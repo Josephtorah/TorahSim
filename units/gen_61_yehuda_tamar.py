@@ -103,6 +103,10 @@ m.step("Gen.38.8")
 # demand — LET: arise-seed-to-your-brother
 m.declare("yehuda", "LET",
           "haqem_zera_le_achikha")
+# witness-tier presupposed read: first_performance on yibum — read, not
+# installed
+m.witness_read("yibum", "first_performance",
+                cites=["Bereshit Rabbah 85:5"])
 
 # -------------------------- Gen.38.9 · THE_SUBVERSION ----------------------
 # וַיֵּדַע אוֹנָן כִּי לֹּא לוֹ יִהְיֶה הַזָּרַע וְהָיָה אִם־בָּא אֶל־אֵשֶׁת
@@ -211,6 +215,10 @@ m.step("Gen.38.17")
 # young-goat she-goat from the-flock”) — fact holds: young-goat-she-goat-
 # and-pawn(shrub)
 m.fact("gedi_izim_ve_eravon(siach)")
+# witness-tier presupposed read: repayment_pair on gedi_izzim — read, not
+# installed
+m.witness_read("gedi_izzim", "repayment_pair",
+                cites=["Bereshit Rabbah 85:9"])
 
 # -------------------------- Gen.38.18 · THE_THREE_PLEDGES_AND_THE_CONCEPTION -
 # וַיֹּאמֶר מָה הָעֵרָבוֹן אֲשֶׁר אֶתֶּן־לָּךְ וַתֹּאמֶר חֹתָמְךָ
@@ -228,6 +236,9 @@ m.result("hava_avo_elayikh", tmark="t1")
 # signature-ring-you/your and-twine-you/your and-staff/tribe-you/your which
 # in-hand-you/your”) — fact holds: chotam-petil-staff/tribe-in-hand-Tamar
 m.fact("chotam_petil_mate_be_yad_tamar")
+# witness-grounded state (its own tier): three_crowns on eravon
+m.witness_state("eravon", "three_crowns",
+                cites=["Bereshit Rabbah 85:9"])
 
 # -------------------------- Gen.38.19 · THE_GARMENTS_RETURNED --------------
 # וַתָּקָם וַתֵּלֶךְ וַתָּסַר צְעִיפָהּ מֵעָלֶיהָ וַתִּלְבַּשׁ בִּגְדֵי
@@ -328,6 +339,10 @@ m.step("Gen.38.26")
 # and-say be-right from-me/my”) — demand settled (popped from the queue):
 # scrutinize-please-to-who?
 m.result("haker_na_le_mi", tmark="t2")
+# witness-tier presupposed read: voice_testimony on tzadka_mimeni — read,
+# not installed
+m.witness_read("tzadka_mimeni", "voice_testimony",
+                cites=["Bereshit Rabbah 85:12", "Onkelos Genesis 38:26"])
 
 # -------------------------- Gen.38.27 · THE_TWINS_DISCOVERED ---------------
 # וַיְהִי בְּעֵת לִדְתָּהּ וְהִנֵּה תְאוֹמִים בְּבִטְנָהּ
@@ -348,6 +363,10 @@ m.step("Gen.38.28")
 # set hand and-take the-bear-young and-tie over hand-him/its crimson”) —
 # fact holds: and-set-hand-and-tie-crimson(the-bear-young)
 m.fact("va_yiten_yad_va_tiqshor_shani(ha_meyaledet)")
+# witness-tier presupposed read: four_forward on yad_count — read, not
+# installed
+m.witness_read("yad_count", "four_forward",
+                cites=["Bereshit Rabbah 85:14"])
 
 # -------------------------- Gen.38.29 · PERETZ_NAMED -----------------------
 # וַיְהִי כְּמֵשִׁיב יָדוֹ וְהִנֵּה יָצָא אָחִיו וַתֹּאמֶר מַה־פָּרַצְתָּ
@@ -391,4 +410,20 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 14
+    assert sorted(m.WORLD["witnessed"]) == ['eravon']
+    assert m.WORLD["witnessed"]['eravon']["cites"] == ['Bereshit Rabbah 85:9']
+    assert all('three_crowns' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('yibum', 'first_performance'), ('gedi_izzim', 'repayment_pair'), ('tzadka_mimeni', 'voice_testimony'), ('yad_count', 'four_forward')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 85:5']
+    assert all('first_performance' not in f for f in m.WORLD["facts"])
+    assert 'yibum' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 85:9']
+    assert all('repayment_pair' not in f for f in m.WORLD["facts"])
+    assert 'gedi_izzim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 85:12', 'Onkelos Genesis 38:26']
+    assert all('voice_testimony' not in f for f in m.WORLD["facts"])
+    assert 'tzadka_mimeni' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 85:14']
+    assert all('four_forward' not in f for f in m.WORLD["facts"])
+    assert 'yad_count' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

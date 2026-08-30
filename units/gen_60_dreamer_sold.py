@@ -40,6 +40,10 @@ m.fact("toldot_yaaqov(yosef_ben_sheva_esre)")
 # obj-marker slander-them/their bad to father-them/their”) — fact holds:
 # hevi-dibata-m-bad-to-avi-they(Joseph)
 m.fact("hevi_dibata_m_raa_el_avi_hem(yosef)")
+# witness-tier presupposed read: three_slanders_owed on dibat_ra — read, not
+# installed
+m.witness_read("dibat_ra", "three_slanders_owed",
+                cites=["Bereshit Rabbah 84:7"])
 
 # -------------------------- Gen.37.3 · THE_LOVE_AND_THE_COAT ---------------
 # וְיִשְׂרָאֵל אָהַב אֶת־יוֹסֵף מִכָּל־בָּנָיו כִּי־בֶן־זְקֻנִים הוּא לוֹ
@@ -55,6 +59,10 @@ m.fact("ahav_et_yosef_mi_kal_banay_v(yisrael)")
 # sleeved-tunic”) — event: make — agent Israel; theme shirt-long-and-
 # sleeved-tunic
 m.event("asa", agent="yisrael", themes=["ketonet_pasim"])
+# witness-tier presupposed read: wisdom_sense on ben_zequnim — read, not
+# installed
+m.witness_read("ben_zequnim", "wisdom_sense",
+                cites=["Onkelos Genesis 37:3", "Bereshit Rabbah 84:8"])
 
 # -------------------------- Gen.37.4 · THE_LEAN_PEACE ----------------------
 # וַיִּרְאוּ אֶחָיו כִּי־אֹתוֹ אָהַב אֲבִיהֶם מִכָּל־אֶחָיו וַיִּשְׂנְאוּ
@@ -99,6 +107,10 @@ m.step("Gen.37.7")
 # bound-me/my and-also stand”) — fact holds: alumati-arise-stand-and-alumot-
 # afflict(dream-rishon)
 m.fact("alumati_qama_nitzava_ve_alumot_tishtachavena(chalom_rishon)")
+# witness-tier presupposed read: count_five on alumah_words — read, not
+# installed
+m.witness_read("alumah_words", "count_five",
+                cites=["Bereshit Rabbah 84:10"])
 
 # -------------------------- Gen.37.8 · THE_ANSWER_OF_KINGS -----------------
 # וַיֹּאמְרוּ לוֹ אֶחָיו הֲמָלֹךְ תִּמְלֹךְ עָלֵינוּ אִם־מָשׁוֹל תִּמְשֹׁל
@@ -125,6 +137,10 @@ m.step("Gen.37.9")
 # (“and-behold the-sun and-the-moon and-one -teen stars afflict”) — event:
 # chalam — agent Joseph; theme dream-sheni
 m.event("chalam", agent="yosef", themes=["chalom_sheni"])
+# witness-grounded state (its own tier): enforceable_instrument on
+# chalom_sheni
+m.witness_state("chalom_sheni", "enforceable_instrument",
+                cites=["Bereshit Rabbah 84:11", "Bereshit Rabbah 97:4", "Bereshit Rabbah 6:9"])
 
 # -------------------------- Gen.37.10 · THE_REBUKE_THAT_KEEPS --------------
 # וַיְסַפֵּר אֶל־אָבִיו וְאֶל־אֶחָיו וַיִּגְעַר־בּוֹ אָבִיו וַיֹּאמֶר לוֹ
@@ -148,6 +164,10 @@ m.step("Gen.37.11")
 # word/thing”) — fact holds: qinu-in-it-echay-v-and-aviv-keep/guard-with-
 # the-word/thing
 m.fact("qinu_bo_echay_v_ve_aviv_shamar_et_ha_davar")
+# witness-tier presupposed read: dated_record on shamar_et_ha_davar — read,
+# not installed
+m.witness_read("shamar_et_ha_davar", "dated_record",
+                cites=["Bereshit Rabbah 84:12"])
 
 # -------------------------- Gen.37.12 · THE_DOTTED_ET ----------------------
 # וַיֵּלְכוּ אֶחָיו לִרְעוֹת אֶׄתׄ־צֹאן אֲבִיהֶם בִּשְׁכֶם
@@ -381,6 +401,14 @@ m.step("Gen.37.28")
 # silver”) — demand settled (popped from the queue): nimkere-nu-to-
 # yishmeelim
 m.result("nimkere_nu_la_yishmeelim", tmark="t2")
+# witness-tier presupposed read: count_disputed on shtarot_mekhira — read,
+# not installed
+m.witness_read("shtarot_mekhira", "count_disputed",
+                cites=["Bereshit Rabbah 84:22"])
+# witness-tier presupposed read: five_selaim_measure on esrim_kesef — read,
+# not installed
+m.witness_read("esrim_kesef", "five_selaim_measure",
+                cites=["Bereshit Rabbah 84:18"])
 
 # -------------------------- Gen.37.29 · REUBEN_AT_THE_EMPTY_PIT ------------
 # וַיָּשָׁב רְאוּבֵן אֶל־הַבּוֹר וְהִנֵּה אֵין־יוֹסֵף בַּבּוֹר וַיִּקְרַע
@@ -440,6 +468,10 @@ m.result("haker_na_ha_ketonet", tmark="t3")
 # pluck-off”) — fact holds: amar-living-bad-akhalat-he/it-pluck-off-pluck-
 # off(Jacob)
 m.fact("amar_chaya_raa_akhalat_hu_tarof_toraf(yaaqov)")
+# witness-tier presupposed read: keeper_evidence_formula on tarof_toraf —
+# read, not installed
+m.witness_read("tarof_toraf", "keeper_evidence_formula",
+                cites=["Bereshit Rabbah 84:16", "Onkelos Genesis 37:33"])
 
 # -------------------------- Gen.37.34 · THE_MOURNING -----------------------
 # וַיִּקְרַע יַעֲקֹב שִׂמְלֹתָיו וַיָּשֶׂם שַׂק בְּמָתְנָיו וַיִּתְאַבֵּל
@@ -491,4 +523,29 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 28
+    assert sorted(m.WORLD["witnessed"]) == ['chalom_sheni']
+    assert m.WORLD["witnessed"]['chalom_sheni']["cites"] == ['Bereshit Rabbah 84:11', 'Bereshit Rabbah 97:4', 'Bereshit Rabbah 6:9']
+    assert all('enforceable_instrument' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('dibat_ra', 'three_slanders_owed'), ('ben_zequnim', 'wisdom_sense'), ('alumah_words', 'count_five'), ('shamar_et_ha_davar', 'dated_record'), ('shtarot_mekhira', 'count_disputed'), ('esrim_kesef', 'five_selaim_measure'), ('tarof_toraf', 'keeper_evidence_formula')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 84:7']
+    assert all('three_slanders_owed' not in f for f in m.WORLD["facts"])
+    assert 'dibat_ra' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Genesis 37:3', 'Bereshit Rabbah 84:8']
+    assert all('wisdom_sense' not in f for f in m.WORLD["facts"])
+    assert 'ben_zequnim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 84:10']
+    assert all('count_five' not in f for f in m.WORLD["facts"])
+    assert 'alumah_words' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 84:12']
+    assert all('dated_record' not in f for f in m.WORLD["facts"])
+    assert 'shamar_et_ha_davar' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 84:22']
+    assert all('count_disputed' not in f for f in m.WORLD["facts"])
+    assert 'shtarot_mekhira' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 84:18']
+    assert all('five_selaim_measure' not in f for f in m.WORLD["facts"])
+    assert 'esrim_kesef' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 84:16', 'Onkelos Genesis 37:33']
+    assert all('keeper_evidence_formula' not in f for f in m.WORLD["facts"])
+    assert 'tarof_toraf' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

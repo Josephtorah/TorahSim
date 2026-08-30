@@ -159,6 +159,10 @@ m.step("Gen.40.13")
 # ‹בְּעוֹד שְׁלֹשֶׁת יָמִים› (“in-still/again three day”) — fact holds:
 # lift/carry-Pharaoh-obj-marker-roshekha-and-hashivkha-over-kanekha
 m.fact("yisa_paro_et_roshekha_va_hashivkha_al_kanekha")
+# witness-tier presupposed read: three_renderings on nasa_rosh — read, not
+# installed
+m.witness_read("nasa_rosh", "three_renderings",
+                cites=["Onkelos Genesis 40:13"])
 
 # -------------------------- Gen.40.14 · THE_REMEMBER_DEMAND ----------------
 # כִּי אִם־זְכַרְתַּנִי אִתְּךָ כַּאֲשֶׁר יִיטַב לָךְ וְעָשִׂיתָ־נָּא
@@ -175,6 +179,10 @@ m.step("Gen.40.14")
 # hizkartani-to-Pharaoh
 m.declare("yosef", "LET",
           "zekhartani_ve_hizkartani_el_paro")
+# witness-tier presupposed read: two_years_billed on zekhirah_pair — read,
+# not installed
+m.witness_read("zekhirah_pair", "two_years_billed",
+                cites=["Bereshit Rabbah 89:2", "Bereshit Rabbah 89:3"])
 
 # -------------------------- Gen.40.15 · STOLEN_I_WAS_STOLEN ----------------
 # כִּי־גֻנֹּב גֻּנַּבְתִּי מֵאֶרֶץ הָעִבְרִים וְגַם־פֹּה לֹא־עָשִׂיתִי
@@ -289,4 +297,11 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 4
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('nasa_rosh', 'three_renderings'), ('zekhirah_pair', 'two_years_billed')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Genesis 40:13']
+    assert all('three_renderings' not in f for f in m.WORLD["facts"])
+    assert 'nasa_rosh' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 89:2', 'Bereshit Rabbah 89:3']
+    assert all('two_years_billed' not in f for f in m.WORLD["facts"])
+    assert 'zekhirah_pair' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

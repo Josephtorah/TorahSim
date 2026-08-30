@@ -455,3 +455,109 @@ parashat Miketz, opening at gen_64 (Genesis 41:1 — Pharaoh's
 dreams; the seam gen_63's ledger already names: the elevation
 routed through the dream).
 
+THE SEVENTH SWEEP — MIKETZ (2026-08-28, the sitting after Vayeshev):
+gen_64 through gen_67 (Genesis 41:1-44:34 — Pharaoh's dreams and the
+rise, the first descent, the second descent and the meal, the goblet
+and the surety; four blocks, 163 verses, the longest sweep of the
+Genesis walk). 11,025 sources enumerated, 245 declared = 34 fresh
+Bereshit Rabbah + 39 standing credits + 9 in-sitting + 163 Onkelos
+verses; 30 of the 34 fresh sections material, and 17 Onkelos delta
+rows. Ninety-seven outside-scope chain primaries carried with their
+shelf split marked. The sweep's exhibits: TWO LAWS AND AN INFERENCE
+RULE resting on these units' own ink — the quorum of ten derived by
+equal-decree from "the sons of Israel came AMONG those who came"
+(42:5), the restrictive-particle reading that caps "you shall be ONLY
+above" and "you shall be holy" learned from Pharaoh's "only the
+throne" (41:40), and 44:8 standing as the FIRST MEMBER of the ten
+a-fortiori arguments of Scripture, which makes this unit's verse the
+tradition's own type-specimen for the light-and-heavy inference the
+machine cites everywhere; the dreams-follow-the-mouth rule carried
+with R. Abahu's flat denial; the famine's length disputed four ways;
+the six-row limb-by-limb repayment table paying out the refusal read
+at gen_62; Judah's speech read as conciliation three ways at once —
+the repentance the sale of gen_60 had been waiting on. Onkelos
+carried the heaviest theological freight yet: DIVINATION CONVERTED TO
+INVESTIGATION at both of Joseph's goblet verses (the righteous one
+does not practice augury), the separate tables EXPLAINED by naming
+the Egyptian cult, "he made himself a stranger" rendered "he
+considered what to say" against the midrash's own reading, "harm"
+rendered DEATH at four seats — the reading the Exodus miscarriage law
+will require — and "torn, torn" rendered "surely killed" in exact
+agreement with what the same translation did seven chapters back. The
+flywheel ran hardest in gen_66, where FIVE standing credits cashed
+seats promised in earlier ledgers on this block's own verses. The
+text gate found ZERO pre-existing defects — the fourth defect-free
+sweep in a row. All gates green; four ledgers, four rev-2 units.
+Genesis stands at 67 of 73 blocks read (Genesis 1:1-44:34 continuous,
+1,359 of 1,533 verses — 89%); FIFTY-NINE blocks (gen_09 through
+gen_67) green and unstamped. Note the block boundary: gen_67 spans
+the whole of chapter 44, so Vayigash's opening seventeen verses were
+read here; the parashah proper opens at gen_68 (Genesis 45:1 — "Joseph
+could not restrain himself"), which is where the next sweep begins,
+with six blocks and 174 verses left to a whole Genesis. [Workshop
+note: needs canon mirroring on the owner's word in that window.]
+
+THE EIGHTH SWEEP — VAYIGASH AND VAYECHI: **GENESIS CLOSES**
+(2026-08-28, same sitting as Miketz). gen_68 through gen_73 (Genesis
+45:1-50:26 — the disclosure, the descent and the count, Goshen and the
+fifth, the crossed hands, the testament, and the coffin in Egypt; six
+blocks, 174 verses, two parashiyot in one run). 17,588 sources
+enumerated, 297 declared = 45 fresh Bereshit Rabbah + 74 standing
+credits + 4 in-sitting + 174 Onkelos verses; 44 of the 45 fresh
+sections material, and 22 Onkelos delta rows. 253 outside-scope chain
+primaries carried with their shelf split marked — the largest
+remainder of any sweep, because every later book cites chapter 49.
+The sweep's exhibits: THE SHEMA SOURCED TO JACOB'S DEATHBED — the sons
+answering "Hear, Israel" to their father and Jacob replying with the
+line Israel has said in an undertone ever since; THE TEMPLE'S SITE
+decided by who did not join the sale of Joseph, eleven tribes
+disqualified and Benjamin's portion chosen — the furthest consequence
+the sale has drawn in the whole walk; the seventy that count
+sixty-nine, disputed five ways and carrying R. Meir's own scroll
+reading of "the SON of Dan" in the singular, with the siege law on
+delivering one soul riding beside it; the peace ruling at the book's
+end, where the text records the tribes speaking words that were not so
+in order to make peace; the bones-oath scope rule that hands this book
+off to the next; and a nine-item precedence census verifying the
+crossed hands across four later books. THE LARGEST TRANSLATION-LAYER
+FINDING OF THE WALK also lands here: in chapter 49 Onkelos CHANGES
+GENRE — after forty-eight chapters of translation it becomes an
+interpretive paraphrase, naming the Messiah at Shiloh, writing
+Reuben's three forfeited portions into the verse, giving Benjamin's
+portion the Temple outright, and rendering seven consecutive blessings
+as their fulfilments. At the other end of the same chapter the chain
+preserves the Ptolemy emendation, so one verse carries three
+translation layers at once. The text gate found ZERO pre-existing
+defects — the fifth defect-free sweep in a row. All gates green; six
+ledgers, six rev-2 units.
+**GENESIS IS READ THROUGH: 73 of 73 blocks, Genesis 1:1-50:26
+continuous, 1,533 of 1,533 verses — 100%.** Verified block by block:
+every one of the seventy-three numbered blocks carries a dated triage
+ledger with its read-N-of-N-COMPLETE line. SIXTY-FIVE blocks (gen_09
+through gen_73) stand green and unstamped, batchable by parashah on
+the owner's word. The walk now reaches Exodus, where the spine changes
+to the Mekhilta of Rabbi Yishmael — and the standing dependency comes
+due: the sugya case-file machinery must be real before the law spans.
+
+THE DERIVATION ERA OPENS (2026-08-28/30, on the owner's word in the
+workshop window; landed in canon 2026-08-30): reading a book is not
+deriving it. Genesis stands read through, but only the creation week
+(gen_01-07) and Eden (gen_08) were ever built FROM their readings.
+The first span since to walk Steps 5, 6 and 7 is parashat Vayeshev —
+gen_60 through gen_63, the dreamer sold, Yehuda and Tamar, Potifar's
+house, and the two dreams in prison — now at rev 3. Eighteen operators
+entered from the reading (sixteen WITNESS_READ, two WITNESS_STATE),
+every one of them from the rule catalog's EXISTING vocabulary: the
+pilot met seven natural new operator shapes and folded them into what
+already exists rather than mint names, because naming a new operator
+versions the catalog, and that is process law — the owner's word. The
+claims manifests grew (13→21, 12→17, 12→15, 12→14); seven of the new
+claims carry machine checks that verify, eleven are honestly marked
+manual. The world fold moved with them: standing facts 288 → 306,
+exactly the eighteen, with the state hash unchanged at 8b8fff1fa28953af
+(it does not cover the standing set). All gates green. NOTE THE CHIP
+LAW HERE: these four blocks are DERIVED but UNSTAMPED, so they read
+first pass like every other unstamped block — the stamp is the owner's
+word alone, and the label never runs ahead of it. Sixty-one blocks
+remain to derive (gen_09-gen_59, gen_64-gen_73), parashah by parashah;
+expect each to move to rev 3 as its turn comes.

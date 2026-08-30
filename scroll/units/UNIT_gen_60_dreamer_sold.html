@@ -34,7 +34,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 .arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
        border-radius:8px; padding:.4rem .7rem; }
 .arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
-</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_60_dreamer_sold?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The dreamer sent, stripped, and sold (37:1-36) <span class='badge frozen'>MODEL · REV 2 · GATES GREEN</span></h1>
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_60_dreamer_sold?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The dreamer sent, stripped, and sold (37:1-36) <span class='badge frozen'>MODEL · REV 3 · GATES GREEN</span></h1>
 <div class="meta">unit <b>gen_60_dreamer_sold</b> · Genesis 37:1-36 · derive logic_derived_v1 · phase FWD-1</div>
 <div class="meta"><a href="../#Gen/37/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
 <p><span class="he">הֲבוֹא נָבוֹא אֲנִי וְאִמְּךָ וְאַחֶיךָ</span> · <i>ha-vo navo ani ve-imkha ve-achekha</i> · &#x27;shall we indeed come, I and your mother and your brothers?&#x27;</p>
@@ -70,6 +70,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">אֵלֶּה תֹּלְדוֹת יַעֲקֹב יוֹסֵף</span> · <i>ele toldot yaaqov yosef</i><br><span class="gloss">= ele toldot yaaqov yosef</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hevi_dibata_m_raa_el_avi_hem(yosef), t0)</span><br><span class="gloss">= HOLDS(hevi-dibata-m-raa-to-avi-hem(yosef), t0)</span><br>THE EVIL REPORT. va-yave yosef et dibatam raa el avihem — the rift&#x27;s first fact is Joseph&#x27;s own carrying of words.
 </td><td><span class="he">וַיָּבֵא יוֹסֵף אֶת־דִּבָּתָם רָעָה אֶל־אֲבִיהֶם</span> · <i>va-yave yosef et-dibata-m raa el-avi-hem</i><br><span class="gloss">= and-yave yosef dibata-m raa to-avi-hem</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(dibat_ra, three_slanders_owed)</span><br><span class="gloss">= WITNESS-READ(dibat-evil, three-slanders-owed)</span><br>THE REPORT OPENS A LEDGER THE NEXT TWO BLOCKS CLOSE [claim G60-17]. Joseph&#x27;s three reports are repaid one for one on the scales of Proverbs 16:11: the limb-of-a-living-animal charge repaid by the slaughtered goat of 37:31; calling the handmaids&#x27; sons slaves repaid by his own sale as a slave; the charge about the girls repaid by his master&#x27;s wife at 39:7 (gen_62&#x27;s span). Recorded at witness tier as a three-row obligation whose discharges land outside this unit — the earliest cross-unit repayment structure in the Joseph arc. Argues middah E27 (symmetry).
+</td><td>—</td><td class='cite'>Bereshit Rabbah 84:7</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The toledot header opens on a son, not a list; the report opens the rift.</div>
 </div>
@@ -82,6 +84,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וְיִשְׂרָאֵל אָהַב אֶת־יוֹסֵף מִכָּל־בָּנָיו</span> · <i>ve-yisrael ahav et-yosef mi-kal-banay-v</i><br><span class="gloss">= and-yisrael ahav yosef from-kal-banay-v</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>EVENT</td><td><span class="expr">asa(e1); Agent(e1, yisrael); Theme(e1, ketonet_pasim)</span><br><span class="gloss">= asa(e1); Agent(e1, yisrael); Theme(e1, ketonet-pasim)</span><br>THE COAT MADE. ve-asa lo ketonet pasim — the span&#x27;s central object enters by a making-event; its verb-chain runs: made (here), stripped (37:23), dipped (37:31), sent-and-recognized (37:32-33).
 </td><td><span class="he">וְעָשָׂה לוֹ כְּתֹנֶת פַּסִּים</span> · <i>ve-asa l-o ketonet pasim</i><br><span class="gloss">= and-asa l-o ketonet pasim</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(ben_zequnim, wisdom_sense)</span><br><span class="gloss">= WITNESS-READ(ben-zequnim, wisdom-sense)</span><br>THE LOVE-REASON IS DECIDED IN TRANSLATION [claim G60-22]. The grammar gives &quot;a son of his OLD AGE&quot;; the received translation renders &quot;a WISE son,&quot; voting with R. Nechemya — that Jacob transmitted to Joseph all he had received from Shem and Ever — against plain chronology and against R. Yehuda&#x27;s face-likeness reading. Both senses stand: the age-sense from the ink, the wisdom-sense read at witness tier. Carried as a recorded dispute, not decided.
+</td><td>—</td><td class='cite'>Onkelos Genesis 37:3, Bereshit Rabbah 84:8</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The love stated, the coat made: the object the span will strip, dip, and send.</div>
 </div>
@@ -122,6 +126,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(alumati_qama_nitzava_ve_alumot_tishtachavena(chalom_rishon), t0)</span><br><span class="gloss">= HOLDS(alumati-qama-nitzava-and-alumot-tishtachavena(chalom-rishon), t0)</span><br>THE BOW-WORD&#x27;S EXACT PAIR [G60-11]. va-tishtachavena la-alumati — the sheaves&#x27; bow-form stands EXACTLY TWICE in the Torah: here in the dream, and at 33:6 — &#x27;the handmaids drew near AND BOWED&#x27; [VERIFIED: manifest G60-11]: the Kitzur reads the pair — the first dream showed eleven brothers only, but the whole house came to bow. tesubena&#x27;s tav soft per MS (asserted).
 </td><td><span class="he">וְהִנֵּה קָמָה אֲלֻמָּתִי וְגַם־נִצָּבָה</span> · <i>ve-hine qama alumati-y ve-gam-nitzava</i><br><span class="gloss">= and-hine qama alumati-y and-also-nitzava</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(alumah_words, count_five)</span><br><span class="gloss">= WITNESS-READ(alumah-words, count-five)</span><br>FIVE WORDS OF ONE ROOT [claim G60-15, machine-checked]. The sheaf-noun stands in the whole Torah ONLY in this verse — three times bare and a fourth carrying the prefixed lamed (&quot;to my sheaf&quot;) — and the binding-verb (&quot;binding sheaves&quot;) makes a fifth word of the same three letters. The reading counts those five and takes the dream&#x27;s prostration as fivefold. Argues middah E10 (a repeated expression signifies).
+</td><td>—</td><td class='cite'>Bereshit Rabbah 84:10</td><td>tested</td></tr>
 </table>
 <div class="meta">The dream&#x27;s content: the standing sheaf, the bowing sheaves.</div>
 </div>
@@ -142,6 +148,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>EVENT</td><td><span class="expr">chalam(e3); Agent(e3, yosef); Theme(e3, chalom_sheni)</span><br><span class="gloss">= chalam(e3); Agent(e3, yosef); Theme(e3, chalom-sheni)</span><br>THE SECOND DREAM. ha-shemesh ve-ha-yareach ve-achad asar kokhavim mishtachavim li — sun, moon, eleven stars; the second witness the letter later counts as settled (42:9 remembers THE DREAMS, plural).
 </td><td><span class="he">וְהִנֵּה הַשֶּׁמֶשׁ וְהַיָּרֵחַ וְאַחַד עָשָׂר כּוֹכָבִים מִשְׁתַּחֲוִים</span> · <i>ve-hine ha-shemesh ve-ha-yarecha ve-achad asar kokhavim mishtachavim</i><br><span class="gloss">= and-hine the-shemesh and-the-yarecha and-achad asar stars mishtachavim</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_STATE</td><td><span class="expr">WITNESS(chalom_sheni, enforceable_instrument)</span><br><span class="gloss">= WITNESS(chalom-sheni, enforceable-instrument)</span><br>THE DREAM AS AN ENFORCEABLE INSTRUMENT [claim G60-18]. The reading takes the second dream not as prediction but as title, and enforces it generations later: Joshua addresses the sun at Gibeon as a wayward slave — &quot;were you not PURCHASED with my father&#x27;s money? did my father not see you bowing in the dream?&quot; — before commanding it to stand still. Witness-tier state, never mixed into the text-grounded facts: the dream&#x27;s standing as an instrument is testimony carried from the reading, not a grammatical consequence of the verse.
+</td><td>—</td><td class='cite'>Bereshit Rabbah 84:11, Bereshit Rabbah 97:4, Bereshit Rabbah 6:9</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Dream two: the celestial court.</div>
 </div>
@@ -162,6 +170,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(qinu_bo_echay_v_ve_aviv_shamar_et_ha_davar, t0)</span><br><span class="gloss">= HOLDS(qinu-in-it-echay-v-and-aviv-shamar-the-davar, t0)</span><br>ENVY AND KEEPING. va-yeqanu vo echav — ve-aviv SHAMAR et ha-davar: the father stores the dream the way the span&#x27;s end will store his grief.
 </td><td><span class="he">וַיְקַנְאוּ־בוֹ אֶחָיו וְאָבִיו שָׁמַר אֶת־הַדָּבָר</span> · <i>va-yeqanu-v-o echay-v ve-avi-v shamar et-ha-davar</i><br><span class="gloss">= and-yeqanu-v-o echay-v and-avi-v shamar the-davar</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(shamar_et_ha_davar, dated_record)</span><br><span class="gloss">= WITNESS-READ(shamar-the-davar, dated-record)</span><br>THE DREAM IS LOGGED [claim G60-21]. &quot;His father KEPT the matter&quot; is read by R. Levi as an act of writing — he took a quill and set down the day, the hour and the place; R. Chiyya hears the Divine Spirit saying KEEP, for these things are destined to occur. The verse creates a dated record, which is what makes the later fulfilment auditable rather than merely remembered — the instrument-logic the witness state at 37:9 carries.
+</td><td>—</td><td class='cite'>Bereshit Rabbah 84:12</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Envy filed; the father waits.</div>
 </div>
@@ -350,6 +360,10 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(nimkere_nu_la_yishmeelim, t2)</span><br><span class="gloss">= RESULT: HOLDS(nimkere-nu-to-yishmeelim, t2)</span><br>THE SALE — AGENT UNRESOLVED. va-yaavru anashim midyanim socharim va- yimshekhu... va-yimkeru et yosef la-yishmeelim be-esrim kasef — the sale-demand discharges, but the letter leaves the seller&#x27;s identity suspended between the brothers and the passing Midianites (the camps are named — Rashi&#x27;s brothers, Rashbam&#x27;s Midianites — and no one is ruled for; the RESULT is agentless by the machine&#x27;s own semantics). va-yimshekhu carries its accent-stroke at word-end per MS [VERIFIED: manifest G60-13, pashta in-stream]; the draw-verb&#x27;s pair (drawing Jeremiah from HIS pit) files named.
 </td><td><span class="he">וַיִּמְשְׁכוּ וַיַּעֲלוּ אֶת־יוֹסֵף מִן־הַבּוֹר וַיִּמְכְּרוּ אֶת־יוֹסֵף לַיִּשְׁמְעֵאלִים בְּעֶשְׂרִים כָּסֶף</span> · <i>va-yimshkhu va-yaalu et-yosef min-ha-bor va-yimkru et-yosef la-yishmelim be-esrim kasef</i><br><span class="gloss">= and-yimshkhu and-yaalu yosef from-the-bor and-yimkru yosef to-yishmelim in-esrim kasef</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(shtarot_mekhira, count_disputed)</span><br><span class="gloss">= WITNESS-READ(shtarot-mekhira, count-disputed)</span><br>THE DEED-CHAIN IS A RECORDED DISPUTE [claim G60-19]. R. Yudan counts FOUR bills of sale (brothers to Ishmaelites to merchants to Midianites to Egypt); R. Huna counts FIVE, adding the state treasury from which Potiphar then buys. Carried as a dispute and never decided: the machine records the sale event and refuses to fix the number of conveyances.
+</td><td>—</td><td class='cite'>Bereshit Rabbah 84:22</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(esrim_kesef, five_selaim_measure)</span><br><span class="gloss">= WITNESS-READ(esrim-kesef, five-selaim-measure)</span><br>TWO STANDING LAWS PRICED FROM THIS NUMBER [claim G60-20, machine-checked]. The twenty pieces of silver are read as five sela&#x27;im, and the firstborn-redemption measure of five sela&#x27;im is decreed measure for measure — &quot;you sold Rachel&#x27;s firstborn for twenty&quot;; the same twenty divided among the brothers gives the half-shekel a head of Exodus 38:26. Law-shaped claims resting on this verse&#x27;s own number, recorded at witness tier and owed to the law spans that will test them. Argues middah E27 (symmetry).
+</td><td>—</td><td class='cite'>Bereshit Rabbah 84:18</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The sale fires with the subject unresolved on the letter.</div>
 </div>
@@ -402,6 +416,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וַיַּכִּירָהּ וַיֹּאמֶר כְּתֹנֶת בְּנִי</span> · <i>va-yakira-ה va-yomer ketonet beni-y</i><br><span class="gloss">= and-yakira-ה and-yomer ketonet beni-y</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(amar_chaya_raa_akhalat_hu_tarof_toraf(yaaqov), t0)</span><br><span class="gloss">= HOLDS(amar-living-raa-akhalat-that-tarof-toraf(yaaqov), t0)</span><br>THE LIE IN THE FATHER&#x27;S MOUTH. chaya raa akhalathu — the EXACT words the plot queued at 37:20 (&#x27;and we will say: an evil beast devoured him&#x27;) fire here as JACOB&#x27;S OWN conclusion: the brothers never say the sentence; the deceived speaks it for the deceivers, and the say- demand stays open on the queue forever — the machine&#x27;s record of the letter&#x27;s cruelest economy. tarof toraf yosef — the doubled tear- verb; watch 44:28 (Jacob repeats it) and Exod 22:12&#x27;s torn-carcass law.
 </td><td><span class="he">חַיָּה רָעָה אֲכָלָתְהוּ טָרֹף טֹרַף</span> · <i>chaya raa akhalat-hu tarof toraf</i><br><span class="gloss">= living raa akhalat-that tarof toraf</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(tarof_toraf, keeper_evidence_formula)</span><br><span class="gloss">= WITNESS-READ(tarof-toraf, keeper-evidence-formula)</span><br>THE BROTHERS STAGE THE BAILEE&#x27;S DEFENCE [claim G60-16, machine-checked — NEW AT DERIVATION, not visible in the reading pass]. The father&#x27;s verdict is the doubled tearing-formula (&quot;torn, surely torn&quot;), and that doubled pair of the tearing-root stands in exactly three places in the Torah: here, at 44:28 where Judah quotes the verdict back (gen_67&#x27;s span), and at Exodus 22:12 — &quot;if it is surely torn, let him bring it as evidence; he shall not pay&quot; — the keeper&#x27;s exemption. Joseph&#x27;s brothers were keepers of the flock (37:2), and they produce the bloodied tunic as evidence of a tearing: precisely the procedure by which the later law releases a keeper from liability. Recorded at witness tier; the test is owed to the Exodus 22 bailee ladder at Step 9. Argues middah E7 (equal decree — the same wording in two passages; I2 at law strength). Note the translation cost: the received rendering flattens the doubled tearing to a death-certainty formula at both Genesis seats, erasing the very word the later law turns on.
+</td><td>—</td><td class='cite'>Bereshit Rabbah 84:16, Onkelos Genesis 37:33</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The recognize-demand satisfied; the planned lie fires from the wrong mouth.</div>
 </div>
@@ -714,6 +730,10 @@ m.fact(&quot;toldot_yaaqov(yosef_ben_sheva_esre)&quot;)
 # obj-marker slander-them/their bad to father-them/their”) — fact holds:
 # hevi-dibata-m-bad-to-avi-they(Joseph)
 m.fact(&quot;hevi_dibata_m_raa_el_avi_hem(yosef)&quot;)
+# witness-tier presupposed read: three_slanders_owed on dibat_ra — read, not
+# installed
+m.witness_read(&quot;dibat_ra&quot;, &quot;three_slanders_owed&quot;,
+                cites=[&quot;Bereshit Rabbah 84:7&quot;])
 
 # -------------------------- Gen.37.3 · THE_LOVE_AND_THE_COAT ---------------
 # וְיִשְׂרָאֵל אָהַב אֶת־יוֹסֵף מִכָּל־בָּנָיו כִּי־בֶן־זְקֻנִים הוּא לוֹ
@@ -729,6 +749,10 @@ m.fact(&quot;ahav_et_yosef_mi_kal_banay_v(yisrael)&quot;)
 # sleeved-tunic”) — event: make — agent Israel; theme shirt-long-and-
 # sleeved-tunic
 m.event(&quot;asa&quot;, agent=&quot;yisrael&quot;, themes=[&quot;ketonet_pasim&quot;])
+# witness-tier presupposed read: wisdom_sense on ben_zequnim — read, not
+# installed
+m.witness_read(&quot;ben_zequnim&quot;, &quot;wisdom_sense&quot;,
+                cites=[&quot;Onkelos Genesis 37:3&quot;, &quot;Bereshit Rabbah 84:8&quot;])
 
 # -------------------------- Gen.37.4 · THE_LEAN_PEACE ----------------------
 # וַיִּרְאוּ אֶחָיו כִּי־אֹתוֹ אָהַב אֲבִיהֶם מִכָּל־אֶחָיו וַיִּשְׂנְאוּ
@@ -773,6 +797,10 @@ m.step(&quot;Gen.37.7&quot;)
 # bound-me/my and-also stand”) — fact holds: alumati-arise-stand-and-alumot-
 # afflict(dream-rishon)
 m.fact(&quot;alumati_qama_nitzava_ve_alumot_tishtachavena(chalom_rishon)&quot;)
+# witness-tier presupposed read: count_five on alumah_words — read, not
+# installed
+m.witness_read(&quot;alumah_words&quot;, &quot;count_five&quot;,
+                cites=[&quot;Bereshit Rabbah 84:10&quot;])
 
 # -------------------------- Gen.37.8 · THE_ANSWER_OF_KINGS -----------------
 # וַיֹּאמְרוּ לוֹ אֶחָיו הֲמָלֹךְ תִּמְלֹךְ עָלֵינוּ אִם־מָשׁוֹל תִּמְשֹׁל
@@ -799,6 +827,10 @@ m.step(&quot;Gen.37.9&quot;)
 # (“and-behold the-sun and-the-moon and-one -teen stars afflict”) — event:
 # chalam — agent Joseph; theme dream-sheni
 m.event(&quot;chalam&quot;, agent=&quot;yosef&quot;, themes=[&quot;chalom_sheni&quot;])
+# witness-grounded state (its own tier): enforceable_instrument on
+# chalom_sheni
+m.witness_state(&quot;chalom_sheni&quot;, &quot;enforceable_instrument&quot;,
+                cites=[&quot;Bereshit Rabbah 84:11&quot;, &quot;Bereshit Rabbah 97:4&quot;, &quot;Bereshit Rabbah 6:9&quot;])
 
 # -------------------------- Gen.37.10 · THE_REBUKE_THAT_KEEPS --------------
 # וַיְסַפֵּר אֶל־אָבִיו וְאֶל־אֶחָיו וַיִּגְעַר־בּוֹ אָבִיו וַיֹּאמֶר לוֹ
@@ -822,6 +854,10 @@ m.step(&quot;Gen.37.11&quot;)
 # word/thing”) — fact holds: qinu-in-it-echay-v-and-aviv-keep/guard-with-
 # the-word/thing
 m.fact(&quot;qinu_bo_echay_v_ve_aviv_shamar_et_ha_davar&quot;)
+# witness-tier presupposed read: dated_record on shamar_et_ha_davar — read,
+# not installed
+m.witness_read(&quot;shamar_et_ha_davar&quot;, &quot;dated_record&quot;,
+                cites=[&quot;Bereshit Rabbah 84:12&quot;])
 
 # -------------------------- Gen.37.12 · THE_DOTTED_ET ----------------------
 # וַיֵּלְכוּ אֶחָיו לִרְעוֹת אֶׄתׄ־צֹאן אֲבִיהֶם בִּשְׁכֶם
@@ -1055,6 +1091,14 @@ m.step(&quot;Gen.37.28&quot;)
 # silver”) — demand settled (popped from the queue): nimkere-nu-to-
 # yishmeelim
 m.result(&quot;nimkere_nu_la_yishmeelim&quot;, tmark=&quot;t2&quot;)
+# witness-tier presupposed read: count_disputed on shtarot_mekhira — read,
+# not installed
+m.witness_read(&quot;shtarot_mekhira&quot;, &quot;count_disputed&quot;,
+                cites=[&quot;Bereshit Rabbah 84:22&quot;])
+# witness-tier presupposed read: five_selaim_measure on esrim_kesef — read,
+# not installed
+m.witness_read(&quot;esrim_kesef&quot;, &quot;five_selaim_measure&quot;,
+                cites=[&quot;Bereshit Rabbah 84:18&quot;])
 
 # -------------------------- Gen.37.29 · REUBEN_AT_THE_EMPTY_PIT ------------
 # וַיָּשָׁב רְאוּבֵן אֶל־הַבּוֹר וְהִנֵּה אֵין־יוֹסֵף בַּבּוֹר וַיִּקְרַע
@@ -1114,6 +1158,10 @@ m.result(&quot;haker_na_ha_ketonet&quot;, tmark=&quot;t3&quot;)
 # pluck-off”) — fact holds: amar-living-bad-akhalat-he/it-pluck-off-pluck-
 # off(Jacob)
 m.fact(&quot;amar_chaya_raa_akhalat_hu_tarof_toraf(yaaqov)&quot;)
+# witness-tier presupposed read: keeper_evidence_formula on tarof_toraf —
+# read, not installed
+m.witness_read(&quot;tarof_toraf&quot;, &quot;keeper_evidence_formula&quot;,
+                cites=[&quot;Bereshit Rabbah 84:16&quot;, &quot;Onkelos Genesis 37:33&quot;])
 
 # -------------------------- Gen.37.34 · THE_MOURNING -----------------------
 # וַיִּקְרַע יַעֲקֹב שִׂמְלֹתָיו וַיָּשֶׂם שַׂק בְּמָתְנָיו וַיִּתְאַבֵּל
@@ -1165,5 +1213,30 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 28
+    assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;chalom_sheni&#x27;]
+    assert m.WORLD[&quot;witnessed&quot;][&#x27;chalom_sheni&#x27;][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:11&#x27;, &#x27;Bereshit Rabbah 97:4&#x27;, &#x27;Bereshit Rabbah 6:9&#x27;]
+    assert all(&#x27;enforceable_instrument&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;dibat_ra&#x27;, &#x27;three_slanders_owed&#x27;), (&#x27;ben_zequnim&#x27;, &#x27;wisdom_sense&#x27;), (&#x27;alumah_words&#x27;, &#x27;count_five&#x27;), (&#x27;shamar_et_ha_davar&#x27;, &#x27;dated_record&#x27;), (&#x27;shtarot_mekhira&#x27;, &#x27;count_disputed&#x27;), (&#x27;esrim_kesef&#x27;, &#x27;five_selaim_measure&#x27;), (&#x27;tarof_toraf&#x27;, &#x27;keeper_evidence_formula&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:7&#x27;]
+    assert all(&#x27;three_slanders_owed&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;dibat_ra&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Onkelos Genesis 37:3&#x27;, &#x27;Bereshit Rabbah 84:8&#x27;]
+    assert all(&#x27;wisdom_sense&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;ben_zequnim&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:10&#x27;]
+    assert all(&#x27;count_five&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;alumah_words&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:12&#x27;]
+    assert all(&#x27;dated_record&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;shamar_et_ha_davar&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:22&#x27;]
+    assert all(&#x27;count_disputed&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;shtarot_mekhira&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:18&#x27;]
+    assert all(&#x27;five_selaim_measure&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;esrim_kesef&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:16&#x27;, &#x27;Onkelos Genesis 37:33&#x27;]
+    assert all(&#x27;keeper_evidence_formula&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;tarof_toraf&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-28 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-08-30 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

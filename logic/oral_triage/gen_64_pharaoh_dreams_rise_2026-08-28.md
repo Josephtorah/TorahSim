@@ -1,0 +1,96 @@
+# ORAL TRIAGE LEDGER — gen_64_pharaoh_dreams_rise (Genesis 41:1-57)
+
+## Parashah-grain sweep, block 1 of 4 (parashat Miketz, one sitting 2026-08-28)
+Spine default (Bereshit Rabbah + Onkelos). Append-only. Not binding
+religious law. This block opens the parashah on the dream gen_63's
+ledger named as the seam — "the elevation routed through the dream" —
+and closes on the whole earth coming to Egypt to buy.
+
+**ENUMERATED:** 4,090 sources. **DECLARED: 85** = 15 fresh + 13
+credits + 0 in-sitting + 57 Onkelos.
+**OUTSIDE DECLARED SCOPE: 25 chain primaries** (reading 5 / testing 3
+/ bridge 17) + the non-primary sources. Register FP: 1 (Tosefta
+Kifshutah on Sukkah 2:10:5 — pattern held).
+
+## STANDING CREDITS (13, guard-1 quick-looks done, standing row named)
+| Ref | Note |
+|---|---|
+| Bereshit Rabbah 89:2 | gen_63 row 1 — the two-years-for-two-words bill; its FORWARD seat is OUR 41:1 ("at the end of two years"), and the Asenat gain lands at OUR 41:45 |
+| Bereshit Rabbah 89:3 | gen_63 row 2 — Pharaoh's Nile theology ("who stands over whom?"), seated at OUR 41:1; and WHY the delay: so Pharaoh would dream — this block IS the dream it purchased |
+| Bereshit Rabbah 89:4 | gen_48 row 24 — the STANDING-OVER polarity: the wicked stand over their gods (Pharaoh ON the Nile, OUR 41:1), the righteous have their God standing over them |
+| Bereshit Rabbah 90:4 | gen_56 row 12 — the Tzafenat Paneaḥ letter-table, and the screening REPAID by elevation ("Joseph was thirty when he stood before Pharaoh") — both seat at OUR 41:45-46; the partner of Onkelos O4 below |
+| **Bereshit Rabbah 34:7** | gen_16 row 28 — THE ABSTINENCE LAW, and OUR 41:50 is its second proof: "two sons were born to Joseph BEFORE the year of famine came" grounds the rule that intercourse is forbidden in a time of famine [a law resting on this unit's own ink — flagged at the standing row as feeding forward, and this is the seat] |
+| Bereshit Rabbah 79:5 | gen_55 row 25 — the four-way SHALEM (intact) audit; its studies-clause is undone here: "Joseph forgot," from OUR 41:51 ("God has made me forget all my toil") |
+| Bereshit Rabbah 86:5 | gen_62 row 2 — the master seeing the Divine Presence; the same recognition Pharaoh voices at OUR 41:38 |
+| Bereshit Rabbah 87:6 | gen_58 row 14 — the Joseph↔Mordekhai table: the ring removed, the garments, the chariot, the herald's cry — every one of those four cashes at OUR 41:42-43 |
+| Bereshit Rabbah 88:3 | gen_62 row 12 — the anger-engineering symmetry (Pharaoh's wrath at his servants existed to elevate Joseph); the elevation itself is this block |
+| Bereshit Rabbah 86:3 | gen_23 row 13 — Potiphar complex, "those who were acquired were acquiring"; backward, no new ops here |
+| Bereshit Rabbah 69:3 | gen_33 row 37 — enrichment; the righteous-and-their-God cluster, the reverse pole of 89:4 |
+| Bereshit Rabbah 31:12 | gen_15 row 27 — giants' might dossier; backward, not-bearing here |
+| Bereshit Rabbah 37:7 | gen_14 row 15 — the naming-conventions dispute (names as event-records); quick-looked because OUR 41:51-52 names two sons for events — the convention it describes is exercised here, no new ops |
+
+## FRESH VERDICT ROWS (15)
+| # | Source | Verdict | Note |
+|---|---|---|---|
+| 1 | Bereshit Rabbah 89:1 | **material** | F — "He sets an end to darkness" (Job 28:3) read twice: God set a term for the WORLD's darkness (while the evil inclination stands), and a term for JOSEPH's darkness in prison — "when the end came, Pharaoh dreamed a dream" [the delay is a SET TERM, not neglect; gen_63 row 2's mechanism claim gets its opening-verse witness] |
+| 2 | Bereshit Rabbah 89:1-2 | duplicate | terse — a range-form citation; 89:1 is read at row 1 and 89:2 is credited above (gen_63 row 1). No separate text in the corpus at this ref [honest note: the fetch returned nothing for the range form — an enumeration artifact, not an unread source] |
+| 3 | Bereshit Rabbah 89:5 | **material** | F — INK ROW (opened, never credited): "his spirit was troubled" at OUR 41:8 is written with ONE letter tav ‹וַתִּפָּעֶם› ("vatipa'em") against Daniel 2:1's doubled tav ‹וַתִּתְפָּעֶם› ("vatitpa'em") — three readings of the difference: R. Yehuda (here the dream was known and only its meaning sought; there both were lost), R. Neḥemya (there TWO separate dreams — the idol and the tree; here one dream doubled), the Rabbis (there prominence and life for FOUR — Daniel and his three; here for ONE — Joseph); and the timing reading (a night's length of trouble there, a moment before dawn here). R. Yoḥanan's rule: a dream just before morning is actualized at once |
+| 4 | Bereshit Rabbah 89:6 | **material** | F — the magicians DID interpret, and their reading failed to enter Pharaoh's ears: seven daughters born and seven buried, seven kingdoms conquered and seven provinces rebelling [the wrong reading recorded in full — the machine's negative control]; and the PROVIDENCE OF ORDER: they were let to exhaust him first so that Joseph's interpretation could not be answered with "had you asked us first" — the same engineered-sequence mechanism as gen_62's distraction row; plus the standing claim that each nation is given five wise men with wisdom, understanding and might, all withdrawn at its judgment |
+| 5 | Bereshit Rabbah 89:7 | **material** | F — the butler's motive audited: seeing Pharaoh's soul near departing, he calculated that a new king might not keep him in his trust [the confession is self-interested — the ledger of "I recall my sins" itemized as TWO: not repaying Joseph, and withholding what he knew while Pharaoh suffered]; and the THREE DEMEANINGS in one clause at OUR 41:12 — "lad" (a fool), "Hebrew" (an enemy tongue), "slave" (and by Pharaoh's own statute BOOKS: a slave may not reign and may not wear the royal bracelets) — "cursed are the wicked, who do not perform a complete goodness" [the Egyptian-law objection that the elevation must overcome, stated by the chain as written law] |
+| 6 | Bereshit Rabbah 89:8 | **material** | F — THE INTERPRETATION MAKES THE EVENT: the woman whose broken-beam dream R. Elazar read as a son born and living, and his students, in his absence, as a husband buried — "you have eliminated a man," on the proof of OUR 41:13 ("as he interpreted to us, SO IT WAS") [dreams follow the mouth — the operative rule the whole chapter runs on]; carried as a RECORDED DISPUTE: R. Yoḥanan excepts wine (good for a scholar, bad for an ignoramus), and R. Abahu denies the premise outright — "the content of dreams makes no difference" |
+| 7 | Bereshit Rabbah 89:9 | **material** | F — the shave at OUR 41:14 read as deference to royalty; "not by me — God will answer" as attributing the greatness to its Owner [chain-witnessed BOTH WAYS: Onkelos O1 below writes the same reading into the translation]; and the NUMERIC DISPUTE on how many famine years the dream should have produced — R. Yehuda fourteen (what Pharaoh SAW), R. Neḥemya twenty-eight (adding what he SAID to Joseph), the Rabbis forty-two (adding Joseph's repetition back) — against R. Yosei ben Ḥanina: the famine actually lasted TWO years and ceased when Jacob descended, returning only in Ezekiel's day (Ezekiel 29:12) [dual-track; the seven-year term the unit's ops carry is itself disputed in the chain] |
+| 8 | Bereshit Rabbah 90:1 | enrichment | the Song of Songs 6:9 typology — the faultless dove Abraham, the only one Isaac, the pure one Jacob, the girls the tribes, the queens Joseph — mounted on OUR 41:38 ("can we find a man like this"); no ops, and see row 15 for its duplicate seat |
+| 9 | Bereshit Rabbah 90:2 | **material** | F — A READING RULE DERIVED FROM PHARAOH'S OWN SPEECH: Reish Lakish holds that two Torah passages are learned from the wicked Pharaoh's wording at OUR 41:40 — the restrictive particle ‹רַק› ("rak," only) caps what precedes it, so "you shall be ONLY above" (Deuteronomy 28:13) means God's greatness stays above Israel's, and "you shall be holy" (Leviticus 19:2) means His sanctity stays above theirs, exactly as Pharaoh's "only the throne" keeps his greatness above Joseph's; with the a-fortiori from the "I" of flesh and blood ("I am Pharaoh," 41:44 — and Joseph received all that honor) to the "I" of the Holy One [a particle rule and an inference form sourced from this unit's verse — a standing-rules-table candidate] |
+| 10 | Bereshit Rabbah 90:3 | **material** | F — THE SIX-ROW REPAYMENT TABLE (Rabban Shimon ben Gamliel), the exact mirror of gen_60's three-slanders-three-repayments: the mouth that did not kiss in transgression is repaid "at your word shall my people be fed" (41:40); the body that did not touch, the linen garments; the neck that did not bend, the gold chain; the hands that did not grope, the signet ring; the feet that did not stride, the chariot; the thought that did not think, called wisdom [limb by limb, the Potiphar refusal of gen_62 paid out in this block's ink]; the ‹אַבְרֵךְ› ("avrekh") cry decoded as ‹אָב› ("av," great/father) in wisdom + ‹רַךְ› ("rakh," tender) in years, against Nebuchadnezzar's title read as foolish-and-elder; and "hand… foot" at 41:44 as instruments of the hand (weapons) and of the foot (a horse) — the reading Onkelos O5 writes in |
+| 11 | Bereshit Rabbah 90:5 | **material** | F — the storage mechanism at OUR 41:47-49: ‹לִקְמָצִים› ("likmatzim," by handfuls) read from reaping straight to the mill and as savings; the STORAGE LAW that each land preserves its own produce, so the field's grain is stored in its own city (41:48 read as a rule, with Tiberias and Tzippori as the worked example), R. Neḥemya's dust-and-ashes preservative, and the blessing that rests in the storehouses themselves |
+| 12 | Bereshit Rabbah 90:6 | **material** | F — INK-ADJACENT PAIR at OUR 41:53-54: the plenty years "were completed" ‹וַתִּכְלֶינָה› ("vatikhlena") read as emerging whole, against the famine years that "began" ‹וַתְּחִלֶּינָה› ("vateḥilena") read as entering already ill — hunger on the first day though they had eaten on the last [the seam between the two seven-year terms priced at the verb]; "famine in ALL lands" counted as THREE (Phoenicia, Arabia, Philistia); and the CIRCUMCISION CONDITION on the grain — R. Abba bar Kahana: "what he says to you, do" (41:55) means he compelled them to circumcise; R. Shmuel bar Naḥman proves it from the extra letter heh in "you have kept us alive" (47:25), read as life in this world and the next [numeric + ink claims, both opened] |
+| 13 | Bereshit Rabbah 91:5 | **material** | F — Proverbs 11:26 mapped onto OUR 41:55-56: the grain-withholder the nation curses is PHARAOH, the provider blessed on the head is JOSEPH; the full circumcision exchange staged (Joseph: my God does not sustain the uncircumcised; the people to Pharaoh; Pharaoh's rebuke that they were warned through seven years of plenty and stored nothing, and their answer that what they stored rotted — "if he decrees on grain and it rots, perhaps he will decree on us"); and the ink reading of "the famine was on the FACE of all the earth" (41:56) — it began with the WEALTHY, since only the moneyed have a face to show [the famine's order of arrival read off one word] |
+| 14 | Bereshit Rabbah 91:6 | **material** | F — the block's forward engine (its verses run into gen_65, which credits it in-sitting): "Jacob SAW there was grain in Egypt" though he was not there — because from the day Joseph was taken THE DIVINE SPIRIT LEFT HIM, and he would see without seeing, hear without hearing [the prophetic faculty as a state the machine must carry from gen_60 forward]; ‹שֶׁבֶר› ("shever," grain) re-read as ‹סֵבֶר› ("sever," hope) — his hope was in Egypt, and that hope was Joseph; ‹רְדוּ› ("redu," go down) as a prophecy of the descent AND its numeric value 210, the years of the bondage; the evil-eye instruction not to enter by one gate; and Joseph's REGISTRY apparatus — every buyer's name and father's name written at the gates, the notes brought at evening, all storehouses shut but one, the seventy strong men, and the brothers found in the harlots' market where they searched for a brother "fair of form"; Simeon taken because HE pushed Joseph into the pit and separated from Levi lest the pair conspire [the sale of gen_60 audited and repaid, name by name] |
+| 15 | Bereshit Rabbah 94:1 | duplicate | terse — the same Song of Songs 6:9 typology as row 8, cited here because it quotes OUR 41:38; its home verse is Genesis 45:16 (gen_68's span, read at Vayigash) |
+
+## ONKELOS TRACK (57 verses, Genesis 41:1-57)
+| Verses | Verdict | Note |
+|---|---|---|
+| O1 · 41:16 | **material** | "not by me — God will answer Pharaoh's peace" → "NOT FROM MY WISDOM; from BEFORE the LORD ‹מִן קֳדָם› ("min kodam") let an answer be given" — the buffer both names the disclaimed faculty (wisdom) and adds the reverence formula [the same reading the chain gives at row 7: the greatness attributed to its Owner — witnessed in translation and in midrash independently] |
+| O2 · 41:38 | **material** | Pharaoh's "a man in whom is the spirit of God" → "in whom is THE SPIRIT OF PROPHECY from before the LORD" — the Egyptian king's phrase resolved into a specific gift [the buffer decides what the spirit is; the chain at row 8 reads the same verse only as praise] |
+| O3 · 41:43 | **material** | the untranslated cry ‹אַבְרֵךְ› ("avrekh") → "THIS IS THE FATHER OF/TO THE KING ‹דֵּין אַבָּא לְמַלְכָּא›" — Onkelos DECIDES the crux as a title of office, a THIRD reading standing beside row 10's great-in-wisdom-tender-in-years [dual-track: the machine diffs, the chain disputes, and the received translation votes] |
+| O4 · 41:45, 41:50 | **material** | the Egyptian name ‹צָפְנַת פַּעְנֵחַ› ("Tzafenat Paneaḥ") is TRANSLATED, not carried over: "the man to whom hidden things are revealed" [the buffer refuses a foreign name and states the office instead — the partner of credited 90:4's letter-table]; and Poti Phera's title ‹כֹּהֵן› ("kohen," priest) rendered ‹רַבָּא› ("rabba," chief) at both seats — the priesthood of On withheld from the idolatrous cult |
+| O5 · 41:44 | **material** | "no man shall lift his hand or his foot" → "no man shall raise his hand TO TAKE UP A WEAPON or his foot TO RIDE UPON A HORSE," and "without you" → "without YOUR WORD ‹מֵימְרָךְ› ("memrakh")" — the idiom's two limbs given their concrete instruments, exactly as row 10 reads them [chain-witnessed both ways], and Joseph's own word governing the realm as it governed the prison in gen_62's O3 |
+| O6 · 41:47 | **material** | "the earth produced by handfuls" → "THE INHABITANTS OF THE LAND STORED UP grain for storehouses" — subject and sense both moved: a human act of storage, not the ground's yield [a genuine semantic divergence from row 11's handful-to-mill reading, and the one place this chapter's plenty is described as administration rather than abundance] |
+| O7 · 41:40 | context+ | "only the throne will I be GREATER than you" → "more HONORED ‹יַקִּיר› ("yakkir") than you, by the throne OF THIS KINGDOM" — the comparison narrowed to honor and to office, which is precisely the restriction row 9 builds its particle rule on |
+| O8 · 41:8, 41:6-7, 41:23-24, 41:27 | context+ | "his spirit was troubled" → "his spirit was BEATEN ‹וּמִטַּרְפָּא› ("mittarpa")"; and the blighted ears rendered "SMITTEN ‹לָקְיָן› ("lakyan") and BEATEN ‹שְׁקִיפָן› ("shekifan") by the east wind" at every seat — the dream's damage vocabulary made physical and kept uniform |
+| O9 · 41:35-36, 41:48-49 | context+ | "food ‹אֹכֶל› ("okhel")" → "GRAIN ‹עִיבוּרָא› ("ibura")" throughout the storage program, and the deposit of 41:36 → "grain STORED AWAY ‹גָּנִיז› ("ganiz") for the land" — the buffer specifies the commodity the ops move |
+| O10 · 41:52, 41:32, 41:14 | context+ | "the land of my affliction" → "the land of my SERVITUDE ‹שִׁעְבּוּדִי›"; "the thing is established BY God" → "FROM BEFORE the LORD"; "he shaved" → "he TRIMMED HIS HAIR ‹וְסַפַּר›" |
+| O11 · 41:1-5, 41:9-13, 41:15, 41:17-22, 41:25-31, 41:33-34, 41:37, 41:39, 41:41-42, 41:46, 41:51, 41:53-57 | context | buffer-consistent: the two dreams, the butler's speech, the interpretation, the appointment, the years of plenty and famine, and the world coming to buy, rendered plain (the Nile as "the river," the magicians as "wizards," "all the earth" at 41:57 read as its INHABITANTS ‹דָּיְרֵי›) |
+
+**Distribution (fresh):** 12 material / 1 enrichment / 2 duplicate.
+**Onkelos:** 6 delta rows material, 5 grouped context+/context rows
+over 57 verses. **Credits:** 13, all quick-looked, five of them
+(34:7, 79:5, 87:6, 89:2-4, 90:4) landing new seats on this block's ink.
+
+**read: 85 of 85 — COMPLETE** (15 fresh + 13 credits + 57 Onkelos)
+
+**Amendment candidates (rev 3 / stamp-time):** the abstinence-in-famine
+law seated on 41:50 (credit 34:7 — a law resting on this unit's own
+ink); the restrictive-particle rule and its a-fortiori derived from
+Pharaoh's speech (row 9 — standing-rules-table candidate); the
+dreams-follow-the-mouth rule with R. Abahu's denial carried as dispute
+(row 6); the six-row limb-by-limb repayment table (row 10) closing
+gen_62's refusal; the famine-years count as a four-way numeric dispute
+(row 7); the one-tav/two-tav spelling contrast against Daniel 2:1
+(row 3 — ink); the three-lands count and the extra-heh proof (row 12);
+the avrekh crux as a three-way standoff (row 10 vs O3); the Divine
+Spirit's departure from Jacob as a carried state (row 14); Onkelos
+translating the Egyptian name and withholding the priestly title (O4).
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition. The sweep records its Onkelos track in a compact
+row form ("O1 · 41:1"), which the unit-level cite validator cannot
+match: a cite is valid only when the literal source string appears in a
+triage ledger. This block's Onkelos verses are therefore listed here in
+citable form, so the derivation may cite the translation it actually
+read. No verdict is changed and no row is rewritten — this is a naming
+key for the Onkelos rows above.
+
+Onkelos Genesis 41:1, Onkelos Genesis 41:2, Onkelos Genesis 41:3, Onkelos Genesis 41:4, Onkelos Genesis 41:5, Onkelos Genesis 41:6, Onkelos Genesis 41:7, Onkelos Genesis 41:8, Onkelos Genesis 41:9, Onkelos Genesis 41:10, Onkelos Genesis 41:11, Onkelos Genesis 41:12, Onkelos Genesis 41:13, Onkelos Genesis 41:14, Onkelos Genesis 41:15, Onkelos Genesis 41:16, Onkelos Genesis 41:17, Onkelos Genesis 41:18, Onkelos Genesis 41:19, Onkelos Genesis 41:20, Onkelos Genesis 41:21, Onkelos Genesis 41:22, Onkelos Genesis 41:23, Onkelos Genesis 41:24, Onkelos Genesis 41:25, Onkelos Genesis 41:26, Onkelos Genesis 41:27, Onkelos Genesis 41:28, Onkelos Genesis 41:29, Onkelos Genesis 41:30, Onkelos Genesis 41:31, Onkelos Genesis 41:32, Onkelos Genesis 41:33, Onkelos Genesis 41:34, Onkelos Genesis 41:35, Onkelos Genesis 41:36, Onkelos Genesis 41:37, Onkelos Genesis 41:38, Onkelos Genesis 41:39, Onkelos Genesis 41:40, Onkelos Genesis 41:41, Onkelos Genesis 41:42, Onkelos Genesis 41:43, Onkelos Genesis 41:44, Onkelos Genesis 41:45, Onkelos Genesis 41:46, Onkelos Genesis 41:47, Onkelos Genesis 41:48, Onkelos Genesis 41:49, Onkelos Genesis 41:50, Onkelos Genesis 41:51, Onkelos Genesis 41:52, Onkelos Genesis 41:53, Onkelos Genesis 41:54, Onkelos Genesis 41:55, Onkelos Genesis 41:56, Onkelos Genesis 41:57.

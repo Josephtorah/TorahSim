@@ -8,7 +8,7 @@ each block still gets its own ledger.
 
 - enumerated: 2213 distinct linked sources
 - declared: 66 = 38 chain primaries + 28 Onkelos verses
-- credited (standing verdicts): 8 · FRESH TO READ: 30
+- credited (standing verdicts): 17 · FRESH TO READ: 21
 - outside declared scope (open narrowing, per the standing default): 2147
 
 | # | source | status |
@@ -18,16 +18,16 @@ each block still gets its own ledger.
 | 3 | Bereshit Rabbah 40:6 | CREDIT — material at gen_28_egypt_descent |
 | 4 | Bereshit Rabbah 64:2 | CREDIT — dup-of at gen_11_sentences_exile |
 | 5 | Bereshit Rabbah 79:1 | CREDIT — material at gen_48_bethel_ladder_vow |
-| 6 | Bereshit Rabbah 90:1 | fresh |
-| 7 | Bereshit Rabbah 93:10 | fresh |
-| 8 | Bereshit Rabbah 93:11 | fresh |
-| 9 | Bereshit Rabbah 93:12 | fresh |
-| 10 | Bereshit Rabbah 93:2 | fresh |
+| 6 | Bereshit Rabbah 90:1 | CREDIT — enrichment at gen_64_pharaoh_dreams_rise |
+| 7 | Bereshit Rabbah 93:10 | CREDIT — material at gen_68_i_am_yosef |
+| 8 | Bereshit Rabbah 93:11 | CREDIT — material at gen_68_i_am_yosef |
+| 9 | Bereshit Rabbah 93:12 | CREDIT — material at gen_68_i_am_yosef |
+| 10 | Bereshit Rabbah 93:2 | CREDIT — material at gen_66_second_descent |
 | 11 | Bereshit Rabbah 93:8 | CREDIT — material at gen_60_dreamer_sold |
-| 12 | Bereshit Rabbah 93:9 | fresh |
-| 13 | Bereshit Rabbah 94:1 | fresh |
-| 14 | Bereshit Rabbah 94:2 | fresh |
-| 15 | Bereshit Rabbah 94:3 | fresh |
+| 12 | Bereshit Rabbah 93:9 | CREDIT — material at gen_67_cup_and_surety |
+| 13 | Bereshit Rabbah 94:1 | CREDIT — UNRECOGNIZED at gen_64_pharaoh_dreams_rise |
+| 14 | Bereshit Rabbah 94:2 | CREDIT — material at gen_68_i_am_yosef |
+| 15 | Bereshit Rabbah 94:3 | CREDIT — material at gen_68_i_am_yosef |
 | 16 | Bereshit Rabbah 95:3 | CREDIT — material at gen_34_mamre_laugh_plea |
 | 17 | Chagigah 4b:8 | fresh |
 | 18 | Jerusalem Talmud Eruvin 3:1:8 | fresh |
@@ -57,7 +57,7 @@ each block still gets its own ledger.
 
 - enumerated: 2296 distinct linked sources
 - declared: 75 = 41 chain primaries + 34 Onkelos verses
-- credited (standing verdicts): 14 · FRESH TO READ: 27
+- credited (standing verdicts): 20 · FRESH TO READ: 21
 - outside declared scope (open narrowing, per the standing default): 2221
 
 | # | source | status |
@@ -68,7 +68,7 @@ each block still gets its own ledger.
 | 4 | Bava Batra 143b:6 | fresh |
 | 5 | Berakhot 13a:12 | fresh |
 | 6 | Berakhot 56b:19 | CREDIT — no-bearing at gen_28_egypt_descent |
-| 7 | Bereshit Rabbah 100:5 | fresh |
+| 7 | Bereshit Rabbah 100:5 | CREDIT — material at gen_69_descent_seventy |
 | 8 | Bereshit Rabbah 55:8 | CREDIT — material at gen_38_moriah_binding_oath |
 | 9 | Bereshit Rabbah 61:4 | CREDIT — no-bearing at gen_12_cain_abel |
 | 10 | Bereshit Rabbah 73:2 | CREDIT — material at gen_51_opened_womb_twelve_names |
@@ -76,13 +76,13 @@ each block still gets its own ledger.
 | 12 | Bereshit Rabbah 80:11 | CREDIT — material at gen_57_deceit_at_the_gate |
 | 13 | Bereshit Rabbah 94:4 | CREDIT — material at gen_37_laughter_wilderness_oath |
 | 14 | Bereshit Rabbah 94:5 | CREDIT — enrichment at gen_33_shaddai_covenant_flesh |
-| 15 | Bereshit Rabbah 94:6 | fresh |
-| 16 | Bereshit Rabbah 94:7 | fresh |
+| 15 | Bereshit Rabbah 94:6 | CREDIT — material at gen_69_descent_seventy |
+| 16 | Bereshit Rabbah 94:7 | CREDIT — enrichment at gen_69_descent_seventy |
 | 17 | Bereshit Rabbah 94:8 | CREDIT — material at gen_60_dreamer_sold |
-| 18 | Bereshit Rabbah 94:9 | fresh |
-| 19 | Bereshit Rabbah 95:1 | fresh |
+| 18 | Bereshit Rabbah 94:9 | CREDIT — material at gen_69_descent_seventy |
+| 19 | Bereshit Rabbah 95:1 | CREDIT — enrichment at gen_65_first_descent |
 | 20 | Bereshit Rabbah 95:3 | CREDIT — material at gen_34_mamre_laugh_plea |
-| 21 | Bereshit Rabbah 96:5 | fresh · also in gen_70_goshen_and_the_fifth |
+| 21 | Bereshit Rabbah 96:5 | CREDIT — material at gen_69_descent_seventy |
 | 22 | Chullin 101b:9 | fresh |
 | 23 | Jerusalem Talmud Sotah 1:10:4 | fresh |
 | 24 | Jerusalem Talmud Sotah 1:10:5 | fresh |
@@ -109,7 +109,7 @@ each block still gets its own ledger.
 
 - enumerated: 2785 distinct linked sources
 - declared: 88 = 57 chain primaries + 31 Onkelos verses
-- credited (standing verdicts): 11 · FRESH TO READ: 46
+- credited (standing verdicts): 17 · FRESH TO READ: 40
 - NOTE: span crosses a parashah boundary — read both portions' runs
 - outside declared scope (open narrowing, per the standing default): 2697
 
@@ -124,13 +124,13 @@ each block still gets its own ledger.
 | 7 | Bereshit Rabbah 71:2 | CREDIT — material at gen_51_opened_womb_twelve_names |
 | 8 | Bereshit Rabbah 86:2 | CREDIT — material at gen_31_covenant_pieces |
 | 9 | Bereshit Rabbah 86:3 | CREDIT — enrichment at gen_23_vineyard_curse |
-| 10 | Bereshit Rabbah 90:6 | fresh |
-| 11 | Bereshit Rabbah 95:4 | fresh |
-| 12 | Bereshit Rabbah 96:1 | fresh |
+| 10 | Bereshit Rabbah 90:6 | CREDIT — material at gen_64_pharaoh_dreams_rise |
+| 11 | Bereshit Rabbah 95:4 | CREDIT — material at gen_70_goshen_and_the_fifth |
+| 12 | Bereshit Rabbah 96:1 | CREDIT — material at gen_70_goshen_and_the_fifth |
 | 13 | Bereshit Rabbah 96:2 | CREDIT — enrichment at gen_31_covenant_pieces |
-| 14 | Bereshit Rabbah 96:3 | fresh |
-| 15 | Bereshit Rabbah 96:4 | fresh |
-| 16 | Bereshit Rabbah 96:5 | fresh · also in gen_69_descent_seventy |
+| 14 | Bereshit Rabbah 96:3 | CREDIT — material at gen_70_goshen_and_the_fifth |
+| 15 | Bereshit Rabbah 96:4 | CREDIT — material at gen_70_goshen_and_the_fifth |
+| 16 | Bereshit Rabbah 96:5 | CREDIT — material at gen_69_descent_seventy |
 | 17 | Chullin 60b:15 | fresh |
 | 18 | Jerusalem Talmud Challah 1:1:2 | fresh |
 | 19 | Jerusalem Talmud Ketubot 12:3:11 | fresh |

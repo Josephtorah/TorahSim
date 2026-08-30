@@ -8,7 +8,7 @@ each block still gets its own ledger.
 
 - enumerated: 2448 distinct linked sources
 - declared: 77 = 55 chain primaries + 22 Onkelos verses
-- credited (standing verdicts): 15 · FRESH TO READ: 40
+- credited (standing verdicts): 18 · FRESH TO READ: 37
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, Maariv Service for the Conclusion of Shabbos, Veyiten Lecha 58 · Shabbat Siddur Sefard Linear, Prayer Before Retiring at Night 204
 - outside declared scope (open narrowing, per the standing default): 2369
 
@@ -30,11 +30,11 @@ each block still gets its own ledger.
 | 14 | Bereshit Rabbah 70:7 | CREDIT — material at gen_48_bethel_ladder_vow |
 | 15 | Bereshit Rabbah 80:10 | CREDIT — material at gen_57_deceit_at_the_gate |
 | 16 | Bereshit Rabbah 82:4 | CREDIT — material at gen_58_israel_written_three_deaths |
-| 17 | Bereshit Rabbah 97:1 | fresh |
-| 18 | Bereshit Rabbah 97:2 | fresh |
+| 17 | Bereshit Rabbah 97:1 | CREDIT — material at gen_71_crossed_hands |
+| 18 | Bereshit Rabbah 97:2 | CREDIT — material at gen_71_crossed_hands |
 | 19 | Bereshit Rabbah 97:3 | CREDIT — material at gen_11_sentences_exile |
 | 20 | Bereshit Rabbah 97:4 | CREDIT — material at gen_60_dreamer_sold |
-| 21 | Bereshit Rabbah 97:5 | fresh |
+| 21 | Bereshit Rabbah 97:5 | CREDIT — material at gen_71_crossed_hands |
 | 22 | Bereshit Rabbah 97:6 | CREDIT — material at gen_57_deceit_at_the_gate |
 | 23 | Eikhah Rabbah, Petichta 33 | fresh |
 | 24 | Jerusalem Talmud Berakhot 4:3:5 | fresh |
@@ -75,7 +75,7 @@ each block still gets its own ledger.
 
 - enumerated: 6024 distinct linked sources
 - declared: 165 = 132 chain primaries + 33 Onkelos verses
-- credited (standing verdicts): 29 · FRESH TO READ: 103
+- credited (standing verdicts): 54 · FRESH TO READ: 78
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, Maariv Service for the Conclusion of Shabbos, Veyiten Lecha 31 · Shabbat Siddur Sefard Linear, Prayer Before Retiring at Night 241 · Shabbat Siddur Sefard Linear, Prayers for Yom Tov, Musaf for Yom Tov, Prayer for Rain 77
 - outside declared scope (open narrowing, per the standing default): 5856
 
@@ -88,9 +88,9 @@ each block still gets its own ledger.
 | 5 | Berakhot 20a:7 | fresh |
 | 6 | Berakhot 55b:12 | fresh · also in gen_71_crossed_hands |
 | 7 | Berakhot 57a:6 | fresh |
-| 8 | Bereshit Rabbah 100:1 | fresh · also in gen_73_coffin_in_egypt |
+| 8 | Bereshit Rabbah 100:1 | CREDIT — material at gen_72_testament_twelve |
 | 9 | Bereshit Rabbah 100:12 | CREDIT — material at gen_47_grudge_flight_paddan_send |
-| 10 | Bereshit Rabbah 100:2 | fresh · also in gen_73_coffin_in_egypt |
+| 10 | Bereshit Rabbah 100:2 | CREDIT — material at gen_72_testament_twelve |
 | 11 | Bereshit Rabbah 33:3 | CREDIT — enrichment at gen_15_flood_prologue |
 | 12 | Bereshit Rabbah 47:5 | CREDIT — material at gen_32_hagar_angel |
 | 13 | Bereshit Rabbah 66:4 | CREDIT — material at gen_42_abraham_end_ishmael_line |
@@ -103,40 +103,40 @@ each block still gets its own ledger.
 | 20 | Bereshit Rabbah 87:6 | CREDIT — material at gen_58_israel_written_three_deaths |
 | 21 | Bereshit Rabbah 87:7 | CREDIT — material at gen_62_potifar_house |
 | 22 | Bereshit Rabbah 90:4 | CREDIT — material at gen_56_blessing_returned_first_altar |
-| 23 | Bereshit Rabbah 93:7 | fresh |
-| 24 | Bereshit Rabbah 95:1 | fresh |
-| 25 | Bereshit Rabbah 98:1 | fresh |
-| 26 | Bereshit Rabbah 98:10 | fresh |
-| 27 | Bereshit Rabbah 98:11 | fresh |
-| 28 | Bereshit Rabbah 98:12 | fresh |
-| 29 | Bereshit Rabbah 98:13 | fresh |
-| 30 | Bereshit Rabbah 98:14 | fresh |
+| 23 | Bereshit Rabbah 93:7 | CREDIT — material at gen_67_cup_and_surety |
+| 24 | Bereshit Rabbah 95:1 | CREDIT — enrichment at gen_65_first_descent |
+| 25 | Bereshit Rabbah 98:1 | CREDIT — material at gen_72_testament_twelve |
+| 26 | Bereshit Rabbah 98:10 | CREDIT — material at gen_72_testament_twelve |
+| 27 | Bereshit Rabbah 98:11 | CREDIT — material at gen_72_testament_twelve |
+| 28 | Bereshit Rabbah 98:12 | CREDIT — material at gen_72_testament_twelve |
+| 29 | Bereshit Rabbah 98:13 | CREDIT — material at gen_72_testament_twelve |
+| 30 | Bereshit Rabbah 98:14 | CREDIT — material at gen_72_testament_twelve |
 | 31 | Bereshit Rabbah 98:15 | CREDIT — material at gen_42_abraham_end_ishmael_line |
-| 32 | Bereshit Rabbah 98:16 | fresh |
-| 33 | Bereshit Rabbah 98:17 | fresh |
+| 32 | Bereshit Rabbah 98:16 | CREDIT — material at gen_72_testament_twelve |
+| 33 | Bereshit Rabbah 98:17 | CREDIT — material at gen_72_testament_twelve |
 | 34 | Bereshit Rabbah 98:18 | CREDIT — material at gen_56_blessing_returned_first_altar |
-| 35 | Bereshit Rabbah 98:19 | fresh |
-| 36 | Bereshit Rabbah 98:2 | fresh |
-| 37 | Bereshit Rabbah 98:20 | fresh |
-| 38 | Bereshit Rabbah 98:3 | fresh |
+| 35 | Bereshit Rabbah 98:19 | CREDIT — material at gen_72_testament_twelve |
+| 36 | Bereshit Rabbah 98:2 | CREDIT — material at gen_72_testament_twelve |
+| 37 | Bereshit Rabbah 98:20 | CREDIT — material at gen_66_second_descent |
+| 38 | Bereshit Rabbah 98:3 | CREDIT — material at gen_72_testament_twelve |
 | 39 | Bereshit Rabbah 98:4 | CREDIT — enrichment at gen_46_isaac_blessing_demandee_mismatch |
-| 40 | Bereshit Rabbah 98:5 | fresh |
+| 40 | Bereshit Rabbah 98:5 | CREDIT — material at gen_72_testament_twelve |
 | 41 | Bereshit Rabbah 98:6 | CREDIT — material at gen_46_isaac_blessing_demandee_mismatch |
-| 42 | Bereshit Rabbah 98:7 | fresh |
-| 43 | Bereshit Rabbah 98:8 | fresh |
-| 44 | Bereshit Rabbah 98:9 | fresh |
-| 45 | Bereshit Rabbah 99:1 | fresh |
+| 42 | Bereshit Rabbah 98:7 | CREDIT — material at gen_72_testament_twelve |
+| 43 | Bereshit Rabbah 98:8 | CREDIT — material at gen_72_testament_twelve |
+| 44 | Bereshit Rabbah 98:9 | CREDIT — material at gen_72_testament_twelve |
+| 45 | Bereshit Rabbah 99:1 | CREDIT — material at gen_72_testament_twelve |
 | 46 | Bereshit Rabbah 99:10 | CREDIT — material at gen_51_opened_womb_twelve_names |
-| 47 | Bereshit Rabbah 99:11 | fresh |
+| 47 | Bereshit Rabbah 99:11 | CREDIT — material at gen_72_testament_twelve |
 | 48 | Bereshit Rabbah 99:12 | CREDIT — material at gen_51_opened_womb_twelve_names |
 | 49 | Bereshit Rabbah 99:2 | CREDIT — material at gen_47_grudge_flight_paddan_send |
-| 50 | Bereshit Rabbah 99:3 | fresh |
-| 51 | Bereshit Rabbah 99:4 | fresh |
+| 50 | Bereshit Rabbah 99:3 | CREDIT — material at gen_72_testament_twelve |
+| 51 | Bereshit Rabbah 99:4 | CREDIT — material at gen_72_testament_twelve |
 | 52 | Bereshit Rabbah 99:5 | CREDIT — material at gen_46_isaac_blessing_demandee_mismatch |
 | 53 | Bereshit Rabbah 99:6 | CREDIT — material at gen_51_opened_womb_twelve_names |
 | 54 | Bereshit Rabbah 99:7 | CREDIT — material at gen_46_isaac_blessing_demandee_mismatch |
 | 55 | Bereshit Rabbah 99:8 | fresh |
-| 56 | Bereshit Rabbah 99:9 | fresh |
+| 56 | Bereshit Rabbah 99:9 | CREDIT — material at gen_72_testament_twelve |
 | 57 | Eikhah Rabbah 1:51 | fresh |
 | 58 | Jerusalem Talmud Avodah Zarah 2:7:9 | CREDIT — dup-of at gen_12_cain_abel |
 | 59 | Jerusalem Talmud Gittin 1:1:4 | fresh |
@@ -219,24 +219,24 @@ each block still gets its own ledger.
 
 - enumerated: 1822 distinct linked sources
 - declared: 85 = 59 chain primaries + 26 Onkelos verses
-- credited (standing verdicts): 9 · FRESH TO READ: 50
+- credited (standing verdicts): 19 · FRESH TO READ: 40
 - outside declared scope (open narrowing, per the standing default): 1737
 
 | # | source | status |
 |---|--------|--------|
-| 1 | Bereshit Rabbah 100:1 | fresh · also in gen_72_testament_twelve |
-| 2 | Bereshit Rabbah 100:10 | fresh |
-| 3 | Bereshit Rabbah 100:11 | fresh |
+| 1 | Bereshit Rabbah 100:1 | CREDIT — material at gen_72_testament_twelve |
+| 2 | Bereshit Rabbah 100:10 | CREDIT — material at gen_73_coffin_in_egypt |
+| 3 | Bereshit Rabbah 100:11 | CREDIT — material at gen_73_coffin_in_egypt |
 | 4 | Bereshit Rabbah 100:12 | CREDIT — material at gen_47_grudge_flight_paddan_send |
 | 5 | Bereshit Rabbah 100:13 | CREDIT — no-bearing at gen_31_covenant_pieces |
-| 6 | Bereshit Rabbah 100:2 | fresh · also in gen_72_testament_twelve |
-| 7 | Bereshit Rabbah 100:3 | fresh |
-| 8 | Bereshit Rabbah 100:4 | fresh |
-| 9 | Bereshit Rabbah 100:5 | fresh |
-| 10 | Bereshit Rabbah 100:6 | fresh |
+| 6 | Bereshit Rabbah 100:2 | CREDIT — material at gen_72_testament_twelve |
+| 7 | Bereshit Rabbah 100:3 | CREDIT — material at gen_66_second_descent |
+| 8 | Bereshit Rabbah 100:4 | CREDIT — material at gen_73_coffin_in_egypt |
+| 9 | Bereshit Rabbah 100:5 | CREDIT — material at gen_69_descent_seventy |
+| 10 | Bereshit Rabbah 100:6 | CREDIT — material at gen_73_coffin_in_egypt |
 | 11 | Bereshit Rabbah 100:7 | CREDIT — material at gen_07_completion_sanctity |
-| 12 | Bereshit Rabbah 100:8 | fresh |
-| 13 | Bereshit Rabbah 100:9 | fresh |
+| 12 | Bereshit Rabbah 100:8 | CREDIT — material at gen_73_coffin_in_egypt |
+| 13 | Bereshit Rabbah 100:9 | CREDIT — material at gen_73_coffin_in_egypt |
 | 14 | Bereshit Rabbah 84:6 | CREDIT — no-bearing at gen_24_nations_table |
 | 15 | Chullin 92a:17 | fresh |
 | 16 | Jerusalem Talmud Ketubot 1:1:12 | fresh |

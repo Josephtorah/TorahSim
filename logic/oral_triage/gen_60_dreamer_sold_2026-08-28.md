@@ -96,3 +96,25 @@ the butler's cup (row 15 — owned here, seats at gen_63); the
 begins-and-stops law bridging into gen_61 (row 14); the dots over
 et (credit 84:13); Reuben's repentance patent (credit 84:19); the
 wise-son and surely-killed duals (O1/O2).
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation pilot)
+Append-only addition. The Onkelos track above is written in the sweep's
+compact row form ("O1 · 37:3"), which the unit-level cite validator
+cannot match: a cite is valid only if the literal source string appears
+in a triage ledger. The verses of this block's Onkelos track are
+therefore listed here in citable form, so the derivation may cite the
+translation it actually read. No verdict is changed and no row is
+rewritten — this is a naming key for rows O1-O9 above.
+
+Onkelos Genesis 37:1, Onkelos Genesis 37:2, Onkelos Genesis 37:3,
+Onkelos Genesis 37:4, Onkelos Genesis 37:5, Onkelos Genesis 37:6,
+Onkelos Genesis 37:7, Onkelos Genesis 37:8, Onkelos Genesis 37:9,
+Onkelos Genesis 37:10, Onkelos Genesis 37:11, Onkelos Genesis 37:12,
+Onkelos Genesis 37:13, Onkelos Genesis 37:14, Onkelos Genesis 37:15,
+Onkelos Genesis 37:16, Onkelos Genesis 37:17, Onkelos Genesis 37:18,
+Onkelos Genesis 37:19, Onkelos Genesis 37:20, Onkelos Genesis 37:21,
+Onkelos Genesis 37:22, Onkelos Genesis 37:23, Onkelos Genesis 37:24,
+Onkelos Genesis 37:25, Onkelos Genesis 37:26, Onkelos Genesis 37:27,
+Onkelos Genesis 37:28, Onkelos Genesis 37:29, Onkelos Genesis 37:30,
+Onkelos Genesis 37:31, Onkelos Genesis 37:32, Onkelos Genesis 37:33,
+Onkelos Genesis 37:34, Onkelos Genesis 37:35, Onkelos Genesis 37:36.

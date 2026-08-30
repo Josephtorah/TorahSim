@@ -34,7 +34,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 .arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
        border-radius:8px; padding:.4rem .7rem; }
 .arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
-</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_62_potifar_house?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Potiphar&#x27;s house: the refusal on the chain (39:1-23) <span class='badge frozen'>MODEL · REV 2 · GATES GREEN</span></h1>
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_62_potifar_house?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Potiphar&#x27;s house: the refusal on the chain (39:1-23) <span class='badge frozen'>MODEL · REV 3 · GATES GREEN</span></h1>
 <div class="meta">unit <b>gen_62_potifar_house</b> · Genesis 39:1-23 · derive logic_derived_v1 · phase FWD-3</div>
 <div class="meta"><a href="../#Gen/39/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
 <p><span class="he">וַיְמָאֵן וַיֹּאמֶר אֶל־אֵשֶׁת אֲדֹנָיו</span> · <i>va-yemaen va-yomer el-eshet adonav</i> · &#x27;and he refused, and said to his master&#x27;s wife&#x27;</p>
@@ -68,6 +68,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(YHWH_et_yosef_ish_matzliach, t0)</span><br><span class="gloss">= HOLDS(the-LORD-yosef-man-matzliach, t0)</span><br>THE REFRAIN. va-yehi YHWH et yosef va-yehi ish matzliach — the prosper-word opens and closes the chapter (39:2, 3, 23): the machine&#x27;s only stable fact across the fall.
 </td><td><span class="he">וַיְהִי יְהוָה אֶת־יוֹסֵף וַיְהִי אִישׁ מַצְלִיחַ</span> · <i>va-yehi YHWH et-yosef va-yehi ish matzlicha</i><br><span class="gloss">= and-yehi the-LORD yosef and-yehi man matzlicha</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(accompaniment_formula, four_seat_frame)</span><br><span class="gloss">= WITNESS-READ(accompaniment-formula, four-seat-frame)</span><br>THE ACCOMPANIMENT FORMULA FRAMES THE CHAPTER [claim G62-14, machine-checked]. &quot;The LORD was with Joseph&quot; stands at 39:2 and 39:3 in the master&#x27;s house and again at 39:21 and 39:23 in the prison — two before the fall and two after, an exact frame around the accusation. The received translation renders each with its Word-as-support formula, the same idiom it uses of Jacob at 48:21 and in Joseph&#x27;s blessing at 49:25, so one vocabulary carries the accompaniment across the whole cycle.
+</td><td>—</td><td class='cite'>Onkelos Genesis 39:2</td><td>tested</td></tr>
 </table>
 <div class="meta">The refrain-word of the chapter enters: matzliach.</div>
 </div>
@@ -158,6 +160,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_en_ish_ba_bayit, t0)</span><br><span class="gloss">= HOLDS(and-en-man-in-the-bayit, t0)</span><br>THE CLEARED STAGE. ve-en ish me-anshe ha-bayit sham ba-bayit — the house-word tolls three times in the verse; melakhto (&#x27;his work&#x27;) — the same word the Sabbath rested (2:2-3) and Joseph&#x27;s only other Torah-station carried (39:11 is מלאכתו tok4 of 4, gen_07&#x27;s census closing HERE): the last his-work in the Torah is the errand into the empty house.
 </td><td><span class="he">וְאֵין אִישׁ מֵאַנְשֵׁי הַבַּיִת שָׁם בַּבָּיִת</span> · <i>ve-en ish me-anshe ha-bayit sham ba-bayit</i><br><span class="gloss">= and-en man from-anshe the-bayit there in-the-bayit</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(laasot_melakhto, errand_disputed)</span><br><span class="gloss">= WITNESS-READ(laasot-melakhto, errand-disputed)</span><br>THE EMPTY HOUSE AND THE FATHER&#x27;S IMAGE [claim G62-13]. &quot;He came into the house to do his work&quot; is read three ways in the chain — his actual accounts, an INDEED (he came for her), and &quot;no man of the household there&quot; because all had gone to the Nile festival or the theatre. The received translation votes for the first, rendering the errand as checking the account-books; the reading adds the restraint&#x27;s mechanism — he saw his father&#x27;s image and his blood cooled, the bow drawn and slackened. Carried as a recorded dispute: the errand from the grammar, the image at witness tier.
+</td><td>—</td><td class='cite'>Bereshit Rabbah 87:7, Onkelos Genesis 39:11</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The stage cleared.</div>
 </div>
@@ -240,6 +244,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yichar_apo(adonav), t0)</span><br><span class="gloss">= HOLDS(and-yichar-apo(adonav), t0)</span><br>THE ANGER ON HEARSAY. va-yichar apo — the letter never says at whom; the reading tradition splits the anger (at Joseph with his wife&#x27;s words / at the situation, knowing her — named): the machine records only the burning.
 </td><td><span class="he">עַבְדֶּךָ וַיִּחַר</span> · <i>avde-kha va-yichar</i><br><span class="gloss">= avde-kha and-yichar</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(charon_af, master_disbelief)</span><br><span class="gloss">= WITNESS-READ(charon-af, master-disbelief)</span><br>POTIPHAR&#x27;S OWN VERDICT [claim G62-15]. The reading takes the master&#x27;s anger as directed not at Joseph but at the story — &quot;I know you did not do it&quot; — and reads the committal verb as an APPOINTMENT rather than a sentence, which is why the prison-keeper hands him the house within two verses. The machine records the custody with the master&#x27;s disbelief carried beside it at witness tier, never as a text-grounded fact.
+</td><td>—</td><td class='cite'>Bereshit Rabbah 87:9</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The verdict on hearsay.</div>
 </div>
@@ -475,6 +481,10 @@ m.step(&quot;Gen.39.2&quot;)
 # Joseph and-be man push-forward”) — fact holds: the-LORD-with-Joseph-man-
 # matzliach
 m.fact(&quot;YHWH_et_yosef_ish_matzliach&quot;)
+# witness-tier presupposed read: four_seat_frame on accompaniment_formula —
+# read, not installed
+m.witness_read(&quot;accompaniment_formula&quot;, &quot;four_seat_frame&quot;,
+                cites=[&quot;Onkelos Genesis 39:2&quot;])
 
 # -------------------------- Gen.39.3 · THE_MASTER_SEES ---------------------
 # וַיַּרְא אֲדֹנָיו כִּי יְהוָה אִתּוֹ וְכֹל אֲשֶׁר־הוּא עֹשֶׂה יְהוָה
@@ -577,6 +587,10 @@ m.step(&quot;Gen.39.11&quot;)
 # from-man the-house there in-house”) — fact holds: and-there-is-not-man-
 # come/bring-house
 m.fact(&quot;ve_en_ish_ba_bayit&quot;)
+# witness-tier presupposed read: errand_disputed on laasot_melakhto — read,
+# not installed
+m.witness_read(&quot;laasot_melakhto&quot;, &quot;errand_disputed&quot;,
+                cites=[&quot;Bereshit Rabbah 87:7&quot;, &quot;Onkelos Genesis 39:11&quot;])
 
 # -------------------------- Gen.39.12 · THE_GARMENT_SEIZED -----------------
 # וַתִּתְפְּשֵׂהוּ בְּבִגְדוֹ לֵאמֹר שִׁכְבָה עִמִּי וַיַּעֲזֹב בִּגְדוֹ
@@ -668,6 +682,10 @@ m.step(&quot;Gen.39.19&quot;)
 # ‹עַבְדֶּךָ וַיִּחַר› (“servant-you/your and-glow”) — fact holds: and-glow-
 # apo(adonav)
 m.fact(&quot;va_yichar_apo(adonav)&quot;)
+# witness-tier presupposed read: master_disbelief on charon_af — read, not
+# installed
+m.witness_read(&quot;charon_af&quot;, &quot;master_disbelief&quot;,
+                cites=[&quot;Bereshit Rabbah 87:9&quot;])
 
 # -------------------------- Gen.39.20 · INTO_THE_ROUND_HOUSE ---------------
 # וַיִּקַּח אֲדֹנֵי יוֹסֵף אֹתוֹ וַיִּתְּנֵהוּ אֶל־בֵּית הַסֹּהַר מְקוֹם
@@ -731,5 +749,15 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 3
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;accompaniment_formula&#x27;, &#x27;four_seat_frame&#x27;), (&#x27;laasot_melakhto&#x27;, &#x27;errand_disputed&#x27;), (&#x27;charon_af&#x27;, &#x27;master_disbelief&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Onkelos Genesis 39:2&#x27;]
+    assert all(&#x27;four_seat_frame&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;accompaniment_formula&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 87:7&#x27;, &#x27;Onkelos Genesis 39:11&#x27;]
+    assert all(&#x27;errand_disputed&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;laasot_melakhto&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 87:9&#x27;]
+    assert all(&#x27;master_disbelief&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;charon_af&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-28 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-08-30 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

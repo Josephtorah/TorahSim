@@ -37,6 +37,10 @@ m.step("Gen.39.2")
 # Joseph and-be man push-forward”) — fact holds: the-LORD-with-Joseph-man-
 # matzliach
 m.fact("YHWH_et_yosef_ish_matzliach")
+# witness-tier presupposed read: four_seat_frame on accompaniment_formula —
+# read, not installed
+m.witness_read("accompaniment_formula", "four_seat_frame",
+                cites=["Onkelos Genesis 39:2"])
 
 # -------------------------- Gen.39.3 · THE_MASTER_SEES ---------------------
 # וַיַּרְא אֲדֹנָיו כִּי יְהוָה אִתּוֹ וְכֹל אֲשֶׁר־הוּא עֹשֶׂה יְהוָה
@@ -139,6 +143,10 @@ m.step("Gen.39.11")
 # from-man the-house there in-house”) — fact holds: and-there-is-not-man-
 # come/bring-house
 m.fact("ve_en_ish_ba_bayit")
+# witness-tier presupposed read: errand_disputed on laasot_melakhto — read,
+# not installed
+m.witness_read("laasot_melakhto", "errand_disputed",
+                cites=["Bereshit Rabbah 87:7", "Onkelos Genesis 39:11"])
 
 # -------------------------- Gen.39.12 · THE_GARMENT_SEIZED -----------------
 # וַתִּתְפְּשֵׂהוּ בְּבִגְדוֹ לֵאמֹר שִׁכְבָה עִמִּי וַיַּעֲזֹב בִּגְדוֹ
@@ -230,6 +238,10 @@ m.step("Gen.39.19")
 # ‹עַבְדֶּךָ וַיִּחַר› (“servant-you/your and-glow”) — fact holds: and-glow-
 # apo(adonav)
 m.fact("va_yichar_apo(adonav)")
+# witness-tier presupposed read: master_disbelief on charon_af — read, not
+# installed
+m.witness_read("charon_af", "master_disbelief",
+                cites=["Bereshit Rabbah 87:9"])
 
 # -------------------------- Gen.39.20 · INTO_THE_ROUND_HOUSE ---------------
 # וַיִּקַּח אֲדֹנֵי יוֹסֵף אֹתוֹ וַיִּתְּנֵהוּ אֶל־בֵּית הַסֹּהַר מְקוֹם
@@ -293,4 +305,14 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 3
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('accompaniment_formula', 'four_seat_frame'), ('laasot_melakhto', 'errand_disputed'), ('charon_af', 'master_disbelief')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Genesis 39:2']
+    assert all('four_seat_frame' not in f for f in m.WORLD["facts"])
+    assert 'accompaniment_formula' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 87:7', 'Onkelos Genesis 39:11']
+    assert all('errand_disputed' not in f for f in m.WORLD["facts"])
+    assert 'laasot_melakhto' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 87:9']
+    assert all('master_disbelief' not in f for f in m.WORLD["facts"])
+    assert 'charon_af' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

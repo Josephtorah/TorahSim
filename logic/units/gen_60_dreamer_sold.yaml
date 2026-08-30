@@ -8,8 +8,9 @@
 
 meta:
   id: "gen_60_dreamer_sold"
-  rev: 2
+  rev: 3
   changelog:
+    - "2026-08-30 rev 3: DERIVATION PILOT — first unit with its logic amended FROM its reading pass (owner order: 'start the Vayeshev derivation pilot'). Step 5: eight claims extracted from the 2026-08-28 ledger into the manifest (G60-15..G60-22; a ninth was drafted and DROPPED as a duplicate of the standing G60-07, so the id sequence skips G60-14) — four machine-checked and verifying, four interpretive at check.type manual. Step 6: eight operators added across seven steps, all in the rulebook's existing vocabulary (seven WITNESS_READ, one WITNESS_STATE — no new operator invented, so the rulebook is not versioned): the three-slanders repayment ledger at 37:2, the wise-son translation dispute at 37:3, the five-sheaf-word count at 37:7, the dream-as-instrument witness state at 37:9, the quill-logged record at 37:11, the bills-of-sale dispute and the twenty-silver law pricing at 37:28, and the bailee-defence link at 37:33; the standing lean-take operator at 37:24 now cites Bereshit Rabbah 84:16 as independent corroboration of its Masoretic reading. NEW AT DERIVATION: the doubled tearing-formula of 37:33 stands in exactly three Torah places — here, 44:28, and Exodus 22:12, the keeper's evidence exemption — so the brothers stage the very defence the bailee law later authorises (middah E7/I2), a link owed to the Exodus 22 ladder at Step 9. No verse text, tree, or morphology changed."
     - "2026-08-28 rev 2: RE-era reading pass (parashat Vayeshev sweep, 4 blocks one sitting — SIXTH RUN UNDER THE SPINE DEFAULT, owner 2026-08-27: Bereshit Rabbah + Onkelos declared, Mishnah/Talmud held for the Step 9 exam): ledger logic/oral_triage/gen_60_dreamer_sold_2026-08-28.md; ORAL_reading_pass block appended; no machine ops changed."
   title_en: "The dreamer sent, stripped, and sold (37:1-36)"
   title_he: הֲבוֹא נָבוֹא אֲנִי וְאִמְּךָ וְאַחֶיךָ
@@ -662,6 +663,20 @@ boot_steps:
       first fact is Joseph's own carrying of words.
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(dibat_ra, three_slanders_owed)"
+    en: >
+      THE REPORT OPENS A LEDGER THE NEXT TWO BLOCKS CLOSE [claim G60-17].
+      Joseph's three reports are repaid one for one on the scales of
+      Proverbs 16:11: the limb-of-a-living-animal charge repaid by the
+      slaughtered goat of 37:31; calling the handmaids' sons slaves
+      repaid by his own sale as a slave; the charge about the girls
+      repaid by his master's wife at 39:7 (gen_62's span). Recorded at
+      witness tier as a three-row obligation whose discharges land
+      outside this unit — the earliest cross-unit repayment structure in
+      the Joseph arc. Argues middah E27 (symmetry).
+    cites: ["Bereshit Rabbah 84:7"]
+    confidence: witnessed
   comment: >
     The toledot header opens on a son, not a list; the report opens the
     rift.
@@ -703,6 +718,19 @@ boot_steps:
       (37:23), dipped (37:31), sent-and-recognized (37:32-33).
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(ben_zequnim, wisdom_sense)"
+    en: >
+      THE LOVE-REASON IS DECIDED IN TRANSLATION [claim G60-22]. The
+      grammar gives "a son of his OLD AGE"; the received translation
+      renders "a WISE son," voting with R. Nechemya — that Jacob
+      transmitted to Joseph all he had received from Shem and Ever —
+      against plain chronology and against R. Yehuda's face-likeness
+      reading. Both senses stand: the age-sense from the ink, the
+      wisdom-sense read at witness tier. Carried as a recorded dispute,
+      not decided.
+    cites: ["Onkelos Genesis 37:3", "Bereshit Rabbah 84:8"]
+    confidence: witnessed
   comment: >
     The love stated, the coat made: the object the span will strip, dip,
     and send.
@@ -838,6 +866,18 @@ boot_steps:
       tav soft per MS (asserted).
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(alumah_words, count_five)"
+    en: >
+      FIVE WORDS OF ONE ROOT [claim G60-15, machine-checked]. The
+      sheaf-noun stands in the whole Torah ONLY in this verse — three
+      times bare and a fourth carrying the prefixed lamed ("to my
+      sheaf") — and the binding-verb ("binding sheaves") makes a fifth
+      word of the same three letters. The reading counts those five and
+      takes the dream's prostration as fivefold. Argues middah E10
+      (a repeated expression signifies).
+    cites: ["Bereshit Rabbah 84:10"]
+    confidence: tested
   comment: >
     The dream's content: the standing sheaf, the bowing sheaves.
   confidence: tested
@@ -903,6 +943,20 @@ boot_steps:
       letter later counts as settled (42:9 remembers THE DREAMS, plural).
     cites: []
     confidence: tested
+  - op: WITNESS_STATE
+    expr_en: "WITNESS(chalom_sheni, enforceable_instrument)"
+    en: >
+      THE DREAM AS AN ENFORCEABLE INSTRUMENT [claim G60-18]. The reading
+      takes the second dream not as prediction but as title, and enforces
+      it generations later: Joshua addresses the sun at Gibeon as a
+      wayward slave — "were you not PURCHASED with my father's money? did
+      my father not see you bowing in the dream?" — before commanding it
+      to stand still. Witness-tier state, never mixed into the
+      text-grounded facts: the dream's standing as an instrument is
+      testimony carried from the reading, not a grammatical consequence
+      of the verse.
+    cites: ["Bereshit Rabbah 84:11", "Bereshit Rabbah 97:4", "Bereshit Rabbah 6:9"]
+    confidence: witnessed
   comment: >
     Dream two: the celestial court.
   confidence: tested
@@ -966,6 +1020,18 @@ boot_steps:
       grief.
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(shamar_et_ha_davar, dated_record)"
+    en: >
+      THE DREAM IS LOGGED [claim G60-21]. "His father KEPT the matter" is
+      read by R. Levi as an act of writing — he took a quill and set down
+      the day, the hour and the place; R. Chiyya hears the Divine Spirit
+      saying KEEP, for these things are destined to occur. The verse
+      creates a dated record, which is what makes the later fulfilment
+      auditable rather than merely remembered — the instrument-logic the
+      witness state at 37:9 carries.
+    cites: ["Bereshit Rabbah 84:12"]
+    confidence: witnessed
   comment: >
     Envy filed; the father waits.
   confidence: tested
@@ -1624,6 +1690,30 @@ boot_steps:
       Jeremiah from HIS pit) files named.
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(shtarot_mekhira, count_disputed)"
+    en: >
+      THE DEED-CHAIN IS A RECORDED DISPUTE [claim G60-19]. R. Yudan counts
+      FOUR bills of sale (brothers to Ishmaelites to merchants to
+      Midianites to Egypt); R. Huna counts FIVE, adding the state treasury
+      from which Potiphar then buys. Carried as a dispute and never
+      decided: the machine records the sale event and refuses to fix the
+      number of conveyances.
+    cites: ["Bereshit Rabbah 84:22"]
+    confidence: witnessed
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(esrim_kesef, five_selaim_measure)"
+    en: >
+      TWO STANDING LAWS PRICED FROM THIS NUMBER [claim G60-20,
+      machine-checked]. The twenty pieces of silver are read as five
+      sela'im, and the firstborn-redemption measure of five sela'im is
+      decreed measure for measure — "you sold Rachel's firstborn for
+      twenty"; the same twenty divided among the brothers gives the
+      half-shekel a head of Exodus 38:26. Law-shaped claims resting on
+      this verse's own number, recorded at witness tier and owed to the
+      law spans that will test them. Argues middah E27 (symmetry).
+    cites: ["Bereshit Rabbah 84:18"]
+    confidence: witnessed
   comment: >
     The sale fires with the subject unresolved on the letter.
   confidence: tested
@@ -1806,6 +1896,27 @@ boot_steps:
       law.
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(tarof_toraf, keeper_evidence_formula)"
+    en: >
+      THE BROTHERS STAGE THE BAILEE'S DEFENCE [claim G60-16,
+      machine-checked — NEW AT DERIVATION, not visible in the reading
+      pass]. The father's verdict is the doubled tearing-formula ("torn,
+      surely torn"), and that doubled pair of the tearing-root stands in
+      exactly three places in the Torah: here, at 44:28 where Judah
+      quotes the verdict back (gen_67's span), and at Exodus 22:12 — "if
+      it is surely torn, let him bring it as evidence; he shall not pay"
+      — the keeper's exemption. Joseph's brothers were keepers of the
+      flock (37:2), and they produce the bloodied tunic as evidence of a
+      tearing: precisely the procedure by which the later law releases a
+      keeper from liability. Recorded at witness tier; the test is owed
+      to the Exodus 22 bailee ladder at Step 9. Argues middah E7 (equal
+      decree — the same wording in two passages; I2 at law strength).
+      Note the translation cost: the received rendering flattens the
+      doubled tearing to a death-certainty formula at both Genesis seats,
+      erasing the very word the later law turns on.
+    cites: ["Bereshit Rabbah 84:16", "Onkelos Genesis 37:33"]
+    confidence: witnessed
   comment: >
     The recognize-demand satisfied; the planned lie fires from the wrong
     mouth.

@@ -82,3 +82,12 @@ this refusal (credit 87:5); the engineered-distraction providence
 (row 10); the four-af list at its baker seat (row 14 + gen_63 credit
 19:2); the who-was-expecting litany (row 15); the she-bear frame
 (rows 1/5/6 + gen_60 row 2's third slander cashing). 
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation pilot)
+Append-only addition: the sweep's compact row form is not a citable
+source string for the unit-level cite validator. This block's Onkelos
+verses are listed here in citable form. No verdict changed, no row
+rewritten.
+
+Onkelos Genesis 39:1, Onkelos Genesis 39:2, Onkelos Genesis 39:3, Onkelos Genesis 39:4, Onkelos Genesis 39:5, Onkelos Genesis 39:6, Onkelos Genesis 39:7, Onkelos Genesis 39:8, Onkelos Genesis 39:9, Onkelos Genesis 39:10, Onkelos Genesis 39:11, Onkelos Genesis 39:12, Onkelos Genesis 39:13, Onkelos Genesis 39:14, Onkelos Genesis 39:15, Onkelos Genesis 39:16, Onkelos Genesis 39:17, Onkelos Genesis 39:18, Onkelos Genesis 39:19, Onkelos Genesis 39:20, Onkelos Genesis 39:21, Onkelos Genesis 39:22, Onkelos Genesis 39:23, Onkelos Genesis 39:24.
