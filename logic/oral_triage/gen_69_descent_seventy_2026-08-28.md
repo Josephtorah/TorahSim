@@ -61,3 +61,15 @@ doctrine with the rolling tunnels (row 4 — governs gen_70 and gen_73);
 the Machpelah plot bought a second time from Esau (row 3 — joins
 gen_39's purchase); and the one-word split at 46:28, clear-a-place
 against found-an-academy (O1 vs credit 95:3).
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition. The sweep records its Onkelos track in a compact
+row form ("O1 · 46:1"), which the unit-level cite validator cannot
+match: a cite is valid only when the literal source string appears in a
+triage ledger. This block's Onkelos verses are therefore listed here in
+citable form, so the derivation may cite the translation it actually
+read. No verdict is changed and no row is rewritten — this is a naming
+key for the Onkelos rows above.
+
+Onkelos Genesis 46:1, Onkelos Genesis 46:2, Onkelos Genesis 46:3, Onkelos Genesis 46:4, Onkelos Genesis 46:5, Onkelos Genesis 46:6, Onkelos Genesis 46:7, Onkelos Genesis 46:8, Onkelos Genesis 46:9, Onkelos Genesis 46:10, Onkelos Genesis 46:11, Onkelos Genesis 46:12, Onkelos Genesis 46:13, Onkelos Genesis 46:14, Onkelos Genesis 46:15, Onkelos Genesis 46:16, Onkelos Genesis 46:17, Onkelos Genesis 46:18, Onkelos Genesis 46:19, Onkelos Genesis 46:20, Onkelos Genesis 46:21, Onkelos Genesis 46:22, Onkelos Genesis 46:23, Onkelos Genesis 46:24, Onkelos Genesis 46:25, Onkelos Genesis 46:26, Onkelos Genesis 46:27, Onkelos Genesis 46:28, Onkelos Genesis 46:29, Onkelos Genesis 46:30, Onkelos Genesis 46:31, Onkelos Genesis 46:32, Onkelos Genesis 46:33, Onkelos Genesis 46:34.

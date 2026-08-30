@@ -74,3 +74,15 @@ agreement with gen_60's O2 (O3); Judah's three crowning speeches now
 complete on the record (credit 84:17); and the parashah seam — the
 speech carried here breaks off at "Joseph could not restrain himself,"
 which opens gen_68 at Genesis 45:1, unread.
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition. The sweep records its Onkelos track in a compact
+row form ("O1 · 44:1"), which the unit-level cite validator cannot
+match: a cite is valid only when the literal source string appears in a
+triage ledger. This block's Onkelos verses are therefore listed here in
+citable form, so the derivation may cite the translation it actually
+read. No verdict is changed and no row is rewritten — this is a naming
+key for the Onkelos rows above.
+
+Onkelos Genesis 44:1, Onkelos Genesis 44:2, Onkelos Genesis 44:3, Onkelos Genesis 44:4, Onkelos Genesis 44:5, Onkelos Genesis 44:6, Onkelos Genesis 44:7, Onkelos Genesis 44:8, Onkelos Genesis 44:9, Onkelos Genesis 44:10, Onkelos Genesis 44:11, Onkelos Genesis 44:12, Onkelos Genesis 44:13, Onkelos Genesis 44:14, Onkelos Genesis 44:15, Onkelos Genesis 44:16, Onkelos Genesis 44:17, Onkelos Genesis 44:18, Onkelos Genesis 44:19, Onkelos Genesis 44:20, Onkelos Genesis 44:21, Onkelos Genesis 44:22, Onkelos Genesis 44:23, Onkelos Genesis 44:24, Onkelos Genesis 44:25, Onkelos Genesis 44:26, Onkelos Genesis 44:27, Onkelos Genesis 44:28, Onkelos Genesis 44:29, Onkelos Genesis 44:30, Onkelos Genesis 44:31, Onkelos Genesis 44:32, Onkelos Genesis 44:33, Onkelos Genesis 44:34.

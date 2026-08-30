@@ -82,3 +82,15 @@ gen_62's refusal; the famine-years count as a four-way numeric dispute
 the avrekh crux as a three-way standoff (row 10 vs O3); the Divine
 Spirit's departure from Jacob as a carried state (row 14); Onkelos
 translating the Egyptian name and withholding the priestly title (O4).
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition. The sweep records its Onkelos track in a compact
+row form ("O1 · 41:1"), which the unit-level cite validator cannot
+match: a cite is valid only when the literal source string appears in a
+triage ledger. This block's Onkelos verses are therefore listed here in
+citable form, so the derivation may cite the translation it actually
+read. No verdict is changed and no row is rewritten — this is a naming
+key for the Onkelos rows above.
+
+Onkelos Genesis 41:1, Onkelos Genesis 41:2, Onkelos Genesis 41:3, Onkelos Genesis 41:4, Onkelos Genesis 41:5, Onkelos Genesis 41:6, Onkelos Genesis 41:7, Onkelos Genesis 41:8, Onkelos Genesis 41:9, Onkelos Genesis 41:10, Onkelos Genesis 41:11, Onkelos Genesis 41:12, Onkelos Genesis 41:13, Onkelos Genesis 41:14, Onkelos Genesis 41:15, Onkelos Genesis 41:16, Onkelos Genesis 41:17, Onkelos Genesis 41:18, Onkelos Genesis 41:19, Onkelos Genesis 41:20, Onkelos Genesis 41:21, Onkelos Genesis 41:22, Onkelos Genesis 41:23, Onkelos Genesis 41:24, Onkelos Genesis 41:25, Onkelos Genesis 41:26, Onkelos Genesis 41:27, Onkelos Genesis 41:28, Onkelos Genesis 41:29, Onkelos Genesis 41:30, Onkelos Genesis 41:31, Onkelos Genesis 41:32, Onkelos Genesis 41:33, Onkelos Genesis 41:34, Onkelos Genesis 41:35, Onkelos Genesis 41:36, Onkelos Genesis 41:37, Onkelos Genesis 41:38, Onkelos Genesis 41:39, Onkelos Genesis 41:40, Onkelos Genesis 41:41, Onkelos Genesis 41:42, Onkelos Genesis 41:43, Onkelos Genesis 41:44, Onkelos Genesis 41:45, Onkelos Genesis 41:46, Onkelos Genesis 41:47, Onkelos Genesis 41:48, Onkelos Genesis 41:49, Onkelos Genesis 41:50, Onkelos Genesis 41:51, Onkelos Genesis 41:52, Onkelos Genesis 41:53, Onkelos Genesis 41:54, Onkelos Genesis 41:55, Onkelos Genesis 41:56, Onkelos Genesis 41:57.

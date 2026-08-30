@@ -62,3 +62,15 @@ census with David's dropped title (row 3 — ink); the fifth as a
 standing statute with the priests' exemption (O4 — the block's one
 permanent law); and the resettlement read as city-to-city transfer
 (O1).
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition. The sweep records its Onkelos track in a compact
+row form ("O1 · 47:1"), which the unit-level cite validator cannot
+match: a cite is valid only when the literal source string appears in a
+triage ledger. This block's Onkelos verses are therefore listed here in
+citable form, so the derivation may cite the translation it actually
+read. No verdict is changed and no row is rewritten — this is a naming
+key for the Onkelos rows above.
+
+Onkelos Genesis 47:1, Onkelos Genesis 47:2, Onkelos Genesis 47:3, Onkelos Genesis 47:4, Onkelos Genesis 47:5, Onkelos Genesis 47:6, Onkelos Genesis 47:7, Onkelos Genesis 47:8, Onkelos Genesis 47:9, Onkelos Genesis 47:10, Onkelos Genesis 47:11, Onkelos Genesis 47:12, Onkelos Genesis 47:13, Onkelos Genesis 47:14, Onkelos Genesis 47:15, Onkelos Genesis 47:16, Onkelos Genesis 47:17, Onkelos Genesis 47:18, Onkelos Genesis 47:19, Onkelos Genesis 47:20, Onkelos Genesis 47:21, Onkelos Genesis 47:22, Onkelos Genesis 47:23, Onkelos Genesis 47:24, Onkelos Genesis 47:25, Onkelos Genesis 47:26, Onkelos Genesis 47:27, Onkelos Genesis 47:28, Onkelos Genesis 47:29, Onkelos Genesis 47:30, Onkelos Genesis 47:31.

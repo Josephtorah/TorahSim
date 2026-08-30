@@ -68,3 +68,15 @@ separate tables (O1); "roll and fall upon us" resolved into
 domination and false accusation (O2); the suretyship term matching
 the chain's register (O4); the noon meal read as the day's principal
 meal against the Sabbath-preparation reading (O5 vs in-sitting 92:4).
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition. The sweep records its Onkelos track in a compact
+row form ("O1 · 43:1"), which the unit-level cite validator cannot
+match: a cite is valid only when the literal source string appears in a
+triage ledger. This block's Onkelos verses are therefore listed here in
+citable form, so the derivation may cite the translation it actually
+read. No verdict is changed and no row is rewritten — this is a naming
+key for the Onkelos rows above.
+
+Onkelos Genesis 43:1, Onkelos Genesis 43:2, Onkelos Genesis 43:3, Onkelos Genesis 43:4, Onkelos Genesis 43:5, Onkelos Genesis 43:6, Onkelos Genesis 43:7, Onkelos Genesis 43:8, Onkelos Genesis 43:9, Onkelos Genesis 43:10, Onkelos Genesis 43:11, Onkelos Genesis 43:12, Onkelos Genesis 43:13, Onkelos Genesis 43:14, Onkelos Genesis 43:15, Onkelos Genesis 43:16, Onkelos Genesis 43:17, Onkelos Genesis 43:18, Onkelos Genesis 43:19, Onkelos Genesis 43:20, Onkelos Genesis 43:21, Onkelos Genesis 43:22, Onkelos Genesis 43:23, Onkelos Genesis 43:24, Onkelos Genesis 43:25, Onkelos Genesis 43:26, Onkelos Genesis 43:27, Onkelos Genesis 43:28, Onkelos Genesis 43:29, Onkelos Genesis 43:30, Onkelos Genesis 43:31, Onkelos Genesis 43:32, Onkelos Genesis 43:33, Onkelos Genesis 43:34.

@@ -4879,3 +4879,87 @@ stampable by parashah); the torahsim relay for the three new sweeps
 (its HEAD 46512c9 is two commits ahead of its own origin; push/deploy
 await his word in that window); and the Exodus decision — case-file
 machinery first, per his own standing condition.
+
+## ADDENDUM 2026-08-30 — DERIVATION ERA OPENS; COMPACTION POINT #26
+
+Sitting #26 (cont.). After the review, the owner ordered: "commit and
+push, then start the Vayeshev derivation pilot," and then "commit it
+and do 2 and 3."
+
+WHAT LANDED AND IS PUSHED:
+- a0b488e — GENESIS IS READ THROUGH. The three sweeps of 2026-08-28
+  (Vayeshev, Miketz, Vayigash+Vayechi): 14 ledgers, 14 rev-2 units,
+  THE_STEPS' three sweep paragraphs, ten stale mirror flags cleared.
+  73 of 73 blocks, 1:1-50:26 continuous, 1,533 verses.
+- 3e96699 — THE DERIVATION PILOT. gen_60-63 taken through Steps 5/6/7:
+  18 claims (7 machine-checked, 11 manual), 18 operators (16
+  WITNESS_READ, 2 WITNESS_STATE — no operator invented, rulebook NOT
+  versioned), all four units rev 3, every gate green. World standing
+  facts 288 -> 306, exactly the 18 operators. The state hash
+  8b8fff1fa28953af is unchanged (it does not cover `standing`).
+
+THE REVIEW'S FINDING, IN ONE LINE: Genesis was READ, not DERIVED.
+Before the pilot, 65 blocks sat at rev 2 with "no machine ops changed,"
+zero units had claims sections, and every claims manifest predated all
+eight sweeps. The pilot is the first movement.
+
+TWO FINDINGS THAT APPEARED ONLY AT DERIVATION (not in the reading):
+- THE BAILEE'S DEFENCE: the doubled tearing-formula of 37:33 stands in
+  exactly three Torah places — 37:33, 44:28, and EXODUS 22:12, the
+  keeper's evidence exemption. Joseph's brothers were keepers of the
+  flock and produce the bloodied tunic as evidence of a tearing: the
+  very procedure the later law authorises. Owed to the Exodus 22
+  bailee ladder at Step 9 (claim G60-16, middah E7/I2).
+- THE KID FOR THE KID: the kid-of-goats word stands in Genesis at
+  exactly four places in two pairs — 27:9/27:16 (Jacob deceiving his
+  blind father in kid-skins) and 38:17/38:20 (Judah's pledged kid
+  turned against him) (claim G61-13, middah E27).
+
+PROCESS DEFECTS FOUND: (1) sweep ledgers write Onkelos rows compactly
+("O1 · 37:3"), which is NOT a citable source string — the unit cite
+validator requires the literal source to appear in a ledger. FIXED:
+citation keys APPENDED (append-only) to all FOURTEEN sweep ledgers;
+verified 0 uncitable Onkelos verses remain. (2) Claim IDs and bare
+verse refs are not valid cites — only ledger-read sources; claim
+G60-14 was dropped as a duplicate of standing G60-07, so gen_60's id
+sequence honestly skips G60-14. (3) OPEN, NEEDS OWNER WORD: seven
+operator names that came naturally at derivation are not in the
+rulebook; all were folded into WITNESS_READ. Recommendation on record:
+do NOT version the rulebook yet — derive the remaining blocks first,
+then propose typed operators from evidence.
+
+COST MEASURED (the pilot's purpose): block 1 took ~25 tool calls
+(where the contract was discovered); block 2 passed first try in 4;
+blocks 3-4 together in 3. STEADY STATE 3-4 CALLS PER BLOCK.
+
+*** WHERE THE NEXT SITTING RESUMES ***
+STEP 2 IS DONE (citation keys, all 14 ledgers) — the 10 non-pilot
+ledgers are edited and UNCOMMITTED at this point.
+STEP 3 IS THE WORK: derive the remaining 61 blocks (gen_09-59 and
+gen_64-73), PARASHAH BY PARASHAH, not block by block — in-sitting
+credits cross-reference within a parashah, gates and changelog stay
+parashah-shaped, and each parashah is a safe compaction checkpoint.
+Nine groups remain: gen_09-26, 27-33, 34-38, 39-42, 43-47, 48-54,
+55-59, 64-67, 68-73.
+THE METHOD, PROVEN (follow exactly):
+  a. read the block's ledger material rows + amendment-candidate list
+  b. verify any ink/numeric fact against torah_grok.sqlite BEFORE
+     claiming it (two of the pilot's claims were corrected this way)
+  c. append claims to logic/oral_audit/manifests/<uid>_claims.json —
+     de-duplicate against the standing forward-era claims, which are
+     masoretic-orthography where the reading's are midrash/translation
+  d. add operators before each step's `comment:` line using ONLY the
+     rulebook's names; expr_en must match the parse contracts
+     WITNESS-READ(entity, state) / WITNESS(entity, state); omit `he:`;
+     cites name ONLY sources present in a triage ledger
+  e. rev 3 + one changelog line; gates: verify_text, preflight,
+     changelog_gate, verify_claims, gloss_lint
+STILL OPEN FROM THE REVIEW: the two works.yaml register rows for the
+misclassified modern works (Mishnah Berurah, Tosefta Kifshutah — owner
+word required); a superlative_lint pass over the 14 sweep units before
+any stamp; canon (TorahSim) is behind by the three sweeps + the pilot.
+AWAITING OWNER WORD: batch stamps (honest only for derived blocks —
+now gen_01-07 and gen_60-63); Exodus, still gated on the sugya
+case-file machinery, which does not exist.
+
+COMPACTION POINT #26 — records current through here. Safe to compact.

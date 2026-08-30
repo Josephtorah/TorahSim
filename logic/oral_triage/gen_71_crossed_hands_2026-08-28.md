@@ -64,3 +64,15 @@ pattern paying out across four later books); the crossing declared
 deliberate in the translation (O3); the memra-support formula at its
 third seat (O4); and the brothers' suspicion of favouritism recorded
 at the blessing (row 1).
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition. The sweep records its Onkelos track in a compact
+row form ("O1 · 48:1"), which the unit-level cite validator cannot
+match: a cite is valid only when the literal source string appears in a
+triage ledger. This block's Onkelos verses are therefore listed here in
+citable form, so the derivation may cite the translation it actually
+read. No verdict is changed and no row is rewritten — this is a naming
+key for the Onkelos rows above.
+
+Onkelos Genesis 48:1, Onkelos Genesis 48:2, Onkelos Genesis 48:3, Onkelos Genesis 48:4, Onkelos Genesis 48:5, Onkelos Genesis 48:6, Onkelos Genesis 48:7, Onkelos Genesis 48:8, Onkelos Genesis 48:9, Onkelos Genesis 48:10, Onkelos Genesis 48:11, Onkelos Genesis 48:12, Onkelos Genesis 48:13, Onkelos Genesis 48:14, Onkelos Genesis 48:15, Onkelos Genesis 48:16, Onkelos Genesis 48:17, Onkelos Genesis 48:18, Onkelos Genesis 48:19, Onkelos Genesis 48:20, Onkelos Genesis 48:21, Onkelos Genesis 48:22.

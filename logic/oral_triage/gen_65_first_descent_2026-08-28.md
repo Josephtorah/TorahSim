@@ -72,3 +72,15 @@ recognition variable (row 4); the Sabbath-before-Sinai claim carried
 here for gen_66 (row 6); the interpreter identified as Manasseh
 (credit 91:8) and Simeon's binding as the pit-pusher's repayment
 (credit 84:16), both now seated on their verses.
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition. The sweep records its Onkelos track in a compact
+row form ("O1 · 42:1"), which the unit-level cite validator cannot
+match: a cite is valid only when the literal source string appears in a
+triage ledger. This block's Onkelos verses are therefore listed here in
+citable form, so the derivation may cite the translation it actually
+read. No verdict is changed and no row is rewritten — this is a naming
+key for the Onkelos rows above.
+
+Onkelos Genesis 42:1, Onkelos Genesis 42:2, Onkelos Genesis 42:3, Onkelos Genesis 42:4, Onkelos Genesis 42:5, Onkelos Genesis 42:6, Onkelos Genesis 42:7, Onkelos Genesis 42:8, Onkelos Genesis 42:9, Onkelos Genesis 42:10, Onkelos Genesis 42:11, Onkelos Genesis 42:12, Onkelos Genesis 42:13, Onkelos Genesis 42:14, Onkelos Genesis 42:15, Onkelos Genesis 42:16, Onkelos Genesis 42:17, Onkelos Genesis 42:18, Onkelos Genesis 42:19, Onkelos Genesis 42:20, Onkelos Genesis 42:21, Onkelos Genesis 42:22, Onkelos Genesis 42:23, Onkelos Genesis 42:24, Onkelos Genesis 42:25, Onkelos Genesis 42:26, Onkelos Genesis 42:27, Onkelos Genesis 42:28, Onkelos Genesis 42:29, Onkelos Genesis 42:30, Onkelos Genesis 42:31, Onkelos Genesis 42:32, Onkelos Genesis 42:33, Onkelos Genesis 42:34, Onkelos Genesis 42:35, Onkelos Genesis 42:36, Onkelos Genesis 42:37, Onkelos Genesis 42:38.

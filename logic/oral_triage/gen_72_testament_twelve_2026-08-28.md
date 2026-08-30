@@ -116,3 +116,15 @@ and, above all, **THE TRANSLATION'S CHANGE OF GENRE** in this chapter
 (O1-O7) — Onkelos ceasing to translate and beginning to interpret,
 which is a fact about the reading shelf itself and belongs in the
 CORE_SHELF record.
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition. The sweep records its Onkelos track in a compact
+row form ("O1 · 49:1"), which the unit-level cite validator cannot
+match: a cite is valid only when the literal source string appears in a
+triage ledger. This block's Onkelos verses are therefore listed here in
+citable form, so the derivation may cite the translation it actually
+read. No verdict is changed and no row is rewritten — this is a naming
+key for the Onkelos rows above.
+
+Onkelos Genesis 49:1, Onkelos Genesis 49:2, Onkelos Genesis 49:3, Onkelos Genesis 49:4, Onkelos Genesis 49:5, Onkelos Genesis 49:6, Onkelos Genesis 49:7, Onkelos Genesis 49:8, Onkelos Genesis 49:9, Onkelos Genesis 49:10, Onkelos Genesis 49:11, Onkelos Genesis 49:12, Onkelos Genesis 49:13, Onkelos Genesis 49:14, Onkelos Genesis 49:15, Onkelos Genesis 49:16, Onkelos Genesis 49:17, Onkelos Genesis 49:18, Onkelos Genesis 49:19, Onkelos Genesis 49:20, Onkelos Genesis 49:21, Onkelos Genesis 49:22, Onkelos Genesis 49:23, Onkelos Genesis 49:24, Onkelos Genesis 49:25, Onkelos Genesis 49:26, Onkelos Genesis 49:27, Onkelos Genesis 49:28, Onkelos Genesis 49:29, Onkelos Genesis 49:30, Onkelos Genesis 49:31, Onkelos Genesis 49:32, Onkelos Genesis 49:33.

@@ -69,3 +69,15 @@ book end to end); the six equal-year pairs placing Joseph beside
 Joshua (row 6 — numeric); "am I in the place of God" reversed into "I
 am one who fears God" (O1); and the ‹חֲזַק› closing token carried in
 the translation (O5).
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition. The sweep records its Onkelos track in a compact
+row form ("O1 · 50:1"), which the unit-level cite validator cannot
+match: a cite is valid only when the literal source string appears in a
+triage ledger. This block's Onkelos verses are therefore listed here in
+citable form, so the derivation may cite the translation it actually
+read. No verdict is changed and no row is rewritten — this is a naming
+key for the Onkelos rows above.
+
+Onkelos Genesis 50:1, Onkelos Genesis 50:2, Onkelos Genesis 50:3, Onkelos Genesis 50:4, Onkelos Genesis 50:5, Onkelos Genesis 50:6, Onkelos Genesis 50:7, Onkelos Genesis 50:8, Onkelos Genesis 50:9, Onkelos Genesis 50:10, Onkelos Genesis 50:11, Onkelos Genesis 50:12, Onkelos Genesis 50:13, Onkelos Genesis 50:14, Onkelos Genesis 50:15, Onkelos Genesis 50:16, Onkelos Genesis 50:17, Onkelos Genesis 50:18, Onkelos Genesis 50:19, Onkelos Genesis 50:20, Onkelos Genesis 50:21, Onkelos Genesis 50:22, Onkelos Genesis 50:23, Onkelos Genesis 50:24, Onkelos Genesis 50:25, Onkelos Genesis 50:26.

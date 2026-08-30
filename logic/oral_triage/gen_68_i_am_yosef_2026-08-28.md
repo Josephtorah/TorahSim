@@ -60,3 +60,15 @@ colloquial speech, with R. Yoḥanan's counter-usage (row 4 —
 testing-shelf candidate); the beheaded-heifer password (row 5); the
 circumcision shown as proof of identity (row 1); the spirit of
 prophecy returning, closing gen_64's departure claim (O1 + row 5).
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition. The sweep records its Onkelos track in a compact
+row form ("O1 · 45:1"), which the unit-level cite validator cannot
+match: a cite is valid only when the literal source string appears in a
+triage ledger. This block's Onkelos verses are therefore listed here in
+citable form, so the derivation may cite the translation it actually
+read. No verdict is changed and no row is rewritten — this is a naming
+key for the Onkelos rows above.
+
+Onkelos Genesis 45:1, Onkelos Genesis 45:2, Onkelos Genesis 45:3, Onkelos Genesis 45:4, Onkelos Genesis 45:5, Onkelos Genesis 45:6, Onkelos Genesis 45:7, Onkelos Genesis 45:8, Onkelos Genesis 45:9, Onkelos Genesis 45:10, Onkelos Genesis 45:11, Onkelos Genesis 45:12, Onkelos Genesis 45:13, Onkelos Genesis 45:14, Onkelos Genesis 45:15, Onkelos Genesis 45:16, Onkelos Genesis 45:17, Onkelos Genesis 45:18, Onkelos Genesis 45:19, Onkelos Genesis 45:20, Onkelos Genesis 45:21, Onkelos Genesis 45:22, Onkelos Genesis 45:23, Onkelos Genesis 45:24, Onkelos Genesis 45:25, Onkelos Genesis 45:26, Onkelos Genesis 45:27, Onkelos Genesis 45:28.
