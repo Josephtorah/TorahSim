@@ -6503,3 +6503,232 @@ what the generator emits. **THIS TREE HAS NEVER HAND-EDITED IT.** I
 copied the file aside, re-ran the fold, and diffed: BYTE-IDENTICAL. The
 workshop has been regenerating as the landing step throughout, which is
 the practice the peer has now adopted.
+
+---
+
+## VAYIGASH DERIVED — gen_68-70 (2026-08-30, owner: "commit and push, then start Vayigash")
+
+**MIKETZ COMMITTED AND PUSHED** as fca8626 (36a9930..fca8626), 12 files,
+then released. torahsim landed it: nine gates green, all four ledgers
+BYTE-IDENTICAL (the no-appends-owed claim held, no finding), redaction
+step run regardless of expectation with 0 occurrences and coverage
+printed, all four rendered green and read d:1 first pass.
+**AND THE BORDER IS NOW ONE LINE.** It ran the FOLD rather than
+hand-editing — first landing under the practice this tree already had —
+and the generator emitted standing 841 on its own. Canon's generated
+proof now differs from ours by exactly line 23, the generator path, the
+documented adaptation that must never be repaired. Two independently
+maintained copies of the era's proof agreeing to the byte on 97 units,
+1809 facts, 341 demands, 191 open, 841 standing and the hash. The
+strongest cross-tree check the project has had, and it exists because a
+comment was mirrored.
+
+**VAYIGASH: THREE UNITS, 27 CLAIMS, 32 OPERATORS, ALL GATES GREEN.**
+gen_68 (9/11), gen_69 (9/11), gen_70 (9/10). Text layer green x3, ALL
+SCENARIOS GREEN x3, verify_claims 45 verified / **0 FAILED** / 21
+uncheckable, changelog green, gloss_lint 0. World folded **841 -> 873,
+exactly the 32 operators**, hash **8b8fff1fa28953af** UNMOVED — ninth
+run. Pre-gate sweep clean; the only cross-unit references are
+pre-existing forward-era cites.
+NOTE: gen_70 spans the whole of chapter 47 and therefore CROSSES THE
+VAYECHI SEAM at 47:28 — the same whole-chapter law that put Vayigash's
+opening seventeen verses inside gen_67. Declared in the unit, not
+smoothed.
+
+**SIX NUMERIC/INK CLAIMS OPENED (guard 3), AND ONE DECLARED UNTESTABLE:**
+
+- **THE ROSTER DECIDED BY A SPELLING PATTERN IN A LATER BOOK, EXACT
+  ACROSS ALL ELEVEN** [G70-21]. The five brothers shown to Pharaoh are
+  read as THE WEAK, deliberately presented so the strong would not be
+  conscripted — and the strength test is read backwards out of Moses'
+  blessing: whoever's name is REPEATED there was mighty. Machine-checked
+  prefix-tolerantly, with the homograph separated by MORPHOLOGY: exactly
+  the chain's six are doubled (Judah 33:7, Zebulun 33:18, Gad 33:20, Dan
+  33:22, Naphtali 33:23, Asher 33:24 — the other three tokens of that
+  last name tagged Tr, the relative pronoun); the four named weak stand
+  ONCE each; and **SIMEON DOES NOT APPEAR IN DEUTERONOMY 33 AT ALL**,
+  the extreme case of not-repeated. The only other doubled name is
+  Joseph, who is not among those presented. The chain's split of eleven
+  into six withheld and five shown IS the ink's own split.
+  ⚠ **METHOD — THE NAIVE MATCH WOULD HAVE CONVICTED THE TRADITION.**
+  First count returned "only Asher repeats," which is false twice over:
+  the prefixed forms (le-, u-le-, ve-li-) hide behind the article and
+  preposition, and three of the Asher tokens are the relative pronoun.
+  Same prefix bug as the almost-five silences at gen_66, hit again
+  within one day. THE FIX THAT WORKS: match the LAST morpheme segment of
+  he_plain (it keeps the slashes), and filter proper nouns by morph.
+- **THE TOTAL THE TEXT'S OWN NUMBERS DO NOT REACH** [G69-21], the
+  sweep's largest numeric row. 46:26 closes at SIXTY-SIX; 46:27 gives
+  Joseph's sons as TWO and then declares SEVENTY. The shortfall is in
+  our ink. Five candidates recorded for the missing member and NONE
+  promoted. The translation passes the arithmetic in silence.
+- **A PLURAL HEADING OVER A SINGLE NAME** [G69-22], with the next verse
+  as its control: 46:23 carries three tokens (plural "and the sons of,"
+  the tribe, one son) where 46:24 puts the identical heading over FOUR.
+  **THE MANUSCRIPT LEG DECLARED UNOPENED** — the passage reports one
+  master's own scroll reading SINGULAR, and that scroll is outside a
+  corpus carrying one consonantal text.
+- **THE APPROACHED RULE, CONFIRMED IN TWO INDEPENDENT FAMILIES**
+  [G70-22]: 147 at 47:28 against 175 (25:7) and 180 (35:28) — short of
+  both; 120 (Deut 34:7) against 137 (Exod 6:20) — short again. Third leg
+  (the king's seventy) declared unopened, outside the Torah.
+- **A ONE-OFF FORM CARRYING A PROPHECY** [G68-21]: the plural "necks" at
+  45:14 is the only construct-plural among NINE Torah neck-tokens, and
+  the second half of the same verse supplies the control.
+- **A PASSWORD CHECKED AT BOTH ENDS** [G68-22]: the wagon-word at seven
+  Torah seats, four in this parashah; the heifer-word at five, four in
+  the beheaded-heifer law. Both ends exist where the reading needs them.
+- ⚠ **DECLARED UNTESTABLE, AND THE DISTINCTION MATTERS** [G70-23]: the
+  CLOSED-PORTION claim — why this weekly portion has no open space
+  before it, with its three answers. This corpus carries CANTILLATION
+  ONLY (every mark tagged disjunctive or conjunctive) and NO
+  section-break markers. The claim is about white space and we hold no
+  white space. **RECORDED AS UNTESTABLE HERE, NOT AS UNSUPPORTED — the
+  machine is silent, not contradicting.** First time this era has had to
+  make that distinction explicitly in a claim.
+
+**ALSO SEATED:** a capital law with its named-man exception and two
+applications, arriving through a genealogy's arithmetic (G69-23 —
+testing shelf's richest Genesis catch); the burial doctrine with the
+rolling tunnels that governs the rest of the book (G69-25); the
+Machpelah right bought a SECOND time, from the brother, joining gen_39's
+purchase (G69-26); one unpointed word yielding either the first house of
+study or a billeting detail, recorded as a total split (G69-27); the
+block's one permanent statute, the fifth with its priestly exemption
+(G70-25); a translation conspicuously DECLINING an available reading at
+the head of the bed (G70-27); and **the translation CLOSING a carried
+state** — the spirit that departed from Jacob at gen_64 is named, on its
+return at 45:27, THE SPIRIT OF PROPHECY (G68-27). The only place in the
+derived corpus where a carried absence is discharged by the buffer
+rather than by the chain.
+
+**WHERE GENESIS STANDS:** 73 of 73 READ, **70 of 73 DERIVED — gen_01
+through gen_70 CONTINUOUS**, 1:1 to 47:31. Standing **873**.
+**THREE BLOCKS REMAIN: gen_71, gen_72, gen_73 — VAYECHI, and the end of
+the book.** Ledgers already keyed; no prerequisite.
+⚠ **FIRST CHECK OF THAT GROUP: 49:32 AND THE MACHPELAH SEATS** — whether
+they are cited from the Exodus 21 machine. If they are, the
+sons-of-Chet census and the fourteen-wire harness close in gen_73, the
+last block of Genesis.
+
+**ERA ARITHMETIC:** 288->306 (+18); 306->495 (+189); 495->530 (+35);
+530->582 (+52); 582->648 (+66); 648->725 (+77); 725->778 (+53);
+778->841 (+63); **841->873 (+32)**. Nine runs, every delta exactly the
+operator count, hash never moving.
+
+**NOT COMMITTED, NOT RELEASED** — awaiting the owner's word.
+
+---
+
+## ⭐ GENESIS IS COMPLETE — VAYECHI DERIVED, gen_71-73 (2026-08-30, owner: "finish gen three blocks")
+
+**THE BOOK STANDS DERIVED END TO END. 73 of 73 blocks, gen_01 through
+gen_73, Genesis 1:1 to 50:26 — every block frozen and at rev 3, verified
+on disk block by block (no gaps, no duplicates, none below rev 3).**
+Standing **905**, hash **8b8fff1fa28953af** UNMOVED through all ten runs
+of the era.
+
+**VAYECHI: THREE UNITS, 30 CLAIMS, 32 OPERATORS, ALL GATES GREEN.**
+gen_71 (7/9), gen_72 (13/13), gen_73 (10/10). Text layer green x3, ALL
+SCENARIOS GREEN x3, verify_claims 46 verified / **0 FAILED** / 23
+uncheckable, changelog green, gloss_lint 0. Fold **873 -> 905, exactly
+the 32 operators**. Pre-gate sweep clean.
+
+**⚠ THE 49:32 CHECK CAME BACK NEGATIVE — REPORTED AS SUCH.** Both windows
+wanted the sons-of-Chet census and the fourteen-wire harness to close in
+gen_73, the last block. They do not. Parsed all four Exodus 21 machine
+files (coverage: 60 citation rows, 14 Genesis, probe passed): there is
+**NO citation anywhere in Genesis 48-50**, and none at 49:32 or at any
+Machpelah verse. The harness stops at 44:33. **Fourteen remains
+fourteen.** The hoped-for ending did not happen and is recorded as a
+negative, not left as an open hope.
+
+**THE CLOSING GROUP'S RESULTS:**
+- **A ONE-OFF MOURNING VERB** [G73-21]: the chain contrasts weeping that
+  PASSED here with weeping that CONCLUDED for Moses, reading the
+  difference as company - Moses had no others weeping. Machine-checked:
+  the concluding verb stands at EXACTLY ONE seat in the whole Torah, at
+  that verse, against six for the passing verb. The word the argument
+  calls unique IS unique.
+- **A REPORTED SEARCH CONFIRMED ON ITS TORAH LEG** [G73-22]: a master
+  says he searched all Scripture for the place-name and found none. In
+  our corpus it stands at exactly TWO tokens, both in this one scene.
+  Torah leg confirmed; the rest of Scripture declared unopened.
+- **THE HINGE INTO EXODUS, VERIFIED AT THE PREPOSITION** [G73-23]: the
+  oath here ends FROM HERE; the Exodus repetition appends WITH YOU, that
+  word standing twice there against once here. The scope rule that fixes
+  the timing to the exodus AND extends the carrying to all the tribes
+  rests on a word present exactly where the argument places it.
+- **AN UNTRUTH LICENSED BY NAME** [G73-24]: GREAT IS PEACE, for the
+  tribes SPOKE WORDS THAT WERE NOT SO to make peace - the command they
+  quote being one we never find him giving anywhere in the text. The
+  falsehood identified BY ITS ABSENCE FROM THE RECORD and permitted for
+  its purpose. Testing-shelf ruling of the first order.
+- **THE SHEMA SOURCED TO THE DEATHBED** [G72-21]: the twice-daily
+  recitation and its undertone line given their origin at 49:2, the sons
+  answering their father by his own name. The walk's strongest
+  liturgical claim.
+- **THE SALE'S FURTHEST CONSEQUENCE** [G72-23]: eleven tribes
+  disqualified from the sanctuary for their part in selling Joseph, the
+  site's title awarded to the one tribe absent from the crime. An act at
+  gen_60 deciding a LOCATION.
+- **THREE LAYERS ON ONE VERSE** [G72-25, machine-checked]: our Hebrew's
+  ox at 49:6 verified; the chain re-reading it as the WALL of the
+  proselytes; and the chain RECORDING BY NAME that this is one of the
+  places the elders altered for King Ptolemy. The tradition keeps the
+  record of a rival translation's deliberate change.
+- **THE POOLING RULE, PROVED ACROSS BOOKS** [G72-22, machine-checked]:
+  the blessings are distributed then pooled, and the proof is that Dan
+  is a SERPENT here and a LION'S CUB in Moses' blessing - both in our ink.
+- ⚠ **THE LARGEST TRANSLATION-LAYER FINDING OF THE WALK** [G72-30]:
+  **ONKELOS CHANGES GENRE IN GENESIS 49.** Through forty-eight chapters
+  it translates, deviating only at points this corpus logged one by one.
+  In this chapter it becomes an INTERPRETIVE PARAPHRASE - seven
+  consecutive blessings rendered as their fulfilments. This is a fact
+  about the READING SHELF, not about a verse: the declared translation's
+  evidentiary weight must be adjusted here and nowhere else.
+  **CORE_SHELF.md candidate — raised, not acted on.**
+- **EPHRAIM PRECEDENCE, GRADED** [G71-21]: the nine-item census holds at
+  all THREE Torah seats (lineage, banners, princes' offerings - seventh
+  day against eighth); inheritance, judges and kings DECLARED UNOPENED.
+- **THE PATRIARCH DISARMED BY BOTH MEMBERS INDEPENDENTLY** [G71-22]: the
+  translation substitutes PRAYER AND PLEA for sword and bow; the chain
+  reassigns the sword's ownership to Esau. Neither borrowed from the
+  other.
+- ⚠ **A SECOND TEXT-LAYER BOUNDARY DECLARED** [G73-29]: the book's
+  closing scribal token stands in the reading shelf's own column and is
+  ABSENT from our word stream. Same limit as the closed-portion claim
+  one block back: **this corpus carries the words, not the scribal
+  apparatus.** Recorded as a boundary, not as a finding against the
+  tradition.
+
+**GEN_70 AMENDED BEFORE COMMIT.** The peer opened the closed-portion
+claim against canon's Tanakh layer, which DOES carry Masoretic section
+markers, and I verified it here myself: of the twelve Genesis portions,
+the eleven with a preceding verse were checked, TEN carry a section
+marker on that verse (seven open, three closed), and **VAYECHI ALONE HAS
+NONE** - 47:27 bearing its verse-end mark and nothing else, so the zero
+is real and not a gap. G70-23 and its operator were rewritten from
+"untestable" to **"silent in this layer, confirmed in the fuller one,"**
+and gen_70 re-gated green. A stale "untestable" would have been a false
+record once the answer existed.
+
+**METHOD NOTE:** the completion count needed TWO passes. A first census
+read only the first 6,000 characters of each unit and reported 71 frozen
+Genesis units; reading the files whole gives **73, none missing, none
+duplicated, none below rev 3**. Third truncation-shaped miscount of the
+day, same family as the draft-shadowing and the unquoted refs. The
+lesson stands: verify a completion claim by full read, never by window.
+
+**ERA ARITHMETIC, TEN RUNS:** 288->306 (+18); 306->495 (+189);
+495->530 (+35); 530->582 (+52); 582->648 (+66); 648->725 (+77);
+725->778 (+53); 778->841 (+63); 841->873 (+32); **873->905 (+32)**.
+Every delta exactly the operator count. The hash never moved.
+
+**NOT COMMITTED, NOT RELEASED — awaiting the owner's word.**
+Uncommitted: 6 units (gen_68-73), 6 manifests, CORPUS_TRUTH, the state
+doc. gen_70's amendment rides in the same batch.
+
+**WHAT NOW STANDS OPEN:** the batch stamps for the whole book — held by
+the owner's own standing decision UNTIL GENESIS WAS FINISHED, and it is
+now finished. That decision is his to take, and it is not to be pushed.
