@@ -109,6 +109,32 @@ or ink-level claims — counts, spellings, written-vs-read forms — are
 NEVER dup-credited without opening: that is the class where seats
 diverge (the canopy counts 9/10/11 vs 13/11/10 are the standing
 exhibit).
+GRADE THE LEG, NOT THE SECTION (2026-08-30, mirrored from canon's
+THE_STEPS; found deriving Toledot). When one source makes a claim in
+several parts, each part is opened and graded SEPARATELY, and the note
+says which parts were not opened. A part that fails is evidence about
+THAT PART ONLY — never a verdict on the source. WORKED EXAMPLE, the
+three-demands ladder of Bereshit Rabbah 65:9, which holds that aging,
+suffering and illness are each unwritten in Genesis until a patriarch
+demanded them: the AGING leg (claimed at 24:1) FAILS — the word stands
+five times earlier and 18:11 carries the identical phrase. The
+SUFFERING leg (claimed at 27:1) IS NOT A WORD-CENSUS AT ALL — the root
+for chastisement is absent from Genesis entirely, its first Torah seat
+Leviticus 26:18, and absent from 27:1 too; carried as interpretive and
+labelled. The ILLNESS leg (claimed at 48:1) HOLDS EXACTLY — one Genesis
+token, at that verse, three in the whole Torah. One exact, one false,
+one uncheckable by that method; only opening all three could tell them
+apart, and letting the first failure stand as a verdict would have
+discarded the exact leg with the false one. Same shape as the coverage
+rule below: the difference between a claim CHECKED and a claim
+CHARACTERISED.
+A REPORT OF ZERO IS WORTH ONLY THE COVERAGE LINE ABOVE IT
+(2026-08-30, from the border-leak episode; canon's own tools adopted
+it). Any check that reports an ABSENCE must first self-test its
+patterns against a probe known to contain what it looks for, refuse to
+report at all if the probe fails to fire, and print what it actually
+scanned beside the result. An unfalsifiable "clean" is what let a real
+leak stand through two landings.
    → shows as: chip "in reading 39/63" or "read through"; grid cell fill.
 
 ## Step 5 — Extract claims

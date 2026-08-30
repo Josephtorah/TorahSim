@@ -80,3 +80,16 @@ Carmel license vs the tribes-rendering (row 6 + O2 — Elijah docket);
 the childbirth census (row 7); the twin-sisters teaching (row 8);
 the curse cashing at 35:19 (credit 74:4); the transparency exhibit
 at 35:22 (row 14); the Betzer measure-for-measure (row 12). 
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers and to the Vayera, Chayei
+Sarah, Toledot and Vayetze ledgers on 2026-08-30. This ledger records
+its Onkelos track in the compact row form ("O1 · 35:1"), which the
+unit-level cite validator cannot match: a cite is valid only when the
+literal source string appears in a triage ledger. This block's Onkelos
+verses are therefore listed here in citable form, so the derivation may
+cite the translation it actually read. No verdict is changed and no row
+is rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 35:1, Onkelos Genesis 35:2, Onkelos Genesis 35:3, Onkelos Genesis 35:4, Onkelos Genesis 35:5, Onkelos Genesis 35:6, Onkelos Genesis 35:7, Onkelos Genesis 35:8, Onkelos Genesis 35:9, Onkelos Genesis 35:10, Onkelos Genesis 35:11, Onkelos Genesis 35:12, Onkelos Genesis 35:13, Onkelos Genesis 35:14, Onkelos Genesis 35:15, Onkelos Genesis 35:16, Onkelos Genesis 35:17, Onkelos Genesis 35:18, Onkelos Genesis 35:19, Onkelos Genesis 35:20, Onkelos Genesis 35:21, Onkelos Genesis 35:22, Onkelos Genesis 35:23, Onkelos Genesis 35:24, Onkelos Genesis 35:25, Onkelos Genesis 35:26, Onkelos Genesis 35:27, Onkelos Genesis 35:28, Onkelos Genesis 35:29.

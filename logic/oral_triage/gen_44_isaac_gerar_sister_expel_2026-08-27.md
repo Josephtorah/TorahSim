@@ -55,3 +55,16 @@ ten-famines census seated (credits 25:3/64:2); the
 blessing-at-the-feet census (row 6); the ha'el partial-grant ink parse
 (row 2); the Memra-support formula (O1) and the estimated-hundredfold
 convergence (O4).
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers, the five Vayera ledgers and
+the four Chayei Sarah ledgers on 2026-08-30. This ledger records its
+Onkelos track in the compact row form ("O1 · 26:1"), which the unit-level
+cite validator cannot match: a cite is valid only when the literal source
+string appears in a triage ledger. This block's Onkelos verses are
+therefore listed here in citable form, so the derivation may cite the
+translation it actually read. No verdict is changed and no row is
+rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 26:1, Onkelos Genesis 26:2, Onkelos Genesis 26:3, Onkelos Genesis 26:4, Onkelos Genesis 26:5, Onkelos Genesis 26:6, Onkelos Genesis 26:7, Onkelos Genesis 26:8, Onkelos Genesis 26:9, Onkelos Genesis 26:10, Onkelos Genesis 26:11, Onkelos Genesis 26:12, Onkelos Genesis 26:13, Onkelos Genesis 26:14, Onkelos Genesis 26:15, Onkelos Genesis 26:16.

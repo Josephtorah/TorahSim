@@ -113,3 +113,16 @@ table (row 30); Jacob's nest-law argument (row 31); the efo repayment
 (row 34); the wives-count rule (row 36); the concealed-End reading
 (row 37); the wisdom re-grade double-witnessed (row 25 + O3); Esau's
 half-repentance with the forgiven-name claim (row 29). 
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers, the five Vayera ledgers and
+the four Chayei Sarah ledgers on 2026-08-30. This ledger records its
+Onkelos track in the compact row form ("O1 · 27:1"), which the unit-level
+cite validator cannot match: a cite is valid only when the literal source
+string appears in a triage ledger. This block's Onkelos verses are
+therefore listed here in citable form, so the derivation may cite the
+translation it actually read. No verdict is changed and no row is
+rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 27:1, Onkelos Genesis 27:2, Onkelos Genesis 27:3, Onkelos Genesis 27:4, Onkelos Genesis 27:5, Onkelos Genesis 27:6, Onkelos Genesis 27:7, Onkelos Genesis 27:8, Onkelos Genesis 27:9, Onkelos Genesis 27:10, Onkelos Genesis 27:11, Onkelos Genesis 27:12, Onkelos Genesis 27:13, Onkelos Genesis 27:14, Onkelos Genesis 27:15, Onkelos Genesis 27:16, Onkelos Genesis 27:17, Onkelos Genesis 27:18, Onkelos Genesis 27:19, Onkelos Genesis 27:20, Onkelos Genesis 27:21, Onkelos Genesis 27:22, Onkelos Genesis 27:23, Onkelos Genesis 27:24, Onkelos Genesis 27:25, Onkelos Genesis 27:26, Onkelos Genesis 27:27, Onkelos Genesis 27:28, Onkelos Genesis 27:29, Onkelos Genesis 27:30, Onkelos Genesis 27:31, Onkelos Genesis 27:32, Onkelos Genesis 27:33, Onkelos Genesis 27:34, Onkelos Genesis 27:35, Onkelos Genesis 27:36, Onkelos Genesis 27:37, Onkelos Genesis 27:38, Onkelos Genesis 27:39, Onkelos Genesis 27:40.

@@ -843,3 +843,71 @@ workshop dashboard's black skin — or both with a toggle.
   missing subsystem). THE_STEPS Step 4 gained the TWO SHELVES passage
   (workshop copy; canon mirroring pending on the owner's word in that
   window, joining the queue) and Step 9 now points at it.
+
+- **2026-08-30 — EVIDENCE, NOT AN IDEA: THE TRADITION ALREADY DOES
+  SCHEMA-REUSE, AND SAYS SO OUT LOUD.** Found while deriving Vayetze
+  (gen_49, Genesis 29:2, Bereshit Rabbah 70:8-9). The chain fixes the
+  well scene as a FRAME — a well, three flocks, a great stone, a
+  gathering, a rolling away, a returning — and then BINDS THAT ONE FRAME
+  TO SIX INSTITUTIONS IN TURN, holding the roles constant and changing
+  only what fills them: (i) the wilderness well, water distributed by
+  banner, tribe and family; (ii) Zion with its three pilgrimage
+  festivals, the stone being the water-drawing celebration; (iii) Zion's
+  three courts, the stone being the High Court and *the returning of the
+  stone* being deliberation until a ruling is established; (iv) three
+  kingdoms drawing from the chambers, the stone being the merit of the
+  fathers; (v) the Sanhedrin's three rows of students, the stone being
+  the member who analyses the law; (vi) the synagogue's three called to
+  the Torah, the stone being the evil inclination — which RETURNS when
+  the congregation leaves. R. Yochanan then adds a SEVENTH binding at
+  Sinai, and that one carries a stated precondition rather than a
+  mapping: had Israel lacked even ONE, they would not have received the
+  Torah — an all-or-nothing gate on the whole system.
+  WHY THIS MATTERS HERE: this is the schema insight above, performed by
+  the tradition itself on a narrative verse — one machine, seven
+  bindings, the slots named and the fillers swapped. It is the strongest
+  argument yet that Genesis-as-schema is a reading the corpus already
+  supports rather than a modelling convenience we impose.
+
+- **2026-08-30 — THE CHAIN DRAWS ITS OWN CANON ARCHITECTURE, TWICE, IN
+  ONE PARASHAH.** (a) At gen_45 (Genesis 26:22, Bereshit Rabbah 64:8)
+  the well NAMES are mapped clause by clause onto the books of the
+  Torah, with Ben Kappara pushing the count to SEVEN books by treating
+  the two traveling-Ark verses as a book in themselves. (b) At gen_46
+  (Genesis 27:28, Bereshit Rabbah 66:3) the blessing's items are
+  assigned outright: dew = SCRIPTURE, fat = MISHNAH, grain = TALMUD,
+  wine = the narrative lore. The TWO SHELVES architecture recorded above
+  (owner ruling 2026-08-27) is here stated by the tradition in its own
+  words, on a narrative verse — not reconstructed by us from how the
+  books behave. Belongs beside the oracle-anatomy entry, not in a
+  feature list.
+
+- **2026-08-30 — A NUMERIC CLAIM WITH BOTH ENDS DERIVED IN ONE SITTING
+  (the cross-block wire, proven).** Vayishlach, gen_55 and gen_59.
+  Bereshit Rabbah 75:11 counts the times Jacob calls Esau "my lord" and
+  prices the deference in dynasties: EIGHT KINGS from his sons before
+  yours, citing Genesis 36:31. Machine-checked at BOTH ends against our
+  own ink: the address stands exactly EIGHT times across Genesis 32-33
+  (32:5, 32:6, 32:19, 33:8, 33:13, 33:14 twice, 33:15), and Genesis
+  36:32-39 records exactly EIGHT reigns before any king of Israel.
+  WHY IT BELONGS IN THIS FILE: it is the first claim the project has
+  MINTED IN ONE BLOCK AND DISCHARGED IN ANOTHER WITHIN A SINGLE
+  DERIVATION SITTING, with the machine confirming both counts. That is
+  exactly the shape a cross-block wire display would exist to show, and
+  it is now backed by ink rather than by assertion. Three more arcs of
+  the same shape closed in the same group (gen_48's borrowed sun-hours
+  repaid at gen_55's 32:32; gen_53's curse chain completing at gen_58's
+  35:19; gen_55's angel deferring the renaming and gen_58's text
+  performing it at 35:10) — but this is the one that is countable.
+
+- **2026-08-30 — THE MACHINE AND THE TRADITION RUN THE SAME GRAMMAR
+  RULE.** gen_48, Genesis 28:10, Bereshit Rabbah 68:8. R. Nechemya
+  states a rule: any word that would need the preposition "to" at its
+  start may instead take a heh at its end — with four examples, the last
+  being that verse's own final word. Our Step 2 morphology layer tags
+  that ending independently as a directional suffix: 392 tokens across
+  the Torah in 75 distinct forms, and all four of the chain's examples
+  are among them. Not a claim the machine checked — the SAME RULE,
+  reached twice, independently. Worth holding onto when the question
+  arises of whether the machine layer is imposing categories or
+  recovering them.

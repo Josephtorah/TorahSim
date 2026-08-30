@@ -64,3 +64,16 @@ angel-medium claim on both Bethel appearances (row 8); the shearing
 portent-rule across its seats (rows 5/9); the Laban-sons trigger
 chain with Bar Sira cited by name (row 1); the thief-son-of-a-thief
 echo wire (row 10); the fear-vocabulary on Laban's pantheon (O2).
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers and to the Vayera, Chayei
+Sarah and Toledot ledgers on 2026-08-30. This ledger records its Onkelos
+track in the compact row form ("O1 · 31:1"), which the unit-level cite
+validator cannot match: a cite is valid only when the literal source
+string appears in a triage ledger. This block's Onkelos verses are
+therefore listed here in citable form, so the derivation may cite the
+translation it actually read. No verdict is changed and no row is
+rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 31:1, Onkelos Genesis 31:2, Onkelos Genesis 31:3, Onkelos Genesis 31:4, Onkelos Genesis 31:5, Onkelos Genesis 31:6, Onkelos Genesis 31:7, Onkelos Genesis 31:8, Onkelos Genesis 31:9, Onkelos Genesis 31:10, Onkelos Genesis 31:11, Onkelos Genesis 31:12, Onkelos Genesis 31:13, Onkelos Genesis 31:14, Onkelos Genesis 31:15, Onkelos Genesis 31:16, Onkelos Genesis 31:17, Onkelos Genesis 31:18, Onkelos Genesis 31:19, Onkelos Genesis 31:20, Onkelos Genesis 31:21.

@@ -74,3 +74,16 @@ across three seats (rows 3/12/14); the elohim-as-judges guard
 double-witnessed (row 4 + O1); the merit-individuation at the
 division (row 1); the four-hundred desertion repaid at Ziklag
 (row 7). 
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers and to the Vayera, Chayei
+Sarah, Toledot and Vayetze ledgers on 2026-08-30. This ledger records
+its Onkelos track in the compact row form ("O1 · 33:1"), which the
+unit-level cite validator cannot match: a cite is valid only when the
+literal source string appears in a triage ledger. This block's Onkelos
+verses are therefore listed here in citable form, so the derivation may
+cite the translation it actually read. No verdict is changed and no row
+is rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 33:1, Onkelos Genesis 33:2, Onkelos Genesis 33:3, Onkelos Genesis 33:4, Onkelos Genesis 33:5, Onkelos Genesis 33:6, Onkelos Genesis 33:7, Onkelos Genesis 33:8, Onkelos Genesis 33:9, Onkelos Genesis 33:10, Onkelos Genesis 33:11, Onkelos Genesis 33:12, Onkelos Genesis 33:13, Onkelos Genesis 33:14, Onkelos Genesis 33:15, Onkelos Genesis 33:16, Onkelos Genesis 33:17, Onkelos Genesis 33:18, Onkelos Genesis 33:19, Onkelos Genesis 33:20.

@@ -66,3 +66,16 @@ clauses (row 5); the sacred/profane oath split with the buffer's
 unpacked epithet (row 7 + O4); the combativeness/clean-hands exhibit
 (row 2); the lulei rule with the chain's own attribution audit
 (row 3).
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers and to the Vayera, Chayei
+Sarah and Toledot ledgers on 2026-08-30. This ledger records its Onkelos
+track in the compact row form ("O1 · 31:22"), which the unit-level cite
+validator cannot match: a cite is valid only when the literal source
+string appears in a triage ledger. This block's Onkelos verses are
+therefore listed here in citable form, so the derivation may cite the
+translation it actually read. No verdict is changed and no row is
+rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 31:22, Onkelos Genesis 31:23, Onkelos Genesis 31:24, Onkelos Genesis 31:25, Onkelos Genesis 31:26, Onkelos Genesis 31:27, Onkelos Genesis 31:28, Onkelos Genesis 31:29, Onkelos Genesis 31:30, Onkelos Genesis 31:31, Onkelos Genesis 31:32, Onkelos Genesis 31:33, Onkelos Genesis 31:34, Onkelos Genesis 31:35, Onkelos Genesis 31:36, Onkelos Genesis 31:37, Onkelos Genesis 31:38, Onkelos Genesis 31:39, Onkelos Genesis 31:40, Onkelos Genesis 31:41, Onkelos Genesis 31:42, Onkelos Genesis 31:43, Onkelos Genesis 31:44, Onkelos Genesis 31:45, Onkelos Genesis 31:46, Onkelos Genesis 31:47, Onkelos Genesis 31:48, Onkelos Genesis 31:49, Onkelos Genesis 31:50, Onkelos Genesis 31:51, Onkelos Genesis 31:52, Onkelos Genesis 31:53, Onkelos Genesis 31:54.

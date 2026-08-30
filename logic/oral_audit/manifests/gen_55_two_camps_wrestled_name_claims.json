@@ -1,173 +1,301 @@
 [
- {
-  "id": "G55-01",
-  "source": "Minchat Shai on Gen 32:31 ('the first is פניאל, the second פנואל — so the Masorah, with its sign')",
-  "ref": "Gen 32:31",
-  "claim_en": "THE FACE-NAME'S CHANGED LETTER: Jacob names the place פניאל ('the FACE OF GOD,' 32:31 — 'for I have seen God face to face') with a YOD at its heart; one verse later, as the sun rises on his limp, the Torah writes it פנואל with a VAV (32:32, builder-checked) — the naming and the morning spelled one letter apart, exactly as the Masorah rules the order: first yod, then vav.",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 32:31",
-   "idx": 4,
-   "contains": "פְּנִיאֵ֑ל"
+  {
+    "id": "G55-01",
+    "source": "Minchat Shai on Gen 32:31 ('the first is פניאל, the second פנואל — so the Masorah, with its sign')",
+    "ref": "Gen 32:31",
+    "claim_en": "THE FACE-NAME'S CHANGED LETTER: Jacob names the place פניאל ('the FACE OF GOD,' 32:31 — 'for I have seen God face to face') with a YOD at its heart; one verse later, as the sun rises on his limp, the Torah writes it פנואל with a VAV (32:32, builder-checked) — the naming and the morning spelled one letter apart, exactly as the Masorah rules the order: first yod, then vav.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 32:31",
+      "idx": 4,
+      "contains": "פְּנִיאֵ֑ל"
+    }
+  },
+  {
+    "id": "G55-02",
+    "source": "Kitzur Baal HaTurim on Gen 32:15 ('עזים מאתים — the whole verse ends in mem, like the offering-verses; eight mems, against the eight kings who reigned in Edom before a king reigned in Israel; another reading: all the beasts sent were blemished, unfit for the altar')",
+    "ref": "Gen 32:15",
+    "claim_en": "THE GIFT-VERSE OF EIGHT MEMS: every word of the tribute's first verse — 'two hundred she-goats and twenty he-goats, two hundred ewes and twenty rams' (32:15) — ends in the letter mem, eight closing mems in a row (DB-checked), which the Kitzur sets against the EIGHT KINGS who reigned in Edom before any king in Israel (the ledger of gen_59's span): Esau's tribute sealed with Esau's king-count.",
+    "check": {
+      "type": "final_letters",
+      "ref": "Gen 32:15",
+      "idx": [
+        0,
+        7
+      ],
+      "spell": "מממממממם"
+    }
+  },
+  {
+    "id": "G55-03",
+    "source": "Minchat Shai on Gen 32:10 ('האמר — two, both lean, their signs: WHO-SAID-to-me return-to-your-land, and WHO-SAID-of-his-father-and-mother; the Ramah: every like-form in the Torah lean')",
+    "ref": "Gen 32:10",
+    "claim_en": "THE TWO LEAN WHO-SAIDs: האמר ('YHWH, WHO SAID to me: return to your land,' 32:10 — the prayer quoting the command of 31:3) stands exactly twice in the Torah, both lean — here, and Levi's blessing 'WHO SAID of his father and mother, I have not seen them' (Deut 33:9): the prayer's quoted promise and the Levite's severed kinship, spelled as one pair.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "האמר"
+      },
+      "expect_total": 2,
+      "expect_refs": [
+        "Gen 32:10",
+        "Deut 33:9"
+      ]
+    }
+  },
+  {
+    "id": "G55-04",
+    "source": "Minchat Shai on Gen 32:26 ('יכל — lean, proven from the Shelach Masorah; the Ramah: the CAN of we-surely-can alone is written full vav in the Torah')",
+    "ref": "Gen 32:26",
+    "claim_en": "THE ONE FULL CAN: at the wrestling — 'he saw that he COULD not prevail against him' (32:26) — the can-word יכל runs lean, as at Joseph's breakdown (45:1) and the cloud-filled Tabernacle Moses could not enter (Exod 40:35, all three builder-checked); the Torah's ONE full יכול belongs to Caleb: 'we surely CAN go up' (Num 13:30). Every could-not lean; the one whole CAN is the faith-cry.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "יכול"
+      },
+      "expect_total": 1,
+      "expect_refs": [
+        "Num 13:30"
+      ]
+    }
+  },
+  {
+    "id": "G55-05",
+    "source": "Minchat Shai on Gen 32:10 ('ואיטיבה — full, two yods, the Masorah marking NONE LIKE IT; the Hilleli full against the Yerushalmi; so the Ramah explicitly') + Kitzur 32:10 ('full of yod: he prayed that the TEN trials of Abraham stand for him')",
+    "ref": "Gen 32:10",
+    "claim_en": "THE PROMISE WRITTEN OVERFULL: ואיטיבה ('and I WILL SURELY DO GOOD with you,' 32:10 — the promise Jacob holds up in prayer) — written full with BOTH yods, the Masorah's none-like-it, the Hilleli and the Ramah against the Yerushalmi's lean form; the Kitzur reads the extra yod (the ten-letter) as Abraham's ten trials invoked into the promise.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 32:10",
+      "idx": 14,
+      "contains": "וְ/אֵיטִ֥יבָה"
+    }
+  },
+  {
+    "id": "G55-06",
+    "source": "Minchat Shai on Gen 32:19 ('שלוחה — the Masorah: three, two lean and one full; the Naphtali one lean; an old scroll-manual's lean variant here is overruled') + Kitzur 32:19 (the sent-hand reading)",
+    "ref": "Gen 32:19",
+    "claim_en": "THE SENT-GIFT FULL, THE SENT-HIND LEAN: שלוחה ('it is a gift SENT to my lord, to Esau,' 32:19) — written full with its vav, while its Torah sister runs lean: 'Naphtali is a hind SENT forth' (49:21, builder-checked; the third member, Ezekiel's outstretched hand, named outside): the Masorah's two-lean-one-full landing with the gift as the whole one, against the old book's lean variant.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 32:19",
+      "idx": 5,
+      "contains": "שְׁלוּחָ֔ה"
+    }
+  },
+  {
+    "id": "G55-07",
+    "source": "Kitzur Baal HaTurim on Gen 32:12 ('הצילני נא מיד — the initials hint at HAMAN, who went out to strike mother with children')",
+    "ref": "Gen 32:12",
+    "claim_en": "THE ENEMY IN THE INITIALS: הצילני נא מיד ('DELIVER me, please, from the hand of my brother,' 32:12) — the three words' initial letters carry the letters of המן (Haman, DB-checked as a multiset): the Kitzur reads the prayer against the striker of 'mother with children' armed already inside Jacob's own fear of exactly that fate (32:12's own closing words).",
+    "check": {
+      "type": "initial_letters",
+      "ref": "Gen 32:12",
+      "idx": [
+        0,
+        2
+      ],
+      "multiset_of": "המן"
+    }
+  },
+  {
+    "id": "G55-08",
+    "source": "Kitzur Baal HaTurim on Gen 32:25 ('ויאבק איש עמו — the final letters spell קשו, for the house of Esau shall be STRAW; and איש עמו in gematria is עשו אדום')",
+    "ref": "Gen 32:25",
+    "claim_en": "STRAW AT THE END OF THE WRESTLING: ויאבק איש עמו ('and a man WRESTLED with him,' 32:25) — the three words' final letters spell קשו ('straw,' DB-checked in order), the Kitzur hearing Obadiah's verdict 'the house of Esau shall be straw' sealed at the clause's ends; and the letters of איש עמו ('a man with him') sum to 427, the count of עשו אדום ('Esau, Edom' — builder-checked): the adversary named twice inside the grapple's own letters.",
+    "check": {
+      "type": "final_letters",
+      "ref": "Gen 32:25",
+      "idx": [
+        3,
+        5
+      ],
+      "spell": "קשו"
+    }
+  },
+  {
+    "id": "G55-09",
+    "source": "Minchat Shai on Gen 32:23 ('ויקם בלילה הוא — one of the FOUR the-Masorah lists where the sense expects ההוא and the letter writes הוא; the signs at Vayera and I Samuel 19')",
+    "ref": "Gen 32:23",
+    "claim_en": "THE NIGHT THE LETTER LEAVES BARE, AGAIN: הוא of the crossing-night ('and he rose THAT night and took his two wives,' 32:23) — the sense expects the the-prefixed form; the letter writes it bare, another of the Masorah's FOUR such stations (with Lot's elder daughter's night, 19:33, and the mandrake night, 30:16, both already in the corpus): the expected-form class gains its third in-span member on the night of the wrestling.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 32:23",
+      "idx": 2,
+      "contains": "ה֗וּא"
+    }
+  },
+  {
+    "id": "G55-10",
+    "source": "Kitzur Baal HaTurim on Gen 32:17 ('ורוח — two in the Masorah: a SPACE you shall set between herd and herd, and RELIEF shall rise for the Jews (Esther 4:14): a hint that the generations to come send their tribute to the princes')",
+    "ref": "Gen 32:17",
+    "claim_en": "THE BREATHING-SPACE AND THE RELIEF: ורוח ('and a SPACE you shall set between herd and herd,' 32:17) — of the four Torah tokens of these letters, this alone is the breathing-space noun (segol-pointed; the other three are the WIND of creation, of the locusts, and of the quails, builder-checked): the Masorah pairs it with Esther's רוח ('RELIEF shall rise for the Jews,' 4:14, named) — the space Jacob sets before Esau read as the relief set before every later Haman.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 32:17",
+      "idx": 11,
+      "contains": "וְ/רֶ֣וַח"
+    }
+  },
+  {
+    "id": "G55-11",
+    "source": "Minchat Shai on Gen 32:16 ('ועירם — the ayin with SHEVA ALONE in the precise manuscripts; so the Michlol, Livyat Chen, and Rav Pealim')",
+    "ref": "Gen 32:16",
+    "claim_en": "THE AYIN HOLDS THE LINE: ועירם ('twenty she-asses and ten FOALS,' 32:16) — the ayin with plain sheva (the silent half-vowel) exactly as all the precise books rule: where resh, tzadi, lamed, and qof keep splitting into the compound half-vowel (the characterized law's eleven stations), the guttural ayin stands bare here as at ויעתק (26:22) — the class's consonant boundary confirmed a second time.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 32:16",
+      "idx": 10,
+      "contains": "עְ"
+    }
+  },
+  {
+    "id": "G55-12",
+    "source": "Minchat Shai on Gen 32:11 ('כי במקלי — the bet SOFT in all the books, against Rav Pealim') + Kitzur ('במקלי in gematria: יעקב — with my body alone') + MS 32:27 ('אשלחך — meteg on the shin in the precise manuscripts and Ben Asher's variant-lists')",
+    "ref": "Gen 32:11",
+    "claim_en": "THE STAFF AND THE STROKE, AS RULED: במקלי ('with MY STAFF I crossed this Jordan,' 32:11) — the bet soft with all the books against Rav Pealim's dagesh, and the staff-word's letters sum to 182, the count of יעקב himself (builder-checked): the Kitzur's 'with my body alone' carried in the arithmetic; and at the dawn's אשלחך ('I will not LET YOU GO,' 32:27) the ruled meteg (the small stress-stroke) stands on the shin in the stream exactly as Ben Asher's lists require.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 32:11",
+      "idx": 10,
+      "contains": "בְ"
+    }
+  },
+  {
+    "id": "G55-13",
+    "source": "Minchat Shai on Gen 32:3 ('מחנה אלהים זה — HOLY, tractate Soferim') + 32:29 ('כי שרית עם אלהים — some of the sages read it holy, some profane; Bereshit Rabbah and Chullin, the sinew chapter')",
+    "ref": "Gen 32:3",
+    "claim_en": "THE CAMP'S HOLY NAME AND THE WRESTLER'S DISPUTED ONE (classification layer, uninstrumented): tractate Soferim rules the אלהים of 'this is God's CAMP' (32:3) HOLY, while the אלהים of the renaming — 'for you have striven WITH GOD and with men' (32:29) — the sages themselves divide, some holy, some profane (Bereshit Rabbah; Chullin's sinew chapter): SNAPSHOT's stream carries no holy/profane layer — stations nine and ten filed unsettled.",
+    "check": {
+      "type": "manual"
+    }
+  },
+  {
+    "id": "G55-21",
+    "source": "Bereshit Rabbah 75:11",
+    "claim_en": "A DEFERENCE IS COUNTED AND PRICED IN DYNASTIES, AND THE PRICE IS PAID FOUR CHAPTERS LATER. The chain counts the times Jacob addressed his brother as 'my lord' and puts the penalty in the same number: as you live, I will establish EIGHT KINGS from his sons before yours - citing 36:31, the kings who reigned in Edom before any king reigned in Israel. Machine-checked at BOTH ends, in this one derivation group: the address stands exactly EIGHT times across Genesis 32-33 (32:5, 32:6, 32:19, 33:8, 33:13, 33:14 twice, 33:15), and Genesis 36:32-39 records exactly EIGHT reigns before any king of Israel. A numeric claim minted at this verse and counted at gen_59's, both ends confirmed against our own ink.",
+    "check": {
+      "type": "verse_token_count",
+      "ref": "Gen 33:14",
+      "translit": "adoni-y",
+      "expect_total": 2
+    }
+  },
+  {
+    "id": "G55-22",
+    "source": "Bereshit Rabbah 75:13",
+    "claim_en": "A CHARACTER ARGUES FROM A STATUTE THAT HAS NOT YET BEEN GIVEN, AND NAMES THE CONSEQUENCE FOR THE GIVER. The prayer is read as citing the law forbidding the slaughter of an animal and its young on one day, and pressing it: if this man destroys mother and children together, WHO WILL READ THE TORAH SCROLL YOU ARE DESTINED TO GIVE? The lever is not mercy but the future existence of the audience for the law. The same section reads the spacing of the droves as a standing intercession - if troubles come upon my children, SPACE THEM, not one after another.",
+    "check": {
+      "type": "manual",
+      "note": "A prayer argued from a statute not yet given, with the giver's own future purpose as the lever."
+    }
+  },
+  {
+    "id": "G55-23",
+    "source": "Bereshit Rabbah 76:3",
+    "claim_en": "A PRUDENCE RULE IS MINTED FROM THE DIVISION OF THE CAMP. The Torah taught proper conduct here, the chain says: a man should not put ALL HIS WEALTH IN ONE CORNER - derived from the splitting of the camp, with a later hiding of prophets fifty to a cave as the second case. A risk-distribution rule taken from a defensive manoeuvre.",
+    "check": {
+      "type": "manual",
+      "note": "A risk-distribution maxim derived from a narrative act of dividing a camp, with a second named instance."
+    }
+  },
+  {
+    "id": "G55-24",
+    "source": "Bereshit Rabbah 76:4",
+    "claim_en": "THE INVOCATION IS READ AS PROOF THAT DESCENT DOES NOT SECURE THE NAME. He names the God of Abraham and of Isaac AND NOT OF ESAU, and the rule is stated: one who chooses their path has the Name rested upon him; one who does not, does not - with a king skipped in one genealogy and another named in it as the proof pair. Sonship is declared insufficient and conduct made the test for whether the divine name attaches at all.",
+    "check": {
+      "type": "manual",
+      "note": "A rule that lineage does not secure divine association, argued from whose names an invocation omits."
+    }
+  },
+  {
+    "id": "G55-25",
+    "source": "Bereshit Rabbah 76:5; Onkelos Genesis 32:11",
+    "claim_en": "'I AM SMALL' IS ADJUDICATED, AND THE TRANSLATION VOTES FOR MERIT-DEPLETION. One reading has him unworthy; the other has him worthy but DIMINISHED by the kindnesses already received - merit spent down by favours. Onkelos renders it MY MERITS ARE FEW from all the kindnesses, writing the depletion doctrine as the verse's plain sense. A model in which merit is a finite balance drawn down by benefits received.",
+    "check": {
+      "type": "manual",
+      "note": "A self-deprecation adjudicated as merit-depletion, with the translation writing the finite-balance model into the verse."
+    }
+  },
+  {
+    "id": "G55-26",
+    "source": "Bereshit Rabbah 77:3",
+    "claim_en": "THE CHAIN DECLARES OPENLY THAT IT DOES NOT KNOW WHO WON, AND THEN DECIDES BY A VERB. Asked which of the two prevailed, R. Berekhya answers: WE DO NOT KNOW - but who was filled with dust? THE MAN WITH HIM. The uncertainty is stated first and the resolution taken from the dust implied by the wrestling verb, not from the outcome. The wound is separately read as future history - he touched the righteous destined from him, the generation of the persecution - and the dislocation verb is parsed three ways.",
+    "check": {
+      "type": "manual",
+      "note": "An explicit admission of ignorance, followed by a decision drawn from a verb's implication rather than the narrative."
+    }
+  },
+  {
+    "id": "G55-27",
+    "source": "Bereshit Rabbah 78:1",
+    "claim_en": "A RANK TABLE IS DERIVED FROM THE ANGEL'S REQUEST TO BE LET GO. R. Shimon draws three inferences of precedence and this verse supplies the third: the guarded outranks the guard, the carried outranks the carrier, and THE RELEASER OUTRANKS THE RELEASED - taken from 'release me'. Around it the doctrine that a new company of angels is created daily and none sings twice, with the objection raised from this very verse and answered.",
+    "check": {
+      "type": "manual",
+      "note": "A three-member precedence table whose third member is derived from this verse's imperative."
+    }
+  },
+  {
+    "id": "G55-28",
+    "source": "Bereshit Rabbah 78:2",
+    "claim_en": "A PENALTY NUMBER RECORDED AT ONE BLOCK IS SPOKEN BY ITS SUBJECT AT ANOTHER. The angel's fear is that he will be banished as the Sodom angels were banished for 138 years for revealing a secret - the same figure the corpus records at gen_48's ladder, where those angels' exile is said to close. Here the number is in the mouth of an angel weighing his own risk. The deferral follows: He will reveal Himself to you at Bethel and change your name, AND I WILL BE STANDING THERE - a promise the text keeps at 35:10 in gen_58, in this same group.",
+    "check": {
+      "type": "manual",
+      "note": "A penalty figure from an earlier block quoted by a character weighing his own exposure, with a deferral the text later honours."
+    }
+  },
+  {
+    "id": "G55-29",
+    "source": "Bereshit Rabbah 78:4",
+    "claim_en": "THE REFUSAL TO GIVE A NAME IS EXPLAINED BY A DOCTRINE THAT THE CLASS HAS NO FIXED NAMES. Asked why he will not say it, the answer is that the messengers' names change - not as he is called now is he called later - with two verses about the stars reconciled on that basis and a later refusal in the same terms: I do not know what name I will be exchanged to. The doctrine stands immediately beside the moment a human name is being FIXED permanently, which is the contrast the placement makes.",
+    "check": {
+      "type": "manual",
+      "note": "A class declared to have no stable names, placed immediately beside the fixing of a human name."
+    }
+  },
+  {
+    "id": "G55-30",
+    "source": "Onkelos Genesis 32:29",
+    "claim_en": "THE NAME'S ETYMOLOGY IS REFUSED BY THE TRANSLATION. Where the verse explains the new name as striving WITH GOD and with men, Onkelos writes that you are GREAT BEFORE THE LORD and with men - the striving-with-God surface removed and the name re-grounded in rank rather than contest. The sharpest guard in this sweep, and it stands beside the chain's own admission that it does not know who prevailed: one member declines to say, the other declines to let the question arise.",
+    "check": {
+      "type": "manual",
+      "note": "A name-etymology's theological surface removed by the translation, beside the midrash's stated uncertainty on the same point."
+    }
+  },
+  {
+    "id": "G55-31",
+    "source": "Bereshit Rabbah 78:6",
+    "claim_en": "THE FIRST FOOD PROHIBITION IS SEATED ON A NARRATIVE WOUND, AND ITS SCOPE IS DISPUTED AND SELF-IMPOSED. The sinew is named from the dislocation itself. Rav Huna records that its outer extensions are TECHNICALLY PERMITTED - but Israel is holy and prohibited them upon themselves, a self-stringency recorded as such rather than as law. And the scope is disputed: he touched one side, so one is forbidden, against he touched one and BOTH are forbidden because the verse names no side - each side carrying its own logic-dictates tradition.",
+    "check": {
+      "type": "manual",
+      "note": "A dietary prohibition derived from a narrative injury, with an admitted self-imposed extension and a scope dispute."
+    }
+  },
+  {
+    "id": "G55-32",
+    "source": "Bereshit Rabbah 78:11",
+    "claim_en": "THE RATIFICATION MAXIM TAKES A SECOND SEAT AT THE MEETING ITSELF. The blessings are again said to have sat dubious in his hand until the brother's own words - my brother, WHAT IS YOURS SHALL BE YOURS - at which point R. Elazar's rule is re-minted: ratification of a document is only by its signatories. The maxim the corpus records at 27:33 and 28:1 now fires a third time, and here the signatory is the injured party rather than the grantor.",
+    "check": {
+      "type": "manual",
+      "note": "A document-ratification maxim firing a third time, with the ratifying party being the one who lost by the instrument."
+    }
+  },
+  {
+    "id": "G55-33",
+    "source": "Bereshit Rabbah 78:5; Bereshit Rabbah 68:10",
+    "claim_en": "THE TIME BORROWED AT THE OUTWARD JOURNEY IS REPAID HERE, WITH INTEREST. Two hours were taken from the day at 28:11 so the meeting could be private; at this verse the sun rose FOR HIM, and the chain reads the phrase as healing rather than daylight - the sun healing him while scorching the other party, with a prophet's verse cited both ways, furnace and healing. The debt gen_48 recorded is discharged at the exact verse that block predicted, and the repayment is larger than the loan.",
+    "check": {
+      "type": "manual",
+      "note": "A borrowed quantity from an earlier block discharged at the predicted verse, with the return exceeding the loan."
+    }
+  },
+  {
+    "id": "G55-34",
+    "source": "Bereshit Rabbah 75:2; Bereshit Rabbah 75:3",
+    "claim_en": "THE CHAIN AUDITS THE PATRIARCH AND FINDS AGAINST HIM. The embassy is criticized outright: a righteous man casting himself before a wicked one, likened to a muddied spring; he was going his own way and YOU sent to him calling yourself his servant. A second seat adds the sleeping-robber parable - I was asleep and you WOKE me. The criticism of the subject is recorded in the same register as the praise, and neither cancels the other.",
+    "check": {
+      "type": "manual",
+      "note": "An explicit criticism of the narrative's protagonist preserved at equal weight with the favourable readings."
+    }
   }
- },
- {
-  "id": "G55-02",
-  "source": "Kitzur Baal HaTurim on Gen 32:15 ('עזים מאתים — the whole verse ends in mem, like the offering-verses; eight mems, against the eight kings who reigned in Edom before a king reigned in Israel; another reading: all the beasts sent were blemished, unfit for the altar')",
-  "ref": "Gen 32:15",
-  "claim_en": "THE GIFT-VERSE OF EIGHT MEMS: every word of the tribute's first verse — 'two hundred she-goats and twenty he-goats, two hundred ewes and twenty rams' (32:15) — ends in the letter mem, eight closing mems in a row (DB-checked), which the Kitzur sets against the EIGHT KINGS who reigned in Edom before any king in Israel (the ledger of gen_59's span): Esau's tribute sealed with Esau's king-count.",
-  "check": {
-   "type": "final_letters",
-   "ref": "Gen 32:15",
-   "idx": [
-    0,
-    7
-   ],
-   "spell": "מממממממם"
-  }
- },
- {
-  "id": "G55-03",
-  "source": "Minchat Shai on Gen 32:10 ('האמר — two, both lean, their signs: WHO-SAID-to-me return-to-your-land, and WHO-SAID-of-his-father-and-mother; the Ramah: every like-form in the Torah lean')",
-  "ref": "Gen 32:10",
-  "claim_en": "THE TWO LEAN WHO-SAIDs: האמר ('YHWH, WHO SAID to me: return to your land,' 32:10 — the prayer quoting the command of 31:3) stands exactly twice in the Torah, both lean — here, and Levi's blessing 'WHO SAID of his father and mother, I have not seen them' (Deut 33:9): the prayer's quoted promise and the Levite's severed kinship, spelled as one pair.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "he_plain_joined": "האמר"
-   },
-   "expect_total": 2,
-   "expect_refs": [
-    "Gen 32:10",
-    "Deut 33:9"
-   ]
-  }
- },
- {
-  "id": "G55-04",
-  "source": "Minchat Shai on Gen 32:26 ('יכל — lean, proven from the Shelach Masorah; the Ramah: the CAN of we-surely-can alone is written full vav in the Torah')",
-  "ref": "Gen 32:26",
-  "claim_en": "THE ONE FULL CAN: at the wrestling — 'he saw that he COULD not prevail against him' (32:26) — the can-word יכל runs lean, as at Joseph's breakdown (45:1) and the cloud-filled Tabernacle Moses could not enter (Exod 40:35, all three builder-checked); the Torah's ONE full יכול belongs to Caleb: 'we surely CAN go up' (Num 13:30). Every could-not lean; the one whole CAN is the faith-cry.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "he_plain_joined": "יכול"
-   },
-   "expect_total": 1,
-   "expect_refs": [
-    "Num 13:30"
-   ]
-  }
- },
- {
-  "id": "G55-05",
-  "source": "Minchat Shai on Gen 32:10 ('ואיטיבה — full, two yods, the Masorah marking NONE LIKE IT; the Hilleli full against the Yerushalmi; so the Ramah explicitly') + Kitzur 32:10 ('full of yod: he prayed that the TEN trials of Abraham stand for him')",
-  "ref": "Gen 32:10",
-  "claim_en": "THE PROMISE WRITTEN OVERFULL: ואיטיבה ('and I WILL SURELY DO GOOD with you,' 32:10 — the promise Jacob holds up in prayer) — written full with BOTH yods, the Masorah's none-like-it, the Hilleli and the Ramah against the Yerushalmi's lean form; the Kitzur reads the extra yod (the ten-letter) as Abraham's ten trials invoked into the promise.",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 32:10",
-   "idx": 14,
-   "contains": "וְ/אֵיטִ֥יבָה"
-  }
- },
- {
-  "id": "G55-06",
-  "source": "Minchat Shai on Gen 32:19 ('שלוחה — the Masorah: three, two lean and one full; the Naphtali one lean; an old scroll-manual's lean variant here is overruled') + Kitzur 32:19 (the sent-hand reading)",
-  "ref": "Gen 32:19",
-  "claim_en": "THE SENT-GIFT FULL, THE SENT-HIND LEAN: שלוחה ('it is a gift SENT to my lord, to Esau,' 32:19) — written full with its vav, while its Torah sister runs lean: 'Naphtali is a hind SENT forth' (49:21, builder-checked; the third member, Ezekiel's outstretched hand, named outside): the Masorah's two-lean-one-full landing with the gift as the whole one, against the old book's lean variant.",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 32:19",
-   "idx": 5,
-   "contains": "שְׁלוּחָ֔ה"
-  }
- },
- {
-  "id": "G55-07",
-  "source": "Kitzur Baal HaTurim on Gen 32:12 ('הצילני נא מיד — the initials hint at HAMAN, who went out to strike mother with children')",
-  "ref": "Gen 32:12",
-  "claim_en": "THE ENEMY IN THE INITIALS: הצילני נא מיד ('DELIVER me, please, from the hand of my brother,' 32:12) — the three words' initial letters carry the letters of המן (Haman, DB-checked as a multiset): the Kitzur reads the prayer against the striker of 'mother with children' armed already inside Jacob's own fear of exactly that fate (32:12's own closing words).",
-  "check": {
-   "type": "initial_letters",
-   "ref": "Gen 32:12",
-   "idx": [
-    0,
-    2
-   ],
-   "multiset_of": "המן"
-  }
- },
- {
-  "id": "G55-08",
-  "source": "Kitzur Baal HaTurim on Gen 32:25 ('ויאבק איש עמו — the final letters spell קשו, for the house of Esau shall be STRAW; and איש עמו in gematria is עשו אדום')",
-  "ref": "Gen 32:25",
-  "claim_en": "STRAW AT THE END OF THE WRESTLING: ויאבק איש עמו ('and a man WRESTLED with him,' 32:25) — the three words' final letters spell קשו ('straw,' DB-checked in order), the Kitzur hearing Obadiah's verdict 'the house of Esau shall be straw' sealed at the clause's ends; and the letters of איש עמו ('a man with him') sum to 427, the count of עשו אדום ('Esau, Edom' — builder-checked): the adversary named twice inside the grapple's own letters.",
-  "check": {
-   "type": "final_letters",
-   "ref": "Gen 32:25",
-   "idx": [
-    3,
-    5
-   ],
-   "spell": "קשו"
-  }
- },
- {
-  "id": "G55-09",
-  "source": "Minchat Shai on Gen 32:23 ('ויקם בלילה הוא — one of the FOUR the-Masorah lists where the sense expects ההוא and the letter writes הוא; the signs at Vayera and I Samuel 19')",
-  "ref": "Gen 32:23",
-  "claim_en": "THE NIGHT THE LETTER LEAVES BARE, AGAIN: הוא of the crossing-night ('and he rose THAT night and took his two wives,' 32:23) — the sense expects the the-prefixed form; the letter writes it bare, another of the Masorah's FOUR such stations (with Lot's elder daughter's night, 19:33, and the mandrake night, 30:16, both already in the corpus): the expected-form class gains its third in-span member on the night of the wrestling.",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 32:23",
-   "idx": 2,
-   "contains": "ה֗וּא"
-  }
- },
- {
-  "id": "G55-10",
-  "source": "Kitzur Baal HaTurim on Gen 32:17 ('ורוח — two in the Masorah: a SPACE you shall set between herd and herd, and RELIEF shall rise for the Jews (Esther 4:14): a hint that the generations to come send their tribute to the princes')",
-  "ref": "Gen 32:17",
-  "claim_en": "THE BREATHING-SPACE AND THE RELIEF: ורוח ('and a SPACE you shall set between herd and herd,' 32:17) — of the four Torah tokens of these letters, this alone is the breathing-space noun (segol-pointed; the other three are the WIND of creation, of the locusts, and of the quails, builder-checked): the Masorah pairs it with Esther's רוח ('RELIEF shall rise for the Jews,' 4:14, named) — the space Jacob sets before Esau read as the relief set before every later Haman.",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 32:17",
-   "idx": 11,
-   "contains": "וְ/רֶ֣וַח"
-  }
- },
- {
-  "id": "G55-11",
-  "source": "Minchat Shai on Gen 32:16 ('ועירם — the ayin with SHEVA ALONE in the precise manuscripts; so the Michlol, Livyat Chen, and Rav Pealim')",
-  "ref": "Gen 32:16",
-  "claim_en": "THE AYIN HOLDS THE LINE: ועירם ('twenty she-asses and ten FOALS,' 32:16) — the ayin with plain sheva (the silent half-vowel) exactly as all the precise books rule: where resh, tzadi, lamed, and qof keep splitting into the compound half-vowel (the characterized law's eleven stations), the guttural ayin stands bare here as at ויעתק (26:22) — the class's consonant boundary confirmed a second time.",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 32:16",
-   "idx": 10,
-   "contains": "עְ"
-  }
- },
- {
-  "id": "G55-12",
-  "source": "Minchat Shai on Gen 32:11 ('כי במקלי — the bet SOFT in all the books, against Rav Pealim') + Kitzur ('במקלי in gematria: יעקב — with my body alone') + MS 32:27 ('אשלחך — meteg on the shin in the precise manuscripts and Ben Asher's variant-lists')",
-  "ref": "Gen 32:11",
-  "claim_en": "THE STAFF AND THE STROKE, AS RULED: במקלי ('with MY STAFF I crossed this Jordan,' 32:11) — the bet soft with all the books against Rav Pealim's dagesh, and the staff-word's letters sum to 182, the count of יעקב himself (builder-checked): the Kitzur's 'with my body alone' carried in the arithmetic; and at the dawn's אשלחך ('I will not LET YOU GO,' 32:27) the ruled meteg (the small stress-stroke) stands on the shin in the stream exactly as Ben Asher's lists require.",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 32:11",
-   "idx": 10,
-   "contains": "בְ"
-  }
- },
- {
-  "id": "G55-13",
-  "source": "Minchat Shai on Gen 32:3 ('מחנה אלהים זה — HOLY, tractate Soferim') + 32:29 ('כי שרית עם אלהים — some of the sages read it holy, some profane; Bereshit Rabbah and Chullin, the sinew chapter')",
-  "ref": "Gen 32:3",
-  "claim_en": "THE CAMP'S HOLY NAME AND THE WRESTLER'S DISPUTED ONE (classification layer, uninstrumented): tractate Soferim rules the אלהים of 'this is God's CAMP' (32:3) HOLY, while the אלהים of the renaming — 'for you have striven WITH GOD and with men' (32:29) — the sages themselves divide, some holy, some profane (Bereshit Rabbah; Chullin's sinew chapter): SNAPSHOT's stream carries no holy/profane layer — stations nine and ten filed unsettled.",
-  "check": {
-   "type": "manual"
-  }
- }
 ]

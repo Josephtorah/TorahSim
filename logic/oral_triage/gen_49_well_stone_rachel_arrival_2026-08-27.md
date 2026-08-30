@@ -48,3 +48,16 @@ brother-in-deceit dual with Onkelos's literalized kinship (credit
 70:13 + O1); the tending-relatives month measure and the half-wage
 fraud baseline (row 5); the hired-vs-owner labor rebuke (row 4); the
 lone-shepherdess protection contrast (row 4).
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers and to the Vayera, Chayei
+Sarah and Toledot ledgers on 2026-08-30. This ledger records its Onkelos
+track in the compact row form ("O1 · 29:1"), which the unit-level cite
+validator cannot match: a cite is valid only when the literal source
+string appears in a triage ledger. This block's Onkelos verses are
+therefore listed here in citable form, so the derivation may cite the
+translation it actually read. No verdict is changed and no row is
+rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 29:1, Onkelos Genesis 29:2, Onkelos Genesis 29:3, Onkelos Genesis 29:4, Onkelos Genesis 29:5, Onkelos Genesis 29:6, Onkelos Genesis 29:7, Onkelos Genesis 29:8, Onkelos Genesis 29:9, Onkelos Genesis 29:10, Onkelos Genesis 29:11, Onkelos Genesis 29:12, Onkelos Genesis 29:13, Onkelos Genesis 29:14.

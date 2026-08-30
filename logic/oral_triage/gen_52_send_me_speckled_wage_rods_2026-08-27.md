@@ -53,3 +53,16 @@ the hen-lu fraud-count dispute across its three seats (rows 2/5/7);
 the flock and dog censuses with the reconciliation (row 4); the
 pre-formed-outcome tense argument (row 5); the lion-decree tax on
 the shepherd's ledger (row 7); the pursuit arithmetic (row 6).
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers and to the Vayera, Chayei
+Sarah and Toledot ledgers on 2026-08-30. This ledger records its Onkelos
+track in the compact row form ("O1 · 30:25"), which the unit-level cite
+validator cannot match: a cite is valid only when the literal source
+string appears in a triage ledger. This block's Onkelos verses are
+therefore listed here in citable form, so the derivation may cite the
+translation it actually read. No verdict is changed and no row is
+rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 30:25, Onkelos Genesis 30:26, Onkelos Genesis 30:27, Onkelos Genesis 30:28, Onkelos Genesis 30:29, Onkelos Genesis 30:30, Onkelos Genesis 30:31, Onkelos Genesis 30:32, Onkelos Genesis 30:33, Onkelos Genesis 30:34, Onkelos Genesis 30:35, Onkelos Genesis 30:36, Onkelos Genesis 30:37, Onkelos Genesis 30:38, Onkelos Genesis 30:39, Onkelos Genesis 30:40, Onkelos Genesis 30:41, Onkelos Genesis 30:42, Onkelos Genesis 30:43.

@@ -5636,3 +5636,487 @@ again. Both are correct — a derivation outranks a records note, and
 redact_border.py --apply now runs as a landing step, so the redaction
 re-applies automatically.
 
+
+## ADDENDUM 2026-08-30 — TOLEDOT DERIVED (fifth derivation group)
+
+Owner's word: "Commit and push, then start Toledot." gen_43-gen_47,
+Genesis 25:19-28:9, FIVE BLOCKS — including gen_46, the densest block in
+the corpus (93 declared sources).
+
+THE NUMBERS: 66 operators (62 WITNESS_READ, 4 WITNESS_STATE; none
+invented, rulebook NOT versioned). 65 claims. Six machine-checked. ALL
+GATES GREEN 5/5; claims 92 verified / 0 failed / 63 uncheckable;
+changelog GREEN; gloss_lint 0. World fold: standing 582 -> 648, exactly
+the 66 operators; hash 8b8fff1fa28953af unchanged.
+
+PREREQUISITE: 106 Onkelos citation keys appended across the five
+2026-08-27 ledgers (gen_43 16 verses, gen_44 16, gen_45 19, gen_46 40,
+gen_47 15 — the last spanning two chapters, 27:41-46 + 28:1-9).
+Append-only; no verdict changed, no row rewritten.
+
+**THE GROUP'S SIGNATURE RESULT — THE THREE-DEMANDS LADDER OPENED IN FULL,
+AND IT SPLITS THREE WAYS.** Bereshit Rabbah 65:9 makes one claim in three
+parts: aging, suffering and illness are each unwritten in the book until
+a patriarch demanded them — aging at Genesis 24:1, suffering at 27:1's
+dimmed eyes, illness at 48:1. gen_40 had already ruled the first leg
+failed. Opening all three under guard 3:
+
+  LEG 1 (aging, 24:1) — FAILS. The word stands five times earlier
+  (18:11, 18:12, 18:13, 19:4, 19:31); 18:11 carries the identical phrase.
+  Recorded at gen_40, not applied.
+
+  LEG 2 (suffering, 27:1) — CANNOT BE A WORD-CENSUS AT ALL. The root for
+  chastisement occurs NOWHERE in Genesis; its first Torah appearance is
+  Leviticus 26:18, and it is absent from 27:1 too. So this leg is a claim
+  about the first recorded affliction, not about ink. Carried as
+  interpretive, explicitly labelled.
+
+  LEG 3 (illness, 48:1) — HOLDS EXACTLY. The word for illness stands
+  ONCE in Genesis, at 48:1, precisely where the chain places it; three
+  tokens in the whole Torah, the others in Exodus and Deuteronomy.
+  Machine-checked. Its seat is in gen_71/72, NOT YET DERIVED.
+
+One part exact, one false, one not the kind of claim that can be checked
+that way — and only opening ALL THREE could tell them apart. Had the
+guard let gen_40's failure stand as a verdict on the whole section, the
+exact leg would have been discarded with the false one. This is the
+strongest vindication of the owner's 2026-08-25 credit guards to date,
+and it argues that a failed leg is evidence about THAT LEG, never about
+its section.
+
+OTHER MACHINE-CHECKED, ALL HOLDING: 'twins' written SHORT at 25:24 and
+FULL at 38:27 — the chain's one-righteous-one-wicked contrast confirmed
+at both seats, twelve chapters apart. The opening word of 26:5 totals
+exactly 172 by letter value; against Abraham's verified 175 that yields
+the age of three, exactly as Reish Lakish computes (rival answer of 48
+recorded, unreconciled). 'His household' at 26:14 stands DEFECTIVE as the
+service-maxim reading requires. The rare particle of Isaac's trembling
+stands exactly FOUR times in the Torah — 27:33, 27:37, 43:11 (where the
+repayment is booked) and Exodus 33:16 — every occurrence accounted for.
+And the three-word blessing census sits exactly where the chain places
+it: 24:1, 27:33, 33:11, one word to each patriarch.
+
+THE CHAIN DRAWS ITS OWN ARCHITECTURE, TWICE, IN THIS GROUP. At gen_45's
+well names the canon's book-list is mapped clause by clause onto the
+geography, and Ben Kappara pushes the count to SEVEN books by treating
+the two traveling-Ark verses as a book in themselves. At gen_46's
+blessing the four-part division is stated outright: dew = SCRIPTURE, fat
+= MISHNAH, grain = TALMUD, wine = the narrative lore. THE TWO-SHELVES
+ARCHITECTURE THIS PROJECT RECONSTRUCTED IS HERE DRAWN BY THE TRADITION IN
+ITS OWN WORDS, on a narrative verse. Worth the owner's attention beside
+the oracle-anatomy insight.
+
+THE SPINE'S BEHAVIOUR THIS GROUP: it SPLITS at 27:19 (the midrash mounts
+an equivocation defence acquitting 'I am Esau your firstborn' by
+re-punctuation; Onkelos declines it and renders straight) and at 27:42
+(interior resolution vs external ambush on the block's hinge word). It
+CONVERGES at 25:22 (both send her to a school), 26:5 (both read the verse
+maximally, the translation supplying the register), 26:12, and 27:35
+(both re-grade 'cunning' as WISDOM). And it does something new: at 27:13
+ONKELOS WRITES A DOCTRINE THE CHAIN ONLY STATES TWO BLOCKS LATER — the
+matriarch-prophecy licence planted inside the verse in gen_46, its source
+row appearing at gen_47's 27:42. The licence precedes its statement.
+
+LAW ARRIVING AS NARRATIVE ENGINE (the pattern sharpening): the
+altar-service law supplied as Jacob's MOTIVE for the birthright purchase;
+the slave-property acquisition maxim deployed to VOID Esau's claim; the
+document-ratification maxim ('only by its signatories') validating a
+blessing obtained by deception, stated at 27:33 and seated at 28:1; the
+marriage contract's food clause licensing the taking of the kids; and
+sanctuary disqualification law binding Isaac to the Land. Also: the
+manslaughter statute's own verb (Exodus 21:13) read back into 27:30 —
+the law chapter this project read most deeply reaching into a narrative.
+
+TOOLCHAIN / RECORD FIX CAUGHT IN-RUN: gen_46's manifest already held 23
+claims, so three of this run's IDs (G46-21/22/23) collided with existing
+Masorah claims and were silently skipped by the de-duplicator while the
+operators still referenced them. Caught before the gates, renumbered to
+G46-41/42/43, operators repointed; all five units then verified so that
+EVERY operator claim-reference resolves to a real claim (12/10/10/20/10,
+zero unmatched). The de-duplicator protects the manifest but does not
+protect the reference — worth remembering.
+
+STATE: Genesis 73 of 73 READ; **51 of 73 DERIVED** (gen_01-47 continuous,
+1:1-28:9, plus gen_60-63). **22 blocks remain**: gen_48-59 and gen_64-73.
+Four groups left: gen_48-54 (Vayetze, 7), 55-59 (Vayishlach, 5), 64-67
+(Miketz, 4), 68-73 (Vayigash + Vayechi, 6).
+
+UNCOMMITTED: 5 rev-3 units + 5 manifests + 5 ledgers (citation keys) +
+CORPUS_TRUTH (648) + corpus_world.sqlite + this addendum. Never-commit
+set untouched. AWAITING OWNER WORD: commit/push. Stamps held to the end
+of the book by his standing decision.
+
+### Appended 2026-08-30 — TORAHSIM: CHAYEI SARAH LANDED; THE REDACTION STEP'S FIRST CATCH
+
+torahsim-19 landed Chayei Sarah: four pairs byte-identical, append-only
+proven per file (gen_39 66->79 lines, gen_40 88->101, gen_41 73->86,
+gen_42 67->80, every canon prefix byte-identical, each grown by its
+citation-key section alone, 105 keys as announced). All four rev 3, all
+GREEN, all d:1 first pass. CORPUS_TRUTH 530 -> 582 by the assert alone,
+hash unchanged, border line untouched. Nine gates green.
+
+THE NEW LANDING STEP EARNED ITS KEEP ON ITS FIRST OUTING: gen_39 and
+gen_40 arrived carrying the workshop filename exactly as both windows
+predicted, and redact_border.py --apply caught and rewrote both
+automatically, printing its coverage beside the result — "scanned 317
+file(s), of which 97 unit YAML(s); pattern self-test passed — 2
+occurrence(s), REWRITTEN". Before the fix those would have been two more
+silent leaks. Our rev-3 changelog lines replaced its redaction notes as
+agreed, and the redaction re-applied underneath.
+
+ITS NOTE ON THE FALSE ALARM, worth keeping for the method: raising it was
+correct on the evidence available, since this window cannot see canon and
+the two readings named were the only two there were. The rule that came
+out of it cost one function and six printed words and caught two real
+leaks within the hour.
+
+### Appended 2026-08-30 — THE FAILED-LEG RULE IS LAW IN CANON; REFERENCE SWEEP CLEAN
+
+torahsim-19 landed the failed-leg rule into canon's THE_STEPS Step 4 with
+all three legs worked through as found here, and stated the rule as:
+GRADE THE LEG YOU OPENED, SAY WHICH LEGS YOU DID NOT. MIRRORED into this
+tree's THE_STEPS.md Step 4 (workshop copy is a mirror; canon is the
+living copy by owner ruling), together with the coverage rule from the
+border episode — a report of zero is worth only the coverage line above
+it. BOTH ARE OWNER-VETOABLE: they are method notes in his plain-language
+reference, not gate/law/test changes, and no gate was touched. Flagged to
+him in-session.
+
+IT CHECKED THE CLAIM-REFERENCE FAILURE MODE RATHER THAN NOTING IT: across
+the whole canonical layer, 76 units carrying claim ids, 296 distinct
+operator claim-references, ZERO unresolved — so canon holds no dangling
+references today, and this tree's gen_46 renumbering held across the
+border. It deliberately did NOT build a standing guard, on the reasoning
+that one clean sweep is not a mechanism; if claim chips ever reach the
+renderer it becomes a step that prints its coverage, same discipline as
+the redaction tool. Correct call, recorded.
+
+IT IS ALSO HOLDING THE ARCHITECTURE FINDING OUT OF ITS ROADMAP ON
+PURPOSE, and the reasoning is worth keeping: canon cannot yet SHOW the
+finding, because the evidence sits in gen_45 and gen_46 at a derivation
+not yet landed, and recording a finding before its record arrives is the
+one habit that would make canon's documents untrustworthy. It goes in
+when Toledot lands and not before.
+
+ON THE ANTICIPATION CASE it concedes the taxonomy: Onkelos writing the
+matriarch-prophecy licence at 27:13 while the source row stating the
+doctrine sits at 27:42 two blocks later is not a split, not a
+convergence, and not an internal division — the licence PRECEDES its
+statement, a fourth kind. Both windows now agree the AGREEMENT-row
+proposal should NOT be built as a three-value schema, and that the method
+is to tag instances in the ledgers and let the count decide the
+vocabulary. Still the owner's call; still unbuilt on both sides.
+
+
+## ADDENDUM 2026-08-30 — VAYETZE DERIVED (sixth derivation group)
+
+Owner's word: "Next." gen_48-gen_54, Genesis 28:10-31:54, SEVEN BLOCKS —
+the largest group yet.
+
+THE NUMBERS: 77 operators (70 WITNESS_READ, 7 WITNESS_STATE; none
+invented, rulebook NOT versioned). 75 claims. Four machine-checked. ALL
+GATES GREEN 7/7; claims 110 verified / 0 failed / 78 uncheckable;
+changelog GREEN; gloss_lint 0. World fold: standing 648 -> 725, exactly
+the 77 operators; hash 8b8fff1fa28953af unchanged. Claim-reference sweep
+run before the gates (the gen_46 lesson): 75 references, zero unmatched.
+
+PREREQUISITE: 145 Onkelos citation keys appended across the seven
+2026-08-27 ledgers (gen_48 13 verses, gen_49 14, gen_50 16, gen_51 29
+across two chapters, gen_52 19, gen_53 21, gen_54 33). Append-only.
+
+**THE FINDING OF THE GROUP — THE TRADITION STATES THE GRAMMAR RULE OUR
+MORPHOLOGY LAYER RUNS.** At gen_48's very first verse, Bereshit Rabbah
+68:8 records R. Nechemya stating a rule: any word that would need the
+preposition "to" at its start may instead take a heh at its end — with
+four examples, to Sodom, to Seir, to Egypt, to Haran, the last being
+28:10's own final word. Our Step 2 morphology layer tags that ending
+independently as a directional suffix: 392 tokens across the Torah in 75
+distinct forms, and ALL FOUR of the chain's cited examples are among
+them. The chain's own recorded objection — that one word carries both
+devices — is answered, not suppressed. This is not a claim the machine
+checks; it is the SAME RULE, arrived at twice, and it is the sharpest
+overlap yet between the tradition's inference apparatus and this
+project's machine layer.
+
+**AND THE STRONGEST SIMULATION EXHIBIT SO FAR** (gen_49, Bereshit Rabbah
+70:8-9): the chain fixes the well scene as a FRAME — a well, three
+flocks, a great stone, a gathering, a rolling away, a returning — and
+then binds that one frame to SIX institutions in turn, holding the roles
+constant and changing only what fills them: the wilderness well; Zion
+with its three festivals; Zion's three courts, where the returning of the
+stone is deliberation until a ruling stands; three kingdoms drawing from
+the chambers; the Sanhedrin's three rows; and the synagogue, where the
+stone is the evil inclination and returns when the congregation leaves. A
+SEVENTH binding at Sinai then carries an all-or-nothing precondition
+stated as law. One machine, seven bindings, roles held constant — the
+tradition doing explicitly what THE_WORLD proposes to do. Belongs with
+the owner's oracle-anatomy insight.
+
+GUARD 3 AND THE NEW FAILED-LEG RULE, WORKING TOGETHER (gen_48, Bereshit
+Rabbah 69:4): the eighteen-count of the patriarchs was opened and
+DELIBERATELY LEFT UNGRADED. Under the frame tried — Torah verses naming
+all three together — our corpus returns nine, or ten allowing the
+alternate name, not eighteen. The frame is named in the claim and the leg
+left open, BECAUSE TWICE IN THIS PROJECT A COUNT THAT LOOKED WRONG WAS A
+WRONG FRAME (the thirteen genealogies; the ten sons of Chet). What IS
+machine-checked is the edge case the chain's own audit turns on: 28:13
+names Abraham and Isaac and does NOT name Jacob, exactly as its exclusion
+branch requires. Grading the leg opened, and saying which was not.
+
+OTHER MACHINE-CHECKED: the handmaid's missing verb. Bereshit Rabbah 71:9
+notes that of Zilpah it is written that she BORE with no preceding "and
+she conceived." Checked across every birth in the block: the phrase
+stands before NINE of eleven — six for Leah, two for Bilhah, one for
+Rachel — and is absent from exactly the two that are Zilpah's, 30:10 and
+30:12. Not impressionistic; the exceptions are precisely the two claimed.
+
+THE CLEANEST TWO-TRACK INSTANCE IN THE PROJECT (gen_53, 31:19-21): the
+chain defends the theft of the images by supplying INTENT — shall I go my
+way and leave this elder in his corruption? — and insists the verse must
+therefore still SAY "stole." Onkelos removes the verb instead: she HID
+the images; he CONCEALED his intentions; he WENT rather than fled. The
+midrash keeps the word and argues the motive; the translation keeps the
+motive and removes the word. One embarrassment, opposite solutions, same
+verses.
+
+THE CASE-FILE EXHIBIT (gen_50): three anti-fraud contract terms read as
+deliberate drafting against three named swaps — for RACHEL, YOUR
+DAUGHTER, THE YOUNGER — and the switch defeats all three WITHOUT
+BREACHING ANY, because the substituted bride answered to the name.
+Drafting law verse-perfect, beaten by performance outside its scope. This
+is the pair the sugya case-file machinery will want first. And the
+deceit is repaid by its identical mechanism, the victim naming it: did
+your father not call ESAU — and you answered him?
+
+THE CROWN DOCTRINE (gen_54, 31:42): LABOUR IS RANKED ABOVE THE MERIT OF
+THE FATHERS — "merit salvaged money, labour saved lives" — minted off the
+verse's own pairing of the fathers' God with "my hardship and the toil of
+my hands God saw." An inherited-standing hierarchy inverted, at the verse
+where a wage dispute is being argued.
+
+LAW-WIRES INTO THE ORDINANCES, sharpening: Onkelos refiles the shepherd's
+complaint at 31:39 in the operative vocabulary of the BAILMENT statutes —
+that which was MISSING FROM THE COUNT you demanded from my hand; I
+GUARDED by day and I GUARDED by night. The count, the demand and the
+watch are the keeper laws' own terms. Clearest narrative-to-ordinance
+wire yet. Also seated: the labour day's defaults with their sabbath-eve
+exception (gen_51); the mixing-of-joys calendar law born in a swindler's
+instruction (gen_50); the vow's chain of title, register and delay
+penalty (gen_48); and a predator tax absorbed personally by the keeper so
+it never reached the owner (gen_52).
+
+THE WORD TAKES A JURIDICAL OFFICE for the first time in the derived
+corpus (gen_54, 31:49-50): elsewhere it supports, promises and is sworn
+by; here the WORD of the LORD WATCHES and WITNESSES a contract between
+two parties. And at 31:24 the gentile-prophecy guard is stated by the
+chain and enforced grammatically by the translation at one verse — the
+THIRD instance of that convergence pattern after 20:3 and 24:63.
+
+⚠ ELIJAH-DOCKET EXHIBIT, NOT ACTED ON (gen_51, Bereshit Rabbah 71:9):
+arguing which tribe Elijah descends from, two sides each harmonize the
+other's proof verse — UNTIL ELIJAH HIMSELF STOOD BEFORE THEM: "why do you
+dispute about me? I am of the children of Rachel." The chain preserves
+not only the dispute but its resolution BY THE PERSON DISPUTED OVER, an
+evidentiary shape unlike anything else in the block. Recorded as an
+operator; the Elijah docket remains DEFERRED per the owner's 2026-08-09
+ruling and nothing was opened.
+
+STATE: Genesis 73 of 73 READ; **58 of 73 DERIVED** (gen_01-54 continuous,
+1:1-31:54, plus gen_60-63). **15 blocks remain**: gen_55-59 and
+gen_64-73. Three groups left: gen_55-59 (Vayishlach, 5), 64-67 (Miketz,
+4), 68-73 (Vayigash + Vayechi, 6).
+
+UNCOMMITTED (TWO GROUPS NOW): Toledot's 5 units + 5 manifests + 5
+ledgers, and Vayetze's 7 units + 7 manifests + 7 ledgers, plus
+CORPUS_TRUTH (725), corpus_world.sqlite, THE_STEPS.md (the two mirrored
+method rules) and these addenda. Never-commit set untouched. AWAITING
+OWNER WORD: commit/push. Stamps held to the end of the book by his
+standing decision.
+
+
+## ADDENDUM 2026-08-30 — VAYISHLACH DERIVED (seventh derivation group)
+
+Owner's word: "continue and record notes as you see fit wherever you need
+to put them. just let me know." gen_55-gen_59, Genesis 32:1-36:43, FIVE
+BLOCKS.
+
+THE NUMBERS: 53 operators (51 WITNESS_READ, 2 WITNESS_STATE; none
+invented, rulebook NOT versioned). 54 claims. Two machine-checked. ALL
+GATES GREEN 5/5; claims 43 verified / 0 failed / 57 uncheckable;
+changelog GREEN; gloss_lint 0. World fold: standing 725 -> 778, exactly
+the 53 operators; hash 8b8fff1fa28953af unchanged. Claim-reference sweep
+before the gates: 53 references, zero unmatched.
+
+PREREQUISITE: 156 Onkelos citation keys appended across the five
+2026-08-27 ledgers (gen_55 33 verses, gen_56 20, gen_57 31, gen_58 29,
+gen_59 43). Append-only.
+
+**THE GROUP'S RESULT — A NUMERIC CLAIM WITH BOTH ENDS DERIVED IN ONE
+SITTING.** Bereshit Rabbah 75:11 counts the times Jacob addresses his
+brother as "my lord" and prices the deference in dynasties: EIGHT KINGS
+from his sons before yours, citing 36:31. Machine-checked at BOTH ends:
+the address stands exactly EIGHT times across Genesis 32-33 (32:5, 32:6,
+32:19, 33:8, 33:13, 33:14 TWICE, 33:15), and Genesis 36:32-39 records
+exactly EIGHT reigns before any king of Israel. The claim is minted at
+gen_55 and counted at gen_59 — both blocks in this same group, the first
+time the project has derived both ends of such a claim in one sitting.
+
+THREE MORE CROSS-BLOCK ARCS CLOSED IN THIS GROUP, all predicted by
+earlier derivations: gen_48's two borrowed sun-hours repaid at gen_55's
+32:32 ("the sun rose FOR HIM", read as healing, the repayment larger than
+the loan); gen_53's curse chain completing at gen_58's 35:19 (took the
+images 31:19 -> curse in ignorance 31:32 -> died 35:19, with two rival
+causes preserved); and gen_55's angel deferring the renaming to Bethel,
+which gen_58's narration then performs at 35:10.
+
+SECOND MACHINE CHECK — THE DOTTING RULE MEETS ITS OWN TIE-CASE. The rule
+is expound-the-majority: dots over letters, or letters over dots. At the
+kiss of 33:4 the chain says they are EQUAL, which is why it records BOTH
+readings and settles neither (kissed wholeheartedly / came to bite, the
+neck turned to marble, "and they wept" split between the two). Verified:
+the word carries SIX consonants and SIX upper dots. Of the five dotted
+passages in Genesis, THREE are fully dotted and TWO only partially — so
+the precondition the chain claims here is real and is not general. This
+also completes the honest note left open at gen_34, where 18:9's four
+dotted letters were recorded against an exposition using three.
+
+THE CHAIN AUDITS ITSELF AND ITS SUBJECTS, REPEATEDLY, IN THIS GROUP: it
+criticizes the patriarch's embassy outright (a righteous man casting
+himself before a wicked one); it states plainly that IT DOES NOT KNOW who
+prevailed in the wrestling, then decides by a verb; it audits a promise
+the text never shows kept, confirms across the whole canon that he never
+went to Seir, and reclassifies the undertaking as OUTSTANDING rather than
+false; and at gen_57's chapter — the hardest in the book — IT DECLINES TO
+RULE, filing both sentences (the muddied barrel against the clarified
+one) with no verdict entered.
+
+THE MOST STARTLING REGISTER MOVE OF THE SWEEP (gen_57, Bereshit Rabbah
+80:7): the covenant vocabulary of divine love — cleaving, desiring,
+wanting — is sourced explicitly out of the ASSAILANT'S own clauses in
+Genesis 34, the chain saying so in as many words: "and we learn them from
+the portion of this wicked one." And Onkelos drains exactly those verbs
+on the same clause, rendering the assault as mistreatment and the
+cleaving as mere desire. The two shelves pulling opposite ways on one
+sentence.
+
+ALSO SEATED: the first food prohibition, with its extension recorded as a
+SELF-STRINGENCY ("technically permitted, but Israel is holy and
+prohibited them upon themselves") and its scope disputed; a sabbath
+danger-ruling taking 34:25 as its empirical measure; an anti-monument
+maxim recorded at the Torah's most famous monument; an unnarrated
+matriarch's death located inside a place-name; interpretations recorded
+as the operative basis of political acts; the third uncontestable
+purchase completing that doctrine inside the derived corpus; and the
+ratification maxim firing a third time with the LOSING party as
+signatory.
+
+NOTES RECORDED ELSEWHERE THIS SITTING (owner: "record notes as you see
+fit wherever you need to put them"):
+- THE_WORLD.md gained FOUR appended entries in its idea log, marked as
+  EVIDENCE rather than ideas: (1) the tradition performing schema-reuse
+  explicitly — one well-frame bound to six institutions plus a seventh
+  with an all-or-nothing gate (gen_49); (2) the chain drawing its own
+  canon architecture twice in one parashah, including the outright
+  dew/fat/grain/wine = Scripture/Mishnah/Talmud/lore assignment, which is
+  the two-shelves ruling stated by the tradition in its own words; (3)
+  this group's both-ends-derived numeric claim; (4) the morphology layer
+  and Bereshit Rabbah 68:8 running the SAME directional-ending rule.
+  Appended to the existing idea log, its own stated append point; no
+  section of the architect file was restructured.
+- THE_STEPS.md Step 4 carries the two mirrored method rules from earlier
+  today (grade-the-leg, and a zero is worth only its coverage line), both
+  flagged to the owner as vetoable.
+
+STATE: Genesis 73 of 73 READ; **63 of 73 DERIVED** (gen_01-63
+CONTINUOUS, 1:1-38:30 — the first unbroken run from the book's opening
+through the Judah-and-Tamar block). **10 blocks remain**: gen_64-73. Two
+groups left: gen_64-67 (Miketz, 4) and gen_68-73 (Vayigash + Vayechi, 6).
+
+UNCOMMITTED (THREE GROUPS NOW): Toledot, Vayetze and Vayishlach — 17
+units + 17 manifests + 17 ledgers, plus CORPUS_TRUTH (778),
+corpus_world.sqlite, THE_STEPS.md, THE_WORLD.md and these addenda.
+Never-commit set untouched. AWAITING OWNER WORD: commit/push.
+
+## ⚠⚠ COMPACTION POINT #28 (2026-08-30, owner: "lets compact. get ready.")
+## READ THIS BLOCK FIRST ON RESUME.
+
+**STEP ZERO ON RESUME — NON-NEGOTIABLE:** reread THE_STEPS.md Step 4
+BEFORE deriving anything. That is the standing post-compaction rule and it
+exists because a prior sitting derived at the wrong grain and broke a law
+the owner had already given. Step 4 now also carries two method rules
+added 2026-08-30 and flagged to him as vetoable: GRADE THE LEG, NOT THE
+SECTION, and A REPORT OF ZERO IS WORTH ONLY THE COVERAGE LINE ABOVE IT.
+
+**⚠ THE ONE REAL RISK ACROSS THIS COMPACTION: THREE GROUPS ARE
+UNCOMMITTED.** 56 tracked files modified; last commit is c61dffe (Chayei
+Sarah). Uncommitted: TOLEDOT (gen_43-47), VAYETZE (gen_48-54) and
+VAYISHLACH (gen_55-59) — 17 rev-3 units, 17 manifests, 17 ledgers with
+appended citation keys — plus CORPUS_TRUTH (778), corpus_world.sqlite,
+THE_STEPS.md, THE_WORLD.md and the addenda above. All gated green; none of
+it exists anywhere but this working tree. torahsim has NOT been sent any
+of the three. The owner was told and has not yet given the commit word.
+FIRST ACTION AFTER THE STEP-4 REREAD: ask him to commit, or act on his
+word if he has already given it.
+
+**WHERE GENESIS STANDS:** 73 of 73 READ. **63 of 73 DERIVED, gen_01
+through gen_63 CONTINUOUS** (1:1 to 38:30) — the first unbroken run from
+the book's opening. Standing facts **778**, hash **8b8fff1fa28953af**
+(unchanged through every group of the era). TEN BLOCKS REMAIN, in two
+groups: **gen_64-67 (Miketz, 4)** and **gen_68-73 (Vayigash + Vayechi,
+6)**. Their ledgers are the 2026-08-28 sweeps and ALREADY CARRY Onkelos
+citation keys (appended in the fourteen-ledger batch earlier today), so
+those two groups need NO prerequisite step.
+
+**THE ERA'S ARITHMETIC, run by run:** Vayeshev pilot 288->306 (+18);
+Bereshit+Noach 306->495 (+189); Vayera 495->530 (+35); Chayei Sarah
+530->582 (+52); Toledot 582->648 (+66); Vayetze 648->725 (+77);
+Vayishlach 725->778 (+53). Every delta EXACTLY the operator count, hash
+never moving. That equality is the era's proof and must keep holding.
+
+**HOW TO DERIVE A GROUP** — the full recipe is in the memory file
+`derivation-era.md`; the scratchpad helper is `derive.py` with the
+per-group scripts beside it (derive_chayei_sarah.py, derive_toledot.py,
+derive_vayetze.py, derive_vayishlach.py) as worked models. Short form:
+read the ledger's own "Amendment candidates" line as the Step 5 worklist;
+open EVERY numeric and ink claim (guard 3, never credit); check each
+manifest's max claim id before choosing new ids; sweep operator
+claim-references against manifest ids BEFORE the gates; then gates, then
+fold, then confirm the standing delta equals the operator count.
+
+**AWAITING THE OWNER'S WORD (nothing blocked, all recorded):**
+- commit/push the three groups (the live item)
+- BATCH STAMPS for the whole book, held by his own standing decision until
+  Genesis is finished — this INCLUDES gen_08's re-affirmation, which is
+  the one block whose public chip says full rule on a machine that changed
+  after its stamp. Raised once, unruled, NOT to be raised again unprompted.
+- the rulebook question (typed operators) — both windows recommend WAIT
+- the two works.yaml register rows
+- gen_12's double reading — owner's option, unblocking, display fixed
+- the AGREEMENT-row display class — BOTH WINDOWS NOW AGREE it should not
+  be built as a three-value schema, because Vayetze produced a fourth kind
+  (Onkelos writing a doctrine at 27:13 that the chain only states two
+  blocks later — the licence PRECEDING its statement). Method agreed: tag
+  instances in the ledgers, let the count decide the vocabulary.
+
+**TORAHSIM (peer session torahsim-19):** Vayera and Chayei Sarah landed,
+nine gates green each, byte-verified. Its redact_border.py --apply now
+runs as a landing step and caught two real leaks on its first outing. Its
+checks print coverage lines instead of bare zeros. Standing arrangement:
+this window announces the citation-key appends, it proves them byte-wise
+and runs the redaction step regardless of prediction. It is holding
+NOTHING right now and has been told nothing about the three uncommitted
+groups.
+
+**NOTES WRITTEN OUTSIDE THIS DOC TODAY** (owner: "record notes as you see
+fit wherever you need to put them. just let me know"): THE_WORLD.md gained
+four idea-log entries marked EVIDENCE not ideas — the tradition performing
+schema-reuse explicitly (one well-frame, six institutional bindings plus a
+seventh with an all-or-nothing gate); the chain drawing its own canon
+architecture twice, including the outright dew/fat/grain/wine =
+Scripture/Mishnah/Talmud/lore assignment; the both-ends-derived eight-and-
+eight numeric claim; and the morphology layer running the same directional
+-ending rule Bereshit Rabbah 68:8 states. Appended at the file's own stated
+append point; nothing restructured. THE_STEPS.md Step 4 carries the two
+mirrored method rules. Memory gained `derivation-era.md` with the recipe,
+the helper's two fixed bugs, and the two traps.
+
