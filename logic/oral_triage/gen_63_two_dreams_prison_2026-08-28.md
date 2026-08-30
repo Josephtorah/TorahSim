@@ -54,3 +54,12 @@ last verse); the four cups of Passover at their home verses (in-sit
 the af-census's baker seat (credit 19:2 + gen_62 row 14); the
 elevation-routed-through-the-dream mechanism (row 2) as the seam
 into Miketz (gen_64's span opens on the dream it purchased). 
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation pilot)
+Append-only addition: the sweep's compact row form is not a citable
+source string for the unit-level cite validator. This block's Onkelos
+verses are listed here in citable form. No verdict changed, no row
+rewritten.
+
+Onkelos Genesis 40:1, Onkelos Genesis 40:2, Onkelos Genesis 40:3, Onkelos Genesis 40:4, Onkelos Genesis 40:5, Onkelos Genesis 40:6, Onkelos Genesis 40:7, Onkelos Genesis 40:8, Onkelos Genesis 40:9, Onkelos Genesis 40:10, Onkelos Genesis 40:11, Onkelos Genesis 40:12, Onkelos Genesis 40:13, Onkelos Genesis 40:14, Onkelos Genesis 40:15, Onkelos Genesis 40:16, Onkelos Genesis 40:17, Onkelos Genesis 40:18, Onkelos Genesis 40:19, Onkelos Genesis 40:20, Onkelos Genesis 40:21, Onkelos Genesis 40:22, Onkelos Genesis 40:23.

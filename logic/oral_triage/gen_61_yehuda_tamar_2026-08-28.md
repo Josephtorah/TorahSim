@@ -76,3 +76,12 @@ veil-twins pair and Petaḥ Einayim decoded (credit 85:7); the
 nafkat-bara consistency claim (O1 + gen_57 O2); the kedesha/zonah
 two-word discipline (O3); the angel-of-desire dynasty engineering
 (row 3); the merchant defense double-witnessed (row 1 + O6).
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation pilot)
+Append-only addition, same reason as gen_60's: the sweep's compact row
+form ("O1 · 38:15") is not a citable source string for the unit-level
+cite validator. The verses of this block's Onkelos track are listed
+here in citable form. No verdict changed, no row rewritten.
+
+Onkelos Genesis 38:1, Onkelos Genesis 38:2, Onkelos Genesis 38:3, Onkelos Genesis 38:4, Onkelos Genesis 38:5, Onkelos Genesis 38:6, Onkelos Genesis 38:7, Onkelos Genesis 38:8, Onkelos Genesis 38:9, Onkelos Genesis 38:10, Onkelos Genesis 38:11, Onkelos Genesis 38:12, Onkelos Genesis 38:13, Onkelos Genesis 38:14, Onkelos Genesis 38:15, Onkelos Genesis 38:16, Onkelos Genesis 38:17, Onkelos Genesis 38:18, Onkelos Genesis 38:19, Onkelos Genesis 38:20, Onkelos Genesis 38:21, Onkelos Genesis 38:22, Onkelos Genesis 38:23, Onkelos Genesis 38:24, Onkelos Genesis 38:25, Onkelos Genesis 38:26, Onkelos Genesis 38:27, Onkelos Genesis 38:28, Onkelos Genesis 38:29, Onkelos Genesis 38:30.
