@@ -4,11 +4,13 @@
 
 The site's front door is Epic Disclosure (Disclosure/Epic_Disclosure.md
 rendered to site/index.html by the small markdown converter below —
-stock Python, no packages). The Tanakh-run app lives under site/run/:
-the live app (app/app.py) is one self-contained page and six JSON
+stock Python, no packages). The Tanakh-run app CAN live under site/run/
+— the live app (app/app.py) is one self-contained page and six JSON
 endpoints, and this program renders every endpoint to a file and
 patches the page's fetch paths, so the identical interface serves
-from any static host (torahsim.org rides Cloudflare Pages):
+from any static host (torahsim.org rides Cloudflare Pages) — but it is
+NOT published since the owner's order of 2026-08-30; see PUBLISH_RUN
+below. When that flag is on, the section is:
 
   api/scenes.json  api/run/<id>.json  api/verse/<ref>.json
   api/forms.json   api/replay.json    api/summary.json
@@ -46,6 +48,16 @@ spec.loader.exec_module(app)
 
 
 DISC = os.path.join(ROOT, "Disclosure", "Epic_Disclosure.md")
+
+
+# THE RUN LEFT THE PUBLIC SITE (owner order 2026-08-30, "take the run
+# off the website"): the masthead tab, the app page, and the api/
+# payload it fetches are no longer exported, and the recital's one link
+# into it renders as plain text. Nothing was deleted from the
+# repository — app/app.py still runs locally (python3 app/app.py) and
+# the 64-scene stamp gate still guards it on every check.py. Flip this
+# back to True and the whole section returns, unchanged.
+PUBLISH_RUN = False
 
 
 def dump(rel, obj):
@@ -647,7 +659,7 @@ def masthead(prefix, active):
             '</span><nav class="mid">'
             + link("disclosure", prefix, "Epic Disclosure")
             + link("scroll", prefix + "scroll/", "The Scroll")
-            + link("run", prefix + "run/", "The Run")
+            + (link("run", prefix + "run/", "The Run") if PUBLISH_RUN else "")
             + link("contact", prefix + "contact/", "Contact")
             + '</nav><nav class="ext">'
             '<a href="https://github.com/Josephtorah/TorahSim" '
@@ -918,6 +930,8 @@ def build_disclosure():
     content = "\n".join(body)
 
     for phrase, url, count in DISC_LINKS:
+        if not PUBLISH_RUN and url == "run/":
+            continue          # the recital's words stand; the link does not
         assert content.count(phrase) >= count, phrase
         target = "" if url.startswith("http") is False else \
             ' target="_blank" rel="noopener"'
@@ -928,6 +942,8 @@ def build_disclosure():
                        % (sid, _html.escape(t)) for sid, t in toc)
     page = DISC_PAGE % (GITHUB_SVG, DISCORD_SVG, toc_html, content,
                         _html.escape(page_date))
+    if not PUBLISH_RUN:       # the front door writes its own nav
+        page = patch(page, '    <a href="run/">The Run</a>\n', "")
     with open(os.path.join(SITE, "index.html"), "w", encoding="utf-8") as f:
         f.write(page)
     print("  disclosure             %5d sections rendered" % len(toc))
@@ -936,37 +952,43 @@ def build_disclosure():
 def main():
     if os.path.isdir(SITE):
         shutil.rmtree(SITE)
-    os.makedirs(os.path.join(SITE, "run"))
+    os.makedirs(SITE)
     build_disclosure()
     build_contact()
 
-    scenes = []
-    for s in app.CAT["scenes"]:
-        r = app.HANDLERS[s["id"]](s)
-        scenes.append({"id": s["id"], "title_en": s["title_en"],
-                       "priority": s["priority"], "mode": s["mode"],
-                       "chronology_key": s["chronology_key"],
-                       "stamp": r["stamp"]})
-    dump("api/scenes.json", scenes)
-    for sid in app.SCENES:
-        dump(os.path.join("api", "run", sid + ".json"), app.run_scene(sid))
-    print("  scenes                 %5d rendered" % len(scenes))
+    total = 0
+    if PUBLISH_RUN:
+        os.makedirs(os.path.join(SITE, "run"))
+        scenes = []
+        for s in app.CAT["scenes"]:
+            r = app.HANDLERS[s["id"]](s)
+            scenes.append({"id": s["id"], "title_en": s["title_en"],
+                           "priority": s["priority"], "mode": s["mode"],
+                           "chronology_key": s["chronology_key"],
+                           "stamp": r["stamp"]})
+        dump("api/scenes.json", scenes)
+        for sid in app.SCENES:
+            dump(os.path.join("api", "run", sid + ".json"),
+                 app.run_scene(sid))
+        print("  scenes                 %5d rendered" % len(scenes))
 
-    refs = sorted({r for s in app.CAT["scenes"] for r in s["refs"]})
-    for ref in refs:
-        dump(os.path.join("api", "verse", ref_slug(ref) + ".json"),
-             app.verse_words(ref))
-    print("  verses                 %5d interlinear" % len(refs))
+        refs = sorted({r for s in app.CAT["scenes"] for r in s["refs"]})
+        for ref in refs:
+            dump(os.path.join("api", "verse", ref_slug(ref) + ".json"),
+                 app.verse_words(ref))
+        print("  verses                 %5d interlinear" % len(refs))
 
-    dump("api/forms.json",
-         {k: {"label": v["label"],
-              "params": offered_params(k, v["params"])}
-          for k, v in app.FORMS.items()})
-    dump("api/replay.json", app.build_replay())
-    dump("api/summary.json", app.build_summary())
-    total = build_custom_tables()
-
-    build_page()
+        dump("api/forms.json",
+             {k: {"label": v["label"],
+                  "params": offered_params(k, v["params"])}
+              for k, v in app.FORMS.items()})
+        dump("api/replay.json", app.build_replay())
+        dump("api/summary.json", app.build_summary())
+        total = build_custom_tables()
+        build_page()
+    else:
+        print("  run                      not published — the 64-scene app "
+              "stays local (owner order 2026-08-30)")
     shutil.copy(os.path.join(ROOT, "viz", "inheritance.html"),
                 os.path.join(SITE, "inheritance.html"))
     shutil.copytree(os.path.join(ROOT, "scroll"),
@@ -987,8 +1009,9 @@ def main():
     n = sum(len(fs) for _, _, fs in os.walk(SITE))
     mb = sum(os.path.getsize(os.path.join(b, f))
              for b, _, fs in os.walk(SITE) for f in fs) / 1e6
-    print("site/: %d files, %.1f MB, %d precomputed machine calls"
-          % (n, mb, total))
+    print("site/: %d files, %.1f MB%s"
+          % (n, mb, ", %d precomputed machine calls" % total if total
+             else " (the run not published)"))
 
 
 if __name__ == "__main__":
