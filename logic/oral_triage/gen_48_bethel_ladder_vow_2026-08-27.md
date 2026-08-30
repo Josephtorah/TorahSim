@@ -92,3 +92,16 @@ four kingdoms); the Luz no-death enclave (row 13); the Glory/Word/
 worship-place buffer at the theophany (O1-O3); the on-it dispute
 (credit 69:3); dreams-follow-interpretation at the dream verse
 (credit 68:12); the Omnipresent title at vayifga (credit 68:9).
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers and to the Vayera, Chayei
+Sarah and Toledot ledgers on 2026-08-30. This ledger records its Onkelos
+track in the compact row form ("O1 · 28:10"), which the unit-level cite
+validator cannot match: a cite is valid only when the literal source
+string appears in a triage ledger. This block's Onkelos verses are
+therefore listed here in citable form, so the derivation may cite the
+translation it actually read. No verdict is changed and no row is
+rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 28:10, Onkelos Genesis 28:11, Onkelos Genesis 28:12, Onkelos Genesis 28:13, Onkelos Genesis 28:14, Onkelos Genesis 28:15, Onkelos Genesis 28:16, Onkelos Genesis 28:17, Onkelos Genesis 28:18, Onkelos Genesis 28:19, Onkelos Genesis 28:20, Onkelos Genesis 28:21, Onkelos Genesis 28:22.

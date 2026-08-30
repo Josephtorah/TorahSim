@@ -34,8 +34,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 .arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
        border-radius:8px; padding:.4rem .7rem; }
 .arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
-</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_14_adam_line_ledger?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The book of Adam&#x27;s line: the death ledger and the man who walked (5:1-32) <span class='badge frozen'>MODEL · REV 2 · GATES GREEN</span></h1>
-<div class="meta">unit <b>gen_14_adam_line_ledger</b> · Genesis 5:1-32 · derive logic_derived_v1 · phase C-14</div>
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_14_adam_line_ledger?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The book of Adam&#x27;s line: the death ledger and the man who walked (5:1-32) <span class='badge frozen'>MODEL · REV 4 · GATES GREEN</span></h1>
+<div class="meta">unit <b>gen_14_adam_line_ledger</b> · Genesis 5:1-32 · derive logic_derived_v2_full_rule · phase C-14</div>
 <div class="meta"><a href="../#Gen/5/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
 <p><span class="he">זֶה סֵפֶר תּוֹלְדֹת אָדָם</span> · <i>zeh sefer toledot adam</i> · &#x27;this is the book of the generations of Adam&#x27;</p>
 <div class="note">Derived 2026-08-01 at owner&#x27;s order (&quot;derive next block&quot;) — the first unit under the AUTO-FREEZE process (owner order 2026-08-01: freeze automatically on green pre-flight). Calibrated coverage (charter 4.1): Onkelos read Tier-A at derive time (32 sequential fetches, Data/FETCHLOG.md — the span holds a find unique in our corpus: the translation&#x27;s OWN MANUSCRIPTS FORK at 5:24, a bracketed negation deciding whether God caused Chanokh to die); trees from the DB&#x27;s stored tree_json. TENTH PROSPECTIVE MIDDOT RUN (logic/middot_scan/ WATCHLIST_gen14_prospective_2026-08-01.md): cache holds ZERO sources for Gen 5 — eighth tripwire in a row (5:1 anchors the named ben-Azzai/Akiva dispute on the Torah&#x27;s greatest principle — a klal [&quot;general principle&quot;] class target; the 5:24 einenu fork is a translation-variant specimen). INTERPRETER: ZERO extensions — fifth extension-free derivation in a row.</div>
@@ -68,6 +68,10 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr class="opline"><td>NOTE_SPEC_DELTA</td><td><span class="expr">flag: spec &#x27;be-tzalmenu ki-dmutenu — in-our-IMAGE after-our-LIKENESS (1:26, frozen day 6)&#x27; delivered &#x27;bidmut elohim asah oto — LIKENESS ONLY, the image-word dropped from the restatement (5:1)&#x27;</span><br><span class="gloss">= flag: spec &#x27;in-our-image for-our-likeness — in-our-IMAGE after-our-LIKENESS (1:26, frozen day 6)&#x27; delivered &#x27;in-likeness-of God make it — LIKENESS ONLY, the image-word dropped from the restatement (5:1)&#x27;</span><br>QUOTE-DIFF against the frozen day-6 text: the restatement keeps demut (&#x27;likeness&#x27;) and DROPS tzelem (&#x27;image&#x27;) — the pair that day 6 spoke together is halved in the book&#x27;s own header [the letter&#x27;s fact; the machine flags the delta and reads nothing into it]. The image-word census: 1:26, 1:27 x2, then NOT here — it returns at 5:3 and 9:6.
 </td><td><span class="he">בדמות אלהים עשׂה אתו</span> · <i>bi-demut Elohim asa et-o</i><br><span class="gloss">= likeness God made him</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">adam are READ without prior install (Eden&#x27;s first man, resumed as the ledger&#x27;s head)</span><br><span class="gloss">= Adam are READ without prior install (Eden&#x27;s first man, resumed as the ledger&#x27;s head)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(sefer_op, prewritten_registry_and_soul_queue)</span><br><span class="gloss">= WITNESS-READ(book-op, prewritten-registry-and-soul-queue)</span><br>THE LEDGER IS READ AS A SCHEDULER [claim G14-13]. סֵפֶר (sefer, &#x27;book&#x27;) is read as a registry ALREADY WRITTEN and shown to the first human - &#x27;He showed him each generation and its expositors, its sages, its leaders&#x27; - so &#x27;in Your book all of them are written&#x27; means written in the book of the first man. From this a scheduling claim: THE MESSIANIC KING WILL NOT COME UNTIL ALL THE SOULS IN THE BOOK OF ADAM ARE CREATED. This unit&#x27;s genealogical ledger becomes a queue the world drains, its exhaustion gating an event outside the corpus. [folded shape: kept record]
+</td><td>—</td><td class='cite'>Avodah Zarah 5a:9, Bereshit Rabbah 24:2, Bereshit Rabbah 24:4</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_STATE</td><td><span class="expr">WITNESS(zeh_sefer, great_principle_dispute_with_strength_variance)</span><br><span class="gloss">= WITNESS(this-book, great-principle-dispute-with-strength-variance)</span><br>WHICH VERSE IS THE TORAH&#x27;S GREATEST PRINCIPLE - AND THE SEATS DISAGREE ABOUT THE DISAGREEMENT [claim G14-14]. Ben Azzai holds our 5:1, &#x27;this is the book of the generations of Adam&#x27;; R. Akiva holds &#x27;love your neighbour as yourself&#x27;. At the Bereshit Rabbah seat the two stand level; at the Jerusalem Talmud seat Ben Azzai says our verse is a principle GREATER THAN THAT. Not only the ruling but its STRENGTH varies by seat, and both forms are carried. [folded shape: recorded dispute]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 24:7, Jerusalem Talmud Nedarim 9:4:3</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The corpus opens its first book, and the book is a death ledger with a birth certificate for a header — quoting day 6 minus one word.</div>
 </div>
@@ -82,6 +86,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">ויקרא את־שׁמם אדם</span> · <i>va-yiqra et-shema-m adam</i><br><span class="gloss">= He-called obj-marker·et-hear-m Adam</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(zakhar_u_nekevah_beraam, t0) ∧ HOLDS(be_yom_hibaram, t0)</span><br><span class="gloss">= HOLDS(male-and-female-when-created, t0) ∧ HOLDS(in-day-of-their-being-created, t0)</span><br>Standing facts: created male-and-female, &#x27;in the day of their being created&#x27; (passive infinitive — the day-word again).
 </td><td><span class="he">זכר ונקבה בראם</span> · <i>zakhar u-neqeva beraa-m</i><br><span class="gloss">= male female created-them</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(male_female_recap, procreation_measure_proof_text)</span><br><span class="gloss">= WITNESS-READ(male-female-recap, procreation-measure-proof-text)</span><br>A CASE-TABLE ROW WHOSE PROOF-TEXT IS THIS VERY VERSE [claim G14-15]. The rule that a man may not neglect procreation unless he has children is disputed as to measure, and the House of Hillel&#x27;s ruling - A MALE AND A FEMALE - is proved by quoting our own words, &#x27;male and female He created them&#x27;; the House of Shammai holds two sons. The same verse yields a further rule: &#x27;whoever has no wife is NOT ADAM, as it is stated: male and female He created them AND CALLED THEIR NAME ADAM&#x27; - the shared name read as making the pair the person. This is testing-shelf material anchored here, and it will meet the machine again at the exam. [folded shape: priced law]
+</td><td>—</td><td class='cite'>Tosefta Yevamot 8:3, Yevamot 61b:15, Yevamot 63a:2</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The header&#x27;s second half: the blessing without its words, and the Namer of the first week writing one species-entry that covers them both.</div>
 </div>
@@ -96,6 +102,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">בדמותו כצלמו</span> · <i>bi-demut-o ke-tzalm-o</i><br><span class="gloss">= his-likeness like-tzalm-o</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>NAME</td><td><span class="expr">name(shet) := Shet</span><br><span class="gloss">= name(Shet) := Shet</span><br>THE SECOND NAMING OF SHET: the mother named him at 4:25 (va-tiqra, feminine — with her etymology); the father names him here (va-yiqra, masculine — with none). The corpus lets both stand [held, not harmonized; DB-verified verb genders]. In this standalone unit the registry takes the father&#x27;s write.
 </td><td><span class="he">ויקרא את־שׁמו שׁת</span> · <i>va-yiqra et-shem-o shet</i><br><span class="gloss">= He-called obj-marker·et-Shem-o Shet</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(likeness_recap, boundary_marker_and_dark_inference)</span><br><span class="gloss">= WITNESS-READ(likeness-recap, boundary-marker-and-dark-inference)</span><br>AN INFERENCE FROM WHAT THE VERSE TROUBLES TO SAY [claim G14-16]. Because 5:3 specifies that at a hundred and thirty years he begot &#x27;IN HIS LIKENESS, AFTER HIS IMAGE&#x27;, R. Yirmeyah ben Elazar infers the silence before it: until then, NOT after his image - reading those years as a period under ban. Bereshit Rabbah gives three answers to why &#x27;THESE are descendants and the earlier were not&#x27;, among them that the first three alone stood in the image, and that the earlier were the spirits of those years. The recap operator is read as a boundary marker. [folded shape: kept record]
+</td><td>—</td><td class='cite'>Eruvin 18b, Bereshit Rabbah 24:6</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Row one carries the unit&#x27;s genetic question: what exactly passes from Adam to Seth — the letter swaps the sacred pair&#x27;s order and the translation deletes half of it.</div>
 </div>
@@ -320,6 +328,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">ויתהלך חנוך את־האלהים ואיננו</span> · <i>va-yithalekh chanokh et-ha-Elohim ve-ene-nu</i><br><span class="gloss">= he-walked Enoch obj-marker·et-the-God and-ene-nu</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
 <tr class="opline"><td>EVENT</td><td><span class="expr">take(e15) ∧ Agent(e15, Elohim) ∧ Theme(e15, chanokh)</span><br><span class="gloss">= take(e15) ∧ Agent(e15, God) ∧ Theme(e15, Enoch)</span><br>LAQACH (&#x27;took&#x27;) — the verb that put the human INTO the garden (2:15 va-yikachehu) now takes the seventh man out of the ledger. Destination: unstated [OPEN — nothing invented]. Onkelos is FORKED HERE IN ITS OWN MANUSCRIPTS: &#x27;he was not, for the LORD (LA — not?) CAUSED HIM TO DIE&#x27; — the printed text carries a bracketed negation: one reading kills him, the other denies the killing; either way the translation swaps the TAKE-verb for the DEATH-verb — the buffer layer split over the corpus&#x27;s most contested non-death (dual-track, BOTH variants held). And both walk-lines are buffered: &#x27;walked with God&#x27; -&gt; &#x27;walked in the FEAR of the LORD&#x27; (companionship -&gt; reverence, twice).
 </td><td><span class="he">כי־לקח אתו אלהים</span> · <i>ki-laqach et-o Elohim</i><br><span class="gloss">= for-took him God</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_STATE</td><td><span class="expr">WITNESS(chanokh_taking, contested_by_duelling_verbal_analogies)</span><br><span class="gloss">= WITNESS(Enoch-taking, contested-by-duelling-verbal-analogies)</span><br>THE INFERENCE RULE ITSELF BECOMES THE BATTLEGROUND [claim G14-17]. Our 5:24 says God TOOK him, and the verb is contested by two applications of ONE middah: some argue from the taking of Elijah that he did not die; R. Abbahu answers with a COUNTER verbal analogy from the taking of Ezekiel&#x27;s wife, where the same verb plainly means death. He is also recorded as capricious - written in the ledger of the wicked, taken &#x27;while in his righteousness&#x27; before he could turn. The machine&#x27;s entry for this generation carries a CONTESTED exit, not a settled one. [folded shape: recorded dispute]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 25:1</td><td>witnessed</td></tr>
 </table>
 <div class="meta">One row refuses the refrain: no death verb, a taking instead — and the translation&#x27;s own manuscripts split over what happened.</div>
 </div>
@@ -376,6 +386,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">לאמר זה ינחמנו ממעשׂנו ומעצבון ידינו מן־האדמה אשׁר אררה יהוה</span> · <i>le-mor ze yenachame-nu mi-maase-nu u-me-itzvon yade-nu min-ha-adama asher erra-ה YHWH</i><br><span class="gloss">= saying this will-comfort-us from-maase-nu toil-of our-hands from-the-ground that erra-ה the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>NOTE_SPEC_DELTA</td><td><span class="expr">flag: spec &#x27;arurah ha-adamah baavurekha — the ground cursed, curser unnamed in the sentence text (3:17, frozen gen_11)&#x27; delivered &#x27;ha-adamah asher ererah YHWH — the curse attributed to YHWH by name, plus a comfort forecast no one ratifies (5:29)&#x27;</span><br><span class="gloss">= flag: spec &#x27;cursed the-ground for-your-sake — the ground cursed, curser unnamed in the sentence text (3:17, frozen gen-11)&#x27; delivered &#x27;the-ground that cursed the-LORD — the curse attributed to the-LORD by name, plus a comfort forecast no one ratifies (5:29)&#x27;</span><br>QUOTE-DIFF #3 of the unit (the corpus&#x27;s second human-mouth citation of divine text after 4:24): the curse is quoted with an ATTRIBUTION the original&#x27;s grammar withheld, and a comfort-forecast attached that nothing in the letter answers [OPEN: the machine flags; heaven is silent here].
 </td><td><span class="he">מן־האדמה אשׁר אררה יהוה</span> · <i>min-ha-adama asher erra-ה YHWH</i><br><span class="gloss">= from-the-ground that erra-ה the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(noach_naming, disputed_etymology_and_righteous_arrival_rule)</span><br><span class="gloss">= WITNESS-READ(Noach-naming, disputed-etymology-and-righteous-arrival-rule)</span><br>A NAME THE CHAIN REFUSES TO SETTLE, AND A RULE IT DRAWS ANYWAY [claim G14-18]. The etymology is disputed with an explicit caveat that &#x27;the name is not the exposition&#x27;: the furrow and the ox obeying again; the WATERS resting; the pleasing savour of the later offering. From the same verse a general rule: &#x27;when a righteous one comes into the world, GOOD comes into the world - as it is stated: THIS ONE WILL COMFORT US&#x27;, carried at both its Tosefta base and its Babylonian seat. [folded shape: recorded dispute]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 25:2, Sanhedrin 113b:3, Tosefta Sotah 10:1, Tosefta Sotah (Lieberman) 10:2</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The name arrives with the unit&#x27;s third quotation of frozen text: a father citing the curse by name and betting his son against it.</div>
 </div>
@@ -410,6 +422,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">ויהי־נח בן־חמשׁ מאות שׁנה</span> · <i>va-yehi-nocha ben-chamesh meot shana</i><br><span class="gloss">= and-was-Noach son-five hundred year</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>EVENT</td><td><span class="expr">beget(e20) ∧ Agent(e20, noach) ∧ Theme(e20, shem) ∧ Theme(e20, cham) ∧ Theme(e20, yafet)</span><br><span class="gloss">= beget(e20) ∧ Agent(e20, Noach) ∧ Theme(e20, Shem) ∧ Theme(e20, Cham) ∧ Theme(e20, Yafet)</span><br>The first TRIPLE begetting — one event, three named sons: Shem, Cham, Yafet (first tokens, all three). The next unit&#x27;s whole cast in one verse.
 </td><td><span class="he">ויולד נח את־שׁם את־חם ואת־יפת</span> · <i>va-yoled nocha et-shem et-cham ve-et-yafet</i><br><span class="gloss">= he-begot Noach obj-marker·et-Shem obj-marker·et-Cham and-obj-marker·et-Yafet</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(three_sons_order, listed_by_rank_with_arithmetic_proof)</span><br><span class="gloss">= WITNESS-READ(three-sons-order, listed-by-rank-with-arithmetic-proof)</span><br>THE LIST IS ORDERED BY RANK, AND THE CHAIN PROVES IT BY COUNTING [claim G14-19]. Shem stands first though Yefet is the elder, justified by rank - righteous, born circumcised, the Name attached, the line of Abraham, the priesthood, the Temple in his territory. The supporting arithmetic is OPENED rather than credited, as credit guard 3 requires: Shem reaches a hundred two years after the Flood, so he cannot be the eldest. And the chain asks why this man alone begot at five hundred where the others begot at a hundred or two, answering that the chronology is DESIGN - so no child would reach the punishable age of a hundred before the Flood arrived. [folded shape: kept record]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 26:3, Bereshit Rabbah 37:7, Sanhedrin 69b:15, Bereshit Rabbah 26:2</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The ledger&#x27;s last line is an open row: a father at 500, three sons, and no closing number — the book hands its last entry to the flood.</div>
 </div>
@@ -1450,6 +1464,14 @@ m.spec_delta(&quot;be-tzalmenu ki-dmutenu — in-our-IMAGE after-our-LIKENESS (1
              &quot;bidmut elohim asah oto — LIKENESS ONLY, the image-word dropped from the restatement (5:1)&quot;)
 # reads without prior install (flag, not fix): Adam
 m.presupposed(&quot;adam&quot;)
+# witness-tier presupposed read: prewritten_registry_and_soul_queue on
+# sefer_op — read, not installed
+m.witness_read(&quot;sefer_op&quot;, &quot;prewritten_registry_and_soul_queue&quot;,
+                cites=[&quot;Avodah Zarah 5a:9&quot;, &quot;Bereshit Rabbah 24:2&quot;, &quot;Bereshit Rabbah 24:4&quot;])
+# witness-grounded state (its own tier):
+# great_principle_dispute_with_strength_variance on zeh_sefer
+m.witness_state(&quot;zeh_sefer&quot;, &quot;great_principle_dispute_with_strength_variance&quot;,
+                cites=[&quot;Bereshit Rabbah 24:7&quot;, &quot;Jerusalem Talmud Nedarim 9:4:3&quot;])
 
 # -------------------------- Gen.5.2 · SPECIES_BLESSED_AND_NAMED ------------
 # זכר ונקבה בראם ויברך אתם ויקרא את־שׁמם אדם ביום הבראם
@@ -1466,6 +1488,10 @@ m.name(&quot;adam_species&quot;, &quot;Adam&quot;)
 # female-when-created; in-day-of-their-being-created
 m.fact(&quot;zakhar_u_nekevah_beraam&quot;,
        &quot;be_yom_hibaram&quot;)
+# witness-tier presupposed read: procreation_measure_proof_text on
+# male_female_recap — read, not installed
+m.witness_read(&quot;male_female_recap&quot;, &quot;procreation_measure_proof_text&quot;,
+                cites=[&quot;Tosefta Yevamot 8:3&quot;, &quot;Yevamot 61b:15&quot;, &quot;Yevamot 63a:2&quot;])
 
 # -------------------------- Gen.5.3 · SHET_IN_SWAPPED_IMAGE ----------------
 # ויחי אדם שׁלשׁים ומאת שׁנה ויולד בדמותו כצלמו ויקרא את־שׁמו שׁת
@@ -1486,6 +1512,10 @@ m.spec_delta(&quot;be-tzalmenu ki-dmutenu — in-our-IMAGE after-our-LIKENESS, G
 # ‹ויקרא את־שׁמו שׁת› (“and-he-called obj-marker name-him/its Shet”) —
 # named: Shet := Shet
 m.name(&quot;shet&quot;, &quot;Shet&quot;)
+# witness-tier presupposed read: boundary_marker_and_dark_inference on
+# likeness_recap — read, not installed
+m.witness_read(&quot;likeness_recap&quot;, &quot;boundary_marker_and_dark_inference&quot;,
+                cites=[&quot;Eruvin 18b&quot;, &quot;Bereshit Rabbah 24:6&quot;])
 
 # -------------------------- Gen.5.4 · LEDGER_ADAM_AFTER --------------------
 # ויהיו ימי־אדם אחרי הולידו את־שׁת שׁמנה מאת שׁנה ויולד בנים ובנות
@@ -1709,6 +1739,10 @@ m.fact(&quot;hithalekh_chanokh_et_ha_elohim&quot;,
 # ‹כי־לקח אתו אלהים› (“for took him God”) — event: take — agent God; theme
 # Enoch
 m.event(&quot;take&quot;, agent=&quot;Elohim&quot;, themes=[&quot;chanokh&quot;])
+# witness-grounded state (its own tier):
+# contested_by_duelling_verbal_analogies on chanokh_taking
+m.witness_state(&quot;chanokh_taking&quot;, &quot;contested_by_duelling_verbal_analogies&quot;,
+                cites=[&quot;Bereshit Rabbah 25:1&quot;])
 
 # -------------------------- Gen.5.25 · LEDGER_METUSHELACH_BEGETS -----------
 # ויחי מתושׁלח שׁבע ושׁמנים שׁנה ומאת שׁנה ויולד את־למך
@@ -1776,6 +1810,11 @@ m.fact(&quot;zeh_yenachamenu_mi_maasenu_u_me_itzvon_yadenu&quot;,
 # the-LORD by name, plus a comfort forecast no one ratifies (5:29)
 m.spec_delta(&quot;arurah ha-adamah baavurekha — the ground cursed, curser unnamed in the sentence text (3:17, frozen gen_11)&quot;,
              &quot;ha-adamah asher ererah YHWH — the curse attributed to YHWH by name, plus a comfort forecast no one ratifies (5:29)&quot;)
+# witness-tier presupposed read:
+# disputed_etymology_and_righteous_arrival_rule on noach_naming — read, not
+# installed
+m.witness_read(&quot;noach_naming&quot;, &quot;disputed_etymology_and_righteous_arrival_rule&quot;,
+                cites=[&quot;Bereshit Rabbah 25:2&quot;, &quot;Sanhedrin 113b:3&quot;, &quot;Tosefta Sotah 10:1&quot;, &quot;Tosefta Sotah (Lieberman) 10:2&quot;])
 
 # -------------------------- Gen.5.30 · LEDGER_LEMEKH_AFTER -----------------
 # ויחי־למך אחרי הולידו את־נח חמשׁ ותשׁעים שׁנה וחמשׁ מאת שׁנה ויולד בנים
@@ -1813,6 +1852,10 @@ m.fact(&quot;noach_ben_chamesh_meot_shanah&quot;)
 # marker Cham obj-marker Yafet”) — event: beget — agent Noach; theme Shem,
 # Cham, Yafet
 m.event(&quot;beget&quot;, agent=&quot;noach&quot;, themes=[&quot;shem&quot;, &quot;cham&quot;, &quot;yafet&quot;])
+# witness-tier presupposed read: listed_by_rank_with_arithmetic_proof on
+# three_sons_order — read, not installed
+m.witness_read(&quot;three_sons_order&quot;, &quot;listed_by_rank_with_arithmetic_proof&quot;,
+                cites=[&quot;Bereshit Rabbah 26:3&quot;, &quot;Bereshit Rabbah 37:7&quot;, &quot;Sanhedrin 69b:15&quot;, &quot;Bereshit Rabbah 26:2&quot;])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
@@ -1830,6 +1873,27 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 24
+    assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;chanokh_taking&#x27;, &#x27;zeh_sefer&#x27;]
+    assert m.WORLD[&quot;witnessed&quot;][&#x27;chanokh_taking&#x27;][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 25:1&#x27;]
+    assert all(&#x27;contested_by_duelling_verbal_analogies&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert m.WORLD[&quot;witnessed&quot;][&#x27;zeh_sefer&#x27;][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 24:7&#x27;, &#x27;Jerusalem Talmud Nedarim 9:4:3&#x27;]
+    assert all(&#x27;great_principle_dispute_with_strength_variance&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;sefer_op&#x27;, &#x27;prewritten_registry_and_soul_queue&#x27;), (&#x27;male_female_recap&#x27;, &#x27;procreation_measure_proof_text&#x27;), (&#x27;likeness_recap&#x27;, &#x27;boundary_marker_and_dark_inference&#x27;), (&#x27;noach_naming&#x27;, &#x27;disputed_etymology_and_righteous_arrival_rule&#x27;), (&#x27;three_sons_order&#x27;, &#x27;listed_by_rank_with_arithmetic_proof&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Avodah Zarah 5a:9&#x27;, &#x27;Bereshit Rabbah 24:2&#x27;, &#x27;Bereshit Rabbah 24:4&#x27;]
+    assert all(&#x27;prewritten_registry_and_soul_queue&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;sefer_op&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Tosefta Yevamot 8:3&#x27;, &#x27;Yevamot 61b:15&#x27;, &#x27;Yevamot 63a:2&#x27;]
+    assert all(&#x27;procreation_measure_proof_text&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;male_female_recap&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Eruvin 18b&#x27;, &#x27;Bereshit Rabbah 24:6&#x27;]
+    assert all(&#x27;boundary_marker_and_dark_inference&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;likeness_recap&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 25:2&#x27;, &#x27;Sanhedrin 113b:3&#x27;, &#x27;Tosefta Sotah 10:1&#x27;, &#x27;Tosefta Sotah (Lieberman) 10:2&#x27;]
+    assert all(&#x27;disputed_etymology_and_righteous_arrival_rule&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;noach_naming&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 26:3&#x27;, &#x27;Bereshit Rabbah 37:7&#x27;, &#x27;Sanhedrin 69b:15&#x27;, &#x27;Bereshit Rabbah 26:2&#x27;]
+    assert all(&#x27;listed_by_rank_with_arithmetic_proof&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;three_sons_order&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-08-01 (derived on owner order &quot;derive next block&quot;; frozen automatically per the 2026-08-01 process order — the FIRST auto-freeze): fifteenth frozen unit — THE BOOK OF ADAM&#x27;S LINE, the corpus&#x27;s first ledger-genre unit and its largest span yet (32 verses, 365 words); fifth extension-free derivation in a row. Central findings, all DB-verified before drafting: the Torah&#x27;s first BOOK-word opens a genealogy whose header quotes frozen day 6 MINUS THE IMAGE-WORD (spec-delta #1) and whose first row returns the pair SWAPPED (spec-delta #2 — and Onkelos deletes the image there entirely); the die-verb&#x27;s first narrative tokens (everything earlier is command or quote) land Adam&#x27;s death 930 years wide of in-the-day and run the refrain eight rows; the SEVENTH row swaps both load-bearing verbs (lived-&gt;walked-with-God, died-&gt;was-not) and ends in a taking with no destination — and the TRANSLATION&#x27;S OWN MANUSCRIPTS FORK on whether God caused him to die (unique find; both variants held); the ninth row births a son NAMELESS and returns the name wrapped around a quotation of the frozen curse with the curser named and a comfort no one ratifies (spec-delta #3 — and the comfort-root&#x27;s next tokens are God&#x27;s REGRET at 6:6-7); 777 faces the Cain-line&#x27;s 77 across the genealogies; two totals run on a singular verb; no woman is named in the chapter; and the last row never closes — Noach at 500, three first-token sons, the total held hostage at 9:29 across the flood. Machine state: zero installs, no demands, no tests — a template, three flagged mutations of frozen text, one missing death, and an open row.</div><p class='meta'>Rendered 2026-08-25 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-08-01 (derived on owner order &quot;derive next block&quot;; frozen automatically per the 2026-08-01 process order — the FIRST auto-freeze): fifteenth frozen unit — THE BOOK OF ADAM&#x27;S LINE, the corpus&#x27;s first ledger-genre unit and its largest span yet (32 verses, 365 words); fifth extension-free derivation in a row. Central findings, all DB-verified before drafting: the Torah&#x27;s first BOOK-word opens a genealogy whose header quotes frozen day 6 MINUS THE IMAGE-WORD (spec-delta #1) and whose first row returns the pair SWAPPED (spec-delta #2 — and Onkelos deletes the image there entirely); the die-verb&#x27;s first narrative tokens (everything earlier is command or quote) land Adam&#x27;s death 930 years wide of in-the-day and run the refrain eight rows; the SEVENTH row swaps both load-bearing verbs (lived-&gt;walked-with-God, died-&gt;was-not) and ends in a taking with no destination — and the TRANSLATION&#x27;S OWN MANUSCRIPTS FORK on whether God caused him to die (unique find; both variants held); the ninth row births a son NAMELESS and returns the name wrapped around a quotation of the frozen curse with the curser named and a comfort no one ratifies (spec-delta #3 — and the comfort-root&#x27;s next tokens are God&#x27;s REGRET at 6:6-7); 777 faces the Cain-line&#x27;s 77 across the genealogies; two totals run on a singular verb; no woman is named in the chapter; and the last row never closes — Noach at 500, three first-token sons, the total held hostage at 9:29 across the flood. Machine state: zero installs, no demands, no tests — a template, three flagged mutations of frozen text, one missing death, and an open row.</div><p class='meta'>Rendered 2026-08-30 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

@@ -71,3 +71,16 @@ Moriah-decree dispute at 24:50 (credit 60:10 — gen_38 wire); the
 camel-sign twins foreshadow + walking-behind rule (credit 60:14); the
 minchah institution, double-witnessed (credit 68:9 + O4); the
 living-angel well-name rewrite (O4 — recurs 25:11, gen_42).
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers and to the five Vayera
+ledgers on 2026-08-30. This ledger records its Onkelos track in the
+compact row form ("O1 · 24:34"), which the unit-level cite validator
+cannot match: a cite is valid only when the literal source string
+appears in a triage ledger. This block's Onkelos verses are therefore
+listed here in citable form, so the derivation may cite the translation
+it actually read. No verdict is changed and no row is rewritten — this
+is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 24:34, Onkelos Genesis 24:35, Onkelos Genesis 24:36, Onkelos Genesis 24:37, Onkelos Genesis 24:38, Onkelos Genesis 24:39, Onkelos Genesis 24:40, Onkelos Genesis 24:41, Onkelos Genesis 24:42, Onkelos Genesis 24:43, Onkelos Genesis 24:44, Onkelos Genesis 24:45, Onkelos Genesis 24:46, Onkelos Genesis 24:47, Onkelos Genesis 24:48, Onkelos Genesis 24:49, Onkelos Genesis 24:50, Onkelos Genesis 24:51, Onkelos Genesis 24:52, Onkelos Genesis 24:53, Onkelos Genesis 24:54, Onkelos Genesis 24:55, Onkelos Genesis 24:56, Onkelos Genesis 24:57, Onkelos Genesis 24:58, Onkelos Genesis 24:59, Onkelos Genesis 24:60, Onkelos Genesis 24:61, Onkelos Genesis 24:62, Onkelos Genesis 24:63, Onkelos Genesis 24:64, Onkelos Genesis 24:65, Onkelos Genesis 24:66, Onkelos Genesis 24:67.

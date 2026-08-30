@@ -69,6 +69,10 @@ m.event("give", agent="saray", themes=["hagar"])
 # years to-dwell/sit Abram in-earth Canaan”) — fact holds: from-end-ten-
 # years-to-dwell/sit-Abram-in-earth-Canaan
 m.fact("mi_qetz_eser_shanim_le_shevet_avram_be_eretz_kenaan")
+# witness-tier presupposed read: binding_rule_on_a_self_graded_hint on
+# ten_years_clause — read, not installed
+m.witness_read("ten_years_clause", "binding_rule_on_a_self_graded_hint",
+                cites=["Tosefta Yevamot 8:4", "Yevamot 64a:5", "Bereshit Rabbah 45:3", "Jerusalem Talmud Yevamot 6:6:3", "Mishnah Yevamot 6:6"])
 
 # -------------------------- Gen.16.4 · THE_COMPLIANCE_AND_THE_CONTEMPT -----
 # וַיָּבֹא אֶל־הָגָר וַתַּהַר וַתֵּרֶא כִּי הָרָתָה וַתֵּקַל גְּבִרְתָּהּ
@@ -109,6 +113,10 @@ m.fact("chamasi_alekha",
 # and-veinekha)
 m.declare("saray", "LET",
           "yishpot(YHWH, beini_u_veinekha)")
+# witness-tier presupposed read: rule_stated_then_narrowed on
+# let_the_lord_judge — read, not installed
+m.witness_read("let_the_lord_judge", "rule_stated_then_narrowed",
+                cites=["Bava Kamma 93a:3", "Rosh Hashanah 16b:5"])
 
 # -------------------------- Gen.16.6 · THE_PERMISSION_THE_AFFLICTION_THE_FLIGHT -
 # וַיֹּאמֶר אַבְרָם אֶל־שָׂרַי הִנֵּה שִׁפְחָתֵךְ בְּיָדֵךְ עֲשִׂי־לָהּ
@@ -131,6 +139,10 @@ m.event("afflict", agent="saray", themes=["hagar"])
 # ‹וַתִּבְרַח מִפָּנֶיהָ› (“and-bolt from-face-her/its”) — event: flee —
 # agent Hagar
 m.event("flee", agent="hagar")
+# witness-tier presupposed read: statutes_pleaded_and_precedent_set on
+# affliction_scene — read, not installed
+m.witness_read("affliction_scene", "statutes_pleaded_and_precedent_set",
+                cites=["Bereshit Rabbah 45:6", "Bereshit Rabbah 71:7", "Bava Kamma 92b:5"])
 
 # -------------------------- Gen.16.7 · THE_ANGEL_FINDS_HER -----------------
 # וַיִּמְצָאָהּ מַלְאַךְ יְהוָה עַל־עֵין הַמַּיִם בַּמִּדְבָּר עַל־הָעַיִן
@@ -143,6 +155,10 @@ m.step("Gen.16.7")
 m.event("find", agent="malakh_YHWH", themes=["hagar"])
 # reads without prior install (flag, not fix): Shur
 m.presupposed("shur")
+# witness-tier presupposed read: divine_name_marks_the_mode on
+# angel_of_the_lord — read, not installed
+m.witness_read("angel_of_the_lord", "divine_name_marks_the_mode",
+                cites=["Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 5:4"])
 
 # -------------------------- Gen.16.8 · THE_WHERE_QUESTIONS_AND_THE_RUNAWAY_ANSWER -
 # וַיֹּאמַר הָגָר שִׁפְחַת שָׂרַי אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי וַתֹּאמֶר
@@ -212,6 +228,10 @@ m.event("say", agent="malakh_YHWH")
 m.fact("hinakh_harah_ve_yoladt_ben",
        "ve_qarat_shemo_yishmael",
        "ki_shama_YHWH_el_onyekh")
+# witness-grounded state (its own tier): both_disputed on
+# angel_and_naming_censuses
+m.witness_state("angel_and_naming_censuses", "both_disputed",
+                cites=["Bereshit Rabbah 45:7", "Jerusalem Talmud Berakhot 1:6:10", "Bereshit Rabbah 45:8"])
 
 # -------------------------- Gen.16.12 · THE_WILD_ASS_ORACLE ----------------
 # וְהוּא יִהְיֶה פֶּרֶא אָדָם יָדוֹ בַכֹּל וְיַד כֹּל בּוֹ וְעַל־פְּנֵי
@@ -239,6 +259,10 @@ m.name("YHWH", "El_Roi")
 # ‹כִּי אָמְרָה הֲגַם הֲלֹם רָאִיתִי אַחֲרֵי רֹאִי› (“that say the-also
 # hither see after see-me/my”) — fact holds: hagam-hither-see-acharei-sight
 m.fact("hagam_halom_raiti_acharei_roi")
+# witness-tier presupposed read: name_coined_here_still_in_use on el_roi —
+# read, not installed
+m.witness_read("el_roi", "name_coined_here_still_in_use",
+                cites=["Jerusalem Talmud Peah 8:8:13", "Bereshit Rabbah 45:10"])
 
 # -------------------------- Gen.16.14 · THE_WELL_OF_THE_LIVING_ONE_WHO_SEES -
 # עַל־כֵּן קָרָא לַבְּאֵר בְּאֵר לַחַי רֹאִי הִנֵּה בֵין־קָדֵשׁ וּבֵין
@@ -294,4 +318,23 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 25
+    assert sorted(m.WORLD["witnessed"]) == ['angel_and_naming_censuses']
+    assert m.WORLD["witnessed"]['angel_and_naming_censuses']["cites"] == ['Bereshit Rabbah 45:7', 'Jerusalem Talmud Berakhot 1:6:10', 'Bereshit Rabbah 45:8']
+    assert all('both_disputed' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ten_years_clause', 'binding_rule_on_a_self_graded_hint'), ('let_the_lord_judge', 'rule_stated_then_narrowed'), ('affliction_scene', 'statutes_pleaded_and_precedent_set'), ('angel_of_the_lord', 'divine_name_marks_the_mode'), ('el_roi', 'name_coined_here_still_in_use')]
+    assert m.WITNESS_READS[0]["cites"] == ['Tosefta Yevamot 8:4', 'Yevamot 64a:5', 'Bereshit Rabbah 45:3', 'Jerusalem Talmud Yevamot 6:6:3', 'Mishnah Yevamot 6:6']
+    assert all('binding_rule_on_a_self_graded_hint' not in f for f in m.WORLD["facts"])
+    assert 'ten_years_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bava Kamma 93a:3', 'Rosh Hashanah 16b:5']
+    assert all('rule_stated_then_narrowed' not in f for f in m.WORLD["facts"])
+    assert 'let_the_lord_judge' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 45:6', 'Bereshit Rabbah 71:7', 'Bava Kamma 92b:5']
+    assert all('statutes_pleaded_and_precedent_set' not in f for f in m.WORLD["facts"])
+    assert 'affliction_scene' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 5:4']
+    assert all('divine_name_marks_the_mode' not in f for f in m.WORLD["facts"])
+    assert 'angel_of_the_lord' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Jerusalem Talmud Peah 8:8:13', 'Bereshit Rabbah 45:10']
+    assert all('name_coined_here_still_in_use' not in f for f in m.WORLD["facts"])
+    assert 'el_roi' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

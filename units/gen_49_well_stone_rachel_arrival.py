@@ -34,6 +34,14 @@ m.step("Gen.29.2")
 # ‹רֹבְצִים … וְהָאֶבֶן גְּדֹלָה› (“crouch … and-the-stone great”) — fact
 # holds: well-three-flocks-great-stone-on-mouth
 m.fact("well_three_flocks_great_stone_on_mouth")
+# witness-grounded state (its own tier):
+# one_machine_bound_to_six_institutions on the_well_frame
+m.witness_state("the_well_frame", "one_machine_bound_to_six_institutions",
+                cites=["Bereshit Rabbah 70:8"])
+# witness-tier presupposed read: sinai_with_an_all_or_nothing_gate on
+# the_seventh_binding — read, not installed
+m.witness_read("the_seventh_binding", "sinai_with_an_all_or_nothing_gate",
+                cites=["Bereshit Rabbah 70:9"])
 
 # -------------------------- Gen.29.3 · THE_STONE_PROTOCOL_HABITUAL ---------
 # וְנֶאֶסְפוּ־שָׁמָּה כָל־הָעֲדָרִים וְגָלֲלוּ אֶת־הָאֶבֶן מֵעַל פִּי
@@ -55,6 +63,10 @@ m.step("Gen.29.4")
 # ‹אַחַי מֵאַיִן אַתֶּם … מֵחָרָן› (“brother-me/my from-where? you … from-
 # Haran”) — fact holds: shepherds-are-from-Haran
 m.fact("shepherds_are_from_charan")
+# witness-tier presupposed read: re_keyed_clause_by_clause_to_the_exile on
+# the_greeting — read, not installed
+m.witness_read("the_greeting", "re_keyed_clause_by_clause_to_the_exile",
+                cites=["Bereshit Rabbah 70:10"])
 
 # -------------------------- Gen.29.5 · THE_KNOW_CHAIN_AND_GRANDFATHER_SKIP -
 # וַיֹּאמֶר לָהֶם הַיְדַעְתֶּם אֶת־לָבָן בֶּן־נָחוֹר וַיֹּאמְרוּ יָדָעְנוּ
@@ -85,6 +97,10 @@ m.step("Gen.29.7")
 # Jacob speaks a demand — LET: give-drink-go-graze(the-roim)
 m.declare("yaaqov", "LET",
           "hashqu_lekhu_reu(ha_roim)")
+# witness-tier presupposed read: labour_duty_from_an_exhaustive_disjunction
+# on the_shepherds_rebuke — read, not installed
+m.witness_read("the_shepherds_rebuke", "labour_duty_from_an_exhaustive_disjunction",
+                cites=["Bereshit Rabbah 70:11"])
 
 # -------------------------- Gen.29.8 · THE_REFUSAL_WITH_STONE_GROUNDS ------
 # וַיֹּאמְרוּ לֹא נוּכַל עַד אֲשֶׁר יֵאָסְפוּ כָּל־הָעֲדָרִים וְגָלֲלוּ
@@ -118,6 +134,10 @@ m.step("Gen.29.10")
 # ‹וַיִּגַּשׁ … וַיָּגֶל … וַיַּשְׁקְ› (“and-be … and-roll … and-give-
 # drink”) — fact holds: demander-performed-roll-and-water
 m.fact("demander_performed_roll_and_water")
+# witness-tier presupposed read: strength_exhibit_recorded_at_its_verse on
+# the_stone_rolled — read, not installed
+m.witness_read("the_stone_rolled", "strength_exhibit_recorded_at_its_verse",
+                cites=["Bereshit Rabbah 70:12"])
 
 # -------------------------- Gen.29.11 · THE_KISS_VOICE_AND_WEEPING ---------
 # וַיִּשַּׁק יַעֲקֹב לְרָחֵל וַיִּשָּׂא אֶת־קֹלוֹ וַיֵּבְךְּ
@@ -127,6 +147,10 @@ m.step("Gen.29.11")
 # obj-marker voice/sound-him/its and-weep”) — fact holds: kiss-lifted-voice-
 # weeping
 m.fact("kiss_lifted_voice_weeping")
+# witness-tier presupposed read: classified_against_an_exhaustive_table on
+# the_kiss — read, not installed
+m.witness_read("the_kiss", "classified_against_an_exhaustive_table",
+                cites=["Bereshit Rabbah 70:12"])
 
 # -------------------------- Gen.29.12 · THE_TELL_CHAIN_AND_HER_RUN ---------
 # וַיַּגֵּד יַעֲקֹב לְרָחֵל כִּי אֲחִי אָבִיהָ הוּא וְכִי בֶן־רִבְקָה הוּא
@@ -137,6 +161,11 @@ m.step("Gen.29.12")
 # ‹וַיַּגֵּד … וַתָּרָץ וַתַּגֵּד› (“and-tell … and-run and-tell”) — fact
 # holds: identity-told-Rachel-ran-told-father
 m.fact("identity_told_rachel_ran_told_father")
+# witness-tier presupposed read:
+# ambiguity_kept_by_one_member_removed_by_the_other on her_fathers_brother —
+# read, not installed
+m.witness_read("her_fathers_brother", "ambiguity_kept_by_one_member_removed_by_the_other",
+                cites=["Bereshit Rabbah 70:13", "Onkelos Genesis 29:12"])
 
 # -------------------------- Gen.29.13 · THE_SECOND_RUN_EMBRACE_KISS_RECOUNT -
 # וַיְהִי כִשְׁמֹעַ לָבָן אֶת־שֵׁמַע יַעֲקֹב בֶּן־אֲחֹתוֹ וַיָּרָץ
@@ -160,6 +189,10 @@ m.step("Gen.29.14")
 # ‹עַצְמִי וּבְשָׂרִי … וַיֵּשֶׁב עִמּוֹ› (“bone-me/my and-flesh-me/my …
 # and-dwell/sit with-him/its”) — fact holds: bone-flesh-kinship-month-dwell
 m.fact("bone_flesh_kinship_month_dwell")
+# witness-tier presupposed read: welcome_decoded_as_a_stripping_threat on
+# my_bone_and_my_flesh — read, not installed
+m.witness_read("my_bone_and_my_flesh", "welcome_decoded_as_a_stripping_threat",
+                cites=["Bereshit Rabbah 70:14", "Onkelos Genesis 29:14"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -177,4 +210,29 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 1
+    assert sorted(m.WORLD["witnessed"]) == ['the_well_frame']
+    assert m.WORLD["witnessed"]['the_well_frame']["cites"] == ['Bereshit Rabbah 70:8']
+    assert all('one_machine_bound_to_six_institutions' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_seventh_binding', 'sinai_with_an_all_or_nothing_gate'), ('the_greeting', 're_keyed_clause_by_clause_to_the_exile'), ('the_shepherds_rebuke', 'labour_duty_from_an_exhaustive_disjunction'), ('the_stone_rolled', 'strength_exhibit_recorded_at_its_verse'), ('the_kiss', 'classified_against_an_exhaustive_table'), ('her_fathers_brother', 'ambiguity_kept_by_one_member_removed_by_the_other'), ('my_bone_and_my_flesh', 'welcome_decoded_as_a_stripping_threat')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 70:9']
+    assert all('sinai_with_an_all_or_nothing_gate' not in f for f in m.WORLD["facts"])
+    assert 'the_seventh_binding' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 70:10']
+    assert all('re_keyed_clause_by_clause_to_the_exile' not in f for f in m.WORLD["facts"])
+    assert 'the_greeting' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 70:11']
+    assert all('labour_duty_from_an_exhaustive_disjunction' not in f for f in m.WORLD["facts"])
+    assert 'the_shepherds_rebuke' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 70:12']
+    assert all('strength_exhibit_recorded_at_its_verse' not in f for f in m.WORLD["facts"])
+    assert 'the_stone_rolled' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 70:12']
+    assert all('classified_against_an_exhaustive_table' not in f for f in m.WORLD["facts"])
+    assert 'the_kiss' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 70:13', 'Onkelos Genesis 29:12']
+    assert all('ambiguity_kept_by_one_member_removed_by_the_other' not in f for f in m.WORLD["facts"])
+    assert 'her_fathers_brother' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 70:14', 'Onkelos Genesis 29:14']
+    assert all('welcome_decoded_as_a_stripping_threat' not in f for f in m.WORLD["facts"])
+    assert 'my_bone_and_my_flesh' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

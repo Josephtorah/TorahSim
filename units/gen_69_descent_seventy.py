@@ -24,6 +24,10 @@ m.step("Gen.46.1")
 # slaughter-an-animal sacrifice to-God father-him/its”) — fact holds: and-
 # slaughter-an-animal-sacrifice-l-God-aviv
 m.fact("va_yizbach_zevachim_l_elohe_aviv")
+# witness-tier presupposed read: the_middle_seat_of_the_cedars_arc on
+# beersheba_sacrifices — read, not installed
+m.witness_read("beersheba_sacrifices", "the_middle_seat_of_the_cedars_arc",
+                cites=["Bereshit Rabbah 94:4", "Bereshit Rabbah 94:5"])
 
 # -------------------------- Gen.46.2 · JACOB_JACOB_HERE_I_AM ---------------
 # וַיֹּאמֶר אֱלֹהִים לְיִשְׂרָאֵל בְּמַרְאֹת הַלַּיְלָה וַיֹּאמֶר יַעֲקֹב
@@ -55,6 +59,11 @@ m.step("Gen.46.4")
 # ‹אָנֹכִי אֵרֵד עִמְּךָ מִצְרַיְמָה› (“go-down with-you/your Egypt-ward”) —
 # fact holds: I-go-down-imkha-and-I-aalkha
 m.fact("anokhi_ered_imkha_ve_anokhi_aalkha")
+# witness-tier presupposed read:
+# a_personal_promise_widened_to_a_general_clause on i_will_bring_you_up —
+# read, not installed
+m.witness_read("i_will_bring_you_up", "a_personal_promise_widened_to_a_general_clause",
+                cites=["Bereshit Rabbah 94:6", "Onkelos Genesis 46:2"])
 
 # -------------------------- Gen.46.5 · THE_WAGONS_CARRY --------------------
 # וַיָּקָם יַעֲקֹב מִבְּאֵר שָׁבַע וַיִּשְׂאוּ בְנֵי־יִשְׂרָאֵל אֶת־יַעֲקֹב
@@ -90,6 +99,11 @@ m.step("Gen.46.7")
 # ‹אִתּוֹ מִצְרָיְמָה› (“with-him/its Egypt-ward”) — fact holds: all-zaro-
 # come/bring-with-him-mitzrayma
 m.fact("kol_zaro_hevi_ito_mitzrayma")
+# witness-tier presupposed read:
+# sons_daughters_count_and_daughters_sons_do_not on the_roster_phrasing —
+# read, not installed
+m.witness_read("the_roster_phrasing", "sons_daughters_count_and_daughters_sons_do_not",
+                cites=["Bereshit Rabbah 94:6"])
 
 # -------------------------- Gen.46.8 · THE_LEDGER_OPENS --------------------
 # וְאֵלֶּה שְׁמוֹת בְּנֵי־יִשְׂרָאֵל הַבָּאִים מִצְרַיְמָה יַעֲקֹב וּבָנָיו
@@ -118,6 +132,10 @@ m.fact("bene_reuven_arbaa")
 m.step("Gen.46.10")
 # ‹וּבְנֵי שִׁמְעוֹן› (“and-son Simeon”) — fact holds: son-Simeon-shisha
 m.fact("bene_shimon_shisha")
+# witness-tier presupposed read: a_standing_dossier_cashing_on_the_roster on
+# shaul_son_of_the_canaanite_woman — read, not installed
+m.witness_read("shaul_son_of_the_canaanite_woman", "a_standing_dossier_cashing_on_the_roster",
+                cites=["Bereshit Rabbah 80:11", "Bereshit Rabbah 73:2"])
 
 # -------------------------- Gen.46.11 · LEVIS_SONS -------------------------
 # וּבְנֵי לֵוִי גֵּרְשׁוֹן קְהָת וּמְרָרִי
@@ -236,6 +254,10 @@ m.step("Gen.46.23")
 # ‹וּבְנֵי־דָן חֻשִׁים› (“and-son Daniel Hushim”) — fact holds: and-son-
 # Daniel-Hushim
 m.fact("u_vene_dan_chushim")
+# witness-grounded state (its own tier):
+# plural_heading_confirmed_variant_unopened on the_sons_of_dan_over_one_name
+m.witness_state("the_sons_of_dan_over_one_name", "plural_heading_confirmed_variant_unopened",
+                cites=["Bereshit Rabbah 94:9"])
 
 # -------------------------- Gen.46.24 · NAPHTALIS_SONS ---------------------
 # וּבְנֵי נַפְתָּלִי יַחְצְאֵל וְגוּנִי וְיֵצֶר וְשִׁלֵּם
@@ -275,6 +297,14 @@ m.step("Gen.46.27")
 # living-being to-house Jacob the-come/bring Egypt-ward seventy”) — fact
 # holds: all-the-living-being-seventy
 m.fact("kol_ha_nefesh_shivim")
+# witness-grounded state (its own tier):
+# a_total_the_texts_own_numbers_do_not_reach on the_seventy
+m.witness_state("the_seventy", "a_total_the_texts_own_numbers_do_not_reach",
+                cites=["Bereshit Rabbah 94:9", "Onkelos Genesis 46:27"])
+# witness-tier presupposed read: a_capital_law_arriving_through_a_genealogy
+# on the_tally — read, not installed
+m.witness_read("the_tally", "a_capital_law_arriving_through_a_genealogy",
+                cites=["Bereshit Rabbah 94:9"])
 
 # -------------------------- Gen.46.28 · JUDAH_SENT_AHEAD -------------------
 # וְאֶת־יְהוּדָה שָׁלַח לְפָנָיו אֶל־יוֹסֵף לְהוֹרֹת לְפָנָיו גֹּשְׁנָה
@@ -285,6 +315,10 @@ m.step("Gen.46.28")
 # ‹וְאֶת־יְהוּדָה שָׁלַח לְפָנָיו› (“and-obj-marker Judah send to-face-
 # him/its”) — fact holds: and-obj-marker-Judah-send-lefanav
 m.fact("ve_et_yehuda_shalach_lefanav")
+# witness-grounded state (its own tier): an_academy_or_an_advance_party on
+# sent_judah_ahead
+m.witness_state("sent_judah_ahead", "an_academy_or_an_advance_party",
+                cites=["Bereshit Rabbah 95:3", "Onkelos Genesis 46:28"])
 
 # -------------------------- Gen.46.29 · THE_HARD_BINDING_AND_THE_LONG_WEEPING -
 # וַיֶּאְסֹר יוֹסֵף מֶרְכַּבְתּוֹ וַיַּעַל לִקְרַאת־יִשְׂרָאֵל אָבִיו
@@ -297,6 +331,10 @@ m.step("Gen.46.29")
 # ‹וַיֶּאְסֹר יוֹסֵף מֶרְכַּבְתּוֹ› (“and-yoke Joseph chariot-him/its”) —
 # event: bakha — agent Joseph
 m.event("bakha", agent="yosef")
+# witness-tier presupposed read: the_conduct_rule_firing_again on
+# harnessed_his_own_chariot — read, not installed
+m.witness_read("harnessed_his_own_chariot", "the_conduct_rule_firing_again",
+                cites=["Bereshit Rabbah 55:8"])
 
 # -------------------------- Gen.46.30 · LET_ME_DIE_THIS_TIME ---------------
 # וַיֹּאמֶר יִשְׂרָאֵל אֶל־יוֹסֵף אָמוּתָה הַפָּעַם אַחֲרֵי רְאוֹתִי
@@ -307,6 +345,10 @@ m.step("Gen.46.30")
 # ‹אָמוּתָה הַפָּעַם אַחֲרֵי רְאוֹתִי אֶת־› (“die the-stroke after see-me/my
 # obj-marker”) — fact holds: die-the-stroke-after-reoti-obj-marker-your-face
 m.fact("amuta_ha_paam_achare_reoti_et_panekha")
+# witness-tier presupposed read: the_death_wish_converted_to_consolation on
+# now_let_me_die — read, not installed
+m.witness_read("now_let_me_die", "the_death_wish_converted_to_consolation",
+                cites=["Onkelos Genesis 46:30"])
 
 # -------------------------- Gen.46.31 · I_WILL_TELL_PHARAOH ----------------
 # וַיֹּאמֶר יוֹסֵף אֶל־אֶחָיו וְאֶל־בֵּית אָבִיו אֶעֱלֶה וְאַגִּידָה
@@ -353,6 +395,10 @@ m.step("Gen.46.34")
 # — Joseph speaks a demand — LET: and-say-man-something-bought
 m.declare("yosef", "LET",
           "va_amartem_anshe_miqne")
+# witness-tier presupposed read: the_taboo_restated_as_practice on
+# every_shepherd_an_abomination — read, not installed
+m.witness_read("every_shepherd_an_abomination", "the_taboo_restated_as_practice",
+                cites=["Onkelos Genesis 46:34"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -370,4 +416,36 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 5
+    assert sorted(m.WORLD["witnessed"]) == ['sent_judah_ahead', 'the_seventy', 'the_sons_of_dan_over_one_name']
+    assert m.WORLD["witnessed"]['sent_judah_ahead']["cites"] == ['Bereshit Rabbah 95:3', 'Onkelos Genesis 46:28']
+    assert all('an_academy_or_an_advance_party' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['the_seventy']["cites"] == ['Bereshit Rabbah 94:9', 'Onkelos Genesis 46:27']
+    assert all('a_total_the_texts_own_numbers_do_not_reach' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['the_sons_of_dan_over_one_name']["cites"] == ['Bereshit Rabbah 94:9']
+    assert all('plural_heading_confirmed_variant_unopened' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('beersheba_sacrifices', 'the_middle_seat_of_the_cedars_arc'), ('i_will_bring_you_up', 'a_personal_promise_widened_to_a_general_clause'), ('the_roster_phrasing', 'sons_daughters_count_and_daughters_sons_do_not'), ('shaul_son_of_the_canaanite_woman', 'a_standing_dossier_cashing_on_the_roster'), ('the_tally', 'a_capital_law_arriving_through_a_genealogy'), ('harnessed_his_own_chariot', 'the_conduct_rule_firing_again'), ('now_let_me_die', 'the_death_wish_converted_to_consolation'), ('every_shepherd_an_abomination', 'the_taboo_restated_as_practice')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 94:4', 'Bereshit Rabbah 94:5']
+    assert all('the_middle_seat_of_the_cedars_arc' not in f for f in m.WORLD["facts"])
+    assert 'beersheba_sacrifices' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 94:6', 'Onkelos Genesis 46:2']
+    assert all('a_personal_promise_widened_to_a_general_clause' not in f for f in m.WORLD["facts"])
+    assert 'i_will_bring_you_up' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 94:6']
+    assert all('sons_daughters_count_and_daughters_sons_do_not' not in f for f in m.WORLD["facts"])
+    assert 'the_roster_phrasing' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 80:11', 'Bereshit Rabbah 73:2']
+    assert all('a_standing_dossier_cashing_on_the_roster' not in f for f in m.WORLD["facts"])
+    assert 'shaul_son_of_the_canaanite_woman' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 94:9']
+    assert all('a_capital_law_arriving_through_a_genealogy' not in f for f in m.WORLD["facts"])
+    assert 'the_tally' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 55:8']
+    assert all('the_conduct_rule_firing_again' not in f for f in m.WORLD["facts"])
+    assert 'harnessed_his_own_chariot' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Genesis 46:30']
+    assert all('the_death_wish_converted_to_consolation' not in f for f in m.WORLD["facts"])
+    assert 'now_let_me_die' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Genesis 46:34']
+    assert all('the_taboo_restated_as_practice' not in f for f in m.WORLD["facts"])
+    assert 'every_shepherd_an_abomination' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

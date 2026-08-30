@@ -67,6 +67,15 @@ m.step("Gen.32.5")
 # Esau)
 m.declare("yaaqov", "LET?",
           "tomrun(ha_malakhim, la_doni_le_esav)")
+# witness-tier presupposed read: priced_in_dynasties_and_paid_at_gen_59 on
+# my_lord_eight_times — read, not installed
+m.witness_read("my_lord_eight_times", "priced_in_dynasties_and_paid_at_gen_59",
+                cites=["Bereshit Rabbah 75:11"])
+# witness-tier presupposed read:
+# criticized_by_the_chain_against_its_own_subject on the_embassy — read, not
+# installed
+m.witness_read("the_embassy", "criticized_by_the_chain_against_its_own_subject",
+                cites=["Bereshit Rabbah 75:2", "Bereshit Rabbah 75:3"])
 
 # -------------------------- Gen.32.6 · THE_INVENTORY_MESSAGE ---------------
 # וַיְהִי־לִי שׁוֹר וַחֲמוֹר צֹאן וְעֶבֶד וְשִׁפְחָה וָאֶשְׁלְחָה לְהַגִּיד
@@ -101,6 +110,10 @@ m.step("Gen.32.8")
 # ‹וַיִּירָא יַעֲקֹב מְאֹד וַיֵּצֶר› (“and-fear Jacob very and-press”) —
 # fact holds: and-fear-and-cut-to-me-shene-camp(Jacob)
 m.fact("va_yira_va_yachatz_li_shene_machanot(yaaqov)")
+# witness-tier presupposed read: risk_distribution_maxim_minted_here on
+# divided_the_camp — read, not installed
+m.witness_read("divided_the_camp", "risk_distribution_maxim_minted_here",
+                cites=["Bereshit Rabbah 76:3"])
 
 # -------------------------- Gen.32.9 · THE_REMNANT_ARITHMETIC --------------
 # וַיֹּאמֶר אִם־יָבוֹא עֵשָׂו אֶל־הַמַּחֲנֶה הָאַחַת וְהִכָּהוּ וְהָיָה
@@ -124,6 +137,10 @@ m.step("Gen.32.10")
 # you/your and-to-nativity-you/your and-be-make-well with-you/your”) — fact
 # holds: retell-return-to-artzekha-and-be-make-well(tefila, delta-x2)
 m.fact("retell_shuv_le_artzekha_ve_etiva(tefila, delta_x2)")
+# witness-tier presupposed read: descent_does_not_secure_the_name on
+# God_of_my_fathers_and_not_of_esau — read, not installed
+m.witness_read("God_of_my_fathers_and_not_of_esau", "descent_does_not_secure_the_name",
+                cites=["Bereshit Rabbah 76:4"])
 
 # -------------------------- Gen.32.11 · THE_TOO_SMALL ----------------------
 # קָטֹנְתִּי מִכֹּל הַחֲסָדִים וּמִכָּל־הָאֱמֶת אֲשֶׁר עָשִׂיתָ
@@ -137,6 +154,10 @@ m.step("Gen.32.11")
 # kindness and-from-all the-stability”) — fact holds: diminish-who?-all-the-
 # kindness(tefila)
 m.fact("qatonti_mi_kol_ha_chasadim(tefila)")
+# witness-tier presupposed read: merit_as_a_finite_balance_drawn_down on
+# i_am_small — read, not installed
+m.witness_read("i_am_small", "merit_as_a_finite_balance_drawn_down",
+                cites=["Bereshit Rabbah 76:5", "Onkelos Genesis 32:11"])
 
 # -------------------------- Gen.32.12 · THE_RESCUE_DEMAND ------------------
 # הַצִּילֵנִי נָא מִיַּד אָחִי מִיַּד עֵשָׂו כִּי־יָרֵא אָנֹכִי אֹתוֹ
@@ -149,6 +170,10 @@ m.step("Gen.32.12")
 # hatzileni(the-LORD, who?-hand-Esau)
 m.declare("yaaqov", "LET",
           "hatzileni(YHWH, mi_yad_esav)")
+# witness-tier presupposed read: argued_from_a_statute_not_yet_given on
+# the_plea — read, not installed
+m.witness_read("the_plea", "argued_from_a_statute_not_yet_given",
+                cites=["Bereshit Rabbah 75:13"])
 
 # -------------------------- Gen.32.13 · THE_UNSOURCED_DOUBLET --------------
 # וְאַתָּה אָמַרְתָּ הֵיטֵב אֵיטִיב עִמָּךְ וְשַׂמְתִּי אֶת־זַרְעֲךָ כְּחוֹל
@@ -304,6 +329,10 @@ m.step("Gen.32.25")
 # him/its until go-up the-dawn”) — fact holds: and-bedust-man-imo(Jacob-
 # alone, until-go-up-the-dawn)
 m.fact("va_yeaveq_ish_imo(yaaqov_levado, ad_alot_ha_shachar)")
+# witness-tier presupposed read: ignorance_stated_then_decided_by_a_verb on
+# who_prevailed — read, not installed
+m.witness_read("who_prevailed", "ignorance_stated_then_decided_by_a_verb",
+                cites=["Bereshit Rabbah 77:3"])
 
 # -------------------------- Gen.32.26 · THE_TOUCH --------------------------
 # וַיַּרְא כִּי לֹא יָכֹל לוֹ וַיִּגַּע בְּכַף־יְרֵכוֹ וַתֵּקַע כַּף־יֶרֶךְ
@@ -327,6 +356,11 @@ m.step("Gen.32.27")
 # the-man speaks a demand — LET: shalcheni(Jacob)
 m.declare("ha_ish", "LET",
           "shalcheni(yaaqov)")
+# witness-tier presupposed read:
+# precedence_table_and_a_penalty_in_the_angels_mouth on release_me — read,
+# not installed
+m.witness_read("release_me", "precedence_table_and_a_penalty_in_the_angels_mouth",
+                cites=["Bereshit Rabbah 78:1", "Bereshit Rabbah 78:2"])
 
 # -------------------------- Gen.32.28 · THE_NAME_SURRENDERED ---------------
 # וַיֹּאמֶר אֵלָיו מַה־שְּׁמֶךָ וַיֹּאמֶר יַעֲקֹב
@@ -347,6 +381,10 @@ m.step("Gen.32.29")
 # Israel”) — fact holds: not-Jacob-say-still/again-that-with-Israel(decree-
 # fact)
 m.fact("lo_yaaqov_yeamer_od_ki_im_yisrael(decree_fact)")
+# witness-tier presupposed read: etymology_refused_by_the_translation on
+# the_new_name — read, not installed
+m.witness_read("the_new_name", "etymology_refused_by_the_translation",
+                cites=["Onkelos Genesis 32:29"])
 
 # -------------------------- Gen.32.30 · THE_NAME_REFUSED -------------------
 # וַיִּשְׁאַל יַעֲקֹב וַיֹּאמֶר הַגִּידָה־נָּא שְׁמֶךָ וַיֹּאמֶר לָמָּה זֶּה
@@ -358,6 +396,10 @@ m.step("Gen.32.30")
 # a demand — LET: hagida(the-man, obj-marker-shimkha)
 m.declare("yaaqov", "LET",
           "hagida(ha_ish, et_shimkha)")
+# witness-tier presupposed read: a_class_with_no_fixed_names on
+# why_ask_my_name — read, not installed
+m.witness_read("why_ask_my_name", "a_class_with_no_fixed_names",
+                cites=["Bereshit Rabbah 78:4"])
 
 # -------------------------- Gen.32.31 · THE_FACE_AND_THE_WRONG_RESCUE ------
 # וַיִּקְרָא יַעֲקֹב שֵׁם הַמָּקוֹם פְּנִיאֵל כִּי־רָאִיתִי אֱלֹהִים פָּנִים
@@ -380,6 +422,10 @@ m.step("Gen.32.32")
 # ‹וַיִּזְרַח־לוֹ הַשֶּׁמֶשׁ› (“and-irradiate to-him/its the-sun”) — fact
 # holds: and-irradiate-the-sun-and-that-limp(over-obj-marker-Peniel)
 m.fact("va_yizrach_ha_shemesh_ve_hu_tzolea(over_et_penuel)")
+# witness-tier presupposed read: borrowed_hours_repaid_with_interest on
+# the_sun_rose_for_him — read, not installed
+m.witness_read("the_sun_rose_for_him", "borrowed_hours_repaid_with_interest",
+                cites=["Bereshit Rabbah 78:5", "Bereshit Rabbah 68:10"])
 
 # -------------------------- Gen.32.33 · THE_FIRST_NARRATOR_LAW -------------
 # עַל־כֵּן לֹא־יֹאכְלוּ בְנֵי־יִשְׂרָאֵל אֶת־גִּיד הַנָּשֶׁה אֲשֶׁר עַל־כַּף
@@ -393,6 +439,15 @@ m.step("Gen.32.33")
 # eat son Israel obj-marker thong the-rheumatic”) — pattern recorded: not-
 # eat-bene-Israel-obj-marker-thong-the-rheumatic
 m.pattern("lo_yokhlu_bene_yisrael_et_gid_ha_nashe")
+# witness-tier presupposed read:
+# first_food_prohibition_with_an_admitted_self_stringency on the_sinew —
+# read, not installed
+m.witness_read("the_sinew", "first_food_prohibition_with_an_admitted_self_stringency",
+                cites=["Bereshit Rabbah 78:6"])
+# witness-tier presupposed read: ratification_by_the_losing_signatory on
+# what_is_yours_shall_be_yours — read, not installed
+m.witness_read("what_is_yours_shall_be_yours", "ratification_by_the_losing_signatory",
+                cites=["Bereshit Rabbah 78:11"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -410,4 +465,44 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 10
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('my_lord_eight_times', 'priced_in_dynasties_and_paid_at_gen_59'), ('the_embassy', 'criticized_by_the_chain_against_its_own_subject'), ('divided_the_camp', 'risk_distribution_maxim_minted_here'), ('God_of_my_fathers_and_not_of_esau', 'descent_does_not_secure_the_name'), ('i_am_small', 'merit_as_a_finite_balance_drawn_down'), ('the_plea', 'argued_from_a_statute_not_yet_given'), ('who_prevailed', 'ignorance_stated_then_decided_by_a_verb'), ('release_me', 'precedence_table_and_a_penalty_in_the_angels_mouth'), ('the_new_name', 'etymology_refused_by_the_translation'), ('why_ask_my_name', 'a_class_with_no_fixed_names'), ('the_sun_rose_for_him', 'borrowed_hours_repaid_with_interest'), ('the_sinew', 'first_food_prohibition_with_an_admitted_self_stringency'), ('what_is_yours_shall_be_yours', 'ratification_by_the_losing_signatory')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 75:11']
+    assert all('priced_in_dynasties_and_paid_at_gen_59' not in f for f in m.WORLD["facts"])
+    assert 'my_lord_eight_times' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 75:2', 'Bereshit Rabbah 75:3']
+    assert all('criticized_by_the_chain_against_its_own_subject' not in f for f in m.WORLD["facts"])
+    assert 'the_embassy' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 76:3']
+    assert all('risk_distribution_maxim_minted_here' not in f for f in m.WORLD["facts"])
+    assert 'divided_the_camp' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 76:4']
+    assert all('descent_does_not_secure_the_name' not in f for f in m.WORLD["facts"])
+    assert 'God_of_my_fathers_and_not_of_esau' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 76:5', 'Onkelos Genesis 32:11']
+    assert all('merit_as_a_finite_balance_drawn_down' not in f for f in m.WORLD["facts"])
+    assert 'i_am_small' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 75:13']
+    assert all('argued_from_a_statute_not_yet_given' not in f for f in m.WORLD["facts"])
+    assert 'the_plea' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 77:3']
+    assert all('ignorance_stated_then_decided_by_a_verb' not in f for f in m.WORLD["facts"])
+    assert 'who_prevailed' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 78:1', 'Bereshit Rabbah 78:2']
+    assert all('precedence_table_and_a_penalty_in_the_angels_mouth' not in f for f in m.WORLD["facts"])
+    assert 'release_me' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Genesis 32:29']
+    assert all('etymology_refused_by_the_translation' not in f for f in m.WORLD["facts"])
+    assert 'the_new_name' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 78:4']
+    assert all('a_class_with_no_fixed_names' not in f for f in m.WORLD["facts"])
+    assert 'why_ask_my_name' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 78:5', 'Bereshit Rabbah 68:10']
+    assert all('borrowed_hours_repaid_with_interest' not in f for f in m.WORLD["facts"])
+    assert 'the_sun_rose_for_him' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 78:6']
+    assert all('first_food_prohibition_with_an_admitted_self_stringency' not in f for f in m.WORLD["facts"])
+    assert 'the_sinew' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[12]["cites"] == ['Bereshit Rabbah 78:11']
+    assert all('ratification_by_the_losing_signatory' not in f for f in m.WORLD["facts"])
+    assert 'what_is_yours_shall_be_yours' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

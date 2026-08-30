@@ -23,6 +23,10 @@ m.step("Gen.42.1")
 # ‹כִּי יֶשׁ־שֶׁבֶר בְּמִצְרָיִם› (“that there-is grain in-Egypt”) — fact
 # holds: there-is-grain-in-Egypt
 m.fact("yesh_shever_be_mitzrayim")
+# witness-tier presupposed read: a_pun_the_chain_builds_on on grain_in_egypt
+# — read, not installed
+m.witness_read("grain_in_egypt", "a_pun_the_chain_builds_on",
+                cites=["Bereshit Rabbah 91:1", "Onkelos Genesis 42:1"])
 
 # -------------------------- Gen.42.2 · GO_DOWN_AND_BUY ---------------------
 # וַיֹּאמֶר הִנֵּה שָׁמַעְתִּי כִּי יֶשׁ־שֶׁבֶר בְּמִצְרָיִם רְדוּ־שָׁמָּה
@@ -35,6 +39,10 @@ m.step("Gen.42.2")
 # grain-lanu
 m.declare("yaaqov", "LET",
           "redu_shamah_ve_shivru_lanu")
+# witness-grounded state (its own tier):
+# the_imperative_carries_the_years_of_the_bondage on go_down
+m.witness_state("go_down", "the_imperative_carries_the_years_of_the_bondage",
+                cites=["Bereshit Rabbah 91:2", "Bereshit Rabbah 91:6"])
 
 # -------------------------- Gen.42.3 · TEN_GO_DOWN -------------------------
 # וַיֵּרְדוּ אֲחֵי־יוֹסֵף עֲשָׂרָה לִשְׁבֹּר בָּר מִמִּצְרָיִם
@@ -46,6 +54,10 @@ m.step("Gen.42.3")
 # demand settled (popped from the queue): go-down-shamah-and-deal-in-grain-
 # lanu
 m.result("redu_shamah_ve_shivru_lanu", tmark="t1")
+# witness-tier presupposed read: nine_parts_brotherhood_one_part_grain on
+# ten_brothers_went_down — read, not installed
+m.witness_read("ten_brothers_went_down", "nine_parts_brotherhood_one_part_grain",
+                cites=["Bereshit Rabbah 91:2"])
 
 # -------------------------- Gen.42.4 · BENJAMIN_WITHHELD -------------------
 # וְאֶת־בִּנְיָמִין אֲחִי יוֹסֵף לֹא־שָׁלַח יַעֲקֹב אֶת־אֶחָיו כִּי אָמַר
@@ -56,6 +68,10 @@ m.step("Gen.42.4")
 # ‹וְאֶת־בִּנְיָמִין› (“and-obj-marker Benjamin”) — fact holds: obj-marker-
 # Benjamin-not-send-lest-hurt
 m.fact("et_binyamin_lo_shalach_pen_ason")
+# witness-grounded state (its own tier):
+# the_word_lives_only_here_and_in_the_capital_law on lest_harm_befall_him
+m.witness_state("lest_harm_befall_him", "the_word_lives_only_here_and_in_the_capital_law",
+                cites=["Onkelos Genesis 42:4", "Onkelos Genesis 42:38"])
 
 # -------------------------- Gen.42.5 · AMONG_THE_COMERS --------------------
 # וַיָּבֹאוּ בְּנֵי יִשְׂרָאֵל לִשְׁבֹּר בְּתוֹךְ הַבָּאִים כִּי־הָיָה
@@ -67,6 +83,10 @@ m.step("Gen.42.5")
 # come/bring son Israel to-deal-in-grain in-midst the-come/bring”) — fact
 # holds: in-midst-the-come/bring-that-the-hunger-in-earth-Canaan
 m.fact("be_tokh_ha_baim_ki_ha_raav_be_eretz_kenaan")
+# witness-tier presupposed read: the_quorum_of_ten_derived_here on
+# among_those_who_came — read, not installed
+m.witness_read("among_those_who_came", "the_quorum_of_ten_derived_here",
+                cites=["Bereshit Rabbah 91:3"])
 
 # -------------------------- Gen.42.6 · THE_SHEAVES_BOW ---------------------
 # וְיוֹסֵף הוּא הַשַּׁלִּיט עַל־הָאָרֶץ הוּא הַמַּשְׁבִּיר לְכָל־עַם הָאָרֶץ
@@ -79,6 +99,10 @@ m.step("Gen.42.6")
 # come/bring brother Joseph and-afflict to-him/its nose earth-ward”) —
 # event: hishtachavu — agent achei-Joseph
 m.event("hishtachavu", agent="achei_yosef")
+# witness-tier presupposed read: three_edicts_that_make_the_finding_possible
+# on the_governor_over_the_land — read, not installed
+m.witness_read("the_governor_over_the_land", "three_edicts_that_make_the_finding_possible",
+                cites=["Bereshit Rabbah 91:4"])
 
 # -------------------------- Gen.42.7 · HE_KNEW_THEM_THEY_KNEW_HIM_NOT ------
 # וַיַּרְא יוֹסֵף אֶת־אֶחָיו וַיַּכִּרֵם וַיִּתְנַכֵּר אֲלֵיהֶם וַיְדַבֵּר
@@ -92,6 +116,10 @@ m.step("Gen.42.7")
 # ‹וַיַּכִּרֵם וַיִּתְנַכֵּר אֲלֵיהֶם› (“and-scrutinize-them/their and-
 # scrutinize to-them/their”) — fact holds: and-yakirem-and-scrutinize-alehem
 m.fact("va_yakirem_va_yitnaker_alehem")
+# witness-grounded state (its own tier):
+# disguise_against_deliberation_unresolved on he_made_himself_strange
+m.witness_state("he_made_himself_strange", "disguise_against_deliberation_unresolved",
+                cites=["Onkelos Genesis 42:7", "Bereshit Rabbah 91:7"])
 
 # -------------------------- Gen.42.8 · THE_ONE_WAY_KNOWING -----------------
 # וַיַּכֵּר יוֹסֵף אֶת־אֶחָיו וְהֵם לֹא הִכִּרֻהוּ
@@ -101,6 +129,10 @@ m.step("Gen.42.8")
 # ‹וְהֵם לֹא הִכִּרֻהוּ› (“and-they not scrutinize-him/its”) — fact holds:
 # and-they-not-hikiruhu
 m.fact("ve_hem_lo_hikiruhu")
+# witness-tier presupposed read: the_beard_as_the_recognition_variable on
+# he_knew_them_they_knew_him_not — read, not installed
+m.witness_read("he_knew_them_they_knew_him_not", "the_beard_as_the_recognition_variable",
+                cites=["Bereshit Rabbah 91:7"])
 
 # -------------------------- Gen.42.9 · THE_DREAMS_REMEMBERED ---------------
 # וַיִּזְכֹּר יוֹסֵף אֵת הַחֲלֹמוֹת אֲשֶׁר חָלַם לָהֶם וַיֹּאמֶר אֲלֵהֶם
@@ -112,6 +144,10 @@ m.step("Gen.42.9")
 # ‹וַיִּזְכֹּר יוֹסֵף אֵת הַחֲלֹמוֹת› (“and-mark Joseph obj-marker the-
 # dream”) — event: male — agent Joseph; theme the-dream
 m.event("zakhar", agent="yosef", themes=["ha_chalomot"])
+# witness-tier presupposed read: rendered_as_the_breach_in_the_defenses on
+# the_nakedness_of_the_land — read, not installed
+m.witness_read("the_nakedness_of_the_land", "rendered_as_the_breach_in_the_defenses",
+                cites=["Onkelos Genesis 42:9", "Onkelos Genesis 42:12"])
 
 # -------------------------- Gen.42.10 · NO_MY_LORD -------------------------
 # וַיֹּאמְרוּ אֵלָיו לֹא אֲדֹנִי וַעֲבָדֶיךָ בָּאוּ לִשְׁבָּר־אֹכֶל
@@ -177,6 +213,10 @@ m.step("Gen.42.15")
 # ‹בְּזֹאת תִּבָּחֵנוּ חֵי פַרְעֹה› (“in-this test living Pharaoh”) — fact
 # holds: in-this-test-chei-Pharaoh
 m.fact("be_zot_tibachenu_chei_faro")
+# witness-tier presupposed read: identified_as_a_false_oath_formula on
+# by_pharaohs_life — read, not installed
+m.witness_read("by_pharaohs_life", "identified_as_a_false_oath_formula",
+                cites=["Bereshit Rabbah 91:7"])
 
 # -------------------------- Gen.42.16 · THE_FIRST_PLAN ---------------------
 # שִׁלְחוּ מִכֶּם אֶחָד וְיִקַּח אֶת־אֲחִיכֶם וְאַתֶּם הֵאָסְרוּ
@@ -210,6 +250,10 @@ m.step("Gen.42.18")
 # LET: this-make-vichyu
 m.declare("yosef", "LET",
           "zot_asu_vichyu")
+# witness-tier presupposed read: an_enumerated_member_of_the_canon_pattern
+# on on_the_third_day — read, not installed
+m.witness_read("on_the_third_day", "an_enumerated_member_of_the_canon_pattern",
+                cites=["Bereshit Rabbah 56:1", "Onkelos Genesis 42:18"])
 
 # -------------------------- Gen.42.19 · ONE_BOUND_NINE_CARRY ---------------
 # אִם־כֵּנִים אַתֶּם אֲחִיכֶם אֶחָד יֵאָסֵר בְּבֵית מִשְׁמַרְכֶם וְאַתֶּם
@@ -248,6 +292,11 @@ m.step("Gen.42.21")
 # ‹אֲבָל אֲשֵׁמִים אֲנַחְנוּ עַל־אָחִינוּ› (“nay guilty we over brother-
 # us/our”) — fact holds: nay-guilty-we-over-achinu
 m.fact("aval_ashemim_anachnu_al_achinu")
+# witness-tier presupposed read:
+# the_pit_entered_as_evidence_and_hearing_read_as_obedience on
+# the_confession — read, not installed
+m.witness_read("the_confession", "the_pit_entered_as_evidence_and_hearing_read_as_obedience",
+                cites=["Bereshit Rabbah 91:8", "Onkelos Genesis 42:21", "Onkelos Genesis 42:22"])
 
 # -------------------------- Gen.42.22 · REUBEN_CITES_HIS_DEAD_DEMANDS ------
 # וַיַּעַן רְאוּבֵן אֹתָם לֵאמֹר הֲלוֹא אָמַרְתִּי אֲלֵיכֶם לֵאמֹר
@@ -268,6 +317,10 @@ m.step("Gen.42.23")
 # ‹כִּי הַמֵּלִיץ בֵּינֹתָם› (“that the-make-mouths-at between-them/their”)
 # — fact holds: that-the-make-mouths-at-benotam
 m.fact("ki_ha_melitz_benotam")
+# witness-grounded state (its own tier):
+# identified_as_the_viceroys_elder_son on the_interpreter
+m.witness_state("the_interpreter", "identified_as_the_viceroys_elder_son",
+                cites=["Bereshit Rabbah 91:8"])
 
 # -------------------------- Gen.42.24 · WEEPING_AND_THE_SOFT_BINDING -------
 # וַיִּסֹּב מֵעֲלֵיהֶם וַיֵּבְךְּ וַיָּשָׁב אֲלֵהֶם וַיְדַבֵּר אֲלֵהֶם
@@ -283,6 +336,10 @@ m.event("bakha", agent="yosef")
 # from-with-them/their obj-marker Simeon and-yoke obj-marker-him/its to-eye-
 # them/their”) — fact holds: and-yikach-obj-marker-Simeon-and-yoke
 m.fact("va_yikach_et_shimon_va_yeesor")
+# witness-tier presupposed read: the_promised_repayment_arrives on
+# simeon_bound_before_their_eyes — read, not installed
+m.witness_read("simeon_bound_before_their_eyes", "the_promised_repayment_arrives",
+                cites=["Bereshit Rabbah 84:16", "Bereshit Rabbah 99:7"])
 
 # -------------------------- Gen.42.25 · VESSELS_SILVER_PROVISIONS ----------
 # וַיְצַו יוֹסֵף וַיְמַלְאוּ אֶת־כְּלֵיהֶם בָּר וּלְהָשִׁיב כַּסְפֵּיהֶם
@@ -330,6 +387,10 @@ m.step("Gen.42.28")
 # ‹מַה־זֹּאת עָשָׂה אֱלֹהִים לָנוּ› (“what this make God to-us/our”) — fact
 # holds: and-bring-forth-libam-what-this-make-God
 m.fact("va_yetze_libam_ma_zot_asa_Elohim")
+# witness-tier presupposed read: the_faculty_named_and_the_organ_removed on
+# their_heart_went_out — read, not installed
+m.witness_read("their_heart_went_out", "the_faculty_named_and_the_organ_removed",
+                cites=["Onkelos Genesis 42:28"])
 
 # -------------------------- Gen.42.29 · THE_REPORT_BEGINS ------------------
 # וַיָּבֹאוּ אֶל־יַעֲקֹב אֲבִיהֶם אַרְצָה כְּנָעַן וַיַּגִּידוּ לוֹ אֵת
@@ -406,6 +467,10 @@ m.step("Gen.42.35")
 # (“and-see obj-marker parcel silver-them/their they and-father-them/their
 # and-fear”) — fact holds: and-see-obj-marker-parcel-kaspehem-and-fear
 m.fact("va_yiru_et_tzerorot_kaspehem_va_yirau")
+# witness-grounded state (its own tier): the_father_suspects_his_own_sons on
+# the_silver_reappearing
+m.witness_state("the_silver_reappearing", "the_father_suspects_his_own_sons",
+                cites=["Bereshit Rabbah 91:9"])
 
 # -------------------------- Gen.42.36 · YOU_HAVE_BEREAVED_ME ---------------
 # וַיֹּאמֶר אֲלֵהֶם יַעֲקֹב אֲבִיהֶם אֹתִי שִׁכַּלְתֶּם יוֹסֵף אֵינֶנּוּ
@@ -442,6 +507,10 @@ m.step("Gen.42.38")
 # ‹וַיֹּאמֶר לֹא־יֵרֵד בְּנִי עִמָּכֶם› (“and-say not go-down son-me/my
 # with-you/your(pl)”) — fact holds: not-go-down-beni-imakhem
 m.fact("lo_yered_beni_imakhem")
+# witness-tier presupposed read: the_accuser_accuses_only_in_danger on
+# lest_disaster_on_the_way — read, not installed
+m.witness_read("lest_disaster_on_the_way", "the_accuser_accuses_only_in_danger",
+                cites=["Bereshit Rabbah 91:9", "Onkelos Genesis 42:38"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -459,4 +528,52 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 10
+    assert sorted(m.WORLD["witnessed"]) == ['go_down', 'he_made_himself_strange', 'lest_harm_befall_him', 'the_interpreter', 'the_silver_reappearing']
+    assert m.WORLD["witnessed"]['go_down']["cites"] == ['Bereshit Rabbah 91:2', 'Bereshit Rabbah 91:6']
+    assert all('the_imperative_carries_the_years_of_the_bondage' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['he_made_himself_strange']["cites"] == ['Onkelos Genesis 42:7', 'Bereshit Rabbah 91:7']
+    assert all('disguise_against_deliberation_unresolved' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['lest_harm_befall_him']["cites"] == ['Onkelos Genesis 42:4', 'Onkelos Genesis 42:38']
+    assert all('the_word_lives_only_here_and_in_the_capital_law' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['the_interpreter']["cites"] == ['Bereshit Rabbah 91:8']
+    assert all('identified_as_the_viceroys_elder_son' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['the_silver_reappearing']["cites"] == ['Bereshit Rabbah 91:9']
+    assert all('the_father_suspects_his_own_sons' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('grain_in_egypt', 'a_pun_the_chain_builds_on'), ('ten_brothers_went_down', 'nine_parts_brotherhood_one_part_grain'), ('among_those_who_came', 'the_quorum_of_ten_derived_here'), ('the_governor_over_the_land', 'three_edicts_that_make_the_finding_possible'), ('he_knew_them_they_knew_him_not', 'the_beard_as_the_recognition_variable'), ('the_nakedness_of_the_land', 'rendered_as_the_breach_in_the_defenses'), ('by_pharaohs_life', 'identified_as_a_false_oath_formula'), ('on_the_third_day', 'an_enumerated_member_of_the_canon_pattern'), ('the_confession', 'the_pit_entered_as_evidence_and_hearing_read_as_obedience'), ('simeon_bound_before_their_eyes', 'the_promised_repayment_arrives'), ('their_heart_went_out', 'the_faculty_named_and_the_organ_removed'), ('lest_disaster_on_the_way', 'the_accuser_accuses_only_in_danger')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 91:1', 'Onkelos Genesis 42:1']
+    assert all('a_pun_the_chain_builds_on' not in f for f in m.WORLD["facts"])
+    assert 'grain_in_egypt' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 91:2']
+    assert all('nine_parts_brotherhood_one_part_grain' not in f for f in m.WORLD["facts"])
+    assert 'ten_brothers_went_down' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 91:3']
+    assert all('the_quorum_of_ten_derived_here' not in f for f in m.WORLD["facts"])
+    assert 'among_those_who_came' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 91:4']
+    assert all('three_edicts_that_make_the_finding_possible' not in f for f in m.WORLD["facts"])
+    assert 'the_governor_over_the_land' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 91:7']
+    assert all('the_beard_as_the_recognition_variable' not in f for f in m.WORLD["facts"])
+    assert 'he_knew_them_they_knew_him_not' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Genesis 42:9', 'Onkelos Genesis 42:12']
+    assert all('rendered_as_the_breach_in_the_defenses' not in f for f in m.WORLD["facts"])
+    assert 'the_nakedness_of_the_land' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 91:7']
+    assert all('identified_as_a_false_oath_formula' not in f for f in m.WORLD["facts"])
+    assert 'by_pharaohs_life' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 56:1', 'Onkelos Genesis 42:18']
+    assert all('an_enumerated_member_of_the_canon_pattern' not in f for f in m.WORLD["facts"])
+    assert 'on_the_third_day' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 91:8', 'Onkelos Genesis 42:21', 'Onkelos Genesis 42:22']
+    assert all('the_pit_entered_as_evidence_and_hearing_read_as_obedience' not in f for f in m.WORLD["facts"])
+    assert 'the_confession' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 84:16', 'Bereshit Rabbah 99:7']
+    assert all('the_promised_repayment_arrives' not in f for f in m.WORLD["facts"])
+    assert 'simeon_bound_before_their_eyes' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Onkelos Genesis 42:28']
+    assert all('the_faculty_named_and_the_organ_removed' not in f for f in m.WORLD["facts"])
+    assert 'their_heart_went_out' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 91:9', 'Onkelos Genesis 42:38']
+    assert all('the_accuser_accuses_only_in_danger' not in f for f in m.WORLD["facts"])
+    assert 'lest_disaster_on_the_way' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

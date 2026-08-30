@@ -31,6 +31,10 @@ m.install("ir")
 m.name("ir", "Chanokh")
 # reads without prior install (flag, not fix): Cain, wife-of-Cain
 m.presupposed("kayin", "eshet_kayin")
+# witness-tier presupposed read: immortality_bid on build_and_name — read,
+# not installed
+m.witness_read("build_and_name", "immortality_bid",
+                cites=["Bereshit Rabbah 23:1"])
 
 # -------------------------- Gen.4.18 · BEGETTING_CHAIN_FOUR_LINKS ----------
 # וַיִּוָּלֵד לַחֲנוֹךְ אֶת־עִירָד וְעִירָד יָלַד אֶת־מְחוּיָאֵל
@@ -50,6 +54,10 @@ m.event("beget", agent="mechuyael", themes=["metushael"])
 # ‹וּמְתוּשָׁאֵל יָלַד אֶת־לָמֶךְ› (“and-Methusael begot obj-marker Lamech”)
 # — event: beget — agent Methusael; theme Lamech
 m.event("beget", agent="metushael", themes=["lemekh"])
+# witness-tier presupposed read: decree_verbs_sentence_ledger on line_names
+# — read, not installed
+m.witness_read("line_names", "decree_verbs_sentence_ledger",
+                cites=["Bereshit Rabbah 23:2", "Jerusalem Talmud Yevamot 6:5:3"])
 
 # -------------------------- Gen.4.19 · FIRST_POLYGAMY ----------------------
 # וַיִּקַּח־לוֹ לֶמֶךְ שְׁתֵּי נָשִׁים שֵׁם הָאַחַת עָדָה וְשֵׁם הַשֵּׁנִית
@@ -107,6 +115,10 @@ m.event("bear", agent="tzilah", themes=["tuval_kayin"])
 # Cain); sister-of-Tuval-Cain-Naamah
 m.fact("lotesh_kol_choresh_nechoshet_u_varzel(tuval_kayin)",
        "achot_tuval_kayin_naamah")
+# witness-tier presupposed read: origin_of_the_weapons_trade on
+# smith_install — read, not installed
+m.witness_read("smith_install", "origin_of_the_weapons_trade",
+                cites=["Bereshit Rabbah 23:3"])
 
 # -------------------------- Gen.4.23 · SWORD_SONG_FIRST_HUMAN_IMPERATIVES --
 # וַיֹּאמֶר לֶמֶךְ לְנָשָׁיו עָדָה וְצִלָּה שְׁמַעַן קוֹלִי נְשֵׁי לֶמֶךְ
@@ -141,6 +153,10 @@ m.step("Gen.4.24")
 # Lamech, boast, multiplier x11, target self, ratification NONE (4:24)
 m.spec_delta("kol-horeg Kayin shivatayim yukam — issuer YHWH, decree with mark (4:15, frozen gen_12)",
              "ki shivatayim yukam-Kayin ve-Lemekh shivim ve-shivah — issuer lemekh, boast, multiplier x11, target self, ratification NONE (4:24)")
+# witness-grounded state (its own tier): graded_flawed_yet_canonical on
+# lemekh_inference
+m.witness_state("lemekh_inference", "graded_flawed_yet_canonical",
+                cites=["Bereshit Rabbah 23:4", "Jerusalem Talmud Sanhedrin 10:1:10"])
 
 # -------------------------- Gen.4.25 · SETH_REPLACEMENT_SEED ---------------
 # וַיֵּדַע אָדָם עוֹד אֶת־אִשְׁתּוֹ וַתֵּלֶד בֵּן וַתִּקְרָא אֶת־שְׁמוֹ שֵׁת
@@ -164,6 +180,10 @@ m.fact("shat_li_elohim_zera_acher_tachat_hevel",
        "harago_kayin_named_in_speech")
 # reads without prior install (flag, not fix): Adam, wife-of-Adam
 m.presupposed("adam", "eshet_adam")
+# witness-tier presupposed read: messianic_root_and_image_line_cut on
+# seth_install — read, not installed
+m.witness_read("seth_install", "messianic_root_and_image_line_cut",
+                cites=["Bereshit Rabbah 23:5", "Bereshit Rabbah 23:6"])
 
 # -------------------------- Gen.4.26 · ENOSH_CALLING_ON_THE_NAME -----------
 # וּלְשֵׁת גַּם־הוּא יֻלַּד־בֵּן וַיִּקְרָא אֶת־שְׁמוֹ אֱנוֹשׁ אָז הוּחַל
@@ -180,6 +200,10 @@ m.name("enosh", "Enosh")
 # ‹אָז הוּחַל לִקְרֹא בְּשֵׁם יְהוָה› (“then was-begun to-call in-name-of
 # YHWH”) — fact holds: was-begun-to-call-in-name-of-the-LORD
 m.fact("huchal_likro_be_shem_YHWH")
+# witness-tier presupposed read: rebellion_census_on_a_unique_passive on
+# huchal — read, not installed
+m.witness_read("huchal", "rebellion_census_on_a_unique_passive",
+                cites=["Bereshit Rabbah 23:7", "Mekhilta DeRabbi Yishmael, Tractate Bachodesh 6:9"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -197,4 +221,23 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 15
+    assert sorted(m.WORLD["witnessed"]) == ['lemekh_inference']
+    assert m.WORLD["witnessed"]['lemekh_inference']["cites"] == ['Bereshit Rabbah 23:4', 'Jerusalem Talmud Sanhedrin 10:1:10']
+    assert all('graded_flawed_yet_canonical' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('build_and_name', 'immortality_bid'), ('line_names', 'decree_verbs_sentence_ledger'), ('smith_install', 'origin_of_the_weapons_trade'), ('seth_install', 'messianic_root_and_image_line_cut'), ('huchal', 'rebellion_census_on_a_unique_passive')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 23:1']
+    assert all('immortality_bid' not in f for f in m.WORLD["facts"])
+    assert 'build_and_name' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 23:2', 'Jerusalem Talmud Yevamot 6:5:3']
+    assert all('decree_verbs_sentence_ledger' not in f for f in m.WORLD["facts"])
+    assert 'line_names' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 23:3']
+    assert all('origin_of_the_weapons_trade' not in f for f in m.WORLD["facts"])
+    assert 'smith_install' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 23:5', 'Bereshit Rabbah 23:6']
+    assert all('messianic_root_and_image_line_cut' not in f for f in m.WORLD["facts"])
+    assert 'seth_install' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 23:7', 'Mekhilta DeRabbi Yishmael, Tractate Bachodesh 6:9']
+    assert all('rebellion_census_on_a_unique_passive' not in f for f in m.WORLD["facts"])
+    assert 'huchal' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

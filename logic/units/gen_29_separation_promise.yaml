@@ -21,8 +21,10 @@
 
 meta:
   id: "gen_29_separation_promise"
-  rev: 2
+  rev: 4
   changelog:
+    - "rev 4 (2026-08-30): FULL-RULE STAMP on the owner's word — the batch stamp he held by standing decision until Genesis was whole, given when the book closed at 73 of 73 read and derived. tree_derive_version logic_derived_v1 -> logic_derived_v2_full_rule; the span's declared reading is COMPLETE in its triage ledger and its logic was rebuilt FROM that reading in the derivation pass. No operator, claim, text or test changed by this edit — the stamp records a judgement already earned."
+    - "2026-08-30 rev 3: DERIVATION PASS, parashat Lech Lecha (owner order: 'Derive the next set of verses'). Step 5: seven claims (G29-18..G29-24), all interpretive at check.type manual; the seventeen standing claims hold the orthography. Step 6: seven operators across seven steps, all in the rulebook's existing vocabulary (five WITNESS_READ, two WITNESS_STATE - no operator invented), each tagged with its folded shape. What landed: ACQUISITION BY WALKING derived from our 13:17, disputed in scope but agreed by all sides in one case - one who sells a path, once walked, has acquired it; the lodging law derived TWICE from two clauses of our 13:3, the two derivations diverging in practice on temporary lodging so that the choice of clause decides a case; our 13:10 ruled WHOLLY figurative for sin, that ruling then deciding an intent question in a later discussion, and the same verse serving as the premise of a light-and-heavy argument about the Land; the herdsmen's quarrel of 13:7 standing as the opening paradigm of TWO separate bodies of law, assault and litigation; the Sodom verdict of 13:13 split across two tenses to supply a ruling's reason, with one Tosefta seat recording the OPPOSITE valence outright - no city more temperate than Sodom - carried dual-track; our 13:8 weighed as the base of a verbal analogy and explicitly DECLINED, the refusal reasoned; and the tradition's own rhetoric rule grading our dust simile as LITERAL where 'fortified to the heavens' is hyperbole - the corpus marking which of its figures are measurements. No verse text, tree, or morphology changed."
     - "2026-08-25 rev 2: RE-era reading pass (parashat Lech Lecha sweep, 7 blocks one sitting): declared core shelf read end to end — ledger logic/oral_triage/gen_29_separation_promise_2026-08-25.md; v1 Tier-A queue discharged; ORAL_reading_pass block appended; no machine ops changed."
   title_en: "The separation and the promise: the return, the strife, the plain, the land forever (13:1-18)"
   title_he: וַיִּפָּרְדוּ אִישׁ מֵעַל אָחִיו
@@ -228,7 +230,7 @@ meta:
     mood, and scenario clause parses under the UNMODIFIED repo
     interpreter (preflight from scratchpad, draft-guard bypassed for
     preview only).
-  tree_derive_version: logic_derived_v1
+  tree_derive_version: logic_derived_v2_full_rule
   tree_derive_phase: "C-29"
   confidence_overall: "structure tested; operator readings tested-per-TIR; intent hypothesis"
   genre: "separation_narrative"
@@ -784,6 +786,18 @@ boot_steps:
         en: "flag, not fix (Beit-El tokens 3-4; the Ai token 2 OF EXACTLY 2 — the place-name's whole Torah career is this camp, twice)"
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(return_to_the_place, lodging_law_derived_twice)"
+        en: >
+          ONE RULE, TWO CLAUSES, A PRACTICAL DIFFERENCE [claim G29-19]. That a
+          person should not change his lodging is sourced by Rav to this
+          verse's 'to the place where his tent had been at the beginning'; R.
+          Yosei ben R. Chanina sources it instead to the same verse's 'on his
+          journeys'. The tradition records that the two derivations diverge in
+          practice on temporary lodging - so which clause of one verse is
+          chosen decides a case. [folded shape: priced law]
+        cites: ["Arakhin 16b:17", "Arakhin 16b:18"]
+        confidence: witnessed
     comment: >
       The going-verb of the call walks backward: stage by stage to
       the exact between-point of 12:8, to a tent the letter spells
@@ -989,6 +1003,18 @@ boot_steps:
           same verb as 13:6's double la-shevet].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(herdsmen_quarrel, paradigm_at_the_head_of_two_laws)"
+        en: >
+          THIS QUARREL OPENS TWO BODIES OF LAW [claim G29-21]. Two tannaitic
+          seats preface their discussions with it: the injury law's 'when men
+          quarrel' is introduced 'nothing good comes from quarrel - what
+          caused Lot to separate from that righteous man? Quarrel'; and the
+          lawsuit-opener of the flogging discussion the same way. This unit's
+          dispute between herdsmen stands as the illustration at the head of
+          both. [folded shape: cross-corpus link]
+        cites: ["Mekhilta DeRabbi Shimon Ben Yochai 21:18", "Sifrei Devarim 286:1"]
+        confidence: witnessed
     comment: >
       The strife arrives one row below the owners — herdsman
       against herdsman — while the notice-clause quietly seats two
@@ -1062,6 +1088,18 @@ boot_steps:
           trying to save.
         cites: []
         confidence: tested
+      - op: WITNESS_STATE
+        expr_en: "WITNESS(we_are_brothers, analogy_candidate_declined)"
+        en: >
+          THIS TOKEN IS WEIGHED FOR A FORMAL INFERENCE AND DECLINED [claim
+          G29-24]. The levirate discussion considers deriving the meaning of
+          brotherhood from this verse's 'for we are brothers', and REJECTS it
+          - here the word means mere kinsmen - preferring a term that stands
+          free for the analogy elsewhere. The unit's own token examined as the
+          base of a verbal analogy and recorded as refused, with the reason
+          given. [folded shape: recorded dispute]
+        cites: ["Yevamot 17b:6"]
+        confidence: witnessed
     comment: >
       A negative particle is born so that a quarrel can be refused:
       four betweens, one please, and the sentence rests its whole
@@ -1230,6 +1268,21 @@ boot_steps:
         en: "flag, not fix (Sodom token 2 — token 1 is frozen gen_24's border verse; Gomorrah token 2; Tzoar debut; the Jordan debut)"
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(kikar_description, ruled_wholly_figurative_for_sin)"
+        en: >
+          THE WHOLE VERSE IS RULED FIGURATIVE, AND THAT DECIDES A LATER CASE
+          [claim G29-20]. R. Yosei bar Chanina reads it as expressions of
+          immorality, matching four of its tokens to later scenes - the raised
+          eyes, the round loaf, the watering, the destruction. R. Yochanan
+          states it flatly: 'this entire verse was stated about sin' - and
+          that premise then decides the question of intent in the discussion
+          of Lot's daughters. The same verse separately serves as the PREMISE
+          of a light-and-heavy argument: Egypt is the most praiseworthy of
+          lands by this verse, yet Israel's poorest region outranks its best.
+          [folded shape: kept record]
+        cites: ["Bereshit Rabbah 41:7", "Nazir 23a:15", "Sifrei Devarim 36:10"]
+        confidence: witnessed
     comment: >
       A man looks at ground the narrator has already burned: the
       sentence waters the plain with Eden's word and Egypt's name,
@@ -1429,6 +1482,20 @@ boot_steps:
           flagged].
         cites: []
         confidence: tested
+      - op: WITNESS_STATE
+        expr_en: "WITNESS(sodom_verdict, split_by_tense_and_reversed_at_one_seat)"
+        en: >
+          THE VERSE IS SPLIT ACROSS TWO TENSES TO SUPPLY A RULING [claim
+          G29-23]. The ruling that the men of Sodom have no share takes its
+          reason from this verse read in two times - wicked and sinful IN THIS
+          WORLD, the added clause FOR THE WORLD TO COME. The Sifra builds its
+          category of deliberate rebellion on the same token, 'to the LORD',
+          marking one who knows his Master and rebels. And against all of it
+          one Tosefta seat records the opposite valence outright: no city more
+          temperate than Sodom, 'Lot circled all the places and found none as
+          temperate'. Carried dual-track. [folded shape: recorded dispute]
+        cites: ["Jerusalem Talmud Sanhedrin 10:3:4", "Sifra, Bechukotai, Section 2 2", "Tosefta Shabbat 8:12"]
+        confidence: witnessed
     comment: >
       Six words file a city: evil, sinning, against YHWH, very —
       entered in the record at the exact moment a family member
@@ -1621,6 +1688,20 @@ boot_steps:
           letter's open IF closed by the buffer [dual-track].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(dust_simile, graded_literal_not_hyperbole)"
+        en: >
+          THE TRADITION MARKS ITS OWN FIGURE AS LITERAL [claim G29-22]. Rabban
+          Shimon ben Gamliel holds that Scripture speaks in hyperbole - cities
+          'fortified to the heavens' - but rules that the promises to Abraham,
+          the stars and OUR dust, ARE NOT HYPERBOLE. The corpus thereby marks
+          which of its numeric similes are to be read as measurements. The
+          dust is unpacked as four claims - dispersed end to end, blessed only
+          through water, outlasting metal and the nations, trodden - and
+          paired with the stars in a grading rule: when they descend, to the
+          dust; when they rise, to the stars. [folded shape: kept record]
+        cites: ["Sifrei Devarim 25:4", "Bereshit Rabbah 41:9", "Megillah 16a:15"]
+        confidence: witnessed
     comment: >
       The counting-verb is born, used twice, and retired until an
       enemy prophet quotes it back: the seed is promised in the
@@ -1695,6 +1776,21 @@ boot_steps:
           covers both tokens].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(walk_the_land, acquisition_by_walking)"
+        en: >
+          A MODE OF ACQUIRING PROPERTY DERIVED FROM THIS COMMAND [claim
+          G29-18]. R. Eliezer holds that WALKING a parcel acquires it, his
+          stated reason this verse - 'arise, walk the land in its length and
+          breadth, for to you I will give it'. The Sages dispute the general
+          rule, reading the walking as love of Abraham to ease his
+          descendants' conquest. But the Jerusalem Talmud records the AGREED
+          case even on the dissenting view: one who sells another a path, once
+          he has walked it, has acquired it - 'what is the reason? Our verse.'
+          The verse grounds a live acquisition mode all sides accept in at
+          least one case. [folded shape: priced law]
+        cites: ["Bava Batra 100a:7", "Bereshit Rabbah 41:10", "Jerusalem Talmud Kiddushin 1:3:5"]
+        confidence: witnessed
     comment: >
       The survey precedes the deed: rise, pace the length, pace
       the breadth — and the speech signs itself with the give-word

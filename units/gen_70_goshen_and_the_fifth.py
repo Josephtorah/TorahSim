@@ -34,6 +34,11 @@ m.step("Gen.47.2")
 # ‹וּמִקְצֵה אֶחָיו לָקַח חֲמִשָּׁה אֲנָשִׁים› (“and-from-end brother-
 # him/its take five man”) — fact holds: five-man-lifne-Pharaoh
 m.fact("chamisha_anashim_lifne_faro")
+# witness-grounded state (its own tier):
+# a_roster_decided_by_a_spelling_pattern_in_deuteronomy on
+# five_men_from_the_edge
+m.witness_state("five_men_from_the_edge", "a_roster_decided_by_a_spelling_pattern_in_deuteronomy",
+                cites=["Bereshit Rabbah 95:4"])
 
 # -------------------------- Gen.47.3 · THE_SCRIPT_PERFORMED ----------------
 # וַיֹּאמֶר פַּרְעֹה אֶל־אֶחָיו מַה־מַּעֲשֵׂיכֶם וַיֹּאמְרוּ אֶל־פַּרְעֹה
@@ -61,6 +66,10 @@ m.step("Gen.47.4")
 # LET: dwell/sit-please-avadekha-in-earth-Goshen
 m.declare("bene_yaaqov", "LET",
           "yeshvu_na_avadekha_be_eretz_goshen")
+# witness-tier presupposed read: the_paved_way_taking_its_third_seat on
+# we_have_come_to_sojourn — read, not installed
+m.witness_read("we_have_come_to_sojourn", "the_paved_way_taking_its_third_seat",
+                cites=["Bereshit Rabbah 40:6", "Onkelos Genesis 47:4"])
 
 # -------------------------- Gen.47.5 · THEY_HAVE_COME_TO_YOU ---------------
 # וַיֹּאמֶר פַּרְעֹה אֶל־יוֹסֵף לֵאמֹר אָבִיךָ וְאַחֶיךָ בָּאוּ אֵלֶיךָ
@@ -137,6 +146,11 @@ m.step("Gen.47.11")
 # Raamses”) — fact holds: something-seized-in-earth-Raamses-kaasher-command-
 # Pharaoh
 m.fact("achuza_be_eretz_ramses_kaasher_tziva_faro")
+# witness-grounded state (its own tier):
+# a_decree_of_chains_executing_in_its_softened_form on
+# settled_in_the_best_of_the_land
+m.witness_state("settled_in_the_best_of_the_land", "a_decree_of_chains_executing_in_its_softened_form",
+                cites=["Bereshit Rabbah 86:2"])
 
 # -------------------------- Gen.47.12 · BREAD_FOR_THE_MOUTHS ---------------
 # וַיְכַלְכֵּל יוֹסֵף אֶת־אָבִיו וְאֶת־אֶחָיו וְאֵת כָּל־בֵּית אָבִיו לֶחֶם
@@ -261,6 +275,10 @@ m.step("Gen.47.21")
 # ‹וְאֶת־הָעָם הֶעֱבִיר אֹתוֹ לֶעָרִים› (“and-obj-marker the-people pass-
 # over obj-marker-him/its to-city”) — fact holds: pass-over-it-to-city
 m.fact("heevir_oto_le_arim")
+# witness-tier presupposed read: urbanization_or_population_transfer on
+# he_moved_the_people — read, not installed
+m.witness_read("he_moved_the_people", "urbanization_or_population_transfer",
+                cites=["Onkelos Genesis 47:21"])
 
 # -------------------------- Gen.47.22 · THE_PRIESTS_EXEMPT -----------------
 # רַק אַדְמַת הַכֹּהֲנִים לֹא קָנָה כִּי חֹק לַכֹּהֲנִים מֵאֵת פַּרְעֹה
@@ -318,6 +336,10 @@ m.step("Gen.47.26")
 # לְפַרְעֹה לַחֹמֶשׁ› (“and-put/set obj-marker-her/its Joseph to-enactment
 # until the-day the-this over ground Egypt to-Pharaoh to-fifth-tax”) —
 m.statute("BIND", "le_faro_la_chomesh")
+# witness-tier presupposed read: the_blocks_one_permanent_law on
+# the_fifth_is_pharaohs — read, not installed
+m.witness_read("the_fifth_is_pharaohs", "the_blocks_one_permanent_law",
+                cites=["Onkelos Genesis 47:22", "Onkelos Genesis 47:26", "Bereshit Rabbah 90:6"])
 
 # -------------------------- Gen.47.27 · FRUITFUL_IN_GOSHEN -----------------
 # וַיֵּשֶׁב יִשְׂרָאֵל בְּאֶרֶץ מִצְרַיִם בְּאֶרֶץ גֹּשֶׁן וַיֵּאָחֲזוּ בָהּ
@@ -341,6 +363,15 @@ m.step("Gen.47.28")
 # Jacob in-earth Egypt seven -teen years”) — fact holds: day-Jacob-seven-
 # forty-and-hundred-years
 m.fact("yeme_yaaqov_sheva_arbaim_u_meat_shana")
+# witness-grounded state (its own tier):
+# the_approached_rule_confirmed_in_two_families on
+# one_hundred_forty_seven_years
+m.witness_state("one_hundred_forty_seven_years", "the_approached_rule_confirmed_in_two_families",
+                cites=["Bereshit Rabbah 96:4"])
+# witness-grounded state (its own tier):
+# silent_in_this_layer_confirmed_in_the_fuller_one on the_closed_portion
+m.witness_state("the_closed_portion", "silent_in_this_layer_confirmed_in_the_fuller_one",
+                cites=["Bereshit Rabbah 96:1"])
 
 # -------------------------- Gen.47.29 · THE_THIGH_AND_THE_BAN --------------
 # וַיִּקְרְבוּ יְמֵי־יִשְׂרָאֵל לָמוּת וַיִּקְרָא לִבְנוֹ לְיוֹסֵף וַיֹּאמֶר
@@ -355,6 +386,10 @@ m.step("Gen.47.29")
 # — Israel speaks a demand — LET-NOT: over-please-tiqbreni-in-Egypt
 m.declare("yisrael", "LET-NOT",
           "al_na_tiqbreni_be_mitzrayim")
+# witness-tier presupposed read: the_father_becomes_a_petitioner_to_his_son
+# on if_i_have_found_favor — read, not installed
+m.witness_read("if_i_have_found_favor", "the_father_becomes_a_petitioner_to_his_son",
+                cites=["Bereshit Rabbah 96:3", "Bereshit Rabbah 96:2"])
 
 # -------------------------- Gen.47.30 · CARRY_ME_AND_BURY_ME ---------------
 # וְשָׁכַבְתִּי עִם־אֲבֹתַי וּנְשָׂאתַנִי מִמִּצְרַיִם וּקְבַרְתַּנִי
@@ -368,6 +403,10 @@ m.step("Gen.47.30")
 # a demand — LET: and-qevartani-bi-qvuratam
 m.declare("yisrael", "LET",
           "u_qevartani_bi_qvuratam")
+# witness-tier presupposed read: four_reasons_and_a_doctrine_of_transit on
+# do_not_bury_me_in_egypt — read, not installed
+m.witness_read("do_not_bury_me_in_egypt", "four_reasons_and_a_doctrine_of_transit",
+                cites=["Bereshit Rabbah 96:5", "Onkelos Genesis 47:29"])
 
 # -------------------------- Gen.47.31 · SWEAR_TO_ME ------------------------
 # וַיֹּאמֶר הִשָּׁבְעָה לִי וַיִּשָּׁבַע לוֹ וַיִּשְׁתַּחוּ יִשְׂרָאֵל
@@ -382,6 +421,10 @@ m.declare("yisrael", "LET",
 # ‹וַיִּשָּׁבַע לוֹ› (“and-swear to-him/its”) — demand settled (popped from
 # the queue): hishava-to-me
 m.result("hishava_li", tmark="t4")
+# witness-grounded state (its own tier):
+# a_translation_declining_a_move_on_offer on the_head_of_the_bed
+m.witness_state("the_head_of_the_bed", "a_translation_declining_a_move_on_offer",
+                cites=["Onkelos Genesis 47:31"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -399,4 +442,31 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 13
+    assert sorted(m.WORLD["witnessed"]) == ['five_men_from_the_edge', 'one_hundred_forty_seven_years', 'settled_in_the_best_of_the_land', 'the_closed_portion', 'the_head_of_the_bed']
+    assert m.WORLD["witnessed"]['five_men_from_the_edge']["cites"] == ['Bereshit Rabbah 95:4']
+    assert all('a_roster_decided_by_a_spelling_pattern_in_deuteronomy' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['one_hundred_forty_seven_years']["cites"] == ['Bereshit Rabbah 96:4']
+    assert all('the_approached_rule_confirmed_in_two_families' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['settled_in_the_best_of_the_land']["cites"] == ['Bereshit Rabbah 86:2']
+    assert all('a_decree_of_chains_executing_in_its_softened_form' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['the_closed_portion']["cites"] == ['Bereshit Rabbah 96:1']
+    assert all('silent_in_this_layer_confirmed_in_the_fuller_one' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['the_head_of_the_bed']["cites"] == ['Onkelos Genesis 47:31']
+    assert all('a_translation_declining_a_move_on_offer' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('we_have_come_to_sojourn', 'the_paved_way_taking_its_third_seat'), ('he_moved_the_people', 'urbanization_or_population_transfer'), ('the_fifth_is_pharaohs', 'the_blocks_one_permanent_law'), ('if_i_have_found_favor', 'the_father_becomes_a_petitioner_to_his_son'), ('do_not_bury_me_in_egypt', 'four_reasons_and_a_doctrine_of_transit')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 40:6', 'Onkelos Genesis 47:4']
+    assert all('the_paved_way_taking_its_third_seat' not in f for f in m.WORLD["facts"])
+    assert 'we_have_come_to_sojourn' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Genesis 47:21']
+    assert all('urbanization_or_population_transfer' not in f for f in m.WORLD["facts"])
+    assert 'he_moved_the_people' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Genesis 47:22', 'Onkelos Genesis 47:26', 'Bereshit Rabbah 90:6']
+    assert all('the_blocks_one_permanent_law' not in f for f in m.WORLD["facts"])
+    assert 'the_fifth_is_pharaohs' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 96:3', 'Bereshit Rabbah 96:2']
+    assert all('the_father_becomes_a_petitioner_to_his_son' not in f for f in m.WORLD["facts"])
+    assert 'if_i_have_found_favor' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 96:5', 'Onkelos Genesis 47:29']
+    assert all('four_reasons_and_a_doctrine_of_transit' not in f for f in m.WORLD["facts"])
+    assert 'do_not_bury_me_in_egypt' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

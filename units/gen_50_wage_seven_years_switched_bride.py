@@ -44,6 +44,11 @@ m.step("Gen.29.17")
 # ‹וְעֵינֵי לֵאָה רַכּוֹת … יְפַת־תֹּאַר› (“and-eye Leah tender … beautiful
 # outline”) — fact holds: leah-eyes-tender-Rachel-beautiful
 m.fact("leah_eyes_tender_rachel_beautiful")
+# witness-tier presupposed read:
+# pejorative_rebuked_in_one_member_replaced_in_the_other on her_eyes — read,
+# not installed
+m.witness_read("her_eyes", "pejorative_rebuked_in_one_member_replaced_in_the_other",
+                cites=["Bereshit Rabbah 70:16", "Onkelos Genesis 29:17"])
 
 # -------------------------- Gen.29.18 · THE_WAGE_TOLD_POP ------------------
 # וַיֶּאֱהַב יַעֲקֹב אֶת־רָחֵל וַיֹּאמֶר אֶעֱבָדְךָ שֶׁבַע שָׁנִים בְּרָחֵל
@@ -57,6 +62,14 @@ m.result("hagida_maskoret(yaaqov)", tmark="t1")
 # ‹וַיֶּאֱהַב יַעֲקֹב אֶת־רָחֵל› (“and-have-affection-for Jacob obj-marker
 # Rachel”) — fact holds: Jacob-loves-Rachel-contract-names-her
 m.fact("yaaqov_loves_rachel_contract_names_her")
+# witness-tier presupposed read: perfect_drafting_defeated_outside_its_scope
+# on three_specifications — read, not installed
+m.witness_read("three_specifications", "perfect_drafting_defeated_outside_its_scope",
+                cites=["Bereshit Rabbah 70:17", "Bereshit Rabbah 70:19"])
+# witness-tier presupposed read: partition_table_over_later_history on
+# the_two_sisters — read, not installed
+m.witness_read("the_two_sisters", "partition_table_over_later_history",
+                cites=["Bereshit Rabbah 70:15"])
 
 # -------------------------- Gen.29.19 · THE_FENCED_TOV_AND_DWELL_PUSH ------
 # וַיֹּאמֶר לָבָן טוֹב תִּתִּי אֹתָהּ לָךְ מִתִּתִּי אֹתָהּ לְאִישׁ אַחֵר
@@ -92,6 +105,10 @@ m.step("Gen.29.21")
 # a demand — LET: hava-ishti(Laban)
 m.declare("yaaqov", "LET",
           "hava_ishti(lavan)")
+# witness-tier presupposed read: urgency_in_one_member_contract_in_the_other
+# on give_me_my_wife — read, not installed
+m.witness_read("give_me_my_wife", "urgency_in_one_member_contract_in_the_other",
+                cites=["Bereshit Rabbah 70:18", "Onkelos Genesis 29:21"])
 
 # -------------------------- Gen.29.22 · THE_FEAST_OF_THE_PLACE -------------
 # וַיֶּאֱסֹף לָבָן אֶת־כָּל־אַנְשֵׁי הַמָּקוֹם וַיַּעַשׂ מִשְׁתֶּה
@@ -111,6 +128,10 @@ m.step("Gen.29.23")
 # come/bring to-her/its”) — fact holds: leah-delivered-object-mismatch-no-
 # pop
 m.fact("leah_delivered_object_mismatch_no_pop")
+# witness-tier presupposed read: financed_with_the_townsmens_own_pledges on
+# the_switch — read, not installed
+m.witness_read("the_switch", "financed_with_the_townsmens_own_pledges",
+                cites=["Bereshit Rabbah 70:19"])
 
 # -------------------------- Gen.29.24 · THE_FIRST_MAID_ZILPAH --------------
 # וַיִּתֵּן לָבָן לָהּ אֶת־זִלְפָּה שִׁפְחָתוֹ לְלֵאָה בִתּוֹ שִׁפְחָה
@@ -132,6 +153,10 @@ m.step("Gen.29.25")
 # and-to-what hurl-me/my”) — fact holds: morning-revelation-accusation-
 # rimitani
 m.fact("morning_revelation_accusation_rimitani")
+# witness-tier presupposed read: repaid_by_the_identical_mechanism on
+# deceiver_daughter_of_a_deceiver — read, not installed
+m.witness_read("deceiver_daughter_of_a_deceiver", "repaid_by_the_identical_mechanism",
+                cites=["Bereshit Rabbah 70:19"])
 
 # -------------------------- Gen.29.26 · THE_CUSTOM_YOUNGER_NOT_BEFORE_FIRSTBORN -
 # וַיֹּאמֶר לָבָן לֹא־יֵעָשֶׂה כֵן בִּמְקוֹמֵנוּ לָתֵת הַצְּעִירָה לִפְנֵי
@@ -153,6 +178,10 @@ m.step("Gen.29.27")
 # fill-sevened(Jacob)
 m.declare("lavan", "LET",
           "male_shevua(yaaqov)")
+# witness-tier presupposed read: mixing_of_joys_law_born_here on
+# complete_the_week_of_this_one — read, not installed
+m.witness_read("complete_the_week_of_this_one", "mixing_of_joys_law_born_here",
+                cites=["Bereshit Rabbah 70:19"])
 
 # -------------------------- Gen.29.28 · THE_DOUBLE_POP_RACHEL_GIVEN --------
 # וַיַּעַשׂ יַעֲקֹב כֵּן וַיְמַלֵּא שְׁבֻעַ זֹאת וַיִּתֶּן־לוֹ אֶת־רָחֵל
@@ -187,6 +216,10 @@ m.step("Gen.29.30")
 # affection-for also obj-marker Rachel from-Leah … still/again seven years”)
 # — fact holds: Rachel-loved-more-seven-more-years
 m.fact("rachel_loved_more_seven_more_years")
+# witness-tier presupposed read: faithful_after_the_fraud on
+# the_second_seven_years — read, not installed
+m.witness_read("the_second_seven_years", "faithful_after_the_fraud",
+                cites=["Bereshit Rabbah 70:20"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -204,4 +237,29 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 7
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('her_eyes', 'pejorative_rebuked_in_one_member_replaced_in_the_other'), ('three_specifications', 'perfect_drafting_defeated_outside_its_scope'), ('the_two_sisters', 'partition_table_over_later_history'), ('give_me_my_wife', 'urgency_in_one_member_contract_in_the_other'), ('the_switch', 'financed_with_the_townsmens_own_pledges'), ('deceiver_daughter_of_a_deceiver', 'repaid_by_the_identical_mechanism'), ('complete_the_week_of_this_one', 'mixing_of_joys_law_born_here'), ('the_second_seven_years', 'faithful_after_the_fraud')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 70:16', 'Onkelos Genesis 29:17']
+    assert all('pejorative_rebuked_in_one_member_replaced_in_the_other' not in f for f in m.WORLD["facts"])
+    assert 'her_eyes' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 70:17', 'Bereshit Rabbah 70:19']
+    assert all('perfect_drafting_defeated_outside_its_scope' not in f for f in m.WORLD["facts"])
+    assert 'three_specifications' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 70:15']
+    assert all('partition_table_over_later_history' not in f for f in m.WORLD["facts"])
+    assert 'the_two_sisters' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 70:18', 'Onkelos Genesis 29:21']
+    assert all('urgency_in_one_member_contract_in_the_other' not in f for f in m.WORLD["facts"])
+    assert 'give_me_my_wife' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 70:19']
+    assert all('financed_with_the_townsmens_own_pledges' not in f for f in m.WORLD["facts"])
+    assert 'the_switch' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 70:19']
+    assert all('repaid_by_the_identical_mechanism' not in f for f in m.WORLD["facts"])
+    assert 'deceiver_daughter_of_a_deceiver' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 70:19']
+    assert all('mixing_of_joys_law_born_here' not in f for f in m.WORLD["facts"])
+    assert 'complete_the_week_of_this_one' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 70:20']
+    assert all('faithful_after_the_fraud' not in f for f in m.WORLD["facts"])
+    assert 'the_second_seven_years' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -36,6 +36,14 @@ m.event("pass", agent="elohim", themes=["ruach_al_ha_aretz"])
 m.event("subside", themes=["ha_mayim"])
 # reads without prior install (flag, not fix): Noach, ark, waters
 m.presupposed("noach", "tevah", "mayim")
+# witness-tier presupposed read: waters_proven_hot_by_verbal_analogy on
+# vayashoku — read, not installed
+m.witness_read("vayashoku", "waters_proven_hot_by_verbal_analogy",
+                cites=["Rosh Hashanah 12a:4"])
+# witness-tier presupposed read: depths_judged_mountains_spared on
+# remembering_scope — read, not installed
+m.witness_read("remembering_scope", "depths_judged_mountains_spared",
+                cites=["Bereshit Rabbah 33:1"])
 
 # -------------------------- Gen.8.2 · THE_SHUT_MIRROR ----------------------
 # וַיִּסָּכְרוּ מַעְיְנֹת תְּהוֹם וַאֲרֻבֹּת הַשָּׁמָיִם וַיִּכָּלֵא
@@ -126,6 +134,10 @@ m.event("send", agent="noach", themes=["ha_orev"])
 # the-drying-of the-waters”) — fact holds: going-out-and-returning-until-
 # drying-of-the-waters
 m.fact("yatzo_va_shov_ad_yevoshet_ha_mayim")
+# witness-tier presupposed read: argued_back_and_preserved_for_elijah on
+# raven_dispatch — read, not installed
+m.witness_read("raven_dispatch", "argued_back_and_preserved_for_elijah",
+                cites=["Bereshit Rabbah 33:5", "Sanhedrin 108b:12"])
 
 # -------------------------- Gen.8.8 · THE_DOVE_THE_QUESTION ----------------
 # וַיְשַׁלַּח אֶת־הַיּוֹנָה מֵאִתּוֹ לִרְאוֹת הֲקַלּוּ הַמַּיִם מֵעַל פְּנֵי
@@ -204,6 +216,9 @@ m.fact("aleh_zayit_taraf_be_fiha")
 # waters”) — event: know — agent Noach; theme that-whether-they-abated-the-
 # waters
 m.event("know", agent="noach", themes=["ki_qalu_ha_mayim"])
+# witness-grounded state (its own tier): killed_or_sustenance on taraf_verb
+m.witness_state("taraf_verb", "killed_or_sustenance",
+                cites=["Bereshit Rabbah 33:6", "Sanhedrin 108b:17"])
 
 # -------------------------- Gen.8.12 · THE_SECOND_WAIT_THE_LAST_OD ---------
 # וַיִּיָּחֶל עוֹד שִׁבְעַת יָמִים אֲחֵרִים וַיְשַׁלַּח אֶת־הַיּוֹנָה
@@ -247,6 +262,10 @@ m.event("see", agent="noach", themes=["pnei_ha_adamah"])
 # ‹וְהִנֵּה חָרְבוּ פְּנֵי הָאֲדָמָה› (“and-behold were-parched face the-
 # ground”) — fact holds: and-behold-were-parched-face-of-the-ground
 m.fact("ve_hinneh_charvu_pnei_ha_adamah")
+# witness-tier presupposed read: one_day_counts_as_a_year on date_formula —
+# read, not installed
+m.witness_read("date_formula", "one_day_counts_as_a_year",
+                cites=["Rosh Hashanah 10b:6", "Jerusalem Talmud Rosh Hashanah 1:1:3", "Tosefta Rosh Hashanah (Lieberman) 1:3"])
 
 # -------------------------- Gen.8.14 · THE_EARTH_DRY -----------------------
 # וּבַחֹדֶשׁ הַשֵּׁנִי בְּשִׁבְעָה וְעֶשְׂרִים יוֹם לַחֹדֶשׁ יָבְשָׁה
@@ -276,4 +295,20 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 23
+    assert sorted(m.WORLD["witnessed"]) == ['taraf_verb']
+    assert m.WORLD["witnessed"]['taraf_verb']["cites"] == ['Bereshit Rabbah 33:6', 'Sanhedrin 108b:17']
+    assert all('killed_or_sustenance' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('vayashoku', 'waters_proven_hot_by_verbal_analogy'), ('remembering_scope', 'depths_judged_mountains_spared'), ('raven_dispatch', 'argued_back_and_preserved_for_elijah'), ('date_formula', 'one_day_counts_as_a_year')]
+    assert m.WITNESS_READS[0]["cites"] == ['Rosh Hashanah 12a:4']
+    assert all('waters_proven_hot_by_verbal_analogy' not in f for f in m.WORLD["facts"])
+    assert 'vayashoku' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 33:1']
+    assert all('depths_judged_mountains_spared' not in f for f in m.WORLD["facts"])
+    assert 'remembering_scope' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 33:5', 'Sanhedrin 108b:12']
+    assert all('argued_back_and_preserved_for_elijah' not in f for f in m.WORLD["facts"])
+    assert 'raven_dispatch' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Rosh Hashanah 10b:6', 'Jerusalem Talmud Rosh Hashanah 1:1:3', 'Tosefta Rosh Hashanah (Lieberman) 1:3']
+    assert all('one_day_counts_as_a_year' not in f for f in m.WORLD["facts"])
+    assert 'date_formula' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

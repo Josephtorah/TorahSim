@@ -34,8 +34,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 .arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
        border-radius:8px; padding:.4rem .7rem; }
 .arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
-</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_34_mamre_laugh_plea?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The visitors at Mamre, the laugh within, the plea for Sodom (18:1-33) <span class='badge frozen'>MODEL · REV 2 · GATES GREEN</span></h1>
-<div class="meta">unit <b>gen_34_mamre_laugh_plea</b> · Genesis 18:1-33 · derive logic_derived_v1 · phase C-34</div>
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_34_mamre_laugh_plea?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The visitors at Mamre, the laugh within, the plea for Sodom (18:1-33) <span class='badge frozen'>MODEL · REV 4 · GATES GREEN</span></h1>
+<div class="meta">unit <b>gen_34_mamre_laugh_plea</b> · Genesis 18:1-33 · derive logic_derived_v2_full_rule · phase C-34</div>
 <div class="meta"><a href="../#Gen/18/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
 <p><span class="he">הֲשֹׁפֵט כָּל־הָאָרֶץ לֹא יַעֲשֶׂה מִשְׁפָּט</span> · <i>ha-shofet kol-ha-aretz lo yaaseh mishpat</i> · &#x27;Shall the Judge of all the earth not do justice?&#x27;</p>
 <div class="note">Pre-Code method (Stage C): stage first, write last. All censuses, careers, morphology, trees, pointed lines, JPS lines, and precedent quotes were pulled from the DB snapshot and the frozen corpus BEFORE any YAML was written; every frozen quote was re-opened this session (grep -n + exact line range). Flags never auto-resolve; the main loop rules on every flag at review.</div>
@@ -44,7 +44,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
 <h2>Derivation log (steps A–J)</h2><table>
 <tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
-<tr><td><b>A</b></td><td>Source fetch + verification</td><td>Hebrew: Data/Gen.xml via the DB snapshot torah_grok.SNAPSHOT-main-51801ca.sqlite (words/verses/trees); pointed lines regenerated with cantillation stripped, vowels kept (gen_22&#x27;s boot_steps convention). English aid: JPS 1917 (Data/tanakh_genesis_jps1917_en.json). Span totals VERIFIED: 437 tokens / 33 verses (the largest span yet; census-exact); the staging&#x27;s &#x27;164 lemmas&#x27; is the normalized-Strong count, raw distinct lemma-strings 226 [flag 14]. Onkelos Genesis 18:1-33 fetched Tier-A, sequential, 0.5s spacing — cache MISS x33 (the longest fetch-run yet), all appended to Data/FETCHLOG.md 2026-08-05.</td><td>established</td></tr>
+<tr><td><b>A</b></td><td>Source fetch + verification</td><td>Hebrew: Data/Gen.xml via the DB snapshot source-snapshot.sqlite (words/verses/trees); pointed lines regenerated with cantillation stripped, vowels kept (gen_22&#x27;s boot_steps convention). English aid: JPS 1917 (Data/tanakh_genesis_jps1917_en.json). Span totals VERIFIED: 437 tokens / 33 verses (the largest span yet; census-exact); the staging&#x27;s &#x27;164 lemmas&#x27; is the normalized-Strong count, raw distinct lemma-strings 226 [flag 14]. Onkelos Genesis 18:1-33 fetched Tier-A, sequential, 0.5s spacing — cache MISS x33 (the longest fetch-run yet), all appended to Data/FETCHLOG.md 2026-08-05.</td><td>established</td></tr>
 <tr><td><b>B</b></td><td>Census battery</td><td>One batched script (gen34_census.py; 396-line output). Debuts VERIFIED in-span: nagash (&#x27;draw near&#x27;) 18:23 — Torah debut of the approach-verb, born as a man stepping toward God with numbers; anah (&#x27;answer&#x27;) 18:27 — the answer-verb born in the same plea (its next three tokens are all Gen 23&#x27;s Machpelah courtesies); shachah (&#x27;bow down&#x27;) 18:2 — the WORSHIP-verb&#x27;s Torah debut is hospitality; amad (&#x27;stand&#x27;) tokens 1-2 BOTH in-span (18:8 servant / 18:22 advocate — the stand-verb&#x27;s first two tokens bracket the chapter); mishpat (&#x27;judgment&#x27;) debut x2 (18:19 God&#x27;s soliloquy / 18:25 Abraham&#x27;s question — the noun&#x27;s whole Torah debut is this chapter); yesh (&#x27;there is&#x27;) 18:24 — the existence- particle born counting righteous men; chalilah (&#x27;far be it&#x27;) debut doubled in one verse (4 Torah tokens: 18:25 x2 + Joseph&#x27;s brothers x2); zaaqah (&#x27;outcry&#x27;) 18:20 TORAH HAPAX beside tzeaqah (&#x27;outcry&#x27;) debut 18:21 — the outcry enters doubled in two spellings; kalah-noun (&#x27;full end&#x27;) 18:21 — TWO Torah tokens only: Sodom&#x27;s inquiry and Exod 11:1&#x27;s last plague; efer (&#x27;ashes&#x27;) 18:27 — three Torah tokens: Abraham&#x27;s self-title + the red-heifer rite x2; yaal (&#x27;venture&#x27;) 18:27/18:31 — the venture-verb&#x27;s first two of four; kachash (&#x27;deny&#x27;) 18:15 — career continues in Lev 5&#x27;s false-oath laws; pala (&#x27;be wondrous&#x27;) 18:14; ayeh (&#x27;where?&#x27;) 18:9; shaqaf (&#x27;look down&#x27;) 18:16; rutz (&#x27;run&#x27;) 18:2/18:7; mahar (&#x27;hurry&#x27;) x3 18:6-7; edna (&#x27;pleasure&#x27;) hapax 18:12. Landings VERIFIED (frozen lines quoted at the steps): tzedaqah token 2 = 18:19 (gen_31); shafat token 2 = 18:25 (gen_32); moed token 3 = 18:14 (gen_33); kalah-verb token 5 = 18:33 (gen_33); adonai-136 tokens 3-6 = 18:27/30/31/32 (gen_31); En-mishpat&#x27;s &#x27;concept next&#x27; = 18:19/25 (gen_30). Career finds: nasa (&#x27;lift&#x27;) tokens 6-8 all in-span — eyes lifted (18:2), forgiveness asked (ve-lo-TISA, 18:24), forgiveness pledged (ve-NASATI, 18:26): the lift-verb turns forgive-verb in three tokens; shachat (&#x27;destroy&#x27;) tokens 9-12 in-span (the flood&#x27;s verb, negated three times in God&#x27;s answers); ulay (&#x27;perhaps&#x27;) tokens 2-7 all in-span (token 1 was Sarai&#x27;s hope, 16:2); tzachaq (&#x27;laugh&#x27;) tokens 2-5 all Sarah&#x27;s; tzaddiq tokens 3-9 as counting nouns (tokens 1-2 = Noach; token 10 = 20:4, Avimelech&#x27;s plea — the NEXT token is also an argument against killing the righteous); QAL-PASSIVE take: exactly TWO VQ-coded tokens in the Torah — 12:15 (Sarai TAKEN into Pharaoh&#x27;s house) and 18:4 (water &#x27;let BE TAKEN&#x27; for guests): seizure and hospitality share one rare stem. Mood census: 15 volitive-coded tokens (the demand-field spec); interrogative census: 10 Ti-coded tokens across 8 verses (the question-law&#x27;s stress test); say-census: 25 tokens delimiter-safe (18:24&#x27;s tispe is Strong 5595, not a say-token — substring trap caught and corrected); na (&#x27;please&#x27;) x8.</td><td>established</td></tr>
 <tr><td><b>C</b></td><td>Structure choice</td><td>HYBRID 25 steps [flag 2 corrects the staging&#x27;s stated 24]: per-verse STEP_Gn_18_1..22 (each verse a distinct camera beat) + STEP_Gn_18_23_26 (the approach and the fifty — the plea&#x27;s opening exchange) + STEP_Gn_18_27_32 (the descending ladder: the letter&#x27;s own numbered rows 45/40/30/20/10, gen_24&#x27;s grouped-row device as extended by gen_30&#x27;s annal and gen_33&#x27;s house-cutting) + STEP_Gn_18_33 (the exit formula). Tree anchors: etnachta (mid-verse rest) and silluq (verse-final) positions pulled for all 33 verses; notable thrones carried into tree notes — 18:19 and 18:25 BOTH rest their arms on the justice-words (etnachta u-mishpat / silluq mishpat); 18:22&#x27;s silluq is YHWH (Abraham&#x27;s still-standing ends on the NAME); 18:15&#x27;s arms rest on the fear and the correction (yarea / tzachaqt); 18:33&#x27;s on li-mqomo (&#x27;to his place&#x27;).</td><td>established</td></tr>
 <tr><td><b>D</b></td><td>Say-roster + speech map</td><td>25 say-tokens, the densest roster yet: Abraham&#x27;s hospitality speech (18:3-5, one speech, four demands), the guests&#x27; assent (18:5b), Abraham to Sarah (18:6), the men&#x27;s where-question (18:9a) and Abraham&#x27;s answer (18:9b), the return-promise (18:10), Sarah&#x27;s INTERIOR speech (18:12 — va-titzchaq be-qirbah LE-MOR: the third heart-class speech, first female [flag 13]), YHWH&#x27;s question to Abraham quoting Sarah EDITED (18:13 — her &#x27;my lord is old&#x27; becomes &#x27;I am old&#x27;: the chain&#x27;s peace-lesson file, named-only), the wonder-question + re-promise (18:14), the denial exchange (18:15 x2 — va-tekhachesh &#x27;she denied&#x27; vs lo ki tzachaqt &#x27;no — you DID laugh&#x27;: the corpus&#x27;s first denied-then-corrected speech, a fact-pair), the SOLILOQUY (18:17-19 — va-YHWH amar with no addressee: the corpus&#x27;s first divine deliberation about a human ally), the verdict-frame (18:20-21), and the plea&#x27;s six exchanges (18:23-32, twelve say-tokens alternating Abraham/YHWH without a single narrative event between 18:27 and 18:32 except 18:29&#x27;s va-yosef &#x27;he added&#x27;). Speaker classes: narrator frame, men-as-group, YHWH, Abraham, Sarah — the women&#x27;s speech roster (gen_32&#x27;s class) gains its first INTERIOR member.</td><td>established</td></tr>
@@ -67,6 +67,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">בְּאֵלֹנֵי מַמְרֵא</span> · <i>be-elonei mamre</i><br><span class="gloss">= in-elonei mamre</span></td><td class='cite'>TIR-026</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yoshev_petach_ha_ohel_ke_chom_ha_yom, t0)</span><br><span class="gloss">= HOLDS(yoshev-door-opening-the-ohel-like-chom-the-day, t0)</span><br>The sitting frame: PETACH (&#x27;opening&#x27;) tokens 3-5 all in-span — the tent-door is the chapter&#x27;s stage (18:1, 18:2, 18:10: the appearance, the run, the listening wife all pass one doorway) [census, prose]. CHOM (&#x27;heat&#x27;) token 2 — token 1 was 8:22&#x27;s cold-and-heat pledge: the heat-word&#x27;s first narrative hour [census].
 </td><td><span class="he">וְהוּא יֹשֵׁב פֶּתַח־הָאֹהֶל כְּחֹם הַיּוֹם</span> · <i>ve-hu yoshev petach-ha-ohel ke-chom ha-yom</i><br><span class="gloss">= and-that yoshev door-opening-the-ohel like-chom day</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(heat_of_the_day, six_hours_by_comparison)</span><br><span class="gloss">= WITNESS-READ(heat-fowl-the-day, six-hours-by-comparison)</span><br>A VAGUE TIME TOKEN MEASURED [claim G34-22]. R. Yishmael derives that &#x27;the heat of the day&#x27; means SIX hours, set against the manna verse&#x27;s &#x27;when the sun grew hot&#x27; at FOUR - and the discriminator is a physical test: at four hours the shade is cool while the sun is hot; at six, both are hot. And two spellings of this block carry readings [claim G34-23]: this verse&#x27;s sitting-word is written DEFECTIVE, read as a command - he sought to stand and was told SIT, &#x27;you are the sign for your sons&#x27;, from which the synagogue practice follows, Israel seated while the Presence stands over them. [folded shape: ink count]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 48:8, Bereshit Rabbah 48:7</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The largest span in the corpus opens on a wordless theophany: the NAME appears, and the first voice heard is a man&#x27;s, offering water. The tent door will carry the whole first scene.</div>
 </div>
@@ -91,6 +93,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(avraham, LET-NOT(taavor(me_al_avdekha)))</span><br><span class="gloss">= DECLARE(avraham, LET-NOT(taavor(from-upon-avdekha)))</span><br>THE FIRST PUSH of a seven-open chapter [flag 3]: AL-NA + true jussive (HVqj2ms) — gen_29&#x27;s frozen class, quoted: &#x27;DECLARE(avram, LET-NOT(tehi(merivah, bein_avram_u_ven_lot)))&#x27; — &#x27;the first human negative demand (AL debut)... born refusing a quarrel and never popped&#x27; [TIR-027 family]. Like the merivah-demand, this one can never pop: an asked-for NOT-passing has no receipt-event; the guests&#x27; staying is narrated in deeds, never in the demand&#x27;s verb. OPEN letter- faithfully. The addressee: ADONA-Y — the DB codes Strong 113 (common &#x27;my lord&#x27;; same coding as Sarah&#x27;s 18:12 and Lot&#x27;s 19:2) while Onkelos renders the NAME (YYY) and reads the petition as prayer — the two machine layers SPLIT on the chain&#x27;s holy-or-common dispute file [flag 12, named-only; no operator reads the dispute; Shevuot 35b queued]. CHEN (&#x27;grace/favor&#x27;) token 2 — token 1 was Noach&#x27;s (6:8): the favor-idiom&#x27;s second finder [census]. Onkelos: chen -&gt; RACHAMIN (&#x27;mercy&#x27;), matzati chen be-enekha -&gt; &#x27;found mercy BEFORE You&#x27; (kodam-distancing) [dual-track].
 </td><td><span class="he">אַל־נָא תַעֲבֹר מֵעַל עַבְדֶּךָ</span> · <i>al-na taavor me-al avdekha</i><br><span class="gloss">= upon-na taavor from-upon avdekha</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_STATE</td><td><span class="expr">WITNESS(adonai_address, spine_members_in_recorded_dispute)</span><br><span class="gloss">= WITNESS(adonai-address, spine-members-in-recorded-dispute)</span><br>THE DECLARED READING&#x27;S TWO MEMBERS DISAGREE HERE [claim G34-24]. Onkelos renders the address as the divine NAME, reading it as spoken to God; Bereshit Rabbah 48:10 reads it as PROFANE, addressed to the senior of the three visitors. This is a dispute not between the chain and the machine but between the two members of the spine this project declared - and it is carried dual-track, neither side merged. At 18:21 the same two members CONVERGE independently, both writing the repentance door into the descent. [folded shape: recorded dispute]
+</td><td>—</td><td class='cite'>Onkelos Genesis 18:3, Bereshit Rabbah 48:10, Onkelos Genesis 18:21, Bereshit Rabbah 49:6</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The chapter&#x27;s first speech is a petition in the negative: do not pass by. The machine pushes it and the letter never pays it — the visit itself is the unreceipted answer.</div>
 </div>
@@ -117,6 +121,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וְסַעֲדוּ לִבְּכֶם</span> · <i>ve-saadu libkhem</i><br><span class="gloss">= and-saadu libkhem</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ken_taaseh_ka_asher_dibarta, t0)</span><br><span class="gloss">= HOLDS(ken-taaseh-like-which-dibarta, t0)</span><br>THE ASSENT FIRES NO DEMAND [flag 11]: taaseh is a PLAIN IMPERFECT (HVqi2ms — not jussive-coded): the mood decides (gen_33&#x27;s ratified law-block reframe — the mood, not the force, selects the operator). The guests&#x27; &#x27;so do as you have spoken&#x27; is held as spoken FACT — and the verse RESTS on dibarta (&#x27;you have spoken&#x27;): the silluq throne under the speech-verb [tree fact]. The first recorded speech of the three men is an acceptance [prose].
 </td><td><span class="he">כֵּן תַּעֲשֶׂה כַּאֲשֶׁר דִּבַּרְתָּ</span> · <i>ken taaseh ka-asher dibarta</i><br><span class="gloss">= ken taaseh like-which dibarta</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(single_bet_heart, visitors_without_the_inclination)</span><br><span class="gloss">= WITNESS-READ(single-bet-heart, visitors-without-the-inclination)</span><br>A SHORTENED SPELLING READ AS AN ONTOLOGICAL CLAIM [claim G34-23]. &#x27;Sustain your HEART&#x27; is written with the single-consonant form rather than the doubled one - verified in the ink at derivation - and the chain reads the shortened spelling as meaning these visitors have NO evil inclination: one heart, not two. The machine&#x27;s guests are typed by a letter. [folded shape: ink count]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 48:11</td><td>witnessed</td></tr>
 </table>
 <div class="meta">A morsel promised in a mood that binds only the promiser, hearts to be sustained in a verb the Torah never uses again, and an assent whose grammar refuses to command — the machine takes one push from the verse and leaves the rest as speech.</div>
 </div>
@@ -165,6 +171,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>EVENT</td><td><span class="expr">say(e8) ∧ Agent(e8, shelosha_anashim) ∧ Goal(e8, avraham)</span><br><span class="gloss">= say(e8) ∧ Agent(e8, shelosha-anashim) ∧ Goal(e8, avraham)</span><br>AYEH (&#x27;where?&#x27;) TORAH DEBUT — THE WHERE-LADDER&#x27;S FOURTH RUNG, frozen gen_32&#x27;s line quoted: &#x27;the where-ladder&#x27;s third firing (ayeka to Adam, ei to Cain, ei-mizeh to Hagar)&#x27; — and now a fourth where-word ASKING FOR A WOMAN, answered in one word: hinneh va-ohel (&#x27;behold, in the tent&#x27;) [census; LANDED as the ladder&#x27;s continuation]. Token 2 is 19:5 — Sodom&#x27;s mob asking WHERE the guests are, to abuse them: the ladder&#x27;s next rung weaponizes the question [across the seam, watch]. The question PUSHES NOTHING (gen_31&#x27;s flag-5 law, quoted at the plea). The written source dots ELAV (&#x27;to him&#x27;) — one of the Torah&#x27;s puncta extraordinaria: named, NO claim [the dotted-word file]. This is the three men&#x27;s SECOND speech; both of their speeches so far are about the host&#x27;s own house [prose].
 </td><td><span class="he">וַיֹּאמְרוּ אֵלָיו אַיֵּה שָׂרָה אִשְׁתֶּךָ</span> · <i>va-yomru elav ayeh sarah ishtekha</i><br><span class="gloss">= and-yomru to-him ayeh sarah ishtekha</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(dotted_elav, expound_the_dots_meta_rule)</span><br><span class="gloss">= WITNESS-READ(dotted-to-him, expound-the-dots-meta-rule)</span><br>THE SCRIBAL POINTS, AND THE RULE FOR READING THEM [claim G34-18]. The word אֵלָיו (&#x27;to him&#x27;) carries the extraordinary points, and R. Shimon ben Elazar states the governing meta-rule: WHERE THE DOTTED LETTERS ARE THE MAJORITY, EXPOUND THE DOTS - so one reads not &#x27;they said TO HIM&#x27; but ayo, &#x27;WHERE IS HE?&#x27;, the angels asking Sarah after Abraham as they had asked him after her. Verified at derivation: the word carries FOUR upper dots, on alef, lamed, yod and vav, and the exposition uses three of them to spell the question; the fourth is noted, not smoothed. [folded shape: ink count]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 48:15</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The where-question that hunted the man, the brother, and the runaway now asks after a wife — and the answer is a tent. The dotted word above it stays a dot: named, never read.</div>
 </div>
@@ -211,6 +219,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>EVENT</td><td><span class="expr">say(e11) ∧ Agent(e11, YHWH) ∧ Goal(e11, avraham)</span><br><span class="gloss">= say(e11) ∧ Agent(e11, the-LORD) ∧ Goal(e11, avraham)</span><br>The NAME&#x27;s first speech of the chapter — twelve verses after its wordless appearance — and it is a QUESTION about a laugh no one heard: the interior speech of 18:12 is answered from outside the tent [prose]. The lamah-question PUSHES NOTHING (gen_31&#x27;s flag-5 law). TZACHAQ token 3: the laugh QUOTED [census]. And the quote is EDITED: Sarah said VA-DONI ZAQEN (&#x27;and my lord is old&#x27;); God repeats VA-ANI ZAQANTI (&#x27;and I am old&#x27;) — the letter&#x27;s own one-word substitution, the chain&#x27;s peace-lesson file (Yevamot 65b queued) [named-only; the machine encodes both sentences as the letter gives them and reads no motive]. HA-AF UMNAM (&#x27;shall I indeed truly&#x27;) — umnam debut; the ha-af interrogative&#x27;s first token of three in-span (18:13, 18:23, 18:24) [census].
 </td><td><span class="he">וַיֹּאמֶר יְהוָה אֶל־אַבְרָהָם לָמָּה זֶּה צָחֲקָה שָׂרָה</span> · <i>va-yomer YHWH el-avraham lamah zeh tzachaqah sarah</i><br><span class="gloss">= and-yomer the-LORD to-avraham lamah this tzachaqah sarah</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(altered_quotation, canon_edits_for_peace)</span><br><span class="gloss">= WITNESS-READ(altered-quotation, canon-edits-for-peace)</span><br>THE TEXT RECORDS ITSELF EDITING FOR PEACE [claim G34-20]. Bar Kappara notes that she said &#x27;my husband is old&#x27; while Scripture reports her as saying &#x27;I have grown old&#x27; - and states the rule outright: the text ALTERED her words to keep peace between the spouses. The corpus is described as having deliberately changed a quotation, and the change is offered as precedent for peace outweighing exact report. [folded shape: kept record]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 48:18</td><td>witnessed</td></tr>
 </table>
 <div class="meta">God quotes the laugh the walls could not have carried and changes one word in the quoting — the machine records both sentences and lets the difference stand as the letter&#x27;s own.</div>
 </div>
@@ -321,6 +331,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וַיִּפְנוּ מִשָּׁם הָאֲנָשִׁים וַיֵּלְכוּ סְדֹמָה</span> · <i>va-yifnu mi-sham ha-anashim va-yelkhu sedomah</i><br><span class="gloss">= and-yifnu from-there the-anashim and-yelkhu sedomah</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_avraham_odenu_omed_lifnei_YHWH, t0)</span><br><span class="gloss">= HOLDS(and-avraham-odenu-omed-lifnei-the-LORD, t0)</span><br>OMED TOKEN 2 — THE BRACKET CLOSES: the stand-verb&#x27;s first two Torah tokens are 18:8 (standing over eating guests) and 18:22 (standing before YHWH) — servant, then advocate, one chapter, one verb [census-exact]. The verse RESTS on the NAME: silluq under YHWH [tree fact]. THE TIQQUN-SOFERIM FILE: the chain&#x27;s tradition that this sentence was &#x27;emended by the scribes&#x27; (that the older reading had YHWH standing before Abraham) is the chain&#x27;s own dossier — NAMED ONLY; the letter as written is what the machine encodes [the dotted-and-emended-word files stay prose]. Onkelos: MESHAMESH BI-TZLO qodam YYY (&#x27;still ministering IN PRAYER before YHWH&#x27;) — the prayer-family fires again (its sixth-plus firing: gen_27, 29, 30, 32 x2, 33 frozen records), and the SAME meshamesh served the meal at 18:8: the buffer welds the stand-bracket into one service-verb — table service and prayer, one word [dual-track]. Token 3 of the stand-verb is 19:27 — Abraham returning &#x27;to the place where he had STOOD before YHWH&#x27;: the bracket grows a third rung across the seam [watch].
 </td><td><span class="he">וְאַבְרָהָם עוֹדֶנּוּ עֹמֵד לִפְנֵי יְהוָה</span> · <i>ve-avraham odenu omed lifnei YHWH</i><br><span class="gloss">= and-avraham odenu omed lifnei the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(standing_before_the_lord, scribal_emendation_claim)</span><br><span class="gloss">= WITNESS-READ(standing-before-the-lord, scribal-emendation-claim)</span><br>THIS VERSE IS ENROLLED IN THE EMENDATION RECORD [claim G34-21]. R. Simon records that &#x27;Abraham was still standing before the LORD&#x27; stands where the original had the Presence waiting for ABRAHAM - one of the adjustments the tradition attributes to the scribes. Our verse joins the corpus&#x27;s own census of places where its text was deliberately changed, beside the members at Genesis 1, 11 and 17. The received ink stands; the claim is about transmission. [folded shape: dual-track translation]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 49:7</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The men become Sodom&#x27;s problem; the host becomes its advocate. The stand-verb&#x27;s bracket closes on the NAME, and the buffer reads the standing as prayer — which is what the next eleven verses are.</div>
 </div>
@@ -337,6 +349,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">חָלִלָה לְּךָ … הֲשֹׁפֵט כָּל־הָאָרֶץ לֹא יַעֲשֶׂה מִשְׁפָּט</span> · <i>chalilah lekha … ha-shofet kol-ha-aretz lo yaaseh mishpat</i><br><span class="gloss">= chalilah to-you the-shofet all-the-earth not yaaseh mishpat</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(im_emtza_chamishim_ve_nasati_le_khol_ha_maqom, t0)</span><br><span class="gloss">= HOLDS(if-emtza-chamishim-and-nasati-to-all-the-maqom, t0)</span><br>THE FIRST PLEDGE (18:26): conditional law-grammar — IM + imperfect (emtza &#x27;if I find&#x27;) resolved by weqatal (ve-nasati &#x27;then I will forgive/spare&#x27;): NO LET fires (gen_33&#x27;s ratified reframe — the mood decides); the pledge is a standing FACT. NASA token 8: forgiveness ASKED in tisa (18:24) is ANSWERED in nasati — the question&#x27;s own verb returns in the pledge, and because questions push nothing, NOTHING POPS: the letter&#x27;s echo is held as prose, not receipt [census; the lift-verb&#x27;s arc closes: eyes (18:2) -&gt; plea (18:24) -&gt; pledge (18:26)]. THE WHOLE PLACE for fifty: the arithmetic of representative merit enters the corpus [prose; maqom tokens 6-7]. Onkelos: ve-nasati -&gt; VE-ESHBOQ (&#x27;I will forgive/release&#x27;) — the forgive-verb explicit [dual-track].
 </td><td><span class="he">אִם־אֶמְצָא בִסְדֹם חֲמִשִּׁים צַדִּיקִם בְּתוֹךְ הָעִיר וְנָשָׂאתִי לְכָל־הַמָּקוֹם בַּעֲבוּרָם</span> · <i>im-emtza vi-sedom chamishim tzaddiqim be-tokh ha-ir ve-nasati le-khol-ha-maqom ba-avuram</i><br><span class="gloss">= if-emtza vi-sedom chamishim tzaddiqim in-tokh the-ir and-nasati to-all-the-maqom in-the-avuram</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_plea, courtroom_procedure_on_a_cited_precedent)</span><br><span class="gloss">= WITNESS-READ(the-plea, courtroom-procedure-on-a-cited-precedent)</span><br>THE PLEA IS A PROCEDURE, AND IT CITES AN EARLIER UNIT AS LAW [claim G34-19]. The basis: R. Acha has Abraham argue the FLOOD OATH as governing precedent - &#x27;You swore no flood; a flood of FIRE evades the oath&#x27; - so the plea invokes gen_22&#x27;s covenant as binding, and the oath-scope question raised there is argued here by a character. The procedure: fifty down to five attempted directly and refused, the descent disciplined; R. Levi&#x27;s water-clock parable has the judge adding water to extend the advocate&#x27;s time. The floor of ten is derived three ways - an assembly requires ten, the flood&#x27;s eight did not suffice, Lot&#x27;s household counted ten - with Sodom needing ten where Jerusalem needs one. [folded shape: priced law]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 39:6, Bereshit Rabbah 49:10, Bereshit Rabbah 49:12, Bereshit Rabbah 49:13</td><td>witnessed</td></tr>
 </table>
 <div class="meta">A man draws near and asks the Judge whether justice can sweep; the machine takes four verses of questions and one conditional pledge and pushes nothing — the plea&#x27;s whole opening is speech held as fact, exactly as the frozen question-law requires.</div>
 </div>
@@ -1115,6 +1129,10 @@ m.presupposed(&quot;mamre&quot;)
 # opening the-tent like-heat the-day”) — fact holds: dwell/sit-opening-the-
 # tent-like-heat-the-day
 m.fact(&quot;yoshev_petach_ha_ohel_ke_chom_ha_yom&quot;)
+# witness-tier presupposed read: six_hours_by_comparison on heat_of_the_day
+# — read, not installed
+m.witness_read(&quot;heat_of_the_day&quot;, &quot;six_hours_by_comparison&quot;,
+                cites=[&quot;Bereshit Rabbah 48:8&quot;, &quot;Bereshit Rabbah 48:7&quot;])
 
 # -------------------------- Gen.18.2 · THREE_MEN_AND_THE_BOW ---------------
 # וַיִּשָּׂא עֵינָיו וַיַּרְא וְהִנֵּה שְׁלֹשָׁה אֲנָשִׁים נִצָּבִים עָלָיו
@@ -1144,6 +1162,10 @@ m.step(&quot;Gen.18.3&quot;)
 # over-avdekha)
 m.declare(&quot;avraham&quot;, &quot;LET-NOT&quot;,
           &quot;taavor(me_al_avdekha)&quot;)
+# witness-grounded state (its own tier): spine_members_in_recorded_dispute
+# on adonai_address
+m.witness_state(&quot;adonai_address&quot;, &quot;spine_members_in_recorded_dispute&quot;,
+                cites=[&quot;Onkelos Genesis 18:3&quot;, &quot;Bereshit Rabbah 48:10&quot;, &quot;Onkelos Genesis 18:21&quot;, &quot;Bereshit Rabbah 49:6&quot;])
 
 # -------------------------- Gen.18.4 · WATER_AND_THE_RARE_PASSIVE ----------
 # יֻקַּח־נָא מְעַט־מַיִם וְרַחֲצוּ רַגְלֵיכֶם וְהִשָּׁעֲנוּ תַּחַת הָעֵץ
@@ -1177,6 +1199,10 @@ m.declare(&quot;avraham&quot;, &quot;LET&quot;,
 # ‹כֵּן תַּעֲשֶׂה כַּאֲשֶׁר דִּבַּרְתָּ› (“so make like-as/which speak”) —
 # fact holds: set-upright-taaseh-like-which-speak
 m.fact(&quot;ken_taaseh_ka_asher_dibarta&quot;)
+# witness-tier presupposed read: visitors_without_the_inclination on
+# single_bet_heart — read, not installed
+m.witness_read(&quot;single_bet_heart&quot;, &quot;visitors_without_the_inclination&quot;,
+                cites=[&quot;Bereshit Rabbah 48:11&quot;])
 
 # -------------------------- Gen.18.6 · THE_TRIPLE_TO_SARAH -----------------
 # וַיְמַהֵר אַבְרָהָם הָאֹהֱלָה אֶל־שָׂרָה וַיֹּאמֶר מַהֲרִי שְׁלֹשׁ סְאִים
@@ -1236,6 +1262,10 @@ m.step(&quot;Gen.18.9&quot;)
 # ‹וַיֹּאמְרוּ אֵלָיו אַיֵּה שָׂרָה אִשְׁתֶּךָ› (“and-say to-him/its where?
 # Sarah woman-you/your”) — event: say — agent three-man
 m.event(&quot;say&quot;, agent=&quot;shelosha_anashim&quot;)
+# witness-tier presupposed read: expound_the_dots_meta_rule on dotted_elav —
+# read, not installed
+m.witness_read(&quot;dotted_elav&quot;, &quot;expound_the_dots_meta_rule&quot;,
+                cites=[&quot;Bereshit Rabbah 48:15&quot;])
 
 # -------------------------- Gen.18.10 · THE_RETURN_PROMISE -----------------
 # וַיֹּאמֶר שׁוֹב אָשׁוּב אֵלֶיךָ כָּעֵת חַיָּה וְהִנֵּה־בֵן לְשָׂרָה
@@ -1293,6 +1323,10 @@ m.step(&quot;Gen.18.13&quot;)
 # to Abraham to-what this laugh-outright Sarah”) — event: say — agent the-
 # LORD
 m.event(&quot;say&quot;, agent=&quot;YHWH&quot;)
+# witness-tier presupposed read: canon_edits_for_peace on altered_quotation
+# — read, not installed
+m.witness_read(&quot;altered_quotation&quot;, &quot;canon_edits_for_peace&quot;,
+                cites=[&quot;Bereshit Rabbah 48:18&quot;])
 
 # -------------------------- Gen.18.14 · TOO_WONDROUS -----------------------
 # הֲיִפָּלֵא מֵיְהוָה דָּבָר לַמּוֹעֵד אָשׁוּב אֵלֶיךָ כָּעֵת חַיָּה
@@ -1426,6 +1460,10 @@ m.event(&quot;turn_go&quot;, agent=&quot;shelosha_anashim&quot;)
 # him/its stand to-face YHWH”) — fact holds: and-Abraham-odenu-stand-lifnei-
 # the-LORD
 m.fact(&quot;ve_avraham_odenu_omed_lifnei_YHWH&quot;)
+# witness-tier presupposed read: scribal_emendation_claim on
+# standing_before_the_lord — read, not installed
+m.witness_read(&quot;standing_before_the_lord&quot;, &quot;scribal_emendation_claim&quot;,
+                cites=[&quot;Bereshit Rabbah 49:7&quot;])
 
 # -------------------------- Gen.18.23 · THE_APPROACH_AND_THE_FIFTY ---------
 # וַיִּגַּשׁ אַבְרָהָם וַיֹּאמַר הַאַף תִּסְפֶּה צַדִּיק עִם־רָשָׁע … אוּלַי
@@ -1459,6 +1497,10 @@ m.fact(&quot;chalilah_lekha_ha_shofet_kol_ha_aretz_lo_yaaseh_mishpat&quot;)
 # city and-lift/carry to-all the-place in-crossed-them/their”) — fact holds:
 # if-emtza-chamishim-and-nasati-to-all-the-maqom
 m.fact(&quot;im_emtza_chamishim_ve_nasati_le_khol_ha_maqom&quot;)
+# witness-tier presupposed read: courtroom_procedure_on_a_cited_precedent on
+# the_plea — read, not installed
+m.witness_read(&quot;the_plea&quot;, &quot;courtroom_procedure_on_a_cited_precedent&quot;,
+                cites=[&quot;Bereshit Rabbah 39:6&quot;, &quot;Bereshit Rabbah 49:10&quot;, &quot;Bereshit Rabbah 49:12&quot;, &quot;Bereshit Rabbah 49:13&quot;])
 
 # -------------------------- Gen.18.27 · THE_DESCENDING_LADDER --------------
 # וַיַּעַן אַבְרָהָם וַיֹּאמַר הִנֵּה־נָא הוֹאַלְתִּי לְדַבֵּר אֶל־אֲדֹנָי
@@ -1519,5 +1561,27 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 29
+    assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;adonai_address&#x27;]
+    assert m.WORLD[&quot;witnessed&quot;][&#x27;adonai_address&#x27;][&quot;cites&quot;] == [&#x27;Onkelos Genesis 18:3&#x27;, &#x27;Bereshit Rabbah 48:10&#x27;, &#x27;Onkelos Genesis 18:21&#x27;, &#x27;Bereshit Rabbah 49:6&#x27;]
+    assert all(&#x27;spine_members_in_recorded_dispute&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;heat_of_the_day&#x27;, &#x27;six_hours_by_comparison&#x27;), (&#x27;single_bet_heart&#x27;, &#x27;visitors_without_the_inclination&#x27;), (&#x27;dotted_elav&#x27;, &#x27;expound_the_dots_meta_rule&#x27;), (&#x27;altered_quotation&#x27;, &#x27;canon_edits_for_peace&#x27;), (&#x27;standing_before_the_lord&#x27;, &#x27;scribal_emendation_claim&#x27;), (&#x27;the_plea&#x27;, &#x27;courtroom_procedure_on_a_cited_precedent&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 48:8&#x27;, &#x27;Bereshit Rabbah 48:7&#x27;]
+    assert all(&#x27;six_hours_by_comparison&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;heat_of_the_day&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 48:11&#x27;]
+    assert all(&#x27;visitors_without_the_inclination&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;single_bet_heart&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 48:15&#x27;]
+    assert all(&#x27;expound_the_dots_meta_rule&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;dotted_elav&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 48:18&#x27;]
+    assert all(&#x27;canon_edits_for_peace&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;altered_quotation&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 49:7&#x27;]
+    assert all(&#x27;scribal_emendation_claim&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;standing_before_the_lord&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 39:6&#x27;, &#x27;Bereshit Rabbah 49:10&#x27;, &#x27;Bereshit Rabbah 49:12&#x27;, &#x27;Bereshit Rabbah 49:13&#x27;]
+    assert all(&#x27;courtroom_procedure_on_a_cited_precedent&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_plea&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-27 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-08-30 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

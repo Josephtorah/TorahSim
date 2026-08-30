@@ -25,6 +25,10 @@ m.step("Gen.31.1")
 # word/thing son Laban to-say”) — fact holds: take-Jacob-all-which-to-
 # avinu(word/thing-son-Laban)
 m.fact("laqach_yaaqov_kol_asher_le_avinu(divre_vene_lavan)")
+# witness-tier presupposed read: three_stage_trigger_ending_in_a_command on
+# the_sons_words — read, not installed
+m.witness_read("the_sons_words", "three_stage_trigger_ending_in_a_command",
+                cites=["Bereshit Rabbah 73:12"])
 
 # -------------------------- Gen.31.2 · THE_CHANGED_FACE --------------------
 # וַיַּרְא יַעֲקֹב אֶת־פְּנֵי לָבָן וְהִנֵּה אֵינֶנּוּ עִמּוֹ כִּתְמוֹל
@@ -48,6 +52,11 @@ m.step("Gen.31.3")
 # return-earth-avot(Jacob)
 m.declare("YHWH", "LET",
           "shuv_eretz_avot(yaaqov)")
+# witness-tier presupposed read:
+# blessing_on_property_conditioned_on_geography on return_to_your_land —
+# read, not installed
+m.witness_read("return_to_your_land", "blessing_on_property_conditioned_on_geography",
+                cites=["Bereshit Rabbah 74:1", "Onkelos Genesis 31:3"])
 
 # -------------------------- Gen.31.4 · THE_FIELD_SUMMONS -------------------
 # וַיִּשְׁלַח יַעֲקֹב וַיִּקְרָא לְרָחֵל וּלְלֵאָה הַשָּׂדֶה אֶל־צֹאנוֹ
@@ -58,6 +67,10 @@ m.step("Gen.31.4")
 # call to-Rachel and-to-Leah”) — fact holds: qara-to-Rachel-and-to-leah(the-
 # field)
 m.fact("qara_le_rachel_u_le_leah(ha_sade)")
+# witness-tier presupposed read: prudence_rule_from_the_setting on
+# counsel_in_the_open_field — read, not installed
+m.witness_read("counsel_in_the_open_field", "prudence_rule_from_the_setting",
+                cites=["Bereshit Rabbah 74:2"])
 
 # -------------------------- Gen.31.5 · THE_CONDITION_DECLARED_TRUE ---------
 # וַיֹּאמֶר לָהֶן רֹאֶה אָנֹכִי אֶת־פְּנֵי אֲבִיכֶן כִּי־אֵינֶנּוּ אֵלַי
@@ -130,6 +143,10 @@ m.fact("va_ere_ba_chalom_atudim(olim)")
 m.step("Gen.31.11")
 # ‹וָאֹמַר הִנֵּנִי› (“and-say behold-me/my”) — fact holds: behold-I(Jacob)
 m.fact("hineni(yaaqov)")
+# witness-tier presupposed read: medium_fixed_by_comparing_two_verses on
+# the_angel_in_the_dream — read, not installed
+m.witness_read("the_angel_in_the_dream", "medium_fixed_by_comparing_two_verses",
+                cites=["Bereshit Rabbah 82:3"])
 
 # -------------------------- Gen.31.12 · THE_RETOLD_LIFT_YOUR_EYES ----------
 # וַיֹּאמֶר שָׂא־נָא עֵינֶיךָ וּרְאֵה כָּל־הָעַתֻּדִים הָעֹלִים עַל־הַצֹּאן
@@ -224,6 +241,22 @@ m.step("Gen.31.19")
 # the-Teraphim-a-family-idol which”) — fact holds: and-steal-Rachel-
 # Teraphim-a-family-idol(Laban-gozez)
 m.fact("va_tignov_rachel_terafim(lavan_gozez)")
+# witness-tier presupposed read: motive_supplied_here_verb_removed_there on
+# the_theft — read, not installed
+m.witness_read("the_theft", "motive_supplied_here_verb_removed_there",
+                cites=["Bereshit Rabbah 74:5", "Onkelos Genesis 31:19", "Onkelos Genesis 31:20", "Onkelos Genesis 31:21"])
+# witness-tier presupposed read: never_called_gods_in_the_translation on
+# the_images — read, not installed
+m.witness_read("the_images", "never_called_gods_in_the_translation",
+                cites=["Onkelos Genesis 31:19", "Onkelos Genesis 31:30"])
+# witness-tier presupposed read: tracked_as_cause_across_three_verses on
+# the_curse_chain — read, not installed
+m.witness_read("the_curse_chain", "tracked_as_cause_across_three_verses",
+                cites=["Bereshit Rabbah 74:4"])
+# witness-tier presupposed read: taunt_in_a_later_block_with_the_retort_kept
+# on the_theft_echo — read, not installed
+m.witness_read("the_theft_echo", "taunt_in_a_later_block_with_the_retort_kept",
+                cites=["Bereshit Rabbah 92:8"])
 
 # -------------------------- Gen.31.20 · THE_HEART_THEFT --------------------
 # וַיִּגְנֹב יַעֲקֹב אֶת־לֵב לָבָן הָאֲרַמִּי עַל־בְּלִי הִגִּיד לוֹ כִּי
@@ -235,6 +268,10 @@ m.step("Gen.31.20")
 # heart Laban the-Aramite”) — fact holds: and-steal-Jacob-heart-Laban(the-
 # Aramite)
 m.fact("va_yignov_yaaqov_lev_lavan(ha_arami)")
+# witness-tier presupposed read: declared_portentous_wherever_it_occurs on
+# shearing — read, not installed
+m.witness_read("shearing", "declared_portentous_wherever_it_occurs",
+                cites=["Bereshit Rabbah 74:5"])
 
 # -------------------------- Gen.31.21 · THE_FLIGHT_AND_THE_RIVER -----------
 # וַיִּבְרַח הוּא וְכָל־אֲשֶׁר־לוֹ וַיָּקָם וַיַּעֲבֹר אֶת־הַנָּהָר
@@ -247,6 +284,10 @@ m.step("Gen.31.21")
 # the-river”) — fact holds: and-bolt-and-pass-over-the-river(panav-mountain-
 # the-Gilead)
 m.fact("va_yivrach_va_yaavor_ha_nahar(panav_har_ha_gilad)")
+# witness-grounded state (its own tier): suspicion_concealment_and_a_mercy
+# on the_search_ahead
+m.witness_state("the_search_ahead", "suspicion_concealment_and_a_mercy",
+                cites=["Bereshit Rabbah 74:9"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -264,4 +305,35 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 2
+    assert sorted(m.WORLD["witnessed"]) == ['the_search_ahead']
+    assert m.WORLD["witnessed"]['the_search_ahead']["cites"] == ['Bereshit Rabbah 74:9']
+    assert all('suspicion_concealment_and_a_mercy' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_sons_words', 'three_stage_trigger_ending_in_a_command'), ('return_to_your_land', 'blessing_on_property_conditioned_on_geography'), ('counsel_in_the_open_field', 'prudence_rule_from_the_setting'), ('the_angel_in_the_dream', 'medium_fixed_by_comparing_two_verses'), ('the_theft', 'motive_supplied_here_verb_removed_there'), ('the_images', 'never_called_gods_in_the_translation'), ('the_curse_chain', 'tracked_as_cause_across_three_verses'), ('the_theft_echo', 'taunt_in_a_later_block_with_the_retort_kept'), ('shearing', 'declared_portentous_wherever_it_occurs')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 73:12']
+    assert all('three_stage_trigger_ending_in_a_command' not in f for f in m.WORLD["facts"])
+    assert 'the_sons_words' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 74:1', 'Onkelos Genesis 31:3']
+    assert all('blessing_on_property_conditioned_on_geography' not in f for f in m.WORLD["facts"])
+    assert 'return_to_your_land' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 74:2']
+    assert all('prudence_rule_from_the_setting' not in f for f in m.WORLD["facts"])
+    assert 'counsel_in_the_open_field' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 82:3']
+    assert all('medium_fixed_by_comparing_two_verses' not in f for f in m.WORLD["facts"])
+    assert 'the_angel_in_the_dream' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 74:5', 'Onkelos Genesis 31:19', 'Onkelos Genesis 31:20', 'Onkelos Genesis 31:21']
+    assert all('motive_supplied_here_verb_removed_there' not in f for f in m.WORLD["facts"])
+    assert 'the_theft' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Genesis 31:19', 'Onkelos Genesis 31:30']
+    assert all('never_called_gods_in_the_translation' not in f for f in m.WORLD["facts"])
+    assert 'the_images' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 74:4']
+    assert all('tracked_as_cause_across_three_verses' not in f for f in m.WORLD["facts"])
+    assert 'the_curse_chain' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 92:8']
+    assert all('taunt_in_a_later_block_with_the_retort_kept' not in f for f in m.WORLD["facts"])
+    assert 'the_theft_echo' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 74:5']
+    assert all('declared_portentous_wherever_it_occurs' not in f for f in m.WORLD["facts"])
+    assert 'shearing' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

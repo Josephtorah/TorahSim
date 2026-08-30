@@ -1,7 +1,10 @@
 meta:
   id: gen_40_servant_oath_well
-  rev: 2
+  rev: 4
+  tree_derive_version: logic_derived_v2_full_rule
   changelog:
+    - "rev 4 (2026-08-30): FULL-RULE STAMP on the owner's word — the batch stamp he held by standing decision until Genesis was whole, given when the book closed at 73 of 73 read and derived. tree_derive_version logic_derived_v1 -> logic_derived_v2_full_rule; the span's declared reading is COMPLETE in its triage ledger and its logic was rebuilt FROM that reading in the derivation pass. No operator, claim, text or test changed by this edit — the stamp records a judgement already earned."
+    - "rev 3 (2026-08-30): logic rebuilt from the 2026-08-27 parashah-grain reading (64 of 64 declared, COMPLETE) under the spine default. Fourteen claims seated, two machine-checked. GUARD 3 CATCH RECORDED: the chain's first-aging census on 24:1 does NOT survive our tree - the word stands five times earlier, 18:11 carrying the identical phrase - so the premise is carried as the chain's own and not applied, with the counter-witness machine-checked. The divine-title ink claim on 24:3 against 24:7 DOES hold and is machine-checked. Thigh-oath procedure, void-vow class, answered-before-finishing census, betrothal typology, the kneel/rest/muzzle collision, and the ink-economy meta-rule seated at its own verse."
     - "2026-08-27 rev 2: RE-era reading pass (parashat Chayei Sarah sweep, 4 blocks one sitting — SECOND RUN UNDER THE SPINE DEFAULT, owner 2026-08-27: Bereshit Rabbah + Onkelos declared, Mishnah/Talmud held for the Step 9 exam): ledger logic/oral_triage/gen_40_servant_oath_well_2026-08-27.md; v1 queue discharged; ORAL_reading_pass block appended; no machine ops changed."
     - "2026-08-27 ink fix (pre-existing at HEAD, caught by verify_text): 24:21 op fragment — the interrogative heh of ha-hitzliach (did He prosper) repointed to the verse's patach form."
   title_en: The servant's oath and the well (24:1-33)
@@ -372,6 +375,46 @@ boot_steps:
       '
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(first_aging_census, chain_premise_not_carried_by_our_ink)"
+    en: >
+      AN INK CLAIM OPENED UNDER GUARD 3, AND IT FAILS AGAINST OUR TREE
+      [claim G40-21, machine-checked]. The chain holds that aging is not
+      written from the start of the book until this verse, making 24:1 the
+      first-aging seat. Our corpus does not carry it: the word stands five
+      times earlier - 18:11, 18:12, 18:13, 19:4, 19:31 - and 18:11 has the
+      very phrase, old and advanced in days, that this verse repeats. The
+      premise is RECORDED as the chain's own and is not applied here; the
+      counter-witness at 18:11 is machine-checked and carried beside it.
+      This is what the guard against crediting unopened numeric claims
+      exists to catch. [folded shape: recorded dispute]
+    cites: ["Bereshit Rabbah 65:9"]
+    confidence: witnessed
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(the_word_old, read_as_a_compressed_sentence)"
+    en: >
+      ONE WORD READ AS AN ABBREVIATED SENTENCE [claim G40-22]. 'Old' is
+      taken to stand for 'this one acquired', and what was acquired is two
+      worlds; 'advanced in days' becomes entry into both. From that
+      reading the chain builds a census of those crowned with age AND
+      days, each the head of a line, with the rule that the look of age
+      and the count of days can come apart - and here did not. [folded
+      shape: kept record]
+    cites: ["Bereshit Rabbah 59:6"]
+    confidence: witnessed
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(blessed_with_everything, four_way_dispute_wired_to_two_blocks)"
+    en: >
+      WHAT HE WAS BLESSED WITH IS ARGUED AND LEFT ARGUED [claim G40-23]. A
+      daughter; no daughter at all; rule over his own inclination; a son
+      repenting in his lifetime; a storehouse lacking nothing; and He did
+      not test him again. That last leg lands on the oath this machine
+      already records at 22:16 in gen_38, reached from another verse by
+      another argument - two independent routes to one operator. The
+      repentance leg is spent forward at gen_42. [folded shape: recorded
+      dispute]
+    cites: ["Bereshit Rabbah 59:7", "Bereshit Rabbah 43:8"]
+    confidence: witnessed
   comment: 'The chapter of the quest opens on age and blessing already held — the machine inherits a finished
     life and a full blessing, then hands the errand to a servant.
 
@@ -445,6 +488,17 @@ boot_steps:
     cites:
     - TIR-027
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(hand_under_the_thigh, oath_object_procedure)"
+    en: >
+      A GESTURE IS CONVERTED INTO THE FORM OF A PROCEDURE [claim G40-24].
+      The hand under the thigh is read as swearing by the sign of the
+      covenant: given through pain and therefore beloved, and 'they would
+      take an oath only by it'. What the narrative reports once, the chain
+      states as what one swears BY - and why that object and no other.
+      [folded shape: priced law]
+    cites: ["Bereshit Rabbah 59:8"]
+    confidence: witnessed
   comment: 'The corpus''s first sworn GESTURE opens as a single imperative under the etnachta rest: age
     and rule on the left, the hand under the thigh on the right.
 
@@ -484,8 +538,7 @@ boot_steps:
       [VERIFIED: gen_39_machpelah_purchase.yaml STEP_Gn_23_4 operator prose]. shava (''swear'') token
       5/70 = 24:3 ve-ashbia-kha [VERIFIED: gen40_census_out.txt]. Staging asserts "shava''s FIRST HIPHIL"
       [VERIFIED as staging-claim: gen40_staging.md]. COORDINATOR DB RE-CHECK (handoff): strong 7650 ordinals
-      1-4 are all niphal (HVN…); first morph with Vhi is ordinal 5 = 24:3 ve-ashbia-kha [VERIFIED: torah_grok.SNAPSHOT-
-      main-51801ca.sqlite + debut_map ATTACH]. U1 RESOLVED.
+      1-4 are all niphal (HVN…); first morph with Vhi is ordinal 5 = 24:3 ve-ashbia-kha [VERIFIED: source-snapshot.sqlite + debut_map ATTACH]. U1 RESOLVED.
 
       '
     cites: []
@@ -505,6 +558,31 @@ boot_steps:
       '
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(oath_by_the_word, reverence_buffer_supplies_the_object)"
+    en: >
+      THE TRANSLATION SUPPLIES A DIFFERENT OATH-OBJECT FROM THE ONE THE
+      MIDRASH SUPPLIES [claim G40-27]. Onkelos has him swear by the WORD
+      of the LORD, the same buffer the machine carries at the Beersheba
+      covenant in gen_37. Set against the thigh-oath reading on the verse
+      before, one oath scene now has two accounts of what is sworn by: an
+      object in the chain, a mediating Word in the translation. [folded
+      shape: dual-track translation]
+    cites: ["Onkelos Genesis 24:3"]
+    confidence: witnessed
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(double_divine_title, biography_read_off_an_ink_difference)"
+    en: >
+      A THEOLOGY BUILT ON THE GAP BETWEEN TWO VERSES OF ONE SPEECH [claim
+      G40-25, machine-checked]. Here Abraham swears by the God of the
+      heavens AND the God of the earth; four verses on, at 24:7, he says
+      only God of the heavens. The chain reads the difference as biography
+      - He was of the heavens only until Abraham made Him known, and
+      Abraham MADE Him God of the earth. Our ink carries the difference
+      exactly: the second title is present in this verse and absent at
+      24:7. [folded shape: ink count]
+    cites: ["Bereshit Rabbah 59:8"]
+    confidence: witnessed
   comment: 'The swear rides under heaven-and-earth; the not-take is content of the oath, not a second
     queue entry under the safe reading.
 
@@ -734,6 +812,18 @@ boot_steps:
       '
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(oath_preamble, registry_of_prior_events)"
+    en: >
+      THE RELATIVE CLAUSES ARE ASSIGNED TO RECORDED EVENTS ONE BY ONE
+      [claim G40-26]. The father's house, the neighbourhood, the oath in
+      Charan, and - for 'who spoke to me' - the covenant between the
+      pieces, so gen_31's scene is named as the seat this verse points
+      back to. The restrictive particle is then read as reaching one
+      generation further than it states: the son may not return, and the
+      grandson does not either. [folded shape: cross-corpus link]
+    cites: ["Bereshit Rabbah 59:10"]
+    confidence: witnessed
   comment: 'The past oath is cited; the angel is promised in the imperfect; the take-duty is re-sounded
     as then-clause from there.
 
@@ -941,6 +1031,21 @@ boot_steps:
     cites:
     - TIR-014
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(made_the_camels_kneel, one_verb_three_readings_and_a_collision)"
+    en: >
+      ONE VERB, THREE READINGS, AND AN UNRESOLVED COLLISION INSIDE THE
+      SHELF [claim G40-31]. The midrash reads that he made them KNEEL;
+      Onkelos refuses the kneel-and-bless homograph and renders that he
+      made them REST. Beside it the chain fights itself about the animals:
+      that he untied their MUZZLES, the muzzles being the household's
+      theft-prevention signature, against the objection that this
+      patriarch's animals would not graze a stolen field - argued from the
+      donkey that refused untithed barley and the ruling exempting animal
+      feed from doubtfully-tithed produce. Both poles recorded; neither
+      wins. [folded shape: recorded dispute]
+    cites: ["Bereshit Rabbah 59:11", "Bereshit Rabbah 60:8", "Onkelos Genesis 24:11", "Mishnah Demai 1:3"]
+    confidence: witnessed
   comment: 'Evening and a well: the quest arrives at the hour the drawers go out.
 
     '
@@ -1105,6 +1210,19 @@ boot_steps:
       '
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(open_conditional_request, enrolled_in_a_void_vow_class)"
+    en: >
+      THE CONDITION IS TESTED AGAINST A CASE TABLE [claim G40-28]. Four
+      are named who asked improperly, of whom three were answered properly
+      and one was not; the ruling that voids the class is quoted with the
+      story - one who declares an impure or blemished animal a burnt
+      offering HAS SAID NOTHING - along with the standoff in which neither
+      party would go to the other, both punished, each punishment proved
+      from ink. A narrative conditional judged by the exam shelf. [folded
+      shape: priced law]
+    cites: ["Bereshit Rabbah 60:3", "Mishnah Temurah 5:6"]
+    confidence: witnessed
   comment: 'The machine does not fire TESTS while a human builds a test in speech; the design''s imperatives
     never join the queue.
 
@@ -1160,6 +1278,17 @@ boot_steps:
     cites:
     - TIR-014
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(before_he_had_finished_speaking, answered_before_finishing_census)"
+    en: >
+      A CENSUS WHOSE MEMBERSHIP TEST IS TIMING, NOT SUBJECT [claim
+      G40-29]. Three are counted as answered before they finished: this
+      servant, whose sign arrives before he had done speaking; Moses,
+      where the ground split as he ended; and Solomon, where the fire came
+      down. Our verse is the class's first member. [folded shape: kept
+      record]
+    cites: ["Bereshit Rabbah 60:4"]
+    confidence: witnessed
   comment: 'The designed girl walks into the unfinished prayer with a pitcher already on her shoulder.
 
     '
@@ -1428,6 +1557,18 @@ boot_steps:
       '
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(astonished_at_her, rendered_as_observation_protocol)"
+    en: >
+      AN INTERIOR STATE IS RENDERED AS PROCEDURE [claim G40-33]. Onkelos
+      replaces the astonishment with WAITED AND OBSERVED SILENTLY to
+      determine - a protocol where the verse had a feeling. The chain
+      arrives near the same place from the other side, reading the verb as
+      squinting to determine. The translation removes the person; the
+      midrash keeps the person and adds the scrutiny. [folded shape:
+      dual-track translation]
+    cites: ["Onkelos Genesis 24:21"]
+    confidence: witnessed
   comment: 'He watches in silence while the prosper-verb is born as a question.
 
     '
@@ -1467,6 +1608,16 @@ boot_steps:
     cites:
     - TIR-014
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(betrothal_gifts, numeric_foreshadow_by_weight_and_count)"
+    en: >
+      THE GIFTS ARE READ BY THEIR NUMBERS RATHER THAN THEIR VALUE [claim
+      G40-30]. The half-shekel ring is read to the census half-shekel, the
+      TWO bracelets to the two tablets, and their TEN of gold to the ten
+      commandments. A courtship inventory is made to carry the arithmetic
+      of a later covenant. [folded shape: cross-corpus link]
+    cites: ["Bereshit Rabbah 60:6"]
+    confidence: witnessed
   comment: 'Gold on her face and hands before he asks her name.
 
     '
@@ -1929,6 +2080,29 @@ boot_steps:
     cites:
     - TIR-027
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(will_not_eat_until_I_have_spoken, disclosure_before_negotiation)"
+    en: >
+      THE ORDER OF THE SPEECH IS READ AS A REQUIRED ORDER [claim G40-34].
+      That he refuses food until he has spoken, and that his opening words
+      name him a servant, yield the rule that a man states his own flaw
+      first. Sequence in a narrative becomes sequence in a procedure.
+      [folded shape: priced law]
+    cites: ["Bereshit Rabbah 60:9"]
+    confidence: witnessed
+  - op: WITNESS_STATE
+    expr_en: "WITNESS(the_repetition_ahead, ink_economy_rule_stated_at_its_seat)"
+    en: >
+      THE TRADITION MEASURES ITS OWN INK AND SAYS SO [claim G40-32]. The
+      conversation of the patriarchs' household servants is held more
+      significant than the descendants' Torah: this errand spans columns
+      and is then REPEATED in full, while a whole law of impurity hangs on
+      one extra letter - the added definite letter on one opinion, the
+      joining letter on another. The chain is pricing its own text against
+      its yield, and the observation is the stated warrant for the
+      repetition block that begins in gen_41. [folded shape: ink count]
+    cites: ["Bereshit Rabbah 60:8"]
+    confidence: witnessed
   comment: 'The house says one word — Speak — and the unit stops on the cliff.
 
     '

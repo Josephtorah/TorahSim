@@ -134,3 +134,17 @@ one-angel-one-mission rule (row 27); Sodom's statute as institutional
 law (row 29); the promise→receipt closure formula (row 30); the
 three-prayers institution on 19:27 (row 38); the escort verb in the
 buffer (row O8).
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers on 2026-08-30. This ledger
+records its Onkelos track in the compact row form ("O1 · 18:1"), which
+the unit-level cite validator cannot match: a cite is valid only when
+the literal source string appears in a triage ledger. This block's
+Onkelos verses are therefore listed here in citable form, so the
+derivation may cite the translation it actually read. No verdict is
+changed and no row is rewritten — this is a naming key for the Onkelos
+rows above.
+
+Onkelos Genesis 18:1, Onkelos Genesis 18:2, Onkelos Genesis 18:3, Onkelos Genesis 18:4, Onkelos Genesis 18:5, Onkelos Genesis 18:6, Onkelos Genesis 18:7, Onkelos Genesis 18:8, Onkelos Genesis 18:9, Onkelos Genesis 18:10, Onkelos Genesis 18:11, Onkelos Genesis 18:12, Onkelos Genesis 18:13, Onkelos Genesis 18:14, Onkelos Genesis 18:15, Onkelos Genesis 18:16, Onkelos Genesis 18:17, Onkelos Genesis 18:18, Onkelos Genesis 18:19, Onkelos Genesis 18:20, Onkelos Genesis 18:21, Onkelos Genesis 18:22, Onkelos Genesis 18:23, Onkelos Genesis 18:24, Onkelos Genesis 18:25, Onkelos Genesis 18:26, Onkelos Genesis 18:27, Onkelos Genesis 18:28, Onkelos Genesis 18:29, Onkelos Genesis 18:30, Onkelos Genesis 18:31, Onkelos Genesis 18:32, Onkelos Genesis 18:33.

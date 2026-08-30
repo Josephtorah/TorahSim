@@ -70,6 +70,10 @@ m.step("Gen.44.5")
 # ‹וְהוּא נַחֵשׁ יְנַחֵשׁ בּוֹ› (“and-he/it hiss hiss in-him/its”) — fact
 # holds: hiss-hiss-in-it
 m.fact("nachesh_yenachesh_bo")
+# witness-grounded state (its own tier):
+# converted_to_investigation_at_both_seats on he_surely_divines
+m.witness_state("he_surely_divines", "converted_to_investigation_at_both_seats",
+                cites=["Onkelos Genesis 44:5", "Onkelos Genesis 44:15"])
 
 # -------------------------- Gen.44.6 · HE_OVERTOOK_THEM --------------------
 # וַיַּשִּׂגֵם וַיְדַבֵּר אֲלֵהֶם אֶת־הַדְּבָרִים הָאֵלֶּה
@@ -101,6 +105,10 @@ m.step("Gen.44.8")
 # ‹הֵן כֶּסֶף אֲשֶׁר מָצָאנוּ› (“lo! silver which find”) — fact holds:
 # lo!-silver-return-and-how?-steal
 m.fact("hen_kesef_heshivonu_ve_ekh_nignov")
+# witness-grounded state (its own tier):
+# the_type_specimen_of_the_inference_rule on how_then_should_we_steal
+m.witness_state("how_then_should_we_steal", "the_type_specimen_of_the_inference_rule",
+                cites=["Bereshit Rabbah 92:7", "Onkelos Genesis 44:8"])
 
 # -------------------------- Gen.44.9 · THE_RASH_SENTENCE -------------------
 # אֲשֶׁר יִמָּצֵא אִתּוֹ מֵעֲבָדֶיךָ וָמֵת וְגַם־אֲנַחְנוּ נִהְיֶה לַאדֹנִי
@@ -144,6 +152,10 @@ m.step("Gen.44.12")
 # in-something-expansive Benjamin”) — fact holds: and-find-the-goblet-in-
 # something-expansive-Benjamin
 m.fact("va_yimatze_ha_gavia_be_amtachat_binyamin")
+# witness-tier presupposed read: an_old_theft_thrown_back on
+# the_goblet_found_in_benjamins_sack — read, not installed
+m.witness_read("the_goblet_found_in_benjamins_sack", "an_old_theft_thrown_back",
+                cites=["Bereshit Rabbah 92:8"])
 
 # -------------------------- Gen.44.13 · THE_GARMENTS_TORN ------------------
 # וַיִּקְרְעוּ שִׂמְלֹתָם וַיַּעֲמֹס אִישׁ עַל־חֲמֹרוֹ וַיָּשֻׁבוּ הָעִירָה
@@ -153,6 +165,10 @@ m.step("Gen.44.13")
 # ‹וַיִּקְרְעוּ שִׂמְלֹתָם› (“and-rend dress-them/their”) — event: qara —
 # agent the-achim; theme simlotam
 m.event("qara", agent="ha_achim", themes=["simlotam"])
+# witness-tier presupposed read: the_first_installment_of_the_rending_table
+# on they_rent_their_garments — read, not installed
+m.witness_read("they_rent_their_garments", "the_first_installment_of_the_rending_table",
+                cites=["Bereshit Rabbah 84:20"])
 
 # -------------------------- Gen.44.14 · THEY_FALL_BEFORE_HIM ---------------
 # וַיָּבֹא יְהוּדָה וְאֶחָיו בֵּיתָה יוֹסֵף וְהוּא עוֹדֶנּוּ שָׁם
@@ -163,6 +179,10 @@ m.step("Gen.44.14")
 # ‹וַיִּפְּלוּ לְפָנָיו אָרְצָה› (“and-fall to-face-him/its earth-ward”) —
 # event: naflu — agent Judah-and-echav
 m.event("naflu", agent="yehuda_ve_echav")
+# witness-tier presupposed read: the_second_of_three_crowning_speeches on
+# judah_and_his_brothers_came — read, not installed
+m.witness_read("judah_and_his_brothers_came", "the_second_of_three_crowning_speeches",
+                cites=["Bereshit Rabbah 84:17"])
 
 # -------------------------- Gen.44.15 · A_MAN_LIKE_ME ----------------------
 # וַיֹּאמֶר לָהֶם יוֹסֵף מָה־הַמַּעֲשֶׂה הַזֶּה אֲשֶׁר עֲשִׂיתֶם הֲלוֹא
@@ -187,6 +207,11 @@ m.step("Gen.44.16")
 # perversity servant-you/your”) — fact holds: the-God-find-obj-marker-
 # perversity-avadekha
 m.fact("ha_Elohim_matza_et_avon_avadekha")
+# witness-tier presupposed read:
+# the_chain_personalizes_where_the_buffer_depersonalizes on
+# god_has_found_the_iniquity — read, not installed
+m.witness_read("god_has_found_the_iniquity", "the_chain_personalizes_where_the_buffer_depersonalizes",
+                cites=["Onkelos Genesis 44:16", "Bereshit Rabbah 92:9"])
 
 # -------------------------- Gen.44.17 · GO_UP_IN_PEACE ---------------------
 # וַיֹּאמֶר חָלִילָה לִּי מֵעֲשׂוֹת זֹאת הָאִישׁ אֲשֶׁר נִמְצָא הַגָּבִיעַ
@@ -211,6 +236,23 @@ m.step("Gen.44.18")
 # ‹וַיִּגַּשׁ אֵלָיו יְהוּדָה› (“and-be to-him/its Judah”) — event: nigash —
 # agent Judah
 m.event("nigash", agent="yehuda")
+# witness-tier presupposed read: persuasion_as_incremental_extraction on
+# judah_approached_him — read, not installed
+m.witness_read("judah_approached_him", "persuasion_as_incremental_extraction",
+                cites=["Bereshit Rabbah 93:4"])
+# witness-tier presupposed read: a_rival_translator_named_inside_the_midrash
+# on a_word_spoken_on_its_wheel — read, not installed
+m.witness_read("a_word_spoken_on_its_wheel", "a_rival_translator_named_inside_the_midrash",
+                cites=["Bereshit Rabbah 93:3"])
+# witness-grounded state (its own tier):
+# three_estrangements_discharged_at_once on the_whole_speech
+m.witness_state("the_whole_speech", "three_estrangements_discharged_at_once",
+                cites=["Bereshit Rabbah 93:9"])
+# witness-tier presupposed read:
+# a_test_of_strength_resolved_by_a_judgment_of_piety on the_confrontation —
+# read, not installed
+m.witness_read("the_confrontation", "a_test_of_strength_resolved_by_a_judgment_of_piety",
+                cites=["Bereshit Rabbah 93:7", "Onkelos Genesis 44:18"])
 
 # -------------------------- Gen.44.19 · MY_LORD_ASKED ----------------------
 # אֲדֹנִי שָׁאַל אֶת־עֲבָדָיו לֵאמֹר הֲיֵשׁ־לָכֶם אָב אוֹ־אָח
@@ -313,6 +355,10 @@ m.step("Gen.44.28")
 # ‹אַךְ טָרֹף טֹרָף› (“indeed pluck-off pluck-off”) — fact holds: indeed-
 # pluck-off-pluck-off-and-not-reitiv
 m.fact("akh_tarof_toraf_ve_lo_reitiv")
+# witness-grounded state (its own tier):
+# two_seats_in_the_torah_one_rendering on surely_torn_torn
+m.witness_state("surely_torn_torn", "two_seats_in_the_torah_one_rendering",
+                cites=["Onkelos Genesis 44:28", "Bereshit Rabbah 93:8"])
 
 # -------------------------- Gen.44.29 · GRAY_HAIR_IN_EVIL ------------------
 # וּלְקַחְתֶּם גַּם־אֶת־זֶה מֵעִם פָּנַי וְקָרָהוּ אָסוֹן וְהוֹרַדְתֶּם
@@ -324,6 +370,11 @@ m.step("Gen.44.29")
 # old-age-me/my in-bad Shᵉ'Owl-ward”) — fact holds: and-go-down-obj-marker-
 # sevati-in-bad-sheola
 m.fact("ve_horadtem_et_sevati_be_raa_sheola")
+# witness-tier presupposed read:
+# the_third_seat_of_the_word_that_lives_in_one_law on lest_harm_befall_him —
+# read, not installed
+m.witness_read("lest_harm_befall_him", "the_third_seat_of_the_word_that_lives_in_one_law",
+                cites=["Onkelos Genesis 44:29", "Onkelos Genesis 42:4"])
 
 # -------------------------- Gen.44.30 · SOUL_BOUND_TO_SOUL -----------------
 # וְעַתָּה כְּבֹאִי אֶל־עַבְדְּךָ אָבִי וְהַנַּעַר אֵינֶנּוּ אִתָּנוּ
@@ -334,6 +385,11 @@ m.step("Gen.44.30")
 # ‹וְנַפְשׁוֹ קְשׁוּרָה בְנַפְשׁוֹ› (“and-living-being-him/its tie in-
 # living-being-him/its”) — fact holds: and-nafsho-tie-and-nafsho
 m.fact("ve_nafsho_qeshura_ve_nafsho")
+# witness-tier presupposed read:
+# rendered_as_love_which_is_the_arguments_premise on
+# his_soul_is_bound_up_with_his_soul — read, not installed
+m.witness_read("his_soul_is_bound_up_with_his_soul", "rendered_as_love_which_is_the_arguments_premise",
+                cites=["Onkelos Genesis 44:30", "Onkelos Genesis 44:32"])
 
 # -------------------------- Gen.44.31 · WHEN_HE_SEES_THE_LAD_IS_NOT --------
 # וְהָיָה כִּרְאוֹתוֹ כִּי־אֵין הַנַּעַר וָמֵת וְהוֹרִידוּ עֲבָדֶיךָ
@@ -379,6 +435,10 @@ m.step("Gen.44.34")
 # up to father-me/my and-the-boy there-is-not-him/its with-me/my”) — fact
 # holds: how?-go-up-to-avi-and-the-boy-enennu
 m.fact("ekh_eele_el_avi_ve_ha_naar_enennu")
+# witness-grounded state (its own tier): breaking_off_at_an_open_edge on
+# the_speech
+m.witness_state("the_speech", "breaking_off_at_an_open_edge",
+                cites=["Bereshit Rabbah 93:9", "Bereshit Rabbah 93:8"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -396,4 +456,43 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 9
+    assert sorted(m.WORLD["witnessed"]) == ['he_surely_divines', 'how_then_should_we_steal', 'surely_torn_torn', 'the_speech', 'the_whole_speech']
+    assert m.WORLD["witnessed"]['he_surely_divines']["cites"] == ['Onkelos Genesis 44:5', 'Onkelos Genesis 44:15']
+    assert all('converted_to_investigation_at_both_seats' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['how_then_should_we_steal']["cites"] == ['Bereshit Rabbah 92:7', 'Onkelos Genesis 44:8']
+    assert all('the_type_specimen_of_the_inference_rule' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['surely_torn_torn']["cites"] == ['Onkelos Genesis 44:28', 'Bereshit Rabbah 93:8']
+    assert all('two_seats_in_the_torah_one_rendering' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['the_speech']["cites"] == ['Bereshit Rabbah 93:9', 'Bereshit Rabbah 93:8']
+    assert all('breaking_off_at_an_open_edge' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['the_whole_speech']["cites"] == ['Bereshit Rabbah 93:9']
+    assert all('three_estrangements_discharged_at_once' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_goblet_found_in_benjamins_sack', 'an_old_theft_thrown_back'), ('they_rent_their_garments', 'the_first_installment_of_the_rending_table'), ('judah_and_his_brothers_came', 'the_second_of_three_crowning_speeches'), ('god_has_found_the_iniquity', 'the_chain_personalizes_where_the_buffer_depersonalizes'), ('judah_approached_him', 'persuasion_as_incremental_extraction'), ('a_word_spoken_on_its_wheel', 'a_rival_translator_named_inside_the_midrash'), ('the_confrontation', 'a_test_of_strength_resolved_by_a_judgment_of_piety'), ('lest_harm_befall_him', 'the_third_seat_of_the_word_that_lives_in_one_law'), ('his_soul_is_bound_up_with_his_soul', 'rendered_as_love_which_is_the_arguments_premise')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 92:8']
+    assert all('an_old_theft_thrown_back' not in f for f in m.WORLD["facts"])
+    assert 'the_goblet_found_in_benjamins_sack' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 84:20']
+    assert all('the_first_installment_of_the_rending_table' not in f for f in m.WORLD["facts"])
+    assert 'they_rent_their_garments' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 84:17']
+    assert all('the_second_of_three_crowning_speeches' not in f for f in m.WORLD["facts"])
+    assert 'judah_and_his_brothers_came' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Genesis 44:16', 'Bereshit Rabbah 92:9']
+    assert all('the_chain_personalizes_where_the_buffer_depersonalizes' not in f for f in m.WORLD["facts"])
+    assert 'god_has_found_the_iniquity' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 93:4']
+    assert all('persuasion_as_incremental_extraction' not in f for f in m.WORLD["facts"])
+    assert 'judah_approached_him' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 93:3']
+    assert all('a_rival_translator_named_inside_the_midrash' not in f for f in m.WORLD["facts"])
+    assert 'a_word_spoken_on_its_wheel' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 93:7', 'Onkelos Genesis 44:18']
+    assert all('a_test_of_strength_resolved_by_a_judgment_of_piety' not in f for f in m.WORLD["facts"])
+    assert 'the_confrontation' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Genesis 44:29', 'Onkelos Genesis 42:4']
+    assert all('the_third_seat_of_the_word_that_lives_in_one_law' not in f for f in m.WORLD["facts"])
+    assert 'lest_harm_befall_him' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Genesis 44:30', 'Onkelos Genesis 44:32']
+    assert all('rendered_as_love_which_is_the_arguments_premise' not in f for f in m.WORLD["facts"])
+    assert 'his_soul_is_bound_up_with_his_soul' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

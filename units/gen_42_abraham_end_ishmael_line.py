@@ -24,6 +24,14 @@ m.event("take_wife", agent="avraham", themes=["qetura"])
 # ‹וּשְׁמָהּ קְטוּרָה› (“and-name-her/its Keturah”) — fact holds: report-
 # name-Keturah
 m.fact("report_name_qetura")
+# witness-tier presupposed read: evening_sowing_of_a_four_way_proverb on
+# remarriage_in_old_age — read, not installed
+m.witness_read("remarriage_in_old_age", "evening_sowing_of_a_four_way_proverb",
+                cites=["Bereshit Rabbah 61:3"])
+# witness-tier presupposed read: ink_leg_recorded_but_not_applied on
+# ketura_identified_as_hagar — read, not installed
+m.witness_read("ketura_identified_as_hagar", "ink_leg_recorded_but_not_applied",
+                cites=["Bereshit Rabbah 61:4", "Bereshit Rabbah 47:2"])
 
 # -------------------------- Gen.25.2 · THE_KETURAH_SIX_SONS ----------------
 # וַתֵּ֣לֶד ל֗וֹ אֶת־זִמְרָן֙ וְאֶת־יָקְשָׁ֔ן וְאֶת־מְדָ֖ן וְאֶת־מִדְיָ֑ן
@@ -49,6 +57,10 @@ m.step("Gen.25.3")
 # Asshurim and-Letushim and-Leummim”) — fact holds: named-only-roster-
 # Jokshan-line
 m.fact("named_only_roster_yaqshan_line")
+# witness-tier presupposed read: declared_shelf_splitting_three_ways_by_name
+# on three_names — read, not installed
+m.witness_read("three_names", "declared_shelf_splitting_three_ways_by_name",
+                cites=["Bereshit Rabbah 61:5", "Onkelos Genesis 25:3"])
 
 # -------------------------- Gen.25.4 · THE_MIDIAN_LINE_AND_CLOSE -----------
 # וּבְנֵ֣י מִדְיָ֗ן עֵיפָ֤ה וָעֵ֨פֶר֙ וַחֲנֹ֔ךְ וַאֲבִידָ֖ע וְאֶלְדָּעָ֑ה
@@ -68,6 +80,14 @@ m.step("Gen.25.5")
 # ‹וַיִּתֵּן אַבְרָהָם אֶת־כָּל־אֲשֶׁר־לוֹ לְיִצְחָק› (“and-set Abraham obj-
 # marker all which to-him/its to-Isaac”) — event: give-all — agent Abraham
 m.event("give_all", agent="avraham")
+# witness-tier presupposed read: four_way_dispute_resolved_by_deferral on
+# all_that_he_had — read, not installed
+m.witness_read("all_that_he_had", "four_way_dispute_resolved_by_deferral",
+                cites=["Bereshit Rabbah 61:6"])
+# witness-tier presupposed read: argued_as_property_law_in_a_tribunal on
+# gift_plus_severance — read, not installed
+m.witness_read("gift_plus_severance", "argued_as_property_law_in_a_tribunal",
+                cites=["Bereshit Rabbah 61:7"])
 
 # -------------------------- Gen.25.6 · THE_PILEGESH_GIFTS_AND_SEND_EAST ----
 # וְלִבְנֵ֤י הַפִּֽילַגְשִׁים֙ אֲשֶׁ֣ר לְאַבְרָהָ֔ם נָתַ֥ן אַבְרָהָ֖ם
@@ -117,6 +137,10 @@ m.step("Gen.25.9")
 # bury obj-marker-him/its Isaac and-Ishmael … cavern the-Machpelah”) —
 # event: bury — theme Abraham
 m.event("bury", themes=["avraham"])
+# witness-tier presupposed read: order_read_as_repentance_evidence on
+# isaac_named_before_ishmael — read, not installed
+m.witness_read("isaac_named_before_ishmael", "order_read_as_repentance_evidence",
+                cites=["Bereshit Rabbah 62:2"])
 
 # -------------------------- Gen.25.10 · THE_FIELD_PURCHASE_RECAP -----------
 # הַשָּׂדֶ֛ה אֲשֶׁר־קָנָ֥ה אַבְרָהָ֖ם מֵאֵ֣ת בְּנֵי־חֵ֑ת שָׁ֛מָּה קֻבַּ֥ר
@@ -128,6 +152,14 @@ m.step("Gen.25.10")
 # possessor Abraham from-with son Heth”) — fact holds: field-bought-from-
 # son-Heth-burial-place
 m.fact("field_bought_from_bene_chet_burial_place")
+# witness-tier presupposed read: kindness_receipted_after_thirty_eight_years
+# on and_sarah_his_wife — read, not installed
+m.witness_read("and_sarah_his_wife", "kindness_receipted_after_thirty_eight_years",
+                cites=["Bereshit Rabbah 62:2", "Bereshit Rabbah 58:4"])
+# witness-tier presupposed read: one_conveyance_counted_across_three_blocks
+# on ninth_sons_of_chet_mention — read, not installed
+m.witness_read("ninth_sons_of_chet_mention", "one_conveyance_counted_across_three_blocks",
+                cites=["Bereshit Rabbah 58:8"])
 
 # -------------------------- Gen.25.11 · THE_BLESSING_AND_BEER_LACHAI_ROI_CLOSE -
 # וַיְהִ֗י אַחֲרֵי֙ מ֣וֹת אַבְרָהָ֔ם וַיְבָ֥רֶךְ אֱלֹהִ֖ים אֶת־יִצְחָ֣ק
@@ -141,6 +173,14 @@ m.event("?")
 # ‹בְּאֵר לַחַי רֹאִי› (“Beer-lahai-roi”) — fact holds: Isaac-dwells-beer-
 # lachai-Beer-lahai-roi-career-close
 m.fact("yitzchaq_dwells_beer_lachai_roi_career_close")
+# witness-tier presupposed read: deferred_blessing_discharged_in_this_block
+# on God_blessed_isaac — read, not installed
+m.witness_read("God_blessed_isaac", "deferred_blessing_discharged_in_this_block",
+                cites=["Bereshit Rabbah 61:6"])
+# witness-grounded state (its own tier): regression_rule_with_an_ink_guard
+# on after_the_death_formula
+m.witness_state("after_the_death_formula", "regression_rule_with_an_ink_guard",
+                cites=["Bereshit Rabbah 62:3"])
 
 # -------------------------- Gen.25.12 · THE_TOLEDOT_OF_ISHMAEL -------------
 # וְאֵ֛לֶּה תֹּלְדֹ֥ת יִשְׁמָעֵ֖אל בֶּן־אַבְרָהָ֑ם אֲשֶׁ֨ר יָלְדָ֜ה הָגָ֧ר
@@ -200,6 +240,10 @@ m.step("Gen.25.17")
 # ‹וַיִּגְוַע וַיָּמָת וַיֵּאָסֶף אֶל־עַמָּיו› (“and-breathe-out and-die
 # and-gather-for-any-purpose to people-him/its”) — event: expire-die-gather
 m.event("expire_die_gather")
+# witness-tier presupposed read: genealogy_number_used_to_date_another_block
+# on one_hundred_thirty_seven — read, not installed
+m.witness_read("one_hundred_thirty_seven", "genealogy_number_used_to_date_another_block",
+                cites=["Bereshit Rabbah 62:4", "Megillah 17a"])
 
 # -------------------------- Gen.25.18 · THE_NAFAL_YISHKON_ECHO_AND_SEAM ----
 # וַיִּשְׁכְּנ֨וּ מֵֽחֲוִילָ֜ה עַד־שׁ֗וּר אֲשֶׁר֙ עַל־פְּנֵ֣י מִצְרַ֔יִם
@@ -213,6 +257,10 @@ m.event("?")
 # ‹עַל־פְּנֵי כָל־אֶחָיו נָפָל› (“over face all brother-him/its fall”) —
 # fact holds: fall-before-brothers-echo-fowl-16-12-yishkon
 m.fact("nafal_before_brothers_echo_of_16_12_yishkon")
+# witness-tier presupposed read: polarity_completed_and_then_flattened on
+# he_fell_before_his_brethren — read, not installed
+m.witness_read("he_fell_before_his_brethren", "polarity_completed_and_then_flattened",
+                cites=["Bereshit Rabbah 45:9", "Onkelos Genesis 25:18"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -230,4 +278,41 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 9
+    assert sorted(m.WORLD["witnessed"]) == ['after_the_death_formula']
+    assert m.WORLD["witnessed"]['after_the_death_formula']["cites"] == ['Bereshit Rabbah 62:3']
+    assert all('regression_rule_with_an_ink_guard' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('remarriage_in_old_age', 'evening_sowing_of_a_four_way_proverb'), ('ketura_identified_as_hagar', 'ink_leg_recorded_but_not_applied'), ('three_names', 'declared_shelf_splitting_three_ways_by_name'), ('all_that_he_had', 'four_way_dispute_resolved_by_deferral'), ('gift_plus_severance', 'argued_as_property_law_in_a_tribunal'), ('isaac_named_before_ishmael', 'order_read_as_repentance_evidence'), ('and_sarah_his_wife', 'kindness_receipted_after_thirty_eight_years'), ('ninth_sons_of_chet_mention', 'one_conveyance_counted_across_three_blocks'), ('God_blessed_isaac', 'deferred_blessing_discharged_in_this_block'), ('one_hundred_thirty_seven', 'genealogy_number_used_to_date_another_block'), ('he_fell_before_his_brethren', 'polarity_completed_and_then_flattened')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 61:3']
+    assert all('evening_sowing_of_a_four_way_proverb' not in f for f in m.WORLD["facts"])
+    assert 'remarriage_in_old_age' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 61:4', 'Bereshit Rabbah 47:2']
+    assert all('ink_leg_recorded_but_not_applied' not in f for f in m.WORLD["facts"])
+    assert 'ketura_identified_as_hagar' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 61:5', 'Onkelos Genesis 25:3']
+    assert all('declared_shelf_splitting_three_ways_by_name' not in f for f in m.WORLD["facts"])
+    assert 'three_names' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 61:6']
+    assert all('four_way_dispute_resolved_by_deferral' not in f for f in m.WORLD["facts"])
+    assert 'all_that_he_had' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 61:7']
+    assert all('argued_as_property_law_in_a_tribunal' not in f for f in m.WORLD["facts"])
+    assert 'gift_plus_severance' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 62:2']
+    assert all('order_read_as_repentance_evidence' not in f for f in m.WORLD["facts"])
+    assert 'isaac_named_before_ishmael' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 62:2', 'Bereshit Rabbah 58:4']
+    assert all('kindness_receipted_after_thirty_eight_years' not in f for f in m.WORLD["facts"])
+    assert 'and_sarah_his_wife' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 58:8']
+    assert all('one_conveyance_counted_across_three_blocks' not in f for f in m.WORLD["facts"])
+    assert 'ninth_sons_of_chet_mention' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 61:6']
+    assert all('deferred_blessing_discharged_in_this_block' not in f for f in m.WORLD["facts"])
+    assert 'God_blessed_isaac' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 62:4', 'Megillah 17a']
+    assert all('genealogy_number_used_to_date_another_block' not in f for f in m.WORLD["facts"])
+    assert 'one_hundred_thirty_seven' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 45:9', 'Onkelos Genesis 25:18']
+    assert all('polarity_completed_and_then_flattened' not in f for f in m.WORLD["facts"])
+    assert 'he_fell_before_his_brethren' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

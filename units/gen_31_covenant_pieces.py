@@ -108,6 +108,10 @@ m.event("say", agent="YHWH")
 # ‹כֹּה יִהְיֶה זַרְעֶךָ› (“like-this be seed-you/your”) — fact holds: koh-
 # yihyeh-zarekha
 m.fact("koh_yihyeh_zarekha")
+# witness-tier presupposed read: exemption_from_astrology on
+# brought_him_outside — read, not installed
+m.witness_read("brought_him_outside", "exemption_from_astrology",
+                cites=["Shabbat 156a:13", "Bereshit Rabbah 44:12"])
 
 # -------------------------- Gen.15.6 · THE_BELIEF_AND_THE_RECKONING --------
 # וְהֶאֱמִן בַּיהוָה וַיַּחְשְׁבֶהָ לּוֹ צְדָקָה
@@ -147,6 +151,10 @@ m.event("say", agent="avram")
 # know that possess/inherit-her/its”) — fact holds: in-the-mah-know-that-
 # irashena
 m.fact("ba_mah_eda_ki_irashena")
+# witness-tier presupposed read: order_of_offerings_instituted on
+# bamah_eda_question — read, not installed
+m.witness_read("bamah_eda_question", "order_of_offerings_instituted",
+                cites=["Megillah 31b:5", "Berakhot 7b:1"])
 
 # -------------------------- Gen.15.9 · THE_TAKE_COMMAND --------------------
 # וַיֹּאמֶר אֵלָיו קְחָה לִי עֶגְלָה מְשֻׁלֶּשֶׁת וְעֵז מְשֻׁלֶּשֶׁת וְאַיִל
@@ -164,6 +172,10 @@ m.event("say", agent="YHWH")
 # nestling)
 m.declare("YHWH", "LET",
           "qechah(avram, eglah_ez_ayil_tor_ve_gozal)")
+# witness-tier presupposed read: standing_covenant_form on pieces_rite —
+# read, not installed
+m.witness_read("pieces_rite", "standing_covenant_form",
+                cites=["Sifrei Devarim 171:6"])
 
 # -------------------------- Gen.15.10 · THE_COMPLIANCE_AND_THE_CUTTING -----
 # וַיִּקַּח־לוֹ אֶת־כָּל־אֵלֶּה וַיְבַתֵּר אֹתָם בַּתָּוֶךְ וַיִּתֵּן
@@ -214,6 +226,10 @@ m.event("fall", themes=["tardemah"])
 # darkness great fall over-him/its”) — fact holds: emah-chashekhah-gedolah-
 # fall-alav
 m.fact("emah_chashekhah_gedolah_nofelet_alav")
+# witness-grounded state (its own tier):
+# decoded_three_ways_with_transposition on the_vision
+m.witness_state("the_vision", "decoded_three_ways_with_transposition",
+                cites=["Bereshit Rabbah 44:21", "Mekhilta DeRabbi Yishmael, Tractate Bachodesh 9:5", "Mekhilta DeRabbi Yishmael, Tractate Bachodesh 9:7"])
 
 # -------------------------- Gen.15.13 · THE_DECREE_SOJOURN_SERVE_AFFLICT ---
 # וַיֹּאמֶר לְאַבְרָם יָדֹעַ תֵּדַע כִּי־גֵר יִהְיֶה זַרְעֲךָ בְּאֶרֶץ לֹא
@@ -232,6 +248,10 @@ m.event("say", agent="YHWH")
 # earth-not-to-them; and-avadum-and-afflict-literally-otam-four-hundred-year
 m.fact("ger_yihyeh_zarakha_be_eretz_lo_lahem",
        "va_avadum_ve_inu_otam_arba_meot_shanah")
+# witness-tier presupposed read: dated_before_the_call_by_arithmetic on
+# four_hundred_years — read, not installed
+m.witness_read("four_hundred_years", "dated_before_the_call_by_arithmetic",
+                cites=["Mekhilta DeRabbi Yishmael, Tractate Pischa 14:15", "Bereshit Rabbah 39:8", "Bereshit Rabbah 53:4"])
 
 # -------------------------- Gen.15.14 · THE_JUDGMENT_AND_THE_EXODUS_WEALTH -
 # וְגַם אֶת־הַגּוֹי אֲשֶׁר יַעֲבֹדוּ דָּן אָנֹכִי וְאַחֲרֵי־כֵן יֵצְאוּ
@@ -257,6 +277,10 @@ m.step("Gen.15.15")
 # fact holds: come/bring-to-avotekha-in-safe; bury-in-sevah-tovah
 m.fact("tavo_el_avotekha_be_shalom",
        "tiqaver_be_sevah_tovah")
+# witness-tier presupposed read: leave_taking_formula on in_peace_clause —
+# read, not installed
+m.witness_read("in_peace_clause", "leave_taking_formula",
+                cites=["Berakhot 64a:10"])
 
 # -------------------------- Gen.15.16 · THE_FOURTH_GENERATION_AND_THE_UNFULL_INIQUITY -
 # וְדוֹר רְבִיעִי יָשׁוּבוּ הֵנָּה כִּי לֹא־שָׁלֵם עֲוֺן הָאֱמֹרִי
@@ -270,6 +294,10 @@ m.step("Gen.15.16")
 # return-henah; not-complete-perversity-the-Emorite-until-henah
 m.fact("ve_dor_revii_yashuvu_henah",
        "lo_shalem_avon_ha_emori_ad_henah")
+# witness-grounded state (its own tier): conditional_on_conduct on
+# two_clocks
+m.witness_state("two_clocks", "conditional_on_conduct",
+                cites=["Mishnah Eduyot 2:9", "Tosefta Eduyot 1:11", "Mekhilta DeRabbi Yishmael, Tractate Pischa 14:16"])
 
 # -------------------------- Gen.15.17 · THE_FIRE_BETWEEN_THE_PIECES --------
 # וַיְהִי הַשֶּׁמֶשׁ בָּאָה וַעֲלָטָה הָיָה וְהִנֵּה תַנּוּר עָשָׁן
@@ -308,6 +336,10 @@ m.fact("le_zarakha_natati_et_ha_aretz_ha_zot")
 m.fact("mi_nehar_mitzrayim_ad_ha_nahar_ha_gadol_nehar_perat")
 # reads without prior install (flag, not fix): river-Egypt, river-Euphrates
 m.presupposed("nahar_mitzrayim", "nehar_perat")
+# witness-tier presupposed read: statement_is_a_deed on natati_past_tense —
+# read, not installed
+m.witness_read("natati_past_tense", "statement_is_a_deed",
+                cites=["Bereshit Rabbah 44:22", "Jerusalem Talmud Challah 2:1:3"])
 
 # -------------------------- Gen.15.19 · THE_GRANT_ROSTER_ROW_ONE -----------
 # אֶת־הַקֵּינִי וְאֶת־הַקְּנִזִּי וְאֵת הַקַּדְמֹנִי
@@ -357,4 +389,28 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 23
+    assert sorted(m.WORLD["witnessed"]) == ['the_vision', 'two_clocks']
+    assert m.WORLD["witnessed"]['the_vision']["cites"] == ['Bereshit Rabbah 44:21', 'Mekhilta DeRabbi Yishmael, Tractate Bachodesh 9:5', 'Mekhilta DeRabbi Yishmael, Tractate Bachodesh 9:7']
+    assert all('decoded_three_ways_with_transposition' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['two_clocks']["cites"] == ['Mishnah Eduyot 2:9', 'Tosefta Eduyot 1:11', 'Mekhilta DeRabbi Yishmael, Tractate Pischa 14:16']
+    assert all('conditional_on_conduct' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('brought_him_outside', 'exemption_from_astrology'), ('bamah_eda_question', 'order_of_offerings_instituted'), ('pieces_rite', 'standing_covenant_form'), ('four_hundred_years', 'dated_before_the_call_by_arithmetic'), ('in_peace_clause', 'leave_taking_formula'), ('natati_past_tense', 'statement_is_a_deed')]
+    assert m.WITNESS_READS[0]["cites"] == ['Shabbat 156a:13', 'Bereshit Rabbah 44:12']
+    assert all('exemption_from_astrology' not in f for f in m.WORLD["facts"])
+    assert 'brought_him_outside' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Megillah 31b:5', 'Berakhot 7b:1']
+    assert all('order_of_offerings_instituted' not in f for f in m.WORLD["facts"])
+    assert 'bamah_eda_question' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifrei Devarim 171:6']
+    assert all('standing_covenant_form' not in f for f in m.WORLD["facts"])
+    assert 'pieces_rite' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Mekhilta DeRabbi Yishmael, Tractate Pischa 14:15', 'Bereshit Rabbah 39:8', 'Bereshit Rabbah 53:4']
+    assert all('dated_before_the_call_by_arithmetic' not in f for f in m.WORLD["facts"])
+    assert 'four_hundred_years' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Berakhot 64a:10']
+    assert all('leave_taking_formula' not in f for f in m.WORLD["facts"])
+    assert 'in_peace_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 44:22', 'Jerusalem Talmud Challah 2:1:3']
+    assert all('statement_is_a_deed' not in f for f in m.WORLD["facts"])
+    assert 'natati_past_tense' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

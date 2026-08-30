@@ -35,6 +35,10 @@ m.fact("kol_eleh_chavru_el_emeq_ha_sidim_hu_yam_ha_melach")
 # reads without prior install (flag, not fix): Shinar, Ellasar, Elam, Sodom,
 # Gomorrah, admah, Zeboiim, Zoar, vale-the-Siddim, yam-the-melach
 m.presupposed("shinar", "elasar", "elam", "sedom", "amora", "admah", "tzevoyim", "tzoar", "emeq_ha_sidim", "yam_ha_melach")
+# witness-tier presupposed read: member_of_the_three_scrolls_census on
+# written_hu_at_14_3 — read, not installed
+m.witness_read("written_hu_at_14_3", "member_of_the_three_scrolls_census",
+                cites=["Jerusalem Talmud Taanit 4:2:12"])
 
 # -------------------------- Gen.14.4 · THE_CLOCK_AND_THE_SWEEP -------------
 # שְׁתֵּים עֶשְׂרֵה שָׁנָה עָבְדוּ אֶת־כְּדָרְלָעֹמֶר וּשְׁלֹשׁ־עֶשְׂרֵה
@@ -96,6 +100,10 @@ m.event("flee", agent="melekh_sedom_va_amorah")
 m.event("take", agent="arbaat_ha_melakhim", themes=["kol_rekhush_sedom_va_amorah"])
 # reads without prior install (flag, not fix): Gentile-land
 m.presupposed("goyim_land")
+# witness-tier presupposed read: type_of_the_four_kingdoms on
+# four_kings_roster — read, not installed
+m.witness_read("four_kings_roster", "type_of_the_four_kingdoms",
+                cites=["Bereshit Rabbah 42:2", "Bereshit Rabbah 42:8", "Niddah 61a:20", "Pirkei Avot 6:10"])
 
 # -------------------------- Gen.14.12 · THE_TAKING_OF_LOT ------------------
 # וַיִּקְחוּ אֶת־לוֹט וְאֶת־רְכֻשׁוֹ בֶּן־אֲחִי אַבְרָם וַיֵּלֵכוּ וְהוּא
@@ -150,6 +158,10 @@ m.fact("chanikhav_yelidei_veito_shmonah_asar_u_shelosh_meot")
 m.event("pursue", agent="avram")
 # reads without prior install (flag, not fix): Daniel
 m.presupposed("dan")
+# witness-tier presupposed read: name_value_read_as_one_man on
+# three_hundred_eighteen — read, not installed
+m.witness_read("three_hundred_eighteen", "name_value_read_as_one_man",
+                cites=["Bereshit Rabbah 44:9", "Bereshit Rabbah 43:2"])
 
 # -------------------------- Gen.14.15 · THE_NIGHT_SPLIT --------------------
 # וַיֵּחָלֵק עֲלֵיהֶם לַיְלָה הוּא וַעֲבָדָיו וַיַּכֵּם וַיִּרְדְּפֵם
@@ -170,6 +182,10 @@ m.event("strike", agent="avram_va_avadav")
 m.event("pursue", agent="avram_va_avadav")
 # reads without prior install (flag, not fix): chovah, Damascus
 m.presupposed("chovah", "damaseq")
+# witness-tier presupposed read: bound_to_the_exodus_midnight on
+# divided_night — read, not installed
+m.witness_read("divided_night", "bound_to_the_exodus_midnight",
+                cites=["Mekhilta DeRabbi Yishmael, Tractate Pischa 13:3", "Bereshit Rabbah 43:3"])
 
 # -------------------------- Gen.14.16 · THE_BRINGING_BACK ------------------
 # וַיָּשֶׁב אֵת כָּל־הָרְכֻשׁ וְגַם אֶת־לוֹט אָחִיו וּרְכֻשׁוֹ הֵשִׁיב וְגַם
@@ -224,6 +240,10 @@ m.bless("malki_tzedeq", "avram")
 # God Most-High possessor heavens and-earth”) — fact holds: bless-Abram-to-
 # to-Most-High-qoneh-heavens-and-earth
 m.fact("barukh_avram_le_el_elyon_qoneh_shamayim_va_aretz")
+# witness-tier presupposed read: priesthood_transferred on
+# blessing_word_order — read, not installed
+m.witness_read("blessing_word_order", "priesthood_transferred",
+                cites=["Vayikra Rabbah 25:6", "Bereshit Rabbah 43:7", "Bereshit Rabbah 56:10"])
 
 # -------------------------- Gen.14.20 · THE_BLESSING_OF_EL_ELYON_AND_THE_TENTH -
 # וּבָרוּךְ אֵל עֶלְיוֹן אֲשֶׁר־מִגֵּן צָרֶיךָ בְּיָדֶךָ וַיִּתֶּן־לוֹ
@@ -272,6 +292,10 @@ m.event("say", agent="avram")
 # fact holds: rise-high-yadi-to-the-LORD-to-Most-High-qoneh-heavens-and-
 # earth
 m.fact("harimoti_yadi_el_YHWH_el_elyon_qoneh_shamayim_va_aretz")
+# witness-tier presupposed read: three_parses_and_the_first_tithe on
+# raised_hand — read, not installed
+m.witness_read("raised_hand", "three_parses_and_the_first_tithe",
+                cites=["Bereshit Rabbah 43:9", "Pesikta DeRav Kahana 10:6", "Sifrei Devarim 33:4", "Sotah 17a:21"])
 
 # -------------------------- Gen.14.23 · THE_THREAD_AND_THE_THONG -----------
 # אִם־מִחוּט וְעַד שְׂרוֹךְ־נַעַל וְאִם־אֶקַּח מִכָּל־אֲשֶׁר־לָךְ וְלֹא
@@ -319,4 +343,23 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 25
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('written_hu_at_14_3', 'member_of_the_three_scrolls_census'), ('four_kings_roster', 'type_of_the_four_kingdoms'), ('three_hundred_eighteen', 'name_value_read_as_one_man'), ('divided_night', 'bound_to_the_exodus_midnight'), ('blessing_word_order', 'priesthood_transferred'), ('raised_hand', 'three_parses_and_the_first_tithe')]
+    assert m.WITNESS_READS[0]["cites"] == ['Jerusalem Talmud Taanit 4:2:12']
+    assert all('member_of_the_three_scrolls_census' not in f for f in m.WORLD["facts"])
+    assert 'written_hu_at_14_3' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 42:2', 'Bereshit Rabbah 42:8', 'Niddah 61a:20', 'Pirkei Avot 6:10']
+    assert all('type_of_the_four_kingdoms' not in f for f in m.WORLD["facts"])
+    assert 'four_kings_roster' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 44:9', 'Bereshit Rabbah 43:2']
+    assert all('name_value_read_as_one_man' not in f for f in m.WORLD["facts"])
+    assert 'three_hundred_eighteen' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Mekhilta DeRabbi Yishmael, Tractate Pischa 13:3', 'Bereshit Rabbah 43:3']
+    assert all('bound_to_the_exodus_midnight' not in f for f in m.WORLD["facts"])
+    assert 'divided_night' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Vayikra Rabbah 25:6', 'Bereshit Rabbah 43:7', 'Bereshit Rabbah 56:10']
+    assert all('priesthood_transferred' not in f for f in m.WORLD["facts"])
+    assert 'blessing_word_order' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 43:9', 'Pesikta DeRav Kahana 10:6', 'Sifrei Devarim 33:4', 'Sotah 17a:21']
+    assert all('three_parses_and_the_first_tithe' not in f for f in m.WORLD["facts"])
+    assert 'raised_hand' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

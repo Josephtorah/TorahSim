@@ -25,6 +25,10 @@ m.step("Gen.22.1")
 # the-God-nisah-obj-marker-Abraham; and-say-behold-I
 m.fact("achar_ha_devarim_ve_ha_elohim_nisah_et_avraham",
        "va_yomer_hineni")
+# witness-grounded state (its own tier):
+# nature_disputed_and_deliberation_guaranteed on the_test
+m.witness_state("the_test", "nature_disputed_and_deliberation_guaranteed",
+                cites=["Bereshit Rabbah 55:6", "Bereshit Rabbah 55:5"])
 
 # -------------------------- Gen.22.2 · THE_CROWN_COMMAND -------------------
 # וַיֹּאמֶר קַח־נָא אֶת־בִּנְךָ אֶת־יְחִידְךָ אֲשֶׁר־אָהַבְתָּ אֶת־יִצְחָק
@@ -70,6 +74,10 @@ m.event("dawn_journey", agent="avraham")
 # fact holds: and-rise-early-in-the-morning-and-wrap-firmly-obj-marker-
 # chamoro
 m.fact("va_yashkem_ba_boqer_va_yachavosh_et_chamoro")
+# witness-tier presupposed read: love_upsets_the_order on
+# saddled_his_own_donkey — read, not installed
+m.witness_read("saddled_his_own_donkey", "love_upsets_the_order",
+                cites=["Bereshit Rabbah 55:8"])
 
 # -------------------------- Gen.22.4 · THE_THIRD_DAY_SIGHTING --------------
 # בַּיּוֹם הַשְּׁלִישִׁי וַיִּשָּׂא אַבְרָהָם אֶת־עֵינָיו וַיַּרְא
@@ -79,6 +87,10 @@ m.step("Gen.22.4")
 # ‹בַּיּוֹם הַשְּׁלִישִׁי … מֵרָחֹק› (“in-day the-third … from-remote”) —
 # fact holds: in-the-day-the-third-and-see-obj-marker-the-place-from-remote
 m.fact("ba_yom_ha_shelishi_va_yar_et_ha_maqom_me_rachoq")
+# witness-tier presupposed read: member_of_a_corpus_wide_pattern on
+# third_day — read, not installed
+m.witness_read("third_day", "member_of_a_corpus_wide_pattern",
+                cites=["Bereshit Rabbah 56:1"])
 
 # -------------------------- Gen.22.5 · THE_STAY_DEMAND_AND_THE_EXCLUSIVE_WE -
 # וַיֹּאמֶר אַבְרָהָם אֶל־נְעָרָיו שְׁבוּ־לָכֶם פֹּה עִם־הַחֲמוֹר וַאֲנִי
@@ -151,6 +163,10 @@ m.event("bind", agent="avraham", themes=["yitzchaq"])
 # him/its over the-altar”) — fact holds: and-tie-with-thongs-obj-marker-
 # Isaac-and-put/set-over-the-altar
 m.fact("va_yaaqod_et_yitzchaq_va_yasem_al_ha_mizbeach")
+# witness-tier presupposed read: fitness_law_in_the_subjects_mouth on
+# binding_request — read, not installed
+m.witness_read("binding_request", "fitness_law_in_the_subjects_mouth",
+                cites=["Bereshit Rabbah 56:8"])
 
 # -------------------------- Gen.22.10 · THE_HAND_AND_THE_KNIFE -------------
 # וַיִּשְׁלַח אַבְרָהָם אֶת־יָדוֹ וַיִּקַּח אֶת־הַמַּאֲכֶלֶת לִשְׁחֹט
@@ -162,6 +178,10 @@ m.step("Gen.22.10")
 # obj-marker hand-him/its and-take obj-marker the-something-to-eat-with to-
 # slaughter”) — event: reach-knife — agent Abraham
 m.event("reach_knife", agent="avraham")
+# witness-tier presupposed read: detached_instrument_required on
+# extended_his_hand — read, not installed
+m.witness_read("extended_his_hand", "detached_instrument_required",
+                cites=["Bereshit Rabbah 56:6"])
 
 # -------------------------- Gen.22.11 · THE_FIRST_DOUBLED_NAME_CALL --------
 # וַיִּקְרָא אֵלָיו מַלְאַךְ יְהוָה מִן־הַשָּׁמַיִם וַיֹּאמֶר אַבְרָהָם
@@ -175,6 +195,10 @@ m.install("malakh_YHWH")
 # ‹אַבְרָהָם אַבְרָהָם … הִנֵּנִי› (“Abraham Abraham … behold-me/my”) — fact
 # holds: Abraham-Abraham-and-say-behold-I
 m.fact("avraham_avraham_va_yomer_hineni")
+# witness-tier presupposed read: affection_exhortation_and_recurrence on
+# doubled_name — read, not installed
+m.witness_read("doubled_name", "affection_exhortation_and_recurrence",
+                cites=["Bereshit Rabbah 56:7"])
 
 # -------------------------- Gen.22.12 · THE_COUNTERMAND_AND_THE_CONFERRED_TITLE -
 # וַיֹּאמֶר אַל־תִּשְׁלַח יָדְךָ אֶל־הַנַּעַר וְאַל־תַּעַשׂ לוֹ מְאוּמָה
@@ -222,6 +246,10 @@ m.event("offer_substitute", agent="avraham", themes=["ha_ayil"])
 # offering-under-beno
 m.fact("ayil_neechaz_ba_sevakh_be_qarnav",
        "va_yaalehu_le_olah_tachat_beno")
+# witness-tier presupposed read: shofar_instituted_and_parts_inventoried on
+# the_ram — read, not installed
+m.witness_read("the_ram", "shofar_instituted_and_parts_inventoried",
+                cites=["Bereshit Rabbah 56:9"])
 
 # -------------------------- Gen.22.14 · THE_SENTENCE_NAME_AND_THE_SAYING ---
 # וַיִּקְרָא אַבְרָהָם שֵׁם־הַמָּקוֹם הַהוּא יְהוָה יִרְאֶה אֲשֶׁר יֵאָמֵר
@@ -237,6 +265,10 @@ m.name("ha_maqom", "YHWH_Yireh")
 # mountain YHWH see”) — pattern recorded: which-say-the-day-in-mountain-the-
 # LORD-yeraeh
 m.pattern("asher_yeamer_ha_yom_be_har_YHWH_yeraeh")
+# witness-tier presupposed read: rewritten_as_the_worship_institution on
+# the_naming — read, not installed
+m.witness_read("the_naming", "rewritten_as_the_worship_institution",
+                cites=["Onkelos Genesis 22:14", "Onkelos Genesis 22:16"])
 
 # -------------------------- Gen.22.15 · THE_SECOND_SKY_CALL ----------------
 # וַיִּקְרָא מַלְאַךְ יְהוָה אֶל־אַבְרָהָם שֵׁנִית מִן־הַשָּׁמָיִם
@@ -258,6 +290,10 @@ m.step("Gen.22.16")
 # LORD; heed-which-make-and-not-restrain
 m.fact("bi_nishbati_neum_YHWH",
        "yaan_asher_asita_ve_lo_chasakhta")
+# witness-tier presupposed read: answering_a_demand_for_no_further_tests on
+# the_oath — read, not installed
+m.witness_read("the_oath", "answering_a_demand_for_no_further_tests",
+                cites=["Bereshit Rabbah 56:11"])
 
 # -------------------------- Gen.22.17 · THE_DOUBLED_BLESSINGS --------------
 # כִּי־בָרֵךְ אֲבָרֶכְךָ וְהַרְבָּה אַרְבֶּה אֶת־זַרְעֲךָ כְּכוֹכְבֵי
@@ -340,4 +376,32 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 14
+    assert sorted(m.WORLD["witnessed"]) == ['the_test']
+    assert m.WORLD["witnessed"]['the_test']["cites"] == ['Bereshit Rabbah 55:6', 'Bereshit Rabbah 55:5']
+    assert all('nature_disputed_and_deliberation_guaranteed' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('saddled_his_own_donkey', 'love_upsets_the_order'), ('third_day', 'member_of_a_corpus_wide_pattern'), ('binding_request', 'fitness_law_in_the_subjects_mouth'), ('extended_his_hand', 'detached_instrument_required'), ('doubled_name', 'affection_exhortation_and_recurrence'), ('the_ram', 'shofar_instituted_and_parts_inventoried'), ('the_naming', 'rewritten_as_the_worship_institution'), ('the_oath', 'answering_a_demand_for_no_further_tests')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 55:8']
+    assert all('love_upsets_the_order' not in f for f in m.WORLD["facts"])
+    assert 'saddled_his_own_donkey' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 56:1']
+    assert all('member_of_a_corpus_wide_pattern' not in f for f in m.WORLD["facts"])
+    assert 'third_day' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 56:8']
+    assert all('fitness_law_in_the_subjects_mouth' not in f for f in m.WORLD["facts"])
+    assert 'binding_request' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 56:6']
+    assert all('detached_instrument_required' not in f for f in m.WORLD["facts"])
+    assert 'extended_his_hand' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 56:7']
+    assert all('affection_exhortation_and_recurrence' not in f for f in m.WORLD["facts"])
+    assert 'doubled_name' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 56:9']
+    assert all('shofar_instituted_and_parts_inventoried' not in f for f in m.WORLD["facts"])
+    assert 'the_ram' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Genesis 22:14', 'Onkelos Genesis 22:16']
+    assert all('rewritten_as_the_worship_institution' not in f for f in m.WORLD["facts"])
+    assert 'the_naming' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 56:11']
+    assert all('answering_a_demand_for_no_further_tests' not in f for f in m.WORLD["facts"])
+    assert 'the_oath' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

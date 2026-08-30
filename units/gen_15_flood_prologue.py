@@ -28,6 +28,9 @@ m.event("multiply", agent="ha_adam")
 m.event("born", themes=["banot"])
 # reads without prior install (flag, not fix): human
 m.presupposed("adam")
+# witness-grounded state (its own tier): propagation_or_strife on larov
+m.witness_state("larov", "propagation_or_strife",
+                cites=["Bava Batra 16b:6", "Bereshit Rabbah 26:4"])
 
 # -------------------------- Gen.6.2 · STOLEN_FORMULA_THE_TAKING ------------
 # וַיִּרְאוּ בְנֵי־הָאֱלֹהִים אֶת־בְּנוֹת הָאָדָם כִּי טֹבֹת הֵנָּה
@@ -54,6 +57,10 @@ m.spec_delta("va-yar Elohim ki-tov — the Maker inspects His work and verdicts 
 # themselves wives from-all that they-chose”) — event: take — agent sons-of-
 # the-God; theme wives-from-all-that-they-chose
 m.event("take", agent="bnei_ha_elohim", themes=["nashim_mi_kol_asher_bacharu"])
+# witness-grounded state (its own tier): identity_machloket_one_side_cursing
+# on benei_ha_elohim
+m.witness_state("benei_ha_elohim", "identity_machloket_one_side_cursing",
+                cites=["Bereshit Rabbah 26:5", "Yoma 67b:7"])
 
 # -------------------------- Gen.6.3 · DECREE_120_YEARS ---------------------
 # וַיֹּאמֶר יְהוָה לֹא־יָדוֹן רוּחִי בָאָדָם לְעֹלָם בְּשַׁגַּם הוּא בָשָׂר
@@ -70,6 +77,18 @@ m.event("say", agent="YHWH")
 # spirit-and-human-to-forever; and-shall-be-his-days-hundred-and-twenty-year
 m.fact("lo_yadon_ruchi_va_adam_le_olam",
        "ve_hayu_yamav_meah_ve_esrim_shanah")
+# witness-tier presupposed read: lawgiver_in_cipher on beshagam_clause —
+# read, not installed
+m.witness_read("beshagam_clause", "lawgiver_in_cipher",
+                cites=["Chullin 139b:10"])
+# witness-tier presupposed read: no_share_verdict_at_the_case_table on
+# lo_yadon — read, not installed
+m.witness_read("lo_yadon", "no_share_verdict_at_the_case_table",
+                cites=["Mishnah Sanhedrin 10:3", "Tosefta Sanhedrin 13:1", "Jerusalem Talmud Sanhedrin 10:3:3", "Bereshit Rabbah 26:6"])
+# witness-tier presupposed read: grace_period_with_warning_function on
+# hundred_twenty_years — read, not installed
+m.witness_read("hundred_twenty_years", "grace_period_with_warning_function",
+                cites=["Mekhilta DeRabbi Yishmael, Tractate Shirah 5:8", "Sifrei Devarim 43:31", "Bereshit Rabbah 30:7"])
 
 # -------------------------- Gen.6.4 · NEPHILIM_PARENTHESIS -----------------
 # הַנְּפִלִים הָיוּ בָאָרֶץ בַּיָּמִים הָהֵם וְגַם אַחֲרֵי־כֵן אֲשֶׁר
@@ -108,6 +127,14 @@ m.spec_delta("va-yar Elohim et-kol-asher asah ve-hinneh tov meod — He saw all 
 # of thoughts-of his-heart only evil all the-day”) — fact holds: all-
 # devising-of-thoughts-His-heart-only-evil-all-the-day
 m.fact("kol_yetzer_machshevot_libo_raq_ra_kol_ha_yom")
+# witness-tier presupposed read: persistent_adversary_process on
+# yetzer_clause — read, not installed
+m.witness_read("yetzer_clause", "persistent_adversary_process",
+                cites=["Kiddushin 30b:6", "Sukkah 52b:1", "Bava Batra 16a:8"])
+# witness-tier presupposed read: theft_engineered_below_jurisdiction on
+# chamas_trigger — read, not installed
+m.witness_read("chamas_trigger", "theft_engineered_below_jurisdiction",
+                cites=["Jerusalem Talmud Bava Metzia 4:2:2", "Sanhedrin 108a:12"])
 
 # -------------------------- Gen.6.6 · REGRET_AND_GRIEF ---------------------
 # וַיִּנָּחֶם יְהוָה כִּי־עָשָׂה אֶת־הָאָדָם בָּאָרֶץ וַיִּתְעַצֵּב
@@ -121,6 +148,10 @@ m.event("regret", agent="YHWH")
 # ‹וַיִּתְעַצֵּב אֶל־לִבּוֹ› (“and-He-grieved to His-heart”) — event: grieve
 # — agent the-LORD; theme His-heart
 m.event("grieve", agent="YHWH", themes=["libo"])
+# witness-grounded state (its own tier): polarity_dispute_regret_or_solace
+# on vayinachem
+m.witness_state("vayinachem", "polarity_dispute_regret_or_solace",
+                cites=["Bereshit Rabbah 27:4", "Sanhedrin 108a:15", "Sifrei Devarim 326:1"])
 
 # -------------------------- Gen.6.7 · WIPE_RESOLVE_PUSHED ------------------
 # וַיֹּאמֶר יְהוָה אֶמְחֶה אֶת־הָאָדָם אֲשֶׁר־בָּרָאתִי מֵעַל פְּנֵי
@@ -142,6 +173,10 @@ m.declare("YHWH", "CMD-US?",
 # livestock to creeper and-to bird-of the-heavens”) — fact holds: from-
 # human-to-livestock-to-creeper-and-to-bird-of-the-heavens
 m.fact("me_adam_ad_behemah_ad_remes_ve_ad_of_ha_shamayim")
+# witness-tier presupposed read: animals_included_and_earth_strayed on
+# emcheh_scope — read, not installed
+m.witness_read("emcheh_scope", "animals_included_and_earth_strayed",
+                cites=["Bereshit Rabbah 28:6", "Bereshit Rabbah 28:8", "Bereshit Rabbah 28:3"])
 
 # -------------------------- Gen.6.8 · FIVE_WORDS_FAVOR ---------------------
 # וְנֹחַ מָצָא חֵן בְּעֵינֵי יְהוָה
@@ -150,6 +185,10 @@ m.step("Gen.6.8")
 # ‹וְנֹחַ מָצָא חֵן בְּעֵינֵי יְהוָה› (“and-Noach found favor in-eyes-of
 # YHWH”) — fact holds: Noach-found-favor-in-eyes-of-the-LORD
 m.fact("noach_matza_chen_be_einei_YHWH")
+# witness-grounded state (its own tier): direction_grade_and_ground_disputed
+# on chen_found
+m.witness_state("chen_found", "direction_grade_and_ground_disputed",
+                cites=["Bereshit Rabbah 29:3", "Bereshit Rabbah 29:4", "Bereshit Rabbah 29:1", "Bereshit Rabbah 29:5"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -167,4 +206,32 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 10
+    assert sorted(m.WORLD["witnessed"]) == ['benei_ha_elohim', 'chen_found', 'larov', 'vayinachem']
+    assert m.WORLD["witnessed"]['benei_ha_elohim']["cites"] == ['Bereshit Rabbah 26:5', 'Yoma 67b:7']
+    assert all('identity_machloket_one_side_cursing' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['chen_found']["cites"] == ['Bereshit Rabbah 29:3', 'Bereshit Rabbah 29:4', 'Bereshit Rabbah 29:1', 'Bereshit Rabbah 29:5']
+    assert all('direction_grade_and_ground_disputed' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['larov']["cites"] == ['Bava Batra 16b:6', 'Bereshit Rabbah 26:4']
+    assert all('propagation_or_strife' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['vayinachem']["cites"] == ['Bereshit Rabbah 27:4', 'Sanhedrin 108a:15', 'Sifrei Devarim 326:1']
+    assert all('polarity_dispute_regret_or_solace' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('beshagam_clause', 'lawgiver_in_cipher'), ('lo_yadon', 'no_share_verdict_at_the_case_table'), ('hundred_twenty_years', 'grace_period_with_warning_function'), ('yetzer_clause', 'persistent_adversary_process'), ('chamas_trigger', 'theft_engineered_below_jurisdiction'), ('emcheh_scope', 'animals_included_and_earth_strayed')]
+    assert m.WITNESS_READS[0]["cites"] == ['Chullin 139b:10']
+    assert all('lawgiver_in_cipher' not in f for f in m.WORLD["facts"])
+    assert 'beshagam_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Sanhedrin 10:3', 'Tosefta Sanhedrin 13:1', 'Jerusalem Talmud Sanhedrin 10:3:3', 'Bereshit Rabbah 26:6']
+    assert all('no_share_verdict_at_the_case_table' not in f for f in m.WORLD["facts"])
+    assert 'lo_yadon' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Mekhilta DeRabbi Yishmael, Tractate Shirah 5:8', 'Sifrei Devarim 43:31', 'Bereshit Rabbah 30:7']
+    assert all('grace_period_with_warning_function' not in f for f in m.WORLD["facts"])
+    assert 'hundred_twenty_years' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Kiddushin 30b:6', 'Sukkah 52b:1', 'Bava Batra 16a:8']
+    assert all('persistent_adversary_process' not in f for f in m.WORLD["facts"])
+    assert 'yetzer_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Jerusalem Talmud Bava Metzia 4:2:2', 'Sanhedrin 108a:12']
+    assert all('theft_engineered_below_jurisdiction' not in f for f in m.WORLD["facts"])
+    assert 'chamas_trigger' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 28:6', 'Bereshit Rabbah 28:8', 'Bereshit Rabbah 28:3']
+    assert all('animals_included_and_earth_strayed' not in f for f in m.WORLD["facts"])
+    assert 'emcheh_scope' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -92,3 +92,16 @@ the ratification maxim's second seat (row 24); the shalem audit
 (row 25); the angels-as-messengers census (rows 1-2 + credit 75:4);
 Dina in the chest and its charge (row 15 — wires gen_57); the
 two-hours sun debt repaid (row 22 + credit 68:10). 
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers and to the Vayera, Chayei
+Sarah, Toledot and Vayetze ledgers on 2026-08-30. This ledger records
+its Onkelos track in the compact row form ("O1 · 32:1"), which the
+unit-level cite validator cannot match: a cite is valid only when the
+literal source string appears in a triage ledger. This block's Onkelos
+verses are therefore listed here in citable form, so the derivation may
+cite the translation it actually read. No verdict is changed and no row
+is rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 32:1, Onkelos Genesis 32:2, Onkelos Genesis 32:3, Onkelos Genesis 32:4, Onkelos Genesis 32:5, Onkelos Genesis 32:6, Onkelos Genesis 32:7, Onkelos Genesis 32:8, Onkelos Genesis 32:9, Onkelos Genesis 32:10, Onkelos Genesis 32:11, Onkelos Genesis 32:12, Onkelos Genesis 32:13, Onkelos Genesis 32:14, Onkelos Genesis 32:15, Onkelos Genesis 32:16, Onkelos Genesis 32:17, Onkelos Genesis 32:18, Onkelos Genesis 32:19, Onkelos Genesis 32:20, Onkelos Genesis 32:21, Onkelos Genesis 32:22, Onkelos Genesis 32:23, Onkelos Genesis 32:24, Onkelos Genesis 32:25, Onkelos Genesis 32:26, Onkelos Genesis 32:27, Onkelos Genesis 32:28, Onkelos Genesis 32:29, Onkelos Genesis 32:30, Onkelos Genesis 32:31, Onkelos Genesis 32:32, Onkelos Genesis 32:33.

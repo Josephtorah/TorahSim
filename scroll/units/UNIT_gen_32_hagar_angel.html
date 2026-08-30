@@ -34,8 +34,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 .arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
        border-radius:8px; padding:.4rem .7rem; }
 .arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
-</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_32_hagar_angel?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Hagar: the maid given, the flight, the angel, the names (16:1-16) <span class='badge frozen'>MODEL · REV 2 · GATES GREEN</span></h1>
-<div class="meta">unit <b>gen_32_hagar_angel</b> · Genesis 16:1-16 · derive logic_derived_v1 · phase C-32</div>
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_32_hagar_angel?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Hagar: the maid given, the flight, the angel, the names (16:1-16) <span class='badge frozen'>MODEL · REV 4 · GATES GREEN</span></h1>
+<div class="meta">unit <b>gen_32_hagar_angel</b> · Genesis 16:1-16 · derive logic_derived_v2_full_rule · phase C-32</div>
 <div class="meta"><a href="../#Gen/16/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
 <p><span class="he">אַתָּה אֵל רֳאִי</span> · <i>atah El Roi</i> · &#x27;You are a God of seeing&#x27;</p>
 <div class="note">Logic-derived v1: v3 taamim (cantillation accents) trees from DB tree_json -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (bo(avram, el_shifchati), yishpot(YHWH, beini_u_veinekha), asi(saray, la_hagar_ha_tov_be_ einayikh), shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha), name(YHWH) := El_Roi). Per-verse steps x16 (the staged span order, ratified by the derive-order).</div>
@@ -93,6 +93,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וַתִּתֵּן אֹתָהּ לְאַבְרָם אִישָׁהּ לוֹ לְאִשָּׁה</span> · <i>va-titen otah le-avram ishah lo le-ishah</i><br><span class="gloss">= and-titen her to-avram woman not woman</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(mi_qetz_eser_shanim_le_shevet_avram_be_eretz_kenaan, t0)</span><br><span class="gloss">= HOLDS(from-qetz-eser-shanim-to-shevet-avram-in-earth-kenaan, t0)</span><br>The clock held as fact: TEN YEARS in the land — the letter dates the initiative to the promise&#x27;s delay [letter fact; the chain&#x27;s ten-year rule is the chain&#x27;s, named-only]. QETZ (&#x27;end&#x27;) token 4 — token 1 was 6:13&#x27;s &#x27;the END of all flesh&#x27; [census, prose].
 </td><td><span class="he">מִקֵּץ עֶשֶׂר שָׁנִים לְשֶׁבֶת אַבְרָם בְּאֶרֶץ כְּנָעַן</span> · <i>mi-qetz eser shanim le-shevet avram be-eretz kenaan</i><br><span class="gloss">= from-qetz eser shanim to-shevet avram earth kenaan</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(ten_years_clause, binding_rule_on_a_self_graded_hint)</span><br><span class="gloss">= WITNESS-READ(ten-years-clause, binding-rule-on-a-self-graded-hint)</span><br>A BINDING RULE WHOSE SOURCE THE TRADITION GRADES AS WEAK [claim G32-16]. The Mishnah rules that a man who has waited ten years without children must act, and the Tanna&#x27;s stated reason is THIS verse&#x27;s ten years in the land of Canaan - from which follows the rider that years spent outside the Land do not count, with exclusions for sickness and imprisonment. But the Tosefta records the derivation&#x27;s grade openly: &#x27;NO PROOF, BUT A HINT&#x27;, and the Babylonian seat repeats it. A live obligation resting on a source the tradition itself marks as suggestive rather than probative. [folded shape: priced law]
+</td><td>—</td><td class='cite'>Tosefta Yevamot 8:4, Yevamot 64a:5, Bereshit Rabbah 45:3, Jerusalem Talmud Yevamot 6:6:3, Mishnah Yevamot 6:6</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Take and give, the war chapter&#x27;s two abused verbs, come home to the household: a wife takes her maid and gives her husband a wife — the letter prices nothing, dates it to ten silent years, and ends the verse on the word that changes Hagar&#x27;s title.</div>
 </div>
@@ -123,6 +125,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">חֲמָסִי עָלֶיךָ אָנֹכִי נָתַתִּי שִׁפְחָתִי בְּחֵיקֶךָ</span> · <i>chamasi alekha anokhi natati shifchati be-cheqekha</i><br><span class="gloss">= chamasi alekha anokhi natati shifchati in-cheqekha</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(saray, LET(yishpot(YHWH, beini_u_veinekha)))</span><br><span class="gloss">= DECLARE(saray, LET(yishpot(the-LORD, beini-and-veinekha)))</span><br>THE DEMAND ON GOD [flag 2 — the unit&#x27;s second-boldest, staged both ways; owner triages]: YISHPOT (&#x27;let-Him- JUDGE&#x27;) — SHAFAT&#x27;s TORAH DEBUT, and the DB codes a TRUE JUSSIVE (HVqj3ms): the jussive-LET class controls, frozen gen_30&#x27;s device quoted (&#x27;YIQCHU is JUSSIVE (HVqj3mp, DB-verified), and the controlling class is frozen gen_23&#x27;s... All four pushed and letter-faithfully OPEN&#x27;) — pushed, with YHWH as the demanded agent: the corpus&#x27;s FIRST HUMAN DEMAND ON GOD, aimed by a woman, from inside a marriage. OPEN letter-faithfully: no judging between them is ever narrated [the alternative — invocation-fact — staged in the note; the letter&#x27;s mood decides and the mood is jussive]. The judge-verb&#x27;s career: token 2 is 18:25 — ha-SHOFET kol-ha-aretz (&#x27;shall the JUDGE of all the earth...&#x27; — Abraham adopts the office Sarai invoked); token 3-4 are 19:9, Sodom&#x27;s mob spitting the verb back at Lot [census, prose]. The demand ends the verse [tree fact]; the written source dots u-veinekha (one of the Torah&#x27;s puncta marks — noted, no claim). Onkelos: chamasi -&gt; DIN LI ALAKH (&#x27;I have a CASE against you&#x27;) and yishpot -&gt; yedin — the buffer harmonizes grievance and demand into one din-vocabulary [dual-track].
 </td><td><span class="he">יִשְׁפֹּט יְהוָה בֵּינִי וּבֵינֶיךָ</span> · <i>yishpot YHWH beini u-veinekha</i><br><span class="gloss">= yishpot the-LORD beini and-veinekha</span></td><td class='cite'>TIR-026</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(let_the_lord_judge, rule_stated_then_narrowed)</span><br><span class="gloss">= WITNESS-READ(let-the-lord-judge, rule-stated-then-narrowed)</span><br>A RULE DERIVED HERE AND LIMITED LATER [claim G32-17]. R. Chanan holds that whoever passes judgment on another to Heaven is punished first, with this verse&#x27;s &#x27;let the Lord judge between me and you&#x27; the proof and the later death the sequel. The Babylonian seat then supplies the limiting clause the earlier statement lacked: only where earthly recourse exists. Both forms carried, the refinement recorded rather than merged. [folded shape: priced law]
+</td><td>—</td><td class='cite'>Bava Kamma 93a:3, Rosh Hashanah 16b:5</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The grievance escalates past its addressee: a flood-word for a household wrong, a covenant-perfect for a gift gone sour — and then over the husband&#x27;s head to the only court left, in a mood the machine must file as the corpus&#x27;s first human demand on God.</div>
 </div>
@@ -139,6 +143,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וַתְּעַנֶּהָ שָׂרַי</span> · <i>va-teaneha saray</i><br><span class="gloss">= and-teaneha saray</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
 <tr class="opline"><td>EVENT</td><td><span class="expr">flee(e10) ∧ Agent(e10, hagar)</span><br>BARACH (&#x27;flee&#x27;) — TORAH DEBUT, born on Hagar (tokens 3-5 are Yaakov&#x27;s flights: the flee-verb&#x27;s early career is the household&#x27;s underdogs) [census, prose]. MI-PANEHA (&#x27;from her FACE&#x27;) — verse-final: the face-word opens its own run (her face 16:6, my mistress&#x27;s face 16:8, the face of all his brothers 16:12) [tree fact; census, prose].
 </td><td><span class="he">וַתִּבְרַח מִפָּנֶיהָ</span> · <i>va-tivrach mi-paneha</i><br><span class="gloss">= and-tivrach from-paneha</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(affliction_scene, statutes_pleaded_and_precedent_set)</span><br><span class="gloss">= WITNESS-READ(affliction-scene, statutes-pleaded-and-precedent-set)</span><br>LAW ARGUED INSIDE THE NARRATIVE, AND THE NARRATIVE BECOMING LAW [claim G32-21]. Against the harsh treatment TWO statutes are cited within the scene itself - the captive woman who may not be enslaved because she was afflicted, and the bondswoman who may not be sold in betrayal - so the episode is argued as a legal case in its own terms. It is then invoked as PRECEDENT by Rachel, who introduces her rival on its strength. And a standing proverb is sourced to its dialogue: &#x27;if your friend calls you a donkey, prepare a saddle&#x27;, from the angel saying &#x27;maidservant of Sarai&#x27; and her answering &#x27;my mistress Sarai&#x27;. [folded shape: priced law]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 45:6, Bereshit Rabbah 71:7, Bava Kamma 92b:5</td><td>witnessed</td></tr>
 </table>
 <div class="meta">A permission built of good and eyes is executed as affliction in one verb&#x27;s swap — the machine keeps the demand open forever, the letter keeps its silence, and the maid keeps the road: the chapter&#x27;s first flight is from a face.</div>
 </div>
@@ -150,6 +156,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr class="opline"><td>EVENT</td><td><span class="expr">find(e11) ∧ Agent(e11, malakh_YHWH) ∧ Theme(e11, hagar)</span><br><span class="gloss">= find(e11) ∧ Agent(e11, malakh-the-LORD) ∧ Theme(e11, hagar)</span><br>THE ANGEL&#x27;S TORAH DEBUT [flag 6]: MALAKH YHWH (&#x27;the messenger/angel of YHWH&#x27;, 4397 token 1; tokens 1-4 all in-span, tokens 5-6 are 19:1/19:15 — Sodom&#x27;s pair): the messenger-class is born FINDING a runaway Egyptian slave. VA-YIMTZAAH — MATZA token 7: the find-verb&#x27;s career (the failed helper-search of 2:20 — frozen gen_09&#x27;s line quoted: &#x27;lo matza (&quot;did not find&quot; — matza&#x27;s first token, debuting in a FAILED search)&#x27;; Cain&#x27;s feared finders 4:14-15; Noach&#x27;s favor 6:8; the dove&#x27;s no-rest 8:9; Babel&#x27;s plain 11:2) arrives at its first divine-side finding OF A PERSON — the search that failed for Adam succeeds on Hagar [census, prose]. THE LEMMA SPLIT [flag 10]: the contempt of 16:4-6 ran through be-eineha (5869 a, &#x27;eye&#x27;); the rescue sits al-EIN ha-mayim (5869 b, &#x27;spring&#x27;) — same skeleton, split lemma: contempt and rescue share one written word the lexicon divides [lemma-split class, held as observation]. DEREKH token 3 (be-derekh Shur) — tokens 1-2: the guarded WAY to the tree of life (3:24), all flesh corrupting its WAY (6:12): the way-word&#x27;s third token is a slave&#x27;s road to Egypt [census, prose].
 </td><td><span class="he">וַיִּמְצָאָהּ מַלְאַךְ יְהוָה</span> · <i>va-yimtzaah malakh YHWH</i><br><span class="gloss">= and-yimtzaah malakh the-LORD</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
 <tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">shur are READ without prior install (known geography)</span><br>flag, not fix (the Egypt road; shur tokens 2-4 are 20:1, 25:18, Exod 15:22 — Abraham&#x27;s sojourn, Yishmael&#x27;s range, the sea&#x27;s far shore; Onkelos maps it Chagra — identification class, dual-track)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(angel_of_the_lord, divine_name_marks_the_mode)</span><br><span class="gloss">= WITNESS-READ(angel-fowl-the-lord, divine-name-marks-the-mode)</span><br>A RULE ABOUT THE MACHINE&#x27;S OWN NAME-TOKENS, EXEMPLIFIED HERE [claim G32-18]. R. Natan states it to R. Shimon ben Yochai: wherever the text says &#x27;the angel of the LORD&#x27; one thing is meant, and where it says &#x27;angel of ELOHIM&#x27;, JUDGMENT is meant - that name everywhere denoting a judge. Our 16:7 and 16:9 are named as the type-cases of the first form. The divine-name distinction this unit records mechanically is here a named interpretive rule with our tokens supplying its exemplars. [folded shape: kept record]
+</td><td>—</td><td class='cite'>Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 5:4</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The corpus&#x27;s first angel does not descend in fire or stand in a doorway: it finds — the verb of failed searches and dove&#x27;s feet — and what it finds is the one person in the story running away, at a spring the grammar splits from the eyes that caused the flight.</div>
 </div>
@@ -202,6 +210,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה</span> · <i>va-yomer lah malakh YHWH</i><br><span class="gloss">= and-yomer lah malakh the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hinakh_harah_ve_yoladt_ben, t0) ∧ HOLDS(ve_qarat_shemo_yishmael, t0) ∧ HOLDS(ki_shama_YHWH_el_onyekh, t0)</span><br><span class="gloss">= HOLDS(hinakh-harah-and-yoladt-ben, t0) ∧ HOLDS(and-qarat-shemo-yishmael, t0) ∧ HOLDS(when-shama-the-LORD-to-onyekh, t0)</span><br>THE PRE-BIRTH NAME-DECREE AS FACT [flag 11]: VE-QARAT (&#x27;and you shall CALL his name&#x27;) is WEQATAL (HVqq2fs — TIR-029&#x27;s future-chain; frozen gen_31&#x27;s va-avadum class): a decree-FACT, not a demand and not a NAME op — the corpus&#x27;s first pre-birth naming, decreed to the MOTHER (its executor at 16:15 will be the father — the arc is prose; the class&#x27;s next token is 17:19, God naming Yitzchak, named-only). THE NAME IS THE VERB&#x27;S MONUMENT: YISHMAEL (&#x27;God hears&#x27;) — KI SHAMA YHWH EL-ONYEKH (&#x27;for YHWH has HEARD your affliction&#x27;): shama token 8, closing the in-span pair with 16:2&#x27;s token 7 — Abram heard the wife&#x27;s voice, YHWH heard the maid&#x27;s affliction [flag 8, census]. ONI (&#x27;affliction&#x27;) token 1 — the afflict-root nominalized; token 2 is 29:32, LEAH&#x27;s be-onyi (the same heard-my-affliction naming-grammar at Reuben); the Exodus shape (&#x27;I have seen the affliction of My people&#x27;, 3:7) is the formula&#x27;s horizon [census, prose, named-only]. The verse ENDS on onyekh — the affliction verse-final, as 16:6 left it and 16:9 re-commanded it [tree fact]. Onkelos: arei QABIL YHWH TZELOTIKH (&#x27;YHWH has RECEIVED your PRAYER&#x27;) — the affliction replaced by prayer: the headline&#x27;s first half [dual-track, flagged].
 </td><td><span class="he">הִנָּךְ הָרָה וְיֹלַדְתְּ בֵּן וְקָרָאת שְׁמוֹ יִשְׁמָעֵאל כִּי־שָׁמַע יְהוָה אֶל־עָנְיֵךְ</span> · <i>hinakh harah ve-yoladt ben ve-qarat shemo yishmael ki-shama YHWH el-onyekh</i><br><span class="gloss">= hinakh harah and-yoladt ben and-qarat shemo yishmael when-shama the-LORD to-onyekh</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_STATE</td><td><span class="expr">WITNESS(angel_and_naming_censuses, both_disputed)</span><br><span class="gloss">= WITNESS(angel-and-naming-censuses, both-disputed)</span><br>TWO CENSUSES COUNTED OFF THIS UNIT&#x27;S REPETITIONS [claim G32-20]. The number of angels is taken from the verses&#x27; own repeated verbs: FIVE on the count of the speech-verbs, FOUR on the count of the messenger-nouns - a numeric dispute read directly off our ink. And the census of those named before birth carries our Ishmael as a disputed member: &#x27;some say also Ishmael, among the nations&#x27; at one seat, a full member at another. Both counts taken from this unit, both carried with their variance per credit guard 3. [folded shape: recorded dispute]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 45:7, Jerusalem Talmud Berakhot 1:6:10, Bereshit Rabbah 45:8</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The annunciation names the child after what no one else in the chapter did: listening. She was given, taken, afflicted, questioned, and sent back — and the name says only this: God hears, and what He heard the verse ends on.</div>
 </div>
@@ -224,6 +234,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וַתִּקְרָא שֵׁם־יְהוָה הַדֹּבֵר אֵלֶיהָ אַתָּה אֵל רֳאִי</span> · <i>va-tiqra shem-YHWH ha-dover eleha atah el roi</i><br><span class="gloss">= and-tiqra shem-the-LORD the-dover eleha you to roi</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hagam_halom_raiti_acharei_roi, t0)</span><br><span class="gloss">= HOLDS(hagam-halom-raiti-acharei-roi, t0)</span><br>The naming&#x27;s ground, held in the letter&#x27;s own hard words (the syntax is famously difficult — held as spoken fact, unresolved): HAGAM HALOM RAITI ACHAREI ROI (&#x27;have I even HERE seen, after the One seeing me&#x27;) — HALOM (&#x27;here&#x27;) debut; RAAH doubled (raiti / roi — she SEES the One who SEES her) after the chapter&#x27;s seeing ran only through contempt-eyes (16:4-5) [census, prose]. THE ROI-SKELETON ON THREE CONSECUTIVE THRONES: 16:13&#x27;s etnachta (EL ROI), 16:13&#x27;s silluq (acharei ROI), 16:14&#x27;s etnachta (beer-lachai-ROI) [tree fact]. KI AMRAH (&#x27;for she SAID&#x27;) — the naming-reason form of the mothers&#x27; etymologies (4:25&#x27;s class), here grounding a name for God [letter fact].
 </td><td><span class="he">כִּי אָמְרָה הֲגַם הֲלֹם רָאִיתִי אַחֲרֵי רֹאִי</span> · <i>ki amrah hagam halom raiti acharei roi</i><br><span class="gloss">= when amrah hagam halom raiti acharei roi</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(el_roi, name_coined_here_still_in_use)</span><br><span class="gloss">= WITNESS-READ(to-roi, name-coined-here-still-in-use)</span><br>A NAME MINTED IN THIS UNIT AND STILL SPOKEN [claim G32-19]. The divine name given here is carried into live usage as a blessing formula - the One who SEES AND IS NOT SEEN - cited with a named precedent. The name is separately expounded as &#x27;You who see the wretchedness of the wretched&#x27;, with a seeing-hierarchy claim attached: the maidservant saw what her mistress did not. [folded shape: kept record]
+</td><td>—</td><td class='cite'>Jerusalem Talmud Peah 8:8:13, Bereshit Rabbah 45:10</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The woman no one in the story addresses by her own name gives God one: the naming verb the corpus reserves for mothers and builders runs uphill for the only time — and the reason is grammar&#x27;s plainest astonishment: I was seen.</div>
 </div>
@@ -772,6 +784,10 @@ m.event(&quot;give&quot;, agent=&quot;saray&quot;, themes=[&quot;hagar&quot;])
 # years to-dwell/sit Abram in-earth Canaan”) — fact holds: from-end-ten-
 # years-to-dwell/sit-Abram-in-earth-Canaan
 m.fact(&quot;mi_qetz_eser_shanim_le_shevet_avram_be_eretz_kenaan&quot;)
+# witness-tier presupposed read: binding_rule_on_a_self_graded_hint on
+# ten_years_clause — read, not installed
+m.witness_read(&quot;ten_years_clause&quot;, &quot;binding_rule_on_a_self_graded_hint&quot;,
+                cites=[&quot;Tosefta Yevamot 8:4&quot;, &quot;Yevamot 64a:5&quot;, &quot;Bereshit Rabbah 45:3&quot;, &quot;Jerusalem Talmud Yevamot 6:6:3&quot;, &quot;Mishnah Yevamot 6:6&quot;])
 
 # -------------------------- Gen.16.4 · THE_COMPLIANCE_AND_THE_CONTEMPT -----
 # וַיָּבֹא אֶל־הָגָר וַתַּהַר וַתֵּרֶא כִּי הָרָתָה וַתֵּקַל גְּבִרְתָּהּ
@@ -812,6 +828,10 @@ m.fact(&quot;chamasi_alekha&quot;,
 # and-veinekha)
 m.declare(&quot;saray&quot;, &quot;LET&quot;,
           &quot;yishpot(YHWH, beini_u_veinekha)&quot;)
+# witness-tier presupposed read: rule_stated_then_narrowed on
+# let_the_lord_judge — read, not installed
+m.witness_read(&quot;let_the_lord_judge&quot;, &quot;rule_stated_then_narrowed&quot;,
+                cites=[&quot;Bava Kamma 93a:3&quot;, &quot;Rosh Hashanah 16b:5&quot;])
 
 # -------------------------- Gen.16.6 · THE_PERMISSION_THE_AFFLICTION_THE_FLIGHT -
 # וַיֹּאמֶר אַבְרָם אֶל־שָׂרַי הִנֵּה שִׁפְחָתֵךְ בְּיָדֵךְ עֲשִׂי־לָהּ
@@ -834,6 +854,10 @@ m.event(&quot;afflict&quot;, agent=&quot;saray&quot;, themes=[&quot;hagar&quot;]
 # ‹וַתִּבְרַח מִפָּנֶיהָ› (“and-bolt from-face-her/its”) — event: flee —
 # agent Hagar
 m.event(&quot;flee&quot;, agent=&quot;hagar&quot;)
+# witness-tier presupposed read: statutes_pleaded_and_precedent_set on
+# affliction_scene — read, not installed
+m.witness_read(&quot;affliction_scene&quot;, &quot;statutes_pleaded_and_precedent_set&quot;,
+                cites=[&quot;Bereshit Rabbah 45:6&quot;, &quot;Bereshit Rabbah 71:7&quot;, &quot;Bava Kamma 92b:5&quot;])
 
 # -------------------------- Gen.16.7 · THE_ANGEL_FINDS_HER -----------------
 # וַיִּמְצָאָהּ מַלְאַךְ יְהוָה עַל־עֵין הַמַּיִם בַּמִּדְבָּר עַל־הָעַיִן
@@ -846,6 +870,10 @@ m.step(&quot;Gen.16.7&quot;)
 m.event(&quot;find&quot;, agent=&quot;malakh_YHWH&quot;, themes=[&quot;hagar&quot;])
 # reads without prior install (flag, not fix): Shur
 m.presupposed(&quot;shur&quot;)
+# witness-tier presupposed read: divine_name_marks_the_mode on
+# angel_of_the_lord — read, not installed
+m.witness_read(&quot;angel_of_the_lord&quot;, &quot;divine_name_marks_the_mode&quot;,
+                cites=[&quot;Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 5:4&quot;])
 
 # -------------------------- Gen.16.8 · THE_WHERE_QUESTIONS_AND_THE_RUNAWAY_ANSWER -
 # וַיֹּאמַר הָגָר שִׁפְחַת שָׂרַי אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי וַתֹּאמֶר
@@ -915,6 +943,10 @@ m.event(&quot;say&quot;, agent=&quot;malakh_YHWH&quot;)
 m.fact(&quot;hinakh_harah_ve_yoladt_ben&quot;,
        &quot;ve_qarat_shemo_yishmael&quot;,
        &quot;ki_shama_YHWH_el_onyekh&quot;)
+# witness-grounded state (its own tier): both_disputed on
+# angel_and_naming_censuses
+m.witness_state(&quot;angel_and_naming_censuses&quot;, &quot;both_disputed&quot;,
+                cites=[&quot;Bereshit Rabbah 45:7&quot;, &quot;Jerusalem Talmud Berakhot 1:6:10&quot;, &quot;Bereshit Rabbah 45:8&quot;])
 
 # -------------------------- Gen.16.12 · THE_WILD_ASS_ORACLE ----------------
 # וְהוּא יִהְיֶה פֶּרֶא אָדָם יָדוֹ בַכֹּל וְיַד כֹּל בּוֹ וְעַל־פְּנֵי
@@ -942,6 +974,10 @@ m.name(&quot;YHWH&quot;, &quot;El_Roi&quot;)
 # ‹כִּי אָמְרָה הֲגַם הֲלֹם רָאִיתִי אַחֲרֵי רֹאִי› (“that say the-also
 # hither see after see-me/my”) — fact holds: hagam-hither-see-acharei-sight
 m.fact(&quot;hagam_halom_raiti_acharei_roi&quot;)
+# witness-tier presupposed read: name_coined_here_still_in_use on el_roi —
+# read, not installed
+m.witness_read(&quot;el_roi&quot;, &quot;name_coined_here_still_in_use&quot;,
+                cites=[&quot;Jerusalem Talmud Peah 8:8:13&quot;, &quot;Bereshit Rabbah 45:10&quot;])
 
 # -------------------------- Gen.16.14 · THE_WELL_OF_THE_LIVING_ONE_WHO_SEES -
 # עַל־כֵּן קָרָא לַבְּאֵר בְּאֵר לַחַי רֹאִי הִנֵּה בֵין־קָדֵשׁ וּבֵין
@@ -997,5 +1033,24 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 25
+    assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;angel_and_naming_censuses&#x27;]
+    assert m.WORLD[&quot;witnessed&quot;][&#x27;angel_and_naming_censuses&#x27;][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 45:7&#x27;, &#x27;Jerusalem Talmud Berakhot 1:6:10&#x27;, &#x27;Bereshit Rabbah 45:8&#x27;]
+    assert all(&#x27;both_disputed&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;ten_years_clause&#x27;, &#x27;binding_rule_on_a_self_graded_hint&#x27;), (&#x27;let_the_lord_judge&#x27;, &#x27;rule_stated_then_narrowed&#x27;), (&#x27;affliction_scene&#x27;, &#x27;statutes_pleaded_and_precedent_set&#x27;), (&#x27;angel_of_the_lord&#x27;, &#x27;divine_name_marks_the_mode&#x27;), (&#x27;el_roi&#x27;, &#x27;name_coined_here_still_in_use&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Tosefta Yevamot 8:4&#x27;, &#x27;Yevamot 64a:5&#x27;, &#x27;Bereshit Rabbah 45:3&#x27;, &#x27;Jerusalem Talmud Yevamot 6:6:3&#x27;, &#x27;Mishnah Yevamot 6:6&#x27;]
+    assert all(&#x27;binding_rule_on_a_self_graded_hint&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;ten_years_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Bava Kamma 93a:3&#x27;, &#x27;Rosh Hashanah 16b:5&#x27;]
+    assert all(&#x27;rule_stated_then_narrowed&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;let_the_lord_judge&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 45:6&#x27;, &#x27;Bereshit Rabbah 71:7&#x27;, &#x27;Bava Kamma 92b:5&#x27;]
+    assert all(&#x27;statutes_pleaded_and_precedent_set&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;affliction_scene&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 5:4&#x27;]
+    assert all(&#x27;divine_name_marks_the_mode&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;angel_of_the_lord&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Jerusalem Talmud Peah 8:8:13&#x27;, &#x27;Bereshit Rabbah 45:10&#x27;]
+    assert all(&#x27;name_coined_here_still_in_use&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;el_roi&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-25 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-08-30 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

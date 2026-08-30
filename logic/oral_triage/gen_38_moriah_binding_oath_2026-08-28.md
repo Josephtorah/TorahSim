@@ -88,3 +88,17 @@ see-what-I-see classification claim (credit 56:2); the naming's two
 spine readings — remember-the-binding and the worship institution
 (credit 56:10 + O4); Moriah=worship in the buffer (O1); the
 revealed-before conversion at 22:8 (O2); the Memra oath (O5).
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers on 2026-08-30. This ledger
+records its Onkelos track in the compact row form ("O1 · 22:1"), which
+the unit-level cite validator cannot match: a cite is valid only when
+the literal source string appears in a triage ledger. This block's
+Onkelos verses are therefore listed here in citable form, so the
+derivation may cite the translation it actually read. No verdict is
+changed and no row is rewritten — this is a naming key for the Onkelos
+rows above.
+
+Onkelos Genesis 22:1, Onkelos Genesis 22:2, Onkelos Genesis 22:3, Onkelos Genesis 22:4, Onkelos Genesis 22:5, Onkelos Genesis 22:6, Onkelos Genesis 22:7, Onkelos Genesis 22:8, Onkelos Genesis 22:9, Onkelos Genesis 22:10, Onkelos Genesis 22:11, Onkelos Genesis 22:12, Onkelos Genesis 22:13, Onkelos Genesis 22:14, Onkelos Genesis 22:15, Onkelos Genesis 22:16, Onkelos Genesis 22:17, Onkelos Genesis 22:18, Onkelos Genesis 22:19, Onkelos Genesis 22:20, Onkelos Genesis 22:21, Onkelos Genesis 22:22, Onkelos Genesis 22:23, Onkelos Genesis 22:24.

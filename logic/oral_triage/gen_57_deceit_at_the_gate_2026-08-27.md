@@ -67,3 +67,16 @@ cases (row 5); the thirteen-years number and the gate-stand seat of
 Simeon-marriage/burial aftermath (row 6); the Job-marriage claim at
 its direct witness (credit 19:12 + the dating dispute 57:4); the
 silence rule at 34:5 (credit 80:6); the deathbed echo (credit 99:7). 
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers and to the Vayera, Chayei
+Sarah, Toledot and Vayetze ledgers on 2026-08-30. This ledger records
+its Onkelos track in the compact row form ("O1 · 34:1"), which the
+unit-level cite validator cannot match: a cite is valid only when the
+literal source string appears in a triage ledger. This block's Onkelos
+verses are therefore listed here in citable form, so the derivation may
+cite the translation it actually read. No verdict is changed and no row
+is rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 34:1, Onkelos Genesis 34:2, Onkelos Genesis 34:3, Onkelos Genesis 34:4, Onkelos Genesis 34:5, Onkelos Genesis 34:6, Onkelos Genesis 34:7, Onkelos Genesis 34:8, Onkelos Genesis 34:9, Onkelos Genesis 34:10, Onkelos Genesis 34:11, Onkelos Genesis 34:12, Onkelos Genesis 34:13, Onkelos Genesis 34:14, Onkelos Genesis 34:15, Onkelos Genesis 34:16, Onkelos Genesis 34:17, Onkelos Genesis 34:18, Onkelos Genesis 34:19, Onkelos Genesis 34:20, Onkelos Genesis 34:21, Onkelos Genesis 34:22, Onkelos Genesis 34:23, Onkelos Genesis 34:24, Onkelos Genesis 34:25, Onkelos Genesis 34:26, Onkelos Genesis 34:27, Onkelos Genesis 34:28, Onkelos Genesis 34:29, Onkelos Genesis 34:30, Onkelos Genesis 34:31.

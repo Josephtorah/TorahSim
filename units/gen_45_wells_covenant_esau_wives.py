@@ -46,6 +46,10 @@ m.event("redig_wells", agent="yitzchaq", themes=["beerot_avraham"])
 # to-them/their name like-name which call to-them/their father-him/its”) —
 # event: ?
 m.event("?")
+# witness-tier presupposed read: evidence_for_the_gen_42_regression_rule on
+# wells_sealed_and_redug — read, not installed
+m.witness_read("wells_sealed_and_redug", "evidence_for_the_gen_42_regression_rule",
+                cites=["Bereshit Rabbah 62:3"])
 
 # -------------------------- Gen.26.19 · THE_WELL_OF_LIVING_WATER -----------
 # וַיַּחְפְּר֥וּ עַבְדֵֽי־יִצְחָ֖ק בַּנָּ֑חַל וַיִּ֨מְצְאוּ־שָׁ֔ם בְּאֵ֖ר
@@ -104,6 +108,10 @@ m.name("beer_rechovot", "rechovot")
 # YHWH to-us/our and-be-fruitful in-earth”) — fact holds: broaden-the-LORD-
 # to-us/our-and-be-fruitful
 m.fact("hirchiv_YHWH_la_nu_u_farinu")
+# witness-tier presupposed read: read_as_the_canons_own_book_list on
+# the_well_names — read, not installed
+m.witness_read("the_well_names", "read_as_the_canons_own_book_list",
+                cites=["Bereshit Rabbah 64:8"])
 
 # -------------------------- Gen.26.23 · THE_ASCENT_TO_BEER_SHEBA -----------
 # וַיַּ֥עַל מִשָּׁ֖ם בְּאֵ֥ר שָֽׁבַע
@@ -136,6 +144,10 @@ m.declare("YHWH", "LET-NOT",
 # with-you/your and-bless-you/your and-multiply obj-marker seed-you/your”) —
 # fact holds: obj-marker-kha-anokhi-and-verakhti-and-multiply
 m.fact("et_kha_anokhi_u_verakhti_ve_hirbeti")
+# witness-tier presupposed read: memra_support_and_a_census_seat on
+# night_revelation — read, not installed
+m.witness_read("night_revelation", "memra_support_and_a_census_seat",
+                cites=["Onkelos Genesis 26:24", "Bereshit Rabbah 87:5"])
 
 # -------------------------- Gen.26.25 · THE_ALTAR_INVOCATION_AND_KARAH_DIG -
 # וַיִּ֧בֶן שָׁ֣ם מִזְבֵּ֗חַ וַיִּקְרָא֙ בְּשֵׁ֣ם יְהוָ֔ה וַיֶּט־שָׁ֖ם
@@ -151,6 +163,10 @@ m.event("?")
 # ‹וַיִּכְרוּ שָׁם עַבְדֵי יִצְחָק בְּאֵר› (“and-dig there servant Isaac
 # pit”) — event: ?
 m.event("?")
+# witness-tier presupposed read: rendered_as_prayer_at_the_altar on
+# called_in_the_name — read, not installed
+m.witness_read("called_in_the_name", "rendered_as_prayer_at_the_altar",
+                cites=["Onkelos Genesis 26:25"])
 
 # -------------------------- Gen.26.26 · THE_VISITORS_FROM_GERAR ------------
 # וַאֲבִימֶ֕לֶךְ הָלַ֥ךְ אֵלָ֖יו מִגְּרָ֑ר וַאֲחֻזַּת֙ מֵרֵעֵ֔הוּ וּפִיכֹ֖ל
@@ -164,6 +180,10 @@ m.event("visit", agent="avimelekh")
 # ‹אֲחֻזַּת … פִיכֹל› (“something-seized … Pikhol”) — reads without prior
 # install (flag, not fix): Ahuzzath, Phichol, merea
 m.presupposed("achuzat", "fikhol", "merea")
+# witness-tier presupposed read: name_or_cohort_settled_by_the_translation
+# on the_kings_companion — read, not installed
+m.witness_read("the_kings_companion", "name_or_cohort_settled_by_the_translation",
+                cites=["Bereshit Rabbah 64:9", "Onkelos Genesis 26:26"])
 
 # -------------------------- Gen.26.27 · THE_WHY_HAVE_YOU_COME --------------
 # וַיֹּ֤אמֶר אֲלֵהֶם֙ יִצְחָ֔ק מַדּ֖וּעַ בָּאתֶ֣ם אֵלָ֑י וְאַתֶּם֙
@@ -194,6 +214,10 @@ m.declare("avimelekh_party", "LET",
 # Abimelech-party speaks a demand — CMD-US?: nikhreta(berit-with-kha)
 m.declare("avimelekh_party", "CMD-US?",
           "nikhreta(berit_im_kha)")
+# witness-tier presupposed read: rendered_as_reactivating_the_fathers_oath
+# on let_there_be_an_oath — read, not installed
+m.witness_read("let_there_be_an_oath", "rendered_as_reactivating_the_fathers_oath",
+                cites=["Onkelos Genesis 26:28"])
 
 # -------------------------- Gen.26.29 · THE_OATH_CONTENT_TERMS -------------
 # אִם־תַּעֲשֵׂ֨ה עִמָּ֜נוּ רָעָ֗ה כַּאֲשֶׁר֙ לֹ֣א נְגַֽעֲנ֔וּךָ וְכַאֲשֶׁ֨ר
@@ -209,6 +233,11 @@ m.fact("im_taase_ima_nu_raa_oath_content")
 # ‹אַתָּה עַתָּה בְּרוּךְ יְהוָה› (“you now bless YHWH”) — fact holds: now-
 # now-bless-the-LORD
 m.fact("ata_ata_berukh_YHWH")
+# witness-tier presupposed read:
+# restrictive_particle_fired_against_the_speakers on only_good — read, not
+# installed
+m.witness_read("only_good", "restrictive_particle_fired_against_the_speakers",
+                cites=["Bereshit Rabbah 64:10"])
 
 # -------------------------- Gen.26.30 · THE_FEAST --------------------------
 # וַיַּ֤עַשׂ לָהֶם֙ מִשְׁתֶּ֔ה וַיֹּאכְל֖וּ וַיִּשְׁתּֽוּ
@@ -277,6 +306,14 @@ m.event("take_wives", agent="esav")
 # ‹יְהוּדִית … בָּשְׂמַת … בְּאֵרִי … אֵילֹן› (“Judith … Bashemath … Beeri …
 # Elon”) — the world gains: Judith, Bashemath, Beeri, Elon
 m.install("yehudit", "basmat", "beeri", "elon")
+# witness-tier presupposed read: piety_theatre_graded_by_a_zoological_simile
+# on the_marriage_at_forty — read, not installed
+m.witness_read("the_marriage_at_forty", "piety_theatre_graded_by_a_zoological_simile",
+                cites=["Bereshit Rabbah 65:1"])
+# witness-tier presupposed read: graded_by_a_ban_statute_and_by_species_law
+# on the_match — read, not installed
+m.witness_read("the_match", "graded_by_a_ban_statute_and_by_species_law",
+                cites=["Bereshit Rabbah 65:2", "Bereshit Rabbah 65:3"])
 
 # -------------------------- Gen.26.35 · BITTERNESS_OF_SPIRIT ---------------
 # וַתִּהְיֶ֖יןָ מֹ֣רַת ר֑וּחַ לְיִצְחָ֖ק וּלְרִבְקָֽה
@@ -285,6 +322,14 @@ m.step("Gen.26.35")
 # ‹מֹרַת רוּחַ לְיִצְחָק וּלְרִבְקָה› (“bitterness spirit to-Isaac and-to-
 # Rebekah”) — fact holds: bitterness-spirit-wind-to-Isaac-and-to-rivqah
 m.fact("morat_ruach_le_yitzchaq_u_le_rivqah")
+# witness-tier presupposed read: rendered_as_defiance_of_instruction on
+# bitterness_of_spirit — read, not installed
+m.witness_read("bitterness_of_spirit", "rendered_as_defiance_of_instruction",
+                cites=["Onkelos Genesis 26:35"])
+# witness-tier presupposed read: answered_three_ways_and_wired_forward on
+# the_father_named_first — read, not installed
+m.witness_read("the_father_named_first", "answered_three_ways_and_wired_forward",
+                cites=["Bereshit Rabbah 65:4"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -302,4 +347,38 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 27
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('wells_sealed_and_redug', 'evidence_for_the_gen_42_regression_rule'), ('the_well_names', 'read_as_the_canons_own_book_list'), ('night_revelation', 'memra_support_and_a_census_seat'), ('called_in_the_name', 'rendered_as_prayer_at_the_altar'), ('the_kings_companion', 'name_or_cohort_settled_by_the_translation'), ('let_there_be_an_oath', 'rendered_as_reactivating_the_fathers_oath'), ('only_good', 'restrictive_particle_fired_against_the_speakers'), ('the_marriage_at_forty', 'piety_theatre_graded_by_a_zoological_simile'), ('the_match', 'graded_by_a_ban_statute_and_by_species_law'), ('bitterness_of_spirit', 'rendered_as_defiance_of_instruction'), ('the_father_named_first', 'answered_three_ways_and_wired_forward')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 62:3']
+    assert all('evidence_for_the_gen_42_regression_rule' not in f for f in m.WORLD["facts"])
+    assert 'wells_sealed_and_redug' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 64:8']
+    assert all('read_as_the_canons_own_book_list' not in f for f in m.WORLD["facts"])
+    assert 'the_well_names' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Genesis 26:24', 'Bereshit Rabbah 87:5']
+    assert all('memra_support_and_a_census_seat' not in f for f in m.WORLD["facts"])
+    assert 'night_revelation' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Genesis 26:25']
+    assert all('rendered_as_prayer_at_the_altar' not in f for f in m.WORLD["facts"])
+    assert 'called_in_the_name' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 64:9', 'Onkelos Genesis 26:26']
+    assert all('name_or_cohort_settled_by_the_translation' not in f for f in m.WORLD["facts"])
+    assert 'the_kings_companion' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Genesis 26:28']
+    assert all('rendered_as_reactivating_the_fathers_oath' not in f for f in m.WORLD["facts"])
+    assert 'let_there_be_an_oath' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 64:10']
+    assert all('restrictive_particle_fired_against_the_speakers' not in f for f in m.WORLD["facts"])
+    assert 'only_good' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 65:1']
+    assert all('piety_theatre_graded_by_a_zoological_simile' not in f for f in m.WORLD["facts"])
+    assert 'the_marriage_at_forty' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 65:2', 'Bereshit Rabbah 65:3']
+    assert all('graded_by_a_ban_statute_and_by_species_law' not in f for f in m.WORLD["facts"])
+    assert 'the_match' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Genesis 26:35']
+    assert all('rendered_as_defiance_of_instruction' not in f for f in m.WORLD["facts"])
+    assert 'bitterness_of_spirit' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 65:4']
+    assert all('answered_three_ways_and_wired_forward' not in f for f in m.WORLD["facts"])
+    assert 'the_father_named_first' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

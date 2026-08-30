@@ -182,6 +182,16 @@ td.mat { background:#edf3ea; font-weight:700; }
        padding:8px 12px; margin:6px 0 10px; font:.78rem/1.6 Menlo,Consolas,monospace;
        overflow-x:auto; white-space:pre; }
 .badge.vstat { background:none; border:none; color:var(--mut); cursor:help; }
+
+.opstep { margin:.5rem 0 .7rem; }
+.opsh { font:.7rem monospace; letter-spacing:.06em; color:var(--bblue); text-transform:uppercase;
+        border-bottom:1px solid var(--line); padding-bottom:2px; margin-bottom:.3rem; }
+.opr { border-left:3px solid var(--line); padding:.25rem 0 .25rem .6rem; margin:.3rem 0; }
+.opr.opw { border-left-color:var(--bblue); background:var(--bbluel); border-radius:0 6px 6px 0; }
+.opx code { font:.8rem Menlo,Consolas,monospace; color:var(--fg); }
+.opk { font:700 9.5px Verdana,sans-serif; letter-spacing:.06em; color:var(--bblue); margin-right:.4rem; }
+.ope { font-size:.82rem; line-height:1.45; margin:.15rem 0 0; }
+.opc { font:.72rem monospace; color:var(--mut); margin-top:.15rem; }
 :root { --bblue:#5a7ca6; --bbluel:#eef2f8; }
 
 /* ---------- the verse-tree window (pan + zoom) ---------- */
@@ -395,7 +405,8 @@ function unitRecordHTML(bid, uid, u, vds) {
       <div><b>${material}</b><span>MATERIAL</span></div></div>
       <p style="margin:10px 0 2px"><b>The ledger's verdicts</b> — by class:</p>
       <table><tr><th>verdict class</th><th>rows</th></tr>${clsRows}</table>
-      <p class="desc" style="font-size:.78rem;color:var(--mut)">↳ the append-only ledger: logic/oral_triage/${esc(u.led)}</p>`;
+      <p class="desc" style="font-size:.78rem;color:var(--mut)">↳ the append-only ledger: logic/oral_triage/${esc(u.led)}</p>
+      ${(u.leds || []).length > 1 ? `<p class="desc" style="font-size:.78rem;color:var(--mut)"><b>This span was read ${u.leds.length} times, independently</b> — ${u.leds.map(x => esc(x)).join(" · ")}. Every reading stands in the append-only record; the counts and rows shown here are the governing one, the latest.</p>` : ""}`;
     const matRows = (u.mat || []).filter(r => r[1]).map(r =>
       `<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td></tr>`).join("");
     const allRows = (u.rows || []).map(r =>
@@ -434,8 +445,19 @@ function unitRecordHTML(bid, uid, u, vds) {
   const codeGroups = vds.map((vd, i) => { const sh = shadeOf(i, nv);
     return `<div><span class="vchip2" style="background:${sh}">${vd.v}</span><div class="vgroup" style="border-left-color:${sh}">${vd.code.map(l =>
       `${esc(l.c).padEnd(38)}<span class="cmt">${esc(l.m)}</span>`).join("\n")}</div></div>`; }).join("");
-  const s6body = `<p class="desc" style="font:11px Verdana,sans-serif;color:var(--mut);margin:4px 0 8px">each verse keeps one shade of the band's blue, everywhere code appears</p>
-    ${codeGroups}
+  // STEP 6 shows THE UNIT'S OWN OPERATORS — the derived machine, loaded
+  // on demand from data/ops/<uid>.json. The verse-shaded block below it
+  // is the AUTOMATIC sketch the role tags emit from grammar alone; it
+  // used to stand here unlabelled, under the words "the unit's machine",
+  // which is what the derivation era made false.
+  const s6body = `<div class="s6ops" data-uid="${esc(uid)}"><p class="desc" style="color:var(--mut)">loading the unit's operators…</p></div>
+    <div class="xp" style="margin-top:10px;border-style:dashed"><div class="xp-head" onclick="tg(this,'${bid}s6a',0)">
+      <b style="font-size:.85rem">The automatic grammar sketch</b>
+      <span class="sum">what the role tags emit from grammar alone — illustrative, not the derived logic</span>
+      <span class="more">▸ open</span></div>
+      <div id="${bid}s6a" class="xp-body">
+      <p class="desc" style="font:11px Verdana,sans-serif;color:var(--mut);margin:4px 0 8px">each verse keeps one shade of the band's blue, everywhere code appears</p>
+      ${codeGroups}</div></div>
     <p class="desc" style="font-size:.78rem;color:var(--mut)">↳ the full derivation, operator by operator with its citations: <a href="units/UNIT_${esc(uid)}.html">the unit page</a> — printed by the mill from the unit's record: the mill transforms, never asserts</p>`;
 
   const s7body = `<div class="gates">${GATE_NAMES.map(x => `<i>✓ ${x}</i>`).join("")}<i>— 9/9</i></div>
@@ -451,7 +473,7 @@ function unitRecordHTML(bid, uid, u, vds) {
     ${xp(bid + "s3", "STEP 3", "Declare the reading", s3sum, s3body, 1)}
     ${xp(bid + "s4", "STEP 4", "Read and log", s4sum, s4body, 1)}
     ${xp(bid + "s5", "STEP 5", "Extract claims", s5sum, s5body, 1)}
-    ${xp(bid + "s6", "STEP 6", "Write or amend the logic", "the unit's machine — every line shaded by its verse", s6body, 1)}
+    ${xp(bid + "s6", "STEP 6", "Write or amend the logic", u.nops ? `the unit's machine — ${u.nops} operators, each citing what licensed it` : "the unit's machine", s6body, 1)}
     ${xp(bid + "s7", "STEP 7", "Run the gates", "one command, nine gates, all green — before any human declared anything", s7body, 1)}
     ${xp(bid + "s8", "STEP 8", "The stamp", s8sum, s8body, 1)}</div>`;
 }
@@ -541,7 +563,7 @@ function tg(el, id, top) {
   el.classList.toggle("on", open);
   const m = el.querySelector(".more"); if (m) m.innerHTML = open ? "▾ close" : "▸ open";
   const cp = el.querySelector(".cap2"); if (cp) cp.textContent = open ? "▾" : "▸";
-  if (open) initTrees(body);
+  if (open) { initTrees(body); initOps(body); }
   if (open && top) { OPENID = id; alignAfter(el, before); }
   else if (!open && OPENID === id) OPENID = null;
 }
@@ -556,7 +578,7 @@ function vtg(ev, card, id) {
   card.classList.toggle("isopen", open); head.classList.toggle("on", open);
   const m = head.querySelector(".more"); if (m) m.innerHTML = open ? "▾ close" : "▸ open";
   const cp = head.querySelector(".cap2"); if (cp) cp.textContent = open ? "▾" : "▸";
-  if (open) { OPENID = id; initTrees(body); alignAfter(card, before); }
+  if (open) { OPENID = id; initTrees(body); initOps(body); alignAfter(card, before); }
   else if (OPENID === id) OPENID = null;
 }
 function pk(ev, id) {
@@ -703,6 +725,41 @@ function initTVP(vp) {
   vp.querySelector(".tzo").onclick = () => { s = Math.max(0.1, s * 0.8); apply(); };
   vp.querySelector(".tzf").onclick = fit;
   fit();
+}
+
+/* the unit's own operators — fetched per unit when step 6 first opens */
+const OPS = new Map();
+function opsHTML(steps) {
+  if (!steps.length) return '<p class="desc" style="color:var(--mut)">This unit carries no operator rows yet.</p>';
+  const n = steps.reduce((a, s) => a + s.ops.length, 0);
+  const wit = steps.reduce((a, s) => a + s.ops.filter(o => /WITNESS/.test(o.op || "")).length, 0);
+  return `<p class="desc" style="font-size:.8rem;color:var(--mut);margin:2px 0 8px">${n} operators across ${steps.length} steps${wit ? ` · ${wit} of them read from the oral tradition (the witness tier), walled from the text-grounded set` : ""}. Each line is the machine itself; the grammar sketch is below, kept separate.</p>` +
+    steps.map(s => {
+      const rows = s.ops.map(o => {
+        const cites = (o.c || []).join(" · ");
+        const wt = /WITNESS/.test(o.op || "");
+        return `<div class="opr${wt ? " opw" : ""}">
+          <div class="opx"><span class="opk">${esc(o.op || "")}</span> <code>${esc(o.x || "")}</code></div>
+          ${o.en ? `<div class="ope">${esc(o.en)}</div>` : ""}
+          ${cites ? `<div class="opc">licensed by: ${esc(cites)}${o.k ? ` · ${esc(o.k)}` : ""}</div>` : ""}
+        </div>`;
+      }).join("");
+      return `<div class="opstep"><div class="opsh">${esc(s.ref || "")} · ${esc(s.name || "")}</div>${rows}</div>`;
+    }).join("");
+}
+async function initOps(body) {
+  const box = body.querySelector(".s6ops");
+  if (!box || box.dataset.done) return;
+  box.dataset.done = 1;
+  const uid = box.dataset.uid;
+  try {
+    if (!OPS.has(uid))
+      OPS.set(uid, await (await fetch("data/ops/" + uid + ".json")).json());
+    box.innerHTML = opsHTML(OPS.get(uid) || []);
+  } catch (e) {
+    console.error("[ops]", uid, e);
+    box.innerHTML = '<p class="desc" style="color:var(--mut)">The operator record could not be loaded; the unit page carries it in full.</p>';
+  }
 }
 
 function initTrees(body) {

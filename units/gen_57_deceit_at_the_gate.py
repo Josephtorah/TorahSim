@@ -35,6 +35,11 @@ m.step("Gen.34.2")
 # her/its and-lie-down obj-marker-her/its and-afflict-literally-her/its”) —
 # fact holds: and-take-and-lie-down-and-yeaneha(Shechem, her)
 m.fact("va_yiqach_va_yishkav_va_yeaneha(shekhem, otah)")
+# witness-tier presupposed read:
+# elevated_by_one_member_flattened_by_the_other on the_assault_verbs — read,
+# not installed
+m.witness_read("the_assault_verbs", "elevated_by_one_member_flattened_by_the_other",
+                cites=["Onkelos Genesis 34:2", "Onkelos Genesis 34:3"])
 
 # -------------------------- Gen.34.3 · THE_CLEAVE_AND_THE_HEART ------------
 # וַתִּדְבַּק נַפְשׁוֹ בְּדִינָה בַּת־יַעֲקֹב וַיֶּאֱהַב אֶת־הַנַּעֲרָ
@@ -46,6 +51,10 @@ m.step("Gen.34.3")
 # in-Dinah daughter”) — fact holds: and-impinge-nafsho-and-speak-over-
 # heart(Shechem, the-girl)
 m.fact("va_tidbaq_nafsho_va_yedaber_al_lev(shekhem, ha_naara)")
+# witness-tier presupposed read: covenant_words_mined_from_a_crime_scene on
+# cleaving_desiring_wanting — read, not installed
+m.witness_read("cleaving_desiring_wanting", "covenant_words_mined_from_a_crime_scene",
+                cites=["Bereshit Rabbah 80:7"])
 
 # -------------------------- Gen.34.4 · THE_DEMAND_AFTER_THE_DEED -----------
 # וַיֹּאמֶר שְׁכֶם אֶל־חֲמוֹר אָבִיו לֵאמֹר קַח־לִי אֶת־הַיַּלְדָּה הַזֹּאת
@@ -171,6 +180,11 @@ m.step("Gen.34.13")
 # ‹בְּמִרְמָה וַיְדַבֵּרוּ› (“in-fraud and-speak”) — fact holds: and-eye-in-
 # fraud(son-Jacob, which-be-foul)
 m.fact("va_yaanu_be_mirma(vene_yaaqov, asher_time)")
+# witness-tier presupposed read:
+# renamed_by_one_member_warranted_by_the_other on with_guile — read, not
+# installed
+m.witness_read("with_guile", "renamed_by_one_member_warranted_by_the_other",
+                cites=["Onkelos Genesis 34:13", "Bereshit Rabbah 80:8"])
 
 # -------------------------- Gen.34.14 · THE_REFUSAL ------------------------
 # וַיֹּאמְרוּ אֲלֵיהֶם לֹא נוּכַל לַעֲשׂוֹת הַדָּבָר הַזֶּה לָתֵת
@@ -301,6 +315,18 @@ m.step("Gen.34.25")
 # son Jacob Simeon and-Levi brother”) — fact holds: and-take-charbam-and-
 # smite-with-deadly-intent-all-male(Simeon-and-Levi)
 m.fact("va_yiqchu_charbam_va_yahargu_kal_zakhar(shimon_ve_levi)")
+# witness-tier presupposed read: danger_measured_from_this_verse on
+# the_third_day — read, not installed
+m.witness_read("the_third_day", "danger_measured_from_this_verse",
+                cites=["Bereshit Rabbah 80:9"])
+# witness-tier presupposed read: one_adverb_two_subjects on came_confidently
+# — read, not installed
+m.witness_read("came_confidently", "one_adverb_two_subjects",
+                cites=["Onkelos Genesis 34:25", "Bereshit Rabbah 80:10"])
+# witness-tier presupposed read: naming_by_devotion on
+# sons_of_jacob_and_brothers_of_dina — read, not installed
+m.witness_read("sons_of_jacob_and_brothers_of_dina", "naming_by_devotion",
+                cites=["Bereshit Rabbah 80:10"])
 
 # -------------------------- Gen.34.26 · THE_TAKING_BACK --------------------
 # וְאֶת־חֲמוֹר וְאֶת־שְׁכֶם בְּנוֹ הָרְגוּ לְפִי־חָרֶב וַיִּקְחוּ
@@ -312,6 +338,14 @@ m.step("Gen.34.26")
 # smite-with-deadly-intent-to-mouth-drought-and-take-obj-marker-Dinah(and-
 # bring-forth)
 m.fact("hargu_le_fi_charev_va_yiqchu_et_dina(va_yetzeu)")
+# witness-tier presupposed read: robbery_and_priesthood_in_one_passage on
+# the_verdict_on_the_act — read, not installed
+m.witness_read("the_verdict_on_the_act", "robbery_and_priesthood_in_one_passage",
+                cites=["Bereshit Rabbah 80:2"])
+# witness-tier presupposed read: preserved_through_three_answers on
+# her_question — read, not installed
+m.witness_read("her_question", "preserved_through_three_answers",
+                cites=["Bereshit Rabbah 80:11"])
 
 # -------------------------- Gen.34.27 · THE_PLUNDER_REASON -----------------
 # בְּנֵי יַעֲקֹב בָּאוּ עַל־הַחֲלָלִים וַיָּבֹזּוּ הָעִיר אֲשֶׁר טִמְּאוּ
@@ -366,6 +400,15 @@ m.step("Gen.34.31")
 # commit-adultery make obj-marker sister-us/our”) — fact holds: the-khe-
 # zona-make-obj-marker-achotenu(sheela-petucha)
 m.fact("ha_khe_zona_yaase_et_achotenu(sheela_petucha)")
+# witness-grounded state (its own tier): filed_open_with_both_sentences on
+# the_moral_verdict
+m.witness_state("the_moral_verdict", "filed_open_with_both_sentences",
+                cites=["Bereshit Rabbah 80:12", "Onkelos Genesis 34:31"])
+# witness-tier presupposed read:
+# carried_to_a_deathbed_court_fifteen_chapters_on on the_deed — read, not
+# installed
+m.witness_read("the_deed", "carried_to_a_deathbed_court_fifteen_chapters_on",
+                cites=["Bereshit Rabbah 99:7"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -383,4 +426,35 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 9
+    assert sorted(m.WORLD["witnessed"]) == ['the_moral_verdict']
+    assert m.WORLD["witnessed"]['the_moral_verdict']["cites"] == ['Bereshit Rabbah 80:12', 'Onkelos Genesis 34:31']
+    assert all('filed_open_with_both_sentences' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_assault_verbs', 'elevated_by_one_member_flattened_by_the_other'), ('cleaving_desiring_wanting', 'covenant_words_mined_from_a_crime_scene'), ('with_guile', 'renamed_by_one_member_warranted_by_the_other'), ('the_third_day', 'danger_measured_from_this_verse'), ('came_confidently', 'one_adverb_two_subjects'), ('sons_of_jacob_and_brothers_of_dina', 'naming_by_devotion'), ('the_verdict_on_the_act', 'robbery_and_priesthood_in_one_passage'), ('her_question', 'preserved_through_three_answers'), ('the_deed', 'carried_to_a_deathbed_court_fifteen_chapters_on')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Genesis 34:2', 'Onkelos Genesis 34:3']
+    assert all('elevated_by_one_member_flattened_by_the_other' not in f for f in m.WORLD["facts"])
+    assert 'the_assault_verbs' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 80:7']
+    assert all('covenant_words_mined_from_a_crime_scene' not in f for f in m.WORLD["facts"])
+    assert 'cleaving_desiring_wanting' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Genesis 34:13', 'Bereshit Rabbah 80:8']
+    assert all('renamed_by_one_member_warranted_by_the_other' not in f for f in m.WORLD["facts"])
+    assert 'with_guile' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 80:9']
+    assert all('danger_measured_from_this_verse' not in f for f in m.WORLD["facts"])
+    assert 'the_third_day' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Genesis 34:25', 'Bereshit Rabbah 80:10']
+    assert all('one_adverb_two_subjects' not in f for f in m.WORLD["facts"])
+    assert 'came_confidently' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 80:10']
+    assert all('naming_by_devotion' not in f for f in m.WORLD["facts"])
+    assert 'sons_of_jacob_and_brothers_of_dina' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 80:2']
+    assert all('robbery_and_priesthood_in_one_passage' not in f for f in m.WORLD["facts"])
+    assert 'the_verdict_on_the_act' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 80:11']
+    assert all('preserved_through_three_answers' not in f for f in m.WORLD["facts"])
+    assert 'her_question' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 99:7']
+    assert all('carried_to_a_deathbed_court_fifteen_chapters_on' not in f for f in m.WORLD["facts"])
+    assert 'the_deed' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

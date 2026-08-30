@@ -1,7 +1,10 @@
 meta:
   id: gen_44_isaac_gerar_sister_expel
-  rev: 2
+  rev: 4
+  tree_derive_version: logic_derived_v2_full_rule
   changelog:
+    - "rev 4 (2026-08-30): FULL-RULE STAMP on the owner's word — the batch stamp he held by standing decision until Genesis was whole, given when the book closed at 73 of 73 read and derived. tree_derive_version logic_derived_v1 -> logic_derived_v2_full_rule; the span's declared reading is COMPLETE in its triage ledger and its logic was rebuilt FROM that reading in the derivation pass. No operator, claim, text or test changed by this edit — the stamp records a judgement already earned."
+    - "rev 3 (2026-08-30): logic rebuilt from the 2026-08-27 parashah-grain reading (28 of 28 declared, COMPLETE) under the spine default. Ten claims seated, two machine-checked under guard 3 and BOTH HOLD: the opening word of 26:5 totals exactly 172 by letter value, which against Abraham's verified 175 yields the age of three; and 'his household' at 26:14 stands defective as the service-maxim reading requires. Sanctuary disqualification law applied to geography; a modesty-law cluster on one verb with its exception preserved; the blessing-versus-tithing collision adjudicated on 26:12; and both members reading 26:5 maximally, the translation supplying the register."
     - "2026-08-27 rev 2: RE-era reading pass (parashat Toledot sweep, 5 blocks one sitting — THIRD RUN UNDER THE SPINE DEFAULT, owner 2026-08-27: Bereshit Rabbah + Onkelos declared, Mishnah/Talmud held for the Step 9 exam): ledger logic/oral_triage/gen_44_isaac_gerar_sister_expel_2026-08-27.md; v1 queue discharged; ORAL_reading_pass block appended; no machine ops changed."
     - "2026-08-27 ink fixes (pre-existing at HEAD, caught by verify_text): 26:2 tree span and 26:9 tree span aligned to the snapshot halves; the 26:6 contrast fragment moved from the unrecognized not-equals notation to the verifier's cross-verse arrow convention."
   title_en: Isaac in Gerar — sister-claim, decree, hundredfold, expulsion seam (26:1-16)
@@ -450,7 +453,7 @@ boot_steps:
   tree_left:
     he: וַיְהִ֤י רָעָב֙ בָּאָ֔רֶץ מִלְּבַד֙ הָרָעָ֣ב הָרִאשׁ֔וֹן אֲשֶׁ֥ר הָיָ֖ה בִּימֵ֣י אַבְרָהָ֑ם
     he_translit: va-yehi raav ba-aretz mi-le-vad ha-raav ha-rishon asher haya bi-yme avraham
-    en: 'there was famine in the land besides the first famine that was in Abraham''s days (etnachta on avraham ''Abraham'') [VERIFIED: torah_grok.SNAPSHOT-main-51801ca.sqlite words Gen.26.1 idx9 mark_id=etnachta rank=1]'
+    en: 'there was famine in the land besides the first famine that was in Abraham''s days (etnachta on avraham ''Abraham'') [VERIFIED: source-snapshot.sqlite words Gen.26.1 idx9 mark_id=etnachta rank=1]'
   tree_right:
     he: וַיֵּ֧לֶךְ יִצְחָ֛ק אֶל־אֲבִימֶּ֥לֶךְ מֶֽלֶךְ־פְּלִשְׁתִּ֖ים גְּרָֽרָה
     he_translit: va-yelekh yitzchaq el avimelekh melekh pelishtim gerara-ה
@@ -506,6 +509,17 @@ boot_steps:
       no WORLD += avimelekh re-install [flag 8].
     cites: [TIR-014]
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(this_famine, member_of_the_ten_famines_census)"
+    en: >
+      THE VERSE FLAGS ITS OWN PLACE IN A CENSUS [claim G44-30]. Ten
+      famines are counted across the corpus, and this is the Isaac member
+      - the clause 'besides the first famine' supplying the
+      cross-reference from inside the text. The frame rides with it: the
+      righteous are not starved, the devastation of the wicked is averted.
+      [folded shape: kept record]
+    cites: ["Bereshit Rabbah 25:3", "Bereshit Rabbah 64:2"]
+    confidence: witnessed
   comment: >
     The letter opens the third Gerar path by naming the famine as not-first and sending
     Isaac toward Abimelech — SPECS still empty.
@@ -568,6 +582,18 @@ boot_steps:
       not a second push. SPECS depth 2 after this step.
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(remain_in_this_land, offering_disqualification_rule_applied_to_geography)"
+    en: >
+      SANCTUARY LAW IS IMPORTED TO BIND A MAN TO A PLACE [claim G44-23].
+      You are an unblemished burnt offering: as an offering that leaves
+      the curtains is disqualified, so you leaving the Land are
+      disqualified. The dwelling command is read alongside as an
+      instruction to settle - plant, sow, graft - and as causing the
+      Presence to dwell. A ritual rule made to govern movement. [folded
+      shape: priced law]
+    cites: ["Bereshit Rabbah 64:3"]
+    confidence: witnessed
   comment: >
     God appears and both fences Egypt (LET-NOT go-down) and commands residence (shekhon).
   confidence: tested
@@ -641,6 +667,17 @@ boot_steps:
       Same 1cs morph earlier at Gen.22.16 nishbati tok4/70 (Aqedah) [VERIFIED: debut_map 7650].
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(these_lands_short_form, partial_grant_with_a_future_instalment)"
+    en: >
+      A SHORT SPELLING READ AS A DELIVERY SCHEDULE [claim G44-24]. The
+      demonstrative is written short, and the chain reads it as the MIGHTY
+      lands or as a partial grant - some now, the rest to come. Onkelos
+      meanwhile routes the promise through the Word: 'I will be with you'
+      becomes MY WORD WILL BE YOUR SUPPORT, the standing buffer at
+      covenant assurances. [folded shape: ink count]
+    cites: ["Bereshit Rabbah 64:3", "Onkelos Genesis 26:3"]
+    confidence: witnessed
   comment: >
     Imperative sojourn joins the queue; the oath to Abraham is cited and promised-established
     as fact, not re-sworn as a new demand.
@@ -735,6 +772,31 @@ boot_steps:
       name-writes (no va-yiqra / naming formula in 26:1-5) [flag 7]. SPECS still 3 OPEN.
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(the_opening_word, numeric_value_172_and_the_age_of_three)"
+    en: >
+      A NUMERIC CLAIM OPENED UNDER GUARD 3, AND THE ARITHMETIC HOLDS
+      [claim G44-21, machine-checked]. The verse's opening word totals
+      exactly 172 by letter value, computed here from our own consonants;
+      subtracted from the 175 years recorded at 25:7 it yields three, the
+      age at which the chain says Abraham recognized his Creator. The
+      rival answer of forty-eight is recorded beside it and not
+      reconciled. [folded shape: ink count]
+    cites: ["Bereshit Rabbah 64:4"]
+    confidence: witnessed
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(the_stacked_law_words, whole_system_known_before_sinai)"
+    en: >
+      BOTH MEMBERS READ THIS VERSE MAXIMALLY, AND ONE SUPPLIES THE
+      VOCABULARY [claim G44-28]. The chain holds that Abraham kept the
+      entire law-system in advance, down to the courtyard-joining rules;
+      Onkelos renders the verse's stacked terms in full rabbinic register
+      - RECEIVED MY WORD, the mandate of My Word, My commandments, My
+      decrees, My TEACHINGS. The translation does not merely allow the
+      maximal reading, it carries it. [folded shape: dual-track
+      translation]
+    cites: ["Bereshit Rabbah 64:4", "Onkelos Genesis 26:5"]
+    confidence: witnessed
   comment: >
     The promise rides on Abraham's listening and keeping — four law-words debut here as a cluster;
     the machine records the grounds without opening a new demand.
@@ -907,6 +969,19 @@ boot_steps:
       the sister-claim; no SPECS push; no TEST. SPECS still depth 3.
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(the_word_playing, modesty_law_cluster_with_its_exception)"
+    en: >
+      A CLUSTER OF CONDUCT RULINGS IS SEATED ON ONE VERB [claim G44-25].
+      From this verse's 'playing' the chain derives that conjugal
+      relations belong to the night, proved from Esther and enforced by
+      two figures cursing the day of their conception - with one prophet's
+      exception, flight from a queen's killings, recorded rather than
+      suppressed. The same verse also carries the rule that a bad dream, a
+      harsh prophecy and excessive mourning are nullified by length of
+      days. [folded shape: priced law]
+    cites: ["Bereshit Rabbah 64:5"]
+    confidence: witnessed
   comment: >
     The name that means laugh is seen laughing with his wife — the claim unravels at the window.
   confidence: tested
@@ -1014,6 +1089,16 @@ boot_steps:
       REGISTRY. No TEST. SPECS still three OPEN at piece-2 end.
     cites: []
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(one_of_the_people, rendered_as_the_distinguished_one)"
+    en: >
+      THE TRANSLATION NAMES WHO WAS MEANT [claim G44-29]. 'One of the
+      people might easily have lain with your wife' becomes THE UNIQUE ONE
+      AMONG THE PEOPLE - the buffer hearing the king himself in the
+      indefinite phrase, and converting a general risk into a particular
+      confession. [folded shape: dual-track translation]
+    cites: ["Onkelos Genesis 26:10"]
+    confidence: witnessed
   comment: >
     The third sister-court hears the garden-to-Gerar accusation formula; guilt debuts as a word
     on the king's lips — machine records speech, leaves the residence queue open.
@@ -1114,6 +1199,27 @@ boot_steps:
       — blessing EVENT/FACT. NO TEST (not instrument-word fire). SPECS unchanged.
     cites: [TIR-014]
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(the_hundredfold, two_standing_rules_colliding_and_adjudicated)"
+    en: >
+      TWO RECEIVED RULES MEET ON ONE ACT AND THE VERSE DECIDES [claim
+      G44-26]. Blessing does not rest on what is weighed, measured or
+      counted - so why measure the harvest? FOR THE TITHES: the measuring
+      is licensed only by a duty that requires it. Onkelos independently
+      renders the hundredfold as a hundred times WHAT THEY ESTIMATED, the
+      same estimate reading the chain gives. [folded shape: priced law]
+    cites: ["Bereshit Rabbah 64:6", "Onkelos Genesis 26:12"]
+    confidence: witnessed
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(enrichment_of_the_host, first_member_of_a_proximity_census)"
+    en: >
+      THE VERSE OPENS A CENSUS WHOSE WITNESS IS A LATER ANTAGONIST [claim
+      G44-27]. Three are counted as enriching the households they dwelt
+      beside - Isaac here, Jacob at Laban's, Joseph at Potiphar's - and
+      the census is quoted out of Laban's own mouth later in the corpus.
+      [folded shape: cross-corpus link]
+    cites: ["Bereshit Rabbah 73:8"]
+    confidence: witnessed
   comment: >
     Hundred measures — a measure-word that never means gate — and YHWH's blessing as fact.
   confidence: tested
@@ -1188,6 +1294,17 @@ boot_steps:
       Next verb tokens: 30:1 Rachel; 37:11 brothers. No SPECS; no TEST.
     cites: [TIR-014]
     confidence: tested
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(household_written_short, service_maxim_on_a_missing_letter)"
+    en: >
+      A LABOUR MAXIM CARRIED ON ONE ABSENT LETTER [claim G44-22,
+      machine-checked]. The word for his household staff is written
+      defective here, and the short form is read as the rule that one who
+      does not make himself LIKE A SLAVE to his slave does not acquire
+      him. Our tree carries the defective form the reading requires.
+      [folded shape: ink count]
+    cites: ["Bereshit Rabbah 64:7"]
+    confidence: witnessed
   comment: >
     Wealth on the left; the corpus's first envy-verb on the right.
   confidence: tested

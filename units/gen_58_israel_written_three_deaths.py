@@ -35,6 +35,10 @@ m.declare("Elohim", "LET",
 # speaks a demand — LET: make-there-altar(Jacob, to-to-the-see)
 m.declare("Elohim", "LET",
           "ase_sham_mizbeach(yaaqov, la_el_ha_nire)")
+# witness-tier presupposed read: the_vow_audit_executed_as_a_command on
+# arise_and_go_up — read, not installed
+m.witness_read("arise_and_go_up", "the_vow_audit_executed_as_a_command",
+                cites=["Bereshit Rabbah 81:1", "Bereshit Rabbah 81:2"])
 
 # -------------------------- Gen.35.2 · THE_PURGE_TRIPLE --------------------
 # וַיֹּאמֶר יַעֲקֹב אֶל־בֵּיתוֹ וְאֶל כָּל־אֲשֶׁר עִמּוֹ הָסִרוּ אֶת־אֱלֹהֵי
@@ -56,6 +60,10 @@ m.declare("yaaqov", "LET",
 # speaks a demand — LET: slide-by(from-Jacob, simlotekhem)
 m.declare("yaaqov", "LET",
           "hachalifu(bet_yaaqov, simlotekhem)")
+# witness-tier presupposed read: extending_a_recorded_prohibition on
+# the_purge_order — read, not installed
+m.witness_read("the_purge_order", "extending_a_recorded_prohibition",
+                cites=["Bereshit Rabbah 81:3", "Onkelos Genesis 35:2"])
 
 # -------------------------- Gen.35.3 · THE_COHORTATIVE_PAIR ----------------
 # וְנָקוּמָה וְנַעֲלֶה בֵּית־אֵל וְאֶעֱשֶׂה־שָּׁם מִזְבֵּחַ לָאֵל הָעֹנֶה
@@ -68,6 +76,11 @@ m.step("Gen.35.3")
 # speaks a demand — CMD-US?: arise-and-go-up(from-Jacob, from-to)
 m.declare("yaaqov", "CMD-US?",
           "naquma_ve_naale(bet_yaaqov, bet_el)")
+# witness-tier presupposed read:
+# promise_recall_and_discharge_in_one_vocabulary on the_vow_arc — read, not
+# installed
+m.witness_read("the_vow_arc", "promise_recall_and_discharge_in_one_vocabulary",
+                cites=["Onkelos Genesis 35:3"])
 
 # -------------------------- Gen.35.4 · THE_HANDOVER ------------------------
 # וַיִּתְּנוּ אֶל־יַעֲקֹב אֵת כָּל־אֱלֹהֵי הַנֵּכָר אֲשֶׁר בְּיָדָם
@@ -127,6 +140,10 @@ m.install("ha_alon")
 # ‹וַיִּקְרָא שְׁמוֹ אַלּוֹן בָּכוּת› (“and-call name-him/its Allon-
 # bachuth”) — named: the-oak := oak-Allon-bachuth
 m.name("ha_alon", "alon_bakhut")
+# witness-tier presupposed read: an_unnarrated_death_found_inside_it on
+# the_trees_name — read, not installed
+m.witness_read("the_trees_name", "an_unnarrated_death_found_inside_it",
+                cites=["Bereshit Rabbah 81:5", "Onkelos Genesis 35:8"])
 
 # -------------------------- Gen.35.9 · THE_SECOND_APPEARANCE ---------------
 # וַיֵּרָא אֱלֹהִים אֶל־יַעֲקֹב עוֹד בְּבֹאוֹ מִפַּדַּן אֲרָם וַיְבָרֶךְ
@@ -150,6 +167,11 @@ m.install("yaaqov")
 # ‹וַיִּקְרָא אֶת־שְׁמוֹ יִשְׂרָאֵל› (“and-call obj-marker name-him/its
 # Israel”) — named: Jacob := Israel
 m.name("yaaqov", "yisrael")
+# witness-tier presupposed read:
+# a_characters_deferral_honoured_by_the_narration on the_renaming — read,
+# not installed
+m.witness_read("the_renaming", "a_characters_deferral_honoured_by_the_narration",
+                cites=["Bereshit Rabbah 78:3", "Bereshit Rabbah 46:8"])
 
 # -------------------------- Gen.35.11 · THE_SINGULAR_BLESSING_COMMAND ------
 # וַיֹּאמֶר לוֹ אֱלֹהִים אֲנִי אֵל שַׁדַּי פְּרֵה וּרְבֵה גּוֹי וּקְהַל
@@ -162,6 +184,10 @@ m.step("Gen.35.11")
 # demand — LET: be-fruitful-and-multiply(Israel)
 m.declare("el_shaday", "LET",
           "pere_u_reve(yisrael)")
+# witness-tier presupposed read: expounded_to_crown_a_king on
+# the_blessings_terms — read, not installed
+m.witness_read("the_blessings_terms", "expounded_to_crown_a_king",
+                cites=["Bereshit Rabbah 82:4", "Onkelos Genesis 35:11"])
 
 # -------------------------- Gen.35.12 · THE_LAND_GRANT_TRIPLE --------------
 # וְאֶת־הָאָרֶץ אֲשֶׁר נָתַתִּי לְאַבְרָהָם וּלְיִצְחָק לְךָ אֶתְּנֶנָּה
@@ -240,6 +266,11 @@ m.name("ha_ben", "ben_oni")
 # ‹וְאָבִיו קָרָא־לוֹ בִנְיָמִין› (“and-father-him/its call to-him/its
 # Benjamin”) — named: the-son := Benjamin
 m.name("ha_ben", "vinyamin")
+# witness-tier presupposed read:
+# a_bilingual_seam_with_the_translation_on_one_side on the_two_names — read,
+# not installed
+m.witness_read("the_two_names", "a_bilingual_seam_with_the_translation_on_one_side",
+                cites=["Bereshit Rabbah 82:9", "Onkelos Genesis 35:18"])
 
 # -------------------------- Gen.35.19 · RACHEL_DIES ------------------------
 # וַתָּמָת רָחֵל וַתִּקָּבֵר בְּדֶרֶךְ אֶפְרָתָה הִוא בֵּית לָחֶם
@@ -249,6 +280,10 @@ m.step("Gen.35.19")
 # ‹וַתָּמָת רָחֵל› (“and-die Rachel”) — fact holds: and-die-and-bury(Rachel,
 # in-way/road-'Ephrath-from-Bethlehem)
 m.fact("va_tamat_va_tiqaver(rachel, be_derekh_efrata_bet_lachem)")
+# witness-tier presupposed read: curse_chain_from_gen_53_closing_here on
+# the_death — read, not installed
+m.witness_read("the_death", "curse_chain_from_gen_53_closing_here",
+                cites=["Bereshit Rabbah 74:4"])
 
 # -------------------------- Gen.35.20 · THE_GRAVE_PILLAR -------------------
 # וַיַּצֵּב יַעֲקֹב מַצֵּבָה עַל־קְבֻרָתָהּ הִוא מַצֶּבֶת קְבֻרַת־רָחֵל
@@ -259,6 +294,10 @@ m.step("Gen.35.20")
 # ‹וַיַּצֵּב יַעֲקֹב מַצֵּבָה› (“and-stand Jacob pillar”) — fact holds:
 # something-stationary-sepulture-Rachel(until-the-day)
 m.fact("matzevet_qevurat_rachel(ad_ha_yom)")
+# witness-tier presupposed read: anti_monument_maxim_at_the_monument on
+# the_pillar — read, not installed
+m.witness_read("the_pillar", "anti_monument_maxim_at_the_monument",
+                cites=["Bereshit Rabbah 82:10"])
 
 # -------------------------- Gen.35.21 · ISRAEL_MOVES -----------------------
 # וַיִּסַּע יִשְׂרָאֵל וַיֵּט אָהֳלֹה מֵהָלְאָה לְמִגְדַּל־עֵדֶר
@@ -279,6 +318,19 @@ m.step("Gen.35.22")
 # ‹וַיִּשְׁכַּב אֶת־בִּלְהָה פִּילֶגֶשׁ› (“and-lie-down with Bilhah
 # concubine”) — fact holds: and-lie-down-Reuben-and-hear-Israel(two--teen)
 m.fact("va_yishkav_reuven_va_yishma_yisrael(shenem_asar)")
+# witness-tier presupposed read:
+# lineage_conserved_where_a_name_could_have_dropped on the_sons_were_twelve
+# — read, not installed
+m.witness_read("the_sons_were_twelve", "lineage_conserved_where_a_name_could_have_dropped",
+                cites=["Bereshit Rabbah 82:11"])
+# witness-tier presupposed read: converted_into_two_standing_institutions on
+# two_firsts — read, not installed
+m.witness_read("two_firsts", "converted_into_two_standing_institutions",
+                cites=["Bereshit Rabbah 84:15", "Bereshit Rabbah 84:19"])
+# witness-tier presupposed read: the_canons_transparency_used_as_a_premise
+# on the_recorded_offence — read, not installed
+m.witness_read("the_recorded_offence", "the_canons_transparency_used_as_a_premise",
+                cites=["Bereshit Rabbah 87:6"])
 
 # -------------------------- Gen.35.23 · LEAH_S_SIX -------------------------
 # בְּנֵי לֵאָה בְּכוֹר יַעֲקֹב רְאוּבֵן וְשִׁמְעוֹן וְלֵוִי וִיהוּדָה
@@ -362,4 +414,41 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 15
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('arise_and_go_up', 'the_vow_audit_executed_as_a_command'), ('the_purge_order', 'extending_a_recorded_prohibition'), ('the_vow_arc', 'promise_recall_and_discharge_in_one_vocabulary'), ('the_trees_name', 'an_unnarrated_death_found_inside_it'), ('the_renaming', 'a_characters_deferral_honoured_by_the_narration'), ('the_blessings_terms', 'expounded_to_crown_a_king'), ('the_two_names', 'a_bilingual_seam_with_the_translation_on_one_side'), ('the_death', 'curse_chain_from_gen_53_closing_here'), ('the_pillar', 'anti_monument_maxim_at_the_monument'), ('the_sons_were_twelve', 'lineage_conserved_where_a_name_could_have_dropped'), ('two_firsts', 'converted_into_two_standing_institutions'), ('the_recorded_offence', 'the_canons_transparency_used_as_a_premise')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 81:1', 'Bereshit Rabbah 81:2']
+    assert all('the_vow_audit_executed_as_a_command' not in f for f in m.WORLD["facts"])
+    assert 'arise_and_go_up' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 81:3', 'Onkelos Genesis 35:2']
+    assert all('extending_a_recorded_prohibition' not in f for f in m.WORLD["facts"])
+    assert 'the_purge_order' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Genesis 35:3']
+    assert all('promise_recall_and_discharge_in_one_vocabulary' not in f for f in m.WORLD["facts"])
+    assert 'the_vow_arc' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 81:5', 'Onkelos Genesis 35:8']
+    assert all('an_unnarrated_death_found_inside_it' not in f for f in m.WORLD["facts"])
+    assert 'the_trees_name' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 78:3', 'Bereshit Rabbah 46:8']
+    assert all('a_characters_deferral_honoured_by_the_narration' not in f for f in m.WORLD["facts"])
+    assert 'the_renaming' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 82:4', 'Onkelos Genesis 35:11']
+    assert all('expounded_to_crown_a_king' not in f for f in m.WORLD["facts"])
+    assert 'the_blessings_terms' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 82:9', 'Onkelos Genesis 35:18']
+    assert all('a_bilingual_seam_with_the_translation_on_one_side' not in f for f in m.WORLD["facts"])
+    assert 'the_two_names' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 74:4']
+    assert all('curse_chain_from_gen_53_closing_here' not in f for f in m.WORLD["facts"])
+    assert 'the_death' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 82:10']
+    assert all('anti_monument_maxim_at_the_monument' not in f for f in m.WORLD["facts"])
+    assert 'the_pillar' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 82:11']
+    assert all('lineage_conserved_where_a_name_could_have_dropped' not in f for f in m.WORLD["facts"])
+    assert 'the_sons_were_twelve' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 84:15', 'Bereshit Rabbah 84:19']
+    assert all('converted_into_two_standing_institutions' not in f for f in m.WORLD["facts"])
+    assert 'two_firsts' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 87:6']
+    assert all('the_canons_transparency_used_as_a_premise' not in f for f in m.WORLD["facts"])
+    assert 'the_recorded_offence' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

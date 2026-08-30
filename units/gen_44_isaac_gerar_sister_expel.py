@@ -35,6 +35,10 @@ m.event("go", agent="yitzchaq")
 # Abimelech … Gerar-ward”) — reads without prior install (flag, not fix):
 # Isaac, Abraham, Abimelech, gerar, Pelishtite
 m.presupposed("yitzchaq", "avraham", "avimelekh", "gerar", "pelishtim")
+# witness-tier presupposed read: member_of_the_ten_famines_census on
+# this_famine — read, not installed
+m.witness_read("this_famine", "member_of_the_ten_famines_census",
+                cites=["Bereshit Rabbah 25:3", "Bereshit Rabbah 64:2"])
 
 # -------------------------- Gen.26.2 · THE_APPEARANCE_THE_LET_NOT_AND_THE_DWELL -
 # וַיֵּרָ֤א אֵלָי֙ו יְהוָ֔ה וַיֹּ֖אמֶר אַל־תֵּרֵ֣ד מִצְרָ֑יְמָה שְׁכֹ֣ן
@@ -54,6 +58,11 @@ m.declare("YHWH", "LET-NOT",
 # which-say-to-you)
 m.declare("YHWH", "LET",
           "shekhon(yitzchaq, ba_aretz_asher_omar_elekha)")
+# witness-tier presupposed read:
+# offering_disqualification_rule_applied_to_geography on remain_in_this_land
+# — read, not installed
+m.witness_read("remain_in_this_land", "offering_disqualification_rule_applied_to_geography",
+                cites=["Bereshit Rabbah 64:3"])
 
 # -------------------------- Gen.26.3 · THE_SOJOURN_THE_PROMISE_AND_THE_PAST_OATH -
 # גּ֚וּר בָּאָ֣רֶץ הַזֹּ֔את וְאֶֽהְיֶ֥ה עִמְּךָ֖ וַאֲבָרְכֶ֑ךָּ כִּֽי־לְךָ֣
@@ -83,6 +92,10 @@ m.fact("eten_le_kha_u_le_zara_kha_et_kal_ha_aratzot_ha_el")
 # oath-swear-to-Abraham
 m.fact("va_haqimoti_et_ha_shevua",
        "past_oath_nishbati_le_avraham")
+# witness-tier presupposed read: partial_grant_with_a_future_instalment on
+# these_lands_short_form — read, not installed
+m.witness_read("these_lands_short_form", "partial_grant_with_a_future_instalment",
+                cites=["Bereshit Rabbah 64:3", "Onkelos Genesis 26:3"])
 
 # -------------------------- Gen.26.4 · THE_SEED_STARS_AND_THE_NATIONS_BLESSING -
 # וְהִרְבֵּיתִ֤י אֶֽת־זַרְעֲךָ֙ כְּכוֹכְבֵ֣י הַשָּׁמַ֔יִם וְנָתַתִּ֣י
@@ -116,6 +129,14 @@ m.fact("eqev_asher_shama_avraham_be_qoli")
 # keep/guard watch-me/my commandment-me/my statute-me/my and-precept-me/my”)
 # — fact holds: and-keep/guard-mishmarti-mitzvotai-chuqqotai-and-torotai
 m.fact("va_yishmor_mishmarti_mitzvotai_chuqqotai_ve_torotai")
+# witness-tier presupposed read: numeric_value_172_and_the_age_of_three on
+# the_opening_word — read, not installed
+m.witness_read("the_opening_word", "numeric_value_172_and_the_age_of_three",
+                cites=["Bereshit Rabbah 64:4"])
+# witness-tier presupposed read: whole_system_known_before_sinai on
+# the_stacked_law_words — read, not installed
+m.witness_read("the_stacked_law_words", "whole_system_known_before_sinai",
+                cites=["Bereshit Rabbah 64:4", "Onkelos Genesis 26:5"])
 
 # -------------------------- Gen.26.6 · THE_DWELL_OTHER_VERB_CENTERPIECE ----
 # וַיֵּ֥שֶׁב יִצְחָ֖ק בִּגְרָֽר
@@ -162,6 +183,10 @@ m.event("?")
 # Rebekah woman-him/its”) — fact holds: Isaac-laugh-outright-obj-marker-
 # rivqah-his-wife
 m.fact("yitzchaq_metzacheq_et_rivqah_ishto")
+# witness-tier presupposed read: modesty_law_cluster_with_its_exception on
+# the_word_playing — read, not installed
+m.witness_read("the_word_playing", "modesty_law_cluster_with_its_exception",
+                cites=["Bereshit Rabbah 64:5"])
 
 # -------------------------- Gen.26.9 · THE_SUMMONS_AND_THE_RE_QUOTE --------
 # וַיִּקְרָ֨א אֲבִימֶ֜לֶךְ לְיִצְחָ֗ק וַיֹּ֨אמֶר֙ אַ֣ךְ הִנֵּ֤ה אִשְׁתְּךָ֙
@@ -198,6 +223,10 @@ m.fact("ma_zot_asita_la_nu")
 # and-come/bring over-us/our guilt”) — fact holds: near-miss-lie-down-and-
 # guilt-brought
 m.fact("near_miss_shakhav_and_asham_brought")
+# witness-tier presupposed read: rendered_as_the_distinguished_one on
+# one_of_the_people — read, not installed
+m.witness_read("one_of_the_people", "rendered_as_the_distinguished_one",
+                cites=["Onkelos Genesis 26:10"])
 
 # -------------------------- Gen.26.11 · THE_ROYAL_DECREE_MOT_YUMAT ---------
 # וַיְצַ֣ו אֲבִימֶ֔לֶךְ אֶת־כָּל־הָעָ֖ם לֵאמֹ֑ר הַנֹּגֵ֜עַ בָּאִ֥ישׁ הַזֶּ֛ה
@@ -225,6 +254,15 @@ m.step("Gen.26.12")
 m.event("sow_and_find", agent="yitzchaq", themes=["mea_shearim"])
 # ‹וַיְבָרֲכֵהוּ יְהוָה› (“and-bless-him/its YHWH”) — event: ?
 m.event("?")
+# witness-tier presupposed read:
+# two_standing_rules_colliding_and_adjudicated on the_hundredfold — read,
+# not installed
+m.witness_read("the_hundredfold", "two_standing_rules_colliding_and_adjudicated",
+                cites=["Bereshit Rabbah 64:6", "Onkelos Genesis 26:12"])
+# witness-tier presupposed read: first_member_of_a_proximity_census on
+# enrichment_of_the_host — read, not installed
+m.witness_read("enrichment_of_the_host", "first_member_of_a_proximity_census",
+                cites=["Bereshit Rabbah 73:8"])
 
 # -------------------------- Gen.26.13 · THE_MAN_GREW_VERY_GREAT ------------
 # וַיִּגְדַּ֖ל הָאִ֑ישׁ וַיֵּ֤לֶךְ הָלוֹךְ֙ וְגָדֵ֔ל עַ֥ד כִּֽי־גָדַ֖ל
@@ -249,6 +287,10 @@ m.fact("miqne_tzon_vaqar_va_avuda_raba")
 # ‹וַיְקַנְאוּ אֹתוֹ פְּלִשְׁתִּים› (“and-be-zealous obj-marker-him/its
 # Pelishtite”) — event: envy — agent Pelishtite
 m.event("envy", agent="pelishtim")
+# witness-tier presupposed read: service_maxim_on_a_missing_letter on
+# household_written_short — read, not installed
+m.witness_read("household_written_short", "service_maxim_on_a_missing_letter",
+                cites=["Bereshit Rabbah 64:7"])
 
 # -------------------------- Gen.26.15 · THE_STOPPED_WELLS_OF_ABRAHAMS_DAYS -
 # וְכָל־הַבְּאֵרֹ֗ת אֲשֶׁ֤ר חָֽפְרוּ֙ עַבְדֵ֣י אָבִ֔יו בִּימֵ֖י אַבְרָהָ֣ם
@@ -299,4 +341,35 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 19
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('this_famine', 'member_of_the_ten_famines_census'), ('remain_in_this_land', 'offering_disqualification_rule_applied_to_geography'), ('these_lands_short_form', 'partial_grant_with_a_future_instalment'), ('the_opening_word', 'numeric_value_172_and_the_age_of_three'), ('the_stacked_law_words', 'whole_system_known_before_sinai'), ('the_word_playing', 'modesty_law_cluster_with_its_exception'), ('one_of_the_people', 'rendered_as_the_distinguished_one'), ('the_hundredfold', 'two_standing_rules_colliding_and_adjudicated'), ('enrichment_of_the_host', 'first_member_of_a_proximity_census'), ('household_written_short', 'service_maxim_on_a_missing_letter')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 25:3', 'Bereshit Rabbah 64:2']
+    assert all('member_of_the_ten_famines_census' not in f for f in m.WORLD["facts"])
+    assert 'this_famine' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 64:3']
+    assert all('offering_disqualification_rule_applied_to_geography' not in f for f in m.WORLD["facts"])
+    assert 'remain_in_this_land' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 64:3', 'Onkelos Genesis 26:3']
+    assert all('partial_grant_with_a_future_instalment' not in f for f in m.WORLD["facts"])
+    assert 'these_lands_short_form' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 64:4']
+    assert all('numeric_value_172_and_the_age_of_three' not in f for f in m.WORLD["facts"])
+    assert 'the_opening_word' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 64:4', 'Onkelos Genesis 26:5']
+    assert all('whole_system_known_before_sinai' not in f for f in m.WORLD["facts"])
+    assert 'the_stacked_law_words' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 64:5']
+    assert all('modesty_law_cluster_with_its_exception' not in f for f in m.WORLD["facts"])
+    assert 'the_word_playing' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Genesis 26:10']
+    assert all('rendered_as_the_distinguished_one' not in f for f in m.WORLD["facts"])
+    assert 'one_of_the_people' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 64:6', 'Onkelos Genesis 26:12']
+    assert all('two_standing_rules_colliding_and_adjudicated' not in f for f in m.WORLD["facts"])
+    assert 'the_hundredfold' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 73:8']
+    assert all('first_member_of_a_proximity_census' not in f for f in m.WORLD["facts"])
+    assert 'enrichment_of_the_host' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 64:7']
+    assert all('service_maxim_on_a_missing_letter' not in f for f in m.WORLD["facts"])
+    assert 'household_written_short' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -34,8 +34,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 .arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
        border-radius:8px; padding:.4rem .7rem; }
 .arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
-</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_19_the_remembering?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The remembering: God remembers Noach, the waters go home, the earth dries (8:1-14) <span class='badge frozen'>MODEL · REV 2 · GATES GREEN</span></h1>
-<div class="meta">unit <b>gen_19_the_remembering</b> · Genesis 8:1-14 · derive logic_derived_v1 · phase C-19</div>
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_19_the_remembering?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The remembering: God remembers Noach, the waters go home, the earth dries (8:1-14) <span class='badge frozen'>MODEL · REV 4 · GATES GREEN</span></h1>
+<div class="meta">unit <b>gen_19_the_remembering</b> · Genesis 8:1-14 · derive logic_derived_v2_full_rule · phase C-19</div>
 <div class="meta"><a href="../#Gen/8/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
 <p><span class="he">וַיִּזְכֹּר אֱלֹהִים אֶת־נֹחַ — יָבְשָׁה הָאָרֶץ</span> · <i>va-yizkor Elohim et-Noach — yavshah ha-aretz</i> · &#x27;and God remembered Noach&#x27; — &#x27;the earth was dry&#x27;</p>
 <div class="note">Derived 2026-08-01 by the persistent derivation agent (post-trial; freeze-after-review by the main loop — no agent freeze). REVIEW PASSED and FROZEN 2026-08-01 by the main loop: all prose read; load-bearing censuses independently re-verified against the raw snapshot (remember-verb debut, the rest-verb&#x27;s sibling-lemma split, the hapax trio, the evening refrain count, the dust-to- dust pair, the dropped totalizers, the manoach clause-match, the name/speech/imperative zero-scans); glossing airtight; [OPEN] discipline intact; nothing invented. First unit derived under the PIPELINE + DEBUT-MAP process: the corpus survey was COMPLETE (68 flagged lemmas in 192 tokens, staged before the seed) rather than curated. Calibrated coverage (charter 4.1): Onkelos read Tier-A at derive time (14 sequential fetches, Data/FETCHLOG.md — the buffer renders the remembering as a mindful STATE, levels Elohim to the LORD-name, gives the waters the rest-verb early, renames Ararat to Kardu, merges the sky-lattice and ark-window words, and levels the two wait-verbs; it preserves the hapax stop-up verb, the abate-root, the appearance-passive, and the span&#x27;s speechlessness); trees from the DB&#x27;s stored tree_json. FIFTEENTH PROSPECTIVE MIDDOT RUN (logic/middot_scan/WATCHLIST_gen19_prospective_2026-08-01.md): cache holds ZERO sources for Gen 8:1-14 — thirteenth tripwire in a row. INTERPRETER: ZERO extensions — tenth extension-free derivation candidate in a row.</div>
@@ -68,6 +68,10 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr class="opline"><td>EVENT</td><td><span class="expr">subside(e3) ∧ Theme(e3, ha_mayim)</span><br><span class="gloss">= subside(e3) ∧ Theme(e3, the-waters)</span><br>VA-YASHOKU — &#x27;and the waters SUBSIDED&#x27;: a TWO-token Torah verb; its only other token is Num 17:20 — God subsiding the camp&#x27;s murmurings: both tokens calm an uprising [letter fact, held; Onkelos renders the REST-verb (ve-nachu) — handing the waters, three verses early, the root the Hebrew saves for the ark; dual-track, flagged].
 </td><td><span class="he">וַיָּשֹׁכּוּ הַמָּיִם</span> · <i>va-yashoku ha-mayim</i><br><span class="gloss">= they-subsided waters</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">noach, tevah, mayim are READ without prior install (the boarder, the build, the waters — the standing trio resumed)</span><br><span class="gloss">= Noach, ark, waters are READ without prior install (the boarder, the build, the waters — the standing trio resumed)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(vayashoku, waters_proven_hot_by_verbal_analogy)</span><br><span class="gloss">= WITNESS-READ(vayashoku, waters-proven-hot-by-verbal-analogy)</span><br>A PHYSICAL PROPERTY DERIVED FROM THE VERB THAT ENDS IT [claim G19-12]. Our 8:1 says the waters וַיָּשֹׁכּוּ (va-yashoku, &#x27;abated&#x27;), and the same verb describes a king&#x27;s wrath being ASSUAGED - which is to say COOLED. By verbal analogy Rav Chisda concludes the flood waters were scalding: &#x27;they sinned with boiling passion and were punished with boiling water&#x27;. The world-state&#x27;s temperature is inferred from a shared verb, never described. Argues middah E7 (equal decree). [folded shape: cross-corpus link]
+</td><td>—</td><td class='cite'>Rosh Hashanah 12a:4</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(remembering_scope, depths_judged_mountains_spared)</span><br><span class="gloss">= WITNESS-READ(remembering-scope, depths-judged-mountains-spared)</span><br>THE UNIT&#x27;S OWN TOPOGRAPHY TYPED BY ATTRIBUTE [claim G19-16]. The remembering is read as covering the whole ark&#x27;s manifest, and the flood&#x27;s two halves are typed by the geography each used: judgment came through the DEPTHS, broken open at 7:11; kindness through the MOUNTAINS, on which the ark came to rest. [folded shape: kept record]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 33:1</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The turn of the whole flood is a silent interior verb with a passenger list attached: God remembers a man and a zoo.</div>
 </div>
@@ -140,6 +144,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וַיְשַׁלַּח אֶת־הָעֹרֵב</span> · <i>va-yeshallach et-ha-orev</i><br><span class="gloss">= and-yeshallach obj-marker·et-the-raven</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yatzo_va_shov_ad_yevoshet_ha_mayim, t1)</span><br><span class="gloss">= HOLDS(going-out-and-returning-until-drying-of-the-waters, t1)</span><br>YATZO VA-SHOV — &#x27;going out and returning&#x27; (the third infinitive pair: the raven adopts the waters&#x27; own gait). AD-YEVOSHET — &#x27;until the DRYING&#x27;: YAVESH (&#x27;be dry&#x27;) — BOTH its Torah tokens are in this span (here as the raven&#x27;s horizon; 8:14 as the earth&#x27;s closing fact), and it is the verb-root of 1:9&#x27;s YABBASHAH (&#x27;dry land&#x27;) [root-family echo, verified]. The raven never reports; it commutes.
 </td><td><span class="he">יָצוֹא וָשׁוֹב עַד־יְבֹשֶׁת הַמַּיִם</span> · <i>yatzo va-shov ad-yevoshet ha-mayim</i><br><span class="gloss">= going-out returning until-drying-of waters</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(raven_dispatch, argued_back_and_preserved_for_elijah)</span><br><span class="gloss">= WITNESS-READ(raven-dispatch, argued-back-and-preserved-for-elijah)</span><br>THE DISPATCHED CREATURE ARGUES WITH THE SENDER [claim G19-15]. The raven objects that it is of a species taken only in twos while the species taken in sevens are spared, and asks whether it is its mate that is wanted. It is judged unfit for food and for offering - and the reason given for keeping it alive at all is that ELIJAH will later need ravens to feed him. A creature preserved in this unit because a far later book requires it. [folded shape: cross-corpus link]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 33:5, Sanhedrin 108b:12</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The first scout is a shuttle, not a messenger: it keeps the waters&#x27; own rhythm until the drying.</div>
 </div>
@@ -198,6 +204,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וְהִנֵּה עֲלֵה־זַיִת טָרָף בְּפִיהָ</span> · <i>ve-hinneh aleh-zayit taraf be-fiha</i><br><span class="gloss">= behold leaf-olive freshly-plucked her-mouth</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>EVENT</td><td><span class="expr">know(e19) ∧ Agent(e19, noach) ∧ Theme(e19, ki_qalu_ha_mayim)</span><br><span class="gloss">= know(e19) ∧ Agent(e19, Noach) ∧ Theme(e19, that-whether-they-abated-the-waters)</span><br>VA-YEDA — &#x27;and Noach KNEW that the waters had ABATED&#x27;: knowledge from a carried sign — the inquiry closes in the knowing-verb, not in speech. QALU — the abate-root&#x27;s token 2 (its token 3 is 8:21&#x27;s never-again-CURSE: one root, abate and curse, all early tokens in the flood&#x27;s resolution [letter fact, named-only]).
 </td><td><span class="he">וַיֵּדַע נֹחַ כִּי־קַלּוּ הַמַּיִם</span> · <i>va-yeda Noach ki-qalu ha-mayim</i><br><span class="gloss">= he-knew Noach that-whether-they-abated waters</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_STATE</td><td><span class="expr">WITNESS(taraf_verb, killed_or_sustenance)</span><br><span class="gloss">= WITNESS(freshly-plucked-verb, killed-light-sustenance)</span><br>ONE VERB, TWO OPPOSITE READINGS, BOTH CARRIED [claim G19-14]. טָרָף (taraf) is read as KILLED - the leaf torn off, in the vocabulary later used of Joseph - and as SUSTENANCE, in the dove&#x27;s own recorded prayer: &#x27;may my sustenance be bitter as the olive and dependent on YOUR hands rather than sweet as honey and dependent on flesh and blood&#x27;. The dove is read typologically besides: had it found rest it would not have returned, which becomes the figure of exile. [folded shape: recorded dispute]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 33:6, Sanhedrin 108b:17</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The world&#x27;s all-clear is one leaf wide, delivered at the first evening since the week.</div>
 </div>
@@ -230,6 +238,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וַיַּרְא וְהִנֵּה חָרְבוּ פְּנֵי הָאֲדָמָה</span> · <i>va-yar ve-hinneh charvu pnei ha-adamah</i><br><span class="gloss">= he-saw behold were-parched face-of ground</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hinneh_charvu_pnei_ha_adamah, t1)</span><br><span class="gloss">= HOLDS(and-behold-were-parched-face-of-the-ground, t1)</span><br>The seen state, held: the face of the ground — the adamah whose face the wipe cleared (7:23) — dried before his eyes (perfect, fact).
 </td><td><span class="he">וְהִנֵּה חָרְבוּ פְּנֵי הָאֲדָמָה</span> · <i>ve-hinneh charvu pnei ha-adamah</i><br><span class="gloss">= behold were-parched face-of ground</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(date_formula, one_day_counts_as_a_year)</span><br><span class="gloss">= WITNESS-READ(date-formula, one-day-counts-as-a-year)</span><br>LIVE CALENDAR LAW STANDS ON THIS DATE OPERATOR [claim G19-13]. R. Meir derives the rule that ONE DAY IN A YEAR COUNTS AS A YEAR from this verse&#x27;s own ink: one day into the six hundred and first year, and the verse already calls it a year. The same operator is used as the calendar system&#x27;s stress test - the objection that the count works only if the flood year goes uncounted resolves solely on the Tishrei reckoning - and the rule that months are counted from Nisan is set against our ordinals. [folded shape: priced law]
+</td><td>—</td><td class='cite'>Rosh Hashanah 10b:6, Jerusalem Talmud Rosh Hashanah 1:1:3, Tosefta Rosh Hashanah (Lieberman) 1:3</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The new year opens with a man on a roofless boat, looking at a world that dried while he waited.</div>
 </div>
@@ -839,6 +849,14 @@ m.event(&quot;pass&quot;, agent=&quot;elohim&quot;, themes=[&quot;ruach_al_ha_ar
 m.event(&quot;subside&quot;, themes=[&quot;ha_mayim&quot;])
 # reads without prior install (flag, not fix): Noach, ark, waters
 m.presupposed(&quot;noach&quot;, &quot;tevah&quot;, &quot;mayim&quot;)
+# witness-tier presupposed read: waters_proven_hot_by_verbal_analogy on
+# vayashoku — read, not installed
+m.witness_read(&quot;vayashoku&quot;, &quot;waters_proven_hot_by_verbal_analogy&quot;,
+                cites=[&quot;Rosh Hashanah 12a:4&quot;])
+# witness-tier presupposed read: depths_judged_mountains_spared on
+# remembering_scope — read, not installed
+m.witness_read(&quot;remembering_scope&quot;, &quot;depths_judged_mountains_spared&quot;,
+                cites=[&quot;Bereshit Rabbah 33:1&quot;])
 
 # -------------------------- Gen.8.2 · THE_SHUT_MIRROR ----------------------
 # וַיִּסָּכְרוּ מַעְיְנֹת תְּהוֹם וַאֲרֻבֹּת הַשָּׁמָיִם וַיִּכָּלֵא
@@ -929,6 +947,10 @@ m.event(&quot;send&quot;, agent=&quot;noach&quot;, themes=[&quot;ha_orev&quot;])
 # the-drying-of the-waters”) — fact holds: going-out-and-returning-until-
 # drying-of-the-waters
 m.fact(&quot;yatzo_va_shov_ad_yevoshet_ha_mayim&quot;)
+# witness-tier presupposed read: argued_back_and_preserved_for_elijah on
+# raven_dispatch — read, not installed
+m.witness_read(&quot;raven_dispatch&quot;, &quot;argued_back_and_preserved_for_elijah&quot;,
+                cites=[&quot;Bereshit Rabbah 33:5&quot;, &quot;Sanhedrin 108b:12&quot;])
 
 # -------------------------- Gen.8.8 · THE_DOVE_THE_QUESTION ----------------
 # וַיְשַׁלַּח אֶת־הַיּוֹנָה מֵאִתּוֹ לִרְאוֹת הֲקַלּוּ הַמַּיִם מֵעַל פְּנֵי
@@ -1007,6 +1029,9 @@ m.fact(&quot;aleh_zayit_taraf_be_fiha&quot;)
 # waters”) — event: know — agent Noach; theme that-whether-they-abated-the-
 # waters
 m.event(&quot;know&quot;, agent=&quot;noach&quot;, themes=[&quot;ki_qalu_ha_mayim&quot;])
+# witness-grounded state (its own tier): killed_or_sustenance on taraf_verb
+m.witness_state(&quot;taraf_verb&quot;, &quot;killed_or_sustenance&quot;,
+                cites=[&quot;Bereshit Rabbah 33:6&quot;, &quot;Sanhedrin 108b:17&quot;])
 
 # -------------------------- Gen.8.12 · THE_SECOND_WAIT_THE_LAST_OD ---------
 # וַיִּיָּחֶל עוֹד שִׁבְעַת יָמִים אֲחֵרִים וַיְשַׁלַּח אֶת־הַיּוֹנָה
@@ -1050,6 +1075,10 @@ m.event(&quot;see&quot;, agent=&quot;noach&quot;, themes=[&quot;pnei_ha_adamah&q
 # ‹וְהִנֵּה חָרְבוּ פְּנֵי הָאֲדָמָה› (“and-behold were-parched face the-
 # ground”) — fact holds: and-behold-were-parched-face-of-the-ground
 m.fact(&quot;ve_hinneh_charvu_pnei_ha_adamah&quot;)
+# witness-tier presupposed read: one_day_counts_as_a_year on date_formula —
+# read, not installed
+m.witness_read(&quot;date_formula&quot;, &quot;one_day_counts_as_a_year&quot;,
+                cites=[&quot;Rosh Hashanah 10b:6&quot;, &quot;Jerusalem Talmud Rosh Hashanah 1:1:3&quot;, &quot;Tosefta Rosh Hashanah (Lieberman) 1:3&quot;])
 
 # -------------------------- Gen.8.14 · THE_EARTH_DRY -----------------------
 # וּבַחֹדֶשׁ הַשֵּׁנִי בְּשִׁבְעָה וְעֶשְׂרִים יוֹם לַחֹדֶשׁ יָבְשָׁה
@@ -1079,6 +1108,22 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 23
+    assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;taraf_verb&#x27;]
+    assert m.WORLD[&quot;witnessed&quot;][&#x27;taraf_verb&#x27;][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 33:6&#x27;, &#x27;Sanhedrin 108b:17&#x27;]
+    assert all(&#x27;killed_or_sustenance&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;vayashoku&#x27;, &#x27;waters_proven_hot_by_verbal_analogy&#x27;), (&#x27;remembering_scope&#x27;, &#x27;depths_judged_mountains_spared&#x27;), (&#x27;raven_dispatch&#x27;, &#x27;argued_back_and_preserved_for_elijah&#x27;), (&#x27;date_formula&#x27;, &#x27;one_day_counts_as_a_year&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Rosh Hashanah 12a:4&#x27;]
+    assert all(&#x27;waters_proven_hot_by_verbal_analogy&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;vayashoku&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 33:1&#x27;]
+    assert all(&#x27;depths_judged_mountains_spared&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;remembering_scope&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 33:5&#x27;, &#x27;Sanhedrin 108b:12&#x27;]
+    assert all(&#x27;argued_back_and_preserved_for_elijah&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;raven_dispatch&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Rosh Hashanah 10b:6&#x27;, &#x27;Jerusalem Talmud Rosh Hashanah 1:1:3&#x27;, &#x27;Tosefta Rosh Hashanah (Lieberman) 1:3&#x27;]
+    assert all(&#x27;one_day_counts_as_a_year&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;date_formula&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-08-01 (persistent derivation agent, post-trial; freeze-after-review #2 — review PASSED; first unit under the PIPELINE + DEBUT-MAP process, the survey COMPLETE before the seed): twentieth frozen unit — THE REMEMBERING; tenth extension-free derivation in a row. Central findings, all DB-verified before drafting: ZAKHAR (&#x27;remember&#x27;) born on Noach and the animals together — the Name back on the page (Elohim x2, the only name-tokens) in a span with ZERO speech and ZERO imperatives: the second speechless span, but not nameless; AVAR (&#x27;pass over&#x27;) debuts carrying 1:2&#x27;s RUACH (&#x27;wind/spirit&#x27;) — the hover set moving; the shut-mirror NEAR-verbatim (the totalizers KOL &#x27;all&#x27; and RABBAH &#x27;great&#x27; dropped) with a TORAH-HAPAX stop-up verb — door and sky get different shut-words; the 150-bracket closed in its own digits; the ark RESTS (nuach debut) on the sound of its builder&#x27;s name, month 7 day 17, on the mountains that debuted drowned; the tops APPEAR by 1:9&#x27;s own niphal see-verb; the decree&#x27;s end-word counts down to a window he MADE; the Eden-expulsion send-verb turned scout (five sendings — birds piel, the hand qal); the dove finds no MANOACH (&#x27;resting-place&#x27;) — the two-token word the exile-curse quotes verbatim (Deut 28:65), held as FACT not FAIL; the first evening since the week&#x27;s refrain carries an olive leaf (aleh — shame, hope, terror: 3 tokens) and Noach KNOWS; two waits in two verbs (the second a Torah hapax); year 601 month 1 day 1 anchors the TIME register (the second full calendar date; RISHON &#x27;first&#x27; debuting inside it); CHAREV (&#x27;be parched&#x27;) spends both tokens in one verse; MIKHSEH (&#x27;covering&#x27;) debuts with an all-sanctuary future; the earth dry ten days past the entry-date&#x27;s slot one year on — and the unit ends dry, silent, and sealed-in: the exit-word belongs to 8:15. Machine state: t0 = the new year, zero installs (+3 presupposed), zero writes, zero queue traffic, zero tests, twenty-three events, eighteen facts, three read-flags.</div><p class='meta'>Rendered 2026-08-25 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-08-01 (persistent derivation agent, post-trial; freeze-after-review #2 — review PASSED; first unit under the PIPELINE + DEBUT-MAP process, the survey COMPLETE before the seed): twentieth frozen unit — THE REMEMBERING; tenth extension-free derivation in a row. Central findings, all DB-verified before drafting: ZAKHAR (&#x27;remember&#x27;) born on Noach and the animals together — the Name back on the page (Elohim x2, the only name-tokens) in a span with ZERO speech and ZERO imperatives: the second speechless span, but not nameless; AVAR (&#x27;pass over&#x27;) debuts carrying 1:2&#x27;s RUACH (&#x27;wind/spirit&#x27;) — the hover set moving; the shut-mirror NEAR-verbatim (the totalizers KOL &#x27;all&#x27; and RABBAH &#x27;great&#x27; dropped) with a TORAH-HAPAX stop-up verb — door and sky get different shut-words; the 150-bracket closed in its own digits; the ark RESTS (nuach debut) on the sound of its builder&#x27;s name, month 7 day 17, on the mountains that debuted drowned; the tops APPEAR by 1:9&#x27;s own niphal see-verb; the decree&#x27;s end-word counts down to a window he MADE; the Eden-expulsion send-verb turned scout (five sendings — birds piel, the hand qal); the dove finds no MANOACH (&#x27;resting-place&#x27;) — the two-token word the exile-curse quotes verbatim (Deut 28:65), held as FACT not FAIL; the first evening since the week&#x27;s refrain carries an olive leaf (aleh — shame, hope, terror: 3 tokens) and Noach KNOWS; two waits in two verbs (the second a Torah hapax); year 601 month 1 day 1 anchors the TIME register (the second full calendar date; RISHON &#x27;first&#x27; debuting inside it); CHAREV (&#x27;be parched&#x27;) spends both tokens in one verse; MIKHSEH (&#x27;covering&#x27;) debuts with an all-sanctuary future; the earth dry ten days past the entry-date&#x27;s slot one year on — and the unit ends dry, silent, and sealed-in: the exit-word belongs to 8:15. Machine state: t0 = the new year, zero installs (+3 presupposed), zero writes, zero queue traffic, zero tests, twenty-three events, eighteen facts, three read-flags.</div><p class='meta'>Rendered 2026-08-30 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

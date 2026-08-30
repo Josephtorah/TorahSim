@@ -356,11 +356,21 @@ def main():
         print("           note   changelog gate skipped — git unavailable")
 
     # -- the press — the shipped pool must be reprintable ----------------
-    # Regenerate all 97 unit renderings from the canonical YAML (logic/
+    # Regenerate EVERY unit rendering from the canonical YAML (logic/
     # units/) through press/render_unit_py.py into a temp dir and diff
     # them against units/. Self-sufficiency is not a claim; it re-proves
     # here on every run. Needs the derivation DB (uncommitted, like
     # shelf/) — absent, the gate reports itself skipped rather than red.
+    # This gate REPORTS, so its count is counted, never recited: the pool
+    # has stood at 97 for the whole Genesis walk, but it grows the moment
+    # a draft elsewhere in the Torah is derived and crosses, and a gate
+    # printing a remembered number would state what it did not measure.
+    # SCOPE, and it matters: that rule binds REPORTS, not ASSERTS. A
+    # fixed literal in an assert is a tripwire whose job is to fail when
+    # the world moves — logic/corpus/CORPUS_TRUTH.py is built entirely of
+    # those, and converting them to dynamic counts would disarm the era's
+    # proof while every gate stayed green. Count what you report; assert
+    # what must not change; never convert the second into the first.
     db = os.path.join(ROOT, "data", "derivation.sqlite")
     if os.path.exists(db):
         import tempfile
@@ -370,9 +380,10 @@ def main():
                 [sys.executable, os.path.join(ROOT, "press",
                                               "render_unit_py.py")],
                 capture_output=True, text=True, cwd=ROOT, env=env)
-            drift = []
+            drift, reprinted = [], 0
             if r.returncode == 0:
                 for f in sorted(os.listdir(td)):
+                    reprinted += 1
                     a = open(os.path.join(td, f), encoding="utf-8").read()
                     b_path = os.path.join(ROOT, "units", f)
                     b = (open(b_path, encoding="utf-8").read()
@@ -380,9 +391,9 @@ def main():
                     if a != b:
                         drift.append(f)
             report("press", r.returncode == 0 and not drift,
-                   "97 units reprinted from canonical YAML, "
-                   "diff vs units/: clean" if r.returncode == 0
-                   and not drift else
+                   "%d units reprinted from canonical YAML, "
+                   "diff vs units/: clean" % reprinted
+                   if r.returncode == 0 and not drift else
                    ("REPRINT FAILED — run press/render_unit_py.py"
                     if r.returncode else "DRIFT: " + ", ".join(drift[:5])))
     else:

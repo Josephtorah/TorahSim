@@ -18,8 +18,10 @@
 
 meta:
   id: "gen_26_shem_ledger"
-  rev: 2
+  rev: 4
   changelog:
+    - "rev 4 (2026-08-30): FULL-RULE STAMP on the owner's word — the batch stamp he held by standing decision until Genesis was whole, given when the book closed at 73 of 73 read and derived. tree_derive_version logic_derived_v1 -> logic_derived_v2_full_rule; the span's declared reading is COMPLETE in its triage ledger and its logic was rebuilt FROM that reading in the derivation pass. No operator, claim, text or test changed by this edit — the stamp records a judgement already earned."
+    - "2026-08-30 rev 3: DERIVATION PASS (owner order: 'include gen_08, start gen_09-26'). CLOSES THE GROUP. Step 5: five claims (G26-03..G26-07), all interpretive at check.type manual though one rests on ink verified at derivation; the two standing claims hold the orthography. Step 6: five operators across five steps, all in the rulebook's existing vocabulary (five WITNESS_READ - no operator invented), each tagged with its folded shape. What landed: this ledger recognised as the SUBJECT of a canonical case-table row - the ten generations from Noah to Abraham are precisely our 11:10-26, counted to show how long divine patience runs; an arithmetic computed from our 11:29's own figures, that Haran begot at SIX, then quoted in a levirate-law discussion as evidence for the minimum age of paternity beside Achaz at nine and Caleb at ten, so a number derived from this unit becomes legal precedent; the apparently redundant second clause of 11:30, verified present in the ink, read as an anatomical claim that she had not even a place for a child, with a second dispute on the same words; the al-penei phrase of our 11:28 supplying the semantics that decide a priestly-service dispute; and the death notice of 11:32 read as narrated out of chronological order ON PURPOSE - Terach had sixty-five years still to live, and the death was recorded early to spare Abram the appearance of abandoning his father. No verse text, tree, or morphology changed."
     - "2026-08-25 rev 2: RE-era reading pass (parashat Noach sweep, 11 blocks one sitting): declared core shelf read end to end — ledger logic/oral_triage/gen_26_shem_ledger_2026-08-25.md; v1 Tier-A queue discharged; ORAL_reading_pass block appended; no machine ops changed."
   title_en: "The deathless ledger: Shem to Terach, and the two deaths that land (11:10-32)"
   title_he: אֵלֶּה תּוֹלְדֹת שֵׁם
@@ -95,7 +97,7 @@ meta:
     Charan (spelled with chet, guttural ch) throughout; valad DB-glossed
     'boy' -> 'child/offspring'; akarah DB-glossed 'sterile' -> 'barren';
     Terach DB-glossed 'Tarah' -> 'Terach'.
-  tree_derive_version: logic_derived_v1
+  tree_derive_version: logic_derived_v2_full_rule
   tree_derive_phase: "C-26"
   confidence_overall: "structure tested; operator readings tested-per-TIR; intent hypothesis"
   genre: "genealogy_ledger_template"
@@ -472,6 +474,17 @@ boot_steps:
           daughters') where Gen 5 seated the death-verb.
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(ten_generations_ledger, canonical_case_table_subject)"
+        en: >
+          THIS LEDGER IS ITSELF A CASE-TABLE ROW'S SUBJECT [claim G26-05]. The
+          ruling counts TEN GENERATIONS from Adam to Noah and TEN from Noah to
+          Abraham - and our 11:10-26 IS that second ten. The stated purpose is
+          to show how long divine patience runs, 'until Abraham came and
+          received the reward of them all'. The count is taken directly over
+          this span's own steps. [folded shape: kept record]
+        cites: ["Pirkei Avot 5:2"]
+        confidence: witnessed
     comment: >
       The second ledger opens by burying the flood-word and deleting the
       death-column: a row that runs lived-begot-lived-begot and simply
@@ -936,6 +949,18 @@ boot_steps:
         en: "flag, not fix"
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(al_penei_phrase, proof_text_in_a_priestly_law_dispute)"
+        en: >
+          A PHRASE FROM THIS LEDGER DECIDES A PRIESTLY-SERVICE DISPUTE [claim
+          G26-07]. Our 11:28 says Haran died אַל־פְּנֵי (al-penei) Terach, and
+          because Haran died while his father still lived, R. Yitzchak reads
+          the phrase as meaning IN HIS LIFETIME - then carries that sense into
+          an argument about priests serving al-penei their father. A
+          genealogical death-notice supplies the semantics for a law about who
+          may serve. [folded shape: cross-corpus link]
+        cites: ["Megillah 14a:13", "Pesikta DeRav Kahana 26:10"]
+        confidence: witnessed
     comment: >
       Death returns to the ledger upside down: before the total, before
       the father, with an address — and carrying the birthplace-word the
@@ -1001,6 +1026,20 @@ boot_steps:
           are named-only, out of machine].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(ledger_arithmetic, cited_as_paternity_age_precedent)"
+        en: >
+          A NUMBER COMPUTED FROM THIS LEDGER IS PLEADED AS EVIDENCE IN COURT
+          [claim G26-03]. From our 11:29's relationships the chain computes
+          that Haran must have begotten at SIX years old - Abram a year older
+          than Nachor, Nachor a year older than Haran, with the two daughters'
+          births counted back - and the computation is then quoted in a
+          levirate-law discussion as evidence for the minimum age of
+          paternity, beside Achaz at nine and Caleb at ten. An arithmetic
+          performed on this unit's own figures becomes legal precedent.
+          [folded shape: ink count]
+        cites: ["Bereshit Rabbah 38:14", "Jerusalem Talmud Yevamot 10:7:8", "Bereshit Rabbah 45:1"]
+        confidence: witnessed
     comment: >
       Two brides enter on one singular verb: one arrives with a family
       tree grown from a dead man, the other with a name and a silence.
@@ -1056,6 +1095,19 @@ boot_steps:
           speaks into exactly this state; seam not encoded].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(barren_clause, redundancy_read_as_anatomy)"
+        en: >
+          A CLAUSE THAT ADDS NOTHING IS READ AS ADDING EVERYTHING [claim
+          G26-04]. The verse says 'Sarai was BARREN' and then adds 'she had no
+          child' - a second clause that on its face repeats the first,
+          verified present in the ink at derivation. Rav Nachman reads the
+          redundancy as meaning she had not even a PLACE for a child. The same
+          words carry a second dispute: R. Yehuda reads that she bore none TO
+          HIM though she might have to another, R. Nechemya that she bore none
+          to either. [folded shape: ink count]
+        cites: ["Yevamot 64b:2", "Bereshit Rabbah 45:1"]
+        confidence: witnessed
     comment: >
       Six words, the span's shortest verse: the one feminine verb, the
       debut of barrenness, and a child-word the Torah will never use
@@ -1217,6 +1269,19 @@ boot_steps:
           flagged].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(terach_death_notice, narrated_out_of_order_on_purpose)"
+        en: >
+          THE DEATH IS RECORDED BEFORE IT HAPPENED, DELIBERATELY [claim
+          G26-06]. Terach had sixty-five years still to live when Abram
+          departed - so this notice stands BEFORE the call although the death
+          followed it. The chain gives the reason: the wicked are called dead
+          in their lifetimes, and the death was recorded early to spare Abram
+          the appearance of abandoning his father. The unit's own time-anchor
+          is read as narrated out of chronological order on purpose. [folded
+          shape: kept record]
+        cites: ["Bereshit Rabbah 39:7"]
+        confidence: witnessed
     comment: >
       The ledger gets its one close: two hundred and five, no 'all', and
       a place-name where the lone verb used to stand — the row-holder

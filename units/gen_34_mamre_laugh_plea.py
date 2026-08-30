@@ -30,6 +30,10 @@ m.presupposed("mamre")
 # opening the-tent like-heat the-day”) — fact holds: dwell/sit-opening-the-
 # tent-like-heat-the-day
 m.fact("yoshev_petach_ha_ohel_ke_chom_ha_yom")
+# witness-tier presupposed read: six_hours_by_comparison on heat_of_the_day
+# — read, not installed
+m.witness_read("heat_of_the_day", "six_hours_by_comparison",
+                cites=["Bereshit Rabbah 48:8", "Bereshit Rabbah 48:7"])
 
 # -------------------------- Gen.18.2 · THREE_MEN_AND_THE_BOW ---------------
 # וַיִּשָּׂא עֵינָיו וַיַּרְא וְהִנֵּה שְׁלֹשָׁה אֲנָשִׁים נִצָּבִים עָלָיו
@@ -59,6 +63,10 @@ m.step("Gen.18.3")
 # over-avdekha)
 m.declare("avraham", "LET-NOT",
           "taavor(me_al_avdekha)")
+# witness-grounded state (its own tier): spine_members_in_recorded_dispute
+# on adonai_address
+m.witness_state("adonai_address", "spine_members_in_recorded_dispute",
+                cites=["Onkelos Genesis 18:3", "Bereshit Rabbah 48:10", "Onkelos Genesis 18:21", "Bereshit Rabbah 49:6"])
 
 # -------------------------- Gen.18.4 · WATER_AND_THE_RARE_PASSIVE ----------
 # יֻקַּח־נָא מְעַט־מַיִם וְרַחֲצוּ רַגְלֵיכֶם וְהִשָּׁעֲנוּ תַּחַת הָעֵץ
@@ -92,6 +100,10 @@ m.declare("avraham", "LET",
 # ‹כֵּן תַּעֲשֶׂה כַּאֲשֶׁר דִּבַּרְתָּ› (“so make like-as/which speak”) —
 # fact holds: set-upright-taaseh-like-which-speak
 m.fact("ken_taaseh_ka_asher_dibarta")
+# witness-tier presupposed read: visitors_without_the_inclination on
+# single_bet_heart — read, not installed
+m.witness_read("single_bet_heart", "visitors_without_the_inclination",
+                cites=["Bereshit Rabbah 48:11"])
 
 # -------------------------- Gen.18.6 · THE_TRIPLE_TO_SARAH -----------------
 # וַיְמַהֵר אַבְרָהָם הָאֹהֱלָה אֶל־שָׂרָה וַיֹּאמֶר מַהֲרִי שְׁלֹשׁ סְאִים
@@ -151,6 +163,10 @@ m.step("Gen.18.9")
 # ‹וַיֹּאמְרוּ אֵלָיו אַיֵּה שָׂרָה אִשְׁתֶּךָ› (“and-say to-him/its where?
 # Sarah woman-you/your”) — event: say — agent three-man
 m.event("say", agent="shelosha_anashim")
+# witness-tier presupposed read: expound_the_dots_meta_rule on dotted_elav —
+# read, not installed
+m.witness_read("dotted_elav", "expound_the_dots_meta_rule",
+                cites=["Bereshit Rabbah 48:15"])
 
 # -------------------------- Gen.18.10 · THE_RETURN_PROMISE -----------------
 # וַיֹּאמֶר שׁוֹב אָשׁוּב אֵלֶיךָ כָּעֵת חַיָּה וְהִנֵּה־בֵן לְשָׂרָה
@@ -208,6 +224,10 @@ m.step("Gen.18.13")
 # to Abraham to-what this laugh-outright Sarah”) — event: say — agent the-
 # LORD
 m.event("say", agent="YHWH")
+# witness-tier presupposed read: canon_edits_for_peace on altered_quotation
+# — read, not installed
+m.witness_read("altered_quotation", "canon_edits_for_peace",
+                cites=["Bereshit Rabbah 48:18"])
 
 # -------------------------- Gen.18.14 · TOO_WONDROUS -----------------------
 # הֲיִפָּלֵא מֵיְהוָה דָּבָר לַמּוֹעֵד אָשׁוּב אֵלֶיךָ כָּעֵת חַיָּה
@@ -341,6 +361,10 @@ m.event("turn_go", agent="shelosha_anashim")
 # him/its stand to-face YHWH”) — fact holds: and-Abraham-odenu-stand-lifnei-
 # the-LORD
 m.fact("ve_avraham_odenu_omed_lifnei_YHWH")
+# witness-tier presupposed read: scribal_emendation_claim on
+# standing_before_the_lord — read, not installed
+m.witness_read("standing_before_the_lord", "scribal_emendation_claim",
+                cites=["Bereshit Rabbah 49:7"])
 
 # -------------------------- Gen.18.23 · THE_APPROACH_AND_THE_FIFTY ---------
 # וַיִּגַּשׁ אַבְרָהָם וַיֹּאמַר הַאַף תִּסְפֶּה צַדִּיק עִם־רָשָׁע … אוּלַי
@@ -374,6 +398,10 @@ m.fact("chalilah_lekha_ha_shofet_kol_ha_aretz_lo_yaaseh_mishpat")
 # city and-lift/carry to-all the-place in-crossed-them/their”) — fact holds:
 # if-emtza-chamishim-and-nasati-to-all-the-maqom
 m.fact("im_emtza_chamishim_ve_nasati_le_khol_ha_maqom")
+# witness-tier presupposed read: courtroom_procedure_on_a_cited_precedent on
+# the_plea — read, not installed
+m.witness_read("the_plea", "courtroom_procedure_on_a_cited_precedent",
+                cites=["Bereshit Rabbah 39:6", "Bereshit Rabbah 49:10", "Bereshit Rabbah 49:12", "Bereshit Rabbah 49:13"])
 
 # -------------------------- Gen.18.27 · THE_DESCENDING_LADDER --------------
 # וַיַּעַן אַבְרָהָם וַיֹּאמַר הִנֵּה־נָא הוֹאַלְתִּי לְדַבֵּר אֶל־אֲדֹנָי
@@ -434,4 +462,26 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 29
+    assert sorted(m.WORLD["witnessed"]) == ['adonai_address']
+    assert m.WORLD["witnessed"]['adonai_address']["cites"] == ['Onkelos Genesis 18:3', 'Bereshit Rabbah 48:10', 'Onkelos Genesis 18:21', 'Bereshit Rabbah 49:6']
+    assert all('spine_members_in_recorded_dispute' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('heat_of_the_day', 'six_hours_by_comparison'), ('single_bet_heart', 'visitors_without_the_inclination'), ('dotted_elav', 'expound_the_dots_meta_rule'), ('altered_quotation', 'canon_edits_for_peace'), ('standing_before_the_lord', 'scribal_emendation_claim'), ('the_plea', 'courtroom_procedure_on_a_cited_precedent')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 48:8', 'Bereshit Rabbah 48:7']
+    assert all('six_hours_by_comparison' not in f for f in m.WORLD["facts"])
+    assert 'heat_of_the_day' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 48:11']
+    assert all('visitors_without_the_inclination' not in f for f in m.WORLD["facts"])
+    assert 'single_bet_heart' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 48:15']
+    assert all('expound_the_dots_meta_rule' not in f for f in m.WORLD["facts"])
+    assert 'dotted_elav' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 48:18']
+    assert all('canon_edits_for_peace' not in f for f in m.WORLD["facts"])
+    assert 'altered_quotation' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 49:7']
+    assert all('scribal_emendation_claim' not in f for f in m.WORLD["facts"])
+    assert 'standing_before_the_lord' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 39:6', 'Bereshit Rabbah 49:10', 'Bereshit Rabbah 49:12', 'Bereshit Rabbah 49:13']
+    assert all('courtroom_procedure_on_a_cited_precedent' not in f for f in m.WORLD["facts"])
+    assert 'the_plea' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

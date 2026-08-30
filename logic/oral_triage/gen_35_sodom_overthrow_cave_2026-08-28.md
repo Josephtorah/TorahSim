@@ -83,3 +83,17 @@ dual-tracked (row 16); the initiator-punished-first rule applied at
 (credit 51:2 + O5); the naming-polarity war-law (credit 51:11);
 Onkelos's fidelity insert at 19:15 (O1) and the in-edition sacred/
 profane variance at 19:18 (O2).
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers on 2026-08-30. This ledger
+records its Onkelos track in the compact row form ("O1 · 19:1"), which
+the unit-level cite validator cannot match: a cite is valid only when
+the literal source string appears in a triage ledger. This block's
+Onkelos verses are therefore listed here in citable form, so the
+derivation may cite the translation it actually read. No verdict is
+changed and no row is rewritten — this is a naming key for the Onkelos
+rows above.
+
+Onkelos Genesis 19:1, Onkelos Genesis 19:2, Onkelos Genesis 19:3, Onkelos Genesis 19:4, Onkelos Genesis 19:5, Onkelos Genesis 19:6, Onkelos Genesis 19:7, Onkelos Genesis 19:8, Onkelos Genesis 19:9, Onkelos Genesis 19:10, Onkelos Genesis 19:11, Onkelos Genesis 19:12, Onkelos Genesis 19:13, Onkelos Genesis 19:14, Onkelos Genesis 19:15, Onkelos Genesis 19:16, Onkelos Genesis 19:17, Onkelos Genesis 19:18, Onkelos Genesis 19:19, Onkelos Genesis 19:20, Onkelos Genesis 19:21, Onkelos Genesis 19:22, Onkelos Genesis 19:23, Onkelos Genesis 19:24, Onkelos Genesis 19:25, Onkelos Genesis 19:26, Onkelos Genesis 19:27, Onkelos Genesis 19:28, Onkelos Genesis 19:29, Onkelos Genesis 19:30, Onkelos Genesis 19:31, Onkelos Genesis 19:32, Onkelos Genesis 19:33, Onkelos Genesis 19:34, Onkelos Genesis 19:35, Onkelos Genesis 19:36, Onkelos Genesis 19:37, Onkelos Genesis 19:38.

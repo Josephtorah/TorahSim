@@ -20,8 +20,10 @@
 
 meta:
   id: "gen_39_machpelah_purchase"
-  rev: 2
+  rev: 4
   changelog:
+    - "rev 4 (2026-08-30): FULL-RULE STAMP on the owner's word — the batch stamp he held by standing decision until Genesis was whole, given when the book closed at 73 of 73 read and derived. tree_derive_version logic_derived_v1 -> logic_derived_v2_full_rule; the span's declared reading is COMPLETE in its triage ledger and its logic was rebuilt FROM that reading in the derivation pass. No operator, claim, text or test changed by this edit — the stamp records a judgement already earned."
+    - "rev 3 (2026-08-30): logic rebuilt from the 2026-08-27 parashah-grain reading (35 of 35 declared, COMPLETE) under the spine default. Thirteen claims seated, three machine-checked against the corpus: the vendor's name written defective exactly at the weighing, the participle at 23:10 defective as the seating reading requires, and the ten-fold sons-of-Chet census confirmed exact - thirteen name-tokens in the Torah, less the ancestor at 10:15 and the two daughters at 27:46, leaving ten, every one of them in a passage about this single conveyance. Deed-specification law, mourner's-exemption law claiming 23:3, the cave's occupant registry, the Moriah grief wire from gen_38, and the standing-title doctrine seated. Onkelos dual-tracks on the honorific, the weight table and the acceptance system."
     - "2026-08-27 rev 2: RE-era reading pass (parashat Chayei Sarah sweep, 4 blocks one sitting — SECOND RUN UNDER THE SPINE DEFAULT, owner 2026-08-27: Bereshit Rabbah + Onkelos declared, Mishnah/Talmud held for the Step 9 exam): ledger logic/oral_triage/gen_39_machpelah_purchase_2026-08-27.md; v1 queue discharged; ORAL_reading_pass block appended; no machine ops changed."
   title_en: "Sarah's death and the Machpelah purchase (23:1-20)"
   title_he: גֵּר־וְתוֹשָׁב אָנֹכִי עִמָּכֶם תְּנוּ לִי אֲחֻזַּת־קֶבֶר
@@ -220,7 +222,7 @@ meta:
     Chittite; 46:10's son of Simeon) — the same-lemma class.
   data_paths_en:
     - "Data/tanakh_genesis_jps1917_en.json"
-  tree_derive_version: logic_derived_v1
+  tree_derive_version: logic_derived_v2_full_rule
   tree_derive_phase: "C-39"
   confidence_overall: "structure tested; operator readings tested-per-TIR; intent hypothesis; contingent cycle-numbers filed OPEN"
   genre: "death_mourning_and_purchase_narrative"
@@ -260,7 +262,7 @@ meta:
     dual-track, never merged into the letter's encoding.
   method_note_en: >
     Derivation from the Hebrew letter (DB snapshot
-    torah_grok.SNAPSHOT-main-51801ca.sqlite) with the frozen corpus
+    source-snapshot.sqlite) with the frozen corpus
     gen_01..gen_38 as precedent; every frozen quote verified against
     the frozen YAML this session; censuses run fresh against the
     snapshot + debut map. JPS 1917 as English aid only.
@@ -551,6 +553,30 @@ boot_steps:
           [census; tree fact].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(split_lifespan, parsed_clause_against_clause)"
+        en: >
+          THE NUMBER IS READ AS THREE CLAUSES, NOT ONE SUM [claim G39-21]. The
+          verse declines to write 127 and writes 'a hundred year and twenty
+          year and seven years'; the chain reads each clause against the next
+          - at a hundred like twenty for sin, at twenty like seven for beauty
+          - importing a standing law premise, that heavenly accountability
+          begins at twenty, to carry the first leg. The closing repetition is
+          read as a second life rather than a flourish. [folded shape: ink
+          count]
+        cites: ["Bereshit Rabbah 58:1"]
+        confidence: witnessed
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(one_hundred_twenty_seven, inheritance_wire_to_a_later_reign)"
+        en: >
+          THE LIFESPAN IS SPENT FORWARD AS A NUMBER [claim G39-22]. Sarah's
+          127 years are read as the warrant for a descendant reigning over 127
+          provinces. The chain records the occasion with the inference - the
+          claim is delivered to rouse a dozing audience - so the machine
+          carries both the argument and the scene that produced it. [folded
+          shape: cross-corpus link]
+        cites: ["Bereshit Rabbah 58:3"]
+        confidence: witnessed
     comment: >
       A chapter about a grave opens with a verse that says LIFE
       three times. The machine installs her; the next verse is
@@ -635,6 +661,19 @@ boot_steps:
           cited].
         cites: ["TIR-026"]
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(came_to_mourn, cause_supplied_by_adjacency)"
+        en: >
+          WHERE HE CAME FROM IS ANSWERED, AND THE ANSWER IS A CAUSE OF DEATH
+          [claim G39-29]. He came from Mount Moriah: Sarah died of grief over
+          the binding, a claim resting on nothing but the placement of
+          gen_38's altar immediately before this verse. R. Yosei's
+          chronological objection is recorded rather than removed, and it is
+          what forces the answer. The previous block's hardest scene is
+          thereby wired to this block's first event. [folded shape: recorded
+          dispute]
+        cites: ["Bereshit Rabbah 58:5"]
+        confidence: witnessed
     comment: >
       Two Torah careers open at this graveside — one verb that
       will only ever mourn patriarchs' households, one whose
@@ -675,6 +714,18 @@ boot_steps:
           register [census; prose].
         cites: ["TIR-014"]
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(rose_from_before_his_dead, mourner_exemption_law_seated_here)"
+        en: >
+          A CASE-ANCHORED LAW REACHES BACK AND CLAIMS THIS VERSE [claim
+          G39-27]. Asked from where the received ruling is learned - that one
+          whose dead lies before him is exempt from the recitation, from
+          prayer, from the phylacteries, and from every obligation stated in
+          the Torah - the answer is 'it is from here'. The direction is the
+          finding: the exam shelf naming a narrative verse as its source, the
+          bridge running INTO the reading. [folded shape: priced law]
+        cites: ["Bereshit Rabbah 58:6", "Mishnah Berakhot 3:1"]
+        confidence: witnessed
     comment: >
       The mourner stands up into a negotiator: the same verb
       that lifts him from the dead's face will, by the
@@ -847,6 +898,18 @@ boot_steps:
           honorific [flag 14d, dual-track].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(prince_of_God, honorific_solved_two_ways)"
+        en: >
+          THE DECLARED SHELF SOLVES ONE HONORIFIC IN TWO INCOMPATIBLE WAYS
+          [claim G39-31]. Onkelos refuses the divine word as a mortal's
+          epithet and converts the title to standing - respected BEFORE the
+          LORD among us. The midrash leg takes the identical words as a
+          coronation formula shouted from a platform. Neither cites the other;
+          both are the declared reading. [folded shape: dual-track
+          translation]
+        cites: ["Onkelos Genesis 23:6", "Bereshit Rabbah 43:5"]
+        confidence: witnessed
     comment: >
       The sons answer a stranger's request with a prince's
       honors and an open cemetery — and both their imperatives
@@ -1044,6 +1107,18 @@ boot_steps:
           courts and burials [census].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(defective_participle_sitting, seated_that_very_day)"
+        en: >
+          A SHORT SPELLING READ AS AN APPOINTMENT MADE THAT DAY [claim G39-24,
+          machine-checked]. 'Ephron was SITTING among the sons of Chet' stands
+          in our tree in the defective form, and the chain reads the short
+          form as a state newly entered: seated that day as chief officer, so
+          the great should not have to buy from the small. The same
+          defective-participle machine seats Lot in the gate at gen_35.
+          [folded shape: ink count]
+        cites: ["Bereshit Rabbah 58:7"]
+        confidence: witnessed
     comment: >
       The letter seats the answer before the question finishes
       traveling: Efron, in the gate, in everyone's ears —
@@ -1209,6 +1284,17 @@ boot_steps:
           the take-demand itself [flag 14a, dual-track].
         cites: ["TIR-027"]
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(hear_me_idiom, rendered_as_offer_and_acceptance)"
+        en: >
+          THE TRANSLATION SUPPLIES CONVEYANCE VOCABULARY THE VERSE DOES NOT
+          HAVE [claim G39-33]. Every 'hear me' across the negotiation becomes
+          ACCEPT me, and the broken clause of this verse is smoothed to 'if
+          you will do me a kindness, accept me'. The buffer is not merely
+          avoiding an idiom - it makes the bargain read as a sequence of
+          offers and acceptances. [folded shape: dual-track translation]
+        cites: ["Onkelos Genesis 23:13", "Onkelos Genesis 23:8"]
+        confidence: witnessed
     comment: >
       A wish that may not push, a gift already given in the
       perfect tense, and a take-command whose taking the letter
@@ -1378,6 +1464,31 @@ boot_steps:
           merchant-current shekels, weighed [prose].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(vendor_name_defective_at_the_weighing, diminished_where_he_takes_the_silver)"
+        en: >
+          THE NAME IS SPELLED SHORT EXACTLY WHERE THE MONEY CHANGES HANDS
+          [claim G39-23, machine-checked]. Of the eight tokens of Ephron's
+          name in this chapter, seven are written full and exactly one is
+          written defective - and it is the form in this verse, at the
+          weighing. This verse carries BOTH spellings: the full one when he is
+          addressed, the short one when the silver is weighed to him. The
+          chain's greed reading rides an ink difference our own corpus
+          confirms. [folded shape: ink count]
+        cites: ["Bereshit Rabbah 58:7"]
+        confidence: witnessed
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(four_hundred_shekels, weight_table_applied_not_quoted)"
+        en: >
+          THE TRANSLATION APPLIES A TABLE THE MIDRASH ONLY STATES [claim
+          G39-32]. R. Chanina's rule that the Torah's shekels are selas is
+          stated in the chain; Onkelos renders this verse's four hundred
+          shekels as four hundred SELAS without citing it, and turns 'current
+          with the merchant' into 'accepted as merchandise in every province'.
+          Two members of one declared shelf converging on this verse's
+          economics, independently. [folded shape: dual-track translation]
+        cites: ["Onkelos Genesis 23:16", "Bereshit Rabbah 58:7"]
+        confidence: witnessed
     comment: >
       The era's next certified receipt is a hearing, and the
       hearing's proof is four hundred weighed shekels. The
@@ -1426,6 +1537,17 @@ boot_steps:
           dual-track].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(field_cave_trees_borders, deed_specification_law)"
+        en: >
+          THE VERSE'S EXCESS OF DETAIL IS READ AS THE FORM A DEED MUST TAKE
+          [claim G39-25]. From the full enumeration here - the field, the cave
+          in it, the trees in it, and the borders all around - the chain
+          derives that one who sells his field must write the field and its
+          markers. A drafting requirement built out of the narrative's own
+          specificity. [folded shape: priced law]
+        cites: ["Bereshit Rabbah 58:8"]
+        confidence: witnessed
     comment: >
       The letter's most contractual sentence: a verb of rising
       applied to real estate, an inventory down to the trees,
@@ -1469,6 +1591,17 @@ boot_steps:
           the buy-word added [flag 14b].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(purchase_on_the_record, standing_title_against_future_claim)"
+        en: >
+          THE CONVEYANCE IS ENROLLED AS EVIDENCE FOR AN ARGUMENT NOT YET HAD
+          [claim G39-30]. Three places, the chain holds, can never be called
+          stolen, because each was bought on the record: this cave, the Temple
+          site, and Joseph's plot. Our weighing is cited as the deed. A
+          narrative sale kept as an evidentiary instrument. [folded shape:
+          kept record]
+        cites: ["Bereshit Rabbah 79:7"]
+        confidence: witnessed
     comment: >
       One verse of pure legality: the purchase, the eyes, the
       gate. The letter's court adjourns; what remains is the
@@ -1528,6 +1661,18 @@ boot_steps:
           letter files the deed by address [flag 9; prose].
         cites: ["TIR-026"]
         confidence: tested
+      - op: WITNESS_STATE
+        expr_en: "WITNESS(the_cave, standing_occupant_registry)"
+        en: >
+          THE PLACE IS GIVEN A ROSTER, NOT A DESCRIPTION [claim G39-28]. The
+          name is read as 'the doubled one' and tripled - value doubled,
+          reward doubled, the first man's height folded to lie in it - and
+          around that sits a fixed list: four righteous residents, four
+          circumcised there, four patriarchal couples buried there. The chain
+          maintains an occupancy record for a named place across the whole
+          corpus. [folded shape: kept record]
+        cites: ["Bereshit Rabbah 58:4", "Bereshit Rabbah 58:8"]
+        confidence: witnessed
     comment: >
       The verb that was promised in a vision pays its first
       deed: a wife buried in bought ground, at an address the
@@ -1571,6 +1716,23 @@ boot_steps:
           prose].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(sons_of_chet_census, ten_and_every_one_a_title_mention)"
+        en: >
+          THE TEN-FOLD COUNT HOLDS EXACTLY, AND IT IS A TITLE CENSUS [claim
+          G39-26, machine-checked]. The chain counts the vendor party ten
+          times and reads the ten against the Ten Commandments. Our corpus
+          confirms the number and shows what it is a count OF: the name stands
+          13 times in the Torah, one being the ancestor himself at 10:15 and
+          two being DAUGHTERS of Chet at 27:46; the remaining TEN are all sons
+          of Chet - eight here, one at 25:10 where Abraham is buried in this
+          field, one at 49:32 where Jacob names this same purchase. Every one
+          of the ten sits in a passage about this single conveyance, and the
+          two exclusions are principled rather than convenient. A
+          chapter-scoped count would have found eight and called the tradition
+          wrong. [folded shape: ink count]
+        cites: ["Bereshit Rabbah 58:8"]
+        confidence: witnessed
     comment: >
       The chapter ends the way it bargained: twice-sealed,
       fully addressed, and with its very first request still

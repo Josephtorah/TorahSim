@@ -24,6 +24,10 @@ m.step("Gen.49.1")
 # you/your(pl)”) — section divre-Jacob-to-vanav: son-Leah, son-the-
 # shefachot, son-rachel
 m.section("divre_yaaqov_le_vanav", "bene_lea", "bene_ha_shefachot", "bene_rachel")
+# witness-grounded state (its own tier): revealed_then_sealed_mid_sentence
+# on the_end_of_days
+m.witness_state("the_end_of_days", "revealed_then_sealed_mid_sentence",
+                cites=["Bereshit Rabbah 98:2", "Bereshit Rabbah 99:5"])
 
 # -------------------------- Gen.49.2 · HEAR_TO_ISRAEL_YOUR_FATHER ----------
 # הִקָּבְצוּ וְשִׁמְעוּ בְּנֵי יַעֲקֹב וְשִׁמְעוּ אֶל־יִשְׂרָאֵל אֲבִיכֶם
@@ -33,6 +37,10 @@ m.step("Gen.49.2")
 # ‹וְשִׁמְעוּ אֶל־יִשְׂרָאֵל אֲבִיכֶם› (“and-hear to Israel father-
 # you/your(pl)”) — fact holds: hear-to-Israel-avikhem
 m.fact("shimu_el_yisrael_avikhem")
+# witness-tier presupposed read: the_daily_liturgy_sourced_to_this_verse on
+# hear_israel_your_father — read, not installed
+m.witness_read("hear_israel_your_father", "the_daily_liturgy_sourced_to_this_verse",
+                cites=["Bereshit Rabbah 98:3", "Onkelos Genesis 49:2"])
 
 # -------------------------- Gen.49.3 · REUBEN_MY_FIRSTBORN -----------------
 # רְאוּבֵן בְּכֹרִי אַתָּה כֹּחִי וְרֵאשִׁית אוֹנִי יֶתֶר שְׂאֵת וְיֶתֶר עָז
@@ -72,6 +80,10 @@ m.step("Gen.49.6")
 # ‹בִּקְהָלָם אַל־תֵּחַד כְּבֹדִי› (“in-assemblage-them/their do-not be-one
 # weight-me/my”) — fact holds: bi-qhalam-over-be-one-kevodi
 m.fact("bi_qhalam_al_techad_kevodi")
+# witness-grounded state (its own tier): three_layers_standing_on_one_verse
+# on they_hamstrung_an_ox
+m.witness_state("they_hamstrung_an_ox", "three_layers_standing_on_one_verse",
+                cites=["Bereshit Rabbah 98:5", "Onkelos Genesis 49:5"])
 
 # -------------------------- Gen.49.7 · CURSED_THEIR_ANGER ------------------
 # אָרוּר אַפָּם כִּי עָז וְעֶבְרָתָם כִּי קָשָׁתָה אֲחַלְּקֵם בְּיַעֲקֹב
@@ -93,6 +105,10 @@ m.step("Gen.49.8")
 # ‹יְהוּדָה אַתָּה יוֹדוּךָ אַחֶיךָ› (“Judah you physically-you/your
 # brother-you/your”) — fact holds: yodukha-achekha
 m.fact("yodukha_achekha")
+# witness-tier presupposed read: the_name_read_to_the_confession on
+# your_brothers_shall_praise_you — read, not installed
+m.witness_read("your_brothers_shall_praise_you", "the_name_read_to_the_confession",
+                cites=["Onkelos Genesis 49:8", "Bereshit Rabbah 98:7"])
 
 # -------------------------- Gen.49.9 · LION_WHELP_JUDAH --------------------
 # גּוּר אַרְיֵה יְהוּדָה מִטֶּרֶף בְּנִי עָלִיתָ כָּרַע רָבַץ כְּאַרְיֵה
@@ -115,6 +131,10 @@ m.step("Gen.49.10")
 # scion from-Judah and-hack from-between foot-him/its”) — fact holds: not-
 # turn-aside-scion-who?-Judah-until-that-come/bring-Shiloh
 m.fact("lo_yasur_shevet_mi_yhuda_ad_ki_yavo_shilo")
+# witness-tier presupposed read: a_place_name_resolved_into_a_person on
+# until_shiloh_comes — read, not installed
+m.witness_read("until_shiloh_comes", "a_place_name_resolved_into_a_person",
+                cites=["Onkelos Genesis 49:10", "Bereshit Rabbah 98:8"])
 
 # -------------------------- Gen.49.11 · BINDING_HIS_FOAL_TO_THE_VINE -------
 # אֹסְרִי לַגֶּפֶן עירה עִירוֹ וְלַשֹּׂרֵקָה בְּנִי אֲתֹנוֹ כִּבֵּס
@@ -144,6 +164,10 @@ m.step("Gen.49.13")
 # ‹זְבוּלֻן לְחוֹף יַמִּים יִשְׁכֹּן› (“Zebulun to-cove seas reside”) — fact
 # holds: Zebulun-to-cove-day-reside
 m.fact("zevulun_le_chof_yamim_yishkon")
+# witness-tier presupposed read: a_prophets_parentage_and_a_patronage_rule
+# on zebulun_at_the_shore — read, not installed
+m.witness_read("zebulun_at_the_shore", "a_prophets_parentage_and_a_patronage_rule",
+                cites=["Bereshit Rabbah 98:11", "Bereshit Rabbah 99:9"])
 
 # -------------------------- Gen.49.14 · ISSACHAR_STRONG_DONKEY -------------
 # יִשָּׂשכָר חֲמֹר גָּרֶם רֹבֵץ בֵּין הַמִּשְׁפְּתָיִם
@@ -182,6 +206,10 @@ m.step("Gen.49.17")
 # ‹הַנֹּשֵׁךְ עִקְּבֵי־סוּס› (“the-strike-with-a-sting heel horse”) — fact
 # holds: the-strike-with-a-sting-heel-horse
 m.fact("ha_noshekh_iqve_sus")
+# witness-grounded state (its own tier):
+# the_blessings_distributed_then_pooled on dan_a_serpent
+m.witness_state("dan_a_serpent", "the_blessings_distributed_then_pooled",
+                cites=["Bereshit Rabbah 99:4"])
 
 # -------------------------- Gen.49.18 · FOR_YOUR_SALVATION_I_WAIT ----------
 # לִישׁוּעָתְךָ קִוִּיתִי יְהוָה
@@ -190,6 +218,10 @@ m.step("Gen.49.18")
 # ‹לִישׁוּעָתְךָ קִוִּיתִי יְהוָה› (“to-something-saved-you/your bind-
 # together YHWH”) — fact holds: to-me-yshuatkha-bind-together-the-LORD
 m.fact("li_yshuatkha_qiviti_YHWH")
+# witness-grounded state (its own tier): one_cry_and_two_destinations on
+# for_your_salvation_i_hope
+m.witness_state("for_your_salvation_i_hope", "one_cry_and_two_destinations",
+                cites=["Bereshit Rabbah 98:14", "Bereshit Rabbah 99:11"])
 
 # -------------------------- Gen.49.19 · GAD_RAIDERS_RAID_HIM ---------------
 # גָּד גְּדוּד יְגוּדֶנּוּ וְהוּא יָגֻד עָקֵב
@@ -235,6 +267,10 @@ m.step("Gen.49.23")
 # shoot-an-arrow and-lurk-for-him/its”) — fact holds: and-yemararuhu-and-
 # shoot-an-arrow
 m.fact("va_yemararuhu_va_robu")
+# witness-tier presupposed read: the_slander_model_stated_in_full on
+# they_embittered_him_and_shot_at_him — read, not installed
+m.witness_read("they_embittered_him_and_shot_at_him", "the_slander_model_stated_in_full",
+                cites=["Bereshit Rabbah 98:19"])
 
 # -------------------------- Gen.49.24 · HIS_BOW_STAYED_FIRM ----------------
 # וַתֵּשֶׁב בְּאֵיתָן קַשְׁתּוֹ וַיָּפֹזּוּ זְרֹעֵי יָדָיו מִידֵי אֲבִיר
@@ -246,6 +282,10 @@ m.step("Gen.49.24")
 # ‹וַתֵּשֶׁב בְּאֵיתָן קַשְׁתּוֹ› (“and-dwell/sit in-permanence bow-
 # him/its”) — fact holds: and-dwell/sit-in-permanence-qashto
 m.fact("va_teshev_be_etan_qashto")
+# witness-tier presupposed read: one_noun_read_three_ways on
+# his_bow_abode_in_strength — read, not installed
+m.witness_read("his_bow_abode_in_strength", "one_noun_read_three_ways",
+                cites=["Onkelos Genesis 49:24", "Bereshit Rabbah 98:20"])
 
 # -------------------------- Gen.49.25 · BLESSINGS_OF_HEAVEN_AND_DEEP -------
 # מֵאֵל אָבִיךָ וְיַעְזְרֶךָּ וְאֵת שַׁדַּי וִיבָרְכֶךָּ בִּרְכֹת שָׁמַיִם
@@ -278,6 +318,11 @@ m.step("Gen.49.27")
 # ‹בִּנְיָמִין זְאֵב יִטְרָף› (“Benjamin wolf pluck-off”) — fact holds:
 # Benjamin-wolf-pluck-off
 m.fact("binyamin_zeev_yitraf")
+# witness-tier presupposed read:
+# the_sanctuary_awarded_by_absence_from_a_crime on benjamin_a_ravening_wolf
+# — read, not installed
+m.witness_read("benjamin_a_ravening_wolf", "the_sanctuary_awarded_by_absence_from_a_crime",
+                cites=["Bereshit Rabbah 99:1", "Onkelos Genesis 49:27", "Bereshit Rabbah 99:3"])
 
 # -------------------------- Gen.49.28 · EACH_BY_HIS_BLESSING ---------------
 # כָּל־אֵלֶּה שִׁבְטֵי יִשְׂרָאֵל שְׁנֵים עָשָׂר וְזֹאת אֲשֶׁר־דִּבֶּר לָהֶם
@@ -289,6 +334,10 @@ m.step("Gen.49.28")
 # ‹כָּל־אֵלֶּה שִׁבְטֵי יִשְׂרָאֵל שְׁנֵים עָשָׂר› (“all these scion Israel
 # two -teen”) — blessing: Jacob blesses scion-Israel-two--teen
 m.bless("yaaqov", "shivte_yisrael_shenem_asar")
+# witness-grounded state (its own tier):
+# ceasing_to_translate_for_one_chapter on the_translation_itself
+m.witness_state("the_translation_itself", "ceasing_to_translate_for_one_chapter",
+                cites=["Onkelos Genesis 49:13", "Onkelos Genesis 49:10", "Onkelos Genesis 49:27"])
 
 # -------------------------- Gen.49.29 · BURY_ME_WITH_MY_FATHERS ------------
 # וַיְצַו אוֹתָם וַיֹּאמֶר אֲלֵהֶם אֲנִי נֶאֱסָף אֶל־עַמִּי קִבְרוּ אֹתִי
@@ -345,6 +394,10 @@ m.step("Gen.49.33")
 # ‹וַיִּגְוַע וַיֵּאָסֶף אֶל־עַמָּיו› (“and-breathe-out and-gather-for-any-
 # purpose to people-him/its”) — event: gava — agent Jacob
 m.event("gava", agent="yaaqov")
+# witness-tier presupposed read: a_funeral_order_that_becomes_a_camp on
+# he_finished_commanding_his_sons — read, not installed
+m.witness_read("he_finished_commanding_his_sons", "a_funeral_order_that_becomes_a_camp",
+                cites=["Bereshit Rabbah 100:2", "Bereshit Rabbah 100:1"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -362,4 +415,40 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 4
+    assert sorted(m.WORLD["witnessed"]) == ['dan_a_serpent', 'for_your_salvation_i_hope', 'the_end_of_days', 'the_translation_itself', 'they_hamstrung_an_ox']
+    assert m.WORLD["witnessed"]['dan_a_serpent']["cites"] == ['Bereshit Rabbah 99:4']
+    assert all('the_blessings_distributed_then_pooled' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['for_your_salvation_i_hope']["cites"] == ['Bereshit Rabbah 98:14', 'Bereshit Rabbah 99:11']
+    assert all('one_cry_and_two_destinations' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['the_end_of_days']["cites"] == ['Bereshit Rabbah 98:2', 'Bereshit Rabbah 99:5']
+    assert all('revealed_then_sealed_mid_sentence' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['the_translation_itself']["cites"] == ['Onkelos Genesis 49:13', 'Onkelos Genesis 49:10', 'Onkelos Genesis 49:27']
+    assert all('ceasing_to_translate_for_one_chapter' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['they_hamstrung_an_ox']["cites"] == ['Bereshit Rabbah 98:5', 'Onkelos Genesis 49:5']
+    assert all('three_layers_standing_on_one_verse' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('hear_israel_your_father', 'the_daily_liturgy_sourced_to_this_verse'), ('your_brothers_shall_praise_you', 'the_name_read_to_the_confession'), ('until_shiloh_comes', 'a_place_name_resolved_into_a_person'), ('zebulun_at_the_shore', 'a_prophets_parentage_and_a_patronage_rule'), ('they_embittered_him_and_shot_at_him', 'the_slander_model_stated_in_full'), ('his_bow_abode_in_strength', 'one_noun_read_three_ways'), ('benjamin_a_ravening_wolf', 'the_sanctuary_awarded_by_absence_from_a_crime'), ('he_finished_commanding_his_sons', 'a_funeral_order_that_becomes_a_camp')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 98:3', 'Onkelos Genesis 49:2']
+    assert all('the_daily_liturgy_sourced_to_this_verse' not in f for f in m.WORLD["facts"])
+    assert 'hear_israel_your_father' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Genesis 49:8', 'Bereshit Rabbah 98:7']
+    assert all('the_name_read_to_the_confession' not in f for f in m.WORLD["facts"])
+    assert 'your_brothers_shall_praise_you' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Genesis 49:10', 'Bereshit Rabbah 98:8']
+    assert all('a_place_name_resolved_into_a_person' not in f for f in m.WORLD["facts"])
+    assert 'until_shiloh_comes' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 98:11', 'Bereshit Rabbah 99:9']
+    assert all('a_prophets_parentage_and_a_patronage_rule' not in f for f in m.WORLD["facts"])
+    assert 'zebulun_at_the_shore' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 98:19']
+    assert all('the_slander_model_stated_in_full' not in f for f in m.WORLD["facts"])
+    assert 'they_embittered_him_and_shot_at_him' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Genesis 49:24', 'Bereshit Rabbah 98:20']
+    assert all('one_noun_read_three_ways' not in f for f in m.WORLD["facts"])
+    assert 'his_bow_abode_in_strength' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 99:1', 'Onkelos Genesis 49:27', 'Bereshit Rabbah 99:3']
+    assert all('the_sanctuary_awarded_by_absence_from_a_crime' not in f for f in m.WORLD["facts"])
+    assert 'benjamin_a_ravening_wolf' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 100:2', 'Bereshit Rabbah 100:1']
+    assert all('a_funeral_order_that_becomes_a_camp' not in f for f in m.WORLD["facts"])
+    assert 'he_finished_commanding_his_sons' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

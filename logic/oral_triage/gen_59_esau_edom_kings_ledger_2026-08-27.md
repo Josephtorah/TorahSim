@@ -64,3 +64,16 @@ Magdiel-Diocletian countdown with Iram's escrowed treasuries
 reading (O1); the forgiven-name bride re-surfacing as Basmat
 (credit 67:13); the supplier-liability of Botzra (row 4); the
 Vayeshev seam (row 6 + credit 84:5). 
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers and to the Vayera, Chayei
+Sarah, Toledot and Vayetze ledgers on 2026-08-30. This ledger records
+its Onkelos track in the compact row form ("O1 · 36:1"), which the
+unit-level cite validator cannot match: a cite is valid only when the
+literal source string appears in a triage ledger. This block's Onkelos
+verses are therefore listed here in citable form, so the derivation may
+cite the translation it actually read. No verdict is changed and no row
+is rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 36:1, Onkelos Genesis 36:2, Onkelos Genesis 36:3, Onkelos Genesis 36:4, Onkelos Genesis 36:5, Onkelos Genesis 36:6, Onkelos Genesis 36:7, Onkelos Genesis 36:8, Onkelos Genesis 36:9, Onkelos Genesis 36:10, Onkelos Genesis 36:11, Onkelos Genesis 36:12, Onkelos Genesis 36:13, Onkelos Genesis 36:14, Onkelos Genesis 36:15, Onkelos Genesis 36:16, Onkelos Genesis 36:17, Onkelos Genesis 36:18, Onkelos Genesis 36:19, Onkelos Genesis 36:20, Onkelos Genesis 36:21, Onkelos Genesis 36:22, Onkelos Genesis 36:23, Onkelos Genesis 36:24, Onkelos Genesis 36:25, Onkelos Genesis 36:26, Onkelos Genesis 36:27, Onkelos Genesis 36:28, Onkelos Genesis 36:29, Onkelos Genesis 36:30, Onkelos Genesis 36:31, Onkelos Genesis 36:32, Onkelos Genesis 36:33, Onkelos Genesis 36:34, Onkelos Genesis 36:35, Onkelos Genesis 36:36, Onkelos Genesis 36:37, Onkelos Genesis 36:38, Onkelos Genesis 36:39, Onkelos Genesis 36:40, Onkelos Genesis 36:41, Onkelos Genesis 36:42, Onkelos Genesis 36:43.

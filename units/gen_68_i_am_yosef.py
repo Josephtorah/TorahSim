@@ -29,6 +29,10 @@ m.declare("yosef", "LET",
 # ‹וְלֹא־עָמַד אִישׁ אִתּוֹ› (“and-not stand man with-him/its”) — demand
 # settled (popped from the queue): bring-forth-all-man-mealai
 m.result("hotziu_khol_ish_mealai", tmark="t1")
+# witness-tier presupposed read: the_speech_of_gen_67_completing_here on
+# he_could_not_restrain_himself — read, not installed
+m.witness_read("he_could_not_restrain_himself", "the_speech_of_gen_67_completing_here",
+                cites=["Bereshit Rabbah 93:9", "Bereshit Rabbah 93:8"])
 
 # -------------------------- Gen.45.2 · THE_VOICE_IN_WEEPING ----------------
 # וַיִּתֵּן אֶת־קֹלוֹ בִּבְכִי וַיִּשְׁמְעוּ מִצְרַיִם וַיִּשְׁמַע בֵּית
@@ -50,6 +54,11 @@ m.step("Gen.45.3")
 # ‹אֲנִי יוֹסֵף הַעוֹד אָבִי חָי› (“Joseph the-still/again father-me/my
 # living”) — fact holds: ani-Joseph-the-still/again-avi-living
 m.fact("ani_yosef_ha_od_avi_chai")
+# witness-tier presupposed read:
+# one_inference_stated_twice_by_two_authorities on
+# his_brothers_could_not_answer_him — read, not installed
+m.witness_read("his_brothers_could_not_answer_him", "one_inference_stated_twice_by_two_authorities",
+                cites=["Bereshit Rabbah 93:10", "Bereshit Rabbah 93:11", "Bereshit Rabbah 93:2"])
 
 # -------------------------- Gen.45.4 · DRAW_NEAR_TO_ME ---------------------
 # וַיֹּאמֶר יוֹסֵף אֶל־אֶחָיו גְּשׁוּ־נָא אֵלַי וַיִּגָּשׁוּ וַיֹּאמֶר אֲנִי
@@ -64,6 +73,10 @@ m.declare("yosef", "LET",
 # ‹וַיִּגָּשׁוּ› (“and-be”) — demand settled (popped from the queue): be-
 # please-elai
 m.result("geshu_na_elai", tmark="t2")
+# witness-tier presupposed read: the_body_entered_as_evidence on
+# come_near_to_me — read, not installed
+m.witness_read("come_near_to_me", "the_body_entered_as_evidence",
+                cites=["Bereshit Rabbah 93:10"])
 
 # -------------------------- Gen.45.5 · LET_IT_NOT_BURN ---------------------
 # וְעַתָּה אַל־תֵּעָצְבוּ וְאַל־יִחַר בְּעֵינֵיכֶם כִּי־מְכַרְתֶּם אֹתִי
@@ -154,6 +167,10 @@ m.step("Gen.45.12")
 # you/your(pl) see and-eye brother-me/my Benjamin”) — fact holds: enekhem-
 # see-and-eye-my-brother-Benjamin
 m.fact("enekhem_root_ve_ene_achi_vinyamin")
+# witness-tier presupposed read: the_language_itself_as_credential on
+# my_mouth_speaking_to_you — read, not installed
+m.witness_read("my_mouth_speaking_to_you", "the_language_itself_as_credential",
+                cites=["Bereshit Rabbah 93:10", "Onkelos Genesis 45:12"])
 
 # -------------------------- Gen.45.13 · TELL_AND_BRING_DOWN ----------------
 # וְהִגַּדְתֶּם לְאָבִי אֶת־כָּל־כְּבוֹדִי בְּמִצְרַיִם וְאֵת כָּל־אֲשֶׁר
@@ -176,6 +193,10 @@ m.step("Gen.45.14")
 # back-of-the-neck Benjamin brother-him/its and-weep”) — event: weep — agent
 # Joseph-and-Benjamin
 m.event("bakha", agent="yosef_u_vinyamin")
+# witness-grounded state (its own tier):
+# a_form_that_stands_once_in_the_torah on the_necks_written_plural
+m.witness_state("the_necks_written_plural", "a_form_that_stands_once_in_the_torah",
+                cites=["Bereshit Rabbah 93:12"])
 
 # -------------------------- Gen.45.15 · THE_SPEECH_HEALED ------------------
 # וַיְנַשֵּׁק לְכָל־אֶחָיו וַיֵּבְךְּ עֲלֵיהֶם וְאַחֲרֵי כֵן דִּבְּרוּ
@@ -197,6 +218,10 @@ m.step("Gen.45.16")
 # ‹וְהַקֹּל נִשְׁמַע בֵּית פַּרְעֹה› (“and-the-voice/sound hear house
 # Pharaoh”) — fact holds: and-the-voice/sound-hear-house-Pharaoh
 m.fact("ve_ha_qol_nishma_bet_paro")
+# witness-tier presupposed read: a_seat_predicted_four_chapters_early on
+# the_news_heard_in_pharaohs_house — read, not installed
+m.witness_read("the_news_heard_in_pharaohs_house", "a_seat_predicted_four_chapters_early",
+                cites=["Bereshit Rabbah 94:1", "Bereshit Rabbah 90:1"])
 
 # -------------------------- Gen.45.17 · LOAD_AND_GO ------------------------
 # וַיֹּאמֶר פַּרְעֹה אֶל־יוֹסֵף אֱמֹר אֶל־אַחֶיךָ זֹאת עֲשׂוּ טַעֲנוּ
@@ -275,6 +300,10 @@ m.step("Gen.45.23")
 # ‹עֲשָׂרָה חֲמֹרִים נֹשְׂאִים› (“ten male-ass lift/carry”) — fact holds:
 # ten-male-ass-and-ten-female-donkey
 m.fact("asara_chamorim_ve_eser_atonot")
+# witness-tier presupposed read: a_vow_rule_grounded_on_an_inventory on
+# grain_and_bread_and_food — read, not installed
+m.witness_read("grain_and_bread_and_food", "a_vow_rule_grounded_on_an_inventory",
+                cites=["Bereshit Rabbah 94:2"])
 
 # -------------------------- Gen.45.24 · DO_NOT_QUARREL_ON_THE_WAY ----------
 # וַיְשַׁלַּח אֶת־אֶחָיו וַיֵּלֵכוּ וַיֹּאמֶר אֲלֵהֶם אַל־תִּרְגְּזוּ
@@ -286,6 +315,10 @@ m.step("Gen.45.24")
 # a demand — LET-NOT: over-tirgezu-in-the-way/road
 m.declare("yosef", "LET-NOT",
           "al_tirgezu_ba_darekh")
+# witness-tier presupposed read: three_travel_rules_and_the_buffers_premise
+# on do_not_be_agitated_on_the_way — read, not installed
+m.witness_read("do_not_be_agitated_on_the_way", "three_travel_rules_and_the_buffers_premise",
+                cites=["Bereshit Rabbah 94:2", "Onkelos Genesis 45:24"])
 
 # -------------------------- Gen.45.25 · UP_FROM_EGYPT ----------------------
 # וַיַּעֲלוּ מִמִּצְרָיִם וַיָּבֹאוּ אֶרֶץ כְּנַעַן אֶל־יַעֲקֹב אֲבִיהֶם
@@ -308,6 +341,10 @@ m.step("Gen.45.26")
 # ‹לֵאמֹר עוֹד יוֹסֵף חַי› (“to-say still/again Joseph living”) — fact
 # holds: still/again-Joseph-living-and-be-sluggish-His-heart
 m.fact("od_yosef_chai_va_yafag_libo")
+# witness-tier presupposed read: the_liars_penalty_and_the_faculty_named on
+# he_did_not_believe_them — read, not installed
+m.witness_read("he_did_not_believe_them", "the_liars_penalty_and_the_faculty_named",
+                cites=["Bereshit Rabbah 94:3", "Onkelos Genesis 45:26"])
 
 # -------------------------- Gen.45.27 · THE_WAGONS_SEEN --------------------
 # וַיְדַבְּרוּ אֵלָיו אֵת כָּל־דִּבְרֵי יוֹסֵף אֲשֶׁר דִּבֶּר אֲלֵהֶם
@@ -321,6 +358,10 @@ m.step("Gen.45.27")
 # them/their”) — fact holds: and-see-obj-marker-the-something-revolving-and-
 # live-spirit-wind
 m.fact("va_yar_et_ha_agalot_va_techi_ruach")
+# witness-grounded state (its own tier):
+# a_password_whose_two_ends_are_both_in_the_torah on the_wagons
+m.witness_state("the_wagons", "a_password_whose_two_ends_are_both_in_the_torah",
+                cites=["Bereshit Rabbah 94:3", "Onkelos Genesis 45:27"])
 
 # -------------------------- Gen.45.28 · ENOUGH_JOSEPH_MY_SON_LIVES ---------
 # וַיֹּאמֶר יִשְׂרָאֵל רַב עוֹד־יוֹסֵף בְּנִי חָי אֵלְכָה וְאֶרְאֶנּוּ
@@ -331,6 +372,10 @@ m.step("Gen.45.28")
 # ‹רַב עוֹד־יוֹסֵף בְּנִי חָי› (“many/great still/again Joseph son-me/my
 # living”) — fact holds: many/great-still/again-Joseph-beni-living
 m.fact("rav_od_yosef_beni_chai")
+# witness-tier presupposed read: two_refusals_of_the_plain_sense on
+# rav_yosef_beni_chai — read, not installed
+m.witness_read("rav_yosef_beni_chai", "two_refusals_of_the_plain_sense",
+                cites=["Bereshit Rabbah 94:3", "Onkelos Genesis 45:28"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -348,4 +393,37 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 12
+    assert sorted(m.WORLD["witnessed"]) == ['the_necks_written_plural', 'the_wagons']
+    assert m.WORLD["witnessed"]['the_necks_written_plural']["cites"] == ['Bereshit Rabbah 93:12']
+    assert all('a_form_that_stands_once_in_the_torah' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['the_wagons']["cites"] == ['Bereshit Rabbah 94:3', 'Onkelos Genesis 45:27']
+    assert all('a_password_whose_two_ends_are_both_in_the_torah' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('he_could_not_restrain_himself', 'the_speech_of_gen_67_completing_here'), ('his_brothers_could_not_answer_him', 'one_inference_stated_twice_by_two_authorities'), ('come_near_to_me', 'the_body_entered_as_evidence'), ('my_mouth_speaking_to_you', 'the_language_itself_as_credential'), ('the_news_heard_in_pharaohs_house', 'a_seat_predicted_four_chapters_early'), ('grain_and_bread_and_food', 'a_vow_rule_grounded_on_an_inventory'), ('do_not_be_agitated_on_the_way', 'three_travel_rules_and_the_buffers_premise'), ('he_did_not_believe_them', 'the_liars_penalty_and_the_faculty_named'), ('rav_yosef_beni_chai', 'two_refusals_of_the_plain_sense')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 93:9', 'Bereshit Rabbah 93:8']
+    assert all('the_speech_of_gen_67_completing_here' not in f for f in m.WORLD["facts"])
+    assert 'he_could_not_restrain_himself' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 93:10', 'Bereshit Rabbah 93:11', 'Bereshit Rabbah 93:2']
+    assert all('one_inference_stated_twice_by_two_authorities' not in f for f in m.WORLD["facts"])
+    assert 'his_brothers_could_not_answer_him' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 93:10']
+    assert all('the_body_entered_as_evidence' not in f for f in m.WORLD["facts"])
+    assert 'come_near_to_me' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 93:10', 'Onkelos Genesis 45:12']
+    assert all('the_language_itself_as_credential' not in f for f in m.WORLD["facts"])
+    assert 'my_mouth_speaking_to_you' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 94:1', 'Bereshit Rabbah 90:1']
+    assert all('a_seat_predicted_four_chapters_early' not in f for f in m.WORLD["facts"])
+    assert 'the_news_heard_in_pharaohs_house' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 94:2']
+    assert all('a_vow_rule_grounded_on_an_inventory' not in f for f in m.WORLD["facts"])
+    assert 'grain_and_bread_and_food' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 94:2', 'Onkelos Genesis 45:24']
+    assert all('three_travel_rules_and_the_buffers_premise' not in f for f in m.WORLD["facts"])
+    assert 'do_not_be_agitated_on_the_way' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 94:3', 'Onkelos Genesis 45:26']
+    assert all('the_liars_penalty_and_the_faculty_named' not in f for f in m.WORLD["facts"])
+    assert 'he_did_not_believe_them' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 94:3', 'Onkelos Genesis 45:28']
+    assert all('two_refusals_of_the_plain_sense' not in f for f in m.WORLD["facts"])
+    assert 'rav_yosef_beni_chai' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

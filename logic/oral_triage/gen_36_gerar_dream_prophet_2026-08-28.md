@@ -70,3 +70,17 @@ analogy (credit 41:2); the Noahide marriage battery riding 20:3/12
 cross-corpus); the 20:13 plural-verb rewrite (O3); the thousand-silver
 compensation reading (O4 + credit 52:12); the Rekem/Chagra
 identifications (O1).
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers on 2026-08-30. This ledger
+records its Onkelos track in the compact row form ("O1 · 20:1"), which
+the unit-level cite validator cannot match: a cite is valid only when
+the literal source string appears in a triage ledger. This block's
+Onkelos verses are therefore listed here in citable form, so the
+derivation may cite the translation it actually read. No verdict is
+changed and no row is rewritten — this is a naming key for the Onkelos
+rows above.
+
+Onkelos Genesis 20:1, Onkelos Genesis 20:2, Onkelos Genesis 20:3, Onkelos Genesis 20:4, Onkelos Genesis 20:5, Onkelos Genesis 20:6, Onkelos Genesis 20:7, Onkelos Genesis 20:8, Onkelos Genesis 20:9, Onkelos Genesis 20:10, Onkelos Genesis 20:11, Onkelos Genesis 20:12, Onkelos Genesis 20:13, Onkelos Genesis 20:14, Onkelos Genesis 20:15, Onkelos Genesis 20:16, Onkelos Genesis 20:17, Onkelos Genesis 20:18.

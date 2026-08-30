@@ -22,6 +22,10 @@ m.step("Gen.50.1")
 # ‹וַיֵּבְךְּ עָלָיו וַיִּשַּׁק־לוֹ› (“and-weep over-him/its and-kiss to-
 # him/its”) — fact holds: and-weep-alav-and-kiss-not
 m.fact("va_yevk_alav_va_yishaq_lo")
+# witness-tier presupposed read: the_bill_for_the_silences_falling_due on
+# he_fell_on_his_fathers_face — read, not installed
+m.witness_read("he_fell_on_his_fathers_face", "the_bill_for_the_silences_falling_due",
+                cites=["Bereshit Rabbah 100:3"])
 
 # -------------------------- Gen.50.2 · THE_PHYSICIANS_EMBALM ---------------
 # וַיְצַו יוֹסֵף אֶת־עֲבָדָיו אֶת־הָרֹפְאִים לַחֲנֹט אֶת־אָבִיו וַיַּחַנְטוּ
@@ -54,6 +58,10 @@ m.step("Gen.50.4")
 # broadness.-i.e.-the-ear Pharaoh to-say”) — fact holds: speak-please-in-
 # broadness.-i.e.-the-ear-Pharaoh
 m.fact("dabru_na_be_azne_faro")
+# witness-grounded state (its own tier):
+# a_verb_chosen_by_who_else_is_in_the_room on the_days_of_weeping_passed
+m.witness_state("the_days_of_weeping_passed", "a_verb_chosen_by_who_else_is_in_the_room",
+                cites=["Bereshit Rabbah 100:4"])
 
 # -------------------------- Gen.50.5 · MY_FATHER_MADE_ME_SWEAR -------------
 # אָבִי הִשְׁבִּיעַנִי לֵאמֹר הִנֵּה אָנֹכִי מֵת בְּקִבְרִי אֲשֶׁר כָּרִיתִי
@@ -122,6 +130,11 @@ m.step("Gen.50.10")
 # ‹וַיַּעַשׂ לְאָבִיו אֵבֶל שִׁבְעַת יָמִים› (“and-make to-father-him/its
 # lamentation seven day”) — fact holds: lamentation-seven-day
 m.fact("evel_shivat_yamim")
+# witness-grounded state (its own tier):
+# a_search_of_scripture_reported_and_confirmed_where_we_can_see on
+# the_threshing_floor_of_atad
+m.witness_state("the_threshing_floor_of_atad", "a_search_of_scripture_reported_and_confirmed_where_we_can_see",
+                cites=["Bereshit Rabbah 100:6", "Bereshit Rabbah 100:7"])
 
 # -------------------------- Gen.50.11 · MOURNING_OF_EGYPT ------------------
 # וַיַּרְא יוֹשֵׁב הָאָרֶץ הַכְּנַעֲנִי אֶת־הָאֵבֶל בְּגֹרֶן הָאָטָד
@@ -157,6 +170,10 @@ m.step("Gen.50.13")
 # marker-him/its in-cavern field the-Machpelah”) — fact holds: and-yiqberu-
 # it-bi-mearat-field-the-Machpelah
 m.fact("va_yiqberu_oto_bi_mearat_sede_ha_makhpela")
+# witness-tier presupposed read: the_deed_produced_against_a_contest on
+# they_buried_him_in_the_cave — read, not installed
+m.witness_read("they_buried_him_in_the_cave", "the_deed_produced_against_a_contest",
+                cites=["Bereshit Rabbah 98:17", "Bereshit Rabbah 100:5"])
 
 # -------------------------- Gen.50.14 · THE_RETURN_KEPT --------------------
 # וַיָּשָׁב יוֹסֵף מִצְרַיְמָה הוּא וְאֶחָיו וְכָל־הָעֹלִים אִתּוֹ לִקְבֹּר
@@ -187,6 +204,11 @@ m.step("Gen.50.16")
 # ‹אָבִיךָ צִוָּה לִפְנֵי מוֹתוֹ› (“father-you/your command to-face death-
 # him/its”) — fact holds: avikha-command-lifne-moto
 m.fact("avikha_tziva_lifne_moto")
+# witness-grounded state (its own tier):
+# an_untruth_licensed_by_its_absence_from_the_record on
+# your_father_commanded
+m.witness_state("your_father_commanded", "an_untruth_licensed_by_its_absence_from_the_record",
+                cites=["Bereshit Rabbah 100:8"])
 
 # -------------------------- Gen.50.17 · FORGIVE_THE_CRIME ------------------
 # כֹּה־תֹאמְרוּ לְיוֹסֵף אָנָּא שָׂא נָא פֶּשַׁע אַחֶיךָ וְחַטָּאתָם
@@ -220,6 +242,10 @@ m.step("Gen.50.19")
 # ‹כִּי הֲתַחַת אֱלֹהִים אָנִי› (“that the-under God”) — fact holds: the-
 # under-God-ani
 m.fact("ha_tachat_elohim_ani")
+# witness-grounded state (its own tier):
+# a_question_turned_into_a_declaration on am_i_in_the_place_of_god
+m.witness_state("am_i_in_the_place_of_god", "a_question_turned_into_a_declaration",
+                cites=["Onkelos Genesis 50:19"])
 
 # -------------------------- Gen.50.20 · YOU_DEVISED_GOD_DEVISED ------------
 # וְאַתֶּם חֲשַׁבְתֶּם עָלַי רָעָה אֱלֹהִים חֲשָׁבָהּ לְטֹבָה לְמַעַן עֲשֹׂה
@@ -241,6 +267,11 @@ m.step("Gen.50.21")
 # and-speak over heart-them/their”) — demand settled (popped from the
 # queue): lift/carry-please-to-revolt-servant-God-avikha
 m.result("sa_na_le_fesha_avde_elohe_avikha", tmark="t2")
+# witness-tier presupposed read:
+# consolation_argued_from_cosmology_and_self_interest on
+# he_spoke_to_their_heart — read, not installed
+m.witness_read("he_spoke_to_their_heart", "consolation_argued_from_cosmology_and_self_interest",
+                cites=["Bereshit Rabbah 100:9"])
 
 # -------------------------- Gen.50.22 · A_HUNDRED_AND_TEN ------------------
 # וַיֵּשֶׁב יוֹסֵף בְּמִצְרַיִם הוּא וּבֵית אָבִיו וַיְחִי יוֹסֵף מֵאָה
@@ -251,6 +282,10 @@ m.step("Gen.50.22")
 # ‹וַיְחִי יוֹסֵף מֵאָה וָעֶשֶׂר שָׁנִים› (“and-live Joseph hundred and-ten
 # years”) — fact holds: and-live-Joseph-hundred-and-ten-years
 m.fact("va_yechi_yosef_mea_va_eser_shanim")
+# witness-grounded state (its own tier): a_census_of_equal_lifespans_graded
+# on one_hundred_and_ten_years
+m.witness_state("one_hundred_and_ten_years", "a_census_of_equal_lifespans_graded",
+                cites=["Bereshit Rabbah 100:10"])
 
 # -------------------------- Gen.50.23 · ON_JOSEPHS_KNEES -------------------
 # וַיַּרְא יוֹסֵף לְאֶפְרַיִם בְּנֵי שִׁלֵּשִׁים גַּם בְּנֵי מָכִיר
@@ -285,6 +320,10 @@ m.step("Gen.50.25")
 # this
 m.declare("yosef", "LET",
           "ve_haalitem_et_atzmotai_mi_ze")
+# witness-grounded state (its own tier): the_hinge_into_the_next_book on
+# you_shall_carry_my_bones_up
+m.witness_state("you_shall_carry_my_bones_up", "the_hinge_into_the_next_book",
+                cites=["Bereshit Rabbah 100:11"])
 
 # -------------------------- Gen.50.26 · A_COFFIN_IN_EGYPT ------------------
 # וַיָּמָת יוֹסֵף בֶּן־מֵאָה וָעֶשֶׂר שָׁנִים וַיַּחַנְטוּ אֹתוֹ וַיִּישֶׂם
@@ -295,6 +334,10 @@ m.step("Gen.50.26")
 # ‹וַיַּחַנְטוּ אֹתוֹ וַיִּישֶׂם בָּאָרוֹן בְּמִצְרָיִם› (“and-spice obj-
 # marker-him/its and-place in-ark in-Egypt”) — event: die — agent Joseph
 m.event("met", agent="yosef")
+# witness-grounded state (its own tier):
+# present_in_the_reading_shelf_absent_from_our_layer on the_closing_token
+m.witness_state("the_closing_token", "present_in_the_reading_shelf_absent_from_our_layer",
+                cites=["Onkelos Genesis 50:26", "Bereshit Rabbah 100:12"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -312,4 +355,29 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 7
+    assert sorted(m.WORLD["witnessed"]) == ['am_i_in_the_place_of_god', 'one_hundred_and_ten_years', 'the_closing_token', 'the_days_of_weeping_passed', 'the_threshing_floor_of_atad', 'you_shall_carry_my_bones_up', 'your_father_commanded']
+    assert m.WORLD["witnessed"]['am_i_in_the_place_of_god']["cites"] == ['Onkelos Genesis 50:19']
+    assert all('a_question_turned_into_a_declaration' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['one_hundred_and_ten_years']["cites"] == ['Bereshit Rabbah 100:10']
+    assert all('a_census_of_equal_lifespans_graded' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['the_closing_token']["cites"] == ['Onkelos Genesis 50:26', 'Bereshit Rabbah 100:12']
+    assert all('present_in_the_reading_shelf_absent_from_our_layer' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['the_days_of_weeping_passed']["cites"] == ['Bereshit Rabbah 100:4']
+    assert all('a_verb_chosen_by_who_else_is_in_the_room' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['the_threshing_floor_of_atad']["cites"] == ['Bereshit Rabbah 100:6', 'Bereshit Rabbah 100:7']
+    assert all('a_search_of_scripture_reported_and_confirmed_where_we_can_see' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['you_shall_carry_my_bones_up']["cites"] == ['Bereshit Rabbah 100:11']
+    assert all('the_hinge_into_the_next_book' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['your_father_commanded']["cites"] == ['Bereshit Rabbah 100:8']
+    assert all('an_untruth_licensed_by_its_absence_from_the_record' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('he_fell_on_his_fathers_face', 'the_bill_for_the_silences_falling_due'), ('they_buried_him_in_the_cave', 'the_deed_produced_against_a_contest'), ('he_spoke_to_their_heart', 'consolation_argued_from_cosmology_and_self_interest')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 100:3']
+    assert all('the_bill_for_the_silences_falling_due' not in f for f in m.WORLD["facts"])
+    assert 'he_fell_on_his_fathers_face' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 98:17', 'Bereshit Rabbah 100:5']
+    assert all('the_deed_produced_against_a_contest' not in f for f in m.WORLD["facts"])
+    assert 'they_buried_him_in_the_cave' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 100:9']
+    assert all('consolation_argued_from_cosmology_and_self_interest' not in f for f in m.WORLD["facts"])
+    assert 'he_spoke_to_their_heart' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

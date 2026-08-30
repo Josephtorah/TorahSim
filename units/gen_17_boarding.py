@@ -44,6 +44,10 @@ m.step("Gen.7.2")
 # livestock-the-clean; two-which-not-clean
 m.fact("shivah_shivah_ha_behemah_ha_tehorah",
        "shnayim_asher_lo_tehorah")
+# witness-tier presupposed read: coarse_word_avoided_in_the_ink on
+# clean_speech_circumlocution — read, not installed
+m.witness_read("clean_speech_circumlocution", "coarse_word_avoided_in_the_ink",
+                cites=["Bereshit Rabbah 32:4", "Pesachim 3a:10", "Bava Batra 123a:14", "Vayikra Rabbah 26:1"])
 
 # -------------------------- Gen.7.3 · BIRDS_AND_THE_SEED_PURPOSE -----------
 # גַּם מֵעוֹף הַשָּׁמַיִם שִׁבְעָה שִׁבְעָה זָכָר וּנְקֵבָה לְחַיּוֹת זֶרַע
@@ -134,6 +138,10 @@ m.step("Gen.7.10")
 # the-day and-waters the-deluge be”) — fact holds: to-seven-the-day-waters-
 # of-the-deluge
 m.fact("le_shivat_ha_yamim_mei_ha_mabul")
+# witness-tier presupposed read: mourning_period_and_its_rule on
+# seven_days_delay — read, not installed
+m.witness_read("seven_days_delay", "mourning_period_and_its_rule",
+                cites=["Jerusalem Talmud Moed Katan 3:5:14", "Sanhedrin 108b:4", "Tosefta Sotah (Lieberman) 10:3"])
 
 # -------------------------- Gen.7.11 · THE_DATE_DOUBLE_BREACH --------------
 # בִּשְׁנַת שֵׁשׁ־מֵאוֹת שָׁנָה לְחַיֵּי־נֹחַ בַּחֹדֶשׁ הַשֵּׁנִי
@@ -154,6 +162,18 @@ m.event("split", themes=["mayenot_tehom_rabbah"])
 # ‹וַאֲרֻבֹּת הַשָּׁמַיִם נִפְתָּחוּ› (“and-windows-of the-heavens were-
 # opened”) — event: open — theme windows-of-the-heavens
 m.event("open", themes=["arubot_ha_shamayim"])
+# witness-tier presupposed read: measure_for_measure_on_a_shared_root on
+# breach_event — read, not installed
+m.witness_read("breach_event", "measure_for_measure_on_a_shared_root",
+                cites=["Mekhilta DeRabbi Yishmael, Tractate Shirah 2:5"])
+# witness-grounded state (its own tier): disputed_by_the_years_own_start on
+# second_month_date
+m.witness_state("second_month_date", "disputed_by_the_years_own_start",
+                cites=["Rosh Hashanah 11b:6", "Jerusalem Talmud Taanit 1:3:2"])
+# witness-tier presupposed read: exception_class_left_standing on
+# all_wellsprings_quantifier — read, not installed
+m.witness_read("all_wellsprings_quantifier", "exception_class_left_standing",
+                cites=["Bereshit Rabbah 33:4"])
 
 # -------------------------- Gen.7.12 · THE_RAIN_FORTY ----------------------
 # וַיְהִי הַגֶּשֶׁם עַל־הָאָרֶץ אַרְבָּעִים יוֹם וְאַרְבָּעִים לָיְלָה
@@ -162,6 +182,10 @@ m.step("Gen.7.12")
 # ‹הַגֶּשֶׁם … אַרְבָּעִים יוֹם וְאַרְבָּעִים לָיְלָה› (“the-rain … forty
 # day and-forty night”) — fact holds: the-rain-forty-day-and-forty-night
 m.fact("ha_geshem_arbaim_yom_va_arbaim_laylah")
+# witness-tier presupposed read: twelve_months_worked_to_the_day on
+# flood_calendar — read, not installed
+m.witness_read("flood_calendar", "twelve_months_worked_to_the_day",
+                cites=["Bereshit Rabbah 33:7", "Mishnah Eduyot 2:10", "Bereshit Rabbah 32:6"])
 
 # -------------------------- Gen.7.13 · THE_SOLEMN_DAY_STAMP ----------------
 # בְּעֶצֶם הַיּוֹם הַזֶּה בָּא נֹחַ וְשֵׁם־וְחָם וָיֶפֶת בְּנֵי־נֹחַ
@@ -213,6 +237,10 @@ m.fact("ha_baim_zakhar_u_nekevah_bau",
 # ‹וַיִּסְגֹּר יְהוָה בַּעֲדוֹ› (“and-He-shut YHWH behind-him”) — event:
 # shut — agent the-LORD; theme about-him
 m.event("shut", agent="YHWH", themes=["baado"])
+# witness-tier presupposed read: permission_discipline_loop on shutting_in —
+# read, not installed
+m.witness_read("shutting_in", "permission_discipline_loop",
+                cites=["Bereshit Rabbah 34:4", "Bereshit Rabbah 34:6", "Bereshit Rabbah 34:1"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -230,4 +258,26 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 7
+    assert sorted(m.WORLD["witnessed"]) == ['second_month_date']
+    assert m.WORLD["witnessed"]['second_month_date']["cites"] == ['Rosh Hashanah 11b:6', 'Jerusalem Talmud Taanit 1:3:2']
+    assert all('disputed_by_the_years_own_start' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('clean_speech_circumlocution', 'coarse_word_avoided_in_the_ink'), ('seven_days_delay', 'mourning_period_and_its_rule'), ('breach_event', 'measure_for_measure_on_a_shared_root'), ('all_wellsprings_quantifier', 'exception_class_left_standing'), ('flood_calendar', 'twelve_months_worked_to_the_day'), ('shutting_in', 'permission_discipline_loop')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 32:4', 'Pesachim 3a:10', 'Bava Batra 123a:14', 'Vayikra Rabbah 26:1']
+    assert all('coarse_word_avoided_in_the_ink' not in f for f in m.WORLD["facts"])
+    assert 'clean_speech_circumlocution' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Jerusalem Talmud Moed Katan 3:5:14', 'Sanhedrin 108b:4', 'Tosefta Sotah (Lieberman) 10:3']
+    assert all('mourning_period_and_its_rule' not in f for f in m.WORLD["facts"])
+    assert 'seven_days_delay' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Mekhilta DeRabbi Yishmael, Tractate Shirah 2:5']
+    assert all('measure_for_measure_on_a_shared_root' not in f for f in m.WORLD["facts"])
+    assert 'breach_event' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 33:4']
+    assert all('exception_class_left_standing' not in f for f in m.WORLD["facts"])
+    assert 'all_wellsprings_quantifier' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 33:7', 'Mishnah Eduyot 2:10', 'Bereshit Rabbah 32:6']
+    assert all('twelve_months_worked_to_the_day' not in f for f in m.WORLD["facts"])
+    assert 'flood_calendar' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 34:4', 'Bereshit Rabbah 34:6', 'Bereshit Rabbah 34:1']
+    assert all('permission_discipline_loop' not in f for f in m.WORLD["facts"])
+    assert 'shutting_in' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

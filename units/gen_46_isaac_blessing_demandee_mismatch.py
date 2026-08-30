@@ -28,6 +28,14 @@ m.step("Gen.27.1")
 # old-eyes-dim; Esau-called-as-great-son
 m.fact("yitzchaq_old_eyes_dim",
        "esav_called_as_great_son")
+# witness-grounded state (its own tier):
+# one_leg_exact_one_false_one_uncheckable on three_demands_ladder
+m.witness_state("three_demands_ladder", "one_leg_exact_one_false_one_uncheckable",
+                cites=["Bereshit Rabbah 65:9"])
+# witness-tier presupposed read: four_incompatible_causes_all_kept on
+# the_dimmed_eyes — read, not installed
+m.witness_read("the_dimmed_eyes", "four_incompatible_causes_all_kept",
+                cites=["Bereshit Rabbah 65:5", "Bereshit Rabbah 65:8", "Bereshit Rabbah 65:10"])
 
 # -------------------------- Gen.27.2 · THE_DEATH_DAY_UNKNOWN ---------------
 # וַיֹּאמֶר הִנֵּה־נָא זָקַנְתִּי לֹא יָדַעְתִּי יוֹם מוֹתִי
@@ -37,6 +45,11 @@ m.step("Gen.27.2")
 # ‹זָקַנְתִּי … לֹא יָדַעְתִּי יוֹם מוֹתִי› (“be-old … not know day death-
 # me/my”) — fact holds: Isaac-does-not-know-death-day
 m.fact("yitzchaq_does_not_know_death_day")
+# witness-tier presupposed read:
+# death_anxiety_rule_with_an_arithmetic_trigger on i_know_not_my_day — read,
+# not installed
+m.witness_read("i_know_not_my_day", "death_anxiety_rule_with_an_arithmetic_trigger",
+                cites=["Bereshit Rabbah 65:12"])
 
 # -------------------------- Gen.27.3 · THE_HUNT_CHAIN_OPENS ----------------
 # וְעַתָּה שָׂא־נָא כֵלֶיךָ תֶּלְיְךָ וְקַשְׁתֶּךָ וְצֵא הַשָּׂדֶה וְצוּדָה
@@ -117,6 +130,11 @@ m.declare("rivqah", "LET",
 # good-attribute-fenced-kids; rivqah-will-make-delicacy
 m.fact("tovim_attribute_fenced_kids",
        "rivqah_will_make_matamim")
+# witness-tier presupposed read:
+# licensed_by_a_marriage_contract_and_typologized_to_the_rite on two_kids —
+# read, not installed
+m.witness_read("two_kids", "licensed_by_a_marriage_contract_and_typologized_to_the_rite",
+                cites=["Bereshit Rabbah 65:14"])
 
 # -------------------------- Gen.27.10 · THE_WEQATAL_DUTY_AND_BLESS_CONTENT -
 # וְהֵבֵאתָ לְאָבִיךָ וְאָכָל בַּעֲבֻר אֲשֶׁר יְבָרֶכְךָ לִפְנֵי מוֹתוֹ
@@ -160,6 +178,10 @@ m.fact("curse_transfer_speech_alai_qillat_kha")
 # ‹אַךְ שְׁמַע בְּקֹלִי וְלֵךְ קַח› (“indeed hear in-voice/sound-me/my and-
 # go take”) — fact holds: reissue-hear-and-go-take-same-stack
 m.fact("reissue_shema_and_lekh_qach_same_stack")
+# witness-tier presupposed read: replaced_by_a_prophecy_licence on
+# the_self_curse — read, not installed
+m.witness_read("the_self_curse", "replaced_by_a_prophecy_licence",
+                cites=["Bereshit Rabbah 65:6", "Onkelos Genesis 27:13"])
 
 # -------------------------- Gen.27.14 · THE_POP_WEIGH_THREE_ROOT_TO_MOTHER -
 # וַיֵּלֶךְ וַיִּקַּח וַיָּבֵא לְאִמּוֹ וַתַּעַשׂ אִמּוֹ מַטְעַמִּים
@@ -232,6 +254,11 @@ m.fact("spoken_claim_anokhi_esav_bekhore_kha")
 # Jacob speaks a demand — LET: arise-seven-akhla(Isaac)
 m.declare("yaaqov", "LET",
           "qum_sheva_akhla(yitzchaq)")
+# witness-tier presupposed read:
+# equivocation_defence_declined_by_the_other_member on
+# i_am_esau_your_firstborn — read, not installed
+m.witness_read("i_am_esau_your_firstborn", "equivocation_defence_declined_by_the_other_member",
+                cites=["Bereshit Rabbah 65:18", "Onkelos Genesis 27:19", "Onkelos Genesis 27:24"])
 
 # -------------------------- Gen.27.20 · THE_YHWH_ELOHEKHA_AND_HIQRA_DEBUTS -
 # וַיֹּאמֶר יִצְחָק אֶל־בְּנוֹ מַה־זֶּה מִהַרְתָּ לִמְצֹא בְּנִי וַיֹּאמֶר
@@ -267,6 +294,10 @@ m.result("gesha(yaaqov)", tmark="t1")
 # feel-of-him/its … the-voice/sound voice/sound Jacob and-the-hand hand
 # Esau”) — event: ?
 m.event("?")
+# witness-grounded state (its own tier):
+# dominance_mechanism_with_an_explicit_toggle on voice_and_hands
+m.witness_state("voice_and_hands", "dominance_mechanism_with_an_explicit_toggle",
+                cites=["Bereshit Rabbah 65:20", "Bereshit Rabbah 65:21"])
 
 # -------------------------- Gen.27.23 · THE_NAKAR_DEBUT_AND_FIRST_BLESS_EVENT -
 # וְלֹא הִכִּירוֹ כִּי־הָיוּ יָדָיו כִּידֵי עֵשָׂו אָחִיו שְׂעִרֹת
@@ -342,6 +373,10 @@ m.step("Gen.27.28")
 # a demand — LET: set(the-God, to-Jacob)
 m.declare("yitzchaq", "LET",
           "yiten(ha_Elohim, le_yaaqov)")
+# witness-tier presupposed read: the_chain_maps_its_own_canon_here on
+# dew_fat_grain_wine — read, not installed
+m.witness_read("dew_fat_grain_wine", "the_chain_maps_its_own_canon_here",
+                cites=["Bereshit Rabbah 66:3"])
 
 # -------------------------- Gen.27.29 · THE_JUSSIVE_CHAIN_HEVE_AND_CHIASM --
 # יַעַבְדוּךָ עַמִּים וְיִשְׁתַּחֲווּ לְךָ לְאֻמִּים הֱוֵה גְבִיר לְאַחֶיךָ
@@ -370,6 +405,10 @@ m.declare("yitzchaq", "LET",
 # ‹אֹרְרֶיךָ אָרוּר וּמְבָרֲכֶיךָ בָּרוּךְ› (“execrate-you/your execrate
 # and-bless-you/your bless”) — fact holds: execrate-bless-state-formulas
 m.fact("arur_barukh_state_formulas")
+# witness-tier presupposed read: amen_rule_seated_and_applied_both_ways on
+# curse_and_bless_clause — read, not installed
+m.witness_read("curse_and_bless_clause", "amen_rule_seated_and_applied_both_ways",
+                cites=["Bereshit Rabbah 66:6"])
 
 # -------------------------- Gen.27.30 · THE_JUST_GONE_AND_ESAU_RETURNS -----
 # וַיְהִי כַּאֲשֶׁר כִּלָּה יִצְחָק לְבָרֵךְ אֶת־יַעֲקֹב וַיְהִי אַךְ יָצֹא
@@ -381,6 +420,10 @@ m.step("Gen.27.30")
 # ‹יָצֹא יָצָא … בָּא מִצֵּידוֹ› (“bring-forth bring-forth … come/bring
 # from-chase-him/its”) — event: ?
 m.event("?")
+# witness-tier presupposed read: glossed_by_the_homicide_statutes_own_verb
+# on from_his_hunt — read, not installed
+m.witness_read("from_his_hunt", "glossed_by_the_homicide_statutes_own_verb",
+                cites=["Bereshit Rabbah 66:5"])
 
 # -------------------------- Gen.27.31 · THE_TRUE_BRING_WRONG_DEMANDEE_AND_YAQUM -
 # וַיַּעַשׂ גַּם־הוּא מַטְעַמִּים וַיָּבֵא לְאָבִיו וַיֹּאמֶר לְאָבִיו יָקֻם
@@ -419,6 +462,23 @@ m.step("Gen.27.33")
 # (“and-shudder-with-terror Isaac fear … and-bless-him/its … also bless be”)
 # — event: ?
 m.event("?")
+# witness-tier presupposed read: particle_repaid_at_the_same_particle on
+# who_then — read, not installed
+m.witness_read("who_then", "particle_repaid_at_the_same_particle",
+                cites=["Bereshit Rabbah 91:11"])
+# witness-tier presupposed read:
+# middle_leg_of_the_three_word_blessing_census on i_ate_from_all — read, not
+# installed
+m.witness_read("i_ate_from_all", "middle_leg_of_the_three_word_blessing_census",
+                cites=["Bereshit Rabbah 43:8"])
+# witness-tier presupposed read: ratified_by_its_own_signatory on
+# indeed_he_shall_be_blessed — read, not installed
+m.witness_read("indeed_he_shall_be_blessed", "ratified_by_its_own_signatory",
+                cites=["Bereshit Rabbah 67:2", "Bereshit Rabbah 67:12"])
+# witness-tier presupposed read: re_explained_as_a_concealed_ending on
+# the_trembling — read, not installed
+m.witness_read("the_trembling", "re_explained_as_a_concealed_ending",
+                cites=["Bereshit Rabbah 99:5", "Onkelos Genesis 27:33"])
 
 # -------------------------- Gen.27.34 · THE_GREAT_BITTER_CRY_AND_BARAKHENI_1 -
 # כִּשְׁמֹעַ עֵשָׂו אֶת־דִּבְרֵי אָבִיו וַיִּצְעַק צְעָקָה גְּדֹלָה וּמָרָה
@@ -433,6 +493,10 @@ m.event("?")
 # barakheni-1(Isaac)
 m.declare("esav", "LET",
           "barakheni_1(yitzchaq)")
+# witness-tier presupposed read: booked_against_a_later_cry_at_the_phrase on
+# great_and_bitter_cry — read, not installed
+m.witness_read("great_and_bitter_cry", "booked_against_a_later_cry_at_the_phrase",
+                cites=["Bereshit Rabbah 67:4"])
 
 # -------------------------- Gen.27.35 · THE_DECEIT_WORD_DEBUT --------------
 # וַיֹּאמֶר בָּא אָחִיךָ בְּמִרְמָה וַיִּקַּח בִּרְכָתֶךָ
@@ -442,6 +506,10 @@ m.step("Gen.27.35")
 # ‹בְּמִרְמָה … בִּרְכָתֶךָ› (“in-fraud … blessing-you/your”) — fact holds:
 # spoken-fraud-and-took-blessing
 m.fact("spoken_mirma_and_took_blessing")
+# witness-tier presupposed read: re_graded_as_wisdom_by_both_members on
+# with_cunning — read, not installed
+m.witness_read("with_cunning", "re_graded_as_wisdom_by_both_members",
+                cites=["Bereshit Rabbah 67:4", "Onkelos Genesis 27:35"])
 
 # -------------------------- Gen.27.36 · THE_BEKHORAH_TOK6_AND_SUPPLANT_HAPAX -
 # וַיֹּאמֶר הֲכִי קָרָא שְׁמוֹ יַעֲקֹב וַיַּעְקְבֵנִי זֶה פַעֲמַיִם
@@ -470,6 +538,10 @@ m.step("Gen.27.37")
 # ‹גְּבִיר … וְדָגָן וְתִירֹשׁ› (“master … and-increase and-must”) — fact
 # holds: anti-answer-master-increase-must
 m.fact("anti_answer_gevir_dagan_tirosh")
+# witness-tier presupposed read: slave_property_maxim_voiding_the_claim on
+# lord_over_you — read, not installed
+m.witness_read("lord_over_you", "slave_property_maxim_voiding_the_claim",
+                cites=["Bereshit Rabbah 67:5"])
 
 # -------------------------- Gen.27.38 · THE_BARAKHENI_2_AND_WEEPING --------
 # וַיֹּאמֶר עֵשָׂו אֶל־אָבִיו הַבְרָכָה אַחַת הִוא־לְךָ אָבִי בָּרֲכֵנִי
@@ -509,6 +581,18 @@ m.step("Gen.27.40")
 # him/its … back-of-the-neck-you/your”) — fact holds: anti-blessing-sword-
 # serve-yoke-neck
 m.fact("anti_blessing_sword_serve_yoke_neck")
+# witness-tier presupposed read: condition_written_in_as_plain_sense on
+# you_will_remove_his_yoke — read, not installed
+m.witness_read("you_will_remove_his_yoke", "condition_written_in_as_plain_sense",
+                cites=["Bereshit Rabbah 67:7", "Onkelos Genesis 27:40"])
+# witness-tier presupposed read: countersigned_from_above_one_by_one on
+# the_blessing_clauses — read, not installed
+m.witness_read("the_blessing_clauses", "countersigned_from_above_one_by_one",
+                cites=["Bereshit Rabbah 75:8"])
+# witness-tier presupposed read: prayer_argued_from_two_mercy_statutes on
+# mother_with_children — read, not installed
+m.witness_read("mother_with_children", "prayer_argued_from_two_mercy_statutes",
+                cites=["Bereshit Rabbah 76:6"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -526,4 +610,64 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 35
+    assert sorted(m.WORLD["witnessed"]) == ['three_demands_ladder', 'voice_and_hands']
+    assert m.WORLD["witnessed"]['three_demands_ladder']["cites"] == ['Bereshit Rabbah 65:9']
+    assert all('one_leg_exact_one_false_one_uncheckable' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['voice_and_hands']["cites"] == ['Bereshit Rabbah 65:20', 'Bereshit Rabbah 65:21']
+    assert all('dominance_mechanism_with_an_explicit_toggle' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_dimmed_eyes', 'four_incompatible_causes_all_kept'), ('i_know_not_my_day', 'death_anxiety_rule_with_an_arithmetic_trigger'), ('two_kids', 'licensed_by_a_marriage_contract_and_typologized_to_the_rite'), ('the_self_curse', 'replaced_by_a_prophecy_licence'), ('i_am_esau_your_firstborn', 'equivocation_defence_declined_by_the_other_member'), ('dew_fat_grain_wine', 'the_chain_maps_its_own_canon_here'), ('curse_and_bless_clause', 'amen_rule_seated_and_applied_both_ways'), ('from_his_hunt', 'glossed_by_the_homicide_statutes_own_verb'), ('who_then', 'particle_repaid_at_the_same_particle'), ('i_ate_from_all', 'middle_leg_of_the_three_word_blessing_census'), ('indeed_he_shall_be_blessed', 'ratified_by_its_own_signatory'), ('the_trembling', 're_explained_as_a_concealed_ending'), ('great_and_bitter_cry', 'booked_against_a_later_cry_at_the_phrase'), ('with_cunning', 're_graded_as_wisdom_by_both_members'), ('lord_over_you', 'slave_property_maxim_voiding_the_claim'), ('you_will_remove_his_yoke', 'condition_written_in_as_plain_sense'), ('the_blessing_clauses', 'countersigned_from_above_one_by_one'), ('mother_with_children', 'prayer_argued_from_two_mercy_statutes')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 65:5', 'Bereshit Rabbah 65:8', 'Bereshit Rabbah 65:10']
+    assert all('four_incompatible_causes_all_kept' not in f for f in m.WORLD["facts"])
+    assert 'the_dimmed_eyes' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 65:12']
+    assert all('death_anxiety_rule_with_an_arithmetic_trigger' not in f for f in m.WORLD["facts"])
+    assert 'i_know_not_my_day' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 65:14']
+    assert all('licensed_by_a_marriage_contract_and_typologized_to_the_rite' not in f for f in m.WORLD["facts"])
+    assert 'two_kids' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 65:6', 'Onkelos Genesis 27:13']
+    assert all('replaced_by_a_prophecy_licence' not in f for f in m.WORLD["facts"])
+    assert 'the_self_curse' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 65:18', 'Onkelos Genesis 27:19', 'Onkelos Genesis 27:24']
+    assert all('equivocation_defence_declined_by_the_other_member' not in f for f in m.WORLD["facts"])
+    assert 'i_am_esau_your_firstborn' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 66:3']
+    assert all('the_chain_maps_its_own_canon_here' not in f for f in m.WORLD["facts"])
+    assert 'dew_fat_grain_wine' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 66:6']
+    assert all('amen_rule_seated_and_applied_both_ways' not in f for f in m.WORLD["facts"])
+    assert 'curse_and_bless_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 66:5']
+    assert all('glossed_by_the_homicide_statutes_own_verb' not in f for f in m.WORLD["facts"])
+    assert 'from_his_hunt' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 91:11']
+    assert all('particle_repaid_at_the_same_particle' not in f for f in m.WORLD["facts"])
+    assert 'who_then' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 43:8']
+    assert all('middle_leg_of_the_three_word_blessing_census' not in f for f in m.WORLD["facts"])
+    assert 'i_ate_from_all' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 67:2', 'Bereshit Rabbah 67:12']
+    assert all('ratified_by_its_own_signatory' not in f for f in m.WORLD["facts"])
+    assert 'indeed_he_shall_be_blessed' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 99:5', 'Onkelos Genesis 27:33']
+    assert all('re_explained_as_a_concealed_ending' not in f for f in m.WORLD["facts"])
+    assert 'the_trembling' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[12]["cites"] == ['Bereshit Rabbah 67:4']
+    assert all('booked_against_a_later_cry_at_the_phrase' not in f for f in m.WORLD["facts"])
+    assert 'great_and_bitter_cry' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[13]["cites"] == ['Bereshit Rabbah 67:4', 'Onkelos Genesis 27:35']
+    assert all('re_graded_as_wisdom_by_both_members' not in f for f in m.WORLD["facts"])
+    assert 'with_cunning' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[14]["cites"] == ['Bereshit Rabbah 67:5']
+    assert all('slave_property_maxim_voiding_the_claim' not in f for f in m.WORLD["facts"])
+    assert 'lord_over_you' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[15]["cites"] == ['Bereshit Rabbah 67:7', 'Onkelos Genesis 27:40']
+    assert all('condition_written_in_as_plain_sense' not in f for f in m.WORLD["facts"])
+    assert 'you_will_remove_his_yoke' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[16]["cites"] == ['Bereshit Rabbah 75:8']
+    assert all('countersigned_from_above_one_by_one' not in f for f in m.WORLD["facts"])
+    assert 'the_blessing_clauses' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[17]["cites"] == ['Bereshit Rabbah 76:6']
+    assert all('prayer_argued_from_two_mercy_statutes' not in f for f in m.WORLD["facts"])
+    assert 'mother_with_children' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -34,8 +34,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 .arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
        border-radius:8px; padding:.4rem .7rem; }
 .arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
-</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_17_boarding?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The boarding: you have I seen righteous, the date, the shut door (7:1-16) <span class='badge frozen'>MODEL · REV 2 · GATES GREEN</span></h1>
-<div class="meta">unit <b>gen_17_boarding</b> · Genesis 7:1-16 · derive logic_derived_v1 · phase C-17</div>
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_17_boarding?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The boarding: you have I seen righteous, the date, the shut door (7:1-16) <span class='badge frozen'>MODEL · REV 4 · GATES GREEN</span></h1>
+<div class="meta">unit <b>gen_17_boarding</b> · Genesis 7:1-16 · derive logic_derived_v2_full_rule · phase C-17</div>
 <div class="meta"><a href="../#Gen/7/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
 <p><span class="he">בֹּא־אַתָּה וְכָל־בֵּיתְךָ — וַיִּסְגֹּר יְהוָה בַּעֲדוֹ</span> · <i>bo-atah ve-khol-beitkha — va-yisgor YHWH baado</i> · &#x27;come, you and all your house&#x27; — &#x27;and YHWH shut him in&#x27;</p>
 <div class="note">Derived 2026-08-01 at owner&#x27;s order (&quot;next block&quot;) — the fourth unit under the AUTO-FREEZE process. Calibrated coverage (charter 4.1): Onkelos read Tier-A at derive time (16 sequential fetches, Data/FETCHLOG.md — the buffer rewrites the shutting as SHIELDING and LEVELS the verse&#x27;s divine-name split; de-personifies the animals&#x27; marriage-words; inserts appointed-time vocabulary); trees from the DB&#x27;s stored tree_json. THIRTEENTH PROSPECTIVE MIDDOT RUN (logic/middot_scan/ WATCHLIST_gen17_prospective_2026-08-01.md): cache holds ZERO sources for Gen 7:1-16 — eleventh tripwire in a row (BR 32:5&#x27;s praise-abridgement teaching derives doctrine from the 6:9-vs-7:1 DELTA itself — the chain running a quote-diff of its own). INTERPRETER: ZERO extensions — eighth extension-free derivation in a row.</div>
@@ -76,6 +76,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shivah_shivah_ha_behemah_ha_tehorah, t1) ∧ HOLDS(shnayim_asher_lo_tehorah, t1)</span><br><span class="gloss">= HOLDS(seven-seven-the-livestock-the-clean, t1) ∧ HOLDS(two-which-not-clean, t1)</span><br>TAHOR (&#x27;pure/clean&#x27;) — THE LAW&#x27;S CENTRAL ADJECTIVE, FIRST TOKENS — born in cargo arithmetic two chapters before its altar explains it (token 5 = 8:20: the clean sevens are sacrifice-stock) and long before any purity law exists [OPEN: how Noach knows clean from not-clean — the chain&#x27;s question; named-only]. The pairs are counted ISH VE-ISHTO (&#x27;a MAN and his WIFE&#x27;) — the human marriage-words applied to animals [letter fact; Onkelos refuses the wedding: male-and-female — dual-track]. The not-clean clause carries the he-written/she-read spelling&#x27;s 4th token in our spans (3:12, 3:20, 4:22, here). The command-bundle continues (imperfect in the command frame).
 </td><td><span class="he">הַטְּהוֹרָה … שִׁבְעָה שִׁבְעָה … לֹא טְהֹרָה הִוא שְׁנַיִם</span> · <i>ha-tehorah … shivah shivah … lo tehorah hi shnayim</i><br><span class="gloss">= clean seven seven not clean hi two</span></td><td class='cite'>TIR-028</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(clean_speech_circumlocution, coarse_word_avoided_in_the_ink)</span><br><span class="gloss">= WITNESS-READ(clean-speech-circumlocution, coarse-word-avoided-in-the-ink)</span><br>THE VERSE PAYS EXTRA LETTERS TO AVOID A COARSE WORD [claim G17-10]. Where the single word טְמֵאָה (temeah, &#x27;impure&#x27;) was available, our 7:2 writes אֲשֶׁר לֹא טְהֹרָה (&#x27;which is NOT pure&#x27;) and 7:8 writes אֲשֶׁר אֵינֶנָּה טְהֹרָה - both circumlocutions verified in the ink at derivation. The rule drawn: never let a coarse word leave your mouth, since Scripture spent extra letters to avoid one even about a non-kosher animal, and all the more so about the righteous. The seats price the cost differently - eight extra letters at one, two or three extra WORDS at the other - and the accounting variance is carried, not harmonised. [folded shape: ink count]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 32:4, Pesachim 3a:10, Bava Batra 123a:14, Vayikra Rabbah 26:1</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Purity enters the corpus as a count. The law&#x27;s biggest word debuts unexplained, attached to a number that waits two chapters for its reason.</div>
 </div>
@@ -158,6 +160,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(le_shivat_ha_yamim_mei_ha_mabul, t1)</span><br><span class="gloss">= HOLDS(to-seven-the-day-waters-of-the-deluge, t1)</span><br>The seven-day countdown of 7:4 elapses on schedule — the corpus&#x27;s first kept forecast interval: announced, waited, arrived.
 </td><td><span class="he">וַיְהִי לְשִׁבְעַת הַיָּמִים וּמֵי הַמַּבּוּל הָיוּ</span> · <i>va-yehi le-shivat ha-yamim u-mei ha-mabul hayu</i><br><span class="gloss">= be seven day waters-of deluge be</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(seven_days_delay, mourning_period_and_its_rule)</span><br><span class="gloss">= WITNESS-READ(seven-days-delay, mourning-period-and-its-rule)</span><br>THE DELAY IS READ AS MOURNING [claim G17-13]. The seven days are explained as the mourning for Methuselah the righteous, whose merit DELAYED the punishment - the righteous suspending wrath in life and in death - or as God keeping seven days of mourning for His world before destroying it. From the latter, the allowance of mourning BEFORE a death is noted as unique to the One who knows the future. [folded shape: kept record]
+</td><td>—</td><td class='cite'>Jerusalem Talmud Moed Katan 3:5:14, Sanhedrin 108b:4, Tosefta Sotah (Lieberman) 10:3</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The clock the voice set runs out exactly.</div>
 </div>
@@ -172,6 +176,12 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">נִבְקְעוּ כָּל־מַעְיְנֹת תְּהוֹם רַבָּה</span> · <i>nivkeu kol-mayenot tehom rabbah</i><br><span class="gloss">= nivkeu all-fountains-of deep great</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
 <tr class="opline"><td>EVENT</td><td><span class="expr">open(e3) ∧ Theme(e3, arubot_ha_shamayim)</span><br><span class="gloss">= open(e3) ∧ Theme(e3, windows-of-the-heavens)</span><br>And from above: ARUBOT HA-SHAMAYIM — &#x27;heaven&#x27;s windows&#x27; (a two-token Torah word: opened here, shut at 8:2) — NIFTACHU (agentless again, TIR-032). The double breach: day 2&#x27;s separation of waters-above from waters-below fails in BOTH directions on one dated day — the un-creation&#x27;s biggest structural move, executed as plumbing.
 </td><td><span class="he">וַאֲרֻבֹּת הַשָּׁמַיִם נִפְתָּחוּ</span> · <i>va-arubot ha-shamayim niftachu</i><br><span class="gloss">= windows-of heavens were-opened</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(breach_event, measure_for_measure_on_a_shared_root)</span><br><span class="gloss">= WITNESS-READ(breach-event, measure-for-measure-on-a-shared-root)</span><br>THE PUNISHMENT IS SPELLED OUT OF THE CRIME&#x27;S OWN VOCABULARY [claim G17-14]. They set their EYES on what was forbidden, and He opened the WELLSPRINGS above and below - the two words sharing a root, so this operator&#x27;s event is read as the crime&#x27;s word turned against it. [folded shape: cross-corpus link]
+</td><td>—</td><td class='cite'>Mekhilta DeRabbi Yishmael, Tractate Shirah 2:5</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_STATE</td><td><span class="expr">WITNESS(second_month_date, disputed_by_the_years_own_start)</span><br><span class="gloss">= WITNESS(second-month-date, disputed-by-the-years-own-start)</span><br>THE DATE IS DISPUTED BECAUSE THE YEAR&#x27;S START IS [claim G17-12]. This operator dates the breach to &#x27;the SECOND month&#x27;, and the ordinal resolves differently depending on whether the year begins in Nisan or in Tishrei - one reckoning giving Marcheshvan, the other Iyar. Both tie the date to the setting of the Pleiades, and one reads God as having removed two stars from that constellation to open the flood. The rainfall-season law is anchored to the same date. [folded shape: recorded dispute]
+</td><td>—</td><td class='cite'>Rosh Hashanah 11b:6, Jerusalem Talmud Taanit 1:3:2</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(all_wellsprings_quantifier, exception_class_left_standing)</span><br><span class="gloss">= WITNESS-READ(all-wellsprings-quantifier, exception-class-left-standing)</span><br>A QUANTIFIER PRESENT AT THE OPENING AND ABSENT AT THE CLOSE [claim G17-15]. Our 7:11 breaches ALL the wellsprings of the great deep; 8:2 dams &#x27;the wellsprings&#x27; WITHOUT the word all. R. Elazar reads the missing quantifier as leaving some open, and names them - the hot springs of Tiberias, of Chamat Gader, and the cave of Banyas. A word missing from the closing operator is read as a permanent physical remainder in the world. [folded shape: ink count]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 33:4</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The corpus learns to tell time on the day the sky and the deep forget their places.</div>
 </div>
@@ -182,6 +192,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ha_geshem_arbaim_yom_va_arbaim_laylah, t1)</span><br><span class="gloss">= HOLDS(the-rain-forty-day-and-forty-night, t1)</span><br>GESHEM (&#x27;rain-shower&#x27;) — the noun&#x27;s first token (its second, 8:2, is its being restrained): the announced forty runs. The 2:5 problem — no rain yet, no man to work the ground — is answered at scale: rain arrives to unwork it.
 </td><td><span class="he">הַגֶּשֶׁם … אַרְבָּעִים יוֹם וְאַרְבָּעִים לָיְלָה</span> · <i>ha-geshem … arbaim yom ve-arbaim laylah</i><br><span class="gloss">= rain forty day forty night</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(flood_calendar, twelve_months_worked_to_the_day)</span><br><span class="gloss">= WITNESS-READ(flood-calendar, twelve-months-worked-to-the-day)</span><br>THE SCHEDULE IS RECONSTRUCTED FROM THIS UNIT&#x27;S OWN DATE OPERATORS [claim G17-11]. The ruling that the judgment lasted TWELVE MONTHS is a canonical case-table row, the first of five such judgments. From our date-formulas the chain works the calendar to the day - forty days of rain, a hundred and fifty of swell, the ark resting on the seventeenth, recession at one cubit per four days - and from that recession rate computes THE ARK&#x27;S DRAFT at eleven cubits. Whether the flood year counts in the man&#x27;s age is disputed, one seat excluding it from his count while including it in calendrical reckoning. [folded shape: kept record]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 33:7, Mishnah Eduyot 2:10, Bereshit Rabbah 32:6</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Creation&#x27;s withheld weather arrives as the sentence.</div>
 </div>
@@ -224,6 +236,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וְהַבָּאִים זָכָר וּנְקֵבָה … בָּאוּ כַּאֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים</span> · <i>ve-ha-baim zakhar u-nekevah … bau ka-asher tzivah oto Elohim</i><br><span class="gloss">= comers male female they-came as/which commanded it God</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>EVENT</td><td><span class="expr">shut(e5) ∧ Agent(e5, YHWH) ∧ Theme(e5, baado)</span><br><span class="gloss">= shut(e5) ∧ Agent(e5, the-LORD) ∧ Theme(e5, about-him)</span><br>...and YHWH SHUT HIM IN. SAGAR token 2 — token 1 is 2:21 (God closing the FLESH after taking the rib; tokens 3-4 are Lot&#x27;s door against the mob): every early closure in the corpus is a protective closure, and this one is the Judge&#x27;s own hand on the rescue&#x27;s door. The names split inside one verse — Elohim commands the intake, YHWH seals it [letter fact, held; the chain&#x27;s justice/mercy reading is named-only; Onkelos LEVELS both names to the LORD and rewrites the shutting as SHIELDING (&#x27;protected over him,&#x27; Memra variant) — the letter&#x27;s sharpest name-switch does not survive translation; dual-track, flagged].
 </td><td><span class="he">וַיִּסְגֹּר יְהוָה בַּעֲדוֹ</span> · <i>va-yisgor YHWH baado</i><br><span class="gloss">= He-shut the-LORD about-him</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(shutting_in, permission_discipline_loop)</span><br><span class="gloss">= WITNESS-READ(shutting-in, permission-discipline-loop)</span><br>ENTERED BY LEAVE, THEREFORE EXITS ONLY BY LEAVE [claim G17-17]. The entry command and its compliance, then the exit command and its compliance, are read as a closed four-verse obedience loop spanning this unit and the exit unit. He is read as REFUSING to leave and resume procreation until given an oath that no second flood will come. And the shutting-in here is read through the psalm&#x27;s &#x27;release me from confinement&#x27; - twelve months shut in. [folded shape: cross-corpus link]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 34:4, Bereshit Rabbah 34:6, Bereshit Rabbah 34:1</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The unit ends on the corpus&#x27;s gentlest verb of judgment: the hand that decreed the flood closes the door against it.</div>
 </div>
@@ -884,6 +898,10 @@ m.step(&quot;Gen.7.2&quot;)
 # livestock-the-clean; two-which-not-clean
 m.fact(&quot;shivah_shivah_ha_behemah_ha_tehorah&quot;,
        &quot;shnayim_asher_lo_tehorah&quot;)
+# witness-tier presupposed read: coarse_word_avoided_in_the_ink on
+# clean_speech_circumlocution — read, not installed
+m.witness_read(&quot;clean_speech_circumlocution&quot;, &quot;coarse_word_avoided_in_the_ink&quot;,
+                cites=[&quot;Bereshit Rabbah 32:4&quot;, &quot;Pesachim 3a:10&quot;, &quot;Bava Batra 123a:14&quot;, &quot;Vayikra Rabbah 26:1&quot;])
 
 # -------------------------- Gen.7.3 · BIRDS_AND_THE_SEED_PURPOSE -----------
 # גַּם מֵעוֹף הַשָּׁמַיִם שִׁבְעָה שִׁבְעָה זָכָר וּנְקֵבָה לְחַיּוֹת זֶרַע
@@ -974,6 +992,10 @@ m.step(&quot;Gen.7.10&quot;)
 # the-day and-waters the-deluge be”) — fact holds: to-seven-the-day-waters-
 # of-the-deluge
 m.fact(&quot;le_shivat_ha_yamim_mei_ha_mabul&quot;)
+# witness-tier presupposed read: mourning_period_and_its_rule on
+# seven_days_delay — read, not installed
+m.witness_read(&quot;seven_days_delay&quot;, &quot;mourning_period_and_its_rule&quot;,
+                cites=[&quot;Jerusalem Talmud Moed Katan 3:5:14&quot;, &quot;Sanhedrin 108b:4&quot;, &quot;Tosefta Sotah (Lieberman) 10:3&quot;])
 
 # -------------------------- Gen.7.11 · THE_DATE_DOUBLE_BREACH --------------
 # בִּשְׁנַת שֵׁשׁ־מֵאוֹת שָׁנָה לְחַיֵּי־נֹחַ בַּחֹדֶשׁ הַשֵּׁנִי
@@ -994,6 +1016,18 @@ m.event(&quot;split&quot;, themes=[&quot;mayenot_tehom_rabbah&quot;])
 # ‹וַאֲרֻבֹּת הַשָּׁמַיִם נִפְתָּחוּ› (“and-windows-of the-heavens were-
 # opened”) — event: open — theme windows-of-the-heavens
 m.event(&quot;open&quot;, themes=[&quot;arubot_ha_shamayim&quot;])
+# witness-tier presupposed read: measure_for_measure_on_a_shared_root on
+# breach_event — read, not installed
+m.witness_read(&quot;breach_event&quot;, &quot;measure_for_measure_on_a_shared_root&quot;,
+                cites=[&quot;Mekhilta DeRabbi Yishmael, Tractate Shirah 2:5&quot;])
+# witness-grounded state (its own tier): disputed_by_the_years_own_start on
+# second_month_date
+m.witness_state(&quot;second_month_date&quot;, &quot;disputed_by_the_years_own_start&quot;,
+                cites=[&quot;Rosh Hashanah 11b:6&quot;, &quot;Jerusalem Talmud Taanit 1:3:2&quot;])
+# witness-tier presupposed read: exception_class_left_standing on
+# all_wellsprings_quantifier — read, not installed
+m.witness_read(&quot;all_wellsprings_quantifier&quot;, &quot;exception_class_left_standing&quot;,
+                cites=[&quot;Bereshit Rabbah 33:4&quot;])
 
 # -------------------------- Gen.7.12 · THE_RAIN_FORTY ----------------------
 # וַיְהִי הַגֶּשֶׁם עַל־הָאָרֶץ אַרְבָּעִים יוֹם וְאַרְבָּעִים לָיְלָה
@@ -1002,6 +1036,10 @@ m.step(&quot;Gen.7.12&quot;)
 # ‹הַגֶּשֶׁם … אַרְבָּעִים יוֹם וְאַרְבָּעִים לָיְלָה› (“the-rain … forty
 # day and-forty night”) — fact holds: the-rain-forty-day-and-forty-night
 m.fact(&quot;ha_geshem_arbaim_yom_va_arbaim_laylah&quot;)
+# witness-tier presupposed read: twelve_months_worked_to_the_day on
+# flood_calendar — read, not installed
+m.witness_read(&quot;flood_calendar&quot;, &quot;twelve_months_worked_to_the_day&quot;,
+                cites=[&quot;Bereshit Rabbah 33:7&quot;, &quot;Mishnah Eduyot 2:10&quot;, &quot;Bereshit Rabbah 32:6&quot;])
 
 # -------------------------- Gen.7.13 · THE_SOLEMN_DAY_STAMP ----------------
 # בְּעֶצֶם הַיּוֹם הַזֶּה בָּא נֹחַ וְשֵׁם־וְחָם וָיֶפֶת בְּנֵי־נֹחַ
@@ -1053,6 +1091,10 @@ m.fact(&quot;ha_baim_zakhar_u_nekevah_bau&quot;,
 # ‹וַיִּסְגֹּר יְהוָה בַּעֲדוֹ› (“and-He-shut YHWH behind-him”) — event:
 # shut — agent the-LORD; theme about-him
 m.event(&quot;shut&quot;, agent=&quot;YHWH&quot;, themes=[&quot;baado&quot;])
+# witness-tier presupposed read: permission_discipline_loop on shutting_in —
+# read, not installed
+m.witness_read(&quot;shutting_in&quot;, &quot;permission_discipline_loop&quot;,
+                cites=[&quot;Bereshit Rabbah 34:4&quot;, &quot;Bereshit Rabbah 34:6&quot;, &quot;Bereshit Rabbah 34:1&quot;])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
@@ -1070,6 +1112,28 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 7
+    assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;second_month_date&#x27;]
+    assert m.WORLD[&quot;witnessed&quot;][&#x27;second_month_date&#x27;][&quot;cites&quot;] == [&#x27;Rosh Hashanah 11b:6&#x27;, &#x27;Jerusalem Talmud Taanit 1:3:2&#x27;]
+    assert all(&#x27;disputed_by_the_years_own_start&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;clean_speech_circumlocution&#x27;, &#x27;coarse_word_avoided_in_the_ink&#x27;), (&#x27;seven_days_delay&#x27;, &#x27;mourning_period_and_its_rule&#x27;), (&#x27;breach_event&#x27;, &#x27;measure_for_measure_on_a_shared_root&#x27;), (&#x27;all_wellsprings_quantifier&#x27;, &#x27;exception_class_left_standing&#x27;), (&#x27;flood_calendar&#x27;, &#x27;twelve_months_worked_to_the_day&#x27;), (&#x27;shutting_in&#x27;, &#x27;permission_discipline_loop&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 32:4&#x27;, &#x27;Pesachim 3a:10&#x27;, &#x27;Bava Batra 123a:14&#x27;, &#x27;Vayikra Rabbah 26:1&#x27;]
+    assert all(&#x27;coarse_word_avoided_in_the_ink&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;clean_speech_circumlocution&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Jerusalem Talmud Moed Katan 3:5:14&#x27;, &#x27;Sanhedrin 108b:4&#x27;, &#x27;Tosefta Sotah (Lieberman) 10:3&#x27;]
+    assert all(&#x27;mourning_period_and_its_rule&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;seven_days_delay&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Mekhilta DeRabbi Yishmael, Tractate Shirah 2:5&#x27;]
+    assert all(&#x27;measure_for_measure_on_a_shared_root&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;breach_event&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 33:4&#x27;]
+    assert all(&#x27;exception_class_left_standing&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;all_wellsprings_quantifier&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 33:7&#x27;, &#x27;Mishnah Eduyot 2:10&#x27;, &#x27;Bereshit Rabbah 32:6&#x27;]
+    assert all(&#x27;twelve_months_worked_to_the_day&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;flood_calendar&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 34:4&#x27;, &#x27;Bereshit Rabbah 34:6&#x27;, &#x27;Bereshit Rabbah 34:1&#x27;]
+    assert all(&#x27;permission_discipline_loop&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;shutting_in&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-08-01 (derived on owner order &quot;next block&quot;; frozen automatically per the 2026-08-01 process order — auto-freeze #4): eighteenth frozen unit — THE BOARDING; eighth extension-free derivation in a row. Central findings, all DB-verified before drafting: the corpus&#x27;s first PERSON-VERDICT (TEST PASS(tzaddik, noach) — the seeing-verb + verdict-adjective in divine second person; the narrator&#x27;s plural in-his-generations vs the voice&#x27;s singular in-THIS-generation, the delta BR 32:5 builds doctrine on); TAHOR&#x27;s first tokens in cargo arithmetic before any purity law (token 5 = 8:20&#x27;s altar: the sevens are sacrifice-stock), the pairs counted in human marriage-words; settled command cycle #2 (bo -&gt; va-yavo, the echo-receipt) with FOUR compliance refrains and alternating divine names; the corpus&#x27;s FIRST FULL CALENDAR DATE (year 600 / month 2 / day 17 — the TIME register&#x27;s first timestamp, the month-word debuting inside it) on the day of the DOUBLE BREACH (the deep split from below — the split-verb&#x27;s debut, career: the binding&#x27;s wood, the sea — and heaven&#x27;s two-token windows opened above: day 2 reversed both ways); the solemn-day formula minted (career: the circumcision, the exodus); the self-loading cargo (they CAME, two by two); and the close: VA-YISGOR YHWH BAADO — the shut-verb&#x27;s protective career (the flesh, this door, Lot&#x27;s door) with the names split inside one verse (Elohim commands, YHWH shuts) — which Onkelos LEVELS while rewriting the shutting as SHIELDING. Machine state: TIME anchored to a date, one PASS, empty queue, zero installs, zero writes, two read-flags, no spec-delta — the unit ends sealed from outside.</div><p class='meta'>Rendered 2026-08-25 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-08-01 (derived on owner order &quot;next block&quot;; frozen automatically per the 2026-08-01 process order — auto-freeze #4): eighteenth frozen unit — THE BOARDING; eighth extension-free derivation in a row. Central findings, all DB-verified before drafting: the corpus&#x27;s first PERSON-VERDICT (TEST PASS(tzaddik, noach) — the seeing-verb + verdict-adjective in divine second person; the narrator&#x27;s plural in-his-generations vs the voice&#x27;s singular in-THIS-generation, the delta BR 32:5 builds doctrine on); TAHOR&#x27;s first tokens in cargo arithmetic before any purity law (token 5 = 8:20&#x27;s altar: the sevens are sacrifice-stock), the pairs counted in human marriage-words; settled command cycle #2 (bo -&gt; va-yavo, the echo-receipt) with FOUR compliance refrains and alternating divine names; the corpus&#x27;s FIRST FULL CALENDAR DATE (year 600 / month 2 / day 17 — the TIME register&#x27;s first timestamp, the month-word debuting inside it) on the day of the DOUBLE BREACH (the deep split from below — the split-verb&#x27;s debut, career: the binding&#x27;s wood, the sea — and heaven&#x27;s two-token windows opened above: day 2 reversed both ways); the solemn-day formula minted (career: the circumcision, the exodus); the self-loading cargo (they CAME, two by two); and the close: VA-YISGOR YHWH BAADO — the shut-verb&#x27;s protective career (the flesh, this door, Lot&#x27;s door) with the names split inside one verse (Elohim commands, YHWH shuts) — which Onkelos LEVELS while rewriting the shutting as SHIELDING. Machine state: TIME anchored to a date, one PASS, empty queue, zero installs, zero writes, two read-flags, no spec-delta — the unit ends sealed from outside.</div><p class='meta'>Rendered 2026-08-30 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

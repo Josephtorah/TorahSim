@@ -31,6 +31,14 @@ m.fact("ish_tzaddik_tamim_be_dorotav",
        "et_ha_elohim_hithalekh_noach")
 # reads without prior install (flag, not fix): Noach
 m.presupposed("noach")
+# witness-grounded state (its own tier): two_domains_and_disputed_qualifier
+# on noach_epithets
+m.witness_state("noach_epithets", "two_domains_and_disputed_qualifier",
+                cites=["Bereshit Rabbah 30:9", "Avodah Zarah 6a:2", "Bereshit Rabbah 30:10"])
+# witness-tier presupposed read: exclusion_particle on eleh_header — read,
+# not installed
+m.witness_read("eleh_header", "exclusion_particle",
+                cites=["Bereshit Rabbah 30:3"])
 
 # -------------------------- Gen.6.10 · THREE_SONS_RESTATED -----------------
 # וַיּוֹלֶד נֹחַ שְׁלֹשָׁה בָנִים אֶת־שֵׁם אֶת־חָם וְאֶת־יָפֶת
@@ -52,6 +60,10 @@ m.event("corrupt", themes=["ha_aretz"])
 # ‹וַתִּמָּלֵא הָאָרֶץ חָמָס› (“and-was-filled the-earth violence”) — fact
 # holds: and-was-filled-the-earth-violence
 m.fact("va_timale_ha_aretz_chamas")
+# witness-tier presupposed read: threshold_definition_and_capital_list on
+# chamas_vocabulary — read, not installed
+m.witness_read("chamas_vocabulary", "threshold_definition_and_capital_list",
+                cites=["Bereshit Rabbah 31:5", "Bereshit Rabbah 31:6", "Sanhedrin 57a:1"])
 
 # -------------------------- Gen.6.12 · THIRD_SEEING_BEHOLD_CORRUPTED -------
 # וַיַּרְא אֱלֹהִים אֶת־הָאָרֶץ וְהִנֵּה נִשְׁחָתָה כִּי־הִשְׁחִית
@@ -104,6 +116,10 @@ m.declare("Elohim", "LET",
 # fact holds: ark-of-wood-of-gofer-rooms; and-you-shall-pitch-has-come-pitch
 m.fact("tevat_atzei_gofer_qinim",
        "ve_khafarta_ba_kofer")
+# witness-tier presupposed read: make_for_yourself_census on build_command —
+# read, not installed
+m.witness_read("build_command", "make_for_yourself_census",
+                cites=["Jerusalem Talmud Rosh Hashanah 3:9:2"])
 
 # -------------------------- Gen.6.15 · BLUEPRINT_DIMENSIONS ----------------
 # וְזֶה אֲשֶׁר תַּעֲשֶׂה אֹתָהּ שְׁלֹשׁ מֵאוֹת אַמָּה אֹרֶךְ הַתֵּבָה
@@ -119,6 +135,10 @@ m.step("Gen.6.15")
 m.fact("shelosh_meot_amah_orekh",
        "chamishim_amah_rochbah",
        "sheloshim_amah_qomatah")
+# witness-tier presupposed read: shipwright_ratios_and_disputed_compartments
+# on ark_dimensions — read, not installed
+m.witness_read("ark_dimensions", "shipwright_ratios_and_disputed_compartments",
+                cites=["Bereshit Rabbah 31:10", "Sanhedrin 108b:10", "Bereshit Rabbah 31:11", "Sanhedrin 108b:11"])
 
 # -------------------------- Gen.6.16 · BLUEPRINT_LIGHT_DOOR_DECKS ----------
 # צֹהַר תַּעֲשֶׂה לַתֵּבָה וְאֶל־אַמָּה תְּכַלֶנָּה מִלְמַעְלָה וּפֶתַח
@@ -135,6 +155,10 @@ m.step("Gen.6.16")
 m.fact("tzohar_la_tevah",
        "petach_ba_tzidah",
        "tachtiyim_shniyim_u_shlishim")
+# witness-tier presupposed read: pitch_regime_compared_to_the_basket on
+# vessel_spec_delta — read, not installed
+m.witness_read("vessel_spec_delta", "pitch_regime_compared_to_the_basket",
+                cites=["Bereshit Rabbah 31:9"])
 
 # -------------------------- Gen.6.17 · FLOOD_ANNOUNCED ---------------------
 # וַאֲנִי הִנְנִי מֵבִיא אֶת־הַמַּבּוּל מַיִם עַל־הָאָרֶץ לְשַׁחֵת
@@ -163,6 +187,10 @@ m.step("Gen.6.18")
 # shall-come-to-the-ark-you-and-your-sons
 m.fact("va_hakimoti_et_briti_itakh",
        "u_vata_el_ha_tevah_atah_u_vanekha")
+# witness-tier presupposed read: ark_abstinence_from_the_order on
+# covenant_entry_listing — read, not installed
+m.witness_read("covenant_entry_listing", "ark_abstinence_from_the_order",
+                cites=["Bereshit Rabbah 34:7", "Jerusalem Talmud Taanit 1:6:10"])
 
 # -------------------------- Gen.6.19 · MANIFEST_TWO_OF_ALL -----------------
 # וּמִכָּל־הָחַי מִכָּל־בָּשָׂר שְׁנַיִם מִכֹּל תָּבִיא אֶל־הַתֵּבָה
@@ -176,6 +204,10 @@ m.step("Gen.6.19")
 # you-shall-bring-to-the-ark; male-and-female-they-shall-be
 m.fact("shnayim_mi_kol_tavi_el_ha_tevah",
        "zakhar_u_nekevah_yihyu")
+# witness-tier presupposed read: offering_fitness_standard on intake_roster
+# — read, not installed
+m.witness_read("intake_roster", "offering_fitness_standard",
+                cites=["Avodah Zarah 51a:15", "Avodah Zarah 51a:18", "Jerusalem Talmud Pesachim 9:5:2", "Sanhedrin 57a:7"])
 
 # -------------------------- Gen.6.20 · MANIFEST_BY_KINDS_SELF_LOADING ------
 # מֵהָעוֹף לְמִינֵהוּ וּמִן־הַבְּהֵמָה לְמִינָהּ מִכֹּל רֶמֶשׂ הָאֲדָמָה
@@ -220,6 +252,10 @@ m.result("aseh(noach, tevah)", tmark="t2")
 # ‹כֵּן עָשָׂה› (“so he-did”) — demand settled (popped from the queue):
 # take(Noach, from-all-food)
 m.result("qach(noach, mi_kol_maakhal)", tmark="t2")
+# witness-tier presupposed read: praise_law_from_an_ink_diff on
+# compliance_note — read, not installed
+m.witness_read("compliance_note", "praise_law_from_an_ink_diff",
+                cites=["Bereshit Rabbah 32:3"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -237,4 +273,32 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 10
+    assert sorted(m.WORLD["witnessed"]) == ['noach_epithets']
+    assert m.WORLD["witnessed"]['noach_epithets']["cites"] == ['Bereshit Rabbah 30:9', 'Avodah Zarah 6a:2', 'Bereshit Rabbah 30:10']
+    assert all('two_domains_and_disputed_qualifier' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('eleh_header', 'exclusion_particle'), ('chamas_vocabulary', 'threshold_definition_and_capital_list'), ('build_command', 'make_for_yourself_census'), ('ark_dimensions', 'shipwright_ratios_and_disputed_compartments'), ('vessel_spec_delta', 'pitch_regime_compared_to_the_basket'), ('covenant_entry_listing', 'ark_abstinence_from_the_order'), ('intake_roster', 'offering_fitness_standard'), ('compliance_note', 'praise_law_from_an_ink_diff')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 30:3']
+    assert all('exclusion_particle' not in f for f in m.WORLD["facts"])
+    assert 'eleh_header' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 31:5', 'Bereshit Rabbah 31:6', 'Sanhedrin 57a:1']
+    assert all('threshold_definition_and_capital_list' not in f for f in m.WORLD["facts"])
+    assert 'chamas_vocabulary' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Jerusalem Talmud Rosh Hashanah 3:9:2']
+    assert all('make_for_yourself_census' not in f for f in m.WORLD["facts"])
+    assert 'build_command' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 31:10', 'Sanhedrin 108b:10', 'Bereshit Rabbah 31:11', 'Sanhedrin 108b:11']
+    assert all('shipwright_ratios_and_disputed_compartments' not in f for f in m.WORLD["facts"])
+    assert 'ark_dimensions' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 31:9']
+    assert all('pitch_regime_compared_to_the_basket' not in f for f in m.WORLD["facts"])
+    assert 'vessel_spec_delta' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 34:7', 'Jerusalem Talmud Taanit 1:6:10']
+    assert all('ark_abstinence_from_the_order' not in f for f in m.WORLD["facts"])
+    assert 'covenant_entry_listing' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Avodah Zarah 51a:15', 'Avodah Zarah 51a:18', 'Jerusalem Talmud Pesachim 9:5:2', 'Sanhedrin 57a:7']
+    assert all('offering_fitness_standard' not in f for f in m.WORLD["facts"])
+    assert 'intake_roster' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 32:3']
+    assert all('praise_law_from_an_ink_diff' not in f for f in m.WORLD["facts"])
+    assert 'compliance_note' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

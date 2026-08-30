@@ -64,3 +64,16 @@ claim (row 5); the Esther-127 numeric wire (row 2); the selas +
 every-province currency convergence (O2 + credit 58:7); the kabbel
 offer-and-acceptance system (O3); the 23:6 honorific dual-track (O1 +
 credit 43:5).
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers and to the five Vayera
+ledgers on 2026-08-30. This ledger records its Onkelos track in the
+compact row form ("O1 · 23:6"), which the unit-level cite validator
+cannot match: a cite is valid only when the literal source string
+appears in a triage ledger. This block's Onkelos verses are therefore
+listed here in citable form, so the derivation may cite the translation
+it actually read. No verdict is changed and no row is rewritten — this
+is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 23:1, Onkelos Genesis 23:2, Onkelos Genesis 23:3, Onkelos Genesis 23:4, Onkelos Genesis 23:5, Onkelos Genesis 23:6, Onkelos Genesis 23:7, Onkelos Genesis 23:8, Onkelos Genesis 23:9, Onkelos Genesis 23:10, Onkelos Genesis 23:11, Onkelos Genesis 23:12, Onkelos Genesis 23:13, Onkelos Genesis 23:14, Onkelos Genesis 23:15, Onkelos Genesis 23:16, Onkelos Genesis 23:17, Onkelos Genesis 23:18, Onkelos Genesis 23:19, Onkelos Genesis 23:20.

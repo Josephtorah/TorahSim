@@ -189,3 +189,25 @@ the thin-reading deal is "the exam tests it," so the exam must be
 real by then. (Mirrored from the workshop's living copy 2026-08-27 on
 the owner's sync order; the workshop verified all local spine texts
 on disk the same day.)
+
+**AN UNANTICIPATED RETURN, found in the first derived parashah**
+(2026-08-30; the workshop found the instances, both windows read them
+the same way — a finding, not a ruling, recorded because it would
+otherwise live only in chat). The spine default reduces the declared
+shelf to TWO members, the book's own spine and Onkelos. That makes a
+new class of evidence legible: when the two members disagree, converge,
+or divide internally, it is the WHOLE DECLARED SHELF doing it, with no
+third voice to drown the signal. Parashat Vayera produced four such
+instances — at Genesis 18:3 the spine and the translation split on
+whether Abraham's address is sacred or profane; at 19:18 that same
+split appears INSIDE Onkelos's own printed editions; and at 18:21,
+19:27 and 20:3 the two converge INDEPENDENTLY, the last of them on a
+prophecy grade, where the midrash states the rule outright while the
+translation encodes the identical distinction structurally, routing
+the gentile king's revelation through the Word where Abraham's comes
+direct — neither citing the other. Independent convergence is worth
+more than agreement by dependence. The reading was made thinner to go
+faster; it also made the shelf's own agreement measurable. No display
+class has been built for this: four instances from one parashah is
+thin evidence, and the standing method here is to tag the instances
+and let the count decide rather than argue.

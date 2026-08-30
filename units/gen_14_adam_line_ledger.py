@@ -35,6 +35,14 @@ m.spec_delta("be-tzalmenu ki-dmutenu — in-our-IMAGE after-our-LIKENESS (1:26, 
              "bidmut elohim asah oto — LIKENESS ONLY, the image-word dropped from the restatement (5:1)")
 # reads without prior install (flag, not fix): Adam
 m.presupposed("adam")
+# witness-tier presupposed read: prewritten_registry_and_soul_queue on
+# sefer_op — read, not installed
+m.witness_read("sefer_op", "prewritten_registry_and_soul_queue",
+                cites=["Avodah Zarah 5a:9", "Bereshit Rabbah 24:2", "Bereshit Rabbah 24:4"])
+# witness-grounded state (its own tier):
+# great_principle_dispute_with_strength_variance on zeh_sefer
+m.witness_state("zeh_sefer", "great_principle_dispute_with_strength_variance",
+                cites=["Bereshit Rabbah 24:7", "Jerusalem Talmud Nedarim 9:4:3"])
 
 # -------------------------- Gen.5.2 · SPECIES_BLESSED_AND_NAMED ------------
 # זכר ונקבה בראם ויברך אתם ויקרא את־שׁמם אדם ביום הבראם
@@ -51,6 +59,10 @@ m.name("adam_species", "Adam")
 # female-when-created; in-day-of-their-being-created
 m.fact("zakhar_u_nekevah_beraam",
        "be_yom_hibaram")
+# witness-tier presupposed read: procreation_measure_proof_text on
+# male_female_recap — read, not installed
+m.witness_read("male_female_recap", "procreation_measure_proof_text",
+                cites=["Tosefta Yevamot 8:3", "Yevamot 61b:15", "Yevamot 63a:2"])
 
 # -------------------------- Gen.5.3 · SHET_IN_SWAPPED_IMAGE ----------------
 # ויחי אדם שׁלשׁים ומאת שׁנה ויולד בדמותו כצלמו ויקרא את־שׁמו שׁת
@@ -71,6 +83,10 @@ m.spec_delta("be-tzalmenu ki-dmutenu — in-our-IMAGE after-our-LIKENESS, God to
 # ‹ויקרא את־שׁמו שׁת› (“and-he-called obj-marker name-him/its Shet”) —
 # named: Shet := Shet
 m.name("shet", "Shet")
+# witness-tier presupposed read: boundary_marker_and_dark_inference on
+# likeness_recap — read, not installed
+m.witness_read("likeness_recap", "boundary_marker_and_dark_inference",
+                cites=["Eruvin 18b", "Bereshit Rabbah 24:6"])
 
 # -------------------------- Gen.5.4 · LEDGER_ADAM_AFTER --------------------
 # ויהיו ימי־אדם אחרי הולידו את־שׁת שׁמנה מאת שׁנה ויולד בנים ובנות
@@ -294,6 +310,10 @@ m.fact("hithalekh_chanokh_et_ha_elohim",
 # ‹כי־לקח אתו אלהים› (“for took him God”) — event: take — agent God; theme
 # Enoch
 m.event("take", agent="Elohim", themes=["chanokh"])
+# witness-grounded state (its own tier):
+# contested_by_duelling_verbal_analogies on chanokh_taking
+m.witness_state("chanokh_taking", "contested_by_duelling_verbal_analogies",
+                cites=["Bereshit Rabbah 25:1"])
 
 # -------------------------- Gen.5.25 · LEDGER_METUSHELACH_BEGETS -----------
 # ויחי מתושׁלח שׁבע ושׁמנים שׁנה ומאת שׁנה ויולד את־למך
@@ -361,6 +381,11 @@ m.fact("zeh_yenachamenu_mi_maasenu_u_me_itzvon_yadenu",
 # the-LORD by name, plus a comfort forecast no one ratifies (5:29)
 m.spec_delta("arurah ha-adamah baavurekha — the ground cursed, curser unnamed in the sentence text (3:17, frozen gen_11)",
              "ha-adamah asher ererah YHWH — the curse attributed to YHWH by name, plus a comfort forecast no one ratifies (5:29)")
+# witness-tier presupposed read:
+# disputed_etymology_and_righteous_arrival_rule on noach_naming — read, not
+# installed
+m.witness_read("noach_naming", "disputed_etymology_and_righteous_arrival_rule",
+                cites=["Bereshit Rabbah 25:2", "Sanhedrin 113b:3", "Tosefta Sotah 10:1", "Tosefta Sotah (Lieberman) 10:2"])
 
 # -------------------------- Gen.5.30 · LEDGER_LEMEKH_AFTER -----------------
 # ויחי־למך אחרי הולידו את־נח חמשׁ ותשׁעים שׁנה וחמשׁ מאת שׁנה ויולד בנים
@@ -398,6 +423,10 @@ m.fact("noach_ben_chamesh_meot_shanah")
 # marker Cham obj-marker Yafet”) — event: beget — agent Noach; theme Shem,
 # Cham, Yafet
 m.event("beget", agent="noach", themes=["shem", "cham", "yafet"])
+# witness-tier presupposed read: listed_by_rank_with_arithmetic_proof on
+# three_sons_order — read, not installed
+m.witness_read("three_sons_order", "listed_by_rank_with_arithmetic_proof",
+                cites=["Bereshit Rabbah 26:3", "Bereshit Rabbah 37:7", "Sanhedrin 69b:15", "Bereshit Rabbah 26:2"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -415,4 +444,25 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 24
+    assert sorted(m.WORLD["witnessed"]) == ['chanokh_taking', 'zeh_sefer']
+    assert m.WORLD["witnessed"]['chanokh_taking']["cites"] == ['Bereshit Rabbah 25:1']
+    assert all('contested_by_duelling_verbal_analogies' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['zeh_sefer']["cites"] == ['Bereshit Rabbah 24:7', 'Jerusalem Talmud Nedarim 9:4:3']
+    assert all('great_principle_dispute_with_strength_variance' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('sefer_op', 'prewritten_registry_and_soul_queue'), ('male_female_recap', 'procreation_measure_proof_text'), ('likeness_recap', 'boundary_marker_and_dark_inference'), ('noach_naming', 'disputed_etymology_and_righteous_arrival_rule'), ('three_sons_order', 'listed_by_rank_with_arithmetic_proof')]
+    assert m.WITNESS_READS[0]["cites"] == ['Avodah Zarah 5a:9', 'Bereshit Rabbah 24:2', 'Bereshit Rabbah 24:4']
+    assert all('prewritten_registry_and_soul_queue' not in f for f in m.WORLD["facts"])
+    assert 'sefer_op' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Tosefta Yevamot 8:3', 'Yevamot 61b:15', 'Yevamot 63a:2']
+    assert all('procreation_measure_proof_text' not in f for f in m.WORLD["facts"])
+    assert 'male_female_recap' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Eruvin 18b', 'Bereshit Rabbah 24:6']
+    assert all('boundary_marker_and_dark_inference' not in f for f in m.WORLD["facts"])
+    assert 'likeness_recap' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 25:2', 'Sanhedrin 113b:3', 'Tosefta Sotah 10:1', 'Tosefta Sotah (Lieberman) 10:2']
+    assert all('disputed_etymology_and_righteous_arrival_rule' not in f for f in m.WORLD["facts"])
+    assert 'noach_naming' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 26:3', 'Bereshit Rabbah 37:7', 'Sanhedrin 69b:15', 'Bereshit Rabbah 26:2']
+    assert all('listed_by_rank_with_arithmetic_proof' not in f for f in m.WORLD["facts"])
+    assert 'three_sons_order' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

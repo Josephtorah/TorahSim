@@ -24,6 +24,10 @@ m.step("Gen.9.8")
 m.event("speak", agent="elohim", themes=["el_noach_ve_el_banav"])
 # reads without prior install (flag, not fix): Noach, banav, ark
 m.presupposed("noach", "banav", "tevah")
+# witness-grounded state (its own tier): demotion_or_elevation on
+# address_widened
+m.witness_state("address_widened", "demotion_or_elevation",
+                cites=["Bereshit Rabbah 35:1"])
 
 # -------------------------- Gen.9.9 · I_AM_ESTABLISHING --------------------
 # וַאֲנִי הִנְנִי מֵקִים אֶת־בְּרִיתִי אִתְּכֶם וְאֶת־זַרְעֲכֶם אַחֲרֵיכֶם
@@ -84,6 +88,10 @@ m.event("speak", agent="elohim", themes=["zot_ot_ha_brit"])
 # between-Me and-between-you … for-generations-of everlasting”) — fact
 # holds: I-giving-beini-and-veineikhem-to-generations-of-everlasting
 m.fact("ani_noten_beini_u_veineikhem_le_dorot_olam")
+# witness-tier presupposed read: exemptions_written_in_the_missing_letters
+# on ledorot_clause — read, not installed
+m.witness_read("ledorot_clause", "exemptions_written_in_the_missing_letters",
+                cites=["Bereshit Rabbah 35:2"])
 
 # -------------------------- Gen.9.13 · MY_BOW_IN_THE_CLOUD -----------------
 # אֶת־קַשְׁתִּי נָתַתִּי בֶּעָנָן וְהָיְתָה לְאוֹת בְּרִית בֵּינִי וּבֵין
@@ -97,6 +105,10 @@ m.step("Gen.9.13")
 # beini-and-vein-the-earth
 m.fact("et_qashti_natati_be_anan",
        "ve_haytah_le_ot_brit_beini_u_vein_ha_aretz")
+# witness-tier presupposed read: placed_not_made on bow_sign — read, not
+# installed
+m.witness_read("bow_sign", "placed_not_made",
+                cites=["Pirkei Avot 5:6", "Mekhilta DeRabbi Shimon Ben Yochai 31:6"])
 
 # -------------------------- Gen.9.14 · THE_WEATHER_WIRED_HANDLER -----------
 # וְהָיָה בְּעַנְנִי עָנָן עַל־הָאָרֶץ וְנִרְאֲתָה הַקֶּשֶׁת בֶּעָנָן
@@ -125,6 +137,10 @@ m.step("Gen.9.15")
 # deluge
 m.fact("ve_zakharti_et_briti_beini_u_veineikhem",
        "ve_lo_yihyeh_od_ha_mayim_le_mabul")
+# witness-tier presupposed read: standing_law_with_disputed_scope on
+# never_again_oath — read, not installed
+m.witness_read("never_again_oath", "standing_law_with_disputed_scope",
+                cites=["Tosefta Ta'anit 2:11", "Sifrei Devarim 343:9"])
 
 # -------------------------- Gen.9.16 · TO_REMEMBER_THE_EVERLASTING ---------
 # וְהָיְתָה הַקֶּשֶׁת בֶּעָנָן וּרְאִיתִיהָ לִזְכֹּר בְּרִית עוֹלָם בֵּין
@@ -169,4 +185,17 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == ['ve_lo_yikkaret_kol_basar_od_mi_mei_ha_mabul', 've_lo_yihyeh_od_mabul_le_shachet_ha_aretz']
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 4
+    assert sorted(m.WORLD["witnessed"]) == ['address_widened']
+    assert m.WORLD["witnessed"]['address_widened']["cites"] == ['Bereshit Rabbah 35:1']
+    assert all('demotion_or_elevation' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ledorot_clause', 'exemptions_written_in_the_missing_letters'), ('bow_sign', 'placed_not_made'), ('never_again_oath', 'standing_law_with_disputed_scope')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 35:2']
+    assert all('exemptions_written_in_the_missing_letters' not in f for f in m.WORLD["facts"])
+    assert 'ledorot_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Pirkei Avot 5:6', 'Mekhilta DeRabbi Shimon Ben Yochai 31:6']
+    assert all('placed_not_made' not in f for f in m.WORLD["facts"])
+    assert 'bow_sign' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ["Tosefta Ta'anit 2:11", 'Sifrei Devarim 343:9']
+    assert all('standing_law_with_disputed_scope' not in f for f in m.WORLD["facts"])
+    assert 'never_again_oath' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

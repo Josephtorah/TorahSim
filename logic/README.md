@@ -65,6 +65,28 @@ this repository actually uses:
 | its working-notes folder | `provenance/` |
 | its interim coordinator, by name | "the interim coordinator" |
 
+**THE REDACTION IS NOW MECHANICAL** (2026-08-30). It was hand-applied
+at every crossing until a sweep found that the pinned snapshot's
+workshop filename had ridden in unredacted on seven unit files across
+two landings — hand discipline is not a mechanism. Run
+`python3 press/redact_border.py --apply` as the step after copying and
+before rendering, every landing; it applies the table above to
+`logic/` and reports, as a residue check, any mention of the workshop
+by name that the table does not cover, so an unmapped case gets a human
+decision and a new row here rather than a silent rewrite. The seven
+late redactions carry changelog lines saying so; their revs were
+deliberately NOT bumped, because a rev of 3 signals a derivation pass
+and a redaction is not a derivation.
+
+The tool PROVES ITS OWN COVERAGE, because a zero looks the same
+whether the scan read everything or nothing — that was the exact
+weakness that let the leak through. Every run prints how many files it
+read and how many of them were canonical unit YAMLs (the surface the
+leak crossed on), and it self-tests its patterns against a probe
+string carrying both known border names before it will report
+anything at all. A report of zero is only worth the coverage line
+printed above it.
+
 Thirty-seven references were rewritten across the crossing; a sweep for
 the old names over `logic/` and `press/` returns zero. Nothing else was
 changed: operator text, citations, confidence grades, and Hebrew are

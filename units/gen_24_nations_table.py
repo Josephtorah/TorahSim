@@ -51,6 +51,10 @@ m.fact("bnei_yefet_gomer_u_magog_u_maday_ve_yavan")
 # leshono-to-mishpechotam-in-goyehem
 m.fact("u_me_eleh_nifredu_iyei_ha_goyim_be_artzotam",
        "ish_li_leshono_le_mishpechotam_be_goyehem")
+# witness-tier presupposed read: resolved_by_two_conflicting_gazetteers on
+# nations_roster — read, not installed
+m.witness_read("nations_roster", "resolved_by_two_conflicting_gazetteers",
+                cites=["Bereshit Rabbah 37:1", "Yoma 10a:2", "Yoma 10a:4", "Yoma 10a:5"])
 
 # -------------------------- Gen.10.6-7 · HAM_ROWS_KUSH_TO_DEDAN ------------
 # וּבְנֵי חָם כּוּשׁ וּמִצְרַיִם וּפוּט וּכְנָעַן וּבְנֵי כוּשׁ סְבָא
@@ -65,6 +69,10 @@ m.step("Gen.10.6-7")
 # and-Phut-and-Canaan; sons-of-Chush-Seba-and-Havilah-and-vnei-ramah
 m.fact("bnei_cham_kush_u_mitzrayim_u_fut_u_khenaan",
        "bnei_khush_seva_va_chavilah_u_vnei_ramah")
+# witness-tier presupposed read: arithmetic_premise_for_another_verse on
+# listing_order — read, not installed
+m.witness_read("listing_order", "arithmetic_premise_for_another_verse",
+                cites=["Ketubot 112a:8"])
 
 # -------------------------- Gen.10.8-9 · NIMROD_AND_THE_PROVERB ------------
 # וְכוּשׁ יָלַד אֶת־נִמְרֹד הוּא הֵחֵל לִהְיוֹת גִּבֹּר בָּאָרֶץ הוּא־הָיָה
@@ -86,6 +94,10 @@ m.fact("hu_hechel_lihyot_gibbor_ba_aretz",
 # like-Nimrod powerful chase to-face YHWH”) — pattern recorded: like-Nimrod-
 # gibbor-hunter-lifnei-yhwh
 m.pattern("ke_nimrod_gibbor_tzayid_lifnei_yhwh")
+# witness-tier presupposed read: name_converted_to_type on
+# ke_nimrod_particle — read, not installed
+m.witness_read("ke_nimrod_particle", "name_converted_to_type",
+                cites=["Bereshit Rabbah 37:2", "Bereshit Rabbah 37:3"])
 
 # -------------------------- Gen.10.10-12 · THE_KINGDOM_AND_THE_FOUR_CITIES -
 # וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל וְאֶרֶךְ וְאַכַּד וְכַלְנֵה בְּאֶרֶץ
@@ -157,6 +169,10 @@ m.fact("eleh_ha_kenaani_asarah_amamim",
 # Kenaanite from-Sidon … until Lasha”) — fact holds: border-of-the-
 # Canaanite-from-Sidon-until-azah-until-Lasha
 m.fact("gevul_ha_kenaani_mi_tzidon_ad_azah_ad_lasha")
+# witness-tier presupposed read: halakhic_boundary_source on border_verse —
+# read, not installed
+m.witness_read("border_verse", "halakhic_boundary_source",
+                cites=["Sifrei Devarim 6:1", "Bereshit Rabbah 44:23"])
 
 # -------------------------- Gen.10.20 · HAM_CLOSE --------------------------
 # אֵלֶּה בְנֵי־חָם לְמִשְׁפְּחֹתָם לִלְשֹׁנֹתָם בְּאַרְצֹתָם בְּגוֹיֵהֶם
@@ -249,6 +265,10 @@ m.step("Gen.10.32")
 # in-the-earth-after-the-deluge
 m.fact("eleh_mishpechot_bnei_noach_le_toledotam",
        "u_me_eleh_nifredu_ha_goyim_ba_aretz_achar_ha_mabul")
+# witness-tier presupposed read: named_precedents_in_a_standing_formula on
+# generations_of_this_span — read, not installed
+m.witness_read("generations_of_this_span", "named_precedents_in_a_standing_formula",
+                cites=["Mishnah Bava Metzia 4:2", "Sanhedrin 111a:3"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -266,4 +286,20 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 12
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('nations_roster', 'resolved_by_two_conflicting_gazetteers'), ('listing_order', 'arithmetic_premise_for_another_verse'), ('ke_nimrod_particle', 'name_converted_to_type'), ('border_verse', 'halakhic_boundary_source'), ('generations_of_this_span', 'named_precedents_in_a_standing_formula')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 37:1', 'Yoma 10a:2', 'Yoma 10a:4', 'Yoma 10a:5']
+    assert all('resolved_by_two_conflicting_gazetteers' not in f for f in m.WORLD["facts"])
+    assert 'nations_roster' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Ketubot 112a:8']
+    assert all('arithmetic_premise_for_another_verse' not in f for f in m.WORLD["facts"])
+    assert 'listing_order' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 37:2', 'Bereshit Rabbah 37:3']
+    assert all('name_converted_to_type' not in f for f in m.WORLD["facts"])
+    assert 'ke_nimrod_particle' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifrei Devarim 6:1', 'Bereshit Rabbah 44:23']
+    assert all('halakhic_boundary_source' not in f for f in m.WORLD["facts"])
+    assert 'border_verse' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Mishnah Bava Metzia 4:2', 'Sanhedrin 111a:3']
+    assert all('named_precedents_in_a_standing_formula' not in f for f in m.WORLD["facts"])
+    assert 'generations_of_this_span' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

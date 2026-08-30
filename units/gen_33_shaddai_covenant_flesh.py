@@ -32,6 +32,10 @@ m.fact("ani_el_shaddai")
 # before-Me)
 m.declare("YHWH", "LET",
           "hithalekh_ve_heyeh_tamim(avram, lefanai)")
+# witness-tier presupposed read: wholeness_pending_the_act on
+# tamim_condition — read, not installed
+m.witness_read("tamim_condition", "wholeness_pending_the_act",
+                cites=["Mishnah Nedarim 3:11", "Bereshit Rabbah 46:1"])
 
 # -------------------------- Gen.17.2 · THE_COHORTATIVE_COVENANT ------------
 # וְאֶתְּנָה בְרִיתִי בֵּינִי וּבֵינֶךָ וְאַרְבֶּה אוֹתְךָ בִּמְאֹד מְאֹד
@@ -79,6 +83,14 @@ m.step("Gen.17.5")
 # shimkha-Abraham
 m.fact("lo_yiqare_od_shimkha_avram",
        "ve_hayah_shimkha_avraham")
+# witness-tier presupposed read: charter_of_the_acronym_rule on av_hamon —
+# read, not installed
+m.witness_read("av_hamon", "charter_of_the_acronym_rule",
+                cites=["Bereshit Rabbah 46:7", "Shabbat 105a:2"])
+# witness-grounded state (its own tier):
+# enforced_naming_law_and_counter_rule on rename_operator
+m.witness_state("rename_operator", "enforced_naming_law_and_counter_rule",
+                cites=["Berakhot 13a:8", "Bereshit Rabbah 46:8", "Tosefta Berakhot 1:15", "Berakhot 13a:10"])
 
 # -------------------------- Gen.17.6 · FRUITFULNESS_AND_KINGS --------------
 # וְהִפְרֵתִי אֹתְךָ בִּמְאֹד מְאֹד וּנְתַתִּיךָ לְגוֹיִם וּמְלָכִים מִמְּךָ
@@ -106,6 +118,14 @@ m.step("Gen.17.7")
 # vrit-forever; to-me-being-to-you-to-lohim
 m.fact("va_haqimoti_et_briti_li_vrit_olam",
        "li_heyot_lekha_le_lohim")
+# witness-tier presupposed read: three_family_laws on covenant_clause —
+# read, not installed
+m.witness_read("covenant_clause", "three_family_laws",
+                cites=["Yevamot 42a:6", "Yevamot 100b:9", "Yevamot 64a:2"])
+# witness-tier presupposed read: surviving_analogy_of_three_weighed on
+# dorot_token — read, not installed
+m.witness_read("dorot_token", "surviving_analogy_of_three_weighed",
+                cites=["Shabbat 132a:6", "Shabbat 132a:8", "Shabbat 132a:10"])
 
 # -------------------------- Gen.17.8 · THE_EVERLASTING_POSSESSION ----------
 # וְנָתַתִּי לְךָ וּלְזַרְעֲךָ אַחֲרֶיךָ אֵת אֶרֶץ מְגֻרֶיךָ אֵת כָּל־אֶרֶץ
@@ -121,6 +141,10 @@ m.step("Gen.17.8")
 # them-to-lohim
 m.fact("ve_natati_et_eretz_megurekha_la_achuzat_olam",
        "ve_hayiti_lahem_le_lohim")
+# witness-tier presupposed read: conditioned_on_the_next_verse on land_grant
+# — read, not installed
+m.witness_read("land_grant", "conditioned_on_the_next_verse",
+                cites=["Bereshit Rabbah 46:9"])
 
 # -------------------------- Gen.17.9 · THE_GUARDED_KEEP_COMMAND ------------
 # וַיֹּאמֶר אֱלֹהִים אֶל־אַבְרָהָם וְאַתָּה אֶת־בְּרִיתִי תִשְׁמֹר אַתָּה
@@ -148,6 +172,10 @@ m.step("Gen.17.10")
 # fact holds: this-My-covenant-which-tishmeru; circumcise-lakhem-all-male
 m.fact("zot_briti_asher_tishmeru",
        "himol_lakhem_kol_zakhar")
+# witness-tier presupposed read: three_tier_enforcement_cascade on
+# circumcision_command — read, not installed
+m.witness_read("circumcision_command", "three_tier_enforcement_cascade",
+                cites=["Kiddushin 29a:11", "Avodah Zarah 26b:12", "Jerusalem Talmud Kiddushin 1:7:2"])
 
 # -------------------------- Gen.17.11 · THE_SIGN_IN_THE_FLESH --------------
 # וּנְמַלְתֶּם אֵת בְּשַׂר עָרְלַתְכֶם וְהָיָה לְאוֹת בְּרִית בֵּינִי
@@ -161,6 +189,10 @@ m.step("Gen.17.11")
 # and-was-to-signs-brit
 m.fact("u_nemaltem_et_besar_arlatkhem",
        "ve_hayah_le_ot_brit")
+# witness-tier presupposed read: objected_to_and_answered on
+# abraham_own_analogy — read, not installed
+m.witness_read("abraham_own_analogy", "objected_to_and_answered",
+                cites=["Bereshit Rabbah 46:4"])
 
 # -------------------------- Gen.17.12 · THE_EIGHTH_DAY_HANDLER -------------
 # וּבֶן־שְׁמֹנַת יָמִים יִמּוֹל לָכֶם כָּל־זָכָר לְדֹרֹתֵיכֶם יְלִיד בָּיִת
@@ -175,6 +207,10 @@ m.step("Gen.17.12")
 # silver-bi-khlal
 m.handler("ben_shemonat_yamim ∧ kol_zakhar_le_doroteikhem",
           "yimol ∧ yelid_bayit_u_miqnat_kesef_bi_khlal")
+# witness-tier presupposed read: three_determinations_from_one_number on
+# eighth_day_clause — read, not installed
+m.witness_read("eighth_day_clause", "three_determinations_from_one_number",
+                cites=["Shabbat 132a:15", "Shabbat 132a:20", "Sifra, Tazria Parashat Yoledet, Chapter 1 2"])
 
 # -------------------------- Gen.17.13 · THE_DOUBLED_MUST_AND_THE_FLESH_COVENANT -
 # הִמּוֹל יִמּוֹל יְלִיד בֵּיתְךָ וּמִקְנַת כַּסְפֶּךָ וְהָיְתָה בְרִיתִי
@@ -189,6 +225,10 @@ m.step("Gen.17.13")
 # vriti-bi-vesarkhem-to-me-vrit-forever
 m.fact("himol_yimol_yelid_beitkha",
        "vriti_bi_vesarkhem_li_vrit_olam")
+# witness-grounded state (its own tier): the_two_grammar_schools on
+# himol_yimol
+m.witness_state("himol_yimol", "the_two_grammar_schools",
+                cites=["Jerusalem Talmud Shabbat 19:2:2", "Avodah Zarah 27a:6", "Bereshit Rabbah 46:12"])
 
 # -------------------------- Gen.17.14 · THE_KARET_HANDLER ------------------
 # וְעָרֵל זָכָר אֲשֶׁר לֹא־יִמּוֹל אֶת־בְּשַׂר עָרְלָתוֹ וְנִכְרְתָה
@@ -255,6 +295,10 @@ m.event("say", agent="avraham")
 # young; the-daughter-ninety-year-bear-young
 m.fact("ha_le_ven_meah_shanah_yivaled",
        "ha_vat_tishim_shanah_teled")
+# witness-tier presupposed read: alteration_census_and_name_remedy on
+# laughter_clause — read, not installed
+m.witness_read("laughter_clause", "alteration_census_and_name_remedy",
+                cites=["Bereshit Rabbah 48:17", "Rosh Hashanah 16b:6"])
 
 # -------------------------- Gen.17.18 · THE_LU_PLEA ------------------------
 # וַיֹּאמֶר אַבְרָהָם אֶל־הָאֱלֹהִים לוּ יִשְׁמָעֵאל יִחְיֶה לְפָנֶיךָ
@@ -328,6 +372,10 @@ m.event("finish_speaking", agent="elohim")
 # ‹וַיַּעַל אֱלֹהִים מֵעַל אַבְרָהָם› (“and-go-up God from-over Abraham”) —
 # event: ascend — agent God
 m.event("ascend", agent="elohim")
+# witness-tier presupposed read: leave_taking_rule_and_chariot_claim on
+# ascent_from_abraham — read, not installed
+m.witness_read("ascent_from_abraham", "leave_taking_rule_and_chariot_claim",
+                cites=["Bereshit Rabbah 47:6", "Mekhilta DeRabbi Shimon Ben Yochai, Additions 6:2"])
 
 # -------------------------- Gen.17.23 · THE_SELFSAME_DAY_COMPLIANCE --------
 # וַיִּקַּח אַבְרָהָם אֶת־יִשְׁמָעֵאל בְּנוֹ וְאֵת כָּל־יְלִידֵי בֵיתוֹ …
@@ -375,4 +423,40 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 18
+    assert sorted(m.WORLD["witnessed"]) == ['himol_yimol', 'rename_operator']
+    assert m.WORLD["witnessed"]['himol_yimol']["cites"] == ['Jerusalem Talmud Shabbat 19:2:2', 'Avodah Zarah 27a:6', 'Bereshit Rabbah 46:12']
+    assert all('the_two_grammar_schools' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['rename_operator']["cites"] == ['Berakhot 13a:8', 'Bereshit Rabbah 46:8', 'Tosefta Berakhot 1:15', 'Berakhot 13a:10']
+    assert all('enforced_naming_law_and_counter_rule' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('tamim_condition', 'wholeness_pending_the_act'), ('av_hamon', 'charter_of_the_acronym_rule'), ('covenant_clause', 'three_family_laws'), ('dorot_token', 'surviving_analogy_of_three_weighed'), ('land_grant', 'conditioned_on_the_next_verse'), ('circumcision_command', 'three_tier_enforcement_cascade'), ('abraham_own_analogy', 'objected_to_and_answered'), ('eighth_day_clause', 'three_determinations_from_one_number'), ('laughter_clause', 'alteration_census_and_name_remedy'), ('ascent_from_abraham', 'leave_taking_rule_and_chariot_claim')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Nedarim 3:11', 'Bereshit Rabbah 46:1']
+    assert all('wholeness_pending_the_act' not in f for f in m.WORLD["facts"])
+    assert 'tamim_condition' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 46:7', 'Shabbat 105a:2']
+    assert all('charter_of_the_acronym_rule' not in f for f in m.WORLD["facts"])
+    assert 'av_hamon' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Yevamot 42a:6', 'Yevamot 100b:9', 'Yevamot 64a:2']
+    assert all('three_family_laws' not in f for f in m.WORLD["facts"])
+    assert 'covenant_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Shabbat 132a:6', 'Shabbat 132a:8', 'Shabbat 132a:10']
+    assert all('surviving_analogy_of_three_weighed' not in f for f in m.WORLD["facts"])
+    assert 'dorot_token' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 46:9']
+    assert all('conditioned_on_the_next_verse' not in f for f in m.WORLD["facts"])
+    assert 'land_grant' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Kiddushin 29a:11', 'Avodah Zarah 26b:12', 'Jerusalem Talmud Kiddushin 1:7:2']
+    assert all('three_tier_enforcement_cascade' not in f for f in m.WORLD["facts"])
+    assert 'circumcision_command' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 46:4']
+    assert all('objected_to_and_answered' not in f for f in m.WORLD["facts"])
+    assert 'abraham_own_analogy' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Shabbat 132a:15', 'Shabbat 132a:20', 'Sifra, Tazria Parashat Yoledet, Chapter 1 2']
+    assert all('three_determinations_from_one_number' not in f for f in m.WORLD["facts"])
+    assert 'eighth_day_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 48:17', 'Rosh Hashanah 16b:6']
+    assert all('alteration_census_and_name_remedy' not in f for f in m.WORLD["facts"])
+    assert 'laughter_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 47:6', 'Mekhilta DeRabbi Shimon Ben Yochai, Additions 6:2']
+    assert all('leave_taking_rule_and_chariot_claim' not in f for f in m.WORLD["facts"])
+    assert 'ascent_from_abraham' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

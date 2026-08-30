@@ -67,17 +67,30 @@ def main():
         d = yaml.safe_load(open(path, encoding="utf-8"))
         meta = d["meta"]
         uid = meta["id"]
+        # A block may carry MORE THAN ONE ledger — Cain and Abel was read
+        # twice, independently, by the two working windows a day apart
+        # (both closing at 77 of 77, different compositions). Every
+        # reading stands: the ledgers are append-only and neither is
+        # thrown away. But the unit band displays ONE reading, the same
+        # one whose completion line it quotes — the governing ledger, the
+        # latest by date — or the page would show two readings
+        # concatenated, with restarting row numbers and a doubled
+        # material count. The other readings are named in `leds` so the
+        # page can say the block was read more than once.
+        leds = sorted(glob.glob(os.path.join(
+            ROOT, "logic", "oral_triage", uid + "_*.md")))
+        led = os.path.basename(leds[-1]) if leds else None
+        gov_date = re.search(r"_(\d{4}-\d{2}-\d{2})\.md$", led).group(1) \
+            if led else None
         rows = cx.execute(
             "SELECT row_num, source_ref, verdict_class, note FROM triage "
-            "WHERE unit LIKE ? ORDER BY row_num", (uid + "%",)).fetchall()
+            "WHERE unit LIKE ? AND ledger_date = ? ORDER BY row_num",
+            (uid + "%", gov_date)).fetchall() if gov_date else []
         cls = {}
         for _n, _s, vc, _note in rows:
             cls[vc] = cls.get(vc, 0) + 1
-        leds = sorted(glob.glob(os.path.join(
-            ROOT, "logic", "oral_triage", uid + "_*.md")))
-        led, read, declared = None, None, None
+        read, declared = None, None
         if leds:
-            led = os.path.basename(leds[-1])
             mts = re.findall(r"\*\*read: (\d+) of (\d+)",
                              open(leds[-1], encoding="utf-8").read())
             if mts:
@@ -100,6 +113,9 @@ def main():
                     == "logic_derived_v2_full_rule",
             "stamped": stamp_of(meta),
             "led": led, "read": read, "declared": declared,
+            # every ledger the block carries; more than one means the
+            # span was read more than once, independently
+            "leds": [os.path.basename(p) for p in leds],
             "cls": cls,
             "mat": [[s, note or ""] for _n, s, vc, note in rows
                     if vc == "material"],
@@ -108,6 +124,60 @@ def main():
             "teach": teach,
             "census": CENSUS.get(uid),
         }
+    # THE UNIT'S ACTUAL MACHINE, per unit, fetched on demand.
+    # The scroll's step 6 had been rendering the AUTOMATIC grammar
+    # sketch — the pass/EVENT lines the role tags emit — while calling
+    # it "the unit's machine". The real operators live nested in
+    # boot_steps[].operators[], which no export carried, so the entire
+    # derivation era (564 witness operators and counting) was invisible
+    # on the public page. They ship per unit rather than in the boot
+    # bundle: 3,580 operators would roughly double a file every reader
+    # downloads to read one verse.
+    ops_dir = os.path.join(ROOT, "scroll", "data", "ops")
+    os.makedirs(ops_dir, exist_ok=True)
+    n_ops = n_files = 0
+    for uid, rec in urec.items():
+        d = yaml.safe_load(open(os.path.join(
+            ROOT, "logic", "units", uid + ".yaml"), encoding="utf-8"))
+        steps = []
+        for s in d.get("boot_steps") or []:
+            ops = []
+            for o in (s.get("operators") or []):
+                prose = " ".join(str(o.get("en") or "").split())
+                # cites arrive as a YAML list in some units and as the
+                # printed form of one in others; normalise here so the
+                # page never has to guess which it got
+                raw = o.get("cites")
+                if isinstance(raw, str):
+                    inner = raw.strip()
+                    if inner.startswith("[") and inner.endswith("]"):
+                        inner = inner[1:-1]
+                    cites = [c.strip().strip("'\"") for c in inner.split(",")
+                             if c.strip().strip("'\"")]
+                elif isinstance(raw, (list, tuple)):
+                    cites = [str(c).strip() for c in raw if str(c).strip()]
+                else:
+                    cites = []
+                ops.append({"op": o.get("op"),
+                            "x": o.get("expr_en"),
+                            # the lead only; the unit page carries it whole
+                            "en": prose[:400] + ("…" if len(prose) > 400 else ""),
+                            "c": cites,
+                            "k": o.get("confidence")})
+            if ops:
+                steps.append({"ref": s.get("ref"), "name": s.get("op"),
+                              "ops": ops})
+                n_ops += len(ops)
+        if steps:
+            n_files += 1
+            with open(os.path.join(ops_dir, uid + ".json"), "w",
+                      encoding="utf-8") as f:
+                json.dump(steps, f, ensure_ascii=False,
+                          separators=(",", ":"))
+        rec["nops"] = sum(len(x["ops"]) for x in steps)
+    print("ops: %d operators over %d units -> scroll/data/ops/"
+          % (n_ops, n_files))
+
     out = os.path.join(ROOT, "scroll", "data", "urec.json")
     with open(out, "w", encoding="utf-8") as f:
         json.dump(urec, f, ensure_ascii=False, separators=(",", ":"))

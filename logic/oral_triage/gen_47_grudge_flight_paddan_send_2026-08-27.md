@@ -66,3 +66,16 @@ no-promise-in-this-world rule (row 6); the tribe-against-kingdom
 table with the Rachel's-descendants tradition (row 8); the relay rule
 splicing the canon's blessings (row 9); the tribes rendering at 28:3
 (O2). 
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers, the five Vayera ledgers and
+the four Chayei Sarah ledgers on 2026-08-30. This ledger records its
+Onkelos track in the compact row form ("O1 · 27:41"), which the unit-level
+cite validator cannot match: a cite is valid only when the literal source
+string appears in a triage ledger. This block's Onkelos verses are
+therefore listed here in citable form, so the derivation may cite the
+translation it actually read. No verdict is changed and no row is
+rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 27:41, Onkelos Genesis 27:42, Onkelos Genesis 27:43, Onkelos Genesis 27:44, Onkelos Genesis 27:45, Onkelos Genesis 27:46, Onkelos Genesis 28:1, Onkelos Genesis 28:2, Onkelos Genesis 28:3, Onkelos Genesis 28:4, Onkelos Genesis 28:5, Onkelos Genesis 28:6, Onkelos Genesis 28:7, Onkelos Genesis 28:8, Onkelos Genesis 28:9.

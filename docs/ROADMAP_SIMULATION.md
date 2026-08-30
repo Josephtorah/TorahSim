@@ -142,6 +142,34 @@ the edge-case variants, and the dispute flag. Done once by hand
 already: the Exodus 21 machine's 64 scenes were graded against Mishnah
 Bava Kamma's ox taxonomy.
 
+### The tradition states this architecture itself (found 2026-08-30)
+
+The two-shelves reading above was reconstructed from how the books
+behave. Parashat Toledot ("generations") turned up the tradition stating it
+outright,
+in its own words, on a narrative verse — and the finding is recorded
+here only now that the blocks carrying it stand derived in canon
+(gen_45 and gen_46, landed 2026-08-30; the claim would otherwise be a
+report about a record this repository could not show).
+
+At Isaac's blessing the chain reads the blessing's own terms as the
+four parts of its canon: the DEW is Scripture, the FAT is the Mishnah,
+the GRAIN is the Talmud, and the WINE is the narrative lore. That is
+the same division this project arrived at from the other direction —
+the verse-anchored reading shelf, the case-anchored testing shelf, the
+bridge between them, and the lore that grounds no case — stated by the
+tradition as exegesis of a blessing. And two blocks earlier, at the
+wells Isaac digs, the chain maps the canon's own BOOK-LIST onto the
+geography, with Ben Kappara pushing the count to seven by treating the
+two traveling-Ark verses as a book in themselves.
+
+What this is, and is not: it is not proof that our reconstruction is
+the tradition's own, and no machine claim rests on it. It is evidence
+that the architecture the oracle mission assumes — that these books
+divide by JOB, and that the division is native rather than imposed by
+us — was already explicit in the sources, and it belongs beside the
+oracle's anatomy rather than in any display feature.
+
 ### The two shelves, and the measured bridge (owner rulings 2026-08-27)
 
 The library split became law: books divide by WHICH END OF THE BRIDGE

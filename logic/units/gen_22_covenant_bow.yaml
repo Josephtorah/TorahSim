@@ -14,8 +14,10 @@
 
 meta:
   id: "gen_22_covenant_bow"
-  rev: 2
+  rev: 4
   changelog:
+    - "rev 4 (2026-08-30): FULL-RULE STAMP on the owner's word — the batch stamp he held by standing decision until Genesis was whole, given when the book closed at 73 of 73 read and derived. tree_derive_version logic_derived_v1 -> logic_derived_v2_full_rule; the span's declared reading is COMPLETE in its triage ledger and its logic was rebuilt FROM that reading in the derivation pass. No operator, claim, text or test changed by this edit — the stamp records a judgement already earned."
+    - "2026-08-30 rev 3: DERIVATION PASS (owner order: 'include gen_08, start gen_09-26'). Step 5: four claims (G22-08..G22-11), one machine-checked and verifying, three manual; the seven standing claims hold the orthography. Step 6: four operators across four steps, all in the rulebook's existing vocabulary (three WITNESS_READ, one WITNESS_STATE - no operator invented), each tagged with its folded shape. Machine-checked: the sign's duration word le-dorot at our 9:12 is written DOUBLY DEFECTIVE and stands in the Torah exactly ONCE in that spelling - the chain reading the two missing letters as generations that needed no rainbow, so the operator's duration parameter carries its own exceptions in the ink. Also landed: the widened address of 9:8 read as demotion at one seat and elevation at the other; the bow ruled one of the ten things created at the first Sabbath's twilight, so our 9:13 PLACES rather than makes it - this unit installing a pointer to an object created in an earlier unit's final moments; and the never-again oath treated as standing law generations later, relied on so that one does not pray against rain, with R. Meir disputing its scope - a flood of fire and brimstone remaining possible, the guarantee covering water only. No verse text, tree, or morphology changed."
     - "2026-08-25 rev 2: RE-era reading pass (parashat Noach sweep, 11 blocks one sitting): declared core shelf read end to end — ledger logic/oral_triage/gen_22_covenant_bow_2026-08-25.md; v1 Tier-A queue discharged; ORAL_reading_pass block appended; no machine ops changed."
   title_en: "The covenant and the bow: My bow I have set in the cloud (9:8-17)"
   title_he: אֶת־קַשְׁתִּי נָתַתִּי בֶּעָנָן — וְזָכַרְתִּי אֶת־בְּרִיתִי
@@ -58,7 +60,7 @@ meta:
     cache holds ZERO sources for Gen 9:8-17 — sixteenth tripwire
     in a row. INTERPRETER: ZERO extensions — thirteenth
     extension-free derivation candidate in a row.
-  tree_derive_version: logic_derived_v1
+  tree_derive_version: logic_derived_v2_full_rule
   tree_derive_phase: "C-22"
   confidence_overall: "structure tested; operator readings tested-per-TIR; intent hypothesis"
   genre: "covenant_speech_ring_and_ladder"
@@ -428,6 +430,18 @@ boot_steps:
         en: "flag, not fix"
         cites: []
         confidence: tested
+      - op: WITNESS_STATE
+        expr_en: "WITNESS(address_widened, demotion_or_elevation)"
+        en: >
+          WHY 'AND HIS SONS'? A POLARITY DISPUTE [claim G22-11]. R. Yehuda
+          reads the widened address as a DEMOTION - because he broke the order
+          about resuming procreation, the speech is no longer his alone. R.
+          Nechemya reads it as an ELEVATION - his abstinence earned his sons a
+          share in the address. The same change to an operator's addressee
+          list is read as punishment at one seat and reward at the other.
+          [folded shape: recorded dispute]
+        cites: ["Bereshit Rabbah 35:1"]
+        confidence: witnessed
     comment: >
       The frame is the plot: what happens in this span is that
       God says, says again, and says it is done.
@@ -625,6 +639,19 @@ boot_steps:
           le-dorot is named-only].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(ledorot_clause, exemptions_written_in_the_missing_letters)"
+        en: >
+          THE DURATION PARAMETER CARRIES ITS EXCEPTIONS IN THE INK [claim
+          G22-08, machine-checked]. The covenant sign is given לְדֹרֹת
+          (le-dorot, 'for generations') - written DOUBLY DEFECTIVE, lacking
+          both vav letters, and machine-checked at derivation as standing in
+          the Torah exactly ONCE, here. The chain reads the missing letters as
+          generations that needed no rainbow, and names them: the generation
+          of Hezekiah, and the men of the Great Assembly. [folded shape: ink
+          count]
+        cites: ["Bereshit Rabbah 35:2"]
+        confidence: witnessed
     comment: >
       The second saying gives the covenant a face it can be
       recognized by, for as long as generations run.
@@ -673,6 +700,20 @@ boot_steps:
           dual-track, flagged].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(bow_sign, placed_not_made)"
+        en: >
+          THE SIGN PREDATES THE COVENANT THAT USES IT [claim G22-09]. A
+          canonical case-table row counts the rainbow among the TEN THINGS
+          CREATED AT TWILIGHT on the eve of the first Sabbath - so here the
+          bow is PLACED, not made, and this operator installs a pointer to an
+          object created in an earlier unit's final moments. The same object
+          heads a ten-member census of covenant-bearing things, ours the
+          first, with circumcision, the Sabbath, Torah study, the release of
+          slaves, the priesthood and the kingship following. [folded shape:
+          cross-corpus link]
+        cites: ["Pirkei Avot 5:6", "Mekhilta DeRabbi Shimon Ben Yochai 31:6"]
+        confidence: witnessed
     comment: >
       A weapon is hung up butt-forward in the weather that did
       the killing: the sign is an armistice made visible.
@@ -759,6 +800,18 @@ boot_steps:
           dual-track].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(never_again_oath, standing_law_with_disputed_scope)"
+        en: >
+          AN OATH RELIED ON AS LIVE LAW, AND ARGUED OVER [claim G22-10]. The
+          pious man will not pray against rain, 'for we are certain the Place
+          brings no flood' - this verse cited as legal ground. At Sinai's
+          thunder the nations ask whether He is flooding the world and are
+          answered from it. But what the oath does NOT foreclose is disputed:
+          R. Meir holds a flood of FIRE AND BRIMSTONE remains possible, the
+          guarantee covering water alone. [folded shape: priced law]
+        cites: ["Tosefta Ta'anit 2:11", "Sifrei Devarim 343:9"]
+        confidence: witnessed
     comment: >
       The covenant remembers forward: every storm that ends in a
       bow is a scheduled act of memory.

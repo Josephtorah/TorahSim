@@ -47,6 +47,14 @@ m.step("Gen.25.21")
 # burn-incense-in-worship … and-be-pregnant”) — event: entreat-and-in-
 # entreated — theme woman-him/its
 m.event("entreat_and_be_entreated", themes=["isht-o"])
+# witness-tier presupposed read: poured_out_or_decree_overturned on
+# entreaty_verb — read, not installed
+m.witness_read("entreaty_verb", "poured_out_or_decree_overturned",
+                cites=["Bereshit Rabbah 63:5", "Onkelos Genesis 25:21"])
+# witness-tier presupposed read: wire_closed_from_gen_41 on
+# conception_held_for_this_prayer — read, not installed
+m.witness_read("conception_held_for_this_prayer", "wire_closed_from_gen_41",
+                cites=["Bereshit Rabbah 60:13"])
 
 # -------------------------- Gen.25.22 · THE_STRUGGLE_AND_INQUIRE -----------
 # וַיִּתְרֹֽצֲצ֤וּ הַבָּנִים֙ בְּקִרְבָּ֔הּ וַתֹּ֣אמֶר אִם־כֵּ֔ן לָ֥מָּה
@@ -57,6 +65,14 @@ m.step("Gen.25.22")
 # ‹וַיִּתְרֹצֲצוּ … לִדְרֹשׁ אֶת־יְהוָה› (“and-crack-in-pieces … to-tread
 # obj-marker YHWH”) — event: struggle-and-inquire
 m.event("struggle_and_inquire")
+# witness-tier presupposed read: read_as_conflict_of_law_systems on
+# struggle_in_the_womb — read, not installed
+m.witness_read("struggle_in_the_womb", "read_as_conflict_of_law_systems",
+                cites=["Bereshit Rabbah 63:6"])
+# witness-tier presupposed read: both_members_send_her_to_a_school on
+# went_to_inquire — read, not installed
+m.witness_read("went_to_inquire", "both_members_send_her_to_a_school",
+                cites=["Bereshit Rabbah 63:6", "Onkelos Genesis 25:22"])
 
 # -------------------------- Gen.25.23 · THE_ORACLE_DECREE_FACTS ------------
 # וַיֹּ֨אמֶר יְהוָ֜ה לָ֗הּ שְׁנֵ֤י גיים גוֹיִם֙ בְּבִטְנֵ֔ךְ וּשְׁנֵ֣י
@@ -69,6 +85,14 @@ m.step("Gen.25.23")
 # ‹שְׁנֵי גוֹיִם … וְרַב יַעֲבֹד צָעִיר› (“two nation … and-many/great
 # work/serve little”) — fact holds: oracle-two-nations-elder-serves-younger
 m.fact("oracle_two_nations_elder_serves_younger")
+# witness-tier presupposed read: ambiguity_closed_by_the_translation on
+# elder_serve_younger — read, not installed
+m.witness_read("elder_serve_younger", "ambiguity_closed_by_the_translation",
+                cites=["Onkelos Genesis 25:23"])
+# witness-tier presupposed read: counted_twice_to_twelve on the_oracle_terms
+# — read, not installed
+m.witness_read("the_oracle_terms", "counted_twice_to_twelve",
+                cites=["Bereshit Rabbah 63:6"])
 
 # -------------------------- Gen.25.24 · THE_TWINS_IN_THE_WOMB --------------
 # וַיִּמְלְא֥וּ יָמֶ֖יהָ לָלֶ֑דֶת וְהִנֵּ֥ה תוֹמִ֖ם בְּבִטְנָֽהּ
@@ -78,6 +102,10 @@ m.step("Gen.25.24")
 # ‹תוֹמִם בְּבִטְנָהּ› (“twin in-belly-her/its”) — event: birth-due — theme
 # twin
 m.event("birth_due", themes=["tomim"])
+# witness-tier presupposed read: verdict_on_the_pair_carried_by_one_letter
+# on twins_written_short — read, not installed
+m.witness_read("twins_written_short", "verdict_on_the_pair_carried_by_one_letter",
+                cites=["Bereshit Rabbah 63:8", "Bereshit Rabbah 85:13"])
 
 # -------------------------- Gen.25.25 · THE_ESAV_NAMING --------------------
 # וַיֵּצֵ֤א הָרִאשׁוֹן֙ אַדְמוֹנִ֔י כֻּלּ֖וֹ כְּאַדֶּ֣רֶת שֵׂעָ֑ר
@@ -117,6 +145,15 @@ m.step("Gen.25.27")
 # ‹עֵשָׂו אִישׁ יֹדֵעַ צַיִד … יַעֲקֹב אִישׁ תָּם› (“Esau man know chase …
 # Jacob man complete”) — fact holds: Esau-hunter-Jacob-man-complete
 m.fact("esav_hunter_yaaqov_ish_tam")
+# witness-tier presupposed read: study_house_written_into_the_verse on
+# dweller_in_tents — read, not installed
+m.witness_read("dweller_in_tents", "study_house_written_into_the_verse",
+                cites=["Onkelos Genesis 25:27", "Bereshit Rabbah 63:10"])
+# witness-tier presupposed read:
+# thirteen_years_charter_for_a_standing_blessing on the_lads_grew — read,
+# not installed
+m.witness_read("the_lads_grew", "thirteen_years_charter_for_a_standing_blessing",
+                cites=["Bereshit Rabbah 63:10"])
 
 # -------------------------- Gen.25.28 · THE_SPLIT_LOVES --------------------
 # וַיֶּאֱהַ֥ב יִצְחָ֛ק אֶת־עֵשָׂ֖ו כִּי־צַ֣יִד בְּפִ֑יו וְרִבְקָ֖ה אֹהֶ֥בֶת
@@ -151,6 +188,10 @@ m.declare("esav", "LET",
 # ‹עַל־כֵּן קָרָא־שְׁמוֹ אֱדוֹם› (“over so call name-him/its Edom”) — fact
 # holds: over-so-call-shemo-Edom-report-only
 m.fact("al_ken_qara_shemo_edom_report_only")
+# witness-tier presupposed read: elder_died_today_and_the_heresy_at_the_pot
+# on the_stew_day — read, not installed
+m.witness_read("the_stew_day", "elder_died_today_and_the_heresy_at_the_pot",
+                cites=["Bereshit Rabbah 63:11", "Bereshit Rabbah 63:14"])
 
 # -------------------------- Gen.25.31 · THE_MIKHRA_PUSH --------------------
 # וַיֹּ֖אמֶר יַעֲקֹ֑ב מִכְרָ֥ה כַיּ֛וֹם אֶת־בְּכֹֽרָתְךָ֖ לִֽי
@@ -189,6 +230,14 @@ m.result("hishava(li, ka_yom)", tmark="t1")
 # man-him/its to-Jacob”) — demand settled (popped from the queue):
 # mikhra(firstling-of-man-you/your, day)
 m.result("mikhra(bekhorat_kha, ka_yom)", tmark="t2")
+# witness-tier presupposed read: standing_instrument_still_feared_lost on
+# the_oath_on_the_sale — read, not installed
+m.witness_read("the_oath_on_the_sale", "standing_instrument_still_feared_lost",
+                cites=["Bereshit Rabbah 68:7"])
+# witness-tier presupposed read: written_deed_and_a_countersignature on
+# the_sale — read, not installed
+m.witness_read("the_sale", "written_deed_and_a_countersignature",
+                cites=["Bereshit Rabbah 63:14"])
 
 # -------------------------- Gen.25.34 · THE_MEAL_AND_THE_DESPISE -----------
 # וְיַעֲקֹ֞ב נָתַ֣ן לְעֵשָׂ֗ו לֶ֚חֶם וּנְזִ֣יד עֲדָשִׁ֔ים וַיֹּ֣אכַל
@@ -202,6 +251,10 @@ m.event("?")
 # ‹וַיִּבֶז עֵשָׂו אֶת־הַבְּכֹרָה› (“and-disesteem Esau obj-marker the-
 # firstling-of-man”) — event: ?
 m.event("?")
+# witness-grounded state (its own tier): five_withheld_on_the_stew_day on
+# the_elders_years
+m.witness_state("the_elders_years", "five_withheld_on_the_stew_day",
+                cites=["Bereshit Rabbah 63:12"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -219,4 +272,44 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 16
+    assert sorted(m.WORLD["witnessed"]) == ['the_elders_years']
+    assert m.WORLD["witnessed"]['the_elders_years']["cites"] == ['Bereshit Rabbah 63:12']
+    assert all('five_withheld_on_the_stew_day' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('entreaty_verb', 'poured_out_or_decree_overturned'), ('conception_held_for_this_prayer', 'wire_closed_from_gen_41'), ('struggle_in_the_womb', 'read_as_conflict_of_law_systems'), ('went_to_inquire', 'both_members_send_her_to_a_school'), ('elder_serve_younger', 'ambiguity_closed_by_the_translation'), ('the_oracle_terms', 'counted_twice_to_twelve'), ('twins_written_short', 'verdict_on_the_pair_carried_by_one_letter'), ('dweller_in_tents', 'study_house_written_into_the_verse'), ('the_lads_grew', 'thirteen_years_charter_for_a_standing_blessing'), ('the_stew_day', 'elder_died_today_and_the_heresy_at_the_pot'), ('the_oath_on_the_sale', 'standing_instrument_still_feared_lost'), ('the_sale', 'written_deed_and_a_countersignature')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 63:5', 'Onkelos Genesis 25:21']
+    assert all('poured_out_or_decree_overturned' not in f for f in m.WORLD["facts"])
+    assert 'entreaty_verb' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 60:13']
+    assert all('wire_closed_from_gen_41' not in f for f in m.WORLD["facts"])
+    assert 'conception_held_for_this_prayer' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 63:6']
+    assert all('read_as_conflict_of_law_systems' not in f for f in m.WORLD["facts"])
+    assert 'struggle_in_the_womb' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 63:6', 'Onkelos Genesis 25:22']
+    assert all('both_members_send_her_to_a_school' not in f for f in m.WORLD["facts"])
+    assert 'went_to_inquire' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Genesis 25:23']
+    assert all('ambiguity_closed_by_the_translation' not in f for f in m.WORLD["facts"])
+    assert 'elder_serve_younger' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 63:6']
+    assert all('counted_twice_to_twelve' not in f for f in m.WORLD["facts"])
+    assert 'the_oracle_terms' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 63:8', 'Bereshit Rabbah 85:13']
+    assert all('verdict_on_the_pair_carried_by_one_letter' not in f for f in m.WORLD["facts"])
+    assert 'twins_written_short' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Genesis 25:27', 'Bereshit Rabbah 63:10']
+    assert all('study_house_written_into_the_verse' not in f for f in m.WORLD["facts"])
+    assert 'dweller_in_tents' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 63:10']
+    assert all('thirteen_years_charter_for_a_standing_blessing' not in f for f in m.WORLD["facts"])
+    assert 'the_lads_grew' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 63:11', 'Bereshit Rabbah 63:14']
+    assert all('elder_died_today_and_the_heresy_at_the_pot' not in f for f in m.WORLD["facts"])
+    assert 'the_stew_day' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 68:7']
+    assert all('standing_instrument_still_feared_lost' not in f for f in m.WORLD["facts"])
+    assert 'the_oath_on_the_sale' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 63:14']
+    assert all('written_deed_and_a_countersignature' not in f for f in m.WORLD["facts"])
+    assert 'the_sale' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

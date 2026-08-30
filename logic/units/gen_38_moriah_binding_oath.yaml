@@ -20,8 +20,10 @@
 
 meta:
   id: "gen_38_moriah_binding_oath"
-  rev: 2
+  rev: 4
   changelog:
+    - "rev 4 (2026-08-30): FULL-RULE STAMP on the owner's word — the batch stamp he held by standing decision until Genesis was whole, given when the book closed at 73 of 73 read and derived. tree_derive_version logic_derived_v1 -> logic_derived_v2_full_rule; the span's declared reading is COMPLETE in its triage ledger and its logic was rebuilt FROM that reading in the derivation pass. No operator, claim, text or test changed by this edit — the stamp records a judgement already earned."
+    - "2026-08-30 rev 3: DERIVATION PASS, parashat Vayera - CLOSES THE GROUP (owner order: 'Go'). Step 5: nine claims (G38-31..G38-39), all interpretive at check.type manual; the thirty standing claims hold the orthography. Step 6: nine operators across nine steps, all in the rulebook's existing vocabulary (eight WITNESS_READ, one WITNESS_STATE - no operator invented), each tagged with its folded shape. Onkelos citation keys appended to this ledger first (append-only). WHAT LANDED: INTENT COUNTED AS DEED, with this unit's stopped act as the ruling case - 'though no action was performed, He accepted it as though the deed were completed'; the nature of the test itself disputed, R. Akiva insisting on a literal test and reading the three-day journey as deliberation time deliberately provided 'so people should not say He stunned him', which makes the unit's own time operator a procedural GUARANTEE OF CONSENT; a live slaughter law - that the instrument must be detached and movable - seated on the narrative gesture of 22:10, 'he EXTENDED HIS HAND and took the knife'; the offering-fitness law spoken by the intended offering itself, asking to be bound well lest the slaughter be rendered unfit, with his age carried as a variance between seats; THE SHOFAR INSTITUTED on our ram with its parts censused into a standing inventory - ashes, sinews, skin, horns; the oath of 22:16 read as ANSWERING A DEMAND the subject set rather than freely given; our 22:4 enrolled in the corpus-wide third-day census; and Onkelos rewriting the naming of 22:14 as the founding of Temple worship - 'here will the generations worship' - with the oath and the obedience both routed through the Word. No verse text, tree, or morphology changed."
     - "2026-08-28 rev 2: RE-era reading pass (parashat Vayera sweep, 5 blocks one sitting — FIRST RUN UNDER THE SPINE DEFAULT, owner 2026-08-27: Bereshit Rabbah + Onkelos declared, Mishnah/Talmud held for the Step 9 exam): ledger logic/oral_triage/gen_38_moriah_binding_oath_2026-08-28.md; v1 Tier-A queue discharged; ORAL_reading_pass block appended; no machine ops changed."
   title_en: "The test, the binding, the oath (22:1-24)"
   title_he: וְהָאֱלֹהִים נִסָּה אֶת־אַבְרָהָם
@@ -270,7 +272,7 @@ meta:
     yirat-elohim guess-line as a title.
   data_paths_en:
     - "Data/tanakh_genesis_jps1917_en.json"
-  tree_derive_version: logic_derived_v1
+  tree_derive_version: logic_derived_v2_full_rule
   tree_derive_phase: "C-38"
   confidence_overall: "structure tested; operator readings tested-per-TIR; intent hypothesis; the crown fork owner-staged"
   genre: "trial_binding_and_oath_narrative"
@@ -311,7 +313,7 @@ meta:
     dual-track, never merged into the letter's encoding.
   method_note_en: >
     Derivation from the Hebrew letter (DB snapshot
-    torah_grok.SNAPSHOT-main-51801ca.sqlite) with the frozen corpus
+    source-snapshot.sqlite) with the frozen corpus
     gen_01..gen_37 as precedent; every frozen quote verified against
     the frozen YAML this session; censuses run fresh against the
     snapshot + debut map. JPS 1917 as English aid only.
@@ -619,6 +621,21 @@ boot_steps:
           not soften the divine testing [flag 14d, dual-track].
         cites: []
         confidence: tested
+      - op: WITNESS_STATE
+        expr_en: "WITNESS(the_test, nature_disputed_and_deliberation_guaranteed)"
+        en: >
+          WHAT KIND OF THING THIS IS, IS DISPUTED [claim G38-32]. R. Yosei
+          HaGelili reads the opening verb as exaltation, a banner raised; R.
+          Akiva insists on a LITERAL test - 'so people should not say He
+          stunned him and he acted without knowing' - and reads the three-day
+          journey as time deliberately given FOR DELIBERATION, so the act
+          could not be called coerced. On that reading the unit's own time
+          operator is a procedural guarantee of consent. And the doctrine that
+          governs the outcome is stated here: INTENT COUNTED AS DEED - though
+          no action was performed, He accepted it as though completed [claim
+          G38-31]. [folded shape: recorded dispute]
+        cites: ["Bereshit Rabbah 55:6", "Bereshit Rabbah 55:5"]
+        confidence: witnessed
     comment: >
       The frame-clause opens a trial the machine cannot grade: the
       test-verb debuts into an empty instrument field, and the
@@ -782,6 +799,16 @@ boot_steps:
           prose].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(saddled_his_own_donkey, love_upsets_the_order)"
+        en: >
+          A SMALL GESTURE READ AS A CONDUCT RULE [claim G38-39]. That he
+          saddled his own animal is read as the rule that LOVE UPSETS THE
+          ORDER - a man of his standing doing a servant's work - with the
+          hatred counterpart named in Balaam's rising early to the same task.
+          [folded shape: kept record]
+        cites: ["Bereshit Rabbah 55:8"]
+        confidence: witnessed
     comment: >
       The fourth dawn-rise of the era saddles a donkey for the
       hardest journey. Two demanded roots come back at once and
@@ -824,6 +851,17 @@ boot_steps:
           [census].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(third_day, member_of_a_corpus_wide_pattern)"
+        en: >
+          A DATE TOKEN TYPED AS A CANON DEVICE [claim G38-33]. The chain
+          gathers the corpus's third days into one pattern - this verse with
+          the brothers' release, the spies, Sinai, Jonah, Esther, and the
+          prophet's 'on the third day He will raise us' - so what the machine
+          records as a local duration is a member of a standing corpus-wide
+          device. [folded shape: cross-corpus link]
+        cites: ["Bereshit Rabbah 56:1"]
+        confidence: witnessed
     comment: >
       A single-arm verse for a single act: three unnarrated days
       end in one lifted eye. The place is still only 'the place'
@@ -1079,6 +1117,17 @@ boot_steps:
           state [prose].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(binding_request, fitness_law_in_the_subjects_mouth)"
+        en: >
+          THE OFFERING STATES THE LAW THAT WOULD INVALIDATE IT [claim G38-35].
+          He asks to be bound well 'lest I tremble and the slaughter be
+          rendered UNFIT' - the technical law of what invalidates an offering
+          spoken by the intended offering itself, inside the scene. His age is
+          recorded with variance across seats, thirty-seven against
+          twenty-six, carried rather than resolved. [folded shape: priced law]
+        cites: ["Bereshit Rabbah 56:8"]
+        confidence: witnessed
     comment: >
       The hapax fires: one verb, once in the Torah, for one bound
       son. Even here the machine's queue does not move — building,
@@ -1123,6 +1172,17 @@ boot_steps:
           mid-reach [census-exact].
         cites: ["TIR-014"]
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(extended_his_hand, detached_instrument_required)"
+        en: >
+          A BINDING SLAUGHTER LAW SEATED ON A GESTURE [claim G38-34]. Rav asks
+          R. Chiya the Great from where it is known that ritual slaughter
+          requires a DETACHED, movable instrument - and the answer is this
+          verse: 'Abraham EXTENDED HIS HAND and took the knife.' The taking-up
+          IS the requirement. A procedural rule still binding, derived from a
+          narrative motion. [folded shape: priced law]
+        cites: ["Bereshit Rabbah 56:6"]
+        confidence: witnessed
     comment: >
       The queue's starkest picture: the demand stands open, the
       knife is in the hand, and the verse ends on an infinitive
@@ -1179,6 +1239,15 @@ boot_steps:
           silluq arm is the one word [flag 8; tree fact].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(doubled_name, affection_exhortation_and_recurrence)"
+        en: >
+          THE REPETITION IS READ THREE WAYS [claim G38-39]. The doubled
+          address carries affection, exhortation, and 'for him and for the
+          generations' - the repetition taken as the claim that no generation
+          lacks its Abraham. [folded shape: kept record]
+        cites: ["Bereshit Rabbah 56:7"]
+        confidence: witnessed
     comment: >
       Heaven interrupts with the corpus's first doubled name, and
       the man with the knife answers with the word he coined ten
@@ -1344,6 +1413,18 @@ boot_steps:
           may or may not pay [flag 2].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(the_ram, shofar_instituted_and_parts_inventoried)"
+        en: >
+          ONE ANIMAL BECOMES A STANDING INVENTORY [claim G38-36]. The word
+          'after' is read forward - after Israel's entanglements, THE RAM'S
+          HORN rescues - grounding the horn's institution on this animal. And
+          its parts are censused as a distribution: ashes at the altar's base,
+          sinews for the harp's strings, skin for the prophet's belt, horns
+          for the trumpet. A narrative animal converted into an inventory of
+          later instruments. [folded shape: repayment table]
+        cites: ["Bereshit Rabbah 56:9"]
+        confidence: witnessed
     comment: >
       The demanded verb, saved for ten verses, lands on a
       substitute the letter marks with one word: instead. The
@@ -1409,6 +1490,20 @@ boot_steps:
           50-51].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(the_naming, rewritten_as_the_worship_institution)"
+        en: >
+          A PLACE-NAME REWRITTEN AS AN INSTITUTION [claim G38-38]. Where the
+          received ink gives a name and a saying, Onkelos writes a founding:
+          'Abraham WORSHIPPED AND PRAYED there and said before the LORD: HERE
+          WILL THE GENERATIONS WORSHIP; therefore it will be said, on THIS
+          MOUNTAIN Abraham worshipped and prayed.' The future Temple service
+          is written into the verse. At 22:16 the oath is sworn BY THE WORD
+          and the obedience of 22:18 routed through it likewise - the buffer
+          carrying both the oath and its ground. [folded shape: dual-track
+          translation]
+        cites: ["Onkelos Genesis 22:14", "Onkelos Genesis 22:16"]
+        confidence: witnessed
     comment: >
       The answer becomes an address: what Abraham told his son on
       the way up, he tells the map on the way down, and the letter
@@ -1503,6 +1598,16 @@ boot_steps:
           dual-track].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(the_oath, answering_a_demand_for_no_further_tests)"
+        en: >
+          THE OATH ANSWERS A DEMAND [claim G38-37]. At the second call Abraham
+          is read as demanding terms: swear that You will not test me again,
+          nor Isaac - the stream-jump parable supplying the reasoning. What
+          the machine records as an oath freely given is read as the answer to
+          a condition the subject himself set. [folded shape: kept record]
+        cites: ["Bereshit Rabbah 56:11"]
+        confidence: witnessed
     comment: >
       God swears by Himself in a formula prophecy will use for a
       thousand years — and grounds it in a deed the machine still

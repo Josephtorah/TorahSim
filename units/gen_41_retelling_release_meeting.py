@@ -208,6 +208,10 @@ m.declare("ha_eved", "LET",
 # ‹אִם־יֶשְׁכֶם עֹשִׂים חֶסֶד וֶאֱמֶת› (“if there-is-you/your(pl) make
 # kindness and-stability”) — fact holds: if-kindness-and-stability-branch
 m.fact("im_chesed_ve_emet_branch")
+# witness-tier presupposed read: alternative_brides_on_the_family_map on
+# right_or_left — read, not installed
+m.witness_read("right_or_left", "alternative_brides_on_the_family_map",
+                cites=["Bereshit Rabbah 60:9"])
 
 # -------------------------- Gen.24.50 · THE_FROM_YHWH_VERDICT --------------
 # וַיַּ֨עַן לָבָ֤ן וּבְתוּאֵל֙ וַיֹּ֣אמְר֔וּ מֵיְהוָ֖ה יָצָ֣א הַדָּבָ֑ר לֹ֥א
@@ -221,6 +225,10 @@ m.event("answer")
 # ‹מֵיְהוָה יָצָא הַדָּבָר› (“from-YHWH bring-forth the-word/thing”) — fact
 # holds: from-the-LORD-bring-forth-the-word/thing
 m.fact("me_YHWH_yatza_ha_davar")
+# witness-tier presupposed read: traced_to_moriah_and_disputed on
+# the_matter_came_from_the_LORD — read, not installed
+m.witness_read("the_matter_came_from_the_LORD", "traced_to_moriah_and_disputed",
+                cites=["Bereshit Rabbah 60:10"])
 
 # -------------------------- Gen.24.51 · THE_COMPOUND_QACH_VA_LEKH ----------
 # הִנֵּֽה־רִבְקָ֥ה לְפָנֶ֖יךָ קַ֣ח וָלֵ֑ךְ וּתְהִ֤י אִשָּׁה֙
@@ -282,6 +290,11 @@ m.step("Gen.24.55")
 # ‹תֵּשֵׁב הַנַּעֲרָ אִתָּנוּ יָמִים אוֹ עָשׂוֹר› (“dwell/sit the-girl with-
 # us/our day or ten”) — fact holds: family-counter-dwell/sit-day-or-ten
 m.fact("family_counter_teshev_yamim_o_asor")
+# witness-tier presupposed read:
+# death_overnight_and_the_delay_reread_as_mourning on missing_father — read,
+# not installed
+m.witness_read("missing_father", "death_overnight_and_the_delay_reread_as_mourning",
+                cites=["Bereshit Rabbah 60:12", "Mishnah Ketubot 5:2"])
 
 # -------------------------- Gen.24.56 · THE_AL_TEACHARU_AND_SHALCHUNI_REPEAT -
 # וַיֹּ֤אמֶר אֲלֵהֶם֙ אַל־תְּאַחֲר֣וּ אֹתִ֔י וַֽיהוָ֖ה הִצְלִ֣יחַ דַּרְכִּ֑י
@@ -306,6 +319,10 @@ m.step("Gen.24.57")
 # the)
 m.declare("ha_bayit", "CMD-US?",
           "nishala(et_pi_ha)")
+# witness-tier presupposed read: consent_law_and_translation_converging on
+# we_will_ask_her — read, not installed
+m.witness_read("we_will_ask_her", "consent_law_and_translation_converging",
+                cites=["Bereshit Rabbah 60:12", "Onkelos Genesis 24:57"])
 
 # -------------------------- Gen.24.58 · THE_ELEKH_CONSENT ------------------
 # וַיִּקְרְא֤וּ לְרִבְקָה֙ וַיֹּאמְר֣וּ אֵלֶ֔יהָ הֲתֵלְכִ֖י עִם־הָאִ֣ישׁ
@@ -315,6 +332,10 @@ m.declare("ha_bayit", "CMD-US?",
 m.step("Gen.24.58")
 # ‹הֲתֵלְכִי … אֵלֵךְ› (“the-go … go”) — event: ask-and-consent
 m.event("ask_and_consent")
+# witness-tier presupposed read: read_as_defiance_of_the_questioners on
+# her_single_word — read, not installed
+m.witness_read("her_single_word", "read_as_defiance_of_the_questioners",
+                cites=["Bereshit Rabbah 60:12"])
 
 # -------------------------- Gen.24.59 · THE_SEND_POP -----------------------
 # וַֽיְשַׁלְּח֛וּ אֶת־רִבְקָ֥ה אֲחֹתָ֖ם וְאֶת־מֵנִקְתָּ֑הּ וְאֶת־עֶ֥בֶד
@@ -340,6 +361,15 @@ m.declare("ha_bayit", "LET",
 # you/your obj-marker gate hate-him/its”) — fact holds: gate-fowl-haters-
 # blessing-content
 m.fact("gate_of_haters_blessing_content")
+# witness-tier presupposed read:
+# insincere_and_therefore_needing_a_later_prayer on farewell_blessing —
+# read, not installed
+m.witness_read("farewell_blessing", "insincere_and_therefore_needing_a_later_prayer",
+                cites=["Bereshit Rabbah 60:13"])
+# witness-tier presupposed read: divided_by_one_member_joined_by_the_other
+# on thousands_and_myriads — read, not installed
+m.witness_read("thousands_and_myriads", "divided_by_one_member_joined_by_the_other",
+                cites=["Bereshit Rabbah 60:13", "Onkelos Genesis 24:60"])
 
 # -------------------------- Gen.24.61 · THE_COMPOUND_POP_AND_DEPARTURE -----
 # וַתָּ֨קָם רִבְקָ֜ה וְנַעֲרֹתֶ֗יהָ וַתִּרְכַּ֨בְנָה֙ עַל־הַגְּמַלִּ֔ים
@@ -355,6 +385,11 @@ m.event("?")
 # marker Rebekah and-go”) — demand settled (popped from the queue): take-
 # and-go(rivqah)
 m.result("qach_va_lekh(rivqah)", tmark="t2")
+# witness-tier presupposed read:
+# twins_foreshadowed_with_the_plain_answer_kept on the_camel_marks — read,
+# not installed
+m.witness_read("the_camel_marks", "twins_foreshadowed_with_the_plain_answer_kept",
+                cites=["Bereshit Rabbah 60:14"])
 
 # -------------------------- Gen.24.62 · THE_BEER_LACHAI_ROI_ADDRESS --------
 # וְיִצְחָק֙ בָּ֣א מִבּ֔וֹא בְּאֵ֥ר לַחַ֖י רֹאִ֑י וְה֥וּא יוֹשֵׁ֖ב בְּאֶ֥רֶץ
@@ -375,6 +410,10 @@ m.step("Gen.24.63")
 # ‹לָשׂוּחַ … וְהִנֵּה גְמַלִּים בָּאִים› (“to-muse-pensively … and-behold
 # camel come/bring”) — event: meditate-and-see-camels — agent Isaac
 m.event("meditate_and_see_camels", agent="yitzchaq")
+# witness-tier presupposed read: afternoon_prayer_instituted_by_both_members
+# on went_out_toward_evening — read, not installed
+m.witness_read("went_out_toward_evening", "afternoon_prayer_instituted_by_both_members",
+                cites=["Bereshit Rabbah 68:9", "Onkelos Genesis 24:63"])
 
 # -------------------------- Gen.24.64 · THE_RIVQAH_SEES_ISAAC --------------
 # וַתִּשָּׂ֤א רִבְקָה֙ אֶת־עֵינֶ֔יהָ וַתֵּ֖רֶא אֶת־יִצְחָ֑ק וַתִּפֹּ֖ל
@@ -386,6 +425,10 @@ m.step("Gen.24.64")
 # and-fall from-over the-camel”) — event: see-and-dismount — agent rivqah;
 # theme Isaac
 m.event("see_and_dismount", agent="rivqah", themes=["yitzchaq"])
+# witness-tier presupposed read: softened_to_inclined_by_two_devices on
+# she_fell — read, not installed
+m.witness_read("she_fell", "softened_to_inclined_by_two_devices",
+                cites=["Bereshit Rabbah 60:15", "Onkelos Genesis 24:64"])
 
 # -------------------------- Gen.24.65 · THE_TZAIF_VEIL ---------------------
 # וַתֹּ֣אמֶר אֶל־הָעֶ֗בֶד מִֽי־הָאִ֤ישׁ הַלָּזֶה֙ הַהֹלֵ֤ךְ בַּשָּׂדֶה֙
@@ -407,6 +450,10 @@ m.step("Gen.24.66")
 # ‹וַיְסַפֵּר … כָּל־הַדְּבָרִים אֲשֶׁר עָשָׂה› (“and-count … all the-
 # word/thing which make”) — event: recount — agent the-servant
 m.event("recount", agent="ha_eved")
+# witness-grounded state (its own tier):
+# generalities_exceed_details_second_seat on all_the_matters_he_had_done
+m.witness_state("all_the_matters_he_had_done", "generalities_exceed_details_second_seat",
+                cites=["Bereshit Rabbah 60:15"])
 
 # -------------------------- Gen.24.67 · THE_WIFE_LOVE_AND_COMFORT ----------
 # וַיְבִאֶ֣הָ יִצְחָ֗ק הָאֹ֨הֱלָה֙ שָׂרָ֣ה אִמּ֔וֹ וַיִּקַּ֧ח אֶת־רִבְקָ֛ה
@@ -426,6 +473,14 @@ m.result("tehi(rivqah, isha_le_ven_adonekha)", tmark="t3")
 # ‹וַיֶּאֱהָבֶהָ … וַיִּנָּחֵם יִצְחָק אַחֲרֵי אִמּוֹ› (“and-have-affection-
 # for-her/its … and-sigh Isaac after mother-him/its”) — event: ?
 m.event("?")
+# witness-grounded state (its own tier): four_conditions_ceased_and_returned
+# on the_tent
+m.witness_state("the_tent", "four_conditions_ceased_and_returned",
+                cites=["Bereshit Rabbah 60:16", "Onkelos Genesis 24:67"])
+# witness-tier presupposed read: precedence_read_off_verse_order on
+# marriage_before_remarriage — read, not installed
+m.witness_read("marriage_before_remarriage", "precedence_read_off_verse_order",
+                cites=["Bereshit Rabbah 60:16"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -443,4 +498,43 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 23
+    assert sorted(m.WORLD["witnessed"]) == ['all_the_matters_he_had_done', 'the_tent']
+    assert m.WORLD["witnessed"]['all_the_matters_he_had_done']["cites"] == ['Bereshit Rabbah 60:15']
+    assert all('generalities_exceed_details_second_seat' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['the_tent']["cites"] == ['Bereshit Rabbah 60:16', 'Onkelos Genesis 24:67']
+    assert all('four_conditions_ceased_and_returned' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('right_or_left', 'alternative_brides_on_the_family_map'), ('the_matter_came_from_the_LORD', 'traced_to_moriah_and_disputed'), ('missing_father', 'death_overnight_and_the_delay_reread_as_mourning'), ('we_will_ask_her', 'consent_law_and_translation_converging'), ('her_single_word', 'read_as_defiance_of_the_questioners'), ('farewell_blessing', 'insincere_and_therefore_needing_a_later_prayer'), ('thousands_and_myriads', 'divided_by_one_member_joined_by_the_other'), ('the_camel_marks', 'twins_foreshadowed_with_the_plain_answer_kept'), ('went_out_toward_evening', 'afternoon_prayer_instituted_by_both_members'), ('she_fell', 'softened_to_inclined_by_two_devices'), ('marriage_before_remarriage', 'precedence_read_off_verse_order')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 60:9']
+    assert all('alternative_brides_on_the_family_map' not in f for f in m.WORLD["facts"])
+    assert 'right_or_left' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 60:10']
+    assert all('traced_to_moriah_and_disputed' not in f for f in m.WORLD["facts"])
+    assert 'the_matter_came_from_the_LORD' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 60:12', 'Mishnah Ketubot 5:2']
+    assert all('death_overnight_and_the_delay_reread_as_mourning' not in f for f in m.WORLD["facts"])
+    assert 'missing_father' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 60:12', 'Onkelos Genesis 24:57']
+    assert all('consent_law_and_translation_converging' not in f for f in m.WORLD["facts"])
+    assert 'we_will_ask_her' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 60:12']
+    assert all('read_as_defiance_of_the_questioners' not in f for f in m.WORLD["facts"])
+    assert 'her_single_word' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 60:13']
+    assert all('insincere_and_therefore_needing_a_later_prayer' not in f for f in m.WORLD["facts"])
+    assert 'farewell_blessing' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 60:13', 'Onkelos Genesis 24:60']
+    assert all('divided_by_one_member_joined_by_the_other' not in f for f in m.WORLD["facts"])
+    assert 'thousands_and_myriads' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 60:14']
+    assert all('twins_foreshadowed_with_the_plain_answer_kept' not in f for f in m.WORLD["facts"])
+    assert 'the_camel_marks' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 68:9', 'Onkelos Genesis 24:63']
+    assert all('afternoon_prayer_instituted_by_both_members' not in f for f in m.WORLD["facts"])
+    assert 'went_out_toward_evening' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 60:15', 'Onkelos Genesis 24:64']
+    assert all('softened_to_inclined_by_two_devices' not in f for f in m.WORLD["facts"])
+    assert 'she_fell' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 60:16']
+    assert all('precedence_read_off_verse_order' not in f for f in m.WORLD["facts"])
+    assert 'marriage_before_remarriage' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

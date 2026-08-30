@@ -27,6 +27,18 @@ m.step("Gen.27.41")
 # intent
 m.fact("esav_grudge",
        "heart_kill_intent")
+# witness-tier presupposed read: full_plan_decoded_and_censused on
+# said_in_his_heart — read, not installed
+m.witness_read("said_in_his_heart", "full_plan_decoded_and_censused",
+                cites=["Bereshit Rabbah 75:9", "Bereshit Rabbah 34:10"])
+# witness-tier presupposed read: expanded_into_the_empires_own_title on
+# the_grudge_verb — read, not installed
+m.witness_read("the_grudge_verb", "expanded_into_the_empires_own_title",
+                cites=["Bereshit Rabbah 67:8"])
+# witness-tier presupposed read: the_same_clause_read_as_filial_honour on
+# waiting_for_the_mourning_days — read, not installed
+m.witness_read("waiting_for_the_mourning_days", "the_same_clause_read_as_filial_honour",
+                cites=["Bereshit Rabbah 76:2"])
 
 # -------------------------- Gen.27.42 · THE_LEAK_RETELLING_DELTA_AND_CALL_YOUNGER -
 # וַיֻּגַּד לְרִבְקָה אֶת־דִּבְרֵי עֵשָׂו בְּנָהּ הַגָּדֹל וַתִּשְׁלַח
@@ -39,6 +51,14 @@ m.step("Gen.27.42")
 # ‹וַיֻּגַּד … מִתְנַחֵם … לְהָרְגֶךָ› (“and-tell … sigh … to-smite-with-
 # deadly-intent-you/your”) — fact holds: leak-and-delta
 m.fact("leak_and_delta")
+# witness-tier presupposed read: matriarch_prophecy_stated_at_its_source on
+# it_was_told_to_rebecca — read, not installed
+m.witness_read("it_was_told_to_rebecca", "matriarch_prophecy_stated_at_its_source",
+                cites=["Bereshit Rabbah 67:9", "Onkelos Genesis 27:13"])
+# witness-tier presupposed read: interior_resolution_or_external_ambush on
+# consoles_himself — read, not installed
+m.witness_read("consoles_himself", "interior_resolution_or_external_ambush",
+                cites=["Bereshit Rabbah 67:9", "Onkelos Genesis 27:42"])
 
 # -------------------------- Gen.27.43 · THE_SHEMA_BE_QOLI_AND_FLIGHT_COMPOUND -
 # וְעַתָּה בְנִי שְׁמַע בְּקֹלִי וְקוּם בְּרַח־לְךָ אֶל־לָבָן אָחִי חָרָנָה
@@ -62,6 +82,10 @@ m.step("Gen.27.44")
 # ‹וְיָשַׁבְתָּ … חֲמַת אָחִיךָ› (“and-dwell/sit … heat brother-you/your”) —
 # fact holds: dwell/sit-third-member-attached
 m.fact("yashavta_third_member_attached")
+# witness-tier presupposed read: made_seven_years_by_verbal_analogy on
+# a_few_days — read, not installed
+m.witness_read("a_few_days", "made_seven_years_by_verbal_analogy",
+                cites=["Bereshit Rabbah 67:10"])
 
 # -------------------------- Gen.27.45 · THE_FORGET_SEND_TAKE_AND_BEREAVE_ARITHMETIC -
 # עַד־שׁוּב אַף־אָחִיךָ מִמְּךָ וְשָׁכַח אֵת אֲשֶׁר־עָשִׂיתָ לּוֹ
@@ -74,6 +98,11 @@ m.step("Gen.27.45")
 # ‹וְשָׁכַח … וְשָׁלַחְתִּי … אֶשְׁכַּל› (“and-forget … and-send …
 # miscarry”) — fact holds: Rebekah-plan-forget-send-take
 m.fact("rivqa_plan_forget_send_take")
+# witness-tier presupposed read:
+# fourteen_hidden_and_the_marriage_at_eighty_four on the_untold_years —
+# read, not installed
+m.witness_read("the_untold_years", "fourteen_hidden_and_the_marriage_at_eighty_four",
+                cites=["Bereshit Rabbah 68:5"])
 
 # -------------------------- Gen.27.46 · THE_PRESSURE_SPEECH_TO_ISAAC_HITTITE_LOATHE -
 # וַתֹּאמֶר רִבְקָה אֶל־יִצְחָק קַצְתִּי בְחַיַּי מִפְּנֵי בְּנוֹת חֵת
@@ -86,6 +115,11 @@ m.step("Gen.27.46")
 # ‹קַצְתִּי … לָמָּה לִּי חַיִּים› (“be-disgusted … to-what to-me/my alive”)
 # — fact holds: Rebekah-pressure-speech-to-Isaac
 m.fact("rivqa_pressure_speech_to_yitzchaq")
+# witness-tier presupposed read:
+# loathing_speech_counted_against_the_standing_wives on the_stated_pretext —
+# read, not installed
+m.witness_read("the_stated_pretext", "loathing_speech_counted_against_the_standing_wives",
+                cites=["Bereshit Rabbah 67:11"])
 
 # -------------------------- Gen.28.1 · THE_BLESS_EVENT_AND_CANAANITE_PROHIBITION -
 # וַיִּקְרָא יִצְחָק אֶל־יַעֲקֹב וַיְבָרֶךְ אֹתוֹ וַיְצַוֵּהוּ וַיֹּאמֶר לוֹ
@@ -97,6 +131,10 @@ m.step("Gen.28.1")
 m.event("?")
 # ‹לֹא תִקַּח› (“not take”) — fact holds: prohibition-not-take-kenaanit
 m.fact("prohibition_lo_tiqach_kenaanit")
+# witness-tier presupposed read: ratification_maxim_at_its_home_seat on
+# the_summons — read, not installed
+m.witness_read("the_summons", "ratification_maxim_at_its_home_seat",
+                cites=["Bereshit Rabbah 67:12"])
 
 # -------------------------- Gen.28.2 · THE_QUM_LEKH_QACH_WIFE_COMPOUND -----
 # קוּם לֵךְ פַּדֶּנָה אֲרָם בֵּיתָה בְתוּאֵל אֲבִי אִמֶּךָ וְקַח־לְךָ
@@ -119,6 +157,10 @@ m.step("Gen.28.3")
 # ‹וְאֵל שַׁדַּי יְבָרֵךְ … וְיַרְבֶּךָ› (“and-strength Almighty bless …
 # and-multiply-you/your”) — fact holds: to-shaddai-limbs-staged
 m.fact("el_shaddai_limbs_staged")
+# witness-tier presupposed read: nationalized_into_tribes on
+# assembly_of_peoples — read, not installed
+m.witness_read("assembly_of_peoples", "nationalized_into_tribes",
+                cites=["Onkelos Genesis 28:3"])
 
 # -------------------------- Gen.28.4 · THE_ABRAHAM_BLESSING_GRANT_PACKAGE_PUSH -
 # וְיִתֶּן־לְךָ אֶת־בִּרְכַּת אַבְרָהָם לְךָ וּלְזַרְעֲךָ אִתָּךְ
@@ -166,6 +208,10 @@ m.result("shema_be_qoli_2(yaaqov)", tmark="t1")
 # ‹וַיֵּלֶךְ פַּדֶּנָה אֲרָם› (“and-go to-Padan Padan”) — fact holds: go-go-
 # frame-not-flee-frame
 m.fact("yelekh_go_frame_not_flee_frame")
+# witness-tier presupposed read: absorbed_into_the_acceptance_register on
+# heeded_his_father_and_mother — read, not installed
+m.witness_read("heeded_his_father_and_mother", "absorbed_into_the_acceptance_register",
+                cites=["Onkelos Genesis 28:7"])
 
 # -------------------------- Gen.28.8 · THE_SECOND_SEEING_EVIL_IN_THE_FATHERS_EYES -
 # וַיַּרְא עֵשָׂו כִּי רָעוֹת בְּנוֹת כְּנָעַן בְּעֵינֵי יִצְחָק אָבִיו
@@ -186,6 +232,10 @@ m.step("Gen.28.9")
 # ‹וַיִּקַּח אֶת־מָחֲלַת› (“and-take obj-marker Mahalath”) — fact holds:
 # Esau-mirror-take-Mahalath
 m.fact("esav_mirror_take_machalat")
+# witness-grounded state (its own tier):
+# tribes_paired_against_kingdoms_with_named_agents on the_exile_table
+m.witness_state("the_exile_table", "tribes_paired_against_kingdoms_with_named_agents",
+                cites=["Bereshit Rabbah 99:2", "Bereshit Rabbah 100:12"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -203,4 +253,41 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 6
+    assert sorted(m.WORLD["witnessed"]) == ['the_exile_table']
+    assert m.WORLD["witnessed"]['the_exile_table']["cites"] == ['Bereshit Rabbah 99:2', 'Bereshit Rabbah 100:12']
+    assert all('tribes_paired_against_kingdoms_with_named_agents' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('said_in_his_heart', 'full_plan_decoded_and_censused'), ('the_grudge_verb', 'expanded_into_the_empires_own_title'), ('waiting_for_the_mourning_days', 'the_same_clause_read_as_filial_honour'), ('it_was_told_to_rebecca', 'matriarch_prophecy_stated_at_its_source'), ('consoles_himself', 'interior_resolution_or_external_ambush'), ('a_few_days', 'made_seven_years_by_verbal_analogy'), ('the_untold_years', 'fourteen_hidden_and_the_marriage_at_eighty_four'), ('the_stated_pretext', 'loathing_speech_counted_against_the_standing_wives'), ('the_summons', 'ratification_maxim_at_its_home_seat'), ('assembly_of_peoples', 'nationalized_into_tribes'), ('heeded_his_father_and_mother', 'absorbed_into_the_acceptance_register')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 75:9', 'Bereshit Rabbah 34:10']
+    assert all('full_plan_decoded_and_censused' not in f for f in m.WORLD["facts"])
+    assert 'said_in_his_heart' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 67:8']
+    assert all('expanded_into_the_empires_own_title' not in f for f in m.WORLD["facts"])
+    assert 'the_grudge_verb' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 76:2']
+    assert all('the_same_clause_read_as_filial_honour' not in f for f in m.WORLD["facts"])
+    assert 'waiting_for_the_mourning_days' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 67:9', 'Onkelos Genesis 27:13']
+    assert all('matriarch_prophecy_stated_at_its_source' not in f for f in m.WORLD["facts"])
+    assert 'it_was_told_to_rebecca' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 67:9', 'Onkelos Genesis 27:42']
+    assert all('interior_resolution_or_external_ambush' not in f for f in m.WORLD["facts"])
+    assert 'consoles_himself' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 67:10']
+    assert all('made_seven_years_by_verbal_analogy' not in f for f in m.WORLD["facts"])
+    assert 'a_few_days' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 68:5']
+    assert all('fourteen_hidden_and_the_marriage_at_eighty_four' not in f for f in m.WORLD["facts"])
+    assert 'the_untold_years' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 67:11']
+    assert all('loathing_speech_counted_against_the_standing_wives' not in f for f in m.WORLD["facts"])
+    assert 'the_stated_pretext' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 67:12']
+    assert all('ratification_maxim_at_its_home_seat' not in f for f in m.WORLD["facts"])
+    assert 'the_summons' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Genesis 28:3']
+    assert all('nationalized_into_tribes' not in f for f in m.WORLD["facts"])
+    assert 'assembly_of_peoples' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Onkelos Genesis 28:7']
+    assert all('absorbed_into_the_acceptance_register' not in f for f in m.WORLD["facts"])
+    assert 'heeded_his_father_and_mother' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

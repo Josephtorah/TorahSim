@@ -40,6 +40,11 @@ m.step("Gen.36.3")
 # ‹וְאֶת־בָּשְׂמַת בַּת› (“and-obj-marker Bashemath daughter”) — fact holds:
 # Bashemath-daughter-Ishmael(sister-Nebaioth)
 m.fact("basmat_bat_yishmael(achot_nevayot)")
+# witness-tier presupposed read:
+# a_forgiveness_claim_left_standing_against_the_ledger on the_brides_name —
+# read, not installed
+m.witness_read("the_brides_name", "a_forgiveness_claim_left_standing_against_the_ledger",
+                cites=["Bereshit Rabbah 67:13"])
 
 # -------------------------- Gen.36.4 · THE_FIRSTBORN_SONS ------------------
 # וַתֵּלֶד עָדָה לְעֵשָׂו אֶת־אֱלִיפָז וּבָשְׂמַת יָלְדָה אֶת־רְעוּאֵל
@@ -72,6 +77,10 @@ m.step("Gen.36.6")
 # ‹וַיֵּלֶךְ אֶל־אֶרֶץ מִפְּנֵי יַעֲקֹב› (“and-go to earth from-face Jacob”)
 # — fact holds: and-go-to-earth(Esau, from-face-Jacob-his-brother)
 m.fact("va_yelekh_el_eretz(esav, mi_pene_yaaqov_achiv)")
+# witness-tier presupposed read: read_as_escaping_the_covenant_debt on
+# went_to_another_land — read, not installed
+m.witness_read("went_to_another_land", "read_as_escaping_the_covenant_debt",
+                cites=["Bereshit Rabbah 82:13", "Onkelos Genesis 36:6"])
 
 # -------------------------- Gen.36.7 · THE_LAND_THAT_COULD_NOT_BEAR --------
 # כִּי־הָיָה רְכוּשָׁם רָב מִשֶּׁבֶת יַחְדָּו וְלֹא יָכְלָה אֶרֶץ
@@ -130,6 +139,10 @@ m.step("Gen.36.12")
 # ‹וְתִמְנַע הָיְתָה פִילֶגֶשׁ לֶאֱלִיפַז› (“and-Timna be concubine to-
 # Eliphaz”) — fact holds: and-bear-young-Timna-to-Eliphaz(obj-marker-Amalek)
 m.fact("va_teled_timna_le_elifaz(et_amaleq)")
+# witness-tier presupposed read: audited_as_evidence_of_illegitimate_lines
+# on the_roster — read, not installed
+m.witness_read("the_roster", "audited_as_evidence_of_illegitimate_lines",
+                cites=["Bereshit Rabbah 82:12", "Bereshit Rabbah 82:15"])
 
 # -------------------------- Gen.36.13 · REUEL_S_FOUR -----------------------
 # וְאֵלֶּה בְּנֵי רְעוּאֵל נַחַת וָזֶרַח שַׁמָּה וּמִזָּה אֵלֶּה הָיוּ
@@ -251,6 +264,10 @@ m.step("Gen.36.24")
 # ‹הוּא עֲנָה אֲשֶׁר מָצָא› (“he/it Anah which find”) — fact holds: he/it-
 # Anah-which-find-obj-marker-the-warm-spring(pasture)
 m.fact("hu_ana_asher_matza_et_ha_yemim(ba_midbar)")
+# witness-tier presupposed read: a_third_reading_entered_by_the_translation
+# on what_was_found — read, not installed
+m.witness_read("what_was_found", "a_third_reading_entered_by_the_translation",
+                cites=["Onkelos Genesis 36:24"])
 
 # -------------------------- Gen.36.25 · ANA_S_TWO --------------------------
 # וְאֵלֶּה בְנֵי־עֲנָה דִּשֹׁן וְאָהֳלִיבָמָה בַּת־עֲנָה
@@ -316,6 +333,14 @@ m.step("Gen.36.31")
 # which reign in-earth Edom”) — fact holds: the-king-which-reign-in-Edom(to-
 # me-fene-reign-king-to-me-son-Israel)
 m.fact("ha_melakhim_asher_malkhu_be_edom(li_fene_melakh_melekh_li_vene_yisrael)")
+# witness-grounded state (its own tier):
+# the_penalty_minted_at_gen_55_counted_here on eight_kings
+m.witness_state("eight_kings", "the_penalty_minted_at_gen_55_counted_here",
+                cites=["Bereshit Rabbah 83:2"])
+# witness-tier presupposed read: read_as_a_state_of_imported_parts on
+# the_king_list — read, not installed
+m.witness_read("the_king_list", "read_as_a_state_of_imported_parts",
+                cites=["Bereshit Rabbah 83:1"])
 
 # -------------------------- Gen.36.32 · THE_FIRST_KING ---------------------
 # וַיִּמְלֹךְ בֶּאֱדוֹם בֶּלַע בֶּן־בְּעוֹר וְשֵׁם עִירוֹ דִּנְהָבָה
@@ -334,6 +359,10 @@ m.step("Gen.36.33")
 # ‹וַיָּמָת בָּלַע› (“and-die Bela”) — fact holds: and-die-Bela-and-
 # reign(Jobab-from-Bozrah)
 m.fact("va_yamat_bela_va_yimlokh(yovav_mi_batzra)")
+# witness-tier presupposed read: supplier_liability_applied_to_a_state on
+# the_king_from_botzra — read, not installed
+m.witness_read("the_king_from_botzra", "supplier_liability_applied_to_a_state",
+                cites=["Bereshit Rabbah 83:3"])
 
 # -------------------------- Gen.36.34 · THE_THIRD_KING ---------------------
 # וַיָּמָת יוֹבָב וַיִּמְלֹךְ תַּחְתָּיו חֻשָׁם מֵאֶרֶץ הַתֵּימָנִי
@@ -393,6 +422,10 @@ m.step("Gen.36.39")
 # woman-him/its Mehetabeel daughter Matred daughter Mezahab”) — fact holds:
 # and-reign-Hadar(his-wife-Mehetabeel-daughter-from-Mezahab)
 m.fact("va_yimlokh_hadar(ishto_mehetavel_bat_me_zahav)")
+# witness-tier presupposed read: read_as_a_countdown_and_an_escrow on
+# the_last_names — read, not installed
+m.witness_read("the_last_names", "read_as_a_countdown_and_an_escrow",
+                cites=["Bereshit Rabbah 83:4", "Onkelos Genesis 36:39"])
 
 # -------------------------- Gen.36.40 · THE_CLOSING_LIST_OPENS -------------
 # וְאֵלֶּה שְׁמוֹת אַלּוּפֵי עֵשָׂו לְמִשְׁפְּחֹתָם לִמְקֹמֹתָם בִּשְׁמֹתָם
@@ -450,4 +483,29 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
+    assert sorted(m.WORLD["witnessed"]) == ['eight_kings']
+    assert m.WORLD["witnessed"]['eight_kings']["cites"] == ['Bereshit Rabbah 83:2']
+    assert all('the_penalty_minted_at_gen_55_counted_here' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_brides_name', 'a_forgiveness_claim_left_standing_against_the_ledger'), ('went_to_another_land', 'read_as_escaping_the_covenant_debt'), ('the_roster', 'audited_as_evidence_of_illegitimate_lines'), ('what_was_found', 'a_third_reading_entered_by_the_translation'), ('the_king_list', 'read_as_a_state_of_imported_parts'), ('the_king_from_botzra', 'supplier_liability_applied_to_a_state'), ('the_last_names', 'read_as_a_countdown_and_an_escrow')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 67:13']
+    assert all('a_forgiveness_claim_left_standing_against_the_ledger' not in f for f in m.WORLD["facts"])
+    assert 'the_brides_name' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 82:13', 'Onkelos Genesis 36:6']
+    assert all('read_as_escaping_the_covenant_debt' not in f for f in m.WORLD["facts"])
+    assert 'went_to_another_land' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 82:12', 'Bereshit Rabbah 82:15']
+    assert all('audited_as_evidence_of_illegitimate_lines' not in f for f in m.WORLD["facts"])
+    assert 'the_roster' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Genesis 36:24']
+    assert all('a_third_reading_entered_by_the_translation' not in f for f in m.WORLD["facts"])
+    assert 'what_was_found' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 83:1']
+    assert all('read_as_a_state_of_imported_parts' not in f for f in m.WORLD["facts"])
+    assert 'the_king_list' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 83:3']
+    assert all('supplier_liability_applied_to_a_state' not in f for f in m.WORLD["facts"])
+    assert 'the_king_from_botzra' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 83:4', 'Onkelos Genesis 36:39']
+    assert all('read_as_a_countdown_and_an_escrow' not in f for f in m.WORLD["facts"])
+    assert 'the_last_names' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

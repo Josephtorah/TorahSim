@@ -25,6 +25,10 @@ m.step("Gen.30.25")
 # shalcheni(Laban)
 m.declare("yaaqov", "LET",
           "shalcheni(lavan)")
+# witness-tier presupposed read: clock_keyed_to_the_adversarys_birth on
+# the_release_request — read, not installed
+m.witness_read("the_release_request", "clock_keyed_to_the_adversarys_birth",
+                cites=["Bereshit Rabbah 73:7"])
 
 # -------------------------- Gen.30.26 · THE_WIVES_AND_CHILDREN_DEMAND ------
 # תְּנָה אֶת־נָשַׁי וְאֶת־יְלָדַי אֲשֶׁר עָבַדְתִּי אֹתְךָ בָּהֵן וְאֵלֵכָה
@@ -48,6 +52,10 @@ m.step("Gen.30.27")
 # in-circumstance-you/your”) — fact holds: berakh-the-LORD-biglal-
 # Jacob(Laban)
 m.fact("berakh_YHWH_biglal_yaaqov(lavan)")
+# witness-tier presupposed read: scrubbed_identically_by_both_members on
+# i_have_divined — read, not installed
+m.witness_read("i_have_divined", "scrubbed_identically_by_both_members",
+                cites=["Bereshit Rabbah 73:8", "Onkelos Genesis 30:27"])
 
 # -------------------------- Gen.30.28 · THE_WAGE_DESIGNATION_DEMAND --------
 # וַיֹּאמַר נָקְבָה שְׂכָרְךָ עָלַי וְאֶתֵּנָה
@@ -101,6 +109,11 @@ m.step("Gen.30.32")
 # ‹וְהָיָה שְׂכָרִי› (“and-be wage-me/my”) — demand settled (popped from the
 # queue): naqva-sekhar(Jacob)
 m.result("naqva_sekhar(yaaqov)", tmark="t3")
+# witness-tier presupposed read:
+# fraud_count_disputed_ten_against_one_hundred on the_wage_terms — read, not
+# installed
+m.witness_read("the_wage_terms", "fraud_count_disputed_ten_against_one_hundred",
+                cites=["Bereshit Rabbah 73:9", "Bereshit Rabbah 74:3"])
 
 # -------------------------- Gen.30.33 · THE_RIGHTEOUSNESS_CLAUSE -----------
 # וְעָנְתָה־בִּי צִדְקָתִי בְּיוֹם מָחָר כִּי־תָבוֹא עַל־שְׂכָרִי לְפָנֶיךָ
@@ -172,6 +185,14 @@ m.step("Gen.30.38")
 # channel in-trough the-waters”) — fact holds: shoot-in-the-rehatim(to-
 # front-part-the-flock)
 m.fact("maqlot_ba_rehatim(le_nokhach_ha_tzon)")
+# witness-tier presupposed read: natural_sign_against_angelic_transfer on
+# the_rods — read, not installed
+m.witness_read("the_rods", "natural_sign_against_angelic_transfer",
+                cites=["Bereshit Rabbah 73:10", "Onkelos Genesis 30:38"])
+# witness-tier presupposed read: applied_to_decide_a_paternity_case on
+# the_impression_doctrine — read, not installed
+m.witness_read("the_impression_doctrine", "applied_to_decide_a_paternity_case",
+                cites=["Bereshit Rabbah 73:10"])
 
 # -------------------------- Gen.30.39 · THE_FLOCK_CONCEIVES_STRIPED --------
 # וַיֶּחֱמוּ הַצֹּאן אֶל־הַמַּקְלוֹת וַתֵּלַדְןָ הַצֹּאן עֲקֻדִּים נְקֻדִּים
@@ -183,6 +204,11 @@ m.step("Gen.30.39")
 # flock striped spotted and-cover-with-pieces”) — fact holds: bear-young-
 # striped-spotted-cover-with-pieces(the-flock)
 m.fact("teladna_aqudim_nequdim_teluim(ha_tzon)")
+# witness-tier presupposed read:
+# formed_before_the_condition_argued_from_tense on the_outcome — read, not
+# installed
+m.witness_read("the_outcome", "formed_before_the_condition_argued_from_tense",
+                cites=["Bereshit Rabbah 74:3"])
 
 # -------------------------- Gen.30.40 · THE_SEPARATION ---------------------
 # וְהַכְּשָׂבִים הִפְרִיד יַעֲקֹב וַיִּתֵּן פְּנֵי הַצֹּאן אֶל־עָקֹד
@@ -217,6 +243,14 @@ m.step("Gen.30.42")
 # to-Laban and-the-tie to-Jacob”) — fact holds: shroud-to-Laban-tie-to-
 # Jacob(the-flock)
 m.fact("atufim_le_lavan_qeshurim_le_yaaqov(ha_tzon)")
+# witness-tier presupposed read: dispute_seat_held_by_the_rendering on
+# the_flock_split — read, not installed
+m.witness_read("the_flock_split", "dispute_seat_held_by_the_rendering",
+                cites=["Onkelos Genesis 30:42"])
+# witness-tier presupposed read: absorbed_so_it_never_reaches_the_owner on
+# the_predator_tax — read, not installed
+m.witness_read("the_predator_tax", "absorbed_so_it_never_reaches_the_owner",
+                cites=["Bereshit Rabbah 74:11"])
 
 # -------------------------- Gen.30.43 · THE_BREAK_OUT_DOUBLED --------------
 # וַיִּפְרֹץ הָאִישׁ מְאֹד מְאֹד וַיְהִי־לוֹ צֹאן רַבּוֹת וּשְׁפָחוֹת
@@ -227,6 +261,10 @@ m.step("Gen.30.43")
 # ‹וַיִּפְרֹץ הָאִישׁ מְאֹד מְאֹד› (“and-break-out the-man very very”) —
 # fact holds: paratz-very-very(the-man)
 m.fact("paratz_meod_meod(ha_ish)")
+# witness-grounded state (its own tier):
+# censused_with_its_disagreement_reconciled on the_wealth
+m.witness_state("the_wealth", "censused_with_its_disagreement_reconciled",
+                cites=["Bereshit Rabbah 73:11"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -244,4 +282,32 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 4
+    assert sorted(m.WORLD["witnessed"]) == ['the_wealth']
+    assert m.WORLD["witnessed"]['the_wealth']["cites"] == ['Bereshit Rabbah 73:11']
+    assert all('censused_with_its_disagreement_reconciled' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_release_request', 'clock_keyed_to_the_adversarys_birth'), ('i_have_divined', 'scrubbed_identically_by_both_members'), ('the_wage_terms', 'fraud_count_disputed_ten_against_one_hundred'), ('the_rods', 'natural_sign_against_angelic_transfer'), ('the_impression_doctrine', 'applied_to_decide_a_paternity_case'), ('the_outcome', 'formed_before_the_condition_argued_from_tense'), ('the_flock_split', 'dispute_seat_held_by_the_rendering'), ('the_predator_tax', 'absorbed_so_it_never_reaches_the_owner')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 73:7']
+    assert all('clock_keyed_to_the_adversarys_birth' not in f for f in m.WORLD["facts"])
+    assert 'the_release_request' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 73:8', 'Onkelos Genesis 30:27']
+    assert all('scrubbed_identically_by_both_members' not in f for f in m.WORLD["facts"])
+    assert 'i_have_divined' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 73:9', 'Bereshit Rabbah 74:3']
+    assert all('fraud_count_disputed_ten_against_one_hundred' not in f for f in m.WORLD["facts"])
+    assert 'the_wage_terms' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 73:10', 'Onkelos Genesis 30:38']
+    assert all('natural_sign_against_angelic_transfer' not in f for f in m.WORLD["facts"])
+    assert 'the_rods' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 73:10']
+    assert all('applied_to_decide_a_paternity_case' not in f for f in m.WORLD["facts"])
+    assert 'the_impression_doctrine' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 74:3']
+    assert all('formed_before_the_condition_argued_from_tense' not in f for f in m.WORLD["facts"])
+    assert 'the_outcome' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Genesis 30:42']
+    assert all('dispute_seat_held_by_the_rendering' not in f for f in m.WORLD["facts"])
+    assert 'the_flock_split' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 74:11']
+    assert all('absorbed_so_it_never_reaches_the_owner' not in f for f in m.WORLD["facts"])
+    assert 'the_predator_tax' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

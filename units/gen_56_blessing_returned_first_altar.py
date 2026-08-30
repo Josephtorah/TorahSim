@@ -27,6 +27,10 @@ m.step("Gen.33.1")
 # lift/carry Jacob eye-him/its and-see and-behold Esau come/bring”) — fact
 # holds: and-see-Esau-come/bring-and-cut(four-hundred-man)
 m.fact("va_yar_esav_ba_va_yachatz(arba_meot_ish)")
+# witness-tier presupposed read: collective_merit_disaggregated_under_test
+# on dividing_the_children — read, not installed
+m.witness_read("dividing_the_children", "collective_merit_disaggregated_under_test",
+                cites=["Bereshit Rabbah 78:7"])
 
 # -------------------------- Gen.33.2 · THE_ORDER_OF_LOVE -------------------
 # וַיָּשֶׂם אֶת־הַשְּׁפָחוֹת וְאֶת־יַלְדֵיהֶן רִאשֹׁנָה וְאֶת־לֵאָה
@@ -59,6 +63,10 @@ m.step("Gen.33.4")
 # encountering-him/its and-clasp-him/its”) — fact holds: and-yechabqehu-and-
 # weep(Esau-and-Jacob)
 m.fact("va_yechabqehu_va_yivku(esav_ve_yaaqov)")
+# witness-tier presupposed read: the_rules_own_tie_case_confirmed_in_our_ink
+# on the_dotted_kiss — read, not installed
+m.witness_read("the_dotted_kiss", "the_rules_own_tie_case_confirmed_in_our_ink",
+                cites=["Bereshit Rabbah 78:9"])
 
 # -------------------------- Gen.33.5 · THE_GRACE_VERB_IS_BORN --------------
 # וַיִּשָּׂא אֶת־עֵינָיו וַיַּרְא אֶת־הַנָּשִׁים וְאֶת־הַיְלָדִים וַיֹּאמֶר
@@ -70,6 +78,10 @@ m.step("Gen.33.5")
 # ‹חָנַן אֱלֹהִים אֶת־עַבְדֶּךָ› (“bend God obj-marker servant-you/your”) —
 # fact holds: the-child-which-bend-God(maane-Jacob)
 m.fact("ha_yeladim_asher_chanan_Elohim(maane_yaaqov)")
+# witness-tier presupposed read: one_grace_outstanding_until_43_29 on
+# the_children_God_graced — read, not installed
+m.witness_read("the_children_God_graced", "one_grace_outstanding_until_43_29",
+                cites=["Bereshit Rabbah 78:10"])
 
 # -------------------------- Gen.33.6 · THE_FIRST_WAVE ----------------------
 # וַתִּגַּשְׁןָ הַשְּׁפָחוֹת הֵנָּה וְיַלְדֵיהֶן וַתִּשְׁתַּחֲוֶיןָ
@@ -126,6 +138,10 @@ m.step("Gen.33.10")
 # see face God and-be-pleased-with-me/my”) — fact holds: very-widely-used-
 # as-a-relati-see-face-God-and-tirtzeni(peniel-coda)
 m.fact("ki_reot_pene_Elohim_va_tirtzeni(peniel_coda)")
+# witness-tier presupposed read: comparison_removed_by_both_members on
+# as_the_face_of_God — read, not installed
+m.witness_read("as_the_face_of_God", "comparison_removed_by_both_members",
+                cites=["Onkelos Genesis 33:10"])
 
 # -------------------------- Gen.33.11 · THE_POP_THE_BLESSING_RETURNED ------
 # קַח־נָא אֶת־בִּרְכָתִי אֲשֶׁר הֻבָאת לָךְ כִּי־חַנַּנִי אֱלֹהִים וְכִי
@@ -140,6 +156,10 @@ m.declare("yaaqov", "LET",
 # ‹וַיִּפְצַר־בּוֹ וַיִּקָּח› (“and-peck-at in-him/its and-take”) — demand
 # settled (popped from the queue): take-please-obj-marker-birkhati(Esau)
 m.result("qach_na_et_birkhati(esav)", tmark="t2")
+# witness-tier presupposed read: booked_as_a_reversible_transfer on the_gift
+# — read, not installed
+m.witness_read("the_gift", "booked_as_a_reversible_transfer",
+                cites=["Bereshit Rabbah 78:12"])
 
 # -------------------------- Gen.33.12 · THE_DECLINED_CONVOY ----------------
 # וַיֹּאמֶר נִסְעָה וְנֵלֵכָה וְאֵלְכָה לְנֶגְדֶּךָ
@@ -175,6 +195,11 @@ m.step("Gen.33.14")
 # please(adoni, to-me-fene-avdo)
 m.declare("yaaqov", "LET",
           "yaavar_na(adoni, li_fene_avdo)")
+# witness-tier presupposed read:
+# audited_unkept_and_reclassified_as_outstanding on i_will_come_to_seir —
+# read, not installed
+m.witness_read("i_will_come_to_seir", "audited_unkept_and_reclassified_as_outstanding",
+                cites=["Bereshit Rabbah 78:14"])
 
 # -------------------------- Gen.33.15 · THE_DECLINED_GARRISON --------------
 # וַיֹּאמֶר עֵשָׂו אַצִּיגָה־נָּא עִמְּךָ מִן־הָעָם אֲשֶׁר אִתִּי וַיֹּאמֶר
@@ -196,6 +221,11 @@ m.step("Gen.33.16")
 # day that Esau to-way/road-him/its Seir-ward”) — fact holds: and-return-
 # Esau-seira(to-its-way)
 m.fact("va_yashav_esav_seira(le_darko)")
+# witness-tier presupposed read:
+# run_as_procedure_with_its_one_logged_failure on the_portion — read, not
+# installed
+m.witness_read("the_portion", "run_as_procedure_with_its_one_logged_failure",
+                cites=["Bereshit Rabbah 78:15"])
 
 # -------------------------- Gen.33.17 · THE_SECOND_VECTOR_AND_THE_BOOTHS ---
 # וְיַעֲקֹב נָסַע סֻכֹּתָה וַיִּבֶן לוֹ בָּיִת וּלְמִקְנֵהוּ עָשָׂה סֻכֹּת
@@ -219,6 +249,11 @@ m.step("Gen.33.18")
 # Shechem”) — fact holds: and-come/bring-complete-who?-from-Padan(and-
 # encamp)
 m.fact("va_yavo_shalem_mi_padan_aram(va_yichan)")
+# witness-tier presupposed read:
+# gratitude_to_the_place_and_a_fence_enforced_twice on he_camped — read, not
+# installed
+m.witness_read("he_camped", "gratitude_to_the_place_and_a_fence_enforced_twice",
+                cites=["Bereshit Rabbah 79:6"])
 
 # -------------------------- Gen.33.19 · THE_SECOND_PURCHASE ----------------
 # וַיִּקֶן אֶת־חֶלְקַת הַשָּׂדֶה אֲשֶׁר נָטָה־שָׁם אָהֳלוֹ מִיַּד
@@ -230,6 +265,11 @@ m.step("Gen.33.19")
 # ‹וַיִּקֶן אֶת־חֶלְקַת הַשָּׂדֶה› (“and-erect obj-marker smoothness the-
 # field”) — fact holds: and-erect-smoothness-the-field(in-hundred-ingot)
 m.fact("va_yiqen_chelqat_ha_sade(be_mea_qesita)")
+# witness-tier presupposed read:
+# third_uncontestable_purchase_completing_the_set on the_hundred_units —
+# read, not installed
+m.witness_read("the_hundred_units", "third_uncontestable_purchase_completing_the_set",
+                cites=["Bereshit Rabbah 79:7", "Onkelos Genesis 33:19"])
 
 # -------------------------- Gen.33.20 · THE_ALTAR_AND_THE_OBLIQUE_WRITE ----
 # וַיַּצֶּב־שָׁם מִזְבֵּחַ וַיִּקְרָא־לוֹ אֵל אֱלֹהֵי יִשְׂרָאֵל
@@ -242,6 +282,10 @@ m.install("ha_mizbeach")
 # ‹וַיִּקְרָא־לוֹ אֵל אֱלֹהֵי יִשְׂרָאֵל› (“and-call to-him/its strength God
 # Israel”) — named: the-altar := do-not-God-Israel
 m.name("ha_mizbeach", "el_elohe_yisrael")
+# witness-tier presupposed read: offence_priced_here_and_deleted_there on
+# the_altars_name — read, not installed
+m.witness_read("the_altars_name", "offence_priced_here_and_deleted_there",
+                cites=["Bereshit Rabbah 79:8", "Onkelos Genesis 33:20"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -259,4 +303,35 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 6
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('dividing_the_children', 'collective_merit_disaggregated_under_test'), ('the_dotted_kiss', 'the_rules_own_tie_case_confirmed_in_our_ink'), ('the_children_God_graced', 'one_grace_outstanding_until_43_29'), ('as_the_face_of_God', 'comparison_removed_by_both_members'), ('the_gift', 'booked_as_a_reversible_transfer'), ('i_will_come_to_seir', 'audited_unkept_and_reclassified_as_outstanding'), ('the_portion', 'run_as_procedure_with_its_one_logged_failure'), ('he_camped', 'gratitude_to_the_place_and_a_fence_enforced_twice'), ('the_hundred_units', 'third_uncontestable_purchase_completing_the_set'), ('the_altars_name', 'offence_priced_here_and_deleted_there')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 78:7']
+    assert all('collective_merit_disaggregated_under_test' not in f for f in m.WORLD["facts"])
+    assert 'dividing_the_children' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 78:9']
+    assert all('the_rules_own_tie_case_confirmed_in_our_ink' not in f for f in m.WORLD["facts"])
+    assert 'the_dotted_kiss' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 78:10']
+    assert all('one_grace_outstanding_until_43_29' not in f for f in m.WORLD["facts"])
+    assert 'the_children_God_graced' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Genesis 33:10']
+    assert all('comparison_removed_by_both_members' not in f for f in m.WORLD["facts"])
+    assert 'as_the_face_of_God' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 78:12']
+    assert all('booked_as_a_reversible_transfer' not in f for f in m.WORLD["facts"])
+    assert 'the_gift' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 78:14']
+    assert all('audited_unkept_and_reclassified_as_outstanding' not in f for f in m.WORLD["facts"])
+    assert 'i_will_come_to_seir' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 78:15']
+    assert all('run_as_procedure_with_its_one_logged_failure' not in f for f in m.WORLD["facts"])
+    assert 'the_portion' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 79:6']
+    assert all('gratitude_to_the_place_and_a_fence_enforced_twice' not in f for f in m.WORLD["facts"])
+    assert 'he_camped' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 79:7', 'Onkelos Genesis 33:19']
+    assert all('third_uncontestable_purchase_completing_the_set' not in f for f in m.WORLD["facts"])
+    assert 'the_hundred_units' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 79:8', 'Onkelos Genesis 33:20']
+    assert all('offence_priced_here_and_deleted_there' not in f for f in m.WORLD["facts"])
+    assert 'the_altars_name' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

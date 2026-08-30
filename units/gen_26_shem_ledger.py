@@ -37,6 +37,10 @@ m.event("beget", agent="shem", themes=["arpakhshad"])
 # marker Arphaxad five hundred years and-bear-young son and-daughter”) —
 # fact holds: son-and-daughter(Sem)
 m.fact("banim_u_vanot(shem)")
+# witness-tier presupposed read: canonical_case_table_subject on
+# ten_generations_ledger — read, not installed
+m.witness_read("ten_generations_ledger", "canonical_case_table_subject",
+                cites=["Pirkei Avot 5:2"])
 
 # -------------------------- Gen.11.12-13 · ARPACHSHAD_ROW_FRONTED_PERFECT --
 # וְאַרְפַּכְשַׁד חַי חָמֵשׁ וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־שָׁלַח …
@@ -192,6 +196,10 @@ m.event("die", agent="haran")
 m.fact("be_eretz_moladto_be_ur_kasdim(haran)")
 # reads without prior install (flag, not fix): Ur-Chaldeans
 m.presupposed("ur_kasdim")
+# witness-tier presupposed read: proof_text_in_a_priestly_law_dispute on
+# al_penei_phrase — read, not installed
+m.witness_read("al_penei_phrase", "proof_text_in_a_priestly_law_dispute",
+                cites=["Megillah 14a:13", "Pesikta DeRav Kahana 26:10"])
 
 # -------------------------- Gen.11.29 · THE_WIVES_TAKEN_ONE_GENEALOGY_WITHHELD -
 # וַיִּקַּח אַבְרָם וְנָחוֹר לָהֶם נָשִׁים שֵׁם אֵשֶׁת־אַבְרָם שָׂרָי וְשֵׁם
@@ -213,6 +221,10 @@ m.fact("shem_eshet_avram_saray",
 # Haran; Haran-father-milkah-and-father-yiskah
 m.fact("milkah_bat_haran",
        "haran_avi_milkah_va_avi_yiskah")
+# witness-tier presupposed read: cited_as_paternity_age_precedent on
+# ledger_arithmetic — read, not installed
+m.witness_read("ledger_arithmetic", "cited_as_paternity_age_precedent",
+                cites=["Bereshit Rabbah 38:14", "Jerusalem Talmud Yevamot 10:7:8", "Bereshit Rabbah 45:1"])
 
 # -------------------------- Gen.11.30 · SARAI_BARREN_THE_DOUBLED_ABSENCE ---
 # וַתְּהִי שָׂרַי עֲקָרָה אֵין לָהּ וָלָד
@@ -224,6 +236,10 @@ m.fact("saray_akarah")
 # ‹אֵין לָהּ וָלָד› (“there-is-not to-her/its boy”) — fact holds: ein-lah-
 # boy
 m.fact("ein_lah_valad")
+# witness-tier presupposed read: redundancy_read_as_anatomy on barren_clause
+# — read, not installed
+m.witness_read("barren_clause", "redundancy_read_as_anatomy",
+                cites=["Yevamot 64b:2", "Bereshit Rabbah 45:1"])
 
 # -------------------------- Gen.11.31 · THE_JOURNEY_STATED_STOPPED_SETTLED -
 # וַיִּקַּח תֶּרַח אֶת־אַבְרָם בְּנוֹ וְאֶת־לוֹט בֶּן־הָרָן בֶּן־בְּנוֹ
@@ -266,6 +282,10 @@ m.fact("yemei_terach_205_shanah")
 # ‹וַיָּמָת תֶּרַח בְּחָרָן› (“and-die Tarah in-Haran”) — event: die — agent
 # Tarah
 m.event("die", agent="terach")
+# witness-tier presupposed read: narrated_out_of_order_on_purpose on
+# terach_death_notice — read, not installed
+m.witness_read("terach_death_notice", "narrated_out_of_order_on_purpose",
+                cites=["Bereshit Rabbah 39:7"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -283,4 +303,20 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 19
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ten_generations_ledger', 'canonical_case_table_subject'), ('al_penei_phrase', 'proof_text_in_a_priestly_law_dispute'), ('ledger_arithmetic', 'cited_as_paternity_age_precedent'), ('barren_clause', 'redundancy_read_as_anatomy'), ('terach_death_notice', 'narrated_out_of_order_on_purpose')]
+    assert m.WITNESS_READS[0]["cites"] == ['Pirkei Avot 5:2']
+    assert all('canonical_case_table_subject' not in f for f in m.WORLD["facts"])
+    assert 'ten_generations_ledger' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Megillah 14a:13', 'Pesikta DeRav Kahana 26:10']
+    assert all('proof_text_in_a_priestly_law_dispute' not in f for f in m.WORLD["facts"])
+    assert 'al_penei_phrase' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 38:14', 'Jerusalem Talmud Yevamot 10:7:8', 'Bereshit Rabbah 45:1']
+    assert all('cited_as_paternity_age_precedent' not in f for f in m.WORLD["facts"])
+    assert 'ledger_arithmetic' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Yevamot 64b:2', 'Bereshit Rabbah 45:1']
+    assert all('redundancy_read_as_anatomy' not in f for f in m.WORLD["facts"])
+    assert 'barren_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 39:7']
+    assert all('narrated_out_of_order_on_purpose' not in f for f in m.WORLD["facts"])
+    assert 'terach_death_notice' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

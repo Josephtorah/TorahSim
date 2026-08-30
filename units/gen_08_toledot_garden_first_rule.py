@@ -33,6 +33,18 @@ m.presupposed("shamayim", "aretz")
 # personal name + generic)
 m.spec_delta("Elohim (the week's sole agent name, gen_01-07)",
              "YHWH_Elohim (compound: personal name + generic)")
+# witness-tier presupposed read: complete_name_over_completed_world on
+# yhwh_elohim_debut — read, not installed
+m.witness_read("yhwh_elohim_debut", "complete_name_over_completed_world",
+                cites=["Bereshit Rabbah 13:3", "Bereshit Rabbah 12:15"])
+# witness-tier presupposed read: mortality_class_marker on toledot_header —
+# read, not installed
+m.witness_read("toledot_header", "mortality_class_marker",
+                cites=["Bereshit Rabbah 12:7"])
+# witness-grounded state (its own tier): equal_creation_recorded_dispute on
+# chiasm_flip_earth_heaven
+m.witness_state("chiasm_flip_earth_heaven", "equal_creation_recorded_dispute",
+                cites=["Tosefta Keritot 4:7", "Bereshit Rabbah 12:12"])
 
 # -------------------------- Gen.2.5 · PRECONDITIONS_LACKS ------------------
 # וְכֹל שִׂיחַ הַשָּׂדֶה טֶרֶם יִהְיֶה בָאָרֶץ וְכָל־עֵשֶׂב הַשָּׂדֶה טֶרֶם
@@ -61,6 +73,14 @@ m.step("Gen.2.6")
 # ‹וְאֵד יַעֲלֶה … וְהִשְׁקָה› (“and-mist would-rise … and-would-water”) —
 # fact holds: mist-went-up-and-watered(all-face-of-the-ground)
 m.fact("ed_yaaleh_ve_hishqah(kol_pnei_ha_adamah)")
+# witness-tier presupposed read: superseded_irrigation_regime on ed_mist —
+# read, not installed
+m.witness_read("ed_mist", "superseded_irrigation_regime",
+                cites=["Bereshit Rabbah 13:9", "Mekhilta DeRabbi Yishmael, Tractate Shirah 2:4"])
+# witness-tier presupposed read: sukkah_roof_and_niddah_law_source on
+# ed_mist — read, not installed
+m.witness_read("ed_mist", "sukkah_roof_and_niddah_law_source",
+                cites=["Sukkah 11b:14", "Jerusalem Talmud Sukkah 1:5:4", "Jerusalem Talmud Shabbat 2:6:10"])
 
 # -------------------------- Gen.2.7 · FORM_BREATHE_BECOME ------------------
 # וַיִּיצֶר יְהוָה אֱלֹהִים אֶת־הָאָדָם עָפָר מִן־הָאֲדָמָה וַיִּפַּח
@@ -85,6 +105,22 @@ m.install("adam")
 # delivery says he-formed (form — the potter verb, double-yod written-form)
 m.spec_delta("bara/asah (create/make — the week's build verbs)",
              "yatzar (form — the potter verb, double-yod ktiv)")
+# witness-tier presupposed read: flood_breath_verbal_analogy on
+# nishmat_chayim — read, not installed
+m.witness_read("nishmat_chayim", "flood_breath_verbal_analogy",
+                cites=["Bereshit Rabbah 14:10"])
+# witness-grounded state (its own tier): four_recorded_readings on
+# vayyitzer_double_yod
+m.witness_state("vayyitzer_double_yod", "four_recorded_readings",
+                cites=["Berakhot 61a:3", "Bereshit Rabbah 14:2", "Bereshit Rabbah 14:3", "Eruvin 18a:20"])
+# witness-tier presupposed read: self_preservation_command on nefesh_chayah
+# — read, not installed
+m.witness_read("nefesh_chayah", "self_preservation_command",
+                cites=["Taanit 22b:11", "Bereshit Rabbah 14:9"])
+# witness-tier presupposed read: shaped_fetus_purity_law on
+# vayyitzer_man_and_beast — read, not installed
+m.witness_read("vayyitzer_man_and_beast", "shaped_fetus_purity_law",
+                cites=["Niddah 22b:13", "Chullin 71a:12"])
 
 # -------------------------- Gen.2.8 · PLANT_PLACE --------------------------
 # וַיִּטַּע יְהוָה אֱלֹהִים גַּן־בְּעֵדֶן מִקֶּדֶם וַיָּשֶׂם שָׁם
@@ -104,6 +140,10 @@ m.event("place", agent="YHWH_Elohim", themes=["adam"])
 m.install("gan")
 # reads without prior install (flag, not fix): Eden
 m.presupposed("eden")
+# witness-grounded state (its own tier):
+# recorded_dispute_time_and_containment on gan_planting
+m.witness_state("gan_planting", "recorded_dispute_time_and_containment",
+                cites=["Bereshit Rabbah 15:3", "Pesachim 54a:10", "Bereshit Rabbah 15:2"])
 
 # -------------------------- Gen.2.9 · SPROUT_TWO_TREES ---------------------
 # וַיַּצְמַח יְהוָה אֱלֹהִים מִן־הָאֲדָמָה כָּל־עֵץ נֶחְמָד לְמַרְאֶה וְטוֹב
@@ -192,6 +232,10 @@ m.name("nahar_4", "Perat")
 # ‹הוּא הַהֹלֵךְ קִדְמַת אַשּׁוּר› (“he/it the-going east-of Asshur”) — fact
 # holds: going-east-of-Asshur(river-3)
 m.fact("holekh_qidmat_ashur(nahar_3)")
+# witness-tier presupposed read: proleptic_name_rule on
+# known_geography_flags — read, not installed
+m.witness_read("known_geography_flags", "proleptic_name_rule",
+                cites=["Ketubot 10b:10", "Bereshit Rabbah 16:2"])
 
 # -------------------------- Gen.2.15 · TAKE_SETTLE_ASSIGN_JOB --------------
 # וַיִּקַּח יְהוָה אֱלֹהִים אֶת־הָאָדָם וַיַּנִּחֵהוּ בְגַן־עֵדֶן לְעָבְדָהּ
@@ -227,6 +271,10 @@ m.declare("YHWH_Elohim", "LET?",
 # (the grant narrows to a bounded domain)
 m.spec_delta("kol esev + kol etz le-okhlah (1:29 universal food grant)",
              "mi-kol etz ha-gan + one exclusion pending (the grant narrows to a bounded domain)")
+# witness-tier presupposed read: six_noachide_commandments on
+# declare_payload — read, not installed
+m.witness_read("declare_payload", "six_noachide_commandments",
+                cites=["Sanhedrin 56b:4", "Bereshit Rabbah 16:6", "Pesikta DeRav Kahana 12:1", "Sanhedrin 56b:23"])
 
 # -------------------------- Gen.2.17 · PROHIBITION_PENALTY -----------------
 # וּמֵעֵץ הַדַּעַת טוֹב וָרָע לֹא תֹאכַל מִמֶּנּוּ כִּי בְּיוֹם אֲכָלְךָ
@@ -246,6 +294,10 @@ m.declare("YHWH_Elohim", "LET-NOT",
 # die(human)
 m.handler("be_yom_akhal(adam, me_etz_ha_daat_tov_va_ra)",
           "mot_tamut(adam)")
+# witness-tier presupposed read: divine_day_scope_and_exact_payload on
+# death_handler — read, not installed
+m.witness_read("death_handler", "divine_day_scope_and_exact_payload",
+                cites=["Bereshit Rabbah 19:8", "Bereshit Rabbah 19:3", "Sanhedrin 29a:34", "Jerusalem Talmud Kiddushin 4:1:9"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -263,4 +315,42 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 18
+    assert sorted(m.WORLD["witnessed"]) == ['chiasm_flip_earth_heaven', 'gan_planting', 'vayyitzer_double_yod']
+    assert m.WORLD["witnessed"]['chiasm_flip_earth_heaven']["cites"] == ['Tosefta Keritot 4:7', 'Bereshit Rabbah 12:12']
+    assert all('equal_creation_recorded_dispute' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['gan_planting']["cites"] == ['Bereshit Rabbah 15:3', 'Pesachim 54a:10', 'Bereshit Rabbah 15:2']
+    assert all('recorded_dispute_time_and_containment' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['vayyitzer_double_yod']["cites"] == ['Berakhot 61a:3', 'Bereshit Rabbah 14:2', 'Bereshit Rabbah 14:3', 'Eruvin 18a:20']
+    assert all('four_recorded_readings' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('yhwh_elohim_debut', 'complete_name_over_completed_world'), ('toledot_header', 'mortality_class_marker'), ('ed_mist', 'superseded_irrigation_regime'), ('ed_mist', 'sukkah_roof_and_niddah_law_source'), ('nishmat_chayim', 'flood_breath_verbal_analogy'), ('nefesh_chayah', 'self_preservation_command'), ('vayyitzer_man_and_beast', 'shaped_fetus_purity_law'), ('known_geography_flags', 'proleptic_name_rule'), ('declare_payload', 'six_noachide_commandments'), ('death_handler', 'divine_day_scope_and_exact_payload')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 13:3', 'Bereshit Rabbah 12:15']
+    assert all('complete_name_over_completed_world' not in f for f in m.WORLD["facts"])
+    assert 'yhwh_elohim_debut' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 12:7']
+    assert all('mortality_class_marker' not in f for f in m.WORLD["facts"])
+    assert 'toledot_header' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 13:9', 'Mekhilta DeRabbi Yishmael, Tractate Shirah 2:4']
+    assert all('superseded_irrigation_regime' not in f for f in m.WORLD["facts"])
+    assert 'ed_mist' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sukkah 11b:14', 'Jerusalem Talmud Sukkah 1:5:4', 'Jerusalem Talmud Shabbat 2:6:10']
+    assert all('sukkah_roof_and_niddah_law_source' not in f for f in m.WORLD["facts"])
+    assert 'ed_mist' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 14:10']
+    assert all('flood_breath_verbal_analogy' not in f for f in m.WORLD["facts"])
+    assert 'nishmat_chayim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Taanit 22b:11', 'Bereshit Rabbah 14:9']
+    assert all('self_preservation_command' not in f for f in m.WORLD["facts"])
+    assert 'nefesh_chayah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Niddah 22b:13', 'Chullin 71a:12']
+    assert all('shaped_fetus_purity_law' not in f for f in m.WORLD["facts"])
+    assert 'vayyitzer_man_and_beast' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Ketubot 10b:10', 'Bereshit Rabbah 16:2']
+    assert all('proleptic_name_rule' not in f for f in m.WORLD["facts"])
+    assert 'known_geography_flags' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sanhedrin 56b:4', 'Bereshit Rabbah 16:6', 'Pesikta DeRav Kahana 12:1', 'Sanhedrin 56b:23']
+    assert all('six_noachide_commandments' not in f for f in m.WORLD["facts"])
+    assert 'declare_payload' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 19:8', 'Bereshit Rabbah 19:3', 'Sanhedrin 29a:34', 'Jerusalem Talmud Kiddushin 4:1:9']
+    assert all('divine_day_scope_and_exact_payload' not in f for f in m.WORLD["facts"])
+    assert 'death_handler' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

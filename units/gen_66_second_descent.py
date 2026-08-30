@@ -21,6 +21,10 @@ m.step("Gen.43.1")
 # ‹וְהָרָעָב כָּבֵד בָּאָרֶץ› (“and-the-hunger heavy in-earth”) — fact
 # holds: and-the-hunger-heavy-come/bring-earth
 m.fact("ve_ha_raav_kaved_ba_aretz")
+# witness-tier presupposed read: an_enumerated_member_of_the_paved_way on
+# the_famine_was_severe — read, not installed
+m.witness_read("the_famine_was_severe", "an_enumerated_member_of_the_paved_way",
+                cites=["Bereshit Rabbah 40:6"])
 
 # -------------------------- Gen.43.2 · RETURN_AND_BUY_A_LITTLE -------------
 # וַיְהִי כַּאֲשֶׁר כִּלּוּ לֶאֱכֹל אֶת־הַשֶּׁבֶר אֲשֶׁר הֵבִיאוּ
@@ -113,6 +117,10 @@ m.step("Gen.43.9")
 # me/my search-out-him/its”) — fact holds: anokhi-eervenu-who?-yadi-
 # tevaqshenu
 m.fact("anokhi_eervenu_mi_yadi_tevaqshenu")
+# witness-tier presupposed read: read_clause_by_clause_through_a_proverb on
+# judahs_pledge — read, not installed
+m.witness_read("judahs_pledge", "read_clause_by_clause_through_a_proverb",
+                cites=["Bereshit Rabbah 93:1", "Onkelos Genesis 43:9"])
 
 # -------------------------- Gen.43.10 · WE_COULD_HAVE_RETURNED_TWICE -------
 # כִּי לוּלֵא הִתְמַהְמָהְנוּ כִּי־עַתָּה שַׁבְנוּ זֶה פַעֲמָיִם
@@ -122,6 +130,10 @@ m.step("Gen.43.10")
 # ‹כִּי לוּלֵא הִתְמַהְמָהְנוּ› (“that if-not question”) — fact holds: that-
 # if-not-question
 m.fact("ki_lule_hitmahmahnu")
+# witness-grounded state (its own tier):
+# a_standing_rule_meeting_its_own_objection on had_we_not_delayed
+m.witness_state("had_we_not_delayed", "a_standing_rule_meeting_its_own_objection",
+                cites=["Bereshit Rabbah 74:12"])
 
 # -------------------------- Gen.43.11 · THE_FATHERS_CARAVAN_PLAN -----------
 # וַיֹּאמֶר אֲלֵהֶם יִשְׂרָאֵל אֲבִיהֶם אִם־כֵּן אֵפוֹא זֹאת עֲשׂוּ קְחוּ
@@ -137,6 +149,10 @@ m.step("Gen.43.11")
 # Israel speaks a demand — LET: this-make-take-and-go-down
 m.declare("yisrael", "LET",
           "zot_asu_qechu_ve_horidu")
+# witness-grounded state (its own tier):
+# the_particle_that_wires_deception_to_repayment on if_so_then_do_this
+m.witness_state("if_so_then_do_this", "the_particle_that_wires_deception_to_repayment",
+                cites=["Bereshit Rabbah 91:11"])
 
 # -------------------------- Gen.43.12 · DOUBLE_SILVER_AND_THE_RETURNED -----
 # וְכֶסֶף מִשְׁנֶה קְחוּ בְיֶדְכֶם וְאֶת־הַכֶּסֶף הַמּוּשָׁב בְּפִי
@@ -171,6 +187,14 @@ m.step("Gen.43.14")
 # lakhem-compassion
 m.declare("yisrael", "LET",
           "el_shaday_yiten_lakhem_rachamim")
+# witness-tier presupposed read: prayer_sited_where_the_accounting_ends on
+# may_god_almighty_give_you_mercy — read, not installed
+m.witness_read("may_god_almighty_give_you_mercy", "prayer_sited_where_the_accounting_ends",
+                cites=["Bereshit Rabbah 92:2"])
+# witness-grounded state (its own tier):
+# one_verse_carrying_a_domestic_and_a_national_register on as_i_am_bereaved
+m.witness_state("as_i_am_bereaved", "one_verse_carrying_a_domestic_and_a_national_register",
+                cites=["Bereshit Rabbah 92:3"])
 
 # -------------------------- Gen.43.15 · THE_CARAVAN_DESCENDS ---------------
 # וַיִּקְחוּ הָאֲנָשִׁים אֶת־הַמִּנְחָה הַזֹּאת וּמִשְׁנֶה־כֶּסֶף לָקְחוּ
@@ -202,6 +226,10 @@ m.step("Gen.43.16")
 # man-the-baita
 m.declare("yosef", "LET",
           "have_et_ha_anashim_ha_baita")
+# witness-tier presupposed read: a_sabbath_kept_before_it_was_given on
+# slaughter_and_prepare — read, not installed
+m.witness_read("slaughter_and_prepare", "a_sabbath_kept_before_it_was_given",
+                cites=["Bereshit Rabbah 92:4", "Onkelos Genesis 43:16"])
 
 # -------------------------- Gen.43.17 · AS_JOSEPH_SAID ---------------------
 # וַיַּעַשׂ הָאִישׁ כַּאֲשֶׁר אָמַר יוֹסֵף וַיָּבֵא הָאִישׁ אֶת־הָאֲנָשִׁים
@@ -227,6 +255,10 @@ m.step("Gen.43.18")
 # ‹וַיִּירְאוּ הָאֲנָשִׁים כִּי הוּבְאוּ› (“and-fear the-man that
 # come/bring”) — fact holds: and-fear-the-man-that-come/bring
 m.fact("va_yiru_ha_anashim_ki_huvu")
+# witness-tier presupposed read: resolved_into_domination_and_false_charge
+# on to_roll_and_to_fall_upon_us — read, not installed
+m.witness_read("to_roll_and_to_fall_upon_us", "resolved_into_domination_and_false_charge",
+                cites=["Onkelos Genesis 43:18"])
 
 # -------------------------- Gen.43.19 · AT_THE_DOOR_THEY_DRAW_NEAR ---------
 # וַיִּגְּשׁוּ אֶל־הָאִישׁ אֲשֶׁר עַל־בֵּית יוֹסֵף וַיְדַבְּרוּ אֵלָיו
@@ -333,6 +365,10 @@ m.step("Gen.43.28")
 # ‹וַיִּקְּדוּ וישתחו וַיִּשְׁתַּחֲוּוּ› (“and-shrivel-up and-afflict and-
 # afflict”) — fact holds: and-shrivel-up-and-afflict
 m.fact("va_yiqdu_va_yishtachavu")
+# witness-grounded state (its own tier):
+# the_fifth_seat_and_the_reason_for_almost on your_servant_our_father
+m.witness_state("your_servant_our_father", "the_fifth_seat_and_the_reason_for_almost",
+                cites=["Bereshit Rabbah 100:3"])
 
 # -------------------------- Gen.43.29 · GOD_BE_GRACIOUS_TO_YOU_MY_SON ------
 # וַיִּשָּׂא עֵינָיו וַיַּרְא אֶת־בִּנְיָמִין אָחִיו בֶּן־אִמּוֹ וַיֹּאמֶר
@@ -345,6 +381,10 @@ m.step("Gen.43.29")
 # ‹וַיֹּאמַר אֱלֹהִים יָחְנְךָ בְּנִי› (“and-say God bend-you/your son-
 # me/my”) — blessing: Joseph blesses Benjamin
 m.bless("yosef", "binyamin")
+# witness-tier presupposed read: a_withheld_grace_paid_by_another_hand on
+# god_be_gracious_to_you_my_son — read, not installed
+m.witness_read("god_be_gracious_to_you_my_son", "a_withheld_grace_paid_by_another_hand",
+                cites=["Bereshit Rabbah 78:10", "Onkelos Genesis 43:29", "Bereshit Rabbah 95:1"])
 
 # -------------------------- Gen.43.30 · THE_CHAMBER_WEEPING ----------------
 # וַיְמַהֵר יוֹסֵף כִּי־נִכְמְרוּ רַחֲמָיו אֶל־אָחִיו וַיְבַקֵּשׁ לִבְכּוֹת
@@ -378,6 +418,10 @@ m.step("Gen.43.32")
 # ‹וַיָּשִׂימוּ לוֹ לְבַדּוֹ› (“and-put/set to-him/its to-separation-
 # him/its”) — demand settled (popped from the queue): put/set-food
 m.result("simu_lachem", tmark="t3")
+# witness-tier presupposed read: the_taboo_explained_rather_than_translated
+# on an_abomination_to_the_egyptians — read, not installed
+m.witness_read("an_abomination_to_the_egyptians", "the_taboo_explained_rather_than_translated",
+                cites=["Onkelos Genesis 43:32"])
 
 # -------------------------- Gen.43.33 · SEATED_BY_BIRTH_ORDER --------------
 # וַיֵּשְׁבוּ לְפָנָיו הַבְּכֹר כִּבְכֹרָתוֹ וְהַצָּעִיר כִּצְעִרָתוֹ
@@ -390,6 +434,10 @@ m.step("Gen.43.33")
 # firstling-of-man-him/its and-the-little like-smallness-him/its”) — fact
 # holds: the-firstborn-that-vkhorato-and-the-little-that-tzeirato
 m.fact("ha_bekhor_ki_vkhorato_ve_ha_tzair_ki_tzeirato")
+# witness-tier presupposed read: the_duel_already_under_way on
+# the_men_looked_at_one_another — read, not installed
+m.witness_read("the_men_looked_at_one_another", "the_duel_already_under_way",
+                cites=["Bereshit Rabbah 93:2", "Onkelos Genesis 43:33", "Bereshit Rabbah 92:5"])
 
 # -------------------------- Gen.43.34 · FIVE_HANDS -------------------------
 # וַיִּשָּׂא מַשְׂאֹת מֵאֵת פָּנָיו אֲלֵהֶם וַתֵּרֶב מַשְׂאַת בִּנְיָמִן
@@ -402,6 +450,10 @@ m.step("Gen.43.34")
 # Benjamin from-raising all-them/their”) — fact holds: and-multiply-raising-
 # Benjamin-five-hand
 m.fact("va_terev_masat_binyamin_chamesh_yadot")
+# witness-grounded state (its own tier):
+# twenty_two_years_hanging_on_one_suffix on they_drank_with_him
+m.witness_state("they_drank_with_him", "twenty_two_years_hanging_on_one_suffix",
+                cites=["Bereshit Rabbah 98:20", "Bereshit Rabbah 92:5"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -419,4 +471,40 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 14
+    assert sorted(m.WORLD["witnessed"]) == ['as_i_am_bereaved', 'had_we_not_delayed', 'if_so_then_do_this', 'they_drank_with_him', 'your_servant_our_father']
+    assert m.WORLD["witnessed"]['as_i_am_bereaved']["cites"] == ['Bereshit Rabbah 92:3']
+    assert all('one_verse_carrying_a_domestic_and_a_national_register' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['had_we_not_delayed']["cites"] == ['Bereshit Rabbah 74:12']
+    assert all('a_standing_rule_meeting_its_own_objection' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['if_so_then_do_this']["cites"] == ['Bereshit Rabbah 91:11']
+    assert all('the_particle_that_wires_deception_to_repayment' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['they_drank_with_him']["cites"] == ['Bereshit Rabbah 98:20', 'Bereshit Rabbah 92:5']
+    assert all('twenty_two_years_hanging_on_one_suffix' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['your_servant_our_father']["cites"] == ['Bereshit Rabbah 100:3']
+    assert all('the_fifth_seat_and_the_reason_for_almost' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_famine_was_severe', 'an_enumerated_member_of_the_paved_way'), ('judahs_pledge', 'read_clause_by_clause_through_a_proverb'), ('may_god_almighty_give_you_mercy', 'prayer_sited_where_the_accounting_ends'), ('slaughter_and_prepare', 'a_sabbath_kept_before_it_was_given'), ('to_roll_and_to_fall_upon_us', 'resolved_into_domination_and_false_charge'), ('god_be_gracious_to_you_my_son', 'a_withheld_grace_paid_by_another_hand'), ('an_abomination_to_the_egyptians', 'the_taboo_explained_rather_than_translated'), ('the_men_looked_at_one_another', 'the_duel_already_under_way')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 40:6']
+    assert all('an_enumerated_member_of_the_paved_way' not in f for f in m.WORLD["facts"])
+    assert 'the_famine_was_severe' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 93:1', 'Onkelos Genesis 43:9']
+    assert all('read_clause_by_clause_through_a_proverb' not in f for f in m.WORLD["facts"])
+    assert 'judahs_pledge' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 92:2']
+    assert all('prayer_sited_where_the_accounting_ends' not in f for f in m.WORLD["facts"])
+    assert 'may_god_almighty_give_you_mercy' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 92:4', 'Onkelos Genesis 43:16']
+    assert all('a_sabbath_kept_before_it_was_given' not in f for f in m.WORLD["facts"])
+    assert 'slaughter_and_prepare' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Genesis 43:18']
+    assert all('resolved_into_domination_and_false_charge' not in f for f in m.WORLD["facts"])
+    assert 'to_roll_and_to_fall_upon_us' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 78:10', 'Onkelos Genesis 43:29', 'Bereshit Rabbah 95:1']
+    assert all('a_withheld_grace_paid_by_another_hand' not in f for f in m.WORLD["facts"])
+    assert 'god_be_gracious_to_you_my_son' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Genesis 43:32']
+    assert all('the_taboo_explained_rather_than_translated' not in f for f in m.WORLD["facts"])
+    assert 'an_abomination_to_the_egyptians' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 93:2', 'Onkelos Genesis 43:33', 'Bereshit Rabbah 92:5']
+    assert all('the_duel_already_under_way' not in f for f in m.WORLD["facts"])
+    assert 'the_men_looked_at_one_another' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

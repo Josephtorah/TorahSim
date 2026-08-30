@@ -50,3 +50,16 @@ case-file machinery will want); the mixing-of-joys law born at 29:27
 you answered") as the measure-for-measure seat (row 4); the
 faithful-worker rule over the post-fraud years (row 5); the achadim
 analogy cashed at 29:20 (credit 67:10).
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers and to the Vayera, Chayei
+Sarah and Toledot ledgers on 2026-08-30. This ledger records its Onkelos
+track in the compact row form ("O1 · 29:15"), which the unit-level cite
+validator cannot match: a cite is valid only when the literal source
+string appears in a triage ledger. This block's Onkelos verses are
+therefore listed here in citable form, so the derivation may cite the
+translation it actually read. No verdict is changed and no row is
+rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 29:15, Onkelos Genesis 29:16, Onkelos Genesis 29:17, Onkelos Genesis 29:18, Onkelos Genesis 29:19, Onkelos Genesis 29:20, Onkelos Genesis 29:21, Onkelos Genesis 29:22, Onkelos Genesis 29:23, Onkelos Genesis 29:24, Onkelos Genesis 29:25, Onkelos Genesis 29:26, Onkelos Genesis 29:27, Onkelos Genesis 29:28, Onkelos Genesis 29:29, Onkelos Genesis 29:30.

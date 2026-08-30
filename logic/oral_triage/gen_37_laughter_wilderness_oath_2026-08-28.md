@@ -83,3 +83,17 @@ the cedars-to-Tabernacle supply chain from 21:33 (row 16 —
 cross-corpus demand); the et-inclusion question at 21:20 with the
 rule-table row (credits 1:14/53:15); the eshel triple reading (credit
 54:6 + O7); the Memra deltas (O4/O6); the de-mocked laughter (O1).
+
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers on 2026-08-30. This ledger
+records its Onkelos track in the compact row form ("O1 · 21:1"), which
+the unit-level cite validator cannot match: a cite is valid only when
+the literal source string appears in a triage ledger. This block's
+Onkelos verses are therefore listed here in citable form, so the
+derivation may cite the translation it actually read. No verdict is
+changed and no row is rewritten — this is a naming key for the Onkelos
+rows above.
+
+Onkelos Genesis 21:1, Onkelos Genesis 21:2, Onkelos Genesis 21:3, Onkelos Genesis 21:4, Onkelos Genesis 21:5, Onkelos Genesis 21:6, Onkelos Genesis 21:7, Onkelos Genesis 21:8, Onkelos Genesis 21:9, Onkelos Genesis 21:10, Onkelos Genesis 21:11, Onkelos Genesis 21:12, Onkelos Genesis 21:13, Onkelos Genesis 21:14, Onkelos Genesis 21:15, Onkelos Genesis 21:16, Onkelos Genesis 21:17, Onkelos Genesis 21:18, Onkelos Genesis 21:19, Onkelos Genesis 21:20, Onkelos Genesis 21:21, Onkelos Genesis 21:22, Onkelos Genesis 21:23, Onkelos Genesis 21:24, Onkelos Genesis 21:25, Onkelos Genesis 21:26, Onkelos Genesis 21:27, Onkelos Genesis 21:28, Onkelos Genesis 21:29, Onkelos Genesis 21:30, Onkelos Genesis 21:31, Onkelos Genesis 21:32, Onkelos Genesis 21:33, Onkelos Genesis 21:34.

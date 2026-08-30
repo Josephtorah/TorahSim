@@ -21,6 +21,10 @@ m.step("Gen.11.1")
 # ‹כָל־הָאָרֶץ שָׂפָה אֶחָת וּדְבָרִים אֲחָדִים› (“all the-earth lip one
 # and-words one”) — fact holds: all-the-earth-safah-one-and-words-one
 m.fact("kol_ha_aretz_safah_echat_u_devarim_achadim")
+# witness-tier presupposed read: parsed_four_ways_and_name_as_idolatry on
+# one_speech — read, not installed
+m.witness_read("one_speech", "parsed_four_ways_and_name_as_idolatry",
+                cites=["Bereshit Rabbah 38:6", "Mekhilta DeRabbi Yishmael, Tractate Kaspa 4:5"])
 
 # -------------------------- Gen.11.2 · THE_JOURNEY_EAST_TO_SHINAR ----------
 # וַיְהִי בְּנָסְעָם מִקֶּדֶם וַיִּמְצְאוּ בִקְעָה בְּאֶרֶץ שִׁנְעָר
@@ -39,6 +43,10 @@ m.event("find", themes=["viqah_be_eretz_shinar"])
 m.event("settle", themes=["sham"])
 # reads without prior install (flag, not fix): Shinar
 m.presupposed("shinar")
+# witness-tier presupposed read: satisfaction_cause_chain on sitting_verb —
+# read, not installed
+m.witness_read("sitting_verb", "satisfaction_cause_chain",
+                cites=["Mekhilta DeRabbi Yishmael, Tractate Shirah 5:9", "Sifrei Devarim 43:9", "Tosefta Sotah 3:3"])
 
 # -------------------------- Gen.11.3 · COME_LET_US_BRICK -------------------
 # וַיֹּאמְרוּ אִישׁ אֶל־רֵעֵהוּ הָבָה נִלְבְּנָה לְבֵנִים וְנִשְׂרְפָה
@@ -88,6 +96,11 @@ m.declare("ish_el_reehu", "CMD-US?",
 # face-of-all-the-earth
 m.fact("ve_rosho_va_shamayim",
        "pen_nafutz_al_pnei_khol_ha_aretz")
+# witness-tier presupposed read:
+# firmament_supports_on_the_floods_own_interval on tower_motive — read, not
+# installed
+m.witness_read("tower_motive", "firmament_supports_on_the_floods_own_interval",
+                cites=["Bereshit Rabbah 38:1"])
 
 # -------------------------- Gen.11.5 · THE_DESCENT_TO_SEE ------------------
 # וַיֵּרֶד יְהוָה לִרְאֹת אֶת־הָעִיר וְאֶת־הַמִּגְדָּל אֲשֶׁר בָּנוּ בְּנֵי
@@ -135,6 +148,10 @@ m.declare("YHWH", "CMD-US",
 # LORD speaks a demand — CMD-US: navlah(there-sefatam)
 m.declare("YHWH", "CMD-US",
           "navlah(sham_sefatam)")
+# witness-tier presupposed read: translation_alteration_canon_member on
+# let_us_descend — read, not installed
+m.witness_read("let_us_descend", "translation_alteration_canon_member",
+                cites=["Bereshit Rabbah 38:10"])
 
 # -------------------------- Gen.11.8 · THE_SCATTER_AND_THE_CEASING ---------
 # וַיָּפֶץ יְהוָה אֹתָם מִשָּׁם עַל־פְּנֵי כָל־הָאָרֶץ וַיַּחְדְּלוּ לִבְנֹת
@@ -169,6 +186,10 @@ m.pattern("al_ken_kara_shemah_bavel")
 # lip-of-all-the-earth; and-from-there-hefitzam-yhwh
 m.fact("ki_sham_balal_yhwh_sefat_kol_ha_aretz",
        "u_mi_sham_hefitzam_yhwh")
+# witness-tier presupposed read: one_of_three_fates on scattering_outcome —
+# read, not installed
+m.witness_read("scattering_outcome", "one_of_three_fates",
+                cites=["Sanhedrin 109a:5", "Sanhedrin 109a:4"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -186,4 +207,20 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 15
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('one_speech', 'parsed_four_ways_and_name_as_idolatry'), ('sitting_verb', 'satisfaction_cause_chain'), ('tower_motive', 'firmament_supports_on_the_floods_own_interval'), ('let_us_descend', 'translation_alteration_canon_member'), ('scattering_outcome', 'one_of_three_fates')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 38:6', 'Mekhilta DeRabbi Yishmael, Tractate Kaspa 4:5']
+    assert all('parsed_four_ways_and_name_as_idolatry' not in f for f in m.WORLD["facts"])
+    assert 'one_speech' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Mekhilta DeRabbi Yishmael, Tractate Shirah 5:9', 'Sifrei Devarim 43:9', 'Tosefta Sotah 3:3']
+    assert all('satisfaction_cause_chain' not in f for f in m.WORLD["facts"])
+    assert 'sitting_verb' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 38:1']
+    assert all('firmament_supports_on_the_floods_own_interval' not in f for f in m.WORLD["facts"])
+    assert 'tower_motive' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 38:10']
+    assert all('translation_alteration_canon_member' not in f for f in m.WORLD["facts"])
+    assert 'let_us_descend' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sanhedrin 109a:5', 'Sanhedrin 109a:4']
+    assert all('one_of_three_fates' not in f for f in m.WORLD["facts"])
+    assert 'scattering_outcome' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

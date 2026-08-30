@@ -58,3 +58,16 @@ swine-empire type and the marriage-motive claims (rows 4-6 — Esau
 dossier); the night-revelation census member at 26:24 (credit 87:5 +
 O1); the defiance rendering of the wives (O5); the why-Isaac-first
 seat (in-sitting 65:4). 
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers, the five Vayera ledgers and
+the four Chayei Sarah ledgers on 2026-08-30. This ledger records its
+Onkelos track in the compact row form ("O1 · 26:17"), which the unit-level
+cite validator cannot match: a cite is valid only when the literal source
+string appears in a triage ledger. This block's Onkelos verses are
+therefore listed here in citable form, so the derivation may cite the
+translation it actually read. No verdict is changed and no row is
+rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 26:17, Onkelos Genesis 26:18, Onkelos Genesis 26:19, Onkelos Genesis 26:20, Onkelos Genesis 26:21, Onkelos Genesis 26:22, Onkelos Genesis 26:23, Onkelos Genesis 26:24, Onkelos Genesis 26:25, Onkelos Genesis 26:26, Onkelos Genesis 26:27, Onkelos Genesis 26:28, Onkelos Genesis 26:29, Onkelos Genesis 26:30, Onkelos Genesis 26:31, Onkelos Genesis 26:32, Onkelos Genesis 26:33, Onkelos Genesis 26:34, Onkelos Genesis 26:35.

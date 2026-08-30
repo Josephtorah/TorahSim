@@ -21,8 +21,10 @@
 
 meta:
   id: "gen_35_sodom_overthrow_cave"
-  rev: 2
+  rev: 4
   changelog:
+    - "rev 4 (2026-08-30): FULL-RULE STAMP on the owner's word — the batch stamp he held by standing decision until Genesis was whole, given when the book closed at 73 of 73 read and derived. tree_derive_version logic_derived_v1 -> logic_derived_v2_full_rule; the span's declared reading is COMPLETE in its triage ledger and its logic was rebuilt FROM that reading in the derivation pass. No operator, claim, text or test changed by this edit — the stamp records a judgement already earned."
+    - "2026-08-30 rev 3: DERIVATION PASS, parashat Vayera (owner order: 'Go'). Step 5: seven claims (G35-19..G35-25), one machine-checked and verifying, six manual; the eighteen standing claims hold the orthography. Step 6: six operators across six steps, all in the rulebook's existing vocabulary (four WITNESS_READ, two WITNESS_STATE - no operator invented), each tagged with its folded shape. Onkelos citation keys appended to this ledger first (append-only). MACHINE-CHECKED AT DERIVATION: the extraordinary points stand at exactly TEN verses in the whole Torah, and TWO of them fall in this parashah - our 19:33 and gen_34's 18:9 - so the meta-rule stated at the first seat governs the second; at our verse the point marks what he did and did not know, her lying down unknown but HER RISING KNOWN. Also landed: THE DAWN MEASURE computed from this unit's own two timestamps - 19:15's breaking dawn against 19:23's emerging sun - yielding a standing measure of time and distance still used in law; a numeric penalty of one hundred and thirty-eight years imposed on the messengers here and explicitly DISCHARGED at the ladder of Genesis 28:12, a demand filed in this unit and receipted in a later one; the city's offence read as ENACTED STATUTE rather than impulse, its charter quoting Abraham's own charge from the previous block; the cave episode parsed by a stated biological rule with blame assigned by the verb's NUMBER and the motive left as a recorded dispute; and the sacred-or-profane split that gen_34 records BETWEEN the two spine members appearing here WITHIN one of them, Onkelos reading profane at 19:18 while its own printed variant reads the Name - with a second independent convergence of the two members at 19:27's prayer gloss. No verse text, tree, or morphology changed."
     - "2026-08-28 rev 2: RE-era reading pass (parashat Vayera sweep, 5 blocks one sitting — FIRST RUN UNDER THE SPINE DEFAULT, owner 2026-08-27: Bereshit Rabbah + Onkelos declared, Mishnah/Talmud held for the Step 9 exam): ledger logic/oral_triage/gen_35_sodom_overthrow_cave_2026-08-28.md; v1 Tier-A queue discharged; ORAL_reading_pass block appended; no machine ops changed."
     - "2026-08-28 rev 2 (same sitting): ink fix at Genesis 19:20 — the verse's FIRST ve-hi is written WITH YOD (a member of the eleven yod-instances the three-scrolls census counts; the second, ha-lo mitzar hu, keeps the vav form): step he and tree_left corrected to the snapshot's ink; pre-existing at HEAD, caught by verify_text; no semantic change."
     - "2026-08-28 rev 2 (same sitting): second ink fix — Genesis 19:16's vayachaziku (they grasped) is written DEFECTIVE (no yod); the unit's step and operator fragment carried the plene spelling; both corrected to the ink. Same class, same gate, pre-existing at HEAD."
@@ -215,7 +217,7 @@ meta:
     loop's amendment gate.
   data_paths_en:
     - "Data/tanakh_genesis_jps1917_en.json"
-  tree_derive_version: logic_derived_v1
+  tree_derive_version: logic_derived_v2_full_rule
   tree_derive_phase: "C-35"
   confidence_overall: "structure tested; operator readings tested-per-TIR; intent hypothesis"
   genre: "rescue_narrative_judgment_execution_and_origin_coda"
@@ -315,7 +317,7 @@ derivation_log:
     name_en: "Source fetch + verification"
     comment: >
       Hebrew: Data/Gen.xml via the DB snapshot
-      torah_grok.SNAPSHOT-main-51801ca.sqlite; pointed lines
+      source-snapshot.sqlite; pointed lines
       regenerated (cantillation stripped, vowels kept — gen_22's
       convention). English aid: JPS 1917. Span totals VERIFIED: 563
       tokens / 38 verses — the NEW largest span (past gen_34's 437);
@@ -882,6 +884,18 @@ boot_steps:
           Onkelos (ve-nida) — dual-track].
         cites: ["TIR-027"]
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(city_practice, enacted_statute_not_impulse)"
+        en: >
+          THE OFFENCE IS LEGISLATION [claim G35-23]. Their practice is quoted
+          as a STATUTE enacted by their predecessors - 'any guest: we lie with
+          him and take his money' - and enforced even against Abraham, whose
+          own charge at 18:19 they quote inside their stipulation. The wife's
+          complicity is priced the same way: she begged salt of the neighbours
+          'for our guests' in order to EXPOSE them, and the pillar of salt
+          answers the salt she asked for. [folded shape: priced law]
+        cites: ["Bereshit Rabbah 50:7", "Bereshit Rabbah 51:5"]
+        confidence: witnessed
     comment: >
       The where-question turns predator, and the grammar of
       let-us — creation's own council mood — mounts a siege. The
@@ -1297,6 +1311,18 @@ boot_steps:
           warrant [dual-track].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(we_are_destroying, penalty_discharged_at_the_ladder)"
+        en: >
+          A SENTENCE FILED HERE, RECEIPTED NINE CHAPTERS LATER [claim G35-22].
+          The messengers are expelled from their station for ONE HUNDRED AND
+          THIRTY-EIGHT YEARS - for revealing the secret, or on the other
+          reading for the arrogance of saying 'WE are destroying', the
+          attribution itself disputed. The arc closes explicitly at the ladder
+          of Genesis 28:12: 'where did they return? HERE - ascending, and only
+          then descending.' [folded shape: cross-corpus link]
+        cites: ["Bereshit Rabbah 50:9", "Bereshit Rabbah 68:12"]
+        confidence: witnessed
     comment: >
       The executioners read their warrant: the cry, the Sender,
       the sentence. Two frozen watch-lines land in one verse, and
@@ -1394,6 +1420,20 @@ boot_steps:
           [dual-track; named-only].
         cites: ["TIR-027"]
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(dawn_timestamps, standing_measure_of_time_and_distance)"
+        en: >
+          TWO TIMESTAMPS OF THIS UNIT YIELD A LEGAL MEASURE [claim G35-21].
+          Reading our 19:15 'as the dawn broke' against our 19:23 'the sun
+          emerged and Lot arrived', the chain computes the DAWN MEASURE: first
+          gleam to eastern light four mil, eastern light to sunrise another
+          four - the distance from Sodom to Tzoar supplying the span, the
+          angel said to have levelled the way. Two narrative time operators
+          converted into a standing measure still used in law. The directional
+          rule governing this block's own place-names stands at its home seat
+          here [claim G35-20]. [folded shape: priced law]
+        cites: ["Bereshit Rabbah 50:10", "Bereshit Rabbah 50:3"]
+        confidence: witnessed
     comment: >
       Dawn brings the fifth demand on Lot in one night — arise,
       take — and the letter answers with the Torah's first
@@ -1575,6 +1615,20 @@ boot_steps:
           class's second firing, now human].
         cites: []
         confidence: tested
+      - op: WITNESS_STATE
+        expr_en: "WITNESS(adonai_at_19_18, dispute_inside_one_spine_member)"
+        en: >
+          THE DISPUTE MOVES INSIDE A SINGLE BOOK [claim G35-25]. Here Onkelos
+          renders the address as PROFANE, 'my lords' - while its OWN printed
+          variant reads the divine Name. So the sacred-or-profane split that
+          gen_34 records BETWEEN the two spine members is mirrored WITHIN one
+          of them, in its own editions. And at 19:27 the same translation
+          glosses the standing as SERVING IN PRAYER, carrying the very reading
+          by which Bereshit Rabbah institutes the morning prayer from that
+          verse - a second independent convergence. [folded shape: recorded
+          dispute]
+        cites: ["Onkelos Genesis 19:18", "Onkelos Genesis 19:27", "Bereshit Rabbah 68:9"]
+        confidence: witnessed
     comment: >
       A no with no verb in it, aimed somewhere between two angels
       and their Sender. The machine holds the bare refusal and
@@ -2369,6 +2423,34 @@ boot_steps:
           is the pops' public receipt).
         cites: []
         confidence: tested
+      - op: WITNESS_STATE
+        expr_en: "WITNESS(cave_episode, rule_parsed_and_motive_disputed)"
+        en: >
+          PARSED BY A STATED RULE, BLAMED BY A VERB'S NUMBER [claim G35-24].
+          The first-intercourse rule is stated at its seat - conception never
+          follows the first act - and the daughters' procedure read as a
+          workaround of it. Blame is assigned by grammar: the SINGULAR verb
+          isolates the father as the one who sought the act, the daughters
+          exonerated. And the motive of the elder line is a recorded dispute -
+          conception for Heaven then descendants for lust, against the
+          reverse, with a third reading holding both consistent. Carried
+          dual-track. [folded shape: recorded dispute]
+        cites: ["Bereshit Rabbah 51:9", "Bereshit Rabbah 51:10"]
+        confidence: witnessed
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(dotted_ubkumah, second_of_the_torahs_ten)"
+        en: >
+          THE SECOND DOTTED TEXT OF THIS PARASHAH [claim G35-19,
+          machine-checked]. The word 'and when she arose' carries a scribal
+          point, read as marking exactly what he did and did not know: her
+          lying down he knew not, HER RISING HE KNEW. Machine-checked across
+          the corpus at derivation: the extraordinary points stand at exactly
+          TEN verses in the whole Torah, and TWO of them fall in this parashah
+          - our 19:33 and 18:9 - so the meta-rule stated at the first seat,
+          that where the dotted letters are the majority one expounds the
+          dots, governs this one too. [folded shape: ink count]
+        cites: ["Bereshit Rabbah 51:8"]
+        confidence: witnessed
     comment: >
       Two nights, four demands, three receipts — the cave is the
       corpus's first place where council-grammar reliably pays.

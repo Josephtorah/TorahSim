@@ -45,6 +45,11 @@ m.step("Gen.31.24")
 # demand — LET: keep/guard(Laban, lest-speak-with-Jacob-from-good-until-bad)
 m.declare("Elohim", "LET",
           "hishamer(lavan, pen_tedaber_im_yaaqov_mi_tov_ad_ra)")
+# witness-tier presupposed read:
+# prophecy_guard_stated_and_rendered_at_one_verse on a_word_came_by_night —
+# read, not installed
+m.witness_read("a_word_came_by_night", "prophecy_guard_stated_and_rendered_at_one_verse",
+                cites=["Bereshit Rabbah 74:7", "Onkelos Genesis 31:24"])
 
 # -------------------------- Gen.31.25 · THE_TWO_CAMPS ----------------------
 # וַיַּשֵּׂג לָבָן אֶת־יַעֲקֹב וְיַעֲקֹב תָּקַע אֶת־אָהֳלוֹ בָּהָר וְלָבָן
@@ -191,6 +196,10 @@ m.step("Gen.31.36")
 # ‹וַיִּחַר לְיַעֲקֹב וַיָּרֶב בְּלָבָן› (“and-glow to-Jacob and-toss in-
 # Laban”) — fact holds: and-glow-to-Jacob(the-charon-in-the-enayim-acherot)
 m.fact("va_yichar_le_yaaqov(ha_charon_ba_enayim_acherot)")
+# witness-tier presupposed read: audited_and_found_to_contain_appeasement on
+# the_quarrel — read, not installed
+m.witness_read("the_quarrel", "audited_and_found_to_contain_appeasement",
+                cites=["Bereshit Rabbah 74:10"])
 
 # -------------------------- Gen.31.37 · THE_TRIBUNAL_DEMAND ----------------
 # כִּי־מִשַּׁשְׁתָּ אֶת־כָּל־כֵּלַי מַה־מָּצָאתָ מִכֹּל כְּלֵי־בֵיתֶךָ שִׂים
@@ -224,6 +233,10 @@ m.step("Gen.31.39")
 # ‹טְרֵפָה לֹא־הֵבֵאתִי אֵלֶיךָ› (“prey not come/bring to-you/your”) — fact
 # holds: prey-anokhi-achatena(Jacob, cheshbon)
 m.fact("terefa_anokhi_achatena(yaaqov, cheshbon)")
+# witness-tier presupposed read: refiled_under_the_bailment_statutes on
+# the_shepherds_defence — read, not installed
+m.witness_read("the_shepherds_defence", "refiled_under_the_bailment_statutes",
+                cites=["Onkelos Genesis 31:39"])
 
 # -------------------------- Gen.31.40 · THE_HEAT_AND_THE_FROST -------------
 # הָיִיתִי בַיּוֹם אֲכָלַנִי חֹרֶב וְקֶרַח בַּלָּיְלָה וַתִּדַּד שְׁנָתִי
@@ -265,6 +278,14 @@ m.fact("lule_elohe_avi_u_fachad_yitzchaq(yaaqov)")
 # ‹וַיּוֹכַח אָמֶשׁ› (“and-be-right yesterday”) — fact holds: see-God-and-
 # be-right-yesterday(landing-put/set-tribunal)
 m.fact("raa_Elohim_va_yokhach_amesh(landing_sim_tribunal)")
+# witness-grounded state (its own tier):
+# ranked_above_the_merit_of_the_fathers on labour
+m.witness_state("labour", "ranked_above_the_merit_of_the_fathers",
+                cites=["Bereshit Rabbah 74:12"])
+# witness-tier presupposed read: flagged_uncertain_by_the_transmitter on
+# the_attribution — read, not installed
+m.witness_read("the_attribution", "flagged_uncertain_by_the_transmitter",
+                cites=["Bereshit Rabbah 74:12"])
 
 # -------------------------- Gen.31.43 · THE_EVERYTHING_IS_MINE -------------
 # וַיַּעַן לָבָן וַיֹּאמֶר אֶל־יַעֲקֹב הַבָּנוֹת בְּנֹתַי וְהַבָּנִים בָּנַי
@@ -278,6 +299,10 @@ m.step("Gen.31.43")
 # ‹וְכֹל אֲשֶׁר־אַתָּה רֹאֶה לִי־הוּא› (“and-all which you see to-me/my
 # he/it”) — fact holds: the-all-to-me-he/it-and-what-make(Laban)
 m.fact("ha_kol_li_hu_u_ma_eese(lavan)")
+# witness-tier presupposed read: all_four_mothers_one_house on
+# my_daughters_doubled — read, not installed
+m.witness_read("my_daughters_doubled", "all_four_mothers_one_house",
+                cites=["Bereshit Rabbah 74:13"])
 
 # -------------------------- Gen.31.44 · THE_COVENANT_COHORTATIVE -----------
 # וְעַתָּה לְכָה נִכְרְתָה בְרִית אֲנִי וָאָתָּה וְהָיָה לְעֵד בֵּינִי
@@ -325,6 +350,10 @@ m.name("ha_gal", "yegar_sahaduta")
 # ‹וְיַעֲקֹב קָרָא לוֹ גַּלְעֵד› (“and-Jacob call to-him/its Galeed”) —
 # named: the-something-rolled := Galeed
 m.name("ha_gal", "galed")
+# witness-tier presupposed read: one_member_honouring_the_others_language on
+# the_two_names — read, not installed
+m.witness_read("the_two_names", "one_member_honouring_the_others_language",
+                cites=["Bereshit Rabbah 74:14"])
 
 # -------------------------- Gen.31.48 · THE_ETIOLOGY_REPORT ----------------
 # וַיֹּאמֶר לָבָן הַגַּל הַזֶּה עֵד בֵּינִי וּבֵינְךָ הַיּוֹם עַל־כֵּן
@@ -347,6 +376,10 @@ m.step("Gen.31.49")
 # beni-and-venekha)
 m.declare("lavan", "LET",
           "yitzef(YHWH, beni_u_venekha)")
+# witness-tier presupposed read: both_routed_through_the_word on
+# the_watch_and_the_witness — read, not installed
+m.witness_read("the_watch_and_the_witness", "both_routed_through_the_word",
+                cites=["Onkelos Genesis 31:49", "Onkelos Genesis 31:50"])
 
 # -------------------------- Gen.31.50 · THE_TERMS_AND_THE_SEE --------------
 # אִם־תְּעַנֶּה אֶת־בְּנֹתַי וְאִם־תִּקַּח נָשִׁים עַל־בְּנֹתַי אֵין אִישׁ
@@ -358,6 +391,10 @@ m.step("Gen.31.50")
 # and-between-you/your”) — fact holds: with-afflict-literally-with-take-
 # oath-content(Laban)
 m.fact("im_teane_im_tiqach_oath_content(lavan)")
+# witness-tier presupposed read: family_law_partitioning_time on
+# the_two_clauses — read, not installed
+m.witness_read("the_two_clauses", "family_law_partitioning_time",
+                cites=["Bereshit Rabbah 74:14"])
 
 # -------------------------- Gen.31.51 · THE_CLAIMED_CASTER -----------------
 # וַיֹּאמֶר לָבָן לְיַעֲקֹב הִנֵּה הַגַּל הַזֶּה וְהִנֵּה הַמַצֵּבָה אֲשֶׁר
@@ -382,6 +419,10 @@ m.step("Gen.31.52")
 # the-this and-testimony the-pillar”) — fact holds: concretely-the-
 # something-rolled-and-testimony-the-pillar-not-naavor(oath-content)
 m.fact("ed_ha_gal_ve_eda_ha_matzeva_lo_naavor(oath_content)")
+# witness-tier presupposed read: carve_out_and_a_legal_afterlife_in_court on
+# the_boundary — read, not installed
+m.witness_read("the_boundary", "carve_out_and_a_legal_afterlife_in_court",
+                cites=["Bereshit Rabbah 74:15"])
 
 # -------------------------- Gen.31.53 · THE_OATH_BY_THE_FEAR ---------------
 # אֱלֹהֵי אַבְרָהָם וֵאלֹהֵי נָחוֹר יִשְׁפְּטוּ בֵינֵינוּ אֱלֹהֵי אֲבִיהֶם
@@ -397,6 +438,10 @@ m.fact("yishptu_imperfect_fenced(elohe_avraham_ve_lohe_nachor)")
 # father-him/its Isaac”) — fact holds: and-swear-Jacob-in-alarm-aviv(other-
 # root-performance)
 m.fact("va_yishava_yaaqov_be_fachad_aviv(other_root_performance)")
+# witness-tier presupposed read: graded_sacred_profane_and_both on
+# the_oath_formula — read, not installed
+m.witness_read("the_oath_formula", "graded_sacred_profane_and_both",
+                cites=["Bereshit Rabbah 74:16", "Onkelos Genesis 31:53"])
 
 # -------------------------- Gen.31.54 · THE_FIRST_SACRIFICE ----------------
 # וַיִּזְבַּח יַעֲקֹב זֶבַח בָּהָר וַיִּקְרָא לְאֶחָיו לֶאֱכָל־לָחֶם
@@ -425,4 +470,38 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 9
+    assert sorted(m.WORLD["witnessed"]) == ['labour']
+    assert m.WORLD["witnessed"]['labour']["cites"] == ['Bereshit Rabbah 74:12']
+    assert all('ranked_above_the_merit_of_the_fathers' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('a_word_came_by_night', 'prophecy_guard_stated_and_rendered_at_one_verse'), ('the_quarrel', 'audited_and_found_to_contain_appeasement'), ('the_shepherds_defence', 'refiled_under_the_bailment_statutes'), ('the_attribution', 'flagged_uncertain_by_the_transmitter'), ('my_daughters_doubled', 'all_four_mothers_one_house'), ('the_two_names', 'one_member_honouring_the_others_language'), ('the_watch_and_the_witness', 'both_routed_through_the_word'), ('the_two_clauses', 'family_law_partitioning_time'), ('the_boundary', 'carve_out_and_a_legal_afterlife_in_court'), ('the_oath_formula', 'graded_sacred_profane_and_both')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 74:7', 'Onkelos Genesis 31:24']
+    assert all('prophecy_guard_stated_and_rendered_at_one_verse' not in f for f in m.WORLD["facts"])
+    assert 'a_word_came_by_night' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 74:10']
+    assert all('audited_and_found_to_contain_appeasement' not in f for f in m.WORLD["facts"])
+    assert 'the_quarrel' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Genesis 31:39']
+    assert all('refiled_under_the_bailment_statutes' not in f for f in m.WORLD["facts"])
+    assert 'the_shepherds_defence' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 74:12']
+    assert all('flagged_uncertain_by_the_transmitter' not in f for f in m.WORLD["facts"])
+    assert 'the_attribution' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 74:13']
+    assert all('all_four_mothers_one_house' not in f for f in m.WORLD["facts"])
+    assert 'my_daughters_doubled' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 74:14']
+    assert all('one_member_honouring_the_others_language' not in f for f in m.WORLD["facts"])
+    assert 'the_two_names' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Genesis 31:49', 'Onkelos Genesis 31:50']
+    assert all('both_routed_through_the_word' not in f for f in m.WORLD["facts"])
+    assert 'the_watch_and_the_witness' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 74:14']
+    assert all('family_law_partitioning_time' not in f for f in m.WORLD["facts"])
+    assert 'the_two_clauses' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 74:15']
+    assert all('carve_out_and_a_legal_afterlife_in_court' not in f for f in m.WORLD["facts"])
+    assert 'the_boundary' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 74:16', 'Onkelos Genesis 31:53']
+    assert all('graded_sacred_profane_and_both' not in f for f in m.WORLD["facts"])
+    assert 'the_oath_formula' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

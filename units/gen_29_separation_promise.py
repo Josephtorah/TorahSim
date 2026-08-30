@@ -54,6 +54,10 @@ m.event("go", agent="avram")
 m.fact("asher_hayah_sham_aholo_ba_techillah")
 # reads without prior install (flag, not fix): beit-Beth-el, the-ai
 m.presupposed("beit_el", "ha_ai")
+# witness-tier presupposed read: lodging_law_derived_twice on
+# return_to_the_place — read, not installed
+m.witness_read("return_to_the_place", "lodging_law_derived_twice",
+                cites=["Arakhin 16b:17", "Arakhin 16b:18"])
 
 # -------------------------- Gen.13.4 · THE_RETURN_CALL_AT_THE_FIRST_ALTAR --
 # אֶל־מְקוֹם הַמִּזְבֵּחַ אֲשֶׁר־עָשָׂה שָׁם בָּרִאשֹׁנָה וַיִּקְרָא שָׁם
@@ -104,6 +108,10 @@ m.step("Gen.13.7")
 # dwell/sit-in-the-earth
 m.fact("va_yehi_riv_bein_roei_miqneh_avram_u_vein_roei_miqneh_lot",
        "ve_ha_kenaani_ve_ha_perizi_az_yoshev_ba_aretz")
+# witness-tier presupposed read: paradigm_at_the_head_of_two_laws on
+# herdsmen_quarrel — read, not installed
+m.witness_read("herdsmen_quarrel", "paradigm_at_the_head_of_two_laws",
+                cites=["Mekhilta DeRabbi Shimon Ben Yochai 21:18", "Sifrei Devarim 286:1"])
 
 # -------------------------- Gen.13.8 · THE_PEACE_PLEA_WE_ARE_BROTHERS ------
 # וַיֹּאמֶר אַבְרָם אֶל־לוֹט אַל־נָא תְהִי מְרִיבָה בֵּינִי וּבֵינֶיךָ
@@ -122,6 +130,10 @@ m.declare("avram", "LET-NOT",
 # ‹כִּי־אֲנָשִׁים אַחִים אֲנָחְנוּ› (“that man brother we”) — fact holds:
 # that-man-brother-we
 m.fact("ki_anashim_achim_anachnu")
+# witness-grounded state (its own tier): analogy_candidate_declined on
+# we_are_brothers
+m.witness_state("we_are_brothers", "analogy_candidate_declined",
+                cites=["Yevamot 17b:6"])
 
 # -------------------------- Gen.13.9 · THE_OFFER_OF_THE_WHOLE_LAND ---------
 # הֲלֹא כָל־הָאָרֶץ לְפָנֶיךָ הִפָּרֶד נָא מֵעָלָי אִם־הַשְּׂמֹאל וְאֵימִנָה
@@ -166,6 +178,10 @@ m.fact("ki_khulah_mashqeh_lifnei_shachet_YHWH_et_sedom_ve_et_amorah")
 # reads without prior install (flag, not fix): the-Jordan, Sodom, Gomorrah,
 # Zoar
 m.presupposed("ha_yarden", "sedom", "amora", "tzoar")
+# witness-tier presupposed read: ruled_wholly_figurative_for_sin on
+# kikar_description — read, not installed
+m.witness_read("kikar_description", "ruled_wholly_figurative_for_sin",
+                cites=["Bereshit Rabbah 41:7", "Nazir 23a:15", "Sifrei Devarim 36:10"])
 
 # -------------------------- Gen.13.11 · THE_CHOICE_AND_THE_SEPARATION ------
 # וַיִּבְחַר־לוֹ לוֹט אֵת כָּל־כִּכַּר הַיַּרְדֵּן וַיִּסַּע לוֹט מִקֶּדֶם
@@ -211,6 +227,10 @@ m.step("Gen.13.13")
 # and-criminal to-YHWH very”) — fact holds: and-men-of-Sodom-bad-and-
 # criminal-to-the-LORD-very
 m.fact("ve_anshei_sedom_raim_ve_chataim_la_YHWH_meod")
+# witness-grounded state (its own tier):
+# split_by_tense_and_reversed_at_one_seat on sodom_verdict
+m.witness_state("sodom_verdict", "split_by_tense_and_reversed_at_one_seat",
+                cites=["Jerusalem Talmud Sanhedrin 10:3:4", "Sifra, Bechukotai, Section 2 2", "Tosefta Shabbat 8:12"])
 
 # -------------------------- Gen.13.14 · THE_SPEECH_AFTER_THE_SEPARATING ----
 # וַיהוָה אָמַר אֶל־אַבְרָם אַחֲרֵי הִפָּרֶד־לוֹט מֵעִמּוֹ שָׂא נָא עֵינֶיךָ
@@ -256,6 +276,10 @@ m.step("Gen.13.16")
 # earth; if-be-able-man-limnot-also-zarakha-yimaneh
 m.fact("ve_samti_et_zarakha_ka_afar_ha_aretz",
        "im_yukhal_ish_limnot_gam_zarakha_yimaneh")
+# witness-tier presupposed read: graded_literal_not_hyperbole on dust_simile
+# — read, not installed
+m.witness_read("dust_simile", "graded_literal_not_hyperbole",
+                cites=["Sifrei Devarim 25:4", "Bereshit Rabbah 41:9", "Megillah 16a:15"])
 
 # -------------------------- Gen.13.17 · THE_WALK_COMMAND -------------------
 # קוּם הִתְהַלֵּךְ בָּאָרֶץ לְאָרְכָּהּ וּלְרָחְבָּהּ כִּי לְךָ אֶתְּנֶנָּה
@@ -270,6 +294,10 @@ m.declare("YHWH", "LET",
 # ‹כִּי לְךָ אֶתְּנֶנָּה› (“that to-you/your set-her/its”) — fact holds:
 # that-to-you-etnenah
 m.fact("ki_lekha_etnenah")
+# witness-tier presupposed read: acquisition_by_walking on walk_the_land —
+# read, not installed
+m.witness_read("walk_the_land", "acquisition_by_walking",
+                cites=["Bava Batra 100a:7", "Bereshit Rabbah 41:10", "Jerusalem Talmud Kiddushin 1:3:5"])
 
 # -------------------------- Gen.13.18 · THE_HEBRON_ALTAR -------------------
 # וַיֶּאֱהַל אַבְרָם וַיָּבֹא וַיֵּשֶׁב בְּאֵלֹנֵי מַמְרֵא אֲשֶׁר
@@ -308,4 +336,25 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 21
+    assert sorted(m.WORLD["witnessed"]) == ['sodom_verdict', 'we_are_brothers']
+    assert m.WORLD["witnessed"]['sodom_verdict']["cites"] == ['Jerusalem Talmud Sanhedrin 10:3:4', 'Sifra, Bechukotai, Section 2 2', 'Tosefta Shabbat 8:12']
+    assert all('split_by_tense_and_reversed_at_one_seat' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['we_are_brothers']["cites"] == ['Yevamot 17b:6']
+    assert all('analogy_candidate_declined' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('return_to_the_place', 'lodging_law_derived_twice'), ('herdsmen_quarrel', 'paradigm_at_the_head_of_two_laws'), ('kikar_description', 'ruled_wholly_figurative_for_sin'), ('dust_simile', 'graded_literal_not_hyperbole'), ('walk_the_land', 'acquisition_by_walking')]
+    assert m.WITNESS_READS[0]["cites"] == ['Arakhin 16b:17', 'Arakhin 16b:18']
+    assert all('lodging_law_derived_twice' not in f for f in m.WORLD["facts"])
+    assert 'return_to_the_place' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Mekhilta DeRabbi Shimon Ben Yochai 21:18', 'Sifrei Devarim 286:1']
+    assert all('paradigm_at_the_head_of_two_laws' not in f for f in m.WORLD["facts"])
+    assert 'herdsmen_quarrel' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 41:7', 'Nazir 23a:15', 'Sifrei Devarim 36:10']
+    assert all('ruled_wholly_figurative_for_sin' not in f for f in m.WORLD["facts"])
+    assert 'kikar_description' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifrei Devarim 25:4', 'Bereshit Rabbah 41:9', 'Megillah 16a:15']
+    assert all('graded_literal_not_hyperbole' not in f for f in m.WORLD["facts"])
+    assert 'dust_simile' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bava Batra 100a:7', 'Bereshit Rabbah 41:10', 'Jerusalem Talmud Kiddushin 1:3:5']
+    assert all('acquisition_by_walking' not in f for f in m.WORLD["facts"])
+    assert 'walk_the_land' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -43,6 +43,10 @@ m.spec_delta("akhol tokhel mi-kol etz ha-gan + one exclusion (gen_08 2:16-17: pe
 # Eden-exclusive compound), delivery says God (the serpent
 m.spec_delta("YHWH_Elohim (the rule's issuer, gen_08 2:16 — the Eden-exclusive compound)",
              "Elohim (the serpent")
+# witness-grounded state (its own tier): erect_legged_intended_king_baseline
+# on nachash_pre_curse_form
+m.witness_state("nachash_pre_curse_form", "erect_legged_intended_king_baseline",
+                cites=["Bereshit Rabbah 19:1", "Sotah 9b:1", "Tosefta Sotah 4:5"])
 
 # -------------------------- Gen.3.2 · WOMAN_PERMISSION_REDUCED -------------
 # וַתֹּאמֶר הָאִשָּׁה אֶל־הַנָּחָשׁ מִפְּרִי עֵץ־הַגָּן נֹאכֵל
@@ -112,6 +116,10 @@ m.step("Gen.3.5")
 # God … and-shall-be-opened … and-you-shall-be like-God”) — event: claim —
 # agent serpent; theme were-opened-your-eyes, like-God
 m.event("claim", agent="nachash", themes=["nifqechu_eineikhem", "ke_Elohim"])
+# witness-tier presupposed read: first_slander_and_grammar_defence on
+# serpent_speech — read, not installed
+m.witness_read("serpent_speech", "first_slander_and_grammar_defence",
+                cites=["Bereshit Rabbah 19:4", "Vayikra Rabbah 26:2"])
 
 # -------------------------- Gen.3.6 · CREATURE_TEST_AND_TRIGGER ------------
 # וַתֵּרֶא הָאִשָּׁה כִּי טוֹב הָעֵץ לְמַאֲכָל וְכִי תַאֲוָה־הוּא לָעֵינַיִם
@@ -138,6 +146,10 @@ m.event("give", agent="ishah", themes=["adam"])
 m.event("eat", agent="adam", themes=["pri"])
 # reads without prior install (flag, not fix): human
 m.presupposed("adam")
+# witness-tier presupposed read: three_properties_and_inclusive_gam on
+# test_op — read, not installed
+m.witness_read("test_op", "three_properties_and_inclusive_gam",
+                cites=["Bereshit Rabbah 19:5"])
 
 # -------------------------- Gen.3.7 · EYES_OPEN_FIRST_MANUFACTURE ----------
 # וַתִּפָּקַחְנָה עֵינֵי שְׁנֵיהֶם וַיֵּדְעוּ כִּי עֵירֻמִּם הֵם
@@ -157,6 +169,10 @@ m.event("know", agent="shneihem", themes=["eirummim"])
 m.event("make", agent="shneihem", themes=["chagorot"])
 # ‹חֲגֹרֹת› (“girdles”) — the world gains: girdles
 m.install("chagorot")
+# witness-tier presupposed read: stripped_of_one_commandment on eyes_open —
+# read, not installed
+m.witness_read("eyes_open", "stripped_of_one_commandment",
+                cites=["Bereshit Rabbah 19:6"])
 
 # -------------------------- Gen.3.8 · VOICE_AND_HIDING ---------------------
 # וַיִּשְׁמְעוּ אֶת־קוֹל יְהוָה אֱלֹהִים מִתְהַלֵּךְ בַּגָּן לְרוּחַ הַיּוֹם
@@ -174,6 +190,10 @@ m.event("hear", agent="shneihem", themes=["qol_YHWH_Elohim"])
 # the-human and-his-wife … in-midst-of tree-of the-garden”) — event: hide —
 # agent both-of-them; theme in-midst-of-tree-of-the-garden
 m.event("hide", agent="shneihem", themes=["be_tokh_etz_ha_gan"])
+# witness-tier presupposed read: presence_altitude_first_withdrawal on
+# voice_event — read, not installed
+m.witness_read("voice_event", "presence_altitude_first_withdrawal",
+                cites=["Bereshit Rabbah 19:7", "Pesikta DeRav Kahana 5:3"])
 
 # -------------------------- Gen.3.9 · FIRST_QUESTION -----------------------
 # וַיִּקְרָא יְהוָה אֱלֹהִים אֶל־הָאָדָם וַיֹּאמֶר לוֹ אַיֶּכָּה
@@ -186,6 +206,10 @@ m.event("call", agent="YHWH_Elohim", themes=["adam"])
 # ‹אַיֶּכָּה› (“where-are-you”) — event: ask — agent the-LORD-God; theme
 # where-are-you
 m.event("ask", agent="YHWH_Elohim", themes=["ayeka"])
+# witness-tier presupposed read: opportunity_to_confess_class on
+# first_question — read, not installed
+m.witness_read("first_question", "opportunity_to_confess_class",
+                cites=["Bereshit Rabbah 19:11", "Sanhedrin 38b:11"])
 
 # -------------------------- Gen.3.10 · TESTIMONY_FEAR ----------------------
 # וַיֹּאמֶר אֶת־קֹלְךָ שָׁמַעְתִּי בַּגָּן וָאִירָא כִּי־עֵירֹם אָנֹכִי
@@ -240,6 +264,10 @@ m.event("ask", agent="YHWH_Elohim", themes=["ishah"])
 m.event("say", agent="ishah", themes=["nachash"])
 # ‹וָאֹכֵל› (“and-I-ate”) — fact holds: admission-and-I-ate(woman)
 m.fact("admission_va_okhel(ishah)")
+# witness-grounded state (its own tier): absent_by_procedure on
+# third_interrogation
+m.witness_state("third_interrogation", "absent_by_procedure",
+                cites=["Bereshit Rabbah 20:2"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -257,4 +285,25 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 20
+    assert sorted(m.WORLD["witnessed"]) == ['nachash_pre_curse_form', 'third_interrogation']
+    assert m.WORLD["witnessed"]['nachash_pre_curse_form']["cites"] == ['Bereshit Rabbah 19:1', 'Sotah 9b:1', 'Tosefta Sotah 4:5']
+    assert all('erect_legged_intended_king_baseline' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['third_interrogation']["cites"] == ['Bereshit Rabbah 20:2']
+    assert all('absent_by_procedure' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('serpent_speech', 'first_slander_and_grammar_defence'), ('test_op', 'three_properties_and_inclusive_gam'), ('eyes_open', 'stripped_of_one_commandment'), ('voice_event', 'presence_altitude_first_withdrawal'), ('first_question', 'opportunity_to_confess_class')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 19:4', 'Vayikra Rabbah 26:2']
+    assert all('first_slander_and_grammar_defence' not in f for f in m.WORLD["facts"])
+    assert 'serpent_speech' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 19:5']
+    assert all('three_properties_and_inclusive_gam' not in f for f in m.WORLD["facts"])
+    assert 'test_op' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 19:6']
+    assert all('stripped_of_one_commandment' not in f for f in m.WORLD["facts"])
+    assert 'eyes_open' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 19:7', 'Pesikta DeRav Kahana 5:3']
+    assert all('presence_altitude_first_withdrawal' not in f for f in m.WORLD["facts"])
+    assert 'voice_event' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 19:11', 'Sanhedrin 38b:11']
+    assert all('opportunity_to_confess_class' not in f for f in m.WORLD["facts"])
+    assert 'first_question' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

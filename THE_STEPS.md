@@ -108,6 +108,75 @@ or ink-level claims — counts, spellings, written-vs-read forms — are
 NEVER dup-credited without opening: that is the class where seats
 diverge (the canopy counts 9/10/11 vs 13/11/10 are the standing
 exhibit).
+A FAILED LEG IS EVIDENCE ABOUT THAT LEG, NEVER ABOUT ITS SECTION
+(lesson of the derivation pass, 2026-08-30, recorded in both windows).
+A source often makes ONE claim in SEVERAL parts, and the parts do not
+stand or fall together. Bereshit Rabbah 65:9 says aging, suffering and
+illness are each unwritten in the book until a patriarch asked for
+them — at 24:1, 27:1 and 48:1. Opened one at a time against the ink:
+the aging leg FAILS (the word stands five times earlier, and 18:11
+carries the identical phrase); the suffering leg is NOT A WORD-CENSUS
+AT ALL (the root for chastisement appears nowhere in Genesis, and not
+at 27:1 either — so it is a claim about the first recorded affliction,
+carried as interpretive and labelled so); and the illness leg HOLDS
+EXACTLY, the word standing ONCE in Genesis, at 48:1, precisely where
+the chain places it. One part exact, one false, one uncheckable by
+that method — and only opening all three could tell them apart. Had
+the first failure been allowed to stand as a verdict on the section,
+the exact leg would have been thrown away with the false one. Grade
+the leg you opened; say which legs you did not.
+A REPORT OF ZERO IS WORTH ONLY THE COVERAGE LINE ABOVE IT — and a
+plausible NON-ZERO deserves an independent count (both windows,
+2026-08-30, each rule found by the other side's near-miss). A check
+that reports an absence looks identical whether it read everything or
+nothing, so it must print what it read; that rule caught two silent
+leaks the day it was written. But the harder failure is the FALSE
+DEFICIT: a count that is wrong yet plausible, which no coverage line
+flags because nothing is zero. Mapping the machine's backward
+citations to their Genesis blocks returned two, then eight, then nine,
+then fourteen — twice from frame errors (draft units shadowing frozen
+ones under a naive first match, and a regex requiring quotes on a
+field the corpus writes both ways). What caught it was the other
+window counting the same thing independently and disagreeing; what
+made the disagreement a located bug in one pass, instead of an
+argument, was the coverage line naming what had been used, excluded
+and left unparsed. In one breath: the coverage rule catches zeros,
+cross-checking catches deficits, and coverage is what makes the second
+one cheap.
+AND THE SCOPE THAT KEEPS THE RULE HONEST: count what you REPORT;
+assert what must not CHANGE; never convert the second into the first.
+A fixed number in a report is a RECITAL — it claims a measurement it
+never took and lies quietly when the world moves, which is what the
+press gate was doing when it printed a remembered 97. A fixed number
+in an assert is a TRIPWIRE — it claims nothing, it FAILS LOUDLY the
+moment the world moves, and the failing IS its function; that is what
+every literal in logic/corpus/CORPUS_TRUTH.py is, and converting them
+to counts of themselves would leave the file passing forever and
+proving nothing, the era's whole proof disarmed by a tidying commit
+with nothing going red to announce it. Same literal, opposite roles.
+The rules above are graded the way this step grades a source: by the
+leg actually opened, not by the section it sits in.
+AND THE SIBLING RULE, the costliest of the week to learn: A FIGURE
+THAT NEVER CHANGES ACROSS WORK THAT SHOULD CHANGE IT IS A DEFECT
+REPORT, NOT A CONSTANT. The unit indexer printed "2132 steps" after
+every derivation landing — after eighteen operators, then a hundred
+eighty-nine, then sixty-three, then thirty-two, until three thousand
+six hundred forty-four operators stood in the units and the number had
+not moved once. Both windows watched it go by. It was not lying: it
+counted STEPS, and steps did not change, because the derivation adds
+operators INSIDE existing steps. But a figure sitting beside work that
+should move it, and not moving, is evidence about the instrument, and
+the instrument here was the public scroll: its step 6 said "the unit's
+machine" while rendering the automatic grammar sketch the role tags
+emit from morphology alone, because no export ever carried the real
+operators out of boot_steps[].operators[]. Three months of derivation
+was invisible under a heading claiming to show it — the worst instance
+of the week's whole family, because this false report was aimed at the
+public rather than at us. Fixed 2026-08-30: the operators ship per
+unit and step 6 renders the machine, each line naming the sources that
+licensed it; the grammar sketch stays, moved beneath a label that says
+what it honestly is. When a number refuses to move, ask what it is
+actually counting before you trust it as a constant.
    → shows as: chip "in reading 39/63" or "read through"; grid cell fill.
 
 ## Step 5 — Extract claims
@@ -558,6 +627,78 @@ exactly the eighteen, with the state hash unchanged at 8b8fff1fa28953af
 (it does not cover the standing set). All gates green. NOTE THE CHIP
 LAW HERE: these four blocks are DERIVED but UNSTAMPED, so they read
 first pass like every other unstamped block — the stamp is the owner's
-word alone, and the label never runs ahead of it. Sixty-one blocks
-remain to derive (gen_09-gen_59, gen_64-gen_73), parashah by parashah;
-expect each to move to rev 3 as its turn comes.
+word alone, and the label never runs ahead of it.
+
+THE DERIVATION PASS REACHES LECH LECHA (2026-08-30): twenty-six more
+blocks built from their readings in one workshop sitting and landed
+here the same day — Eden's remainder and the fall (gen_08 through
+gen_15), the whole of parashat Noach (gen_16 through gen_26), and the
+whole of parashat Lech Lecha (gen_27 through gen_33). ONE HUNDRED
+EIGHTY-NINE operators entered, again every one from the existing
+vocabulary, no operator invented, the catalog not versioned; one
+hundred seventy-one claims added, fourteen machine-checked. The world
+fold moved by exactly the one hundred eighty-nine — standing facts
+306 to 495 — with the state hash unchanged at 8b8fff1fa28953af. The
+triage ledgers were NOT touched by this pass; only the units moved.
+GENESIS NOW STANDS 73 of 73 READ and — after parashat Vayera joined
+them the same day (gen_34 through gen_38, Genesis 18:1-22:24, thirty-five
+operators, the fold moving 495 to 530 by exactly that many) — 42 of 73
+DERIVED — and then four more parashiyot followed within the day:
+Chayei Sarah (gen_39-42, fifty-two operators, the fold 530 to 582),
+then Toledot (gen_43-47, sixty-six, to 648), Vayetze (gen_48-54,
+seventy-seven, to 725) and Vayishlach (gen_55-59, fifty-three, to
+778) — every delta exactly its operator count, the state hash
+unmoved through all of them. GENESIS NOW STANDS 63 of 73 DERIVED,
+gen_01 through gen_63 CONTINUOUS: an unbroken run from the book's
+first verse to Genesis 38:30. Miketz followed on the owner's word
+(gen_64-67, sixty-three operators, the fold 778 to 841, no ledger
+touched because the 2026-08-28 sweeps already carried their citation
+keys), taking the run to 67 of 73 DERIVED — gen_01 through gen_67
+unbroken, Genesis 1:1 to 44:34. SIX remain: gen_68-73, Vayigash and
+Vayechi, their keys already in place. Note the seam gen_67 declares
+rather than smooths: its span is the whole of chapter 44, so it
+carries Vayigash's opening seventeen verses and its operators break
+off mid-speech, where Joseph could not restrain himself; gen_68 opens
+at 45:1. The owner's standing decision, relayed
+2026-08-30: KEEP DERIVING TO THE END OF GENESIS AND HOLD THE STAMPS
+UNTIL THE BOOK IS WHOLE — so no stamp traffic is expected group by
+group, and every derived block goes on reading first pass until that
+word comes.
+THE FOLDED SHAPES ARE NOW COUNTED, not argued (the canon window's
+proposal, adopted): every one of the 189 operators carries a bracketed
+tag naming which natural shape it really is, and the tally across all
+of derived Genesis reads — kept record 48, priced law 48, recorded
+dispute 42, cross-corpus link 28, ink count 17, dual-track translation
+4, repayment table 2. The top three plainly earn names and the tail
+two plainly do not; both windows recommend WAITING for the Exodus law
+spans before proposing typed operators, since law-heavy blocks will
+move the distribution. Minting a name is a catalog change and remains
+the owner's word.
+ONE STAMP QUESTION STANDS OPEN, flagged and untouched: gen_08 was
+stamped FULL RULE on the owner's word of 2026-08-24, and its machine
+has since gained operators — so the only block in the book whose chip
+reads full rule on a machine that changed after its stamp is that one.
+No stamp field was edited by either window. It joins the batch-stamp
+queue for the owner's re-affirmation; until he speaks, the chip stands
+as the record left it.
+
+GENESIS IS WHOLE AND STAMPED (2026-08-30, the owner's word closing the
+book). He had held the batch stamps by standing decision until Genesis
+was finished; it finished, and he gave them. Sixty-five blocks —
+gen_09 through gen_73 — flipped to logic_derived_v2_full_rule in one
+batch, each on the same two grounds the stamp has always required: a
+declared reading COMPLETE in its own triage ledger, and logic rebuilt
+FROM that reading in the derivation pass. Verified before the flip,
+all sixty-five eligible, none stamped on a reading it did not have.
+And gen_08 was RE-AFFIRMED rather than given a new label, closing the one
+open honesty question in the book: it had been stamped 2026-08-24 and
+its machine changed afterwards when the derivation added operators, so
+its chip had been claiming full rule for a machine that no longer
+existed. The owner re-affirmed; the stamp now covers what the unit
+actually is. THE WHOLE BOOK NOW READS READ THROUGH AND FULL RULE —
+1,533 of 1,533 verses, 73 of 73 blocks, Genesis 1:1 to 50:26 — the
+first book of the Torah carried end to end through all of Steps 1
+to 8. Step 9, proof against the tradition's own recorded cases, is
+untouched here: no Genesis block claims it, and the exam that would
+grant it does not exist yet.
+

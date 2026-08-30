@@ -24,6 +24,10 @@ m.step("Gen.21.1")
 # as/which say … like-as/which speak”) — fact holds: count/visit-like-which-
 # say-and-make-like-which-speak
 m.fact("paqad_ka_asher_amar_va_yaas_ka_asher_diber")
+# witness-tier presupposed read: argued_by_a_fortiori_from_sotah_law on
+# remembering — read, not installed
+m.witness_read("remembering", "argued_by_a_fortiori_from_sotah_law",
+                cites=["Bereshit Rabbah 53:6"])
 
 # -------------------------- Gen.21.2 · THE_BIRTH_AT_THE_APPOINTED_TIME -----
 # וַתַּהַר וַתֵּלֶד שָׂרָה לְאַבְרָהָם בֵּן לִזְקֻנָיו לַמּוֹעֵד
@@ -91,6 +95,10 @@ m.step("Gen.21.7")
 # ‹מִי מִלֵּל לְאַבְרָהָם› (“who? speak to-Abraham”) — fact holds:
 # who?-speak-to-Abraham-heniqah-son-sarah
 m.fact("mi_milel_le_avraham_heniqah_vanim_sarah")
+# witness-tier presupposed read: age_encoded_in_the_word_choice on
+# milel_verb — read, not installed
+m.witness_read("milel_verb", "age_encoded_in_the_word_choice",
+                cites=["Bereshit Rabbah 53:9"])
 
 # -------------------------- Gen.21.8 · THE_WEANING_FEAST -------------------
 # וַיִּגְדַּל הַיֶּלֶד וַיִּגָּמַל וַיַּעַשׂ אַבְרָהָם מִשְׁתֶּה גָדוֹל
@@ -115,6 +123,10 @@ m.install("ha_naar")
 # ‹וַתֵּרֶא שָׂרָה … מְצַחֵק› (“and-see Sarah … laugh-outright”) — event:
 # see — agent sarah; theme the-boy
 m.event("see", agent="sarah", themes=["ha_naar"])
+# witness-grounded state (its own tier): four_readings_of_one_participle on
+# metzachek
+m.witness_state("metzachek", "four_readings_of_one_participle",
+                cites=["Bereshit Rabbah 53:11"])
 
 # -------------------------- Gen.21.10 · THE_EXPULSION_DEMAND ---------------
 # וַתֹּאמֶר לְאַבְרָהָם גָּרֵשׁ הָאָמָה הַזֹּאת וְאֶת־בְּנָהּ כִּי לֹא
@@ -163,6 +175,10 @@ m.declare("elohim", "LET",
 # ‹כִּי בְיִצְחָק יִקָּרֵא לְךָ זָרַע› (“that in-Isaac call to-you/your
 # seed”) — fact holds: that-and-Isaac-call-to-you-seed
 m.fact("ki_ve_yitzchaq_yiqare_lekha_zara")
+# witness-tier presupposed read: partitive_preposition_as_descent_statute on
+# be_yitzchak — read, not installed
+m.witness_read("be_yitzchak", "partitive_preposition_as_descent_statute",
+                cites=["Bereshit Rabbah 53:12"])
 
 # -------------------------- Gen.21.13 · THE_OTHER_NATION_PROMISE -----------
 # וְגַם אֶת־בֶּן־הָאָמָה לְגוֹי אֲשִׂימֶנּוּ כִּי זַרְעֲךָ הוּא
@@ -237,6 +253,10 @@ m.declare("malakh_elohim", "LET-NOT",
 # God to voice/sound the-boy in-who he/it there”) — fact holds: hear-God-to-
 # voice/sound-the-boy-in-the-which-he/it-there
 m.fact("shama_elohim_el_qol_ha_naar_ba_asher_hu_sham")
+# witness-tier presupposed read: judged_by_present_state on ba_asher_hu_sham
+# — read, not installed
+m.witness_read("ba_asher_hu_sham", "judged_by_present_state",
+                cites=["Bereshit Rabbah 53:14"])
 
 # -------------------------- Gen.21.18 · THE_COMPOUND_TRIPLE_THIRD_TOKEN ----
 # קוּמִי שְׂאִי אֶת־הַנַּעַר וְהַחֲזִיקִי אֶת־יָדֵךְ בּוֹ כִּי־לְגוֹי
@@ -330,6 +350,10 @@ m.step("Gen.21.25")
 # ‹וְהוֹכִחַ אַבְרָהָם אֶת־אֲבִימֶלֶךְ› (“and-be-right Abraham obj-marker
 # Abimelech”) — event: reprove — agent Abraham; theme Abimelech
 m.event("reprove", agent="avraham", themes=["avimelekh"])
+# witness-tier presupposed read: public_robber_defined on rebuke_at_the_well
+# — read, not installed
+m.witness_read("rebuke_at_the_well", "public_robber_defined",
+                cites=["Bereshit Rabbah 54:3"])
 
 # -------------------------- Gen.21.26 · THE_TRIPLE_DENIAL ------------------
 # וַיֹּאמֶר אֲבִימֶלֶךְ לֹא יָדַעְתִּי מִי עָשָׂה אֶת־הַדָּבָר הַזֶּה
@@ -381,6 +405,10 @@ m.result("hishava(li_ve_elohim)", tmark="t1")
 # that Beer-shebah”) — pattern recorded: over-so-call-to-place-pit-Beer-
 # shebah
 m.pattern("al_ken_qara_la_maqom_beer_shava")
+# witness-tier presupposed read: penalty_ledger_and_proof_by_sign on
+# seven_ewes — read, not installed
+m.witness_read("seven_ewes", "penalty_ledger_and_proof_by_sign",
+                cites=["Bereshit Rabbah 54:4", "Bereshit Rabbah 54:5"])
 
 # -------------------------- Gen.21.32 · THE_SECOND_CUT_AND_THE_RETURN ------
 # וַיִּכְרְתוּ בְרִית בִּבְאֵר שָׁבַע וַיָּקָם אֲבִימֶלֶךְ וּפִיכֹל
@@ -408,6 +436,10 @@ m.event("plant_and_call", agent="avraham")
 # ‹אֵל עוֹלָם› (“strength forever”) — fact holds: and-call-in-name-the-LORD-
 # to-forever
 m.fact("va_yiqra_be_shem_YHWH_el_olam")
+# witness-tier presupposed read: chain_of_custody_into_the_tabernacle on
+# the_planting — read, not installed
+m.witness_read("the_planting", "chain_of_custody_into_the_tabernacle",
+                cites=["Bereshit Rabbah 94:4", "Onkelos Genesis 21:33"])
 
 # -------------------------- Gen.21.34 · THE_LONG_SOJOURN_CODA --------------
 # וַיָּגָר אַבְרָהָם בְּאֶרֶץ פְּלִשְׁתִּים יָמִים רַבִּים
@@ -434,4 +466,29 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 23
+    assert sorted(m.WORLD["witnessed"]) == ['metzachek']
+    assert m.WORLD["witnessed"]['metzachek']["cites"] == ['Bereshit Rabbah 53:11']
+    assert all('four_readings_of_one_participle' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('remembering', 'argued_by_a_fortiori_from_sotah_law'), ('milel_verb', 'age_encoded_in_the_word_choice'), ('be_yitzchak', 'partitive_preposition_as_descent_statute'), ('ba_asher_hu_sham', 'judged_by_present_state'), ('rebuke_at_the_well', 'public_robber_defined'), ('seven_ewes', 'penalty_ledger_and_proof_by_sign'), ('the_planting', 'chain_of_custody_into_the_tabernacle')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 53:6']
+    assert all('argued_by_a_fortiori_from_sotah_law' not in f for f in m.WORLD["facts"])
+    assert 'remembering' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 53:9']
+    assert all('age_encoded_in_the_word_choice' not in f for f in m.WORLD["facts"])
+    assert 'milel_verb' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 53:12']
+    assert all('partitive_preposition_as_descent_statute' not in f for f in m.WORLD["facts"])
+    assert 'be_yitzchak' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 53:14']
+    assert all('judged_by_present_state' not in f for f in m.WORLD["facts"])
+    assert 'ba_asher_hu_sham' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 54:3']
+    assert all('public_robber_defined' not in f for f in m.WORLD["facts"])
+    assert 'rebuke_at_the_well' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 54:4', 'Bereshit Rabbah 54:5']
+    assert all('penalty_ledger_and_proof_by_sign' not in f for f in m.WORLD["facts"])
+    assert 'seven_ewes' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 94:4', 'Onkelos Genesis 21:33']
+    assert all('chain_of_custody_into_the_tabernacle' not in f for f in m.WORLD["facts"])
+    assert 'the_planting' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

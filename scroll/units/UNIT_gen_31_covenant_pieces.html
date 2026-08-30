@@ -34,8 +34,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 .arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
        border-radius:8px; padding:.4rem .7rem; }
 .arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
-</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_31_covenant_pieces?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The covenant of the pieces: the vision, the stars, the rite, the decree, the grant (15:1-21) <span class='badge frozen'>MODEL · REV 2 · GATES GREEN</span></h1>
-<div class="meta">unit <b>gen_31_covenant_pieces</b> · Genesis 15:1-21 · derive logic_derived_v1 · phase C-31</div>
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_31_covenant_pieces?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The covenant of the pieces: the vision, the stars, the rite, the decree, the grant (15:1-21) <span class='badge frozen'>MODEL · REV 4 · GATES GREEN</span></h1>
+<div class="meta">unit <b>gen_31_covenant_pieces</b> · Genesis 15:1-21 · derive logic_derived_v2_full_rule · phase C-31</div>
 <div class="meta"><a href="../#Gen/15/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
 <p><span class="he">לְזַרְעֲךָ נָתַתִּי אֶת־הָאָרֶץ הַזֹּאת</span> · <i>le-zarakha natati et-ha-aretz ha-zot</i> · &#x27;To your seed I HAVE GIVEN this land&#x27;</p>
 <div class="note">Logic-derived v1: v3 taamim (cantillation accents) trees from DB tree_json -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (tira(avram), habet_u_sefor(avram, ha_shamaymah_ve_ha_kokhavim), qechah(avram, eglah_ez_ayil_tor_ve_gozal), le_zarakha_natati_et_ha_aretz_ha_zot). Per-verse steps x21 (the ratified span order).</div>
@@ -122,6 +122,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וַיֹּאמֶר לוֹ</span> · <i>va-yomer lo</i><br><span class="gloss">= and-yomer not</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(koh_yihyeh_zarekha, t0)</span><br><span class="gloss">= HOLDS(koh-yihyeh-zarekha, t0)</span><br>KOH (&#x27;SO/thus&#x27;) — TORAH DEBUT: the comparison-word is born pointing at stars, its referent a night sky [census]. Promise-FACT (no duration clause — gen_27&#x27;s class): the seed will be LIKE THAT — the verse ends on zarekha [tree fact]. KOKHAVIM (&#x27;stars&#x27;) token 2 — token 1 is 1:16 (the stars MADE), token 3 is 22:17 (the oath&#x27;s ke-khokhvei ha-shamayim): made, counted, sworn [census, prose].
 </td><td><span class="he">כֹּה יִהְיֶה זַרְעֶךָ</span> · <i>koh yihyeh zarekha</i><br><span class="gloss">= koh yihyeh zarekha</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(brought_him_outside, exemption_from_astrology)</span><br><span class="gloss">= WITNESS-READ(brought-him-outside, exemption-from-astrology)</span><br>ONE ADVERB GROUNDS A STANDING EXEMPTION [claim G31-16]. &#x27;And He brought him OUTSIDE&#x27; is read as: outside your astrology - from which Rav states the rule that Israel has no constellation. The dossier reads the same verse as annulling star-reading entirely: &#x27;you are a prophet, not an astrologer&#x27;, with the looking-down direction argued from the verb itself. [folded shape: priced law]
+</td><td>—</td><td class='cite'>Shabbat 156a:13, Bereshit Rabbah 44:12</td><td>witnessed</td></tr>
 </table>
 <div class="meta">God answers a bookkeeping question with astronomy: an imperative to count the uncountable, a promise built on the failure of the command — and the machine holds the demand open exactly as the sky holds the count.</div>
 </div>
@@ -157,6 +159,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וַיֹּאמַר</span> · <i>va-yomar</i><br><span class="gloss">= and-yomar</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ba_mah_eda_ki_irashena, t0)</span><br><span class="gloss">= HOLDS(in-the-mah-eda-when-irashena, t0)</span><br>The second question held as spoken fact [flag 5&#x27;s class: interrogative, no demand]: BA-MAH EDA (&#x27;whereby shall I KNOW&#x27;) — and the decree will answer in the question&#x27;s own verb, doubled: yadoa teda (&#x27;KNOWING you shall KNOW&#x27;, 15:13) — question-verb and answer-verb are one root, three tokens in-span (eda, yadoa, teda) [census, prose]. ADONAI YHWH — the double-name&#x27;s second and last Genesis token [flag 8]. IRASHENA — yarash token 5, the fifth and last in-span: the dialogue about inheriting ends inside a question [census].
 </td><td><span class="he">אֲדֹנָי יֱהוִה בַּמָּה אֵדַע כִּי אִירָשֶׁנָּה</span> · <i>adonai YHWH ba-mah eda ki irashena</i><br><span class="gloss">= adonai the-LORD in-the-mah eda when irashena</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(bamah_eda_question, order_of_offerings_instituted)</span><br><span class="gloss">= WITNESS-READ(bamah-eda-question, order-fowl-offerings-instituted)</span><br>A LITURGICAL INSTITUTION FOUNDED INSIDE THIS DIALOGUE [claim G31-18]. Asked by what he shall know, the answer establishes the ORDER OF OFFERINGS as a substitute for the offerings: &#x27;when the Temple stands, offerings atone; when it does not - I have established the order of offerings: whenever they READ them I count it as if they sacrificed, and pardon all their iniquities.&#x27; A standing practice dated to this unit&#x27;s question. And R. Shimon ben Yochai notes a first here: from creation no one addressed God as Lord until this verse [claim G31-20]. [folded shape: priced law]
+</td><td>—</td><td class='cite'>Megillah 31b:5, Berakhot 7b:1</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The believer asks for a proof: the same mouth the last verse credited with faith wants to know HOW it will know — and the letter, unembarrassed, seats the asking itself on the throne of the verse.</div>
 </div>
@@ -169,6 +173,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וַיֹּאמֶר אֵלָיו</span> · <i>va-yomer elav</i><br><span class="gloss">= and-yomer to-him</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(qechah(avram, eglah_ez_ayil_tor_ve_gozal)))</span><br><span class="gloss">= DECLARE(the-LORD, LET(qechah(avram, eglah-ez-ayil-tor-and-gozal)))</span><br>QECHAH (&#x27;TAKE!&#x27; — true imperative HVqv2ms with paragogic he; laqach token 29) — and frozen gen_30&#x27;s arc-line LANDS, quoted verbatim: &#x27;token 29 is 15:9&#x27;s qechah-li — GOD says take next, across the seam [career, prose]&#x27;: after the king&#x27;s abused take-imperative (token 26) and Abram&#x27;s take-refusal (token 27), the first take-command Abram will obey is God&#x27;s, and it convenes a covenant [landed; TIR-027, the imperative-LET class]. Pushed; watch 15:10. THE MENAGERIE — five debuts in one command: EGLAH (&#x27;heifer&#x27; — tokens 2-5 ALL Deut 21:3-6, the broken-neck rite: two rites own the word), EZ (&#x27;she-goat&#x27;), AYIL (&#x27;ram&#x27; — the Akedah&#x27;s substitute at token 2, 22:13), TOR (&#x27;turtledove&#x27; — tokens 2+ all Leviticus&#x27;s bird-offerings), GOZAL (&#x27;young pigeon&#x27; — its only other token Deut 32:11&#x27;s eagle-nestling): Leviticus&#x27;s species-list born in one verse, unexplained [censuses, prose]. MESHULESHET (&#x27;threefold&#x27;) x3 — a triple said three times (its only other Torah token: Deut 19:3&#x27;s road-tripling); the rite&#x27;s number arrives uninterpreted [census; the chain&#x27;s readings named-only]. Onkelos liturgizes the whole line: qechah li -&gt; QAREV KODAMAI (&#x27;OFFER BEFORE ME&#x27; — the korban-verb two books early, with the kodam-distancing) and the threefold becomes THREE-OF-EACH (eglin telata, &#x27;three calves&#x27;): the buffer reads a sacrifice and multiplies the herd, 5 -&gt; 11 [dual-track, flagged at the oral note].
 </td><td><span class="he">קְחָה לִי עֶגְלָה מְשֻׁלֶּשֶׁת וְעֵז מְשֻׁלֶּשֶׁת וְאַיִל מְשֻׁלָּשׁ וְתֹר וְגוֹזָל</span> · <i>qechah li eglah meshuleshet ve-ez meshuleshet ve-ayil meshulash ve-tor ve-gozal</i><br><span class="gloss">= qechah to-me eglah meshuleshet and-ez meshuleshet and-ayil meshulash and-tor and-gozal</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(pieces_rite, standing_covenant_form)</span><br><span class="gloss">= WITNESS-READ(pieces-rite, standing-covenant-form)</span><br>THIS CEREMONY IS THE FORM A COVENANT TAKES [claim G31-17]. The prophets&#x27; own covenant rite - the calf cut in two, the parties passing between its parts - is identified with this unit&#x27;s ceremony, so what the machine records as a singular vision is read as a repeatable LEGAL INSTRUMENT, witnessed from a later book. [folded shape: cross-corpus link]
+</td><td>—</td><td class='cite'>Sifrei Devarim 171:6</td><td>witnessed</td></tr>
 </table>
 <div class="meta">How shall I know? Take. The proof is an errand list — three beasts tripled and two birds — and the machine opens a demand exactly where the letter opens a rite.</div>
 </div>
@@ -211,6 +217,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וְתַרְדֵּמָה נָפְלָה עַל־אַבְרָם</span> · <i>ve-tardemah naflah al-avram</i><br><span class="gloss">= deep-sleep naflah upon-avram</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(emah_chashekhah_gedolah_nofelet_alav, t0)</span><br><span class="gloss">= HOLDS(emah-chashekhah-gedolah-nofelet-alav, t0)</span><br>EMAH (&#x27;dread&#x27;) — TORAH DEBUT (tokens 2-3 are Exod 15:16&#x27;s Song and 23:27&#x27;s vanguard-terror: the dread-word&#x27;s career is God&#x27;s weapon; here it falls on His covenant partner); CHASHEKHAH (&#x27;darkness&#x27;) — hapax-form of the dark-word [census]. THE FALL-VERB ON BOTH THRONES: naflah (finite) at the etnachta, nofelet (participle, still falling) at the silluq [tree fact]. And the prohibition of 15:1 stands OPEN over this verse in the letter&#x27;s own irony: the man told al-tira (&#x27;fear not&#x27;) receives the dread-word&#x27;s debut [prose; flag 3]. The chain reads the dread as the exiles [named-only].
 </td><td><span class="he">וְהִנֵּה אֵימָה חֲשֵׁכָה גְדֹלָה נֹפֶלֶת עָלָיו</span> · <i>ve-hineh emah chashekhah gedolah nofelet alav</i><br><span class="gloss">= and-hineh emah chashekhah gedolah nofelet alav</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_STATE</td><td><span class="expr">WITNESS(the_vision, decoded_three_ways_with_transposition)</span><br><span class="gloss">= WITNESS(the-vision, decoded-three-ways-with-transposition)</span><br>ONE VISION, THREE DECODINGS, AND AN ADMITTED TRANSPOSITION [claim G31-19]. One seat reads four things shown at the pieces - Gehenna, the kingdoms, the Torah, the Temple - with the rule that engagement in two saves from two. Another maps the same tokens differently: the furnace as Gehenna, the torch as the giving of the Torah, the passage between the pieces as the splitting of the sea. And the four words of this verse&#x27;s dread are mapped one by one onto four kingdoms, the seat itself recording that &#x27;some transpose&#x27; the assignments. Carried with its variance intact. [folded shape: recorded dispute]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 44:21, Mekhilta DeRabbi Yishmael, Tractate Bachodesh 9:5, Mekhilta DeRabbi Yishmael, Tractate Bachodesh 9:7</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The sun goes down on schedule and the grammar goes down with it: a sleep that falls with no thrower, a dread still falling at the verse&#x27;s end — and the fear God forbade arrives wearing a word the Torah has never used.</div>
 </div>
@@ -223,6 +231,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וַיֹּאמֶר לְאַבְרָם יָדֹעַ תֵּדַע</span> · <i>va-yomer le-avram yadoa teda</i><br><span class="gloss">= and-yomer to-avram yadoa teda</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ger_yihyeh_zarakha_be_eretz_lo_lahem, t0) ∧ HOLDS(va_avadum_ve_inu_otam_arba_meot_shanah, t0)</span><br><span class="gloss">= HOLDS(ger-yihyeh-zarakha-in-earth-not-to-them, t0) ∧ HOLDS(and-avadum-and-inu-otam-arba-meot-year, t0)</span><br>THE DECREE HELD AS FACT (a dark promise is still a promise — gen_27&#x27;s class; the weqatal chain va-avadum ve-inu is future-decree grammar, not command [morph, TIR-029 named]): GER (&#x27;sojourner&#x27;) — TORAH DEBUT, and frozen gen_28&#x27;s line is its seed, quoted verbatim: &#x27;LA-GUR (&quot;to SOJOURN&quot;) — the ger-root&#x27;s Torah debut: the stranger-word is born on Abram&#x27;s way down&#x27; — the verb debuted on Abram&#x27;s own descent; the NOUN debuts in the prophecy of the nation&#x27;s [landed, career]. GER TOKEN 2 = 23:4 — ABRAHAM&#x27;s own mouth at Sarah&#x27;s grave (&#x27;ger ve-toshav anokhi&#x27;), and the bury-verb of 15:15 stands beside it there (qavar tokens 2-3 = 23:4/23:6): the decree&#x27;s sojourn-and-bury pair recurs as a pair at Machpelah [census, prose]. ANAH (&#x27;afflict&#x27;) token 1 — tokens 2-3 are 16:6 (SARAI afflicts Hagar) and 16:9 (the angel&#x27;s submit-command): the afflict-verb crosses the seam into the next chapter&#x27;s house [census; gen_32 watch]. AVAD tokens 7-8 (here + 15:14) — frozen gen_30&#x27;s career line extends, quoted: &#x27;the garden&#x27;s work-verb ... the sixth serves an empire&#x27; — now the seed itself will serve one [census, prose]. The 400 years sit verse-final [tree fact; the chain&#x27;s arithmetic named-only]. Onkelos: ger -&gt; DAYARIN (&#x27;sojourners&#x27;, plural) yehon BENAKH (&#x27;your SONS will be&#x27;) — the seed-to-sons buffer again [dual-track].
 </td><td><span class="he">כִּי־גֵר יִהְיֶה זַרְעֲךָ בְּאֶרֶץ לֹא לָהֶם וַעֲבָדוּם וְעִנּוּ אֹתָם אַרְבַּע מֵאוֹת שָׁנָה</span> · <i>ki-ger yihyeh zarakha be-eretz lo lahem va-avadum ve-inu otam arba meot shanah</i><br><span class="gloss">= when-ger yihyeh zarakha earth not to-them and-avadum and-inu otam arba meot year</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(four_hundred_years, dated_before_the_call_by_arithmetic)</span><br><span class="gloss">= WITNESS-READ(four-hundred-years, dated-before-the-call-by-arithmetic)</span><br>THIS UNIT IS DATED BEFORE AN EARLIER-NUMBERED ONE [claim G31-14]. Reconciling our four hundred years with the four hundred and thirty stated elsewhere, the tannaitic seat concludes that THE DECREE AT THE PIECES CAME THIRTY YEARS BEFORE ISAAC&#x27;S BIRTH - dating this chapter to Abraham&#x27;s seventieth year, before the departure of 12:4 at seventy-five. R. Nechemya&#x27;s reading of the doubled going-command carries the same inversion. The machine&#x27;s narrated order is contested by an arithmetic the tradition performs on the corpus&#x27;s own numbers. And a decree-revocability rule takes our verses as its exhibit pair, since these years were said and not performed in full [claim G31-20]. [folded shape: ink count]
+</td><td>—</td><td class='cite'>Mekhilta DeRabbi Yishmael, Tractate Pischa 14:15, Bereshit Rabbah 39:8, Bereshit Rabbah 53:4</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The proof the question asked for turns out to be a sentence: know, doubled — then three verbs walking downhill (sojourn, serve, be afflicted) with a number at the end of them longer than any life the book has counted lately.</div>
 </div>
@@ -243,6 +253,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(tavo_el_avotekha_be_shalom, t0) ∧ HOLDS(tiqaver_be_sevah_tovah, t0)</span><br><span class="gloss">= HOLDS(tavo-to-avotekha-in-shalom, t0) ∧ HOLDS(tiqaver-in-sevah-tovah, t0)</span><br>THREE DEBUTS IN ONE PROMISE-VERSE: SHALOM (&#x27;peace&#x27;) — TORAH DEBUT, seated ON THE ETNACHTA [tree fact]: the peace-word&#x27;s first token is a burial promise (tokens 2-3 are 26:29/31, the Isaac-Abimelech pact); QAVAR (&#x27;bury&#x27;) — TORAH DEBUT, niphal (&#x27;you shall BE buried&#x27;); SEVAH (&#x27;old age&#x27;) — TORAH DEBUT (token 2 = 25:8, the verse that KEEPS this promise: Abraham dies be-sevah tovah — the receipt is seven chapters ahead, named-only) [censuses, prose]. TOVAH — the span&#x27;s only tov-token (2896 a): attributive, inside the promise — NOT an evaluation event (the instrument-roster census behind flag 1&#x27;s Reading B; seed refinement recorded in flag 12b) [census]. VE-ATAH (&#x27;and YOU&#x27;) — the decree breaks off its plural to face its listener: four hundred years for the seed, one quiet grave for the man [letter fact].
 </td><td><span class="he">וְאַתָּה תָּבוֹא אֶל־אֲבֹתֶיךָ בְּשָׁלוֹם תִּקָּבֵר בְּשֵׂיבָה טוֹבָה</span> · <i>ve-atah tavo el-avotekha be-shalom tiqaver be-sevah tovah</i><br><span class="gloss">= you tavo to-avotekha in-shalom tiqaver in-sevah tovah</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(in_peace_clause, leave_taking_formula)</span><br><span class="gloss">= WITNESS-READ(in-peace-clause, leave-taking-formula)</span><br>A FORMULA FOR THE LIVING, TAKEN FROM A PROMISE TO THE DYING [claim G31-20]. From this verse&#x27;s &#x27;you shall come to your fathers IN peace&#x27; comes the rule that one takes leave of the dead saying &#x27;go IN peace&#x27;, not &#x27;to peace&#x27; - the preposition of our clause fixing the wording of a standing practice. [folded shape: priced law]
+</td><td>—</td><td class='cite'>Berakhot 64a:10</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Inside the four-hundred-year sentence, a personal clause: you, peace, fathers, a good old age — the peace-word is born making the one promise that every man can collect.</div>
 </div>
@@ -253,6 +265,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_dor_revii_yashuvu_henah, t0) ∧ HOLDS(lo_shalem_avon_ha_emori_ad_henah, t0)</span><br><span class="gloss">= HOLDS(and-dor-revii-yashuvu-henah, t0) ∧ HOLDS(not-shalem-avon-the-emori-until-henah, t0)</span><br>ONE WORD ON BOTH THRONES: HENAH (&#x27;hither/here&#x27;) — TORAH DEBUT x2, tokens 1-2 both in this verse, seated on the etnachta AND the silluq: they return HERE; not yet full until HERE [tree fact, census]. Onkelos SPLITS the pair — haka (&#x27;here&#x27;) for the first, ad KEAN (&#x27;until NOW&#x27;) for the second: place kept, time resolved [dual-track]. SHUV token 12 (yashuvu) after frozen gen_30&#x27;s restore-cluster (tokens 8-11): the return-verb&#x27;s next token is the return of a generation not yet born; token 13 is 16:9&#x27;s SHUVI — the angel to Hagar, across the seam [census; gen_32 watch]. AVON (&#x27;iniquity&#x27;) token 2 — token 1 is 4:13, CAIN&#x27;s &#x27;my iniquity is greater than I can bear&#x27;; token 3 is 19:15, Sodom&#x27;s morning [census, prose]. LO-SHALEM (&#x27;not yet COMPLETE&#x27;) — shalem (8003) token 1, ONE SKELETON from 14:18&#x27;s Salem city (8004, Torah hapax): shalem the city hosted the blessing; shalem the adjective withholds the land — same three consonants, two lemmas, held as sound-observation only (gen_30&#x27;s Bera/Birsha class; the DB&#x27;s lemma-split respected) — and Onkelos KEEPS the skeleton (la SHELIM) [census, dual-track]. The moral clock held exactly as written: the land waits on its holders&#x27; account [letter fact; the chain&#x27;s theodicy files named-only].
 </td><td><span class="he">וְדוֹר רְבִיעִי יָשׁוּבוּ הֵנָּה כִּי לֹא־שָׁלֵם עֲוֺן הָאֱמֹרִי עַד־הֵנָּה</span> · <i>ve-dor revii yashuvu henah ki lo-shalem avon ha-emori ad-henah</i><br><span class="gloss">= and-dor revii yashuvu henah when not-shalem avon the-emori until-henah</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_STATE</td><td><span class="expr">WITNESS(two_clocks, conditional_on_conduct)</span><br><span class="gloss">= WITNESS(two-clocks, conditional-on-conduct)</span><br>TWO CLOCKS IN ONE UNIT, RECONCILED BY CONDITION [claim G31-13]. Our 15:13 sets four hundred years; this verse sets the fourth generation. The Mishnah carries the tension as a ruling in its own right - &#x27;WHICH IS THE KETZ: though it says four hundred years, it says the fourth generation returns&#x27;. Rabbi resolves it as a conditional machine: if they repent I redeem them BY GENERATIONS; if not, BY YEARS. Two numeric operators disagreeing, and the choice between them made to depend on conduct. [folded shape: recorded dispute]
+</td><td>—</td><td class='cite'>Mishnah Eduyot 2:9, Tosefta Eduyot 1:11, Mekhilta DeRabbi Yishmael, Tractate Pischa 14:16</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The timetable has a reason and the reason is bookkeeping: a fourth generation returning to a HERE the sleeping man is lying in, because another people&#x27;s column has not yet added up to enough.</div>
 </div>
@@ -280,6 +294,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(mi_nehar_mitzrayim_ad_ha_nahar_ha_gadol_nehar_perat, t0)</span><br><span class="gloss">= HOLDS(from-nehar-mitzrayim-until-the-river-the-gadol-nehar-Euphrates, t0)</span><br>THE BORDER, RIVER TO RIVER: PERAT TOKEN 2 — token 1 is 2:14: EDEN&#x27;s fourth river is the covenant&#x27;s far border — the grant&#x27;s geography reaches back to the garden&#x27;s [census, prose]. NAHAR x3 in one clause (tokens 5-7): the river-word triples exactly where the land gets edges [census]. The verse ends on nehar-perat [tree fact]. The ad (&#x27;until&#x27;)-ladder: frozen gen_29&#x27;s ran places to forever; gen_30&#x27;s ran thread to thong; this one runs river to river — the span&#x27;s own measure of a gift [letter echo, prose].
 </td><td><span class="he">מִנְּהַר מִצְרַיִם עַד־הַנָּהָר הַגָּדֹל נְהַר־פְּרָת</span> · <i>mi-nehar mitzrayim ad-ha-nahar ha-gadol nehar-perat</i><br><span class="gloss">= from-nehar mitzrayim until-the-river the-gadol nehar-Euphrates</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">nahar_mitzrayim, nehar_perat are READ without prior install (known geography)</span><br><span class="gloss">= river-mitzrayim, nehar-Euphrates are READ without prior install (known geography)</span><br>flag, not fix (the border&#x27;s two rivers, read as known ground inside the grant-speech; Perat&#x27;s only prior token is Eden&#x27;s river-table, 2:14 — frozen gen_08&#x27;s span; the ten PEOPLES that follow are grant-roster content, NOT reads — flag 6)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(natati_past_tense, statement_is_a_deed)</span><br><span class="gloss">= WITNESS-READ(natati-past-tense, statement-is-a-deed)</span><br>A TENSE DECIDES WHEN AN OBLIGATION BEGINS [claim G31-15]. The grant is written &#x27;to your seed I HAVE GIVEN&#x27; in the past, and the chain rules that HIS STATEMENT IS A DEED - the promise executed at the moment of speaking, placing it in the census of prophetic past-tenses. That reading then does legal work: the dispute over when the dough-offering obligation began is settled by it - &#x27;before they entered they had ALREADY inherited: I HAVE GIVEN, not I will give - already given.&#x27; A grammatical tense in this unit fixing a live obligation&#x27;s start date. [folded shape: priced law]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 44:22, Jerusalem Talmud Challah 2:1:3</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The chapter&#x27;s ledger closes in one verb-tense: on that day a covenant was cut, and inside it the gift is already past — I HAVE given — measured from the river of Egypt to a river that last flowed through Eden.</div>
 </div>
@@ -912,6 +928,10 @@ m.event(&quot;say&quot;, agent=&quot;YHWH&quot;)
 # ‹כֹּה יִהְיֶה זַרְעֶךָ› (“like-this be seed-you/your”) — fact holds: koh-
 # yihyeh-zarekha
 m.fact(&quot;koh_yihyeh_zarekha&quot;)
+# witness-tier presupposed read: exemption_from_astrology on
+# brought_him_outside — read, not installed
+m.witness_read(&quot;brought_him_outside&quot;, &quot;exemption_from_astrology&quot;,
+                cites=[&quot;Shabbat 156a:13&quot;, &quot;Bereshit Rabbah 44:12&quot;])
 
 # -------------------------- Gen.15.6 · THE_BELIEF_AND_THE_RECKONING --------
 # וְהֶאֱמִן בַּיהוָה וַיַּחְשְׁבֶהָ לּוֹ צְדָקָה
@@ -951,6 +971,10 @@ m.event(&quot;say&quot;, agent=&quot;avram&quot;)
 # know that possess/inherit-her/its”) — fact holds: in-the-mah-know-that-
 # irashena
 m.fact(&quot;ba_mah_eda_ki_irashena&quot;)
+# witness-tier presupposed read: order_of_offerings_instituted on
+# bamah_eda_question — read, not installed
+m.witness_read(&quot;bamah_eda_question&quot;, &quot;order_of_offerings_instituted&quot;,
+                cites=[&quot;Megillah 31b:5&quot;, &quot;Berakhot 7b:1&quot;])
 
 # -------------------------- Gen.15.9 · THE_TAKE_COMMAND --------------------
 # וַיֹּאמֶר אֵלָיו קְחָה לִי עֶגְלָה מְשֻׁלֶּשֶׁת וְעֵז מְשֻׁלֶּשֶׁת וְאַיִל
@@ -968,6 +992,10 @@ m.event(&quot;say&quot;, agent=&quot;YHWH&quot;)
 # nestling)
 m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
           &quot;qechah(avram, eglah_ez_ayil_tor_ve_gozal)&quot;)
+# witness-tier presupposed read: standing_covenant_form on pieces_rite —
+# read, not installed
+m.witness_read(&quot;pieces_rite&quot;, &quot;standing_covenant_form&quot;,
+                cites=[&quot;Sifrei Devarim 171:6&quot;])
 
 # -------------------------- Gen.15.10 · THE_COMPLIANCE_AND_THE_CUTTING -----
 # וַיִּקַּח־לוֹ אֶת־כָּל־אֵלֶּה וַיְבַתֵּר אֹתָם בַּתָּוֶךְ וַיִּתֵּן
@@ -1018,6 +1046,10 @@ m.event(&quot;fall&quot;, themes=[&quot;tardemah&quot;])
 # darkness great fall over-him/its”) — fact holds: emah-chashekhah-gedolah-
 # fall-alav
 m.fact(&quot;emah_chashekhah_gedolah_nofelet_alav&quot;)
+# witness-grounded state (its own tier):
+# decoded_three_ways_with_transposition on the_vision
+m.witness_state(&quot;the_vision&quot;, &quot;decoded_three_ways_with_transposition&quot;,
+                cites=[&quot;Bereshit Rabbah 44:21&quot;, &quot;Mekhilta DeRabbi Yishmael, Tractate Bachodesh 9:5&quot;, &quot;Mekhilta DeRabbi Yishmael, Tractate Bachodesh 9:7&quot;])
 
 # -------------------------- Gen.15.13 · THE_DECREE_SOJOURN_SERVE_AFFLICT ---
 # וַיֹּאמֶר לְאַבְרָם יָדֹעַ תֵּדַע כִּי־גֵר יִהְיֶה זַרְעֲךָ בְּאֶרֶץ לֹא
@@ -1036,6 +1068,10 @@ m.event(&quot;say&quot;, agent=&quot;YHWH&quot;)
 # earth-not-to-them; and-avadum-and-afflict-literally-otam-four-hundred-year
 m.fact(&quot;ger_yihyeh_zarakha_be_eretz_lo_lahem&quot;,
        &quot;va_avadum_ve_inu_otam_arba_meot_shanah&quot;)
+# witness-tier presupposed read: dated_before_the_call_by_arithmetic on
+# four_hundred_years — read, not installed
+m.witness_read(&quot;four_hundred_years&quot;, &quot;dated_before_the_call_by_arithmetic&quot;,
+                cites=[&quot;Mekhilta DeRabbi Yishmael, Tractate Pischa 14:15&quot;, &quot;Bereshit Rabbah 39:8&quot;, &quot;Bereshit Rabbah 53:4&quot;])
 
 # -------------------------- Gen.15.14 · THE_JUDGMENT_AND_THE_EXODUS_WEALTH -
 # וְגַם אֶת־הַגּוֹי אֲשֶׁר יַעֲבֹדוּ דָּן אָנֹכִי וְאַחֲרֵי־כֵן יֵצְאוּ
@@ -1061,6 +1097,10 @@ m.step(&quot;Gen.15.15&quot;)
 # fact holds: come/bring-to-avotekha-in-safe; bury-in-sevah-tovah
 m.fact(&quot;tavo_el_avotekha_be_shalom&quot;,
        &quot;tiqaver_be_sevah_tovah&quot;)
+# witness-tier presupposed read: leave_taking_formula on in_peace_clause —
+# read, not installed
+m.witness_read(&quot;in_peace_clause&quot;, &quot;leave_taking_formula&quot;,
+                cites=[&quot;Berakhot 64a:10&quot;])
 
 # -------------------------- Gen.15.16 · THE_FOURTH_GENERATION_AND_THE_UNFULL_INIQUITY -
 # וְדוֹר רְבִיעִי יָשׁוּבוּ הֵנָּה כִּי לֹא־שָׁלֵם עֲוֺן הָאֱמֹרִי
@@ -1074,6 +1114,10 @@ m.step(&quot;Gen.15.16&quot;)
 # return-henah; not-complete-perversity-the-Emorite-until-henah
 m.fact(&quot;ve_dor_revii_yashuvu_henah&quot;,
        &quot;lo_shalem_avon_ha_emori_ad_henah&quot;)
+# witness-grounded state (its own tier): conditional_on_conduct on
+# two_clocks
+m.witness_state(&quot;two_clocks&quot;, &quot;conditional_on_conduct&quot;,
+                cites=[&quot;Mishnah Eduyot 2:9&quot;, &quot;Tosefta Eduyot 1:11&quot;, &quot;Mekhilta DeRabbi Yishmael, Tractate Pischa 14:16&quot;])
 
 # -------------------------- Gen.15.17 · THE_FIRE_BETWEEN_THE_PIECES --------
 # וַיְהִי הַשֶּׁמֶשׁ בָּאָה וַעֲלָטָה הָיָה וְהִנֵּה תַנּוּר עָשָׁן
@@ -1112,6 +1156,10 @@ m.fact(&quot;le_zarakha_natati_et_ha_aretz_ha_zot&quot;)
 m.fact(&quot;mi_nehar_mitzrayim_ad_ha_nahar_ha_gadol_nehar_perat&quot;)
 # reads without prior install (flag, not fix): river-Egypt, river-Euphrates
 m.presupposed(&quot;nahar_mitzrayim&quot;, &quot;nehar_perat&quot;)
+# witness-tier presupposed read: statement_is_a_deed on natati_past_tense —
+# read, not installed
+m.witness_read(&quot;natati_past_tense&quot;, &quot;statement_is_a_deed&quot;,
+                cites=[&quot;Bereshit Rabbah 44:22&quot;, &quot;Jerusalem Talmud Challah 2:1:3&quot;])
 
 # -------------------------- Gen.15.19 · THE_GRANT_ROSTER_ROW_ONE -----------
 # אֶת־הַקֵּינִי וְאֶת־הַקְּנִזִּי וְאֵת הַקַּדְמֹנִי
@@ -1161,5 +1209,29 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 23
+    assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;the_vision&#x27;, &#x27;two_clocks&#x27;]
+    assert m.WORLD[&quot;witnessed&quot;][&#x27;the_vision&#x27;][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 44:21&#x27;, &#x27;Mekhilta DeRabbi Yishmael, Tractate Bachodesh 9:5&#x27;, &#x27;Mekhilta DeRabbi Yishmael, Tractate Bachodesh 9:7&#x27;]
+    assert all(&#x27;decoded_three_ways_with_transposition&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert m.WORLD[&quot;witnessed&quot;][&#x27;two_clocks&#x27;][&quot;cites&quot;] == [&#x27;Mishnah Eduyot 2:9&#x27;, &#x27;Tosefta Eduyot 1:11&#x27;, &#x27;Mekhilta DeRabbi Yishmael, Tractate Pischa 14:16&#x27;]
+    assert all(&#x27;conditional_on_conduct&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;brought_him_outside&#x27;, &#x27;exemption_from_astrology&#x27;), (&#x27;bamah_eda_question&#x27;, &#x27;order_of_offerings_instituted&#x27;), (&#x27;pieces_rite&#x27;, &#x27;standing_covenant_form&#x27;), (&#x27;four_hundred_years&#x27;, &#x27;dated_before_the_call_by_arithmetic&#x27;), (&#x27;in_peace_clause&#x27;, &#x27;leave_taking_formula&#x27;), (&#x27;natati_past_tense&#x27;, &#x27;statement_is_a_deed&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Shabbat 156a:13&#x27;, &#x27;Bereshit Rabbah 44:12&#x27;]
+    assert all(&#x27;exemption_from_astrology&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;brought_him_outside&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Megillah 31b:5&#x27;, &#x27;Berakhot 7b:1&#x27;]
+    assert all(&#x27;order_of_offerings_instituted&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;bamah_eda_question&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Sifrei Devarim 171:6&#x27;]
+    assert all(&#x27;standing_covenant_form&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;pieces_rite&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Mekhilta DeRabbi Yishmael, Tractate Pischa 14:15&#x27;, &#x27;Bereshit Rabbah 39:8&#x27;, &#x27;Bereshit Rabbah 53:4&#x27;]
+    assert all(&#x27;dated_before_the_call_by_arithmetic&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;four_hundred_years&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Berakhot 64a:10&#x27;]
+    assert all(&#x27;leave_taking_formula&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;in_peace_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 44:22&#x27;, &#x27;Jerusalem Talmud Challah 2:1:3&#x27;]
+    assert all(&#x27;statement_is_a_deed&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;natati_past_tense&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-25 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-08-30 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

@@ -60,6 +60,11 @@ m.event("dream_say", agent="elohim")
 # master
 m.fact("hinkha_met_al_ha_ishah",
        "ve_hi_beulat_baal")
+# witness-tier presupposed read:
+# prophecy_grade_carried_by_both_spine_members on gentile_dream — read, not
+# installed
+m.witness_read("gentile_dream", "prophecy_grade_carried_by_both_spine_members",
+                cites=["Bereshit Rabbah 52:5", "Bereshit Rabbah 74:7", "Onkelos Genesis 20:3"])
 
 # -------------------------- Gen.20.4 · THE_KINGS_COUNT_QUESTION ------------
 # וַאֲבִימֶלֶךְ לֹא קָרַב אֵלֶיהָ וַיֹּאמַר אֲדֹנָי הֲגוֹי גַּם־צַדִּיק
@@ -102,6 +107,10 @@ m.step("Gen.20.6")
 m.fact("gam_anokhi_yadati_ve_tom_levavkha",
        "va_echsokh_otkha_me_chato_li",
        "lo_netatikha_lingoa")
+# witness-tier presupposed read: agency_assigned_away_from_the_subject on
+# withheld_sin — read, not installed
+m.witness_read("withheld_sin", "agency_assigned_away_from_the_subject",
+                cites=["Bereshit Rabbah 52:7"])
 
 # -------------------------- Gen.20.7 · THE_PROPHET_AND_THE_RETURN_COMMAND --
 # וְעַתָּה הָשֵׁב אֵשֶׁת־הָאִישׁ כִּי־נָבִיא הוּא וְיִתְפַּלֵּל בַּעַדְךָ
@@ -122,6 +131,10 @@ m.fact("ve_yitpalel_baadkha_ve_cheyeh")
 # you/your return know that die die”) — fact holds: if-einkha-return-know-
 # that-die-die
 m.fact("im_einkha_meshiv_da_ki_mot_tamut")
+# witness-tier presupposed read: second_leg_of_no_forewarning on
+# know_you_shall_die — read, not installed
+m.witness_read("know_you_shall_die", "second_leg_of_no_forewarning",
+                cites=["Bereshit Rabbah 52:8"])
 
 # -------------------------- Gen.20.8 · THE_COURT_FEARS ---------------------
 # וַיַּשְׁכֵּם אֲבִימֶלֶךְ בַּבֹּקֶר וַיִּקְרָא לְכָל־עֲבָדָיו וַיְדַבֵּר
@@ -195,6 +208,10 @@ m.step("Gen.20.13")
 # God-from-beit-avi; say-to-me-my-brother-he/it
 m.fact("hitu_oti_elohim_mi_beit_avi",
        "imri_li_achi_hu")
+# witness-tier presupposed read: re_subjected_in_translation on
+# plural_verb_crux — read, not installed
+m.witness_read("plural_verb_crux", "re_subjected_in_translation",
+                cites=["Onkelos Genesis 20:13"])
 
 # -------------------------- Gen.20.14 · THE_RETURN_CYCLE_CLOSES ------------
 # וַיִּקַּח אֲבִימֶלֶךְ צֹאן וּבָקָר וַעֲבָדִים וּשְׁפָחֹת וַיִּתֵּן
@@ -229,6 +246,10 @@ m.step("Gen.20.16")
 # right
 m.fact("elef_kesef_kesut_einayim",
        "ve_nokhachat")
+# witness-tier presupposed read: read_as_compensation_with_a_right on
+# thousand_silver — read, not installed
+m.witness_read("thousand_silver", "read_as_compensation_with_a_right",
+                cites=["Bereshit Rabbah 52:10", "Onkelos Genesis 20:16"])
 
 # -------------------------- Gen.20.17 · THE_PRAYER_AND_THE_HEALING ---------
 # וַיִּתְפַּלֵּל אַבְרָהָם אֶל־הָאֱלֹהִים וַיִּרְפָּא אֱלֹהִים
@@ -272,4 +293,20 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 9
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('gentile_dream', 'prophecy_grade_carried_by_both_spine_members'), ('withheld_sin', 'agency_assigned_away_from_the_subject'), ('know_you_shall_die', 'second_leg_of_no_forewarning'), ('plural_verb_crux', 're_subjected_in_translation'), ('thousand_silver', 'read_as_compensation_with_a_right')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 52:5', 'Bereshit Rabbah 74:7', 'Onkelos Genesis 20:3']
+    assert all('prophecy_grade_carried_by_both_spine_members' not in f for f in m.WORLD["facts"])
+    assert 'gentile_dream' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 52:7']
+    assert all('agency_assigned_away_from_the_subject' not in f for f in m.WORLD["facts"])
+    assert 'withheld_sin' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 52:8']
+    assert all('second_leg_of_no_forewarning' not in f for f in m.WORLD["facts"])
+    assert 'know_you_shall_die' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Genesis 20:13']
+    assert all('re_subjected_in_translation' not in f for f in m.WORLD["facts"])
+    assert 'plural_verb_crux' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 52:10', 'Onkelos Genesis 20:16']
+    assert all('read_as_compensation_with_a_right' not in f for f in m.WORLD["facts"])
+    assert 'thousand_silver' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

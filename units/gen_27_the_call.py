@@ -30,6 +30,10 @@ m.declare("YHWH", "LET",
 # and-from-nativity-you/your and-from-house father-you/your”) — fact holds:
 # go-to-you-from-artzekha-and-from-moladtekha-and-from-beit-avikha
 m.fact("lekh_lekha_me_artzekha_u_mi_moladtekha_u_mi_beit_avikha")
+# witness-tier presupposed read: reward_per_stride_and_decree_annulment on
+# withheld_destination — read, not installed
+m.witness_read("withheld_destination", "reward_per_stride_and_decree_annulment",
+                cites=["Bereshit Rabbah 39:9", "Rosh Hashanah 16b:7", "Bereshit Rabbah 44:12"])
 
 # -------------------------- Gen.12.2 · THE_PROMISE_LADDER_AND_THE_SECOND_IMPERATIVE -
 # וְאֶעֶשְׂךָ לְגוֹי גָּדוֹל וַאֲבָרֶכְךָ וַאֲגַדְּלָה שְׁמֶךָ וֶהְיֵה
@@ -46,6 +50,10 @@ m.fact("e_eskha_le_goy_gadol",
 # heyeh(Abram, berakhah)
 m.declare("YHWH", "LET",
           "heyeh(avram, berakhah)")
+# witness-tier presupposed read: structure_of_a_standing_prayer on
+# promise_clauses — read, not installed
+m.witness_read("promise_clauses", "structure_of_a_standing_prayer",
+                cites=["Bereshit Rabbah 39:11", "Pesachim 117b:11"])
 
 # -------------------------- Gen.12.3 · THE_ASYMMETRY_AND_THE_FAMILIES ------
 # וַאֲבָרֲכָה מְבָרְכֶיךָ וּמְקַלֶּלְךָ אָאֹר וְנִבְרְכוּ בְךָ כֹּל
@@ -62,6 +70,10 @@ m.fact("va_avarakhah_mevarakhekha",
 # family the-ground”) — fact holds: and-nivrekhu-vekha-all-mishpechot-the-
 # ground
 m.fact("ve_nivrekhu_vekha_kol_mishpechot_ha_adamah")
+# witness-tier presupposed read: warrant_for_the_priestly_blessing on
+# blessing_clause — read, not installed
+m.witness_read("blessing_clause", "warrant_for_the_priestly_blessing",
+                cites=["Chullin 49a:18", "Sotah 38b:3", "Berakhot 55a:8"])
 
 # -------------------------- Gen.12.4 · THE_RECEIPT_IN_THE_LETTERS_OWN_GRAMMAR -
 # וַיֵּלֶךְ אַבְרָם כַּאֲשֶׁר דִּבֶּר אֵלָיו יְהוָה וַיֵּלֶךְ אִתּוֹ לוֹט
@@ -113,6 +125,10 @@ m.fact("kol_rekhusham_asher_rakhashu",
        "ve_et_ha_nefesh_asher_asu_ve_charan")
 # reads without prior install (flag, not fix): earth-Canaan
 m.presupposed("eretz_kenaan")
+# witness-tier presupposed read: conversion_counted_as_creation on
+# souls_made_in_haran — read, not installed
+m.witness_read("souls_made_in_haran", "conversion_counted_as_creation",
+                cites=["Bereshit Rabbah 39:14", "Sanhedrin 99b:12", "Avodah Zarah 9a:7"])
 
 # -------------------------- Gen.12.6 · THE_PASS_AND_THE_THEN ---------------
 # וַיַּעֲבֹר אַבְרָם בָּאָרֶץ עַד מְקוֹם שְׁכֶם עַד אֵלוֹן מוֹרֶה
@@ -129,6 +145,10 @@ m.event("pass", agent="avram", themes=["ad_meqom_shekhem_ad_elon_moreh"])
 m.fact("ve_ha_kenaani_az_ba_aretz")
 # reads without prior install (flag, not fix): Shechem
 m.presupposed("shekhem")
+# witness-tier presupposed read: ceremony_site_by_equal_cut on elon_moreh —
+# read, not installed
+m.witness_read("elon_moreh", "ceremony_site_by_equal_cut",
+                cites=["Jerusalem Talmud Sotah 7:3:1", "Mishnah Sotah 7:5", "Jerusalem Talmud Sotah 7:3:4"])
 
 # -------------------------- Gen.12.7 · THE_APPEARANCE_THE_PLEDGE_THE_FIRST_ALTAR -
 # וַיֵּרָא יְהוָה אֶל־אַבְרָם וַיֹּאמֶר לְזַרְעֲךָ אֶתֵּן אֶת־הָאָרֶץ
@@ -180,6 +200,10 @@ m.install("mizbeach_beit_el")
 m.event("call", agent="avram", themes=["be_shem_YHWH"])
 # reads without prior install (flag, not fix): beit-to, the-ai
 m.presupposed("beit_el", "ha_ai")
+# witness-tier presupposed read: her_tent_pitched_first on oholoh_final_heh
+# — read, not installed
+m.witness_read("oholoh_final_heh", "her_tent_pitched_first",
+                cites=["Bereshit Rabbah 39:15"])
 
 # -------------------------- Gen.12.9 · THE_ROAD_SOUTH_STAYS_OPEN -----------
 # וַיִּסַּע אַבְרָם הָלוֹךְ וְנָסוֹעַ הַנֶּגְבָּה
@@ -190,6 +214,10 @@ m.step("Gen.12.9")
 m.event("journey", agent="avram")
 # reads without prior install (flag, not fix): the-negev
 m.presupposed("ha_negev")
+# witness-tier presupposed read: catastrophe_gives_way_to_chastisement on
+# famine_at_departure — read, not installed
+m.witness_read("famine_at_departure", "catastrophe_gives_way_to_chastisement",
+                cites=["Sifrei Devarim 311:1"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -207,4 +235,26 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 16
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('withheld_destination', 'reward_per_stride_and_decree_annulment'), ('promise_clauses', 'structure_of_a_standing_prayer'), ('blessing_clause', 'warrant_for_the_priestly_blessing'), ('souls_made_in_haran', 'conversion_counted_as_creation'), ('elon_moreh', 'ceremony_site_by_equal_cut'), ('oholoh_final_heh', 'her_tent_pitched_first'), ('famine_at_departure', 'catastrophe_gives_way_to_chastisement')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 39:9', 'Rosh Hashanah 16b:7', 'Bereshit Rabbah 44:12']
+    assert all('reward_per_stride_and_decree_annulment' not in f for f in m.WORLD["facts"])
+    assert 'withheld_destination' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 39:11', 'Pesachim 117b:11']
+    assert all('structure_of_a_standing_prayer' not in f for f in m.WORLD["facts"])
+    assert 'promise_clauses' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Chullin 49a:18', 'Sotah 38b:3', 'Berakhot 55a:8']
+    assert all('warrant_for_the_priestly_blessing' not in f for f in m.WORLD["facts"])
+    assert 'blessing_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 39:14', 'Sanhedrin 99b:12', 'Avodah Zarah 9a:7']
+    assert all('conversion_counted_as_creation' not in f for f in m.WORLD["facts"])
+    assert 'souls_made_in_haran' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Jerusalem Talmud Sotah 7:3:1', 'Mishnah Sotah 7:5', 'Jerusalem Talmud Sotah 7:3:4']
+    assert all('ceremony_site_by_equal_cut' not in f for f in m.WORLD["facts"])
+    assert 'elon_moreh' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 39:15']
+    assert all('her_tent_pitched_first' not in f for f in m.WORLD["facts"])
+    assert 'oholoh_final_heh' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifrei Devarim 311:1']
+    assert all('catastrophe_gives_way_to_chastisement' not in f for f in m.WORLD["facts"])
+    assert 'famine_at_departure' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -30,6 +30,14 @@ m.declare("YHWH_Elohim", "CMD-US?",
           "make(ezer_kenegdo, le_adam)")
 # reads without prior install (flag, not fix): human
 m.presupposed("adam")
+# witness-tier presupposed read: merit_conditional_semantics on ezer_kenegdo
+# — read, not installed
+m.witness_read("ezer_kenegdo", "merit_conditional_semantics",
+                cites=["Bereshit Rabbah 17:3", "Yevamot 63a:3"])
+# witness-tier presupposed read: standing_obligation_and_charity_measure on
+# lo_tov_verdict — read, not installed
+m.witness_read("lo_tov_verdict", "standing_obligation_and_charity_measure",
+                cites=["Yevamot 61b:16", "Ketubot 67b:2", "Tosefta Ketubot 6:9", "Tosefta Peah 4:10", "Sifrei Devarim 116:18"])
 
 # -------------------------- Gen.2.19 · FORM_BRING_DELEGATE -----------------
 # וַיִּצֶר יְהוָה אֱלֹהִים מִן־הָאֲדָמָה כָּל־חַיַּת הַשָּׂדֶה וְאֵת
@@ -57,6 +65,10 @@ m.event("bring", agent="YHWH_Elohim", themes=["chayat_ha_sadeh"])
 m.fact("hu_shemo(kol_asher_yiqra_lo_ha_adam)")
 # reads without prior install (flag, not fix): ground
 m.presupposed("adamah")
+# witness-tier presupposed read: brought_for_naming_only on
+# birds_source_delta — read, not installed
+m.witness_read("birds_source_delta", "brought_for_naming_only",
+                cites=["Chullin 27b:12"])
 
 # -------------------------- Gen.2.20 · BULK_NAMING_FAILED_SEARCH -----------
 # וַיִּקְרָא הָאָדָם שֵׁמוֹת לְכָל־הַבְּהֵמָה וּלְעוֹף הַשָּׁמַיִם וּלְכֹל
@@ -92,6 +104,14 @@ m.event("take", agent="YHWH_Elohim", themes=["tzela"])
 # ‹וַיִּסְגֹּר בָּשָׂר תַּחְתֶּנָּה› (“and-he-closed flesh beneath-it”) —
 # event: close — agent the-LORD-God; theme flesh
 m.event("close", agent="YHWH_Elohim", themes=["basar"])
+# witness-grounded state (its own tier): three_slumbers_type_register on
+# tardemah
+m.witness_state("tardemah", "three_slumbers_type_register",
+                cites=["Bereshit Rabbah 17:5"])
+# witness-grounded state (its own tier): face_or_tail_recorded_dispute on
+# tzela
+m.witness_state("tzela", "face_or_tail_recorded_dispute",
+                cites=["Eruvin 18a:15", "Berakhot 61a:15", "Berakhot 61a:16"])
 
 # -------------------------- Gen.2.22 · BUILD_WOMAN_RECEIPT -----------------
 # וַיִּבֶן יְהוָה אֱלֹהִים אֶת־הַצֵּלָע אֲשֶׁר־לָקַח מִן־הָאָדָם לְאִשָּׁה
@@ -112,6 +132,10 @@ m.result("make(ezer_kenegdo, le_adam)", tmark="t1")
 # verb), delivery says and-he-built (He BUILT — build, first token)
 m.spec_delta("e'eseh (I will MAKE — asah, the week's build verb)",
              "va-yiven (He BUILT — banah, first token)")
+# witness-tier presupposed read: capacity_law_labor_category_and_liturgy on
+# vayiven_build — read, not installed
+m.witness_read("vayiven_build", "capacity_law_labor_category_and_liturgy",
+                cites=["Bereshit Rabbah 18:1", "Niddah 45b:11", "Shabbat 95a:1", "Ketubot 8a:3"])
 
 # -------------------------- Gen.2.23 · FIRST_HUMAN_SPEECH_NAME -------------
 # וַיֹּאמֶר הָאָדָם זֹאת הַפַּעַם עֶצֶם מֵעֲצָמַי וּבָשָׂר מִבְּשָׂרִי
@@ -124,6 +148,10 @@ m.event("say", agent="adam")
 # ‹לְזֹאת יִקָּרֵא אִשָּׁה כִּי מֵאִישׁ לֻקֳחָה־זֹּאת› (“to-this shall-be-
 # called woman for from-man was-taken this”) — named: woman := woman
 m.name("ishah", "ishah")
+# witness-tier presupposed read: sacred_tongue_proof on ish_isha_naming —
+# read, not installed
+m.witness_read("ish_isha_naming", "sacred_tongue_proof",
+                cites=["Bereshit Rabbah 18:4"])
 
 # -------------------------- Gen.2.24 · ETIOLOGY_PATTERN --------------------
 # עַל־כֵּן יַעֲזָב־אִישׁ אֶת־אָבִיו וְאֶת־אִמּוֹ וְדָבַק בְּאִשְׁתּוֹ
@@ -136,6 +164,10 @@ m.step("Gen.2.24")
 # recorded: leave(man, father-and-mother) ∧ cleave(man, in-his-wife) ∧ they-
 # become(one-flesh)
 m.pattern("azav(ish, av_ve_em) ∧ davak(ish, be_ishto) ∧ hayu(basar_echad)")
+# witness-tier presupposed read: noachide_family_law_crown on pattern_op —
+# read, not installed
+m.witness_read("pattern_op", "noachide_family_law_crown",
+                cites=["Bereshit Rabbah 18:5", "Sanhedrin 58a:8", "Sanhedrin 58a:7", "Sanhedrin 57b:10", "Sanhedrin 58b:14", "Jerusalem Talmud Kiddushin 1:1:13", "Jerusalem Talmud Yevamot 11:2:6"])
 
 # -------------------------- Gen.2.25 · CLOSING_STATE_BRIDGE ----------------
 # וַיִּהְיוּ שְׁנֵיהֶם עֲרוּמִּים הָאָדָם וְאִשְׁתּוֹ וְלֹא יִתְבֹּשָׁשׁוּ
@@ -162,4 +194,28 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 12
+    assert sorted(m.WORLD["witnessed"]) == ['tardemah', 'tzela']
+    assert m.WORLD["witnessed"]['tardemah']["cites"] == ['Bereshit Rabbah 17:5']
+    assert all('three_slumbers_type_register' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['tzela']["cites"] == ['Eruvin 18a:15', 'Berakhot 61a:15', 'Berakhot 61a:16']
+    assert all('face_or_tail_recorded_dispute' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ezer_kenegdo', 'merit_conditional_semantics'), ('lo_tov_verdict', 'standing_obligation_and_charity_measure'), ('birds_source_delta', 'brought_for_naming_only'), ('vayiven_build', 'capacity_law_labor_category_and_liturgy'), ('ish_isha_naming', 'sacred_tongue_proof'), ('pattern_op', 'noachide_family_law_crown')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 17:3', 'Yevamot 63a:3']
+    assert all('merit_conditional_semantics' not in f for f in m.WORLD["facts"])
+    assert 'ezer_kenegdo' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Yevamot 61b:16', 'Ketubot 67b:2', 'Tosefta Ketubot 6:9', 'Tosefta Peah 4:10', 'Sifrei Devarim 116:18']
+    assert all('standing_obligation_and_charity_measure' not in f for f in m.WORLD["facts"])
+    assert 'lo_tov_verdict' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Chullin 27b:12']
+    assert all('brought_for_naming_only' not in f for f in m.WORLD["facts"])
+    assert 'birds_source_delta' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 18:1', 'Niddah 45b:11', 'Shabbat 95a:1', 'Ketubot 8a:3']
+    assert all('capacity_law_labor_category_and_liturgy' not in f for f in m.WORLD["facts"])
+    assert 'vayiven_build' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 18:4']
+    assert all('sacred_tongue_proof' not in f for f in m.WORLD["facts"])
+    assert 'ish_isha_naming' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 18:5', 'Sanhedrin 58a:8', 'Sanhedrin 58a:7', 'Sanhedrin 57b:10', 'Sanhedrin 58b:14', 'Jerusalem Talmud Kiddushin 1:1:13', 'Jerusalem Talmud Yevamot 11:2:6']
+    assert all('noachide_family_law_crown' not in f for f in m.WORLD["facts"])
+    assert 'pattern_op' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

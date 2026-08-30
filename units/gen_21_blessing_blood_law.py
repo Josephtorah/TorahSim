@@ -28,6 +28,10 @@ m.step("Gen.9.1")
 m.bless("elohim", "noach_u_vanav", mandate=["CMD!(peru)", "CMD!(revu)", "CMD!(milu(et_ha_aretz))"])
 # reads without prior install (flag, not fix): Noach, banav
 m.presupposed("noach", "banav")
+# witness-tier presupposed read: retained_though_legally_inoperative on
+# flood_span — read, not installed
+m.witness_read("flood_span", "retained_though_legally_inoperative",
+                cites=["Jerusalem Talmud Sheviit 1:1:4"])
 
 # -------------------------- Gen.9.2 · FEAR_AND_DREAD_IN_DOMINIONS_PLACE ----
 # וּמוֹרַאֲכֶם וְחִתְּכֶם יִהְיֶה עַל כָּל־חַיַּת הָאָרֶץ וְעַל כָּל־עוֹף
@@ -43,6 +47,10 @@ m.step("Gen.9.2")
 # moraakhem-and-chitkhem-over-all-living-the-earth; in-yedkhem-nittanu
 m.fact("moraakhem_ve_chitkhem_al_kol_chayat_ha_aretz",
        "be_yedkhem_nittanu")
+# witness-tier presupposed read: co_residence_law_and_lapsing_right on
+# fear_grant — read, not installed
+m.witness_read("fear_grant", "co_residence_law_and_lapsing_right",
+                cites=["Eikhah Rabbah, Petichta 34", "Shabbat 151b:9"])
 
 # -------------------------- Gen.9.3 · THE_MEAT_GRANT_CITES_THE_OLD ---------
 # כָּל־רֶמֶשׂ אֲשֶׁר הוּא־חַי לָכֶם יִהְיֶה לְאָכְלָה כְּיֶרֶק עֵשֶׂב
@@ -62,6 +70,10 @@ m.declare("elohim", "LET?",
 # given to-you obj-marker all”) — fact holds: like-as-the-green-of-herb-I-
 # have-given-to-you-obj-marker·et-all
 m.fact("ke_yereq_esev_natati_la_khem_et_kol")
+# witness-tier presupposed read: theft_prohibition_inside_the_simile on
+# meat_grant — read, not installed
+m.witness_read("meat_grant", "theft_prohibition_inside_the_simile",
+                cites=["Sanhedrin 57a:4", "Sifra, Shemini, Section 2 3", "Vayikra Rabbah 13:2"])
 
 # -------------------------- Gen.9.4 · THE_FIRST_PROHIBITION_SINCE_EDEN -----
 # אַךְ־בָּשָׂר בְּנַפְשׁוֹ דָמוֹ לֹא תֹאכֵלוּ
@@ -73,6 +85,10 @@ m.step("Gen.9.4")
 # in-nafsho-damo)
 m.declare("elohim", "LET-NOT",
           "akhal(basar_be_nafsho_damo)")
+# witness-tier presupposed read: grant_creates_the_law on limb_restriction —
+# read, not installed
+m.witness_read("limb_restriction", "grant_creates_the_law",
+                cites=["Bereshit Rabbah 34:13", "Sanhedrin 57a:5", "Sanhedrin 59a:6", "Sifra, Shemini, Section 2 4"])
 
 # -------------------------- Gen.9.5 · THE_RECKONING_LADDER -----------------
 # וְאַךְ אֶת־דִּמְכֶם לְנַפְשֹׁתֵיכֶם אֶדְרֹשׁ מִיַּד כָּל־חַיָּה
@@ -92,6 +108,10 @@ m.invariant("et_dimkhem_le_nafshoteikhem_edrosh")
 # his-brother”) — fact holds: from-hand-of-all-beast-and-from-hand-of-the-
 # human-a-man-his-brother
 m.fact("mi_yad_kol_chayah_u_mi_yad_ha_adam_ish_achiv")
+# witness-tier presupposed read: two_courts_split on self_blood_clause —
+# read, not installed
+m.witness_read("self_blood_clause", "two_courts_split",
+                cites=["Bava Kamma 91b:8", "Jerusalem Talmud Bava Kamma 8:6:1", "Tosefta Bava Kamma (Lieberman) 9:31"])
 
 # -------------------------- Gen.9.6 · THE_TALION_ON_THE_IMAGE_GROUND -------
 # שֹׁפֵךְ דַּם הָאָדָם בָּאָדָם דָּמוֹ יִשָּׁפֵךְ כִּי בְּצֶלֶם אֱלֹהִים
@@ -109,6 +129,22 @@ m.handler("shofekh(dam_ha_adam)",
 # made obj-marker the-human”) — fact holds: that-in-image-of-God-make-obj-
 # marker·et-the-human
 m.fact("ki_be_tzelem_elohim_asah_et_ha_adam")
+# witness-tier presupposed read: complete_criminal_procedure on
+# bloodshed_verse — read, not installed
+m.witness_read("bloodshed_verse", "complete_criminal_procedure",
+                cites=["Bereshit Rabbah 34:14", "Mekhilta DeRabbi Yishmael, Tractate Nezikin 4:9", "Sanhedrin 57a:3", "Sanhedrin 57a:13"])
+# witness-tier presupposed read: quoted_inside_the_forewarning_liturgy on
+# bloodshed_verse — read, not installed
+m.witness_read("bloodshed_verse", "quoted_inside_the_forewarning_liturgy",
+                cites=["Jerusalem Talmud Sanhedrin 5:1:8", "Tosefta Sanhedrin 11:1", "Mekhilta DeRabbi Yishmael, Tractate Bachodesh 8:10"])
+# witness-grounded state (its own tier):
+# refuses_conviction_yet_licenses_killing on bloodshed_verse
+m.witness_state("bloodshed_verse", "refuses_conviction_yet_licenses_killing",
+                cites=["Mekhilta DeRabbi Yishmael, Tractate Kaspa 3:9", "Sanhedrin 72b:15", "Sanhedrin 72b:17"])
+# witness-tier presupposed read: affirmative_body_care_duty on image_clause
+# — read, not installed
+m.witness_read("image_clause", "affirmative_body_care_duty",
+                cites=["Vayikra Rabbah 34:3"])
 
 # -------------------------- Gen.9.7 · THE_FRAME_REDOUBLED ------------------
 # וְאַתֶּם פְּרוּ וּרְבוּ שִׁרְצוּ בָאָרֶץ וּרְבוּ־בָהּ
@@ -119,6 +155,10 @@ m.step("Gen.9.7")
 # fruitful and-multiply swarm in-the-earth and-multiply in-her/its”) — fact
 # holds: and-you-be-fruitful-and-multiply-swarm-and-earth
 m.fact("ve_atem_peru_u_revu_shirtzu_va_aretz")
+# witness-grounded state (its own tier): blessing_or_prohibition on
+# swarm_and_multiply
+m.witness_state("swarm_and_multiply", "blessing_or_prohibition",
+                cites=["Sanhedrin 57a:6", "Bereshit Rabbah 34:15"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -136,4 +176,32 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == ['et_dimkhem_le_nafshoteikhem_edrosh']
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 5
+    assert sorted(m.WORLD["witnessed"]) == ['bloodshed_verse', 'swarm_and_multiply']
+    assert m.WORLD["witnessed"]['bloodshed_verse']["cites"] == ['Mekhilta DeRabbi Yishmael, Tractate Kaspa 3:9', 'Sanhedrin 72b:15', 'Sanhedrin 72b:17']
+    assert all('refuses_conviction_yet_licenses_killing' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['swarm_and_multiply']["cites"] == ['Sanhedrin 57a:6', 'Bereshit Rabbah 34:15']
+    assert all('blessing_or_prohibition' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('flood_span', 'retained_though_legally_inoperative'), ('fear_grant', 'co_residence_law_and_lapsing_right'), ('meat_grant', 'theft_prohibition_inside_the_simile'), ('limb_restriction', 'grant_creates_the_law'), ('self_blood_clause', 'two_courts_split'), ('bloodshed_verse', 'complete_criminal_procedure'), ('bloodshed_verse', 'quoted_inside_the_forewarning_liturgy'), ('image_clause', 'affirmative_body_care_duty')]
+    assert m.WITNESS_READS[0]["cites"] == ['Jerusalem Talmud Sheviit 1:1:4']
+    assert all('retained_though_legally_inoperative' not in f for f in m.WORLD["facts"])
+    assert 'flood_span' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Eikhah Rabbah, Petichta 34', 'Shabbat 151b:9']
+    assert all('co_residence_law_and_lapsing_right' not in f for f in m.WORLD["facts"])
+    assert 'fear_grant' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sanhedrin 57a:4', 'Sifra, Shemini, Section 2 3', 'Vayikra Rabbah 13:2']
+    assert all('theft_prohibition_inside_the_simile' not in f for f in m.WORLD["facts"])
+    assert 'meat_grant' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 34:13', 'Sanhedrin 57a:5', 'Sanhedrin 59a:6', 'Sifra, Shemini, Section 2 4']
+    assert all('grant_creates_the_law' not in f for f in m.WORLD["facts"])
+    assert 'limb_restriction' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bava Kamma 91b:8', 'Jerusalem Talmud Bava Kamma 8:6:1', 'Tosefta Bava Kamma (Lieberman) 9:31']
+    assert all('two_courts_split' not in f for f in m.WORLD["facts"])
+    assert 'self_blood_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 34:14', 'Mekhilta DeRabbi Yishmael, Tractate Nezikin 4:9', 'Sanhedrin 57a:3', 'Sanhedrin 57a:13']
+    assert all('complete_criminal_procedure' not in f for f in m.WORLD["facts"])
+    assert m.WITNESS_READS[6]["cites"] == ['Jerusalem Talmud Sanhedrin 5:1:8', 'Tosefta Sanhedrin 11:1', 'Mekhilta DeRabbi Yishmael, Tractate Bachodesh 8:10']
+    assert all('quoted_inside_the_forewarning_liturgy' not in f for f in m.WORLD["facts"])
+    assert m.WITNESS_READS[7]["cites"] == ['Vayikra Rabbah 34:3']
+    assert all('affirmative_body_care_duty' not in f for f in m.WORLD["facts"])
+    assert 'image_clause' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -47,6 +47,10 @@ m.fact("roeh_tzon(hevel)",
        "oved_adamah(kayin)")
 # reads without prior install (flag, not fix): ground
 m.presupposed("adamah")
+# witness-tier presupposed read: twin_sisters_and_procreation_measure on
+# double_et — read, not installed
+m.witness_read("double_et", "twin_sisters_and_procreation_measure",
+                cites=["Yevamot 62a:7", "Bereshit Rabbah 22:3", "Bereshit Rabbah 61:4"])
 
 # -------------------------- Gen.4.3 · FIRST_OFFERING -----------------------
 # וַיְהִי מִקֵּץ יָמִים וַיָּבֵא קַיִן מִפְּרִי הָאֲדָמָה מִנְחָה לַיהוָה
@@ -72,6 +76,10 @@ m.event("bring", agent="hevel", themes=["bekhorot"])
 # Abel and-to his-offering”) — test PASS — oracle-word gaze, on Abel-and-
 # his-offering
 m.test("PASS", "shaah", "hevel_u_minchato")
+# witness-tier presupposed read: pursued_census_and_offering_species_law on
+# minchah_accepted — read, not installed
+m.witness_read("minchah_accepted", "pursued_census_and_offering_species_law",
+                cites=["Pesikta DeRav Kahana 9:4", "Sifra, Shemini, Mekhilta DeMiluim II 31"])
 
 # -------------------------- Gen.4.5 · NON_REGARD_FIRST_ANGER ---------------
 # וְאֶל־קַיִן וְאֶל־מִנְחָתוֹ לֹא שָׁעָה וַיִּחַר לְקַיִן מְאֹד וַיִּפְּלוּ
@@ -116,6 +124,18 @@ m.handler("lo_teitiv(kayin)",
 # rule(Cain, in-the-sin)
 m.declare("YHWH", "LET?",
           "timshol(kayin, ba_chattat)")
+# witness-tier presupposed read: gender_mismatch_as_growth_curve on
+# chatat_rovetz — read, not installed
+m.witness_read("chatat_rovetz", "gender_mismatch_as_growth_curve",
+                cites=["Bereshit Rabbah 22:6", "Berakhot 61a:27"])
+# witness-tier presupposed read: torah_antidote_and_condition_syntax_law on
+# conditional_op — read, not installed
+m.witness_read("conditional_op", "torah_antidote_and_condition_syntax_law",
+                cites=["Kiddushin 30b:4", "Kiddushin 30b:5", "Kiddushin 61b:9", "Sanhedrin 91b:7", "Niddah 30b:23"])
+# witness-grounded state (its own tier): undecidable_parse_on_record on
+# seet_cut_point
+m.witness_state("seet_cut_point", "undecidable_parse_on_record",
+                cites=["Bereshit Rabbah 80:6", "Sifrei Devarim 54:1"])
 
 # -------------------------- Gen.4.8 · EMPTY_QUOTE_FIRST_MURDER -------------
 # וַיֹּאמֶר קַיִן אֶל־הֶבֶל אָחִיו וַיְהִי בִּהְיוֹתָם בַּשָּׂדֶה וַיָּקָם
@@ -129,6 +149,10 @@ m.event("say", agent="kayin", themes=["hevel"])
 # ‹וַיָּקָם קַיִן אֶל־הֶבֶל אָחִיו וַיַּהַרְגֵהוּ› (“and-he-rose Cain to
 # Abel his-brother and-killed-him”) — event: kill — agent Cain; theme Abel
 m.event("kill", agent="kayin", themes=["hevel"])
+# witness-tier presupposed read: filled_three_ways on empty_quote — read,
+# not installed
+m.witness_read("empty_quote", "filled_three_ways",
+                cites=["Bereshit Rabbah 22:7", "Bereshit Rabbah 22:8"])
 
 # -------------------------- Gen.4.9 · DOCKET_FIRST_LIE ---------------------
 # וַיֹּאמֶר יְהוָה אֶל־קַיִן אֵי הֶבֶל אָחִיךָ וַיֹּאמֶר לֹא יָדַעְתִּי
@@ -155,6 +179,10 @@ m.event("ask", agent="YHWH", themes=["kayin"])
 # your-brother crying to-me from the-ground”) — fact holds: all-bloods-of-
 # your-brother-crying-out-from-the-ground
 m.fact("kol_demei_achikha_tzoakim_min_ha_adamah")
+# witness-tier presupposed read: capital_court_witness_warning on
+# demei_plural — read, not installed
+m.witness_read("demei_plural", "capital_court_witness_warning",
+                cites=["Mishnah Sanhedrin 4:5", "Bereshit Rabbah 22:9", "Sanhedrin 37b:10", "Jerusalem Talmud Sanhedrin 4:9:1"])
 
 # -------------------------- Gen.4.11 · CURSE_REACHES_HUMAN -----------------
 # וְעַתָּה אָרוּר אָתָּה מִן־הָאֲדָמָה אֲשֶׁר פָּצְתָה אֶת־פִּיהָ לָקַחַת
@@ -181,6 +209,10 @@ m.step("Gen.4.12")
 # fugitive-and-wanderer-shall-be(Cain)
 m.fact("ki_taavod_lo_tosef_tet_kochah(adamah, kayin)",
        "na_va_nad_tihyeh(kayin)")
+# witness-tier presupposed read: half_remitted_visible_in_the_ink on
+# na_va_nad_decree — read, not installed
+m.witness_read("na_va_nad_decree", "half_remitted_visible_in_the_ink",
+                cites=["Pesikta DeRav Kahana 24:11", "Sanhedrin 37b:12", "Vayikra Rabbah 10:5"])
 
 # -------------------------- Gen.4.13 · PLEA_UNBEARABLE ---------------------
 # וַיֹּאמֶר קַיִן אֶל־יְהוָה גָּדוֹל עֲוֺנִי מִנְּשֹׂא
@@ -189,6 +221,10 @@ m.step("Gen.4.13")
 # ‹גָּדוֹל עֲוֺנִי מִנְּשֹׂא› (“great my-iniquity than-bearing”) — event:
 # plead — agent Cain; theme the-LORD
 m.event("plead", agent="kayin", themes=["YHWH"])
+# witness-grounded state (its own tier): three_recorded_readings on
+# cain_plea
+m.witness_state("cain_plea", "three_recorded_readings",
+                cites=["Bereshit Rabbah 22:11", "Sanhedrin 101b:3", "Bereshit Rabbah 22:13"])
 
 # -------------------------- Gen.4.14 · FEAR_OF_FINDERS ---------------------
 # הֵן גֵּרַשְׁתָּ אֹתִי הַיּוֹם מֵעַל פְּנֵי הָאֲדָמָה וּמִפָּנֶיךָ אֶסָּתֵר
@@ -220,6 +256,10 @@ m.handler("horeg(kayin)",
 # ‹וַיָּשֶׂם יְהוָה לְקַיִן אוֹת› (“and-he-set YHWH for-Cain sign”) — fact
 # holds: sign-to-Cain-so-as-not-strike(Cain)
 m.fact("ot_le_kayin_levilti_hakot(kayin)")
+# witness-tier presupposed read: discharged_at_the_flood on
+# seven_generations_clause — read, not installed
+m.witness_read("seven_generations_clause", "discharged_at_the_flood",
+                cites=["Bereshit Rabbah 32:5"])
 
 # -------------------------- Gen.4.16 · EXIT_EAST_SETTLED_IN_WANDERING ------
 # וַיֵּצֵא קַיִן מִלִּפְנֵי יְהוָה וַיֵּשֶׁב בְּאֶרֶץ־נוֹד קִדְמַת־עֵדֶן
@@ -247,4 +287,34 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 19
+    assert sorted(m.WORLD["witnessed"]) == ['cain_plea', 'seet_cut_point']
+    assert m.WORLD["witnessed"]['cain_plea']["cites"] == ['Bereshit Rabbah 22:11', 'Sanhedrin 101b:3', 'Bereshit Rabbah 22:13']
+    assert all('three_recorded_readings' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['seet_cut_point']["cites"] == ['Bereshit Rabbah 80:6', 'Sifrei Devarim 54:1']
+    assert all('undecidable_parse_on_record' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('double_et', 'twin_sisters_and_procreation_measure'), ('minchah_accepted', 'pursued_census_and_offering_species_law'), ('chatat_rovetz', 'gender_mismatch_as_growth_curve'), ('conditional_op', 'torah_antidote_and_condition_syntax_law'), ('empty_quote', 'filled_three_ways'), ('demei_plural', 'capital_court_witness_warning'), ('na_va_nad_decree', 'half_remitted_visible_in_the_ink'), ('seven_generations_clause', 'discharged_at_the_flood')]
+    assert m.WITNESS_READS[0]["cites"] == ['Yevamot 62a:7', 'Bereshit Rabbah 22:3', 'Bereshit Rabbah 61:4']
+    assert all('twin_sisters_and_procreation_measure' not in f for f in m.WORLD["facts"])
+    assert 'double_et' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Pesikta DeRav Kahana 9:4', 'Sifra, Shemini, Mekhilta DeMiluim II 31']
+    assert all('pursued_census_and_offering_species_law' not in f for f in m.WORLD["facts"])
+    assert 'minchah_accepted' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 22:6', 'Berakhot 61a:27']
+    assert all('gender_mismatch_as_growth_curve' not in f for f in m.WORLD["facts"])
+    assert 'chatat_rovetz' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Kiddushin 30b:4', 'Kiddushin 30b:5', 'Kiddushin 61b:9', 'Sanhedrin 91b:7', 'Niddah 30b:23']
+    assert all('torah_antidote_and_condition_syntax_law' not in f for f in m.WORLD["facts"])
+    assert 'conditional_op' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 22:7', 'Bereshit Rabbah 22:8']
+    assert all('filled_three_ways' not in f for f in m.WORLD["facts"])
+    assert 'empty_quote' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Sanhedrin 4:5', 'Bereshit Rabbah 22:9', 'Sanhedrin 37b:10', 'Jerusalem Talmud Sanhedrin 4:9:1']
+    assert all('capital_court_witness_warning' not in f for f in m.WORLD["facts"])
+    assert 'demei_plural' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Pesikta DeRav Kahana 24:11', 'Sanhedrin 37b:12', 'Vayikra Rabbah 10:5']
+    assert all('half_remitted_visible_in_the_ink' not in f for f in m.WORLD["facts"])
+    assert 'na_va_nad_decree' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 32:5']
+    assert all('discharged_at_the_flood' not in f for f in m.WORLD["facts"])
+    assert 'seven_generations_clause' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

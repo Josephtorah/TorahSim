@@ -21,6 +21,15 @@ m.step("Gen.28.10")
 # ‹וַיֵּצֵא … וַיֵּלֶךְ חָרָנָה› (“and-bring-forth … and-go Haran-ward”) —
 # fact holds: Jacob-departed-from-seven-toward-charan
 m.fact("yaaqov_departed_beer_sheva_toward_charan")
+# witness-tier presupposed read:
+# the_traditions_own_grammar_rule_at_this_word on directional_ending — read,
+# not installed
+m.witness_read("directional_ending", "the_traditions_own_grammar_rule_at_this_word",
+                cites=["Bereshit Rabbah 68:8"])
+# witness-tier presupposed read: radiance_rule_made_comparative_to_survive
+# on the_departure — read, not installed
+m.witness_read("the_departure", "radiance_rule_made_comparative_to_survive",
+                cites=["Bereshit Rabbah 68:6"])
 
 # -------------------------- Gen.28.11 · THE_PLACE_SUNSET_AND_STONE_PILLOW --
 # וַיִּפְגַּע בַּמָּקוֹם וַיָּלֶן שָׁם כִּי־בָא הַשֶּׁמֶשׁ וַיִּקַּח
@@ -32,6 +41,14 @@ m.step("Gen.28.11")
 # ‹כִּי־בָא הַשֶּׁמֶשׁ … מֵאַבְנֵי הַמָּקוֹם› (“that come/bring the-sun …
 # from-stone the-place”) — fact holds: sun-set-stone-pillow-at-the-place
 m.fact("sun_set_stone_pillow_at_ha_maqom")
+# witness-tier presupposed read: three_counts_each_framed_as_a_test on
+# the_stones — read, not installed
+m.witness_read("the_stones", "three_counts_each_framed_as_a_test",
+                cites=["Bereshit Rabbah 68:11"])
+# witness-tier presupposed read: borrowed_time_booked_for_repayment on
+# sunset_two_hours_early — read, not installed
+m.witness_read("sunset_two_hours_early", "borrowed_time_booked_for_repayment",
+                cites=["Bereshit Rabbah 68:10"])
 
 # -------------------------- Gen.28.12 · THE_DREAM_DEBUT_AND_LADDER_HAPAX ---
 # וַיַּחֲלֹם וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה
@@ -45,6 +62,14 @@ m.event("?")
 # ‹סֻלָּם מֻצָּב אַרְצָה› (“stair-case stand earth-ward”) — fact holds:
 # stair-case-earthward-head-heavenward-angels
 m.fact("sulam_earthward_head_heavenward_angels")
+# witness-tier presupposed read: dreams_follow_the_interpretation on
+# the_dream — read, not installed
+m.witness_read("the_dream", "dreams_follow_the_interpretation",
+                cites=["Bereshit Rabbah 68:12"])
+# witness-tier presupposed read: kingdom_sequence_read_off_the_word_order on
+# ascending_and_descending — read, not installed
+m.witness_read("ascending_and_descending", "kingdom_sequence_read_off_the_word_order",
+                cites=["Bereshit Rabbah 68:14"])
 
 # -------------------------- Gen.28.13 · THE_STATIONED_LORD_AND_LAND_COMMITMENT -
 # וְהִנֵּה יְהוָה נִצָּב עָלָיו וַיֹּאמַר אֲנִי יְהוָה אֱלֹהֵי אַבְרָהָם
@@ -57,6 +82,14 @@ m.step("Gen.28.13")
 # ‹נִצָּב עָלָיו … לְךָ אֶתְּנֶנָּה› (“stand over-him/its … to-you/your set-
 # her/its”) — fact holds: the-LORD-stand-self-identification-land-commitment
 m.fact("YHWH_nitzav_self_identification_land_commitment")
+# witness-tier presupposed read: opened_frame_stated_leg_left_open on
+# the_eighteen_count — read, not installed
+m.witness_read("the_eighteen_count", "opened_frame_stated_leg_left_open",
+                cites=["Bereshit Rabbah 69:4"])
+# witness-tier presupposed read: glory_buffer_at_both_theophany_verses on
+# the_LORD_stood_over_him — read, not installed
+m.witness_read("the_LORD_stood_over_him", "glory_buffer_at_both_theophany_verses",
+                cites=["Onkelos Genesis 28:13", "Onkelos Genesis 28:16"])
 
 # -------------------------- Gen.28.14 · THE_DUST_FORMULA_ALL_FAMILIES_NIPHAL -
 # וְהָיָה זַרְעֲךָ כַּעֲפַר הָאָרֶץ וּפָרַצְתָּ יָמָּה וָקֵדְמָה וְצָפֹנָה
@@ -81,6 +114,15 @@ m.step("Gen.28.15")
 # you/your … and-return-you/your … not loosen-you/your”) — fact holds: five-
 # fold-promise-with-keep-return-not-leave-until-done
 m.fact("five_fold_promise_with_keep_return_not_leave_until_done")
+# witness-tier presupposed read:
+# clause_map_against_the_vow_with_one_field_uncovered on the_promise — read,
+# not installed
+m.witness_read("the_promise", "clause_map_against_the_vow_with_one_field_uncovered",
+                cites=["Bereshit Rabbah 69:6"])
+# witness-tier presupposed read: condition_made_to_quote_the_promise on
+# my_word_is_your_support — read, not installed
+m.witness_read("my_word_is_your_support", "condition_made_to_quote_the_promise",
+                cites=["Onkelos Genesis 28:15", "Onkelos Genesis 28:20"])
 
 # -------------------------- Gen.28.16 · THE_WAKING_AKHEN_AND_NOT_KNOWING ---
 # וַיִּיקַץ יַעֲקֹב מִשְּׁנָתוֹ וַיֹּאמֶר אָכֵן יֵשׁ יְהוָה בַּמָּקוֹם
@@ -101,6 +143,10 @@ m.step("Gen.28.17")
 # ‹וַיִּירָא … מַה־נּוֹרָא … שַׁעַר הַשָּׁמָיִם› (“and-fear … what fear …
 # gate the-heavens”) — fact holds: fear-doublet-house-God-gate-the-heavens
 m.fact("fear_doublet_bet_elohim_shaar_ha_shamayim")
+# witness-tier presupposed read: de_literalized_into_prayer_reception on
+# house_of_God — read, not installed
+m.witness_read("house_of_God", "de_literalized_into_prayer_reception",
+                cites=["Onkelos Genesis 28:17", "Onkelos Genesis 28:22"])
 
 # -------------------------- Gen.28.18 · THE_PILLAR_AND_THE_OIL_DEBUT -------
 # וַיַּשְׁכֵּם יַעֲקֹב בַּבֹּקֶר וַיִּקַּח אֶת־הָאֶבֶן אֲשֶׁר־שָׂם
@@ -124,6 +170,10 @@ m.step("Gen.28.19")
 # ‹וַיִּקְרָא אֶת־שֵׁם־הַמָּקוֹם הַהוּא בֵּית־אֵל› (“and-call obj-marker
 # name the-place that Beth-el”) — named: the-place-Luz := beit-to
 m.name("ha_maqom_luz", "beit_el")
+# witness-grounded state (its own tier):
+# permanent_properties_across_the_corpus on the_city
+m.witness_state("the_city", "permanent_properties_across_the_corpus",
+                cites=["Bereshit Rabbah 69:8"])
 
 # -------------------------- Gen.28.20 · THE_FIRST_VOW_CONDITIONS_OPEN ------
 # וַיִּדַּר יַעֲקֹב נֶדֶר לֵאמֹר אִם־יִהְיֶה אֱלֹהִים עִמָּדִי וּשְׁמָרַנִי
@@ -137,6 +187,15 @@ m.step("Gen.28.20")
 # food … and-garment”) — fact holds: promise-opened-conditions-with-keep-
 # bread-garment
 m.fact("neder_opened_conditions_with_keep_bread_garment")
+# witness-tier presupposed read:
+# first_instance_chain_of_title_and_a_register on the_vow — read, not
+# installed
+m.witness_read("the_vow", "first_instance_chain_of_title_and_a_register",
+                cites=["Bereshit Rabbah 70:1", "Bereshit Rabbah 70:3"])
+# witness-tier presupposed read: audit_penalty_that_explains_the_loss on
+# delay_in_discharge — read, not installed
+m.witness_read("delay_in_discharge", "audit_penalty_that_explains_the_loss",
+                cites=["Bereshit Rabbah 81:1"])
 
 # -------------------------- Gen.28.21 · THE_RETURN_IN_PEACE_AND_THEN_CLAUSE -
 # וְשַׁבְתִּי בְשָׁלוֹם אֶל־בֵּית אָבִי וְהָיָה יְהוָה לִי לֵאלֹהִים
@@ -163,6 +222,11 @@ m.handler("elohim_imadi ∧ shemarani_ba_derekh ∧ natan_lechem_u_veged ∧ sha
 # ‹וְהָאֶבֶן הַזֹּאת … עַשֵּׂר אֲעַשְּׂרֶנּוּ› (“and-the-stone the-this …
 # tithe tithe-him/its”) — fact holds: stone-house-tithe-vow-content
 m.fact("stone_house_tithe_vow_content")
+# witness-tier presupposed read:
+# challenged_by_arithmetic_and_rescued_by_exclusion on the_tithe_promise —
+# read, not installed
+m.witness_read("the_tithe_promise", "challenged_by_arithmetic_and_rescued_by_exclusion",
+                cites=["Bereshit Rabbah 70:7"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -180,4 +244,50 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 4
+    assert sorted(m.WORLD["witnessed"]) == ['the_city']
+    assert m.WORLD["witnessed"]['the_city']["cites"] == ['Bereshit Rabbah 69:8']
+    assert all('permanent_properties_across_the_corpus' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('directional_ending', 'the_traditions_own_grammar_rule_at_this_word'), ('the_departure', 'radiance_rule_made_comparative_to_survive'), ('the_stones', 'three_counts_each_framed_as_a_test'), ('sunset_two_hours_early', 'borrowed_time_booked_for_repayment'), ('the_dream', 'dreams_follow_the_interpretation'), ('ascending_and_descending', 'kingdom_sequence_read_off_the_word_order'), ('the_eighteen_count', 'opened_frame_stated_leg_left_open'), ('the_LORD_stood_over_him', 'glory_buffer_at_both_theophany_verses'), ('the_promise', 'clause_map_against_the_vow_with_one_field_uncovered'), ('my_word_is_your_support', 'condition_made_to_quote_the_promise'), ('house_of_God', 'de_literalized_into_prayer_reception'), ('the_vow', 'first_instance_chain_of_title_and_a_register'), ('delay_in_discharge', 'audit_penalty_that_explains_the_loss'), ('the_tithe_promise', 'challenged_by_arithmetic_and_rescued_by_exclusion')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 68:8']
+    assert all('the_traditions_own_grammar_rule_at_this_word' not in f for f in m.WORLD["facts"])
+    assert 'directional_ending' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 68:6']
+    assert all('radiance_rule_made_comparative_to_survive' not in f for f in m.WORLD["facts"])
+    assert 'the_departure' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 68:11']
+    assert all('three_counts_each_framed_as_a_test' not in f for f in m.WORLD["facts"])
+    assert 'the_stones' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 68:10']
+    assert all('borrowed_time_booked_for_repayment' not in f for f in m.WORLD["facts"])
+    assert 'sunset_two_hours_early' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 68:12']
+    assert all('dreams_follow_the_interpretation' not in f for f in m.WORLD["facts"])
+    assert 'the_dream' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 68:14']
+    assert all('kingdom_sequence_read_off_the_word_order' not in f for f in m.WORLD["facts"])
+    assert 'ascending_and_descending' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 69:4']
+    assert all('opened_frame_stated_leg_left_open' not in f for f in m.WORLD["facts"])
+    assert 'the_eighteen_count' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Genesis 28:13', 'Onkelos Genesis 28:16']
+    assert all('glory_buffer_at_both_theophany_verses' not in f for f in m.WORLD["facts"])
+    assert 'the_LORD_stood_over_him' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 69:6']
+    assert all('clause_map_against_the_vow_with_one_field_uncovered' not in f for f in m.WORLD["facts"])
+    assert 'the_promise' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Genesis 28:15', 'Onkelos Genesis 28:20']
+    assert all('condition_made_to_quote_the_promise' not in f for f in m.WORLD["facts"])
+    assert 'my_word_is_your_support' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Onkelos Genesis 28:17', 'Onkelos Genesis 28:22']
+    assert all('de_literalized_into_prayer_reception' not in f for f in m.WORLD["facts"])
+    assert 'house_of_God' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 70:1', 'Bereshit Rabbah 70:3']
+    assert all('first_instance_chain_of_title_and_a_register' not in f for f in m.WORLD["facts"])
+    assert 'the_vow' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[12]["cites"] == ['Bereshit Rabbah 81:1']
+    assert all('audit_penalty_that_explains_the_loss' not in f for f in m.WORLD["facts"])
+    assert 'delay_in_discharge' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[13]["cites"] == ['Bereshit Rabbah 70:7']
+    assert all('challenged_by_arithmetic_and_rescued_by_exclusion' not in f for f in m.WORLD["facts"])
+    assert 'the_tithe_promise' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

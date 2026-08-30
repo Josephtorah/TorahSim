@@ -68,6 +68,10 @@ m.event("become_drunk", agent="noach")
 # ‹וַיִּתְגַּל בְּתוֹךְ אָהֳלֹה› (“and-uncovered-himself inside his-tent”) —
 # event: uncover-self — agent Noach; theme in-inside-aholoh
 m.event("uncover_self", agent="noach", themes=["be_tokh_aholoh"])
+# witness-tier presupposed read: feminine_suffix_and_disputed_woe_count on
+# drunkenness_verse — read, not installed
+m.witness_read("drunkenness_verse", "feminine_suffix_and_disputed_woe_count",
+                cites=["Bereshit Rabbah 36:4", "Sanhedrin 70a:17"])
 
 # -------------------------- Gen.9.22 · THE_SEEING_AND_THE_TELLING ----------
 # וַיַּרְא חָם אֲבִי כְנַעַן אֵת עֶרְוַת אָבִיו וַיַּגֵּד לִשְׁנֵי־אֶחָיו
@@ -82,6 +86,9 @@ m.event("see", agent="cham", themes=["ervat_aviv"])
 # ‹וַיַּגֵּד לִשְׁנֵי־אֶחָיו בַּחוּץ› (“and-he-told to-his-two his-brothers
 # outside”) — event: tell — agent Ham; theme to-me-shnei-echav
 m.event("tell", agent="cham", themes=["li_shnei_echav"])
+# witness-grounded state (its own tier): castration_or_sodomy on the_offence
+m.witness_state("the_offence", "castration_or_sodomy",
+                cites=["Sanhedrin 70a:19", "Bereshit Rabbah 36:7"])
 
 # -------------------------- Gen.9.23 · THE_BACKWARD_COVERING ---------------
 # וַיִּקַּח שֵׁם וָיֶפֶת אֶת־הַשִּׂמְלָה וַיָּשִׂימוּ עַל־שְׁכֶם שְׁנֵיהֶם
@@ -110,6 +117,10 @@ m.event("cover", agent="shem_va_yefet", themes=["ervat_avihem"])
 # backward and-nakedness-of their-father not they-saw”) — fact holds: and-
 # nakedness-of-avihem-not-they-saw
 m.fact("ve_ervat_avihem_lo_rau")
+# witness-tier presupposed read: prayer_law_on_a_gentile_subject on
+# nakedness_covered — read, not installed
+m.witness_read("nakedness_covered", "prayer_law_on_a_gentile_subject",
+                cites=["Berakhot 25b:11", "Bereshit Rabbah 36:5"])
 
 # -------------------------- Gen.9.24 · THE_AWAKENING_AND_THE_KNOWING -------
 # וַיִּיקֶץ נֹחַ מִיֵּינוֹ וַיֵּדַע אֵת אֲשֶׁר־עָשָׂה־לוֹ בְּנוֹ הַקָּטָן
@@ -137,6 +148,10 @@ m.assign("kenaan", "arur")
 # ‹עֶבֶד עֲבָדִים יִהְיֶה לְאֶחָיו› (“slave-of slaves shall-he-be to-his-
 # brothers”) — fact holds: slave-of-slaves-yihyeh-to-echav(Canaan)
 m.fact("eved_avadim_yihyeh_le_echav(kenaan)")
+# witness-tier presupposed read: legal_category_name_yet_exitable on
+# slave_curse — read, not installed
+m.witness_read("slave_curse", "legal_category_name_yet_exitable",
+                cites=["Jerusalem Talmud Kiddushin 1:3:1", "Bereshit Rabbah 61:7", "Bereshit Rabbah 60:7"])
 
 # -------------------------- Gen.9.26 · THE_FIRST_HUMAN_BLESSING ------------
 # וַיֹּאמֶר בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם וִיהִי כְנַעַן עֶבֶד לָמוֹ
@@ -172,6 +187,10 @@ m.declare("noach", "LET",
 # Noach speaks a demand — LET: yehi(Canaan, slave-of-lamo)
 m.declare("noach", "LET",
           "yehi(kenaan, eved_lamo)")
+# witness-tier presupposed read: translation_charter on tents_of_shem —
+# read, not installed
+m.witness_read("tents_of_shem", "translation_charter",
+                cites=["Bereshit Rabbah 36:8", "Megillah 9b:4", "Mishnah Megillah 1:8", "Jerusalem Talmud Megillah 1:9:2", "Yoma 9b:18"])
 
 # -------------------------- Gen.9.28 · THE_YEARS_AFTER_THE_DELUGE ----------
 # וַיְחִי־נֹחַ אַחַר הַמַּבּוּל שְׁלֹשׁ מֵאוֹת שָׁנָה וַחֲמִשִּׁים שָׁנָה
@@ -210,4 +229,20 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 22
+    assert sorted(m.WORLD["witnessed"]) == ['the_offence']
+    assert m.WORLD["witnessed"]['the_offence']["cites"] == ['Sanhedrin 70a:19', 'Bereshit Rabbah 36:7']
+    assert all('castration_or_sodomy' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('drunkenness_verse', 'feminine_suffix_and_disputed_woe_count'), ('nakedness_covered', 'prayer_law_on_a_gentile_subject'), ('slave_curse', 'legal_category_name_yet_exitable'), ('tents_of_shem', 'translation_charter')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 36:4', 'Sanhedrin 70a:17']
+    assert all('feminine_suffix_and_disputed_woe_count' not in f for f in m.WORLD["facts"])
+    assert 'drunkenness_verse' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Berakhot 25b:11', 'Bereshit Rabbah 36:5']
+    assert all('prayer_law_on_a_gentile_subject' not in f for f in m.WORLD["facts"])
+    assert 'nakedness_covered' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Jerusalem Talmud Kiddushin 1:3:1', 'Bereshit Rabbah 61:7', 'Bereshit Rabbah 60:7']
+    assert all('legal_category_name_yet_exitable' not in f for f in m.WORLD["facts"])
+    assert 'slave_curse' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 36:8', 'Megillah 9b:4', 'Mishnah Megillah 1:8', 'Jerusalem Talmud Megillah 1:9:2', 'Yoma 9b:18']
+    assert all('translation_charter' not in f for f in m.WORLD["facts"])
+    assert 'tents_of_shem' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

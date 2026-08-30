@@ -20,8 +20,10 @@
 
 meta:
   id: "gen_34_mamre_laugh_plea"
-  rev: 2
+  rev: 4
   changelog:
+    - "rev 4 (2026-08-30): FULL-RULE STAMP on the owner's word — the batch stamp he held by standing decision until Genesis was whole, given when the book closed at 73 of 73 read and derived. tree_derive_version logic_derived_v1 -> logic_derived_v2_full_rule; the span's declared reading is COMPLETE in its triage ledger and its logic was rebuilt FROM that reading in the derivation pass. No operator, claim, text or test changed by this edit — the stamp records a judgement already earned."
+    - "2026-08-30 rev 3: DERIVATION PASS, parashat Vayera (owner order: 'Go'). Step 5: seven claims (G34-18..G34-24), all interpretive at check.type manual though three rest on ink verified at derivation; the seventeen standing claims hold the orthography. Step 6: seven operators across seven steps, all in the rulebook's existing vocabulary (six WITNESS_READ, one WITNESS_STATE - no operator invented), each tagged with its folded shape. PREREQUISITE: Onkelos citation keys appended to this ledger (append-only, same law and reason as the fourteen sweep ledgers on 2026-08-30), so the translation this block read can now be cited. THE BLOCK'S SHARPEST FINDING IS ABOUT THE SPINE ITSELF: at 18:3 the declared reading's TWO MEMBERS DISAGREE - Onkelos renders the address as the divine Name, Bereshit Rabbah reads it as profane and addressed to the senior visitor - while at 18:21 THE SAME TWO CONVERGE INDEPENDENTLY, both writing the repentance door into the descent. A dispute and an agreement between the two books this project declared as its reading, both carried dual-track. VERIFIED IN THE INK: our 18:9 carries the extraordinary points - four upper dots on alef, lamed, yod and vav - and R. Shimon ben Elazar states the meta-rule for such marks, that where the dotted letters are the majority one expounds the dots, reading 'where is HE?' instead of 'to him'; the exposition uses three of the four and the fourth is recorded rather than smoothed. Also verified: the defective sitting-word of 18:1 grounding the synagogue practice, and the single-consonant heart of 18:5 read as meaning the visitors have no evil inclination. Also landed: the six-hour clock derived from our own time token by comparison against the manna verse; THE CANON RECORDING ITSELF EDITING FOR PEACE at 18:13, where Scripture is said to have altered Sarah's words deliberately; our 18:22 enrolled in the scribal-emendation census; and the plea read as a courtroom procedure that CITES gen_22's flood oath as governing precedent, with a decrement discipline and three independent derivations of its floor of ten. No verse text, tree, or morphology changed."
     - "2026-08-28 rev 2: RE-era reading pass (parashat Vayera sweep, 5 blocks one sitting — FIRST RUN UNDER THE SPINE DEFAULT, owner 2026-08-27: Bereshit Rabbah + Onkelos declared, Mishnah/Talmud held for the Step 9 exam): ledger logic/oral_triage/gen_34_mamre_laugh_plea_2026-08-28.md; v1 Tier-A queue discharged; ORAL_reading_pass block appended; no machine ops changed."
   title_en: "The visitors at Mamre, the laugh within, the plea for Sodom (18:1-33)"
   title_he: הֲשֹׁפֵט כָּל־הָאָרֶץ לֹא יַעֲשֶׂה מִשְׁפָּט
@@ -157,7 +159,7 @@ meta:
     walls back) is prose, not an operator.
   data_paths_en:
     - "Data/tanakh_genesis_jps1917_en.json"
-  tree_derive_version: logic_derived_v1
+  tree_derive_version: logic_derived_v2_full_rule
   tree_derive_phase: "C-34"
   confidence_overall: "structure tested; operator readings tested-per-TIR; intent hypothesis"
   genre: "theophany_hospitality_and_forensic_negotiation"
@@ -263,7 +265,7 @@ derivation_log:
     name_en: "Source fetch + verification"
     comment: >
       Hebrew: Data/Gen.xml via the DB snapshot
-      torah_grok.SNAPSHOT-main-51801ca.sqlite (words/verses/trees);
+      source-snapshot.sqlite (words/verses/trees);
       pointed lines regenerated with cantillation stripped, vowels
       kept (gen_22's boot_steps convention). English aid: JPS 1917
       (Data/tanakh_genesis_jps1917_en.json). Span totals VERIFIED:
@@ -578,6 +580,21 @@ boot_steps:
           pledge: the heat-word's first narrative hour [census].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(heat_of_the_day, six_hours_by_comparison)"
+        en: >
+          A VAGUE TIME TOKEN MEASURED [claim G34-22]. R. Yishmael derives that
+          'the heat of the day' means SIX hours, set against the manna verse's
+          'when the sun grew hot' at FOUR - and the discriminator is a
+          physical test: at four hours the shade is cool while the sun is hot;
+          at six, both are hot. And two spellings of this block carry readings
+          [claim G34-23]: this verse's sitting-word is written DEFECTIVE, read
+          as a command - he sought to stand and was told SIT, 'you are the
+          sign for your sons', from which the synagogue practice follows,
+          Israel seated while the Presence stands over them. [folded shape:
+          ink count]
+        cites: ["Bereshit Rabbah 48:8", "Bereshit Rabbah 48:7"]
+        confidence: witnessed
     comment: >
       The largest span in the corpus opens on a wordless
       theophany: the NAME appears, and the first voice heard is
@@ -698,6 +715,20 @@ boot_steps:
           BEFORE You' (kodam-distancing) [dual-track].
         cites: ["TIR-027"]
         confidence: tested
+      - op: WITNESS_STATE
+        expr_en: "WITNESS(adonai_address, spine_members_in_recorded_dispute)"
+        en: >
+          THE DECLARED READING'S TWO MEMBERS DISAGREE HERE [claim G34-24].
+          Onkelos renders the address as the divine NAME, reading it as spoken
+          to God; Bereshit Rabbah 48:10 reads it as PROFANE, addressed to the
+          senior of the three visitors. This is a dispute not between the
+          chain and the machine but between the two members of the spine this
+          project declared - and it is carried dual-track, neither side
+          merged. At 18:21 the same two members CONVERGE independently, both
+          writing the repentance door into the descent. [folded shape:
+          recorded dispute]
+        cites: ["Onkelos Genesis 18:3", "Bereshit Rabbah 48:10", "Onkelos Genesis 18:21", "Bereshit Rabbah 49:6"]
+        confidence: witnessed
     comment: >
       The chapter's first speech is a petition in the negative:
       do not pass by. The machine pushes it and the letter never
@@ -831,6 +862,17 @@ boot_steps:
           men is an acceptance [prose].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(single_bet_heart, visitors_without_the_inclination)"
+        en: >
+          A SHORTENED SPELLING READ AS AN ONTOLOGICAL CLAIM [claim G34-23].
+          'Sustain your HEART' is written with the single-consonant form
+          rather than the doubled one - verified in the ink at derivation -
+          and the chain reads the shortened spelling as meaning these visitors
+          have NO evil inclination: one heart, not two. The machine's guests
+          are typed by a letter. [folded shape: ink count]
+        cites: ["Bereshit Rabbah 48:11"]
+        confidence: witnessed
     comment: >
       A morsel promised in a mood that binds only the promiser,
       hearts to be sustained in a verb the Torah never uses
@@ -1071,6 +1113,20 @@ boot_steps:
           far are about the host's own house [prose].
         cites: ["TIR-014"]
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(dotted_elav, expound_the_dots_meta_rule)"
+        en: >
+          THE SCRIBAL POINTS, AND THE RULE FOR READING THEM [claim G34-18].
+          The word אֵלָיו ('to him') carries the extraordinary points, and R.
+          Shimon ben Elazar states the governing meta-rule: WHERE THE DOTTED
+          LETTERS ARE THE MAJORITY, EXPOUND THE DOTS - so one reads not 'they
+          said TO HIM' but ayo, 'WHERE IS HE?', the angels asking Sarah after
+          Abraham as they had asked him after her. Verified at derivation: the
+          word carries FOUR upper dots, on alef, lamed, yod and vav, and the
+          exposition uses three of them to spell the question; the fourth is
+          noted, not smoothed. [folded shape: ink count]
+        cites: ["Bereshit Rabbah 48:15"]
+        confidence: witnessed
     comment: >
       The where-question that hunted the man, the brother, and
       the runaway now asks after a wife — and the answer is a
@@ -1293,6 +1349,18 @@ boot_steps:
           (18:13, 18:23, 18:24) [census].
         cites: ["TIR-014"]
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(altered_quotation, canon_edits_for_peace)"
+        en: >
+          THE TEXT RECORDS ITSELF EDITING FOR PEACE [claim G34-20]. Bar
+          Kappara notes that she said 'my husband is old' while Scripture
+          reports her as saying 'I have grown old' - and states the rule
+          outright: the text ALTERED her words to keep peace between the
+          spouses. The corpus is described as having deliberately changed a
+          quotation, and the change is offered as precedent for peace
+          outweighing exact report. [folded shape: kept record]
+        cites: ["Bereshit Rabbah 48:18"]
+        confidence: witnessed
     comment: >
       God quotes the laugh the walls could not have carried and
       changes one word in the quoting — the machine records
@@ -1858,6 +1926,19 @@ boot_steps:
           across the seam [watch].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(standing_before_the_lord, scribal_emendation_claim)"
+        en: >
+          THIS VERSE IS ENROLLED IN THE EMENDATION RECORD [claim G34-21]. R.
+          Simon records that 'Abraham was still standing before the LORD'
+          stands where the original had the Presence waiting for ABRAHAM - one
+          of the adjustments the tradition attributes to the scribes. Our
+          verse joins the corpus's own census of places where its text was
+          deliberately changed, beside the members at Genesis 1, 11 and 17.
+          The received ink stands; the claim is about transmission. [folded
+          shape: dual-track translation]
+        cites: ["Bereshit Rabbah 49:7"]
+        confidence: witnessed
     comment: >
       The men become Sodom's problem; the host becomes its
       advocate. The stand-verb's bracket closes on the NAME,
@@ -1989,6 +2070,22 @@ boot_steps:
           the forgive-verb explicit [dual-track].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(the_plea, courtroom_procedure_on_a_cited_precedent)"
+        en: >
+          THE PLEA IS A PROCEDURE, AND IT CITES AN EARLIER UNIT AS LAW [claim
+          G34-19]. The basis: R. Acha has Abraham argue the FLOOD OATH as
+          governing precedent - 'You swore no flood; a flood of FIRE evades
+          the oath' - so the plea invokes gen_22's covenant as binding, and
+          the oath-scope question raised there is argued here by a character.
+          The procedure: fifty down to five attempted directly and refused,
+          the descent disciplined; R. Levi's water-clock parable has the judge
+          adding water to extend the advocate's time. The floor of ten is
+          derived three ways - an assembly requires ten, the flood's eight did
+          not suffice, Lot's household counted ten - with Sodom needing ten
+          where Jerusalem needs one. [folded shape: priced law]
+        cites: ["Bereshit Rabbah 39:6", "Bereshit Rabbah 49:10", "Bereshit Rabbah 49:12", "Bereshit Rabbah 49:13"]
+        confidence: witnessed
     comment: >
       A man draws near and asks the Judge whether justice can
       sweep; the machine takes four verses of questions and one

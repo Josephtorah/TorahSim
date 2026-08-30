@@ -66,6 +66,10 @@ m.fact("gavru_meod_meod_al_ha_aretz",
 # ‹וַיְכֻסּוּ כָּל־הֶהָרִים הַגְּבֹהִים› (“and-were-covered all the-
 # mountains the-high”) — event: cover — theme all-he-mountains-the-high
 m.event("cover", themes=["kol_he_harim_ha_gevohim"])
+# witness-tier presupposed read: territorial_claim_defeated on
+# all_mountains_quantifier — read, not installed
+m.witness_read("all_mountains_quantifier", "territorial_claim_defeated",
+                cites=["Bereshit Rabbah 32:10"])
 
 # -------------------------- Gen.7.20 · FIFTEEN_CUBITS_UPWARD ---------------
 # חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה גָּבְרוּ הַמָּיִם וַיְכֻסּוּ הֶהָרִים
@@ -108,6 +112,14 @@ m.step("Gen.7.22")
 # which-in-dry-land-died
 m.fact("nishmat_ruach_chayim_be_apav",
        "mi_kol_asher_be_charavah_metu")
+# witness-tier presupposed read: legal_definition_of_life on nishmat_formula
+# — read, not installed
+m.witness_read("nishmat_formula", "legal_definition_of_life",
+                cites=["Yoma 85a:11", "Yoma 85a:12", "Mishnah Yoma 8:7"])
+# witness-tier presupposed read: fish_exempted_by_the_wording on
+# dry_land_limiter — read, not installed
+m.witness_read("dry_land_limiter", "fish_exempted_by_the_wording",
+                cites=["Kiddushin 13a:14"])
 
 # -------------------------- Gen.7.23 · THE_WIPE_EXECUTED_ONLY_NOACH_LEFT ---
 # וַיִּמַח אֶת־כָּל־הַיְקוּם אֲשֶׁר עַל־פְּנֵי הָאֲדָמָה מֵאָדָם
@@ -135,6 +147,14 @@ m.event("wiped", themes=["kol_ha_yequm"])
 m.event("remain", themes=["akh_noach_va_asher_ito"])
 # reads without prior install (flag, not fix): Noach
 m.presupposed("noach")
+# witness-tier presupposed read: two_worlds_two_verbs on double_wipe_verb —
+# read, not installed
+m.witness_read("double_wipe_verb", "two_worlds_two_verbs",
+                cites=["Jerusalem Talmud Sanhedrin 10:3:2"])
+# witness-tier presupposed read: initiator_punished_first on
+# from_man_to_beast_order — read, not installed
+m.witness_read("from_man_to_beast_order", "initiator_punished_first",
+                cites=["Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 2:8"])
 
 # -------------------------- Gen.7.24 · THE_HUNDRED_AND_FIFTY_DAYS ----------
 # וַיִּגְבְּרוּ הַמַּיִם עַל־הָאָרֶץ חֲמִשִּׁים וּמְאַת יוֹם
@@ -163,4 +183,20 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 11
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('all_mountains_quantifier', 'territorial_claim_defeated'), ('nishmat_formula', 'legal_definition_of_life'), ('dry_land_limiter', 'fish_exempted_by_the_wording'), ('double_wipe_verb', 'two_worlds_two_verbs'), ('from_man_to_beast_order', 'initiator_punished_first')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 32:10']
+    assert all('territorial_claim_defeated' not in f for f in m.WORLD["facts"])
+    assert 'all_mountains_quantifier' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Yoma 85a:11', 'Yoma 85a:12', 'Mishnah Yoma 8:7']
+    assert all('legal_definition_of_life' not in f for f in m.WORLD["facts"])
+    assert 'nishmat_formula' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Kiddushin 13a:14']
+    assert all('fish_exempted_by_the_wording' not in f for f in m.WORLD["facts"])
+    assert 'dry_land_limiter' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Jerusalem Talmud Sanhedrin 10:3:2']
+    assert all('two_worlds_two_verbs' not in f for f in m.WORLD["facts"])
+    assert 'double_wipe_verb' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 2:8']
+    assert all('initiator_punished_first' not in f for f in m.WORLD["facts"])
+    assert 'from_man_to_beast_order' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

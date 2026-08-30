@@ -24,6 +24,11 @@ m.step("Gen.48.1")
 # ‹הִנֵּה אָבִיךָ חֹלֶה› (“behold father-you/your be-rubbed”) — fact holds:
 # behold-avikha-be-rubbed
 m.fact("hine_avikha_chole")
+# witness-tier presupposed read:
+# the_suspicion_of_favouritism_at_the_deathbed on your_father_is_ill — read,
+# not installed
+m.witness_read("your_father_is_ill", "the_suspicion_of_favouritism_at_the_deathbed",
+                cites=["Bereshit Rabbah 97:1", "Bereshit Rabbah 65:9"])
 
 # -------------------------- Gen.48.2 · STRENGTHENED_ON_THE_BED -------------
 # וַיַּגֵּד לְיַעֲקֹב וַיֹּאמֶר הִנֵּה בִּנְךָ יוֹסֵף בָּא אֵלֶיךָ
@@ -57,6 +62,10 @@ m.step("Gen.48.4")
 # ‹אֲחֻזַּת עוֹלָם› (“something-seized forever”) — fact holds: something-
 # seized-forever-to-zarakha
 m.fact("achuzat_olam_le_zarakha")
+# witness-tier presupposed read: a_promise_quoted_back_and_cashed on
+# an_assembly_of_nations — read, not installed
+m.witness_read("an_assembly_of_nations", "a_promise_quoted_back_and_cashed",
+                cites=["Bereshit Rabbah 82:4"])
 
 # -------------------------- Gen.48.5 · EPHRAIM_AND_MANASSEH_MINE -----------
 # וְעַתָּה שְׁנֵי־בָנֶיךָ הַנּוֹלָדִים לְךָ בְּאֶרֶץ מִצְרַיִם עַד־בֹּאִי
@@ -170,6 +179,11 @@ m.step("Gen.48.14")
 # obj-marker hand-him/its that Manasseh the-firstborn”) — event: be-
 # circumspect-and-hence-yadav — agent Israel
 m.event("sikel_yadav", agent="yisrael")
+# witness-tier presupposed read:
+# the_crossing_declared_deliberate_in_the_text on he_guided_his_hands —
+# read, not installed
+m.witness_read("he_guided_his_hands", "the_crossing_declared_deliberate_in_the_text",
+                cites=["Onkelos Genesis 48:14"])
 
 # -------------------------- Gen.48.15 · THE_SHEPHERD_GOD -------------------
 # וַיְבָרֶךְ אֶת־יוֹסֵף וַיֹּאמַר הָאֱלֹהִים אֲשֶׁר הִתְהַלְּכוּ אֲבֹתַי
@@ -182,6 +196,10 @@ m.step("Gen.48.15")
 # ‹הָאֱלֹהִים הָרֹעֶה אֹתִי מֵעוֹדִי› (“the-God the-graze obj-marker-me/my
 # from-still/again-me/my”) — blessing: Israel blesses Joseph
 m.bless("yisrael", "yosef")
+# witness-grounded state (its own tier): which_way_the_dependence_runs on
+# my_fathers_walked_before_him
+m.witness_state("my_fathers_walked_before_him", "which_way_the_dependence_runs",
+                cites=["Bereshit Rabbah 97:2", "Onkelos Genesis 48:15", "Bereshit Rabbah 30:10"])
 
 # -------------------------- Gen.48.16 · THE_REDEEMING_ANGEL ----------------
 # הַמַּלְאָךְ הַגֹּאֵל אֹתִי מִכָּל־רָע יְבָרֵךְ אֶת־הַנְּעָרִים וְיִקָּרֵא
@@ -197,6 +215,10 @@ m.step("Gen.48.16")
 # marker the-boy”) — fact holds: the-messenger-the-be-the-next-of-kin-bless-
 # obj-marker-the-boy
 m.fact("ha_malakh_ha_goel_yevarekh_et_ha_nearim")
+# witness-tier presupposed read: an_angel_the_buffer_keeps on
+# the_angel_who_redeemed_me — read, not installed
+m.witness_read("the_angel_who_redeemed_me", "an_angel_the_buffer_keeps",
+                cites=["Onkelos Genesis 48:16"])
 
 # -------------------------- Gen.48.17 · EVIL_IN_HIS_EYES -------------------
 # וַיַּרְא יוֹסֵף כִּי־יָשִׁית אָבִיו יַד־יְמִינוֹ עַל־רֹאשׁ אֶפְרַיִם
@@ -235,6 +257,10 @@ m.step("Gen.48.19")
 # father-him/its and-say know son-me/my know”) — fact holds: and-refuse-
 # aviv-know-veni-know
 m.fact("va_yemaen_aviv_yadati_veni_yadati")
+# witness-tier presupposed read: the_refusal_carrying_what_the_father_knows
+# on i_know_my_son_i_know — read, not installed
+m.witness_read("i_know_my_son_i_know", "the_refusal_carrying_what_the_father_knows",
+                cites=["Bereshit Rabbah 97:4"])
 
 # -------------------------- Gen.48.20 · BY_YOU_SHALL_ISRAEL_BLESS ----------
 # וַיְבָרֲכֵם בַּיּוֹם הַהוּא לֵאמוֹר בְּךָ יְבָרֵךְ יִשְׂרָאֵל לֵאמֹר
@@ -248,6 +274,10 @@ m.step("Gen.48.20")
 # like-Ephraim and-like-Manasseh”) — blessing: Israel blesses Ephraim-and-
 # Manasseh
 m.bless("yisrael", "efrayim_u_menashe")
+# witness-grounded state (its own tier):
+# three_torah_legs_confirmed_the_rest_unopened on ephraim_before_manasseh
+m.witness_state("ephraim_before_manasseh", "three_torah_legs_confirmed_the_rest_unopened",
+                cites=["Bereshit Rabbah 97:5"])
 
 # -------------------------- Gen.48.21 · GOD_WILL_RETURN_YOU ----------------
 # וַיֹּאמֶר יִשְׂרָאֵל אֶל־יוֹסֵף הִנֵּה אָנֹכִי מֵת וְהָיָה אֱלֹהִים
@@ -259,6 +289,10 @@ m.step("Gen.48.21")
 # you/your(pl) to earth father-you/your(pl)”) — fact holds: and-return-
 # etkhem-to-earth-avotekhem
 m.fact("ve_heshiv_etkhem_el_eretz_avotekhem")
+# witness-tier presupposed read: the_word_as_support_at_its_second_seat on
+# god_will_be_with_you — read, not installed
+m.witness_read("god_will_be_with_you", "the_word_as_support_at_its_second_seat",
+                cites=["Onkelos Genesis 48:21"])
 
 # -------------------------- Gen.48.22 · SHEKHEM_ABOVE_YOUR_BROTHERS --------
 # וַאֲנִי נָתַתִּי לְךָ שְׁכֶם אַחַד עַל־אַחֶיךָ אֲשֶׁר לָקַחְתִּי מִיַּד
@@ -270,6 +304,10 @@ m.step("Gen.48.22")
 # place-of-burden one”) — fact holds: set-to-you-neck-as-the-place-of-
 # burden-one
 m.fact("natati_lekha_shekhem_achad")
+# witness-grounded state (its own tier):
+# disarmed_by_both_members_independently on my_sword_and_my_bow
+m.witness_state("my_sword_and_my_bow", "disarmed_by_both_members_independently",
+                cites=["Onkelos Genesis 48:22", "Bereshit Rabbah 99:7", "Bereshit Rabbah 97:6"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -287,4 +325,30 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 6
+    assert sorted(m.WORLD["witnessed"]) == ['ephraim_before_manasseh', 'my_fathers_walked_before_him', 'my_sword_and_my_bow']
+    assert m.WORLD["witnessed"]['ephraim_before_manasseh']["cites"] == ['Bereshit Rabbah 97:5']
+    assert all('three_torah_legs_confirmed_the_rest_unopened' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['my_fathers_walked_before_him']["cites"] == ['Bereshit Rabbah 97:2', 'Onkelos Genesis 48:15', 'Bereshit Rabbah 30:10']
+    assert all('which_way_the_dependence_runs' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['my_sword_and_my_bow']["cites"] == ['Onkelos Genesis 48:22', 'Bereshit Rabbah 99:7', 'Bereshit Rabbah 97:6']
+    assert all('disarmed_by_both_members_independently' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('your_father_is_ill', 'the_suspicion_of_favouritism_at_the_deathbed'), ('an_assembly_of_nations', 'a_promise_quoted_back_and_cashed'), ('he_guided_his_hands', 'the_crossing_declared_deliberate_in_the_text'), ('the_angel_who_redeemed_me', 'an_angel_the_buffer_keeps'), ('i_know_my_son_i_know', 'the_refusal_carrying_what_the_father_knows'), ('god_will_be_with_you', 'the_word_as_support_at_its_second_seat')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 97:1', 'Bereshit Rabbah 65:9']
+    assert all('the_suspicion_of_favouritism_at_the_deathbed' not in f for f in m.WORLD["facts"])
+    assert 'your_father_is_ill' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 82:4']
+    assert all('a_promise_quoted_back_and_cashed' not in f for f in m.WORLD["facts"])
+    assert 'an_assembly_of_nations' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Genesis 48:14']
+    assert all('the_crossing_declared_deliberate_in_the_text' not in f for f in m.WORLD["facts"])
+    assert 'he_guided_his_hands' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Genesis 48:16']
+    assert all('an_angel_the_buffer_keeps' not in f for f in m.WORLD["facts"])
+    assert 'the_angel_who_redeemed_me' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 97:4']
+    assert all('the_refusal_carrying_what_the_father_knows' not in f for f in m.WORLD["facts"])
+    assert 'i_know_my_son_i_know' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Genesis 48:21']
+    assert all('the_word_as_support_at_its_second_seat' not in f for f in m.WORLD["facts"])
+    assert 'god_will_be_with_you' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

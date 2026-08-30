@@ -28,6 +28,10 @@ m.event("go_down", agent="avram")
 m.fact("ki_khaved_ha_raav_ba_aretz")
 # reads without prior install (flag, not fix): mitzrayim
 m.presupposed("mitzrayim")
+# witness-tier presupposed read: paved_way_template_of_eleven_ink_pairs on
+# descent_episode — read, not installed
+m.witness_read("descent_episode", "paved_way_template_of_eleven_ink_pairs",
+                cites=["Bereshit Rabbah 40:6", "Yevamot 13b:6"])
 
 # -------------------------- Gen.12.11 · THE_FIRST_SPEECH_IS_FEAR_AND_BEAUTY -
 # וַיְהִי כַּאֲשֶׁר הִקְרִיב לָבוֹא מִצְרָיְמָה וַיֹּאמֶר אֶל־שָׂרַי
@@ -71,6 +75,10 @@ m.declare("avram", "LET",
 # circumstance-you/your”) — fact holds: so-that-do-well-to-me-vaavurekh-and-
 # chaytah-nafshi
 m.fact("lemaan_yitav_li_vaavurekh_ve_chaytah_nafshi")
+# witness-tier presupposed read: consent_established_by_one_word on
+# request_particle — read, not installed
+m.witness_read("request_particle", "consent_established_by_one_word",
+                cites=["Bereshit Rabbah 52:4", "Sanhedrin 39b:21"])
 
 # -------------------------- Gen.12.14 · THE_SEEING -------------------------
 # וַיְהִי כְּבוֹא אַבְרָם מִצְרָיְמָה וַיִּרְאוּ הַמִּצְרִים אֶת־הָאִשָּׁה
@@ -131,6 +139,10 @@ m.event("plague", agent="YHWH", themes=["paro_u_veito"])
 # ‹עַל־דְּבַר שָׂרַי אֵשֶׁת אַבְרָם› (“over word/thing Sarai woman Abram”) —
 # fact holds: over-word/thing-Sarai-woman-Abram
 m.fact("al_devar_saray_eshet_avram")
+# witness-tier presupposed read: named_disease_carried_into_divorce_law on
+# affliction_op — read, not installed
+m.witness_read("affliction_op", "named_disease_carried_into_divorce_law",
+                cites=["Bereshit Rabbah 41:2", "Jerusalem Talmud Ketubot 7:9:3", "Vayikra Rabbah 16:1", "Arakhin 16a:9"])
 
 # -------------------------- Gen.12.18 · THE_KINGS_QUESTIONS_IN_THE_GARDENS_FORM -
 # וַיִּקְרָא פַרְעֹה לְאַבְרָם וַיֹּאמֶר מַה־זֹּאת עָשִׂיתָ לִּי לָמָּה
@@ -176,6 +188,10 @@ m.event("command", agent="paro", themes=["anashim"])
 # to-him/its”) — event: send-away — agent man; theme Abram-and-his-wife-and-
 # all-which-not
 m.event("send_away", agent="anashim", themes=["avram_ve_ishto_ve_khol_asher_lo"])
+# witness-tier presupposed read: four_steps_priced_at_four_hundred_years on
+# escort_and_release — read, not installed
+m.witness_read("escort_and_release", "four_steps_priced_at_four_hundred_years",
+                cites=["Sotah 46b:14", "Mekhilta DeRabbi Shimon Ben Yochai 3:1"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -193,4 +209,17 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 14
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('descent_episode', 'paved_way_template_of_eleven_ink_pairs'), ('request_particle', 'consent_established_by_one_word'), ('affliction_op', 'named_disease_carried_into_divorce_law'), ('escort_and_release', 'four_steps_priced_at_four_hundred_years')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 40:6', 'Yevamot 13b:6']
+    assert all('paved_way_template_of_eleven_ink_pairs' not in f for f in m.WORLD["facts"])
+    assert 'descent_episode' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 52:4', 'Sanhedrin 39b:21']
+    assert all('consent_established_by_one_word' not in f for f in m.WORLD["facts"])
+    assert 'request_particle' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 41:2', 'Jerusalem Talmud Ketubot 7:9:3', 'Vayikra Rabbah 16:1', 'Arakhin 16a:9']
+    assert all('named_disease_carried_into_divorce_law' not in f for f in m.WORLD["facts"])
+    assert 'affliction_op' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sotah 46b:14', 'Mekhilta DeRabbi Shimon Ben Yochai 3:1']
+    assert all('four_steps_priced_at_four_hundred_years' not in f for f in m.WORLD["facts"])
+    assert 'escort_and_release' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

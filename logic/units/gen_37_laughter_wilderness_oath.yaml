@@ -23,8 +23,10 @@
 
 meta:
   id: "gen_37_laughter_wilderness_oath"
-  rev: 2
+  rev: 4
   changelog:
+    - "rev 4 (2026-08-30): FULL-RULE STAMP on the owner's word — the batch stamp he held by standing decision until Genesis was whole, given when the book closed at 73 of 73 read and derived. tree_derive_version logic_derived_v1 -> logic_derived_v2_full_rule; the span's declared reading is COMPLETE in its triage ledger and its logic was rebuilt FROM that reading in the derivation pass. No operator, claim, text or test changed by this edit — the stamp records a judgement already earned."
+    - "2026-08-30 rev 3: DERIVATION PASS, parashat Vayera (owner order: 'Go'). Step 5: seven claims (G37-23..G37-29), all interpretive at check.type manual though one rests on arithmetic verified at derivation; the twenty-two standing claims hold the orthography. Step 6: eight operators across eight steps, all in the rulebook's existing vocabulary (seven WITNESS_READ, one WITNESS_STATE - no operator invented), each tagged with its folded shape. Onkelos citation keys appended to this ledger first (append-only). VERIFIED AT DERIVATION: the rare verb of our 21:7 has letters totalling exactly ONE HUNDRED, Abraham's age at the birth, so the chain's claim that the word choice encodes the age holds arithmetically (middah E29). Also landed: THE PRESENT-STATE JUDGMENT LAW at its home verse - 'as he is THERE' read as the rule that a person is judged by his condition at the moment and not by what his descendants will do; the partitive preposition of 21:12 doing the work of a descent statute, IN Isaac meaning part and not all, which is how Esau is excluded; the PUBLIC ROBBER defined at 21:25, fixing the boundary between open taking and covert theft, with the rule that any peace without reprimand is not peace; the seven ewes priced as a penalty cascade and an evidentiary procedure drawn from the same dispute, proof by sign stated as a model 'for your sons'; the planting of 21:33 tracked across three books into the Tabernacle's boards with receipts named, the verse itself read three ways including the translation's PRAYED; the expulsion trigger read four incompatible ways with none merged; and the remembering argued by light-and-heavy from the law of the suspected wife, a later statute imported as the premise of a narrative inference. No verse text, tree, or morphology changed."
     - "2026-08-28 rev 2: RE-era reading pass (parashat Vayera sweep, 5 blocks one sitting — FIRST RUN UNDER THE SPINE DEFAULT, owner 2026-08-27: Bereshit Rabbah + Onkelos declared, Mishnah/Talmud held for the Step 9 exam): ledger logic/oral_triage/gen_37_laughter_wilderness_oath_2026-08-28.md; v1 Tier-A queue discharged; ORAL_reading_pass block appended; no machine ops changed."
   title_en: "The visitation, the expulsion, the well-oath (21:1-34)"
   title_he: וַיהוָה פָּקַד אֶת־שָׂרָה כַּאֲשֶׁר אָמָר
@@ -243,7 +245,7 @@ meta:
     gen_36's gerar-basis).
   data_paths_en:
     - "Data/tanakh_genesis_jps1917_en.json"
-  tree_derive_version: logic_derived_v1
+  tree_derive_version: logic_derived_v2_full_rule
   tree_derive_phase: "C-37"
   confidence_overall: "structure tested; operator readings tested-per-TIR; intent hypothesis"
   genre: "birth_expulsion_and_treaty_narrative"
@@ -284,7 +286,7 @@ meta:
     dual-track, never merged into the letter's encoding.
   method_note_en: >
     Derivation from the Hebrew letter (DB snapshot
-    torah_grok.SNAPSHOT-main-51801ca.sqlite) with the frozen corpus
+    source-snapshot.sqlite) with the frozen corpus
     gen_01..gen_36 as precedent; every frozen quote verified against
     the frozen YAML this session; censuses run fresh against the
     snapshot + debut map. JPS 1917 as English aid only.
@@ -590,6 +592,17 @@ boot_steps:
           the debut under memory [dual-track].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(remembering, argued_by_a_fortiori_from_sotah_law)"
+        en: >
+          A NARRATIVE EVENT ARGUED FROM A LATER STATUTE [claim G37-29]. The
+          remembering is argued by light-and-heavy from the law of the
+          suspected wife: if she who was cleared is promised she 'shall be
+          absolved and conceive', then one who left two palaces untainted all
+          the more so. A statute from a later book imported as the premise of
+          a narrative inference. [folded shape: cross-corpus link]
+        cites: ["Bereshit Rabbah 53:6"]
+        confidence: witnessed
     comment: >
       One verse, two receipts, both God's. The machine holds the
       doubled frame as fact — the promises it pays are frozen
@@ -872,6 +885,19 @@ boot_steps:
           own the oath-scene [dual-track].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(milel_verb, age_encoded_in_the_word_choice)"
+        en: >
+          THE AGE IS WRITTEN INTO WHICH VERB WAS CHOSEN [claim G37-23,
+          verified at derivation]. She says 'who would have SAID' with a rare
+          verb rather than either common one, and the chain reads the choice
+          as encoding a number: its letters total ONE HUNDRED, Abraham's age
+          at the birth. Computed at derivation and exact. The same verse's
+          plural 'nursed CHILDREN' is read as the public proof-of-birth, the
+          noblewomen's infants brought and nursed by her. Argues middah E29
+          (numerical value). [folded shape: ink count]
+        cites: ["Bereshit Rabbah 53:9"]
+        confidence: witnessed
     comment: >
       A hapax speak-verb for a speech no one could have made.
       The machine holds the question as fact; the buffer answers
@@ -983,6 +1009,17 @@ boot_steps:
           mood-split [flag 13, dual-track].
         cites: ["TIR-014"]
         confidence: tested
+      - op: WITNESS_STATE
+        expr_en: "WITNESS(metzachek, four_readings_of_one_participle)"
+        en: >
+          ONE PARTICIPLE, FOUR READINGS [claim G37-29]. The expulsion trigger
+          is read as immorality, as idolatry, as bloodshed, and - against all
+          three - as a COMPLIMENT, with the inheritance quarrel running
+          beneath the dispute. The machine records a single word; the chain
+          records four incompatible accounts of what it names, none merged.
+          [folded shape: recorded dispute]
+        cites: ["Bereshit Rabbah 53:11"]
+        confidence: witnessed
     comment: >
       Two installs and one participle. The laugh-root that named
       the heir shows its other face over the un-named son — and
@@ -1160,6 +1197,18 @@ boot_steps:
           property; God answers lineage [prose].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(be_yitzchak, partitive_preposition_as_descent_statute)"
+        en: >
+          A SUCCESSION RULE CARRIED BY ONE LETTER [claim G37-25]. The promise
+          says 'IN Isaac shall seed be called to you', and the chain presses
+          the preposition: IN Isaac - part of him, not all of him - which is
+          how Esau is excluded from the line. A second reading takes the same
+          letter as the numeral TWO, meaning whoever acknowledges two worlds.
+          One preposition doing the work of a descent statute. [folded shape:
+          priced law]
+        cites: ["Bereshit Rabbah 53:12"]
+        confidence: witnessed
     comment: >
       Three moods in one speech: a jussive that comforts, an
       imperative that endorses, a fact that grounds. The machine
@@ -1464,6 +1513,17 @@ boot_steps:
           [flag 14, dual-track].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(ba_asher_hu_sham, judged_by_present_state)"
+        en: >
+          A PRINCIPLE OF JUDGMENT FROM ONE LOCATIVE PHRASE [claim G37-24]. 'As
+          he is THERE' is read as the rule that a person is judged by his
+          condition AT THE MOMENT, not by what his descendants will do - the
+          lad saved though his sons would one day kill with thirst. And
+          Hagar's tears are cited as the precedent David later invokes: 'to
+          HER tears You were not silent.' [folded shape: priced law]
+        cites: ["Bereshit Rabbah 53:14"]
+        confidence: witnessed
     comment: >
       The chapter's quietest device detonates: the un-named boy's
       name happens twice as grammar — God-hears, God-hears — and
@@ -1839,6 +1899,17 @@ boot_steps:
           ANISU ('seized by force') for gazlu [flag 14].
         cites: ["TIR-014"]
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(rebuke_at_the_well, public_robber_defined)"
+        en: >
+          A CATEGORY BOUNDARY IN PROPERTY LAW, FIXED HERE [claim G37-26]. Bar
+          Kappara defines the robber as THE ONE WHO TAKES OPENLY, fixing the
+          line between the open taking and the covert theft - a definition
+          still load-bearing. And the reproof in this verse models the rule
+          stated with it: any love without reprimand is not love, any peace
+          without reprimand is not peace. [folded shape: priced law]
+        cites: ["Bereshit Rabbah 54:3"]
+        confidence: witnessed
     comment: >
       Between the commitment and the deed, a grievance: the
       vindication-verb changes targets, and both arms of the
@@ -2040,6 +2111,19 @@ boot_steps:
           itself [tree fact; prose].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(seven_ewes, penalty_ledger_and_proof_by_sign)"
+        en: >
+          A GIFT PRICED AS A PENALTY, AND AN EVIDENCE RULE DRAWN [claim
+          G37-27]. Because the covenant-gift was made against His wish, the
+          sevens are repaid in a cascade - seven generations of delayed
+          rejoicing, seven righteous slain by the Philistines, the ark seven
+          months in their fields. And from the well dispute an evidentiary
+          procedure follows: 'for whomever the water rises, the well is his' -
+          proof by sign - stated as a model 'for your sons', the wilderness
+          well rising as the later instance. [folded shape: repayment table]
+        cites: ["Bereshit Rabbah 54:4", "Bereshit Rabbah 54:5"]
+        confidence: witnessed
     comment: >
       Seven ewes buy a verb its receipt: the swear-demand pops
       in its own root while the registry — by frozen law —
@@ -2155,6 +2239,20 @@ boot_steps:
           the world/eternity') [flag 14].
         cites: []
         confidence: tested
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(the_planting, chain_of_custody_into_the_tabernacle)"
+        en: >
+          A PLANTED OBJECT TRACKED ACROSS THREE BOOKS [claim G37-28]. The
+          chain follows this planting forward: Jacob cuts these same trees at
+          Beersheba, carries them down to Egypt, and they become the
+          Tabernacle's boards, the central bar hidden among them from his days
+          - a material chain of custody with receipts named in a later book.
+          The verse itself is read three ways: an orchard, an inn, and
+          Onkelos's own - that he planted and PRAYED there in the Name of the
+          LORD. Carried as a dual-tracked triple. [folded shape: cross-corpus
+          link]
+        cites: ["Bereshit Rabbah 94:4", "Onkelos Genesis 21:33"]
+        confidence: witnessed
     comment: >
       A hapax tree, a borrowed formula, and the El-ladder's
       fourth rung: the sojourner plants something he will not

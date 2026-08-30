@@ -27,6 +27,11 @@ m.event("patach", agent="YHWH", themes=["rechem_leah"])
 # sterile(Rachel)
 m.fact("senua(leah)",
        "aqara(rachel)")
+# witness-tier presupposed read:
+# rendered_as_petition_and_acceptance_throughout on the_opened_womb — read,
+# not installed
+m.witness_read("the_opened_womb", "rendered_as_petition_and_acceptance_throughout",
+                cites=["Onkelos Genesis 30:22", "Onkelos Genesis 30:6", "Onkelos Genesis 29:31"])
 
 # -------------------------- Gen.29.32 · THE_FIRST_WRITE_REUVEN -------------
 # וַתַּהַר לֵאָה וַתֵּלֶד בֵּן וַתִּקְרָא שְׁמוֹ רְאוּבֵן כִּי אָמְרָה
@@ -83,6 +88,15 @@ m.install("ben_4_leah")
 # ‹קָרְאָה שְׁמוֹ יְהוּדָה› (“call name-him/its Judah”) — named: son-4-leah
 # := Judah
 m.name("ben_4_leah", "yehuda")
+# witness-tier presupposed read: gratitude_begins_where_entitlement_ends on
+# thanks_at_the_fourth — read, not installed
+m.witness_read("thanks_at_the_fourth", "gratitude_begins_where_entitlement_ends",
+                cites=["Bereshit Rabbah 71:4"])
+# witness-tier presupposed read:
+# entered_under_a_four_cell_name_conduct_table on the_twelve_names — read,
+# not installed
+m.witness_read("the_twelve_names", "entered_under_a_four_cell_name_conduct_table",
+                cites=["Bereshit Rabbah 71:3"])
 
 # -------------------------- Gen.30.1 · THE_CHILDREN_DEMAND -----------------
 # וַתֵּרֶא רָחֵל כִּי לֹא יָלְדָה לְיַעֲקֹב וַתְּקַנֵּא רָחֵל בַּאֲחֹתָהּ
@@ -95,6 +109,10 @@ m.step("Gen.30.1")
 # LET: hava-banim(Jacob)
 m.declare("rachel", "LET",
           "hava_banim(yaaqov)")
+# witness-tier presupposed read: proof_verse_for_the_living_as_dead_census
+# on give_me_children_or_i_die — read, not installed
+m.witness_read("give_me_children_or_i_die", "proof_verse_for_the_living_as_dead_census",
+                cites=["Bereshit Rabbah 71:6", "Bereshit Rabbah 45:2"])
 
 # -------------------------- Gen.30.2 · THE_REDIRECT_TO_ELOHIM --------------
 # וַיִּחַר־אַף יַעֲקֹב בְּרָחֵל וַיֹּאמֶר הֲתַחַת אֱלֹהִים אָנֹכִי
@@ -106,6 +124,11 @@ m.step("Gen.30.2")
 # God which debar-from-benefit from-you/your fruit belly”) — fact holds:
 # debar-from-benefit-God-fruit-belly(Rachel)
 m.fact("mana_Elohim_peri_vaten(rachel)")
+# witness-tier presupposed read:
+# criticized_here_and_rewritten_by_the_translation on am_i_in_place_of_God —
+# read, not installed
+m.witness_read("am_i_in_place_of_God", "criticized_here_and_rewritten_by_the_translation",
+                cites=["Bereshit Rabbah 71:7", "Onkelos Genesis 30:2"])
 
 # -------------------------- Gen.30.3 · THE_SARAI_SCRIPT_RERUN --------------
 # וַתֹּאמֶר הִנֵּה אֲמָתִי בִלְהָה בֹּא אֵלֶיהָ וְתֵלֵד עַל־בִּרְכַּי
@@ -163,6 +186,10 @@ m.step("Gen.30.8")
 # ‹וַתִּקְרָא שְׁמוֹ נַפְתָּלִי› (“and-call name-him/its Naphtali”) — named:
 # son-2-bilhah := Naphtali
 m.name("ben_2_bilhah", "naftali")
+# witness-tier presupposed read: rebuilt_entirely_as_petition on
+# the_wrestling_name — read, not installed
+m.witness_read("the_wrestling_name", "rebuilt_entirely_as_petition",
+                cites=["Onkelos Genesis 30:8", "Bereshit Rabbah 71:8"])
 
 # -------------------------- Gen.30.9 · THE_ZILPAH_MOVE ---------------------
 # וַתֵּרֶא לֵאָה כִּי עָמְדָה מִלֶּדֶת וַתִּקַּח אֶת־זִלְפָּה שִׁפְחָתָהּ
@@ -182,6 +209,10 @@ m.step("Gen.30.10")
 # ‹וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה לְיַעֲקֹב בֵּן› (“and-bear-young Zilpah
 # female-slave Leah to-Jacob son”) — the world gains: son-1-zilpah
 m.install("ben_1_zilpah")
+# witness-tier presupposed read: the_omission_is_complete_and_exact on
+# bore_without_conceived — read, not installed
+m.witness_read("bore_without_conceived", "the_omission_is_complete_and_exact",
+                cites=["Bereshit Rabbah 71:9"])
 
 # -------------------------- Gen.30.11 · THE_SEVENTH_WRITE_GAD_WRITTEN_AND_READ -
 # וַתֹּאמֶר לֵאָה בגד בָּא גָד וַתִּקְרָא אֶת־שְׁמוֹ גָּד
@@ -190,6 +221,10 @@ m.step("Gen.30.11")
 # ‹וַתִּקְרָא אֶת־שְׁמוֹ גָּד› (“and-call obj-marker name-him/its Gad”) —
 # named: son-1-zilpah := fortune
 m.name("ben_1_zilpah", "gad")
+# witness-grounded state (its own tier):
+# resolved_in_the_record_by_its_own_subject on the_lineage_dispute
+m.witness_state("the_lineage_dispute", "resolved_in_the_record_by_its_own_subject",
+                cites=["Bereshit Rabbah 71:9"])
 
 # -------------------------- Gen.30.12 · ZILPAH_BEARS_A_SECOND --------------
 # וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה בֵּן שֵׁנִי לְיַעֲקֹב
@@ -225,6 +260,10 @@ m.fact("dudaim_found_by_reuven(sade)")
 # son-you/your”) — Rachel speaks a demand — LET: set-boiler(leah)
 m.declare("rachel", "LET",
           "teni_dudaim(leah)")
+# witness-tier presupposed read: dispute_mined_for_its_unanimous_residue on
+# what_the_boy_brought — read, not installed
+m.witness_read("what_the_boy_brought", "dispute_mined_for_its_unanimous_residue",
+                cites=["Bereshit Rabbah 72:2", "Onkelos Genesis 30:14"])
 
 # -------------------------- Gen.30.15 · THE_EXCHANGE_SET -------------------
 # וַתֹּאמֶר לָהּ הַמְעַט קַחְתֵּךְ אֶת־אִישִׁי וְלָקַחַת גַּם אֶת־דּוּדָאֵי
@@ -239,6 +278,10 @@ m.step("Gen.30.15")
 # down with-you/your the-night under boiler son-you/your”) — fact holds:
 # laila-under-boiler(exchange-set)
 m.fact("laila_tachat_dudaim(exchange_set)")
+# witness-tier presupposed read: priced_on_both_sides_and_into_the_grave on
+# the_traded_night — read, not installed
+m.witness_read("the_traded_night", "priced_on_both_sides_and_into_the_grave",
+                cites=["Bereshit Rabbah 72:3"])
 
 # -------------------------- Gen.30.16 · THE_HIRE_NIGHT ---------------------
 # וַיָּבֹא יַעֲקֹב מִן־הַשָּׂדֶה בָּעֶרֶב וַתֵּצֵא לֵאָה לִקְרָאתוֹ
@@ -251,6 +294,10 @@ m.step("Gen.30.16")
 # ‹שָׂכֹר שְׂכַרְתִּיךָ בְּדוּדָאֵי בְּנִי› (“hire hire-you/your in-boiler
 # son-me/my”) — fact holds: hire-sekharticha(laila)
 m.fact("sakhor_sekharticha(laila)")
+# witness-tier presupposed read: working_hours_defaults_with_their_exception
+# on came_in_from_the_field_at_evening — read, not installed
+m.witness_read("came_in_from_the_field_at_evening", "working_hours_defaults_with_their_exception",
+                cites=["Bereshit Rabbah 72:4"])
 
 # -------------------------- Gen.30.17 · THE_FIFTH_SON_HEARD ----------------
 # וַיִּשְׁמַע אֱלֹהִים אֶל־לֵאָה וַתַּהַר וַתֵּלֶד לְיַעֲקֹב בֵּן חֲמִישִׁי
@@ -273,6 +320,11 @@ m.step("Gen.30.18")
 # ‹וַתִּקְרָא שְׁמוֹ יִשָּׂשכָר› (“and-call name-him/its Issachar”) — named:
 # son-5-leah := Issachar
 m.name("ben_5_leah", "yisashkhar")
+# witness-tier presupposed read:
+# study_and_commerce_chartered_with_their_numbers on the_two_tribes — read,
+# not installed
+m.witness_read("the_two_tribes", "study_and_commerce_chartered_with_their_numbers",
+                cites=["Bereshit Rabbah 72:5", "Bereshit Rabbah 99:10"])
 
 # -------------------------- Gen.30.19 · THE_SIXTH_SON ----------------------
 # וַתַּהַר עוֹד לֵאָה וַתֵּלֶד בֵּן־שִׁשִּׁי לְּיַעֲקֹב
@@ -304,6 +356,10 @@ m.install("bat_leah")
 # ‹וַתִּקְרָא אֶת־שְׁמָהּ דִּינָה› (“and-call obj-marker name-her/its
 # Dinah”) — named: daughter-leah := Dinah
 m.name("bat_leah", "dina")
+# witness-tier presupposed read: vain_prayer_rule_overridden_by_this_verse
+# on the_daughter — read, not installed
+m.witness_read("the_daughter", "vain_prayer_rule_overridden_by_this_verse",
+                cites=["Bereshit Rabbah 72:6"])
 
 # -------------------------- Gen.30.22 · THE_REMEMBERING_AND_THE_OPENING ----
 # וַיִּזְכֹּר אֱלֹהִים אֶת־רָחֵל וַיִּשְׁמַע אֵלֶיהָ אֱלֹהִים וַיִּפְתַּח
@@ -317,6 +373,14 @@ m.event("zakhar", agent="Elohim", themes=["rachel"])
 # ‹וַיִּפְתַּח אֶת־רַחְמָהּ› (“and-open-wide obj-marker womb-her/its”) —
 # event: patach — agent God; theme rechem-Rachel
 m.event("patach", agent="Elohim", themes=["rechem_rachel"])
+# witness-grounded state (its own tier): operations_never_delegated on
+# three_keys
+m.witness_state("three_keys", "operations_never_delegated",
+                cites=["Bereshit Rabbah 73:4"])
+# witness-tier presupposed read: a_silence_confessed_earlier_in_this_block
+# on what_was_remembered — read, not installed
+m.witness_read("what_was_remembered", "a_silence_confessed_earlier_in_this_block",
+                cites=["Bereshit Rabbah 71:8", "Bereshit Rabbah 73:4"])
 
 # -------------------------- Gen.30.23 · THE_REPROACH_GATHERED_NON_POP ------
 # וַתַּהַר וַתֵּלֶד בֵּן וַתֹּאמֶר אָסַף אֱלֹהִים אֶת־חֶרְפָּתִי
@@ -339,6 +403,10 @@ m.step("Gen.30.24")
 # ‹וַתִּקְרָא אֶת־שְׁמוֹ יוֹסֵף לֵאמֹר› (“and-call obj-marker name-him/its
 # Joseph to-say”) — named: son-1-Rachel := Joseph
 m.name("ben_1_rachel", "yosef")
+# witness-grounded state (its own tier):
+# thanks_and_silence_as_heritable_capabilities on two_crafts
+m.witness_state("two_crafts", "thanks_and_silence_as_heritable_capabilities",
+                cites=["Bereshit Rabbah 71:5"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -356,4 +424,51 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 19
+    assert sorted(m.WORLD["witnessed"]) == ['the_lineage_dispute', 'three_keys', 'two_crafts']
+    assert m.WORLD["witnessed"]['the_lineage_dispute']["cites"] == ['Bereshit Rabbah 71:9']
+    assert all('resolved_in_the_record_by_its_own_subject' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['three_keys']["cites"] == ['Bereshit Rabbah 73:4']
+    assert all('operations_never_delegated' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['two_crafts']["cites"] == ['Bereshit Rabbah 71:5']
+    assert all('thanks_and_silence_as_heritable_capabilities' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_opened_womb', 'rendered_as_petition_and_acceptance_throughout'), ('thanks_at_the_fourth', 'gratitude_begins_where_entitlement_ends'), ('the_twelve_names', 'entered_under_a_four_cell_name_conduct_table'), ('give_me_children_or_i_die', 'proof_verse_for_the_living_as_dead_census'), ('am_i_in_place_of_God', 'criticized_here_and_rewritten_by_the_translation'), ('the_wrestling_name', 'rebuilt_entirely_as_petition'), ('bore_without_conceived', 'the_omission_is_complete_and_exact'), ('what_the_boy_brought', 'dispute_mined_for_its_unanimous_residue'), ('the_traded_night', 'priced_on_both_sides_and_into_the_grave'), ('came_in_from_the_field_at_evening', 'working_hours_defaults_with_their_exception'), ('the_two_tribes', 'study_and_commerce_chartered_with_their_numbers'), ('the_daughter', 'vain_prayer_rule_overridden_by_this_verse'), ('what_was_remembered', 'a_silence_confessed_earlier_in_this_block')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Genesis 30:22', 'Onkelos Genesis 30:6', 'Onkelos Genesis 29:31']
+    assert all('rendered_as_petition_and_acceptance_throughout' not in f for f in m.WORLD["facts"])
+    assert 'the_opened_womb' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 71:4']
+    assert all('gratitude_begins_where_entitlement_ends' not in f for f in m.WORLD["facts"])
+    assert 'thanks_at_the_fourth' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 71:3']
+    assert all('entered_under_a_four_cell_name_conduct_table' not in f for f in m.WORLD["facts"])
+    assert 'the_twelve_names' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 71:6', 'Bereshit Rabbah 45:2']
+    assert all('proof_verse_for_the_living_as_dead_census' not in f for f in m.WORLD["facts"])
+    assert 'give_me_children_or_i_die' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 71:7', 'Onkelos Genesis 30:2']
+    assert all('criticized_here_and_rewritten_by_the_translation' not in f for f in m.WORLD["facts"])
+    assert 'am_i_in_place_of_God' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Genesis 30:8', 'Bereshit Rabbah 71:8']
+    assert all('rebuilt_entirely_as_petition' not in f for f in m.WORLD["facts"])
+    assert 'the_wrestling_name' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 71:9']
+    assert all('the_omission_is_complete_and_exact' not in f for f in m.WORLD["facts"])
+    assert 'bore_without_conceived' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 72:2', 'Onkelos Genesis 30:14']
+    assert all('dispute_mined_for_its_unanimous_residue' not in f for f in m.WORLD["facts"])
+    assert 'what_the_boy_brought' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 72:3']
+    assert all('priced_on_both_sides_and_into_the_grave' not in f for f in m.WORLD["facts"])
+    assert 'the_traded_night' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 72:4']
+    assert all('working_hours_defaults_with_their_exception' not in f for f in m.WORLD["facts"])
+    assert 'came_in_from_the_field_at_evening' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 72:5', 'Bereshit Rabbah 99:10']
+    assert all('study_and_commerce_chartered_with_their_numbers' not in f for f in m.WORLD["facts"])
+    assert 'the_two_tribes' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 72:6']
+    assert all('vain_prayer_rule_overridden_by_this_verse' not in f for f in m.WORLD["facts"])
+    assert 'the_daughter' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[12]["cites"] == ['Bereshit Rabbah 71:8', 'Bereshit Rabbah 73:4']
+    assert all('a_silence_confessed_earlier_in_this_block' not in f for f in m.WORLD["facts"])
+    assert 'what_was_remembered' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

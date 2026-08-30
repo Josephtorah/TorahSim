@@ -79,3 +79,16 @@ Aramean-charlatan derivation (row 4); Onkelos's four deltas (O1-O4 —
 two spine convergences, the decisive 25:23 resolution, the study-house
 insert). BATCH NOTE: the exile-one-day arithmetic (row 11) and the
 succession-oracle scene (row 8) are witness-tier narrative claims.
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers, the five Vayera ledgers and
+the four Chayei Sarah ledgers on 2026-08-30. This ledger records its
+Onkelos track in the compact row form ("O1 · 25:19"), which the unit-level
+cite validator cannot match: a cite is valid only when the literal source
+string appears in a triage ledger. This block's Onkelos verses are
+therefore listed here in citable form, so the derivation may cite the
+translation it actually read. No verdict is changed and no row is
+rewritten - this is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 25:19, Onkelos Genesis 25:20, Onkelos Genesis 25:21, Onkelos Genesis 25:22, Onkelos Genesis 25:23, Onkelos Genesis 25:24, Onkelos Genesis 25:25, Onkelos Genesis 25:26, Onkelos Genesis 25:27, Onkelos Genesis 25:28, Onkelos Genesis 25:29, Onkelos Genesis 25:30, Onkelos Genesis 25:31, Onkelos Genesis 25:32, Onkelos Genesis 25:33, Onkelos Genesis 25:34.
