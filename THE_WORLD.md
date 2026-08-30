@@ -911,3 +911,144 @@ workshop dashboard's black skin — or both with a toggle.
   reached twice, independently. Worth holding onto when the question
   arises of whether the machine layer is imposing categories or
   recovering them.
+
+- **2026-08-30 — THE FIRST GENESIS-TO-EXODUS WIRE THAT CLOSES ON BOTH
+  ENDS, AND IT LANDS ON A ROUTING PREDICATE, NOT JUST A VERSE.**
+  EVIDENCE, not an idea. Deriving Miketz, the harm-word Onkelos renders
+  as DEATH was opened under guard 3 and found to stand at **exactly five
+  seats in the whole Torah**: three in this parashah's own units (42:4,
+  42:38, 44:29) and two at Exodus 21:22-23, the miscarriage law whose
+  entire penalty structure turns on whether that harm occurred. The word
+  has no other home in the corpus. The peer window observed that this is
+  the first cross-block wire the project can close at both ends, because
+  Exodus 21 is already compiled to machines. Checked at the line here,
+  and it is sharper than that: in `logic/units/exo_21_the_ordinances.yaml`
+  the compiled machine does not merely contain the word — it **ROUTES on
+  it**. Line 1407 carries
+  `CASE(ve-khi yinatzu anashim ve-nagfu isha hara ve-yatzu yeladeha)
+  ROUTE(ason_o_lo)`, and line 430 has a scene, "after STEP_Ex_21_22 —
+  the struck mother," whose facts hold `ason_o_lo`. So a machine-checked
+  claim in a FIRST-PASS Genesis block now points directly at the
+  DISPATCH KEY of a compiled Exodus machine. The narrative occurrences
+  and the statute are the same word's only occurrences, and the statute's
+  implementation branches on it.
+  WHY IT MATTERS FOR THE SIMULATION: this is the shape the whole design
+  has been predicting — narrative blocks that install state, and law
+  blocks that read that state as a branch condition — and it is now an
+  instance rather than an argument. It is the strongest available case
+  for a cross-block wire display. NOTHING IS BUILT ON IT YET, and no
+  machine claim outside gen_65/gen_67 rests on it.
+  FIGURE RESOLVED SAME DAY (both windows opened it): the "sixty-four
+  scenes" is real but belongs to a different object than the sentence
+  implied. TorahSim's `app/scene_stamps_baseline.json` carries
+  `{meta, stamps}` with **stamps holding exactly 64** — a Tanakh-wide
+  scene catalogue of recorded cases tested AGAINST the Exodus 21
+  machine, drawn from Genesis, Exodus, Deuteronomy, Judges, Second
+  Samuel, Jeremiah, Proverbs, Psalms and more. It is NOT 64 Exodus 21
+  scenes. The exo_21 UNIT carries 37 scenarios, in canon and in the
+  workshop alike. Note for the next check of this kind: a naive length
+  on that file returns 2, because the scenes sit under a key — a bare
+  count there is exactly the unfalsifiable number the coverage rule
+  exists to catch, and it nearly produced a false contradiction here.
+
+  **THE WIRE IS NOT PREDICTED — IT IS ALREADY WELDED, AND IT WAS WELDED
+  FIRST FROM THE OTHER END.** Verified in the compiled machine, not the
+  YAML. `machines/exo21/block2.py` defines a real branch,
+  `fetus_payment(ason_in_woman=False, ...)`, asserts its zero-payment
+  case, and its sibling operator carries the docstring: "Death-class
+  liability swallows co-liable payment — ONE wickedness; Heaven's ason
+  (karet) welds in via Gen 42:38; sequential acts split." More than a
+  docstring: the file carries a STRUCTURED BACKWARD-CITATION TABLE, and
+  Genesis 42:38 is a registered row in it —
+  `("the ason-genus import", "Genesis", 42, 38, "back", "L12-05",
+  ‹פן יקראנו אסון› ("pen yikra'enu ason," lest harm befall him) —
+  Jacob's word welds Heaven's docket to man's)`.
+  AND IT IS NOT ONE WIRE, NOR TWO — **IT IS FOURTEEN BACKWARD CITATIONS
+  INTO ELEVEN FROZEN GENESIS BLOCKS.** Counted mechanically across all
+  four machine files (60 citation rows total, 14 of them Genesis+back),
+  mapped against the 71 frozen Genesis spans, zero unresolved:
+
+      1:31  → L11-04  gen_06   the six-and-one term frame
+      9:5   → L28-02  gen_21   the stoning charter (beast answerable)
+      9:6   → L12-04  gen_21   the sword's charter
+      9:22  → L26-04  gen_23   the manumission aetiology
+      15:13 → L6-04   gen_31   the piercing rite: the awl's four hundred
+      16:6  → L11-05  gen_32   resale: the no-degradation ban
+      28:20 → L10-01  gen_48   the vow-parallel triad
+      29:18 → L11-05  gen_50   court sale: the mitzvah-sale carve-out
+      31:15 → L8-03   gen_53   designation: the betrayal lexeme
+      37:24 → L33-01  gen_60   pit precedent: the open pit
+      37:28 → L11-05  gen_60   court sale: national precedent
+      37:28 → L16-04  gen_60   the kidnap statute's test case
+      42:38 → L12-05  gen_65   the harm-genus import
+      44:33 → L24-02  gen_67   the substitution idiom in the flesh
+                               ‹ישב נא עבדך תחת הנער›
+                               ("yeshev na avdekha tachat ha-na'ar,"
+                               let your servant remain instead of the lad)
+
+  NINE OF THE ELEVEN ARE ALREADY DERIVED — every one except gen_65 and
+  gen_67, which are this sitting's own unlanded Miketz blocks. gen_60 is
+  cited THREE times: Joseph's pit is the human-victim branch's own
+  precedent, and his sale is the kidnap statute's test case.
+  SO THE HARNESS IS NOT A PROSPECT AND NOT A PAIR — IT EXISTS TODAY, on
+  both ends, for nine blocks. The law era reached back and registered
+  these verses; the derivation era has since reached forward to nine of
+  the same blocks by a completely different route, neither side reading
+  the other's list.
+  WHAT IT CHANGES FOR THE BUILD QUEUE: a cross-block wire display stops
+  being a feature waiting on evidence. Fourteen instances exist with
+  law-ids on one end and derived blocks on the other, machine-parseable
+  from files both trees already hold — no new tagging pass, and no
+  schema to invent, because the law-era authors already wrote the
+  vocabulary (label, book, chapter, verse, direction, law-id, the Hebrew
+  with its gloss). A stronger case than the AGREEMENT row has, and it
+  arrived the same way: by counting rather than arguing. STILL BUILT:
+  nothing. It goes to the owner as a finding.
+
+  **METHOD SCAR, MINE, WORTH KEEPING.** My first count said two wires;
+  my second said eight blocks; my third said nine. All three were wrong
+  and all three UNDER-reported, from two independent frame errors: (1)
+  eighteen legacy wide DRAFT units (gen_02_03_garden, gen_42_45_brothers
+  and their family) still sit in logic/units/ and shadowed the frozen
+  fine-grained blocks under a naive first-match; (2) twenty-two frozen
+  units write `refs:` UNQUOTED, invisible to a regex that required
+  quotes. Both produced a FALSE DEFICIT, which is the failure mode a
+  coverage line alone does not catch — the count was non-zero and looked
+  plausible. WHAT CAUGHT IT was a second window counting independently
+  and disagreeing; what made the disagreement DIAGNOSABLE in one pass
+  was the coverage line printing spans-used, drafts-excluded and
+  unparsed-list beside the result. The lesson is not "print coverage"
+  alone: it is that a plausible non-zero deserves an independent count,
+  and coverage is what turns that disagreement into a located bug
+  instead of an argument.
+  PROVENANCE CHECKED: the weld line entered at commit cddeca8,
+  2026-08-13 — "TorahCode 1.0 — the Exodus 21 instrument, public" —
+  SEVENTEEN DAYS BEFORE this derivation pass existed.
+  WHAT THAT MAKES IT: the law-era reading of Exodus 21 reached BACK to
+  Genesis 42:38 and 44:33 and registered them; the Miketz pass reached
+  FORWARD to the same verses independently, by counting one word's five
+  Torah seats, knowing nothing of the table. Two eras of this project's
+  own work converged on the same word from opposite directions without
+  citing each other — the same shape as the independent 20:3
+  convergence, one layer up. The far end is in ink, dated before the
+  near end that would justify it.
+
+- **2026-08-30 — WHAT THE GUARD-3 READING HAS BEEN WORTH, IN ONE PAIR.**
+  Every guard-3 result until now tested whether a tradition's number was
+  RIGHT. The Miketz hedge result tested whether a tradition's
+  IMPRECISION WAS MEANT — and the ink answered that the approximation
+  was itself exact. The chain bills Joseph's early death to "ALMOST
+  five" silences; the ink carries four seats in the identical bare form
+  and a fifth differing only by a preposition prefixed to each word,
+  which is precisely the case that earns an "almost" rather than a
+  "five." A tradition that says almost where the ink says
+  four-and-a-near-miss is being careful, not loose.
+  Read beside GRADE THE LEG, NOT THE SECTION — where a three-part claim
+  had one leg exact, one false, and one uncheckable by that method —
+  the pair states the same principle from both directions: **grade what
+  was actually claimed, at the grain it was actually claimed at.** The
+  failed-leg rule protects the tradition from being convicted on a
+  neighbouring part; the hedge result protects it from being convicted
+  on a precision it never asserted. If the question is ever asked what
+  the guard-3 discipline has bought, these two results together are the
+  answer.

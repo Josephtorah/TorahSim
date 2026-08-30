@@ -1,195 +1,313 @@
 [
- {
-  "id": "G65-01",
-  "source": "Minchat Shai on Gen 42:6 (the precise books)",
-  "ref": "Gen 42:6",
-  "claim_en": "am ('the PEOPLE of the land'): the precise books rule GALGAL (the wheel stroke) with NO maqqef; SNAPSHOT writes the munach (the upright conjunctive stroke) with no maqqef — wheel-class station TEN, the stream in the munach camp at all ten (maqqef-absence checked; the stroke asserted in-stream).",
-  "check": {
-   "type": "maqqef_after",
-   "ref": "Gen 42:6",
-   "idx": 8,
-   "expect": 0
+  {
+    "id": "G65-01",
+    "source": "Minchat Shai on Gen 42:6 (the precise books)",
+    "ref": "Gen 42:6",
+    "claim_en": "am ('the PEOPLE of the land'): the precise books rule GALGAL (the wheel stroke) with NO maqqef; SNAPSHOT writes the munach (the upright conjunctive stroke) with no maqqef — wheel-class station TEN, the stream in the munach camp at all ten (maqqef-absence checked; the stroke asserted in-stream).",
+    "check": {
+      "type": "maqqef_after",
+      "ref": "Gen 42:6",
+      "idx": 8,
+      "expect": 0
+    }
+  },
+  {
+    "id": "G65-02",
+    "source": "Minchat Shai on Gen 42:4 (the Masorah's seventeen; the Ramah's seven)",
+    "ref": "Gen 42:4",
+    "claim_en": "BINYAMIN ('Benjamin') written FULL — yod between the mem and the nun: the Ramah counts SEVEN such fulls in the Torah, and the census is EXACT: the naming (Gen 35:18), the guarding (42:4), the sending (43:14), the seeing (43:16), the greeting (43:29), the kissing (45:12), the blessing (49:27) — while the SAME chapter writes the demanded son LEAN (binyamin without yod, 42:36, asserted): full when held, lean when claimed.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "בנימין"
+      },
+      "expect_total": 7,
+      "expect_refs": [
+        "Gen 35:18",
+        "Gen 42:4",
+        "Gen 43:14",
+        "Gen 43:16",
+        "Gen 43:29",
+        "Gen 45:12",
+        "Gen 49:27"
+      ]
+    }
+  },
+  {
+    "id": "G65-03",
+    "source": "Minchat Shai on Gen 42:7 (the Hilleli and Yerushalmi copies; the Masorah's seventeen fulls)",
+    "ref": "Gen 42:7",
+    "claim_en": "va-yitnaker ALEHEM ('he made himself strange TO THEM'): the Hilleli copy lean, the Yerushalmi and ALL precise books FULL (one of the Masorah's seventeen fulls) — SNAPSHOT full, the stream with the precise books AGAINST the Hilleli (the seesaw: with the Hilleli at the lean cows, against it here) — and the SAME VERSE writes its second to-them LEAN (alehem, idx 11), excluded from the count by the Masorah's own note (both tokens asserted; the full form checked via its yod).",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 42:7",
+      "idx": 6,
+      "contains": "לֵי"
+    }
+  },
+  {
+    "id": "G65-04",
+    "source": "Minchat Shai on Gen 42:3 (the Aspamia codex; Rabbenu Gershom's book)",
+    "ref": "Gen 42:3",
+    "claim_en": "lishbor bar MI-MITZRAYIM ('to buy grain FROM Egypt'): so write the Aspamia codex and Rabbenu Gershom's book, against copies that read be-mitzrayim ('in Egypt') — SNAPSHOT writes the from-form with the precise books.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 42:3",
+      "idx": 6,
+      "contains": "מִּצְ"
+    }
+  },
+  {
+    "id": "G65-05",
+    "source": "Minchat Shai on Gen 42:24 (the Masorah; Mikhlol; Shorashim)",
+    "ref": "Gen 42:24",
+    "claim_en": "va-YEESOR oto ('and he BOUND him' — Simeon): the alef in CHATAF SEGOL — the Masorah's note: none other so SOFT; its file counts three bind-verbs of this shape — one soft (Simeon, here) and two HARD (alef in plain sheva): Joseph binding his chariot to meet his father (Gen 46:29) and Pharaoh binding his chariot to chase Israel (Exod 14:6). A brother bound softly; the chariots hard.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 42:24",
+      "idx": 11,
+      "contains": "אֱ"
+    }
+  },
+  {
+    "id": "G65-06",
+    "source": "Minchat Shai on Gen 42:29 (the Hilleli and Yerushalmi copies; the Ramah)",
+    "ref": "Gen 42:29",
+    "claim_en": "va-YAGIDU lo ('and they TOLD him') FULL: the Hilleli copy alone lean; the Yerushalmi, every book, and the Masorah full — for the Ramah counts the Torah's LEAN tellings as exactly TWO: the well found (va-yagidu lean, Gen 26:32) and 'Joseph still lives' (Gen 45:26) — and the lean census verifies EXACT in-stream: the two lean tellings are a well and a lost son; every other telling keeps its yod.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "ויגדו"
+      },
+      "expect_total": 2,
+      "expect_refs": [
+        "Gen 26:32",
+        "Gen 45:26"
+      ]
+    }
+  },
+  {
+    "id": "G65-07",
+    "source": "Kitzur Baal HaTurim on Gen 42:11 (the Masorah)",
+    "ref": "Gen 42:11",
+    "claim_en": "NACHNU ('we', the clipped form without the alef): exactly TWICE in the Torah — the brothers' 'sons of one man are WE' and the Reubenites' war-pledge 'WE will cross armed' (Num 32:32); the Masorah's third is 'WE have transgressed' (Lam 3:42, named, Tanakh-side). The Kitzur reads the three as one speech — armed, and guilty; and hears the clipped letter as the missing brother.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "נחנו"
+      },
+      "expect_total": 2,
+      "expect_refs": [
+        "Gen 42:11",
+        "Num 32:32"
+      ]
+    }
+  },
+  {
+    "id": "G65-08",
+    "source": "Minchat Shai on Gen 42:38 (the Ramah)",
+    "ref": "Gen 42:38",
+    "claim_en": "SEVATI ('my gray hair') FULL with the yod: the Ramah rules every gray-hair form in the Torah full, and the file verifies EXACT — sevati twice (42:38 and 44:29), sevat once (44:31): all three are Jacob's hair, all three bound to a going-down-to-Sheol clause, all three full.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "שיבתי"
+      },
+      "expect_total": 2,
+      "expect_refs": [
+        "Gen 42:38",
+        "Gen 44:29"
+      ]
+    }
+  },
+  {
+    "id": "G65-09",
+    "source": "Kitzur Baal HaTurim on Gen 42:36 (the Masorah)",
+    "ref": "Gen 42:36",
+    "claim_en": "alai hayu KHULANA ('upon me are they ALL'): the bare all-of-them form stands ONCE in the Torah; the Masorah pairs it with 'and you surpass them ALL' (Prov 31:29, named): all the losses land on one man. Calneh of Babel (Gen 10:10) wears the skeleton only with its vav — collision framed, not claimed.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "כלנה"
+      },
+      "expect_total": 1,
+      "expect_refs": [
+        "Gen 42:36"
+      ]
+    }
+  },
+  {
+    "id": "G65-10",
+    "source": "Kitzur Baal HaTurim on Gen 42:37 (the Masorah)",
+    "ref": "Gen 42:37",
+    "claim_en": "TAMIT ('you may KILL' — Reuben's two-sons pledge): ONCE in the Torah; the Masorah's pair is 'and a seduced one kills envy' (Prov, named); the reading tradition rides the two-sons clause into Datan and Aviram (named): the pledge the father refused, read forward into the sons' rebellion.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "תמית"
+      },
+      "expect_total": 1,
+      "expect_refs": [
+        "Gen 42:37"
+      ]
+    }
+  },
+  {
+    "id": "G65-11",
+    "source": "Kitzur Baal HaTurim on Gen 42:8 (the Masorah)",
+    "ref": "Gen 42:8",
+    "claim_en": "ve-hem lo HIKIRUHU ('and they did not RECOGNIZE him'): the form stands ONCE in the Torah; the Masorah's pair is Job's friends who 'did not recognize him' from afar (Job 2:12, named): there suffering hid a man past knowing; here elevation — the slave had become the governor.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "הכרהו"
+      },
+      "expect_total": 1,
+      "expect_refs": [
+        "Gen 42:8"
+      ]
+    }
+  },
+  {
+    "id": "G65-12",
+    "source": "Minchat Shai on Gen 42:2/9/22/28/30/32/35/38 (the chapter's file); Chizkuni",
+    "ref": "Gen 42:2",
+    "claim_en": "The chapter's pointing-and-spelling file: ba-MITZRAYIM (42:2) with the bet DAGESHED (checked); ve-nichye (42:2) with the yod in segol, meraglim (42:9) with the gimel dageshed in every token, be-amtachti (42:28) with the bet soft, tzerorot (42:35) first vav lean second vav full (the Ramah, against a scroll-tikkun's variant), u-qraahu (42:38) with the vav in shuruk (Chizkuni), halo (42:22) full — all asserted; named: the lengthening stroke on ka-meraglim (42:30), the tevir file at asar anachnu (42:32), merikim with no paseq (42:35), and the Mikketz portion's no-break run (42:37-38).",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 42:2",
+      "idx": 6,
+      "contains": "בּ"
+    }
+  },
+  {
+    "id": "G65-13",
+    "source": "Kitzur Baal HaTurim on Gen 42:6",
+    "ref": "Gen 42:6",
+    "claim_en": "va-yishtachavu-LO ('and they bowed TO HIM'): the bow-verb JOINED to its him-word by maqqef in-stream (checked) — and the Kitzur counts the joined phrase's letters: 'HERE THE DREAM WAS FULFILLED' (named): the letter's own receipt hung on the verse where gen_60's sheaves land.",
+    "check": {
+      "type": "maqqef_after",
+      "ref": "Gen 42:6",
+      "idx": 13,
+      "expect": 1
+    }
+  },
+  {
+    "id": "G65-21",
+    "source": "Onkelos Genesis 42:4; Onkelos Genesis 42:38",
+    "claim_en": "THE TRANSLATION'S CHOICE AT THIS VERSE IS THE READING A LATER LAW REQUIRES, AND THE WORD'S WHOLE TORAH CAREER PROVES IT. Where Jacob fears that ‹אָסוֹן› ('ason,' harm) may befall the boy, Onkelos writes DEATH at both seats in this block. Machine-checked across the whole Torah: the word stands at EXACTLY FIVE SEATS - three of them in this parashah's own units (42:4, 42:38 here and 44:29 in the next block), and the OTHER TWO are the miscarriage law of Exodus 21:22-23, where the entire penalty structure turns on whether there was ‹אָסוֹן› ('ason') or not. The word has no other home in the Torah. A translator's decision made in a narrative of a father's fear is therefore a decision about a capital statute, and the two contexts are the word's only contexts.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "אסון"
+      },
+      "expect_total": 5,
+      "expect_refs": [
+        "Gen 42:4",
+        "Gen 42:38",
+        "Gen 44:29",
+        "Exod 21:22",
+        "Exod 21:23"
+      ]
+    }
+  },
+  {
+    "id": "G65-22",
+    "source": "Bereshit Rabbah 91:2",
+    "claim_en": "THE COMMAND THAT SENDS THEM FOR FOOD IS READ AS ANNOUNCING THE LENGTH OF THE BONDAGE. R. Abba bar Kahana takes the imperative ‹רְדוּ› ('redu,' go down) at 42:2 and reads its letter-value as 210 - the years of the servitude in Egypt. Machine-checked arithmetic on our own ink: the three letters sum to 200 plus 4 plus 6, exactly 210. A prophecy hidden in the letters of a grocery instruction, and the number is right by the tradition's own method of counting.",
+    "check": {
+      "type": "manual",
+      "note": "The letter-values of the imperative 'go down' sum to 210, the stated years of the bondage; arithmetic confirmed on the corpus's own consonants."
+    }
+  },
+  {
+    "id": "G65-23",
+    "source": "Bereshit Rabbah 91:3",
+    "claim_en": "THE QUORUM OF TEN FOR MATTERS OF SANCTITY IS DERIVED FROM THIS BLOCK'S OWN INK. From 42:5 - 'the sons of Israel came AMONG ‹בְּתוֹךְ› (betokh) those who came' - where the sons of Israel are exactly ten, the chain derives the requirement of ten. It argues by equal-decree three separate ways: two masters link the word 'congregation' to the ten evil spies; another links 'among' to the sanctification clause; a fourth corrects them, since 'among' alone would admit far more than ten, and pins the derivation to the phrase 'sons of Israel' itself. Verified at the ink: the count of ten stands at 42:3 and the word 'among' at 42:5, both exactly as the argument requires. A standing institution of communal prayer resting on a grain-buying itinerary.",
+    "check": {
+      "type": "manual",
+      "note": "A quorum requirement derived by equal-decree from a narrative clause, with the count and the operative preposition both present in the ink."
+    }
+  },
+  {
+    "id": "G65-24",
+    "source": "Bereshit Rabbah 91:9",
+    "claim_en": "A GENERAL RULE ABOUT WHEN LIABILITY IS EXPOSED IS MINTED FROM A FATHER'S REFUSAL. 'Lest disaster befall him ON THE WAY you go' (42:38) is pressed - and in the house it could not? - yielding the standing rule that THE ACCUSER ACCUSES ONLY IN A TIME OF DANGER. Around it: 'all that BEFELL them' read as weighing on them like beams; the father's suspicion of his own sons when the silver reappeared, read as a change in his state that feeds the refusal; and a flat verdict on the elder's offer of his two sons - 'a firstborn imbecile: are your sons not my sons?' A rule about risk and exposure taken from a sentence of grief.",
+    "check": {
+      "type": "manual",
+      "note": "A standing rule about when accusation attaches, derived by pressing a locative clause in a refusal."
+    }
+  },
+  {
+    "id": "G65-25",
+    "source": "Bereshit Rabbah 91:4",
+    "claim_en": "THREE ADMINISTRATIVE EDICTS ARE READ INTO THE FAMINE APPARATUS, AND THEY ARE WHY THE BROTHERS ARE FOUND. No slave may enter Egypt; no man may enter with two donkeys, and no driver may move grain from place to place; and no one enters without registering his own name, his father's name and his grandfather's name - with the elder son posted to collect the notes. The recognition scene is thereby given a mechanism rather than a coincidence: the search apparatus is built into the food administration itself.",
+    "check": {
+      "type": "manual",
+      "note": "Three registration edicts read into a relief program, supplying the mechanism by which a search succeeds."
+    }
+  },
+  {
+    "id": "G65-26",
+    "source": "Onkelos Genesis 42:7; Bereshit Rabbah 91:7",
+    "claim_en": "THE BLOCK'S LOAD-BEARING DISAGREEMENT: WAS THE HARSHNESS A DISGUISE OR A CALCULATION. The verse says he MADE HIMSELF STRANGE ‹וַיִּתְנַכֵּר› ('vayitnakker') to them, and the chain reads exactly that - he became like a stranger. Onkelos writes instead that he CONSIDERED WHAT HE SHOULD SAY to them. The difference is not stylistic: it decides whether the whole interrogation that follows is deception or design, and therefore what the unit's operators are modelling. Carried dual-track, unresolved, because the two members of the declared reading genuinely disagree.",
+    "check": {
+      "type": "manual",
+      "note": "A verb read as estrangement by the chain and as deliberation by the translation, deciding whether the ensuing interrogation is deception or design."
+    }
+  },
+  {
+    "id": "G65-27",
+    "source": "Bereshit Rabbah 91:7",
+    "claim_en": "THE RECOGNITION ASYMMETRY IS GIVEN A PHYSICAL VARIABLE, AND A MORAL ONE, AND BOTH ARE KEPT. Why did he know them while they did not know him? One master answers morally - he knew them when they fell into his hands, they did not know him when he fell into theirs. The Rabbis answer materially: he left them BEARDED and left them BEARDLESS. The beard is thereby made the machine's recognition variable. In the same passage the interrogation is priced - he raised the sale figure back at them until they answered 'for that we came down, to kill or be killed' - and 'by Pharaoh's life' is identified as his false-oath formula.",
+    "check": {
+      "type": "manual",
+      "note": "A recognition asymmetry explained materially by facial hair and morally by circumstance, with both explanations preserved."
+    }
+  },
+  {
+    "id": "G65-28",
+    "source": "Bereshit Rabbah 91:8",
+    "claim_en": "THE INTERPRETER BETWEEN THEM IS NAMED, AND THE PIT IS REPLAYED AS A COURT RECORD. The standing reading identifies the interpreter of 42:23 as Joseph's own elder son - the man they speak freely in front of is the viceroy's child. The same passage stages the pit scene as evidence: the boy at seventeen pleading at each brother's feet unheeded, which their own confession at 42:21 quotes back at themselves, and the eldest's reckoning at 42:22. A forward seat promised at the sale block, now occupied by the verse it named.",
+    "check": {
+      "type": "manual",
+      "note": "An unnamed interpreter identified as the protagonist's son, with an earlier scene entering as the brothers' own quoted confession."
+    }
+  },
+  {
+    "id": "G65-29",
+    "source": "Bereshit Rabbah 84:16",
+    "claim_en": "AN INK ROW READ AT THE SALE NAMES THE ACTOR, AND THIS VERSE IS THE REPAYMENT IT PROMISED. The standing row read 'and they TOOK him' in the singular at the sale and identified the one who pushed him into the pit; this block's 42:24 - 'he took Simeon from them and bound him before their eyes' - is the repayment it named in advance. Verified in the ink: the verse carries the taking and the binding before their eyes exactly. Beside it the reason for the choice of prisoner and for splitting him from his partner: the pair is separated lest they conspire.",
+    "check": {
+      "type": "manual",
+      "note": "A grammatical reading at an earlier block naming an actor, with this block's verse arriving as its promised repayment."
+    }
+  },
+  {
+    "id": "G65-30",
+    "source": "Onkelos Genesis 42:9; Onkelos Genesis 42:12",
+    "claim_en": "THE ACCUSATION IS MOVED FROM SHAME TO FORTIFICATION AT BOTH ITS SEATS. Where the charge is that they came 'to see the NAKEDNESS ‹עֶרְוַת› (ervat) of the land,' Onkelos writes THE BREACH ‹בִּדְקָא› ('bidka,' the weak or defective part) at both 42:9 and 42:12 - the idiom of exposure replaced by a term of military survey. The brothers are accused not of shaming the country but of scouting where its defenses fail, which is a different crime with a different penalty.",
+    "check": {
+      "type": "manual",
+      "note": "An idiom of shameful exposure rendered as a fortification term at both its seats, changing the offense charged."
+    }
+  },
+  {
+    "id": "G65-31",
+    "source": "Onkelos Genesis 42:28",
+    "claim_en": "THE TRANSLATION NAMES THE FACULTY THAT FAILS AND KEEPS THE ORGAN OUT OF IT. 'Their HEART went out' becomes 'the UNDERSTANDING ‹מַדַּע› (mada) of their heart went out of them' - the same specifying move the translator makes on the spirit in the previous block. The idiom of terror is converted into a statement about a cognitive capacity leaving, which is what the unit's state operators can actually carry.",
+    "check": {
+      "type": "manual",
+      "note": "A bodily idiom of fear rendered as the departure of a named cognitive faculty."
+    }
+  },
+  {
+    "id": "G65-32",
+    "source": "Bereshit Rabbah 56:1",
+    "claim_en": "A STANDING CANON PATTERN FIRES ON THIS BLOCK'S OWN INK. The third-day census - the recurring pattern of deliverance on a third day - counts 'Joseph said to them on the third day' (42:18) as a named member, beside the mountain, the revelation, the prophet in the fish, the queen's fast, and the prophetic clause read to resurrection. The rule that the Holy One does not leave the righteous in distress past three days is stated at this verse and carried on the corpus's own list.",
+    "check": {
+      "type": "manual",
+      "note": "A cross-canon third-day pattern counting this block's verse as an enumerated member."
+    }
   }
- },
- {
-  "id": "G65-02",
-  "source": "Minchat Shai on Gen 42:4 (the Masorah's seventeen; the Ramah's seven)",
-  "ref": "Gen 42:4",
-  "claim_en": "BINYAMIN ('Benjamin') written FULL — yod between the mem and the nun: the Ramah counts SEVEN such fulls in the Torah, and the census is EXACT: the naming (Gen 35:18), the guarding (42:4), the sending (43:14), the seeing (43:16), the greeting (43:29), the kissing (45:12), the blessing (49:27) — while the SAME chapter writes the demanded son LEAN (binyamin without yod, 42:36, asserted): full when held, lean when claimed.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "he_plain_joined": "בנימין"
-   },
-   "expect_total": 7,
-   "expect_refs": [
-    "Gen 35:18",
-    "Gen 42:4",
-    "Gen 43:14",
-    "Gen 43:16",
-    "Gen 43:29",
-    "Gen 45:12",
-    "Gen 49:27"
-   ]
-  }
- },
- {
-  "id": "G65-03",
-  "source": "Minchat Shai on Gen 42:7 (the Hilleli and Yerushalmi copies; the Masorah's seventeen fulls)",
-  "ref": "Gen 42:7",
-  "claim_en": "va-yitnaker ALEHEM ('he made himself strange TO THEM'): the Hilleli copy lean, the Yerushalmi and ALL precise books FULL (one of the Masorah's seventeen fulls) — SNAPSHOT full, the stream with the precise books AGAINST the Hilleli (the seesaw: with the Hilleli at the lean cows, against it here) — and the SAME VERSE writes its second to-them LEAN (alehem, idx 11), excluded from the count by the Masorah's own note (both tokens asserted; the full form checked via its yod).",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 42:7",
-   "idx": 6,
-   "contains": "לֵי"
-  }
- },
- {
-  "id": "G65-04",
-  "source": "Minchat Shai on Gen 42:3 (the Aspamia codex; Rabbenu Gershom's book)",
-  "ref": "Gen 42:3",
-  "claim_en": "lishbor bar MI-MITZRAYIM ('to buy grain FROM Egypt'): so write the Aspamia codex and Rabbenu Gershom's book, against copies that read be-mitzrayim ('in Egypt') — SNAPSHOT writes the from-form with the precise books.",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 42:3",
-   "idx": 6,
-   "contains": "מִּצְ"
-  }
- },
- {
-  "id": "G65-05",
-  "source": "Minchat Shai on Gen 42:24 (the Masorah; Mikhlol; Shorashim)",
-  "ref": "Gen 42:24",
-  "claim_en": "va-YEESOR oto ('and he BOUND him' — Simeon): the alef in CHATAF SEGOL — the Masorah's note: none other so SOFT; its file counts three bind-verbs of this shape — one soft (Simeon, here) and two HARD (alef in plain sheva): Joseph binding his chariot to meet his father (Gen 46:29) and Pharaoh binding his chariot to chase Israel (Exod 14:6). A brother bound softly; the chariots hard.",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 42:24",
-   "idx": 11,
-   "contains": "אֱ"
-  }
- },
- {
-  "id": "G65-06",
-  "source": "Minchat Shai on Gen 42:29 (the Hilleli and Yerushalmi copies; the Ramah)",
-  "ref": "Gen 42:29",
-  "claim_en": "va-YAGIDU lo ('and they TOLD him') FULL: the Hilleli copy alone lean; the Yerushalmi, every book, and the Masorah full — for the Ramah counts the Torah's LEAN tellings as exactly TWO: the well found (va-yagidu lean, Gen 26:32) and 'Joseph still lives' (Gen 45:26) — and the lean census verifies EXACT in-stream: the two lean tellings are a well and a lost son; every other telling keeps its yod.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "he_plain_joined": "ויגדו"
-   },
-   "expect_total": 2,
-   "expect_refs": [
-    "Gen 26:32",
-    "Gen 45:26"
-   ]
-  }
- },
- {
-  "id": "G65-07",
-  "source": "Kitzur Baal HaTurim on Gen 42:11 (the Masorah)",
-  "ref": "Gen 42:11",
-  "claim_en": "NACHNU ('we', the clipped form without the alef): exactly TWICE in the Torah — the brothers' 'sons of one man are WE' and the Reubenites' war-pledge 'WE will cross armed' (Num 32:32); the Masorah's third is 'WE have transgressed' (Lam 3:42, named, Tanakh-side). The Kitzur reads the three as one speech — armed, and guilty; and hears the clipped letter as the missing brother.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "he_plain_joined": "נחנו"
-   },
-   "expect_total": 2,
-   "expect_refs": [
-    "Gen 42:11",
-    "Num 32:32"
-   ]
-  }
- },
- {
-  "id": "G65-08",
-  "source": "Minchat Shai on Gen 42:38 (the Ramah)",
-  "ref": "Gen 42:38",
-  "claim_en": "SEVATI ('my gray hair') FULL with the yod: the Ramah rules every gray-hair form in the Torah full, and the file verifies EXACT — sevati twice (42:38 and 44:29), sevat once (44:31): all three are Jacob's hair, all three bound to a going-down-to-Sheol clause, all three full.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "he_plain_joined": "שיבתי"
-   },
-   "expect_total": 2,
-   "expect_refs": [
-    "Gen 42:38",
-    "Gen 44:29"
-   ]
-  }
- },
- {
-  "id": "G65-09",
-  "source": "Kitzur Baal HaTurim on Gen 42:36 (the Masorah)",
-  "ref": "Gen 42:36",
-  "claim_en": "alai hayu KHULANA ('upon me are they ALL'): the bare all-of-them form stands ONCE in the Torah; the Masorah pairs it with 'and you surpass them ALL' (Prov 31:29, named): all the losses land on one man. Calneh of Babel (Gen 10:10) wears the skeleton only with its vav — collision framed, not claimed.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "he_plain_joined": "כלנה"
-   },
-   "expect_total": 1,
-   "expect_refs": [
-    "Gen 42:36"
-   ]
-  }
- },
- {
-  "id": "G65-10",
-  "source": "Kitzur Baal HaTurim on Gen 42:37 (the Masorah)",
-  "ref": "Gen 42:37",
-  "claim_en": "TAMIT ('you may KILL' — Reuben's two-sons pledge): ONCE in the Torah; the Masorah's pair is 'and a seduced one kills envy' (Prov, named); the reading tradition rides the two-sons clause into Datan and Aviram (named): the pledge the father refused, read forward into the sons' rebellion.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "he_plain_joined": "תמית"
-   },
-   "expect_total": 1,
-   "expect_refs": [
-    "Gen 42:37"
-   ]
-  }
- },
- {
-  "id": "G65-11",
-  "source": "Kitzur Baal HaTurim on Gen 42:8 (the Masorah)",
-  "ref": "Gen 42:8",
-  "claim_en": "ve-hem lo HIKIRUHU ('and they did not RECOGNIZE him'): the form stands ONCE in the Torah; the Masorah's pair is Job's friends who 'did not recognize him' from afar (Job 2:12, named): there suffering hid a man past knowing; here elevation — the slave had become the governor.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "he_plain_joined": "הכרהו"
-   },
-   "expect_total": 1,
-   "expect_refs": [
-    "Gen 42:8"
-   ]
-  }
- },
- {
-  "id": "G65-12",
-  "source": "Minchat Shai on Gen 42:2/9/22/28/30/32/35/38 (the chapter's file); Chizkuni",
-  "ref": "Gen 42:2",
-  "claim_en": "The chapter's pointing-and-spelling file: ba-MITZRAYIM (42:2) with the bet DAGESHED (checked); ve-nichye (42:2) with the yod in segol, meraglim (42:9) with the gimel dageshed in every token, be-amtachti (42:28) with the bet soft, tzerorot (42:35) first vav lean second vav full (the Ramah, against a scroll-tikkun's variant), u-qraahu (42:38) with the vav in shuruk (Chizkuni), halo (42:22) full — all asserted; named: the lengthening stroke on ka-meraglim (42:30), the tevir file at asar anachnu (42:32), merikim with no paseq (42:35), and the Mikketz portion's no-break run (42:37-38).",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 42:2",
-   "idx": 6,
-   "contains": "בּ"
-  }
- },
- {
-  "id": "G65-13",
-  "source": "Kitzur Baal HaTurim on Gen 42:6",
-  "ref": "Gen 42:6",
-  "claim_en": "va-yishtachavu-LO ('and they bowed TO HIM'): the bow-verb JOINED to its him-word by maqqef in-stream (checked) — and the Kitzur counts the joined phrase's letters: 'HERE THE DREAM WAS FULFILLED' (named): the letter's own receipt hung on the verse where gen_60's sheaves land.",
-  "check": {
-   "type": "maqqef_after",
-   "ref": "Gen 42:6",
-   "idx": 13,
-   "expect": 1
-  }
- }
 ]

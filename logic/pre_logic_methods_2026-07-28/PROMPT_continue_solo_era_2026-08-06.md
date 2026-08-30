@@ -6129,3 +6129,377 @@ append point; nothing restructured. THE_STEPS.md Step 4 carries the two
 mirrored method rules. Memory gained `derivation-era.md` with the recipe,
 the helper's two fixed bugs, and the two traps.
 
+
+
+---
+
+## MIKETZ DERIVED — gen_64-67 (2026-08-30, owner: "do both")
+
+**RESUMED AFTER COMPACTION.** Step Zero honoured first: THE_STEPS Step 4
+reread before any derivation, including the two rules added earlier today.
+Then the compaction block's one open item was discharged, then Miketz.
+
+**THE RELEASE WENT OUT AND LANDED.** Toledot, Vayetze and Vayishlach
+released to torahsim-19 in one message with the 407 citation keys
+announced (106 / 145 / 156). Its reply: all seventeen landed, nine gates
+green each, byte-identical to ours; append-only proven per file across all
+seventeen ledgers, canon prefix byte-identical every time; CORPUS_TRUTH
+582 -> 778 by the assert alone, hash unmoved, border line untouched. It
+confirmed the headline mechanically: the derived set is ONE RUN, gen_01
+through gen_63, unbroken.
+
+**MY PREDICTION WAS WRONG AND THE MECHANISM WAS RIGHT — RECORD IT.** I
+warned to expect gen_39/gen_40 redaction hits again. NEITHER carried
+anything. The one hit was GEN_44, which neither window predicted, caught
+and rewritten inside the chain with coverage printed beside it (317 files,
+97 unit YAMLs, self-test passed). Yesterday that would have crossed
+silently, because yesterday the check was a prediction plus a grep. This
+is the argument for running the step regardless of prediction, made by the
+thing itself rather than by either window's judgment. It belongs beside
+the coverage rule as its first live vindication.
+
+**ARCHITECTURE FINDING NOW IN CANON:** torahsim placed the four-part
+canon reading (dew = Scripture, fat = Mishnah, grain = Talmud, wine = the
+lore) in docs/ROADMAP_SIMULATION.md ahead of the two-shelves ruling, after
+verifying the evidence at the line in gen_45's and gen_46's changelogs,
+and wrote it WITH ITS LIMITS STATED: not proof that our reconstruction is
+the tradition's own, no machine claim resting on it — evidence that the
+division is native rather than imposed by us. Both method rules are in
+canon's Step 4 as well, and they reached each tree from opposite
+directions: the coverage rule from there, the failed-leg rule from here.
+
+**MIKETZ: FOUR UNITS, 52 CLAIMS, 63 OPERATORS, ALL GATES GREEN.**
+gen_64 (14 claims / 19 ops), gen_65 (12 / 17), gen_66 (14 / 13),
+gen_67 (12 / 14). Text layer green on all four; ALL SCENARIOS GREEN on
+all four; verify_claims 62 verified, **0 FAILED**, 42 uncheckable;
+changelog gate green; gloss_lint 0 flags. World folded: standing
+**778 -> 841, exactly the 63 operators**, hash **8b8fff1fa28953af**
+UNMOVED. Pre-gate sweep run as standing practice — the only unresolved
+claim-references are PRE-EXISTING cross-unit cites from the forward era
+(gen_64 citing G62/G63, gen_66 and gen_67 citing G65 and G66); all 52 new
+claims resolve.
+
+**NINE NUMERIC/INK CLAIMS OPENED, NEVER CREDITED (guard 3), AND THE GROUP
+IS THE MOST MACHINE-CHECKED OF THE ERA. The strongest results:**
+
+- **THE HARM-WORD LIVES IN EXACTLY TWO PLACES IN THE TORAH** [G65-21].
+  The word Onkelos renders as DEATH stands at EXACTLY FIVE seats in the
+  whole corpus: 42:4, 42:38, 44:29 — this parashah's own units — and
+  Exodus 21:22-23, the miscarriage law whose entire penalty structure
+  turns on whether that harm occurred. It has no other home. A
+  translator's choice inside a father's fear is therefore a decision
+  about a capital statute, and the narrative and the statute are the
+  word's only two contexts.
+- **THE DIVINATION WORD'S ONLY OTHER SEAT IS THE PROHIBITION** [G67-22].
+  Onkelos converts "he surely divines" into "he thoroughly investigates"
+  at both 44:5 and 44:15. Machine-checked: the root in this form stands
+  at exactly FIVE tokens across THREE verses — twice at each of ours, and
+  once at Deuteronomy 18:10, the verse that FORBIDS divination. The
+  buffer is not squeamishness; it is the only available reading.
+- **A HEDGE WORD CONFIRMED BY THE INK** [G66-21]. The chain bills an
+  early death to ALMOST FIVE silences ("your servant my father"). The ink
+  says exactly why "almost": FOUR seats carry the phrase in the identical
+  bare form (44:24, 27, 30, 31) and the FIFTH, 43:28, carries both words
+  with a preposition prefixed to each. Five seats, four identical. The
+  approximation is precision about a form, not looseness — the first time
+  this project has machine-confirmed a tradition's own hedge.
+- **THE INFERENCE RULE'S TYPE-SPECIMEN IS THIS UNIT'S VERSE** [G67-21,
+  MIDDOT-layer]. The census of ten light-and-heavy arguments OPENS at
+  44:8. Machine-checked on the Torah members: the two-particle frame the
+  first two share stands at exactly THREE Torah verses — 44:8, Exodus
+  6:12, and 6:12's own restatement at 6:30 — and the second particle
+  alone at five. The census's opening pair IS the whole Torah population
+  of the form, less one repetition.
+- **A RARE PARTICLE WHOSE ENTIRE GENESIS CAREER IS THE DECEPTION AND ITS
+  REPAYMENT** [G66-24]. Four Torah seats; three of them are 27:33, 27:37
+  and 43:11. The measure-for-measure pairing was not manufactured — the
+  word has nowhere else to be.
+- **TORN, TORN AT EXACTLY TWO SEATS** [G67-23], 37:33 and 44:28, both
+  about one son, both rendered "surely killed"; the only other seat of
+  the first word takes a different second form, in the herdsman's law.
+- **A HAPAX WITH THREE READINGS AND NO CONTROL** [G64-21]: the herald's
+  cry at 41:43 stands ONCE in the Torah, so the machine can state that
+  the three-way standoff has no arbiter anywhere in the corpus.
+- **A GRADED LEG** [G64-22]: the one-tav spelling contrast — our leg
+  exact and sole; the Daniel leg DECLARED UNOPENED, that book lying
+  outside this Torah-only corpus. Neither grade borrowed from the other.
+- **TWENTY-TWO YEARS ON ONE SUFFIX** [G66-22/23]: the abstinence claim
+  rests on the final word of 43:34, present exactly where the argument
+  places it; the fivefold portion likewise, once, before the word for
+  portions.
+
+**ALSO SEATED, non-numeric:** the quorum of ten derived by equal-decree
+from a grain itinerary (G65-23); a Sabbath kept before it was given, by
+equal-decree on a narrative verb (G66-31); a particle rule and an
+a-fortiori form learned from a king the tradition calls wicked (G64-25);
+a refusal repaid limb by limb in six matched rows (G64-26); the failed
+magicians' reading kept VERBATIM as a negative control (G64-29); the
+unit's own seven-year term recorded as a four-way dispute the machine
+declares NON-ADJUDICABLE because it counts tellings, not tokens (G64-28);
+the accuser-accuses-only-in-danger rule (G65-24); the load-bearing
+disguise-or-calculation split at 42:7 carried unresolved (G65-26); a
+rival translator (Akilas the proselyte) named and weighed INSIDE the
+midrash, the chain doing what this project does (G67-26); one speech
+discharging three estrangements at once with its recorded dispute on the
+risk (G67-24); and the unit's own seam declared OPEN, breaking mid-speech
+at 45:1 (G67-32).
+
+**WHERE GENESIS STANDS NOW:** 73 of 73 READ, **67 of 73 DERIVED —
+gen_01 through gen_67 CONTINUOUS**, 1:1 to 44:34. Standing **841**.
+SIX BLOCKS REMAIN: **gen_68-73 (Vayigash + Vayechi)**. Their ledgers are
+the 2026-08-28 sweeps and ALREADY CARRY Onkelos citation keys — no
+prerequisite step. The scratchpad helper `derive_miketz.py` is the newest
+worked model.
+
+**ERA ARITHMETIC, run by run:** 288->306 (+18); 306->495 (+189);
+495->530 (+35); 530->582 (+52); 582->648 (+66); 648->725 (+77);
+725->778 (+53); **778->841 (+63)**. Every delta exactly the operator
+count, hash never moving, eight runs deep.
+
+**NOT COMMITTED YET — awaiting the owner's word**, per standing law.
+Miketz has NOT been released to torahsim either: the release goes out
+after the commit, because the peer verifies byte-wise against our pushed
+tree. torahsim has been told Miketz is derived and gated and is holding
+for it; it will run the redaction step and the byte-proof on both
+remaining groups regardless of prediction, precisely because today's
+prediction was wrong.
+
+**PEER EXCHANGE AFTER THE MIKETZ GATES (2026-08-30, torahsim-19 holding
+Miketz until release):** two notes taken, one of them checked at the line
+and upgraded.
+
+1. **THE HARM-WORD IS THE FIRST GENESIS-TO-EXODUS WIRE THAT CLOSES ON
+   BOTH ENDS — AND IT LANDS ON A ROUTING PREDICATE.** The peer observed
+   that its five seats are three in Miketz and two at Exodus 21:22-23,
+   and that exo_21 is already compiled to machines, so a first-pass
+   Genesis claim would point into a proven machine — the only such pair
+   in the corpus today. VERIFIED HERE AND SHARPER THAN STATED: in
+   logic/units/exo_21_the_ordinances.yaml the machine does not merely
+   contain the word, it ROUTES on it — line 1407,
+   CASE(...ve-yatzu yeladeha) ROUTE(ason_o_lo), with line 430's scene
+   "after STEP_Ex_21_22 — the struck mother" holding ason_o_lo as a
+   fact. The claim points at the DISPATCH KEY of a compiled machine.
+   NOT CONFIRMED: the peer's "sixty-four graded scenes" — the workshop
+   unit shows 37 steps and 37 scenes; the 64 likely belongs to the
+   public v2 chapter machine. Recorded as unverified rather than
+   repeated. Entry added to THE_WORLD.md at its append point, marked
+   EVIDENCE, with "nothing is built on it yet" stated in the entry.
+
+2. **WHAT GUARD 3 HAS BEEN WORTH.** The peer's reading, which I agree
+   with: every guard-3 result until now tested whether a tradition's
+   NUMBER was right; the hedge result tested whether its IMPRECISION was
+   MEANT, and the ink answered that the approximation was itself exact.
+   Read beside GRADE THE LEG, NOT THE SECTION, the pair says one thing
+   from two directions — grade what was actually claimed, at the grain
+   it was actually claimed at. The failed-leg rule keeps a source from
+   being convicted on a neighbouring part; the hedge result keeps it
+   from being convicted on a precision it never asserted. Also in
+   THE_WORLD.md. If the owner ever asks what the guard-3 discipline has
+   bought, that pair is the answer.
+
+Both windows have withdrawn predictions on the redaction step for the
+remaining releases. Nothing is landed in canon; torahsim is holding
+Miketz until the commit, by the same discipline it applied to the
+architecture finding.
+
+**THE WIRE WAS ALREADY WELDED — AND WELDED FIRST FROM THE FAR END
+(2026-08-30, verified here in TorahSim's compiled machine).** The peer
+opened its own unverified number and corrected it; I opened its new
+claim before recording it, per the same rule, and found MORE than it
+reported.
+
+- **THE 64 IS RESOLVED.** TorahSim's app/scene_stamps_baseline.json is
+  {meta, stamps} with **stamps holding exactly 64** — a TANAKH-WIDE
+  catalogue of recorded cases tested AGAINST the Exodus 21 machine
+  (Genesis, Exodus, Deuteronomy, Judges, Second Samuel, Jeremiah,
+  Proverbs, Psalms...), not 64 Exodus 21 scenes. The exo_21 UNIT carries
+  37 scenarios in both trees — my figure was right about the unit, its
+  figure was right about the run, and the phrase collapsed two objects.
+  METHOD NOTE WORTH KEEPING: a naive length on that file returns 2,
+  because the scenes sit under a key. That is exactly the unfalsifiable
+  number the coverage rule exists to catch, and it nearly produced a
+  false contradiction from THIS side. The rule caught my check, not just
+  the peer's.
+- **NOT A DOCSTRING — A REGISTERED CITATION TABLE.**
+  machines/exo21/block2.py defines the real branch
+  fetus_payment(ason_in_woman=False, ...), asserts its zero-payment
+  case, carries the weld docstring ("Heaven's ason (karet) welds in via
+  Gen 42:38"), AND carries a structured backward-citation table in which
+  Genesis 42:38 is a row: ("the ason-genus import", "Genesis", 42, 38,
+  "back", "L12-05", pen yikra'enu ason / "lest harm befall him" —
+  Jacob's word welds Heaven's docket to man's).
+- **TWO WIRES INTO THIS GROUP, NOT ONE.** The same table registers
+  **Genesis 44:33 -> L24-02** — yeshev na avdekha tachat ha-na'ar,
+  "let your servant remain instead of the lad," the substitution idiom
+  in the flesh — and 44:33 sits INSIDE gen_67's span. So two of the four
+  units derived today are cited BY NAME from inside a compiled Exodus
+  machine. (The table also registers Genesis 37:28 and 9:22, outside
+  this group.)
+- **PROVENANCE:** the weld entered at commit cddeca8, 2026-08-13,
+  "TorahCode 1.0 — the Exodus 21 instrument, public" — SEVENTEEN DAYS
+  BEFORE this derivation pass existed.
+
+**WHAT IT MEANS:** the law-era reading of Exodus 21 reached BACK to
+Genesis 42:38 and 44:33 and registered them as citations. The Miketz
+pass reached FORWARD to the same verses independently, by counting one
+word's five Torah seats, knowing nothing of that table. Two eras of this
+project's own work converged on the same word from opposite directions
+without citing each other — the same shape as the independent 20:3
+convergence, one layer up. The far end is in ink and dated before the
+near end that would justify it. THE_WORLD.md's entry has been amended
+to say all of this and its stale "unverified" note removed rather than
+left standing.
+
+**THE WIRE IS FOURTEEN, NOT TWO — AND MY OWN COUNT WAS WRONG THREE TIMES
+(2026-08-30, both windows counted independently).** The peer parsed the
+citation tables across all three machine blocks and reported 14 backward
+citations into 11 Genesis blocks. I counted it myself before recording
+it, per the rule in both directions. **ITS NUMBER IS EXACT: 14 backward
+citations into 11 FROZEN Genesis blocks, zero unresolved, its list
+matching mine block for block.**
+
+    1:31 -> L11-04 gen_06 | 9:5 -> L28-02 gen_21 | 9:6 -> L12-04 gen_21
+    9:22 -> L26-04 gen_23 | 15:13 -> L6-04 gen_31 | 16:6 -> L11-05 gen_32
+    28:20 -> L10-01 gen_48 | 29:18 -> L11-05 gen_50 | 31:15 -> L8-03 gen_53
+    37:24 -> L33-01 gen_60 | 37:28 -> L11-05 gen_60 | 37:28 -> L16-04 gen_60
+    42:38 -> L12-05 gen_65 | 44:33 -> L24-02 gen_67
+
+NINE OF THE ELEVEN ARE ALREADY DERIVED — all but gen_65 and gen_67, this
+sitting's own unlanded blocks. gen_60 is cited THREE times: the pit is
+the human-victim branch's precedent and the sale is the kidnap statute's
+test case. So the harness EXISTS TODAY on both ends for nine blocks; the
+law era reached back and registered these verses, and the derivation era
+reached forward to nine of the same blocks by a different route, neither
+side reading the other's list.
+
+**METHOD SCAR — MINE, AND THE MOST USEFUL ONE OF THE DAY.** My count
+went two wires, then eight blocks, then nine. All three wrong, all three
+UNDER-reporting, from two independent frame errors:
+1. **EIGHTEEN LEGACY WIDE DRAFT UNITS** (gen_02_03_garden,
+   gen_42_45_brothers and family) still sit in logic/units/ with
+   status: draft, and SHADOWED the frozen fine-grained blocks under a
+   naive first-match. Worth knowing generally: any tool that maps a
+   verse to a block must filter on status: frozen, or it will silently
+   resolve to a draft.
+2. **TWENTY-TWO FROZEN UNITS WRITE `refs:` UNQUOTED** (refs: 28:10-22),
+   invisible to a regex requiring quotes. The corpus uses BOTH forms.
+Both errors produced a FALSE DEFICIT — a non-zero, plausible-looking
+count — which is exactly the failure a coverage line alone does NOT
+catch. What caught it was the second window counting independently and
+disagreeing; what made the disagreement diagnosable in ONE pass was the
+coverage line printing spans-used, drafts-excluded and unparsed-list
+beside the result. THE REFINEMENT TO CARRY: a plausible non-zero deserves
+an independent count, and coverage is what turns that disagreement into a
+located bug rather than an argument.
+
+**FOR THE LAST GROUP (peer's suggestion, adopted):** when Vayigash and
+Vayechi derive, CHECK WHETHER 49:32 AND THE MACHPELAH SEATS ARE CITED
+FROM THE MACHINE TOO. If they are, the sons-of-Chet census and this
+harness close in the same block. The count can only rise from fourteen.
+
+**BUILD-QUEUE CONSEQUENCE (finding only, nothing built):** the
+cross-block wire display stops being a feature waiting on evidence.
+Fourteen instances, law-ids on one end and derived blocks on the other,
+machine-parseable from files both trees already hold — no new tagging
+pass and no schema to invent, since the law-era authors already wrote the
+vocabulary (label, book, chapter, verse, direction, law-id, Hebrew with
+gloss). A stronger case than the AGREEMENT row, and it arrived the same
+way: by counting rather than arguing. Goes to the owner with the rest.
+
+**WORKSHOP AUDITED AGAINST ITS OWN TWO FRAME ERRORS — GATES CLEAN, AND
+THE EXPOSURE IS BIGGER THAN THE BUG (2026-08-30).** The peer reported
+canon immune to both hazards structurally (97 units all frozen; the
+exporter selects WHERE status = 'frozen'; consumers read refs from the
+index through the YAML loader, so quoting is normalised before any
+consumer sees it). Rather than re-verify its tree, I audited MINE, since
+my mapper is where both errors actually fired.
+
+RESULT — NO WORKSHOP GATE CARRIES EITHER HAZARD:
+- **corpus_world.py, the world fold, is immune BY CONSTRUCTION**: it
+  loads through the YAML loader and filters meta.status == "frozen"
+  explicitly (frozen_units_in_canonical_order, line 61). Quoting cannot
+  reach it and drafts cannot enter it.
+- **freeze_ritual.py's only "refs" regex is unrelated** — it matches the
+  ledger prose "covering N fresh link-refs", not the meta refs field.
+- The remaining unit-reading tools (changelog_gate, build_unit,
+  preflight, verify_text) operate on a NAMED unit passed as an argument,
+  so verse-to-block attribution is never their job.
+- **The two errors were confined to my ad-hoc scratchpad mapper**, a
+  throwaway. Recorded explicitly so no later reader assumes the gates
+  need a fix: they do not.
+
+**BUT THE WORKSHOP'S EXPOSURE IS AN ORDER OF MAGNITUDE LARGER THAN THE
+BUG I HIT, AND THAT IS THE THING TO CARRY.** Canon holds 97 units, all
+frozen. THE WORKSHOP HOLDS ~97 FROZEN PLUS ~212 NON-FROZEN DRAFT UNITS —
+the whole Deuteronomy scaffold, most of Exodus, Leviticus and Numbers,
+the Proverbs stubs, AND the eighteen legacy wide Genesis drafts
+(gen_02_03_garden ... gen_48_50_blessings_death). I found the hazard via
+eighteen; the real population is over two hundred. STANDING NOTE FOR ANY
+FUTURE TOOL WRITTEN HERE: in this tree a verse maps to MORE THAN ONE
+unit file by design, and only the frozen one is real — filter on
+meta.status == "frozen" through the loader, never a raw-text pattern,
+and never trust first-match on a sorted glob. The workshop is the tree
+where this bites; canon is not.
+
+**WORKSHOP INSTRUMENTS AUDITED FOR THE RECITED-NUMBER DEFECT — CLEAN,
+AND A DISTINCTION THAT MUST BE RECORDED BEFORE THE RULE IS APPLIED
+BROADLY (2026-08-30).** The peer found a latent defect in canon's press
+gate — it PRINTED a hardcoded 97 while its actual check was dynamic, so
+it would have reported "97 units reprinted" on the day the pool grew to
+110. Fixed there: the count is now counted. It asked the same question of
+this tree, so I ran it.
+
+CLEAN HERE: no tool prints a literal count. corpus_world.py reports
+"THE WORLD - %d units" from len(). No solo_tool recites a figure.
+
+**BUT THE FIX MUST NOT BE GENERALIZED TO ASSERTS, AND THIS NEEDS SAYING
+LOUDLY.** logic/corpus/CORPUS_TRUTH.py contains exactly the pattern the
+new rule condemns on its face - `assert len(W["units"]) == 97`,
+`assert len(W["standing"]) == 841`, `assert _state_hash(W) ==
+'8b8fff1fa28953af'` - and those numbers are CORRECT AS FIXED LITERALS.
+THE DISTINCTION: a fixed number in a REPORT is a RECITAL - it claims a
+measurement it did not take, and it lies quietly when the world moves.
+A fixed number in an ASSERT is a TRIPWIRE - it claims nothing, it FAILS
+LOUDLY when the world moves, and the failing IS its function. Same
+literal, opposite roles.
+CORPUS_TRUTH's fixed figures are the era's entire proof mechanism: the
+standing count must move by exactly the operator count and the hash must
+not move, and both are checked by asserting a number computed in a prior
+sitting. **If a later session "fixes" those asserts into dynamic counts
+in the name of count-never-assert, it silently disarms the proof** - the
+file would pass forever and prove nothing. So the rule as this project
+holds it: COUNT WHAT YOU REPORT; ASSERT WHAT MUST NOT CHANGE. Never
+convert the second into the first. Relayed to the peer, since its gate
+fix is right and its slogan, applied without this line, is dangerous.
+
+**THE TRIPWIRE WARNING MIRRORED INTO THE WORKSHOP GENERATOR — ONE TOOL
+FILE EDITED, DISCLOSED (2026-08-30).** The peer put the assert-vs-report
+warning in the GENERATOR'S EMITTED HEADER rather than in CORPUS_TRUTH.py
+itself, reasoning that a note inside a generated file is erased by the
+next regeneration — the file's own header says "Do not edit —
+regenerate." That reasoning is right, and it has a consequence for THIS
+tree that made mirroring the correct call rather than an optional
+courtesy: **the fold runs HERE every derivation group.** A warning
+present only in canon's generator would be stripped from the workshop's
+proof file on every regeneration — and the workshop is the tree with the
+212 drafts and the hurried future sessions, so the protection is needed
+here more than there.
+
+CHANGED: corpus_world.py's emitted header now carries canon's warning
+block VERBATIM, in canon's ordering. Nothing else touched — no assert,
+no logic, no value.
+VERIFIED AFTER: fold re-run, CORPUS TRUTH GREEN — 97 units, 1809 facts,
+341 demands (191 open), standing 841, hash 8b8fff1fa28953af unchanged.
+**THE BORDER AGAINST CANON'S GENERATED FILE IS NOW EXACTLY TWO LINES:**
+the generator path (press/ there, root here — the pre-existing documented
+border) and standing 778 against 841, which converges the moment Miketz
+lands. That is TIGHTER than before this edit, which also diverged on the
+header. After the landing the border is ONE line.
+
+ALSO VERIFIED, prompted by the peer's own disclosure: it had been
+hand-editing CORPUS_TRUTH.py — a generated file — one literal per
+landing all day, and on checking found its hand-edits byte-identical to
+what the generator emits. **THIS TREE HAS NEVER HAND-EDITED IT.** I
+copied the file aside, re-ran the fold, and diffed: BYTE-IDENTICAL. The
+workshop has been regenerating as the landing step throughout, which is
+the practice the peer has now adopted.
