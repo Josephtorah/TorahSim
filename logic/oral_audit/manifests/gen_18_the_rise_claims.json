@@ -1,17 +1,102 @@
 [
-  {"id": "G18-01", "source": "Minchat Shai on Gen 7:23 (Or Torah; Rashi; Mizrachi)", "ref": "Gen 7:23",
-   "claim_en": "וימח (\"and He ERASED,\" 7:23) — the precise manuscripts: mem SOFT (no dagesh, the doubling dot) — the simple active stem, \"He erased all the standing.\" Minchat Shai's warning: read with dagesh it becomes the passive — \"the Enemy of the Holy One [the euphemism] was erased with all the standing\" — \"and one must be exceedingly careful\"; Gur Aryeh's dagesh-books are called corrupt. SNAPSHOT: mem+vowel contiguous, no dot — the careful reading.",
-   "check": {"type": "he_contains", "ref": "Gen 7:23", "idx": 0, "contains": "מַ"}},
-
-  {"id": "G18-02", "source": "Minchat Shai on Gen 7:23", "ref": "Gen 7:23",
-   "claim_en": "וימחו (\"and they were erased\" — the passive, correctly, of the creatures) — tifcha (a pause accent) on the word. SNAPSHOT agrees: the active erasing and the passive being-erased sit eight words apart, distinguished by one dot the careful books refuse.",
-   "check": {"type": "mark", "ref": "Gen 7:23", "idx": 16, "expect_mark": "tifcha"}},
-
-  {"id": "G18-03", "source": "Minchat Shai on Gen 7:23 (Or Torah; Masorah note)", "ref": "Gen 7:23",
-   "claim_en": "וישאר (\"and there was LEFT only Noah\") — darga (the stair-step accent) on the shin in the precise books; the manuscript Masorah marks the word unique-and-first-stressed. SNAPSHOT: darga.",
-   "check": {"type": "mark", "ref": "Gen 7:23", "idx": 19, "expect_mark": "darga"}},
-
-  {"id": "G18-04", "source": "Minchat Shai on Gen 7:23", "ref": "Gen 7:23",
-   "claim_en": "וישאר — the alef with SEGOL (short e-vowel), \"as is right, for were it end-stressed the alef would carry tsere, like ותשאר\" (Ruth's clause): the stress-position argument locked at the vowel. SNAPSHOT: segol.",
-   "check": {"type": "he_contains", "ref": "Gen 7:23", "idx": 19, "contains": "אֶ"}}
+  {
+    "id": "G18-01",
+    "source": "Minchat Shai on Gen 7:23 (Or Torah; Rashi; Mizrachi)",
+    "ref": "Gen 7:23",
+    "claim_en": "וימח (\"and He ERASED,\" 7:23) — the precise manuscripts: mem SOFT (no dagesh, the doubling dot) — the simple active stem, \"He erased all the standing.\" Minchat Shai's warning: read with dagesh it becomes the passive — \"the Enemy of the Holy One [the euphemism] was erased with all the standing\" — \"and one must be exceedingly careful\"; Gur Aryeh's dagesh-books are called corrupt. SNAPSHOT: mem+vowel contiguous, no dot — the careful reading.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 7:23",
+      "idx": 0,
+      "contains": "מַ"
+    }
+  },
+  {
+    "id": "G18-02",
+    "source": "Minchat Shai on Gen 7:23",
+    "ref": "Gen 7:23",
+    "claim_en": "וימחו (\"and they were erased\" — the passive, correctly, of the creatures) — tifcha (a pause accent) on the word. SNAPSHOT agrees: the active erasing and the passive being-erased sit eight words apart, distinguished by one dot the careful books refuse.",
+    "check": {
+      "type": "mark",
+      "ref": "Gen 7:23",
+      "idx": 16,
+      "expect_mark": "tifcha"
+    }
+  },
+  {
+    "id": "G18-03",
+    "source": "Minchat Shai on Gen 7:23 (Or Torah; Masorah note)",
+    "ref": "Gen 7:23",
+    "claim_en": "וישאר (\"and there was LEFT only Noah\") — darga (the stair-step accent) on the shin in the precise books; the manuscript Masorah marks the word unique-and-first-stressed. SNAPSHOT: darga.",
+    "check": {
+      "type": "mark",
+      "ref": "Gen 7:23",
+      "idx": 19,
+      "expect_mark": "darga"
+    }
+  },
+  {
+    "id": "G18-04",
+    "source": "Minchat Shai on Gen 7:23",
+    "ref": "Gen 7:23",
+    "claim_en": "וישאר — the alef with SEGOL (short e-vowel), \"as is right, for were it end-stressed the alef would carry tsere, like ותשאר\" (Ruth's clause): the stress-position argument locked at the vowel. SNAPSHOT: segol.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 7:23",
+      "idx": 19,
+      "contains": "אֶ"
+    }
+  },
+  {
+    "id": "G18-05",
+    "source": "Yoma 85a:11; Yoma 85a:12; Mishnah Yoma 8:7",
+    "claim_en": "THE LEGAL DEFINITION OF LIFE IS TAKEN FROM OUR 7:22, AND IT IS THE SAME FORMULA AS THE FIRST HUMAN'S CREATION. Our verse says 'all in whose NOSTRILS was the BREATH of the spirit of LIFE' - and from it the tradition fixes where life is tested: at the nose. The rockslide case makes it operational - one clears the debris on the Sabbath even in doubt, and if digging from below one continues to the nose, while from above the nose suffices. Verified in the ink at derivation: the construct nishmat ('breath of') stands in the Torah in EXACTLY TWO places, Genesis 2:7 and our 7:22, both carrying breath-of, life, and into-his-nostrils. The verse where breath is GIVEN and the verse where it is TAKEN are one formula, and the law of rescue is built on the second.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "נשמת"
+      },
+      "expect_total": 2,
+      "expect_refs": [
+        "Gen 2:7",
+        "Gen 7:22"
+      ]
+    }
+  },
+  {
+    "id": "G18-06",
+    "source": "Kiddushin 13a:14",
+    "claim_en": "THE OBLITERATION OPERATOR CARRIES AN EXPLICIT SCOPE LIMIT IN ITS OWN WORDS. Our 7:22 ends 'of all that was on the DRY LAND' - and from that limiter the chain rules that the fish of the sea did not die in the flood. The destruction is bounded by the verse itself, not by inference.",
+    "check": {
+      "type": "manual",
+      "note": "A scope limiter in the operator's own wording, read as exempting a whole class from the destruction."
+    }
+  },
+  {
+    "id": "G18-07",
+    "source": "Jerusalem Talmud Sanhedrin 10:3:2",
+    "claim_en": "A DOUBLE VERB IN OUR 7:23 IS READ AS TWO SEPARATE PUNISHMENTS. The verse says וַיִּמַח ('and He wiped out') and then וַיִּמָּחוּ ('and they were wiped out') - both present in the ink, active then passive. From the doubling the derivation is drawn that the generation loses this world and the world to come, one verb each - the ruling the Mishnah states elsewhere getting its textual hook here.",
+    "check": {
+      "type": "manual",
+      "note": "An active-passive verb pair in one verse read as two distinct sentences. Both verbs verified present in the ink at derivation."
+    }
+  },
+  {
+    "id": "G18-08",
+    "source": "Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 2:8",
+    "claim_en": "THE ORDER OF OUR 7:23's OWN LIST IS READ AS A RULE OF PROCEDURE: 'from MAN to beast' - because man began the transgression, the punishment begins with him. The principle 'he who began the transgression, from him the punishment begins' is stated on this word order, and closed with the named light-and-heavy argument to the measure of good.",
+    "check": {
+      "type": "manual",
+      "note": "A procedural rule read off the order of an operator's operands - the same class as the sentencing-order rule of gen_11."
+    }
+  },
+  {
+    "id": "G18-09",
+    "source": "Bereshit Rabbah 32:10",
+    "claim_en": "A QUANTIFIER IN OUR 7:19 IS USED TO DEFEAT A TERRITORIAL CLAIM. Confronted with the argument that a particular mountain was exempt from the flood, R. Yonatan answers from the verse's own word: 'ALL the high mountains were covered' - either it is a high mountain, in which case it is included, or it is too low to be worth mentioning. The dilemma turns entirely on this operator's universal quantifier, and the tradition records that he ceded his mount on losing the exchange.",
+    "check": {
+      "type": "manual",
+      "note": "A universal quantifier in the operator used as the decisive term in a recorded dispute."
+    }
+  }
 ]

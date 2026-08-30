@@ -1,158 +1,239 @@
 [
- {
-  "id": "G16-01",
-  "source": "Kitzur Baal HaTurim on Gen 6:9 (Masorah)",
-  "ref": "Gen 6:9",
-  "claim_en": "אלה תולדות (\"these are the generations\" — bare, no joining vav): the Kitzur's list of FOUR juxtaposed headers — the heavens (2:4), Noah (6:9), Shem (11:10), Jacob (37:2) — \"each disqualifies what precedes it\": chaos, the wicked generations, Ham and Japheth, Esau. SNAPSHOT adjacency: exactly those four (the vav-prefixed headers stand apart).",
-  "check": {
-   "type": "adjacency",
-   "first": {
-    "translit": "ele"
-   },
-   "second": "toldot",
-   "expect_refs": [
-    "Gen 2:4",
-    "Gen 6:9",
-    "Gen 11:10",
-    "Gen 37:2"
-   ]
+  {
+    "id": "G16-01",
+    "source": "Kitzur Baal HaTurim on Gen 6:9 (Masorah)",
+    "ref": "Gen 6:9",
+    "claim_en": "אלה תולדות (\"these are the generations\" — bare, no joining vav): the Kitzur's list of FOUR juxtaposed headers — the heavens (2:4), Noah (6:9), Shem (11:10), Jacob (37:2) — \"each disqualifies what precedes it\": chaos, the wicked generations, Ham and Japheth, Esau. SNAPSHOT adjacency: exactly those four (the vav-prefixed headers stand apart).",
+    "check": {
+      "type": "adjacency",
+      "first": {
+        "translit": "ele"
+      },
+      "second": "toldot",
+      "expect_refs": [
+        "Gen 2:4",
+        "Gen 6:9",
+        "Gen 11:10",
+        "Gen 37:2"
+      ]
+    }
+  },
+  {
+    "id": "G16-02",
+    "source": "Kitzur Baal HaTurim on Gen 6:9",
+    "ref": "Gen 6:9",
+    "claim_en": "נח נח... נח — Noah's name written THREE times in his header verse: \"he saw three worlds\"; \"he saved three by his merit\" (as Daniel three, as Job three); the rest-homily runs it to six. SNAPSHOT: three tokens in the verse.",
+    "check": {
+      "type": "verse_token_count",
+      "ref": "Gen 6:9",
+      "translit": "nocha",
+      "expect_total": 3
+    }
+  },
+  {
+    "id": "G16-03",
+    "source": "Kitzur Baal HaTurim on Gen 6:9",
+    "ref": "Gen 6:9",
+    "claim_en": "את האלהים התהלך נח (\"with God walked Noah\") — the FINAL letters of the walk-clause spell חכם (\"wise\"), read tail-first (verse-order מ-כ-ח): \"and the wise one takes souls\" (Prov 11:30). SNAPSHOT finals locked.",
+    "check": {
+      "type": "final_letters",
+      "ref": "Gen 6:9",
+      "idx": [
+        10,
+        12
+      ],
+      "spell": "מכח"
+    }
+  },
+  {
+    "id": "G16-04",
+    "source": "Kitzur Baal HaTurim on Gen 6:13",
+    "ref": "Gen 6:13",
+    "claim_en": "משחיתם את הארץ (\"destroying them with the earth\") — the INITIAL letters spell מאה (\"hundred\"): \"He destroyed their stature, which was a hundred cubits tall.\" SNAPSHOT initials locked.",
+    "check": {
+      "type": "initial_letters",
+      "ref": "Gen 6:13",
+      "idx": [
+        14,
+        16
+      ],
+      "multiset_of": "מאה"
+    }
+  },
+  {
+    "id": "G16-05",
+    "source": "Kitzur Baal HaTurim on Gen 6:11 (Masorah)",
+    "ref": "Gen 6:11",
+    "scope": "scripture",
+    "claim_en": "ותמלא (\"and it was FILLED\") — the Masorah pair: \"the earth was filled with violence\" (6:11) and \"the land was filled with them\" (Exod 1:7, Israel multiplying): the Kitzur's measure-for-measure homily rides the pair. SNAPSHOT: exactly two tokens of this form (the she-filled verb, 21:19/24:16, is a different form and stands apart).",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "translit": "va-timale"
+      },
+      "expect_total": 2,
+      "expect_refs": [
+        "Gen 6:11",
+        "Exod 1:7"
+      ]
+    }
+  },
+  {
+    "id": "G16-06",
+    "source": "Kitzur Baal HaTurim on Gen 6:13 (Masorah)",
+    "ref": "Gen 6:13",
+    "scope": "scripture",
+    "claim_en": "והנני (\"and behold I\" — the destroy-decree) — the Kitzur's Masorah trio spans to the Prophets (the Shiloh house-word; the widow gathering her two sticks, 1 Kgs 17:12): \"I said to build the world up, and they ruined it.\" Torah-side: this is the word's ONLY Torah token.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "translit": "ve-hin-ni"
+      },
+      "expect_total": 1,
+      "expect_refs": [
+        "Gen 6:13"
+      ]
+    }
+  },
+  {
+    "id": "G16-07",
+    "source": "Kitzur Baal HaTurim on Gen 6:16 (Masorah)",
+    "ref": "Gen 6:16",
+    "claim_en": "ושלשים (\"and THIRD decks\") — the Masorah pair: the ark's third story (6:16) and \"they journey THIRD\" — the camp banners on the march (Num 2:24): \"by the merit of the banners they were saved.\" SNAPSHOT: exactly two tokens of the third-plural, this pair.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "translit": "u-shelishim"
+      },
+      "expect_total": 2,
+      "expect_refs": [
+        "Gen 6:16",
+        "Num 2:24"
+      ]
+    }
+  },
+  {
+    "id": "G16-08",
+    "source": "Kitzur Baal HaTurim on Gen 6:15 (Masorah)",
+    "ref": "Gen 6:15",
+    "scope": "scripture",
+    "claim_en": "וזה אשר (\"and this is what...\") opens exactly THREE Torah instructions — the ARK spec (6:15), the ALTAR spec (Exod 29:38), and the permitted-birds law (Deut 14:12). The Kitzur's Masorah pair is the two BUILD-commands (וזה אשר תעשה, \"this is what you shall MAKE\"): \"as the altar atones, so the ark — build an atoning altar when you exit.\" SNAPSHOT: the three openings locked; the two make-formulas are the pair.",
+    "check": {
+      "type": "adjacency",
+      "first": {
+        "translit": "ve-ze"
+      },
+      "second": "asher",
+      "expect_refs": [
+        "Gen 6:15",
+        "Exod 29:38",
+        "Deut 14:12"
+      ]
+    }
+  },
+  {
+    "id": "G16-09",
+    "source": "Minchat Shai on Gen 6:9 (Mikhlol; R. Moshe Kimchi)",
+    "ref": "Gen 6:9",
+    "claim_en": "התהלך־נח (\"walked Noah\") — \"in all the books the lamed with SEGOL (the short e-vowel)\" — because the maqqef (joining hyphen) binds it to a first-stressed word; Minchat Shai wonders at the one authority who wrote tsere. SNAPSHOT: segol.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 6:9",
+      "idx": 11,
+      "contains": "לֶּ"
+    }
+  },
+  {
+    "id": "G16-10",
+    "source": "Minchat Shai on Gen 6:9",
+    "ref": "Gen 6:9",
+    "claim_en": "התהלך־נח — the maqqef (joining hyphen) itself, the stated REASON for the segol juncture: SNAPSHOT's maqqef column joins the walk-verb to the walker.",
+    "check": {
+      "type": "maqqef_after",
+      "ref": "Gen 6:9",
+      "idx": 11,
+      "expect": 1
+    }
+  },
+  {
+    "id": "G16-11",
+    "source": "Bereshit Rabbah 30:9; Avodah Zarah 6a:2; Bereshit Rabbah 30:10",
+    "claim_en": "THE HEADER'S EPITHETS ARE PARSED AS A LEGAL DESCRIPTION AND THEN DISPUTED. Because 'righteous' already covers his deeds, תָּמִים (tamim, 'whole') is read as covering his BODY - two adjectives, two domains. The qualifier 'IN HIS GENERATIONS' carries the standing dispute: R. Yehuda reads it as relative praise only (a wine-cellar, a blind marketplace), R. Nechemya as an a-fortiori all-the-more (balsam in a graveyard). And the walking-verb is graded against Abraham's: this man walked WITH God, needing support, where Abraham walked BEFORE Him.",
+    "check": {
+      "type": "manual",
+      "note": "Two epithets split across two domains; the qualifier's force disputed; the walking-verb graded relative to a later unit."
+    }
+  },
+  {
+    "id": "G16-12",
+    "source": "Bereshit Rabbah 30:3",
+    "claim_en": "R. Abahu states a particle rule on our 6:9 header: אֵלֶּה ('THESE are') EXCLUDES what preceded it. The section marker the machine reads as structural is read by the chain as an operator of exclusion - the flood generation cut off at this header.",
+    "check": {
+      "type": "manual",
+      "note": "A section-header particle read as performing an exclusion, not merely a division."
+    }
+  },
+  {
+    "id": "G16-13",
+    "source": "Bereshit Rabbah 31:5; Bereshit Rabbah 31:6; Sanhedrin 57a:1",
+    "claim_en": "חָמָס (chamas) IS DISTINGUISHED FROM ROBBERY BY VALUE THRESHOLD, and the vocabulary is fixed four ways. R. Chanina: chamas is a taking of less than a perutah, robbery a perutah or more - the lupin-basket scene supplying the case. R. Levi gives the word a fourfold field: idolatry, immorality, bloodshed, and its plain sense. And the corruption vocabulary of our 6:11-12 is the derivation base for the Noahide capital-liability list at the Sanhedrin sugya.",
+    "check": {
+      "type": "manual",
+      "note": "A threshold definition distinguishing two offences, and a corruption vocabulary grounding a capital-liability list."
+    }
+  },
+  {
+    "id": "G16-14",
+    "source": "Bereshit Rabbah 31:10; Sanhedrin 108b:10; Bereshit Rabbah 31:11; Sanhedrin 108b:11",
+    "claim_en": "THE ARK SPEC IS READ AS ENGINEERING, AND THE COMPARTMENT COUNT IS DISPUTED. The dimensions of our 6:15 - three hundred by fifty by thirty cubits, present in the ink - are read as shipwright ratios, breadth a sixth of length and height a tenth, with 'AND this' read as meaning another will measure by your cubit, joining the spec to the Temple's. 'To a cubit finish it above' is read as hull engineering: a wide base narrowing to a top, so the vessel stands and does not capsize. The internal division is disputed three ways across seats - three hundred and sixty compartments at ten by ten, nine hundred at six by six, and a baraita's own three-storey allocation of manure, animals and people - all recorded.",
+    "check": {
+      "type": "manual",
+      "note": "Numeric spec read as practical shipbuilding instruction, with a three-way seat variance on the compartment census."
+    }
+  },
+  {
+    "id": "G16-15",
+    "source": "Avodah Zarah 51a:15; Avodah Zarah 51a:18; Jerusalem Talmud Pesachim 9:5:2; Sanhedrin 57a:7",
+    "claim_en": "THE BOARDING LIST IS READ AS A QUALIFYING STANDARD FOR THE ALTAR. From 6:19's 'of every LIVING thing' R. Elazar rules an animal lacking a limb prohibited for the descendants of Noah; 'WITH YOU' is read as 'similar to you', excluding the mortally injured, with the man himself proven whole from 6:9's 'tamim'. Some of the ark's animals are read as destined for the altar, so the intake spec doubles as an offering-fitness spec. And 6:20's 'after their kind' grounds a recorded dispute over whether the descendants of Noah are commanded against crossbreeding at all.",
+    "check": {
+      "type": "manual",
+      "note": "An intake roster read as an offering-fitness standard, with a crossbreeding dispute on the same verse."
+    }
+  },
+  {
+    "id": "G16-16",
+    "source": "Bereshit Rabbah 31:9",
+    "claim_en": "A SPEC-DELTA BETWEEN TWO VESSELS IS READ AS PURPOSE-DRIVEN. Our ark is pitched inside and out; the basket that later carries the infant Moses is clay within and pitch without. The chain reads the difference against the water each must survive - a weak current against a flood - so the two specifications are compared as engineering answers to different loads. The compartment-word is separately joined to the bird-pair purification: 'your ark purifies you'.",
+    "check": {
+      "type": "manual",
+      "note": "Two vessel specifications in the corpus compared as engineering responses to different conditions."
+    }
+  },
+  {
+    "id": "G16-17",
+    "source": "Bereshit Rabbah 34:7; Jerusalem Talmud Taanit 1:6:10",
+    "claim_en": "THE ARK-ABSTINENCE LAW IS DERIVED FROM THE LISTING ORDER OF OUR 6:18. At entry the verse lists the men and the women separately - 'you and your sons, and your wife and your sons' wives' - while at the exit of 8:16 they are joined. From that ordering difference the prohibition of intercourse inside the ark is derived, with the famine-abstinence rule riding alongside it. Three are named as having violated it, each marked for it.",
+    "check": {
+      "type": "manual",
+      "note": "A prohibition derived from the ORDER in which an operator lists its participants, discharged by the corresponding exit verse."
+    }
+  },
+  {
+    "id": "G16-18",
+    "source": "Bereshit Rabbah 32:3",
+    "claim_en": "A LAW OF PRAISE READ OUT OF AN INK-DIFF BETWEEN TWO VERSES. Our 6:9 calls the man 'righteous, WHOLE in his generations' when speaking about him; 7:1, addressing him to his face, says only 'righteous'. From the difference the rule is drawn: one gives partial praise in a person's presence and full praise in his absence. A model-relevant delta between two of this corpus's own verses becomes a rule of conduct.",
+    "check": {
+      "type": "manual",
+      "note": "A conduct rule derived from the difference between two descriptions of the same person in adjacent units."
+    }
+  },
+  {
+    "id": "G16-19",
+    "source": "Jerusalem Talmud Rosh Hashanah 3:9:2",
+    "claim_en": "Our 6:14's 'MAKE FOR YOURSELF an ark' is enrolled as the first member of a four-place census of the same construction - the ark, the trumpets, the flint knives, and the serpent - three of them explicit and one not. The build command is typed as an instance of a recurring divine construction directive rather than a one-off.",
+    "check": {
+      "type": "manual",
+      "note": "A build operator typed as a member of a four-place corpus-wide census."
+    }
   }
- },
- {
-  "id": "G16-02",
-  "source": "Kitzur Baal HaTurim on Gen 6:9",
-  "ref": "Gen 6:9",
-  "claim_en": "נח נח... נח — Noah's name written THREE times in his header verse: \"he saw three worlds\"; \"he saved three by his merit\" (as Daniel three, as Job three); the rest-homily runs it to six. SNAPSHOT: three tokens in the verse.",
-  "check": {
-   "type": "verse_token_count",
-   "ref": "Gen 6:9",
-   "translit": "nocha",
-   "expect_total": 3
-  }
- },
- {
-  "id": "G16-03",
-  "source": "Kitzur Baal HaTurim on Gen 6:9",
-  "ref": "Gen 6:9",
-  "claim_en": "את האלהים התהלך נח (\"with God walked Noah\") — the FINAL letters of the walk-clause spell חכם (\"wise\"), read tail-first (verse-order מ-כ-ח): \"and the wise one takes souls\" (Prov 11:30). SNAPSHOT finals locked.",
-  "check": {
-   "type": "final_letters",
-   "ref": "Gen 6:9",
-   "idx": [
-    10,
-    12
-   ],
-   "spell": "מכח"
-  }
- },
- {
-  "id": "G16-04",
-  "source": "Kitzur Baal HaTurim on Gen 6:13",
-  "ref": "Gen 6:13",
-  "claim_en": "משחיתם את הארץ (\"destroying them with the earth\") — the INITIAL letters spell מאה (\"hundred\"): \"He destroyed their stature, which was a hundred cubits tall.\" SNAPSHOT initials locked.",
-  "check": {
-   "type": "initial_letters",
-   "ref": "Gen 6:13",
-   "idx": [
-    14,
-    16
-   ],
-   "multiset_of": "מאה"
-  }
- },
- {
-  "id": "G16-05",
-  "source": "Kitzur Baal HaTurim on Gen 6:11 (Masorah)",
-  "ref": "Gen 6:11",
-  "scope": "scripture",
-  "claim_en": "ותמלא (\"and it was FILLED\") — the Masorah pair: \"the earth was filled with violence\" (6:11) and \"the land was filled with them\" (Exod 1:7, Israel multiplying): the Kitzur's measure-for-measure homily rides the pair. SNAPSHOT: exactly two tokens of this form (the she-filled verb, 21:19/24:16, is a different form and stands apart).",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "translit": "va-timale"
-   },
-   "expect_total": 2,
-   "expect_refs": [
-    "Gen 6:11",
-    "Exod 1:7"
-   ]
-  }
- },
- {
-  "id": "G16-06",
-  "source": "Kitzur Baal HaTurim on Gen 6:13 (Masorah)",
-  "ref": "Gen 6:13",
-  "scope": "scripture",
-  "claim_en": "והנני (\"and behold I\" — the destroy-decree) — the Kitzur's Masorah trio spans to the Prophets (the Shiloh house-word; the widow gathering her two sticks, 1 Kgs 17:12): \"I said to build the world up, and they ruined it.\" Torah-side: this is the word's ONLY Torah token.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "translit": "ve-hin-ni"
-   },
-   "expect_total": 1,
-   "expect_refs": [
-    "Gen 6:13"
-   ]
-  }
- },
- {
-  "id": "G16-07",
-  "source": "Kitzur Baal HaTurim on Gen 6:16 (Masorah)",
-  "ref": "Gen 6:16",
-  "claim_en": "ושלשים (\"and THIRD decks\") — the Masorah pair: the ark's third story (6:16) and \"they journey THIRD\" — the camp banners on the march (Num 2:24): \"by the merit of the banners they were saved.\" SNAPSHOT: exactly two tokens of the third-plural, this pair.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "translit": "u-shelishim"
-   },
-   "expect_total": 2,
-   "expect_refs": [
-    "Gen 6:16",
-    "Num 2:24"
-   ]
-  }
- },
- {
-  "id": "G16-08",
-  "source": "Kitzur Baal HaTurim on Gen 6:15 (Masorah)",
-  "ref": "Gen 6:15",
-  "scope": "scripture",
-  "claim_en": "וזה אשר (\"and this is what...\") opens exactly THREE Torah instructions — the ARK spec (6:15), the ALTAR spec (Exod 29:38), and the permitted-birds law (Deut 14:12). The Kitzur's Masorah pair is the two BUILD-commands (וזה אשר תעשה, \"this is what you shall MAKE\"): \"as the altar atones, so the ark — build an atoning altar when you exit.\" SNAPSHOT: the three openings locked; the two make-formulas are the pair.",
-  "check": {
-   "type": "adjacency",
-   "first": {
-    "translit": "ve-ze"
-   },
-   "second": "asher",
-   "expect_refs": [
-    "Gen 6:15",
-    "Exod 29:38",
-    "Deut 14:12"
-   ]
-  }
- },
- {
-  "id": "G16-09",
-  "source": "Minchat Shai on Gen 6:9 (Mikhlol; R. Moshe Kimchi)",
-  "ref": "Gen 6:9",
-  "claim_en": "התהלך־נח (\"walked Noah\") — \"in all the books the lamed with SEGOL (the short e-vowel)\" — because the maqqef (joining hyphen) binds it to a first-stressed word; Minchat Shai wonders at the one authority who wrote tsere. SNAPSHOT: segol.",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 6:9",
-   "idx": 11,
-   "contains": "לֶּ"
-  }
- },
- {
-  "id": "G16-10",
-  "source": "Minchat Shai on Gen 6:9",
-  "ref": "Gen 6:9",
-  "claim_en": "התהלך־נח — the maqqef (joining hyphen) itself, the stated REASON for the segol juncture: SNAPSHOT's maqqef column joins the walk-verb to the walker.",
-  "check": {
-   "type": "maqqef_after",
-   "ref": "Gen 6:9",
-   "idx": 11,
-   "expect": 1
-  }
- }
 ]

@@ -1,50 +1,404 @@
 [
-{"id":"G08-01","source":"Bereshit Rabbah 12:6; Minchat Shai on Gen 2:4","ref":"Gen 2:4","scope":"scripture",
- "claim_en":"All toledot ('generations') in Scripture are written defectively except Gen 2:4 and Ruth 4:18 (full: both vavs)",
- "check":{"type":"spelling_variants","where":{"translit_like":"%told%"},"pattern_full":"תולדות","expect_full_refs":["Gen 2:4"]}},
-{"id":"G08-02","source":"Bereshit Rabbah 12:9; Kitzur Baal HaTurim on Gen 2:4","ref":"Gen 2:4",
- "claim_en":"be-hibbaram ('when-they-were-created') has exactly the letters of be-Avraham ('for Abraham')",
- "check":{"type":"letters_multiset","ref":"Gen 2:4","idx":4,"equals_letters_of":"באברהם"}},
-{"id":"G08-03","source":"Bereshit Rabbah 12:10; Minchat Shai on Gen 2:4","ref":"Gen 2:4",
- "claim_en":"The he of be-hibbaram is written SMALL (he zeira)",
- "check":{"type":"manual","note":"instrument gap - SNAPSHOT does not encode Masoretic letter size"}},
-{"id":"G08-04","source":"Kitzur Baal HaTurim on Gen 2:7; Minchat Shai on Gen 2:7 (Masorah)","ref":"Gen 2:7",
- "claim_en":"va-yitzer ('and He formed') occurs exactly twice as this pointed form - Gen 2:7 (human) and Gen 2:19 (beasts)",
- "check":{"type":"token_count","where":{"translit":"va-yitzer"},"expect_total":2,"expect_refs":["Gen 2:7","Gen 2:19"]}},
-{"id":"G08-05","source":"Kitzur Baal HaTurim on Gen 2:7; Minchat Shai; Berakhot 61a; Bereshit Rabbah 14","ref":"Gen 2:7",
- "claim_en":"Of the two va-yitzer tokens, only the human one (2:7) is written FULL with double yod; the beasts' (2:19) is defective",
- "check":{"type":"spelling_variants","where":{"translit":"va-yitzer"},"pattern_full":"ייצר","expect_full_refs":["Gen 2:7"]}},
-{"id":"G08-06","source":"Kitzur Baal HaTurim on Gen 2:6 (Masorah pair with Job 18:12)","ref":"Gen 2:6","scope":"scripture",
- "claim_en":"ve-ed ('and a mist') occurs twice in Scripture; the mist-noun ed is unique in the Torah to Gen 2:6",
- "check":{"type":"career","strong":"108","expect_total":1}},
-{"id":"G08-07","source":"Kitzur Baal HaTurim on Gen 2:4 (Masorah pair with Ps 148:13)","ref":"Gen 2:4","scope":"scripture",
- "claim_en":"The flipped order eretz-then-ve-shamayim ('earth and heavens') occurs twice in Scripture; in the Torah only Gen 2:4",
- "check":{"type":"adjacency","first":{"translit_like":"%retz%"},"second":["ve-shamayim","ve-ha-shamayim"],"expect_refs":["Gen 2:4"]}},
-{"id":"G08-08","source":"Kitzur Baal HaTurim on Gen 2:10 (Masorah pair with Prov 19:4)","ref":"Gen 2:10","scope":"scripture",
- "claim_en":"yipared ('shall be parted') occurs twice in Scripture; in the Torah only Gen 2:10",
- "check":{"type":"token_count","where":{"translit":"yipared"},"expect_total":1,"expect_refs":["Gen 2:10"]}},
-{"id":"G08-09","source":"Kitzur Baal HaTurim on Gen 2:12 (Masorah)","ref":"Gen 2:12","scope":"scripture",
- "claim_en":"ha-bedolach ('the bdellium') occurs exactly twice in Scripture: Gen 2:12 and Num 11:7 (the manna)",
- "check":{"type":"token_count","where":{"translit_like":"%bedola%"},"expect_total":2,"expect_refs":["Gen 2:12","Num 11:7"]}},
-{"id":"G08-10","source":"Kitzur Baal HaTurim on Gen 2:7 (sofei tevot)","ref":"Gen 2:7",
- "claim_en":"The final letters of va-yipach be-apav nishmat chayim ('He breathed into his nostrils the breath of life') spell chotam ('seal')",
- "check":{"type":"final_letters","ref":"Gen 2:7","idx":[8,11],"spell":"חותם"}},
-{"id":"G08-11","source":"Kitzur Baal HaTurim on Gen 2:7 (rashei tevot); cf. Bereshit Rabbah 14 (Adam as challah)","ref":"Gen 2:7",
- "claim_en":"The initials of ha-adam le-nefesh chaya ('the man became a living soul') are the letters of challah (the dough-offering)",
- "check":{"type":"initial_letters","ref":"Gen 2:7","idx":[13,15],"multiset_of":"חלה"}},
-{"id":"G08-12","source":"Minchat Shai on Gen 2:10 (Masorah)","ref":"Gen 2:10",
- "claim_en":"The bare go-out participle yotze is written defectively throughout the Torah except three full spellings (Exod 8:16, 8:25, 11:4)",
- "check":{"type":"spelling_variants","where":{"lemma_like":"%3318%","morph_like":"%Vqrmsa%"},"pattern_full":"יוצא","expect_full_refs":["Exod 8:16","Exod 8:25","Exod 11:4"]}},
-{"id":"G08-13","source":"Minchat Shai on Gen 2:9","ref":"Gen 2:9",
- "claim_en":"ve-etz ('and the tree' of knowledge) carries the zaqef gadol accent",
- "check":{"type":"mark","ref":"Gen 2:9","idx":15,"expect_mark":"zaqef_gadol"}},
-{"id":"G08-14","source":"Minchat Shai on Gen 2:15","ref":"Gen 2:15",
- "claim_en":"le-avdah ('to work it') ends in he with mappiq (consonantal 3fs suffix)",
- "check":{"type":"he_contains","ref":"Gen 2:15","idx":8,"contains":"הּ"}},
-{"id":"G08-15","source":"Minchat Shai on Gen 2:15","ref":"Gen 2:15",
- "claim_en":"u-le-shamrah ('and to keep it') ends in he with mappiq (consonantal 3fs suffix)",
- "check":{"type":"he_contains","ref":"Gen 2:15","idx":9,"contains":"הּ"}},
-{"id":"G08-16","source":"Minchat Shai on Gen 2:6","ref":"Gen 2:6",
- "claim_en":"Manuscript traditions differ on the pointing of et in ve-hishqah et kol pene ha-adamah (Ben Naftali dagesh vs Ashkenazi segol+metheg)",
- "check":{"type":"manual","note":"instrument gap - SNAPSHOT carries one pointing tradition; manuscript variants not encoded"}}
+  {
+    "id": "G08-01",
+    "source": "Bereshit Rabbah 12:6; Minchat Shai on Gen 2:4",
+    "ref": "Gen 2:4",
+    "scope": "scripture",
+    "claim_en": "All toledot ('generations') in Scripture are written defectively except Gen 2:4 and Ruth 4:18 (full: both vavs)",
+    "check": {
+      "type": "spelling_variants",
+      "where": {
+        "translit_like": "%told%"
+      },
+      "pattern_full": "תולדות",
+      "expect_full_refs": [
+        "Gen 2:4"
+      ]
+    }
+  },
+  {
+    "id": "G08-02",
+    "source": "Bereshit Rabbah 12:9; Kitzur Baal HaTurim on Gen 2:4",
+    "ref": "Gen 2:4",
+    "claim_en": "be-hibbaram ('when-they-were-created') has exactly the letters of be-Avraham ('for Abraham')",
+    "check": {
+      "type": "letters_multiset",
+      "ref": "Gen 2:4",
+      "idx": 4,
+      "equals_letters_of": "באברהם"
+    }
+  },
+  {
+    "id": "G08-03",
+    "source": "Bereshit Rabbah 12:10; Minchat Shai on Gen 2:4",
+    "ref": "Gen 2:4",
+    "claim_en": "The he of be-hibbaram is written SMALL (he zeira)",
+    "check": {
+      "type": "manual",
+      "note": "instrument gap - SNAPSHOT does not encode Masoretic letter size"
+    }
+  },
+  {
+    "id": "G08-04",
+    "source": "Kitzur Baal HaTurim on Gen 2:7; Minchat Shai on Gen 2:7 (Masorah)",
+    "ref": "Gen 2:7",
+    "claim_en": "va-yitzer ('and He formed') occurs exactly twice as this pointed form - Gen 2:7 (human) and Gen 2:19 (beasts)",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "translit": "va-yitzer"
+      },
+      "expect_total": 2,
+      "expect_refs": [
+        "Gen 2:7",
+        "Gen 2:19"
+      ]
+    }
+  },
+  {
+    "id": "G08-05",
+    "source": "Kitzur Baal HaTurim on Gen 2:7; Minchat Shai; Berakhot 61a; Bereshit Rabbah 14",
+    "ref": "Gen 2:7",
+    "claim_en": "Of the two va-yitzer tokens, only the human one (2:7) is written FULL with double yod; the beasts' (2:19) is defective",
+    "check": {
+      "type": "spelling_variants",
+      "where": {
+        "translit": "va-yitzer"
+      },
+      "pattern_full": "ייצר",
+      "expect_full_refs": [
+        "Gen 2:7"
+      ]
+    }
+  },
+  {
+    "id": "G08-06",
+    "source": "Kitzur Baal HaTurim on Gen 2:6 (Masorah pair with Job 18:12)",
+    "ref": "Gen 2:6",
+    "scope": "scripture",
+    "claim_en": "ve-ed ('and a mist') occurs twice in Scripture; the mist-noun ed is unique in the Torah to Gen 2:6",
+    "check": {
+      "type": "career",
+      "strong": "108",
+      "expect_total": 1
+    }
+  },
+  {
+    "id": "G08-07",
+    "source": "Kitzur Baal HaTurim on Gen 2:4 (Masorah pair with Ps 148:13)",
+    "ref": "Gen 2:4",
+    "scope": "scripture",
+    "claim_en": "The flipped order eretz-then-ve-shamayim ('earth and heavens') occurs twice in Scripture; in the Torah only Gen 2:4",
+    "check": {
+      "type": "adjacency",
+      "first": {
+        "translit_like": "%retz%"
+      },
+      "second": [
+        "ve-shamayim",
+        "ve-ha-shamayim"
+      ],
+      "expect_refs": [
+        "Gen 2:4"
+      ]
+    }
+  },
+  {
+    "id": "G08-08",
+    "source": "Kitzur Baal HaTurim on Gen 2:10 (Masorah pair with Prov 19:4)",
+    "ref": "Gen 2:10",
+    "scope": "scripture",
+    "claim_en": "yipared ('shall be parted') occurs twice in Scripture; in the Torah only Gen 2:10",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "translit": "yipared"
+      },
+      "expect_total": 1,
+      "expect_refs": [
+        "Gen 2:10"
+      ]
+    }
+  },
+  {
+    "id": "G08-09",
+    "source": "Kitzur Baal HaTurim on Gen 2:12 (Masorah)",
+    "ref": "Gen 2:12",
+    "scope": "scripture",
+    "claim_en": "ha-bedolach ('the bdellium') occurs exactly twice in Scripture: Gen 2:12 and Num 11:7 (the manna)",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "translit_like": "%bedola%"
+      },
+      "expect_total": 2,
+      "expect_refs": [
+        "Gen 2:12",
+        "Num 11:7"
+      ]
+    }
+  },
+  {
+    "id": "G08-10",
+    "source": "Kitzur Baal HaTurim on Gen 2:7 (sofei tevot)",
+    "ref": "Gen 2:7",
+    "claim_en": "The final letters of va-yipach be-apav nishmat chayim ('He breathed into his nostrils the breath of life') spell chotam ('seal')",
+    "check": {
+      "type": "final_letters",
+      "ref": "Gen 2:7",
+      "idx": [
+        8,
+        11
+      ],
+      "spell": "חותם"
+    }
+  },
+  {
+    "id": "G08-11",
+    "source": "Kitzur Baal HaTurim on Gen 2:7 (rashei tevot); cf. Bereshit Rabbah 14 (Adam as challah)",
+    "ref": "Gen 2:7",
+    "claim_en": "The initials of ha-adam le-nefesh chaya ('the man became a living soul') are the letters of challah (the dough-offering)",
+    "check": {
+      "type": "initial_letters",
+      "ref": "Gen 2:7",
+      "idx": [
+        13,
+        15
+      ],
+      "multiset_of": "חלה"
+    }
+  },
+  {
+    "id": "G08-12",
+    "source": "Minchat Shai on Gen 2:10 (Masorah)",
+    "ref": "Gen 2:10",
+    "claim_en": "The bare go-out participle yotze is written defectively throughout the Torah except three full spellings (Exod 8:16, 8:25, 11:4)",
+    "check": {
+      "type": "spelling_variants",
+      "where": {
+        "lemma_like": "%3318%",
+        "morph_like": "%Vqrmsa%"
+      },
+      "pattern_full": "יוצא",
+      "expect_full_refs": [
+        "Exod 8:16",
+        "Exod 8:25",
+        "Exod 11:4"
+      ]
+    }
+  },
+  {
+    "id": "G08-13",
+    "source": "Minchat Shai on Gen 2:9",
+    "ref": "Gen 2:9",
+    "claim_en": "ve-etz ('and the tree' of knowledge) carries the zaqef gadol accent",
+    "check": {
+      "type": "mark",
+      "ref": "Gen 2:9",
+      "idx": 15,
+      "expect_mark": "zaqef_gadol"
+    }
+  },
+  {
+    "id": "G08-14",
+    "source": "Minchat Shai on Gen 2:15",
+    "ref": "Gen 2:15",
+    "claim_en": "le-avdah ('to work it') ends in he with mappiq (consonantal 3fs suffix)",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 2:15",
+      "idx": 8,
+      "contains": "הּ"
+    }
+  },
+  {
+    "id": "G08-15",
+    "source": "Minchat Shai on Gen 2:15",
+    "ref": "Gen 2:15",
+    "claim_en": "u-le-shamrah ('and to keep it') ends in he with mappiq (consonantal 3fs suffix)",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 2:15",
+      "idx": 9,
+      "contains": "הּ"
+    }
+  },
+  {
+    "id": "G08-16",
+    "source": "Minchat Shai on Gen 2:6",
+    "ref": "Gen 2:6",
+    "claim_en": "Manuscript traditions differ on the pointing of et in ve-hishqah et kol pene ha-adamah (Ben Naftali dagesh vs Ashkenazi segol+metheg)",
+    "check": {
+      "type": "manual",
+      "note": "instrument gap - SNAPSHOT carries one pointing tradition; manuscript variants not encoded"
+    }
+  },
+  {
+    "id": "G08-17",
+    "source": "Bereshit Rabbah 14:10",
+    "middah": "E7",
+    "claim_en": "The breath-construct נִשְׁמַת (nishmat, 'breath of') stands in the Torah in EXACTLY TWO places - Genesis 2:7, the forming of the human, and Genesis 7:22, the flood's dying - and Bereshit Rabbah 14:10 joins them by the verbal analogy it calls chayim-chayim ('life'-'life'), ruling the soul-terms interchangeable. The machine confirms the pair is unique: both verses carry the same three elements, נִשְׁמַת ('breath of'), חַיִּים ('life'), and בְּאַפָּיו ('into his nostrils').",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "נשמת"
+      },
+      "expect_total": 2,
+      "expect_refs": [
+        "Gen 2:7",
+        "Gen 7:22"
+      ]
+    }
+  },
+  {
+    "id": "G08-18",
+    "source": "Bereshit Rabbah 13:3; Bereshit Rabbah 12:15",
+    "claim_en": "The BARE compound name יְהוָה אֱלֹהִים (YHWH Elohim, 'the LORD God') - the personal name followed by the unsuffixed generic - stands in the Torah in exactly twenty verses: nineteen across Genesis 2-3, the Eden narrative, and Exodus 9:30 alone outside it. Bereshit Rabbah 13:3 gives the rule for its debut at our 2:4 - שֵׁם מָלֵא עַל עוֹלָם מָלֵא (shem malei al olam malei, 'a complete Name over a completed world') - and Bereshit Rabbah 12:15 reads the compound as mercy mixed with strict justice, like hot water with cold, so the world endures.",
+    "check": {
+      "type": "adjacency",
+      "first": {
+        "translit": "YHWH"
+      },
+      "second": [
+        "Elohim"
+      ],
+      "expect_refs": [
+        "Gen 2:4",
+        "Gen 2:5",
+        "Gen 2:7",
+        "Gen 2:8",
+        "Gen 2:9",
+        "Gen 2:15",
+        "Gen 2:16",
+        "Gen 2:18",
+        "Gen 2:19",
+        "Gen 2:21",
+        "Gen 2:22",
+        "Gen 3:1",
+        "Gen 3:8",
+        "Gen 3:9",
+        "Gen 3:13",
+        "Gen 3:14",
+        "Gen 3:21",
+        "Gen 3:22",
+        "Gen 3:23",
+        "Exod 9:30"
+      ]
+    }
+  },
+  {
+    "id": "G08-19",
+    "source": "Taanit 22b:11; Bereshit Rabbah 14:9",
+    "claim_en": "The phrase נֶפֶשׁ חַיָּה (nefesh chayah, 'a living soul') stands in the Torah exactly eight times, ALL of them in Genesis: 1:20, 1:24, 1:30 (the creatures), our 2:7 and 2:19, and 9:12, 9:15, 9:16 (the covenant after the flood). Our 2:7 is the only seat where it is prefixed - לְנֶפֶשׁ חַיָּה (le-nefesh chayah, 'INTO a living soul') - the human entering the category the swarms already held. Taanit 22b:11 reads the phrase at our verse as a COMMAND, not a description: R. Yosei forbids self-affliction by fasting because 'the soul I placed within you - keep it alive'. Bereshit Rabbah 14:9 types the five names of the soul on the same verse, with נֶפֶשׁ (nefesh) identified as the BLOOD (Deuteronomy 12:23).",
+    "check": {
+      "type": "adjacency",
+      "first": {
+        "lemma_like": "%5315%"
+      },
+      "second": [
+        "chaya"
+      ],
+      "expect_refs": [
+        "Gen 1:20",
+        "Gen 1:24",
+        "Gen 1:30",
+        "Gen 2:7",
+        "Gen 2:19",
+        "Gen 9:12",
+        "Gen 9:15",
+        "Gen 9:16"
+      ]
+    }
+  },
+  {
+    "id": "G08-20",
+    "source": "Bereshit Rabbah 12:7",
+    "claim_en": "תּוֹלְדוֹת (toledot, 'generations'), the section-header word our 2:4 debuts, is read as a CLASS MARKER on what it heads: whatever has generations 'dies, decomposes, is created but does not create'. The header therefore types its own subject as mortal - and our verse applies it, uniquely in the corpus, to the heavens and the earth rather than to a person.",
+    "check": {
+      "type": "manual",
+      "note": "Interpretive class-typing. Rides the standing DB-verified census of thirteen toledot seats in Genesis (lemma 8435) and standing claim G08-01's spelling finding - our 2:4 is written FULL where the other twelve run defective."
+    }
+  },
+  {
+    "id": "G08-21",
+    "source": "Tosefta Keritot 4:7; Bereshit Rabbah 12:12",
+    "claim_en": "Our 2:4's chiasm - the header's הַשָּׁמַיִם וְהָאָרֶץ ('the heavens and the earth') answered by the date-line's אֶרֶץ וְשָׁמָיִם ('earth and heavens') - is read at a tannaitic seat as a deliberate equalizer. R. Shimon in Tosefta Keritot 4:7: everywhere the heavens precede the earth, but in this one place the order flips, teaching that THE TWO ARE EQUAL. Bereshit Rabbah 12:12 argues the same by the palace and ship analogies: they were created as ONE act. The machine's recorded spec-delta on this verse is thereby witnessed as intentional, not a defect.",
+    "check": {
+      "type": "manual",
+      "note": "Interpretive. Rides standing claim G08-07, which machine-checks the flipped order's adjacency."
+    }
+  },
+  {
+    "id": "G08-22",
+    "source": "Bereshit Rabbah 13:9; Mekhilta DeRabbi Yishmael, Tractate Shirah 2:4",
+    "claim_en": "Our 2:6 mist, אֵד (ed), is read as the world's ORIGINAL irrigation regime, later reconsidered and replaced by rain from above for four stated reasons. The chain thus records a spec change on the machine's own precondition state. Mekhilta DeRabbi Yishmael, Tractate Shirah 2:4 then shows the flood generation WEAPONIZING this very verse - 'we need Him not even for rain; a mist rises from the earth' - and being answered measure for measure with water from above (Genesis 7:12).",
+    "check": {
+      "type": "manual",
+      "note": "Interpretive regime-change record plus a cross-corpus join to the flood narrative."
+    }
+  },
+  {
+    "id": "G08-23",
+    "source": "Sukkah 11b:14; Jerusalem Talmud Sukkah 1:5:4; Jerusalem Talmud Shabbat 2:6:10",
+    "claim_en": "Two laws are grounded on our 2:6 mist verse. Resh Lakish derives the SUKKAH-ROOF specification from it - thatch must be insusceptible to impurity and grown from the ground, just as the mist arises from the earth. And the Jerusalem Talmud reads Adam as the BLOOD of the world from the same verse, handing the niddah commandment to the woman - the first of the three commandments the tradition assigns her.",
+    "check": {
+      "type": "manual",
+      "note": "Two laws riding one precondition-state operator; interpretive derivation."
+    }
+  },
+  {
+    "id": "G08-24",
+    "source": "Berakhot 61a:3; Bereshit Rabbah 14:2; Bereshit Rabbah 14:3; Eruvin 18a:20",
+    "claim_en": "The double-yod spelling of וַיִּיצֶר (va-yitzer, 'and He formed') at our 2:7 - the machine's recorded spec delta, written full here and defective at 2:19 - carries FOUR recorded readings, held dual-track: two inclinations, good and evil, created in the forming (Berakhot 61a:3); two formations, of man and of woman, carrying the seven-month viability measure (Bereshit Rabbah 14:2); formation from the lower and the upper realms, four animal traits with four angelic (Bereshit Rabbah 14:3); and one yod for Adam and one for Eve (Eruvin 18a:20).",
+    "check": {
+      "type": "manual",
+      "note": "Four recorded readings of one spelling. Rides standing claim G08-05, which machine-checks the full/defective pair."
+    }
+  },
+  {
+    "id": "G08-25",
+    "source": "Niddah 22b:13; Chullin 71a:12",
+    "middah": "I2",
+    "claim_en": "Because the forming verb יָצַר (yatzar, 'formed') is written of the human at our 2:7 AND of the beasts at 2:19, a BIRTH-IMPURITY law is derived by verbal analogy: a miscarriage bearing animal form still counts for the purity periods. The machine's own two-token census of the verb is the law's ground.",
+    "check": {
+      "type": "manual",
+      "note": "Law derived by gezerah shavah at law strength. Rides standing claim G08-04's verified two-token census."
+    }
+  },
+  {
+    "id": "G08-26",
+    "source": "Bereshit Rabbah 15:3; Pesachim 54a:10; Bereshit Rabbah 15:2",
+    "claim_en": "Two recorded disputes sit on our 2:8 planting. WHEN: מִקֶּדֶם (mikedem) is read not as 'in the east' but as BEFOREHAND - the garden planted on day three, before the human of day six (Bereshit Rabbah 15:3) - against Pesachim 54a:10, which reads it mi-kodem, the garden created BEFORE THE WORLD, one of the seven pre-creation things. WHAT CONTAINS WHAT: the machine models the garden inside Eden, and the containment relation is itself disputed - R. Yehuda holds the garden the larger, R. Yosei holds Eden the larger (Bereshit Rabbah 15:2). Both carried dual-track; the modeled parent edge stands.",
+    "check": {
+      "type": "manual",
+      "note": "Created-time versus narrated-time, and a container dispute on a modeled edge."
+    }
+  },
+  {
+    "id": "G08-27",
+    "source": "Ketubot 10b:10; Bereshit Rabbah 16:2",
+    "claim_en": "The machine flags our 2:11-14 river geography as known-geography - places named before they existed. The chain supplies the RULE for exactly this class at its legal seat: 'and is a verse written for the future? YES' - Rav Yosef, on our 2:14's אַשּׁוּר (Ashur), which he identifies as Seleucia, named before it was founded. Bereshit Rabbah 16:2 states the same of Havilah: 'it did not yet exist - He tells the outcome from the outset' (Isaiah 46:10). The machine's presupposition flags are thereby upgraded from unexplained forward references to a chain-ruled device.",
+    "check": {
+      "type": "manual",
+      "note": "A named hermeneutic rule adopted for an existing operator class."
+    }
+  },
+  {
+    "id": "G08-28",
+    "source": "Sanhedrin 56b:4; Bereshit Rabbah 16:6; Pesikta DeRav Kahana 12:1; Sanhedrin 56b:23",
+    "claim_en": "THE CROWN OF THIS UNIT. R. Yochanan derives the commandments binding all humanity word by word from our 2:16 declare-operator: צַו (tzav, 'command') yields the ban on idolatry; יְהוָה (YHWH) blasphemy; אֱלֹהִים (Elohim) the duty of courts; הָאָדָם (ha-adam, 'the man') bloodshed; לֵאמֹר (lemor, 'saying') the forbidden relations; and מִכֹּל עֵץ הַגָּן ('of every tree of the garden') robbery. Pesikta DeRav Kahana 12:1 extends it into an accretion ladder - six to Adam, the limb-from-the-living added for Noah, and onward to Sinai. The count is itself disputed and the dissent is recorded: R. Yehuda holds Adam was commanded on idolatry ONLY, R. Yehuda ben Beteira adds blessing the Name, others add courts (Sanhedrin 56b:23).",
+    "check": {
+      "type": "manual",
+      "note": "Six laws read off one operator's own words, with the count carried as a recorded dispute."
+    }
+  },
+  {
+    "id": "G08-29",
+    "source": "Bereshit Rabbah 19:8; Bereshit Rabbah 19:3; Sanhedrin 29a:34; Jerusalem Talmud Kiddushin 4:1:9",
+    "claim_en": "The death-penalty handler our 2:17 installs appears never to fire - the human eats and does not die that day - and the chain resolves it three ways on the operator's own wording. SCOPE OF THE DAY: 'you do not know whether one of My days or one of yours; I will grant him one of Mine, a thousand years' (Psalms 90:4) - so the handler DID fire, Adam dying at 930, inside the divine day. EXACT PAYLOAD: the prohibition was on EATING only; the touching clause is the woman's addition at 3:3, and on this exact gap Sanhedrin 29a:34 mints the legal principle כָּל הַמּוֹסִיף גּוֹרֵעַ (kol ha-mosif gorea, 'whoever adds, subtracts') - the fence built taller than the law is what the serpent pushed against. MOTIVE ON RECORD: the serpent is quoted reasoning FROM our clause - 'I know He said on the day you eat you shall die; I will trick them and they will be punished'.",
+    "check": {
+      "type": "manual",
+      "note": "Handler firing semantics, exact payload scope, and a recorded motive - all read off one operator."
+    }
+  }
 ]

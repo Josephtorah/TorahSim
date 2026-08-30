@@ -1,31 +1,184 @@
 [
-  {"id": "G15-01", "source": "Kitzur Baal HaTurim on Gen 6:4; Minchat Shai (Masorah; Zohar I:117)", "ref": "Gen 6:4",
-   "scope": "scripture",
-   "claim_en": "הנפלים (\"the Nephilim, the fallen ones\") — the Masorah's trio: \"one plene, two defective\" — HERE defective (first yod missing), the spies' \"there we saw the Nephilim\" (Num 13:33) PLENE, and \"sons of the giant, of the Nephilim\" (Num 13:33) defective again. The Kitzur rides Niddah 61a's Shamchazai tradition on the defective letter; the Zohar reads the missing yod on the unborn. SNAPSHOT: three tokens, exactly one plene.",
-   "check": {"type": "spelling_variants", "where": {"translit": "ha-nefilim"},
-             "pattern_full": "נפילים", "expect_full_refs": ["Num 13:33"]}},
-
-  {"id": "G15-02", "source": "Minchat Shai on Gen 6:3 (Zohar I:58a named)", "ref": "Gen 6:3",
-   "claim_en": "לעלם (\"forever\" — \"My spirit shall not abide in man forever\") — written DEFECTIVE without vav; the Zohar's reading on the diminished world-word is named at the letter. SNAPSHOT letter-exact.",
-   "check": {"type": "letters_multiset", "ref": "Gen 6:3", "idx": 6,
-             "equals_letters_of": "לעלם"}},
-
-  {"id": "G15-03", "source": "Minchat Shai on Gen 6:5 (Ramah)", "ref": "Gen 6:5",
-   "claim_en": "מחשבת (\"the devisings of his heart\") — the Ramah's rule: \"every יצר מחשבת לבו is written defective without vav.\" SNAPSHOT letter-exact in the total-diagnosis verse.",
-   "check": {"type": "letters_multiset", "ref": "Gen 6:5", "idx": 9,
-             "equals_letters_of": "מחשבת"}},
-
-  {"id": "G15-04", "source": "Minchat Shai on Gen 6:4", "ref": "Gen 6:4",
-   "claim_en": "בימים ההם (\"in those days\") — the second he of ההם pointed with TSERE (the long e-vowel), not segol. SNAPSHOT agrees.",
-   "check": {"type": "he_contains", "ref": "Gen 6:4", "idx": 4, "contains": "הֵ"}},
-
-  {"id": "G15-05", "source": "Minchat Shai on Gen 6:4 (Ramah)", "ref": "Gen 6:4",
-   "claim_en": "אחרי כן (\"after that\") — \"TWO words with a maqqef (joining hyphen) between them, and all [occurrences] are written so\" (Ramah). SNAPSHOT's maqqef column joins them here.",
-   "check": {"type": "maqqef_after", "ref": "Gen 6:4", "idx": 6, "expect": 1}},
-
-  {"id": "G15-06", "source": "Minchat Shai on Gen 6:7 (Masorah)", "ref": "Gen 6:7",
-   "scope": "scripture",
-   "claim_en": "מאדם עד בהמה (\"from man TO beast,\" the wipe-scope) — the Masorah's book-rule: all of GENESIS (with Numbers and Psalms) reads bare עד; Exodus and Jeremiah read ועד (\"and-to\"). SNAPSHOT: the bare עד locked in the un-creation list.",
-   "check": {"type": "letters_multiset", "ref": "Gen 6:7", "idx": 11,
-             "equals_letters_of": "עד"}}
+  {
+    "id": "G15-01",
+    "source": "Kitzur Baal HaTurim on Gen 6:4; Minchat Shai (Masorah; Zohar I:117)",
+    "ref": "Gen 6:4",
+    "scope": "scripture",
+    "claim_en": "הנפלים (\"the Nephilim, the fallen ones\") — the Masorah's trio: \"one plene, two defective\" — HERE defective (first yod missing), the spies' \"there we saw the Nephilim\" (Num 13:33) PLENE, and \"sons of the giant, of the Nephilim\" (Num 13:33) defective again. The Kitzur rides Niddah 61a's Shamchazai tradition on the defective letter; the Zohar reads the missing yod on the unborn. SNAPSHOT: three tokens, exactly one plene.",
+    "check": {
+      "type": "spelling_variants",
+      "where": {
+        "translit": "ha-nefilim"
+      },
+      "pattern_full": "נפילים",
+      "expect_full_refs": [
+        "Num 13:33"
+      ]
+    }
+  },
+  {
+    "id": "G15-02",
+    "source": "Minchat Shai on Gen 6:3 (Zohar I:58a named)",
+    "ref": "Gen 6:3",
+    "claim_en": "לעלם (\"forever\" — \"My spirit shall not abide in man forever\") — written DEFECTIVE without vav; the Zohar's reading on the diminished world-word is named at the letter. SNAPSHOT letter-exact.",
+    "check": {
+      "type": "letters_multiset",
+      "ref": "Gen 6:3",
+      "idx": 6,
+      "equals_letters_of": "לעלם"
+    }
+  },
+  {
+    "id": "G15-03",
+    "source": "Minchat Shai on Gen 6:5 (Ramah)",
+    "ref": "Gen 6:5",
+    "claim_en": "מחשבת (\"the devisings of his heart\") — the Ramah's rule: \"every יצר מחשבת לבו is written defective without vav.\" SNAPSHOT letter-exact in the total-diagnosis verse.",
+    "check": {
+      "type": "letters_multiset",
+      "ref": "Gen 6:5",
+      "idx": 9,
+      "equals_letters_of": "מחשבת"
+    }
+  },
+  {
+    "id": "G15-04",
+    "source": "Minchat Shai on Gen 6:4",
+    "ref": "Gen 6:4",
+    "claim_en": "בימים ההם (\"in those days\") — the second he of ההם pointed with TSERE (the long e-vowel), not segol. SNAPSHOT agrees.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 6:4",
+      "idx": 4,
+      "contains": "הֵ"
+    }
+  },
+  {
+    "id": "G15-05",
+    "source": "Minchat Shai on Gen 6:4 (Ramah)",
+    "ref": "Gen 6:4",
+    "claim_en": "אחרי כן (\"after that\") — \"TWO words with a maqqef (joining hyphen) between them, and all [occurrences] are written so\" (Ramah). SNAPSHOT's maqqef column joins them here.",
+    "check": {
+      "type": "maqqef_after",
+      "ref": "Gen 6:4",
+      "idx": 6,
+      "expect": 1
+    }
+  },
+  {
+    "id": "G15-06",
+    "source": "Minchat Shai on Gen 6:7 (Masorah)",
+    "ref": "Gen 6:7",
+    "scope": "scripture",
+    "claim_en": "מאדם עד בהמה (\"from man TO beast,\" the wipe-scope) — the Masorah's book-rule: all of GENESIS (with Numbers and Psalms) reads bare עד; Exodus and Jeremiah read ועד (\"and-to\"). SNAPSHOT: the bare עד locked in the un-creation list.",
+    "check": {
+      "type": "letters_multiset",
+      "ref": "Gen 6:7",
+      "idx": 11,
+      "equals_letters_of": "עד"
+    }
+  },
+  {
+    "id": "G15-07",
+    "source": "Bava Batra 16b:6; Bereshit Rabbah 26:4",
+    "claim_en": "לָרֹב (larov) at our 6:1 is read two ways and both are carried: R. Yochanan reads that PROPAGATION came into the world; Reish Lakish reads מְרִיבָה (meriva, 'STRIFE') came into the world. The multiplication the machine records as growth is read by one seat as the arrival of conflict.",
+    "check": {
+      "type": "manual",
+      "note": "One word, two readings of what the multiplication brought."
+    }
+  },
+  {
+    "id": "G15-08",
+    "source": "Bereshit Rabbah 26:5; Yoma 67b:7",
+    "claim_en": "THE IDENTITY OF בְּנֵי הָאֱלֹהִים (benei ha-elohim) IS A STANDING MACHLOKET, AND ONE SIDE CURSES THE OTHER. R. Shimon ben Yochai renders them 'the sons of the JUDGES' and CURSES those who render the phrase literally; the school of R. Yishmael reads them as the fallen ones and joins the scapegoat law to them - the goat atoning 'for the deeds of Uzza and Azael'. Both are carried dual-track. Beside it an ink point: טֹבֹת (tovot, 'good', of the daughters) at 6:2 is written DEFECTIVE, and the chain reads the seigneur taking first. Verified at derivation: this defective spelling stands in the Torah exactly twice - our 6:2 and Genesis 24:16, where Rebecca is 'very GOOD of appearance'.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "טבת"
+      },
+      "expect_total": 2,
+      "expect_refs": [
+        "Gen 6:2",
+        "Gen 24:16"
+      ]
+    }
+  },
+  {
+    "id": "G15-09",
+    "source": "Chullin 139b:10",
+    "middah": "E29",
+    "claim_en": "THE LAWGIVER STANDS IN THIS CLAUSE IN CIPHER. To the question 'Moses - from where in the Torah?' the answer given is בְּשַׁגַּם (be-shagam) of OUR 6:3, whose letters total three hundred and forty-five, the same as מֹשֶׁה (Moshe) - and the clause continues 'his days shall be a hundred and twenty years', which is exactly Moses' lifespan. Verified at derivation: be-shagam stands in the Torah exactly once, here; and the two numeric values are computed as equal, both three hundred and forty-five. Argues middah E29 (numerical value).",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "בשגם"
+      },
+      "expect_total": 1,
+      "expect_refs": [
+        "Gen 6:3"
+      ]
+    }
+  },
+  {
+    "id": "G15-10",
+    "source": "Mishnah Sanhedrin 10:3; Tosefta Sanhedrin 13:1; Jerusalem Talmud Sanhedrin 10:3:3; Bereshit Rabbah 26:6",
+    "claim_en": "A CANONICAL CASE-TABLE ROW DERIVES ITS RULING FROM OUR 6:3's OWN TOKEN. The Mishnah rules that the generation of the Flood has no share in the world to come AND DOES NOT STAND IN JUDGMENT, and states its proof from this verse: לֹא יָדוֹן רוּחִי (lo yadon ruchi) - neither judgment nor spirit. The tannaim parse the clause four ways at the Jerusalem Talmud seat, and the semantic field is developed at Bereshit Rabbah - no return of the spirit to its sheath, and so no resurrection for that generation. R. Nechemyah dissents.",
+    "check": {
+      "type": "manual",
+      "note": "A Mishnah verdict row whose stated derivation is this unit's own clause - testing-shelf material anchored at its verse."
+    }
+  },
+  {
+    "id": "G15-11",
+    "source": "Mekhilta DeRabbi Yishmael, Tractate Shirah 5:8; Sifrei Devarim 43:31; Bereshit Rabbah 30:7",
+    "claim_en": "The hundred and twenty years of our 6:3 are read as a GRACE PERIOD, not a lifespan cap: 'You did not decree destruction until they consummated their evil'. The period is filled with warning - the righteous man planting and felling cedars for the ark in view of the generation and mocked as a contemptible old man - and the grace is limited by a stated contrast: 'the flood generation had no one to learn from; you have'.",
+    "check": {
+      "type": "manual",
+      "note": "A time-anchor operator read as a deadline with a warning function."
+    }
+  },
+  {
+    "id": "G15-12",
+    "source": "Kiddushin 30b:6; Sukkah 52b:1; Bava Batra 16a:8",
+    "claim_en": "The inclination-clause of our 6:5 is read as describing a live adversary rather than a disposition: it RENEWS DAILY, read out of this verse's 'all the day'; it overcomes a person daily and SEEKS TO KILL HIM, and were God not helping him he could not withstand it; and it is identified outright with the Accuser and with the angel of death, this verse's 'only evil all the day' serving as the identification's proof-slot.",
+    "check": {
+      "type": "manual",
+      "note": "A descriptive clause read as installing a persistent adversarial process."
+    }
+  },
+  {
+    "id": "G15-13",
+    "source": "Jerusalem Talmud Bava Metzia 4:2:2; Sanhedrin 108a:12",
+    "claim_en": "חָמָס (chamas, 'violence') IS DEFINED AT LAW AS THEFT ENGINEERED BELOW THE COURT'S JURISDICTION. The generation's crime is described concretely: one would come with a box of lupines and each would take LESS THAN A PERUTAH - 'a matter that cannot be brought before judges'. Each taking is individually unactionable by design. And the sealing-cause is stated: 'they violated everything, but the decree was SEALED only when they stretched their hands into ROBBERY'. The verdict operator's trigger is therefore a crime built to be immune to adjudication.",
+    "check": {
+      "type": "manual",
+      "note": "A named offence defined by its evasion of the legal threshold - the trigger of this unit's destruction decree."
+    }
+  },
+  {
+    "id": "G15-14",
+    "source": "Bereshit Rabbah 27:4; Sanhedrin 108a:15; Sifrei Devarim 326:1",
+    "claim_en": "וַיִּנָּחֶם (va-yinachem) at our 6:6 carries a POLARITY DISPUTE. Read as regret it is the machine's plain sense; read as SOLACE it inverts - Rav Dimi: 'I did WELL that I prepared graves in the earth', comfort rather than regret. At the tannaitic seat the verb's semantics are fixed as SECOND THOUGHTS. The parenthetical grief is read as aimed at His own heart. The operator is carried with both polarities.",
+    "check": {
+      "type": "manual",
+      "note": "A verb whose polarity is disputed - regret against solace - both carried on one operator."
+    }
+  },
+  {
+    "id": "G15-15",
+    "source": "Bereshit Rabbah 28:6; Bereshit Rabbah 28:8; Bereshit Rabbah 28:3",
+    "claim_en": "THE SCOPE OF THE BLOTTING-OUT IS ARGUED, AND THE EARTH IS FOUND TO HAVE STRAYED TOO. Why the animals die is answered by parable - the pedagogue punished with the pupil, the canopy dismantled when the son is lost. The totality is pressed to its limits, even the dust of the first man, even the indestructible bone of the spine, with a recorded audience-refusal when it was preached. And the corruption is read as CROSS-SPECIES, on an ink point: 'ALL FLESH corrupted its way' - all flesh, not all MAN - with the earth itself straying, wheat sown and darnel produced. This is the earth's second recorded deviation in the corpus.",
+    "check": {
+      "type": "manual",
+      "note": "A destruction-scope rationale plus the earth's second recorded deviation, read off the all-flesh wording."
+    }
+  },
+  {
+    "id": "G15-16",
+    "source": "Bereshit Rabbah 29:3; Bereshit Rabbah 29:4; Bereshit Rabbah 29:1; Bereshit Rabbah 29:5",
+    "claim_en": "EVEN THE DIRECTION OF OUR 6:8 IS DISPUTED. In the three-finds census Noah is EXCLUDED with a precise reason: 'HE found; the Holy One did not find HIM' - the favour flowing one way only. What the favour granted is graded three ways by verbal analogy - favour as friendship, as authority, as wisdom. His merit is minimised - one ounce, escaping 'by the pureness of YOUR hands' - and inverted outright at another seat: kindness shown to the earlier by merit of the LATER, Noah saved by his descendants.",
+    "check": {
+      "type": "manual",
+      "note": "Direction, grade and ground of the favour operator all disputed and carried without merger."
+    }
+  }
 ]

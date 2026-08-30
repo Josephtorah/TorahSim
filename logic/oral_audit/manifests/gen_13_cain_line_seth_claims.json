@@ -1,37 +1,167 @@
 [
-  {"id": "G13-01", "source": "Minchat Shai on Gen 4:18 (Ramah; Masorah)", "ref": "Gen 4:18",
-   "claim_en": "מחויאל (\"Mechuyael\") — first mention: soft yod, FULL with vav BEFORE the yod (Ramah's spelling rule for the first token).",
-   "check": {"type": "letters_multiset", "ref": "Gen 4:18", "idx": 7,
-             "equals_letters_of": "מחויאל"}},
-
-  {"id": "G13-02", "source": "Minchat Shai on Gen 4:18 (Masorah at Behaalotcha)", "ref": "Gen 4:18",
-   "claim_en": "ומחייאל (\"and Mechiyael\") — the SAME MAN respelled inside the SAME VERSE: first token vav, second token double yod — one of the Masorah's SEVEN CHANGING PAIRS (two spellings of one name in one context). The frozen unit held this letter-fact unattributed; the chain owns it.",
-   "check": {"type": "letters_multiset", "ref": "Gen 4:18", "idx": 8,
-             "equals_letters_of": "ומחייאל"}},
-
-  {"id": "G13-03", "source": "Minchat Shai on Gen 4:22", "ref": "Gen 4:22",
-   "claim_en": "וצלה גם הוא (\"and Tzillah, she also\") — הוא WRITTEN with vav (the masculine skeleton), READ as feminine: SNAPSHOT points it הִוא with hiriq (the read-form's vowel inside the written form) — the Torah's standing written-vs-read (ktiv/qere) on this pronoun, confirmed here by manuscripts and the early print (Minchat Shai).",
-   "check": {"type": "he_contains", "ref": "Gen 4:22", "idx": 2, "contains": "הִ"}},
-
-  {"id": "G13-04", "source": "Minchat Shai on Gen 4:22", "ref": "Gen 4:22",
-   "claim_en": "וצלה גם הוא — the gimel of גם (\"also\") is SOFT (no dagesh, the doubling dot): gimel+patach contiguous in SNAPSHOT.",
-   "check": {"type": "he_contains", "ref": "Gen 4:22", "idx": 1, "contains": "גַ"}},
-
-  {"id": "G13-05", "source": "Minchat Shai on Gen 4:26", "ref": "Gen 4:26",
-   "claim_en": "ולשת גם הוא (\"and to Seth, he also\") — the same phrase four verses on, and THIS gimel carries the dagesh (doubling dot): Tzillah's soft גם and Seth's hard גם are a pointed minimal pair across the chapter's pivot.",
-   "check": {"type": "he_contains", "ref": "Gen 4:26", "idx": 1, "contains": "גּ"}},
-
-  {"id": "G13-06", "source": "Minchat Shai on Gen 4:22 (Western vs Eastern Masorah)", "ref": "Gen 4:22",
-   "claim_en": "תובל קין (\"Tubal-Cain\") — the Easterners write and read it as ONE word; the Westerners, \"and we hold like the Westerners\" (Minchat Shai, Ramah), as TWO. SNAPSHOT: two tokens, תובל adjacent to קין, both occurrences.",
-   "check": {"type": "adjacency", "first": {"translit": "tuval"}, "second": "qayin",
-             "expect_refs": ["Gen 4:22"]}},
-
-  {"id": "G13-07", "source": "Minchat Shai on Gen 4:22 (Ramah)", "ref": "Gen 4:22",
-   "claim_en": "תובל written FULL with vav — the Ramah: \"in the Torah we find no plene ones besides these two\" (both in this verse; Japheth's תבל, Gen 10:2, is defective). SNAPSHOT: exactly two plene tokens, both at 4:22.",
-   "check": {"type": "token_count", "where": {"translit": "tuval"},
-             "expect_total": 2, "expect_refs": ["Gen 4:22"]}},
-
-  {"id": "G13-08", "source": "Minchat Shai on Gen 4:23 (Chizkuni; Mikhlol)", "ref": "Gen 4:23",
-   "claim_en": "האזנה (\"give ear,\" the sword-song's summons) — the copies split: many point the zayin with segol; Chizkuni and old manuscripts with TSERE (\"on the pattern of הפקדנה,\" the Mikhlol), the alef quiescent. SNAPSHOT: alef with silent sheva, zayin with TSERE — the Chizkuni camp.",
-   "check": {"type": "he_contains", "ref": "Gen 4:23", "idx": 9, "contains": "זֵ"}}
+  {
+    "id": "G13-01",
+    "source": "Minchat Shai on Gen 4:18 (Ramah; Masorah)",
+    "ref": "Gen 4:18",
+    "claim_en": "מחויאל (\"Mechuyael\") — first mention: soft yod, FULL with vav BEFORE the yod (Ramah's spelling rule for the first token).",
+    "check": {
+      "type": "letters_multiset",
+      "ref": "Gen 4:18",
+      "idx": 7,
+      "equals_letters_of": "מחויאל"
+    }
+  },
+  {
+    "id": "G13-02",
+    "source": "Minchat Shai on Gen 4:18 (Masorah at Behaalotcha)",
+    "ref": "Gen 4:18",
+    "claim_en": "ומחייאל (\"and Mechiyael\") — the SAME MAN respelled inside the SAME VERSE: first token vav, second token double yod — one of the Masorah's SEVEN CHANGING PAIRS (two spellings of one name in one context). The frozen unit held this letter-fact unattributed; the chain owns it.",
+    "check": {
+      "type": "letters_multiset",
+      "ref": "Gen 4:18",
+      "idx": 8,
+      "equals_letters_of": "ומחייאל"
+    }
+  },
+  {
+    "id": "G13-03",
+    "source": "Minchat Shai on Gen 4:22",
+    "ref": "Gen 4:22",
+    "claim_en": "וצלה גם הוא (\"and Tzillah, she also\") — הוא WRITTEN with vav (the masculine skeleton), READ as feminine: SNAPSHOT points it הִוא with hiriq (the read-form's vowel inside the written form) — the Torah's standing written-vs-read (ktiv/qere) on this pronoun, confirmed here by manuscripts and the early print (Minchat Shai).",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 4:22",
+      "idx": 2,
+      "contains": "הִ"
+    }
+  },
+  {
+    "id": "G13-04",
+    "source": "Minchat Shai on Gen 4:22",
+    "ref": "Gen 4:22",
+    "claim_en": "וצלה גם הוא — the gimel of גם (\"also\") is SOFT (no dagesh, the doubling dot): gimel+patach contiguous in SNAPSHOT.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 4:22",
+      "idx": 1,
+      "contains": "גַ"
+    }
+  },
+  {
+    "id": "G13-05",
+    "source": "Minchat Shai on Gen 4:26",
+    "ref": "Gen 4:26",
+    "claim_en": "ולשת גם הוא (\"and to Seth, he also\") — the same phrase four verses on, and THIS gimel carries the dagesh (doubling dot): Tzillah's soft גם and Seth's hard גם are a pointed minimal pair across the chapter's pivot.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 4:26",
+      "idx": 1,
+      "contains": "גּ"
+    }
+  },
+  {
+    "id": "G13-06",
+    "source": "Minchat Shai on Gen 4:22 (Western vs Eastern Masorah)",
+    "ref": "Gen 4:22",
+    "claim_en": "תובל קין (\"Tubal-Cain\") — the Easterners write and read it as ONE word; the Westerners, \"and we hold like the Westerners\" (Minchat Shai, Ramah), as TWO. SNAPSHOT: two tokens, תובל adjacent to קין, both occurrences.",
+    "check": {
+      "type": "adjacency",
+      "first": {
+        "translit": "tuval"
+      },
+      "second": "qayin",
+      "expect_refs": [
+        "Gen 4:22"
+      ]
+    }
+  },
+  {
+    "id": "G13-07",
+    "source": "Minchat Shai on Gen 4:22 (Ramah)",
+    "ref": "Gen 4:22",
+    "claim_en": "תובל written FULL with vav — the Ramah: \"in the Torah we find no plene ones besides these two\" (both in this verse; Japheth's תבל, Gen 10:2, is defective). SNAPSHOT: exactly two plene tokens, both at 4:22.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "translit": "tuval"
+      },
+      "expect_total": 2,
+      "expect_refs": [
+        "Gen 4:22"
+      ]
+    }
+  },
+  {
+    "id": "G13-08",
+    "source": "Minchat Shai on Gen 4:23 (Chizkuni; Mikhlol)",
+    "ref": "Gen 4:23",
+    "claim_en": "האזנה (\"give ear,\" the sword-song's summons) — the copies split: many point the zayin with segol; Chizkuni and old manuscripts with TSERE (\"on the pattern of הפקדנה,\" the Mikhlol), the alef quiescent. SNAPSHOT: alef with silent sheva, zayin with TSERE — the Chizkuni camp.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 4:23",
+      "idx": 9,
+      "contains": "זֵ"
+    }
+  },
+  {
+    "id": "G13-09",
+    "source": "Bereshit Rabbah 23:1",
+    "claim_en": "The build-and-name operator of our 4:17 is read as the wicked man's bid for immortality - naming a city after a son so the name endures - answered by 'their inward thought is that their houses shall continue forever', and by the ruling that in the end 'their houses become their graves'.",
+    "check": {
+      "type": "manual",
+      "note": "A motive assigned to a build operator."
+    }
+  },
+  {
+    "id": "G13-10",
+    "source": "Bereshit Rabbah 23:2; Jerusalem Talmud Yevamot 6:5:3",
+    "claim_en": "THE GENEALOGY READ AS A SENTENCE-LEDGER. The line-names of our 4:18 are parsed as decree-verbs spoken against the line: Irad, 'I will expel them'; Mechuyael, 'I will erase them'; Metushael, 'I will uproot them'; and of Lemekh, 'what have I to do with Lemekh'. The register the machine reads as descent is read by the chain as a running judgment. The two-wives institution of the era is described beside it - one wife for offspring, one kept barren for company - and the seats REVERSE the roles of the two wives against one another, a variance carried dual-track.",
+    "check": {
+      "type": "manual",
+      "note": "A genealogy operator re-read as a judgment ledger, with a recorded role-reversal between seats."
+    }
+  },
+  {
+    "id": "G13-11",
+    "source": "Bereshit Rabbah 23:3",
+    "claim_en": "The craft-founder operators of our 4:20-22 are read darkly: the herdsman's holdings as provocation, the musician's instruments as serving idols, and the smith Tuval-Cain as the one who 'SEASONED Cain's transgression - Cain killed without an instrument; this one forges every cutting edge'. The first metallurgy operator is read as the origin of the weapons trade, joined back to the undecided weapon of the first murder.",
+    "check": {
+      "type": "manual",
+      "note": "A craft-install operator read as the origin of an industry, linked to the prior block's weapon dispute."
+    }
+  },
+  {
+    "id": "G13-12",
+    "source": "Bereshit Rabbah 23:4; Jerusalem Talmud Sanhedrin 10:1:10",
+    "middah": "E5",
+    "claim_en": "A NAMED INFERENCE-FAILURE, GRADED AT A PRIMARY SEAT AND CANONIZED ANYWAY. Lemekh argues at our 4:24 from Cain's seven generations to his own seventy-seven - a light-and-heavy inference. Rebbi GRADES IT AND FAILS IT: 'a flawed a-fortiori, an a-fortiori of darkness - from whom would He ever collect His note?'. Yet the Jerusalem Talmud cites this very verse as the exhibit a-fortiori that one may not deny, with the editor's own note that the argument violates the form's rules and stands regardless. The corpus therefore records a middah applied WRONGLY and preserved as canonical text - the machine must carry the inference as recorded-and-failed, not as sound.",
+    "check": {
+      "type": "manual",
+      "note": "An inference rule explicitly graded as invalid at a primary seat while the verse carrying it stays canonical. The middah is recorded as attempted, not as licensed."
+    }
+  },
+  {
+    "id": "G13-13",
+    "source": "Bereshit Rabbah 23:5; Bereshit Rabbah 23:6",
+    "claim_en": "The Seth install at our 4:25 is sighted FORWARD: 'she looked at that offspring who comes from ANOTHER PLACE - the messianic king', so the line the machine records as a replacement is read as a root. And the image-line is CUT at Enosh: 'Adam, Seth, Enosh - then silence: until here in the image and likeness; from here on the generations corrupted' - which sets the boundary the next unit's likeness-recap will re-open.",
+    "check": {
+      "type": "manual",
+      "note": "A forward reference on an install operator, and a boundary the following unit inherits."
+    }
+  },
+  {
+    "id": "G13-14",
+    "source": "Bereshit Rabbah 23:7; Mekhilta DeRabbi Yishmael, Tractate Bachodesh 6:9",
+    "claim_en": "הוּחַל (huchal) at our 4:26 is read not as 'began to call' but as REBELLION - the profaning of the Name - and R. Simon censuses three places where the verb carries that sense: our 4:26, Genesis 6:1, and Nimrod's beginning. Verified at derivation: our 4:26 is the ONLY token of this form in the whole Torah, and it is the only PASSIVE (hophal) member of the group - the other two seats write the active form. The ocean's riposte is recorded with it: 'you called your names divine - I will call the sea's waters by My name', and the inundation's measure varies by seat, one giving geographic bounds and the tannaitic seat a third of the world.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "הוחל"
+      },
+      "expect_total": 1,
+      "expect_refs": [
+        "Gen 4:26"
+      ]
+    }
+  }
 ]

@@ -1,119 +1,173 @@
 [
- {
-  "id": "G28-01",
-  "source": "Minchat Shai on Gen 12:16 (the Masorah's three-defective list)",
-  "ref": "Gen 12:16",
-  "claim_en": "u-shfachot ('and maidservants') written DEFECTIVE (no second vav) — three in the Torah, the Masorah's mnemonic: 'to Abram he did good' (12:16), 'Avimelech took' (20:14), 'the LORD blessed my master' (24:35). The Hilleli copy reads plene here; SNAPSHOT sides with the Yerushalmi codex and the Masorah: defective at exactly the three.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "he_plain_joined": "ושפחת"
-   },
-   "expect_total": 3,
-   "expect_refs": [
-    "Gen 12:16",
-    "Gen 20:14",
-    "Gen 24:35"
-   ]
+  {
+    "id": "G28-01",
+    "source": "Minchat Shai on Gen 12:16 (the Masorah's three-defective list)",
+    "ref": "Gen 12:16",
+    "claim_en": "u-shfachot ('and maidservants') written DEFECTIVE (no second vav) — three in the Torah, the Masorah's mnemonic: 'to Abram he did good' (12:16), 'Avimelech took' (20:14), 'the LORD blessed my master' (24:35). The Hilleli copy reads plene here; SNAPSHOT sides with the Yerushalmi codex and the Masorah: defective at exactly the three.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "ושפחת"
+      },
+      "expect_total": 3,
+      "expect_refs": [
+        "Gen 12:16",
+        "Gen 20:14",
+        "Gen 24:35"
+      ]
+    }
+  },
+  {
+    "id": "G28-02",
+    "source": "Minchat Shai on Gen 12:16 (the book-splitting Masorah)",
+    "ref": "Gen 30:43",
+    "claim_en": "The rule's boundary: 'from the book's beginning until THE MAN BURST FORTH (30:43) the maidservant-plural is written defective; from there to the Torah's end, always plene.' The first plene token is the boundary verse itself.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "ושפחות"
+      },
+      "expect_total": 1,
+      "expect_refs": [
+        "Gen 30:43"
+      ]
+    }
+  },
+  {
+    "id": "G28-03",
+    "source": "Minchat Shai on Gen 12:16 (the book-splitting Masorah)",
+    "ref": "Gen 33:1",
+    "claim_en": "The rule's far side: every remaining maidservant-plural token (Jacob's camp-ordering, 33:1/2/6) is plene — the book-splitting rule holds END-TO-END on SNAPSHOT: three defective before the boundary, four plene at and after it, nothing else anywhere in the Torah.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "השפחות"
+      },
+      "expect_total": 3,
+      "expect_refs": [
+        "Gen 33:1",
+        "Gen 33:2",
+        "Gen 33:6"
+      ]
+    }
+  },
+  {
+    "id": "G28-04",
+    "source": "Minchat Shai on Gen 12:15",
+    "ref": "Gen 12:15",
+    "claim_en": "va-yehallelu ('and they PRAISED her') — 'the first lamed is LIGHT, to ease the tongue, like va-etpalela in Daniel 9:4.' SNAPSHOT: the doubling dot is absent from the first lamed — the praise-hapax's very form is a lightened one; the Daniel pair rides as an edge.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 12:15",
+      "idx": 4,
+      "contains": "לְל"
+    }
+  },
+  {
+    "id": "G28-05",
+    "source": "Kitzur Baal HaTurim on Gen 12:12",
+    "ref": "Gen 12:12",
+    "claim_en": "yechayu ('they will KEEP ALIVE') — two in the Masorah: here and 'they shall revive as the grain' (Hosea 14:8). Torah-side: exactly ONE token — the fear-verse's life-verb is unique in the Torah; the Hosea leg rides as an edge.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "he_plain_joined": "יחיו"
+      },
+      "expect_total": 1,
+      "expect_refs": [
+        "Gen 12:12"
+      ]
+    }
+  },
+  {
+    "id": "G28-06",
+    "source": "Kitzur Baal HaTurim on Gen 12:13",
+    "ref": "Gen 12:13",
+    "claim_en": "achoti at ('you are my sister') — two in the Masorah: here and 'say to wisdom: you are my sister' (Prov 7:4) — 'Abraham and Sarah were great in wisdom.' Torah-side: the two-word pair stands exactly once (12:13; every other 'my sister' token is followed by another word). The Proverbs leg — a SAY-command aimed at the sister-word, like Abram's own imri — rides as an edge.",
+    "check": {
+      "type": "adjacency",
+      "first": {
+        "he_plain_joined": "אחתי"
+      },
+      "second": [
+        "et"
+      ],
+      "expect_refs": [
+        "Gen 12:13"
+      ]
+    }
+  },
+  {
+    "id": "G28-07",
+    "source": "Kitzur Baal HaTurim on Gen 12:19",
+    "ref": "Gen 12:19",
+    "claim_en": "qach va-lekh ('TAKE and GO') — the Masorah's five-member hand-to-hand list (the Kitzur: what is given passes from hand to hand — so Pharaoh surely gave gifts here too). Torah-side: the pair stands exactly TWICE — Pharaoh releasing Sarai (12:19) and Laban's house releasing Rivkah (24:51): both wife-transfer releases; the Kings and Jeremiah legs ride as edges.",
+    "check": {
+      "type": "adjacency",
+      "first": {
+        "he_plain_joined": "קח"
+      },
+      "second": [
+        "va-lekh"
+      ],
+      "expect_refs": [
+        "Gen 12:19",
+        "Gen 24:51"
+      ]
+    }
+  },
+  {
+    "id": "G28-08",
+    "source": "Bereshit Rabbah 40:6",
+    "claim_en": "THE PAVED-WAY MACHINE: THIS EPISODE IS READ AS A SPECIFICATION THE NATION LATER EXECUTES. 'Go and pave the way before your descendants' - and the chain lists ELEVEN matched ink-pairs between this descent and Israel's, word answering word: famine and famine, descended and descended, to-sojourn and to-sojourn, severe and severe. The unit is thereby not merely a precedent but a template whose tokens are checked one by one against the later text. Its pairs return as credited seats across the rest of Genesis.",
+    "check": {
+      "type": "manual",
+      "note": "An episode read as a token-by-token template for a later national event, with eleven matched ink-pairs enumerated."
+    }
+  },
+  {
+    "id": "G28-09",
+    "source": "Bereshit Rabbah 41:2; Jerusalem Talmud Ketubot 7:9:3; Vayikra Rabbah 16:1; Arakhin 16a:9",
+    "claim_en": "THE AFFLICTION OF OUR 12:17 IS IDENTIFIED AS A NAMED DISEASE AND CARRIED INTO LIVE DIVORCE LAW. The affliction is identified as the one condition that blocks marital relations - the measure exactly matching the crime - and that identification is quoted inside the halakhic sugya on conditions that compel a divorce, with an attribution variance recorded. Two further cause-claims ride the same verse: forbidden relations at one Babylonian seat, and the inciting of discord between husband and wife at another, where the count of the census is itself disputed.",
+    "check": {
+      "type": "manual",
+      "note": "An affliction operator identified with a named condition, that identification then quoted inside a live divorce-law discussion."
+    }
+  },
+  {
+    "id": "G28-10",
+    "source": "Sotah 46b:14",
+    "claim_en": "A MEASURE-FOR-MEASURE ARITHMETIC IS COMPUTED ON OUR 12:20. Because Pharaoh escorted the departing household - 'and he commanded men concerning him' - for FOUR STEPS, he was repaid with four hundred years of his descendants' service. The escort law's standing rules are stated beside it. A courtesy in this unit is priced, and the price is paid in the decree of a later unit.",
+    "check": {
+      "type": "manual",
+      "note": "A small act in this unit converted into an exact numeric obligation discharged in a later one."
+    }
+  },
+  {
+    "id": "G28-11",
+    "source": "Mekhilta DeRabbi Shimon Ben Yochai 3:1",
+    "claim_en": "A UNIQUENESS CLAIM IS MADE ON OUR EXIT VERSE. 'No slave or maidservant ever went free from Egypt EXCEPT HAGAR' - proved from our 12:20, 'and they sent him away, him and his wife and all that was his'. The verse's inventory clause is read as covering a person the narrative has not yet named, seating Hagar's origin in this episode.",
+    "check": {
+      "type": "manual",
+      "note": "An inventory clause read as covering an unnamed person, seating a later character's origin in this unit."
+    }
+  },
+  {
+    "id": "G28-12",
+    "source": "Yevamot 13b:6",
+    "claim_en": "A GRAMMAR RULE THE PARSE LAYER ALREADY ENCODES IS STATED AS LAW AT ITS HALAKHIC SEAT. R. Nechemya's rule - a word that would take a directing prefix at its start instead takes a HEH at its end - is stated in the legal discussion, and the school of Rabbi Yishmael's census of that form includes our 12:10's own directional token. The morphology this unit records mechanically is here a named, cited rule.",
+    "check": {
+      "type": "manual",
+      "note": "A morphological pattern the unit already encodes, stated as a named rule at a legal seat with this unit's token in its census."
+    }
+  },
+  {
+    "id": "G28-13",
+    "source": "Bereshit Rabbah 52:4; Sanhedrin 39b:21",
+    "claim_en": "TWO READINGS PRICED ON SINGLE PARTICLES. The request particle at our 12:13 is read as making the plan SOLICITED rather than imposed - set in explicit contrast with the later Gerar episode, where he said it of her by force. And the intensifier at our 12:14 is graded against its use elsewhere: where another woman is 'fair UP TO' the intensifier, meaning not including it, Sarah is described by the intensifier itself - so 'she did not reach half of Sarah's beauty'. An exclusive-particle parse used as a comparative measure.",
+    "check": {
+      "type": "manual",
+      "note": "A request particle read as establishing consent, and an intensifier graded by an exclusive-particle parse against another verse."
+    }
   }
- },
- {
-  "id": "G28-02",
-  "source": "Minchat Shai on Gen 12:16 (the book-splitting Masorah)",
-  "ref": "Gen 30:43",
-  "claim_en": "The rule's boundary: 'from the book's beginning until THE MAN BURST FORTH (30:43) the maidservant-plural is written defective; from there to the Torah's end, always plene.' The first plene token is the boundary verse itself.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "he_plain_joined": "ושפחות"
-   },
-   "expect_total": 1,
-   "expect_refs": [
-    "Gen 30:43"
-   ]
-  }
- },
- {
-  "id": "G28-03",
-  "source": "Minchat Shai on Gen 12:16 (the book-splitting Masorah)",
-  "ref": "Gen 33:1",
-  "claim_en": "The rule's far side: every remaining maidservant-plural token (Jacob's camp-ordering, 33:1/2/6) is plene — the book-splitting rule holds END-TO-END on SNAPSHOT: three defective before the boundary, four plene at and after it, nothing else anywhere in the Torah.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "he_plain_joined": "השפחות"
-   },
-   "expect_total": 3,
-   "expect_refs": [
-    "Gen 33:1",
-    "Gen 33:2",
-    "Gen 33:6"
-   ]
-  }
- },
- {
-  "id": "G28-04",
-  "source": "Minchat Shai on Gen 12:15",
-  "ref": "Gen 12:15",
-  "claim_en": "va-yehallelu ('and they PRAISED her') — 'the first lamed is LIGHT, to ease the tongue, like va-etpalela in Daniel 9:4.' SNAPSHOT: the doubling dot is absent from the first lamed — the praise-hapax's very form is a lightened one; the Daniel pair rides as an edge.",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 12:15",
-   "idx": 4,
-   "contains": "לְל"
-  }
- },
- {
-  "id": "G28-05",
-  "source": "Kitzur Baal HaTurim on Gen 12:12",
-  "ref": "Gen 12:12",
-  "claim_en": "yechayu ('they will KEEP ALIVE') — two in the Masorah: here and 'they shall revive as the grain' (Hosea 14:8). Torah-side: exactly ONE token — the fear-verse's life-verb is unique in the Torah; the Hosea leg rides as an edge.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "he_plain_joined": "יחיו"
-   },
-   "expect_total": 1,
-   "expect_refs": [
-    "Gen 12:12"
-   ]
-  }
- },
- {
-  "id": "G28-06",
-  "source": "Kitzur Baal HaTurim on Gen 12:13",
-  "ref": "Gen 12:13",
-  "claim_en": "achoti at ('you are my sister') — two in the Masorah: here and 'say to wisdom: you are my sister' (Prov 7:4) — 'Abraham and Sarah were great in wisdom.' Torah-side: the two-word pair stands exactly once (12:13; every other 'my sister' token is followed by another word). The Proverbs leg — a SAY-command aimed at the sister-word, like Abram's own imri — rides as an edge.",
-  "check": {
-   "type": "adjacency",
-   "first": {
-    "he_plain_joined": "אחתי"
-   },
-   "second": [
-    "et"
-   ],
-   "expect_refs": [
-    "Gen 12:13"
-   ]
-  }
- },
- {
-  "id": "G28-07",
-  "source": "Kitzur Baal HaTurim on Gen 12:19",
-  "ref": "Gen 12:19",
-  "claim_en": "qach va-lekh ('TAKE and GO') — the Masorah's five-member hand-to-hand list (the Kitzur: what is given passes from hand to hand — so Pharaoh surely gave gifts here too). Torah-side: the pair stands exactly TWICE — Pharaoh releasing Sarai (12:19) and Laban's house releasing Rivkah (24:51): both wife-transfer releases; the Kings and Jeremiah legs ride as edges.",
-  "check": {
-   "type": "adjacency",
-   "first": {
-    "he_plain_joined": "קח"
-   },
-   "second": [
-    "va-lekh"
-   ],
-   "expect_refs": [
-    "Gen 12:19",
-    "Gen 24:51"
-   ]
-  }
- }
 ]

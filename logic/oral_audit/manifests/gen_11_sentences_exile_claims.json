@@ -1,209 +1,316 @@
 [
- {
-  "id": "G11-01",
-  "source": "Minchat Shai on Gen 3:19 (Masorah)",
-  "ref": "Gen 3:19",
-  "scope": "scripture",
-  "claim_en": "אפיך (\"your nostrils\") is written FULL with a yod exactly twice: בזעת אפיך (\"in the sweat of your nostrils,\" Gen 3:19) and ברוח אפיך (\"by the breath of Your nostrils\" the waters piled up, Exod 15:8) — the Masorah's own mnemonic: man's livelihood is as hard as the splitting of the Sea of Reeds.",
-  "check": {
-   "type": "spelling_variants",
-   "where": {
-    "translit_like": "%ape-kha%"
-   },
-   "pattern_full": "אפי",
-   "expect_full_refs": [
-    "Gen 3:19",
-    "Exod 15:8"
-   ]
+  {
+    "id": "G11-01",
+    "source": "Minchat Shai on Gen 3:19 (Masorah)",
+    "ref": "Gen 3:19",
+    "scope": "scripture",
+    "claim_en": "אפיך (\"your nostrils\") is written FULL with a yod exactly twice: בזעת אפיך (\"in the sweat of your nostrils,\" Gen 3:19) and ברוח אפיך (\"by the breath of Your nostrils\" the waters piled up, Exod 15:8) — the Masorah's own mnemonic: man's livelihood is as hard as the splitting of the Sea of Reeds.",
+    "check": {
+      "type": "spelling_variants",
+      "where": {
+        "translit_like": "%ape-kha%"
+      },
+      "pattern_full": "אפי",
+      "expect_full_refs": [
+        "Gen 3:19",
+        "Exod 15:8"
+      ]
+    }
+  },
+  {
+    "id": "G11-02",
+    "source": "Kitzur Baal HaTurim on Gen 3:21",
+    "ref": "Gen 3:21",
+    "scope": "scripture",
+    "claim_en": "וילבשם (\"and He clothed them\") appears twice in the Masorah (the received spelling tradition): here and Lev 8:13 (Moses clothes Aaron's sons in tunics) — teaching that the Holy One made PRIESTLY garments for the first man; Bereshit Rabbah adds the firstborn served in them.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "translit": "va-yalbishe-m"
+      },
+      "expect_total": 2,
+      "expect_refs": [
+        "Gen 3:21",
+        "Lev 8:13"
+      ]
+    }
+  },
+  {
+    "id": "G11-03",
+    "source": "Kitzur Baal HaTurim on Gen 3:21",
+    "ref": "Gen 3:21",
+    "claim_en": "The garments verse has exactly EIGHT words — corresponding to the eight garments of the priesthood.",
+    "check": {
+      "type": "verse_word_count",
+      "ref": "Gen 3:21",
+      "expect_total": 8
+    }
+  },
+  {
+    "id": "G11-04",
+    "source": "Kitzur Baal HaTurim on Gen 3:15 (Masorah)",
+    "ref": "Gen 3:15",
+    "scope": "scripture",
+    "claim_en": "עקב (\"heel\") in this pointing stands three times in the Masorah's list: the serpent's heel-strike (3:15), Gad's blessing והוא יגד עקב (\"he shall raid at the heel,\" Gen 49:19 — the Kitzur folds the serpent-likened tribes into one blessing), and Ps 41:10 (outside the Torah DB). Torah-side: exactly the two.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "translit": "aqev"
+      },
+      "expect_total": 2,
+      "expect_refs": [
+        "Gen 3:15",
+        "Gen 49:19"
+      ]
+    }
+  },
+  {
+    "id": "G11-05",
+    "source": "Kitzur Baal HaTurim on Gen 3:24",
+    "ref": "Gen 3:24",
+    "claim_en": "לשמר (\"to guard\") read as a notarikon (initial-letter cipher): its four letters open לילין שדין מזיקין רוחין (\"night-beings, demons, harmers, spirits\") — the guarded way warded against them. SNAPSHOT locks the cipher's base letters.",
+    "check": {
+      "type": "letters_multiset",
+      "ref": "Gen 3:24",
+      "idx": 13,
+      "equals_letters_of": "לשמר"
+    }
+  },
+  {
+    "id": "G11-06",
+    "source": "Minchat Shai on Gen 3:14",
+    "ref": "Gen 3:14",
+    "claim_en": "זאת (\"this\") in the serpent's indictment carries a dagesh (doubling dot) in the zayin — the doubling that binds it to עשית (\"you did\") before it.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 3:14",
+      "idx": 7,
+      "contains": "זּ"
+    }
+  },
+  {
+    "id": "G11-07",
+    "source": "Minchat Shai on Gen 3:16",
+    "ref": "Gen 3:16",
+    "claim_en": "עצבונך (\"your toil\") — the tsadi carries a dagesh (doubling dot).",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 3:16",
+      "idx": 5,
+      "contains": "צּ"
+    }
+  },
+  {
+    "id": "G11-08",
+    "source": "Minchat Shai on Gen 3:19 (Masorah Gedolah)",
+    "ref": "Gen 3:19",
+    "claim_en": "כי עפר אתה (\"for dust you are\") — אתה (\"you\") carries zaqef qatan (\"small upright,\" a pause accent) and is stressed on its FIRST syllable; the Great Masorah's list of first-syllable-stressed אתה opens HERE: the mortality verse heads the list.",
+    "check": {
+      "type": "mark",
+      "ref": "Gen 3:19",
+      "idx": 13,
+      "expect_mark": "zaqef_qatan"
+    }
+  },
+  {
+    "id": "G11-09",
+    "source": "Minchat Shai on Gen 3:18",
+    "ref": "Gen 3:18",
+    "claim_en": "ודרדר (\"and thistles\") — both dalets pointed with patach (the flat a-vowel); some copies point the second with qamatz, and Minchat Shai rules patach with all his books — SNAPSHOT sides with the ruling.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 3:18",
+      "idx": 1,
+      "contains": "דַרְדַּ"
+    }
+  },
+  {
+    "id": "G11-10",
+    "source": "Minchat Shai on Gen 3:19",
+    "ref": "Gen 3:19",
+    "claim_en": "בזעת (\"in the sweat\") — the precise codices read mahpach (\"inverted horn\" accent) on the ayin; SNAPSHOT's chain reads exactly that.",
+    "check": {
+      "type": "mark",
+      "ref": "Gen 3:19",
+      "idx": 0,
+      "expect_mark": "mahpach"
+    }
+  },
+  {
+    "id": "G11-11",
+    "source": "Minchat Shai on Gen 3:17",
+    "ref": "Gen 3:17",
+    "claim_en": "כי שמעת (\"because you listened\") — \"must be with ONE zarqa only, on the tav\": the zarqa (= zinor, \"pipe\" accent) the unit's own parse flagged as the rare near-poetic register marker over both sentence-openers, attested from outside.",
+    "check": {
+      "type": "mark",
+      "ref": "Gen 3:17",
+      "idx": 3,
+      "expect_mark": "zinor"
+    }
+  },
+  {
+    "id": "G11-12",
+    "source": "Minchat Shai on Gen 3:14",
+    "ref": "Gen 3:14",
+    "claim_en": "ויאמר (\"and He said\") opening the serpent's sentence carries telisha qetana (\"small detached\" accent; Minchat Shai's term tarsa) — \"one sign only, on the resh\": the postpositive sign sits once, on the word's last letter.",
+    "check": {
+      "type": "mark",
+      "ref": "Gen 3:14",
+      "idx": 0,
+      "expect_mark": "telisha_qetana"
+    }
+  },
+  {
+    "id": "G11-13",
+    "source": "Minchat Shai on Gen 3:21",
+    "ref": "Gen 3:21",
+    "claim_en": "ויעש (\"and He made\") of the garments verse likewise carries telisha qetana (\"small detached\" accent) — \"one tarsa alone.\"",
+    "check": {
+      "type": "mark",
+      "ref": "Gen 3:21",
+      "idx": 0,
+      "expect_mark": "telisha_qetana"
+    }
+  },
+  {
+    "id": "G11-14",
+    "source": "Minchat Shai on Gen 3:17 (Ben Asher vs Ben Naftali)",
+    "ref": "Gen 3:17",
+    "claim_en": "תאכלנה (\"you shall eat of it\") — Ben Naftali reads the kaf with plain sheva; Ben Asher, \"on whom we rely,\" with chataf patach (the hurried a-vowel) — SNAPSHOT reads chataf patach: the letter follows Ben Asher.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 3:17",
+      "idx": 19,
+      "contains": "כֲ"
+    }
+  },
+  {
+    "id": "G11-15",
+    "source": "Bereshit Rabbah 20:12",
+    "ref": "Gen 3:21",
+    "claim_en": "\"In the Torah of Rabbi Meir they found written כתנות אור — garments of LIGHT\" (aleph for ayin): the tradition's own record of a manuscript variant. The received letter and SNAPSHOT read עור (\"skin\") with ayin — the frozen unit's letter-variant detector tripwire, now read at its source.",
+    "check": {
+      "type": "letters_multiset",
+      "ref": "Gen 3:21",
+      "idx": 6,
+      "equals_letters_of": "עור"
+    }
+  },
+  {
+    "id": "G11-16",
+    "source": "Minchat Shai on Gen 3:14",
+    "ref": "Gen 3:14",
+    "claim_en": "Minchat Shai reads galgal (\"wheel,\" the day-old-moon accent) on אלהים (\"God\") and on כי (\"because\" — \"with galgal, not maqqef,\" the joining hyphen) where SNAPSHOT's chain reads mercha / munach (both conjunctive accents) — manuscript accent-variant class, same class as gen_10's revia gap.",
+    "check": {
+      "type": "manual",
+      "note": "accent variant vs SNAPSHOT chain; galgal absent from SNAPSHOT's mark inventory at these tokens — manuscript-class, uncheckable"
+    }
+  },
+  {
+    "id": "G11-17",
+    "source": "Bereshit Rabbah 20:4",
+    "claim_en": "THE SEVENTY-ONE CENSUS. R. Yehudah bar Simon in the name of R. Hoshaya: 'from the beginning of the book until here there are SEVENTY-ONE mentions of the divine name' - the first humans were judged before a FULL SANHEDRIN, the court of seventy-one. Verified in the ink at derivation: counting every token of אֱלֹהִים (Elohim, 'God') and יְהוָה (YHWH) from Genesis 1:1 through Genesis 3:13, the total is EXACTLY 71, and the seventy-first falls on Genesis 3:13 itself - the last question before sentencing begins at our 3:14. The chain's court-size claim is an exact property of the corpus's own ink.",
+    "check": {
+      "type": "manual",
+      "note": "Machine-verified at derivation against the snapshot corpus: divine-name lemmas 430 and 3068, Genesis 1:1 to 3:13 inclusive, count = 71, the final pair standing at 3:13. Not expressible in the verifier's check vocabulary, which cannot range-bound a census, so it is carried manual with the query and its result recorded here rather than credited unopened."
+    }
+  },
+  {
+    "id": "G11-18",
+    "source": "Sifra, Shemini, Mekhilta DeMiluim II 39; Bereshit Rabbah 20:3",
+    "claim_en": "AN INFERENCE RULE IS EXTRACTED FROM THIS SPAN'S OWN STRUCTURE. Rebbi derives from our sentencing ORDER - serpent first, then the woman, then the man - the rule that 'in greatness one begins from the greatest; in curse one begins from the LESSER', and instantiates it at the death of Aaron's sons. The unit's operator sequence is thus read as a procedural precedent, not merely a narrative order. The attribution varies between seats and is recorded: the Sifra gives it as Rebbi's, Bereshit Rabbah as R. Chiyya's.",
+    "check": {
+      "type": "manual",
+      "note": "A derivation rule read off the order of the unit's own operators, with its attribution variance carried."
+    }
+  },
+  {
+    "id": "G11-19",
+    "source": "Jerusalem Talmud Berakhot 8:5:8; Jerusalem Talmud Avodah Zarah 1:2:3",
+    "claim_en": "A STANDING LITURGICAL LAW IS INSTITUTED FROM FEAR OF OUR 3:15. As the first Sabbath ended and the primordial light withdrew, the darkness was feared as the serpent's promised strike - 'perhaps what is written, he shall strike your head, is coming to bite me'. Two flintstones were given, fire was made, and from that moment the HAVDALAH BLESSING OVER FIRE is dated: 'therefore we bless over fire at the Sabbath's exit, the time of its first creation'. The same fear is recorded as the origin of the winter festival days when the nights lengthened.",
+    "check": {
+      "type": "manual",
+      "note": "A recurring liturgical obligation dated to this unit's own sentence clause."
+    }
+  },
+  {
+    "id": "G11-20",
+    "source": "Eruvin 100b:20; Eruvin 100b:21; Sotah 12a:16",
+    "claim_en": "The woman's sentence at our 3:16 is read as TEN CURSES, itemized by Rav Yitzchak bar Avdimi and mapped onto our tokens: הַרְבָּה אַרְבֶּה (harbah arbeh, 'greatly multiply') as TWO BLOODS, menstruation and virginity; עִצְּבוֹנֵךְ (itzvonekh, 'your toil') as the raising of children; הֵרֹנֵךְ (heronekh) as pregnancy; and בְּעֶצֶב תֵּלְדִי ('in pain you shall bear') in its plain sense. The census is claimed as ten and four are mapped at this seat - the honest fraction is recorded. And the term is ESCAPABLE: righteous women are exempt from 'the verdict of Eve', Jochebed's painless birth given as the case.",
+    "check": {
+      "type": "manual",
+      "note": "A ten-item census claimed with four mapped, recorded as an honest fraction rather than completed; plus a righteous-exemption on the term."
+    }
+  },
+  {
+    "id": "G11-21",
+    "source": "Yevamot 62b:17; Bereshit Rabbah 20:7",
+    "claim_en": "POLARITY INVERSION ON A SENTENCE TERM. From the woman's own clause וְאֶל אִישֵׁךְ תְּשׁוּקָתֵךְ ('and your desire shall be toward your husband') a POSITIVE OBLIGATION ON THE HUSBAND is derived: because a wife desires her husband when he departs on a journey, he is obligated to be intimate with her before travelling. A clause imposed as a penalty on one party becomes a duty owed by the other. Bereshit Rabbah 20:7 sets the same clause in a four-desires census - the woman toward her husband, the evil inclination toward Cain, rain toward the earth, God toward Israel.",
+    "check": {
+      "type": "manual",
+      "note": "A penalty clause read as generating a duty on the other party - the polarity recorded as inverted."
+    }
+  },
+  {
+    "id": "G11-22",
+    "source": "Bereshit Rabbah 97:3; Pesachim 118a:6",
+    "claim_en": "THE TWO SENTENCE TERMS MACHINE-DIFFED, AND THE WORD RETURNS AT NOAH'S NAMING. The chain compares the woman's בְּעֶצֶב (be-etzev, 'in pain', 3:16) with the man's בְּעִצָּבוֹן (be-itzavon, 'in toil', 3:17) and reads the longer form as the greater: providing sustenance is TWICE as hard as childbirth, and as hard as the splitting of the sea. Verified in the ink: the toil-word עִצָּבוֹן stands in the Torah exactly three times, and all three are in Genesis - the woman's at our 3:16, the man's at our 3:17, and Genesis 5:29, where Lamech names Noah saying he will comfort them 'from our work and from the TOIL of our hands, from the ground which the LORD has cursed'. The third seat names this very curse as the thing to be undone.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "lemma_like": "%6093%"
+      },
+      "expect_total": 3,
+      "expect_refs": [
+        "Gen 3:16",
+        "Gen 3:17",
+        "Gen 5:29"
+      ]
+    }
+  },
+  {
+    "id": "G11-23",
+    "source": "Shabbat 152b:12; Avodah Zarah 8a:7",
+    "claim_en": "The dust-clause of our 3:19 is SCOPE-LIMITED: 'for dust you are and to dust you shall return' is applied to the righteous only one hour before the resurrection. Taken with the righteous-exemption on the birth-pain term, the pair shows the chain treating BOTH sentence terms as default writs rather than physics. And the sentence is recorded as first EXPERIENCED as cosmology: seeing the days shorten, the man feared 'the world darkens and returns to chaos - this is the death sentenced on me', and fasted eight days.",
+    "check": {
+      "type": "manual",
+      "note": "A boundary term bounded; the second of a pair showing sentence terms are defaults, not physics."
+    }
+  },
+  {
+    "id": "G11-24",
+    "source": "Sotah 14a:4; Sotah 14a:6; Sotah 14a:5; Niddah 25a:9",
+    "claim_en": "THE GARMENTS OPERATOR OPENS A STANDING OBLIGATION AND ENVELOPES THE CORPUS. From וַיַּלְבִּשֵׁם ('and He clothed them', our 3:21) the imitatio Dei duty is derived - walk after His attributes: as He clothes the naked, so you clothe the naked - opening the four-act kindness ladder of clothing, visiting, consoling and burying. R. Simlai reads the same act as one end of a whole-Torah envelope: the Torah BEGINS with kindness, our 3:21, and ENDS with kindness, the burial of Moses at Deuteronomy 34:6. The garments' material is a recorded dispute - 'a thing that comes from skin' against 'a thing the skin benefits from'. And from the verse's event-ORDER, formation before skin, a law of embryology is drawn.",
+    "check": {
+      "type": "manual",
+      "note": "One install operator grounding a standing obligation, a whole-corpus envelope, a material dispute, and a purity ruling read off event order."
+    }
+  },
+  {
+    "id": "G11-25",
+    "source": "Bereshit Rabbah 21:5; Bereshit Rabbah 21:6; Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 7:10",
+    "claim_en": "Our 3:22 deliberation carries a dispute recorded at two seats with a wording difference between them. R. Papus reads כְּאַחַד מִמֶּנּוּ (ke-achad mimenu, 'like one of us') as 'like one of the ministering angels'; R. Akiva rebukes him - 'ENOUGH, Papus' - and reads it as the two paths set before the man, of life and of death. At the TANNAITIC seat the rebuke says plainly that he CHOSE THE PATH OF DEATH, where the later amoraic form euphemizes to 'another path' - a wording variance carried on the record. Beside it, וְעַתָּה (ve-atah, 'and now') is read as God opening an opening of REPENTANCE, and פֶּן (pen, 'lest') as the man's refusal.",
+    "check": {
+      "type": "manual",
+      "note": "A dispute whose two seats differ in wording, the sharper tannaitic form recorded beside the softer amoraic one."
+    }
+  },
+  {
+    "id": "G11-26",
+    "source": "Bereshit Rabbah 21:8; Bereshit Rabbah 21:7",
+    "claim_en": "The expulsion verb וַיְגָרֶשׁ (va-yegaresh) is read as DIVORCE, and whether the divorce is final is disputed: R. Yochanan likens it to a priest's daughter divorced, who cannot return; Reish Lakish to an Israelite's daughter, who CAN. The expulsion's SCOPE is likewise disputed - R. Yehudah reads banishment from the Eden of this world and of the world to come, R. Nechemyah from this world only - and R. Luleyani reads the man banished only to the open land adjoining Eden, with guards posted. The machine's expulsion operator is thereby assigned a contested finality and a contested geometry.",
+    "check": {
+      "type": "manual",
+      "note": "Two disputes - reversibility and scope - assigned to one expulsion operator."
+    }
+  },
+  {
+    "id": "G11-27",
+    "source": "Vayikra Rabbah 9:3; Sifrei Devarim 40:14; Eikhah Rabbah 5:21",
+    "claim_en": "A CHRONOLOGICAL RULE READ OFF THE GUARD-ASSIGNMENT'S WORD ORDER. Our 3:24 posts the guard 'to guard THE WAY to the tree of life'. R. Yishmael bar Rav Nachman reads the order itself: דֶּרֶךְ (derekh, 'the way') is civil conduct and stands FIRST; the tree of life is the Torah and stands second - therefore civil conduct PRECEDED the Torah by twenty-six generations. At the tannaitic seat the same verse yields the book and the sword descending BOUND TOGETHER: 'if you keep what is written in this book you are saved from this sword'. And the liturgy's standing return-petition, 'renew our days כְּקֶדֶם (ke-kedem)', is voiced in this operator's own token - like Adam, from the מִקֶּדֶם of our verse.",
+    "check": {
+      "type": "manual",
+      "note": "A priority rule derived from the operand order of one operator, plus its tannaitic and liturgical seats."
+    }
   }
- },
- {
-  "id": "G11-02",
-  "source": "Kitzur Baal HaTurim on Gen 3:21",
-  "ref": "Gen 3:21",
-  "scope": "scripture",
-  "claim_en": "וילבשם (\"and He clothed them\") appears twice in the Masorah (the received spelling tradition): here and Lev 8:13 (Moses clothes Aaron's sons in tunics) — teaching that the Holy One made PRIESTLY garments for the first man; Bereshit Rabbah adds the firstborn served in them.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "translit": "va-yalbishe-m"
-   },
-   "expect_total": 2,
-   "expect_refs": [
-    "Gen 3:21",
-    "Lev 8:13"
-   ]
-  }
- },
- {
-  "id": "G11-03",
-  "source": "Kitzur Baal HaTurim on Gen 3:21",
-  "ref": "Gen 3:21",
-  "claim_en": "The garments verse has exactly EIGHT words — corresponding to the eight garments of the priesthood.",
-  "check": {
-   "type": "verse_word_count",
-   "ref": "Gen 3:21",
-   "expect_total": 8
-  }
- },
- {
-  "id": "G11-04",
-  "source": "Kitzur Baal HaTurim on Gen 3:15 (Masorah)",
-  "ref": "Gen 3:15",
-  "scope": "scripture",
-  "claim_en": "עקב (\"heel\") in this pointing stands three times in the Masorah's list: the serpent's heel-strike (3:15), Gad's blessing והוא יגד עקב (\"he shall raid at the heel,\" Gen 49:19 — the Kitzur folds the serpent-likened tribes into one blessing), and Ps 41:10 (outside the Torah DB). Torah-side: exactly the two.",
-  "check": {
-   "type": "token_count",
-   "where": {
-    "translit": "aqev"
-   },
-   "expect_total": 2,
-   "expect_refs": [
-    "Gen 3:15",
-    "Gen 49:19"
-   ]
-  }
- },
- {
-  "id": "G11-05",
-  "source": "Kitzur Baal HaTurim on Gen 3:24",
-  "ref": "Gen 3:24",
-  "claim_en": "לשמר (\"to guard\") read as a notarikon (initial-letter cipher): its four letters open לילין שדין מזיקין רוחין (\"night-beings, demons, harmers, spirits\") — the guarded way warded against them. SNAPSHOT locks the cipher's base letters.",
-  "check": {
-   "type": "letters_multiset",
-   "ref": "Gen 3:24",
-   "idx": 13,
-   "equals_letters_of": "לשמר"
-  }
- },
- {
-  "id": "G11-06",
-  "source": "Minchat Shai on Gen 3:14",
-  "ref": "Gen 3:14",
-  "claim_en": "זאת (\"this\") in the serpent's indictment carries a dagesh (doubling dot) in the zayin — the doubling that binds it to עשית (\"you did\") before it.",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 3:14",
-   "idx": 7,
-   "contains": "זּ"
-  }
- },
- {
-  "id": "G11-07",
-  "source": "Minchat Shai on Gen 3:16",
-  "ref": "Gen 3:16",
-  "claim_en": "עצבונך (\"your toil\") — the tsadi carries a dagesh (doubling dot).",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 3:16",
-   "idx": 5,
-   "contains": "צּ"
-  }
- },
- {
-  "id": "G11-08",
-  "source": "Minchat Shai on Gen 3:19 (Masorah Gedolah)",
-  "ref": "Gen 3:19",
-  "claim_en": "כי עפר אתה (\"for dust you are\") — אתה (\"you\") carries zaqef qatan (\"small upright,\" a pause accent) and is stressed on its FIRST syllable; the Great Masorah's list of first-syllable-stressed אתה opens HERE: the mortality verse heads the list.",
-  "check": {
-   "type": "mark",
-   "ref": "Gen 3:19",
-   "idx": 13,
-   "expect_mark": "zaqef_qatan"
-  }
- },
- {
-  "id": "G11-09",
-  "source": "Minchat Shai on Gen 3:18",
-  "ref": "Gen 3:18",
-  "claim_en": "ודרדר (\"and thistles\") — both dalets pointed with patach (the flat a-vowel); some copies point the second with qamatz, and Minchat Shai rules patach with all his books — SNAPSHOT sides with the ruling.",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 3:18",
-   "idx": 1,
-   "contains": "דַרְדַּ"
-  }
- },
- {
-  "id": "G11-10",
-  "source": "Minchat Shai on Gen 3:19",
-  "ref": "Gen 3:19",
-  "claim_en": "בזעת (\"in the sweat\") — the precise codices read mahpach (\"inverted horn\" accent) on the ayin; SNAPSHOT's chain reads exactly that.",
-  "check": {
-   "type": "mark",
-   "ref": "Gen 3:19",
-   "idx": 0,
-   "expect_mark": "mahpach"
-  }
- },
- {
-  "id": "G11-11",
-  "source": "Minchat Shai on Gen 3:17",
-  "ref": "Gen 3:17",
-  "claim_en": "כי שמעת (\"because you listened\") — \"must be with ONE zarqa only, on the tav\": the zarqa (= zinor, \"pipe\" accent) the unit's own parse flagged as the rare near-poetic register marker over both sentence-openers, attested from outside.",
-  "check": {
-   "type": "mark",
-   "ref": "Gen 3:17",
-   "idx": 3,
-   "expect_mark": "zinor"
-  }
- },
- {
-  "id": "G11-12",
-  "source": "Minchat Shai on Gen 3:14",
-  "ref": "Gen 3:14",
-  "claim_en": "ויאמר (\"and He said\") opening the serpent's sentence carries telisha qetana (\"small detached\" accent; Minchat Shai's term tarsa) — \"one sign only, on the resh\": the postpositive sign sits once, on the word's last letter.",
-  "check": {
-   "type": "mark",
-   "ref": "Gen 3:14",
-   "idx": 0,
-   "expect_mark": "telisha_qetana"
-  }
- },
- {
-  "id": "G11-13",
-  "source": "Minchat Shai on Gen 3:21",
-  "ref": "Gen 3:21",
-  "claim_en": "ויעש (\"and He made\") of the garments verse likewise carries telisha qetana (\"small detached\" accent) — \"one tarsa alone.\"",
-  "check": {
-   "type": "mark",
-   "ref": "Gen 3:21",
-   "idx": 0,
-   "expect_mark": "telisha_qetana"
-  }
- },
- {
-  "id": "G11-14",
-  "source": "Minchat Shai on Gen 3:17 (Ben Asher vs Ben Naftali)",
-  "ref": "Gen 3:17",
-  "claim_en": "תאכלנה (\"you shall eat of it\") — Ben Naftali reads the kaf with plain sheva; Ben Asher, \"on whom we rely,\" with chataf patach (the hurried a-vowel) — SNAPSHOT reads chataf patach: the letter follows Ben Asher.",
-  "check": {
-   "type": "he_contains",
-   "ref": "Gen 3:17",
-   "idx": 19,
-   "contains": "כֲ"
-  }
- },
- {
-  "id": "G11-15",
-  "source": "Bereshit Rabbah 20:12",
-  "ref": "Gen 3:21",
-  "claim_en": "\"In the Torah of Rabbi Meir they found written כתנות אור — garments of LIGHT\" (aleph for ayin): the tradition's own record of a manuscript variant. The received letter and SNAPSHOT read עור (\"skin\") with ayin — the frozen unit's letter-variant detector tripwire, now read at its source.",
-  "check": {
-   "type": "letters_multiset",
-   "ref": "Gen 3:21",
-   "idx": 6,
-   "equals_letters_of": "עור"
-  }
- },
- {
-  "id": "G11-16",
-  "source": "Minchat Shai on Gen 3:14",
-  "ref": "Gen 3:14",
-  "claim_en": "Minchat Shai reads galgal (\"wheel,\" the day-old-moon accent) on אלהים (\"God\") and on כי (\"because\" — \"with galgal, not maqqef,\" the joining hyphen) where SNAPSHOT's chain reads mercha / munach (both conjunctive accents) — manuscript accent-variant class, same class as gen_10's revia gap.",
-  "check": {
-   "type": "manual",
-   "note": "accent variant vs SNAPSHOT chain; galgal absent from SNAPSHOT's mark inventory at these tokens — manuscript-class, uncheckable"
-  }
- }
 ]

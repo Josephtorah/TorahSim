@@ -4963,3 +4963,305 @@ now gen_01-07 and gen_60-63); Exodus, still gated on the sugya
 case-file machinery, which does not exist.
 
 COMPACTION POINT #26 — records current through here. Safe to compact.
+
+## ADDENDUM 2026-08-30 — SYNC RELAY DISPATCHED TO TORAHSIM (sitting #27 opens)
+
+Post-compaction sitting #27. Owner's first word: "before we continue
+can you tell torahsim what we updated since its last sync? It needs to
+be kept current. ask it to do that work."
+
+Delta computed from disk, not memory: torahsim's landing point is ITS
+46512c9 (the 25 pairs gen_39-63, byte-verified, nine gates green,
+verified from this side in the sitting-#26 addendum above). The
+workshop delta since is exactly 14b192d..5a0c045 — 34 files, three
+commits — and it was relayed in full:
+
+(1) a0b488e — TEN NEW PAIRS gen_64-gen_73 (Miketz + Vayigash/Vayechi
+    sweeps): 10 new triage ledgers + 10 units at rev 2, machine ops
+    untouched, zero text-gate defects. Genesis read through 73/73.
+(2) 3e96699 — THE PILOT MOVES FOUR PAIRS TORAHSIM ALREADY HOLDS:
+    gen_60-63 rev 2 -> rev 3, 18 operators, manifests 13/12/12/12 ->
+    21/17/15/14, CORPUS_TRUTH standing 288 -> 306, hash unchanged.
+    Its landed copies are STALE — a re-land, not a new land.
+(3) 5a0c045 — the ONKELOS CITATION KEYS appendix on all FOURTEEN
+    ledgers gen_60-73, which touches its four landed ledgers too.
+    Plus THE_STEPS' two new sweep paragraphs, still bracketed here
+    (workshop lines 482, 526) because the mirroring is canon's side on
+    the owner's word in that window.
+
+ASKED OF IT: land the ten new pairs, RE-land the four stale ones, take
+the standing count, run its gates, report green/red per unit and any
+boundary/chip discrepancy (41:1 is now OPENED — it is gen_64's own
+first verse, where last time it was honestly unopened). NOT asked, and
+said so explicitly: commit, push, deploy, stamps — the owner's word
+alone in that window, per-window law unchanged.
+
+TOLD IT WHAT IS COMING so the cadence is not a surprise: the derivation
+era means the remaining 61 blocks will keep moving to rev 3 with
+operators and grown manifests, so it should expect a re-land request
+per parashah rather than one final landing. The open rulebook question
+(seven natural operator types folded into WITNESS_READ / WITNESS_STATE
+rather than versioning the rulebook without the owner's word) was put
+to it for a second opinion, recommendation unchanged: wait for more
+evidence.
+
+Reply not yet received. NEXT, unchanged and already authorized: STEP 3,
+the derivation of the remaining 61 blocks, parashah by parashah, first
+group gen_09-26 — the method recorded verbatim at compaction point #26
+above.
+
+### Correction appended 2026-08-30 (sitting #27 catch-up audit)
+
+Owner asked for a status study before moving on; disk was audited
+mechanically rather than trusted from the record. Everything above
+verifies EXCEPT one count, corrected here.
+
+VERIFIED TRUE: 73 triage ledgers and 73 claims manifests on disk;
+73 numbered units; the 25 blank-rev units are exactly the superseded
+v1 coarse multi-chapter set; HEAD 5a0c045 pushed, tracked tree clean.
+
+CORRECTED: compaction point #26 names the derived set "gen_01-07 and
+gen_60-63" (11 blocks) and the remainder 61. The rev tally on disk is
+12 units at rev 3, not 11 — gen_08 is also rev 3. But gen_08's rev 3
+is a STAMP ("records-only edit, machine untouched"), and the audit
+that matters is not the rev number: it is whether any operator CITES a
+source the reading pass read. Counted per unit:
+
+  DERIVED (operators citing chain sources): gen_01 (10), gen_02 (5),
+  gen_03 (9), gen_04 (5), gen_05 (2), gen_06 (10), gen_07 (6),
+  gen_60 (8), gen_61 (5), gen_62 (3), gen_63 (2) — ELEVEN blocks,
+  65 chain-citing operators.
+  gen_08: ZERO. Every one of its 36 cite-lists names only TIR rules.
+  All 61 rev-2 units: ZERO.
+
+So the derived count of 11 stands and the remainder of 61 stands, but
+GEN_08 IS A THIRD CATEGORY and the record should say so: it is READ
+(146 declared, 48 material — the densest single-block yield of the
+whole project), it is STAMPED AT FULL RULE on the owner's word
+2026-08-24, and its 48 findings live in THIRTEEN oral_notes blocks
+BESIDE the machine — none of them in an operator. It is the only
+stamped unit in that condition. Flagged for the owner as a decision,
+not fixed: whether the derivation pass should cover gen_08 too (making
+the remainder 62), given that a stamp already stands on it.
+
+Also noted for sequencing: oral_notes depth is uneven and predicts
+derivation yield — gen_09 (8 blocks), gen_11 (9), gen_10 (6) are rich;
+gen_40 onward carry 1 each.
+
+## ADDENDUM 2026-08-30 — THE FIRST DERIVATION GROUP: BERESHIT AND NOACH DERIVED
+
+Owner's word: "include gen_08, start gen_09-26". Both done in one
+sitting. NINETEEN BLOCKS DERIVED — gen_08 through gen_26, Genesis
+2:4-11:32 continuous: the whole of parashat Bereshit's remainder and
+the whole of parashat Noach.
+
+THE NUMBERS: 139 operators added across 19 units (all in the rulebook's
+EXISTING vocabulary — 118 WITNESS_READ, 21 WITNESS_STATE; no operator
+invented, the rulebook is NOT versioned). 120 claims extracted
+(G08-17..G08-29, G09-12..G09-19, G10-12..G10-18, G11-17..G11-27,
+G12-13..G12-22, G13-09..G13-14, G14-13..G14-19, G15-07..G15-16,
+G16-11..G16-19, G17-10..G17-17, G18-05..G18-09, G19-12..G19-16,
+G20-12..G20-18, G21-07..G21-16, G22-08..G22-11, G23-10..G23-15,
+G24-12..G24-16, G25-11..G25-15, G26-03..G26-07). Fourteen machine-
+checked and verifying; the rest manual, every one with a note.
+EVERY GATE GREEN: verify_text 19/19, preflight ALL SCENARIOS GREEN
+19/19, verify_claims 0 FAILED on all 19, changelog GREEN 19, gloss_lint
+0 flags repo-wide. World fold: standing facts 306 -> 445, EXACTLY the
+139 operators; state hash 8b8fff1fa28953af unchanged.
+
+GEN_08 WAS INCLUDED ON THE OWNER'S EXPLICIT WORD, and it needed it: the
+densest reading in the project (146 declared, 48 material) had never
+reached the machine — every operator cited only TIR rules and the 48
+findings sat in thirteen oral_notes blocks BESIDE the logic. NOTE FOR
+THE STAMP QUEUE: gen_08's FULL-RULE stamp (owner word 'gen_08 good',
+2026-08-24) predates these operators and therefore covers a machine
+that has since changed. No stamp field was touched; gen_08 joins the
+batch-stamp queue for re-affirmation on the owner's word.
+
+WHAT THE INK GAVE UP THAT THE READING PASS COULD NOT (machine-checked
+at derivation, the method's step b earning its keep):
+- THE BREATH FORMULA IS A UNIQUE PAIR. The construct nishmat ('breath
+  of') stands in the Torah in EXACTLY TWO places — Genesis 2:7 and
+  7:22 — both carrying breath-of / life / into-his-nostrils. Bereshit
+  Rabbah 14:10's verbal analogy joins them, and the tradition builds
+  the LEGAL TEST FOR WHETHER A BURIED PERSON IS ALIVE on the second
+  (Yoma 85a). The verse where breath is GIVEN and the verse where it is
+  TAKEN are one formula, and the Sabbath rescue law stands on it.
+  Claimed twice, at both ends: G08-17 and G18-05.
+- THE SEVENTY-ONE CENSUS HOLDS EXACTLY. Divine-name tokens from Genesis
+  1:1 through 3:13 total 71, the seventy-first standing at 3:13 — the
+  last question before sentencing opens at 3:14. The full-Sanhedrin
+  reading is an exact property of the ink (G11-17, opened not credited,
+  per guard 3).
+- HALF THE DECREE VISIBLY REMITTED: 'na' stands twice (4:12, 4:14) and
+  'nod' once (4:16) — the sentence's first term absent from the
+  settlement notice, three seats giving three mechanisms (G12-19).
+- THE TOIL-WORD RETURNS AT NOAH'S NAMING: itzavon stands three times,
+  all Genesis — the woman's 3:16, the man's 3:17, and 5:29, where
+  Lamech names Noah as the one who will comfort them from the TOIL of
+  their hands and the cursed ground. The third seat names this very
+  curse as the thing to be undone (G11-22).
+- THE LAWGIVER IN CIPHER: be-shagam stands in the Torah exactly once,
+  our 6:3, its letters totalling 345 — the value of Moshe — and the
+  clause continues 'his days shall be 120 years', his exact lifespan
+  (G15-09, middah E29).
+- Plus: the gender mismatch at 4:7 confirmed in the morphology (chatat
+  feminine, rovetz masculine — 'rovetzet is not written'); demei at
+  4:10 confirmed a masculine PLURAL construct, on which the capital
+  court's witness-warning stands; the doubled et of 4:2; huchal at 4:26
+  the only token of its form in the Torah and the only passive; tovot
+  at 6:2 defective, twice in the Torah; le-dorot at 9:12 doubly
+  defective and UNIQUE, its missing letters read as exempted
+  generations; kenegdo twice with identical consonants carrying both
+  vocalizations; tardemah twice; rovetz four times.
+
+FINDINGS ABOUT THE MACHINE ITSELF (a class the reading pass never
+produced):
+- OUR 4:7 HEADS THE TRADITION'S OWN CENSUS OF VERSES WHOSE CUT-POINT
+  CANNOT BE DECIDED (Bereshit Rabbah 80:6). The unit's binary tree must
+  carry an undecidable-cut flag rather than assert a split (G12-16).
+- THE TWO SPEECH OPERATORS ARE LEGALLY DIFFERENT: every 'God SPOKE'
+  introduces a new commandment as against the weaker 'said', with our
+  8:15 the stated exhibit (G20-12).
+- LEMEKH'S A-FORTIORI IS GRADED AND FAILED at a primary seat — 'an
+  a-fortiori of darkness' — yet cited elsewhere as the exhibit one may
+  not deny, its own editor noting it violates the form's rules. Carried
+  as RECORDED-AND-FAILED, never as licensed (G13-12).
+- OUR 9:27 IS THE TRANSLATION CHARTER — the verse from which the
+  tradition derives its own license to translate Scripture, made
+  binding law in the Greek-scrolls ruling. The Aramaic track this
+  project reads beside the Hebrew stands on it (G23-10).
+- OUR 11:7 IS A MEMBER OF THE TRANSLATION-ALTERATION CANON (G25-11).
+- R. Yonah records that the flood span 'will have no future use' yet is
+  retained 'to inform you' — the canon's own retention policy stated
+  (G21-16).
+- THE NOACHIDE LAW CROWN: a COMPLETE criminal procedure read word by
+  word out of 9:6 alone — one witness, one judge, no forewarning,
+  agency, fetal liability from ba-adam, execution mode from the verb —
+  the same verse quoted aloud in the court's forewarning formula, used
+  to REFUSE conviction on circumstantial evidence and to LICENSE
+  killing a pursuer, and read by Hillel as grounding a duty of body
+  care (G21-11..G21-14).
+
+PROCESS: torahsim-19's suggestion adopted from gen_08 onward — every
+operator carries a bracketed tag naming which of the seven folded
+shapes it really is (ink count / kept record / priced law / recorded
+dispute / cross-corpus link / dual-track translation / repayment
+table), so when the rulebook question is finally put to the owner it
+arrives as a COUNT, not an argument. Grep '[folded shape:' to tally.
+
+TWO TOOLING BUGS FOUND AND FIXED IN THE HELPER (scratchpad/derive.py):
+a greedy \s* swallowed the blank line before each step and inflated the
+computed indent; and operator entries under `operators:` sit at six
+spaces, not four. Both caught by the YAML parse in verify_text, three
+units reverted via git checkout and rewritten clean. No partial writes
+reached disk — the helper builds the whole file in memory and writes
+only after every insertion succeeds.
+
+STATE: Genesis 73 of 73 READ; **30 of 73 DERIVED** (gen_01-26
+continuous, 1:1-11:32, plus gen_60-63). **43 blocks remain** to derive:
+gen_27-59 and gen_64-73. EIGHT groups left: gen_27-33 (Lech Lecha, 7),
+34-38 (Vayera, 5), 39-42 (Chayei Sarah, 4), 43-47 (Toledot, 5), 48-54
+(Vayetze, 7), 55-59 (Vayishlach, 5), 64-67 (Miketz, 4), 68-73 (Vayigash
++ Vayechi, 6).
+[Counted mechanically 2026-08-30 after the group closed: 73 numbered
+blocks, 30 with chain-citing operators, 43 without. An earlier line in
+this addendum said 27 derived / 46 remaining and seven groups; that was
+wrong on all three and is corrected here.]
+
+UNCOMMITTED (awaiting owner word): 19 rev-3 units + 19 claims manifests
++ CORPUS_TRUTH.py (standing 445) + corpus_world.sqlite + this addendum.
+Never-commit set untouched.
+AWAITING OWNER WORD (never push): commit/push of this group; batch
+stamps (now honest for gen_01-26 and gen_60-63) INCLUDING gen_08's
+re-affirmation; the two works.yaml register rows; the rulebook question.
+
+## ADDENDUM 2026-08-30 — LECH LECHA DERIVED (second derivation group)
+
+Owner's word: "Derive the next set of verses." gen_27-gen_33, Genesis
+12:1-17:27, SEVEN BLOCKS, one sitting.
+
+THE NUMBERS: 50 operators added (44 WITNESS_READ, 6 WITNESS_STATE; no
+operator invented, rulebook NOT versioned). 51 claims extracted
+(G27-17..23, G28-08..13, G29-18..24, G30-25..30, G31-13..20,
+G32-16..21, G33-19..29); one machine-checked and verifying, the rest
+manual with notes, several resting on ink or arithmetic verified at
+derivation. ALL GATES GREEN: verify_text 7/7, preflight 7/7,
+verify_claims 0 FAILED on all seven, changelog GREEN, gloss_lint 0.
+World fold: standing 445 -> 495, exactly the 50 operators; state hash
+8b8fff1fa28953af unchanged.
+
+MACHINE-CHECKED / VERIFIED AT DERIVATION:
+- THE TENT WRITTEN AS HERS, FOUR SEATS. gen_27's 12:8 writes the
+  tent-word with a final heh where a vav is expected, so it reads HER
+  tent, and the chain draws Sarah's precedence from it. Checked: that
+  spelling stands in the Torah at EXACTLY FOUR seats, all Genesis —
+  9:21 (where gen_23 already reads it as his wife's tent), our 12:8,
+  13:3 (gen_29's return to the same place), and 35:21. One ink anomaly
+  spanning four blocks, carrying a woman's precedence at two of them
+  (G27-17).
+- 318 = ELIEZER. gen_30's 14:14 numbers the trained men at three
+  hundred eighteen; the letters of that name total exactly 318,
+  computed at derivation — so the reading that the whole force was one
+  servant rests on an arithmetic that holds (G30-25, middah E29).
+- THE THREE-SCROLLS MEMBER. gen_30's 14:3 writes the pronoun as the
+  written 'he' where the sense requires the feminine — verified — and
+  the token is a member of the ELEVEN in the Temple-court census where
+  two scrolls were confirmed against one (G30-26).
+
+FINDINGS ABOUT THE TRADITION'S OWN METHOD — the richest class this
+group produced, all in gen_33:
+- OUR 17:5 IS THE CHARTER OF THE ACRONYM RULE. Asked from where in the
+  Torah acronyms derive, the answer is this verse. One of the 32
+  narrative middot is licensed by the very text the unit encodes.
+- THE SELECTION PROCESS IS PRESERVED. Three candidate verbal analogies
+  are raised over this chapter's tokens to prove the act overrides the
+  Sabbath — the sign, the covenant, the generations — TWO ARE WEIGHED
+  AND SET ASIDE, and the corpus records the discarded candidates by
+  name beside the survivor.
+- A CHARACTER USES A MIDDAH AND IS CHALLENGED FOR IT. Abraham derives
+  the site by equating the covering-word of a tree with that of a man,
+  and R. Chanina bar Pazi objects: "were the verbal analogies
+  transmitted to Abraham?!" — answered, not suppressed.
+- THE TWO GRAMMAR SCHOOLS FIGHT ON OUR TOKEN. The doubled verb of
+  17:13: R. Akiva reads doubles as inclusions, R. Yishmael as the
+  Torah speaking in its own idiom. How this corpus reads its own
+  repetitions is contested on this unit's word, with a live legal
+  split riding it.
+
+OTHER LOAD-BEARING: the priestly blessing's warrant traced to 12:3; the
+blessings-and-curses ceremony SITED by equal-cut from 12:6, which then
+adjudicates the rival Samaritan text; the paved-way machine's ELEVEN
+matched ink-pairs making gen_28 a template the nation executes;
+acquisition BY WALKING from 13:17, agreed by all sides in one case; the
+lodging law derived twice from two clauses of 13:3 with a practical
+difference between them; the tradition's rhetoric rule grading 13:16's
+dust simile LITERAL where "fortified to the heavens" is hyperbole; TWO
+CLOCKS in gen_31 (400 years vs the fourth generation) reconciled by
+making the applicable clock conditional on conduct; the covenant of
+gen_31 dated by arithmetic THIRTY YEARS BEFORE ISAAC'S BIRTH — Abraham's
+seventieth year, before gen_27's departure at seventy-five — so the
+narrated order is contested by the tradition's own computation; a
+past-tense grant read as making the statement a DEED, settling when the
+dough-offering obligation began; the ten-years law binding today whose
+derivation the Tosefta itself grades "NO PROOF, BUT A HINT"; and the
+priesthood transferring on the ORDER of two clauses inside one blessing.
+
+FOLDED-SHAPE TALLY (torahsim's counted case, now 189 operators over 37
+blocks): kept record 48, priced law 48, recorded dispute 42,
+cross-corpus link 28, ink count 17, dual-track translation 4, repayment
+table 2. The top three are now effectively tied and plainly earn names;
+the tail two do not. Recommendation unchanged: wait for the law-heavy
+Exodus spans before putting the rulebook question to the owner.
+
+STATE: Genesis 73 of 73 READ; **37 of 73 DERIVED** (gen_01-33
+continuous, 1:1-17:27, plus gen_60-63). **36 blocks remain**: gen_34-59
+and gen_64-73. Seven groups left: gen_34-38 (Vayera, 5), 39-42 (Chayei
+Sarah, 4), 43-47 (Toledot, 5), 48-54 (Vayetze, 7), 55-59 (Vayishlach,
+5), 64-67 (Miketz, 4), 68-73 (Vayigash + Vayechi, 6).
+
+UNCOMMITTED (awaiting owner word): now 26 rev-3 units + 26 manifests +
+CORPUS_TRUTH (standing 495) + corpus_world.sqlite + both addenda.
+Never-commit set untouched. AWAITING OWNER WORD, unchanged: commit/push;
+batch stamps (honest for gen_01-33 and gen_60-63, incl. gen_08's
+re-affirmation); the two works.yaml register rows; the rulebook question.

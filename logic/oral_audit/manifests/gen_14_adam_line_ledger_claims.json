@@ -1,53 +1,218 @@
 [
-  {"id": "G14-01", "source": "Minchat Shai on Gen 5:3 (Masorah alphabet; Ramah)", "ref": "Gen 5:3",
-   "claim_en": "כצלמו (\"AS his image,\" the man-to-son likeness) — the Masorah's alphabet-count: the pair occurs once with bet and once with kaf, \"the first בצלמו with bet, the latter כצלמו with kaf, and the mnemonic is בצלמנו כדמותנו ('in our image, as our likeness')\" (Ramah). SNAPSHOT: כצלמו unique, here.",
-   "check": {"type": "token_count", "where": {"translit": "ke-tzalm-o"},
-             "expect_total": 1, "expect_refs": ["Gen 5:3"]}},
-
-  {"id": "G14-02", "source": "Minchat Shai on Gen 5:3 (Masorah alphabet; Ramah)", "ref": "Gen 1:27",
-   "claim_en": "בצלמו (\"IN His image,\" the God-to-man direction, 1:27) — the pair's bet member, likewise unique: the two prepositions split the two directions of likeness across the two creation notices.",
-   "check": {"type": "token_count", "where": {"translit": "be-tzalm-o"},
-             "expect_total": 1, "expect_refs": ["Gen 1:27"]}},
-
-  {"id": "G14-03", "source": "Minchat Shai on Gen 5:25-26 (Ramah; Hilleli)", "ref": "Gen 5:26",
-   "claim_en": "שמונים (\"eighty\") — the Ramah: \"ONE alone in the Torah is written plene with vav\" — Methuselah's SECOND eighty (5:26, after he begot Lamech), plene with vav and yod; every other Torah eighty (including Methuselah's first, one verse earlier) defective. Minchat Shai calls the six-plene Masorah note \"two errors\"; SNAPSHOT sides with the Ramah: nine eighty-tokens, exactly one plene, at 5:26.",
-   "check": {"type": "spelling_variants", "where": {"translit_like": "%shemonim%"},
-             "pattern_full": "שמונים", "expect_full_refs": ["Gen 5:26"]}},
-
-  {"id": "G14-04", "source": "Minchat Shai on Gen 5:29 (Ramah; Hilleli)", "ref": "Gen 5:29",
-   "claim_en": "ממעשנו (\"from our work\") in Noah's naming-speech — written DEFECTIVE without yod (the Ramah; the Hilleli records a dispute, \"our books\" defective). SNAPSHOT letter-exact.",
-   "check": {"type": "letters_multiset", "ref": "Gen 5:29", "idx": 7,
-             "equals_letters_of": "ממעשנו"}},
-
-  {"id": "G14-05", "source": "Minchat Shai on Gen 5:29", "ref": "Gen 5:29",
-   "claim_en": "ומעצבון (\"and from the toil\") — the tsadi carries a dagesh (doubling dot): the toil-word's third and last Torah token (after the woman's and the man's sentences, 3:16/3:17 — this unit's own census), pointed exactly as its siblings.",
-   "check": {"type": "he_contains", "ref": "Gen 5:29", "idx": 8, "contains": "צּ"}},
-
-  {"id": "G14-06", "source": "Minchat Shai on Gen 5:24", "ref": "Gen 5:24",
-   "claim_en": "כי לקח (\"for [God] took him\" — Enoch's exit) — כי joined by maqqef (the joining hyphen), not accented: the taking-clause reads as one breath. SNAPSHOT's maqqef data agrees.",
-   "check": {"type": "maqqef_after", "ref": "Gen 5:24", "idx": 5, "expect": 1}},
-
-  {"id": "G14-07", "source": "Minchat Shai on Gen 5:5", "ref": "Gen 5:5",
-   "claim_en": "אשר חי (\"which he lived,\" Adam's total) — אשר \"with maqqef (joining hyphen), not with mehuppach (the inverted-horn accent)\": SNAPSHOT joins it.",
-   "check": {"type": "maqqef_after", "ref": "Gen 5:5", "idx": 4, "expect": 1}},
-
-  {"id": "G14-08", "source": "Minchat Shai on Gen 5:5", "ref": "Gen 5:5",
-   "claim_en": "ויהיו (\"and all the days of Adam WERE\") — \"in most books with two gerishin\" (gershayim, the double-stroke accent): SNAPSHOT reads gershayim on the ledger's first total.",
-   "check": {"type": "mark", "ref": "Gen 5:5", "idx": 0, "expect_mark": "gershayim"}},
-
-  {"id": "G14-09", "source": "Minchat Shai on Gen 5:18", "ref": "Gen 5:18",
-   "claim_en": "שתים (\"two,\" in Jared's 162) — darga (the stair-step conjunctive accent) on the tav: SNAPSHOT agrees.",
-   "check": {"type": "mark", "ref": "Gen 5:18", "idx": 2, "expect_mark": "darga"}},
-
-  {"id": "G14-10", "source": "Minchat Shai on Gen 5:26", "ref": "Gen 5:26",
-   "claim_en": "מתושלח אחרי (\"Methuselah, after...\") — אחרי with pashta (the forward-leaning pause accent): SNAPSHOT agrees.",
-   "check": {"type": "mark", "ref": "Gen 5:26", "idx": 2, "expect_mark": "pashta"}},
-
-  {"id": "G14-11", "source": "Minchat Shai on Gen 5 (eight setuma notes)", "ref": "Gen 5:6",
-   "claim_en": "THE LEDGER'S ROW-BREAKS: Minchat Shai marks each generation's opening a CLOSED section (setuma) — 5:6, 5:9, 5:15, 5:18, 5:21, 5:25, 5:28, 5:32 all \"closed\" per the precise books: the death-ledger's rows are paragraph-ruled. SNAPSHOT carries no paragraph (petucha/setuma) instrumentation — gap class of gen_12's G12-11.",
-   "check": {"type": "manual", "note": "no petucha/setuma columns in SNAPSHOT; the eight-row paragraph structure is real Masorah data the instrument cannot see"}},
-
-  {"id": "G14-12", "source": "Minchat Shai on Gen 5:7 (galgal class)", "ref": "Gen 5:7",
-   "claim_en": "הולידו (\"after he begot,\" Seth's row) — Minchat Shai reads galgal (\"wheel,\" the day-old-moon accent) on the dalet; SNAPSHOT's chain reads munach (a plain conjunctive) — the galgal-vs-SNAPSHOT variant class again (gen_11's G11-16 on 3:14): recurrence #2, same manuscript family difference.",
-   "check": {"type": "manual", "note": "galgal absent from SNAPSHOT's mark inventory at this token (munach); manuscript accent-variant class, banked with G11-16"}}
+  {
+    "id": "G14-01",
+    "source": "Minchat Shai on Gen 5:3 (Masorah alphabet; Ramah)",
+    "ref": "Gen 5:3",
+    "claim_en": "כצלמו (\"AS his image,\" the man-to-son likeness) — the Masorah's alphabet-count: the pair occurs once with bet and once with kaf, \"the first בצלמו with bet, the latter כצלמו with kaf, and the mnemonic is בצלמנו כדמותנו ('in our image, as our likeness')\" (Ramah). SNAPSHOT: כצלמו unique, here.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "translit": "ke-tzalm-o"
+      },
+      "expect_total": 1,
+      "expect_refs": [
+        "Gen 5:3"
+      ]
+    }
+  },
+  {
+    "id": "G14-02",
+    "source": "Minchat Shai on Gen 5:3 (Masorah alphabet; Ramah)",
+    "ref": "Gen 1:27",
+    "claim_en": "בצלמו (\"IN His image,\" the God-to-man direction, 1:27) — the pair's bet member, likewise unique: the two prepositions split the two directions of likeness across the two creation notices.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "translit": "be-tzalm-o"
+      },
+      "expect_total": 1,
+      "expect_refs": [
+        "Gen 1:27"
+      ]
+    }
+  },
+  {
+    "id": "G14-03",
+    "source": "Minchat Shai on Gen 5:25-26 (Ramah; Hilleli)",
+    "ref": "Gen 5:26",
+    "claim_en": "שמונים (\"eighty\") — the Ramah: \"ONE alone in the Torah is written plene with vav\" — Methuselah's SECOND eighty (5:26, after he begot Lamech), plene with vav and yod; every other Torah eighty (including Methuselah's first, one verse earlier) defective. Minchat Shai calls the six-plene Masorah note \"two errors\"; SNAPSHOT sides with the Ramah: nine eighty-tokens, exactly one plene, at 5:26.",
+    "check": {
+      "type": "spelling_variants",
+      "where": {
+        "translit_like": "%shemonim%"
+      },
+      "pattern_full": "שמונים",
+      "expect_full_refs": [
+        "Gen 5:26"
+      ]
+    }
+  },
+  {
+    "id": "G14-04",
+    "source": "Minchat Shai on Gen 5:29 (Ramah; Hilleli)",
+    "ref": "Gen 5:29",
+    "claim_en": "ממעשנו (\"from our work\") in Noah's naming-speech — written DEFECTIVE without yod (the Ramah; the Hilleli records a dispute, \"our books\" defective). SNAPSHOT letter-exact.",
+    "check": {
+      "type": "letters_multiset",
+      "ref": "Gen 5:29",
+      "idx": 7,
+      "equals_letters_of": "ממעשנו"
+    }
+  },
+  {
+    "id": "G14-05",
+    "source": "Minchat Shai on Gen 5:29",
+    "ref": "Gen 5:29",
+    "claim_en": "ומעצבון (\"and from the toil\") — the tsadi carries a dagesh (doubling dot): the toil-word's third and last Torah token (after the woman's and the man's sentences, 3:16/3:17 — this unit's own census), pointed exactly as its siblings.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 5:29",
+      "idx": 8,
+      "contains": "צּ"
+    }
+  },
+  {
+    "id": "G14-06",
+    "source": "Minchat Shai on Gen 5:24",
+    "ref": "Gen 5:24",
+    "claim_en": "כי לקח (\"for [God] took him\" — Enoch's exit) — כי joined by maqqef (the joining hyphen), not accented: the taking-clause reads as one breath. SNAPSHOT's maqqef data agrees.",
+    "check": {
+      "type": "maqqef_after",
+      "ref": "Gen 5:24",
+      "idx": 5,
+      "expect": 1
+    }
+  },
+  {
+    "id": "G14-07",
+    "source": "Minchat Shai on Gen 5:5",
+    "ref": "Gen 5:5",
+    "claim_en": "אשר חי (\"which he lived,\" Adam's total) — אשר \"with maqqef (joining hyphen), not with mehuppach (the inverted-horn accent)\": SNAPSHOT joins it.",
+    "check": {
+      "type": "maqqef_after",
+      "ref": "Gen 5:5",
+      "idx": 4,
+      "expect": 1
+    }
+  },
+  {
+    "id": "G14-08",
+    "source": "Minchat Shai on Gen 5:5",
+    "ref": "Gen 5:5",
+    "claim_en": "ויהיו (\"and all the days of Adam WERE\") — \"in most books with two gerishin\" (gershayim, the double-stroke accent): SNAPSHOT reads gershayim on the ledger's first total.",
+    "check": {
+      "type": "mark",
+      "ref": "Gen 5:5",
+      "idx": 0,
+      "expect_mark": "gershayim"
+    }
+  },
+  {
+    "id": "G14-09",
+    "source": "Minchat Shai on Gen 5:18",
+    "ref": "Gen 5:18",
+    "claim_en": "שתים (\"two,\" in Jared's 162) — darga (the stair-step conjunctive accent) on the tav: SNAPSHOT agrees.",
+    "check": {
+      "type": "mark",
+      "ref": "Gen 5:18",
+      "idx": 2,
+      "expect_mark": "darga"
+    }
+  },
+  {
+    "id": "G14-10",
+    "source": "Minchat Shai on Gen 5:26",
+    "ref": "Gen 5:26",
+    "claim_en": "מתושלח אחרי (\"Methuselah, after...\") — אחרי with pashta (the forward-leaning pause accent): SNAPSHOT agrees.",
+    "check": {
+      "type": "mark",
+      "ref": "Gen 5:26",
+      "idx": 2,
+      "expect_mark": "pashta"
+    }
+  },
+  {
+    "id": "G14-11",
+    "source": "Minchat Shai on Gen 5 (eight setuma notes)",
+    "ref": "Gen 5:6",
+    "claim_en": "THE LEDGER'S ROW-BREAKS: Minchat Shai marks each generation's opening a CLOSED section (setuma) — 5:6, 5:9, 5:15, 5:18, 5:21, 5:25, 5:28, 5:32 all \"closed\" per the precise books: the death-ledger's rows are paragraph-ruled. SNAPSHOT carries no paragraph (petucha/setuma) instrumentation — gap class of gen_12's G12-11.",
+    "check": {
+      "type": "manual",
+      "note": "no petucha/setuma columns in SNAPSHOT; the eight-row paragraph structure is real Masorah data the instrument cannot see"
+    }
+  },
+  {
+    "id": "G14-12",
+    "source": "Minchat Shai on Gen 5:7 (galgal class)",
+    "ref": "Gen 5:7",
+    "claim_en": "הולידו (\"after he begot,\" Seth's row) — Minchat Shai reads galgal (\"wheel,\" the day-old-moon accent) on the dalet; SNAPSHOT's chain reads munach (a plain conjunctive) — the galgal-vs-SNAPSHOT variant class again (gen_11's G11-16 on 3:14): recurrence #2, same manuscript family difference.",
+    "check": {
+      "type": "manual",
+      "note": "galgal absent from SNAPSHOT's mark inventory at this token (munach); manuscript accent-variant class, banked with G11-16"
+    }
+  },
+  {
+    "id": "G14-13",
+    "source": "Avodah Zarah 5a:9; Bereshit Rabbah 24:2; Bereshit Rabbah 24:4",
+    "claim_en": "THE LEDGER OPERATOR IS READ AS A SCHEDULER. סֵפֶר (sefer, 'book') at our 5:1 is read as a registry ALREADY WRITTEN and shown to the first human - 'He showed him each generation and its expositors, its sages, its leaders' - so that 'in Your book all of them are written' means they were written in the book of the first man. From this the chain draws a scheduling claim: THE MESSIANIC KING WILL NOT COME UNTIL ALL THE SOULS IN THE BOOK OF ADAM ARE CREATED. The unit's genealogical ledger is thereby a queue the world drains, and its completion is a precondition for an event outside the corpus.",
+    "check": {
+      "type": "manual",
+      "note": "A ledger operator read as a work queue whose exhaustion gates a later event."
+    }
+  },
+  {
+    "id": "G14-14",
+    "source": "Bereshit Rabbah 24:7; Jerusalem Talmud Nedarim 9:4:3",
+    "claim_en": "A DISPUTE OVER WHICH VERSE IS THE TORAH'S GREATEST PRINCIPLE, SEATED ON OUR 5:1 - and the seats do not rank it the same way. Ben Azzai holds 'this is the book of the generations of Adam' the great principle; R. Akiva holds 'love your neighbour as yourself'. At the Bereshit Rabbah seat the two are presented level; at the Jerusalem Talmud seat Ben Azzai says our verse is a principle GREATER THAN THAT. The strength of the claim varies between seats, and both forms are carried.",
+    "check": {
+      "type": "manual",
+      "note": "A dispute whose relative ranking differs between seats - a strength-variance, recorded rather than smoothed."
+    }
+  },
+  {
+    "id": "G14-15",
+    "source": "Tosefta Yevamot 8:3; Yevamot 61b:15; Yevamot 63a:2",
+    "claim_en": "THE PROCREATION MEASURE IS PROVED FROM OUR 5:2. The case-table rule - a man may not neglect procreation unless he has children - is disputed as to the measure, and the House of Hillel's ruling of A MALE AND A FEMALE is proved by citing this verse's own words, 'male and female He created them'. The House of Shammai holds two sons. The same verse yields a further rule: 'whoever has no wife is NOT ADAM, as it is stated: male and female He created them AND CALLED THEIR NAME ADAM' - the shared name read as making the pair the person.",
+    "check": {
+      "type": "manual",
+      "note": "A canonical case-table row whose stated proof-text is this unit's own verse - a testing-shelf row anchored here."
+    }
+  },
+  {
+    "id": "G14-16",
+    "source": "Eruvin 18b; Bereshit Rabbah 24:6",
+    "claim_en": "THE LIKENESS-RECAP AT 5:3 IS READ AS A BOUNDARY MARKER WITH A DARK INFERENCE. Because the verse says that at 130 years he begot 'IN HIS LIKENESS, AFTER HIS IMAGE', R. Yirmeyah ben Elazar infers what the verse does not say: until then, NOT after his image - and reads those years as a period under ban in which spirits were begotten. Bereshit Rabbah gives three answers to why 'THESE are descendants and the earlier were not', including that the first three alone stood in the image and that the earlier were the spirits of those 130 years.",
+    "check": {
+      "type": "manual",
+      "note": "An inference from what the recap verse specifies to what the preceding silence implies."
+    }
+  },
+  {
+    "id": "G14-17",
+    "source": "Bereshit Rabbah 25:1",
+    "middah": "E7",
+    "claim_en": "A DISPUTE FOUGHT WITH DUELLING VERBAL ANALOGIES ON THE SAME WORD. Our 5:24 says of Chanokh that God TOOK him, and the verb is contested: some argue from the taking of Elijah that he did not die; R. Abbahu answers with a COUNTER verbal analogy from the taking of Ezekiel's wife, where the same verb plainly means death. The chain also records him as capricious - written in the ledger of the wicked, taken 'while in his righteousness' before he could turn. The machine's entry for this generation therefore carries a contested exit rather than a settled one, and the contest is between two applications of one middah.",
+    "check": {
+      "type": "manual",
+      "note": "Middah E7 (equal decree) deployed by both sides on the same verb - the inference rule itself becoming the battleground."
+    }
+  },
+  {
+    "id": "G14-18",
+    "source": "Bereshit Rabbah 25:2; Sanhedrin 113b:3; Tosefta Sotah 10:1; Tosefta Sotah (Lieberman) 10:2",
+    "claim_en": "THE NAMING AT 5:29 IS BOTH A DISPUTED ETYMOLOGY AND A GENERAL RULE. The name is disputed with the explicit caveat that 'the name is not the exposition': R. Yochanan reads the furrow and the ox obeying again; Reish Lakish the WATERS resting; R. Eliezer the pleasing savour of the later offering. And from the same verse the chain states a rule of the world: 'when a righteous one comes into the world, GOOD comes into the world - as it is stated: THIS ONE WILL COMFORT US', carried at both the Tosefta base and its Babylonian seat.",
+    "check": {
+      "type": "manual",
+      "note": "A naming operator carrying a three-way etymology dispute and a general rule about righteous arrivals."
+    }
+  },
+  {
+    "id": "G14-19",
+    "source": "Bereshit Rabbah 26:3; Bereshit Rabbah 37:7; Sanhedrin 69b:15; Bereshit Rabbah 26:2",
+    "claim_en": "THE THREE-SONS LIST OF 5:32 IS ORDERED BY RANK, NOT BIRTH - AND THE CHAIN PROVES IT ARITHMETICALLY. Shem is named first though Yefet is the elder, and the ordering is justified by rank: righteous, born circumcised, the Name attached to him, the line of Abraham, the priesthood, the Temple in his territory. The arithmetic is opened rather than credited: Shem reaches a hundred two years after the Flood, so he cannot be the eldest. The chain also asks why this man alone begot at five hundred where the others begot at a hundred or two, and answers that the chronology is DESIGN - so that no child would reach the punishable age of a hundred before the Flood came.",
+    "check": {
+      "type": "manual",
+      "note": "A list order justified by rank with a supporting computation, opened per credit guard 3 rather than credited unread."
+    }
+  }
 ]

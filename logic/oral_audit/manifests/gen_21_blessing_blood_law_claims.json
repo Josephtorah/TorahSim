@@ -1,28 +1,170 @@
 [
-  {"id": "G21-01", "source": "Minchat Shai on Gen 9:2", "ref": "Gen 9:2",
-   "claim_en": "כל חית הארץ (\"every beast of the earth,\" the dread-clause) — the yod carries a dagesh (doubling dot). SNAPSHOT agrees.",
-   "check": {"type": "he_contains", "ref": "Gen 9:2", "idx": 5, "contains": "יּ"}},
-
-  {"id": "G21-02", "source": "Minchat Shai on Gen 9:2", "ref": "Gen 9:2",
-   "claim_en": "דגי הים (\"the fish of the sea\") — the yod of the sea-word with dagesh (doubling dot). SNAPSHOT agrees.",
-   "check": {"type": "he_contains", "ref": "Gen 9:2", "idx": 17, "contains": "יּ"}},
-
-  {"id": "G21-03", "source": "Minchat Shai on Gen 9:2 (Ben Asher; the precise books)", "ref": "Gen 9:2",
-   "claim_en": "ובכל (\"and in every [fish of the sea]\") — the vav carries the lengthening mark (maarikh, the small vertical stroke) \"per Ben Asher, and so in the precise books.\" SNAPSHOT's codepoints: vav, its vowel-dot, and the stroke — the Ben Asher reading locked.",
-   "check": {"type": "he_contains", "ref": "Gen 9:2", "idx": 15, "contains": "וּֽ"}},
-
-  {"id": "G21-04", "source": "Minchat Shai on Gen 9:4", "ref": "Gen 9:4",
-   "claim_en": "בשר בנפשו דמו (\"flesh with its life, its BLOOD\") — the first blood-word's dalet is SOFT (no dagesh): dalet+vowel contiguous in SNAPSHOT.",
-   "check": {"type": "he_contains", "ref": "Gen 9:4", "idx": 3, "contains": "דָ"}},
-
-  {"id": "G21-05", "source": "Minchat Shai on Gen 9:7 (Great Masorah)", "ref": "Gen 9:7",
-   "claim_en": "שרצו בארץ (\"SWARM in the earth,\" the renewed blessing) — the Great Masorah lists it among the pairs that take NO vav at the word's head, \"and the copies err in them\": here bare, unlike the true ושרצו (\"and they shall swarm\") of the exit-command (8:17) — both forms locked one chapter apart.",
-   "check": {"type": "letters_multiset", "ref": "Gen 9:7", "idx": 3,
-             "equals_letters_of": "שרצו"}},
-
-  {"id": "G21-06", "source": "Kitzur Baal HaTurim on Gen 9:5 (Masorah)", "ref": "Gen 9:5",
-   "scope": "scripture",
-   "claim_en": "ואך (\"and yet\") — the Kitzur's Masorah trio: the blood-reckoning (9:5), Balaam's \"yet ONLY the word I speak\" (Num 22:20), and \"yet if the land of your possession is unclean\" (Josh 22:19): as one may not kill oneself, one may not curse oneself — even SPEECH is reckoned. Torah-side: exactly the two tokens of this pointing (Pharaoh's ואך, Exod 9:15, is another vocalization); the Joshua leg is an inheritance edge.",
-   "check": {"type": "token_count", "where": {"translit": "ve-akh"},
-             "expect_total": 2, "expect_refs": ["Gen 9:5", "Num 22:20"]}}
+  {
+    "id": "G21-01",
+    "source": "Minchat Shai on Gen 9:2",
+    "ref": "Gen 9:2",
+    "claim_en": "כל חית הארץ (\"every beast of the earth,\" the dread-clause) — the yod carries a dagesh (doubling dot). SNAPSHOT agrees.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 9:2",
+      "idx": 5,
+      "contains": "יּ"
+    }
+  },
+  {
+    "id": "G21-02",
+    "source": "Minchat Shai on Gen 9:2",
+    "ref": "Gen 9:2",
+    "claim_en": "דגי הים (\"the fish of the sea\") — the yod of the sea-word with dagesh (doubling dot). SNAPSHOT agrees.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 9:2",
+      "idx": 17,
+      "contains": "יּ"
+    }
+  },
+  {
+    "id": "G21-03",
+    "source": "Minchat Shai on Gen 9:2 (Ben Asher; the precise books)",
+    "ref": "Gen 9:2",
+    "claim_en": "ובכל (\"and in every [fish of the sea]\") — the vav carries the lengthening mark (maarikh, the small vertical stroke) \"per Ben Asher, and so in the precise books.\" SNAPSHOT's codepoints: vav, its vowel-dot, and the stroke — the Ben Asher reading locked.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 9:2",
+      "idx": 15,
+      "contains": "וּֽ"
+    }
+  },
+  {
+    "id": "G21-04",
+    "source": "Minchat Shai on Gen 9:4",
+    "ref": "Gen 9:4",
+    "claim_en": "בשר בנפשו דמו (\"flesh with its life, its BLOOD\") — the first blood-word's dalet is SOFT (no dagesh): dalet+vowel contiguous in SNAPSHOT.",
+    "check": {
+      "type": "he_contains",
+      "ref": "Gen 9:4",
+      "idx": 3,
+      "contains": "דָ"
+    }
+  },
+  {
+    "id": "G21-05",
+    "source": "Minchat Shai on Gen 9:7 (Great Masorah)",
+    "ref": "Gen 9:7",
+    "claim_en": "שרצו בארץ (\"SWARM in the earth,\" the renewed blessing) — the Great Masorah lists it among the pairs that take NO vav at the word's head, \"and the copies err in them\": here bare, unlike the true ושרצו (\"and they shall swarm\") of the exit-command (8:17) — both forms locked one chapter apart.",
+    "check": {
+      "type": "letters_multiset",
+      "ref": "Gen 9:7",
+      "idx": 3,
+      "equals_letters_of": "שרצו"
+    }
+  },
+  {
+    "id": "G21-06",
+    "source": "Kitzur Baal HaTurim on Gen 9:5 (Masorah)",
+    "ref": "Gen 9:5",
+    "scope": "scripture",
+    "claim_en": "ואך (\"and yet\") — the Kitzur's Masorah trio: the blood-reckoning (9:5), Balaam's \"yet ONLY the word I speak\" (Num 22:20), and \"yet if the land of your possession is unclean\" (Josh 22:19): as one may not kill oneself, one may not curse oneself — even SPEECH is reckoned. Torah-side: exactly the two tokens of this pointing (Pharaoh's ואך, Exod 9:15, is another vocalization); the Joshua leg is an inheritance edge.",
+    "check": {
+      "type": "token_count",
+      "where": {
+        "translit": "ve-akh"
+      },
+      "expect_total": 2,
+      "expect_refs": [
+        "Gen 9:5",
+        "Num 22:20"
+      ]
+    }
+  },
+  {
+    "id": "G21-07",
+    "source": "Eikhah Rabbah, Petichta 34; Shabbat 151b:9",
+    "claim_en": "THE FEAR-GRANT OF OUR 9:2 IS READ AS ECOLOGICAL LAW AND AS A LAPSING RIGHT. Because the grant covers beast, bird and fish together, dominion is read as implying CO-RESIDENCE - the birds and the fish are said to have left the Land with Israel and returned with them. And the grant's own second-person suffix is read through the word for LIVING: 'YOUR fear' holds while you are alive and LAPSES AT DEATH, which is why a day-old infant needs no guarding from beasts while even a mighty dead man does. A permission operator with a stated expiry condition.",
+    "check": {
+      "type": "manual",
+      "note": "A dominion grant read as implying co-residence, and as a right that expires with the holder's life."
+    }
+  },
+  {
+    "id": "G21-08",
+    "source": "Sanhedrin 57a:4; Sifra, Shemini, Section 2 3; Vayikra Rabbah 13:2",
+    "claim_en": "THE MEAT GRANT OF OUR 9:3 CARRIES A THEFT PROHIBITION INSIDE ITS OWN SIMILE, AND A STATED TWO-ERA ARCHITECTURE. R. Levi reads 'as the GREEN HERB I have given you everything' to mean: like the self-sprouting ownerless growth, and NOT like a tended garden - so theft is forbidden in the same breath that meat is permitted; others read the verse as permitting meat only, and the dispute is recorded. The Sifra states the legal architecture explicitly - ONE DECLARATION REPLACES ANOTHER: this universal grant stands until Deuteronomy narrows it for Israel, so the corpus is read as running two legal eras with a documented supersession.",
+    "check": {
+      "type": "manual",
+      "note": "A prohibition read out of the simile inside a permission, and an explicit statement of how a later declaration supersedes an earlier one."
+    }
+  },
+  {
+    "id": "G21-09",
+    "source": "Bereshit Rabbah 34:13; Sanhedrin 57a:5; Sanhedrin 59a:6; Sifra, Shemini, Section 2 4",
+    "claim_en": "THE GRANT DRIVES THE LAW: BECAUSE MEAT IS PERMITTED, A RESTRICTION BECOMES NECESSARY. The chain notes the delta directly - the first human, who had no meat grant, was never warned about a limb from a living animal; the sons of Noah, who receive the grant at 9:3, are warned at 9:4. A prohibition is thus derived as the consequence of a permission granted one verse earlier. The clause is split two ways at the baraita - the limb, and the blood of a living animal - and the Sifra builds a whole ladder over the grant, each later verse adding one rung: the limb, the sinew, the fat, the blood, and slaughter.",
+    "check": {
+      "type": "manual",
+      "note": "A prohibition whose necessity is derived from a permission installed one operator earlier - the grant creating the law."
+    }
+  },
+  {
+    "id": "G21-10",
+    "source": "Bava Kamma 91b:8; Jerusalem Talmud Bava Kamma 8:6:1; Tosefta Bava Kamma (Lieberman) 9:31",
+    "claim_en": "SELF-INJURY IS PROHIBITED ON OUR 9:5, AND THE TWO COURTS SPLIT ON IT. R. Elazar reads 'from the hand of YOUR SOULS I will require your blood' as establishing liability for taking one's own life. The tradition then divides the forum: self-injury is exempt in a human court yet LIABLE IN HEAVEN'S COURT, while another who injures him is liable in both - and R. Akiva's oil-flask case is the exhibit. Tearing one's hair or garments in anger is placed under the same head.",
+    "check": {
+      "type": "manual",
+      "note": "One verse grounding a prohibition that is actionable in one forum and not the other - the two-court split recorded on a single clause."
+    }
+  },
+  {
+    "id": "G21-11",
+    "source": "Bereshit Rabbah 34:14; Mekhilta DeRabbi Yishmael, Tractate Nezikin 4:9; Sanhedrin 57a:3; Sanhedrin 57a:13",
+    "claim_en": "THE WHOLE MURDER PROCEDURE FOR THE DESCENDANTS OF NOAH IS READ WORD BY WORD OUT OF OUR 9:6. R. Chanina derives from the verse's own phrasing: conviction on ONE witness, before ONE judge, with NO forewarning required, with liability for one who kills through an agent, and - from בָּאָדָם (ba-adam, 'IN the man') - liability for a fetus, 'the man within a man'. The strangler is added, since the blood stays inside him. The MODE of execution is read from the verb: 'by man shall his blood BE SHED' means death by shedding, which excludes strangling and stoning. The verse's legal role is itself disputed - one school holds it the SOURCE of the bloodshed prohibition, others that it supplies only the death mode - and it serves as the punishment paradigm for the entire seven-law list: 'the Merciful One revealed it at bloodshed, and the same holds for all'.",
+    "check": {
+      "type": "manual",
+      "note": "A complete criminal procedure - evidentiary threshold, court size, forewarning rule, agency, fetal scope and execution mode - derived clause by clause from one verse, whose own legal role is disputed."
+    }
+  },
+  {
+    "id": "G21-12",
+    "source": "Jerusalem Talmud Sanhedrin 5:1:8; Tosefta Sanhedrin 11:1; Mekhilta DeRabbi Yishmael, Tractate Bachodesh 8:10",
+    "claim_en": "OUR 9:6 IS QUOTED INSIDE THE COURT'S OWN FOREWARNING FORMULA. The warning administered to a suspect before a capital act cites this verse as the statute - 'know that he is a son of the covenant, and the Torah said: he who spills a man's blood...' - and liability attaches only if the suspect answers that he knows and acts on that condition, with one seat requiring all witnesses to warn as one. The verse is further paired with the Decalogue's prohibition as its other half: 'You shall not kill' is the exhortation, our verse is the PUNISHMENT - two verses, one statute.",
+    "check": {
+      "type": "manual",
+      "note": "The verse functioning as citable statutory text inside a live courtroom procedure, and paired with a later verse as the penalty half of one statute."
+    }
+  },
+  {
+    "id": "G21-13",
+    "source": "Mekhilta DeRabbi Yishmael, Tractate Kaspa 3:9; Sanhedrin 72b:15; Sanhedrin 72b:17",
+    "claim_en": "THE SAME VERSE IS USED TO REFUSE A CONVICTION AND TO LICENSE A KILLING. REFUSED: the pursuer is seen, the warning is given citing our 9:6, the witnesses' eyes are averted for a moment, and the knife is found dripping - and still there is no execution, because 'a clean and righteous one you shall not kill'; circumstantial proof, however overwhelming, does not convict. LICENSED: the pursuer law rides the same verse - 'save the blood of the pursued WITH the blood of the pursuer' - and whether forewarning is needed there is disputed on both sides of this one clause.",
+    "check": {
+      "type": "manual",
+      "note": "One verse supplying both a refusal to convict on circumstantial evidence and the license to kill a pursuer, with the forewarning question disputed on both sides of it."
+    }
+  },
+  {
+    "id": "G21-14",
+    "source": "Vayikra Rabbah 34:3",
+    "claim_en": "THE IMAGE CLAUSE OF OUR 9:6 IS READ AS A POSITIVE DUTY OF BODY CARE. Hillel holds that bathing is itself a commandment, arguing from the statue-scrubber: if one appointed over the images of kings scrubs and washes them and is honoured for it, how much more one who was made in the image of God. The clause the machine reads as the ground of the murder prohibition is read here as generating an affirmative obligation toward one's own body.",
+    "check": {
+      "type": "manual",
+      "note": "A clause that grounds a capital prohibition read, by light-and-heavy argument, as also grounding an affirmative duty."
+    }
+  },
+  {
+    "id": "G21-15",
+    "source": "Sanhedrin 57a:6; Bereshit Rabbah 34:15",
+    "claim_en": "OUR 9:7 IS READ AS PROHIBITING CASTRATION, and the reading is disputed. From 'swarm and multiply' it is argued that nothing may be done to prevent reproduction; others hold the verse is merely a blessing and carries no prohibition - the dispute recorded on both sides. Reish Lakish reads the neighbouring covenant as granted to the CLIMATES themselves, with the favour a person's native place holds for him.",
+    "check": {
+      "type": "manual",
+      "note": "A blessing operator read as carrying a prohibition, against the reading that it is only a blessing."
+    }
+  },
+  {
+    "id": "G21-16",
+    "source": "Jerusalem Talmud Sheviit 1:1:4",
+    "claim_en": "A CLAIM ABOUT WHY THIS SPAN IS KEPT IN THE CANON AT ALL. R. Yonah observes that the flood chapter 'will have no future use' - the oath of 9:11 forecloses any repetition, so the passage can never govern a future case - and yet it is retained in the studied canon, the reason given being 'to inform you'. The tradition explicitly records a portion of the corpus as legally inoperative and deliberately preserved.",
+    "check": {
+      "type": "manual",
+      "note": "The tradition's own statement that a span is retained despite having no forward legal application - a claim about the canon's retention policy, not about the world."
+    }
+  }
 ]
