@@ -6047,16 +6047,25 @@ the owner had already given. Step 4 now also carries two method rules
 added 2026-08-30 and flagged to him as vetoable: GRADE THE LEG, NOT THE
 SECTION, and A REPORT OF ZERO IS WORTH ONLY THE COVERAGE LINE ABOVE IT.
 
-**⚠ THE ONE REAL RISK ACROSS THIS COMPACTION: THREE GROUPS ARE
+**✅ RESOLVED BEFORE THE COMPACTION — ALL THREE GROUPS ARE COMMITTED AND
+PUSHED as c61dffe..310544e (2026-08-30, owner's word "commit and push").
+55 files: 17 rev-3 units, 17 manifests, 17 ledgers, CORPUS_TRUTH (778),
+THE_STEPS.md, THE_WORLD.md and the state doc. elijah_docket correctly
+excluded. NOTHING IS UNCOMMITTED. The paragraph below is kept as the
+record of what the risk WAS, not as a live warning.**
+
+**(HISTORICAL) THE RISK THIS BLOCK WAS WRITTEN AGAINST: THREE GROUPS WERE
 UNCOMMITTED.** 56 tracked files modified; last commit is c61dffe (Chayei
 Sarah). Uncommitted: TOLEDOT (gen_43-47), VAYETZE (gen_48-54) and
 VAYISHLACH (gen_55-59) — 17 rev-3 units, 17 manifests, 17 ledgers with
 appended citation keys — plus CORPUS_TRUTH (778), corpus_world.sqlite,
 THE_STEPS.md, THE_WORLD.md and the addenda above. All gated green; none of
 it exists anywhere but this working tree. torahsim has NOT been sent any
-of the three. The owner was told and has not yet given the commit word.
-FIRST ACTION AFTER THE STEP-4 REREAD: ask him to commit, or act on his
-word if he has already given it.
+of the three — THAT REMAINS TRUE AND IS THE ONE OPEN ITEM: after the
+Step-4 reread, RELEASE Toledot, Vayetze and Vayishlach to torahsim-19 in
+one message, announcing the 407 appended Onkelos citation keys (Toledot
+106, Vayetze 145, Vayishlach 156) per the standing arrangement, and warn
+it that gen_39/gen_40 style redaction hits are expected again.
 
 **WHERE GENESIS STANDS:** 73 of 73 READ. **63 of 73 DERIVED, gen_01
 through gen_63 CONTINUOUS** (1:1 to 38:30) — the first unbroken run from
