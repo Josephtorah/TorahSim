@@ -128,3 +128,32 @@ read. No verdict is changed and no row is rewritten — this is a naming
 key for the Onkelos rows above.
 
 Onkelos Genesis 49:1, Onkelos Genesis 49:2, Onkelos Genesis 49:3, Onkelos Genesis 49:4, Onkelos Genesis 49:5, Onkelos Genesis 49:6, Onkelos Genesis 49:7, Onkelos Genesis 49:8, Onkelos Genesis 49:9, Onkelos Genesis 49:10, Onkelos Genesis 49:11, Onkelos Genesis 49:12, Onkelos Genesis 49:13, Onkelos Genesis 49:14, Onkelos Genesis 49:15, Onkelos Genesis 49:16, Onkelos Genesis 49:17, Onkelos Genesis 49:18, Onkelos Genesis 49:19, Onkelos Genesis 49:20, Onkelos Genesis 49:21, Onkelos Genesis 49:22, Onkelos Genesis 49:23, Onkelos Genesis 49:24, Onkelos Genesis 49:25, Onkelos Genesis 49:26, Onkelos Genesis 49:27, Onkelos Genesis 49:28, Onkelos Genesis 49:29, Onkelos Genesis 49:30, Onkelos Genesis 49:31, Onkelos Genesis 49:32, Onkelos Genesis 49:33.
+
+## APPENDED 2026-08-30 — MEASUREMENT NOTE ON ROW O9 (49:11-12)
+Append-only. **No verdict is changed and no row is rewritten.** Row O9
+filed 49:11-12 among the verses where the buffer "still translates,"
+with the hedge "though even these carry expansions." The translation
+layer was afterwards measured against the ink
+(logic/onkelos_genre_2026-08-30/), and on the numbers those two verses
+belong with O1-O7, not with O9:
+
+| verse | expansion | retention | chapter context |
+|---|---|---|---|
+| 49:11 | **2.08** | 0.09 | 2nd-highest expansion in the chapter |
+| 49:12 | 1.83 | 0.00 | Genesis prose baseline is 1.035 |
+
+Opened, the hedge understates it. Our Hebrew at 49:11 binds a foal to a
+vine and washes a garment in wine; Onkelos writes "Israel will travel
+round to his city, the people will build his temple, the righteous will
+be round about him, and the doers of the Torah in learning with him."
+There is no lexical contact — a different sentence, not an expanded one.
+
+The same measurement CONFIRMS row O9's other members: the burial charge
+at 49:29-33 translates at or below the book's prose rate, and 49:31
+carries the **highest retention in the chapter (0.80)**. O9's reading
+was right about the frame and wrong about these two verses only —
+graded by leg, per Step 4.
+
+This note is also the evidence behind THE ONKELOS GENRE RULE now
+standing in logic/CORE_SHELF.md, which generalises this block's finding
+from one chapter to every poem in the Torah.

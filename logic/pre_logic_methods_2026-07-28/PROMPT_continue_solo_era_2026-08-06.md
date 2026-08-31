@@ -6732,3 +6732,296 @@ doc. gen_70's amendment rides in the same batch.
 **WHAT NOW STANDS OPEN:** the batch stamps for the whole book — held by
 the owner's own standing decision UNTIL GENESIS WAS FINISHED, and it is
 now finished. That decision is his to take, and it is not to be pushed.
+
+---
+
+## ⚠⚠ COMPACTION POINT #29 (2026-08-30, owner: "Time to compact get ready")
+## READ THIS BLOCK FIRST ON RESUME.
+
+**STEP ZERO ON RESUME:** reread THE_STEPS.md Step 4 before deriving anything.
+Standing post-compaction rule. Step 4 now also carries the four method rules
+this week paid for: GRADE THE LEG NOT THE SECTION; A REPORT OF ZERO IS WORTH
+ONLY ITS COVERAGE LINE; COUNT WHAT YOU REPORT, ASSERT WHAT MUST NOT CHANGE;
+and A FIGURE THAT NEVER CHANGES ACROSS WORK THAT SHOULD CHANGE IT IS A DEFECT
+REPORT, NOT A CONSTANT.
+
+**✅ NOTHING IS UNCOMMITTED.** HEAD is **b3a11fc**, working tree clean apart
+from `elijah_docket` (never-commit set, correct). Everything below is landed.
+
+**⭐ GENESIS IS FINISHED, STAMPED AND PUBLISHED.** 73 of 73 blocks derived,
+gen_01 through gen_73, 1:1 to 50:26, every block frozen at rev 3+ and verified
+block by block. Standing **905**, hash **8b8fff1fa28953af** unmoved through all
+ten runs of the era (288→306→495→530→582→648→725→778→841→873→905, every delta
+exactly the operator count). The owner gave the BATCH STAMPS in the torahsim
+window and the book is live at full rule, 1,533 of 1,533 verses.
+
+**⚠ THREE OWNER INSTRUCTIONS THAT CHANGE THE DEFAULTS — OBEY THESE:**
+1. **DO NOT MIRROR THE STAMPS INTO THIS TREE.** He was asked directly and said
+   "no don't mirror." The workshop is behind canon on 65 units (45 flips, 20
+   field-additions) and that is now the INTENDED state, not drift. Do not
+   raise it again unprompted.
+2. **FORGET TORAHSIM FOR NOW.** "lets stay focued on this repo. forget
+   torahsim." Cross-session relay is suspended by his word. The peer knows.
+3. **THE WORLD LIVES IN ITS OWN FOLDER, OUTSIDE THIS REPO.**
+
+**⭐ NEW: `<world-link>/` — READ ITS `RESUME.md` FIRST.** Owner's
+instruction: a folder separate from everything, kept to itself, not inside
+Torah_Grok and not inside the grok-created tree. It holds a QUERYABLE WORLD
+(not a ledger) compiled from the whole corpus: `build_world.py`, `schema.sql`,
+`ask.py`, `world.sqlite`, `research/`, `placement/`. It reads this repo
+READ-ONLY, never writes back, and reconciles against `corpus_world.fold()` on
+every build — ten counts plus the state hash, all green. 97 units, 2,074
+verses, 278 entities, 740 relations, 341 demands. It answers what a ledger
+cannot: what an entity was called at a given verse, what was still unresolved
+at a moment, an entity's whole career in order.
+Grok's earlier attempt at `Torah_Grok_local/genesis_world/` is UNTOUCHED and
+should stay that way — a record of a different approach, not a thing to edit.
+
+**THE ONE OPEN PIECE OF WORK — THE PLACEMENT LAYER, awaiting his word.**
+THE FINDING: after 3,644 operators **the corpus has almost no geography**.
+"Jacob went down to Egypt" is not in the machine. Zero movement verbs in the
+event stream; 3 of 557 events have a place-like theme. Measured and recorded
+in `World/research/VERB_REVIEW.md` — all 464 Genesis verb lemmas enumerated
+from the morphology, 83 location-bearing: **909 of 1,533 verses (59%)**, of
+which **654 (72%) name a target and are machine-proposable** and 255 need
+reading. Estimate six to seven sittings, resting on a false-positive rate NOT
+yet measured. **NEXT ACTION IF HE SAYS GO: pilot ONE parashah, VAYETZE**, all
+four phases, to turn the estimate into a measurement. **BUILD IT BESIDE THE
+FROZEN UNITS, NEVER INSIDE** — new operators would take all 73 blocks to rev 5
+and every stamp would need re-affirming.
+AND THE CHAIN HAS A VIEW ON THIS, checked against the ledgers not recalled:
+Bereshit Rabbah 40:6's PAVED-WAY MACHINE reads movement as TYPOLOGY — eleven
+matched ink-pairs, the ancestor's route as the nation's, his-journeys against
+their-journeys; and Bereshit Rabbah 86:2 records a descent as a COMMUTED
+SENTENCE (liable to go down in chains, drawn by his son instead). So placement
+must carry WHY it holds, not only where.
+
+**ALSO STILL HIS, UNRULED, NOT TO BE PUSHED:** the ONKELOS GENRE SHIFT in
+Genesis 49 — through forty-eight chapters the translation renders with logged
+deviations; in that one chapter it becomes interpretive paraphrase, seven
+consecutive blessings given as their fulfilments. Under the spine default
+Onkelos is HALF the declared shelf, so it is a CORE_SHELF question. He asked
+for a full explanation first and has ruled nothing. CORE_SHELF is untouched
+and the spine default stands exactly as ruled 2026-08-27.
+
+**METHOD SCARS WORTH CARRYING (all mine, all caught):** a hand-picked verb list
+that missed 22% of the book, including a SECOND go-verb — enumerate from the
+morphology, never from memory. A completion census reading only the first
+6,000 characters of each unit, returning 71 for 73 — verify completion by FULL
+read. `he_plain` bare-equality matching that hides prefixed forms — match the
+LAST slash-separated segment and filter proper nouns by morph. And 212
+non-frozen drafts in `logic/units/` that shadow the frozen blocks under
+first-match — always filter `meta.status == "frozen"` through the loader.
+
+---
+
+## SITTING CLOSE 2026-08-30 (owner: "Get 2 done then 1", then "stop for the night")
+## Both items closed. NOTHING COMMITTED — three files await the owner's word.
+
+**UNCOMMITTED (his call):** `logic/CORE_SHELF.md` (amended),
+`logic/oral_triage/gen_72_testament_twelve_2026-08-28.md` (appended),
+`logic/onkelos_genre_2026-08-30/` (new). gloss_lint 0 flags. HEAD still b3a11fc.
+
+**⚠ HE DECLINED TO BE ASKED.** An AskUserQuestion offering the ruling options
+was rejected with "Denied by user" — he had said "Get 2 done", meaning DO it,
+not bring it back. Acted on the recommendation and told him it is reversible.
+Carry this: on this project, a queued instruction is the word; do not stop to
+poll him for a ruling he has already delegated.
+
+### ITEM 2 — THE ONKELOS GENRE RULE, LANDED IN CORE_SHELF
+Claim G72-30 asked whether Onkelos changes genre in Genesis 49. Measured
+against the ink (Onkelos is on disk for all five books), not characterised:
+
+- **Genesis 49 is rank 1 of 184 aligned Torah chapters** by expansion (1.538 vs
+  a 1.040 all-chapter mean). The ledger called it the largest finding of the
+  Genesis walk; it is the largest in the TORAH.
+- **"Here and nowhere else" is FALSE.** The six Torah poems, named IN ADVANCE
+  from genre, all land in the top nine; four take the top four (Gen 49,
+  Deut 33, Deut 32, Num 24, then Num 23 at 8 and Exod 15 at 9). A poetry
+  gradient, not a singularity — so the rule is general, not a footnote.
+- **It is the POEM, not the chapter.** Gen 49's blessings run 1.698; its
+  narrative frame (gathering, burial charge, death) runs 0.944, BELOW the book's
+  prose rate, and 49:31 has the chapter's highest retention. Onkelos changes
+  genre and changes back inside one chapter. Confirmed the same way in
+  Deut 32, Num 24, Exod 15.
+- Rule as written: in prose Onkelos translates and its smoothing is evidence
+  ABOUT THE VERSE; in poetry it delivers the tradition's READING, so a deviation
+  is evidence about THE CHAIN. **Re-labelled, never re-weighted** — read as
+  translation it makes false claims about the Hebrew; discarded it throws away
+  chain testimony (49:10's messianic naming, 49:27's Temple in Benjamin's
+  portion, both corroborated independently by Bereshit Rabbah).
+- **Reaches Exodus before the walk does:** Exodus 15 is rank 9 and already
+  frozen as exo_15.
+
+**TWO SAVES WORTH KEEPING.** (1) Ketiv/qere rows double-count — the written
+form carries no vowel points; 67 dropped. (2) **Exodus 20 and Deuteronomy 5
+ranked #1 and #2 until caught**: our Hebrew and this Onkelos versify the
+Decalogue differently (26 vs 23, 33 vs 30), so index pairing compared unrelated
+sentences. Three chapters excluded and NAMED; 184 of 187 survive. A ranking is
+worthless without an alignment audit under it.
+
+**APPENDED TO gen_72 (append-only, no verdict changed):** row O9 filed 49:11-12
+as "still translating." Measured, 49:11 is the chapter's 2nd-highest expansion
+(2.08) with retention 0.09 — the Hebrew binds a foal to a vine, Onkelos writes
+"Israel will travel round to his city, the people will build his temple." No
+lexical contact: a different sentence, not an expanded one. The same measurement
+CONFIRMS O9's other members (the burial charge at or below the prose rate).
+Graded by leg, per Step 4.
+
+### ITEM 1 — THE VAYETZE PILOT, ALL FOUR PHASES RUN
+Lives in `<world-link>/placement/`; full write-up in `PILOT_RESULT.md`;
+`RESUME.md` updated with the correction above the original plan.
+
+- **⚠ THE 72% PROPOSABLE FIGURE COUNTED PERSON NAMES AS TARGETS.** Separating
+  persons from places: **21% across Genesis, 7% in Vayetze.** The old number
+  reproduces exactly (71%/68% vs the recorded 72%), so this is that measurement
+  corrected. RESUME had flagged the risk in words ("Abraham took Sarah"); it is
+  the DOMINANT case, not an edge case.
+- **Precision 33% on the full triple (who+relation+where); recall 29%.** A
+  reading task with machine assistance, not a machine task with review.
+- **⭐ PLACEMENT IS STATE, NOT A TAG.** Vayetze places Jacob once and says
+  nothing for 88 verses. With propagation (from_ord/to_ord), "where is Jacob at
+  30:25?" answers "Haran, placed 29:4" from a verse naming no place. **The
+  255-verse reading queue is largely NOT a backlog** — propagation covers it.
+- Three machine failure modes, each a design decision: GOAL IS NOT POSITION
+  ("went toward Haran" would place him there before Bethel); a locative inside a
+  SUBORDINATE CLAUSE is not a placement ("acquired in Padan-aram"); the
+  nearest-name heuristic picks the wrong person (Isaac at 31:18 is whom Jacob
+  goes TO).
+- The five placements reading supplied were invisible IN PRINCIPLE: at 28:11 the
+  positioning verse has no name and the naming verse has no motion; at 29:4
+  arrival comes from REPORTED SPEECH about someone else's origin; at 31:21 the
+  direction is the idiom "set his face toward."
+- **GAZETTEER LESSONS (four bugs, all in the script):** "governed by a locative
+  preposition" is NOT a place signal — "to Jacob" and "to Bethel" are identical,
+  and it reported Jacob, Joseph, Abraham and the divine Name as places; what
+  discriminates is PERSONS ACT, PLACES DO NOT. Key on the LEMMA not the surface
+  form (400 names, not 629). The directional ending is a SUFFIX so a prefix
+  guard misses it ("Timnah-ward he went up" read as "Timnah went up"). "Land of
+  X" is possession when occasional and toponymic when habitual — demoting it
+  outright cost CANAAN; promoted at 3+ occurrences.
+- **THE MISSING SIGNAL:** Genesis MAKES toponyms by naming them, and the fold
+  already recorded every naming. The gazetteer now reads the corpus's own
+  `names` table instead of pattern-matching — recovered Bethel, Galeed,
+  Mahanaim, Peniel, Rehoboth.
+- The 14 "both" names are NOT errors: Egypt, Canaan, Shechem, Nahor, Haran,
+  Seir, Cush are each a person AND a place. Genesis's real eponym problem.
+- **REVISED: ~12 sittings, not 6.** Phases 1/2/4 built and reusable; phase 3,
+  the reading, does not compress. Caveat recorded: Vayetze is one long stay in
+  one unnamed place, so travel parashiyot should score better — unmeasured.
+- `world.sqlite` carries a `placement` table (7 rows) and STILL RECONCILES GREEN
+  on all ten counts and hash 8b8fff1fa28953af. Nothing written back to the corpus.
+
+**NEXT SITTING:** ask about committing the three files. Then either the next
+placement parashah (the tooling is built) or whatever he opens.
+
+### ⚠ CORRECTION TO COMPACTION POINT #29 — the movement claim is REFUTED
+Owner's question at the close of the sitting: **"Did you run the test on the
+movement"**. It had NOT been re-run — the claim was carried over from before the
+compaction and repeated to him in tonight's report. Re-run on the spot,
+probe-validated, full enumeration: `World/research/MOVEMENT_TEST.py`.
+
+**#29 records: "Zero movement verbs in the event stream; 3 of 557 events have a
+place-like theme." THE FIRST HALF IS FALSE.**
+**MEASURED: 91 of 557 events (16%) carry a movement verb, 30 distinct labels**
+— take 20, come 10, go_out 5, send 5, bring 4, dwell 4, settle 3, pass 3,
+return 3, go 3, plus descend, journey, flee, pursue, go_up, tent, bring_out,
+station, place, met, walk, run, approach, depart, bury, remain, set, go_down,
+send_away, cast_sleep. Probe fired 4/4 before reporting; all 254 distinct labels
+enumerated with the non-movement remainder printed so the negative is auditable.
+
+**PROBABLE CAUSE:** `events.verb` holds ENGLISH labels ("come", "go_out"). A
+query written against Hebrew roots or Strong's numbers returns zero from it.
+Same class as the verb-probe miss already on the scar list — but that one was
+CAUGHT by the coverage rule and this one was not, so it reached RESUME.md, the
+state doc, and a verbal report to the owner. **The lesson is not "run probes" —
+that was already law. It is that a zero inherited ACROSS A COMPACTION never got
+its probe, because the compaction summary carried the conclusion without the
+coverage line.** Treat any pre-compaction zero as unverified until re-run.
+
+**The second half is also unreliable** ("3 of 557 place-like themes"): a
+name-shaped scan finds ~22 candidate themes, but that filter is loose and
+several are people-of-a-place, not places. Neither 3 nor 22 is trustworthy; only
+the 91 is probe-validated.
+
+**WHAT SURVIVES, and it still justifies the placement layer:** the corpus
+records THAT someone moved but rarely WHERE TO — destinations are mostly not
+carried as themes. The gap is destinations, not movement. "Jacob went down to
+Egypt" has the going and lacks the Egypt.
+
+**THE PILOT'S NUMBERS ARE UNAFFECTED** — it measured proposals from the TEXT,
+not from the event stream. `World/RESUME.md` corrected in place with the old
+claim struck through rather than deleted.
+
+---
+
+## 2026-08-31 — THE EXHAUSTIVE 13-BLOCK AUDIT OF THE OPUS ERA, AND ITS FIXES
+Owner's orders, in sequence: "do a audit and figure out what was done and
+what we will have to redo" → "I want to know everything opus did" → spot
+audit (6/6 pass) → "do the exhaustive one and check the operators too" →
+"ok lets finish the 13 then we will recheck all of opus derivation passes"
+→ "yes do the fixes." Model boundary established from commit trailers:
+OPUS = the ten commits of 08-30 plus the 08-28 reading sittings; everything
+before is Fable.
+
+**SCOPE:** the fourteen blocks Opus both READ and DERIVED (gen_60–73),
+audited exhaustively — every fresh row, every material credit, every
+Onkelos delta row opened against the local sources (Bereshit Rabbah whole,
+Onkelos on disk, the text DB for ink claims), every manifest's Opus claims
+checked, machine-original numeric claims re-derived independently, claim-ID
+wiring diffed manifest-against-YAML. ~300 checks across ~120 fresh rows.
+
+**VERDICT: THE READING IS SOUND. Zero wrong verdicts, zero fabricated
+source claims, zero failed machine checks.** Every disputed attribution,
+count, spelling and quote the ledgers assert was found in the sources —
+including the five-candidates seventy-count with R. Meir's singular-"son"
+scroll variant, the ten-a-fortiori census member for member, the Shema
+origin verbatim, the 22-years-no-wine claim at BOTH independent seats, and
+the six equal-lifespan pairs. Twice Opus corrected its own reading at
+derivation (the chazak book-end token — opened, found absent both trees,
+recorded as text-layer boundary G73-29; the closed-portion claim). The
+one-line judgment: OPUS READ ACCURATELY AND FILED CARELESSLY.
+
+**THE 8 REAL DEFECTS (all bookkeeping between Steps 5 and 6, none in
+judgment) AND THEIR FIXES, all landed this sitting, all gates green:**
+1. gen_62 CROSS-WIRE: the two rev-3 operators cited each other's claim
+   IDs (G62-14↔G62-15). FIXED: tags swapped; rev 4.
+2-5. FOUR ORPHAN CLAIM IDs — extracted at Step 5, never tagged in an
+   operator, content present in an operator every time: G66-30, G68-27,
+   G72-29, G73-26. FIXED: each host operator now carries both IDs;
+   gen_66/68/72/73 to rev 4.
+6-7. TWO CROSS-UNIT ORPHANS: G69-25/G69-26, anchored at gen_69 but seated
+   at their home blocks (gen_70's G70-28; gen_73's deed operator). FIXED:
+   check.note annotations in the gen_69 manifest; verifier still 15/0.
+8. PHANTOM CITATION KEY "Onkelos Genesis 39:24" (Gen 39 has 23 verses),
+   nothing cites it. FIXED: voided by appended note on the gen_62 ledger.
+**THREE LEDGER PROSE SLIPS, corrected by append-only notes (no verdict
+changed):** gen_61 (the lishma juxtaposition is R. Shmuel bar Naḥman, not
+R. Yoḥanan, whose identify↔identify opinion the note omitted); gen_62
+(Ḥama bar Abba, not Ḥiyya, at 88:4); gen_64 (the redu=210 gematria is
+Bereshit Rabbah 91:2, not 91:6 — and 91:2 WAS opened at gen_65 row 1).
+**COSMETIC, documented only, not corrected:** the two-selas phrasing
+(Shabbat 10b wording inside a Bereshit Rabbah row, gen_60); the "/Midian"
+ban-list variant and the confession clause (gen_61); "twelve months"
+stated flatly where the printed text says years with the emendation in the
+commentaries (gen_66 credit 86:6); the ID gap 14–20 between masorah and
+derivation claims is a CONVENTION, consistent across all blocks.
+
+**MECHANICS OF THE FIX LANDING:** 5 units bumped to rev 4 with changelog
+lines; verify_text + preflight GREEN on all touched units; changelog gate
+GREEN (5 edits, 5 lines); verify_claims green on the annotated manifest;
+freeze ritual re-run on all five (97 frozen units, renderings regenerated);
+world refolds to hash 8b8fff1fa28953af UNMOVED (no operator changed — the
+equality is the proof the fixes touched wiring only); gloss_lint 0 flags.
+
+**STILL OPUS'S, NOT RE-AUDITED HERE:** the derivations of gen_08–59 (the
+reading under them is Fable's, committed 08-25/27). The owner's stated
+plan: "then we will recheck all of opus derivation passes" — that is the
+NEXT standing task: operator-vs-claim-vs-source checks on gen_08–59,
+lighter per block (no reading audit needed).
+
+**NOT COMMITTED.** This sitting's tree now carries: the audit fixes (5
+YAMLs + regenerated renderings, 1 manifest, 3 ledger appends), PLUS the
+still-uncommitted 08-30 batch (CORE_SHELF Onkelos genre rule, gen_72
+ledger append, logic/onkelos_genre_2026-08-30/). All awaiting the owner's
+word, as ever.

@@ -94,3 +94,13 @@ read. No verdict is changed and no row is rewritten — this is a naming
 key for the Onkelos rows above.
 
 Onkelos Genesis 41:1, Onkelos Genesis 41:2, Onkelos Genesis 41:3, Onkelos Genesis 41:4, Onkelos Genesis 41:5, Onkelos Genesis 41:6, Onkelos Genesis 41:7, Onkelos Genesis 41:8, Onkelos Genesis 41:9, Onkelos Genesis 41:10, Onkelos Genesis 41:11, Onkelos Genesis 41:12, Onkelos Genesis 41:13, Onkelos Genesis 41:14, Onkelos Genesis 41:15, Onkelos Genesis 41:16, Onkelos Genesis 41:17, Onkelos Genesis 41:18, Onkelos Genesis 41:19, Onkelos Genesis 41:20, Onkelos Genesis 41:21, Onkelos Genesis 41:22, Onkelos Genesis 41:23, Onkelos Genesis 41:24, Onkelos Genesis 41:25, Onkelos Genesis 41:26, Onkelos Genesis 41:27, Onkelos Genesis 41:28, Onkelos Genesis 41:29, Onkelos Genesis 41:30, Onkelos Genesis 41:31, Onkelos Genesis 41:32, Onkelos Genesis 41:33, Onkelos Genesis 41:34, Onkelos Genesis 41:35, Onkelos Genesis 41:36, Onkelos Genesis 41:37, Onkelos Genesis 41:38, Onkelos Genesis 41:39, Onkelos Genesis 41:40, Onkelos Genesis 41:41, Onkelos Genesis 41:42, Onkelos Genesis 41:43, Onkelos Genesis 41:44, Onkelos Genesis 41:45, Onkelos Genesis 41:46, Onkelos Genesis 41:47, Onkelos Genesis 41:48, Onkelos Genesis 41:49, Onkelos Genesis 41:50, Onkelos Genesis 41:51, Onkelos Genesis 41:52, Onkelos Genesis 41:53, Onkelos Genesis 41:54, Onkelos Genesis 41:55, Onkelos Genesis 41:56, Onkelos Genesis 41:57.
+
+## APPENDED 2026-08-31 — AUDIT CORRECTION (exhaustive 13-block audit, owner's order)
+Append-only; no verdict changed, no row rewritten. Row 14 (Bereshit
+Rabbah 91:6) folds in the reading of ‹רְדוּ› ("redu," go down) as the
+number 210, the years of the bondage. Opened at the source, that
+teaching stands at Bereshit Rabbah 91:2 (R. Abba bar Kahana), not 91:6
+— and 91:2 was properly DECLARED AND OPENED one block later, at gen_65
+row 1, in the same sitting. The content is sound and its true seat was
+read; only this row's citation folded two paragraphs into one. No claim
+carries the misfiled reference.

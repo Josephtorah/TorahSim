@@ -85,3 +85,12 @@ cite validator. The verses of this block's Onkelos track are listed
 here in citable form. No verdict changed, no row rewritten.
 
 Onkelos Genesis 38:1, Onkelos Genesis 38:2, Onkelos Genesis 38:3, Onkelos Genesis 38:4, Onkelos Genesis 38:5, Onkelos Genesis 38:6, Onkelos Genesis 38:7, Onkelos Genesis 38:8, Onkelos Genesis 38:9, Onkelos Genesis 38:10, Onkelos Genesis 38:11, Onkelos Genesis 38:12, Onkelos Genesis 38:13, Onkelos Genesis 38:14, Onkelos Genesis 38:15, Onkelos Genesis 38:16, Onkelos Genesis 38:17, Onkelos Genesis 38:18, Onkelos Genesis 38:19, Onkelos Genesis 38:20, Onkelos Genesis 38:21, Onkelos Genesis 38:22, Onkelos Genesis 38:23, Onkelos Genesis 38:24, Onkelos Genesis 38:25, Onkelos Genesis 38:26, Onkelos Genesis 38:27, Onkelos Genesis 38:28, Onkelos Genesis 38:29, Onkelos Genesis 38:30.
+
+## APPENDED 2026-08-31 — AUDIT CORRECTION (exhaustive 13-block audit, owner's order)
+Append-only; no verdict changed, no row rewritten. The credit row for
+Bereshit Rabbah 85:2 attributes the Tamar↔Potiphar's-wife "both for the
+sake of Heaven" juxtaposition to R. Yoḥanan. Opened at the source, that
+teaching is R. SHMUEL BAR NAḤMAN's; R. Yoḥanan's own opinion there is
+the "identify"-to-"identify" juxtaposition (37:32 against 38:25), which
+the credit note omitted. No claim or operator carries the misattribution
+— it is ledger prose only, corrected here.

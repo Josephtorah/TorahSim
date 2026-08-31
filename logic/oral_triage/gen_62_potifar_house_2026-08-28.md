@@ -91,3 +91,12 @@ verses are listed here in citable form. No verdict changed, no row
 rewritten.
 
 Onkelos Genesis 39:1, Onkelos Genesis 39:2, Onkelos Genesis 39:3, Onkelos Genesis 39:4, Onkelos Genesis 39:5, Onkelos Genesis 39:6, Onkelos Genesis 39:7, Onkelos Genesis 39:8, Onkelos Genesis 39:9, Onkelos Genesis 39:10, Onkelos Genesis 39:11, Onkelos Genesis 39:12, Onkelos Genesis 39:13, Onkelos Genesis 39:14, Onkelos Genesis 39:15, Onkelos Genesis 39:16, Onkelos Genesis 39:17, Onkelos Genesis 39:18, Onkelos Genesis 39:19, Onkelos Genesis 39:20, Onkelos Genesis 39:21, Onkelos Genesis 39:22, Onkelos Genesis 39:23, Onkelos Genesis 39:24.
+
+## APPENDED 2026-08-31 — AUDIT CORRECTIONS (exhaustive 13-block audit, owner's order)
+Append-only; no verdict changed, no row rewritten. Two items:
+1. Row 13 names the crossed-dreams teacher as Ḥiyya bar Abba. Opened at
+   Bereshit Rabbah 88:4, the teaching is R. ḤAMA BAR ABBA's. Prose only.
+2. The 2026-08-30 citation-key list above ends with "Onkelos Genesis
+   39:24" — Genesis 39 has TWENTY-THREE verses. That key is VOID: it
+   names no verse, nothing cites it, and it must not be used to validate
+   a cite. The 23 real keys stand.
