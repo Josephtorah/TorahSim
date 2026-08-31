@@ -104,3 +104,98 @@ loop closing in miniature: the three seated findings show HELD across
 strata; gehinom shows "held nowhere — verified in all three strata," the
 honest guest it was ruled to be. THE QUEUE STANDS EMPTY of open corpus
 findings.
+
+## From the Genesis sweep, 2026-08-31 (owner: "I want to run all of the
+## remaining Mishnah Talmud references for gen" → "Go" → "Finish";
+## World/step9/cases_gen_sweep.yaml + GEN_SWEEP_LEDGER.md)
+
+**F-007 · OPEN — the seas-as-mikveh dispute is unseated.** Mishnah Mikvaot
+5:4 (verbatim = Mishnah Parah 8:8) hangs a three-way tannaitic dispute on
+our Gen 1:10 naming operator — וּלְמִקְוֵה הַמַּיִם קָרָא יַמִּים ('and the
+GATHERING of the waters He called SEAS'): R. Meir (all seas are as a
+mikveh, from our verse), R. Yehudah (the Great Sea only), R. Yosei (seas
+purify as flowing, invalid for zavim/metzoraim/purification-waters).
+gen_03_double_build holds the naming as its NAME operator; no claim holds
+the law. Seat candidate: claim + WITNESS_READ on gen_03's NAME op.
+
+**F-008 · OPEN — the forgiveness law is unseated.** Mishnah Bava Kamma 8:7
+derives BOTH legs from our Genesis 20 ink: payment does not atone until
+forgiveness is sought (וְעַתָּה הָשֵׁב אֵשֶׁת — 'now restore the man's wife...
+and he will pray for you', Gen 20:7), and the wronged must not be cruel
+(וַיִּתְפַּלֵּל אַבְרָהָם — 'and Abraham prayed... and God healed Abimelech',
+Gen 20:17). gen_36_gerar_dream_prophet holds both events as operator prose
+(THE_PROPHET_AND_THE_RETURN_COMMAND, THE_PRAYER_AND_THE_HEALING); the LAW
+read off them is unheld. Seat candidate: one claim on gen_36.
+
+**F-009 · OPEN — the thirteen-covenants count, VERIFIED against our ink,
+is unseated.** Mishnah Nedarim 3:11, R. Yishmael: גְּדוֹלָה מִילָה שֶׁנִּכְרְתוּ
+עָלֶיהָ שְׁלֹשׁ עֶשְׂרֵה בְרִיתוֹת ('great is circumcision — THIRTEEN covenants
+were cut over it'). Machine census of Genesis 17's ink: exactly 13
+covenant-word tokens (vv. 2, 4, 7×2, 9, 10, 11, 13×2, 14, 19×2, 21). A
+numeric ink claim of the class that is never credited unopened — and it
+was opened, and it holds. The engine computes it live (_covenant_count).
+Seat candidate: claim on gen_33_shaddai_covenant_flesh.
+
+**F-010 · OPEN — two of the three Genesis members of the world-to-come
+census are unseated.** Mishnah Sanhedrin 10:3: the FLOOD member is already
+held whole (G15-10 — no share AND no judgment, from לֹא יָדוֹן, four
+tannaitic parses). The DISPERSION member (the scattering doubled — this
+world and the next, on our Gen 11:8-9) and the SODOM member (רָעִים this
+world, וְחַטָּאִים the next, on our Gen 13:13 — with R. Nechemiah's dispute
+over standing in judgment) are unheld: gen_25_babel holds the scattering,
+gen_29_separation_promise holds the verse as THE_SODOM_VERDICT, neither
+holds the eschatological ruling. Seat candidates: one claim each.
+
+**F-011 · OPEN — the Sinai-provenance dispute on the sinew is unseated.**
+Mishnah Chullin 7:6: R. Yehudah — the sinew was forbidden from the sons of
+Jacob, while impure animals were still permitted them; the sages —
+בְּסִינַי נֶאֱמַר אֶלָּא שֶׁנִּכְתַּב בִּמְקוֹמוֹ ('it was said at SINAI, but written
+in its place'). A dispute about WHEN Genesis's one narrator-voice food law
+(our Gen 32:33) took effect — the machine's own provenance-dispute
+pattern, and gen_55_two_camps_wrestled_name (G55-31 holds the scope
+dispute and the self-stringency) does not hold this one. Seat candidate:
+claim + WITNESS_STATE beside G55-31.
+
+## RESOLUTIONS — 2026-08-31 (owner: "Yes update", after the Genesis sweep)
+
+**F-007 · SEATED, THE F-003 PATTERN AGAIN.** The three-way seas-as-mikveh
+dispute had been held in gen_03's NAME operator PROSE since the 2026-08-23
+amendment — the sweep's holdings check read the claim stratum and called
+it unheld. Seat is claim-visibility only: claim G03-12 + inline tag in
+the existing prose, the Parah 8:8 verbatim dup credited in the cites. No
+new operator. gen_03 rev 4.
+
+**F-008 · SEATED.** Claim G36-18 + one WITNESS_READ beside the
+heal-event operator: payment insufficient until forgiveness is asked
+(Gen 20:7's restore-command), the forgiver must not be cruel (Gen 20:17's
+prayer). gen_36 rev 4.
+
+**F-009 · SEATED, MACHINE-CHECKED.** Claim G33-30 + one WITNESS_READ
+beside G33-29's wholeness op (same Mishnah row): thirteen covenants over
+circumcision = exactly 13 covenant-word tokens in Genesis 17's own ink,
+verified at the sweep and computed live by the Step 9 engine. gen_33
+rev 4.
+
+**F-010 · SEATED, WITH A CORRECTION TO THE FINDING ITSELF.** The Sodom
+no-share leg was WRONG — claim G29-23 held it all along (the sweep's
+probe grepped case-sensitively for 'world to come' and the op writes
+'WORLD TO COME': the unfalsifiable-zero lesson repeating at the probe
+level). What was truly unheld: the DISPERSION verdict (seated as G25-16
+on gen_25's doubled scatter-tokens, rev 4) and the Sodom
+stands-in-judgment DISPUTE (seated as G29-25 beside G29-23, rev 4 — first
+opinion vs R. Nechemiah vs the sages' rejoinder).
+
+**F-011 · SEATED.** Claim G55-35 + one WITNESS_STATE beside G55-31's op:
+R. Yehudah (forbidden from the sons of Jacob, reaching impure species)
+against the sages ('said at Sinai, but written in its place') — the
+effective-date dispute on the corpus's first narrator-law. gen_55 rev 5.
+
+GATES: all six rituals green (the cite gate first refused the new Mishnah
+cites — resolved by the sweep's reading ledger landing in
+logic/oral_triage/gen_sweep_mishnah_2026-08-31.md, the honest record that
+all 48 rows were read today); preflight ALL SCENARIOS GREEN on all six;
+renderings regenerated by the rituals; world refolded, hash
+8b8fff1fa28953af UNMOVED; gloss_lint 0 flags; both exams re-run green
+(28/28, 0 mismatches) with every engine UNHELD marker now flipped to its
+seated claim. Six units joined the re-affirmation queue. THE QUEUE STANDS
+EMPTY of open corpus findings.

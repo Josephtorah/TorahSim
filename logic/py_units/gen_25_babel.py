@@ -189,6 +189,10 @@ m.fact("ki_sham_balal_yhwh_sefat_kol_ha_aretz",
 # read, not installed
 m.witness_read("scattering_outcome", "one_of_three_fates",
                 cites=["Sanhedrin 109a:5", "Sanhedrin 109a:4"])
+# witness-tier presupposed read: eternal_verdict_from_two_tokens on
+# doubled_scattering — read, not installed
+m.witness_read("doubled_scattering", "eternal_verdict_from_two_tokens",
+                cites=["Mishnah Sanhedrin 10:3"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -206,7 +210,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 15
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('one_speech', 'parsed_four_ways_and_name_as_idolatry'), ('sitting_verb', 'satisfaction_cause_chain'), ('tower_motive', 'firmament_supports_on_the_floods_own_interval'), ('let_us_descend', 'translation_alteration_canon_member'), ('scattering_outcome', 'one_of_three_fates')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('one_speech', 'parsed_four_ways_and_name_as_idolatry'), ('sitting_verb', 'satisfaction_cause_chain'), ('tower_motive', 'firmament_supports_on_the_floods_own_interval'), ('let_us_descend', 'translation_alteration_canon_member'), ('scattering_outcome', 'one_of_three_fates'), ('doubled_scattering', 'eternal_verdict_from_two_tokens')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 38:6', 'Mekhilta DeRabbi Yishmael, Tractate Kaspa 4:5']
     assert all('parsed_four_ways_and_name_as_idolatry' not in f for f in m.WORLD["facts"])
     assert 'one_speech' not in m.WORLD["witnessed"]
@@ -222,4 +226,7 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[4]["cites"] == ['Sanhedrin 109a:5', 'Sanhedrin 109a:4']
     assert all('one_of_three_fates' not in f for f in m.WORLD["facts"])
     assert 'scattering_outcome' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Sanhedrin 10:3']
+    assert all('eternal_verdict_from_two_tokens' not in f for f in m.WORLD["facts"])
+    assert 'doubled_scattering' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

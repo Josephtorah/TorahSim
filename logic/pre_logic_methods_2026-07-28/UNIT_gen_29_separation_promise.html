@@ -34,7 +34,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 .arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
        border-radius:8px; padding:.4rem .7rem; }
 .arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
-</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_29_separation_promise?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The separation and the promise: the return, the strife, the plain, the land forever (13:1-18) <span class='badge frozen'>MODEL · REV 3 · GATES GREEN</span></h1>
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_29_separation_promise?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The separation and the promise: the return, the strife, the plain, the land forever (13:1-18) <span class='badge frozen'>MODEL · REV 4 · GATES GREEN</span></h1>
 <div class="meta">unit <b>gen_29_separation_promise</b> · Genesis 13:1-18 · derive logic_derived_v1 · phase C-29</div>
 <div class="meta"><a href="/#Gen/13/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
 <p><span class="he">וַיִּפָּרְדוּ אִישׁ מֵעַל אָחִיו</span> · <i>va-yipardu ish me-al achiv</i> · &#x27;and they separated, each from his brother&#x27;</p>
@@ -223,6 +223,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וְאַנְשֵׁי סְדֹם רָעִים וְחַטָּאִים לַיהוָה מְאֹד</span> · <i>ve-anshei sedom raim ve-chataim la-YHWH meod</i><br><span class="gloss">= men-of sedom raim and-chataim to-the-LORD very</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>WITNESS_STATE</td><td><span class="expr">WITNESS(sodom_verdict, split_by_tense_and_reversed_at_one_seat)</span><br><span class="gloss">= WITNESS(sodom-verdict, split-by-tense-and-reversed-at-one-seat)</span><br>THE VERSE IS SPLIT ACROSS TWO TENSES TO SUPPLY A RULING [claim G29-23]. The ruling that the men of Sodom have no share takes its reason from this verse read in two times - wicked and sinful IN THIS WORLD, the added clause FOR THE WORLD TO COME. The Sifra builds its category of deliberate rebellion on the same token, &#x27;to the LORD&#x27;, marking one who knows his Master and rebels. And against all of it one Tosefta seat records the opposite valence outright: no city more temperate than Sodom, &#x27;Lot circled all the places and found none as temperate&#x27;. Carried dual-track. [folded shape: recorded dispute]
 </td><td>—</td><td class='cite'>Jerusalem Talmud Sanhedrin 10:3:4, Sifra, Bechukotai, Section 2 2, Tosefta Shabbat 8:12</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_STATE</td><td><span class="expr">WITNESS(sodom_in_judgment, disputed_whether_they_stand)</span><br><span class="gloss">= WITNESS(sodom-in-judgment, disputed-whether-they-stand)</span><br>WHETHER SODOM STANDS IN JUDGMENT IS ITS OWN RECORDED DISPUTE [claim G29-25]. Beyond the no-share ruling (G29-23), the Mishnah carries the further question split: the first opinion - no share, BUT THEY STAND IN JUDGMENT; R. Nechemiah - these and those do not stand in judgment, reading &#x27;therefore the wicked shall not stand in the JUDGMENT, nor sinners in the congregation of the righteous&#x27; (Psalm 1:5) - the wicked being the flood generation, the sinners the men of Sodom; and the sages answer him: they stand not in the congregation of the RIGHTEOUS, but they stand in the congregation of the wicked. Made claim-visible through the Genesis sweep (finding F-010). [folded shape: recorded dispute]
+</td><td>—</td><td class='cite'>Mishnah Sanhedrin 10:3</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Six words file a city: evil, sinning, against YHWH, very — entered in the record at the exact moment a family member pitches toward it, and tried by no one for six more chapters.</div>
 </div>
@@ -964,6 +966,10 @@ m.fact(&quot;ve_anshei_sedom_raim_ve_chataim_la_YHWH_meod&quot;)
 # split_by_tense_and_reversed_at_one_seat on sodom_verdict
 m.witness_state(&quot;sodom_verdict&quot;, &quot;split_by_tense_and_reversed_at_one_seat&quot;,
                 cites=[&quot;Jerusalem Talmud Sanhedrin 10:3:4&quot;, &quot;Sifra, Bechukotai, Section 2 2&quot;, &quot;Tosefta Shabbat 8:12&quot;])
+# witness-grounded state (its own tier): disputed_whether_they_stand on
+# sodom_in_judgment
+m.witness_state(&quot;sodom_in_judgment&quot;, &quot;disputed_whether_they_stand&quot;,
+                cites=[&quot;Mishnah Sanhedrin 10:3&quot;])
 
 # -------------------------- Gen.13.14 · THE_SPEECH_AFTER_THE_SEPARATING ----
 # וַיהוָה אָמַר אֶל־אַבְרָם אַחֲרֵי הִפָּרֶד־לוֹט מֵעִמּוֹ שָׂא נָא עֵינֶיךָ
@@ -1069,7 +1075,9 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 21
-    assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;sodom_verdict&#x27;, &#x27;we_are_brothers&#x27;]
+    assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;sodom_in_judgment&#x27;, &#x27;sodom_verdict&#x27;, &#x27;we_are_brothers&#x27;]
+    assert m.WORLD[&quot;witnessed&quot;][&#x27;sodom_in_judgment&#x27;][&quot;cites&quot;] == [&#x27;Mishnah Sanhedrin 10:3&#x27;]
+    assert all(&#x27;disputed_whether_they_stand&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert m.WORLD[&quot;witnessed&quot;][&#x27;sodom_verdict&#x27;][&quot;cites&quot;] == [&#x27;Jerusalem Talmud Sanhedrin 10:3:4&#x27;, &#x27;Sifra, Bechukotai, Section 2 2&#x27;, &#x27;Tosefta Shabbat 8:12&#x27;]
     assert all(&#x27;split_by_tense_and_reversed_at_one_seat&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert m.WORLD[&quot;witnessed&quot;][&#x27;we_are_brothers&#x27;][&quot;cites&quot;] == [&#x27;Yevamot 17b:6&#x27;]

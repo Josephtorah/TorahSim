@@ -46,8 +46,7 @@ def interactive(vocab):
     mods = list(engine.RULES)
     print("\nPOSE A CASE — choose a module:")
     for i, m in enumerate(mods, 1):
-        print("  %d. %s" % (i, m))
-    print("  (uncompiled and unavailable: judgment_durations)")
+        print("  %d. %s [%s]" % (i, m, engine.RULES[m]["tractate"]))
     try:
         mi = int(input("module #: ").strip())
         module = mods[mi - 1]

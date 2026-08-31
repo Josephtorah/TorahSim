@@ -34,7 +34,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 .arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
        border-radius:8px; padding:.4rem .7rem; }
 .arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
-</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_33_shaddai_covenant_flesh?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>El Shaddai: the renamings, the law of the flesh, the laugh, the selfsame day (17:1-27) <span class='badge frozen'>MODEL · REV 3 · GATES GREEN</span></h1>
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_33_shaddai_covenant_flesh?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>El Shaddai: the renamings, the law of the flesh, the laugh, the selfsame day (17:1-27) <span class='badge frozen'>MODEL · REV 4 · GATES GREEN</span></h1>
 <div class="meta">unit <b>gen_33_shaddai_covenant_flesh</b> · Genesis 17:1-27 · derive logic_derived_v1 · phase C-33</div>
 <div class="meta"><a href="/#Gen/17/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
 <p><span class="he">אֲנִי־אֵל שַׁדַּי הִתְהַלֵּךְ לְפָנַי</span> · <i>ani-El Shaddai hithalekh lefanai</i> · &#x27;I am God Almighty — walk before Me&#x27;</p>
@@ -69,6 +69,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">הִתְהַלֵּךְ לְפָנַי וֶהְיֵה תָמִים</span> · <i>hithalekh lefanai ve-heyeh tamim</i><br><span class="gloss">= walked-about before-Me and-heyeh tamim</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(tamim_condition, wholeness_pending_the_act)</span><br><span class="gloss">= WITNESS-READ(tamim-condition, wholeness-pending-the-act)</span><br>THE UNIT&#x27;S OPENING ADJECTIVE IS READ AS PENDING [claim G33-29]. The Mishnah rules on this verse that a man is NOT CALLED WHOLE until he has circumcised, closing the battery with the claim that the world was not created but for this - and the figure is drawn from the fig, which has no refuse but the covering: remove it and the blemish is gone. The state the operator asserts is read as conditional on an act still four verses away. [folded shape: kept record]
 </td><td>—</td><td class='cite'>Mishnah Nedarim 3:11, Bereshit Rabbah 46:1</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(thirteen_covenants, the_chapter_counts_its_own_word)</span><br><span class="gloss">= WITNESS-READ(thirteen-covenants, the-chapter-counts-its-own-word)</span><br>THIRTEEN COVENANTS ARE CUT OVER CIRCUMCISION - AND THE COUNT IS THIS CHAPTER&#x27;S OWN TOKEN CENSUS [claim G33-30, machine-checked]. R. Yishmael, in the same Mishnah row as G33-29&#x27;s wholeness ruling: &#x27;great is circumcision, for THIRTEEN covenants were cut over it.&#x27; Machine-verified: the covenant-word בְּרִית (berit) stands EXACTLY thirteen times in Genesis 17 - verses 2, 4, 7 (twice), 9, 10, 11, 13 (twice), 14, 19 (twice), 21 - and nowhere is the count stated in the ink: the number IS the census. A numeric ink claim of the never-credited-unopened class, opened at the Genesis sweep and verified; the Step 9 engine computes it live. [folded shape: counted ink]
+</td><td>—</td><td class='cite'>Mishnah Nedarim 3:11</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Thirteen years of silence end with a name the corpus has never heard and a command in two imperatives: walk, be whole — graded on a ladder where the last two walkers walked WITH, and this one must walk BEFORE.</div>
 </div>
@@ -967,6 +969,10 @@ m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
 # tamim_condition — read, not installed
 m.witness_read(&quot;tamim_condition&quot;, &quot;wholeness_pending_the_act&quot;,
                 cites=[&quot;Mishnah Nedarim 3:11&quot;, &quot;Bereshit Rabbah 46:1&quot;])
+# witness-tier presupposed read: the_chapter_counts_its_own_word on
+# thirteen_covenants — read, not installed
+m.witness_read(&quot;thirteen_covenants&quot;, &quot;the_chapter_counts_its_own_word&quot;,
+                cites=[&quot;Mishnah Nedarim 3:11&quot;])
 
 # -------------------------- Gen.17.2 · THE_COHORTATIVE_COVENANT ------------
 # וְאֶתְּנָה בְרִיתִי בֵּינִי וּבֵינֶךָ וְאַרְבֶּה אוֹתְךָ בִּמְאֹד מְאֹד
@@ -1359,35 +1365,38 @@ if __name__ == &quot;__main__&quot;:
     assert all(&#x27;the_two_grammar_schools&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert m.WORLD[&quot;witnessed&quot;][&#x27;rename_operator&#x27;][&quot;cites&quot;] == [&#x27;Berakhot 13a:8&#x27;, &#x27;Bereshit Rabbah 46:8&#x27;, &#x27;Tosefta Berakhot 1:15&#x27;, &#x27;Berakhot 13a:10&#x27;]
     assert all(&#x27;enforced_naming_law_and_counter_rule&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;tamim_condition&#x27;, &#x27;wholeness_pending_the_act&#x27;), (&#x27;av_hamon&#x27;, &#x27;charter_of_the_acronym_rule&#x27;), (&#x27;covenant_clause&#x27;, &#x27;three_family_laws&#x27;), (&#x27;dorot_token&#x27;, &#x27;surviving_analogy_of_three_weighed&#x27;), (&#x27;land_grant&#x27;, &#x27;conditioned_on_the_next_verse&#x27;), (&#x27;circumcision_command&#x27;, &#x27;three_tier_enforcement_cascade&#x27;), (&#x27;abraham_own_analogy&#x27;, &#x27;objected_to_and_answered&#x27;), (&#x27;eighth_day_clause&#x27;, &#x27;three_determinations_from_one_number&#x27;), (&#x27;laughter_clause&#x27;, &#x27;alteration_census_and_name_remedy&#x27;), (&#x27;ascent_from_abraham&#x27;, &#x27;leave_taking_rule_and_chariot_claim&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;tamim_condition&#x27;, &#x27;wholeness_pending_the_act&#x27;), (&#x27;thirteen_covenants&#x27;, &#x27;the_chapter_counts_its_own_word&#x27;), (&#x27;av_hamon&#x27;, &#x27;charter_of_the_acronym_rule&#x27;), (&#x27;covenant_clause&#x27;, &#x27;three_family_laws&#x27;), (&#x27;dorot_token&#x27;, &#x27;surviving_analogy_of_three_weighed&#x27;), (&#x27;land_grant&#x27;, &#x27;conditioned_on_the_next_verse&#x27;), (&#x27;circumcision_command&#x27;, &#x27;three_tier_enforcement_cascade&#x27;), (&#x27;abraham_own_analogy&#x27;, &#x27;objected_to_and_answered&#x27;), (&#x27;eighth_day_clause&#x27;, &#x27;three_determinations_from_one_number&#x27;), (&#x27;laughter_clause&#x27;, &#x27;alteration_census_and_name_remedy&#x27;), (&#x27;ascent_from_abraham&#x27;, &#x27;leave_taking_rule_and_chariot_claim&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Mishnah Nedarim 3:11&#x27;, &#x27;Bereshit Rabbah 46:1&#x27;]
     assert all(&#x27;wholeness_pending_the_act&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;tamim_condition&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 46:7&#x27;, &#x27;Shabbat 105a:2&#x27;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Mishnah Nedarim 3:11&#x27;]
+    assert all(&#x27;the_chapter_counts_its_own_word&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;thirteen_covenants&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 46:7&#x27;, &#x27;Shabbat 105a:2&#x27;]
     assert all(&#x27;charter_of_the_acronym_rule&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;av_hamon&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Yevamot 42a:6&#x27;, &#x27;Yevamot 100b:9&#x27;, &#x27;Yevamot 64a:2&#x27;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Yevamot 42a:6&#x27;, &#x27;Yevamot 100b:9&#x27;, &#x27;Yevamot 64a:2&#x27;]
     assert all(&#x27;three_family_laws&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;covenant_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Shabbat 132a:6&#x27;, &#x27;Shabbat 132a:8&#x27;, &#x27;Shabbat 132a:10&#x27;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Shabbat 132a:6&#x27;, &#x27;Shabbat 132a:8&#x27;, &#x27;Shabbat 132a:10&#x27;]
     assert all(&#x27;surviving_analogy_of_three_weighed&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;dorot_token&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 46:9&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 46:9&#x27;]
     assert all(&#x27;conditioned_on_the_next_verse&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;land_grant&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Kiddushin 29a:11&#x27;, &#x27;Avodah Zarah 26b:12&#x27;, &#x27;Jerusalem Talmud Kiddushin 1:7:2&#x27;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Kiddushin 29a:11&#x27;, &#x27;Avodah Zarah 26b:12&#x27;, &#x27;Jerusalem Talmud Kiddushin 1:7:2&#x27;]
     assert all(&#x27;three_tier_enforcement_cascade&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;circumcision_command&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 46:4&#x27;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 46:4&#x27;]
     assert all(&#x27;objected_to_and_answered&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;abraham_own_analogy&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Shabbat 132a:15&#x27;, &#x27;Shabbat 132a:20&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Chapter 1 2&#x27;]
+    assert m.WITNESS_READS[8][&quot;cites&quot;] == [&#x27;Shabbat 132a:15&#x27;, &#x27;Shabbat 132a:20&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Chapter 1 2&#x27;]
     assert all(&#x27;three_determinations_from_one_number&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;eighth_day_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[8][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 48:17&#x27;, &#x27;Rosh Hashanah 16b:6&#x27;]
+    assert m.WITNESS_READS[9][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 48:17&#x27;, &#x27;Rosh Hashanah 16b:6&#x27;]
     assert all(&#x27;alteration_census_and_name_remedy&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;laughter_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[9][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 47:6&#x27;, &#x27;Mekhilta DeRabbi Shimon Ben Yochai, Additions 6:2&#x27;]
+    assert m.WITNESS_READS[10][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 47:6&#x27;, &#x27;Mekhilta DeRabbi Shimon Ben Yochai, Additions 6:2&#x27;]
     assert all(&#x27;leave_taking_rule_and_chariot_claim&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;ascent_from_abraham&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)

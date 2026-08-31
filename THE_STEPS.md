@@ -237,6 +237,25 @@ already seated. HOW IT WORKS, in order:
      witness rows, AND operator prose — the pilot's one blind spot was
      missing a dispute held in operator prose since 2026-08-23 (F-006).
 
+THE GENESIS SWEEP RAN (2026-08-31, same day, owner: "run all of the
+remaining Mishnah Talmud references for gen" → "Go" → "Finish"). All 48
+remaining Mishnah rows citing Genesis read and verdicted
+(World/step9/GEN_SWEEP_LEDGER.md); seven new modules compiled (ten total);
+28 of 28 case rows across pilot + sweep answered, 0 mismatches. Headline:
+THE READING ANTICIPATED THE EXAM — 19 of 25 material rows were already
+held, several better than the Mishnah states them (the ten-generations
+row and the rainbow-at-twilight row were already seated as claims).
+Second computed verdict: R. Yishmael's THIRTEEN covenants over
+circumcision computed live from Genesis 17's own ink (exactly 13
+covenant-word tokens). Findings F-007..F-011 filed OPEN. SCOPE RULING
+FROM THE DISCUSSION: the 958 Babylonian Talmud passages citing Genesis
+are three piles, not one — bridges (read when their Mishnah row is
+tested), TALMUD-ONLY GENESIS LAW with no Mishnah row above it (the seven
+Noahide laws from Gen 2:16, the patriarchs' prayers — reachable by NO
+Mishnah-first sweep), and aggadic readings (largely dup-creditable
+against Bereshit Rabbah ledgers). The full-958 triage ledger is the
+proposed next block, awaiting the owner's word.
+
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed
 on the spot: logic/findings/FINDINGS_QUEUE.md (append-only). The owner

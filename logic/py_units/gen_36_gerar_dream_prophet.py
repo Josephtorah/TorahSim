@@ -262,6 +262,10 @@ m.event("pray", agent="avraham")
 # ‹וַיִּרְפָּא אֱלֹהִים … וַיֵּלֵדוּ› (“and-mend God … and-bear-young”) —
 # event: heal — agent God; theme beit-Abimelech
 m.event("heal", agent="elohim", themes=["beit_avimelekh"])
+# witness-tier presupposed read: payment_insufficient_and_cruelty_forbidden
+# on forgiveness_law — read, not installed
+m.witness_read("forgiveness_law", "payment_insufficient_and_cruelty_forbidden",
+                cites=["Mishnah Bava Kamma 8:7"])
 
 # -------------------------- Gen.20.18 · THE_SHUT_WOMB_CLOSER ---------------
 # כִּי־עָצֹר עָצַר יְהוָה בְּעַד כָּל־רֶחֶם לְבֵית אֲבִימֶלֶךְ עַל־דְּבַר
@@ -292,7 +296,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 9
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('gentile_dream', 'prophecy_grade_carried_by_both_spine_members'), ('withheld_sin', 'agency_assigned_away_from_the_subject'), ('know_you_shall_die', 'second_leg_of_no_forewarning'), ('plural_verb_crux', 're_subjected_in_translation'), ('thousand_silver', 'read_as_compensation_with_a_right')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('gentile_dream', 'prophecy_grade_carried_by_both_spine_members'), ('withheld_sin', 'agency_assigned_away_from_the_subject'), ('know_you_shall_die', 'second_leg_of_no_forewarning'), ('plural_verb_crux', 're_subjected_in_translation'), ('thousand_silver', 'read_as_compensation_with_a_right'), ('forgiveness_law', 'payment_insufficient_and_cruelty_forbidden')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 52:5', 'Bereshit Rabbah 74:7', 'Onkelos Genesis 20:3']
     assert all('prophecy_grade_carried_by_both_spine_members' not in f for f in m.WORLD["facts"])
     assert 'gentile_dream' not in m.WORLD["witnessed"]
@@ -308,4 +312,7 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 52:10', 'Onkelos Genesis 20:16']
     assert all('read_as_compensation_with_a_right' not in f for f in m.WORLD["facts"])
     assert 'thousand_silver' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Bava Kamma 8:7']
+    assert all('payment_insufficient_and_cruelty_forbidden' not in f for f in m.WORLD["facts"])
+    assert 'forgiveness_law' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

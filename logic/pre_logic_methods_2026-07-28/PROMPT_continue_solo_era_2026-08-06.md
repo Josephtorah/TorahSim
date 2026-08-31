@@ -7402,3 +7402,64 @@ in chat replies — too small for the owner; plain lines only.**
 spine shifts to the Mekhilta; the case-file machinery Step 9 prototyped
 becomes the requirement; the frontier ledger (Lev 18:5, Exod 31:16) is the
 prioritization map. Tree should be clean after this block's commit.
+
+## MILESTONE (2026-08-31, post-#32, before its compaction fired) — THE
+## GENESIS SWEEP. Owner REDIRECTED off Exodus: "I don't want to run
+## Exodus yet. I want to run all of the remaining Mishnah Talmud
+## references for gen" → "Go" → (scope discussion) → "Finish".
+Enumerated from the links shelf: 51 Mishnah rows cite Genesis; 48
+remained after the pilot. ALL 48 read and verdicted
+(World/step9/GEN_SWEEP_LEDGER.md); material rows in exam form
+(cases_gen_sweep.yaml); SEVEN new engine modules (ten total):
+sciatic_nerve, day_boundary, seas_as_mikveh, forgiveness_after_injury,
+seed_categories, world_to_come, circumcision_third_day. 28/28 case rows
+across pilot+sweep, 0 mismatches; pilot regression green. Second
+COMPUTED verdict: thirteen covenants over circumcision counted live from
+Genesis 17's ink (exactly 13 ברית 'covenant' tokens — F-009). Headline:
+19 of 25 material rows ALREADY HELD by the reading (G26-05 names the
+ten-generations row itself; G22-09 the rainbow at twilight; G15-10 the
+flood's no-share-no-judgment whole; G23-10 the Greek charter; G57-23 the
+third-day cluster). FINDINGS F-007..F-011 OPEN in FINDINGS_QUEUE.md —
+nothing seated, stamps untouched, hash unmoved. Frontier grew: Lev
+22:28, Deut 4:32, Exod 12:19, Deut 24:1, the Numbers/Deuteronomy members
+of Sanhedrin 10:3. Full report World/step9/REPORT_SWEEP.md. THE_STEPS
+Step 9 updated with the sweep block + the three-piles scope ruling.
+**OPEN QUESTION FOR THE OWNER:** the 958 Babylonian Talmud passages —
+proposed triage ledger (bridge / independent law like the Noahide sugya
+Sanhedrin 56a on Gen 2:16 / aggadic reading with Bereshit Rabbah
+dup-credits); a few sittings; NOT started, awaits his word. Also
+awaiting: rulings on F-007..F-011. NOT COMMITTED YET — commit on owner
+word only.
+
+## MILESTONE (2026-08-31, later) — SWEEP FINDINGS SEATED (owner: "Yes
+## update"). F-007..F-011 all ruled seat and landed: G03-12 (mikveh
+dispute claim-visible — the F-003 prose pattern repeating, held since
+2026-08-23), G36-18 (forgiveness law), G33-30 (thirteen covenants,
+MACHINE-CHECKED census), G25-16 (dispersion verdict on the doubled
+scatter-token), G29-25 (Sodom judgment dispute — and F-010's Sodom
+no-share leg CORRECTED: G29-23 held it all along, the sweep's probe
+grepped case-sensitively; lesson filed in the resolution), G55-35 (sinew
+Sinai-provenance dispute). Six units bumped (gen_03/36/33/25/29 rev 4,
+gen_55 rev 5), all on the re-affirmation queue per the stamp law. GATES:
+the cite gate refused the new Mishnah cites until the sweep's reading
+landed as logic/oral_triage/gen_sweep_mishnah_2026-08-31.md (every oral
+cite a read source — the gate worked as designed); then all six rituals
+green, preflight ALL SCENARIOS GREEN x6, renders regenerated, hash
+8b8fff1fa28953af UNMOVED, gloss_lint 0, exams 28/28 with zero UNHELD
+markers left in the engine. Findings queue EMPTY again. NOT COMMITTED —
+awaiting owner word. Still open: the 958-passage triage proposal;
+re-affirmation batch word for the six queued units.
+
+## ⚠ OWNER-STAMPED INSIGHT (2026-08-31, evening — "This is the biggest
+## news ever"): DEMONSTRATE / COMPILE / LINK. The nose-predicate scan
+(owner: "Scan the 24 books for a function that looks like the one the
+Genesis verse on nose referenced" → "Can you use the morphology?")
+measured the whole pipeline on one example: the 24 books DEMONSTRATE the
+life-at-the-nose predicate (Isaiah states it, Deuteronomy/Joshua call it
+as the kill-scope selector, Kings runs it as death-test and revival, Job
+revokes it); the Mishnah COMPILES it (Mishnah Yoma 8:7's rockslide row);
+the Talmud LINKS it (Yoma 85a → Genesis 7:22). And the links are
+MACHINE-DISCOVERABLE: shared ink at the lemma level (5397 breath + 639
+nose, probe-tested) found every call site in one pass — so the links
+table can be seeded by scan and confirmed by recorded middot. Recorded:
+THE_WORLD.md idea log (two entries) + memory demonstrate-compile-link.md.

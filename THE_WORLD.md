@@ -1168,3 +1168,51 @@ workshop dashboard's black skin — or both with a toggle.
   (nishmat exactly twice — confirmed) while the ARGUMENT stays the
   chain's. The machine never argues by a middah; it audits the ground the
   tradition's argument stands on.
+
+**2026-08-31 — the definition has a career: the nose-predicate across the
+24 books (owner: "Scan the 24 books for a function that looks like the one
+the Genesis verse on nose referenced").** Morphology-clean scan (breath =
+lemma 5397, nose = lemma 639; homographs like the tinshemet-lizard
+excluded; probe self-test on Genesis 2:7 + 7:22): 24 breath-word verses in
+the whole Bible. They sort into the SAME FUNCTION in four postures.
+Definition stated: Isaiah 2:22 ('man, whose breath is in his nostrils'),
+Job 27:3 (the while-alive condition clause). Run FORWARD as law:
+Deuteronomy 20:16's kill-scope 'anything that breathes' is Genesis 7:22's
+flood selector reused verbatim as a legal selector, executed at Joshua
+10:40 and 11:11-14. Run as TEST: 1 Kings 17:17 declares the widow's son
+dead by the test itself ('no breath was left in him') — the rescue rule's
+found-dead branch in narrative; 2 Kings 4:35's sevenfold SNEEZE is the
+reverse entry (life returns through the nose — the tradition's own soul-
+by-the-nostril-door connector to Genesis 2:7). Run as REVOCATION: Job
+34:14-15, withdraw(breath) → all flesh perishes — the flood operator in
+general form. CONSEQUENCE FOR THE ARCHITECTURE: the Mishnah's rockslide
+rule (Mishnah Yoma 8:7 / claim G18-05) did not invent its predicate — it
+COMPILED one the 24 books already call wherever life is granted, tested,
+or revoked. When pass 1 reaches these books, these verses join the
+alive-predicate's links table rows; the frontier idea generalizes: a
+definition seated in Genesis accumulates call sites across the canon.
+
+**2026-08-31 — ⚠ OWNER-STAMPED ("This is the biggest news ever"): THE
+THREE-LAYER PIPELINE, MEASURED. The 24 books DEMONSTRATE, the Mishnah
+COMPILES, the Talmud LINKS — and the links run on shared ink the machine
+can discover.** The nose-predicate afternoon proved all three layers on
+one example: the canon demonstrates the function in use (Isaiah states
+the predicate, Deuteronomy/Joshua call it as a kill-scope selector,
+Kings runs it as death-test and revival, Job as revocation); the Mishnah
+compiles the demonstrations into one executable case row (Mishnah Yoma
+8:7 — rockslide, Shabbat, check the nose, three verdicts — verdicts
+shown, work hidden); the Talmud makes the link explicit (Yoma 85a: 'from
+where do we know?' — Genesis 7:22). This CONFIRMS the oracle-anatomy
+insight (Mishnah = verdict table, gemara = traceability) with a measured
+specimen. THE NEW PIECE: the linking METHOD is mechanizable. The
+tradition's links run on SHARED INK — the same word standing in two
+verses (the verbal analogy is its formal case) — and a lemma-level scan
+found the nose-function's call sites across the whole canon in one pass
+(lemma 5397 breath + 639 nose, probe-tested). Consequence for the links
+table (verses as nodes, middot as edge types): links are not only
+STORABLE, they are partially DISCOVERABLE — the machine proposes
+candidate edges by shared ink; the chain's recorded middot confirm which
+edges the tradition actually made; recorded-never-assigned still
+governs what enters as law. Pass 1 over the 24 books can therefore
+emit a candidate-edge list as it compiles, with the case shelf as the
+confirming oracle.

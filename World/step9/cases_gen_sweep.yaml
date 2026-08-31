@@ -1,0 +1,316 @@
+# THE GENESIS SWEEP — every remaining Mishnah row citing Genesis (48 rows,
+# the pilot's three excluded), owner's word 2026-08-31: "I want to run all
+# of the remaining Mishnah Talmud references for gen" → "Go".
+# Method: THE_STEPS Step 9 (exam first, classify A/B/C, findings queued,
+# compile, re-run). The full 48-row verdict table is GEN_SWEEP_LEDGER.md;
+# this file holds the CASE-ROW modules (input→output law) in exam form.
+# Hebrew quoted from the shelf's own ink (Data/mishnah_*_he.json), always
+# with English beside it.
+
+- module: sciatic_nerve
+  tractate: Chullin
+  oracle: Mishnah Chullin 7:1 + 7:6
+  genesis_anchor:
+    unit: gen_55_two_camps_wrestled_name
+    ref: Gen.32.33
+    claim: G55-31
+    holds: the first food prohibition seated on a narrative wound — scope
+      disputed (one side vs both, each side its own tradition), outer
+      extensions technically permitted but self-prohibited (Rav Huna),
+      recorded as self-stringency rather than law
+  talmud_bridge:
+    source: the Mishnah itself quotes Gen 32:33 at 7:6 — עַל כֵּן לֹא יֹאכְלוּ
+      בְנֵי יִשְׂרָאֵל אֶת גִּיד הַנָּשֶׁה ('therefore the children of Israel eat
+      not the sinew of the thigh-vein'); Chullin 89b-103a develops scope
+    walks_to: Gen 32:33
+    note: Genesis's ONLY narrator-voice food law — the one Mishnah module
+      whose anchor verse is itself statute ink in our derived span
+  cases:
+  - id: CHUL_7_1_a
+    input: {animal: beast, thigh: right}
+    expected: {verdict: forbidden, basis: applies to beast and wild animal,
+      right thigh and left}
+    dispute: the gemara records the one-side-vs-both dispute — HELD at G55-31
+    class: B
+  - id: CHUL_7_1_b
+    input: {animal: bird}
+    expected: {verdict: permitted, basis: אֵינוֹ נוֹהֵג בְּעוֹף מִפְּנֵי שֶׁאֵין לוֹ
+      כָף — 'does not apply to a bird, for it has no spoon (of the thigh)'}
+    dispute: null
+    class: B
+  - id: CHUL_7_1_c
+    input: {animal: fetus}
+    expected: {verdict: dispute, basis: first opinion applies it to the
+      fetus; R. Yehudah says it does not apply}
+    dispute: first opinion vs R. Yehudah
+    class: B
+  - id: CHUL_7_1_d
+    input: {part: sinew_fat}
+    expected: {verdict: permitted, basis: וְחֶלְבּוֹ מֻתָּר — 'its fat is
+      permitted'; Israel's self-stringency recorded as such}
+    dispute: null
+    class: A-adjacent — G55-31 holds exactly this leg (technically
+      permitted, self-prohibited)
+  - id: CHUL_7_6_a
+    input: {animal: impure_species}
+    expected: {verdict: dispute, basis: R. Yehudah — applies, for it was
+      forbidden from the sons of Jacob while impure animals were still
+      permitted them; sages — בְּסִינַי נֶאֱמַר אֶלָּא שֶׁנִּכְתַּב בִּמְקוֹמוֹ ('it
+      was said at SINAI, but written in its place')}
+    dispute: R. Yehudah vs sages — a dispute about the LAW'S OWN PROVENANCE
+      (patriarchal era vs Sinai), the machine's provenance-dispute pattern
+    class: C — gen_55 does not hold the Sinai-provenance dispute → F-011
+
+- module: day_boundary
+  tractate: Chullin
+  oracle: Mishnah Chullin 5:5
+  genesis_anchor:
+    unit: gen_01_creation_boot
+    ref: Gen.1.5
+    claim: the unit's own operator order — וַיְהִי עֶרֶב וַיְהִי בֹקֶר יוֹם אֶחָד
+      ('and there was EVENING and there was MORNING, one day') — evening
+      precedes morning in the ink the machine executes
+    holds: the day-unit's boundary structure, night first
+  talmud_bridge:
+    source: the Mishnah itself is the bridge — Ben Zoma's gezerah shavah
+      (verbal analogy, middah I2), יוֹם אֶחָד ↔ יוֹם אֶחָד
+    walks_to: Gen 1:5
+    note: נֶאֱמַר בְּמַעֲשֵׂה בְרֵאשִׁית יוֹם אֶחָד — 'ONE DAY is said in the work
+      of creation... as there the day follows the night, so here the day
+      follows the night'
+  anchor_pending: 'Leviticus 22:28 — the it-and-its-young law this boundary
+    serves; Leviticus 22 not yet derived. See FRONTIER.md.'
+  cases:
+  - id: CHUL_5_5_a
+    input: {mother_slaughtered: night, offspring_slaughtered: following_day}
+    expected: {verdict: same_day_violation, basis: the day follows the
+      night — night plus its following daytime are ONE day}
+    dispute: null
+    class: B
+  - id: CHUL_5_5_b
+    input: {mother_slaughtered: day, offspring_slaughtered: following_night}
+    expected: {verdict: different_days_permitted, basis: nightfall closed
+      the day — the following night belongs to the NEXT day}
+    dispute: null
+    class: B
+
+- module: seas_as_mikveh
+  tractate: Mikvaot
+  oracle: Mishnah Mikvaot 5:4 (verbatim duplicate = Mishnah Parah 8:8)
+  genesis_anchor:
+    unit: gen_03_double_build
+    ref: Gen.1.10
+    claim: held as the NAME operator only — no claim → F-007
+    holds: וּלְמִקְוֵה הַמַּיִם קָרָא יַמִּים — 'and the GATHERING (mikveh) of the
+      waters He called SEAS' — the naming operator whose very noun is the
+      ritual-pool term
+  talmud_bridge:
+    source: the Mishnah itself quotes Gen 1:10 in R. Meir's name
+    walks_to: Gen 1:10
+    note: the law is a three-way tannaitic dispute riding on whether the
+      naming speaks of ALL seas or explains the plural
+  cases:
+  - id: MIKV_5_4_a
+    input: {water_body: sea, use: ritual_immersion}
+    expected:
+      verdict: dispute — three labeled positions
+      basis: 'R. Meir: all seas are as a mikveh, from our verse; R. Yehudah:
+        only the Great Sea (the plural marks many kinds within it);
+        R. Yosei: seas purify as flowing streams, yet are invalid for
+        zavim, metzoraim, and sanctifying purification-waters'
+    dispute: R. Meir vs R. Yehudah vs R. Yosei
+    class: C for the law (naming held as op, dispute unheld) → F-007
+
+- module: forgiveness_after_injury
+  tractate: Bava Kamma
+  oracle: Mishnah Bava Kamma 8:7
+  genesis_anchor:
+    unit: gen_36_gerar_dream_prophet
+    ref: Gen.20.7 + Gen.20.17
+    claim: held as operator prose (THE_PROPHET_AND_THE_RETURN_COMMAND;
+      THE_PRAYER_AND_THE_HEALING) — the LAW unheld → F-008
+    holds: the return command ('restore the man's wife, for he is a
+      prophet and will pray for you') and the prayer-and-healing event
+  talmud_bridge:
+    source: the Mishnah itself quotes both verses
+    walks_to: Gen 20:7, Gen 20:17
+    note: payment does not atone until forgiveness is SOUGHT (from the
+      restore command); the wronged must not be cruel in withholding it
+      (from Abraham praying for his own wronger)
+  cases:
+  - id: BK_8_7_a
+    input: {injurer_paid: 'yes', asked_forgiveness: 'no'}
+    expected: {verdict: not_forgiven, basis: אֵין נִמְחָל לוֹ עַד שֶׁיְּבַקֵּשׁ
+      מִמֶּנּוּ — 'he is not forgiven until he asks of him'}
+    dispute: null
+    class: C for the law → F-008
+  - id: BK_8_7_b
+    input: {victim_asked: 'yes', victim_withholds: 'yes'}
+    expected: {verdict: withholder_is_cruel, basis: שֶׁלֹּא יְהֵא הַמּוֹחֵל
+      אַכְזָרִי — 'the forgiver must not be cruel' — Abraham prayed for
+      Abimelech}
+    dispute: null
+    class: C for the law → F-008
+
+- module: seed_categories
+  tractate: Nedarim
+  oracle: Mishnah Nedarim 3:11
+  genesis_anchor:
+    unit: gen_37_laughter_wilderness_oath (categories); gen_33_shaddai_covenant_flesh
+      (the covenant chapter)
+    ref: Gen.21.12 + Gen.17 whole
+    claim: G37-25 — 'IN Isaac' read partitive, part and not all, HOW ESAU IS
+      EXCLUDED from the line; a whole line of law follows
+    holds: the descent statute that defines 'seed of Abraham' at law
+  talmud_bridge:
+    source: the Mishnah's own rows; R. Yishmael's count within it
+    walks_to: Gen 21:12; Genesis 17's covenant-word tokens
+    note: גְּדוֹלָה מִילָה שֶׁנִּכְרְתוּ עָלֶיהָ שְׁלֹשׁ עֶשְׂרֵה בְרִיתוֹת — 'great is
+      circumcision, for THIRTEEN covenants were cut over it' — VERIFIED
+      against Genesis 17's ink, exactly 13 covenant-word tokens
+      (vv. 2,4,7×2,9,10,11,13×2,14,19×2,21)
+  cases:
+  - id: NED_3_11_a
+    input: {vow: no_benefit_from_sons_of_noah, counterparty: israelite}
+    expected: {verdict: permitted, basis: מֻתָּר בְּיִשְׂרָאֵל — Israel left the
+      sons-of-Noah category through Abraham}
+    dispute: null
+    class: B
+  - id: NED_3_11_b
+    input: {vow: no_benefit_from_seed_of_abraham, counterparty: descendant_of_ishmael_or_esau}
+    expected: {verdict: permitted, basis: כִּי בְיִצְחָק יִקָּרֵא לְךָ זָרַע — 'in
+      Isaac shall seed be called to you' — partitive, G37-25}
+    dispute: null
+    class: B
+  - id: NED_3_11_c
+    input: {query: covenants_over_circumcision}
+    expected: {verdict: thirteen, basis: R. Yishmael's count — COMPUTED from
+      the machine's own Genesis 17 ink at run time}
+    dispute: null
+    class: C as claim (count verified, unheld on gen_33) → F-009
+
+- module: world_to_come
+  tractate: Sanhedrin
+  oracle: Mishnah Sanhedrin 10:3
+  genesis_anchor:
+    unit: gen_15_flood_prologue (flood); gen_25_babel (dispersion);
+      gen_29_separation_promise (Sodom)
+    ref: Gen.6.3 + Gen.11.8-9 + Gen.13.13
+    claim: G15-10 HOLDS the flood row whole ('no share in the world to come
+      AND does not stand in judgment — לֹא יָדוֹן, neither judgment nor
+      spirit, the tannaim parse the clause four ways'); dispersion and
+      Sodom verdicts UNHELD → F-010
+    holds: flood member complete; the other two members' verses and
+      readings held without their eschatological verdicts
+  talmud_bridge:
+    source: the Mishnah quotes all three Genesis verses itself
+    walks_to: Gen 6:3; Gen 11:8-9 (the doubled scattering); Gen 13:13
+      (רָעִים this world, וְחַטָּאִים the next)
+    note: the chapter's non-Genesis members (spies, wilderness generation,
+      Korach's band, the ten tribes) rest on Numbers and Deuteronomy —
+      anchor_pending, FRONTIER.md
+  cases:
+  - id: SAN_10_3_a
+    input: {query: share_in_world_to_come, subject: generation_of_the_flood}
+    expected: {verdict: no_share_and_no_judgment, basis: לֹא יָדוֹן רוּחִי —
+      neither judgment nor spirit}
+    dispute: null
+    class: A-adjacent — G15-10 holds verdict AND derivation
+  - id: SAN_10_3_b
+    input: {query: share_in_world_to_come, subject: generation_of_the_dispersion}
+    expected: {verdict: no_share, basis: the scattering doubled — this world
+      and the next}
+    dispute: null
+    class: C for the verdict → F-010
+  - id: SAN_10_3_c
+    input: {query: share_in_world_to_come, subject: men_of_sodom}
+    expected: {verdict: dispute, basis: 'first opinion: no share but they
+      STAND in judgment; R. Nechemiah: these and those do not stand in
+      judgment'}
+    dispute: first opinion vs R. Nechemiah
+    class: C for the verdict → F-010
+
+- module: circumcision_third_day
+  tractate: Shabbat
+  oracle: Mishnah Shabbat 19:3 (+ 9:3, same Genesis leg)
+  genesis_anchor:
+    unit: gen_57_deceit_at_the_gate
+    ref: Gen.34.25
+    claim: G57-23 — the full case-shelf cluster held ('bathing the
+      circumcised child on the sabbath... Shmuel's ruling — BECAUSE OF
+      DANGER, OUR VERSE IS THE MEASURE of the third day's peril')
+    holds: the third-day-pain measure and the sabbath-bathing discussion
+  talmud_bridge:
+    source: the Mishnah quotes Gen 34:25 itself — וַיְהִי בַיּוֹם הַשְּׁלִישִׁי
+      בִּהְיוֹתָם כֹּאֲבִים ('on the third day, when they were in pain')
+    walks_to: Gen 34:25
+    note: structural contrast with the pilot's life_override — doubt of
+      LIFE overrides Shabbat (Yoma), doubt of OBLIGATION does not
+      (safek/androgynos here); the two modules compose
+  cases:
+  - id: SHAB_19_3_a
+    input: {day: shabbat, child_state: third_day_after_circumcision, act: bathing}
+    expected: {verdict: permitted, basis: danger — the third day's peril
+      measured by our verse (R. Elazar b. Azariah; Shmuel)}
+    dispute: null
+    class: B
+  - id: SHAB_19_3_b
+    input: {day: shabbat, child_state: safek_or_androgynos, act: circumcision}
+    expected: {verdict: no_override, basis: doubt and the androgynos do not
+      override Shabbat}
+    dispute: R. Yehudah permits the androgynos
+    class: B (the contrast structure; the safek rule itself imports —
+      no Genesis anchor claimed by the row)
+
+# ---------------------------------------------------------------------------
+# HELD ROWS — class A-adjacent / B rows already carried by the machine as
+# claims; classified here, not compiled (the claim IS the answer).
+- held_rows:
+  - row: Pirkei Avot 5:2
+    holding: "G26-05 (gen_26_shem_ledger) — counts TEN GENERATIONS from Adam to Noah and TEN from Noah to Abraham; our 11:10-26 IS that second ten, the Mishnah's count taken directly over this span's own steps"
+    class: A-adjacent
+  - row: Pirkei Avot 5:6
+    holding: "G22-09 (gen_22_covenant_bow) — the rainbow among the TEN THINGS CREATED AT TWILIGHT; at our 9:13 the bow is PLACED, not made"
+    class: A-adjacent
+  - row: Mishnah Eduyot 2:9
+    holding: "G31-13 (gen_31_covenant_pieces) — the two clocks (400 years / fourth generation) with Rabbi's conditional resolution"
+    class: B
+  - row: Mishnah Kiddushin 4:14
+    holding: "G44-01 (gen_44_isaac_gerar_sister_expel) — Abraham kept the charge (Gen 26:5); G47-07 (gen_47) — blessed 'in all' (Gen 24:1)"
+    class: B
+  - row: Mishnah Megillah 1:8 (+ Mishnah Shekalim 3:2 Greek leg)
+    holding: "G23-10 (gen_23_vineyard_curse) — THE TRANSLATION CHARTER; Rabban Shimon ben Gamliel's Greek-only ruling ruled binding WITH OUR 9:27 AS THE REASON"
+    class: B
+  - row: Mishnah Sanhedrin 4:5
+    holding: "G21-11 + G08-28 — 'the BLOODS of your brother' (plural) held with the his-blood-and-his-descendants reading"
+    class: B
+  - row: Mishnah Sotah 7:5
+    holding: "G27-19 (gen_27_the_call) — Elon Moreh = Shechem, the verbal analogy's Genesis leg"
+    class: B
+  - row: Mishnah Sotah 1:9
+    holding: "gen_73 region — Joseph's funeral honors (Gen 50:7-9) held as narrative; the measure-for-measure frame is the Mishnah's own"
+    class: B
+  - row: Pirkei Avot 3:14
+    holding: "Gen 9:6's image-clause held (gen_21_blessing_blood_law family) — 'beloved is man, created in the image' quotes our ink"
+    class: B
+  - row: Pirkei Avot 6:10
+    holding: "gen_30_war_of_kings BREAD_WINE_AND_A_PRIEST — 'possessor of heaven and earth' (Gen 14:19) held as prose"
+    class: B
+  - row: Mishnah Taanit 4:2 + 4:3 + Mishnah Megillah 3:6
+    holding: "the maamad reading-table runs OVER our creation-week units (Gen 1:1-2:3 fully derived) — liturgical usage of the machine's span; the mapping itself the Mishnah's own institution"
+    class: B (usage)
+  - row: Mishnah Chagigah 2:1
+    holding: "nothing — the exposition-limit is law ABOUT Genesis 1, derived (Chagigah 11b) from Deuteronomy 4:32; anchor_pending Deut 4:32"
+    class: C — import-only candidate
+  - row: Mishnah Megillah 4:10
+    holding: "gen_58_israel_written_three_deaths REUBEN_AND_THE_COUNT — the Reuben verse held with its count structure; the read-not-translated rule is the case shelf's own"
+    class: B verse / C rule (import candidate)
+  - row: Mishnah Nazir 9:3
+    holding: "Gen 47:30's carry-me-from-Egypt held as narrative (vayechi span); the corpse-and-its-earth rule derived at Nazir 65a — bridge read, rule import-labeled"
+    class: B/C
+  - row: Mishnah Pesachim 1:1
+    holding: "Gen 44:12's search held as narrative (the goblet); the search-found verbal analogy (Pesachim 7b) walks the lamp-search to our verse; leaven law anchor_pending Exod 12:19"
+    class: B/C
+  - row: Mishnah Kiddushin 1:1
+    holding: "gen_39_machpelah_purchase — the field-of-Ephron silver purchase (Gen 23:13) held whole; the taking-taking verbal analogy (Kiddushin 2a) makes it money-betrothal's anchor; anchor_pending Deut 24:1"
+    class: B/C

@@ -230,6 +230,10 @@ m.fact("ve_anshei_sedom_raim_ve_chataim_la_YHWH_meod")
 # split_by_tense_and_reversed_at_one_seat on sodom_verdict
 m.witness_state("sodom_verdict", "split_by_tense_and_reversed_at_one_seat",
                 cites=["Jerusalem Talmud Sanhedrin 10:3:4", "Sifra, Bechukotai, Section 2 2", "Tosefta Shabbat 8:12"])
+# witness-grounded state (its own tier): disputed_whether_they_stand on
+# sodom_in_judgment
+m.witness_state("sodom_in_judgment", "disputed_whether_they_stand",
+                cites=["Mishnah Sanhedrin 10:3"])
 
 # -------------------------- Gen.13.14 · THE_SPEECH_AFTER_THE_SEPARATING ----
 # וַיהוָה אָמַר אֶל־אַבְרָם אַחֲרֵי הִפָּרֶד־לוֹט מֵעִמּוֹ שָׂא נָא עֵינֶיךָ
@@ -335,7 +339,9 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 21
-    assert sorted(m.WORLD["witnessed"]) == ['sodom_verdict', 'we_are_brothers']
+    assert sorted(m.WORLD["witnessed"]) == ['sodom_in_judgment', 'sodom_verdict', 'we_are_brothers']
+    assert m.WORLD["witnessed"]['sodom_in_judgment']["cites"] == ['Mishnah Sanhedrin 10:3']
+    assert all('disputed_whether_they_stand' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['sodom_verdict']["cites"] == ['Jerusalem Talmud Sanhedrin 10:3:4', 'Sifra, Bechukotai, Section 2 2', 'Tosefta Shabbat 8:12']
     assert all('split_by_tense_and_reversed_at_one_seat' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['we_are_brothers']["cites"] == ['Yevamot 17b:6']

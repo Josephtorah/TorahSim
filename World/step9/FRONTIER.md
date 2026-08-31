@@ -19,3 +19,13 @@ chased, never pretended.
 
 ## PAID
 (none yet — the first flips arrive when Exodus 31 / Leviticus 18 are derived)
+
+## OWED — appended by the Genesis sweep, 2026-08-31
+
+| verse | quote | owed by | why | recorded at |
+|---|---|---|---|---|
+| Leviticus 22:28 | "it and its young — you shall not slaughter on one day" | day_boundary | Ben Zoma's verbal analogy reads its 'one day' from Gen 1:5's — the law's own verse underived | Mishnah Chullin 5:5, read 2026-08-31 |
+| Deuteronomy 4:32 | "ask now of the days that are past... since the day God created man" | exposition_limits (Chagigah 2:1, import candidate) | the gemara derives the work-of-creation exposition limit from here, not from Genesis | Chagigah 11b, recorded 2026-08-31 |
+| Exodus 12:19 | "seven days shall no leaven be found in your houses" | leaven_search (Pesachim 1:1 bridge) | the found-word joins the search-found verbal analogy that lands on our Gen 44:12 | Pesachim 7b, recorded 2026-08-31 |
+| Deuteronomy 24:1 | "when a man takes a wife" | acquisition_by_money (Kiddushin 1:1 bridge) | the taking-taking verbal analogy joins it to our Gen 23:13 field-of-Ephron silver | Kiddushin 2a, recorded 2026-08-31 |
+| Numbers 14:37 + Numbers 16:33 + Deuteronomy 29:27 | (spies, Korach, ten tribes) | world_to_come non-Genesis members | Mishnah Sanhedrin 10:3's remaining members rest on underived books | recorded 2026-08-31 |

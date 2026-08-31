@@ -443,6 +443,10 @@ m.pattern("lo_yokhlu_bene_yisrael_et_gid_ha_nashe")
 # read, not installed
 m.witness_read("the_sinew", "first_food_prohibition_with_an_admitted_self_stringency",
                 cites=["Bereshit Rabbah 78:6"])
+# witness-grounded state (its own tier): sinai_or_the_sons_of_jacob on
+# sinew_law_provenance
+m.witness_state("sinew_law_provenance", "sinai_or_the_sons_of_jacob",
+                cites=["Mishnah Chullin 7:6"])
 # witness-tier presupposed read: ratification_by_the_losing_signatory on
 # what_is_yours_shall_be_yours — read, not installed
 m.witness_read("what_is_yours_shall_be_yours", "ratification_by_the_losing_signatory",
@@ -464,6 +468,9 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 10
+    assert sorted(m.WORLD["witnessed"]) == ['sinew_law_provenance']
+    assert m.WORLD["witnessed"]['sinew_law_provenance']["cites"] == ['Mishnah Chullin 7:6']
+    assert all('sinai_or_the_sons_of_jacob' not in f for f in m.WORLD["facts"])
     assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('my_lord_eight_times', 'priced_in_dynasties_and_paid_at_gen_59'), ('the_embassy', 'criticized_by_the_chain_against_its_own_subject'), ('divided_the_camp', 'risk_distribution_maxim_minted_here'), ('God_of_my_fathers_and_not_of_esau', 'descent_does_not_secure_the_name'), ('i_am_small', 'merit_as_a_finite_balance_drawn_down'), ('the_plea', 'argued_from_a_statute_not_yet_given'), ('who_prevailed', 'ignorance_stated_then_decided_by_a_verb'), ('release_me', 'precedence_table_and_a_penalty_in_the_angels_mouth'), ('the_new_name', 'etymology_refused_by_the_translation'), ('why_ask_my_name', 'a_class_with_no_fixed_names'), ('the_sun_rose_for_him', 'borrowed_hours_repaid_with_interest'), ('the_sinew', 'first_food_prohibition_with_an_admitted_self_stringency'), ('what_is_yours_shall_be_yours', 'ratification_by_the_losing_signatory')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 75:11']
     assert all('priced_in_dynasties_and_paid_at_gen_59' not in f for f in m.WORLD["facts"])
