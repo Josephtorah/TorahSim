@@ -2,6 +2,12 @@
 # Units amended after their standing stamp; cleared in batches by the
 # owner's word ("recent changes good" or similar). Append on amend, mark on
 # re-affirmation — never delete rows.
+#
+# ✅ BATCH RE-AFFIRMED 2026-08-31 — owner's verbatim word: "recent changes
+# good." All sixteen rows below are covered: every amendment listed (revs 4
+# and 5, from gen_08's derivation pass through the F-001..F-003 seats)
+# now carries the owner's renewed stamp. Rows stay for the record; the
+# queue is EMPTY as of this word. New amendments append below the line.
 
 | unit | stamped at | now at | amended | what changed |
 |---|---|---|---|---|

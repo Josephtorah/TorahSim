@@ -75,3 +75,11 @@ Fix belongs in the exam tooling (World/step9), not the corpus.
 
 World state after the batch: standing 907 -> 909 (exactly the two new
 operators), hash 8b8fff1fa28953af unmoved, rituals green on all three units.
+
+## RULING — 2026-08-31 (owner: "ok import only for F-005. recent changes good.")
+
+**F-005 · IMPORT-ONLY (owner's word).** The gehinom duration stays the
+engine's labeled guest — quoted from Mishnah Eduyot 2:10 with its dispute,
+nothing seated, Genesis untouched. Re-openable if Isaiah is ever derived
+(its proof text is Isaiah 66:23). Takes effect inside the engine when
+F-004 compiles the judgment_durations module.

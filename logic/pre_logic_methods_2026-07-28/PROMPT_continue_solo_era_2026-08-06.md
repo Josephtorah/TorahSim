@@ -7349,3 +7349,12 @@ at <world-link> keeps every old path and habit working. world.sqlite
 and __pycache__ are gitignored (model layer, rebuilt not archived); the
 read-only-over-the-corpus and never-invent rules unchanged. Rebuilt and
 reconciled ALL GREEN at standing 909 before the commit.
+
+**TWO RULINGS LAND (2026-08-31 evening, owner: "ok import only for F-005.
+recent changes good."):** F-005 ruled IMPORT-ONLY (recorded in the findings
+queue; takes effect in the engine when F-004 compiles). And the FIRST BATCH
+RE-AFFIRMATION under the new stamp law: "recent changes good" covers all
+sixteen REAFFIRM_QUEUE rows — gen_08's derivation pass, the thirteen audit
+amendments, and the three findings seats all carry the owner's renewed
+stamp; the queue stands empty. Open engine work: F-004 (compute the twelve
+months) and F-006 (three-strata search). NOT COMMITTED.
