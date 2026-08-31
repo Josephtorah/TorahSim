@@ -7380,3 +7380,25 @@ the self-graded hint), verses-never-call-verses / THE MIDDOT ARE THE EDGE
 TYPES / a rule is a named bundle of edges, and the finished shape in one
 breath. The future links-table (from-ref, to-ref, middah, source, claim) is
 named there as storage-not-concept work.
+
+## ⚠⚠ COMPACTION POINT #32 (2026-08-31 night, owner: "OK, get ready. I'm
+## going to compact.") READ #31 ABOVE FIRST — it maps the whole day; this
+## block is the delta since. Then THE_STEPS Step 4 reread (standing rule).
+
+**Since #31:** the pilot CLOSED COMPLETE and pushed (ff46554): F-004 (the
+flood's twelve months COMPUTED from machine rows seq 499/577/583 — first
+end-to-end derived verdict; all ten cases answer, 0 mismatches), F-006
+(holdings.py three-strata search, 5,779 operator-prose blocks; findings
+queue EMPTY of open corpus items), F-005 import-only + the FIRST BATCH
+RE-AFFIRMATION ('recent changes good', 16 units, queue empty) pushed at
+aa07aef. The night's architecture Q&A is in THE_WORLD's idea log (four
+entries dated 2026-08-31 night): one-corpus/doorway, most-not-all with
+measurements, MIDDOT ARE THE EDGE TYPES / rules are edge-bundles, the
+five-step run mechanics (Torah read once at compile; runs are lookups),
+and how middot are used (recorded never assigned; they live on links).
+**NEW STANDING RULE (memory reply-length.md): NO code blocks or diagrams
+in chat replies — too small for the owner; plain lines only.**
+**NEXT:** the Exodus planning conversation, fresh after compaction — the
+spine shifts to the Mekhilta; the case-file machinery Step 9 prototyped
+becomes the requirement; the frontier ledger (Lev 18:5, Exod 31:16) is the
+prioritization map. Tree should be clean after this block's commit.

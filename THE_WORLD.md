@@ -1131,3 +1131,40 @@ workshop dashboard's black skin — or both with a toggle.
   story, topical (the Mishnah's own module map) when the subject is a
   case, and able to report at every point which of its parts derive from
   the ink.
+
+- **2026-08-31 night, continued — HOW A RUN ACTUALLY WORKS (the owner:
+  "I just don't get how that function will run"; the walkthrough that
+  helped, kept for reference).** Five steps, and nothing reads the Torah
+  at run time: (1) the question is stated in the REGISTERED VOCABULARY —
+  unregistered words are refused before anything runs; (2) the case is
+  ROUTED BY TOPIC to its module, the routing map being the Mishnah's own
+  table of contents; (3) the module's RULE RECORDS are matched — plain
+  IF/THEN condition-matching, no interpretation: all judgment happened at
+  compile time; (4) THE TORAH IS READ ONCE, AT COMPILE TIME — the reading
+  becomes records (claims, operators, typed links); a run never repeats
+  the reading, exactly as a program never re-reads its own source; (5)
+  the verdict returns WEARING ITS PEDIGREE — the system walks the stored
+  pointers (rule -> Mishnah row -> gemara bridge -> verses -> linked
+  verses) and prints the trail; the trail is replayed lookup, not fresh
+  computation. What changes at full scale is quantity, not kind:
+  thousands of rule records emitted as data instead of three written by
+  hand, links in one flat table instead of inside claim texts. pose_case
+  today IS the finished mechanics in miniature. One sentence: compiling
+  is reading the Torah once and turning it into records; running is
+  asking questions of the records.
+
+- **2026-08-31 night, last entry — HOW MIDDOT ARE USED (the owner: "do we
+  assign middot to a verse if the oral Torah references it?").** WE NEVER
+  ASSIGN A MIDDAH — we record the tradition assigning it. A middah is
+  recorded ONLY when a source itself argues by that rule (Step 4: the
+  ledger note names it; Step 5: the claim carries the tag; the operator
+  inherits it). A mere citation of a verse records NO middah — a
+  citation is not an inference. THE MIDDAH LIVES ON THE LINK, NOT THE
+  VERSE (the graph insight again): Gen 7:22 has no middah; the connection
+  from 7:22 to Psalm 78:23 carries 'verbal analogy'. Two catalogs
+  (logic/MIDDOT.md): 13 for law, 32 for narrative — tagged from whichever
+  the source works in. AND SOME MIDDOT ARE CHECKABLE: a verbal analogy
+  stands on a shared word, so the machine verifies the FOOTING in the ink
+  (nishmat exactly twice — confirmed) while the ARGUMENT stays the
+  chain's. The machine never argues by a middah; it audits the ground the
+  tradition's argument stands on.
