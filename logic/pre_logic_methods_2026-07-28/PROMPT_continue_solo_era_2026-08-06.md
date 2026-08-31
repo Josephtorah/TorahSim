@@ -7250,3 +7250,92 @@ operators fold in without moving it); rituals re-run, renderings and
 py_units regenerated, asserts green. gen_17 now runs eight claims eight
 operators, gen_43 thirteen and thirteen — both rev-3 changelogs finally
 true. NOT COMMITTED — awaiting the owner's word.
+
+## STEP 9 ERA OPENS — the exam, the findings loop, and the stamp law
+## (2026-08-31 afternoon, all on the owner's words in one sitting)
+
+**THE PILOT EXAM RAN** (World/step9/: cases_pilot.yaml, engine.py,
+run_exam.py, REPORT.md, EXAM_LEDGER.md). Ten Mishnah case rows (Yoma 8:7,
+Yevamot 6:6, Eduyot 2:10) faced the machine: A=0 / B=7 / C=3 — the law held
+as text, appliable nowhere. Two modules compiled: 8 of 8 answered, 0
+mismatches, disputes as labeled dual verdicts, provenance in the return
+type. The engine caught an error in the exam spec itself (male+female
+divides the houses) and the Mishnah adjudicated FOR the engine. The
+ten-years law routed to Gen 16:3, not the predicted anchor, carrying riders
+and the tradition's own grade ('no proof, but a hint'). Architecture
+decisions recorded in REPORT.md. Also this sitting: run_genesis.py (the
+teaching replay of the whole book, narration table, quote-never-compose
+Hebrew) built and green in <world-link>.
+
+**THE FINDINGS LOOP IS STANDING** (owner: "we need to setup this process...
+even on the stamped code"): logic/findings/FINDINGS_QUEUE.md (append-only
+intake; exams auto-draft to World/step9/findings_draft.md; I file; owner
+rules seat / import-only / reject; seats go through the normal rev-bump +
+gates + ritual path).
+
+**THE STAMP LAW IS OWNER-APPROVED** ("ok I approve the stamp law"): an
+amended stamped unit keeps its stamp, records that the stamp predates the
+new rev, and joins logic/findings/REAFFIRM_QUEUE.md (16 units currently
+listed, gen_08 through today's seats) for the owner's batch word.
+
+**F-001..F-003 SEATED on the owner's word:** G18-10 (the rockslide table's
+dead->stop boundary — THE FIRST VERDICT TO ENTER THE CORPUS THROUGH THE
+STEP 9 DOOR), G32-22 (the miscarriage-restart clock rule), G06-12 (the
+bearers dispute made claim-visible — and the seat corrected the finding:
+the dissent was held all along in gen_06's BLESS operator prose since the
+2026-08-23 amendment; the exam's search reads claims and witness rows, not
+operator prose — filed as F-006, an exam-tooling fix). gen_18/gen_32/gen_06
+at rev 4; all gates green; standing 907 -> 909, exactly the two new
+operators; hash 8b8fff1fa28953af UNMOVED; rituals green; engine provenance
+flipped from imported_from to machine_claim; exam re-run 8/8 0 mismatches.
+F-004 (compute the flood's twelve months) and F-005 (gehinom off-book,
+recommend import-only) remain OPEN. NOT COMMITTED — awaiting the owner's
+word.
+
+## ⚠⚠ COMPACTION POINT #31 (2026-08-31 evening, owner: "update everything
+## so we never forget these steps when I compact")
+## READ THIS BLOCK FIRST ON RESUME. Then reread THE_STEPS Step 4 (standing
+## rule) — AND the new Step 9 section, which now carries today's method.
+
+**THE DAY IN ONE LINE:** the gen_08-59 recheck closed clean and pushed
+(0eba1fa, bd1779d, 69b9117); then the afternoon opened the STEP 9 ERA —
+the teaching replay, the first exam, the first compiled rules, the first
+case-shelf seats, the findings loop, and the stamp law.
+
+**WHERE EVERYTHING LIVES (all documented in durable files):**
+- THE_STEPS.md Step 9 — the exam method in Brian's vocabulary (exam before
+  engine; A/B/C classes; vocabulary discovered not designed; pose-a-case;
+  the three-strata search rule) + the FINDINGS LOOP + STAMP LAW section.
+  [Canon mirror pending on owner word; relay suspended.]
+- THE_WORLD.md tail — the 2026-08-31 era entry with the architecture
+  decisions and the TWO-PASS HORIZON (pass 1 compiles the 24 books, pass 2
+  takes inputs; engine goes DATA-DRIVEN when Exodus law spans land).
+- Memory: step9-exam-era.md + findings-loop-stamp-law.md (indexed).
+- <world-link>/step9/ — cases_pilot.yaml, engine.py, run_exam.py,
+  vocabulary.yaml, pose_case.py, EXAM_LEDGER.md, REPORT.md,
+  findings_draft.md. <world-link>/run_genesis.py — the teaching
+  replay (parashah pauses, narration table, quote-never-compose Hebrew,
+  reconciles ALL GREEN). World RESUME.md refreshed.
+- logic/findings/FINDINGS_QUEUE.md (F-001..003 SEATED with resolutions;
+  F-004 compute-the-flood OPEN; F-005 gehinom recommend import-only;
+  F-006 exam three-strata blind spot OPEN) + REAFFIRM_QUEUE.md (16 units
+  awaiting the owner's batch re-stamp).
+
+**CORPUS STATE:** gen_06/gen_18/gen_32 at rev 4 (G06-12 tag-only, G18-10,
+G32-22 seated on owner word); standing 909; hash 8b8fff1fa28953af unmoved
+all day; all gates + rituals green; verify_claims 0 failed everywhere.
+
+**⚠ UNCOMMITTED (the one risk):** everything after 69b9117 — the three
+seats (units+manifests), logic/findings/ (both queues), THE_STEPS and
+THE_WORLD updates, this state doc. The World folder is outside git
+entirely. FIRST ASK AFTER RESUME if not already done: the owner's commit
+word. Never-commit set unchanged; push method in standing orders.
+
+**OPEN THREADS, in rough order:** (1) commit+push on owner word;
+(2) F-004 — compile judgment_durations so the flood's twelve months is
+COMPUTED from the machine's own date operators (first fully-derived
+verdict); (3) F-006 — teach the exam's holdings-search the third stratum
+(operator prose); (4) F-005 ruling; (5) owner's batch re-stamp word for
+the 16-unit REAFFIRM queue; (6) longer: placement rollout (~12 sittings),
+Exodus law spans + the data-driven engine decision, canon mirroring of
+THE_STEPS when relay resumes.

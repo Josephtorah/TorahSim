@@ -72,6 +72,10 @@ m.fact("mi_qetz_eser_shanim_le_shevet_avram_be_eretz_kenaan")
 # ten_years_clause — read, not installed
 m.witness_read("ten_years_clause", "binding_rule_on_a_self_graded_hint",
                 cites=["Tosefta Yevamot 8:4", "Yevamot 64a:5", "Bereshit Rabbah 45:3", "Jerusalem Talmud Yevamot 6:6:3", "Mishnah Yevamot 6:6"])
+# witness-tier presupposed read: restarted_by_miscarriage on ten_years_clock
+# — read, not installed
+m.witness_read("ten_years_clock", "restarted_by_miscarriage",
+                cites=["Mishnah Yevamot 6:6", "Yevamot 64a:5"])
 
 # -------------------------- Gen.16.4 · THE_COMPLIANCE_AND_THE_CONTEMPT -----
 # וַיָּבֹא אֶל־הָגָר וַתַּהַר וַתֵּרֶא כִּי הָרָתָה וַתֵּקַל גְּבִרְתָּהּ
@@ -320,20 +324,23 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['angel_and_naming_censuses']
     assert m.WORLD["witnessed"]['angel_and_naming_censuses']["cites"] == ['Bereshit Rabbah 45:7', 'Jerusalem Talmud Berakhot 1:6:10', 'Bereshit Rabbah 45:8']
     assert all('both_disputed' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ten_years_clause', 'binding_rule_on_a_self_graded_hint'), ('let_the_lord_judge', 'rule_stated_then_narrowed'), ('affliction_scene', 'statutes_pleaded_and_precedent_set'), ('angel_of_the_lord', 'divine_name_marks_the_mode'), ('el_roi', 'name_coined_here_still_in_use')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ten_years_clause', 'binding_rule_on_a_self_graded_hint'), ('ten_years_clock', 'restarted_by_miscarriage'), ('let_the_lord_judge', 'rule_stated_then_narrowed'), ('affliction_scene', 'statutes_pleaded_and_precedent_set'), ('angel_of_the_lord', 'divine_name_marks_the_mode'), ('el_roi', 'name_coined_here_still_in_use')]
     assert m.WITNESS_READS[0]["cites"] == ['Tosefta Yevamot 8:4', 'Yevamot 64a:5', 'Bereshit Rabbah 45:3', 'Jerusalem Talmud Yevamot 6:6:3', 'Mishnah Yevamot 6:6']
     assert all('binding_rule_on_a_self_graded_hint' not in f for f in m.WORLD["facts"])
     assert 'ten_years_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Bava Kamma 93a:3', 'Rosh Hashanah 16b:5']
+    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Yevamot 6:6', 'Yevamot 64a:5']
+    assert all('restarted_by_miscarriage' not in f for f in m.WORLD["facts"])
+    assert 'ten_years_clock' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bava Kamma 93a:3', 'Rosh Hashanah 16b:5']
     assert all('rule_stated_then_narrowed' not in f for f in m.WORLD["facts"])
     assert 'let_the_lord_judge' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 45:6', 'Bereshit Rabbah 71:7', 'Bava Kamma 92b:5']
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 45:6', 'Bereshit Rabbah 71:7', 'Bava Kamma 92b:5']
     assert all('statutes_pleaded_and_precedent_set' not in f for f in m.WORLD["facts"])
     assert 'affliction_scene' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 5:4']
+    assert m.WITNESS_READS[4]["cites"] == ['Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 5:4']
     assert all('divine_name_marks_the_mode' not in f for f in m.WORLD["facts"])
     assert 'angel_of_the_lord' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Jerusalem Talmud Peah 8:8:13', 'Bereshit Rabbah 45:10']
+    assert m.WITNESS_READS[5]["cites"] == ['Jerusalem Talmud Peah 8:8:13', 'Bereshit Rabbah 45:10']
     assert all('name_coined_here_still_in_use' not in f for f in m.WORLD["facts"])
     assert 'el_roi' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

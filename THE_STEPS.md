@@ -202,6 +202,55 @@ reading). The case-anchored books are this step's home shelf — see
 THE TWO SHELVES in Step 4.
    → shows as: chip "proven"; drops automatically if a test goes red.
 
+THE FIRST EXAM RAN (2026-08-31, pilot; home: <world-link>/step9,
+full record in its REPORT.md). Ten Mishnah case rows (Yoma 8:7, Yevamot
+6:6, Eduyot 2:10) faced the machine on Genesis anchors the reading had
+already seated. HOW IT WORKS, in order:
+ (1) THE EXAM COMES FIRST. Case rows are quoted from the Mishnah into a
+     spec file (cases_pilot.yaml) BEFORE any engine exists — input state,
+     expected verdict, dispute if recorded, and a Talmud column: does the
+     gemara walk the verdict back to our verse.
+ (2) EVERY CASE IS CLASSIFIED against the machine as it stands:
+     A = the machine answers; B = the rule is held as text but cannot be
+     applied; C = held nowhere (the Mishnah's own addition). Pilot score:
+     A=0, B=7, C=3 — the reading seats law as text; the case shelf makes
+     it runnable.
+ (3) CLASS C AND PARTIAL HOLDINGS BECOME FINDINGS — filed to the intake
+     queue (below), never fixed on the spot.
+ (4) COMPILE AND RE-RUN: modules become rule functions (a dispute returns
+     BOTH verdicts, labeled; every verdict carries provenance — Mishnah
+     row, Talmud bridge, Genesis anchor, machine claim or explicit
+     import). Pilot: 8 of 8 answered, 0 mismatches — and the engine
+     caught an error in the exam spec itself, which the Mishnah's plain
+     text adjudicated in the engine's favor.
+ (5) THE VOCABULARY IS DISCOVERED, NOT DESIGNED: every input value a case
+     uses is registered (vocabulary.yaml) with the source that introduced
+     it and its own Hebrew ink — a case CANNOT be stated in vocabulary no
+     source defined. Values re-attested by later books append witnesses,
+     never duplicate. Modules carry their tractate, so the code's
+     structure grows into the Mishnah's own organization.
+ (6) POSE A CASE: pose_case.py walks the registered menus (or takes
+     key=value args), validates against the registry, and returns the
+     verdicts with full pedigree. The first working cell of the
+     simulation.
+ (7) LOOKING FOR HOLDINGS, look in ALL THREE strata: claims manifests,
+     witness rows, AND operator prose — the pilot's one blind spot was
+     missing a dispute held in operator prose since 2026-08-23 (F-006).
+
+## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
+Whatever any exam, audit, or derivation surfaces gets FILED, never fixed
+on the spot: logic/findings/FINDINGS_QUEUE.md (append-only). The owner
+rules each finding — SEAT (into the corpus by the normal path: rev bump,
+claim, operator, gates, ritual) / IMPORT-ONLY (the engine carries it,
+corpus untouched) / REJECT. First three seats landed the same day
+(G18-10, G32-22, G06-12), standing 907→909, hash unmoved.
+THE STAMP LAW: updates are never blocked, stamped code included. An
+amended stamped unit KEEPS its stamp (the record of what the owner
+approved), the changelog records the stamp predates the new rev, and the
+unit joins logic/findings/REAFFIRM_QUEUE.md until the owner's next batch
+word ("recent changes good"). Never delete a stamp; never let it claim
+code the owner hasn't seen.
+
 ## Step 10 — Publish
 Export, parity check against the public repo, deploy. Owner's word.
 

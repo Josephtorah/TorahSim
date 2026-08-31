@@ -34,7 +34,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 .arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
        border-radius:8px; padding:.4rem .7rem; }
 .arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
-</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_32_hagar_angel?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Hagar: the maid given, the flight, the angel, the names (16:1-16) <span class='badge frozen'>MODEL · REV 3 · GATES GREEN</span></h1>
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_32_hagar_angel?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Hagar: the maid given, the flight, the angel, the names (16:1-16) <span class='badge frozen'>MODEL · REV 4 · GATES GREEN</span></h1>
 <div class="meta">unit <b>gen_32_hagar_angel</b> · Genesis 16:1-16 · derive logic_derived_v1 · phase C-32</div>
 <div class="meta"><a href="/#Gen/16/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
 <p><span class="he">אַתָּה אֵל רֳאִי</span> · <i>atah El Roi</i> · &#x27;You are a God of seeing&#x27;</p>
@@ -95,6 +95,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">מִקֵּץ עֶשֶׂר שָׁנִים לְשֶׁבֶת אַבְרָם בְּאֶרֶץ כְּנָעַן</span> · <i>mi-qetz eser shanim le-shevet avram be-eretz kenaan</i><br><span class="gloss">= from-qetz eser shanim to-shevet avram earth kenaan</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(ten_years_clause, binding_rule_on_a_self_graded_hint)</span><br><span class="gloss">= WITNESS-READ(ten-years-clause, binding-rule-on-a-self-graded-hint)</span><br>A BINDING RULE WHOSE SOURCE THE TRADITION GRADES AS WEAK [claim G32-16]. The Mishnah rules that a man who has waited ten years without children must act, and the Tanna&#x27;s stated reason is THIS verse&#x27;s ten years in the land of Canaan - from which follows the rider that years spent outside the Land do not count, with exclusions for sickness and imprisonment. But the Tosefta records the derivation&#x27;s grade openly: &#x27;NO PROOF, BUT A HINT&#x27;, and the Babylonian seat repeats it. A live obligation resting on a source the tradition itself marks as suggestive rather than probative. [folded shape: priced law]
 </td><td>—</td><td class='cite'>Tosefta Yevamot 8:4, Yevamot 64a:5, Bereshit Rabbah 45:3, Jerusalem Talmud Yevamot 6:6:3, Mishnah Yevamot 6:6</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(ten_years_clock, restarted_by_miscarriage)</span><br><span class="gloss">= WITNESS-READ(ten-years-clock, restarted-by-miscarriage)</span><br>THE OBLIGATION&#x27;S CLOCK HAS A RESTART RULE [claim G32-22]. The ten-years count this verse grounds does not run blindly: the Mishnah rules that a MISCARRIAGE RESTARTS it - the years are counted from the miscarriage, not the marriage. A counting rule the machine did not hold at any anchor, supplied by the case shelf through the Step 9 exam. [folded shape: priced law]
+</td><td>—</td><td class='cite'>Mishnah Yevamot 6:6, Yevamot 64a:5</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Take and give, the war chapter&#x27;s two abused verbs, come home to the household: a wife takes her maid and gives her husband a wife — the letter prices nothing, dates it to ten silent years, and ends the verse on the word that changes Hagar&#x27;s title.</div>
 </div>
@@ -787,6 +789,10 @@ m.fact(&quot;mi_qetz_eser_shanim_le_shevet_avram_be_eretz_kenaan&quot;)
 # ten_years_clause — read, not installed
 m.witness_read(&quot;ten_years_clause&quot;, &quot;binding_rule_on_a_self_graded_hint&quot;,
                 cites=[&quot;Tosefta Yevamot 8:4&quot;, &quot;Yevamot 64a:5&quot;, &quot;Bereshit Rabbah 45:3&quot;, &quot;Jerusalem Talmud Yevamot 6:6:3&quot;, &quot;Mishnah Yevamot 6:6&quot;])
+# witness-tier presupposed read: restarted_by_miscarriage on ten_years_clock
+# — read, not installed
+m.witness_read(&quot;ten_years_clock&quot;, &quot;restarted_by_miscarriage&quot;,
+                cites=[&quot;Mishnah Yevamot 6:6&quot;, &quot;Yevamot 64a:5&quot;])
 
 # -------------------------- Gen.16.4 · THE_COMPLIANCE_AND_THE_CONTEMPT -----
 # וַיָּבֹא אֶל־הָגָר וַתַּהַר וַתֵּרֶא כִּי הָרָתָה וַתֵּקַל גְּבִרְתָּהּ
@@ -1035,20 +1041,23 @@ if __name__ == &quot;__main__&quot;:
     assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;angel_and_naming_censuses&#x27;]
     assert m.WORLD[&quot;witnessed&quot;][&#x27;angel_and_naming_censuses&#x27;][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 45:7&#x27;, &#x27;Jerusalem Talmud Berakhot 1:6:10&#x27;, &#x27;Bereshit Rabbah 45:8&#x27;]
     assert all(&#x27;both_disputed&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;ten_years_clause&#x27;, &#x27;binding_rule_on_a_self_graded_hint&#x27;), (&#x27;let_the_lord_judge&#x27;, &#x27;rule_stated_then_narrowed&#x27;), (&#x27;affliction_scene&#x27;, &#x27;statutes_pleaded_and_precedent_set&#x27;), (&#x27;angel_of_the_lord&#x27;, &#x27;divine_name_marks_the_mode&#x27;), (&#x27;el_roi&#x27;, &#x27;name_coined_here_still_in_use&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;ten_years_clause&#x27;, &#x27;binding_rule_on_a_self_graded_hint&#x27;), (&#x27;ten_years_clock&#x27;, &#x27;restarted_by_miscarriage&#x27;), (&#x27;let_the_lord_judge&#x27;, &#x27;rule_stated_then_narrowed&#x27;), (&#x27;affliction_scene&#x27;, &#x27;statutes_pleaded_and_precedent_set&#x27;), (&#x27;angel_of_the_lord&#x27;, &#x27;divine_name_marks_the_mode&#x27;), (&#x27;el_roi&#x27;, &#x27;name_coined_here_still_in_use&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Tosefta Yevamot 8:4&#x27;, &#x27;Yevamot 64a:5&#x27;, &#x27;Bereshit Rabbah 45:3&#x27;, &#x27;Jerusalem Talmud Yevamot 6:6:3&#x27;, &#x27;Mishnah Yevamot 6:6&#x27;]
     assert all(&#x27;binding_rule_on_a_self_graded_hint&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;ten_years_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Bava Kamma 93a:3&#x27;, &#x27;Rosh Hashanah 16b:5&#x27;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Mishnah Yevamot 6:6&#x27;, &#x27;Yevamot 64a:5&#x27;]
+    assert all(&#x27;restarted_by_miscarriage&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;ten_years_clock&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Bava Kamma 93a:3&#x27;, &#x27;Rosh Hashanah 16b:5&#x27;]
     assert all(&#x27;rule_stated_then_narrowed&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;let_the_lord_judge&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 45:6&#x27;, &#x27;Bereshit Rabbah 71:7&#x27;, &#x27;Bava Kamma 92b:5&#x27;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 45:6&#x27;, &#x27;Bereshit Rabbah 71:7&#x27;, &#x27;Bava Kamma 92b:5&#x27;]
     assert all(&#x27;statutes_pleaded_and_precedent_set&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;affliction_scene&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 5:4&#x27;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 5:4&#x27;]
     assert all(&#x27;divine_name_marks_the_mode&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;angel_of_the_lord&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Jerusalem Talmud Peah 8:8:13&#x27;, &#x27;Bereshit Rabbah 45:10&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Jerusalem Talmud Peah 8:8:13&#x27;, &#x27;Bereshit Rabbah 45:10&#x27;]
     assert all(&#x27;name_coined_here_still_in_use&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;el_roi&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)

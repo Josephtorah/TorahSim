@@ -1052,3 +1052,37 @@ workshop dashboard's black skin — or both with a toggle.
   on a precision it never asserted. If the question is ever asked what
   the guard-3 discipline has bought, these two results together are the
   answer.
+
+- **2026-08-31 — THE FIRST EXAM RAN, AND THE SIMULATOR'S FIRST CELL
+  ANSWERED.** The Step 9 pilot (home: <world-link>/step9) put ten
+  Mishnah case rows — Yoma 8:7, Yevamot 6:6, Eduyot 2:10 — to the machine
+  on Genesis anchors the reading had already seated. Score before any
+  engine: A=0, B=7, C=3 — the oracle-anatomy thesis measured true: the
+  reading seats law as TEXT; the Mishnah supplies the CASE GRID that makes
+  it runnable; the Talmud is the bridge column (Yoma the clean specimen —
+  verdict in the Mishnah, mechanism-and-verse in the gemara; Yevamot the
+  counter-shape, proof-verses inside the row). Two modules compiled: 8 of
+  8 answered, 0 mismatches, disputes as labeled dual verdicts, provenance
+  in the return type — and the engine caught an error in the exam spec
+  itself, adjudicated by the Mishnah FOR the engine: the oracle correcting
+  the examiner, the purpose working. The ten-years law routed to Gen 16:3
+  (not the predicted anchor), carrying riders the exam didn't know and the
+  tradition's own grade — 'no proof, but a hint' — now repeated verbatim
+  in the verdict's basis rather than laundered into certainty.
+  ARCHITECTURE SETTLED BY THE EXAM: uncertainty is first-class input;
+  verdicts are lists with labeled authorities; provenance is part of the
+  return type; modules carry their tractate so the code grows into the
+  Mishnah's own organization; the input vocabulary is DISCOVERED not
+  designed (vocabulary.yaml — every value registered by the source that
+  introduced it, with its own ink, multi-attested as later books repeat
+  it; a case cannot be stated in vocabulary no source defined).
+  pose_case.py is the first input door: menus that ARE the registry.
+  THE TWO-PASS HORIZON (owner, same sitting): pass 1 compiles the 24
+  books; pass 2 takes inputs. Decision recorded, not yet due: when the
+  Exodus law spans land, the engine goes DATA-DRIVEN — pass 1 emits rules
+  as records, the engine becomes a small executor; hand-written functions
+  were pilot scaffolding only. Same sitting: the FINDINGS LOOP and the
+  STAMP LAW became standing (logic/findings/), F-001..F-003 seated
+  (standing 907→909, hash unmoved), and run_genesis.py — the teaching
+  replay of the whole book, quote-never-compose Hebrew, narration table —
+  went green in <world-link>.
