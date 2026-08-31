@@ -34,7 +34,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 .arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
        border-radius:8px; padding:.4rem .7rem; }
 .arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
-</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_17_boarding?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The boarding: you have I seen righteous, the date, the shut door (7:1-16) <span class='badge frozen'>MODEL · REV 4 · GATES GREEN</span></h1>
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_17_boarding?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The boarding: you have I seen righteous, the date, the shut door (7:1-16) <span class='badge frozen'>MODEL · REV 5 · GATES GREEN</span></h1>
 <div class="meta">unit <b>gen_17_boarding</b> · Genesis 7:1-16 · derive logic_derived_v1 · phase C-17</div>
 <div class="meta"><a href="/#Gen/7/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
 <p><span class="he">בֹּא־אַתָּה וְכָל־בֵּיתְךָ — וַיִּסְגֹּר יְהוָה בַּעֲדוֹ</span> · <i>bo-atah ve-khol-beitkha — va-yisgor YHWH baado</i> · &#x27;come, you and all your house&#x27; — &#x27;and YHWH shut him in&#x27;</p>
@@ -182,6 +182,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td>—</td><td class='cite'>Rosh Hashanah 11b:6, Jerusalem Talmud Taanit 1:3:2</td><td>witnessed</td></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(all_wellsprings_quantifier, exception_class_left_standing)</span><br><span class="gloss">= WITNESS-READ(all-wellsprings-quantifier, exception-class-left-standing)</span><br>A QUANTIFIER PRESENT AT THE OPENING AND ABSENT AT THE CLOSE [claim G17-15]. Our 7:11 breaches ALL the wellsprings of the great deep; 8:2 dams &#x27;the wellsprings&#x27; WITHOUT the word all. R. Elazar reads the missing quantifier as leaving some open, and names them - the hot springs of Tiberias, of Chamat Gader, and the cave of Banyas. A word missing from the closing operator is read as a permanent physical remainder in the world. [folded shape: ink count]
 </td><td>—</td><td class='cite'>Bereshit Rabbah 33:4</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(flood_height_numbers, hydraulic_model_then_manna_a_fortiori)</span><br><span class="gloss">= WITNESS-READ(flood-height-numbers, hydraulic-model-then-manna-a-fortiori)</span><br>TWO OF OUR NUMBERS ARE SEQUENCED INTO ONE HYDRAULIC MODEL, THEN USED TO MEASURE A LATER MIRACLE [claim G17-16]. The deep&#x27;s waters are read as rising LEVEL with the mountains first, and only then the fifteen cubits of 7:20 above them - the two verses resolved into one sequence rather than a contradiction. On the same numbers R. Elazar HaModai argues the manna&#x27;s height at SIXTY cubits: as windows are to doors, so fifteen is to sixty - if the measure of punishment reached this far, the measure of good reaches further - the argument licensed by the גְּזֵרָה שָׁוָה (gezerah shavah, verbal analogy) on the opening-word this operator&#x27;s own verse shares with Psalm 78:23. [folded shape: cross-corpus link]
+</td><td>—</td><td class='cite'>Yoma 76a:6, Yoma 76a:10, Mekhilta DeRabbi Yishmael, Tractate Vayassa 4:17</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The corpus learns to tell time on the day the sky and the deep forget their places.</div>
 </div>
@@ -1027,6 +1029,10 @@ m.witness_state(&quot;second_month_date&quot;, &quot;disputed_by_the_years_own_s
 # all_wellsprings_quantifier — read, not installed
 m.witness_read(&quot;all_wellsprings_quantifier&quot;, &quot;exception_class_left_standing&quot;,
                 cites=[&quot;Bereshit Rabbah 33:4&quot;])
+# witness-tier presupposed read: hydraulic_model_then_manna_a_fortiori on
+# flood_height_numbers — read, not installed
+m.witness_read(&quot;flood_height_numbers&quot;, &quot;hydraulic_model_then_manna_a_fortiori&quot;,
+                cites=[&quot;Yoma 76a:6&quot;, &quot;Yoma 76a:10&quot;, &quot;Mekhilta DeRabbi Yishmael, Tractate Vayassa 4:17&quot;])
 
 # -------------------------- Gen.7.12 · THE_RAIN_FORTY ----------------------
 # וַיְהִי הַגֶּשֶׁם עַל־הָאָרֶץ אַרְבָּעִים יוֹם וְאַרְבָּעִים לָיְלָה
@@ -1114,7 +1120,7 @@ if __name__ == &quot;__main__&quot;:
     assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;second_month_date&#x27;]
     assert m.WORLD[&quot;witnessed&quot;][&#x27;second_month_date&#x27;][&quot;cites&quot;] == [&#x27;Rosh Hashanah 11b:6&#x27;, &#x27;Jerusalem Talmud Taanit 1:3:2&#x27;]
     assert all(&#x27;disputed_by_the_years_own_start&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;clean_speech_circumlocution&#x27;, &#x27;coarse_word_avoided_in_the_ink&#x27;), (&#x27;seven_days_delay&#x27;, &#x27;mourning_period_and_its_rule&#x27;), (&#x27;breach_event&#x27;, &#x27;measure_for_measure_on_a_shared_root&#x27;), (&#x27;all_wellsprings_quantifier&#x27;, &#x27;exception_class_left_standing&#x27;), (&#x27;flood_calendar&#x27;, &#x27;twelve_months_worked_to_the_day&#x27;), (&#x27;shutting_in&#x27;, &#x27;permission_discipline_loop&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;clean_speech_circumlocution&#x27;, &#x27;coarse_word_avoided_in_the_ink&#x27;), (&#x27;seven_days_delay&#x27;, &#x27;mourning_period_and_its_rule&#x27;), (&#x27;breach_event&#x27;, &#x27;measure_for_measure_on_a_shared_root&#x27;), (&#x27;all_wellsprings_quantifier&#x27;, &#x27;exception_class_left_standing&#x27;), (&#x27;flood_height_numbers&#x27;, &#x27;hydraulic_model_then_manna_a_fortiori&#x27;), (&#x27;flood_calendar&#x27;, &#x27;twelve_months_worked_to_the_day&#x27;), (&#x27;shutting_in&#x27;, &#x27;permission_discipline_loop&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 32:4&#x27;, &#x27;Pesachim 3a:10&#x27;, &#x27;Bava Batra 123a:14&#x27;, &#x27;Vayikra Rabbah 26:1&#x27;]
     assert all(&#x27;coarse_word_avoided_in_the_ink&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;clean_speech_circumlocution&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -1127,10 +1133,13 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 33:4&#x27;]
     assert all(&#x27;exception_class_left_standing&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;all_wellsprings_quantifier&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 33:7&#x27;, &#x27;Mishnah Eduyot 2:10&#x27;, &#x27;Bereshit Rabbah 32:6&#x27;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Yoma 76a:6&#x27;, &#x27;Yoma 76a:10&#x27;, &#x27;Mekhilta DeRabbi Yishmael, Tractate Vayassa 4:17&#x27;]
+    assert all(&#x27;hydraulic_model_then_manna_a_fortiori&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;flood_height_numbers&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 33:7&#x27;, &#x27;Mishnah Eduyot 2:10&#x27;, &#x27;Bereshit Rabbah 32:6&#x27;]
     assert all(&#x27;twelve_months_worked_to_the_day&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;flood_calendar&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 34:4&#x27;, &#x27;Bereshit Rabbah 34:6&#x27;, &#x27;Bereshit Rabbah 34:1&#x27;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 34:4&#x27;, &#x27;Bereshit Rabbah 34:6&#x27;, &#x27;Bereshit Rabbah 34:1&#x27;]
     assert all(&#x27;permission_discipline_loop&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;shutting_in&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)

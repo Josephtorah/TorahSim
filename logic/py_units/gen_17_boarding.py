@@ -173,6 +173,10 @@ m.witness_state("second_month_date", "disputed_by_the_years_own_start",
 # all_wellsprings_quantifier — read, not installed
 m.witness_read("all_wellsprings_quantifier", "exception_class_left_standing",
                 cites=["Bereshit Rabbah 33:4"])
+# witness-tier presupposed read: hydraulic_model_then_manna_a_fortiori on
+# flood_height_numbers — read, not installed
+m.witness_read("flood_height_numbers", "hydraulic_model_then_manna_a_fortiori",
+                cites=["Yoma 76a:6", "Yoma 76a:10", "Mekhilta DeRabbi Yishmael, Tractate Vayassa 4:17"])
 
 # -------------------------- Gen.7.12 · THE_RAIN_FORTY ----------------------
 # וַיְהִי הַגֶּשֶׁם עַל־הָאָרֶץ אַרְבָּעִים יוֹם וְאַרְבָּעִים לָיְלָה
@@ -260,7 +264,7 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['second_month_date']
     assert m.WORLD["witnessed"]['second_month_date']["cites"] == ['Rosh Hashanah 11b:6', 'Jerusalem Talmud Taanit 1:3:2']
     assert all('disputed_by_the_years_own_start' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('clean_speech_circumlocution', 'coarse_word_avoided_in_the_ink'), ('seven_days_delay', 'mourning_period_and_its_rule'), ('breach_event', 'measure_for_measure_on_a_shared_root'), ('all_wellsprings_quantifier', 'exception_class_left_standing'), ('flood_calendar', 'twelve_months_worked_to_the_day'), ('shutting_in', 'permission_discipline_loop')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('clean_speech_circumlocution', 'coarse_word_avoided_in_the_ink'), ('seven_days_delay', 'mourning_period_and_its_rule'), ('breach_event', 'measure_for_measure_on_a_shared_root'), ('all_wellsprings_quantifier', 'exception_class_left_standing'), ('flood_height_numbers', 'hydraulic_model_then_manna_a_fortiori'), ('flood_calendar', 'twelve_months_worked_to_the_day'), ('shutting_in', 'permission_discipline_loop')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 32:4', 'Pesachim 3a:10', 'Bava Batra 123a:14', 'Vayikra Rabbah 26:1']
     assert all('coarse_word_avoided_in_the_ink' not in f for f in m.WORLD["facts"])
     assert 'clean_speech_circumlocution' not in m.WORLD["witnessed"]
@@ -273,10 +277,13 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 33:4']
     assert all('exception_class_left_standing' not in f for f in m.WORLD["facts"])
     assert 'all_wellsprings_quantifier' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 33:7', 'Mishnah Eduyot 2:10', 'Bereshit Rabbah 32:6']
+    assert m.WITNESS_READS[4]["cites"] == ['Yoma 76a:6', 'Yoma 76a:10', 'Mekhilta DeRabbi Yishmael, Tractate Vayassa 4:17']
+    assert all('hydraulic_model_then_manna_a_fortiori' not in f for f in m.WORLD["facts"])
+    assert 'flood_height_numbers' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 33:7', 'Mishnah Eduyot 2:10', 'Bereshit Rabbah 32:6']
     assert all('twelve_months_worked_to_the_day' not in f for f in m.WORLD["facts"])
     assert 'flood_calendar' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 34:4', 'Bereshit Rabbah 34:6', 'Bereshit Rabbah 34:1']
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 34:4', 'Bereshit Rabbah 34:6', 'Bereshit Rabbah 34:1']
     assert all('permission_discipline_loop' not in f for f in m.WORLD["facts"])
     assert 'shutting_in' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

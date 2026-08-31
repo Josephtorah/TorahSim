@@ -34,7 +34,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 .arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
        border-radius:8px; padding:.4rem .7rem; }
 .arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
-</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_43_isaac_twins_birthright?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Isaac&#x27;s toledot: twins and the birthright (25:19-34) <span class='badge frozen'>MODEL · REV 4 · GATES GREEN</span></h1>
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_43_isaac_twins_birthright?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Isaac&#x27;s toledot: twins and the birthright (25:19-34) <span class='badge frozen'>MODEL · REV 5 · GATES GREEN</span></h1>
 <div class="meta">unit <b>gen_43_isaac_twins_birthright</b> · Genesis 25:19-34 · derive  · phase </div>
 <div class="meta"><a href="/#Gen/25/19">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
 <p><span class="he">מִכְרָה כַיּוֹם אֶת־בְּכֹרָתְךָ</span> · <i>mikhra ka-yom et bekhorat-kha</i> · &#x27;Sell as of today your birthright&#x27;</p>
@@ -204,6 +204,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yaaqov, LET(mikhra(bekhorat_kha, ka_yom)))</span><br><span class="gloss">= DECLARE(yaaqov, LET(mikhra(bekhorat-kha, like-day)))</span><br>LIVE PUSH [flag 17 SAFE]. mikhra (HVqv2ms 4376 tok1/39) [VERIFIED: SNAPSHOT Gen.25.31 idx2 morph=HVqv2ms strong=4376 ordinal=1/39] — SELL today. bekhorat-kha (1062 tok2/11) [VERIFIED: idx5; tok1=4:4 mi-bekhorot]. SPECS depth 2: haliteni + mikhra.
 </td><td><span class="he">מִכְרָה כַיּוֹם אֶת־בְּכֹרָתְךָ לִי</span> · <i>mikhra ka-yom et-bekhorat-kha li-y</i><br><span class="gloss">= mikhra like-day bekhorat-kha to-me-y</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_sale_push, case_shelf_law_supplied_as_the_motive)</span><br><span class="gloss">= WITNESS-READ(the-sale-push, case-shelf-law-supplied-as-the-motive)</span><br>A CASE-SHELF LAW IS SUPPLIED AS THE MOTIVE FOR THIS PUSH [claim G43-30]. Asked why Jacob would give his life for the birthright, the chain quotes the altar-service law directly: until the Tabernacle was established, private altars were permitted and the SERVICE WAS BY THE FIRSTBORN; once established, by the priests. The motive is then put as a question - shall this wicked one stand and offer? A testing-shelf ruling arriving as a narrative engine: the law the Step 9 exam will face is already the reason this operator&#x27;s demand is made. [folded shape: kept record]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 63:13</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Sell me the birthright today — the price of the red stew is named.</div>
 </div>
@@ -534,6 +536,10 @@ m.step(&quot;Gen.25.31&quot;)
 # mikhra(firstling-of-man-you/your, day)
 m.declare(&quot;yaaqov&quot;, &quot;LET&quot;,
           &quot;mikhra(bekhorat_kha, ka_yom)&quot;)
+# witness-tier presupposed read: case_shelf_law_supplied_as_the_motive on
+# the_sale_push — read, not installed
+m.witness_read(&quot;the_sale_push&quot;, &quot;case_shelf_law_supplied_as_the_motive&quot;,
+                cites=[&quot;Bereshit Rabbah 63:13&quot;])
 
 # -------------------------- Gen.25.32 · THE_DISMISS_SPEECH -----------------
 # וַיֹּ֣אמֶר עֵשָׂ֔ו הִנֵּ֛ה אָנֹכִ֥י הוֹלֵ֖ךְ לָמ֑וּת וְלָמָּה־זֶּ֥ה לִ֖י
@@ -607,7 +613,7 @@ if __name__ == &quot;__main__&quot;:
     assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;the_elders_years&#x27;]
     assert m.WORLD[&quot;witnessed&quot;][&#x27;the_elders_years&#x27;][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 63:12&#x27;]
     assert all(&#x27;five_withheld_on_the_stew_day&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;entreaty_verb&#x27;, &#x27;poured_out_or_decree_overturned&#x27;), (&#x27;conception_held_for_this_prayer&#x27;, &#x27;wire_closed_from_gen_41&#x27;), (&#x27;struggle_in_the_womb&#x27;, &#x27;read_as_conflict_of_law_systems&#x27;), (&#x27;went_to_inquire&#x27;, &#x27;both_members_send_her_to_a_school&#x27;), (&#x27;elder_serve_younger&#x27;, &#x27;ambiguity_closed_by_the_translation&#x27;), (&#x27;the_oracle_terms&#x27;, &#x27;counted_twice_to_twelve&#x27;), (&#x27;twins_written_short&#x27;, &#x27;verdict_on_the_pair_carried_by_one_letter&#x27;), (&#x27;dweller_in_tents&#x27;, &#x27;study_house_written_into_the_verse&#x27;), (&#x27;the_lads_grew&#x27;, &#x27;thirteen_years_charter_for_a_standing_blessing&#x27;), (&#x27;the_stew_day&#x27;, &#x27;elder_died_today_and_the_heresy_at_the_pot&#x27;), (&#x27;the_oath_on_the_sale&#x27;, &#x27;standing_instrument_still_feared_lost&#x27;), (&#x27;the_sale&#x27;, &#x27;written_deed_and_a_countersignature&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;entreaty_verb&#x27;, &#x27;poured_out_or_decree_overturned&#x27;), (&#x27;conception_held_for_this_prayer&#x27;, &#x27;wire_closed_from_gen_41&#x27;), (&#x27;struggle_in_the_womb&#x27;, &#x27;read_as_conflict_of_law_systems&#x27;), (&#x27;went_to_inquire&#x27;, &#x27;both_members_send_her_to_a_school&#x27;), (&#x27;elder_serve_younger&#x27;, &#x27;ambiguity_closed_by_the_translation&#x27;), (&#x27;the_oracle_terms&#x27;, &#x27;counted_twice_to_twelve&#x27;), (&#x27;twins_written_short&#x27;, &#x27;verdict_on_the_pair_carried_by_one_letter&#x27;), (&#x27;dweller_in_tents&#x27;, &#x27;study_house_written_into_the_verse&#x27;), (&#x27;the_lads_grew&#x27;, &#x27;thirteen_years_charter_for_a_standing_blessing&#x27;), (&#x27;the_stew_day&#x27;, &#x27;elder_died_today_and_the_heresy_at_the_pot&#x27;), (&#x27;the_sale_push&#x27;, &#x27;case_shelf_law_supplied_as_the_motive&#x27;), (&#x27;the_oath_on_the_sale&#x27;, &#x27;standing_instrument_still_feared_lost&#x27;), (&#x27;the_sale&#x27;, &#x27;written_deed_and_a_countersignature&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 63:5&#x27;, &#x27;Onkelos Genesis 25:21&#x27;]
     assert all(&#x27;poured_out_or_decree_overturned&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;entreaty_verb&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -638,10 +644,13 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[9][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 63:11&#x27;, &#x27;Bereshit Rabbah 63:14&#x27;]
     assert all(&#x27;elder_died_today_and_the_heresy_at_the_pot&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;the_stew_day&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[10][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 68:7&#x27;]
+    assert m.WITNESS_READS[10][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 63:13&#x27;]
+    assert all(&#x27;case_shelf_law_supplied_as_the_motive&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_sale_push&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[11][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 68:7&#x27;]
     assert all(&#x27;standing_instrument_still_feared_lost&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;the_oath_on_the_sale&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[11][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 63:14&#x27;]
+    assert m.WITNESS_READS[12][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 63:14&#x27;]
     assert all(&#x27;written_deed_and_a_countersignature&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;the_sale&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)

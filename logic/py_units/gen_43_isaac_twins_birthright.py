@@ -201,6 +201,10 @@ m.step("Gen.25.31")
 # mikhra(firstling-of-man-you/your, day)
 m.declare("yaaqov", "LET",
           "mikhra(bekhorat_kha, ka_yom)")
+# witness-tier presupposed read: case_shelf_law_supplied_as_the_motive on
+# the_sale_push — read, not installed
+m.witness_read("the_sale_push", "case_shelf_law_supplied_as_the_motive",
+                cites=["Bereshit Rabbah 63:13"])
 
 # -------------------------- Gen.25.32 · THE_DISMISS_SPEECH -----------------
 # וַיֹּ֣אמֶר עֵשָׂ֔ו הִנֵּ֛ה אָנֹכִ֥י הוֹלֵ֖ךְ לָמ֑וּת וְלָמָּה־זֶּ֥ה לִ֖י
@@ -274,7 +278,7 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['the_elders_years']
     assert m.WORLD["witnessed"]['the_elders_years']["cites"] == ['Bereshit Rabbah 63:12']
     assert all('five_withheld_on_the_stew_day' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('entreaty_verb', 'poured_out_or_decree_overturned'), ('conception_held_for_this_prayer', 'wire_closed_from_gen_41'), ('struggle_in_the_womb', 'read_as_conflict_of_law_systems'), ('went_to_inquire', 'both_members_send_her_to_a_school'), ('elder_serve_younger', 'ambiguity_closed_by_the_translation'), ('the_oracle_terms', 'counted_twice_to_twelve'), ('twins_written_short', 'verdict_on_the_pair_carried_by_one_letter'), ('dweller_in_tents', 'study_house_written_into_the_verse'), ('the_lads_grew', 'thirteen_years_charter_for_a_standing_blessing'), ('the_stew_day', 'elder_died_today_and_the_heresy_at_the_pot'), ('the_oath_on_the_sale', 'standing_instrument_still_feared_lost'), ('the_sale', 'written_deed_and_a_countersignature')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('entreaty_verb', 'poured_out_or_decree_overturned'), ('conception_held_for_this_prayer', 'wire_closed_from_gen_41'), ('struggle_in_the_womb', 'read_as_conflict_of_law_systems'), ('went_to_inquire', 'both_members_send_her_to_a_school'), ('elder_serve_younger', 'ambiguity_closed_by_the_translation'), ('the_oracle_terms', 'counted_twice_to_twelve'), ('twins_written_short', 'verdict_on_the_pair_carried_by_one_letter'), ('dweller_in_tents', 'study_house_written_into_the_verse'), ('the_lads_grew', 'thirteen_years_charter_for_a_standing_blessing'), ('the_stew_day', 'elder_died_today_and_the_heresy_at_the_pot'), ('the_sale_push', 'case_shelf_law_supplied_as_the_motive'), ('the_oath_on_the_sale', 'standing_instrument_still_feared_lost'), ('the_sale', 'written_deed_and_a_countersignature')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 63:5', 'Onkelos Genesis 25:21']
     assert all('poured_out_or_decree_overturned' not in f for f in m.WORLD["facts"])
     assert 'entreaty_verb' not in m.WORLD["witnessed"]
@@ -305,10 +309,13 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 63:11', 'Bereshit Rabbah 63:14']
     assert all('elder_died_today_and_the_heresy_at_the_pot' not in f for f in m.WORLD["facts"])
     assert 'the_stew_day' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 68:7']
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 63:13']
+    assert all('case_shelf_law_supplied_as_the_motive' not in f for f in m.WORLD["facts"])
+    assert 'the_sale_push' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 68:7']
     assert all('standing_instrument_still_feared_lost' not in f for f in m.WORLD["facts"])
     assert 'the_oath_on_the_sale' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 63:14']
+    assert m.WITNESS_READS[12]["cites"] == ['Bereshit Rabbah 63:14']
     assert all('written_deed_and_a_countersignature' not in f for f in m.WORLD["facts"])
     assert 'the_sale' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

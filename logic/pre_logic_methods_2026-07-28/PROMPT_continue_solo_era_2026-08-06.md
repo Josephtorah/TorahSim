@@ -7232,3 +7232,21 @@ renderings + 1 py_unit regenerated, asserts green, hash 8b8fff1fa28953af
 STILL unmoved. The reading debt itself is unchanged and stands openly — the
 gate notes it, the export chips say 'in reading', and the ledgers hold the
 enumerations. Every frozen unit in the corpus can now re-run its ritual.
+
+**THE TWO ORPHANS SEATED (2026-08-31, owner: "seat the two claims").** The
+recheck's last open item closes. G17-16 — the hydraulic model (the deep
+level with the mountains, then the fifteen cubits) and the sixty-cubit
+manna a-fortiori argued in our numbers under the opening/opening verbal
+analogy — seated as a WITNESS_READ on STEP_Gn_7_11 (cites Yoma 76a:6,
+76a:10, Mekhilta DeRabbi Yishmael Tractate Vayassa 4:17, ledger rows 19/
+31/33). G43-30 — the altar-service law as Jacob's purchase motive
+("service was by the firstborn... shall this wicked one stand and
+offer?") — seated as a WITNESS_READ on STEP_Gn_25_31, the sale push
+itself (cites Bereshit Rabbah 63:13, ledger row 11). gen_17 to rev 5,
+gen_43 to rev 5; manifests re-annotated SEATED; every gate green;
+STANDING FACTS 905 -> 907, exactly the two operators, hash
+8b8fff1fa28953af UNMOVED (the derivation-era invariant holds: witness
+operators fold in without moving it); rituals re-run, renderings and
+py_units regenerated, asserts green. gen_17 now runs eight claims eight
+operators, gen_43 thirteen and thirteen — both rev-3 changelogs finally
+true. NOT COMMITTED — awaiting the owner's word.
