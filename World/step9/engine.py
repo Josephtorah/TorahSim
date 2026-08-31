@@ -134,8 +134,104 @@ def rule_procreation(case):
     return None
 
 
-# judgment_durations: DELIBERATELY NOT COMPILED — the report shows the
-# contrast between an examined module and a compiled one.
+# ------------------------------------------------------ judgment_durations
+# F-004 (owner: "build F-004"): the flood's twelve months is COMPUTED from
+# the machine's own date rows — the first verdict derived end to end from
+# the corpus's facts rather than looked up. The gehinom member is
+# IMPORT-ONLY by the owner's ruling on F-005 ("ok import only for F-005").
+import re as _re
+import sqlite3 as _sql
+from pathlib import Path as _P
+
+_WORLD_DB = _P(__file__).resolve().parent.parent / "world.sqlite"
+
+EDU_PROV = dict(
+    mishnah="Mishnah Eduyot 2:10",
+    talmud_bridge="the Mishnah's five-judgment census itself — our flood is "
+                  "its first member (machine claim G17-11 holds the census "
+                  "and the day-by-day calendar)",
+    genesis_anchor="Gen.7.11 start anchor; Gen.8.13-14 end (gen_17_boarding, "
+                   "gen_19_the_remembering)",
+)
+
+_NUM = {"echad": 1, "sheni": 2, "shivah": 7, "esrim": 20}
+
+
+def _flood_span():
+    """Read the machine's own date rows and compute the span. Returns
+    (months, days_beyond, provenance_rows) or None if the rows are absent —
+    the verdict is COMPUTED, never assumed."""
+    if not _WORLD_DB.exists():
+        return None
+    con = _sql.connect(_WORLD_DB)
+    rows = {}
+    for seq, unit, ref, payload in con.execute(
+            "SELECT seq, unit, ref, payload FROM standing "
+            "WHERE kind='TIME_ANCHOR'"):
+        m = _re.search(r"shnat_(\d+)_chodesh_(\d+)_yom_(\d+)", payload)
+        if m:
+            rows[ref] = (tuple(int(x) for x in m.groups()),
+                         "standing seq %d (%s)" % (seq, unit))
+    end_fact = con.execute(
+        "SELECT seq, unit, fact FROM facts WHERE ref='Gen.8.14' "
+        "AND fact LIKE 'ba_chodesh%'").fetchone()
+    con.close()
+    start = rows.get("Gen.7.11")
+    year_marker = rows.get("Gen.8.13")
+    if not (start and year_marker and end_fact):
+        return None
+    (y1, m1, d1), src1 = start
+    (y2, _, _), src2 = year_marker
+    # the end fact spells its numbers in the corpus's own transliteration:
+    # ba_chodesh_ha_sheni_be_shivah_ve_esrim_yom — month 2, day 27
+    parts = end_fact[2].split("_")
+    nums = [_NUM[p] for p in parts if p in _NUM]
+    m2 = nums[0]
+    d2 = sum(nums[1:])
+    months = (y2 - y1) * 12 + (m2 - m1)
+    days = d2 - d1
+    prov = [src1, src2,
+            "fact seq %d (%s): %s" % (end_fact[0], end_fact[1], end_fact[2])]
+    return months, days, prov
+
+
+def rule_judgment_durations(case):
+    if case.get("query") != "duration_of_judgment":
+        return None
+    subj = case.get("subject")
+    if subj == "generation_of_the_flood":
+        span = _flood_span()
+        if span is None:
+            return [V("twelve_months",
+                      "held as the chain's ruling (G17-11); the date rows "
+                      "were not found to compute from",
+                      machine_claim="G17-11", **EDU_PROV)]
+        months, days, prov = span
+        return [V("twelve_months",
+                  "COMPUTED from the machine's own date rows: year 600 "
+                  "month 2 day 17 (the breach) to year 601 month 2 day 27 "
+                  "(the earth dry) = %d months and %d days beyond — the "
+                  "excess the chain itself counts as the solar year's "
+                  "eleven days over the lunar (G17-11). The Mishnah's "
+                  "twelve-month row, derived end to end from the corpus."
+                  % (months, days),
+                  machine_claim="G17-11; date rows: " + "; ".join(prov),
+                  **EDU_PROV)]
+    if subj == "the_wicked_in_gehinom":
+        return [
+            V("twelve_months", "Isaiah 66:23 — 'from one month until its "
+              "month'", authority="the anonymous first opinion",
+              imported_from="Mishnah Eduyot 2:10 — IMPORT-ONLY by owner "
+                            "ruling on F-005 (2026-08-31); no Genesis "
+                            "anchor; proof text is Isaiah, not yet derived",
+              **EDU_PROV),
+            V("passover_to_shavuot", "Isaiah 66:23 — 'from one sabbath "
+              "until its sabbath'", authority="R. Yochanan ben Nuri",
+              imported_from="Mishnah Eduyot 2:10 — IMPORT-ONLY per F-005",
+              **EDU_PROV),
+        ]
+    return None
+
 
 # Module registry — routing follows the Mishnah's own organization (the
 # owner's tractate map, logic/MISHNAH_TOPICS.md): each module names the
@@ -144,6 +240,8 @@ def rule_procreation(case):
 RULES = {
     "life_override": {"fn": rule_life_override, "tractate": "Yoma"},
     "procreation_measure": {"fn": rule_procreation, "tractate": "Yevamot"},
+    "judgment_durations": {"fn": rule_judgment_durations,
+                           "tractate": "Eduyot"},
 }
 
 

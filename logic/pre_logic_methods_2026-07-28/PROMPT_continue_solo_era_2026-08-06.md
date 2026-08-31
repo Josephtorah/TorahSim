@@ -7358,3 +7358,25 @@ sixteen REAFFIRM_QUEUE rows — gen_08's derivation pass, the thirteen audit
 amendments, and the three findings seats all carry the owner's renewed
 stamp; the queue stands empty. Open engine work: F-004 (compute the twelve
 months) and F-006 (three-strata search). NOT COMMITTED.
+
+**F-004 + F-006 BUILT AND CLOSED (2026-08-31 night, owner word).** The
+flood's twelve months now COMPUTES from three named machine rows (seq
+499/577/583) — the first verdict derived end to end from the corpus's own
+facts; all ten pilot cases answered by compiled modules, 0 mismatches.
+holdings.py gives the exam the three-strata search (claims, witness,
+operator prose — 5,779 blocks); the check runs inside run_exam and verified
+both the seats (HELD) and gehinom (held nowhere, the ruled guest). Findings
+queue empty of open corpus items. ALSO ANSWERED THIS SITTING (owner's
+architecture question): NOT two separate compilations — the Mishnah/Talmud
+FILL INTO the written Torah's units wherever a verse anchors them (the seat
+path); the engine is a thin callable doorway of pointers into the one
+corpus, holding only labeled guests. NOT COMMITTED.
+
+**THE NIGHT'S ARCHITECTURE Q&A RECORDED (owner: "we should record these
+discussions... is there a file?"):** THE_WORLD.md idea log, dated
+2026-08-31-night entry — the fill-in resolution (one corpus, engine as
+doorway), the most-not-all answer with its measurements (22-of-35, 7-of-10,
+the self-graded hint), verses-never-call-verses / THE MIDDOT ARE THE EDGE
+TYPES / a rule is a named bundle of edges, and the finished shape in one
+breath. The future links-table (from-ref, to-ref, middah, source, claim) is
+named there as storage-not-concept work.

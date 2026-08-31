@@ -17,6 +17,18 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import engine  # noqa: E402
+import holdings  # noqa: E402
+
+# F-006: search terms per case for the three-strata holdings check. The
+# original Phase-1 classes below are the pilot's historical record; the
+# check reports what the corpus holds NOW, in all three strata, so a
+# "held nowhere" claim can never again miss operator prose.
+HOLDINGS_TERMS = {
+    "YOMA_8_7_c": ["dignity of the dead"],
+    "YEV_6_6_d": ["miscarriage", "restart"],
+    "YEV_6_6_e": ["ben beroka"],
+    "EDU_2_10_b": ["gehinom"],
+}
 
 # Phase-1 verdicts from the manual audit of holdings (sources in REPORT.md).
 CLASSIFICATION = {
@@ -144,6 +156,15 @@ def main():
             "# findings queue on the owner's word; this file is overwritten\n"
             "# each run\n\n" + "\n\n".join(drafts) + "\n")
         print("\n%d finding draft(s) -> findings_draft.md" % len(drafts))
+    print("\nTHREE-STRATA HOLDINGS CHECK (F-006) — what the corpus holds "
+          "NOW for every case once classed C or partial:")
+    for cid, terms in HOLDINGS_TERMS.items():
+        held, r = holdings.held_anywhere(terms)
+        strata = ", ".join("%s:%d" % (k, len(v)) for k, v in r.items() if v)
+        print("  %-11s %-28s -> %s" % (
+            cid, "/".join(terms),
+            ("HELD (%s)" % strata) if held else "held nowhere (verified in "
+                                               "all three strata)"))
     print("\nEXAM: %d cases — before the engine: A=%d  B=%d  C=%d" %
           (total, a, b, cc))
     print("ENGINE: %d cases answered by compiled modules, %d mismatches" %

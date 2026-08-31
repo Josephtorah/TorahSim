@@ -1086,3 +1086,48 @@ workshop dashboard's black skin — or both with a toggle.
   (standing 907→909, hash unmoved), and run_genesis.py — the teaching
   replay of the whole book, quote-never-compose Hebrew, narration table —
   went green in <world-link>.
+
+- **2026-08-31 night — THE OWNER'S QUESTIONS, AND THE ANSWERS THAT BECAME
+  ARCHITECTURE.** A run of design questions after the pilot closed, each
+  answer now part of the plan:
+  (1) *"I assumed the Mishnah and Talmud would fill in missing pieces of
+  the written Torah — are we compiling the Mishnah as a separate
+  program?"* NO — the fill-in assumption is the reality and the measured
+  main road: of the pilot's ten case rows, everything with a verse anchor
+  was seated INTO the Genesis units themselves (G18-10, G32-22, G06-12);
+  the engine is a DOORWAY, not a codebase — a thin file of pointers into
+  the one corpus that exists because a unit cannot take a question, only
+  a function can. Its only residents are verdicts with NO verse anywhere
+  (one of ten — gehinom), kept as labeled import-only guests by owner
+  ruling. When rules become data, the doorway thins further.
+  (2) *"Does all the Mishnah's data come from the written Torah?"* MOST,
+  NOT ALL, AND THE REMAINDER ANNOUNCES ITSELF — the measured answer: the
+  goring ox's 22-of-35 to ink or argued analogy with exactly two
+  self-labeled decrees; the pilot's 7-of-10 anchored with three
+  verse-less verdicts; the ten-years law carrying its own grade, 'no
+  proof, but a hint.' The tradition claims traceability, not pure
+  derivation, and marks its decrees as decrees — the machine preserves
+  the marks. The finished system answers this very question about itself,
+  with counts and citations.
+  (3) *"Will verses call other verses? How are they linked in a logical
+  format?"* VERSES NEVER CALL VERSES — verses stay inert evidence; the
+  links are RECORDED CONNECTIONS made by the tradition, each typed and
+  cited, and THE LOGICAL FORMAT ALREADY EXISTS: THE MIDDOT ARE THE EDGE
+  TYPES. The finished system is a graph — verses as nodes, the
+  tradition's arguments as typed cited edges (verbal analogy on a shared
+  word, machine-verifiable, like nishmat joining Gen 2:7 to 7:22;
+  light-and-heavy; derivation seats in the gemara) — and A RULE IS A
+  NAMED BUNDLE OF EDGES made callable. Posing a case = the engine WALKS
+  the recorded edges; the walk itself is the citation trail printed under
+  every verdict. What remains to build is storage, not concept: the edges
+  live today inside claim texts and cites; the finished form lays them
+  flat in a links table (from-ref, to-ref, middah, source, claim) so the
+  walk is a query. The tradition invented the format two thousand years
+  ago; we are storing it, not inventing one.
+  (4) THE FINISHED SHAPE, one breath: one corpus at the heart (the
+  written Torah compiled, oral material seated where anchored, the
+  self-labeled remainder as marked guests), one graph of typed edges over
+  it, one thin door for questions — sequential when the subject is the
+  story, topical (the Mishnah's own module map) when the subject is a
+  case, and able to report at every point which of its parts derive from
+  the ink.

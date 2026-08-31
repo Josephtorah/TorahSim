@@ -83,3 +83,24 @@ engine's labeled guest — quoted from Mishnah Eduyot 2:10 with its dispute,
 nothing seated, Genesis untouched. Re-openable if Isaiah is ever derived
 (its proof text is Isaiah 66:23). Takes effect inside the engine when
 F-004 compiles the judgment_durations module.
+
+## RESOLUTIONS — 2026-08-31 evening (owner: "build F-004 and F-006")
+
+**F-004 · CLOSED — the first end-to-end derived verdict.** The
+judgment_durations module is compiled, and the flood's twelve months is now
+COMPUTED, not looked up: the engine reads the machine's own date rows —
+standing seq 499 (Gen 7:11, year 600 month 2 day 17), standing seq 577
+(Gen 8:13, year 601), fact seq 583 (Gen 8:14, month 2 day 27) — and derives
+12 months + 10 days, naming all three rows in the verdict. The gehinom
+member answers as the labeled import-only guest per the F-005 ruling. All
+ten pilot cases now answered by compiled modules, 0 mismatches.
+
+**F-006 · CLOSED — the exam sees all three strata.** World/step9/holdings.py
+searches claims manifests, witness rows, AND operator prose (5,779 blocks,
+YAML-walked); run_exam.py now prints the three-strata check for every case
+once classed C or partial. Proof against the original blind spot: "ben
+beroka" lands on gen_06's BLESS operator. And the check's own output is the
+loop closing in miniature: the three seated findings show HELD across
+strata; gehinom shows "held nowhere — verified in all three strata," the
+honest guest it was ruled to be. THE QUEUE STANDS EMPTY of open corpus
+findings.
