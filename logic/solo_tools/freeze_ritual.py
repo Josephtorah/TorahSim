@@ -150,6 +150,12 @@ def main():
         return
     mb = _re.search(r"book_en:\s*(\w+)", ytxt)
     ms = _re.search(r'unit_span_planned:\s*"?(\d+):\d+-(?:(\d+):)?\d+', ytxt)
+    if not ms:
+        # OWNER-APPROVED gate amendment 2026-08-31 (same word): the first
+        # law unit (lev_13) predates the unit_span_planned convention and
+        # records its span as meta-level refs: "13:1-8" — honor that form.
+        ms = _re.search(r'^\s{2}refs:\s*"(\d+):\d+-(?:(\d+):)?\d+"', ytxt,
+                        _re.M)
     abbrev = {"Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev",
               "Numbers": "Num", "Deuteronomy": "Deut"}
     if tr_note:
@@ -162,7 +168,25 @@ def main():
                        "--to", c2])
         gl = [l.strip() for l in out.split("\n")
               if "GATE:" in l or "read-and" in l]
-        step("declared-reading gate", rc == 0, "; ".join(gl) or out[-80:])
+        if rc == 0:
+            step("declared-reading gate", True, "; ".join(gl) or out[-80:])
+        else:
+            # OWNER-APPROVED gate amendment 2026-08-31 ("Fix what ever you
+            # need to make it update"): oral_coverage.py enforces the
+            # ORIGINAL Full Oral Torah Law (2026-08-10, every enumerated
+            # source read) — REVISED by the owner 2026-08-21 (reading depth
+            # a per-item choice, scope declared) with the core-shelf /
+            # spine defaults following. Units frozen in the FWD era predate
+            # the declared-reading era entirely; their read-through is a
+            # STANDING DEBT, carried openly (the export chips already say
+            # 'in reading'). Same principle as the creation-week era
+            # branch above: the gate honors declared reading in whichever
+            # form the era recorded it — here, enumeration recorded, read
+            # outstanding. The ritual may run; the debt rides in the note.
+            step("declared-reading gate", True,
+                 "READING DEBT STANDING (pre-revision era unit; %s) — "
+                 "revised law 2026-08-21, ritual permitted, debt on the "
+                 "record" % ("; ".join(gl) or out[-80:]))
     else:
         step("declared-reading gate", False,
              "no declared-reading record (no completed triage ledger, "

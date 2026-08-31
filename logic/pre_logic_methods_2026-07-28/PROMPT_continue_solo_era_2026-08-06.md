@@ -7215,3 +7215,20 @@ drafts correctly skipped; 68 HTML renderings + 62 py_units regenerated;
 every changed py_unit executed assert-green; corpus_world hash
 8b8fff1fa28953af UNMOVED through the whole day. The python-rendering-layer
 standing order is again true of the whole Genesis corpus.
+
+**THE EXODUS/LEVITICUS RENDERINGS UPDATE TOO (2026-08-31, owner: "Fix what
+ever you need to make it update", then "commit and push when done").** Two
+further gate amendments, both dated in freeze_ritual.py: (1) the fallback
+branch no longer BLOCKS on oral_coverage.py's pre-revision demand (the
+original 2026-08-10 every-enumerated-source law, revised by the owner
+2026-08-21) — for era units it now PASSES with the debt named verbatim in
+the note ("READING DEBT STANDING... 0 of 3219 required"), same principle as
+the creation-week era treatment; Exod 21's genuinely-read chapter path is
+untouched and still passes on its own strength. (2) The span parser also
+honors the first law unit's older form — lev_13 records its span as
+meta-level refs: "13:1-8", predating unit_span_planned. RESULT: all 24
+Exodus/Leviticus rituals ran OK (exo_01-21, lev_04, lev_13, lev_19), 24
+renderings + 1 py_unit regenerated, asserts green, hash 8b8fff1fa28953af
+STILL unmoved. The reading debt itself is unchanged and stands openly — the
+gate notes it, the export chips say 'in reading', and the ledgers hold the
+enumerations. Every frozen unit in the corpus can now re-run its ritual.
