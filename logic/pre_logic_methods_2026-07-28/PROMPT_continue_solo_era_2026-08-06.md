@@ -7339,3 +7339,13 @@ verdict); (3) F-006 — teach the exam's holdings-search the third stratum
 the 16-unit REAFFIRM queue; (6) longer: placement rollout (~12 sittings),
 Exodus law spans + the data-driven engine decision, canon mirroring of
 THE_STEPS when relay resumes.
+
+**THE WORLD JOINS THE REPO (2026-08-31, owner: "I think we should add the
+world to this repository" — superseding his 2026-08-30 keep-it-separate
+word, which the World's RESUME preserves for the record).** The folder
+moved to Torah_Grok/World/ whole — build/replay, ask, step9 (exam, engine,
+vocabulary, pose_case, FRONTIER, ledgers), placement, research. A symlink
+at <world-link> keeps every old path and habit working. world.sqlite
+and __pycache__ are gitignored (model layer, rebuilt not archived); the
+read-only-over-the-corpus and never-invent rules unchanged. Rebuilt and
+reconciled ALL GREEN at standing 909 before the commit.

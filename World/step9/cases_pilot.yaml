@@ -1,0 +1,324 @@
+- module: life_override
+  tractate: Yoma
+  oracle: Mishnah Yoma 8:7
+  genesis_anchor:
+    unit: gen_18_the_rise
+    ref: Gen.7.22
+    claim: G18-05
+    holds: life is tested at the nostrils — from 'all in whose nostrils was the
+      breath of the spirit of life'
+  talmud_bridge:
+    source: Yoma 85a:11
+    walks_to: Gen 7:22
+    note: the Mishnah rules WHAT (clear the debris); only the gemara says WHERE
+      life is tested (the nose) and hangs it on our verse — verdict and mechanism
+      live on different shelves
+  cases:
+  - id: YOMA_8_7_a
+    input:
+      event: rockslide_burial
+      day: shabbat
+      uncertain:
+      - victim_present
+      - victim_alive
+      - victim_jewish
+    expected:
+      verdict: clear_the_debris
+      basis: doubt of life overrides Shabbat — triple uncertainty does not weaken
+        the override
+    dispute: null
+    machine_answer: 'held: G18-05 ''one clears the debris on the Sabbath even in
+      doubt'' — text, not a function'
+    class: B
+    engine_answer:
+    - verdict: clear_the_debris
+      basis: doubt of life overrides Shabbat; stacked uncertainties (presence, life,
+        identity) do not weaken the override
+      provenance:
+        machine_claim: G18-05
+        mishnah: Mishnah Yoma 8:7
+        talmud_bridge: Yoma 85a:11 — life is tested at the nose, from Gen 7:22 ('all
+          in whose nostrils was the breath of the spirit of life')
+        genesis_anchor: Gen.7.22 (gen_18_the_rise, claim G18-05)
+        anchor_pending: 'Leviticus 18:5 ''and live by them'' — the override''s surviving
+          derivation for DOUBT cases (Yoma 85b:6); Leviticus 18 not yet derived.
+          Also owed: Exodus 31:16 (the certain-danger derivation, Yoma 85b:3); Exodus
+          31 not yet derived. See FRONTIER.md.'
+    engine_class: A
+  - id: YOMA_8_7_b
+    input:
+      event: rockslide_burial
+      day: shabbat
+      found: alive_mid_clearing
+    expected:
+      verdict: continue_clearing
+    dispute: null
+    machine_answer: 'held: G18-05 carries the gemara''s mechanism (dig to the nose)
+      — richer than the Mishnah''s bare verdict'
+    class: B
+    engine_answer:
+    - verdict: continue_clearing
+      basis: life confirmed — the override stands until extrication; digging from
+        below one continues to the nose, from above the nose suffices
+      provenance:
+        machine_claim: G18-05
+        mishnah: Mishnah Yoma 8:7
+        talmud_bridge: Yoma 85a:11 — life is tested at the nose, from Gen 7:22 ('all
+          in whose nostrils was the breath of the spirit of life')
+        genesis_anchor: Gen.7.22 (gen_18_the_rise, claim G18-05)
+        anchor_pending: 'Leviticus 18:5 ''and live by them'' — the override''s surviving
+          derivation for DOUBT cases (Yoma 85b:6); Leviticus 18 not yet derived.
+          Also owed: Exodus 31:16 (the certain-danger derivation, Yoma 85b:3); Exodus
+          31 not yet derived. See FRONTIER.md.'
+    engine_class: A
+  - id: YOMA_8_7_c
+    input:
+      event: rockslide_burial
+      day: shabbat
+      found: dead_mid_clearing
+    expected:
+      verdict: stop_clearing
+      basis: Shabbat is not desecrated for the dignity of the dead
+    dispute: null
+    machine_answer: 'held NOWHERE: the dead->stop leg is the Mishnah''s own addition
+      at this anchor'
+    class: C
+    engine_answer:
+    - verdict: stop_clearing
+      basis: Shabbat is not desecrated for the dignity of the dead
+      provenance:
+        machine_claim: G18-10 (seated 2026-08-31, finding F-001)
+        mishnah: Mishnah Yoma 8:7
+        talmud_bridge: Yoma 85a:11 — life is tested at the nose, from Gen 7:22 ('all
+          in whose nostrils was the breath of the spirit of life')
+        genesis_anchor: Gen.7.22 (gen_18_the_rise, claim G18-05)
+        anchor_pending: 'Leviticus 18:5 ''and live by them'' — the override''s surviving
+          derivation for DOUBT cases (Yoma 85b:6); Leviticus 18 not yet derived.
+          Also owed: Exodus 31:16 (the certain-danger derivation, Yoma 85b:3); Exodus
+          31 not yet derived. See FRONTIER.md.'
+    engine_class: A
+- module: procreation_measure
+  tractate: Yevamot
+  oracle: Mishnah Yevamot 6:6
+  genesis_anchor:
+    unit: gen_14_adam_line_ledger
+    ref: Gen.5.2
+    claim: G14-15
+    holds: the measure disputed; Beit Hillel prove A MALE AND A FEMALE from this
+      verse's own words
+  talmud_bridge:
+    source: Mishnah itself cites Gen 5:2 and Gen 1:28
+    walks_to: Gen 5:2; Gen 1:28
+    note: 'RARE: the verse bridge is inside the Mishnah row — the case shelf citing
+      the reading shelf directly'
+  cases:
+  - id: YEV_6_6_a
+    input:
+      person: man
+      children:
+      - male
+      - male
+    expected:
+      dispute:
+      - authority: Beit Shammai
+        verdict: duty_discharged
+      - authority: Beit Hillel
+        verdict: duty_stands
+        basis: male AND female He created them — Gen 5:2
+    machine_answer: 'held: G14-15 carries BOTH houses — Hillel proved from Gen 5:2,
+      Shammai''s two sons recorded'
+    class: B
+    engine_answer:
+    - verdict: duty_discharged
+      basis: two males discharge the duty
+      provenance:
+        machine_claim: G14-15
+        mishnah: Mishnah Yevamot 6:6
+        talmud_bridge: the Mishnah itself cites Gen 5:2 (Hillel) and Gen 1:28 (R.
+          Yochanan ben Beroka) — the bridge is inside the row
+        genesis_anchor: Gen.5.2 (gen_14, claim G14-15); Gen.16.3 (gen_32, claim
+          G32-16); Gen.1.28 ketiv (gen_06, claim G06-03)
+      authority: Beit Shammai
+    - verdict: duty_stands
+      basis: a male AND a female — 'male and female He created them' (Gen 5:2)
+      provenance:
+        machine_claim: G14-15
+        mishnah: Mishnah Yevamot 6:6
+        talmud_bridge: the Mishnah itself cites Gen 5:2 (Hillel) and Gen 1:28 (R.
+          Yochanan ben Beroka) — the bridge is inside the row
+        genesis_anchor: Gen.5.2 (gen_14, claim G14-15); Gen.16.3 (gen_32, claim
+          G32-16); Gen.1.28 ketiv (gen_06, claim G06-03)
+      authority: Beit Hillel
+    engine_class: A
+  - id: YEV_6_6_b
+    input:
+      person: man
+      children:
+      - male
+      - female
+    expected:
+      dispute:
+      - authority: Beit Shammai
+        verdict: duty_stands
+        basis: two MALES are the measure — a male and a female do not reach it
+      - authority: Beit Hillel
+        verdict: duty_discharged
+        basis: a male and a female — 'male and female He created them' (Gen 5:2)
+    dispute: null
+    machine_answer: 'held: same claim, agreed composition'
+    class: B
+    engine_answer:
+    - verdict: duty_stands
+      basis: two males discharge the duty
+      provenance:
+        machine_claim: G14-15
+        mishnah: Mishnah Yevamot 6:6
+        talmud_bridge: the Mishnah itself cites Gen 5:2 (Hillel) and Gen 1:28 (R.
+          Yochanan ben Beroka) — the bridge is inside the row
+        genesis_anchor: Gen.5.2 (gen_14, claim G14-15); Gen.16.3 (gen_32, claim
+          G32-16); Gen.1.28 ketiv (gen_06, claim G06-03)
+      authority: Beit Shammai
+    - verdict: duty_discharged
+      basis: a male AND a female — 'male and female He created them' (Gen 5:2)
+      provenance:
+        machine_claim: G14-15
+        mishnah: Mishnah Yevamot 6:6
+        talmud_bridge: the Mishnah itself cites Gen 5:2 (Hillel) and Gen 1:28 (R.
+          Yochanan ben Beroka) — the bridge is inside the row
+        genesis_anchor: Gen.5.2 (gen_14, claim G14-15); Gen.16.3 (gen_32, claim
+          G32-16); Gen.1.28 ketiv (gen_06, claim G06-03)
+      authority: Beit Hillel
+    engine_class: A
+    spec_correction: '2026-08-31: the spec''s original row said ''agreed: both_houses''
+      — WRONG, caught by the compiled engine at first run; the Mishnah''s plain
+      text gives Shammai two males, so this composition divides the houses. The
+      exam was corrected to the oracle, not the engine to the exam.'
+  - id: YEV_6_6_c
+    input:
+      person: man
+      married_years: 10
+      births: 0
+    expected:
+      verdict: must_act
+      basis: divorce and remarry, or take a second wife — the duty may no longer
+        idle
+    dispute: null
+    machine_answer: 'held — AT A DIFFERENT ANCHOR: G32-16 on Gen 16:3 (Sarai''s
+      ten years), four seats, with riders the exam did not know and the tradition''s
+      own grade: ''no proof, but a hint'''
+    class: B
+    engine_answer:
+    - verdict: must_act
+      basis: 'ten childless years — divorce and remarry, or take a second wife.
+        RIDERS THE MACHINE ALREADY HELD (G32-16, Gen 16:3): years outside the Land
+        do not count; sickness and imprisonment are excluded. GRADE: the tradition
+        marks this derivation ''no proof, but a hint'' (Tosefta Yevamot 8:4)'
+      provenance:
+        machine_claim: G32-16
+        mishnah: Mishnah Yevamot 6:6
+        talmud_bridge: the Mishnah itself cites Gen 5:2 (Hillel) and Gen 1:28 (R.
+          Yochanan ben Beroka) — the bridge is inside the row
+        genesis_anchor: Gen.5.2 (gen_14, claim G14-15); Gen.16.3 (gen_32, claim
+          G32-16); Gen.1.28 ketiv (gen_06, claim G06-03)
+    engine_class: A
+  - id: YEV_6_6_d
+    input:
+      person: man
+      married_years: 10
+      miscarriage_at_year: 7
+    expected:
+      verdict: count_restarts_from_miscarriage
+    dispute: null
+    machine_answer: 'held nowhere: the miscarriage-restart clause was never seated'
+    class: C
+    engine_answer:
+    - verdict: count_restarts_from_miscarriage
+      basis: the ten-year count restarts from the miscarriage
+      provenance:
+        machine_claim: G32-22 (seated 2026-08-31, finding F-002)
+        mishnah: Mishnah Yevamot 6:6
+        talmud_bridge: the Mishnah itself cites Gen 5:2 (Hillel) and Gen 1:28 (R.
+          Yochanan ben Beroka) — the bridge is inside the row
+        genesis_anchor: Gen.5.2 (gen_14, claim G14-15); Gen.16.3 (gen_32, claim
+          G32-16); Gen.1.28 ketiv (gen_06, claim G06-03)
+    engine_class: A
+  - id: YEV_6_6_e
+    input:
+      person: woman
+    expected:
+      dispute:
+      - authority: the anonymous first opinion
+        verdict: not_commanded
+      - authority: R. Yochanan ben Beroka
+        verdict: commanded
+        basis: '''And God blessed THEM... be fruitful and multiply'' — Gen 1:28
+          addresses both'
+    machine_answer: 'held for ONE side only: G06-03''s ink derivation (lean ve-khivshuha
+      ketiv, ''subdue HER'') = not commanded; the dissent is absent from the machine'
+    class: B-partial
+    engine_answer:
+    - verdict: not_commanded
+      basis: the written skeleton of Gen 1:28 reads 'and subdue HER' in the singular
+        — the man, not the woman, is commanded
+      provenance:
+        machine_claim: G06-03 (ink-derived, Yevamot 65b)
+        mishnah: Mishnah Yevamot 6:6
+        talmud_bridge: the Mishnah itself cites Gen 5:2 (Hillel) and Gen 1:28 (R.
+          Yochanan ben Beroka) — the bridge is inside the row
+        genesis_anchor: Gen.5.2 (gen_14, claim G14-15); Gen.16.3 (gen_32, claim
+          G32-16); Gen.1.28 ketiv (gen_06, claim G06-03)
+      authority: the anonymous first opinion
+    - verdict: commanded
+      basis: '''And God blessed THEM... be fruitful and multiply'' — Gen 1:28 addresses
+        both'
+      provenance:
+        machine_claim: G06-12 (claim-visible 2026-08-31, finding F-003; held in
+          the BLESS operator prose since 2026-08-23)
+        mishnah: Mishnah Yevamot 6:6
+        talmud_bridge: the Mishnah itself cites Gen 5:2 (Hillel) and Gen 1:28 (R.
+          Yochanan ben Beroka) — the bridge is inside the row
+        genesis_anchor: Gen.5.2 (gen_14, claim G14-15); Gen.16.3 (gen_32, claim
+          G32-16); Gen.1.28 ketiv (gen_06, claim G06-03)
+      authority: R. Yochanan ben Beroka
+    engine_class: A
+- module: judgment_durations
+  tractate: Eduyot
+  oracle: Mishnah Eduyot 2:10
+  genesis_anchor:
+    unit: gen_17_boarding
+    ref: Gen.7.11
+    claim: G17-11
+    holds: the flood judgment lasted TWELVE MONTHS — already seated as a canonical
+      case-table row, with the day-by-day calendar worked from our own dates
+  talmud_bridge:
+    source: the Mishnah's census itself
+    walks_to: the flood span Gen 7:11-8:14
+    note: our flood is the FIRST MEMBER of a five-judgment census; the machine's
+      calendar operators are the evidence the twelve-month figure rests on
+  cases:
+  - id: EDU_2_10_a
+    input:
+      query: duration_of_judgment
+      subject: generation_of_the_flood
+    expected:
+      verdict: twelve_months
+    dispute: null
+    machine_answer: 'held: G17-11 — twelve months AND the five-judgment census membership
+      AND the date-facts to compute it; the closest case to Class A: only arithmetic
+      application is missing'
+    class: B
+  - id: EDU_2_10_b
+    input:
+      query: duration_of_judgment
+      subject: the_wicked_in_gehinom
+    expected:
+      dispute:
+      - authority: the anonymous first opinion
+        verdict: twelve_months
+        basis: Isaiah 66:23, month to its month
+      - authority: R. Yochanan ben Nuri
+        verdict: passover_to_shavuot
+        basis: Isaiah 66:23, sabbath to its sabbath
+    machine_answer: 'held nowhere: the gehinom member is off-book — not Genesis
+      material'
+    class: C

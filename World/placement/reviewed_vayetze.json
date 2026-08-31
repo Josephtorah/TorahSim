@@ -1,0 +1,87 @@
+[
+ {
+  "ref": "Gen 28:10", "subject": "Jacob", "relation": "from", "place": "Beer-sheba",
+  "source": "machine", "unit": "gen_48_bethel_ladder_vow",
+  "grade": "correct",
+  "verdict": "accept",
+  "evidence": "and Jacob went out FROM Beer-sheba; departure preposition on the name"
+ },
+ {
+  "ref": "Gen 28:10", "subject": "Jacob", "relation": "to", "place": "Haran",
+  "source": "machine", "unit": "gen_48_bethel_ladder_vow",
+  "grade": "goal-not-position",
+  "verdict": "reject",
+  "evidence": "REJECTED AS A PLACEMENT. 'and went toward Haran' states a DESTINATION, not where Jacob is. Taking it as a position would put him at Haran at 28:10 - before Bethel, which he reaches in the very next verse. Arrival is recorded by reading at 29:4."
+ },
+ {
+  "ref": "Gen 31:18", "subject": null, "relation": "at", "place": "Padan-aram",
+  "source": "machine", "unit": "gen_53_flight_over_the_river",
+  "grade": "wrong",
+  "verdict": "reject",
+  "evidence": "REJECTED. 'in Padan-aram' modifies the relative clause 'which he had acquired' - it locates the ACQUIRING of the livestock, not any person at this moment. A locative inside a subordinate clause is not a placement."
+ },
+ {
+  "ref": "Gen 31:18", "subject": "Isaac", "relation": "to", "place": "Canaan",
+  "source": "machine", "unit": "gen_53_flight_over_the_river",
+  "grade": "place-right-subject-wrong",
+  "verdict": "reject",
+  "evidence": "REJECTED. The place and direction are right - 'to the land of Canaan' - but the subject is wrong: the nearest preceding person name is Isaac, who is the one Jacob goes TO, not the one who moves. This is the nearest-name heuristic's characteristic failure."
+ },
+ {
+  "ref": "Gen 31:23", "subject": null, "relation": "at", "place": "mount Gilead",
+  "source": "machine", "unit": "gen_53_flight_over_the_river",
+  "grade": "place-right-subject-missing",
+  "verdict": "reject",
+  "evidence": "REJECTED as emitted. 'and overtook him in mount Gilead' - the place is right, but no subject was resolved: the pursuer, Laban, is named back in 31:23's opening clause only as an unexpressed verb subject. Supplied by reading below."
+ },
+ {
+  "ref": "Gen 31:25", "subject": "Laban", "relation": "at", "place": "mount Gilead",
+  "source": "machine", "unit": "gen_53_flight_over_the_river",
+  "grade": "correct",
+  "verdict": "accept",
+  "evidence": "and Laban pitched with his brethren IN mount Gilead; subject named in the clause"
+ },
+
+ {
+  "ref": "Gen 28:11", "subject": "Jacob", "relation": "at", "place": "Bethel",
+  "source": "reading", "unit": "gen_48_bethel_ladder_vow",
+  "grade": "machine-missed",
+  "verdict": "accept",
+  "evidence": "READING. 'and he came upon THE PLACE and stayed the night there' - the place is unnamed at 28:11 and named only at 28:19, which the fold records as the naming ha_maqom_luz -> beit_el. The machine cannot place him here because the verse that positions him carries no name and the verse that names it carries no motion."
+ },
+ {
+  "ref": "Gen 29:4", "subject": "Jacob", "relation": "at", "place": "Haran",
+  "source": "reading", "unit": "gen_49_well_stone_rachel_arrival",
+  "grade": "machine-missed",
+  "verdict": "accept",
+  "evidence": "READING. Jacob asks the shepherds where they are from and they answer 'we are FROM Haran' - the arrival is established by REPORTED SPEECH about someone else's origin, with no motion verb placing Jacob at all."
+ },
+ {
+  "ref": "Gen 31:21", "subject": "Jacob", "relation": "to", "place": "mount Gilead",
+  "source": "reading", "unit": "gen_53_flight_over_the_river",
+  "grade": "machine-missed",
+  "verdict": "reject",
+  "evidence": "READING, recorded but rejected as a POSITION for the same reason as 28:10: 'he set his face toward mount Gilead' is a goal. Note the machine missed it entirely - the direction is carried by the IDIOM 'set his face toward', not by any preposition or ending."
+ },
+ {
+  "ref": "Gen 31:25", "subject": "Jacob", "relation": "at", "place": "mount Gilead",
+  "source": "reading", "unit": "gen_53_flight_over_the_river",
+  "grade": "machine-partial",
+  "verdict": "accept",
+  "evidence": "READING. The same verse the machine read for Laban also says 'and Jacob had pitched his tent in the mount'. The extractor emits ONE proposal per place token and so recorded only the second of the two men in one verse."
+ },
+ {
+  "ref": "Gen 32:1", "subject": "Laban", "relation": "from", "place": "mount Gilead",
+  "source": "reading", "unit": "gen_54_pursuit_heap_two_tongues",
+  "grade": "machine-missed",
+  "verdict": "accept",
+  "evidence": "READING. 'and Laban returned TO HIS PLACE' - a departure whose destination is a pronoun. Closes Laban's placement; the machine cannot see it because no name is present."
+ },
+ {
+  "ref": "Gen 32:3", "subject": "Jacob", "relation": "at", "place": "Mahanaim",
+  "source": "reading", "unit": "gen_55_two_camps_wrestled_name",
+  "grade": "machine-missed",
+  "verdict": "accept",
+  "evidence": "READING. Jacob names the place Mahanaim; the fold records the naming maqom_machanayim -> machanayim. Same shape as Bethel: the naming formula places him, and it carries no motion verb."
+ }
+]
