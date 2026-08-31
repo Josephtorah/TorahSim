@@ -7025,3 +7025,33 @@ YAMLs + regenerated renderings, 1 manifest, 3 ledger appends), PLUS the
 still-uncommitted 08-30 batch (CORE_SHELF Onkelos genre rule, gen_72
 ledger append, logic/onkelos_genre_2026-08-30/). All awaiting the owner's
 word, as ever.
+
+## ⚠⚠ COMPACTION POINT #30 (2026-08-31, owner: "I will need to compact first")
+## READ THIS BLOCK FIRST ON RESUME. Then reread THE_STEPS Step 4 (standing rule).
+
+**✅ COMMITTED AND PUSHED: cfd2a63** (b3a11fc..cfd2a63 on origin). The batch
+carries the 13-block audit fixes AND the Onkelos genre rule — the block above
+this one describes both in full. Tree clean apart from the never-commit set.
+
+**⭐ THE NEXT TASK, ORDERED AND NOT STARTED: the gen_08–59 recheck.** Owner:
+"commit and push, then start the gen_08-59 recheck" — then interrupted the
+start for compaction. 52 blocks, LIGHTER than the 13 full audits (the reading
+under them is Fable's, already trusted; only Opus's DERIVATION needs checking).
+Zero full checks remain — the 13 full ones are done and clean.
+
+**THE PLAN AS DESIGNED (first move on resume):** a MECHANICAL SWEEP across all
+52 blocks at once for Opus's signature defect class before any per-block work —
+(a) manifest-vs-YAML claim-ID diff (orphans like G66-30 etc., cross-wires like
+G62-14↔15), (b) phantom citation keys (key lists vs chapter verse counts),
+(c) changelog claim-counts vs actually-wired counts. Then per-block
+claim-vs-source spot checks on the manual claims and independent re-derivation
+of machine-original numeric claims. NOTE THE NAMING TRAP: logic/units/ carries
+draft files (gen_01_day2_raqia.yaml etc.) beside frozen ones — filter
+meta.status=="frozen" through the loader, the 212-drafts scar. Manifests:
+logic/oral_audit/manifests/<uid>_claims.json.
+
+**Standing state:** Genesis 73/73 derived+stamped+published; units gen_62/66/
+68/72/73 at rev 4 (audit fixes); world hash 8b8fff1fa28953af; 97 frozen units;
+The World folder at <world-link> (separate, read its RESUME.md);
+placement pilot done, ~12-sitting estimate; relay to torahsim SUSPENDED; do
+NOT mirror stamps. Reply-length rule: keep chat replies SHORT.
