@@ -101,6 +101,10 @@ m.declare("anshei_sedom", "LET",
 # a demand — CMD-US: nedah(otam)
 m.declare("anshei_sedom", "CMD-US",
           "nedah(otam)")
+# witness-tier presupposed read: enacted_statute_not_impulse on
+# city_practice — read, not installed
+m.witness_read("city_practice", "enacted_statute_not_impulse",
+                cites=["Bereshit Rabbah 50:7", "Bereshit Rabbah 51:5"])
 
 # -------------------------- Gen.19.6 · THE_DOOR_SHUT_BEHIND ----------------
 # וַיֵּצֵא אֲלֵהֶם לוֹט הַפֶּתְחָה וְהַדֶּלֶת סָגַר אַחֲרָיו
@@ -207,6 +211,10 @@ m.step("Gen.19.13")
 # tzaaqatam-and-yeshalchenu-the-LORD
 m.fact("mashchitim_anachnu_et_ha_maqom",
        "gadlah_tzaaqatam_va_yeshalchenu_YHWH")
+# witness-tier presupposed read: penalty_discharged_at_the_ladder on
+# we_are_destroying — read, not installed
+m.witness_read("we_are_destroying", "penalty_discharged_at_the_ladder",
+                cites=["Bereshit Rabbah 50:9", "Bereshit Rabbah 68:12"])
 
 # -------------------------- Gen.19.14 · THE_MOCKED_DEMAND ------------------
 # וַיֵּצֵא לוֹט וַיְדַבֵּר אֶל־חֲתָנָיו לֹקְחֵי בְנֹתָיו וַיֹּאמֶר קוּמוּ
@@ -238,9 +246,13 @@ m.step("Gen.19.15")
 # speaks a demand — LET: arise-take(ishtekha-and-shtei-venotekha)
 m.declare("ha_malakhim", "LET",
           "qum_qach(ishtekha_u_shtei_venotekha)")
+# witness-tier presupposed read: standing_measure_of_time_and_distance on
+# dawn_timestamps — read, not installed
+m.witness_read("dawn_timestamps", "standing_measure_of_time_and_distance",
+                cites=["Bereshit Rabbah 50:10", "Bereshit Rabbah 50:3"])
 
 # -------------------------- Gen.19.16 · THE_LINGERING_AND_THE_SEIZURE ------
-# וַיִּתְמַהְמָהּ וַיַּחֲזִיקוּ הָאֲנָשִׁים בְּיָדוֹ וּבְיַד־אִשְׁתּוֹ
+# וַיִּתְמַהְמָהּ וַיַּחֲזִקוּ הָאֲנָשִׁים בְּיָדוֹ וּבְיַד־אִשְׁתּוֹ
 # וּבְיַד שְׁתֵּי בְנֹתָיו בְּחֶמְלַת יְהוָה עָלָיו וַיֹּצִאֻהוּ
 # וַיַּנִּחֻהוּ מִחוּץ לָעִיר
 # "But he lingered; and the men laid hold upon his hand, and upon the hand
@@ -248,8 +260,8 @@ m.declare("ha_malakhim", "LET",
 # merciful unto him. And they brought him forth, and set him without the
 # city."
 m.step("Gen.19.16")
-# ‹וַיִּתְמַהְמָהּ וַיַּחֲזִיקוּ הָאֲנָשִׁים בְּיָדוֹ … וַיֹּצִאֻהוּ› (“and-
-# question and-they-seized the-man in-hand-him/its … and-bring-forth-
+# ‹וַיִּתְמַהְמָהּ וַיַּחֲזִקוּ הָאֲנָשִׁים בְּיָדוֹ … וַיֹּצִאֻהוּ› (“and-
+# question and-fasten-upon the-man in-hand-him/its … and-bring-forth-
 # him/its”) — event: seize-carry — agent shnei-the-messenger; theme Lot-and-
 # veito
 m.event("seize_carry", agent="shnei_ha_malakhim", themes=["lot_u_veito"])
@@ -283,6 +295,10 @@ m.step("Gen.19.18")
 # ‹אַל־נָא אֲדֹנָי› (“do-not please Lord-me/my”) — fact holds: over-please-
 # adonai
 m.fact("al_na_adonai")
+# witness-grounded state (its own tier): dispute_inside_one_spine_member on
+# adonai_at_19_18
+m.witness_state("adonai_at_19_18", "dispute_inside_one_spine_member",
+                cites=["Onkelos Genesis 19:18", "Onkelos Genesis 19:27", "Bereshit Rabbah 68:9"])
 
 # -------------------------- Gen.19.19 · THE_INABILITY_CLAIM ----------------
 # הִנֵּה־נָא מָצָא עַבְדְּךָ חֵן בְּעֵינֶיךָ וַתַּגְדֵּל חַסְדְּךָ אֲשֶׁר
@@ -299,7 +315,7 @@ m.fact("matza_chen_va_tagdel_chasdekha",
        "lo_ukhal_le_himalet")
 
 # -------------------------- Gen.19.20 · THE_LITTLE_CITY_PLEA ---------------
-# הִנֵּה־נָא הָעִיר הַזֹּאת קְרֹבָה לָנוּס שָׁמָּה וְהִוא מִצְעָר אִמָּלְטָה
+# הִנֵּה־נָא הָעִיר הַזֹּאת קְרֹבָה לָנוּס שָׁמָּה וְהִיא מִצְעָר אִמָּלְטָה
 # נָּא שָׁמָּה הֲלֹא מִצְעָר הִוא וּתְחִי נַפְשִׁי
 # "Behold now, this city is near to flee unto, and it is a little one; oh,
 # let me escape thither—is it not a little one?—and my soul shall live.'"
@@ -483,6 +499,14 @@ m.result("nashqenu(gam_ha_lailah)", tmark="t1")
 # yayin; and-tishkav-and-taharena
 m.fact("va_tashqena_et_avihen_yayin",
        "va_tishkav_va_taharena")
+# witness-grounded state (its own tier): rule_parsed_and_motive_disputed on
+# cave_episode
+m.witness_state("cave_episode", "rule_parsed_and_motive_disputed",
+                cites=["Bereshit Rabbah 51:9", "Bereshit Rabbah 51:10"])
+# witness-tier presupposed read: second_of_the_torahs_ten on dotted_ubkumah
+# — read, not installed
+m.witness_read("dotted_ubkumah", "second_of_the_torahs_ten",
+                cites=["Bereshit Rabbah 51:8"])
 
 # -------------------------- Gen.19.37 · THE_TWO_NAMINGS --------------------
 # וַתֵּלֶד הַבְּכִירָה בֵּן וַתִּקְרָא שְׁמוֹ מוֹאָב הוּא אֲבִי־מוֹאָב
@@ -506,8 +530,8 @@ m.name("ben_ammi", "Ben_Ammi")
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'shnei_ha_malakhim', 'moav', 'ben_ammi', 'shtei_ha_banot', 'anshei_sedom'}
-    assert m.presupposed_set() == {'sedom', 'amora', 'tzoar'}
+    assert m.created_set() == {'anshei_sedom', 'ben_ammi', 'moav', 'shnei_ha_malakhim', 'shtei_ha_banot'}
+    assert m.presupposed_set() == {'amora', 'sedom', 'tzoar'}
     assert m.REGISTRY["names"] == {'moav': 'Moav', 'ben_ammi': 'Ben_Ammi'}
     assert m.REGISTRY["writes"] == 2
     assert m.tests_list() == []
@@ -519,4 +543,22 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 37
+    assert sorted(m.WORLD["witnessed"]) == ['adonai_at_19_18', 'cave_episode']
+    assert m.WORLD["witnessed"]['adonai_at_19_18']["cites"] == ['Onkelos Genesis 19:18', 'Onkelos Genesis 19:27', 'Bereshit Rabbah 68:9']
+    assert all('dispute_inside_one_spine_member' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['cave_episode']["cites"] == ['Bereshit Rabbah 51:9', 'Bereshit Rabbah 51:10']
+    assert all('rule_parsed_and_motive_disputed' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('city_practice', 'enacted_statute_not_impulse'), ('we_are_destroying', 'penalty_discharged_at_the_ladder'), ('dawn_timestamps', 'standing_measure_of_time_and_distance'), ('dotted_ubkumah', 'second_of_the_torahs_ten')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 50:7', 'Bereshit Rabbah 51:5']
+    assert all('enacted_statute_not_impulse' not in f for f in m.WORLD["facts"])
+    assert 'city_practice' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 50:9', 'Bereshit Rabbah 68:12']
+    assert all('penalty_discharged_at_the_ladder' not in f for f in m.WORLD["facts"])
+    assert 'we_are_destroying' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 50:10', 'Bereshit Rabbah 50:3']
+    assert all('standing_measure_of_time_and_distance' not in f for f in m.WORLD["facts"])
+    assert 'dawn_timestamps' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 51:8']
+    assert all('second_of_the_torahs_ten' not in f for f in m.WORLD["facts"])
+    assert 'dotted_ubkumah' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

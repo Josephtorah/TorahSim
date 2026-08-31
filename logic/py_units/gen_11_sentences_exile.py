@@ -14,7 +14,7 @@ from machine import Machine
 m = Machine("gen_11_sentences_exile")
 
 # -------------------------- Gen.3.14 · SENTENCE_SERPENT_FIRST_CURSE --------
-# וַיֹּאמֶר יְהוָה אֱלֹהִים אֶל־הַנָּחָשׁ כִּי עָשִׂיתָ זֹּאת אָרוּר אַתָּה
+# וַיֹּאמֶר יְהֹוָה אֱלֹהִים אֶל־הַנָּחָשׁ כִּי עָשִׂיתָ זֹּאת אָרוּר אַתָּה
 # מִכָּל־הַבְּהֵמָה וּמִכֹּל חַיַּת הַשָּׂדֶה עַל־גְּחֹנְךָ תֵלֵךְ וְעָפָר
 # תֹּאכַל כָּל־יְמֵי חַיֶּיךָ
 # "And the LORD God said unto the serpent: 'Because thou hast done this,
@@ -36,6 +36,14 @@ m.assign("nachash", "arur_mi_kol_ha_behemah")
 # dust-you-shall-eat-all-days-of-your-life(serpent)
 m.fact("al_gechonkha_telekh(nachash)",
        "afar_tokhal_kol_yemei_chayekha(nachash)")
+# witness-tier presupposed read: full_sanhedrin_of_seventy_one on
+# divine_name_census_to_sentencing — read, not installed
+m.witness_read("divine_name_census_to_sentencing", "full_sanhedrin_of_seventy_one",
+                cites=["Bereshit Rabbah 20:4"])
+# witness-tier presupposed read: lesser_first_ordering_rule on
+# sentencing_order — read, not installed
+m.witness_read("sentencing_order", "lesser_first_ordering_rule",
+                cites=["Sifra, Shemini, Mekhilta DeMiluim II 39", "Bereshit Rabbah 20:3"])
 
 # -------------------------- Gen.3.15 · ENMITY_PROGRAM ----------------------
 # וְאֵיבָה אָשִׁית בֵּינְךָ וּבֵין הָאִשָּׁה וּבֵין זַרְעֲךָ וּבֵין זַרְעָהּ
@@ -49,6 +57,10 @@ m.step("Gen.3.15")
 # pattern recorded: enmity(between-seed-the-woman, between-seed-the-serpent)
 # ∧ he-shall-bruise-you-head ∧ you-shall-bruise-him-heel
 m.pattern("eivah(bein_zera_ha_ishah, bein_zera_ha_nachash) ∧ hu_yeshufkha_rosh ∧ atah_teshufenu_akev")
+# witness-tier presupposed read: havdalah_fire_institution on strike_clause
+# — read, not installed
+m.witness_read("strike_clause", "havdalah_fire_institution",
+                cites=["Jerusalem Talmud Berakhot 8:5:8", "Jerusalem Talmud Avodah Zarah 1:2:3"])
 
 # -------------------------- Gen.3.16 · SENTENCE_WOMAN ----------------------
 # אֶל־הָאִשָּׁה אָמַר הַרְבָּה אַרְבֶּה עִצְּבוֹנֵךְ וְהֵרֹנֵךְ בְּעֶצֶב
@@ -67,6 +79,14 @@ m.presupposed("ishah")
 m.fact("harbah_arbeh_itzvonekh_ve_heronekh(ishah)",
        "be_etzev_teldi_vanim(ishah)",
        "el_ishekh_teshukatekh_ve_hu_yimshol_bakh(ishah)")
+# witness-tier presupposed read: ten_curses_census_and_righteous_exemption
+# on birth_pain_term — read, not installed
+m.witness_read("birth_pain_term", "ten_curses_census_and_righteous_exemption",
+                cites=["Eruvin 100b:20", "Eruvin 100b:21", "Sotah 12a:16"])
+# witness-tier presupposed read: husband_conjugal_obligation on
+# teshukah_clause — read, not installed
+m.witness_read("teshukah_clause", "husband_conjugal_obligation",
+                cites=["Yevamot 62b:17", "Bereshit Rabbah 20:7"])
 
 # -------------------------- Gen.3.17 · SENTENCE_MAN_GROUND_CURSED ----------
 # וּלְאָדָם אָמַר כִּי־שָׁמַעְתָּ לְקוֹל אִשְׁתֶּךָ וַתֹּאכַל מִן־הָעֵץ
@@ -91,6 +111,10 @@ m.assign("adamah", "arurah_baavurekha")
 # all days-of your-life”) — fact holds: in-toil-you-shall-eat-all-days-of-
 # your-life(Adam)
 m.fact("be_itzavon_tokhalenah_kol_yemei_chayekha(adam)")
+# witness-tier presupposed read: doubled_form_diff_and_noah_naming_link on
+# sustenance_term — read, not installed
+m.witness_read("sustenance_term", "doubled_form_diff_and_noah_naming_link",
+                cites=["Bereshit Rabbah 97:3", "Pesachim 118a:6"])
 
 # -------------------------- Gen.3.18 · THORN_DIET --------------------------
 # וְקוֹץ וְדַרְדַּר תַּצְמִיחַ לָךְ וְאָכַלְתָּ אֶת־עֵשֶׂב הַשָּׂדֶה
@@ -118,14 +142,19 @@ m.step("Gen.3.19")
 m.fact("be_zeat_apekha_tokhal_lechem(adam)",
        "ad_shuvkha_el_ha_adamah(adam)",
        "afar_atah_ve_el_afar_tashuv(adam)")
-# ‹מוֹת תָּמוּת … עַד שׁוּבְךָ› (“die die … until your-return”) — spec-delta
-# — spec said because in-day your-eating from-it dying you-shall-die (gen-08
-# 2:17 — the armed HANDLER: dying-you-shall-die, IN THE DAY), delivery says
-# until your-return to-the-ground … and-to-dust you-shall-return (the
-# sentence: toil-terms + mortality as BOUNDARY — the return to dust as
-# horizon; same-day death not executed)
+# ‹עַד שׁוּבְךָ אֶל־הָאֲדָמָה … כִּי־עָפָר אַתָּה וְאֶל־עָפָר תָּשׁוּב›
+# (“until your-return to the-ground … for dust you and-to dust you-shall-
+# return”) — spec-delta — spec said because in-day your-eating from-it dying
+# you-shall-die (gen-08 2:17 — the armed HANDLER: dying-you-shall-die, IN
+# THE DAY), delivery says until your-return to-the-ground … and-to-dust you-
+# shall-return (the sentence: toil-terms + mortality as BOUNDARY — the
+# return to dust as horizon; same-day death not executed)
 m.spec_delta("ki be-yom akholkha mimenu mot tamut (gen_08 2:17 — the armed HANDLER: dying-you-shall-die, IN THE DAY)",
              "ad shuvkha el-ha-adamah … ve-el-afar tashuv (the sentence: toil-terms + mortality as BOUNDARY — the return to dust as horizon; same-day death not executed)")
+# witness-tier presupposed read: scope_limited_default_writ on dust_clause —
+# read, not installed
+m.witness_read("dust_clause", "scope_limited_default_writ",
+                cites=["Shabbat 152b:12", "Avodah Zarah 8a:7"])
 
 # -------------------------- Gen.3.20 · NAME_CHAVAH -------------------------
 # וַיִּקְרָא הָאָדָם שֵׁם אִשְׁתּוֹ חַוָּה כִּי הִוא הָיְתָה אֵם כָּל־חָי
@@ -151,6 +180,10 @@ m.event("make", agent="YHWH_Elohim", themes=["kotnot_or"])
 m.event("clothe", agent="YHWH_Elohim", themes=["adam"])
 # ‹כָּתְנוֹת עוֹר› (“tunics-of skin”) — the world gains: garments-of-skin
 m.install("kotnot_or")
+# witness-tier presupposed read: kindness_obligation_and_torah_envelope on
+# garments_install — read, not installed
+m.witness_read("garments_install", "kindness_obligation_and_torah_envelope",
+                cites=["Sotah 14a:4", "Sotah 14a:6", "Sotah 14a:5", "Niddah 25a:9"])
 
 # -------------------------- Gen.3.22 · COUNCIL_CONCERN_SECOND_TREE ---------
 # וַיֹּאמֶר יְהוָה אֱלֹהִים הֵן הָאָדָם הָיָה כְּאַחַד מִמֶּנּוּ לָדַעַת
@@ -172,6 +205,10 @@ m.fact("ke_achad_mimenu_la_daat_tov_va_ra(adam)",
        "pen_yishlach_yado_ve_lakach_me_etz_ha_chayim_va_chai_le_olam")
 # reads without prior install (flag, not fix): tree-of-life, garden-of
 m.presupposed("etz_ha_chayim", "gan")
+# witness-grounded state (its own tier):
+# recorded_dispute_with_wording_variance on ke_achad_mimenu
+m.witness_state("ke_achad_mimenu", "recorded_dispute_with_wording_variance",
+                cites=["Bereshit Rabbah 21:5", "Bereshit Rabbah 21:6", "Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 7:10"])
 
 # -------------------------- Gen.3.23 · EXPULSION_WORK_HALF -----------------
 # וַיְשַׁלְּחֵהוּ יְהוָה אֱלֹהִים מִגַּן־עֵדֶן לַעֲבֹד אֶת־הָאֲדָמָה אֲשֶׁר
@@ -184,6 +221,10 @@ m.step("Gen.3.23")
 # the-ground which he-was-taken from-there”) — event: send-out — agent the-
 # LORD-God; theme Adam
 m.event("send_out", agent="YHWH_Elohim", themes=["adam"])
+# witness-grounded state (its own tier): divorce_analogy_contested_finality
+# on vayegaresh
+m.witness_state("vayegaresh", "divorce_analogy_contested_finality",
+                cites=["Bereshit Rabbah 21:8", "Bereshit Rabbah 21:7"])
 
 # -------------------------- Gen.3.24 · GUARDS_INSTALLED_WAY_KEPT -----------
 # וַיְגָרֶשׁ אֶת־הָאָדָם וַיַּשְׁכֵּן מִקֶּדֶם לְגַן־עֵדֶן אֶת־הַכְּרֻבִים
@@ -205,12 +246,16 @@ m.install("keruvim", "lahat_ha_cherev")
 # ‹לִשְׁמֹר אֶת־דֶּרֶךְ עֵץ הַחַיִּים› (“to-guard obj-marker way-of tree-of
 # the-life”) — role assigned: cherubim -> keeper-way-of-tree-the-life
 m.assign("keruvim", "shomer_derekh_etz_ha_chayim")
+# witness-tier presupposed read: derekh_precedes_torah_by_operand_order on
+# guard_assignment — read, not installed
+m.witness_read("guard_assignment", "derekh_precedes_torah_by_operand_order",
+                cites=["Vayikra Rabbah 9:3", "Sifrei Devarim 40:14", "Eikhah Rabbah 5:21"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'keruvim', 'lahat_ha_cherev', 'kotnot_or'}
-    assert m.presupposed_set() == {'adam', 'adamah', 'nachash', 'gan', 'ishah', 'etz_ha_chayim'}
+    assert m.created_set() == {'keruvim', 'kotnot_or', 'lahat_ha_cherev'}
+    assert m.presupposed_set() == {'adam', 'adamah', 'etz_ha_chayim', 'gan', 'ishah', 'nachash'}
     assert m.REGISTRY["names"] == {'nachash': 'arur_mi_kol_ha_behemah', 'adamah': 'arurah_baavurekha', 'ishah': 'Chavah', 'keruvim': 'shomer_derekh_etz_ha_chayim'}
     assert m.REGISTRY["writes"] == 4
     assert m.tests_list() == []
@@ -222,4 +267,37 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 13
+    assert sorted(m.WORLD["witnessed"]) == ['ke_achad_mimenu', 'vayegaresh']
+    assert m.WORLD["witnessed"]['ke_achad_mimenu']["cites"] == ['Bereshit Rabbah 21:5', 'Bereshit Rabbah 21:6', 'Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 7:10']
+    assert all('recorded_dispute_with_wording_variance' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['vayegaresh']["cites"] == ['Bereshit Rabbah 21:8', 'Bereshit Rabbah 21:7']
+    assert all('divorce_analogy_contested_finality' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('divine_name_census_to_sentencing', 'full_sanhedrin_of_seventy_one'), ('sentencing_order', 'lesser_first_ordering_rule'), ('strike_clause', 'havdalah_fire_institution'), ('birth_pain_term', 'ten_curses_census_and_righteous_exemption'), ('teshukah_clause', 'husband_conjugal_obligation'), ('sustenance_term', 'doubled_form_diff_and_noah_naming_link'), ('dust_clause', 'scope_limited_default_writ'), ('garments_install', 'kindness_obligation_and_torah_envelope'), ('guard_assignment', 'derekh_precedes_torah_by_operand_order')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 20:4']
+    assert all('full_sanhedrin_of_seventy_one' not in f for f in m.WORLD["facts"])
+    assert 'divine_name_census_to_sentencing' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Shemini, Mekhilta DeMiluim II 39', 'Bereshit Rabbah 20:3']
+    assert all('lesser_first_ordering_rule' not in f for f in m.WORLD["facts"])
+    assert 'sentencing_order' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Jerusalem Talmud Berakhot 8:5:8', 'Jerusalem Talmud Avodah Zarah 1:2:3']
+    assert all('havdalah_fire_institution' not in f for f in m.WORLD["facts"])
+    assert 'strike_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Eruvin 100b:20', 'Eruvin 100b:21', 'Sotah 12a:16']
+    assert all('ten_curses_census_and_righteous_exemption' not in f for f in m.WORLD["facts"])
+    assert 'birth_pain_term' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Yevamot 62b:17', 'Bereshit Rabbah 20:7']
+    assert all('husband_conjugal_obligation' not in f for f in m.WORLD["facts"])
+    assert 'teshukah_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 97:3', 'Pesachim 118a:6']
+    assert all('doubled_form_diff_and_noah_naming_link' not in f for f in m.WORLD["facts"])
+    assert 'sustenance_term' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Shabbat 152b:12', 'Avodah Zarah 8a:7']
+    assert all('scope_limited_default_writ' not in f for f in m.WORLD["facts"])
+    assert 'dust_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sotah 14a:4', 'Sotah 14a:6', 'Sotah 14a:5', 'Niddah 25a:9']
+    assert all('kindness_obligation_and_torah_envelope' not in f for f in m.WORLD["facts"])
+    assert 'garments_install' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Vayikra Rabbah 9:3', 'Sifrei Devarim 40:14', 'Eikhah Rabbah 5:21']
+    assert all('derekh_precedes_torah_by_operand_order' not in f for f in m.WORLD["facts"])
+    assert 'guard_assignment' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -1,7 +1,8 @@
 meta:
   id: gen_44_isaac_gerar_sister_expel
-  rev: 3
+  rev: 4
   changelog:
+    - "rev 4 (2026-08-31): AUDIT FIX (gen_08-59 recheck, owner: 'Fix'). The [claim G44-29] tag sat on the 26:10 king-reading operator, whose content matches no claim (the reading itself is real — confirmed in the Aramaic: the distinguished one among the people); G44-29's actual two policies were carried verbatim but untagged in the 26:3 operator (MY WORD WILL BE YOUR SUPPORT) and the 26:12 operator (a hundred times WHAT THEY ESTIMATED). Fixed by co-tagging both carrying operators [claims G44-24 and G44-29; claims G44-26 and G44-29] and removing the misplaced tag from the 26:10 operator. Tag wiring only; no operator added or removed, no cite changed, no verse text, tree, or morphology touched."
     - "rev 3 (2026-08-30): logic rebuilt from the 2026-08-27 parashah-grain reading (28 of 28 declared, COMPLETE) under the spine default. Ten claims seated, two machine-checked under guard 3 and BOTH HOLD: the opening word of 26:5 totals exactly 172 by letter value, which against Abraham's verified 175 yields the age of three; and 'his household' at 26:14 stands defective as the service-maxim reading requires. Sanctuary disqualification law applied to geography; a modesty-law cluster on one verb with its exception preserved; the blessing-versus-tithing collision adjudicated on 26:12; and both members reading 26:5 maximally, the translation supplying the register."
     - "2026-08-27 rev 2: RE-era reading pass (parashat Toledot sweep, 5 blocks one sitting — THIRD RUN UNDER THE SPINE DEFAULT, owner 2026-08-27: Bereshit Rabbah + Onkelos declared, Mishnah/Talmud held for the Step 9 exam): ledger logic/oral_triage/gen_44_isaac_gerar_sister_expel_2026-08-27.md; v1 queue discharged; ORAL_reading_pass block appended; no machine ops changed."
     - "2026-08-27 ink fixes (pre-existing at HEAD, caught by verify_text): 26:2 tree span and 26:9 tree span aligned to the snapshot halves; the 26:6 contrast fragment moved from the unrecognized not-equals notation to the verifier's cross-verse arrow convention."
@@ -668,12 +669,13 @@ boot_steps:
   - op: WITNESS_READ
     expr_en: "WITNESS-READ(these_lands_short_form, partial_grant_with_a_future_instalment)"
     en: >
-      A SHORT SPELLING READ AS A DELIVERY SCHEDULE [claim G44-24]. The
-      demonstrative is written short, and the chain reads it as the MIGHTY
-      lands or as a partial grant - some now, the rest to come. Onkelos
-      meanwhile routes the promise through the Word: 'I will be with you'
-      becomes MY WORD WILL BE YOUR SUPPORT, the standing buffer at
-      covenant assurances. [folded shape: ink count]
+      A SHORT SPELLING READ AS A DELIVERY SCHEDULE [claims G44-24 and
+      G44-29]. The demonstrative is written short, and the chain reads it
+      as the MIGHTY lands or as a partial grant - some now, the rest to
+      come. Onkelos meanwhile routes the promise through the Word: 'I will
+      be with you' becomes MY WORD WILL BE YOUR SUPPORT, the standing
+      buffer at covenant assurances - the first of G44-29's two policies.
+      [folded shape: ink count]
     cites: ["Bereshit Rabbah 64:3", "Onkelos Genesis 26:3"]
     confidence: witnessed
   comment: >
@@ -1090,11 +1092,12 @@ boot_steps:
   - op: WITNESS_READ
     expr_en: "WITNESS-READ(one_of_the_people, rendered_as_the_distinguished_one)"
     en: >
-      THE TRANSLATION NAMES WHO WAS MEANT [claim G44-29]. 'One of the
-      people might easily have lain with your wife' becomes THE UNIQUE ONE
-      AMONG THE PEOPLE - the buffer hearing the king himself in the
-      indefinite phrase, and converting a general risk into a particular
-      confession. [folded shape: dual-track translation]
+      THE TRANSLATION NAMES WHO WAS MEANT. 'One of the people might
+      easily have lain with your wife' becomes THE UNIQUE ONE AMONG THE
+      PEOPLE - the buffer hearing the king himself in the indefinite
+      phrase, and converting a general risk into a particular confession.
+      Confirmed in the Aramaic at the 2026-08-31 recheck. [folded shape:
+      dual-track translation]
     cites: ["Onkelos Genesis 26:10"]
     confidence: witnessed
   comment: >
@@ -1200,12 +1203,13 @@ boot_steps:
   - op: WITNESS_READ
     expr_en: "WITNESS-READ(the_hundredfold, two_standing_rules_colliding_and_adjudicated)"
     en: >
-      TWO RECEIVED RULES MEET ON ONE ACT AND THE VERSE DECIDES [claim
-      G44-26]. Blessing does not rest on what is weighed, measured or
-      counted - so why measure the harvest? FOR THE TITHES: the measuring
-      is licensed only by a duty that requires it. Onkelos independently
-      renders the hundredfold as a hundred times WHAT THEY ESTIMATED, the
-      same estimate reading the chain gives. [folded shape: priced law]
+      TWO RECEIVED RULES MEET ON ONE ACT AND THE VERSE DECIDES [claims
+      G44-26 and G44-29]. Blessing does not rest on what is weighed,
+      measured or counted - so why measure the harvest? FOR THE TITHES:
+      the measuring is licensed only by a duty that requires it. Onkelos
+      independently renders the hundredfold as a hundred times WHAT THEY
+      ESTIMATED, the same estimate reading the chain gives - the second
+      of G44-29's two policies. [folded shape: priced law]
     cites: ["Bereshit Rabbah 64:6", "Onkelos Genesis 26:12"]
     confidence: witnessed
   - op: WITNESS_READ

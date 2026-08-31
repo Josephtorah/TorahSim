@@ -7055,3 +7055,163 @@ logic/oral_audit/manifests/<uid>_claims.json.
 The World folder at <world-link> (separate, read its RESUME.md);
 placement pilot done, ~12-sitting estimate; relay to torahsim SUSPENDED; do
 NOT mirror stamps. Reply-length rule: keep chat replies SHORT.
+
+## THE gen_08-59 RECHECK — COMPLETE (2026-08-31, owner: "start the recheck I
+## want a complete check and report back about how these derivations compare")
+
+**SCOPE.** The four Opus derivation commits — 1ce616e (gen_08-33), 0702b33
+(gen_34-38), c61dffe (gen_39-42), 310544e (gen_43-59) — 52 blocks, 473 claims
+added, 472 operators added (both counts re-derived from the diffs and matching
+the commits' own claims exactly). The reading under these blocks is Fable's
+and was trusted; only Opus's derivation was on trial.
+
+**WHAT WAS CHECKED (all of it, on the record):**
+- MECHANICAL SWEEP, all 52 blocks: manifest-vs-YAML claim-ID diff (473
+  Opus-added IDs vs the frozen YAMLs' wired tags; pre-era claims separated by
+  git before/after so old masorah claims don't false-positive); changelog
+  stated counts vs actual (all three phrasing conventions parsed); the 659
+  Onkelos citation keys Opus appended to 26 ledgers validated against chapter
+  verse counts in the text DB — ZERO phantoms (the one earlier false alarm was
+  this auditor's own book-name and index bugs, both proven and discarded);
+  gates re-run fresh: verify_claims 722 verified 0 FAILED across all 52
+  manifests, preflight 52/52 green, gloss_lint 0 flags.
+- CROSS-WIRE DETECTOR over every wired tag: op-text vs tagged-claim token
+  overlap, best-alternative scoring. One hit, confirmed real (below).
+- SOURCE EXISTENCE: all 806 source strings on the 473 claims checked against
+  the block ledgers; 17 not in their own block's ledger — every one found
+  read in ANOTHER ledger (standing-verdict credits), ZERO fabricated.
+- CLAIM-VS-SOURCE FIDELITY: all 380 Bereshit-Rabbah-sourced claims scored
+  against the local en.json passages; the 10 lowest-overlap read in full —
+  10/10 CONFIRMED (Isi ben Yehudah's unresolvable-verses list at BR 80:6;
+  the uvkuma dot at BR 51:8; rak-restrictive at BR 64:10; the tooth-and-eye
+  slave rule at BR 36:5; Botzra supplier-liability at BR 83:3; Machalat/
+  Basmat at BR 67:13; the lulei attribution-doubt at BR 74:12; angel-medium
+  at BR 82:3; hata'a-as-punishment at BR 52:10; larov/meriva at Bava Batra
+  16b:6 with BR 26:4 the same-verse seat). TWO APPARENT MISSES WERE MY OWN
+  INDEX BUGS: the local Talmud exports carry two empty lead elements, so
+  index = daf*2-2 (+1 for amud b) — with that mapping Opus's Bava Batra
+  16b:6 and Yoma 9b:18 land EXACTLY on the claimed passages, segment numbers
+  included.
+- ONKELOS INK: all 32 Onkelos-facing claims opened against the local Aramaic
+  — 32/32 confirmed verbatim (Word-buffer at oaths/promises, glory-buffer at
+  Bethel, selas at the purchase, tribes at 28:3, the study house at 25:27,
+  the bailment vocabulary at 31:39, the mighty ones at 36:24, the estimate
+  reading at 26:12, the 26:10 king-reading — all really there).
+- MACHINE CLAIMS: all 34 independently re-derived from the claim TEXTS with
+  fresh queries against the snapshot DB (not the check specs): nishmat 2,
+  bare-compound-name 20 verses, bare nefesh-chayah 8 all-Genesis with 2:7
+  the only prefixed, kenegdo 2, tardemah 2, itzavon 3, the 4:2 double-et,
+  rovetz masculine + 4 seats, demei 3, na 2, huchal hophal hapax, beshagam
+  gematria 345=Moshe, ledorot doubly-defective hapax, ahalah 4, uvkuma
+  hapax, Ephron 8-in-chapter with the ONE defective at the payment verse,
+  yoshev defective, Chet 13 tokens (10 census after ancestor + the two
+  27:46), zeqenim 5 tokens before 24:1 (the aging-leg refutation), the
+  24:3-vs-24:7 two-gods delta, ha-pilagshim written FULL (the variant
+  honestly absent), tomim defective vs 38:27 full, eqev=172, va-avuda
+  defective, afo exactly 4, the bakol/mikol/kol census at its three seats,
+  the sick-root 1-in-Genesis 3-in-Torah, charanah 2, the 30:10 birth with
+  no conception verb, and adoni-to-Esau EXACTLY EIGHT — ALL EXACT, zero
+  numeric defects.
+- TALMUD SPOT CHECKS: 12 Talmud/halakhic-midrash claims across gen_08-33
+  opened at their cited seats — 12/12 confirmed (Niddah 22b animal-form
+  fetus; Eruvin 18a du-partzufin; Kiddushin 30b Torah-as-antidote; Yevamot
+  63a not-a-man; Rosh Hashanah 11b Iyar/Marcheshvan; Yoma 85a life-at-the-
+  nose; Sanhedrin 72b pursuer forewarning; Berakhot 25b gentile nakedness;
+  Sanhedrin 109a three factions; Arakhin 16b lodging rule twice-derived;
+  Megillah 31b order-of-offerings; Shabbat 132a three-analogies audit).
+
+**DEFECTS FOUND — EIGHT, ALL BOOKKEEPING, ZERO CONTENT:**
+1. gen_44 G44-29 TAG ON THE WRONG OPERATOR: the tag sits on the 26:10
+   king-reading op (whose content matches NO claim — the reading itself is
+   real, confirmed in the Aramaic), while G44-29's two policies are carried
+   VERBATIM but untagged inside the G44-24 op (26:3 Word-support) and the
+   G44-26 op (26:12 estimate). Fix class: move/extend tags.
+2. gen_17 G17-16 TRUE ORPHAN: the layered-water + manna a-fortiori claim has
+   NO operator; the rev-3 changelog's "Also landed" list wrongly includes it
+   (the numeric counts 8 claims / 7 operators are honest).
+3. gen_43 G43-30 TRUE ORPHAN: the firstborn-altar-service motive claim has
+   no operator ("Thirteen claims seated" overstates for this one).
+4. gen_47 G47-25 DUPLICATE EXTRACTION: same BR 70:17 finding extracted here
+   AND at gen_50 where it is wired as G50-21. Fix class: cross-unit
+   annotation (the gen_69 precedent).
+5. gen_47 G47-32 CO-SEATED UNTAGGED: content and source (BR 100:12) inside
+   the G47-31 op; tag absent. Fix: co-tag.
+6. gen_55 G55-28 CO-SEATED UNTAGGED: the 138-years content and BR 78:2
+   inside the G55-27 op; tag absent. Fix: co-tag.
+7. gen_41 changelog says "Twelve claims seated" — thirteen were (G41-22..34,
+   all wired). Prose miscount.
+8. gen_45 changelog says "Eleven claims seated" — ten claims, eleven
+   OPERATORS (G45-30 seated twice); the prose counted ops as claims.
+
+**THE COMPARISON THE OWNER ASKED FOR.** The 13-block audit (gen_60-73, Opus
+read AND derived): 122 claims, 8 defects, all bookkeeping. This recheck
+(gen_08-59, Opus derived over Fable's reading): 473 claims, 8 defects, all
+bookkeeping — the same absolute defect count over four times the claim
+volume, and the same signature exactly (orphans, one wrong tag, prose count
+slips; no wrong verdict, no fabricated source, no failed machine check, no
+bad number anywhere in either audit). Opus's derivation-only work over a
+trusted reading was measurably cleaner than its read-and-derive work. The
+defect class never left Step-5-to-Step-6 bookkeeping: what was extracted vs
+what got tagged.
+
+**NOT YET DONE: THE FIXES.** Eight defects await the owner's word, same
+protocol as the 13 ("We can decide together"). The fix plan mirrors the
+13-audit batch: tag moves/extensions on gen_44/47/55 (rev bumps + changelog
+lines), orphan resolution on gen_17/43 (owner choice: add the missing
+operator, or annotate the manifest that the claim stands extracted-unwired),
+cross-unit annotation on G47-25, append-only prose corrections for the two
+changelog miscounts. Hash must not move; freeze ritual re-run after.
+
+**FIXES LANDED (2026-08-31, owner: "Fix").** All eight, wiring and record
+only: gen_44 to rev 4 (G44-29 tag moved onto its two real carrying operators,
+the false tag stripped from the 26:10 op whose reading stands confirmed);
+gen_47 to rev 4 (G47-32 co-tagged on the tribe-table op; G47-25 annotated
+SEATED CROSS-UNIT at gen_50's G50-21); gen_55 to rev 4 (G55-28 co-tagged on
+the rank-table op); gen_17 and gen_43 to rev 4 with CORRECTION-OF-THE-RECORD
+changelog lines and their orphans (G17-16, G43-30) annotated EXTRACTED-UNWIRED
+in the manifests — real claims, no operators, seating them would change the
+machine so they await the owner's word to seat or retire; gen_41 and gen_45 to
+rev 4 correcting the prose miscounts. GATES: verify_text + preflight +
+changelog_gate green on all seven units, verify_claims 0 FAILED on the three
+touched manifests, gloss_lint 0 flags, corpus_world hash 8b8fff1fa28953af
+UNMOVED (the wiring-only proof), freeze ritual re-run OK on six units with
+renderings + py_units regenerated (py asserts green).
+
+**⚠ NEW OPEN ITEM — the declared-reading gate's parser gap (pre-existing,
+exposed by the ritual re-run, NOT caused by the fixes):** the gate computes
+declared = fresh + carry + Onkelos and does not know two counting categories
+the 2026-08-25 Noach-sweep ledgers actually use — "daf-grain credits" and
+"in-sitting dups". gen_17 claims 78 = 33+22+4+3+16 and the gate sums 71;
+UNTOUCHED gen_16 fails identically (81 claimed, 76 summed, 5 daf-grain).
+Consequence: gen_17's ritual aborts at that gate, so its rendering/py_unit
+still shows rev 3 while the YAML is at rev 4 — the one honest inconsistency
+outstanding. The gate is under the mechanical-gates freeze, so teaching it
+the two categories (the ff53d87 precedent: the coverage gate learns every
+convention the corpus actually wrote) NEEDS THE OWNER'S WORD. Likely more
+2026-08-25-sweep units share the gap; a sweep of all 52 rituals was not run.
+NOT COMMITTED — awaiting the owner's word, per standing order.
+
+**GATE AMENDED AND THE RENDERINGS BROUGHT CURRENT (2026-08-31, owner: "Yes
+fix it and keep going").** The declared-reading gate learned the two credit
+categories the 2026-08-25 sweep ledgers actually use — "daf-grain credits"
+and "in-sitting dups" — both optional, added to the component sum
+(logic/solo_tools/freeze_ritual.py, dated amendment comment inside; the
+ff53d87 principle: the gate honors declared reading in whichever form the
+era recorded it). gen_17 and control gen_16 now pass with components
+verified. A standalone parser sweep over all 97 frozen units: all 73
+Genesis ledgers pass (26 component-verified + 47 era-format); the 24
+Exodus/Leviticus units flow through the gate's OTHER branch, which honestly
+FAILS them (exo_15 tested: read-and-logged 0 of 3219 required — the
+pre-revision full-enumeration demand; their rituals cannot re-run until
+that branch meets the revised law — STANDING DEBT, owner's call, nothing
+regenerated there).
+
+**THE BIGGER FIND: the derivation-era commits never re-ran the rendering
+step**, so every Genesis rendering not re-ritualed since (≈57 units) was
+STALE — missing every operator the derivation added (gen_16's py_unit had
+ZERO witness operators on disk while its YAML carried nine). Fixed by
+running the freeze ritual across ALL 73 Genesis units: 73 OK, 0 FAIL, 25
+drafts correctly skipped; 68 HTML renderings + 62 py_units regenerated;
+every changed py_unit executed assert-green; corpus_world hash
+8b8fff1fa28953af UNMOVED through the whole day. The python-rendering-layer
+standing order is again true of the whole Genesis corpus.

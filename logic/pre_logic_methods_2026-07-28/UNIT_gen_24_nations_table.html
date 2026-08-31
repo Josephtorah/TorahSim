@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_24_nations_table — frozen logic unit</title><style>
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_24_nations_table — derived logic unit</title><style>
 body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
        margin:0; padding:2rem 1rem 6rem; }
 main { max-width:1200px; margin:0 auto; }
@@ -34,7 +34,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 .arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
        border-radius:8px; padding:.4rem .7rem; }
 .arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
-</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_24_nations_table?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The nations table: of these the nations divided after the flood (10:1-32) <span class='badge frozen'>FROZEN</span></h1>
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_24_nations_table?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The nations table: of these the nations divided after the flood (10:1-32) <span class='badge frozen'>MODEL · REV 3 · GATES GREEN</span></h1>
 <div class="meta">unit <b>gen_24_nations_table</b> · Genesis 10:1-32 · derive logic_derived_v1 · phase C-24</div>
 <div class="meta"><a href="/#Gen/10/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
 <p><span class="he">וְאֵלֶּה תּוֹלְדֹת בְּנֵי־נֹחַ — וּמֵאֵלֶּה נִפְרְדוּ הַגּוֹיִם</span> · <i>ve-eleh toledot bnei-Noach — u-me-eleh nifredu ha-goyim</i> · &#x27;And these are the generations of the sons of Noach&#x27; — &#x27;and of these the nations divided&#x27;</p>
@@ -78,6 +78,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">בְּנֵי יֶפֶת גֹּמֶר וּמָגוֹג וּמָדַי וְיָוָן וְתֻבָל וּמֶשֶׁךְ וְתִירָס</span> · <i>bnei Yefet Gomer u-Magog u-Maday ve-Yavan ve-Tuval u-Meshekh ve-Tiras</i><br><span class="gloss">= sons-of Yefet Gomer and-Magog and-Maday and-Yavan and-Tuval and-Meshekh and-Tiras</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_me_eleh_nifredu_iyei_ha_goyim_be_artzotam, t1) ∧ HOLDS(ish_li_leshono_le_mishpechotam_be_goyehem, t1)</span><br><span class="gloss">= HOLDS(and-from-these-nifredu-iyei-the-nations-in-artzotam, t1) ∧ HOLDS(each-to-me-leshono-to-mishpechotam-in-goyehem, t1)</span><br>THE ANOMALOUS CLOSE [letter facts, deltas named]: no &#x27;these are the sons of Yefet&#x27; opener (the other two closings have it); SINGULAR ish li-leshono (&#x27;EACH to his tongue&#x27;) against the others&#x27; plural tongue-forms; the item order differs (lands-tongue-families-nations). Inside it, three debuts: GOY (&#x27;nation&#x27;) tokens 1-2 — the nations-word BORN in the table (token 7 = 12:2&#x27;s great-NATION promise [cited]); LASHON (&#x27;tongue&#x27;) token 1 of six in the Torah (Babel&#x27;s word is the sibling saphah, &#x27;lip&#x27; — split named); PARAD (&#x27;separate&#x27;) token 2 — token 1 = 2:10, Eden&#x27;s river dividing into four heads; iyei (&#x27;coastlands of&#x27;) a Torah hapax.
 </td><td><span class="he">מֵאֵלֶּה נִפְרְדוּ אִיֵּי הַגּוֹיִם … אִישׁ לִלְשֹׁנוֹ</span> · <i>me-eleh nifredu iyei ha-goyim … ish li-leshono</i><br><span class="gloss">= these nifredu iyei nations each to-me-leshono</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(nations_roster, resolved_by_two_conflicting_gazetteers)</span><br><span class="gloss">= WITNESS-READ(nations-roster, resolved-by-two-conflicting-gazetteers)</span><br>THE REGISTER IS MAPPED TO THE REAL WORLD TWICE, AND THE MAPS DISAGREE [claim G24-12]. Each name is identified with a contemporary nation or city, and the two great identification lists do NOT align - one giving Gomer as Germania and Madai as Macedonia, the other Magog as Kandiya on a different reckoning, with Tiras disputed between Persia and Thrace and ruled for Persia at one seat. The city names of 10:10-12 are resolved twice over as well. The variance is recorded, not harmonised: this unit&#x27;s register reaches the world through two competing gazetteers. [folded shape: recorded dispute]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 37:1, Yoma 10a:2, Yoma 10a:4, Yoma 10a:5</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The first section runs to sea: coastland peoples, each with a tongue — the table says quietly what Babel will say loud.</div>
 </div>
@@ -88,6 +90,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bnei_cham_kush_u_mitzrayim_u_fut_u_khenaan, t1) ∧ HOLDS(bnei_khush_seva_va_chavilah_u_vnei_ramah, t1)</span><br><span class="gloss">= HOLDS(sons-of-Ham-Chush-and-Egypt-and-Phut-and-Canaan, t1) ∧ HOLDS(sons-of-Chush-Seba-and-Havilah-and-vnei-ramah, t1)</span><br>Ham&#x27;s rows as ledger facts: MITZRAYIM (&#x27;Egypt&#x27;) — the name&#x27;s Torah token 1 (314 tokens follow); Canaan the fourth son (cursed in the previous span — prose echo, no receipt). DUPLICATE NAMES begin [letter facts, no harmonizing]: CHAVILAH here (token 2 — token 1 = 2:11, EDEN&#x27;S GOLD-LAND) returns as a SHEM-line son at 10:29; SHEVA here (10:7) returns at 10:28 in Shem&#x27;s line — the table lets two brothers hold one name.
 </td><td><span class="he">וּבְנֵי חָם כּוּשׁ וּמִצְרַיִם וּפוּט וּכְנָעַן …</span> · <i>u-vnei Cham Kush u-Mitzrayim u-Fut u-Khenaan …</i><br><span class="gloss">= and-vnei Cham Kush and-Mitzrayim and-Fut and-Khenaan</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(listing_order, arithmetic_premise_for_another_verse)</span><br><span class="gloss">= WITNESS-READ(listing-order, arithmetic-premise-for-another-verse)</span><br>THIS ORDER DECIDES A WORD&#x27;S MEANING IN ANOTHER BOOK [claim G24-14]. Because our 10:6 lists Mizraim before Canaan, Mizraim is the elder - and therefore the statement that Hebron was built seven years before Zoan cannot mean FOUNDED, since no father builds for his younger son first. The word is parsed instead as seven times more developed. A genealogical ordering here constrains a parse elsewhere in the corpus. [folded shape: cross-corpus link]
+</td><td>—</td><td class='cite'>Ketubot 112a:8</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The southern rows begin, and the map starts rhyming with itself: Eden&#x27;s gold-land is suddenly somebody&#x27;s son.</div>
 </div>
@@ -102,6 +106,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">הוּא הֵחֵל לִהְיוֹת גִּבֹּר בָּאָרֶץ … גִבֹּר־צַיִד לִפְנֵי יְהוָה</span> · <i>hu hechel lihyot gibbor ba-aretz … gibbor-tzayid lifnei YHWH</i><br><span class="gloss">= he began lihyot gibbor earth gibbor-hunter lifnei the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>PATTERN</td><td><span class="expr">PATTERN(ke_nimrod_gibbor_tzayid_lifnei_yhwh)</span><br><span class="gloss">= PATTERN(like-Nimrod-gibbor-hunter-lifnei-yhwh)</span><br>THE TABLE&#x27;S ONE PROVERB as PATTERN [precedent quoted]: gen_09 encoded 2:24&#x27;s al-ken (&#x27;therefore&#x27;) etiology as &#x27;PATTERN(azav(ish, av_ve_em) ∧ davak(ish, be_ishto) ∧ hayu(basar_echad))&#x27; — a standing generalization in the narrator&#x27;s mouth, NO trigger, NO addressee. AL-KEN YEAMAR (&#x27;therefore it is said&#x27;) is the same formula bent to a SAYING: the proverb, not the practice — 11:9&#x27;s Babel-naming will reuse the al-ken [letter fact]. The saying stands on the books forever; nothing fires it.
 </td><td><span class="he">עַל־כֵּן יֵאָמַר כְּנִמְרֹד גִּבּוֹר צַיִד לִפְנֵי יְהוָה</span> · <i>al-ken yeamar ke-Nimrod gibbor tzayid lifnei YHWH</i><br><span class="gloss">= therefore-so it-is-said like-Nimrod gibbor hunter lifnei the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(ke_nimrod_particle, name_converted_to_type)</span><br><span class="gloss">= WITNESS-READ(like-Nimrod-particle, name-converted-to-type)</span><br>A COMPARATIVE PARTICLE TURNS A NAME INTO A TYPE [claim G24-13]. The verse does not say people would speak OF him but that they would say &#x27;כְּנִמְרֹד (ke-Nimrod, LIKE Nimrod), a mighty hunter before the Lord&#x27; - the comparative verified in the ink at derivation. From that one particle the chain reads the clause as establishing a reusable TYPE rather than reporting a reputation, and later figures are measured against it: Esau hunts with his mouth as this one ensnared with words. The clause also enters a census of five ill-omened uses of the word &#x27;he&#x27;. [folded shape: kept record]
+</td><td>—</td><td class='cite'>Bereshit Rabbah 37:2, Bereshit Rabbah 37:3</td><td>witnessed</td></tr>
 </table>
 <div class="meta">One man gets a story inside the spreadsheet — and the story hardens instantly into a saying the narrator can still hear.</div>
 </div>
@@ -115,7 +121,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr class="opline"><td>EVENT</td><td><span class="expr">build(e3) ∧ Theme(e3, ninveh) ∧ Theme(e3, rechovot_ir) ∧ Theme(e3, kalach) ∧ Theme(e3, resen)</span><br><span class="gloss">= build(e3) ∧ Theme(e3, ninveh) ∧ Theme(e3, Rehoboth-city) ∧ Theme(e3, Calah) ∧ Theme(e3, Resen)</span><br>VA-YIVEN (&#x27;and he built&#x27;) — one of the table&#x27;s only wayyiqtol deed-verbs, carried AGENTLESS: the builder is the unresolved subject (the gen_23 dwell-subject discipline) [decision recorded]. BANAH (&#x27;build&#x27;) token 4 — the career: the rib (2:22, God builds the woman), Cain&#x27;s city, Noach&#x27;s altar, Ninveh, Babel&#x27;s tower (tokens 5-6) [cited]. IR (&#x27;city&#x27;) tokens 3-4 — between Cain&#x27;s city and Babel&#x27;s.
 </td><td><span class="he">וַיִּבֶן אֶת־נִינְוֵה וְאֶת־רְחֹבֹת עִיר וְאֶת־כָּלַח וְאֶת־רֶסֶן</span> · <i>va-yiven et-Ninveh ve-et-Rechovot Ir ve-et-Kalach ve-et-Resen</i><br><span class="gloss">= he-built obj-marker·et-Ninveh and-obj-marker·et-Rechovot Ir and-obj-marker·et-Kalach and-obj-marker·et-Resen</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {ninveh, rechovot_ir, kalach, resen}</span><br><span class="gloss">= WORLD += {ninveh, Rehoboth-city, Calah, Resen}</span><br>THE BUILD DECISION [recorded, precedents quoted]: frozen gen_13 installed Cain&#x27;s city on a PARTICIPLE — &#x27;WORLD += {ir}&#x27;, &#x27;he WAS BUILDING&#x27; — and the completed builds install throughout the chain (ark; altar 8:20; vineyard 9:20): a wayyiqtol build with four named, persistent objects installs A FORTIORI. The machine breaks into installs exactly where the table breaks into narrative.
-</td><td><span class="he">נִינְוֵה וְרְחֹבֹת עִיר וְכָלַח וְרֶסֶן</span> · <i>Ninveh ve-Rechovot Ir ve-Khalach ve-Resen</i><br><span class="gloss">= Ninveh and-Rechovot Ir and-Khalach and-Resen</span></td><td class='cite'>—</td><td>tested</td></tr>
+</td><td><span class="he">וַיִּבֶן אֶת־נִינְוֵה וְאֶת־רְחֹבֹת עִיר וְאֶת־כָּלַח וְאֶת־רֶסֶן</span> · <i>Ninveh ve-Rechovot Ir ve-Khalach ve-Resen</i><br><span class="gloss">= Ninveh and-Rechovot Ir and-Khalach and-Resen</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hi_ha_ir_ha_gedolah, t1)</span><br><span class="gloss">= HOLDS(hi-the-city-the-gedolah, t1)</span><br>&#x27;The same is THE GREAT CITY&#x27; — GADOL token 5 (token 6 is 10:21&#x27;s elder brother; tokens 1-3 were the great lights and the great sea-creatures) [letter fact; which city the tag crowns is the letter&#x27;s own looseness — held].
 </td><td><span class="he">הִוא הָעִיר הַגְּדֹלָה</span> · <i>hi ha-ir ha-gedolah</i><br><span class="gloss">= hi city the-gedolah</span></td><td class='cite'>—</td><td>tested</td></tr>
 </table>
@@ -144,6 +150,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וְאֶת־הַיְבוּסִי וְאֶת־הָאֱמֹרִי … וְאַחַר נָפֹצוּ מִשְׁפְּחוֹת הַכְּנַעֲנִי</span> · <i>ve-et-ha-Yevusi ve-et-ha-Emori … ve-achar nafotzu mishpechot ha-Kenaani</i><br><span class="gloss">= and-obj-marker·et-the-Yevusi and-obj-marker·et-the-Emori after were-spread mishpechot the-Kenaani</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(gevul_ha_kenaani_mi_tzidon_ad_azah_ad_lasha, t1)</span><br><span class="gloss">= HOLDS(border-of-the-Canaanite-from-Sidon-until-azah-until-Lasha, t1)</span><br>GEVUL (&#x27;border&#x27;) — the border-word&#x27;s Torah token 1 draws the CANAANITE border: the land the covenant will promise gets its first survey here [cited]. On the line, six debuts as map-points: Gerar, Azzah, SODOM (token 1 of 23), Gomorrah, Admah, Tzevoyim — the doomed cities enter the corpus as geography [letter facts; Onkelos: gevul -&gt; techum, the boundary-word; dual-track].
 </td><td><span class="he">וַיְהִי גְּבוּל הַכְּנַעֲנִי מִצִּידֹן … עַד־לָשַׁע</span> · <i>va-yehi gevul ha-Kenaani mi-Tzidon … ad-Lasha</i><br><span class="gloss">= was border-of the-Kenaani from-Tzidon until-Lasha</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(border_verse, halakhic_boundary_source)</span><br><span class="gloss">= WITNESS-READ(border-verse, halakhic-boundary-source)</span><br>A LEGAL BOUNDARY IS FIXED BY THIS OPERATOR [claim G24-15]. The territorial extent named in a later book is resolved by citing our own verse - &#x27;the land of the Canaanite, to the Canaanite border, as it is said: the Canaanite border was from Sidon&#x27; - so a boundary in law rests on this unit&#x27;s geography. Set against it, the register of nations promised is counted at TEN where seven were given, the three unidentified names disputed across four different identification sets. [folded shape: priced law]
+</td><td>—</td><td class='cite'>Sifrei Devarim 6:1, Bereshit Rabbah 44:23</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The cursed line gets the longest section, the first firstborn, the first border — and the border runs straight through the cities the fire is coming for.</div>
 </div>
@@ -205,6 +213,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(eleh_mishpechot_bnei_noach_le_toledotam, t1) ∧ HOLDS(u_me_eleh_nifredu_ha_goyim_ba_aretz_achar_ha_mabul, t1)</span><br><span class="gloss">= HOLDS(these-mishpechot-sons-of-Noach-to-toledotam, t1) ∧ HOLDS(and-from-these-nifredu-the-nations-in-the-earth-after-the-deluge, t1)</span><br>THE GRAND CLOSE mirrors the heading and SEALS THE INCLUSIO: toledot token 5 answers 10:1&#x27;s token 4, and both verses end on the identical arm — ACHAR HA-MABUL (&#x27;after the deluge&#x27;), the deluge-word&#x27;s last pair (tokens 10-11; its final token is 11:10) [tree fact]. NIFREDU (&#x27;divided&#x27;) — PARAD token 3, answering 10:5&#x27;s token 2 (token 1 = Eden&#x27;s river, 2:10); GOY tokens 5-6 and MISHPACHAH token 6 close the words the table gave the Torah — and their next tokens are 12:2-3: the great-NATION promise and the all-FAMILIES blessing [the Abram-bridge, cited]. The echo of 9:19 (&#x27;from these the whole earth scattered&#x27;) completes the bracketing [prose echo, no receipt].
 </td><td><span class="he">אֵלֶּה מִשְׁפְּחֹת בְּנֵי־נֹחַ … וּמֵאֵלֶּה נִפְרְדוּ הַגּוֹיִם בָּאָרֶץ אַחַר הַמַּבּוּל</span> · <i>eleh mishpechot bnei-Noach … u-me-eleh nifredu ha-goyim ba-aretz achar ha-mabul</i><br><span class="gloss">= these mishpechot sons-of-Noach these nifredu nations earth after deluge</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(generations_of_this_span, named_precedents_in_a_standing_formula)</span><br><span class="gloss">= WITNESS-READ(generations-fowl-this-span, named-precedents-in-a-standing-formula)</span><br>THESE GENERATIONS BECOME PRECEDENTS IN A LIVE COURT FORMULA [claim G24-16]. The formula pronounced against one who reneges on a sale names them: &#x27;He who exacted payment from the generation of the flood AND FROM THE GENERATION OF THE DISPERSION will exact payment from whoever does not stand by his word&#x27; - the two generations standing as the heavenly court&#x27;s precedents. And the surviving &#x27;third&#x27; of a prophetic census is computed off this genealogy&#x27;s own nodes, disputed as a third of Shem&#x27;s line or of the whole world&#x27;s. [folded shape: cross-corpus link]
+</td><td>—</td><td class='cite'>Mishnah Bava Metzia 4:2, Sanhedrin 111a:3</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The table closes its own cover: the same words that opened it, and a world now divided into everyone the promises will have to reach.</div>
 </div>
@@ -265,6 +275,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <br><i>Queue entry — no claim made beyond the naming.</i></div>
 <div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 10:1-32 — read Tier-A at derive time (32 sequential fetches, Data/FETCHLOG.md 2026-08-03)</b><br><span class="he">נְפַק אֲתוּרָאָה וּבְנָא יָת נִינְוֵה</span> · <i>nefak Aturaah u-vena yat Ninveh</i> · The span&#x27;s translation witness: the buffer RESOLVES THE ASHUR-AMBIGUITY — &#x27;the ASSYRIAN went out and built&#x27; (the gentilic form: subject decided; the machine holds the letter&#x27;s ambiguity); ACTUALIZES THE MAP [the predicted geography class, confirmed]: Shinar -&gt; &#x27;the land of BABEL&#x27;, Kaftorim -&gt; CAPPADOCIANS, the Sinite -&gt; an actualized people-name; NORMALIZES the twin closings&#x27; endings — the letter&#x27;s one-preposition delta (in/by their nations) is erased; GOY -&gt; AM throughout (the nations-word leveled to the people-word) and MISHPACHAH -&gt; ZARYATA (the family-word rendered with the SEED-root); Nimrod&#x27;s might DOUBLED — gibbor -&gt; gibbar TAKKIF (&#x27;mighty STRONG one&#x27;) x3, lifnei YHWH -&gt; kodam YY (the reverential &#x27;before&#x27;), the proverb kept a proverb; the beget-voices preserved exactly (active olid x6, passive ityelid; the heading&#x27;s plural passive); the Peleg split-verb kept cognate (itpeligat) and the naming kept a report; the Hebrew scatter-triple LEVELED to an Aramaic pair (putz AND 9:19&#x27;s nafatz both -&gt; the disperse-root; parad -&gt; the separate-root) — the hapax-vs-Babel-verb distinction invisible in Aramaic; GEVUL -&gt; TECHUM (the boundary-word); MABUL -&gt; TOFANA at both inclusio arms — batar tofana closing 10:1 and 10:32 alike; textual variants embedded in the fetched text (the Rechovot-Ir and Mitzrayim readings) noted, not resolved.
 <br><i>Read from Data/sefaria_texts/ (local, gitignored; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>RE-era reading pass 2026-08-25 (parashat Noach sweep, block 9 of 11; ledger logic/oral_triage/gen_24_nations_table_2026-08-25.md)</b><br><span class="he">נקרא כולו</span> · <i>nikra kulo (read in full)</i> · The v1 queue above is DISCHARGED: the declared core shelf was read end to end this sitting (Bavli Yoma 10a&#x27;s identification series read at its four segments; Bereshit Rabbah 37 in full; the Nimrod-rebellion etymology standing at its carried census). HEADLINES: the IDENTIFICATIONS GAZETTEER at three seats with recorded variances (Bereshit Rabbah 37 / Jerusalem Talmud Megillah 1:9 / Yoma 10a — Madai as itself or Macedonia; Magog as Gothica or Kandiya; Tiras as Persia or Thrace, Rav Yosef ruling Persia) under the carried PROLEPTIC-NAME RULE; the DODANIM/RODANIM cross-witness ink diff (our 10:4 against First Chronicles 1:7) read as Israel-relative polarity; the HU census (five bad, five good, ours among the bad); SHINAR&#x27;s six etymologies and the Ashur arc (four cities for four abandoned, forfeited at the Temple) with the &quot;great city&quot; resolved to Nineveh from Jonah at two seats; the PHILISTINE ORIGIN on 10:14; our 10:6 as ARITHMETIC PREMISE in the Hebron/Zoan parse (built = developed, not founded) at two Bavli seats; the MI-SHEPARA curse RULING naming the dispersion generation as a heaven-court precedent in commercial law; the boundary-source law (Deuteronomy&#x27;s &quot;land of the Canaanite&quot; resolved BY our 10:19); the ten-promised/seven-given register with its identifications machloket; the Shem-vs-Noah denominators of Zechariah&#x27;s surviving third; the twin-daughters listing claim (Egypt and Canaan from one sac) grounding the two-lands practices law; measured geography on 10:7 (the Sakistans, a hundred parasangs apart). Findings in the ledger; dual-track throughout; no reading merged into the machine.
+<br><i>Reading-pass record; the stamp and ritual remain the owner&#x27;s word (batch, per parashah).</i></div>
 <h2>Binary trees (ta'amim v3, glue bricks)</h2>
 <h3>Gen.10.1 · parser unique · 12 words</h3>
 <div class="meta"><span class="he">ואלה תולדת בני־נח שׁם חם ויפת ויולדו להם בנים אחר המבול</span> · <i>ve-ele toldot bene-nocha shem cham va-yafet va-yivaldu la-hem banim achar ha-mabul</i> · The fourth toledot heading — sons born after the deluge. [EN-AID]</div>
@@ -1005,7 +1017,7 @@ final state: WORLD=[&#x27;kalach&#x27;, &#x27;ninveh&#x27;, &#x27;rechovot_ir&#x
 ALL SCENARIOS GREEN
 </pre>
 <h2>Python rendering — the unit as a program</h2>
-<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_24_nations_table.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<p class='meta'>Generated from the canonical YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_24_nations_table.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
 <pre class='pyblock'>#!/usr/bin/env python3
 # =============================================================================
 # gen_24_nations_table — 10:1-32
@@ -1058,6 +1070,10 @@ m.fact(&quot;bnei_yefet_gomer_u_magog_u_maday_ve_yavan&quot;)
 # leshono-to-mishpechotam-in-goyehem
 m.fact(&quot;u_me_eleh_nifredu_iyei_ha_goyim_be_artzotam&quot;,
        &quot;ish_li_leshono_le_mishpechotam_be_goyehem&quot;)
+# witness-tier presupposed read: resolved_by_two_conflicting_gazetteers on
+# nations_roster — read, not installed
+m.witness_read(&quot;nations_roster&quot;, &quot;resolved_by_two_conflicting_gazetteers&quot;,
+                cites=[&quot;Bereshit Rabbah 37:1&quot;, &quot;Yoma 10a:2&quot;, &quot;Yoma 10a:4&quot;, &quot;Yoma 10a:5&quot;])
 
 # -------------------------- Gen.10.6-7 · HAM_ROWS_KUSH_TO_DEDAN ------------
 # וּבְנֵי חָם כּוּשׁ וּמִצְרַיִם וּפוּט וּכְנָעַן וּבְנֵי כוּשׁ סְבָא
@@ -1072,6 +1088,10 @@ m.step(&quot;Gen.10.6-7&quot;)
 # and-Phut-and-Canaan; sons-of-Chush-Seba-and-Havilah-and-vnei-ramah
 m.fact(&quot;bnei_cham_kush_u_mitzrayim_u_fut_u_khenaan&quot;,
        &quot;bnei_khush_seva_va_chavilah_u_vnei_ramah&quot;)
+# witness-tier presupposed read: arithmetic_premise_for_another_verse on
+# listing_order — read, not installed
+m.witness_read(&quot;listing_order&quot;, &quot;arithmetic_premise_for_another_verse&quot;,
+                cites=[&quot;Ketubot 112a:8&quot;])
 
 # -------------------------- Gen.10.8-9 · NIMROD_AND_THE_PROVERB ------------
 # וְכוּשׁ יָלַד אֶת־נִמְרֹד הוּא הֵחֵל לִהְיוֹת גִּבֹּר בָּאָרֶץ הוּא־הָיָה
@@ -1093,6 +1113,10 @@ m.fact(&quot;hu_hechel_lihyot_gibbor_ba_aretz&quot;,
 # like-Nimrod powerful chase to-face YHWH”) — pattern recorded: like-Nimrod-
 # gibbor-hunter-lifnei-yhwh
 m.pattern(&quot;ke_nimrod_gibbor_tzayid_lifnei_yhwh&quot;)
+# witness-tier presupposed read: name_converted_to_type on
+# ke_nimrod_particle — read, not installed
+m.witness_read(&quot;ke_nimrod_particle&quot;, &quot;name_converted_to_type&quot;,
+                cites=[&quot;Bereshit Rabbah 37:2&quot;, &quot;Bereshit Rabbah 37:3&quot;])
 
 # -------------------------- Gen.10.10-12 · THE_KINGDOM_AND_THE_FOUR_CITIES -
 # וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל וְאֶרֶךְ וְאַכַּד וְכַלְנֵה בְּאֶרֶץ
@@ -1115,8 +1139,10 @@ m.fact(&quot;reshit_mamlakhto_bavel_be_eretz_shinar&quot;,
 # and-obj-marker Resen”) — event: build — theme ninveh, Rehoboth-city,
 # Calah, Resen
 m.event(&quot;build&quot;, themes=[&quot;ninveh&quot;, &quot;rechovot_ir&quot;, &quot;kalach&quot;, &quot;resen&quot;])
-# ‹נִינְוֵה וְרְחֹבֹת עִיר וְכָלַח וְרֶסֶן› (“Nineveh and-Rehoboth city and-
-# Calah and-Resen”) — the world gains: ninveh, Rehoboth-city, Calah, Resen
+# ‹וַיִּבֶן אֶת־נִינְוֵה וְאֶת־רְחֹבֹת עִיר וְאֶת־כָּלַח וְאֶת־רֶסֶן› (“and-
+# build obj-marker Nineveh and-obj-marker Rehoboth city and-obj-marker Calah
+# and-obj-marker Resen”) — the world gains: ninveh, Rehoboth-city, Calah,
+# Resen
 m.install(&quot;ninveh&quot;, &quot;rechovot_ir&quot;, &quot;kalach&quot;, &quot;resen&quot;)
 # ‹הִוא הָעִיר הַגְּדֹלָה› (“he/it the-city the-great”) — fact holds: hi-
 # the-city-the-gedolah
@@ -1162,6 +1188,10 @@ m.fact(&quot;eleh_ha_kenaani_asarah_amamim&quot;,
 # Kenaanite from-Sidon … until Lasha”) — fact holds: border-of-the-
 # Canaanite-from-Sidon-until-azah-until-Lasha
 m.fact(&quot;gevul_ha_kenaani_mi_tzidon_ad_azah_ad_lasha&quot;)
+# witness-tier presupposed read: halakhic_boundary_source on border_verse —
+# read, not installed
+m.witness_read(&quot;border_verse&quot;, &quot;halakhic_boundary_source&quot;,
+                cites=[&quot;Sifrei Devarim 6:1&quot;, &quot;Bereshit Rabbah 44:23&quot;])
 
 # -------------------------- Gen.10.20 · HAM_CLOSE --------------------------
 # אֵלֶּה בְנֵי־חָם לְמִשְׁפְּחֹתָם לִלְשֹׁנֹתָם בְּאַרְצֹתָם בְּגוֹיֵהֶם
@@ -1254,11 +1284,15 @@ m.step(&quot;Gen.10.32&quot;)
 # in-the-earth-after-the-deluge
 m.fact(&quot;eleh_mishpechot_bnei_noach_le_toledotam&quot;,
        &quot;u_me_eleh_nifredu_ha_goyim_ba_aretz_achar_ha_mabul&quot;)
+# witness-tier presupposed read: named_precedents_in_a_standing_formula on
+# generations_of_this_span — read, not installed
+m.witness_read(&quot;generations_of_this_span&quot;, &quot;named_precedents_in_a_standing_formula&quot;,
+                cites=[&quot;Mishnah Bava Metzia 4:2&quot;, &quot;Sanhedrin 111a:3&quot;])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
     m.report()
-    assert m.created_set() == {&#x27;kalach&#x27;, &#x27;rechovot_ir&#x27;, &#x27;resen&#x27;, &#x27;ninveh&#x27;}
+    assert m.created_set() == {&#x27;kalach&#x27;, &#x27;ninveh&#x27;, &#x27;rechovot_ir&#x27;, &#x27;resen&#x27;}
     assert m.presupposed_set() == {&#x27;noach&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {}
     assert m.REGISTRY[&quot;writes&quot;] == 0
@@ -1271,6 +1305,22 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 12
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;nations_roster&#x27;, &#x27;resolved_by_two_conflicting_gazetteers&#x27;), (&#x27;listing_order&#x27;, &#x27;arithmetic_premise_for_another_verse&#x27;), (&#x27;ke_nimrod_particle&#x27;, &#x27;name_converted_to_type&#x27;), (&#x27;border_verse&#x27;, &#x27;halakhic_boundary_source&#x27;), (&#x27;generations_of_this_span&#x27;, &#x27;named_precedents_in_a_standing_formula&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 37:1&#x27;, &#x27;Yoma 10a:2&#x27;, &#x27;Yoma 10a:4&#x27;, &#x27;Yoma 10a:5&#x27;]
+    assert all(&#x27;resolved_by_two_conflicting_gazetteers&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;nations_roster&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Ketubot 112a:8&#x27;]
+    assert all(&#x27;arithmetic_premise_for_another_verse&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;listing_order&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 37:2&#x27;, &#x27;Bereshit Rabbah 37:3&#x27;]
+    assert all(&#x27;name_converted_to_type&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;ke_nimrod_particle&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Sifrei Devarim 6:1&#x27;, &#x27;Bereshit Rabbah 44:23&#x27;]
+    assert all(&#x27;halakhic_boundary_source&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;border_verse&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Mishnah Bava Metzia 4:2&#x27;, &#x27;Sanhedrin 111a:3&#x27;]
+    assert all(&#x27;named_precedents_in_a_standing_formula&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;generations_of_this_span&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-08-03 (second-generation derivation agent; freeze-after-review by the main loop — NO agent freeze; sixth unit under the PIPELINE + DEBUT-MAP process, the agent&#x27;s second): twenty-fifth-unit candidate — THE NATIONS TABLE, span OWNER-RULED whole (32 verses as one ledger-genre unit; boot steps grouped on the letter&#x27;s own twelve paragraphs); fifteenth extension-free derivation candidate in a row. The table is 91 percent verbless and the machine mirrors it: one SECTION that labels and installs nothing (gen_16&#x27;s toledot device — the series&#x27; tokens 4-5 bracket the span), twenty-three row-facts (gen_14&#x27;s ledger class), ten birth/build events (the beget-grammar&#x27;s active/passive split by line held, TIR-032), one PATTERN for the table&#x27;s one proverb (gen_09&#x27;s al-ken class — carrying the chapter&#x27;s only divine-name tokens), FOUR city installs on an AGENTLESS build (gen_13&#x27;s city precedent a fortiori; the Ashur/he subject held [OPEN] while Onkelos decides it), and a queue that NEVER WAKES — zero imperatives, zero jussives, no demand, no test, no invariant, no handler, no clock. The letter&#x27;s own architecture carried as facts: the 10:1/10:32 achar-ha-mabul INCLUSIO [tree fact], the three closings with deltas named (Yefet&#x27;s anomalous; the Ham/Shem twins ONE PREPOSITION apart — a delta Onkelos erases), GOY and MISHPACHAH born here and handing off to 12:2-3&#x27;s promises [the Abram-bridge], the scatter-family bracketing the atlas (the putz debut on the Canaanites; the palag hapax in Peleg&#x27;s naming-reason — report-naming, no NAME op; parad from Eden&#x27;s river), the Canaanite border pre-loading Sodom and the covenant map, the firstborn-word debuting on Canaan&#x27;s Tzidon, the kingdom&#x27;s Babel-first beginning on creation&#x27;s beginning-word, and the cross-line name-doubles held without harmonizing. The seventy-count stays the chain&#x27;s [OPEN, named-only; raw census 79 lemmas / 110 tokens]. Machine state: t0 empty, four installs (+1 presupposed), zero registry writes, zero queue traffic, zero tests, eleven events, one pattern, twenty-three facts, one read-flag — an atlas at rest, one chapter before Babel.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-08-03 (second-generation derivation agent; freeze-after-review by the main loop — NO agent freeze; sixth unit under the PIPELINE + DEBUT-MAP process, the agent&#x27;s second): twenty-fifth-unit candidate — THE NATIONS TABLE, span OWNER-RULED whole (32 verses as one ledger-genre unit; boot steps grouped on the letter&#x27;s own twelve paragraphs); fifteenth extension-free derivation candidate in a row. The table is 91 percent verbless and the machine mirrors it: one SECTION that labels and installs nothing (gen_16&#x27;s toledot device — the series&#x27; tokens 4-5 bracket the span), twenty-three row-facts (gen_14&#x27;s ledger class), ten birth/build events (the beget-grammar&#x27;s active/passive split by line held, TIR-032), one PATTERN for the table&#x27;s one proverb (gen_09&#x27;s al-ken class — carrying the chapter&#x27;s only divine-name tokens), FOUR city installs on an AGENTLESS build (gen_13&#x27;s city precedent a fortiori; the Ashur/he subject held [OPEN] while Onkelos decides it), and a queue that NEVER WAKES — zero imperatives, zero jussives, no demand, no test, no invariant, no handler, no clock. The letter&#x27;s own architecture carried as facts: the 10:1/10:32 achar-ha-mabul INCLUSIO [tree fact], the three closings with deltas named (Yefet&#x27;s anomalous; the Ham/Shem twins ONE PREPOSITION apart — a delta Onkelos erases), GOY and MISHPACHAH born here and handing off to 12:2-3&#x27;s promises [the Abram-bridge], the scatter-family bracketing the atlas (the putz debut on the Canaanites; the palag hapax in Peleg&#x27;s naming-reason — report-naming, no NAME op; parad from Eden&#x27;s river), the Canaanite border pre-loading Sodom and the covenant map, the firstborn-word debuting on Canaan&#x27;s Tzidon, the kingdom&#x27;s Babel-first beginning on creation&#x27;s beginning-word, and the cross-line name-doubles held without harmonizing. The seventy-count stays the chain&#x27;s [OPEN, named-only; raw census 79 lemmas / 110 tokens]. Machine state: t0 empty, four installs (+1 presupposed), zero registry writes, zero queue traffic, zero tests, eleven events, one pattern, twenty-three facts, one read-flag — an atlas at rest, one chapter before Babel.</div><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

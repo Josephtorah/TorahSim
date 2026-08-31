@@ -110,6 +110,16 @@ def main():
                   or _re.search(r"(\d+)\s+fresh", tail))
         mcarry = _re.search(r"(\d+)\s+carry", tail)
         monk = _re.search(r"(\d+)\s+Onkelos", tail)
+        # OWNER-APPROVED gate amendment 2026-08-31 ("Yes fix it"), from the
+        # gen_08-59 recheck: the 2026-08-25 sweep ledgers record two further
+        # credit categories the sum did not know — "N daf-grain" credits and
+        # "N in-sitting dups" — so gen_17 (78 = 33+22+4+3+16) and untouched
+        # gen_16 (81 = 47+15+5+14) failed a component check their ledgers
+        # satisfy. Both are optional (0 when absent); the ff53d87 principle:
+        # the gate honors declared reading in whichever form the era
+        # recorded it.
+        mdaf = _re.search(r"(\d+)\s+daf-grain", tail)
+        mdup = _re.search(r"(\d+)\s+in-sitting dup", tail)
         if not (mfresh and mcarry and monk):
             # pre-amendment era format (creation week): components not
             # stated — the gate honors declared reading in whichever form
@@ -118,16 +128,22 @@ def main():
                        "(era format, components not stated) (%s)"
                        % (n, n, tp.name))
             break
-        total = int(mfresh.group(1)) + int(mcarry.group(1)) + int(monk.group(1))
+        ndaf = int(mdaf.group(1)) if mdaf else 0
+        ndup = int(mdup.group(1)) if mdup else 0
+        total = (int(mfresh.group(1)) + int(mcarry.group(1))
+                 + int(monk.group(1)) + ndaf + ndup)
         if total != n:
             tr_fail = ("component check FAILED: %d of %d claimed but "
-                       "fresh+carry+Onkelos = %d (%s)"
+                       "fresh+carry+daf-grain+dups+Onkelos = %d (%s)"
                        % (n, n, total, tp.name))
             continue
+        extras = ""
+        if ndaf or ndup:
+            extras = "+%d daf-grain+%d dups" % (ndaf, ndup)
         tr_note = ("declared scope complete: %d of %d read, components "
-                   "verified %s+%s+%s (%s)"
+                   "verified %s+%s+%s%s (%s)"
                    % (n, n, mfresh.group(1), mcarry.group(1), monk.group(1),
-                      tp.name))
+                      extras, tp.name))
         break
     if not tr_note and tr_fail:
         step("declared-reading gate", False, tr_fail)
