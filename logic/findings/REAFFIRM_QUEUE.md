@@ -39,3 +39,16 @@
 | gen_33_shaddai_covenant_flesh | rev 4 | rev 5 | 2026-09-01 | F-015 seated (G33-31, line-scope in and out) |
 | gen_36_gerar_dream_prophet | rev 4 | rev 5 | 2026-09-01 | F-016 seated (G36-19, deflected-proof role) |
 | gen_55_two_camps_wrestled_name | rev 5 | rev 6 | 2026-09-01 | F-015 seated (G55-36, repeated-at-Sinai framework) |
+
+# ✅ BATCH RE-AFFIRMED 2026-09-01 — the FIRST DELEGATED re-affirmation,
+# under the owner's stamp-delegation ruling of this date (verbatim: "I
+# want you to take over stamps. I don't want torahsim to flow into this
+# repo. It is you first, info only flows to torahsim not from it to
+# you"). All twelve open rows above (from gen_03's F-007 seat through
+# gen_55's F-015 seat at rev 6) are covered: the nine distinct units
+# were preflighted this sitting — ALL SCENARIOS GREEN, gloss_lint 0,
+# world hash 8b8fff1fa28953af unmoved — and their amendments carry the
+# renewed stamp under delegated administration. Delegated
+# re-affirmations are labeled as such forever: the record never claims
+# the owner personally read a rev he did not. Rows stay for the record;
+# the queue is EMPTY as of this entry. New amendments append below.

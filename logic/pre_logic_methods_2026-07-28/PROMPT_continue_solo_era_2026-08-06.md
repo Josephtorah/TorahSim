@@ -7800,3 +7800,49 @@ derived AND examined end to end; Genesis Talmud blocks ~11 (162 rows),
 Tosefta + Jerusalem Talmud, Exod 25-40 derivation remain. Records:
 World/step9/REPORT_BACKFILL.md + EXAM_LEDGER round 5 + FRONTIER PAID
 section; THE_STEPS Step 9 updated. NOT COMMITTED — owner word.
+
+## ⚠⚠ NEW STANDING LAW (2026-09-01, same sitting, owner verbatim): "I
+## want you to take over stamps. I don't want torahsim to flow into
+## this repo. It is you first, info only flows to torahsim not from it
+## to you" — THE STAMP DELEGATION + THE ONE-WAY FLOW LAW.
+Three rulings in one utterance, all recorded in THE_STEPS Step 8 and
+memory: (1) STAMPS DELEGATED — the machine administers stamps and
+re-affirmations, verifying the criteria itself (reading complete,
+logic rebuilt from it, gates green); delegated stamps are LABELED as
+such forever, owner-stamps stay distinct as the record of what he
+personally approved; he can overrule any stamp any time. (2) THE
+STAMP CROSSING IS CANCELLED — the ATOP-merge plan is DEAD: the 65
+batch stamps + gen_08's re-affirmation of 2026-08-30 remain in
+TorahSim's tree as history and never enter this one; this tree's
+stamp state is rebuilt under delegated administration. (3) ONE-WAY
+FLOW — Torah_Grok first; info flows TO TorahSim only, NEVER from it
+into this repo. TorahSim has NOT yet been told (relay-at-owner-
+direction stands; it still holds its units expecting to hand diffs —
+the owner should give the word in that window or direct a relay).
+FIRST DELEGATED ACT, same sitting: the twelve open REAFFIRM_QUEUE
+rows cleared — nine distinct Genesis units preflighted ALL SCENARIOS
+GREEN, gloss_lint 0, hash 8b8fff1fa28953af unmoved; the queue is
+EMPTY. NOT COMMITTED — owner word.
+
+## RECORD (2026-09-01, same sitting) — THE ONE-TIME REPATRIATION,
+## COMPLETE AND CLOSED. TorahSim relayed that THE_STEPS.md had diverged
+both ways during its canon period; the owner delegated ("you decide").
+THE RULING: RULES CROSS, CHRONICLES STAY — canon-era process rules
+(written 2026-08-21..08-31 when TorahSim was legitimately the living
+copy, commit d6419ee under the owner's Genesis-closing word) are
+stranded canon history and repatriate ONCE; canon-era narrative
+chronicles stay in TorahSim's tree as history, consistent with the
+stamps ruling. LANDED in THE_STEPS Step 4, labeled verbatim-with-
+noted-adaptations: (1) the FALSE-DEFICIT expansion of the coverage
+rule (plausible non-zero deserves an independent count); (2) COUNT
+WHAT YOU REPORT / ASSERT WHAT MUST NOT CHANGE (recital vs tripwire —
+the CORPUS_TRUTH literals' whole point); (3) A FIGURE THAT NEVER
+CHANGES ACROSS WORK THAT SHOULD CHANGE IT IS A DEFECT REPORT, NOT A
+CONSTANT (the 2132-steps lesson). NOT landed: the failed-leg long
+form (this tree's condensed GRADE THE LEG form is the richer record —
+the peer's own assessment); the four tail chronicle paragraphs (stay
+in TorahSim, named in THE_STEPS' closed tail note, which replaced the
+obsolete needs-canon-mirroring placeholder); the triage-count line
+(already in compaction #33 here). The peer's door is CLOSED from its
+side; nothing further crosses; the next cross-tree event is a sync WE
+initiate. NOT COMMITTED — owner word.

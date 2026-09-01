@@ -146,6 +146,65 @@ patterns against a probe known to contain what it looks for, refuse to
 report at all if the probe fails to fire, and print what it actually
 scanned beside the result. An unfalsifiable "clean" is what let a real
 leak stand through two landings.
+(The next three rules are repatriated 2026-09-01 from the
+TorahSim-canon period — commit d6419ee, 2026-08-30, "the rules the
+week paid for" — under the one-time repatriation exception; verbatim
+but for the noted adaptations.)
+— AND A PLAUSIBLE NON-ZERO DESERVES AN INDEPENDENT COUNT (both
+windows, 2026-08-30, each rule found by the other side's near-miss).
+A check that reports an absence looks identical whether it read
+everything or nothing, so it must print what it read; that rule
+caught two silent leaks the day it was written. But the harder
+failure is the FALSE DEFICIT: a count that is wrong yet plausible,
+which no coverage line flags because nothing is zero. Mapping the
+machine's backward citations to their Genesis blocks returned two,
+then eight, then nine, then fourteen — twice from frame errors (draft
+units shadowing frozen ones under a naive first match, and a regex
+requiring quotes on a field the corpus writes both ways). What caught
+it was the other window counting the same thing independently and
+disagreeing; what made the disagreement a located bug in one pass,
+instead of an argument, was the coverage line naming what had been
+used, excluded and left unparsed. In one breath: the coverage rule
+catches zeros, cross-checking catches deficits, and coverage is what
+makes the second one cheap.
+AND THE SCOPE THAT KEEPS THE RULE HONEST: count what you REPORT;
+assert what must not CHANGE; never convert the second into the first.
+A fixed number in a report is a RECITAL — it claims a measurement it
+never took and lies quietly when the world moves, which is what the
+press gate was doing when it printed a remembered 97. A fixed number
+in an assert is a TRIPWIRE — it claims nothing, it FAILS LOUDLY the
+moment the world moves, and the failing IS its function; that is what
+every literal in logic/corpus/CORPUS_TRUTH.py is, and converting them
+to counts of themselves would leave the file passing forever and
+proving nothing, the era's whole proof disarmed by a tidying commit
+with nothing going red to announce it. Same literal, opposite roles.
+The rules above are graded the way this step grades a source: by the
+leg actually opened, not by the section it sits in (the GRADE THE LEG
+rule above — the condensed form this copy keeps).
+A FIGURE THAT NEVER CHANGES ACROSS WORK THAT SHOULD CHANGE IT IS A
+DEFECT REPORT, NOT A CONSTANT (repatriated 2026-09-01 from the
+TorahSim-canon period — commit d6419ee, 2026-08-30, "the rules the
+week paid for" — under the one-time repatriation exception; opening
+line adapted to stand alone). The unit indexer printed "2132 steps"
+after every derivation landing — after eighteen operators, then a
+hundred eighty-nine, then sixty-three, then thirty-two, until three
+thousand six hundred forty-four operators stood in the units and the
+number had not moved once. Both windows watched it go by. It was not
+lying: it counted STEPS, and steps did not change, because the
+derivation adds operators INSIDE existing steps. But a figure sitting
+beside work that should move it, and not moving, is evidence about
+the instrument, and the instrument here was the public scroll: its
+step 6 said "the unit's machine" while rendering the automatic
+grammar sketch the role tags emit from morphology alone, because no
+export ever carried the real operators out of
+boot_steps[].operators[]. Three months of derivation was invisible
+under a heading claiming to show it — the worst instance of the
+week's whole family, because this false report was aimed at the
+public rather than at us. Fixed 2026-08-30: the operators ship per
+unit and step 6 renders the machine, each line naming the sources
+that licensed it; the grammar sketch stays, moved beneath a label
+that says what it honestly is. When a number refuses to move, ask
+what it is actually counting before you trust it as a constant.
    → shows as: chip "in reading 39/63" or "read through"; grid cell fill.
 
 ## Step 5 — Extract claims
@@ -195,13 +254,30 @@ One command, all green or the change doesn't ship: unit assertions,
 renderings reprinted, world refolded to its hash, scenes vs baseline,
 changelog check. (Deleting or rebaselining a TEST takes owner word.)
 
-## Step 8 — The stamp (owner word only)
+## Step 8 — The stamp (delegated 2026-09-01; owner word before that)
 When a span's declared reading is COMPLETE and its logic was rebuilt
-from that reading, the owner may order the full-rule stamp.
+from that reading, the unit qualifies for the full-rule stamp.
 BATCH STAMPS (owner, 2026-08-25): the word may cover a batch — a
 parashah, a section — in one utterance; per-block stamps are not
 required. The freeze ritual and the landing overhead (index → render
 → export → gates) then run once per batch, not once per block.
+⚠ STAMP DELEGATION (owner, 2026-09-01, verbatim): "I want you to take
+over stamps. I don't want torahsim to flow into this repo. It is you
+first, info only flows to torahsim not from it to you." Three laws in
+one utterance: (1) STAMPS ARE DELEGATED — the machine administers
+stamps and re-affirmations, verifying the criteria (reading complete,
+logic rebuilt from it, gates green) itself; no per-batch owner word.
+Delegated stamps and re-affirmations are LABELED as such forever — an
+owner-stamp remains the record of what the owner personally approved,
+and the record never blurs the two. The owner can still stamp, revoke,
+or overrule any stamp at any time. (2) THE STAMP CROSSING IS
+CANCELLED — the 65 batch stamps + gen_08's re-affirmation given in the
+TorahSim window 2026-08-30 stay in that tree as historical record and
+NEVER merge into this one; this tree's stamp state is rebuilt under
+delegated administration. (3) ONE-WAY FLOW — Torah_Grok is first;
+information flows TO TorahSim only, never FROM it into this repo.
+First delegated act, same sitting: the twelve queued re-affirmations
+cleared (REAFFIRM_QUEUE, nine units preflighted green).
    → shows as: chip "full rule" (until then: "first pass").
 
 ## Step 9 — Prove against cases (where the text records cases)
@@ -685,5 +761,13 @@ through gen_73) stand green and unstamped, batchable by parashah on
 the owner's word. The walk now reaches Exodus, where the spine changes
 to the Mekhilta of Rabbi Yishmael — and the standing dependency comes
 due: the sugya case-file machinery must be real before the law spans.
-[Workshop note: needs canon mirroring on the owner's word in that
-window.]
+[CLOSED 2026-09-01, under the one-way flow law: no canon mirroring
+will come — this tree is canon now. Four chronicle paragraphs from
+the TorahSim-canon period remain in that tree's copy as history and
+do not cross (per the rules-cross-chronicles-stay boundary of the
+one-time repatriation): THE DERIVATION ERA OPENS (its ce755ab), THE
+DERIVATION PASS REACHES LECH LECHA, THE FOLDED SHAPES ARE NOW
+COUNTED, and GENESIS IS WHOLE AND STAMPED (its d6419ee — the record
+of the 65 batch stamps, which likewise stay there). This tree's
+chronicle of the same events is the state doc,
+logic/pre_logic_methods_2026-07-28/PROMPT_continue_solo_era_2026-08-06.md.]
