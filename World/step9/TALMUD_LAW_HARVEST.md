@@ -1,0 +1,211 @@
+# THE LAW HARVEST — 206 Talmud-only Genesis laws
+The triage's yield: halakhah derived from Genesis verses directly, with no
+Mishnah case row above it. Each is a CASE-ROW CANDIDATE for a future Step 9
+exam round. Grouped by theme. Full notes in TALMUD_TRIAGE_LEDGER.md.
+
+- Arakhin 16b:17 (Gen 13:3): do not change your lodging: 'to the place where his tent had been at first' (13:3)
+- Avodah Zarah 25b:8 (Gen 33:14): traveler's ruse with a dangerous escort: widen the road as Jacob did to Esau ('until I come to Seir', 33:14)
+- Avodah Zarah 26b:12 (Gen 17:9): circumcision by a gentile invalid: 'and YOU shall keep My covenant' (Gen 17:9)
+- Avodah Zarah 27a:6 (Gen 17:13): the two derivations: la-H' himol vs himol yimol (17:13)
+- Avodah Zarah 36b:7 (Gen 38:24): harlotry banned by the court of Shem - 'take her out and be burned' (38:24): jurisdiction history from our verse
+- Avodah Zarah 51a:15 (Gen 6:19): MISSING-LIMB ban for Noahide offerings: 'of all the living' (Gen 6:19) - bring animals whose limbs live; ark-spec ink as sacrificial law
+- Avodah Zarah 51a:16 (Gen 7:3): terefah excluded: 'to keep seed alive' (7:3)
+- Avodah Zarah 51a:18 (Gen 6:19, 6:9): 'with YOU - like you' (6:18): the animals like Noach; and Noach himself tamim (6:9)
+- Avodah Zarah 53b:13 (Gen 11:1-9): idol-annulment: the house of Nimrod abandoned in peacetime (the dispersion, 11:1-9) - annulled idolatry precedent
+- Bava Batra 100a:7 (Gen 13:17): acquisition by walking: R. Eliezer from 'arise, walk the land... for to you I give it' (13:17)
+- Bava Batra 110b:9 (Gen 42:13): paternal-brother inheritance: brotherhood-brotherhood analogy from the sons of Jacob (42:13)
+- Bava Batra 113a:4 (Gen 2:24): the cleave-word doubled (yidbeku) in the husband-inheritance derivation (2:24 family)
+- Bava Batra 123a:10 (Gen 48:5): 'Ephraim and Manasseh shall be to me like Reuben and Simeon' (48:5) - tribal double-portion law
+- Bava Batra 143b:6 (Gen 46:23): 'the sons of Dan: Chushim' (46:23) - one child written plural: the bnei-canon for inheritance
+- Bava Batra 173b:10 (Gen 42:37): the unconditional-guarantor category from Reuben's 'give him into my hand and I will return him' (42:37)
+- Bava Batra 173b:9 (Gen 43:9): THE GUARANTOR BECOMES OBLIGATED: 'I will be surety for him, from my hand you shall require him' (43:9) - surety law's root
+- Bava Batra 56a:9 (Gen 15:18): Kenite, Kenizzite, Kadmonite excluded from the conquest - the covenant's land list (15:18-19) as boundary law
+- Bava Batra 69b:1 (Gen 23:17): deed law: boundary clauses from 'the field of Ephron... in all its border round about' (23:17) - our Machpelah purchase as the drafting template
+- Bava Kamma 49a:5 (Gen 22:5): ox goring a slave-woman - fetus damages as animal loss: am ha-domeh la-chamor (22:5)
+- Bava Kamma 55a:12 (Gen 1:21, 1:25): breeding two SEA species banned: le-mino at sea learned from le-mino on land (1:21/1:25) - creation ink as kilayim law
+- Bava Kamma 60b:6 (Gen 12:10): famine in the city, scatter your feet - 'Abram went down to Egypt' (12:10)
+- Bava Kamma 65b:18 (Gen 31:38): a day-old ram is a 'ram': 'your rams I have not eaten' (31:38) - sacrificial-age definition
+- Bava Kamma 91b:8 (Gen 9:5): SELF-INJURY FORBIDDEN: 'your own blood I will require' (9:5)
+- Bava Kamma 92a:16 (Gen 20:17, 21:1): pray for your fellow first and be answered first: Abraham for Abimelech, then Sarah remembered (20:17 to 21:1)
+- Bava Kamma 93a:3 (Gen 16:5, 23:2): invoking Heaven's judgment on a fellow - the invoker is punished first: Sarai's cry, Sarah's death (16:5, 23:2)
+- Bava Metzia 106b:5 (Gen 8:22): the six agricultural seasons of the sharecropper law - built on 'seedtime and harvest, cold and heat' (8:22)
+- Bava Metzia 59a:11 (Gen 12:15, 12:16): honor your wife, for blessing comes through her: 'he did good to Abram for her sake' (12:16)
+- Bava Metzia 87a:1 (Gen 19:3): one refuses a lesser host, never a greater: 'he urged them greatly' (19:3)
+- Bava Metzia 87a:2 (Gen 18:5, 18:7): the righteous say little and do much: bread promised, cattle run for (18:5, 18:7) - the source behind the Pirkei Avot 1:15 link
+- Bava Metzia 93b:3 (Gen 31:40): the paid keeper's standard of care measured by Jacob's 'heat by day, frost by night' (31:40)
+- Bekhorot 46b:2 (Gen 7:22): THE NOSE-PREDICATE'S THIRD LAW: the emerging head counts when 'the breath of life is in its nostrils' (7:22) - firstborn law; add to the scan's career list
+- Bekhorot 50a:8 (Gen 23:16): all plain Torah silver = sela, EXCEPT Ephron's: centenaria, 'current with the merchant' (23:16)
+- Bekhorot 55a:22 (Gen 2:11-14): vow-scope geography: all rivers are beneath the Euphrates (2:10-14) - 'the fourth river is Perat'
+- Berakhot 13a:8 (Gen 17:5): calling Abraham 'Abram' breaches a positive command - 'your name SHALL BE Abraham' (Gen 17:5); R. Eliezer adds a negative
+- Berakhot 18a:3 (Gen 23:3, 23:4): the mourner-before-burial exemption: 'Abraham rose from before his dead... I will bury my dead from BEFORE ME' (Gen 23:3-4)
+- Berakhot 25b:11 (Gen 9:23): a gentile's nakedness bars the Shema: 'their father's nakedness they saw not' (Gen 9:23)
+- Berakhot 26a:17 (Gen 1:5): missed-evening-prayer makeup rides the day boundary: 'evening and morning, ONE DAY' (Gen 1:5) - a new call site of our day_boundary predicate
+- Berakhot 26b:5 (Gen 19:27): ABRAHAM INSTITUTED MORNING PRAYER - 'Abraham rose early to the place where he had STOOD' (Gen 19:27), standing = prayer
+- Berakhot 26b:6 (Gen 24:63): ISAAC INSTITUTED AFTERNOON PRAYER - 'Isaac went out to MEDITATE in the field toward evening' (Gen 24:63)
+- Berakhot 26b:7 (Gen 28:11): JACOB INSTITUTED EVENING PRAYER - 'he ENCOUNTERED the place and lodged' (Gen 28:11), encounter = prayer
+- Berakhot 27a:10 (Gen 18:1): prayer-hours defined from 'the HEAT OF THE DAY' (Gen 18:1) = six hours
+- Berakhot 2a:9 (Gen 1:5): night precedes day for the Shema - learned from the world's creation, 'evening and morning one day' (Gen 1:5)
+- Berakhot 34b:3 (Gen 37:10): bowing taxonomy: full prostration = spread arms and legs, from 'to bow to you to the GROUND' (Gen 37:10)
+- Berakhot 54b:10 (Gen 19:29): the blessing rows on Lot and his wife: 'the true Judge' and 'who remembers the righteous' (Gen 19:29)
+- Berakhot 54b:8 (Gen 19:26): the pillar of salt as a standing blessing-object (Gen 19:26)
+- Berakhot 55b:17 (Gen 41:12, 41:13): DREAMS FOLLOW THE MOUTH - 'as he interpreted for us, so it was' (Gen 41:13); Rava's rider: when the reading fits the dream
+- Berakhot 61a:19 (Gen 2:22): escort duty (shoshvin): 'He BROUGHT her to the man' (Gen 2:22) - the Torah taught conduct, the greater escorts the lesser
+- Berakhot 61a:24 (Gen 24:61): riding behind, not before: 'Rebekah and her maidens rode AFTER the man' (Gen 24:61)
+- Berakhot 64a:10 (Gen 15:15): parting from the dead: say 'go IN peace' - 'you shall come to your fathers IN peace' (Gen 15:15)
+- Berakhot 6b:8 (Gen 19:27): a fixed place for prayer, from Abraham's returning 'to the PLACE where he had stood' (Gen 19:27)
+- Chullin 113a:20 (Gen 38:20): meat-milk 'kid' defined from 'Judah sent the kid of the GOATS' (Gen 38:20)
+- Chullin 113b:2 (Gen 27:16): 'skins of the kids of goats' (Gen 27:16): where Scripture specifies vs plain gedi - the definition's second leg
+- Chullin 139b:19 (Gen 7:14): 'every bird every wing' (Gen 7:14) - tzippor/kanaf distinction in the bird-law sugya
+- Chullin 16a:5 (Gen 22:10): slaughter valid with a detached blade: 'he took the KNIFE to slay' (Gen 22:10) - shechitah rule from the binding
+- Chullin 49a:18 (Gen 12:3): the priests' return-blessing: 'I will bless those who bless you' (Gen 12:3) - R. Akiva's source
+- Chullin 60b:12 (Gen 21:23): Abimelech's oath (Gen 21:23) as standing legal bar - the Caphtorim conquest workaround
+- Chullin 65a:2 (Gen 14:4): SCRIBAL LAW: Kedorlaomer written as two words but never on two lines (Gen 14:4)
+- Chullin 85a:12 (Gen 43:16): fitting-slaughter analogy: 'slaughter a slaughtering and PREPARE' (Gen 43:16)
+- Chullin 89a:4 (Gen 14:23-24, 14:24): consumed robbery cannot be restored - 'save what the lads have eaten' (Gen 14:24)
+- Chullin 90b:4 (Gen 32:33): sinew of a burnt-offering: 'the CHILDREN OF ISRAEL shall not eat' - not 'the altar' (Gen 32:33 subject-scope)
+- Chullin 95b:14 (Gen 42:36): the THREE-TIME pattern rule (chazakah): 'Joseph is gone, Simeon is gone, and Benjamin you will take' (Gen 42:36)
+- Chullin 95b:8 (Gen 24:14): divination defined by Eliezer's test (Gen 24:14) - the paradigm case of the nichush ban
+- Eruvin 18b:13 (Gen 7:1): partial praise to the face, full behind it: 'YOU I have seen righteous' (7:1)
+- Eruvin 18b:14 (Gen 6:9): against the narrator's fuller 'righteous and WHOLE' (6:9) - the conduct rule from the ink delta
+- Horayot 5b:15 (Gen 48:4): KAHAL defined at 'I will make you a congregation of peoples' (48:4)
+- Horayot 6b:2 (Gen 48:4): a tribe with a holding is a kahal; Levi excluded - same verse (48:4)
+- Ketubot 30a:6 (Gen 42:38): ason by Heaven's hand exempts like ason by man's: 'lest a calamity befall him' (42:38)
+- Ketubot 50a:3 (Gen 28:22): the CHARITY CAP - a fifth: 'all You give me I will DOUBLY TITHE' (28:22, the doubled verb = two tenths)
+- Ketubot 57b:2 (Gen 24:25, 24:55): the bride's preparation time: 'let the maiden remain days or ten' (24:55)
+- Ketubot 57b:3 (Gen 24:55): 'days' read as a year - the leg's resolution
+- Ketubot 61a:3 (Gen 20:3, 3:20): she rises with him and does not descend: be'ulat BA'AL (20:3) + 'mother of all LIVING - for life, not pain' (3:20)
+- Ketubot 67b:2 (Gen 2:18): provisioning the orphan groom: house, bed, then the wife - 'a helper for him' (2:18)
+- Ketubot 8a:3 (Gen 2:22): the wedding blessing's 'building forever' - the rib BUILT (2:22) in the liturgy
+- Ketubot 8b:10 (Gen 18:19, 21:33): the mourners' consolation formula: 'holders of Abraham's covenant... he will command his children' (18:19)
+- Kiddushin 11b:5 (Gen 23:13): money betrothal: taking-taking from the field of Ephron (23:13) - our Kiddushin 1:1 bridge verbatim
+- Kiddushin 29a:11 (Gen 17:10, 17:14, 21:4): the circumcision cascade: father ('Abraham circumcised Isaac', 21:4), court ('every male', 17:10), self ('the uncircumcised male', 17:14)
+- Kiddushin 29a:12 (Gen 21:4): the mother exempt: 'as God commanded HIM' - not her (21:4)
+- Kiddushin 2a:4 (Gen 23:13): the same kichah-kichah derivation at the tractate's opening (23:13)
+- Kiddushin 2a:5 (Gen 25:10): and taking is called ACQUISITION: 'the field Abraham BOUGHT' (25:10)
+- Kiddushin 4b:3 (Gen 23:13): the baraita's version: 'I have given the silver of the field, TAKE from me' (23:13)
+- Kiddushin 61b:9 (Gen 4:7): the doubled condition (tenai kaful): R. Meir from 'if you do well... and if you do not' (4:7)
+- Makkot 11b:1 (Gen 43:9): a conditional ban needs release: Judah's self-ban and his rolling bones (43:9)
+- Makkot 9a:10 (Gen 20:6): 'from sinning TO ME' (20:6) - Heaven's jurisdiction vs man's in the killer sugya
+- Megillah 20b:2 (Gen 1:5): dawn-performed rites valid: 'God called the LIGHT day' (Gen 1:5) - the brightening is day; the naming operator in rite-timing law
+- Menachot 26b:11 (Gen 19:28): kitor defined: no kiln smokes until the fire grips its majority - 'the smoke of the land like the kiln's' (19:28)
+- Menachot 37a:1 (Gen 48:17): the right hand called YAD: 'he saw his father set his right hand' (48:17) - tefillin-hand leg
+- Moed Katan 18a:4 (Gen 22:5): A COVENANT IS CUT TO THE LIPS: 'we will bow and RETURN to you' - and both returned (22:5)
+- Nedarim 32b:6 (Gen 14:18): the priesthood passes from Shem to Abraham - 'he was priest to God Most High' (14:18) and the blessing order
+- Nedarim 32b:8 (Gen 14:18): 'HE a priest' - he and not his seed (14:18)
+- Nedarim 37b:8 (Gen 18:5, 24:55): ITTUR SOFERIM - the scribes' adornment readings: 'AFTER you shall pass' (18:5), 'AFTER she shall go' (24:55) - ink canon
+- Niddah 22b:13 (Gen 2:19, 2:7): the miscarriage-form question rides 'formation like man' (2:7, 2:19)
+- Niddah 25a:9 (Gen 3:21): skin is made only for the formed: 'garments of skin He made them' (3:21)
+- Niddah 28a:9 (Gen 38:28, 38:28-29): the hand that emerged and returned - the mother impure: 'he put out a hand' (38:28)
+- Niddah 31a:24 (Gen 46:15): the sex-determination rule proven from the ledger's ink: sons hung on the daughters (46:15)
+- Niddah 70b:7 (Gen 19:26): does Lot's wife's pillar defile? a corpse defiles, a pillar of salt does not (19:26) - a posed case answered on our verse's object
+- Niddah 8b:17 (Gen 38:24): pregnancy recognized at three months: 'about three months later' (38:24) - the Tamar presumption
+- Pesachim 117b:11 (Gen 12:2): the Amidah's three-patriarch opening mapped to the call's clauses (12:2): liturgical structure from our verse
+- Pesachim 2a:3 (Gen 1:4, 44:3): enter and leave a city by daylight (ki tov) - the travel rule riding day one's good-light token (1:4, 44:3)
+- Pesachim 3a:10 (Gen 7:8): THE CLEAN-LANGUAGE CANON: the Torah curved EIGHT LETTERS to avoid 'impure' (7:8) - numeric ink claim, checkable
+- Pesachim 4a:6 (Gen 22:3): THE ZEALOUS DO COMMANDMENTS EARLY - source: 'Abraham rose early in the morning' (22:3)
+- Pesachim 56a:7 (Gen 49:1): the silent 'blessed be the Name' - born at Jacob's deathbed Shema scene (49:1)
+- Pesachim 7b:14 (Gen 44:12): the leaven-search analogy: found-found from 'he SEARCHED... it was FOUND' (44:12) - the bridge our sweep row predicted, verbatim
+- Pesachim 93b:13 (Gen 19:15, 19:23): dawn-to-sunrise = five mils, computed from Lot's dawn departure reaching Zoar at sunrise (19:15, 19:23) - a legal constant from our verses
+- Rosh Hashanah 10b:6 (Gen 8:13): ONE DAY IN A YEAR COUNTS AS A YEAR: 'in the six hundred and first year, on the first of the month' (8:13) - computed from our flood date rows
+- Rosh Hashanah 16b:4 (Gen 21:17): JUDGED BY THIS HOUR'S DEEDS: 'God heard the lad WHERE HE IS' (21:17)
+- Rosh Hashanah 16b:6 (Gen 17:15, 17:16): name-change tears the decree: 'Sarai... for Sarah is her name, and I will bless her' (17:15-16)
+- Rosh Hashanah 32b:5 (Gen 21:1): is 'the LORD remembered Sarah' (21:1) a remembrance-verse for the liturgy? R. Yosei vs R. Yehudah
+- Sanhedrin 108b:14 (Gen 6:18, 8:16): ark cohabitation ban: entry verse separates couples (Gen 6:18), exit verse rejoins (8:16) - law from operand ORDER
+- Sanhedrin 29a:34 (Gen 2:17, 3:3): WHOEVER ADDS SUBTRACTS - the hermeneutic law derived from Gen 3:3's added 'nor touch it'
+- Sanhedrin 37b:12 (Gen 4:14, 4:16): exile atones half: Gen 4:14 'wanderer' vs 4:16 'dwelt in Nod' - the ink delta IS the derivation (our gen_11 sentences-exile territory)
+- Sanhedrin 46b:21 (Gen 23:2): eulogy law: honor of the living or the dead? proof from Gen 23:2 Abraham eulogizing Sarah (our Machpelah unit)
+- Sanhedrin 56a:15 (Gen 2:16): Noahide sugya opener: blasphemy leg of Gen 2:16 derivation
+- Sanhedrin 56b:23 (Gen 2:16): dispute how many laws Adam got: R. Yehudah idolatry only; +blasphemy; +dinim
+- Sanhedrin 56b:4 (Gen 2:16): THE ROOT: all seven laws hung on Gen 2:16 va-yetzav ('and He commanded') word by word
+- Sanhedrin 56b:5 (Gen 18:19): dinim (courts) from va-yetzav via Gen 18:19 'he will command his children'
+- Sanhedrin 56b:6 (Gen 9:6): blasphemy/idolatry/bloodshed legs; bloodshed cites Gen 9:6
+- Sanhedrin 57a:1 (Gen 6:11, 6:12): hashchatah = sexual sin + idolatry, from Gen 6:11-12 (flood indictment as legal category)
+- Sanhedrin 57a:3 (Gen 9:6): bloodshed leg restated on Gen 9:6
+- Sanhedrin 57a:4 (Gen 9:3): ROBBERY from Gen 9:3 'as the green herb' (of the field, not the garden)
+- Sanhedrin 57a:5 (Gen 9:4): LIMB FROM THE LIVING from Gen 9:4 'flesh with its life-blood you shall not eat'
+- Sanhedrin 57a:6 (Gen 9:7): castration ban from Gen 9:7 'swarm and multiply'
+- Sanhedrin 57a:7 (Gen 6:20): mixed-kinds ban from Gen 6:20 'of the fowl by its kind' (ark spec as law source)
+- Sanhedrin 57a:9 (Gen 9:6): Rav Sheshet's challenge: bloodshed explicit at Gen 9:6, whence the rest
+- Sanhedrin 57b:1 (Gen 9:6): Noahide executed for bloodshed (Gen 9:6 continuation)
+- Sanhedrin 57b:10 (Gen 2:24): woman's liability: Gen 2:24 'a MAN shall leave' vs 'they shall be one flesh'
+- Sanhedrin 57b:12 (Gen 2:16): 'saying' (lemor, Gen 2:16) = sexual prohibitions leg
+- Sanhedrin 57b:3 (Gen 9:5): ONE JUDGE suffices for a Noahide: Gen 9:5 'I will require it' singular
+- Sanhedrin 57b:4 (Gen 9:5): Gen 9:5 word-by-word: no warning needed, one witness, man not woman, even a relative
+- Sanhedrin 57b:5 (Gen 9:6): R. Yishmael: FETUS included - Gen 9:6 'blood of man IN man' = the embryo (abortion law from our ink)
+- Sanhedrin 57b:7 (Gen 18:19): objection from Gen 18:19 'he will command' re women in dinim
+- Sanhedrin 58a:7 (Gen 2:24): Gen 2:24 dissected: 'his father'/'his mother' - R. Eliezer vs R. Akiva on which relatives banned
+- Sanhedrin 58a:8 (Gen 2:24): Gen 2:24 word-by-word: ve-davak not male; b-ishto not the neighbor's; one-flesh excludes beast
+- Sanhedrin 58b:14 (Gen 2:24): unnatural relations with one's wife: ve-davak (Gen 2:24)
+- Sanhedrin 58b:25 (Gen 8:22): a gentile who keeps a full Sabbath: Gen 8:22 'day and night shall not cease'
+- Sanhedrin 58b:5 (Gen 20:12): sister law: Gen 20:12 'my father's daughter, not my mother's' proves maternal sister banned
+- Sanhedrin 59a:12 (Gen 32:32): the SINEW: given to the sons of Jacob, not repeated at Sinai - the framework our G55-35 seat carries
+- Sanhedrin 59a:6 (Gen 9:4): blood from the living, R. Chanina b. Gamliel's extra law from Gen 9:4
+- Sanhedrin 59b:1 (Gen 17:9): circumcision: commanded to Noahides? Gen 17:9 'you and your seed' - repeated at Sinai for Israel alone
+- Sanhedrin 59b:10 (Gen 21:12): sons of Ishmael exempt: Gen 21:12 'in Isaac shall seed be called' (same statute as our G37-25)
+- Sanhedrin 59b:12 (Gen 17:14): sons of Keturah obligated: Gen 17:14 'et briti hefar' the inclusion
+- Sanhedrin 59b:13 (Gen 1:29): Adam not permitted meat: Gen 1:29 read as grant of herbs only
+- Sanhedrin 59b:14 (Gen 9:3, 9:4): meat permitted to Noach: Gen 9:3, limb-from-living carved out by Gen 9:4 'akh'
+- Sanhedrin 59b:16 (Gen 1:26, 1:28): 'dominion over fish' (Gen 1:26) = labor not eating (matches our day-6 dominion-as-labor seat)
+- Sanhedrin 59b:18 (Gen 1:26): 'fowl of the sky' (Gen 1:26) likewise labor
+- Sanhedrin 59b:20 (Gen 1:28): 'every creeping beast' (Gen 1:28) brings in the serpent (for labor)
+- Sanhedrin 59b:3 (Gen 9:7): procreation: said to the sons of Noach (Gen 9:7), repeated at Sinai for Israel
+- Sanhedrin 59b:9 (Gen 17:9): circumcision restricted: 'you and your seed' (Gen 17:9), no one else
+- Sanhedrin 5a:6 (Gen 49:10): judicial AUTHORITY: 'the scepter shall not depart' (Gen 49:10) = the exilarchs' license to judge
+- Sanhedrin 72b:15 (Gen 9:6): the PURSUER: 'who sheds man's blood by man shall his blood be shed' (Gen 9:6) - save the pursued by the pursuer's blood
+- Sanhedrin 72b:17 (Gen 9:6): pursuer warning formula quoting Gen 9:6
+- Sanhedrin 91a:16 (Gen 25:5): gift-deed law: Gen 25:5-6 'gave all to Isaac; gifts to concubines' sons' - lifetime deeds settle inheritance
+- Sanhedrin 91a:8 (Gen 9:25): slave-property doctrine from Gen 9:25 'slave of slaves': what a slave acquires his master owns
+- Shabbat 105a:2 (Gen 17:5): NOTARIKON licensed from the Torah: av hamon goyim unpacked letter by letter (17:5) - in the writing-liability sugya
+- Shabbat 108a:10 (Gen 17:14): WHERE circumcision is done: foreskin-foreskin analogy; the fruit-making place (17:14 family)
+- Shabbat 127a:13 (Gen 18:3): hospitality greater than receiving the Presence: 'my Lord, do not pass by' (18:3)
+- Shabbat 132a:10 (Gen 17:7): the generations-generations analogy (17:7)
+- Shabbat 132a:15 (Gen 17:12): 'on the day' - by day and not by night, from 'eight days old' (17:12)
+- Shabbat 132a:20 (Gen 17:12): 'eighth' excludes the seventh - from the same clause (17:12)
+- Shabbat 132a:6 (Gen 17:11): circumcision overrides Shabbat: the sign-sign analogy (17:11)
+- Shabbat 132a:8 (Gen 17:11): the covenant-covenant analogy (17:11)
+- Shabbat 132a:9 (Gen 17:14): an adult, of whom 'covenant' is written - should he override? (17:14)
+- Shabbat 132b:10 (Gen 17:10, 17:14): adult/minor/in-between: where 'flesh' is written (17:10, 17:14)
+- Shabbat 133b:13 (Gen 17:14): the overconfident circumciser on Shabbat dusk - liability shape (17:14 frame)
+- Shabbat 137a:3 (Gen 17:10): 'himol lakhem kol zakhar' - why circumcision differs (17:10)
+- Shabbat 151b:9 (Gen 9:2): the dread-of-man grant read as a live-only condition: day-old alive needs no guard, dead Og does (9:2)
+- Shabbat 152a:15 (Gen 50:10): SEVEN-DAY MOURNING from 'he made for his father a mourning of seven days' (50:10)
+- Shabbat 32a:4 (Gen 32:11): never stand in danger counting on a miracle - merit is deducted: 'I am diminished by all the kindnesses' (32:11)
+- Shabbat 95a:1 (Gen 2:22): hair-plaiting on Shabbat = BUILDING: 'He BUILT the rib' - He braided Eve's hair (2:22); a labor-definition from our verse
+- Shevuot 35b:11 (Gen 19:18): every name in the Lot passage profane except 19:18 - the same classification
+- Shevuot 35b:9 (Gen 18:3): name-sanctity ON OUR INK: every 'Lord' of Abraham sacred except 18:3 - erasure law
+- Shevuot 36a:13 (Gen 9:15): NO is an oath: 'the waters shall NO more become a flood' (9:15) with Isaiah's 'I swore'
+- Shevuot 36a:14 (Gen 9:11, 9:15): doubled no, doubled yes: the covenant's two negations (9:11, 9:15)
+- Shevuot 38b:20 (Gen 24:3): the oath administered 'by the LORD': Abraham's adjuration (24:3)
+- Shevuot 38b:22 (Gen 24:2): grasping an object at the oath: the thigh-grasp scene (24:2)
+- Sotah 10b:6 (Gen 38:25): BETTER THE FURNACE THAN SHAMING ANOTHER IN PUBLIC - derived from Tamar (Gen 38:25)
+- Sotah 14a:4 (Gen 18:1, 25:11, 3:21): IMITATIO DEI: clothe the naked (Gen 3:21), visit the sick (18:1), comfort mourners (25:11) - the kindness obligations rooted verse by verse
+- Sotah 45b:17 (Gen 7:22): THE NOSE-PREDICATE'S SECOND LAW: corpse measured FROM THE NOSE for the nearest-city rite - 'all in whose nostrils was the breath of life' (Gen 7:22); a new call site for the scan's career list
+- Sukkah 11b:14 (Gen 2:6): SUKKAH ROOFING defined from the mist: not impurity-susceptible, earth-grown (2:6)
+- Taanit 10b:6 (Gen 42:1): do not display satiety in famine: 'why do you show yourselves' (42:1)
+- Taanit 10b:7 (Gen 45:24): no halakhic engrossment on the road: 'do not quarrel on the way' (45:24)
+- Taanit 11a:4 (Gen 41:50): marital relations forbidden in famine years: 'born BEFORE the famine came' (41:50), the childless excepted
+- Taanit 22b:11 (Gen 2:7): the self-affliction limit: 'the man became a LIVING soul - keep it alive' (2:7)
+- Yevamot 100b:9 (Gen 17:7): 'to be God to you and your seed after you' (17:7): the ban on gentile and slave unions
+- Yevamot 17b:6 (Gen 13:8): why the brotherhood analogy takes the sons of Jacob and not Lot's 'men brothers' (13:8) - the free-term analysis
+- Yevamot 24a:6 (Gen 48:6): LEVIRATE 'NAME' MEANS INHERITANCE: name-name analogy to 'on the name of their brothers in their inheritance' (48:6)
+- Yevamot 34b:3 (Gen 38:9): the acts of Er and Onan defined (38:9)
+- Yevamot 34b:4 (Gen 38:10, 38:9): Er's act inferred from the matched deaths (38:10)
+- Yevamot 42a:6 (Gen 17:7): the wait between husbands: distinguish the first's seed - 'to your seed AFTER you' (17:7)
+- Yevamot 61b:13 (Gen 24:16): betulah = maiden, from 'the maiden, very fair, a virgin' (24:16)
+- Yevamot 61b:16 (Gen 2:18): one must not stand without a wife even with children: 'not good that the man be alone' (2:18)
+- Yevamot 62a:14 (Gen 22:5): a slave has no lineage: 'sit here WITH the donkey' (22:5)
+- Yevamot 62b:17 (Gen 3:16): conjugal duty before a journey - the longing clause of the curse (3:16)
+- Yevamot 63b:16 (Gen 9:6, 9:7): neglecting procreation = shedding blood: the juxtaposition at Gen 9:6-7
+- Yevamot 63b:17 (Gen 9:6, 9:7): or diminishing the image - the same juxtaposition's second reading
+- Yevamot 65b:9 (Gen 18:12, 18:13): PEACE PERMITS THE ALTERED REPORT: God Himself changed Sarah's words (18:12-13)
+- Yevamot 72a:7 (Gen 17:13, 17:14): the drawn foreskin re-circumcised: himol yimol + 'my covenant he broke' (17:13-14)
+- Yevamot 88a:13 (Gen 42:8): identity evidence: 'Joseph recognized his brothers and they did not recognize him' (42:8) - the beard rule
+- Yoma 77a:14 (Gen 31:50): marital deprivation is called AFFLICTION: 'if you afflict my daughters' (31:50) - the Yom Kippur innuy roster's source
+- Yoma 87a:13 (Gen 50:17): ASK FORGIVENESS AT MOST THREE TIMES: the brothers' triple plea (50:17) - a rider on our forgiveness module
+- Zevachim 108b:15 (Gen 8:20): R. Yosei's outside-slaughter source: 'Noach built an altar' (8:20)
+- Zevachim 115b:18 (Gen 8:20): all species valid on a private altar: 'of every clean beast and every clean fowl' (8:20)
+- Zevachim 116a:11 (Gen 7:16): the self-presenting animals: 'those that CAME, male and female' (7:16) - ark ink in altar law
+- Zevachim 116a:14 (Gen 4:4): did the sons of Noach offer peace-offerings? Abel's FATS prove it (4:4)
+- Zevachim 53b:8 (Gen 49:27): the altar's strip in the portion of 'Benjamin the wolf' (49:27) - Temple geography from the testament
+- Zevachim 88b:6 (Gen 37:31): the tunic atones for bloodshed: 'they dipped the tunic in the blood' (37:31)
+- Zevachim 97b:9 (Gen 22:10, 22:13): the knife and the burnt-offering from the binding (22:10, 22:13)

@@ -1227,3 +1227,99 @@ teaches the composition mechanism. Running a composite row against the
 machine DECOMPILES it — the exam reports which component functions we
 hold and which are missing. This is the oracle-anatomy insight one turn
 sharper: the oracle's rows are composite worked examples.
+
+**2026-09-01 — the 958 triaged; the nose-predicate found two more LAWS
+calling it.** The full Babylonian Talmud sweep of Genesis citations
+(owner: "run the triage on the 958 talmud passages") closed in one
+sitting: 206 rows of Talmud-only Genesis law (the Noahide sugya of
+Sanhedrin 56a-59b the motherlode: the seven laws word by word from
+va-yetzav at Gen 2:16, abortion from 'blood of man IN man', judicial
+procedure from Gen 9:5, the forbidden-relations dissection of Gen 2:24;
+plus the patriarch prayers, the guarantor law from 'I will be surety'
+(43:9), the seven-day mourning from 50:10, the three-time chazakah from
+'Joseph is gone', the charity cap from Jacob's doubled tithe-verb,
+sukkah roofing from the mist of 2:6, oath law from the flood covenant's
+doubled NO). THE SCAN'S PREDICTION CONFIRMED TWICE: the life-at-the-nose
+definition (Gen 7:22) is CALLED by two more laws the triage surfaced —
+Sotah 45b:17 (the corpse measured FROM THE NOSE for the nearest-city
+rite) and Bekhorot 46b:2 (the emerging head counts for firstborn law
+when breath is in its nostrils). Three legal call sites plus the
+narrative career: a definition seated once, called across the canon.
+174 rows were already held by the machine — including twelve of our own
+seated claims meeting their own gemara in the wild (the seas dispute at
+Shabbat 109a, ben Beroka at Shabbat 111a and Gittin 43b, the thirteen
+covenants doing override-work at Shabbat 132a and Pesachim 69b, the
+39-labors token question at Shabbat 49b, the ten-years riders verbatim
+at Yevamot 64a). New checkable numerics flagged: thirteen vavs in the
+wine passage (Sanhedrin 70a), eight curved letters (Pesachim 3a), no tet
+before the light is seen good (Bava Kamma 55a).
+
+**2026-09-01 — THE RULE CATALOG opens (owner: "how do we catalog
+them").** World/step9/RULE_CATALOG.md is the rule book's master index:
+R-001..R-010 the compiled modules, R-011..R-216 the triage's Talmud-law
+candidates, grouped by tractate (the Mishnah's own organization - the
+catalog's table of contents grows into the tradition's). Stable IDs,
+moving statuses (CANDIDATE → EXAMINED → COMPILED), the standing path
+written at the bottom, the intake rule satisfied by construction. This
+is the concrete seed of the data-driven engine: when rules become
+records, the catalog rows are the records.
+
+**2026-09-01 — owner's insight: the census row is a CROSS-BOOK FUNCTION
+TABLE (F-005 was the signature, not a defect).** Reading Mishnah Eduyot
+2:10's own ink: five judgments, one constant (twelve months), each
+member anchored in a DIFFERENT book - flood (Genesis, computed by our
+engine from its own date rows), Job (Job), the Egyptians (Exodus
+chronology), Gog and Magog (Ezekiel, dated in the future), the wicked
+in Gehinnom (Isaiah 66:23 - the ONLY member the Mishnah quotes a verse
+for, because it is the only one not computable from a narrative's
+dates; even the dissent reads the other clause of the same verse).
+THE PATTERN: the Mishnah defines the constant once; each member's
+derivation is local to its book. Our corpus derived one book, so one
+member computes and one arrived import-only - exactly the signature of
+a distributed row. As books are derived, members light up one at a
+time. The inverse of the nose predicate (one definition called by many
+books); here one constant implemented by many books. Consequence: an
+import-only ruling is often a CROSS-BOOK ROW seen from one book's
+vantage; the frontier ledger is how the row's empty slots wait.
+
+**2026-09-01 — THE WRITTEN TORAH CONTAINS CALL SITES (owner's question:
+"can you find a place in the written torah that might call a function
+written in the mishnah?"). YES, verified in ink.** Deuteronomy 12:21:
+"you shall slaughter... KA'ASHER TZIVITIKHA ('as I have commanded
+you')" - and no slaughter procedure exists anywhere in the written
+Torah: a declared function with no body, whose implementation lives in
+Mishnah tractate Chullin (the Talmud reads it exactly so, Chullin 28a).
+Same pattern: MELAKHAH ('labor') forbidden on Shabbat but never defined
+in the ink - the 39-category definition is the Mishnah's (and our
+day-7 unit holds the claim that the count includes Gen 2:2's own
+melakhah token). In our derived span: Gen 32:33 bans "the sinew on the
+socket" and defines no scope - Mishnah Chullin 7 is the scope function.
+The Mishnah maps its own call-graph density at Chagigah 1:8: "mountains
+hanging by a hair - little Scripture, many laws." ARCHITECTURE
+CONFIRMED: the oral functions sit BESIDE the written code and are
+called when needed - sometimes by a situation (the rockslide),
+sometimes by the written text itself ("as I have commanded you"). Our
+layout (units never import the engine; the engine queries the units) is
+inherited from the texts, not designed.
+
+**2026-09-01 — WHERE THE FINISHED CODE GETS ITS INPUTS (the owner's
+standing question, answered).** Three input sources, all with the same
+format guard:
+(1) THE RECORDED HYPOTHETICALS - the tradition's own case library: the
+Mishnah/Tosefta input-output rows and the Talmud's posed cases,
+thousands of them, each arriving WITH its expected output (that is what
+makes them tests). The Exodus 21 reading already yielded 64 scenes this
+way; the two exams transcribed 28 more.
+(2) THE CANON'S OWN NARRATIVES - events in the text are inputs to the
+law: 1 Kings 17:17 runs the life-test (no breath = dead), the widow's
+son a test vector the canon itself supplies. When later books are
+derived, their event streams run through the standing rules - the
+narrative feeds the law engine. (Future build-queue item: rules that
+WATCH the world-fold's event stream and fire on matching states.)
+(3) POSED CASES - a person states a new situation via pose_case; the
+finished system's public face. The owner's two-pass horizon
+(2026-08-31): pass 1 compiles the books, pass 2 takes inputs.
+THE FORMAT GUARD for all three: the vocabulary registry - every input
+value must be a term some source actually introduced, with its Hebrew
+ink. A case cannot be stated in words no source defined; that is what
+keeps the simulator from drifting into invented situations.

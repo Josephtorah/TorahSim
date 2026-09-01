@@ -89,3 +89,12 @@ All five findings ruled and seated: G03-12, G36-18, G33-30 (machine-checked
 13), G25-16, G29-25, G55-35. F-010's Sodom no-share leg corrected — G29-23
 held it all along (case-sensitive probe bug). Gates green on all six units,
 hash unmoved, exams 28/28. Resolutions: logic/findings/FINDINGS_QUEUE.md.
+
+## THE 958 — TRIAGED (2026-09-01, owner: "run the triage on the 958
+## talmud passages")
+COMPLETE. All 955 segment-refs read in full (3 range-refs covered by
+member rows). Verdicts: 206 LAW (Talmud-only Genesis law, case-row
+candidates), 488 AGGADAH, 174 CREDIT (already held / in-triage dups), 87
+QUOTE. Full ledger: TALMUD_TRIAGE_LEDGER.md (mirrored to
+logic/oral_triage/talmud_triage_gen_2026-09-01.md as the read-source
+record); the harvest: TALMUD_LAW_HARVEST.md.

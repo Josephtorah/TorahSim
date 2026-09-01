@@ -29,3 +29,14 @@ chased, never pretended.
 | Exodus 12:19 | "seven days shall no leaven be found in your houses" | leaven_search (Pesachim 1:1 bridge) | the found-word joins the search-found verbal analogy that lands on our Gen 44:12 | Pesachim 7b, recorded 2026-08-31 |
 | Deuteronomy 24:1 | "when a man takes a wife" | acquisition_by_money (Kiddushin 1:1 bridge) | the taking-taking verbal analogy joins it to our Gen 23:13 field-of-Ephron silver | Kiddushin 2a, recorded 2026-08-31 |
 | Numbers 14:37 + Numbers 16:33 + Deuteronomy 29:27 | (spies, Korach, ten tribes) | world_to_come non-Genesis members | Mishnah Sanhedrin 10:3's remaining members rest on underived books | recorded 2026-08-31 |
+
+## OWED — the census row's empty slots (owner's insight 2026-09-01)
+Mishnah Eduyot 2:10 is a five-member cross-book row; our engine carries
+two members (flood computed, Gehinnom import-only per F-005). Three
+slots owed:
+
+| slot | owed by | derives in |
+|---|---|---|
+| the judgment of Job, twelve months | judgment_durations | the book of Job (not yet derived) |
+| the judgment of the Egyptians, twelve months | judgment_durations | Exodus plague chronology (Exodus derived through ch. 21; the chronology derivation not yet examined) |
+| the judgment of Gog and Magog, twelve months | judgment_durations | Ezekiel (not yet derived; dated in the future by the row's own ink) |

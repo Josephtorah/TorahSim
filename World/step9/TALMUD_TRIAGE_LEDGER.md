@@ -1,0 +1,1051 @@
+# THE TALMUD TRIAGE LEDGER — all 958 Babylonian Talmud passages citing Genesis
+Owner's word 2026-09-01: "run the triage on the 958 talmud passages."
+Method settled in the 2026-08-31 scope discussion: every passage read and
+given a KIND verdict — the three piles, plus credits and quote-legs.
+Enumeration: the citation-links shelf (Data/links*.csv) filtered to the 37
+Babylonian Talmud tractates; text read from Data/bavli_*_he.json (daf index
+= daf*2-2, +1 for side b). 955 segment-refs read in full; the 3 range-form
+refs (Berakhot 2a:1-5, Eruvin 18b, Tamid 32a:3-4) are covered by member
+rows read within them. APPEND-ONLY.
+
+Verdict key:
+- LAW — halakhah the Talmud derives from the Genesis verse directly, with
+  no Mishnah row above it: case-row candidates for the Step 9 exam.
+- CREDIT — the statement is already held by the machine (a seated claim,
+  a module oracle, or an in-triage duplicate of a row already verdicted).
+- AGGADAH — narrative/homiletic expansion of Genesis: reading-shelf
+  material, much of it parallel to Bereshit Rabbah rows already read.
+- QUOTE — the verse serves as lexicon, mnemonic, or dialectic leg for a
+  matter not derived from Genesis.
+
+TALLY: 955 rows — LAW 206 · AGGADAH 488 · CREDIT 174 · QUOTE 87
+
+## Arakhin (6: AGGADAH 3, CREDIT 1, LAW 1, QUOTE 1)
+- **Arakhin 15b:19** [AGGADAH] (Gen 39:9, 4:13) — evil speech against the three: Joseph's 'great evil', Cain's 'great sin' (39:9, 4:13)
+- **Arakhin 16a:13** [CREDIT] (Gen 37:31) — the tunic atones for blood - dup of Zevachim 88b:6 (37:31)
+- **Arakhin 16a:9** [AGGADAH] (Gen 12:17) — plagues for forbidden relations: Pharaoh struck (12:17)
+- **Arakhin 16b:17** [LAW] (Gen 13:3) — do not change your lodging: 'to the place where his tent had been at first' (13:3)
+- **Arakhin 16b:18** [QUOTE] (Gen 13:3) — the second lodging derivation and the chance-guest difference (13:3)
+- **Arakhin 17a:6** [AGGADAH] (Gen 1:1-2) — the world nearly returned to chaos (1:1-2 frame)
+
+## Avodah Zarah (39: AGGADAH 12, CREDIT 12, LAW 8, QUOTE 7)
+- **Avodah Zarah 11a:6** [AGGADAH] (Gen 25:23) — two proud ones at one table - dup of Berakhot 57b:17 (25:23)
+- **Avodah Zarah 19a:1** [AGGADAH] (Gen 11:4, 13:13) — Abraham against the counsel of the dispersion and Sodom (11:4, 13:13)
+- **Avodah Zarah 23b:9** [CREDIT] (Gen 6:12) — hashchatah category - dup of Sanhedrin 57a:1
+- **Avodah Zarah 24b:20** [QUOTE] (Gen 31:35) — the Persians' menstruation word from 'the way of women' (31:35)
+- **Avodah Zarah 25a:12** [AGGADAH] (Gen 49:8) — the bow war hinted in Judah's hand-on-neck (49:8)
+- **Avodah Zarah 25a:2** [AGGADAH] (Gen 48:19) — the sun stands when 'his seed fills the nations' (48:19)
+- **Avodah Zarah 25b:8** [LAW] (Gen 33:14) — traveler's ruse with a dangerous escort: widen the road as Jacob did to Esau ('until I come to Seir', 33:14)
+- **Avodah Zarah 25b:9** [AGGADAH] (Gen 33:17) — 'and Jacob journeyed to Sukkot' - the ruse's proof (33:17)
+- **Avodah Zarah 26b:12** [LAW] (Gen 17:9) — circumcision by a gentile invalid: 'and YOU shall keep My covenant' (Gen 17:9)
+- **Avodah Zarah 27a:1** [QUOTE] (Gen 17:13, 17:9) — expert-physician row; the Genesis anchor contextual
+- **Avodah Zarah 27a:5** [CREDIT] (Gen 17:9) — the gentile-circumciser baraita restated - dup of 26b:12
+- **Avodah Zarah 27a:6** [LAW] (Gen 17:13) — the two derivations: la-H' himol vs himol yimol (17:13)
+- **Avodah Zarah 29a:5** [QUOTE] (Gen 1:2, 24:15) — medical mnemonics: wind on water, pitcher on shoulder (1:2, 24:15)
+- **Avodah Zarah 2b:1** [QUOTE] (Gen 25:23) — le'om = kingdom lexicon (25:23)
+- **Avodah Zarah 36b:7** [LAW] (Gen 38:24) — harlotry banned by the court of Shem - 'take her out and be burned' (38:24): jurisdiction history from our verse
+- **Avodah Zarah 3a:6** [CREDIT] (Gen 1:31) — the extra heh of ha-shishi: creation conditional on the Torah (1:31) - our day-6 witness state
+- **Avodah Zarah 3a:8** [AGGADAH] (Gen 31:36-42, 39:7-12) — Nimrod, Laban, and Potiphar's wife testify for the fathers (31:36-42, 39:7-12)
+- **Avodah Zarah 43b:3** [CREDIT] (Gen 1:27) — 'you shall not make WITH ME' - the image-making law seated on our day-6 unit
+- **Avodah Zarah 4a:15** [AGGADAH] (Gen 18:25) — chulin - 'far be it from You' (18:25)
+- **Avodah Zarah 51a:15** [LAW] (Gen 6:19) — MISSING-LIMB ban for Noahide offerings: 'of all the living' (Gen 6:19) - bring animals whose limbs live; ark-spec ink as sacrificial law
+- **Avodah Zarah 51a:16** [LAW] (Gen 7:3) — terefah excluded: 'to keep seed alive' (7:3)
+- **Avodah Zarah 51a:18** [LAW] (Gen 6:19, 6:9) — 'with YOU - like you' (6:18): the animals like Noach; and Noach himself tamim (6:9)
+- **Avodah Zarah 53b:13** [LAW] (Gen 11:1-9) — idol-annulment: the house of Nimrod abandoned in peacetime (the dispersion, 11:1-9) - annulled idolatry precedent
+- **Avodah Zarah 5a:12** [CREDIT] (Gen 1:31) — the same condition retold
+- **Avodah Zarah 5a:19** [AGGADAH] (Gen 30:1) — the childless as dead: 'give me sons or I die' (30:1)
+- **Avodah Zarah 5a:5** [CREDIT] (Gen 39:10) — Joseph's refusal dual reading - dup of Sotah 3b:14
+- **Avodah Zarah 5a:7** [CREDIT] (Gen 9:7) — procreation to the sons of Noach - dup of Sanhedrin 59b:3's frame
+- **Avodah Zarah 5a:9** [CREDIT] (Gen 5:1) — the book of Adam - dup of Sanhedrin 38b:10
+- **Avodah Zarah 5b:1** [AGGADAH] (Gen 3:12) — the ingrates: 'the woman YOU gave me' (3:12)
+- **Avodah Zarah 5b:10** [CREDIT] (Gen 6:19) — missing-limb ban restated - dup of 51a:15
+- **Avodah Zarah 5b:11** [CREDIT] (Gen 7:3) — terefah exclusion restated - dup of 51a:16
+- **Avodah Zarah 6a:1** [CREDIT] (Gen 6:19, 6:9) — 'with you - like you' restated - dup of 51a:18
+- **Avodah Zarah 6a:2** [QUOTE] (Gen 6:9) — tamim-in-his-ways dialectic leg (6:9)
+- **Avodah Zarah 7b:14** [CREDIT] (Gen 24:63) — meditation = prayer (24:63) - the minchah verse's second seat
+- **Avodah Zarah 8a:7** [AGGADAH] (Gen 3:19) — Adam's shortening days and the eight-day fast (3:19 frame)
+- **Avodah Zarah 8b:9** [AGGADAH] (Gen 33:12, 33:14) — Rome's two readings of the Esau meeting (33:12, 33:14)
+- **Avodah Zarah 9a:3** [QUOTE] (Gen 31:41) — era-arithmetic mnemonic: 'twenty years in your house' (31:41)
+- **Avodah Zarah 9a:7** [AGGADAH] (Gen 12:5) — Abraham fifty-two at the souls made in Charan (12:5)
+- **Avodah Zarah 9b:3** [QUOTE] (Gen 45:6, 46:5) — sabbatical mnemonic: 'two years the famine' (45:6)
+
+## Bava Batra (47: AGGADAH 29, CREDIT 7, LAW 9, QUOTE 2)
+- **Bava Batra 100a:7** [LAW] (Gen 13:17) — acquisition by walking: R. Eliezer from 'arise, walk the land... for to you I give it' (13:17)
+- **Bava Batra 110b:9** [LAW] (Gen 42:13) — paternal-brother inheritance: brotherhood-brotherhood analogy from the sons of Jacob (42:13)
+- **Bava Batra 113a:4** [LAW] (Gen 2:24) — the cleave-word doubled (yidbeku) in the husband-inheritance derivation (2:24 family)
+- **Bava Batra 115b:4** [AGGADAH] (Gen 36:20, 36:24) — Anah: Tzivon came upon his mother - genealogy inference (36:20, 36:24)
+- **Bava Batra 115b:5** [AGGADAH] (Gen 36:24) — 'hu Anah' - the same Anah as before (36:24 ink)
+- **Bava Batra 118b:1** [CREDIT] (Gen 49:22) — evil eye and Joseph - dup
+- **Bava Batra 118b:2** [CREDIT] (Gen 48:16) — the fish comparison - dup
+- **Bava Batra 120a:1** [CREDIT] (Gen 46:15) — Yocheved between the walls - dup of Sotah 12a:14
+- **Bava Batra 123a:10** [LAW] (Gen 48:5) — 'Ephraim and Manasseh shall be to me like Reuben and Simeon' (48:5) - tribal double-portion law
+- **Bava Batra 123a:13** [AGGADAH] (Gen 37:2) — the birthright fit for Rachel; Leah preceded by prayer (37:2)
+- **Bava Batra 123a:14** [AGGADAH] (Gen 29:17, 7:8) — Leah's soft eyes; Scripture would not demean even an impure animal (29:17 with 7:8's clean-language canon)
+- **Bava Batra 123a:16** [AGGADAH] (Gen 25:27) — Rebekah's inquiry at the crossroads (25:27)
+- **Bava Batra 123a:17** [AGGADAH] (Gen 29:31) — 'hated' = Esau's deeds hateful to her (29:31)
+- **Bava Batra 123a:18** [AGGADAH] (Gen 29:12) — 'her father's brother' - the trickster exchange (29:12)
+- **Bava Batra 123a:20** [AGGADAH] (Gen 29:25) — the signs passed on - dup of Megillah 13b:5 (29:25)
+- **Bava Batra 123a:21** [AGGADAH] (Gen 46:15, 46:27) — the seventy count and Dinah's twin (46:15, 46:27) - ledger arithmetic
+- **Bava Batra 123a:6** [AGGADAH] (Gen 48:22) — 'my sword and my bow' = prayer and petition (48:22)
+- **Bava Batra 123b:1** [AGGADAH] (Gen 43:29) — 'his mother's son' - the pearl Yocheved (43:29)
+- **Bava Batra 123b:2** [AGGADAH] (Gen 30:25) — Esau falls only to Rachel's seed (30:25)
+- **Bava Batra 141a:6** [CREDIT] (Gen 24:1) — the bakol daughter dispute in the inheritance sugya - G47-07's blessed-in-all family
+- **Bava Batra 143b:6** [LAW] (Gen 46:23) — 'the sons of Dan: Chushim' (46:23) - one child written plural: the bnei-canon for inheritance
+- **Bava Batra 15a:12** [QUOTE] (Gen 27:33, 37:16, 43:11) — dating Job by efo tokens (27:33, 37:16, 43:11)
+- **Bava Batra 15b:12** [AGGADAH] (Gen 13:17) — Satan's testimony: Abraham unquestioning at Machpelah (13:17)
+- **Bava Batra 15b:13** [AGGADAH] (Gen 22:12) — Job's fear praised above Abraham's (22:12)
+- **Bava Batra 15b:7** [AGGADAH] (Gen 34:7) — Job in Jacob's days; married Dinah (34:7 nevalah link)
+- **Bava Batra 16a:15** [AGGADAH] (Gen 12:11) — 'now I know you are beautiful' - he had not gazed (12:11)
+- **Bava Batra 16a:3** [AGGADAH] (Gen 13:17) — the Satan-testimony retold (13:17)
+- **Bava Batra 16a:8** [AGGADAH] (Gen 6:5) — Satan, the inclination, and the death angel one (6:5)
+- **Bava Batra 16b:10** [CREDIT] (Gen 24:1) — bakol: no daughter / a daughter / a daughter named Bakol / the gem - same seat
+- **Bava Batra 16b:11** [AGGADAH] (Gen 25:29) — Esau's restraint in Abraham's days; the lentil meal (25:29)
+- **Bava Batra 16b:14** [AGGADAH] (Gen 25:29, 25:32, 25:34) — Esau's five deeds that day - word-links (25:29-34)
+- **Bava Batra 16b:15** [AGGADAH] (Gen 35:29, 7:21) — gevi'ah and the righteous death (35:29, 7:21)
+- **Bava Batra 16b:16** [AGGADAH] (Gen 25:17, 25:9) — Ishmael repented: 'Isaac and Ishmael buried him' (25:9)
+- **Bava Batra 16b:17** [AGGADAH] (Gen 35:29) — the order proves the deference (35:29)
+- **Bava Batra 16b:18** [AGGADAH] (Gen 24:1) — three tasted the world to come in this world (24:1 leg)
+- **Bava Batra 16b:6** [AGGADAH] (Gen 6:1) — increase or strife came to the world (6:1)
+- **Bava Batra 173b:10** [LAW] (Gen 42:37) — the unconditional-guarantor category from Reuben's 'give him into my hand and I will return him' (42:37)
+- **Bava Batra 173b:9** [LAW] (Gen 43:9) — THE GUARANTOR BECOMES OBLIGATED: 'I will be surety for him, from my hand you shall require him' (43:9) - surety law's root
+- **Bava Batra 17a:1** [CREDIT] (Gen 24:1, 27:33, 33:11) — bakol-mikol-kol roster - dup of Sotah 5a:5
+- **Bava Batra 4a:5** [QUOTE] (Gen 41:43) — avrekh = tender king (41:43)
+- **Bava Batra 56a:9** [LAW] (Gen 15:18) — Kenite, Kenizzite, Kadmonite excluded from the conquest - the covenant's land list (15:18-19) as boundary law
+- **Bava Batra 58a:5** [AGGADAH] (Gen 1:27) — Adam's cave: 'you gazed at the likeness of My image' (1:27)
+- **Bava Batra 69b:1** [LAW] (Gen 23:17) — deed law: boundary clauses from 'the field of Ephron... in all its border round about' (23:17) - our Machpelah purchase as the drafting template
+- **Bava Batra 74b:5** [CREDIT] (Gen 1:21) — the great sea-creatures = Leviathan (1:21) - the provenance dispute seated in our day-5 unit with its Isaiah 27:1 anchor
+- **Bava Batra 7b:14** [AGGADAH] (Gen 22:17) — the righteous need no wall - sand and stars (22:17)
+- **Bava Batra 91a:16** [AGGADAH] (Gen 11:31) — Abraham imprisoned ten years; Ur the little fort (11:31)
+- **Bava Batra 91b:10** [AGGADAH] (Gen 19:15) — the two daughters 'found' - toward David (19:15)
+
+## Bava Kamma (23: AGGADAH 12, CREDIT 4, LAW 7)
+- **Bava Kamma 17a:10** [AGGADAH] (Gen 49:14, 49:22) — the two-tribe inheritance blessing (49:14, 49:22)
+- **Bava Kamma 49a:5** [LAW] (Gen 22:5) — ox goring a slave-woman - fetus damages as animal loss: am ha-domeh la-chamor (22:5)
+- **Bava Kamma 55a:12** [LAW] (Gen 1:21, 1:25) — breeding two SEA species banned: le-mino at sea learned from le-mino on land (1:21/1:25) - creation ink as kilayim law
+- **Bava Kamma 55a:6** [AGGADAH] (Gen 1:4) — no letter tet from bereshit until the light seen good (1:4) - ink-letter claim
+- **Bava Kamma 60b:1** [CREDIT] (Gen 1:4) — enter and leave by ki-tov - dup of Pesachim 2a:3
+- **Bava Kamma 60b:6** [LAW] (Gen 12:10) — famine in the city, scatter your feet - 'Abram went down to Egypt' (12:10)
+- **Bava Kamma 65b:18** [LAW] (Gen 31:38) — a day-old ram is a 'ram': 'your rams I have not eaten' (31:38) - sacrificial-age definition
+- **Bava Kamma 91b:8** [LAW] (Gen 9:5) — SELF-INJURY FORBIDDEN: 'your own blood I will require' (9:5)
+- **Bava Kamma 92a:11** [AGGADAH] (Gen 20:18) — the two restraints: seed and birth (20:18)
+- **Bava Kamma 92a:14** [AGGADAH] (Gen 20:18) — even the hens of Abimelech's house closed (20:18)
+- **Bava Kamma 92a:16** [LAW] (Gen 20:17, 21:1) — pray for your fellow first and be answered first: Abraham for Abimelech, then Sarah remembered (20:17 to 21:1)
+- **Bava Kamma 92a:19** [AGGADAH] (Gen 47:2) — the five brothers of doubled names (47:2)
+- **Bava Kamma 92a:22** [AGGADAH] (Gen 35:22) — Judah's rolling bones - dup of Sotah 7b:10 (35:22)
+- **Bava Kamma 92a:4** [CREDIT] (Gen 20:17, 20:7) — MISHNAH BAVA KAMMA 8:7 TEXT - our forgiveness module oracle (G36-18)
+- **Bava Kamma 92a:7** [CREDIT] (Gen 20:7) — the module's baraita: rams of Nevayot insufficient until he asks
+- **Bava Kamma 92a:9** [CREDIT] (Gen 20:4) — 'restore the man's wife in any case' - the module sugya's dialectic
+- **Bava Kamma 92b:13** [AGGADAH] (Gen 28:9) — birds of a feather: Esau to Ishmael (28:9) - the triple source
+- **Bava Kamma 92b:5** [AGGADAH] (Gen 16:8) — the saddle proverb from Hagar's answer (16:8)
+- **Bava Kamma 92b:6** [AGGADAH] (Gen 24:34) — state your flaw first: 'I am Abraham's slave' (24:34)
+- **Bava Kamma 92b:9** [AGGADAH] (Gen 24:67, 25:1) — comfort before the next marriage (24:67, 25:1)
+- **Bava Kamma 93a:2** [AGGADAH] (Gen 13:5) — property follows its owner: Lot with Abram (13:5)
+- **Bava Kamma 93a:3** [LAW] (Gen 16:5, 23:2) — invoking Heaven's judgment on a fellow - the invoker is punished first: Sarai's cry, Sarah's death (16:5, 23:2)
+- **Bava Kamma 93a:5** [AGGADAH] (Gen 20:16, 27:1) — the commoner's-curse chain - dup of Megillah 15a:18 (20:16, 27:1)
+
+## Bava Metzia (34: AGGADAH 21, CREDIT 6, LAW 5, QUOTE 2)
+- **Bava Metzia 106b:5** [LAW] (Gen 8:22) — the six agricultural seasons of the sharecropper law - built on 'seedtime and harvest, cold and heat' (8:22)
+- **Bava Metzia 117a:6** [QUOTE] (Gen 39:1) — upper-lower repair mnemonic: 'Joseph was brought DOWN' (39:1)
+- **Bava Metzia 39b:8** [CREDIT] (Gen 42:8) — the beard-identity rule - dup of Yevamot 88a:13
+- **Bava Metzia 53b:1** [QUOTE] (Gen 43:34) — se'et = eating - dup (43:34)
+- **Bava Metzia 59a:11** [LAW] (Gen 12:15, 12:16) — honor your wife, for blessing comes through her: 'he did good to Abram for her sake' (12:16)
+- **Bava Metzia 59a:3** [CREDIT] (Gen 38:24, 38:25) — furnace-before-shaming - dup of Sotah 10b:6
+- **Bava Metzia 84a:10** [CREDIT] (Gen 49:22) — Joseph and the evil eye - dup
+- **Bava Metzia 84a:11** [CREDIT] (Gen 48:16) — the fish comparison - dup
+- **Bava Metzia 86b:12** [AGGADAH] (Gen 18:7, 18:8) — measure for measure: the running, the butter and milk (18:7-8)
+- **Bava Metzia 86b:13** [AGGADAH] (Gen 18:16, 18:8) — standing over them; escorting them (18:8, 18:16)
+- **Bava Metzia 86b:14** [AGGADAH] (Gen 18:4) — a little water - the rock's water (18:4)
+- **Bava Metzia 86b:16** [AGGADAH] (Gen 18:4) — the dust-worship suspicion (18:4)
+- **Bava Metzia 86b:17** [AGGADAH] (Gen 18:1) — the third day of the circumcision - God visits the sick (18:1); the sun drawn out
+- **Bava Metzia 86b:18** [AGGADAH] (Gen 18:3) — Eliezer's errand; the Presence at the door (18:3)
+- **Bava Metzia 86b:19** [AGGADAH] (Gen 18:2) — binding and loosening - the guests hesitate (18:2)
+- **Bava Metzia 86b:20** [AGGADAH] (Gen 19:1, 19:25) — Michael, Gabriel, Raphael - and the singular 'He overturned' (19:1, 19:25)
+- **Bava Metzia 86b:21** [AGGADAH] (Gen 18:5) — the do-as-you-said contrast with Lot (18:5)
+- **Bava Metzia 86b:3** [AGGADAH] (Gen 18:7) — Solomon's thousand tables against Abraham's one calf (18:7)
+- **Bava Metzia 86b:7** [AGGADAH] (Gen 18:7) — 'a calf, tender and good' - one, two, three (18:7)
+- **Bava Metzia 86b:9** [AGGADAH] (Gen 18:7, 18:8) — each calf handed to the lad (18:7-8)
+- **Bava Metzia 87a:1** [LAW] (Gen 19:3) — one refuses a lesser host, never a greater: 'he urged them greatly' (19:3)
+- **Bava Metzia 87a:10** [CREDIT] (Gen 18:12, 18:13) — God altered Sarah's words - dup of Yevamot 65b:9's law
+- **Bava Metzia 87a:11** [CREDIT] (Gen 18:12, 18:13) — the peace-alteration baraita - same
+- **Bava Metzia 87a:12** [AGGADAH] (Gen 21:7) — 'who would have said - Sarah nursing SONS' (21:7)
+- **Bava Metzia 87a:13** [AGGADAH] (Gen 25:19) — the mockery and the opened springs; Isaac's face turned (25:19)
+- **Bava Metzia 87a:14** [AGGADAH] (Gen 24:1) — until Abraham no old age - dup of Sanhedrin 107b:17 (24:1)
+- **Bava Metzia 87a:15** [AGGADAH] (Gen 48:1) — until Jacob no illness - same dup (48:1)
+- **Bava Metzia 87a:2** [LAW] (Gen 18:5, 18:7) — the righteous say little and do much: bread promised, cattle run for (18:5, 18:7) - the source behind the Pirkei Avot 1:15 link
+- **Bava Metzia 87a:3** [AGGADAH] (Gen 23:15, 23:16) — Ephron's word and Ephron's deed: the centenaria shekels (23:15-16)
+- **Bava Metzia 87a:4** [AGGADAH] (Gen 18:6) — flour and fine flour - the hostess's eye (18:6)
+- **Bava Metzia 87a:5** [AGGADAH] (Gen 18:6, 18:8) — the bread never served (18:6, 18:8)
+- **Bava Metzia 87a:7** [AGGADAH] (Gen 18:9) — 'in the tent' - endearment of modesty (18:9)
+- **Bava Metzia 87a:9** [AGGADAH] (Gen 18:12) — 'after I am worn, freshness' - youth restored (18:12)
+- **Bava Metzia 93b:3** [LAW] (Gen 31:40) — the paid keeper's standard of care measured by Jacob's 'heat by day, frost by night' (31:40)
+
+## Beitzah (1: QUOTE 1)
+- **Beitzah 16a:3** [QUOTE] (Gen 47:22) — chok = sustenance: 'they ate their portion' (47:22)
+
+## Bekhorot (8: AGGADAH 2, CREDIT 1, LAW 3, QUOTE 2)
+- **Bekhorot 45a:19** [QUOTE] (Gen 30:22) — the womb-key clause in the firstborn dispute (30:22)
+- **Bekhorot 46b:2** [LAW] (Gen 7:22) — THE NOSE-PREDICATE'S THIRD LAW: the emerging head counts when 'the breath of life is in its nostrils' (7:22) - firstborn law; add to the scan's career list
+- **Bekhorot 50a:8** [LAW] (Gen 23:16) — all plain Torah silver = sela, EXCEPT Ephron's: centenaria, 'current with the merchant' (23:16)
+- **Bekhorot 55a:22** [LAW] (Gen 2:11-14) — vow-scope geography: all rivers are beneath the Euphrates (2:10-14) - 'the fourth river is Perat'
+- **Bekhorot 55b:2** [QUOTE] (Gen 2:10, 2:14) — 'the fourth river is Perat' - the leg (2:14)
+- **Bekhorot 57a:12** [CREDIT] (Gen 6:12) — hashchatah category - dup (6:12)
+- **Bekhorot 8a:10** [AGGADAH] (Gen 3:14) — the three the Presence addressed (3:14 frame)
+- **Bekhorot 8a:15** [AGGADAH] (Gen 3:14) — the serpent's gestation by a-fortiori on 'cursed above all' (3:14) - argued middah
+
+## Berakhot (64: AGGADAH 37, CREDIT 9, LAW 17, QUOTE 1)
+- **Berakhot 12b:28** [AGGADAH] (Gen 35:10) — the Jacob-name verse in the name-law sugya (35:10)
+- **Berakhot 13a:10** [AGGADAH] (Gen 17:15) — only Abraham was commanded about Sarai's name (17:15)
+- **Berakhot 13a:11** [AGGADAH] (Gen 32:29) — the Jacob objection (32:29)
+- **Berakhot 13a:12** [AGGADAH] (Gen 46:2) — Scripture itself reuses 'Jacob' (46:2)
+- **Berakhot 13a:5** [AGGADAH] (Gen 17:5) — father to Aram, then father to the world (17:5)
+- **Berakhot 13a:8** [LAW] (Gen 17:5) — calling Abraham 'Abram' breaches a positive command - 'your name SHALL BE Abraham' (Gen 17:5); R. Eliezer adds a negative
+- **Berakhot 18a:3** [LAW] (Gen 23:3, 23:4) — the mourner-before-burial exemption: 'Abraham rose from before his dead... I will bury my dead from BEFORE ME' (Gen 23:3-4)
+- **Berakhot 20a:7** [CREDIT] (Gen 49:22) — Joseph's seed and the evil eye - dup of Sotah 36b:6
+- **Berakhot 20a:8** [CREDIT] (Gen 48:16) — the fish comparison - dup of Sotah 36b:7
+- **Berakhot 25b:11** [LAW] (Gen 9:23) — a gentile's nakedness bars the Shema: 'their father's nakedness they saw not' (Gen 9:23)
+- **Berakhot 26a:17** [LAW] (Gen 1:5) — missed-evening-prayer makeup rides the day boundary: 'evening and morning, ONE DAY' (Gen 1:5) - a new call site of our day_boundary predicate
+- **Berakhot 26b:5** [LAW] (Gen 19:27) — ABRAHAM INSTITUTED MORNING PRAYER - 'Abraham rose early to the place where he had STOOD' (Gen 19:27), standing = prayer
+- **Berakhot 26b:6** [LAW] (Gen 24:63) — ISAAC INSTITUTED AFTERNOON PRAYER - 'Isaac went out to MEDITATE in the field toward evening' (Gen 24:63)
+- **Berakhot 26b:7** [LAW] (Gen 28:11) — JACOB INSTITUTED EVENING PRAYER - 'he ENCOUNTERED the place and lodged' (Gen 28:11), encounter = prayer
+- **Berakhot 27a:10** [LAW] (Gen 18:1) — prayer-hours defined from 'the HEAT OF THE DAY' (Gen 18:1) = six hours
+- **Berakhot 2a:9** [LAW] (Gen 1:5) — night precedes day for the Shema - learned from the world's creation, 'evening and morning one day' (Gen 1:5)
+- **Berakhot 34b:26** [AGGADAH] (Gen 2:10) — Eden and the Garden distinct - the river proves two (2:10); dup of Sanhedrin 99a:16
+- **Berakhot 34b:3** [LAW] (Gen 37:10) — bowing taxonomy: full prostration = spread arms and legs, from 'to bow to you to the GROUND' (Gen 37:10)
+- **Berakhot 40a:14** [CREDIT] (Gen 3:7, 9:21) — tree-of-knowledge species dispute - dup of Sanhedrin 70b:1
+- **Berakhot 42a:8** [CREDIT] (Gen 30:27, 39:5) — blessing follows the scholar (30:27/39:5) - dup of Sanhedrin 39b:11
+- **Berakhot 43b:8** [CREDIT] (Gen 38:25) — furnace-before-shaming from Tamar - dup of Sotah 10b:6's law
+- **Berakhot 49a:1** [CREDIT] (Gen 17:1-14) — 'and this was given with THIRTEEN covenants' - our G33-30 census cited in the grace sugya
+- **Berakhot 4a:16** [CREDIT] (Gen 28:15, 32:8) — 'perhaps sin will cause' (28:15 vs 32:8) - dup of Sanhedrin 98b:5
+- **Berakhot 54b:10** [LAW] (Gen 19:29) — the blessing rows on Lot and his wife: 'the true Judge' and 'who remembers the righteous' (Gen 19:29)
+- **Berakhot 54b:8** [LAW] (Gen 19:26) — the pillar of salt as a standing blessing-object (Gen 19:26)
+- **Berakhot 55a:17** [AGGADAH] (Gen 37:9) — a dream partly void: the sun and moon (37:9)
+- **Berakhot 55a:8** [AGGADAH] (Gen 12:3) — refusing the blessing cup; Joseph died first for airs of authority (12:3 leg)
+- **Berakhot 55b:1** [AGGADAH] (Gen 37:9) — his mother was already gone (37:9 leg)
+- **Berakhot 55b:12** [CREDIT] (Gen 48:16, 49:22) — the evil-eye formula - same Joseph cluster dup
+- **Berakhot 55b:17** [LAW] (Gen 41:12, 41:13) — DREAMS FOLLOW THE MOUTH - 'as he interpreted for us, so it was' (Gen 41:13); Rava's rider: when the reading fits the dream
+- **Berakhot 55b:18** [AGGADAH] (Gen 40:16) — each saw the other's dream and meaning (40:16)
+- **Berakhot 55b:2** [AGGADAH] (Gen 37:2, 41:46) — hope for a good dream twenty-two years - Joseph's count (37:2, 41:46)
+- **Berakhot 55b:20** [AGGADAH] (Gen 41:32) — three dreams that come true; the doubled dream (41:32)
+- **Berakhot 56b:13** [AGGADAH] (Gen 41:14) — dream-omens: say the good verse first (41:14 shaving)
+- **Berakhot 56b:19** [AGGADAH] (Gen 46:4) — seeing Ishmael - the prayer heard; the camel and the descent promise (46:4)
+- **Berakhot 56b:7** [AGGADAH] (Gen 26:19) — seeing a well - peace, Torah, life (26:19)
+- **Berakhot 57a:6** [AGGADAH] (Gen 49:11) — the laden vine and the shoot (49:11)
+- **Berakhot 57b:14** [AGGADAH] (Gen 3:19) — sweat as a good sign - 'by the sweat of your brow' (3:19)
+- **Berakhot 57b:17** [AGGADAH] (Gen 25:23) — 'two nations' read two proud ones - Antoninus and Rabbi (25:23)
+- **Berakhot 59b:4** [QUOTE] (Gen 2:14) — Chidekel/Perat name etymologies (2:14)
+- **Berakhot 5b:24** [AGGADAH] (Gen 25:24) — her days were FULL - twins carried to term (25:24)
+- **Berakhot 60a:12** [AGGADAH] (Gen 30:21) — Leah's judgment and Dinah (30:21)
+- **Berakhot 61a:11** [AGGADAH] (Gen 7:23) — flood punishment order: man first, then beast (7:23)
+- **Berakhot 61a:14** [CREDIT] (Gen 5:2, 9:6) — 'male and female He created them' vs the image clause, thought-then-deed - G14-15's own proof text with its resolution
+- **Berakhot 61a:15** [AGGADAH] (Gen 2:21) — the closed flesh - the cut place (2:21)
+- **Berakhot 61a:16** [AGGADAH] (Gen 2:22) — vayiven on the face-face view (2:22)
+- **Berakhot 61a:19** [LAW] (Gen 2:22) — escort duty (shoshvin): 'He BROUGHT her to the man' (Gen 2:22) - the Torah taught conduct, the greater escorts the lesser
+- **Berakhot 61a:24** [LAW] (Gen 24:61) — riding behind, not before: 'Rebekah and her maidens rode AFTER the man' (Gen 24:61)
+- **Berakhot 61a:27** [AGGADAH] (Gen 4:7) — the inclination at the heart's two doors (4:7)
+- **Berakhot 61a:3** [AGGADAH] (Gen 2:7) — two yods, two inclinations (2:7 spelling)
+- **Berakhot 61a:6** [AGGADAH] (Gen 2:22) — the building of the rib (2:22)
+- **Berakhot 62b:15** [AGGADAH] (Gen 22:8, 32:3) — what was seen at Moriah: the camps or Isaac's ash (22:8, 32:3)
+- **Berakhot 62b:16** [AGGADAH] (Gen 22:14) — atonement money or the Temple (22:14)
+- **Berakhot 62b:17** [AGGADAH] (Gen 22:14) — and the Temple view prevails (22:14)
+- **Berakhot 63b:22** [AGGADAH] (Gen 47:6) — hospitality a-fortiori from Pharaoh's cattle-chiefs (47:6)
+- **Berakhot 64a:10** [LAW] (Gen 15:15) — parting from the dead: say 'go IN peace' - 'you shall come to your fathers IN peace' (Gen 15:15)
+- **Berakhot 6b:8** [LAW] (Gen 19:27) — a fixed place for prayer, from Abraham's returning 'to the PLACE where he had stood' (Gen 19:27)
+- **Berakhot 7b:1** [AGGADAH] (Gen 15:2, 15:8) — Abraham first called Him Master (15:2, 15:8)
+- **Berakhot 7b:5** [AGGADAH] (Gen 29:35) — Leah first gave thanks (29:35)
+- **Berakhot 7b:6** [AGGADAH] (Gen 25:33, 27:41) — Reuben against Esau (25:33)
+- **Berakhot 7b:7** [AGGADAH] (Gen 27:36) — 'he outwitted me twice' (27:36)
+- **Berakhot 7b:8** [AGGADAH] (Gen 37:21) — Reuben unjealous though the birthright passed (37:21)
+- **Berakhot 8b:14** [AGGADAH] (Gen 31:4) — Jacob called his wives to the field to consult (31:4)
+- **Berakhot 9b:1** [AGGADAH] (Gen 15:13, 15:13-14) — 'afterward with great wealth' - the promise's second half (15:13-14)
+
+## Chagigah (14: AGGADAH 12, CREDIT 2)
+- **Chagigah 12a:10** [AGGADAH] (Gen 1:4) — the light hidden for the righteous (1:4)
+- **Chagigah 12a:15** [CREDIT] (Gen 17:1, 35:11) — SHADDAI = who said ENOUGH (17:1, 35:11) - the she-dai bound gen_03's amendment holds
+- **Chagigah 12a:16** [AGGADAH] (Gen 1:1, 2:4) — heavens first or earth first: the houses' dispute (1:1 vs 2:4)
+- **Chagigah 12a:20** [CREDIT] (Gen 1:1) — the et-inclusions of 1:1 - the particle-rule family our TIR cites as chain authority
+- **Chagigah 12a:6** [AGGADAH] (Gen 1:1, 1:2, 1:3, 1:5) — the ten things of day one, verse by verse (1:1-5)
+- **Chagigah 12a:8** [AGGADAH] (Gen 1:17, 1:19) — the first light vs the fourth-day luminaries (1:17)
+- **Chagigah 12b:1** [AGGADAH] (Gen 1:2) — why the earth's deeds are told first (1:2)
+- **Chagigah 12b:5** [AGGADAH] (Gen 1:17) — the seven firmaments; 'He set them in the rakia' (1:17)
+- **Chagigah 15a:3** [AGGADAH] (Gen 1:2) — ben Zoma and the three-finger gap (1:2)
+- **Chagigah 15a:4** [AGGADAH] (Gen 1:2, 1:6) — when did the hovering happen - the day-two separation (1:6)
+- **Chagigah 16a:15** [AGGADAH] (Gen 8:21) — trust not the inclination (8:21)
+- **Chagigah 3a:14** [AGGADAH] (Gen 37:24) — the empty pit - snakes and scorpions - dup (37:24)
+- **Chagigah 4b:8** [AGGADAH] (Gen 45:3) — R. Elazar wept at Joseph's rebuke (45:3)
+- **Chagigah 5b:6** [AGGADAH] (Gen 33:12) — 'I will go alongside you' (33:12)
+
+## Chullin (66: AGGADAH 28, CREDIT 21, LAW 12, QUOTE 5)
+- **Chullin 100b:14** [CREDIT] (Gen 32:33) — gemara diyuk on R. Yehudah's sons-of-Jacob argument - G55-35 territory
+- **Chullin 100b:3** [CREDIT] (Gen 32:33) — Mishnah Chullin 7:6 text - our sciatic module; the Sinai dispute seated G55-35
+- **Chullin 101a:3** [CREDIT] (Gen 32:33) — Rava's sinew-only-flesh-permitted scope - module gemara (G55-31)
+- **Chullin 101b:7** [CREDIT] (Gen 32:33) — the same R. Yehudah clause requoted
+- **Chullin 101b:9** [CREDIT] (Gen 35:10, 46:5) — 'sons of Israel carried Jacob' (Gen 46:5) - name-timing objection in the sinew sugya, F-011 framework
+- **Chullin 113a:20** [LAW] (Gen 38:20) — meat-milk 'kid' defined from 'Judah sent the kid of the GOATS' (Gen 38:20)
+- **Chullin 113b:2** [LAW] (Gen 27:16) — 'skins of the kids of goats' (Gen 27:16): where Scripture specifies vs plain gedi - the definition's second leg
+- **Chullin 134b:16** [CREDIT] (Gen 32:33) — 'the choicest of the thigh' reused for the priestly foreleg - Rava's sinew rule as precedent
+- **Chullin 137b:12** [QUOTE] (Gen 32:15) — rechelim: Torah language vs sages' language (Gen 32:15)
+- **Chullin 139b:10** [AGGADAH] (Gen 6:3, 6:4) — Moses-in-the-Torah riddle: beshagam (Gen 6:3) - gen_15's clause in wordplay
+- **Chullin 139b:11** [AGGADAH] (Gen 3:11) — Haman riddle: ha-min ha-etz (3:11)
+- **Chullin 139b:19** [LAW] (Gen 7:14) — 'every bird every wing' (Gen 7:14) - tzippor/kanaf distinction in the bird-law sugya
+- **Chullin 16a:5** [LAW] (Gen 22:10) — slaughter valid with a detached blade: 'he took the KNIFE to slay' (Gen 22:10) - shechitah rule from the binding
+- **Chullin 18b:11** [QUOTE] (Gen 32:2) — paga = meet or touch? (Gen 32:2 lexicon)
+- **Chullin 23a:2** [CREDIT] (Gen 6:12) — hashchatah = sexual sin (Gen 6:12) - dup of Sanhedrin 57a:1's category
+- **Chullin 27b:11** [CREDIT] (Gen 1:20, 2:19) — birds from water or earth? (Gen 1:20 vs 2:19) - the mud-shallows resolution our day-5 unit holds
+- **Chullin 27b:13** [CREDIT] (Gen 2:19) — the mud answer's second telling
+- **Chullin 49a:18** [LAW] (Gen 12:3) — the priests' return-blessing: 'I will bless those who bless you' (Gen 12:3) - R. Akiva's source
+- **Chullin 60a:10** [CREDIT] (Gen 1:11, 1:12) — the grasses' own a-fortiori at le-mino (Gen 1:11-12) - held in the day-3 unit
+- **Chullin 60a:12** [CREDIT] (Gen 1:12) — the world-minister's psalm on the grasses - same cluster
+- **Chullin 60a:9** [AGGADAH] (Gen 2:1) — creations at full stature and beauty (tzivyonam, 2:1)
+- **Chullin 60b:12** [LAW] (Gen 21:23) — Abimelech's oath (Gen 21:23) as standing legal bar - the Caphtorim conquest workaround
+- **Chullin 60b:15** [AGGADAH] (Gen 47:21) — Joseph moved the people so his brothers not be called exiles (47:21)
+- **Chullin 60b:2** [CREDIT] (Gen 1:16) — the moon's diminution (Gen 1:16 great/small) - day-4 reading holds the two-kings dispute
+- **Chullin 60b:3** [CREDIT] (Gen 1:14) — the moon's consolations (Gen 1:14) - same cluster
+- **Chullin 60b:5** [CREDIT] (Gen 1:12, 2:5) — Rav Asi: grasses waited at the soil's mouth (1:12 vs 2:5) - gen_03's WITNESS_STATE(deshe) verbatim
+- **Chullin 65a:2** [LAW] (Gen 14:4) — SCRIBAL LAW: Kedorlaomer written as two words but never on two lines (Gen 14:4)
+- **Chullin 71a:12** [QUOTE] (Gen 2:19, 2:7) — fragment ('the words of R. Meir'); Gen anchor incidental
+- **Chullin 7b:13** [QUOTE] (Gen 36:24) — yemim/mule lexicon (Gen 36:24)
+- **Chullin 83a:15** [CREDIT] (Gen 1:5) — Mishnah Chullin 5:5 text - our day_boundary module oracle
+- **Chullin 85a:12** [LAW] (Gen 43:16) — fitting-slaughter analogy: 'slaughter a slaughtering and PREPARE' (Gen 43:16)
+- **Chullin 88b:10** [AGGADAH] (Gen 18:27) — dust-and-ashes reward: cow ash and sotah dust (18:27)
+- **Chullin 89a:1** [AGGADAH] (Gen 14:23) — thread-and-strap reward: blue thread and tefillin strap (14:23)
+- **Chullin 89a:4** [LAW] (Gen 14:23-24, 14:24) — consumed robbery cannot be restored - 'save what the lads have eaten' (Gen 14:24)
+- **Chullin 89a:6** [AGGADAH] (Gen 18:27) — greatness met with humility roster (18:27)
+- **Chullin 89a:7** [AGGADAH] (Gen 11:4) — the nations' opposite roster: Nimrod's 'let us build' (11:4)
+- **Chullin 89b:3** [CREDIT] (Gen 32:33) — Mishnah Chullin 7:1 text - our sciatic module oracle
+- **Chullin 90a:2** [CREDIT] (Gen 32:25-33) — sinew binds consecrated animals because it preceded them (sons-of-Noach timing) - F-011 framework
+- **Chullin 90b:4** [LAW] (Gen 32:33) — sinew of a burnt-offering: 'the CHILDREN OF ISRAEL shall not eat' - not 'the altar' (Gen 32:33 subject-scope)
+- **Chullin 91a:12** [CREDIT] (Gen 32:33) — the choicest-of-the-thigh scope - the side dispute held at G55-31
+- **Chullin 91a:14** [AGGADAH] (Gen 32:26) — the wrestler's hand reached the right socket (32:26)
+- **Chullin 91a:18** [AGGADAH] (Gen 32:26) — the dust of their feet rose to the Throne (32:26)
+- **Chullin 91a:21** [CREDIT] (Gen 43:16) — 'slaughter and prepare' = remove the sinew before them (Gen 43:16) - R. Yehudah's side of F-011
+- **Chullin 91a:22** [AGGADAH] (Gen 32:25) — left alone for small jars - the righteous and their property (32:25)
+- **Chullin 91a:23** [AGGADAH] (Gen 32:25) — a scholar should not go out alone at night (32:25)
+- **Chullin 91b:11** [AGGADAH] (Gen 28:13) — angels gazing at the image above and below (28:13)
+- **Chullin 91b:12** [AGGADAH] (Gen 28:13) — the Land folded beneath him (28:13)
+- **Chullin 91b:13** [AGGADAH] (Gen 28:1, 32:27) — the angel's first song: 'send me, dawn has risen' (32:27)
+- **Chullin 91b:2** [AGGADAH] (Gen 22:3) — Abraham's early saddling as the zealous hour (22:3)
+- **Chullin 91b:3** [AGGADAH] (Gen 37:14) — 'go see the peace of your brothers' (37:14)
+- **Chullin 91b:4** [AGGADAH] (Gen 32:32) — 'the sun rose FOR HIM' (32:32)
+- **Chullin 91b:5** [AGGADAH] (Gen 32:32) — R. Akiva's question on the same clause
+- **Chullin 91b:6** [AGGADAH] (Gen 28:10, 28:11) — the sun that set for him rose for him; the leap to Charan (28:10-11)
+- **Chullin 91b:8** [AGGADAH] (Gen 28:11, 28:18) — the quarreling stones merged (28:11 vs 28:18)
+- **Chullin 91b:9** [AGGADAH] (Gen 28:12) — the ladder's width: eight thousand parasangs (28:12)
+- **Chullin 92a:13** [AGGADAH] (Gen 40:11) — the three cups of Egypt (40:11)
+- **Chullin 92a:17** [QUOTE] (Gen 50:5) — kirah = purchase (Gen 50:5 lexicon)
+- **Chullin 92a:2** [AGGADAH] (Gen 32:29) — who became master of whom (32:29 decodes Hosea)
+- **Chullin 92a:3** [AGGADAH] (Gen 32:27) — the angel wept to Jacob (32:27)
+- **Chullin 92a:4** [AGGADAH] (Gen 32:29) — two princes hinted: exilarch and patriarch (32:29)
+- **Chullin 92a:5** [AGGADAH] (Gen 40:10) — the vine's three branches as leaders (40:10)
+- **Chullin 92a:9** [AGGADAH] (Gen 40:10) — R. Elazar of Modiin: the vine is Jerusalem (40:10)
+- **Chullin 92b:2** [CREDIT] (Gen 32:33) — the bird has a socket but not rounded - our CHUL_7_1_b's mechanism
+- **Chullin 95b:14** [LAW] (Gen 42:36) — the THREE-TIME pattern rule (chazakah): 'Joseph is gone, Simeon is gone, and Benjamin you will take' (Gen 42:36)
+- **Chullin 95b:8** [LAW] (Gen 24:14) — divination defined by Eliezer's test (Gen 24:14) - the paradigm case of the nichush ban
+- **Chullin 96a:11** [CREDIT] (Gen 32:33) — Shmuel: only upon the socket (al kaf) - module scope
+
+## Eruvin (21: AGGADAH 14, CREDIT 4, LAW 2, QUOTE 1)
+- **Eruvin 100b:19** [AGGADAH] (Gen 30:16) — Leah's going-out rewarded with Issachar's wisdom (30:16)
+- **Eruvin 100b:20** [AGGADAH] (Gen 3:16) — Eve's ten curses - the catalog opens (3:16)
+- **Eruvin 100b:21** [AGGADAH] (Gen 3:16) — the curses itemized: two bloods, raising-pain, pregnancy-pain, birth-pain (3:16) - the niddah etiology
+- **Eruvin 18a:15** [AGGADAH] (Gen 2:22) — two faces or a tail - Rav and Shmuel (2:22)
+- **Eruvin 18a:19** [AGGADAH] (Gen 7:23) — the flood erased man first, then beast (7:23) - dup
+- **Eruvin 18a:20** [AGGADAH] (Gen 2:7) — the two yods of va-yiytzer (2:7) - dup
+- **Eruvin 18a:22** [AGGADAH] (Gen 5:2) — 'male and female He created them' in the dispute (5:2)
+- **Eruvin 18a:23** [CREDIT] (Gen 1:27) — thought-vs-deed - dup of Berakhot 61a:14
+- **Eruvin 18a:24** [AGGADAH] (Gen 2:21) — the closed flesh (2:21) - dup
+- **Eruvin 18a:26** [AGGADAH] (Gen 2:22) — va-yiven on either view (2:22) - dup
+- **Eruvin 18b:10** [CREDIT] (Gen 5:3) — Adam's excommunicate years and the spirit-children (5:3) - gen_14's likeness-recap dark inference
+- **Eruvin 18b:13** [LAW] (Gen 7:1) — partial praise to the face, full behind it: 'YOU I have seen righteous' (7:1)
+- **Eruvin 18b:14** [LAW] (Gen 6:9) — against the narrator's fuller 'righteous and WHOLE' (6:9) - the conduct rule from the ink delta
+- **Eruvin 18b:15** [AGGADAH] (Gen 8:11) — the dove's bitter olive (8:11) - dup of Sanhedrin 108b:17
+- **Eruvin 18b:2** [CREDIT] (Gen 2:22) — the escort teaching - dup of Berakhot 61a:19's law
+- **Eruvin 18b:8** [CREDIT] (Gen 24:61) — riding behind the man - dup of Berakhot 61a:24's law
+- **Eruvin 53a:4** [AGGADAH] (Gen 23:9) — Machpelah: two chambers or story above story (23:9)
+- **Eruvin 53a:6** [AGGADAH] (Gen 35:27) — the city of the four couples (35:27) - dup of Sotah 13a:7
+- **Eruvin 53a:7** [AGGADAH] (Gen 14:1) — Amraphel who said 'cast him in' - Nimrod (14:1)
+- **Eruvin 53a:9** [QUOTE] (Gen 36) — the new-king dispute; Genesis anchor is links noise
+- **Eruvin 65a:18** [AGGADAH] (Gen 8:21) — appeased by wine like his Maker: 'He smelled the pleasing scent' (8:21)
+
+## Gittin (3: AGGADAH 2, CREDIT 1)
+- **Gittin 43b:5** [CREDIT] (Gen 1:28) — the half-slave freed for procreation - ben Beroka's both-blessed APPLIED (1:28): G06-12 doing law work
+- **Gittin 57a:16** [AGGADAH] (Gen 39) — the martyr who outdid Joseph (Gen 39 frame)
+- **Gittin 57b:9** [AGGADAH] (Gen 27:22) — the voice of Jacob, the hands of Esau - the empires (27:22)
+
+## Horayot (8: AGGADAH 4, CREDIT 2, LAW 2)
+- **Horayot 10b:10** [AGGADAH] (Gen 13:10) — 'the whole verse for sin was said' - Lot's lifting of eyes (13:10)
+- **Horayot 10b:11** [AGGADAH] (Gen 13:10, 34:2, 34:4, 39:7) — the lifting-eyes roster (13:10, 39:7, 34:2)
+- **Horayot 10b:12** [AGGADAH] (Gen 19:33) — the DOTTED VAV of u-vekumah (19:33) - scribal-dot ink claim
+- **Horayot 10b:9** [AGGADAH] (Gen 19:30-38) — Lot and his daughters: her intention and his (19:30-38)
+- **Horayot 11b:3** [CREDIT] (Gen 49:10) — scepter and lawgiver: exilarch and patriarch - dup of Sanhedrin 5a:6 (49:10)
+- **Horayot 12a:16** [CREDIT] (Gen 32:33) — 'choicest of the anointed' on the choicest-thigh template (32:33)
+- **Horayot 5b:15** [LAW] (Gen 48:4) — KAHAL defined at 'I will make you a congregation of peoples' (48:4)
+- **Horayot 6b:2** [LAW] (Gen 48:4) — a tribe with a holding is a kahal; Levi excluded - same verse (48:4)
+
+## Keritot (1: CREDIT 1)
+- **Keritot 21a:12** [CREDIT] (Gen 32:33) — the sinew's socket scope - module dup (32:33)
+
+## Ketubot (23: AGGADAH 9, CREDIT 4, LAW 8, QUOTE 2)
+- **Ketubot 10b:10** [QUOTE] (Gen 2:14) — Scripture writes for the future: the Tigris past Assur (2:14)
+- **Ketubot 111a:19** [AGGADAH] (Gen 22:5) — even the maidservant in the Land - the am-am link (22:5)
+- **Ketubot 111a:22** [AGGADAH] (Gen 47:30) — Jacob's fear of the tunnels (47:30)
+- **Ketubot 111a:23** [AGGADAH] (Gen 50:25) — Joseph's same fear (50:25)
+- **Ketubot 111b:16** [AGGADAH] (Gen 49:11) — the Land's vines and the laden ass (49:11)
+- **Ketubot 111b:17** [AGGADAH] (Gen 49:11, 49:12) — wine red, satisfying, tasty (49:11-12)
+- **Ketubot 111b:19** [AGGADAH] (Gen 49:12) — whitening teeth better than milk (49:12)
+- **Ketubot 112a:10** [AGGADAH] (Gen 26:12) — with the blessing: Isaac's hundredfold (26:12)
+- **Ketubot 112a:7** [AGGADAH] (Gen 13:10) — Egypt as the garden - dup of Sotah 34b:12 (13:10)
+- **Ketubot 112a:8** [AGGADAH] (Gen 10:6) — Hebron before Zoan - dup of Sotah 34b:11 (10:6)
+- **Ketubot 27b:11** [CREDIT] (Gen 22:8, 42:8) — beard-identity - dup of Yevamot 88a:13
+- **Ketubot 30a:6** [LAW] (Gen 42:38) — ason by Heaven's hand exempts like ason by man's: 'lest a calamity befall him' (42:38)
+- **Ketubot 47b:10** [CREDIT] (Gen 31:50) — onah from 'if you afflict my daughters' (31:50) - dup of Yoma 77a:14's law in the maintenance sugya
+- **Ketubot 50a:3** [LAW] (Gen 28:22) — the CHARITY CAP - a fifth: 'all You give me I will DOUBLY TITHE' (28:22, the doubled verb = two tenths)
+- **Ketubot 57b:2** [LAW] (Gen 24:25, 24:55) — the bride's preparation time: 'let the maiden remain days or ten' (24:55)
+- **Ketubot 57b:3** [LAW] (Gen 24:55) — 'days' read as a year - the leg's resolution
+- **Ketubot 61a:3** [LAW] (Gen 20:3, 3:20) — she rises with him and does not descend: be'ulat BA'AL (20:3) + 'mother of all LIVING - for life, not pain' (3:20)
+- **Ketubot 67b:14** [CREDIT] (Gen 38:24, 38:25) — furnace-before-shaming - dup
+- **Ketubot 67b:2** [LAW] (Gen 2:18) — provisioning the orphan groom: house, bed, then the wife - 'a helper for him' (2:18)
+- **Ketubot 72b:5** [QUOTE] (Gen 48:5) — cursing-parents mnemonic: Ephraim and Manasseh (48:5)
+- **Ketubot 8a:3** [LAW] (Gen 2:22) — the wedding blessing's 'building forever' - the rib BUILT (2:22) in the liturgy
+- **Ketubot 8a:9** [CREDIT] (Gen 1:27, 5:2) — thought-vs-deed creation - dup of Berakhot 61a:14
+- **Ketubot 8b:10** [LAW] (Gen 18:19, 21:33) — the mourners' consolation formula: 'holders of Abraham's covenant... he will command his children' (18:19)
+
+## Kiddushin (21: AGGADAH 4, CREDIT 7, LAW 7, QUOTE 3)
+- **Kiddushin 11b:5** [LAW] (Gen 23:13) — money betrothal: taking-taking from the field of Ephron (23:13) - our Kiddushin 1:1 bridge verbatim
+- **Kiddushin 13a:14** [CREDIT] (Gen 7:22) — the fish spared (7:22) - the dry-land limiter again
+- **Kiddushin 21b:11** [CREDIT] (Gen 32:33) — 'the choicest awl' patterned on Rava's choicest-of-the-thigh (32:33) - the sinew scope as template
+- **Kiddushin 29a:11** [LAW] (Gen 17:10, 17:14, 21:4) — the circumcision cascade: father ('Abraham circumcised Isaac', 21:4), court ('every male', 17:10), self ('the uncircumcised male', 17:14)
+- **Kiddushin 29a:12** [LAW] (Gen 21:4) — the mother exempt: 'as God commanded HIM' - not her (21:4)
+- **Kiddushin 2a:4** [LAW] (Gen 23:13) — the same kichah-kichah derivation at the tractate's opening (23:13)
+- **Kiddushin 2a:5** [LAW] (Gen 25:10) — and taking is called ACQUISITION: 'the field Abraham BOUGHT' (25:10)
+- **Kiddushin 30b:4** [AGGADAH] (Gen 4:7) — the antidote: 'if you improve - uplift' (4:7)
+- **Kiddushin 30b:5** [AGGADAH] (Gen 4:7) — sin crouches; you may rule it (4:7)
+- **Kiddushin 30b:6** [AGGADAH] (Gen 6:5, 8:21) — the inclination evil from youth (8:21, 6:5)
+- **Kiddushin 32b:5** [AGGADAH] (Gen 18:8) — Abraham stood over his guests - the serving precedent (18:8)
+- **Kiddushin 34a:3** [CREDIT] (Gen 1:28) — the exemption sugya opens - the procreation module's frame
+- **Kiddushin 35a:1** [CREDIT] (Gen 1:28) — ben Beroka's both-blessed - G06-12's sugya
+- **Kiddushin 35a:2** [CREDIT] (Gen 1:28) — ve-khivshah KETIV, the man subdues - G06-03's ink
+- **Kiddushin 4b:3** [LAW] (Gen 23:13) — the baraita's version: 'I have given the silver of the field, TAKE from me' (23:13)
+- **Kiddushin 61b:10** [QUOTE] (Gen 24:41) — Eliezer's oath-release clause (24:41) - dialectic leg
+- **Kiddushin 61b:11** [QUOTE] (Gen 24:38) — the family's consent leg (24:38)
+- **Kiddushin 61b:12** [QUOTE] (Gen 24:8) — 'if the woman will not follow' (24:8)
+- **Kiddushin 61b:9** [LAW] (Gen 4:7) — the doubled condition (tenai kaful): R. Meir from 'if you do well... and if you do not' (4:7)
+- **Kiddushin 68a:13** [CREDIT] (Gen 22:5) — slave-woman betrothal invalid: am-donkey (22:5) - dup of Yevamot 62a:14
+- **Kiddushin 82a:10** [CREDIT] (Gen 24:1, 26:5) — Abraham kept the whole Torah, blessed in age (24:1, 26:5) - G44-01 family dup
+
+## Makkot (14: AGGADAH 5, CREDIT 2, LAW 2, QUOTE 5)
+- **Makkot 10a:14** [AGGADAH] (Gen 37:21) — Reuben first in rescue, first named for refuge (37:21)
+- **Makkot 11a:2** [QUOTE] (Gen 42:30) — dibber = harsh speech: 'the man spoke harshly' (42:30)
+- **Makkot 11b:1** [LAW] (Gen 43:9) — a conditional ban needs release: Judah's self-ban and his rolling bones (43:9)
+- **Makkot 19b:9** [QUOTE] (Gen 43:34) — se'et = eating - dup (43:34)
+- **Makkot 21b:10** [CREDIT] (Gen 32:33) — the sinew in the five-lashes stack - module member (32:33)
+- **Makkot 23b:12** [AGGADAH] (Gen 38:26) — the holy spirit in Shem's court: MIMENI - 'from Me it came' (38:26)
+- **Makkot 24a:18** [AGGADAH] (Gen 18:19) — works righteousness = Abraham (18:19)
+- **Makkot 24a:4** [AGGADAH] (Gen 17:1) — walks whole = Abraham (17:1)
+- **Makkot 24a:7** [AGGADAH] (Gen 27:12) — no slander on his tongue = Jacob (27:12)
+- **Makkot 9a:10** [LAW] (Gen 20:6) — 'from sinning TO ME' (20:6) - Heaven's jurisdiction vs man's in the killer sugya
+- **Makkot 9a:11** [QUOTE] (Gen 39:9) — 'I would sin to God' - and not to man? (39:9)
+- **Makkot 9a:12** [QUOTE] (Gen 20:4, 20:7) — 'will You slay a righteous nation?' (20:4)
+- **Makkot 9a:9** [QUOTE] (Gen 20:3) — 'you shall die' - by whose hand? the leg (20:3)
+- **Makkot 9b:2** [CREDIT] (Gen 20:4, 20:7) — the host-inquiry teaching - dup of Bava Kamma 92a:9 (20:7)
+
+## Megillah (52: AGGADAH 36, CREDIT 12, LAW 1, QUOTE 3)
+- **Megillah 10b:10** [AGGADAH] (Gen 1:5, 29:1, 29:10) — vayehi objections: Jacob at the well, day one (29:10, 1:5)
+- **Megillah 10b:12** [AGGADAH] (Gen 14:1) — the five 'in the days of' - Amraphel among them (14:1)
+- **Megillah 10b:14** [AGGADAH] (Gen 38:15) — the modest bride merits kings and prophets - Tamar (38:15)
+- **Megillah 10b:5** [AGGADAH] (Gen 6:1, 6:5) — vayehi-woe roster: 'when man began to multiply' (6:1)
+- **Megillah 10b:6** [AGGADAH] (Gen 11:2, 11:20, 11:4, 14:1, 14:2) — the woe roster's Babel and Amraphel members (11:2, 14:1)
+- **Megillah 10b:8** [AGGADAH] (Gen 1:5) — the eighth day as joyous as creation's first (1:5)
+- **Megillah 11a:17** [AGGADAH] (Gen 36:43) — the 'hu' roster: Esau wicked start to end (36:43)
+- **Megillah 13b:2** [AGGADAH] (Gen 29:12) — Rachel's modesty in the sign story (29:12)
+- **Megillah 13b:5** [AGGADAH] (Gen 29:25) — the signs passed to Leah; Saul her reward (29:25)
+- **Megillah 13b:8** [AGGADAH] (Gen 41:12) — the master angered for Joseph's sake (41:12)
+- **Megillah 14a:13** [CREDIT] (Gen 11:29, 21:12) — Yiskah = Sarah among the seven prophetesses - dup of Sanhedrin 69b:13
+- **Megillah 15a:18** [AGGADAH] (Gen 20:16, 27:1) — a commoner's curse: Abimelech to Sarah to Isaac's eyes (20:16, 27:1)
+- **Megillah 16a:14** [AGGADAH] (Gen 49:8) — 'your hand on the neck of your foes' - Judah's immunity (49:8)
+- **Megillah 16a:15** [AGGADAH] (Gen 13:16, 15:5) — dust and stars - the two falls (13:16, 15:5)
+- **Megillah 16a:24** [AGGADAH] (Gen 45:22) — Benjamin's five garments against the striped coat (45:22)
+- **Megillah 16b:2** [AGGADAH] (Gen 45:14) — weeping on necks: the sanctuaries to come (45:14)
+- **Megillah 16b:3** [AGGADAH] (Gen 45:12) — 'my mouth speaks' - as my mouth so my heart (45:12)
+- **Megillah 16b:4** [AGGADAH] (Gen 45:23) — aged wine, the good of Egypt (45:23)
+- **Megillah 16b:5** [AGGADAH] (Gen 50:18, 50:3) — the fox in its hour (50:18)
+- **Megillah 16b:6** [AGGADAH] (Gen 47:31) — Israel bowed at the bed's head (47:31)
+- **Megillah 16b:7** [AGGADAH] (Gen 50:21) — words that settle the heart: ten candles and one (50:21)
+- **Megillah 16b:8** [AGGADAH] (Gen 17:9) — sasson is circumcision (17:9 leg)
+- **Megillah 17a:1** [AGGADAH] (Gen 16:16, 21:5, 25:17, 25:26) — Ishmael's years dated to fix Jacob's (16:16, 21:5, 25:17, 25:26) - ledger arithmetic
+- **Megillah 17a:2** [AGGADAH] (Gen 28:6) — Jacob blessed at sixty-three; Ishmael's death dates it (28:6)
+- **Megillah 17a:3** [AGGADAH] (Gen 41:46) — sixty-three plus fourteen to Joseph's rise (41:46)
+- **Megillah 17a:4** [AGGADAH] (Gen 47:8) — one hundred thirty at Pharaoh's court (47:8)
+- **Megillah 17a:7** [AGGADAH] (Gen 33:17) — the missing years: eighteen months at Sukkot (33:17)
+- **Megillah 18a:17** [AGGADAH] (Gen 33:20) — God called Jacob 'el' (33:20)
+- **Megillah 20b:2** [LAW] (Gen 1:5) — dawn-performed rites valid: 'God called the LIGHT day' (Gen 1:5) - the brightening is day; the naming operator in rite-timing law
+- **Megillah 20b:3** [AGGADAH] (Gen 1:5) — the dusk counterpart of the naming argument (1:5)
+- **Megillah 21b:10** [CREDIT] (Gen 1:1) — 'bereshit is also an utterance' - the ten-utterances census our units seat
+- **Megillah 21b:4** [QUOTE] (Gen 33:3) — over = precede (33:3 lexicon)
+- **Megillah 22a:2** [CREDIT] (Gen 1:1, 1:6) — 'bereshit in two, yehi rakia in one' - the maamad reading-division our Taanit 4:3 row holds
+- **Megillah 22b:16** [CREDIT] (Gen 37:10) — bowing taxonomy - dup of Berakhot 34b:3
+- **Megillah 25a:16** [CREDIT] (Gen 35:22) — Mishnah Megillah 4:10 text - our held Reuben read-not-translated row
+- **Megillah 25b:10** [CREDIT] (Gen 35:22) — the Chanina b. Gamliel Reuben-translation story - same row's gemara
+- **Megillah 28a:16** [AGGADAH] (Gen 27:1) — Isaac's eyes dimmed from Esau's face (27:1)
+- **Megillah 28a:17** [AGGADAH] (Gen 20:16) — the commoner's-curse dup (20:16)
+- **Megillah 30b:10** [CREDIT] (Gen 1:1) — the maamadot read the work of creation - held usage row
+- **Megillah 31a:10** [CREDIT] (Gen 21, 22:1) — second-day reading the binding (22:1) - same
+- **Megillah 31a:9** [CREDIT] (Gen 21:1) — Rosh Hashanah first-day reading 'the LORD remembered Sarah' (21:1) - the gemara behind our Megillah 3:5 context row
+- **Megillah 31b:3** [AGGADAH] (Gen 15:8) — the maamadot sustain heaven and earth (15:8 frame)
+- **Megillah 31b:4** [AGGADAH] (Gen 15:2, 15:8) — 'how shall I know' - the flood-and-dispersion fear (15:2, 15:8)
+- **Megillah 31b:5** [AGGADAH] (Gen 15:9) — the offerings order as standing atonement (15:9)
+- **Megillah 6a:17** [QUOTE] (Gen 25:23) — le'om lexicon (25:23) - dup
+- **Megillah 9a:12** [AGGADAH] (Gen 1:1, 1:26) — the elders' first changes (1:1, 1:26)
+- **Megillah 9a:13** [CREDIT] (Gen 1:27, 2:2, 5:2) — the elders' changes incl. the sixth/seventh-day swap - the Ptolemy material our day-7 unit holds
+- **Megillah 9a:14** [AGGADAH] (Gen 11:7, 18:12) — Sarah laughed 'among her relatives' (11:7, 18:12)
+- **Megillah 9a:15** [AGGADAH] (Gen 49:6) — the ox-manger swap in Greek (49:6)
+- **Megillah 9a:5** [QUOTE] (Gen 31:47) — the Torah's own Aramaic: yegar sahaduta (31:47) - ink note in the translation sugya
+- **Megillah 9b:4** [CREDIT] (Gen 9:26, 9:27) — Rabban Shimon b. Gamliel's Greek ruling WITH Gen 9:27 as the reason - G23-10's own gemara
+- **Megillah 9b:5** [CREDIT] (Gen 10:2) — 'the beauty of Japheth in the tents of Shem' - the charter's second leg
+
+## Meilah (1: AGGADAH 1)
+- **Meilah 17b:5** [AGGADAH] (Gen 16:9-11) — the maid of my father's house met angels three times (16:9-11)
+
+## Menachot (8: AGGADAH 1, CREDIT 3, LAW 2, QUOTE 2)
+- **Menachot 26b:11** [LAW] (Gen 19:28) — kitor defined: no kiln smokes until the fire grips its majority - 'the smoke of the land like the kiln's' (19:28)
+- **Menachot 29b:10** [AGGADAH] (Gen 2:4) — be-hibaram: with a heh He created them (2:4) - the small-heh ink note
+- **Menachot 37a:1** [LAW] (Gen 48:17) — the right hand called YAD: 'he saw his father set his right hand' (48:17) - tefillin-hand leg
+- **Menachot 42a:18** [CREDIT] (Gen 17:9) — gentile circumciser invalid - dup of Avodah Zarah 26b:12 (17:9)
+- **Menachot 42a:19** [CREDIT] (Gen 17:13) — R. Yochanan's himol yimol version - same sugya (17:13)
+- **Menachot 63a:3** [QUOTE] (Gen 31:27) — machavat from 'why did you HIDE' - offered and dropped (31:27)
+- **Menachot 82b:13** [CREDIT] (Gen 22:10, 22:13) — knife and burnt-offering - dup of Zevachim 97b:9 (22:10)
+- **Menachot 93b:16** [QUOTE] (Gen 48:14) — the twenty-four hands; 'he guided his hands' (48:14)
+
+## Moed Katan (3: AGGADAH 1, CREDIT 1, LAW 1)
+- **Moed Katan 18a:4** [LAW] (Gen 22:5) — A COVENANT IS CUT TO THE LIPS: 'we will bow and RETURN to you' - and both returned (22:5)
+- **Moed Katan 18b:15** [AGGADAH] (Gen 24:50) — marriage from Heaven in all three shelves: 'from the LORD the matter came' (24:50)
+- **Moed Katan 29a:3** [CREDIT] (Gen 15:15) — go IN peace to the dead - dup of Berakhot 64a:10 (15:15)
+
+## Nazir (10: AGGADAH 6, CREDIT 1, QUOTE 3)
+- **Nazir 23a:15** [AGGADAH] (Gen 13:10) — the whole verse for sin - dup (13:10)
+- **Nazir 23a:16** [AGGADAH] (Gen 13:10, 39:7) — the lifting-eyes roster - dup (39:7)
+- **Nazir 23a:17** [AGGADAH] (Gen 34:2) — the seeing roster - dup (34:2)
+- **Nazir 23a:18** [AGGADAH] (Gen 19:33) — the dotted vav - dup of Horayot 10b:12 (19:33)
+- **Nazir 23b:1** [AGGADAH] (Gen 14:14) — Lot who parted from Abraham - the quarrel's bar (14:14 frame)
+- **Nazir 23b:9** [AGGADAH] (Gen 31:24, 31:29) — the good of the wicked is ill - dup of Yevamot 103b:1 (31:29)
+- **Nazir 3a:6** [QUOTE] (Gen 47:12) — kilkul = sustaining: 'Joseph sustained' (47:12) - offered and dropped
+- **Nazir 5a:5** [QUOTE] (Gen 41:1) — 'two years of days' (41:1) in the term-length sugya
+- **Nazir 65a:6** [CREDIT] (Gen 47:30) — the grave-earth measure: 'carry me FROM Egypt - take earth with me' (47:30) - our Nazir 9:3 bridge row's own gemara
+- **Nazir 7a:10** [QUOTE] (Gen 1:5) — 'one day' (1:5) in the same sugya
+
+## Nedarim (22: AGGADAH 14, CREDIT 4, LAW 3, QUOTE 1)
+- **Nedarim 20b:11** [AGGADAH] (Gen 30:16, 49:14) — Issachar's night - dup (30:16, 49:14)
+- **Nedarim 30b:11** [QUOTE] (Gen 48:5) — nolad = already born: 'your two sons BORN in Egypt' (48:5) - lexical leg in vow scope
+- **Nedarim 31a:8** [CREDIT] (Gen 21:12) — Ishmael and part of Isaac excluded - 'IN Isaac' (21:12): G37-25's own sugya
+- **Nedarim 31b:11** [CREDIT] (Gen 17:1) — not called whole until circumcised (17:1) - G33-29's claim
+- **Nedarim 31b:14** [CREDIT] (Gen 34:25) — Moses' delay: the third day's danger (34:25) - G57-23's measure
+- **Nedarim 32a:11** [AGGADAH] (Gen 17:1, 17:4) — walk whole and the hour stands: tamim to av hamon (17:1, 17:4)
+- **Nedarim 32a:14** [AGGADAH] (Gen 14:14) — the servitude's cause: the drafted scholars (14:14)
+- **Nedarim 32a:15** [AGGADAH] (Gen 14:21, 15:8) — or the 'how shall I know'; or the withheld souls (15:8, 14:21)
+- **Nedarim 32a:16** [AGGADAH] (Gen 14:14) — horikan: emptied them in Torah or in gold (14:14)
+- **Nedarim 32a:17** [AGGADAH] (Gen 14:14) — the 318 = Eliezer's own gematria (14:14) - ink-count note
+- **Nedarim 32a:18** [AGGADAH] (Gen 26:5) — Abraham knew his Creator at three: EKEV = 172 (26:5) - gematria note
+- **Nedarim 32a:5** [CREDIT] (Gen 17:1, 17:2) — tamim is circumcision; the covenant beside it (17:1-2) - G33-29 family
+- **Nedarim 32a:8** [AGGADAH] (Gen 17:1, 17:2) — Abraham's trembling until the covenant was named (17:1-2)
+- **Nedarim 32a:9** [AGGADAH] (Gen 15:5) — 'He took him OUTSIDE' - leave your astrology, no constellation for Israel (15:5); dup of Shabbat 156a:13
+- **Nedarim 32b:1** [AGGADAH] (Gen 17:5) — Abram 243 to Abraham 248 limbs (17:5) - gematria note
+- **Nedarim 32b:6** [LAW] (Gen 14:18) — the priesthood passes from Shem to Abraham - 'he was priest to God Most High' (14:18) and the blessing order
+- **Nedarim 32b:7** [AGGADAH] (Gen 14:19) — 'and blessed be God Most High' - the order that cost Shem (14:19)
+- **Nedarim 32b:8** [LAW] (Gen 14:18) — 'HE a priest' - he and not his seed (14:18)
+- **Nedarim 37b:8** [LAW] (Gen 18:5, 24:55) — ITTUR SOFERIM - the scribes' adornment readings: 'AFTER you shall pass' (18:5), 'AFTER she shall go' (24:55) - ink canon
+- **Nedarim 39b:7** [AGGADAH] (Gen 2:8) — the garden planted before - dup (2:8)
+- **Nedarim 41a:7** [AGGADAH] (Gen 4:14) — at his end, all rule over him: 'whoever finds me will slay me' (4:14)
+- **Nedarim 64b:6** [AGGADAH] (Gen 30:1) — the childless as dead - dup (30:1)
+
+## Niddah (18: AGGADAH 5, CREDIT 3, LAW 6, QUOTE 4)
+- **Niddah 13a:17** [CREDIT] (Gen 38:10, 38:9-10) — wasted seed - Er and Onan's death (38:10): dup of Yevamot 34b's law
+- **Niddah 13b:3** [CREDIT] (Gen 38:10) — the hirhur extension of the same (38:10)
+- **Niddah 17a:2** [CREDIT] (Gen 22:5) — am-donkey - dup (22:5)
+- **Niddah 22b:13** [LAW] (Gen 2:19, 2:7) — the miscarriage-form question rides 'formation like man' (2:7, 2:19)
+- **Niddah 22b:14** [QUOTE] (Gen 1:21) — the tanin-form objection (1:21)
+- **Niddah 22b:17** [QUOTE] (Gen 1:27) — the bria-bria leg (1:27)
+- **Niddah 22b:21** [QUOTE] (Gen 1:21, 1:25, 2:19) — the free-term analysis across the creation verbs (1:21, 1:25, 2:19)
+- **Niddah 25a:9** [LAW] (Gen 3:21) — skin is made only for the formed: 'garments of skin He made them' (3:21)
+- **Niddah 28a:9** [LAW] (Gen 38:28, 38:28-29) — the hand that emerged and returned - the mother impure: 'he put out a hand' (38:28)
+- **Niddah 30b:23** [AGGADAH] (Gen 4:7) — the angel's slap and the forgotten Torah (4:7)
+- **Niddah 31a:22** [AGGADAH] (Gen 30:16, 49:14) — Heaven assisted that night (30:16, 49:14)
+- **Niddah 31a:24** [LAW] (Gen 46:15) — the sex-determination rule proven from the ledger's ink: sons hung on the daughters (46:15)
+- **Niddah 31b:7** [AGGADAH] (Gen 30:28) — 'NEKEVAH your wages' - the clean arrival (30:28)
+- **Niddah 45b:11** [AGGADAH] (Gen 2:22) — VA-YIVEN = extra binah given the woman (2:22)
+- **Niddah 61a:20** [AGGADAH] (Gen 14:13, 14:13-14) — the escapee was Og (14:13)
+- **Niddah 63a:8** [QUOTE] (Gen 33:3) — over = precede - dup lexicon (33:3)
+- **Niddah 70b:7** [LAW] (Gen 19:26) — does Lot's wife's pillar defile? a corpse defiles, a pillar of salt does not (19:26) - a posed case answered on our verse's object
+- **Niddah 8b:17** [LAW] (Gen 38:24) — pregnancy recognized at three months: 'about three months later' (38:24) - the Tamar presumption
+
+## Pesachim (36: AGGADAH 15, CREDIT 6, LAW 7, QUOTE 8)
+- **Pesachim 117b:11** [LAW] (Gen 12:2) — the Amidah's three-patriarch opening mapped to the call's clauses (12:2): liturgical structure from our verse
+- **Pesachim 118a:6** [AGGADAH] (Gen 3:16, 3:17) — livelihood doubly harder than childbirth: etzev vs itzavon (3:16-17)
+- **Pesachim 118a:7** [AGGADAH] (Gen 48:15, 48:16) — livelihood harder than redemption: the angel vs the Shepherd (48:15-16)
+- **Pesachim 118a:8** [AGGADAH] (Gen 3:18, 3:19) — Adam wept at thorns; consoled by bread by sweat (3:18-19)
+- **Pesachim 119a:6** [AGGADAH] (Gen 41:57, 47:14) — Joseph gathered all the world's silver (41:57, 47:14)
+- **Pesachim 119b:1** [QUOTE] (Gen 21:8) — bless before performing - the over-frame; Genesis leg is lexicon
+- **Pesachim 119b:2** [QUOTE] (Gen 33:3) — over = precede - dup of Megillah 21b:4 (33:3)
+- **Pesachim 119b:4** [AGGADAH] (Gen 21:8) — the feast on the weaning of Isaac's seed; the cup reaches David (21:8)
+- **Pesachim 22a:3** [CREDIT] (Gen 32:33) — sending the thigh with the sinew inside - the module's benefit question (32:33)
+- **Pesachim 2a:3** [LAW] (Gen 1:4, 44:3) — enter and leave a city by daylight (ki tov) - the travel rule riding day one's good-light token (1:4, 44:3)
+- **Pesachim 2a:5** [CREDIT] (Gen 1:5) — the naming-light dialectic - dup of Megillah 20b:2
+- **Pesachim 36b:5** [QUOTE] (Gen 43:34) — se'et = eating - dup of Sanhedrin 112b:15 (43:34)
+- **Pesachim 3a:10** [LAW] (Gen 7:8) — THE CLEAN-LANGUAGE CANON: the Torah curved EIGHT LETTERS to avoid 'impure' (7:8) - numeric ink claim, checkable
+- **Pesachim 3a:14** [QUOTE] (Gen 24:61) — women on camels - the fear exception (24:61)
+- **Pesachim 42b:6** [AGGADAH] (Gen 25:23) — the fill-and-ruin seesaw (25:23)
+- **Pesachim 4a:3** [AGGADAH] (Gen 49:16) — 'judge my case' betrays Dan (49:16)
+- **Pesachim 4a:4** [AGGADAH] (Gen 49:13) — the shore-boast betrays Zevulun (49:13)
+- **Pesachim 4a:6** [LAW] (Gen 22:3) — THE ZEALOUS DO COMMANDMENTS EARLY - source: 'Abraham rose early in the morning' (22:3)
+- **Pesachim 50a:15** [QUOTE] (Gen 38:2) — Canaani = merchant (38:2)
+- **Pesachim 54a:10** [AGGADAH] (Gen 2:8) — the garden planted mi-kedem - before (2:8)
+- **Pesachim 54a:13** [CREDIT] (Gen 1:31) — why day two lacks 'good': Gehinnom's fire - the missing-tov dispute our day-2 unit seats
+- **Pesachim 54a:14** [AGGADAH] (Gen 36:24) — our fire waited for Shabbat's exit; Anah's mules (36:24)
+- **Pesachim 54a:15** [AGGADAH] (Gen 36:20, 36:24) — Anah the flawed brought the flawed - dup of Bava Batra 115b:4 (36:20-24)
+- **Pesachim 54b:1** [AGGADAH] (Gen 3:21) — Adam's garment among the treasures (3:21)
+- **Pesachim 56a:7** [LAW] (Gen 49:1) — the silent 'blessed be the Name' - born at Jacob's deathbed Shema scene (49:1)
+- **Pesachim 5a:15** [AGGADAH] (Gen 25:25) — 'first': Esau's ruin, the Temple, the Messiah's name (25:25)
+- **Pesachim 69b:10** [CREDIT] (Gen 17) — the thirteen covenants as the override argument - G33-30 again
+- **Pesachim 7b:10** [QUOTE] (Gen 33:3) — over lexicon dup (33:3)
+- **Pesachim 7b:14** [LAW] (Gen 44:12) — the leaven-search analogy: found-found from 'he SEARCHED... it was FOUND' (44:12) - the bridge our sweep row predicted, verbatim
+- **Pesachim 87b:6** [CREDIT] (Gen 14:19) — the five acquisitions - dup of the Pirkei Avot 6:10 held row (14:19)
+- **Pesachim 88a:1** [QUOTE] (Gen 22:14, 24:63, 28:19) — Pumbedita dates; anchors incidental
+- **Pesachim 88a:4** [AGGADAH] (Gen 22:14, 24:63, 28:19) — mountain, field, HOUSE - Jacob's name for the place (28:19)
+- **Pesachim 88a:5** [AGGADAH] (Gen 1:5) — ingathering as great as the day heaven and earth were made (1:5)
+- **Pesachim 8a:1** [CREDIT] (Gen 44:12) — the lamp-search chain (44:12) - our Pesachim 1:1 bridge row's own text
+- **Pesachim 93b:13** [LAW] (Gen 19:15, 19:23) — dawn-to-sunrise = five mils, computed from Lot's dawn departure reaching Zoar at sunrise (19:15, 19:23) - a legal constant from our verses
+- **Pesachim 94a:8** [QUOTE] (Gen 19:15) — the va-ya'itzu objection to the five-mil computation (19:15) - dialectic leg
+
+## Rosh Hashanah (17: AGGADAH 7, CREDIT 3, LAW 4, QUOTE 3)
+- **Rosh Hashanah 10b:6** [LAW] (Gen 8:13) — ONE DAY IN A YEAR COUNTS AS A YEAR: 'in the six hundred and first year, on the first of the month' (8:13) - computed from our flood date rows
+- **Rosh Hashanah 11a:13** [AGGADAH] (Gen 18:14) — Isaac born on Passover: 'at the appointed time' (18:14)
+- **Rosh Hashanah 11a:14** [AGGADAH] (Gen 18:12) — the leap-year answer (18:12 frame)
+- **Rosh Hashanah 11a:16** [AGGADAH] (Gen 30:22) — Sarah, Rachel, Hannah remembered on Rosh Hashanah - the analogies (30:22)
+- **Rosh Hashanah 11a:17** [AGGADAH] (Gen 21:1) — the pekidah-pekidah leg (21:1)
+- **Rosh Hashanah 11a:3** [CREDIT] (Gen 1:11, 2:6) — Tishrei creation from tadshe (1:11) - the calendar machloket gen_03's delta ops carry
+- **Rosh Hashanah 11a:4** [CREDIT] (Gen 1:12) — Nisan creation from totze (1:12) - the same seated dispute
+- **Rosh Hashanah 11a:6** [AGGADAH] (Gen 2:1) — tzivyonam - in their beauty (2:1) - dup
+- **Rosh Hashanah 11b:6** [AGGADAH] (Gen 7:11) — 17 Iyyar and the Pleiades: the flood's stars (7:11)
+- **Rosh Hashanah 12a:4** [AGGADAH] (Gen 8:1) — boiling they sinned, boiling judged - dup (8:1)
+- **Rosh Hashanah 16b:4** [LAW] (Gen 21:17) — JUDGED BY THIS HOUR'S DEEDS: 'God heard the lad WHERE HE IS' (21:17)
+- **Rosh Hashanah 16b:5** [CREDIT] (Gen 16:5, 23:2) — invoking judgment on a fellow - dup of Bava Kamma 93a:3 (16:5, 23:2)
+- **Rosh Hashanah 16b:6** [LAW] (Gen 17:15, 17:16) — name-change tears the decree: 'Sarai... for Sarah is her name, and I will bless her' (17:15-16)
+- **Rosh Hashanah 16b:7** [QUOTE] (Gen 12:1, 12:2) — some add change of place: lekh-lekha (12:1-2)
+- **Rosh Hashanah 26a:18** [QUOTE] (Gen 33:19) — kesitah = ma'ah, learned in Africa (33:19)
+- **Rosh Hashanah 26a:19** [QUOTE] (Gen 50:5) — kirah = purchase - dup (50:5)
+- **Rosh Hashanah 32b:5** [LAW] (Gen 21:1) — is 'the LORD remembered Sarah' (21:1) a remembrance-verse for the liturgy? R. Yosei vs R. Yehudah
+
+## Sanhedrin (143: AGGADAH 72, CREDIT 18, LAW 45, QUOTE 8)
+- **Sanhedrin 100b:1** [AGGADAH] (Gen 7:11) — good-measure vs punishment-measure; Gen 7:11 windows as the punishment side
+- **Sanhedrin 101b:3** [AGGADAH] (Gen 27:38, 4:13) — three who came with pretext: Cain (4:13), Esau (27:38)
+- **Sanhedrin 102a:5** [AGGADAH] (Gen 38:1) — 'at that time' = appointed for punishment (Gen 38:1 Judah's descent)
+- **Sanhedrin 104b:8** [AGGADAH] (Gen 19:24) — Sodom vs Jerusalem severity (Gen 19:24)
+- **Sanhedrin 105a:16** [AGGADAH] (Gen 49:17) — Samson the serpent (Gen 49:17); Balaam lame
+- **Sanhedrin 105b:11** [AGGADAH] (Gen 21:14, 22:3) — love overrides rank: Abraham saddled at dawn (21:14, 22:3) vs Balaam
+- **Sanhedrin 106a:15** [AGGADAH] (Gen 37:1, 37:2, 47:27, 47:29) — every va-yeshev is distress (37:1, 47:27)
+- **Sanhedrin 107b:17** [AGGADAH] (Gen 24:1, 48:1) — Abraham asked for old age (24:1), Jacob for illness (48:1) - the demands ladder; its aging leg FAILED our word census (THE_STEPS worked example)
+- **Sanhedrin 107b:18** [CREDIT] (Gen 11:8, 11:9, 13:13, 6:3) — the Mishnah Sanhedrin 10:3 text itself - our world_to_come module (G15-10, G25-16, G29-23/25)
+- **Sanhedrin 108a:1** [CREDIT] (Gen 13:13, 6:5) — the sages' congregation rejoinder - seated at G29-25
+- **Sanhedrin 108a:10** [AGGADAH] (Gen 6:5, 7:11) — rabbah-rabbah measure (6:5/7:11); three flood remnants incl. Tiberias springs
+- **Sanhedrin 108a:11** [AGGADAH] (Gen 6:12) — all flesh interbred (6:12); all reverted but the tushlami
+- **Sanhedrin 108a:12** [CREDIT] (Gen 6:13, 6:3) — decree sealed only on robbery (chamas) - held in gen_15's reading
+- **Sanhedrin 108a:14** [AGGADAH] (Gen 6:7) — the decree included Noach; favor saved him (6:7-8)
+- **Sanhedrin 108a:15** [AGGADAH] (Gen 50:21, 6:6) — vayinachem read via Gen 50:21 comfort (shared-ink link)
+- **Sanhedrin 108a:17** [AGGADAH] (Gen 6:9) — 'in his generations': R. Yochanan vs Resh Lakish (relative vs absolute)
+- **Sanhedrin 108a:19** [AGGADAH] (Gen 7:23) — if man sinned what did the beast sin (7:23)
+- **Sanhedrin 108a:21** [CREDIT] (Gen 7:22) — 'all on DRY LAND died - not the fish' - gen_18's dry-land limiter, already in the operator wording
+- **Sanhedrin 108a:5** [CREDIT] (Gen 6:3, 7:23) — flood no-share baraita, R. Akiva vs R. Yehudah b. Beteira - the four-way parse held at G15-10
+- **Sanhedrin 108a:8** [AGGADAH] (Gen 6:17) — 'we need Him only for rain' - judged by the boon (6:17)
+- **Sanhedrin 108a:9** [AGGADAH] (Gen 6:2, 7:11) — eyeball-water measure (6:2/7:11)
+- **Sanhedrin 108b:10** [AGGADAH] (Gen 6:16) — ark converges to a cubit (6:16) - stability note
+- **Sanhedrin 108b:11** [AGGADAH] (Gen 6:16) — three decks: refuse/animals/humans (6:16)
+- **Sanhedrin 108b:12** [AGGADAH] (Gen 8:7) — the raven's retort (8:7)
+- **Sanhedrin 108b:14** [LAW] (Gen 6:18, 8:16) — ark cohabitation ban: entry verse separates couples (Gen 6:18), exit verse rejoins (8:16) - law from operand ORDER
+- **Sanhedrin 108b:16** [AGGADAH] (Gen 8:8) — pure birds dwell with the righteous (8:8)
+- **Sanhedrin 108b:17** [AGGADAH] (Gen 8:11) — the dove's olive leaf: bitter from Your hand (8:11)
+- **Sanhedrin 108b:18** [AGGADAH] (Gen 8:19) — 'by families they left' - not them (8:19)
+- **Sanhedrin 108b:3** [AGGADAH] (Gen 8:1) — boiling waters measure-for-measure (8:1 vayashoku)
+- **Sanhedrin 108b:4** [AGGADAH] (Gen 7:10) — the seven days (7:10)
+- **Sanhedrin 108b:6** [AGGADAH] (Gen 7:2) — 'ish ve-ishto' - animals unsinned-with (7:2)
+- **Sanhedrin 108b:8** [AGGADAH] (Gen 6:14) — gopher wood identified (6:14)
+- **Sanhedrin 108b:9** [AGGADAH] (Gen 6:16) — tzohar = gems (6:16)
+- **Sanhedrin 109a:10** [CREDIT] (Gen 39:9) — the baraita's inverse money/body split - same G29-23 family
+- **Sanhedrin 109a:4** [CREDIT] (Gen 11:2) — tower factions mocked (build on a mountain) - inside G25-14's op
+- **Sanhedrin 109a:5** [CREDIT] (Gen 11:9) — three factions three fates - G25-14 verbatim territory
+- **Sanhedrin 109a:6** [CREDIT] (Gen 11:4) — R. Natan: all for idolatry (shem-shem verbal analogy) - the sin dispute G25-14 records
+- **Sanhedrin 109a:8** [CREDIT] (Gen 13:13) — Sodom no-share baraita - G29-23
+- **Sanhedrin 109a:9** [CREDIT] (Gen 39:9) — Rav Yehudah: wicked in body, sinners in money (Gen 39:9 leg) - the charge-domain split G29-23's op carries via Onkelos
+- **Sanhedrin 109b:14** [AGGADAH] (Gen 49:6) — Jacob's prayer out of spies/Korach rosters (49:6)
+- **Sanhedrin 109b:9** [AGGADAH] (Gen 18:20) — the maiden and the honey; rabbah read riva (18:20)
+- **Sanhedrin 111a:1** [QUOTE] (Gen 13, 26, 29) — amen gloss; link-row anchors malformed (13,26,29) - links noise
+- **Sanhedrin 111a:10** [AGGADAH] (Gen 28:13) — Jacob promised yet bought (28:13), no complaint
+- **Sanhedrin 111a:8** [AGGADAH] (Gen 13:17, 28:14) — Abraham promised yet bought Machpelah (13:17), no complaint
+- **Sanhedrin 111a:9** [AGGADAH] (Gen 26:20, 26:3) — Isaac promised yet wells disputed (26:3, 26:20)
+- **Sanhedrin 112b:15** [QUOTE] (Gen 43:34) — 'se-et = eating' lexical leg (Gen 43:34 Joseph's portions) inside tithe law
+- **Sanhedrin 113b:3** [CREDIT] (Gen 5:29) — Noach naming 'this one will comfort us' (Gen 5:29) - gen_14's noach_naming row
+- **Sanhedrin 22b:4** [AGGADAH] (Gen 48:7) — a man dies to his wife: 'Rachel died on me' (48:7)
+- **Sanhedrin 29a:34** [LAW] (Gen 2:17, 3:3) — WHOEVER ADDS SUBTRACTS - the hermeneutic law derived from Gen 3:3's added 'nor touch it'
+- **Sanhedrin 37a:11** [CREDIT] (Gen 4:10) — capital-witness admonition (Mishnah Sanhedrin 4:5) - sweep row 39, held G21-11/G08-28
+- **Sanhedrin 37a:12** [CREDIT] (Gen 4:10) — bloods-plural derivation itself - G21-11/G08-28
+- **Sanhedrin 37a:7** [AGGADAH] (Gen 27:27) — smell of his garments = his traitors (27:27)
+- **Sanhedrin 37b:10** [AGGADAH] (Gen 4:10) — Cain's wounds - not knowing where the soul exits (neck; the nose-predicate's dark twin)
+- **Sanhedrin 37b:12** [LAW] (Gen 4:14, 4:16) — exile atones half: Gen 4:14 'wanderer' vs 4:16 'dwelt in Nod' - the ink delta IS the derivation (our gen_11 sentences-exile territory)
+- **Sanhedrin 38b:10** [CREDIT] (Gen 5:1) — book of Adam shown every generation - gen_14's sefer_op row (prewritten registry)
+- **Sanhedrin 38b:11** [AGGADAH] (Gen 17:14, 3:9, 9:9) — Adam the heretic / covenant-breaker (3:9, 9:9)
+- **Sanhedrin 38b:14** [CREDIT] (Gen 11:5, 11:7, 1:26, 1:27, 35:3, 35:7) — heretic-answer roster (na'aseh adam beside vayivra; Babel descend) - gen_06's consultation dossier + gen_25
+- **Sanhedrin 38b:21** [AGGADAH] (Gen 19:24, 4:23) — the launderer's answer: Lamech's style (19:24, 4:23)
+- **Sanhedrin 39a:2** [AGGADAH] (Gen 2:21) — the rib-thief taunt and the daughter's answer (2:21)
+- **Sanhedrin 39a:7** [AGGADAH] (Gen 1:27, 2:7) — vayivra/vayyitzer two-creator taunt (1:27, 2:7)
+- **Sanhedrin 39b:11** [AGGADAH] (Gen 30:27, 39:5) — blessing in Jacob's and Joseph's wake (30:27, 39:5)
+- **Sanhedrin 39b:12** [AGGADAH] (Gen 22:12) — Obadiah's 'exceedingly' vs Abraham (22:12)
+- **Sanhedrin 39b:13** [AGGADAH] (Gen 32:9) — Obadiah's fifty-per-cave from Jacob's camp split (32:9)
+- **Sanhedrin 39b:21** [AGGADAH] (Gen 12:14) — Abishag not half Sarah's beauty (12:14)
+- **Sanhedrin 44a:4** [QUOTE] (Gen 17:14) — Achan 'pulled foreskin': brit-brit link to Gen 17:14
+- **Sanhedrin 46b:21** [LAW] (Gen 23:2) — eulogy law: honor of the living or the dead? proof from Gen 23:2 Abraham eulogizing Sarah (our Machpelah unit)
+- **Sanhedrin 56a:15** [LAW] (Gen 2:16) — Noahide sugya opener: blasphemy leg of Gen 2:16 derivation
+- **Sanhedrin 56b:23** [LAW] (Gen 2:16) — dispute how many laws Adam got: R. Yehudah idolatry only; +blasphemy; +dinim
+- **Sanhedrin 56b:4** [LAW] (Gen 2:16) — THE ROOT: all seven laws hung on Gen 2:16 va-yetzav ('and He commanded') word by word
+- **Sanhedrin 56b:5** [LAW] (Gen 18:19) — dinim (courts) from va-yetzav via Gen 18:19 'he will command his children'
+- **Sanhedrin 56b:6** [LAW] (Gen 9:6) — blasphemy/idolatry/bloodshed legs; bloodshed cites Gen 9:6
+- **Sanhedrin 57a:1** [LAW] (Gen 6:11, 6:12) — hashchatah = sexual sin + idolatry, from Gen 6:11-12 (flood indictment as legal category)
+- **Sanhedrin 57a:3** [LAW] (Gen 9:6) — bloodshed leg restated on Gen 9:6
+- **Sanhedrin 57a:4** [LAW] (Gen 9:3) — ROBBERY from Gen 9:3 'as the green herb' (of the field, not the garden)
+- **Sanhedrin 57a:5** [LAW] (Gen 9:4) — LIMB FROM THE LIVING from Gen 9:4 'flesh with its life-blood you shall not eat'
+- **Sanhedrin 57a:6** [LAW] (Gen 9:7) — castration ban from Gen 9:7 'swarm and multiply'
+- **Sanhedrin 57a:7** [LAW] (Gen 6:20) — mixed-kinds ban from Gen 6:20 'of the fowl by its kind' (ark spec as law source)
+- **Sanhedrin 57a:9** [LAW] (Gen 9:6) — Rav Sheshet's challenge: bloodshed explicit at Gen 9:6, whence the rest
+- **Sanhedrin 57b:1** [LAW] (Gen 9:6) — Noahide executed for bloodshed (Gen 9:6 continuation)
+- **Sanhedrin 57b:10** [LAW] (Gen 2:24) — woman's liability: Gen 2:24 'a MAN shall leave' vs 'they shall be one flesh'
+- **Sanhedrin 57b:12** [LAW] (Gen 2:16) — 'saying' (lemor, Gen 2:16) = sexual prohibitions leg
+- **Sanhedrin 57b:3** [LAW] (Gen 9:5) — ONE JUDGE suffices for a Noahide: Gen 9:5 'I will require it' singular
+- **Sanhedrin 57b:4** [LAW] (Gen 9:5) — Gen 9:5 word-by-word: no warning needed, one witness, man not woman, even a relative
+- **Sanhedrin 57b:5** [LAW] (Gen 9:6) — R. Yishmael: FETUS included - Gen 9:6 'blood of man IN man' = the embryo (abortion law from our ink)
+- **Sanhedrin 57b:7** [LAW] (Gen 18:19) — objection from Gen 18:19 'he will command' re women in dinim
+- **Sanhedrin 58a:7** [LAW] (Gen 2:24) — Gen 2:24 dissected: 'his father'/'his mother' - R. Eliezer vs R. Akiva on which relatives banned
+- **Sanhedrin 58a:8** [LAW] (Gen 2:24) — Gen 2:24 word-by-word: ve-davak not male; b-ishto not the neighbor's; one-flesh excludes beast
+- **Sanhedrin 58b:14** [LAW] (Gen 2:24) — unnatural relations with one's wife: ve-davak (Gen 2:24)
+- **Sanhedrin 58b:25** [LAW] (Gen 8:22) — a gentile who keeps a full Sabbath: Gen 8:22 'day and night shall not cease'
+- **Sanhedrin 58b:5** [LAW] (Gen 20:12) — sister law: Gen 20:12 'my father's daughter, not my mother's' proves maternal sister banned
+- **Sanhedrin 59a:12** [LAW] (Gen 32:32) — the SINEW: given to the sons of Jacob, not repeated at Sinai - the framework our G55-35 seat carries
+- **Sanhedrin 59a:6** [LAW] (Gen 9:4) — blood from the living, R. Chanina b. Gamliel's extra law from Gen 9:4
+- **Sanhedrin 59b:1** [LAW] (Gen 17:9) — circumcision: commanded to Noahides? Gen 17:9 'you and your seed' - repeated at Sinai for Israel alone
+- **Sanhedrin 59b:10** [LAW] (Gen 21:12) — sons of Ishmael exempt: Gen 21:12 'in Isaac shall seed be called' (same statute as our G37-25)
+- **Sanhedrin 59b:12** [LAW] (Gen 17:14) — sons of Keturah obligated: Gen 17:14 'et briti hefar' the inclusion
+- **Sanhedrin 59b:13** [LAW] (Gen 1:29) — Adam not permitted meat: Gen 1:29 read as grant of herbs only
+- **Sanhedrin 59b:14** [LAW] (Gen 9:3, 9:4) — meat permitted to Noach: Gen 9:3, limb-from-living carved out by Gen 9:4 'akh'
+- **Sanhedrin 59b:16** [LAW] (Gen 1:26, 1:28) — 'dominion over fish' (Gen 1:26) = labor not eating (matches our day-6 dominion-as-labor seat)
+- **Sanhedrin 59b:18** [LAW] (Gen 1:26) — 'fowl of the sky' (Gen 1:26) likewise labor
+- **Sanhedrin 59b:20** [LAW] (Gen 1:28) — 'every creeping beast' (Gen 1:28) brings in the serpent (for labor)
+- **Sanhedrin 59b:3** [LAW] (Gen 9:7) — procreation: said to the sons of Noach (Gen 9:7), repeated at Sinai for Israel
+- **Sanhedrin 59b:9** [LAW] (Gen 17:9) — circumcision restricted: 'you and your seed' (Gen 17:9), no one else
+- **Sanhedrin 5a:6** [LAW] (Gen 49:10) — judicial AUTHORITY: 'the scepter shall not depart' (Gen 49:10) = the exilarchs' license to judge
+- **Sanhedrin 67b:10** [QUOTE] (Gen 3:24) — 'flame of the turning sword' (Gen 3:24) as lexicon for sorcery classes
+- **Sanhedrin 69a:4** [QUOTE] (Gen 25:29) — meizid=cooking from 'Jacob cooked' (Gen 25:29) - lexical leg in minors' liability
+- **Sanhedrin 69b:12** [AGGADAH] (Gen 11:27, 11:29) — Abraham-Haran age arithmetic (11:27, 11:29)
+- **Sanhedrin 69b:13** [AGGADAH] (Gen 17:17, 21:12) — Yiskah = Sarah (17:17, 21:12)
+- **Sanhedrin 69b:15** [CREDIT] (Gen 11:10, 5:32, 7:6) — Shem's age computed across Gen 5:32/7:6/11:10 - gen_26's ledger_arithmetic row (cited as precedent in THIS sugya)
+- **Sanhedrin 69b:17** [AGGADAH] (Gen 10:21) — Japheth the elder (10:21)
+- **Sanhedrin 6b:5** [QUOTE] (Gen 37:26) — botzea=Judah (Gen 37:26) inside the arbitration debate
+- **Sanhedrin 70a:17** [AGGADAH] (Gen 9:20) — THIRTEEN VAVS in the wine passage (9:20ff) - NUMERIC INK CLAIM, checkable like the covenants
+- **Sanhedrin 70a:19** [AGGADAH] (Gen 10:6, 34:2, 9:25) — castrated-or-abused dispute; vayar-vayar link to Shechem (9:25, 34:2)
+- **Sanhedrin 70b:1** [AGGADAH] (Gen 3:7) — the tree was vine/wheat/fig dispute (3:7)
+- **Sanhedrin 70b:6** [AGGADAH] (Gen 9:20) — 'boor from Noach' (9:20)
+- **Sanhedrin 72b:15** [LAW] (Gen 9:6) — the PURSUER: 'who sheds man's blood by man shall his blood be shed' (Gen 9:6) - save the pursued by the pursuer's blood
+- **Sanhedrin 72b:17** [LAW] (Gen 9:6) — pursuer warning formula quoting Gen 9:6
+- **Sanhedrin 89b:10** [AGGADAH] (Gen 22:2) — kach NA - please, the king's plea (22:2)
+- **Sanhedrin 89b:11** [AGGADAH] (Gen 22:2) — the two-sons dialogue (22:2)
+- **Sanhedrin 89b:14** [AGGADAH] (Gen 21:9, 22:1) — R. Levi: Ishmael's taunt (21:9, 22:1)
+- **Sanhedrin 89b:8** [AGGADAH] (Gen 22:1) — 'after these words' - whose words (22:1)
+- **Sanhedrin 89b:9** [AGGADAH] (Gen 21:8) — Satan's accusation at the weaning feast (21:8)
+- **Sanhedrin 91a:14** [AGGADAH] (Gen 25:12, 25:19) — Ishmael/Keturah claimants before Alexander (25:12, 25:19)
+- **Sanhedrin 91a:16** [LAW] (Gen 25:5) — gift-deed law: Gen 25:5-6 'gave all to Isaac; gifts to concubines' sons' - lifetime deeds settle inheritance
+- **Sanhedrin 91a:8** [LAW] (Gen 9:25) — slave-property doctrine from Gen 9:25 'slave of slaves': what a slave acquires his master owns
+- **Sanhedrin 91b:7** [AGGADAH] (Gen 4:7) — evil inclination from birth: sin crouches at the OPENING (4:7)
+- **Sanhedrin 92a:1** [QUOTE] (Gen 25:23) — le'om=fetus lexicon (Gen 25:23)
+- **Sanhedrin 92a:19** [AGGADAH] (Gen 27:12) — word-changer as idolater (27:12 kmit'ate'a link)
+- **Sanhedrin 92a:3** [AGGADAH] (Gen 42:6) — teacher blessed like Joseph the provider (42:6)
+- **Sanhedrin 95a:16** [AGGADAH] (Gen 24:42) — the earth leaped for Eliezer (24:42 'I came today')
+- **Sanhedrin 95a:2** [QUOTE] (Gen 49:9) — lion lexicon (Gen 49:9 ari/lavi)
+- **Sanhedrin 95b:1** [AGGADAH] (Gen 28:10, 28:11) — Jacob's return for prayer; the earth leaped (28:10-11)
+- **Sanhedrin 95b:3** [AGGADAH] (Gen 28:11, 32:32) — the sun that set for him rose for him (28:11, 32:32)
+- **Sanhedrin 96a:4** [AGGADAH] (Gen 14:14, 14:15) — the angel named Night at the kings' war (14:15)
+- **Sanhedrin 96a:5** [AGGADAH] (Gen 14:14) — Abraham weakened at Dan (14:14)
+- **Sanhedrin 98b:14** [AGGADAH] (Gen 49:10) — Messiah's name Shiloh (49:10)
+- **Sanhedrin 98b:5** [AGGADAH] (Gen 28:15, 32:7, 32:8) — 'perhaps sin will cause': promise vs fear (28:15 vs 32:8)
+- **Sanhedrin 99a:16** [AGGADAH] (Gen 2:10) — Eden and Garden distinct: the river proves two (2:10)
+- **Sanhedrin 99a:6** [CREDIT] (Gen 15:13) — R. Dosa's 400 years (Gen 15:13) - the two-clocks claim G31-13
+- **Sanhedrin 99b:12** [AGGADAH] (Gen 12:5) — 'the souls they MADE in Charan' - teaching as making (12:5)
+- **Sanhedrin 99b:18** [AGGADAH] (Gen 18:26) — forgiveness for the place's sake (18:26)
+- **Sanhedrin 99b:5** [AGGADAH] (Gen 30:14, 36:12, 36:22) — Manasseh's mockery of Timna and the mandrakes (36:22, 30:14)
+- **Sanhedrin 99b:7** [AGGADAH] (Gen 36:29, 36:40) — Timna the princess (36:29)
+- **Sanhedrin 99b:9** [AGGADAH] (Gen 30:14) — the mandrakes were ownerless - the righteous don't steal (30:14)
+
+## Shabbat (45: AGGADAH 15, CREDIT 10, LAW 16, QUOTE 4)
+- **Shabbat 105a:2** [LAW] (Gen 17:5) — NOTARIKON licensed from the Torah: av hamon goyim unpacked letter by letter (17:5) - in the writing-liability sugya
+- **Shabbat 105a:5** [QUOTE] (Gen 44:16) — nitztadak as the second notarikon specimen (44:16)
+- **Shabbat 108a:10** [LAW] (Gen 17:14) — WHERE circumcision is done: foreskin-foreskin analogy; the fruit-making place (17:14 family)
+- **Shabbat 109a:9** [CREDIT] (Gen 1:10) — the seas-as-mikveh dispute applied to washing (1:10) - G03-12's own gemara
+- **Shabbat 10a:5** [AGGADAH] (Gen 1:5) — the true judge partners in creation - the evening-morning link (1:5)
+- **Shabbat 10b:8** [AGGADAH] (Gen 19:20) — the young city: Zoar's gematria fifty-one (19:20) - ink count
+- **Shabbat 111a:2** [CREDIT] (Gen 1:28) — ben Beroka's both-were-blessed in the eunuch sugya (1:28) - G06-12's own gemara
+- **Shabbat 113b:3** [AGGADAH] (Gen 7:23) — eating Babylon's earth = eating the flood's dead (7:23)
+- **Shabbat 115b:5** [QUOTE] (Gen 31:47) — yegar sahaduta saved from fire - dup of Megillah 9a:5
+- **Shabbat 118b:1** [AGGADAH] (Gen 13:17, 26:3, 28:14) — Jacob's boundless portion: u-faratzta (28:14)
+- **Shabbat 118b:3** [AGGADAH] (Gen 4:26) — Shabbat keeper forgiven though like Enosh's generation (4:26)
+- **Shabbat 119b:2** [CREDIT] (Gen 2:1) — saying vaykhulu on Shabbat eve (2:1) - the recital-law our day-7 unit seats as standing testimony
+- **Shabbat 11a:1** [QUOTE] (Gen 14:4-5) — the twenty-six years computation (14:4-5)
+- **Shabbat 127a:13** [LAW] (Gen 18:3) — hospitality greater than receiving the Presence: 'my Lord, do not pass by' (18:3)
+- **Shabbat 132a:10** [LAW] (Gen 17:7) — the generations-generations analogy (17:7)
+- **Shabbat 132a:15** [LAW] (Gen 17:12) — 'on the day' - by day and not by night, from 'eight days old' (17:12)
+- **Shabbat 132a:2** [CREDIT] (Gen 17) — 'thirteen covenants were cut on it' as the override argument's strength - G33-30's number doing law work
+- **Shabbat 132a:20** [LAW] (Gen 17:12) — 'eighth' excludes the seventh - from the same clause (17:12)
+- **Shabbat 132a:6** [LAW] (Gen 17:11) — circumcision overrides Shabbat: the sign-sign analogy (17:11)
+- **Shabbat 132a:8** [LAW] (Gen 17:11) — the covenant-covenant analogy (17:11)
+- **Shabbat 132a:9** [LAW] (Gen 17:14) — an adult, of whom 'covenant' is written - should he override? (17:14)
+- **Shabbat 132b:10** [LAW] (Gen 17:10, 17:14) — adult/minor/in-between: where 'flesh' is written (17:10, 17:14)
+- **Shabbat 133b:13** [LAW] (Gen 17:14) — the overconfident circumciser on Shabbat dusk - liability shape (17:14 frame)
+- **Shabbat 134b:1** [CREDIT] (Gen 34:25) — Mishnah Shabbat 19:3 text - our circumcision_third_day module oracle
+- **Shabbat 137a:3** [LAW] (Gen 17:10) — 'himol lakhem kol zakhar' - why circumcision differs (17:10)
+- **Shabbat 139a:12** [AGGADAH] (Gen 49:26) — Joseph the nazir of his brothers - no wine (49:26)
+- **Shabbat 139a:13** [AGGADAH] (Gen 43:34) — 'they drank and were merry WITH HIM' - the first wine since (43:34)
+- **Shabbat 150a:10** [CREDIT] (Gen 9:23) — 'their father's nakedness they saw not' - dup of Berakhot 25b:11's law
+- **Shabbat 151b:9** [LAW] (Gen 9:2) — the dread-of-man grant read as a live-only condition: day-old alive needs no guard, dead Og does (9:2)
+- **Shabbat 152a:15** [LAW] (Gen 50:10) — SEVEN-DAY MOURNING from 'he made for his father a mourning of seven days' (50:10)
+- **Shabbat 152b:12** [AGGADAH] (Gen 3:19) — 'dust you are' - until the hour before revival (3:19)
+- **Shabbat 156a:13** [AGGADAH] (Gen 15:3, 15:4, 15:5) — 'He took him OUTSIDE' - no constellation for Israel (15:5)
+- **Shabbat 22a:1** [AGGADAH] (Gen 37:24) — 'empty, no water' - but snakes and scorpions (37:24); the superfluous-clause canon
+- **Shabbat 32a:4** [LAW] (Gen 32:11) — never stand in danger counting on a miracle - merit is deducted: 'I am diminished by all the kindnesses' (32:11)
+- **Shabbat 33b:10** [AGGADAH] (Gen 33:18) — Jacob SHALEM: coin, markets, baths for the city (33:18)
+- **Shabbat 49b:8** [CREDIT] (Gen 39:11) — does Joseph's 'came to do his MELAKHAH' count among the 39? - the labor-count token our day-7 unit seats
+- **Shabbat 55b:6** [CREDIT] (Gen 35:22) — 'the sons of Jacob were TWELVE' - the intact count behind Reuben's defense; gen_58's REUBEN_AND_THE_COUNT
+- **Shabbat 55b:8** [AGGADAH] (Gen 49:4) — two beds disturbed - yetzu'ei read plural (49:4)
+- **Shabbat 77a:6** [QUOTE] (Gen 24:17) — gemi'ah spelled from hagmi'ini (24:17)
+- **Shabbat 85a:2** [AGGADAH] (Gen 36:2, 36:20) — the Horites as land-tasters (36:20)
+- **Shabbat 86a:2** [CREDIT] (Gen 34:25) — Mishnah Shabbat 9:3 text - the module's second oracle row
+- **Shabbat 88a:6** [CREDIT] (Gen 1:31) — the ha-shishi condition again - the seated extra-heh claim's own gemara
+- **Shabbat 89b:3** [AGGADAH] (Gen 15:13, 27:40, 46:4) — the fathers fail to plead; Isaac pleads (15:13, 46:4)
+- **Shabbat 95a:1** [LAW] (Gen 2:22) — hair-plaiting on Shabbat = BUILDING: 'He BUILT the rib' - He braided Eve's hair (2:22); a labor-definition from our verse
+- **Shabbat 97a:5** [AGGADAH] (Gen 15:6) — believers, sons of believers ('he believed', 15:6)
+
+## Shevuot (7: CREDIT 1, LAW 6)
+- **Shevuot 16b:9** [CREDIT] (Gen 37:10) — bowing taxonomy - dup (37:10)
+- **Shevuot 35b:11** [LAW] (Gen 19:18) — every name in the Lot passage profane except 19:18 - the same classification
+- **Shevuot 35b:9** [LAW] (Gen 18:3) — name-sanctity ON OUR INK: every 'Lord' of Abraham sacred except 18:3 - erasure law
+- **Shevuot 36a:13** [LAW] (Gen 9:15) — NO is an oath: 'the waters shall NO more become a flood' (9:15) with Isaiah's 'I swore'
+- **Shevuot 36a:14** [LAW] (Gen 9:11, 9:15) — doubled no, doubled yes: the covenant's two negations (9:11, 9:15)
+- **Shevuot 38b:20** [LAW] (Gen 24:3) — the oath administered 'by the LORD': Abraham's adjuration (24:3)
+- **Shevuot 38b:22** [LAW] (Gen 24:2) — grasping an object at the oath: the thigh-grasp scene (24:2)
+
+## Sotah (75: AGGADAH 62, CREDIT 5, LAW 3, QUOTE 5)
+- **Sotah 10a:1** [AGGADAH] (Gen 21:23) — Abimelech's oath began Israel's trouble (21:23)
+- **Sotah 10a:16** [AGGADAH] (Gen 38:13) — descent at Timnah vs ascent (38:13)
+- **Sotah 10a:19** [AGGADAH] (Gen 38:14) — petach enayim = Abraham's doorway (38:14)
+- **Sotah 10a:21** [AGGADAH] (Gen 21:33) — the eshel: orchard or inn (21:33)
+- **Sotah 10a:23** [AGGADAH] (Gen 21:33) — vayikra read vayakri - he caused the Name to be called (21:33)
+- **Sotah 10a:8** [AGGADAH] (Gen 49:16) — Dan judges like the One (49:16)
+- **Sotah 10a:9** [AGGADAH] (Gen 49:17) — Samson lame in both legs (49:17)
+- **Sotah 10b:12** [AGGADAH] (Gen 38:26) — 'did not cease to know her' - the two readings (38:26)
+- **Sotah 10b:2** [AGGADAH] (Gen 38:15) — she covered her face in her father-in-law's house (38:15)
+- **Sotah 10b:4** [AGGADAH] (Gen 38:25) — Samael distanced the signs, Gabriel restored them (38:25)
+- **Sotah 10b:6** [LAW] (Gen 38:25) — BETTER THE FURNACE THAN SHAMING ANOTHER IN PUBLIC - derived from Tamar (Gen 38:25)
+- **Sotah 10b:7** [AGGADAH] (Gen 37:32, 38:25) — haker na answered with haker na (37:32/38:25)
+- **Sotah 10b:9** [AGGADAH] (Gen 38:26) — Judah confessed; Joseph gained a letter (38:26)
+- **Sotah 11a:1** [AGGADAH] (Gen 15:13, 37:14) — the deep counsel of the buried in Hebron (37:14 + 15:13)
+- **Sotah 11a:11** [QUOTE] (Gen 25:29) — zadu = pot, from 'Jacob cooked' (Gen 25:29) - dup of Sanhedrin 69a:4
+- **Sotah 11b:17** [QUOTE] (Gen 29:23) — midwives row; the Genesis anchor is commentary-side noise
+- **Sotah 11b:20** [AGGADAH] (Gen 49:14, 49:17, 49:21, 49:27, 49:9) — the tribes as animals - the testament roster (Gen 49)
+- **Sotah 12a:14** [AGGADAH] (Gen 46:15) — Yocheved born between the walls (46:15)
+- **Sotah 12a:16** [AGGADAH] (Gen 3:16) — the righteous women outside Eve's decree (3:16) - a carve-out on gen_11's curse operators
+- **Sotah 12a:17** [AGGADAH] (Gen 1:4) — 'she saw he was good' rhymes with day one's light test (1:4)
+- **Sotah 12b:3** [QUOTE] (Gen 25:32) — 'going' = dying, from Esau's 'I am going to die' (25:32)
+- **Sotah 13a:11** [AGGADAH] (Gen 27:45) — Rebekah's 'one day' fulfilled at the burial (27:45)
+- **Sotah 13a:12** [AGGADAH] (Gen 50:13) — the sons carried him - honor in kings (50:13)
+- **Sotah 13a:2** [CREDIT] (Gen 50:14, 50:7, 50:8) — the funeral escort orders (Gen 50:7-14) - Mishnah Sotah 1:9's own gemara, our held row
+- **Sotah 13a:4** [AGGADAH] (Gen 50:10) — crowns around the coffin at Goren ha-Atad (50:10)
+- **Sotah 13a:6** [AGGADAH] (Gen 50:10) — even horses and donkeys mourned (50:10)
+- **Sotah 13a:7** [AGGADAH] (Gen 35:27) — Esau at Machpelah: four couples (35:27)
+- **Sotah 13a:8** [AGGADAH] (Gen 50:5) — 'my grave which I bought' - kirah as purchase (50:5)
+- **Sotah 13a:9** [AGGADAH] (Gen 49:21) — Naftali the swift scribe (49:21)
+- **Sotah 13b:11** [AGGADAH] (Gen 39:1) — hurad read horid - the astrologers demoted (39:1)
+- **Sotah 13b:12** [AGGADAH] (Gen 39:1, 41:45) — Potiphar/Potiphera (39:1, 41:45)
+- **Sotah 13b:4** [AGGADAH] (Gen 37:12) — from Shechem stolen, to Shechem returned (37:12)
+- **Sotah 13b:7** [AGGADAH] (Gen 38:1) — demotion: 'Judah went DOWN' (38:1)
+- **Sotah 13b:8** [AGGADAH] (Gen 38:12, 46:12) — he buries wife and sons (38:12)
+- **Sotah 13b:9** [AGGADAH] (Gen 43:28, 44:24, 50:25) — Joseph called bones in his lifetime (44:24)
+- **Sotah 14a:4** [LAW] (Gen 18:1, 25:11, 3:21) — IMITATIO DEI: clothe the naked (Gen 3:21), visit the sick (18:1), comfort mourners (25:11) - the kindness obligations rooted verse by verse
+- **Sotah 14a:5** [AGGADAH] (Gen 3:21) — garments of skin: the two views (3:21)
+- **Sotah 14a:6** [AGGADAH] (Gen 3:21) — Torah begins and ends with kindness (3:21)
+- **Sotah 17a:17** [AGGADAH] (Gen 18:27) — the sotah's dust and Abraham's dust (18:27)
+- **Sotah 17a:18** [AGGADAH] (Gen 18:27) — the dust-and-ashes reward retold - dup of Chullin 88b:10
+- **Sotah 17a:21** [AGGADAH] (Gen 14:23) — thread and strap retold - dup of Chullin 89a:1
+- **Sotah 31a:6** [AGGADAH] (Gen 22:12) — fear-from-love: Job linked to Abraham (22:12)
+- **Sotah 32a:10** [CREDIT] (Gen 12:6) — Mishnah Sotah 7:5 text - Elon Moreh = Shechem, held G27-19
+- **Sotah 33b:5** [CREDIT] (Gen 12:6) — the baraita's repeat of the same analogy
+- **Sotah 33b:8** [QUOTE] (Gen 34:2) — geography continuation; weak anchor
+- **Sotah 34b:11** [AGGADAH] (Gen 10:6) — Hebron built before Zoan (10:6)
+- **Sotah 34b:12** [AGGADAH] (Gen 13:10) — Egypt like the garden of the LORD (13:10)
+- **Sotah 36b:11** [AGGADAH] (Gen 39:11) — 'to do his work' - the two views (39:11)
+- **Sotah 36b:12** [AGGADAH] (Gen 39:11) — the festival day; the house was empty (39:11)
+- **Sotah 36b:13** [AGGADAH] (Gen 39:12) — his father's image at the window (39:12)
+- **Sotah 36b:14** [AGGADAH] (Gen 49:24) — his bow returned firm (49:24)
+- **Sotah 36b:15** [AGGADAH] (Gen 49:24) — the shepherd-stone merited (49:24)
+- **Sotah 36b:16** [AGGADAH] (Gen 37:2, 46:21) — twelve tribes could have come from him (37:2, 46:21)
+- **Sotah 36b:19** [AGGADAH] (Gen 41:44) — the astrologers' objection; royal bearing (41:44)
+- **Sotah 36b:22** [AGGADAH] (Gen 50:5, 50:6) — the oath-release exchange (50:5-6)
+- **Sotah 36b:6** [AGGADAH] (Gen 49:22) — the eye has no power over Joseph's seed (49:22)
+- **Sotah 36b:7** [AGGADAH] (Gen 48:16) — like the fish the water covers (48:16)
+- **Sotah 36b:9** [AGGADAH] (Gen 35:18) — Benjamin written FULL - an ink-spelling note (35:18)
+- **Sotah 38b:3** [CREDIT] (Gen 12:3) — priest who blesses is blessed (Gen 12:3) - dup of Chullin 49a:18
+- **Sotah 3b:14** [AGGADAH] (Gen 39:10) — 'to lie, to be with her' - this world and the next (39:10)
+- **Sotah 41b:13** [QUOTE] (Gen 25:23) — le'om = fetuses lexicon (25:23) - dup of Sanhedrin 92a:1
+- **Sotah 41b:9** [AGGADAH] (Gen 33:10) — 'like seeing the face of God' (33:10)
+- **Sotah 43a:2** [AGGADAH] (Gen 37:36) — Pinchas avenges the Midianite sale (37:36)
+- **Sotah 45b:17** [LAW] (Gen 7:22) — THE NOSE-PREDICATE'S SECOND LAW: corpse measured FROM THE NOSE for the nearest-city rite - 'all in whose nostrils was the breath of life' (Gen 7:22); a new call site for the scan's career list
+- **Sotah 46b:14** [AGGADAH] (Gen 12:20, 15:13) — Pharaoh's four steps of escort → four hundred years (12:20/15:13)
+- **Sotah 4b:14** [AGGADAH] (Gen 14:22) — the adulterer and Abraham's raised hand (14:22)
+- **Sotah 5a:5** [AGGADAH] (Gen 24:1, 27:33, 33:11) — bakol-mikol-kol: the three alls of the patriarchs (24:1/27:33/33:11)
+- **Sotah 7b:10** [AGGADAH] (Gen 35:22) — Judah's bones rolled until Moses prayed (35:22 region)
+- **Sotah 7b:8** [AGGADAH] (Gen 38:26) — Judah's confession on the record (38:26)
+- **Sotah 9a:8** [AGGADAH] (Gen 40:11) — the three cups - dup of Chullin 92a:13 (40:11)
+- **Sotah 9b:1** [AGGADAH] (Gen 3:1-15, 3:14) — the serpent's desires inverted (3:14)
+- **Sotah 9b:2** [AGGADAH] (Gen 3:15) — the serpent's sentences itemized (3:15)
+- **Sotah 9b:21** [AGGADAH] (Gen 49:17) — Samson fulfills the Dan-serpent line (49:17)
+- **Sotah 9b:3** [AGGADAH] (Gen 4) — the enviers' roster including Cain (Gen 4)
+- **Sotah 9b:9** [CREDIT] (Gen 50:7) — Joseph merited burying his father (50:7) - the held Mishnah Sotah 1:9 row itself
+
+## Sukkah (9: AGGADAH 5, LAW 1, QUOTE 3)
+- **Sukkah 11b:14** [LAW] (Gen 2:6) — SUKKAH ROOFING defined from the mist: not impurity-susceptible, earth-grown (2:6)
+- **Sukkah 14a:9** [AGGADAH] (Gen 25:21) — the prayer like a pitchfork: va-ye'etar (25:21)
+- **Sukkah 39a:3** [QUOTE] (Gen 33:3) — over = precede - dup (33:3)
+- **Sukkah 49a:2** [AGGADAH] (Gen 1:1) — bara SHIT - the drains from creation (1:1 wordplay)
+- **Sukkah 52a:13** [AGGADAH] (Gen 6:5) — the inclination daily renewed (6:5) - dup
+- **Sukkah 52a:7** [AGGADAH] (Gen 8:21) — the seven names of the inclination (8:21)
+- **Sukkah 52b:1** [AGGADAH] (Gen 6:5) — evil all the day - the daily struggle (6:5)
+- **Sukkah 5b:1** [QUOTE] (Gen 27:30) — panim-panim from Isaac's face (27:30)
+- **Sukkah 5b:2** [QUOTE] (Gen 33:10) — the face-of-God leg dismissed (33:10)
+
+## Taanit (21: AGGADAH 11, CREDIT 5, LAW 4, QUOTE 1)
+- **Taanit 10a:8** [AGGADAH] (Gen 2:10) — the world drinks Eden's residue (2:10)
+- **Taanit 10b:11** [CREDIT] (Gen 1:4, 44:3) — ki-tov entry - dup of Pesachim 2a:3
+- **Taanit 10b:6** [LAW] (Gen 42:1) — do not display satiety in famine: 'why do you show yourselves' (42:1)
+- **Taanit 10b:7** [LAW] (Gen 45:24) — no halakhic engrossment on the road: 'do not quarrel on the way' (45:24)
+- **Taanit 11a:4** [LAW] (Gen 41:50) — marital relations forbidden in famine years: 'born BEFORE the famine came' (41:50), the childless excepted
+- **Taanit 15a:9** [CREDIT] (Gen 22:11) — the Moriah fast-liturgy - our Taanit 2:4 context row's text (22:11)
+- **Taanit 20b:8** [CREDIT] (Gen 32:11) — no reliance on miracles - dup of Shabbat 32a:4's law (32:11)
+- **Taanit 22b:11** [LAW] (Gen 2:7) — the self-affliction limit: 'the man became a LIVING soul - keep it alive' (2:7)
+- **Taanit 26a:7** [CREDIT] (Gen 1:1, 1:14, 1:20, 1:24, 1:9, 2:1) — the six-day reading table (1:1-2:1) - our Taanit 4:3 held row's gemara
+- **Taanit 27b:10** [CREDIT] (Gen 1:1, 1:6) — 'bereshit in two, yehi rakia in one' - the same table's division
+- **Taanit 27b:3** [AGGADAH] (Gen 15:2, 15:8) — the maamadot sustain heaven and earth - dup of Megillah 31b (15:2)
+- **Taanit 27b:4** [AGGADAH] (Gen 15:9) — the flood-and-dispersion fear dialogue - dup (15:8-9)
+- **Taanit 29b:2** [AGGADAH] (Gen 27:27) — the scent of the field He blessed (27:27)
+- **Taanit 2b:1** [AGGADAH] (Gen 30:22) — the womb-key kept in His hand: 'He opened her womb' (30:22)
+- **Taanit 31a:4** [QUOTE] (Gen 49:33) — the broken-scythe day; anchor noise (49:33)
+- **Taanit 4a:5** [AGGADAH] (Gen 24:14) — Eliezer's improper request answered kindly (24:14)
+- **Taanit 8b:1** [AGGADAH] (Gen 20:18) — restraint said of the womb and the skies (20:18)
+- **Taanit 8b:2** [AGGADAH] (Gen 30:23) — birth said of woman and rain (30:23)
+- **Taanit 8b:3** [AGGADAH] (Gen 21:1) — remembering said of Sarah and the land (21:1)
+- **Taanit 9a:6** [AGGADAH] (Gen 42:28) — all of Writings hinted in Torah: 'what has God done to us' (42:28)
+- **Taanit 9b:10** [AGGADAH] (Gen 2:6) — the world drinks the ocean, sweetened in clouds (2:6)
+
+## Tamid (2: AGGADAH 2)
+- **Tamid 32a:3** [AGGADAH] (Gen 1:1) — Alexander and the elders: heavens created first (1:1)
+- **Tamid 32a:4** [AGGADAH] (Gen 1:2, 1:3) — light or darkness first - no answer given (1:2-3)
+
+## Temurah (1: CREDIT 1)
+- **Temurah 28b:17** [CREDIT] (Gen 6:12) — hashchatah category - dup (6:12)
+
+## Yevamot (38: AGGADAH 13, CREDIT 7, LAW 15, QUOTE 3)
+- **Yevamot 100b:9** [LAW] (Gen 17:7) — 'to be God to you and your seed after you' (17:7): the ban on gentile and slave unions
+- **Yevamot 103b:1** [AGGADAH] (Gen 31:24) — the good of the wicked is ill to the righteous: 'speak not good or evil' (31:24)
+- **Yevamot 13b:6** [QUOTE] (Gen 12:10, 13:1) — the directional heh replaces lamed: mitzraimah (12:10) - grammar canon
+- **Yevamot 17b:6** [LAW] (Gen 13:8) — why the brotherhood analogy takes the sons of Jacob and not Lot's 'men brothers' (13:8) - the free-term analysis
+- **Yevamot 24a:6** [LAW] (Gen 48:6) — LEVIRATE 'NAME' MEANS INHERITANCE: name-name analogy to 'on the name of their brothers in their inheritance' (48:6)
+- **Yevamot 34b:3** [LAW] (Gen 38:9) — the acts of Er and Onan defined (38:9)
+- **Yevamot 34b:4** [LAW] (Gen 38:10, 38:9) — Er's act inferred from the matched deaths (38:10)
+- **Yevamot 42a:6** [LAW] (Gen 17:7) — the wait between husbands: distinguish the first's seed - 'to your seed AFTER you' (17:7)
+- **Yevamot 59a:8** [QUOTE] (Gen 38:11) — the widow-widow analogy from Tamar raised and dismissed (38:11)
+- **Yevamot 61b:13** [LAW] (Gen 24:16) — betulah = maiden, from 'the maiden, very fair, a virgin' (24:16)
+- **Yevamot 61b:15** [CREDIT] (Gen 5:2) — MISHNAH YEVAMOT 6:6 TEXT - our procreation_measure module oracle
+- **Yevamot 61b:16** [LAW] (Gen 2:18) — one must not stand without a wife even with children: 'not good that the man be alone' (2:18)
+- **Yevamot 62a:14** [LAW] (Gen 22:5) — a slave has no lineage: 'sit here WITH the donkey' (22:5)
+- **Yevamot 62a:7** [AGGADAH] (Gen 4:2, 4:25) — the twin sisters born with the brothers - the et-augments (4:2, 4:25)
+- **Yevamot 62b:13** [AGGADAH] (Gen 2:18) — without a wife - no joy, no blessing, no good (2:18)
+- **Yevamot 62b:17** [LAW] (Gen 3:16) — conjugal duty before a journey - the longing clause of the curse (3:16)
+- **Yevamot 62b:6** [QUOTE] (Gen 31:43) — grandchildren-as-children tried from 'the daughters are my daughters' (31:43) and dismissed
+- **Yevamot 63a:2** [AGGADAH] (Gen 5:2) — without a wife one is not 'adam' - 'He called THEIR name Adam' (5:2)
+- **Yevamot 63a:3** [CREDIT] (Gen 2:18) — helper or opponent (2:18) - gen_09's helper-unit reading
+- **Yevamot 63a:5** [AGGADAH] (Gen 2:20, 2:23) — 'this time' - rest came only with Eve (2:23)
+- **Yevamot 63a:6** [AGGADAH] (Gen 12:3, 18:18) — the two grafts: Ruth and Naamah; ships blessed for Israel (12:3, 18:18)
+- **Yevamot 63b:16** [LAW] (Gen 9:6, 9:7) — neglecting procreation = shedding blood: the juxtaposition at Gen 9:6-7
+- **Yevamot 63b:17** [LAW] (Gen 9:6, 9:7) — or diminishing the image - the same juxtaposition's second reading
+- **Yevamot 64a:2** [AGGADAH] (Gen 17:7) — childless and the Presence departs (17:7)
+- **Yevamot 64a:5** [CREDIT] (Gen 16:3) — the ten-years rule with land-only years and illness/prison exclusions (16:3) - G32-16's riders verbatim
+- **Yevamot 64a:6** [AGGADAH] (Gen 25:20, 25:26) — the Isaac objection: he waited twenty years - answered, he was infertile (25:20-26)
+- **Yevamot 64a:8** [AGGADAH] (Gen 25:21) — 'opposite his wife' - both were barren (25:21)
+- **Yevamot 64b:2** [CREDIT] (Gen 11:30) — Sarah without a womb (11:30) - gen_26's barren-clause row exactly
+- **Yevamot 65b:3** [CREDIT] (Gen 1:28) — Mishnah 6:5's man-not-woman with ben Beroka's dissent - G06-03 + G06-12's own gemara
+- **Yevamot 65b:4** [CREDIT] (Gen 1:28) — ve-khivshuHA read from the KETIV - the ink derivation G06-03 seats
+- **Yevamot 65b:5** [CREDIT] (Gen 35:11) — Rav Yosef's alternative from 35:11 (peh u-rveh singular) - the same sugya
+- **Yevamot 65b:9** [LAW] (Gen 18:12, 18:13) — PEACE PERMITS THE ALTERED REPORT: God Himself changed Sarah's words (18:12-13)
+- **Yevamot 72a:7** [LAW] (Gen 17:13, 17:14) — the drawn foreskin re-circumcised: himol yimol + 'my covenant he broke' (17:13-14)
+- **Yevamot 76a:4** [AGGADAH] (Gen 49:3) — 'my strength and the first of my vigor' (49:3)
+- **Yevamot 77a:3** [AGGADAH] (Gen 18:9) — 'where is Sarah? in the tent' - modesty (18:9)
+- **Yevamot 77a:7** [AGGADAH] (Gen 19:15) — 'the found ones' - toward David (19:15)
+- **Yevamot 79a:3** [AGGADAH] (Gen 18:19) — the three marks: merciful, shamefast, kind - kindness from 18:19
+- **Yevamot 88a:13** [LAW] (Gen 42:8) — identity evidence: 'Joseph recognized his brothers and they did not recognize him' (42:8) - the beard rule
+
+## Yoma (31: AGGADAH 20, CREDIT 4, LAW 2, QUOTE 5)
+- **Yoma 10a:2** [AGGADAH] (Gen 10:2) — the sons of Japheth identified nation by nation (10:2)
+- **Yoma 10a:3** [AGGADAH] (Gen 10:7) — Sabteh and Raamah located (10:7)
+- **Yoma 10a:4** [AGGADAH] (Gen 10:10) — Babel, Erech, Akkad, Calneh identified (10:10)
+- **Yoma 10a:5** [AGGADAH] (Gen 10:11, 10:12) — Asshur's cities; which is 'the great city' (10:11-12)
+- **Yoma 20a:1** [AGGADAH] (Gen 4:7) — ha-satan in gematria 364 (4:7 frame)
+- **Yoma 22b:19** [AGGADAH] (Gen 38) — a leader needs a box of flaws behind him (Gen 38 frame)
+- **Yoma 28b:4** [CREDIT] (Gen 22:3) — the zealous rise early - dup of Pesachim 4a:6
+- **Yoma 28b:7** [AGGADAH] (Gen 24:1, 27:1, 48:10) — the fathers old and seated in the academy (24:1, 27:1, 48:10)
+- **Yoma 28b:8** [AGGADAH] (Gen 15:2, 24:2) — Eliezer who drew and watered his master's teaching (15:2, 24:2)
+- **Yoma 28b:9** [CREDIT] (Gen 26:5) — Abraham kept the whole Torah (26:5) - G44-01's claim, Rav's version
+- **Yoma 35b:12** [AGGADAH] (Gen 39:10) — Joseph against the daily bribes (39:10)
+- **Yoma 38b:10** [AGGADAH] (Gen 18:19, 18:20) — from the blessing of the righteous the curse of the wicked (18:19-20)
+- **Yoma 38b:11** [AGGADAH] (Gen 13:13, 13:14, 1:4) — the world created for one righteous: the light called good (1:4)
+- **Yoma 38b:7** [AGGADAH] (Gen 18:17, 18:18) — 'shall I hide from Abraham' - the righteous remembered for blessing (18:17-18)
+- **Yoma 38b:8** [AGGADAH] (Gen 13:12, 13:13) — 'he tented toward Sodom' - the rot of the wicked's name (13:12-13)
+- **Yoma 44b:17** [AGGADAH] (Gen 2:12) — the seven golds; 'the gold of that land is good' (2:12)
+- **Yoma 52b:1** [QUOTE] (Gen 4:7) — se'et (4:7) among the five undecided verses - the syntactic-ambiguity roster
+- **Yoma 52b:4** [QUOTE] (Gen 49:7) — arur (49:7) - the same roster
+- **Yoma 54b:5** [AGGADAH] (Gen 2:4) — heaven's offspring of heaven, earth's of earth (2:4)
+- **Yoma 67b:7** [AGGADAH] (Gen 6:2) — Azazel atones for Uza and Azael (6:2 frame)
+- **Yoma 74b:12** [QUOTE] (Gen 31:50) — the affliction-analogy leg raised and dismissed (31:50)
+- **Yoma 76a:10** [AGGADAH] (Gen 7:11) — the forty-day counter (7:11 frame)
+- **Yoma 76a:6** [AGGADAH] (Gen 7:11, 7:20) — the fifteen cubits and the mountain question (7:20)
+- **Yoma 76a:7** [AGGADAH] (Gen 7:11) — the good measure greater - windows vs doors (7:11); dup of Sanhedrin 100b:1
+- **Yoma 77a:14** [LAW] (Gen 31:50) — marital deprivation is called AFFLICTION: 'if you afflict my daughters' (31:50) - the Yom Kippur innuy roster's source
+- **Yoma 77b:3** [QUOTE] (Gen 34:2) — va-yeaneha at Shechem in the innuy dialectic (34:2)
+- **Yoma 83b:17** [QUOTE] (Gen 18:12) — balah lexicon from 'after I am worn' (18:12)
+- **Yoma 85a:11** [CREDIT] (Gen 7:22) — life is tested at the nose (7:22) - G18-05's own bridge text, the pilot's citation
+- **Yoma 85a:12** [CREDIT] (Gen 7:22) — dig-from-below to the nose; from above the nose suffices - the module's mechanism text
+- **Yoma 87a:13** [LAW] (Gen 50:17) — ASK FORGIVENESS AT MOST THREE TIMES: the brothers' triple plea (50:17) - a rider on our forgiveness module
+- **Yoma 9b:18** [AGGADAH] (Gen 9:27) — the Presence absent from the Second Temple: Shem's tents (9:27)
+
+## Zevachim (23: AGGADAH 8, CREDIT 6, LAW 7, QUOTE 2)
+- **Zevachim 108b:15** [LAW] (Gen 8:20) — R. Yosei's outside-slaughter source: 'Noach built an altar' (8:20)
+- **Zevachim 113b:3** [AGGADAH] (Gen 7:22) — did the flood fall on the Land? the dry-land objection (7:22)
+- **Zevachim 113b:4** [AGGADAH] (Gen 8:1) — boiling they sinned, boiling judged - dup of Sanhedrin 108b:3 (8:1)
+- **Zevachim 113b:5** [AGGADAH] (Gen 7:22) — the second telling of the dry-land dispute (7:22)
+- **Zevachim 113b:6** [CREDIT] (Gen 7:22) — 'all on dry land died - not the fish' (7:22) - gen_18's limiter again
+- **Zevachim 115b:18** [LAW] (Gen 8:20) — all species valid on a private altar: 'of every clean beast and every clean fowl' (8:20)
+- **Zevachim 116a:11** [LAW] (Gen 7:16) — the self-presenting animals: 'those that CAME, male and female' (7:16) - ark ink in altar law
+- **Zevachim 116a:14** [LAW] (Gen 4:4) — did the sons of Noach offer peace-offerings? Abel's FATS prove it (4:4)
+- **Zevachim 116a:2** [QUOTE] (Gen 8:20) — beast and fowl linked at the altar (8:20 leg)
+- **Zevachim 116a:23** [AGGADAH] (Gen 9:15) — the nations at Balaam: is a flood coming? (9:15)
+- **Zevachim 116a:24** [AGGADAH] (Gen 9:15) — a flood of fire? the oath's scope (9:15)
+- **Zevachim 116a:3** [CREDIT] (Gen 6:19) — missing-limb ban - dup of Avodah Zarah 51a:15
+- **Zevachim 116a:4** [CREDIT] (Gen 7:3) — terefah exclusion - dup
+- **Zevachim 116a:5** [CREDIT] (Gen 6:19) — 'with you - like you' - dup
+- **Zevachim 116a:6** [CREDIT] (Gen 6:9) — Noach tamim - dup
+- **Zevachim 116a:9** [CREDIT] (Gen 8:20) — the unsinned animals - dup of Sanhedrin 108b:6
+- **Zevachim 118b:2** [AGGADAH] (Gen 49:22) — the eye that would not feast - Joseph's reward (49:22)
+- **Zevachim 53b:8** [LAW] (Gen 49:27) — the altar's strip in the portion of 'Benjamin the wolf' (49:27) - Temple geography from the testament
+- **Zevachim 54a:4** [AGGADAH] (Gen 49:27) — Rav and Levi's two Aramaic renderings of the wolf's portion (49:27) - dual-track note
+- **Zevachim 54b:9** [AGGADAH] (Gen 49:27) — 'we found it in the field of the forest' - Benjamin (49:27)
+- **Zevachim 62b:1** [QUOTE] (Gen 25:1, 25:4) — 'Keturah is WRITTEN' - the name-precision rebuke (25:1)
+- **Zevachim 88b:6** [LAW] (Gen 37:31) — the tunic atones for bloodshed: 'they dipped the tunic in the blood' (37:31)
+- **Zevachim 97b:9** [LAW] (Gen 22:10, 22:13) — the knife and the burnt-offering from the binding (22:10, 22:13)
+

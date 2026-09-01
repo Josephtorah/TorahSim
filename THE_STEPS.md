@@ -109,6 +109,17 @@ or ink-level claims — counts, spellings, written-vs-read forms — are
 NEVER dup-credited without opening: that is the class where seats
 diverge (the canopy counts 9/10/11 vs 13/11/10 are the standing
 exhibit).
+THE TRIAGE IS STEP 4 MACHINERY RUN IN STEP 9'S SERVICE (owner's
+observation 2026-09-01, confirmed by the 958-passage Talmud triage).
+Reading the case-anchored and bridge books uses THIS step's discipline
+exactly - every source opened, one verdict row each, append-only ledger
+in logic/oral_triage/, credits for duplicates, terse non-material rows.
+What differs is the DESTINATION: a verse-anchored book's material rows
+feed Step 6 (claims and operators in the verse code); a bridge book's
+law rows feed Step 9 (case rows and rule candidates - the RULE_CATALOG).
+The two-shelves ruling stands unchanged, and such a triage never enters
+a unit's DECLARED reading scope: stamps and coverage stay on the
+core-shelf default, no reading debt appears.
 GRADE THE LEG, NOT THE SECTION (2026-08-30, mirrored from canon's
 THE_STEPS; found deriving Toledot). When one source makes a claim in
 several parts, each part is opened and graded SEPARATELY, and the note

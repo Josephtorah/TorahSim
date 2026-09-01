@@ -7463,3 +7463,47 @@ MACHINE-DISCOVERABLE: shared ink at the lemma level (5397 breath + 639
 nose, probe-tested) found every call site in one pass — so the links
 table can be seeded by scan and confirmed by recorded middot. Recorded:
 THE_WORLD.md idea log (two entries) + memory demonstrate-compile-link.md.
+
+## MILESTONE (2026-09-01) — THE 958 TALMUD PASSAGES TRIAGED, COMPLETE IN
+## ONE SITTING (owner: "run the triage on the 958 talmud passages").
+Every Babylonian Talmud passage citing Genesis read from the local shelf
+and verdicted: 206 LAW / 488 AGGADAH / 174 CREDIT / 87 QUOTE (955
+segments + 3 range-refs covered by members). Ledger:
+World/step9/TALMUD_TRIAGE_LEDGER.md, mirrored to
+logic/oral_triage/talmud_triage_gen_2026-09-01.md (read-source record —
+all 955 refs now citable at the gate). Harvest:
+World/step9/TALMUD_LAW_HARVEST.md — 206 case-row candidates, the Noahide
+sugya (Sanhedrin 56a-59b) the motherlode. Nose-predicate gained two legal
+call sites (Sotah 45b:17 corpse-measure, Bekhorot 46b:2 firstborn) —
+recorded in THE_WORLD. Twelve seated claims met their own gemara in the
+sweep (credits ledgered). New checkable numerics flagged (13 vavs, 8
+curved letters, no-tet). NO unit YAMLs touched, hash untouched, no gates
+needed. NOT COMMITTED — owner word. NEXT DECISIONS FOR OWNER: which LAW
+rows become the next exam round; whether to seat the two new nose call
+sites as claims on gen_18.
+
+## ADDENDUM (2026-09-01) — RULE_CATALOG.md born: R-001..R-216 (10
+COMPILED + 206 CANDIDATE, tractate-grouped, stable IDs, status ladder,
+the candidate-to-rule path written in). World/step9/RULE_CATALOG.md +
+rule_catalog_ids.json. Owner picks batches from Part II to open exam
+rounds. Uncommitted with the triage batch.
+
+## ⚠ CROSS-WINDOW FLAG (2026-09-01, from torahsim-19 after the owner-
+## ordered steps sync) — THE NEXT UNIT SYNC IS A MERGE, NOT A COPY.
+Canon confirmed (its commit c3ce4d2, pushed): THE_STEPS Step 9 exam-first
+method + both run records + three-piles ruling landed verbatim with
+border adaptations; FINDINGS LOOP + STAMP LAW section landed (live
+queues stay workshop-side, canon receives seated results on sync);
+Step 4's triage clarification landed verbatim; CORE_SHELF carries the
+Onkelos genre rule with provenance to this window's ruling. Site
+exported and deployed; Step 9 VISIBILITY on the page (chip/band for
+exam results) is an OPEN DISPLAY DECISION for the owner - today only
+exo_21 carries proven.
+THE FLAG BOTH WINDOWS MUST HONOR: the unit trees have DIVERGED with rev
+collisions in BOTH directions - canon's stamp revs (65 units) against
+this workshop's audit fixes + seats + rev bumps (gen_62 rev 4 in BOTH
+trees with DIFFERENT content; canon gen_17 rev 4 vs workshop rev 5). A
+pure copy either way destroys the other side's work. The next unit sync
+needs a MERGE PLAN (changelog union, rev reconciliation, stamps
+re-applied atop audits) and the OWNER'S WORD on the order of operations.
+NEITHER WINDOW IMPROVISES IT.
