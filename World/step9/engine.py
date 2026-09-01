@@ -1663,3 +1663,11 @@ RULES = {
 def answer(module, case_input):
     entry = RULES.get(module)
     return entry["fn"](case_input) if entry else None
+
+
+# ---- the Exodus 1-21 backfill exam's modules (2026-09-01) ----
+# 33 rules in backfill_rules.py — Part I on the FWD-era units' new
+# EXnn-14+ seats, Part II re-checking chapter 21 against the law-era
+# claims. build(V) avoids a circular import.
+import backfill_rules as _bf
+RULES.update(_bf.build(V))

@@ -49,6 +49,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 17 (10 notes) + Kitzur Baal HaTurim on Exod 17 (13 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE. One row sharpened by the verifier itself: the or-not census is a PAUSAL-FORM pair (17:7 + Num 13:20), not a four — the two long or-nots are exactly the two the Kitzur wires to war. The quarrel-file; the four brought-us-ups; the stoning-word; Ben Asher&#x27;s stroke; the slack hands; the go-out pair; the bare Aaron; the full hands + three fathers; the lean sun; the blot-pair + this-is-Haman; the fly initials; the throne-file with David and Messiah.</td><td>established</td></tr>
 <tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
 <tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-10 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Exod 1-17 continuous.</td><td>established</td></tr>
+<tr><td><b>S9</b></td><td>Step 9 backfill seats (2026-09-01)</td><td>Step 9 backfill exam (2026-09-01, owner: &#x27;lets run step 9 on exodus 1 - 21 again&#x27;): the bare-Mishnah rows citing Exod 1-21 read in full (ledger logic/oral_triage/exodus_backfill_mishnah_2026-09-01.md); this unit&#x27;s unheld legs seated under the auto-seat law — claims EX17-14. Machine ops untouched below the witness tier.</td><td>tested</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -160,6 +161,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ka_asher_yarim_ve_gavar_yisrael, t0)</span><br><span class="gloss">= HOLDS(like-which-yarim-and-gavar-yisrael, t0)</span><br>THE MECHANISM. ka-asher YARIM moshe yad-o ve-GAVAR yisrael — &#x27;when Moses would RAISE his hand, ISRAEL PREVAILED&#x27;; ve-kha-asher YANICHA yad-o ve-gavar AMALEQ — and the converse: the corpus&#x27;s first narrated CONTROL LOOP — a visible state-variable (one man&#x27;s hand) driving a battlefield in real time, sampled in both directions by the verse&#x27;s own if-and-if frame (the machine notes what the loop is made of: not a weapon — the hand holds the staff but the verse tracks the HAND; the readings the Mishna itself asks here — &#x27;do Moses&#x27; hands make or break the war?&#x27; — named-only, with its answer: the hands aimed the eyes upward, and the heart followed): the battle below become an instrument reading of the posture above.
 </td><td><span class="he">וְהָיָה כַּאֲשֶׁר יָרִים מֹשֶׁה יָדוֹ וְגָבַר יִשְׂרָאֵל</span> · <i>ve-haya ka-asher yarim moshe yad-o ve-gavar yisrael</i><br><span class="gloss">= and-haya like-which yarim Moses yad-o and-gavar yisrael</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(raised_hands, instrument_reading)</span><br><span class="gloss">= WITNESS-READ(raised-hands, instrument-reading)</span><br>DID HIS HANDS MAKE WAR? [claim EX17-14]. The tradition&#x27;s own question on this step, with its answer — the hands are instrument, the upward heart the cause (Mishnah Rosh Hashanah 3:8, pairing the serpent of Num 21); the row&#x27;s tail installs the discharge principle: only the obligated discharge the many. Finding F-027, auto-seated per the standing law.
+</td><td>—</td><td class='cite'>Mishnah Rosh Hashanah 3:8</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The control loop.</div>
 </div>
@@ -461,6 +464,10 @@ m.step(&quot;Exod.17.11&quot;)
 # as/which rise-high Moses hand-him/its and-be-strong Israel”) — fact holds:
 # like-which-rise-high-and-be-strong-Israel
 m.fact(&quot;ka_asher_yarim_ve_gavar_yisrael&quot;)
+# witness-tier presupposed read: instrument_reading on raised_hands — read,
+# not installed
+m.witness_read(&quot;raised_hands&quot;, &quot;instrument_reading&quot;,
+                cites=[&quot;Mishnah Rosh Hashanah 3:8&quot;])
 
 # -------------------------- Exod.17.12 · HANDS_OF_FAITHFULNESS -------------
 # וִידֵי מֹשֶׁה כְּבֵדִים וַיִּקְחוּ־אֶבֶן וַיָּשִׂימוּ תַחְתָּיו וַיֵּשֶׁב
@@ -536,5 +543,9 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 11
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;raised_hands&#x27;, &#x27;instrument_reading&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Mishnah Rosh Hashanah 3:8&#x27;]
+    assert all(&#x27;instrument_reading&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;raised_hands&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

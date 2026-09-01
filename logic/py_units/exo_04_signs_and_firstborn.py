@@ -311,6 +311,10 @@ m.step("Exod.4.24")
 # him/its YHWH and-search-out die-him/its”) — fact holds: and-search-out-
 # hamito
 m.fact("va_yevaqesh_hamito")
+# witness-tier presupposed read: circumcision_priority on lodging_seizure —
+# read, not installed
+m.witness_read("lodging_seizure", "circumcision_priority",
+                cites=["Mishnah Nedarim 3:11"])
 
 # -------------------------- Exod.4.25 · THE_FLINT --------------------------
 # וַתִּקַּח צִפֹּרָה צֹר וַתִּכְרֹת אֶת־עָרְלַת בְּנָהּ וַתַּגַּע לְרַגְלָיו
@@ -408,4 +412,8 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 22
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('lodging_seizure', 'circumcision_priority')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Nedarim 3:11']
+    assert all('circumcision_priority' not in f for f in m.WORLD["facts"])
+    assert 'lodging_seizure' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

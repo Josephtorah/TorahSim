@@ -25,6 +25,10 @@ m.step("Exod.11.1")
 # one come/bring over Pharaoh and-over Egypt”) — fact holds: still/again-
 # blow-one-come/bring
 m.fact("od_nega_echad_avi")
+# witness-tier presupposed read: plague_census on one_more_plague — read,
+# not installed
+m.witness_read("one_more_plague", "plague_census",
+                cites=["Pirkei Avot 5:4"])
 
 # -------------------------- Exod.11.2 · ASK_OF_YOUR_NEIGHBOR ---------------
 # דַּבֶּר־נָא בְּאָזְנֵי הָעָם וְיִשְׁאֲלוּ אִישׁ מֵאֵת רֵעֵהוּ וְאִשָּׁה
@@ -150,4 +154,8 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 1
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('one_more_plague', 'plague_census')]
+    assert m.WITNESS_READS[0]["cites"] == ['Pirkei Avot 5:4']
+    assert all('plague_census' not in f for f in m.WORLD["facts"])
+    assert 'one_more_plague' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

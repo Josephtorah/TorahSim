@@ -7764,3 +7764,39 @@ OPEN FOR THE OWNER besides: the stamp crossing (canon flip); the
 re-affirmation batch word (twelve units queued now); Exodus 25-40
 derivation; the remaining ~11 Genesis Talmud blocks; Tosefta +
 Jerusalem Talmud triage; Step 9 site visibility (TorahSim's question).
+
+## MILESTONE (2026-09-01, post-#34, first sitting after compaction) —
+## THE EXODUS 1-21 BACKFILL EXAM: THE ORDERED TASK RAN WHOLE (owner's
+## standing order from #34: "lets run step 9 on exodus 1 - 21 again").
+Resume path honored (#33 + #34 + Step 4 + Step 9 rereads), then the
+round end to end in one sitting: ENUMERATED 761 Mishnah-category rows
+on Exod 1-20 → 83 bare paragraphs (the prior 75 + the 8 Pirkei Avot
+rows read rather than pre-filtered) + 41 chapter-21 re-checks; ALL 125
+texts opened from the local shelf, verdicted in
+logic/oral_triage/exodus_backfill_mishnah_2026-09-01.md (52 material
+Part I / 38 Part II). FINDINGS F-021..F-031 filed AND auto-seated per
+the standing law: 24 claims / 24 WITNESS_READ ops / 14 units (EX01-14,
+EX02-14, EX04-14, EX05-14, EX11-14, EX12-17..22 — the Passover unit's
+six-claim bundle, EX13-14/15, EX15-14/15, EX16-14/15, EX17-14,
+EX18-14, EX19-14, EX20-14/15/16, EX21-14; exo_11 carries an honest
+numbering gap, EX11-09..13 unassigned). 14 rituals COMPLETE, 14
+preflights green, gloss_lint 0, hash 8b8fff1fa28953af UNMOVED.
+COMPILED: 33 modules / 100 cases — 100/100 FIRST RUN; all five exams
+229/229 (two vocabulary dimension collisions — part, offender — caught
+by the regression and merged). Catalog R-248..R-280 = 74 compiled
+rules. TWO FRONTIER DEBTS PAID: Exod 12:19 leaven (EX12-19 +
+leaven_ban) and the plague-census slot (EX11-14 + census_tables,
+closing at 11:1's ONE MORE plague). THE HEADLINE: the chapter-21
+machine ANSWERED THE MISHNAH IT NEVER SAW — 34 of 38 material rows
+already held by the 2026-08-12 law-era claims, several word for word
+(BK 3:9's split-verse = L35-01; BK 4:9's guarded-mu'ad grammar =
+L29-05; BK 4:8's verdict-riding ban and Keritot 6:2's annulment
+MIRROR of it = L28-05 run in both directions). Part I's flagship: the
+three-cohort ink-census (three nouns in 12:6 → three cohorts,
+Pesachim 5:5). NOTE FOR THE MERGE: the 14 rev-bumped Exodus units
+widen the pending ATOP-merge's REAFFIRM set (the crossing plan
+already says REAFFIRM where revs collided). STATUS: Exodus 1-24
+derived AND examined end to end; Genesis Talmud blocks ~11 (162 rows),
+Tosefta + Jerusalem Talmud, Exod 25-40 derivation remain. Records:
+World/step9/REPORT_BACKFILL.md + EXAM_LEDGER round 5 + FRONTIER PAID
+section; THE_STEPS Step 9 updated. NOT COMMITTED — owner word.

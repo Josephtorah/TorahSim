@@ -349,3 +349,115 @@ four titles; Mishnah Terumot 3:7). Read in the morning's spine, met by
 the case shelf the same day, skipped by the derivation pass's eight ops.
 Seated as EX22-10 (one claim, one WITNESS_READ at the 22:28 step's
 area). exo_22_property_social.
+
+## From the Exodus 1-21 backfill exam, 2026-09-01 (owner: "lets run
+## step 9 on exodus 1 - 21 again"; AUTO-SEAT ERA — filed and seated the
+## same sitting per the standing law). Ledger:
+## logic/oral_triage/exodus_backfill_mishnah_2026-09-01.md.
+
+**F-021 · FILED + AUTO-SEATED — the Passover statute's implementing
+rows on exo_12.** Six legs, all bare-Mishnah, all on the chapter's own
+ink: (a) SERVICE LAWS — for-its-name required (זבח פסח הוא, 12:27,
+Pesachim 5:2), the eater/registration teleology (לפי אכלו 12:4,
+Pesachim 5:3 + 7:4), the midday window (בין הערבים 12:6, Pesachim 5:3),
+and THE THREE-COHORT INK-CENSUS: assembly-congregation-Israel, three
+nouns in 12:6 → three slaughter cohorts (Pesachim 5:5) — with the
+agency doctrine's seat on the same verse (all slaughter, one
+slaughters — Kiddushin 2:1 via Kiddushin 41b). (b) EATING REGIME —
+liquids as cooking (12:9, Pesachim 2:8), the innards dispute (7:1),
+the helmeted-kid fence (Beitzah 2:7), midnight window (10:9), the
+leftover-lash asymmetry (repaired-by-burn, Makkot 3:3). (c) LEAVEN
+BAN implementing rows — THE FRONTIER DEBT AT 12:19: lamplight search
+(Pesachim 1:1), the lecha ownership scope (2:2 on 13:7), the measures
+dispute (Beitzah 1:1), the eating lash (Makkot 3:2), second-Passover
+contrast (9:3). (d) SEDER DUTIES — the Rabban Gamliel trio with its
+verse-reasons + five grains (10:5, 2:5). (e) TWO-ERA TABLE — Egypt's
+Passover vs the generations', clause by clause (9:5). (f) CALENDAR
+COMMISSION — sanctification procedure, the relatives dispute,
+no-Nisan-in-Nisan (Rosh Hashanah 3:1 + 1:7, Pesachim 4:9 on 12:1-2);
+plus the arel-terumah extension (12:48, Yevamot 8:1). Seated as
+EX12-17..EX12-22 with WITNESS_READ ops. exo_12_passover_and_exodus.
+
+**F-022 · FILED + AUTO-SEATED — the firstborn cluster + tefillin form
+on exo_13.** (a) FIRSTBORN: the doubled peter-chamor token → both must
+be donkeys (Bekhorot 1:2); redemption-precedes-neck-breaking from
+13:13's own clause order (1:7); the twin-males dispute on the plural
+of 13:12 (2:6); the caesarean womb-opener definition (2:9); the
+dual-track priest/inheritance split with the Israel-womb reading of
+13:2 (8:1); the any-amount prohibition class (Avodah Zarah 5:9).
+(b) TEFILLIN FORM: four compartments the scribal datum (five = liable,
+Sanhedrin 11:3), round = danger, forehead/palm = sectarian (Megillah
+4:8) — the received form of 13:9+16 beside the EX13-04 crown. Seated
+as EX13-14..EX13-15. exo_13_consecration_and_pillars.
+
+**F-023 · FILED + AUTO-SEATED — the manna chapter's three law legs on
+exo_16.** The boundary QUANTIFICATION dispute (2000 cubits vs 4,
+Eruvin 4:5) + the carrying grid as the labor prototype (Shabbat 1:1)
++ the partial-uprooting example (Horayot 1:3), all on the EX16-10
+crown's verse; the challah measure derived from the omer-per-head of
+16:16 (Eduyot 1:2); the manna's membership in the canonical
+twilight-creation table (Pirkei Avot 5:6 — the table gen_22 already
+witnesses at G22-09). Seated as EX16-14..EX16-15 (+ the 20:10 rest-
+roster leg noted at exo_20). exo_16_manna_and_sabbath.
+
+**F-024 · FILED + AUTO-SEATED — the court tiers on exo_18 and the
+utterances' implementing rows on exo_20.** exo_18: the seventy-one
+docket (Sanhedrin 1:5) + capital court composition and side-first
+opening (4:2) + the money/capital asymmetry table (4:1) as the
+institutional heirs of the 18:22 routing — EX18-14. exo_20: the
+plotting-witnesses rows at the ninth utterance (pay-not-lash;
+80-vs-40 — Makkot 1:2/1:3) — EX20-14; father-mother equal weight from
+the reversed order of Leviticus 19:3 against 20:12 (Keritot 6:9) —
+EX20-15; the altar ground-status dispute on 20:21 (Chagigah 3:8), the
+one-student Presence warrant on the Name-mention clause (Pirkei Avot
+3:6), the Decalogue's daily Temple reading (Tamid 5:1), and the
+rest-roster gentile-out reading of 20:10 (Shabbat 24:1) — EX20-16.
+exo_18_jethro_and_the_judges + exo_20_the_ten_utterances.
+
+**F-025 · FILED + AUTO-SEATED — two Song-chapter legs on exo_15.** The
+performance-mode dispute on the doubled saying-token of 15:1 (R. Akiva
+responsive like Hallel / R. Nechemiah together like Shema — Sotah 5:4)
+— EX15-14; the healing verse 15:26 fenced from magical use (R. Akiva's
+whisperer, Sanhedrin 10:1) — EX15-15. exo_15_the_song_and_marah.
+
+**F-026 · FILED + AUTO-SEATED — the readiness interval on exo_19.**
+The three-days preparation of 19:15 read as the standing viability
+window of seed for impurity (Shabbat 9:3's מנין question) — EX19-14.
+exo_19_sinai_and_the_covenant.
+
+**F-027 · FILED + AUTO-SEATED — the raised-hands doctrine on exo_17.**
+Did Moses' hands make war? — instrument, not cause: Israel looking
+upward and subjecting their heart (Rosh Hashanah 3:8 on 17:11, with
+the Num 21 serpent as its pair), and the law tail — only the obligated
+discharge the many — EX17-14. exo_17_massah_and_amalek.
+
+**F-028 · FILED + AUTO-SEATED — the plague census closes on exo_11.**
+Ten plagues in Egypt, ten at the Sea (Pirkei Avot 5:4) — the census
+closing at our 11:1's ONE MORE plague (the clause presupposes nine);
+the frontier's plague-chronology slot paid — EX11-14.
+exo_11_one_more_plague.
+
+**F-029 · FILED + AUTO-SEATED — two narrative-as-law legs.** exo_04:
+circumcision suspended not even an hour over righteous Moses — the
+lodging episode of 4:24-26 as law-evidence (Nedarim 3:11, R. Yehoshua
+ben Korcha) — EX04-14. exo_05: the document rule — the ruler written
+ABOVE the Name on the page's order, from Pharaoh's own progression
+(מי ה' at 5:2 → ה' הצדיק at 9:27; Yadayim 4:8, the Pharisees' retort)
+— EX05-14, citing exo_09's confession op. exo_04_signs_and_firstborn +
+exo_05_bricks_without_straw.
+
+**F-030 · FILED + AUTO-SEATED — two opening-chapters legs.** exo_01:
+the maror reason — the bitter herb eats the verb וימררו of 1:14
+(Pesachim 10:5's third clause) — EX01-14. exo_02: the good-measure
+table — Miriam's hour at 2:4 repaid seven days (Sotah 1:9; the Moses/
+Joseph's-bones leg rides EX13-01's marquee) — EX02-14.
+exo_01_names_and_midwives + exo_02_drawn_from_the_water.
+
+**F-031 · FILED + AUTO-SEATED — two new legs on the ordinances unit.**
+(a) THE STONED ROOSTER: R. Yehudah ben Bava's testimony that a rooster
+was stoned in Jerusalem for killing a person (Eduyot 6:1) — the
+ba-hoveh canon (ox = any killer) carried as an EXECUTED PRECEDENT, not
+a hypothetical. (b) THE PLOTTING-WITNESS TIMING at our 21:23: both
+sides of the Sadducee dispute quote nefesh-tachat-nefesh — killed
+after the VERDICT, not after execution (Makkot 1:6). Seated as EX21-14.
+exo_21_the_ordinances.

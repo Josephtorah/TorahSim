@@ -61,6 +61,45 @@ STATUS ladder:
 | R-246 | bikkurim_duty | Bikkurim | Mishnah Bikkurim 1:2/1:3/1:9; Shekalim 8:8 | Exod 23:16 + 23:19 (EX23-08, EX23-09) |
 | R-247 | shemitah_model | Eduyot | Mishnah Eduyot 4:3 | Exod 23:11 (EX23-05) |
 
+### The Exodus 1-21 backfill exam (2026-09-01, owner: 'lets run step
+### 9 on exodus 1 - 21 again') — R-248..R-280, 33 modules, 100/100.
+### Part II (R-273..R-280) compiled ON the law-era claims: 34 of 38
+### material chapter-21 rows were already held by manifests
+### law01/law02/law03 — the machine answered Mishnah it never saw.
+| R-248 | passover_offering | Pesachim | Mishnah Pesachim 5:2/5:3/5:5/7:4; Kiddushin 2:1 | Exod 12:4-6 + 12:27 (EX12-17) |
+| R-249 | passover_eating | Pesachim | Mishnah Pesachim 2:8/7:1/10:9; Beitzah 2:7; Makkot 3:3 | Exod 12:8-10 + 12:46 (EX12-18) |
+| R-250 | leaven_ban | Pesachim | Mishnah Pesachim 1:1/2:2/3:3/9:3; Beitzah 1:1; Makkot 3:2 | Exod 12:15 + 12:19 (EX12-19 — the frontier debt paid) |
+| R-251 | seder_duties | Pesachim | Mishnah Pesachim 10:5 + 2:5 | Exod 12:27 + 12:39 + 1:14 (EX12-20, EX01-14) |
+| R-252 | egypt_vs_generations | Pesachim | Mishnah Pesachim 9:5 | Exod 12:3 + 12:11 + 12:22 (EX12-21) |
+| R-253 | calendar_court | Rosh Hashanah | Mishnah Rosh Hashanah 1:7 + 3:1; Pesachim 4:9 | Exod 12:1-2 (EX12-22) |
+| R-254 | firstborn_animal | Bekhorot | Mishnah Bekhorot 1:2/1:7/2:6/2:9; Avodah Zarah 5:9 | Exod 13:12-13 (EX13-14) |
+| R-255 | firstborn_human | Bekhorot | Mishnah Bekhorot 8:1 | Exod 13:2 (EX13-14) |
+| R-256 | tefillin_form | Megillah | Mishnah Megillah 4:8; Sanhedrin 11:3 | Exod 13:9 + 13:16 (EX13-15, beside the EX13-04 crown) |
+| R-257 | sabbath_boundary | Eruvin | Mishnah Eruvin 4:5; Shabbat 1:1 + 24:1; Horayot 1:3 | Exod 16:29 + 20:10 (EX16-14 beside the EX16-10 crown; EX20-16) |
+| R-258 | challah_measure | Eduyot | Mishnah Eduyot 1:2 | Exod 16:16 (EX16-15) |
+| R-259 | court_tiers | Sanhedrin | Mishnah Sanhedrin 1:5 + 4:1 + 4:2 | Exod 18:22 (EX18-14 beside the EX18-13 routing) |
+| R-260 | plotting_witnesses | Makkot | Mishnah Makkot 1:2 + 1:3 + 1:6 | Exod 20:13 + 21:23 (EX20-14, EX21-14) |
+| R-261 | equal_weight | Keritot | Mishnah Keritot 6:9 | Exod 20:12 (EX20-15) |
+| R-262 | altar_stones | Middot | Mishnah Middot 3:4; Chagigah 3:8 | Exod 20:21-22 (EX20-12 held before the exam; EX20-16) |
+| R-263 | sinai_purity | Shabbat | Mishnah Shabbat 9:3 | Exod 19:15 (EX19-14) |
+| R-264 | song_performance | Sotah | Mishnah Sotah 5:4 | Exod 15:1 (EX15-14) |
+| R-265 | incantation_ban | Sanhedrin | Mishnah Sanhedrin 10:1 | Exod 15:26 (EX15-15) |
+| R-266 | public_discharge | Rosh Hashanah | Mishnah Rosh Hashanah 3:8 | Exod 17:11 (EX17-14) |
+| R-267 | census_tables | Pirkei Avot | Pirkei Avot 5:4 + 5:6 | Exod 11:1 + 16:4 (EX11-14 — the plague-chronology slot paid; EX16-15) |
+| R-268 | decalogue_standing | Tamid | Mishnah Tamid 5:1; Pirkei Avot 3:6 | Exod 20:2 + 20:21 (EX20-16) |
+| R-269 | document_precedent | Yadayim | Mishnah Yadayim 4:8 | Exod 5:2 + 9:27 (EX05-14) |
+| R-270 | circumcision_priority | Nedarim | Mishnah Nedarim 3:11 | Exod 4:24-26 (EX04-14) |
+| R-271 | good_measure | Sotah | Mishnah Sotah 1:9 | Exod 2:4 + 13:19 (EX02-14, riding EX13-01) |
+| R-272 | maror_reason | Pesachim | Mishnah Pesachim 10:5 | Exod 1:14 (EX01-14) |
+| R-273 | slave_acquisition | Kiddushin | Mishnah Kiddushin 1:2 + 3:12; Yevamot 2:5; Bekhorot 1:7 | Exod 21:2-11 (law-era L2/L4/L5/L6/L8/L11) |
+| R-274 | onah_duty | Ketubot | Mishnah Ketubot 5:6; Eduyot 4:10 | Exod 21:10 (L10-01/02) |
+| R-275 | goring_liability | Bava Kamma | Mishnah Bava Kamma 1:4/3:8/3:9/4:3/4:9/5:7 | Exod 21:35-36 (L29/L35/L36) |
+| R-276 | stoned_ox_process | Sanhedrin | Mishnah Sanhedrin 1:4; Bava Kamma 4:4-4:8; Keritot 6:2; Kiddushin 2:9; Arakhin 3:3; Eduyot 6:1 | Exod 21:28-32 (L28/L30/L31/L32 + EX21-14) |
+| R-277 | pit_liability | Bava Kamma | Mishnah Bava Kamma 5:5 + 5:6 + 3:1 | Exod 21:33-34 (L33) |
+| R-278 | five_payments | Bava Kamma | Mishnah Bava Kamma 8:1/8:2/3:10; Ketubot 3:2 | Exod 21:18-27 (L19/L22/L26/L12-05) |
+| R-279 | theft_tariff | Bava Kamma | Mishnah Bava Kamma 7:1 + 7:5; Sanhedrin 1:1 | Exod 21:37 (L37) |
+| R-280 | capital_modes | Sanhedrin | Mishnah Sanhedrin 11:1 + 7:3 | Exod 21:12-21 (L12/L15/L16/L17/L20) |
+
 ## PART II — CANDIDATES from the Talmud triage (206), by tractate
 
 Each: id | source passage | Genesis anchor | the rule in one line.

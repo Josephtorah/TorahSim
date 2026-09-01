@@ -49,6 +49,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 18 (18 notes) + Kitzur Baal HaTurim on Exod 18 (18 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE, first run. The did-God pair; the three lean rescues; the camping angel; the on-account pair (printed Masorah convicted); the unique joy + the sevirin; the pointed blessing; the creation-letters; the seek-file; the heavy guard-stroke; the ten-utterance warning; the two counselors; the roster&#x27;s letters; the grown vav.</td><td>established</td></tr>
 <tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
 <tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-10 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Exod 1-18 continuous.</td><td>established</td></tr>
+<tr><td><b>S9</b></td><td>Step 9 backfill seats (2026-09-01)</td><td>Step 9 backfill exam (2026-09-01, owner: &#x27;lets run step 9 on exodus 1 - 21 again&#x27;): the bare-Mishnah rows citing Exod 1-21 read in full (ledger logic/oral_triage/exodus_backfill_mishnah_2026-09-01.md); this unit&#x27;s unheld legs seated under the auto-seat law — claims EX18-14. Machine ops untouched below the witness tier.</td><td>tested</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -268,6 +269,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_haqel_me_alekha, t0)</span><br><span class="gloss">= HOLDS(and-haqel-from-alekha, t0)</span><br>THE ROUTING [EX18-13]. ve-SHAFTU et-ha-am be-khol-ET — &#x27;and they shall judge the people AT EVERY TIME&#x27; (the queue goes continuous: no more one-day bottleneck); kol-ha-davar ha-GADOL yaviu elekha — the GREAT matter up (the great-word lean, VERIFIED at the build — absent from the full-roster of Noah&#x27;s parasha), ve-khol-ha-davar ha-QATON yishptu-HEM — the SMALL they judge (the judging-verb here LEAN — armed: 18:26 will replay this clause with the verb GROWN A VAV); ve- HAQEL me-alekha — &#x27;and LIGHTEN it from off you&#x27;: the heavy-diagnosis (18:18 khaved) answered by its own antonym (the machine closes the arc: the chapter is one mass-transfer problem — kaved in, haqel out); ve-NASU itakh — &#x27;and they shall BEAR WITH you&#x27;: the carrying shared (Numbers 11&#x27;s seventy elders armed, the readings named-only).
 </td><td><span class="he">וְהָקֵל מֵעָלֶיךָ וְנָשְׂאוּ אִתָּךְ</span> · <i>ve-haqel me-ale-kha ve-nasu et-khe</i><br><span class="gloss">= and-haqel from-ale-kha and-nasu khe</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(great_matter, court_tiers)</span><br><span class="gloss">= WITNESS-READ(great-matter, court-tiers)</span><br>THE GREAT MATTER&#x27;S STANDING DOCKET [claim EX18-14]. On this step&#x27;s routing (every great matter to Moses — the EX18-13 crown): the seventy-one docket (Mishnah Sanhedrin 1:5), the money/capital asymmetry table (Mishnah Sanhedrin 4:1), the side-first opening and capital composition (Mishnah Sanhedrin 4:2) — the Jethro architecture running as institutions. Finding F-024, auto-seated per the standing law.
+</td><td>—</td><td class='cite'>Mishnah Sanhedrin 1:5, Mishnah Sanhedrin 4:1, Mishnah Sanhedrin 4:2</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The routing rule.</div>
 </div>
@@ -736,6 +739,10 @@ m.step(&quot;Exod.18.22&quot;)
 # ‹וְהָקֵל מֵעָלֶיךָ וְנָשְׂאוּ אִתָּךְ› (“and-be-light from-over-you/your
 # and-lift/carry with-you/your”) — fact holds: and-be-light-from-alekha
 m.fact(&quot;ve_haqel_me_alekha&quot;)
+# witness-tier presupposed read: court_tiers on great_matter — read, not
+# installed
+m.witness_read(&quot;great_matter&quot;, &quot;court_tiers&quot;,
+                cites=[&quot;Mishnah Sanhedrin 1:5&quot;, &quot;Mishnah Sanhedrin 4:1&quot;, &quot;Mishnah Sanhedrin 4:2&quot;])
 
 # -------------------------- Exod.18.23 · TO_ITS_PLACE_IN_PEACE -------------
 # אִם אֶת־הַדָּבָר הַזֶּה תַּעֲשֶׂה וְצִוְּךָ אֱלֹהִים וְיָכָלְתָּ עֲמֹד
@@ -806,5 +813,9 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 3
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;great_matter&#x27;, &#x27;court_tiers&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Mishnah Sanhedrin 1:5&#x27;, &#x27;Mishnah Sanhedrin 4:1&#x27;, &#x27;Mishnah Sanhedrin 4:2&#x27;]
+    assert all(&#x27;court_tiers&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;great_matter&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

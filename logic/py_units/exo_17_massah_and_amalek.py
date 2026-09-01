@@ -145,6 +145,10 @@ m.step("Exod.17.11")
 # as/which rise-high Moses hand-him/its and-be-strong Israel”) — fact holds:
 # like-which-rise-high-and-be-strong-Israel
 m.fact("ka_asher_yarim_ve_gavar_yisrael")
+# witness-tier presupposed read: instrument_reading on raised_hands — read,
+# not installed
+m.witness_read("raised_hands", "instrument_reading",
+                cites=["Mishnah Rosh Hashanah 3:8"])
 
 # -------------------------- Exod.17.12 · HANDS_OF_FAITHFULNESS -------------
 # וִידֵי מֹשֶׁה כְּבֵדִים וַיִּקְחוּ־אֶבֶן וַיָּשִׂימוּ תַחְתָּיו וַיֵּשֶׁב
@@ -220,4 +224,8 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 11
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('raised_hands', 'instrument_reading')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Rosh Hashanah 3:8']
+    assert all('instrument_reading' not in f for f in m.WORLD["facts"])
+    assert 'raised_hands' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

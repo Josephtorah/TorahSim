@@ -53,6 +53,10 @@ m.step("Exod.2.4")
 # ‹וַתֵּתַצַּב אֲחֹתוֹ מֵרָחֹק› (“and-place sister-him/its from-remote”) —
 # fact holds: and-place-achoto-from-remote
 m.fact("va_tetatzav_achoto_me_rachoq")
+# witness-tier presupposed read: good_measure on station_afar — read, not
+# installed
+m.witness_read("station_afar", "good_measure",
+                cites=["Mishnah Sotah 1:9"])
 
 # -------------------------- Exod.2.5 · THE_DESCENT_THAT_CHANGED_HER_LAW ----
 # וַתֵּרֶד בַּת־פַּרְעֹה לִרְחֹץ עַל־הַיְאֹר וְנַעֲרֹתֶיהָ הֹלְכֹת עַל־יַד
@@ -304,4 +308,8 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 10
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('station_afar', 'good_measure')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Sotah 1:9']
+    assert all('good_measure' not in f for f in m.WORLD["facts"])
+    assert 'station_afar' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

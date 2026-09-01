@@ -49,3 +49,10 @@ slots owed:
 | Leviticus 12:3 | "on the eighth day the flesh of his foreskin shall be circumcised" | repeated_at_sinai (the circumcision instance) | the Sinai repetition the framework weighs — resolved as the Shabbat-permission (59b:2) | Sanhedrin 59b:1-2, read 2026-09-01 |
 | Deuteronomy 5:27 | "go say to them: return to your tents" | repeated_at_sinai (the procreation instance) | the Sinai repetition — resolved as the counted-body principle (59b:4) | Sanhedrin 59b:3-4, read 2026-09-01 |
 | Leviticus 18:5 | "which THE MAN shall do and live by them" | gentile_sabbath_torah (the like-high-priest leg) | R. Meir's counter — the same verse already on the frontier for life_override | Sanhedrin 59a:4, read 2026-09-01 |
+
+## PAID — by the Exodus 1-21 backfill exam, 2026-09-01
+
+| debt | paid by | how |
+|---|---|---|
+| Exodus 12:19 (the leaven found-clause, owed by leaven_search since 2026-08-31) | claim EX12-19 on exo_12_passover_and_exodus + module leaven_ban (R-250) | the implementing rows read and seated: lamplight search (Mishnah Pesachim 1:1), the lekha ownership scope (Pesachim 2:2), the measures dispute (Mishnah Beitzah 1:1), the eating lash (Mishnah Makkot 3:2) — the found-word's own case shelf now runs |
+| the plague-chronology slot (the Egyptians' judgment census context) | claim EX11-14 on exo_11_one_more_plague + module census_tables (R-267) | the canonical count closed at 11:1's ONE MORE plague: ten in Egypt, ten at the Sea (Pirkei Avot 5:4) — the census question now answerable; the TWELVE-MONTH duration member still owed to the chronology derivation proper |

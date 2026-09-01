@@ -317,6 +317,10 @@ m.step("Exod.21.28")
 # khi butt-with-the-horns bullock obj-marker man o obj-marker woman and-die
 # routes to bullock-butting
 m.case("ve-khi yigach shor et ish o et isha va-met", "shor_nagach")
+# witness-tier presupposed read: backfill_legs on stoning_statute — read,
+# not installed
+m.witness_read("stoning_statute", "backfill_legs",
+                cites=["Mishnah Eduyot 6:1", "Mishnah Makkot 1:6"])
 
 # -------------------------- Exod.21.29 · THE_WARNED_OX ---------------------
 # וְאִם שׁוֹר נַגָּח הוּא מִתְּמֹל שִׁלְשֹׁם וְהוּעַד בִּבְעָלָיו וְלֹא
@@ -447,4 +451,8 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 27
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('stoning_statute', 'backfill_legs')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Eduyot 6:1', 'Mishnah Makkot 1:6']
+    assert all('backfill_legs' not in f for f in m.WORLD["facts"])
+    assert 'stoning_statute' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

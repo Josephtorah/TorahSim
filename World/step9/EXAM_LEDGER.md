@@ -76,3 +76,33 @@ doctrine), F-020 EX22-10 (gift order + mah-she-asah-asui). Rituals
 green after each seat; hash unmoved. COMPILED: 20 modules, 60 case
 rows, 60/60; regressions green — 129/129 across pilot + sweep +
 Noahide + Mishpatim. Catalog R-228..R-247; 41 compiled rules.
+
+## ROUND 5 — THE EXODUS 1-21 BACKFILL (2026-09-01, owner: "lets run
+## step 9 on exodus 1 - 21 again")
+The round the frozen Exodus units never had. MEMBERSHIP: 83 bare
+Mishnah rows citing Exod 1-20 (110 verse-pairs; the prior sitting's
+75 + the 8 Pirkei Avot rows read rather than pre-filtered) + the 41
+chapter-21 rows re-checked exam-first against the proven law-era
+machine (108 claims, manifests law01/02/03). All 125 texts opened
+from the local shelf — ledger logic/oral_triage/
+exodus_backfill_mishnah_2026-09-01.md (52 material Part I; 38
+material Part II, 34 of them HELD by the law-era claims, several
+EXACTLY — the split-verse dispute of Bava Kamma 3:9 = L35-01, the
+guarded-mu'ad grammar of 4:9 = L29-05, the verdict-riding ban of 4:8
+AND its annulment mirror Keritot 6:2 = L28-05). FINDINGS F-021..F-031
+filed and AUTO-SEATED same sitting: 24 claims (EX01-14, EX02-14,
+EX04-14, EX05-14, EX11-14, EX12-17..22, EX13-14/15, EX15-14/15,
+EX16-14/15, EX17-14, EX18-14, EX19-14, EX20-14/15/16, EX21-14) on 14
+units, 24 WITNESS_READ ops; 14 rituals COMPLETE, 14 preflights green,
+gloss_lint 0, hash 8b8fff1fa28953af UNMOVED. (exo_11's numbering
+carries an honest gap — EX11-09..13 unassigned; the backfill's seats
+are uniformly EXnn-14+.) COMPILED: 33 modules (25 Part I + 8 Part
+II), 100 case rows, 100/100 first run; regressions green — 229/229
+across all five exams. Vocabulary: 45 new dimensions + ~75 query
+values (two duplicate-dimension collisions with part/offender caught
+by regression and merged — the registry stays single-rooted). Catalog
+R-248..R-280; 74 compiled rules. FRONTIER DEBTS PAID: Exod 12:19
+(leaven) + the plague-chronology census slot. HEADLINE: the
+chapter-21 machine ANSWERED THE MISHNAH IT NEVER SAW — the 2026-08-12
+whole-chapter reading wrote the claims; today's 38 material rows
+found 34 already carrying their exact content.

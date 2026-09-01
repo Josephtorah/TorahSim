@@ -49,6 +49,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 2 (19 notes) + Kitzur Baal HaTurim on Exod 2 (11 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE. The Ramah&#x27;s ark-rule verified as a Torah-pair (Noah&#x27;s ark / the reed basket); a two-count Masorah ruled a corruption and the three-count verified; a Talmudic dispute carried in half a vowel with the stream&#x27;s camp identified.</td><td>established</td></tr>
 <tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
 <tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+<tr><td><b>S9</b></td><td>Step 9 backfill seats (2026-09-01)</td><td>Step 9 backfill exam (2026-09-01, owner: &#x27;lets run step 9 on exodus 1 - 21 again&#x27;): the bare-Mishnah rows citing Exod 1-21 read in full (ledger logic/oral_triage/exodus_backfill_mishnah_2026-09-01.md); this unit&#x27;s unheld legs seated under the auto-seat law — claims EX02-14. Machine ops untouched below the witness tier.</td><td>tested</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -88,6 +89,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_tetatzav_achoto_me_rachoq, t0)</span><br><span class="gloss">= HOLDS(and-tetatzav-achoto-from-rachoq, t0)</span><br>THE STATION. va-TETATZAV achoto me-RACHOQ — &#x27;his sister STATIONED herself afar&#x27;: the stand-firm verb (the readings hear the Presence&#x27;s own stationing-word, armed at the sea&#x27;s &#x27;stand and see&#x27; 14:13 and the cleft 34:5); le-DEA ma-YEASE lo — &#x27;to KNOW what would be DONE to him&#x27;: the know-verb in a seven-year-old&#x27;s hands (the chapter will close with the same verb in God&#x27;s, 2:25 — the machine notes the arc); Miriam unnamed here (her prophecy at the ha-elekh file, named [EX02-13]): the corpus&#x27;s first sentinel.
 </td><td><span class="he">וַתֵּתַצַּב אֲחֹתוֹ מֵרָחֹק</span> · <i>va-tetatzav achot-o me-rachoq</i><br><span class="gloss">= and-tetatzav achot-o from-rachoq</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(station_afar, good_measure)</span><br><span class="gloss">= WITNESS-READ(station-afar, good-measure)</span><br>THE HOUR REPAID SEVEN DAYS [claim EX02-14]. The station this step records (va-tetatzav achoto me-rachoq — &#x27;his sister stationed herself afar&#x27;) is the input of the tradition&#x27;s good-measure computation: Miriam waited one hour, Israel waited for her seven days (Mishnah Sotah 1:9, citing Num 12:15); the same table&#x27;s Moses leg rides the bones-marquee of exo_13 (EX13-01). Finding F-030, auto-seated per the standing law.
+</td><td>—</td><td class='cite'>Mishnah Sotah 1:9</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The watcher; the know-verb&#x27;s small sentinel.</div>
 </div>
@@ -522,6 +525,10 @@ m.step(&quot;Exod.2.4&quot;)
 # ‹וַתֵּתַצַּב אֲחֹתוֹ מֵרָחֹק› (“and-place sister-him/its from-remote”) —
 # fact holds: and-place-achoto-from-remote
 m.fact(&quot;va_tetatzav_achoto_me_rachoq&quot;)
+# witness-tier presupposed read: good_measure on station_afar — read, not
+# installed
+m.witness_read(&quot;station_afar&quot;, &quot;good_measure&quot;,
+                cites=[&quot;Mishnah Sotah 1:9&quot;])
 
 # -------------------------- Exod.2.5 · THE_DESCENT_THAT_CHANGED_HER_LAW ----
 # וַתֵּרֶד בַּת־פַּרְעֹה לִרְחֹץ עַל־הַיְאֹר וְנַעֲרֹתֶיהָ הֹלְכֹת עַל־יַד
@@ -773,5 +780,9 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 10
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;station_afar&#x27;, &#x27;good_measure&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Mishnah Sotah 1:9&#x27;]
+    assert all(&#x27;good_measure&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;station_afar&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

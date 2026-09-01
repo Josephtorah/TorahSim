@@ -34,6 +34,10 @@ m.step("Exod.12.2")
 # moon-the-this-head
 m.declare("YHWH", "LET",
           "ha_chodesh_ha_ze_rosh")
+# witness-tier presupposed read: court_procedure on calendar_commission —
+# read, not installed
+m.witness_read("calendar_commission", "court_procedure",
+                cites=["Mishnah Rosh Hashanah 3:1", "Mishnah Rosh Hashanah 1:7", "Mishnah Pesachim 4:9", "Mishnah Yevamot 8:1"])
 
 # -------------------------- Exod.12.3 · A_LAMB_FOR_A_HOUSE -----------------
 # דַּבְּרוּ אֶל־כָּל־עֲדַת יִשְׂרָאֵל לֵאמֹר בֶּעָשֹׂר לַחֹדֶשׁ הַזֶּה
@@ -82,6 +86,10 @@ m.step("Exod.12.6")
 # slaughter obj-marker-him/its all assemblage congregation Israel between
 # the-evening”) — fact holds: and-slaughter-son-the-evening
 m.fact("ve_shachatu_ben_ha_arbayim")
+# witness-tier presupposed read: service_laws on slaughter_clause — read,
+# not installed
+m.witness_read("slaughter_clause", "service_laws",
+                cites=["Mishnah Pesachim 5:5", "Mishnah Pesachim 5:3", "Mishnah Pesachim 5:2", "Mishnah Pesachim 7:4", "Mishnah Kiddushin 2:1"])
 
 # -------------------------- Exod.12.7 · BLOOD_ON_THE_DOORPOSTS -------------
 # וְלָקְחוּ מִן־הַדָּם וְנָתְנוּ עַל־שְׁתֵּי הַמְּזוּזֹת וְעַל־הַמַּשְׁקוֹף
@@ -115,6 +123,10 @@ m.step("Exod.12.9")
 # from-us/our tough and-boiled boil-up in-waters”) — fact holds: over-eat-
 # tough-and-boiled
 m.fact("al_tokhlu_na_u_vashel")
+# witness-tier presupposed read: eating_regime on roast_clause — read, not
+# installed
+m.witness_read("roast_clause", "eating_regime",
+                cites=["Mishnah Pesachim 2:8", "Mishnah Pesachim 7:1", "Mishnah Beitzah 2:7", "Mishnah Pesachim 10:9", "Mishnah Makkot 3:3"])
 
 # -------------------------- Exod.12.10 · NOTHING_LEFT_TILL_MORNING ---------
 # וְלֹא־תוֹתִירוּ מִמֶּנּוּ עַד־בֹּקֶר וְהַנֹּתָר מִמֶּנּוּ עַד־בֹּקֶר
@@ -138,6 +150,10 @@ m.step("Exod.12.11")
 # ‹פֶּסַח הוּא לַיהוָה› (“pretermission he/it to-YHWH”) — fact holds:
 # pretermission-he/it-to-the-LORD
 m.fact("pesach_hu_la_YHWH")
+# witness-tier presupposed read: two_era_table on haste_clause — read, not
+# installed
+m.witness_read("haste_clause", "two_era_table",
+                cites=["Mishnah Pesachim 9:5"])
 
 # -------------------------- Exod.12.12 · JUDGMENTS_ON_ALL_THE_GODS ---------
 # וְעָבַרְתִּי בְאֶרֶץ־מִצְרַיִם בַּלַּיְלָה הַזֶּה וְהִכֵּיתִי כָל־בְּכוֹר
@@ -243,6 +259,10 @@ m.step("Exod.12.19")
 # the-earth”) — fact holds: in-the-sojourner-and-and-spontaneous-growth-the-
 # earth
 m.fact("ba_ger_u_ve_ezrach_ha_aretz")
+# witness-tier presupposed read: implementing_rows on leaven_ban — read, not
+# installed
+m.witness_read("leaven_ban", "implementing_rows",
+                cites=["Mishnah Pesachim 1:1", "Mishnah Pesachim 2:2", "Mishnah Beitzah 1:1", "Mishnah Makkot 3:2", "Mishnah Pesachim 3:3", "Mishnah Pesachim 9:3"])
 
 # -------------------------- Exod.12.20 · IN_ALL_YOUR_DWELLINGS -------------
 # כָּל־מַחְמֶצֶת לֹא תֹאכֵלוּ בְּכֹל מוֹשְׁבֹתֵיכֶם תֹּאכְלוּ מַצּוֹת
@@ -336,6 +356,10 @@ m.step("Exod.12.27")
 # ‹וַיִּקֹּד הָעָם וַיִּשְׁתַּחֲוּוּ› (“and-shrivel-up the-people and-
 # afflict”) — fact holds: and-shrivel-up-the-people-and-yishtachavu
 m.fact("va_yiqod_ha_am_va_yishtachavu")
+# witness-tier presupposed read: seder_trio on pesach_answer — read, not
+# installed
+m.witness_read("pesach_answer", "seder_trio",
+                cites=["Mishnah Pesachim 10:5", "Mishnah Pesachim 2:5"])
 
 # -------------------------- Exod.12.28 · AND_THEY_DID_SO -------------------
 # וַיֵּלְכוּ וַיַּעֲשׂוּ בְּנֵי יִשְׂרָאֵל כַּאֲשֶׁר צִוָּה יְהוָה
@@ -615,4 +639,23 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 12
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('calendar_commission', 'court_procedure'), ('slaughter_clause', 'service_laws'), ('roast_clause', 'eating_regime'), ('haste_clause', 'two_era_table'), ('leaven_ban', 'implementing_rows'), ('pesach_answer', 'seder_trio')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Rosh Hashanah 3:1', 'Mishnah Rosh Hashanah 1:7', 'Mishnah Pesachim 4:9', 'Mishnah Yevamot 8:1']
+    assert all('court_procedure' not in f for f in m.WORLD["facts"])
+    assert 'calendar_commission' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Pesachim 5:5', 'Mishnah Pesachim 5:3', 'Mishnah Pesachim 5:2', 'Mishnah Pesachim 7:4', 'Mishnah Kiddushin 2:1']
+    assert all('service_laws' not in f for f in m.WORLD["facts"])
+    assert 'slaughter_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Mishnah Pesachim 2:8', 'Mishnah Pesachim 7:1', 'Mishnah Beitzah 2:7', 'Mishnah Pesachim 10:9', 'Mishnah Makkot 3:3']
+    assert all('eating_regime' not in f for f in m.WORLD["facts"])
+    assert 'roast_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Mishnah Pesachim 9:5']
+    assert all('two_era_table' not in f for f in m.WORLD["facts"])
+    assert 'haste_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Mishnah Pesachim 1:1', 'Mishnah Pesachim 2:2', 'Mishnah Beitzah 1:1', 'Mishnah Makkot 3:2', 'Mishnah Pesachim 3:3', 'Mishnah Pesachim 9:3']
+    assert all('implementing_rows' not in f for f in m.WORLD["facts"])
+    assert 'leaven_ban' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Pesachim 10:5', 'Mishnah Pesachim 2:5']
+    assert all('seder_trio' not in f for f in m.WORLD["facts"])
+    assert 'pesach_answer' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

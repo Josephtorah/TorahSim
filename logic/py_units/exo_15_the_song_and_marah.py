@@ -30,6 +30,10 @@ m.event("shirat_ha_yam", agent="moshe", themes=["bene-yisrael"])
 # to-YHWH that mount-up mount-up horse and-ride-him/its hurl in-seas”) —
 # fact holds: that-mount-up-mount-up-horse-and-rokhvo
 m.fact("ki_gao_gaa_sus_ve_rokhvo")
+# witness-tier presupposed read: performance_mode on saying_token — read,
+# not installed
+m.witness_read("saying_token", "performance_mode",
+                cites=["Mishnah Sotah 5:4"])
 
 # -------------------------- Exod.15.2 · MY_STRENGTH_AND_SONG ---------------
 # עָזִּי וְזִמְרָת יָהּ וַיְהִי־לִי לִישׁוּעָה זֶה אֵלִי וְאַנְוֵהוּ אֱלֹהֵי
@@ -326,6 +330,10 @@ m.declare("YHWH", "LET",
 # put/set over-you/your that YHWH mend-you/your”) — fact holds: ani-the-
 # LORD-rofekha
 m.fact("ani_YHWH_rofekha")
+# witness-tier presupposed read: incantation_ban on healing_promise — read,
+# not installed
+m.witness_read("healing_promise", "incantation_ban",
+                cites=["Mishnah Sanhedrin 10:1"])
 
 # -------------------------- Exod.15.27 · TWELVE_SPRINGS_SEVENTY_PALMS ------
 # וַיָּבֹאוּ אֵילִמָה וְשָׁם שְׁתֵּים עֶשְׂרֵה עֵינֹת מַיִם וְשִׁבְעִים
@@ -354,4 +362,11 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 7
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('saying_token', 'performance_mode'), ('healing_promise', 'incantation_ban')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Sotah 5:4']
+    assert all('performance_mode' not in f for f in m.WORLD["facts"])
+    assert 'saying_token' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Sanhedrin 10:1']
+    assert all('incantation_ban' not in f for f in m.WORLD["facts"])
+    assert 'healing_promise' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

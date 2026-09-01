@@ -288,6 +288,31 @@ Gen 8:22 (the round's one clean hole), the repeated-at-Sinai framework
 Catalog: R-217..R-227 compiled, 42 candidates flipped, 162 LAW rows
 remain in ~11 blocks. Full record: World/step9/REPORT_NOAHIDE.md.
 
+THE MISHPATIM EXAM RAN (2026-09-01, same day the parashah was derived —
+the derive-then-examine rhythm's first full cycle). The 59 bare Mishnah
+rows citing Exod 22:1-24:18 read in full, 20 modules compiled, 60/60.
+The headline sharpened to hours: the morning's Mekhilta reading IS the
+case shelf — the same tannaim tables met twice in one day (fire
+distances, the four keepers, swear-not-pay, meat-in-milk,
+pesach-over-leaven). The auto-seat law's first full cycle: F-017..F-020
+filed and seated the same sitting. Catalog R-228..R-247.
+
+THE EXODUS 1-21 BACKFILL RAN (2026-09-01, owner: "lets run step 9 on
+exodus 1 - 21 again") — the round the frozen Exodus units never had.
+All 125 bare-Mishnah paragraphs citing Exod 1-21 opened (83 on 1-20,
+41 chapter-21 re-checks + one range), 33 modules, 100/100 first run;
+229/229 across all five exams; F-021..F-031 auto-seated — 24 claims on
+14 units (the Passover chapters the densest: EX12-17..22), rituals and
+preflights green, hash unmoved. Two frontier debts PAID: the Exod
+12:19 leaven rows and the plague-census (ten closing at "one more
+plague," 11:1). THE HEADLINE AT CHAPTER SCALE: the chapter-21 machine
+ANSWERED THE MISHNAH IT NEVER SAW — 34 of 38 material rows were
+already held by the 2026-08-12 law-era claims, several word for word
+(the split-verse dispute = L35-01; the guarded-mu'ad grammar = L29-05;
+the verdict-riding ban AND its annulment mirror = L28-05). Exodus 1-24
+now derived AND examined end to end. Full record:
+World/step9/REPORT_BACKFILL.md.
+
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed
 on the spot: logic/findings/FINDINGS_QUEUE.md (append-only). The owner

@@ -49,6 +49,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 21 (19 notes) + Kitzur Baal HaTurim on Exod 21 (34 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE, first run. The fraud-finals; the awl&#x27;s 400; the garment-betrayal pair; the alef-vav trio; the three exits; the two presumptions; the healing license; the Cain-skeleton; the vav-to-vav freedom; the no-benefit cipher; the two yesterdays; the precious ransom; the curser&#x27;s career.</td><td>established</td></tr>
 <tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
 <tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-10 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Exod 1-21 continuous.</td><td>established</td></tr>
+<tr><td><b>S9</b></td><td>Step 9 backfill seats (2026-09-01)</td><td>Step 9 backfill exam (2026-09-01, owner: &#x27;lets run step 9 on exodus 1 - 21 again&#x27;): the bare-Mishnah rows citing Exod 1-21 read in full (ledger logic/oral_triage/exodus_backfill_mishnah_2026-09-01.md); this unit&#x27;s unheld legs seated under the auto-seat law — claims EX21-14. Machine ops untouched below the witness tier.</td><td>tested</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -328,6 +329,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>CASE</td><td><span class="expr">CASE(ve-khi yigach shor et ish o et isha va-met) ROUTE(shor_nagach)</span><br><span class="gloss">= CASE(and-khi yigach shor et man o et isha and-met) ROUTE(shor-nagach)</span><br>THE SIXTH CASE [EX21-10 CROWN]. ve-khi-YIGACH SHOR et-ish o et-isha va-MET — &#x27;when an OX GORES a man or a woman, and he dies&#x27;: the case installed — SAQOL YISAQEL ha-shor: the surely-stoned doubling&#x27;s second and last Torah station (the 19:13 pair CLOSES IN-SPAN: the mountain-toucher&#x27;s protocol becomes the ox&#x27;s — &#x27;from here we learn for the generations&#x27;: the Sinai-fence&#x27;s one-time rule now standing court-law); VE-LO YEAKHEL et-besaro — &#x27;its flesh shall NOT BE EATEN&#x27;: and the cipher EXACT (VERIFIED at the build): ve-lo yeakhel = VE-LO HANAA, &#x27;and no BENEFIT&#x27; (98 = 98 — the halakha&#x27;s benefit-ban encoded in the letters&#x27; own arithmetic); u-vaal ha-shor NAQI — &#x27;and the owner is CLEAR&#x27; (first goring — the readings&#x27; three readings of naqi, named-only): the machine files the marvel plainly: the corpus puts an ANIMAL ON TRIAL, executes it by the mountain&#x27;s own protocol, and quarantines its carcass by cipher.
 </td><td><span class="he">וְכִי־יִגַּח שׁוֹר אֶת־אִישׁ אוֹ אֶת־אִשָּׁה וָמֵת</span> · <i>ve-ki-yigach shor et-ish o et-isha va-met</i><br><span class="gloss">= and-when-yigach shor man o isha and-met</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(stoning_statute, backfill_legs)</span><br><span class="gloss">= WITNESS-READ(stoning-statute, backfill-legs)</span><br>THE STATUTE&#x27;S EXECUTED PRECEDENT AND ITS TIMING CLAUSE [claim EX21-14]. On this step&#x27;s stoning law: a rooster stoned in Jerusalem — the ba-hoveh canon as courtroom fact (Mishnah Eduyot 6:1); and 21:23&#x27;s nefesh-tachat-nefesh quoted by BOTH sides of the plotting-witness timing dispute, the sages reading it as verdict-not-execution (Mishnah Makkot 1:6). The 34-of-38 held rows of the re-check are recorded in the exam ledger; these two were the chapter&#x27;s only new legs. Finding F-031, auto-seated per the standing law.
+</td><td>—</td><td class='cite'>Mishnah Eduyot 6:1, Mishnah Makkot 1:6</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The beast on trial.</div>
 </div>
@@ -960,6 +963,10 @@ m.step(&quot;Exod.21.28&quot;)
 # khi butt-with-the-horns bullock obj-marker man o obj-marker woman and-die
 # routes to bullock-butting
 m.case(&quot;ve-khi yigach shor et ish o et isha va-met&quot;, &quot;shor_nagach&quot;)
+# witness-tier presupposed read: backfill_legs on stoning_statute — read,
+# not installed
+m.witness_read(&quot;stoning_statute&quot;, &quot;backfill_legs&quot;,
+                cites=[&quot;Mishnah Eduyot 6:1&quot;, &quot;Mishnah Makkot 1:6&quot;])
 
 # -------------------------- Exod.21.29 · THE_WARNED_OX ---------------------
 # וְאִם שׁוֹר נַגָּח הוּא מִתְּמֹל שִׁלְשֹׁם וְהוּעַד בִּבְעָלָיו וְלֹא
@@ -1090,5 +1097,9 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 27
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;stoning_statute&#x27;, &#x27;backfill_legs&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Mishnah Eduyot 6:1&#x27;, &#x27;Mishnah Makkot 1:6&#x27;]
+    assert all(&#x27;backfill_legs&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;stoning_statute&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

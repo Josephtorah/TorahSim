@@ -151,6 +151,10 @@ m.step("Exod.13.13")
 # member-of-a-flock”) — fact holds: fissure-male-ass-sever-and-member-of-a-
 # flock
 m.fact("peter_chamor_tifde_ve_se")
+# witness-tier presupposed read: firstborn_cluster on donkey_firstling —
+# read, not installed
+m.witness_read("donkey_firstling", "firstborn_cluster",
+                cites=["Mishnah Bekhorot 1:2", "Mishnah Bekhorot 1:7", "Mishnah Bekhorot 2:6", "Mishnah Bekhorot 2:9", "Mishnah Bekhorot 8:1", "Mishnah Avodah Zarah 5:9"])
 
 # -------------------------- Exod.13.14 · WHEN_YOUR_SON_ASKS_TOMORROW -------
 # וְהָיָה כִּי־יִשְׁאָלְךָ בִנְךָ מָחָר לֵאמֹר מַה־זֹּאת וְאָמַרְתָּ אֵלָיו
@@ -190,6 +194,10 @@ m.step("Exod.13.16")
 # you/your and-to-fillet-for-the-forehead”) — fact holds: to-signs-over-
 # yadkha-he
 m.fact("le_ot_al_yadkha_he")
+# witness-tier presupposed read: received_form on frontlets — read, not
+# installed
+m.witness_read("frontlets", "received_form",
+                cites=["Mishnah Sanhedrin 11:3", "Mishnah Megillah 4:8"])
 
 # -------------------------- Exod.13.17 · NOT_BY_THE_NEAR_WAY ---------------
 # וַיְהִי בְּשַׁלַּח פַּרְעֹה אֶת־הָעָם וְלֹא־נָחָם אֱלֹהִים דֶּרֶךְ אֶרֶץ
@@ -272,4 +280,11 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 2
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('donkey_firstling', 'firstborn_cluster'), ('frontlets', 'received_form')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Bekhorot 1:2', 'Mishnah Bekhorot 1:7', 'Mishnah Bekhorot 2:6', 'Mishnah Bekhorot 2:9', 'Mishnah Bekhorot 8:1', 'Mishnah Avodah Zarah 5:9']
+    assert all('firstborn_cluster' not in f for f in m.WORLD["facts"])
+    assert 'donkey_firstling' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Sanhedrin 11:3', 'Mishnah Megillah 4:8']
+    assert all('received_form' not in f for f in m.WORLD["facts"])
+    assert 'frontlets' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

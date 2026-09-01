@@ -49,6 +49,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 1 (10 notes) + Kitzur Baal HaTurim on Exod 1 (19 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE. A printed- Masorah error corrected by collation and verified whole (the lean midwives, empty full-census); a unique-lean verified with its full stations exact; the FWD-3 Rameses map confirmed from the Exodus end.</td><td>established</td></tr>
 <tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
 <tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+<tr><td><b>S9</b></td><td>Step 9 backfill seats (2026-09-01)</td><td>Step 9 backfill exam (2026-09-01, owner: &#x27;lets run step 9 on exodus 1 - 21 again&#x27;): the bare-Mishnah rows citing Exod 1-21 read in full (ledger logic/oral_triage/exodus_backfill_mishnah_2026-09-01.md); this unit&#x27;s unheld legs seated under the auto-seat law — claims EX01-14. Machine ops untouched below the witness tier.</td><td>tested</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -188,6 +189,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yemarru_et_chayehem, t0)</span><br><span class="gloss">= HOLDS(and-yemarru-chayehem, t0)</span><br>THE BITTERNESS [EX01-11]. va-YEMARERU et chayehem — &#x27;they made their lives BITTER&#x27; (the resh on its simple sheva, MS&#x27;s pointing asserted): the readings count the verse&#x27;s FOUR afflictions (hard service / mortar-and-bricks / field-service / the crushing all) with the plague-arithmetic named (each plague four — the ten armed); be- CHOMER — the MORTAR written LEAN, the 248-limbs reading named, and the stream&#x27;s census planted: the lean mortar-word stands exactly TWICE in the Torah — the bondage here and the pitch-and-mortar of the little ark (2:3, armed): the substance of the slavery is about to be the substance of a rescue [VERIFIED: manifest EX01-11]; the bitterness-root files forward (the bitter herbs of the night of going out, 12:8, armed).
 </td><td><span class="he">וַיְמָרְרוּ אֶת־חַיֵּיהֶם בַּעֲבֹדָה קָשָׁה</span> · <i>va-yemarru et-chaye-hem ba-avoda qasha</i><br><span class="gloss">= and-yemarru chaye-hem in-the-avoda qasha</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(embittered_verb, maror_reason)</span><br><span class="gloss">= WITNESS-READ(embittered-verb, maror-reason)</span><br>THE VERB BECOMES A FOOD [claim EX01-14]. va-yemareru (&#x27;and they EMBITTERED&#x27; — our verse) is quoted by the seder&#x27;s charter as the maror duty&#x27;s reason: whoever has not said pesach-matzah-maror has not discharged (Mishnah Pesachim 10:5) — the third word&#x27;s reason is THIS verse&#x27;s verb. The exam&#x27;s Exodus 1-21 backfill met it as the case shelf&#x27;s own citation. Finding F-030, auto-seated per the standing law.
+</td><td>—</td><td class='cite'>Mishnah Pesachim 10:5</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The bitterness itemized.</div>
 </div>
@@ -569,6 +572,10 @@ m.step(&quot;Exod.1.14&quot;)
 # alive-them/their in-service/work severe”) — fact holds: and-be-bitter-
 # with-chayehem
 m.fact(&quot;va_yemarru_et_chayehem&quot;)
+# witness-tier presupposed read: maror_reason on embittered_verb — read, not
+# installed
+m.witness_read(&quot;embittered_verb&quot;, &quot;maror_reason&quot;,
+                cites=[&quot;Mishnah Pesachim 10:5&quot;])
 
 # -------------------------- Exod.1.15 · SHIFRA_AND_PUA ---------------------
 # וַיֹּאמֶר מֶלֶךְ מִצְרַיִם לַמְיַלְּדֹת הָעִבְרִיֹּת אֲשֶׁר שֵׁם הָאַחַת
@@ -672,5 +679,9 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 6
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;embittered_verb&#x27;, &#x27;maror_reason&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Mishnah Pesachim 10:5&#x27;]
+    assert all(&#x27;maror_reason&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;embittered_verb&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

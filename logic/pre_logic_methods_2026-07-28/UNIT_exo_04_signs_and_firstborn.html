@@ -49,6 +49,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 4 (10 notes) + Kitzur Baal HaTurim on Exod 4 (13 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE. The Name in the initials (mechanical, the finals&#x27; twin); a genuine stream-vs-chain spelling split carried named (the second throw-word); the firstborn-pair reframed on the stream&#x27;s own census (Reuben demoted / Israel elected).</td><td>established</td></tr>
 <tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
 <tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+<tr><td><b>S9</b></td><td>Step 9 backfill seats (2026-09-01)</td><td>Step 9 backfill exam (2026-09-01, owner: &#x27;lets run step 9 on exodus 1 - 21 again&#x27;): the bare-Mishnah rows citing Exod 1-21 read in full (ledger logic/oral_triage/exodus_backfill_mishnah_2026-09-01.md); this unit&#x27;s unheld legs seated under the auto-seat law — claims EX04-14. Machine ops untouched below the witness tier.</td><td>tested</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -300,6 +301,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yevaqesh_hamito, t0)</span><br><span class="gloss">= HOLDS(and-yevaqesh-hamito, t0)</span><br>THE ATTACK [EX04-04]. va-YIFGESHEHU YHWH va-yevaqesh HAMITO — &#x27;and the LORD MET him, and sought to KILL him&#x27;: the met-word&#x27;s exact Scripture-pair lives INSIDE this chapter — the attack here, Aaron&#x27;s kiss at 4:27 (the Kitzur: &#x27;when Moses was lax about the circumcision, Wrath and Fury came to swallow him... by Aaron&#x27;s merit he was saved&#x27;) [VERIFIED: manifest EX04-04]; the machine holds the seeking as standing fact (the class of 2:15 — no imperative, no card) and files the terror the readings weigh: the sender attacks the sent (the readings&#x27; whose-lapse and which-son hearings named, never merged): three verses of night between the commission and the road.
 </td><td><span class="he">וַיִּפְגְּשֵׁהוּ יְהוָה וַיְבַקֵּשׁ הֲמִיתוֹ</span> · <i>va-yifgshe-hu YHWH va-yevaqesh hamit-o</i><br><span class="gloss">= and-yifgshe-that the-LORD and-yevaqesh hamit-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(lodging_seizure, circumcision_priority)</span><br><span class="gloss">= WITNESS-READ(lodging-seizure, circumcision-priority)</span><br>NOT EVEN AN HOUR [claim EX04-14]. The seizure at the lodging place this step carries is read by the chain as a LAW datum: circumcision so great that righteous Moses was not suspended over it a full hour (Mishnah Nedarim 3:11, R. Yehoshua ben Korcha) — the mission to Pharaoh itself waits for the flint. The exam&#x27;s backfill met the greatness-list with this leg unheld; the thirteen-covenants leg was already the Genesis sweep&#x27;s computed verdict. Finding F-029, auto-seated per the standing law.
+</td><td>—</td><td class='cite'>Mishnah Nedarim 3:11</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The second seeking; the pair&#x27;s dark half.</div>
 </div>
@@ -926,6 +929,10 @@ m.step(&quot;Exod.4.24&quot;)
 # him/its YHWH and-search-out die-him/its”) — fact holds: and-search-out-
 # hamito
 m.fact(&quot;va_yevaqesh_hamito&quot;)
+# witness-tier presupposed read: circumcision_priority on lodging_seizure —
+# read, not installed
+m.witness_read(&quot;lodging_seizure&quot;, &quot;circumcision_priority&quot;,
+                cites=[&quot;Mishnah Nedarim 3:11&quot;])
 
 # -------------------------- Exod.4.25 · THE_FLINT --------------------------
 # וַתִּקַּח צִפֹּרָה צֹר וַתִּכְרֹת אֶת־עָרְלַת בְּנָהּ וַתַּגַּע לְרַגְלָיו
@@ -1023,5 +1030,9 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 22
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;lodging_seizure&#x27;, &#x27;circumcision_priority&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Mishnah Nedarim 3:11&#x27;]
+    assert all(&#x27;circumcision_priority&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;lodging_seizure&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

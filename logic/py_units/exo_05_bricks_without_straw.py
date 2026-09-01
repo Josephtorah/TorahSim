@@ -36,6 +36,10 @@ m.step("Exod.5.2")
 # ‹לֹא יָדַעְתִּי אֶת־יְהוָה› (“not know obj-marker YHWH”) — fact holds:
 # not-know-obj-marker-the-LORD
 m.fact("lo_yadati_et_YHWH")
+# witness-tier presupposed read: document_precedent on who_is_the_lord —
+# read, not installed
+m.witness_read("who_is_the_lord", "document_precedent",
+                cites=["Mishnah Yadayim 4:8"])
 
 # -------------------------- Exod.5.3 · THE_SCRIPT_PERFORMED ----------------
 # וַיֹּאמְרוּ אֱלֹהֵי הָעִבְרִים נִקְרָא עָלֵינוּ נֵלֲכָה נָּא דֶּרֶךְ
@@ -286,4 +290,8 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 5
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('who_is_the_lord', 'document_precedent')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Yadayim 4:8']
+    assert all('document_precedent' not in f for f in m.WORLD["facts"])
+    assert 'who_is_the_lord' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -49,6 +49,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 11 (8 notes) + Kitzur Baal HaTurim on Exod 11 (3 notes). Manifest 8 rows: 8 VERIFIED / 0 FAILED / 0 UNCHECKABLE. The six lean to-you&#x27;s (the Miqetz-signed list verified exact); the Moses/Name finals; the bekhor-three; the Josiah frame; the sevirin cry; the dog&#x27;s lean tongue; the letter-file; the large-tzadi books-split.</td><td>established</td></tr>
 <tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 8/8 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
 <tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Run FWD-6 opens: Exod 1-11 continuous.</td><td>established</td></tr>
+<tr><td><b>S9</b></td><td>Step 9 backfill seats (2026-09-01)</td><td>Step 9 backfill exam (2026-09-01, owner: &#x27;lets run step 9 on exodus 1 - 21 again&#x27;): the bare-Mishnah rows citing Exod 1-21 read in full (ledger logic/oral_triage/exodus_backfill_mishnah_2026-09-01.md); this unit&#x27;s unheld legs seated under the auto-seat law — claims EX11-14. Machine ops untouched below the witness tier.</td><td>tested</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -58,6 +59,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(od_nega_echad_avi, t0)</span><br><span class="gloss">= HOLDS(od-nega-echad-avi, t0)</span><br>THE FORECAST [EX11-07]. OD NEGA ECHAD avi al-paro — &#x27;ONE plague MORE I bring&#x27;: the tenth named as ONE (the nine behind it summed into a cycle, the last standing alone — 10:29&#x27;s except-the-firstborn hint now the program); achare khen YESHALACH etkhem mi-ze — &#x27;AFTERWARDS he will SEND you&#x27;: the send-verb at last in the future indicative, with the king as subject (the demand of 5:2 priced: what was refused will be performed — armed at 12:31-33); ke-SHALLECHO kala — &#x27;when he sends, COMPLETELY&#x27; (the send-word&#x27;s dageshed lamed and ruled qadma, checked [EX11-07]: the intensive release — no men-only, no flocks- stay: the bargain-ladder&#x27;s every rung annulled in one adverb); GARESH YEGARESH etkhem mi-ze — &#x27;DRIVING he shall DRIVE YOU OUT&#x27; (asserted: the doubled drive-verb — 6:1&#x27;s promise whole, its down- payment already spent on the deliverers at 10:11; armed at 12:39&#x27;s thrust-out): the machine arms the exit&#x27;s whole grammar before the plague that buys it.
 </td><td><span class="he">עוֹד נֶגַע אֶחָד אָבִיא עַל־פַּרְעֹה וְעַל־מִצְרַיִם</span> · <i>od nega echad avi al-paro ve-al-mitzrayim</i><br><span class="gloss">= od nega echad avi upon-paro and-upon-mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(one_more_plague, plague_census)</span><br><span class="gloss">= WITNESS-READ(one-more-plague, plague-census)</span><br>ONE MORE MEANS TEN [claim EX11-14]. The census the corpus carried plague by plague through exo_07-exo_10 CLOSES here: &#x27;yet ONE MORE plague&#x27; arithmetically presupposes nine, and the canonical table records the total — ten in Egypt, ten at the Sea, ten miracles beside them (Pirkei Avot 5:4). The same table-family whose rainbow member gen_22 witnesses (G22-09). Finding F-028, auto-seated per the standing law.
+</td><td>—</td><td class='cite'>Pirkei Avot 5:4</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The tenth named as one; the send-and-drive forecast.</div>
 </div>
@@ -249,6 +252,10 @@ m.step(&quot;Exod.11.1&quot;)
 # one come/bring over Pharaoh and-over Egypt”) — fact holds: still/again-
 # blow-one-come/bring
 m.fact(&quot;od_nega_echad_avi&quot;)
+# witness-tier presupposed read: plague_census on one_more_plague — read,
+# not installed
+m.witness_read(&quot;one_more_plague&quot;, &quot;plague_census&quot;,
+                cites=[&quot;Pirkei Avot 5:4&quot;])
 
 # -------------------------- Exod.11.2 · ASK_OF_YOUR_NEIGHBOR ---------------
 # דַּבֶּר־נָא בְּאָזְנֵי הָעָם וְיִשְׁאֲלוּ אִישׁ מֵאֵת רֵעֵהוּ וְאִשָּׁה
@@ -374,5 +381,9 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 1
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;one_more_plague&#x27;, &#x27;plague_census&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Pirkei Avot 5:4&#x27;]
+    assert all(&#x27;plague_census&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;one_more_plague&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

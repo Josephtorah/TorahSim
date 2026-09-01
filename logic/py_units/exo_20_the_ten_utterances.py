@@ -132,6 +132,10 @@ m.step("Exod.20.12")
 # ‹כַּבֵּד אֶת־אָבִיךָ וְאֶת־אִמֶּךָ› (“be-heavy obj-marker father-you/your
 # and-obj-marker mother-you/your”) —
 m.statute("BIND", "kabed_av_va_em")
+# witness-tier presupposed read: equal_weight on honor_utterance — read, not
+# installed
+m.witness_read("honor_utterance", "equal_weight",
+                cites=["Mishnah Keritot 6:9"])
 
 # -------------------------- Exod.20.13 · NO_MURDER -------------------------
 # לֹא תִּרְצָח
@@ -139,6 +143,10 @@ m.statute("BIND", "kabed_av_va_em")
 m.step("Exod.20.13")
 # ‹לֹא תִּרְצָח› (“not dash-in-pieces”) —
 m.statute("FORBID", "retzach")
+# witness-tier presupposed read: plotting_rows on false_witness_utterance —
+# read, not installed
+m.witness_read("false_witness_utterance", "plotting_rows",
+                cites=["Mishnah Makkot 1:2", "Mishnah Makkot 1:3"])
 
 # -------------------------- Exod.20.14 · NO_ADULTERY -----------------------
 # לֹא תִּנְאָף
@@ -220,6 +228,10 @@ m.step("Exod.20.21")
 # the-gloom which there the-God”) — demand settled (popped from the queue):
 # speak-you-imanu
 m.result("daber_ata_imanu", tmark="t1")
+# witness-tier presupposed read: standing_rows on altar_speech — read, not
+# installed
+m.witness_read("altar_speech", "standing_rows",
+                cites=["Mishnah Chagigah 3:8", "Pirkei Avot 3:6", "Mishnah Tamid 5:1", "Mishnah Shabbat 24:1"])
 
 # -------------------------- Exod.20.22 · FROM_THE_HEAVENS ------------------
 # וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה כֹּה תֹאמַר אֶל־בְּנֵי יִשְׂרָאֵל אַתֶּם
@@ -289,4 +301,14 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 17
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('honor_utterance', 'equal_weight'), ('false_witness_utterance', 'plotting_rows'), ('altar_speech', 'standing_rows')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Keritot 6:9']
+    assert all('equal_weight' not in f for f in m.WORLD["facts"])
+    assert 'honor_utterance' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Makkot 1:2', 'Mishnah Makkot 1:3']
+    assert all('plotting_rows' not in f for f in m.WORLD["facts"])
+    assert 'false_witness_utterance' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Mishnah Chagigah 3:8', 'Pirkei Avot 3:6', 'Mishnah Tamid 5:1', 'Mishnah Shabbat 24:1']
+    assert all('standing_rows' not in f for f in m.WORLD["facts"])
+    assert 'altar_speech' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

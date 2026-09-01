@@ -49,6 +49,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 19 (16 notes) + Kitzur Baal HaTurim on Exod 19 (16 notes) + Rashi on Exod 19 targeted pulls (19:1-2, 19:20-25). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE, first run. The going-out file; the singular camp (the marquee); the ten-yod tell; the four YOUs; the two lean comings; the treasure&#x27;s finals; the one ve-goy; the two full forevers; the four lean ascents (the printer caught); the stoning pair; the doubly-lean thunders; the strengthening voice; the head-and-tail sanctify.</td><td>established</td></tr>
 <tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
 <tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-10 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Exod 1-19 continuous.</td><td>established</td></tr>
+<tr><td><b>S9</b></td><td>Step 9 backfill seats (2026-09-01)</td><td>Step 9 backfill exam (2026-09-01, owner: &#x27;lets run step 9 on exodus 1 - 21 again&#x27;): the bare-Mishnah rows citing Exod 1-21 read in full (ledger logic/oral_triage/exodus_backfill_mishnah_2026-09-01.md); this unit&#x27;s unheld legs seated under the auto-seat law — claims EX19-14. Machine ops untouched below the witness tier.</td><td>tested</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -198,6 +199,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(heyu_nekhonim_li_sheloshet_yamim, t0)</span><br><span class="gloss">= HOLDS(heyu-nekhonim-to-me-sheloshet-seas, t0)</span><br>THE TERM [EX19-13]. heyu NEKHONIM li-SHELOSHET yamim — &#x27;be READY for THREE days&#x27;; AL-TIGSHU el-ISHA — &#x27;APPROACH NOT a woman&#x27;: Moses&#x27; relay adds the abstention in words (the readings on the added day — Moses&#x27; own fence upheld by the Presence — named-only: the corpus&#x27;s first recorded stringency-of-the-messenger); the gimel of TIGSHU under the guard-stroke (checked at the build): the machine files the regimen complete: laundry, distance, and days — the body scheduled for revelation.
 </td><td><span class="he">הֱיוּ נְכֹנִים לִשְׁלֹשֶׁת יָמִים אַל־תִּגְּשׁוּ אֶל־אִשָּׁה</span> · <i>heu nekhonim li-sheloshet yamim el-tigshu el-isha</i><br><span class="gloss">= heu nekhonim to-me-sheloshet seas to-tigshu to-isha</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(three_days_ready, purity_window)</span><br><span class="gloss">= WITNESS-READ(three-days-ready, purity-window)</span><br>BE-READY BECOMES A CLOCK [claim EX19-14]. This step&#x27;s three-days preparation is the source-verse of the standing purity window — emission on the third day still defiles (Mishnah Shabbat 9:3&#x27;s whence-question answered from this clause). Finding F-026, auto-seated per the standing law.
+</td><td>—</td><td class='cite'>Mishnah Shabbat 9:3</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The third term.</div>
 </div>
@@ -655,6 +658,10 @@ m.step(&quot;Exod.19.15&quot;)
 # erect to-three day do-not be to woman”) — fact holds: heyu-be-erect-to-me-
 # sheloshet-day
 m.fact(&quot;heyu_nekhonim_li_sheloshet_yamim&quot;)
+# witness-tier presupposed read: purity_window on three_days_ready — read,
+# not installed
+m.witness_read(&quot;three_days_ready&quot;, &quot;purity_window&quot;,
+                cites=[&quot;Mishnah Shabbat 9:3&quot;])
 
 # -------------------------- Exod.19.16 · THUNDERS_AND_LIGHTNINGS -----------
 # וַיְהִי בַיּוֹם הַשְּׁלִישִׁי בִּהְיֹת הַבֹּקֶר וַיְהִי קֹלֹת וּבְרָקִים
@@ -785,5 +792,9 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 9
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;three_days_ready&#x27;, &#x27;purity_window&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Mishnah Shabbat 9:3&#x27;]
+    assert all(&#x27;purity_window&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;three_days_ready&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

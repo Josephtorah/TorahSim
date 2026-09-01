@@ -261,6 +261,10 @@ m.step("Exod.18.22")
 # ‹וְהָקֵל מֵעָלֶיךָ וְנָשְׂאוּ אִתָּךְ› (“and-be-light from-over-you/your
 # and-lift/carry with-you/your”) — fact holds: and-be-light-from-alekha
 m.fact("ve_haqel_me_alekha")
+# witness-tier presupposed read: court_tiers on great_matter — read, not
+# installed
+m.witness_read("great_matter", "court_tiers",
+                cites=["Mishnah Sanhedrin 1:5", "Mishnah Sanhedrin 4:1", "Mishnah Sanhedrin 4:2"])
 
 # -------------------------- Exod.18.23 · TO_ITS_PLACE_IN_PEACE -------------
 # אִם אֶת־הַדָּבָר הַזֶּה תַּעֲשֶׂה וְצִוְּךָ אֱלֹהִים וְיָכָלְתָּ עֲמֹד
@@ -331,4 +335,8 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 3
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('great_matter', 'court_tiers')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Sanhedrin 1:5', 'Mishnah Sanhedrin 4:1', 'Mishnah Sanhedrin 4:2']
+    assert all('court_tiers' not in f for f in m.WORLD["facts"])
+    assert 'great_matter' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

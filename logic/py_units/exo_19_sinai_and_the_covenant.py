@@ -190,6 +190,10 @@ m.step("Exod.19.15")
 # erect to-three day do-not be to woman”) — fact holds: heyu-be-erect-to-me-
 # sheloshet-day
 m.fact("heyu_nekhonim_li_sheloshet_yamim")
+# witness-tier presupposed read: purity_window on three_days_ready — read,
+# not installed
+m.witness_read("three_days_ready", "purity_window",
+                cites=["Mishnah Shabbat 9:3"])
 
 # -------------------------- Exod.19.16 · THUNDERS_AND_LIGHTNINGS -----------
 # וַיְהִי בַיּוֹם הַשְּׁלִישִׁי בִּהְיֹת הַבֹּקֶר וַיְהִי קֹלֹת וּבְרָקִים
@@ -320,4 +324,8 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 9
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('three_days_ready', 'purity_window')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Shabbat 9:3']
+    assert all('purity_window' not in f for f in m.WORLD["facts"])
+    assert 'three_days_ready' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

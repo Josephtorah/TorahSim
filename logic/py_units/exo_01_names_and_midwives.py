@@ -151,6 +151,10 @@ m.step("Exod.1.14")
 # alive-them/their in-service/work severe”) — fact holds: and-be-bitter-
 # with-chayehem
 m.fact("va_yemarru_et_chayehem")
+# witness-tier presupposed read: maror_reason on embittered_verb — read, not
+# installed
+m.witness_read("embittered_verb", "maror_reason",
+                cites=["Mishnah Pesachim 10:5"])
 
 # -------------------------- Exod.1.15 · SHIFRA_AND_PUA ---------------------
 # וַיֹּאמֶר מֶלֶךְ מִצְרַיִם לַמְיַלְּדֹת הָעִבְרִיֹּת אֲשֶׁר שֵׁם הָאַחַת
@@ -254,4 +258,8 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 6
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('embittered_verb', 'maror_reason')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Pesachim 10:5']
+    assert all('maror_reason' not in f for f in m.WORLD["facts"])
+    assert 'embittered_verb' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

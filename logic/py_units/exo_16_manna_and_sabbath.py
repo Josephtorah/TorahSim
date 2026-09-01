@@ -223,6 +223,10 @@ m.step("Exod.16.16")
 # (“this the-word/thing which command YHWH pick-up from-us/our man to-mouth
 # food-him/its”) — fact holds: heap-to-skull
 m.fact("omer_la_gulgolet")
+# witness-tier presupposed read: challah_yardstick on omer_ration — read,
+# not installed
+m.witness_read("omer_ration", "challah_yardstick",
+                cites=["Mishnah Eduyot 1:2", "Pirkei Avot 5:6"])
 
 # -------------------------- Exod.16.17 · GREAT_AND_SMALL -------------------
 # וַיַּעֲשׂוּ־כֵן בְּנֵי יִשְׂרָאֵל וַיִּלְקְטוּ הַמַּרְבֶּה וְהַמַּמְעִיט
@@ -373,6 +377,10 @@ m.step("Exod.16.29")
 # man-who?-meqomo
 m.declare("YHWH", "LET",
           "al_yetze_ish_mi_meqomo")
+# witness-tier presupposed read: quantification on boundary_crown — read,
+# not installed
+m.witness_read("boundary_crown", "quantification",
+                cites=["Mishnah Eruvin 4:5", "Mishnah Shabbat 1:1", "Mishnah Horayot 1:3"])
 
 # -------------------------- Exod.16.30 · AND_THE_PEOPLE_RESTED -------------
 # וַיִּשְׁבְּתוּ הָעָם בַּיּוֹם הַשְּׁבִעִי
@@ -467,4 +475,11 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 16
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('omer_ration', 'challah_yardstick'), ('boundary_crown', 'quantification')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Eduyot 1:2', 'Pirkei Avot 5:6']
+    assert all('challah_yardstick' not in f for f in m.WORLD["facts"])
+    assert 'omer_ration' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Eruvin 4:5', 'Mishnah Shabbat 1:1', 'Mishnah Horayot 1:3']
+    assert all('quantification' not in f for f in m.WORLD["facts"])
+    assert 'boundary_crown' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
