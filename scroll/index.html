@@ -463,6 +463,35 @@ function unitRecordHTML(bid, uid, u, vds) {
   const s7body = `<div class="gates">${GATE_NAMES.map(x => `<i>✓ ${x}</i>`).join("")}<i>— 9/9</i></div>
     <p class="desc" style="font-size:.78rem;color:var(--mut);margin:6px 0 2px">The same nine gates run on every change and every push; a full-rule stamp ran its own declared-reading check besides — no record, no stamp.</p>`;
 
+  // STEP 9 — the exam. "Proven" is computed from the verses' own p flag
+  // (the scene-stamp baseline), never claimed by prose: the chip law is
+  // that the label drops automatically if a recorded case goes red, and
+  // it never runs ahead of a verdict's seat.
+  const proven = vds.every(v => (v.vstat || {}).p);
+  const s9sum = proven
+    ? "PROVEN — the recorded cases run green against the compiled machine"
+    : "the exam stands open — no recorded case has run against this block yet";
+  const s9body = proven
+    ? `<p style="margin-top:2px">This span is COMPILED TO A MACHINE and the tradition's own
+      recorded cases run against it on every build. The scene stamps are frozen as a
+      baseline — sixty-four scenes from across the Bible, with the Mishnah's own
+      input→output rows joining the case list at the chapter's reading — and the
+      gates compare every run against it. The chip is computed, never hand-set:
+      if any case goes red, "proven" drops on its own.</p>
+      <p class="desc" style="font-size:.78rem;color:var(--mut)">↳ the compiled machine and its case tables live in the public repo (machines/); the 64-scene baseline is asserted by the gates on every push</p>`
+    : `<p style="margin-top:2px">STEP 9 IS THE EXAM: the machine faces the tradition's own recorded
+      cases — the Mishnah's input→output rows, routed by topic, with the Talmud as the
+      bridge that walks each ruling back to its verse ("from where do we know this?").
+      ${uid.startsWith("gen_") ? `The exam era opened 2026-08-31: the Mishnah's rows citing Genesis
+      have run twenty-eight of twenty-eight with zero mismatches in the workshop's
+      engine, and the reading anticipated the exam — nineteen of twenty-five material
+      rows were already held before the cases were posed. But no Genesis block claims
+      the proven chip yet: a verdict seats into a block only on the owner's word, and
+      the label never runs ahead of it.` : `The case tables for this span have not yet
+      been assembled into a runnable exam, and the chip stays honestly unproven until
+      they run green.`}</p>
+      <p class="desc" style="font-size:.78rem;color:var(--mut)">↳ the method, in full: THE_STEPS Step 9 in the public repo — the exam comes first, every case is classified against the machine as it stands, findings are filed and never fixed on the spot, and disputes return both verdicts, labeled</p>`;
+
   const s8sum = u.full ? `the owner's word${u.stamped ? ", " + u.stamped : ""} — rev ${u.rev || 1}`
     : `awaiting the owner's word — rev ${u.rev || 1}`;
   const s8body = `<p class="desc" style="font-size:.82rem;margin:2px 0">${u.full
@@ -475,7 +504,8 @@ function unitRecordHTML(bid, uid, u, vds) {
     ${xp(bid + "s5", "STEP 5", "Extract claims", s5sum, s5body, 1)}
     ${xp(bid + "s6", "STEP 6", "Write or amend the logic", u.nops ? `the unit's machine — ${u.nops} operators, each citing what licensed it` : "the unit's machine", s6body, 1)}
     ${xp(bid + "s7", "STEP 7", "Run the gates", "one command, nine gates, all green — before any human declared anything", s7body, 1)}
-    ${xp(bid + "s8", "STEP 8", "The stamp", s8sum, s8body, 1)}</div>`;
+    ${xp(bid + "s8", "STEP 8", "The stamp", s8sum, s8body, 1)}
+    ${xp(bid + "s9", "STEP 9", "Prove against cases", s9sum, s9body, 1)}</div>`;
 }
 
 function bandHTML(b, c, uid, vds) {
