@@ -7616,3 +7616,151 @@ COMMITTED — owner word. Owner also answered in-sitting: engine
 functions are live Python; the verse side's own generated
 logic/py_units/<uid>.py renderings regenerate at each ritual (all six
 did today).
+
+## MILESTONE (2026-09-01, same day) — MISHPATIM DERIVED WHOLE (owner:
+## "derive mishpatim"). The first parashah under the derive-then-exam
+rhythm the owner approved this sitting. Exodus 21 already stood (three
+law units + the ordinances unit + the proven exo21 machine); the four
+July-era DRAFTS covering the rest came through the full RE process in
+ONE parashah-grain sitting: exo_22_property_social (22:1-30),
+exo_23_justice_calendar (23:1-19), exo_23_escort_land (23:20-33),
+exo_24_covenant_ascent (24:1-18). READING (Step 4, one sequential
+pass): Mekhilta of Rabbi Yishmael chapters 22-23 IN FULL (135
+paragraphs — the book's running text ENDS at 23:19; the silence over
+23:20-24:18 recorded openly, those blocks on Onkelos alone) + Onkelos
+81 verses; 8,163 rows pre-enumerated by script, remainder outside
+declared scope; four ledgers logic/oral_triage/exo_2*_2026-09-01.md.
+LOGIC (Steps 5-6): 24 witness operators + 24 claims (EX22-01..08,
+EX23-01..08, EX23B-01..02, EX24-01..06) — the four-keepers table
+closing on the chapter's own ink, judges-three from the elohim-tokens,
+all-oaths-by-the-Name, asymmetric majority, the acquittal asymmetry
+with THE PURSUER WARNING QUOTING GEN 9:6 (G21-13's Mekhilta seat found
+in this unit's own reading), the ris measure, meat-in-milk with
+ONKELOS PRINTING THE VERDICT ('you shall not EAT MEAT IN MILK'), the
+terefah rendered in Gen 9:4's limb-vocabulary (the two-era
+architecture visible in translation), mohar=ketubah with Gen 34 as
+lexicon, the firstborn officiants, the covenant blood as atonement,
+Aaron-and-Hur the standing court. Draft-era scenarios re-anchored to
+the runner's convention (the one mechanical fix). GATES: 4 freeze
+rituals COMPLETE (draft->frozen — the corpus stands at 101 FROZEN
+UNITS), 4 preflights ALL SCENARIOS GREEN, gloss_lint 0, hash
+8b8fff1fa28953af UNMOVED. NOT COMMITTED — owner word. NEXT (per the
+approved rhythm): the Step 9 exam round on Mishpatim — the property/
+oaths/courts case rows from the RULE_CATALOG (Bava Kamma 7, Bava
+Metzia 5, Bava Batra 9, Shevuot 6, plus the Exodus-anchored Mishnah
+rows proper) against the newly derived statutes; and the frontier
+debts this parashah can now pay.
+
+## MILESTONE (2026-09-01, same day) — THE MISHPATIM EXAM: THE
+## PARASHAH RHYTHM CLOSES ITS FIRST FULL CYCLE (owner: "run step 9 on
+## mishpatim"). Derive-in-the-morning, examine-in-the-afternoon, the
+rhythm approved this sitting, ran whole: 252 Mishnah-category rows
+enumerated on Exod 22:1-24:18, the 59 BARE Mishnah rows read in full
+(mishpatim_exam_mishnah_2026-09-01.md, 47 material), 20 modules
+compiled, 60/60 green, 129/129 across all four exams. THE HEADLINE
+SHARPENED TO HOURS: the morning's Mekhilta reading IS the case shelf —
+the same tannaim tables met twice in one day (fire distances, the
+intent dispute, the four keepers, swear-not-pay, the appearance
+table, meat-in-milk, pesach-over-leaven, act-stands). AUTO-SEAT LAW'S
+FIRST FULL CYCLE: F-017..F-020 filed AND seated the same sitting —
+EX22-09 (interest/service-paradigm/curse-clauses/self-conviction-
+excluded), EX23-09 (the bikkurim legs + the grower-classes dual-track
+DELTA between spine and Mishnah on one clause), EX24-07 (the
+unnamed-elders every-court-as-Moses doctrine — institutional
+authority from this unit's silence), EX22-10 (gift order +
+mah-she-asah-asui). Rituals green after every seat, preflights green,
+hash 8b8fff1fa28953af UNMOVED all day. Catalog: R-228..R-247, 41
+compiled rules. Corpus: 101 frozen units. NOT COMMITTED — owner word.
+STATUS AFTER TODAY: Genesis derivation DONE + Mishnah 51/51 + Talmud
+958 read (206 law rows: 44 examined, 162 in ~11 blocks); MISHPATIM
+derived AND examined end to end (the first parashah with both);
+Exodus 25-40 remain as drafts; Tosefta + Jerusalem Talmud unswept.
+
+## ⚠⚠ COMPACTION POINT #34 (2026-09-01, owner: "lets run step 9 on
+## exodus 1 - 21 again. but first I need to compact") — READ #33 ABOVE
+## FIRST, then THE_STEPS Step 4 reread (standing rule) AND Step 9.
+## This block is the delta. ⚠ THE NEXT SITTING'S TASK IS ALREADY
+## ORDERED: STEP 9 BACKFILL ON EXODUS 1-21 (details at the tail).
+THE SESSION'S ARC since #33 (owner-ordered throughout; commit 6d6cec6
+mid-session, the rest UNCOMMITTED at this writing — commit word given
+implicitly by the get-ready precedent, executed with this block):
+(1) THE NOAHIDE BLOCK (owner: "open the noahide block"): 44 triage rows
++ 40 neighbor segments (own Step 4 ledger), 11 TALMUD-ONLY modules
+(provenance talmud_source — no Mishnah above), 41/41; sixteen legs
+already seated by the reading; findings F-012..F-016.
+(2) ⚠ NEW STANDING LAW mid-sitting (verbatim): "the findings that are
+not yet derived (verse) should automatically be seated. you don't need
+my rulings going forward." — THE AUTO-SEAT ERA: verse-side unheld legs
+on derived units seat WITHOUT per-finding word; filing-first, stamp
+law, REAFFIRM queue, his import-only/reject override all stand.
+Recorded in THE_STEPS findings-loop, FINDINGS_QUEUE, memory. First
+batch: F-012..F-016 seated (G08-30 token-assignment dual-track, G21-17
+three procedure legs, G20-19 gentile-rest closing the class-C hole,
+G33-31 line-scope in/out, G36-19 deflected-proof role, G55-36 the
+repeated-at-Sinai framework beside its named exception). Six units
+bumped, on REAFFIRM_QUEUE; gates green; committed at 6d6cec6.
+(3) ⚠ CANON FLIP (owner's ruling in the TorahSim window, relayed):
+TORAH_GROK IS CANON; TorahSim mirrors + publishes. OPEN EDGE NEEDING
+HIS WORD HERE: the 65 batch stamps + gen_08 re-affirmation live ONLY
+in TorahSim's tree — must cross as an ATOP-merge; TorahSim holds
+un-overwritten, will hand exact diffs on the word. Neither improvises.
+(4) THE CALL-SITE HYPOTHESIS (owner: "I suspect the hebrew bible will
+call these functions and submit the data... do you know it's not that
+way?"): NOT refuted — deposits-only is a MEASUREMENT OF PRE-SINAI
+GENESIS, not a law of the Bible; four Torah episodes submit a case
+with data and receive a ruling (the blasphemer Lev 24, the
+wood-gatherer Num 15, the second Passover Num 9, Zelophehad's
+daughters Num 27 — two held in custody while the ruling was fetched);
+later books are executions (Ruth 4, Jeremiah 32, Naboth). DESIGN
+CONSEQUENCE (his): going forward the verse logic gains a CALL-SITE
+operator when evidence first demands it; Genesis stays frozen as the
+honest deposits measurement. Recorded in THE_WORLD's idea log.
+(5) MISHPATIM DERIVED WHOLE (owner: "derive mishpatim"): the four
+July drafts (exo_22_property_social 22:1-30, exo_23_justice_calendar
+23:1-19, exo_23_escort_land 23:20-33, exo_24_covenant_ascent 24:1-18)
+through the full RE process in one parashah-grain sitting. Reading:
+Mekhilta chapters 22-23 IN FULL (135 paragraphs; the book ENDS at
+23:19 — the silence over 23:20-24:18 recorded, those blocks Onkelos-
+only) + Onkelos 81 verses; 8,163 rows pre-enumerated; four ledgers
+logic/oral_triage/exo_2*_2026-09-01.md. Logic: 24 witness ops + 24
+claims (EX22-01..08, EX23-01..08, EX23B-01..02, EX24-01..06); the
+four-keepers table on the chapter's own ink; the pursuer warning
+QUOTING GEN 9:6 met in this unit's reading (G21-13's Mekhilta seat);
+Onkelos printing verdicts (meat-in-milk as 'you shall not EAT';
+terefah in Gen 9:4's limb vocabulary; the firstborn officiants; the
+sun as the witnesses' eye). Draft scenarios re-anchored. 4 rituals
+COMPLETE → 101 FROZEN UNITS; 4 preflights green; hash UNMOVED.
+(6) THE MISHPATIM EXAM (owner: "run step 9 on mishpatim") — the
+parashah rhythm's first full cycle, derive-morning examine-afternoon:
+252 rows enumerated, the 59 bare Mishnah rows read in full
+(mishpatim_exam_mishnah_2026-09-01.md, 47 material), 20 modules,
+60/60; 129/129 across all four exams; catalog R-228..R-247 = 41
+compiled rules. THE HEADLINE AT HOURS' GRAIN: the morning's Mekhilta
+IS the case shelf — same tannaim tables met twice in one day.
+AUTO-SEAT's first full cycle: F-017..F-020 filed AND seated same
+sitting (EX22-09 interest/service-paradigm/curses/self-conviction;
+EX23-09 bikkurim legs + the grower-classes spine-vs-Mishnah DELTA
+dual-track; EX24-07 unnamed-elders every-court-as-Moses; EX22-10
+gift order + mah-she-asah-asui). Rituals green after every seat.
+STANDING: hash 8b8fff1fa28953af unmoved ALL SESSION; 101 frozen
+units; four exams 129/129; engine 41 rules; findings queue EMPTY of
+open items; REAFFIRM_QUEUE holds six Genesis units (F-012..16) + the
+prior six. STATUS: Genesis DONE; Mishnah-vs-Genesis 51/51; Talmud-vs-
+Genesis read 958/958, examined 44/206 (162 in ~11 blocks); MISHPATIM
+derived + examined END TO END (the first such parashah); Exod 1-20
+frozen but never Step 9'd; Exod 25-40 July drafts; Tosefta +
+Jerusalem Talmud unswept.
+⚠ THE ORDERED NEXT TASK — STEP 9 BACKFILL ON EXODUS 1-21: 75 bare
+Mishnah rows citing Exod 1-20 enumerated by script (Pesachim 18 the
+flagship cluster — chapter 12's Passover law; Megillah 6, Shabbat 6,
+Bekhorot 5, Sanhedrin 5, Makkot 4, Eduyot 4...); chapter 21's rows to
+be re-checked under the exam-first method against its proven law-era
+machine. Method: the Genesis-sweep pattern — read all rows from the
+local Mishnah shelf, classify against the frozen exo_01-21 units'
+claims (holdings.py three strata), spec cases_exodus_backfill.yaml,
+compile, auto-seat unheld legs per the standing law, run; frontier
+debts payable: Exod 12:19 (leaven) + the plague-chronology slot.
+OPEN FOR THE OWNER besides: the stamp crossing (canon flip); the
+re-affirmation batch word (twelve units queued now); Exodus 25-40
+derivation; the remaining ~11 Genesis Talmud blocks; Tosefta +
+Jerusalem Talmud triage; Step 9 site visibility (TorahSim's question).

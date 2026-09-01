@@ -1,0 +1,442 @@
+# THE MISHPATIM EXAM — the first parashah-rhythm Step 9 round (owner:
+# "run step 9 on mishpatim"), same day the parashah was derived.
+# Membership: the 59 bare Mishnah rows citing Exod 22:1-24:18 (252
+# Mishnah-category rows enumerated; commentary layers outside scope);
+# chapter 21's rows already face the proven exo21 machine. Read-source
+# record: logic/oral_triage/mishpatim_exam_mishnah_2026-09-01.md.
+# Method: THE_STEPS Step 9 — exam first, classify, findings queued (and
+# under the 2026-09-01 auto-seat law, F-017..F-020 seated same sitting),
+# compile, re-run. THE HEADLINE, third repetition: the morning's Mekhilta
+# reading IS the case shelf — same tannaim, same tables, read hours apart.
+# Provenance shape: mishnah + mekhilta_spine + exodus_anchor (the spine
+# read the same sitting the statutes were derived).
+
+- module: four_avot_damages
+  tractate: Bava Kamma
+  oracle: Mishnah Bava Kamma 1:1 + 2:2 + 5:7 + 6:2; Mishnah Gittin 5:1
+  exodus_anchor: {unit: exo_22_property_social, ref: Exod.22.4-5,
+    claims: [EX22-02, EX22-03, EX22-08]}
+  cases:
+  - id: BK_1_1_census
+    input: {query: damage_category_census}
+    expected: {verdict: four_fathers}
+    class: B
+  - id: BK_meitav
+    input: {query: assessment_land}
+    expected: {verdict: best_land}
+    class: B
+  - id: BK_5_7_species
+    input: {query: species_scope, animal: beast}
+    expected: {verdict: same_as_ox, basis: dibber ba-hoveh — the named
+        method of EX22-08}
+    class: B
+  - id: BK_2_2_public
+    input: {query: damage_liability, eaten: suited_produce,
+      damage_domain: public}
+    expected: {verdict: exempt_pays_benefit}
+    class: B
+  - id: BK_2_2_victim
+    input: {query: damage_liability, eaten: suited_produce,
+      damage_domain: victims}
+    expected: {verdict: full_payment}
+    class: B
+
+- module: fire_liability
+  tractate: Bava Kamma
+  oracle: Mishnah Bava Kamma 6:4 + 6:5 (quoting Exod 22:5)
+  exodus_anchor: {unit: exo_22_property_social, ref: Exod.22.5,
+    claims: [EX22-03]}
+  cases:
+  - id: BK_6_4_incompetent
+    input: {query: fire_agency, via: incompetent}
+    expected: {verdict: exempt_human_liable_heaven}
+    class: B
+  - id: BK_6_4_wind
+    input: {query: fire_agency, via: wind}
+    expected: {verdict: all_exempt}
+    class: B
+  - id: BK_6_4_distance
+    input: {query: fire_distance}
+    expected: {verdict: dispute_four_ways, basis: the Mekhilta's own
+        tannaim table — beit-kor / sixteen / fifty / by-the-blaze}
+    class: B
+  - id: BK_6_5_vessels
+    input: {query: fire_scope, contents: hidden_vessels}
+    expected: {verdict: dispute_two_ways, basis: R. Yehudah contents vs
+        the sages grain-only — the sages' side is the Mekhilta's
+        open-things rule}
+    class: B
+
+- module: theft_and_confession
+  tractate: Bava Kamma
+  oracle: Mishnah Bava Kamma 7:1 + 7:4 + 9:8; Mishnah Shevuot 8:3 + 8:4;
+    Mishnah Ketubot 3:9
+  exodus_anchor: {unit: exo_22_property_social, ref: Exod.22.3-8,
+    claims: [EX22-04, EX22-09]}
+  cases:
+  - id: THEFT_after_thief
+    input: {query: theft_payment, thief_from: thief}
+    expected: {verdict: exempt_double}
+    class: B
+  - id: THEFT_self_admission
+    input: {query: theft_payment, proof: self_admission}
+    expected: {verdict: principal_only, basis: asher yarshi'un — whom
+        the JUDGES convict, not the self-convicter (EX22-09 leg d)}
+    class: B
+  - id: DEPOSIT_false_oath
+    input: {query: deposit_plea, plea: stolen, proof: witnesses_after_oath}
+    expected: {verdict: double}
+    class: B
+  - id: DEPOSIT_own_confession
+    input: {query: deposit_plea, plea: stolen,
+      proof: self_admission_after_oath}
+    expected: {verdict: principal_fifth_guilt_offering}
+    class: B
+
+- module: four_keepers
+  tractate: Bava Metzia
+  oracle: Mishnah Bava Metzia 7:8 (the table verbatim) + 3:12 + 6:6 + 8:1
+  exodus_anchor: {unit: exo_22_property_social, ref: Exod.22.6-14,
+    claims: [EX22-04, EX22-06]}
+  cases:
+  - id: KEEP_unpaid
+    input: {query: keeper_liability, keeper: unpaid}
+    expected: {verdict: swears_on_all}
+    class: B
+  - id: KEEP_borrower
+    input: {query: keeper_liability, keeper: borrower}
+    expected: {verdict: pays_all}
+    class: B
+  - id: KEEP_paid
+    input: {query: keeper_liability, keeper: paid}
+    expected: {verdict: swears_accidents_pays_theft_loss}
+    class: B
+  - id: KEEP_intent
+    input: {query: misuse_liability, stage: intent_only}
+    expected: {verdict: dispute_two_ways, basis: Beit Shammai liable,
+        Beit Hillel from the act — quoting our 22:7 (EX22-04's held
+        dispute)}
+    class: B
+  - id: KEEP_owner_first
+    input: {query: owner_with, sequence: owner_first}
+    expected: {verdict: exempt, basis: Exod 22:14 quoted}
+    class: B
+  - id: KEEP_cow_first
+    input: {query: owner_with, sequence: cow_first}
+    expected: {verdict: liable, basis: Exod 22:13 quoted}
+    class: B
+
+- module: oath_mechanics
+  tractate: Shevuot
+  oracle: Mishnah Shevuot 6:3 + 6:4 + 7:1
+  exodus_anchor: {unit: exo_22_property_social, ref: Exod.22.7-10,
+    claims: [EX22-04, EX22-05]}
+  cases:
+  - id: OATH_default
+    input: {query: oath_default}
+    expected: {verdict: swear_and_not_pay, basis: EX22-05's row verbatim}
+    class: B
+  - id: OATH_same_kind
+    input: {query: partial_admission, admitted_kind: different}
+    expected: {verdict: exempt}
+    class: B
+  - id: OATH_land
+    input: {query: partial_admission, admitted_kind: land}
+    expected: {verdict: exempt_but_drawn_in, basis: the middah's
+        movables-only output + zokekin}
+    class: B
+  - id: OATH_minor_claim
+    input: {query: oath_on_claim_of, claimant: minor}
+    expected: {verdict: no_oath}
+    class: B
+
+- module: verbal_wronging
+  tractate: Bava Metzia
+  oracle: Mishnah Bava Metzia 4:10 (quoting Exod 22:20)
+  exodus_anchor: {unit: exo_22_property_social, ref: Exod.22.20,
+    claims: []}
+  spine_note: the words-vs-money split held in the EX22 ledger's 22:20
+    row; the Mishnah's three worked cases are the case shelf's own
+  cases:
+  - id: ONA_penitent
+    input: {query: speech_permitted, target: penitent,
+      speech: remind_deeds}
+    expected: {verdict: forbidden}
+    class: B
+  - id: ONA_converts_son
+    input: {query: speech_permitted, target: converts_son,
+      speech: remind_fathers_deeds}
+    expected: {verdict: forbidden, basis: our 22:20 quoted in the row}
+    class: B
+
+- module: interest_parties
+  tractate: Bava Metzia
+  oracle: Mishnah Bava Metzia 5:11
+  exodus_anchor: {unit: exo_22_property_social, ref: Exod.22.24,
+    claims: [EX22-09]}
+  cases:
+  - id: INT_parties
+    input: {query: interest_violators}
+    expected: {verdict: five_parties, basis: lender, borrower,
+        guarantor, witnesses; the scribe the sages' addition — the
+        Mekhilta row met verbatim (F-017 leg a)}
+    class: B
+
+- module: unloading_duty
+  tractate: Bava Metzia
+  oracle: Mishnah Bava Metzia 2:10 (quoting עזב תעזב and עמו)
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.5,
+    claims: [EX23-03]}
+  cases:
+  - id: UNLOAD_repeat
+    input: {query: unload_duty, times: repeated}
+    expected: {verdict: still_liable}
+    class: B
+  - id: UNLOAD_idle_owner
+    input: {query: unload_duty, owner_helps: 'no'}
+    expected: {verdict: exempt, basis: imo — with him}
+    class: B
+  - id: UNLOAD_father_order
+    input: {query: unload_duty, order_from: father_contrary}
+    expected: {verdict: not_obeyed, basis: parents themselves bound —
+        EX23-03's held priority case}
+    class: B
+  - id: UNLOAD_overload
+    input: {query: unload_duty, load: overload}
+    expected: {verdict: exempt, basis: tachat masao}
+    class: B
+
+- module: court_architecture
+  tractate: Sanhedrin
+  oracle: Mishnah Sanhedrin 1:1 + 1:6 + 4:2; Mishnah Rosh Hashanah 2:9
+  exodus_anchor: {unit: exo_22_property_social + exo_23_justice_calendar
+      + exo_24_covenant_ascent, ref: Exod.22.8 + 23.2 + 24.9,
+    claims: [EX22-04, EX23-02, EX24-07]}
+  cases:
+  - id: COURT_monetary
+    input: {query: court_size, case_type: monetary}
+    expected: {verdict: three, basis: the elohim-tokens (EX22-04)}
+    class: B
+  - id: COURT_capital
+    input: {query: court_size, case_type: capital}
+    expected: {verdict: twenty_three, basis: derived THROUGH our 23:2 —
+        tilt-for-good by one, for-evil by two (EX23-02's margin)}
+    class: B
+  - id: COURT_fines
+    input: {query: court_size, case_type: fines}
+    expected: {verdict: dispute_two_ways, basis: R. Meir three; the
+        sages — the defamer in twenty-three}
+    class: B
+  - id: COURT_junior_first
+    input: {query: deliberation_start, case_type: capital}
+    expected: {verdict: from_the_side}
+    class: B
+  - id: COURT_as_moses
+    input: {query: court_authority, bench: any_three}
+    expected: {verdict: as_moses_court, basis: the unnamed elders of
+        our 24:9 (EX24-07, F-019)}
+    class: B
+
+- module: witness_fitness
+  tractate: Sanhedrin
+  oracle: Mishnah Sanhedrin 3:3; Mishnah Shevuot 4:1
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.1,
+    claims: [EX23-01]}
+  cases:
+  - id: WIT_dice
+    input: {query: witness_fit, candidate: dice_player}
+    expected: {verdict: disqualified}
+    class: B
+  - id: WIT_interest_lender
+    input: {query: witness_fit, candidate: interest_lender}
+    expected: {verdict: disqualified}
+    class: B
+
+- module: tunneler
+  tractate: Sanhedrin
+  oracle: Mishnah Sanhedrin 8:6
+  exodus_anchor: {unit: exo_22_property_social, ref: Exod.22.1-2,
+    claims: [EX22-01]}
+  cases:
+  - id: TUN_license_standing
+    input: {query: tunneler_payment, blood_license: standing,
+      broke: jar}
+    expected: {verdict: exempt_payment, basis: judged by his end; the
+        Mekhilta's own wine-jars inside the row}
+    class: B
+  - id: TUN_license_lapsed
+    input: {query: tunneler_payment, blood_license: lapsed, broke: jar}
+    expected: {verdict: liable_payment, basis: the sun risen — the
+        witnesses'-eye clarity (EX22-01)}
+    class: B
+
+- module: sorcerer_mode
+  tractate: Sanhedrin
+  oracle: Mishnah Sanhedrin 7:4
+  exodus_anchor: {unit: exo_22_property_social, ref: Exod.22.17,
+    claims: []}
+  spine_note: the mode DISPUTE (sword vs stoning) held in the EX22
+    ledger's 22:17 row; the Mishnah's list DECIDES it — the sorcerer
+    among the stoned (R. Akiva's side become the table)
+  cases:
+  - id: SORC_mode
+    input: {query: execution_mode, offender: sorcerer}
+    expected: {verdict: stoning, basis: the Mishnah deciding the
+        Mekhilta's recorded dispute in the case table}
+    class: B
+
+- module: idolatry_service
+  tractate: Sanhedrin
+  oracle: Mishnah Sanhedrin 7:6
+  exodus_anchor: {unit: exo_22_property_social, ref: Exod.22.19 + 23.13,
+    claims: [EX22-09]}
+  cases:
+  - id: IDOL_temple_style
+    input: {query: idol_service_liability, service: temple_style}
+    expected: {verdict: liable_any_idol, basis: the zevichah paradigm —
+        F-017 leg b}
+    class: B
+  - id: IDOL_embrace
+    input: {query: idol_service_liability, service: embrace_kiss}
+    expected: {verdict: prohibition_only}
+    class: B
+  - id: IDOL_vow
+    input: {query: vow_in_idol_name}
+    expected: {verdict: prohibition, basis: our 23:13's no-mention
+        clause consumed by the row}
+    class: B
+
+- module: bribe_consequences
+  tractate: Peah
+  oracle: Mishnah Peah 8:9 (quoting Exod 23:8 verbatim)
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.8,
+    claims: [EX23-04]}
+  cases:
+  - id: BRIBE_eyes
+    input: {query: bribe_taker_fate}
+    expected: {verdict: eyes_dim, basis: the Mekhilta's blindness
+        ladder, the Mishnah quoting the verse}
+    class: B
+
+- module: appearance_duty
+  tractate: Chagigah
+  oracle: Mishnah Chagigah 1:1 (quoting שלש רגלים) + 1:2
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.14-17,
+    claims: [EX23-07]}
+  cases:
+  - id: APP_woman
+    input: {query: appearance_obligated, person: woman}
+    expected: {verdict: exempt, basis: zekhurkha — EX23-07's table}
+    class: B
+  - id: APP_lame
+    input: {query: appearance_obligated, appearer: lame}
+    expected: {verdict: exempt, basis: regalim}
+    class: B
+  - id: APP_fit_man
+    input: {query: appearance_obligated, person: man}
+    expected: {verdict: obligated}
+    class: B
+  - id: APP_minimum
+    input: {query: appearance_minimum}
+    expected: {verdict: dispute_two_ways, basis: Beit Shammai two
+        silver / maah; Beit Hillel maah / two silver}
+    class: B
+
+- module: meat_milk_scope
+  tractate: Chullin
+  oracle: Mishnah Chullin 8:4; Mishnah Kiddushin 2:9; Mishnah Avodah
+    Zarah 5:9; Mishnah Makkot 3:2
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.19,
+    claims: [EX23-08]}
+  cases:
+  - id: MMK_pure_pure
+    input: {query: meat_milk, pair: pure_in_pure}
+    expected: {verdict: forbidden_cook_and_benefit}
+    class: B
+  - id: MMK_pure_impure
+    input: {query: meat_milk, pair: pure_in_impure}
+    expected: {verdict: permitted_both}
+    class: B
+  - id: MMK_fowl
+    input: {query: meat_milk, pair: fowl_in_milk}
+    expected: {verdict: dispute_two_ways, basis: R. Akiva not-Torah
+        (the three kids exclude); R. Yose ha-Gelili — no mother's milk
+        (both positions in EX23-08's reading)}
+    class: B
+  - id: MMK_betrothal
+    input: {query: betrothal_with, item: meat_in_milk}
+    expected: {verdict: invalid, basis: the benefit ban consumed by
+        marriage law; sold-first proceeds valid}
+    class: B
+
+- module: pesach_over_chametz
+  tractate: Pesachim
+  oracle: Mishnah Pesachim 5:4
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.18,
+    claims: [EX23-08]}
+  cases:
+  - id: PES_slaughter
+    input: {query: pesach_slaughter_with_leaven}
+    expected: {verdict: violates, basis: the Mekhilta's positions as
+        the Mishnah's row; R. Yehudah adds the daily offering —
+        dispute carried}
+    class: B
+
+- module: gift_order
+  tractate: Terumot
+  oracle: Mishnah Terumot 3:6 (quoting Exod 22:28) + 3:7
+  exodus_anchor: {unit: exo_22_property_social, ref: Exod.22.28,
+    claims: [EX22-10]}
+  cases:
+  - id: GIFT_reordered
+    input: {query: gift_reordered}
+    expected: {verdict: act_stands_though_forbidden, basis: mah
+        she-asah asui — EX22-10 (F-020), verse quoted in the row}
+    class: B
+  - id: GIFT_why_first
+    input: {query: gift_order_reason}
+    expected: {verdict: names_count, basis: firstfruits carry four
+        titles — the Mekhilta's argument as the Mishnah's}
+    class: B
+
+- module: bikkurim_duty
+  tractate: Bikkurim
+  oracle: Mishnah Bikkurim 1:2 + 1:3 + 1:9; Mishnah Shekalim 8:8;
+    Mishnah Challah 4:10
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.16 + 23.19,
+    claims: [EX23-08, EX23-09]}
+  cases:
+  - id: BIK_sharecropper
+    input: {query: bikkurim_brings, grower: sharecropper}
+    expected: {verdict: dispute_two_seats, basis: the Mekhilta
+        bring-but-not-read vs the Mishnah do-not-bring — EX23-09's
+        dual-track delta}
+    class: B
+  - id: BIK_before_shavuot
+    input: {query: bikkurim_timing, brought: before_shavuot}
+    expected: {verdict: refused, basis: the Tzevoim case on our
+        23:16's words}
+    class: B
+  - id: BIK_liability
+    input: {query: bikkurim_liability}
+    expected: {verdict: until_temple_mount, basis: the bring-verb of
+        23:19 (EX23-09)}
+    class: B
+  - id: BIK_no_temple
+    input: {query: bikkurim_era, temple: absent}
+    expected: {verdict: not_practiced, basis: beit-H' dependency
+        (Shekalim 8:8)}
+    class: B
+
+- module: shemitah_model
+  tractate: Eduyot
+  oracle: Mishnah Eduyot 4:3
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.11,
+    claims: [EX23-05]}
+  cases:
+  - id: HEFKER_scope
+    input: {query: hefker_scope}
+    expected: {verdict: dispute_two_ways, basis: Beit Shammai to the
+        poor; Beit Hillel also to the rich LIKE THE SEVENTH YEAR — our
+        clause as the model}
+    class: B

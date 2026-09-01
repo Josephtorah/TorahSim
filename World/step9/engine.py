@@ -1046,6 +1046,547 @@ def rule_pursuer(case):
     return None
 
 
+# =================================================================
+# THE MISHPATIM EXAM (2026-09-01, owner: "run step 9 on mishpatim") —
+# the first parashah-rhythm round: the statutes derived in the morning,
+# the case shelf faced the same day. Provenance carries mekhilta_spine
+# (the spine read the sitting the statutes were derived) beside the
+# Mishnah row and the Exodus anchor. Spec: cases_mishpatim.yaml.
+
+def _MP(mishnah, spine, anchor, **extra):
+    d = dict(mishnah=mishnah, mekhilta_spine=spine, exodus_anchor=anchor)
+    d.update(extra)
+    return d
+
+AVOT_PROV = _MP("Mishnah Bava Kamma 1:1 + 2:2 + 5:7 + 6:2; Gittin 5:1",
+                "Mekhilta on Exod 22:4-5 (read 2026-09-01)",
+                "Exod.22.4-5 (exo_22_property_social, EX22-02/03/08)")
+
+
+def rule_four_avot_damages(case):
+    q = case.get("query")
+    if q == "damage_category_census":
+        return [V("four_fathers", "the ox, the pit, the grazer, the "
+                  "fire — not this like that, the common side: their "
+                  "way is to damage and their keeping is on you",
+                  machine_claim="EX22-02 (tooth) + EX22-03 (fire); ox "
+                  "and pit at the frozen exo_21 units", **AVOT_PROV)]
+    if q == "assessment_land":
+        return [V("best_land", "payment from the BEST land (meitav) — "
+                  "the Mekhilta's R. Yishmael / R. Akiva dispute, the "
+                  "Mishnah's standing table (damages best, creditor "
+                  "middling, ketubah poorest — Gittin 5:1)",
+                  machine_claim="EX22-02", **AVOT_PROV)]
+    if q == "species_scope":
+        return [V("same_as_ox", "ox = every beast, wild animal and "
+                  "fowl for the whole duty-list — 'the verse spoke of "
+                  "the ORDINARY CASE'", machine_claim="EX22-08 (dibber "
+                  "ba-hoveh, the named method)", **AVOT_PROV)]
+    if q == "damage_liability" and case.get("eaten") == "suited_produce":
+        dom = case.get("damage_domain")
+        if dom == "public":
+            return [V("exempt_pays_benefit", "in the public domain the "
+                      "tooth is exempt — pays what it benefited",
+                      machine_claim="EX22-02 (the domain matrix)",
+                      **AVOT_PROV)]
+        if dom == "victims":
+            return [V("full_payment", "in the victim's domain the "
+                      "tooth pays in full", machine_claim="EX22-02",
+                      **AVOT_PROV)]
+    return None
+
+
+FIRE_PROV = _MP("Mishnah Bava Kamma 6:4 + 6:5 (quoting Exod 22:5)",
+                "Mekhilta on Exod 22:5", "Exod.22.5 (EX22-03)")
+
+
+def rule_fire_liability(case):
+    q = case.get("query")
+    if q == "fire_agency":
+        v = case.get("via")
+        if v == "incompetent":
+            return [V("exempt_human_liable_heaven", "sent by the "
+                      "deaf-mute, the deranged, the minor — exempt in "
+                      "man's court, liable in Heaven's",
+                      machine_claim="EX22-03", **FIRE_PROV)]
+        if v == "wind":
+            return [V("all_exempt", "the wind fanned it — all exempt",
+                      machine_claim="EX22-03", **FIRE_PROV)]
+    if q == "fire_distance":
+        return [
+            V("beit_kor", "as if standing in the middle of a beit kor",
+              authority="R. Elazar ben Azariah", machine_claim="EX22-03 "
+              "(the Mekhilta's own table)", **FIRE_PROV),
+            V("sixteen_cubits", "as the public road",
+              authority="R. Eliezer", machine_claim="EX22-03", **FIRE_PROV),
+            V("fifty_cubits", "fifty", authority="R. Akiva",
+              machine_claim="EX22-03", **FIRE_PROV),
+            V("all_by_the_blaze", "'shalem yeshalem ha-mav'ir' — all "
+              "according to the blaze", authority="R. Shimon",
+              machine_claim="EX22-03", **FIRE_PROV),
+        ]
+    if q == "fire_scope" and case.get("contents") == "hidden_vessels":
+        return [
+            V("pays_contents", "pays what was inside",
+              authority="R. Yehudah", machine_claim="EX22-03", **FIRE_PROV),
+            V("grain_only", "only the stack of wheat or barley — the "
+              "hidden excluded", authority="the sages (= the Mekhilta's "
+              "open-things rule)", machine_claim="EX22-03", **FIRE_PROV),
+        ]
+    return None
+
+
+THEFT_PROV = _MP("Mishnah Bava Kamma 7:1 + 7:4 + 9:8; Shevuot 8:3-4; "
+                 "Ketubot 3:9", "Mekhilta on Exod 22:3 + 22:6-8",
+                 "Exod.22.3-8 (EX22-04, EX22-09)")
+
+
+def rule_theft_and_confession(case):
+    q = case.get("query")
+    if q == "theft_payment":
+        if case.get("thief_from") == "thief":
+            return [V("exempt_double", "the thief after the thief does "
+                      "not pay double — the Mekhilta's row",
+                      machine_claim="EX22-04 area (the 22:6 reading)",
+                      **THEFT_PROV)]
+        if case.get("proof") == "self_admission":
+            return [V("principal_only", "whoever pays MORE than the "
+                      "damage does not pay by his own mouth — asher "
+                      "yarshi'un, the JUDGES convict, not the "
+                      "self-convicter", machine_claim="EX22-09 (leg d, "
+                      "F-017)", **THEFT_PROV)]
+    if q == "deposit_plea" and case.get("plea") == "stolen":
+        p = case.get("proof")
+        if p == "witnesses_after_oath":
+            return [V("double", "swore 'stolen' and witnesses prove he "
+                      "took it — pays double", machine_claim="EX22-04 "
+                      "(the oath machine) + EX22-05", **THEFT_PROV)]
+        if p == "self_admission_after_oath":
+            return [V("principal_fifth_guilt_offering", "admitted on "
+                      "his own — principal, the added fifth, and the "
+                      "guilt offering", machine_claim="EX22-09 (leg d)",
+                      **THEFT_PROV)]
+    return None
+
+
+KEEP_PROV = _MP("Mishnah Bava Metzia 7:8 (the four keepers verbatim) + "
+                "3:12 + 6:6 + 8:1", "Mekhilta on Exod 22:6-8 + 22:9-12 "
+                "+ 22:13-14", "Exod.22.6-14 (EX22-04, EX22-06)")
+
+
+def rule_four_keepers(case):
+    q = case.get("query")
+    if q == "keeper_liability":
+        k = case.get("keeper")
+        if k == "unpaid":
+            return [V("swears_on_all", "the unpaid keeper swears on "
+                      "everything", machine_claim="EX22-06", **KEEP_PROV)]
+        if k == "borrower":
+            return [V("pays_all", "the borrower pays everything",
+                      machine_claim="EX22-06", **KEEP_PROV)]
+        if k == "paid":
+            return [V("swears_accidents_pays_theft_loss", "the paid "
+                      "keeper and the hirer swear on the broken, the "
+                      "captured and the dead, and PAY loss and theft",
+                      machine_claim="EX22-06 (the table closing on the "
+                      "chapter's own ink)", **KEEP_PROV)]
+    if q == "misuse_liability" and case.get("stage") == "intent_only":
+        return [
+            V("liable", "Beit Shammai: liable for the intent — 'al kol "
+              "devar pesha'", authority="Beit Shammai",
+              machine_claim="EX22-04 (the held dispute)", **KEEP_PROV),
+            V("not_liable_until_act", "Beit Hillel: only from the "
+              "moment he misused — 'im lo shalach yado' quoted",
+              authority="Beit Hillel", machine_claim="EX22-04",
+              **KEEP_PROV),
+        ]
+    if q == "owner_with":
+        s = case.get("sequence")
+        if s == "owner_first":
+            return [V("exempt", "'if its owner is with it he shall not "
+                      "pay' (Exod 22:14) — owner engaged first",
+                      machine_claim="EX22-06 (be-ve'alav)", **KEEP_PROV)]
+        if s == "cow_first":
+            return [V("liable", "'its owner not with it, he shall "
+                      "surely pay' (Exod 22:13) — the cow came first",
+                      machine_claim="EX22-06", **KEEP_PROV)]
+    return None
+
+
+OATHM_PROV = _MP("Mishnah Shevuot 6:3 + 6:4 + 7:1",
+                 "Mekhilta on Exod 22:6-8 + 22:9-12",
+                 "Exod.22.7-10 (EX22-04, EX22-05)")
+
+
+def rule_oath_mechanics(case):
+    q = case.get("query")
+    if q == "oath_default":
+        return [V("swear_and_not_pay", "ALL WHO SWEAR BY TORAH LAW "
+                  "SWEAR AND DO NOT PAY — the Mekhilta's row as the "
+                  "Mishnah's opening; the swear-and-take five are the "
+                  "sages' inversions, listed as such",
+                  machine_claim="EX22-05", **OATHM_PROV)]
+    if q == "partial_admission":
+        k = case.get("admitted_kind")
+        if k == "different":
+            return [V("exempt", "claimed wheat, admitted barley — the "
+                      "admission must be OF THE CLAIM'S KIND",
+                      machine_claim="EX22-04 (ki hu zeh)", **OATHM_PROV)]
+        if k == "land":
+            return [V("exempt_but_drawn_in", "land carries no oath (the "
+                      "middah's movables-only output) — but movables "
+                      "admitted DRAW the land-claims into the oath "
+                      "(zokekin)", machine_claim="EX22-04", **OATHM_PROV)]
+    if q == "oath_on_claim_of" and case.get("claimant") == "minor":
+        return [V("no_oath", "no oath on the claim of the deaf-mute, "
+                  "the deranged or the minor; one swears TO the minor "
+                  "and to consecrated property",
+                  machine_claim="EX22-04 (import leg — the Mishnah's "
+                  "own carve)", **OATHM_PROV)]
+    return None
+
+
+ONA_PROV = _MP("Mishnah Bava Metzia 4:10 (quoting Exod 22:20)",
+               "Mekhilta on Exod 22:20 (words vs money)",
+               "Exod.22.20 (the EX22 ledger's held row)")
+
+
+def rule_verbal_wronging(case):
+    if case.get("query") != "speech_permitted":
+        return None
+    t, s = case.get("target"), case.get("speech")
+    if (t, s) == ("penitent", "remind_deeds"):
+        return [V("forbidden", "do not say 'remember your former "
+                  "deeds' — wronging by WORDS, the Mekhilta's split",
+                  machine_claim="ledger-held (exo_22 reading, 22:20)",
+                  **ONA_PROV)]
+    if (t, s) == ("converts_son", "remind_fathers_deeds"):
+        return [V("forbidden", "'remember your fathers' deeds'? — 'and "
+                  "a sojourner you shall not wrong' quoted in the row",
+                  machine_claim="ledger-held", **ONA_PROV)]
+    return None
+
+
+def rule_interest_parties(case):
+    if case.get("query") != "interest_violators":
+        return None
+    return [V("five_parties", "the lender, the borrower, the "
+              "guarantor and the witnesses transgress; the sages add "
+              "THE SCRIBE — the Mekhilta's row met verbatim",
+              machine_claim="EX22-09 (F-017 leg a)",
+              **_MP("Mishnah Bava Metzia 5:11",
+                    "Mekhilta on Exod 22:24", "Exod.22.24 (EX22-09)"))]
+
+
+UNL_PROV = _MP("Mishnah Bava Metzia 2:10 (quoting azov ta'azov + imo)",
+               "Mekhilta on Exod 23:4-5", "Exod.23.5 (EX23-03)")
+
+
+def rule_unloading_duty(case):
+    if case.get("query") != "unload_duty":
+        return None
+    if case.get("times") == "repeated":
+        return [V("still_liable", "unloaded and it re-collapsed — even "
+                  "four and five times: azov TA'AZOV",
+                  machine_claim="EX23-03", **UNL_PROV)]
+    if case.get("owner_helps") == "no":
+        return [V("exempt", "he sat aside and said 'the duty is "
+                  "yours' — IMO, with him: the idle owner exempts you "
+                  "(old or sick — the duty stands)",
+                  machine_claim="EX23-03", **UNL_PROV)]
+    if case.get("order_from") == "father_contrary":
+        return [V("not_obeyed", "his father said do not unload — he "
+                  "does not listen: the parents are themselves bound",
+                  machine_claim="EX23-03 (the held priority case)",
+                  **UNL_PROV)]
+    if case.get("load") == "overload":
+        return [V("exempt", "more than its load — tachat masao, a load "
+                  "it can stand under", authority="R. Yose ha-Gelili",
+                  machine_claim="EX23-03", **UNL_PROV)]
+    return None
+
+
+COURT_PROV = _MP("Mishnah Sanhedrin 1:1 + 1:6 + 4:2; Rosh Hashanah 2:9",
+                 "Mekhilta on Exod 22:6-8 + 23:2",
+                 "Exod.22.8 + 23.2 + 24.9 (EX22-04, EX23-02, EX24-07)")
+
+
+def rule_court_architecture(case):
+    q = case.get("query")
+    if q == "court_size":
+        ct = case.get("case_type")
+        if ct == "monetary":
+            return [V("three", "monetary cases in THREE — the "
+                      "elohim-tokens of our deposit passage",
+                      machine_claim="EX22-04", **COURT_PROV)]
+        if ct == "capital":
+            return [V("twenty_three", "derived THROUGH our 23:2: "
+                      "tilt-for-good by one, tilt-for-evil by two, no "
+                      "even bench — ten, ten, and three",
+                      machine_claim="EX23-02 (the margin of two)",
+                      **COURT_PROV)]
+        if ct == "fines":
+            return [
+                V("three", "the rapist, the seducer and the defamer in "
+                  "three", authority="R. Meir", machine_claim="EX22-04",
+                  **COURT_PROV),
+                V("defamer_twenty_three", "the defamer in twenty-three "
+                  "— capital matter inside it", authority="the sages",
+                  machine_claim="EX23-02", **COURT_PROV),
+            ]
+    if q == "deliberation_start" and case.get("case_type") == "capital":
+        return [V("from_the_side", "capital deliberation begins FROM "
+                  "THE SIDE — the junior speaks first (purity cases "
+                  "from the great)", machine_claim="EX23-02 area (the "
+                  "lo-taaneh clause)", **COURT_PROV)]
+    if q == "court_authority" and case.get("bench") == "any_three":
+        return [V("as_moses_court", "the seventy elders of our 24:9 "
+                  "left UNNAMED — so every three that stands as a "
+                  "court over Israel is AS THE COURT OF MOSES (the "
+                  "calendar case decided by it)",
+                  machine_claim="EX24-07 (F-019)", **COURT_PROV)]
+    return None
+
+
+def rule_witness_fitness(case):
+    if case.get("query") != "witness_fit":
+        return None
+    c = case.get("candidate")
+    if c in ("dice_player", "interest_lender"):
+        return [V("disqualified", "the dice player, the interest "
+                  "lender, the pigeon racers, the seventh-year traders "
+                  "— the case shelf's list on the Mekhilta's "
+                  "violent-and-robbers filter",
+                  machine_claim="EX23-01",
+                  **_MP("Mishnah Sanhedrin 3:3; Shevuot 4:1",
+                        "Mekhilta on Exod 23:1", "Exod.23.1 (EX23-01)"))]
+    return None
+
+
+TUN_PROV = _MP("Mishnah Sanhedrin 8:6", "Mekhilta on Exod 22:1-2",
+               "Exod.22.1-2 (EX22-01)")
+
+
+def rule_tunneler(case):
+    if case.get("query") != "tunneler_payment" or case.get("broke") != "jar":
+        return None
+    bl = case.get("blood_license")
+    if bl == "standing":
+        return [V("exempt_payment", "judged by his end — while his "
+                  "killer bears no blood-guilt, his own payments "
+                  "merge into his forfeit life: broke the jar, exempt "
+                  "(the Mekhilta's wine-jars inside the row)",
+                  machine_claim="EX22-01", **TUN_PROV)]
+    if bl == "lapsed":
+        return [V("liable_payment", "the sun risen — the "
+                  "witnesses'-eye clarity: blood-guilt stands, so the "
+                  "jar is paid for", machine_claim="EX22-01 (the "
+                  "Onkelos rendering)", **TUN_PROV)]
+    return None
+
+
+def rule_sorcerer_mode(case):
+    if case.get("query") != "execution_mode"             or case.get("offender") != "sorcerer":
+        return None
+    return [V("stoning", "the sorcerer stands in the Mishnah's stoned "
+              "list — the case table DECIDING the Mekhilta's recorded "
+              "mode dispute (R. Akiva's stoning over R. Yishmael's "
+              "sword)", machine_claim="ledger-held dispute (exo_22 "
+              "reading, 22:17); the decision is the case shelf's",
+              **_MP("Mishnah Sanhedrin 7:4", "Mekhilta on Exod 22:17",
+                    "Exod.22.17 (the EX22 ledger's dispute row)"))]
+
+
+IDOL_PROV = _MP("Mishnah Sanhedrin 7:6", "Mekhilta on Exod 22:19 + 23:13",
+                "Exod.22.19 + 23.13 (EX22-09)")
+
+
+def rule_idolatry_service(case):
+    q = case.get("query")
+    if q == "idol_service_liability":
+        s = case.get("service")
+        if s == "temple_style":
+            return [V("liable_any_idol", "slaughtering, burning, "
+                      "libating, bowing — liable for ANY idol, its own "
+                      "cult or not: the zevichah paradigm",
+                      machine_claim="EX22-09 (F-017 leg b)", **IDOL_PROV)]
+        if s == "embrace_kiss":
+            return [V("prohibition_only", "embracing, kissing, "
+                      "sweeping, washing — a prohibition, not the "
+                      "capital count", machine_claim="EX22-09",
+                      **IDOL_PROV)]
+    if q == "vow_in_idol_name":
+        return [V("prohibition", "vowing and fulfilling in its name — "
+                  "our 23:13's 'let it not be heard upon your mouth' "
+                  "consumed by the row", machine_claim="EX22-09 + the "
+                  "EX23 ledger's 23:13 row", **IDOL_PROV)]
+    return None
+
+
+def rule_bribe_consequences(case):
+    if case.get("query") != "bribe_taker_fate":
+        return None
+    return [V("eyes_dim", "the judge who takes a bribe and tilts — "
+              "his eyes dim before he leaves the world, the Mishnah "
+              "quoting our 23:8 verbatim (the Mekhilta's blindness "
+              "ladder)", machine_claim="EX23-04",
+              **_MP("Mishnah Peah 8:9 (the verse quoted)",
+                    "Mekhilta on Exod 23:6-8", "Exod.23.8 (EX23-04)"))]
+
+
+APP_PROV = _MP("Mishnah Chagigah 1:1 (quoting shalosh regalim) + 1:2",
+               "Mekhilta on Exod 23:14-17", "Exod.23.14-17 (EX23-07)")
+
+
+def rule_appearance_duty(case):
+    q = case.get("query")
+    if q == "appearance_obligated":
+        if case.get("person") == "woman":
+            return [V("exempt", "zekhurkha — your MALES",
+                      machine_claim="EX23-07 (the word-by-word table)",
+                      **APP_PROV)]
+        if case.get("appearer") == "lame":
+            return [V("exempt", "regalim — on his feet",
+                      machine_claim="EX23-07", **APP_PROV)]
+        if case.get("person") == "man":
+            return [V("obligated", "ALL are obligated in appearing "
+                      "except the listed", machine_claim="EX23-07",
+                      **APP_PROV)]
+    if q == "appearance_minimum":
+        return [
+            V("appearance_two_silver", "the appearance two silver, the "
+              "festival offering a maah", authority="Beit Shammai",
+              machine_claim="the Mishnah's own minimums (import)",
+              **APP_PROV),
+            V("appearance_one_maah", "the appearance a maah, the "
+              "festival offering two silver", authority="Beit Hillel",
+              machine_claim="import", **APP_PROV),
+        ]
+    return None
+
+
+MMK_PROV = _MP("Mishnah Chullin 8:4; Kiddushin 2:9; Avodah Zarah 5:9",
+               "Mekhilta on Exod 23:19 (the seven answers; Onkelos "
+               "printing the verdict)", "Exod.23.19 (EX23-08)")
+
+
+def rule_meat_milk_scope(case):
+    q = case.get("query")
+    if q == "meat_milk":
+        p = case.get("pair")
+        if p == "pure_in_pure":
+            return [V("forbidden_cook_and_benefit", "pure meat in pure "
+                      "milk — forbidden to cook and in benefit (and on "
+                      "the forbidden-in-any-quantity list)",
+                      machine_claim="EX23-08", **MMK_PROV)]
+        if p == "pure_in_impure":
+            return [V("permitted_both", "pure in impure and impure in "
+                      "pure — permitted to cook and in benefit",
+                      machine_claim="EX23-08", **MMK_PROV)]
+        if p == "fowl_in_milk":
+            return [
+                V("not_torah", "'kid' three times — excluding the wild "
+                  "animal, the fowl and the impure beast",
+                  authority="R. Akiva", machine_claim="EX23-08 (both "
+                  "positions in the morning's reading)", **MMK_PROV),
+                V("fowl_excluded_no_mothers_milk", "'its MOTHER'S milk' "
+                  "— the fowl has none", authority="R. Yose ha-Gelili",
+                  machine_claim="EX23-08", **MMK_PROV),
+            ]
+    if q == "betrothal_with" and case.get("item") == "meat_in_milk":
+        return [V("invalid", "betrothal with meat-in-milk is NO "
+                  "betrothal — the benefit ban consumed by marriage "
+                  "law; sold first, the proceeds betroth",
+                  machine_claim="EX23-08 (the benefit ladder)",
+                  **MMK_PROV)]
+    return None
+
+
+def rule_pesach_over_chametz(case):
+    if case.get("query") != "pesach_slaughter_with_leaven":
+        return None
+    return [
+        V("violates", "slaughtering the Passover while leaven stands "
+          "violates the prohibition — the Mekhilta's R. Yishmael (R. "
+          "Akiva adds the throwing)", machine_claim="EX23-08",
+          **_MP("Mishnah Pesachim 5:4", "Mekhilta on Exod 23:18",
+                "Exod.23.18 (EX23-08)")),
+        V("also_the_tamid", "the daily offering too — 'the offering "
+          "wholly Mine'", authority="R. Yehudah",
+          machine_claim="EX23-08",
+          **_MP("Mishnah Pesachim 5:4", "Mekhilta on Exod 23:18",
+                "Exod.23.18 (EX23-08)")),
+    ]
+
+
+GIFT_PROV = _MP("Mishnah Terumot 3:6 (quoting Exod 22:28) + 3:7",
+                "Mekhilta on Exod 22:28", "Exod.22.28 (EX22-10)")
+
+
+def rule_gift_order(case):
+    q = case.get("query")
+    if q == "gift_reordered":
+        return [V("act_stands_though_forbidden", "mah she-asah asui — "
+                  "the reordering transgresses and the act stands, the "
+                  "Mishnah quoting our verse",
+                  machine_claim="EX22-10 (F-020)", **GIFT_PROV)]
+    if q == "gift_order_reason":
+        return [V("names_count", "firstfruits first, for they carry "
+                  "FOUR titles; terumah three; the tithes after — the "
+                  "Mekhilta's argument as the Mishnah's reason",
+                  machine_claim="EX22-10", **GIFT_PROV)]
+    return None
+
+
+BIK_PROV = _MP("Mishnah Bikkurim 1:2 + 1:3 + 1:9; Shekalim 8:8; "
+               "Challah 4:10", "Mekhilta on Exod 23:19",
+               "Exod.23.16 + 23.19 (EX23-08, EX23-09)")
+
+
+def rule_bikkurim_duty(case):
+    q = case.get("query")
+    if q == "bikkurim_brings" and case.get("grower") == "sharecropper":
+        return [
+            V("does_not_bring", "'until all growth is from YOUR land' "
+              "— sharecroppers, tenants, seizers and robbers excluded",
+              authority="Mishnah Bikkurim 1:2",
+              machine_claim="EX23-09 (the delta's Mishnah seat)",
+              **BIK_PROV),
+            V("brings_but_does_not_read", "the Mekhilta re-includes "
+              "them by the bring-verb, without the recital",
+              authority="Mekhilta on Exod 23:19",
+              machine_claim="EX23-09 (dual-track)", **BIK_PROV),
+        ]
+    if q == "bikkurim_timing" and case.get("brought") == "before_shavuot":
+        return [V("refused", "the men of Mount Tzevoim brought before "
+                  "Shavuot and were not accepted — on our 23:16's own "
+                  "words", machine_claim="EX23-09 (F-018)", **BIK_PROV)]
+    if q == "bikkurim_liability":
+        return [V("until_temple_mount", "responsible until he brings "
+                  "them to the Temple Mount — the bring-verb of 23:19",
+                  machine_claim="EX23-09", **BIK_PROV)]
+    if q == "bikkurim_era" and case.get("temple") == "absent":
+        return [V("not_practiced", "shekalim and firstfruits run only "
+                  "with the House standing; grain-tithe and firstborn "
+                  "either way", machine_claim="EX23-09 area (the "
+                  "beit-H' dependency)", **BIK_PROV)]
+    return None
+
+
+def rule_shemitah_model(case):
+    if case.get("query") != "hefker_scope":
+        return None
+    P = _MP("Mishnah Eduyot 4:3", "Mekhilta on Exod 23:10-11",
+            "Exod.23.11 (EX23-05)")
+    return [
+        V("poor_only", "ownerless to the poor is ownerless",
+          authority="Beit Shammai", machine_claim="EX23-05", **P),
+        V("also_rich_like_shemitah", "not ownerless until ownerless "
+          "also to the rich — LIKE THE SEVENTH YEAR: our clause as the "
+          "model", authority="Beit Hillel", machine_claim="EX23-05", **P),
+    ]
+
+
 # Module registry — routing follows the Mishnah's own organization (the
 # owner's tractate map, logic/MISHNAH_TOPICS.md): each module names the
 # tractate whose case rows feed it, so the code's structure grows into the
@@ -1085,6 +1626,37 @@ RULES = {
     "court_of_shem": {"fn": rule_court_of_shem,
                       "tractate": "Avodah Zarah"},
     "pursuer": {"fn": rule_pursuer, "tractate": "Sanhedrin"},
+    # the Mishpatim exam (2026-09-01) — the parashah-rhythm round
+    "four_avot_damages": {"fn": rule_four_avot_damages,
+                          "tractate": "Bava Kamma"},
+    "fire_liability": {"fn": rule_fire_liability, "tractate": "Bava Kamma"},
+    "theft_and_confession": {"fn": rule_theft_and_confession,
+                             "tractate": "Bava Kamma"},
+    "four_keepers": {"fn": rule_four_keepers, "tractate": "Bava Metzia"},
+    "oath_mechanics": {"fn": rule_oath_mechanics, "tractate": "Shevuot"},
+    "verbal_wronging": {"fn": rule_verbal_wronging,
+                        "tractate": "Bava Metzia"},
+    "interest_parties": {"fn": rule_interest_parties,
+                         "tractate": "Bava Metzia"},
+    "unloading_duty": {"fn": rule_unloading_duty,
+                       "tractate": "Bava Metzia"},
+    "court_architecture": {"fn": rule_court_architecture,
+                           "tractate": "Sanhedrin"},
+    "witness_fitness": {"fn": rule_witness_fitness,
+                        "tractate": "Sanhedrin"},
+    "tunneler": {"fn": rule_tunneler, "tractate": "Sanhedrin"},
+    "sorcerer_mode": {"fn": rule_sorcerer_mode, "tractate": "Sanhedrin"},
+    "idolatry_service": {"fn": rule_idolatry_service,
+                         "tractate": "Sanhedrin"},
+    "bribe_consequences": {"fn": rule_bribe_consequences,
+                           "tractate": "Peah"},
+    "appearance_duty": {"fn": rule_appearance_duty, "tractate": "Chagigah"},
+    "meat_milk_scope": {"fn": rule_meat_milk_scope, "tractate": "Chullin"},
+    "pesach_over_chametz": {"fn": rule_pesach_over_chametz,
+                            "tractate": "Pesachim"},
+    "gift_order": {"fn": rule_gift_order, "tractate": "Terumot"},
+    "bikkurim_duty": {"fn": rule_bikkurim_duty, "tractate": "Bikkurim"},
+    "shemitah_model": {"fn": rule_shemitah_model, "tractate": "Eduyot"},
 }
 
 

@@ -53,3 +53,26 @@ re-run: 41/41, 0 mismatches; regressions green (pilot 10/10, sweep
 I; 42 candidate rows flipped COMPILED-into, R-140 + R-143 EXAMINED
 with notes. No unit YAMLs touched; hash unmoved; findings queued,
 nothing fixed inline.
+
+## 2026-09-01 — THE MISHPATIM EXAM (owner: "run step 9 on mishpatim") —
+## the first parashah-rhythm round: statutes derived in the morning,
+## the case shelf faced the same day.
+
+252 Mishnah-category rows enumerated citing Exod 22:1-24:18; the 59
+BARE Mishnah rows read IN FULL (logic/oral_triage/
+mishpatim_exam_mishnah_2026-09-01.md — 47 material). Chapter 21's rows
+already face the proven exo21 machine. THE HEADLINE, third repetition
+and sharpest yet: THE MORNING'S SPINE IS THE CASE SHELF — the Mekhilta
+rows read at derivation ARE the Mishnah's tables, met hours apart
+(the fire-distance tannaim, the intent dispute, the four keepers,
+swear-and-not-pay, the appearance table, the meat-in-milk positions,
+pesach-over-leaven, act-stands-though-forbidden). FOUR FINDINGS filed
+and AUTO-SEATED same sitting (the new law's first full cycle):
+F-017 EX22-09 (interest parties, the zevichah service-paradigm, the
+curse clauses, self-conviction excluded), F-018 EX23-09 (bikkurim:
+not-before-Shavuot, until-Temple-Mount, the grower-classes DELTA
+dual-track), F-019 EX24-07 (the unnamed-elders every-court-as-Moses
+doctrine), F-020 EX22-10 (gift order + mah-she-asah-asui). Rituals
+green after each seat; hash unmoved. COMPILED: 20 modules, 60 case
+rows, 60/60; regressions green — 129/129 across pilot + sweep +
+Noahide + Mishpatim. Catalog R-228..R-247; 41 compiled rules.

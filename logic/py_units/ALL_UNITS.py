@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ALL_UNITS.py — frozen only (exo_21 frozen 2026-08-10; 97 frozen units)."""
+"""ALL_UNITS.py — frozen only (exo_24 frozen 2026-09-01; 101 frozen units)."""
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
@@ -28111,6 +28111,848 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 27
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: exo_22_property_social
+###############################################################################
+
+m = Machine("exo_22_property_social")
+
+# -------------------------- Exod.22.1 · COND_אם ----------------------------
+# אם במחתרת ימצא הגנב והכה ומת … אין לו דמים
+# "[EN-AID] From top split: LEFT «אם במחתרת ימצא הגנב והכה ומת» / RIGHT «אין
+# לו דמים». Derive claim from Hebrew arms, not English alone. Exod 22:1."
+m.step("Exod.22.1")
+
+# -------------------------- Exod.22.2 · COND_אם ----------------------------
+# אם זרחה השמש עליו דמים לו … שלם ישלם אם אין לו ונמכר בגנבתו
+# "[EN-AID] From top split: LEFT «אם זרחה השמש עליו דמים לו» / RIGHT «שלם
+# ישלם אם אין לו ונמכר בגנבתו». Derive claim from Hebrew arms, not English
+# alone. Exod 22:2."
+m.step("Exod.22.2")
+# witness-tier presupposed read: sun_as_peace_and_the_life_override_seed on
+# burglar_clause — read, not installed
+m.witness_read("burglar_clause", "sun_as_peace_and_the_life_override_seed",
+                cites=["Mekhilta on Exod 22:1-2", "Onkelos Exod 22:2"])
+
+# -------------------------- Exod.22.3 · COND_אם ----------------------------
+# אם המצא תמצא בידו הגנבה משור עד חמור עד שה חיים … שנים ישלם
+# "[EN-AID] From top split: LEFT «אם המצא תמצא בידו הגנבה משור עד חמור עד שה
+# חיים» / RIGHT «שנים ישלם». Derive claim from Hebrew arms, not English
+# alone. Exod 22:3."
+m.step("Exod.22.3")
+
+# -------------------------- Exod.22.4 · COND_כי ----------------------------
+# כי יבער איש שדה או כרם ושלח את בעירה בעירו ובער בשדה אחר … מיטב שדהו ומיטב
+# כרמו ישלם
+# "[EN-AID] From top split: LEFT «כי יבער איש שדה או כרם ושלח את בעירה בעירו
+# ובער בשדה אחר» / RIGHT «מיטב שדהו ומיטב כרמו ישלם». Derive claim from
+# Hebrew arms, not English alone. Exod 22:4."
+m.step("Exod.22.4")
+# witness-tier presupposed read: tooth_category_and_the_domain_matrix on
+# grazing_clause — read, not installed
+m.witness_read("grazing_clause", "tooth_category_and_the_domain_matrix",
+                cites=["Mekhilta on Exod 22:4"])
+
+# -------------------------- Exod.22.5 · COND_כי ----------------------------
+# כי תצא אש ומצאה קצים ונאכל גדיש או הקמה או השדה … שלם ישלם המבער את הבערה
+# "[EN-AID] From top split: LEFT «כי תצא אש ומצאה קצים ונאכל גדיש או הקמה או
+# השדה» / RIGHT «שלם ישלם המבער את הבערה». Derive claim from Hebrew arms,
+# not English alone. Exod 22:5."
+m.step("Exod.22.5")
+# witness-tier presupposed read: accident_as_intent_and_woman_as_man on
+# fire_clause — read, not installed
+m.witness_read("fire_clause", "accident_as_intent_and_woman_as_man",
+                cites=["Mekhilta on Exod 22:5"])
+
+# -------------------------- Exod.22.6 · COND_כי ----------------------------
+# כי יתן איש אל רעהו כסף או כלים לשמר וגנב מבית האיש … אם ימצא הגנב ישלם
+# שנים
+# "[EN-AID] From top split: LEFT «כי יתן איש אל רעהו כסף או כלים לשמר וגנב
+# מבית האיש» / RIGHT «אם ימצא הגנב ישלם שנים». Derive claim from Hebrew
+# arms, not English alone. Exod 22:6."
+m.step("Exod.22.6")
+
+# -------------------------- Exod.22.7 · COND_אם ----------------------------
+# אם לא ימצא הגנב ונקרב בעל הבית אל האלהים … אם לא שלח ידו במלאכת רעהו
+# "[EN-AID] From top split: LEFT «אם לא ימצא הגנב ונקרב בעל הבית אל האלהים»
+# / RIGHT «אם לא שלח ידו במלאכת רעהו». Derive claim from Hebrew arms, not
+# English alone. Exod 22:7."
+m.step("Exod.22.7")
+
+# -------------------------- Exod.22.8 · ETNACHTA_SPLIT ---------------------
+# על כל דבר פשע על שור על חמור על שה על שלמה על כל אבדה אשר יא … אשר ירשיען
+# אלהים ישלם שנים לרעהו
+# "[EN-AID] From top split: LEFT «על כל דבר פשע על שור על חמור על שה על שלמה
+# על כל אבדה אשר יאמר כי הוא זה עד האלה» / RIGHT «אשר ירשיען אלהים ישלם שנים
+# לרעהו». Derive claim from Hebrew arms, not English alone. Exod 22:8."
+m.step("Exod.22.8")
+# witness-tier presupposed read: judges_three_and_partial_admission on
+# keeper_oath_clause — read, not installed
+m.witness_read("keeper_oath_clause", "judges_three_and_partial_admission",
+                cites=["Mekhilta on Exod 22:6-8", "Onkelos Exod 22:7-8"])
+
+# -------------------------- Exod.22.9 · COND_כי ----------------------------
+# כי יתן איש אל רעהו חמור או שור או שה וכל בהמה לשמר … ומת או נשבר או נשבה
+# אין ראה
+# "[EN-AID] From top split: LEFT «כי יתן איש אל רעהו חמור או שור או שה וכל
+# בהמה לשמר» / RIGHT «ומת או נשבר או נשבה אין ראה». Derive claim from Hebrew
+# arms, not English alone. Exod 22:9."
+m.step("Exod.22.9")
+
+# -------------------------- Exod.22.10 · ETNACHTA_SPLIT --------------------
+# שבעת יהוה תהיה בין שניהם אם לא שלח ידו במלאכת רעהו … ולקח בעליו ולא ישלם
+# "[EN-AID] From top split: LEFT «שבעת יהוה תהיה בין שניהם אם לא שלח ידו
+# במלאכת רעהו» / RIGHT «ולקח בעליו ולא ישלם». Derive claim from Hebrew arms,
+# not English alone. Exod 22:10."
+m.step("Exod.22.10")
+# witness-tier presupposed read: all_torah_oaths_by_the_name on oath_clause
+# — read, not installed
+m.witness_read("oath_clause", "all_torah_oaths_by_the_name",
+                cites=["Mekhilta on Exod 22:9-12"])
+
+# -------------------------- Exod.22.11 · COND_ואם --------------------------
+# ואם גנב יגנב מעמו … ישלם לבעליו
+# "[EN-AID] From top split: LEFT «ואם גנב יגנב מעמו» / RIGHT «ישלם לבעליו».
+# Derive claim from Hebrew arms, not English alone. Exod 22:11."
+m.step("Exod.22.11")
+
+# -------------------------- Exod.22.12 · COND_אם ---------------------------
+# אם טרף יטרף יבאהו עד … הטרפה לא ישלם
+# "[EN-AID] From top split: LEFT «אם טרף יטרף יבאהו עד» / RIGHT «הטרפה לא
+# ישלם». Derive claim from Hebrew arms, not English alone. Exod 22:12."
+m.step("Exod.22.12")
+
+# -------------------------- Exod.22.13 · COND_וכי --------------------------
+# וכי ישאל איש מעם רעהו ונשבר או מת … בעליו אין עמו שלם ישלם
+# "[EN-AID] From top split: LEFT «וכי ישאל איש מעם רעהו ונשבר או מת» / RIGHT
+# «בעליו אין עמו שלם ישלם». Derive claim from Hebrew arms, not English
+# alone. Exod 22:13."
+m.step("Exod.22.13")
+
+# -------------------------- Exod.22.14 · COND_אם ---------------------------
+# אם בעליו עמו לא ישלם … אם שכיר הוא בא בשכרו
+# "[EN-AID] From top split: LEFT «אם בעליו עמו לא ישלם» / RIGHT «אם שכיר הוא
+# בא בשכרו». Derive claim from Hebrew arms, not English alone. Exod 22:14."
+m.step("Exod.22.14")
+# witness-tier presupposed read: four_keepers_table_closes on
+# borrower_clause — read, not installed
+m.witness_read("borrower_clause", "four_keepers_table_closes",
+                cites=["Mekhilta on Exod 22:13-14"])
+
+# -------------------------- Exod.22.15 · COND_וכי --------------------------
+# וכי יפתה איש בתולה אשר לא ארשה ושכב עמה … מהר ימהרנה לו לאשה
+# "[EN-AID] From top split: LEFT «וכי יפתה איש בתולה אשר לא ארשה ושכב עמה» /
+# RIGHT «מהר ימהרנה לו לאשה». Derive claim from Hebrew arms, not English
+# alone. Exod 22:15."
+m.step("Exod.22.15")
+# witness-tier presupposed read: mohar_is_the_ketubah on seducer_clause —
+# read, not installed
+m.witness_read("seducer_clause", "mohar_is_the_ketubah",
+                cites=["Mekhilta on Exod 22:15-16"])
+
+# -------------------------- Exod.22.16 · COND_אם ---------------------------
+# אם מאן ימאן אביה לתתה לו … כסף ישקל כמהר הבתולת
+# "[EN-AID] From top split: LEFT «אם מאן ימאן אביה לתתה לו» / RIGHT «כסף
+# ישקל כמהר הבתולת». Derive claim from Hebrew arms, not English alone. Exod
+# 22:16."
+m.step("Exod.22.16")
+
+# -------------------------- Exod.22.17 · TREE_CLAIM ------------------------
+# … לא תחיה
+# "[EN-AID] From top split: LEFT «» / RIGHT «לא תחיה». Derive claim from
+# Hebrew arms, not English alone. Exod 22:17."
+m.step("Exod.22.17")
+
+# -------------------------- Exod.22.18 · TREE_CLAIM ------------------------
+# כל שכב עם בהמה … מות יומת
+# "[EN-AID] From top split: LEFT «כל שכב עם בהמה» / RIGHT «מות יומת». Derive
+# claim from Hebrew arms, not English alone. Exod 22:18."
+m.step("Exod.22.18")
+
+# -------------------------- Exod.22.19 · ETNACHTA_SPLIT --------------------
+# זבח לאלהים יחרם … בלתי ליהוה לבדו
+# "[EN-AID] From top split: LEFT «זבח לאלהים יחרם» / RIGHT «בלתי ליהוה
+# לבדו». Derive claim from Hebrew arms, not English alone. Exod 22:19."
+m.step("Exod.22.19")
+
+# -------------------------- Exod.22.20 · ETNACHTA_SPLIT --------------------
+# וגר לא תונה ולא תלחצנו … כי גרים הייתם בארץ מצרים
+# "[EN-AID] From top split: LEFT «וגר לא תונה ולא תלחצנו» / RIGHT «כי גרים
+# הייתם בארץ מצרים». Derive claim from Hebrew arms, not English alone. Exod
+# 22:20."
+m.step("Exod.22.20")
+
+# -------------------------- Exod.22.21 · TREE_CLAIM ------------------------
+# כל אלמנה ויתום … לא תענון
+# "[EN-AID] From top split: LEFT «כל אלמנה ויתום» / RIGHT «לא תענון». Derive
+# claim from Hebrew arms, not English alone. Exod 22:21."
+m.step("Exod.22.21")
+
+# -------------------------- Exod.22.22 · COND_אם ---------------------------
+# אם ענה תענה אתו … כי אם צעק יצעק אלי שמע אשמע צעקתו
+# "[EN-AID] From top split: LEFT «אם ענה תענה אתו» / RIGHT «כי אם צעק יצעק
+# אלי שמע אשמע צעקתו». Derive claim from Hebrew arms, not English alone.
+# Exod 22:22."
+m.step("Exod.22.22")
+
+# -------------------------- Exod.22.23 · ETNACHTA_SPLIT --------------------
+# וחרה אפי והרגתי אתכם בחרב … והיו נשיכם אלמנות ובניכם יתמים
+# "[EN-AID] From top split: LEFT «וחרה אפי והרגתי אתכם בחרב» / RIGHT «והיו
+# נשיכם אלמנות ובניכם יתמים». Derive claim from Hebrew arms, not English
+# alone. Exod 22:23."
+m.step("Exod.22.23")
+
+# -------------------------- Exod.22.24 · COND_אם ---------------------------
+# אם כסף תלוה את עמי את העני עמך לא תהיה לו כנשה … לא תשימון עליו נשך
+# "[EN-AID] From top split: LEFT «אם כסף תלוה את עמי את העני עמך לא תהיה לו
+# כנשה» / RIGHT «לא תשימון עליו נשך». Derive claim from Hebrew arms, not
+# English alone. Exod 22:24."
+m.step("Exod.22.24")
+
+# -------------------------- Exod.22.25 · COND_אם ---------------------------
+# אם חבל תחבל שלמת רעך … עד בא השמש תשיבנו לו
+# "[EN-AID] From top split: LEFT «אם חבל תחבל שלמת רעך» / RIGHT «עד בא השמש
+# תשיבנו לו». Derive claim from Hebrew arms, not English alone. Exod 22:25."
+m.step("Exod.22.25")
+
+# -------------------------- Exod.22.26 · COND_כי ---------------------------
+# כי הוא כסותה כסותו לבדה הוא שמלתו לערו … במה ישכב והיה כי יצעק אלי ושמעתי
+# כי חנון אני
+# "[EN-AID] From top split: LEFT «כי הוא כסותה כסותו לבדה הוא שמלתו לערו» /
+# RIGHT «במה ישכב והיה כי יצעק אלי ושמעתי כי חנון אני». Derive claim from
+# Hebrew arms, not English alone. Exod 22:26."
+m.step("Exod.22.26")
+
+# -------------------------- Exod.22.27 · ETNACHTA_SPLIT --------------------
+# אלהים לא תקלל … ונשיא בעמך לא תאר
+# "[EN-AID] From top split: LEFT «אלהים לא תקלל» / RIGHT «ונשיא בעמך לא
+# תאר». Derive claim from Hebrew arms, not English alone. Exod 22:27."
+m.step("Exod.22.27")
+
+# -------------------------- Exod.22.28 · ETNACHTA_SPLIT --------------------
+# מלאתך ודמעך לא תאחר … בכור בניך תתן לי
+# "[EN-AID] From top split: LEFT «מלאתך ודמעך לא תאחר» / RIGHT «בכור בניך
+# תתן לי». Derive claim from Hebrew arms, not English alone. Exod 22:28."
+m.step("Exod.22.28")
+
+# -------------------------- Exod.22.29 · ETNACHTA_SPLIT --------------------
+# כן תעשה לשרך לצאנך … שבעת ימים יהיה עם אמו ביום השמיני תתנו לי
+# "[EN-AID] From top split: LEFT «כן תעשה לשרך לצאנך» / RIGHT «שבעת ימים
+# יהיה עם אמו ביום השמיני תתנו לי». Derive claim from Hebrew arms, not
+# English alone. Exod 22:29."
+m.step("Exod.22.29")
+
+# -------------------------- Exod.22.30 · ETNACHTA_SPLIT --------------------
+# ואנשי קדש תהיון לי … ובשר בשדה טרפה לא תאכלו לכלב תשלכון אתו
+# "[EN-AID] From top split: LEFT «ואנשי קדש תהיון לי» / RIGHT «ובשר בשדה
+# טרפה לא תאכלו לכלב תשלכון אתו». Derive claim from Hebrew arms, not English
+# alone. Exod 22:30."
+m.step("Exod.22.30")
+# witness-tier presupposed read:
+# terefah_in_limb_vocabulary_and_the_dogs_wage on torn_flesh_clause — read,
+# not installed
+m.witness_read("torn_flesh_clause", "terefah_in_limb_vocabulary_and_the_dogs_wage",
+                cites=["Mekhilta on Exod 22:30", "Onkelos Exod 22:30"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('burglar_clause', 'sun_as_peace_and_the_life_override_seed'), ('grazing_clause', 'tooth_category_and_the_domain_matrix'), ('fire_clause', 'accident_as_intent_and_woman_as_man'), ('keeper_oath_clause', 'judges_three_and_partial_admission'), ('oath_clause', 'all_torah_oaths_by_the_name'), ('borrower_clause', 'four_keepers_table_closes'), ('seducer_clause', 'mohar_is_the_ketubah'), ('torn_flesh_clause', 'terefah_in_limb_vocabulary_and_the_dogs_wage')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mekhilta on Exod 22:1-2', 'Onkelos Exod 22:2']
+    assert all('sun_as_peace_and_the_life_override_seed' not in f for f in m.WORLD["facts"])
+    assert 'burglar_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Mekhilta on Exod 22:4']
+    assert all('tooth_category_and_the_domain_matrix' not in f for f in m.WORLD["facts"])
+    assert 'grazing_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Mekhilta on Exod 22:5']
+    assert all('accident_as_intent_and_woman_as_man' not in f for f in m.WORLD["facts"])
+    assert 'fire_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Mekhilta on Exod 22:6-8', 'Onkelos Exod 22:7-8']
+    assert all('judges_three_and_partial_admission' not in f for f in m.WORLD["facts"])
+    assert 'keeper_oath_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Mekhilta on Exod 22:9-12']
+    assert all('all_torah_oaths_by_the_name' not in f for f in m.WORLD["facts"])
+    assert 'oath_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Mekhilta on Exod 22:13-14']
+    assert all('four_keepers_table_closes' not in f for f in m.WORLD["facts"])
+    assert 'borrower_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Mekhilta on Exod 22:15-16']
+    assert all('mohar_is_the_ketubah' not in f for f in m.WORLD["facts"])
+    assert 'seducer_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Mekhilta on Exod 22:30', 'Onkelos Exod 22:30']
+    assert all('terefah_in_limb_vocabulary_and_the_dogs_wage' not in f for f in m.WORLD["facts"])
+    assert 'torn_flesh_clause' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: exo_23_justice_calendar
+###############################################################################
+
+m = Machine("exo_23_justice_calendar")
+
+# -------------------------- Exod.23.1 · ETNACHTA_SPLIT ---------------------
+# לא תשא שמע שוא … אל תשת ידך עם רשע להית עד חמס
+# "[EN-AID] From top split: LEFT «לא תשא שמע שוא» / RIGHT «אל תשת ידך עם רשע
+# להית עד חמס». Derive claim from Hebrew arms, not English alone. Exod
+# 23:1."
+m.step("Exod.23.1")
+# witness-tier presupposed read: three_azharot_and_witness_fitness on
+# false_report_clause — read, not installed
+m.witness_read("false_report_clause", "three_azharot_and_witness_fitness",
+                cites=["Mekhilta on Exod 23:1"])
+
+# -------------------------- Exod.23.2 · ETNACHTA_SPLIT ---------------------
+# לא תהיה אחרי רבים לרעת … ולא תענה על רב לנטת אחרי רבים להטת
+# "[EN-AID] From top split: LEFT «לא תהיה אחרי רבים לרעת» / RIGHT «ולא תענה
+# על רב לנטת אחרי רבים להטת». Derive claim from Hebrew arms, not English
+# alone. Exod 23:2."
+m.step("Exod.23.2")
+# witness-tier presupposed read: asymmetric_majority_and_the_duty_to_speak
+# on majority_clause — read, not installed
+m.witness_read("majority_clause", "asymmetric_majority_and_the_duty_to_speak",
+                cites=["Mekhilta on Exod 23:2", "Onkelos Exod 23:2"])
+
+# -------------------------- Exod.23.3 · TREE_CLAIM -------------------------
+# … לא תהדר בריבו
+# "[EN-AID] From top split: LEFT «» / RIGHT «לא תהדר בריבו». Derive claim
+# from Hebrew arms, not English alone. Exod 23:3."
+m.step("Exod.23.3")
+
+# -------------------------- Exod.23.4 · COND_כי ----------------------------
+# כי תפגע שור איבך או חמרו תעה … השב תשיבנו לו
+# "[EN-AID] From top split: LEFT «כי תפגע שור איבך או חמרו תעה» / RIGHT «השב
+# תשיבנו לו». Derive claim from Hebrew arms, not English alone. Exod 23:4."
+m.step("Exod.23.4")
+
+# -------------------------- Exod.23.5 · COND_כי ----------------------------
+# כי תראה חמור שנאך רבץ תחת משאו וחדלת מעזב לו … עזב תעזב עמו
+# "[EN-AID] From top split: LEFT «כי תראה חמור שנאך רבץ תחת משאו וחדלת מעזב
+# לו» / RIGHT «עזב תעזב עמו». Derive claim from Hebrew arms, not English
+# alone. Exod 23:5."
+m.step("Exod.23.5")
+# witness-tier presupposed read: the_ris_measure_and_the_grudge_released on
+# unloading_clause — read, not installed
+m.witness_read("unloading_clause", "the_ris_measure_and_the_grudge_released",
+                cites=["Mekhilta on Exod 23:5", "Mekhilta on Exod 23:4", "Onkelos Exod 23:5"])
+
+# -------------------------- Exod.23.6 · TREE_CLAIM -------------------------
+# לא תטה משפט אבינך
+# "[EN-AID] From top split: LEFT «לא תטה משפט אבינך» / RIGHT «». Derive
+# claim from Hebrew arms, not English alone. Exod 23:6."
+m.step("Exod.23.6")
+
+# -------------------------- Exod.23.7 · ETNACHTA_SPLIT ---------------------
+# מדבר שקר תרחק … ונקי וצדיק אל תהרג כי לא אצדיק רשע
+# "[EN-AID] From top split: LEFT «מדבר שקר תרחק» / RIGHT «ונקי וצדיק אל תהרג
+# כי לא אצדיק רשע». Derive claim from Hebrew arms, not English alone. Exod
+# 23:7."
+m.step("Exod.23.7")
+# witness-tier presupposed read:
+# acquittal_asymmetry_and_the_circumstantial_refusal on falsehood_clause —
+# read, not installed
+m.witness_read("falsehood_clause", "acquittal_asymmetry_and_the_circumstantial_refusal",
+                cites=["Mekhilta on Exod 23:6-8", "Onkelos Exod 23:7"])
+
+# -------------------------- Exod.23.8 · COND_כי ----------------------------
+# ושחד לא תקח … כי השחד יעור פקחים ויסלף דברי צדיקים
+# "[EN-AID] From top split: LEFT «ושחד לא תקח» / RIGHT «כי השחד יעור פקחים
+# ויסלף דברי צדיקים». Derive claim from Hebrew arms, not English alone. Exod
+# 23:8."
+m.step("Exod.23.8")
+
+# -------------------------- Exod.23.9 · ETNACHTA_SPLIT ---------------------
+# וגר לא תלחץ … ואתם ידעתם את נפש הגר כי גרים הייתם בארץ מצרים
+# "[EN-AID] From top split: LEFT «וגר לא תלחץ» / RIGHT «ואתם ידעתם את נפש
+# הגר כי גרים הייתם בארץ מצרים». Derive claim from Hebrew arms, not English
+# alone. Exod 23:9."
+m.step("Exod.23.9")
+
+# -------------------------- Exod.23.10 · ETNACHTA_SPLIT --------------------
+# ושש שנים תזרע את ארצך … ואספת את תבואתה
+# "[EN-AID] From top split: LEFT «ושש שנים תזרע את ארצך» / RIGHT «ואספת את
+# תבואתה». Derive claim from Hebrew arms, not English alone. Exod 23:10."
+m.step("Exod.23.10")
+
+# -------------------------- Exod.23.11 · ETNACHTA_SPLIT --------------------
+# והשביעת תשמטנה ונטשתה ואכלו אביני עמך ויתרם תאכל חית השדה … כן תעשה לכרמך
+# לזיתך
+# "[EN-AID] From top split: LEFT «והשביעת תשמטנה ונטשתה ואכלו אביני עמך
+# ויתרם תאכל חית השדה» / RIGHT «כן תעשה לכרמך לזיתך». Derive claim from
+# Hebrew arms, not English alone. Exod 23:11."
+m.step("Exod.23.11")
+# witness-tier presupposed read: abandonment_lawless_by_design on
+# shemitah_clause — read, not installed
+m.witness_read("shemitah_clause", "abandonment_lawless_by_design",
+                cites=["Mekhilta on Exod 23:10-11"])
+
+# -------------------------- Exod.23.12 · ETNACHTA_SPLIT --------------------
+# ששת ימים תעשה מעשיך וביום השביעי תשבת … למען ינוח שורך וחמרך וינפש בן אמתך
+# והגר
+# "[EN-AID] From top split: LEFT «ששת ימים תעשה מעשיך וביום השביעי תשבת» /
+# RIGHT «למען ינוח שורך וחמרך וינפש בן אמתך והגר». Derive claim from Hebrew
+# arms, not English alone. Exod 23:12."
+m.step("Exod.23.12")
+# witness-tier presupposed read: animal_rest_is_grazing_and_the_status_table
+# on rest_clause — read, not installed
+m.witness_read("rest_clause", "animal_rest_is_grazing_and_the_status_table",
+                cites=["Mekhilta on Exod 23:12"])
+
+# -------------------------- Exod.23.13 · ETNACHTA_SPLIT --------------------
+# ובכל אשר אמרתי אליכם תשמרו … ושם אלהים אחרים לא תזכירו לא ישמע על פיך
+# "[EN-AID] From top split: LEFT «ובכל אשר אמרתי אליכם תשמרו» / RIGHT «ושם
+# אלהים אחרים לא תזכירו לא ישמע על פיך». Derive claim from Hebrew arms, not
+# English alone. Exod 23:13."
+m.step("Exod.23.13")
+
+# -------------------------- Exod.23.14 · TREE_CLAIM ------------------------
+# שלש רגלים … תחג לי בשנה
+# "[EN-AID] From top split: LEFT «שלש רגלים» / RIGHT «תחג לי בשנה». Derive
+# claim from Hebrew arms, not English alone. Exod 23:14."
+m.step("Exod.23.14")
+# witness-tier presupposed read: the_exemption_table_word_by_word on
+# pilgrimage_clause — read, not installed
+m.witness_read("pilgrimage_clause", "the_exemption_table_word_by_word",
+                cites=["Mekhilta on Exod 23:14-17"])
+
+# -------------------------- Exod.23.15 · ETNACHTA_SPLIT --------------------
+# את חג המצות תשמר שבעת ימים תאכל מצות כאשר צויתך למועד חדש הא … ולא יראו
+# פני ריקם
+# "[EN-AID] From top split: LEFT «את חג המצות תשמר שבעת ימים תאכל מצות כאשר
+# צויתך למועד חדש האביב כי בו יצאת ממצרי» / RIGHT «ולא יראו פני ריקם».
+# Derive claim from Hebrew arms, not English alone. Exod 23:15."
+m.step("Exod.23.15")
+
+# -------------------------- Exod.23.16 · ETNACHTA_SPLIT --------------------
+# וחג הקציר בכורי מעשיך אשר תזרע בשדה … וחג האסף בצאת השנה באספך את מעשיך מן
+# השדה
+# "[EN-AID] From top split: LEFT «וחג הקציר בכורי מעשיך אשר תזרע בשדה» /
+# RIGHT «וחג האסף בצאת השנה באספך את מעשיך מן השדה». Derive claim from
+# Hebrew arms, not English alone. Exod 23:16."
+m.step("Exod.23.16")
+
+# -------------------------- Exod.23.17 · ETNACHTA_SPLIT --------------------
+# שלש פעמים בשנה … יראה כל זכורך אל פני האדן יהוה
+# "[EN-AID] From top split: LEFT «שלש פעמים בשנה» / RIGHT «יראה כל זכורך אל
+# פני האדן יהוה». Derive claim from Hebrew arms, not English alone. Exod
+# 23:17."
+m.step("Exod.23.17")
+
+# -------------------------- Exod.23.18 · ETNACHTA_SPLIT --------------------
+# לא תזבח על חמץ דם זבחי … ולא ילין חלב חגי עד בקר
+# "[EN-AID] From top split: LEFT «לא תזבח על חמץ דם זבחי» / RIGHT «ולא ילין
+# חלב חגי עד בקר». Derive claim from Hebrew arms, not English alone. Exod
+# 23:18."
+m.step("Exod.23.18")
+
+# -------------------------- Exod.23.19 · ETNACHTA_SPLIT --------------------
+# ראשית בכורי אדמתך תביא בית יהוה אלהיך … לא תבשל גדי בחלב אמו
+# "[EN-AID] From top split: LEFT «ראשית בכורי אדמתך תביא בית יהוה אלהיך» /
+# RIGHT «לא תבשל גדי בחלב אמו». Derive claim from Hebrew arms, not English
+# alone. Exod 23:19."
+m.step("Exod.23.19")
+# witness-tier presupposed read: the_translation_is_the_verdict on
+# kid_in_milk_clause — read, not installed
+m.witness_read("kid_in_milk_clause", "the_translation_is_the_verdict",
+                cites=["Mekhilta on Exod 23:19", "Onkelos Exod 23:19", "Mekhilta on Exod 23:18", "Onkelos Exod 23:18"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('false_report_clause', 'three_azharot_and_witness_fitness'), ('majority_clause', 'asymmetric_majority_and_the_duty_to_speak'), ('unloading_clause', 'the_ris_measure_and_the_grudge_released'), ('falsehood_clause', 'acquittal_asymmetry_and_the_circumstantial_refusal'), ('shemitah_clause', 'abandonment_lawless_by_design'), ('rest_clause', 'animal_rest_is_grazing_and_the_status_table'), ('pilgrimage_clause', 'the_exemption_table_word_by_word'), ('kid_in_milk_clause', 'the_translation_is_the_verdict')]
+    assert m.WITNESS_READS[0]["cites"] == ['Mekhilta on Exod 23:1']
+    assert all('three_azharot_and_witness_fitness' not in f for f in m.WORLD["facts"])
+    assert 'false_report_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Mekhilta on Exod 23:2', 'Onkelos Exod 23:2']
+    assert all('asymmetric_majority_and_the_duty_to_speak' not in f for f in m.WORLD["facts"])
+    assert 'majority_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Mekhilta on Exod 23:5', 'Mekhilta on Exod 23:4', 'Onkelos Exod 23:5']
+    assert all('the_ris_measure_and_the_grudge_released' not in f for f in m.WORLD["facts"])
+    assert 'unloading_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Mekhilta on Exod 23:6-8', 'Onkelos Exod 23:7']
+    assert all('acquittal_asymmetry_and_the_circumstantial_refusal' not in f for f in m.WORLD["facts"])
+    assert 'falsehood_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Mekhilta on Exod 23:10-11']
+    assert all('abandonment_lawless_by_design' not in f for f in m.WORLD["facts"])
+    assert 'shemitah_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Mekhilta on Exod 23:12']
+    assert all('animal_rest_is_grazing_and_the_status_table' not in f for f in m.WORLD["facts"])
+    assert 'rest_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Mekhilta on Exod 23:14-17']
+    assert all('the_exemption_table_word_by_word' not in f for f in m.WORLD["facts"])
+    assert 'pilgrimage_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Mekhilta on Exod 23:19', 'Onkelos Exod 23:19', 'Mekhilta on Exod 23:18', 'Onkelos Exod 23:18']
+    assert all('the_translation_is_the_verdict' not in f for f in m.WORLD["facts"])
+    assert 'kid_in_milk_clause' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: exo_23_escort_land
+###############################################################################
+
+m = Machine("exo_23_escort_land")
+
+# -------------------------- Exod.23.20 · ETNACHTA_SPLIT --------------------
+# הנה אנכי שלח מלאך לפניך לשמרך בדרך … ולהביאך אל המקום אשר הכנתי
+# "[EN-AID] From top split: LEFT «הנה אנכי שלח מלאך לפניך לשמרך בדרך» /
+# RIGHT «ולהביאך אל המקום אשר הכנתי». Derive claim from Hebrew arms, not
+# English alone. Exod 23:20."
+m.step("Exod.23.20")
+
+# -------------------------- Exod.23.21 · ETNACHTA_SPLIT --------------------
+# השמר מפניו ושמע בקלו אל תמר בו … כי לא ישא לפשעכם כי שמי בקרבו
+# "[EN-AID] From top split: LEFT «השמר מפניו ושמע בקלו אל תמר בו» / RIGHT
+# «כי לא ישא לפשעכם כי שמי בקרבו». Derive claim from Hebrew arms, not
+# English alone. Exod 23:21."
+m.step("Exod.23.21")
+# witness-tier presupposed read: the_word_in_my_name on angel_clause — read,
+# not installed
+m.witness_read("angel_clause", "the_word_in_my_name",
+                cites=["Onkelos Exod 23:21"])
+
+# -------------------------- Exod.23.22 · COND_כי ---------------------------
+# כי אם שמע תשמע בקלו ועשית כל אשר אדבר … ואיבתי את איביך וצרתי את צרריך
+# "[EN-AID] From top split: LEFT «כי אם שמע תשמע בקלו ועשית כל אשר אדבר» /
+# RIGHT «ואיבתי את איביך וצרתי את צרריך». Derive claim from Hebrew arms, not
+# English alone. Exod 23:22."
+m.step("Exod.23.22")
+
+# -------------------------- Exod.23.23 · COND_כי ---------------------------
+# כי ילך מלאכי לפניך והביאך אל האמרי והחתי והפרזי והכנעני החוי והיבוסי
+# "[EN-AID] From top split: LEFT «כי ילך מלאכי לפניך והביאך אל האמרי והחתי
+# והפרזי והכנעני החוי והיבוסי» / RIGHT «». Derive claim from Hebrew arms,
+# not English alone. Exod 23:23."
+m.step("Exod.23.23")
+
+# -------------------------- Exod.23.24 · ETNACHTA_SPLIT --------------------
+# לא תשתחוה לאלהיהם ולא תעבדם ולא תעשה כמעשיהם … כי הרס תהרסם ושבר תשבר
+# מצבתיהם
+# "[EN-AID] From top split: LEFT «לא תשתחוה לאלהיהם ולא תעבדם ולא תעשה
+# כמעשיהם» / RIGHT «כי הרס תהרסם ושבר תשבר מצבתיהם». Derive claim from
+# Hebrew arms, not English alone. Exod 23:24."
+m.step("Exod.23.24")
+# witness-tier presupposed read: errors_and_pillars on no_bowing_clause —
+# read, not installed
+m.witness_read("no_bowing_clause", "errors_and_pillars",
+                cites=["Onkelos Exod 23:24", "Onkelos Exod 23:32-33"])
+
+# -------------------------- Exod.23.25 · ETNACHTA_SPLIT --------------------
+# ועבדתם את יהוה אלהיכם וברך את לחמך ואת מימיך … והסרתי מחלה מקרבך
+# "[EN-AID] From top split: LEFT «ועבדתם את יהוה אלהיכם וברך את לחמך ואת
+# מימיך» / RIGHT «והסרתי מחלה מקרבך». Derive claim from Hebrew arms, not
+# English alone. Exod 23:25."
+m.step("Exod.23.25")
+
+# -------------------------- Exod.23.26 · ETNACHTA_SPLIT --------------------
+# לא תהיה משכלה ועקרה בארצך … את מספר ימיך אמלא
+# "[EN-AID] From top split: LEFT «לא תהיה משכלה ועקרה בארצך» / RIGHT «את
+# מספר ימיך אמלא». Derive claim from Hebrew arms, not English alone. Exod
+# 23:26."
+m.step("Exod.23.26")
+
+# -------------------------- Exod.23.27 · ETNACHTA_SPLIT --------------------
+# את אימתי אשלח לפניך והמתי את כל העם אשר תבא בהם … ונתתי את כל איביך אליך
+# ערף
+# "[EN-AID] From top split: LEFT «את אימתי אשלח לפניך והמתי את כל העם אשר
+# תבא בהם» / RIGHT «ונתתי את כל איביך אליך ערף». Derive claim from Hebrew
+# arms, not English alone. Exod 23:27."
+m.step("Exod.23.27")
+
+# -------------------------- Exod.23.28 · ETNACHTA_SPLIT --------------------
+# ושלחתי את הצרעה לפניך … וגרשה את החוי את הכנעני ואת החתי מלפניך
+# "[EN-AID] From top split: LEFT «ושלחתי את הצרעה לפניך» / RIGHT «וגרשה את
+# החוי את הכנעני ואת החתי מלפניך». Derive claim from Hebrew arms, not
+# English alone. Exod 23:28."
+m.step("Exod.23.28")
+
+# -------------------------- Exod.23.29 · ETNACHTA_SPLIT --------------------
+# לא אגרשנו מפניך בשנה אחת … פן תהיה הארץ שממה ורבה עליך חית השדה
+# "[EN-AID] From top split: LEFT «לא אגרשנו מפניך בשנה אחת» / RIGHT «פן תהיה
+# הארץ שממה ורבה עליך חית השדה». Derive claim from Hebrew arms, not English
+# alone. Exod 23:29."
+m.step("Exod.23.29")
+
+# -------------------------- Exod.23.30 · ETNACHTA_SPLIT --------------------
+# מעט מעט אגרשנו מפניך … עד אשר תפרה ונחלת את הארץ
+# "[EN-AID] From top split: LEFT «מעט מעט אגרשנו מפניך» / RIGHT «עד אשר תפרה
+# ונחלת את הארץ». Derive claim from Hebrew arms, not English alone. Exod
+# 23:30."
+m.step("Exod.23.30")
+
+# -------------------------- Exod.23.31 · ETNACHTA_SPLIT --------------------
+# ושתי את גבלך מים סוף ועד ים פלשתים וממדבר עד הנהר … כי אתן בידכם את ישבי
+# הארץ וגרשתמו מפניך
+# "[EN-AID] From top split: LEFT «ושתי את גבלך מים סוף ועד ים פלשתים וממדבר
+# עד הנהר» / RIGHT «כי אתן בידכם את ישבי הארץ וגרשתמו מפניך». Derive claim
+# from Hebrew arms, not English alone. Exod 23:31."
+m.step("Exod.23.31")
+
+# -------------------------- Exod.23.32 · TREE_CLAIM ------------------------
+# לא תכרת להם ולאלהיהם
+# "[EN-AID] From top split: LEFT «לא תכרת להם ולאלהיהם» / RIGHT «». Derive
+# claim from Hebrew arms, not English alone. Exod 23:32."
+m.step("Exod.23.32")
+
+# -------------------------- Exod.23.33 · ETNACHTA_SPLIT --------------------
+# לא ישבו בארצך פן יחטיאו אתך לי … כי תעבד את אלהיהם כי יהיה לך למוקש
+# "[EN-AID] From top split: LEFT «לא ישבו בארצך פן יחטיאו אתך לי» / RIGHT
+# «כי תעבד את אלהיהם כי יהיה לך למוקש». Derive claim from Hebrew arms, not
+# English alone. Exod 23:33."
+m.step("Exod.23.33")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('angel_clause', 'the_word_in_my_name'), ('no_bowing_clause', 'errors_and_pillars')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Exod 23:21']
+    assert all('the_word_in_my_name' not in f for f in m.WORLD["facts"])
+    assert 'angel_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Exod 23:24', 'Onkelos Exod 23:32-33']
+    assert all('errors_and_pillars' not in f for f in m.WORLD["facts"])
+    assert 'no_bowing_clause' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: exo_24_covenant_ascent
+###############################################################################
+
+m = Machine("exo_24_covenant_ascent")
+
+# -------------------------- Exod.24.1 · ETNACHTA_SPLIT ---------------------
+# ואל משה אמר עלה אל יהוה אתה ואהרן נדב ואביהוא ושבעים מזקני י … והשתחויתם
+# מרחק
+# "[EN-AID] From top split: LEFT «ואל משה אמר עלה אל יהוה אתה ואהרן נדב
+# ואביהוא ושבעים מזקני ישראל» / RIGHT «והשתחויתם מרחק». Derive claim from
+# Hebrew arms, not English alone. Exod 24:1."
+m.step("Exod.24.1")
+
+# -------------------------- Exod.24.2 · ETNACHTA_SPLIT ---------------------
+# ונגש משה לבדו אל יהוה והם לא יגשו … והעם לא יעלו עמו
+# "[EN-AID] From top split: LEFT «ונגש משה לבדו אל יהוה והם לא יגשו» / RIGHT
+# «והעם לא יעלו עמו». Derive claim from Hebrew arms, not English alone. Exod
+# 24:2."
+m.step("Exod.24.2")
+
+# -------------------------- Exod.24.3 · ETNACHTA_SPLIT ---------------------
+# ויבא משה ויספר לעם את כל דברי יהוה ואת כל המשפטים … ויען כל העם קול אחד
+# ויאמרו כל הדברים אשר דבר יהוה נעשה
+# "[EN-AID] From top split: LEFT «ויבא משה ויספר לעם את כל דברי יהוה ואת כל
+# המשפטים» / RIGHT «ויען כל העם קול אחד ויאמרו כל הדברים אשר דבר יהוה נעשה».
+# Derive claim from Hebrew arms, not English alone. Exod 24:3."
+m.step("Exod.24.3")
+# witness-tier presupposed read: two_payloads_one_voice on telling_clause —
+# read, not installed
+m.witness_read("telling_clause", "two_payloads_one_voice",
+                cites=["Onkelos Exod 24:3"])
+
+# -------------------------- Exod.24.4 · ETNACHTA_SPLIT ---------------------
+# ויכתב משה את כל דברי יהוה וישכם בבקר ויבן מזבח תחת ההר … ושתים עשרה מצבה
+# לשנים עשר שבטי ישראל
+# "[EN-AID] From top split: LEFT «ויכתב משה את כל דברי יהוה וישכם בבקר ויבן
+# מזבח תחת ההר» / RIGHT «ושתים עשרה מצבה לשנים עשר שבטי ישראל». Derive claim
+# from Hebrew arms, not English alone. Exod 24:4."
+m.step("Exod.24.4")
+
+# -------------------------- Exod.24.5 · ETNACHTA_SPLIT ---------------------
+# וישלח את נערי בני ישראל ויעלו עלת … ויזבחו זבחים שלמים ליהוה פרים
+# "[EN-AID] From top split: LEFT «וישלח את נערי בני ישראל ויעלו עלת» / RIGHT
+# «ויזבחו זבחים שלמים ליהוה פרים». Derive claim from Hebrew arms, not
+# English alone. Exod 24:5."
+m.step("Exod.24.5")
+# witness-tier presupposed read: the_firstborn_officiate on youths_clause —
+# read, not installed
+m.witness_read("youths_clause", "the_firstborn_officiate",
+                cites=["Onkelos Exod 24:5"])
+
+# -------------------------- Exod.24.6 · ETNACHTA_SPLIT ---------------------
+# ויקח משה חצי הדם וישם באגנת … וחצי הדם זרק על המזבח
+# "[EN-AID] From top split: LEFT «ויקח משה חצי הדם וישם באגנת» / RIGHT «וחצי
+# הדם זרק על המזבח». Derive claim from Hebrew arms, not English alone. Exod
+# 24:6."
+m.step("Exod.24.6")
+
+# -------------------------- Exod.24.7 · ETNACHTA_SPLIT ---------------------
+# ויקח ספר הברית ויקרא באזני העם … ויאמרו כל אשר דבר יהוה נעשה ונשמע
+# "[EN-AID] From top split: LEFT «ויקח ספר הברית ויקרא באזני העם» / RIGHT
+# «ויאמרו כל אשר דבר יהוה נעשה ונשמע». Derive claim from Hebrew arms, not
+# English alone. Exod 24:7."
+m.step("Exod.24.7")
+# witness-tier presupposed read: read_aloud_do_and_receive on book_clause —
+# read, not installed
+m.witness_read("book_clause", "read_aloud_do_and_receive",
+                cites=["Onkelos Exod 24:7"])
+
+# -------------------------- Exod.24.8 · ETNACHTA_SPLIT ---------------------
+# ויקח משה את הדם ויזרק על העם … ויאמר הנה דם הברית אשר כרת יהוה עמכם על כל
+# הדברים האלה
+# "[EN-AID] From top split: LEFT «ויקח משה את הדם ויזרק על העם» / RIGHT
+# «ויאמר הנה דם הברית אשר כרת יהוה עמכם על כל הדברים האלה». Derive claim
+# from Hebrew arms, not English alone. Exod 24:8."
+m.step("Exod.24.8")
+# witness-tier presupposed read: covenant_blood_as_atonement on blood_clause
+# — read, not installed
+m.witness_read("blood_clause", "covenant_blood_as_atonement",
+                cites=["Onkelos Exod 24:8"])
+
+# -------------------------- Exod.24.9 · ETNACHTA_SPLIT ---------------------
+# ויעל משה ואהרן … נדב ואביהוא ושבעים מזקני ישראל
+# "[EN-AID] From top split: LEFT «ויעל משה ואהרן» / RIGHT «נדב ואביהוא
+# ושבעים מזקני ישראל». Derive claim from Hebrew arms, not English alone.
+# Exod 24:9."
+m.step("Exod.24.9")
+
+# -------------------------- Exod.24.10 · ETNACHTA_SPLIT --------------------
+# ויראו את אלהי ישראל … ותחת רגליו כמעשה לבנת הספיר וכעצם השמים לטהר
+# "[EN-AID] From top split: LEFT «ויראו את אלהי ישראל» / RIGHT «ותחת רגליו
+# כמעשה לבנת הספיר וכעצם השמים לטהר». Derive claim from Hebrew arms, not
+# English alone. Exod 24:10."
+m.step("Exod.24.10")
+# witness-tier presupposed read: glory_throne_and_no_injury on vision_clause
+# — read, not installed
+m.witness_read("vision_clause", "glory_throne_and_no_injury",
+                cites=["Onkelos Exod 24:10", "Onkelos Exod 24:11"])
+
+# -------------------------- Exod.24.11 · ETNACHTA_SPLIT --------------------
+# ואל אצילי בני ישראל לא שלח ידו … ויחזו את האלהים ויאכלו וישתו
+# "[EN-AID] From top split: LEFT «ואל אצילי בני ישראל לא שלח ידו» / RIGHT
+# «ויחזו את האלהים ויאכלו וישתו». Derive claim from Hebrew arms, not English
+# alone. Exod 24:11."
+m.step("Exod.24.11")
+
+# -------------------------- Exod.24.12 · ETNACHTA_SPLIT --------------------
+# ויאמר יהוה אל משה עלה אלי ההרה והיה שם … ואתנה לך את לחת האבן והתורה
+# והמצוה אשר כתבתי להורתם
+# "[EN-AID] From top split: LEFT «ויאמר יהוה אל משה עלה אלי ההרה והיה שם» /
+# RIGHT «ואתנה לך את לחת האבן והתורה והמצוה אשר כתבתי להורתם». Derive claim
+# from Hebrew arms, not English alone. Exod 24:12."
+m.step("Exod.24.12")
+
+# -------------------------- Exod.24.13 · ETNACHTA_SPLIT --------------------
+# ויקם משה ויהושע משרתו … ויעל משה אל הר האלהים
+# "[EN-AID] From top split: LEFT «ויקם משה ויהושע משרתו» / RIGHT «ויעל משה
+# אל הר האלהים». Derive claim from Hebrew arms, not English alone. Exod
+# 24:13."
+m.step("Exod.24.13")
+
+# -------------------------- Exod.24.14 · ETNACHTA_SPLIT --------------------
+# ואל הזקנים אמר שבו לנו בזה עד אשר נשוב אליכם … והנה אהרן וחור עמכם מי בעל
+# דברים יגש אלהם
+# "[EN-AID] From top split: LEFT «ואל הזקנים אמר שבו לנו בזה עד אשר נשוב
+# אליכם» / RIGHT «והנה אהרן וחור עמכם מי בעל דברים יגש אלהם». Derive claim
+# from Hebrew arms, not English alone. Exod 24:14."
+m.step("Exod.24.14")
+# witness-tier presupposed read: the_standing_court_of_the_forty_days on
+# elders_clause — read, not installed
+m.witness_read("elders_clause", "the_standing_court_of_the_forty_days",
+                cites=["Onkelos Exod 24:14", "Onkelos Exod 24:12"])
+
+# -------------------------- Exod.24.15 · ETNACHTA_SPLIT --------------------
+# ויעל משה אל ההר … ויכס הענן את ההר
+# "[EN-AID] From top split: LEFT «ויעל משה אל ההר» / RIGHT «ויכס הענן את
+# ההר». Derive claim from Hebrew arms, not English alone. Exod 24:15."
+m.step("Exod.24.15")
+
+# -------------------------- Exod.24.16 · ETNACHTA_SPLIT --------------------
+# וישכן כבוד יהוה על הר סיני ויכסהו הענן ששת ימים … ויקרא אל משה ביום השביעי
+# מתוך הענן
+# "[EN-AID] From top split: LEFT «וישכן כבוד יהוה על הר סיני ויכסהו הענן ששת
+# ימים» / RIGHT «ויקרא אל משה ביום השביעי מתוך הענן». Derive claim from
+# Hebrew arms, not English alone. Exod 24:16."
+m.step("Exod.24.16")
+
+# -------------------------- Exod.24.17 · ETNACHTA_SPLIT --------------------
+# ומראה כבוד יהוה כאש אכלת בראש ההר … לעיני בני ישראל
+# "[EN-AID] From top split: LEFT «ומראה כבוד יהוה כאש אכלת בראש ההר» / RIGHT
+# «לעיני בני ישראל». Derive claim from Hebrew arms, not English alone. Exod
+# 24:17."
+m.step("Exod.24.17")
+
+# -------------------------- Exod.24.18 · ETNACHTA_SPLIT --------------------
+# ויבא משה בתוך הענן ויעל אל ההר … ויהי משה בהר ארבעים יום וארבעים לילה
+# "[EN-AID] From top split: LEFT «ויבא משה בתוך הענן ויעל אל ההר» / RIGHT
+# «ויהי משה בהר ארבעים יום וארבעים לילה». Derive claim from Hebrew arms, not
+# English alone. Exod 24:18."
+m.step("Exod.24.18")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('telling_clause', 'two_payloads_one_voice'), ('youths_clause', 'the_firstborn_officiate'), ('book_clause', 'read_aloud_do_and_receive'), ('blood_clause', 'covenant_blood_as_atonement'), ('vision_clause', 'glory_throne_and_no_injury'), ('elders_clause', 'the_standing_court_of_the_forty_days')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Exod 24:3']
+    assert all('two_payloads_one_voice' not in f for f in m.WORLD["facts"])
+    assert 'telling_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Exod 24:5']
+    assert all('the_firstborn_officiate' not in f for f in m.WORLD["facts"])
+    assert 'youths_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Exod 24:7']
+    assert all('read_aloud_do_and_receive' not in f for f in m.WORLD["facts"])
+    assert 'book_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Exod 24:8']
+    assert all('covenant_blood_as_atonement' not in f for f in m.WORLD["facts"])
+    assert 'blood_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Exod 24:10', 'Onkelos Exod 24:11']
+    assert all('glory_throne_and_no_injury' not in f for f in m.WORLD["facts"])
+    assert 'vision_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Exod 24:14', 'Onkelos Exod 24:12']
+    assert all('the_standing_court_of_the_forty_days' not in f for f in m.WORLD["facts"])
+    assert 'elders_clause' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
 
 

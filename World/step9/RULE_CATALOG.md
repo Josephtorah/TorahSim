@@ -15,7 +15,7 @@ STATUS ladder:
   COMPILED   — a working rule function in engine.py, exam green
   (a rule's claims seat in units via the findings loop as usual)
 
-## PART I — COMPILED (the working rule book, 21 rules, 69/69 green)
+## PART I — COMPILED (the working rule book, 41 rules, 129/129 green)
 
 | id | module | tractate | oracle | Genesis anchor |
 |---|---|---|---|---|
@@ -40,6 +40,26 @@ STATUS ladder:
 | R-225 | circumcision_agent | Avodah Zarah | Avodah Zarah 26b:12 + 27a:6 (TALMUD-ONLY) | Gen 17:9-13 (G33-24, G33-22) |
 | R-226 | court_of_shem | Avodah Zarah | Avodah Zarah 36b:7 (TALMUD-ONLY) | Gen 38:24 (G61-16) |
 | R-227 | pursuer | Sanhedrin | Sanhedrin 72b:15 + 72b:17 (TALMUD-ONLY) | Gen 9:6 (G21-13) |
+| R-228 | four_avot_damages | Bava Kamma | Mishnah Bava Kamma 1:1/2:2/5:7/6:2; Gittin 5:1 | Exod 22:4-5 (EX22-02/03/08) |
+| R-229 | fire_liability | Bava Kamma | Mishnah Bava Kamma 6:4 + 6:5 | Exod 22:5 (EX22-03) |
+| R-230 | theft_and_confession | Bava Kamma | Mishnah Bava Kamma 7:1/7:4/9:8; Shevuot 8:3-4; Ketubot 3:9 | Exod 22:3-8 (EX22-04, EX22-09) |
+| R-231 | four_keepers | Bava Metzia | Mishnah Bava Metzia 7:8/3:12/6:6/8:1 | Exod 22:6-14 (EX22-04, EX22-06) |
+| R-232 | oath_mechanics | Shevuot | Mishnah Shevuot 6:3/6:4/7:1 | Exod 22:7-10 (EX22-04, EX22-05) |
+| R-233 | verbal_wronging | Bava Metzia | Mishnah Bava Metzia 4:10 | Exod 22:20 (ledger-held) |
+| R-234 | interest_parties | Bava Metzia | Mishnah Bava Metzia 5:11 | Exod 22:24 (EX22-09) |
+| R-235 | unloading_duty | Bava Metzia | Mishnah Bava Metzia 2:10 | Exod 23:5 (EX23-03) |
+| R-236 | court_architecture | Sanhedrin | Mishnah Sanhedrin 1:1/1:6/4:2; Rosh Hashanah 2:9 | Exod 22:8 + 23:2 + 24:9 (EX22-04, EX23-02, EX24-07) |
+| R-237 | witness_fitness | Sanhedrin | Mishnah Sanhedrin 3:3; Shevuot 4:1 | Exod 23:1 (EX23-01) |
+| R-238 | tunneler | Sanhedrin | Mishnah Sanhedrin 8:6 | Exod 22:1-2 (EX22-01) |
+| R-239 | sorcerer_mode | Sanhedrin | Mishnah Sanhedrin 7:4 | Exod 22:17 (ledger-held dispute, decided by the case table) |
+| R-240 | idolatry_service | Sanhedrin | Mishnah Sanhedrin 7:6 | Exod 22:19 + 23:13 (EX22-09) |
+| R-241 | bribe_consequences | Peah | Mishnah Peah 8:9 | Exod 23:8 (EX23-04) |
+| R-242 | appearance_duty | Chagigah | Mishnah Chagigah 1:1 + 1:2 | Exod 23:14-17 (EX23-07) |
+| R-243 | meat_milk_scope | Chullin | Mishnah Chullin 8:4; Kiddushin 2:9; Avodah Zarah 5:9 | Exod 23:19 (EX23-08) |
+| R-244 | pesach_over_chametz | Pesachim | Mishnah Pesachim 5:4 | Exod 23:18 (EX23-08) |
+| R-245 | gift_order | Terumot | Mishnah Terumot 3:6 + 3:7 | Exod 22:28 (EX22-10) |
+| R-246 | bikkurim_duty | Bikkurim | Mishnah Bikkurim 1:2/1:3/1:9; Shekalim 8:8 | Exod 23:16 + 23:19 (EX23-08, EX23-09) |
+| R-247 | shemitah_model | Eduyot | Mishnah Eduyot 4:3 | Exod 23:11 (EX23-05) |
 
 ## PART II — CANDIDATES from the Talmud triage (206), by tractate
 

@@ -302,3 +302,50 @@ from our verse and deflected — the verse's recorded role carried
 honestly as attempted-and-deflected evidence. The import-only
 recommendation in the finding was superseded by the owner's blanket
 "seat f-012 through f-016". gen_36 rev 5.
+
+## From the Mishpatim exam, 2026-09-01 (owner: "run step 9 on mishpatim";
+## AUTO-SEAT ERA — filed and seated the same sitting per the standing law)
+
+**F-017 · FILED + AUTO-SEATED — four exo_22 legs the derivation pass
+skipped, all in the morning's own reading.** (a) INTEREST PARTIES: the
+five violators (lender, borrower, guarantor, witnesses; the scribe
+disputed) — Mekhilta on Exod 22:24, met by Mishnah Bava Metzia 5:11
+verbatim. (b) THE SERVICE PARADIGM: zevichah left-the-rule-to-teach —
+Temple-style services liable for any idol, its-own-way otherwise
+(Mekhilta on Exod 22:19; Mishnah Sanhedrin 7:6 is its case table).
+(c) THE CURSE CLAUSES: judge and prince each their own liability, the
+four-liabilities utterance, be-amkha (Mekhilta on Exod 22:27; Mishnah
+Shevuot 4:13 the case row). (d) SELF-CONVICTION EXCLUDED: אשר ירשיען
+אלהים — 'whom the JUDGES convict,' not the self-convicter — the
+admission-pays-no-fine rule (Mishnah Ketubot 3:9; Bava Kamma 9:8's
+fifth-and-asham branch). Seated as EX22-09 (one claim, one WITNESS_READ
+beside EX22-04's court op). exo_22_property_social.
+
+**F-018 · FILED + AUTO-SEATED — three bikkurim legs on exo_23_justice.**
+(a) NOT BEFORE SHAVUOT: the Tzevoim-mountain offering refused, quoting
+our 23:16 (Mishnah Bikkurim 1:3 + Challah 4:10). (b) RESPONSIBILITY
+UNTIL THE TEMPLE MOUNT from 23:19's bring-verb (Mishnah Bikkurim 1:9).
+(c) THE GROWER-CLASSES DELTA: the Mekhilta re-includes sharecroppers
+and seizers as bring-but-not-read; Mishnah Bikkurim 1:2 excludes them
+from bringing at all ('until all growth is from YOUR land') — a
+recorded two-seat split on the same clause, carried dual-track. Seated
+as EX23-09 (one claim, one WITNESS_READ beside EX23-08's op).
+exo_23_justice_calendar.
+
+**F-019 · FILED + AUTO-SEATED — the unnamed-elders court doctrine on
+exo_24.** R. Dosa ben Harkinas (Mishnah Rosh Hashanah 2:9): why were
+the seventy elders of our 24:9 left UNNAMED? So that every three that
+ever stands as a court over Israel is AS THE COURT OF MOSES — the
+institutional-authority rule that decides the Rabban Gamliel calendar
+case, derived from this unit's silence about names. Seated as EX24-07
+(one claim, one WITNESS_READ at the 24:9 step). exo_24_covenant_ascent.
+
+**F-020 · FILED + AUTO-SEATED — the gift-order clauses of Exod 22:28 on
+exo_22.** The exam's Terumot rows quote our verse directly: reordered
+gifts — the act STANDS though forbidden (מלאתך ודמעך לא תאחר, Mishnah
+Terumot 3:6 = the Mekhilta's mah-she-asah-asui row verbatim); and the
+ORDER itself derived by the names-count argument (firstfruits first,
+four titles; Mishnah Terumot 3:7). Read in the morning's spine, met by
+the case shelf the same day, skipped by the derivation pass's eight ops.
+Seated as EX22-10 (one claim, one WITNESS_READ at the 22:28 step's
+area). exo_22_property_social.
