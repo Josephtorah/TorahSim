@@ -7507,3 +7507,49 @@ pure copy either way destroys the other side's work. The next unit sync
 needs a MERGE PLAN (changelog union, rev reconciliation, stamps
 re-applied atop audits) and the OWNER'S WORD on the order of operations.
 NEITHER WINDOW IMPROVISES IT.
+
+## ⚠⚠ COMPACTION POINT #33 (2026-09-01, owner: "I have to compact. get
+## ready") — READ #32 ABOVE FIRST, then THE_STEPS Step 4 reread
+## (standing rule) AND the new Step 9 section. This block is the delta.
+THE SESSION'S ARC (all owner-ordered, all COMMITTED AND PUSHED through
+fb5a765): (1) Owner redirected OFF Exodus ("I don't want to run Exodus
+yet") into the MISHNAH/TALMUD-vs-GENESIS program. (2) THE GENESIS SWEEP:
+all 48 remaining Mishnah rows citing Genesis read/verdicted, 7 new
+engine modules (10 total), 28/28 green, headline "the reading
+anticipated the exam" (19/25 held); F-007..F-011 filed and SEATED same
+day ("Yes update") - six claims, six units rev-bumped (gen_03/25/29/33/
+36 r4, gen_55 r5, on REAFFIRM_QUEUE), F-010's Sodom leg corrected
+(G29-23 held it; case-sensitive probe lesson). (3) THE 958 TALMUD
+TRIAGE, complete in ONE sitting: 206 LAW / 488 AGGADAH / 174 CREDIT /
+87 QUOTE; ledger World/step9/TALMUD_TRIAGE_LEDGER.md + mirror
+logic/oral_triage/talmud_triage_gen_2026-09-01.md; harvest
+TALMUD_LAW_HARVEST.md; RULE_CATALOG.md = R-001..R-010 compiled +
+R-011..R-216 candidates, ~12 exam blocks mapped (Noahide 45-row block
+the flagship). Owner confirmed: the triage is Step 4 machinery run in
+Step 9's service (now IN THE_STEPS Step 4). (4) THE NOSE-PREDICATE SCAN
+(morphology/lemma, probe-tested): the definition's whole-canon career;
+owner-stamped DEMONSTRATE/COMPILE/LINK ("biggest news ever", memory
+demonstrate-compile-link.md); triage then found call sites #2 and #3
+IN LAW (Sotah 45b corpse-measure, Bekhorot 46b firstborn) - seat-on-
+gen_18 question OPEN. (5) THE ANSWER KEY epub (The_Answer_Key.epub,
+root) - the teaching book, no em dashes, hard breaks. (6) TORAHSIM
+SYNCED on owner's order (its c3ce4d2, site redeployed); ⚠ THE MERGE
+FLAG STANDS: unit trees DIVERGED, rev collisions BOTH directions
+(gen_62 r4 both trees different content) - next unit sync is a MERGE
+needing owner's word; NEITHER window improvises. (7) THE TEACHING
+ENTRIES in THE_WORLD's idea log (all pushed): composite functions,
+cross-book function table (Eduyot 2:10's five twelve-month members -
+F-005 was the signature), the written Torah's CALL SITES verified in
+ink (Deut 12:21 ka'asher tzivitikha), WHERE INPUTS COME FROM (three
+sources + vocabulary guard), DEPOSIT-AND-OPERATE proven three ways,
+and BLOCKS CAPTURE DEPOSITS NOT LOGIC (gen_17 frozen before the exam
+existed - the deposits were blind and the function found them).
+STANDING: hash 8b8fff1fa28953af unmoved all session; gates green; tree
+clean but for the never-commit set. STATUS: Genesis derivation DONE;
+Mishnah-vs-Genesis DONE (51/51); Talmud-vs-Genesis READ 958/958,
+EXAMINED 0/206; Tosefta + Jerusalem Talmud UNSWEPT.
+**OPEN FOR THE OWNER:** which exam block opens (of the ~12; Noahide
+flagship); seat the two new nose call sites on gen_18?; Step 9
+site-visibility (TorahSim's question); the unit MERGE plan + word;
+re-affirmation batch word (6 units queued); Tosefta/Jerusalem Talmud
+triage; the deferred Exodus planning conversation.
