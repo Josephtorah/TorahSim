@@ -61,3 +61,13 @@
 # three rows above — rituals COMPLETE, preflights ALL SCENARIOS GREEN,
 # gloss_lint 0, hash unmoved after the spine-amendment seats. Queue
 # EMPTY.
+
+| exo_25_ark_table_menorah | delegated FULL RULE (this sitting) | +EX25-11, EX25-12 | 2026-09-01 | Step 9 Terumah exam seats (F-032, F-033) |
+| exo_26_curtains_boards | delegated FULL RULE (this sitting) | +EX26-06 | 2026-09-01 | Step 9 Terumah exam seat (F-034) |
+| exo_27_altar_court | delegated FULL RULE (this sitting) | +EX27-06 | 2026-09-01 | Step 9 Terumah exam seat (F-035) |
+
+# ✅ RE-AFFIRMED same sitting under the delegation (2026-09-01): the
+# three rows above — rituals COMPLETE (corpus 104), preflights ALL
+# SCENARIOS GREEN, gloss_lint 0, CORPUS_TRUTH regenerated (standing
+# 992 → 996, the four witness ops) with hash 8b8fff1fa28953af unmoved.
+# Queue EMPTY.

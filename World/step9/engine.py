@@ -1671,3 +1671,10 @@ def answer(module, case_input):
 # claims. build(V) avoids a circular import.
 import backfill_rules as _bf
 RULES.update(_bf.build(V))
+
+# ---- the Terumah exam's modules (2026-09-01, same day the parashah
+# was derived and stamped — the derive-then-examine rhythm's third
+# cycle). 11 rules in terumah_rules.py; mitzvah_orientation is
+# Talmud-only (talmud_source in place of a Mishnah row).
+import terumah_rules as _tr
+RULES.update(_tr.build(V))

@@ -1,0 +1,261 @@
+# THE TERUMAH EXAM (owner: "commit and push. then run step 9 on
+# terumah") — the Step 9 round on the parashah derived the same day
+# (exo_25/26/27, stamped FULL RULE under the delegation). Membership:
+# the 13 bare Mishnah rows citing Exod 25:1-27:21 (11 read in full, 2
+# credited to the backfill ledger) + 2 neighbors for the frame.
+# Read-source record: logic/oral_triage/terumah_exam_mishnah_2026-09-01.md.
+# Method: THE_STEPS Step 9 — exam first, classify, findings filed
+# (F-032..F-035), auto-seated per the standing law, compile, run.
+# Provenance shape: mishnah + exodus_anchor (the same-day Terumah seats);
+# mitzvah_orientation is Talmud-only (talmud_source, the Noahide shape).
+
+- module: temple_funds
+  tractate: Shekalim
+  oracle: Mishnah Shekalim 4:6
+  exodus_anchor: {unit: exo_25_ark_table_menorah, ref: Exod.25.2+8,
+    claims: [EX25-08, EX25-02]}
+  cases:
+  - id: Shek_4_6_craftsmen
+    input: {query: craftsmen_payment, funds_source: consecrated_property}
+    expected: {verdict: [give_as_wages, desacralize_then_pay],
+      dispute: R. Akiva vs Ben Azzai}
+    class: B_dispute
+  - id: Tan_1_surplus
+    input: {query: surplus_offering}
+    expected: {verdict: gold_leaf_holy_of_holies, basis: the rider on
+        EX25-08 — the Tanchuma's own opening question}
+    class: B
+- module: sanctuary_extension
+  tractate: Shevuot
+  oracle: Mishnah Shevuot 2:2; Mishnah Sanhedrin 1:5 (credit)
+  exodus_anchor: {unit: exo_25_ark_table_menorah, ref: Exod.25.9,
+    claims: [EX25-03]}
+  cases:
+  - id: Shev_2_2_full
+    input: {query: extension_validity, extension_elements: [king, prophet,
+        urim_tummim, sanhedrin_71, two_thanksgivings, song]}
+    expected: {verdict: valid}
+    class: B
+  - id: Shev_2_2_partial
+    input: {query: extension_validity, extension_elements: [king, prophet]}
+    expected: {verdict: invalid}
+    class: B
+  - id: Shev_2_2_entrant
+    input: {query: entrant_liability, addition_status: unconsecrated}
+    expected: {verdict: exempt}
+    class: B
+  - id: San_1_5_bench
+    input: {query: extension_bench}
+    expected: {verdict: seventy_one}
+    class: B_credit  # read in the backfill (EX18-14's docket)
+- module: showbread_form
+  tractate: Menachot
+  oracle: Mishnah Menachot 11:5 + 11:4
+  exodus_anchor: {unit: exo_25_ark_table_menorah, ref: Exod.25.23+30,
+    claims: [EX25-11, EX25-06]}
+  cases:
+  - id: Men_11_5_yehudah
+    input: {query: table_dimensions, cubit_handbreadths: 5}
+    expected: {verdict: ten_by_five, basis: COMPUTED — the verse's
+        two-cubits-by-one times five}
+    class: C_seated  # F-032 -> EX25-11
+  - id: Men_11_5_meir
+    input: {query: table_dimensions, cubit_handbreadths: 6}
+    expected: {verdict: twelve_by_six, basis: COMPUTED — the same verse
+        times six}
+    class: C_seated
+  - id: Men_11_4_faces
+    input: {query: bread_form}
+    expected: {verdict: must_have_faces, basis: Ben Zoma on 25:30's own
+        name}
+    class: C_seated
+  - id: Men_11_4_showbread_dims
+    input: {query: bread_dimensions, item: showbread}
+    expected: {verdict: ten_by_five_horns_seven}
+    class: C_seated
+  - id: Men_11_4_two_loaves_dims
+    input: {query: bread_dimensions, item: two_loaves}
+    expected: {verdict: seven_by_four_horns_four}
+    class: C_seated
+  - id: Men_11_5_frankincense
+    input: {query: frankincense_placement}
+    expected: {verdict: [beside_the_rows, on_the_rows],
+      dispute: Abba Shaul (al = adjacent, from Numbers 2:20) vs the
+        sages' plain 'al'}
+    class: C_seated
+- module: showbread_tamid
+  tractate: Menachot
+  oracle: Mishnah Menachot 11:7 + 11:6
+  exodus_anchor: {unit: exo_25_ark_table_menorah, ref: Exod.25.30,
+    claims: [EX25-12, EX25-06]}
+  cases:
+  - id: Men_11_7_simultaneous
+    input: {query: tamid_satisfied, exchange: simultaneous}
+    expected: {verdict: satisfied}
+    class: C_seated  # F-033 -> EX25-12
+  - id: Men_11_7_same_day_gap
+    input: {query: tamid_satisfied, exchange: same_day_gap}
+    expected: {verdict: [not_satisfied, satisfied],
+      dispute: the first tanna vs R. Yose}
+    class: C_seated
+  - id: Men_11_7_overnight
+    input: {query: tamid_satisfied, exchange: overnight_vacant}
+    expected: {verdict: not_satisfied}
+    class: C_seated
+  - id: Men_11_7_ascent
+    input: {query: table_order}
+    expected: {verdict: marble_in_gold_out, basis: we ascend in holiness
+        and do not descend}
+    class: C_seated
+  - id: Men_11_6_rods
+    input: {query: rod_work_on_sabbath}
+    expected: {verdict: deferred}
+    class: B
+- module: menorah_integrity
+  tractate: Menachot
+  oracle: Mishnah Menachot 3:7
+  exodus_anchor: {unit: exo_25_ark_table_menorah, ref: Exod.25.31-36,
+    claims: [EX25-07]}
+  cases:
+  - id: Men_3_7_complete
+    input: {query: menorah_validity, branches: 7, lamps: 7}
+    expected: {verdict: valid}
+    class: B
+  - id: Men_3_7_six_branches
+    input: {query: menorah_validity, branches: 6, lamps: 7}
+    expected: {verdict: invalid, basis: mutually indispensable}
+    class: B
+  - id: Men_3_7_six_lamps
+    input: {query: menorah_validity, branches: 7, lamps: 6}
+    expected: {verdict: invalid}
+    class: B
+- module: sanctuary_partition
+  tractate: Yoma
+  oracle: Mishnah Yoma 5:1
+  exodus_anchor: {unit: exo_26_curtains_boards, ref: Exod.26.33,
+    claims: [EX26-04]}
+  cases:
+  - id: Yoma_5_1_tabernacle
+    input: {query: partition_count, temple: tabernacle}
+    expected: {verdict: one, basis: the verse's single separating veil}
+    class: B
+  - id: Yoma_5_1_second_temple
+    input: {query: partition_count, temple: second_temple}
+    expected: {verdict: [two, one],
+      dispute: the rabbis (a cubit between) vs R. Yose (she-ne'emar
+        our 26:33)}
+    class: B
+  - id: Yoma_5_1_openings
+    input: {query: curtain_openings}
+    expected: {verdict: outer_south_inner_north}
+    class: B
+- module: mitzvah_orientation
+  tractate: Sukkah
+  oracle: Babylonian Talmud Sukkah 45b (talmud-only; Mishnah Sukkah
+    3:14 the case neighborhood)
+  exodus_anchor: {unit: exo_26_curtains_boards, ref: Exod.26.15,
+    claims: [EX26-06, EX26-02]}
+  cases:
+  - id: Suk_45b_as_grown
+    input: {query: mitzvah_object_orientation, held: as_grown}
+    expected: {verdict: valid}
+    class: C_seated  # F-034 -> EX26-06
+  - id: Suk_45b_inverted
+    input: {query: mitzvah_object_orientation, held: inverted}
+    expected: {verdict: invalid, basis: acacia wood STANDING — the way
+        they grow}
+    class: C_seated
+- module: sheretz_removal
+  tractate: Eruvin
+  oracle: Mishnah Eruvin 10:15; Mishnah Tamid 5:5 (the psakhter's
+    services)
+  exodus_anchor: {unit: exo_27_altar_court, ref: Exod.27.3,
+    claims: [EX27-06, EX27-04]}
+  cases:
+  - id: Eru_10_15_method
+    input: {query: sheretz_removal_method}
+    expected: {verdict: [belt, wooden_tongs],
+      dispute: R. Yochanan ben Beroka vs R. Yehudah}
+    class: C_seated  # F-035 -> EX27-06
+  - id: Eru_10_15_zones
+    input: {query: sheretz_removal_zones}
+    expected: {verdict: [hall_vestibule_altar, karet_zones],
+      dispute: R. Shimon ben Nannas vs R. Akiva}
+    class: C_seated
+  - id: Eru_10_15_elsewhere
+    input: {query: sheretz_found_elsewhere}
+    expected: {verdict: covered_with_psakhter, basis: the ash-vessel's
+        second service}
+    class: C_seated
+- module: karpef_carrying
+  tractate: Eruvin
+  oracle: Mishnah Eruvin 2:5
+  exodus_anchor: {unit: exo_27_altar_court, ref: Exod.27.18,
+    claims: [EX27-02]}
+  cases:
+  - id: Eru_2_5_limit
+    input: {query: karpef_limit}
+    expected: {verdict: seventy_and_remainder_squared, basis: COMPUTED —
+        the square root of the verse's own hundred-by-fifty}
+    class: B
+  - id: Eru_2_5_amenity
+    input: {query: karpef_carrying, amenity: none}
+    expected: {verdict: [forbidden, permitted],
+      dispute: R. Yehudah ben Baba (watch-hut, dwelling, or near-town)
+        vs R. Akiva (the measure alone suffices)}
+    class: B
+  - id: Eru_2_5_shape_double
+    input: {query: karpef_carrying, length_to_width: double}
+    expected: {verdict: [forbidden, permitted],
+      dispute: R. Eliezer vs R. Yose (the courtyard's own proportion)}
+    class: B
+- module: curtain_boundary
+  tractate: Makkot
+  oracle: Mishnah Makkot 3:3 (credit — read in the backfill)
+  exodus_anchor: {unit: exo_27_altar_court, ref: Exod.27.9,
+    claims: [EX27-01]}
+  cases:
+  - id: Mak_3_3_outside
+    input: {query: eating_liability, offering: most_holy,
+      eaten: outside_curtains}
+    expected: {verdict: lashes_forty}
+    class: B_credit
+  - id: Mak_3_3_within
+    input: {query: eating_liability, offering: most_holy,
+      eaten: within_curtains}
+    expected: {verdict: permitted}
+    class: B_credit
+- module: oil_grades
+  tractate: Menachot
+  oracle: Mishnah Menachot 8:5 + 8:4
+  exodus_anchor: {unit: exo_27_altar_court, ref: Exod.27.20,
+    claims: [EX27-03]}
+  cases:
+  - id: Men_8_4_menorah_first
+    input: {query: oil_acceptable, destination: menorah, olive: 1,
+      pressing: 1}
+    expected: {verdict: acceptable}
+    class: B
+  - id: Men_8_4_menorah_second
+    input: {query: oil_acceptable, destination: menorah, olive: 1,
+      pressing: 2}
+    expected: {verdict: not_acceptable, basis: only the crushed first
+        pressing feeds the lamp}
+    class: B
+  - id: Men_8_4_meal_third
+    input: {query: oil_acceptable, destination: meal_offering, olive: 3,
+      pressing: 3}
+    expected: {verdict: acceptable}
+    class: B
+  - id: Men_8_5_qal_vachomer
+    input: {query: meal_offering_requires_crushed}
+    expected: {verdict: 'no', basis: the a-fortiori refuted by the
+        verse — crushed FOR THE LIGHT and not crushed for the
+        meal-offerings}
+    class: B
+  - id: Men_8_5_order
+    input: {query: oil_grade_order}
+    expected: {verdict: sum_diagonal, basis: COMPUTED — rank is olive
+        plus pressing; the Mishnah's equal pairs are the anti-diagonals
+        of the three-by-three table}
+    class: B

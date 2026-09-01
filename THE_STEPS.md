@@ -398,6 +398,24 @@ the verdict-riding ban AND its annulment mirror = L28-05). Exodus 1-24
 now derived AND examined end to end. Full record:
 World/step9/REPORT_BACKFILL.md.
 
+THE TERUMAH EXAM RAN (2026-09-01, ordered at compaction #35: "run step
+9 on terumah") — the rhythm's third cycle and the first on a pure
+ARCHITECTURE parashah: derived, stamped, spine-amended, and examined
+in one calendar day. The 13 bare Mishnah rows citing Exod 25-27 (11
+read, 2 backfill credits quick-looked), 11 modules, 38/38 first run;
+267/267 across all six exams. F-032..F-035 auto-seated (EX25-11/12,
+EX26-06, EX27-06 — the way-of-growth law the round's Talmud-only seat,
+Babylonian Talmud Sukkah 45b on the boards' own standing-word).
+THREE COMPUTED VERDICTS: the table's disputed dimensions = the verse's
+2×1 cubits times the two recorded constants; the karpef limit = the
+square root of the courtyard's own 100×50; the oil grades' equal
+pairs = the anti-diagonals of the 3×3 olive-times-pressing table.
+HEADLINE: the architecture runs as law — the reading had pre-named
+the exam's hardest rows inside the claims (EX25-06 listed Menachot
+11:4/5/7 as its own docket before the exam opened them). Catalog
+R-281..R-291; 85 compiled rules. Full record:
+World/step9/REPORT_TERUMAH.md.
+
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed
 on the spot: logic/findings/FINDINGS_QUEUE.md (append-only). The owner

@@ -1393,3 +1393,42 @@ hypothesis holds, the canon's own narratives are not only streams the
 rules watch — some are recorded INVOCATIONS with their return values,
 i.e., the Bible's own execution traces of the very functions the
 Mishnah compiles.
+
+**2026-09-01 — WHAT THE FIRST SPEC PARASHAH TAUGHT (Terumah derived,
+stamped, examined in one day; the exam's own record
+World/step9/REPORT_TERUMAH.md — the round asked whether a building
+specification examines like a statute, and it does).** Two new
+architecture facts and one confirmation, from the machine's first
+non-narrative, non-court genre:
+(1) THE BUILDING EXPORTS CONSTANTS TO OTHER MODULES. Genesis exported
+precedents; chapter 21 exported tariffs; the tabernacle exports
+STANDARDS AND TYPES that unrelated tractates import: the court's
+hundred-by-fifty is the Sabbath-carrying area unit for every enclosure
+in Eruvin (bet satayim = "like the courtyard of the tabernacle"); the
+court hangings are a lash-statute's boundary definition in Makkot;
+the great bronze ash-pot is a purity fixture in Eruvin 10:15's
+sanctuary procedure; the boards' one participle ("standing") is the
+orientation law for every commandment object (Babylonian Talmud
+Sukkah 45b). In machine terms: exo_25-27 is a module whose
+MEASUREMENTS are imported far outside the sanctuary domain — a new
+export kind beside precedent and tariff.
+(2) THE INK HOLDS THE DATA; THE DISPUTES LIVE IN THE CONVERSION
+LAYER. All three of the round's computed verdicts share one shape:
+the verse's numbers are fixed (two cubits by one; a hundred by fifty;
+three olives, three pressings) and the recorded dispute is over the
+PARAMETER — the cubit at five or six handbreadths (R. Yehudah vs R.
+Meir's table sizes are one verse times two constants), what
+"continually" tolerates (simultaneity vs no vacant night), whether
+the measure alone suffices (R. Akiva vs R. Yehudah ben Baba). The
+disputants are not reading different ink; they are running the same
+ink under different constants. Engine-native separation: ink = data,
+dispute = parameters, verdict = computation — disputes-as-runtime-
+outputs (the purpose ruling) gains its numeric case.
+(3) CONFIRMATION: the received translation already calls the
+assembly-order itself a HALAKHAH (ke-hilkhetei, 26:30) — the
+architecture is law-bearing spec, and the two-shelves model held
+unmodified on it (verse-anchored reading seats the law as text;
+the case shelf makes it runnable; no new machinery was needed).
+Tetzaveh is the next probe: garments — more spec, plus the first
+PERSONNEL install (the priesthood clothed after its duty was already
+assigned at 27:20-21).

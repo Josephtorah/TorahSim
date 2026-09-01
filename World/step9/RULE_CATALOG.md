@@ -382,3 +382,14 @@ Status: all CANDIDATE unless marked.
 INTAKE RULE (standing): a candidate qualifies only if a derived unit
 already anchors its Genesis verse - true for all 206 by construction
 (the triage enumerated only passages citing derived Genesis).
+R-281 | MODULE temple_funds (Terumah exam 2026-09-01)
+R-282 | MODULE sanctuary_extension (Terumah exam 2026-09-01)
+R-283 | MODULE showbread_form (Terumah exam 2026-09-01)
+R-284 | MODULE showbread_tamid (Terumah exam 2026-09-01)
+R-285 | MODULE menorah_integrity (Terumah exam 2026-09-01)
+R-286 | MODULE sanctuary_partition (Terumah exam 2026-09-01)
+R-287 | MODULE mitzvah_orientation (Terumah exam 2026-09-01; TALMUD-ONLY — Babylonian Talmud Sukkah 45b)
+R-288 | MODULE sheretz_removal (Terumah exam 2026-09-01)
+R-289 | MODULE karpef_carrying (Terumah exam 2026-09-01)
+R-290 | MODULE curtain_boundary (Terumah exam 2026-09-01; Makkot 3:3 backfill credit)
+R-291 | MODULE oil_grades (Terumah exam 2026-09-01)

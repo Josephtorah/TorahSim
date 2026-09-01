@@ -461,3 +461,47 @@ a hypothetical. (b) THE PLOTTING-WITNESS TIMING at our 21:23: both
 sides of the Sadducee dispute quote nefesh-tachat-nefesh — killed
 after the VERDICT, not after execution (Makkot 1:6). Seated as EX21-14.
 exo_21_the_ordinances.
+
+**F-032 · FILED + AUTO-SEATED — the showbread's form-laws on exo_25.**
+The dimension table under the recorded cubit-conversion dispute:
+Mishnah Menachot 11:5's ten-by-five (R. Yehudah) and twelve-by-six
+(R. Meir) are BOTH our 25:23's own two-cubits-by-one under the two
+recorded constants (five vs six handbreadths to the cubit) — a
+verse-times-constant computation, with the fold geometry, the
+wind-gap, and Abba Shaul's frankincense placement (על as ADJACENT,
+from Numbers 2:20) riding; and Ben Zoma's form-requirement from
+25:30's own name — לחם פנים ("bread of the FACE"), שיהא לו פנים
+("it must have faces") (Menachot 11:4, with the loaf/two-loaves
+table and R. Yehudah's letter-numeral mnemonic). Seated as EX25-11.
+exo_25_ark_table_menorah.
+
+**F-033 · FILED + AUTO-SEATED — the continuity-token's operational
+dispute on exo_25.** Mishnah Menachot 11:7 quotes our 25:30 (לפני
+תמיד — "before Me continually") as the proof for the simultaneous
+exchange (withdrawing and placing hands a handbreadth apart); R. Yose:
+even placed later the same day, that too is תמיד ("continually") —
+the token's operational meaning is a recorded dispute (strict
+simultaneity vs no vacant night). Riding: מעלין בקדש ולא מורידין
+("we ascend in holiness and do not descend") — the marble-then-gold
+table order as the principle's exhibit; and the rod-arrangement's
+Sabbath deference (11:6). Seated as EX25-12. exo_25_ark_table_menorah.
+
+**F-034 · FILED + AUTO-SEATED — the way-of-growth law on exo_26.** The
+Talmud (Babylonian Talmud Sukkah 45b) derives from our 26:15's own
+token — עצי שטים עמדים ("acacia wood, STANDING") — that mitzvah
+objects are taken דרך גדילתן ("the way they grow"): upright as they
+stood. The boards' standing-word becomes a general orientation law for
+commandment objects (the lulav rows its case neighborhood — Mishnah
+Sukkah 3:14's enumeration anchor rides this bridge). Talmud-only
+provenance: no Mishnah row states the rule. Seated as EX26-06.
+exo_26_curtains_boards.
+
+**F-035 · FILED + AUTO-SEATED — the ash-vessel's second service on
+exo_27.** Our 27:3's סירתיו לדשנו ("its pots for its ashes") has a
+case-side face: the פסכתר ("psakhter-pot," the large bronze
+ash-vessel — Mishnah Tamid 5:5 lists its services) is overturned over
+a dead creeping thing found in the sanctuary (Mishnah Eruvin 10:15),
+where the removal disputes run: belt vs wooden tongs (impurity must
+not linger vs must not spread), and the zones bounded by
+cut-off-liability (R. Shimon ben Nannas vs R. Akiva). The altar
+vessel running in purity law. Seated as EX27-06. exo_27_altar_court.

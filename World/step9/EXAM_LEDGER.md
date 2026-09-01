@@ -106,3 +106,39 @@ R-248..R-280; 74 compiled rules. FRONTIER DEBTS PAID: Exod 12:19
 chapter-21 machine ANSWERED THE MISHNAH IT NEVER SAW — the 2026-08-12
 whole-chapter reading wrote the claims; today's 38 material rows
 found 34 already carrying their exact content.
+
+## ROUND 6 — THE TERUMAH EXAM (2026-09-01, owner: "commit and push.
+## then run step 9 on terumah")
+The derive-then-examine rhythm's third cycle, and the tightest yet:
+the parashah was derived, stamped (delegated), spine-amended, and
+EXAMINED inside one calendar day. MEMBERSHIP: the 13 bare Mishnah rows
+citing Exod 25:1-27:21 — 11 opened in full from the local shelf, 2
+credited to the same day's backfill ledger (Mishnah Sanhedrin 1:5,
+Mishnah Makkot 3:3) with their Terumah legs quick-looked; 2 neighbors
+(Mishnah Menachot 11:6, 8:4) for the frame. Reading ledger:
+logic/oral_triage/terumah_exam_mishnah_2026-09-01.md. CLASSIFIED:
+seven rows class B on the same-morning seats — EX25-06 had named
+Menachot 11:4 + 11:5 + 11:7 as its own docket before the exam opened
+them; EX26-04 held Yoma 5:1's two-curtain dispute in its claim text;
+EX27-02/03 named their rows outright. FINDINGS F-032..F-035 filed AND
+auto-seated (EX25-11 the cubit-conversion dispute + Ben Zoma's
+face-requirement; EX25-12 the continuity-token's exchange dispute +
+the ascent principle; EX26-06 the way-of-growth orientation law —
+TALMUD-ONLY, Babylonian Talmud Sukkah 45b on our own standing-word;
+EX27-06 the ash-vessel's second service) — 4 claims / 4 WITNESS_READ
+ops / 3 units; rituals COMPLETE, preflights green, gloss_lint 0,
+CORPUS_TRUTH regenerated (standing 992 → 996), hash 8b8fff1fa28953af
+UNMOVED; the three stamped units re-affirmed under the delegation.
+COMPILED: 11 modules (terumah_rules.py), 38 case rows, 38/38 FIRST
+RUN; regressions green — 267/267 across all six exams. THREE COMPUTED
+VERDICTS: the table's two Mishnah dimension-sets derived live as the
+verse's own 2×1 cubits times the two recorded constants (5 and 6);
+the karpef limit derived as the square root of the courtyard's own
+100×50; the nine oil grades' equal pairs derived as the anti-diagonals
+of the 3×3 olive-times-pressing table — exactly as the Mishnah states
+them. Vocabulary: 13 new dimensions + 25 query values + 7 value-
+appends (single-rooted, collision guard passed pre-write). Catalog
+R-281..R-291; 85 compiled rules. HEADLINE: THE ARCHITECTURE RUNS AS
+LAW — a building spec derived in the morning was answering Sabbath-
+enclosure, purity, and Temple-procedure cases by the afternoon, and
+the exam's hardest rows were already sitting in the claims by name.

@@ -169,6 +169,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(boards_clause, standing_enduring)</span><br><span class="gloss">= WITNESS-READ(boards-clause, standing-enduring)</span><br>STANDING MEANS ENDURING [claim EX26-02]. The boards&#x27; standing-word carries both senses in the received translation — orientation and permanence (Onkelos Exod 26:15).
 </td><td>—</td><td class='cite'>Onkelos Exod 26</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(standing_wood, way_of_growth)</span><br><span class="gloss">= WITNESS-READ(standing-wood, way-fowl-growth)</span><br>THE STANDING-WORD BECOMES AN ORIENTATION LAW [claim EX26-06]. From this verse&#x27;s own token — acacia wood, STANDING — the Talmud derives that commandment objects are taken the way they grow, upright as they stood (Babylonian Talmud Sukkah 45b); the lulav rows are its case neighborhood (Mishnah Sukkah 3:14). Talmud-only provenance — no Mishnah states the rule. Seated from the Step 9 Terumah exam, auto-seat law.
+</td><td>—</td><td class='cite'>Babylonian Talmud Sukkah 45b, Mishnah Sukkah 3:14</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.</div>
 </div>
@@ -387,6 +389,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <div class="note"><span class="badge tier-o">dual_track</span> <b>Mekhilta</b><br><i>see Hebrew sample in Data/mekhilta_he.json</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
 <div class="note"><span class="badge tier-o">dual_track</span> <b>Mekhilta</b><br><i>see Hebrew sample in Data/mekhilta_he.json</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
 <div class="note"><span class="badge tier-o">dual_track</span> <b>Mekhilta</b><br><i>see Hebrew sample in Data/mekhilta_he.json</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<div class="note"><span class="badge tier-o"></span> <b></b><br></div>
 <div class="note"><span class="badge tier-o"></span> <b></b><br></div>
 <div class="note"><span class="badge tier-o"></span> <b></b><br></div>
 <h2>Binary trees (ta'amim v3, glue bricks)</h2>
@@ -2053,6 +2056,10 @@ m.step(&quot;Exod.26.15&quot;)
 # not installed
 m.witness_read(&quot;boards_clause&quot;, &quot;standing_enduring&quot;,
                 cites=[&quot;Onkelos Exod 26&quot;])
+# witness-tier presupposed read: way_of_growth on standing_wood — read, not
+# installed
+m.witness_read(&quot;standing_wood&quot;, &quot;way_of_growth&quot;,
+                cites=[&quot;Babylonian Talmud Sukkah 45b&quot;, &quot;Mishnah Sukkah 3:14&quot;])
 
 # -------------------------- Exod.26.16 · ETNACHTA_SPLIT --------------------
 # עשר אמות ארך הקרש … ואמה וחצי האמה רחב הקרש האחד
@@ -2239,20 +2246,23 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;fabric_clauses&#x27;, &#x27;craft_grades&#x27;), (&#x27;boards_clause&#x27;, &#x27;standing_enduring&#x27;), (&#x27;middle_bar&#x27;, &#x27;jacob_planted&#x27;), (&#x27;raising_clause&#x27;, &#x27;building_halakhah&#x27;), (&#x27;veil_clause&#x27;, &#x27;partition_and_stations&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;fabric_clauses&#x27;, &#x27;craft_grades&#x27;), (&#x27;boards_clause&#x27;, &#x27;standing_enduring&#x27;), (&#x27;standing_wood&#x27;, &#x27;way_of_growth&#x27;), (&#x27;middle_bar&#x27;, &#x27;jacob_planted&#x27;), (&#x27;raising_clause&#x27;, &#x27;building_halakhah&#x27;), (&#x27;veil_clause&#x27;, &#x27;partition_and_stations&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Onkelos Exod 26&#x27;]
     assert all(&#x27;craft_grades&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;fabric_clauses&#x27; not in m.WORLD[&quot;witnessed&quot;]
     assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Onkelos Exod 26&#x27;]
     assert all(&#x27;standing_enduring&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;boards_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Terumah 9&#x27;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Babylonian Talmud Sukkah 45b&#x27;, &#x27;Mishnah Sukkah 3:14&#x27;]
+    assert all(&#x27;way_of_growth&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;standing_wood&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Terumah 9&#x27;]
     assert all(&#x27;jacob_planted&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;middle_bar&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Onkelos Exod 26&#x27;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Onkelos Exod 26&#x27;]
     assert all(&#x27;building_halakhah&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;raising_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Mishnah Yoma 5:1&#x27;, &#x27;Onkelos Exod 26&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Mishnah Yoma 5:1&#x27;, &#x27;Onkelos Exod 26&#x27;]
     assert all(&#x27;partition_and_stations&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;veil_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
