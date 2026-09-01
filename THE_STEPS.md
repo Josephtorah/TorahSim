@@ -36,7 +36,16 @@ THE SPINE DEFAULT (owner, 2026-08-27 — narrows the above; effective
 at parashat Vayera): declared reading per span = the Torah book's ONE
 SPINE + Onkelos. The spines: Genesis — Bereshit Rabbah; Exodus — the
 Mekhilta of Rabbi Yishmael; Leviticus — the Sifra; Numbers — the
-Sifrei on Numbers; Deuteronomy — the Sifrei on Deuteronomy. The
+Sifrei on Numbers; Deuteronomy — the Sifrei on Deuteronomy.
+SUBSTITUTE SPINE FOR EXOD 25-40 (delegated ruling 2026-09-01, owner:
+"you decide"): the Mekhilta's running text ENDS at 23:19 — silent
+over the Tabernacle portions — so for that stretch the spine is
+MIDRASH TANCHUMA (both recensions), beside the standing Onkelos.
+Primaries over anthologies: Lekach Tov stays enumerated depth,
+Shemot Rabbah credited where it parallels Tanchuma; the Talmud
+law-clusters (Yoma, Menachot, Shabbat) meet the machine at Step 9
+where they belong. Applied retroactively to Terumah the same
+sitting, append-only. The
 Mishnah and Talmud leave the reading pass and return at Step 9 as the
 exam (see THE TWO SHELVES, Step 4). Unchanged riders: canon
 pattern-rules fire on grammar; ink claims never credited unopened;

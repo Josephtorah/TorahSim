@@ -175,6 +175,7 @@ from the verse's own ink — the very thing a verse-order book walks).
 |---|---|
 | Genesis | Bereshit Rabbah |
 | Exodus | Mekhilta of Rabbi Yishmael (the Rabbi Shimon Mekhilta = depth) |
+| Exodus 25-40 | Midrash Tanchuma, both recensions (the substitute spine for the Mekhilta-silent stretch — its running text ends at 23:19; delegated ruling 2026-09-01, owner: "you decide"; primaries over anthologies — Midrash Lekach Tov stays enumerated depth, Shemot Rabbah credited where it parallels) |
 | Leviticus | Sifra |
 | Numbers | Sifrei on Numbers (register row added 2026-08-27) |
 | Deuteronomy | Sifrei on Deuteronomy |

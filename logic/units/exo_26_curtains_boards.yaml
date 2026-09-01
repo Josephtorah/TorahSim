@@ -17,7 +17,7 @@ meta:
   refs: "26:1-37"
   data_paths_he:
     - "Data/Exod.xml"
-  status: draft
+  status: frozen
   tree_derive_version: tree_derived_v1
   tree_derive_phase: "2d"
   confidence_overall: hypothesis
@@ -76,6 +76,17 @@ boot_steps:
       he: שש משזר ותכלת וארגמן ותלעת שני כרבים מעשה חשב תעשה אתם
       he_translit: "shsh mshzr vtklt v'rgmn vtl't shny krbym m'shh chshb t'shh 'tm"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(fabric_clauses, craft_grades)"
+        en: >
+          THE CRAFT HAS RANKS [claim EX26-01]. The received translation
+          distinguishes the master-craftsman's woven cherubim (the inner
+          fabrics) from the embroiderer's screen (the outer door) — a graded
+          taxonomy of sacred workmanship (Onkelos Exod 26:1, and the veil and
+          screen at 26:31 and 26:36).
+        cites: ["Onkelos Exod 26"]
+        confidence: witnessed
     comment: >
       Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.
     confidence: hypothesis
@@ -356,6 +367,15 @@ boot_steps:
       he: עצי שטים עמדים
       he_translit: "'tzy shtym 'mdym"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(boards_clause, standing_enduring)"
+        en: >
+          STANDING MEANS ENDURING [claim EX26-02]. The boards' standing-word
+          carries both senses in the received translation — orientation and
+          permanence (Onkelos Exod 26:15).
+        cites: ["Onkelos Exod 26"]
+        confidence: witnessed
     comment: >
       Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.
     confidence: hypothesis
@@ -616,6 +636,21 @@ boot_steps:
       he: מברח מן הקצה אל הקצה
       he_translit: "mbrch mn hqtzh 'l hqtzh"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(middle_bar, jacob_planted)"
+        en: >
+          THE BAR THAT CAME DOWN WITH JACOB [claim EX26-05]. The end-to-end
+          middle bar is given a provenance older than the command: planted by
+          Jacob at the descent, carried in his hand to Egypt (Midrash
+          Tanchuma, Terumah 9; Buber 9) — the tradition wiring this chapter's
+          hardware back into Genesis, with the shittim-heals-Shittim
+          aetiology pointing forward to Numbers 25. The contained-Voice
+          reading of the curtains (the speech that once burst into the
+          nations' tents now housed — Tanchuma 9) pairs with EX25-05's oracle
+          interface. Seated under the amended spine, auto-seat law.
+        cites: ["Midrash Tanchuma, Terumah 9"]
+        confidence: witnessed
     comment: >
       Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.
     confidence: hypothesis
@@ -656,6 +691,16 @@ boot_steps:
       he: כמשפטו אשר הראית בהר
       he_translit: "kmshptv 'shr hr'yt bhr"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(raising_clause, building_halakhah)"
+        en: >
+          THE CHAPTER'S CROWN [claim EX26-03]. Raise the tabernacle ACCORDING
+          TO ITS HALAKHAH (Onkelos Exod 26:30) — the translation's own
+          word-choice files the building's assembly under law-vocabulary: the
+          structure is erected the way a ruling is followed.
+        cites: ["Onkelos Exod 26"]
+        confidence: witnessed
     comment: >
       Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.
     confidence: hypothesis
@@ -716,6 +761,17 @@ boot_steps:
       he: והבדילה הפרכת לכם בין הקדש ובין קדש הקדשים
       he_translit: vhbdylh hprkt lkm byn hqdsh vbyn qdsh hqdshym
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(veil_clause, partition_and_stations)"
+        en: >
+          THE PARTITION IS LAW [claim EX26-04]. One curtain separates the two
+          sanctities FOR YOU (Onkelos Exod 26:33) — the graded-holiness
+          architecture in a clause, with each vessel's compass-station fixed
+          in the two verses that follow; the case shelf's Second-Temple echo
+          waits at Mishnah Yoma 5:1.
+        cites: ["Mishnah Yoma 5:1", "Onkelos Exod 26"]
+        confidence: witnessed
     comment: >
       Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.
     confidence: hypothesis
@@ -876,34 +932,59 @@ oral_notes:
     source: "[ORAL][MEKHILTA]"
     confidence: hypothesis
 
+  - step: E
+    name_en: "RE-era derivation pass (2026-09-01)"
+    comment: >
+      RE-era derivation pass (2026-09-01, owner: 'derive terumah').
+      Parashah-grain sitting over Terumah (Exod 25:1-27:19; this unit read
+      whole where its span runs past the boundary). The book spine
+      (Mekhilta of Rabbi Yishmael) ends at 23:19 — silent over the
+      parashah, recorded openly; declared reading is Onkelos alone, read IN
+      FULL — ledger logic/oral_triage/exo_26_curtains_boards_2026-09-01.md,
+      1,023 rows pre-enumerated, remainder outside declared scope. 4
+      witness operators seated (claims EX26-01, EX26-02, EX26-03, EX26-04,
+      manifest logic/oral_audit/manifests/). Scenarios re-anchored to the
+      runner's after-STEP convention. Machine ops untouched below the
+      witness tier; no verse text, tree, or morphology changed.
+    confidence: tested
+  - step: F
+    name_en: "Spine-amendment pass (2026-09-01)"
+    comment: >
+      Spine-amendment pass (2026-09-01, the owner's delegated ruling 'you
+      decide': Midrash Tanchuma is the substitute spine for the
+      Mekhilta-silent Exod 25-40, beside Onkelos). Tanchuma Terumah read IN
+      FULL both recensions, appended to the ledger; claims EX26-05 seated
+      from the reading under the auto-seat law. Machine ops untouched below
+      the witness tier.
+    confidence: tested
 scenarios:
   - id: S1
-    title_en: "After Exod 26:1 (STEP_Ex_26_1)"
-    expect_en: "State advances via tree-derived STEP_Ex_26_1; arms cited in boot_steps."
+    title_en: "after STEP_Ex_26_1 — Exod 26:1"
+    expect_en: "no test, no name."
   - id: S2
-    title_en: "After Exod 26:2 (STEP_Ex_26_2)"
-    expect_en: "State advances via tree-derived STEP_Ex_26_2; arms cited in boot_steps."
+    title_en: "after STEP_Ex_26_2 — Exod 26:2"
+    expect_en: "no test, no name."
   - id: S3
-    title_en: "After Exod 26:3 (STEP_Ex_26_3)"
-    expect_en: "State advances via tree-derived STEP_Ex_26_3; arms cited in boot_steps."
+    title_en: "after STEP_Ex_26_3 — Exod 26:3"
+    expect_en: "no test, no name."
   - id: S4
-    title_en: "After Exod 26:4 (STEP_Ex_26_4)"
-    expect_en: "State advances via tree-derived STEP_Ex_26_4; arms cited in boot_steps."
+    title_en: "after STEP_Ex_26_4 — Exod 26:4"
+    expect_en: "no test, no name."
   - id: S5
-    title_en: "After Exod 26:5 (STEP_Ex_26_5)"
-    expect_en: "State advances via tree-derived STEP_Ex_26_5; arms cited in boot_steps."
+    title_en: "after STEP_Ex_26_5 — Exod 26:5"
+    expect_en: "no test, no name."
   - id: S6
-    title_en: "After Exod 26:6 (STEP_Ex_26_6)"
-    expect_en: "State advances via tree-derived STEP_Ex_26_6; arms cited in boot_steps."
+    title_en: "after STEP_Ex_26_6 — Exod 26:6"
+    expect_en: "no test, no name."
   - id: S7
-    title_en: "After Exod 26:7 (STEP_Ex_26_7)"
-    expect_en: "State advances via tree-derived STEP_Ex_26_7; arms cited in boot_steps."
+    title_en: "after STEP_Ex_26_7 — Exod 26:7"
+    expect_en: "no test, no name."
   - id: S8
-    title_en: "After Exod 26:8 (STEP_Ex_26_8)"
-    expect_en: "State advances via tree-derived STEP_Ex_26_8; arms cited in boot_steps."
+    title_en: "after STEP_Ex_26_8 — Exod 26:8"
+    expect_en: "no test, no name."
   - id: S_last
-    title_en: "After final verse 26:37"
-    expect_en: "Block closed via STEP_Ex_26_37."
+    title_en: "after STEP_Ex_26_37 — the block closes"
+    expect_en: "no test, no name."
 
 binary_trees:
   display_policy_en: >

@@ -52,3 +52,12 @@
 # re-affirmations are labeled as such forever: the record never claims
 # the owner personally read a rev he did not. Rows stay for the record;
 # the queue is EMPTY as of this entry. New amendments append below.
+
+| exo_25_ark_table_menorah | delegated FULL RULE (this sitting) | +EX25-08..10 | 2026-09-01 | spine-amendment pass (Tanchuma read, 3 claims) |
+| exo_26_curtains_boards | delegated FULL RULE (this sitting) | +EX26-05 | 2026-09-01 | spine-amendment pass (1 claim) |
+| exo_27_altar_court | delegated FULL RULE (this sitting) | +EX27-05 | 2026-09-01 | spine-amendment pass (1 claim) |
+
+# ✅ RE-AFFIRMED same sitting under the delegation (2026-09-01): the
+# three rows above — rituals COMPLETE, preflights ALL SCENARIOS GREEN,
+# gloss_lint 0, hash unmoved after the spine-amendment seats. Queue
+# EMPTY.

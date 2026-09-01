@@ -7846,3 +7846,162 @@ obsolete needs-canon-mirroring placeholder); the triage-count line
 (already in compaction #33 here). The peer's door is CLOSED from its
 side; nothing further crosses; the next cross-tree event is a sync WE
 initiate. NOT COMMITTED — owner word.
+
+## MILESTONE (2026-09-01, same day) — TERUMAH DERIVED WHOLE (owner:
+## "commit and push. then derive terumah"; commits ff1ff3e + 50122e4
+## pushed first). The second parashah under the derive-then-exam
+rhythm, and the first Tabernacle portion: the three July drafts
+(exo_25_ark_table_menorah 25:1-40, exo_26_curtains_boards 26:1-37,
+exo_27_altar_court 27:1-21 — the unit read whole past the parashah
+boundary at 27:19, noted) through the full RE process in one
+parashah-grain sitting. READING: the Mekhilta of Rabbi Yishmael ends
+at 23:19 — SILENT over the whole parashah, recorded openly; declared
+reading Onkelos alone, 98 verses IN FULL; 4,490 rows pre-enumerated
+(2,560 + 1,023 + 907), remainder outside declared scope; three
+ledgers logic/oral_triage/exo_2[567]*_2026-09-01.md. LOGIC: 15
+witness ops + 15 claims (EX25-01..07, EX26-01..04, EX27-01..04) —
+the yield is the ARCHITECTURE'S OWN LAW-VOCABULARY: the gift as
+formal SEPARATION made before-not-to (25:2); the Presence dwelling
+AMONG THE PEOPLE not the building (25:8, the crown); ve-khen taasu as
+the CONSTITUTIONAL clause (25:9 — the Shevuot 2:2 / Sanhedrin 1:5
+authority-list, pairing with EX18-14's 71-docket); the poles-never-
+removed standing prohibition (25:15); THE WORD APPOINTED at the
+ark-cover (25:22 — the oracle interface installed before any case
+exists: the call-site design's ANSWER ADDRESS); the showbread's
+continuity-token (25:30); the menorah one-piece + seven-branch count
+(25:36, Menachot 3:7's row); the craft-grade taxonomy (26:1/31/36);
+KE-HILKHETEI — the received translation calls the assembly-order a
+HALAKHAH (26:30, the chapter crown); the veil-partition law + vessel
+stations (26:33-35, Yoma 5:1's row); the court hangings as a lash-
+statute's boundary (27:9, crediting the morning's Makkot 3:3 read);
+THE COURT AS UNIT OF MEASURE — bet satayim defined 'like the
+courtyard of the tabernacle' (27:18, Eruvin 2:5 — architecture
+running as a measure in Sabbath law); crushed-for-the-light oil
+grades (27:20); the evening-to-morning eternal lamp statute, the
+priesthood's first standing duty given before the priests are clothed
+(27:21). Scenarios re-anchored (the July fix); one cite-gate lesson:
+a wrapped cite-line breaks the substring check — restated unbroken,
+append-only. GATES: 3 rituals COMPLETE — CORPUS AT 104 FROZEN UNITS
+(the first two rituals hit the corpus proof mid-flight while all
+three stood flipped; re-run green) — 3 preflights green, gloss_lint
+0, hash 8b8fff1fa28953af UNMOVED. STAMPS (delegated era): STAMP
+LEDGER OPENED (logic/findings/STAMP_LEDGER.md — classes OWNER vs
+DELEGATED); first FULL-RULE stamps granted under the delegation: the
+four Mishpatim units + the three Terumah units; the twelve-row
+re-affirmation recorded as its first row. 13 bare Mishnah rows
+citing Exod 25-27 enumerated for the NEXT Step 9 round (Menachot the
+lead tractate). NOT COMMITTED — owner word.
+
+## ADDENDUM (2026-09-01, same sitting) — THE SPINE QUESTION ANSWERED
+## AND THE TANCHUMA PASS RUN. The owner asked "is there no other oral
+torah in our list to read for these verses" and then delegated ("you
+decide based on your training. what is important here"). THE RULING:
+for the Mekhilta-silent stretch (Exod 25-40) the SUBSTITUTE SPINE is
+MIDRASH TANCHUMA, both recensions, beside Onkelos — primaries over
+anthologies (Lekach Tov = enumerated depth; Shemot Rabbah credited
+where parallel; the Talmud clusters to Step 9). Recorded: CORE_SHELF
+spine table, THE_STEPS Step 3, memory spine-default. APPLIED TO
+TERUMAH RETROACTIVELY, append-only: all 20 Tanchuma Terumah sections
+read (11 standard + 9 Buber), three ledgers appended with new
+completion lines (54/54, 41/41, 23/23), FIVE claims seated under the
+auto-seat law — EX25-08 (THE FLAGSHIP: Reish Lakish's five-who-may-
+not-separate table derived word by word from 25:2's own tokens —
+Mishnah Terumot 1:1 anchored, the three-cohorts shape again; +the
+surplus-funds law), EX25-09 (the Yom Kippur timestamp under
+no-earlier-and-later; tabernacle gold atones for calf gold; the
+TESTIMONY name), EX25-10 (thirteen-for-thirteen dual-track census +
+the tachash dispute pairing Onkelos' sasgona), EX26-05 (Jacob planted
+the cedars; THE MIDDLE BAR of 26:28 went down to Egypt in Jacob's
+hand; shittim-heals-Shittim; the contained-Voice pairing EX25-05),
+EX27-05 (Moses' recorded ENGINEERING OBJECTION at the altar spec —
+wood under perpetual fire — with its answer stack and the
+dinar-thickness datum). GATES: 3 rituals re-run COMPLETE, preflights
+green, gloss_lint 0, hash 8b8fff1fa28953af UNMOVED; the three units'
+post-stamp amendments queued and RE-AFFIRMED same sitting under the
+delegation (REAFFIRM_QUEUE + STAMP_LEDGER rows). NOT COMMITTED —
+owner word.
+
+## ⚠⚠ COMPACTION POINT #35 (2026-09-01, owner: "commit and push. then
+## run step 9 on terumah. I need to compact. lets do that first. get
+## ready") — READ #34 ABOVE FIRST, then THE_STEPS Step 4 reread
+## (standing rule) AND Step 9 AND Step 8 (the delegation is new).
+## This block is the delta. ⚠ THE NEXT SITTING'S TASK IS ALREADY
+## ORDERED: STEP 9 ON TERUMAH (details at the tail).
+THE SESSION'S ARC since #34 (owner-ordered throughout; commits
+ff1ff3e, 50122e4, and this closing commit):
+(1) THE EXODUS 1-21 BACKFILL EXAM (#34's ordered task, ran whole):
+125 bare-Mishnah paragraphs read (83 on Exod 1-20 + 42 ch-21
+re-checks), 33 modules compiled (backfill_rules.py, catalog
+R-248..R-280 = 74 rules), 100/100 FIRST RUN, all five exams 229/229;
+F-021..F-031 filed AND auto-seated — 24 claims on 14 units
+(EX12-17..22 the six-claim Passover bundle); two frontier debts PAID
+(Exod 12:19 leaven; the plague census at 11:1's ONE MORE). HEADLINE:
+the chapter-21 law-era machine answered 34 of 38 Mishnah rows it
+never saw, several word for word (BK 3:9 = L35-01, BK 4:9 = L29-05,
+BK 4:8 + Keritot 6:2 = L28-05 both directions). Commit ff1ff3e.
+(2) ⚠ NEW STANDING LAW (owner verbatim): "I want you to take over
+stamps. I don't want torahsim to flow into this repo. It is you
+first, info only flows to torahsim not from it to you" — STAMP
+DELEGATION (machine-administered stamps/re-affirmations, labeled
+DELEGATED forever, owner-stamps distinct, owner overrules any time;
+STAMP_LEDGER.md opened in logic/findings/) + ONE-WAY FLOW (Torah_Grok
+first; the 65-stamp ATOP-merge CANCELLED, TorahSim told at his word
+and confirmed, standing down as mirror) + first delegated acts: the
+twelve-row REAFFIRM queue cleared; first delegated FULL RULE stamps
+(the four Mishpatim units + the three Terumah units). In THE_STEPS
+Step 8, memory two-window-workflow + findings-loop-stamp-law.
+(3) THE ONE-TIME REPATRIATION (owner: "you decide"): RULES CROSS,
+CHRONICLES STAY — three canon-era process rules (TorahSim's d6419ee,
+its legitimate canon period) landed in THE_STEPS Step 4 (the
+false-deficit expansion; recital-vs-tripwire; the figure-that-never-
+changes rule); the failed-leg long form NOT landed (our condensed
+form richer); four chronicle paragraphs stay in TorahSim's tree,
+named in the closed tail note. Door CLOSED both sides. Commit 50122e4
+(with (2)).
+(4) TERUMAH DERIVED WHOLE (owner: "derive terumah"): the three July
+drafts (exo_25 25:1-40, exo_26 26:1-37, exo_27 27:1-21 read whole
+past the boundary) through the full RE process — CORPUS AT 104 FROZEN
+UNITS. Onkelos 98 verses IN FULL; 4,490 rows pre-enumerated; 15
+witness ops (EX25-01..07, EX26-01..04, EX27-01..04). The yield: the
+architecture's own law-vocabulary — KE-HILKHETEI (the assembly-order
+called a HALAKHAH, 26:30), the court as UNIT OF MEASURE (bet satayim
+= this courtyard, Eruvin 2:5, 27:18), THE WORD APPOINTED at the
+ark-cover (25:22 — the call-site design's answer address installed
+before any caller), the Presence dwelling AMONG THE PEOPLE (25:8),
+the poles-never-removed prohibition (25:15), the evening-to-morning
+eternal lamp statute (27:21). Cite-gate lesson: a line-wrapped cite
+breaks the substring check — restate unbroken, append-only.
+(5) ⚠ SPINE RULING (owner asked "is there no other oral torah...";
+then "you decide based on your training"): SUBSTITUTE SPINE FOR EXOD
+25-40 = MIDRASH TANCHUMA both recensions beside Onkelos (the Mekhilta
+ends at 23:19) — primaries over anthologies; Lekach Tov enumerated
+depth; Shemot Rabbah credited where parallel; Talmud clusters to Step
+9. In CORE_SHELF spine table, THE_STEPS Step 3, memory spine-default.
+APPLIED TO TERUMAH RETROACTIVELY: all 20 Tanchuma sections read, 5
+claims seated (EX25-08 THE FLAGSHIP — Reish Lakish's five-who-may-
+not-separate table word by word from 25:2; EX25-09 the Yom Kippur
+timestamp + gold-atones-for-gold; EX25-10 thirteen-for-thirteen
+dual-track + the tachash dispute; EX26-05 Jacob's cedars + THE MIDDLE
+BAR down to Egypt in his hand; EX27-05 Moses' recorded engineering
+objection at the altar spec). Rituals re-run COMPLETE, re-affirmed
+under the delegation.
+STANDING: hash 8b8fff1fa28953af unmoved ALL SESSION; 104 frozen
+units; five exams 229/229; 74 compiled rules; findings queue EMPTY;
+REAFFIRM queue EMPTY; STAMP_LEDGER 4 rows. STATUS: Genesis DONE;
+Exod 1-24 derived+examined; Terumah (25:1-27:19) derived under the
+amended spine, NOT yet examined; Exod 28-40 July drafts; ~11 Genesis
+Talmud blocks (162 rows); Tosefta + Jerusalem Talmud unswept.
+⚠ THE ORDERED NEXT TASK — STEP 9 ON TERUMAH: the 13 bare Mishnah
+rows citing Exod 25-27 (enumerated; scratchpad terumah_links.json and
+the ledgers' testing-shelf pointers): Mishnah Menachot 11:4 + 11:5 +
+11:7 (showbread), Menachot 3:7 (menorah branches), Menachot 8:5 (oil
+grades), Eruvin 2:5 (the court measure), Eruvin 10:15 (27:3), Yoma
+5:1 (the veil), Sukkah 3:14 (26:15), Shekalim 4:6 (surplus funds),
+Shevuot 2:2 (extending city/courts — 25:9), Sanhedrin 1:5 + Makkot
+3:3 (CREDITS — read in the backfill). Method: the standing exam
+pattern — read from the local shelf, classify against the fresh
+Terumah seats (expect heavy B-class: EX25-03/06/07/08, EX26-04,
+EX27-02/03 anticipate most rows), spec cases_terumah.yaml, compile,
+auto-seat unheld legs, run + all regressions. OPEN besides: Tetzaveh
+next in the parashah rhythm; the ~11 Genesis Talmud blocks; Exod
+28-40; Tosefta/Jerusalem Talmud; Step 9 site visibility.
