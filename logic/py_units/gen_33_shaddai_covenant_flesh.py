@@ -179,6 +179,10 @@ m.fact("zot_briti_asher_tishmeru",
 # circumcision_command — read, not installed
 m.witness_read("circumcision_command", "three_tier_enforcement_cascade",
                 cites=["Kiddushin 29a:11", "Avodah Zarah 26b:12", "Jerusalem Talmud Kiddushin 1:7:2"])
+# witness-tier presupposed read: line_scope_you_and_your_seed on
+# circumcision_command — read, not installed
+m.witness_read("circumcision_command", "line_scope_you_and_your_seed",
+                cites=["Sanhedrin 59b:9", "Sanhedrin 59b:10", "Sanhedrin 59b:11", "Sanhedrin 59b:12"])
 
 # -------------------------- Gen.17.11 · THE_SIGN_IN_THE_FLESH --------------
 # וּנְמַלְתֶּם אֵת בְּשַׂר עָרְלַתְכֶם וְהָיָה לְאוֹת בְּרִית בֵּינִי
@@ -431,7 +435,7 @@ if __name__ == "__main__":
     assert all('the_two_grammar_schools' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['rename_operator']["cites"] == ['Berakhot 13a:8', 'Bereshit Rabbah 46:8', 'Tosefta Berakhot 1:15', 'Berakhot 13a:10']
     assert all('enforced_naming_law_and_counter_rule' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('tamim_condition', 'wholeness_pending_the_act'), ('thirteen_covenants', 'the_chapter_counts_its_own_word'), ('av_hamon', 'charter_of_the_acronym_rule'), ('covenant_clause', 'three_family_laws'), ('dorot_token', 'surviving_analogy_of_three_weighed'), ('land_grant', 'conditioned_on_the_next_verse'), ('circumcision_command', 'three_tier_enforcement_cascade'), ('abraham_own_analogy', 'objected_to_and_answered'), ('eighth_day_clause', 'three_determinations_from_one_number'), ('laughter_clause', 'alteration_census_and_name_remedy'), ('ascent_from_abraham', 'leave_taking_rule_and_chariot_claim')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('tamim_condition', 'wholeness_pending_the_act'), ('thirteen_covenants', 'the_chapter_counts_its_own_word'), ('av_hamon', 'charter_of_the_acronym_rule'), ('covenant_clause', 'three_family_laws'), ('dorot_token', 'surviving_analogy_of_three_weighed'), ('land_grant', 'conditioned_on_the_next_verse'), ('circumcision_command', 'three_tier_enforcement_cascade'), ('circumcision_command', 'line_scope_you_and_your_seed'), ('abraham_own_analogy', 'objected_to_and_answered'), ('eighth_day_clause', 'three_determinations_from_one_number'), ('laughter_clause', 'alteration_census_and_name_remedy'), ('ascent_from_abraham', 'leave_taking_rule_and_chariot_claim')]
     assert m.WITNESS_READS[0]["cites"] == ['Mishnah Nedarim 3:11', 'Bereshit Rabbah 46:1']
     assert all('wholeness_pending_the_act' not in f for f in m.WORLD["facts"])
     assert 'tamim_condition' not in m.WORLD["witnessed"]
@@ -453,16 +457,19 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[6]["cites"] == ['Kiddushin 29a:11', 'Avodah Zarah 26b:12', 'Jerusalem Talmud Kiddushin 1:7:2']
     assert all('three_tier_enforcement_cascade' not in f for f in m.WORLD["facts"])
     assert 'circumcision_command' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 46:4']
+    assert m.WITNESS_READS[7]["cites"] == ['Sanhedrin 59b:9', 'Sanhedrin 59b:10', 'Sanhedrin 59b:11', 'Sanhedrin 59b:12']
+    assert all('line_scope_you_and_your_seed' not in f for f in m.WORLD["facts"])
+    assert 'circumcision_command' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 46:4']
     assert all('objected_to_and_answered' not in f for f in m.WORLD["facts"])
     assert 'abraham_own_analogy' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Shabbat 132a:15', 'Shabbat 132a:20', 'Sifra, Tazria Parashat Yoledet, Chapter 1 2']
+    assert m.WITNESS_READS[9]["cites"] == ['Shabbat 132a:15', 'Shabbat 132a:20', 'Sifra, Tazria Parashat Yoledet, Chapter 1 2']
     assert all('three_determinations_from_one_number' not in f for f in m.WORLD["facts"])
     assert 'eighth_day_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 48:17', 'Rosh Hashanah 16b:6']
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 48:17', 'Rosh Hashanah 16b:6']
     assert all('alteration_census_and_name_remedy' not in f for f in m.WORLD["facts"])
     assert 'laughter_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 47:6', 'Mekhilta DeRabbi Shimon Ben Yochai, Additions 6:2']
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 47:6', 'Mekhilta DeRabbi Shimon Ben Yochai, Additions 6:2']
     assert all('leave_taking_rule_and_chariot_claim' not in f for f in m.WORLD["facts"])
     assert 'ascent_from_abraham' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

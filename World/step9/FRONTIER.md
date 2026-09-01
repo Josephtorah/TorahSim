@@ -40,3 +40,12 @@ slots owed:
 | the judgment of Job, twelve months | judgment_durations | the book of Job (not yet derived) |
 | the judgment of the Egyptians, twelve months | judgment_durations | Exodus plague chronology (Exodus derived through ch. 21; the chronology derivation not yet examined) |
 | the judgment of Gog and Magog, twelve months | judgment_durations | Ezekiel (not yet derived; dated in the future by the row's own ink) |
+
+## OWED — appended by the Noahide block, 2026-09-01
+
+| verse | quote | owed by | why | recorded at |
+|---|---|---|---|---|
+| Deuteronomy 33:4 | "Moses commanded us a Torah, an inheritance" | gentile_sabbath_torah (the Torah-study leg) | R. Yochanan's liability reads מורשה ("inheritance" — ours, not theirs); no Genesis ink in the leg | Sanhedrin 59a:2, read 2026-09-01 |
+| Leviticus 12:3 | "on the eighth day the flesh of his foreskin shall be circumcised" | repeated_at_sinai (the circumcision instance) | the Sinai repetition the framework weighs — resolved as the Shabbat-permission (59b:2) | Sanhedrin 59b:1-2, read 2026-09-01 |
+| Deuteronomy 5:27 | "go say to them: return to your tents" | repeated_at_sinai (the procreation instance) | the Sinai repetition — resolved as the counted-body principle (59b:4) | Sanhedrin 59b:3-4, read 2026-09-01 |
+| Leviticus 18:5 | "which THE MAN shall do and live by them" | gentile_sabbath_torah (the like-high-priest leg) | R. Meir's counter — the same verse already on the frontier for life_override | Sanhedrin 59a:4, read 2026-09-01 |

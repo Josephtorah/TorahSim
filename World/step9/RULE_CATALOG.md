@@ -15,7 +15,7 @@ STATUS ladder:
   COMPILED   — a working rule function in engine.py, exam green
   (a rule's claims seat in units via the findings loop as usual)
 
-## PART I — COMPILED (the working rule book, 10 rules, 28/28 green)
+## PART I — COMPILED (the working rule book, 21 rules, 69/69 green)
 
 | id | module | tractate | oracle | Genesis anchor |
 |---|---|---|---|---|
@@ -29,6 +29,17 @@ STATUS ladder:
 | R-008 | seed_categories | Nedarim | Mishnah Nedarim 3:11 | Gen 21:12 + Gen 17 (G37-25, G33-30, computed) |
 | R-009 | world_to_come | Sanhedrin | Mishnah Sanhedrin 10:3 | Gen 6:3, 11:8-9, 13:13 (G15-10, G25-16, G29-23/25) |
 | R-010 | circumcision_third_day | Shabbat | Mishnah Shabbat 19:3 | Gen 34:25 (G57-23) |
+| R-217 | noahide_seven_laws | Sanhedrin | Sanhedrin 56a:24 + 56b:4-8 + 57a:1-7 (TALMUD-ONLY) | Gen 2:16 (G08-28; F-012 the token-assignment dispute) |
+| R-218 | noahide_execution_scope | Sanhedrin | Sanhedrin 57a:8-13 (TALMUD-ONLY) | Gen 9:6 (G21-11 — the all-seven paradigm) |
+| R-219 | noahide_procedure | Sanhedrin | Sanhedrin 57b:2-9 (TALMUD-ONLY) | Gen 9:5-6 (G21-11, G36-14; F-013 three legs) |
+| R-220 | noahide_relations | Sanhedrin | Sanhedrin 58a:7-8 + 57b:10 + 58b:5-14 (TALMUD-ONLY) | Gen 2:24, 20:12 (G09-19; F-016 the sister leg) |
+| R-221 | gentile_sabbath_torah | Sanhedrin | Sanhedrin 58b:25 + 59a:2-5 (TALMUD-ONLY) | Gen 8:22 (UNSEATED — F-014) |
+| R-222 | repeated_at_sinai | Sanhedrin | Sanhedrin 59a:10-12 + 59b:1-12 (TALMUD-ONLY) | Gen 32:33, 21:12, 17:9/14 (G55-35, G37-25; F-015 framework + two legs) |
+| R-223 | meat_timeline | Sanhedrin | Sanhedrin 59b:13-21 + 57a:4-5 + 59a:6-9 (TALMUD-ONLY) | Gen 1:29-30 vs 9:3-4 (G21-08/09, gen_06 rev 2) |
+| R-224 | noahide_offerings | Avodah Zarah | Avodah Zarah 51a:15-18 + Sanhedrin 57a:7 (TALMUD-ONLY) | Gen 6:19-20, 7:3, 6:9 (G16-15) |
+| R-225 | circumcision_agent | Avodah Zarah | Avodah Zarah 26b:12 + 27a:6 (TALMUD-ONLY) | Gen 17:9-13 (G33-24, G33-22) |
+| R-226 | court_of_shem | Avodah Zarah | Avodah Zarah 36b:7 (TALMUD-ONLY) | Gen 38:24 (G61-16) |
+| R-227 | pursuer | Sanhedrin | Sanhedrin 72b:15 + 72b:17 (TALMUD-ONLY) | Gen 9:6 (G21-13) |
 
 ## PART II — CANDIDATES from the Talmud triage (206), by tractate
 
@@ -40,12 +51,12 @@ Status: all CANDIDATE unless marked.
 
 ### Avodah Zarah (8)
 - **R-012** · Avodah Zarah 25b:8 (Gen 33:14) — traveler's ruse with a dangerous escort: widen the road as Jacob did to Esau ('until I come to Seir', 33:14)
-- **R-013** · Avodah Zarah 26b:12 (Gen 17:9) — circumcision by a gentile invalid: 'and YOU shall keep My covenant' (Gen 17:9)
-- **R-014** · Avodah Zarah 27a:6 (Gen 17:13) — the two derivations: la-H' himol vs himol yimol (17:13)
-- **R-015** · Avodah Zarah 36b:7 (Gen 38:24) — harlotry banned by the court of Shem - 'take her out and be burned' (38:24): jurisdiction history from our verse
-- **R-016** · Avodah Zarah 51a:15 (Gen 6:19) — MISSING-LIMB ban for Noahide offerings: 'of all the living' (Gen 6:19) - bring animals whose limbs live; ark-spec ink as sacrificial law
-- **R-017** · Avodah Zarah 51a:16 (Gen 7:3) — terefah excluded: 'to keep seed alive' (7:3)
-- **R-018** · Avodah Zarah 51a:18 (Gen 6:19, 6:9) — 'with YOU - like you' (6:18): the animals like Noach; and Noach himself tamim (6:9)
+- **R-013** · Avodah Zarah 26b:12 (Gen 17:9) — circumcision by a gentile invalid: 'and YOU shall keep My covenant' (Gen 17:9) — **COMPILED → R-225 (2026-09-01, the Noahide block)**
+- **R-014** · Avodah Zarah 27a:6 (Gen 17:13) — the two derivations: la-H' himol vs himol yimol (17:13) — **COMPILED → R-225 (2026-09-01, the Noahide block)**
+- **R-015** · Avodah Zarah 36b:7 (Gen 38:24) — harlotry banned by the court of Shem - 'take her out and be burned' (38:24): jurisdiction history from our verse — **COMPILED → R-226 (2026-09-01, the Noahide block)**
+- **R-016** · Avodah Zarah 51a:15 (Gen 6:19) — MISSING-LIMB ban for Noahide offerings: 'of all the living' (Gen 6:19) - bring animals whose limbs live; ark-spec ink as sacrificial law — **COMPILED → R-224 (2026-09-01, the Noahide block)**
+- **R-017** · Avodah Zarah 51a:16 (Gen 7:3) — terefah excluded: 'to keep seed alive' (7:3) — **COMPILED → R-224 (2026-09-01, the Noahide block)**
+- **R-018** · Avodah Zarah 51a:18 (Gen 6:19, 6:9) — 'with YOU - like you' (6:18): the animals like Noach; and Noach himself tamim (6:9) — **COMPILED → R-224 (2026-09-01, the Noahide block)**
 - **R-019** · Avodah Zarah 53b:13 (Gen 11:1-9) — idol-annulment: the house of Nimrod abandoned in peacetime (the dispersion, 11:1-9) - annulled idolatry precedent
 
 ### Bava Batra (9)
@@ -187,45 +198,45 @@ Status: all CANDIDATE unless marked.
 - **R-119** · Sanhedrin 29a:34 (Gen 2:17, 3:3) — WHOEVER ADDS SUBTRACTS - the hermeneutic law derived from Gen 3:3's added 'nor touch it'
 - **R-120** · Sanhedrin 37b:12 (Gen 4:14, 4:16) — exile atones half: Gen 4:14 'wanderer' vs 4:16 'dwelt in Nod' - the ink delta IS the derivation (our gen_11 sentences-exile territory)
 - **R-121** · Sanhedrin 46b:21 (Gen 23:2) — eulogy law: honor of the living or the dead? proof from Gen 23:2 Abraham eulogizing Sarah (our Machpelah unit)
-- **R-122** · Sanhedrin 56a:15 (Gen 2:16) — Noahide sugya opener: blasphemy leg of Gen 2:16 derivation
-- **R-123** · Sanhedrin 56b:23 (Gen 2:16) — dispute how many laws Adam got: R. Yehudah idolatry only; +blasphemy; +dinim
-- **R-124** · Sanhedrin 56b:4 (Gen 2:16) — THE ROOT: all seven laws hung on Gen 2:16 va-yetzav ('and He commanded') word by word
-- **R-125** · Sanhedrin 56b:5 (Gen 18:19) — dinim (courts) from va-yetzav via Gen 18:19 'he will command his children'
-- **R-126** · Sanhedrin 56b:6 (Gen 9:6) — blasphemy/idolatry/bloodshed legs; bloodshed cites Gen 9:6
-- **R-127** · Sanhedrin 57a:1 (Gen 6:11, 6:12) — hashchatah = sexual sin + idolatry, from Gen 6:11-12 (flood indictment as legal category)
-- **R-128** · Sanhedrin 57a:3 (Gen 9:6) — bloodshed leg restated on Gen 9:6
-- **R-129** · Sanhedrin 57a:4 (Gen 9:3) — ROBBERY from Gen 9:3 'as the green herb' (of the field, not the garden)
-- **R-130** · Sanhedrin 57a:5 (Gen 9:4) — LIMB FROM THE LIVING from Gen 9:4 'flesh with its life-blood you shall not eat'
-- **R-131** · Sanhedrin 57a:6 (Gen 9:7) — castration ban from Gen 9:7 'swarm and multiply'
-- **R-132** · Sanhedrin 57a:7 (Gen 6:20) — mixed-kinds ban from Gen 6:20 'of the fowl by its kind' (ark spec as law source)
-- **R-133** · Sanhedrin 57a:9 (Gen 9:6) — Rav Sheshet's challenge: bloodshed explicit at Gen 9:6, whence the rest
-- **R-134** · Sanhedrin 57b:1 (Gen 9:6) — Noahide executed for bloodshed (Gen 9:6 continuation)
-- **R-135** · Sanhedrin 57b:10 (Gen 2:24) — woman's liability: Gen 2:24 'a MAN shall leave' vs 'they shall be one flesh'
-- **R-136** · Sanhedrin 57b:12 (Gen 2:16) — 'saying' (lemor, Gen 2:16) = sexual prohibitions leg
-- **R-137** · Sanhedrin 57b:3 (Gen 9:5) — ONE JUDGE suffices for a Noahide: Gen 9:5 'I will require it' singular
-- **R-138** · Sanhedrin 57b:4 (Gen 9:5) — Gen 9:5 word-by-word: no warning needed, one witness, man not woman, even a relative
-- **R-139** · Sanhedrin 57b:5 (Gen 9:6) — R. Yishmael: FETUS included - Gen 9:6 'blood of man IN man' = the embryo (abortion law from our ink)
-- **R-140** · Sanhedrin 57b:7 (Gen 18:19) — objection from Gen 18:19 'he will command' re women in dinim
-- **R-141** · Sanhedrin 58a:7 (Gen 2:24) — Gen 2:24 dissected: 'his father'/'his mother' - R. Eliezer vs R. Akiva on which relatives banned
-- **R-142** · Sanhedrin 58a:8 (Gen 2:24) — Gen 2:24 word-by-word: ve-davak not male; b-ishto not the neighbor's; one-flesh excludes beast
-- **R-143** · Sanhedrin 58b:14 (Gen 2:24) — unnatural relations with one's wife: ve-davak (Gen 2:24)
-- **R-144** · Sanhedrin 58b:25 (Gen 8:22) — a gentile who keeps a full Sabbath: Gen 8:22 'day and night shall not cease'
-- **R-145** · Sanhedrin 58b:5 (Gen 20:12) — sister law: Gen 20:12 'my father's daughter, not my mother's' proves maternal sister banned
-- **R-146** · Sanhedrin 59a:12 (Gen 32:32) — the SINEW: given to the sons of Jacob, not repeated at Sinai - the framework our G55-35 seat carries
-- **R-147** · Sanhedrin 59a:6 (Gen 9:4) — blood from the living, R. Chanina b. Gamliel's extra law from Gen 9:4
-- **R-148** · Sanhedrin 59b:1 (Gen 17:9) — circumcision: commanded to Noahides? Gen 17:9 'you and your seed' - repeated at Sinai for Israel alone
-- **R-149** · Sanhedrin 59b:10 (Gen 21:12) — sons of Ishmael exempt: Gen 21:12 'in Isaac shall seed be called' (same statute as our G37-25)
-- **R-150** · Sanhedrin 59b:12 (Gen 17:14) — sons of Keturah obligated: Gen 17:14 'et briti hefar' the inclusion
-- **R-151** · Sanhedrin 59b:13 (Gen 1:29) — Adam not permitted meat: Gen 1:29 read as grant of herbs only
-- **R-152** · Sanhedrin 59b:14 (Gen 9:3, 9:4) — meat permitted to Noach: Gen 9:3, limb-from-living carved out by Gen 9:4 'akh'
-- **R-153** · Sanhedrin 59b:16 (Gen 1:26, 1:28) — 'dominion over fish' (Gen 1:26) = labor not eating (matches our day-6 dominion-as-labor seat)
-- **R-154** · Sanhedrin 59b:18 (Gen 1:26) — 'fowl of the sky' (Gen 1:26) likewise labor
-- **R-155** · Sanhedrin 59b:20 (Gen 1:28) — 'every creeping beast' (Gen 1:28) brings in the serpent (for labor)
-- **R-156** · Sanhedrin 59b:3 (Gen 9:7) — procreation: said to the sons of Noach (Gen 9:7), repeated at Sinai for Israel
-- **R-157** · Sanhedrin 59b:9 (Gen 17:9) — circumcision restricted: 'you and your seed' (Gen 17:9), no one else
+- **R-122** · Sanhedrin 56a:15 (Gen 2:16) — Noahide sugya opener: blasphemy leg of Gen 2:16 derivation — **COMPILED → R-217 (2026-09-01, the Noahide block)**
+- **R-123** · Sanhedrin 56b:23 (Gen 2:16) — dispute how many laws Adam got: R. Yehudah idolatry only; +blasphemy; +dinim — **COMPILED → R-217 (2026-09-01, the Noahide block)**
+- **R-124** · Sanhedrin 56b:4 (Gen 2:16) — THE ROOT: all seven laws hung on Gen 2:16 va-yetzav ('and He commanded') word by word — **COMPILED → R-217 (2026-09-01, the Noahide block)**
+- **R-125** · Sanhedrin 56b:5 (Gen 18:19) — dinim (courts) from va-yetzav via Gen 18:19 'he will command his children' — **COMPILED → R-217 (2026-09-01, the Noahide block)**
+- **R-126** · Sanhedrin 56b:6 (Gen 9:6) — blasphemy/idolatry/bloodshed legs; bloodshed cites Gen 9:6 — **COMPILED → R-217 (2026-09-01, the Noahide block)**
+- **R-127** · Sanhedrin 57a:1 (Gen 6:11, 6:12) — hashchatah = sexual sin + idolatry, from Gen 6:11-12 (flood indictment as legal category) — **COMPILED → R-217 (2026-09-01, the Noahide block)**
+- **R-128** · Sanhedrin 57a:3 (Gen 9:6) — bloodshed leg restated on Gen 9:6 — **COMPILED → R-218 (2026-09-01, the Noahide block)**
+- **R-129** · Sanhedrin 57a:4 (Gen 9:3) — ROBBERY from Gen 9:3 'as the green herb' (of the field, not the garden) — **COMPILED → R-217 (2026-09-01, the Noahide block)**
+- **R-130** · Sanhedrin 57a:5 (Gen 9:4) — LIMB FROM THE LIVING from Gen 9:4 'flesh with its life-blood you shall not eat' — **COMPILED → R-223 (2026-09-01, the Noahide block)**
+- **R-131** · Sanhedrin 57a:6 (Gen 9:7) — castration ban from Gen 9:7 'swarm and multiply' — **COMPILED → R-217 (2026-09-01, the Noahide block)**
+- **R-132** · Sanhedrin 57a:7 (Gen 6:20) — mixed-kinds ban from Gen 6:20 'of the fowl by its kind' (ark spec as law source) — **COMPILED → R-224 (2026-09-01, the Noahide block)**
+- **R-133** · Sanhedrin 57a:9 (Gen 9:6) — Rav Sheshet's challenge: bloodshed explicit at Gen 9:6, whence the rest — **COMPILED → R-218 (2026-09-01, the Noahide block)**
+- **R-134** · Sanhedrin 57b:1 (Gen 9:6) — Noahide executed for bloodshed (Gen 9:6 continuation) — **COMPILED → R-218 (2026-09-01, the Noahide block)**
+- **R-135** · Sanhedrin 57b:10 (Gen 2:24) — woman's liability: Gen 2:24 'a MAN shall leave' vs 'they shall be one flesh' — **COMPILED → R-220 (2026-09-01, the Noahide block)**
+- **R-136** · Sanhedrin 57b:12 (Gen 2:16) — 'saying' (lemor, Gen 2:16) = sexual prohibitions leg — **COMPILED → R-217 (2026-09-01, the Noahide block)**
+- **R-137** · Sanhedrin 57b:3 (Gen 9:5) — ONE JUDGE suffices for a Noahide: Gen 9:5 'I will require it' singular — **COMPILED → R-219 (2026-09-01, the Noahide block)**
+- **R-138** · Sanhedrin 57b:4 (Gen 9:5) — Gen 9:5 word-by-word: no warning needed, one witness, man not woman, even a relative — **COMPILED → R-219 (2026-09-01, the Noahide block)**
+- **R-139** · Sanhedrin 57b:5 (Gen 9:6) — R. Yishmael: FETUS included - Gen 9:6 'blood of man IN man' = the embryo (abortion law from our ink) — **COMPILED → R-219 (2026-09-01, the Noahide block)**
+- **R-140** · Sanhedrin 57b:7 (Gen 18:19) — objection from Gen 18:19 'he will command' re women in dinim — **EXAMINED 2026-09-01 — read in full; the women-in-courts split (sons to judgment, household to charity, 57b:8) not yet a case row**
+- **R-141** · Sanhedrin 58a:7 (Gen 2:24) — Gen 2:24 dissected: 'his father'/'his mother' - R. Eliezer vs R. Akiva on which relatives banned — **COMPILED → R-220 (2026-09-01, the Noahide block)**
+- **R-142** · Sanhedrin 58a:8 (Gen 2:24) — Gen 2:24 word-by-word: ve-davak not male; b-ishto not the neighbor's; one-flesh excludes beast — **COMPILED → R-220 (2026-09-01, the Noahide block)**
+- **R-143** · Sanhedrin 58b:14 (Gen 2:24) — unnatural relations with one's wife: ve-davak (Gen 2:24) — **EXAMINED 2026-09-01 — held at G09-19 (the manner of cleaving actionable); classified B in the held_rows table, case row not posed**
+- **R-144** · Sanhedrin 58b:25 (Gen 8:22) — a gentile who keeps a full Sabbath: Gen 8:22 'day and night shall not cease' — **COMPILED → R-221 (2026-09-01, the Noahide block)**
+- **R-145** · Sanhedrin 58b:5 (Gen 20:12) — sister law: Gen 20:12 'my father's daughter, not my mother's' proves maternal sister banned — **COMPILED → R-220 (2026-09-01, the Noahide block)**
+- **R-146** · Sanhedrin 59a:12 (Gen 32:32) — the SINEW: given to the sons of Jacob, not repeated at Sinai - the framework our G55-35 seat carries — **COMPILED → R-222 (2026-09-01, the Noahide block)**
+- **R-147** · Sanhedrin 59a:6 (Gen 9:4) — blood from the living, R. Chanina b. Gamliel's extra law from Gen 9:4 — **COMPILED → R-223 (2026-09-01, the Noahide block)**
+- **R-148** · Sanhedrin 59b:1 (Gen 17:9) — circumcision: commanded to Noahides? Gen 17:9 'you and your seed' - repeated at Sinai for Israel alone — **COMPILED → R-222 (2026-09-01, the Noahide block)**
+- **R-149** · Sanhedrin 59b:10 (Gen 21:12) — sons of Ishmael exempt: Gen 21:12 'in Isaac shall seed be called' (same statute as our G37-25) — **COMPILED → R-222 (2026-09-01, the Noahide block)**
+- **R-150** · Sanhedrin 59b:12 (Gen 17:14) — sons of Keturah obligated: Gen 17:14 'et briti hefar' the inclusion — **COMPILED → R-222 (2026-09-01, the Noahide block)**
+- **R-151** · Sanhedrin 59b:13 (Gen 1:29) — Adam not permitted meat: Gen 1:29 read as grant of herbs only — **COMPILED → R-223 (2026-09-01, the Noahide block)**
+- **R-152** · Sanhedrin 59b:14 (Gen 9:3, 9:4) — meat permitted to Noach: Gen 9:3, limb-from-living carved out by Gen 9:4 'akh' — **COMPILED → R-223 (2026-09-01, the Noahide block)**
+- **R-153** · Sanhedrin 59b:16 (Gen 1:26, 1:28) — 'dominion over fish' (Gen 1:26) = labor not eating (matches our day-6 dominion-as-labor seat) — **COMPILED → R-223 (2026-09-01, the Noahide block)**
+- **R-154** · Sanhedrin 59b:18 (Gen 1:26) — 'fowl of the sky' (Gen 1:26) likewise labor — **COMPILED → R-223 (2026-09-01, the Noahide block)**
+- **R-155** · Sanhedrin 59b:20 (Gen 1:28) — 'every creeping beast' (Gen 1:28) brings in the serpent (for labor) — **COMPILED → R-223 (2026-09-01, the Noahide block)**
+- **R-156** · Sanhedrin 59b:3 (Gen 9:7) — procreation: said to the sons of Noach (Gen 9:7), repeated at Sinai for Israel — **COMPILED → R-222 (2026-09-01, the Noahide block)**
+- **R-157** · Sanhedrin 59b:9 (Gen 17:9) — circumcision restricted: 'you and your seed' (Gen 17:9), no one else — **COMPILED → R-222 (2026-09-01, the Noahide block)**
 - **R-158** · Sanhedrin 5a:6 (Gen 49:10) — judicial AUTHORITY: 'the scepter shall not depart' (Gen 49:10) = the exilarchs' license to judge
-- **R-159** · Sanhedrin 72b:15 (Gen 9:6) — the PURSUER: 'who sheds man's blood by man shall his blood be shed' (Gen 9:6) - save the pursued by the pursuer's blood
-- **R-160** · Sanhedrin 72b:17 (Gen 9:6) — pursuer warning formula quoting Gen 9:6
+- **R-159** · Sanhedrin 72b:15 (Gen 9:6) — the PURSUER: 'who sheds man's blood by man shall his blood be shed' (Gen 9:6) - save the pursued by the pursuer's blood — **COMPILED → R-227 (2026-09-01, the Noahide block)**
+- **R-160** · Sanhedrin 72b:17 (Gen 9:6) — pursuer warning formula quoting Gen 9:6 — **COMPILED → R-227 (2026-09-01, the Noahide block)**
 - **R-161** · Sanhedrin 91a:16 (Gen 25:5) — gift-deed law: Gen 25:5-6 'gave all to Isaac; gifts to concubines' sons' - lifetime deeds settle inheritance
 - **R-162** · Sanhedrin 91a:8 (Gen 9:25) — slave-property doctrine from Gen 9:25 'slave of slaves': what a slave acquires his master owns
 

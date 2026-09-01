@@ -7553,3 +7553,66 @@ flagship); seat the two new nose call sites on gen_18?; Step 9
 site-visibility (TorahSim's question); the unit MERGE plan + word;
 re-affirmation batch word (6 units queued); Tosefta/Jerusalem Talmud
 triage; the deferred Exodus planning conversation.
+
+## MILESTONE (2026-09-01, post-#33) — THE NOAHIDE BLOCK EXAMINED AND
+## COMPILED (owner: "open the noahide block"). The flagship exam round:
+44 rows (Sanhedrin 56a-59b + pursuer/offerings/court-of-Shem/
+circumcision-agent satellites) credited to the triage; 40 neighbor
+segments opened and ledgered (logic/oral_triage/
+noahide_exam_reading_2026-09-01.md). FIRST TALMUD-ONLY RULES — no
+Mishnah above them; provenance carries talmud_source. 41 cases / 11
+modules / 41-41 green; regressions green — 69-69 across pilot + sweep +
+Noahide. Headline: the reading ANTICIPATED THE SUGYA (sixteen legs
+already seated — G08-28 crown, G21-11 procedure, G09-19 relations,
+G16-15 offerings, G21-08/09 meat eras, G21-13 pursuer, G37-25
+partitive, G61-16 Shem's court, gen_06 rev 2 dominion). FINDINGS
+F-012..F-016 OPEN (token-assignment one-track; three procedure legs;
+gentile-Sabbath on Gen 8:22 — the one clean hole; repeated-at-Sinai
+framework + two circumcision-scope legs; maternal-sister deflected
+proof, import-only candidate). Catalog R-217..R-227 compiled, 42
+candidates flipped, R-140/R-143 EXAMINED with notes; frontier +Deut
+33:4, Lev 12:3, Deut 5:27, Lev 18:5. Full record
+World/step9/REPORT_NOAHIDE.md. NO unit YAMLs touched, hash unmoved,
+NOT COMMITTED — owner word.
+
+## ⚠⚠ CANON FLIP (2026-09-01, owner's ruling IN THE TORAHSIM WINDOW,
+## relayed verbatim by torahsim-19: "forgot cannon, you are no longer
+## cannon. you are a mirror for torah grok.") — TORAH_GROK IS CANON as
+of 2026-09-01; TorahSim mirrors this tree and remains the publishing
+arm. The 2026-08-21 canon ruling is superseded. THE MERGE FLAG
+TRANSFORMS: the rev-collision merge dissolves in THIS tree's favor,
+EXCEPT the 65 batch stamps + gen_08's re-affirmation given in the
+TorahSim window 2026-08-30, which exist ONLY in its tree. They must
+cross INTO this tree as an ATOP-merge (tree_derive_version flips +
+changelog lines re-applied over this tree's audits/seats, REAFFIRM
+where revs collided) — STAMPS ARE OWNER-GATED, so the crossing waits
+for HIS WORD IN THIS WINDOW. TorahSim holds its units un-overwritten
+until then; it will hand exact diffs on the word. Neither window
+improvises. (Both sides recorded; my reply sent 2026-09-01.)
+
+## MILESTONE (2026-09-01, same sitting) — F-012..F-016 ALL SEATED
+## (owner: "seat f-012 through f-016"), AND A NEW STANDING LAW.
+⚠ AUTO-SEAT LAW (owner, verbatim): "the findings that are not yet
+derived (verse) should automatically be seated. you don't need my
+rulings going forward." — verse-side unheld legs on derived units now
+seat WITHOUT per-finding word; filing-first, resolutions, stamp law,
+REAFFIRM queue, and his import-only/reject override all stand.
+Recorded: THE_STEPS findings-loop section, FINDINGS_QUEUE resolutions
+block, memory findings-loop-stamp-law.md. THE SEATS: G08-30 (gen_08
+rev 5, token-assignment dispute dual-track), G21-17 (gen_21 rev 4,
+three procedure legs), G20-19 (gen_20 rev 4, gentile-rest law — the
+class-C hole closed), G33-31 (gen_33 rev 5, line-scope in/out:
+you-and-your-seed + Keturah), G36-19 (gen_36 rev 5, the 20:12
+deflected-proof role; the import-only recommendation superseded by the
+blanket word), G55-36 (gen_55 rev 6, the repeated-at-Sinai framework
+beside its named exception). Each: claim in manifest + WITNESS_READ op
++ changelog with STAMP LAW sentence. GATES: 6 freeze rituals COMPLETE,
+6 preflights ALL SCENARIOS GREEN (cite gate passed on the triage
+mirror + noahide_exam_reading ledger), gloss_lint 0, hash
+8b8fff1fa28953af UNMOVED, exams 69/69 with ZERO UNHELD markers left in
+the engine. Six units on REAFFIRM_QUEUE (gen_08/20/21 first-timers,
+gen_33/36/55 again). Findings queue EMPTY of open corpus items. NOT
+COMMITTED — owner word. Owner also answered in-sitting: engine
+functions are live Python; the verse side's own generated
+logic/py_units/<uid>.py renderings regenerate at each ritual (all six
+did today).

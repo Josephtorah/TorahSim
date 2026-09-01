@@ -267,6 +267,27 @@ Mishnah-first sweep), and aggadic readings (largely dup-creditable
 against Bereshit Rabbah ledgers). The full-958 triage ledger is the
 proposed next block, awaiting the owner's word.
 
+THE NOAHIDE BLOCK RAN (2026-09-01, owner: "open the noahide block") —
+the flagship of the ~12 exam blocks mapped from the 958 triage, and the
+machine's FIRST TALMUD-ONLY RULES: no Mishnah row above them, so each
+verdict's provenance carries talmud_source in place of
+mishnah + talmud_bridge — the Talmud is the ruling body and Genesis its
+stated derivation. 44 rows (the Sanhedrin 56a-59b sugya + the pursuer,
+offering, court-of-Shem, and circumcision-agent satellites), all
+credited to the triage's read; 40 neighbor segments opened for the
+frame (its own Step 4 ledger). 41 case rows in 11 modules, 41/41 green;
+69/69 across the three exams. The headline repeated at Talmud scale:
+THE READING ANTICIPATED THE SUGYA — sixteen legal legs already seated
+(the word-by-word crown G08-28, the whole murder procedure G21-11, the
+2:24 dissection G09-19, the offering standard G16-15, the two-era meat
+grant G21-08/09, the pursuer G21-13, dominion-as-labor at gen_06's own
+rev 2). Five findings queued (F-012..F-016): the token-assignment
+dispute one-track, three procedure legs, the gentile-Sabbath law on
+Gen 8:22 (the round's one clean hole), the repeated-at-Sinai framework
++ two circumcision-scope legs, the maternal-sister deflected proof.
+Catalog: R-217..R-227 compiled, 42 candidates flipped, 162 LAW rows
+remain in ~11 blocks. Full record: World/step9/REPORT_NOAHIDE.md.
+
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed
 on the spot: logic/findings/FINDINGS_QUEUE.md (append-only). The owner
@@ -274,6 +295,17 @@ rules each finding — SEAT (into the corpus by the normal path: rev bump,
 claim, operator, gates, ritual) / IMPORT-ONLY (the engine carries it,
 corpus untouched) / REJECT. First three seats landed the same day
 (G18-10, G32-22, G06-12), standing 907→909, hash unmoved.
+⚠ AUTO-SEAT AMENDMENT (owner, 2026-09-01, verbatim: "the findings that
+are not yet derived (verse) should automatically be seated. you don't
+need my rulings going forward"): a finding whose content is an unheld or
+half-held leg on an ALREADY-DERIVED unit now SEATS AUTOMATICALLY by the
+normal path — no per-finding word. Everything else stands: findings are
+still filed first (never fixed mid-exam), resolutions still appended,
+the STAMP LAW below still routes every amended stamped unit to the
+re-affirmation queue for the owner's batch word, and he can still order
+import-only or reject on any finding. The default flipped from wait to
+seat; the record and the stamps stay owner-gated. First auto-era batch:
+F-012..F-016 (six units, 2026-09-01).
 THE STAMP LAW: updates are never blocked, stamped code included. An
 amended stamped unit KEEPS its stamp (the record of what the owner
 approved), the changelog records the stamp predates the new rev, and the

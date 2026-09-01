@@ -33,3 +33,9 @@
 | gen_25_babel | rev 3 | rev 4 | 2026-08-31 | F-010 seated (G25-16, dispersion verdict) |
 | gen_29_separation_promise | rev 3 | rev 4 | 2026-08-31 | F-010 seated (G29-25, judgment dispute; Sodom no-share was already held at G29-23 — finding corrected) |
 | gen_55_two_camps_wrestled_name | rev 4 | rev 5 | 2026-08-31 | F-011 seated (G55-35, Sinai-provenance dispute) |
+| gen_08_toledot_garden_first_rule | rev 4 | rev 5 | 2026-09-01 | F-012 seated (G08-30, token-assignment dispute dual-track) |
+| gen_21_blessing_blood_law | rev 3 | rev 4 | 2026-09-01 | F-013 seated (G21-17, three procedure legs) |
+| gen_20_exit_altar | rev 3 | rev 4 | 2026-09-01 | F-014 seated (G20-19, gentile-rest prohibition) |
+| gen_33_shaddai_covenant_flesh | rev 4 | rev 5 | 2026-09-01 | F-015 seated (G33-31, line-scope in and out) |
+| gen_36_gerar_dream_prophet | rev 4 | rev 5 | 2026-09-01 | F-016 seated (G36-19, deflected-proof role) |
+| gen_55_two_camps_wrestled_name | rev 5 | rev 6 | 2026-09-01 | F-015 seated (G55-36, repeated-at-Sinai framework) |

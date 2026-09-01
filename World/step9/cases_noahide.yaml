@@ -1,0 +1,622 @@
+# THE NOAHIDE BLOCK — the flagship exam round of the 958-passage Talmud
+# triage (owner's word 2026-09-01: "open the noahide block").
+# Membership: the Sanhedrin 56a-59b sugya's 36 Genesis-tagged rows
+# (R-122..R-157) + the pursuer pair (R-159/R-160) + the Noahide-offering
+# trio (R-016/R-017/R-018) + the court-of-Shem row (R-015) + the
+# circumcision-agent pair (R-013/R-014) = 44 rows, all read at the triage;
+# 40 neighbor segments opened today (logic/oral_triage/
+# noahide_exam_reading_2026-09-01.md).
+# Method: THE_STEPS Step 9 — exam first, classify A/B/C, findings queued
+# (F-012..F-016), compile, re-run. Unlike the Mishnah rounds these rules
+# are TALMUD-ONLY LAW: no Mishnah row above them; provenance says
+# talmud_source, and the "bridge" column inverts — the Talmud is not
+# walking a Mishnah back to the verse, it IS the ruling body, and Genesis
+# is its stated derivation. Hebrew quoted from the shelf's own ink,
+# always with English beside it.
+
+- module: noahide_seven_laws
+  tractate: Sanhedrin
+  oracle: Babylonian Talmud Sanhedrin 56a:24 (the baraita) + 56b:4-8 (the
+    derivation) + 56b:23 (the count-for-Adam dispute) + 57a:1-7 (the
+    school of Menashe's alternate system)
+  genesis_anchor:
+    unit: gen_08_toledot_garden_first_rule
+    ref: Gen.2.16
+    claim: G08-28
+    holds: R. Yochanan's word-by-word derivation off the 2:16
+      declare-operator (the unit's crown), the Pesikta DeRav Kahana
+      accretion ladder (six to Adam, the limb added for Noach), and the
+      count-for-Adam dispute (R. Yehudah idolatry only; R. Yehudah ben
+      Beteira adds blasphemy; some add courts)
+  talmud_source:
+    source: תנו רבנן שבע מצות נצטוו בני נח — 'Our rabbis taught, seven
+      commandments were the sons of Noach commanded' (Sanhedrin 56a:24) —
+      courts, blasphemy, idolatry, forbidden relations, bloodshed,
+      robbery, limb from the living
+    walks_to: Gen 2:16 word by word (56b:4-7), bloodshed doubly at Gen
+      9:6 (56b:6)
+    note: 'THE TOKEN-ASSIGNMENT DISPUTE (F-012): the mainline assigns ויצו
+      ("and He commanded") = courts (via Gen 18:19) and אלהים ("God") =
+      idolatry; R. Yitzchak TEACHES THE INVERSION (56b:8) — ויצו =
+      idolatry, אלהים = courts. G08-28 carries the inversion-side
+      assignment (its Bereshit Rabbah 16:6 source), one-track.'
+  cases:
+  - id: NOA_7_census
+    input: {query: noahide_laws_census}
+    expected: {verdict: seven_laws, basis: 'courts, blasphemy, idolatry,
+      forbidden relations, bloodshed, robbery, limb from the living —
+      the baraita of Sanhedrin 56a:24'}
+    dispute: 'the school of Menashe (57a:1-7) runs a variant seven:
+      castration and mixed kinds IN (Gen 9:7, 6:20), courts and blasphemy
+      OUT, with the flood indictment (Gen 6:11-12) as its derivation
+      spine — both lists returned, labeled'
+    class: B
+  - id: NOA_7_adam_count
+    input: {query: laws_commanded_to_adam}
+    expected: {verdict: dispute_three_ways, basis: 'the full derivation
+      hangs all on Gen 2:16; R. Yehudah — idolatry ONLY; R. Yehudah ben
+      Beteira — also blasphemy; some — also courts (56b:23)'}
+    dispute: recorded three ways — HELD at G08-28
+    class: B
+  - id: NOA_7_token_map
+    input: {query: which_token_yields, token: vayetzav}
+    expected: {verdict: dispute_two_ways, basis: 'ויצו ("and He
+      commanded") = courts (mainline, via Gen 18:19 "he will command his
+      children"); = idolatry (R. Yitzchak''s inversion, 56b:8)'}
+    dispute: 'F-012 — G08-28 holds one track (the inversion side); the
+      mainline assignment unheld'
+    class: B_partial
+  - id: NOA_7_robbery_leg
+    input: {query: which_token_yields, token: every_tree}
+    expected: {verdict: robbery_ban, basis: 'מכל עץ הגן ("of every tree
+      of the garden") — yours and not stolen (56b:7); and the school of
+      Menashe from Gen 9:3 "as the GREEN HERB" — R. Levi: like ownerless
+      field growth, not like a tended garden (57a:4)'}
+    dispute: null — both routes recorded, second HELD at G21-08
+    class: B
+
+- module: noahide_execution_scope
+  tractate: Sanhedrin
+  oracle: Babylonian Talmud Sanhedrin 57a:8 (three), 57a:11 (four),
+    57a:12 (their prohibition is their death), 57a:13 (all seven)
+  genesis_anchor:
+    unit: gen_21_blessing_blood_law
+    ref: Gen.9.6
+    claim: G21-11
+    holds: the punishment paradigm — 'the Merciful revealed it at
+      bloodshed and the same holds for all' (Rav Huna and all Rav's
+      students, 57a:13)
+  talmud_source:
+    source: 'the count ladder of the school of Rav: Rav Yosef — executed
+      for THREE (relations, bloodshed, blasphemy — the גש"ר mnemonic);
+      Rav Sheshet — FOUR (idolatry joins); Rav Huna and all the students
+      of Rav — ALL SEVEN'
+    walks_to: Gen 9:6 (the one revealed execution)
+    note: 'Rav Nachman bar Yitzchak (57a:12): אזהרה שלהן זו היא מיתתן —
+      THEIR PROHIBITION IS THEIR DEATH-LIABILITY; the principle the
+      Sabbath row (58b:25) reuses'
+  cases:
+  - id: NOA_EXEC_bloodshed
+    input: {query: noahide_executed_for, law: bloodshed}
+    expected: {verdict: executed, basis: 'explicit at Gen 9:6 — every
+      rung of the ladder agrees'}
+    dispute: null
+    class: B
+  - id: NOA_EXEC_robbery
+    input: {query: noahide_executed_for, law: robbery}
+    expected: {verdict: dispute_by_authority, basis: 'school of Rav
+      (three / four): not executed; Rav Huna and Rav''s students: executed
+      — revealed at one, holds for all'}
+    dispute: the 3/4/7 ladder — the 7-paradigm HELD at G21-11, the
+      3-count and 4-count rungs talmud_source only
+    class: B_partial
+
+- module: noahide_procedure
+  tractate: Sanhedrin
+  oracle: Babylonian Talmud Sanhedrin 57b:2 (the aggadah-book baraita) +
+    57b:3-5 (Gen 9:5 word by word) + 57b:6 (strangulation reading) +
+    57b:9 (the woman-killer resolution)
+  genesis_anchor:
+    unit: gen_21_blessing_blood_law
+    ref: Gen.9.5-6
+    claim: G21-11
+    holds: conviction on ONE witness, before ONE judge, NO forewarning,
+      agent-liability, fetus ('the man within a man'), execution mode
+      from the verb, the source-vs-mode dispute — the whole procedure
+      read word by word; the no-forewarning SECOND leg at G36-14
+      (Gen 20:7, 'know that you shall surely die' said unwarned)
+  talmud_source:
+    source: 'בן נח נהרג בדיין א'' ובעד אחד שלא בהתראה מפי איש ולא מפי אשה
+      ואפילו קרוב — "a Noahide is executed by one judge, on one witness,
+      without forewarning, by a man''s testimony and not a woman''s, even
+      a relative''s" (57b:2); by R. Yishmael — even for a fetus'
+    walks_to: 'Gen 9:5 word by word (57b:4): "from the hand of every
+      beast" — even unwarned; "I will require it... from the hand of the
+      man" — even one witness; "from the hand of a MAN" — not a woman''s
+      testimony; "his brother" — even a relative; and Gen 9:6 באדם ("in
+      the man") for the fetus'
+    note: 'F-013 — the witness-GENDER and relative-witness legs and the
+      woman-killer resolution (57b:9 — "WHOEVER sheds," so a woman who
+      kills IS liable) are not in G21-11''s text; queued, never fixed
+      inline'
+  cases:
+  - id: NOA_PROC_bench
+    input: {query: conviction_stands, judges: '1', witnesses: '1',
+      forewarned: 'no'}
+    expected: {verdict: conviction_stands, basis: 'one judge (9:5 "I will
+      require it" — singular), one witness, no forewarning — each from
+      its own word'}
+    dispute: null
+    class: B
+  - id: NOA_PROC_witness_woman
+    input: {query: conviction_stands, witnesses: '1',
+      witness_is: woman}
+    expected: {verdict: testimony_not_accepted, basis: 'מיד איש ("from
+      the hand of a man") — and not from a woman''s mouth (57b:2/4)'}
+    dispute: null
+    class: C_partial — F-013
+  - id: NOA_PROC_witness_relative
+    input: {query: conviction_stands, witnesses: '1',
+      witness_is: relative}
+    expected: {verdict: conviction_stands, basis: 'אחיו ("his brother") —
+      even a relative (57b:4)'}
+    dispute: null
+    class: C_partial — F-013
+  - id: NOA_PROC_woman_killer
+    input: {query: noahide_executed_for, law: bloodshed,
+      killer: woman}
+    expected: {verdict: executed, basis: 'שופך דם האדם — "WHOEVER sheds
+      the blood of man," in any case (Rav Yehudah''s resolution, 57b:9)'}
+    dispute: null
+    class: C_partial — F-013
+  - id: NOA_PROC_fetus
+    input: {query: noahide_executed_for, law: bloodshed, victim: fetus}
+    expected: {verdict: dispute_two_ways, basis: 'R. Yishmael: liable —
+      באדם ("the man IN a man") is the embryo (57b:5); the school of
+      Menashe routes באדם to execution mode (strangulation — blood kept
+      in the body, 57b:6)'}
+    dispute: recorded — HELD at G21-11 (both the fetus reading and the
+      strangler)
+    class: B
+
+- module: noahide_relations
+  tractate: Sanhedrin
+  oracle: Babylonian Talmud Sanhedrin 58a:7-8 (Gen 2:24 dissected) +
+    57b:10 (the adulteress) + 58b:14 (the manner of cleaving) + 58b:5-6
+    (the sister proof and its deflection)
+  genesis_anchor:
+    unit: gen_09_helper_woman_first_speech
+    ref: Gen.2.24
+    claim: G09-19
+    holds: the span's law crown — cleave excludes a male, his-wife
+      excludes the neighbor's, one-flesh excludes the animal; the gender
+      scope settled from the tail clause (the adulteress liable); the
+      manner of cleaving actionable; the R. Eliezer / R. Akiva referent
+      dispute dual-track
+  talmud_source:
+    source: 'the baraita on על כן יעזב איש את אביו ואת אמו ("therefore a
+      man leaves his father and his mother"): R. Eliezer — his father =
+      the father''s SISTER, his mother = the mother''s sister; R. Akiva —
+      his father = the father''s WIFE, his mother = his mother literally'
+    walks_to: Gen 2:24 clause by clause; the sister question presses
+      Gen 20:12 and is DEFLECTED (58b:6 — 'she was his brother''s
+      daughter')
+    note: 'F-016 — the maternal-sister ban itself and our 20:12''s role
+      as an attempted-and-deflected proof are unheld on gen_36'
+  cases:
+  - id: NOA_REL_male
+    input: {query: relation_permitted, partner: male}
+    expected: {verdict: forbidden, basis: 'ודבק — "and shall CLEAVE," not
+      to a male (58a:8)'}
+    dispute: null
+    class: B
+  - id: NOA_REL_neighbors_wife
+    input: {query: relation_permitted, partner: neighbors_wife}
+    expected: {verdict: forbidden, basis: 'באשתו — "to HIS wife," not the
+      neighbor''s (58a:8)'}
+    dispute: null
+    class: B
+  - id: NOA_REL_animal
+    input: {query: relation_permitted, partner: animal}
+    expected: {verdict: forbidden, basis: 'והיו לבשר אחד — those who can
+      become one flesh; beast and wild animal excluded (58a:8)'}
+    dispute: null
+    class: B
+  - id: NOA_REL_fathers_relative
+    input: {query: relation_permitted, partner: fathers_side}
+    expected: {verdict: dispute_two_ways, basis: 'R. Eliezer: the
+      father''s sister banned; R. Akiva: the father''s wife banned —
+      each token of 2:24 assigned disputed referents'}
+    dispute: recorded — HELD dual-track at G09-19
+    class: B
+  - id: NOA_REL_maternal_sister
+    input: {query: relation_permitted, partner: maternal_sister}
+    expected: {verdict: forbidden, basis: 'pressed from Gen 20:12 — "my
+      father''s daughter, NOT my mother''s" (58b:5); the proof DEFLECTED
+      at 58b:6 (she was his brother''s daughter), the law standing on the
+      baraita'}
+    dispute: our verse's evidentiary role is attempted-and-deflected —
+      F-016
+    class: C — F-016
+  - id: NOA_REL_adulteress
+    input: {query: relation_liability, subject_gender: woman}
+    expected: {verdict: liable, basis: 'proposed exempt from יעזב איש ("a
+      MAN shall leave"); resolved — והיו לבשר אחד re-combined them
+      (57b:10)'}
+    dispute: null
+    class: B
+
+- module: gentile_sabbath_torah
+  tractate: Sanhedrin
+  oracle: Babylonian Talmud Sanhedrin 58b:25 (the Sabbath row) +
+    59a:2-5 (the Torah-study exchange)
+  genesis_anchor:
+    unit: gen_20_exit_altar
+    ref: Gen.8.22
+    claim: null
+    holds: 'NOTHING of this law — G20-18 reads 8:22 as a machine with a
+      termination condition, G20-11 its Masorah pair; the gentile-Sabbath
+      law is the round''s one clean class-C hole (F-014)'
+  talmud_source:
+    source: 'Resh Lakish: עובד כוכבים ששבת חייב מיתה — "a gentile who
+      rested is liable to death," from ויום ולילה לא ישבותו ("and day and
+      night they shall not CEASE," Gen 8:22 read onto them); their
+      prohibition is their death; Ravina: even on a Monday'
+    walks_to: Gen 8:22
+    note: 'the Torah-study exchange has NO Genesis ink: R. Yochanan
+      (liable — מורשה "inheritance," Deut 33:4, ours-not-theirs) against
+      R. Meir (like a HIGH PRIEST — האדם, Lev 18:5); resolved — like a
+      high priest in THEIR OWN seven; carried as import'
+  cases:
+  - id: NOA_SAB_rest
+    input: {query: gentile_liability, act: kept_full_sabbath}
+    expected: {verdict: liable, basis: 'Gen 8:22 "day and night shall not
+      cease" + their-prohibition-is-their-death; Ravina — any full day of
+      rest, even Monday'}
+    dispute: null
+    class: C — F-014
+  - id: NOA_SAB_torah
+    input: {query: gentile_liability, act: studied_torah}
+    expected: {verdict: dispute_resolved, basis: 'R. Yochanan liable
+      (Deut 33:4); R. Meir like a high priest (Lev 18:5); resolution —
+      praised when studying THEIR OWN seven laws'}
+    dispute: recorded with resolution — no Genesis anchor, import
+    class: B_import
+  - id: NOA_SAB_own_seven
+    input: {query: gentile_liability, act: studied_own_seven}
+    expected: {verdict: praised_like_high_priest, basis: 'the resolution
+      itself (59a:5): התם בשבע מצות דידהו — "there, in their own seven"'}
+    dispute: null
+    class: B_import
+
+- module: repeated_at_sinai
+  tractate: Sanhedrin
+  oracle: Babylonian Talmud Sanhedrin 59a:10-12 (the framework) +
+    59b:1-12 (its test cases)
+  genesis_anchor:
+    unit: gen_55_two_camps_wrestled_name
+    ref: Gen.32.33
+    claim: G55-35
+    holds: the sinew INSTANCE — R. Yehudah's given-to-the-sons-of-Jacob
+      framework against the sages' said-at-Sinai-written-in-place; the
+      one commandment on the not-repeated-and-Israel's side of the table
+  talmud_source:
+    source: 'R. Yose son of R. Chanina (59a:11): כל מצוה שנאמרה לבני נח
+      ונשנית בסיני לזה ולזה נאמרה — "every commandment said to the sons
+      of Noach and REPEATED at Sinai was said to both"; not repeated —
+      to Israel and not the sons of Noach; and the table''s one reverse
+      instance is our sinew (59a:12, per R. Yehudah)'
+    walks_to: 'instances on our ink: circumcision Gen 17:9-14, procreation
+      Gen 9:7, the sinew Gen 32:33, the line-scope at Gen 21:12'
+    note: 'F-015 — the FRAMEWORK RULE is held nowhere as a rule; and two
+      circumcision-scope legs are unheld on gen_33: the
+      restriction (59b:9 — אתה וזרעך, "YOU and your seed," no one else)
+      and the Keturah inclusion (59b:12 — את בריתי הפר, "My covenant he
+      has BROKEN," Gen 17:14)'
+  cases:
+  - id: SINAI_framework
+    input: {query: who_is_bound, said_to_noahides: 'yes',
+      repeated_at_sinai: 'yes'}
+    expected: {verdict: both_bound, basis: 'the framework — said to both
+      (59a:11)'}
+    dispute: null
+    class: C — F-015
+  - id: SINAI_not_repeated
+    input: {query: who_is_bound, said_to_noahides: 'yes',
+      repeated_at_sinai: 'no'}
+    expected: {verdict: israel_only, basis: 'said to the sons of Noach
+      and not repeated — to Israel and not to them; the sugya''s worked
+      example is circumcision (59b:1)'}
+    dispute: null
+    class: C — F-015
+  - id: SINAI_sinew
+    input: {query: who_is_bound, commandment: sciatic_nerve}
+    expected: {verdict: israel_only_reverse_instance, basis: 'said to
+      Israel (the sons of Jacob) and not the sons of Noach — "and we have
+      only the sinew, per R. Yehudah" (59a:12)'}
+    dispute: the effective-date dispute — HELD at G55-35
+    class: B
+  - id: SINAI_circumcision_scope
+    input: {query: who_is_bound, commandment: circumcision}
+    expected: {verdict: abraham_line_only, basis: 'two resolutions — the
+      Sinai repetition came to permit Shabbat (59b:2), or the command was
+      never general: אתה וזרעך — "YOU and your seed," no one else
+      (59b:9)'}
+    dispute: two recorded resolutions, both returned
+    class: C_partial — F-015
+  - id: SINAI_ishmael
+    input: {query: who_is_bound, commandment: circumcision,
+      lineage: sons_of_ishmael}
+    expected: {verdict: exempt, basis: 'כי ביצחק יקרא לך זרע — "IN Isaac
+      shall seed be called to you" (Gen 21:12, 59b:10)'}
+    dispute: null — HELD at G37-25 + the compiled seed_categories module
+    class: B
+  - id: SINAI_esau
+    input: {query: who_is_bound, commandment: circumcision,
+      lineage: sons_of_esau}
+    expected: {verdict: exempt, basis: 'ביצחק ולא כל יצחק — "IN Isaac,
+      and not all of Isaac" (59b:11)'}
+    dispute: null — HELD at G37-25 (the partitive excluding Esau)
+    class: B
+  - id: SINAI_keturah
+    input: {query: who_is_bound, commandment: circumcision,
+      lineage: sons_of_keturah}
+    expected: {verdict: obligated, basis: 'את בריתי הפר — "My covenant he
+      has broken" (Gen 17:14) — to INCLUDE the sons of Keturah (R. Yose
+      bar Avin, 59b:12)'}
+    dispute: null
+    class: C_partial — F-015
+  - id: SINAI_procreation
+    input: {query: who_is_bound, commandment: procreation}
+    expected: {verdict: israel_only, basis: 'said to the sons of Noach
+      (Gen 9:7) and repeated at Sinai (Deut 5:27) — but the repetition
+      came for the counted-body principle (59b:4), so the framework
+      routes it to Israel'}
+    dispute: null
+    class: B_partial
+
+- module: meat_timeline
+  tractate: Sanhedrin
+  oracle: Babylonian Talmud Sanhedrin 59b:13-21 (the two-era grant) +
+    57a:4-5 + 59a:6-9 (the carve-outs)
+  genesis_anchor:
+    unit: gen_21_blessing_blood_law
+    ref: Gen.9.3-4
+    claim: G21-08
+    holds: the TWO-ERA ARCHITECTURE stated (one declaration replaces
+      another), R. Levi's robbery-in-the-simile with its recorded
+      dispute; G21-09 — the grant DRIVING the limb ban (Adam unwarned
+      because ungranted), and the baraita's two-way split (the limb, and
+      the blood of a living animal); the Adam-era vegetarian grant and
+      dominion-as-labor seated at gen_06 (rev 2, Sanhedrin 59b read at
+      its primary)
+  talmud_source:
+    source: 'Rav Yehudah citing Rav (59b:13): אדם הראשון לא הותר לו בשר
+      לאכילה — "the first man was not permitted meat," Gen 1:29 read as
+      herbs-to-you-and-the-beasts, not beasts-to-you; the sons of Noach
+      permitted at Gen 9:3; the limb carved out by אך ("but," Gen 9:4)'
+    walks_to: Gen 1:29-30 against Gen 9:3-4
+    note: 'swarming creatures excluded from the limb ban two ways — אך
+      (59b:14) or Rav Huna: דמו, whose blood is distinct from its flesh
+      (59b:15); the dominion objections (fish 59b:17, fowl 59b:19,
+      serpent 59b:21) all resolved as LABOR'
+  cases:
+  - id: MEAT_adam
+    input: {query: food_permitted, era: adam, food: meat}
+    expected: {verdict: forbidden, basis: 'Gen 1:29 — the herb grant
+      only; "to you and to every beast" (59b:13)'}
+    dispute: null
+    class: B
+  - id: MEAT_noach
+    input: {query: food_permitted, era: noach, food: meat}
+    expected: {verdict: permitted, basis: 'כירק עשב נתתי לכם את כל — "as
+      the green herb I have given you everything" (Gen 9:3)'}
+    dispute: null
+    class: B
+  - id: MEAT_limb
+    input: {query: food_permitted, era: noach, food: limb_from_living}
+    expected: {verdict: forbidden, basis: 'אך בשר בנפשו דמו לא תאכלו —
+      "but flesh with its life, its blood, you shall not eat" (Gen 9:4);
+      the ban BORN of the grant one verse earlier'}
+    dispute: null
+    class: B
+  - id: MEAT_blood_living
+    input: {query: food_permitted, era: noach, food: blood_from_living}
+    expected: {verdict: dispute_two_ways, basis: 'R. Chanina ben Gamliel:
+      also forbidden — the clause split two ways (59a:6); the rabbis
+      route the clause to permit swarming creatures'}
+    dispute: recorded — HELD at G21-09 (the two-way split at the baraita)
+    class: B
+  - id: MEAT_swarming
+    input: {query: food_permitted, era: noach, food: swarming_limb}
+    expected: {verdict: excluded_from_ban, basis: 'אך excludes them
+      (59b:14), or Rav Huna — דמו, whose blood is distinct from its
+      flesh (59b:15); two recorded routes, one verdict'}
+    dispute: null
+    class: B_partial
+  - id: MEAT_dominion
+    input: {query: dominion_meaning}
+    expected: {verdict: labor_not_eating, basis: 'ורדו ("and have
+      dominion," Gen 1:26/1:28) pressed three times — fish, fowl, the
+      creeping serpent — each resolved as labor (59b:16-21)'}
+    dispute: null — HELD at gen_06 rev 2 (dominion = labor)
+    class: B
+
+- module: noahide_offerings
+  tractate: Avodah Zarah
+  oracle: Babylonian Talmud Avodah Zarah 51a:15-18
+  genesis_anchor:
+    unit: gen_16_ark_spec
+    ref: Gen.6.19-20
+    claim: G16-15
+    holds: the boarding list AS an offering-fitness standard — R.
+      Elazar's missing-limb ban from 'of every LIVING thing'; 'WITH YOU'
+      = similar to you, excluding the mortally injured; Noach himself
+      proven whole from 6:9 תמים; and the 6:20 'after their kind'
+      crossbreeding dispute
+  talmud_source:
+    source: 'R. Elazar (Avodah Zarah 51a:15): מנין למחוסר אבר שהוא אסור
+      לבני נח — "whence that the missing-limbed is forbidden to the sons
+      of Noach" — Gen 6:19 "of all the living": bring an animal whose
+      limbs are all alive'
+    walks_to: Gen 6:19 (limb), Gen 7:3 להחיות זרע ('to keep seed alive' —
+      the terefah, which cannot breed, excluded), Gen 6:9 (Noach not a
+      terefah — תמים written of him)
+    note: the sugya routes the terefah exclusion through 7:3 where
+      G16-15's seat routes it through אתך = like-you; both are the
+      sugya's own two steps (51a:16-18), one verdict
+  cases:
+  - id: OFR_missing_limb
+    input: {query: offering_valid, offerer: noahide,
+      defect: missing_limb}
+    expected: {verdict: invalid, basis: 'Gen 6:19 "of all the LIVING" —
+      limbs alive (51a:15)'}
+    dispute: null
+    class: B
+  - id: OFR_terefah
+    input: {query: offering_valid, offerer: noahide, defect: terefah}
+    expected: {verdict: invalid, basis: 'Gen 7:3 "to keep seed ALIVE" — a
+      terefah cannot breed (51a:16); Noach himself was whole — תמים (Gen
+      6:9, 51a:18)'}
+    dispute: null
+    class: B
+  - id: OFR_crossbreed
+    input: {query: noahide_bound_by, law: mixed_kinds}
+    expected: {verdict: dispute_two_ways, basis: 'the school of Menashe
+      derives a crossbreeding ban from Gen 6:20 למינהו ("after its
+      kind," 57a:7); the other side reads the kinds-clause as
+      companionship only'}
+    dispute: recorded — HELD at G16-15 (the crossbreeding dispute)
+    class: B
+
+- module: circumcision_agent
+  tractate: Avodah Zarah
+  oracle: Babylonian Talmud Avodah Zarah 26b:12 + 27a:6
+  genesis_anchor:
+    unit: gen_33_shaddai_covenant_flesh
+    ref: Gen.17.9-13
+    claim: G33-24
+    holds: eligibility fixed from 17:9's 'and YOU shall keep My covenant'
+      — a gentile's performance ruled invalid; G33-22 — the doubled verb
+      of 17:13 as the two grammar schools' battleground, one seat reading
+      the doubling as licensing anyone, the intent question riding it
+  talmud_source:
+    source: 'R. Yehudah (Avodah Zarah 26b:12): מנין למילה בעובד כוכבים
+      שהיא פסולה — "whence that circumcision by a gentile is invalid" —
+      ואתה את בריתי תשמור ("and YOU shall keep My covenant," Gen 17:9)'
+    walks_to: Gen 17:9 (R. Yehudah) against Gen 17:13's doubled המול
+      ימול (the other derivation, 27a:6)
+    note: same verdict, two recorded derivations — the classic
+      two-sources-one-law shape
+  cases:
+  - id: CIRC_gentile_agent
+    input: {query: circumcision_valid, circumciser: gentile}
+    expected: {verdict: invalid, basis: 'Gen 17:9 "and YOU..." (R.
+      Yehudah) or Gen 17:13 המול ימול (the doubled verb) — one verdict,
+      two recorded derivations'}
+    dispute: derivation-level only
+    class: B
+
+- module: court_of_shem
+  tractate: Avodah Zarah
+  oracle: Babylonian Talmud Avodah Zarah 36b:7
+  genesis_anchor:
+    unit: gen_61_yehuda_tamar
+    ref: Gen.38.24
+    claim: G61-16
+    holds: Shem's court counted among the three where the Divine Voice
+      testified — the tribunal itself standing in the unit; G61-03 — the
+      sentence's written-form carrying the man into her verse
+  talmud_source:
+    source: 'זנות נמי בבית דינו של שם גזרו — "harlotry too, the court of
+      Shem decreed against it," from ויאמר יהודה הוציאוה ותשרף — "and
+      Judah said: bring her out and let her be burned" (Gen 38:24)'
+    walks_to: Gen 38:24 — the verse as the decree's RECORD (a court
+      already exercising jurisdiction over harlotry)
+    note: a jurisdiction-history row — the decree's antiquity proven
+      from our ink; the tribunal held, the decree-history leg carried
+      talmud_source
+  cases:
+  - id: SHEM_harlotry
+    input: {query: harlotry_justiciable, era: patriarchal}
+    expected: {verdict: justiciable, basis: 'Gen 38:24 read as a court
+      (Shem''s) already trying harlotry — the decree''s ancient seat'}
+    dispute: null
+    class: B_partial
+
+- module: pursuer
+  tractate: Sanhedrin
+  oracle: Babylonian Talmud Sanhedrin 72b:15 + 72b:17
+  genesis_anchor:
+    unit: gen_21_blessing_blood_law
+    ref: Gen.9.6
+    claim: G21-13
+    holds: the same verse REFUSING a conviction (circumstantial proof,
+      however overwhelming, does not convict — the dripping knife) and
+      LICENSING a killing (save the pursued WITH the pursuer's blood),
+      the forewarning question disputed on both sides
+  talmud_source:
+    source: 'the warning formula (72b:15/17): "see, he is an Israelite, a
+      son of the covenant, and the Torah said שופך דם האדם באדם דמו ישפך
+      — who sheds man''s blood, BY MAN shall his blood be shed: save the
+      blood of the pursued by the blood of the pursuer"'
+    walks_to: Gen 9:6 — באדם read instrumentally ('by man' — any
+      bystander, pre-emptively)
+    note: '72b:17''s acceptance ladder: said "I know it is so" — exempt
+      (the pursuer license covers him); "on that condition I act" —
+      liable'
+  cases:
+  - id: PUR_license
+    input: {query: bystander_may_kill, target: pursuer_to_kill}
+    expected: {verdict: licensed, basis: 'Gen 9:6 באדם — save the pursued
+      by the pursuer''s blood (72b:15)'}
+    dispute: whether the pursuer needs forewarning — disputed on both
+      sides, HELD at G21-13
+    class: B
+  - id: PUR_acceptance
+    input: {query: pursuer_court_liability, said: on_that_condition}
+    expected: {verdict: liable, basis: 'the acceptance ladder of 72b:17 —
+      "I know it is so" exempt; "on that condition I act" liable'}
+    dispute: null
+    class: B
+
+- held_rows:
+  - row: Sanhedrin 56b:4-7 (the word-by-word derivation)
+    holding: "G08-28 (gen_08_toledot_garden_first_rule) — the unit's crown, with the accretion ladder and the count dispute"
+    class: B
+  - row: Sanhedrin 57a:3 + 57a:13 (bloodshed leg + all-seven paradigm)
+    holding: "G21-11 (gen_21_blessing_blood_law) — the whole murder procedure word by word"
+    class: B
+  - row: Sanhedrin 57a:4 (robbery from the green-herb simile)
+    holding: "G21-08 — R. Levi's reading WITH its recorded dispute and the two-era architecture"
+    class: B
+  - row: Sanhedrin 57a:5 + 59a:6 (limb + blood from the living)
+    holding: "G21-09 — the grant driving the law; the baraita's two-way split"
+    class: B
+  - row: Sanhedrin 57a:6 (castration from 9:7)
+    holding: "G21-15 — the ban WITH the blessing-only dissent recorded"
+    class: B
+  - row: Sanhedrin 57a:7 + Avodah Zarah 51a:15-18 (mixed kinds + offering fitness)
+    holding: "G16-15 (gen_16_ark_spec) — the boarding list as altar standard, all four legs"
+    class: B
+  - row: Sanhedrin 57b:10 + 58a:7-8 + 58b:14 (the 2:24 dissection)
+    holding: "G09-19 (gen_09_helper_woman_first_speech) — the span's law crown, clause by clause with the referent dispute dual-track"
+    class: B
+  - row: Sanhedrin 59a:12 + 59b:7 (the sinew's place in the framework)
+    holding: "G55-35 (gen_55_two_camps_wrestled_name) — the effective-date dispute seated at the sweep"
+    class: B
+  - row: Sanhedrin 59b:10-11 (Ishmael and Esau excluded)
+    holding: "G37-25 (gen_37_laughter_wilderness_oath) — the partitive descent statute; seed_categories compiled at the sweep"
+    class: B
+  - row: Sanhedrin 59b:13-21 (the two-era meat grant + dominion as labor)
+    holding: "G21-08/G21-09 + gen_06 rev 2 (vegetarian grant, dominion = labor read at Sanhedrin 59b's own primary)"
+    class: B
+  - row: Avodah Zarah 26b:12 + 27a:6 (the gentile circumciser)
+    holding: "G33-24 (eligibility from 17:9) + G33-22 (the doubled-verb battleground)"
+    class: B
+  - row: Avodah Zarah 36b:7 (the court of Shem)
+    holding: "G61-16 (gen_61_yehuda_tamar) — Shem's court among the three where the Voice testified"
+    class: B_partial
+  - row: Sanhedrin 72b:15 + 72b:17 (the pursuer)
+    holding: "G21-13 — refusal and license on one verse, the forewarning dispute both sides"
+    class: B

@@ -23,3 +23,33 @@ ve-khivshuha ketiv). Two modules compiled (engine.py); re-run: 8 of 8
 answered, 0 mismatches. ONE SPEC ERROR caught BY the engine and corrected
 TO the Mishnah (YEV_6_6_b — male+female divides the houses; correction note
 kept in the row). Full findings: REPORT.md.
+
+## 2026-09-01 — THE NOAHIDE BLOCK (owner: "open the noahide block")
+
+The flagship round of the 958-triage harvest: 44 rows (the Sanhedrin
+56a-59b sugya's 36 Genesis-tagged segments + the pursuer pair + the
+Avodah Zarah offering trio + court-of-Shem + the circumcision-agent
+pair), all CREDITED to the triage's read; 40 neighbor segments opened
+today for the sugya's frame and resolutions
+(logic/oral_triage/noahide_exam_reading_2026-09-01.md — 25 material,
+15 context). First TALMUD-ONLY rules: no Mishnah row above them, so
+provenance carries talmud_source in place of mishnah + talmud_bridge.
+
+41 case rows in 11 modules (cases_noahide.yaml). Classification before
+compiling: the reading had anticipated the sugya heavily — G08-28 (the
+word-by-word crown WITH the count dispute), G21-11 (the whole murder
+procedure), G21-08/09 (the two-era meat grant driving the limb ban),
+G21-13 (pursuer), G21-15 (castration + dissent), G09-19 (the 2:24
+dissection dual-track), G16-15 (offering fitness, all four legs),
+G33-22/24 (the circumcision agent), G37-25 (the partitive excluding
+Ishmael and Esau), G61-16 (Shem's court), gen_06 rev 2 (vegetarian
+grant + dominion-as-labor at this sugya's own primary). Clean class-C
+holes → findings F-012..F-016 (token-assignment dispute one-track;
+three procedure legs; the gentile-Sabbath law on Gen 8:22; the
+repeated-at-Sinai framework + two circumcision-scope legs; the
+maternal-sister deflected proof — import-only candidate). Compiled and
+re-run: 41/41, 0 mismatches; regressions green (pilot 10/10, sweep
+18/18 — 69/69 across the three exams). Catalog: R-217..R-227 join Part
+I; 42 candidate rows flipped COMPILED-into, R-140 + R-143 EXAMINED
+with notes. No unit YAMLs touched; hash unmoved; findings queued,
+nothing fixed inline.

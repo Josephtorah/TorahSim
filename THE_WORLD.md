@@ -1363,3 +1363,33 @@ So block processing does not change; completeness is bounded and
 checkable per block ("all the ink"), and the seemingly impossible
 global logic self-assembles by query - which the lemma-scan made
 discoverable even for consumers nobody has read yet.
+
+**2026-09-01 — THE OWNER'S CALL-SITE HYPOTHESIS ("I suspect the hebrew
+bible will call these functions and submit the data it needs to rule
+and return a response... do you know it's not that way?"): NOT REFUTED,
+AND THE FIRST EVIDENCE IS ALREADY IN THE TORAH.** The deposits-only
+picture was MEASURED ON GENESIS — a pre-Sinai corpus where the
+functions do not yet exist in the story's own timeline, so verses could
+only stock shelves. It is a fact about Genesis, not a law of the whole
+Bible. Standing FOR the hypothesis, inside the corpus already on the
+shelf: FOUR Torah episodes that literally submit a case with its data
+and receive a ruling back — the blasphemer (Leviticus 24, held in
+custody WHILE the ruling is fetched), the Sabbath wood-gatherer
+(Numbers 15, same held-pending shape), the second Passover (Numbers 9,
+query in, new ruling out), and Zelophehad's daughters (Numbers 27 —
+ruling returned AND the law updated by the response). Deuteronomy
+12:21's "as I have commanded you" already stands recorded as a declared
+call with no body. The later books read as EXECUTIONS, not deposits:
+Ruth 4 runs the acquisition procedure, Jeremiah 32 executes a witnessed
+land purchase, Naboth's trial (1 Kings 21) runs the two-witness court
+function. DESIGN CONSEQUENCE (the owner's own): going FORWARD the verse
+logic gains a call-site shape when the evidence first demands it — an
+operator recording that a verse CALLED a rule, SUBMITTED data, and
+RECEIVED a verdict — Genesis stays frozen as the honest deposits-heavy
+measurement it is. The four Torah cases are the designated first test
+sites; the lemma scan can hunt candidate call sites mechanically. This
+also completes input-source #2 (narratives as event streams): if the
+hypothesis holds, the canon's own narratives are not only streams the
+rules watch — some are recorded INVOCATIONS with their return values,
+i.e., the Bible's own execution traces of the very functions the
+Mishnah compiles.

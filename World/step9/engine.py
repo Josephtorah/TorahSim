@@ -548,6 +548,504 @@ def rule_circumcision_third_day(case):
     return None
 
 
+# =================================================================
+# THE NOAHIDE BLOCK (2026-09-01, owner: "open the noahide block") —
+# the first TALMUD-ONLY law modules: no Mishnah row above them. The
+# provenance key is talmud_source, not mishnah + talmud_bridge: the
+# Talmud is the ruling body here and Genesis its stated derivation.
+# Spec: cases_noahide.yaml. Findings F-012..F-016 mark the unheld and
+# half-held legs; nothing fixed inline.
+
+SEVEN_PROV = dict(
+    talmud_source="Sanhedrin 56a:24 (the baraita) + 56b:4-8 (the "
+                  "word-by-word derivation) + 57a:1-7 (the school of "
+                  "Menashe's alternate system)",
+    genesis_anchor="Gen.2.16 (gen_08_toledot_garden_first_rule, claim "
+                   "G08-28 — the unit's crown)",
+)
+
+
+def rule_noahide_seven_laws(case):
+    q = case.get("query")
+    if q == "noahide_laws_census":
+        return [
+            V("seven_laws",
+              "courts, blasphemy, idolatry, forbidden relations, "
+              "bloodshed, robbery, limb from the living",
+              authority="the baraita (Sanhedrin 56a:24), derived word by "
+                        "word from Gen 2:16",
+              machine_claim="G08-28", **SEVEN_PROV),
+            V("seven_laws_menashe_variant",
+              "castration (Gen 9:7) and mixed kinds (Gen 6:20) IN; "
+              "courts and blasphemy OUT — the flood indictment "
+              "(Gen 6:11-12) as its derivation spine",
+              authority="the school of Menashe (Sanhedrin 57a:1-7)",
+              machine_claim="legs held: G21-15 (castration + dissent), "
+                            "G16-15 (mixed-kinds dispute); the list "
+                            "variant itself talmud_source only",
+              **SEVEN_PROV),
+        ]
+    if q == "laws_commanded_to_adam":
+        return [
+            V("idolatry_only", "ויצו ה' אלהים על האדם — 'and the LORD God "
+              "commanded THE MAN' (Gen 2:16)",
+              authority="R. Yehudah (Sanhedrin 56b:23)",
+              machine_claim="G08-28 (the dispute recorded)", **SEVEN_PROV),
+            V("also_blasphemy", "the Name in the same clause",
+              authority="R. Yehudah ben Beteira (56b:23)",
+              machine_claim="G08-28", **SEVEN_PROV),
+            V("also_courts", "אלהים read as the judges",
+              authority="some say (56b:23)",
+              machine_claim="G08-28", **SEVEN_PROV),
+        ]
+    if q == "which_token_yields":
+        tok = case.get("token")
+        if tok == "vayetzav":
+            return [
+                V("courts", "ויצו — 'and He commanded': as it says, 'he "
+                  "will command his children... to DO JUSTICE' (Gen "
+                  "18:19)",
+                  authority="the mainline derivation (Sanhedrin 56b:5)",
+                  machine_claim="G08-30 (F-012 SEATED 2026-09-01 — the dispute dual-track beside G08-28)", **SEVEN_PROV),
+                V("idolatry", "ויצו = idolatry, אלהים = courts — the "
+                  "inversion",
+                  authority="R. Yitzchak (Sanhedrin 56b:8; Bereshit "
+                            "Rabbah 16:6's side)",
+                  machine_claim="G08-28", **SEVEN_PROV),
+            ]
+        if tok == "every_tree":
+            return [V("robbery_ban",
+                      "מכל עץ הגן — 'of every tree of the garden': yours "
+                      "and not stolen (56b:7); and from Gen 9:3 'as the "
+                      "GREEN herb' — like ownerless field growth, not a "
+                      "tended garden (R. Levi, 57a:4)",
+                      machine_claim="G21-08 (the 9:3 route with its "
+                                    "recorded dispute)", **SEVEN_PROV)]
+    return None
+
+
+EXEC_PROV = dict(
+    talmud_source="Sanhedrin 57a:8 (three) / 57a:11 (four) / 57a:13 (all "
+                  "seven); 57a:12 — their prohibition is their death",
+    genesis_anchor="Gen.9.6 (gen_21_blessing_blood_law, claim G21-11 — "
+                   "'revealed at bloodshed, the same holds for all')",
+)
+
+
+def rule_noahide_execution_scope(case):
+    if case.get("query") != "noahide_executed_for":
+        return None
+    law = case.get("law")
+    if law == "bloodshed" and "killer" not in case and "victim" not in case:
+        return [V("executed",
+                  "explicit at Gen 9:6 — every rung of the count ladder "
+                  "agrees", machine_claim="G21-11", **EXEC_PROV)]
+    if law == "robbery":
+        return [
+            V("not_executed",
+              "the school of Rav's counts: three (relations, bloodshed, "
+              "blasphemy — the גש\"ר mnemonic) or four (idolatry joins) — "
+              "robbery outside both",
+              authority="Rav Yosef 57a:8; Rav Sheshet 57a:11",
+              machine_claim="talmud_source only (the ladder rungs "
+                            "unheld)", **EXEC_PROV),
+            V("executed",
+              "'the Merciful revealed it at bloodshed and the same holds "
+              "for all'",
+              authority="Rav Huna, Rav Yehudah, all the students of Rav "
+                        "(57a:13)",
+              machine_claim="G21-11 (the paradigm sentence held)",
+              **EXEC_PROV),
+        ]
+    return None
+
+
+PROC_PROV = dict(
+    talmud_source="Sanhedrin 57b:2 (the aggadah-book baraita) + 57b:3-5 "
+                  "(Gen 9:5 word by word) + 57b:6 + 57b:9",
+    genesis_anchor="Gen.9.5-6 (gen_21_blessing_blood_law, claim G21-11; "
+                   "the no-forewarning second leg G36-14 at Gen 20:7)",
+)
+
+
+def rule_noahide_procedure(case):
+    q = case.get("query")
+    if q == "conviction_stands":
+        w = case.get("witness_is")
+        if w == "woman":
+            return [V("testimony_not_accepted",
+                      "מיד איש — 'from the hand of a MAN,' and not from a "
+                      "woman's mouth (57b:2/4)",
+                      machine_claim="G21-17 (F-013 seated 2026-09-01)", **PROC_PROV)]
+        if w == "relative":
+            return [V("conviction_stands",
+                      "אחיו — 'his brother': even a relative (57b:4)",
+                      machine_claim="G21-17 (F-013 seated 2026-09-01)", **PROC_PROV)]
+        return [V("conviction_stands",
+                  "one judge (Gen 9:5 'I will require it' — singular), "
+                  "one witness, no forewarning — each from its own word",
+                  machine_claim="G21-11", **PROC_PROV)]
+    if q == "noahide_executed_for" and case.get("law") == "bloodshed":
+        if case.get("killer") == "woman":
+            return [V("executed",
+                      "שופך דם האדם — 'WHOEVER sheds the blood of man,' "
+                      "in any case (Rav Yehudah's resolution, 57b:9)",
+                      machine_claim="G21-17 (F-013 seated 2026-09-01)", **PROC_PROV)]
+        if case.get("victim") == "fetus":
+            return [
+                V("executed",
+                  "באדם — 'the blood of man IN a man' is the embryo",
+                  authority="R. Yishmael (57b:5)",
+                  machine_claim="G21-11 (the fetus reading)", **PROC_PROV),
+                V("mode_reading_strangulation",
+                  "באדם routed to execution mode — bloodshed of a man "
+                  "that stays IN his body is strangulation",
+                  authority="the school of Menashe (57b:6)",
+                  machine_claim="G21-11 (the strangler)", **PROC_PROV),
+            ]
+    return None
+
+
+REL_PROV = dict(
+    talmud_source="Sanhedrin 58a:7-8 (Gen 2:24 dissected) + 57b:10 + "
+                  "58b:5-6 + 58b:14",
+    genesis_anchor="Gen.2.24 (gen_09_helper_woman_first_speech, claim "
+                   "G09-19 — the span's law crown)",
+)
+
+
+def rule_noahide_relations(case):
+    q = case.get("query")
+    if q == "relation_permitted":
+        p = case.get("partner")
+        if p == "male":
+            return [V("forbidden", "ודבק — 'and shall CLEAVE,' not to a "
+                      "male (58a:8)", machine_claim="G09-19", **REL_PROV)]
+        if p == "neighbors_wife":
+            return [V("forbidden", "באשתו — 'to HIS wife,' not the "
+                      "neighbor's (58a:8)", machine_claim="G09-19",
+                      **REL_PROV)]
+        if p == "animal":
+            return [V("forbidden", "והיו לבשר אחד — those who can become "
+                      "one flesh; beast and wild animal excluded (58a:8)",
+                      machine_claim="G09-19", **REL_PROV)]
+        if p == "fathers_side":
+            return [
+                V("fathers_sister_banned", "אביו = the father's sister",
+                  authority="R. Eliezer (58a:7)",
+                  machine_claim="G09-19 (dual-track)", **REL_PROV),
+                V("fathers_wife_banned", "אביו = the father's wife",
+                  authority="R. Akiva (58a:7)",
+                  machine_claim="G09-19 (dual-track)", **REL_PROV),
+            ]
+        if p == "maternal_sister":
+            return [V("forbidden",
+                      "the baraita's law; Gen 20:12 ('my father's "
+                      "daughter, NOT my mother's') pressed as proof at "
+                      "58b:5 and DEFLECTED at 58b:6 — the verse's "
+                      "recorded role is attempted evidence",
+                      machine_claim="G36-19 (F-016 seated 2026-09-01 as a kept record)", **REL_PROV)]
+    if q == "relation_liability" and case.get("subject_gender") == "woman":
+        return [V("liable",
+                  "proposed exempt from יעזב איש ('a MAN shall leave'); "
+                  "resolved — והיו לבשר אחד re-combined them (57b:10)",
+                  machine_claim="G09-19 (the gender scope settled from "
+                                "the tail clause)", **REL_PROV)]
+    return None
+
+
+SAB_PROV = dict(
+    talmud_source="Sanhedrin 58b:25 (Resh Lakish; Ravina — even a "
+                  "Monday) + 57a:12 (their prohibition is their death) + "
+                  "59a:2-5 (the Torah-study exchange)",
+    genesis_anchor="Gen.8.22 (gen_20_exit_altar, claim G20-19 — seated "
+                   "2026-09-01; G20-18 the termination-condition reading)",
+)
+
+
+def rule_gentile_sabbath_torah(case):
+    if case.get("query") != "gentile_liability":
+        return None
+    act = case.get("act")
+    if act == "kept_full_sabbath":
+        return [V("liable",
+                  "ויום ולילה לא ישבותו — 'day and night they shall not "
+                  "CEASE' (Gen 8:22) read onto them; their prohibition "
+                  "is their death; any full day of rest, even Monday",
+                  machine_claim="G20-19 (F-014 seated 2026-09-01)",
+                  **SAB_PROV)]
+    if act == "studied_torah":
+        return [
+            V("liable", "מורשה — 'an inheritance' (Deut 33:4): ours, not "
+              "theirs (read also as מאורסה, 'betrothed')",
+              authority="R. Yochanan (59a:2)",
+              machine_claim="imported — no Genesis ink; Deut 33:4 "
+                            "anchor_pending", **SAB_PROV),
+            V("like_high_priest", "האדם — 'THE MAN who does them and "
+              "lives by them' (Lev 18:5), not priests-Levites-Israelites",
+              authority="R. Meir (59a:4)",
+              machine_claim="imported — Lev 18:5 anchor_pending (the "
+                            "FRONTIER's standing row)", **SAB_PROV),
+        ]
+    if act == "studied_own_seven":
+        return [V("praised_like_high_priest",
+                  "התם בשבע מצות דידהו — 'there, in their own seven' "
+                  "(the resolution, 59a:5)",
+                  machine_claim="imported (the resolution row)",
+                  **SAB_PROV)]
+    return None
+
+
+SINAI_PROV = dict(
+    talmud_source="Sanhedrin 59a:10-12 (R. Yose son of R. Chanina's "
+                  "framework) + 59b:1-12 (its test cases)",
+    genesis_anchor="instances: Gen 32:33 (G55-35 + G55-36 the framework, held), Gen 21:12 "
+                   "(G37-25, held), Gen 17:9/17:14 (G33-31, seated "
+                   "2026-09-01)",
+)
+
+
+def rule_repeated_at_sinai(case):
+    if case.get("query") != "who_is_bound":
+        return None
+    cmd = case.get("commandment")
+    if cmd == "sciatic_nerve":
+        return [V("israel_only_reverse_instance",
+                  "said to Israel (the sons of Jacob) and not the sons "
+                  "of Noach — 'and we have only the sinew, per R. "
+                  "Yehudah' (59a:12)",
+                  machine_claim="G55-35 (the effective-date dispute "
+                                "seated)", **SINAI_PROV)]
+    if cmd == "circumcision":
+        lin = case.get("lineage")
+        if lin == "sons_of_ishmael":
+            return [V("exempt", "כי ביצחק יקרא לך זרע — 'IN Isaac shall "
+                      "seed be called to you' (Gen 21:12, 59b:10)",
+                      machine_claim="G37-25 + the compiled "
+                                    "seed_categories module",
+                      **SINAI_PROV)]
+        if lin == "sons_of_esau":
+            return [V("exempt", "ביצחק ולא כל יצחק — 'IN Isaac, and not "
+                      "all of Isaac' (59b:11)",
+                      machine_claim="G37-25 (the partitive excluding "
+                                    "Esau)", **SINAI_PROV)]
+        if lin == "sons_of_keturah":
+            return [V("obligated", "את בריתי הפר — 'My covenant he has "
+                      "broken' (Gen 17:14), to INCLUDE the sons of "
+                      "Keturah (R. Yose bar Avin, 59b:12)",
+                      machine_claim="G33-31 (F-015 seated 2026-09-01)",
+                      **SINAI_PROV)]
+        return [V("abraham_line_only",
+                  "two recorded resolutions: the Sinai repetition (Lev "
+                  "12:3) came to permit Shabbat (59b:2); or the command "
+                  "was never general — אתה וזרעך, 'YOU and your seed,' "
+                  "no one else (59b:9)",
+                  machine_claim="G33-31 (F-015 seated 2026-09-01) + G33-24",
+                  **SINAI_PROV)]
+    if cmd == "procreation":
+        return [V("israel_only",
+                  "said to the sons of Noach (Gen 9:7) and repeated at "
+                  "Sinai (Deut 5:27) — but the repetition came for the "
+                  "counted-body principle (59b:4), so the framework "
+                  "routes it to Israel",
+                  machine_claim="the 9:7 verse-role dispute held at "
+                                "G21-15 (command vs blessing); the "
+                                "routing talmud_source", **SINAI_PROV)]
+    s, r = case.get("said_to_noahides"), case.get("repeated_at_sinai")
+    if s == "yes" and r == "yes":
+        return [V("both_bound", "כל מצוה שנאמרה לבני נח ונשנית בסיני לזה "
+                  "ולזה נאמרה — 'said to both' (59a:11)",
+                  machine_claim="G55-36 (F-015 seated 2026-09-01)",
+                  **SINAI_PROV)]
+    if s == "yes" and r == "no":
+        return [V("israel_only",
+                  "not repeated — to Israel and not the sons of Noach; "
+                  "the sugya's worked example is circumcision (59b:1)",
+                  machine_claim="G55-36 (F-015 seated 2026-09-01)", **SINAI_PROV)]
+    return None
+
+
+MEAT_PROV = dict(
+    talmud_source="Sanhedrin 59b:13-21 (the two-era grant + the labor "
+                  "readings) + 57a:4-5 + 59a:6-9 (the carve-outs)",
+    genesis_anchor="Gen.1.29-30 against Gen.9.3-4 "
+                   "(gen_21_blessing_blood_law G21-08/G21-09; the "
+                   "Adam-era grant and dominion-as-labor at gen_06 "
+                   "rev 2)",
+)
+
+
+def rule_meat_timeline(case):
+    q = case.get("query")
+    if q == "dominion_meaning":
+        return [V("labor_not_eating",
+                  "ורדו — 'and have dominion' (Gen 1:26/1:28) pressed "
+                  "three times: fish (driving with the shibbuta), fowl "
+                  "(threshing with geese), the creeping serpent — each "
+                  "resolved as labor (59b:16-21)",
+                  machine_claim="gen_06 rev 2 (dominion = labor, read at "
+                                "Sanhedrin 59b's own primary)",
+                  **MEAT_PROV)]
+    if q != "food_permitted":
+        return None
+    era, food = case.get("era"), case.get("food")
+    if era == "adam" and food == "meat":
+        return [V("forbidden",
+                  "Gen 1:29 — the herb grant only: 'to you and to every "
+                  "beast,' not the beasts to you (Rav, 59b:13)",
+                  machine_claim="gen_06 rev 2 (the vegetarian grant)",
+                  **MEAT_PROV)]
+    if era == "noach":
+        if food == "meat":
+            return [V("permitted",
+                      "כירק עשב נתתי לכם את כל — 'as the green herb I "
+                      "have given you everything' (Gen 9:3)",
+                      machine_claim="G21-08 (the two-era architecture "
+                                    "stated)", **MEAT_PROV)]
+        if food == "limb_from_living":
+            return [V("forbidden",
+                      "אך בשר בנפשו דמו לא תאכלו (Gen 9:4) — the ban "
+                      "born of the grant one verse earlier",
+                      machine_claim="G21-09 (the grant driving the law)",
+                      **MEAT_PROV)]
+        if food == "blood_from_living":
+            return [
+                V("forbidden", "the clause split two ways — the limb, "
+                  "and the blood of a living animal",
+                  authority="R. Chanina ben Gamliel (59a:6)",
+                  machine_claim="G21-09 (the two-way split at the "
+                                "baraita)", **MEAT_PROV),
+                V("permitted_clause_routed_elsewhere",
+                  "the rabbis route the clause to permit swarming "
+                  "creatures (59a:7/9)",
+                  authority="the rabbis",
+                  machine_claim="G21-09", **MEAT_PROV),
+            ]
+        if food == "swarming_limb":
+            return [V("excluded_from_ban",
+                      "אך excludes them (59b:14); or Rav Huna — דמו, "
+                      "'whose blood is distinct from its flesh' "
+                      "(59b:15): two recorded routes, one verdict",
+                      machine_claim="talmud_source (the routes); the "
+                                    "ladder frame at G21-09",
+                      **MEAT_PROV)]
+    return None
+
+
+OFR_PROV = dict(
+    talmud_source="Avodah Zarah 51a:15-18 (R. Elazar's missing-limb "
+                  "ban; the terefah steps) + Sanhedrin 57a:7 (mixed "
+                  "kinds)",
+    genesis_anchor="Gen.6.19-20 + Gen.7.3 + Gen.6.9 (gen_16_ark_spec, "
+                   "claim G16-15 — the boarding list as altar standard)",
+)
+
+
+def rule_noahide_offerings(case):
+    q = case.get("query")
+    if q == "offering_valid" and case.get("offerer") == "noahide":
+        d = case.get("defect")
+        if d == "missing_limb":
+            return [V("invalid",
+                      "ומכל החי — 'of all the LIVING' (Gen 6:19): bring "
+                      "an animal whose limbs are all alive (51a:15)",
+                      machine_claim="G16-15", **OFR_PROV)]
+        if d == "terefah":
+            return [V("invalid",
+                      "להחיות זרע — 'to keep seed ALIVE' (Gen 7:3): a "
+                      "terefah cannot breed (51a:16); Noach himself "
+                      "proven whole — תמים (Gen 6:9, 51a:18)",
+                      machine_claim="G16-15 (its seat routes the "
+                                    "exclusion via אתך = like-you; both "
+                                    "steps are the sugya's own)",
+                      **OFR_PROV)]
+    if q == "noahide_bound_by" and case.get("law") == "mixed_kinds":
+        return [
+            V("bound", "מהעוף למינהו — 'of the fowl after its kind' "
+              "(Gen 6:20) read as law",
+              authority="the school of Menashe (57a:7)",
+              machine_claim="G16-15 (the dispute recorded)", **OFR_PROV),
+            V("not_bound", "the kinds-clause read as companionship "
+              "only — לצותא בעלמא",
+              authority="the other side (57a:7)",
+              machine_claim="G16-15", **OFR_PROV),
+        ]
+    return None
+
+
+CIRC_AGENT_PROV = dict(
+    talmud_source="Avodah Zarah 26b:12 (R. Yehudah from Gen 17:9) + "
+                  "27a:6 (the doubled-verb derivation)",
+    genesis_anchor="Gen.17.9-13 (gen_33_shaddai_covenant_flesh, claims "
+                   "G33-24 + G33-22)",
+)
+
+
+def rule_circumcision_agent(case):
+    if case.get("query") == "circumcision_valid" \
+            and case.get("circumciser") == "gentile":
+        return [V("invalid",
+                  "ואתה את בריתי תשמור — 'and YOU shall keep My "
+                  "covenant' (Gen 17:9, R. Yehudah); or המול ימול — the "
+                  "doubled verb (Gen 17:13): one verdict, two recorded "
+                  "derivations",
+                  machine_claim="G33-24 (eligibility) + G33-22 (the "
+                                "doubled-verb battleground)",
+                  **CIRC_AGENT_PROV)]
+    return None
+
+
+SHEM_PROV = dict(
+    talmud_source="Avodah Zarah 36b:7 — 'harlotry too, the court of "
+                  "Shem decreed against it'",
+    genesis_anchor="Gen.38.24 (gen_61_yehuda_tamar, claim G61-16 — "
+                   "Shem's court among the three where the Voice "
+                   "testified)",
+)
+
+
+def rule_court_of_shem(case):
+    if case.get("query") == "harlotry_justiciable" \
+            and case.get("era") == "patriarchal":
+        return [V("justiciable",
+                  "ויאמר יהודה הוציאוה ותשרף — 'bring her out and let "
+                  "her be burned' (Gen 38:24): a court already trying "
+                  "harlotry; the decree's ancient seat",
+                  machine_claim="G61-16 (the tribunal held; the "
+                                "decree-history leg talmud_source)",
+                  **SHEM_PROV)]
+    return None
+
+
+PUR_PROV = dict(
+    talmud_source="Sanhedrin 72b:15 + 72b:17 (the warning formula and "
+                  "the acceptance ladder)",
+    genesis_anchor="Gen.9.6 (gen_21_blessing_blood_law, claim G21-13 — "
+                   "refusal and license on one verse)",
+)
+
+
+def rule_pursuer(case):
+    q = case.get("query")
+    if q == "bystander_may_kill" \
+            and case.get("target") == "pursuer_to_kill":
+        return [V("licensed",
+                  "שופך דם האדם באדם דמו ישפך — באדם read "
+                  "instrumentally: 'save the blood of the pursued BY the "
+                  "blood of the pursuer' (72b:15); whether the pursuer "
+                  "needs forewarning is disputed on both sides",
+                  machine_claim="G21-13", **PUR_PROV)]
+    if q == "pursuer_court_liability" \
+            and case.get("said") == "on_that_condition":
+        return [V("liable",
+                  "the acceptance ladder (72b:17): 'I know it is so' — "
+                  "exempt; 'on that condition I act' — liable",
+                  machine_claim="G21-13 (the formula's verse-use held; "
+                                "the ladder talmud_source)",
+                  **PUR_PROV)]
+    return None
+
+
 # Module registry — routing follows the Mishnah's own organization (the
 # owner's tractate map, logic/MISHNAH_TOPICS.md): each module names the
 # tractate whose case rows feed it, so the code's structure grows into the
@@ -566,6 +1064,27 @@ RULES = {
     "world_to_come": {"fn": rule_world_to_come, "tractate": "Sanhedrin"},
     "circumcision_third_day": {"fn": rule_circumcision_third_day,
                                "tractate": "Shabbat"},
+    # the Noahide block (2026-09-01) — Talmud-only law
+    "noahide_seven_laws": {"fn": rule_noahide_seven_laws,
+                           "tractate": "Sanhedrin"},
+    "noahide_execution_scope": {"fn": rule_noahide_execution_scope,
+                                "tractate": "Sanhedrin"},
+    "noahide_procedure": {"fn": rule_noahide_procedure,
+                          "tractate": "Sanhedrin"},
+    "noahide_relations": {"fn": rule_noahide_relations,
+                          "tractate": "Sanhedrin"},
+    "gentile_sabbath_torah": {"fn": rule_gentile_sabbath_torah,
+                              "tractate": "Sanhedrin"},
+    "repeated_at_sinai": {"fn": rule_repeated_at_sinai,
+                          "tractate": "Sanhedrin"},
+    "meat_timeline": {"fn": rule_meat_timeline, "tractate": "Sanhedrin"},
+    "noahide_offerings": {"fn": rule_noahide_offerings,
+                          "tractate": "Avodah Zarah"},
+    "circumcision_agent": {"fn": rule_circumcision_agent,
+                           "tractate": "Avodah Zarah"},
+    "court_of_shem": {"fn": rule_court_of_shem,
+                      "tractate": "Avodah Zarah"},
+    "pursuer": {"fn": rule_pursuer, "tractate": "Sanhedrin"},
 }
 
 
