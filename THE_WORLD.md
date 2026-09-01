@@ -1216,3 +1216,14 @@ edges the tradition actually made; recorded-never-assigned still
 governs what enters as law. Pass 1 over the 24 books can therefore
 emit a candidate-edge list as it compiles, with the case shelf as the
 confirming oracle.
+
+**2026-08-31 — sharpening (owner's formulation): the Mishnah row is a
+COMPOSITE function taught by worked example.** Each case row composes
+several verse-seated functions (the rockslide: the nose-predicate +
+Shabbat prohibitions + the life-override principle + doubt-logic — four
+functions, four sources, one row) and teaches the composite the way a
+test vector does: input→output, work hidden. The Talmud's trace then
+teaches the composition mechanism. Running a composite row against the
+machine DECOMPILES it — the exam reports which component functions we
+hold and which are missing. This is the oracle-anatomy insight one turn
+sharper: the oracle's rows are composite worked examples.
