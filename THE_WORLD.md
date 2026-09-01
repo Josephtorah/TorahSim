@@ -1323,3 +1323,43 @@ THE FORMAT GUARD for all three: the vocabulary registry - every input
 value must be a term some source actually introduced, with its Hebrew
 ink. A case cannot be stated in words no source defined; that is what
 keeps the simulator from drifting into invented situations.
+
+**2026-09-01 — PROOF ON THE RECORD (owner: "I need solid proof, not
+speculation"): DEPOSIT-AND-OPERATE IS THE ARCHITECTURE, shown three
+ways.** (1) IN RUNNING CODE: the flood-duration rule executed live -
+the function is Mishnah Eduyot 2:10's row; the data is three Genesis
+deposits (Gen 7:11 -> standing row 499 year-600/month-2/day-17; Gen
+8:13 -> row 577 year-601; Gen 8:14 -> fact row 583 month-2/day-27); the
+function READS the rows and computes 12 months + 10 days; the number
+twelve appears nowhere in the function. (2) IN THE TRADITION'S OWN
+PAGES: Babylonian Talmud Rosh Hashanah 11b-12a performs the same
+calendar arithmetic on the same Genesis dates - the gemara page is the
+visible trace of a function running on verse deposits. (3) THE CROSS-
+BOOK CONSUMPTION: Rosh Hashanah 10b extracts one-day-counts-as-a-year
+from Gen 8:13's deposited date and SPENDS it in regnal-year and orlah
+law; Sanhedrin 69b stitches the ages deposited by Gen 5:32/7:6/11:10
+into an arithmetic precedent consumed by family law (gen_26's claim
+records the citation). Verses deposit typed facts; functions operate on
+deposits; the Talmud is the trace; the stitching is real because a
+Genesis deposit is consumed in Rosh Hashanah's law.
+
+**2026-09-01 — THE ANSWER TO "IT SEEMS IMPOSSIBLE TO CAPTURE ALL THIS
+LOGIC" (owner's block-processing question): BLOCKS CAPTURE DEPOSITS,
+NOT LOGIC.** The block derivation (Steps 1-8) never needs to anticipate
+who will consume a fact. Its whole duty is LOCAL and BOUNDED: encode
+everything the block's own ink says - every word, date, count, name -
+as typed deposits. The consuming logic arrives LATER from the case
+shelf (Step 9), each function carrying its own shopping list of needed
+deposits via the Talmud's citations, and finds them BY QUERY. PROVEN BY
+OUR OWN HISTORY: gen_17 was derived and frozen weeks before the exam
+existed; the TIME_ANCHOR deposits were made blind, and the flood
+function found them unchanged. The safety net is closed on both sides:
+ink-completeness gates guarantee no deposit is skipped at derivation
+(the text layer verifies every word encoded); the exam guarantees
+missed TYPING is caught later - a function whose deposit exists but was
+not captured as machine data raises a FINDING, and the stamp law lets
+the unit be amended. Deposits in underived books wait as frontier rows.
+So block processing does not change; completeness is bounded and
+checkable per block ("all the ink"), and the seemingly impossible
+global logic self-assembles by query - which the lemma-scan made
+discoverable even for consumers nobody has read yet.
