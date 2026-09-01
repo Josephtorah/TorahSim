@@ -53,6 +53,10 @@ Race evidence: the narrow run produced the identical core logic at
    resolver: read Tier-A at derive time on every span; where it smooths
    the Hebrew (plural for singular, a counting verb made explicit), the
    roughness it smooths is evidence.
+   **⚠ ITS GENRE CHANGES IN POETRY — see THE ONKELOS GENRE RULE below.
+   In prose it translates; in a poem it delivers the tradition's
+   reading, and a deviation there is evidence about the CHAIN, not
+   about the Hebrew.**
 3. **Rashi** — the chain's first-pass compiled commentary (11th c.).
    Not itself the authority: the POINTER LAYER — names the chain source
    or middah for nearly every crux; what Rashi transmits, verify at its
@@ -211,3 +215,83 @@ faster; it also made the shelf's own agreement measurable. No display
 class has been built for this: four instances from one parashah is
 thin evidence, and the standing method here is to tag the instances
 and let the count decide rather than argue.
+
+---
+
+## THE ONKELOS GENRE RULE — owner ruling 2026-08-30
+
+(Mirrored to canon 2026-09-01 on the owner's sync order; ruled in the
+workshop window on the measurement below. This answers the genre-shift
+finding recorded during the Vayechi derivation.)
+
+Onkelos is HALF the declared shelf under the spine default, so what
+kind of witness it is at a given span is a shelf question, not a
+verse question. It is not one kind of witness throughout.
+
+**In PROSE, Onkelos translates.** Its deviations are local, and each
+one this walk met was logged at its verse. Where it smooths the
+Hebrew, the roughness it smooths is evidence **about the verse** —
+the minimal-resolver role above.
+
+**In POETRY, Onkelos delivers the tradition's READING.** It renders
+blessings as their fulfilments, names what the Hebrew leaves as a
+place-name, and states outcomes the words only imply. A deviation
+there is evidence about **how the chain understood the line**, not
+about the Hebrew's roughness.
+
+**Read a poetic rendering as a translation and you will generate
+false claims about the Hebrew. Discard it and you throw away genuine
+chain testimony.** The witness is RE-LABELLED, never re-weighted:
+its claims are filed as chain reading, and — as everywhere else —
+corroboration is looked for at the spine.
+
+### Measured, not asserted
+
+The measurement folder rides in the workshop tree
+(`logic/onkelos_genre_2026-08-30/`: expansion + retention per verse,
+against Onkelos's own prose baseline; ketiv/qere rows dropped; three
+chapters with differing verse divisions excluded and named — 184 of 187 Torah
+chapters survive). Reproducible by the two scripts there.
+
+The six Torah poems were named **in advance from genre, not picked
+from the ranking.** All six land in the top nine of 184 chapters:
+
+| rank | chapter | expansion | |
+|---|---|---|---|
+| 1 | **Genesis 49** | 1.538 | Jacob's blessings |
+| 2 | Deuteronomy 33 | 1.368 | the Blessing of Moses |
+| 3 | Deuteronomy 32 | 1.229 | the Song of Moses |
+| 4 | Numbers 24 | 1.156 | Balaam, oracles 3–7 |
+| 8 | Numbers 23 | 1.137 | Balaam, oracles 1–2 |
+| 9 | Exodus 15 | 1.134 | the Song of the Sea |
+
+All-chapter baseline 1.040. Genesis 49 is the TOP OF A GRADIENT, not
+a singularity — which is why this rule is general and not a footnote
+on one chapter.
+
+### THE UNIT IS THE POEM, NOT THE CHAPTER
+
+A narrative frame around a poem translates at the book's ordinary
+rate. Onkelos changes genre at the poem's edge and changes back,
+inside the same chapter:
+
+| | poem body | narrative frame | ÷ |
+|---|---|---|---|
+| Genesis 49 (blessings vs gathering, burial charge, death) | 1.698 | 0.944 | **1.80** |
+| Deuteronomy 32 (Song vs the charge to ascend) | 1.281 | 0.981 | 1.31 |
+| Numbers 24 (oracles vs Balak's rage) | 1.203 | 1.058 | 1.14 |
+| Exodus 15 (Song vs Miriam, Marah, the statute) | 1.179 | 1.043 | 1.13 |
+
+So the rule fires on a SPAN's genre, not on a chapter number. Genesis
+49:29–33, the burial charge, is ordinary translation and is read as
+such; 49:31 is word-for-word, the highest retention in the chapter.
+
+### Standing scope
+
+Fires wherever the span is poetry. The named Torah seats are Genesis
+49, Exodus 15, Numbers 23–24, Deuteronomy 32–33, plus the short poems
+embedded in prose (Genesis 4:23–24, 9:25–27, 25:23, 27:27–29, 27:39–40,
+48:15–16 — all measured above the Genesis prose rate). **Exodus 15 is
+already frozen as exo_15**, and this rule reaches the Exodus walk's
+first poem before the walk does.
+
