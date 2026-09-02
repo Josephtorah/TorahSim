@@ -202,3 +202,32 @@ equality-invariant of a coin the translation itself converts, and
 the derivation's Oral-Torah charter (EX34-05 — covenant BY THE
 SAYING, reversal voids it) is the standing constitutional text of
 this project's entire method.
+
+## ROUND 9 — VAYAKHEL-PEKUDEI (2026-09-02, same sitting as the
+## derivation; owner: "ok run it" — THE BOOK OF EXODUS CLOSES)
+
+MEMBERSHIP: the 4 bare Mishnah rows citing Exod 35:1-40:38 (3
+opened in full, 1 credited to the backfill's Sanhedrin 4:1 read
+with the quick-look guard run on its fresh eve-of-Shabbat leg).
+Read record: logic/oral_triage/
+vayakhel_pekudei_exam_mishnah_2026-09-02.md. The derivation half:
+six units derived and stamped FULL RULE the same sitting (36
+claims EX35-01..EX40-06, corpus 111 → 117, hash 8b8fff1fa28953af
+UNMOVED — Exodus 1-40 now FULL RULE end to end). No findings: the
+derivation anticipated every docket row — each Mishnah row was
+cited into its unit's seat before the exam ran, so all four
+classified B on fresh claims (EX35-01, EX36-05, EX38-04, EX40-04).
+COMPILED: 4 modules (vayakhel_pekudei_rules.py), 8 cases, 8/8
+FIRST RUN; all eight prior exams re-run green — 329/329 across
+all NINE exams. Catalog R-316..R-319; 124 compiled rules.
+Vocabulary 144 → 145 (1 new dim 'material'; 6 query values +
+eve_of_sabbath appends; collision guard clean). THE HEADLINE: THE
+BOOKS ARE PART OF THE MACHINE — the execution chapters seat an
+audit constitution (number-and-weight, the two-signatory rule
+with Itamar's countersignature, the treasury dress-code, the
+missing-1,775 reconciled against the physical inventory, the
+as-the-LORD-commanded refrain as the divine countersignature on
+every line), and the exam's four rows all turn out to be laws the
+execution ink itself anchors: the fire-ban scheduling the courts,
+the halt-order anchoring the carrying labor, the census-silver
+carrying the priests' duty dispute, the spread tent naming flax.

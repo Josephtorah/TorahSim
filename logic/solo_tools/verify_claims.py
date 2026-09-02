@@ -180,11 +180,25 @@ class V:
 def main(path):
     claims = json.load(open(path, encoding="utf-8"))
     v = V()
-    counts = {"VERIFIED": 0, "FAILED": 0, "UNCHECKABLE": 0}
+    counts = {"VERIFIED": 0, "FAILED": 0, "UNCHECKABLE": 0, "NO-CHECK": 0}
     for cl in claims:
-        ck = cl["check"]
+        ck = cl.get("check")
+        if ck is None:
+            # RE-era manifest row (2026-08-30 onward): witness-tier claim
+            # with no encoded DB check — the ledger and cite gate carry it.
+            # Report, never crash (2026-09-02 audit fix).
+            counts["NO-CHECK"] += 1
+            print("NO-CHECK    %s [%s]" % (cl["id"], cl["source"]))
+            continue
         if ck["type"] == "manual":
             st, det = "UNCHECKABLE", ck.get("note", "no note")
+        elif not hasattr(v, ck["type"]):
+            # check type this verifier does not implement (e.g. "machine"
+            # — verified by an engine run recorded elsewhere): report,
+            # never crash (2026-09-02 audit fix).
+            st = "UNCHECKABLE"
+            det = "check type '%s' not implemented here; %s" % (
+                ck["type"], ck.get("note", "no note"))
         else:
             ok, det = getattr(v, ck["type"])(ck)
             st = "VERIFIED" if ok else "FAILED"
@@ -193,7 +207,7 @@ def main(path):
         print("%-11s %s [%s] %s%s\n            %s" %
               (st, cl["id"], cl["source"], cl["claim_en"], scope, det))
     print("\nSUMMARY: %(VERIFIED)d verified, %(FAILED)d failed, "
-          "%(UNCHECKABLE)d uncheckable" % counts)
+          "%(UNCHECKABLE)d uncheckable, %(NO-CHECK)d no-check" % counts)
     sys.exit(2 if counts["FAILED"] else 0)
 
 

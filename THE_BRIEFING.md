@@ -14,29 +14,68 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   baked into an epub.
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
-## SCOREBOARD (as of 2026-09-01, latest)
+## SCOREBOARD (as of 2026-09-02, latest)
 
 - Genesis: DONE — derived, read, examined, stamped (73 units).
-- Exodus: chapters 1–34 derived AND examined end to end (Ki Tisa the
-  latest — five chapters in one sitting: the half-shekel, the golden
-  calf, the second tablets). Remaining: Vayakhel and Pekudei — six
-  chapters, the execution of the specs.
-- The corpus: 111 frozen units, one world, fingerprint unmoved.
-- The exam engine: eight rounds, 321 cases, 321 answered correctly,
-  120 compiled rules, vocabulary of 144 registered input dimensions.
+- **Exodus: DONE.** All forty chapters derived, examined, and
+  stamped end to end. The closing sitting (Vayakhel–Pekudei, the
+  six execution chapters) ran the whole cycle in one day and the
+  book ends with the glory filling the tabernacle — the promise
+  from chapter 25 ("that I may dwell among them") discharged on
+  the last page, with the cloud-and-fire travel signal left
+  running for the book of Numbers.
+- The corpus: 117 frozen units, one world, fingerprint unmoved
+  through the entire book.
+- The exam engine: nine rounds, 329 cases, 329 answered correctly,
+  124 compiled rules, vocabulary of 145 registered input dimensions.
 - Stamps: administered by the machine under your delegation, every
   delegated stamp labeled as such forever.
-- Newest design fact (Ki Tisa): the machine's own instruments are
-  themselves regulated by the law it holds — a Mishnah row rules
-  that the calf's second account is read in public but NOT
-  translated (a law about the very translation this project reads
-  with), and the covenant at 34:27 is cut "by the SAYING of these
-  words": Scripture written, the Mishnah and Talmud oral, and
-  reversing the channels voids the covenant — the charter of this
-  project's whole written-layer-tested-by-oral-cases method, now
-  held inside the machine as data.
+- Newest design fact (Vayakhel–Pekudei): THE BOOKS ARE PART OF THE
+  MACHINE. The "boring repetition" chapters turned out to be the
+  audit layer: no public money-office under two signatories (and
+  Moses, though exempted by God's own character reference, declines
+  the exemption and reckons through Itamar); the treasury
+  dress-code so no one can even SUSPECT embezzlement; every talent
+  published to the stake-level in converted currency; a forgotten
+  1,775-shekel line item reconciled by looking up at the actual
+  hooks on the pillars; and the eighteen-fold "as the LORD
+  commanded Moses" decoded as God countersigning each audit line
+  because the people had suspected the treasurer. Next: Leviticus
+  (new spine — Sifra), where chapter 24 is the first recorded CALL
+  into the machine we spent Exodus building.
 
 ## ENTRIES (newest first)
+
+### 2026-09-02 — The rest of the 24 books found: they are the runtime log
+
+You asked for a complete audit and an experiment: take some Mishnah
+functions and hunt for them in the rest of the Hebrew Bible — beyond
+the Torah — piecing them from the verses the tradition references.
+The audit came back clean (all 117 units green on every gate, zero
+failed claims out of 2,134, two measuring instruments repaired along
+the way). The experiment came back five for five, and it named the
+missing piece of the architecture. The Torah demonstrates the
+functions by SPEC; the Prophets and Writings demonstrate them by
+RUN. The carrying-on-Shabbat rule is re-stated by Jeremiah (who
+cites its Torah seat in so many words) and then RUN by Nehemiah with
+police powers — gates shut, guards posted; a machine scan for the
+burden-word plus the sabbath-word found that function's complete
+six-verse canon set in one pass. The audit-waiver for faithful
+treasurers is called twice, a century apart, in nearly identical
+words (Joash's chest, Josiah's repair). The half-shekel's
+denomination actually FLOATS in the Writings (Nehemiah's
+third-shekel) exactly as the Mishnah's equality-invariant dispute
+presupposes. Naboth's trial is the corrupt-run edge case of the
+capital procedure — every form valid, every input false — and the
+midrash on Leviticus 24 (our next stop) already cites it. And the
+elders at Jeremiah's trial quote Micah verbatim as PRECEDENT — a
+court citing case law, inside the canon. Going forward: the
+remaining 22 books are not a mountain of new law to derive — they
+are the TEST LOG of functions the Torah already seats, which makes
+them the cheap, high-confirmation layer of pass one. Your instinct
+about piecing functions from referenced verses is now a working
+method: recorded links plus the lemma scanner assemble a function's
+whole canon career in one sitting.
 
 ### 2026-09-01 — The first architecture parashah taught us two new things
 

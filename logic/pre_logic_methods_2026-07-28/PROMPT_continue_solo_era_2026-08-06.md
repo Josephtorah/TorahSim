@@ -8279,3 +8279,163 @@ Leviticus (Sifra spine per CORE_SHELF; Lev 24 = the first recorded
 CALL into the machine — the call-site test). OPEN besides: ~11
 Genesis Talmud blocks (162 rows); Tosefta + Jerusalem Talmud; Step 9
 site visibility; the next TorahSim sync (one-way, we initiate).
+
+## MILESTONE 2026-09-02 — VAYAKHEL-PEKUDEI RUN WHOLE; THE BOOK OF
+## EXODUS CLOSES AT FULL RULE (the rhythm's sixth cycle, owner: "ok
+## run it")
+The #36-ordered task executed in one sitting. THE DERIVATION: six
+units exo_35_shabbat_donate / exo_35_36_work_start /
+exo_37_furniture_made / exo_38_court_inventory / exo_39_garments_done
+/ exo_40_erect_fill derived and frozen (corpus 111 → 117); Onkelos
+Exod 35-40 IN FULL (214 verses) + Midrash Tanchuma Vayakhel AND
+Pekudei whole, both recensions (167 sections, ending at the Buber
+colophon "the End of the Book of Exodus"); 3,852 rows pre-enumerated
+via Data/links*.csv; six append-only ledgers (32/32, 85/85, 69/69,
+88/88, 56/56, 51/51 — all COMPLETE) with preemptive cite-gate
+restatement notes; 36 claims seated (EX35-01..05, EX36-01..07,
+EX37-01..06, EX38-01..07, EX39-01..05, EX40-01..06) via
+derive_vayakhel_pekudei.py (scratchpad; the July-draft indent family;
+every extracted cite reviewed — the round-7 lesson); rituals,
+preflights ALL SCENARIOS GREEN, gloss_lint 0, corpus_world.py regen,
+CORPUS TRUTH GREEN — 117 units, 1809 facts, hash 8b8fff1fa28953af
+UNMOVED. Delegated FULL RULE stamps on all six (STAMP_LEDGER row
+2026-09-02) — EXODUS 1-40 FULL RULE END TO END. Crowns: rest
+outranks the building; the missing yod at 35:27; the nepotism
+suspicion answered by publishing the verse; the world's-own-toolchain
+identity; the overflow protocol (the carrying labor anchored on the
+halt order); the build-order dispute two recensions deep (Tanchuma's
+ark-first Bezalel vs Babylonian Talmud Berakhot 55a's house-first —
+roles swapped); shittim-for-Shittim; the mirrors' two tracks
+(Onkelos praying-women vs the spine's mirrors honored over Moses'
+objection); THE AUDIT CONSTITUTION (two signatories, Itamar,
+dress-code, number-and-weight, the missing 1,775 reconciled by
+physical inventory, the countersignature refrain); tabernacle =
+creation verb for verb; the self-standing house (tekim/hukam/
+va-yakem); the indwelling landing at 40:34 with the builder locked
+out; the book ending LIVE (the travel signal running). THE EXAM
+(round 9): 4 bare Mishnah rows (Sanhedrin 4:1 credited to the
+backfill read, quick-look on the fresh eve-of-Shabbat leg; Shevuot
+1:1, Shekalim 1:4, Shabbat 2:3 opened); exam ledger
+vayakhel_pekudei_exam_mishnah_2026-09-02.md; 4 modules
+(vayakhel_pekudei_rules.py: capital_schedule, shabbat_carryings,
+priest_shekel_duty, tree_products_wicks), cases_vayakhel_pekudei.yaml
+8 cases, runner clone run_vayakhel_pekudei.py — 8/8 FIRST RUN, all
+eight prior exams re-run green: 329/329 across NINE exams. NO
+FINDINGS (the derivation anticipated every docket row). Catalog
+R-316..R-319 (124 compiled rules); vocabulary 145 dims (new dim
+'material'; guard clean). Records: REPORT_VAYAKHEL_PEKUDEI.md,
+EXAM_LEDGER round 9, THE_STEPS round entry, THE_BRIEFING scoreboard
+(Exodus DONE + the audit-layer design fact), THE_WORLD idea log
+(the-books-are-part-of-the-machine / the-final-raise-is-the-Owner's /
+the-schema-table-is-explicit). OPEN NEXT: the owner's word on the
+THE_BRIEFING epub bake (his suggested milestone — ASK); then
+LEVITICUS (Sifra spine per CORE_SHELF; Lev 24 = the first recorded
+CALL into the machine — the call-site test). Standing open: ~11
+Genesis Talmud exam blocks (162 rows); Tosefta + Jerusalem Talmud;
+Step 9 site visibility; next TorahSim sync (one-way, we initiate).
+Uncommitted this sitting until the owner's word (also uncommitted:
+The_Briefing.epub, baked earlier today at his ask).
+
+## MILESTONE 2026-09-02 (second sitting) — THE COMPLETE AUDIT + THE
+## CANON FUNCTION HUNT (owner: "do a complete audit... take some
+## Mishnah functions, look for them in the Hebrew Bible")
+MECHANICAL AUDIT (reviews/AUDIT_2026-09-02.md): ALL 117 frozen units
+preflighted GREEN (the first sweep's quoted-id regex caught only 95;
+the CORPUS_TRUTH disagreement was chased and the 22 unquoted-id
+units passed separately — cross-check law working); verify_text
+117/117; verify_claims across all 120 manifests: 1,254 verified /
+0 FAILED / 619 uncheckable / 261 no-check; gloss_lint 0;
+CORPUS_TRUTH GREEN hash 8b8fff1fa28953af; nine exams 329/329. TWO
+INSTRUMENT FIXES (model layer, commented in-file): verify_claims.py
+no longer crashes on RE-era no-check manifests or unknown check
+types; changelog_gate.py now counts derivation_log step entries as
+the constitutional changelog line (the gate had diverged from the
+convention every derivation sitting actually followed — GREEN now).
+ARCHITECTURE AUDIT: solid (pipeline probed beyond Torah and held;
+evidence wall clean); honest thinness recorded — core-shelf
+fraction visibility, single links-CSV docket dependency, 22 books
+unread, 261 no-check claims accumulating, hand-written rules still
+scaffolding. THE CANON HUNT (World/step9/REPORT_CANON_HUNT.md):
+owner's hypothesis CONFIRMED FIVE FOR FIVE — compiled functions
+found in the Prophets/Writings, every link recorded: carrying
+(Jeremiah 17 re-states citing its seat + Nehemiah 13 enforcement
+run; LEMMA SCAN found the exact six-verse set in one pass — the
+zero-report law fired first on a bad probe and was obeyed);
+audit-waiver (II Kings 12:16 + 22:7 the same function called twice
+near-verbatim; Ezra 8:34 number-and-weight; Bava Batra 9a compiles
+it); shekel (Nehemiah 10:33 THIRD-shekel = the equality invariant's
+parameter drift; II Chronicles 24:14 = Mishnah Shekalim 4:4's
+surplus row citing Chronicles DIRECT); capital procedure (Naboth =
+corrupt-run edge case; Sifra Emor wires it to Leviticus 24's
+blasphemer — the call-site's midrash already cites the trial);
+precedent (Jeremiah 26:18 quotes Micah 3:12 verbatim in court);
+the instrument (Nehemiah 8:8 MEFORASH = targum charter, Onkelos'
+clear-script root). THE TAXONOMY: Torah demonstrates by SPEC,
+Prophets/Writings by RUN (seven record types). Records: THE_WORLD
+idea log, THE_BRIEFING entry (design upgrade), this doc. ALSO this
+morning (owner asks): The_Briefing.epub re-baked;
+The_Architecture_After_Two_Books.md + .epub written (the
+first-two-books architecture book answering his
+Mishnah-writes-functions theory). ALL UNCOMMITTED pending his word.
+
+## ⚠⚠ COMPACTION POINT #37 (2026-09-02, owner: "I need to compact get
+## ready") — READ #36 ABOVE, then the two 2026-09-02 MILESTONE blocks
+## (they carry the full detail); THE_STEPS Step 4 + Step 9 rereads
+## (standing rule, first sitting after ANY compaction). This block is
+## the session index + the next task.
+THE SESSION'S ARC since #36 (owner-worded throughout; committed with
+this block per the get-ready precedent):
+(1) The_Briefing.epub BAKED at the owner's ask (md_to_epub.py house
+tool, repo root), re-baked after the book closed.
+(2) VAYAKHEL-PEKUDEI RUN WHOLE (owner: "ok run it") — THE BOOK OF
+EXODUS CLOSED AT FULL RULE END TO END: six units derived (corpus
+117), 36 claims, six ledgers ALL COMPLETE, delegated FULL RULE
+stamps, exam round 9 (4 bare rows, 4 modules R-316..R-319, 8/8;
+329/329 across NINE exams; NO findings — the derivation anticipated
+every docket row), hash 8b8fff1fa28953af UNMOVED. Full recipe +
+crowns in the first MILESTONE 2026-09-02 block above. Records:
+REPORT_VAYAKHEL_PEKUDEI.md, EXAM_LEDGER round 9, THE_STEPS round
+entry, THE_BRIEFING scoreboard (Exodus DONE).
+(3) The_Architecture_After_Two_Books.md + .epub WRITTEN (owner ask:
+"pub file of what we know about the first two books... the Mishnah
+writes functions the Torah calls") — the answer: Torah DEMONSTRATES,
+Mishnah COMPILES, Talmud LINKS, and the Torah holds CALL-SITES
+(Lev 24 the first recorded call); the nose-predicate specimen walked
+end to end; scoreboard 329/329.
+(4) THE COMPLETE AUDIT + CANON HUNT (owner: "complete audit... take
+some Mishnah functions, look for them in the Hebrew Bible") — audit
+ALL GREEN (117/117 preflights after the 95-count chase; verify_text
+117/117; 2,134 claims 0 FAILED; two INSTRUMENT FIXES: verify_claims
+no-check/unknown-type reporting, changelog_gate now counts
+derivation_log entries; five honest thin spots recorded); CANON HUNT
+CONFIRMED 5-FOR-5 — the Prophets/Writings are the functions' RUNTIME
+LOG (7 record types; lemma scanner found the carrying function's
+exact 6-verse set blind; the zero-report law fired on the first bad
+probe and was obeyed; full-Tanakh lemma DB at
+elijah_docket/tanakh.sqlite). Records: reviews/AUDIT_2026-09-02.md,
+World/step9/REPORT_CANON_HUNT.md, THE_WORLD idea log, THE_BRIEFING
+entry, demonstrate-compile-link memory EXTENDED. Detail in the
+second MILESTONE 2026-09-02 block above.
+(5) The_Audit_And_The_Scan.md + .epub WRITTEN (owner ask: "narrative
+report in the epub format, as much detail as possible") — the day as
+a story, verses quoted, ~4,400 words.
+STANDING AT THIS POINT: corpus 117 units (Genesis + Exodus complete,
+FULL RULE end to end); hash 8b8fff1fa28953af; NINE exams 329/329;
+catalog R-319 / 124 compiled rules; vocabulary 145 dims; queues
+EMPTY; STAMP_LEDGER 15 rows; four epubs at root (Briefing,
+Architecture, Audit+Scan, plus the older two); THE_STEPS /
+THE_BRIEFING / THE_WORLD all current.
+⚠ THE NEXT TASK — awaiting the owner's word (no standing order):
+LEVITICUS opens the third book. Recipe: Sifra spine per
+logic/CORE_SHELF.md + Onkelos, parashah-grain (Vayikra = Lev 1-5 the
+first portion; check draft units via ls logic/units | grep lev_);
+derive-then-examine rhythm as proven; LEV 24 = THE FIRST RECORDED
+CALL INTO THE MACHINE (the blasphemer — the call-site test; Sifra
+Emor already cites Naboth per the canon hunt; the pedigree
+convention EX38-07 waits for it). Pre-check whether lev_ drafts
+exist and Sifra is in export_texts ('Sifra, Vayikra Dibbura
+d'Nedavah...' ref format — VERIFY before extracting). ALSO OPEN:
+~11 Genesis Talmud exam blocks (162 rows); Tosefta + Jerusalem
+Talmud; Step 9 site visibility; next TorahSim sync (one-way, we
+initiate); the no-check claims ruling (audit thin spot 4); the
+second-source docket membership check (thin spot 2).

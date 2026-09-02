@@ -1689,3 +1689,8 @@ RULES.update(_tv.build(V))
 # cycle). 15 rules in kitisa_rules.py.
 import kitisa_rules as _kt
 RULES.update(_kt.build(V))
+
+# ---- the Vayakhel-Pekudei exam's modules (2026-09-02, round 9 — the
+# book of Exodus' closing cycle). 4 rules in vayakhel_pekudei_rules.py.
+import vayakhel_pekudei_rules as _vp
+RULES.update(_vp.build(V))

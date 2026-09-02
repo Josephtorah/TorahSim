@@ -1,0 +1,76 @@
+# THE VAYAKHEL-PEKUDEI EXAM (round 9 — the book of Exodus' closing
+# cycle, derived and examined in one sitting 2026-09-02). Membership:
+# the 4 bare Mishnah rows citing Exod 35:1-40:38 (3 read in full, 1
+# credited to the backfill round's read under the guards — its
+# eve-of-Shabbat leg opened fresh here). Read-source record:
+# logic/oral_triage/vayakhel_pekudei_exam_mishnah_2026-09-02.md.
+# Provenance: mishnah + exodus_anchor.
+
+- module: capital_schedule
+  tractate: Sanhedrin
+  oracle: Mishnah Sanhedrin 4:1
+  exodus_anchor: {unit: exo_35_shabbat_donate, ref: Exod.35.3,
+    claims: [EX35-01]}
+  cases:
+  - id: San_4_1_eve
+    input: {query: capital_trial_eve, day: eve_of_sabbath}
+    expected: {verdict: not_tried, basis: capital cases conclude for
+        conviction only on the morrow — and the morrow is Shabbat,
+        where the fire-ban of our verse blocks the court}
+    class: B
+  - id: San_4_1_conclude
+    input: {query: verdict_conclusion, case_type: capital}
+    expected: {verdict: acquit_same_day_convict_next}
+    class: B
+- module: shabbat_carryings
+  tractate: Shevuot
+  oracle: Mishnah Shevuot 1:1
+  exodus_anchor: {unit: exo_35_36_work_start, ref: Exod.36.6,
+    claims: [EX36-05]}
+  cases:
+  - id: Shev_1_1_carryings
+    input: {query: carrying_out_count}
+    expected: {verdict: two_that_are_four, basis: the carryings-out of
+        Shabbat — the camp-wide stop order on bringing from the tents
+        is the carrying labor's own anchor}
+    class: B
+- module: priest_shekel_duty
+  tractate: Shekalim
+  oracle: Mishnah Shekalim 1:4
+  exodus_anchor: {unit: exo_38_court_inventory, ref: Exod.38.25-26,
+    claims: [EX38-04]}
+  cases:
+  - id: Shek_1_4_priest
+    input: {query: priest_shekel}
+    expected:
+      verdict: [does_not_sin, sins_if_not_paying]
+      basis: Ben Buchri's Yavneh testimony against Rabban Yochanan
+        ben Zakkai — the priests' own exposition of the
+        wholly-burned meal-offering held as their shield
+    class: B
+- module: tree_products_wicks
+  tractate: Shabbat
+  oracle: Mishnah Shabbat 2:3
+  exodus_anchor: {unit: exo_40_erect_fill, ref: Exod.40.19,
+    claims: [EX40-04]}
+  cases:
+  - id: Shab_2_3_tree
+    input: {query: wick_permitted, material: tree_product}
+    expected: {verdict: not_lit}
+    class: B
+  - id: Shab_2_3_flax
+    input: {query: wick_permitted, material: flax}
+    expected: {verdict: lit, basis: flax alone — the spread TENT of
+        our verse names the linen coverings a tent}
+    class: B
+  - id: Shab_2_3_tent
+    input: {query: tent_uncleanness, material: tree_product}
+    expected: {verdict: only_flax_susceptible}
+    class: B
+  - id: Shab_2_3_folded
+    input: {query: wick_permitted, material: folded_unsinged_cloth}
+    expected:
+      verdict: [unclean_not_lit, clean_and_lit]
+      basis: R. Eliezer against R. Akiva on the folded, unsinged
+        cloth wick
+    class: B

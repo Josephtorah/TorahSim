@@ -451,6 +451,28 @@ holds, as data, the law that authorizes its own architecture.
 Catalog R-301..R-315; 120 compiled rules. Full record:
 World/step9/REPORT_KITISA.md.
 
+THE VAYAKHEL-PEKUDEI ROUND RAN (2026-09-02, owner: "ok run it") —
+the rhythm's sixth cycle and THE BOOK OF EXODUS' CLOSING SITTING:
+SIX units derived (corpus 117; Onkelos 214 verses + the whole
+Tanchuma Vayakhel AND Pekudei, both recensions, 167 sections ending
+at the Buber colophon "the End of the Book of Exodus"), stamped
+FULL RULE, and examined in one pass — EXODUS 1-40 NOW FULL RULE END
+TO END, hash 8b8fff1fa28953af unmoved through everything. The 4
+bare Mishnah rows (3 read, 1 backfill credit quick-looked), 4
+modules, 8/8 first run; 329/329 across all nine exams. NO FINDINGS:
+the derivation anticipated every docket row — each was cited into
+its unit's seat before the exam ran. HEADLINE: THE BOOKS ARE PART
+OF THE MACHINE — the execution chapters seat an audit constitution
+(the two-signatory rule with Itamar, the treasury dress-code,
+number-and-weight with the weights written, the missing 1,775
+reconciled by looking up at the hooks, the as-the-LORD-commanded
+refrain as the divine countersignature on every line), the
+build-order dispute survives two recensions deep with the roles
+swapped, the house RAISES ITSELF to Moses' name, and the book ends
+with the machine LIVE (the cloud-and-fire travel protocol running).
+Catalog R-316..R-319; 124 compiled rules. Full record:
+World/step9/REPORT_VAYAKHEL_PEKUDEI.md.
+
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed
 on the spot: logic/findings/FINDINGS_QUEUE.md (append-only). The owner

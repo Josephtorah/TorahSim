@@ -1432,3 +1432,66 @@ the case shelf makes it runnable; no new machinery was needed).
 Tetzaveh is the next probe: garments — more spec, plus the first
 PERSONNEL install (the priesthood clothed after its duty was already
 assigned at 27:20-21).
+
+**2026-09-02 — WHAT THE EXECUTION CHAPTERS TAUGHT (Vayakhel-Pekudei
+derived + examined; EXODUS CLOSED at FULL RULE).** Three
+architecture facts from the book's last sitting. (1) THE BOOKS ARE
+PART OF THE MACHINE: the "repetition" chapters are the AUDIT LAYER —
+a constitution for public money (no office under TWO signatories,
+and Moses, exempted by God's own character reference, declines the
+exemption and reckons through Itamar; the treasury dress-code;
+number-and-weight with the weights WRITTEN; the missing 1,775
+reconciled against the physical inventory — the ledger gap closed
+by looking UP at the hooks), and the eighteen-fold
+as-the-LORD-commanded refrain decoded as the divine COUNTERSIGNATURE
+on each audit line. A simulation that publishes its own verified
+books is inside the spec, not beside it. (2) THE FINAL RAISE IS THE
+OWNER'S: every craftsman delivers parts ("here is my hook, my board,
+my bolt") and the house FALLS for every hand until the reserved
+step — busy your hands, IT RISES OF ITSELF, and the raising is
+written to the man's name (tekim / hukam / va-yakem); even the
+Temple stands only when the LORD builds the house. Integration is
+not a component. (3) THE SCHEMA TABLE IS EXPLICIT: Midrash
+Tanchuma, Pekudei 2:3 lays tabernacle=creation day by day and maps
+the three closing verbs one to one (completed/blessed/sanctified) —
+the Genesis-as-schema doctrine is the tradition's own table, not
+this project's inference; and the book's END STATE is a running
+signal (cloud by day, vision of fire by night, in all their
+journeys): Exodus terminates with the machine LIVE, handing a
+runtime — not a halt — to the book of Numbers.
+
+**2026-09-02 — THE CANON HUNT: THE PROPHETS AND WRITINGS ARE THE
+RUNTIME LOG (owner's hypothesis, confirmed five for five).** Ordered
+in the full audit ("take some Mishnah functions, look for them in
+the Hebrew Bible — I suspect these functions will be found"). Five
+compiled modules hunted across the non-Torah canon via the recorded
+link-web + the full-Tanakh lemma database; all five found, every
+link the tradition's own: the carrying function (Jeremiah 17
+re-states it citing its Torah seat; Nehemiah 13 RUNS it — gates
+shut, guards posted; the lemma scanner found the complete six-verse
+set in one pass); the audit-waiver function (II Kings 12:16 and II
+Kings 22:7 — the SAME function called twice a century apart,
+near-verbatim signature; Bava Batra 9a compiles it; Ezra 8:34 runs
+full number-and-weight); the shekel machinery (Nehemiah 10:33's
+THIRD-shekel = the equality invariant's parameter drift, live in
+the Writings' own ink; II Chronicles 24:14 = Mishnah Shekalim 4:4's
+surplus-disposition, a bare Mishnah row citing Chronicles direct);
+capital procedure (Naboth = the corrupt-run edge case — two
+witnesses, the blessed-God euphemism, extramural stoning, forms
+valid and content false; Sifra Emor wires Naboth to Leviticus 24's
+blasphemer — the call-site's own midrash already cites the trial);
+precedent citation (Jeremiah 26:18 — the elders quote Micah 3:12
+VERBATIM as precedent for acquittal: document_precedent running in
+a Prophets transcript); the reading instrument (Nehemiah 8:8's
+MEFORASH = the targum's charter verse, the same clear-script root
+as Onkelos' token in Exod 39). THE TAXONOMY: the Torah demonstrates
+by SPEC, the Prophets/Writings demonstrate by RUN — seven record
+types measured (re-statement, enforcement log, repeated call,
+runtime trace, parameter drift, corrupt-run edge case,
+precedent/instrument charter). BUILD CONSEQUENCE: pass 1 over the
+remaining 22 books reads a TEST LOG of functions the Torah pass
+already compiles — cheap to derive, high in confirmation — and the
+piece-together method (recorded links + lemma scan) assembles a
+function's whole canon career TODAY, before derivation. Full
+record: World/step9/REPORT_CANON_HUNT.md; the audit at
+reviews/AUDIT_2026-09-02.md.

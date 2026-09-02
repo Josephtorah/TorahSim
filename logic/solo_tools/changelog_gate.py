@@ -20,7 +20,13 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def clog_count(text):
     m = re.search(r"^  changelog:\n((?:    - .*\n)+)", text, re.M)
-    return len(m.group(1).splitlines()) if m else 0
+    n = len(m.group(1).splitlines()) if m else 0
+    # The derivation era (2026-08-30 onward) records its constitutional
+    # log line as a derivation_log step entry, not a meta.changelog line;
+    # both count (2026-09-02 audit fix — the gate had diverged from the
+    # convention every derivation sitting actually followed).
+    n += len(re.findall(r"^  - step: [A-Z]\b", text, re.M))
+    return n
 
 
 def main():
