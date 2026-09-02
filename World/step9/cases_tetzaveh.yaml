@@ -1,0 +1,155 @@
+# THE TETZAVEH EXAM (owner: "Go" on the parashah rhythm) — the Step 9
+# round on the parashah derived the same sitting (exo_28/exo_29,
+# stamped FULL RULE under the delegation). Membership: the 9 bare
+# Mishnah rows citing Exod 28:1-29:46 (8 read in full, 1 backfill
+# credit) + 1 neighbor. Read-source record:
+# logic/oral_triage/tetzaveh_exam_mishnah_2026-09-01.md.
+# Method: THE_STEPS Step 9 — exam first, classify, findings filed
+# (F-036..F-040), auto-seated per the standing law, compile, run.
+# Provenance: mishnah + exodus_anchor (the same-sitting Tetzaveh
+# seats).
+
+- module: garment_census
+  tractate: Yoma
+  oracle: Mishnah Yoma 7:5
+  exodus_anchor: {unit: exo_28_priest_garments, ref: Exod.28.4,
+    claims: [EX28-02]}
+  cases:
+  - id: Yoma_7_5_high
+    input: {query: garment_count, bearer: high_priest}
+    expected: {verdict: eight}
+    class: B
+  - id: Yoma_7_5_common
+    input: {query: garment_count, bearer: common_priest}
+    expected: {verdict: four}
+    class: B
+- module: oracle_consultation
+  tractate: Yoma
+  oracle: Mishnah Yoma 7:5
+  exodus_anchor: {unit: exo_28_priest_garments, ref: Exod.28.30,
+    claims: [EX28-09, EX28-03]}
+  cases:
+  - id: Yoma_7_5_king
+    input: {query: oracle_access, petitioner: king}
+    expected: {verdict: consulted}
+    class: C_seated  # F-036 -> EX28-09
+  - id: Yoma_7_5_court
+    input: {query: oracle_access, petitioner: court}
+    expected: {verdict: consulted}
+    class: C_seated
+  - id: Yoma_7_5_community
+    input: {query: oracle_access, petitioner: community_need}
+    expected: {verdict: consulted}
+    class: C_seated
+  - id: Yoma_7_5_private
+    input: {query: oracle_access, petitioner: private_person}
+    expected: {verdict: not_consulted}
+    class: C_seated
+- module: temple_officers
+  tractate: Shekalim
+  oracle: Mishnah Shekalim 5:2 (with 5:1's roster as frame)
+  exodus_anchor: {unit: exo_28_priest_garments, ref: Exod.28.5,
+    claims: [EX28-10]}
+  cases:
+  - id: Shek_5_2_minimum
+    input: {query: fiscal_minimum}
+    expected: {verdict: two_officers, basis: three treasurers, seven
+        trustees, never fewer than two over public money}
+    class: C_seated  # F-037 -> EX28-10
+- module: plate_propitiation
+  tractate: Zevachim
+  oracle: Mishnah Zevachim 8:12
+  exodus_anchor: {unit: exo_28_priest_garments, ref: Exod.28.38,
+    claims: [EX28-11, EX28-06]}
+  cases:
+  - id: Zev_8_12_impure
+    input: {query: plate_propitiates, offering_defect: impurity}
+    expected: {verdict: propitiates}
+    class: C_seated  # F-038 -> EX28-11
+  - id: Zev_8_12_exited
+    input: {query: plate_propitiates, offering_defect: exited}
+    expected: {verdict: does_not_propitiate}
+    class: C_seated
+  - id: Zev_8_12_two_cups
+    input: {query: blood_two_cups, event: one_cup_exited}
+    expected: {verdict: inner_fit}
+    class: B
+- module: stone_engraving
+  tractate: Avot
+  oracle: Mishnah Pirkei Avot 5:6 (census held at EX16-15); bridge
+    Babylonian Talmud Sotah 48b
+  exodus_anchor: {unit: exo_28_priest_garments, ref: Exod.28.20,
+    claims: [EX28-12]}
+  cases:
+  - id: Avot_5_6_shamir
+    input: {query: stone_engraving_method}
+    expected: {verdict: shamir, basis: in their fullness — whole,
+        uncut; the twilight creation assigned here}
+    class: C_seated  # F-039 -> EX28-12
+- module: bell_adornment
+  tractate: Shabbat
+  oracle: Mishnah Shabbat 6:9
+  exodus_anchor: {unit: exo_28_priest_garments, ref: Exod.28.34,
+    claims: [EX28-05]}
+  cases:
+  - id: Shab_6_9_bells
+    input: {query: sabbath_wearing, item: bells, wearer: princes_sons}
+    expected: {verdict: permitted, basis: and anyone — the sages spoke
+        of the prevalent case}
+    class: B
+- module: grooming_labors
+  tractate: Shabbat
+  oracle: Mishnah Shabbat 10:6
+  exodus_anchor: {unit: exo_28_priest_garments, ref: Exod.28.14,
+    claims: [EX28-01]}
+  cases:
+  - id: Shab_10_6_nails
+    input: {query: grooming_liability, via: hand_or_teeth}
+    expected: {verdict: [liable, rabbinic_only],
+      dispute: R. Eliezer vs the sages}
+    class: B
+- module: waving_procedure
+  tractate: Menachot
+  oracle: Mishnah Menachot 5:6
+  exodus_anchor: {unit: exo_29_investiture, ref: Exod.29.27,
+    claims: [EX29-13, EX29-04]}
+  cases:
+  - id: Men_5_6_motions
+    input: {query: waving_motions}
+    expected: {verdict: four_motions, basis: COMPUTED — the verse's
+        two verbs each doubled}
+    class: C_seated  # F-040 -> EX29-13
+  - id: Men_5_6_breast_thigh
+    input: {query: waving_required, item: breast_thigh}
+    expected: {verdict: required}
+    class: C_seated
+  - id: Men_5_6_showbread
+    input: {query: waving_required, item: showbread}
+    expected: {verdict: not_required, basis: neither waving nor
+        bringing-near}
+    class: C_seated
+  - id: Men_5_6_geography
+    input: {query: waving_geography}
+    expected: {verdict: east_then_west}
+    class: C_seated
+- module: sacred_eating_states
+  tractate: Pesachim
+  oracle: Mishnah Pesachim 8:8
+  exodus_anchor: {unit: exo_29_investiture, ref: Exod.29.33,
+    claims: [EX29-06]}
+  cases:
+  - id: Pes_8_8_onen_pesach
+    input: {query: eating_eligibility, state: onen, offering: pesach}
+    expected: {verdict: permitted_evening, basis: immerses and eats
+        his Passover at evening}
+    class: B
+  - id: Pes_8_8_onen_kodashim
+    input: {query: eating_eligibility, state: onen,
+      offering: other_sacred}
+    expected: {verdict: barred}
+    class: B
+  - id: Pes_8_8_convert
+    input: {query: convert_pesach_eve}
+    expected: {verdict: [eats_at_evening, barred_seven_days],
+      dispute: Beit Shammai vs Beit Hillel}
+    class: B

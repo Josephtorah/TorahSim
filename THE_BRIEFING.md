@@ -14,17 +14,27 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   baked into an epub.
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
-## SCOREBOARD (as of 2026-09-01)
+## SCOREBOARD (as of 2026-09-01, latest)
 
 - Genesis: DONE — derived, read, examined, stamped (73 units).
-- Exodus: chapters 1–27 derived AND examined end to end (Terumah the
-  latest, done whole in one day). Remaining: Tetzaveh, Ki Tisa,
-  Vayakhel, Pekudei — 13 chapters, about a third of the book.
-- The corpus: 104 frozen units, one world, fingerprint unmoved.
-- The exam engine: six rounds, 267 cases, 267 answered correctly,
-  85 compiled rules, vocabulary of 135 registered input dimensions.
+- Exodus: chapters 1–34 derived AND examined end to end (Ki Tisa the
+  latest — five chapters in one sitting: the half-shekel, the golden
+  calf, the second tablets). Remaining: Vayakhel and Pekudei — six
+  chapters, the execution of the specs.
+- The corpus: 111 frozen units, one world, fingerprint unmoved.
+- The exam engine: eight rounds, 321 cases, 321 answered correctly,
+  120 compiled rules, vocabulary of 144 registered input dimensions.
 - Stamps: administered by the machine under your delegation, every
   delegated stamp labeled as such forever.
+- Newest design fact (Ki Tisa): the machine's own instruments are
+  themselves regulated by the law it holds — a Mishnah row rules
+  that the calf's second account is read in public but NOT
+  translated (a law about the very translation this project reads
+  with), and the covenant at 34:27 is cut "by the SAYING of these
+  words": Scripture written, the Mishnah and Talmud oral, and
+  reversing the channels voids the covenant — the charter of this
+  project's whole written-layer-tested-by-oral-cases method, now
+  held inside the machine as data.
 
 ## ENTRIES (newest first)
 

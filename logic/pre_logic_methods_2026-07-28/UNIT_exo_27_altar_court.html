@@ -215,6 +215,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(oil_clause, crushed_for_light)</span><br><span class="gloss">= WITNESS-READ(oil-clause, crushed-for-light)</span><br>THE GRADE HAS A SCOPE [claim EX27-03]. Crushed-pure oil is the LAMP&#x27;S requirement, not the meal-offerings&#x27; (Mishnah Menachot 8:5 on this clause) — a strictness scoped by its own purpose-word le-anhara, &#x27;for the light&#x27; (Onkelos Exod 27:20).
 </td><td>—</td><td class='cite'>Mishnah Menachot 8:5, Onkelos Exod 27</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(lamp_clauses, not_need_architecture)</span><br><span class="gloss">= WITNESS-READ(lamp-clauses, not-need-architecture)</span><br>THE LIGHT FLOWS OUTWARD [claim EX27-07]. The spine&#x27;s lamp sections argue from the architecture itself that the light is not needed but granted: the menorah stands OUTSIDE the veil, at the table&#x27;s RIGHT where kings keep their lamp at the left (quoting 26:35&#x27;s stations), and the Temple windows are inverted — narrow within, wide without — so the light leaves the house to the world (Midrash Tanchuma, Tetzaveh 2; the not-need parables of Midrash Tanchuma, Tetzaveh 4). R. Chanina segan ha-kohanim&#x27;s first-person testimony rides: the lamp lit at the year&#x27;s head burned the whole year, and Jerusalem&#x27;s courtyards used its light (Midrash Tanchuma, Tetzaveh 3). Seated from the Tetzaveh sitting under the amended spine, auto-seat law.
+</td><td>—</td><td class='cite'>Midrash Tanchuma, Tetzaveh 2, Midrash Tanchuma, Tetzaveh 3, Midrash Tanchuma, Tetzaveh 4</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.</div>
 </div>
@@ -261,6 +263,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <div class="note"><span class="badge tier-o">dual_track</span> <b>Mekhilta</b><br><i>see Hebrew sample in Data/mekhilta_he.json</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
 <div class="note"><span class="badge tier-o">dual_track</span> <b>Mekhilta</b><br><i>see Hebrew sample in Data/mekhilta_he.json</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
 <div class="note"><span class="badge tier-o">dual_track</span> <b>Mekhilta</b><br><i>see Hebrew sample in Data/mekhilta_he.json</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<div class="note"><span class="badge tier-o"></span> <b></b><br></div>
 <div class="note"><span class="badge tier-o"></span> <b></b><br></div>
 <div class="note"><span class="badge tier-o"></span> <b></b><br></div>
 <div class="note"><span class="badge tier-o"></span> <b></b><br></div>
@@ -1286,6 +1289,10 @@ m.step(&quot;Exod.27.20&quot;)
 # installed
 m.witness_read(&quot;oil_clause&quot;, &quot;crushed_for_light&quot;,
                 cites=[&quot;Mishnah Menachot 8:5&quot;, &quot;Onkelos Exod 27&quot;])
+# witness-tier presupposed read: not_need_architecture on lamp_clauses —
+# read, not installed
+m.witness_read(&quot;lamp_clauses&quot;, &quot;not_need_architecture&quot;,
+                cites=[&quot;Midrash Tanchuma, Tetzaveh 2&quot;, &quot;Midrash Tanchuma, Tetzaveh 3&quot;, &quot;Midrash Tanchuma, Tetzaveh 4&quot;])
 
 # -------------------------- Exod.27.21 · ETNACHTA_SPLIT --------------------
 # באהל מועד מחוץ לפרכת אשר על העדת יערך אתו אהרן ובניו מערב עד … חקת עולם
@@ -1315,7 +1322,7 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;altar_spec&#x27;, &#x27;engineering_objection&#x27;), (&#x27;ash_vessels&#x27;, &#x27;second_service&#x27;), (&#x27;hangings_clause&#x27;, &#x27;legal_boundary&#x27;), (&#x27;court_measure&#x27;, &#x27;enclosure_standard&#x27;), (&#x27;oil_clause&#x27;, &#x27;crushed_for_light&#x27;), (&#x27;lamp_duty&#x27;, &#x27;evening_to_morning&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;altar_spec&#x27;, &#x27;engineering_objection&#x27;), (&#x27;ash_vessels&#x27;, &#x27;second_service&#x27;), (&#x27;hangings_clause&#x27;, &#x27;legal_boundary&#x27;), (&#x27;court_measure&#x27;, &#x27;enclosure_standard&#x27;), (&#x27;oil_clause&#x27;, &#x27;crushed_for_light&#x27;), (&#x27;lamp_clauses&#x27;, &#x27;not_need_architecture&#x27;), (&#x27;lamp_duty&#x27;, &#x27;evening_to_morning&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Terumah 11&#x27;]
     assert all(&#x27;engineering_objection&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;altar_spec&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -1331,7 +1338,10 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Mishnah Menachot 8:5&#x27;, &#x27;Onkelos Exod 27&#x27;]
     assert all(&#x27;crushed_for_light&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;oil_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Mishnah Eruvin 10:15&#x27;, &#x27;Onkelos Exod 27&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Tetzaveh 2&#x27;, &#x27;Midrash Tanchuma, Tetzaveh 3&#x27;, &#x27;Midrash Tanchuma, Tetzaveh 4&#x27;]
+    assert all(&#x27;not_need_architecture&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;lamp_clauses&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Mishnah Eruvin 10:15&#x27;, &#x27;Onkelos Exod 27&#x27;]
     assert all(&#x27;evening_to_morning&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;lamp_duty&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)

@@ -175,6 +175,10 @@ m.step("Exod.27.20")
 # installed
 m.witness_read("oil_clause", "crushed_for_light",
                 cites=["Mishnah Menachot 8:5", "Onkelos Exod 27"])
+# witness-tier presupposed read: not_need_architecture on lamp_clauses —
+# read, not installed
+m.witness_read("lamp_clauses", "not_need_architecture",
+                cites=["Midrash Tanchuma, Tetzaveh 2", "Midrash Tanchuma, Tetzaveh 3", "Midrash Tanchuma, Tetzaveh 4"])
 
 # -------------------------- Exod.27.21 · ETNACHTA_SPLIT --------------------
 # באהל מועד מחוץ לפרכת אשר על העדת יערך אתו אהרן ובניו מערב עד … חקת עולם
@@ -204,7 +208,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('altar_spec', 'engineering_objection'), ('ash_vessels', 'second_service'), ('hangings_clause', 'legal_boundary'), ('court_measure', 'enclosure_standard'), ('oil_clause', 'crushed_for_light'), ('lamp_duty', 'evening_to_morning')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('altar_spec', 'engineering_objection'), ('ash_vessels', 'second_service'), ('hangings_clause', 'legal_boundary'), ('court_measure', 'enclosure_standard'), ('oil_clause', 'crushed_for_light'), ('lamp_clauses', 'not_need_architecture'), ('lamp_duty', 'evening_to_morning')]
     assert m.WITNESS_READS[0]["cites"] == ['Midrash Tanchuma, Terumah 11']
     assert all('engineering_objection' not in f for f in m.WORLD["facts"])
     assert 'altar_spec' not in m.WORLD["witnessed"]
@@ -220,7 +224,10 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[4]["cites"] == ['Mishnah Menachot 8:5', 'Onkelos Exod 27']
     assert all('crushed_for_light' not in f for f in m.WORLD["facts"])
     assert 'oil_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Eruvin 10:15', 'Onkelos Exod 27']
+    assert m.WITNESS_READS[5]["cites"] == ['Midrash Tanchuma, Tetzaveh 2', 'Midrash Tanchuma, Tetzaveh 3', 'Midrash Tanchuma, Tetzaveh 4']
+    assert all('not_need_architecture' not in f for f in m.WORLD["facts"])
+    assert 'lamp_clauses' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Mishnah Eruvin 10:15', 'Onkelos Exod 27']
     assert all('evening_to_morning' not in f for f in m.WORLD["facts"])
     assert 'lamp_duty' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

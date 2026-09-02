@@ -71,3 +71,28 @@
 # SCENARIOS GREEN, gloss_lint 0, CORPUS_TRUTH regenerated (standing
 # 992 → 996, the four witness ops) with hash 8b8fff1fa28953af unmoved.
 # Queue EMPTY.
+
+| exo_27_altar_court | delegated FULL RULE (this sitting) | +EX27-07 | 2026-09-01 | Tetzaveh appendix seat (the lamp sections at 27:20-21) |
+
+# ✅ RE-AFFIRMED same sitting under the delegation (2026-09-01): the
+# row above — ritual re-run COMPLETE (corpus 106), preflight ALL
+# SCENARIOS GREEN, gloss_lint 0, hash 8b8fff1fa28953af unmoved. Queue
+# EMPTY.
+
+| exo_28_priest_garments | delegated FULL RULE (this sitting) | +EX28-09..12 | 2026-09-01 | Step 9 Tetzaveh exam seats (F-036..F-039) |
+| exo_29_investiture | delegated FULL RULE (this sitting) | +EX29-13 | 2026-09-01 | Step 9 Tetzaveh exam seat (F-040) |
+
+# ✅ RE-AFFIRMED same sitting under the delegation (2026-09-01): the
+# two rows above — rituals re-run COMPLETE (corpus 106; one cite-gate
+# catch mid-flight: a regex-swallowed prose phrase in EX29-13's cites,
+# removed, re-run green), preflights ALL SCENARIOS GREEN, gloss_lint
+# 0, hash 8b8fff1fa28953af unmoved. Queue EMPTY.
+
+| exo_30_incense_shekel | delegated FULL RULE (this sitting) | +EX30-09, EX30-10 | 2026-09-01 | Step 9 Ki Tisa exam seats (F-041, F-042) |
+| exo_31_craftsmen_shabbat | delegated FULL RULE (this sitting) | +EX31-05 | 2026-09-01 | Step 9 Ki Tisa exam seat (F-043) |
+| exo_34_second_tablets | delegated FULL RULE (this sitting) | +EX34-07 | 2026-09-01 | Step 9 Ki Tisa exam seat (F-044) |
+
+# ✅ RE-AFFIRMED same sitting under the delegation (2026-09-01): the
+# three rows above — rituals re-run COMPLETE (corpus 111), preflights
+# ALL SCENARIOS GREEN, gloss_lint 0, hash 8b8fff1fa28953af unmoved.
+# Queue EMPTY.

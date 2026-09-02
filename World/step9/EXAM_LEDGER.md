@@ -142,3 +142,63 @@ R-281..R-291; 85 compiled rules. HEADLINE: THE ARCHITECTURE RUNS AS
 LAW — a building spec derived in the morning was answering Sabbath-
 enclosure, purity, and Temple-procedure cases by the afternoon, and
 the exam's hardest rows were already sitting in the claims by name.
+
+## ROUND 7 — THE TETZAVEH EXAM (2026-09-01, owner: "Go" on the
+## parashah rhythm)
+The rhythm's fourth cycle: Tetzaveh derived (exo_28 + exo_29, corpus
+104 → 106), stamped under the delegation, and EXAMINED inside the
+same sitting. MEMBERSHIP: the 9 bare Mishnah rows citing Exod 28-29
+(8 opened in full, Chagigah 3:8 credited to the backfill with its
+Tetzaveh leg quick-looked) + 1 neighbor (Shekalim 5:1's officer
+roster). Reading ledger:
+logic/oral_triage/tetzaveh_exam_mishnah_2026-09-01.md. FINDINGS
+F-036..F-040 filed AND auto-seated (EX28-09 the ORACLE'S ACCESS LIST
+— the Urim consulted only in the eight garments and only for king /
+court / community-need; EX28-10 fiscal plurality at 28:5's own plural
+take-verb; EX28-11 the plate's jurisdiction — propitiates the impure,
+not the taken-out; EX28-12 the shamir at the stones-in-their-fullness;
+EX29-13 the waving's four motions computed from 29:27's own two
+verbs) — 5 claims / 5 ops / 2 units; rituals COMPLETE, preflights
+green (one cite-gate catch: a regex-swallowed prose phrase in
+EX29-13's cites, removed, re-run green), hash 8b8fff1fa28953af
+UNMOVED; stamps re-affirmed under the delegation. COMPILED: 9 modules
+(tetzaveh_rules.py), 20 case rows, 20/20 FIRST RUN; 287/287 across
+all SEVEN exams. Catalog R-292..R-300; 105 compiled rules. Vocabulary
+135 → 138 (3 new dims, 13 query values, 8 value-appends). THE
+HEADLINE: THE PERSONNEL LAYER EXAMINES LIKE THE ARCHITECTURE — the
+morning's derivation had already seated the judgment organ, the
+acceptance function, and the waving verbs; the afternoon's Mishnah
+rows supplied their access list, their jurisdiction, and their
+computed motions. The call-site design gained its authorization
+layer: the oracle interface (EX25-05, EX28-03, EX29-09) now carries
+WHO MAY ASK.
+
+## ROUND 8 — THE KI TISA EXAM (2026-09-01, the rhythm's fifth cycle)
+The largest single-sitting cycle yet: FIVE units derived (corpus 106
+→ 111 — Onkelos 149 verses + Midrash Tanchuma Ki Tisa whole, both
+recensions), stamped under the delegation, and EXAMINED the same
+sitting. MEMBERSHIP: 22 bare Mishnah rows citing Exod 30-34 (19
+read, 3 credits: Sanhedrin 7:6, Makkot 3:2, Pesachim 5:4 —
+quick-looked). Reading ledger:
+logic/oral_triage/kitisa_exam_mishnah_2026-09-01.md. FINDINGS
+F-041..F-044 auto-seated (EX30-09 the KALBON — the half-coin's
+transaction-fee law; EX30-10 the EQUALITY INVARIANT — the
+denomination floats, all hands stay equal: the case shelf stating
+the conversion-layer Onkelos performs at the verse; EX31-05 the
+GREAT PRINCIPLE's liability-aggregation algebra; EX34-07 the
+PRECEDENCE TABLE quoting this corpus' own Exod 21:8, with a
+recorded historical flip) — 4 claims / 4 ops / 3 units; rituals
+COMPLETE, preflights green, hash 8b8fff1fa28953af UNMOVED.
+COMPILED: 15 modules (kitisa_rules.py), 34 cases, 34/34 FIRST RUN;
+321/321 across all EIGHT exams. Catalog R-301..R-315; 120 compiled
+rules. Vocabulary 138 → 144 (6 new dims; the collision guard FIRED
+on 'born' — an existing dimension — and 'pair'/'moment' were
+appends: the institutionalized check earning its keep). THE
+HEADLINE: THE MACHINE'S OWN INSTRUMENTS ENTER THE LAW — the exam's
+flagship row (Mishnah Megillah 4:10) REGULATES THE TARGUM THIS
+CORPUS READS WITH (the calf's second account read but not
+translated), the Shekalim cluster legislates the fee-friction and
+equality-invariant of a coin the translation itself converts, and
+the derivation's Oral-Torah charter (EX34-05 — covenant BY THE
+SAYING, reversal voids it) is the standing constitutional text of
+this project's entire method.

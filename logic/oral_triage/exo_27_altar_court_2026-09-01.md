@@ -93,3 +93,59 @@ parashah boundary at 27:19 noted, the unit read whole).
 **read: 23 of 23 — COMPLETE** (21 Onkelos verses + 2 Tanchuma
 sections attributed to this block under the amended spine; remainder
 outside declared scope, openly).
+
+## TETZAVEH-SITTING APPENDIX (2026-09-01, same day, append-only): the
+## Tetzaveh spine sections anchored at this unit's in-span verses
+## 27:20-21 (the parashah head read whole here at the derivation —
+## the lamp sections of Midrash Tanchuma Tetzaveh, standard 1-8 and
+## Buber 1-6, read IN FULL in the Tetzaveh sitting and recorded at
+## their anchor).
+
+- Midrash Tanchuma, Tetzaveh 2 + 4 + 6 + 7 + 8 (with Midrash
+  Tanchuma Buber, Tetzaveh 4 + 5 dup-credited) — MATERIAL. THE
+  LAMP'S NOT-NEED ARCHITECTURE: לֹא שֶׁאֲנִי צָרִיךְ לְאוֹרָה ("not
+  that I NEED its light") — argued from the architecture itself: the
+  menorah stands OUTSIDE the veil (were the light needed, it would
+  stand by the ark); at the table's RIGHT where kings keep their lamp
+  at the LEFT (quoting our 26:35 stations — EX26-04's floor-plan
+  running as proof); and the Temple windows INVERTED — narrow within,
+  wide without, so the light flows OUT of the house to the world.
+  The servant-light and blind-man parables ride; the command is a
+  participation grant (Job 14:15's "You DESIRE the work of Your
+  hands" — He bears, feeds, and lights the world yet assigns the
+  carrying, the offerings, and the lamp). R. Meir: Aaron's lamps
+  dearer than the heavenly luminaries — the lamp as Aaron's own
+  dedication-portion, his consolation beside the princes' offerings.
+- Midrash Tanchuma, Tetzaveh 3 — MATERIAL, a convergence of record.
+  The spine carries VERBATIM the case shelf's oil scoping: the
+  a-fortiori (the meal-offerings, which are eaten, all the more so)
+  REFUTED by תלמוד לומר ("Scripture says") — זָךְ כָּתִית לַמָּאוֹר
+  וְלֹא זָךְ כָּתִית לַמְּנָחוֹת ("pure-crushed FOR THE LIGHT and not
+  pure-crushed for the meal-offerings") — EX27-03's row and
+  yesterday's oil_grades module met again on the READING shelf; and
+  Tanchuma Tetzaveh 6 carries the THREE-OLIVES table with the
+  equal-pairs order (Mishnah Menachot 8:4 + 8:5's own table inside
+  the spine — credited, the exam compiled it). New here: R. CHANINA
+  SEGAN HA-KOHANIM'S TESTIMONY — a first-person Temple report: the
+  lamp lit at the year's head burned the whole year; and the sages'
+  datum that every courtyard in Jerusalem used its light (the
+  outward-flowing light made concrete).
+- Midrash Tanchuma, Tetzaveh 1 + 5 (+ Buber 1-3) — context-plus at
+  this anchor: the yelamdenu (eighth-day circumcision, as Isaac) and
+  the mirror-table frame recorded at exo_28's ledger; the
+  Song-of-Songs frame with the Sanhedrin-as-eyes figure and the
+  dove-brought-light chain (Genesis 8:11's olive leaf → bring olive
+  oil and light before Me — the corpus' own gen_20 dove wired to
+  this verse's oil); Moses-made-king (the command-verb's authority
+  seat). Dup-credits noted.
+
+**read: 26 of 26 — COMPLETE** (the 23 prior + 3 appendix attributions
+at 27:20-21; remainder outside declared scope, openly).
+
+NOTE (Tetzaveh sitting, append-only, cite-gate restatement): the
+appendix's compressed section list, each cite unbroken on its own
+line —
+Midrash Tanchuma, Tetzaveh 2
+Midrash Tanchuma, Tetzaveh 3
+Midrash Tanchuma, Tetzaveh 4
+— the lamp sections seated as EX27-07.

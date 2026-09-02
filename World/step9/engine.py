@@ -1678,3 +1678,14 @@ RULES.update(_bf.build(V))
 # Talmud-only (talmud_source in place of a Mishnah row).
 import terumah_rules as _tr
 RULES.update(_tr.build(V))
+
+# ---- the Tetzaveh exam's modules (2026-09-01, same sitting as the
+# derivation — the rhythm's fourth cycle). 9 rules in
+# tetzaveh_rules.py.
+import tetzaveh_rules as _tv
+RULES.update(_tv.build(V))
+
+# ---- the Ki Tisa exam's modules (2026-09-01, the rhythm's fifth
+# cycle). 15 rules in kitisa_rules.py.
+import kitisa_rules as _kt
+RULES.update(_kt.build(V))

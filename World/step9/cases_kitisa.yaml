@@ -1,0 +1,246 @@
+# THE KI TISA EXAM (the rhythm's fifth cycle — derived and examined
+# in one sitting). Membership: the 22 bare Mishnah rows citing Exod
+# 30:1-34:35 (19 read, 3 credits). Read-source record:
+# logic/oral_triage/kitisa_exam_mishnah_2026-09-01.md. Findings
+# F-041..F-044 auto-seated. Provenance: mishnah + exodus_anchor.
+
+- module: shekel_calendar
+  tractate: Shekalim
+  oracle: Mishnah Shekalim 1:1; Mishnah Megillah 3:4
+  exodus_anchor: {unit: exo_30_incense_shekel, ref: Exod.30.11-13,
+    claims: [EX30-04, EX30-08]}
+  cases:
+  - id: Shek_1_1_announce
+    input: {query: shekel_announcement}
+    expected: {verdict: first_of_adar}
+    class: B
+  - id: Meg_3_4_reading
+    input: {query: shekalim_reading}
+    expected: {verdict: adar_first_sabbath, basis: the four portions —
+        this unit's own text on the liturgical clock}
+    class: B
+- module: shekel_who_pays
+  tractate: Shekalim
+  oracle: Mishnah Shekalim 1:3
+  exodus_anchor: {unit: exo_30_incense_shekel, ref: Exod.30.12-14,
+    claims: [EX30-04]}
+  cases:
+  - id: Shek_1_3_pledged
+    input: {query: shekel_pledged, payer: israelite}
+    expected: {verdict: pledged}
+    class: B
+  - id: Shek_1_3_women
+    input: {query: shekel_pledged, payer: woman}
+    expected: {verdict: not_pledged}
+    class: B
+  - id: Shek_1_3_priests
+    input: {query: shekel_pledged, payer: priest}
+    expected: {verdict: not_pledged, basis: for the ways of peace}
+    class: B
+- module: kalbon_fees
+  tractate: Shekalim
+  oracle: Mishnah Shekalim 1:6
+  exodus_anchor: {unit: exo_30_incense_shekel, ref: Exod.30.13,
+    claims: [EX30-09]}
+  cases:
+  - id: Shek_1_6_joint
+    input: {query: kalbon_owed, payment: joint_two}
+    expected: {verdict: [one_kalbon, two_kalbons],
+      dispute: the first tanna vs R. Meir}
+    class: C_seated  # F-041 -> EX30-09
+  - id: Shek_1_6_for_exempt
+    input: {query: kalbon_owed, payment: on_behalf_of_exempt}
+    expected: {verdict: exempt}
+    class: C_seated
+  - id: Shek_1_6_change
+    input: {query: kalbon_owed, payment: sela_taking_shekel}
+    expected: {verdict: two_kalbons}
+    class: C_seated
+- module: shekel_equality
+  tractate: Shekalim
+  oracle: Mishnah Shekalim 2:4
+  exodus_anchor: {unit: exo_30_incense_shekel, ref: Exod.30.15,
+    claims: [EX30-10]}
+  cases:
+  - id: Shek_2_4_invariant
+    input: {query: shekel_invariant}
+    expected: {verdict: all_hands_equal, basis: the denomination
+        floats, the equality holds}
+    class: C_seated  # F-042 -> EX30-10
+  - id: Shek_2_4_history
+    input: {query: shekel_denominations}
+    expected: {verdict: floated, basis: darkonot, selaim, teva'in,
+        the dinar proposal}
+    class: C_seated
+- module: shabbat_liability_grouping
+  tractate: Shabbat
+  oracle: Mishnah Shabbat 7:1
+  exodus_anchor: {unit: exo_31_craftsmen_shabbat, ref: Exod.31.13-15,
+    claims: [EX31-05, EX31-03]}
+  cases:
+  - id: Shab_7_1_principle
+    input: {query: offering_count, forgot: principle}
+    expected: {verdict: one_total}
+    class: C_seated  # F-043 -> EX31-05
+  - id: Shab_7_1_days
+    input: {query: offering_count, forgot: days}
+    expected: {verdict: one_per_sabbath}
+    class: C_seated
+  - id: Shab_7_1_labors
+    input: {query: offering_count, forgot: labors}
+    expected: {verdict: one_per_category}
+    class: C_seated
+  - id: Shab_7_1_same_kind
+    input: {query: offering_count, forgot: none_same_kind}
+    expected: {verdict: one_total}
+    class: C_seated
+- module: reading_calendar
+  tractate: Megillah
+  oracle: Mishnah Megillah 3:5
+  exodus_anchor: {unit: exo_34_second_tablets, ref: Exod.34.1,
+    claims: [EX34-01]}
+  cases:
+  - id: Meg_3_5_festivals
+    input: {query: festival_readings}
+    expected: {verdict: appointed_portions}
+    class: B
+- module: targum_law
+  tractate: Megillah
+  oracle: Mishnah Megillah 4:10
+  exodus_anchor: {unit: exo_34_second_tablets, ref: Exod.34.27,
+    claims: [EX34-05]}
+  cases:
+  - id: Meg_4_10_calf_first
+    input: {query: targum_permitted, passage: calf_first_account}
+    expected: {verdict: read_and_translated}
+    class: B
+  - id: Meg_4_10_calf_second
+    input: {query: targum_permitted, passage: calf_second_account}
+    expected: {verdict: read_not_translated, basis: Aaron's honor —
+        the law regulating this corpus' own reading instrument}
+    class: B
+  - id: Meg_4_10_david
+    input: {query: targum_permitted, passage: david_amnon}
+    expected: {verdict: neither_read_nor_translated}
+    class: B
+- module: firstling_species
+  tractate: Bekhorot
+  oracle: Mishnah Bekhorot 1:2 + 1:4 + 1:7; Mishnah Eduyot 7:1
+  exodus_anchor: {unit: exo_34_second_tablets, ref: Exod.34.19-20,
+    claims: [EX34-04, EX34-07]}
+  cases:
+  - id: Bek_1_2_species
+    input: {query: firstling_liable, bearer: cow, born: donkey_like}
+    expected: {verdict: exempt, basis: the doubled token — both must
+        be donkeys}
+    class: B
+  - id: Bek_1_4_lamb
+    input: {query: redemption_lamb}
+    expected: {verdict: any_seh, basis: male or female, large or
+        small, even blemished — and the same lamb redeems many times}
+    class: B
+  - id: Bek_1_7_order
+    input: {query: duty_precedence, pair: redeem_vs_break}
+    expected: {verdict: redemption_first}
+    class: C_seated  # F-044 -> EX34-07
+  - id: Bek_1_7_yibbum
+    input: {query: duty_precedence, pair: yibbum_vs_chalitzah}
+    expected: {verdict: flipped_to_chalitzah, basis: formerly yibbum
+        first; the order flipped when intention decayed}
+    class: C_seated
+  - id: Edu_7_1_died
+    input: {query: firstling_liable, event: firstling_died}
+    expected: {verdict: [guarantor_liable, not_liable],
+      dispute: R. Eliezer vs the sages}
+    class: B
+- module: plow_harvest_rest
+  tractate: Sheviit
+  oracle: Mishnah Sheviit 1:4
+  exodus_anchor: {unit: exo_34_second_tablets, ref: Exod.34.21,
+    claims: [EX34-04]}
+  cases:
+  - id: Shev_1_4_scope
+    input: {query: plow_harvest_scope}
+    expected: {verdict: [sabbatical_eve, sabbath_optional_acts],
+      dispute: R. Akiva (the eve entering and the exit) vs R.
+        Yishmael (optional acts, excluding the omer)}
+    class: B
+- module: confession_formula
+  tractate: Yoma
+  oracle: Mishnah Yoma 4:2
+  exodus_anchor: {unit: exo_34_second_tablets, ref: Exod.34.7,
+    claims: [EX34-02]}
+  cases:
+  - id: Yoma_4_2_classes
+    input: {query: confession_classes}
+    expected: {verdict: three_classes, basis: iniquity, transgression,
+        sin — the verse's own vocabulary as liturgy}
+    class: B
+- module: yk_incense_deltas
+  tractate: Yoma
+  oracle: Mishnah Yoma 4:4
+  exodus_anchor: {unit: exo_30_incense_shekel, ref: Exod.30.34-36,
+    claims: [EX30-06]}
+  cases:
+  - id: Yoma_4_4_grind
+    input: {query: incense_grind, occasion: yom_kippur}
+    expected: {verdict: finest_of_fine}
+    class: B
+- module: court_error_scope
+  tractate: Horayot
+  oracle: Mishnah Horayot 1:3
+  exodus_anchor: {unit: exo_34_second_tablets, ref: Exod.34.14,
+    claims: [EX34-04]}
+  cases:
+  - id: Hor_1_3_whole
+    input: {query: court_error_liability, error_scope: whole_principle}
+    expected: {verdict: exempt, basis: a matter — not the whole body}
+    class: B
+  - id: Hor_1_3_partial
+    input: {query: court_error_liability, error_scope: partial}
+    expected: {verdict: liable, basis: there IS idolatry but the
+        bower exempt — our verse's own bowing exemplar}
+    class: B
+- module: karet_census
+  tractate: Keritot
+  oracle: Mishnah Keritot 1:1
+  exodus_anchor: {unit: exo_30_incense_shekel, ref: Exod.30.22-38,
+    claims: [EX30-06]}
+  cases:
+  - id: Ker_1_1_count
+    input: {query: karet_count}
+    expected: {verdict: thirty_six}
+    class: B
+  - id: Ker_1_1_oil
+    input: {query: karet_listed, offense: compounding_oil}
+    expected: {verdict: on_the_census}
+    class: B
+  - id: Ker_1_1_incense
+    input: {query: karet_listed, offense: compounding_incense}
+    expected: {verdict: on_the_census}
+    class: B
+- module: timing_protocol
+  tractate: Avot
+  oracle: Mishnah Pirkei Avot 4:18
+  exodus_anchor: {unit: exo_33_presence, ref: Exod.33.14,
+    claims: [EX33-04]}
+  cases:
+  - id: Avot_4_18_anger
+    input: {query: timing_prohibited, moment: hour_of_anger}
+    expected: {verdict: do_not_appease}
+    class: B
+  - id: Avot_4_18_grief
+    input: {query: timing_prohibited, moment: dead_before_him}
+    expected: {verdict: do_not_comfort}
+    class: B
+- module: engraving_freedom
+  tractate: Avot
+  oracle: Mishnah Pirkei Avot 6:2
+  exodus_anchor: {unit: exo_31_craftsmen_shabbat, ref: Exod.31.18,
+    claims: [EX31-04]}
+  cases:
+  - id: Avot_6_2_token
+    input: {query: engraving_reading}
+    expected: {verdict: freedom, basis: read not charut but cherut —
+        none free but the one engaged in Torah}
+    class: B

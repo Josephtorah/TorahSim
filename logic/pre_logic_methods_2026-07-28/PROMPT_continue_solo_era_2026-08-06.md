@@ -8072,3 +8072,210 @@ shelves → demonstrate/compile/link → exam era → auto-seat → stamp
 delegation/one-way flow → the spine substitution → the one-day rhythm
 + the Terumah architecture lessons). Memory: the-briefing-file.md +
 index line. NOT COMMITTED — owner word.
+
+## MILESTONE (2026-09-01, same session, owner: "Go") — THE TETZAVEH
+## ROUND: DERIVED AND EXAMINED IN ONE SITTING (the rhythm's fourth
+## cycle, the first PERSONNEL parashah). CORPUS AT 106 FROZEN UNITS.
+DERIVATION: exo_28_priest_garments (28:1-43) + exo_29_investiture
+(29:1-46) through the full RE process; the parashah head 27:20-21
+handled as exo_27's ledger APPENDIX (the Tanchuma lamp sections,
+claim EX27-07 — the not-need architecture, inverted windows, R.
+Chanina's year-long-lamp testimony); the tail 30:1-10 rides with
+exo_30 at Ki Tisa, boundaries open. READING: Onkelos 89 verses IN
+FULL + Midrash Tanchuma Tetzaveh WHOLE both recensions (63 standard
++ 19 Buber); 3,257 rows pre-enumerated; ledgers exo_28/exo_29
+_2026-09-01.md (45/45, 51/51) + exo_27 appendix (26/26). LOGIC: 21
+witness ops (EX28-01..08, EX29-01..12, EX27-07) — the office's own
+law-vocabulary: service-BEFORE-Me with fill-the-hand decoded as
+offer-their-offering; the JUDGMENT ORGAN (choshen dina, the Urim
+within, borne continually); two standing prohibitions IN the clothing
+(not-detached, not-torn — the poles class); the announced entry
+(bells + death sanction); the written plate bearing iniquity for
+acceptance; SEMIKHAH's first corpus appearance + the ear-thumb-toe
+map; Leviticus' taxonomy booting early (chattat/olah protocols, the
+fragrance→ACCEPTED-WITH-FAVOR transform ×3); the perpetual dues in
+the terumah word-family (afrashuta); succession BY GARMENT (seven
+days, + the Tanchuma's Moses→Joshua table and student-before-master
+law); the sacred meal's fences (eat-what-atoned, the stranger-ban,
+notar); CONTAGIOUS HOLINESS (whatever touches the altar); the TAMID
+installed; THE SECOND ANSWER ADDRESS (the Word appointed at the Tent
+entrance, plural, extended to Israel) + the exodus-purpose clause
+(brought out TO dwell among them — EX25-02 confirmed); Tanchuma
+crowns — ordination as PUBLIC AMNESTY (bull-for-calf, rams-for-sons,
+purchase-not-plunder), the LI-FOREVER token with its census, the
+institution-consequence table (garments + tamid load-bearing), the
+Ezekiel-16 MIRROR TABLE. GATES: 3 rituals COMPLETE (106), preflights
+green, gloss_lint 0, CORPUS_TRUTH regenerated, hash 8b8fff1fa28953af
+UNMOVED; delegated FULL RULE stamps + exo_27 re-affirmation
+(STAMP_LEDGER rows). THE EXAM, same sitting: 9 bare Mishnah rows (8
+read, Chagigah 3:8 credited), ledger tetzaveh_exam_mishnah; findings
+F-036..F-040 auto-seated (EX28-09 THE ORACLE'S ACCESS LIST — Mishnah
+Yoma 7:5: the Urim only in the eight garments, only for king / court
+/ community-need — the call-site design's AUTHORIZATION LAYER;
+EX28-10 fiscal plurality at 28:5's plural take-verb; EX28-11 the
+plate propitiates the impure not the taken-out; EX28-12 the shamir
+at the stones; EX29-13 the waving's four motions COMPUTED from
+29:27's own two verbs); one cite-gate catch (a regex-swallowed prose
+phrase in a cites list — removed, re-run green; lesson: never let the
+cite-regex run over claim prose unreviewed). COMPILED: 9 modules
+(tetzaveh_rules.py), 20 cases, 20/20 FIRST RUN; 287/287 across all
+SEVEN exams; catalog R-292..R-300 = 105 rules; vocabulary 138 dims.
+Records: REPORT_TETZAVEH.md + EXAM_LEDGER round 7; THE_STEPS Step 9;
+THE_BRIEFING scoreboard. STANDING: 106 units, queues EMPTY,
+STAMP_LEDGER 10 rows, hash unmoved all session. STATUS: Exodus 1-29
+derived + examined end to end; NEXT per the rhythm: Ki Tisa
+(30:11-34:35 — exo_30 reads whole incl. the Tetzaveh tail 30:1-10),
+then Vayakhel-Pekudei to close the book. NOT COMMITTED — owner word.
+
+## MILESTONE (2026-09-01, same session, owner: "Next" → the rhythm) —
+## KI TISA DERIVED WHOLE: THE LARGEST PARASHAH YET. CORPUS AT 111.
+Five units in one sitting: exo_30_incense_shekel (30:1-38 read whole
+incl. the Tetzaveh tail 30:1-10), exo_31_craftsmen_shabbat (31:1-18),
+exo_32_golden_calf (32:1-35), exo_33_presence (33:1-23),
+exo_34_second_tablets (34:1-35). READING: Onkelos 149 verses IN FULL
++ Midrash Tanchuma Ki Tisa WHOLE both recensions (37 standard + 20
+Buber, ending "the end of Parashat Ki Tisa"); 10,543 rows
+pre-enumerated; five ledgers exo_3*_2026-09-01.md. LOGIC: 30 witness
+ops (EX30-01..08, EX31-01..04, EX32-01..07, EX33-01..05,
+EX34-01..06). CROWNS: the incense's INPUT SPEC (no strange incense —
+30:9); the HALF-SHEKEL census-by-ransom with Onkelos CONVERTING THE
+CURRENCY (shekel→sela, twenty ma'in — the conversion-layer at the
+money register); the ransom PRICED FROM THE TORT TABLE (the spine
+quotes our own Exod 21:32 goring-ox slave tariff); the ten-censuses
+law (count by TOKENS, never heads; the acrostic 597,000 with the
+missing 3,000 = the calf's fallen); the SIGN between MY WORD and you
++ the labors' boundary at 31:13; WRITTEN WITH THE FINGER OF GOD kept
+literal; the PRAYER DISCOVERED INSIDE THE DECREE ("let Me alone"
+rendered DESIST FROM YOUR PRAYER — the first successful intercession
+against a standing decree); THE THREE-COURT TRIAGE at 32:20
+(witnesses+warning→sword; warning-only→the water test as the sotah;
+neither→plague — a complete evidentiary decision-tree); the Levites'
+fill-the-hand ordination-by-crisis (32:29); THE BOOK + deferred
+accounting (32:32-34, dated to the Day of Atonement); the tent
+renamed HOUSE OF INSTRUCTION (33:7 — the open-access interface
+against EX28-09's ACL); the anger-partition protocol; the
+thirteen attributes RESOLVED BY THE REPENTANCE BRANCH (34:7); the
+120-day calendar fixing YOM KIPPUR as the standing pardon-day
+(EX25-09 confirmed at its home parashah); THE ORAL-TORAH CHARTER at
+34:27 (covenant BY THE SAYING — two channels, reversal voids it; the
+Mishnah as the identity-secret; Megillah 4:10 regulating our own
+spine's translation); the radiant face from THE LEFTOVER INK. GATES:
+5 rituals COMPLETE (corpus 106→111), preflights green, gloss_lint 0,
+CORPUS_TRUTH regenerated, hash 8b8fff1fa28953af UNMOVED; delegated
+FULL RULE stamps (STAMP_LEDGER row 12). Cite-gate restatements ×4
+(the known wrap trap, handled preemptively + two catches). NOT YET:
+the Step 9 Ki Tisa exam (22 bare Mishnah rows enumerated — the
+Shekalim cluster 1:1/1:3/1:6/2:4, Shabbat 7:1 THE LABORS ROW,
+Megillah 3:4/3:5/4:10, Bekhorot 1:2/1:4/1:7 + Eduyot 7:1, Sheviit
+1:4, Pesachim 5:4, Yoma 4:2/4:4, Horayot 1:3, Keritot 1:1, Makkot
+3:2, Sanhedrin 7:6, Avot 4:18/6:2 — scratchpad kitisa_links.json)
+— THE NEXT TASK, same rhythm. NOT COMMITTED — owner word.
+
+## MILESTONE (2026-09-01, same session) — THE KI TISA EXAM: 34/34
+## FIRST RUN, 321/321 ACROSS ALL EIGHT. The rhythm's fifth cycle
+CLOSED same-sitting: the 22 bare Mishnah rows citing Exod 30-34 read
+(19 opened, 3 credits quick-looked: Sanhedrin 7:6 — the calf's own
+bowed-and-sacrificed verbs are the row's liability modes; Makkot
+3:2 — the formula crimes' lash face; Pesachim 5:4 — 34:25 as the
+leaven-ban's doubled seat), ledger kitisa_exam_mishnah_2026-09-01.md.
+FINDINGS F-041..F-044 auto-seated (EX30-09 the KALBON — the
+half-coin's legislated transaction friction; EX30-10 the EQUALITY
+INVARIANT — darkonot→selaim→teva'in→dinar proposal, the denomination
+FLOATS and yad kulan shavah holds: the case shelf stating Onkelos'
+own conversion; EX31-05 the GREAT PRINCIPLE's liability-aggregation
+algebra — offerings grouped by knowledge-state; EX34-07 the
+PRECEDENCE TABLE — redemption before breaking, designation before
+redemption QUOTING OUR OWN Exod 21:8, the yibbum/chalitzah flip) — 4
+claims / 4 ops / 3 units, rituals COMPLETE, preflights green, hash
+8b8fff1fa28953af UNMOVED, stamps re-affirmed (append the REAFFIRM +
+STAMP_LEDGER rows next sitting if missing — VERIFY). COMPILED: 15
+modules (kitisa_rules.py), 34 cases, 34/34; 321/321 across all
+EIGHT exams (10+18+41+60+100+38+20+34); catalog R-301..R-315 = 120
+rules; vocabulary 144 dims — THE COLLISION GUARD FIRED mid-compile
+('born' existed; 'pair'/'moment' made appends): the institutional
+check working. HEADLINE: THE MACHINE'S OWN INSTRUMENTS ENTER THE
+LAW — Megillah 4:10 regulates the targum this corpus reads with (the
+calf's second account read, NOT translated), and EX34-05's
+Oral-Torah charter (covenant BY THE SAYING; reversal voids it) is
+the constitutional text of this project's own method, now held as
+data. Records: REPORT_KITISA.md + EXAM_LEDGER round 8 + THE_STEPS +
+THE_BRIEFING scoreboard. STATUS: EXODUS 1-34 DERIVED AND EXAMINED
+END TO END; remaining: Vayakhel-Pekudei (35:1-40:38, exo_35..exo_40
+drafts — the execution chapters, heavy credits expected), then the
+book CLOSES. NOT COMMITTED — owner word.
+
+## ⚠⚠ COMPACTION POINT #36 (2026-09-01, owner: "I need to compact get
+## ready") — READ #35 ABOVE FIRST, then THE_STEPS Step 4 reread
+## (standing rule) AND Step 9. This block is the delta. ⚠ THE NEXT
+## TASK PER THE APPROVED RHYTHM: VAYAKHEL-PEKUDEI (Exod 35:1-40:38)
+## — DERIVE + EXAMINE, ONE SITTING, AND EXODUS CLOSES.
+THE SESSION'S ARC since #35 (one continuous sitting, owner-worded
+throughout; commit f25e3c3 mid-session, the rest committed with this
+block per the get-ready precedent):
+(1) THE TERUMAH EXAM (#35's ordered task): 13 rows, 11 modules,
+38/38; F-032..F-035 seated (EX25-11/12, EX26-06, EX27-06); the
+standing tripwire fired at the seats (992→996) and was regenerated,
+hash held. THE_BRIEFING.md BORN (owner: "not every derivation but
+after we make upgrades" → "Yes"): entries ONLY at process/design
+upgrades, scoreboard for derivations, epub at his word, standing
+duty unprompted — seeded with nine entries. Committed f25e3c3.
+(2) TETZAVEH DERIVED + EXAMINED (owner: "Go"): exo_28 + exo_29
+(corpus 106), Onkelos 89 verses + Tanchuma Tetzaveh whole; 21 claims
+(EX28-01..08, EX29-01..12, EX27-07 via exo_27's ledger APPENDIX —
+the parashah head convention); the exam: 9 rows, 9 modules, 20/20,
+287/287; F-036..F-040 seated — THE ORACLE'S ACCESS LIST (EX28-09,
+Mishnah Yoma 7:5: the Urim only in the eight garments, only
+king/court/community-need — the call-site AUTHORIZATION LAYER), the
+plate's jurisdiction, the shamir, the waving's computed motions.
+Headline: the personnel layer exports INTERFACES. One cite-gate
+catch (regex swallowed prose into cites — removed).
+(3) KI TISA DERIVED + EXAMINED (owner: "Next"): FIVE units exo_30..34
+(corpus 111), Onkelos 149 verses + Tanchuma Ki Tisa whole both
+recensions (10,543 rows enumerated); 30 claims + the exam's 4
+(F-041..F-044: the kalbon, the EQUALITY INVARIANT, the Great
+Principle's aggregation algebra, the precedence table quoting our
+own 21:8); 15 modules, 34/34, 321/321 across all EIGHT exams;
+catalog R-315 = 120 rules; vocab 144 dims (the collision guard FIRED
+usefully on 'born'). Crowns: the half-shekel with Onkelos CONVERTING
+THE CURRENCY; the ransom priced from OUR chapter-21 tariff; DESIST-
+FROM-YOUR-PRAYER; the THREE-COURT TRIAGE at 32:20; the HOUSE OF
+INSTRUCTION at 33:7; the attributes' REPENTANCE BRANCH; Yom Kippur
+fixed (EX25-09 confirmed); THE ORAL-TORAH CHARTER at 34:27 (covenant
+BY THE SAYING, channels irreversible — held as data) + Megillah 4:10
+regulating our own targum. Headline: THE MACHINE'S OWN INSTRUMENTS
+ENTER THE LAW.
+STANDING: hash 8b8fff1fa28953af unmoved ALL SESSION; 111 frozen
+units; eight exams 321/321; 120 rules; vocab 144; queues EMPTY;
+STAMP_LEDGER 14 rows (all delegated-era); THE_BRIEFING current.
+STATUS: Genesis DONE; EXODUS 1-34 DERIVED + EXAMINED END TO END;
+remaining exo_35..exo_40 drafts (Vayakhel-Pekudei — the execution
+chapters, heavy credits expected: they repeat Terumah-Tetzaveh's
+specs verse-shape for verse-shape); then the book CLOSES (the cloud
+fills the tabernacle, 40:34-38 — EX25-02's indwelling landing).
+⚠ THE NEXT TASK — VAYAKHEL-PEKUDEI, the standing recipe: enumerate
+via Data/links*.csv (pattern in scratchpad derive_kitisa.py /
+enumerate script family — scratchpad may be gone after compaction;
+the recipe lives in the ledger headers and this doc); extract
+Onkelos 35-40 + Tanchuma Vayakhel/Pekudei both recensions from
+torah_grok.sqlite export_texts ('Onkelos Exodus C:V' /
+'Midrash Tanchuma, Vayakhel N:M'); read whole at parashah grain
+(both portions in one sitting is lawful — one pass); ledgers
+per-block append-only with cite-gate restatement notes for wrapped
+cites; derive script (July-draft indent family: steps 2-space,
+operators: 4, ops 6-dash, fields 8; insert before '    comment:';
+scenario re-anchor regexes; derivation_log step E before
+'scenarios:'); freeze rituals (corpus →117), preflights, gloss_lint,
+corpus_world.py regen + CORPUS_TRUTH verify (standing moves by op
+count, HASH MUST HOLD 8b8fff1fa28953af); delegated stamps +
+STAMP_LEDGER; then the exam: bare-Mishnah docket from the links,
+credits checked against ALL prior ledgers (grep '- Mishnah X' in
+logic/oral_triage/), spec cases_vayakhel_pekudei.yaml + rules file
+build(V) + engine tail import + runner clone + vocab (RUN THE
+COLLISION GUARD), run + all eight regressions; catalog from R-316;
+findings auto-seat; records (report, EXAM_LEDGER round 9, THE_STEPS,
+THE_BRIEFING scoreboard, this doc). AFTER THE BOOK: the briefing
+epub bake is the owner's suggested milestone (ask his word); then
+Leviticus (Sifra spine per CORE_SHELF; Lev 24 = the first recorded
+CALL into the machine — the call-site test). OPEN besides: ~11
+Genesis Talmud blocks (162 rows); Tosefta + Jerusalem Talmud; Step 9
+site visibility; the next TorahSim sync (one-way, we initiate).

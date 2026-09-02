@@ -505,3 +505,72 @@ where the removal disputes run: belt vs wooden tongs (impurity must
 not linger vs must not spread), and the zones bounded by
 cut-off-liability (R. Shimon ben Nannas vs R. Akiva). The altar
 vessel running in purity law. Seated as EX27-06. exo_27_altar_court.
+
+**F-036 · FILED + AUTO-SEATED — the oracle's access list on exo_28.**
+Mishnah Yoma 7:5: the Urim and Tummim are consulted only IN the eight
+garments, and only for three petitioner classes — the KING, the
+COURT, and one whom the COMMUNITY needs. The portable judgment organ
+of EX28-03 carries an authorization layer: full uniform and a
+qualified petitioner, or no query. Seated as EX28-09.
+exo_28_priest_garments.
+
+**F-037 · FILED + AUTO-SEATED — fiscal plurality on exo_28.** Mishnah
+Shekalim 5:2: no fewer than three treasurers and seven trustees, and
+no authority over public money with fewer than TWO officers (the
+recorded exceptions majority-accepted) — anchored at our 28:5's own
+plural take-verb (ואנון יסבון — "and THEY shall take the gold").
+Seated as EX28-10. exo_28_priest_garments.
+
+**F-038 · FILED + AUTO-SEATED — the plate's jurisdiction on exo_28.**
+Mishnah Zevachim 8:12's close: הציץ מרצה על הטמא ואינו מרצה על היוצא
+("the plate propitiates the IMPURE and does not propitiate the
+TAKEN-OUT") — EX28-06's acceptance function scoped: impurity yes,
+exit no. Seated as EX28-11. exo_28_priest_garments.
+
+**F-039 · FILED + AUTO-SEATED — the shamir at the stones on exo_28.**
+Mishnah Pirkei Avot 5:6's twilight census (held at exo_16's EX16-15)
+assigns the SHAMIR — and the Talmud's bridge (Babylonian Talmud Sotah
+48b) puts it at THIS chapter's engraving: the stones written
+בְּמִלֻּאֹתָם ("in their fullness"), whole and uncut. Seated as
+EX28-12. exo_28_priest_garments.
+
+**F-040 · FILED + AUTO-SEATED — the waving's computed motions on
+exo_29.** Mishnah Menachot 5:6 quotes our 29:27 as its proof: the
+four motions — forward-back (from אשר הונף, "which was WAVED") and
+up-down (from אשר הורם, "which was LIFTED") — the procedure computed
+from the verse's own two verbs; with the waving census (men and women
+alike, Israel not others) and the geography (waving east,
+bringing-near west, wavings first). Seated as EX29-13.
+exo_29_investiture.
+
+**F-041 · FILED + AUTO-SEATED — the kalbon on exo_30.** Mishnah
+Shekalim 1:6: because the verse fixed a HALF-coin, change-making
+generates surcharge law — who owes the kalbon, the exempt classes,
+the joint-payment dispute (one kalbon or two, R. Meir), two kalbons
+for sela-in-shekel-out. The flat rate's transaction friction,
+legislated. Seated as EX30-09. exo_30_incense_shekel.
+
+**F-042 · FILED + AUTO-SEATED — the equality invariant on exo_30.**
+Mishnah Shekalim 2:4: the denomination FLOATED across the eras
+(darkonot → selaim → teva'in → the dinar proposal) and R. Shimon's
+answer holds: יד כולן שוה ("ALL HANDS ARE EQUAL") at any coin — the
+constant is the equality, not the denomination; against the
+sin-offering's by-his-means. The case shelf's own statement of the
+conversion-layer Onkelos performs at 30:13 (shekel rendered sela).
+Seated as EX30-10. exo_30_incense_shekel.
+
+**F-043 · FILED + AUTO-SEATED — the liability-aggregation algebra on
+exo_31.** Mishnah Shabbat 7:1's GREAT PRINCIPLE: liability groups by
+knowledge-state — forgot the PRINCIPLE, one offering for everything;
+forgot the DAYS, one per Sabbath; forgot the LABORS, one per
+labor-category; many of one kind, one. Hung from the very
+juxtaposition EX31-03 seats at 31:13. Seated as EX31-05.
+exo_31_craftsmen_shabbat.
+
+**F-044 · FILED + AUTO-SEATED — the precedence table on exo_34.**
+Mishnah Bekhorot 1:7: redemption PRECEDES neck-breaking; designation
+precedes redemption — quoting our own Exod 21:8; yibbum formerly
+preceded chalitzah and the order FLIPPED when intention decayed; the
+owner precedes all in redemption. A cross-domain duty-ordering
+algebra with a recorded historical flip. Seated as EX34-07.
+exo_34_second_tablets.

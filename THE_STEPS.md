@@ -416,6 +416,41 @@ the exam's hardest rows inside the claims (EX25-06 listed Menachot
 R-281..R-291; 85 compiled rules. Full record:
 World/step9/REPORT_TERUMAH.md.
 
+THE TETZAVEH ROUND RAN (2026-09-01, owner: "Go") — the rhythm's
+fourth cycle and the first PERSONNEL parashah: exo_28 + exo_29
+derived (corpus 106), stamped, and examined in one sitting. The 9
+bare Mishnah rows (8 read, 1 credit), 9 modules, 20/20 first run;
+287/287 across all seven exams. F-036..F-040 auto-seated — the crown
+is EX28-09, THE ORACLE'S ACCESS LIST (Mishnah Yoma 7:5): the Urim
+consulted only in the eight garments and only for the king, the
+court, or a community need — the call-site design's authorization
+layer. Also seated: fiscal plurality at the plural take-verb, the
+plate's propitiation jurisdiction, the shamir at the stones, and the
+waving's four motions computed from 29:27's own two verbs. HEADLINE:
+the personnel layer exports INTERFACES the way the architecture
+exported constants — the Word now has two appointed addresses and a
+rule about who may petition it, still ahead of its first recorded
+caller (Leviticus 24). Catalog R-292..R-300; 105 compiled rules.
+Full record: World/step9/REPORT_TETZAVEH.md.
+
+THE KI TISA ROUND RAN (2026-09-01, owner: "Next") — the rhythm's
+fifth cycle and the largest sitting yet: FIVE units derived (corpus
+111; Onkelos 149 verses + the whole Tanchuma Ki Tisa), stamped, and
+examined in one pass. The 22 bare Mishnah rows (19 read, 3 credits),
+15 modules, 34/34 first run; 321/321 across all eight exams.
+F-041..F-044 auto-seated: the kalbon, the equality invariant (the
+denomination floats and all hands stay equal — the case shelf
+stating the conversion-layer Onkelos performs), the Great
+Principle's liability-aggregation algebra, the precedence table
+quoting our own Exod 21:8. HEADLINE: the machine's own instruments
+enter the law — Mishnah Megillah 4:10 regulates THE TARGUM this
+corpus reads with (the calf's second account read, not translated),
+and the derivation seated the ORAL-TORAH CHARTER at 34:27 (covenant
+BY THE SAYING, two channels, reversal voids it): the machine now
+holds, as data, the law that authorizes its own architecture.
+Catalog R-301..R-315; 120 compiled rules. Full record:
+World/step9/REPORT_KITISA.md.
+
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed
 on the spot: logic/findings/FINDINGS_QUEUE.md (append-only). The owner
