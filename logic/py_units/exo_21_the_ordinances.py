@@ -31,6 +31,10 @@ m.step("Exod.21.2")
 # ‹כִּי תִקְנֶה עֶבֶד עִבְרִי› (“that possessor servant Hebrew”) — case that
 # possessor servant Hebrew routes to servant-Hebrew
 m.case("ki tiqne eved ivri", "eved_ivri")
+# witness-tier presupposed read: the_codes_first_case on
+# case_syntax_and_release_list — read, not installed
+m.witness_read("case_syntax_and_release_list", "the_codes_first_case",
+                cites=["Gittin 90a:10", "Mekhilta DeRabbi Yishmael, Tractate Bachodesh 11:11", "Mishnah Kiddushin 1:2", "Kiddushin 16a:11", "Kiddushin 15a:19"])
 
 # -------------------------- Exod.21.3 · AS_HE_CAME -------------------------
 # אִם־בְּגַפּוֹ יָבֹא בְּגַפּוֹ יֵצֵא אִם־בַּעַל אִשָּׁה הוּא וְיָצְאָה
@@ -216,6 +220,10 @@ m.step("Exod.21.19")
 # mishanto then and-be-clean the-makke, shivto set and-mend mend
 m.handler("yaqum ve-hithalekh ba-chutz al mishanto",
           "ve-niqa ha-makke, shivto yiten ve-rapo yerape")
+# witness-tier presupposed read: two_of_five_in_the_ink on
+# injury_indemnities — read, not installed
+m.witness_read("injury_indemnities", "two_of_five_in_the_ink",
+                cites=["Mishnah Bava Kamma 8:1"])
 
 # -------------------------- Exod.21.20 · THE_STRUCK_SLAVE ------------------
 # וְכִי־יַכֶּה אִישׁ אֶת־עַבְדּוֹ אוֹ אֶת־אֲמָתוֹ בַּשֵּׁבֶט וּמֵת תַּחַת
@@ -254,6 +262,10 @@ m.step("Exod.21.22")
 # bring-forth child-her/its and-not be hurt”) — case and-khi go-forth man
 # and-push woman pregnant and-bring-forth yeladeha routes to hurt-or-not
 m.case("ve-khi yinatzu anashim ve-nagfu isha hara ve-yatzu yeladeha", "ason_o_lo")
+# witness-tier presupposed read: the_courts_algorithm on
+# miscarriage_valuation — read, not installed
+m.witness_read("miscarriage_valuation", "the_courts_algorithm",
+                cites=["Mishnah Bava Kamma 5:4"])
 
 # -------------------------- Exod.21.23 · LIFE_FOR_LIFE ---------------------
 # וְאִם־אָסוֹן יִהְיֶה וְנָתַתָּה נֶפֶשׁ תַּחַת נָפֶשׁ
@@ -272,6 +284,10 @@ m.step("Exod.21.24")
 # ‹עַיִן תַּחַת עַיִן שֵׁן תַּחַת שֵׁן› (“eye under eye tooth under tooth”)
 # — fact holds: eye-under-eye
 m.fact("ayin_tachat_ayin")
+# witness-tier presupposed read: compiled_through_leviticus_24 on
+# tariff_call_site — read, not installed
+m.witness_read("tariff_call_site", "compiled_through_leviticus_24",
+                cites=["Bava Kamma 83b:10", "Bava Kamma 84a:1"])
 
 # -------------------------- Exod.21.25 · BURN_FOR_BURN ---------------------
 # כְּוִיָּה תַּחַת כְּוִיָּה פֶּצַע תַּחַת פָּצַע חַבּוּרָה תַּחַת חַבּוּרָה
@@ -292,6 +308,10 @@ m.step("Exod.21.26")
 # avdo and-shichatah then to-exempt yeshalchenu under eno
 m.handler("yake ish et en avdo ve-shichatah",
           "la-chafshi yeshalchenu tachat eno")
+# witness-tier presupposed read: eye_and_tooth_as_exemplars on limb_class —
+# read, not installed
+m.witness_read("limb_class", "eye_and_tooth_as_exemplars",
+                cites=["Kiddushin 24a:6", "Mishnah Negaim 6:7"])
 
 # -------------------------- Exod.21.27 · THE_TOOTH_THAT_FREES --------------
 # וְאִם־שֵׁן עַבְדּוֹ אוֹ־שֵׁן אֲמָתוֹ יַפִּיל לַחָפְשִׁי יְשַׁלְּחֶנּוּ
@@ -321,6 +341,10 @@ m.case("ve-khi yigach shor et ish o et isha va-met", "shor_nagach")
 # not installed
 m.witness_read("stoning_statute", "backfill_legs",
                 cites=["Mishnah Eduyot 6:1", "Mishnah Makkot 1:6"])
+# witness-tier presupposed read: the_answer_keys_module_list on
+# four_damages_class_map — read, not installed
+m.witness_read("four_damages_class_map", "the_answer_keys_module_list",
+                cites=["Mishnah Bava Kamma 1:1", "Bava Kamma 2a:1", "Bava Kamma 6b:11"])
 
 # -------------------------- Exod.21.29 · THE_WARNED_OX ---------------------
 # וְאִם שׁוֹר נַגָּח הוּא מִתְּמֹל שִׁלְשֹׁם וְהוּעַד בִּבְעָלָיו וְלֹא
@@ -338,6 +362,10 @@ m.step("Exod.21.29")
 # bealav die
 m.handler("shor nagach hu mi-temol shilshom, ve-huad bi-vealav ve-lo yishmerenu, ve-hemit",
           "ha-shor yisaqel ve-gam bealav yumat")
+# witness-tier presupposed read: parsed_from_the_temporal_tokens on
+# forewarned_threshold — read, not installed
+m.witness_read("forewarned_threshold", "parsed_from_the_temporal_tokens",
+                cites=["Bava Kamma 23b:17", "Bava Kamma 23b:18", "Mishnah Bava Kamma 2:4", "Bava Kamma 24a:9"])
 
 # -------------------------- Exod.21.30 · THE_RANSOM ------------------------
 # אִם־כֹּפֶר יוּשַׁת עָלָיו וְנָתַן פִּדְיֹן נַפְשׁוֹ כְּכֹל אֲשֶׁר־יוּשַׁת
@@ -434,6 +462,10 @@ m.step("Exod.21.37")
 # case that steal man bullock o member-of-a-flock u-tevacho o mekharo routes
 # to ganav-bullock-or-member-of-a-flock
 m.case("ki yignov ish shor o se u-tevacho o mekharo", "ganav_shor_o_se")
+# witness-tier presupposed read: constants_with_their_scope_in_ink on
+# theft_multiples — read, not installed
+m.witness_read("theft_multiples", "constants_with_their_scope_in_ink",
+                cites=["Mishnah Bava Kamma 7:1"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -451,8 +483,32 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 27
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('stoning_statute', 'backfill_legs')]
-    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Eduyot 6:1', 'Mishnah Makkot 1:6']
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('case_syntax_and_release_list', 'the_codes_first_case'), ('injury_indemnities', 'two_of_five_in_the_ink'), ('miscarriage_valuation', 'the_courts_algorithm'), ('tariff_call_site', 'compiled_through_leviticus_24'), ('limb_class', 'eye_and_tooth_as_exemplars'), ('stoning_statute', 'backfill_legs'), ('four_damages_class_map', 'the_answer_keys_module_list'), ('forewarned_threshold', 'parsed_from_the_temporal_tokens'), ('theft_multiples', 'constants_with_their_scope_in_ink')]
+    assert m.WITNESS_READS[0]["cites"] == ['Gittin 90a:10', 'Mekhilta DeRabbi Yishmael, Tractate Bachodesh 11:11', 'Mishnah Kiddushin 1:2', 'Kiddushin 16a:11', 'Kiddushin 15a:19']
+    assert all('the_codes_first_case' not in f for f in m.WORLD["facts"])
+    assert 'case_syntax_and_release_list' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Bava Kamma 8:1']
+    assert all('two_of_five_in_the_ink' not in f for f in m.WORLD["facts"])
+    assert 'injury_indemnities' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Mishnah Bava Kamma 5:4']
+    assert all('the_courts_algorithm' not in f for f in m.WORLD["facts"])
+    assert 'miscarriage_valuation' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bava Kamma 83b:10', 'Bava Kamma 84a:1']
+    assert all('compiled_through_leviticus_24' not in f for f in m.WORLD["facts"])
+    assert 'tariff_call_site' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Kiddushin 24a:6', 'Mishnah Negaim 6:7']
+    assert all('eye_and_tooth_as_exemplars' not in f for f in m.WORLD["facts"])
+    assert 'limb_class' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Eduyot 6:1', 'Mishnah Makkot 1:6']
     assert all('backfill_legs' not in f for f in m.WORLD["facts"])
     assert 'stoning_statute' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Mishnah Bava Kamma 1:1', 'Bava Kamma 2a:1', 'Bava Kamma 6b:11']
+    assert all('the_answer_keys_module_list' not in f for f in m.WORLD["facts"])
+    assert 'four_damages_class_map' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bava Kamma 23b:17', 'Bava Kamma 23b:18', 'Mishnah Bava Kamma 2:4', 'Bava Kamma 24a:9']
+    assert all('parsed_from_the_temporal_tokens' not in f for f in m.WORLD["facts"])
+    assert 'forewarned_threshold' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Mishnah Bava Kamma 7:1']
+    assert all('constants_with_their_scope_in_ink' not in f for f in m.WORLD["facts"])
+    assert 'theft_multiples' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

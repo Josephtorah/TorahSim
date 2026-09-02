@@ -1495,3 +1495,168 @@ piece-together method (recorded links + lemma scan) assembles a
 function's whole canon career TODAY, before derivation. Full
 record: World/step9/REPORT_CANON_HUNT.md; the audit at
 reviews/AUDIT_2026-09-02.md.
+
+**2026-09-02 — THE TEACHER HYPOTHESIS (owner's challenge; VERDICT
+WRITTEN, NOTHING RULED).** The owner challenged the architecture's
+naming: the 24 books look like a well-structured CODE BASE (with
+the cantillation marks), and the Mishnah/Talmud look like TEACHING
+MODULES that show us how the code runs — not external functions to
+compile; and the system, run faithfully, may "do something no one
+has anticipated." Put to the tradition's own self-testimony, twelve
+witnesses pulled at the local ink support him: the completeness
+motto ("turn it over, for ALL is in it," Pirkei Avot 5:22); nothing
+in the Writings not alluded in the Torah (Babylonian Talmud Taanit
+9a); the Talmud's whole "from where do we know this?" genre; the
+cantillation chartered as how the reading is UNDERSTOOD (Babylonian
+Talmud Megillah 3a on Nehemiah 8:8 — and the full accent layer
+sits unused in our own Data XMLs, 16,515 marks in Genesis alone);
+crowns-on-letters + Moses lost in Rabbi Akiva's classroom — the
+RECORDED unanticipated output (Babylonian Talmud Menachot 29b);
+"it is not in heaven... My children have triumphed over Me" — the
+system runs autonomously post-shipping by its own published rules
+(Babylonian Talmud Bava Metzia 59b); both-are-words-of-the-living-
+God divergent runs (Eruvin 13b); the plain sense never overridden
+(Shabbat 63a); the method-teacher outranking the content-teacher
+(Bava Metzia 33a); the Mishnah typing its own thin-anchored modules
+honestly (Mishnah Chagigah 1:8; "fence," Pirkei Avot 1:1); the
+middot published as the Sifra's PREFACE; rival parser settings
+recorded by name (Rabbi Yishmael vs Rabbi Akiva, Berakhot 31b).
+Honest remainder recorded too: mountains-by-a-hair modules and
+Sinai-transmission content are the tradition's own labels for what
+a cold run cannot reach — measurable, not assumable. If ruled: the
+naming flips (the 24 books RUN; the Mishnah GRADES; the Talmud
+TEACHES), the compilation target becomes the code itself, and two
+experiments open — the cantillation parser (disputes as alternative
+parses) and the cold run (regenerate a passed module's verdicts
+from ink + middot + parse alone, measure the fraction). Full
+record: World/step9/REPORT_TEACHER_HYPOTHESIS.md.
+
+**2026-09-02 — THE CODE HUNT (owner: "look for code, not counts").**
+Ordered the same sitting as the teacher hypothesis, and it delivered
+the hypothesis at code grain. The Bible's law sections are written
+in a detectable CASE SYNTAX — כִּי ("when") opens a case, אִם ("if")
+branches inside it, אוֹ ("or") alternates — and a keyword scan of
+Exodus 21–22 recovered the structure mechanically, including three
+consecutive custody paragraphs at Exodus 22:6/9/13 that coincide
+EXACTLY with the three passages Babylonian Talmud Bava Metzia 94b
+names (unpaid keeper / paid keeper / borrower). The Talmud then
+behaves as the code's engineering documentation, move by move: it
+recovers the code's HIDDEN PARAMETER (paid vs unpaid — stated
+nowhere in the ink) by diffing the theft branch's outputs, objection
+recorded and answered (94b:7–10); it routes a case type the code
+never names (the renter — the Mishnah's fourth bailee) onto an
+existing branch with the routing dispute logged (Mishnah Bava
+Metzia 7:8; Bava Metzia 93a); it maintains the keyword dictionary
+(ki has four meanings — Gittin 90a; every im is optional except
+three — Mekhilta DeRabbi Yishmael, Bachodesh 11:11); and on the
+goring ox it parses the state machine's transition threshold (three
+gorings flip innocuous→forewarned) out of the verse's own temporal
+tokens, with TWO named tokenizations preserved (Abaye vs Rava, Bava
+Kamma 23b) and the reverse transition + a recorded debate over the
+counter's semantics (Mishnah Bava Kamma 2:4; 24a). Consequence: the
+cold-run experiment's best first target is now the four-guardians
+function — nine verses of self-contained code, a parameter
+recoverable by a replayable argument, and its answer-key matrix
+already compiled in our modules since the Mishpatim exam. Full
+record: World/step9/REPORT_CODE_HUNT.md. Nothing ruled.
+
+
+**2026-09-02 — THE FIRST EXECUTION (owner: "I want to see how the
+code executes what the Mishnah says it does").** It ran, and it
+passed: cold_run_guardians.py parses Exodus 22:6-14 from the raw
+word database (no tradition loaded), finds the three custody
+paragraphs by verse-initial כִּי ("when") — exactly Bava Metzia
+94b:6's division — extracts each branch's events and outcomes from
+ink tokens (ten probes enforced in code, zero-report law), then
+applies the teacher's four RECORDED moves, each labeled with its
+source row (the theft-diff recovering the hidden paid/unpaid
+parameter, 94b:8-9; the benefit seal, 94b:10; the loss a-fortiori,
+94b:15; the renter routing, Mishnah Bava Metzia 7:8 on the
+hire-clause hook in 22:14) — and emits the four-role liability
+matrix. GRADE vs Mishnah Shevuot 8:1: **12/12 cells**, provenance
+on every cell (6 ink, 3 recorded inferences, 3 routed). Honest
+caveat on the record: the teacher moves are hand-encoded replays of
+the recorded arguments, not discovered — the next rung is middot-
+as-data. Three new specimens joined the catalog the same sitting:
+the CLASS HIERARCHY (Mishnah Bava Kamma 1:1's four primary damages
+= the scanner's four consecutive KI cases at Exod 21:28/33, 22:4/5,
+with the mishnah's own pairwise interface analysis and the
+avot→toladot subclass typing at Bava Kamma 2a); the TIMER + CROSS-
+MODULE INTERRUPT (the slave's six-year timer, Exod 21:2, and the
+Jubilee release imported from Leviticus 25 overriding even the
+pierced slave's "forever" — Mishnah Kiddushin 1:2, Kiddushin
+15a:19); and the BOUNDED DIAGNOSTIC LOOP (Leviticus 13:1-8 scanned:
+quarantine + seven days + the iteration counter שֵׁנִית "a second
+time" IN THE INK, exit and re-entry guards — Mishnah Negaim
+compiles its tables; waiting for us in the next book). Full record:
+World/step9/REPORT_CODE_EXECUTION.md. Nothing ruled.
+
+**2026-09-02 — THE COMPILER LAW IS RULED (owner, verbatim: "It
+should absolutely become the projects law. This is now our top
+priority to help us compile the bible. Make sure this is recorded
+everywhere. Put it in the steps.").** The teacher hypothesis and
+the code hunt above are no longer open questions — they are LAW and
+the project's TOP PRIORITY. The law: the 24 books are the program;
+the Talmud holds the compile rules (its recorded arguments,
+replayed as executable steps with source labels); the Mishnah is
+the answer sheet that grades every compilation. Proven before
+ruling: the four-guardians cold run, 12/12 vs Mishnah Shevuot 8:1.
+The road: middot as reusable tools instead of hand-coded
+arguments; the cantillation parse (Step 1, already done
+whole-Bible) as the structure layer; compile section by section,
+book by book, grading against the Mishnah at every step. The build
+queue's standing top item is now the compiler. Recorded at THE_STEPS
+top (the law block), THE_BRIEFING (entry + scoreboard), the state
+doc, and memory (compiler-law). Nothing else changes: ledgers,
+gates, stamps, declared scope, the exam — all stand.
+
+**2026-09-02 — THE MISHPATIM RE-COMPILATION PASS (owner: "Ok run it
+and report what you find").** The first full pass under the compiler
+law: five more functions of the Mishpatim law code cold-compiled and
+graded (slave-release vs Mishnah Kiddushin 1:2; the four-damages
+class map vs Bava Kamma 1:1; the goring-ox state machine vs Bava
+Kamma 1:4+2:4; the five injury indemnities vs Bava Kamma 8:1; the
+theft multiples vs Bava Kamma 7:1) — 23/23, and with the guardians
+**35/35 across six functions**. THE MEASURED FRACTIONS: INK 21 cells
+(60%), RECORDED INFERENCE 8 (23%), ROUTED/IMPORT 6 (17%) — sixty
+percent of the answer sheets sits in the bare ink, and every non-ink
+cell names its source row. THE FIND OF THE PASS: the tariff-to-money
+conversion (Bava Kamma 83b-84a) is derived through LEVITICUS
+24:21-22 — the CALL SITE (the formula's only other occurrence,
+per the canon scan) — so compiling the Exodus seat REQUIRES the
+Leviticus call: the next book is a measured compile dependency of
+the finished one. Also measured: the case-syntax boundary (openers
+dense 21:2-22:15; chapter 23 has ZERO if-branches — command-style,
+a second syntax family). Seven teacher-move types observed so far
+(diff, a-fortiori, comparison, routing, threshold-parse,
+generalization, cross-module import) — the growing spec for
+middot-as-data. Remaining Mishpatim openers enumerated in the
+report. Records: World/step9/REPORT_MISHPATIM_COMPILATION.md +
+cold_run_mishpatim.py.
+
+**2026-09-02 — THE MOVE CATALOG BORN + THE FIRST COMPILER SEAT
+(owner, after repeat-back: "Yes, make this change. This is very
+exciting. We are finding deep logic now.").** Two rulings executed:
+(1) logic/MOVE_CATALOG.md is the canonical registry of teacher
+moves — TEN at birth (diff, a-fortiori, comparison, routing,
+threshold-parse, generalization, cross-module import,
+exemplar-generalization, keyword-dictionary, pointer-fetch), each
+with recorded exemplars at pulled rows and its cold-run cells;
+updated unprompted whenever new deep logic is found; the compile-
+dependency graph rides at the bottom (Exod 21 ← Lev 24/25, Exod 22
+← Deut 22/25). (2) Compiler findings now AUTO-SEAT when found: the
+first seat landed twelve claims — EX21-15..22 into
+exo_21_the_ordinances (the case syntax + three-book release list,
+the indemnities ink pair, the valuation algorithm, the CALL-SITE
+dependency, the exemplar class, the four-damages map, the
+threshold-parse, the pure-ink multiples) and EX22-11..14 into
+exo_22_property_social (the three-passages diff, the generated loss
+column, the renter routing, the pointer-fetch) — carried by the
+52-source ledger compiler_code_hunt_2026-09-02.md, manifests
+appended (0 FAILED), rituals re-run COMPLETE, preflights ALL
+SCENARIOS GREEN, changelog GREEN, CORPUS_TRUTH GREEN (117 units,
+hash 8b8fff1fa28953af — unmoved, correctly: the world hash tracks
+narrative facts; law-layer witnesses live in the frozen YAMLs +
+manifests). Delegated re-affirmation row in STAMP_LEDGER (16 rows).
+A wrong prediction corrected on the record: I told the owner the
+seat would move the hash; it does not, for the reason above.

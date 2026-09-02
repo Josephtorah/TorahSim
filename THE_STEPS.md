@@ -6,6 +6,65 @@ part of the process. The scroll's labels report exactly which step a
 verse has reached — never more. (As of 2026-08-21; the RE-era
 constitution governs.)
 
+## ⚠ THE COMPILER LAW — the project's TOP PRIORITY (owner-ruled 2026-09-02)
+
+The owner's ruling, verbatim: "It should absolutely become the
+project's law. This is now our top priority to help us compile the
+bible. Make sure this is recorded everywhere. Put it in the steps."
+
+The law, in plain words: **the 24 books are the program; the Talmud
+holds the compile rules; the Mishnah is the answer sheet.** The
+Bible's law sections are written in a real case structure — כִּי
+("when") opens a case, אִם ("if") branches inside it — that a machine
+detects from the bare ink (and Step 1's cantillation parse of all
+23,213 verses is the structure layer, already done). The gaps the
+bare text leaves open — a hidden parameter, a missing column, an
+unnamed role — are filled by the Talmud's RECORDED arguments,
+replayed as executable steps, each labeled with its source row. The
+result is graded against the Mishnah's decided-case table. Proven
+the day it was ruled: the four-guardians function (Exodus 22:6-14)
+compiled cold and matched Mishnah Shevuot 8:1 in 12 of 12 cells —
+six cells straight from ink, three from recorded inferences, three
+routed per the Mishnah's recorded routing (the runner:
+World/step9/cold_run_guardians.py; the records:
+World/step9/REPORT_CODE_HUNT.md and REPORT_CODE_EXECUTION.md;
+witnesses for the teacher relationship itself:
+REPORT_TEACHER_HYPOTHESIS.md).
+
+What this changes in the naming: the Mishnah/Talmud are the TEACHER,
+not a second code base — the 24 books RUN; the Mishnah GRADES; the
+Talmud TEACHES the compile steps. The exam (Step 9) is unchanged and
+was right all along: grading against the answer key is what an
+answer key is for. The compilation TARGET is what flips: not
+Mishnah rows hand-built into rule functions, but the code itself —
+verse ink + the cantillation structure + the tradition's own
+inference rules (logic/MIDDOT.md) — until the machine's run of the
+code REPRODUCES the answer key. The road: make the recorded
+inference moves reusable tools (middot as data, not hand-coded
+arguments), then compile section by section, book by book. Every
+standing law beneath this is untouched: ledgers append-only, gates,
+stamps, declared scope, the whole ritual.
+
+TWO RIDERS (owner-ruled 2026-09-02, confirmed after repeat-back):
+(1) **THE MOVE CATALOG** — logic/MOVE_CATALOG.md is the canonical
+registry of teacher moves (the compile-move forms with their
+recorded exemplars; M-01..M-10 at birth). The owner: "probably going
+to be one of the more important records to keep because we are in
+discovering deep logic." Updated UNPROMPTED the sitting a new move
+or exemplar is found — a standing duty like this file's.
+(2) **COMPILER FINDINGS AUTO-SEAT** — discoveries about verses
+already derived enter the frozen units WHEN FOUND, through the full
+normal path (claim, cites, ledger, gates, ritual, manifest), no
+per-update owner approval ("I say no — it needs to be updated when
+we find this logic"); delegated actions labeled forever, owner can
+overrule. First seat same day: twelve claims (EX21-15..22,
+EX22-11..14) into exo_21_the_ordinances + exo_22_property_social,
+ledger compiler_code_hunt_2026-09-02.md (52 sources), rituals
+COMPLETE, all gates green. Note for the record: the world hash
+tracks NARRATIVE facts, so law-layer witness seats leave it
+unmoved — the permanence lives in the frozen YAMLs, manifests, and
+ledgers.
+
 ## Step 1 — Parse the verse  ✅ done, whole Bible
 The reading marks (the cantillation) split the verse like brackets:
 the strongest pause first, down to the leaves — the word-bricks. Every
@@ -298,6 +357,27 @@ reading). The case-anchored books are this step's home shelf — see
 THE TWO SHELVES in Step 4.
    → shows as: chip "proven"; drops automatically if a test goes red.
 
+⚠ RE-FOUNDED UNDER THE COMPILER LAW (owner's correction 2026-09-02:
+"didn't we change the way we look at step 9? [the exam] is how we
+derive the deep logic... it seems like you are holding on to the
+previous method"). Step 9 is no longer a FINAL TEST of hand-built
+rules — it is THE COMPILATION LOOP, and the exam is the DERIVATION
+INSTRUMENT: run what the bare ink gives, hold it against the
+Mishnah's answer sheet, and EVERY GAP BETWEEN THEM IS WHERE THE DEEP
+LOGIC LIVES — a hidden parameter, a threshold in the time-words, a
+pointer to another book, a class behind two exemplars. The Talmud's
+recorded argument for each gap is the compile move: registered in
+logic/MOVE_CATALOG.md, seated in the units (the auto-seat rider
+above). One level, not two — there is no "proof by exam" beside
+"proof by regeneration"; grading IS the discovery loop. The rounds
+below (through round 9, 329/329) remain valid RECORDS of the era
+before the law — they graded true tables, but graded rules built
+FROM the answer key, the scaffolding the law replaces as functions
+get cold-compiled. Site presentation follows this: one Step 9 page
+per function — raw code with its case keywords marked, the gaps,
+the moves that fill them, the emitted table graded with provenance,
+the runner and its output.
+
 THE FIRST EXAM RAN (2026-08-31, pilot; home: <world-link>/step9,
 full record in its REPORT.md). Ten Mishnah case rows (Yoma 8:7, Yevamot
 6:6, Eduyot 2:10) faced the machine on Genesis anchors the reading had
@@ -472,6 +552,29 @@ swapped, the house RAISES ITSELF to Moses' name, and the book ends
 with the machine LIVE (the cloud-and-fire travel protocol running).
 Catalog R-316..R-319; 124 compiled rules. Full record:
 World/step9/REPORT_VAYAKHEL_PEKUDEI.md.
+
+THE FIRST COLD COMPILATION RAN (2026-09-02, under the compiler law —
+see the top of this file). The four-guardians function: the machine
+parsed Exodus 22:6-14 from the raw word database with no tradition
+loaded, found the three custody paragraphs by verse-initial כִּי
+("when") — exactly the division Babylonian Talmud Bava Metzia 94b:6
+names — extracted every branch's events and outcomes from ink
+tokens (ten probes enforced, zero-report law), applied the Talmud's
+four recorded moves with source labels (the theft-diff recovering
+the hidden paid/unpaid parameter, 94b:8-9; the benefit seal, 94b:10;
+the loss a-fortiori, 94b:15; the renter routed per Mishnah Bava
+Metzia 7:8 on the hire-clause hook in the ink of 22:14), and emitted
+the four-role liability matrix: **12/12 cells matching Mishnah
+Shevuot 8:1**, provenance on every cell. Same sitting, three more
+code structures catalogued: the CLASS HIERARCHY (Mishnah Bava Kamma
+1:1's four damages = the code's four consecutive when-cases, with
+the tradition's own subclass typing — primary categories and their
+derivatives); the TIMER + CROSS-MODULE INTERRUPT (the slave's
+six-year clock, and the Jubilee from Leviticus 25 overriding even
+the pierced slave's "forever"); the BOUNDED DIAGNOSTIC LOOP
+(Leviticus 13: quarantine seven days, re-examine, the iteration
+counter שֵׁנִית "a second time" written in the ink). Records:
+World/step9/REPORT_CODE_HUNT.md, REPORT_CODE_EXECUTION.md.
 
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed

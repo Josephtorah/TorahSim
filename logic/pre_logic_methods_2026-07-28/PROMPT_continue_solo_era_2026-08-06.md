@@ -8439,3 +8439,139 @@ d'Nedavah...' ref format — VERIFY before extracting). ALSO OPEN:
 Talmud; Step 9 site visibility; next TorahSim sync (one-way, we
 initiate); the no-check claims ruling (audit thin spot 4); the
 second-source docket membership check (thin spot 2).
+
+## ⚠⚠ MILESTONE + LAW 2026-09-02 (after #37, same day): THE COMPILER
+## LAW RULED — the project's TOP PRIORITY. Owner verbatim: "It should
+## absolutely become the projects law. This is now our top priority to
+## help us compile the bible. Make sure this is recorded everywhere.
+## Put it in the steps."
+THE ARC (one sitting, owner-driven): (1) owner challenged the
+architecture ("I see a well structured code base, 24 books with
+cantillation marks... the Mishnah/Talmud as teaching modules... I
+don't think we're supposed to compile the Talmud as external
+functions... the system will run on its own and do something no one
+has anticipated") → TWELVE witnesses pulled at the local ink support
+him (World/step9/REPORT_TEACHER_HYPOTHESIS.md; the strongest: Pirkei
+Avot 5:22 all-is-in-it; Babylonian Talmud Megillah 3a chartering the
+cantillation on Nehemiah 8:8; Menachot 29b crowns + Moses lost in
+Akiva's classroom = recorded unanticipated output; Bava Metzia 59b
+not-in-heaven; Gittin 90a ki-has-four-meanings; Mekhilta DeRabbi
+Yishmael Bachodesh 11:11 every-im-optional-except-three; Chagigah 1:8
+the honest syllabus). (2) The_Program_And_The_Teacher.md+.epub baked
+(root) with FIVE live experiments: covenant-count Gen 17 = 13 exact
+(Mishnah Nedarim 3:11); vayomer-count Gen 1 = 10 tokens (census
+membership = the teacher's rule, Rosh Hashanah 32a); labor-word Torah
+raw = 65 vs the taught 39 (Shabbat 49b records its own counting
+uncertainty); eye-tachat-eye exact formula = ONLY Exod 21:24 + Lev
+24:20 canon-wide (Deut 19:21 carries the b-preposition variant);
+Genesis 1:1 self-parses at the etnachta on God. (3) CODE HUNT
+(REPORT_CODE_HUNT.md): the case syntax (verse-initial KI opens, IM
+branches, O alternates) machine-recovered in Exod 21-22; the three
+custody paragraphs = Bava Metzia 94b:6's named division; the hidden
+paid/unpaid parameter recovered by the gemara's recorded theft-diff
+(94b:7-10); renter routed (Mishnah Bava Metzia 7:8, dispute at 93a);
+goring-ox state machine w/ threshold-3 parsed from the verse's
+temporal tokens in TWO recorded tokenizations (Abaye/Rava, Bava Kamma
+23b:17-18), reverse transition + counter-semantics debate (Mishnah
+Bava Kamma 2:4, 24a:9). (4) THE FIRST EXECUTION
+(REPORT_CODE_EXECUTION.md + cold_run_guardians.py): parse → extract
+(10 probes, zero-report law in code) → replay the four recorded
+moves w/ source labels → emit matrix → GRADE: **12/12 vs Mishnah
+Shevuot 8:1** (6 ink, 1 a-fortiori 94b:15, 2 comparison 94b:19, 3
+routed). Plus three new specimens: class hierarchy (Mishnah Bava
+Kamma 1:1 four avot = the scanner's four KI cases, avot→toladot
+inheritance), timer + cross-module interrupt (Kiddushin 1:2 + 15a:19,
+Jubilee from Lev 25 overrides the pierced "forever"), bounded
+diagnostic loop w/ iteration counter שנית ("a second time") in the
+ink (Lev 13 scan). (5) OWNER RULED IT LAW + TOP PRIORITY (verbatim
+above). RECORDED: THE_STEPS top (⚠ THE COMPILER LAW block) + Step 9
+run entry; THE_WORLD idea log (three entries: teacher hypothesis,
+code hunt, first execution + the RULED entry); THE_BRIEFING (new
+entry newest-first + scoreboard TOP PRIORITY line); memory
+compiler-law.md + MEMORY.md index. Also this sitting, earlier:
+How_The_Machine_Works.md+.epub (root; the from-zero tutorial).
+NOTHING COMMITTED — awaiting the owner's commit word. THE NEXT ROAD
+(under the law): middot-as-data (reusable inference tools replacing
+hand-coded replays), the cantillation structure layer joined to the
+compiler, compile section by section grading against the Mishnah;
+Leviticus (Sifra spine, Lev 24 first recorded call) proceeds
+alongside per the standing queue.
+
+## MILESTONE 2026-09-02 (later the same day): THE MISHPATIM
+## RE-COMPILATION PASS (owner: "Ok run it and report what you find")
+After the review discussion (owner: "Discuss no change" → discussed;
+he then ordered the run): FIVE more functions of Exod 21:1-23:19
+cold-compiled by World/step9/cold_run_mishpatim.py (26 probes,
+zero-report in code) and graded: slave-release 3/3 (Mishnah
+Kiddushin 1:2; deduction via Kiddushin 16a:11 on 21:8, Jubilee
+import via 15a:19), four-damages class map 5/5 (Mishnah Bava Kamma
+1:1; four verse-initial KI openers w/ class nouns; best-of-land INK
+22:4 + Bava Kamma 6b generalization), goring-ox state machine 6/6
+(Bava Kamma 1:4+2:4; threshold-3 via the 23b:17-18 tokenizations),
+injury indemnities 5/5 (Bava Kamma 8:1; medical+idleness INK 21:19;
+DAMAGE-AS-MONEY DERIVED THROUGH LEVITICUS 24:21-22 = THE CALL SITE
+— Bava Kamma 83b:10/84a:1 pulled; pain via 21:25; humiliation via
+Deut 25:11-12), theft multiples 4/4 (Bava Kamma 7:1; all INK).
+TOTAL WITH GUARDIANS: **35/35 across six functions. FRACTIONS: INK
+21 (60%) / RECORDED 8 (23%) / ROUTED-IMPORT 6 (17%).** THE FIND:
+Leviticus 24 is a measured COMPILE DEPENDENCY of Exodus 21 (the
+tariff's semantics fixed at the call site). Syntax boundary
+measured: openers dense 21:2-22:15; Exod 23 has ZERO if-branches
+(command-style family). Seven teacher-move types catalogued so far.
+Remaining Mishpatim openers enumerated in the report (maidservant
+ladder, altar-murderer, struck slave, miscarriage, freed-slave
+eye/tooth, seducer, garment pledge, enemy's animal, the
+command-style tail). RECORDS: REPORT_MISHPATIM_COMPILATION.md;
+THE_WORLD entry; THE_BRIEFING scoreboard updated. Still nothing
+committed — awaiting the owner's word.
+
+ADDENDUM 2026-09-02 (owner: "Put this in an E pub... feel free to
+find a few more... write it like two people who are not
+programmers"): PASS 2 ran first — 3 more functions, 9/9
+(cold_run_mishpatim_2.py): the seducer's fine (POINTER in Exod
+22:15-16 ink, CONSTANT fifty in Deut 22:29 — cross-book price-list
+fetch, Ketubot 29b:3), the freed slave's limbs (eye+tooth INK →
+exemplar-generalization to the 24 non-regenerating limb-tips,
+Kiddushin 24a:6 + Mishnah Negaim 6:7 — the EIGHTH move type), the
+miscarriage valuation (judges-clause INK; before/after appraisal
+algorithm ANSWER-KEY w/ Rabban Shimon ben Gamliel's recorded
+objection, Mishnah Bava Kamma 5:4). **TOTAL NOW 44/44 across nine
+functions; fractions INK 26/59%, RECORDED 9/20%, ROUTED 9/20%.**
+Then the listening epub baked: The_Day_We_Ran_The_Law.md+.epub at
+root — a dialogue (Miriam/Jack, two non-programmers), 6 chapters,
+~18 min listening, covering the whole compilation arc incl. the
+Leviticus 24 dependency. REPORT_MISHPATIM_COMPILATION.md carries
+the PASS 2 section. Still uncommitted — awaiting the owner's word.
+
+## MILESTONE 2026-09-02 (evening): MOVE CATALOG BORN + FIRST COMPILER
+## SEAT (owner rulings, confirmed after repeat-back: "Yes, make this
+## change... We are finding deep logic now.")
+RULING 1 — THE MOVE CATALOG: logic/MOVE_CATALOG.md = canonical
+registry of teacher moves, "one of the more important records";
+M-01..M-10 at birth (diff, a-fortiori, comparison, routing,
+threshold-parse, generalization, cross-module import, exemplar-
+generalization, keyword-dictionary, pointer-fetch), exemplars at
+pulled rows, cold-run cells, dependency graph at bottom; STANDING
+DUTY: update unprompted when logic is found. RULING 2 — COMPILER
+AUTO-SEAT: compiler findings on derived verses seat WHEN FOUND, no
+per-update approval; delegated labels forever; owner may overrule.
+EXECUTED: ledger logic/oral_triage/compiler_code_hunt_2026-09-02.md
+(52 sources, 52/52 COMPLETE, cite-restatement NOTE); TWELVE claims
+seated — EX21-15..22 → exo_21_the_ordinances (8 ops on STEP_Ex_21_
+2/19/22/24/26/28/29/37, forward-era indent family, column-0 steps),
+EX22-11..14 → exo_22_property_social (4 ops on STEP_Ex_22_6/11/14/
+15, July indent family); derivation_log "step: X — Compiler seat"
+both units; manifests +8/+4 rows (verify: 13 verified 0 failed 9
+no-check / 10 uncheckable 0 failed 4 no-check); freeze rituals
+COMPLETE ×2, preflights ALL SCENARIOS GREEN, gloss_lint 0,
+changelog GREEN, corpus_world regen, CORPUS_TRUTH GREEN 117 units
+hash 8b8fff1fa28953af — UNMOVED, and the prediction correction is
+ON RECORD: the world hash tracks narrative facts; law-layer witness
+seats don't touch it (permanence = frozen YAMLs + manifests +
+ledger). STAMP_LEDGER row 16: delegated re-affirmation (compiler
+seat) for both units. TRAPS FOR NEXT TIME: exo_21_slave_person +
+exo_21_ox_pit are DRAFTS (phase-2c reprocessing, NOT in the 117) —
+frozen ch-21 home is exo_21_the_ordinances; a first seat went into
+the drafts and was git-reverted same sitting. verify_claims.py
+takes a MANIFEST PATH argument. Uncommitted: everything from the
+compiler law forward — awaiting the owner's word.
