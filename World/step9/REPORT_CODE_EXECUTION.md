@@ -155,3 +155,67 @@ those moves are replayable by machine.**
 
 STATUS: model-layer experiment; read-only; no unit touched; nothing
 ruled. The runner and both reports live in World/step9/.
+
+## THE EFFECTS RETROFIT (2026-09-03, owner: "retrofit the three cold functions")
+The first effect-bearing modules under THE EFFECTS LAW. New layer:
+effects_layer.py — loads effect_vocabulary.yaml, REFUSES any unregistered
+effect at emission time (the registry discipline in code), renders each
+verdict's state change, tallies ledger ops. All answer-sheet scores held:
+- cold_run_guardians.py: 12/12 — debit x7, status x5 (the swear column IS
+  oath_imposed; the pay column IS pays).
+- cold_run_mishpatim.py: 23/23 — debit x14, status x5, TIMER x2 (the
+  six-year term clock and the jubilee — the simulator's first timers),
+  body x1; four class-map cells honestly write nothing.
+- cold_run_mishpatim_2.py: 9/9 — debit x3, status x5 (the freed slave's
+  released + goes_free pair; the ox actor's exempt).
+- cold_run_vayikra5.py: 27/27 — heaven x13 (ונסלח "and he shall be
+  forgiven" closing Heaven's docket), debit x9, status x11, transfer x4;
+  disputes FORK both arms' effects, labeled (method law 3).
+Registry grew by discovery during the retrofit: jubilee_release (the
+probe for it had already fired inside the compiled code at Lev 25:10 —
+ink verified: דרור "liberty", יובל "jubilee").
+GRAND TOTAL: 71/71 cells, every one carrying a registered effect or an
+honest no-change. The three compiled functions now satisfy the effects
+rule; every future compile carries effects from birth.
+
+## THE SKELETON AND THE FIRST EFFECT-BORN SPANS (2026-09-03, owner:
+## "build the skeleton then compile the spans")
+THE SIMULATOR SKELETON: World/step9/world_engine.py — the five
+constructs live (clock with eras, mutable entity ledgers, laws as
+daemons firing unasked, timers, the diff engine). First spin: 5/5
+checkpoints over TEST SCENES replaying the tradition's own recorded
+cases (method laws 4+6 — never invented history): the six-year term
+fired as the first timer; the ox turned forewarned at the third goring
+and the fourth paid full; the two keepers split oath/pays on one theft;
+the sworn deposit wrote pay+fifth and closed Heaven's docket at the
+recorded ram; the pierced slave's "forever" VOIDED his six-year exit
+(the spin's own interface discovery — timer CANCELLATION by a later
+text event entered the contract) and the jubilee freed him at year 12.
+Seven debits ended OPEN — the recorded cases state the obligation and
+record no payment event; an open ledger is a legal ending.
+THE EFFECT INTERFACE (fixed by the skeleton, every span targets it):
+{effect, subject, counterparty, amount, due, source_law, case_source}
+plus cancel_timers(subject, effect, by-text-event).
+THREE SPANS COMPILED WITH EFFECTS FROM BIRTH:
+- cold_run_pesach.py (Exod 12-13): 24/24 — ink 29% / moves 67% / data
+  4%; ledger signature: block x10 (the access filter), timer x3 (the
+  calendar windows), the first karet_cut_off on Heaven's docket. Two
+  probe tokens corrected by the ink itself (ענוש יענש "fined he shall
+  be fined" in the harvest; תוציא "you shall not carry out" here).
+- cold_run_calendar.py (Exod 23:10-19): 14/14 — the first LAND-entity
+  timer (the seventh-year release), the standing appearance duty on
+  Heaven's docket, the kid-clause census machine-verified at its three
+  seats (23:19, 34:26, Deut 14:21), and the fat/milk consonant pair
+  (חלב chelev/chalev) sitting in adjacent verses — the Sanhedrin 4b:16
+  vocalization exhibit in this span's own ink.
+- cold_run_decalogue.py (Exod 20): 12/12 — the lash hook at lo-yenakkeh,
+  the kiddush duty, the household labor ban, theft-of-persons capital,
+  iron disqualifying the altar stone. Moves-heavy by nature (92%) —
+  the Decalogue states principles; the tradition carries their cases.
+REGISTRY: 39 effects (12 added tonight by discovery, every ink verb
+machine-verified). COMPILED-CHIP LEDGER: exo_12, exo_13, exo_20,
+exo_23 now hold passing cold functions (chips pending the site lap).
+REMAINING SPAN QUEUE (uncompiled law spans): Lev 1-4 (the offering
+procedures — Lev 5 done), the sanctuary/service spans (Exod 25-30
+constants + choreography), Exod 16 (the manna's Sabbath clauses),
+Exod 31/34-35 (the sign clauses), and each new book as it derives.

@@ -1,0 +1,2036 @@
+- **Arakhin 2b:12** [LAW] (Ex 23:17) — appearance duty: the one-eyed exempt — the yera'eh/yireh double reading of the ink's own unpointed verb
+- **Arakhin 3b:13** [LAW] (Ex 29:6) — the head-plate's placement argued against the phylacteries' — vestment geometry bearing tefillin law
+- **Arakhin 4a:3** [QUOTE] (Ex 29:33) — zimmun obligation; the priests' sacrificial meat as the dialectic leg
+- **Arakhin 6b:12** [CREDIT] (Ex 21:29-30) — the ransom-atonement teaching rides the seated ordinances ransom claims
+- **Arakhin 7a:12** [LAW] (Ex 21:22) — the condemned pregnant woman not delayed — the offspring-as-owner's-money leg of our miscarriage verse
+- **Arakhin 8b:13** [AGGADAH] (Ex 34:6) — the abundant-kindness attribute at the scales
+- **Arakhin 11a:20** [LAW] (Ex 19:19) — the Levites' song sourced to Moses-speaks-God-answers-in-voice — Talmud-only temple-service law
+- **Arakhin 13b:2** [LAW] (Ex 12:3,6) — paschal safeguard-timing by the identity-move with the daily offering
+- **Arakhin 14b:19** [CREDIT] (Ex 21:32) — the thirty-shekel slave row rides the seated fixed-fine claim
+- **Arakhin 15a:15** [AGGADAH] (Ex 14:11) — the ten trials: descending into the sea
+- **Arakhin 15a:17** [AGGADAH] (Ex 14:7) — the sea's minister and the spewed Egyptians
+- **Arakhin 15a:18** [AGGADAH] (Ex 14:30) — the Kishon as guarantor
+- **Arakhin 15a:19** [AGGADAH] (Ex 15:23-24, 17:3) — the two water trials
+- **Arakhin 15a:20** [AGGADAH] (Ex 17:1-2) — Rephidim
+- **Arakhin 15b:2** [AGGADAH] (Ex 16:3,13) — the two quail trials
+- **Arakhin 15b:18** [AGGADAH] (Ex 32:31) — malicious speech as the three cardinal sins ('great' analogy)
+- **Arakhin 16a:14** [AGGADAH] (Ex 28:30,35) — the mitre and belt atone
+- **Arakhin 16a:15** [AGGADAH] (Ex 28:15) — the breastplate atones for judgments
+- **Arakhin 16a:16** [AGGADAH] (Ex 28:38) — the frontplate atones for brazenness
+- **Arakhin 16b:20** [CREDIT] (Ex 31:6, 38:23) — Hiram's Dan lineage beside Oholiab — the seated Judah-Dan pairing claim
+- **Arakhin 18a:18** [CREDIT] (Ex 12:15) — the from-the-first-day leaven scope rides the seated leaven rows
+- **Arakhin 18b:2** [CREDIT] (Ex 12:18) — the until-the-21st matza clause, same seated cluster
+- **Arakhin 18b:7** [CREDIT] (Ex 21:2) — year-computations list; the slave's six years = the seated clock
+- **Arakhin 18b:11** [CREDIT] (Ex 21:2) — whole-years from 'and in the seventh' — the seated clock's own derivation
+- **Arakhin 19b:5** [QUOTE] (Ex 30:19) — the forearm-weight vow; the laver verse as leg
+- **Arakhin 19b:6** [LAW] (Ex 13:9) — yad in the Torah = up to the wrist — the tefillin-placement lexicon row (keyword-dictionary class)
+- **Arakhin 19b:8** [LAW] (Ex 23:14) — regel lexicon: the pilgrimage's own word measured
+- **Arakhin 24b:7** [QUOTE] (Ex 12:15) — the from-day expression as grammar exemplar
+- **Arakhin 30b:9** [AGGADAH] (Ex 21:7) — the destitution ladder ending at the sold daughter
+- **Arakhin 31b:10** [QUOTE] (Ex 12:5) — the year-definition leg
+- **Arakhin 33a:3** [CREDIT] (Ex 21:2) — six-vs-seven years, two individuals — the seated release machinery
+- **Avodah Zarah 2b:9** [AGGADAH] (Ex 15:3) — the LORD a man of war; the nations' claim
+- **Avodah Zarah 2b:15** [AGGADAH] (Ex 19:17) — the mountain overturned as a basin — the coercion record (legal shadow noted)
+- **Avodah Zarah 3a:5** [AGGADAH] (Ex 4:22) — the Father's testimony
+- **Avodah Zarah 4a:4** [AGGADAH] (Ex 15:6) — the right hand's power
+- **Avodah Zarah 5a:18** [AGGADAH] (Ex 4:19) — the pauper as dead (Dathan and Abiram)
+- **Avodah Zarah 8a:17** [LAW] (Ex 34:15) — the gentile wedding-feast ban from 'and he call you and you eat of his sacrifice'
+- **Avodah Zarah 10b:14** [AGGADAH] (Ex 29:28) — Ketia's portion
+- **Avodah Zarah 11a:3** [AGGADAH] (Ex 13:21) — Onkelos the convert and the torch
+- **Avodah Zarah 23b:10** [QUOTE] (Ex 25:2) — the red-heifer purchase sugya's take-to-YOU leg
+- **Avodah Zarah 24a:1** [QUOTE] (Ex 25:2) — the same sugya's continuation
+- **Avodah Zarah 24a:2** [LAW] (Ex 25:2,7) — 'onyx stones' WITHOUT the vav = the list-boundary parse of the contributions — an ink-level parse ruling on exo_25's own span
+- **Avodah Zarah 24a:19** [QUOTE] (Ex 10:25) — Pharaoh's offerings, pre-Sinai leg
+- **Avodah Zarah 24a:20** [QUOTE] (Ex 18:12) — Yitro's offering, same sugya
+- **Avodah Zarah 24b:15** [AGGADAH] (Ex 15:1) — the cows' song
+- **Avodah Zarah 27a:2** [LAW] (Ex 4:25) — who may circumcise: the Samaritan dispute with Zipporah's flint as the operative leg
+- **Avodah Zarah 27a:14** [LAW] (Ex 4:25) — a woman may circumcise — vattikach read to resolution
+- **Avodah Zarah 34b:15** [CREDIT] (Ex 21:28) — the stoned ox's flesh-ban — seated at the ordinances
+- **Avodah Zarah 36b:9** [QUOTE] (Ex 34:16) — the intermarriage leg; the zealots' law is Sinai-transmitted
+- **Avodah Zarah 39a:8** [QUOTE] (Ex 16:23) — kodesh as a fish-name MNEMONIC — the quote class's own definition
+- **Avodah Zarah 42b:15** [CREDIT] (Ex 20:20,23) — the attendants-figures ban — the seated image-making law
+- **Avodah Zarah 42b:18** [CREDIT] (Ex 20:20) — same sugya, dup leg
+- **Avodah Zarah 42b:19** [CREDIT] (Ex 20:23) — same sugya, dup leg
+- **Avodah Zarah 43a:12** [CREDIT] (Ex 20:20,23) — same sugya, dup leg
+- **Avodah Zarah 43a:17** [CREDIT] (Ex 20:20) — same sugya, dup leg
+- **Avodah Zarah 43b:4** [CREDIT] (Ex 20:20,23) — same sugya, dup leg
+- **Avodah Zarah 43b:6** [LAW] (Ex 20:4) — the FOUR-DOMAIN parse of the graven-image verse (heaven above / earth beneath / water under) — a distinct ink-structure row
+- **Avodah Zarah 43b:9** [CREDIT] (Ex 20:20) — same sugya, dup leg
+- **Avodah Zarah 44a:2** [AGGADAH] (Ex 32:20) — the calf ground and drunk like the sota
+- **Avodah Zarah 51a:13** [LAW] (Ex 22:19) — slaughtering a BLEMISHED animal to idols exempt — the sacrifices-to-gods verse parsed
+- **Avodah Zarah 53b:10** [AGGADAH] (Ex 32:4) — 'these are your gods,' the plural
+- **Avodah Zarah 54a:4** [LAW] (Ex 20:5) — duress excluded from the bowing ban via live-by-them
+- **Avodah Zarah 74a:2** [CREDIT] (Ex 21:28) — the benefit-ban list's stoned-ox member — seated
+- **Avodah Zarah 74a:3** [CREDIT] (Ex 13:13, 23:19) — the list's firstborn-donkey and meat-in-milk members — both seated
+- **Bava Batra 4a:1** [AGGADAH] (Ex 22:27) — Herod and Bava ben Buta on cursing the ruler
+- **Bava Batra 8b:9** [CREDIT] (Ex 28:5) — authority-of-two over public funds — the seated audit-constitution's own source row
+- **Bava Batra 10b:3** [AGGADAH] (Ex 30:12) — charity exalts the horn of Israel
+- **Bava Batra 12b:7** [QUOTE] (Ex 27:8) — the hollow lexicon leg
+- **Bava Batra 14a:8** [CREDIT] (Ex 25:10) — the ark's cubits at the scroll-length sugya — seated constants
+- **Bava Batra 15a:11** [AGGADAH] (Ex 33:16) — Moses wrote Job; the eifo link
+- **Bava Batra 15b:8** [AGGADAH] (Ex 33:16) — Job's Jewishness; the Presence after Moses
+- **Bava Batra 28b:5** [LAW] (Ex 21:29) — the forewarning must reach the OWNER's presence — the warning-procedure leg of the mu'ad machinery
+- **Bava Batra 50a:7** [LAW] (Ex 21:18,21) — the sold slave's thirty-day condition opens the day-or-two allocation
+- **Bava Batra 50a:8** [LAW] (Ex 21:21) — R. Meir: the first master in the day-or-two rule (authority-holder)
+- **Bava Batra 50a:10** [LAW] (Ex 21:21) — R. Yehuda: the second (his-money); the four-way recorded
+- **Bava Batra 50b:3** [LAW] (Ex 21:21) — R. Elazar's his-money reading closes the set
+- **Bava Batra 75a:2** [AGGADAH] (Ex 30:25) — leviathan; incidental cite
+- **Bava Batra 81a:8** [CREDIT] (Ex 23:19) — first-fruits 'your land' excludes gentile-grown — the seated bikkurim legs (F-018)
+- **Bava Batra 93a:3** [CREDIT] (Ex 21:35) — the gored cow's fetus-doubt case — the seated goring machinery
+- **Bava Batra 98a:8** [AGGADAH] (Ex 15:13) — the scholar's-garment homily
+- **Bava Batra 99a:7** [LAW] (Ex 25:20) — the cherub faces harmonized (toward each other / toward the House — angled): an ink-harmonization row for exo_25
+- **Bava Batra 109b:12** [AGGADAH] (Ex 6:25) — Pinehas and Putiel
+- **Bava Batra 110a:1** [AGGADAH] (Ex 6:25) — the lineage resolution
+- **Bava Batra 110a:2** [LAW] (Ex 6:23) — examine her brothers before marrying — conduct law from Elisheva's ink
+- **Bava Batra 110a:3** [AGGADAH] (Ex 3:5, 4:2) — Jonathan and Micah wordplay
+- **Bava Batra 117b:3** [LAW] (Ex 6:8) — the land divided to the Egypt-leavers — the morasha division law
+- **Bava Batra 119a:8** [CREDIT] (Ex 31:14) — the wood-gatherer knew-the-penalty-not-the-mode — the recorded custody-protocol case
+- **Bava Batra 119b:3** [LAW] (Ex 6:8) — the morasha uncertainty itself (inheritance FOR you vs FROM you)
+- **Bava Batra 119b:4** [LAW] (Ex 15:17) — 'bring THEM in' resolves it — the song's pronoun as the ruling
+- **Bava Batra 119b:13** [AGGADAH] (Ex 2:1) — Jochebed's birth-age
+- **Bava Batra 120a:3** [AGGADAH] (Ex 2:1) — 'took back' the daughter of Levi
+- **Bava Kamma 2b:4** [CREDIT] (Ex 21:28) — Goring's category source (horn via Zedekiah) — the four-classes compile
+- **Bava Kamma 2b:10** [CREDIT] (Ex 21:28,35) — goring/hurting lexical pair — seated
+- **Bava Kamma 2b:11** [CREDIT] (Ex 21:28,35) — the man-vs-beast verb split — seated
+- **Bava Kamma 2b:19** [CREDIT] (Ex 22:4) — Eating and Trampling's category source — the compile's own verse
+- **Bava Kamma 3a:7** [CREDIT] (Ex 22:4) — the tooth-consumes lexicon leg
+- **Bava Kamma 3a:19** [CREDIT] (Ex 21:33-34) — pit depth ten-kills/nine-damages — the seated pit constants
+- **Bava Kamma 5a:4** [CREDIT] (Ex 21:31) — R. Akiva's tempered innocuous-ox row — seated judgment rows
+- **Bava Kamma 5a:17** [CREDIT] (Ex 21:32,34,36; 22:4) — the verbal-analogy web tying the damage classes
+- **Bava Kamma 6b:12** [CREDIT] (Ex 22:4) — best-land payment — the seated mitav claims
+- **Bava Kamma 6b:19** [CREDIT] (Ex 22:4) — the field-field identity-move
+- **Bava Kamma 6b:25** [CREDIT] (Ex 21:35) — 'of another' excludes the consecrated — seated
+- **Bava Kamma 7a:3** [CREDIT] (Ex 21:35) — dialectic leg
+- **Bava Kamma 7a:9** [CREDIT] (Ex 22:4) — best-of-the-injured dispute — seated
+- **Bava Kamma 7a:10** [CREDIT] (Ex 22:4) — payment-form leg
+- **Bava Kamma 7a:11** [CREDIT] (Ex 21:33-34) — pay/recompense doubling at the pit
+- **Bava Kamma 7b:17** [CREDIT] (Ex 22:4) — appraisal-scope leg
+- **Bava Kamma 9a:7** [CREDIT] (Ex 21:34) — money-worth includes bran — the yashiv inclusion
+- **Bava Kamma 10b:16** [CREDIT] (Ex 22:12) — the torn-animal witness row — the guardians compile's own span
+- **Bava Kamma 10b:17** [CREDIT] (Ex 21:36) — carcass to the injured
+- **Bava Kamma 10b:18** [CREDIT] (Ex 21:36) — the same baraita spelled
+- **Bava Kamma 10b:26** [CREDIT] (Ex 21:34) — bran-payment leg
+- **Bava Kamma 10b:28** [CREDIT] (Ex 22:12) — the ed/carcass-depreciation dispute
+- **Bava Kamma 11a:4** [LAW] (Ex 21:34) — the pit-owner must RAISE the carcass — the restore-duty leg beyond the seated rows
+- **Bava Kamma 13b:13** [CREDIT] (Ex 21:29) — consecrated/ownerless ox stoning exclusions — seated
+- **Bava Kamma 14a:12** [CREDIT] (Ex 22:4) — field-of-another at the shared courtyard
+- **Bava Kamma 14a:20** [CREDIT] (Ex 22:4) — same analysis leg
+- **Bava Kamma 14b:12** [CREDIT] (Ex 21:34) — collection-from-land leg
+- **Bava Kamma 15a:5** [CREDIT] (Ex 21:1) — 'before THEM' equates woman and man in the civil law — the ordinances' opening seat
+- **Bava Kamma 15a:6** [CREDIT] (Ex 21:29) — the woman-equation at killings
+- **Bava Kamma 17b:3** [CREDIT] (Ex 22:4) — eating-redundancy leg
+- **Bava Kamma 19b:9** [CREDIT] (Ex 21:33) — the concealed-string pit-class case
+- **Bava Kamma 21b:5** [CREDIT] (Ex 22:4) — head-turning dispute leg
+- **Bava Kamma 22b:10** [CREDIT] (Ex 22:5) — fire breaks out itself / igniter pays — the seated fire class
+- **Bava Kamma 23a:10** [CREDIT] (Ex 22:4) — the cake-on-the-stack case
+- **Bava Kamma 25b:15** [CREDIT] (Ex 22:4) — the public-domain exclusion
+- **Bava Kamma 26a:2** [CREDIT] (Ex 21:35) — 'ITS value' — the specific ox
+- **Bava Kamma 26a:4** [CREDIT] (Ex 22:4) — complete-payment emphasis
+- **Bava Kamma 26a:6** [CREDIT] (Ex 21:35) — half-damage holds in every domain
+- **Bava Kamma 26a:8** [CREDIT] (Ex 21:30) — ransom on the ox's owner, never the man-killer — seated
+- **Bava Kamma 26b:1** [CREDIT] (Ex 21:25) — wound-for-wound redundancy = liability without intent — the ink pair of the five indemnities
+- **Bava Kamma 26b:5** [LAW] (Ex 21:26) — 'and destroy it' — INTENT to destroy required for the slave's release (Rabban Shimon b. Gamliel)
+- **Bava Kamma 26b:7** [LAW] (Ex 21:13) — the thrown-stone intent matrix (two-meant-four-went) across damages/indemnities/Shabbat
+- **Bava Kamma 26b:8** [LAW] (Ex 21:13) — the matrix's second row (four-meant-eight-went; the wherever-it-lands clause)
+- **Bava Kamma 27a:2** [CREDIT] (Ex 21:30) — the child-on-horns ransom application
+- **Bava Kamma 28b:2** [CREDIT] (Ex 21:33) — stone/knife/load derived from the pit
+- **Bava Kamma 28b:5** [CREDIT] (Ex 21:33) — ox-not-person, donkey-not-vessels — seated exclusions
+- **Bava Kamma 33a:12** [CREDIT] (Ex 21:31) — son-or-daughter judgment rows
+- **Bava Kamma 33a:13** [CREDIT] (Ex 21:28-29) — R. Akiva's lower-verse reading
+- **Bava Kamma 33a:21** [CREDIT] (Ex 21:35) — sell-and-divide: court command vs parties' option
+- **Bava Kamma 33b:17** [CREDIT] (Ex 21:35) — sell-the-live even slaughtered — division rows
+- **Bava Kamma 34a:13** [CREDIT] (Ex 21:35) — R. Meir's two-hundred case
+- **Bava Kamma 34b:7** [CREDIT] (Ex 21:36) — no damager gains from damage
+- **Bava Kamma 34b:10** [CREDIT] (Ex 21:35) — R. Yehuda capped by the half-damage ceiling
+- **Bava Kamma 34b:12** [CREDIT] (Ex 21:35) — derivation leg
+- **Bava Kamma 34b:15** [CREDIT] (Ex 21:26) — ox-vs-self at humiliation and the slave's eye — seated rows
+- **Bava Kamma 37b:11** [CREDIT] (Ex 21:35) — the consecrated-ox exclusion mishnah — dup
+- **Bava Kamma 39a:4** [CREDIT] (Ex 21:29) — the steward warning for the deaf-mute's ox — backfill row
+- **Bava Kamma 39a:6** [CREDIT] (Ex 21:28) — the stadium ox: gores-on-its-own parse — backfill row
+- **Bava Kamma 40a:7** [CREDIT] (Ex 21:30) — whose value the ransom measures — kofer rows
+- **Bava Kamma 40a:10** [CREDIT] (Ex 21:22,30) — the imposing-imposing identity-move
+- **Bava Kamma 40b:22** [CREDIT] (Ex 21:28) — duress leg
+- **Bava Kamma 41a:17** [CREDIT] (Ex 21:28) — stoned-flesh eating ban derivation
+- **Bava Kamma 41a:18** [CREDIT] (Ex 21:28) — benefit ban from 'the owner clear'
+- **Bava Kamma 42a:3** [CREDIT] (Ex 21:28) — R. Yosei HaGelili: clear-from-offspring — the miscarriage cluster
+- **Bava Kamma 42a:4** [CREDIT] (Ex 21:22) — R. Akiva: 'men,' not oxen
+- **Bava Kamma 42a:11** [CREDIT] (Ex 21:22) — the life-for-life leg
+- **Bava Kamma 42b:8** [CREDIT] (Ex 21:31) — dup of the tempered-fist row
+- **Bava Kamma 42b:9** [CREDIT] (Ex 21:28) — slave/freeman stringency leg
+- **Bava Kamma 42b:14** [CREDIT] (Ex 21:28-29) — 'and it killed a man or a woman' rows
+- **Bava Kamma 42b:18** [CREDIT] (Ex 21:29) — ransom-beside-stoning leg
+- **Bava Kamma 43a:4** [LAW] (Ex 21:22) — the offspring-payment goes to the FATHER even unmarried (Rav Pappa) — a rider past the seated valuation
+- **Bava Kamma 43a:9** [LAW] (Ex 21:32) — UNINTENTIONAL slave-killing exempt from the thirty — the stoning-payment linkage
+- **Bava Kamma 43a:10** [LAW] (Ex 21:29-30) — unintentional freeman-killing exempt from ransom — same linkage
+- **Bava Kamma 43b:15** [CREDIT] (Ex 21:30) — derivation leg
+- **Bava Kamma 43b:16** [CREDIT] (Ex 21:32) — derivation leg
+- **Bava Kamma 43b:22** [CREDIT] (Ex 21:31) — son-or-daughter includes minors
+- **Bava Kamma 44a:2** [CREDIT] (Ex 21:31) — logic-alone leg
+- **Bava Kamma 44b:10** [CREDIT] (Ex 21:29) — verdict-in-presence via the owner-juxtaposition — the seated verdict-riding rows
+- **Bava Kamma 44b:16** [LAW] (Ex 21:28) — the SEVEN 'ox' tokens = six inclusions (the woman's, the orphans'...) — an ink-census row
+- **Bava Kamma 44b:19** [CREDIT] (Ex 21:29) — consecrated/renounced exemptions — dup
+- **Bava Kamma 45a:7** [CREDIT] (Ex 21:29) — the rabbis' in-presence reason
+- **Bava Kamma 45b:9** [CREDIT] (Ex 21:36) — R. Yehuda's safeguarding split — the guarded-mu'ad grammar seat
+- **Bava Kamma 46a:2** [CREDIT] (Ex 21:29,36) — R. Eliezer's knife-only safeguard — backfill row
+- **Bava Kamma 46a:3** [CREDIT] (Ex 21:33) — the covering analogy leg
+- **Bava Kamma 46b:5** [CREDIT] (Ex 24:14) — burden of proof on the claimant from yiggash — the seated exo_24 approach row
+- **Bava Kamma 48a:12** [CREDIT] (Ex 21:33) — man-digs not ox-digs leg
+- **Bava Kamma 49a:4** [CREDIT] (Ex 21:22) — the goring-at-the-woman exemption
+- **Bava Kamma 49a:13** [CREDIT] (Ex 21:22) — offspring-increase to the husband
+- **Bava Kamma 49b:17** [CREDIT] (Ex 21:33) — open/dig agreement zone
+- **Bava Kamma 50a:1** [CREDIT] (Ex 21:34) — R. Akiva's own-property pit
+- **Bava Kamma 50a:3** [CREDIT] (Ex 21:34) — leg
+- **Bava Kamma 50a:5** [CREDIT] (Ex 21:33) — R. Yishmael's public-domain reading
+- **Bava Kamma 50a:6** [CREDIT] (Ex 21:33) — R. Akiva's counter-reading
+- **Bava Kamma 50a:7** [CREDIT] (Ex 21:34) — open-vs-dig necessity leg
+- **Bava Kamma 50b:1** [AGGADAH] (Ex 34:6) — long-suffering in the plural
+- **Bava Kamma 50b:4** [CREDIT] (Ex 21:33) — pit/ditch/cave mishnah — backfill row
+- **Bava Kamma 50b:8** [CREDIT] (Ex 21:33) — the normal-falling manner
+- **Bava Kamma 50b:9** [CREDIT] (Ex 21:33) — ten handbreadths from 'pit'
+- **Bava Kamma 51a:20** [CREDIT] (Ex 21:33) — open/dig a-fortiori
+- **Bava Kamma 51a:27** [CREDIT] (Ex 21:34) — the second digger completes
+- **Bava Kamma 53a:9** [CREDIT] (Ex 21:33) — falling-manner baraita
+- **Bava Kamma 53b:8** [CREDIT] (Ex 21:34) — disqualified-consecrated exemption
+- **Bava Kamma 53b:11** [CREDIT] (Ex 21:36) — carcass-attendance source
+- **Bava Kamma 53b:14** [CREDIT] (Ex 21:33) — ox-not-person; R. Yehuda on vessels
+- **Bava Kamma 54a:3** [CREDIT] (Ex 21:34) — the generalization-detail-generalization structure on the pit verses (middah-structure noted)
+- **Bava Kamma 54a:5** [CREDIT] (Ex 13:13) — which-detail leg
+- **Bava Kamma 54a:6** [CREDIT] (Ex 21:34) — leg
+- **Bava Kamma 54a:10** [CREDIT] (Ex 21:34) — owners-inclusion leg
+- **Bava Kamma 54b:8** [CREDIT] (Ex 19:13, 21:34) — the Sinai-boundary beast-stoning beside the pit's owners-rule
+- **Bava Kamma 54b:9** [CREDIT] (Ex 22:8, 23:5) — any-trespass double payment; the lost-item verse
+- **Bava Kamma 54b:12** [QUOTE] (Ex 20:10) — crossbreeding via the Shabbat-cattle analogy
+- **Bava Kamma 54b:13** [LAW] (Ex 20:9-10) — ox-and-donkey = ALL animals on Shabbat — the two Decalogue versions compared at the ink
+- **Bava Kamma 54b:17** [CREDIT] (Ex 13:13) — dup leg
+- **Bava Kamma 54b:25** [QUOTE] (Ex 23:5) — the donkey-unloading analogy row
+- **Bava Kamma 54b:26** [QUOTE] (Ex 20:10) — the cattle diverse-kinds row
+- **Bava Kamma 55b:9** [CREDIT] (Ex 21:36) — dup safeguarding row
+- **Bava Kamma 55b:11** [CREDIT] (Ex 21:33) — covered-pit exemption
+- **Bava Kamma 55b:12** [CREDIT] (Ex 22:5) — kindling-similarity bound
+- **Bava Kamma 55b:13** [CREDIT] (Ex 22:4) — set-loose similarity bound
+- **Bava Kamma 55b:14** [CREDIT] (Ex 22:4) — trampling's set-loose bound
+- **Bava Kamma 57b:4** [CREDIT] (Ex 22:13) — the borrower's break-or-die restitution — the guardians span
+- **Bava Kamma 58b:3** [CREDIT] (Ex 22:4) — appraisal relative to the whole field
+- **Bava Kamma 58b:7** [CREDIT] (Ex 22:4) — appraisal leg
+- **Bava Kamma 59a:6** [CREDIT] (Ex 22:4) — best-of-the-injured dup
+- **Bava Kamma 59b:5** [CREDIT] (Ex 22:4) — R. Shimon's ripe-produce valuation
+- **Bava Kamma 60a:3** [AGGADAH] (Ex 3:2) — fanned/blew at the bush's flame
+- **Bava Kamma 60a:8** [CREDIT] (Ex 22:5) — the fire mishnah's source row
+- **Bava Kamma 60a:16** [AGGADAH] (Ex 22:5) — calamity begins with the righteous
+- **Bava Kamma 60a:17** [CREDIT] (Ex 12:22) — none-go-out-until-morning — the seated destroyer-night rows
+- **Bava Kamma 60b:13** [CREDIT] (Ex 22:5) — breaks-out-itself with the I-kindled-in-Zion homily riding
+- **Bava Kamma 61b:2** [CREDIT] (Ex 22:5) — the fire-distance mishnah — the exam's own table
+- **Bava Kamma 62b:7** [CREDIT] (Ex 21:37) — double vs fourfold scope mishnah
+- **Bava Kamma 62b:13** [CREDIT] (Ex 22:8) — alive-and-not-alive derivation
+- **Bava Kamma 62b:17** [CREDIT] (Ex 22:8) — garment leg
+- **Bava Kamma 63a:3** [CREDIT] (Ex 13:13) — which-detail leg
+- **Bava Kamma 63a:8** [CREDIT] (Ex 22:8) — kol-amplification leg
+- **Bava Kamma 63a:9** [CREDIT] (Ex 22:6) — the custody klal-prat-klal
+- **Bava Kamma 63a:10** [CREDIT] (Ex 22:8) — leg
+- **Bava Kamma 63b:1** [CREDIT] (Ex 22:8) — the lost-item double
+- **Bava Kamma 63b:5** [CREDIT] (Ex 22:6) — the false-bailee reading — the guardians' own span
+- **Bava Kamma 63b:7** [CREDIT] (Ex 22:6) — the thief-himself reading
+- **Bava Kamma 63b:10** [CREDIT] (Ex 22:7,10) — approach-the-judges = the oath — the guardians' hook
+- **Bava Kamma 63b:20** [CREDIT] (Ex 22:3) — the all-items double
+- **Bava Kamma 64b:10** [CREDIT] (Ex 22:3,6) — source-allocation leg
+- **Bava Kamma 64b:12** [CREDIT] (Ex 22:8) — whom-the-judges-convict: self-incrimination insufficient
+- **Bava Kamma 64b:15** [CREDIT] (Ex 22:6) — leg
+- **Bava Kamma 65a:1** [CREDIT] (Ex 22:3) — hand/roof/yard doubling
+- **Bava Kamma 65a:4** [CREDIT] (Ex 22:3) — the alive-token
+- **Bava Kamma 67b:5** [CREDIT] (Ex 21:37) — the fourfold mishnah's source
+- **Bava Kamma 67b:7** [CREDIT] (Ex 21:37) — ox-sheep repetition bound
+- **Bava Kamma 68a:3** [CREDIT] (Ex 21:37) — sale-like-slaughter irreversibility
+- **Bava Kamma 68a:22** [CREDIT] (Ex 21:37) — before-despair sale
+- **Bava Kamma 68a:25** [CREDIT] (Ex 21:37) — dup
+- **Bava Kamma 68b:6** [CREDIT] (Ex 21:16) — the kidnapper's no-despair proof — seated man-stealer rows
+- **Bava Kamma 68b:9** [CREDIT] (Ex 22:8) — consecrated-then-slaughtered
+- **Bava Kamma 68b:15** [CREDIT] (Ex 22:3) — leg
+- **Bava Kamma 69b:7** [CREDIT] (Ex 22:6) — stealing from the thief
+- **Bava Kamma 71a:8** [LAW] (Ex 21:37) — the AGENCY EXCEPTION: liability for another's slaughter/sale — the one place the no-agent-in-sin rule bends (slaughter-sale juxtaposition)
+- **Bava Kamma 71a:18** [LAW] (Ex 31:14) — 'holy TO YOU' — the Shabbat-desecration product stays permitted: the deed/benefit split
+- **Bava Kamma 71a:19** [LAW] (Ex 31:14) — the benefit leg
+- **Bava Kamma 71a:20** [LAW] (Ex 31:14) — the unwitting-product leg ('one who profanes' = deliberate)
+- **Bava Kamma 71b:14** [CREDIT] (Ex 21:37) — five-whole-oxen question
+- **Bava Kamma 72a:3** [CREDIT] (Ex 21:37) — father's-lifetime leg
+- **Bava Kamma 72a:6** [CREDIT] (Ex 21:37) — slaughter-duration leg
+- **Bava Kamma 72b:2** [CREDIT] (Ex 21:37) — leg
+- **Bava Kamma 72b:9** [CREDIT] (Ex 23:1) — the wicked-witness disqualification — seated justice rows
+- **Bava Kamma 74b:2** [CREDIT] (Ex 21:26-27) — for-his-eye's-sake, one release not two
+- **Bava Kamma 74b:8** [LAW] (Ex 20:13) — contradicted capital witnesses flogged under the false-witness ban — the Decalogue's own lash rule
+- **Bava Kamma 74b:19** [CREDIT] (Ex 21:27) — the fine-admission exemption
+- **Bava Kamma 75a:6** [CREDIT] (Ex 22:3) — found-by-witnesses reading
+- **Bava Kamma 75a:7** [CREDIT] (Ex 22:8) — judges-convict dup
+- **Bava Kamma 75b:7** [CREDIT] (Ex 21:37) — four-for-sheep five-for-ox exactly
+- **Bava Kamma 76a:15** [CREDIT] (Ex 22:6) — from-the-house-of-the-man custody bound
+- **Bava Kamma 77b:3** [CREDIT] (Ex 21:37) — sale-slaughter comparison
+- **Bava Kamma 77b:13** [CREDIT] (Ex 21:37) — seh and the hybrid
+- **Bava Kamma 77b:14** [CREDIT] (Ex 21:37) — 'or' includes the hybrid
+- **Bava Kamma 78a:3** [CREDIT] (Ex 21:37) — leg
+- **Bava Kamma 78a:5** [CREDIT] (Ex 13:12) — firstborn leg
+- **Bava Kamma 78a:7** [CREDIT] (Ex 13:13) — the donkey-redemption lamb-species rows — seated firstborn cluster
+- **Bava Kamma 78b:13** [CREDIT] (Ex 21:37) — the four-tannaim slaughter/sale grid
+- **Bava Kamma 79a:3** [CREDIT] (Ex 21:37) — agency juxtaposition dup
+- **Bava Kamma 80b:12** [AGGADAH] (Ex 9:10) — the boils, moist and dry
+- **Bava Kamma 82a:5** [LAW] (Ex 15:22) — three days without water = Torah — the Monday-Thursday reading ordinance anchored on our verse (Talmud-only)
+- **Bava Kamma 83b:7** [CREDIT] (Ex 21:24) — talion-as-money — the compiled function's own sugya
+- **Bava Kamma 83b:8** [CREDIT] (Ex 21:24) — the smites-beast/smites-man analogy
+- **Bava Kamma 84a:9** [CREDIT] (Ex 21:23-24) — eye-not-eye-and-life
+- **Bava Kamma 84a:11** [CREDIT] (Ex 21:24-25) — wound-for-wound: pain beside damage
+- **Bava Kamma 84a:12** [CREDIT] (Ex 21:25) — the delicate-person leg
+- **Bava Kamma 84a:13** [CREDIT] (Ex 21:19,24) — absolved-only-livelihood
+- **Bava Kamma 84a:14** [CREDIT] (Ex 21:19) — the quick-healer leg
+- **Bava Kamma 84a:15** [CREDIT] (Ex 21:24,36) — the for-for identity from the ox
+- **Bava Kamma 84a:16** [CREDIT] (Ex 21:23) — which-for leg
+- **Bava Kamma 84a:19** [CREDIT] (Ex 21:24) — R. Eliezer's actual-eye — the dossier's recorded dissent
+- **Bava Kamma 84a:25** [LAW] (Ex 22:8) — damages need ORDAINED judges — the jurisdiction constraint (not collected in Babylonia)
+- **Bava Kamma 84b:14** [CREDIT] (Ex 21:25) — pain assessed at the skewer
+- **Bava Kamma 85a:1** [CREDIT] (Ex 21:25) — the distant klal-prat dispute
+- **Bava Kamma 85a:11** [CREDIT] (Ex 21:19) — bandage side-effects on the medical head
+- **Bava Kamma 85a:13** [CREDIT] (Ex 21:19) — the doubled healing-verb
+- **Bava Kamma 85a:14** [CREDIT] (Ex 21:19) — 'only' restricts livelihood
+- **Bava Kamma 85a:15** [CREDIT] (Ex 21:19) — livelihood/medical linkage leg
+- **Bava Kamma 85a:16** [CREDIT] (Ex 21:19) — the reopened wound re-obligates
+- **Bava Kamma 85a:23** [CREDIT] (Ex 21:25) — the indemnities beside damage
+- **Bava Kamma 85b:2** [CREDIT] (Ex 21:19) — the doubled healing-verb again
+- **Bava Kamma 87a:5** [CREDIT] (Ex 21:22) — person-vs-ox stringency mishnah
+- **Bava Kamma 90a:9** [CREDIT] (Ex 21:21) — R. Eliezer's his-money slave
+- **Bava Kamma 90a:12** [CREDIT] (Ex 21:26) — his-slave uniqueness leg
+- **Bava Kamma 90b:14** [LAW] (Ex 21:18) — Shimon HaTimni: stone-or-fist = the assessable-weapon class (submitted to the assembly)
+- **Bava Kamma 92a:18** [AGGADAH] (Ex 16:28) — the proverb sourced to how-long-refuse
+- **Bava Kamma 92b:3** [AGGADAH] (Ex 23:25) — proverb at the blessed bread
+- **Bava Kamma 92b:17** [AGGADAH] (Ex 13:21) — the small/men proverb
+- **Bava Kamma 93a:1** [AGGADAH] (Ex 23:20) — the sent angel
+- **Bava Kamma 93a:4** [AGGADAH] (Ex 22:22) — woe to the crier — both included at the cry-verse
+- **Bava Kamma 93a:14** [LAW] (Ex 22:6,9) — break-my-jug consent: 'to safeguard' — not to destroy, not to distribute — the bailment-purpose parse
+- **Bava Kamma 94b:9** [CREDIT] (Ex 22:27) — curse-ruler among the DOERS of your people — seated curse rows
+- **Bava Kamma 99b:25** [QUOTE] (Ex 18:20) — the expert-assessor exemption leg
+- **Bava Kamma 106a:3** [LAW] (Ex 22:10) — the OATH EFFECTS ACQUISITION doctrine (Rav via the owner-accepts clause)
+- **Bava Kamma 106a:4** [LAW] (Ex 22:10) — the matter itself: oath-then-witnesses exempt (Rav)
+- **Bava Kamma 106a:10** [CREDIT] (Ex 22:10) — all Torah oath-takers swear and do not pay — the seated swear-not-pay rule
+- **Bava Kamma 106a:17** [CREDIT] (Ex 22:8) — false-theft-claim plus witnesses
+- **Bava Kamma 106b:7** [CREDIT] (Ex 22:6-7) — juxtaposition leg
+- **Bava Kamma 106b:16** [CREDIT] (Ex 22:8) — the lost-item false-claim double
+- **Bava Kamma 106b:17** [CREDIT] (Ex 22:6) — 'man' excludes the minor's deposit
+- **Bava Kamma 106b:21** [LAW] (Ex 22:8) — the deposit false-claim needs PARTIAL DENIAL (R. Yochanan)
+- **Bava Kamma 107a:1** [LAW] (Ex 22:8) — MERGED PORTIONS: 'this is it' written here belongs to the LOAN passage — the eruv-parashiyot text-structure doctrine, a compiler-grade claim about the ink's own layout
+- **Bava Kamma 107b:2** [CREDIT] (Ex 22:6,8) — unpaid/paid derivation split
+- **Bava Kamma 107b:3** [CREDIT] (Ex 22:13) — the vav-adds chain to the borrower — the guardians' own chain-rule
+- **Bava Kamma 107b:4** [LAW] (Ex 22:7) — no double unless he misappropriated BEFORE the oath (R. Chiyya b. Yosef)
+- **Bava Kamma 107b:9** [LAW] (Ex 22:7) — Rav Sheshet's counter — the recorded pair
+- **Bava Kamma 112b:8** [QUOTE] (Ex 21:29) — document-ratification absent the litigant; the presence analogy
+- **Bava Metzia 5a:1** [CREDIT] (Ex 22:8) — land excluded from the oath
+- **Bava Metzia 5a:8** [CREDIT] (Ex 22:8) — this-is-it partial admission
+- **Bava Metzia 5b:19** [LAW] (Ex 20:13-14) — paying-not-returning vs the COVET ban — the Decalogue's reach into bailment
+- **Bava Metzia 10b:9** [CREDIT] (Ex 22:3) — courtyard acquisition vs agency
+- **Bava Metzia 27a:8** [CREDIT] (Ex 21:33) — the donkey/sheep term difficulties
+- **Bava Metzia 30b:1** [QUOTE] (Ex 18:20) — precedence leg
+- **Bava Metzia 30b:11** [LAW] (Ex 18:20) — BEYOND THE LETTER OF THE LAW chartered from 'the way wherein they shall walk' — the conduct-charter row
+- **Bava Metzia 31a:19** [CREDIT] (Ex 23:5) — the doubled release-verb at unloading — seated
+- **Bava Metzia 31b:5** [CREDIT] (Ex 22:25) — the doubled collateral-verb — seated pledge rows
+- **Bava Metzia 32a:6** [CREDIT] (Ex 23:5) — unload four and five times
+- **Bava Metzia 32a:15** [LAW] (Ex 20:12) — the parent's command yields to My-Shabbatot — the honor-override rule
+- **Bava Metzia 32a:16** [LAW] (Ex 20:11-12) — honor equated to the Omnipresent's, hence the override needed
+- **Bava Metzia 32a:17** [CREDIT] (Ex 23:5) — unload-not-load mishnah
+- **Bava Metzia 32a:21** [CREDIT] (Ex 23:5) — collapsed-vs-fallen distinction
+- **Bava Metzia 32b:4** [LAW] (Ex 23:5) — ANIMAL SUFFERING as Torah law — the pro leg from our verse
+- **Bava Metzia 32b:6** [LAW] (Ex 23:5) — the contra leg — the recorded question
+- **Bava Metzia 32b:11** [LAW] (Ex 23:5) — the gentile's animal / Jew's burden scope of 'him that hates you'
+- **Bava Metzia 33a:5** [CREDIT] (Ex 23:4-5) — the seeing-distance defined
+- **Bava Metzia 38b:14** [AGGADAH] (Ex 22:23) — the wrath-inference of R. Eliezer
+- **Bava Metzia 39a:1** [QUOTE] (Ex 23:11) — the abandoned-property lexicon
+- **Bava Metzia 41b:8** [CREDIT] (Ex 22:7,10) — approach = oath, dup
+- **Bava Metzia 43b:13** [CREDIT] (Ex 22:7) — intent-to-misappropriate house dispute — read at the exams
+- **Bava Metzia 44a:1** [CREDIT] (Ex 22:7-8) — the devar-word derivation
+- **Bava Metzia 48b:3** [CREDIT] (Ex 22:27) — the mi-she-para curse and the ruler-ban
+- **Bava Metzia 56b:5** [CREDIT] (Ex 22:3) — his-hand extended, dup
+- **Bava Metzia 57b:8** [CREDIT] (Ex 22:8) — slaves/documents/land excluded from double
+- **Bava Metzia 57b:10** [CREDIT] (Ex 22:6) — the exclusion reasons
+- **Bava Metzia 57b:12** [CREDIT] (Ex 22:6) — unpaid-bailee oath scope
+- **Bava Metzia 57b:15** [CREDIT] (Ex 22:6,9) — paid-bailee scope
+- **Bava Metzia 58b:6** [CREDIT] (Ex 22:20) — verbal mistreatment mishnah — the seated convert-cluster
+- **Bava Metzia 59b:1** [CREDIT] (Ex 23:2) — the Akhnai oven — the seated incline-after-the-majority charter's own exhibit
+- **Bava Metzia 59b:13** [CREDIT] (Ex 22:20,24; 23:9) — the three convert-bans counted
+- **Bava Metzia 59b:15** [CREDIT] (Ex 22:20) — the defect-in-you rider
+- **Bava Metzia 61b:2** [QUOTE] (Ex 20:12) — the theft-prohibitions division leg
+- **Bava Metzia 62a:5** [CREDIT] (Ex 22:27) — doers-of-your-people rider, dup
+- **Bava Metzia 71a:3** [CREDIT] (Ex 22:24) — My-people lending precedence — seated
+- **Bava Metzia 75b:4** [CREDIT] (Ex 22:24) — the interest-violators list
+- **Bava Metzia 75b:6** [CREDIT] (Ex 22:24) — the prohibition mapping
+- **Bava Metzia 75b:8** [CREDIT] (Ex 22:24) — not even passing before the insolvent borrower
+- **Bava Metzia 82a:7** [LAW] (Ex 24:13 link; the pledge verses) — the creditor ACQUIRES the collateral (R. Yitzchak)
+- **Bava Metzia 83a:1** [CREDIT] (Ex 22:9) — Isi b. Yehuda's no-eyewitness oath — the guardians' span
+- **Bava Metzia 83a:5** [CREDIT] (Ex 22:9) — dup
+- **Bava Metzia 94a:16** [CREDIT] (Ex 22:14) — the borrowing-with-the-owner mishnah — the compiled exemption
+- **Bava Metzia 94b:13** [CREDIT] (Ex 22:11) — paid-bailee theft liability
+- **Bava Metzia 94b:17** [CREDIT] (Ex 22:13) — break-or-die
+- **Bava Metzia 94b:21** [CREDIT] (Ex 22:13) — R. Natan's 'or' includes capture
+- **Bava Metzia 95a:5** [CREDIT] (Ex 22:13) — theft/loss for the borrower
+- **Bava Metzia 95a:9** [CREDIT] (Ex 22:13) — owner-with exemption source
+- **Bava Metzia 95a:13** [CREDIT] (Ex 22:13) — the vav-adds chain
+- **Bava Metzia 95a:17** [CREDIT] (Ex 22:13) — chain to the paid bailee
+- **Bava Metzia 95a:20** [CREDIT] (Ex 22:14) — owner-with placement
+- **Bava Metzia 95b:6** [LAW] (Ex 22:14) — Rav Hamnuna's owner-service WINDOW (from borrowing to mishap) — the timing refinement
+- **Bava Metzia 95b:13** [CREDIT] (Ex 22:13-14) — the refuting baraita
+- **Bava Metzia 96a:1** [CREDIT] (Ex 22:14) — R. Yonatan's reading
+- **Bava Metzia 96a:7** [CREDIT] (Ex 22:13) — Rav Ashi's from-the-verse timing
+- **Bava Metzia 107b:11** [AGGADAH] (Ex 23:25) — serve-the-LORD as Shema and prayer
+- **Bava Metzia 113b:2** [LAW] (Ex 22:25) — the collateral verse speaks of the COURT'S AGENT — the jurisdiction reading
+- **Bava Metzia 114b:8** [CREDIT] (Ex 22:25) — the night-garment return — seated pledge rows
+- **Bava Metzia 115b:2** [CREDIT] (Ex 12:9) — raw-or-roasted at the collateral dispute — seated Passover rows
+- **Bava Metzia 115b:3** [CREDIT] (Ex 12:9) — Rava's two-lashes count — same cluster
+- **Bava Metzia 116a:2** [CREDIT] (Ex 12:9) — roasted-at-mitzva-time — Passover cluster
+- **Beitzah 2b:10** [LAW] (Ex 16:5) — THE PREPARATION DOCTRINE: 'and they shall prepare' at the manna — the root of festival-preparation law (Rabba)
+- **Beitzah 5a:7** [LAW] (Ex 19:13,15) — the Sinai abstention and the tents-return — the release-timing pair
+- **Beitzah 5b:3** [LAW] (Ex 19:15) — the be-ready leg
+- **Beitzah 5b:4** [LAW] (Ex 19:13, 34:3) — the ram's-horn releases the mountain — the bound-then-released rule
+- **Beitzah 5b:5** [LAW] (Ex 34:3) — the graze-ban bound to the Presence
+- **Beitzah 7b:8** [CREDIT] (Ex 12:19) — leaven/leavened measures house-dispute — seated rows
+- **Beitzah 7b:11** [CREDIT] (Ex 12:19) — the seven-days-found clause
+- **Beitzah 7b:14** [CREDIT] (Ex 13:7) — seen-vs-found dispute
+- **Beitzah 12a:3** [CREDIT] (Ex 12:16) — festival-labor flogging — the food-only permit rows
+- **Beitzah 15b:4** [LAW] (Ex 20:7-8) — 'remember it' — the joining-of-cooked-foods (eruv tavshilin) source (Shmuel)
+- **Beitzah 15b:9** [CREDIT] (Ex 16:23) — bake-what-you-bake — the manna legs seated
+- **Beitzah 16a:6** [AGGADAH] (Ex 34:29) — the unknowing shining face
+- **Beitzah 16a:7** [AGGADAH] (Ex 31:13) — know-that-I-sanctify — the informing leg
+- **Beitzah 16a:10** [AGGADAH] (Ex 31:17) — the gift given in private
+- **Beitzah 16a:12** [LAW] (Ex 31:17) — THE ADDITIONAL SOUL from vayinafash — witness-grade row for the Shabbat sign's unit
+- **Beitzah 20b:7** [CREDIT] (Ex 12:16) — for-you-not-for-the-Most-High — the festival-offerings house dispute (read at round 10)
+- **Beitzah 21a:13** [CREDIT] (Ex 12:16) — the gain/loss anecdote on the same clause
+- **Beitzah 21a:15** [CREDIT] (Ex 12:16) — the dogs'-food inclusion dispute
+- **Beitzah 28b:6** [CREDIT] (Ex 12:16) — 'that alone' — facilitators dispute
+- **Bekhorot 2b:19** [QUOTE] (Ex 23:13) — the gods-name partnership leg
+- **Bekhorot 3a:9** [CREDIT] (Ex 13:2) — gentile partnership at the firstborn — seated cluster
+- **Bekhorot 3a:16** [CREDIT] (Ex 34:19) — all-the-firstborn wholeness
+- **Bekhorot 3a:17** [CREDIT] (Ex 13:12) — womb-opener leg
+- **Bekhorot 4a:10** [CREDIT] (Ex 13:12) — sanctity self-arising
+- **Bekhorot 4b:2** [LAW] (Ex 13:13) — the Levite lambs abrogate the donkey-firstborns — the silver-silver identity at the census swap
+- **Bekhorot 4b:12** [LAW] (Ex 13:2) — were the wilderness firstborn sanctified — R. Yochanan's side
+- **Bekhorot 4b:13** [LAW] (Ex 13:5,11-12) — Reish Lakish: the when-brought suspension
+- **Bekhorot 4b:17** [LAW] (Ex 13:2) — the difficulty leg
+- **Bekhorot 4b:22** [LAW] (Ex 13:2,11) — the three-sanctifications baraita
+- **Bekhorot 5a:2** [LAW] (Ex 13:11) — the entry-condition leg
+- **Bekhorot 5a:10** [CREDIT] (Ex 38:26) — Kontrokos and the 201 talents — the seated audit-reconciliation's own sugya
+- **Bekhorot 5a:11** [CREDIT] (Ex 38:27) — the hundred-talents casting
+- **Bekhorot 5a:13** [CREDIT] (Ex 38:25,27) — the reconciliation leg
+- **Bekhorot 5a:15** [CREDIT] (Ex 38:27-28) — the seventy-one maneh
+- **Bekhorot 5a:18** [LAW] (Ex 38:29) — THE SANCTUARY MANEH IS DOUBLE — the constant computed from the brass surplus
+- **Bekhorot 5b:4** [AGGADAH] (Ex 17:8) — Rephidim's name
+- **Bekhorot 5b:7** [CREDIT] (Ex 13:13, 34:20) — cow-births-donkey exemptions
+- **Bekhorot 6a:1** [CREDIT] (Ex 13:13, 34:20) — the doubled donkey-firstborn
+- **Bekhorot 6a:6** [CREDIT] (Ex 34:19) — livestock-males klal
+- **Bekhorot 6b:18** [LAW] (Ex 3:8,17) — MILK PERMITTED from 'flowing with milk and honey' — the praise-implies-permission derivation
+- **Bekhorot 9a:6** [CREDIT] (Ex 13:13, 34:20) — lamb from sheep or goats
+- **Bekhorot 9a:8** [CREDIT] (Ex 13:12) — the males leg
+- **Bekhorot 9b:19** [CREDIT] (Ex 13:13) — post-neck-breaking benefit
+- **Bekhorot 10a:2** [CREDIT] (Ex 22:30) — meat-in-milk benefit permitted (R. Shimon) — seated
+- **Bekhorot 10b:16** [CREDIT] (Ex 13:13) — the neck-breaking identity to the heifer
+- **Bekhorot 10b:18** [CREDIT] (Ex 13:13) — Safra's leg
+- **Bekhorot 10b:27** [CREDIT] (Ex 13:13, 34:20) — the shekel-worth donkey
+- **Bekhorot 11a:14** [CREDIT] (Ex 22:3) — stealing the unredeemed donkey — double payment
+- **Bekhorot 11a:16** [CREDIT] (Ex 22:6) — the custody leg
+- **Bekhorot 12a:2** [CREDIT] (Ex 12:3, 13:13) — ben Bag Bag's seh-seh identity from the pesach
+- **Bekhorot 12a:3** [CREDIT] (Ex 12:5, 13:13) — the which-attributes challenge
+- **Bekhorot 12a:18** [CREDIT] (Ex 13:12) — tithe-resemblance leg
+- **Bekhorot 13a:4** [CREDIT] (Ex 13:13) — redemption precedes neck-breaking — the seated precedence table
+- **Bekhorot 13a:5** [CREDIT] (Ex 21:8) — designation precedes redemption — THE SEATED PRECEDENCE ROW QUOTING OUR VERSE
+- **Bekhorot 14b:9** [CREDIT] (Ex 13:12) — passing-passing leg
+- **Bekhorot 17a:21** [CREDIT] (Ex 13:12) — the two-heads-as-one plural reading
+- **Bekhorot 19a:2** [CREDIT] (Ex 13:12) — the caesarean uncertainty
+- **Bekhorot 19a:4** [CREDIT] (Ex 13:2,12) — the generalization-detail structure
+- **Bekhorot 19a:5** [CREDIT] (Ex 13:12) — the female-preceded leg
+- **Bekhorot 21b:3** [CREDIT] (Ex 13:12) — tithe-from-sacrificial leg
+- **Bekhorot 26b:10** [CREDIT] (Ex 22:28) — the thirty/fifty-day raising — the seated gift-order clauses
+- **Bekhorot 26b:11** [CREDIT] (Ex 22:28-29) — the Shavuot-fifty analogy
+- **Bekhorot 26b:13** [CREDIT] (Ex 22:29) — Rava's thirty-day juxtaposition
+- **Bekhorot 26b:15** [CREDIT] (Ex 22:28-29) — the seven-days baraita
+- **Bekhorot 32a:14** [CREDIT] (Ex 13:12) — passing-analogy leg
+- **Bekhorot 34a:4** [LAW] (Ex 21:8) — ⚠ IS THE VOCALIZATION AUTHORITATIVE — the reading-vs-written authority question raised at OUR OWN VERSE's lo (the maidservant's written-and-read pair): the front-end measurement's question, asked by the Talmud itself
+- **Bekhorot 39b:2** [CREDIT] (Ex 12:5) — unblemished-at-each-stage leg
+- **Bekhorot 41a:7** [QUOTE] (Ex 9:10) — the boil-lexicon
+- **Bekhorot 41a:10** [QUOTE] (Ex 9:10) — three boil types
+- **Bekhorot 41b:8** [CREDIT] (Ex 13:12) — the hermaphrodite distinct-entity leg
+- **Bekhorot 44a:15** [AGGADAH] (Ex 26:16, 40:19) — Moses' ten cubits
+- **Bekhorot 46a:9** [CREDIT] (Ex 13:2,12) — womb-opener at an Israelite mother
+- **Bekhorot 47a:10** [CREDIT] (Ex 13:2,12) — the excluded opinion
+- **Bekhorot 47a:15** [CREDIT] (Ex 13:2) — the Levite-daughter leg
+- **Bekhorot 47b:13** [CREDIT] (Ex 13:2,12) — caesarean not firstborn
+- **Bekhorot 49b:11** [CREDIT] (Ex 21:32, 22:16) — the 30/50/100 sanctuary-shekel table — seated fines
+- **Bekhorot 50a:3** [LAW] (Ex 30:13) — ⚠ THE SELA COMPUTED THROUGH ONKELOS: 'the shekel is twenty gera — AND WE TRANSLATE twenty ma'in' — the Talmud itself ruling through the translation's unit conversion: the conversion-layer finding confirmed at the source
+- **Bekhorot 50b:2** [CREDIT] (Ex 22:6) — Tyrian-coinage leg
+- **Bekhorot 50b:7** [LAW] (Ex 21:11) — 'out for nothing, WITHOUT MONEY' — the betrothal-money derivation riding the maidservant's exit clause
+- **Bekhorot 51b:8** [CREDIT] (Ex 23:15, 34:20) — none-empty analogy
+- **Bekhorot 51b:11** [CREDIT] (Ex 23:15, 34:20) — the pair again
+- **Bekhorot 55b:10** [CREDIT] (Ex 22:28) — delay-not rows
+- **Bekhorot 56a:2** [CREDIT] (Ex 22:29) — so-shall-you-do leg
+- **Bekhorot 56a:9** [CREDIT] (Ex 22:29) — the time-of-doing exclusion
+- **Bekhorot 56b:9** [CREDIT] (Ex 13:12) — shall-be-yours partnership
+- **Berakhot 3b:27** [AGGADAH] (Ex 11:4) — about-midnight, David and Moses
+- **Berakhot 4a:17** [AGGADAH] (Ex 15:16) — the doubled until-crosses
+- **Berakhot 5a:3** [LAW] (Ex 24:12) — THE CANON CHANNEL: tablets, Torah, mitzva, 'that I have written,' 'to teach them' — Scripture, Mishnah, and Talmud all enumerated from the one verse: the two-channels charter's other seat (beside 34:27)
+- **Berakhot 5a:7** [AGGADAH] (Ex 15:26) — hear-and-be-healed
+- **Berakhot 6a:13** [LAW] (Ex 20:21) — wherever-My-name-is-mentioned — the Presence at study and the blessing rule
+- **Berakhot 6b:30** [AGGADAH] (Ex 19:16,19) — the five voices
+- **Berakhot 6b:31** [AGGADAH] (Ex 20:15) — the voices counted
+- **Berakhot 7a:5** [AGGADAH] (Ex 33:14) — placate not in anger
+- **Berakhot 7a:23** [AGGADAH] (Ex 33:16) — Moses' three requests
+- **Berakhot 7a:24** [AGGADAH] (Ex 33:16) — the distinguished-people grant
+- **Berakhot 7a:25** [AGGADAH] (Ex 33:13) — show-me-Your-ways
+- **Berakhot 7a:26** [AGGADAH] (Ex 34:7) — the righteous who suffers
+- **Berakhot 7a:27** [LAW] (Ex 20:5) — visiting-iniquity harmonized: only when they grasp their fathers' deeds — the reconciliation row on the Decalogue clause
+- **Berakhot 7a:29** [AGGADAH] (Ex 33:19) — R. Meir's two-of-three
+- **Berakhot 7a:30** [AGGADAH] (Ex 3:6, 33:20) — cannot see My face
+- **Berakhot 7a:32** [AGGADAH] (Ex 3:6, 34:30) — measure for measure at the concealed face
+- **Berakhot 7a:33** [AGGADAH] (Ex 33:23) — the knot of the tefillin shown
+- **Berakhot 7a:36** [AGGADAH] (Ex 1:7) — the many-many analogy
+- **Berakhot 7b:4** [AGGADAH] (Ex 33:14) — placate-not-in-anger dup
+- **Berakhot 9a:14** [CREDIT] (Ex 11:4, 12:8,12) — until-when the pesach is eaten — seated timing rows
+- **Berakhot 9a:15** [CREDIT] (Ex 12:11) — the haste verse
+- **Berakhot 9a:20** [CREDIT] (Ex 12:10) — not-remain-until-morning
+- **Berakhot 9a:26** [CREDIT] (Ex 12:11) — whose haste — the dispute
+- **Berakhot 9a:29** [AGGADAH] (Ex 11:2) — 'please' at the borrowing
+- **Berakhot 9b:3** [AGGADAH] (Ex 12:36) — what they requested
+- **Berakhot 9b:5** [AGGADAH] (Ex 12:36) — the emptied land
+- **Berakhot 9b:6** [AGGADAH] (Ex 3:14) — I-will-be that I-will-be
+- **Berakhot 9b:7** [AGGADAH] (Ex 3:14) — enough for the hour
+- **Berakhot 10b:9** [CREDIT] (Ex 12:2) — this-month-for-you at Hezekiah's intercalation — the seated month-head
+- **Berakhot 10b:12** [AGGADAH] (Ex 32:13) — the merit of others
+- **Berakhot 17a:12** [AGGADAH] (Ex 24:11) — they beheld and ate
+- **Berakhot 20b:7** [LAW] (Ex 16:8) — women and the Grace — the evening-meat morning-bread leg and the doubt
+- **Berakhot 20b:10** [CREDIT] (Ex 20:7-8) — remember/observe as one utterance — the seated Decalogue dual
+- **Berakhot 21b:10** [LAW] (Ex 22:17-18) — ⚠ THE JUXTAPOSITION METHOD itself disputed at our verse (ben Azzai and R. Yehuda on the sorceress beside the beast-lier) — a middah-usage row
+- **Berakhot 27a:6** [QUOTE] (Ex 21:28) — the testimony-list member
+- **Berakhot 27a:9** [CREDIT] (Ex 16:21) — the sun-hours gathering — manna rows
+- **Berakhot 30b:9** [AGGADAH] (Ex 32:11) — the prayer modes
+- **Berakhot 32a:14** [AGGADAH] (Ex 32:7) — go and descend
+- **Berakhot 32a:16** [AGGADAH] (Ex 32:10) — leave-Me-be as the door to prayer
+- **Berakhot 32a:17** [AGGADAH] (Ex 32:10) — the three-legged chair
+- **Berakhot 32a:19** [AGGADAH] (Ex 32:11) — vaychal expounded
+- **Berakhot 32a:20** [AGGADAH] (Ex 32:32) — erase me
+- **Berakhot 32a:24** [AGGADAH] (Ex 32:13) — sworn in Your name
+- **Berakhot 32a:25** [AGGADAH] (Ex 32:13) — I-will-give as spoken
+- **Berakhot 33a:20** [AGGADAH] (Ex 15:17) — the Temple between two Names
+- **Berakhot 33a:35** [QUOTE] (Ex 20:7) — the havdala leg
+- **Berakhot 38a:14** [QUOTE] (Ex 6:7) — hamotzi wording
+- **Berakhot 38a:15** [QUOTE] (Ex 6:7) — the rabbis' response
+- **Berakhot 39b:9** [CREDIT] (Ex 16:22) — TWO LOAVES on Shabbat from the double bread — the seated manna legs
+- **Berakhot 40a:11** [AGGADAH] (Ex 15:26) — the empty vessel holds
+- **Berakhot 45a:8** [LAW] (Ex 19:19) — the TRANSLATOR may not out-voice the reader — the Targum protocol from Moses-speaks-God-answers
+- **Berakhot 48b:7** [LAW] (Ex 23:25) — the blessing-before read out of and-He-will-bless (u-vareikh)
+- **Berakhot 48b:10** [LAW] (Ex 24:12) — the Torah-blessing derivations
+- **Berakhot 54a:10** [LAW] (Ex 18:10) — the miracle blessing from Yitro's blessed-be-the-LORD
+- **Berakhot 54a:15** [CREDIT] (Ex 14:16,22) — the crossing miracles — seated sea rows
+- **Berakhot 54b:3** [AGGADAH] (Ex 9:33) — the suspended stones
+- **Berakhot 54b:7** [LAW] (Ex 17:12) — the blessing at Moses' stone — the seeing-places list row
+- **Berakhot 55a:10** [AGGADAH] (Ex 31:1-2) — the three proclamations
+- **Berakhot 55a:11** [CREDIT] (Ex 35:30-31) — CONSULT THE COMMUNITY at Bezalel's appointment — the seated public-name row
+- **Berakhot 55a:12** [AGGADAH] (Ex 31:7) — in-the-shadow-of-God
+- **Berakhot 55a:13** [AGGADAH] (Ex 31:3, 35:31) — the letters of creation
+- **Berakhot 55a:14** [AGGADAH] (Ex 31:6) — wisdom to the wise
+- **Berakhot 56b:12** [AGGADAH] (Ex 11:7) — the dream dog
+- **Berakhot 56b:15** [AGGADAH] (Ex 21:28) — the dream ox
+- **Berakhot 57a:8** [AGGADAH] (Ex 27:20) — the dream olives
+- **Berakhot 58a:16** [AGGADAH] (Ex 14:31, 17:16) — the greatness list
+- **Berakhot 60a:28** [AGGADAH] (Ex 21:19) — the blood-letting prayer
+- **Berakhot 60a:29** [LAW] (Ex 21:19) — ⚠ PERMISSION TO HEAL granted to the physician from the doubled healing-verb — the school of R. Yishmael
+- **Berakhot 62b:11** [AGGADAH] (Ex 30:12) — the incited census
+- **Berakhot 62b:23** [LAW] (Ex 3:5) — Temple-mount reverence derived from remove-your-shoe
+- **Berakhot 63b:6** [AGGADAH] (Ex 33:7) — the tent taken outside
+- **Berakhot 63b:7** [AGGADAH] (Ex 33:11) — cheerful faces in study
+- **Berakhot 63b:8** [AGGADAH] (Ex 33:11) — the restored tent
+- **Berakhot 63b:9** [AGGADAH] (Ex 33:11) — Joshua departed not
+- **Berakhot 64a:7** [AGGADAH] (Ex 18:12) — bread before God
+- **Berakhot 64a:9** [LAW] (Ex 4:18) — go TO peace, not in peace — the farewell formula
+- **Chagigah 2a:2** [CREDIT] (Ex 23:14) — the minor's definition at the pilgrimage — seated rows
+- **Chagigah 2a:6** [CREDIT] (Ex 23:17) — the one-eyed exemption — in-triage dup (Arakhin 2b:12)
+- **Chagigah 3a:11** [CREDIT] (Ex 23:14) — the lame exemption — the regalim-feet lexicon dup
+- **Chagigah 3b:4** [AGGADAH] (Ex 20:1) — all from one Shepherd
+- **Chagigah 4a:3** [LAW] (Ex 23:17) — tumtum and hermaphrodite exempt from appearance — the zekhurkha parse
+- **Chagigah 4a:9** [LAW] (Ex 23:17) — the scrimper exemption (Acherim)
+- **Chagigah 4a:10** [LAW] (Ex 23:17) — the slaves' exemption derivation
+- **Chagigah 4a:13** [CREDIT] (Ex 23:14) — regalim excludes the lame — dup
+- **Chagigah 4b:5** [CREDIT] (Ex 23:17) — the one-eyed dup again
+- **Chagigah 6a:14** [CREDIT] (Ex 24:5) — the pre-speech peace-offerings — seated exo_24 rows
+- **Chagigah 6b:12** [LAW] (Ex 24:5) — ⚠ HOW IS THE VERSE WRITTEN — the two-halves reading question posed on exo_24's own ink (burnt-offerings of what?)
+- **Chagigah 7a:6** [LAW] (Ex 23:15) — none-empty at every appearance — the R. Yochanan dispute
+- **Chagigah 7a:10** [LAW] (Ex 23:15,17) — three-times commanded; no partial appearance
+- **Chagigah 7a:17** [LAW] (Ex 23:17) — all-your-males TOGETHER — the ten-sons rule
+- **Chagigah 10a:8** [LAW] (Ex 35:5) — ⚠ THE VOW-RELEASE SUPPORT hung on 'whoever is of a WILLING heart' — the mountains-hanging-by-a-hair row anchored at our donation verse
+- **Chagigah 10b:3** [QUOTE] (Ex 5:1, 10:25) — the feast leg
+- **Chagigah 10b:4** [LAW] (Ex 23:18) — the festival offering from My-feast-fat
+- **Chagigah 11a:8** [CREDIT] (Ex 21:22-23) — life-for-life = MONEY (Rebbi) — the compiled talion row
+- **Chagigah 11b:15** [QUOTE] (Ex 12:17, 31:14) — the observe-verses class
+- **Chagigah 13b:5** [AGGADAH] (Ex 15:1) — the villager and the king
+- **Chagigah 14a:16** [AGGADAH] (Ex 20:6) — the stumbling-block
+- **Chagigah 18a:2** [LAW] (Ex 23:16) — harvest-festival timing (Shavuot) and the intermediate days
+- **Chagigah 18a:3** [LAW] (Ex 23:16) — gathering-festival leg
+- **Chagigah 18a:5** [LAW] (Ex 23:15) — the intermediate-days labor derivation
+- **Chagigah 26b:3** [CREDIT] (Ex 25:30) — the continual table — seated
+- **Chagigah 26b:4** [CREDIT] (Ex 26:35) — the lamp opposite the table
+- **Chagigah 27a:3** [CREDIT] (Ex 20:21) — the altars like the ground
+- **Chullin 7a:3** [QUOTE] (Ex 28:28) — the loosed-breastplate lexicon
+- **Chullin 11a:2** [CREDIT] (Ex 23:2) — follow-the-majority — the seated incline-after row
+- **Chullin 11a:8** [LAW] (Ex 12:46) — the NON-QUANTIFIABLE majority derived from the unbroken bone
+- **Chullin 11b:3** [LAW] (Ex 21:15) — the majority chain through the father-striker
+- **Chullin 11b:5** [LAW] (Ex 21:12) — and through the murderer — three anchors for one principle
+- **Chullin 17b:13** [CREDIT] (Ex 12:46) — the bone-deficiency measure
+- **Chullin 30a:3** [CREDIT] (Ex 23:18) — slaughtering the pesach over leaven — the exam's own row
+- **Chullin 37a:8** [CREDIT] (Ex 22:30) — the tereifah definition rows — seated
+- **Chullin 42a:6** [CREDIT] (Ex 22:30) — the allusion question
+- **Chullin 47b:6** [QUOTE] (Ex 22:30) — the lung-appearance mnemonic
+- **Chullin 62b:9** [QUOTE] (Ex 34:14) — the bowing-bird mnemonic
+- **Chullin 68a:4** [CREDIT] (Ex 22:30) — in-the-field extension
+- **Chullin 68b:11** [CREDIT] (Ex 22:30) — the hanging-limb leg
+- **Chullin 70a:13** [CREDIT] (Ex 13:2) — womb-opener edge queries
+- **Chullin 73b:12** [CREDIT] (Ex 22:30) — hanging-limb ruling
+- **Chullin 74b:10** [CREDIT] (Ex 13:13) — the ben-pekua redemption question
+- **Chullin 74b:13** [CREDIT] (Ex 12:5, 13:13) — the lamb-lamb analogy leg
+- **Chullin 74b:14** [CREDIT] (Ex 13:13) — the attributes leg
+- **Chullin 81a:3** [CREDIT] (Ex 22:29) — eighth-day acceptance
+- **Chullin 82b:15** [LAW] (Ex 21:15,17) — the uncertain father struck or cursed — doubt-liability at the parent laws
+- **Chullin 82b:19** [CREDIT] (Ex 12:10) — uncertain forewarning (R. Yehuda)
+- **Chullin 89a:3** [AGGADAH] (Ex 24:10) — sky-blue to the sapphire
+- **Chullin 91a:7** [CREDIT] (Ex 12:10) — burn-the-remainder as positive-after-negative
+- **Chullin 92a:11** [AGGADAH] (Ex 1:7) — the vine and branches
+- **Chullin 102b:11** [CREDIT] (Ex 22:30) — limb-from-living source allocation
+- **Chullin 102b:12** [CREDIT] (Ex 22:30) — Reish Lakish's allocation
+- **Chullin 108b:2** [CREDIT] (Ex 23:19) — the wringable-milk pot
+- **Chullin 113a:18** [CREDIT] (Ex 23:19) — any-kosher-milk mishnah — seated
+- **Chullin 115a:2** [CREDIT] (Ex 31:14) — sacred-it-not-its-products — in-triage dup
+- **Chullin 115a:10** [CREDIT] (Ex 12:9) — Reish Lakish's boiled-in-any-way leg
+- **Chullin 115b:1** [CREDIT] (Ex 23:19, 34:26) — derivation leg
+- **Chullin 115b:6** [CREDIT] (Ex 23:19 ×3) — the THREE kid-verses split eat/benefit/cook — seated triple
+- **Chullin 115b:7** [CREDIT] (Ex 22:30) — Isi's holiness derivation
+- **Chullin 116a:7** [CREDIT] (Ex 22:30) — the benefit dispute
+- **Chullin 116a:9** [CREDIT] (Ex 23:19) — R. Akiva's three exclusions
+- **Chullin 120a:21** [CREDIT] (Ex 12:15-16) — drinking leaven under the soul-term
+- **Chullin 134a:14** [CREDIT] (Ex 23:3) — favor-not-the-poor — seated justice row
+- **Chullin 135b:11** [CREDIT] (Ex 16:16,36) — the omer-measure legs
+- **Chullin 137a:20** [QUOTE] (Ex 21:37) — the four-sheep flock term
+- **Chullin 138a:6** [CREDIT] (Ex 28:37) — the cap and frontplate placement
+- **Chullin 139b:12** [AGGADAH] (Ex 30:23) — the Esther allusion in the flowing myrrh
+- **Chullin 141b:5** [CREDIT] (Ex 12:10) — remainder-burning dup
+- **Eruvin 2b:1** [CREDIT] (Ex 25:8) — sanctuary/tabernacle naming
+- **Eruvin 2b:2** [CREDIT] (Ex 27:14,18; 38:15) — the courtyard-gate dimensions — seated constants
+- **Eruvin 17b:10** [CREDIT] (Ex 16:29) — the Shabbat-limit flogging — the seated go-out-not row
+- **Eruvin 17b:13** [LAW] (Ex 16:29) — ⚠ Rav Ashi's INK PARSE: 'go out' is written, not 'carry out' — the letter decides between two laws
+- **Eruvin 19a:11** [AGGADAH] (Ex 6:7) — He-Who-brings-out
+- **Eruvin 22a:6** [AGGADAH] (Ex 34:6) — long-suffering to both
+- **Eruvin 23b:5** [CREDIT] (Ex 27:18) — the hundred-by-fifty courtyard — the karpef constant's own verse
+- **Eruvin 38b:11** [CREDIT] (Ex 16:5) — weekday-prepares — the preparation pair
+- **Eruvin 48a:14** [LAW] (Ex 16:29) — FOUR CUBITS as one's place — the body-measure constant
+- **Eruvin 51a:7** [LAW] (Ex 16:29) — the two-thousand-cubit limit hung on 'his place'
+- **Eruvin 51a:8** [LAW] (Ex 16:29 + 21:13) — ⚠ the place-place identity-move FROM THE ASYLUM VERSE — the manslayer's refuge measuring the Shabbat limit: a cross-module import between our own two units
+- **Eruvin 53a:8** [AGGADAH] (Ex 1:8) — the new king
+- **Eruvin 53a:10** [AGGADAH] (Ex 1:8) — as-if-he-knew-not
+- **Eruvin 54a:15** [QUOTE] (Ex 15:18) — forever-and-ever lexicon
+- **Eruvin 54a:18** [AGGADAH] (Ex 31:18) — cheeks like the stone
+- **Eruvin 54a:19** [AGGADAH] (Ex 32:16) — freedom on the tablets
+- **Eruvin 54b:15** [CREDIT] (Ex 21:1) — the teacher SHOWS THE REASONS — set-before-them like a table: the seated opening row
+- **Eruvin 58a:3** [CREDIT] (Ex 27:18) — the fifty-cubit measuring rope
+- **Eruvin 65a:21** [AGGADAH] (Ex 23:25) — wine like water
+- **Eruvin 83b:2** [CREDIT] (Ex 16:16,36) — omer = tenth of the eifa = the three-seah computation — the conversion layer's own Talmud seat
+- **Eruvin 96a:6** [LAW] (Ex 13:2,10) — tefillin on Shabbat — R. Akiva's days-to-days parse
+- **Eruvin 96a:10** [LAW] (Ex 13:9) — the counter-baraita
+- **Gittin 7a:18** [AGGADAH] (Ex 22:7) — homily
+- **Gittin 20a:6** [QUOTE] (Ex 15:2) — the adornment leg at the get's writing
+- **Gittin 20b:1** [CREDIT] (Ex 39:30) — the signet-engraving writing question — seated
+- **Gittin 38a:12** [LAW] (Ex 12:44) — the renounced slave freed WITHOUT a bill (Shmuel on the bought-man verse)
+- **Gittin 42b:7** [LAW] (Ex 21:32) — the half-freed slave's thirty: 'his MASTER' — and there is no master
+- **Gittin 42b:10** [CREDIT] (Ex 21:26-27) — tooth-then-eye, two releases
+- **Gittin 42b:12** [CREDIT] (Ex 21:26) — the middle-ground leg
+- **Gittin 45a:6** [CREDIT] (Ex 23:33) — they-shall-not-dwell conditions — seated
+- **Gittin 48b:12** [CREDIT] (Ex 22:4) — betterment and best-land
+- **Gittin 49a:2** [CREDIT] (Ex 22:4-5) — field-field dup
+- **Gittin 49a:6** [CREDIT] (Ex 21:35) — consecrated a-fortiori dup
+- **Gittin 49b:1** [CREDIT] (Ex 22:4) — best-of-injured dup
+- **Gittin 49b:3** [CREDIT] (Ex 22:4) — the robbers-reason baraita
+- **Gittin 55b:6** [CREDIT] (Ex 21:37, 22:3) — stole-consecrated dup
+- **Gittin 56b:10** [AGGADAH] (Ex 15:11) — who-is-like-You among the silent
+- **Gittin 57b:14** [AGGADAH] (Ex 20:2) — the mother and seven sons
+- **Gittin 57b:15** [AGGADAH] (Ex 20:2-3, 22:19) — the second and third sons
+- **Gittin 57b:16** [AGGADAH] (Ex 34:14) — the fourth son
+- **Gittin 60b:2** [CREDIT] (Ex 34:27) — majority-written/minority-oral — the seated charter's sugya
+- **Gittin 60b:5** [CREDIT] (Ex 34:27) — written-not-by-mouth / by-mouth-not-written — the channel-separation rule
+- **Gittin 60b:6** [CREDIT] (Ex 34:27) — the covenant for the oral's sake
+- **Gittin 77a:12** [CREDIT] (Ex 22:3) — hand-extension dup
+- **Gittin 88b:10** [CREDIT] (Ex 21:1) — ordinary judges as the ordained's agents — before-THEM rows
+- **Horayot 4a:20** [CREDIT] (Ex 34:14) — partial-idolatry ruling — the court-error partials read at round 10
+- **Horayot 4b:8** [LAW] (Ex 34:21) — a ruling nullifying Shabbat-in-the-Sabbatical — the partial-error example on plowing-and-harvest
+- **Horayot 4b:15** [QUOTE] (Ex 18:22) — the with-you leg
+- **Horayot 8a:21** [CREDIT] (Ex 20:2-3) — idolatry as the direct dibbur — the from-the-Mouth rows
+- **Horayot 8b:1** [CREDIT] (Ex 15:26) — the first-commanded leg
+- **Horayot 11b:8** [CREDIT] (Ex 30:31) — the twelve-log oil miracles — seated oil rows
+- **Horayot 11b:10** [LAW] (Ex 30:31) — anoint the priest's son, not the king's son — the office-inheritance asymmetry
+- **Horayot 12a:3** [CREDIT] (Ex 16:33, 29:43, 30:31) — the there-there concealment analogies
+- **Keritot 2a:3** [CREDIT] (Ex 30:22) — the karet census' oil-blending member — seated compounding ban
+- **Keritot 3a:3** [LAW] (Ex 30:32-33) — two prohibitions under one karet — the division rule at the oil verses
+- **Keritot 3b:3** [CREDIT] (Ex 20:20) — the silver-gods error leg
+- **Keritot 4a:8** [QUOTE] (Ex 19:13) — the ox-paradigm leg
+- **Keritot 5a:13** [CREDIT] (Ex 29:34) — the sacred-sacred leftover analogy — seated
+- **Keritot 5a:19** [CREDIT] (Ex 30:22,33) — oil-blending karet — the seated compounding ban
+- **Keritot 5a:20** [CREDIT] (Ex 30:32,37) — blending to learn or to transfer — exempt
+- **Keritot 5a:22** [CREDIT] (Ex 30:32,37) — like-its-composition precision
+- **Keritot 5a:24** [CREDIT] (Ex 30:23) — the weights tally — seated constants
+- **Keritot 5a:26** [LAW] (Ex 30:34) — weigh with surplus or precision — 'of each there shall be' as the weighing-protocol parameter
+- **Keritot 5b:2** [CREDIT] (Ex 30:31) — this = twelve log — the seated oil witness
+- **Keritot 5b:10** [CREDIT] (Ex 30:31) — the Jehu anointing leg
+- **Keritot 5b:16** [CREDIT] (Ex 16:33) — the oil sequestered with the Ark
+- **Keritot 5b:18** [CREDIT] (Ex 16:33, 30:6) — there-there manna analogy
+- **Keritot 5b:19** [CREDIT] (Ex 16:33, 30:31) — generations-generations oil analogy
+- **Keritot 6a:6** [CREDIT] (Ex 30:38) — incense-blending karet — seated
+- **Keritot 6a:17** [CREDIT] (Ex 30:32,36) — all-its-actions-sacred
+- **Keritot 6b:1** [CREDIT] (Ex 30:37) — the leftover-incense halves
+- **Keritot 6b:3** [CREDIT] (Ex 30:37) — parts-blending rules
+- **Keritot 6b:5** [CREDIT] (Ex 30:36) — the Yom Kippur extra-fine grind
+- **Keritot 6b:7** [LAW] (Ex 30:34) — ⚠ THE ELEVEN INGREDIENTS 'stated to Moses at Sinai' — the incense list partly unwritten: the data channel self-labeled again at our verse
+- **Keritot 6b:19** [CREDIT] (Ex 30:32) — animals/vessels/gentiles applications exempt
+- **Keritot 6b:25** [CREDIT] (Ex 30:32-33) — the flesh-of-a-person dispute
+- **Keritot 7a:5** [CREDIT] (Ex 30:32) — included-in-applying leg
+- **Keritot 7a:6** [LAW] (Ex 30:32) — the High Priest's own head-to-stomach transfer liable
+- **Keritot 8b:18** [CREDIT] (Ex 24:5) — the convert's covenant offerings — seated exo_24 rows
+- **Keritot 9a:9** [CREDIT] (Ex 24:5-6) — covenant entry by blood-sprinkling — seated
+- **Keritot 20b:1** [CREDIT] (Ex 35:3) — kindling singled out — the seated fire-ban row
+- **Keritot 23b:16** [CREDIT] (Ex 21:28) — the refuted-testimony stoned ox
+- **Keritot 28a:27** [CREDIT] (Ex 12:5) — lambs-precede-goats equivalence — the seated order-equivalence table's gemara
+- **Keritot 28a:29** [CREDIT] (Ex 20:12) — father-mother equivalence — same table
+- **Ketubot 5a:11** [AGGADAH] (Ex 15:17) — the handiwork of the righteous
+- **Ketubot 7a:6** [CREDIT] (Ex 12:16) — equal-for-every-soul at the incense
+- **Ketubot 10a:4** [CREDIT] (Ex 22:16) — the dowry-of-virgins fine — seated
+- **Ketubot 17a:1** [LAW] (Ex 23:7) — how one praises the bride — the houses' dispute riding distance-from-falsehood
+- **Ketubot 29b:5** [CREDIT] (Ex 22:16) — the virgin-virgin analogy
+- **Ketubot 32a:6** [CREDIT] (Ex 20:12) — pay-not-flogged from the conspirators
+- **Ketubot 32b:1** [CREDIT] (Ex 21:24) — the for-for rape analogy
+- **Ketubot 33a:8** [CREDIT] (Ex 21:22-23) — pay-not-flogged at the quarrel verse
+- **Ketubot 33a:9** [CREDIT] (Ex 21:22) — the forewarning leg
+- **Ketubot 33b:2** [CREDIT] (Ex 21:23) — soul-for-soul as money
+- **Ketubot 33b:3** [CREDIT] (Ex 21:19) — the bedridden-absolved leg
+- **Ketubot 33b:11** [CREDIT] (Ex 21:37) — the agency exception — in-triage dup
+- **Ketubot 34a:3** [CREDIT] (Ex 31:14) — sacred-to-you dup
+- **Ketubot 34a:4** [CREDIT] (Ex 31:14) — the unwitting-product dup
+- **Ketubot 34b:10** [CREDIT] (Ex 21:22) — no-harm-follow leg
+- **Ketubot 35a:1** [CREDIT] (Ex 21:22) — the harm reading
+- **Ketubot 36b:7** [CREDIT] (Ex 21:22) — the fine-ineligible list
+- **Ketubot 37a:8** [CREDIT] (Ex 21:22) — death exempts payment
+- **Ketubot 37b:12** [CREDIT] (Ex 21:3,29-30) — the ransom-atonement teaching — in-triage dup
+- **Ketubot 38a:4** [CREDIT] (Ex 21:24) — talion-money leg
+- **Ketubot 38b:3** [CREDIT] (Ex 22:16) — the payment's kind
+- **Ketubot 39b:5** [CREDIT] (Ex 22:16) — the father-refuses clause
+- **Ketubot 40a:1** [CREDIT] (Ex 22:15) — to-him-a-wife willing
+- **Ketubot 40b:5** [CREDIT] (Ex 21:7) — the daughter's handiwork — the maidservant seat
+- **Ketubot 42b:11** [CREDIT] (Ex 21:32) — the give-thirty leg
+- **Ketubot 44b:5** [CREDIT] (Ex 22:16) — the utterly-refuse baraita
+- **Ketubot 46a:12** [LAW] (Ex 22:24) — the defamer's hired witnesses via the placing-placing move from the interest verse
+- **Ketubot 46a:13** [LAW] (Ex 22:24) — the same identity at R. Shimon b. Yochai's school
+- **Ketubot 46b:4** [CREDIT] (Ex 21:11) — betrothal money to the father — the exit-clause seat
+- **Ketubot 46b:7** [CREDIT] (Ex 21:7) — handiwork dup
+- **Ketubot 46b:10** [CREDIT] (Ex 21:11) — the reasonable-owner leg
+- **Ketubot 47a:2** [CREDIT] (Ex 21:7) — earnings dup
+- **Ketubot 61b:10** [CREDIT] (Ex 21:10) — the marital-duty rows — seated onah claims
+- **Ketubot 62b:9** [AGGADAH] (Ex 15:17, 25:8) — the intended Temple
+- **Ketubot 103a:26** [CREDIT] (Ex 20:11-12) — honor-your-mother
+- **Ketubot 105a:8** [LAW] (Ex 23:8) — the judge who charges BOTH parties — Karna's istera and the bribe fence
+- **Ketubot 105a:10** [CREDIT] (Ex 23:8) — not even to acquit the innocent — seated
+- **Ketubot 105a:15** [AGGADAH] (Ex 23:8) — the blinded eyes
+- **Ketubot 105b:8** [LAW] (Ex 23:8) — VERBAL bribery included — the bribe ban's speech extension
+- **Ketubot 111a:9** [AGGADAH] (Ex 20:21) — buried beneath the altar
+- **Ketubot 111b:22** [AGGADAH] (Ex 3:8) — the oozing figs
+- **Ketubot 112a:14** [AGGADAH] (Ex 3:8) — the swift land
+- **Ketubot 112a:17** [AGGADAH] (Ex 24:7) — the hasty mouths
+- **Kiddushin 2b:6** [QUOTE] (Ex 18:20) — the feminine way
+- **Kiddushin 2b:8** [QUOTE] (Ex 18:20) — the Torah as the way
+- **Kiddushin 3b:5** [CREDIT] (Ex 21:11) — without-money — the betrothal-money source
+- **Kiddushin 3b:8** [CREDIT] (Ex 21:7) — handiwork dup
+- **Kiddushin 3b:12** [CREDIT] (Ex 21:11) — to-the-father reasoning
+- **Kiddushin 4a:3** [CREDIT] (Ex 21:11) — the this-master leg
+- **Kiddushin 4b:1** [CREDIT] (Ex 21:11) — the ailonit inclusion
+- **Kiddushin 9b:16** [CREDIT] (Ex 21:10) — the onah leg at the yevama
+- **Kiddushin 11b:1** [CREDIT] (Ex 22:6) — partial-admission dup
+- **Kiddushin 11b:7** [CREDIT] (Ex 21:32) — the fixed-fines list dup
+- **Kiddushin 11b:9** [CREDIT] (Ex 21:8) — Beit Shammai's dinar from the deduction reading
+- **Kiddushin 12a:1** [CREDIT] (Ex 21:8) — deduction-like-designation
+- **Kiddushin 14b:2** [CREDIT] (Ex 21:2) — the slave-acquisition mishnah — seated clock
+- **Kiddushin 14b:4** [CREDIT] (Ex 21:8) — redemption implies money-acquisition
+- **Kiddushin 14b:15** [CREDIT] (Ex 21:6) — the self-seller not pierced
+- **Kiddushin 15a:3** [CREDIT] (Ex 21:5) — his-ear not her-ear
+- **Kiddushin 15a:10** [CREDIT] (Ex 21:4) — the self-seller's maidservant exclusion
+- **Kiddushin 15a:21** [CREDIT] (Ex 21:6) — forever-until-Jubilee — the seated interrupt
+- **Kiddushin 16a:2** [CREDIT] (Ex 21:10) — document acquisition via the maidservant
+- **Kiddushin 16a:4** [CREDIT] (Ex 21:7) — not-as-menslaves inference
+- **Kiddushin 16a:6** [CREDIT] (Ex 21:7) — the document leg
+- **Kiddushin 16a:8** [CREDIT] (Ex 21:7) — not released by injury
+- **Kiddushin 16a:9** [CREDIT] (Ex 21:2) — the six-years source
+- **Kiddushin 16b:21** [CREDIT] (Ex 21:2) — the fleeing slave completes
+- **Kiddushin 17a:1** [LAW] (Ex 21:2) — the SICK slave still leaves in the seventh — illness does not extend the clock
+- **Kiddushin 17a:3** [LAW] (Ex 21:2) — the three-years-sick boundary on the same rule
+- **Kiddushin 17a:5** [CREDIT] (Ex 21:32) — severance five-sela-per-kind
+- **Kiddushin 17a:7** [CREDIT] (Ex 34:20) — the empty-empty analogy
+- **Kiddushin 17a:10** [CREDIT] (Ex 21:32) — R. Yehuda's thirty like the slave-fine
+- **Kiddushin 17b:5** [CREDIT] (Ex 21:2) — serves-you-not-the-heir rows
+- **Kiddushin 17b:11** [CREDIT] (Ex 21:5) — the maidservant-severance comparison
+- **Kiddushin 17b:13** [CREDIT] (Ex 21:6) — the pierced serves neither son nor daughter
+- **Kiddushin 18a:8** [LAW] (Ex 22:2) — the slave sold twice, the maidservant once — from the theft-sale clause
+- **Kiddushin 18a:16** [CREDIT] (Ex 21:8) — the deceit/garment (be-vigdo) dispute — the seated threshold-parse family
+- **Kiddushin 19a:3** [LAW] (Ex 21:9) — designation for the minor son — the dilemma
+- **Kiddushin 19a:8** [LAW] (Ex 21:8) — DESIGNATION NEEDS HER CONSENT (ye'adah read to consent)
+- **Kiddushin 19a:10** [CREDIT] (Ex 21:8) — the source baraita
+- **Kiddushin 19b:14** [CREDIT] (Ex 21:7) — sells-only-as-maidservant times
+- **Kiddushin 19b:17** [CREDIT] (Ex 21:8) — the flawed-lineage sale dispute
+- **Kiddushin 20a:3** [CREDIT] (Ex 21:8) — R. Meir's leg
+- **Kiddushin 20a:6** [CREDIT] (Ex 21:3) — begappo = with his body — the seated release list
+- **Kiddushin 20a:20** [AGGADAH] (Ex 21:7) — the poverty ladder to the sold daughter
+- **Kiddushin 20b:9** [CREDIT] (Ex 22:2) — sold wholly, not partly
+- **Kiddushin 21b:3** [CREDIT] (Ex 21:6) — the piercing source
+- **Kiddushin 21b:4** [CREDIT] (Ex 21:6) — forever-until-Jubilee
+- **Kiddushin 21b:16** [CREDIT] (Ex 21:5) — the priest-slave piercing leg
+- **Kiddushin 22a:3** [CREDIT] (Ex 21:5) — amor-yomar: said and repeated at both ends
+- **Kiddushin 22a:5** [CREDIT] (Ex 21:5) — the timing leg
+- **Kiddushin 22a:7** [CREDIT] (Ex 21:5) — the wife-and-children conditions
+- **Kiddushin 22a:11** [CREDIT] (Ex 21:3) — the children fed with him
+- **Kiddushin 22b:1** [CREDIT] (Ex 21:6) — ear-to-the-door procedure
+- **Kiddushin 22b:2** [CREDIT] (Ex 21:6) — the outside-piercing leg
+- **Kiddushin 22b:3** [CREDIT] (Ex 21:6) — the standing door
+- **Kiddushin 24b:2** [CREDIT] (Ex 21:20,26) — tooth/eye generalization-detail
+- **Kiddushin 24b:3** [CREDIT] (Ex 21:26) — the re-generalization
+- **Kiddushin 24b:4** [CREDIT] (Ex 21:26) — the exposed-blemish class
+- **Kiddushin 24b:8** [CREDIT] (Ex 21:26) — sending-sending analogy
+- **Kiddushin 24b:15** [CREDIT] (Ex 21:26) — the doctor-master case — intent dup
+- **Kiddushin 29a:15** [CREDIT] (Ex 34:20) — the father redeems the son
+- **Kiddushin 29a:17** [CREDIT] (Ex 34:20) — tifde/tippadeh — the read-form derivation
+- **Kiddushin 29b:5** [CREDIT] (Ex 34:20) — self-before-son
+- **Kiddushin 29b:6** [CREDIT] (Ex 13:2, 34:20) — five sons, five redemptions
+- **Kiddushin 30a:13** [LAW] (Ex 19:9 link) — ⚠ THE MIDPOINT-OF-VERSES census — 'we cannot count the letters; bring a scroll' — the scribes' ink-census row, front-end grade
+- **Kiddushin 30b:18** [CREDIT] (Ex 20:11-12) — honor equated to the Omnipresent's
+- **Kiddushin 30b:20** [CREDIT] (Ex 21:17) — the curse equation
+- **Kiddushin 31a:1** [CREDIT] (Ex 20:11) — the precedence orders — the equivalence table
+- **Kiddushin 31a:6** [AGGADAH] (Ex 20:2) — the kings' concession
+- **Kiddushin 31a:7** [AGGADAH] (Ex 20:11) — they returned and conceded
+- **Kiddushin 32a:2** [CREDIT] (Ex 20:11) — honor-with-wealth analogy
+- **Kiddushin 32a:3** [QUOTE] (Ex 20:11) — the tithe-redemption leg
+- **Kiddushin 32a:16** [AGGADAH] (Ex 13:21) — the Teacher forgone His honor
+- **Kiddushin 33b:15** [AGGADAH] (Ex 33:8) — they looked after Moses
+- **Kiddushin 34b:2** [CREDIT] (Ex 23:17) — the appearance women-exemption dup
+- **Kiddushin 35a:5** [LAW] (Ex 13:9) — tefillin and women — the sign-and-memorial analogy of the Pafunya sage
+- **Kiddushin 35a:9** [CREDIT] (Ex 21:1,29) — them-plural equates the woman — dup
+- **Kiddushin 37a:2** [CREDIT] (Ex 13:11) — the land-dependent definition
+- **Kiddushin 37b:12** [LAW] (Ex 12:20) — the DWELLINGS term scopes matza everywhere
+- **Kiddushin 37b:13** [LAW] (Ex 13:11) — the COMING term: do the mitzva as you enter
+- **Kiddushin 38a:3** [CREDIT] (Ex 16:35) — the forty-year manna timeline
+- **Kiddushin 38a:4** [CREDIT] (Ex 16:35) — forty-less-thirty and the cakes
+- **Kiddushin 38a:7** [CREDIT] (Ex 23:26) — the fill-days birthday computation
+- **Kiddushin 41b:5** [CREDIT] (Ex 12:6) — AGENCY from the pesach assembly — the seated agent-source
+- **Kiddushin 41b:15** [CREDIT] (Ex 12:6) — the whole-assembly leg
+- **Kiddushin 42a:1** [CREDIT] (Ex 12:6) — all Israel, one pesach
+- **Kiddushin 42a:3** [CREDIT] (Ex 12:3) — take-per-household
+- **Kiddushin 42a:4** [CREDIT] (Ex 12:4) — the adult-acquires rule
+- **Kiddushin 42b:11** [CREDIT] (Ex 22:7-8) — devar-thought dup
+- **Kiddushin 42b:12** [CREDIT] (Ex 22:10) — the hand-put leg
+- **Kiddushin 43a:1** [CREDIT] (Ex 21:37) — agency-exception legs
+- **Kiddushin 43a:2** [CREDIT] (Ex 21:37) — the or-includes-agent schools
+- **Kiddushin 46a:2** [CREDIT] (Ex 22:16) — the minor's betrothal prevention
+- **Kiddushin 46a:4** [CREDIT] (Ex 22:15) — the dowry-to-wife leg
+- **Kiddushin 56b:7** [CREDIT] (Ex 21:28) — stoned-ox benefit dup
+- **Kiddushin 56b:8** [CREDIT] (Ex 21:28) — owner-clear dup
+- **Kiddushin 57b:9** [CREDIT] (Ex 23:19, 34:26) — meat-milk benefit dup
+- **Kiddushin 57b:10** [CREDIT] (Ex 22:30) — R. Shimon's benefit leg
+- **Kiddushin 58a:2** [CREDIT] (Ex 22:30) — courtyard-slaughter dogs dup
+- **Kiddushin 68b:1** [CREDIT] (Ex 21:4) — the wife-and-children master's rule
+- **Kiddushin 68b:10** [CREDIT] (Ex 21:4) — the maidservant-line leg
+- **Kiddushin 69a:1** [CREDIT] (Ex 21:4) — the freed-mother slave-offspring dispute
+- **Kiddushin 69a:10** [CREDIT] (Ex 21:4) — R. Eliezer's leg
+- **Kiddushin 71a:10** [LAW] (Ex 3:15) — the four-letter Name's transmission — le-olam written DEFECTIVE: the concealment read off the missing letter
+- **Kiddushin 71a:11** [LAW] (Ex 3:15) — name vs remembrance — the two-channel split at the Name
+- **Kiddushin 72b:9** [CREDIT] (Ex 12:44) — renounced-slave dup
+- **Kiddushin 76b:7** [CREDIT] (Ex 18:22) — the with-you blemish leg
+- **Makkot 2b:7** [CREDIT] (Ex 20:12-13) — no lashes for the speech-ban — conspirator seats
+- **Makkot 2b:10** [CREDIT] (Ex 21:30) — ransom-as-atonement dup
+- **Makkot 2b:12** [CREDIT] (Ex 21:22,30) — imposing-imposing dup
+- **Makkot 2b:15** [CREDIT] (Ex 21:30, 22:2) — the sold-for-theft leg
+- **Makkot 4a:12** [CREDIT] (Ex 20:12-13) — the eighty lashes
+- **Makkot 4b:3** [CREDIT] (Ex 12:10) — the remain-lash question
+- **Makkot 4b:10** [CREDIT] (Ex 20:12-13) — the dispute legs
+- **Makkot 5a:18** [CREDIT] (Ex 21:37) — conspirators at the multiples
+- **Makkot 5b:8** [CREDIT] (Ex 21:23) — only-after-verdict — the Sadducee dispute
+- **Makkot 7b:3** [CREDIT] (Ex 21:13) — exile exclusions
+- **Makkot 7b:6** [CREDIT] (Ex 21:13) — suddenly-excludes
+- **Makkot 7b:7** [CREDIT] (Ex 21:13) — the two-meant-four exclusion — stone-matrix dup
+- **Makkot 8b:3** [CREDIT] (Ex 34:21) — plowing-and-harvest — the Sabbatical pair
+- **Makkot 8b:14** [LAW] (Ex 21:15) — the son who unintentionally kills the father — the wound-refinement on exile
+- **Makkot 8b:16** [CREDIT] (Ex 22:27) — slave and Samaritan at the curse
+- **Makkot 10b:3** [CREDIT] (Ex 21:13) — God-caused-it-to-his-hand — the seated asylum providence
+- **Makkot 11a:8** [LAW] (Ex 13:9) — the scroll-material rule from in-order-that-the-Torah-be-in-your-mouth
+- **Makkot 12b:8** [CREDIT] (Ex 21:13) — the Levite's city-to-city exile — asylum rows
+- **Makkot 14b:2** [QUOTE] (Ex 30:33) — punishment-division leg
+- **Makkot 16a:2** [CREDIT] (Ex 12:10) — remain-lash dup
+- **Makkot 18a:3** [CREDIT] (Ex 29:33) — the five-lashes case
+- **Makkot 18a:4** [CREDIT] (Ex 22:30) — the out-of-bounds flesh rule
+- **Makkot 18a:5** [CREDIT] (Ex 22:30, 29:33-34) — disqualified-eating legs
+- **Makkot 18b:3** [CREDIT] (Ex 29:33) — the priest/layman rows
+- **Makkot 18b:5** [CREDIT] (Ex 29:33) — before-sprinkling exempt
+- **Makkot 22a:8** [CREDIT] (Ex 25:15-16, 28:28) — loosening the breastplate, removing the staves — the seated staves-stay claim
+- **Makkot 23a:4** [AGGADAH] (Ex 34:17-18) — festivals-contempt juxtaposition
+- **Makkot 23a:5** [AGGADAH] (Ex 22:30, 23:1) — thrown to the dogs
+- **Makkot 24a:30** [AGGADAH] (Ex 34:7) — Ezekiel revoked it
+- **Megillah 5a:10** [LAW] (Ex 12:2) — months of the YEAR — days are not counted into years: the calendar-unit rule
+- **Megillah 7a:4** [AGGADAH] (Ex 17:8) — the Esther attribution row
+- **Megillah 7a:5** [LAW] (Ex 17:14) — 'write this for a memorial' licenses Esther's book — the canon-write row
+- **Megillah 7b:13** [CREDIT] (Ex 12:16) — that-not-facilitators dup
+- **Megillah 9a:16** [CREDIT] (Ex 12:40) — the Ptolemy changes census — the seated translation-change rows
+- **Megillah 10b:20** [AGGADAH] (Ex 30:23) — the thorn and Haman
+- **Megillah 10b:21** [AGGADAH] (Ex 30:23) — the chief of spices
+- **Megillah 10b:26** [AGGADAH] (Ex 14:20) — the angels' stilled song
+- **Megillah 11a:18** [AGGADAH] (Ex 6:26) — the hu-consistency list
+- **Megillah 11a:22** [AGGADAH] (Ex 6:20) — the seven-and-twenty count
+- **Megillah 12a:7** [AGGADAH] (Ex 28:2) — Ahasuerus in the vestments
+- **Megillah 12b:10** [AGGADAH] (Ex 28:20) — Carshena and the lambs
+- **Megillah 13a:4** [AGGADAH] (Ex 2:5) — Bithiah at the river
+- **Megillah 14a:5** [LAW] (Ex 15:1) — the song a-fortiori: from slavery to freedom we sing — the Hallel/Megillah warrant
+- **Megillah 14a:14** [AGGADAH] (Ex 15:20) — Miriam the prophetess
+- **Megillah 14a:15** [AGGADAH] (Ex 2:4) — her prophecy at the river
+- **Megillah 15a:12** [AGGADAH] (Ex 32:15) — zeh and the tablets
+- **Megillah 15b:6** [AGGADAH] (Ex 21:22) — the justice-attribute quote
+- **Megillah 18a:12** [LAW] (Ex 17:14) — the Megillah may not be read by heart — the remembrance-remembrance move from the Amalek verse
+- **Megillah 19b:4** [AGGADAH] (Ex 33:20,22) — the crack in the cave
+- **Megillah 21a:6** [QUOTE] (Ex 25:3) — the continually leg
+- **Megillah 21a:8** [CREDIT] (Ex 12:8,12) — pesach eaten at night
+- **Megillah 25b:11** [CREDIT] (Ex 32:21,25) — the second calf account read, not translated — the seated Targum-regulation row
+- **Megillah 25b:12** [CREDIT] (Ex 32:24) — Aaron's answer and careful speech
+- **Megillah 29a:18** [CREDIT] (Ex 12:1) — the four-portions calendar
+- **Megillah 29b:7** [CREDIT] (Ex 30:11-12) — the shekalim portion
+- **Megillah 29b:29** [CREDIT] (Ex 27:20-30:10) — the Tetzaveh-week case
+- **Megillah 30a:7** [CREDIT] (Ex 30:17) — the Ki Tisa-week case
+- **Megillah 30a:8** [CREDIT] (Ex 30:11) — Abaye's ordering
+- **Megillah 30a:24** [CREDIT] (Ex 12:1-2) — the this-month portion
+- **Megillah 31a:5** [CREDIT] (Ex 12:21, 22:24, 34:1) — the Passover-readings mnemonic
+- **Megillah 31a:6** [CREDIT] (Ex 13:17) — the sea-day reading
+- **Megillah 31a:7** [CREDIT] (Ex 12:21, 13:1,17) — the diaspora mnemonic
+- **Megillah 31a:8** [CREDIT] (Ex 19:1) — the Shavuot options
+- **Megillah 31a:16** [CREDIT] (Ex 33:12,14) — the intermediate-Shabbat reading
+- **Megillah 31a:18** [CREDIT] (Ex 17:8) — the Purim reading
+- **Meilah 11b:13** [CREDIT] (Ex 29:34) — the burn-inference
+- **Meilah 13a:10** [CREDIT] (Ex 13:12) — passing-passing dup
+- **Meilah 13a:11** [CREDIT] (Ex 22:29) — the its-mother analogy
+- **Meilah 17b:9** [CREDIT] (Ex 29:34) — piggul/notar joining
+- **Meilah 19a:5** [CREDIT] (Ex 30:33) — the oil-on-stranger leg
+- **Menachot 5b:8** [CREDIT] (Ex 22:30) — the blemished a-fortiori
+- **Menachot 5b:20** [CREDIT] (Ex 30:37) — incense for the Most High
+- **Menachot 10a:8** [CREDIT] (Ex 21:6) — ear-ear from the pierced slave to the leper
+- **Menachot 11a:5** [CREDIT] (Ex 28:16) — the fistful technique — round 10's own row
+- **Menachot 21a:6** [CREDIT] (Ex 29:25) — roasted limbs are no fire-offering
+- **Menachot 25a:2** [CREDIT] (Ex 28:38) — the frontplate bears the sin — seated propitiation rows
+- **Menachot 25a:5** [CREDIT] (Ex 28:38) — always-on-the-forehead acceptance
+- **Menachot 25a:7** [CREDIT] (Ex 28:38) — the deferred-sin scope
+- **Menachot 25b:1** [CREDIT] (Ex 28:38) — for-them, not gentiles
+- **Menachot 27a:25** [CREDIT] (Ex 12:22) — taking-taking from the hyssop bundle
+- **Menachot 27a:28** [LAW] (Ex 15:2) — THIS-IS-MY-GOD-AND-I-WILL-BEAUTIFY — the adornment-of-the-mitzva charter at our song verse
+- **Menachot 27b:10** [CREDIT] (Ex 26:33) — the within-the-curtain scopes
+- **Menachot 28a:6** [CREDIT] (Ex 25:32) — seven branches indispensable — seated constants
+- **Menachot 28a:8** [CREDIT] (Ex 25:36) — the being-term
+- **Menachot 28a:9** [CREDIT] (Ex 25:31,36) — block-not-fragments
+- **Menachot 28a:10** [CREDIT] (Ex 25:31) — other metals included
+- **Menachot 28a:11** [CREDIT] (Ex 25:31) — beaten-work post-facto
+- **Menachot 28a:12** [CREDIT] (Ex 25:31,36) — the gold-gold question
+- **Menachot 28a:14** [CREDIT] (Ex 25:39) — the talent-with-vessels rule
+- **Menachot 28a:15** [CREDIT] (Ex 25:31) — the branches leg
+- **Menachot 28b:5** [CREDIT] (Ex 25:31) — the dispute's frame
+- **Menachot 28b:8** [CREDIT] (Ex 25:31) — the generalization-detail menorah
+- **Menachot 28b:17** [CREDIT] (Ex 25:33-34) — the twenty-two goblets
+- **Menachot 29a:1** [CREDIT] (Ex 25:33-35) — the eleven knobs
+- **Menachot 29a:2** [CREDIT] (Ex 25:33-34) — the nine flowers
+- **Menachot 29a:5** [CREDIT] (Ex 25:39) — the consuming gold
+- **Menachot 29a:12** [CREDIT] (Ex 25:40) — the fire-vessels shown
+- **Menachot 29a:13** [CREDIT] (Ex 26:30) — the shown-fashion leg
+- **Menachot 29a:15** [CREDIT] (Ex 12:2, 29:38) — the three shown-by-the-finger — seated
+- **Menachot 29b:2** [LAW] (Ex 13:15) — ⚠ THE SEVERED VAV of 'slew' adjudicated by the child's reading — an ink-defect ruling row, front-end grade
+- **Menachot 34a:10** [CREDIT] (Ex 12:22-23) — the lintel-doorposts superfluity
+- **Menachot 34b:1** [LAW] (Ex 13:16) — ⚠ TOTAFOT SPELLED DEFECTIVE = the FOUR compartments — the ketiv carrying the number: front-end grade
+- **Menachot 34b:3** [LAW] (Ex 13:9) — four hides, four compartments
+- **Menachot 34b:5** [LAW] (Ex 13:9) — the arm's one hide
+- **Menachot 34b:9** [CREDIT] (Ex 13:1,11) — the passage order — seated tefillin form
+- **Menachot 34b:10** [CREDIT] (Ex 13:1) — the reader's-right reconciliation
+- **Menachot 35a:1** [CREDIT] (Ex 13:1,11) — inner/outer exchange invalid
+- **Menachot 35b:8** [AGGADAH] (Ex 33:23) — the nations fear the head-tefillin
+- **Menachot 36b:4** [CREDIT] (Ex 13:10) — days-to-days — the season rows dup
+- **Menachot 36b:5** [CREDIT] (Ex 13:9,16) — the sign-excludes-Shabbat dup
+- **Menachot 36b:10** [CREDIT] (Ex 28:38) — touch-them-always from the frontplate
+- **Menachot 36b:11** [CREDIT] (Ex 13:9) — yadkha as the left arm
+- **Menachot 37a:3** [LAW] (Ex 13:16) — ⚠ yadkha written WITH THE HEH = the weak arm — a spelling-derivation row, front-end grade
+- **Menachot 37b:2** [CREDIT] (Ex 13:9) — the bicep
+- **Menachot 37b:3** [CREDIT] (Ex 13:9) — a sign for you, not for others
+- **Menachot 37b:5** [CREDIT] (Ex 13:9) — the upper head
+- **Menachot 42b:13** [CREDIT] (Ex 28:31) — the tested dye leg
+- **Menachot 43b:13** [AGGADAH] (Ex 24:10) — tekhelet to the sea to the Throne
+- **Menachot 44a:16** [LAW] (Ex 13:9,16) — eight positive mitzvot in the four passages
+- **Menachot 49b:8** [CREDIT] (Ex 12:3,6) — the four-days inspection from tishmeru
+- **Menachot 50a:6** [CREDIT] (Ex 29:39) — the morning-lamb dependency
+- **Menachot 50a:12** [CREDIT] (Ex 30:7) — altar initiation with the afternoon incense
+- **Menachot 50a:19** [CREDIT] (Ex 30:9) — the individual incense-gift ban
+- **Menachot 50b:1** [CREDIT] (Ex 30:9) — the community leg
+- **Menachot 50b:2** [CREDIT] (Ex 31:11) — the outer-altar leg
+- **Menachot 51a:4** [CREDIT] (Ex 29:40) — the oil-tenth analogy
+- **Menachot 53a:10** [CREDIT] (Ex 12:17) — matza kneaded lukewarm — round 10's row
+- **Menachot 53a:18** [AGGADAH] (Ex 15:10) — the Addir homily
+- **Menachot 53b:3** [AGGADAH] (Ex 2:2) — the good one
+- **Menachot 53b:4** [AGGADAH] (Ex 15:2,16; 32:1) — the zeh chain
+- **Menachot 57b:19** [CREDIT] (Ex 23:19) — the first-produce leaven/honey members
+- **Menachot 61a:7** [CREDIT] (Ex 29:27) — the four-motions waving — the seated computed verdict
+- **Menachot 62a:13** [CREDIT] (Ex 40:3) — al as next-to
+- **Menachot 66a:4** [CREDIT] (Ex 12:15) — six-and-seven days matza
+- **Menachot 68b:20** [CREDIT] (Ex 9:31-32) — aviv-aviv from the hail — the omer-timing move
+- **Menachot 71a:6** [CREDIT] (Ex 23:16) — which-you-sow scope
+- **Menachot 72a:12** [CREDIT] (Ex 34:21) — the omer-reaping override
+- **Menachot 73a:11** [CREDIT] (Ex 29:33) — their-minchah inclusions
+- **Menachot 78b:6** [CREDIT] (Ex 34:25) — pesach-over-leaven dup
+- **Menachot 82a:12** [CREDIT] (Ex 12:3,25) — pesach from the non-sacred
+- **Menachot 82b:2** [CREDIT] (Ex 13:5) — the generations-pesach comparison
+- **Menachot 82b:12** [CREDIT] (Ex 24:5-6) — the utensil requirement from the covenant blood
+- **Menachot 83a:6** [CREDIT] (Ex 29:34) — inauguration-leftover disposal
+- **Menachot 84a:11** [CREDIT] (Ex 9:31-32) — aviv-aviv dup
+- **Menachot 84b:4** [CREDIT] (Ex 23:16, 34:22) — two loaves precede the first fruits — the seated scheduling
+- **Menachot 84b:5** [CREDIT] (Ex 23:16) — the sown leg
+- **Menachot 84b:6** [CREDIT] (Ex 34:22) — roof and ruin produce
+- **Menachot 84b:7** [CREDIT] (Ex 23:16) — the libations precedence
+- **Menachot 85a:3** [QUOTE] (Ex 7:10) — the magicians idiom
+- **Menachot 86a:21** [CREDIT] (Ex 27:20) — refined-of-the-olive — the seated lamp row
+- **Menachot 86a:29** [CREDIT] (Ex 27:20) — the menorah-oil a-fortiori
+- **Menachot 86b:2** [CREDIT] (Ex 27:20) — illumination-only refined
+- **Menachot 86b:3** [CREDIT] (Ex 29:40) — pounded valid for minchah
+- **Menachot 88a:11** [CREDIT] (Ex 30:24) — the hin-vessel dispute
+- **Menachot 88b:10** [CREDIT] (Ex 25:31) — the movable lamps
+- **Menachot 88b:11** [CREDIT] (Ex 25:39) — the talent's scope
+- **Menachot 88b:17** [CREDIT] (Ex 25:39) — the scope dispute
+- **Menachot 88b:20** [CREDIT] (Ex 25:37) — the gold lamps
+- **Menachot 89a:16** [CREDIT] (Ex 30:24,31) — hin = twelve log — the seated constants
+- **Menachot 89a:17** [CREDIT] (Ex 27:21) — the half-log per lamp
+- **Menachot 95a:17** [CREDIT] (Ex 13:21) — night dismantling under the pillar
+- **Menachot 96a:6** [CREDIT] (Ex 25:12,30) — the loaf-dimension mnemonic
+- **Menachot 96a:7** [CREDIT] (Ex 25:23) — the table's handbreadths — the seated computed dimensions
+- **Menachot 96b:1** [CREDIT] (Ex 25:25) — the handbreadth frame
+- **Menachot 97a:5** [CREDIT] (Ex 25:29) — panels and rods
+- **Menachot 98a:5** [CREDIT] (Ex 25:23) — the cubit variants
+- **Menachot 98a:11** [AGGADAH] (Ex 11:8) — the fear of kingship
+- **Menachot 98a:19** [CREDIT] (Ex 40:3) — al-adjacent dup
+- **Menachot 98b:5** [CREDIT] (Ex 26:35) — Solomon's ten tables
+- **Menachot 98b:8** [CREDIT] (Ex 26:35) — the ten candelabra
+- **Menachot 98b:17** [CREDIT] (Ex 27:21) — the western lamp
+- **Menachot 99a:10** [LAW] (Ex 40:18) — ELEVATE, NEVER DOWNGRADE in sanctity — the rule read off Moses erecting the Tabernacle
+- **Menachot 99b:1** [AGGADAH] (Ex 34:1) — the broken study that is its foundation
+- **Menachot 99b:11** [CREDIT] (Ex 25:30) — the shewbread exchange choreography
+- **Menachot 99b:15** [CREDIT] (Ex 25:30) — R. Yosei's continually
+- **Menachot 99b:19** [AGGADAH] (Ex 33:11) — the not-departing blessing
+- **Menachot 101b:6** [CREDIT] (Ex 22:30) — meat-milk benefit dup
+- **Moed Katan 3a:10** [CREDIT] (Ex 23:11) — rest-and-fallow hoeing
+- **Moed Katan 3b:4** [CREDIT] (Ex 34:21) — the added days
+- **Moed Katan 3b:13** [CREDIT] (Ex 34:21) — the Sinai-or-verses question
+- **Moed Katan 5a:20** [QUOTE] (Ex 18:20) — the show-them leg
+- **Moed Katan 15b:13** [CREDIT] (Ex 19:15) — approach-not-a-woman at the leper
+- **Moed Katan 18a:13** [AGGADAH] (Ex 7:15) — Pharaoh at the water
+- **Moed Katan 29a:4** [CREDIT] (Ex 4:18) — go-to-peace — in-triage dup
+- **Nazir 2b:8** [CREDIT] (Ex 15:2) — the beautify vow-term
+- **Nazir 35a:5** [CREDIT] (Ex 22:9) — the bailee-oath structure leg
+- **Nazir 36a:1** [CREDIT] (Ex 12:20) — the kol-leaven combination
+- **Nazir 45a:2** [CREDIT] (Ex 13:19) — Joseph's bones in the Levite camp
+- **Nazir 45a:10** [CREDIT] (Ex 20:23) — the no-steps respect a-fortiori
+- **Nazir 45a:11** [CREDIT] (Ex 20:23) — the Naso version
+- **Nedarim 7b:5** [AGGADAH] (Ex 4:19) — poverty as death
+- **Nedarim 10b:8** [QUOTE] (Ex 30:23) — vow-term lexicon
+- **Nedarim 15b:10** [CREDIT] (Ex 21:10) — the konam-intercourse leg
+- **Nedarim 18a:6** [QUOTE] (Ex 20:6) — oath-stringency leg
+- **Nedarim 20a:12** [AGGADAH] (Ex 20:17) — fear upon your faces = shame
+- **Nedarim 25a:9** [QUOTE] (Ex 12:12) — gods-of-Egypt lexicon
+- **Nedarim 31b:10** [AGGADAH] (Ex 4:24) — the unpostponed hour
+- **Nedarim 31b:13** [AGGADAH] (Ex 4:24) — the merits that did not protect
+- **Nedarim 32a:2** [AGGADAH] (Ex 4:25) — the bridegroom of blood
+- **Nedarim 32a:3** [AGGADAH] (Ex 4:25-26) — Af and Cheima
+- **Nedarim 32a:6** [CREDIT] (Ex 34:27) — circumcision equal to all — the covenant-words family
+- **Nedarim 36a:10** [CREDIT] (Ex 12:3) — the household registration
+- **Nedarim 38a:2** [LAW] (Ex 19:9) — ⚠ THE WEST DIVIDES IT INTO THREE VERSES — a verse-division census row, front-end grade
+- **Nedarim 38a:3** [AGGADAH] (Ex 34:1) — wealth from the hewing
+- **Nedarim 38a:4** [AGGADAH] (Ex 34:1,27) — given to Moses and his descendants
+- **Nedarim 38a:7** [AGGADAH] (Ex 26:16, 40:19) — mighty from the spread tent
+- **Nedarim 38a:9** [AGGADAH] (Ex 34:1) — the precious waste
+- **Nedarim 38a:11** [AGGADAH] (Ex 34:1) — not one donkey
+- **Nedarim 38a:16** [AGGADAH] (Ex 31:18) — the Torah as a gift
+- **Nedarim 51b:7** [QUOTE] (Ex 7:21) — the daga lexicon
+- **Nedarim 64b:4** [CREDIT] (Ex 4:19) — dissolution by the new situation
+- **Nedarim 64b:5** [AGGADAH] (Ex 2:13, 5:20) — the demoted seekers
+- **Nedarim 65a:1** [LAW] (Ex 2:21, 4:19) — a vow dissolved only in the subject's presence — from Moses' oath to Yitro
+- **Niddah 8a:7** [QUOTE] (Ex 21:28) — the testimony list dup
+- **Niddah 13b:4** [AGGADAH] (Ex 20:13) — the hands homily
+- **Niddah 13b:22** [CREDIT] (Ex 28:42) — the breeches-warmth row
+- **Niddah 23b:1** [CREDIT] (Ex 13:2) — the animal-form fetus pair
+- **Niddah 26b:5** [QUOTE] (Ex 25:25) — the table-frame handbreadth cited as a written measure in the measures list
+- **Niddah 40a:14** [LAW] (Ex 13:15) — caesarean birth vs firstborn consecration — natural womb-opening required
+- **Niddah 40a:16** [LAW] (Ex 22:29) — consecrated animal derived from firstborn ("its mother"), not from childbirth
+- **Niddah 42a:11** [LAW] (Ex 19:15) — discharge-status question hooked on the Sinai separation order
+- **Niddah 47b:21** [LAW] (Ex 21:2) — the slave's six years are time-to-time whole years — calendar semantics of the six-year timer
+- **Niddah 48a:2** [LAW] (Ex 21:2) — the whole-years derivation itself: "six years he shall work, AND IN THE SEVENTH he shall go out"
+- **Pesachim 3b:2** [AGGADAH] (Ex 12:43,12:48) — clean-speech homily (Abigail's riding)
+- **Pesachim 3b:10** [AGGADAH] (Ex 12:43,12:48) — the gentile who ate Paschal lambs — lineage-check story enforcing "no stranger shall eat"
+- **Pesachim 4b:9** [LAW] (Ex 12:15,12:19) — Abaye compares "seven days not found" with first-day removal — the deadline derivation opens
+- **Pesachim 5a:2** [LAW] (Ex 12:19) — removal juxtaposed to eating in one verse
+- **Pesachim 5a:3** [LAW] (Ex 12:18,12:20) — leaven-eating juxtaposed to matza-eating
+- **Pesachim 5a:6** [LAW] (Ex 12:18) — "harishon" names the fourteenth — the word 'first' reaches back a day
+- **Pesachim 5a:9** [CREDIT] (Ex 12:15) — in-triage dup: the harishon argument continued
+- **Pesachim 5a:16** [LAW] (Ex 34:25) — Rava: midday deadline from "do not slaughter My offering over leaven"
+- **Pesachim 5a:18** [CREDIT] (Ex 12:15,34:25) — in-triage dup: the same opinions as a baraita
+- **Pesachim 5a:19** [LAW] (Ex 12:15,12:17) — R. Akiva's proof: removal-by-burning cannot fall on the festival itself
+- **Pesachim 5b:2** [LAW] (Ex 12:19,13:7) — "not be found" vs "not be seen" — each phrase assigned its purpose
+- **Pesachim 5b:12** [CREDIT] (Ex 13:7) — in-triage dup: the seeing-gentile-leaven cluster continued
+- **Pesachim 6a:6** [LAW] (Ex 12:19) — gentile's dough in a Jew's courtyard — responsibility turns on deposit acceptance
+- **Pesachim 6b:3** [LAW] (Ex 12:2,12:3) — Moses warns on the first of Nisan for the fourteenth — the thirty-day study window
+- **Pesachim 8b:1** [AGGADAH] (Ex 34:24) — ulterior motives and the needle — reward-seeking homily
+- **Pesachim 8b:7** [LAW] (Ex 34:24) — Isi ben Yehuda: "no man shall covet your land when you go up" — the pilgrimage protection guarantee
+- **Pesachim 10b:15** [LAW] (Ex 12:15,12:19,13:7) — R. Yehuda's three searches correspond to the three leaven verses
+- **Pesachim 16b:7** [CREDIT] (Ex 28:38) — the frontplate bears sin — the plate's propitiation jurisdiction, seated (Tetzaveh round)
+- **Pesachim 21b:5** [LAW] (Ex 13:3) — benefit ban from the PASSIVE VOICE of "shall not be eaten" — the passive-verb compile move
+- **Pesachim 21b:11** [LAW] (Ex 22:30) — R. Yehuda routes the benefit ban through the carcass verse instead
+- **Pesachim 22b:5** [CREDIT] (Ex 21:28) — the stoned ox's flesh ban — seated in the goring-ox claims
+- **Pesachim 22b:6** [CREDIT] (Ex 21:28) — the "naki/clear" benefit extension — the seated ox cluster continued
+- **Pesachim 23a:12** [LAW] (Ex 13:7) — leaven's own benefit ban argued
+- **Pesachim 23b:11** [LAW] (Ex 22:30) — "you shall be sacred men" as R. Yehuda's alternate hook
+- **Pesachim 24a:4** [LAW] (Ex 29:34) — the consecration-leftover burn generalized to disqualified offerings
+- **Pesachim 24b:11** [CREDIT] (Ex 22:30) — Isi's meat-in-milk derivation — the table met in the Mishpatim exam
+- **Pesachim 25a:5** [CREDIT] (Ex 22:30) — in-triage dup: the same Isi derivation weighed
+- **Pesachim 26a:8** [CREDIT] (Ex 30:38) — incense smell and misuse — rides the seated incense-formula ban (Ki Tisa)
+- **Pesachim 27b:9** [LAW] (Ex 12:15) — the Rabbis' rule: a derivation stringent-first lenient-after is invalid — an inference-validity meta-rule
+- **Pesachim 28a:10** [LAW] (Ex 13:7) — leaven over which Passover elapsed: gentile's permitted, Jew's forbidden
+- **Pesachim 28b:4** [LAW] (Ex 12:20,13:3) — R. Yehuda: three verses, three time-windows for the eating ban
+- **Pesachim 28b:6** [LAW] (Ex 13:4) — the second-Passover leaven ban rides "this day" — leaven forbidden beside the eating only
+- **Pesachim 28b:11** [LAW] (Ex 12:18) — matza obligatory after the Temple from "in the evening you shall eat matzot"
+- **Pesachim 28b:12** [LAW] (Ex 12:48) — the impure and far-traveled still eat matza — no worse than the uncircumcised
+- **Pesachim 29a:5** [LAW] (Ex 13:3,13:7) — whose leaven "shall not be seen" — the ownership parameter argued
+- **Pesachim 36a:18** [LAW] (Ex 12:20) — "in ALL your habitations" excludes first-fruits wheat from matza
+- **Pesachim 36b:2** [CREDIT] (Ex 12:20) — in-triage dup: the same baraita re-cited
+- **Pesachim 38b:1** [LAW] (Ex 12:17) — "you shall GUARD the matzot" — guarding for-the-sake-of matza required
+- **Pesachim 38b:2** [LAW] (Ex 12:15) — matza of a nazirite or thanks-offering excluded — eatable all seven days required
+- **Pesachim 39a:10** [AGGADAH] (Ex 1:14) — lettuce as mercy; the Egyptians likened to bitter herbs
+- **Pesachim 39a:13** [LAW] (Ex 12:8) — "bitter herbS" — the plural licenses many species — the grammatical-number hook (M-12 family)
+- **Pesachim 40a:14** [LAW] (Ex 12:17) — Rava: guarding is a positive duty — soak the grain to guard it
+- **Pesachim 41a:6** [LAW] (Ex 12:9) — roast, not boiled — the preparation-mode ban opens
+- **Pesachim 41a:8** [LAW] (Ex 12:9) — "in water" extended to all liquids (Rabbi Yehuda HaNasi)
+- **Pesachim 41a:14** [LAW] (Ex 12:9) — fully-roasted eater not liable — the verse limits its own penalty
+- **Pesachim 41a:17** [LAW] (Ex 12:9) — raw eating — "but roasted with fire" as the ab-initio command
+- **Pesachim 41b:1** [LAW] (Ex 12:9) — two lash-sets: the specific ban plus the roasted-only positive-as-negative
+- **Pesachim 41b:11** [LAW] (Ex 12:8,12:9) — "bashel mevushal" — the doubled verb expounded
+- **Pesachim 41b:17** [LAW] (Ex 12:9) — roasted-before-nightfall — where is ITS ban
+- **Pesachim 41b:18** [LAW] (Ex 12:8) — "on that night" — night yes, day no
+- **Pesachim 42a:5** [LAW] (Ex 12:1) — the school of Rav reads "lemor" as "say a prohibition" — a word-reading on the command frame
+- **Pesachim 43a:18** [LAW] (Ex 12:15,12:20) — "anything leavened" — mixtures enter the ban (R. Meir line)
+- **Pesachim 43a:21** [CREDIT] (Ex 12:19) — in-triage dup: the mixtures-karet challenge on the same baraita
+- **Pesachim 47a:6** [LAW] (Ex 12:16) — "save that which every man must eat" — festival labor licensed for food
+- **Pesachim 47b:10** [LAW] (Ex 16:5,20:10) — set-aside (muktzeh) argued from "prepare on the sixth day"
+- **Pesachim 48a:12** [LAW] (Ex 20:9) — the baking dispute runs on "you shall not perform any labor"
+- **Pesachim 50a:20** [LAW] (Ex 3:15) — "le'olam" written defective — the Name concealed in pronunciation — ink-level law on the Name
+- **Pesachim 50a:21** [CREDIT] (Ex 3:15) — in-triage dup: the concealment contradiction resolved (this world / next world)
+- **Pesachim 53b:8** [AGGADAH] (Ex 7:28) — the frogs' a-fortiori for martyrdom — Hananiah, Mishael, Azariah
+- **Pesachim 59a:1** [LAW] (Ex 12:6) — the Paschal lamb follows the daily offering — "evening" vs "afternoon" ordering
+- **Pesachim 59a:2** [LAW] (Ex 30:8) — should incense and lamps also precede — the order challenge
+- **Pesachim 59a:3** [LAW] (Ex 27:21) — "oto/it" excludes — lamps kindled last
+- **Pesachim 59a:4** [CREDIT] (Ex 27:21) — in-triage dup: the alternative reading of the same exclusion
+- **Pesachim 59a:5** [CREDIT] (Ex 30:8) — in-triage dup: the incense-lamps juxtaposition restated
+- **Pesachim 59a:7** [CREDIT] (Ex 27:21) — in-triage dup: the "it" exclusion re-derived
+- **Pesachim 59a:9** [LAW] (Ex 30:7) — "in the morning, in the morning" — the doubled word puts incense first
+- **Pesachim 59b:4** [LAW] (Ex 29:33) — "they shall eat those things with which atonement was made" — priests' eating completes the owners' atonement
+- **Pesachim 59b:6** [LAW] (Ex 23:18) — the fat-overnight contradiction — night hours vs morning
+- **Pesachim 59b:8** [CREDIT] (Ex 34:25) — in-triage dup: the same contradiction on the parallel verse, same resolution
+- **Pesachim 61a:6** [LAW] (Ex 12:6) — slaughtered before midday disqualified — "between the evenings"
+- **Pesachim 61a:8** [LAW] (Ex 12:4) — registration required — "according to the number of souls shall you make your count"
+- **Pesachim 61a:11** [LAW] (Ex 12:4) — "according to every man's EATING" — the cannot-eat registrant excluded
+- **Pesachim 61b:6** [LAW] (Ex 12:25,12:43,12:48) — "this" — the uncircumcised blocked from eating, not from the other rites
+- **Pesachim 62b:6** [LAW] (Ex 12:27) — "IT IS a Passover sacrifice" — the for-its-own-name requirement in the ink
+- **Pesachim 63a:7** [CREDIT] (Ex 34:25) — the slaughter-over-leaven Mishnah — the table graded in the Mishpatim exam
+- **Pesachim 63b:5** [LAW] (Ex 19:7) — lashes for a violation without an act — the oath-to-eat case's frame
+- **Pesachim 63b:10** [LAW] (Ex 34:25) — whose leaven counts — slaughterer vs group member — the possession scope argued
+- **Pesachim 64a:5** [LAW] (Ex 23:18,34:25) — R. Yehuda extends the leaven ban to the daily offering — "My sacrifice" doubled
+- **Pesachim 64a:6** [CREDIT] (Ex 23:18,34:25) — in-triage dup: R. Shimon's side of the same dispute table
+- **Pesachim 64a:11** [LAW] (Ex 12:6) — three groups from the verse's three terms — assembly, congregation, Israel
+- **Pesachim 67a:10** [LAW] (Ex 13:19) — "with him" — Joseph's bones in Moses' camp — corpse allowed in the Levite camp
+- **Pesachim 70a:5** [LAW] (Ex 34:25) — ben Teima reads the festival offering into the Passover clauses
+- **Pesachim 70a:12** [LAW] (Ex 12:46) — does bone-breaking extend to ben Teima's festival offering — the extension dilemma
+- **Pesachim 70b:6** [LAW] (Ex 12:5) — ben Dortai and the flock-and-herd verse — the rejected reading recorded
+- **Pesachim 71a:12** [LAW] (Ex 23:18,23:19) — the festival offering's parts disqualified overnight — Rav Kahana's derivation
+- **Pesachim 72b:16** [CREDIT] (Ex 21:10) — conjugal rights — the three-obligations claim seated in the ordinances unit
+- **Pesachim 74a:2** [LAW] (Ex 12:8) — the metal spit heats throughout — roast-by-FIRE excludes spit-heat
+- **Pesachim 75a:4** [LAW] (Ex 12:8) — the swept oven — fire's heat without fire — the roast-mode boundary
+- **Pesachim 76a:2** [LAW] (Ex 12:8) — dripped gravy returning — the mutual-flavor case on the roast
+- **Pesachim 77a:12** [LAW] (Ex 28:38) — R. Yehuda alone permits public impurity outright — the frontplate's acceptance scope disputed
+- **Pesachim 78b:6** [CREDIT] (Ex 12:4) — in-triage dup: the registration verse re-argued
+- **Pesachim 78b:7** [CREDIT] (Ex 12:4) — in-triage dup: the registered-only baraita restated
+- **Pesachim 78b:10** [LAW] (Ex 12:6) — R. Natan: the whole nation fulfills through one lamb after the fact — representation in the offering
+- **Pesachim 83a:8** [LAW] (Ex 12:46) — bone-breaking argued for the base-of-leftover case
+- **Pesachim 83a:10** [LAW] (Ex 12:46) — R. Ya'akov splits lambs that had a time of validity from those that never did
+- **Pesachim 83b:12** [LAW] (Ex 12:10) — the doubled "until morning" — the leftover-burn's own repetition expounded
+- **Pesachim 83b:14** [LAW] (Ex 12:16) — Rava routes the burn through the festival food-labor exception
+- **Pesachim 84a:13** [LAW] (Ex 12:10) — leaving-over draws no lashes — the remedy clause repairs the ban
+- **Pesachim 84a:14** [LAW] (Ex 12:46) — R. Ya'akov's meta-rule: a prohibition without an act is not flogged
+- **Pesachim 84a:15** [LAW] (Ex 12:46) — "in IT" — bone-breaking only in a valid lamb
+- **Pesachim 84b:14** [CREDIT] (Ex 12:46) — in-triage dup: the four interpretations gathered into one baraita
+- **Pesachim 85a:2** [LAW] (Ex 12:8,12:46) — the bone with or without marrow — the ban's object defined
+- **Pesachim 85b:1** [LAW] (Ex 12:46) — "you shall not carry out" — moving meat between groups
+- **Pesachim 86a:15** [LAW] (Ex 12:7,12:46) — "upon the HOUSES wherein they eat" — one lamb, two places argued
+- **Pesachim 88a:6** [LAW] (Ex 12:3) — the orphan with many guardians — retroactive designation tested
+- **Pesachim 89a:22** [LAW] (Ex 12:4) — withdrawal until slaughter vs until sprinkling — the registration window disputed
+- **Pesachim 89a:23** [LAW] (Ex 12:4) — "miheyot/from being" read as "while it lives" — the word-form derivation itself
+- **Pesachim 90a:12** [LAW] (Ex 12:4) — "too little for a lamb" — the household-size clause expounded
+- **Pesachim 90a:16** [LAW] (Ex 12:8) — matza and herbs as facilitators share the lamb's rules
+- **Pesachim 91a:14** [CREDIT] (Ex 12:4) — in-triage dup: the registration dispute's R. Yosei leg
+- **Pesachim 91b:3** [LAW] (Ex 12:4) — women at the first and second Passover — "souls" vs "man" assigned
+- **Pesachim 91b:8** [CREDIT] (Ex 12:3) — in-triage dup: R. Shimon's "man" source probed
+- **Pesachim 91b:9** [CREDIT] (Ex 12:4) — in-triage dup: the same source-hunt continued
+- **Pesachim 95b:1** [LAW] (Ex 12:9,34:25) — the second Passover's include/exclude list — raw in, leaven-in-house out
+- **Pesachim 96a:7** [LAW] (Ex 12:3) — Egypt's Passover vs the generations' — "this" begins the difference list
+- **Pesachim 96a:8** [LAW] (Ex 12:6) — "keep it until the fourteenth" — the four-day examination
+- **Pesachim 96a:9** [LAW] (Ex 12:6) — ben Bag Bag extends the four-day examination to the daily offering
+- **Pesachim 96a:11** [LAW] (Ex 13:5) — the generations' four-day examination from "when the Lord brings you"
+- **Pesachim 96a:13** [CREDIT] (Ex 12:8,13:5) — in-triage dup: the "from it" inference run
+- **Pesachim 96a:15** [CREDIT] (Ex 12:48,13:5) — in-triage dup: same run, the uncircumcised clause
+- **Pesachim 96a:17** [CREDIT] (Ex 12:43) — in-triage dup: same run, the stranger clause
+- **Pesachim 96a:20** [CREDIT] (Ex 12:45) — in-triage dup: same run, sojourner and hireling
+- **Pesachim 96a:21** [CREDIT] (Ex 12:44) — in-triage dup: same run, the circumcised slave
+- **Pesachim 96a:23** [CREDIT] (Ex 12:9) — in-triage dup: same run, the raw clause
+- **Pesachim 96a:24** [LAW] (Ex 12:11) — haste was Egypt's alone — "you shall eat it in haste" bounded
+- **Pesachim 96b:1** [LAW] (Ex 13:3,13:4) — Egypt's leaven ban ran one night — the generations' seven days
+- **Pesachim 99a:2** [LAW] (Ex 12:4) — the intermingled lambs case on the registration verse
+- **Pesachim 106a:5** [LAW] (Ex 20:7,20:8) — "Remember the Shabbat" — remember it OVER WINE: kiddush, night and day
+- **Pesachim 108a:4** [LAW] (Ex 12:6) — ben Beteira reads "between the evenings" as the whole day's window
+- **Pesachim 109b:5** [LAW] (Ex 12:42) — "a night of watching" — the guarded night suspends the pairs concern
+- **Pesachim 113b:4** [LAW] (Ex 23:5) — "the donkey of he who HATES you" — the permitted-hatred reading of the unloading verse
+- **Pesachim 116b:1** [CREDIT] (Ex 12:27) — Rabban Gamliel's three obligatory explanations — rides the seated Passover-night claims (backfill EX12)
+- **Pesachim 116b:2** [CREDIT] (Ex 1:14,12:39) — in-triage dup: the matza explanation of the same table
+- **Pesachim 116b:3** [LAW] (Ex 13:8) — "for ME when I came out" — every generation views itself as leaving Egypt
+- **Pesachim 116b:8** [LAW] (Ex 13:8) — the blind exempt from the telling — "because of THIS" needs pointing
+- **Pesachim 117a:1** [LAW] (Ex 17:16) — halleluya, kes-YA, Yedidya — which compounds carry the divine Name — ink-level
+- **Pesachim 117a:7** [AGGADAH] (Ex 15:1) — who first said the hallel — the Song at the Sea in the recital history
+- **Pesachim 117b:8** [LAW] (Ex 20:8) — the exodus mentioned in Shabbat's kiddush — the remember-remember link
+- **Pesachim 118a:12** [AGGADAH] (Ex 34:17,34:18) — disparaging the Festivals likened to idolatry — the juxtaposition homily
+- **Pesachim 118a:13** [AGGADAH] (Ex 22:30,23:1) — slander and the dogs — the carcass verse beside the false-report verse
+- **Pesachim 118b:3** [AGGADAH] (Ex 14:7) — the sea refuses to spew its gift
+- **Pesachim 118b:4** [AGGADAH] (Ex 14:30) — the Kishon stands guarantor
+- **Pesachim 118b:5** [AGGADAH] (Ex 14:7) — six hundred chariots against Sisera's nine hundred — the one-and-a-half measure
+- **Pesachim 119a:7** [AGGADAH] (Ex 12:36) — "vayenatzlu" — the despoiling as trap and deep sea
+- **Pesachim 120a:7** [LAW] (Ex 12:18) — matza's independence from the lamb — "in the evening you shall eat"
+- **Pesachim 120a:9** [CREDIT] (Ex 12:48) — in-triage dup: Rava's matza-nowadays derivation (the 28b:11 family)
+- **Pesachim 120a:12** [LAW] (Ex 12:15) — the seventh day singled out from the generalization — six days optional, the middah itself
+- **Pesachim 120b:5** [LAW] (Ex 11:4,12:8,12:12) — R. Elazar ben Azarya: "that night" — midnight deadline by the Egypt analogy
+- **Pesachim 120b:7** [CREDIT] (Ex 12:11) — in-triage dup: R. Akiva's haste rejoinder in the same dispute
+- **Pesachim 120b:11** [CREDIT] (Ex 12:10) — in-triage dup: the two-nights source probed
+- **Rosh Hashanah 3a:2** [LAW] (Ex 19:1,40:17) — the re-read "they were seen" — the chronology chain fixing Nisan for kings opens
+- **Rosh Hashanah 3a:3** [CREDIT] (Ex 19:1,40:17) — in-triage dup: the Canaan/Sihon objection in the same chain
+- **Rosh Hashanah 3a:5** [CREDIT] (Ex 40:17) — in-triage dup: the Tabernacle date as the chain's datum
+- **Rosh Hashanah 3a:6** [CREDIT] (Ex 19:1) — in-triage dup: the third-month datum weighed
+- **Rosh Hashanah 3a:12** [CREDIT] (Ex 40:17) — in-triage dup: the chain's verse ladder
+- **Rosh Hashanah 3a:13** [CREDIT] (Ex 19:1) — in-triage dup: the ladder continued
+- **Rosh Hashanah 7a:17** [LAW] (Ex 12:2) — the first of Nisan as new year for the shekels — "this month" as head of months
+- **Rosh Hashanah 8b:7** [CREDIT] (Ex 12:2) — in-triage dup: the year-year analogy challenge
+- **Rosh Hashanah 9a:3** [LAW] (Ex 34:21) — "in plowing and in harvest you shall rest" — R. Akiva sends it to the sabbatical year
+- **Rosh Hashanah 9b:12** [CREDIT] (Ex 12:2) — in-triage dup: the year-year analogy again
+- **Rosh Hashanah 11a:12** [AGGADAH] (Ex 23:26) — "the number of your days I will fill" — the righteous die on their birthday
+- **Rosh Hashanah 11b:2** [AGGADAH] (Ex 6:6) — the slavery ceased on Rosh HaShana — the burden-burden analogy
+- **Rosh Hashanah 11b:4** [AGGADAH] (Ex 12:42) — in Nisan redeemed, in Nisan to be redeemed — the watched night doubled
+- **Rosh Hashanah 13a:2** [LAW] (Ex 23:16) — "the festival of gathering at the end of the year" — the calendar seam fixed
+- **Rosh Hashanah 16b:14** [AGGADAH] (Ex 32:32) — "blot me from Your book" — the three books opened
+- **Rosh Hashanah 17a:2** [AGGADAH] (Ex 34:6) — abundant-in-kindness tilts the middling scale
+- **Rosh Hashanah 17a:7** [CREDIT] (Ex 34:6) — in-triage dup: the tilting restated
+- **Rosh Hashanah 17a:12** [CREDIT] (Ex 34:6) — in-triage dup: how the tilt works
+- **Rosh Hashanah 17b:4** [CREDIT] (Ex 34:6) — in-triage dup: kindness against truth in the same verse
+- **Rosh Hashanah 17b:5** [AGGADAH] (Ex 34:6) — He wrapped Himself as a prayer leader — the recital shown to Moses
+- **Rosh Hashanah 17b:6** [AGGADAH] (Ex 34:6) — "the Lord, the Lord" — before the sin and after
+- **Rosh Hashanah 17b:7** [LAW] (Ex 34:10) — the covenant with the thirteen attributes — the recital never returns empty
+- **Rosh Hashanah 20a:14** [LAW] (Ex 12:2) — adding a day to the month — the court's calendar mechanics on "this month is for YOU"
+- **Rosh Hashanah 20b:10** [LAW] (Ex 12:18) — the fourteenth "at evening" — Reish Lakish fixes the day boundary
+- **Rosh Hashanah 24a:19** [LAW] (Ex 20:19,20:23) — "you shall not make WITH ME" — the attendants' images — the scope run opens
+- **Rosh Hashanah 24b:3** [CREDIT] (Ex 20:19) — in-triage dup: the impossible-likeness attendants
+- **Rosh Hashanah 24b:5** [CREDIT] (Ex 20:19) — in-triage dup: the serving attendants
+- **Rosh Hashanah 24b:6** [CREDIT] (Ex 20:3) — in-triage dup: the lower-heaven bodies
+- **Rosh Hashanah 24b:7** [CREDIT] (Ex 20:3) — in-triage dup: down to the tiny worm
+- **Rosh Hashanah 24b:8** [CREDIT] (Ex 20:19) — in-triage dup: the celestial images
+- **Rosh Hashanah 25a:5** [LAW] (Ex 24:9) — the unnamed seventy — every generation's court stands as Moses' — the calendar authority law
+- **Rosh Hashanah 27a:2** [CREDIT] (Ex 20:8) — remember-and-observe in one utterance — the Mekhilta-seated pair behind the two-sounds question
+- **Rosh Hashanah 27a:6** [CREDIT] (Ex 20:8) — in-triage dup: the one-utterance miracle restated
+- **Rosh Hashanah 29a:6** [AGGADAH] (Ex 17:11) — Moses' hands and the heart turned heavenward — the intent teaching
+- **Rosh Hashanah 31a:11** [LAW] (Ex 15:1,15:11) — the Sabbath afternoon psalmody — the Song of the Sea in halves
+- **Rosh Hashanah 31a:15** [AGGADAH] (Ex 25:22) — the Presence's ten journeys — from the Ark cover outward
+- **Rosh Hashanah 32b:15** [LAW] (Ex 15:18) — "the Lord shall reign" — one of the Torah's three Kingship verses
+- **Rosh Hashanah 34a:17** [LAW] (Ex 36:6) — the avara-avara analogy — the shofar's "passing" learned from the camp proclamation
+- **Sanhedrin 2a:1** [CREDIT] (Ex 21:35,21:37,22:3) — the three-judges Mishnah on our ox and theft verses — the seated multiples cluster
+- **Sanhedrin 2a:2** [LAW] (Ex 21:29,22:15) — the seducer's fifty shekels judged by three — the fine's court composition
+- **Sanhedrin 2a:3** [LAW] (Ex 23:2) — the defamer to twenty-three — a case that can turn capital
+- **Sanhedrin 2a:10** [LAW] (Ex 21:29) — the stoned ox by twenty-three — "as the owner's death, so the ox's"
+- **Sanhedrin 2a:16** [LAW] (Ex 23:2) — "you shall not follow a multitude to convict" — the extra judges derived
+- **Sanhedrin 2b:5** [LAW] (Ex 22:7) — "shall come near ha-elohim" — the deposit verse names the court
+- **Sanhedrin 2b:8** [CREDIT] (Ex 22:6) — in-triage dup: the merged-portions question on the same derivation
+- **Sanhedrin 3b:2** [LAW] (Ex 22:7,22:8,23:2) — THREE judges from the threefold "elohim" of the deposit passage
+- **Sanhedrin 3b:3** [LAW] (Ex 22:8) — R. Yonatan's meta-rule: a first mention serves the plain sense and is not counted
+- **Sanhedrin 3b:6** [LAW] (Ex 23:2) — "to incline after the many" — the court must be odd
+- **Sanhedrin 3b:16** [CREDIT] (Ex 22:7) — in-triage dup: the seventy-from-gathering side argument
+- **Sanhedrin 3b:17** [LAW] (Ex 22:8) — "he whom the court shall condemn" — the PLURAL verb yields two, and no even court: the grammatical-number hook
+- **Sanhedrin 4a:3** [CREDIT] (Ex 22:8) — in-triage dup: Rabbi's plural-verb proof restated
+- **Sanhedrin 4a:15** [LAW] (Ex 23:19) — THE VOCALIZATION-AUTHORITY DISPUTE NAMED — is the read text or the received consonants authoritative — the tradition's own front-end question
+- **Sanhedrin 4b:2** [CREDIT] (Ex 22:8) — in-triage dup: all concede the read text; the real dispute relocated
+- **Sanhedrin 4b:12** [CREDIT] (Ex 13:16) — the totafot compartment count — the tefillin-spellings cluster already verdicted in this triage
+- **Sanhedrin 4b:15** [LAW] (Ex 23:17) — "shall see / shall be seen" — the appearing at the festival read both ways, two whole eyes required
+- **Sanhedrin 4b:16** [CREDIT] (Ex 23:19) — the milk/fat vowel pair — rides the seated meat-in-milk cluster
+- **Sanhedrin 5b:9** [LAW] (Ex 33:7) — permission to rule — the student may not teach in his master's jurisdiction
+- **Sanhedrin 7a:3** [AGGADAH] (Ex 24:14,32:5) — the covetous and the calf — Aaron's fear at Hur
+- **Sanhedrin 7a:11** [AGGADAH] (Ex 18:23) — the loser leaving court should sing — "they will come to their place in peace"
+- **Sanhedrin 7a:14** [AGGADAH] (Ex 25:22) — the sword-wide bed — love strong and weak, the Ark cover's meeting
+- **Sanhedrin 7b:9** [LAW] (Ex 20:20,20:23) — "gods of silver and gold" read as the judge appointed for silver and gold
+- **Sanhedrin 7b:12** [LAW] (Ex 20:23,21:1) — no steps to My altar, and THEN the ordinances — temperance in judgment from the juxtaposition
+- **Sanhedrin 7b:15** [LAW] (Ex 23:1) — "you shall not bear a false report" — the judge may not hear one litigant alone
+- **Sanhedrin 9b:8** [LAW] (Ex 23:1) — the complicit witness split — a man is his own relative; testimony divided
+- **Sanhedrin 10a:10** [LAW] (Ex 20:12,20:13) — why the false witness needs its own lash derivation
+- **Sanhedrin 11a:6** [AGGADAH] (Ex 16:28) — Shecaniah learns collective address from Joshua and the manna rebuke
+- **Sanhedrin 12b:8** [LAW] (Ex 12:2) — only Adar is intercalated — Hezekiah's Nisan-in-Nisan and his prayer
+- **Sanhedrin 13a:1** [LAW] (Ex 34:22) — "the festival of ingathering at the turn of the year" — the equinox rule for intercalation
+- **Sanhedrin 13b:4** [CREDIT] (Ex 23:16) — in-triage dup: Acherim's Tishrei reading of the same seam
+- **Sanhedrin 15a:14** [LAW] (Ex 22:18) — the bestiality verse's spare clause reassigned — the animal judged like its man
+- **Sanhedrin 15a:15** [CREDIT] (Ex 21:29) — in-triage dup: the ox-by-twenty-three derivation restated
+- **Sanhedrin 15b:4** [CREDIT] (Ex 21:30) — the ransom clause argued for court size — rides the seated ransom claims
+- **Sanhedrin 15b:6** [LAW] (Ex 19:13) — the ox at Sinai — "no hand shall touch him" judged like the killer ox
+- **Sanhedrin 16a:1** [LAW] (Ex 18:22) — "every GREAT matter" — the matters of a great one to the great court
+- **Sanhedrin 16a:10** [CREDIT] (Ex 18:22) — in-triage dup: the High Priest by seventy-one, same verse
+- **Sanhedrin 16a:11** [CREDIT] (Ex 18:26) — in-triage dup: great matter vs difficult matter weighed
+- **Sanhedrin 16b:4** [LAW] (Ex 25:9) — "so shall you make" — extending Jerusalem and the courts by seventy-one, the pattern-verse read forward
+- **Sanhedrin 16b:9** [LAW] (Ex 18:25) — lesser courts appointed by the great one — as Moses appointed
+- **Sanhedrin 17a:3** [LAW] (Ex 18:22) — "and they shall bear WITH YOU" — the Rabbis' appointment source
+- **Sanhedrin 17a:17** [CREDIT] (Ex 23:2) — in-triage dup: the twenty-three arithmetic assembled
+- **Sanhedrin 17b:11** [LAW] (Ex 18:21) — two hundred thirty men — a town earns its court by the ministers of tens
+- **Sanhedrin 18a:3** [LAW] (Ex 18:21) — the officer arithmetic of the wilderness — thousands to tens counted out
+- **Sanhedrin 18b:3** [CREDIT] (Ex 18:22) — in-triage dup: the High Priest's monetary case sorted
+- **Sanhedrin 18b:9** [LAW] (Ex 23:2) — the king sits on no court — "you shall not answer over a RAV" read at the master
+- **Sanhedrin 19a:16** [LAW] (Ex 21:29) — Yannai's slave and the summons — the owner stands with his ox; kings of Israel left unjudged
+- **Sanhedrin 20b:11** [LAW] (Ex 17:16) — three commandments at the entrance — king, Amalek, the chosen house, in order
+- **Sanhedrin 20b:12** [CREDIT] (Ex 17:16) — in-triage dup: the throne-word proof of the ordering
+- **Sanhedrin 21b:24** [AGGADAH] (Ex 19:3) — Ezra fit to receive the Torah had Moses not preceded
+- **Sanhedrin 22a:5** [LAW] (Ex 27:10) — the script never changed — the VAVS of the pillars: the letter's own name in the ink as witness
+- **Sanhedrin 25a:8** [LAW] (Ex 23:1) — the interest-lender disqualified — the wicked barred from the stand
+- **Sanhedrin 27a:2** [CREDIT] (Ex 23:1) — in-triage dup: retroactive vs prospective disqualification
+- **Sanhedrin 27a:10** [CREDIT] (Ex 23:1) — in-triage dup: wicked-of-violence refinement
+- **Sanhedrin 27b:16** [LAW] (Ex 34:7) — visiting the fathers' iniquity against "each dies for his own sin" — resolved at holding the deeds
+- **Sanhedrin 29a:35** [LAW] (Ex 25:10) — the alef of "amatayim" — whoever adds, subtracts: letter arithmetic in the Ark's own measure
+- **Sanhedrin 29a:36** [LAW] (Ex 26:7) — the ayin of "ashtei esrei" — the second letter-arithmetic exemplar, the curtains' eleven
+- **Sanhedrin 33b:5** [LAW] (Ex 23:7) — "the innocent and righteous you shall not slay" — return for acquittal, never for liability
+- **Sanhedrin 33b:6** [CREDIT] (Ex 23:7) — in-triage dup: the acquitted-leaving leg of the same verse
+- **Sanhedrin 34b:1** [LAW] (Ex 29:25,29:37,29:38,29:42) — "whatever touches the altar" bounded by the next verse — only the suited is sanctified
+- **Sanhedrin 34b:8** [LAW] (Ex 18:22,18:26) — "they shall judge at ALL times" — monetary cases open by day, concluded by night
+- **Sanhedrin 35b:5** [LAW] (Ex 21:14) — "from My altar you shall take him" — murder overrides the service; the Shabbat a-fortiori opens
+- **Sanhedrin 35b:6** [LAW] (Ex 20:10,35:3) — "no fire in your habitations" — the school of R. Yishmael reads execution-burning out of Shabbat
+- **Sanhedrin 35b:8** [CREDIT] (Ex 35:3) — in-triage dup: the habitations difficulty turned
+- **Sanhedrin 35b:9** [CREDIT] (Ex 31:14) — in-triage dup: no court execution on Shabbat, the desecrator clause
+- **Sanhedrin 35b:12** [CREDIT] (Ex 21:14) — in-triage dup: the altar-taking verse re-weighed
+- **Sanhedrin 36a:4** [CREDIT] (Ex 21:14) — in-triage dup: "MY altar" made specific
+- **Sanhedrin 36a:14** [LAW] (Ex 23:2) — capital opinions start from the side — "you shall not speak over the great one"
+- **Sanhedrin 36b:3** [LAW] (Ex 23:6) — "you shall not incline the judgment of your poor" — the clean-lineage bench
+- **Sanhedrin 36b:11** [CREDIT] (Ex 18:22) — in-triage dup: the blemish-free proof rejected and replaced
+- **Sanhedrin 38b:19** [AGGADAH] (Ex 23:20,23:21,24:1) — Rav Idit and the heretic — the angel who bears the Name
+- **Sanhedrin 38b:20** [CREDIT] (Ex 23:21,33:15) — in-triage dup: "do not replace Me" — the exchange continued
+- **Sanhedrin 39a:14** [AGGADAH] (Ex 25:2) — "that they take for ME" — the heretic's priest-God and Moses' burial
+- **Sanhedrin 39b:5** [AGGADAH] (Ex 14:20) — "one came not near the other" — the angels silenced while My handiwork drowns
+- **Sanhedrin 41a:2** [LAW] (Ex 21:14) — FOREWARNING derived — "if a man come INTENTIONALLY": no intent without warning received
+- **Sanhedrin 42a:3** [AGGADAH] (Ex 12:2,15:2) — blessing the month greets the Presence — this-month beside this-is-my-God
+- **Sanhedrin 43a:23** [AGGADAH] (Ex 23:7) — the Nakai name-plea on "the naki you shall not slay"
+- **Sanhedrin 43a:25** [CREDIT] (Ex 4:22,4:23) — in-triage dup: the Buni/beni plea in the same story run
+- **Sanhedrin 44a:15** [AGGADAH] (Ex 5:22) — Joshua's "why" beside Moses' "why have You dealt ill"
+- **Sanhedrin 45a:14** [LAW] (Ex 19:12,19:13) — stoning includes pushing — the Sinai boundary's "stoned or thrown down" is the procedure's source
+- **Sanhedrin 45a:15** [CREDIT] (Ex 19:13) — in-triage dup: both pushing and stones, the falling-death leg
+- **Sanhedrin 52b:13** [LAW] (Ex 21:20) — "he shall be AVENGED" — the slave-killer's death is the sword, vengeance meaning read from the ink
+- **Sanhedrin 53a:11** [LAW] (Ex 21:15) — the parent-smiter's death mode argued — the strangulation default defended
+- **Sanhedrin 54b:6** [LAW] (Ex 22:18) — "whoever LIES with an animal" — the passive participant read in
+- **Sanhedrin 54b:14** [CREDIT] (Ex 22:18) — in-triage dup: R. Yishmael's passive source probed
+- **Sanhedrin 56a:6** [LAW] (Ex 22:27) — "nokev" fixed as cursing from Balaam's own verb — the blasphemy term defined
+- **Sanhedrin 56b:9** [CREDIT] (Ex 22:7) — the elohim-as-judges reading re-used for the Noahide laws — the seated court-word cluster
+- **Sanhedrin 56b:10** [LAW] (Ex 32:8) — "they turned quickly from the way I COMMANDED" — a Noahide-source satellite on the calf verse (the block's home is the Genesis triage)
+- **Sanhedrin 56b:16** [CREDIT] (Ex 15:25) — the Marah statute-and-ordinance — the seated Marah charter of the sea unit
+- **Sanhedrin 58b:3** [LAW] (Ex 6:20) — Amram and Jochebed his aunt — the pre-Sinai incest scope argued from the ink of the marriage
+- **Sanhedrin 58b:17** [LAW] (Ex 2:12) — the gentile who strikes a Jew — Moses and the Egyptian as the source
+- **Sanhedrin 58b:19** [LAW] (Ex 2:13) — the raised hand — "he said to the WICKED one: why would you strike" — wicked before the blow lands
+- **Sanhedrin 60a:1** [LAW] (Ex 22:17,22:18) — the witch beside the bestiality verse — death mode by juxtaposition
+- **Sanhedrin 60b:8** [LAW] (Ex 22:19) — "one who sacrifices to the gods" — slaughter named, the inside-service rule opens
+- **Sanhedrin 60b:9** [CREDIT] (Ex 22:19) — in-triage dup: incense and libation joined to the slaughter clause
+- **Sanhedrin 60b:12** [LAW] (Ex 34:14) — "you shall bow to no other god" — the prohibition found for the punished bow
+- **Sanhedrin 61a:15** [LAW] (Ex 20:3,20:4) — the inciter worshiped in person — "you shall not make FOR YOURSELF" includes self-deification
+- **Sanhedrin 61b:20** [LAW] (Ex 20:4,20:5) — worship from love or fear — the bare bow argued liable
+- **Sanhedrin 62a:7** [LAW] (Ex 35:3) — kindling singled out — to divide the labors or to soften it: the recorded dispute over the fire clause
+- **Sanhedrin 62a:9** [CREDIT] (Ex 20:5) — in-triage dup: bowing run through the same singled-out logic
+- **Sanhedrin 63a:2** [LAW] (Ex 20:5,23:24,34:14) — the THREE bowing verses censused and each assigned its office
+- **Sanhedrin 63a:14** [LAW] (Ex 32:8) — accepting an idol as god equated to worship — the calf verse's three verbs chained
+- **Sanhedrin 63a:17** [LAW] (Ex 22:19,32:4) — joining Heaven's name with another — "save to the Lord ALONE"
+- **Sanhedrin 63a:29** [CREDIT] (Ex 12:10) — the burn-clause's positive-after-negative — the Pesachim leftover cluster already verdicted
+- **Sanhedrin 63b:5** [LAW] (Ex 23:13) — "make no mention of other gods" — no appointments dated by idol festivals
+- **Sanhedrin 66a:12** [LAW] (Ex 22:27) — the parent-curser's prohibition found in the judges-and-ruler verse
+- **Sanhedrin 66a:23** [LAW] (Ex 22:27) — "elohim" sacred or judicial — the blasphemy verse's referent disputed
+- **Sanhedrin 67a:19** [LAW] (Ex 22:17) — "you shall not allow a WITCH to live" — men included; the feminine noun explained by frequency
+- **Sanhedrin 67a:20** [LAW] (Ex 22:17) — the witch's death mode — R. Yosei HaGelili's live-not analogy to the sword
+- **Sanhedrin 67a:21** [CREDIT] (Ex 19:13,22:17) — in-triage dup: R. Akiva's Sinai live-not analogy, the stoning leg
+- **Sanhedrin 67b:2** [CREDIT] (Ex 22:17,22:18) — in-triage dup: ben Azzai's juxtaposition — the 60a:1 point restated
+- **Sanhedrin 67b:15** [AGGADAH] (Ex 8:15) — "the finger of God" — demons create nothing smaller than a barley grain
+- **Sanhedrin 67b:20** [AGGADAH] (Ex 8:2) — "the FROG came up" — the one frog that spawned the plague
+- **Sanhedrin 69b:18** [AGGADAH] (Ex 36:4,38:22) — Bezalel's age and the eight-year fathers — generation arithmetic
+- **Sanhedrin 72a:3** [CREDIT] (Ex 22:1) — the burglar Mishnah — rides the seated tunneler clause; judged for his ultimate end
+- **Sanhedrin 72a:15** [LAW] (Ex 22:1) — "if the sun is risen" — clear as the sun that he comes in peace: the hostility parameter
+- **Sanhedrin 72b:3** [LAW] (Ex 22:1,22:2) — the burglar clause runs on Shabbat too — bloodguilt weekday and holy day alike
+- **Sanhedrin 72b:6** [LAW] (Ex 22:1) — "smitten and dies" — by any person, by any death
+- **Sanhedrin 72b:11** [LAW] (Ex 22:1) — breaking in extended — roof, courtyard, enclosure
+- **Sanhedrin 74a:3** [LAW] (Ex 21:22,21:23) — the pursuer who could be stopped by a limb — R. Yonatan ben Shaul on the striving men
+- **Sanhedrin 78a:14** [LAW] (Ex 21:29) — the mortally-flawed ox that killed, the mortally-flawed owner — whose trial can stand
+- **Sanhedrin 78a:19** [LAW] (Ex 21:19) — R. Nechemya on "if he rises and walks outside" — the assessment rules open
+- **Sanhedrin 78b:1** [CREDIT] (Ex 21:19) — in-triage dup: the superfluous "he is absolved" expounded
+- **Sanhedrin 78b:7** [LAW] (Ex 31:14) — Moses knew the gatherer must die — "its desecrators die" — the mode alone was asked
+- **Sanhedrin 78b:8** [CREDIT] (Ex 21:18,21:19) — in-triage dup: why two assessments are written
+- **Sanhedrin 79a:10** [LAW] (Ex 21:22,21:23) — intent transferred — the Rabbis read the striving men as killing the wrong victim
+- **Sanhedrin 79a:11** [CREDIT] (Ex 21:23) — R. Shimon's life-for-life as money — the seated talion-as-money family
+- **Sanhedrin 79b:1** [CREDIT] (Ex 21:22) — "give as the judges determine" fixes the giving as money — same seated family
+- **Sanhedrin 79b:13** [LAW] (Ex 21:29) — the accused ox intermingled with others — beasts to court, men go free
+- **Sanhedrin 82b:5** [AGGADAH] (Ex 6:25) — the son of Puti demeaned — Pinehas's two grandfathers
+- **Sanhedrin 83b:13** [LAW] (Ex 29:9) — the unvested priest dies by Heaven — while their vestments are on them, their priesthood is on them
+- **Sanhedrin 83b:16** [LAW] (Ex 30:20) — unwashed hands and feet — "that they die not" read at the laver
+- **Sanhedrin 84b:2** [CREDIT] (Ex 21:15) — in-triage dup: the parent-striker's strangulation, the 53a cluster
+- **Sanhedrin 84b:5** [LAW] (Ex 21:12) — striking without killing — the wound requirement carved from the man-smiter verse
+- **Sanhedrin 85a:14** [LAW] (Ex 22:27) — "a ruler of YOUR PEOPLE" — only one who does his people's deeds is protected
+- **Sanhedrin 85a:15** [CREDIT] (Ex 21:15,21:17) — in-triage dup: the striking parallel drawn from cursing
+- **Sanhedrin 85b:10** [LAW] (Ex 21:17) — cursing the dead father — the after-death liability found
+- **Sanhedrin 85b:22** [LAW] (Ex 21:16) — the abduction clause's scope legs — whom the "man" includes
+- **Sanhedrin 86a:7** [CREDIT] (Ex 21:16) — in-triage dup: "found in his possession" exclusions
+- **Sanhedrin 86a:15** [LAW] (Ex 20:12,20:13) — "you shall not steal" — the Decalogue's theft is the theft of PERSONS
+- **Sanhedrin 86a:16** [LAW] (Ex 20:12,20:13) — the derivation itself: a matter learned from its context — the middah named on our commandment
+- **Sanhedrin 87b:10** [CREDIT] (Ex 21:22,21:23) — the life-for-life money dispute cited as the capital-law example — seated family
+- **Sanhedrin 87b:11** [CREDIT] (Ex 21:23) — in-triage dup: the money determination argued from the verse's language
+- **Sanhedrin 90a:16** [LAW] (Ex 15:26) — the healing verse whispered over a wound — R. Akiva bars the incantation use
+- **Sanhedrin 90b:7** [AGGADAH] (Ex 6:4) — resurrection from "to give TO THEM" — the covenant's future tense
+- **Sanhedrin 91a:10** [AGGADAH] (Ex 12:36) — the Egyptians sue for their silver before Alexander
+- **Sanhedrin 91a:12** [CREDIT] (Ex 12:37,12:40) — in-triage dup: Geviha's wage rejoinder — the 430 years billed
+- **Sanhedrin 91b:14** [AGGADAH] (Ex 15:1) — "then Moses WILL SING" — resurrection in the song's future tense
+- **Sanhedrin 92a:8** [AGGADAH] (Ex 15:17) — the Temple set between two Names
+- **Sanhedrin 93a:4** [AGGADAH] (Ex 15:3) — the rider among the myrtles and the Lord of war
+- **Sanhedrin 94a:9** [AGGADAH] (Ex 18:10) — Hezekiah's unsung song — Yitro's blessing as the reproach
+- **Sanhedrin 94a:10** [AGGADAH] (Ex 18:9) — "vayyichad Yitro" — sharp sword or prickling flesh
+- **Sanhedrin 94b:2** [AGGADAH] (Ex 5:2,14:27) — Pharaoh's "who is the Lord" repaid by the Lord Himself
+- **Sanhedrin 95b:10** [AGGADAH] (Ex 8:15,14:31) — by hand, by finger — the angel's instrument measured
+- **Sanhedrin 96b:11** [AGGADAH] (Ex 15:3) — "the ish is not at home" — the man of war on a far journey
+- **Sanhedrin 98b:6** [AGGADAH] (Ex 15:16) — "until Your people pass over" doubled — the two crossings and the fear of sin
+- **Sanhedrin 99a:21** [LAW] (Ex 20:2) — despising the word — the denier of "I am the Lord" classified
+- **Sanhedrin 99b:13** [AGGADAH] (Ex 7:19,17:5) — the rod that struck the river credits its causer
+- **Sanhedrin 101a:10** [AGGADAH] (Ex 15:26) — I will not place, for I am your Healer — the contradiction turned
+- **Sanhedrin 101b:10** [AGGADAH] (Ex 1:22) — the astrologers saw the savior by water and erred
+- **Sanhedrin 102a:15** [AGGADAH] (Ex 32:34) — "on the day I visit" — every reckoning carries a grain of the calf
+- **Sanhedrin 104a:2** [AGGADAH] (Ex 2:20) — "call him, that he may eat bread" — Yitro's bread seats his sons among the hewn stones
+- **Sanhedrin 106a:14** [AGGADAH] (Ex 19:2) — Rephidim expounded — they loosened their hands from the Torah
+- **Sanhedrin 107b:6** [AGGADAH] (Ex 20:2,20:3) — the suspended calf and the misread first utterance
+- **Sanhedrin 108a:16** [AGGADAH] (Ex 32:14) — "vayyinachem" — regret over the graves prepared
+- **Sanhedrin 110a:5** [AGGADAH] (Ex 33:7) — the suspicion in the tents — the far-pitched tent of meeting
+- **Sanhedrin 110a:7** [AGGADAH] (Ex 4:6) — the dispute-keeper and the leprous hand — the bosom analogy
+- **Sanhedrin 110a:10** [AGGADAH] (Ex 16:8) — murmuring against the teacher is murmuring against the Presence
+- **Sanhedrin 111a:6** [AGGADAH] (Ex 6:7,6:8) — take-then-bring juxtaposed — the few who go up
+- **Sanhedrin 111a:7** [AGGADAH] (Ex 5:23) — the Alexandria elder's ledger of drowned and built-in
+- **Sanhedrin 111a:11** [AGGADAH] (Ex 34:6,34:8) — what Moses saw that made him bow — slow to anger
+- **Sanhedrin 111b:5** [AGGADAH] (Ex 21:22) — the attribute of justice answered over the learners
+- **Shabbat 10b:4** [LAW] (Ex 31:13) — the giver must inform — "to KNOW that I am the Lord who sanctifies you" — the Shabbat gift announced
+- **Shabbat 10b:5** [CREDIT] (Ex 34:29) — in-triage dup: Moses' unannounced glow weighed against the rule
+- **Shabbat 12a:4** [LAW] (Ex 28:38) — phylacteries at nightfall — the frontplate's "always" teaches constant touching
+- **Shabbat 18a:6** [LAW] (Ex 23:13) — the noisy mill — the resting-of-vessels question on "take heed in all I said"
+- **Shabbat 20a:4** [LAW] (Ex 12:5) — the Paschal lamb lowered at dusk — the registered group counted vigilant
+- **Shabbat 20a:5** [LAW] (Ex 35:3) — "in YOUR habitations" — the Hearth Chamber's fire outside the ban; priests are vigilant
+- **Shabbat 21a:9** [LAW] (Ex 27:20) — Temple wicks and oils — the lamp that ascends by itself, read at "to cause a lamp to burn continually"
+- **Shabbat 23b:5** [LAW] (Ex 13:22) — kindling neither early nor late — the two pillars' overlap as the measure
+- **Shabbat 24b:6** [LAW] (Ex 12:10) — burnt oil on a Festival — consecrated things are not burned on the holy day
+- **Shabbat 24b:8** [CREDIT] (Ex 12:16) — in-triage dup: Rava's "that alone" source for the same rule
+- **Shabbat 28a:1** [LAW] (Ex 40:19) — tent learned from Tabernacle — the corpse-impurity analogy on "he spread the TENT over the Tabernacle"
+- **Shabbat 28a:2** [CREDIT] (Ex 26:4,26:14,26:15) — in-triage dup: the beams excluded from tent-hood
+- **Shabbat 28b:2** [CREDIT] (Ex 13:9) — in-triage dup: the hide question riding the same analogy run
+- **Shabbat 28b:7** [AGGADAH] (Ex 25:5) — the tachash's single horn and Adam's thanks-ox
+- **Shabbat 30a:5** [AGGADAH] (Ex 32:13) — "remember Abraham" — the dead whose merit still argues
+- **Shabbat 31a:1** [AGGADAH] (Ex 28:4) — the four-hundred-zuz wager on Hillel's patience
+- **Shabbat 31a:7** [AGGADAH] (Ex 28:4) — the convert who heard the garments verse and came for the high priesthood
+- **Shabbat 31a:8** [CREDIT] (Ex 4:22) — in-triage dup: the royal-protocols answer in the same story run
+- **Shabbat 33a:3** [AGGADAH] (Ex 31:14) — vain oaths and desecrated Shabbat — the beasts multiply
+- **Shabbat 33b:8** [AGGADAH] (Ex 20:8) — the elder's two myrtle bundles — one for remember, one for observe
+- **Shabbat 49b:9** [CREDIT] (Ex 36:7) — the labor-count uncertainty at "the labor was sufficient" — the 39-labors index sugya, opened in the code/data research record
+- **Shabbat 67a:3** [AGGADAH] (Ex 3:2,3:3,3:4) — the bush verses as fever incantation
+- **Shabbat 67a:4** [CREDIT] (Ex 3:5) — in-triage dup: the holy-ground verse offered for the same charm
+- **Shabbat 69b:8** [LAW] (Ex 31:16) — knowing the essence of Shabbat — the sign-between-us clause splits the forgetters
+- **Shabbat 70a:2** [LAW] (Ex 31:14,35:2) — DIVISION OF LABORS — each labor its own liability, carved from the desecrator clauses
+- **Shabbat 70a:3** [CREDIT] (Ex 35:3) — R. Natan's kindling-division source — the singled-out dispute already verdicted at Sanhedrin 62a
+- **Shabbat 70a:4** [CREDIT] (Ex 34:21,35:3) — in-triage dup: one lapse, many labors — the division run continued
+- **Shabbat 74b:6** [LAW] (Ex 35:26) — shearing and whitening defined from the Tabernacle's own wool-work — the labors keyed to the build
+- **Shabbat 86a:6** [LAW] (Ex 19:24,34:4) — Moses' early ascents and descents — the discharge-window chronology
+- **Shabbat 86b:5** [LAW] (Ex 12:2,13:3,19:1,19:6,20:7,20:8) — the sixth or the seventh of Sivan — the date-of-giving dispute with its New Moon data
+- **Shabbat 87a:1** [CREDIT] (Ex 19:6,19:10) — in-triage dup: the week's day-by-day reconstruction
+- **Shabbat 87a:4** [LAW] (Ex 19:11,19:15) — Moses separates by his own a-fortiori — the first of the three things done by his reasoning
+- **Shabbat 87a:5** [LAW] (Ex 12:43,34:1) — breaking the tablets by a-fortiori from the Paschal apostate clause — the recorded inference
+- **Shabbat 87a:6** [CREDIT] (Ex 19:11) — in-triage dup: the third-day preparation weighed
+- **Shabbat 87a:7** [CREDIT] (Ex 19:8,19:9) — in-triage dup: which reckoning's third day
+- **Shabbat 87b:1** [CREDIT] (Ex 15:25) — in-triage dup: the encampment count — Shabbat commanded at Marah, the seated charter
+- **Shabbat 87b:5** [CREDIT] (Ex 16:1,16:7,16:26) — in-triage dup: the fifteenth-day proof in the same chronology
+- **Shabbat 87b:6** [CREDIT] (Ex 40:17) — in-triage dup: the Nisan-first erection and the day of ten crowns
+- **Shabbat 88a:5** [AGGADAH] (Ex 19:17) — the mountain held overhead like a cask — the coerced covenant and its Purim reacceptance
+- **Shabbat 88a:7** [AGGADAH] (Ex 24:7,33:6,33:7) — we-will-do before we-will-hear — the two crowns tied and taken
+- **Shabbat 88b:8** [AGGADAH] (Ex 20:2,20:3) — grasp My throne — Moses sent to answer the angels
+- **Shabbat 89a:1** [AGGADAH] (Ex 20:7,20:8,20:12,20:13) — the commandments read back at the angels — no labor, no parents, no envy above
+- **Shabbat 89a:6** [AGGADAH] (Ex 32:1) — boshesh read as the sixth hour come — the calf's clock
+- **Shabbat 89b:4** [AGGADAH] (Ex 4:22) — Isaac's arithmetic of the sins — the defense that halves and halves again
+- **Shabbat 92a:6** [LAW] (Ex 27:1) — carrying above ten handbreadths — liability learned from the sons of Kehat's shoulders
+- **Shabbat 92a:7** [CREDIT] (Ex 26:16,40:19) — in-triage dup: the boards' height arithmetic behind the same rule
+- **Shabbat 96b:1** [LAW] (Ex 36:6) — WHERE CARRYING-OUT IS WRITTEN — "let no man bring more": the camp proclamation as the labor's own ink
+- **Shabbat 96b:2** [CREDIT] (Ex 36:7) — in-triage dup: was the proclamation on Shabbat
+- **Shabbat 96b:13** [CREDIT] (Ex 36:4) — in-triage dup: the weavers' rows and the throwing derivation
+- **Shabbat 97a:1** [LAW] (Ex 4:1) — a verbal analogy cannot be reasoned fresh — R. Yehuda ben Beteira lacked the tradition: the inference-validity meta-rule
+- **Shabbat 97a:4** [AGGADAH] (Ex 4:1) — suspecting the innocent — Moses' doubt and his whitened hand
+- **Shabbat 97a:6** [AGGADAH] (Ex 4:6,4:7) — beneficence outruns punishment — the bosom timed both ways
+- **Shabbat 97a:7** [AGGADAH] (Ex 7:12) — a staff swallowed staffs — the miracle inside the miracle
+- **Shabbat 97b:2** [LAW] (Ex 35:1) — "these are the THINGS" — the assembly verse's own words counted toward the thirty-nine
+- **Shabbat 98b:2** [LAW] (Ex 26:24) — the beams taper to a fingerbreadth — "together ended at the top" as the taper's ink
+- **Shabbat 98b:5** [LAW] (Ex 26:28) — the middle bar from end to end — the standing-miracle reading of the architecture
+- **Shabbat 98b:8** [CREDIT] (Ex 26:7,26:8) — the eleven curtains' arithmetic — rides the seated architecture constants
+- **Shabbat 98b:9** [CREDIT] (Ex 26:9,26:13) — in-triage dup: the overhang cubits measured
+- **Shabbat 98b:10** [CREDIT] (Ex 26:12) — in-triage dup: coverage per the beam dispute
+- **Shabbat 99a:2** [CREDIT] (Ex 35:25,35:26) — in-triage dup: the curtain materials recited from the ink
+- **Shabbat 105a:3** [AGGADAH] (Ex 20:2) — anokhi as acronym — the first word read as notarikon
+- **Shabbat 108a:6** [AGGADAH] (Ex 13:9) — Shmuel, Karna, and the rising water — the arrival of Rav
+- **Shabbat 108a:12** [LAW] (Ex 13:9) — phylacteries only on the hide of the permitted — "that God's Torah be in your MOUTH"
+- **Shabbat 114b:6** [LAW] (Ex 16:23,20:9) — Yom Kippur falling on Shabbat — trimming barred, the overlap question opens
+- **Shabbat 114b:7** [CREDIT] (Ex 16:23,20:9) — in-triage dup: the permitting side of the same overlap
+- **Shabbat 117b:8** [LAW] (Ex 20:9,20:10) — the forgotten bread — rescue three meals' worth, no more
+- **Shabbat 117b:9** [LAW] (Ex 16:5,16:22) — rise early on the sixth day — preparation learned from the manna's own schedule
+- **Shabbat 117b:11** [LAW] (Ex 16:25) — THREE MEALS from the manna's three "today"s — the verse's own repetition counted
+- **Shabbat 118a:7** [AGGADAH] (Ex 16:25) — the three meals' three deliverances
+- **Shabbat 118b:4** [AGGADAH] (Ex 16:27,17:8) — the first Shabbat broken — and Amalek came
+- **Shabbat 119b:5** [AGGADAH] (Ex 32:25) — the torn sentence of the wholehearted amen
+- **Shabbat 120a:1** [AGGADAH] (Ex 20:6,20:17) — the yissa homily — misunderstood Torah and the reluctant chief
+- **Shabbat 120b:11** [LAW] (Ex 20:3,20:9) — "you shall not PERFORM labor" — doing barred, causing not: the causation carve-out
+- **Shabbat 132a:7** [LAW] (Ex 13:16) — sign against sign — why circumcision overrides Shabbat and phylacteries do not
+- **Shabbat 132a:22** [CREDIT] (Ex 31:14) — in-triage dup: the eighth day even on Shabbat, the desecrator clause weighed
+- **Shabbat 133a:10** [CREDIT] (Ex 12:10) — in-triage dup: the leftover-burn's positive-after-negative again
+- **Shabbat 133a:12** [CREDIT] (Ex 12:16) — in-triage dup: Rava's festival food-labor source again
+- **Shabbat 133b:4** [LAW] (Ex 15:2) — "this is my God and I will beautify Him" — the beautification duty argued at its minimum
+- **Shabbat 133b:9** [CREDIT] (Ex 25:30) — the showbread choreography — rides the seated before-Me-always table claims
+- **Shabbat 139a:14** [AGGADAH] (Ex 4:14) — "and he will see you and be glad" — the heart that rejoiced and the anger that left its mark
+- **Shabbat 147b:11** [AGGADAH] (Ex 12:2) — the forgotten scholar misreads the month verse — the letters confused, the exhibit of loss
+- **Shabbat 153b:7** [LAW] (Ex 20:9,20:10) — the laden animal — "you and your beast": driving it is the question
+- **Shabbat 153b:12** [CREDIT] (Ex 20:10) — in-triage dup: the driver's liability split witting and unwitting
+- **Shevuot 3b:11** [CREDIT] (Ex 12:46) — "in it" — the bone of the valid lamb only, the cluster already verdicted
+- **Shevuot 3b:13** [CREDIT] (Ex 12:10) — in-triage dup: the leftover-burn baraita once more
+- **Shevuot 8b:9** [LAW] (Ex 30:10) — the two goats juxtaposed — the incense altar's once-a-year clause enters the atonement algebra
+- **Shevuot 8b:10** [CREDIT] (Ex 30:10) — in-triage dup: the external goat's swap weighed
+- **Shevuot 9b:6** [CREDIT] (Ex 28:38,28:43) — in-triage dup: R. Shimon's reasoning in the goats run
+- **Shevuot 10a:3** [CREDIT] (Ex 30:10) — in-triage dup: the festival goats against the Yom Kippur goat
+- **Shevuot 10a:15** [CREDIT] (Ex 30:10) — in-triage dup: once means one atonement
+- **Shevuot 10a:20** [CREDIT] (Ex 30:10) — in-triage dup: the same clause turned again
+- **Shevuot 10b:4** [CREDIT] (Ex 30:10) — in-triage dup: once a year, not twice
+- **Shevuot 10b:6** [CREDIT] (Ex 30:10) — in-triage dup: the word "once" made to carry both
+- **Shevuot 14b:18** [CREDIT] (Ex 25:9) — the courtyard additions — the so-shall-you-do reading verdicted at Sanhedrin 16b
+- **Shevuot 15a:1** [CREDIT] (Ex 25:9) — in-triage dup: the superfluous "and so shall you do" itself
+- **Shevuot 16b:4** [CREDIT] (Ex 25:8,25:9) — in-triage dup: Temple called Tabernacle in the same run
+- **Shevuot 20b:6** [LAW] (Ex 20:6,20:7) — the future oath broken — its Torah prohibition located at the vain-name clause
+- **Shevuot 20b:9** [LAW] (Ex 20:7,20:8) — vain and false SPOKEN AS ONE — like remember and observe: the single-utterance pair again
+- **Shevuot 20b:13** [CREDIT] (Ex 20:7) — in-triage dup: the lashes made explicit
+- **Shevuot 21a:6** [LAW] (Ex 20:6,20:7) — "will not hold guiltless" — the clause that powers the false oath's lashes
+- **Shevuot 26b:15** [LAW] (Ex 35:5,35:22) — "that which is gone out of your lips" — consecration needs mouth and heart together, the willing-heart bringers as the frame
+- **Shevuot 29a:13** [LAW] (Ex 20:20,20:23) — oaths administered on the COURT'S understanding — Moses' precaution at the ambiguous god-word
+- **Shevuot 30b:2** [LAW] (Ex 18:13) — witnesses testify standing — "the people STOOD over Moses"
+- **Shevuot 30b:13** [LAW] (Ex 23:7) — "distance yourself from a false matter" — the judge may not advocate his own ruling: the distancing cluster opens
+- **Shevuot 31a:3** [CREDIT] (Ex 23:7) — in-triage dup: the student who must not stay silent
+- **Shevuot 31a:5** [CREDIT] (Ex 23:7) — in-triage dup: the teacher's hundred dinars refused
+- **Shevuot 31a:6** [CREDIT] (Ex 20:12,20:13) — in-triage dup: the overlap with the false-witness ban sorted
+- **Shevuot 31a:12** [CREDIT] (Ex 20:7,23:1) — in-triage dup: the early-explaining litigant and the hearing ear
+- **Shevuot 35b:5** [LAW] (Ex 7:4) — is Tzevaot erasable — "My hosts" as the name's non-sacred reading: the Name-erasure list
+- **Shevuot 39a:1** [AGGADAH] (Ex 20:6,20:7) — the world trembled at the vain-name commandment
+- **Shevuot 39a:2** [CREDIT] (Ex 34:7) — in-triage dup: venakkeh against lo-yenakkeh on the same clause
+- **Shevuot 39a:16** [CREDIT] (Ex 34:7) — in-triage dup: the clearing contradiction resolved
+- **Shevuot 39b:6** [LAW] (Ex 22:10) — "the oath of the Lord between them BOTH" — the false oath's punishment reaches both parties
+- **Shevuot 39b:10** [CREDIT] (Ex 22:6,22:8) — the silver-or-vessels precision — rides the compiled guardians and their oath tables
+- **Shevuot 42a:12** [LAW] (Ex 22:6) — "if a MAN delivers" — no court oath on a minor's claim
+- **Shevuot 42b:16** [LAW] (Ex 22:8) — the double-payment exclusions — land, slaves, and documents carved out of "every matter of trespass"
+- **Shevuot 43a:1** [LAW] (Ex 22:6) — silver-or-vessels as generalization-detail-generalization — movable, intrinsic-value property: the middah on the guardians' opening
+- **Shevuot 43a:3** [CREDIT] (Ex 22:6,22:9) — in-triage dup: the paid bailee's exclusions by the same method
+- **Shevuot 45a:11** [CREDIT] (Ex 22:10) — the Torah oath exempts from payment — rides the compiled guardians' oath tables
+- **Shevuot 47a:11** [LAW] (Ex 22:10) — "between them both" — and not between their heirs
+- **Shevuot 47b:2** [CREDIT] (Ex 22:10) — in-triage dup: what Rav and Shmuel do with the both-clause
+- **Shevuot 47b:4** [LAW] (Ex 20:13) — following after the adulterer — the accessory read into the commandment
+- **Sotah 3a:3** [AGGADAH] (Ex 36:6) — the private sin proclaimed aloud
+- **Sotah 5a:9** [AGGADAH] (Ex 3:2) — the lowly mountain and the lowly bush
+- **Sotah 9b:8** [AGGADAH] (Ex 2:4) — Miriam's hour at the river repaid measure for measure
+- **Sotah 9b:10** [AGGADAH] (Ex 13:19) — Moses himself carries Joseph's bones
+- **Sotah 9b:22** [AGGADAH] (Ex 28:34,39:26) — the Presence jangling before Samson like the robe's bell
+- **Sotah 11a:5** [AGGADAH] (Ex 2:4) — the sister's verse read of the Presence
+- **Sotah 11a:6** [AGGADAH] (Ex 1:8) — the new king — new in fact or new in decrees
+- **Sotah 11a:7** [AGGADAH] (Ex 1:9,7:29) — Pharaoh initiated, Pharaoh struck first
+- **Sotah 11a:8** [AGGADAH] (Ex 1:10) — dealing wisely WITH HIM — with their Savior
+- **Sotah 11a:14** [AGGADAH] (Ex 1:10) — the three advisors — Balaam, Job, Yitro and their ends
+- **Sotah 11a:15** [AGGADAH] (Ex 1:11) — "over HIM" — the brick-mold hung on Pharaoh's own neck
+- **Sotah 11a:18** [AGGADAH] (Ex 1:11) — miskenot — cities that endanger or impoverish
+- **Sotah 11a:19** [AGGADAH] (Ex 1:11) — Pithom and Raamses — one city, two names, mouths of the deep
+- **Sotah 11a:20** [AGGADAH] (Ex 1:12) — "so he would multiply" — the future tense as the Spirit's own report
+- **Sotah 11a:21** [AGGADAH] (Ex 1:12) — the dread of Israel as thorns in their eyes
+- **Sotah 11b:3** [AGGADAH] (Ex 1:14) — befarekh — the work of men and women exchanged
+- **Sotah 11b:10** [AGGADAH] (Ex 15:2) — "THIS is my God" — the sea's children knew Him from the field
+- **Sotah 11b:11** [AGGADAH] (Ex 1:15) — Shiphrah and Puah — the midwives renamed by their deeds
+- **Sotah 11b:14** [AGGADAH] (Ex 1:16) — the ovnayim — the birthstool's sign
+- **Sotah 11b:16** [AGGADAH] (Ex 1:16) — Pharaoh's gender omen — face down, face up
+- **Sotah 11b:18** [AGGADAH] (Ex 1:17) — they kept them alive — water and food besides
+- **Sotah 11b:19** [AGGADAH] (Ex 1:19) — chayot — like the beasts of the field they bear
+- **Sotah 11b:22** [AGGADAH] (Ex 1:21) — the houses made for the fearers — priesthood, Levites, kingship
+- **Sotah 12a:8** [AGGADAH] (Ex 1:16,1:22) — the decree widened to every son born
+- **Sotah 12a:9** [AGGADAH] (Ex 2:1) — where did he GO — after his daughter's counsel
+- **Sotah 12a:10** [AGGADAH] (Ex 1:22) — Amram's divorce and the counsel that reversed it
+- **Sotah 12a:13** [AGGADAH] (Ex 2:1) — took, not returned — the remarriage with canopy honors
+- **Sotah 12a:18** [AGGADAH] (Ex 2:2) — the three months — the miscounted pregnancy
+- **Sotah 12a:19** [AGGADAH] (Ex 2:3) — why she could hide him no longer — the Egyptian babies' cries
+- **Sotah 12a:20** [AGGADAH] (Ex 2:3) — the bulrush ark — soft wood for the poor mother
+- **Sotah 12a:22** [AGGADAH] (Ex 2:3) — bitumen within, pitch without — the righteous nose spared
+- **Sotah 12a:23** [AGGADAH] (Ex 2:3) — bassuf — the sea or the reeds
+- **Sotah 12b:2** [AGGADAH] (Ex 2:5) — she came down to cleanse herself of her father's idols
+- **Sotah 12b:4** [AGGADAH] (Ex 2:5) — the maidens' objection and their fall
+- **Sotah 12b:5** [AGGADAH] (Ex 2:5) — amatah — her arm or her maid, the arm stretched long
+- **Sotah 12b:8** [AGGADAH] (Ex 2:6) — she saw IT — the Presence beside the child
+- **Sotah 12b:9** [AGGADAH] (Ex 2:6) — a child with a lad's voice
+- **Sotah 12b:10** [AGGADAH] (Ex 2:6) — how she knew him for a Hebrew — the covenant seen
+- **Sotah 12b:11** [AGGADAH] (Ex 2:6) — "THIS one" — the unknowing prophecy of the decree's end
+- **Sotah 12b:13** [CREDIT] (Ex 1:22) — the astrologers' water error — already verdicted at Sanhedrin 101b
+- **Sotah 12b:19** [AGGADAH] (Ex 2:7) — the mouth that would speak with the Presence refused the nurse
+- **Sotah 12b:21** [AGGADAH] (Ex 2:8) — ha'alma — she went with a maiden's vigor
+- **Sotah 12b:22** [AGGADAH] (Ex 2:9) — heilikhi — take what is yours: the second unknowing prophecy
+- **Sotah 12b:23** [AGGADAH] (Ex 15:20) — the prophetess, sister of AARON — the prophecy before Moses was born
+- **Sotah 13b:5** [AGGADAH] (Ex 13:19) — Moses took, Israel brought up — the finisher gets the name
+- **Sotah 13b:16** [AGGADAH] (Ex 23:26) — a hundred and twenty THIS DAY — the filled days again, at Moses' own mouth
+- **Sotah 13b:25** [AGGADAH] (Ex 34:28) — the twelve-mil voice — Moses the great scribe died
+- **Sotah 14a:9** [AGGADAH] (Ex 32:32) — the portion among the great — the blot-me merit expounded
+- **Sotah 17a:24** [AGGADAH] (Ex 24:10) — sky-blue to sea to sky to Throne — the sapphire pavement in the chain
+- **Sotah 20b:11** [CREDIT] (Ex 13:19) — corpse-impure in the Levite camp — the with-him derivation, verdicted at Pesachim 67a
+- **Sotah 23b:9** [LAW] (Ex 21:7) — the father betroths his minor daughter, the mother cannot — the father's powers at the daughter-sale clause
+- **Sotah 23b:12** [LAW] (Ex 22:2) — "he shall be sold for HIS theft" — the man sold, the woman not: the pronoun carries the law
+- **Sotah 27b:11** [LAW] (Ex 15:1) — "and said, SAYING" — R. Akiva's responsive-song derivation: how the Song was recited
+- **Sotah 30b:11** [CREDIT] (Ex 15:1) — in-triage dup: the adult-hallel mode
+- **Sotah 30b:12** [CREDIT] (Ex 15:1) — in-triage dup: the minor-hallel mode
+- **Sotah 30b:14** [CREDIT] (Ex 15:1) — in-triage dup: the dispute's verse anatomy
+- **Sotah 30b:15** [CREDIT] (Ex 15:1) — in-triage dup: word-by-word repetition and the third view
+- **Sotah 30b:16** [CREDIT] (Ex 15:2) — in-triage dup: the babies and nurslings joining the Song
+- **Sotah 31a:9** [AGGADAH] (Ex 20:5) — from love or from fear — the thousands-of-generations measure
+- **Sotah 33a:14** [LAW] (Ex 19:19) — the Levites answered in Hebrew — voice learned from Moses' voice at Sinai
+- **Sotah 33b:2** [CREDIT] (Ex 19:19) — in-triage dup: R. Yehuda's route to the same voice analogy
+- **Sotah 36a:2** [AGGADAH] (Ex 23:27) — the day at Gerizim and Ebal — the sixty-mil day of miracles
+- **Sotah 36a:3** [CREDIT] (Ex 15:16) — "till Your people pass over" doubled — the two-crossings reading, verdicted at Sanhedrin 98b
+- **Sotah 36a:8** [AGGADAH] (Ex 23:28) — the hornet that did not cross the Jordan
+- **Sotah 36a:12** [LAW] (Ex 28:10) — the shoulder stones' six-and-six — the engraving order argued
+- **Sotah 36b:3** [CREDIT] (Ex 28:10) — in-triage dup: "according to their birth" resolved at Jacob's names
+- **Sotah 37a:5** [AGGADAH] (Ex 14:15) — "why do you cry to Me" — Nachshon in the sea while Moses prays
+- **Sotah 37a:10** [LAW] (Ex 40:3) — "al" means adjacent — the preposition rule tested at the screen and the frankincense
+- **Sotah 38a:11** [LAW] (Ex 20:20,20:21) — "in every place where I cause My Name to be mentioned" — the explicit Name inside the chosen house
+- **Sotah 42a:12** [CREDIT] (Ex 19:19) — in-triage dup: the war priest's Hebrew by the same voice rule
+- **Sotah 42b:2** [AGGADAH] (Ex 15:3) — Goliath who stood against the Man of war
+- **Sotah 47a:10** [CREDIT] (Ex 20:2) — Gehazi's magnet and the calf — verdicted at Sanhedrin 107b
+- **Sotah 48a:21** [AGGADAH] (Ex 15:3) — wine, song, and the captivity for want of knowledge
+- **Sotah 48b:12** [CREDIT] (Ex 28:11,28:20,28:21) — the shamir for the stones — the seated Tetzaveh finding
+- **Sukkah 4b:17** [CREDIT] (Ex 25:22) — the Ark's nine handbreadths — rides the seated Ark constants
+- **Sukkah 5a:2** [LAW] (Ex 19:20) — the Presence never below ten handbreadths — "descended onto Sinai" and stayed above
+- **Sukkah 5a:3** [CREDIT] (Ex 19:3) — in-triage dup: Moses never above ten from the ground
+- **Sukkah 5a:5** [CREDIT] (Ex 25:10) — in-triage dup: the Ark's written cubit and a half
+- **Sukkah 5a:6** [CREDIT] (Ex 25:25) — in-triage dup: the table's handbreadth border as the smallest vessel measure
+- **Sukkah 5b:3** [CREDIT] (Ex 25:20) — in-triage dup: the cherub's child-face proposed as the handbreadth
+- **Sukkah 5b:9** [CREDIT] (Ex 25:20,26:16) — in-triage dup: the ten-cubit beam arithmetic
+- **Sukkah 7b:8** [LAW] (Ex 40:3) — "vesakkota" the Ark WITH THE CURTAIN — a screen-verb used of a partition: R. Yoshiya's wall rationale
+- **Sukkah 11b:12** [LAW] (Ex 12:22) — taking learned from taking — the hyssop BUNDLE teaches the bound lulav
+- **Sukkah 11b:13** [CREDIT] (Ex 15:2) — the binding as beautification — the anveihu duty, verdicted at Shabbat 133b
+- **Sukkah 21a:1** [CREDIT] (Ex 40:19) — the man-made tent analogy — verdicted at Shabbat 28a
+- **Sukkah 27a:9** [CREDIT] (Ex 12:18) — the first-night matza obligation — the in-the-evening family already verdicted
+- **Sukkah 29a:12** [AGGADAH] (Ex 12:12) — a nation's affliction reaches its god — judgment on Egypt's gods
+- **Sukkah 33a:14** [CREDIT] (Ex 12:22) — in-triage dup: the taking-taking analogy to the hyssop again
+- **Sukkah 33a:15** [CREDIT] (Ex 15:2) — in-triage dup: the binding-beautification question again
+- **Sukkah 37b:9** [CREDIT] (Ex 29:27) — the waving choreography — rides the seated four-motions computation
+- **Sukkah 42b:3** [CREDIT] (Ex 12:4) — the olive-bulk eater registered — the eating-registration cluster already verdicted
+- **Sukkah 44b:7** [LAW] (Ex 23:11) — "let it rest and lie fallow" — rest from hoeing, fallow from stones: the sabbatical verbs split
+- **Sukkah 45b:2** [CREDIT] (Ex 26:15) — the standing acacia and the mitzva objects — the seated way-of-growth finding itself
+- **Sukkah 45b:7** [CREDIT] (Ex 22:19) — joining Heaven's name — the save-to-the-Lord-alone teaching, verdicted at Sanhedrin 63a
+- **Sukkah 49b:1** [LAW] (Ex 29:34) — as its pouring, so its burning — disposal in sanctity by the consecration analogy
+- **Sukkah 50b:6** [LAW] (Ex 25:31) — the candelabrum by generalization and detail — pure gold, beaten work, and what other metals make valid
+- **Sukkah 53a:3** [AGGADAH] (Ex 20:20,20:21) — Hillel at the water-drawing — if I am here, all is here
+- **Taanit 9a:8** [AGGADAH] (Ex 16:4) — rain for one petitioner — the manna for Moses' own sake
+- **Taanit 11a:8** [AGGADAH] (Ex 17:12) — Moses' heavy hands — sharing the community's distress
+- **Taanit 21b:4** [AGGADAH] (Ex 19:13,34:3) — the mountain holy only while the Presence stood — the declined honor
+- **Taanit 27b:9** [LAW] (Ex 31:17) — "shavat vayinafash" — the added soul departs and the Sunday fast is barred: the woe-for-the-soul read
+- **Taanit 28b:9** [CREDIT] (Ex 24:16,24:18) — in-triage dup: the seventh-of-Sivan ascent in the date chronology
+- **Taanit 28b:10** [CREDIT] (Ex 32:19) — in-triage dup: the tablets broken on the seventeenth of Tammuz
+- **Taanit 29a:2** [LAW] (Ex 40:17) — the Ninth of Av computed — the erection date anchors the spies' calendar
+- **Tamid 31b:10** [LAW] (Ex 25:23) — promote in sanctity, never demote — the shewbread between the silver and golden tables
+- **Temurah 3a:19** [CREDIT] (Ex 20:7) — the vain-oath lashes — the lo-yenakkeh derivation verdicted at Shevuot 21a
+- **Temurah 3b:3** [CREDIT] (Ex 20:7) — in-triage dup: the false oath joined to it
+- **Temurah 3b:16** [CREDIT] (Ex 22:10) — the true oath permitted — rides the guardians' court oath
+- **Temurah 4a:3** [LAW] (Ex 22:28) — "you shall not delay the fullness and the outflow" — the gifts' separation order and its lashes
+- **Temurah 4b:9** [CREDIT] (Ex 12:10) — the leftover-lashes dispute — the remedied-prohibition cluster already verdicted
+- **Temurah 4b:13** [CREDIT] (Ex 12:10) — in-triage dup: the school of Chizkiyya's doubled morning again
+- **Temurah 5b:13** [LAW] (Ex 13:12) — avara learned from avara — the tithe calf from the womb-opener's passing verb
+- **Temurah 5b:14** [CREDIT] (Ex 22:28) — in-triage dup: effective-though-forbidden at the delayed gifts
+- **Temurah 14b:3** [CREDIT] (Ex 34:27) — write-these against by-the-mouth-of-these — the seated oral-torah charter's own docket
+- **Temurah 16a:6** [AGGADAH] (Ex 33:11) — the laws forgotten in the mourning for Moses — Otniel's restorations
+- **Temurah 18b:4** [LAW] (Ex 13:12) — the tithe-offspring inclusion carved into the limitation
+- **Temurah 25b:3** [LAW] (Ex 21:4) — the pregnant maidservant freed at the fetus — reserved consecration argued at the slave-wife clause
+- **Temurah 28a:11** [CREDIT] (Ex 13:13,23:19) — the benefit-forbidden list — rides the seated donkey, milk, and stoned-ox clusters
+- **Temurah 30b:7** [CREDIT] (Ex 21:28) — in-triage dup: the stoned ox in the abomination analogy
+- **Temurah 30b:19** [CREDIT] (Ex 12:4) — the prostitute's Paschal portion — the registration cluster again
+- **Temurah 31b:7** [LAW] (Ex 25:8) — altar consecrations against maintenance consecrations — the treasury split at "make Me a sanctuary"
+- **Yevamot 4a:5** [LAW] (Ex 22:17,22:18) — does R. Yehuda expound juxtaposition at all — the method's own validity disputed at the witch verse
+- **Yevamot 6b:4** [LAW] (Ex 35:3) — a positive command against a karet prohibition — the override algebra probed at Shabbat
+- **Yevamot 6b:9** [CREDIT] (Ex 31:14) — in-triage dup: the student's execution-on-Shabbat derivation (Sanhedrin 35b run)
+- **Yevamot 6b:10** [CREDIT] (Ex 35:3) — in-triage dup: the kindling analogy in the same run
+- **Yevamot 6b:16** [CREDIT] (Ex 31:14) — in-triage dup: the override framing rejected
+- **Yevamot 7a:1** [CREDIT] (Ex 21:14) — in-triage dup: murder over service, the altar-taking a-fortiori
+- **Yevamot 7a:3** [CREDIT] (Ex 35:3) — in-triage dup: the sister clause inside the same inference
+- **Yevamot 7a:5** [CREDIT] (Ex 31:14) — in-triage dup: the profaner clause reassigned to other labors
+- **Yevamot 22b:5** [LAW] (Ex 21:4) — "the wife and her children shall be her master's" — the child follows the mother: the lineage rule in the ordinances' own ink
+- **Yevamot 22b:7** [LAW] (Ex 22:27) — the mamzer son still liable — the father who does his people's deeds
+- **Yevamot 23a:7** [CREDIT] (Ex 21:4) — in-triage dup: the Rabbis' route to the maidservant exclusion
+- **Yevamot 25a:13** [CREDIT] (Ex 23:1) — the split testimony of the assaulted witness — verdicted at Sanhedrin 9b
+- **Yevamot 40a:3** [CREDIT] (Ex 29:33) — eating the atonement obligatory — the priests-eat-owners-atone row again
+- **Yevamot 46b:2** [LAW] (Ex 19:10) — conversion immersion from Sinai — "sanctify them today and tomorrow"
+- **Yevamot 46b:4** [CREDIT] (Ex 24:8) — in-triage dup: no sprinkling without immersion, the covenant blood leg
+- **Yevamot 48a:2** [LAW] (Ex 12:44) — "every slave of a MAN" — whose circumcision may be compelled
+- **Yevamot 48b:4** [LAW] (Ex 23:12) — keeping uncircumcised slaves — "and your slave shall rest" as R. Yishmael's proof
+- **Yevamot 48b:6** [LAW] (Ex 23:12) — "and the STRANGER" — the resident stranger defined at the rest verse
+- **Yevamot 49b:7** [AGGADAH] (Ex 23:26,33:20) — Manasseh judges Isaiah against Moses' verses
+- **Yevamot 60a:1** [CREDIT] (Ex 22:14) — the seducer's fine — the graded Mishpatim table
+- **Yevamot 60b:13** [LAW] (Ex 28:38) — passed before the frontplate — "for acceptance FOR THEM": the plate as a living test
+- **Yevamot 62a:2** [CREDIT] (Ex 19:15) — in-triage dup: Moses' separation a-fortiori (Shabbat 87a run)
+- **Yevamot 62a:3** [CREDIT] (Ex 12:43) — in-triage dup: the tablets a-fortiori again
+- **Yevamot 62a:4** [CREDIT] (Ex 34:1) — in-triage dup: "asher shibbarta" — the assent to the breaking
+- **Yevamot 62a:5** [CREDIT] (Ex 19:10) — in-triage dup: the added day's reasoning
+- **Yevamot 70a:5** [LAW] (Ex 21:4) — the slave disqualifies by his bed, not his seed — the master's-property clause at teruma
+- **Yevamot 70a:15** [LAW] (Ex 12:45) — the uncircumcised priest and teruma — toshav-and-sakhir carried from the Paschal lamb
+- **Yevamot 70b:6** [CREDIT] (Ex 12:48) — in-triage dup: why the uncircumcised and not the mourner
+- **Yevamot 70b:10** [LAW] (Ex 12:44) — "FROM IT" — the sons' circumcision bars the father's eating: the exclusions run opens
+- **Yevamot 70b:11** [CREDIT] (Ex 12:48) — in-triage dup: the same exclusion tried at the uncircumcised clause
+- **Yevamot 70b:14** [CREDIT] (Ex 12:43) — in-triage dup: the stranger clause's from-it weighed
+- **Yevamot 71a:2** [CREDIT] (Ex 12:48) — in-triage dup: the uncircumcised from-it assigned
+- **Yevamot 71a:4** [CREDIT] (Ex 12:9,12:10) — in-triage dup: the of-it census across the raw and leftover clauses
+- **Yevamot 71a:16** [CREDIT] (Ex 12:44,12:48) — in-triage dup: the males-circumcised baraita
+- **Yevamot 71a:19** [CREDIT] (Ex 12:48) — in-triage dup: Rava's rejoinder on the newborn
+- **Yevamot 72a:4** [AGGADAH] (Ex 12:29) — the north wind at midnight — forty years without it
+- **Yevamot 74a:10** [LAW] (Ex 12:9) — the uncircumcised and second tithe — the of-it analogy carried out of the Passover
+- **Yevamot 74a:12** [CREDIT] (Ex 12:9) — in-triage dup: which of-it is free for the analogy
+- **Yevamot 78a:12** [CREDIT] (Ex 21:4) — the mamzer's purification route — rides the child-follows-mother rule
+- **Yevamot 90a:10** [CREDIT] (Ex 29:33) — in-triage dup: the uprooted eating of the atonement
+- **Yevamot 101a:3** [CREDIT] (Ex 22:27) — the blessing-below-blessing-above analogy — the cursing cluster again
+- **Yevamot 103a:11** [LAW] (Ex 23:14) — "three REGALIM" — the pilgrimage asks for feet: the amputee read out of the word
+- **Yoma 3b:3** [LAW] (Ex 25:10) — from your own or from the public — the making verbs' funding dispute
+- **Yoma 3b:4** [CREDIT] (Ex 30:34) — in-triage dup: take-you and make-you in general
+- **Yoma 3b:14** [LAW] (Ex 24:16) — SEQUESTERING FROM SINAI — the cloud's six days teach the High Priest's seven
+- **Yoma 4a:10** [CREDIT] (Ex 24:16,24:18) — in-triage dup: the baraita of the cloud's sanctification
+- **Yoma 4b:3** [CREDIT] (Ex 24:16) — in-triage dup: the dispute mapped to the tanna'im
+- **Yoma 4b:4** [CREDIT] (Ex 24:16) — in-triage dup: linked to the date-of-giving question
+- **Yoma 4b:9** [LAW] (Ex 24:18,40:35) — could not enter against came into — the cloud contradiction raised
+- **Yoma 4b:10** [CREDIT] (Ex 14:16,14:22) — in-triage dup: into-the-cloud from into-the-sea, the resolving analogy
+- **Yoma 5a:10** [LAW] (Ex 29:30) — seven days shall the son don them — the investiture requirements argued
+- **Yoma 5a:12** [CREDIT] (Ex 29:29) — in-triage dup: the anointed-and-consecrated clause assigned
+- **Yoma 5a:13** [CREDIT] (Ex 29:35) — in-triage dup: the inauguration repetition rationales
+- **Yoma 5b:2** [CREDIT] (Ex 29:32) — in-triage dup: opening learned from opening
+- **Yoma 5b:4** [LAW] (Ex 29:1) — the trousers unwritten in the inauguration portion — the ink's own gap and the clause that supplies it
+- **Yoma 5b:9** [CREDIT] (Ex 29:9) — in-triage dup: Aaron dressed before his sons
+- **Yoma 7a:10** [CREDIT] (Ex 28:38) — the frontplate's forgiveness scope — the seated jurisdiction's docket
+- **Yoma 7b:4** [LAW] (Ex 28:38) — the broken plate — on-his-forehead against always: the plate's state machine disputed
+- **Yoma 7b:5** [CREDIT] (Ex 28:38) — in-triage dup: R. Shimon's end-of-verse emphasis
+- **Yoma 14b:9** [LAW] (Ex 30:7,30:8) — "every morning" doubled — the lamps and incense ordered in the morning service
+- **Yoma 15a:1** [CREDIT] (Ex 27:21,30:8) — in-triage dup: the removal-time reading pressed
+- **Yoma 15b:1** [LAW] (Ex 24:10) — "tohoro" fixed at the altar's cleared gold — "like the very sky for purity" as the word's referent
+- **Yoma 32b:10** [LAW] (Ex 30:20) — dress, then wash — "or when they approach the altar" orders the second sanctification
+- **Yoma 33a:10** [CREDIT] (Ex 30:7) — in-triage dup: the logs in the morning-order series
+- **Yoma 33b:1** [CREDIT] (Ex 26:35) — the furniture bearings — rides the seated layout constants
+- **Yoma 33b:4** [CREDIT] (Ex 29:39,30:7) — in-triage dup: casting the three mornings
+- **Yoma 33b:8** [CREDIT] (Ex 30:7) — in-triage dup: R. Yochanan's morning assignment
+- **Yoma 33b:10** [CREDIT] (Ex 30:7) — in-triage dup: five lamps before two
+- **Yoma 33b:12** [CREDIT] (Ex 29:39) — in-triage dup: inner incense before the outer limbs
+- **Yoma 34b:2** [CREDIT] (Ex 29:39) — in-triage dup: the daily offering in the same order run
+- **Yoma 36b:5** [LAW] (Ex 34:7) — the confession's order — wrong, rebelled, sinned: the attributes verse as the formula's source
+- **Yoma 37a:1** [LAW] (Ex 32:30,32:31) — confession opens with PLEASE — atonement learned from Moses' plea at Horeb
+- **Yoma 44b:16** [LAW] (Ex 28:35) — the ring on this day's coal pan — "and the sound thereof shall be heard" fulfilled
+- **Yoma 45a:3** [CREDIT] (Ex 30:36) — the extra handful of finest incense — rides the seated incense-formula constants
+- **Yoma 45b:7** [LAW] (Ex 27:20) — which fire is the perpetual one — the lamps' flame lit from the outer altar
+- **Yoma 49b:6** [CREDIT] (Ex 12:4) — "mehiyot miseh" as the lamb's lifetime — the word-read verdicted at Pesachim 89a
+- **Yoma 49b:7** [LAW] (Ex 12:4,13:13) — what redeems the firstborn donkey — the SEH's own parameters
+- **Yoma 49b:8** [CREDIT] (Ex 13:13) — in-triage dup: not by the Paschal specs — the seh generalized
+- **Yoma 51b:5** [LAW] (Ex 26:33) — one curtain or two — the second Temple's missing wall and the partition's ink
+- **Yoma 52b:2** [LAW] (Ex 25:34) — MESHUKKADIM — the tradition's own recorded parse ambiguity: which noun the almond-work modifies, undecided
+- **Yoma 52b:3** [LAW] (Ex 17:9) — "machar" — fight tomorrow or stand tomorrow: the second undecided reading
+- **Yoma 52b:7** [LAW] (Ex 24:5) — the young men's offerings — Rav Chisda's indeterminate antecedent, a third undecided verse
+- **Yoma 52b:14** [LAW] (Ex 16:33,30:6,30:31) — where the manna jar stood — before-the-testimony learned from the Ark's own phrase
+- **Yoma 57b:14** [CREDIT] (Ex 30:10) — the once-clause again — the Shevuot cluster already verdicted
+- **Yoma 58a:1** [LAW] (Ex 30:10) — the bloods presented mixed or separate — the corner-atonement dispute
+- **Yoma 59a:10** [CREDIT] (Ex 24:10) — in-triage dup: sprinkling on the cleared gold
+- **Yoma 61a:10** [CREDIT] (Ex 30:10) — in-triage dup: three opinions from the one corners verse
+- **Yoma 62b:11** [LAW] (Ex 29:38,29:39) — "two lambs, day by day" — what the minimum teaches
+- **Yoma 62b:12** [LAW] (Ex 29:38) — the lambs slaughtered opposite the sun — day-by-day read at the light's position
+- **Yoma 66b:12** [AGGADAH] (Ex 35:25) — the calf's unequal deaths — witnesses, warning, and the ordeal
+- **Yoma 66b:15** [AGGADAH] (Ex 32:26) — the tribe of Levi clean of the calf — who is for God
+- **Yoma 68b:19** [LAW] (Ex 29:33) — eating in the vestments, sleeping never — the personal-use boundary inferred
+- **Yoma 71b:6** [LAW] (Ex 39:1) — SHESH means six-fold — the thread-count derivations open at the linen's own name
+- **Yoma 71b:10** [CREDIT] (Ex 39:24) — in-triage dup: twined as eight for the pomegranates
+- **Yoma 71b:13** [CREDIT] (Ex 28:15) — in-triage dup: like-the-ephod bounded to the breastplate
+- **Yoma 71b:14** [CREDIT] (Ex 28:33) — in-triage dup: all its makings equal
+- **Yoma 71b:15** [CREDIT] (Ex 28:31) — in-triage dup: the robe's twelve
+- **Yoma 72a:1** [CREDIT] (Ex 28:31) — in-triage dup: sky-blue from the curtain's six
+- **Yoma 72a:5** [CREDIT] (Ex 28:15) — in-triage dup: the breastplate's twenty-eight
+- **Yoma 72a:6** [CREDIT] (Ex 39:3) — in-triage dup: the beaten gold cut into cords
+- **Yoma 72a:7** [CREDIT] (Ex 39:3) — in-triage dup: the gold worked into each color
+- **Yoma 72a:8** [LAW] (Ex 28:32) — tearing a priestly garment — "it shall not be torn" carries lashes
+- **Yoma 72a:9** [LAW] (Ex 25:15,28:28) — detaching the breastplate, removing the staves — two standing prohibitions in the build's ink
+- **Yoma 72a:10** [CREDIT] (Ex 25:15,27:7) — in-triage dup: the staves loose in their rings
+- **Yoma 72a:11** [CREDIT] (Ex 25:15,27:7) — in-triage dup: the same resolution as a baraita
+- **Yoma 72a:12** [CREDIT] (Ex 26:15) — the standing boards — the seated way-of-growth teaching again
+- **Yoma 72a:13** [AGGADAH] (Ex 35:19) — serad — but for the garments, no remnant would survive
+- **Yoma 72b:3** [LAW] (Ex 28:32) — woven work, not needle-work — the craft requirement
+- **Yoma 72b:7** [LAW] (Ex 25:11) — ZER written as ZAR — the crown's consonants read both ways: worthy, a crown; unworthy, a stranger
+- **Yoma 72b:8** [CREDIT] (Ex 25:10) — in-triage dup: Moses alone against they-shall-make
+- **Yoma 72b:9** [AGGADAH] (Ex 25:11) — within and without — the scholar gilded through
+- **Yoma 72b:18** [LAW] (Ex 26:1,26:31,26:36) — embroiderer against designer — two craft-words, two techniques, one face or two
+- **Yoma 72b:20** [CREDIT] (Ex 29:29) — the Urim in the eight garments — the seated oracle's access list
+- **Yoma 73a:1** [CREDIT] (Ex 29:30) — in-triage dup: the son's seven days
+- **Yoma 75a:11** [AGGADAH] (Ex 16:31) — white like coriander SEED — the manna's colors reconciled
+- **Yoma 75a:16** [AGGADAH] (Ex 16:4) — at the door of the righteous, gathered by the rest
+- **Yoma 75a:17** [AGGADAH] (Ex 16:4) — bread, cakes, and ground — each to his taste
+- **Yoma 75a:19** [AGGADAH] (Ex 35:27,36:3) — every morning — the princes' pearls falling with the dew
+- **Yoma 75a:21** [AGGADAH] (Ex 16:8) — meat asked with a full stomach, given at the dark hour
+- **Yoma 75b:1** [AGGADAH] (Ex 16:8) — the etiquette of the two hours — bread by morning
+- **Yoma 75b:5** [AGGADAH] (Ex 16:4,16:31) — bread, oil, honey — the manna by age
+- **Yoma 75b:9** [AGGADAH] (Ex 16:14) — dew below and dew above — the manna boxed in light
+- **Yoma 75b:10** [AGGADAH] (Ex 16:14) — mechuspas — melting on the palm
+- **Yoma 79b:5** [LAW] (Ex 12:19,13:7) — the large date against the egg — the affliction measure's volume fixed
+- **Yoma 81a:21** [LAW] (Ex 31:15) — affliction learned from affliction — the Yom Kippur fast defined by analogy
+- **Yoma 85a:14** [LAW] (Ex 22:1) — LIFE OVERRIDES SHABBAT — R. Yishmael argues it from the tunneler's own a-fortiori
+- **Yoma 85a:15** [LAW] (Ex 21:14) — R. Akiva from "take him from MY altar" — even uncertain life stops the service
+- **Yoma 85b:2** [LAW] (Ex 31:13,31:14) — "BUT keep My Shabbatot" — the exception word carves the life-saving out
+- **Yoma 86a:1** [CREDIT] (Ex 20:6) — the unabsolved vain name — the lo-yenakkeh cluster again
+- **Yoma 86a:3** [CREDIT] (Ex 20:6,34:7) — in-triage dup: the Horeb absolve weighed against it
+- **Yoma 86a:5** [CREDIT] (Ex 34:7) — in-triage dup: repentance located at Horeb
+- **Yoma 86b:14** [LAW] (Ex 32:31) — DETAIL THE SIN — "they have made themselves a god of gold": confession names its object
+- **Zevachim 7b:13** [CREDIT] (Ex 12:27) — the slaughter for the Passover's own sake — the it-is family verdicted at Pesachim 62b
+- **Zevachim 7b:17** [LAW] (Ex 12:27) — the leftover Paschal offered as a peace offering — Rav Safra's verse assignments
+- **Zevachim 7b:23** [CREDIT] (Ex 12:27) — in-triage dup: why "it is" still needed
+- **Zevachim 7b:24** [CREDIT] (Ex 12:27) — in-triage dup: indispensable for the Paschal, not the guilt offering
+- **Zevachim 9a:8** [CREDIT] (Ex 13:12) — the passing-over analogy again — verdicted at Temurah 5b
+- **Zevachim 9a:19** [CREDIT] (Ex 12:5) — in-triage dup: the leftover-Paschal context pressed
+- **Zevachim 10b:2** [CREDIT] (Ex 12:27) — in-triage dup: "it" at the sin offering's slaughter
+- **Zevachim 11b:23** [CREDIT] (Ex 12:6) — ben Beteira's whole-day afternoon — verdicted at Pesachim 108a
+- **Zevachim 11b:25** [CREDIT] (Ex 29:39) — in-triage dup: the daily offering tried by the same reading
+- **Zevachim 11b:26** [CREDIT] (Ex 29:39) — in-triage dup: the morning inference resolves it
+- **Zevachim 11b:29** [CREDIT] (Ex 29:39,30:8) — in-triage dup: the lamps tried by it
+- **Zevachim 11b:30** [LAW] (Ex 27:21) — "from evening to morning" — the oil allocated to burn the night through
+- **Zevachim 11b:31** [CREDIT] (Ex 30:8) — in-triage dup: the incense tried by it
+- **Zevachim 12a:1** [CREDIT] (Ex 30:8) — in-triage dup: juxtaposed with the lamps, afternoon too
+- **Zevachim 12b:14** [LAW] (Ex 29:18) — the burnt offering's doubled "it" — one superfluous, freed for the derivation
+- **Zevachim 13a:12** [LAW] (Ex 29:30) — blood collected by a fit, vested priest — R. Akiva's sons-of-Aaron derivation
+- **Zevachim 17b:6** [CREDIT] (Ex 29:9) — lacking vestments disqualifies — the priesthood-on-them teaching verdicted at Sanhedrin 83b
+- **Zevachim 18a:1** [CREDIT] (Ex 28:43,29:9,30:21) — in-triage dup: statute learned from statute
+- **Zevachim 18a:2** [CREDIT] (Ex 29:9) — in-triage dup: the scope question on the same rule
+- **Zevachim 18a:7** [CREDIT] (Ex 29:9) — in-triage dup: the girding source weighed
+- **Zevachim 18b:15** [CREDIT] (Ex 30:34) — the linen requirements — the thread-count family again
+- **Zevachim 19a:2** [AGGADAH] (Ex 19:6) — the Persian king lowers the belt — a kingdom of priests dressed as written
+- **Zevachim 19a:25** [LAW] (Ex 29:6) — what may interpose — the hand phylacteries against "upon his BODY"
+- **Zevachim 19b:8** [CREDIT] (Ex 30:21) — in-triage dup: the statute-forever comparison at the laver
+- **Zevachim 19b:9** [LAW] (Ex 40:31) — "that they might wash FROM IT" — what besides the Basin may sanctify hands and feet
+- **Zevachim 19b:15** [CREDIT] (Ex 30:20) — in-triage dup: washing while standing, the laver run
+- **Zevachim 19b:19** [CREDIT] (Ex 30:20) — in-triage dup: Rabbi's one-morning sanctification
+- **Zevachim 19b:23** [CREDIT] (Ex 30:20) — in-triage dup: the fire-offering clause assigned
+- **Zevachim 21a:3** [CREDIT] (Ex 30:19) — in-triage dup: dipping in the Basin against from-it
+- **Zevachim 21b:12** [LAW] (Ex 40:31) — the Basin's minimum — enough for FOUR: Moses, Aaron, and his sons counted into a capacity constant
+- **Zevachim 22a:4** [CREDIT] (Ex 40:11) — in-triage dup: the non-sacred vessel a-fortiori
+- **Zevachim 22a:5** [CREDIT] (Ex 30:18) — in-triage dup: the base's water unfit
+- **Zevachim 22b:16** [CREDIT] (Ex 12:4) — the registration verse again — the Pesachim cluster
+- **Zevachim 23a:1** [CREDIT] (Ex 12:4) — in-triage dup: according-to-his-eating as ab initio
+- **Zevachim 23a:2** [CREDIT] (Ex 12:4) — in-triage dup: indispensable after the fact pressed
+- **Zevachim 23a:11** [CREDIT] (Ex 28:38) — the frontplate proof — the plate cluster
+- **Zevachim 23b:6** [CREDIT] (Ex 28:38) — in-triage dup: the opposite inference from the plate
+- **Zevachim 24b:3** [LAW] (Ex 29:12) — "with your FINGER" stated at placing — and a verse is read from what precedes it
+- **Zevachim 25b:15** [LAW] (Ex 12:5) — "it shall BE for you" — unblemished through its whole being: the continuous-validity read
+- **Zevachim 26a:21** [CREDIT] (Ex 28:43) — the hair outside — the vested-area rules
+- **Zevachim 28b:5** [LAW] (Ex 29:34) — the leftover's excision by sacred-from-sacred — the inauguration's "because it is sacred" anchors the analogy
+- **Zevachim 36a:3** [LAW] (Ex 12:10) — intent to leave over — R. Yehuda's two burn-verses power the intent disqualification
+- **Zevachim 37b:6** [CREDIT] (Ex 13:12) — the substitutes barred — the passing-over cluster
+- **Zevachim 37b:7** [CREDIT] (Ex 12:27) — in-triage dup: the Paschal's explicit clause
+- **Zevachim 37b:14** [CREDIT] (Ex 13:16) — totafot between your eyes — the tefillin-spellings cluster already verdicted
+- **Zevachim 38b:1** [CREDIT] (Ex 24:10) — tihara as the middle — the tohoro word family from Yoma 15b
+- **Zevachim 44b:6** [LAW] (Ex 29:33) — every meal offering of theirs — the omer and the jealousy offering read in
+- **Zevachim 44b:8** [CREDIT] (Ex 29:33) — in-triage dup: the guilt offerings read in
+- **Zevachim 45b:3** [CREDIT] (Ex 28:38) — the plate atones for impurity only — the seated jurisdiction again
+- **Zevachim 45b:5** [CREDIT] (Ex 28:38) — in-triage dup: the gentile's offering at the plate
+- **Zevachim 53a:9** [LAW] (Ex 27:5) — THE RED LINE — the halfway net of the ledge as the blood-divider's ink anchor
+- **Zevachim 54a:8** [LAW] (Ex 20:22) — building the altar — whole stones, frame and lime, no iron touching
+- **Zevachim 57b:7** [CREDIT] (Ex 11:4,12:8,12:12) — the midnight tanna — verdicted at Pesachim 120b
+- **Zevachim 57b:9** [CREDIT] (Ex 12:11) — in-triage dup: R. Akiva's haste rejoinder again
+- **Zevachim 58a:5** [LAW] (Ex 20:20,20:21) — slaughter UPON IT — the altar-top question and the north-or-south dispute open
+- **Zevachim 58a:10** [CREDIT] (Ex 20:20,20:21) — in-triage dup: the tunnels beneath the altar
+- **Zevachim 58b:16** [CREDIT] (Ex 40:6,40:7) — in-triage dup: the whole altar in the north
+- **Zevachim 59a:1** [CREDIT] (Ex 40:29) — in-triage dup: nothing between the altar and the Tent
+- **Zevachim 59a:2** [CREDIT] (Ex 40:29) — in-triage dup: the Basin's placement squeezed
+- **Zevachim 59a:11** [LAW] (Ex 20:21) — "and you shall slaughter UPON IT" — the earth-altar verse read atop the altar
+- **Zevachim 59b:4** [CREDIT] (Ex 27:1) — in-triage dup: Moses' altar in the size dispute
+- **Zevachim 59b:5** [CREDIT] (Ex 27:1) — in-triage dup: square learned from Ezekiel's square
+- **Zevachim 59b:7** [CREDIT] (Ex 27:1) — in-triage dup: the analogy claimed for height
+- **Zevachim 59b:8** [CREDIT] (Ex 27:1,30:2) — in-triage dup: square from the incense altar, height doubled
+- **Zevachim 59b:9** [CREDIT] (Ex 27:18) — in-triage dup: the courtyard's five cubits objection
+- **Zevachim 59b:10** [CREDIT] (Ex 38:12) — in-triage dup: the tabernacle-altar juxtaposition reply
+- **Zevachim 60a:1** [CREDIT] (Ex 27:18,38:14,38:15) — in-triage dup: fifteen-cubit curtains, the five reread
+- **Zevachim 60a:2** [CREDIT] (Ex 27:1) — in-triage dup: three cubits from the ledge up
+- **Zevachim 61b:4** [LAW] (Ex 20:21,20:22) — the altar's materials through history — earth, copper, and Shiloh's stones
+- **Zevachim 61b:10** [CREDIT] (Ex 20:21) — in-triage dup: the altar extended over the cavities
+- **Zevachim 62a:8** [LAW] (Ex 27:1) — corner, ramp, base, and SQUARE — the altar's indispensable features listed
+- **Zevachim 62a:9** [CREDIT] (Ex 27:5) — in-triage dup: the engraving and ledge pressed
+- **Zevachim 62a:12** [CREDIT] (Ex 38:4) — in-triage dup: the karkov's position argued
+- **Zevachim 62a:13** [CREDIT] (Ex 27:1) — in-triage dup: the measures dispensable, never smaller
+- **Zevachim 62b:6** [CREDIT] (Ex 27:1) — in-triage dup: ravua and the crouching wordplay
+- **Zevachim 62b:14** [CREDIT] (Ex 27:1) — in-triage dup: the two small ramps
+- **Zevachim 66a:1** [CREDIT] (Ex 21:33) — the pit-opener comparison — rides the seated pit clauses
+- **Zevachim 66a:2** [CREDIT] (Ex 21:34) — in-triage dup: "the owner of the pit shall pay" as the duty's proof
+- **Zevachim 69a:7** [LAW] (Ex 24:5) — birds and meal offerings on the private altar — the young men's offerings as the era's scope
+- **Zevachim 82a:16** [CREDIT] (Ex 28:38) — the plate and the disqualified blood — the jurisdiction docket again
+- **Zevachim 82b:8** [LAW] (Ex 22:30) — "flesh IN THE FIELD" — the superfluous field generalized: whatever leaves its boundary is torn
+- **Zevachim 83b:9** [CREDIT] (Ex 29:37) — the altar sanctifies — the whatever-touches cluster from Sanhedrin 34b
+- **Zevachim 83b:12** [CREDIT] (Ex 29:18,29:37,29:38) — in-triage dup: R. Yosei HaGelili's version of the scope
+- **Zevachim 87a:11** [CREDIT] (Ex 29:37,30:29,40:10) — in-triage dup: the ramp and vessels join the altar
+- **Zevachim 88a:15** [CREDIT] (Ex 28:32) — woven work, not needle — verdicted at Yoma 72b
+- **Zevachim 88b:2** [CREDIT] (Ex 39:22,39:24) — the robe all of sky-blue — the vestment specs cluster
+- **Zevachim 88b:3** [LAW] (Ex 39:25,39:26) — SEVENTY-TWO bells — the robe's count fixed, a numeric datum on the ink
+- **Zevachim 88b:7** [AGGADAH] (Ex 28:15) — the belt atones for the heart, the breastplate for judgments
+- **Zevachim 88b:8** [CREDIT] (Ex 28:38) — in-triage dup: the robe for evil speech, the plate for brazenness
+- **Zevachim 91a:17** [CREDIT] (Ex 12:6) — before-midday disqualified — verdicted at Pesachim 61a
+- **Zevachim 95a:4** [CREDIT] (Ex 28:32) — the sprayed garment torn before re-entry — the tearing-ban family
+- **Zevachim 97b:5** [CREDIT] (Ex 12:46) — marrow or no marrow — verdicted at Pesachim 85a
+- **Zevachim 97b:8** [LAW] (Ex 24:6) — like the burnt offering, a utensil — the covenant basins of Sinai as the derivation's source
+- **Zevachim 98a:4** [CREDIT] (Ex 29:34) — the inauguration's leftovers burned — the cluster from Pesachim 24a
+- **Zevachim 101b:6** [LAW] (Ex 40:17) — which goat was burned — the three goats of the eighth day sorted for the mourner's rule
+- **Zevachim 102a:6** [AGGADAH] (Ex 4:14) — was Moses High Priest — the anger at the bush and what it cost
+- **Zevachim 102a:7** [CREDIT] (Ex 4:14) — in-triage dup: Aaron the Levite explained
+- **Zevachim 102a:10** [CREDIT] (Ex 11:8) — in-triage dup: the hot anger with no stated effect
+- **Zevachim 102a:11** [CREDIT] (Ex 7:15) — in-triage dup: Reish Lakish's challenge from the morning river
+- **Zevachim 102a:12** [AGGADAH] (Ex 11:8) — fear of kingship always — Moses' courtesy to Pharaoh
+- **Zevachim 102a:14** [AGGADAH] (Ex 3:5) — "do not draw hither" — the kingship asked and withheld
+- **Zevachim 115b:6** [LAW] (Ex 24:5) — before the Tabernacle — private altars permitted, the firstborn serving
+- **Zevachim 115b:10** [CREDIT] (Ex 19:22) — in-triage dup: "let the priests sanctify" read at the firstborn
+- **Zevachim 115b:12** [CREDIT] (Ex 29:43) — in-triage dup: "I will be sanctified" — the ominous reading kept
+- **Zevachim 116a:12** [CREDIT] (Ex 24:5) — in-triage dup: burnt offerings only before the Tabernacle
+- **Zevachim 116a:18** [CREDIT] (Ex 10:25) — in-triage dup: "give into our hand sacrifices" weighed
+- **Zevachim 116a:19** [CREDIT] (Ex 18:12) — in-triage dup: Yitro's burnt offering and sacrifices
+- **Zevachim 116a:21** [AGGADAH] (Ex 17:13,18:1) — what Yitro heard — the sea, Amalek, or the Torah
+- **Zevachim 117a:5** [LAW] (Ex 21:13) — "I will appoint you a place" — refuge ran even in the wilderness: the ordinances' own clause in force
+- **Zevachim 119a:5** [LAW] (Ex 40:3) — second tithe before the Lord — the there-there analogy through the Ark's screen
+- **Zevachim 119b:18** [LAW] (Ex 28:43) — a priest required at the public altar only — the great and small altars split
+- **Zevachim 119b:20** [CREDIT] (Ex 27:5,40:32) — in-triage dup: the red line and washing at the private altar
+- **Bava Kamma 37b:11-12** [LAW] (Ex 21:35) — "the ox of ANOTHER" — the consecrated ox and the gentile's ox carved out of the goring clause: the neighbor-word's exclusions, with the recorded asymmetry
+- **Beitzah 5b:4-5** [LAW] (Ex 19:13,34:3) — "when the horn sounds" — the mount's ban lapses with the Presence; and "return to your tents" read as the conjugal command resumed
+- **Shabbat Siddur Sefard Linear, Hallel 34** [QUOTE] (Ex 19:6) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Hallel 47** [QUOTE] (Ex 17:6) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Kabbalas Shabbos, Lecha Dodi 9** [QUOTE] (Ex 20:8) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Kabbalas Shabbos, Psalm 95 21** [QUOTE] (Ex 17:1) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Kabbalas Shabbos, Psalm 99 5** [QUOTE] (Ex 25:18) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Maariv Service for Shabbos and Yom Tov, Borechu 201** [QUOTE] (Ex 15:11) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Maariv Service for Shabbos and Yom Tov, Borechu 204** [QUOTE] (Ex 15:2) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Maariv Service for Shabbos and Yom Tov, Borechu 206** [QUOTE] (Ex 15:18) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Maariv Service for Shabbos and Yom Tov, Borechu 253** [QUOTE] (Ex 31:16) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Maariv Service for the Conclusion of Shabbos, Borechu 209** [QUOTE] (Ex 15:11) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Maariv Service for the Conclusion of Shabbos, Borechu 212** [QUOTE] (Ex 15:2) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Maariv Service for the Conclusion of Shabbos, Borechu 214** [QUOTE] (Ex 15:18) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Maariv Service for the Conclusion of Shabbos, Borechu 8** [QUOTE] (Ex 34:6) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Mincha Service for Shabbos and Yom Tov, Ketores (Incense Offering) 23** [QUOTE] (Ex 30:7) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Mincha Service for Shabbos and Yom Tov, Ketores (Incense Offering) 8** [QUOTE] (Ex 30:34) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Mincha Service for Shabbos and Yom Tov, Korbanos (Sacrificial Offerings) 3** [QUOTE] (Ex 30:17) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Mincha Service for Shabbos and Yom Tov, Uvah L'tzion 43** [QUOTE] (Ex 15:18) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Prayer Before Retiring at Night 219** [QUOTE] (Ex 15:26) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Prayers for Yom Tov, Amidah for Yom Tov Maariv, Shacharis and Minchah 119** [QUOTE] (Ex 6:7) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Prayers for Yom Tov, Musaf for Yom Tov, Birkas Kohanim 71** [QUOTE] (Ex 15:22) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Prayers for Yom Tov, Musaf for Yom Tov, Prayer for Rain 61** [QUOTE] (Ex 20:5) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Prayers for Yom Tov, Musaf for Yom Tov, Prayer for Rain 64** [QUOTE] (Ex 2:19) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Prayers for Yom Tov, Musaf for Yom Tov, Prayer for Rain 84** [QUOTE] (Ex 15:25) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Reading of the Torah, Berich Shemei 68** [QUOTE] (Ex 19:4) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Reading of the Torah, Va'yehi Binsoa 39** [QUOTE] (Ex 34:6) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Song of Songs 2:9** [QUOTE] (Ex 3:7) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Song of Songs 3:6** [QUOTE] (Ex 13:21) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, Songs for Shabbos Eve, Kol Mekadesh 41** [QUOTE] (Ex 12:47) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, The Morning Prayers, Amidah for Shabbos Morning 109** [QUOTE] (Ex 34:29) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, The Morning Prayers, Amidah for Shabbos Morning 127** [QUOTE] (Ex 31:16) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, The Morning Prayers, Blessings of the Torah 18** [QUOTE] (Ex 19:6) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, The Morning Prayers, Blessings of the Torah 39** [QUOTE] (Ex 23:9) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, The Morning Prayers, Blessings of the Torah 40** [QUOTE] (Ex 23:14) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, The Morning Prayers, Ketores (Incense Offering) 23** [QUOTE] (Ex 30:7) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, The Morning Prayers, Ketores (Incense Offering) 8** [QUOTE] (Ex 30:34) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, The Morning Prayers, Korbanos (Sacrificial Offerings) 3** [QUOTE] (Ex 30:17) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, The Morning Prayers, Recitation of Shema 172** [QUOTE] (Ex 4:22) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+- **Shabbat Siddur Sefard Linear, The Morning Prayers, Shiras Hayam 88** [QUOTE] (Ex 14:30) — the verse recited in the prayer book (a siddur row on the links shelf, not a Talmud passage)
+
+## The 80 standing-verdict credits (exact refs already verdicted in prior ledgers — the Genesis 958-passage triage, the guardians compile ledger, the Noahide block, and the earlier oral_triage ledgers; credited per the speed rulings, not re-read)
+
+- **Arakhin 15b:1** [CREDIT] (Ex 16:19,16:20,16:25,16:27) — standing verdict in a prior ledger
+- **Arakhin 16a:13** [CREDIT] (Ex 28:42) — standing verdict in a prior ledger
+- **Avodah Zarah 27a:6** [CREDIT] (Ex 12:48) — standing verdict in a prior ledger
+- **Avodah Zarah 43b:3** [CREDIT] (Ex 20:20) — standing verdict in a prior ledger
+- **Bava Batra 16b:14** [CREDIT] (Ex 15:2) — standing verdict in a prior ledger
+- **Bava Kamma 23b:17** [CREDIT] (Ex 21:36) — standing verdict in a prior ledger
+- **Bava Kamma 60b:1** [CREDIT] (Ex 12:22) — standing verdict in a prior ledger
+- **Bava Metzia 33a:1** [CREDIT] (Ex 23:5) — standing verdict in a prior ledger
+- **Bava Metzia 59b:5** [CREDIT] (Ex 23:2) — standing verdict in a prior ledger
+- **Bava Metzia 86b:12** [CREDIT] (Ex 16:4) — standing verdict in a prior ledger
+- **Bava Metzia 86b:13** [CREDIT] (Ex 13:21,17:6) — standing verdict in a prior ledger
+- **Bava Metzia 86b:14** [CREDIT] (Ex 17:6) — standing verdict in a prior ledger
+- **Bava Metzia 94b:1** [CREDIT] (Ex 22:13) — standing verdict in a prior ledger
+- **Bava Metzia 94b:19** [CREDIT] (Ex 22:9) — standing verdict in a prior ledger
+- **Bava Metzia 94b:6** [CREDIT] (Ex 22:6,22:9,22:13) — standing verdict in a prior ledger
+- **Bava Metzia 94b:7** [CREDIT] (Ex 22:13) — standing verdict in a prior ledger
+- **Bava Metzia 94b:8** [CREDIT] (Ex 22:6,22:11) — standing verdict in a prior ledger
+- **Berakhot 55a:8** [CREDIT] (Ex 1:6) — standing verdict in a prior ledger
+- **Berakhot 62b:16** [CREDIT] (Ex 30:16) — standing verdict in a prior ledger
+- **Chullin 89a:6** [CREDIT] (Ex 16:7) — standing verdict in a prior ledger
+- **Chullin 89a:7** [CREDIT] (Ex 5:2) — standing verdict in a prior ledger
+- **Eruvin 53a:7** [CREDIT] (Ex 1:8) — standing verdict in a prior ledger
+- **Horayot 12a:1** [CREDIT] (Ex 16:33) — standing verdict in a prior ledger
+- **Ketubot 29b:3** [CREDIT] (Ex 22:15) — standing verdict in a prior ledger
+- **Ketubot 30a:6** [CREDIT] (Ex 21:22,21:23) — standing verdict in a prior ledger
+- **Ketubot 38a:10** [CREDIT] (Ex 22:15,22:16) — standing verdict in a prior ledger
+- **Ketubot 47b:10** [CREDIT] (Ex 21:10) — standing verdict in a prior ledger
+- **Kiddushin 16a:11** [CREDIT] (Ex 21:8) — standing verdict in a prior ledger
+- **Kiddushin 24a:6** [CREDIT] (Ex 21:26) — standing verdict in a prior ledger
+- **Kiddushin 34a:3** [CREDIT] (Ex 13:12,23:15) — standing verdict in a prior ledger
+- **Makkot 24a:1** [CREDIT] (Ex 20:2) — standing verdict in a prior ledger
+- **Makkot 9a:1** [CREDIT] (Ex 21:15) — standing verdict in a prior ledger
+- **Megillah 25a:16** [CREDIT] (Ex 32:1,32:21) — standing verdict in a prior ledger
+- **Megillah 30b:10** [CREDIT] (Ex 17:8) — standing verdict in a prior ledger
+- **Megillah 9a:15** [CREDIT] (Ex 4:20) — standing verdict in a prior ledger
+- **Menachot 29b:1** [CREDIT] (Ex 13:3) — standing verdict in a prior ledger
+- **Nazir 7a:1** [CREDIT] (Ex 12:2) — standing verdict in a prior ledger
+- **Nedarim 31b:14** [CREDIT] (Ex 4:19) — standing verdict in a prior ledger
+- **Nedarim 32a:1** [CREDIT] (Ex 4:24) — standing verdict in a prior ledger
+- **Nedarim 64b:6** [CREDIT] (Ex 4:19) — standing verdict in a prior ledger
+- **Pesachim 3a:14** [CREDIT] (Ex 4:20) — standing verdict in a prior ledger
+- **Pesachim 7b:14** [CREDIT] (Ex 12:19) — standing verdict in a prior ledger
+- **Pesachim 87b:6** [CREDIT] (Ex 15:16) — standing verdict in a prior ledger
+- **Pesachim 8a:1** [CREDIT] (Ex 12:19) — standing verdict in a prior ledger
+- **Rosh Hashanah 24b:4** [CREDIT] (Ex 20:19) — standing verdict in a prior ledger
+- **Rosh Hashanah 32b:5** [CREDIT] (Ex 3:16) — standing verdict in a prior ledger
+- **Sanhedrin 102a:5** [CREDIT] (Ex 32:34) — standing verdict in a prior ledger
+- **Sanhedrin 109a:1** [CREDIT] (Ex 23:13) — standing verdict in a prior ledger
+- **Sanhedrin 109a:6** [CREDIT] (Ex 23:13) — standing verdict in a prior ledger
+- **Sanhedrin 111a:1** [CREDIT] (Ex 5:23) — standing verdict in a prior ledger
+- **Sanhedrin 111a:10** [CREDIT] (Ex 5:23,6:1) — standing verdict in a prior ledger
+- **Sanhedrin 56b:6** [CREDIT] (Ex 20:2) — standing verdict in a prior ledger
+- **Sanhedrin 58b:2** [CREDIT] (Ex 2:13) — standing verdict in a prior ledger
+- **Sanhedrin 59b:6** [CREDIT] (Ex 20:13) — standing verdict in a prior ledger
+- **Sanhedrin 63a:1** [CREDIT] (Ex 20:5) — standing verdict in a prior ledger
+- **Sanhedrin 67b:10** [CREDIT] (Ex 7:11,7:22) — standing verdict in a prior ledger
+- **Sanhedrin 69a:4** [CREDIT] (Ex 21:14) — standing verdict in a prior ledger
+- **Shabbat 10a:5** [CREDIT] (Ex 18:13) — standing verdict in a prior ledger
+- **Shabbat 132a:10** [CREDIT] (Ex 31:16) — standing verdict in a prior ledger
+- **Shabbat 132a:6** [CREDIT] (Ex 31:13) — standing verdict in a prior ledger
+- **Shabbat 132a:8** [CREDIT] (Ex 31:16) — standing verdict in a prior ledger
+- **Shabbat 86a:2** [CREDIT] (Ex 19:15) — standing verdict in a prior ledger
+- **Shabbat 97a:5** [CREDIT] (Ex 4:6,4:31) — standing verdict in a prior ledger
+- **Sotah 11a:11** [CREDIT] (Ex 14:27,18:11) — standing verdict in a prior ledger
+- **Sotah 11b:1** [CREDIT] (Ex 1:13) — standing verdict in a prior ledger
+- **Sotah 11b:17** [CREDIT] (Ex 1:17) — standing verdict in a prior ledger
+- **Sotah 11b:2** [CREDIT] (Ex 1:14) — standing verdict in a prior ledger
+- **Sotah 12a:14** [CREDIT] (Ex 2:1) — standing verdict in a prior ledger
+- **Sotah 12a:16** [CREDIT] (Ex 2:2) — standing verdict in a prior ledger
+- **Sotah 12a:17** [CREDIT] (Ex 2:2) — standing verdict in a prior ledger
+- **Sotah 12b:3** [CREDIT] (Ex 2:5) — standing verdict in a prior ledger
+- **Sotah 13a:1** [CREDIT] (Ex 2:4) — standing verdict in a prior ledger
+- **Sotah 36b:1** [CREDIT] (Ex 1:2) — standing verdict in a prior ledger
+- **Sotah 43a:2** [CREDIT] (Ex 6:25) — standing verdict in a prior ledger
+- **Taanit 15a:9** [CREDIT] (Ex 14:15) — standing verdict in a prior ledger
+- **Yevamot 13b:6** [CREDIT] (Ex 15:27,16:1) — standing verdict in a prior ledger
+- **Yevamot 79a:3** [CREDIT] (Ex 20:17,20:20) — standing verdict in a prior ledger
+- **Yoma 28b:7** [CREDIT] (Ex 3:16) — standing verdict in a prior ledger
+- **Yoma 85b:3** [CREDIT] (Ex 31:16) — standing verdict in a prior ledger
+- **Zevachim 88b:6** [CREDIT] (Ex 28:42) — standing verdict in a prior ledger

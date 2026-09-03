@@ -41,6 +41,10 @@ m.declare("YHWH", "LET",
 # themselves”) — case living-being, sin-vi-shegaga-from-all-commandment
 # routes to and-make-from-one-from-themselves
 m.case("nefesh, techeta_vi_shegaga_mi_kol_mitzvot", "ve_asa_me_achat_me_hena")
+# witness-tier presupposed read: knowledge_indexed_counts on
+# aggregation_keys — read, not installed
+m.witness_read("aggregation_keys", "knowledge_indexed_counts",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 1 7", "Sifra, Vayikra Dibbura DeChovah, Chapter 1 4", "Sifra, Vayikra Dibbura DeChovah, Chapter 1 5", "Sifra, Vayikra Dibbura DeChovah, Section 5 4", "Sifra, Vayikra Dibbura DeChovah, Section 7 8", "Sifra, Vayikra Dibbura DeChovah, Section 7 9", "Sifra, Vayikra Dibbura DeChovah, Chapter 1 8", "Sifra, Vayikra Dibbura DeChovah, Chapter 1 13"])
 
 # -------------------------- Lev.4.3 · BRANCH_ONE_THE_ANOINTED --------------
 # אִם הַכֹּהֵן הַמָּשִׁיחַ יֶחֱטָא לְאַשְׁמַת הָעָם וְהִקְרִיב עַל חַטָּאתוֹ
@@ -95,6 +99,10 @@ m.step("Lev.4.6")
 # marker-face-separatrix-the-holiness
 m.handler("ba_dam",
           "taval_etzbao ∧ hiza_sheva_peamim_et_pene_parokhet_ha_qodesh")
+# witness-tier presupposed read: dip_per_sprinkle_staves on blood_algorithms
+# — read, not installed
+m.witness_read("blood_algorithms", "dip_per_sprinkle_staves",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Section 3 5", "Sifra, Vayikra Dibbura DeChovah, Section 3 7", "Sifra, Vayikra Dibbura DeChovah, Section 3 8", "Sifra, Vayikra Dibbura DeChovah, Section 3 10", "Sifra, Vayikra Dibbura DeChovah, Section 3 11", "Sifra, Vayikra Dibbura DeChovah, Section 3 13", "Sifra, Vayikra Dibbura DeChovah, Chapter 10 4", "Sifra, Vayikra Dibbura DeChovah, Chapter 9 1"])
 
 # -------------------------- Lev.4.7 · HORNS_AND_BASE -----------------------
 # וְנָתַן הַכֹּהֵן מִן־הַדָּם עַל־קַרְנוֹת מִזְבַּח קְטֹרֶת הַסַּמִּים
@@ -199,6 +207,10 @@ m.step("Lev.4.13")
 # from-eye the-assemblage”) — case all-congregation-Israel, stray-and-veil-
 # from-sight-word/thing routes to and-be-guilty
 m.case("kal_adat_yisrael, yishgu_ve_nelam_davar", "ve_ashemu")
+# witness-tier presupposed read: unanimity_partial_located on
+# court_error_machine — read, not installed
+m.witness_read("court_error_machine", "unanimity_partial_located",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Section 4 2", "Sifra, Vayikra Dibbura DeChovah, Section 4 3", "Sifra, Vayikra Dibbura DeChovah, Section 4 4", "Sifra, Vayikra Dibbura DeChovah, Section 4 5", "Sifra, Vayikra Dibbura DeChovah, Section 4 7", "Sifra, Vayikra Dibbura DeChovah, Section 4 8", "Sifra, Vayikra Dibbura DeChovah, Section 4 10", "Sifra, Vayikra Dibbura DeChovah, Section 4 12"])
 
 # -------------------------- Lev.4.14 · THE_SIN_BECOMES_KNOWN ---------------
 # וְנוֹדְעָה הַחַטָּאת אֲשֶׁר חָטְאוּ עָלֶיהָ וְהִקְרִיבוּ הַקָּהָל פַּר
@@ -215,6 +227,10 @@ m.step("Lev.4.14")
 # bring-near-the-assemblage-bullock ∧ come/bring-it-to-me-fene-tent-seasons
 m.handler("ve_noda_ha_chatat",
           "hiqrivu_ha_qahal_par ∧ heviu_oto_li_fene_ohel_moed")
+# witness-tier presupposed read: four_positions on tribal_arithmetic — read,
+# not installed
+m.witness_read("tribal_arithmetic", "four_positions",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Section 4 13", "Sifra, Vayikra Dibbura DeChovah, Section 4 14", "Sifra, Vayikra Dibbura DeChovah, Section 4 15", "Sifra, Vayikra Dibbura DeChovah, Section 4 16", "Sifra, Vayikra Dibbura DeChovah, Section 4 17"])
 
 # -------------------------- Lev.4.15 · THE_ELDERS_HANDS --------------------
 # וְסָמְכוּ זִקְנֵי הָעֵדָה אֶת־יְדֵיהֶם עַל־רֹאשׁ הַפָּר לִפְנֵי יְהוָה
@@ -230,6 +246,10 @@ m.step("Lev.4.15")
 # LORD
 m.handler("par_ha_qahal",
           "samkhu_ziqne_ha_eda_yedehem ∧ shachat_li_fene_YHWH")
+# witness-tier presupposed read: five_or_three on elders_quorum — read, not
+# installed
+m.witness_read("elders_quorum", "five_or_three",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 6 1", "Sifra, Vayikra Dibbura DeChovah, Chapter 6 2", "Sifra, Vayikra Dibbura DeChovah, Chapter 6 3"])
 
 # -------------------------- Lev.4.16 · THE_ANOINTED_CARRIES_AGAIN ----------
 # וְהֵבִיא הַכֹּהֵן הַמָּשִׁיחַ מִדַּם הַפָּר אֶל־אֹהֶל מוֹעֵד
@@ -338,6 +358,10 @@ m.step("Lev.4.23")
 # to-him-chatato then come/bring-qarbano-shaggy-she-goat-male-entire
 m.handler("o_hoda_elav_chatato",
           "hevi_qarbano_seir_izim_zakhar_tamim")
+# witness-tier presupposed read: self_knowledge_specificity on
+# epistemic_triggers — read, not installed
+m.witness_read("epistemic_triggers", "self_knowledge_specificity",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 7 1", "Sifra, Vayikra Dibbura DeChovah, Chapter 7 3", "Sifra, Vayikra Dibbura DeChovah, Chapter 7 4", "Sifra, Vayikra Dibbura DeChovah, Chapter 7 6", "Sifra, Vayikra Dibbura DeChovah, Chapter 7 7", "Sifra, Vayikra Dibbura DeChovah, Chapter 7 8", "Sifra, Vayikra Dibbura DeChovah, Chapter 7 9"])
 
 # -------------------------- Lev.4.24 · AT_THE_OLAH_PLACE -------------------
 # וְסָמַךְ יָדוֹ עַל־רֹאשׁ הַשָּׂעִיר וְשָׁחַט אֹתוֹ בִּמְקוֹם
@@ -399,6 +423,10 @@ m.step("Lev.4.27")
 # being one sin in-mistake from-people the-earth”) — case living-being-from-
 # people-the-earth, sin-vi-shegaga routes to and-be-guilty
 m.case("nefesh_me_am_ha_aretz, techeta_vi_shegaga", "ve_ashem")
+# witness-tier presupposed read: dependent_actor_exempt on tier_fences —
+# read, not installed
+m.witness_read("tier_fences", "dependent_actor_exempt",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Section 7 1", "Sifra, Vayikra Dibbura DeChovah, Section 7 2", "Sifra, Vayikra Dibbura DeChovah, Section 7 3", "Sifra, Vayikra Dibbura DeChovah, Section 7 4", "Sifra, Vayikra Dibbura DeChovah, Section 7 6", "Sifra, Vayikra Dibbura DeChovah, Section 7 7", "Sifra, Vayikra Dibbura DeChovah, Section 6 1", "Sifra, Vayikra Dibbura DeChovah, Section 6 9"])
 
 # -------------------------- Lev.4.28 · THE_SHE_GOAT ------------------------
 # אוֹ הוֹדַע אֵלָיו חַטָּאתוֹ אֲשֶׁר חָטָא וְהֵבִיא קָרְבָּנוֹ שְׂעִירַת
@@ -476,6 +504,10 @@ m.step("Lev.4.32")
 # come/bring-her/its”) — case ram, and-if-come/bring-to-sin-offering routes
 # to female-entire-yeviena
 m.case("keves, ve_im_yavi_le_chatat", "neqeva_temima_yeviena")
+# witness-tier presupposed read: no_rank_lost_replaced on order_equivalence
+# — read, not installed
+m.witness_read("order_equivalence", "no_rank_lost_replaced",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 10 9", "Sifra, Vayikra Dibbura DeChovah, Chapter 10 10", "Sifra, Vayikra Dibbura DeChovah, Chapter 11 1", "Sifra, Vayikra Dibbura DeChovah, Chapter 11 2"])
 
 # -------------------------- Lev.4.33 · LEAN_AND_SLAUGHTER_HER --------------
 # וְסָמַךְ אֶת־יָדוֹ עַל רֹאשׁ הַחַטָּאת וְשָׁחַט אֹתָהּ לְחַטָּאת בִּמְקוֹם
@@ -547,4 +579,29 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 35
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('aggregation_keys', 'knowledge_indexed_counts'), ('blood_algorithms', 'dip_per_sprinkle_staves'), ('court_error_machine', 'unanimity_partial_located'), ('tribal_arithmetic', 'four_positions'), ('elders_quorum', 'five_or_three'), ('epistemic_triggers', 'self_knowledge_specificity'), ('tier_fences', 'dependent_actor_exempt'), ('order_equivalence', 'no_rank_lost_replaced')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 1 7', 'Sifra, Vayikra Dibbura DeChovah, Chapter 1 4', 'Sifra, Vayikra Dibbura DeChovah, Chapter 1 5', 'Sifra, Vayikra Dibbura DeChovah, Section 5 4', 'Sifra, Vayikra Dibbura DeChovah, Section 7 8', 'Sifra, Vayikra Dibbura DeChovah, Section 7 9', 'Sifra, Vayikra Dibbura DeChovah, Chapter 1 8', 'Sifra, Vayikra Dibbura DeChovah, Chapter 1 13']
+    assert all('knowledge_indexed_counts' not in f for f in m.WORLD["facts"])
+    assert 'aggregation_keys' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Section 3 5', 'Sifra, Vayikra Dibbura DeChovah, Section 3 7', 'Sifra, Vayikra Dibbura DeChovah, Section 3 8', 'Sifra, Vayikra Dibbura DeChovah, Section 3 10', 'Sifra, Vayikra Dibbura DeChovah, Section 3 11', 'Sifra, Vayikra Dibbura DeChovah, Section 3 13', 'Sifra, Vayikra Dibbura DeChovah, Chapter 10 4', 'Sifra, Vayikra Dibbura DeChovah, Chapter 9 1']
+    assert all('dip_per_sprinkle_staves' not in f for f in m.WORLD["facts"])
+    assert 'blood_algorithms' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Section 4 2', 'Sifra, Vayikra Dibbura DeChovah, Section 4 3', 'Sifra, Vayikra Dibbura DeChovah, Section 4 4', 'Sifra, Vayikra Dibbura DeChovah, Section 4 5', 'Sifra, Vayikra Dibbura DeChovah, Section 4 7', 'Sifra, Vayikra Dibbura DeChovah, Section 4 8', 'Sifra, Vayikra Dibbura DeChovah, Section 4 10', 'Sifra, Vayikra Dibbura DeChovah, Section 4 12']
+    assert all('unanimity_partial_located' not in f for f in m.WORLD["facts"])
+    assert 'court_error_machine' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Section 4 13', 'Sifra, Vayikra Dibbura DeChovah, Section 4 14', 'Sifra, Vayikra Dibbura DeChovah, Section 4 15', 'Sifra, Vayikra Dibbura DeChovah, Section 4 16', 'Sifra, Vayikra Dibbura DeChovah, Section 4 17']
+    assert all('four_positions' not in f for f in m.WORLD["facts"])
+    assert 'tribal_arithmetic' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 6 1', 'Sifra, Vayikra Dibbura DeChovah, Chapter 6 2', 'Sifra, Vayikra Dibbura DeChovah, Chapter 6 3']
+    assert all('five_or_three' not in f for f in m.WORLD["facts"])
+    assert 'elders_quorum' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 7 1', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 3', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 4', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 6', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 7', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 8', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 9']
+    assert all('self_knowledge_specificity' not in f for f in m.WORLD["facts"])
+    assert 'epistemic_triggers' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Section 7 1', 'Sifra, Vayikra Dibbura DeChovah, Section 7 2', 'Sifra, Vayikra Dibbura DeChovah, Section 7 3', 'Sifra, Vayikra Dibbura DeChovah, Section 7 4', 'Sifra, Vayikra Dibbura DeChovah, Section 7 6', 'Sifra, Vayikra Dibbura DeChovah, Section 7 7', 'Sifra, Vayikra Dibbura DeChovah, Section 6 1', 'Sifra, Vayikra Dibbura DeChovah, Section 6 9']
+    assert all('dependent_actor_exempt' not in f for f in m.WORLD["facts"])
+    assert 'tier_fences' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 10 9', 'Sifra, Vayikra Dibbura DeChovah, Chapter 10 10', 'Sifra, Vayikra Dibbura DeChovah, Chapter 11 1', 'Sifra, Vayikra Dibbura DeChovah, Chapter 11 2']
+    assert all('no_rank_lost_replaced' not in f for f in m.WORLD["facts"])
+    assert 'order_equivalence' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

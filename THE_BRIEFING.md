@@ -14,9 +14,15 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   baked into an epub.
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
-## SCOREBOARD (as of 2026-09-02, latest)
+## SCOREBOARD (as of 2026-09-03, latest)
 
 - Genesis: DONE — derived, read, examined, stamped (73 units).
+- **Leviticus: OPENED.** Parashat Vayikra (the five offering
+  chapters) derived under the book's own spine — the Sifra, the
+  tradition's verse-by-verse law commentary — examined against all 68 of its Mishnah rows, and
+  stamped, in one sitting. The reading anticipated the exam 47 of
+  48, many answers word for word: the spine of a LAW book turns
+  out to hold nearly the whole answer sheet in advance.
 - **Exodus: DONE.** All forty chapters derived, examined, and
   stamped end to end. The closing sitting (Vayakhel–Pekudei, the
   six execution chapters) ran the whole cycle in one day and the
@@ -24,10 +30,23 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   from chapter 25 ("that I may dwell among them") discharged on
   the last page, with the cloud-and-fire travel signal left
   running for the book of Numbers.
-- The corpus: 117 frozen units, one world, fingerprint unmoved
-  through the entire book.
-- The exam engine: nine rounds, 329 cases, 329 answered correctly,
-  124 compiled rules, vocabulary of 145 registered input dimensions.
+- The corpus: 125 frozen units, one world, fingerprint unmoved
+  through two whole books and the third's opening.
+- The exam engine: ten rounds, 377 cases, 377 answered correctly,
+  141 compiled rules, vocabulary of 148 registered input dimensions.
+- **The Exodus Talmud triage: DONE (2026-09-03).** Every row on the
+  citation shelf where the Talmud quotes Exodus — 2,033 of them —
+  opened and sorted: 501 carry law derived from the verse, 1,109
+  were already held by the machine or duplicates, 336 are story,
+  87 are quotations (38 of those turned out to be the prayer book,
+  not the Talmud — recorded openly). The 501 law rows are mapped
+  into 18 exam blocks waiting for your word, the way the Noahide
+  block opened from Genesis's map. Best finds: the Talmud NAMES the
+  vowels-vs-consonants authority question we measured on creation
+  week (Sanhedrin 4a), records three verses whose grammar it calls
+  undecided (Yoma 52b), does letter arithmetic on the Ark's own
+  spelling (Sanhedrin 29a), and rules that nobody may invent a
+  verbal analogy without a received tradition (Shabbat 97a).
 - Stamps: administered by the machine under your delegation, every
   delegated stamp labeled as such forever.
 - Newest design fact (Vayakhel–Pekudei): THE BOOKS ARE PART OF THE
@@ -56,6 +75,147 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Next alongside it: Leviticus (new spine — Sifra).
 
 ## ENTRIES (newest first)
+
+### 2026-09-03 (late night) — The simulator takes its first breath
+
+Your order — "build the skeleton then compile the spans" — and both
+halves ran the same night. THE SKELETON (world_engine.py) is the
+five constructs live: a clock, mutable ledgers on people and
+animals and land, laws firing unasked, timers, and the diff engine.
+Its first spin replayed the tradition's own recorded cases — never
+invented history — and passed 5 of 5: the slave's six-year timer
+fired; the ox turned forewarned at the third goring; the two
+keepers split swear-and-pay on one theft; the sworn deposit paid,
+added its fifth, and closed Heaven's docket when the recorded ram
+arrived; and the pierced slave's "forever" VOIDED his six-year
+exit — a gap the spin itself exposed (timers must be cancellable
+by a later text event), which is exactly what a skeleton is for.
+Seven debts ended OPEN, and that is correct: the cases state the
+obligation and record no payment. THEN THREE SPANS COMPILED with
+effects from birth: the PASSOVER ENGINE (Exod 12-13, 24/24 — the
+access filter's ten blocks, the calendar-window timers, the first
+cut-off entry on Heaven's docket), the FESTIVAL CALENDAR (Exod
+23:10-19, 14/14 — the first timer on a LAND entity: the seventh-
+year release; and the kid-in-milk clause machine-counted at its
+three seats), and the DECALOGUE'S LAW LAYER (Exod 20, 12/12 — the
+vain oath's lashes, the kiddush duty, theft-of-persons, iron
+disqualifying the altar stone). The effect vocabulary stands at 39,
+every entry's Hebrew verb machine-verified in the ink — and twice
+tonight a wrong token of mine was caught by the probes and
+corrected by the actual letters. Four more units earned their
+"compiled" chips: the Passover chapters, the consecration chapter,
+the Decalogue, the calendar chapter.
+
+### 2026-09-03 (night) — THE EFFECTS LAW: the machine stops grading and starts simulating
+
+Your idea, ruled tonight: the law's output has to CHANGE something.
+Until now every compiled function ended at a label — liable,
+exempt. From tonight, every verdict also carries its EFFECT: the
+owner pays, the slave goes free, the ox turns forewarned, the
+land's jubilee timer runs. Effects write a LEDGER on persistent
+things (people, houses, animals, land, two dockets — the court's
+and Heaven's), never the story itself: the law computes what people
+OWE, and only the text says what people DO. That one line is why
+the no-invented-events fence survives untouched — it got a
+clarifying sentence, not an amendment. The effect words themselves
+(pays, goes free, forfeit, exiled) will be discovered from the
+sources exactly the way the case vocabulary was — never designed.
+And the destination is now named: run that ledger across the whole
+Hebrew Bible and check whether every prophetic indictment matches
+an entry the law had already computed as OPEN. Nobody has ever
+computed that. You asked whether this alters the entire
+architecture — answer in the chat and in THE_WORLD.md: it alters
+the whole RUNTIME (verdict shape, a world clock, entity ledgers, a
+diff engine), while the evidence layer you spent three months
+building — frozen units, ledgers, claims, gates — stands unchanged
+as the input that feeds it. The constitution planned for exactly
+this split.
+
+WHY IT'S A SIMULATOR AND NOT A SOPHISTICATED LEDGER (your
+follow-up, recorded for the epub). Everything we have built so far
+is a question-answerer: hand it a case, it hands back a label and
+stops. A simulator is a loop that runs whether or not anyone asks
+anything. Five things will exist in the new engine that exist
+nowhere in today's code:
+1. A MAIN LOOP OVER TIME, not over rows. Today's programs walk
+   lists of cases or recorded events. The simulator advances a
+   clock with named eras, and the clock is the driver.
+2. STATE THAT CHANGES. Today's world is append-only settled facts.
+   The simulator's ledgers mutate: a debt opens, is paid, closes;
+   the ox flips to forewarned; the slave's term ends. People,
+   houses, animals, and land become things with life histories.
+3. LAWS BECOME DAEMONS. Today a law answers when asked. In the
+   simulator every registered law fires UNASKED on every event
+   that arrives from the text — a dispatch loop, a different
+   program shape entirely.
+4. TIMERS. The seventh year fires; the jubilee fires — effects at
+   FUTURE times with no text event triggering them. Nothing we
+   have does anything at a future time. This construct alone is
+   the dividing line: a ledger records what happened; only a
+   simulator can owe something to the future.
+5. THE DIFF ENGINE. Grading stops being a final table and becomes
+   a checkpoint stream — the computed ledger against what the text
+   declares, all the way down the Tanakh, with "still open" as a
+   legal ending.
+WHAT SURVIVES: the 141 compiled rules and the cold functions
+become the law library INSIDE the daemons — each still the verdict
+kernel, now returning verdict + effect. The frozen corpus becomes
+the input tape the events arrive from. The Python we have is not
+discarded; it is demoted from "the program" to "the program's
+parts," and the simulator is the new main loop wrapping them. And
+"compile the law spans" now means: each span compiled WITH
+effects, feeding the engine.
+
+### 2026-09-03 (evening) — The compile becomes a required step, and Leviticus 5 runs
+
+You caught the gap: the sitting's exam had graded rules we wrote
+WITH the reading in hand — nothing had forced the cold act the
+compiler law is for. You confirmed the process back to me in your
+own words, ruled it, and Step 5 now carries the deliverable rule: a
+law span is not finished until its cold-compiled function exists —
+code from the verses first, the Mishnah's rows fed in as test data,
+the Talmud consulted one miss at a time, each fix labeled with its
+source, and only a clean run earns the "compiled" chip. Then we ran
+it on Leviticus 5: three functions from the bare ink — the sliding-
+scale offering, the sacrilege law, the deposit-and-restitution
+algebra — against 27 Mishnah test cells: 27 of 27, with the
+fractions measured (a quarter pure ink, over half named Talmud
+moves, the rest data and recorded disputes). The run found two new
+compile moves for the catalog: the WORD-ORDER READ (a Mishnah row
+that falls straight out of the verse's clause order — pure ink) and
+the NUMBER HOOK (the recursive fifth hanging on the ink's own
+plural, "its FIFTHS"). And the honesty machinery caught ME twice —
+I claimed two spellings the ink doesn't have, and the probes
+refused to run until the code matched the letters.
+
+
+### 2026-09-03 (later) — The front end measured, and the steps cut from ten to six
+
+You asked one sharp question — "I still think we need the
+cantillation marks to derive the narrative, am I wrong?" — and
+ordered it measured on the creation week. The answer: half right.
+We USED the marks (they were the workbench the derivation was
+carved on), but we don't NEED them: of the week's 131 derived
+facts, the accent tree is the sole deciding witness for exactly
+ZERO. More than half the facts stand on words and roots alone,
+about a third on the verb-grammar layer, and the rest are the
+teacher's own testimony — with the scroll's own paragraph marks
+(one closing each of the seven days, written ink a scribe must
+copy) as the built-in scene divider. Then your follow-up question
+("did you use the morphology of the Masoretes or Onkelos?")
+exposed the deeper measurement, and you ordered that run too: of
+the 38 grammar-decided facts, 25 are visible in the bare
+consonants, 12 fall to context, ONE needs a witness — and that
+witness is Onkelos, not the vowels. The Masoretic layer — vowels
+and accents both, the same hands — decides NOTHING alone anywhere
+in the week: it agrees everywhere and rules nowhere. The teacher's
+pronunciation, written down. On the strength of this you called it
+a major change and ordered the steps simplified: TEN became SIX —
+the front end (what the machine reads), the teacher (declare and
+read), the code, gates-and-stamp, the exam, publish. Every law
+moved verbatim; the old text is preserved at
+logic/THE_STEPS_v1_2026-09-03.md; the public site still shows the
+old numbering until its next deploy.
 
 ### 2026-09-03 — The code/data separation law, and the research that keeps proving you right
 

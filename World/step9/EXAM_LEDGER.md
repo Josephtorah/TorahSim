@@ -231,3 +231,28 @@ every line), and the exam's four rows all turn out to be laws the
 execution ink itself anchors: the fire-ban scheduling the courts,
 the halt-order anchoring the carrying labor, the census-silver
 carrying the priests' duty dispute, the spread tent naming flax.
+
+## ROUND 10 — THE VAYIKRA EXAM (2026-09-03; owner: "parashat Vayikra.
+## do this" — THE BOOK OF LEVITICUS OPENS, derived and examined in
+## one sitting, the rhythm's seventh derive-then-examine cycle)
+Membership: all 68 bare Mishnah rows citing Lev 1:1-5:26 (59 read in
+full, 9 credited under the guards; docket ledger
+logic/oral_triage/vayikra_exam_mishnah_2026-09-03.md). 17 modules
+compiled in vayikra_rules.py, 48 case rows in cases_vayikra.yaml:
+48/48 first full run; ALL NINE prior exams re-run green — 377/377
+across ten rounds. ONE finding: F-045 (Mishnah Shevuot 2:3, the
+quick-exit rule for one who became unclean inside the court — class
+C at first classification), AUTO-SEATED same sitting as LV05A-09 on
+lev_05_asham_graded, rule live, case re-classed A. Catalog
+R-320..R-336; 141 compiled rules. Vocabulary 145 → 148 dims (3 new:
+court_state, ruling_scope, oath_scope; 37 query values + 2 actor
+values; collision guard clean). THE HEADLINE: THE READING GRADED
+ITSELF — 47 of 48 rows were anticipated by the same sitting's Sifra
+derivation, many VERBATIM (the recursive fifth, the me'ilah-doubt
+dispute, the dead father's offering, the bird age windows, the vow
+normalization, the four-types matrix, the elders' quorum dispute,
+the two-carried-beam dispute, the compelled offering, the omer
+device dispute, the same-category-doubt refinement): the Sifra IS
+the Mishnah's derivation layer, and reading it first left the
+answer sheet almost nothing to teach — the two-shelves law measured
+at book scale on day one of the book.

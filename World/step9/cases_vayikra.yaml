@@ -1,0 +1,308 @@
+# THE VAYIKRA EXAM (round 10 — the book of Leviticus' OPENING cycle,
+# derived and examined in one sitting 2026-09-03; owner: "parashat
+# Vayikra. do this"). Membership: the 68 bare Mishnah rows citing
+# Lev 1:1-5:26 (59 read in full, 9 credited to prior rounds' reads).
+# Read-source record: logic/oral_triage/vayikra_exam_mishnah_2026-09-03.md.
+# Provenance: mishnah + leviticus_anchor.
+
+- module: court_error
+  tractate: Horayot
+  oracle: Mishnah Horayot 1:4, 1:5, 2:2, 2:3, 2:5, 2:7, 3:1, 3:3
+  leviticus_anchor: {unit: lev_04_inadvertence_case_tree, ref: Lev.4.13,
+    claims: [L04-13, L04-14, L04-16, L04-17]}
+  cases:
+  - id: H1_4_dissent
+    input: {query: court_liability, court_state: one_dissented}
+    expected: {verdict: individuals_liable_court_exempt}
+    class: A
+  - id: H1_4_mufla
+    input: {query: court_liability, court_state: mufla_absent}
+    expected: {verdict: individuals_liable_court_exempt}
+    class: A
+  - id: H1_4_disqualified
+    input: {query: court_liability, court_state: member_disqualified}
+    expected: {verdict: individuals_liable_court_exempt}
+    class: A
+  - id: H2_2_hp_alone
+    input: {query: hp_liability, ruling_scope: self_ruled_self_acted}
+    expected: {verdict: own_bull}
+    class: A
+  - id: H2_3_requirement
+    input: {query: hp_liability, ruling_scope: deed_without_ruling}
+    expected: {verdict: exempt_hora_ah_required}
+    class: A
+  - id: H3_1_removed
+    input: {query: hp_liability, ruling_scope: removed_after_sin}
+    expected: {verdict: still_brings_bull}
+    class: A
+  - id: H3_3_before_appointment
+    input: {query: leader_liability, ruling_scope: sinned_before_appointment}
+    expected:
+      verdict: [commoner_offering, exempt_if_known_after]
+    class: A
+  - id: H2_5_court_oath_exempt
+    input: {query: court_liability, court_state: oath_or_tumah_ruling}
+    expected: {verdict: court_exempt_graded_tier}
+    class: A
+  - id: H2_7_talui_king
+    input: {query: talui_liability, actor: king}
+    expected: {verdict: liable}
+    class: A
+  - id: H2_7_talui_hp
+    input: {query: talui_liability, actor: anointed_priest}
+    expected: {verdict: exempt}
+    class: A
+- module: testimony_oath
+  tractate: Shevuot
+  oracle: Mishnah Shevuot 4:2, 4:3, 4:8, 4:9, 4:10, 4:12
+  leviticus_anchor: {unit: lev_05_asham_graded, ref: Lev.5.1,
+    claims: [LV05A-01]}
+  cases:
+  - id: S4_10_synagogue
+    input: {query: testimony_oath, oath_scope: blanket_congregation}
+    expected: {verdict: exempt}
+    class: A
+  - id: S4_9_oath_precedes
+    input: {query: testimony_oath, oath_scope: oath_before_knowledge}
+    expected: {verdict: exempt}
+    class: A
+  - id: S4_12_slave_sent
+    input: {query: testimony_oath, oath_scope: demanded_by_messenger}
+    expected: {verdict: exempt}
+    class: A
+  - id: S4_8_promise_claim
+    input: {query: testimony_oath, oath_scope: promised_gift_claim}
+    expected: {verdict: exempt}
+    class: A
+  - id: S4_3_forum
+    input: {query: testimony_oath, oath_scope: denial_in_court}
+    expected: {verdict: liable}
+    class: A
+- module: utterance_oath
+  tractate: Shevuot
+  oracle: Mishnah Shevuot 3:1, 3:5, 3:8
+  leviticus_anchor: {unit: lev_05_asham_graded, ref: Lev.5.4,
+    claims: [LV05A-03]}
+  cases:
+  - id: S3_1_two_four
+    input: {query: utterance_oath_count}
+    expected: {verdict: two_that_are_four}
+    class: A
+  - id: S3_5_others_matters
+    input: {query: utterance_oath, oath_scope: others_concern_no_harm}
+    expected: {verdict: liable}
+    class: A
+  - id: S3_8_vain
+    input: {query: utterance_oath, oath_scope: contradicts_known_fact}
+    expected: {verdict: vain_oath_outside_offering}
+    class: A
+- module: tumah_awareness
+  tractate: Shevuot
+  oracle: Mishnah Shevuot 2:1, 2:3, 2:5
+  leviticus_anchor: {unit: lev_05_asham_graded, ref: Lev.5.2,
+    claims: [LV05A-02]}
+  cases:
+  - id: S2_1_two_four
+    input: {query: tumah_awareness_count}
+    expected: {verdict: two_that_are_four}
+    class: A
+  - id: S2_5_which_species
+    input: {query: tumah_hidden_variable}
+    expected:
+      verdict: [hidden_tumah_suffices, must_know_which_species]
+    class: A
+  - id: S2_3_inside_exit
+    input: {query: tumah_in_courtyard_exit}
+    expected: {verdict: shortest_way_or_liable}
+    class: A  # was C at first classification; F-045 auto-seated as LV05A-09 the same sitting
+- module: deposit_oath
+  tractate: Shevuot
+  oracle: Mishnah Shevuot 5:1
+  leviticus_anchor: {unit: lev_05_asham_sancta, ref: Lev.5.21,
+    claims: [LV05B-04]}
+  cases:
+  - id: S5_1_scope
+    input: {query: deposit_oath_scope}
+    expected: {verdict: all_persons}
+    class: A
+- module: keritot_offerings
+  tractate: Keritot
+  oracle: Mishnah Keritot 2:2, 4:3, 5:2, 6:7, 6:8
+  leviticus_anchor: {unit: lev_05_asham_sancta, ref: Lev.5.17,
+    claims: [LV05B-03, LV05B-05]}
+  cases:
+  - id: K4_3_same_category
+    input: {query: doubt_specificity, court_state: same_category_doubt}
+    expected: {verdict: liable_both_agree}
+    class: A
+  - id: K5_2_meilah_doubt
+    input: {query: talui_for_meilah_doubt}
+    expected:
+      verdict: [liable_talui, exempt_talui]
+    class: A
+  - id: K6_7_dead_father
+    input: {query: offering_inheritance}
+    expected: {verdict: no_discharge}
+    class: A
+  - id: K6_8_cross_species
+    input: {query: offering_monies_conversion}
+    expected: {verdict: permitted_across_tiers}
+    class: A
+- module: minchah_rules
+  tractate: Menachot
+  oracle: Mishnah Menachot 3:2, 5:2, 5:3, 9:7, 10:4, 12:3, 13:11
+  leviticus_anchor: {unit: lev_02_minchah, ref: Lev.2.1,
+    claims: [LV02-04, LV02-05, LV02-07, LV02-09, LV02-10]}
+  cases:
+  - id: M3_2_omissions
+    input: {query: minchah_omission_validity}
+    expected: {verdict: valid}
+    class: A
+  - id: M5_2_leaven_remainder
+    input: {query: leaven_liability_scope}
+    expected: {verdict: violates_even_remainder}
+    class: A
+  - id: M5_3_four_types
+    input: {query: adjunct_matrix_types}
+    expected: {verdict: four_types}
+    class: A
+  - id: M9_7_communal_semichah
+    input: {query: communal_semichah_exception}
+    expected: {verdict: court_bull_and_scapegoat}
+    class: A
+  - id: M10_4_parch
+    input: {query: omer_parch_device}
+    expected:
+      verdict: [direct_fire, perforated_tube]
+    class: A
+  - id: M12_3_normalize
+    input: {query: vow_normalization}
+    expected: {verdict: bring_wheat_fine_flour}
+    class: A
+  - id: M13_11_equal_savor
+    input: {query: savor_equality}
+    expected: {verdict: rich_poor_equal}
+    class: A
+- module: altar_boundary
+  tractate: Zevachim
+  oracle: Mishnah Zevachim 5:5, 9:5, 12:5
+  leviticus_anchor: {unit: lev_04_inadvertence_case_tree, ref: Lev.4.12,
+    claims: [L04-12]}
+  cases:
+  - id: Z9_5_descends
+    input: {query: altar_no_return}
+    expected: {verdict: flesh_classes_descend}
+    class: B
+  - id: Z12_5_burned_bulls
+    input: {query: burned_bulls_site}
+    expected: {verdict: outside_three_camps_defile_garments}
+    class: A
+- module: bird_windows
+  tractate: Chullin
+  oracle: Mishnah Chullin 1:5
+  leviticus_anchor: {unit: lev_01_olah_bird, ref: Lev.1.14,
+    claims: [LV01D-01]}
+  cases:
+  - id: C1_5_windows
+    input: {query: bird_age_validity}
+    expected: {verdict: complementary_windows}
+    class: A
+- module: elders_semichah
+  tractate: Sanhedrin
+  oracle: Mishnah Sanhedrin 1:3
+  leviticus_anchor: {unit: lev_04_inadvertence_case_tree, ref: Lev.4.15,
+    claims: [L04-15]}
+  cases:
+  - id: San1_3_count
+    input: {query: elders_semichah_count}
+    expected:
+      verdict: [five_elders, three_elders]
+    class: A
+- module: joint_labor
+  tractate: Shabbat
+  oracle: Mishnah Shabbat 10:5
+  leviticus_anchor: {unit: lev_04_inadvertence_case_tree, ref: Lev.4.27,
+    claims: [L04-11]}
+  cases:
+  - id: Sh10_5_two_carried
+    input: {query: joint_labor_liability, court_state: neither_could_alone}
+    expected:
+      verdict: [liable_when_neither_could, exempt_even_so]
+    class: A
+- module: donation_minimums
+  tractate: Shekalim
+  oracle: Mishnah Shekalim 6:6
+  leviticus_anchor: {unit: lev_01_olah_cattle_procedure, ref: Lev.1.7,
+    claims: [LV01B-04]}
+  cases:
+  - id: Shek6_6_wood
+    input: {query: wood_donation_minimum}
+    expected: {verdict: two_logs}
+    class: A
+  - id: Shek6_6_frankincense
+    input: {query: frankincense_donation_minimum}
+    expected: {verdict: one_handful}
+    class: A
+- module: anointed_vs_garments
+  tractate: Megillah
+  oracle: Mishnah Megillah 1:9
+  leviticus_anchor: {unit: lev_04_inadvertence_case_tree, ref: Lev.4.3,
+    claims: [L04-16]}
+  cases:
+  - id: Meg1_9_bull
+    input: {query: anointed_vs_garments_difference}
+    expected: {verdict: bull_of_the_sin_only_anointed}
+    class: A
+- module: offering_coercion
+  tractate: Arakhin
+  oracle: Mishnah Arakhin 5:6
+  leviticus_anchor: {unit: lev_01_call_and_korban_opening, ref: Lev.1.3,
+    claims: [LV01A-06]}
+  cases:
+  - id: A5_6_repossess
+    input: {query: court_collection}
+    expected: {verdict: not_repossessed_compelled}
+    class: A
+- module: restitution_algebra
+  tractate: Bava Kamma
+  oracle: Mishnah Bava Kamma 9:5, 9:6, 9:7, 9:9
+  leviticus_anchor: {unit: lev_05_asham_sancta, ref: Lev.5.23,
+    claims: [LV05B-05, LV05B-06]}
+  cases:
+  - id: BK9_5_follow
+    input: {query: restitution_delivery}
+    expected: {verdict: bring_to_victim_even_media}
+    class: A
+  - id: BK9_7_recursive
+    input: {query: fifth_recursion}
+    expected: {verdict: fifth_on_fifth}
+    class: A
+  - id: BK9_9_father
+    input: {query: father_robbery_oath}
+    expected: {verdict: principal_stands_own_oath_adds}
+    class: A
+- module: festival_semichah
+  tractate: Chagigah
+  oracle: Mishnah Chagigah 2:3
+  leviticus_anchor: {unit: lev_03_shelamim, ref: Lev.3.2,
+    claims: [LV03-02]}
+  cases:
+  - id: Ch2_3_festival
+    input: {query: festival_offerings}
+    expected:
+      verdict: [shelamim_without_semichah, both_with_semichah]
+    class: B
+- module: procedure_census
+  tractate: Tamid
+  oracle: Mishnah Tamid 4:3, Mishnah Yoma 2:5
+  leviticus_anchor: {unit: lev_01_olah_flock, ref: Lev.1.12,
+    claims: [LV01C-03]}
+  cases:
+  - id: T4_3_lobe
+    input: {query: lobe_attachment}
+    expected: {verdict: lung_and_haunch_attached}
+    class: B
+  - id: Y2_5_carriers
+    input: {query: daily_lamb_carriers}
+    expected: {verdict: nine_priests}
+    class: A

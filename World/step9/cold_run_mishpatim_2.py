@@ -61,3 +61,29 @@ print('=' * 60)
 print('PASS 2: %d/%d  |  RUNNING TOTAL with passes 1+guardians: %d/44' % (ok, n, 35 + ok))
 print('PASS-2 FRACTIONS: INK %d | RECORDED %d | ROUTED/IMPORT %d'
       % (TOTAL['INK'], TOTAL['RECORDED'], TOTAL['ROUTED/IMPORT']))
+
+# ---- EFFECTS (retrofit 2026-09-03, under the effects law) -----------
+import effects_layer as FX
+EFFECTS = [
+    ('seducer: FINE to the father',      ['gives_fixed_sum']),
+    ('seducer: FETCH-50 (the pointer)',  [FX.NONE]),
+    ('seducer: payments TABLE',          ['pays']),
+    ('freed limbs: EYE -> freedom',      ['released', 'goes_free']),
+    ('freed limbs: TOOTH -> freedom',    ['released', 'goes_free']),
+    ('freed limbs: CLASS-24',            [FX.NONE]),
+    ('miscarriage: JUDGES assess',       ['fined_by_assessment']),
+    ('miscarriage: DIFF-VALUE algorithm', [FX.NONE]),
+    ('miscarriage: PERSON-ONLY (ox actor exempt)', ['exempt']),
+]
+print('\nEFFECTS — the state changes each cell writes:')
+used = []
+for name, fx in EFFECTS:
+    used += fx
+    for line in FX.render(fx):
+        print('  %-40s ->%s' % (name, line))
+ops = FX.summarize(used)
+print('LEDGER OPS this pass writes:',
+      ', '.join('%s x%d' % (op, cnt) for op, cnt in sorted(ops.items())))
+assert len(EFFECTS) == n, 'EFFECTS LAW: %d cells graded, %d mapped' % (n, len(EFFECTS))
+print('effects: all %d cells carry a REGISTERED effect or an honest '
+      'no-change [effects law satisfied]' % n)

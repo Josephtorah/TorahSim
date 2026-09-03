@@ -180,3 +180,27 @@ print(f'\nRESULT: {ok}/12 cells match the Mishnah\'s table.')
 print('\nPROVENANCE of every cell:')
 for k in sorted(prov, key=lambda k: (k[0], k[1])):
     print(f'  {k[0]:9} {k[1]:9} <- {prov[k]}')
+
+# ---- step 5: EFFECTS (retrofit 2026-09-03, under the effects law) ---
+# The verdict writes the LEDGER, never the event stream. Each matrix
+# cell's state change, from the registry (effect_vocabulary.yaml):
+#   OATH -> oath_imposed: an oath obligation opens between the parties;
+#           sworn, the claim closes with no debit (the ink's own
+#           "and he shall not pay", Exod 22:10).
+#   PAY  -> pays: a money debit opens against the keeper.
+import effects_layer as FX
+V2FX = {'OATH': ['oath_imposed'], 'PAY': ['pays']}
+print('\nSTEP 5 — EFFECTS. The state changes each verdict writes:')
+used = []
+for k in sorted(matrix, key=lambda k: (k[0], k[1])):
+    fx = V2FX[matrix[k]]
+    used += fx
+    for line in FX.render(fx):
+        print(f'  {k[0]:9} {k[1]:9} ->{line}')
+ops = FX.summarize(used)
+print('LEDGER OPS this run writes:',
+      ', '.join(f'{op} x{n}' for op, n in sorted(ops.items())))
+assert all(v in V2FX for v in matrix.values()), \
+    'EFFECTS LAW: a verdict with no mapped effect'
+print('effects: every cell carries a REGISTERED effect '
+      '[effects law satisfied]')

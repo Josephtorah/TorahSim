@@ -8745,3 +8745,266 @@ runtime data); lesson refinements; Leviticus (Sifra spine; Lev 24
 = first call AND measured compile dependency of Exod 21); the
 remaining Mishpatim openers' re-compilation; units 98-117 TorahSim
 sync; the compiled-chip labels work.
+
+## ADDENDUM 2026-09-03 (post-#38 sitting) — THE FRONT-END MEASUREMENTS
+## + THE SIX-STEP SIMPLIFICATION (owner: "this is a major change")
+Two measurements ran on the owner's word and landed in RESEARCH_LOG.md:
+(1) THE NARRATIVE MEASUREMENT ("yes measure it on the creation week.
+use the oral torah where needed") — all 131 operators of the seven
+frozen creation-week units classified by minimal deciding layer:
+69 words (53%) / 38 morphology (29%) / 24 oral (18%) / TREE 0 /
+PARAGRAPH 0; the tree corroborates at six sites, decides nowhere;
+seven open-paragraph marks (one per day) measured in the ink — the
+day boundaries are scroll ink; Gen 1:1's construct-vs-absolute fork
+was decided by Onkelos, not accents. (2) THE VOWEL MEASUREMENT ("yes
+run that measurement") — the 38 morphology facts re-tested against
+consonants + context + Onkelos: 25 letter-visible / 12 context /
+1 Onkelos (Gen 2:1 ויכלו "were finished" — voice settled by
+וְאִשְׁתַּכְלָלוּ) / ZERO vowels-only. The whole Masoretic layer =
+confirmation, never sole decider. Witness stack: 72% bare ink, 81%
+w/ context, 1 Onkelos, 18% oral. Onkelos renderings verified at 1:3,
+1:6, 1:9, 1:26, 2:1, 2:2; consonant claims verified against the
+words table. THEN THE SIMPLIFICATION (proposal repeated back, owner:
+"yes go"): THE_STEPS 10 → 6 — 1 front end (old 1+2, measured
+standing recorded in-step), 2 teacher (old 3+4), 3 code (old 5+6),
+4 gates+stamp (old 7+8), 5 exam (old 9), 6 publish (old 10). Old
+text backed up at logic/THE_STEPS_v1_2026-09-03.md; renumbering key
+at the file top; all laws verbatim; gloss lint 0. Memory: new
+the-steps-six-step-era.md; code-data-separation-law + post-
+compaction-rule-reread + MEMORY.md index updated (post-compaction
+rereads now: Step 2 read-and-log rules + Step 5 + compiler block).
+THE_BRIEFING entry added. ⚠ QUEUED, awaiting owner word: update the
+public site's step bands/labels to the six-step numbering (site
+still shows old numbers); TorahSim THE_STEPS mirror rides the next
+deploy word. Nothing committed yet — commit on owner word.
+
+## MILESTONE 2026-09-03 — THE BOOK OF LEVITICUS OPENS: PARASHAT
+## VAYIKRA DERIVED, STAMPED, AND EXAMINED IN ONE SITTING (round 10,
+## owner: "parashat Vayikra. do this"; first cycle under the SIX-STEP
+## law and the first Sifra-spine sweep)
+THE DERIVATION: eight July drafts derived and FROZEN — lev_01_call_
+and_korban_opening (1:1-3), lev_01_olah_cattle_procedure (1:4-9),
+lev_01_olah_flock (1:10-13), lev_01_olah_bird (1:14-17), lev_02_
+minchah (2), lev_03_shelamim (3), lev_05_asham_graded (5:1-13),
+lev_05_asham_sancta (5:14-26) — and the FROZEN law-era lev_04_
+inadvertence_case_tree took the chapter-4 reading as a seat (the four
+chatat drafts beneath it stay drafts, the exo_21 pattern). DECLARED:
+the Sifra's two Vayikra sections whole (Dibbura DeNedavah 301 +
+Dibbura DeChovah 347 = 648 rows) + Onkelos Lev 1:1-5:26 (111 vv) =
+759 sources, all verdicted in NINE append-only ledgers (era-format
+completion lines; cite-restatement blocks appended); 10,040
+enumerated rows marked outside scope. 61 claims seated (LV01A-01..06,
+LV01B-01..05, LV01C-01..04, LV01D-01..04, LV02-01..10, LV03-01..09,
+L04-11..18, LV05A-01..09, LV05B-01..07) — all ops in the canonical
+WITNESS_READ form (the interpreter's strict expr notation; the
+draft scenarios rewritten to the anchored lowercase-after format).
+Rituals COMPLETE ×9, corpus 117 → 125, regression 125/125, manifests
+0 FAILED, changelog GREEN, gloss 0, CORPUS_TRUTH regenerated GREEN
+(125 units / 1,809 facts), hash 8b8fff1fa28953af UNMOVED. Delegated
+FULL RULE stamps ×8 + lev_04 re-affirmation (STAMP_LEDGER).
+THE EXAM: 68 bare Mishnah rows (59 fresh, 9 credits; docket ledger
+vayikra_exam_mishnah_2026-09-03.md), 17 modules (vayikra_rules.py,
+engine tail import, run_vayikra.py, cases_vayikra.yaml), 48/48 first
+full run; ALL nine priors re-run green — 377/377 across ten rounds.
+F-045 (Mishnah Shevuot 2:3 quick-exit rule — the round's ONE hole)
+auto-seated as LV05A-09 same sitting, ritual re-run, re-affirmation
+stamped. Catalog R-320..R-336 (141 compiled); vocabulary 145 → 148
+dims + 37 query values + 2 actor values, collision guard clean.
+HEADLINE: THE READING GRADED ITSELF — 47/48 anticipated by the same
+sitting's Sifra reading, many verbatim (recursive fifth, me'ilah-
+doubt, bird windows, vow normalization, elders' quorum, compelled
+offering): the law-midrash spine anticipates the answer sheet at
+47/48 vs Genesis's 19/25 — the two-shelves law measured at book
+scale. ALSO: three paragraph-channel witnesses (reflection-pauses
+charter ×2 + the goat's hiatus at 3:12 carrying the no-fat-tail
+exemption — law from a paragraph break); Onkelos as conversion layer
+twice (tenth-of-ephah = one-of-ten-in-three-se'im IN the verse;
+shekels → sanctuary sela'im); Exodus 21's goring ox in Leviticus 1's
+input filter (first cross-book input-validation link). Records:
+REPORT_VAYIKRA.md + EXAM_LEDGER round 10 + THE_STEPS Step 5 entry +
+THE_BRIEFING scoreboard. TRAP NOTES for the next sweep: the drafts'
+scenario titles need the lowercase 'after STEP_x' anchor; op exprs
+must match handler notation (WITNESS-READ(entity, state)); ledger
+completion lines in era format pass the gate with components
+unstated; run tools from the REPO ROOT (not World/step9). NOTHING
+COMMITTED — awaiting the owner's commit word. NEXT: parashat Tzav
+(Lev 6-8, Sifra Tzav 290 rows) on the owner's word; the Exodus
+Talmud triage (2,040 passages) still queued; the site deploy still
+awaiting word.
+
+## ADDENDUM 2026-09-03 (later) — THE STEP-5 DELIVERABLE RULE + THE
+## FIRST COMPILE (owner: "it has to be done" → "amend it and run it
+## on Leviticus 5"; process confirmed by repeat-back: ink first,
+## Mishnah as test data, Talmud per miss as labeled moves, then add)
+THE AMENDMENT: Step 5 in THE_STEPS now carries THE DELIVERABLE RULE —
+a law span does not finish Step 5 until its COLD-COMPILED FUNCTION
+exists; the five motions written in (ink-first compile / collect
+Mishnah rows as data / run / Talmud PER GAP as labeled moves /
+add + "compiled" chip); exam rules written with the reading in hand
+(the round-10 shape) demoted to SCAFFOLD. THE RUN: World/step9/
+cold_run_vayikra5.py — graded_offering + sacrilege +
+deposit_restitution from the bare ink of Lev 5, 18 probes, 27
+Mishnah cells: 27/27 — pure ink 7 (26%) / named moves 15 (56%) /
+data-dispute 5 (19%). TWO NEW MOVES registered unprompted (M-11
+WORD-ORDER READ — Shevuot 4:9 graded pure ink off Lev 5:1's clause
+order; M-12 GRAMMATICAL-NUMBER HOOK — the recursive fifth on 5:24's
+plural, defective beside 5:16's plene singular). The zero-report law
+caught the compiler's own false ink claims TWICE pre-run (the
+article at 5:8; the fifth's spelling at 5:16) — both probes
+corrected to the letters. The lev_05 units = first COMPILED units
+under the amended step (beside Exod 21-22). Records: REPORT_VAYIKRA
+appendix, MOVE_CATALOG M-11/M-12, THE_BRIEFING entry pending epub
+word. NOT COMMITTED — owner's word. NEXT: compile the rest of the
+Vayikra span (ch 1-4 functions: the olah pipeline, the minchah
+machine, the court-error dispatch) or open Tzav — owner's choice.
+
+## ⚠⚠ COMPACTION POINT #39 (2026-09-03, owner: "we are running out of
+## context" mid-Exodus-Talmud-triage). RESUME EXACTLY HERE.
+DONE THIS SITTING (all durable): (1) round 10 VAYIKRA complete (see
+the 09-03 milestone above) + F-045 seated + stamps. (2) THE STEP-5
+DELIVERABLE RULE + cold_run_vayikra5.py 27/27 (see addendum). (3)
+Step 5 also gained THE ADDRESS-BOOK LINE (motion 2: verse-addresses
+are lookups, the Talmud's REASONING stays closed till motion 4) and
+THE TWO-DIRECTIONS block (scroll-first walk = the program; Talmud-
+first sugya = the tests; they meet at the misses). (4) THE GENESIS
+STAMP GAP audit-found and CLOSED: delegated FULL RULE batch stamp on
+gen_09-73 in STAMP_LEDGER (criteria verified: 65/65 reading-COMPLETE
+re-checked mechanically, text layer 125/125 re-run, findings queue
+all resolved). Text-layer sweep also verified the old July dozen
+healed. (5) THE EXODUS TALMUD TRIAGE IS ~55% READ: enumeration 2,033
+Bavli segment-refs citing Exodus (links shelf, 37 tractates); 80
+exact-ref credits precomputed; 1,913 fresh texts fetched; 40 refs
+lack direct text rows (range/daf forms — handle like the Genesis
+triage's 3). WORKING FILES (durable): logic/oral_triage/
+wip_exod_triage/ — exod_triage_verdicts.md (1,060 verdict rows DONE
+= reading-order rows 0-1059, through Niddah 23b:1), exod_triage_
+order.json (the canonical reading order, alphabetical tractate/daf),
+exod_triage_texts.json (all fresh texts), exod_triage_enum.json
+(ref → Exodus verses), exod_triage_split.json (credit/fresh).
+RESUME METHOD: print rows from order[1060:] in ~95-row batches at
+~250-char truncation with linked verses; verdict each row into
+exod_triage_verdicts.md in the Genesis triage's four kinds — LAW /
+CREDIT (seated claim, module oracle, or in-triage dup) / AGGADAH /
+QUOTE — one bold-ref line each, VERBATIM ref at line start (cite
+gate). Remaining: rows 1060-1912 (Pesachim tail from ~Pesachim 83a,
+Rosh Hashanah, Sanhedrin 183, Shabbat 127, Shevuot, Sotah, Sukkah,
+Taanit, Temurah, Yevamot, Yoma, Zevachim 113 + stragglers), then:
+the 40 no-text refs via Data/bavli_*_he.json (daf = daf*2-2, +1 for
+b), the 80 credits appended as credit rows, TALLY line, assemble
+logic/oral_triage/EXOD_TALMUD_TRIAGE_LEDGER.md (header like World/
+step9/TALMUD_TRIAGE_LEDGER.md, append-only), map the LAW pile into
+exam blocks (the Genesis ~12-blocks pattern), records (state doc,
+THE_STEPS Step 5 note, briefing scoreboard if block-map lands).
+NOTE batch 13 (rows 1060-1159) was PRINTED but NOT verdicted —
+re-print it. THEN: ask the owner about compiling the law spans (his
+standing instruction: "hold off on the compile the law spans. ask
+me about that after the first two are done" — the stamps are done,
+the triage will be; ASK when the triage ledger lands). NOTHING
+COMMITTED since 60dafd7 — the whole 09-03 sitting (six-step
+THE_STEPS, Vayikra round, deliverable rule, stamps, triage WIP)
+awaits the owner's commit word. Post-compaction rereads: THE_STEPS
+Step 2 read-and-log rules + Step 5 (deliverable rule + two
+directions) + the compiler-law block.
+
+## 2026-09-03 (post-#39 sitting) — THE EXODUS TALMUD TRIAGE COMPLETES
+Resumed exactly per #39 after the owner's compaction: post-compaction
+rereads done (Step 2 read-and-log + Step 5 deliverable/two-directions +
+compiler block), then the read from row 1060. Batch 13 re-printed and
+verdicted as noted; rows 1060-1912 read in seven batches (Niddah tail,
+Pesachim 150, Rosh Hashanah 38, Sanhedrin 172, Shabbat 83, Shevuot 39,
+Sotah 74, Sukkah 23, Taanit 7, Tamid 1, Temurah 16, Yevamot 42, Yoma 90,
+Zevachim 112). The 40 odd-form refs decoded: 2 real Talmud range-refs
+(Bava Kamma 37b:11-12 — the ox-of-another exclusions; Beitzah 5b:4-5 —
+the horn and the mount's lapse) opened from member segments; 38 turned
+out to be SIDDUR rows ("Shabbat Siddur Sefard Linear" on the links
+shelf) — verdicted QUOTE as liturgical recitations, openly non-Talmud.
+The 80 standing-verdict credits appended. FINAL:
+logic/oral_triage/EXOD_TALMUD_TRIAGE_LEDGER.md — 2,033 rows, TALLY
+LAW 501 / CREDIT 1,109 / AGGADAH 336 / QUOTE 87, plus THE EXAM-BLOCK
+MAP (18 blocks, anchor sugyot named, awaiting owner's word per the
+Noahide precedent). Notable finds in the ledger header: Sanhedrin 4a:15
+names the vocalization-authority dispute (our vowel measurement's own
+question in the tradition's words); Yoma 52b's three recorded parse
+ambiguities; Sanhedrin 29a letter arithmetic; Shabbat 96b carrying-out's
+ink; Shabbat 97a:1 no-fresh-verbal-analogy meta-rule; Yoma 85a-b life-
+overrides-Shabbat from the tunneler. THE_STEPS Step 5 two-directions
+line updated. WIP folder logic/oral_triage/wip_exod_triage/ retained
+(the verdicts file is the ledger's body; jsons are the enumeration
+evidence). BOTH AUDIT TASKS NOW DONE (Genesis stamps + this triage) —
+the owner's standing instruction fires: ASK HIM about compiling the law
+spans. NOTHING COMMITTED since 60dafd7 — the whole 09-03 line awaits
+his word.
+
+## 2026-09-03 (night) — THE EFFECTS LAW RULED
+TorahSim's window relayed the owner's ledger-vs-event idea at his
+direction; owner ruled "both" (log + fence sentence) and elevated it:
+"this will now build a simulation instead of a ledger... as critical to
+the steps as any other step. It should be coded every time for
+effects." LANDED: THE_WORLD.md idea-log entry (the full model — clock/
+eras, entity ledgers, two dockets, diff engine, the whole-Tanakh
+prophetic-indictment target); TorahSim docs/METHOD_LAWS.md law 6 gains
+the clarifying rider (fence forbids invented EVENTS, computed
+CONSEQUENCES are output); THE_STEPS Step 5 gains THE EFFECTS RULE
+(every cold function returns effects, tradition's vocabulary,
+discovered not designed, registry opens at first effect-bearing
+module); briefing entry; memory the-effects-law.md. Existing compiled
+functions (guardians, Mishpatim, Lev 5) owe an effects retrofit when
+the owner orders. Ruling relayed back to torahsim-7b. Compile-law-spans
+question still parked (owner: "hold that thought"). NOTHING COMMITTED.
+
+(night, addendum) Owner's follow-up ruled and RECORDED at his word
+("record this to our notes files... I will need these explanations
+when I ask for a epub"): the five-constructs engine explanation —
+time-driven main loop, mutable entity ledgers, laws as daemons,
+TIMERS (the dividing line: only a simulator can owe the future), the
+diff engine as checkpoint stream; existing Python demoted to the
+engine's parts. Landed in THE_BRIEFING.md (tonight's entry, epub
+source) and THE_WORLD.md (idea-log rider). Compile-spans question
+still parked.
+
+(night, harvest) Owner: "start with the harvest." THE EFFECT VOCABULARY
+REGISTRY OPENED: World/step9/effect_vocabulary.yaml — 26 effects
+discovered (never designed), each with three witness layers: INK (verbs
+machine-verified in tanakh.sqlite with verse addresses — ישלם "he shall
+pay" 14 sites, לחפשי "to freedom" 3, מות יומת "die he shall die" 6,
+ונסלח "and he shall be forgiven" 9 in Lev 4-5, etc.; probes self-tested,
+the one dead token וענש corrected to the ink's ענוש יענש "fined he shall
+be fined" 21:22), CORPUS (frozen-unit prose counts), EXAM (specs + cold
+functions' own emissions — 'oath' 42 in the guardians, 'fifth' 30 in
+Lev 5). Model layer: ledger_op typing (debit/status/timer/transfer/
+body/heaven/block) — freely rewritable. Honest absence recorded: purity
+effects (impure-until-evening) absent because Lev 11-15 underived;
+probe self-tested. gloss_lint: 0 flags. Registry grows per the
+discovery discipline; first effect-bearing compiles (the retrofit)
+await the owner's word.
+
+(night, retrofit) Owner: "retrofit the three cold functions." DONE — the
+first effect-bearing modules. World/step9/effects_layer.py born (loads
+the registry, REFUSES unregistered effects at emission — the discipline
+in code). All scores held with effects added: guardians 12/12 (debit 7,
+status 5), mishpatim pass 1 23/23 (debit 14, status 5, TIMER 2 — the
+term clock + jubilee, the simulator's first timers; body 1), pass 2 9/9,
+vayikra5 27/27 (heaven 13 — the forgiven-closures; disputes fork both
+arms' effects). 71/71 grand total; 10 cells honestly write nothing
+(classification/pending/routed-out). Registry grew by discovery:
+jubilee_release (its probe already fired in the compiled code; Lev
+25:10 ink verified). Record: World/step9/REPORT_CODE_EXECUTION.md
+addendum. gloss_lint 0 flags throughout. NOTHING COMMITTED.
+
+(night, the engine + three spans) Owner: "build the skeleton then
+compile the spans." DONE THIS SITTING: (1) THE SIMULATOR SKELETON —
+World/step9/world_engine.py, five constructs live, 5/5 checkpoints on
+recorded-case test scenes; the spin discovered timer CANCELLATION (the
+pierced slave's "forever" voids the six-year exit) and it entered the
+contract; the effect interface fixed: {effect, subject, counterparty,
+amount, due, source_law, case_source} + cancel_timers. Seven debits
+honestly OPEN at tape end. (2) THREE SPANS COMPILED, effects from
+birth: cold_run_pesach.py Exod 12-13 24/24 (block x10, timer x3, first
+karet); cold_run_calendar.py Exod 23:10-19 14/14 (first LAND-entity
+timer; kid-clause census verified at its 3 seats; the fat/milk
+consonant pair in adjacent verses); cold_run_decalogue.py Exod 20
+12/12 (92% moves — principles here, cases in the tradition). Registry
+39 effects (12 added tonight, all ink-verified). Chips earned pending
+site lap: exo_12, exo_13, exo_20, exo_23. Remaining queue in
+REPORT_CODE_EXECUTION.md addendum. gloss_lint 0 flags. NOTHING
+COMMITTED — the whole 2026-09-03 line awaits the owner's word.

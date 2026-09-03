@@ -1709,3 +1709,70 @@ not required machinery — the Mishnah's test data quotes the code's
 own roots, so data-to-code binding runs on lemma identity without
 translation. FRONT-END INVENTORY, final form: letters, words,
 roots, verse cuts, fifteen dots. Full record: RESEARCH_LOG.md.
+
+**2026-09-03 — THE EFFECTS LAW: verdicts write the ledger, and the
+fence holds (owner-ruled "both" — the idea logged AND the fence
+clarified; relayed from the TorahSim window at his direction).**
+THE OWNER'S FRAMING, verbatim: "run first pass sets up world,
+compiles law into code. then run code on world and the output of
+that code has to change something. Maybe we have [law] 6 too
+restrictive. That output, it is not meant as a verification of a
+case. It is software designed to do something we haven't learned
+yet." THE RECONCILIATION: method law 6 forbids invented EVENTS,
+never computed CONSEQUENCES. The verdict writes the LEDGER — the
+owner owes, the ox turns forewarned, the slave's term clock runs
+and fires in the seventh year, the land returns at jubilee, a
+house carries a debt until the prophet reads it aloud — but the
+law never decides that anyone ACTS. Obligations are computed; acts
+come from the text. That is the whole content of "agency absent."
+THE RULING'S FORCE (owner, this sitting): "this will now build a
+SIMULATION instead of a ledger. This is as critical to the steps
+as any other step. It should be coded EVERY TIME for effects." So:
+every compiled function returns, with each verdict, its EFFECT in
+the tradition's own effect vocabulary — pays, goes free, forfeit,
+exempt, impure until evening, liable to lashes, exiled to refuge —
+discovered from the sources the way the case vocabulary was, never
+designed; witnessed like any claim; written to the ledger, never
+the event stream. The effect-vocabulary registry opens beside the
+case vocabulary when the first effect-bearing module compiles.
+THE THING NOT LEARNED YET (the output the fence protects): run the
+ledger across the whole Hebrew Bible and ask whether every
+prophetic indictment matches an OPEN ENTRY in the computed ledger.
+Without the fence that ledger is fiction; with it, it is a
+prediction the text either confirms or contradicts. This is the
+roadmap's component 3 ("the ledgers — liability as state") made
+concrete, not a new direction. Runtime shape, tick by tick: a
+clock with named eras; entities with persistent ledgers (people,
+houses, animals, land, the court docket, Heaven's docket);
+narrative events arrive from the text; every registered law fires
+unasked and writes its effects; timers fire on the clock;
+institutional flags flip on narrative events; at each checkpoint a
+diff engine compares the computed ledger against what the text
+declares — and a ledger that ends OPEN can be the correct ending.
+
+**2026-09-03 (night, rider) — THE ENGINE'S SHAPE: why this is a
+simulator, not a sophisticated ledger (owner's follow-up, recorded
+at his word for the coming epub).** Every program built so far is a
+QUESTION-ANSWERER — hand it a case, get a label, it stops. A
+simulator is a LOOP that runs whether or not anyone asks. Five
+constructs will exist in the new engine that exist nowhere in
+today's code: (1) a main loop over TIME, not rows — the clock with
+named eras is the driver; (2) MUTABLE STATE — today's world fold is
+append-only settled fact; the simulator's ledgers change (a debt
+opens, is paid, closes; the ox flips to forewarned; the slave's
+term ends): entities with life histories; (3) LAWS AS DAEMONS —
+pose_case answers when asked; in the engine every registered law
+fires UNASKED on each event arriving from the text (an event bus
+with dispatch); (4) TIMERS — the seventh year and the jubilee fire
+at FUTURE times with no triggering text event; nothing current acts
+at a future time, and this construct alone is the dividing line —
+a ledger records what happened, only a simulator can owe something
+to the future; (5) the DIFF ENGINE as a checkpoint STREAM — the
+computed ledger against the text's declarations down the whole
+Tanakh, "still open" a legal ending. WHAT SURVIVES: the 141
+compiled rules + the cold functions become the law library INSIDE
+the daemons (each still the verdict kernel, now verdict + effect);
+the frozen corpus becomes the input tape. The existing Python is
+demoted from "the program" to "the program's parts"; the simulator
+is the new main loop wrapping them. "Compile the law spans"
+henceforth means: compiled WITH effects, feeding this engine.

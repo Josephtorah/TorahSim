@@ -224,3 +224,29 @@ published subset is the natural first target for middot-as-data. The
 compile-dependency graph so far: Exodus 21 ← Leviticus 24 (M-07c);
 Exodus 22 ← Deuteronomy 22 (M-10); Exodus 21 ← Leviticus 25 (M-07a);
 Exodus 21 ← Deuteronomy 25 (M-07b).
+
+## M-11 — THE WORD-ORDER READ (the clause sequence itself is the condition order)
+The teacher reads the ORDER of the ink's clauses as executable
+sequence: at Lev 5:1 "and he heard the voice of an oath AND HE IS a
+witness" — the witness-state is evaluated AT the oath, so an oath
+that precedes the knowledge finds no witness and exempts (Mishnah
+Shevuot 4:9 falls straight out of the word order); at Lev 2:14 the
+placement of "with fire" between the parch-word and the groats-word
+rules parch-before-grind (the Sifra names the hiatus itself). Found
+2026-09-03, the Vayikra sweep + the Leviticus 5 cold compile
+(cold_run_vayikra5.py — the S4_9 cell graded pure ink).
+**Middah correspondence:** the near of Rabbi Eliezer's #12 family
+(a thing understood from its context) — sequence as context.
+
+## M-12 — THE GRAMMATICAL-NUMBER HOOK (a plural or suffix carries the loop)
+The teacher hangs an iteration or a set-rule on the ink's NUMBER
+morphology: Lev 5:24 writes "its FIFTHS" (vachamishtav, plural,
+written defective beside 5:16's plene singular) — the recursion hook
+for fifth-upon-fifth down to the perutah floor (Mishnah Bava Kamma
+9:7); Exod 35's plural logs yield the TWO afternoon logs (Mishnah
+Shekalim 6:6's floor); Lev 1:2's plural "shall you offer" yields
+partnership. The hook is a LETTER; the loop's semantics are the
+recorded move; the floor is data. Found 2026-09-03, the Leviticus 5
+cold compile.
+**Middah correspondence:** Rabbi Ishmael's ribbui (inclusion) family
+— the inclusive token read as an iterator, not just an extra member.

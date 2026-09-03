@@ -574,3 +574,15 @@ preceded chalitzah and the order FLIPPED when intention decayed; the
 owner precedes all in redemption. A cross-domain duty-ordering
 algebra with a recorded historical flip. Seated as EX34-07.
 exo_34_second_tablets.
+
+
+## F-045 (2026-09-03, the Vayikra exam round 10) — AUTO-SEATED
+Mishnah Shevuot 2:3: one who became unclean INSIDE the court must
+leave by the SHORTEST way — bowing, lingering, or taking the long way
+out is its own liability. The round's ONE hole (class C at first
+classification, 47 of 48 anticipated by the same sitting's Sifra
+reading): the derived unit lev_05_asham_graded held the
+aware-hidden-aware machine (LV05A-02) but not the inside-the-court
+exit rule. Seated the same sitting under the auto-seat rider as claim
+LV05A-09 (op at STEP_Lv_5_2), rule live in vayikra_rules.py
+(tumah_awareness), case S2_3_inside_exit re-classed A, 48/48.

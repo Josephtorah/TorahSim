@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ALL_UNITS.py — frozen only (exo_40 frozen 2026-09-02; 117 frozen units)."""
+"""ALL_UNITS.py — frozen only (lev_05 frozen 2026-09-03; 125 frozen units)."""
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
@@ -34015,6 +34015,1128 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[5]["cites"] == ['Midrash Tanchuma Buber, Pekudei 8:9', 'Midrash Tanchuma, Pekudei 11:14', 'Midrash Tanchuma, Pekudei 6:2', 'Midrash Tanchuma, Vayakhel 7:2', 'Onkelos Exod 40']
     assert all('indwelling_lands' not in f for f in m.WORLD["facts"])
     assert 'glory_fills' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_01_call_and_korban_opening
+###############################################################################
+
+m = Machine("lev_01_call_and_korban_opening")
+
+# -------------------------- Lev.1.1 · ETNACHTA_SPLIT -----------------------
+# ויקרא אל משה … וידבר יהוה אליו מאהל מועד לאמר
+# "[EN-AID] From top split: LEFT «ויקרא אל משה» / RIGHT «וידבר יהוה אליו
+# מאהל מועד לאמר». Derive claim from Hebrew arms. Lev 1:1."
+m.step("Lev.1.1")
+# witness-tier presupposed read: kriyah_precedes_dibbur on call_protocol —
+# read, not installed
+m.witness_read("call_protocol", "kriyah_precedes_dibbur",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 1 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 1 6", "Sifra, Vayikra Dibbura DeNedavah, Chapter 1 7", "Sifra, Vayikra Dibbura DeNedavah, Chapter 1 10", "Sifra, Vayikra Dibbura DeNedavah, Chapter 1 11"])
+# witness-grounded state (its own tier): bounded_single_receiver on voice
+m.witness_state("voice", "bounded_single_receiver",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 2 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 2 9", "Sifra, Vayikra Dibbura DeNedavah, Chapter 2 10", "Sifra, Vayikra Dibbura DeNedavah, Chapter 2 12"])
+# witness-tier presupposed read: reflection_pauses_chartered on
+# paragraph_channel — read, not installed
+m.witness_read("paragraph_channel", "reflection_pauses_chartered",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 1 8", "Sifra, Vayikra Dibbura DeNedavah, Chapter 1 9"])
+
+# -------------------------- Lev.1.2 · ETNACHTA_SPLIT -----------------------
+# דבר אל בני ישראל ואמרת אלהם אדם כי יקריב מכם קרבן ליהוה … מן הבהמה מן הבקר
+# ומן הצאן תקריבו את קרבנכם
+# "[EN-AID] From top split: LEFT «דבר אל בני ישראל ואמרת אלהם אדם כי יקריב
+# מכם קרבן ליהוה» / RIGHT «מן הבהמה מן הבקר ומן הצאן תקריבו את קרבנכם».
+# Derive claim from Hebrew arms. Lev 1:2."
+m.step("Lev.1.2")
+# witness-tier presupposed read: covenant_keyed_optional on caller_domain —
+# read, not installed
+m.witness_read("caller_domain", "covenant_keyed_optional",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Section 2 3", "Sifra, Vayikra Dibbura DeNedavah, Section 2 4", "Sifra, Vayikra Dibbura DeNedavah, Section 2 5"])
+# witness-tier presupposed read: domesticated_with_exclusions on
+# input_filter — read, not installed
+m.witness_read("input_filter", "domesticated_with_exclusions",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Section 2 6", "Sifra, Vayikra Dibbura DeNedavah, Section 2 7", "Sifra, Vayikra Dibbura DeNedavah, Section 2 9", "Sifra, Vayikra Dibbura DeNedavah, Section 2 10", "Sifra, Vayikra Dibbura DeNedavah, Section 2 11", "Sifra, Vayikra Dibbura DeNedavah, Chapter 3 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 3 4"])
+
+# -------------------------- Lev.1.3 · COND_אם ------------------------------
+# אם עלה קרבנו מן הבקר זכר תמים יקריבנו … אל פתח אהל מועד יקריב אתו לרצנו
+# לפני יהוה
+# "[EN-AID] From top split: LEFT «אם עלה קרבנו מן הבקר זכר תמים יקריבנו» /
+# RIGHT «אל פתח אהל מועד יקריב אתו לרצנו לפני יהוה». Derive claim from
+# Hebrew arms. Lev 1:3."
+m.step("Lev.1.3")
+# witness-tier presupposed read: tamim_owner_coercion on acceptance_gate —
+# read, not installed
+m.witness_read("acceptance_gate", "tamim_owner_coercion",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Section 3 12", "Sifra, Vayikra Dibbura DeNedavah, Section 3 13", "Sifra, Vayikra Dibbura DeNedavah, Section 3 15", "Sifra, Vayikra Dibbura DeNedavah, Chapter 5 5", "Onkelos Lev 1:3"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert sorted(m.WORLD["witnessed"]) == ['voice']
+    assert m.WORLD["witnessed"]['voice']["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 2 1', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 2 9', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 2 10', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 2 12']
+    assert all('bounded_single_receiver' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('call_protocol', 'kriyah_precedes_dibbur'), ('paragraph_channel', 'reflection_pauses_chartered'), ('caller_domain', 'covenant_keyed_optional'), ('input_filter', 'domesticated_with_exclusions'), ('acceptance_gate', 'tamim_owner_coercion')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 1 1', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 1 6', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 1 7', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 1 10', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 1 11']
+    assert all('kriyah_precedes_dibbur' not in f for f in m.WORLD["facts"])
+    assert 'call_protocol' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 1 8', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 1 9']
+    assert all('reflection_pauses_chartered' not in f for f in m.WORLD["facts"])
+    assert 'paragraph_channel' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 2 3', 'Sifra, Vayikra Dibbura DeNedavah, Section 2 4', 'Sifra, Vayikra Dibbura DeNedavah, Section 2 5']
+    assert all('covenant_keyed_optional' not in f for f in m.WORLD["facts"])
+    assert 'caller_domain' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 2 6', 'Sifra, Vayikra Dibbura DeNedavah, Section 2 7', 'Sifra, Vayikra Dibbura DeNedavah, Section 2 9', 'Sifra, Vayikra Dibbura DeNedavah, Section 2 10', 'Sifra, Vayikra Dibbura DeNedavah, Section 2 11', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 3 1', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 3 4']
+    assert all('domesticated_with_exclusions' not in f for f in m.WORLD["facts"])
+    assert 'input_filter' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 3 12', 'Sifra, Vayikra Dibbura DeNedavah, Section 3 13', 'Sifra, Vayikra Dibbura DeNedavah, Section 3 15', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 5 5', 'Onkelos Lev 1:3']
+    assert all('tamim_owner_coercion' not in f for f in m.WORLD["facts"])
+    assert 'acceptance_gate' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_01_olah_cattle_procedure
+###############################################################################
+
+m = Machine("lev_01_olah_cattle_procedure")
+
+# -------------------------- Lev.1.4 · ETNACHTA_SPLIT -----------------------
+# וסמך ידו על ראש העלה … ונרצה לו לכפר עליו
+# "[EN-AID] From top split: LEFT «וסמך ידו על ראש העלה» / RIGHT «ונרצה לו
+# לכפר עליו». Derive claim from Hebrew arms. Lev 1:4."
+m.step("Lev.1.4")
+# witness-tier presupposed read: no_delegation_sons on semichah — read, not
+# installed
+m.witness_read("semichah", "no_delegation_sons",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 4 2", "Sifra, Vayikra Dibbura DeNedavah, Section 2 2", "Sifra, Vayikra Dibbura DeNedavah, Chapter 4 8", "Sifra, Vayikra Dibbura DeNedavah, Chapter 4 9"])
+
+# -------------------------- Lev.1.5 · ETNACHTA_SPLIT -----------------------
+# ושחט את בן הבקר לפני יהוה … והקריבו בני אהרן הכהנים את הדם וזרקו את הדם על
+# המזבח סביב אש
+# "[EN-AID] From top split: LEFT «ושחט את בן הבקר לפני יהוה» / RIGHT
+# «והקריבו בני אהרן הכהנים את הדם וזרקו את הדם על המזבח סביב אשר פתח אהל
+# מועד». Derive claim from Hebrew arms. Lev 1:5."
+m.step("Lev.1.5")
+# witness-tier presupposed read: caller_to_priest_handoff on role_table —
+# read, not installed
+m.witness_read("role_table", "caller_to_priest_handoff",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Section 4 1", "Sifra, Vayikra Dibbura DeNedavah, Section 4 2", "Sifra, Vayikra Dibbura DeNedavah, Section 4 4", "Sifra, Vayikra Dibbura DeNedavah, Section 4 5", "Sifra, Vayikra Dibbura DeNedavah, Section 4 6"])
+# witness-tier presupposed read: two_that_are_four on blood_stage — read,
+# not installed
+m.witness_read("blood_stage", "two_that_are_four",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Section 4 9", "Sifra, Vayikra Dibbura DeNedavah, Section 4 10", "Sifra, Vayikra Dibbura DeNedavah, Section 4 11", "Sifra, Vayikra Dibbura DeNedavah, Section 4 13", "Sifra, Vayikra Dibbura DeNedavah, Section 4 14", "Sifra, Vayikra Dibbura DeNedavah, Section 4 7"])
+
+# -------------------------- Lev.1.6 · ETNACHTA_SPLIT -----------------------
+# והפשיט את העלה … ונתח אתה לנתחיה
+# "[EN-AID] From top split: LEFT «והפשיט את העלה» / RIGHT «ונתח אתה לנתחיה».
+# Derive claim from Hebrew arms. Lev 1:6."
+m.step("Lev.1.6")
+
+# -------------------------- Lev.1.7 · ETNACHTA_SPLIT -----------------------
+# ונתנו בני אהרן הכהן אש על המזבח … וערכו עצים על האש
+# "[EN-AID] From top split: LEFT «ונתנו בני אהרן הכהן אש על המזבח» / RIGHT
+# «וערכו עצים על האש». Derive claim from Hebrew arms. Lev 1:7."
+m.step("Lev.1.7")
+# witness-tier presupposed read: man_made_uniform_checked on fire_stage —
+# read, not installed
+m.witness_read("fire_stage", "man_made_uniform_checked",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 5 8", "Sifra, Vayikra Dibbura DeNedavah, Chapter 5 9", "Sifra, Vayikra Dibbura DeNedavah, Chapter 5 10", "Sifra, Vayikra Dibbura DeNedavah, Chapter 5 11", "Sifra, Vayikra Dibbura DeNedavah, Chapter 6 4", "Sifra, Vayikra Dibbura DeNedavah, Chapter 6 5"])
+
+# -------------------------- Lev.1.8 · ETNACHTA_SPLIT -----------------------
+# וערכו בני אהרן הכהנים את הנתחים את הראש ואת הפדר … על העצים אשר על האש אשר
+# על המזבח
+# "[EN-AID] From top split: LEFT «וערכו בני אהרן הכהנים את הנתחים את הראש
+# ואת הפדר» / RIGHT «על העצים אשר על האש אשר על המזבח». Derive claim from
+# Hebrew arms. Lev 1:8."
+m.step("Lev.1.8")
+
+# -------------------------- Lev.1.9 · ETNACHTA_SPLIT -----------------------
+# וקרבו וכרעיו ירחץ במים … והקטיר הכהן את הכל המזבחה עלה אשה ריח ניחוח ליהוה
+# "[EN-AID] From top split: LEFT «וקרבו וכרעיו ירחץ במים» / RIGHT «והקטיר
+# הכהן את הכל המזבחה עלה אשה ריח ניחוח ליהוה». Derive claim from Hebrew
+# arms. Lev 1:9."
+m.step("Lev.1.9")
+# witness-tier presupposed read: no_return_intent_ladder on burn_close —
+# read, not installed
+m.witness_read("burn_close", "no_return_intent_ladder",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 6 7", "Sifra, Vayikra Dibbura DeNedavah, Chapter 6 8", "Sifra, Vayikra Dibbura DeNedavah, Chapter 6 9", "Sifra, Vayikra Dibbura DeNedavah, Chapter 6 10", "Onkelos Lev 1:9"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('semichah', 'no_delegation_sons'), ('role_table', 'caller_to_priest_handoff'), ('blood_stage', 'two_that_are_four'), ('fire_stage', 'man_made_uniform_checked'), ('burn_close', 'no_return_intent_ladder')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 4 2', 'Sifra, Vayikra Dibbura DeNedavah, Section 2 2', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 4 8', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 4 9']
+    assert all('no_delegation_sons' not in f for f in m.WORLD["facts"])
+    assert 'semichah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 4 1', 'Sifra, Vayikra Dibbura DeNedavah, Section 4 2', 'Sifra, Vayikra Dibbura DeNedavah, Section 4 4', 'Sifra, Vayikra Dibbura DeNedavah, Section 4 5', 'Sifra, Vayikra Dibbura DeNedavah, Section 4 6']
+    assert all('caller_to_priest_handoff' not in f for f in m.WORLD["facts"])
+    assert 'role_table' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 4 9', 'Sifra, Vayikra Dibbura DeNedavah, Section 4 10', 'Sifra, Vayikra Dibbura DeNedavah, Section 4 11', 'Sifra, Vayikra Dibbura DeNedavah, Section 4 13', 'Sifra, Vayikra Dibbura DeNedavah, Section 4 14', 'Sifra, Vayikra Dibbura DeNedavah, Section 4 7']
+    assert all('two_that_are_four' not in f for f in m.WORLD["facts"])
+    assert 'blood_stage' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 5 8', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 5 9', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 5 10', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 5 11', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 6 4', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 6 5']
+    assert all('man_made_uniform_checked' not in f for f in m.WORLD["facts"])
+    assert 'fire_stage' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 6 7', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 6 8', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 6 9', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 6 10', 'Onkelos Lev 1:9']
+    assert all('no_return_intent_ladder' not in f for f in m.WORLD["facts"])
+    assert 'burn_close' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_01_olah_flock
+###############################################################################
+
+m = Machine("lev_01_olah_flock")
+
+# -------------------------- Lev.1.10 · COND_ואם ----------------------------
+# ואם מן הצאן קרבנו מן הכשבים או מן העזים לעלה … זכר תמים יקריבנו
+# "[EN-AID] From top split: LEFT «ואם מן הצאן קרבנו מן הכשבים או מן העזים
+# לעלה» / RIGHT «זכר תמים יקריבנו». Derive claim from Hebrew arms. Lev
+# 1:10."
+m.step("Lev.1.10")
+# witness-tier presupposed read: seam_teaches on flock_filter — read, not
+# installed
+m.witness_read("flock_filter", "seam_teaches",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Section 5 2", "Sifra, Vayikra Dibbura DeNedavah, Section 5 1"])
+
+# -------------------------- Lev.1.11 · ETNACHTA_SPLIT ----------------------
+# ושחט אתו על ירך המזבח צפנה לפני יהוה … וזרקו בני אהרן הכהנים את דמו על
+# המזבח סביב
+# "[EN-AID] From top split: LEFT «ושחט אתו על ירך המזבח צפנה לפני יהוה» /
+# RIGHT «וזרקו בני אהרן הכהנים את דמו על המזבח סביב». Derive claim from
+# Hebrew arms. Lev 1:11."
+m.step("Lev.1.11")
+# witness-tier presupposed read: environment_dependent on north_rules —
+# read, not installed
+m.witness_read("north_rules", "environment_dependent",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 4 1", "Sifra, Vayikra Dibbura DeNedavah, Section 5 5", "Sifra, Vayikra Dibbura DeNedavah, Section 5 6", "Sifra, Vayikra Dibbura DeNedavah, Section 5 7", "Sifra, Vayikra Dibbura DeNedavah, Section 5 8", "Sifra, Vayikra Dibbura DeNedavah, Section 5 9", "Sifra, Vayikra Dibbura DeNedavah, Chapter 7 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 7 2"])
+
+# -------------------------- Lev.1.12 · ETNACHTA_SPLIT ----------------------
+# ונתח אתו לנתחיו ואת ראשו ואת פדרו … וערך הכהן אתם על העצים אשר על האש אשר
+# על המזבח
+# "[EN-AID] From top split: LEFT «ונתח אתו לנתחיו ואת ראשו ואת פדרו» / RIGHT
+# «וערך הכהן אתם על העצים אשר על האש אשר על המזבח». Derive claim from Hebrew
+# arms. Lev 1:12."
+m.step("Lev.1.12")
+# witness-tier presupposed read: one_priest_two_limbs on arrangement_roster
+# — read, not installed
+m.witness_read("arrangement_roster", "one_priest_two_limbs",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 6 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 6 2", "Sifra, Vayikra Dibbura DeNedavah, Chapter 6 3", "Sifra, Vayikra Dibbura DeNedavah, Chapter 5 7"])
+
+# -------------------------- Lev.1.13 · ETNACHTA_SPLIT ----------------------
+# והקרב והכרעים ירחץ במים … והקריב הכהן את הכל והקטיר המזבחה עלה הוא אשה ריח
+# ניחח ליהוה
+# "[EN-AID] From top split: LEFT «והקרב והכרעים ירחץ במים» / RIGHT «והקריב
+# הכהן את הכל והקטיר המזבחה עלה הוא אשה ריח ניחח ליהוה». Derive claim from
+# Hebrew arms. Lev 1:13."
+m.step("Lev.1.13")
+# witness-tier presupposed read: north_gates_rest_advisory on
+# criticality_sort — read, not installed
+m.witness_read("criticality_sort", "north_gates_rest_advisory",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 7 6", "Sifra, Vayikra Dibbura DeNedavah, Chapter 7 7", "Sifra, Vayikra Dibbura DeNedavah, Section 4 12", "Sifra, Vayikra Dibbura DeNedavah, Chapter 7 5"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('flock_filter', 'seam_teaches'), ('north_rules', 'environment_dependent'), ('arrangement_roster', 'one_priest_two_limbs'), ('criticality_sort', 'north_gates_rest_advisory')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 5 2', 'Sifra, Vayikra Dibbura DeNedavah, Section 5 1']
+    assert all('seam_teaches' not in f for f in m.WORLD["facts"])
+    assert 'flock_filter' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 4 1', 'Sifra, Vayikra Dibbura DeNedavah, Section 5 5', 'Sifra, Vayikra Dibbura DeNedavah, Section 5 6', 'Sifra, Vayikra Dibbura DeNedavah, Section 5 7', 'Sifra, Vayikra Dibbura DeNedavah, Section 5 8', 'Sifra, Vayikra Dibbura DeNedavah, Section 5 9', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 7 1', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 7 2']
+    assert all('environment_dependent' not in f for f in m.WORLD["facts"])
+    assert 'north_rules' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 6 1', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 6 2', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 6 3', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 5 7']
+    assert all('one_priest_two_limbs' not in f for f in m.WORLD["facts"])
+    assert 'arrangement_roster' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 7 6', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 7 7', 'Sifra, Vayikra Dibbura DeNedavah, Section 4 12', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 7 5']
+    assert all('north_gates_rest_advisory' not in f for f in m.WORLD["facts"])
+    assert 'criticality_sort' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_01_olah_bird
+###############################################################################
+
+m = Machine("lev_01_olah_bird")
+
+# -------------------------- Lev.1.14 · COND_ואם ----------------------------
+# ואם מן העוף עלה קרבנו ליהוה … והקריב מן התרים או מן בני היונה את קרבנו
+# "[EN-AID] From top split: LEFT «ואם מן העוף עלה קרבנו ליהוה» / RIGHT
+# «והקריב מן התרים או מן בני היונה את קרבנו». Derive claim from Hebrew arms.
+# Lev 1:14."
+m.step("Lev.1.14")
+# witness-tier presupposed read: complementary_windows_no_sex_predicate on
+# bird_spec — read, not installed
+m.witness_read("bird_spec", "complementary_windows_no_sex_predicate",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 8 4", "Sifra, Vayikra Dibbura DeNedavah, Chapter 8 5", "Sifra, Vayikra Dibbura DeNedavah, Section 6 3", "Sifra, Vayikra Dibbura DeNedavah, Section 6 5", "Sifra, Vayikra Dibbura DeNedavah, Section 6 6", "Sifra, Vayikra Dibbura DeNedavah, Chapter 8 1", "Sifra, Vayikra Dibbura DeNedavah, Section 7 1"])
+
+# -------------------------- Lev.1.15 · ETNACHTA_SPLIT ----------------------
+# והקריבו הכהן אל המזבח ומלק את ראשו והקטיר המזבחה … ונמצה דמו על קיר המזבח
+# "[EN-AID] From top split: LEFT «והקריבו הכהן אל המזבח ומלק את ראשו והקטיר
+# המזבחה» / RIGHT «ונמצה דמו על קיר המזבח». Derive claim from Hebrew arms.
+# Lev 1:15."
+m.step("Lev.1.15")
+# witness-tier presupposed read: fingernail_majority_blood on pinch_rite —
+# read, not installed
+m.witness_read("pinch_rite", "fingernail_majority_blood",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Section 7 3", "Sifra, Vayikra Dibbura DeNedavah, Section 7 4", "Sifra, Vayikra Dibbura DeNedavah, Section 7 6", "Sifra, Vayikra Dibbura DeNedavah, Section 7 7", "Sifra, Vayikra Dibbura DeNedavah, Section 7 8", "Sifra, Vayikra Dibbura DeNedavah, Chapter 9 7"])
+
+# -------------------------- Lev.1.16 · ETNACHTA_SPLIT ----------------------
+# והסיר את מראתו בנצתה … והשליך אתה אצל המזבח קדמה אל מקום הדשן
+# "[EN-AID] From top split: LEFT «והסיר את מראתו בנצתה» / RIGHT «והשליך אתה
+# אצל המזבח קדמה אל מקום הדשן». Derive claim from Hebrew arms. Lev 1:16."
+m.step("Lev.1.16")
+# witness-tier presupposed read: contents_vote_two_depositories on
+# crop_registry — read, not installed
+m.witness_read("crop_registry", "contents_vote_two_depositories",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Section 7 9", "Sifra, Vayikra Dibbura DeNedavah, Chapter 9 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 9 3", "Onkelos Lev 1:16"])
+
+# -------------------------- Lev.1.17 · ETNACHTA_SPLIT ----------------------
+# ושסע אתו בכנפיו לא יבדיל והקטיר אתו הכהן המזבחה על העצים אשר … עלה הוא אשה
+# ריח ניחח ליהוה
+# "[EN-AID] From top split: LEFT «ושסע אתו בכנפיו לא יבדיל והקטיר אתו הכהן
+# המזבחה על העצים אשר על האש» / RIGHT «עלה הוא אשה ריח ניחח ליהוה». Derive
+# claim from Hebrew arms. Lev 1:17."
+m.step("Lev.1.17")
+# witness-tier presupposed read: feathers_up_knife_fatal on rend_severity —
+# read, not installed
+m.witness_read("rend_severity", "feathers_up_knife_fatal",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 9 5", "Sifra, Vayikra Dibbura DeNedavah, Chapter 9 4", "Sifra, Vayikra Dibbura DeNedavah, Chapter 9 6"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('bird_spec', 'complementary_windows_no_sex_predicate'), ('pinch_rite', 'fingernail_majority_blood'), ('crop_registry', 'contents_vote_two_depositories'), ('rend_severity', 'feathers_up_knife_fatal')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 8 4', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 8 5', 'Sifra, Vayikra Dibbura DeNedavah, Section 6 3', 'Sifra, Vayikra Dibbura DeNedavah, Section 6 5', 'Sifra, Vayikra Dibbura DeNedavah, Section 6 6', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 8 1', 'Sifra, Vayikra Dibbura DeNedavah, Section 7 1']
+    assert all('complementary_windows_no_sex_predicate' not in f for f in m.WORLD["facts"])
+    assert 'bird_spec' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 7 3', 'Sifra, Vayikra Dibbura DeNedavah, Section 7 4', 'Sifra, Vayikra Dibbura DeNedavah, Section 7 6', 'Sifra, Vayikra Dibbura DeNedavah, Section 7 7', 'Sifra, Vayikra Dibbura DeNedavah, Section 7 8', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 9 7']
+    assert all('fingernail_majority_blood' not in f for f in m.WORLD["facts"])
+    assert 'pinch_rite' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 7 9', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 9 1', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 9 3', 'Onkelos Lev 1:16']
+    assert all('contents_vote_two_depositories' not in f for f in m.WORLD["facts"])
+    assert 'crop_registry' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 9 5', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 9 4', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 9 6']
+    assert all('feathers_up_knife_fatal' not in f for f in m.WORLD["facts"])
+    assert 'rend_severity' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_02_minchah
+###############################################################################
+
+m = Machine("lev_02_minchah")
+
+# -------------------------- Lev.2.1 · COND_כי ------------------------------
+# ונפש כי תקריב קרבן מנחה ליהוה סלת יהיה קרבנו … ויצק עליה שמן ונתן עליה
+# לבנה
+# "[EN-AID] From top split: LEFT «ונפש כי תקריב קרבן מנחה ליהוה סלת יהיה
+# קרבנו» / RIGHT «ויצק עליה שמן ונתן עליה לבנה». Derive claim from Hebrew
+# arms. Lev 2:1."
+m.step("Lev.2.1")
+# witness-tier presupposed read: menu_closed_at_incense on single_caller —
+# read, not installed
+m.witness_read("single_caller", "menu_closed_at_incense",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 8 2", "Sifra, Vayikra Dibbura DeNedavah, Section 8 3", "Sifra, Vayikra Dibbura DeNedavah, Section 8 5", "Sifra, Vayikra Dibbura DeNedavah, Section 8 7", "Sifra, Vayikra Dibbura DeNedavah, Section 8 8", "Sifra, Vayikra Dibbura DeNedavah, Section 8 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 10 6"])
+# witness-tier presupposed read: placement_follows_sample on two_adjuncts —
+# read, not installed
+m.witness_read("two_adjuncts", "placement_follows_sample",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 10 7", "Sifra, Vayikra Dibbura DeNedavah, Chapter 10 8", "Sifra, Vayikra Dibbura DeNedavah, Chapter 10 9", "Sifra, Vayikra Dibbura DeNedavah, Chapter 10 10", "Sifra, Vayikra Dibbura DeNedavah, Section 9 2"])
+
+# -------------------------- Lev.2.2 · ETNACHTA_SPLIT -----------------------
+# והביאה אל בני אהרן הכהנים וקמץ משם מלא קמצו מסלתה ומשמנה על  … והקטיר הכהן
+# את אזכרתה המזבחה אשה ריח ניחח ליהוה
+# "[EN-AID] From top split: LEFT «והביאה אל בני אהרן הכהנים וקמץ משם מלא
+# קמצו מסלתה ומשמנה על כל לבנתה» / RIGHT «והקטיר הכהן את אזכרתה המזבחה אשה
+# ריח ניחח ליהוה». Derive claim from Hebrew arms. Lev 2:2."
+m.step("Lev.2.2")
+# witness-tier presupposed read: constant_scaling_level_measure on fistful —
+# read, not installed
+m.witness_read("fistful", "constant_scaling_level_measure",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Section 9 3", "Sifra, Vayikra Dibbura DeNedavah, Section 9 5", "Sifra, Vayikra Dibbura DeNedavah, Section 9 6", "Sifra, Vayikra Dibbura DeNedavah, Section 9 7", "Sifra, Vayikra Dibbura DeNedavah, Section 9 9", "Sifra, Vayikra Dibbura DeNedavah, Section 9 10"])
+# witness-tier presupposed read: tenth_and_log_full on quantity_floors —
+# read, not installed
+m.witness_read("quantity_floors", "tenth_and_log_full",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Section 9 8", "Sifra, Vayikra Dibbura DeNedavah, Section 9 11", "Sifra, Vayikra Dibbura DeNedavah, Section 9 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 11 1"])
+
+# -------------------------- Lev.2.3 · ETNACHTA_SPLIT -----------------------
+# והנותרת מן המנחה לאהרן ולבניו … קדש קדשים מאשי יהוה
+# "[EN-AID] From top split: LEFT «והנותרת מן המנחה לאהרן ולבניו» / RIGHT
+# «קדש קדשים מאשי יהוה». Derive claim from Hebrew arms. Lev 2:3."
+m.step("Lev.2.3")
+
+# -------------------------- Lev.2.4 · COND_וכי -----------------------------
+# וכי תקרב קרבן מנחה מאפה תנור … סלת חלות מצת בלולת בשמן ורקיקי מצות משחים
+# בשמן
+# "[EN-AID] From top split: LEFT «וכי תקרב קרבן מנחה מאפה תנור» / RIGHT «סלת
+# חלות מצת בלולת בשמן ורקיקי מצות משחים בשמן». Derive claim from Hebrew
+# arms. Lev 2:4."
+m.step("Lev.2.4")
+# witness-tier presupposed read: normalize_or_void on vow_parser — read, not
+# installed
+m.witness_read("vow_parser", "normalize_or_void",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 10 2", "Sifra, Vayikra Dibbura DeNedavah, Section 10 1", "Sifra, Vayikra Dibbura DeNedavah, Section 10 2", "Sifra, Vayikra Dibbura DeNedavah, Section 10 3"])
+
+# -------------------------- Lev.2.5 · COND_ואם -----------------------------
+# ואם מנחה על המחבת קרבנך … סלת בלולה בשמן מצה תהיה
+# "[EN-AID] From top split: LEFT «ואם מנחה על המחבת קרבנך» / RIGHT «סלת
+# בלולה בשמן מצה תהיה». Derive claim from Hebrew arms. Lev 2:5."
+m.step("Lev.2.5")
+
+# -------------------------- Lev.2.6 · ETNACHTA_SPLIT -----------------------
+# פתות אתה פתים ויצקת עליה שמן … מנחה הוא
+# "[EN-AID] From top split: LEFT «פתות אתה פתים ויצקת עליה שמן» / RIGHT
+# «מנחה הוא». Derive claim from Hebrew arms. Lev 2:6."
+m.step("Lev.2.6")
+# witness-tier presupposed read: three_by_caller_class on folding_paths —
+# read, not installed
+m.witness_read("folding_paths", "three_by_caller_class",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 12 3", "Sifra, Vayikra Dibbura DeNedavah, Chapter 12 4", "Sifra, Vayikra Dibbura DeNedavah, Chapter 12 5", "Sifra, Vayikra Dibbura DeNedavah, Chapter 12 7"])
+
+# -------------------------- Lev.2.7 · COND_ואם -----------------------------
+# ואם מנחת מרחשת קרבנך … סלת בשמן תעשה
+# "[EN-AID] From top split: LEFT «ואם מנחת מרחשת קרבנך» / RIGHT «סלת בשמן
+# תעשה». Derive claim from Hebrew arms. Lev 2:7."
+m.step("Lev.2.7")
+
+# -------------------------- Lev.2.8 · ETNACHTA_SPLIT -----------------------
+# והבאת את המנחה אשר יעשה מאלה ליהוה … והקריבה אל הכהן והגישה אל המזבח
+# "[EN-AID] From top split: LEFT «והבאת את המנחה אשר יעשה מאלה ליהוה» /
+# RIGHT «והקריבה אל הכהן והגישה אל המזבח». Derive claim from Hebrew arms.
+# Lev 2:8."
+m.step("Lev.2.8")
+
+# -------------------------- Lev.2.9 · ETNACHTA_SPLIT -----------------------
+# והרים הכהן מן המנחה את אזכרתה והקטיר המזבחה … אשה ריח ניחח ליהוה
+# "[EN-AID] From top split: LEFT «והרים הכהן מן המנחה את אזכרתה והקטיר
+# המזבחה» / RIGHT «אשה ריח ניחח ליהוה». Derive claim from Hebrew arms. Lev
+# 2:9."
+m.step("Lev.2.9")
+
+# -------------------------- Lev.2.10 · ETNACHTA_SPLIT ----------------------
+# והנותרת מן המנחה לאהרן ולבניו … קדש קדשים מאשי יהוה
+# "[EN-AID] From top split: LEFT «והנותרת מן המנחה לאהרן ולבניו» / RIGHT
+# «קדש קדשים מאשי יהוה». Derive claim from Hebrew arms. Lev 2:10."
+m.step("Lev.2.10")
+
+# -------------------------- Lev.2.11 · ETNACHTA_SPLIT ----------------------
+# כל המנחה אשר תקריבו ליהוה לא תעשה חמץ … כי כל שאר וכל דבש לא תקטירו ממנו
+# אשה ליהוה
+# "[EN-AID] From top split: LEFT «כל המנחה אשר תקריבו ליהוה לא תעשה חמץ» /
+# RIGHT «כי כל שאר וכל דבש לא תקטירו ממנו אשה ליהוה». Derive claim from
+# Hebrew arms. Lev 2:11."
+m.step("Lev.2.11")
+# witness-tier presupposed read: per_step_liability on leaven_ban — read,
+# not installed
+m.witness_read("leaven_ban", "per_step_liability",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Section 12 1", "Sifra, Vayikra Dibbura DeNedavah, Section 12 3", "Sifra, Vayikra Dibbura DeNedavah, Section 12 4", "Sifra, Vayikra Dibbura DeNedavah, Section 12 5", "Sifra, Vayikra Dibbura DeNedavah, Section 12 6"])
+
+# -------------------------- Lev.2.12 · ETNACHTA_SPLIT ----------------------
+# קרבן ראשית תקריבו אתם ליהוה … ואל המזבח לא יעלו לריח ניחח
+# "[EN-AID] From top split: LEFT «קרבן ראשית תקריבו אתם ליהוה» / RIGHT «ואל
+# המזבח לא יעלו לריח ניחח». Derive claim from Hebrew arms. Lev 2:12."
+m.step("Lev.2.12")
+
+# -------------------------- Lev.2.13 · ETNACHTA_SPLIT ----------------------
+# וכל קרבן מנחתך במלח תמלח ולא תשבית מלח ברית אלהיך מעל מנחתך … על כל קרבנך
+# תקריב מלח
+# "[EN-AID] From top split: LEFT «וכל קרבן מנחתך במלח תמלח ולא תשבית מלח
+# ברית אלהיך מעל מנחתך» / RIGHT «על כל קרבנך תקריב מלח». Derive claim from
+# Hebrew arms. Lev 2:13."
+m.step("Lev.2.13")
+# witness-tier presupposed read: overrides_schedulers on salt_covenant —
+# read, not installed
+m.witness_read("salt_covenant", "overrides_schedulers",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 14 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 14 4", "Sifra, Vayikra Dibbura DeNedavah, Chapter 14 7", "Onkelos Lev 2:13"])
+
+# -------------------------- Lev.2.14 · COND_ואם ----------------------------
+# ואם תקריב מנחת בכורים ליהוה … אביב קלוי באש גרש כרמל תקריב את מנחת בכוריך
+# "[EN-AID] From top split: LEFT «ואם תקריב מנחת בכורים ליהוה» / RIGHT «אביב
+# קלוי באש גרש כרמל תקריב את מנחת בכוריך». Derive claim from Hebrew arms.
+# Lev 2:14."
+m.step("Lev.2.14")
+# witness-tier presupposed read: barley_word_order_if_grading on omer —
+# read, not installed
+m.witness_read("omer", "barley_word_order_if_grading",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Section 13 4", "Sifra, Vayikra Dibbura DeNedavah, Section 13 7", "Sifra, Vayikra Dibbura DeNedavah, Section 13 3", "Sifra, Vayikra Dibbura DeNedavah, Section 13 2", "Sifra, Vayikra Dibbura DeNedavah, Section 13 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 15 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 15 2", "Onkelos Lev 2:14"])
+
+# -------------------------- Lev.2.15 · ETNACHTA_SPLIT ----------------------
+# ונתת עליה שמן ושמת עליה לבנה … מנחה הוא
+# "[EN-AID] From top split: LEFT «ונתת עליה שמן ושמת עליה לבנה» / RIGHT
+# «מנחה הוא». Derive claim from Hebrew arms. Lev 2:15."
+m.step("Lev.2.15")
+# witness-tier presupposed read: closed_member_by_member on adjunct_matrix —
+# read, not installed
+m.witness_read("adjunct_matrix", "closed_member_by_member",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 15 3", "Sifra, Vayikra Dibbura DeNedavah, Chapter 15 4", "Sifra, Vayikra Dibbura DeNedavah, Chapter 15 5", "Sifra, Vayikra Dibbura DeNedavah, Section 12 7", "Sifra, Vayikra Dibbura DeNedavah, Section 12 9"])
+
+# -------------------------- Lev.2.16 · ETNACHTA_SPLIT ----------------------
+# והקטיר הכהן את אזכרתה מגרשה ומשמנה על כל לבנתה … אשה ליהוה
+# "[EN-AID] From top split: LEFT «והקטיר הכהן את אזכרתה מגרשה ומשמנה על כל
+# לבנתה» / RIGHT «אשה ליהוה». Derive claim from Hebrew arms. Lev 2:16."
+m.step("Lev.2.16")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('single_caller', 'menu_closed_at_incense'), ('two_adjuncts', 'placement_follows_sample'), ('fistful', 'constant_scaling_level_measure'), ('quantity_floors', 'tenth_and_log_full'), ('vow_parser', 'normalize_or_void'), ('folding_paths', 'three_by_caller_class'), ('leaven_ban', 'per_step_liability'), ('salt_covenant', 'overrides_schedulers'), ('omer', 'barley_word_order_if_grading'), ('adjunct_matrix', 'closed_member_by_member')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 8 2', 'Sifra, Vayikra Dibbura DeNedavah, Section 8 3', 'Sifra, Vayikra Dibbura DeNedavah, Section 8 5', 'Sifra, Vayikra Dibbura DeNedavah, Section 8 7', 'Sifra, Vayikra Dibbura DeNedavah, Section 8 8', 'Sifra, Vayikra Dibbura DeNedavah, Section 8 1', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 10 6']
+    assert all('menu_closed_at_incense' not in f for f in m.WORLD["facts"])
+    assert 'single_caller' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 10 7', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 10 8', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 10 9', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 10 10', 'Sifra, Vayikra Dibbura DeNedavah, Section 9 2']
+    assert all('placement_follows_sample' not in f for f in m.WORLD["facts"])
+    assert 'two_adjuncts' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 9 3', 'Sifra, Vayikra Dibbura DeNedavah, Section 9 5', 'Sifra, Vayikra Dibbura DeNedavah, Section 9 6', 'Sifra, Vayikra Dibbura DeNedavah, Section 9 7', 'Sifra, Vayikra Dibbura DeNedavah, Section 9 9', 'Sifra, Vayikra Dibbura DeNedavah, Section 9 10']
+    assert all('constant_scaling_level_measure' not in f for f in m.WORLD["facts"])
+    assert 'fistful' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 9 8', 'Sifra, Vayikra Dibbura DeNedavah, Section 9 11', 'Sifra, Vayikra Dibbura DeNedavah, Section 9 1', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 11 1']
+    assert all('tenth_and_log_full' not in f for f in m.WORLD["facts"])
+    assert 'quantity_floors' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 10 2', 'Sifra, Vayikra Dibbura DeNedavah, Section 10 1', 'Sifra, Vayikra Dibbura DeNedavah, Section 10 2', 'Sifra, Vayikra Dibbura DeNedavah, Section 10 3']
+    assert all('normalize_or_void' not in f for f in m.WORLD["facts"])
+    assert 'vow_parser' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 12 3', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 12 4', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 12 5', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 12 7']
+    assert all('three_by_caller_class' not in f for f in m.WORLD["facts"])
+    assert 'folding_paths' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 12 1', 'Sifra, Vayikra Dibbura DeNedavah, Section 12 3', 'Sifra, Vayikra Dibbura DeNedavah, Section 12 4', 'Sifra, Vayikra Dibbura DeNedavah, Section 12 5', 'Sifra, Vayikra Dibbura DeNedavah, Section 12 6']
+    assert all('per_step_liability' not in f for f in m.WORLD["facts"])
+    assert 'leaven_ban' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 14 1', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 14 4', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 14 7', 'Onkelos Lev 2:13']
+    assert all('overrides_schedulers' not in f for f in m.WORLD["facts"])
+    assert 'salt_covenant' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 13 4', 'Sifra, Vayikra Dibbura DeNedavah, Section 13 7', 'Sifra, Vayikra Dibbura DeNedavah, Section 13 3', 'Sifra, Vayikra Dibbura DeNedavah, Section 13 2', 'Sifra, Vayikra Dibbura DeNedavah, Section 13 1', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 15 1', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 15 2', 'Onkelos Lev 2:14']
+    assert all('barley_word_order_if_grading' not in f for f in m.WORLD["facts"])
+    assert 'omer' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 15 3', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 15 4', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 15 5', 'Sifra, Vayikra Dibbura DeNedavah, Section 12 7', 'Sifra, Vayikra Dibbura DeNedavah, Section 12 9']
+    assert all('closed_member_by_member' not in f for f in m.WORLD["facts"])
+    assert 'adjunct_matrix' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_03_shelamim
+###############################################################################
+
+m = Machine("lev_03_shelamim")
+
+# -------------------------- Lev.3.1 · COND_ואם -----------------------------
+# ואם זבח שלמים קרבנו … אם מן הבקר הוא מקריב אם זכר אם נקבה תמים יקריבנו
+# לפני יהוה
+# "[EN-AID] From top split: LEFT «ואם זבח שלמים קרבנו» / RIGHT «אם מן הבקר
+# הוא מקריב אם זכר אם נקבה תמים יקריבנו לפני יהוה». Derive claim from Hebrew
+# arms. Lev 3:1."
+m.step("Lev.3.1")
+# witness-tier presupposed read: three_way_distribution on
+# shelamim_signature — read, not installed
+m.witness_read("shelamim_signature", "three_way_distribution",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 16 2", "Sifra, Vayikra Dibbura DeNedavah, Chapter 16 3", "Sifra, Vayikra Dibbura DeNedavah, Chapter 16 4", "Onkelos Lev 3:1"])
+
+# -------------------------- Lev.3.2 · ETNACHTA_SPLIT -----------------------
+# וסמך ידו על ראש קרבנו ושחטו פתח אהל מועד … וזרקו בני אהרן הכהנים את הדם על
+# המזבח סביב
+# "[EN-AID] From top split: LEFT «וסמך ידו על ראש קרבנו ושחטו פתח אהל מועד»
+# / RIGHT «וזרקו בני אהרן הכהנים את הדם על המזבח סביב». Derive claim from
+# Hebrew arms. Lev 3:2."
+m.step("Lev.3.2")
+# witness-tier presupposed read: partners_in_turn_heir_out on
+# shared_semichah — read, not installed
+m.witness_read("shared_semichah", "partners_in_turn_heir_out",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 17 2", "Sifra, Vayikra Dibbura DeNedavah, Chapter 17 3", "Sifra, Vayikra Dibbura DeNedavah, Chapter 17 4", "Sifra, Vayikra Dibbura DeNedavah, Chapter 17 5", "Sifra, Vayikra Dibbura DeNedavah, Chapter 17 6", "Sifra, Vayikra Dibbura DeNedavah, Chapter 16 8"])
+# witness-tier presupposed read: deut_hook_all_sides on slaughter_license —
+# read, not installed
+m.witness_read("slaughter_license", "deut_hook_all_sides",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 17 7", "Sifra, Vayikra Dibbura DeNedavah, Chapter 17 9", "Sifra, Vayikra Dibbura DeNedavah, Chapter 17 10", "Sifra, Vayikra Dibbura DeNedavah, Chapter 17 11"])
+
+# -------------------------- Lev.3.3 · ETNACHTA_SPLIT -----------------------
+# והקריב מזבח השלמים אשה ליהוה … את החלב המכסה את הקרב ואת כל החלב אשר על
+# הקרב
+# "[EN-AID] From top split: LEFT «והקריב מזבח השלמים אשה ליהוה» / RIGHT «את
+# החלב המכסה את הקרב ואת כל החלב אשר על הקרב». Derive claim from Hebrew
+# arms. Lev 3:3."
+m.step("Lev.3.3")
+# witness-tier presupposed read: six_fields on intent_vector — read, not
+# installed
+m.witness_read("intent_vector", "six_fields",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Section 14 2", "Sifra, Vayikra Dibbura DeNedavah, Section 14 1"])
+
+# -------------------------- Lev.3.4 · ETNACHTA_SPLIT -----------------------
+# ואת שתי הכלית ואת החלב אשר עלהן אשר על הכסלים … ואת היתרת על הכבד על
+# הכליות יסירנה
+# "[EN-AID] From top split: LEFT «ואת שתי הכלית ואת החלב אשר עלהן אשר על
+# הכסלים» / RIGHT «ואת היתרת על הכבד על הכליות יסירנה». Derive claim from
+# Hebrew arms. Lev 3:4."
+m.step("Lev.3.4")
+# witness-tier presupposed read: two_kidneys_lobe_settled on anatomy_table —
+# read, not installed
+m.witness_read("anatomy_table", "two_kidneys_lobe_settled",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Section 14 7", "Sifra, Vayikra Dibbura DeNedavah, Section 14 8", "Sifra, Vayikra Dibbura DeNedavah, Section 14 6", "Sifra, Vayikra Dibbura DeNedavah, Section 14 9"])
+
+# -------------------------- Lev.3.5 · ETNACHTA_SPLIT -----------------------
+# והקטירו אתו בני אהרן המזבחה על העלה אשר על העצים אשר על האש … אשה ריח ניחח
+# ליהוה
+# "[EN-AID] From top split: LEFT «והקטירו אתו בני אהרן המזבחה על העלה אשר על
+# העצים אשר על האש» / RIGHT «אשה ריח ניחח ליהוה». Derive claim from Hebrew
+# arms. Lev 3:5."
+m.step("Lev.3.5")
+
+# -------------------------- Lev.3.6 · COND_ואם -----------------------------
+# ואם מן הצאן קרבנו לזבח שלמים ליהוה … זכר או נקבה תמים יקריבנו
+# "[EN-AID] From top split: LEFT «ואם מן הצאן קרבנו לזבח שלמים ליהוה» /
+# RIGHT «זכר או נקבה תמים יקריבנו». Derive claim from Hebrew arms. Lev 3:6."
+m.step("Lev.3.6")
+
+# -------------------------- Lev.3.7 · COND_אם ------------------------------
+# אם כשב הוא מקריב את קרבנו … והקריב אתו לפני יהוה
+# "[EN-AID] From top split: LEFT «אם כשב הוא מקריב את קרבנו» / RIGHT «והקריב
+# אתו לפני יהוה». Derive claim from Hebrew arms. Lev 3:7."
+m.step("Lev.3.7")
+
+# -------------------------- Lev.3.8 · ETNACHTA_SPLIT -----------------------
+# וסמך את ידו על ראש קרבנו ושחט אתו לפני אהל מועד … וזרקו בני אהרן את דמו על
+# המזבח סביב
+# "[EN-AID] From top split: LEFT «וסמך את ידו על ראש קרבנו ושחט אתו לפני אהל
+# מועד» / RIGHT «וזרקו בני אהרן את דמו על המזבח סביב». Derive claim from
+# Hebrew arms. Lev 3:8."
+m.step("Lev.3.8")
+
+# -------------------------- Lev.3.9 · ETNACHTA_SPLIT -----------------------
+# והקריב מזבח השלמים אשה ליהוה חלבו האליה תמימה לעמת העצה יסיר … ואת החלב
+# המכסה את הקרב ואת כל החלב אשר על הקרב
+# "[EN-AID] From top split: LEFT «והקריב מזבח השלמים אשה ליהוה חלבו האליה
+# תמימה לעמת העצה יסירנה» / RIGHT «ואת החלב המכסה את הקרב ואת כל החלב אשר על
+# הקרב». Derive claim from Hebrew arms. Lev 3:9."
+m.step("Lev.3.9")
+# witness-tier presupposed read: pesach_converts_at_boundary on fat_tail —
+# read, not installed
+m.witness_read("fat_tail", "pesach_converts_at_boundary",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 19 3", "Sifra, Vayikra Dibbura DeNedavah, Chapter 18 4", "Sifra, Vayikra Dibbura DeNedavah, Chapter 19 4"])
+
+# -------------------------- Lev.3.10 · ETNACHTA_SPLIT ----------------------
+# ואת שתי הכלית ואת החלב אשר עלהן אשר על הכסלים … ואת היתרת על הכבד על הכלית
+# יסירנה
+# "[EN-AID] From top split: LEFT «ואת שתי הכלית ואת החלב אשר עלהן אשר על
+# הכסלים» / RIGHT «ואת היתרת על הכבד על הכלית יסירנה». Derive claim from
+# Hebrew arms. Lev 3:10."
+m.step("Lev.3.10")
+
+# -------------------------- Lev.3.11 · ETNACHTA_SPLIT ----------------------
+# והקטירו הכהן המזבחה … לחם אשה ליהוה
+# "[EN-AID] From top split: LEFT «והקטירו הכהן המזבחה» / RIGHT «לחם אשה
+# ליהוה». Derive claim from Hebrew arms. Lev 3:11."
+m.step("Lev.3.11")
+# witness-tier presupposed read: three_variants_three_constraints on
+# smoke_verbs — read, not installed
+m.witness_read("smoke_verbs", "three_variants_three_constraints",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Section 14 10", "Sifra, Vayikra Dibbura DeNedavah, Chapter 19 5", "Onkelos Lev 3:11"])
+
+# -------------------------- Lev.3.12 · COND_ואם ----------------------------
+# ואם עז קרבנו … והקריבו לפני יהוה
+# "[EN-AID] From top split: LEFT «ואם עז קרבנו» / RIGHT «והקריבו לפני יהוה».
+# Derive claim from Hebrew arms. Lev 3:12."
+m.step("Lev.3.12")
+# witness-tier presupposed read: paragraph_carries_exemption on goat_hiatus
+# — read, not installed
+m.witness_read("goat_hiatus", "paragraph_carries_exemption",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 20 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 20 2"])
+
+# -------------------------- Lev.3.13 · ETNACHTA_SPLIT ----------------------
+# וסמך את ידו על ראשו ושחט אתו לפני אהל מועד … וזרקו בני אהרן את דמו על
+# המזבח סביב
+# "[EN-AID] From top split: LEFT «וסמך את ידו על ראשו ושחט אתו לפני אהל
+# מועד» / RIGHT «וזרקו בני אהרן את דמו על המזבח סביב». Derive claim from
+# Hebrew arms. Lev 3:13."
+m.step("Lev.3.13")
+
+# -------------------------- Lev.3.14 · ETNACHTA_SPLIT ----------------------
+# והקריב ממנו קרבנו אשה ליהוה … את החלב המכסה את הקרב ואת כל החלב אשר על
+# הקרב
+# "[EN-AID] From top split: LEFT «והקריב ממנו קרבנו אשה ליהוה» / RIGHT «את
+# החלב המכסה את הקרב ואת כל החלב אשר על הקרב». Derive claim from Hebrew
+# arms. Lev 3:14."
+m.step("Lev.3.14")
+
+# -------------------------- Lev.3.15 · ETNACHTA_SPLIT ----------------------
+# ואת שתי הכלית ואת החלב אשר עלהן אשר על הכסלים … ואת היתרת על הכבד על הכלית
+# יסירנה
+# "[EN-AID] From top split: LEFT «ואת שתי הכלית ואת החלב אשר עלהן אשר על
+# הכסלים» / RIGHT «ואת היתרת על הכבד על הכלית יסירנה». Derive claim from
+# Hebrew arms. Lev 3:15."
+m.step("Lev.3.15")
+
+# -------------------------- Lev.3.16 · ETNACHTA_SPLIT ----------------------
+# והקטירם הכהן המזבחה … לחם אשה לריח ניחח כל חלב ליהוה
+# "[EN-AID] From top split: LEFT «והקטירם הכהן המזבחה» / RIGHT «לחם אשה לריח
+# ניחח כל חלב ליהוה». Derive claim from Hebrew arms. Lev 3:16."
+m.step("Lev.3.16")
+
+# -------------------------- Lev.3.17 · ETNACHTA_SPLIT ----------------------
+# חקת עולם לדרתיכם בכל מושבתיכם … כל חלב וכל דם לא תאכלו
+# "[EN-AID] From top split: LEFT «חקת עולם לדרתיכם בכל מושבתיכם» / RIGHT «כל
+# חלב וכל דם לא תאכלו». Derive claim from Hebrew arms. Lev 3:17."
+m.step("Lev.3.17")
+# witness-tier presupposed read: all_dwellings_place_free on
+# eating_ban_scope — read, not installed
+m.witness_read("eating_ban_scope", "all_dwellings_place_free",
+                cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 20 6", "Sifra, Vayikra Dibbura DeNedavah, Chapter 20 7", "Onkelos Lev 3:17"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('shelamim_signature', 'three_way_distribution'), ('shared_semichah', 'partners_in_turn_heir_out'), ('slaughter_license', 'deut_hook_all_sides'), ('intent_vector', 'six_fields'), ('anatomy_table', 'two_kidneys_lobe_settled'), ('fat_tail', 'pesach_converts_at_boundary'), ('smoke_verbs', 'three_variants_three_constraints'), ('goat_hiatus', 'paragraph_carries_exemption'), ('eating_ban_scope', 'all_dwellings_place_free')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 16 2', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 16 3', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 16 4', 'Onkelos Lev 3:1']
+    assert all('three_way_distribution' not in f for f in m.WORLD["facts"])
+    assert 'shelamim_signature' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 17 2', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 17 3', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 17 4', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 17 5', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 17 6', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 16 8']
+    assert all('partners_in_turn_heir_out' not in f for f in m.WORLD["facts"])
+    assert 'shared_semichah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 17 7', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 17 9', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 17 10', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 17 11']
+    assert all('deut_hook_all_sides' not in f for f in m.WORLD["facts"])
+    assert 'slaughter_license' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 14 2', 'Sifra, Vayikra Dibbura DeNedavah, Section 14 1']
+    assert all('six_fields' not in f for f in m.WORLD["facts"])
+    assert 'intent_vector' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 14 7', 'Sifra, Vayikra Dibbura DeNedavah, Section 14 8', 'Sifra, Vayikra Dibbura DeNedavah, Section 14 6', 'Sifra, Vayikra Dibbura DeNedavah, Section 14 9']
+    assert all('two_kidneys_lobe_settled' not in f for f in m.WORLD["facts"])
+    assert 'anatomy_table' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 19 3', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 18 4', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 19 4']
+    assert all('pesach_converts_at_boundary' not in f for f in m.WORLD["facts"])
+    assert 'fat_tail' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 14 10', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 19 5', 'Onkelos Lev 3:11']
+    assert all('three_variants_three_constraints' not in f for f in m.WORLD["facts"])
+    assert 'smoke_verbs' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 20 1', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 20 2']
+    assert all('paragraph_carries_exemption' not in f for f in m.WORLD["facts"])
+    assert 'goat_hiatus' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 20 6', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 20 7', 'Onkelos Lev 3:17']
+    assert all('all_dwellings_place_free' not in f for f in m.WORLD["facts"])
+    assert 'eating_ban_scope' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_05_asham_graded
+###############################################################################
+
+m = Machine("lev_05_asham_graded")
+
+# -------------------------- Lev.5.1 · COND_כי ------------------------------
+# ונפש כי תחטא ושמעה קול אלה והוא עד או ראה או ידע … אם לוא יגיד ונשא עונו
+# "[EN-AID] From top split: LEFT «ונפש כי תחטא ושמעה קול אלה והוא עד או ראה
+# או ידע» / RIGHT «אם לוא יגיד ונשא עונו». Derive claim from Hebrew arms.
+# Lev 5:1."
+m.step("Lev.5.1")
+# witness-tier presupposed read: court_forum_specificity on witness_oath —
+# read, not installed
+m.witness_read("witness_oath", "court_forum_specificity",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Section 8 1", "Sifra, Vayikra Dibbura DeChovah, Section 8 4", "Sifra, Vayikra Dibbura DeChovah, Section 8 5", "Sifra, Vayikra Dibbura DeChovah, Section 8 6", "Sifra, Vayikra Dibbura DeChovah, Section 8 7", "Sifra, Vayikra Dibbura DeChovah, Chapter 12 1", "Sifra, Vayikra Dibbura DeChovah, Chapter 12 5", "Sifra, Vayikra Dibbura DeChovah, Chapter 12 6", "Sifra, Vayikra Dibbura DeChovah, Chapter 12 7"])
+
+# -------------------------- Lev.5.2 · ETNACHTA_SPLIT -----------------------
+# או נפש אשר תגע בכל דבר טמא או בנבלת חיה טמאה או בנבלת בהמה ט … ונעלם ממנו
+# והוא טמא ואשם
+# "[EN-AID] From top split: LEFT «או נפש אשר תגע בכל דבר טמא או בנבלת חיה
+# טמאה או בנבלת בהמה טמאה או בנבלת שרץ טמא» / RIGHT «ונעלם ממנו והוא טמא
+# ואשם». Derive claim from Hebrew arms. Lev 5:2."
+m.step("Lev.5.2")
+# witness-tier presupposed read: aware_hidden_aware on tumah_trigger — read,
+# not installed
+m.witness_read("tumah_trigger", "aware_hidden_aware",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 13 10", "Sifra, Vayikra Dibbura DeChovah, Chapter 13 11", "Sifra, Vayikra Dibbura DeChovah, Chapter 13 7", "Sifra, Vayikra Dibbura DeChovah, Chapter 13 4", "Sifra, Vayikra Dibbura DeChovah, Chapter 13 6"])
+
+# -------------------------- Lev.5.3 · COND_כי ------------------------------
+# או כי יגע בטמאת אדם לכל טמאתו אשר יטמא בה … ונעלם ממנו והוא ידע ואשם
+# "[EN-AID] From top split: LEFT «או כי יגע בטמאת אדם לכל טמאתו אשר יטמא בה»
+# / RIGHT «ונעלם ממנו והוא ידע ואשם». Derive claim from Hebrew arms. Lev
+# 5:3."
+m.step("Lev.5.3")
+
+# -------------------------- Lev.5.4 · COND_כי ------------------------------
+# או נפש כי תשבע לבטא בשפתים להרע או להיטיב לכל אשר יבטא האדם  … והוא ידע
+# ואשם לאחת מאלה
+# "[EN-AID] From top split: LEFT «או נפש כי תשבע לבטא בשפתים להרע או להיטיב
+# לכל אשר יבטא האדם בשבעה ונעלם ממנו» / RIGHT «והוא ידע ואשם לאחת מאלה».
+# Derive claim from Hebrew arms. Lev 5:4."
+m.step("Lev.5.4")
+# witness-tier presupposed read: lips_option_bound_forgotten on
+# utterance_oath — read, not installed
+m.witness_read("utterance_oath", "lips_option_bound_forgotten",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Section 9 1", "Sifra, Vayikra Dibbura DeChovah, Section 9 2", "Sifra, Vayikra Dibbura DeChovah, Section 9 3", "Sifra, Vayikra Dibbura DeChovah, Section 9 6", "Sifra, Vayikra Dibbura DeChovah, Section 9 8", "Sifra, Vayikra Dibbura DeChovah, Section 9 9", "Onkelos Lev 5:4"])
+
+# -------------------------- Lev.5.5 · COND_כי ------------------------------
+# והיה כי יאשם לאחת מאלה … והתודה אשר חטא עליה
+# "[EN-AID] From top split: LEFT «והיה כי יאשם לאחת מאלה» / RIGHT «והתודה
+# אשר חטא עליה». Derive claim from Hebrew arms. Lev 5:5."
+m.step("Lev.5.5")
+# witness-tier presupposed read: general_one_enumerated_each on
+# individuation — read, not installed
+m.witness_read("individuation", "general_one_enumerated_each",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 17 1", "Sifra, Vayikra Dibbura DeChovah, Section 10 1", "Sifra, Vayikra Dibbura DeChovah, Chapter 14 1", "Sifra, Vayikra Dibbura DeChovah, Chapter 15 1", "Sifra, Vayikra Dibbura DeChovah, Chapter 16 2"])
+
+# -------------------------- Lev.5.6 · ETNACHTA_SPLIT -----------------------
+# והביא את אשמו ליהוה על חטאתו אשר חטא נקבה מן הצאן כשבה או שע … וכפר עליו
+# הכהן מחטאתו
+# "[EN-AID] From top split: LEFT «והביא את אשמו ליהוה על חטאתו אשר חטא נקבה
+# מן הצאן כשבה או שעירת עזים לחטאת» / RIGHT «וכפר עליו הכהן מחטאתו». Derive
+# claim from Hebrew arms. Lev 5:6."
+m.step("Lev.5.6")
+
+# -------------------------- Lev.5.7 · COND_ואם -----------------------------
+# ואם לא תגיע ידו די שה והביא את אשמו אשר חטא שתי תרים או שני  … אחד לחטאת
+# ואחד לעלה
+# "[EN-AID] From top split: LEFT «ואם לא תגיע ידו די שה והביא את אשמו אשר
+# חטא שתי תרים או שני בני יונה ליהוה» / RIGHT «אחד לחטאת ואחד לעלה». Derive
+# claim from Hebrew arms. Lev 5:7."
+m.step("Lev.5.7")
+# witness-tier presupposed read: dynamic_hand_test on poverty_ladder — read,
+# not installed
+m.witness_read("poverty_ladder", "dynamic_hand_test",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 18 1", "Sifra, Vayikra Dibbura DeChovah, Section 10 10", "Sifra, Vayikra Dibbura DeChovah, Section 10 9", "Sifra, Vayikra Dibbura DeChovah, Chapter 18 3", "Sifra, Vayikra Dibbura DeChovah, Chapter 18 4", "Sifra, Vayikra Dibbura DeChovah, Chapter 18 5", "Onkelos Lev 5:7"])
+
+# -------------------------- Lev.5.8 · ETNACHTA_SPLIT -----------------------
+# והביא אתם אל הכהן והקריב את אשר לחטאת ראשונה … ומלק את ראשו ממול ערפו ולא
+# יבדיל
+# "[EN-AID] From top split: LEFT «והביא אתם אל הכהן והקריב את אשר לחטאת
+# ראשונה» / RIGHT «ומלק את ראשו ממול ערפו ולא יבדיל». Derive claim from
+# Hebrew arms. Lev 5:8."
+m.step("Lev.5.8")
+# witness-tier presupposed read: one_sign_lower_wall on sin_bird_rite —
+# read, not installed
+m.witness_read("sin_bird_rite", "one_sign_lower_wall",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 18 7", "Sifra, Vayikra Dibbura DeChovah, Chapter 18 8"])
+
+# -------------------------- Lev.5.9 · ETNACHTA_SPLIT -----------------------
+# והזה מדם החטאת על קיר המזבח והנשאר בדם ימצה אל יסוד המזבח … חטאת הוא
+# "[EN-AID] From top split: LEFT «והזה מדם החטאת על קיר המזבח והנשאר בדם
+# ימצה אל יסוד המזבח» / RIGHT «חטאת הוא». Derive claim from Hebrew arms. Lev
+# 5:9."
+m.step("Lev.5.9")
+
+# -------------------------- Lev.5.10 · ETNACHTA_SPLIT ----------------------
+# ואת השני יעשה עלה כמשפט … וכפר עליו הכהן מחטאתו אשר חטא ונסלח לו
+# "[EN-AID] From top split: LEFT «ואת השני יעשה עלה כמשפט» / RIGHT «וכפר
+# עליו הכהן מחטאתו אשר חטא ונסלח לו». Derive claim from Hebrew arms. Lev
+# 5:10."
+m.step("Lev.5.10")
+
+# -------------------------- Lev.5.11 · COND_ואם ----------------------------
+# ואם לא תשיג ידו לשתי תרים או לשני בני יונה והביא את קרבנו אש … לא ישים
+# עליה שמן ולא יתן עליה לבנה כי חטאת היא
+# "[EN-AID] From top split: LEFT «ואם לא תשיג ידו לשתי תרים או לשני בני יונה
+# והביא את קרבנו אשר חטא עשירת האפה סלת» / RIGHT «לא ישים עליה שמן ולא יתן
+# עליה לבנה כי חטאת היא». Derive claim from Hebrew arms. Lev 5:11."
+m.step("Lev.5.11")
+# witness-tier presupposed read: unit_converted_stripped_now on flour_tier —
+# read, not installed
+m.witness_read("flour_tier", "unit_converted_stripped_now",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 19 5", "Sifra, Vayikra Dibbura DeChovah, Chapter 19 6", "Sifra, Vayikra Dibbura DeChovah, Chapter 19 1", "Onkelos Lev 5:11"])
+
+# -------------------------- Lev.5.12 · ETNACHTA_SPLIT ----------------------
+# והביאה אל הכהן וקמץ הכהן ממנה מלוא קמצו את אזכרתה והקטיר המז … חטאת הוא
+# "[EN-AID] From top split: LEFT «והביאה אל הכהן וקמץ הכהן ממנה מלוא קמצו את
+# אזכרתה והקטיר המזבחה על אשי יהוה» / RIGHT «חטאת הוא». Derive claim from
+# Hebrew arms. Lev 5:12."
+m.step("Lev.5.12")
+
+# -------------------------- Lev.5.13 · ETNACHTA_SPLIT ----------------------
+# וכפר עליו הכהן על חטאתו אשר חטא מאחת מאלה ונסלח לו … והיתה לכהן כמנחה
+# "[EN-AID] From top split: LEFT «וכפר עליו הכהן על חטאתו אשר חטא מאחת מאלה
+# ונסלח לו» / RIGHT «והיתה לכהן כמנחה». Derive claim from Hebrew arms. Lev
+# 5:13."
+m.step("Lev.5.13")
+# witness-tier presupposed read: means_not_gravity on tier_orthogonality —
+# read, not installed
+m.witness_read("tier_orthogonality", "means_not_gravity",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 19 10", "Sifra, Vayikra Dibbura DeChovah, Chapter 19 11"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('witness_oath', 'court_forum_specificity'), ('tumah_trigger', 'aware_hidden_aware'), ('utterance_oath', 'lips_option_bound_forgotten'), ('individuation', 'general_one_enumerated_each'), ('poverty_ladder', 'dynamic_hand_test'), ('sin_bird_rite', 'one_sign_lower_wall'), ('flour_tier', 'unit_converted_stripped_now'), ('tier_orthogonality', 'means_not_gravity')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Section 8 1', 'Sifra, Vayikra Dibbura DeChovah, Section 8 4', 'Sifra, Vayikra Dibbura DeChovah, Section 8 5', 'Sifra, Vayikra Dibbura DeChovah, Section 8 6', 'Sifra, Vayikra Dibbura DeChovah, Section 8 7', 'Sifra, Vayikra Dibbura DeChovah, Chapter 12 1', 'Sifra, Vayikra Dibbura DeChovah, Chapter 12 5', 'Sifra, Vayikra Dibbura DeChovah, Chapter 12 6', 'Sifra, Vayikra Dibbura DeChovah, Chapter 12 7']
+    assert all('court_forum_specificity' not in f for f in m.WORLD["facts"])
+    assert 'witness_oath' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 13 10', 'Sifra, Vayikra Dibbura DeChovah, Chapter 13 11', 'Sifra, Vayikra Dibbura DeChovah, Chapter 13 7', 'Sifra, Vayikra Dibbura DeChovah, Chapter 13 4', 'Sifra, Vayikra Dibbura DeChovah, Chapter 13 6']
+    assert all('aware_hidden_aware' not in f for f in m.WORLD["facts"])
+    assert 'tumah_trigger' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Section 9 1', 'Sifra, Vayikra Dibbura DeChovah, Section 9 2', 'Sifra, Vayikra Dibbura DeChovah, Section 9 3', 'Sifra, Vayikra Dibbura DeChovah, Section 9 6', 'Sifra, Vayikra Dibbura DeChovah, Section 9 8', 'Sifra, Vayikra Dibbura DeChovah, Section 9 9', 'Onkelos Lev 5:4']
+    assert all('lips_option_bound_forgotten' not in f for f in m.WORLD["facts"])
+    assert 'utterance_oath' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 17 1', 'Sifra, Vayikra Dibbura DeChovah, Section 10 1', 'Sifra, Vayikra Dibbura DeChovah, Chapter 14 1', 'Sifra, Vayikra Dibbura DeChovah, Chapter 15 1', 'Sifra, Vayikra Dibbura DeChovah, Chapter 16 2']
+    assert all('general_one_enumerated_each' not in f for f in m.WORLD["facts"])
+    assert 'individuation' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 18 1', 'Sifra, Vayikra Dibbura DeChovah, Section 10 10', 'Sifra, Vayikra Dibbura DeChovah, Section 10 9', 'Sifra, Vayikra Dibbura DeChovah, Chapter 18 3', 'Sifra, Vayikra Dibbura DeChovah, Chapter 18 4', 'Sifra, Vayikra Dibbura DeChovah, Chapter 18 5', 'Onkelos Lev 5:7']
+    assert all('dynamic_hand_test' not in f for f in m.WORLD["facts"])
+    assert 'poverty_ladder' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 18 7', 'Sifra, Vayikra Dibbura DeChovah, Chapter 18 8']
+    assert all('one_sign_lower_wall' not in f for f in m.WORLD["facts"])
+    assert 'sin_bird_rite' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 19 5', 'Sifra, Vayikra Dibbura DeChovah, Chapter 19 6', 'Sifra, Vayikra Dibbura DeChovah, Chapter 19 1', 'Onkelos Lev 5:11']
+    assert all('unit_converted_stripped_now' not in f for f in m.WORLD["facts"])
+    assert 'flour_tier' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 19 10', 'Sifra, Vayikra Dibbura DeChovah, Chapter 19 11']
+    assert all('means_not_gravity' not in f for f in m.WORLD["facts"])
+    assert 'tier_orthogonality' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_05_asham_sancta
+###############################################################################
+
+m = Machine("lev_05_asham_sancta")
+
+# -------------------------- Lev.5.14 · TREE_CLAIM --------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 5:14."
+m.step("Lev.5.14")
+
+# -------------------------- Lev.5.15 · COND_כי -----------------------------
+# נפש כי תמעל מעל וחטאה בשגגה מקדשי יהוה … והביא את אשמו ליהוה איל תמים מן
+# הצאן בערכך כסף שקלים בשקל הק
+# "[EN-AID] From top split: LEFT «נפש כי תמעל מעל וחטאה בשגגה מקדשי יהוה» /
+# RIGHT «והביא את אשמו ליהוה איל תמים מן הצאן בערכך כסף שקלים בשקל הקדש
+# לאשם». Derive claim from Hebrew arms. Lev 5:15."
+m.step("Lev.5.15")
+# witness-tier presupposed read: damage_benefit_accumulating on
+# meilah_predicate — read, not installed
+m.witness_read("meilah_predicate", "damage_benefit_accumulating",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Section 11 3", "Sifra, Vayikra Dibbura DeChovah, Section 11 5", "Sifra, Vayikra Dibbura DeChovah, Section 11 6", "Sifra, Vayikra Dibbura DeChovah, Section 11 7", "Sifra, Vayikra Dibbura DeChovah, Chapter 20 1", "Sifra, Vayikra Dibbura DeChovah, Chapter 20 2", "Sifra, Vayikra Dibbura DeChovah, Chapter 20 3", "Sifra, Vayikra Dibbura DeChovah, Chapter 20 4", "Sifra, Vayikra Dibbura DeChovah, Chapter 20 5", "Onkelos Lev 5:15"])
+
+# -------------------------- Lev.5.16 · ETNACHTA_SPLIT ----------------------
+# ואת אשר חטא מן הקדש ישלם ואת חמישתו יוסף עליו ונתן אתו לכהן … והכהן יכפר
+# עליו באיל האשם ונסלח לו
+# "[EN-AID] From top split: LEFT «ואת אשר חטא מן הקדש ישלם ואת חמישתו יוסף
+# עליו ונתן אתו לכהן» / RIGHT «והכהן יכפר עליו באיל האשם ונסלח לו». Derive
+# claim from Hebrew arms. Lev 5:16."
+m.step("Lev.5.16")
+# witness-tier presupposed read: fifth_quarter_independent on
+# restitution_funds — read, not installed
+m.witness_read("restitution_funds", "fifth_quarter_independent",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 20 7", "Sifra, Vayikra Dibbura DeChovah, Chapter 20 8", "Sifra, Vayikra Dibbura DeChovah, Chapter 20 9"])
+
+# -------------------------- Lev.5.17 · COND_ואם ----------------------------
+# ואם נפש כי תחטא ועשתה אחת מכל מצות יהוה אשר לא תעשינה … ולא ידע ואשם ונשא
+# עונו
+# "[EN-AID] From top split: LEFT «ואם נפש כי תחטא ועשתה אחת מכל מצות יהוה
+# אשר לא תעשינה» / RIGHT «ולא ידע ואשם ונשא עונו». Derive claim from Hebrew
+# arms. Lev 5:17."
+m.step("Lev.5.17")
+# witness-tier presupposed read: doubt_interval_covered on asham_talui —
+# read, not installed
+m.witness_read("asham_talui", "doubt_interval_covered",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Section 12 1", "Sifra, Vayikra Dibbura DeChovah, Section 12 3", "Sifra, Vayikra Dibbura DeChovah, Section 12 4", "Sifra, Vayikra Dibbura DeChovah, Section 12 5", "Sifra, Vayikra Dibbura DeChovah, Chapter 21 3", "Sifra, Vayikra Dibbura DeChovah, Chapter 21 4", "Sifra, Vayikra Dibbura DeChovah, Section 12 2"])
+
+# -------------------------- Lev.5.18 · ETNACHTA_SPLIT ----------------------
+# והביא איל תמים מן הצאן בערכך לאשם אל הכהן … וכפר עליו הכהן על שגגתו אשר
+# שגג והוא לא ידע ונסלח לו
+# "[EN-AID] From top split: LEFT «והביא איל תמים מן הצאן בערכך לאשם אל הכהן»
+# / RIGHT «וכפר עליו הכהן על שגגתו אשר שגג והוא לא ידע ונסלח לו». Derive
+# claim from Hebrew arms. Lev 5:18."
+m.step("Lev.5.18")
+
+# -------------------------- Lev.5.19 · ETNACHTA_SPLIT ----------------------
+# אשם הוא … אשם אשם ליהוה
+# "[EN-AID] From top split: LEFT «אשם הוא» / RIGHT «אשם אשם ליהוה». Derive
+# claim from Hebrew arms. Lev 5:19."
+m.step("Lev.5.19")
+
+# -------------------------- Lev.5.20 · TREE_CLAIM --------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 5:20."
+m.step("Lev.5.20")
+
+# -------------------------- Lev.5.21 · COND_כי -----------------------------
+# נפש כי תחטא ומעלה מעל ביהוה … וכחש בעמיתו בפקדון או בתשומת יד או בגזל או
+# עשק את עמיתו
+# "[EN-AID] From top split: LEFT «נפש כי תחטא ומעלה מעל ביהוה» / RIGHT «וכחש
+# בעמיתו בפקדון או בתשומת יד או בגזל או עשק את עמיתו». Derive claim from
+# Hebrew arms. Lev 5:21."
+m.step("Lev.5.21")
+# witness-tier presupposed read: anti_loophole_third_witness on deposit_oath
+# — read, not installed
+m.witness_read("deposit_oath", "anti_loophole_third_witness",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 22 4", "Sifra, Vayikra Dibbura DeChovah, Chapter 22 2", "Sifra, Vayikra Dibbura DeChovah, Chapter 22 6", "Sifra, Vayikra Dibbura DeChovah, Chapter 22 7", "Sifra, Vayikra Dibbura DeChovah, Chapter 22 9", "Sifra, Vayikra Dibbura DeChovah, Chapter 22 10", "Sifra, Vayikra Dibbura DeChovah, Chapter 22 11", "Onkelos Lev 5:21"])
+
+# -------------------------- Lev.5.22 · ETNACHTA_SPLIT ----------------------
+# או מצא אבדה וכחש בה ונשבע על שקר … על אחת מכל אשר יעשה האדם לחטא בהנה
+# "[EN-AID] From top split: LEFT «או מצא אבדה וכחש בה ונשבע על שקר» / RIGHT
+# «על אחת מכל אשר יעשה האדם לחטא בהנה». Derive claim from Hebrew arms. Lev
+# 5:22."
+m.step("Lev.5.22")
+
+# -------------------------- Lev.5.23 · COND_כי -----------------------------
+# והיה כי יחטא ואשם והשיב את הגזלה אשר גזל או את העשק אשר עשק  … או את האבדה
+# אשר מצא
+# "[EN-AID] From top split: LEFT «והיה כי יחטא ואשם והשיב את הגזלה אשר גזל
+# או את העשק אשר עשק או את הפקדון אשר הפק» / RIGHT «או את האבדה אשר מצא».
+# Derive claim from Hebrew arms. Lev 5:23."
+m.step("Lev.5.23")
+# witness-tier presupposed read: first_in_kind_own_act on restore_op — read,
+# not installed
+m.witness_read("restore_op", "first_in_kind_own_act",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Section 13 1", "Sifra, Vayikra Dibbura DeChovah, Section 13 4", "Sifra, Vayikra Dibbura DeChovah, Section 13 2", "Sifra, Vayikra Dibbura DeChovah, Section 13 5", "Sifra, Vayikra Dibbura DeChovah, Section 13 6"])
+
+# -------------------------- Lev.5.24 · ETNACHTA_SPLIT ----------------------
+# או מכל אשר ישבע עליו לשקר ושלם אתו בראשו וחמשתיו יסף עליו … לאשר הוא לו
+# יתננו ביום אשמתו
+# "[EN-AID] From top split: LEFT «או מכל אשר ישבע עליו לשקר ושלם אתו בראשו
+# וחמשתיו יסף עליו» / RIGHT «לאשר הוא לו יתננו ביום אשמתו». Derive claim
+# from Hebrew arms. Lev 5:24."
+m.step("Lev.5.24")
+# witness-tier presupposed read: oath_fifth_recursive_perutah on
+# payment_algebra — read, not installed
+m.witness_read("payment_algebra", "oath_fifth_recursive_perutah",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Section 13 8", "Sifra, Vayikra Dibbura DeChovah, Section 13 9", "Sifra, Vayikra Dibbura DeChovah, Section 13 10", "Sifra, Vayikra Dibbura DeChovah, Section 13 12", "Sifra, Vayikra Dibbura DeChovah, Section 13 13", "Onkelos Lev 5:24"])
+
+# -------------------------- Lev.5.25 · ETNACHTA_SPLIT ----------------------
+# ואת אשמו יביא ליהוה … איל תמים מן הצאן בערכך לאשם אל הכהן
+# "[EN-AID] From top split: LEFT «ואת אשמו יביא ליהוה» / RIGHT «איל תמים מן
+# הצאן בערכך לאשם אל הכהן». Derive claim from Hebrew arms. Lev 5:25."
+m.step("Lev.5.25")
+
+# -------------------------- Lev.5.26 · ETNACHTA_SPLIT ----------------------
+# וכפר עליו הכהן לפני יהוה ונסלח לו … על אחת מכל אשר יעשה לאשמה בה
+# "[EN-AID] From top split: LEFT «וכפר עליו הכהן לפני יהוה ונסלח לו» / RIGHT
+# «על אחת מכל אשר יעשה לאשמה בה». Derive claim from Hebrew arms. Lev 5:26."
+m.step("Lev.5.26")
+# witness-tier presupposed read: enumerated_each_blanket_one on
+# deposit_individuation — read, not installed
+m.witness_read("deposit_individuation", "enumerated_each_blanket_one",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 23 2", "Sifra, Vayikra Dibbura DeChovah, Chapter 23 6", "Sifra, Vayikra Dibbura DeChovah, Chapter 23 10", "Sifra, Vayikra Dibbura DeChovah, Chapter 23 1"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('meilah_predicate', 'damage_benefit_accumulating'), ('restitution_funds', 'fifth_quarter_independent'), ('asham_talui', 'doubt_interval_covered'), ('deposit_oath', 'anti_loophole_third_witness'), ('restore_op', 'first_in_kind_own_act'), ('payment_algebra', 'oath_fifth_recursive_perutah'), ('deposit_individuation', 'enumerated_each_blanket_one')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Section 11 3', 'Sifra, Vayikra Dibbura DeChovah, Section 11 5', 'Sifra, Vayikra Dibbura DeChovah, Section 11 6', 'Sifra, Vayikra Dibbura DeChovah, Section 11 7', 'Sifra, Vayikra Dibbura DeChovah, Chapter 20 1', 'Sifra, Vayikra Dibbura DeChovah, Chapter 20 2', 'Sifra, Vayikra Dibbura DeChovah, Chapter 20 3', 'Sifra, Vayikra Dibbura DeChovah, Chapter 20 4', 'Sifra, Vayikra Dibbura DeChovah, Chapter 20 5', 'Onkelos Lev 5:15']
+    assert all('damage_benefit_accumulating' not in f for f in m.WORLD["facts"])
+    assert 'meilah_predicate' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 20 7', 'Sifra, Vayikra Dibbura DeChovah, Chapter 20 8', 'Sifra, Vayikra Dibbura DeChovah, Chapter 20 9']
+    assert all('fifth_quarter_independent' not in f for f in m.WORLD["facts"])
+    assert 'restitution_funds' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Section 12 1', 'Sifra, Vayikra Dibbura DeChovah, Section 12 3', 'Sifra, Vayikra Dibbura DeChovah, Section 12 4', 'Sifra, Vayikra Dibbura DeChovah, Section 12 5', 'Sifra, Vayikra Dibbura DeChovah, Chapter 21 3', 'Sifra, Vayikra Dibbura DeChovah, Chapter 21 4', 'Sifra, Vayikra Dibbura DeChovah, Section 12 2']
+    assert all('doubt_interval_covered' not in f for f in m.WORLD["facts"])
+    assert 'asham_talui' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 22 4', 'Sifra, Vayikra Dibbura DeChovah, Chapter 22 2', 'Sifra, Vayikra Dibbura DeChovah, Chapter 22 6', 'Sifra, Vayikra Dibbura DeChovah, Chapter 22 7', 'Sifra, Vayikra Dibbura DeChovah, Chapter 22 9', 'Sifra, Vayikra Dibbura DeChovah, Chapter 22 10', 'Sifra, Vayikra Dibbura DeChovah, Chapter 22 11', 'Onkelos Lev 5:21']
+    assert all('anti_loophole_third_witness' not in f for f in m.WORLD["facts"])
+    assert 'deposit_oath' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Section 13 1', 'Sifra, Vayikra Dibbura DeChovah, Section 13 4', 'Sifra, Vayikra Dibbura DeChovah, Section 13 2', 'Sifra, Vayikra Dibbura DeChovah, Section 13 5', 'Sifra, Vayikra Dibbura DeChovah, Section 13 6']
+    assert all('first_in_kind_own_act' not in f for f in m.WORLD["facts"])
+    assert 'restore_op' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Section 13 8', 'Sifra, Vayikra Dibbura DeChovah, Section 13 9', 'Sifra, Vayikra Dibbura DeChovah, Section 13 10', 'Sifra, Vayikra Dibbura DeChovah, Section 13 12', 'Sifra, Vayikra Dibbura DeChovah, Section 13 13', 'Onkelos Lev 5:24']
+    assert all('oath_fifth_recursive_perutah' not in f for f in m.WORLD["facts"])
+    assert 'payment_algebra' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 23 2', 'Sifra, Vayikra Dibbura DeChovah, Chapter 23 6', 'Sifra, Vayikra Dibbura DeChovah, Chapter 23 10', 'Sifra, Vayikra Dibbura DeChovah, Chapter 23 1']
+    assert all('enumerated_each_blanket_one' not in f for f in m.WORLD["facts"])
+    assert 'deposit_individuation' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
 
 

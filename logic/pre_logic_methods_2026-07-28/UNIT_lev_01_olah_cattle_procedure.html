@@ -1,0 +1,522 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>lev_01_olah_cattle_procedure — derived logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/lev_01_olah_cattle_procedure?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Olah cattle procedure (1:4–9) <span class='badge frozen'>MODEL · REV 1 · GATES GREEN</span></h1>
+<div class="meta">unit <b>lev_01_olah_cattle_procedure</b> · Leviticus 1:4-9 · derive tree_derived_v1 · phase A</div>
+<div class="meta"><a href="/#Lev/1/4">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">עֹלָה — בָּקָר</span> · <i>olah — bakar</i> · Burnt offering — cattle</p>
+<div class="note">Tree-derived v1: each verse top binary split (left/right) grounds one STEP. Not multi-verse English smear. Not full TIR yet.</div>
+<div class="meta">confidence: hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Reprocess lev_01_olah_cattle_procedure (1:4-9, 6 vv) tree-first phase A.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Trees</td><td>Every verse via taamim_tree_parse.py v1; full tree_ascii recorded.</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Tree → steps</td><td>One STEP per verse citing left/right top-split arms. English [EN-AID] only.</td><td>hypothesis</td></tr>
+<tr><td><b>D</b></td><td>Oral dual-track</td><td>Sifra samples when available; dual-track only; never silent-merge.</td><td>hypothesis</td></tr>
+<tr><td><b>E</b></td><td>Vayikra derivation 2026-09-03</td><td>Parashat Vayikra sweep. 41 declared sources read (ledger 2026-09-03): hand-laying without agents, the caller/priest role table with zero-gap adjacency, the two-that-are-four blood algorithm with state-dependent spill recovery, the fire stage&#x27;s uniform check, and the burn close&#x27;s no-return rule seated as claims LV01B-01..05.</td><td>tested</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Lv_1_4 · Lev.1.4 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">וסמך ידו על ראש העלה … ונרצה לו לכפר עליו</span> · <i>vsmk ydv &#x27;l r&#x27;sh h&#x27;lh … vnrtzh lv lkpr &#x27;lyv</i> · From top split: LEFT «וסמך ידו על ראש העלה» / RIGHT «ונרצה לו לכפר עליו». Derive claim from Hebrew arms. Lev 1:4.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וסמך ידו על ראש העלה</span> · <i>vsmk ydv &#x27;l r&#x27;sh h&#x27;lh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">ונרצה לו לכפר עליו</span> · <i>vnrtzh lv lkpr &#x27;lyv</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(semichah, no_delegation_sons) — SEMICHAH: no delegation; sons not daughters (women-may recorded); acceptance scope</span><br><span class="gloss">= WITNESS-READ(semichah, no-delegation-sons) — SEMICHAH: no delegation; sons not daughters (women-may recorded); acceptance scope</span><br>HAND-LAYING [claim LV01B-01]. &#x27;His hand&#x27; — not his wife&#x27;s, his bondsman&#x27;s, or his messenger&#x27;s: the one op in the pipeline that admits NO AGENT; on the head, not the neck or back. Sons of Israel, not daughters — with R. Yossi and R. Shimon recording the women-MAY position (Abba Elazar&#x27;s calf testimony). &#x27;Venirtzah&#x27; scopes the return value: acceptance atones for what carries no stipulated punishment; the atonement AGENT is the blood (Lev 17:11).
+</td><td>—</td><td class='cite'>Sifra, Vayikra Dibbura DeNedavah, Chapter 4 2, Sifra, Vayikra Dibbura DeNedavah, Section 2 2, Sifra, Vayikra Dibbura DeNedavah, Chapter 4 8, Sifra, Vayikra Dibbura DeNedavah, Chapter 4 9</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_1_5 · Lev.1.5 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ושחט את בן הבקר לפני יהוה … והקריבו בני אהרן הכהנים את הדם וזרקו את הדם על המזבח סביב אש</span> · <i>vshcht &#x27;t bn hbqr lpny yhvh … vhqrybv bny &#x27;hrn hkhnym &#x27;t hdm vzrqv &#x27;t hdm &#x27;l hmz</i> · From top split: LEFT «ושחט את בן הבקר לפני יהוה» / RIGHT «והקריבו בני אהרן הכהנים את הדם וזרקו את הדם על המזבח סביב אשר פתח אהל מועד». Derive claim from Hebrew arms. Lev 1:5.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ושחט את בן הבקר לפני יהוה</span> · <i>vshcht &#x27;t bn hbqr lpny yhvh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">והקריבו בני אהרן הכהנים את הדם וזרקו את הדם על המזבח סביב אשר פתח אהל מועד</span> · <i>vhqrybv bny &#x27;hrn hkhnym &#x27;t hdm vzrqv &#x27;t hdm &#x27;l hmzbch sbyb &#x27;shr ptch &#x27;hl mv&#x27;d</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(role_table, caller_to_priest_handoff) — PIPELINE ROLES: slaughter=anyone; from RECEIVING on=priest+vessel; adjacency zero-gap</span><br><span class="gloss">= WITNESS-READ(role-table, caller-to-priest-handoff) — PIPELINE ROLES: slaughter=anyone; from RECEIVING on=priest+vessel; adjacency zero-gap</span><br>THE ROLE TABLE [claim LV01B-02]. Slaughter is valid by non-priests — laymen, women, bondsmen, even the unclean — while hand-laying- to-slaughter runs same-place and IMMEDIATE (zero-gap adjacency); at &#x27;vehikrivu&#x27; the pipeline crosses to the priesthood: RECEIVING the blood needs a fit priest and a ministering vessel (challalim and the blemished excluded), with the R. Tarfon/R. Akiva receiving-vs-dashing dispute on record.
+</td><td>—</td><td class='cite'>Sifra, Vayikra Dibbura DeNedavah, Section 4 1, Sifra, Vayikra Dibbura DeNedavah, Section 4 2, Sifra, Vayikra Dibbura DeNedavah, Section 4 4, Sifra, Vayikra Dibbura DeNedavah, Section 4 5, Sifra, Vayikra Dibbura DeNedavah, Section 4 6</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(blood_stage, two_that_are_four) — BLOOD ALGORITHM: two-that-are-four; spill recovery state-dependent; device+site preconditions</span><br><span class="gloss">= WITNESS-READ(blood-stage, two-that-are-four) — BLOOD ALGORITHM: two-that-are-four; spill recovery state-dependent; device+site preconditions</span><br>THE BLOOD STAGE [claim LV01B-03]. &#x27;Roundabout&#x27; + &#x27;they shall dash&#x27; = TWO applications that are FOUR (diagonal corners; R. Yishmael derives four-with-pauses by identity). Spill recovery is state- dependent: from the vessel — gathered and valid; from the throat — never received, invalid. Device and site preconditions: a broken altar-horn invalidates; no service with the tent dismantled or the curtain furled. Blood mixtures: with olah, temurah, or unconsecrated — offered; with invalid or inner offerings — not.
+</td><td>—</td><td class='cite'>Sifra, Vayikra Dibbura DeNedavah, Section 4 9, Sifra, Vayikra Dibbura DeNedavah, Section 4 10, Sifra, Vayikra Dibbura DeNedavah, Section 4 11, Sifra, Vayikra Dibbura DeNedavah, Section 4 13, Sifra, Vayikra Dibbura DeNedavah, Section 4 14, Sifra, Vayikra Dibbura DeNedavah, Section 4 7</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_1_6 · Lev.1.6 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">והפשיט את העלה … ונתח אתה לנתחיה</span> · <i>vhpshyt &#x27;t h&#x27;lh … vntch &#x27;th lntchyh</i> · From top split: LEFT «והפשיט את העלה» / RIGHT «ונתח אתה לנתחיה». Derive claim from Hebrew arms. Lev 1:6.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והפשיט את העלה</span> · <i>vhpshyt &#x27;t h&#x27;lh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">ונתח אתה לנתחיה</span> · <i>vntch &#x27;th lntchyh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_1_7 · Lev.1.7 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ונתנו בני אהרן הכהן אש על המזבח … וערכו עצים על האש</span> · <i>vntnv bny &#x27;hrn hkhn &#x27;sh &#x27;l hmzbch … v&#x27;rkv &#x27;tzym &#x27;l h&#x27;sh</i> · From top split: LEFT «ונתנו בני אהרן הכהן אש על המזבח» / RIGHT «וערכו עצים על האש». Derive claim from Hebrew arms. Lev 1:7.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ונתנו בני אהרן הכהן אש על המזבח</span> · <i>vntnv bny &#x27;hrn hkhn &#x27;sh &#x27;l hmzbch</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">וערכו עצים על האש</span> · <i>v&#x27;rkv &#x27;tzym &#x27;l h&#x27;sh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(fire_stage, man_made_uniform_checked) — FIRE: man-made though heaven-sent; uniform check; wood spec; two logs</span><br><span class="gloss">= WITNESS-READ(fire-stage, man-made-uniform-checked) — FIRE: man-made though heaven-sent; uniform check; wood spec; two logs</span><br>THE FIRE STAGE [claim LV01B-04]. Though fire DESCENDS from Heaven, man-made fire is commanded (the heavenly fire&#x27;s history recorded: Moses&#x27; to the Temple, Solomon&#x27;s to Menasheh). The UNIFORM CHECK: high priest in a common priest&#x27;s vestments — invalid, and the reverse. Wood upon the fire (order); all species EXCEPT olive and grapevine; R. Shimon reads TWO extra logs at the afternoon daily from the plural — a quantity read off morphology; communal-wood dispute recorded.
+</td><td>—</td><td class='cite'>Sifra, Vayikra Dibbura DeNedavah, Chapter 5 8, Sifra, Vayikra Dibbura DeNedavah, Chapter 5 9, Sifra, Vayikra Dibbura DeNedavah, Chapter 5 10, Sifra, Vayikra Dibbura DeNedavah, Chapter 5 11, Sifra, Vayikra Dibbura DeNedavah, Chapter 6 4, Sifra, Vayikra Dibbura DeNedavah, Chapter 6 5</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_1_8 · Lev.1.8 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">וערכו בני אהרן הכהנים את הנתחים את הראש ואת הפדר … על העצים אשר על האש אשר על המזבח</span> · <i>v&#x27;rkv bny &#x27;hrn hkhnym &#x27;t hntchym &#x27;t hr&#x27;sh v&#x27;t hpdr … &#x27;l h&#x27;tzym &#x27;shr &#x27;l h&#x27;sh &#x27;shr &#x27;l hmzbch</i> · From top split: LEFT «וערכו בני אהרן הכהנים את הנתחים את הראש ואת הפדר» / RIGHT «על העצים אשר על האש אשר על המזבח». Derive claim from Hebrew arms. Lev 1:8.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וערכו בני אהרן הכהנים את הנתחים את הראש ואת הפדר</span> · <i>v&#x27;rkv bny &#x27;hrn hkhnym &#x27;t hntchym &#x27;t hr&#x27;sh v&#x27;t hpdr</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">על העצים אשר על האש אשר על המזבח</span> · <i>&#x27;l h&#x27;tzym &#x27;shr &#x27;l h&#x27;sh &#x27;shr &#x27;l hmzbch</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_1_9 · Lev.1.9 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">וקרבו וכרעיו ירחץ במים … והקטיר הכהן את הכל המזבחה עלה אשה ריח ניחוח ליהוה</span> · <i>vqrbv vkr&#x27;yv yrchtz bmym … vhqtyr hkhn &#x27;t hkl hmzbchh &#x27;lh &#x27;shh rych nychvch l</i> · From top split: LEFT «וקרבו וכרעיו ירחץ במים» / RIGHT «והקטיר הכהן את הכל המזבחה עלה אשה ריח ניחוח ליהוה». Derive claim from Hebrew arms. Lev 1:9.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וקרבו וכרעיו ירחץ במים</span> · <i>vqrbv vkr&#x27;yv yrchtz bmym</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">והקטיר הכהן את הכל המזבחה עלה אשה ריח ניחוח ליהוה</span> · <i>vhqtyr hkhn &#x27;t hkl hmzbchh &#x27;lh &#x27;shh rych nychvch lyhvh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(burn_close, no_return_intent_ladder) — CLOSE: wash any-amount water; no-return above altar; the-whole attached; 5-term intent</span><br><span class="gloss">= WITNESS-READ(burn-close, no-return-intent-ladder) — CLOSE: wash any-amount water; no-return above altar; the-whole attached; 5-term intent</span><br>THE BURN CLOSE [claim LV01B-05]. Washing &#x27;with water&#x27; — ANY amount, not wine (unbounded where the bather&#x27;s law binds forty seah). THE NO-RETURN RULE: once upon the altar, even the invalid, escaped, piggul, notar, or unclean is smoked — &#x27;upon the altar&#x27; is the boundary. &#x27;The whole&#x27; carries attached bone, sinew, horn, hoof; detached is extracted. The INTENT LADDER: olah, fire, savor, sweet, to-the-LORD — five intent parameters; Onkelos converts the savor throughout to &#x27;an offering RECEIVED WITH FAVOR&#x27; — the return value de-anthropomorphized by the buffer.
+</td><td>—</td><td class='cite'>Sifra, Vayikra Dibbura DeNedavah, Chapter 6 7, Sifra, Vayikra Dibbura DeNedavah, Chapter 6 8, Sifra, Vayikra Dibbura DeNedavah, Chapter 6 9, Sifra, Vayikra Dibbura DeNedavah, Chapter 6 10, Onkelos Lev 1:9</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">Coarse states for lev_01_olah_cattle_procedure after tree-derived steps.</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_block_open</b></td><td>Entered 1:4-9</td></tr>
+<tr><td><b>S_block_mid</b></td><td>Mid-block after ~half of verse steps</td></tr>
+<tr><td><b>S_block_closed</b></td><td>Completed tree-derived steps for 1:4-9</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_block_open</td><td>S_block_mid</td><td>STEP_Lv_1_7</td></tr>
+<tr><td>S_block_mid</td><td>S_block_closed</td><td>STEP_Lv_1_9</td></tr>
+</table>
+<div class="note"><b>AFTER_S_block_closed</b> — Tree-derived v1 complete for lev_01_olah_cattle_procedure</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Lv_1_4 — Lev 1:4</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Lv_1_5 — Lev 1:5</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Lv_1_6 — Lev 1:6</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Lv_1_7 — Lev 1:7</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Lv_1_8 — Lev 1:8</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Lv_1_9 — Lev 1:9</td><td></td><td>no test, no name.</td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_olah_cattle</td><td><span class="he">עֹלַת בָּקָר</span> · <i>olat bakar</i> · Cattle burnt offering path</td></tr>
+<tr><td>EXPORT_tree_derived_v1_lev_01_olah_cattle_procedure</td><td>Unit reprocessed tree-first (one STEP per verse, arm-cited)</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Leviticus tree-derive oral policy</b><br><br><i>Written trees first. Prefer Sifra on law densification; MH possible; never silent-merge.</i></div>
+<div class="note"><span class="badge tier-o">dual_track</span> <b>Sifra</b><br><i>see Hebrew sample in local Data dump</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<div class="note"><span class="badge tier-o">dual_track</span> <b>Sifra</b><br><i>see Hebrew sample in local Data dump</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<div class="note"><span class="badge tier-o">dual_track</span> <b>Sifra</b><br><i>see Hebrew sample in local Data dump</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Lev.1.4 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">וסמך ידו על ראש העלה ונרצה לו לכפר עליו</span> · <i>vsmk ydv &#x27;l r&#x27;sh h&#x27;lh vnrtzh lv lkpr &#x27;lyv</i> · Free gloss — structure from Hebrew tree. 1:4.</div>
+<pre>PHRASE (binary 9w) וְ/סָמַ֣ךְ יָד֔/וֹ עַ֖ל רֹ֣אשׁ הָ/עֹלָ֑ה וְ/נִר…
+├── PHRASE (binary 5w) וְ/סָמַ֣ךְ יָד֔/וֹ עַ֖ל רֹ֣אשׁ הָ/עֹלָ֑ה
+│   ├── PHRASE (binary 2w) וְ/סָמַ֣ךְ יָד֔/וֹ
+│   │   ├── [0] וְ/סָמַ֣ךְ (munach (conjunctive), rank=9)
+│   │   └── [1] יָד֔/וֹ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) עַ֖ל רֹ֣אשׁ הָ/עֹלָ֑ה
+│       ├── [2] עַ֖ל (tifcha, rank=2)
+│       └── PHRASE (binary 2w) רֹ֣אשׁ הָ/עֹלָ֑ה
+│           ├── [3] רֹ֣אשׁ (munach (conjunctive), rank=9)
+│           └── [4] הָ/עֹלָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/נִרְצָ֥ה ל֖/וֹ לְ/כַפֵּ֥ר עָלָֽי/ו
+    ├── PHRASE (binary 2w) וְ/נִרְצָ֥ה ל֖/וֹ
+    │   ├── [5] וְ/נִרְצָ֥ה (mercha (conjunctive), rank=9)
+    │   └── [6] ל֖/וֹ (tifcha, rank=2)
+    └── PHRASE (binary 2w) לְ/כַפֵּ֥ר עָלָֽי/ו
+        ├── [7] לְ/כַפֵּ֥ר (mercha (conjunctive), rank=9)
+        └── [8] עָלָֽי/ו (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.1.5 · parser unique · 22 words</h3>
+<div class="meta"><span class="he">ושחט את בן הבקר לפני יהוה והקריבו בני אהרן הכהנים את הדם וזרקו את הדם על המזבח סביב אשר פתח אהל מועד</span> · <i>vshcht &#x27;t bn hbqr lpny yhvh vhqrybv bny &#x27;hrn hkhnym &#x27;t hdm vzrqv &#x27;t hdm &#x27;l hmzbch sbyb &#x27;shr ptch &#x27;hl mv&#x27;d</i> · Free gloss — structure from Hebrew tree. 1:5.</div>
+<pre>PHRASE (binary 22w) וְ/שָׁחַ֛ט אֶת בֶּ֥ן הַ/בָּקָ֖ר לִ/פְנֵ֣י יְהוָ…
+├── PHRASE (binary 6w) וְ/שָׁחַ֛ט אֶת בֶּ֥ן הַ/בָּקָ֖ר לִ/פְנֵ֣י יְהוָ…
+│   ├── PHRASE (binary 4w) וְ/שָׁחַ֛ט אֶת בֶּ֥ן הַ/בָּקָ֖ר
+│   │   ├── [0] וְ/שָׁחַ֛ט (tevir, rank=3)
+│   │   └── PHRASE (3-ary 3w) אֶת בֶּ֥ן הַ/בָּקָ֖ר
+│   │       ├── [1] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│   │       ├── [2] בֶּ֥ן (mercha (conjunctive), rank=9)
+│   │       └── [3] הַ/בָּקָ֖ר (tifcha, rank=2)
+│   └── PHRASE (binary 2w) לִ/פְנֵ֣י יְהוָ֑ה
+│       ├── [4] לִ/פְנֵ֣י (munach (conjunctive), rank=9)
+│       └── [5] יְהוָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 16w) וְ֠/הִקְרִיבוּ בְּנֵ֨י אַהֲרֹ֤ן הַֽ/כֹּֽהֲנִים֙…
+    ├── PHRASE (binary 6w) וְ֠/הִקְרִיבוּ בְּנֵ֨י אַהֲרֹ֤ן הַֽ/כֹּֽהֲנִים֙…
+    │   ├── PHRASE (binary 4w) וְ֠/הִקְרִיבוּ בְּנֵ֨י אַהֲרֹ֤ן הַֽ/כֹּֽהֲנִים֙
+    │   │   ├── [6] וְ֠/הִקְרִיבוּ (telisha gedola, rank=4)
+    │   │   └── PHRASE (3-ary 3w) בְּנֵ֨י אַהֲרֹ֤ן הַֽ/כֹּֽהֲנִים֙
+    │   │       ├── [7] בְּנֵ֨י (qadma (conjunctive), rank=9)
+    │   │       ├── [8] אַהֲרֹ֤ן (mahpach (conjunctive), rank=9)
+    │   │       └── [9] הַֽ/כֹּֽהֲנִים֙ (pashta, rank=3)
+    │   └── PHRASE (binary 2w) אֶת הַ/דָּ֔ם
+    │       ├── [10] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+    │       └── [11] הַ/דָּ֔ם (zaqef qatan, rank=2)
+    └── PHRASE (binary 10w) וְ/זָרְק֨וּ אֶת הַ/דָּ֤ם עַל הַ/מִּזְבֵּ֨חַ֙ סָ…
+        ├── PHRASE (binary 6w) וְ/זָרְק֨וּ אֶת הַ/דָּ֤ם עַל הַ/מִּזְבֵּ֨חַ֙ סָ…
+        │   ├── PHRASE (5-ary 5w) וְ/זָרְק֨וּ אֶת הַ/דָּ֤ם עַל הַ/מִּזְבֵּ֨חַ֙
+        │   │   ├── [12] וְ/זָרְק֨וּ (qadma (conjunctive), rank=9)
+        │   │   ├── [13] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+        │   │   ├── [14] הַ/דָּ֤ם (mahpach (conjunctive), rank=9)
+        │   │   ├── [15] עַל (no cantillation mark — bind as conjunctive, rank=9)
+        │   │   └── [16] הַ/מִּזְבֵּ֨חַ֙ (pashta, rank=3)
+        │   └── [17] סָבִ֔יב (zaqef qatan, rank=2)
+        └── PHRASE (binary 4w) אֲשֶׁר פֶּ֖תַח אֹ֥הֶל מוֹעֵֽד
+            ├── PHRASE (binary 2w) אֲשֶׁר פֶּ֖תַח
+            │   ├── [18] אֲשֶׁר (no cantillation mark — bind as conjunctive, rank=9)
+            │   └── [19] פֶּ֖תַח (tifcha, rank=2)
+            └── PHRASE (binary 2w) אֹ֥הֶל מוֹעֵֽד
+                ├── [20] אֹ֥הֶל (mercha (conjunctive), rank=9)
+                └── [21] מוֹעֵֽד (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.1.6 · parser unique · 6 words</h3>
+<div class="meta"><span class="he">והפשיט את העלה ונתח אתה לנתחיה</span> · <i>vhpshyt &#x27;t h&#x27;lh vntch &#x27;th lntchyh</i> · Free gloss — structure from Hebrew tree. 1:6.</div>
+<pre>PHRASE (binary 6w) וְ/הִפְשִׁ֖יט אֶת הָ/עֹלָ֑ה וְ/נִתַּ֥ח אֹתָ֖/הּ…
+├── PHRASE (binary 3w) וְ/הִפְשִׁ֖יט אֶת הָ/עֹלָ֑ה
+│   ├── [0] וְ/הִפְשִׁ֖יט (tifcha, rank=2)
+│   └── PHRASE (binary 2w) אֶת הָ/עֹלָ֑ה
+│       ├── [1] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│       └── [2] הָ/עֹלָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וְ/נִתַּ֥ח אֹתָ֖/הּ לִ/נְתָחֶֽי/הָ
+    ├── PHRASE (binary 2w) וְ/נִתַּ֥ח אֹתָ֖/הּ
+    │   ├── [3] וְ/נִתַּ֥ח (mercha (conjunctive), rank=9)
+    │   └── [4] אֹתָ֖/הּ (tifcha, rank=2)
+    └── [5] לִ/נְתָחֶֽי/הָ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.1.7 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ונתנו בני אהרן הכהן אש על המזבח וערכו עצים על האש</span> · <i>vntnv bny &#x27;hrn hkhn &#x27;sh &#x27;l hmzbch v&#x27;rkv &#x27;tzym &#x27;l h&#x27;sh</i> · Free gloss — structure from Hebrew tree. 1:7.</div>
+<pre>PHRASE (binary 11w) וְ֠/נָתְנוּ בְּנֵ֨י אַהֲרֹ֧ן הַ/כֹּהֵ֛ן אֵ֖שׁ ע…
+├── PHRASE (binary 7w) וְ֠/נָתְנוּ בְּנֵ֨י אַהֲרֹ֧ן הַ/כֹּהֵ֛ן אֵ֖שׁ ע…
+│   ├── PHRASE (binary 5w) וְ֠/נָתְנוּ בְּנֵ֨י אַהֲרֹ֧ן הַ/כֹּהֵ֛ן אֵ֖שׁ
+│   │   ├── PHRASE (binary 4w) וְ֠/נָתְנוּ בְּנֵ֨י אַהֲרֹ֧ן הַ/כֹּהֵ֛ן
+│   │   │   ├── [0] וְ֠/נָתְנוּ (telisha gedola, rank=4)
+│   │   │   └── PHRASE (3-ary 3w) בְּנֵ֨י אַהֲרֹ֧ן הַ/כֹּהֵ֛ן
+│   │   │       ├── [1] בְּנֵ֨י (qadma (conjunctive), rank=9)
+│   │   │       ├── [2] אַהֲרֹ֧ן (darga (conjunctive), rank=9)
+│   │   │       └── [3] הַ/כֹּהֵ֛ן (tevir, rank=3)
+│   │   └── [4] אֵ֖שׁ (tifcha, rank=2)
+│   └── PHRASE (binary 2w) עַל הַ/מִּזְבֵּ֑חַ
+│       ├── [5] עַל (no cantillation mark — bind as conjunctive, rank=9)
+│       └── [6] הַ/מִּזְבֵּ֑חַ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/עָרְכ֥וּ עֵצִ֖ים עַל הָ/אֵֽשׁ
+    ├── PHRASE (binary 2w) וְ/עָרְכ֥וּ עֵצִ֖ים
+    │   ├── [7] וְ/עָרְכ֥וּ (mercha (conjunctive), rank=9)
+    │   └── [8] עֵצִ֖ים (tifcha, rank=2)
+    └── PHRASE (binary 2w) עַל הָ/אֵֽשׁ
+        ├── [9] עַל (no cantillation mark — bind as conjunctive, rank=9)
+        └── [10] הָ/אֵֽשׁ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.1.8 · parser unique · 18 words</h3>
+<div class="meta"><span class="he">וערכו בני אהרן הכהנים את הנתחים את הראש ואת הפדר על העצים אשר על האש אשר על המזבח</span> · <i>v&#x27;rkv bny &#x27;hrn hkhnym &#x27;t hntchym &#x27;t hr&#x27;sh v&#x27;t hpdr &#x27;l h&#x27;tzym &#x27;shr &#x27;l h&#x27;sh &#x27;shr &#x27;l hmzbch</i> · Free gloss — structure from Hebrew tree. 1:8.</div>
+<pre>PHRASE (binary 18w) וְ/עָרְכ֗וּ בְּנֵ֤י אַהֲרֹן֙ הַ/כֹּ֣הֲנִ֔ים אֵ֚…
+├── PHRASE (binary 10w) וְ/עָרְכ֗וּ בְּנֵ֤י אַהֲרֹן֙ הַ/כֹּ֣הֲנִ֔ים אֵ֚…
+│   ├── PHRASE (binary 4w) וְ/עָרְכ֗וּ בְּנֵ֤י אַהֲרֹן֙ הַ/כֹּ֣הֲנִ֔ים
+│   │   ├── [0] וְ/עָרְכ֗וּ (revia, rank=3)
+│   │   └── PHRASE (binary 3w) בְּנֵ֤י אַהֲרֹן֙ הַ/כֹּ֣הֲנִ֔ים
+│   │       ├── PHRASE (binary 2w) בְּנֵ֤י אַהֲרֹן֙
+│   │       │   ├── [1] בְּנֵ֤י (mahpach (conjunctive), rank=9)
+│   │       │   └── [2] אַהֲרֹן֙ (pashta, rank=3)
+│   │       └── [3] הַ/כֹּ֣הֲנִ֔ים (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) אֵ֚ת הַ/נְּתָחִ֔ים אֶת הָ/רֹ֖אשׁ וְ/אֶת הַ/פָּ֑…
+│       ├── PHRASE (binary 2w) אֵ֚ת הַ/נְּתָחִ֔ים
+│       │   ├── [4] אֵ֚ת (yetiv, rank=3)
+│       │   └── [5] הַ/נְּתָחִ֔ים (zaqef qatan, rank=2)
+│       └── PHRASE (binary 4w) אֶת הָ/רֹ֖אשׁ וְ/אֶת הַ/פָּ֑דֶר
+│           ├── PHRASE (binary 2w) אֶת הָ/רֹ֖אשׁ
+│           │   ├── [6] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│           │   └── [7] הָ/רֹ֖אשׁ (tifcha, rank=2)
+│           └── PHRASE (binary 2w) וְ/אֶת הַ/פָּ֑דֶר
+│               ├── [8] וְ/אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│               └── [9] הַ/פָּ֑דֶר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) עַל הָ/עֵצִים֙ אֲשֶׁ֣ר עַל הָ/אֵ֔שׁ אֲשֶׁ֖ר עַל…
+    ├── PHRASE (binary 5w) עַל הָ/עֵצִים֙ אֲשֶׁ֣ר עַל הָ/אֵ֔שׁ
+    │   ├── PHRASE (binary 2w) עַל הָ/עֵצִים֙
+    │   │   ├── [10] עַל (no cantillation mark — bind as conjunctive, rank=9)
+    │   │   └── [11] הָ/עֵצִים֙ (pashta, rank=3)
+    │   └── PHRASE (3-ary 3w) אֲשֶׁ֣ר עַל הָ/אֵ֔שׁ
+    │       ├── [12] אֲשֶׁ֣ר (munach (conjunctive), rank=9)
+    │       ├── [13] עַל (no cantillation mark — bind as conjunctive, rank=9)
+    │       └── [14] הָ/אֵ֔שׁ (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) אֲשֶׁ֖ר עַל הַ/מִּזְבֵּֽחַ
+        ├── [15] אֲשֶׁ֖ר (tifcha, rank=2)
+        └── PHRASE (binary 2w) עַל הַ/מִּזְבֵּֽחַ
+            ├── [16] עַל (no cantillation mark — bind as conjunctive, rank=9)
+            └── [17] הַ/מִּזְבֵּֽחַ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.1.9 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">וקרבו וכרעיו ירחץ במים והקטיר הכהן את הכל המזבחה עלה אשה ריח ניחוח ליהוה</span> · <i>vqrbv vkr&#x27;yv yrchtz bmym vhqtyr hkhn &#x27;t hkl hmzbchh &#x27;lh &#x27;shh rych nychvch lyhvh</i> · Free gloss — structure from Hebrew tree. 1:9.</div>
+<pre>PHRASE (binary 14w) וְ/קִרְבּ֥/וֹ וּ/כְרָעָ֖י/ו יִרְחַ֣ץ בַּ/מָּ֑יִ…
+├── PHRASE (binary 4w) וְ/קִרְבּ֥/וֹ וּ/כְרָעָ֖י/ו יִרְחַ֣ץ בַּ/מָּ֑יִם
+│   ├── PHRASE (binary 2w) וְ/קִרְבּ֥/וֹ וּ/כְרָעָ֖י/ו
+│   │   ├── [0] וְ/קִרְבּ֥/וֹ (mercha (conjunctive), rank=9)
+│   │   └── [1] וּ/כְרָעָ֖י/ו (tifcha, rank=2)
+│   └── PHRASE (binary 2w) יִרְחַ֣ץ בַּ/מָּ֑יִם
+│       ├── [2] יִרְחַ֣ץ (munach (conjunctive), rank=9)
+│       └── [3] בַּ/מָּ֑יִם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 10w) וְ/הִקְטִ֨יר הַ/כֹּהֵ֤ן אֶת הַ/כֹּל֙ הַ/מִּזְבּ…
+    ├── PHRASE (binary 5w) וְ/הִקְטִ֨יר הַ/כֹּהֵ֤ן אֶת הַ/כֹּל֙ הַ/מִּזְבּ…
+    │   ├── PHRASE (4-ary 4w) וְ/הִקְטִ֨יר הַ/כֹּהֵ֤ן אֶת הַ/כֹּל֙
+    │   │   ├── [4] וְ/הִקְטִ֨יר (qadma (conjunctive), rank=9)
+    │   │   ├── [5] הַ/כֹּהֵ֤ן (mahpach (conjunctive), rank=9)
+    │   │   ├── [6] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+    │   │   └── [7] הַ/כֹּל֙ (pashta, rank=3)
+    │   └── [8] הַ/מִּזְבֵּ֔חָ/ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) עֹלָ֛ה אִשֵּׁ֥ה רֵֽיחַ נִיח֖וֹחַ לַֽ/יהוָֽה
+        ├── PHRASE (binary 4w) עֹלָ֛ה אִשֵּׁ֥ה רֵֽיחַ נִיח֖וֹחַ
+        │   ├── [9] עֹלָ֛ה (tevir, rank=3)
+        │   └── PHRASE (3-ary 3w) אִשֵּׁ֥ה רֵֽיחַ נִיח֖וֹחַ
+        │       ├── [10] אִשֵּׁ֥ה (mercha (conjunctive), rank=9)
+        │       ├── [11] רֵֽיחַ (no cantillation mark — bind as conjunctive, rank=9)
+        │       └── [12] נִיח֖וֹחַ (tifcha, rank=2)
+        └── [13] לַֽ/יהוָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 80/80 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Lev.1.4</td><td>0</td><td class='he-cell'>וסמך</td><td>vsmk</td><td>leaf 0 (וסמך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.4</td><td>1</td><td class='he-cell'>ידו</td><td>ydv</td><td>leaf 1 (ידו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.4</td><td>2</td><td class='he-cell'>על</td><td>&#x27;l</td><td>leaf 2 (על)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.4</td><td>3</td><td class='he-cell'>ראש</td><td>r&#x27;sh</td><td>leaf 3 (ראש)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.4</td><td>4</td><td class='he-cell'>העלה</td><td>h&#x27;lh</td><td>leaf 4 (העלה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.4</td><td>5</td><td class='he-cell'>ונרצה</td><td>vnrtzh</td><td>leaf 5 (ונרצה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.4</td><td>6</td><td class='he-cell'>לו</td><td>lv</td><td>leaf 6 (לו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.4</td><td>7</td><td class='he-cell'>לכפר</td><td>lkpr</td><td>leaf 7 (לכפר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.4</td><td>8</td><td class='he-cell'>עליו</td><td>&#x27;lyv</td><td>leaf 8 (עליו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>0</td><td class='he-cell'>ושחט</td><td>vshcht</td><td>leaf 0 (ושחט)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>1</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 1 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>2</td><td class='he-cell'>בן</td><td>bn</td><td>leaf 2 (בן)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>3</td><td class='he-cell'>הבקר</td><td>hbqr</td><td>leaf 3 (הבקר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>4</td><td class='he-cell'>לפני</td><td>lpny</td><td>leaf 4 (לפני)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>5</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 5 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>6</td><td class='he-cell'>והקריבו</td><td>vhqrybv</td><td>leaf 6 (והקריבו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>7</td><td class='he-cell'>בני</td><td>bny</td><td>leaf 7 (בני)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>8</td><td class='he-cell'>אהרן</td><td>&#x27;hrn</td><td>leaf 8 (אהרן)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>9</td><td class='he-cell'>הכהנים</td><td>hkhnym</td><td>leaf 9 (הכהנים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>10</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 10 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>11</td><td class='he-cell'>הדם</td><td>hdm</td><td>leaf 11 (הדם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>12</td><td class='he-cell'>וזרקו</td><td>vzrqv</td><td>leaf 12 (וזרקו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>13</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 13 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>14</td><td class='he-cell'>הדם</td><td>hdm</td><td>leaf 14 (הדם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>15</td><td class='he-cell'>על</td><td>&#x27;l</td><td>leaf 15 (על)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>16</td><td class='he-cell'>המזבח</td><td>hmzbch</td><td>leaf 16 (המזבח)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>17</td><td class='he-cell'>סביב</td><td>sbyb</td><td>leaf 17 (סביב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>18</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 18 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>19</td><td class='he-cell'>פתח</td><td>ptch</td><td>leaf 19 (פתח)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>20</td><td class='he-cell'>אהל</td><td>&#x27;hl</td><td>leaf 20 (אהל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.5</td><td>21</td><td class='he-cell'>מועד</td><td>mv&#x27;d</td><td>leaf 21 (מועד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.6</td><td>0</td><td class='he-cell'>והפשיט</td><td>vhpshyt</td><td>leaf 0 (והפשיט)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.6</td><td>1</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 1 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.6</td><td>2</td><td class='he-cell'>העלה</td><td>h&#x27;lh</td><td>leaf 2 (העלה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.6</td><td>3</td><td class='he-cell'>ונתח</td><td>vntch</td><td>leaf 3 (ונתח)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.6</td><td>4</td><td class='he-cell'>אתה</td><td>&#x27;th</td><td>leaf 4 (אתה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.6</td><td>5</td><td class='he-cell'>לנתחיה</td><td>lntchyh</td><td>leaf 5 (לנתחיה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.7</td><td>0</td><td class='he-cell'>ונתנו</td><td>vntnv</td><td>leaf 0 (ונתנו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.7</td><td>1</td><td class='he-cell'>בני</td><td>bny</td><td>leaf 1 (בני)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.7</td><td>2</td><td class='he-cell'>אהרן</td><td>&#x27;hrn</td><td>leaf 2 (אהרן)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.7</td><td>3</td><td class='he-cell'>הכהן</td><td>hkhn</td><td>leaf 3 (הכהן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.7</td><td>4</td><td class='he-cell'>אש</td><td>&#x27;sh</td><td>leaf 4 (אש)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.7</td><td>5</td><td class='he-cell'>על</td><td>&#x27;l</td><td>leaf 5 (על)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.7</td><td>6</td><td class='he-cell'>המזבח</td><td>hmzbch</td><td>leaf 6 (המזבח)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.7</td><td>7</td><td class='he-cell'>וערכו</td><td>v&#x27;rkv</td><td>leaf 7 (וערכו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.7</td><td>8</td><td class='he-cell'>עצים</td><td>&#x27;tzym</td><td>leaf 8 (עצים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.7</td><td>9</td><td class='he-cell'>על</td><td>&#x27;l</td><td>leaf 9 (על)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.7</td><td>10</td><td class='he-cell'>האש</td><td>h&#x27;sh</td><td>leaf 10 (האש)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>0</td><td class='he-cell'>וערכו</td><td>v&#x27;rkv</td><td>leaf 0 (וערכו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>1</td><td class='he-cell'>בני</td><td>bny</td><td>leaf 1 (בני)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>2</td><td class='he-cell'>אהרן</td><td>&#x27;hrn</td><td>leaf 2 (אהרן)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>3</td><td class='he-cell'>הכהנים</td><td>hkhnym</td><td>leaf 3 (הכהנים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>4</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 4 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>5</td><td class='he-cell'>הנתחים</td><td>hntchym</td><td>leaf 5 (הנתחים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>6</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 6 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>7</td><td class='he-cell'>הראש</td><td>hr&#x27;sh</td><td>leaf 7 (הראש)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>8</td><td class='he-cell'>ואת</td><td>v&#x27;t</td><td>leaf 8 (ואת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>9</td><td class='he-cell'>הפדר</td><td>hpdr</td><td>leaf 9 (הפדר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>10</td><td class='he-cell'>על</td><td>&#x27;l</td><td>leaf 10 (על)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>11</td><td class='he-cell'>העצים</td><td>h&#x27;tzym</td><td>leaf 11 (העצים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>12</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 12 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>13</td><td class='he-cell'>על</td><td>&#x27;l</td><td>leaf 13 (על)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>14</td><td class='he-cell'>האש</td><td>h&#x27;sh</td><td>leaf 14 (האש)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>15</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 15 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>16</td><td class='he-cell'>על</td><td>&#x27;l</td><td>leaf 16 (על)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.8</td><td>17</td><td class='he-cell'>המזבח</td><td>hmzbch</td><td>leaf 17 (המזבח)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.9</td><td>0</td><td class='he-cell'>וקרבו</td><td>vqrbv</td><td>leaf 0 (וקרבו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.9</td><td>1</td><td class='he-cell'>וכרעיו</td><td>vkr&#x27;yv</td><td>leaf 1 (וכרעיו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.9</td><td>2</td><td class='he-cell'>ירחץ</td><td>yrchtz</td><td>leaf 2 (ירחץ)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.9</td><td>3</td><td class='he-cell'>במים</td><td>bmym</td><td>leaf 3 (במים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.9</td><td>4</td><td class='he-cell'>והקטיר</td><td>vhqtyr</td><td>leaf 4 (והקטיר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.9</td><td>5</td><td class='he-cell'>הכהן</td><td>hkhn</td><td>leaf 5 (הכהן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.9</td><td>6</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 6 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.1.9</td><td>7</td><td class='he-cell'>הכל</td><td>hkl</td><td>leaf 7 (הכל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.9</td><td>8</td><td class='he-cell'>המזבחה</td><td>hmzbchh</td><td>leaf 8 (המזבחה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.9</td><td>9</td><td class='he-cell'>עלה</td><td>&#x27;lh</td><td>leaf 9 (עלה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.9</td><td>10</td><td class='he-cell'>אשה</td><td>&#x27;shh</td><td>leaf 10 (אשה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.9</td><td>11</td><td class='he-cell'>ריח</td><td>rych</td><td>leaf 11 (ריח)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.9</td><td>12</td><td class='he-cell'>ניחוח</td><td>nychvch</td><td>leaf 12 (ניחוח)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.1.9</td><td>13</td><td class='he-cell'>ליהוה</td><td>lyhvh</td><td>leaf 13 (ליהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: lev_01_olah_cattle_procedure — Olah cattle procedure (1:4–9) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Lv_1_4 — Lev 1:4
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Lv_1_5 — Lev 1:5
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Lv_1_6 — Lev 1:6
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Lv_1_7 — Lev 1:7
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Lv_1_8 — Lev 1:8
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Lv_1_9 — Lev 1:9
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the canonical YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/lev_01_olah_cattle_procedure.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# lev_01_olah_cattle_procedure — 1:4-9
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/lev_01_olah_cattle_procedure.yaml) is CANONICAL
+# (Pre-Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Olah cattle procedure (1:4–9)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;lev_01_olah_cattle_procedure&quot;)
+
+# -------------------------- Lev.1.4 · ETNACHTA_SPLIT -----------------------
+# וסמך ידו על ראש העלה … ונרצה לו לכפר עליו
+# &quot;[EN-AID] From top split: LEFT «וסמך ידו על ראש העלה» / RIGHT «ונרצה לו
+# לכפר עליו». Derive claim from Hebrew arms. Lev 1:4.&quot;
+m.step(&quot;Lev.1.4&quot;)
+# witness-tier presupposed read: no_delegation_sons on semichah — read, not
+# installed
+m.witness_read(&quot;semichah&quot;, &quot;no_delegation_sons&quot;,
+                cites=[&quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 4 2&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 2 2&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 4 8&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 4 9&quot;])
+
+# -------------------------- Lev.1.5 · ETNACHTA_SPLIT -----------------------
+# ושחט את בן הבקר לפני יהוה … והקריבו בני אהרן הכהנים את הדם וזרקו את הדם על
+# המזבח סביב אש
+# &quot;[EN-AID] From top split: LEFT «ושחט את בן הבקר לפני יהוה» / RIGHT
+# «והקריבו בני אהרן הכהנים את הדם וזרקו את הדם על המזבח סביב אשר פתח אהל
+# מועד». Derive claim from Hebrew arms. Lev 1:5.&quot;
+m.step(&quot;Lev.1.5&quot;)
+# witness-tier presupposed read: caller_to_priest_handoff on role_table —
+# read, not installed
+m.witness_read(&quot;role_table&quot;, &quot;caller_to_priest_handoff&quot;,
+                cites=[&quot;Sifra, Vayikra Dibbura DeNedavah, Section 4 1&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 4 2&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 4 4&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 4 5&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 4 6&quot;])
+# witness-tier presupposed read: two_that_are_four on blood_stage — read,
+# not installed
+m.witness_read(&quot;blood_stage&quot;, &quot;two_that_are_four&quot;,
+                cites=[&quot;Sifra, Vayikra Dibbura DeNedavah, Section 4 9&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 4 10&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 4 11&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 4 13&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 4 14&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 4 7&quot;])
+
+# -------------------------- Lev.1.6 · ETNACHTA_SPLIT -----------------------
+# והפשיט את העלה … ונתח אתה לנתחיה
+# &quot;[EN-AID] From top split: LEFT «והפשיט את העלה» / RIGHT «ונתח אתה לנתחיה».
+# Derive claim from Hebrew arms. Lev 1:6.&quot;
+m.step(&quot;Lev.1.6&quot;)
+
+# -------------------------- Lev.1.7 · ETNACHTA_SPLIT -----------------------
+# ונתנו בני אהרן הכהן אש על המזבח … וערכו עצים על האש
+# &quot;[EN-AID] From top split: LEFT «ונתנו בני אהרן הכהן אש על המזבח» / RIGHT
+# «וערכו עצים על האש». Derive claim from Hebrew arms. Lev 1:7.&quot;
+m.step(&quot;Lev.1.7&quot;)
+# witness-tier presupposed read: man_made_uniform_checked on fire_stage —
+# read, not installed
+m.witness_read(&quot;fire_stage&quot;, &quot;man_made_uniform_checked&quot;,
+                cites=[&quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 5 8&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 5 9&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 5 10&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 5 11&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 6 4&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 6 5&quot;])
+
+# -------------------------- Lev.1.8 · ETNACHTA_SPLIT -----------------------
+# וערכו בני אהרן הכהנים את הנתחים את הראש ואת הפדר … על העצים אשר על האש אשר
+# על המזבח
+# &quot;[EN-AID] From top split: LEFT «וערכו בני אהרן הכהנים את הנתחים את הראש
+# ואת הפדר» / RIGHT «על העצים אשר על האש אשר על המזבח». Derive claim from
+# Hebrew arms. Lev 1:8.&quot;
+m.step(&quot;Lev.1.8&quot;)
+
+# -------------------------- Lev.1.9 · ETNACHTA_SPLIT -----------------------
+# וקרבו וכרעיו ירחץ במים … והקטיר הכהן את הכל המזבחה עלה אשה ריח ניחוח ליהוה
+# &quot;[EN-AID] From top split: LEFT «וקרבו וכרעיו ירחץ במים» / RIGHT «והקטיר
+# הכהן את הכל המזבחה עלה אשה ריח ניחוח ליהוה». Derive claim from Hebrew
+# arms. Lev 1:9.&quot;
+m.step(&quot;Lev.1.9&quot;)
+# witness-tier presupposed read: no_return_intent_ladder on burn_close —
+# read, not installed
+m.witness_read(&quot;burn_close&quot;, &quot;no_return_intent_ladder&quot;,
+                cites=[&quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 6 7&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 6 8&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 6 9&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 6 10&quot;, &quot;Onkelos Lev 1:9&quot;])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 0
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;semichah&#x27;, &#x27;no_delegation_sons&#x27;), (&#x27;role_table&#x27;, &#x27;caller_to_priest_handoff&#x27;), (&#x27;blood_stage&#x27;, &#x27;two_that_are_four&#x27;), (&#x27;fire_stage&#x27;, &#x27;man_made_uniform_checked&#x27;), (&#x27;burn_close&#x27;, &#x27;no_return_intent_ladder&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 4 2&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 2 2&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 4 8&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 4 9&#x27;]
+    assert all(&#x27;no_delegation_sons&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;semichah&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Section 4 1&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 4 2&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 4 4&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 4 5&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 4 6&#x27;]
+    assert all(&#x27;caller_to_priest_handoff&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;role_table&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Section 4 9&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 4 10&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 4 11&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 4 13&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 4 14&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 4 7&#x27;]
+    assert all(&#x27;two_that_are_four&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;blood_stage&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 5 8&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 5 9&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 5 10&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 5 11&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 6 4&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 6 5&#x27;]
+    assert all(&#x27;man_made_uniform_checked&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;fire_stage&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 6 7&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 6 8&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 6 9&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 6 10&#x27;, &#x27;Onkelos Lev 1:9&#x27;]
+    assert all(&#x27;no_return_intent_ladder&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;burn_close&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">Tree-derived v1 (phase A). One STEP per verse from top-split arms. Not binding religious law.</div><p class='meta'>Rendered 2026-09-03 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

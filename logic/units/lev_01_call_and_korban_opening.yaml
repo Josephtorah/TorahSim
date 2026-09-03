@@ -17,7 +17,7 @@ meta:
   refs: "1:1-3"
   data_paths_he:
     - "Data/Lev.xml"
-  status: draft
+  status: frozen
   tree_derive_version: tree_derived_v1
   tree_derive_phase: "A"
   confidence_overall: hypothesis
@@ -57,6 +57,17 @@ derivation_log:
     confidence: hypothesis
     tags: ["[ORAL]"]
 
+  - step: E
+    name_en: "Vayikra derivation 2026-09-03"
+    comment: >
+      Parashat Vayikra sweep, first Leviticus derivation under the Sifra
+      spine. 70 declared sources read (ledger 2026-09-03): the call
+      protocol, the bounded single-receiver voice, the paragraph-channel
+      charter, the caller domain, the input filter with the goring-ox
+      cross-link, and the acceptance gate seated as claims LV01A-01..06.
+    confidence: tested
+    tags: ["[ORAL]","[HE-WRITTEN]"]
+
 boot_steps:
   - id: STEP_Lv_1_1
     order: 1
@@ -73,6 +84,45 @@ boot_steps:
       he: וידבר יהוה אליו מאהל מועד לאמר
       he_translit: "vydbr yhvh 'lyv m'hl mv'd l'mr"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(call_protocol, kriyah_precedes_dibbur) — CALL(Moses) precedes every SPEAK(tent) — the interface handshake"
+        en: >
+          THE CALL PROTOCOL [claim LV01A-01]. Calling precedes speaking —
+          built as a binyan av from the bush (Exod 3:4) and Sinai (Exod
+          19:3) — and 'from the tent of meeting' extends it to EVERY
+          subsequent speaking, sayings and commandings included (R. Shimon).
+          Every call was the doubled name answered 'Here I am.' The oracle
+          interface the machine met at Exod 25:22 and Exod 28 (the access
+          list) opens the book of the call-site era with its own handshake
+          spec.
+        cites: ["Sifra, Vayikra Dibbura DeNedavah, Chapter 1 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 1 6", "Sifra, Vayikra Dibbura DeNedavah, Chapter 1 7", "Sifra, Vayikra Dibbura DeNedavah, Chapter 1 10", "Sifra, Vayikra Dibbura DeNedavah, Chapter 1 11"]
+        confidence: witnessed
+      - op: WITNESS_STATE
+        expr_en: "WITNESS(voice, bounded_single_receiver) — cut at the tent wall"
+        en: >
+          SINGLE-RECEIVER, BOUNDED BROADCAST [claim LV01A-02]. 'To him' —
+          Aaron excluded (thirteen speakings, thirteen limitations, R.
+          Yehudah b. Beteira), the elders, the sons, even the ministering
+          angels: Moses alone heard. And the voice was CUT OFF at the tent
+          boundary — not weak (Psalm 29's power-voice) but bounded; the
+          source address narrowed to between the two cherubs (R. Akiva; Ben
+          Azzai adds).
+        cites: ["Sifra, Vayikra Dibbura DeNedavah, Chapter 2 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 2 9", "Sifra, Vayikra Dibbura DeNedavah, Chapter 2 10", "Sifra, Vayikra Dibbura DeNedavah, Chapter 2 12"]
+        confidence: witnessed
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(paragraph_channel, reflection_pauses_chartered) — the PAUSES = reflection gaps — the paragraph channel's own charter"
+        en: >
+          THE PARAGRAPH-CHANNEL CHARTER [claim LV01A-03]. The pauses (the
+          paragraph breaks) received NO call — and their stated purpose is
+          'to give Moses time for REFLECTION between section and section and
+          verse and verse,' with an a-fortiori to every learner. The
+          tradition's own explanation of the scroll's ink-level scene
+          divider — the front-end measurement's paragraph layer, chartered
+          by the teacher at the book's first verse (and repeated at the 1:10
+          seam).
+        cites: ["Sifra, Vayikra Dibbura DeNedavah, Chapter 1 8", "Sifra, Vayikra Dibbura DeNedavah, Chapter 1 9"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -93,6 +143,33 @@ boot_steps:
       he: מן הבהמה מן הבקר ומן הצאן תקריבו את קרבנכם
       he_translit: "mn hbhmh mn hbqr vmn htz'n tqrybv 't qrbnkm"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(caller_domain, covenant_keyed_optional) — CALLER: adam of-you — proselytes IN, heretics OUT; offering OPTIONAL"
+        en: >
+          THE CALLER DOMAIN [claim LV01A-04]. 'A man' includes proselytes;
+          'of you' excludes heretics — and the parse rule is stated: after
+          Scripture includes, it excludes, anchored on 'children of Israel'
+          as covenant-accepters. 'If he offer' — OPTIONAL; and the offering
+          must be SANCTIFIED by declaration before it is brought (R.
+          Yehudah; R. Shimon differs). INK INVARIANT (scannable): korban is
+          only ever paired with the Tetragrammaton (R. Yossi).
+        cites: ["Sifra, Vayikra Dibbura DeNedavah, Section 2 3", "Sifra, Vayikra Dibbura DeNedavah, Section 2 4", "Sifra, Vayikra Dibbura DeNedavah, Section 2 5"]
+        confidence: witnessed
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(input_filter, domesticated_with_exclusions) — INPUT: behemah -> cattle+flock only; the excluded-beast list"
+        en: >
+          THE INPUT FILTER [claim LV01A-05]. 'From the behemah' could span
+          wild beasts (Deut 14:4's usage) — 'from the cattle and from the
+          flock' restricts to the domesticated; and the exclusion list is
+          carried token by token: the sodomized and the sodomizer, the
+          worshipped, the designated, the TREIFAH, and the NOGE'ACH — the ox
+          that gored a man to death, Exodus 21's own stoned-ox class
+          standing in this altar's input filter (cross-link
+          exo_21_the_ordinances). Partnership arity: two may share a beast
+          burnt-offering; the congregation may gift one.
+        cites: ["Sifra, Vayikra Dibbura DeNedavah, Section 2 6", "Sifra, Vayikra Dibbura DeNedavah, Section 2 7", "Sifra, Vayikra Dibbura DeNedavah, Section 2 9", "Sifra, Vayikra Dibbura DeNedavah, Section 2 10", "Sifra, Vayikra Dibbura DeNedavah, Section 2 11", "Sifra, Vayikra Dibbura DeNedavah, Chapter 3 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 3 4"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -113,6 +190,22 @@ boot_steps:
       he: אל פתח אהל מועד יקריב אתו לרצנו לפני יהוה
       he_translit: "'l ptch 'hl mv'd yqryb 'tv lrtznv lpny yhvh"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(acceptance_gate, tamim_owner_coercion) — ACCEPTANCE: tamim = the predicate; inspection; owner transports; coercion rule"
+        en: >
+          THE ACCEPTANCE GATE [claim LV01A-06]. 'Unblemished' (tamim) is the
+          acceptance predicate over the whole exclusion list, with a
+          positive command to sanctify the unblemished and R. Yossi's
+          inspection reading (examine it). The OWNER must transport it to
+          the door — no delegation of delivery; and 'yakriv oto' seats the
+          consent-coercion rule: the remiss owner is COMPELLED to bring what
+          he vowed. The caller-layer/object-layer split is R. Chiyya's:
+          eligibility rules bind OFFERERS; processing (flay, cut) runs on
+          any valid object, a gentile's included. Onkelos renders 'li-
+          rtzono' as acceptance-before-God (le-ra'ava).
+        cites: ["Sifra, Vayikra Dibbura DeNedavah, Section 3 12", "Sifra, Vayikra Dibbura DeNedavah, Section 3 13", "Sifra, Vayikra Dibbura DeNedavah, Section 3 15", "Sifra, Vayikra Dibbura DeNedavah, Chapter 5 5", "Onkelos Lev 1:3"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -199,18 +292,14 @@ oral_notes:
 
 scenarios:
   - id: S1
-    title_en: "After Lev 1:1 (STEP_Lv_1_1)"
-    expect_en: "Advances via tree-derived STEP_Lv_1_1; arms in boot_steps."
+    title_en: "after STEP_Lv_1_1 — Lev 1:1"
+    expect_en: "no test, no name."
   - id: S2
-    title_en: "After Lev 1:2 (STEP_Lv_1_2)"
-    expect_en: "Advances via tree-derived STEP_Lv_1_2; arms in boot_steps."
+    title_en: "after STEP_Lv_1_2 — Lev 1:2"
+    expect_en: "no test, no name."
   - id: S3
-    title_en: "After Lev 1:3 (STEP_Lv_1_3)"
-    expect_en: "Advances via tree-derived STEP_Lv_1_3; arms in boot_steps."
-  - id: S_last
-    title_en: "After final verse 1:3"
-    expect_en: "Block closed via STEP_Lv_1_3."
-
+    title_en: "after STEP_Lv_1_3 — Lev 1:3"
+    expect_en: "no test, no name."
 binary_trees:
   display_policy_en: >
     Always he + he_translit + en. Full tree_ascii per verse.

@@ -139,3 +139,51 @@ print('MISHPATIM PASS: %d/%d cells across 5 functions' % (ok, n))
 print('  + the guardians run (separate machine): 12/12')
 print('PROVENANCE FRACTIONS (this pass): INK %d | RECORDED %d | ROUTED/IMPORT %d'
       % (TOTAL['INK'], TOTAL['RECORDED'], TOTAL['ROUTED/IMPORT']))
+
+# ---- EFFECTS (retrofit 2026-09-03, under the effects law) -----------
+# Each graded cell's state change, from effect_vocabulary.yaml. The
+# verdict writes the LEDGER, never the event stream. Cells that only
+# CLASSIFY (a module map, a scope restriction) honestly write nothing.
+import effects_layer as FX
+EFFECTS = [
+    # F1 slave-release
+    ('slave-release: FREE-YEAR-7',   ['term_clock', 'goes_free']),
+    ('slave-release: DEDUCT',        ['pays', 'goes_free']),
+    ('slave-release: FREE-AT-JUBILEE', ['jubilee_release', 'goes_free']),
+    # F2 four damages (class map = classification; the output cell pays)
+    ('four-damages: class OX',       [FX.NONE]),
+    ('four-damages: class PIT',      [FX.NONE]),
+    ('four-damages: class GRAZING',  [FX.NONE]),
+    ('four-damages: class FIRE',     [FX.NONE]),
+    ('four-damages: BEST-OF-LAND',   ['pays']),
+    # F3 goring ox
+    ('goring-ox: HALF-FROM-BODY',    ['pays']),
+    ('goring-ox: FULL',              ['pays']),
+    ('goring-ox: THREE (threshold)', ['forewarned']),
+    ('goring-ox: REVERTS',           ['forewarned']),
+    ('goring-ox: STONE+RANSOM',      ['stoned', 'ransom_imposed']),
+    ('goring-ox: 30-SHEKELS',        ['gives_fixed_sum']),
+    # F4 injury indemnities
+    ('injuries: MEDICAL',            ['pays']),
+    ('injuries: LIVELIHOOD',         ['gives_fixed_sum']),
+    ('injuries: DAMAGE (talion-as-money)', ['substitution']),
+    ('injuries: PAIN',               ['pays']),
+    ('injuries: HUMILIATION',        ['pays']),
+    # F5 theft multiples
+    ('multiples: DOUBLE',            ['pays_double']),
+    ('multiples: FIVEFOLD ox',       ['pays_four_five']),
+    ('multiples: FOURFOLD sheep',    ['pays_four_five']),
+    ('multiples: RESTRICTED scope',  [FX.NONE]),
+]
+print('\nEFFECTS — the state changes each cell writes:')
+used = []
+for name, fx in EFFECTS:
+    used += fx
+    for line in FX.render(fx):
+        print('  %-36s ->%s' % (name, line))
+ops = FX.summarize(used)
+print('LEDGER OPS this pass writes:',
+      ', '.join('%s x%d' % (op, cnt) for op, cnt in sorted(ops.items())))
+assert len(EFFECTS) == n, 'EFFECTS LAW: %d cells graded, %d mapped' % (n, len(EFFECTS))
+print('effects: all %d cells carry a REGISTERED effect or an honest '
+      'no-change [effects law satisfied]' % n)

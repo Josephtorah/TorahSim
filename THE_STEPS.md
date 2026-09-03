@@ -1,10 +1,22 @@
 # THE STEPS — from verse to proven logic
 
-One span of text (a verse, a block, a chapter) moves through these steps,
-in order. Steps 1–2 are already done for the entire Hebrew Bible but are
-part of the process. The scroll's labels report exactly which step a
-verse has reached — never more. (As of 2026-08-21; the RE-era
-constitution governs.)
+One span of text (a verse, a block, a chapter) moves through SIX steps,
+in order. Step 1 (the front end) is already prepared for the entire
+Hebrew Bible. The scroll's labels report exactly which step a verse has
+reached — never more. (RE-era constitution governs.)
+
+⚠ SIMPLIFIED 2026-09-03 on the owner's word ("Lets simplify the steps,
+we don't need them all"), after the front-end measurements landed (the
+narrative measurement + the vowel measurement, RESEARCH_LOG.md). TEN
+steps became SIX; nothing of substance was removed — only the step
+boundaries and the foundation framing of the tree/morphology changed.
+THE RENUMBERING KEY (old → new): 1+2 → 1 (the front end); 3+4 → 2
+(declare + read); 5+6 → 3 (the code); 7+8 → 4 (gates + stamp); 9 → 5
+(the exam); 10 → 6 (publish). The old ten-step text is preserved at
+logic/THE_STEPS_v1_2026-09-03.md and in git history. The public site
+still shows the old numbering until its next deploy; owner quotes that
+say "step 9" mean the exam (Step 5). World/step9/ keeps its directory
+name as history.
 
 ## ⚠ THE COMPILER LAW — the project's TOP PRIORITY (owner-ruled 2026-09-02)
 
@@ -16,8 +28,9 @@ The law, in plain words: **the 24 books are the program; the Talmud
 holds the compile rules; the Mishnah is the answer sheet.** The
 Bible's law sections are written in a real case structure — כִּי
 ("when") opens a case, אִם ("if") branches inside it — that a machine
-detects from the bare ink (and Step 1's cantillation parse of all
-23,213 verses is the structure layer, already done). The gaps the
+detects from the bare ink (and the front end's cantillation parse of
+all 23,213 verses is the structure layer, already prepared — Step 1,
+where its measured standing is recorded). The gaps the
 bare text leaves open — a hidden parameter, a missing column, an
 unnamed role — are filled by the Talmud's RECORDED arguments,
 replayed as executable steps, each labeled with its source row. The
@@ -33,7 +46,7 @@ REPORT_TEACHER_HYPOTHESIS.md).
 
 What this changes in the naming: the Mishnah/Talmud are the TEACHER,
 not a second code base — the 24 books RUN; the Mishnah GRADES; the
-Talmud TEACHES the compile steps. The exam (Step 9) is unchanged and
+Talmud TEACHES the compile steps. The exam (Step 5) is unchanged and
 was right all along: grading against the answer key is what an
 answer key is for. The compilation TARGET is what flips: not
 Mishnah rows hand-built into rule functions, but the code itself —
@@ -86,12 +99,44 @@ tracks NARRATIVE facts, so law-layer witness seats leave it
 unmoved — the permanence lives in the frozen YAMLs, manifests, and
 ledgers.
 
-## Step 1 — Parse the verse  ✅ done, whole Bible
-The reading marks (the cantillation) split the verse like brackets:
-the strongest pause first, down to the leaves — the word-bricks. Every
-one of the 23,213 verses parses to exactly one legal tree under rules
-v3. This is the verse's STRUCTURE.
-   → shows as: the verse tree window and the leaf rows on every verse.
+## Step 1 — The front end: what the machine reads  ✅ prepared, whole Bible
+(Merges old Steps 1-2 under the 2026-09-03 measurements.)
+
+THE LOAD-BEARING LAYERS — the scroll's own ink, the layers a scribe
+must write: LETTERS, WORD SPACES, ROOTS (lemma identity — scans,
+counts, data-to-code binding; the Mishnah quotes the code's own
+roots), VERSE CUTS (tradition-counted), PARAGRAPH BREAKS (the open
+and closed spaces — the ink's own scene divider; the creation week
+closes each of its seven days with an open-paragraph mark), and THE
+FIFTEEN DOTS (the law-relevant annotation channel, below).
+
+THE CONFIRMING LAYERS — the teacher's parse written down: the
+Masoretic VOWELS and ACCENTS. Their standing is MEASURED
+(RESEARCH_LOG.md, 2026-09-03, both measurements on the creation
+week's 131 derived facts): the accent tree decides NOTHING alone
+(0 of 131 — narrative, matching the earlier case-law verdict), and
+the vowels decide NOTHING alone (0 of the 38 morphology-decided
+facts — 25 letter-visible in bare consonants, 12 decided by
+context, 1 by Onkelos, the passive at Genesis 2:1). THE WITNESS
+STACK, fully measured: 72% of the week's facts stand on bare ink,
+81% with context added, one fact on Onkelos, 18% the teacher's own
+oral testimony — and the entire Masoretic layer agrees everywhere
+and rules nowhere. In PRACTICE the tagged morphology stays in use
+(correct at every probe; rebuilding it from consonants would
+re-derive the same answers) — its standing is confirmation, not
+foundation. The accent tree keeps three honest jobs: the READER's
+aid (its charter, Nehemiah 8:8 via Megillah 3a), a REDUNDANCY LINT
+(a disagreement between keyword-structure and accent-split is a
+flag worth inspecting, never a ruling), and the units' left/right
+display and step-carving workbench. Onkelos stands apart from both
+layers: the oldest witness, the ruling voice where the consonants
+genuinely fork (Genesis 1:1's time anchor; 2:1's voice).
+
+The cantillation parse (all 23,213 verses, one legal tree each,
+rules v3) and the full morphology tagging remain prepared and
+shipped — display, lint, and confirmation.
+   → shows as: the verse tree window, the leaf rows, and the morph
+     table on every verse.
 
 ⚠ THE TREE'S ROLE UNDER THE COMPILER LAW (measured 2026-09-03, full
 record in RESEARCH_LOG.md): for CASE LAW the tree never DECIDES —
@@ -112,16 +157,15 @@ census, Num 3:39; liability scope, Deut 29:28; culpability
 established, Gen 19:33 at Nazir 23a), with the processing algorithm
 itself recorded (Bereshit Rabbah 78:9: script outnumbers dots —
 expound the script; dots outnumber — expound the dots). Front-end
-inventory for the compiler: letters, words, roots, verse cuts, and
-the fifteen dots. The accents serve people; the dots serve the law.
+inventory for the compiler: letters, words, roots, verse cuts,
+paragraph breaks, and the fifteen dots. The accents serve people;
+the dots serve the law. (The narrative and vowel measurements above
+extended this verdict to the whole creation week, 2026-09-03.)
 
-## Step 2 — Apply the morphology  ✅ done, whole Bible
-Every word in every leaf is tagged with its grammar: verb form, tense,
-person, noun state, prefixes split out — with the dictionary number for
-each root. This is each word's IDENTITY.
-   → shows as: the morph table on every verse.
+## Step 2 — The teacher: declare the reading, then read and log
+(Merges old Steps 3-4; every law inside is unchanged.)
 
-## Step 3 — Declare the reading
+### Declare the reading
 Choose how much of the oral tradition to read for this span — everything
 (the full inversion), one work (just the Talmud), one verse's worth, a
 block. Owner's choice, per item. The scope is DECLARED up front and
@@ -145,11 +189,11 @@ over the Tabernacle portions — so for that stretch the spine is
 MIDRASH TANCHUMA (both recensions), beside the standing Onkelos.
 Primaries over anthologies: Lekach Tov stays enumerated depth,
 Shemot Rabbah credited where it parallels Tanchuma; the Talmud
-law-clusters (Yoma, Menachot, Shabbat) meet the machine at Step 9
-where they belong. Applied retroactively to Terumah the same
+law-clusters (Yoma, Menachot, Shabbat) meet the machine at Step 5
+(the exam) where they belong. Applied retroactively to Terumah the same
 sitting, append-only. The
-Mishnah and Talmud leave the reading pass and return at Step 9 as the
-exam (see THE TWO SHELVES, Step 4). Unchanged riders: canon
+Mishnah and Talmud leave the reading pass and return at Step 5 as the
+exam (see THE TWO SHELVES, below). Unchanged riders: canon
 pattern-rules fire on grammar; ink claims never credited unopened;
 FULL enumeration with the remainder marked outside declared scope;
 dual-track on disputes. Dependency on record: the sugya case-file
@@ -161,7 +205,7 @@ register classification for every remaining block is computed AHEAD in
 one mechanical pass — each sitting starts with its declared list
 already printed, never re-deriving it by hand.
 
-## Step 4 — Read and log
+### Read and log
 Actually read each chosen source against the text. Every source gets one
 ledger row with a verdict: material (bears on the logic) / context /
 enrichment / duplicate / not-bearing. The ledger is append-only forever.
@@ -179,11 +223,11 @@ different jobs. VERSE-ANCHORED books (Onkelos; the midrash
 collections — the verse-by-verse expounding books — including the
 law-midrash like the Mekhilta on Exodus)
 start at the verse and walk toward the law — they are organized like
-our units, so they are the READING SHELF: they feed Steps 3-4.
+our units, so they are the READING SHELF: they feed this step.
 CASE-ANCHORED books (the Mishnah, with the Tosefta beside it) start
 from the case and barely cite verses — they cannot be read at a verse
 span, so they are the TESTING SHELF: their input→output rows are the
-exam the machine faces at Step 9, routed by topic. The TALMUD is the
+exam the machine faces at Step 5, routed by topic. The TALMUD is the
 bridge between the two directions: it takes a Mishnah rule that looks
 like pure addition and walks it back to the verse ("from where do we
 know this?"). MEASURED on our deepest block (the goring ox — 35
@@ -220,14 +264,14 @@ or ink-level claims — counts, spellings, written-vs-read forms — are
 NEVER dup-credited without opening: that is the class where seats
 diverge (the canopy counts 9/10/11 vs 13/11/10 are the standing
 exhibit).
-THE TRIAGE IS STEP 4 MACHINERY RUN IN STEP 9'S SERVICE (owner's
+THE TRIAGE IS THIS STEP'S MACHINERY RUN IN THE EXAM'S SERVICE (owner's
 observation 2026-09-01, confirmed by the 958-passage Talmud triage).
 Reading the case-anchored and bridge books uses THIS step's discipline
 exactly - every source opened, one verdict row each, append-only ledger
 in logic/oral_triage/, credits for duplicates, terse non-material rows.
 What differs is the DESTINATION: a verse-anchored book's material rows
-feed Step 6 (claims and operators in the verse code); a bridge book's
-law rows feed Step 9 (case rows and rule candidates - the RULE_CATALOG).
+feed Step 3 (claims and operators in the verse code); a bridge book's
+law rows feed Step 5 (case rows and rule candidates - the RULE_CATALOG).
 The two-shelves ruling stands unchanged, and such a triage never enters
 a unit's DECLARED reading scope: stamps and coverage stay on the
 core-shelf default, no reading debt appears.
@@ -319,7 +363,10 @@ that says what it honestly is. When a number refuses to move, ask
 what it is actually counting before you trust it as a constant.
    → shows as: chip "in reading 39/63" or "read through"; grid cell fill.
 
-## Step 5 — Extract claims
+## Step 3 — The code: extract claims, write the logic
+(Merges old Steps 5-6; the code/data separation law governs.)
+
+### Extract claims
 Each material finding becomes a claim: an ID, the statement, the source
 that witnesses it. Nothing enters code without a claim; no claim without
 a read source. Each claim carries a `middah:` field when the source's
@@ -332,18 +379,19 @@ utterance census fires on every qualifying va-yomer ("and He said");
 middah tagging fires on every argued inference. (Lesson of the day-4
 blind compare, 2026-08-21: each session missed exactly one of the two.)
 
-## Step 6 — Write or amend the logic
+### Write or amend the logic
 ⚠ Under the CODE/DATA SEPARATION LAW (2026-09-03, see the compiler
 law block at the top): the logic written here comes from the ink
 alone — quantities, thresholds, and list-values the ink does not
 state are DATA the code must accept as input, never constants baked
 into the source. The Mishnah's case-shape teaches the input schema;
-its rows arrive only at Step 9, as test data.
+its rows arrive only at Step 5 (the exam), as test data.
 Four inputs combine to produce each verse's logic step:
-a. THE TREE (Step 1) gives the SHAPE — which words group together, what
+a. THE TREE (the front end, Step 1) gives the SHAPE — which words group together, what
    the verse's halves are (e.g. Gen 1:1 splits [the creation event |
    the two objects]).
-b. THE MORPHOLOGY (Step 2) picks the OPERATOR TYPE: a narrative-past
+b. THE MORPHOLOGY (the front end's grammar layer — confirmation, not
+   foundation; Step 1) picks the OPERATOR TYPE: a narrative-past
    verb = an EVENT that happened; a "let there be" mood = a COMMAND
    issued; a participle = an ONGOING condition; a verbless clause = a
    STATE.
@@ -352,7 +400,7 @@ c. THE RULE CATALOG — TIR = the Tree-to-logic Interpretation Rules,
    recurring grammar patterns to operators the same way every time.
    Every operator line cites its rule, so nothing is a one-off
    judgment call. (The catalog itself stays flexible — model layer.)
-d. THE CLAIMS from the reading (Step 5) correct and extend what
+d. THE CLAIMS from the reading (above) correct and extend what
    grammar alone can see — e.g. the tradition counts Gen 1:1 as an
    utterance though the "said" verb is absent; disputes are carried
    as recorded disputes, testimony as witness-tier state. A claim
@@ -363,16 +411,19 @@ d. THE CLAIMS from the reading (Step 5) correct and extend what
    and CITES the middah as chain authority — the day-one pattern.
 The output is the unit: steps with operators, each citing its rule
 and/or claim, plus the assertions and scenarios that become the tests
-of Step 7. Every edit takes one changelog line and a rev bump. Free to
+of Step 4 (the gates). Every edit takes one changelog line and a rev bump. Free to
 do any time; the gates are the only tax.
    → shows as: unit page "MODEL · REV N", operator rows citing sources.
 
-## Step 7 — Run the gates
+## Step 4 — Gates and stamp
+(Merges old Steps 7-8.)
+
+### Run the gates
 One command, all green or the change doesn't ship: unit assertions,
 renderings reprinted, world refolded to its hash, scenes vs baseline,
 changelog check. (Deleting or rebaselining a TEST takes owner word.)
 
-## Step 8 — The stamp (delegated 2026-09-01; owner word before that)
+### The stamp (delegated 2026-09-01; owner word before that)
 When a span's declared reading is COMPLETE and its logic was rebuilt
 from that reading, the unit qualifies for the full-rule stamp.
 BATCH STAMPS (owner, 2026-08-25): the word may cover a batch — a
@@ -398,19 +449,127 @@ First delegated act, same sitting: the twelve queued re-affirmations
 cleared (REAFFIRM_QUEUE, nine units preflighted green).
    → shows as: chip "full rule" (until then: "first pass").
 
-## Step 9 — Prove against cases (where the text records cases)
+## Step 5 — The exam: the compilation loop (where the text records cases)
+(Old Step 9 — the owner's quotes that say "step 9" mean this step.)
 Compile the logic to a machine; run the recorded cases against it,
 every miss printed. Recorded cases include the tradition's own case
 tables: the Mishnah's input→output rows, graded at the reading, join
 the scene list (the Exodus 21 pattern — 64 scenes from its chapter
 reading). The case-anchored books are this step's home shelf — see
-THE TWO SHELVES in Step 4.
+THE TWO SHELVES in Step 2.
    → shows as: chip "proven"; drops automatically if a test goes red.
+
+⚠ THE DELIVERABLE RULE (owner-ruled 2026-09-03: "it has to be done"
+— "amend it"). A law span does not FINISH this step until its
+COLD-COMPILED FUNCTION exists. The five motions, in order (the
+owner's confirmed process):
+ (1) COMPILE THE CODE FROM THE VERSES FIRST — the bare ink alone:
+     the when/if case structure, the roles, the actions; anything
+     the ink does not state (a distance, an amount, a threshold)
+     is an input PARAMETER, never a constant. No Mishnah, no
+     Talmud in the source (the code/data separation law).
+ (2) COLLECT the Mishnah's rows as TEST DATA — input cases with
+     expected verdicts, plus the recorded parameter settings. Each
+     row's VERSE-ADDRESS comes from the tradition's own index (the
+     citation links — ultimately the Talmud's bridges): an ADDRESS
+     LOOKUP, used freely up front, carrying no reasoning. What the
+     Talmud SAYS at an address stays closed until motion (4) — the
+     address does no damage to the ink-first measurement; the
+     worked solution would. The whole span's ink is compiled,
+     cited verses or not: untested verses are still program.
+ (3) RUN the code on the test data.
+ (4) Where it MISSES, consult the Talmud PER GAP — never wholesale
+     up front: each miss is where deep logic hides, and the
+     recorded argument for that gap is applied as a LABELED
+     compile move (source cited on the changed line; the Move
+     Catalog grows here). Recompile.
+ (5) When the run reproduces the answer sheet, ADD IT — the
+     function joins the corpus and the unit earns its "compiled"
+     chip.
+⚠ THE EFFECTS RULE (owner-ruled 2026-09-03: "this will now build a
+SIMULATION instead of a ledger. This is as critical to the steps as
+any other step. It should be coded EVERY TIME for effects").
+Every cold-compiled function returns, with each verdict, its EFFECT
+— the state change the verdict makes on its own authority, in the
+tradition's own effect vocabulary (pays, goes free, forfeit, exempt,
+impure until evening, liable to lashes, exiled to refuge),
+discovered from the sources like the case vocabulary, never
+designed, witnessed like any claim. The fence (method law 6)
+holds with one sentence sharpened: it forbids invented EVENTS;
+computed CONSEQUENCES are the simulation's output, not history.
+The verdict writes the LEDGER — debts, statuses, timers, flags on
+persistent entities — never the EVENT STREAM: obligations are
+computed, acts come from the text. The effect-vocabulary registry
+OPENED at the owner's word the same night ("start with the
+harvest"): World/step9/effect_vocabulary.yaml — 26 effects
+harvested from what was already written, each with three witness
+layers (ink verbs machine-verified with verse addresses; frozen-
+unit prose; the exam shelf's own emissions). FIRST EXECUTION same
+night (owner: "retrofit the three cold functions"): guardians
+12/12 + Mishpatim 44/44 + Leviticus 5 27/27 all held with effects
+on every cell — 71/71; effects_layer.py refuses unregistered
+effects at emission; the term clock and the jubilee ran as the
+simulator's first TIMERS; disputes fork both arms' effects; the
+registry grew to 27 by discovery (jubilee_release, whose probe
+already fired inside the compiled code). AND THE ENGINE BREATHES
+(same night, owner: "build the skeleton then compile the spans"):
+World/step9/world_engine.py — the five constructs live, 5/5
+checkpoints on recorded-case test scenes, the effect interface
+contract fixed (with timer CANCELLATION, discovered when the
+pierced slave's "forever" had to void his six-year exit), an open
+ledger printed honestly at tape end. Three spans then compiled
+EFFECTS FROM BIRTH: the Passover engine (Exod 12-13, 24/24), the
+festival calendar (Exod 23:10-19, 14/14 — the first LAND-entity
+timer), the Decalogue's law layer (Exod 20, 12/12). Registry: 39
+effects, every Hebrew verb machine-verified. Compiled chips earned
+(pending the site lap): exo_12, exo_13, exo_20, exo_23. The target this serves (THE_WORLD.md idea log,
+2026-09-03): run the ledger across the whole Hebrew Bible and ask
+whether every prophetic indictment matches an open entry the law
+computed.
+⚠ THE TWO DIRECTIONS (owner-clarified 2026-09-03: "yes write the
+two-directions picture into step 5"). The compile loop runs from
+both ends, and both are law:
+— SCROLL-FIRST (the walk): the compile units are the scroll's own
+  divisions — the paragraph marks (ink, the front-end measurement)
+  and the weekly portions. The walk compiles EVERY span in order,
+  because most verses are tested by no case discussion and untested
+  code is still code. Blocks are never random and never ours: the
+  ink segments the program, and where measured the Talmud's own
+  function boundaries coincide with the scroll's breaks (the
+  three-keeper division of Exod 22:6-14 at Bava Metzia 94b = the
+  paragraph breaks).
+— TALMUD-FIRST (the exam): each sugya (case discussion) is a test
+  harness — it names the case, the expected output, and its VERSE
+  LIST across all the books: the test's dependency closure. A
+  sugya's verse reaching outside the compiled spans is an IMPORT
+  EDGE (moves M-07/M-10), and can drag a remote span forward —
+  Leviticus 24 became Exodus 21's compile dependency this way,
+  before the walk ever reached it. The per-book TALMUD TRIAGE is
+  this direction run at scale (Genesis's 958 passages yielded the
+  Noahide block; EXODUS'S RAN 2026-09-03 — 2,033 rows verdicted,
+  LAW 501 / CREDIT 1,109 / AGGADAH 336 / QUOTE 87, mapped into 18
+  exam blocks awaiting the owner's word:
+  logic/oral_triage/EXOD_TALMUD_TRIAGE_LEDGER.md; Leviticus will
+  get its own).
+The two directions meet at the misses: the walk supplies the
+program, the sugyot supply the tests, and every miss draws one edge
+of the program's cross-book import graph. In one line: the Talmud
+defines the TESTS and their scope; the scroll defines the PROGRAM
+and its blocks; neither picks the other's unit.
+
+The ink-first order is what keeps the fractions honest (pure-ink vs
+recorded-move vs routed, the Mishpatim measurement). Exam rules
+written WITH the reading in hand (the round-10 shape) are SCAFFOLD:
+they prove coverage, they do not count as compiled. The "compiled"
+chip shows only when the cold function exists and passes. Already
+qualifying: Exodus 22:6-14 (the four guardians) and the Mishpatim
+re-compilation; everything else is honestly uncompiled until its
+function lands.
 
 ⚠ RE-FOUNDED UNDER THE COMPILER LAW (owner's correction 2026-09-02:
 "didn't we change the way we look at step 9? [the exam] is how we
 derive the deep logic... it seems like you are holding on to the
-previous method"). Step 9 is no longer a FINAL TEST of hand-built
+previous method"). The exam is no longer a FINAL TEST of hand-built
 rules — it is THE COMPILATION LOOP, and the exam is the DERIVATION
 INSTRUMENT: run what the bare ink gives, hold it against the
 Mishnah's answer sheet, and EVERY GAP BETWEEN THEM IS WHERE THE DEEP
@@ -423,7 +582,7 @@ above). One level, not two — there is no "proof by exam" beside
 below (through round 9, 329/329) remain valid RECORDS of the era
 before the law — they graded true tables, but graded rules built
 FROM the answer key, the scaffolding the law replaces as functions
-get cold-compiled. Site presentation follows this: one Step 9 page
+get cold-compiled. Site presentation follows this: one exam page
 per function — raw code with its case keywords marked, the gaps,
 the moves that fill them, the emitted table graded with provenance,
 the runner and its output.
@@ -490,7 +649,7 @@ mishnah + talmud_bridge — the Talmud is the ruling body and Genesis its
 stated derivation. 44 rows (the Sanhedrin 56a-59b sugya + the pursuer,
 offering, court-of-Shem, and circumcision-agent satellites), all
 credited to the triage's read; 40 neighbor segments opened for the
-frame (its own Step 4 ledger). 41 case rows in 11 modules, 41/41 green;
+frame (its own reading ledger, Step 2). 41 case rows in 11 modules, 41/41 green;
 69/69 across the three exams. The headline repeated at Talmud scale:
 THE READING ANTICIPATED THE SUGYA — sixteen legal legs already seated
 (the word-by-word crown G08-28, the whole murder procedure G21-11, the
@@ -626,6 +785,33 @@ the pierced slave's "forever"); the BOUNDED DIAGNOSTIC LOOP
 counter שֵׁנִית "a second time" written in the ink). Records:
 World/step9/REPORT_CODE_HUNT.md, REPORT_CODE_EXECUTION.md.
 
+THE VAYIKRA ROUND RAN (2026-09-03, owner: "parashat Vayikra. do
+this" — THE BOOK OF LEVITICUS OPENS, the rhythm's seventh cycle and
+the first under the SIX-STEP law): eight units derived and frozen
+FULL RULE + the law-era chapter-4 unit re-affirmed (corpus 117 →
+125) from the book's first SIFRA-SPINE sweep — the Sifra's two
+Vayikra sections whole (648 rows) + Onkelos Lev 1:1-5:26 (111
+verses), 759 declared sources across nine ledgers, 61 claims seated.
+The exam: all 68 bare Mishnah rows citing Lev 1-5 (59 fresh, 9
+credits), 17 modules, 48/48 first full run; 377/377 across all ten
+rounds. ONE finding (F-045, the quick-exit rule of Mishnah Shevuot
+2:3) auto-seated same sitting as LV05A-09. Catalog R-320..R-336; 141
+compiled rules. THE HEADLINE: THE READING GRADED ITSELF — 47 of 48
+exam rows were anticipated by the same sitting's Sifra reading, many
+VERBATIM (the recursive fifth, the me'ilah-doubt dispute, the bird
+age windows, the vow-normalization table, the elders' quorum, the
+compelled offering): the law-midrash spine anticipates the answer
+sheet at 47/48 where Genesis's narrative spine ran 19/25 — the
+two-shelves law measured at book scale on the book's first day.
+Also out of the sweep: THREE paragraph-channel witnesses (the
+reflection-pauses charter, its repeat at the 1:10 seam, and the
+goat's hiatus carrying the no-fat-tail exemption), Onkelos as the
+data channel's CONVERSION LAYER twice (the tenth-of-ephah computed
+as one-of-ten-in-three-se'im inside the verse; shekels rendered
+sanctuary sela'im), and Exodus 21's goring ox standing in Leviticus
+1's input filter — the era's first cross-book input-validation
+link. Full record: World/step9/REPORT_VAYIKRA.md.
+
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed
 on the spot: logic/findings/FINDINGS_QUEUE.md (append-only). The owner
@@ -651,12 +837,14 @@ unit joins logic/findings/REAFFIRM_QUEUE.md until the owner's next batch
 word ("recent changes good"). Never delete a stamp; never let it claim
 code the owner hasn't seen.
 
-## Step 10 — Publish
+## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.
 
 ## The chip, decoded
   ⓘ read through · 10 material · first pass · proven
-  [--- Step 4 status ---]           [Step 6/8]   [Step 9]
+  [--- Step 2 status ---]           [Step 3/4]   [Step 5]
+  (the public site still labels these with the old numbering —
+   Step 4 / Step 6/8 / Step 9 — until its next deploy)
 - oral track: unopened → in reading n/m → read through
 - derivation: underived → first pass (logic predates its reading)
   → full rule (logic rebuilt FROM a completed reading, stamped)
@@ -669,7 +857,7 @@ Export, parity check against the public repo, deploy. Owner's word.
 - the receipts: scans/ ledgers in the public repo (append-only)
 
 ## Creation week, honestly (as of 2026-08-21)
-| Day | Verses  | Step 4 (reading) | Step 6 (applied) | Stamp |
+| Day | Verses  | Step 2 (reading) | Step 3 (applied) | Stamp |
 |-----|---------|------------------|------------------|-------|
 | 1   | 1:1-5   | complete         | YES — rev 3      | ✔ STAMPED 2026-08-23 |
 | 2   | 1:6-8   | complete (core shelf) | YES — rev 3 | ✔ STAMPED 2026-08-23 |

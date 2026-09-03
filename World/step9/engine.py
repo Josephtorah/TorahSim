@@ -1694,3 +1694,8 @@ RULES.update(_kt.build(V))
 # book of Exodus' closing cycle). 4 rules in vayakhel_pekudei_rules.py.
 import vayakhel_pekudei_rules as _vp
 RULES.update(_vp.build(V))
+
+# Round 10 — THE VAYIKRA EXAM (2026-09-03, the book of Leviticus'
+# opening cycle). 17 rules in vayikra_rules.py.
+import vayikra_rules as _vk
+RULES.update(_vk.build(V))

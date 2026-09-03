@@ -846,3 +846,442 @@ alone, and the accent split confirms it. Its compiler role is a
 LINT (a disagreement between keyword-structure and accent-split is
 a flag worth inspecting) and a display layer (the units'
 tree_left/tree_right), never a derivation dependency.
+
+
+---
+
+## THE NARRATIVE MEASUREMENT — does the world machine need the accent tree?
+## (2026-09-03, owner: "I still think we need the cantillation marks to
+## derive the narrative am I wrong? ... Could we do that without the marks?"
+## → "yes measure it on the creation week. use the oral torah where needed")
+
+### The instrument
+
+The seven frozen creation-week units (gen_01_creation_boot through
+gen_07_completion_sanctity, Genesis 1:1–2:3, all FULL RULE) carry
+**131 operators** — every derived world fact of the week: events,
+states, declarations, namings, registry writes, tests, blessings,
+spec-deltas, witness states, utterance-census entries. Each operator
+was read and classified by the MINIMAL front-end layer that decides
+its content:
+
+- **W** — words alone: roots, word order, letter-visible spelling,
+  formula tokens (וַיְהִי־כֵן "and it was so", וַיִּקְרָא "and he
+  called", וַיְבָרֶךְ "and he blessed"), presence/absence of אֵת (the
+  object marker), the day labels, verse cuts.
+- **M** — words + morphology: the verb-form layer — jussive vs
+  imperfect vs narrative-past vs perfect vs participle (the whole
+  LET / LET? / event / state mood system), verb stems, gender and
+  number agreement (the earth as build agent at 1:12 rides the
+  feminine verb), pronominal suffixes.
+- **P** — paragraph breaks needed as the deciding layer.
+- **T** — the accent tree as the deciding witness.
+- **O** — oral testimony is the content's source (the ink never says
+  it): the ten-utterances census, the witness states (the hidden
+  light, the suspended waters, the sea's stipulation, the moon's
+  diminution, the staged grasses, the curtailed great creatures, the
+  Torah-acceptance condition, rest-created-on-day-seven), the
+  recorded census disputes, and Genesis 1:1's time anchor (below).
+
+### THE NUMBERS
+
+| unit | ops | W | M | O | T | P |
+|---|---|---|---|---|---|---|
+| creation_boot (1:1–5) | 18 | 5 | 8 | 5 | 0 | 0 |
+| raqia_day (1:6–8) | 12 | 5 | 5 | 2 | 0 | 0 |
+| double_build (1:9–13) | 20 | 11 | 5 | 4 | 0 | 0 |
+| lights_calendar (1:14–19) | 20 | 11 | 4 | 5 | 0 | 0 |
+| swarms_blessing (1:20–23) | 18 | 10 | 5 | 3 | 0 | 0 |
+| land_adam_dominion (1:24–31) | 36 | 24 | 8 | 4 | 0 | 0 |
+| completion_sanctity (2:1–3) | 7 | 3 | 3 | 1 | 0 | 0 |
+| **WEEK** | **131** | **69 (53%)** | **38 (29%)** | **24 (18%)** | **0** | **0** |
+
+**Zero of 131 facts has the accent tree as its sole deciding
+witness.** The tree appears in the operator prose at exactly SIX
+sites — 1:4 (the כִּי "that" ruling sits "under the etnachta arm"),
+1:16 (the etnachta "stages" the both-great-then-split delta), 1:24
+(the receipt token isolated as the right arm), 1:29 and 1:30 (the
+food-grant demand and its receipt as right arms), 2:2 (the mirrored
+[finished | ceased] halves) — and at every one of them it CONFIRMS
+a fact already decided by words, morphology, or syntax. The
+narrative verdict matches the case-law verdict exactly:
+**corroboration, never derivation.**
+
+### The paragraph finding — the day boundaries are INK
+
+Measured in the source XML: **seven open-paragraph marks (פ —
+petuchah, "open paragraph"), one at the close of each day** — after
+1:5, 1:8, 1:13, 1:19, 1:23, 1:31, and 2:3. The scroll's own layout
+segments the week into exactly seven paragraphs. In this span the
+words already carry the boundary (the evening-morning refrain), so
+the paragraph layer is redundant here — but unlike the accents, the
+paragraph marks ARE in the scroll a scribe must write. Where a
+narrative lacks a refrain, this is the ink's own scene divider.
+
+### Exhibit 1 — the week's ONE real parse ambiguity, and who decided it
+
+בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ
+— "In the beginning God created the heavens and the earth"
+(Genesis 1:1).
+
+The bare consonants allow two readings: the absolute ("In the
+beginning, God created...") or the construct ("In the beginning OF
+God's creating..." — a dependent clause, no absolute origin). This
+is a genuine attachment ambiguity, it affects a world variable (is
+t0 an absolute timeline origin?), and the accents COULD have been
+called as a witness. The derivation instead reached for the
+teacher: the unit's TIME_ANCHOR is ruled temporal by Onkelos —
+בְּקַדְמִין ("at the first") — and the tradition's own testimony at
+Babylonian Talmud Megillah 9a records the elders changing the word
+order for King Ptolemy ("God created in the beginning") to guard
+against misreading. The one place narrative parse ambiguity was
+real, ORAL TESTIMONY decided it — the accents were not even called.
+Exactly the owner's instruction: "use the oral torah where needed."
+
+### Exhibit 2 — the tree's best narrative moment, still redundant
+
+וַיַּ֧רְא אֱלֹהִ֛ים אֶת־הָא֖וֹר כִּי־ט֑וֹב וַיַּבְדֵּ֣ל אֱלֹהִ֔ים
+בֵּ֥ין הָא֖וֹר וּבֵ֥ין הַחֹֽשֶׁךְ — "And God saw the light, that it
+was good; and God divided the light from the darkness" (Genesis 1:4).
+
+Is כִּי here "that" (a complementizer — He saw THAT it was good) or
+casuistic "if/when" (the law books' branch keyword)? The unit rules
+complementizer, noting it sits under the etnachta arm with the
+seeing. But the decider is syntax available from words + morphology:
+כִּי directly after a verb of perception (וַיַּרְא "and he saw") is
+"that" — the accent grouping agrees, the way indentation agrees
+with braces. Corroboration.
+
+### Exhibit 3 — the week's hardest reading problem is not a parse problem
+
+וַיְכַ֤ל אֱלֹהִים֙ בַּיּ֣וֹם הַשְּׁבִיעִ֔י מְלַאכְתּ֖וֹ אֲשֶׁ֣ר
+עָשָׂ֑ה וַיִּשְׁבֹּת֙ בַּיּ֣וֹם הַשְּׁבִיעִ֔י מִכׇּל־מְלַאכְתּ֖וֹ
+אֲשֶׁ֥ר עָשָֽׂה — "And God finished on the seventh day His work
+which He had made; and He ceased on the seventh day from all His
+work which He had made" (Genesis 2:2).
+
+Finished ON the seventh day — after 1:31's global inspection closed
+the sixth? No accent placement can dissolve this; the words say it
+plainly, twice. The tradition's answer is testimony, not parsing:
+what the world still lacked, the seventh day itself supplied —
+מְנוּחָה ("rest"), the bride for the canopy (Bereshit Rabbah 10:9;
+the unit's witness state). The deep narrative problems of the week
+live ABOVE the parse layer entirely.
+
+### Two honest caveats
+
+1. **The tree WAS the workbench.** The units' method field is named
+   tree_derive_version — a fossil of the era when derivation was
+   organized arm-by-arm — and each step's operators are grouped
+   under tree_left/tree_right displays. The carving TABLE was the
+   tree; the carved FACTS, measured one by one, never needed it as
+   a witness. Rebuilt without accents, the step boundaries might
+   fall differently; the 131 facts would not change.
+2. **"Without the marks" ≠ "without the reading tradition."** 29% of
+   the week's facts (38 of 131) are decided by MORPHOLOGY — the
+   mood system (jussive LET vs imperfect LET?), the narrative-past
+   event chain, gender agreement handing the earth her delegated
+   build. Morphology as we consume it bakes in the vowels, which
+   are the reading tradition's other half. The claim this
+   measurement supports is precise: the ACCENTS are testimony and
+   lint; the VOWELS-AND-GRAMMAR layer is load-bearing for
+   narrative in a way it never was for case law (case law rode the
+   branch keywords; narrative rides the verb forms).
+
+### VERDICT
+
+The owner asked: "I still think we need the cantillation marks to
+derive the narrative — am I wrong?" Measured answer: **we USED them
+(workbench + display), we do not NEED them (0 of 131 facts)** — the
+world's states and variables come from words and roots (53%), the
+verb-form layer (29%), and the teacher's testimony where the ink is
+silent (18%), with the scroll's own paragraph marks as the ink-level
+scene divider. The narrative front end is therefore: letters, words,
+roots, verse cuts, paragraph breaks, the fifteen dots — plus the
+GRAMMAR of the reading tradition (vowels/verb-forms) as narrative's
+extra load-bearing layer, and the accent tree in the same seat it
+holds in case law: the reader's aid, the redundancy lint, the
+display.
+
+### Appendix — the full per-operator classification (audit trail)
+
+1:1 TIME_ANCHOR → O
+1:1 EVENT → M
+1:1 REGISTRY_INSTALL → W
+1:1 ORAL_UTTERANCE → O
+1:2 PRECONDITION_STATE → M
+1:2 INVARIANT → M
+1:2 NOTE_ZERO_EVENTS → M
+1:2 NOTE_PRESUPPOSED → W
+1:2 ORAL_UTTERANCE → O
+1:3 ORAL_UTTERANCE → O
+1:3 DECLARE → M
+1:3 TRIPLE → M
+1:3 RESULT → M
+1:4 TEST → M
+1:4 EVENT_PARTITION → W
+1:4 WITNESS_STATE → O
+1:5 NAME → W
+1:5 COMMIT → W
+1:6 ORAL_UTTERANCE → O
+1:6 DECLARE → M
+1:6 DECLARE → M
+1:6 INVARIANT → M
+1:6 NOTE_PRESUPPOSED → W
+1:7 EVENT → M
+1:7 EVENT_PARTITION → W
+1:7 WITNESS_STATE → O
+1:7 RESULT → W
+1:7 RESULT → M
+1:8 NAME → W
+1:8 COMMIT → W
+1:9 ORAL_UTTERANCE → O
+1:9 DECLARE → M
+1:9 DECLARE → M
+1:9 NOTE_PRESUPPOSED → W
+1:9 RESULT → W
+1:9 RESULT → W
+1:10 NAME → W
+1:10 WITNESS_STATE → O
+1:10 TEST → W
+1:11 ORAL_UTTERANCE → O
+1:11 DECLARE → M
+1:11 INVARIANT → M
+1:11 RESULT → W
+1:12 EVENT → M
+1:12 REGISTRY_INSTALL → W
+1:12 NOTE_SPEC_DELTA → W
+1:12 NOTE_SPEC_DELTA → W
+1:12 WITNESS_STATE → O
+1:12 TEST → W
+1:13 COMMIT → W
+1:14 ORAL_UTTERANCE → O
+1:14 DECLARE → M
+1:14 TRIPLE → M
+1:14 NOTE_PRESUPPOSED → W
+1:15 NOTE_PRESUPPOSED → W
+1:15 RESULT → W
+1:16 EVENT → M
+1:16 REGISTRY_INSTALL → W
+1:16 ASSIGN → W
+1:16 NOTE_SPEC_DELTA → W
+1:16 WITNESS_STATE → O
+1:16 WITNESS_STATE → O
+1:16 NOTE_SPEC_DELTA → W
+1:16 WITNESS_STATE → O
+1:16 NOTE_SPEC_DELTA → W
+1:17 EVENT → M
+1:17 WITNESS_READ → O
+1:18 NOTE_SPEC_DELTA → W
+1:18 TEST → W
+1:19 COMMIT → W
+1:20 ORAL_UTTERANCE → O
+1:20 DECLARE → M
+1:20 DECLARE → M
+1:20 TRIPLE → W
+1:20 NOTE_PRESUPPOSED → W
+1:21 EVENT → M
+1:21 ORAL_UTTERANCE → O
+1:21 REGISTRY_INSTALL → W
+1:21 RESULT → M
+1:21 RESULT → W
+1:21 NOTE_SPEC_DELTA → W
+1:21 NOTE_SPEC_DELTA → W
+1:21 WITNESS_STATE → O
+1:21 NOTE_SPEC_DELTA → W
+1:21 TEST → W
+1:22 BLESS → M
+1:22 NOTE_PRESUPPOSED → W
+1:23 COMMIT → W
+1:24 ORAL_UTTERANCE → O
+1:24 DECLARE → M
+1:24 TRIPLE → W
+1:24 RESULT → W
+1:24 NOTE_PRESUPPOSED → W
+1:25 EVENT → M
+1:25 REGISTRY_INSTALL → W
+1:25 NOTE_SPEC_DELTA → W
+1:25 NOTE_SPEC_DELTA → W
+1:25 NOTE_SPEC_DELTA → W
+1:25 TEST → W
+1:26 ORAL_UTTERANCE → O
+1:26 DECLARE → M
+1:26 TRIPLE → M
+1:26 NOTE_PRESUPPOSED → W
+1:27 EVENT → M
+1:27 REGISTRY_INSTALL → W
+1:27 RESULT → W
+1:27 NOTE_SPEC_DELTA → W
+1:27 NOTE_SPEC_DELTA → W
+1:27 NOTE_SPEC_DELTA → W
+1:27 NOTE_SPEC_DELTA → W
+1:28 BLESS → W
+1:28 NOTE_SPEC_DELTA → W
+1:28 NOTE_SPEC_DELTA → W
+1:29 ORAL_UTTERANCE → O
+1:29 EVENT → M
+1:29 NOTE_PRESUPPOSED → W
+1:29 ASSIGN → W
+1:29 DECLARE → M
+1:30 NOTE_PRESUPPOSED → W
+1:30 ASSIGN → W
+1:30 RESULT → M
+1:31 TEST → W
+1:31 WITNESS_STATE → O
+1:31 COMMIT → W
+2:1 EVENT → M
+2:1 NOTE_PRESUPPOSED → W
+2:2 EVENT → M
+2:2 WITNESS_STATE → O
+2:2 EVENT → M
+2:3 BLESS → W
+2:3 ASSIGN → W
+
+
+---
+
+## THE VOWEL MEASUREMENT — could the front end stand on the scroll
+## plus Onkelos, without the Masoretic vowels?
+## (2026-09-03, owner: "yes run that measurement" — following the
+## finding that our morphology tags carry the Masoretes' vowels)
+
+### The question
+
+The narrative measurement above left one witness untested: 38 of the
+creation week's 131 facts are decided by MORPHOLOGY, and our
+morphology tags (OSHB on the Westminster Leningrad Codex) bake in
+the Masoretic vowels — the same hands that wrote the accents. So:
+of those 38 facts, how many could be recovered from **bare
+consonants + context + Onkelos alone** — the scroll's ink plus the
+oldest witness, no Masoretic vowels?
+
+### The method
+
+Each of the 38 morphology-decided operators was re-examined at the
+consonantal (written-letter) level — every claimed letter-visibility
+verified against the words table (pointing stripped), every Onkelos
+citation pulled and read. Classes:
+
+- **C** — the distinction is LETTER-VISIBLE in the bare consonants.
+- **X** — consonants + CONTEXT decide (syntax, speech frames, the
+  named subjects); no external witness required.
+- **K** — ONKELOS is the deciding witness.
+- **V** — only the Masoretic vowels decide.
+
+### THE NUMBERS
+
+| class | count | share |
+|---|---|---|
+| C — consonants alone | 25 | 66% |
+| X — consonants + context | 12 | 32% |
+| K — Onkelos decides | 1 | 3% |
+| **V — Masoretic vowels as sole decider** | **0** | **0%** |
+
+**Zero of 38.** The Masoretes' vowels never stand as the sole
+deciding witness anywhere in the creation week. And in every X case
+where Onkelos was pulled, his rendering CONFIRMS the contextual
+reading (verified this sitting at 1:3, 1:6, 1:9, 1:26, 2:1, 2:2).
+
+### The star exhibits
+
+**The plene vav that carries a delegation (C at its best).** Genesis
+1:12, וַתּוֹצֵא הָאָרֶץ — "and the earth BROUGHT FORTH": the
+causative stem is visible in the bare letters — ותוצא with the vav
+(the plain 'and she went out' would be ותצא) — and the feminine tav
+prefix hands the verb to the earth. The week's only non-divine build
+event rides on TWO CONSONANTS. Contrast 1:11's תדשא ('let it
+sprout'), written defective — there the stem is NOT letter-visible
+and context must decide (class X).
+
+**The one K.** Genesis 2:1, וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל
+צְבָאָם — "and the heavens and the earth were finished, and all
+their host." The bare ויכלו allows 'and they ENDED' (active) or
+'and they WERE COMPLETED' (passive) — the world state is the same
+either way (agentless completion), but the VOICE is settled only by
+a witness: Onkelos writes וְאִשְׁתַּכְלָלוּ ('and they were
+completed'), unambiguously passive. The single fact in 38 where an
+external witness is the clean decider — and the witness is the
+translation, not the vowels.
+
+**The vav ambiguity, handled by position (X).** יְהִי אוֹר וַיְהִי
+אוֹר — "let there be light, and there was light" (1:3). In bare
+consonants the two forms are יהי and ויהי — and ויהי could equally
+be 'and let it be' (as it in fact IS at 1:6, וִיהִי מַבְדִּיל 'and
+let it divide'). What decides? POSITION: inside the quoted speech,
+continuation of command (1:6); after the quote closes, narrative
+report (1:3). Onkelos confirms both readings exactly — וַהֲוָה
+('and there WAS') at 1:3, וִיהִי מַפְרִישׁ ('and let it be
+dividing') at 1:6. The reading tradition's vowels (va- vs vi-)
+encode precisely this judgment — which is to say: the vowels are
+the teacher's parse WRITTEN DOWN, recoverable from context by the
+same reasoning the teacher used.
+
+### VERDICT — the witness stack, now fully measured
+
+Combining both measurements over the creation week's 131 facts:
+
+- **94 facts (72%)** stand on the SCROLL'S BARE INK alone — 69 by
+  words/roots/order + 25 letter-visible morphology.
+- **12 more (81% cumulative)** add only CONTEXT — syntax and speech
+  frames, no witness needed.
+- **1 fact** needs ONKELOS as the deciding witness (2:1's voice).
+- **24 facts (18%)** are the teacher's own testimony (witness
+  states, censuses) — oral by construction, exactly as declared.
+- **The Masoretic vowels decide NOTHING alone; the Masoretic
+  accents decide NOTHING alone.** The entire Masoretic layer —
+  vowels AND accents — is a CONFIRMING witness across the whole
+  week: the teacher's pronunciation and parse written down,
+  agreeing everywhere with what ink + context + Onkelos already
+  give, and disagreeing nowhere.
+
+The front end can, in principle, stand on the scroll plus the
+oldest witness. In PRACTICE we keep consuming the tagged morphology
+— it is correct everywhere it was tested, and rebuilding it from
+raw consonants would re-derive the same answers — but its STANDING
+is now measured: confirmation, not foundation. The hypothesis
+strengthens again: the program is in the ink; every layer above the
+ink is the teacher, and every piece of the teacher's testimony
+checked so far agrees with the ink it teaches.
+
+### Appendix — the 38 morphology facts re-classified (audit trail)
+
+| verse | the fact's morphological hinge | class — decider |
+|---|---|---|
+| 1:1 | perfect ברא (bara, 'created') = completed event | **C** — suffix conjugation, no vav prefix — letter-visible |
+| 1:2 | perfect הָיְתָה ('was') + verbless clauses = states | **C** — suffix form היתה; verbless = absence of verb |
+| 1:2 | participle מְרַחֶפֶת ('hovering') = ongoing | **C** — the participle's mem prefix is a consonant |
+| 1:2 | no narrative-past verb in the verse | **C** — the ו+prefix event pattern is consonant-detectable; 1:2 has noun-first + perfect |
+| 1:3 | jussive יְהִי ('let there be') = LET | **C** — short form יהי vs imperfect יהיה — the final heh is a letter |
+| 1:3 | mood alone splits demanded-Q from holds-Q | **C** — יהי אור vs ויהי אור — the vav is a letter |
+| 1:3 | וַיְהִי = narrative past ('and there WAS light') | **X** — consonants ויהי could also read 'and let it be'; position outside the quote decides; Onkelos: וַהֲוָה ('and there WAS') — perfect, confirms |
+| 1:4 | כִּי ('that') = complementizer, not casuistic 'if' | **X** — syntax: כי directly after a verb of seeing; no vowel involved |
+| 1:6 | jussive יְהִי = clean LET | **C** — short form, letter-visible |
+| 1:6 | וִיהִי ('and let it be') = second directive, imperfect-coded LET? | **X** — consonants ויהי identical to narrative past; INSIDE the quoted speech = continuation of command; Onkelos: וִיהִי מַפְרִישׁ ('and let it be dividing') confirms |
+| 1:6 | participle מַבְדִּיל ('dividing') = standing job | **C** — mem prefix |
+| 1:7 | narrative-past וַיַּעַשׂ ('and He made') | **C** — ו+prefix short form, letter-visible |
+| 1:7 | the job demand's mood stays LET? on the log | **X** — derivative of the 1:6 וִיהִי ruling — same decider |
+| 1:9 | 'let the waters BE GATHERED' (passive) | **X** — consonants יקוו could also be qal 'let them hope'; context (אל מקום אחד 'to one place') decides; Onkelos: יִתְכַּנְשׁוּן ('let them be gathered') — passive, confirms |
+| 1:9 | 'and let the dry land BE SEEN' (passive) | **X** — consonants ותראה could be active 'and she will see'; context decides; Onkelos: וְתִתְחֲזֵי ('and let be seen') — passive, confirms |
+| 1:11 | causative תַּדְשֵׁא ('let sprout') — the first delegation | **X** — no plene vav — the causative stem is NOT letter-visible here; context (earth + cognate object דשא 'grass') decides |
+| 1:11 | participles מַזְרִיעַ / עֹשֶׂה = reproduction duties | **C** — mem prefix / participle pattern |
+| 1:12 | וַתּוֹצֵא ('and she BROUGHT FORTH') — earth as build agent, causative + feminine | **C** — BOTH letters: the plene vav ותוצא (qal 'went out' would be ותצא) AND the feminine tav prefix |
+| 1:14 | singular fiat יְהִי over plural subject — number mismatch | **C** — יהי vs יהיו — letter-visible |
+| 1:14 | purpose clauses = ל + infinitive construct | **C** — the lamed prefix is a letter |
+| 1:16 | וַיַּעַשׂ — manufacture verb, narrative past | **C** — letter-visible |
+| 1:17 | וַיִּתֵּן ('and He set') + אֹתָם suffix — two-step build | **C** — letter-visible |
+| 1:20 | יִשְׁרְצוּ imperfect NOT jussive-coded → mandatory LET? | **C** — the ambiguity IS the fact, and it exists already at consonant level (plural forms show no distinct jussive) |
+| 1:20 | יְעוֹפֵף ('let the flier fly') — doubled-stem imperfect | **C** — the doubled פ is a consonant |
+| 1:21 | וַיִּבְרָא — creation's verb returns, narrative past | **C** — letter-visible |
+| 1:21 | perfect שָׁרְצוּ ('which the waters SWARMED') credits the delegate | **C** — suffix form inside the אשר-clause, letter-visible |
+| 1:22 | וַיְבָרֶךְ + three imperatives (פְּרוּ וּרְבוּ וּמִלְאוּ 'be fruitful, multiply, fill') | **X** — consonants פרו ורבו could be perfects ('they were fruitful'); the blessing frame + לאמר ('saying') decides imperative |
+| 1:24 | causative תּוֹצֵא ('let the earth bring forth') = clean LET | **C** — plene vav letter-visible (contrast 1:11's defective תדשא) |
+| 1:25 | וַיַּעַשׂ — made, not created | **C** — letter-visible |
+| 1:26 | נַעֲשֶׂה ('let US make') — first-person volitive CMD-US? | **X** — consonants נעשה could be 'it was made' (passive perfect); the speech frame ויאמר decides; Onkelos: נַעֲבִיד ('let us make') — first person, confirms |
+| 1:26 | וְיִרְדּוּ ('and let them rule') — jussive design clause | **X** — plural jussive = imperfect in form; continuation of the volitive decides |
+| 1:27 | בָּרָא tripled: one narrative past + two perfects | **C** — ויברא vs ברא — letter-visible |
+| 1:29 | נָתַתִּי ('I HAVE GIVEN') — performative first-person perfect | **C** — suffix form, letter-visible |
+| 1:29 | יִהְיֶה imperfect ('it SHALL BE for food') = LET? | **C** — the final heh — letter-visible vs jussive יהי |
+| 1:30 | the last וַיְהִי כֵן answers a same-root demand in narrative past | **X** — the ויהי vav-ambiguity again; formula position decides; (Onkelos: וַהֲוָה כֵן) |
+| 2:1 | וַיְכֻלּוּ ('and they WERE FINISHED') — passive, the week's first agentless main-line event | **K** — consonants ויכלו allow active-intransitive 'and they ended' vs passive 'were completed' — same world state either way, but the VOICE is settled only by a witness: Onkelos וְאִשְׁתַּכְלָלוּ ('and they were completed'), passive. The one fact in 38 where the deciding witness is external |
+| 2:2 | וַיְכַל ('and God FINISHED') — active, dated inside day seven | **X** — subject אלהים + object מלאכתו decide active; Onkelos: וְשֵׁיצֵי ('and He finished'), active, confirms |
+| 2:2 | וַיִּשְׁבֹּת ('and He CEASED') — narrative past | **C** — letter-visible |
