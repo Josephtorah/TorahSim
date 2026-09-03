@@ -522,7 +522,18 @@ EFFECTS FROM BIRTH: the Passover engine (Exod 12-13, 24/24), the
 festival calendar (Exod 23:10-19, 14/14 — the first LAND-entity
 timer), the Decalogue's law layer (Exod 20, 12/12). Registry: 39
 effects, every Hebrew verb machine-verified. Compiled chips earned
-(pending the site lap): exo_12, exo_13, exo_20, exo_23. The target this serves (THE_WORLD.md idea log,
+(pending the site lap): exo_12, exo_13, exo_20, exo_23. THE FOURTH
+SPAN (2026-09-03, the Tzav round — the rhythm's first full
+five-motion cycle): cold_run_tzav.py (Lev 6-8, the offering-torah
+layer) 33/33 with NINE more effects discovered (registry 48 — the
+purge verbs, the perpetual-fire duty, the priestly due, the
+rejection, contact-sanctification, the investiture commit, the
+seven-day confinement), moves M-13/M-14 registered, and the
+engine's SCENE 6 — the installation tape replaying Lev 8's own
+narrative (the atomic intake gate, the confinement timer, the
+commit at the sprinkling, the day-7 release) — 6/6 checkpoints.
+Chips added pending the site lap: lev_06, the three lev_07 units,
+lev_08. The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law
 computed.
@@ -811,6 +822,36 @@ as one-of-ten-in-three-se'im inside the verse; shekels rendered
 sanctuary sela'im), and Exodus 21's goring ox standing in Leviticus
 1's input filter — the era's first cross-book input-validation
 link. Full record: World/step9/REPORT_VAYIKRA.md.
+
+THE TZAV ROUND RAN (2026-09-03, owner: "Read the resume and go" —
+the first parashah under the FULL NEW RHYTHM, the rhythm's eighth
+cycle): five units derived FULL RULE (corpus 125 → 130) from the
+book's second SIFRA-SPINE sweep — Sifra Tzav whole (290 rows
+including the installation's own Mekhilta DeMiluim I) + Onkelos Lev
+6:1-8:36 (97 verses), 387 declared sources across five ledgers, 48
+claims seated (LV06-01..17, LV07A-01..06, LV07B-01..10,
+LV07C-01..07, LV08-01..08). The exam: all 76 bare Mishnah rows
+citing Lev 6-8 (64 fresh, 12 credits, 1 routed to Lev 12), 16
+modules, 73/73 first run; 450/450 across all eleven rounds; NO
+FINDINGS — the Vayakhel-Pekudei pattern at nine times the case
+count. THE HEADLINE: the answer sheet met the reading seat for seat
+— the wood-pile counts with the same three names, the chavitin
+halving invariant with the same heirs/community pair, the one-law
+laundering, the no-rejection permitters list, the folding spec, the
+offspring-without-loaves, the seven-day separation from the
+installation week — 71 of 73 anticipated; the two remainders (the
+twelve loaves, the schedule hours) are transmitted QUANTITIES, the
+data channel self-labeled. Also out of the sweep: R. Elazar b.
+Azaryah's halachah-to-Moses-on-Sinai constants row at Lev 7:12 (the
+Eruvin 4a doctrine in the Sifra's own ink), the FORTY-loaf compute
+off the extra yod, the piggul/tumah machine comparison, Onkelos
+performing the waving-lifting identity and decoding the
+hand-filling idiom, the sons-of-Eli indictment and Isaiah 61:8
+matched in-row (the effects-law destination witnessed twice inside
+the declared reading), and the installation as an ATOMIC
+TRANSACTION with its commit point at the blood sprinkling. Catalog
+R-337..R-352; 157 compiled rules; vocabulary 158 dims. Full record:
+World/step9/REPORT_TZAV.md.
 
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed

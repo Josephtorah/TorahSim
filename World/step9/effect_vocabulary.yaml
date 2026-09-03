@@ -1,338 +1,377 @@
-# THE EFFECT VOCABULARY — the registry of state changes a verdict may write
-# Opened 2026-09-03 by the owner's order ("start with the harvest") under THE
-# EFFECTS LAW (owner-ruled same day: every compiled function coded every time
-# for effects; verdicts write the LEDGER, never the EVENT STREAM).
-#
-# DISCOVERED, NEVER DESIGNED — the case-vocabulary discipline: an effect may
-# be used by a compiled function only if it is registered here, and it may be
-# registered only with the source that introduced it. Three witness layers per
-# entry: (1) INK — the verb in the verse, Hebrew with English inline, verse
-# addresses machine-verified against elijah_docket/tanakh.sqlite (probes
-# self-tested, zero-report law); (2) CORPUS — frozen units whose prose already
-# speaks the effect; (3) EXAM — where the graded specs/cold functions already
-# emit the word. Model-layer typing (ledger_op) is freely rewritable; the
-# witnessed layers are evidence.
-#
-# ledger_op values (model layer): debit (money owed), status (a persistent
-# flag flips), timer (a clock obligation starts/ends), transfer (a thing
-# changes hands), body (a bodily penalty enters the court docket),
-# heaven (an entry on Heaven's docket clears or opens), block (a
-# disqualification stands).
-#
-# Harvest note, honest: purity effects ("impure until evening") are ABSENT
-# from the corpus today — Leviticus 11-15 not yet derived; the probe was
-# self-tested and the absence is real. The registry grows when those chapters
-# arrive.
-
 effects:
   pays:
     en: pays — a money debt opens against the liable party
-    he: "יְשַׁלֵּם (he shall pay), the doubling שַׁלֵּם יְשַׁלֵּם (pay he shall pay)"
+    he: יְשַׁלֵּם (he shall pay), the doubling שַׁלֵּם יְשַׁלֵּם (pay he shall pay)
     ledger_op: debit
-    ink: "Exod 21:34, 21:36, 21:37, 22:2, 22:3, 22:4, 22:5, 22:6, 22:8; Lev 5:16"
-    corpus: "exo_21_the_ordinances (16 attestations in prose), exo_22_property_social"
-    exam: "cold_run_guardians.py, cold_run_mishpatim.py ('pays' 7), cases_mishpatim.yaml"
-
+    ink: Exod 21:34, 21:36, 21:37, 22:2, 22:3, 22:4, 22:5, 22:6, 22:8; Lev 5:16
+    corpus: exo_21_the_ordinances (16 attestations in prose), exo_22_property_social
+    exam: cold_run_guardians.py, cold_run_mishpatim.py ('pays' 7), cases_mishpatim.yaml
   restores:
     en: restores — the principal itself returns to its owner
-    he: "יָשִׁיב (he shall restore), הָשֵׁב תְּשִׁיבֶנּוּ (return you shall return it); וְהֵשִׁיב (and he shall return)"
+    he: יָשִׁיב (he shall restore), הָשֵׁב תְּשִׁיבֶנּוּ (return you shall return it); וְהֵשִׁיב (and
+      he shall return)
     ledger_op: transfer
-    ink: "Exod 21:34, 22:25, 23:4; Lev 5:23"
-    corpus: "exo_21_the_ordinances, exo_23_justice_calendar, lev_05_asham_graded"
-    exam: "cases_mishpatim.yaml restitution rows"
-
+    ink: Exod 21:34, 22:25, 23:4; Lev 5:23
+    corpus: exo_21_the_ordinances, exo_23_justice_calendar, lev_05_asham_graded
+    exam: cases_mishpatim.yaml restitution rows
   adds_fifth:
     en: adds the fifth — the principal plus its recorded surcharge
-    he: "וַחֲמִשִׁתָיו יֹסֵף עָלָיו (and its fifths he shall add upon it)"
+    he: וַחֲמִשִׁתָיו יֹסֵף עָלָיו (and its fifths he shall add upon it)
     ledger_op: debit
-    ink: "Lev 5:16 (the sacrilege), Lev 5:24 (the deposit)"
-    corpus: "lev_05_asham_graded, lev_05_shevuot_deposit (the recursive fifth)"
-    exam: "cold_run_vayikra5.py ('fifth' 30)"
-
+    ink: Lev 5:16 (the sacrilege), Lev 5:24 (the deposit)
+    corpus: lev_05_asham_graded, lev_05_shevuot_deposit (the recursive fifth)
+    exam: cold_run_vayikra5.py ('fifth' 30)
   pays_double:
     en: pays double — the theft multiple, two for one
-    he: "שְׁנַיִם יְשַׁלֵּם (two he shall pay)"
+    he: שְׁנַיִם יְשַׁלֵּם (two he shall pay)
     ledger_op: debit
-    ink: "Exod 22:3, 22:6, 22:8"
-    corpus: "exo_22_property_social (the multiples cluster)"
-    exam: "cold_run_mishpatim.py theft multiples 4/4"
-
+    ink: Exod 22:3, 22:6, 22:8
+    corpus: exo_22_property_social (the multiples cluster)
+    exam: cold_run_mishpatim.py theft multiples 4/4
   pays_four_five:
     en: pays fourfold or fivefold — the slaughtered-or-sold multiple
-    he: "חֲמִשָּׁה בָקָר... וְאַרְבַּע צֹאן (five oxen... and four sheep)"
+    he: חֲמִשָּׁה בָקָר... וְאַרְבַּע צֹאן (five oxen... and four sheep)
     ledger_op: debit
-    ink: "Exod 21:37"
-    corpus: "exo_21_the_ordinances"
-    exam: "cold_run_mishpatim.py"
-
+    ink: Exod 21:37
+    corpus: exo_21_the_ordinances
+    exam: cold_run_mishpatim.py
   fined_by_assessment:
     en: fined as the court assesses — the amount is a computed parameter
-    he: "עָנוֹשׁ יֵעָנֵשׁ... וְנָתַן בִּפְלִלִים (fined he shall be fined... and give by the judges)"
+    he: עָנוֹשׁ יֵעָנֵשׁ... וְנָתַן בִּפְלִלִים (fined he shall be fined... and give by the judges)
     ledger_op: debit
-    ink: "Exod 21:22"
-    corpus: "exo_21_the_ordinances (the striving-men clause)"
-    exam: "cases_mishpatim.yaml"
-
+    ink: Exod 21:22
+    corpus: exo_21_the_ordinances (the striving-men clause)
+    exam: cases_mishpatim.yaml
   gives_fixed_sum:
     en: gives a fixed sum — the ink states the number (thirty shekels; the lost-time payment)
-    he: "כֶּסֶף שְׁלֹשִׁים שְׁקָלִים יִתֵּן (thirty shekels of silver he shall give); שִׁבְתּוֹ יִתֵּן (his idleness he shall give)"
+    he: כֶּסֶף שְׁלֹשִׁים שְׁקָלִים יִתֵּן (thirty shekels of silver he shall give); שִׁבְתּוֹ יִתֵּן
+      (his idleness he shall give)
     ledger_op: debit
-    ink: "Exod 21:32 (the slave's thirty), 21:19 (sitting-idle), 21:4 context, 22:6, 22:9"
-    corpus: "exo_21_the_ordinances (the five injury payments)"
-    exam: "cold_run_mishpatim.py injury payments"
-
+    ink: Exod 21:32 (the slave's thirty), 21:19 (sitting-idle), 21:4 context, 22:6, 22:9
+    corpus: exo_21_the_ordinances (the five injury payments)
+    exam: cold_run_mishpatim.py injury payments
   ransom_imposed:
     en: ransom — a life-debt redeemed in money when the court imposes it
-    he: "אִם כֹּפֶר יוּשַׁת עָלָיו (if a ransom is placed upon him)"
+    he: אִם כֹּפֶר יוּשַׁת עָלָיו (if a ransom is placed upon him)
     ledger_op: debit
-    ink: "Exod 21:30"
-    corpus: "exo_21_the_ordinances (14 attestations)"
-    exam: "cold_run_mishpatim.py ('ransom' 5)"
-
+    ink: Exod 21:30
+    corpus: exo_21_the_ordinances (14 attestations)
+    exam: cold_run_mishpatim.py ('ransom' 5)
   goes_free:
     en: goes free — the slave's status ends; a person-status flip
-    he: "יֵצֵא לַחָפְשִׁי (he shall go out to freedom); חִנָּם (for nothing — no payment rides the exit)"
+    he: יֵצֵא לַחָפְשִׁי (he shall go out to freedom); חִנָּם (for nothing — no payment rides the exit)
     ledger_op: status
-    ink: "Exod 21:2, 21:26, 21:27 (לחפשי); 21:2, 21:11 (חנם)"
-    corpus: "exo_21_the_ordinances (13 attestations — the release list)"
-    exam: "cold_run_mishpatim.py slave-release list ('free' 14)"
-
+    ink: Exod 21:2, 21:26, 21:27 (לחפשי); 21:2, 21:11 (חנם)
+    corpus: exo_21_the_ordinances (13 attestations — the release list)
+    exam: cold_run_mishpatim.py slave-release list ('free' 14)
   released:
     en: released by the master's hand — the sending itself
-    he: "לַחָפְשִׁי יְשַׁלְּחֶנּוּ (to freedom he shall send him)"
+    he: לַחָפְשִׁי יְשַׁלְּחֶנּוּ (to freedom he shall send him)
     ledger_op: status
-    ink: "Exod 21:26, 21:27 (the tooth and the eye)"
-    corpus: "exo_21_the_ordinances"
-    exam: "cold_run_mishpatim.py"
-
+    ink: Exod 21:26, 21:27 (the tooth and the eye)
+    corpus: exo_21_the_ordinances
+    exam: cold_run_mishpatim.py
   sold_for_theft:
     en: sold — the insolvent thief enters servitude; status flip with a term timer
-    he: "וְנִמְכַּר בִּגְנֵבָתוֹ (and he is sold for his theft)"
+    he: וְנִמְכַּר בִּגְנֵבָתוֹ (and he is sold for his theft)
     ledger_op: status
-    ink: "Exod 22:2"
-    corpus: "exo_22_property_social; the woman excluded (Sotah 23b:12, triage LAW row)"
-    exam: "cases_mishpatim.yaml"
-
+    ink: Exod 22:2
+    corpus: exo_22_property_social; the woman excluded (Sotah 23b:12, triage LAW row)
+    exam: cases_mishpatim.yaml
   term_clock:
     en: the term runs — six years of service, freedom fires in the seventh; the simulator's first timer
-    he: "שֵׁשׁ שָׁנִים יַעֲבֹד וּבַשְּׁבִעִת יֵצֵא (six years he shall serve and in the seventh he goes out)"
+    he: שֵׁשׁ שָׁנִים יַעֲבֹד וּבַשְּׁבִעִת יֵצֵא (six years he shall serve and in the seventh he goes
+      out)
     ledger_op: timer
-    ink: "Exod 21:2"
-    corpus: "exo_21_the_ordinances (the slave clock; whole-years law Niddah 47b-48a, triage LAW rows)"
-    exam: "cold_run_mishpatim.py release list"
-
+    ink: Exod 21:2
+    corpus: exo_21_the_ordinances (the slave clock; whole-years law Niddah 47b-48a, triage LAW rows)
+    exam: cold_run_mishpatim.py release list
   oath_imposed:
     en: the oath of the LORD — an oath obligation opens and, sworn, closes the claim without payment
-    he: "שְׁבֻעַת יְהוָה תִּהְיֶה בֵּין שְׁנֵיהֶם... וְלֹא יְשַׁלֵּם (the oath of the LORD shall be between the two of them... and he shall not pay)"
+    he: שְׁבֻעַת יְהוָה תִּהְיֶה בֵּין שְׁנֵיהֶם... וְלֹא יְשַׁלֵּם (the oath of the LORD shall be between
+      the two of them... and he shall not pay)
     ledger_op: status
-    ink: "Exod 22:10"
-    corpus: "exo_22_property_social (the guardians)"
-    exam: "cold_run_guardians.py ('oath' 42) — the 12/12 matrix's swear column"
-
+    ink: Exod 22:10
+    corpus: exo_22_property_social (the guardians)
+    exam: cold_run_guardians.py ('oath' 42) — the 12/12 matrix's swear column
   exempt:
     en: exempt — no entry opens; the ledger stays clean
-    he: "נָקִי (clear) — the owner of the goring tam ox"
+    he: נָקִי (clear) — the owner of the goring tam ox
     ledger_op: status
-    ink: "Exod 21:28"
-    corpus: "77 prose attestations across the corpus; exo_21 the naki cluster (Pesachim 22b, triage CREDIT rows)"
-    exam: "cases specs ('{verdict: exempt}' the most common expectation); cold functions ('exempt' 28)"
-
+    ink: Exod 21:28
+    corpus: 77 prose attestations across the corpus; exo_21 the naki cluster (Pesachim 22b, triage CREDIT
+      rows)
+    exam: 'cases specs (''{verdict: exempt}'' the most common expectation); cold functions (''exempt''
+      28)'
   put_to_death:
     en: put to death — the court docket opens a capital entry (mode per the compiled law)
-    he: "מוֹת יוּמָת (die he shall die)"
+    he: מוֹת יוּמָת (die he shall die)
     ledger_op: body
-    ink: "Exod 21:12, 21:15, 21:16, 21:17, 22:18 (יומת also 21:29 the owner clause)"
-    corpus: "exo_21_the_ordinances (18 death-penalty attestations)"
-    exam: "cases_mishpatim.yaml capital rows"
-
+    ink: Exod 21:12, 21:15, 21:16, 21:17, 22:18 (יומת also 21:29 the owner clause)
+    corpus: exo_21_the_ordinances (18 death-penalty attestations)
+    exam: cases_mishpatim.yaml capital rows
   stoned:
     en: stoned — the death mode named in ink; for the ox, the beast's own docket entry
-    he: "סָקוֹל יִסָּקֵל (stoned he shall be stoned)"
+    he: סָקוֹל יִסָּקֵל (stoned he shall be stoned)
     ledger_op: body
-    ink: "Exod 21:28, 21:29, 21:32"
-    corpus: "exo_21_the_ordinances (the goring-ox state machine, 20 attestations)"
-    exam: "cold_run_mishpatim.py ox machine ('stoned')"
-
+    ink: Exod 21:28, 21:29, 21:32
+    corpus: exo_21_the_ordinances (the goring-ox state machine, 20 attestations)
+    exam: cold_run_mishpatim.py ox machine ('stoned')
   avenged:
     en: avenged — the slave-killer's penalty, the tradition reading the sword in the verb
-    he: "נָקֹם יִנָּקֵם (avenged he shall be avenged)"
+    he: נָקֹם יִנָּקֵם (avenged he shall be avenged)
     ledger_op: body
-    ink: "Exod 21:20"
-    corpus: "exo_21_the_ordinances; the sword derivation Sanhedrin 52b:13 (triage LAW row)"
-    exam: "—"
-
+    ink: Exod 21:20
+    corpus: exo_21_the_ordinances; the sword derivation Sanhedrin 52b:13 (triage LAW row)
+    exam: —
   destroyed:
     en: utterly destroyed — the idolatrous sacrificer's ban
-    he: "יָחֳרָם (he shall be destroyed)"
+    he: יָחֳרָם (he shall be destroyed)
     ledger_op: body
-    ink: "Exod 22:19"
-    corpus: "exo_22_property_social"
-    exam: "cases_noahide.yaml idolatry rows"
-
+    ink: Exod 22:19
+    corpus: exo_22_property_social
+    exam: cases_noahide.yaml idolatry rows
   lashes:
     en: liable to lashes — the flogging entry on the court docket
-    he: "אַרְבָּעִים יַכֶּנּוּ (forty he shall strike him — Deut 25:3, the count's own ink)"
+    he: אַרְבָּעִים יַכֶּנּוּ (forty he shall strike him — Deut 25:3, the count's own ink)
     ledger_op: body
-    ink: "Deut 25:2-3 (the corpus's law seat: deu_25_courts_yibbum)"
-    corpus: "deu_25_courts_yibbum; 6 prose attestations"
-    exam: "cases specs ('{verdict: lashes_forty}' 3 rows)"
-
+    ink: 'Deut 25:2-3 (the corpus''s law seat: deu_25_courts_yibbum)'
+    corpus: deu_25_courts_yibbum; 6 prose attestations
+    exam: 'cases specs (''{verdict: lashes_forty}'' 3 rows)'
   flees_to_refuge:
     en: flees to the appointed place — a location-status flip protecting the unintentional killer
-    he: "וְשַׂמְתִּי לְךָ מָקוֹם אֲשֶׁר יָנוּס שָׁמָּה (I will appoint you a place where he shall flee)"
+    he: וְשַׂמְתִּי לְךָ מָקוֹם אֲשֶׁר יָנוּס שָׁמָּה (I will appoint you a place where he shall flee)
     ledger_op: status
-    ink: "Exod 21:13"
-    corpus: "exo_21_the_ordinances; the wilderness-refuge row Zevachim 117a:5 (triage LAW)"
-    exam: "—"
-
+    ink: Exod 21:13
+    corpus: exo_21_the_ordinances; the wilderness-refuge row Zevachim 117a:5 (triage LAW)
+    exam: —
   substitution:
     en: in-place-of — the talion table's operator, carried as money per the compiled law
-    he: "תַּחַת (in place of): עַיִן תַּחַת עַיִן (eye in place of eye)"
+    he: 'תַּחַת (in place of): עַיִן תַּחַת עַיִן (eye in place of eye)'
     ledger_op: debit
-    ink: "Exod 21:23, 21:24, 21:25, 21:26, 21:27, 21:36, 21:37 (also 21:20, 23:5 in other senses)"
-    corpus: "exo_21_the_ordinances — talion-as-money runs on Lev 24:21-22 (the measured compile dependency)"
-    exam: "cold_run_mishpatim.py talion cells"
-
+    ink: Exod 21:23, 21:24, 21:25, 21:26, 21:27, 21:36, 21:37 (also 21:20, 23:5 in other senses)
+    corpus: exo_21_the_ordinances — talion-as-money runs on Lev 24:21-22 (the measured compile dependency)
+    exam: cold_run_mishpatim.py talion cells
   redeem_or_break:
     en: redeem with a lamb, or break the neck — the donkey's fork, both arms effects
-    he: "תִּפְדֶה בְשֶׂה וְאִם לֹא תִפְדֶּה וַעֲרַפְתּוֹ (redeem with a lamb; and if you do not redeem, break its neck)"
+    he: תִּפְדֶה בְשֶׂה וְאִם לֹא תִפְדֶּה וַעֲרַפְתּוֹ (redeem with a lamb; and if you do not redeem,
+      break its neck)
     ledger_op: transfer
-    ink: "Exod 13:13, 34:20"
-    corpus: "exo_13_consecration_and_pillars; the seh parameters Yoma 49b:7 (triage LAW)"
-    exam: "—"
-
+    ink: Exod 13:13, 34:20
+    corpus: exo_13_consecration_and_pillars; the seh parameters Yoma 49b:7 (triage LAW)
+    exam: —
   atoned_forgiven:
     en: the priest atones and the offerer is forgiven — Heaven's docket entry closes
-    he: "וְכִפֶּר עָלָיו הַכֹּהֵן... וְנִסְלַח לוֹ (and the priest shall make atonement for him... and he shall be forgiven)"
+    he: וְכִפֶּר עָלָיו הַכֹּהֵן... וְנִסְלַח לוֹ (and the priest shall make atonement for him... and
+      he shall be forgiven)
     ledger_op: heaven
-    ink: "Lev 4:20, 4:26, 4:31, 4:35, 5:10, 5:13, 5:16, 5:18, 5:26 (וכפר also 5:6)"
-    corpus: "lev_04_inadvertence_case_tree, lev_05_asham_graded, lev_05_shevuot_deposit"
-    exam: "cold_run_vayikra5.py 27/27 (the graded-offering routes end here)"
-
+    ink: Lev 4:20, 4:26, 4:31, 4:35, 5:10, 5:13, 5:16, 5:18, 5:26 (וכפר also 5:6)
+    corpus: lev_04_inadvertence_case_tree, lev_05_asham_graded, lev_05_shevuot_deposit
+    exam: cold_run_vayikra5.py 27/27 (the graded-offering routes end here)
   accepted:
     en: accepted for him — the offering's acceptance state
-    he: "וְנִרְצָה לוֹ לְכַפֵּר עָלָיו (and it shall be accepted for him to atone for him)"
+    he: וְנִרְצָה לוֹ לְכַפֵּר עָלָיו (and it shall be accepted for him to atone for him)
     ledger_op: heaven
-    ink: "Lev 1:4"
-    corpus: "lev_01_olah_cattle_procedure (the leaning and acceptance)"
-    exam: "cases_vayikra.yaml acceptance rows"
-
+    ink: Lev 1:4
+    corpus: lev_01_olah_cattle_procedure (the leaning and acceptance)
+    exam: cases_vayikra.yaml acceptance rows
   disqualified:
     en: disqualified — the offering or rite is void; a block entry, no state advances
-    he: "—(the exam shelf's word; the ink states each ground in place)"
+    he: —(the exam shelf's word; the ink states each ground in place)
     ledger_op: block
-    ink: "grounds in place per unit (e.g. Exod 12:6 before-midday, Pesachim 61a)"
-    corpus: "lev_01/lev_02 validity claims; 36 valid/invalid prose attestations"
-    exam: "cases specs ('{verdict: invalid}' / 'disqualified' rows)"
-
+    ink: grounds in place per unit (e.g. Exod 12:6 before-midday, Pesachim 61a)
+    corpus: lev_01/lev_02 validity claims; 36 valid/invalid prose attestations
+    exam: 'cases specs (''{verdict: invalid}'' / ''disqualified'' rows)'
   forewarned:
     en: the ox turns forewarned — the recidivism status flip that re-routes every later verdict
-    he: "וְאִם שׁוֹר נַגָּח הוּא מִתְּמֹל שִׁלְשֹׁם וְהוּעַד בִּבְעָלָיו (and if it was a goring ox from yesterday and before, and warning was given to its owner)"
+    he: וְאִם שׁוֹר נַגָּח הוּא מִתְּמֹל שִׁלְשֹׁם וְהוּעַד בִּבְעָלָיו (and if it was a goring ox from
+      yesterday and before, and warning was given to its owner)
     ledger_op: status
-    ink: "Exod 21:29, 21:36"
-    corpus: "exo_21_the_ordinances (the goring-ox state machine — the corpus's first explicit status flip)"
-    exam: "cold_run_mishpatim.py ox state machine"
-
+    ink: Exod 21:29, 21:36
+    corpus: exo_21_the_ordinances (the goring-ox state machine — the corpus's first explicit status flip)
+    exam: cold_run_mishpatim.py ox state machine
   jubilee_release:
     en: the jubilee frees — a world-clock timer that overrides even the pierced slave's "forever"
-    he: "וּקְרָאתֶם דְּרוֹר בָּאָרֶץ (and you shall proclaim liberty in the land); יוֹבֵל הִוא (it is a jubilee); וְשַׁבְתֶּם אִישׁ אֶל אֲחֻזָּתוֹ (and you shall return, each man to his holding)"
+    he: וּקְרָאתֶם דְּרוֹר בָּאָרֶץ (and you shall proclaim liberty in the land); יוֹבֵל הִוא (it is a
+      jubilee); וְשַׁבְתֶּם אִישׁ אֶל אֲחֻזָּתוֹ (and you shall return, each man to his holding)
     ledger_op: timer
-    ink: "Lev 25:10 (machine-verified; the probe already fired inside cold_run_mishpatim.py's slave-release function)"
-    corpus: "the slave-release import cell [Kiddushin 15a:19 — written even for the pierced 'forever'] — the cross-module interrupt of the code-structures catalog"
-    exam: "cold_run_mishpatim.py F1 FREE-AT-JUBILEE cell"
-
+    ink: Lev 25:10 (machine-verified; the probe already fired inside cold_run_mishpatim.py's slave-release
+      function)
+    corpus: the slave-release import cell [Kiddushin 15a:19 — written even for the pierced 'forever']
+      — the cross-module interrupt of the code-structures catalog
+    exam: cold_run_mishpatim.py F1 FREE-AT-JUBILEE cell
   karet_cut_off:
     en: cut off — the gravest entry on Heaven's docket, written by Heaven's own hand, no court acts
-    he: "וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא מִיִּשְׂרָאֵל (and that soul shall be cut off from Israel)"
+    he: וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא מִיִּשְׂרָאֵל (and that soul shall be cut off from Israel)
     ledger_op: heaven
-    ink: "Exod 12:15, 12:19 (machine-verified; the leaven-eater's clause both times)"
-    corpus: "exo_12_passover_and_exodus; the karet class at Mishnah Keritot 1:1 (leaven on Passover in the list)"
-    exam: "the Vayikra ladder's karet triggers (cases_vayikra.yaml)"
-
+    ink: Exod 12:15, 12:19 (machine-verified; the leaven-eater's clause both times)
+    corpus: exo_12_passover_and_exodus; the karet class at Mishnah Keritot 1:1 (leaven on Passover in
+      the list)
+    exam: the Vayikra ladder's karet triggers (cases_vayikra.yaml)
   purge_deadline:
     en: the removal deadline — leaven must be gone by the appointed hour; a timer against the person
-    he: "אַךְ בַּיּוֹם הָרִאשׁוֹן תַּשְׁבִּיתוּ שְּׂאֹר מִבָּתֵּיכֶם (yet on the FIRST day you shall remove leaven from your houses)"
+    he: אַךְ בַּיּוֹם הָרִאשׁוֹן תַּשְׁבִּיתוּ שְּׂאֹר מִבָּתֵּיכֶם (yet on the FIRST day you shall remove
+      leaven from your houses)
     ledger_op: timer
-    ink: "Exod 12:15 (תשביתו machine-verified)"
-    corpus: "exo_12_passover_and_exodus; the harishon-means-the-fourteenth read (Pesachim 5a:6, triage LAW row) + the midday line (Pesachim 5a:16)"
-    exam: "the leaven-machine block of the Exodus triage map (block 1)"
-
+    ink: Exod 12:15 (תשביתו machine-verified)
+    corpus: exo_12_passover_and_exodus; the harishon-means-the-fourteenth read (Pesachim 5a:6, triage
+      LAW row) + the midday line (Pesachim 5a:16)
+    exam: the leaven-machine block of the Exodus triage map (block 1)
   burn_remainder:
     en: burn what remains — the leftover leaves the world by fire; a duty on the object's holder
-    he: "וְהַנֹּתָר מִמֶּנּוּ עַד בֹּקֶר בָּאֵשׁ תִּשְׂרֹפוּ (and that which remains of it until morning you shall burn with fire)"
+    he: וְהַנֹּתָר מִמֶּנּוּ עַד בֹּקֶר בָּאֵשׁ תִּשְׂרֹפוּ (and that which remains of it until morning
+      you shall burn with fire)
     ledger_op: transfer
-    ink: "Exod 12:10 (תשרפו machine-verified)"
-    corpus: "exo_12_passover_and_exodus; the positive-after-negative cluster (Pesachim 83b-84a, triage rows)"
-    exam: "cases from the backfill's leaven/leftover rows"
-
+    ink: Exod 12:10 (תשרפו machine-verified)
+    corpus: exo_12_passover_and_exodus; the positive-after-negative cluster (Pesachim 83b-84a, triage
+      rows)
+    exam: cases from the backfill's leaven/leftover rows
   barred_from_it:
     en: barred — a person class may not eat of it; a block on the eater, not the offering
-    he: "כָּל בֶּן נֵכָר לֹא יֹאכַל בּוֹ (no stranger shall eat of it); וְכָל עָרֵל לֹא יֹאכַל בּוֹ (and no uncircumcised one shall eat of it)"
+    he: כָּל בֶּן נֵכָר לֹא יֹאכַל בּוֹ (no stranger shall eat of it); וְכָל עָרֵל לֹא יֹאכַל בּוֹ (and
+      no uncircumcised one shall eat of it)
     ledger_op: block
-    ink: "Exod 12:43, 12:45, 12:48 (יאכל machine-verified at 10 sites in the span)"
-    corpus: "exo_12_passover_and_exodus (the access filter)"
-    exam: "Mishnah Pesachim 5:3's invalid-for-the-uncircumcised row"
-
+    ink: Exod 12:43, 12:45, 12:48 (יאכל machine-verified at 10 sites in the span)
+    corpus: exo_12_passover_and_exodus (the access filter)
+    exam: Mishnah Pesachim 5:3's invalid-for-the-uncircumcised row
   registered_to_lamb:
     en: registered — the eater joins a lamb's count; the group status the eating rides on
-    he: "אִישׁ לְפִי אָכְלוֹ תָּכֹסּוּ עַל הַשֶּׂה (each man according to his eating shall you make your count for the lamb)"
+    he: אִישׁ לְפִי אָכְלוֹ תָּכֹסּוּ עַל הַשֶּׂה (each man according to his eating shall you make your
+      count for the lamb)
     ledger_op: status
-    ink: "Exod 12:4 (תכסו machine-verified)"
-    corpus: "exo_12_passover_and_exodus; the registration/withdrawal cluster (Pesachim 89a, triage rows)"
-    exam: "Mishnah Pesachim 8:3 (withdraw until slaughtered); Zevachim 5:8 (only its registrants)"
-
+    ink: Exod 12:4 (תכסו machine-verified)
+    corpus: exo_12_passover_and_exodus; the registration/withdrawal cluster (Pesachim 89a, triage rows)
+    exam: Mishnah Pesachim 8:3 (withdraw until slaughtered); Zevachim 5:8 (only its registrants)
   eating_window:
     en: the eating window — open at nightfall, shut by the law's own clock; a timer on the meal
-    he: "וְאָכְלוּ אֶת הַבָּשָׂר בַּלַּיְלָה הַזֶּה (and they shall eat the flesh on THIS night)"
+    he: וְאָכְלוּ אֶת הַבָּשָׂר בַּלַּיְלָה הַזֶּה (and they shall eat the flesh on THIS night)
     ledger_op: timer
-    ink: "Exod 12:8 (בלילה machine-verified; the dated windows at 12:2, 12:3, 12:6, 12:18)"
-    corpus: "exo_12_passover_and_exodus; the midnight dispute (Pesachim 120b:5-7, triage rows)"
-    exam: "Mishnah Zevachim 5:8 (only at night, only until midnight)"
-
+    ink: Exod 12:8 (בלילה machine-verified; the dated windows at 12:2, 12:3, 12:6, 12:18)
+    corpus: exo_12_passover_and_exodus; the midnight dispute (Pesachim 120b:5-7, triage rows)
+    exam: Mishnah Zevachim 5:8 (only at night, only until midnight)
   consecrated_firstborn:
     en: consecrated — the firstborn belongs to the Lord from the womb; a status written at birth
-    he: "קַדֶּשׁ לִי כָל בְּכוֹר פֶּטֶר כָּל רֶחֶם (sanctify to Me every firstborn, opener of every womb)"
+    he: קַדֶּשׁ לִי כָל בְּכוֹר פֶּטֶר כָּל רֶחֶם (sanctify to Me every firstborn, opener of every womb)
     ledger_op: status
-    ink: "Exod 13:2 (קדש machine-verified); the keeping-words לְמִשְׁמֶרֶת 12:6, וּשְׁמַרְתֶּם 12:17/24/25 verified beside it"
-    corpus: "exo_13_consecration_and_pillars; the caesarean carve-out (Niddah 40a:14, triage LAW row)"
-    exam: "the firstborn rows of the backfill exam"
-
+    ink: Exod 13:2 (קדש machine-verified); the keeping-words לְמִשְׁמֶרֶת 12:6, וּשְׁמַרְתֶּם 12:17/24/25
+      verified beside it
+    corpus: exo_13_consecration_and_pillars; the caesarean carve-out (Niddah 40a:14, triage LAW row)
+    exam: the firstborn rows of the backfill exam
   land_release:
-    en: the land released — the seventh-year timer on a LAND entity; the produce goes ownerless to the poor
-    he: "וְהַשְּׁבִיעִת תִּשְׁמְטֶנָּה וּנְטַשְׁתָּהּ (but the seventh you shall release it and let it lie)"
+    en: the land released — the seventh-year timer on a LAND entity; the produce goes ownerless to the
+      poor
+    he: וְהַשְּׁבִיעִת תִּשְׁמְטֶנָּה וּנְטַשְׁתָּהּ (but the seventh you shall release it and let it
+      lie)
     ledger_op: timer
-    ink: "Exod 23:11 (תשמטנה machine-verified)"
-    corpus: "exo_23_justice_calendar; the rest-from-hoeing verbs split (Sukkah 44b:7, triage LAW row)"
-    exam: "the sabbatical rows of the calendar block (Exodus triage map, block 17)"
-
+    ink: Exod 23:11 (תשמטנה machine-verified)
+    corpus: exo_23_justice_calendar; the rest-from-hoeing verbs split (Sukkah 44b:7, triage LAW row)
+    exam: the sabbatical rows of the calendar block (Exodus triage map, block 17)
   rest_required:
     en: rest required — the recurring seventh-day stop on the household, the beasts, the stranger
-    he: "וּבַיּוֹם הַשְּׁבִיעִי תִּשְׁבֹּת (and on the seventh day you shall rest)... וְיִנָּפֵשׁ (and be refreshed)"
+    he: וּבַיּוֹם הַשְּׁבִיעִי תִּשְׁבֹּת (and on the seventh day you shall rest)... וְיִנָּפֵשׁ (and
+      be refreshed)
     ledger_op: timer
-    ink: "Exod 23:12 (תשבת and ינפש machine-verified)"
-    corpus: "the Shabbat machinery cluster (division of labors etc.); the resting-slave and stranger rows (Yevamot 48b, triage LAW rows)"
-    exam: "the Shabbat rows across the backfill exam"
-
+    ink: Exod 23:12 (תשבת and ינפש machine-verified)
+    corpus: the Shabbat machinery cluster (division of labors etc.); the resting-slave and stranger rows
+      (Yevamot 48b, triage LAW rows)
+    exam: the Shabbat rows across the backfill exam
   appearance_owed:
-    en: the appearing owed — three times a year the male appears before the Lord; a standing duty on Heaven's docket, discharged per festival
-    he: "שָׁלֹשׁ רְגָלִים תָּחֹג לִי בַּשָּׁנָה (three times you shall keep festival to Me in the year); יֵרָאֶה כָּל זְכוּרְךָ (all your males shall appear)"
+    en: the appearing owed — three times a year the male appears before the Lord; a standing duty on Heaven's
+      docket, discharged per festival
+    he: שָׁלֹשׁ רְגָלִים תָּחֹג לִי בַּשָּׁנָה (three times you shall keep festival to Me in the year);
+      יֵרָאֶה כָּל זְכוּרְךָ (all your males shall appear)
     ledger_op: heaven
-    ink: "Exod 23:14, 23:17 (תחג, רגלים, יראה machine-verified)"
-    corpus: "exo_23_justice_calendar; the regalim-feet reading (Yevamot 103a:11) and the two-eyes reading (Sanhedrin 4b:15), triage LAW rows"
-    exam: "Mishnah Chagigah 1:1 (the exemption list — the answer sheet)"
-
+    ink: Exod 23:14, 23:17 (תחג, רגלים, יראה machine-verified)
+    corpus: exo_23_justice_calendar; the regalim-feet reading (Yevamot 103a:11) and the two-eyes reading
+      (Sanhedrin 4b:15), triage LAW rows
+    exam: Mishnah Chagigah 1:1 (the exemption list — the answer sheet)
   sanctify_day:
-    en: sanctify the day — the standing duty to declare the seventh day holy, discharged weekly over wine per the recorded move
-    he: "זָכוֹר אֶת יוֹם הַשַּׁבָּת לְקַדְּשׁוֹ (remember the Sabbath day TO SANCTIFY IT)"
+    en: sanctify the day — the standing duty to declare the seventh day holy, discharged weekly over wine
+      per the recorded move
+    he: זָכוֹר אֶת יוֹם הַשַּׁבָּת לְקַדְּשׁוֹ (remember the Sabbath day TO SANCTIFY IT)
     ledger_op: heaven
-    ink: "Exod 20:8 (לקדשו machine-verified)"
-    corpus: "exo_20 (the ten utterances); remember-over-wine (Pesachim 106a:5, triage LAW row); the kiddush-exodus link (Pesachim 117b:8)"
-    exam: "the Shabbat rows of the backfill exam"
-
+    ink: Exod 20:8 (לקדשו machine-verified)
+    corpus: exo_20 (the ten utterances); remember-over-wine (Pesachim 106a:5, triage LAW row); the kiddush-exodus
+      link (Pesachim 117b:8)
+    exam: the Shabbat rows of the backfill exam
   labor_barred:
-    en: labor barred — the seventh day's act ban on the whole household, the generic prohibition the 39 labors particularize
-    he: "לֹא תַעֲשֶׂה כָל מְלָאכָה (you shall not do ANY LABOR) — you, your son, your daughter, your slave, your beast, your stranger"
+    en: labor barred — the seventh day's act ban on the whole household, the generic prohibition the 39
+      labors particularize
+    he: לֹא תַעֲשֶׂה כָל מְלָאכָה (you shall not do ANY LABOR) — you, your son, your daughter, your slave,
+      your beast, your stranger
     ledger_op: block
-    ink: "Exod 20:10 (מלאכה machine-verified)"
-    corpus: "the 39-labors machinery (division of labors, Shabbat 70a; the labors-from-the-build, 74b; the code/data research Case 1)"
-    exam: "the Shabbat rows across the exams; the doing-not-causing carve-out (Shabbat 120b:11, triage LAW row)"
+    ink: Exod 20:10 (מלאכה machine-verified)
+    corpus: the 39-labors machinery (division of labors, Shabbat 70a; the labors-from-the-build, 74b;
+      the code/data research Case 1)
+    exam: the Shabbat rows across the exams; the doing-not-causing carve-out (Shabbat 120b:11, triage
+      LAW row)
+  launder_blood_spot:
+    en: launder the blood spot — the sprayed garment must be washed in the holy place
+    he: תְּכַבֵּס (you shall wash) — Onkelos תִּתְחַוָּר (it shall be whitened)
+    ledger_op: status
+    ink: Lev 6:20 (probe תכבס fired)
+    corpus: lev_06_olah_minchah_torah (LV06-14, LV06-15 — the washing machine with the return table)
+    exam: tzav exam module washing_scouring (Mishnah Zevachim 11:1, 11:4)
+  break_earthen_vessel:
+    en: break the earthen vessel — the absorbing pot is destroyed in the holy place
+    he: יִשָּׁבֵר (it shall be broken)
+    ledger_op: status
+    ink: Lev 6:21 (probe ישבר fired)
+    corpus: lev_06_olah_minchah_torah (LV06-16 — the vessel purge)
+    exam: tzav exam module washing_scouring (Mishnah Zevachim 11:4)
+  scour_and_rinse:
+    en: scour and rinse — the metal vessel is purged with water in the holy place
+    he: וּמֹרַק וְשֻׁטַּף (it shall be scoured and rinsed)
+    ledger_op: status
+    ink: Lev 6:21 (probes ומרק + ושטף fired)
+    corpus: lev_06_olah_minchah_torah (LV06-16)
+    exam: tzav exam module washing_scouring (Mishnah Zevachim 11:7)
+  perpetual_fire_duty:
+    en: perpetual fire duty — a standing never-extinguish obligation on the altar, renewed every morning
+    he: אֵשׁ תָּמִיד תּוּקַד … לֹא תִכְבֶּה (a continual fire shall burn — it shall not go out)
+    ledger_op: timer
+    ink: Lev 6:5, 6:6 (probe תכבה fired)
+    corpus: lev_06_olah_minchah_torah (LV06-06 — the perpetual fire machine with the day bracket)
+    exam: tzav exam module perpetual_fire (Mishnah Yoma 4:6; Tamid 1:4)
+  due_to_priest:
+    en: due to the priest — a priestly portion transfers (hide, dues, minchah remainder) under its gates
+    he: לַכֹּהֵן … לוֹ תִהְיֶה (to the priest — his shall it be; the ink writes the feminine תהיה at 7:9,
+      probe corrected)
+    ledger_op: transfer
+    ink: Lev 7:8, 7:9 (probes לכהן + תהיה fired)
+    corpus: lev_07_asham_procedure (LV07A-05 hide follows flesh), lev_07_fat_blood_dues (LV07C-06 the
+      dues gates)
+    exam: tzav exam module dues_and_gifts (Mishnah Zevachim 12:1-2)
+  not_accepted:
+    en: 'not accepted — the offering is rejected (pigul: the rejection entered at the offering, with karet
+      on the eater)'
+    he: לֹא יֵרָצֶה … פִּגּוּל יִהְיֶה (it shall not be accepted — rejected shall it be); Onkelos מְרָחָק
+      (a thing distanced)
+    ledger_op: block
+    ink: Lev 7:18 (probe ירצה fired)
+    corpus: lev_07_shelamim_types (LV07B-06 — the rejection machine)
+    exam: tzav exam module piggul_scope (Mishnah Zevachim 2:2-4:5)
+  sanctified_by_contact:
+    en: sanctified by contact — what absorbs from the offering becomes like it, under its stringencies
+    he: כֹּל אֲשֶׁר יִגַּע … יִקְדָּשׁ (whatever touches them shall become holy)
+    ledger_op: status
+    ink: Lev 6:11, 6:20 (probe יקדש fired)
+    corpus: lev_06_olah_minchah_torah (LV06-10 — the absorption rule with the cut-away)
+    exam: tzav exam module washing_scouring (the mixture rule, Mishnah Zevachim 11:8)
+  invested_office:
+    en: 'invested with office — the installation transaction commits: the priest holds the priesthood'
+    he: יְמַלֵּא אֶת יֶדְכֶם (he shall fill your hands); Onkelos יְקָרֵב יָת קֻרְבָּנְכוֹן (he shall offer
+      your offering — the idiom decoded)
+    ledger_op: status
+    ink: Lev 8:33 (probe ימלא fired)
+    corpus: lev_08_milluim (LV08-06 — the atomic transaction, commit at the blood sprinkling)
+    exam: tzav exam module installation_week (Mishnah Menachot 3:6 each-prevents-the-other)
+  confined_seven_days:
+    en: confined seven days — the installation vigil at the door, day and night; the template for the
+      Yom Kippur separation
+    he: וּמִפֶּתַח אֹהֶל מוֹעֵד לֹא תֵצְאוּ שִׁבְעַת יָמִים (from the door of the tent you shall not go
+      out seven days)
+    ledger_op: timer
+    ink: Lev 8:33, 8:35 (probe תצאו fired)
+    corpus: lev_08_milluim (LV08-07 the calendar, LV08-08 the separation template)
+    exam: tzav exam module installation_week (Mishnah Yoma 1:1 — the seven days before Yom Kippur)

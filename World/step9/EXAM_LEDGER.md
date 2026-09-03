@@ -256,3 +256,37 @@ device dispute, the same-category-doubt refinement): the Sifra IS
 the Mishnah's derivation layer, and reading it first left the
 answer sheet almost nothing to teach — the two-shelves law measured
 at book scale on day one of the book.
+
+## ROUND 11 — THE TZAV EXAM (2026-09-03; owner: "Read the resume and
+## go" — derived and examined in one sitting, the rhythm's eighth
+## derive-then-examine cycle and the first under the effects law)
+Membership: all 76 bare Mishnah rows citing Lev 6:1-8:36 (64 read in
+full, 12 credited under the guards, 1 routed out — Eduyot 4:10
+belongs to the Lev 12 span; docket ledger
+logic/oral_triage/tzav_exam_mishnah_2026-09-03.md; Mishnah Berurah
+excluded from the docket as a modern commentary, openly). 16 modules
+compiled in tzav_rules.py, 73 case rows in cases_tzav.yaml: 73/73
+first full run; ALL TEN prior exams re-run green — 450/450 across
+eleven rounds. NO FINDINGS: every case answered from the same
+sitting's seats (the Vayakhel-Pekudei pattern at nine times the case
+count). Catalog R-337..R-352; 157 compiled rules (the .md mirror
+repaired to carry rounds 10-11 beside the live JSON registry).
+Vocabulary 148 → 158 dims (10 new: intent, moment, mixture,
+loaf_state, made_for, food_state, priest_state, offering_state,
+animal_class, dimension_asked, blood_source, offering_class — plus
+46 query values and additions to offering/item/person/service). THE
+HEADLINE, eighth confirmation and sharpest yet: the answer sheet
+met the morning's reading almost seat for seat — the wood-pile
+counts with the same three names (Yoma 4:6 = Sifra Tzav Chapter 2
+11), the chavitin halving invariant with the same heirs/community
+pair (Menachot 4:5 = Section 3 6-9 + Chapter 5 3), the one-law
+laundering of the inner sin-offerings (Zevachim 11:1 = Section 4
+1), the no-rejection list (Zevachim 4:3 = Chapter 13 5), the
+folding spec (Menachot 6:4 = Chapter 4 6), the offspring-without-
+loaves (Temurah 3:2 = Chapter 11 2), the seven-day separation
+(Yoma 1:1 = Mekhilta DeMiluim I 37), the fit-once-up classes
+(Zevachim 9:1 = Chapter 1 3-6), the midnight restore boundary
+(Zevachim 9:6 = Chapter 2 5). Honest remainder: two cells ran on
+transmitted DATA the reading did not carry — the chavitin's twelve
+loaves and the tamid's schedule hours — the quantities channel,
+self-labeled. 71 of 73 anticipated by the reading.

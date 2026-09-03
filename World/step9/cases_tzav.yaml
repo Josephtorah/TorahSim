@@ -1,0 +1,422 @@
+# THE TZAV EXAM (round 11 — the derive-then-examine rhythm's eighth
+# cycle, derived and examined in one sitting 2026-09-03; owner: "Read
+# the resume and go"). Membership: the 76 bare Mishnah rows citing
+# Lev 6:1-8:36 (64 read in full, 12 credited to prior rounds; one row
+# routed out — Eduyot 4:10 belongs to the Lev 12 span).
+# Read-source record: logic/oral_triage/tzav_exam_mishnah_2026-09-03.md.
+# Provenance: mishnah + leviticus_anchor.
+
+- module: wrong_intent_tzav
+  tractate: Zevachim
+  oracle: Mishnah Zevachim 1:1
+  leviticus_anchor: {unit: lev_07_asham_procedure, ref: Lev.7.5,
+    claims: [LV07A-03]}
+  cases:
+  - id: Z1_1_shelamim
+    input: {query: wrong_intent_fitness, offering: shelamim}
+    expected: {verdict: fit_owner_unaccredited}
+    class: A
+  - id: Z1_1_pesach
+    input: {query: wrong_intent_fitness, offering: pesach}
+    expected: {verdict: unfit_at_its_time}
+    class: A
+  - id: Z1_1_chatat
+    input: {query: wrong_intent_fitness, offering: chatat}
+    expected: {verdict: unfit_any_time}
+    class: A
+  - id: Z1_1_asham
+    input: {query: wrong_intent_fitness, offering: asham}
+    expected:
+      verdict: [fit_owner_unaccredited, unfit_any_time]
+    class: A
+
+- module: piggul_scope
+  tractate: Zevachim
+  oracle: Mishnah Zevachim 2:2, 2:3, 3:3, 3:4, 3:6, 4:3, 4:5; Mishnah Menachot 3:1
+  leviticus_anchor: {unit: lev_07_shelamim_types, ref: Lev.7.18,
+    claims: [LV07B-06, LV07B-10]}
+  cases:
+  - id: Z2_2_out_of_place
+    input: {query: bad_intent_effect, intent: out_of_place}
+    expected: {verdict: disqualified_no_karet}
+    class: A
+  - id: Z2_2_out_of_time
+    input: {query: bad_intent_effect, intent: out_of_time}
+    expected: {verdict: piggul_karet}
+    class: A
+  - id: Z3_4_inedible_part
+    input: {query: bad_intent_effect, intent: out_of_time, item: hide_bones_gravy}
+    expected: {verdict: fit_no_karet}
+    class: A
+  - id: Z3_6_leave_blood
+    input: {query: bad_intent_effect, intent: leave_blood_tomorrow}
+    expected:
+      verdict: [unfit, fit]
+    class: A
+  - id: M3_1_wrong_manner
+    input: {query: bad_intent_effect, intent: wrong_manner}
+    expected:
+      verdict: [fit, unfit]
+    class: A
+  - id: Z4_3_no_permitter
+    input: {query: piggul_liability, item: fistful}
+    expected: {verdict: no_piggul}
+    class: A
+  - id: Z4_3_blood
+    input: {query: piggul_liability, item: the_blood}
+    expected: {verdict: no_piggul}
+    class: A
+  - id: Z4_5_notar_no_permitter
+    input: {query: notar_tumah_liability, item: fistful}
+    expected: {verdict: liable}
+    class: A
+  - id: Z4_5_blood_exception
+    input: {query: notar_tumah_liability, item: the_blood}
+    expected: {verdict: exempt}
+    class: A
+  - id: Z4_5_gentile
+    input: {query: piggul_liability, offering: gentile_offering}
+    expected:
+      verdict: [exempt, liable]
+    class: A
+
+- module: altar_retention
+  tractate: Zevachim
+  oracle: Mishnah Zevachim 9:1, 9:6
+  leviticus_anchor: {unit: lev_06_olah_minchah_torah, ref: Lev.6.2,
+    claims: [LV06-01, LV06-04]}
+  cases:
+  - id: Z9_1_criterion
+    input: {query: altar_retention_criterion}
+    expected:
+      verdict: [fire_fit_stays, altar_fit_stays]
+    class: A
+  - id: Z9_6_before_midnight
+    input: {query: dislodged_limb, moment: before_midnight}
+    expected: {verdict: restore_with_sacrilege_liability}
+    class: A
+  - id: Z9_6_after_midnight
+    input: {query: dislodged_limb, moment: after_midnight}
+    expected: {verdict: not_restored}
+    class: A
+  - id: Z9_6_disqualified
+    input: {query: dislodged_limb, item: disqualified_item}
+    expected: {verdict: not_restored}
+    class: A
+
+- module: washing_scouring
+  tractate: Zevachim
+  oracle: Mishnah Zevachim 11:1, 11:4, 11:7, 11:8
+  leviticus_anchor: {unit: lev_06_olah_minchah_torah, ref: Lev.6.20,
+    claims: [LV06-14, LV06-15, LV06-16]}
+  cases:
+  - id: Z11_1_inner
+    input: {query: garment_laundering, offering: inner_chatat}
+    expected: {verdict: requires_laundering}
+    class: A
+  - id: Z11_4_venue
+    input: {query: purge_venue}
+    expected: {verdict: sacred_place}
+    class: A
+  - id: Z11_7_lesser
+    input: {query: scour_rinse_scope, offering: lesser_sanctity}
+    expected:
+      verdict: [required, exempt]
+    class: A
+  - id: Z11_8_taste
+    input: {query: mixture_rule, mixture: imparts_taste}
+    expected: {verdict: eaten_as_stringent}
+    class: A
+
+- module: chavitin
+  tractate: Menachot
+  oracle: Mishnah Menachot 4:5, 6:5
+  leviticus_anchor: {unit: lev_06_olah_minchah_torah, ref: Lev.6.13,
+    claims: [LV06-11]}
+  cases:
+  - id: M4_5_halves
+    input: {query: chavitin_halves_from_house}
+    expected: {verdict: barred_whole_divided}
+    class: A
+  - id: M4_5_successor
+    input: {query: chavitin_successor}
+    expected: {verdict: new_whole_two_lost}
+    class: A
+  - id: M4_5_no_successor
+    input: {query: chavitin_no_successor}
+    expected:
+      verdict: [community_funds, heirs_funds]
+    class: A
+  - id: M6_5_count
+    input: {query: chavitin_loaf_count}
+    expected: {verdict: twelve}
+    class: A
+
+- module: todah_loaves
+  tractate: Menachot
+  oracle: Mishnah Menachot 5:1, 7:1, 7:3, 7:4; Mishnah Temurah 3:2; Mishnah Challah 1:6
+  leviticus_anchor: {unit: lev_07_shelamim_types, ref: Lev.7.13,
+    claims: [LV07B-03, LV07B-04]}
+  cases:
+  - id: M5_1_leavened
+    input: {query: todah_leavened_count}
+    expected: {verdict: ten_of_forty}
+    class: A
+  - id: M7_1_flour
+    input: {query: todah_flour_total}
+    expected: {verdict: twenty_tenths}
+    class: A
+  - id: M7_3_outside_wall
+    input: {query: loaf_consecration, loaf_state: outside_wall}
+    expected: {verdict: not_consecrated}
+    class: A
+  - id: M7_3_pre_crust
+    input: {query: loaf_consecration, loaf_state: pre_crust}
+    expected: {verdict: not_consecrated}
+    class: A
+  - id: M7_3_tereifah
+    input: {query: loaf_consecration, loaf_state: tereifah_found}
+    expected: {verdict: not_consecrated}
+    class: A
+  - id: M7_3_blemished
+    input: {query: loaf_consecration, loaf_state: blemish_found}
+    expected:
+      verdict: [consecrated, not_consecrated]
+    class: A
+  - id: T3_2_offspring
+    input: {query: todah_offspring}
+    expected: {verdict: sacrificed_without_loaves}
+    class: A
+  - id: C1_6_market
+    input: {query: todah_loaf_challah, made_for: market_sale}
+    expected: {verdict: liable}
+    class: A
+
+- module: minchah_procedures
+  tractate: Menachot
+  oracle: Mishnah Menachot 5:8, 6:4; Mishnah Sotah 3:2, 3:7
+  leviticus_anchor: {unit: lev_06_olah_minchah_torah, ref: Lev.6.7,
+    claims: [LV06-07, LV06-12, LV06-13]}
+  cases:
+  - id: M5_8_vow_vessel
+    input: {query: pan_vow_substitution}
+    expected: {verdict: barred}
+    class: A
+  - id: M6_4_israelite_fold
+    input: {query: folding_spec, offering: israelite_minchah}
+    expected: {verdict: folded_and_separated}
+    class: A
+  - id: M6_4_priest_fold
+    input: {query: folding_spec, offering: priest_minchah}
+    expected: {verdict: folded_not_separated}
+    class: A
+  - id: S3_7_daughter
+    input: {query: priest_minchah_eating, person: priest_daughter}
+    expected: {verdict: eaten}
+    class: A
+  - id: S3_7_priest
+    input: {query: priest_minchah_eating, person: priest}
+    expected: {verdict: burned}
+    class: A
+  - id: S3_2_sotah_corner
+    input: {query: sotah_minchah_rite}
+    expected: {verdict: waved_brought_near_southwest}
+    class: A
+
+- module: eating_windows_tzav
+  tractate: Zevachim
+  oracle: Mishnah Zevachim 5:6; Mishnah Megillah 2:6; Mishnah Nazir 4:4
+  leviticus_anchor: {unit: lev_07_shelamim_types, ref: Lev.7.15,
+    claims: [LV07B-05]}
+  cases:
+  - id: Z5_6_todah_window
+    input: {query: eating_window, offering: todah}
+    expected: {verdict: day_night_until_midnight}
+    class: A
+  - id: MG2_6_night_burn
+    input: {query: fat_burning_window}
+    expected: {verdict: all_night}
+    class: A
+  - id: N4_4_nazir_shelamim
+    input: {query: nullified_nazirite_shelamim}
+    expected: {verdict: one_day_no_loaves}
+    class: A
+
+- module: tumah_karet_tzav
+  tractate: Zevachim
+  oracle: Mishnah Zevachim 13:2; Mishnah Pesachim 9:4
+  leviticus_anchor: {unit: lev_07_shelamim_types, ref: Lev.7.20,
+    claims: [LV07B-08, LV07B-09]}
+  cases:
+  - id: Z13_2_pure
+    input: {query: tamei_ate, food_state: pure_sacrificial}
+    expected: {verdict: liable}
+    class: A
+  - id: Z13_2_impure
+    input: {query: tamei_ate, food_state: impure_sacrificial}
+    expected:
+      verdict: [liable, exempt]
+    class: A
+  - id: P9_4_communal
+    input: {query: tamei_ate, food_state: slaughtered_for_unclean}
+    expected: {verdict: exempt}
+    class: A
+
+- module: dues_and_gifts
+  tractate: Zevachim
+  oracle: Mishnah Zevachim 12:1, 12:2; Mishnah Chullin 10:1, 10:4; Mishnah Sukkah 5:7
+  leviticus_anchor: {unit: lev_07_fat_blood_dues, ref: Lev.7.33,
+    claims: [LV07C-06]}
+  cases:
+  - id: Z12_1_tvul_yom
+    input: {query: dues_share, priest_state: tvul_yom}
+    expected: {verdict: no_share}
+    class: A
+  - id: Z12_2_no_altar
+    input: {query: hide_acquisition, offering_state: disqualified_before_sprinkling}
+    expected: {verdict: priests_no_hide}
+    class: A
+  - id: Z12_2_wrong_intent_hide
+    input: {query: hide_acquisition, offering_state: not_for_its_sake}
+    expected: {verdict: priests_acquire_hide}
+    class: A
+  - id: CH10_1_offerings
+    input: {query: foreleg_jaw_maw, animal_class: sacrificial}
+    expected: {verdict: exempt_chullin_only}
+    class: A
+  - id: CH10_4_convert
+    input: {query: foreleg_jaw_maw, animal_class: convert_uncertain}
+    expected: {verdict: exempt_burden_of_proof}
+    class: A
+  - id: SU5_7_festivals
+    input: {query: festival_watch_shares}
+    expected: {verdict: all_watches_equal}
+    class: A
+
+- module: fat_blood
+  tractate: Chullin
+  oracle: Mishnah Chullin 8:6; Mishnah Keritot 5:1
+  leviticus_anchor: {unit: lev_07_fat_blood_dues, ref: Lev.7.23,
+    claims: [LV07C-01, LV07C-02, LV07C-04]}
+  cases:
+  - id: CH8_6_fat_stringency
+    input: {query: fat_vs_blood, dimension_asked: meilah_piggul_notar_tamei}
+    expected: {verdict: fat_only}
+    class: A
+  - id: CH8_6_blood_stringency
+    input: {query: fat_vs_blood, dimension_asked: species_breadth}
+    expected: {verdict: blood_all_species}
+    class: A
+  - id: K5_1_lifeblood
+    input: {query: blood_karet, blood_source: lifeblood}
+    expected: {verdict: liable}
+    class: A
+  - id: K5_1_organ_blood
+    input: {query: blood_karet, blood_source: spleen_heart_eggs}
+    expected: {verdict: exempt}
+    class: A
+
+- module: perpetual_fire
+  tractate: Yoma
+  oracle: Mishnah Yoma 4:6; Mishnah Tamid 1:4; Mishnah Pesachim 5:1, 6:1
+  leviticus_anchor: {unit: lev_06_olah_minchah_torah, ref: Lev.6.5,
+    claims: [LV06-04, LV06-06]}
+  cases:
+  - id: Y4_6_piles
+    input: {query: wood_pile_count}
+    expected:
+      verdict: [two_daily, three_daily, four_daily]
+    class: A
+  - id: T1_4_laving
+    input: {query: ash_removal_gate}
+    expected: {verdict: sanctify_hands_feet_first}
+    class: A
+  - id: P5_1_tamid_hour
+    input: {query: afternoon_tamid_schedule}
+    expected: {verdict: slaughtered_8_5_offered_9_5}
+    class: A
+  - id: P6_1_override
+    input: {query: pesach_shabbat_override, service: slaughter_sprinkle_fats}
+    expected: {verdict: overrides}
+    class: A
+  - id: P6_1_roast
+    input: {query: pesach_shabbat_override, service: roasting_washing}
+    expected: {verdict: does_not_override}
+    class: A
+
+- module: corner_and_north
+  tractate: Zevachim
+  oracle: Mishnah Zevachim 6:1, 6:2, 6:5
+  leviticus_anchor: {unit: lev_06_olah_minchah_torah, ref: Lev.6.18,
+    claims: [LV06-07, LV06-14]}
+  cases:
+  - id: Z6_1_atop
+    input: {query: slaughter_atop_altar}
+    expected:
+      verdict: [as_north, half_north_half_south]
+    class: A
+  - id: Z6_2_bird_chatat
+    input: {query: bird_rite_corner, offering: bird_chatat}
+    expected: {verdict: southwest}
+    class: A
+  - id: Z6_5_bird_olah
+    input: {query: bird_rite_corner, offering: bird_olah}
+    expected: {verdict: southeast}
+    class: A
+
+- module: installation_week
+  tractate: Yoma
+  oracle: Mishnah Yoma 1:1; Mishnah Menachot 7:2, 3:6
+  leviticus_anchor: {unit: lev_08_milluim, ref: Lev.8.33,
+    claims: [LV08-06, LV08-07, LV08-08]}
+  cases:
+  - id: Y1_1_separation
+    input: {query: yom_kippur_hp_preparation}
+    expected: {verdict: seven_days_separated}
+    class: A
+  - id: M7_2_milluim_loaves
+    input: {query: milluim_loaf_kinds}
+    expected: {verdict: three_matzah_kinds_no_leaven}
+    class: A
+  - id: M3_6_atomicity
+    input: {query: paired_components}
+    expected: {verdict: each_prevents_the_other}
+    class: A
+
+- module: yotzei_and_mixtures
+  tractate: Pesachim
+  oracle: Mishnah Pesachim 3:8; Mishnah Zevachim 8:11
+  leviticus_anchor: {unit: lev_06_olah_minchah_torah, ref: Lev.6.23,
+    claims: [LV06-15, LV06-17]}
+  cases:
+  - id: P3_8_past_scopus
+    input: {query: meat_left_city, moment: past_scopus}
+    expected: {verdict: burn_in_place}
+    class: A
+  - id: P3_8_before_scopus
+    input: {query: meat_left_city, moment: before_scopus}
+    expected: {verdict: return_and_burn}
+    class: A
+  - id: Z8_11_mix
+    input: {query: inner_outer_blood_mix}
+    expected: {verdict: poured_to_drain}
+    class: A
+
+- module: bamah_eras
+  tractate: Zevachim
+  oracle: Mishnah Zevachim 14:4, 14:10
+  leviticus_anchor: {unit: lev_07_fat_blood_dues, ref: Lev.7.37,
+    claims: [LV07C-07]}
+  cases:
+  - id: Z14_4_firstborn
+    input: {query: pre_tabernacle_service}
+    expected: {verdict: firstborn_officiated}
+    class: A
+  - id: Z14_10_communal
+    input: {query: bamah_offering_scope, offering_class: communal}
+    expected: {verdict: tabernacle_only}
+    class: A
+  - id: Z14_10_individual
+    input: {query: bamah_offering_scope, offering_class: individual}
+    expected: {verdict: bamah_valid}
+    class: A

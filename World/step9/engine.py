@@ -1699,3 +1699,8 @@ RULES.update(_vp.build(V))
 # opening cycle). 17 rules in vayikra_rules.py.
 import vayikra_rules as _vk
 RULES.update(_vk.build(V))
+
+# Round 11 — THE TZAV EXAM (2026-09-03, the derive-then-examine
+# rhythm's eighth cycle). 16 rules in tzav_rules.py.
+import tzav_rules as _tz
+RULES.update(_tz.build(V))

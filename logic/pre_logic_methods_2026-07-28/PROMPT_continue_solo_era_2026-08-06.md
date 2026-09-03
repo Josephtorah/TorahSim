@@ -9008,3 +9008,105 @@ consonant pair in adjacent verses); cold_run_decalogue.py Exod 20
 site lap: exo_12, exo_13, exo_20, exo_23. Remaining queue in
 REPORT_CODE_EXECUTION.md addendum. gloss_lint 0 flags. NOTHING
 COMMITTED — the whole 2026-09-03 line awaits the owner's word.
+
+(night, commit) Owner: "Commit push." COMMIT 3f20abb pushed to
+Josephtorah/Torah_Grok main — 83 files, ~21.6k insertions: the whole
+2026-09-03 line (six-step THE_STEPS, Vayikra round, deliverable rule,
+Genesis stamps, the Exodus Talmud triage ledger, effects law +
+harvest + retrofit, world_engine skeleton, three effect-born spans).
+Compaction point #40 taken clean after. NEXT at the owner's word:
+parashat TZAV (Lev 6-8) — the first parashah under the full new
+rhythm (derive → stamp → examine → compile with effects → daemons
+into the engine), then the Lev 1-8 offering-procedures span compile.
+
+## 2026-09-03 (post-#40 sitting) — TZAV OPENS
+Owner: "Read the resume and go." Post-compaction rereads done (Step 2
+read-and-log + Step 5 effects/deliverable/two-directions + compiler
+block + this doc's tail). Opening parashat Tzav per the standing
+recommendation: pre-enumeration first (Sifra Tzav whole + Onkelos
+Lev 6:1-8:36, the Sifra spine default).
+
+(derivation) TZAV DERIVED AND STAMPED — the rhythm's eighth cycle,
+Steps 2-4 in one sitting. Pre-enumeration by script
+(logic/oral_triage/wip_tzav/tzav_enum.json): Sifra Tzav whole = 290
+rows (Chapters 1-18, Sections 2-11, Mekhilta DeMiluim I 38) +
+Onkelos 97 verses = 387 declared; 10,416 linked rows enumerated
+outside declared scope, openly. Mid-read CORRECTION on the record:
+Section 6 (11 rows) moved asham → shelamim — its content expounds
+7:11-12; the links histogram (7:9) misled; canonical order S5→C9→
+C10→S6. READ THROUGH: all 387, five append-only ledgers
+(lev_06/07x3/08_*_2026-09-03.md), era completion lines, gloss_lint 0
+after 7 fixes. Onkelos deltas: the tenth-of-ephah conversion
+REPEATED at 6:13 (the Lev 5:11 flagship now standing behavior);
+sweet-savor → ACCEPTED WITH FAVOR; anointment → GREATNESS
+throughout; pigul → "distanced" + bear-sin → RECEIVE HIS DEBT (the
+ledger verb); tenufah → LIFTING everywhere (performing Section 11
+11's binyan-av identity); hand-filling idiom decoded at 8:33; the
+charge kept toward the MEMRA (Word) at 8:35. Sifra crowns: R.
+Elazar b. Azaryah's HALACHAH-TO-MOSES-ON-SINAI constants row
+(Chapter 11 6 — the data channel self-labeled at our span); the
+FORTY-loaves compute off the extra yod; the permitters criterion;
+the piggul/tumah machine comparison (Chapter 15 4); the sons-of-Eli
+prophetic indictment matched in-row (Chapter 16 5, 1 Sam 2:15-17);
+Isaiah 61:8 no-theft atonement (DeMiluim 15); the atomic
+installation transaction with its commit point at the blood
+sprinkling; the 23-Adar→1-Nissan computed calendar; the seven-day
+separation template. DERIVED: 48 witness ops (LV06-01..17,
+LV07A-01..06, LV07B-01..10, LV07C-01..07, LV08-01..08) seated by
+script into the five tree-derived drafts (+ step E logs, claims
+manifests, scenario anchors fixed to era format); 5 rituals
+COMPLETE — corpus 125 → 130; preflights ALL SCENARIOS GREEN;
+changelog GREEN; CORPUS_TRUTH GREEN 130 units / 1,809 facts; hash
+8b8fff1fa28953af unmoved. DELEGATED FULL RULE stamps recorded in
+logic/findings/STAMP_LEDGER.md. Two empty Sifra rows (Chapter 7 7,
+DeMiluim 8, 28 prints "0") recorded honestly. NEXT: the exam (bare
+Mishnah rows citing Lev 6-8), then the Lev 1-8 offering-procedures
+compile WITH EFFECTS, then the engine daemons.
+
+(exam) THE TZAV EXAM RAN — round 11. Docket: 76 bare Mishnah rows
+citing Lev 6-8 (Mishnah Berurah excluded openly); 64 fresh-read, 12
+credits quick-looked, 1 routed out (Eduyot 4:10 → Lev 12). Ledger:
+logic/oral_triage/tzav_exam_mishnah_2026-09-03.md. 16 modules
+(tzav_rules.py), 73 case rows (cases_tzav.yaml): 73/73 FIRST RUN;
+all ten priors re-run green — 450/450 across eleven rounds. NO
+FINDINGS. Vocabulary 148 → 158 dims (+46 query values); catalog
+R-337..R-352 (157 compiled rules; RULE_CATALOG.md mirror repaired —
+round 10's rows had lived only in rule_catalog_ids.json).
+Anticipation 71/73 — the two remainders are transmitted QUANTITIES
+(the chavitin's twelve loaves; the tamid's hours): the data channel
+self-labeled at the exam. Records: EXAM_LEDGER.md round-11 entry,
+THE_STEPS Step 5 round paragraph. NEXT: the Lev 1-8
+offering-procedures compile WITH EFFECTS + the engine daemons +
+REPORT_TZAV.md + briefing scoreboard.
+
+(compile + engine) THE RHYTHM'S FIFTH MOTION RAN — the Step-5
+deliverable WITH EFFECTS from birth: cold_run_tzav.py (Lev 6-8, the
+offering-torah span) — seven functions from bare ink, 19 probes (the
+zero-report law caught Lev 7:9's FEMININE תהיה "his shall it be" —
+the wrong masculine token corrected by the ink), 33/33 answer-sheet
+cells (ink 6% / moves 88% / data 6%); ledger ops block x3, heaven
+x4, status x6, timer x5, transfer x6. NINE effects discovered →
+registry 48 (launder_blood_spot, break_earthen_vessel,
+scour_and_rinse, perpetual_fire_duty, due_to_priest, not_accepted,
+sanctified_by_contact, invested_office, confined_seven_days — all
+probe-verified). TWO moves registered UNPROMPTED per the rider:
+M-13 the clause-position read (Section 5 8's word-position
+argument), M-14 the doubling arithmetic (R. Akiva's half-log
+landing on R. Elazar b. Azaryah's transmitted constant — the
+two-channel doctrine arguing over one number in one row). THE
+ENGINE: law_installation daemon + SCENE 6, the installation tape
+replaying Lev 8's own narrative — atomic intake gate (no basket, no
+sanctification, ATOMIC-BLOCK logged), seven-day confinement timer,
+invested_office at the blood sprinkling, leftover burned, released
+at day 7 — 6/6 checkpoints (the tape's clock unit is days, declared
+in its era label). Records: World/step9/REPORT_TZAV.md (the round's
+full record), REPORT_CODE_EXECUTION.md addendum (span queue
+updated: Lev 1-8 consolidation is the natural next), THE_STEPS Step
+5 (round paragraph + effects-block extension), THE_BRIEFING
+(scoreboard 130 units / 450 cases / 48 effects + the night's-end
+entry). gloss_lint 0 across everything touched. THE FULL NEW RHYTHM
+HAS NOW RUN END TO END ON ONE PARASHAH IN ONE SITTING — derive →
+stamp → examine → compile with effects → the engine grows. NOTHING
+COMMITTED this sitting — the whole post-#40 Tzav line awaits the
+owner's word. Clean compaction point available (all records
+current).

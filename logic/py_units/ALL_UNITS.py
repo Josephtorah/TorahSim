@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ALL_UNITS.py — frozen only (lev_05 frozen 2026-09-03; 125 frozen units)."""
+"""ALL_UNITS.py — frozen only (lev_08 frozen 2026-09-03; 130 frozen units)."""
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
@@ -35137,6 +35137,1136 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[6]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 23 2', 'Sifra, Vayikra Dibbura DeChovah, Chapter 23 6', 'Sifra, Vayikra Dibbura DeChovah, Chapter 23 10', 'Sifra, Vayikra Dibbura DeChovah, Chapter 23 1']
     assert all('enumerated_each_blanket_one' not in f for f in m.WORLD["facts"])
     assert 'deposit_individuation' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_06_olah_minchah_torah
+###############################################################################
+
+m = Machine("lev_06_olah_minchah_torah")
+
+# -------------------------- Lev.6.1 · TREE_CLAIM ---------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 6:1."
+m.step("Lev.6.1")
+
+# -------------------------- Lev.6.2 · ETNACHTA_SPLIT -----------------------
+# צו את אהרן ואת בניו לאמר זאת תורת העלה … הוא העלה על מוקדה על המזבח כל
+# הלילה עד הבקר ואש המזבח תוקד ב
+# "[EN-AID] From top split: LEFT «צו את אהרן ואת בניו לאמר זאת תורת העלה» /
+# RIGHT «הוא העלה על מוקדה על המזבח כל הלילה עד הבקר ואש המזבח תוקד בו».
+# Derive claim from Hebrew arms. Lev 6:2."
+m.step("Lev.6.2")
+# witness-tier presupposed read: all_night_window on altar_fire — read, not
+# installed
+m.witness_read("altar_fire", "all_night_window",
+                cites=["Sifra, Tzav, Chapter 1 3", "Sifra, Tzav, Chapter 1 4", "Sifra, Tzav, Chapter 1 5", "Sifra, Tzav, Chapter 1 6", "Sifra, Tzav, Chapter 1 7", "Sifra, Tzav, Chapter 1 8", "Sifra, Tzav, Chapter 1 9", "Sifra, Tzav, Chapter 1 10", "Sifra, Tzav, Chapter 1 13", "Sifra, Tzav, Chapter 1 15"])
+# witness-tier presupposed read: typed_consecration on sancta_surfaces —
+# read, not installed
+m.witness_read("sancta_surfaces", "typed_consecration",
+                cites=["Sifra, Tzav, Chapter 1 11", "Sifra, Tzav, Chapter 1 12"])
+# witness-tier presupposed read: outer_altar_source on fire_topology — read,
+# not installed
+m.witness_read("fire_topology", "outer_altar_source",
+                cites=["Sifra, Tzav, Chapter 1 16"])
+
+# -------------------------- Lev.6.3 · ETNACHTA_SPLIT -----------------------
+# ולבש הכהן מדו בד ומכנסי בד ילבש על בשרו והרים את הדשן אשר תא … ושמו אצל
+# המזבח
+# "[EN-AID] From top split: LEFT «ולבש הכהן מדו בד ומכנסי בד ילבש על בשרו
+# והרים את הדשן אשר תאכל האש את העלה על המ» / RIGHT «ושמו אצל המזבח». Derive
+# claim from Hebrew arms. Lev 6:3."
+m.step("Lev.6.3")
+# witness-tier presupposed read: dress_and_procedure on ash_lifting — read,
+# not installed
+m.witness_read("ash_lifting", "dress_and_procedure",
+                cites=["Sifra, Tzav, Chapter 2 1", "Sifra, Tzav, Chapter 2 2", "Sifra, Tzav, Chapter 2 3", "Sifra, Tzav, Chapter 2 4", "Sifra, Tzav, Chapter 2 5"])
+
+# -------------------------- Lev.6.4 · ETNACHTA_SPLIT -----------------------
+# ופשט את בגדיו ולבש בגדים אחרים … והוציא את הדשן אל מחוץ למחנה אל מקום טהור
+# "[EN-AID] From top split: LEFT «ופשט את בגדיו ולבש בגדים אחרים» / RIGHT
+# «והוציא את הדשן אל מחוץ למחנה אל מקום טהור». Derive claim from Hebrew
+# arms. Lev 6:4."
+m.step("Lev.6.4")
+# witness-tier presupposed read: lesser_garments on ash_carrying — read, not
+# installed
+m.witness_read("ash_carrying", "lesser_garments",
+                cites=["Sifra, Tzav, Chapter 2 6"])
+
+# -------------------------- Lev.6.5 · ETNACHTA_SPLIT -----------------------
+# והאש על המזבח תוקד בו לא תכבה ובער עליה הכהן עצים בבקר בבקר … וערך עליה
+# העלה והקטיר עליה חלבי השלמים
+# "[EN-AID] From top split: LEFT «והאש על המזבח תוקד בו לא תכבה ובער עליה
+# הכהן עצים בבקר בבקר» / RIGHT «וערך עליה העלה והקטיר עליה חלבי השלמים».
+# Derive claim from Hebrew arms. Lev 6:5."
+m.step("Lev.6.5")
+# witness-tier presupposed read: ban_and_schedule on perpetual_fire — read,
+# not installed
+m.witness_read("perpetual_fire", "ban_and_schedule",
+                cites=["Sifra, Tzav, Chapter 2 7", "Sifra, Tzav, Chapter 2 8", "Sifra, Tzav, Chapter 2 9", "Sifra, Tzav, Chapter 2 10", "Sifra, Tzav, Chapter 2 11"])
+
+# -------------------------- Lev.6.6 · TREE_CLAIM ---------------------------
+# אש תמיד תוקד על המזבח … לא תכבה
+# "[EN-AID] From top split: LEFT «אש תמיד תוקד על המזבח» / RIGHT «לא תכבה».
+# Derive claim from Hebrew arms. Lev 6:6."
+m.step("Lev.6.6")
+
+# -------------------------- Lev.6.7 · ETNACHTA_SPLIT -----------------------
+# וזאת תורת המנחה … הקרב אתה בני אהרן לפני יהוה אל פני המזבח
+# "[EN-AID] From top split: LEFT «וזאת תורת המנחה» / RIGHT «הקרב אתה בני
+# אהרן לפני יהוה אל פני המזבח». Derive claim from Hebrew arms. Lev 6:7."
+m.step("Lev.6.7")
+# witness-tier presupposed read: one_law_and_corner on minchah_intake —
+# read, not installed
+m.witness_read("minchah_intake", "one_law_and_corner",
+                cites=["Sifra, Tzav, Section 2 1", "Sifra, Tzav, Section 2 3", "Sifra, Tzav, Section 2 4", "Sifra, Tzav, Section 2 5", "Sifra, Tzav, Section 2 6"])
+
+# -------------------------- Lev.6.8 · ETNACHTA_SPLIT -----------------------
+# והרים ממנו בקמצו מסלת המנחה ומשמנה ואת כל הלבנה אשר על המנחה … והקטיר
+# המזבח ריח ניחח אזכרתה ליהוה
+# "[EN-AID] From top split: LEFT «והרים ממנו בקמצו מסלת המנחה ומשמנה ואת כל
+# הלבנה אשר על המנחה» / RIGHT «והקטיר המזבח ריח ניחח אזכרתה ליהוה». Derive
+# claim from Hebrew arms. Lev 6:8."
+m.step("Lev.6.8")
+
+# -------------------------- Lev.6.9 · ETNACHTA_SPLIT -----------------------
+# והנותרת ממנה יאכלו אהרן ובניו … מצות תאכל במקום קדש בחצר אהל מועד יאכלוה
+# "[EN-AID] From top split: LEFT «והנותרת ממנה יאכלו אהרן ובניו» / RIGHT
+# «מצות תאכל במקום קדש בחצר אהל מועד יאכלוה». Derive claim from Hebrew arms.
+# Lev 6:9."
+m.step("Lev.6.9")
+# witness-tier presupposed read: matzah_mitzvah on remainder_eating — read,
+# not installed
+m.witness_read("remainder_eating", "matzah_mitzvah",
+                cites=["Sifra, Tzav, Section 2 7", "Sifra, Tzav, Section 2 9", "Sifra, Tzav, Section 2 11", "Sifra, Tzav, Section 2 12"])
+
+# -------------------------- Lev.6.10 · ETNACHTA_SPLIT ----------------------
+# לא תאפה חמץ חלקם נתתי אתה מאשי … קדש קדשים הוא כחטאת וכאשם
+# "[EN-AID] From top split: LEFT «לא תאפה חמץ חלקם נתתי אתה מאשי» / RIGHT
+# «קדש קדשים הוא כחטאת וכאשם». Derive claim from Hebrew arms. Lev 6:10."
+m.step("Lev.6.10")
+# witness-tier presupposed read: apportionment_gate on leaven_ops — read,
+# not installed
+m.witness_read("leaven_ops", "apportionment_gate",
+                cites=["Sifra, Tzav, Chapter 3 1", "Sifra, Tzav, Chapter 3 2", "Sifra, Tzav, Chapter 3 3", "Sifra, Tzav, Chapter 3 4"])
+
+# -------------------------- Lev.6.11 · ETNACHTA_SPLIT ----------------------
+# כל זכר בבני אהרן יאכלנה חק עולם לדרתיכם מאשי יהוה … כל אשר יגע בהם יקדש
+# "[EN-AID] From top split: LEFT «כל זכר בבני אהרן יאכלנה חק עולם לדרתיכם
+# מאשי יהוה» / RIGHT «כל אשר יגע בהם יקדש». Derive claim from Hebrew arms.
+# Lev 6:11."
+m.step("Lev.6.11")
+# witness-tier presupposed read: absorption_rule on touch_sanctify — read,
+# not installed
+m.witness_read("touch_sanctify", "absorption_rule",
+                cites=["Sifra, Tzav, Chapter 3 5", "Sifra, Tzav, Chapter 3 6"])
+
+# -------------------------- Lev.6.12 · TREE_CLAIM --------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 6:12."
+m.step("Lev.6.12")
+
+# -------------------------- Lev.6.13 · ETNACHTA_SPLIT ----------------------
+# זה קרבן אהרן ובניו אשר יקריבו ליהוה ביום המשח אתו עשירת האפה … מחציתה בבקר
+# ומחציתה בערב
+# "[EN-AID] From top split: LEFT «זה קרבן אהרן ובניו אשר יקריבו ליהוה ביום
+# המשח אתו עשירת האפה סלת מנחה תמיד» / RIGHT «מחציתה בבקר ומחציתה בערב».
+# Derive claim from Hebrew arms. Lev 6:13."
+m.step("Lev.6.13")
+# witness-tier presupposed read: halving_invariant on chavitin_machine —
+# read, not installed
+m.witness_read("chavitin_machine", "halving_invariant",
+                cites=["Sifra, Tzav, Section 3 3", "Sifra, Tzav, Section 3 4", "Sifra, Tzav, Section 3 6", "Sifra, Tzav, Section 3 7", "Sifra, Tzav, Section 3 8", "Sifra, Tzav, Section 3 9", "Sifra, Tzav, Chapter 5 1", "Sifra, Tzav, Chapter 5 2", "Sifra, Tzav, Chapter 5 3", "Onkelos Lev 6:13"])
+
+# -------------------------- Lev.6.14 · ETNACHTA_SPLIT ----------------------
+# על מחבת בשמן תעשה מרבכת תביאנה … תפיני מנחת פתים תקריב ריח ניחח ליהוה
+# "[EN-AID] From top split: LEFT «על מחבת בשמן תעשה מרבכת תביאנה» / RIGHT
+# «תפיני מנחת פתים תקריב ריח ניחח ליהוה». Derive claim from Hebrew arms. Lev
+# 6:14."
+m.step("Lev.6.14")
+# witness-tier presupposed read: three_logs_by_resemblance on griddle_spec —
+# read, not installed
+m.witness_read("griddle_spec", "three_logs_by_resemblance",
+                cites=["Sifra, Tzav, Chapter 4 1", "Sifra, Tzav, Chapter 4 3", "Sifra, Tzav, Chapter 4 5", "Sifra, Tzav, Chapter 4 6"])
+
+# -------------------------- Lev.6.15 · ETNACHTA_SPLIT ----------------------
+# והכהן המשיח תחתיו מבניו יעשה אתה … חק עולם ליהוה כליל תקטר
+# "[EN-AID] From top split: LEFT «והכהן המשיח תחתיו מבניו יעשה אתה» / RIGHT
+# «חק עולם ליהוה כליל תקטר». Derive claim from Hebrew arms. Lev 6:15."
+m.step("Lev.6.15")
+
+# -------------------------- Lev.6.16 · TREE_CLAIM --------------------------
+# וכל מנחת כהן כליל תהיה … לא תאכל
+# "[EN-AID] From top split: LEFT «וכל מנחת כהן כליל תהיה» / RIGHT «לא תאכל».
+# Derive claim from Hebrew arms. Lev 6:16."
+m.step("Lev.6.16")
+# witness-tier presupposed read: never_eaten on priest_minchah — read, not
+# installed
+m.witness_read("priest_minchah", "never_eaten",
+                cites=["Sifra, Tzav, Chapter 5 4"])
+
+# -------------------------- Lev.6.17 · TREE_CLAIM --------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 6:17."
+m.step("Lev.6.17")
+
+# -------------------------- Lev.6.18 · ETNACHTA_SPLIT ----------------------
+# דבר אל אהרן ואל בניו לאמר זאת תורת החטאת … במקום אשר תשחט העלה תשחט החטאת
+# לפני יהוה קדש קדשים הוא
+# "[EN-AID] From top split: LEFT «דבר אל אהרן ואל בניו לאמר זאת תורת החטאת»
+# / RIGHT «במקום אשר תשחט העלה תשחט החטאת לפני יהוה קדש קדשים הוא». Derive
+# claim from Hebrew arms. Lev 6:18."
+m.step("Lev.6.18")
+# witness-tier presupposed read: north_and_washing on chatat_law — read, not
+# installed
+m.witness_read("chatat_law", "north_and_washing",
+                cites=["Sifra, Tzav, Section 4 1", "Sifra, Tzav, Section 4 2", "Sifra, Tzav, Section 4 3", "Onkelos Lev 6:19"])
+
+# -------------------------- Lev.6.19 · ETNACHTA_SPLIT ----------------------
+# הכהן המחטא אתה יאכלנה … במקום קדש תאכל בחצר אהל מועד
+# "[EN-AID] From top split: LEFT «הכהן המחטא אתה יאכלנה» / RIGHT «במקום קדש
+# תאכל בחצר אהל מועד». Derive claim from Hebrew arms. Lev 6:19."
+m.step("Lev.6.19")
+
+# -------------------------- Lev.6.20 · ETNACHTA_SPLIT ----------------------
+# כל אשר יגע בבשרה יקדש … ואשר יזה מדמה על הבגד אשר יזה עליה תכבס במקום קדש
+# "[EN-AID] From top split: LEFT «כל אשר יגע בבשרה יקדש» / RIGHT «ואשר יזה
+# מדמה על הבגד אשר יזה עליה תכבס במקום קדש». Derive claim from Hebrew arms.
+# Lev 6:20."
+m.step("Lev.6.20")
+# witness-tier presupposed read: sprinkle_fitness on blood_washing — read,
+# not installed
+m.witness_read("blood_washing", "sprinkle_fitness",
+                cites=["Sifra, Tzav, Chapter 6 1", "Sifra, Tzav, Chapter 6 2", "Sifra, Tzav, Chapter 6 3", "Sifra, Tzav, Chapter 6 4", "Sifra, Tzav, Chapter 6 5", "Sifra, Tzav, Chapter 6 6", "Sifra, Tzav, Chapter 6 7", "Sifra, Tzav, Chapter 6 8"])
+
+# -------------------------- Lev.6.21 · ETNACHTA_SPLIT ----------------------
+# וכלי חרש אשר תבשל בו ישבר … ואם בכלי נחשת בשלה ומרק ושטף במים
+# "[EN-AID] From top split: LEFT «וכלי חרש אשר תבשל בו ישבר» / RIGHT «ואם
+# בכלי נחשת בשלה ומרק ושטף במים». Derive claim from Hebrew arms. Lev 6:21."
+m.step("Lev.6.21")
+# witness-tier presupposed read: break_scour_rinse on vessel_purge — read,
+# not installed
+m.witness_read("vessel_purge", "break_scour_rinse",
+                cites=["Sifra, Tzav, Chapter 7 1", "Sifra, Tzav, Chapter 7 2", "Sifra, Tzav, Chapter 7 3", "Sifra, Tzav, Chapter 7 4", "Sifra, Tzav, Chapter 7 5", "Sifra, Tzav, Chapter 7 6"])
+
+# -------------------------- Lev.6.22 · ETNACHTA_SPLIT ----------------------
+# כל זכר בכהנים יאכל אתה … קדש קדשים הוא
+# "[EN-AID] From top split: LEFT «כל זכר בכהנים יאכל אתה» / RIGHT «קדש קדשים
+# הוא». Derive claim from Hebrew arms. Lev 6:22."
+m.step("Lev.6.22")
+
+# -------------------------- Lev.6.23 · ETNACHTA_SPLIT ----------------------
+# וכל חטאת אשר יובא מדמה אל אהל מועד לכפר בקדש לא תאכל … באש תשרף
+# "[EN-AID] From top split: LEFT «וכל חטאת אשר יובא מדמה אל אהל מועד לכפר
+# בקדש לא תאכל» / RIGHT «באש תשרף». Derive claim from Hebrew arms. Lev
+# 6:23."
+m.step("Lev.6.23")
+# witness-tier presupposed read: enters_unfits on blood_entry — read, not
+# installed
+m.witness_read("blood_entry", "enters_unfits",
+                cites=["Sifra, Tzav, Chapter 8 1", "Sifra, Tzav, Chapter 8 2", "Sifra, Tzav, Chapter 8 3", "Sifra, Tzav, Chapter 8 4", "Sifra, Tzav, Chapter 8 5", "Sifra, Tzav, Chapter 8 6", "Sifra, Tzav, Chapter 8 7", "Sifra, Tzav, Chapter 8 8"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('altar_fire', 'all_night_window'), ('sancta_surfaces', 'typed_consecration'), ('fire_topology', 'outer_altar_source'), ('ash_lifting', 'dress_and_procedure'), ('ash_carrying', 'lesser_garments'), ('perpetual_fire', 'ban_and_schedule'), ('minchah_intake', 'one_law_and_corner'), ('remainder_eating', 'matzah_mitzvah'), ('leaven_ops', 'apportionment_gate'), ('touch_sanctify', 'absorption_rule'), ('chavitin_machine', 'halving_invariant'), ('griddle_spec', 'three_logs_by_resemblance'), ('priest_minchah', 'never_eaten'), ('chatat_law', 'north_and_washing'), ('blood_washing', 'sprinkle_fitness'), ('vessel_purge', 'break_scour_rinse'), ('blood_entry', 'enters_unfits')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Tzav, Chapter 1 3', 'Sifra, Tzav, Chapter 1 4', 'Sifra, Tzav, Chapter 1 5', 'Sifra, Tzav, Chapter 1 6', 'Sifra, Tzav, Chapter 1 7', 'Sifra, Tzav, Chapter 1 8', 'Sifra, Tzav, Chapter 1 9', 'Sifra, Tzav, Chapter 1 10', 'Sifra, Tzav, Chapter 1 13', 'Sifra, Tzav, Chapter 1 15']
+    assert all('all_night_window' not in f for f in m.WORLD["facts"])
+    assert 'altar_fire' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Tzav, Chapter 1 11', 'Sifra, Tzav, Chapter 1 12']
+    assert all('typed_consecration' not in f for f in m.WORLD["facts"])
+    assert 'sancta_surfaces' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Tzav, Chapter 1 16']
+    assert all('outer_altar_source' not in f for f in m.WORLD["facts"])
+    assert 'fire_topology' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Tzav, Chapter 2 1', 'Sifra, Tzav, Chapter 2 2', 'Sifra, Tzav, Chapter 2 3', 'Sifra, Tzav, Chapter 2 4', 'Sifra, Tzav, Chapter 2 5']
+    assert all('dress_and_procedure' not in f for f in m.WORLD["facts"])
+    assert 'ash_lifting' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Tzav, Chapter 2 6']
+    assert all('lesser_garments' not in f for f in m.WORLD["facts"])
+    assert 'ash_carrying' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Tzav, Chapter 2 7', 'Sifra, Tzav, Chapter 2 8', 'Sifra, Tzav, Chapter 2 9', 'Sifra, Tzav, Chapter 2 10', 'Sifra, Tzav, Chapter 2 11']
+    assert all('ban_and_schedule' not in f for f in m.WORLD["facts"])
+    assert 'perpetual_fire' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Tzav, Section 2 1', 'Sifra, Tzav, Section 2 3', 'Sifra, Tzav, Section 2 4', 'Sifra, Tzav, Section 2 5', 'Sifra, Tzav, Section 2 6']
+    assert all('one_law_and_corner' not in f for f in m.WORLD["facts"])
+    assert 'minchah_intake' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Tzav, Section 2 7', 'Sifra, Tzav, Section 2 9', 'Sifra, Tzav, Section 2 11', 'Sifra, Tzav, Section 2 12']
+    assert all('matzah_mitzvah' not in f for f in m.WORLD["facts"])
+    assert 'remainder_eating' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Tzav, Chapter 3 1', 'Sifra, Tzav, Chapter 3 2', 'Sifra, Tzav, Chapter 3 3', 'Sifra, Tzav, Chapter 3 4']
+    assert all('apportionment_gate' not in f for f in m.WORLD["facts"])
+    assert 'leaven_ops' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Tzav, Chapter 3 5', 'Sifra, Tzav, Chapter 3 6']
+    assert all('absorption_rule' not in f for f in m.WORLD["facts"])
+    assert 'touch_sanctify' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Sifra, Tzav, Section 3 3', 'Sifra, Tzav, Section 3 4', 'Sifra, Tzav, Section 3 6', 'Sifra, Tzav, Section 3 7', 'Sifra, Tzav, Section 3 8', 'Sifra, Tzav, Section 3 9', 'Sifra, Tzav, Chapter 5 1', 'Sifra, Tzav, Chapter 5 2', 'Sifra, Tzav, Chapter 5 3', 'Onkelos Lev 6:13']
+    assert all('halving_invariant' not in f for f in m.WORLD["facts"])
+    assert 'chavitin_machine' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Sifra, Tzav, Chapter 4 1', 'Sifra, Tzav, Chapter 4 3', 'Sifra, Tzav, Chapter 4 5', 'Sifra, Tzav, Chapter 4 6']
+    assert all('three_logs_by_resemblance' not in f for f in m.WORLD["facts"])
+    assert 'griddle_spec' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[12]["cites"] == ['Sifra, Tzav, Chapter 5 4']
+    assert all('never_eaten' not in f for f in m.WORLD["facts"])
+    assert 'priest_minchah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[13]["cites"] == ['Sifra, Tzav, Section 4 1', 'Sifra, Tzav, Section 4 2', 'Sifra, Tzav, Section 4 3', 'Onkelos Lev 6:19']
+    assert all('north_and_washing' not in f for f in m.WORLD["facts"])
+    assert 'chatat_law' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[14]["cites"] == ['Sifra, Tzav, Chapter 6 1', 'Sifra, Tzav, Chapter 6 2', 'Sifra, Tzav, Chapter 6 3', 'Sifra, Tzav, Chapter 6 4', 'Sifra, Tzav, Chapter 6 5', 'Sifra, Tzav, Chapter 6 6', 'Sifra, Tzav, Chapter 6 7', 'Sifra, Tzav, Chapter 6 8']
+    assert all('sprinkle_fitness' not in f for f in m.WORLD["facts"])
+    assert 'blood_washing' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[15]["cites"] == ['Sifra, Tzav, Chapter 7 1', 'Sifra, Tzav, Chapter 7 2', 'Sifra, Tzav, Chapter 7 3', 'Sifra, Tzav, Chapter 7 4', 'Sifra, Tzav, Chapter 7 5', 'Sifra, Tzav, Chapter 7 6']
+    assert all('break_scour_rinse' not in f for f in m.WORLD["facts"])
+    assert 'vessel_purge' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[16]["cites"] == ['Sifra, Tzav, Chapter 8 1', 'Sifra, Tzav, Chapter 8 2', 'Sifra, Tzav, Chapter 8 3', 'Sifra, Tzav, Chapter 8 4', 'Sifra, Tzav, Chapter 8 5', 'Sifra, Tzav, Chapter 8 6', 'Sifra, Tzav, Chapter 8 7', 'Sifra, Tzav, Chapter 8 8']
+    assert all('enters_unfits' not in f for f in m.WORLD["facts"])
+    assert 'blood_entry' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_07_asham_procedure
+###############################################################################
+
+m = Machine("lev_07_asham_procedure")
+
+# -------------------------- Lev.7.1 · ETNACHTA_SPLIT -----------------------
+# וזאת תורת האשם … קדש קדשים הוא
+# "[EN-AID] From top split: LEFT «וזאת תורת האשם» / RIGHT «קדש קדשים הוא».
+# Derive claim from Hebrew arms. Lev 7:1."
+m.step("Lev.7.1")
+# witness-tier presupposed read: blood_below on asham_law — read, not
+# installed
+m.witness_read("asham_law", "blood_below",
+                cites=["Sifra, Tzav, Section 5 1", "Sifra, Tzav, Section 5 2"])
+
+# -------------------------- Lev.7.2 · ETNACHTA_SPLIT -----------------------
+# במקום אשר ישחטו את העלה ישחטו את האשם … ואת דמו יזרק על המזבח סביב
+# "[EN-AID] From top split: LEFT «במקום אשר ישחטו את העלה ישחטו את האשם» /
+# RIGHT «ואת דמו יזרק על המזבח סביב». Derive claim from Hebrew arms. Lev
+# 7:2."
+m.step("Lev.7.2")
+# witness-tier presupposed read: open_class on slaughterers — read, not
+# installed
+m.witness_read("slaughterers", "open_class",
+                cites=["Sifra, Tzav, Section 5 3"])
+
+# -------------------------- Lev.7.3 · ETNACHTA_SPLIT -----------------------
+# ואת כל חלבו יקריב ממנו … את האליה ואת החלב המכסה את הקרב
+# "[EN-AID] From top split: LEFT «ואת כל חלבו יקריב ממנו» / RIGHT «את האליה
+# ואת החלב המכסה את הקרב». Derive claim from Hebrew arms. Lev 7:3."
+m.step("Lev.7.3")
+
+# -------------------------- Lev.7.4 · ETNACHTA_SPLIT -----------------------
+# ואת שתי הכלית ואת החלב אשר עליהן אשר על הכסלים … ואת היתרת על הכבד על
+# הכלית יסירנה
+# "[EN-AID] From top split: LEFT «ואת שתי הכלית ואת החלב אשר עליהן אשר על
+# הכסלים» / RIGHT «ואת היתרת על הכבד על הכלית יסירנה». Derive claim from
+# Hebrew arms. Lev 7:4."
+m.step("Lev.7.4")
+
+# -------------------------- Lev.7.5 · ETNACHTA_SPLIT -----------------------
+# והקטיר אתם הכהן המזבחה אשה ליהוה … אשם הוא
+# "[EN-AID] From top split: LEFT «והקטיר אתם הכהן המזבחה אשה ליהוה» / RIGHT
+# «אשם הוא». Derive claim from Hebrew arms. Lev 7:5."
+m.step("Lev.7.5")
+# witness-tier presupposed read: word_position on asham_intent — read, not
+# installed
+m.witness_read("asham_intent", "word_position",
+                cites=["Sifra, Tzav, Section 5 5", "Sifra, Tzav, Section 5 6", "Sifra, Tzav, Section 5 7", "Sifra, Tzav, Section 5 8"])
+
+# -------------------------- Lev.7.6 · ETNACHTA_SPLIT -----------------------
+# כל זכר בכהנים יאכלנו … במקום קדוש יאכל קדש קדשים הוא
+# "[EN-AID] From top split: LEFT «כל זכר בכהנים יאכלנו» / RIGHT «במקום קדוש
+# יאכל קדש קדשים הוא». Derive claim from Hebrew arms. Lev 7:6."
+m.step("Lev.7.6")
+# witness-tier presupposed read: born_blemished on blemish_ladder — read,
+# not installed
+m.witness_read("blemish_ladder", "born_blemished",
+                cites=["Sifra, Tzav, Section 5 9", "Sifra, Tzav, Section 5 10"])
+
+# -------------------------- Lev.7.7 · ETNACHTA_SPLIT -----------------------
+# כחטאת כאשם תורה אחת להם … הכהן אשר יכפר בו לו יהיה
+# "[EN-AID] From top split: LEFT «כחטאת כאשם תורה אחת להם» / RIGHT «הכהן אשר
+# יכפר בו לו יהיה». Derive claim from Hebrew arms. Lev 7:7."
+m.step("Lev.7.7")
+# witness-tier presupposed read: follows_flesh on hide_distribution — read,
+# not installed
+m.witness_read("hide_distribution", "follows_flesh",
+                cites=["Sifra, Tzav, Chapter 9 1", "Sifra, Tzav, Chapter 9 2", "Sifra, Tzav, Chapter 9 4", "Sifra, Tzav, Chapter 9 5"])
+
+# -------------------------- Lev.7.8 · ETNACHTA_SPLIT -----------------------
+# והכהן המקריב את עלת איש … עור העלה אשר הקריב לכהן לו יהיה
+# "[EN-AID] From top split: LEFT «והכהן המקריב את עלת איש» / RIGHT «עור העלה
+# אשר הקריב לכהן לו יהיה». Derive claim from Hebrew arms. Lev 7:8."
+m.step("Lev.7.8")
+
+# -------------------------- Lev.7.9 · ETNACHTA_SPLIT -----------------------
+# וכל מנחה אשר תאפה בתנור וכל נעשה במרחשת ועל מחבת … לכהן המקריב אתה לו תהיה
+# "[EN-AID] From top split: LEFT «וכל מנחה אשר תאפה בתנור וכל נעשה במרחשת
+# ועל מחבת» / RIGHT «לכהן המקריב אתה לו תהיה». Derive claim from Hebrew
+# arms. Lev 7:9."
+m.step("Lev.7.9")
+# witness-tier presupposed read: no_trades on dues_apportionment — read, not
+# installed
+m.witness_read("dues_apportionment", "no_trades",
+                cites=["Sifra, Tzav, Chapter 10 1", "Sifra, Tzav, Chapter 10 2", "Sifra, Tzav, Chapter 10 3", "Sifra, Tzav, Chapter 10 8", "Sifra, Tzav, Chapter 10 9", "Onkelos Lev 7:10"])
+
+# -------------------------- Lev.7.10 · ETNACHTA_SPLIT ----------------------
+# וכל מנחה בלולה בשמן וחרבה … לכל בני אהרן תהיה איש כאחיו
+# "[EN-AID] From top split: LEFT «וכל מנחה בלולה בשמן וחרבה» / RIGHT «לכל
+# בני אהרן תהיה איש כאחיו». Derive claim from Hebrew arms. Lev 7:10."
+m.step("Lev.7.10")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('asham_law', 'blood_below'), ('slaughterers', 'open_class'), ('asham_intent', 'word_position'), ('blemish_ladder', 'born_blemished'), ('hide_distribution', 'follows_flesh'), ('dues_apportionment', 'no_trades')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Tzav, Section 5 1', 'Sifra, Tzav, Section 5 2']
+    assert all('blood_below' not in f for f in m.WORLD["facts"])
+    assert 'asham_law' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Tzav, Section 5 3']
+    assert all('open_class' not in f for f in m.WORLD["facts"])
+    assert 'slaughterers' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Tzav, Section 5 5', 'Sifra, Tzav, Section 5 6', 'Sifra, Tzav, Section 5 7', 'Sifra, Tzav, Section 5 8']
+    assert all('word_position' not in f for f in m.WORLD["facts"])
+    assert 'asham_intent' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Tzav, Section 5 9', 'Sifra, Tzav, Section 5 10']
+    assert all('born_blemished' not in f for f in m.WORLD["facts"])
+    assert 'blemish_ladder' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Tzav, Chapter 9 1', 'Sifra, Tzav, Chapter 9 2', 'Sifra, Tzav, Chapter 9 4', 'Sifra, Tzav, Chapter 9 5']
+    assert all('follows_flesh' not in f for f in m.WORLD["facts"])
+    assert 'hide_distribution' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Tzav, Chapter 10 1', 'Sifra, Tzav, Chapter 10 2', 'Sifra, Tzav, Chapter 10 3', 'Sifra, Tzav, Chapter 10 8', 'Sifra, Tzav, Chapter 10 9', 'Onkelos Lev 7:10']
+    assert all('no_trades' not in f for f in m.WORLD["facts"])
+    assert 'dues_apportionment' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_07_shelamim_types
+###############################################################################
+
+m = Machine("lev_07_shelamim_types")
+
+# -------------------------- Lev.7.11 · ETNACHTA_SPLIT ----------------------
+# וזאת תורת זבח השלמים … אשר יקריב ליהוה
+# "[EN-AID] From top split: LEFT «וזאת תורת זבח השלמים» / RIGHT «אשר יקריב
+# ליהוה». Derive claim from Hebrew arms. Lev 7:11."
+m.step("Lev.7.11")
+# witness-tier presupposed read: asymmetry_and_sourcing on todah_class —
+# read, not installed
+m.witness_read("todah_class", "asymmetry_and_sourcing",
+                cites=["Sifra, Tzav, Section 6 3", "Sifra, Tzav, Section 6 5", "Sifra, Tzav, Section 6 7", "Sifra, Tzav, Section 6 9", "Sifra, Tzav, Section 6 11"])
+
+# -------------------------- Lev.7.12 · COND_אם -----------------------------
+# אם על תודה יקריבנו והקריב על זבח התודה חלות מצות בלולת בשמן  … וסלת מרבכת
+# חלת בלולת בשמן
+# "[EN-AID] From top split: LEFT «אם על תודה יקריבנו והקריב על זבח התודה
+# חלות מצות בלולת בשמן ורקיקי מצות משחים בש» / RIGHT «וסלת מרבכת חלת בלולת
+# בשמן». Derive claim from Hebrew arms. Lev 7:12."
+m.step("Lev.7.12")
+# witness-tier presupposed read: sinai_constant on todah_oil — read, not
+# installed
+m.witness_read("todah_oil", "sinai_constant",
+                cites=["Sifra, Tzav, Chapter 11 4", "Sifra, Tzav, Chapter 11 5", "Sifra, Tzav, Chapter 11 6"])
+
+# -------------------------- Lev.7.13 · ETNACHTA_SPLIT ----------------------
+# על חלת לחם חמץ יקריב קרבנו … על זבח תודת שלמיו
+# "[EN-AID] From top split: LEFT «על חלת לחם חמץ יקריב קרבנו» / RIGHT «על
+# זבח תודת שלמיו». Derive claim from Hebrew arms. Lev 7:13."
+m.step("Lev.7.13")
+# witness-tier presupposed read: forty_computed on todah_loaves — read, not
+# installed
+m.witness_read("todah_loaves", "forty_computed",
+                cites=["Sifra, Tzav, Section 7 1", "Sifra, Tzav, Section 7 3", "Sifra, Tzav, Section 7 4", "Sifra, Tzav, Section 7 6", "Sifra, Tzav, Section 7 7", "Sifra, Tzav, Section 7 8", "Sifra, Tzav, Section 7 9"])
+# witness-tier presupposed read: slaughter_commit on bread_consecration —
+# read, not installed
+m.witness_read("bread_consecration", "slaughter_commit",
+                cites=["Sifra, Tzav, Chapter 11 1", "Sifra, Tzav, Chapter 11 2", "Sifra, Tzav, Chapter 11 3", "Sifra, Tzav, Chapter 11 10", "Sifra, Tzav, Chapter 11 11"])
+
+# -------------------------- Lev.7.14 · ETNACHTA_SPLIT ----------------------
+# והקריב ממנו אחד מכל קרבן תרומה ליהוה … לכהן הזרק את דם השלמים לו יהיה
+# "[EN-AID] From top split: LEFT «והקריב ממנו אחד מכל קרבן תרומה ליהוה» /
+# RIGHT «לכהן הזרק את דם השלמים לו יהיה». Derive claim from Hebrew arms. Lev
+# 7:14."
+m.step("Lev.7.14")
+
+# -------------------------- Lev.7.15 · ETNACHTA_SPLIT ----------------------
+# ובשר זבח תודת שלמיו ביום קרבנו יאכל … לא יניח ממנו עד בקר
+# "[EN-AID] From top split: LEFT «ובשר זבח תודת שלמיו ביום קרבנו יאכל» /
+# RIGHT «לא יניח ממנו עד בקר». Derive claim from Hebrew arms. Lev 7:15."
+m.step("Lev.7.15")
+# witness-tier presupposed read: intent_twin_laws on eating_windows — read,
+# not installed
+m.witness_read("eating_windows", "intent_twin_laws",
+                cites=["Sifra, Tzav, Chapter 12 1", "Sifra, Tzav, Chapter 12 3", "Sifra, Tzav, Chapter 12 5", "Sifra, Tzav, Chapter 12 6", "Sifra, Tzav, Chapter 12 7", "Sifra, Tzav, Chapter 12 9", "Sifra, Tzav, Chapter 12 11", "Sifra, Tzav, Chapter 12 13", "Sifra, Tzav, Chapter 12 14", "Sifra, Tzav, Chapter 12 15", "Onkelos Lev 7:15"])
+
+# -------------------------- Lev.7.16 · COND_ואם ----------------------------
+# ואם נדר או נדבה זבח קרבנו ביום הקריבו את זבחו יאכל … וממחרת והנותר ממנו
+# יאכל
+# "[EN-AID] From top split: LEFT «ואם נדר או נדבה זבח קרבנו ביום הקריבו את
+# זבחו יאכל» / RIGHT «וממחרת והנותר ממנו יאכל». Derive claim from Hebrew
+# arms. Lev 7:16."
+m.step("Lev.7.16")
+
+# -------------------------- Lev.7.17 · ETNACHTA_SPLIT ----------------------
+# והנותר מבשר הזבח … ביום השלישי באש ישרף
+# "[EN-AID] From top split: LEFT «והנותר מבשר הזבח» / RIGHT «ביום השלישי באש
+# ישרף». Derive claim from Hebrew arms. Lev 7:17."
+m.step("Lev.7.17")
+
+# -------------------------- Lev.7.18 · COND_ואם ----------------------------
+# ואם האכל יאכל מבשר זבח שלמיו ביום השלישי לא ירצה המקריב אתו  … והנפש האכלת
+# ממנו עונה תשא
+# "[EN-AID] From top split: LEFT «ואם האכל יאכל מבשר זבח שלמיו ביום השלישי
+# לא ירצה המקריב אתו לא יחשב לו פגול יהיה» / RIGHT «והנפש האכלת ממנו עונה
+# תשא». Derive claim from Hebrew arms. Lev 7:18."
+m.step("Lev.7.18")
+# witness-tier presupposed read: thought_not_deed on piggul_machine — read,
+# not installed
+m.witness_read("piggul_machine", "thought_not_deed",
+                cites=["Sifra, Tzav, Section 8 1", "Sifra, Tzav, Section 8 4", "Sifra, Tzav, Section 8 5", "Sifra, Tzav, Section 8 6", "Sifra, Tzav, Section 8 9", "Sifra, Tzav, Chapter 13 2", "Sifra, Tzav, Chapter 13 5", "Sifra, Tzav, Chapter 13 6", "Sifra, Tzav, Chapter 13 9", "Onkelos Lev 7:18"])
+
+# -------------------------- Lev.7.19 · ETNACHTA_SPLIT ----------------------
+# והבשר אשר יגע בכל טמא לא יאכל באש ישרף … והבשר כל טהור יאכל בשר
+# "[EN-AID] From top split: LEFT «והבשר אשר יגע בכל טמא לא יאכל באש ישרף» /
+# RIGHT «והבשר כל טהור יאכל בשר». Derive claim from Hebrew arms. Lev 7:19."
+m.step("Lev.7.19")
+# witness-tier presupposed read: touch_and_burn on flesh_tumah — read, not
+# installed
+m.witness_read("flesh_tumah", "touch_and_burn",
+                cites=["Sifra, Tzav, Section 9 1", "Sifra, Tzav, Section 9 2", "Sifra, Tzav, Section 9 3", "Sifra, Tzav, Section 9 4", "Sifra, Tzav, Section 9 5", "Sifra, Tzav, Section 9 6", "Sifra, Tzav, Section 9 7", "Onkelos Lev 7:19"])
+# witness-tier presupposed read: after_sprinkling on tumah_liability — read,
+# not installed
+m.witness_read("tumah_liability", "after_sprinkling",
+                cites=["Sifra, Tzav, Section 9 8", "Sifra, Tzav, Section 9 9", "Sifra, Tzav, Section 9 10", "Sifra, Tzav, Chapter 14 1", "Sifra, Tzav, Chapter 14 2"])
+
+# -------------------------- Lev.7.20 · ETNACHTA_SPLIT ----------------------
+# והנפש אשר תאכל בשר מזבח השלמים אשר ליהוה וטמאתו עליו … ונכרתה הנפש ההוא
+# מעמיה
+# "[EN-AID] From top split: LEFT «והנפש אשר תאכל בשר מזבח השלמים אשר ליהוה
+# וטמאתו עליו» / RIGHT «ונכרתה הנפש ההוא מעמיה». Derive claim from Hebrew
+# arms. Lev 7:20."
+m.step("Lev.7.20")
+# witness-tier presupposed read: four_routes on body_tumah — read, not
+# installed
+m.witness_read("body_tumah", "four_routes",
+                cites=["Sifra, Tzav, Chapter 14 3", "Sifra, Tzav, Chapter 14 4", "Sifra, Tzav, Chapter 14 5", "Sifra, Tzav, Chapter 14 6", "Sifra, Tzav, Chapter 14 7", "Onkelos Lev 7:20"])
+
+# -------------------------- Lev.7.21 · COND_כי -----------------------------
+# ונפש כי תגע בכל טמא בטמאת אדם או בבהמה טמאה או בכל שקץ טמא ו … ונכרתה הנפש
+# ההוא מעמיה
+# "[EN-AID] From top split: LEFT «ונפש כי תגע בכל טמא בטמאת אדם או בבהמה
+# טמאה או בכל שקץ טמא ואכל מבשר זבח השלמים » / RIGHT «ונכרתה הנפש ההוא
+# מעמיה». Derive claim from Hebrew arms. Lev 7:21."
+m.step("Lev.7.21")
+# witness-tier presupposed read: compared_frames on two_machines — read, not
+# installed
+m.witness_read("two_machines", "compared_frames",
+                cites=["Sifra, Tzav, Chapter 15 1", "Sifra, Tzav, Chapter 15 2", "Sifra, Tzav, Chapter 15 3", "Sifra, Tzav, Chapter 15 4", "Sifra, Tzav, Chapter 15 5", "Sifra, Tzav, Chapter 15 6", "Sifra, Tzav, Chapter 15 7"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('todah_class', 'asymmetry_and_sourcing'), ('todah_oil', 'sinai_constant'), ('todah_loaves', 'forty_computed'), ('bread_consecration', 'slaughter_commit'), ('eating_windows', 'intent_twin_laws'), ('piggul_machine', 'thought_not_deed'), ('flesh_tumah', 'touch_and_burn'), ('tumah_liability', 'after_sprinkling'), ('body_tumah', 'four_routes'), ('two_machines', 'compared_frames')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Tzav, Section 6 3', 'Sifra, Tzav, Section 6 5', 'Sifra, Tzav, Section 6 7', 'Sifra, Tzav, Section 6 9', 'Sifra, Tzav, Section 6 11']
+    assert all('asymmetry_and_sourcing' not in f for f in m.WORLD["facts"])
+    assert 'todah_class' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Tzav, Chapter 11 4', 'Sifra, Tzav, Chapter 11 5', 'Sifra, Tzav, Chapter 11 6']
+    assert all('sinai_constant' not in f for f in m.WORLD["facts"])
+    assert 'todah_oil' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Tzav, Section 7 1', 'Sifra, Tzav, Section 7 3', 'Sifra, Tzav, Section 7 4', 'Sifra, Tzav, Section 7 6', 'Sifra, Tzav, Section 7 7', 'Sifra, Tzav, Section 7 8', 'Sifra, Tzav, Section 7 9']
+    assert all('forty_computed' not in f for f in m.WORLD["facts"])
+    assert 'todah_loaves' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Tzav, Chapter 11 1', 'Sifra, Tzav, Chapter 11 2', 'Sifra, Tzav, Chapter 11 3', 'Sifra, Tzav, Chapter 11 10', 'Sifra, Tzav, Chapter 11 11']
+    assert all('slaughter_commit' not in f for f in m.WORLD["facts"])
+    assert 'bread_consecration' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Tzav, Chapter 12 1', 'Sifra, Tzav, Chapter 12 3', 'Sifra, Tzav, Chapter 12 5', 'Sifra, Tzav, Chapter 12 6', 'Sifra, Tzav, Chapter 12 7', 'Sifra, Tzav, Chapter 12 9', 'Sifra, Tzav, Chapter 12 11', 'Sifra, Tzav, Chapter 12 13', 'Sifra, Tzav, Chapter 12 14', 'Sifra, Tzav, Chapter 12 15', 'Onkelos Lev 7:15']
+    assert all('intent_twin_laws' not in f for f in m.WORLD["facts"])
+    assert 'eating_windows' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Tzav, Section 8 1', 'Sifra, Tzav, Section 8 4', 'Sifra, Tzav, Section 8 5', 'Sifra, Tzav, Section 8 6', 'Sifra, Tzav, Section 8 9', 'Sifra, Tzav, Chapter 13 2', 'Sifra, Tzav, Chapter 13 5', 'Sifra, Tzav, Chapter 13 6', 'Sifra, Tzav, Chapter 13 9', 'Onkelos Lev 7:18']
+    assert all('thought_not_deed' not in f for f in m.WORLD["facts"])
+    assert 'piggul_machine' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Tzav, Section 9 1', 'Sifra, Tzav, Section 9 2', 'Sifra, Tzav, Section 9 3', 'Sifra, Tzav, Section 9 4', 'Sifra, Tzav, Section 9 5', 'Sifra, Tzav, Section 9 6', 'Sifra, Tzav, Section 9 7', 'Onkelos Lev 7:19']
+    assert all('touch_and_burn' not in f for f in m.WORLD["facts"])
+    assert 'flesh_tumah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Tzav, Section 9 8', 'Sifra, Tzav, Section 9 9', 'Sifra, Tzav, Section 9 10', 'Sifra, Tzav, Chapter 14 1', 'Sifra, Tzav, Chapter 14 2']
+    assert all('after_sprinkling' not in f for f in m.WORLD["facts"])
+    assert 'tumah_liability' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Tzav, Chapter 14 3', 'Sifra, Tzav, Chapter 14 4', 'Sifra, Tzav, Chapter 14 5', 'Sifra, Tzav, Chapter 14 6', 'Sifra, Tzav, Chapter 14 7', 'Onkelos Lev 7:20']
+    assert all('four_routes' not in f for f in m.WORLD["facts"])
+    assert 'body_tumah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Tzav, Chapter 15 1', 'Sifra, Tzav, Chapter 15 2', 'Sifra, Tzav, Chapter 15 3', 'Sifra, Tzav, Chapter 15 4', 'Sifra, Tzav, Chapter 15 5', 'Sifra, Tzav, Chapter 15 6', 'Sifra, Tzav, Chapter 15 7']
+    assert all('compared_frames' not in f for f in m.WORLD["facts"])
+    assert 'two_machines' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_07_fat_blood_dues
+###############################################################################
+
+m = Machine("lev_07_fat_blood_dues")
+
+# -------------------------- Lev.7.22 · TREE_CLAIM --------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 7:22."
+m.step("Lev.7.22")
+
+# -------------------------- Lev.7.23 · ETNACHTA_SPLIT ----------------------
+# דבר אל בני ישראל לאמר … כל חלב שור וכשב ועז לא תאכלו
+# "[EN-AID] From top split: LEFT «דבר אל בני ישראל לאמר» / RIGHT «כל חלב שור
+# וכשב ועז לא תאכלו». Derive claim from Hebrew arms. Lev 7:23."
+m.step("Lev.7.23")
+# witness-tier presupposed read: israel_scope on cheilev_ban — read, not
+# installed
+m.witness_read("cheilev_ban", "israel_scope",
+                cites=["Sifra, Tzav, Section 10 1", "Sifra, Tzav, Section 10 2", "Sifra, Tzav, Section 10 4"])
+
+# -------------------------- Lev.7.24 · ETNACHTA_SPLIT ----------------------
+# וחלב נבלה וחלב טרפה יעשה לכל מלאכה … ואכל לא תאכלהו
+# "[EN-AID] From top split: LEFT «וחלב נבלה וחלב טרפה יעשה לכל מלאכה» /
+# RIGHT «ואכל לא תאכלהו». Derive claim from Hebrew arms. Lev 7:24."
+m.step("Lev.7.24")
+# witness-tier presupposed read: inversion on carrion_fat — read, not
+# installed
+m.witness_read("carrion_fat", "inversion",
+                cites=["Sifra, Tzav, Section 10 5", "Sifra, Tzav, Section 10 6", "Sifra, Tzav, Section 10 7", "Sifra, Tzav, Section 10 8"])
+
+# -------------------------- Lev.7.25 · COND_כי -----------------------------
+# כי כל אכל חלב מן הבהמה אשר יקריב ממנה אשה ליהוה … ונכרתה הנפש האכלת מעמיה
+# "[EN-AID] From top split: LEFT «כי כל אכל חלב מן הבהמה אשר יקריב ממנה אשה
+# ליהוה» / RIGHT «ונכרתה הנפש האכלת מעמיה». Derive claim from Hebrew arms.
+# Lev 7:25."
+m.step("Lev.7.25")
+# witness-tier presupposed read: sacrificial_type on cheilev_karet — read,
+# not installed
+m.witness_read("cheilev_karet", "sacrificial_type",
+                cites=["Sifra, Tzav, Section 10 9", "Sifra, Tzav, Section 10 10"])
+
+# -------------------------- Lev.7.26 · ETNACHTA_SPLIT ----------------------
+# וכל דם לא תאכלו בכל מושבתיכם … לעוף ולבהמה
+# "[EN-AID] From top split: LEFT «וכל דם לא תאכלו בכל מושבתיכם» / RIGHT
+# «לעוף ולבהמה». Derive claim from Hebrew arms. Lev 7:26."
+m.step("Lev.7.26")
+# witness-tier presupposed read: species_criteria on blood_ban — read, not
+# installed
+m.witness_read("blood_ban", "species_criteria",
+                cites=["Sifra, Tzav, Section 10 11"])
+
+# -------------------------- Lev.7.27 · ETNACHTA_SPLIT ----------------------
+# כל נפש אשר תאכל כל דם … ונכרתה הנפש ההוא מעמיה
+# "[EN-AID] From top split: LEFT «כל נפש אשר תאכל כל דם» / RIGHT «ונכרתה
+# הנפש ההוא מעמיה». Derive claim from Hebrew arms. Lev 7:27."
+m.step("Lev.7.27")
+
+# -------------------------- Lev.7.28 · TREE_CLAIM --------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 7:28."
+m.step("Lev.7.28")
+
+# -------------------------- Lev.7.29 · ETNACHTA_SPLIT ----------------------
+# דבר אל בני ישראל לאמר … המקריב את זבח שלמיו ליהוה יביא את קרבנו ליהוה מזבח
+# שלמיו
+# "[EN-AID] From top split: LEFT «דבר אל בני ישראל לאמר» / RIGHT «המקריב את
+# זבח שלמיו ליהוה יביא את קרבנו ליהוה מזבח שלמיו». Derive claim from Hebrew
+# arms. Lev 7:29."
+m.step("Lev.7.29")
+
+# -------------------------- Lev.7.30 · ETNACHTA_SPLIT ----------------------
+# ידיו תביאינה את אשי יהוה … את החלב על החזה יביאנו את החזה להניף אתו תנופה
+# לפני יהוה
+# "[EN-AID] From top split: LEFT «ידיו תביאינה את אשי יהוה» / RIGHT «את החלב
+# על החזה יביאנו את החזה להניף אתו תנופה לפני יהוה». Derive claim from
+# Hebrew arms. Lev 7:30."
+m.step("Lev.7.30")
+# witness-tier presupposed read: stacked_hands on tenufah_engine — read, not
+# installed
+m.witness_read("tenufah_engine", "stacked_hands",
+                cites=["Sifra, Tzav, Section 11 1", "Sifra, Tzav, Section 11 2", "Sifra, Tzav, Section 11 3", "Sifra, Tzav, Section 11 6", "Sifra, Tzav, Section 11 9", "Sifra, Tzav, Section 11 10", "Sifra, Tzav, Section 11 11", "Sifra, Tzav, Chapter 16 2", "Sifra, Tzav, Chapter 16 3", "Onkelos Lev 7:30"])
+
+# -------------------------- Lev.7.31 · ETNACHTA_SPLIT ----------------------
+# והקטיר הכהן את החלב המזבחה … והיה החזה לאהרן ולבניו
+# "[EN-AID] From top split: LEFT «והקטיר הכהן את החלב המזבחה» / RIGHT «והיה
+# החזה לאהרן ולבניו». Derive claim from Hebrew arms. Lev 7:31."
+m.step("Lev.7.31")
+
+# -------------------------- Lev.7.32 · ETNACHTA_SPLIT ----------------------
+# ואת שוק הימין תתנו תרומה לכהן … מזבחי שלמיכם
+# "[EN-AID] From top split: LEFT «ואת שוק הימין תתנו תרומה לכהן» / RIGHT
+# «מזבחי שלמיכם». Derive claim from Hebrew arms. Lev 7:32."
+m.step("Lev.7.32")
+
+# -------------------------- Lev.7.33 · ETNACHTA_SPLIT ----------------------
+# המקריב את דם השלמים ואת החלב מבני אהרן … לו תהיה שוק הימין למנה
+# "[EN-AID] From top split: LEFT «המקריב את דם השלמים ואת החלב מבני אהרן» /
+# RIGHT «לו תהיה שוק הימין למנה». Derive claim from Hebrew arms. Lev 7:33."
+m.step("Lev.7.33")
+# witness-tier presupposed read: consent_and_acknowledgment on dues_gates —
+# read, not installed
+m.witness_read("dues_gates", "consent_and_acknowledgment",
+                cites=["Sifra, Tzav, Chapter 16 4", "Sifra, Tzav, Chapter 16 5", "Sifra, Tzav, Chapter 16 7", "Sifra, Tzav, Chapter 16 8", "Sifra, Tzav, Chapter 16 9", "Sifra, Tzav, Chapter 17 5", "Sifra, Tzav, Chapter 17 6"])
+
+# -------------------------- Lev.7.34 · COND_כי -----------------------------
+# כי את חזה התנופה ואת שוק התרומה לקחתי מאת בני ישראל מזבחי של … ואתן אתם
+# לאהרן הכהן ולבניו לחק עולם מאת בני ישראל
+# "[EN-AID] From top split: LEFT «כי את חזה התנופה ואת שוק התרומה לקחתי מאת
+# בני ישראל מזבחי שלמיהם» / RIGHT «ואתן אתם לאהרן הכהן ולבניו לחק עולם מאת
+# בני ישראל». Derive claim from Hebrew arms. Lev 7:34."
+m.step("Lev.7.34")
+
+# -------------------------- Lev.7.35 · ETNACHTA_SPLIT ----------------------
+# זאת משחת אהרן ומשחת בניו מאשי יהוה … ביום הקריב אתם לכהן ליהוה
+# "[EN-AID] From top split: LEFT «זאת משחת אהרן ומשחת בניו מאשי יהוה» /
+# RIGHT «ביום הקריב אתם לכהן ליהוה». Derive claim from Hebrew arms. Lev
+# 7:35."
+m.step("Lev.7.35")
+
+# -------------------------- Lev.7.36 · ETNACHTA_SPLIT ----------------------
+# אשר צוה יהוה לתת להם ביום משחו אתם מאת בני ישראל … חקת עולם לדרתם
+# "[EN-AID] From top split: LEFT «אשר צוה יהוה לתת להם ביום משחו אתם מאת בני
+# ישראל» / RIGHT «חקת עולם לדרתם». Derive claim from Hebrew arms. Lev 7:36."
+m.step("Lev.7.36")
+
+# -------------------------- Lev.7.37 · ETNACHTA_SPLIT ----------------------
+# זאת התורה לעלה למנחה ולחטאת ולאשם … ולמלואים ולזבח השלמים
+# "[EN-AID] From top split: LEFT «זאת התורה לעלה למנחה ולחטאת ולאשם» / RIGHT
+# «ולמלואים ולזבח השלמים». Derive claim from Hebrew arms. Lev 7:37."
+m.step("Lev.7.37")
+# witness-tier presupposed read: two_channel_charter on sinai_colophon —
+# read, not installed
+m.witness_read("sinai_colophon", "two_channel_charter",
+                cites=["Sifra, Tzav, Chapter 18 2", "Sifra, Tzav, Chapter 18 3", "Sifra, Tzav, Chapter 18 4", "Sifra, Tzav, Chapter 18 6", "Sifra, Tzav, Chapter 18 7", "Sifra, Tzav, Chapter 18 8", "Sifra, Tzav, Chapter 18 10", "Onkelos Lev 7:35"])
+
+# -------------------------- Lev.7.38 · ETNACHTA_SPLIT ----------------------
+# אשר צוה יהוה את משה בהר סיני … ביום צותו את בני ישראל להקריב את קרבניהם
+# ליהוה במדבר סיני
+# "[EN-AID] From top split: LEFT «אשר צוה יהוה את משה בהר סיני» / RIGHT
+# «ביום צותו את בני ישראל להקריב את קרבניהם ליהוה במדבר סיני». Derive claim
+# from Hebrew arms. Lev 7:38."
+m.step("Lev.7.38")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('cheilev_ban', 'israel_scope'), ('carrion_fat', 'inversion'), ('cheilev_karet', 'sacrificial_type'), ('blood_ban', 'species_criteria'), ('tenufah_engine', 'stacked_hands'), ('dues_gates', 'consent_and_acknowledgment'), ('sinai_colophon', 'two_channel_charter')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Tzav, Section 10 1', 'Sifra, Tzav, Section 10 2', 'Sifra, Tzav, Section 10 4']
+    assert all('israel_scope' not in f for f in m.WORLD["facts"])
+    assert 'cheilev_ban' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Tzav, Section 10 5', 'Sifra, Tzav, Section 10 6', 'Sifra, Tzav, Section 10 7', 'Sifra, Tzav, Section 10 8']
+    assert all('inversion' not in f for f in m.WORLD["facts"])
+    assert 'carrion_fat' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Tzav, Section 10 9', 'Sifra, Tzav, Section 10 10']
+    assert all('sacrificial_type' not in f for f in m.WORLD["facts"])
+    assert 'cheilev_karet' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Tzav, Section 10 11']
+    assert all('species_criteria' not in f for f in m.WORLD["facts"])
+    assert 'blood_ban' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Tzav, Section 11 1', 'Sifra, Tzav, Section 11 2', 'Sifra, Tzav, Section 11 3', 'Sifra, Tzav, Section 11 6', 'Sifra, Tzav, Section 11 9', 'Sifra, Tzav, Section 11 10', 'Sifra, Tzav, Section 11 11', 'Sifra, Tzav, Chapter 16 2', 'Sifra, Tzav, Chapter 16 3', 'Onkelos Lev 7:30']
+    assert all('stacked_hands' not in f for f in m.WORLD["facts"])
+    assert 'tenufah_engine' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Tzav, Chapter 16 4', 'Sifra, Tzav, Chapter 16 5', 'Sifra, Tzav, Chapter 16 7', 'Sifra, Tzav, Chapter 16 8', 'Sifra, Tzav, Chapter 16 9', 'Sifra, Tzav, Chapter 17 5', 'Sifra, Tzav, Chapter 17 6']
+    assert all('consent_and_acknowledgment' not in f for f in m.WORLD["facts"])
+    assert 'dues_gates' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Tzav, Chapter 18 2', 'Sifra, Tzav, Chapter 18 3', 'Sifra, Tzav, Chapter 18 4', 'Sifra, Tzav, Chapter 18 6', 'Sifra, Tzav, Chapter 18 7', 'Sifra, Tzav, Chapter 18 8', 'Sifra, Tzav, Chapter 18 10', 'Onkelos Lev 7:35']
+    assert all('two_channel_charter' not in f for f in m.WORLD["facts"])
+    assert 'sinai_colophon' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_08_milluim
+###############################################################################
+
+m = Machine("lev_08_milluim")
+
+# -------------------------- Lev.8.1 · TREE_CLAIM ---------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 8:1."
+m.step("Lev.8.1")
+
+# -------------------------- Lev.8.2 · ETNACHTA_SPLIT -----------------------
+# קח את אהרן ואת בניו אתו ואת הבגדים ואת שמן המשחה … ואת פר החטאת ואת שני
+# האילים ואת סל המצות
+# "[EN-AID] From top split: LEFT «קח את אהרן ואת בניו אתו ואת הבגדים ואת שמן
+# המשחה» / RIGHT «ואת פר החטאת ואת שני האילים ואת סל המצות». Derive claim
+# from Hebrew arms. Lev 8:2."
+m.step("Lev.8.2")
+# witness-tier presupposed read: spec_audit on installation_intake — read,
+# not installed
+m.witness_read("installation_intake", "spec_audit",
+                cites=["Sifra, Tzav, Mekhilta DeMiluim I 1", "Sifra, Tzav, Mekhilta DeMiluim I 2", "Sifra, Tzav, Mekhilta DeMiluim I 3", "Onkelos Lev 8:2"])
+
+# -------------------------- Lev.8.3 · ETNACHTA_SPLIT -----------------------
+# ואת כל העדה הקהל … אל פתח אהל מועד
+# "[EN-AID] From top split: LEFT «ואת כל העדה הקהל» / RIGHT «אל פתח אהל
+# מועד». Derive claim from Hebrew arms. Lev 8:3."
+m.step("Lev.8.3")
+
+# -------------------------- Lev.8.4 · ETNACHTA_SPLIT -----------------------
+# ויעש משה כאשר צוה יהוה אתו … ותקהל העדה אל פתח אהל מועד
+# "[EN-AID] From top split: LEFT «ויעש משה כאשר צוה יהוה אתו» / RIGHT «ותקהל
+# העדה אל פתח אהל מועד». Derive claim from Hebrew arms. Lev 8:4."
+m.step("Lev.8.4")
+
+# -------------------------- Lev.8.5 · ETNACHTA_SPLIT -----------------------
+# ויאמר משה אל העדה … זה הדבר אשר צוה יהוה לעשות
+# "[EN-AID] From top split: LEFT «ויאמר משה אל העדה» / RIGHT «זה הדבר אשר
+# צוה יהוה לעשות». Derive claim from Hebrew arms. Lev 8:5."
+m.step("Lev.8.5")
+
+# -------------------------- Lev.8.6 · ETNACHTA_SPLIT -----------------------
+# ויקרב משה את אהרן ואת בניו … וירחץ אתם במים
+# "[EN-AID] From top split: LEFT «ויקרב משה את אהרן ואת בניו» / RIGHT «וירחץ
+# אתם במים». Derive claim from Hebrew arms. Lev 8:6."
+m.step("Lev.8.6")
+
+# -------------------------- Lev.8.7 · ETNACHTA_SPLIT -----------------------
+# ויתן עליו את הכתנת ויחגר אתו באבנט וילבש אתו את המעיל ויתן ע … ויחגר אתו
+# בחשב האפד ויאפד לו בו
+# "[EN-AID] From top split: LEFT «ויתן עליו את הכתנת ויחגר אתו באבנט וילבש
+# אתו את המעיל ויתן עליו את האפד» / RIGHT «ויחגר אתו בחשב האפד ויאפד לו בו».
+# Derive claim from Hebrew arms. Lev 8:7."
+m.step("Lev.8.7")
+# witness-tier presupposed read: for_generations on dressing_protocol —
+# read, not installed
+m.witness_read("dressing_protocol", "for_generations",
+                cites=["Sifra, Tzav, Mekhilta DeMiluim I 6", "Sifra, Tzav, Mekhilta DeMiluim I 7", "Sifra, Tzav, Mekhilta DeMiluim I 9", "Sifra, Tzav, Mekhilta DeMiluim I 10", "Onkelos Lev 8:10"])
+
+# -------------------------- Lev.8.8 · ETNACHTA_SPLIT -----------------------
+# וישם עליו את החשן … ויתן אל החשן את האורים ואת התמים
+# "[EN-AID] From top split: LEFT «וישם עליו את החשן» / RIGHT «ויתן אל החשן
+# את האורים ואת התמים». Derive claim from Hebrew arms. Lev 8:8."
+m.step("Lev.8.8")
+
+# -------------------------- Lev.8.9 · ETNACHTA_SPLIT -----------------------
+# וישם את המצנפת על ראשו … וישם על המצנפת אל מול פניו את ציץ הזהב נזר הקדש
+# כאשר צוה יהו
+# "[EN-AID] From top split: LEFT «וישם את המצנפת על ראשו» / RIGHT «וישם על
+# המצנפת אל מול פניו את ציץ הזהב נזר הקדש כאשר צוה יהוה את משה». Derive
+# claim from Hebrew arms. Lev 8:9."
+m.step("Lev.8.9")
+
+# -------------------------- Lev.8.10 · ETNACHTA_SPLIT ----------------------
+# ויקח משה את שמן המשחה וימשח את המשכן ואת כל אשר בו … ויקדש אתם
+# "[EN-AID] From top split: LEFT «ויקח משה את שמן המשחה וימשח את המשכן ואת
+# כל אשר בו» / RIGHT «ויקדש אתם». Derive claim from Hebrew arms. Lev 8:10."
+m.step("Lev.8.10")
+
+# -------------------------- Lev.8.11 · ETNACHTA_SPLIT ----------------------
+# ויז ממנו על המזבח שבע פעמים … וימשח את המזבח ואת כל כליו ואת הכיר ואת כנו
+# לקדשם
+# "[EN-AID] From top split: LEFT «ויז ממנו על המזבח שבע פעמים» / RIGHT
+# «וימשח את המזבח ואת כל כליו ואת הכיר ואת כנו לקדשם». Derive claim from
+# Hebrew arms. Lev 8:11."
+m.step("Lev.8.11")
+
+# -------------------------- Lev.8.12 · ETNACHTA_SPLIT ----------------------
+# ויצק משמן המשחה על ראש אהרן … וימשח אתו לקדשו
+# "[EN-AID] From top split: LEFT «ויצק משמן המשחה על ראש אהרן» / RIGHT
+# «וימשח אתו לקדשו». Derive claim from Hebrew arms. Lev 8:12."
+m.step("Lev.8.12")
+
+# -------------------------- Lev.8.13 · ETNACHTA_SPLIT ----------------------
+# ויקרב משה את בני אהרן וילבשם כתנת ויחגר אתם אבנט ויחבש להם מ … כאשר צוה
+# יהוה את משה
+# "[EN-AID] From top split: LEFT «ויקרב משה את בני אהרן וילבשם כתנת ויחגר
+# אתם אבנט ויחבש להם מגבעות» / RIGHT «כאשר צוה יהוה את משה». Derive claim
+# from Hebrew arms. Lev 8:13."
+m.step("Lev.8.13")
+
+# -------------------------- Lev.8.14 · ETNACHTA_SPLIT ----------------------
+# ויגש את פר החטאת … ויסמך אהרן ובניו את ידיהם על ראש פר החטאת
+# "[EN-AID] From top split: LEFT «ויגש את פר החטאת» / RIGHT «ויסמך אהרן
+# ובניו את ידיהם על ראש פר החטאת». Derive claim from Hebrew arms. Lev 8:14."
+m.step("Lev.8.14")
+# witness-tier presupposed read: each_hand on partners_semichah — read, not
+# installed
+m.witness_read("partners_semichah", "each_hand",
+                cites=["Sifra, Tzav, Mekhilta DeMiluim I 12", "Sifra, Tzav, Mekhilta DeMiluim I 13"])
+
+# -------------------------- Lev.8.15 · ETNACHTA_SPLIT ----------------------
+# וישחט ויקח משה את הדם ויתן על קרנות המזבח סביב באצבעו ויחטא  … ואת הדם יצק
+# אל יסוד המזבח ויקדשהו לכפר עליו
+# "[EN-AID] From top split: LEFT «וישחט ויקח משה את הדם ויתן על קרנות המזבח
+# סביב באצבעו ויחטא את המזבח» / RIGHT «ואת הדם יצק אל יסוד המזבח ויקדשהו
+# לכפר עליו». Derive claim from Hebrew arms. Lev 8:15."
+m.step("Lev.8.15")
+# witness-tier presupposed read: no_theft_atonement on bootstrap_officiant —
+# read, not installed
+m.witness_read("bootstrap_officiant", "no_theft_atonement",
+                cites=["Sifra, Tzav, Mekhilta DeMiluim I 14", "Sifra, Tzav, Mekhilta DeMiluim I 15"])
+
+# -------------------------- Lev.8.16 · ETNACHTA_SPLIT ----------------------
+# ויקח את כל החלב אשר על הקרב ואת יתרת הכבד ואת שתי הכלית ואת  … ויקטר משה
+# המזבחה
+# "[EN-AID] From top split: LEFT «ויקח את כל החלב אשר על הקרב ואת יתרת הכבד
+# ואת שתי הכלית ואת חלבהן» / RIGHT «ויקטר משה המזבחה». Derive claim from
+# Hebrew arms. Lev 8:16."
+m.step("Lev.8.16")
+
+# -------------------------- Lev.8.17 · ETNACHTA_SPLIT ----------------------
+# ואת הפר ואת ערו ואת בשרו ואת פרשו שרף באש מחוץ למחנה … כאשר צוה יהוה את
+# משה
+# "[EN-AID] From top split: LEFT «ואת הפר ואת ערו ואת בשרו ואת פרשו שרף באש
+# מחוץ למחנה» / RIGHT «כאשר צוה יהוה את משה». Derive claim from Hebrew arms.
+# Lev 8:17."
+m.step("Lev.8.17")
+
+# -------------------------- Lev.8.18 · ETNACHTA_SPLIT ----------------------
+# ויקרב את איל העלה … ויסמכו אהרן ובניו את ידיהם על ראש האיל
+# "[EN-AID] From top split: LEFT «ויקרב את איל העלה» / RIGHT «ויסמכו אהרן
+# ובניו את ידיהם על ראש האיל». Derive claim from Hebrew arms. Lev 8:18."
+m.step("Lev.8.18")
+# witness-tier presupposed read: recorded_run on olah_execution — read, not
+# installed
+m.witness_read("olah_execution", "recorded_run",
+                cites=["Sifra, Tzav, Mekhilta DeMiluim I 16", "Sifra, Tzav, Mekhilta DeMiluim I 17", "Sifra, Tzav, Mekhilta DeMiluim I 18"])
+
+# -------------------------- Lev.8.19 · ETNACHTA_SPLIT ----------------------
+# … ויזרק משה את הדם על המזבח סביב
+# "[EN-AID] From top split: LEFT «» / RIGHT «ויזרק משה את הדם על המזבח
+# סביב». Derive claim from Hebrew arms. Lev 8:19."
+m.step("Lev.8.19")
+
+# -------------------------- Lev.8.20 · ETNACHTA_SPLIT ----------------------
+# ואת האיל נתח לנתחיו … ויקטר משה את הראש ואת הנתחים ואת הפדר
+# "[EN-AID] From top split: LEFT «ואת האיל נתח לנתחיו» / RIGHT «ויקטר משה את
+# הראש ואת הנתחים ואת הפדר». Derive claim from Hebrew arms. Lev 8:20."
+m.step("Lev.8.20")
+
+# -------------------------- Lev.8.21 · ETNACHTA_SPLIT ----------------------
+# ואת הקרב ואת הכרעים רחץ במים … ויקטר משה את כל האיל המזבחה עלה הוא לריח
+# ניחח אשה הוא ליהוה
+# "[EN-AID] From top split: LEFT «ואת הקרב ואת הכרעים רחץ במים» / RIGHT
+# «ויקטר משה את כל האיל המזבחה עלה הוא לריח ניחח אשה הוא ליהוה כאשר צוה יהוה
+# את משה». Derive claim from Hebrew arms. Lev 8:21."
+m.step("Lev.8.21")
+
+# -------------------------- Lev.8.22 · ETNACHTA_SPLIT ----------------------
+# ויקרב את האיל השני איל המלאים … ויסמכו אהרן ובניו את ידיהם על ראש האיל
+# "[EN-AID] From top split: LEFT «ויקרב את האיל השני איל המלאים» / RIGHT
+# «ויסמכו אהרן ובניו את ידיהם על ראש האיל». Derive claim from Hebrew arms.
+# Lev 8:22."
+m.step("Lev.8.22")
+# witness-tier presupposed read: atomic_commit on installation_transaction —
+# read, not installed
+m.witness_read("installation_transaction", "atomic_commit",
+                cites=["Sifra, Tzav, Mekhilta DeMiluim I 19", "Sifra, Tzav, Mekhilta DeMiluim I 20", "Sifra, Tzav, Mekhilta DeMiluim I 21", "Sifra, Tzav, Mekhilta DeMiluim I 33", "Sifra, Tzav, Mekhilta DeMiluim I 34", "Sifra, Tzav, Mekhilta DeMiluim I 31", "Onkelos Lev 8:23"])
+
+# -------------------------- Lev.8.23 · ETNACHTA_SPLIT ----------------------
+# וישחט ויקח משה מדמו ויתן על תנוך אזן אהרן הימנית … ועל בהן ידו הימנית ועל
+# בהן רגלו הימנית
+# "[EN-AID] From top split: LEFT «וישחט ויקח משה מדמו ויתן על תנוך אזן אהרן
+# הימנית» / RIGHT «ועל בהן ידו הימנית ועל בהן רגלו הימנית». Derive claim
+# from Hebrew arms. Lev 8:23."
+m.step("Lev.8.23")
+
+# -------------------------- Lev.8.24 · ETNACHTA_SPLIT ----------------------
+# ויקרב את בני אהרן ויתן משה מן הדם על תנוך אזנם הימנית ועל בה … ויזרק משה
+# את הדם על המזבח סביב
+# "[EN-AID] From top split: LEFT «ויקרב את בני אהרן ויתן משה מן הדם על תנוך
+# אזנם הימנית ועל בהן ידם הימנית ועל בהן» / RIGHT «ויזרק משה את הדם על המזבח
+# סביב». Derive claim from Hebrew arms. Lev 8:24."
+m.step("Lev.8.24")
+
+# -------------------------- Lev.8.25 · ETNACHTA_SPLIT ----------------------
+# ויקח את החלב ואת האליה ואת כל החלב אשר על הקרב ואת יתרת הכבד … ואת שוק
+# הימין
+# "[EN-AID] From top split: LEFT «ויקח את החלב ואת האליה ואת כל החלב אשר על
+# הקרב ואת יתרת הכבד ואת שתי הכלית ואת ח» / RIGHT «ואת שוק הימין». Derive
+# claim from Hebrew arms. Lev 8:25."
+m.step("Lev.8.25")
+
+# -------------------------- Lev.8.26 · ETNACHTA_SPLIT ----------------------
+# ומסל המצות אשר לפני יהוה לקח חלת מצה אחת וחלת לחם שמן אחת ור … וישם על
+# החלבים ועל שוק הימין
+# "[EN-AID] From top split: LEFT «ומסל המצות אשר לפני יהוה לקח חלת מצה אחת
+# וחלת לחם שמן אחת ורקיק אחד» / RIGHT «וישם על החלבים ועל שוק הימין». Derive
+# claim from Hebrew arms. Lev 8:26."
+m.step("Lev.8.26")
+
+# -------------------------- Lev.8.27 · ETNACHTA_SPLIT ----------------------
+# ויתן את הכל על כפי אהרן ועל כפי בניו … וינף אתם תנופה לפני יהוה
+# "[EN-AID] From top split: LEFT «ויתן את הכל על כפי אהרן ועל כפי בניו» /
+# RIGHT «וינף אתם תנופה לפני יהוה». Derive claim from Hebrew arms. Lev
+# 8:27."
+m.step("Lev.8.27")
+
+# -------------------------- Lev.8.28 · ETNACHTA_SPLIT ----------------------
+# ויקח משה אתם מעל כפיהם ויקטר המזבחה על העלה … מלאים הם לריח ניחח אשה הוא
+# ליהוה
+# "[EN-AID] From top split: LEFT «ויקח משה אתם מעל כפיהם ויקטר המזבחה על
+# העלה» / RIGHT «מלאים הם לריח ניחח אשה הוא ליהוה». Derive claim from Hebrew
+# arms. Lev 8:28."
+m.step("Lev.8.28")
+
+# -------------------------- Lev.8.29 · ETNACHTA_SPLIT ----------------------
+# ויקח משה את החזה ויניפהו תנופה לפני יהוה … מאיל המלאים למשה היה למנה כאשר
+# צוה יהוה את משה
+# "[EN-AID] From top split: LEFT «ויקח משה את החזה ויניפהו תנופה לפני יהוה»
+# / RIGHT «מאיל המלאים למשה היה למנה כאשר צוה יהוה את משה». Derive claim
+# from Hebrew arms. Lev 8:29."
+m.step("Lev.8.29")
+
+# -------------------------- Lev.8.30 · ETNACHTA_SPLIT ----------------------
+# ויקח משה משמן המשחה ומן הדם אשר על המזבח ויז על אהרן על בגדי … ויקדש את
+# אהרן את בגדיו ואת בניו ואת בגדי בניו אתו
+# "[EN-AID] From top split: LEFT «ויקח משה משמן המשחה ומן הדם אשר על המזבח
+# ויז על אהרן על בגדיו ועל בניו ועל בגדי » / RIGHT «ויקדש את אהרן את בגדיו
+# ואת בניו ואת בגדי בניו אתו». Derive claim from Hebrew arms. Lev 8:30."
+m.step("Lev.8.30")
+
+# -------------------------- Lev.8.31 · ETNACHTA_SPLIT ----------------------
+# ויאמר משה אל אהרן ואל בניו בשלו את הבשר פתח אהל מועד ושם תאכ … כאשר צויתי
+# לאמר אהרן ובניו יאכלהו
+# "[EN-AID] From top split: LEFT «ויאמר משה אל אהרן ואל בניו בשלו את הבשר
+# פתח אהל מועד ושם תאכלו אתו ואת הלחם אשר » / RIGHT «כאשר צויתי לאמר אהרן
+# ובניו יאכלהו». Derive claim from Hebrew arms. Lev 8:31."
+m.step("Lev.8.31")
+
+# -------------------------- Lev.8.32 · ETNACHTA_SPLIT ----------------------
+# והנותר בבשר ובלחם … באש תשרפו
+# "[EN-AID] From top split: LEFT «והנותר בבשר ובלחם» / RIGHT «באש תשרפו».
+# Derive claim from Hebrew arms. Lev 8:32."
+m.step("Lev.8.32")
+
+# -------------------------- Lev.8.33 · ETNACHTA_SPLIT ----------------------
+# ומפתח אהל מועד לא תצאו שבעת ימים עד יום מלאת ימי מלאיכם … כי שבעת ימים
+# ימלא את ידכם
+# "[EN-AID] From top split: LEFT «ומפתח אהל מועד לא תצאו שבעת ימים עד יום
+# מלאת ימי מלאיכם» / RIGHT «כי שבעת ימים ימלא את ידכם». Derive claim from
+# Hebrew arms. Lev 8:33."
+m.step("Lev.8.33")
+# witness-tier presupposed read: seven_day_build on installation_calendar —
+# read, not installed
+m.witness_read("installation_calendar", "seven_day_build",
+                cites=["Sifra, Tzav, Mekhilta DeMiluim I 35", "Sifra, Tzav, Mekhilta DeMiluim I 36", "Onkelos Lev 8:33"])
+
+# -------------------------- Lev.8.34 · ETNACHTA_SPLIT ----------------------
+# כאשר עשה ביום הזה … צוה יהוה לעשת לכפר עליכם
+# "[EN-AID] From top split: LEFT «כאשר עשה ביום הזה» / RIGHT «צוה יהוה לעשת
+# לכפר עליכם». Derive claim from Hebrew arms. Lev 8:34."
+m.step("Lev.8.34")
+
+# -------------------------- Lev.8.35 · ETNACHTA_SPLIT ----------------------
+# ופתח אהל מועד תשבו יומם ולילה שבעת ימים ושמרתם את משמרת יהוה … כי כן צויתי
+# "[EN-AID] From top split: LEFT «ופתח אהל מועד תשבו יומם ולילה שבעת ימים
+# ושמרתם את משמרת יהוה ולא תמותו» / RIGHT «כי כן צויתי». Derive claim from
+# Hebrew arms. Lev 8:35."
+m.step("Lev.8.35")
+# witness-tier presupposed read: charge_toward_the_word on
+# separation_template — read, not installed
+m.witness_read("separation_template", "charge_toward_the_word",
+                cites=["Sifra, Tzav, Mekhilta DeMiluim I 37", "Sifra, Tzav, Mekhilta DeMiluim I 38", "Sifra, Tzav, Mekhilta DeMiluim I 23", "Sifra, Tzav, Mekhilta DeMiluim I 26", "Sifra, Tzav, Mekhilta DeMiluim I 27", "Onkelos Lev 8:35"])
+
+# -------------------------- Lev.8.36 · ETNACHTA_SPLIT ----------------------
+# ויעש אהרן ובניו … את כל הדברים אשר צוה יהוה ביד משה
+# "[EN-AID] From top split: LEFT «ויעש אהרן ובניו» / RIGHT «את כל הדברים אשר
+# צוה יהוה ביד משה». Derive claim from Hebrew arms. Lev 8:36."
+m.step("Lev.8.36")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('installation_intake', 'spec_audit'), ('dressing_protocol', 'for_generations'), ('partners_semichah', 'each_hand'), ('bootstrap_officiant', 'no_theft_atonement'), ('olah_execution', 'recorded_run'), ('installation_transaction', 'atomic_commit'), ('installation_calendar', 'seven_day_build'), ('separation_template', 'charge_toward_the_word')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Tzav, Mekhilta DeMiluim I 1', 'Sifra, Tzav, Mekhilta DeMiluim I 2', 'Sifra, Tzav, Mekhilta DeMiluim I 3', 'Onkelos Lev 8:2']
+    assert all('spec_audit' not in f for f in m.WORLD["facts"])
+    assert 'installation_intake' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Tzav, Mekhilta DeMiluim I 6', 'Sifra, Tzav, Mekhilta DeMiluim I 7', 'Sifra, Tzav, Mekhilta DeMiluim I 9', 'Sifra, Tzav, Mekhilta DeMiluim I 10', 'Onkelos Lev 8:10']
+    assert all('for_generations' not in f for f in m.WORLD["facts"])
+    assert 'dressing_protocol' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Tzav, Mekhilta DeMiluim I 12', 'Sifra, Tzav, Mekhilta DeMiluim I 13']
+    assert all('each_hand' not in f for f in m.WORLD["facts"])
+    assert 'partners_semichah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Tzav, Mekhilta DeMiluim I 14', 'Sifra, Tzav, Mekhilta DeMiluim I 15']
+    assert all('no_theft_atonement' not in f for f in m.WORLD["facts"])
+    assert 'bootstrap_officiant' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Tzav, Mekhilta DeMiluim I 16', 'Sifra, Tzav, Mekhilta DeMiluim I 17', 'Sifra, Tzav, Mekhilta DeMiluim I 18']
+    assert all('recorded_run' not in f for f in m.WORLD["facts"])
+    assert 'olah_execution' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Tzav, Mekhilta DeMiluim I 19', 'Sifra, Tzav, Mekhilta DeMiluim I 20', 'Sifra, Tzav, Mekhilta DeMiluim I 21', 'Sifra, Tzav, Mekhilta DeMiluim I 33', 'Sifra, Tzav, Mekhilta DeMiluim I 34', 'Sifra, Tzav, Mekhilta DeMiluim I 31', 'Onkelos Lev 8:23']
+    assert all('atomic_commit' not in f for f in m.WORLD["facts"])
+    assert 'installation_transaction' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Tzav, Mekhilta DeMiluim I 35', 'Sifra, Tzav, Mekhilta DeMiluim I 36', 'Onkelos Lev 8:33']
+    assert all('seven_day_build' not in f for f in m.WORLD["facts"])
+    assert 'installation_calendar' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Tzav, Mekhilta DeMiluim I 37', 'Sifra, Tzav, Mekhilta DeMiluim I 38', 'Sifra, Tzav, Mekhilta DeMiluim I 23', 'Sifra, Tzav, Mekhilta DeMiluim I 26', 'Sifra, Tzav, Mekhilta DeMiluim I 27', 'Onkelos Lev 8:35']
+    assert all('charge_toward_the_word' not in f for f in m.WORLD["facts"])
+    assert 'separation_template' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
 
 

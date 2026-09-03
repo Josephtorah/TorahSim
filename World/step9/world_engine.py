@@ -283,6 +283,53 @@ def law_deposit_oath(event, world):
     return out
 
 
+def law_installation(event, world):
+    """Lev 8 (cold_run_tzav.py F7, the Tzav round 2026-09-03). The
+    installation transaction: ATOMIC over bullock + two rams + basket
+    (Sifra, Tzav, Mekhilta DeMiluim I 19); the seven-day confinement
+    timer (8:33); the commit at the blood sprinkling (DeMiluim I 34);
+    the leftover clause (8:32)."""
+    k = event['kind']
+    if k == 'installation_commanded':
+        required = {'bullock', 'ram_olah', 'ram_milluim', 'basket'}
+        if not required.issubset(set(event['components'])):
+            world.log.append(('ATOMIC-BLOCK', world.clock.year,
+                              dict(event, missing=sorted(
+                                  required - set(event['components'])))))
+            return []          # no component, no sanctification
+        subj = event['subject']
+        return [
+            {'effect': 'confined_seven_days', 'subject': subj,
+             'counterparty': None, 'amount': 7, 'due': None,
+             'source_law': 'F7 confinement [INK 8:33: you shall not '
+                           'go out seven days]',
+             'case_source': event['case_source']},
+            {'effect': 'released', 'subject': subj, 'counterparty': None,
+             'amount': None, 'due': world.clock.year + 7,
+             'source_law': 'F7 completion [INK 8:33: until the day of '
+                           'the filling of your installation days]',
+             'case_source': event['case_source']},
+        ]
+    if k == 'milluim_blood_sprinkled':
+        return [
+            {'effect': 'invested_office', 'subject': event['subject'],
+             'counterparty': None, 'amount': None, 'due': None,
+             'source_law': 'F7 commit [Sifra, Tzav, Mekhilta DeMiluim '
+                           'I 34: consummated only at the blood '
+                           'sprinkling]',
+             'case_source': event['case_source']},
+        ]
+    if k == 'milluim_leftover':
+        return [
+            {'effect': 'burn_remainder', 'subject': event['subject'],
+             'counterparty': None, 'amount': None, 'due': None,
+             'source_law': 'F7 leftover [INK 8:32: what remains you '
+                           'shall burn in fire]',
+             'case_source': event['case_source']},
+        ]
+    return []
+
+
 # =====================================================================
 # THE TEST TAPE — recorded cases only, each citing its source
 # (method law 4: the tradition's own worked examples; law 6: these are
@@ -392,6 +439,49 @@ def run():
     results.append(w.checkpoint(
         'six-year exit VOIDED; jubilee fires at 12',
         (0, 1, 1), (len(six_yr_freed), len(freed2), cancels)))
+
+    # SCENE 6 — the installation tape (Lev 8's OWN recorded narrative —
+    # the tape is the ink itself: the atomic intake, the seven days at
+    # the door, the commit at the sprinkling, the leftover burned).
+    # A fresh world: this tape's clock unit is DAYS (the Clock is a
+    # bare counter; the era label declares the unit honestly).
+    print('\nSCENE 6 — the installation tape [Lev 8; Sifra, Tzav, '
+          'Mekhilta DeMiluim I; cold_run_tzav.py F7]')
+    wi = World(era='installation week (clock unit: days)')
+    wi.laws = [law_installation]
+    # the atomicity gate first: a defective intake sanctifies nothing
+    fired_missing = wi.submit({'kind': 'installation_commanded',
+                               'subject': 'aaron-and-sons',
+                               'components': ['bullock', 'ram_olah',
+                                              'ram_milluim'],
+                               'case_source': 'Sifra, Tzav, Mekhilta '
+                                              'DeMiluim I 19 (no basket '
+                                              '— not sanctified)'})
+    blocked = len([l for l in wi.log if l[0] == 'ATOMIC-BLOCK'])
+    # the recorded intake (Lev 8:2 — all components taken)
+    wi.submit({'kind': 'installation_commanded',
+               'subject': 'aaron-and-sons',
+               'components': ['bullock', 'ram_olah', 'ram_milluim',
+                              'basket'],
+               'case_source': 'Lev 8:2 (the take-list, audited against '
+                              'Exod 29)'})
+    wi.submit({'kind': 'milluim_blood_sprinkled',
+               'subject': 'aaron-and-sons',
+               'case_source': 'Lev 8:30 (the sprinkling; DeMiluim I 34 '
+                              'the commit)'})
+    wi.submit({'kind': 'milluim_leftover', 'subject': 'aaron-and-sons',
+               'case_source': 'Lev 8:32'})
+    wi.advance(7)              # the seven days pass; the release fires
+    aas = wi.entity('aaron-and-sons')
+    confined = [e for e in aas.ledger if e['effect'] == 'confined_seven_days']
+    invested = [e for e in aas.ledger if e['effect'] == 'invested_office']
+    released = [e for e in aas.ledger if e['effect'] == 'released']
+    burned = [e for e in aas.ledger if e['effect'] == 'burn_remainder']
+    results.append(w.checkpoint(
+        'atomic-block; confined+invested+burned; release fires day 7',
+        (1, 0, 1, 1, 1, 1),
+        (blocked, fired_missing, len(confined), len(invested),
+         len(burned), len(released))))
 
     # ---- the honest OPEN ledger --------------------------------------
     print('\nTHE OPEN LEDGER at end of tape (a ledger that ends OPEN '

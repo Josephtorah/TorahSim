@@ -219,3 +219,32 @@ REMAINING SPAN QUEUE (uncompiled law spans): Lev 1-4 (the offering
 procedures — Lev 5 done), the sanctuary/service spans (Exod 25-30
 constants + choreography), Exod 16 (the manna's Sabbath clauses),
 Exod 31/34-35 (the sign clauses), and each new book as it derives.
+
+## THE FOURTH SPAN AND SCENE 6 (2026-09-03, the Tzav round — the
+## first parashah compiled under the full new rhythm)
+cold_run_tzav.py (Lev 6-8, the offering-torah span): 33/33 — pure
+ink 6% / named moves 88% / data 6% (the moves-heavy profile is the
+span's nature: the priests' law layer is where the expounding
+literature concentrates). Ledger signature: block x3, heaven x4, status x6, timer x5,
+transfer x6. The zero-report law caught one more wrong token before
+the run: Lev 7:9 writes the FEMININE תהיה ("his shall it be" — the
+meal-offering is the subject), not the masculine; corrected to the
+letters. NINE effects discovered and registered (39 → 48):
+launder_blood_spot, break_earthen_vessel, scour_and_rinse,
+perpetual_fire_duty, due_to_priest, not_accepted,
+sanctified_by_contact, invested_office, confined_seven_days. TWO
+moves registered: M-13 the clause-position read, M-14 the doubling
+arithmetic. THE ENGINE: law_installation daemon + SCENE 6 — the
+installation tape replaying Lev 8's own narrative (the atomic
+intake gate, the seven-day confinement timer, the commit at the
+blood sprinkling, the leftover burn, the day-7 release) — 6/6
+checkpoints; the tape's clock unit is days, declared in its era
+label. COMPILED-CHIP LEDGER grows: lev_06_olah_minchah_torah,
+lev_07_asham_procedure, lev_07_shelamim_types,
+lev_07_fat_blood_dues, lev_08_milluim (chips pending the site lap).
+REMAINING SPAN QUEUE (updated): Lev 1-4 offering procedures (the
+intake layer — Lev 5-8 now compiled; folding Lev 1-8 into ONE
+offering engine is the natural next consolidation), the
+sanctuary/service spans (Exod 25-30), Exod 16 (the manna's Sabbath
+clauses), Exod 31/34-35 (the sign clauses), and each new book as it
+derives.

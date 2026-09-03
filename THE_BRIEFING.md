@@ -17,12 +17,21 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
 ## SCOREBOARD (as of 2026-09-03, latest)
 
 - Genesis: DONE — derived, read, examined, stamped (73 units).
-- **Leviticus: OPENED.** Parashat Vayikra (the five offering
+- **Leviticus: TWO PARASHOT IN.** Vayikra (the five offering
   chapters) derived under the book's own spine — the Sifra, the
-  tradition's verse-by-verse law commentary — examined against all 68 of its Mishnah rows, and
-  stamped, in one sitting. The reading anticipated the exam 47 of
-  48, many answers word for word: the spine of a LAW book turns
-  out to hold nearly the whole answer sheet in advance.
+  tradition's verse-by-verse law commentary — examined against all
+  68 of its Mishnah rows, and stamped, in one sitting; the reading
+  anticipated the exam 47 of 48. Then TZAV (the priests' own law of
+  the offerings + the seven-day installation, Lev 6-8) ran the
+  FIRST FULL NEW RHYTHM end to end in one sitting: derive → stamp →
+  examine → compile with effects → the engine grows. 73 of 73 exam
+  cases first try, NO findings; anticipation 71 of 73 — and the two
+  leftovers are exactly what the theory predicts: transmitted
+  QUANTITIES (the twelve loaves, the schedule hours), the second
+  data channel. The Sifra even hands the theory its own label: a
+  sage in the text calls three such constants "a halachah to Moses
+  from Sinai" — transmitted, not derived — right where our
+  derivation runs out.
 - **Exodus: DONE.** All forty chapters derived, examined, and
   stamped end to end. The closing sitting (Vayakhel–Pekudei, the
   six execution chapters) ran the whole cycle in one day and the
@@ -30,10 +39,17 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   from chapter 25 ("that I may dwell among them") discharged on
   the last page, with the cloud-and-fire travel signal left
   running for the book of Numbers.
-- The corpus: 125 frozen units, one world, fingerprint unmoved
-  through two whole books and the third's opening.
-- The exam engine: ten rounds, 377 cases, 377 answered correctly,
-  141 compiled rules, vocabulary of 148 registered input dimensions.
+- The corpus: 130 frozen units, one world, fingerprint unmoved
+  through two whole books and the third's first two portions.
+- The exam engine: eleven rounds, 450 cases, 450 answered correctly,
+  157 compiled rules, vocabulary of 158 registered input dimensions.
+- The simulator: 48 registered effects (nine new from Tzav — the
+  wash/break/scour purges, the perpetual-fire duty, the priestly
+  due, the rejection, the investiture commit, the seven-day
+  confinement), four spans compiled with effects from birth, and
+  the engine's sixth scene replays Leviticus 8's own installation
+  as a transaction: no basket, no priesthood — all components or
+  nothing, committed at the blood sprinkling.
 - **The Exodus Talmud triage: DONE (2026-09-03).** Every row on the
   citation shelf where the Talmud quotes Exodus — 2,033 of them —
   opened and sorted: 501 carry law derived from the verse, 1,109
@@ -76,6 +92,39 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
 
 ## ENTRIES (newest first)
 
+### 2026-09-03 (night's end) — The whole rhythm runs in one sitting
+
+Tzav was the test of everything built this week, and it passed.
+One sitting took Leviticus 6-8 from unread to fully alive: the
+Sifra's 290 sections and Onkelos's 97 verses read and verdicted;
+five units derived and stamped; all 76 of the span's Mishnah rows
+faced — 73 cases, 73 right, first try, nothing left to file; the
+span compiled cold into seven working functions that answer with
+EFFECTS (what changes in the world, not just what the verdict is);
+and the world engine gained its sixth scene — Leviticus 8's own
+installation week running as a transaction: take the bullock, the
+two rams, and the basket, or nothing sanctifies; seven days
+confined at the door on a timer; the priesthood COMMITS at the
+blood sprinkling, the way a bank posts a transfer.
+
+Three things worth your eyes. First: the anticipation number keeps
+holding — the answer sheet met the morning's reading almost seat
+for seat, down to the same rabbis' names on the same disputes
+(the wood-pile counts, the halving of the high priest's daily
+offering, who funds it when he dies). Second: the two cases the
+reading could NOT anticipate were both NUMBERS — the twelve
+loaves, the hour of the afternoon offering — and the Sifra itself
+told us why, in its own words: a sage rules that three such
+constants are "a halachah to Moses from Sinai," transmitted, not
+derived. The two-channel theory (types are code in ink,
+quantities are data) got labeled by the source. Third: the
+effects law's far target — matching the prophets' indictments
+against the computed ledger — showed up INSIDE the reading twice:
+the Sifra itself convicts the sons of Eli against the
+after-the-smoking gate (1 Samuel 2), and hangs Isaiah's "I hate
+theft even for a burnt-offering" on the altar's own atonement.
+The teacher was already running the check we are building.
+
 ### 2026-09-03 (late night) — The simulator takes its first breath
 
 Your order — "build the skeleton then compile the spans" — and both
@@ -100,7 +149,7 @@ year release; and the kid-in-milk clause machine-counted at its
 three seats), and the DECALOGUE'S LAW LAYER (Exod 20, 12/12 — the
 vain oath's lashes, the kiddush duty, theft-of-persons, iron
 disqualifying the altar stone). The effect vocabulary stands at 39,
-every entry's Hebrew verb machine-verified in the ink — and twice
+every entry's Hebrew verb verified by machine in the ink — and twice
 tonight a wrong token of mine was caught by the probes and
 corrected by the actual letters. Four more units earned their
 "compiled" chips: the Passover chapters, the consecration chapter,

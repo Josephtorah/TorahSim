@@ -250,3 +250,38 @@ recorded move; the floor is data. Found 2026-09-03, the Leviticus 5
 cold compile.
 **Middah correspondence:** Rabbi Ishmael's ribbui (inclusion) family
 — the inclusive token read as an iterator, not just an extra member.
+
+## M-13 — THE CLAUSE-POSITION READ (where an operand sits in the procedure decides what it binds)
+The teacher resolves a restrictive token's SCOPE by which service
+clause carries it: the sin-offering and the Pesach carry their
+"it" (הוא) AT THE SLAUGHTER clause — wrong intent at the slaughter
+unfits them; the guilt-offering's "it" sits AFTER THE SMOKING of
+the devoted portions, and since even unsmoked portions leave it
+kasher, the token cannot be an intent-gate at all — it is re-bound
+to the exchange rule ("IT is sacrificed, its exchange is not").
+Sifra, Tzav, Section 5 8, answering R. Eliezer's analogy; the
+Mishnah's table rides it (Zevachim 1:1 — all fit except Pesach and
+chatat, R. Eliezer's asham dissent preserved beside it). Distinct
+from M-11: there the WORD order inside a clause is the condition
+order; here the CLAUSE's position among the procedure's stations
+assigns the operand its object. Found 2026-09-03, the Tzav sweep +
+cold compile (cold_run_tzav.py F4's neighbor argument; the exam's
+wrong_intent_tzav module).
+**Middah correspondence:** the context family again (a thing
+understood from its place) — position in the RITE as the context.
+
+## M-14 — THE DOUBLING ARITHMETIC (repetition counts as increase/decrease operators)
+The teacher reads REPEATED tokens as arithmetic on a quantity:
+R. Akiva's rule at the thanksgiving's oil — the second "with oil"
+is an increase after an increase, WHICH DENOTES DECREASE (the log
+drops to half); the third mention, an increase after a decrease,
+INCREASES again (the soaked kind takes its own quarter). Sifra,
+Tzav, Chapter 11 4-6. The output constant lands exactly where R.
+Elazar b. Azaryah's recorded dissent puts it by the OTHER channel —
+"a halachah to Moses on Sinai": the same half-log, derived vs
+transmitted, the two-channel doctrine arguing over one number in
+one row. Found 2026-09-03, the Tzav sweep (the exam's todah oil
+rows ride it via Menachot 7:1's twenty-tenths table).
+**Middah correspondence:** ribbui achar ribbui (inclusion after
+inclusion restricts) — the tradition's own named operator, here
+running as arithmetic on a measure.
