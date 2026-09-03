@@ -45,6 +45,27 @@ arguments), then compile section by section, book by book. Every
 standing law beneath this is untouched: ledgers append-only, gates,
 stamps, declared scope, the whole ritual.
 
+⚠ THE CODE/DATA SEPARATION LAW (owner-ruled 2026-09-03: "This is
+the process to write the logic per verse without the data"): the
+source code of every derived law comes ONLY from the written 24
+books. The Mishnah/Talmud teach HOW to write that code and what
+SHAPE of input it must accept — but their case rows and quantities
+are TEST DATA, fed at run time, NEVER written into the source. The
+test: input the Mishnah's case, require the Mishnah's verdict as
+output. The tradition itself labels the data channel: "the
+MEASURES... are transmitted to Moses from Sinai" (Babylonian Talmud
+Eruvin 4a) — types are code in ink, quantities are data. Proven on
+the tradition's own worst case the day it was ruled: the 39 Sabbath
+labors — 36/36 scannable labor-roots ink-attested, the list defined
+BY REFERENCE to the tabernacle build narrative (Shabbat 49b's index
+rule, anchored in the ink's own juxtaposition at Exodus 31:12-17 +
+35:1-3), the quantities self-labeled as the second channel; and on
+the second Passover (code complete at Numbers 9:10-11; national
+execution at 2 Chronicles 30 including "not as WRITTEN" — the run
+citing the written code; the distance threshold = data with two
+recorded settings, Mishnah Pesachim 9:2). Full record with every
+verse quoted: RESEARCH_LOG.md at the repo root.
+
 TWO RIDERS (owner-ruled 2026-09-02, confirmed after repeat-back):
 (1) **THE MOVE CATALOG** — logic/MOVE_CATALOG.md is the canonical
 registry of teacher moves (the compile-move forms with their
@@ -71,6 +92,28 @@ the strongest pause first, down to the leaves — the word-bricks. Every
 one of the 23,213 verses parses to exactly one legal tree under rules
 v3. This is the verse's STRUCTURE.
    → shows as: the verse tree window and the leaf rows on every verse.
+
+⚠ THE TREE'S ROLE UNDER THE COMPILER LAW (measured 2026-09-03, full
+record in RESEARCH_LOG.md): for CASE LAW the tree never DECIDES —
+the tradition's own census of undecidable parses (five verses, Yoma
+52a-b) contains zero case law, and all 64 branch keywords in Exodus
+21:1-23:19 are boundary-marked by words alone (44 verse-initial, 18
+after pause accents in agreement, 2 inside compound keywords). The
+tree's honest jobs: the READER's aid (its charter, Nehemiah 8:8 via
+Megillah 3a), a REDUNDANCY LINT (the top split lands on the
+condition‖outcome seam in 17 of 20 measurable case verses — like
+indentation agreeing with braces, a disagreement is a flag, never a
+ruling), and the units' left/right display. THE DOT CHANNEL is the
+law-relevant annotation layer instead: FIFTEEN dotted sites canon-
+wide (ten in the Torah — the machine scan matches Avot DeRabbi
+Natan 34:5's own census exactly), each dot a QUALIFICATION of its
+ink (a parameter qualified, Num 9:10; an operand excluded from a
+census, Num 3:39; liability scope, Deut 29:28; culpability
+established, Gen 19:33 at Nazir 23a), with the processing algorithm
+itself recorded (Bereshit Rabbah 78:9: script outnumbers dots —
+expound the script; dots outnumber — expound the dots). Front-end
+inventory for the compiler: letters, words, roots, verse cuts, and
+the fifteen dots. The accents serve people; the dots serve the law.
 
 ## Step 2 — Apply the morphology  ✅ done, whole Bible
 Every word in every leaf is tagged with its grammar: verb form, tense,
@@ -189,7 +232,8 @@ The two-shelves ruling stands unchanged, and such a triage never enters
 a unit's DECLARED reading scope: stamps and coverage stay on the
 core-shelf default, no reading debt appears.
 GRADE THE LEG, NOT THE SECTION (2026-08-30, mirrored from canon's
-THE_STEPS; found deriving Toledot). When one source makes a claim in
+THE_STEPS; found deriving the Toledot — "generations" — portion).
+When one source makes a claim in
 several parts, each part is opened and graded SEPARATELY, and the note
 says which parts were not opened. A part that fails is evidence about
 THAT PART ONLY — never a verdict on the source. WORKED EXAMPLE, the
@@ -289,6 +333,12 @@ middah tagging fires on every argued inference. (Lesson of the day-4
 blind compare, 2026-08-21: each session missed exactly one of the two.)
 
 ## Step 6 — Write or amend the logic
+⚠ Under the CODE/DATA SEPARATION LAW (2026-09-03, see the compiler
+law block at the top): the logic written here comes from the ink
+alone — quantities, thresholds, and list-values the ink does not
+state are DATA the code must accept as input, never constants baked
+into the source. The Mishnah's case-shape teaches the input schema;
+its rows arrive only at Step 9, as test data.
 Four inputs combine to produce each verse's logic step:
 a. THE TREE (Step 1) gives the SHAPE — which words group together, what
    the verse's halves are (e.g. Gen 1:1 splits [the creation event |

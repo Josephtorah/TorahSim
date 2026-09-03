@@ -8575,3 +8575,173 @@ frozen ch-21 home is exo_21_the_ordinances; a first seat went into
 the drafts and was git-reverted same sitting. verify_claims.py
 takes a MANIFEST PATH argument. Uncommitted: everything from the
 compiler law forward — awaiting the owner's word.
+
+## MILESTONE 2026-09-02 (night): SITE TAKEOVER + THE COMPILER GOES
+## PUBLIC (owner: "I want to update the site. Can you take over the
+## site?" → recommendation given → "Yes go")
+THIS SESSION NOW RUNS BOTH TREES; the TorahSim window is retired
+(two-window-workflow memory updated). Built in <repo>
+(commit 59bdb4e, LOCAL — push+deploy await the owner's word):
+(1) /compiler/ section — index.html rendered from NEW canon file
+logic/compiler/COMPILER_RECORD.md (public-voice: the law, the case
+syntax + boundary, the nine-function 44/44 table with fractions, the
+guardians worked example, the Lev 24 dependency, scope-honesty
+close); moves.html rendered from logic/MOVE_CATALOG.md (copied
+canon); the three runners + three FROZEN TRANSCRIPTS (regenerated
+fresh this sitting) shipped verbatim in machines/compiler/ → copied
+to site/compiler/. Masthead gains "The Compiler" (third seat).
+export_site.py: new _md_body() converter (front door untouched) +
+build_compiler_site() with DISC_LINKS-style asserted phrase links.
+(2) exo_21_the_ordinances CROSSED with its compiler seat (YAML +
+manifest), licensed by TWO synced ledgers (compiler_code_hunt +
+exodus_backfill_mishnah_2026-09-01 — their cite gate needed the
+backfill ledger the earlier EX21-14 rode on); rendering + review
+page reprinted via THEIR press (render_unit_py/html, review page →
+scroll/units/UNIT_exo_21_the_ordinances.html per the dev-server
+regen convention). (3) changelog-gate fix PORTED to tools/check.py
+(counts derivation_log entries; documented in-file). ALL NINE GATES
+GREEN (gloss 213 files/0; units 97/97; press reprint clean;
+changelog green on the crossed YAML). Export clean: 496 files,
+62.6 MB, compiler = 2 pages + 6 files. DEPLOY COMMAND in
+TorahSim/CLAUDE.md (check green → export_site → wrangler w/ token
+at ~/.cf_torahsim_token, NEVER echo). NOT DONE YET: TorahSim units
+98-117 sync (their tree holds 97 — Mishpatim..Pekudei units absent;
+exo_22_property_social's compiler seat NOT crossed for that reason);
+the "compiled" vstat chip (needs a compiled-spans record + exporter
++ labels-gate work — its own sitting); the full-era sync remains a
+standing open item. AWAITING: owner's word to push 59bdb4e + deploy.
+
+## RESEARCH OPEN 2026-09-03: THE 100-PERCENT HYPOTHESIS (owner:
+## "100 percent of the code is in the written torah... m/t designed
+## to help us learn how to code from it... we don't want to encode
+## the data from the m/t into the source code... yes do the research")
+Live log: RESEARCH_LOG.md at repo root (owner-reviewable). The
+code/data separation is the design law of this research: source code
+ONLY from the 24 books; Mishnah rows = test DATA fed at runtime
+(their case-shape teaches the input schema); never encode the data.
+SITTING 1 RESULTS: CASE 1 (Sabbath 39 labors — the tradition's own
+worst case): 36/36 scannable labor-roots ink-attested (probes all
+fired), the 39 defined BY REFERENCE to the tabernacle narrative
+(Shabbat 49b:7 pulled — the index rule; the juxtaposition 31:12-17
++ 35:1-3 is the ink anchor), the QUANTITIES self-labeled by the
+tradition as the transmitted DATA channel (Eruvin 4a:10 "the
+MEASURES... from Sinai" — the owner's split in the tradition's own
+words); residue: 2 loom-internal ops + 1 thin verb. CASE 2 (second
+Passover): code complete in ink (Num 9:10-11, when-case w/
+or-branch), NATIONAL execution 2 Chr 30 incl. בלא ככתוב "not as
+WRITTEN" (the run citing the written code as its standard!) + the
+audit at Sanhedrin 12b:10; the distance threshold = DATA w/ two
+recorded settings (Mishnah Pesachim 9:2, Modiim vs courtyard).
+QUEUED: Case 3 courts/Ruth 4; Case 4 vows/Jephthah; then the
+Torah-only machine design (code from ink, schema from case-shape,
+Mishnah rows as runtime test data only). All witnesses pulled at
+rows this sitting; scan script in scratchpad (scan_39_labors.py).
+
+ADDENDUM 2026-09-03: THE CODE/DATA SEPARATION LAW RULED (owner:
+"This needs to go into the steps and everywhere else we need
+memory. This is the process to write the logic per verse without
+the data."). Recorded: THE_STEPS (new law block above the two
+riders + Step 6 header note), memory code-data-separation-law.md +
+MEMORY.md index, THE_WORLD idea log. RESEARCH_LOG.md expanded at
+the owner's ask with THE FULL EXPLANATION — every load-bearing
+verse quoted in full (Hebrew + English): the Sabbath case verse by
+verse (Exod 20:9-10 actor schema; 31:15 in-build statute; 35:2-3
+header + kindling; 34:21 plowing/harvest; the Exod 16 run incl.
+16:27 failed gathering; Num 15:32-35 custody-pending w/ לא פרש "it
+had not been specified"; the tabernacle work-list ink 25:5/35:25/
+35:35; the executions gallery Gen 3:7, 37:7, Ruth 3:2, Num 11:8,
+Jer 7:18 three-labors-in-one-verse, Num 5:23, Isa 41:7, Jer
+17:21-22, Neh 13:15+19, Amos 8:5) and the second-Passover case
+verse by verse (Num 9:6-8 the query, 9:10-11 the code, 9:13 the
+else-branch, 2 Chr 30:2-3/18/20). NEW FIND logged: the runtime
+code-request protocol (4 custody-pending cases: Lev 24:12, Num
+9:8, 15:34, 27:5). The owner asked what name I'd like to be called.
+
+ADDENDUM 2026-09-03 (evening): LESSON ONE teaching file built at the
+owner's ask — How_A_Verse_Becomes_Code.html + passover_lesson.py at
+repo root (Second Passover; 7 steps; full Mishnah Pesachim 9:1-3
+both languages; code from ink w/ the threshold as parameter; 5/5
+under both Akiva/Eliezer settings; refinement #1 recorded on-page:
+underspecified test data caught by the machine, fixed in data not
+code). A LIVING file — the owner will refine it iteratively; builder
+script in scratchpad (build_lesson_html.py) — edit it and re-run to
+revise the page. Logged in RESEARCH_LOG.md.
+
+ADDENDUM 2026-09-03 (night): THE CANTILLATION QUESTION SETTLED
+(owner: "do we even need the cantillation tree... run the hunt").
+Verdict in RESEARCH_LOG.md: the compiler does NOT need the accent
+tree for case law. Prong 1: the tradition's own census — Isi ben
+Yehuda's FIVE undecidable verses (Yoma 52a:10, list at 52b:1-5:
+Gen 4:7, Exod 25:34, Exod 17:9, Gen 49:7, Deut 31:16) — ZERO case
+law (3 narrative, 1 poetry, 1 spec ornament); the one recorded
+pisuk-te'amim dispute (Chagigah 6b:13, Mar Zutra, Exod 24:5) is
+narrative. Prong 2: mechanical — all 64 branch keywords in Exod
+21:1-23:19: 44 verse-initial, 18 after pause-accents (redundant
+agreement), 2 after joining accents BOTH inside compound keywords
+(but-if 21:21, for-if 22:22); zero accent-dependent boundaries.
+DESIGN FACT: the code sections are engineered parse-unambiguous.
+Side-note: the load-bearing ink-flag for law is the DOT layer
+(the dotted heh of "distant," Num 9:10 → Mishnah Pesachim 9:2),
+not the accents. Two annotation channels, two jobs.
+
+ADDENDUM 2026-09-03 (late): THE DOT CHANNEL confirmed (owner's
+hunch). The Num 9:10 mark = scribal DOT (U+05C4 in tanakh.sqlite,
+NOT an accent). Canon scan: 15 dotted sites (10 Torah + 5 beyond) —
+matches Avot DeRabbi Natan 34:5's "ten places in the Torah" exactly.
+Function per the teacher: QUALIFICATION flags — parameter qualified
+(Num 9:10 / Mishnah Pesachim 9:2), operand excluded from a count
+(Num 3:39 / Bamidbar Rabbah 3:13 — Aaron out of the census), scope
+of liability (Deut 29:28 / Sanhedrin 43b:10-11, dispute recorded).
+Front-end inventory now: letters, words, roots, verse cuts + THE 15
+DOTS. Accents = reader channel; dots = law channel. In
+RESEARCH_LOG.md.
+
+## ⚠⚠ COMPACTION POINT #38 (2026-09-03, owner: "I am going to
+## compact now. get ready") — READ #37 above, then the 2026-09-02
+## compiler-law MILESTONE blocks, then EVERY 2026-09-03 addendum,
+## then RESEARCH_LOG.md AT THE REPO ROOT (the owner follows the
+## research THERE — it carries every verse in full). Standing rule:
+## first sitting after compaction, reread THE_STEPS Step 4 AND
+## Step 9 (both re-founded under the compiler law) AND the compiler
+## law block at THE_STEPS' top (code/data separation inside it).
+THE SESSION'S ARC since #37 (all owner-worded): (1) THE COMPILER
+LAW ruled + Step 9 re-founded on the owner's correction + the first
+cold runs (44/44 Mishpatim, fractions 59/20/20) + MOVE_CATALOG
+M-01..M-10 + first auto-seat (12 claims, 2 units) — all committed
+c0e7b66 AND PUSHED. (2) SITE TAKEOVER ("Yes go"): this session now
+runs BOTH trees; TorahSim commit 65bc09a is LOCAL-ONLY — the
+/compiler/ section (record page + moves page + runners +
+transcripts), Step 9 re-founded on the scroll bands W/ THE DERIVED
+PYTHON EMBEDDED (COMPILER_EXHIBITS injection), THE_STEPS mirrored,
+changelog-gate fix ported, nine gates green — ⚠ PUSH + DEPLOY
+AWAIT THE OWNER'S EXPLICIT WORD (deploy recipe in TorahSim/
+CLAUDE.md; dev preview: python3 tools/dev_server.py port 8012).
+(3) THE RESEARCH ERA (2026-09-03): the 100-PERCENT HYPOTHESIS +
+THE CODE/DATA SEPARATION LAW ruled ("the process to write the
+logic per verse without the data") — RESEARCH_LOG.md carries five
+completed investigations: Sabbath 39 labors (36/36 roots ink;
+quantities = the transmitted data channel per Eruvin 4a), second
+Passover (code Num 9; execution 2 Chr 30 "not as WRITTEN";
+parameter w/ two settings), courts+Ruth 4 (zero missing code; the
+7-verse gate+elders scan incl. the Lam 5:14 shutdown log), the
+CANTILLATION VERDICT (tree never decides case law — Yoma 52a-b's
+five undecidables have zero law; 64/64 keywords word-bounded;
+etnachta = condition‖outcome seam 17/20 = LINT only), and THE DOT
+CHANNEL (15 sites machine-matched to Avot DeRabbi Natan 34:5;
+qualification readings at pulled rows; processing algorithm at
+Bereshit Rabbah 78:9). Plus THE RUNTIME CODE-REQUEST PROTOCOL
+(4 custody-pending cases: Lev 24:12, Num 9:8, 15:34, 27:5). (4)
+LESSON ONE: How_A_Verse_Becomes_Code.html + passover_lesson.py at
+root (living teaching file; builder in scratchpad
+build_lesson_html.py; owner will refine iteratively). (5) Memory
+current: compiler-law, code-data-separation-law (w/ front-end
+findings), two-window (site takeover), MOVE_CATALOG standing duty.
+THE_STEPS/THE_WORLD/THE_BRIEFING all current. The owner asked what
+name I'd like: answered CLAUDE, warmly.
+⚠ NEXT TASKS awaiting the owner's word: TorahSim push 65bc09a +
+deploy; research Case 4 (vows/Jephthah) + the Torah-only machine
+design (code from ink, schema from case-shape, Mishnah rows as
+runtime data); lesson refinements; Leviticus (Sifra spine; Lev 24
+= first call AND measured compile dependency of Exod 21); the
+remaining Mishpatim openers' re-compilation; units 98-117 TorahSim
+sync; the compiled-chip labels work.

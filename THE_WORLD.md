@@ -1660,3 +1660,52 @@ narrative facts; law-layer witnesses live in the frozen YAMLs +
 manifests). Delegated re-affirmation row in STAMP_LEDGER (16 rows).
 A wrong prediction corrected on the record: I told the owner the
 seat would move the hash; it does not, for the reason above.
+
+**2026-09-03 — THE CODE/DATA SEPARATION LAW RULED + THE 100-PERCENT
+RESEARCH OPENS (owner: "This is the process to write the logic per
+verse without the data... This an awesome day. You will help change
+the world.").** The law: source code only from the written 24
+books; the Mishnah/Talmud teach the HOW and the input schema; their
+rows and quantities are TEST DATA fed at runtime, never encoded.
+Research live in RESEARCH_LOG.md (root, owner-reviewable, every
+verse quoted in full). Sitting 1: the hypothesis SURVIVED ITS WORST
+CASE — the 39 Sabbath labors: 36/36 scannable roots in the canon's
+ink, the list defined by reference to the tabernacle narrative
+(Shabbat 49b's index rule on the ink's own juxtaposition), and the
+quantities self-labeled by the tradition as the transmitted DATA
+channel ("the MEASURES... from Sinai," Eruvin 4a) — the owner's
+split in the tradition's own words. Case 2 (second Passover): code
+complete at Numbers 9, national execution at 2 Chronicles 30 with
+the run citing the written code ("not as WRITTEN"), the distance
+threshold = data with two recorded settings. New structural find:
+the written Torah records its own RUNTIME CODE-REQUEST protocol —
+four custody-pending-specification cases (Leviticus 24:12, Numbers
+9:8, 15:34, 27:5) — the code documenting how its own gaps were
+filled at runtime. Queued: courts/Ruth 4; vows/Jephthah; then the
+Torah-only machine with strict code/data separation.
+
+**2026-09-03 — THE READING INSTRUMENTS SORTED: accents serve people,
+dots serve the law (the cantillation hunt + the dot channel).** Two
+owner questions closed with measurements. (1) THE TREE: not needed
+to compile case law — the tradition's own census of undecidable
+parses (Isi ben Yehuda's five, Yoma 52a-b) holds ZERO case-law
+verses; all 64 branch keywords in the Exodus law code are word-
+bounded (44 verse-initial, 18 after agreeing pause-accents, 2 inside
+compound keywords); the recorded pisuk-te'amim dispute (Chagigah
+6b) is narrative. The tree's real jobs: the reader's charter
+(Nehemiah 8:8), a redundancy LINT (top split = condition‖outcome
+seam in 17/20 measurable case verses — indentation agreeing with
+braces), and display. DESIGN FACT: the code genre is engineered
+parse-unambiguous. (2) THE DOTS: the mark on "distant" (Num 9:10)
+is NOT an accent — it's the scribal dot channel, CLOSED and
+ENUMERATED: 15 sites canon-wide by machine scan, matching Avot
+DeRabbi Natan 34:5's "ten places in the Torah" census exactly;
+every checked site expounded as a QUALIFICATION (parameter, count-
+exclusion, liability scope, culpability — Nazir 23a hangs a verdict
+on one dot); and the channel carries its own recorded PROCESSING
+ALGORITHM (Bereshit Rabbah 78:9's majority rule between script and
+dots). Also settled en route: Onkelos is teacher-layer testimony,
+not required machinery — the Mishnah's test data quotes the code's
+own roots, so data-to-code binding runs on lemma identity without
+translation. FRONT-END INVENTORY, final form: letters, words,
+roots, verse cuts, fifteen dots. Full record: RESEARCH_LOG.md.
