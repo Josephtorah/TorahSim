@@ -123,6 +123,10 @@ m.step("Exod.23.12")
 # on rest_clause — read, not installed
 m.witness_read("rest_clause", "animal_rest_is_grazing_and_the_status_table",
                 cites=["Mekhilta on Exod 23:12"])
+# witness-tier presupposed read: the_rest_scopes_babylonian_layer on
+# rest_clauses — read, not installed
+m.witness_read("rest_clauses", "the_rest_scopes_babylonian_layer",
+                cites=["Sukkah 44b:7", "Yevamot 48b:4", "Yevamot 48b:5", "Yevamot 48b:6", "Sanhedrin 63b:5", "Sanhedrin 63b:6"])
 
 # -------------------------- Exod.23.13 · ETNACHTA_SPLIT --------------------
 # ובכל אשר אמרתי אליכם תשמרו … ושם אלהים אחרים לא תזכירו לא ישמע על פיך
@@ -130,6 +134,10 @@ m.witness_read("rest_clause", "animal_rest_is_grazing_and_the_status_table",
 # אלהים אחרים לא תזכירו לא ישמע על פיך». Derive claim from Hebrew arms, not
 # English alone. Exod 23:13."
 m.step("Exod.23.13")
+# witness-tier presupposed read: take_heed_hook on vessel_rest — read, not
+# installed
+m.witness_read("vessel_rest", "take_heed_hook",
+                cites=["Shabbat 18a:5", "Shabbat 18a:6", "Shabbat 18a:7"])
 
 # -------------------------- Exod.23.14 · TREE_CLAIM ------------------------
 # שלש רגלים … תחג לי בשנה
@@ -163,6 +171,10 @@ m.step("Exod.23.16")
 # פני האדן יהוה». Derive claim from Hebrew arms, not English alone. Exod
 # 23:17."
 m.step("Exod.23.17")
+# witness-tier presupposed read: the_appearing_machines_derivation_layer on
+# appearance_verse — read, not installed
+m.witness_read("appearance_verse", "the_appearing_machines_derivation_layer",
+                cites=["Sanhedrin 4b:15", "Arakhin 2b:11", "Arakhin 2b:12", "Chagigah 4a:3", "Chagigah 4a:8", "Chagigah 4a:9", "Chagigah 4a:10", "Chagigah 7a:5", "Chagigah 7a:6", "Chagigah 7a:10", "Chagigah 7a:17", "Chagigah 7b:1", "Chagigah 7b:2", "Yevamot 103a:11", "Arakhin 19b:8", "Arakhin 19b:9", "Chagigah 18a:2", "Chagigah 18a:3", "Chagigah 18a:5", "Chagigah 18a:6"])
 
 # -------------------------- Exod.23.18 · ETNACHTA_SPLIT --------------------
 # לא תזבח על חמץ דם זבחי … ולא ילין חלב חגי עד בקר
@@ -170,6 +182,10 @@ m.step("Exod.23.17")
 # חלב חגי עד בקר». Derive claim from Hebrew arms, not English alone. Exod
 # 23:18."
 m.step("Exod.23.18")
+# witness-tier presupposed read: the_feast_offerings_fences on feast_clauses
+# — read, not installed
+m.witness_read("feast_clauses", "the_feast_offerings_fences",
+                cites=["Chagigah 10b:4", "Chagigah 10b:5", "Pesachim 63b:10", "Pesachim 63b:11", "Pesachim 64a:5", "Pesachim 64a:6", "Pesachim 59b:6", "Pesachim 59b:7", "Pesachim 71a:12", "Pesachim 71a:13"])
 
 # -------------------------- Exod.23.19 · ETNACHTA_SPLIT --------------------
 # ראשית בכורי אדמתך תביא בית יהוה אלהיך … לא תבשל גדי בחלב אמו
@@ -185,6 +201,10 @@ m.witness_read("kid_in_milk_clause", "the_translation_is_the_verdict",
 # kid_in_milk_clause — read, not installed
 m.witness_read("kid_in_milk_clause", "bikkurim_exam_legs_f018",
                 cites=["Mishnah Bikkurim 1:3", "Mishnah Bikkurim 1:9", "Mishnah Bikkurim 1:2", "Mekhilta on Exod 23:19"])
+# witness-tier presupposed read: vocalization_authority_file on
+# kid_in_milk_clause — read, not installed
+m.witness_read("kid_in_milk_clause", "vocalization_authority_file",
+                cites=["Sanhedrin 4a:12", "Sanhedrin 4a:13", "Sanhedrin 4a:14", "Sanhedrin 4a:15", "Sanhedrin 4b:1", "Sanhedrin 4b:2", "Sanhedrin 4b:12", "Sanhedrin 4b:13", "Sanhedrin 4b:14", "Sanhedrin 4b:15", "Sanhedrin 4b:16", "Shabbat 97a:1", "Sanhedrin 3b:3"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -202,7 +222,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('false_report_clause', 'three_azharot_and_witness_fitness'), ('majority_clause', 'asymmetric_majority_and_the_duty_to_speak'), ('majority_clause', 'courtroom_conduct_file'), ('unloading_clause', 'the_ris_measure_and_the_grudge_released'), ('falsehood_clause', 'acquittal_asymmetry_and_the_circumstantial_refusal'), ('shemitah_clause', 'abandonment_lawless_by_design'), ('rest_clause', 'animal_rest_is_grazing_and_the_status_table'), ('pilgrimage_clause', 'the_exemption_table_word_by_word'), ('kid_in_milk_clause', 'the_translation_is_the_verdict'), ('kid_in_milk_clause', 'bikkurim_exam_legs_f018')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('false_report_clause', 'three_azharot_and_witness_fitness'), ('majority_clause', 'asymmetric_majority_and_the_duty_to_speak'), ('majority_clause', 'courtroom_conduct_file'), ('unloading_clause', 'the_ris_measure_and_the_grudge_released'), ('falsehood_clause', 'acquittal_asymmetry_and_the_circumstantial_refusal'), ('shemitah_clause', 'abandonment_lawless_by_design'), ('rest_clause', 'animal_rest_is_grazing_and_the_status_table'), ('rest_clauses', 'the_rest_scopes_babylonian_layer'), ('vessel_rest', 'take_heed_hook'), ('pilgrimage_clause', 'the_exemption_table_word_by_word'), ('appearance_verse', 'the_appearing_machines_derivation_layer'), ('feast_clauses', 'the_feast_offerings_fences'), ('kid_in_milk_clause', 'the_translation_is_the_verdict'), ('kid_in_milk_clause', 'bikkurim_exam_legs_f018'), ('kid_in_milk_clause', 'vocalization_authority_file')]
     assert m.WITNESS_READS[0]["cites"] == ['Mekhilta on Exod 23:1']
     assert all('three_azharot_and_witness_fitness' not in f for f in m.WORLD["facts"])
     assert 'false_report_clause' not in m.WORLD["witnessed"]
@@ -224,13 +244,28 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[6]["cites"] == ['Mekhilta on Exod 23:12']
     assert all('animal_rest_is_grazing_and_the_status_table' not in f for f in m.WORLD["facts"])
     assert 'rest_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Mekhilta on Exod 23:14-17']
+    assert m.WITNESS_READS[7]["cites"] == ['Sukkah 44b:7', 'Yevamot 48b:4', 'Yevamot 48b:5', 'Yevamot 48b:6', 'Sanhedrin 63b:5', 'Sanhedrin 63b:6']
+    assert all('the_rest_scopes_babylonian_layer' not in f for f in m.WORLD["facts"])
+    assert 'rest_clauses' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Shabbat 18a:5', 'Shabbat 18a:6', 'Shabbat 18a:7']
+    assert all('take_heed_hook' not in f for f in m.WORLD["facts"])
+    assert 'vessel_rest' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Mekhilta on Exod 23:14-17']
     assert all('the_exemption_table_word_by_word' not in f for f in m.WORLD["facts"])
     assert 'pilgrimage_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Mekhilta on Exod 23:19', 'Onkelos Exod 23:19', 'Mekhilta on Exod 23:18', 'Onkelos Exod 23:18']
+    assert m.WITNESS_READS[10]["cites"] == ['Sanhedrin 4b:15', 'Arakhin 2b:11', 'Arakhin 2b:12', 'Chagigah 4a:3', 'Chagigah 4a:8', 'Chagigah 4a:9', 'Chagigah 4a:10', 'Chagigah 7a:5', 'Chagigah 7a:6', 'Chagigah 7a:10', 'Chagigah 7a:17', 'Chagigah 7b:1', 'Chagigah 7b:2', 'Yevamot 103a:11', 'Arakhin 19b:8', 'Arakhin 19b:9', 'Chagigah 18a:2', 'Chagigah 18a:3', 'Chagigah 18a:5', 'Chagigah 18a:6']
+    assert all('the_appearing_machines_derivation_layer' not in f for f in m.WORLD["facts"])
+    assert 'appearance_verse' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Chagigah 10b:4', 'Chagigah 10b:5', 'Pesachim 63b:10', 'Pesachim 63b:11', 'Pesachim 64a:5', 'Pesachim 64a:6', 'Pesachim 59b:6', 'Pesachim 59b:7', 'Pesachim 71a:12', 'Pesachim 71a:13']
+    assert all('the_feast_offerings_fences' not in f for f in m.WORLD["facts"])
+    assert 'feast_clauses' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[12]["cites"] == ['Mekhilta on Exod 23:19', 'Onkelos Exod 23:19', 'Mekhilta on Exod 23:18', 'Onkelos Exod 23:18']
     assert all('the_translation_is_the_verdict' not in f for f in m.WORLD["facts"])
     assert 'kid_in_milk_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Mishnah Bikkurim 1:3', 'Mishnah Bikkurim 1:9', 'Mishnah Bikkurim 1:2', 'Mekhilta on Exod 23:19']
+    assert m.WITNESS_READS[13]["cites"] == ['Mishnah Bikkurim 1:3', 'Mishnah Bikkurim 1:9', 'Mishnah Bikkurim 1:2', 'Mekhilta on Exod 23:19']
     assert all('bikkurim_exam_legs_f018' not in f for f in m.WORLD["facts"])
+    assert 'kid_in_milk_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[14]["cites"] == ['Sanhedrin 4a:12', 'Sanhedrin 4a:13', 'Sanhedrin 4a:14', 'Sanhedrin 4a:15', 'Sanhedrin 4b:1', 'Sanhedrin 4b:2', 'Sanhedrin 4b:12', 'Sanhedrin 4b:13', 'Sanhedrin 4b:14', 'Sanhedrin 4b:15', 'Sanhedrin 4b:16', 'Shabbat 97a:1', 'Sanhedrin 3b:3']
+    assert all('vocalization_authority_file' not in f for f in m.WORLD["facts"])
     assert 'kid_in_milk_clause' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

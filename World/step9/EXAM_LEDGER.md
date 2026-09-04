@@ -428,3 +428,278 @@ fire-directness requirement and engineering the answer
 (pomegranate) — the closest thing yet to a recorded experiment.
 Ritual COMPLETE exo_12, regression 130/130, standing +4 rebaked
 (1229), hash unmoved, preflight green, gloss_lint 0.
+
+## Round 17 — SHABBAT'S MACHINERY (2026-09-04, Exodus exam block 9 of 18)
+Owner: "Yes block 9 go" — the twice-drawn import edge run at last
+(the leaven block's kindling proof and the courts block's
+execution-burning read had both hit the fork before this block
+opened). 37 LAW rows credited to the triage, 110 sugya segments
+opened fresh across TEN tractates (ledger
+logic/oral_triage/exodus_block_shabbat_2026-09-04.md). Ten modules
+(shabbat_rules.py), 50 cases (cases_shabbat.yaml): **50/50 FIRST
+RUN**; all sixteen prior rounds green — **640/640 across seventeen
+rounds**. Catalog R-394..R-403 (208 compiled rules); vocabulary +50
+query values (464 on 158 dims). SIX findings auto-seated:
+F-061 → EX31-06 (the desecrator clauses' derivation file — the
+division race, the forgetter grid's verse-pair with its recorded
+reversal, the LIFE TOURNAMENT ending at Shmuel's live-by-them, the
+product legs, the gatherer's mode-only doubt), F-062 → EX35-06 (the
+kindling fork's FOUR courtrooms + the 39-count arithmetic held by
+Rebbi himself + the habitations clause's three reads), F-063 →
+EX16-16 (the manna chapter as Shabbat's statute book — boundary
+routes through the asylum verse, kitchen laws, preparation
+doctrine, the shabbaton shell dual-tracked), F-064 → EX36-08 (the
+proclamation's two exports — carrying-out's home ink and the
+shofar's voice, one analogy both directions), F-065 → EX20-17 (the
+rest roster runs — all animals, the laden donkey's
+walking-placement, doing-vs-causing, the parent refused),
+F-066 → EX23-11 (the vessels must rest — the Mekhilta's take-heed
+hook, the acts/does-not-act split). NEW TRAP RECORDED: module
+names need the collision guard too — the block's life_override
+module overwrote the pilot's module of the same name via
+RULES.update (3 pilot mismatches); renamed
+life_override_derivation, pilot green again. Anticipations: EX31-05
+held the forgetter grid, EX31-03 the BUT particle, EX35-01 the
+kindling clause and the non-burning court, EX36-05 the carrying
+anchor, EX16-10/14 the boundary grid, EX20-16(d) the purse row,
+EX22-01/15 the tunneler seed and the rubble rescue — SEVEN seats
+answering before the sugyot opened. Rituals COMPLETE on six units,
+regression 130/130, standing +6 rebaked (1235), hash unmoved,
+gloss_lint 0.
+
+## Round 18 — MATZA, HERBS, AND THE TELLING (2026-09-04, Exodus exam block 3 of 18)
+Owner: "Yes block 3" — the Passover family's eating-side wing plus
+the consecration chapter's tefillin file. 28 LAW rows credited to
+the triage, 22 standing credits quick-looked against three prior
+block ledgers (the family's overlap paying off), 75 sugya segments
+opened fresh across SEVEN tractates (ledger
+logic/oral_triage/exodus_block_matza_2026-09-04.md). Eight modules
+(matza_rules.py), 29 cases (cases_matza.yaml): 27/29 first pass,
+**29/29 after two honest fires** — all seventeen prior rounds
+green: **669/669 across eighteen rounds**. The two fires, both
+gates working as written: the dispute gate refused a verdict-list
+arm carrying its authority only in prose (Rav Ashi's keha route —
+labeled, green), and the vocabulary gate caught an unregistered
+query value (matza_post_temple — registered with its ink, green).
+Catalog R-404..R-411 (216 compiled rules); vocabulary +29 query
+values (493 on 158 dims). THREE findings auto-seated: F-067 →
+EX13-17 (the tefillin file's derivation layer — the totafot count
+at both routes, the one-hide housings, the weak-arm heh become
+law, the eight positives, permitted-to-your-mouth with the
+sinew-sewing self-labeled as the data channel, the biceps
+register, the days-that-are-signs time fork, the women's-exemption
+engine, the child as ink-validity oracle), F-068 → EX13-18 (the
+telling: for-ME every generation, the pointing with the blind
+exemption and its era-grade interlock, the lifting rule), F-069 →
+EX12-29 (the matza statute: the first night's grade dispute on the
+unit's own lean-ketiv verse, the singled-seventh middah with the
+Num 9:11 carve-back, the guard-from-the-grain reversal, the herbs
+class, the watchings-night, ben Beteira's window). ANTICIPATIONS:
+EX13-15 held the four-compartments datum, EX13-04 the yadkha-heh
+(its ink note became Rav Ashi's law), EX12-15 the watchings pair,
+EX12-20 the trio — and STEP_Ex_13_8's own OPERATOR PROSE held the
+pointing and the for-me before the seder dafs were opened: the
+third stratum anticipating. The module-name collision guard
+(round 17's trap) FIRED USEFULLY on its second outing:
+tefillin_form already lives in backfill_rules — the new module
+named tefillin_housing. Rituals COMPLETE exo_13 + exo_12,
+regression 130/130, standing +3 rebaked (1238), hash unmoved,
+gloss_lint 0.
+
+## Round 19 — EGYPT AND THE GENERATIONS (2026-09-04, Exodus exam block 4 of 18)
+Owner: "Let's do the next block" — the Passover family's closing
+wing: the two-era engine's derivation layer, the second Passover's
+statute engine, the carve-outs, Egypt's rite. 7 LAW rows credited
+to the triage, 9 standing credits quick-looked against the pesach
+block ledger, 64 segments opened fresh — all 81 segments of
+Pesachim 95a:1-96b:19 now verdicted between the two dockets
+(ledger logic/oral_triage/exodus_block_egypt_2026-09-04.md). Four
+modules (egypt_rules.py), 28 cases (cases_egypt.yaml): **28/28
+FIRST RUN** — all eighteen prior rounds green: **697/697 across
+nineteen rounds**. THE PASSOVER FAMILY IS CLOSED (blocks 1+2+3+4,
+122 cases). Catalog R-412..R-415 (220 compiled rules); vocabulary
++28 query values (521 on 158 dims). THREE findings auto-seated:
+F-070 → EX12-30 (the second Passover's statute engine — the
+in-body criterion with typed particulars, the include runs, the
+in-body-preferred tie-break fired three times, seek-company, the
+override table with R. Yehuda's fork and the two-tannaim lodging
+split, the impure-Passover carve-outs riding Lev 7:19-20
+CROSS-BOOK — the campaign's second Leviticus-grades-Exodus case),
+F-071 → EX13-19 (the EXPORT OPERATOR: 13:5's you-shall-perform
+read as all-the-month's-services-as-this-one, fired clause by
+clause with each freed restrictor token reassigned — the midnight
+dispute, the uncircumcised's matza duty, the apostasy/terumah
+boundary, the him-alone bar, the valid-only bone; haste and the
+tenth-day taking left in Egypt; the leaven days resolved
+night-and-day vs seven), F-072 → EX12-31 (Egypt's doorway
+altars — Rav Yosef's three altars on lintel and posts, the
+whole-roast answer, the sprinkling Egypt-only). ANTICIPATIONS:
+EX12-28 held the engine's whole surface one round early (the
+rhythm anticipating itself), EX12-29 held the freed-token matza
+corollary, EX12-27 the valid-only bone and the marrow arms — and
+THE THIRD STRATUM AGAIN: STEP_Ex_13_5's own operator prose had
+filed the export verse as the rite's continuity clause before the
+sugya opened. Rituals COMPLETE exo_12 + exo_13, regression
+130/130, standing +3 rebaked (1241), hash unmoved, manifests 0
+FAILED, gloss_lint 0.
+
+## Round 20 — THE INK LAYER (2026-09-04, Exodus exam block 15 of 18)
+Owner: "let continue" — the small pair 15+18 batched, first half.
+The meta-block: the Talmud ruling about the ink itself. 12 LAW
+rows credited (four routed in by prior blocks' own notes), 43
+segments opened fresh (ledger
+logic/oral_triage/exodus_block_ink_2026-09-04.md). Five modules
+(ink_rules.py), 17 cases (cases_ink.yaml): **17/17 FIRST RUN**.
+Catalog R-416..R-420; vocabulary +17. THREE findings auto-seated:
+F-073 → EX23-12 (the vocalization-authority sugya ON the unit's
+own milk clause — the scope law matching the front-end
+measurement: dispute only where written differs from read; the
+way-of-cooking seal; the meta-rules — received-only analogy,
+first-mention), F-074 → EX27-08 (the script witness in the
+verse's own word — the vavs of the pillars; the letter-arithmetic
+pair; the undecided census), F-075 → EX03-14 (the Name's
+ink-protection file — erasure lists, letter grain, Tzevaot
+dispute + ruling, direction law, compounds with the merchav-Ya
+TEIKU). ANTICIPATED: EX03-07 held the concealment ketiv since
+derivation. HEADLINE: the tradition NAMES the front end's
+question (Sanhedrin 4a) and RULES the measured verdict (vowels
+decide only where the skeleton forks) — at the very clause the
+measurement used.
+
+## Round 21 — CONDUCT AND LITURGY (2026-09-04, Exodus exam block 18 of 18 by number)
+Owner: "let continue" — the pair's second half. 18 LAW rows
+credited (six routed in; the healing license carried on content),
+40 segments opened fresh (ledger
+logic/oral_triage/exodus_block_conduct_2026-09-04.md). Five
+modules (conduct_rules.py), 20 cases (cases_conduct.yaml):
+**20/20 FIRST RUN** — all priors green: **734/734 across
+twenty-one rounds**. Catalog R-421..R-425 (230 compiled rules);
+vocabulary +20 (558 on 158 dims). FOUR findings auto-seated:
+F-076 → EX19-15 (the voice protocol — the Levites' holy tongue
+and the translator's volume law on the dialogue crown's own
+clause; the Song's two modes), F-077 → EX20-18 (the kiddush file
+— wine at the entry, the exodus by remember-remember, women
+Torah-grade by the keep-remember pair), F-078 → EX20-19 (the
+Name-mention clause's two jobs — the inverted-verse blessing
+site; the Presence at study), F-079 → EX31-07 (the announced
+gift + the added soul's woe-cry + the camp-measured
+jurisdiction). ANTICIPATIONS: EX21-07 held the healing license
+VERBATIM before the daf opened; EX19-12's crown named the
+CHANNEL; and THE THIRD STRATUM's third consecutive round —
+STEP_Ex_20_8's "remember-and-keep in one saying" IS Rava's
+women's-kiddush derivation. Rituals COMPLETE six units (exo_23,
+exo_27, exo_03, exo_19, exo_20, exo_31 — both rounds' batch),
+regression 130/130, standing +7 rebaked (1248), hash unmoved,
+manifests 0 FAILED, gloss_lint 0.
+
+## Round 22 — THE CALENDAR (2026-09-04, Exodus exam block 10 of 18)
+Owner: "Another block go." The calendar's machinery on Exodus's
+ink. 10 LAW rows credited (the courts block's intercalation pair
+and the matza block's day-boundary row routed in by standing
+notes), 37 segments opened fresh + 2 liturgy rows carried on
+content (ledger
+logic/oral_triage/exodus_block_calendar_2026-09-04.md). Four
+modules (calendar_rules.py), 11 cases (cases_calendar.yaml):
+**11/11 FIRST RUN** — all priors green: **745/745 across
+twenty-two rounds**. Catalog R-426..R-429 (234 compiled rules);
+vocabulary +11 (569 on 158 dims). THREE findings auto-seated:
+F-080 → EX12-32 (the calendar machine's derivation file — the
+see-and-sanctify sight rule, add-vs-sanctify, the witness
+asymmetry: STRETCH NEVER FABRICATE; only-Adar with Hezekiah's
+recorded violation; the shekels' year-head with the
+analogy-SELECTION rule; the day boundary from the chapter's own
+12:18), F-081 → EX34-08 (the equinox trigger's three labeled
+arms + the seam's one-third threshold with the measures
+self-labeled AGAIN + the harvest rest's assignment dispute),
+F-082 → EX40-07 (the erection date as chronology anchor —
+Nisan-for-kings' Exodus rungs + the Ninth of Av computed to the
+day). ANTICIPATIONS: Rosh Hashanah 25a's unnamed-seventy law
+arrived answered — EX24-07 (F-019, the Mishpatim round) already
+holds every-court-as-Moses; EX12-22's commission (F-021) held the
+Mishnah surface. Rituals COMPLETE three units (exo_12, exo_34,
+exo_40), regression 130/130, standing +3 rebaked (1251), hash
+unmoved, manifests 0 FAILED, gloss_lint 0.
+
+## Round 23 — THE SINAI COVENANT (2026-09-04, Exodus exam block 16 of 18)
+Owner: "One more block." The covenant's own machinery. 17 LAW
+rows credited (four routed in; Yoma 3b:3 routed out to block 11
+on content), 46 segments opened fresh (ledger
+logic/oral_triage/exodus_block_covenant_2026-09-04.md). Five
+modules (covenant_rules.py — boundary_machine_sinai the collision
+guard's THIRD firing), 16 cases (cases_covenant.yaml): **16/16
+FIRST RUN** — all priors green: **761/761 across twenty-three
+rounds**. Catalog R-430..R-434 (239 compiled rules); vocabulary
++16 (585 on 158 dims). THREE findings auto-seated: F-083 →
+EX24-08 (the sequestering building-block — the High Priest's week
+from Moses' six; the date-dispute mapping w/ the
+seventeenth-of-Tammuz arithmetic; the entry resolved both ways
+incl. the path-as-the-sea; call-before-speech; THE CANON CHANNEL
+— the whole library from 24:12, the two-channel charter's second
+seat), F-084 → EX19-16 (the boundary machine — push-then-stone
+for the generations, the beast's twenty-three, the
+COUNTED-RELEASE rule ending the mount's sanctity by proclamation;
+conversion's immersion; the giving-date dispute w/ Rava's two
+pegs; the three things Moses reasoned himself), F-085 → EX34-09
+(the attributes covenant — the wrapped prayer leader, the
+covenant that never returns empty, the confession's order
+dispute, the please-opener with Abaye's KASHYA carried as a
+recorded standing difficulty). ANTICIPATIONS: EX19-10's crown
+held BOTH boundary laws in its derivation prose ("for the
+generations: pushing and stoning" + the expiry clause); the
+ten-crowns row landed on EX40-07 — a ONE-ROUND-OLD seat; Moses'
+tablets-breaking a-fortiori rides round 19's own 12:43 apostasy
+seat. Rituals COMPLETE three units (exo_24, exo_19, exo_34),
+regression 130/130, standing +3 rebaked (1254), hash unmoved,
+manifests 0 FAILED, gloss_lint 0.
+
+## Round 24 — FESTIVALS AND GIFTS (2026-09-04, Exodus exam block 17 of 18)
+Owner: "Go." The food-labor license, the regalim, the feast
+offering's fences, the firstborn engine, the delay ban, the rest
+clauses. 39 LAW rows credited (13 routed in by prior blocks' own
+notes — the largest route-in harvest yet: the matza block's
+firstborn-donkey seven, the leaven block's four, the shabbat and
+courts-and-ink routes), 111 segments opened fresh across 13
+tractates (ledger
+logic/oral_triage/exodus_block_festivals_2026-09-04.md). Five
+modules (festivals_rules.py — appearance_exemptions the collision
+guard's FOURTH firing, beside the standing appearance_duty), 28
+cases (cases_festivals.yaml): **28/28 FIRST RUN** — all priors
+green: **789/789 across twenty-four rounds**. Catalog
+R-435..R-439 (244 compiled rules); vocabulary +28 (613 on 158
+dims). SIX findings auto-seated across four units: F-086 →
+EX23-13 (the appearing machine's derivation layer — the two-eyes
+vocalization pair with the stam's counter-inclusion, the graded
+male-word exclusions w/ Abaye's rabbinic-channel label, Acherim's
+caravan census, the one-Master slaves, the feet, no-halves, the
+courtyard-vs-offering dispute, the intermediate days' two routes),
+F-087 → EX13-20 (the firstborn engine's Babylonian layer — the
+wilderness dispute riding EX13-05's own two when-brings-you
+skeletons, the three-sanctifications baraita, the seh parameter
+file w/ species-imported-grade-filtered, the birth-birth and
+passing-passing exports, the delay ban's order), F-088 → EX23-14
+(the feast offering's fences — chag-is-an-offering, anyone's
+leaven bounded to standing parties, the tamid fork on the doubled
+MY-offering, the overnight salvage window, the first morning from
+the juxtaposed firstfruits), F-089 → EX23-15 (the rest clauses —
+the sabbatical verbs split w/ two hoeings, the
+uncircumcised-slave dispute, the resident stranger, the idol-name
+four-channel file), F-090 → EX34-10 (Isi ben Yehuda's pilgrimage
+warranty on 34:24's own covet clause; the erring court on 34:21
+resolved by Ravina as partial nullification), F-091 → EX12-33
+(the license's two exclusion tables on 12:16's for-you word; the
+second morning from 12:10's own doubled until-morning).
+ANTICIPATIONS — THE TABLE ROUND: EX23-07's word-by-word
+exemption table (seated at derivation) HELD against the whole
+Chagigah cluster; EX13-08's Masorah chain held R. Yosei
+HaGelili's days-not-all-days VERBATIM before Eruvin 96a was
+opened; EX22-10's do-not-reorder file answered Temurah 4a;
+EX23-06's border-status table held the slave and stranger
+identities AND the R.-Akiva-switches dispute; EX34-04's Onkelos
+arm held the overnight window's off-the-altar shape; EX13-14's
+cluster held the caesarean and the redemption order; the
+analogy-selection rule (calendar block's middah-governance)
+surfaced at its SECOND seat (Niddah 40a:17). Rituals COMPLETE
+four units (exo_23, exo_13, exo_34, exo_12), regression green
+(all 22 runners), standing +6 rebaked (1254 → 1260, one per seat
+exactly), hash 8b8fff1fa28953af unmoved, manifests 0 FAILED,
+gloss_lint 0 on all new content.

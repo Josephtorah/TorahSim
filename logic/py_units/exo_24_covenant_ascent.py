@@ -158,6 +158,10 @@ m.step("Exod.24.15")
 # ימים» / RIGHT «ויקרא אל משה ביום השביעי מתוך הענן». Derive claim from
 # Hebrew arms, not English alone. Exod 24:16."
 m.step("Exod.24.16")
+# witness-tier presupposed read: sequestering_and_canon_file on
+# cloud_six_days — read, not installed
+m.witness_read("cloud_six_days", "sequestering_and_canon_file",
+                cites=["Yoma 3b:14", "Yoma 3b:15", "Yoma 4a:10", "Yoma 4a:11", "Yoma 4b:1", "Yoma 4b:2", "Yoma 4b:3", "Yoma 4b:5", "Yoma 4b:7", "Yoma 4b:8", "Yoma 4b:9", "Yoma 4b:10", "Yoma 4b:11", "Berakhot 5a:3"])
 
 # -------------------------- Exod.24.17 · ETNACHTA_SPLIT --------------------
 # ומראה כבוד יהוה כאש אכלת בראש ההר … לעיני בני ישראל
@@ -189,7 +193,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('telling_clause', 'two_payloads_one_voice'), ('youths_clause', 'the_firstborn_officiate'), ('book_clause', 'read_aloud_do_and_receive'), ('blood_clause', 'covenant_blood_as_atonement'), ('ascent_roster', 'unnamed_elders_every_court_as_moses'), ('vision_clause', 'glory_throne_and_no_injury'), ('elders_clause', 'the_standing_court_of_the_forty_days')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('telling_clause', 'two_payloads_one_voice'), ('youths_clause', 'the_firstborn_officiate'), ('book_clause', 'read_aloud_do_and_receive'), ('blood_clause', 'covenant_blood_as_atonement'), ('ascent_roster', 'unnamed_elders_every_court_as_moses'), ('vision_clause', 'glory_throne_and_no_injury'), ('elders_clause', 'the_standing_court_of_the_forty_days'), ('cloud_six_days', 'sequestering_and_canon_file')]
     assert m.WITNESS_READS[0]["cites"] == ['Onkelos Exod 24:3']
     assert all('two_payloads_one_voice' not in f for f in m.WORLD["facts"])
     assert 'telling_clause' not in m.WORLD["witnessed"]
@@ -211,4 +215,7 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[6]["cites"] == ['Onkelos Exod 24:14', 'Onkelos Exod 24:12']
     assert all('the_standing_court_of_the_forty_days' not in f for f in m.WORLD["facts"])
     assert 'elders_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Yoma 3b:14', 'Yoma 3b:15', 'Yoma 4a:10', 'Yoma 4a:11', 'Yoma 4b:1', 'Yoma 4b:2', 'Yoma 4b:3', 'Yoma 4b:5', 'Yoma 4b:7', 'Yoma 4b:8', 'Yoma 4b:9', 'Yoma 4b:10', 'Yoma 4b:11', 'Berakhot 5a:3']
+    assert all('sequestering_and_canon_file' not in f for f in m.WORLD["facts"])
+    assert 'cloud_six_days' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

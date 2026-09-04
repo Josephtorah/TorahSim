@@ -46,6 +46,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>B</b></td><td>Trees</td><td>Every verse via taamim_tree_parse.py v1; full tree_ascii recorded.</td><td>tested</td></tr>
 <tr><td><b>C</b></td><td>Tree → steps</td><td>One STEP per verse citing left/right top-split arms. English [EN-AID] only. Condition markers (אם/כי) flagged in op when verse-initial.</td><td>hypothesis</td></tr>
 <tr><td><b>D</b></td><td>Oral dual-track</td><td>Mekhilta samples when available; dual-track only; never silent-merge.</td><td>hypothesis</td></tr>
+<tr><td><b>S17</b></td><td>Round-17 Talmud-block seat (2026-09-04)</td><td>SHABBAT&#x27;S MACHINERY — the sixth Exodus Talmud-first exam block (owner: &#x27;Yes block 9 go&#x27;; ledger logic/oral_triage/exodus_block_shabbat_2026-09-04.md; runner run_shabbat.py, 50/50). One seat under the auto-seat law: EX35-06 (F-062 — the kindling fork&#x27;s four courtrooms, the 39-count arithmetic held by Rebbi himself, and the habitations clause&#x27;s three reads: the courts, the Temple exclusion, the limbs-and-fats). EX35-01&#x27;s own words anticipated the fork and the non-burning court.</td><td>tested</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -71,6 +72,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <p><span class="he">לא תבערו אש בכל משבתיכם … ביום השבת</span> · <i>l&#x27; tb&#x27;rv &#x27;sh bkl mshbtykm … byvm hshbt</i> · From top split: LEFT «לא תבערו אש בכל משבתיכם» / RIGHT «ביום השבת». Derive claim from Hebrew arms, not English alone. Exod 35:3.</p>
 <div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לא תבערו אש בכל משבתיכם</span> · <i>l&#x27; tb&#x27;rv &#x27;sh bkl mshbtykm</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">ביום השבת</span> · <i>byvm hshbt</i> · Right arm of top binary split [EN-AID]</div></div>
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(kindling_fork, four_courtrooms)</span><br><span class="gloss">= WITNESS-READ(kindling-fork, four-courtrooms)</span><br>THE KINDLING FORK AND ITS FOUR COURTROOMS [claim EX35-06]. EX35-01 named this clause &quot;ONE labor singled out in the ink&quot; and cited the court that does not burn — the round-17 block finds the fork RECORDED IN FOUR SUGYOT: R. Yosei — kindling singled out as a MERE PROHIBITION (no stoning, no karet); R. Natan — singled out TO DIVIDE the labors, each its own liability (Shabbat&#x27;s own courtroom; restated at idolatry to count acts; interjected at the execution question; probed at the override algebra where either arm blocks the positive-over-karet ladder). R. Natan&#x27;s ladder climbs the plowing-harvest rung (34:21) before kindling equates the rest. THE COUNT: the assembly verse&#x27;s אלה הדברים (&quot;these are the things,&quot; 35:1) — devarim two, the definite article three, aleh thirty-six by letters — THIRTY-NINE labors, held by Rebbi himself at 97b:2. THE HABITATIONS READS: the school of R. Yishmael takes משבתיכם (&quot;your habitations&quot;) to the COURTS — execution-burning does not override Shabbat (Rava: the word is otherwise superfluous, Shabbat binding the person everywhere); Rav Huna reads it as the Temple&#x27;s exclusion (the Hearth Chamber&#x27;s fire), Rav Chisda re-routes the verse to the limbs-and-fats and rests the Chamber on priestly vigilance — both routes recorded. Auto-seat law, F-062.
+</td><td>—</td><td class='cite'>Shabbat 70a:5, Shabbat 70a:3, Shabbat 70a:4, Shabbat 97b:2, Sanhedrin 62a:7, Sanhedrin 62a:8, Sanhedrin 35b:6, Sanhedrin 35b:7, Sanhedrin 35b:8, Yevamot 6b:4, Yevamot 6b:5, Shabbat 20a:5</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.</div>
 </div>
@@ -1523,6 +1526,10 @@ m.witness_read(&quot;sabbath_first&quot;, &quot;rest_outranks_building&quot;,
 # &quot;[EN-AID] From top split: LEFT «לא תבערו אש בכל משבתיכם» / RIGHT «ביום
 # השבת». Derive claim from Hebrew arms, not English alone. Exod 35:3.&quot;
 m.step(&quot;Exod.35.3&quot;)
+# witness-tier presupposed read: four_courtrooms on kindling_fork — read,
+# not installed
+m.witness_read(&quot;kindling_fork&quot;, &quot;four_courtrooms&quot;,
+                cites=[&quot;Shabbat 70a:5&quot;, &quot;Shabbat 70a:3&quot;, &quot;Shabbat 70a:4&quot;, &quot;Shabbat 97b:2&quot;, &quot;Sanhedrin 62a:7&quot;, &quot;Sanhedrin 62a:8&quot;, &quot;Sanhedrin 35b:6&quot;, &quot;Sanhedrin 35b:7&quot;, &quot;Sanhedrin 35b:8&quot;, &quot;Yevamot 6b:4&quot;, &quot;Yevamot 6b:5&quot;, &quot;Shabbat 20a:5&quot;])
 
 # -------------------------- Exod.35.4 · ETNACHTA_SPLIT ---------------------
 # ויאמר משה אל כל עדת בני ישראל לאמר … זה הדבר אשר צוה יהוה לאמר
@@ -1740,22 +1747,25 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;sabbath_first&#x27;, &#x27;rest_outranks_building&#x27;), (&#x27;willing_heart&#x27;, &#x27;voluntariness_condition&#x27;), (&#x27;men_and_women&#x27;, &#x27;additive_preposition&#x27;), (&#x27;wise_women&#x27;, &#x27;womens_craft&#x27;), (&#x27;leaders_late&#x27;, &#x27;defective_spelling&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;sabbath_first&#x27;, &#x27;rest_outranks_building&#x27;), (&#x27;kindling_fork&#x27;, &#x27;four_courtrooms&#x27;), (&#x27;willing_heart&#x27;, &#x27;voluntariness_condition&#x27;), (&#x27;men_and_women&#x27;, &#x27;additive_preposition&#x27;), (&#x27;wise_women&#x27;, &#x27;womens_craft&#x27;), (&#x27;leaders_late&#x27;, &#x27;defective_spelling&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Mishnah Sanhedrin 4:1&#x27;, &#x27;Onkelos Exod 35&#x27;]
     assert all(&#x27;rest_outranks_building&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;sabbath_first&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Onkelos Exod 35&#x27;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Shabbat 70a:5&#x27;, &#x27;Shabbat 70a:3&#x27;, &#x27;Shabbat 70a:4&#x27;, &#x27;Shabbat 97b:2&#x27;, &#x27;Sanhedrin 62a:7&#x27;, &#x27;Sanhedrin 62a:8&#x27;, &#x27;Sanhedrin 35b:6&#x27;, &#x27;Sanhedrin 35b:7&#x27;, &#x27;Sanhedrin 35b:8&#x27;, &#x27;Yevamot 6b:4&#x27;, &#x27;Yevamot 6b:5&#x27;, &#x27;Shabbat 20a:5&#x27;]
+    assert all(&#x27;four_courtrooms&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;kindling_fork&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Onkelos Exod 35&#x27;]
     assert all(&#x27;voluntariness_condition&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;willing_heart&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Pekudei 11:2&#x27;, &#x27;Onkelos Exod 35&#x27;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Pekudei 11:2&#x27;, &#x27;Onkelos Exod 35&#x27;]
     assert all(&#x27;additive_preposition&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;men_and_women&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Onkelos Exod 35&#x27;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Onkelos Exod 35&#x27;]
     assert all(&#x27;womens_craft&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;wise_women&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Pekudei 11:3&#x27;, &#x27;Midrash Tanchuma, Pekudei 11:4&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Pekudei 11:3&#x27;, &#x27;Midrash Tanchuma, Pekudei 11:4&#x27;]
     assert all(&#x27;defective_spelling&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;leaders_late&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">Tree-derived v1 (phase 2f). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-02 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">Tree-derived v1 (phase 2f). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

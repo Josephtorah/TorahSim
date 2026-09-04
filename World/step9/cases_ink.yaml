@@ -1,0 +1,107 @@
+# THE INK LAYER (round 20 — the ninth Exodus Talmud-first exam
+# block, 2026-09-04; owner: "let continue" — the small pair 15+18
+# batched). The meta-block: the Talmud ruling about the ink itself.
+# Read-source: logic/oral_triage/exodus_block_ink_2026-09-04.md.
+
+- module: vocalization_authority
+  tractate: Sanhedrin
+  oracle: Sanhedrin 4a:12-4b:16
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.19,
+    claims: [EX23-12]}
+  cases:
+  - id: Sa4b_scope
+    input: {query: mikra_masoret_scope}
+    expected: {verdict: dispute_only_where_forms_differ}
+    class: A
+  - id: Sa4a_chalev
+    input: {query: chalev_exemplar}
+    expected: {verdict: way_of_cooking_seal}
+    class: A
+  - id: Sa4a_sukka
+    input: {query: sukka_walls_count}
+    expected: {verdict: [four_by_masoret, six_by_mikra]}
+    class: A
+  - id: Sa4b_yireh
+    input: {query: yireh_counter_exemplar}
+    expected: {verdict: equal_forms_disputed_recorded}
+    class: A
+
+- module: script_witness
+  tractate: Sanhedrin
+  oracle: Sanhedrin 21b:22-22a:6, 29a:33-36
+  exodus_anchor: {unit: exo_27_altar_court, ref: Exod.27.10,
+    claims: [EX27-08]}
+  cases:
+  - id: Sa22a_history
+    input: {query: script_history}
+    expected: {verdict: [changed_in_ezra_days, given_lost_restored, never_changed]}
+    class: A
+  - id: Sa22a_vavs
+    input: {query: vav_pillars_witness}
+    expected: {verdict: letter_names_itself}
+    class: A
+  - id: Sa29a_arithmetic
+    input: {query: adds_subtracts}
+    expected: {verdict: added_letter_lowers_count}
+    class: A
+
+- module: undecided_parses
+  tractate: Yoma
+  oracle: Yoma 52a:10-52b:7
+  exodus_anchor: {unit: exo_25_ark_table_menorah, ref: Exod.25.34,
+    claims: []}
+  cases:
+  - id: Yo52a_census
+    input: {query: undecided_census}
+    expected: {verdict: five_verses_no_decision}
+    class: A
+  - id: Yo52b_meshukkadim
+    input: {query: meshukkadim_parse}
+    expected: {verdict: attachment_undecided}
+    class: A
+  - id: Yo52b_machar
+    input: {query: machar_parse}
+    expected: {verdict: attachment_undecided}
+    class: A
+  - id: Yo52b_youngmen
+    input: {query: young_men_parse}
+    expected: {verdict: undecided_for_rav_chisda}
+    class: A
+
+- module: name_ink_laws
+  tractate: Shevuot
+  oracle: Shevuot 35a:27-35b:7; Pesachim 50a:18-21, 117a:1-3
+  exodus_anchor: {unit: exo_03_bush_and_name, ref: Exod.3.15,
+    claims: [EX03-14]}
+  cases:
+  - id: Sh35b_tzevaot
+    input: {query: tzevaot_erasure}
+    expected: {verdict: [wholly_erasable_israels_title, inerasable_name]}
+    class: A
+  - id: Sh35b_suffix
+    input: {query: name_suffix_letters}
+    expected: {verdict: prefix_erasable_suffix_sanctified}
+    class: A
+  - id: Pe50a_lealem
+    input: {query: le_alem_concealment}
+    expected: {verdict: ketiv_commands_concealment}
+    class: A
+  - id: Pe117a_compounds
+    input: {query: name_compounds}
+    expected: {verdict: three_positions_teiku_rider}
+    class: A
+
+- module: inference_license
+  tractate: Shabbat
+  oracle: Shabbat 97a:1; Sanhedrin 3b:3
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.4.1 + 22.8,
+    claims: [EX23-12]}
+  cases:
+  - id: Sh97a_analogy
+    input: {query: verbal_analogy_license}
+    expected: {verdict: received_only}
+    class: A
+  - id: Sa3b_firstmention
+    input: {query: first_mention_rule}
+    expected: {verdict: plain_sense_not_counted}
+    class: A

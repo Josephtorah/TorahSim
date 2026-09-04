@@ -1,0 +1,277 @@
+# SHABBAT'S MACHINERY (round 17 — the sixth Exodus Talmud-first exam
+# block, 2026-09-04; owner: "Yes block 9 go"). The twice-drawn import
+# edge: the leaven block's kindling proof and the courts block's
+# execution-burning read both hit this block's fork before it opened.
+# Read-source: logic/oral_triage/exodus_block_shabbat_2026-09-04.md.
+
+- module: forgetting_machine
+  tractate: Shabbat
+  oracle: Shabbat 69b:6-70a:1
+  exodus_anchor: {unit: exo_31_craftsmen_shabbat, ref: Exod.31.14-16,
+    claims: [EX31-05, EX31-06]}
+  cases:
+  - id: Sh69b_essence
+    input: {query: forgot_essence_offering}
+    expected: {verdict: one_for_all}
+    class: A
+  - id: Sh69b_days
+    input: {query: forgot_days_offering}
+    expected: {verdict: one_per_shabbat}
+    class: A
+  - id: Sh70a_labors
+    input: {query: forgot_labors_offering}
+    expected: {verdict: one_per_labor}
+    class: A
+  - id: Sh69b_desert
+    input: {query: desert_lost_count}
+    expected: {verdict: count_six_keep_seventh}
+    class: A
+  - id: Sh69b_partial
+    input: {query: desert_partial_count}
+    expected: {verdict: work_departure_day}
+    class: A
+
+- module: division_of_labors
+  tractate: Shabbat
+  oracle: Shabbat 70a:2-6, 97b:2
+  exodus_anchor: {unit: exo_35_shabbat_donate, ref: Exod.35.1-3,
+    claims: [EX35-01, EX35-06]}
+  cases:
+  - id: Sh70a_division
+    input: {query: division_source}
+    expected: {verdict: each_labor_its_own}
+    class: A
+  - id: Sh70a_fork
+    input: {query: kindling_singled_out}
+    expected: {verdict: [divides_labors, mere_prohibition]}
+    class: A
+  - id: Sh70a_39
+    input: {query: labor_count_39}
+    expected: {verdict: thirty_nine}
+    class: A
+
+- module: labor_census
+  tractate: Shabbat
+  oracle: Shabbat 74b:5-7
+  exodus_anchor: {unit: exo_35_36_work_start, ref: Exod.35.26,
+    claims: [EX35-04]}
+  cases:
+  - id: Sh74b_composite
+    input: {query: composite_liability}
+    expected: {verdict: seven_to_thirteen}
+    class: A
+  - id: Sh74b_spin
+    input: {query: spin_on_animal}
+    expected: {verdict: [exempt_atypical, three_liabilities]}
+    class: A
+  - id: Sh74b_feather
+    input: {query: feather_three}
+    expected: {verdict: shear_cut_smooth}
+    class: A
+
+- module: carrying_out
+  tractate: Shabbat
+  oracle: Shabbat 96b:1-3, 92a:5-7, 117b:8; Rosh Hashanah 34a:17
+  exodus_anchor: {unit: exo_35_36_work_start, ref: Exod.36.6,
+    claims: [EX36-05, EX36-08]}
+  cases:
+  - id: Sh96b_source
+    input: {query: carrying_out_source}
+    expected: {verdict: camp_proclamation}
+    class: A
+  - id: Sh96b_day
+    input: {query: proclamation_day}
+    expected: {verdict: shabbat_by_analogy}
+    class: A
+  - id: RH34a_voice
+    input: {query: shofar_voice}
+    expected: {verdict: with_a_sound}
+    class: A
+  - id: Sh92a_ten
+    input: {query: carry_above_ten}
+    expected: {verdict: liable}
+    class: A
+  - id: Sh92a_manner
+    input: {query: carry_manner}
+    expected: {verdict: typical_liable_backhanded_exempt}
+    class: A
+  - id: Sh117b_skill
+    input: {query: skill_not_labor}
+    expected: {verdict: excluded_from_labor}
+    class: A
+
+- module: boundary_machine
+  tractate: Eruvin
+  oracle: Eruvin 48a:13-15, 51a:7-9, 17b:12-13
+  exodus_anchor: {unit: exo_16_manna_and_sabbath, ref: Exod.16.29,
+    claims: [EX16-10, EX16-14, EX16-16]}
+  cases:
+  - id: Er48a_four
+    input: {query: four_cubits_source}
+    expected: {verdict: [four_exact, four_expansive]}
+    class: A
+  - id: Er51a_2000
+    input: {query: two_thousand_source}
+    expected: {verdict: place_place_chain}
+    class: A
+  - id: Er17b_parse
+    input: {query: boundary_verb_parse}
+    expected: {verdict: go_out_written}
+    class: A
+
+- module: life_override_derivation
+  tractate: Yoma
+  oracle: Yoma 85a:12-85b:6; Sanhedrin 35b:5-8
+  exodus_anchor: {unit: exo_31_craftsmen_shabbat, ref: Exod.31.13-16,
+    claims: [EX31-03, EX31-06]}
+  cases:
+  - id: Yo85b_source
+    input: {query: life_override_source}
+    expected: {verdict: live_by_them}
+    class: A
+  - id: Yo85a_rubble
+    input: {query: rubble_check}
+    expected: {verdict: to_the_nose}
+    class: A
+  - id: Yo85a_altar
+    input: {query: murderer_at_altar}
+    expected: {verdict: taken_not_from_atop_except_life}
+    class: A
+  - id: Sa35b_execution
+    input: {query: execution_on_shabbat}
+    expected: {verdict: does_not_override}
+    class: A
+
+- module: meals_and_preparation
+  tractate: Shabbat
+  oracle: Shabbat 117b:7-11; Beitzah 2b:9-11; Pesachim 47b:10
+  exodus_anchor: {unit: exo_16_manna_and_sabbath, ref: Exod.16.5-25,
+    claims: [EX16-15, EX16-16]}
+  cases:
+  - id: Sh117b_meals
+    input: {query: meal_count}
+    expected: {verdict: [four, three]}
+    class: A
+  - id: Sh117b_cap
+    input: {query: fire_rescue_cap}
+    expected: {verdict: three_meals_by_hour}
+    class: A
+  - id: Sh117b_direction
+    input: {query: rescue_direction}
+    expected: {verdict: toward_greater_sanctity_only}
+    class: A
+  - id: Sh117b_loaves
+    input: {query: two_loaves}
+    expected: {verdict: hold_two_break_one}
+    class: A
+  - id: Sh117b_early
+    input: {query: prepare_early}
+    expected: {verdict: rise_early_sixth}
+    class: A
+  - id: Be2b_prepare
+    input: {query: preparation_doctrine}
+    expected: {verdict: weekday_prepares}
+    class: A
+  - id: Pe47b_muktzeh
+    input: {query: muktzeh_source}
+    expected: {verdict: prepare_plus_labor_warning}
+    class: A
+
+- module: rest_roster
+  tractate: Bava Kamma
+  oracle: Bava Kamma 54b:13-14; Shabbat 153b:7-8, 120b:11, 18a:5-7;
+    Bava Metzia 32a:15-16
+  exodus_anchor: {unit: exo_20_the_ten_utterances, ref: Exod.20.10-12,
+    claims: [EX20-15, EX20-16, EX20-17]}
+  cases:
+  - id: BK54b_animals
+    input: {query: animal_rest_scope}
+    expected: {verdict: all_animals}
+    class: A
+  - id: Sh153b_laden
+    input: {query: laden_animal}
+    expected: {verdict: place_while_walking}
+    class: A
+  - id: Sh120b_cause
+    input: {query: cause_not_do}
+    expected: {verdict: causing_permitted}
+    class: A
+  - id: BM32a_parent
+    input: {query: parent_vs_shabbat}
+    expected: {verdict: do_not_listen}
+    class: A
+  - id: Sh18a_vessels
+    input: {query: vessel_rest}
+    expected: {verdict: [noise_contempt, vessel_rest_torah]}
+    class: A
+
+- module: overlap_and_product
+  tractate: Shabbat
+  oracle: Shabbat 114b:6-7; Yoma 81a:20-21; Bava Kamma 71a:17-21;
+    Sanhedrin 78b:7
+  exodus_anchor: {unit: exo_31_craftsmen_shabbat, ref: Exod.31.14-15,
+    claims: [EX31-06]}
+  cases:
+  - id: Sh114b_trimming
+    input: {query: yk_shabbat_trimming}
+    expected: {verdict: [permitted, prohibited]}
+    class: A
+  - id: Yo81a_warning
+    input: {query: yk_affliction_warning}
+    expected: {verdict: warning_by_analogy}
+    class: A
+  - id: BK71a_product
+    input: {query: shabbat_product}
+    expected: {verdict: others_after_shabbat_deliberate_never}
+    class: A
+  - id: BK71a_benefit
+    input: {query: product_benefit}
+    expected: {verdict: benefit_permitted}
+    class: A
+  - id: BK71a_unwitting
+    input: {query: product_unwitting}
+    expected: {verdict: deliberate_only}
+    class: A
+  - id: BK71a_grade
+    input: {query: product_law_grade}
+    expected: {verdict: [rabbinic_grade, torah_grade]}
+    class: A
+  - id: Sa78b_gatherer
+    input: {query: gatherer_doubt}
+    expected: {verdict: mode_only}
+    class: A
+
+- module: eve_vigilance
+  tractate: Shabbat
+  oracle: Shabbat 20a:3-6, 23b:5, 18a:5, 117b:7, 132a:6-8
+  exodus_anchor: {unit: exo_16_manna_and_sabbath, ref: Exod.16.23,
+    claims: [EX16-09, EX16-16]}
+  cases:
+  - id: Sh20a_paschal
+    input: {query: paschal_dusk}
+    expected: {verdict: group_vigilant}
+    class: A
+  - id: Sh20a_hearth
+    input: {query: hearth_chamber}
+    expected: {verdict: [habitations_exclusion, limbs_and_fats]}
+    class: A
+  - id: Sh23b_lamp
+    input: {query: lamp_timing}
+    expected: {verdict: neither_early_nor_late}
+    class: A
+  - id: Sh117b_fences
+    input: {query: tosefet_fences}
+    expected: {verdict: add_at_entry_and_exit}
+    class: A
+  - id: Sh18a_license
+    input: {query: nightfall_license}
+    expected: {verdict: self_running_permitted}
+    class: A
+  - id: Sh20a_bonfire
+    input: {query: bonfire_measure}
+    expected: {verdict: [most_each_branch, no_bring_thinner]}
+    class: A
+  - id: Sh132a_route
+    input: {query: circumcision_override_route}
+    expected: {verdict: covenant_covenant}
+    class: A

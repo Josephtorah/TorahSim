@@ -46,6 +46,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>B</b></td><td>Trees</td><td>Every verse via taamim_tree_parse.py v1; full tree_ascii recorded.</td><td>tested</td></tr>
 <tr><td><b>C</b></td><td>Tree → steps</td><td>One STEP per verse citing left/right top-split arms. English [EN-AID] only. Condition markers (אם/כי) flagged in op when verse-initial.</td><td>hypothesis</td></tr>
 <tr><td><b>D</b></td><td>Oral dual-track</td><td>Mekhilta samples when available; dual-track only; never silent-merge.</td><td>hypothesis</td></tr>
+<tr><td><b>S20</b></td><td>Round-20 Talmud-block seat (2026-09-04)</td><td>THE INK LAYER — the ninth Exodus Talmud-first exam block (owner: &quot;let continue&quot;; ledger logic/oral_triage/exodus_block_ink_2026-09-04.md; runner run_ink.py, 17/17 first run). One seat under the auto-seat law: EX27-08 (F-074 — the script witness in this verse&#x27;s own word: the three recorded positions on the script with R. Elazar HaModai&#x27;s never-changed proof riding the vavs of the pillars; the letter-arithmetic pair from the dwelling&#x27;s measures; the undecided-parse census beside). Machine ops untouched below the witness tier.</td><td>tested</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -131,6 +132,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <p><span class="he">ועמדיו עשרים ואדניהם עשרים נחשת … ווי העמדים וחשקיהם כסף</span> · <i>v&#x27;mdyv &#x27;shrym v&#x27;dnyhm &#x27;shrym nchsht … vvy h&#x27;mdym vchshqyhm ksp</i> · From top split: LEFT «ועמדיו עשרים ואדניהם עשרים נחשת» / RIGHT «ווי העמדים וחשקיהם כסף». Derive claim from Hebrew arms, not English alone. Exod 27:10.</p>
 <div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ועמדיו עשרים ואדניהם עשרים נחשת</span> · <i>v&#x27;mdyv &#x27;shrym v&#x27;dnyhm &#x27;shrym nchsht</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">ווי העמדים וחשקיהם כסף</span> · <i>vvy h&#x27;mdym vchshqyhm ksp</i> · Right arm of top binary split [EN-AID]</div></div>
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(vave_ha_amudim, script_and_letters_file)</span><br><span class="gloss">= WITNESS-READ(vave-the-amudim, script-and-letters-file)</span><br>THE SCRIPT WITNESS STANDS IN THIS VERSE&#x27;S OWN WORD [claim EX27-08]. The round-20 ink block opens the script sugya (Sanhedrin 21b-22a) and its three recorded positions: the Torah first given in the Ivri script and re-given through Ezra in Ashurit, Israel choosing Ashurit (Mar Zutra; R. Yosei — &quot;the script was changed through him&quot;); Rebbi — given in THIS script, turned to Roetz at the sin, restored at the repentance; and R. Elazar HaModai — THE SCRIPT NEVER CHANGED AT ALL, proven from ווי העמודים (&quot;the HOOKS of the pillars&quot;) HERE: the hook is named by the letter vav, so the letter looked like a hook then as now — as the pillars did not change, the vavs did not change (Esther&#x27;s &quot;like-their-script&quot; beside). The verse&#x27;s own vocabulary is the tradition&#x27;s paleographic exhibit: the ink testifying about the ink. Beside it, the LETTER-ARITHMETIC pair from the dwelling&#x27;s own measures (whoever adds, subtracts): the alef of אמתים (&quot;two cubits,&quot; 25:10) turning two hundred into two, and the ayin of עשתי עשרה (&quot;eleven curtains,&quot; 26:7) turning twelve into eleven — a letter added, a number lowered, twice (rows for exo_25/exo_26 named in the block ledger); and the tradition&#x27;s own census of undecided parses (Yoma 52a-b: five verses, meshukkadim of 25:34 among them — the research log&#x27;s standing witness that none is case law). Auto-seat law, F-074.
+</td><td>—</td><td class='cite'>Sanhedrin 21b:22, Sanhedrin 21b:24, Sanhedrin 22a:2, Sanhedrin 22a:3, Sanhedrin 22a:4, Sanhedrin 22a:5, Sanhedrin 29a:34, Sanhedrin 29a:35, Sanhedrin 29a:36, Yoma 52a:10, Yoma 52b:2</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.</div>
 </div>
@@ -1210,6 +1213,10 @@ m.witness_read(&quot;hangings_clause&quot;, &quot;legal_boundary&quot;,
 # «ווי העמדים וחשקיהם כסף». Derive claim from Hebrew arms, not English
 # alone. Exod 27:10.&quot;
 m.step(&quot;Exod.27.10&quot;)
+# witness-tier presupposed read: script_and_letters_file on vave_ha_amudim —
+# read, not installed
+m.witness_read(&quot;vave_ha_amudim&quot;, &quot;script_and_letters_file&quot;,
+                cites=[&quot;Sanhedrin 21b:22&quot;, &quot;Sanhedrin 21b:24&quot;, &quot;Sanhedrin 22a:2&quot;, &quot;Sanhedrin 22a:3&quot;, &quot;Sanhedrin 22a:4&quot;, &quot;Sanhedrin 22a:5&quot;, &quot;Sanhedrin 29a:34&quot;, &quot;Sanhedrin 29a:35&quot;, &quot;Sanhedrin 29a:36&quot;, &quot;Yoma 52a:10&quot;, &quot;Yoma 52b:2&quot;])
 
 # -------------------------- Exod.27.11 · ETNACHTA_SPLIT --------------------
 # וכן לפאת צפון בארך קלעים מאה ארך … ועמדו ועמודיו עשרים ואדניהם עשרים נחשת
@@ -1322,7 +1329,7 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;altar_spec&#x27;, &#x27;engineering_objection&#x27;), (&#x27;ash_vessels&#x27;, &#x27;second_service&#x27;), (&#x27;hangings_clause&#x27;, &#x27;legal_boundary&#x27;), (&#x27;court_measure&#x27;, &#x27;enclosure_standard&#x27;), (&#x27;oil_clause&#x27;, &#x27;crushed_for_light&#x27;), (&#x27;lamp_clauses&#x27;, &#x27;not_need_architecture&#x27;), (&#x27;lamp_duty&#x27;, &#x27;evening_to_morning&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;altar_spec&#x27;, &#x27;engineering_objection&#x27;), (&#x27;ash_vessels&#x27;, &#x27;second_service&#x27;), (&#x27;hangings_clause&#x27;, &#x27;legal_boundary&#x27;), (&#x27;vave_ha_amudim&#x27;, &#x27;script_and_letters_file&#x27;), (&#x27;court_measure&#x27;, &#x27;enclosure_standard&#x27;), (&#x27;oil_clause&#x27;, &#x27;crushed_for_light&#x27;), (&#x27;lamp_clauses&#x27;, &#x27;not_need_architecture&#x27;), (&#x27;lamp_duty&#x27;, &#x27;evening_to_morning&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Terumah 11&#x27;]
     assert all(&#x27;engineering_objection&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;altar_spec&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -1332,18 +1339,21 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Mishnah Makkot 3:3&#x27;, &#x27;Onkelos Exod 27&#x27;]
     assert all(&#x27;legal_boundary&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;hangings_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Mishnah Eruvin 2:5&#x27;, &#x27;Onkelos Exod 27&#x27;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Sanhedrin 21b:22&#x27;, &#x27;Sanhedrin 21b:24&#x27;, &#x27;Sanhedrin 22a:2&#x27;, &#x27;Sanhedrin 22a:3&#x27;, &#x27;Sanhedrin 22a:4&#x27;, &#x27;Sanhedrin 22a:5&#x27;, &#x27;Sanhedrin 29a:34&#x27;, &#x27;Sanhedrin 29a:35&#x27;, &#x27;Sanhedrin 29a:36&#x27;, &#x27;Yoma 52a:10&#x27;, &#x27;Yoma 52b:2&#x27;]
+    assert all(&#x27;script_and_letters_file&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;vave_ha_amudim&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Mishnah Eruvin 2:5&#x27;, &#x27;Onkelos Exod 27&#x27;]
     assert all(&#x27;enclosure_standard&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;court_measure&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Mishnah Menachot 8:5&#x27;, &#x27;Onkelos Exod 27&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Mishnah Menachot 8:5&#x27;, &#x27;Onkelos Exod 27&#x27;]
     assert all(&#x27;crushed_for_light&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;oil_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Tetzaveh 2&#x27;, &#x27;Midrash Tanchuma, Tetzaveh 3&#x27;, &#x27;Midrash Tanchuma, Tetzaveh 4&#x27;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Tetzaveh 2&#x27;, &#x27;Midrash Tanchuma, Tetzaveh 3&#x27;, &#x27;Midrash Tanchuma, Tetzaveh 4&#x27;]
     assert all(&#x27;not_need_architecture&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;lamp_clauses&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Mishnah Eruvin 10:15&#x27;, &#x27;Onkelos Exod 27&#x27;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Mishnah Eruvin 10:15&#x27;, &#x27;Onkelos Exod 27&#x27;]
     assert all(&#x27;evening_to_morning&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;lamp_duty&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">Tree-derived v1 (phase 2d). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">Tree-derived v1 (phase 2d). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

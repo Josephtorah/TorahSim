@@ -1,0 +1,152 @@
+# FESTIVALS AND GIFTS (round 24 — the thirteenth Exodus
+# Talmud-first exam block, 2026-09-04; owner: "Go"). The food-labor
+# license, the regalim, the feast offering's fences, the firstborn's
+# passing verb, the delay ban, the rest clauses.
+# Read-source: logic/oral_triage/exodus_block_festivals_2026-09-04.md.
+
+- module: appearance_exemptions
+  tractate: Chagigah
+  oracle: Chagigah 4a:3-10, 7a:5-7b:2; Sanhedrin 4b:15; Arakhin 2b:11-12, 19b:8-9; Yevamot 103a:11-12; Pesachim 8b:7-8
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.14-17,
+    claims: [EX23-13]}
+  cases:
+  - id: Ch_blind_one_eye
+    input: {query: blind_one_eye_appearance}
+    expected: {verdict: [obligated_stam_inclusion, exempt_two_eyes]}
+    class: A
+  - id: Ch_slave
+    input: {query: slave_appearance}
+    expected: {verdict: exempt_one_master_only}
+    class: A
+  - id: Ch_trades
+    input: {query: repulsive_trade_appearance}
+    expected: {verdict: exempt_cannot_ascend_with_all}
+    class: A
+  - id: Ch_split
+    input: {query: split_household_appearance}
+    expected: {verdict: not_permitted_no_halves}
+    class: A
+  - id: Ch_requirement
+    input: {query: appearance_requirement}
+    expected: {verdict: [courtyard_visit, offering_each_visit]}
+    class: A
+  - id: Ch_prosthesis
+    input: {query: prosthesis_appearance}
+    expected: {verdict: exempt_regalim_wants_feet}
+    class: A
+  - id: Ch_protection
+    input: {query: pilgrimage_protection}
+    expected: {verdict: property_and_return_guaranteed}
+    class: A
+
+- module: festival_labor_license
+  tractate: Pesachim
+  oracle: Pesachim 47a:5-7; Shabbat 24b:6-7; Chagigah 18a:2-6; Eruvin 96a:6-7
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.10 + 12.16,
+    claims: [EX12-33]}
+  cases:
+  - id: Pe_sacred_baking
+    input: {query: sacred_baking_on_festival}
+    expected: {verdict: forbidden_for_you_not_most_high}
+    class: A
+  - id: Sh_burn_consecrated
+    input: {query: burn_consecrated_on_festival}
+    expected: {verdict: forbidden_second_morning_granted}
+    class: A
+  - id: Ch_intermediate
+    input: {query: intermediate_days_labor}
+    expected: {verdict: forbidden_two_routes}
+    class: A
+  - id: Er_tefillin
+    input: {query: tefillin_on_festival}
+    expected: {verdict: [exempt_days_not_all_days, statute_passover_only]}
+    class: A
+  - id: Ch_naming
+    input: {query: harvest_feast_naming}
+    expected: {verdict: feast_at_harvest_time}
+    class: A
+
+- module: feast_offering_machine
+  tractate: Pesachim
+  oracle: Chagigah 10b:4-5; Pesachim 59b:6-7, 63b:10-11, 64a:5-6, 71a:12-13
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.18-19 + 34.25,
+    claims: [EX23-14]}
+  cases:
+  - id: Ch_chag_meaning
+    input: {query: chag_meaning}
+    expected: {verdict: chag_is_an_offering}
+    class: A
+  - id: Pe_leaven_scope
+    input: {query: leaven_beside_scope}
+    expected: {verdict: anyones_leaven_standing_parties}
+    class: A
+  - id: Pe_tamid
+    input: {query: tamid_leaven_ban}
+    expected: {verdict: [tamid_included, fourteenth_cases_read]}
+    class: A
+  - id: Pe_window
+    input: {query: fat_overnight_window}
+    expected: {verdict: burn_all_night_day_is_the_rule}
+    class: A
+  - id: Pe_first_morning
+    input: {query: chagigah_overnight}
+    expected: {verdict: disqualified_first_morning}
+    class: A
+
+- module: firstborn_sanctification
+  tractate: Bekhorot
+  oracle: Bekhorot 4b:2-5a:3; Yoma 49b:7-8; Niddah 40a:14-17; Temurah 4a:3-4, 5b:13, 18b:4-5; Eruvin 96a:6
+  exodus_anchor: {unit: exo_13_consecration_and_pillars, ref: Exod.13.2 + 13.11-15,
+    claims: [EX13-20]}
+  cases:
+  - id: Be_wilderness
+    input: {query: wilderness_sanctification}
+    expected: {verdict: [sanctified_in_wilderness, suspended_until_entry]}
+    class: A
+  - id: Yo_seh_materials
+    input: {query: donkey_redemption_material}
+    expected: {verdict: seh_only_any_seh}
+    class: A
+  - id: Be_levite_swap
+    input: {query: levite_firstborn_swap}
+    expected: {verdict: abrogated_for_generations}
+    class: A
+  - id: Ni_caesarean
+    input: {query: caesarean_consecration}
+    expected: {verdict: not_sacred_womb_opener_required}
+    class: A
+  - id: Te_tithe_export
+    input: {query: tithe_passing_export}
+    expected: {verdict: derived_two_seats}
+    class: A
+  - id: Te_gift_order
+    input: {query: gift_order_advance}
+    expected: {verdict: forbidden_order_stands_lashes_disputed}
+    class: A
+
+- module: rest_scope
+  tractate: Sukkah
+  oracle: Sukkah 44b:7; Horayot 4b:8-10; Yevamot 48b:4-6; Sanhedrin 63b:5-6
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.11-13 + 34.21,
+    claims: [EX23-15]}
+  cases:
+  - id: Su_verbs
+    input: {query: sabbatical_verbs_split}
+    expected: {verdict: hoeing_and_stones_two_hoeings}
+    class: A
+  - id: Ye_slave_keeping
+    input: {query: uncircumcised_slave_keeping}
+    expected: {verdict: [keeping_permitted, keeping_forbidden]}
+    class: A
+  - id: Ye_stranger
+    input: {query: resident_stranger_identity}
+    expected: {verdict: resident_stranger}
+    class: A
+  - id: Sa_idol_names
+    input: {query: idol_name_mention}
+    expected: {verdict: forbidden_four_channels}
+    class: A
+  - id: Ho_court_error
+    input: {query: sabbatical_shabbat_error}
+    expected: {verdict: partial_error_resolved}
+    class: A

@@ -65,6 +65,10 @@ m.step("Exod.34.5")
 # וחנון» / RIGHT «ארך אפים ורב חסד ואמת». Derive claim from Hebrew arms, not
 # English alone. Exod 34:6."
 m.step("Exod.34.6")
+# witness-tier presupposed read: attributes_covenant_file on
+# va_yaavor_va_yiqra — read, not installed
+m.witness_read("va_yaavor_va_yiqra", "attributes_covenant_file",
+                cites=["Rosh Hashanah 17b:5", "Rosh Hashanah 17b:6", "Rosh Hashanah 17b:7", "Yoma 36b:5", "Yoma 36b:6", "Yoma 37a:1", "Yoma 37a:2", "Beitzah 5b:5"])
 
 # -------------------------- Exod.34.7 · ETNACHTA_SPLIT ---------------------
 # נצר חסד לאלפים נשא עון ופשע וחטאה … ונקה לא ינקה פקד עון אבות על בנים ועל
@@ -194,6 +198,10 @@ m.step("Exod.34.21")
 # «וחג האסיף תקופת השנה». Derive claim from Hebrew arms, not English alone.
 # Exod 34:22."
 m.step("Exod.34.22")
+# witness-tier presupposed read: equinox_and_harvest_file on
+# tequfat_ha_shana — read, not installed
+m.witness_read("tequfat_ha_shana", "equinox_and_harvest_file",
+                cites=["Sanhedrin 13a:1", "Sanhedrin 13a:2", "Sanhedrin 13a:3", "Sanhedrin 13b:2", "Sanhedrin 13b:3", "Sanhedrin 13b:4", "Rosh Hashanah 13a:2", "Rosh Hashanah 13a:3", "Rosh Hashanah 13a:4", "Rosh Hashanah 9a:3", "Rosh Hashanah 9a:4", "Rosh Hashanah 9a:5"])
 
 # -------------------------- Exod.34.23 · ETNACHTA_SPLIT --------------------
 # שלש פעמים בשנה … יראה כל זכורך את פני האדן יהוה אלהי ישראל
@@ -209,6 +217,11 @@ m.step("Exod.34.23")
 # RIGHT «ולא יחמד איש את ארצך בעלתך לראות את פני יהוה אלהיך שלש פעמים בשנה».
 # Derive claim from Hebrew arms, not English alone. Exod 34:24."
 m.step("Exod.34.24")
+# witness-tier presupposed read:
+# the_pilgrimage_warranty_and_the_erring_court on covet_clause — read, not
+# installed
+m.witness_read("covet_clause", "the_pilgrimage_warranty_and_the_erring_court",
+                cites=["Pesachim 8b:7", "Pesachim 8b:8", "Horayot 4b:8", "Horayot 4b:9", "Horayot 4b:10"])
 
 # -------------------------- Exod.34.25 · ETNACHTA_SPLIT --------------------
 # לא תשחט על חמץ דם זבחי … ולא ילין לבקר זבח חג הפסח
@@ -315,26 +328,35 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('second_tablets', 'joint_manufacture'), ('firstling_duties', 'precedence_table'), ('thirteen_attributes', 'repentance_branch'), ('pardon_calendar', 'yom_kippur_fixed'), ('covenant_tariffs', 'reenacted_list'), ('covenant_by_mouth', 'oral_charter'), ('radiant_face', 'glory_and_veil')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('second_tablets', 'joint_manufacture'), ('firstling_duties', 'precedence_table'), ('va_yaavor_va_yiqra', 'attributes_covenant_file'), ('thirteen_attributes', 'repentance_branch'), ('pardon_calendar', 'yom_kippur_fixed'), ('covenant_tariffs', 'reenacted_list'), ('tequfat_ha_shana', 'equinox_and_harvest_file'), ('covet_clause', 'the_pilgrimage_warranty_and_the_erring_court'), ('covenant_by_mouth', 'oral_charter'), ('radiant_face', 'glory_and_veil')]
     assert m.WITNESS_READS[0]["cites"] == ['Midrash Tanchuma, Ki Tisa 31', 'Onkelos Exod 34']
     assert all('joint_manufacture' not in f for f in m.WORLD["facts"])
     assert 'second_tablets' not in m.WORLD["witnessed"]
     assert m.WITNESS_READS[1]["cites"] == ['Mishnah Bekhorot 1:7']
     assert all('precedence_table' not in f for f in m.WORLD["facts"])
     assert 'firstling_duties' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Midrash Tanchuma, Ki Tisa 32', 'Mishnah Yoma 4:2', 'Onkelos Exod 34']
+    assert m.WITNESS_READS[2]["cites"] == ['Rosh Hashanah 17b:5', 'Rosh Hashanah 17b:6', 'Rosh Hashanah 17b:7', 'Yoma 36b:5', 'Yoma 36b:6', 'Yoma 37a:1', 'Yoma 37a:2', 'Beitzah 5b:5']
+    assert all('attributes_covenant_file' not in f for f in m.WORLD["facts"])
+    assert 'va_yaavor_va_yiqra' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Midrash Tanchuma, Ki Tisa 32', 'Mishnah Yoma 4:2', 'Onkelos Exod 34']
     assert all('repentance_branch' not in f for f in m.WORLD["facts"])
     assert 'thirteen_attributes' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Midrash Tanchuma, Ki Tisa 31']
+    assert m.WITNESS_READS[4]["cites"] == ['Midrash Tanchuma, Ki Tisa 31']
     assert all('yom_kippur_fixed' not in f for f in m.WORLD["facts"])
     assert 'pardon_calendar' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Mishnah Bekhorot 1:2', 'Mishnah Pesachim 5:4', 'Mishnah Sheviit 1:4', 'Onkelos Exod 34']
+    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Bekhorot 1:2', 'Mishnah Pesachim 5:4', 'Mishnah Sheviit 1:4', 'Onkelos Exod 34']
     assert all('reenacted_list' not in f for f in m.WORLD["facts"])
     assert 'covenant_tariffs' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Midrash Tanchuma, Ki Tisa 34', 'Mishnah Megillah 4:10', 'Onkelos Exod 34']
+    assert m.WITNESS_READS[6]["cites"] == ['Sanhedrin 13a:1', 'Sanhedrin 13a:2', 'Sanhedrin 13a:3', 'Sanhedrin 13b:2', 'Sanhedrin 13b:3', 'Sanhedrin 13b:4', 'Rosh Hashanah 13a:2', 'Rosh Hashanah 13a:3', 'Rosh Hashanah 13a:4', 'Rosh Hashanah 9a:3', 'Rosh Hashanah 9a:4', 'Rosh Hashanah 9a:5']
+    assert all('equinox_and_harvest_file' not in f for f in m.WORLD["facts"])
+    assert 'tequfat_ha_shana' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Pesachim 8b:7', 'Pesachim 8b:8', 'Horayot 4b:8', 'Horayot 4b:9', 'Horayot 4b:10']
+    assert all('the_pilgrimage_warranty_and_the_erring_court' not in f for f in m.WORLD["facts"])
+    assert 'covet_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Midrash Tanchuma, Ki Tisa 34', 'Mishnah Megillah 4:10', 'Onkelos Exod 34']
     assert all('oral_charter' not in f for f in m.WORLD["facts"])
     assert 'covenant_by_mouth' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Midrash Tanchuma, Ki Tisa 37', 'Onkelos Exod 34']
+    assert m.WITNESS_READS[9]["cites"] == ['Midrash Tanchuma, Ki Tisa 37', 'Onkelos Exod 34']
     assert all('glory_and_veil' not in f for f in m.WORLD["facts"])
     assert 'radiant_face' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

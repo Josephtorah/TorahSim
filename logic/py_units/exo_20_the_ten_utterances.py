@@ -87,6 +87,10 @@ m.step("Exod.20.8")
 # ‹זָכוֹר אֶת־יוֹם הַשַּׁבָּת לְקַדְּשׁוֹ› (“mark obj-marker day the-
 # intermission to-sanctify-him/its”) —
 m.statute("BIND", "zakhor_et_yom_ha_shabat")
+# witness-tier presupposed read: kiddush_file on zakhor_et_yom_ha_shabat —
+# read, not installed
+m.witness_read("zakhor_et_yom_ha_shabat", "kiddush_file",
+                cites=["Pesachim 106a:5", "Pesachim 106a:6", "Pesachim 106a:7", "Pesachim 117b:8", "Berakhot 20b:7", "Berakhot 20b:8", "Berakhot 20b:9", "Berakhot 20b:10", "Berakhot 20b:11", "Berakhot 20b:12", "Berakhot 20b:13", "Berakhot 20b:14"])
 
 # -------------------------- Exod.20.9 · SIX_DAYS_SHALL_YOU_LABOR -----------
 # שֵׁשֶׁת יָמִים תַּעֲבֹד וְעָשִׂיתָ כָּל־מְלַאכְתֶּךָ
@@ -109,6 +113,10 @@ m.step("Exod.20.10")
 # maidservant-you/your and-livestock-you/your and-sojourner-you/your”) —
 # fact holds: intermission-to-the-LORD-elohekha
 m.fact("shabat_la_YHWH_elohekha")
+# witness-tier presupposed read: recorded_runs on rest_roster — read, not
+# installed
+m.witness_read("rest_roster", "recorded_runs",
+                cites=["Bava Kamma 54b:13", "Bava Kamma 54b:14", "Shabbat 153b:7", "Shabbat 153b:8", "Shabbat 120b:11", "Shabbat 120b:12", "Shabbat 117b:8", "Bava Metzia 32a:15", "Bava Metzia 32a:16"])
 
 # -------------------------- Exod.20.11 · THE_CREATION_WARRANT --------------
 # כִּי שֵׁשֶׁת־יָמִים עָשָׂה יְהוָה אֶת־הַשָּׁמַיִם וְאֶת־הָאָרֶץ אֶת־הַיָּם
@@ -264,6 +272,10 @@ m.statute("FORBID", "elohe_khesef_ve_zahav")
 m.step("Exod.20.24")
 # ‹מִזְבַּח אֲדָמָה תַּעֲשֶׂה־לִּי› (“altar ground make to-me/my”) —
 m.statute("BIND", "mizbach_adama")
+# witness-tier presupposed read: name_mention_dual_law on
+# be_khol_ha_maqom_asher_azkir — read, not installed
+m.witness_read("be_khol_ha_maqom_asher_azkir", "name_mention_dual_law",
+                cites=["Sotah 38a:9", "Sotah 38a:10", "Sotah 38a:11", "Sotah 38a:12", "Sotah 38a:13", "Berakhot 6a:13", "Berakhot 6a:14", "Berakhot 54a:9"])
 
 # -------------------------- Exod.20.25 · NO_HEWN_STONES --------------------
 # וְאִם־מִזְבַּח אֲבָנִים תַּעֲשֶׂה־לִּי לֹא־תִבְנֶה אֶתְהֶן גָּזִית כִּי
@@ -301,14 +313,23 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 17
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('honor_utterance', 'equal_weight'), ('false_witness_utterance', 'plotting_rows'), ('altar_speech', 'standing_rows')]
-    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Keritot 6:9']
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('zakhor_et_yom_ha_shabat', 'kiddush_file'), ('rest_roster', 'recorded_runs'), ('honor_utterance', 'equal_weight'), ('false_witness_utterance', 'plotting_rows'), ('altar_speech', 'standing_rows'), ('be_khol_ha_maqom_asher_azkir', 'name_mention_dual_law')]
+    assert m.WITNESS_READS[0]["cites"] == ['Pesachim 106a:5', 'Pesachim 106a:6', 'Pesachim 106a:7', 'Pesachim 117b:8', 'Berakhot 20b:7', 'Berakhot 20b:8', 'Berakhot 20b:9', 'Berakhot 20b:10', 'Berakhot 20b:11', 'Berakhot 20b:12', 'Berakhot 20b:13', 'Berakhot 20b:14']
+    assert all('kiddush_file' not in f for f in m.WORLD["facts"])
+    assert 'zakhor_et_yom_ha_shabat' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bava Kamma 54b:13', 'Bava Kamma 54b:14', 'Shabbat 153b:7', 'Shabbat 153b:8', 'Shabbat 120b:11', 'Shabbat 120b:12', 'Shabbat 117b:8', 'Bava Metzia 32a:15', 'Bava Metzia 32a:16']
+    assert all('recorded_runs' not in f for f in m.WORLD["facts"])
+    assert 'rest_roster' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Mishnah Keritot 6:9']
     assert all('equal_weight' not in f for f in m.WORLD["facts"])
     assert 'honor_utterance' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Makkot 1:2', 'Mishnah Makkot 1:3']
+    assert m.WITNESS_READS[3]["cites"] == ['Mishnah Makkot 1:2', 'Mishnah Makkot 1:3']
     assert all('plotting_rows' not in f for f in m.WORLD["facts"])
     assert 'false_witness_utterance' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Mishnah Chagigah 3:8', 'Pirkei Avot 3:6', 'Mishnah Tamid 5:1', 'Mishnah Shabbat 24:1']
+    assert m.WITNESS_READS[4]["cites"] == ['Mishnah Chagigah 3:8', 'Pirkei Avot 3:6', 'Mishnah Tamid 5:1', 'Mishnah Shabbat 24:1']
     assert all('standing_rows' not in f for f in m.WORLD["facts"])
     assert 'altar_speech' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sotah 38a:9', 'Sotah 38a:10', 'Sotah 38a:11', 'Sotah 38a:12', 'Sotah 38a:13', 'Berakhot 6a:13', 'Berakhot 6a:14', 'Berakhot 54a:9']
+    assert all('name_mention_dual_law' not in f for f in m.WORLD["facts"])
+    assert 'be_khol_ha_maqom_asher_azkir' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

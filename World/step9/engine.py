@@ -1732,3 +1732,53 @@ RULES.update(_oa.build(V))
 # pesach_rules.py.
 import pesach_rules as _pe
 RULES.update(_pe.build(V))
+
+# Round 17 — SHABBAT'S MACHINERY (2026-09-04, the sixth Exodus
+# Talmud-first exam block — the twice-drawn import edge). 10 rules
+# in shabbat_rules.py.
+import shabbat_rules as _sh
+RULES.update(_sh.build(V))
+
+# Round 18 — MATZA, HERBS, AND THE TELLING (2026-09-04, the seventh
+# Exodus Talmud-first exam block — the Passover family's eating
+# wing). 8 rules in matza_rules.py.
+import matza_rules as _ma
+RULES.update(_ma.build(V))
+
+# Round 19 — EGYPT AND THE GENERATIONS (2026-09-04, the eighth
+# Exodus Talmud-first exam block — the Passover family's closing
+# wing: the export engine's derivation layer). 4 rules in
+# egypt_rules.py.
+import egypt_rules as _eg
+RULES.update(_eg.build(V))
+
+# Round 20 — THE INK LAYER (2026-09-04, the ninth Exodus
+# Talmud-first exam block — the Talmud ruling about the ink
+# itself). 5 rules in ink_rules.py.
+import ink_rules as _ik
+RULES.update(_ik.build(V))
+
+# Round 21 — CONDUCT AND LITURGY (2026-09-04, the tenth Exodus
+# Talmud-first exam block — the small pair's second half). 5 rules
+# in conduct_rules.py.
+import conduct_rules as _cd
+RULES.update(_cd.build(V))
+
+# Round 22 — THE CALENDAR (2026-09-04, the eleventh Exodus
+# Talmud-first exam block). 4 rules in calendar_rules.py.
+import calendar_rules as _ca
+RULES.update(_ca.build(V))
+
+# Round 23 — THE SINAI COVENANT (2026-09-04, the twelfth Exodus
+# Talmud-first exam block — the module-name guard fired third
+# time: boundary_machine_sinai beside round 17's boundary_machine).
+# 5 rules in covenant_rules.py.
+import covenant_rules as _cv
+RULES.update(_cv.build(V))
+
+# Round 24 — FESTIVALS AND GIFTS (2026-09-04, the thirteenth Exodus
+# Talmud-first exam block — the module-name guard fired a FOURTH
+# time: appearance_exemptions beside the standing appearance_duty).
+# 5 rules in festivals_rules.py.
+import festivals_rules as _fs
+RULES.update(_fs.build(V))

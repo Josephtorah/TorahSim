@@ -186,6 +186,10 @@ m.step("Exod.3.15")
 # ‹זֶה־שְּׁמִי לְעֹלָם› (“this name-me/my to-forever”) — fact holds: this-
 # shemi-to-forever
 m.fact("ze_shemi_le_olam")
+# witness-tier presupposed read: name_ink_protection_file on
+# ze_shemi_le_olam — read, not installed
+m.witness_read("ze_shemi_le_olam", "name_ink_protection_file",
+                cites=["Shevuot 35a:27", "Shevuot 35a:28", "Shevuot 35b:4", "Shevuot 35b:5", "Shevuot 35b:6", "Shevuot 35b:7", "Pesachim 50a:19", "Pesachim 50a:20", "Pesachim 50a:21", "Pesachim 117a:1", "Pesachim 117a:2", "Pesachim 117a:3"])
 
 # -------------------------- Exod.3.16 · GATHER_THE_ELDERS ------------------
 # לֵךְ וְאָסַפְתָּ אֶת־זִקְנֵי יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵהֶם יְהוָה אֱלֹהֵי
@@ -292,4 +296,8 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 5
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ze_shemi_le_olam', 'name_ink_protection_file')]
+    assert m.WITNESS_READS[0]["cites"] == ['Shevuot 35a:27', 'Shevuot 35a:28', 'Shevuot 35b:4', 'Shevuot 35b:5', 'Shevuot 35b:6', 'Shevuot 35b:7', 'Pesachim 50a:19', 'Pesachim 50a:20', 'Pesachim 50a:21', 'Pesachim 117a:1', 'Pesachim 117a:2', 'Pesachim 117a:3']
+    assert all('name_ink_protection_file' not in f for f in m.WORLD["facts"])
+    assert 'ze_shemi_le_olam' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

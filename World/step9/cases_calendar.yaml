@@ -1,0 +1,76 @@
+# THE CALENDAR (round 22 — the eleventh Exodus Talmud-first exam
+# block, 2026-09-04; owner: "Another block go"). The calendar's
+# machinery on Exodus's ink.
+# Read-source: logic/oral_triage/exodus_block_calendar_2026-09-04.md.
+
+- module: nisan_for_kings
+  tractate: Rosh Hashanah
+  oracle: Rosh Hashanah 3a:2-13
+  exodus_anchor: {unit: exo_40_erect_fill, ref: Exod.40.17 + 19.1,
+    claims: [EX40-07]}
+  cases:
+  - id: RH3a_kings
+    input: {query: kings_year_head}
+    expected: {verdict: nisan_by_verse_ladder}
+    class: A
+  - id: RH3a_rungs
+    input: {query: chain_exodus_rungs}
+    expected: {verdict: year_label_unmoved}
+    class: A
+
+- module: intercalation_machine
+  tractate: Sanhedrin
+  oracle: Sanhedrin 12b:6-13b:4; Rosh Hashanah 13a:1-4
+  exodus_anchor: {unit: exo_34_second_tablets, ref: Exod.34.21-22 + 12.2,
+    claims: [EX34-08]}
+  cases:
+  - id: Sa12b_adar
+    input: {query: only_adar_intercalated}
+    expected: {verdict: this_is_nisan_no_other}
+    class: A
+  - id: Sa13a_equinox
+    input: {query: equinox_rule}
+    expected: {verdict: [whole_festival_sixteen, part_festival_twentyone, fourteen_days_two_placements]}
+    class: A
+  - id: RH13a_seam
+    input: {query: year_seam_third}
+    expected: {verdict: third_before_rosh_hashanah}
+    class: A
+
+- module: month_mechanics
+  tractate: Rosh Hashanah
+  oracle: Rosh Hashanah 20a:14-16, 20b:9-12, 25a:3-6
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.2 + 12.18,
+    claims: [EX12-22, EX12-32]}
+  cases:
+  - id: RH20a_addsanctify
+    input: {query: month_add_vs_sanctify}
+    expected: {verdict: stretch_never_fabricate}
+    class: A
+  - id: RH20b_boundary
+    input: {query: day_boundary_source}
+    expected: {verdict: [evening_to_evening, twentyfirst_at_evening]}
+    class: A
+  - id: RH25a_authority
+    input: {query: calendar_authority}
+    expected: {verdict: every_court_as_moses}
+    class: A
+
+- module: year_seams
+  tractate: Rosh Hashanah
+  oracle: Rosh Hashanah 7a:17-18, 9a:2-5; Taanit 29a:2-4
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.2 + 34.21 + 40.17,
+    claims: [EX12-32]}
+  cases:
+  - id: RH7a_shekels
+    input: {query: shekels_year_head}
+    expected: {verdict: nisan_by_months_analogy}
+    class: A
+  - id: RH9a_harvest
+    input: {query: harvest_rest_assignment}
+    expected: {verdict: [sabbatical_edges, omer_excluded_shabbat]}
+    class: A
+  - id: Ta29a_ninthav
+    input: {query: ninth_av_computation}
+    expected: {verdict: computed_from_erection_date}
+    class: A

@@ -900,9 +900,140 @@ Leviticus, already answers the paschal for-its-name grid) and the
 recorded EXPERIMENT (five spit materials tested against the verse's
 fire-directness requirement — metal conducts, palm sweats, fig runs
 sap, the hardwoods weep at their knots — pomegranate the one
-survivor). Records: World/step9/REPORT_LEAVEN.md + REPORT_COURTS.md
-+ REPORT_PERSONS_OATHS.md + REPORT_PESACH.md. Thirteen blocks
-remain (~325 LAW rows).
+survivor). And on "Yes block 9 go" (2026-09-04, after compaction
+#42), round 17 ran SHABBAT'S MACHINERY — the twice-drawn import
+edge — at 50/50 first run: **640/640 across seventeen rounds**,
+catalog through R-403 (208 compiled rules), F-061..F-066 seated on
+SIX units (the sign chapter, the assembly chapter, the manna
+chapter, the work-start chapter, the Decalogue, the justice
+calendar). Its two headlines: THE LIFE TOURNAMENT — seven recorded
+routes for saving-life-overrides-Shabbat, Rava's refutation sweep,
+and Shmuel's live-by-them the one survivor for DOUBT ("one spicy
+pepper is better than a whole basket of squash"); and SEVEN SEATS
+ANSWERING BEFORE THE SUGYOT OPENED — the campaign's strongest
+anticipation surface (the forgetter grid, the BUT particle, the
+kindling clause, the carrying anchor, the boundary grid, the purse
+row, the tunneler seed). New trap on the record: module names need
+the collision guard too (the pilot's life_override module was
+briefly overwritten; renamed, pilot green). And on "Yes block 3," round 18 ran
+MATZA, HERBS, AND THE TELLING — the Passover family's eating wing
+plus the tefillin file — at 29/29 (two honest fires: the dispute
+gate demanding authority labels on every arm, the vocabulary gate
+catching an unregistered value): **669/669 across eighteen
+rounds**, catalog through R-411 (216 compiled rules),
+F-067..F-069 seated on the consecration chapter and the Passover
+chapter. Its two headlines: THE INK NOTES BECAME LAW — the unit's
+own census rows (the yadkha-heh, the totafot spelling) met their
+derivations at the letter (Rav Ashi's weak-arm law, R. Yishmael's
+four-compartment count); and THE THIRD STRATUM ANTICIPATED — the
+derivation's own operator prose on the telling verse held the
+pointing and the for-me before the seder pages were opened, the
+first such case for the three-strata rule. And on "Let's do the next block," round 19 ran EGYPT AND THE
+GENERATIONS — block 4, the Passover family's closing wing — at
+28/28 FIRST RUN: **697/697 across nineteen rounds**, catalog
+through R-415 (220 compiled rules), F-070..F-072 seated on the
+Passover and consecration chapters. THE PASSOVER FAMILY IS CLOSED:
+blocks 1+2+3+4 — leaven, the offering, the eating, and the eras —
+all green. Its two headlines: THE EXPORT OPERATOR FOUND — the
+two-era table the backfill seated (which laws were Egypt's alone)
+turns out to run on ONE CLAUSE of the consecration chapter,
+"you shall perform this service in this month" (13:5) read as
+all-the-month's-services-as-this-one, the sugya firing it clause
+by clause down the chapter and reassigning each freed restrictor
+token to a recorded job (the midnight dispute, the uncircumcised's
+matza duty, the apostasy/terumah boundary, the valid-only bone) —
+and the seat's own operator prose had filed that verse as "the
+rite's continuity clause" before the sugya was opened, the third
+stratum anticipating AGAIN; and THE STATUTE ENGINE TYPED — the
+second Passover's include/exclude runs on a typed criterion (a
+command IN THE LAMB'S BODY, three particulars typing the includes,
+a recorded tie-break fired three times), with the impure-Passover
+carve-outs riding Leviticus 7:19-20 — the Tzav round's own
+flesh-purity verses computing this chapter's karet exemption, the
+campaign's second cross-book grading. And on "let continue," rounds 20-21 ran the SMALL PAIR BATCHED —
+block 15, THE INK LAYER, and block 18, CONDUCT AND LITURGY — at
+17/17 and 20/20 first run: **734/734 across twenty-one rounds**,
+catalog through R-425 (230 compiled rules), F-073..F-079 seated on
+SIX units. The ink block's headline is the deepest yet: the
+tradition NAMES the front end's question (Sanhedrin 4a — do the
+vowels or the consonants carry the law?) and RULES the measured
+verdict in its own words — the dispute lives only where the
+written skeleton forks from the read form — argued at the very
+clause (the kid in its mother's milk) the front-end measurement
+used, and sealed by moving the kid-law onto the cooking-verb
+entirely. Beside it: the script that never changed, proven from
+the hooks of the pillars naming their own letter; the letter
+arithmetic where an added alef turns two hundred into two; the
+Name's erasure boundary with its sanctity-flows-forward law and a
+second TEIKU. The conduct block found Sinai's dialogue verse
+("Moses speaks and God answers him by voice") running the whole
+liturgy stack — the Levites' holy tongue, the translator's volume
+law, the Song's two recitation modes — and the THIRD STRATUM
+anticipated for the THIRD consecutive round: the Decalogue step's
+own prose ("remember-and-keep in one saying") is Rava's derivation
+of women's Torah-grade kiddush; the healing license arrived at its
+daf already seated verbatim (EX21-07). And on "Another block go," round 22 ran THE CALENDAR — block 10 —
+at 11/11 first run: **745/745 across twenty-two rounds**, catalog
+through R-429 (234 compiled rules), F-080..F-082 seated on the
+Passover chapter, the second tablets, and the erection chapter.
+Its two headlines: THE COURT STRETCHES, NEVER FABRICATES — the
+month machine's constitution in one clause ("LIKE THIS see and
+sanctify": add a day at need, never sanctify at need; press
+witnesses to delay a sighting, never to affirm an unseen moon),
+with a recorded ROYAL VIOLATION beside it (Hezekiah intercalated
+Nisan-in-Nisan and prayed for mercy over it); and TWO COMPUTATIONS
+WALK THROUGH 40:17 — the book's closing date clause is a
+load-bearing rung of the Nisan-for-kings verse ladder AND the
+anchor from which the Ninth of Av is computed to the day. The
+authority sugya arrived answered (every-court-as-Moses has been
+seated at EX24-07 since the Mishpatim round), and the measures
+rider fired a fifth time ("all the Sages' measures are thus" at
+the year seam's one-third threshold — the data channel
+self-labeling again). And on "One more block," round 23 ran THE SINAI COVENANT — block
+16 — at 16/16 first run: **761/761 across twenty-three rounds**,
+catalog through R-434 (239 compiled rules), F-083..F-085 seated on
+the ascent, Sinai, and second-tablets chapters. Its two headlines:
+THE CROWN HELD BOTH BOUNDARY LAWS — the boundary verse's own
+frozen prose ("for the generations: pushing and stoning"; "a
+boundary with its EXPIRY written in") turned out to summarize the
+two sugyot behind it, the execution procedure and the
+counted-release rule (a matter enacted by council needs another
+council to release it — the mount's sanctity ended by
+proclamation, not by default); and MOSES' OWN REASONING ENTERS THE
+RECORD — the three things he did of his own reasoning with
+recorded divine assents, the tablets-breaking a-fortiori riding
+the very apostate-clause reading round 19 seated four rounds
+earlier: the seats now answering each other, not just the sugyot.
+Also aboard: the CANON CHANNEL (Scripture, Mishnah, and Talmud
+enumerated from the one giving verse — the two-channel charter's
+second seat beside 34:27), the sequestering building-block, the
+attributes covenant with the wrapped prayer leader, and a new
+honest verdict-state: Abaye's KASHYA, a standing difficulty
+carried unresolved beside the TEIKU family. And on "Go" — the
+first word after the compaction — round 24 ran FESTIVALS AND
+GIFTS (block 17) at 28/28 first run: **789/789 across twenty-four
+rounds**, catalog through R-439 (244 compiled rules),
+F-086..F-091 seated across four chapters. Its headline is THE
+TABLE ROUND: this was the block where the derivation era's oldest
+seated tables faced their own case discussions, and every one
+held — the appearance-exemption table (word by word: the blind,
+the lame, women, the tumtum) was already right before the
+Chagigah cluster was opened; the tefillin verse's Masorah chain
+held "FROM days, not ALL days — excluding Sabbaths and festivals"
+verbatim before its sugya was opened; the gift-order file, the
+border-status table (with its recorded R.-Akiva-switch), and the
+overnight-fat window all arrived answered. And one deeper find:
+the ink era's letter-grain census of when-He-brings-you (written
+full at verse 5, lean at verse 11 of the same chapter) turned out
+to be holding the two pegs of a Babylonian dispute over when the
+firstborn machine switches on. Records:
+World/step9/REPORT_LEAVEN.md + REPORT_COURTS.md +
+REPORT_PERSONS_OATHS.md + REPORT_PESACH.md + REPORT_SHABBAT.md +
+REPORT_MATZA.md + REPORT_EGYPT.md + REPORT_INK.md +
+REPORT_CONDUCT.md + REPORT_CALENDAR.md + REPORT_COVENANT.md +
+REPORT_FESTIVALS.md. Five blocks remain (~133 LAW rows); the
+ripest next: block 8 (capital modes) or block 11 (sanctuary
+constants — the routed Yoma row waits there).
 
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed

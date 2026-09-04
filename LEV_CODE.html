@@ -1,0 +1,1002 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>The Leviticus Code</title>
+<style>
+:root { --bg:#faf9f6; --ink:#1c1a17; --dim:#6b6558; --rule:#d9d4c8; --card:#ffffff; --accent:#7a4a12; }
+body { background:var(--bg); color:var(--ink); font-family: Georgia, 'Times New Roman', serif; margin:0; padding:2rem 1rem 4rem; }
+main { max-width: 60rem; margin: 0 auto; }
+h1 { font-size:1.6rem; margin:0 0 .2rem; }
+.sub { color:var(--dim); margin:0 0 1.6rem; max-width:46rem; }
+.file { background:var(--card); border:1px solid var(--rule); border-radius:6px; margin:1.4rem 0; overflow:hidden;}
+.file header { padding:.6rem .9rem; border-bottom:1px solid var(--rule); background:#f3f0e8; }
+.file header .path { font-family: ui-monospace, Menlo, monospace; font-size:.85rem; }
+.file header .desc { color:var(--dim); font-size:.85rem; margin-top:.15rem; }
+pre { margin:0; padding: .9rem; overflow-x:auto; font-family: ui-monospace, Menlo, Consolas, monospace; font-size:.8rem; line-height:1.45; }
+</style></head><body><main>
+<h1>The Leviticus Code — the final code only</h1>
+<p class="sub">Baked 2026-09-04 · the two cold-compiled functions, the compiler-law deliverables for Leviticus so far. Source code from the written ink alone; the tradition's recorded arguments applied as labeled compile moves; the Mishnah's rows fed at run time as test data. The Pre-Code layers (unit steps, exam scaffold) are not on this page.</p><section class="file"><header><div class="path">World/step9/cold_run_vayikra5.py · 501 lines</div><div class="desc">Leviticus 5 — the graded offering + sancta misuse. Compiled from the bare ink (every branch tagged [INK]), gaps filled by named, labeled moves; the Mishnah's rows fed as test data: 27/27.</div></header><pre>#!/usr/bin/env python3
+"""cold_run_vayikra5.py — THE FIRST COMPILE UNDER THE STEP-5 DELIVERABLE
+RULE (2026-09-03, owner: "amend it and run it on Leviticus 5").
+
+The five motions, in order:
+ (1) code from the BARE INK of Lev 5 alone (verse-tagged, provenance
+     [INK] on every ink-borne branch; unstated quantities = DATA);
+ (2) the Mishnah's rows collected as TEST DATA below;
+ (3) run;
+ (4) every miss filled by a NAMED Talmud/Sifra move, labeled [MOVE ...]
+     on the changed line;
+ (5) the graded matrix printed with per-cell provenance and fractions.
+Zero-report law: every claimed ink token is probed before anything runs.
+"""
+import sqlite3, sys, os
+
+DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+db = sqlite3.connect(DB)
+
+def strip(s):
+    return ''.join(c for c in s if c != '/' and not (0x0591 &lt;= ord(c) &lt;= 0x05C7))
+
+rows = db.execute("""SELECT v.verse, w.idx, w.he FROM words w
+    JOIN verses v ON w.verse_id=v.id
+    WHERE v.book='Lev' AND v.chapter=5 ORDER BY v.verse, w.idx""").fetchall()
+verses = {}
+for vs, i, he in rows:
+    verses.setdefault(vs, []).append(strip(he))
+
+# ---- ink probes (each MUST fire or we refuse to run) ----------------
+PROBES = {
+    'oath-voice (kol alah)':        (1,  'אלה'),
+    'hidden (venelam)':             (2,  'ונעלם'),
+    'he knew (ve-hu yada)':         (3,  'ידע'),
+    'harm-or-good option template': (4,  'להרע'),
+    'confess (vehitvadah)':         (5,  'והתודה'),
+    'ENOUGH for a lamb (dei seh)':  (7,  'די'),
+    'FIRST (chatat first, rishonah)':(8, 'ראשונה'),
+    'AS PRESCRIBED (kamishpat)':    (10, 'כמשפט'),
+    'tenth of the ephah':           (11, 'עשירת'),
+    'no frankincense (stripping)':  (11, 'לבנה'),
+    'silver shekels (currency)':    (15, 'שקלים'),
+    'its fifth (chamishito, plene)':(16, 'חמישתו'),
+    'did NOT know (lo yada)':       (17, 'ידע'),
+    'he shall RETURN (veheshiv)':   (23, 'והשיב'),
+    'its fifthS (PLURAL!)':         (24, 'וחמשתיו'),
+    'at its head (principal)':      (24, 'בראשו'),
+    'to its owner (la-asher hu lo)':(24, 'לו'),
+    'of ONE of all (per-one)':      (26, 'מכל'),
+}
+for label, (vs, tok) in PROBES.items():
+    if not any(tok == w or w.endswith(tok) or w.startswith(tok) for w in verses[vs]):
+        sys.exit('ZERO-REPORT LAW: probe %r failed at Lev 5:%d — refusing to run' % (label, vs))
+print('probes: all %d ink-token probes fired  [zero-report law satisfied]' % len(PROBES))
+
+# ---- mechanical case-opener parse -----------------------------------
+OPENERS = {'ונפש', 'או', 'ואם', 'נפש', 'וידבר'}
+cases_found = [vs for vs in sorted(verses) if verses[vs][0] in OPENERS]
+print('case-opener parse: verse-initial openers at', cases_found)
+
+P = []  # provenance trail of the last call
+def ink(vs, note):   P.append(('INK',  'Lev 5:%s — %s' % (vs, note)))
+def move(src, note): P.append(('MOVE', '%s — %s' % (src, note)))
+def dat(note):       P.append(('DATA', note))
+
+# =====================================================================
+# THE CODE — from the ink of Leviticus 5 alone. Mishnah/Talmud appear
+# ONLY on [MOVE] lines (motion 4) and in the DATA section (motion 2).
+# =====================================================================
+
+def graded_offering(person, data):
+    """Lev 5:1-13 as a machine. person = the input case; data = what the
+    ink does not state (the two poverty thresholds, dispute settings)."""
+    del P[:]
+    # ---- trigger 1: the witness oath (5:1) ----
+    t1 = False
+    if person.get('trigger') == 'witness_oath':
+        # "and he heard the voice of an oath AND HE IS a witness — or saw
+        # or knew — if he does not tell, then he shall bear his sin"
+        ink(1, 'the oath must FIND a witness: "and he heard... AND HE IS '
+               'a witness" — the word order itself exempts the oath that '
+               'precedes the knowledge')
+        if not person.get('was_witness_at_oath'):
+            return 'exempt', P
+        if person.get('adjuration_scope') == 'blanket_congregation':
+            move('Sifra, Vayikra Dibbura DeChovah, Section 8 6 (Mishnah '
+                 'Shevuot 4:10)', 'a blanket oath over a crowd singles '
+                 'out no addressee')
+            return 'exempt', P
+        if person.get('adjured_by') == 'messenger':
+            move('Sifra, Vayikra Dibbura DeChovah, Section 8 4 (Mishnah '
+                 'Shevuot 4:12)', 'the claim must be the claimant\'s own')
+            return 'exempt', P
+        if person.get('claim_kind') == 'promised_gift':
+            move('Sifra, Vayikra Dibbura DeChovah, Chapter 12 (R. Yossi '
+                 'Haglili; Mishnah Shevuot 4:8)', 'monetary testimony '
+                 'only — a promise is no present debt')
+            return 'exempt', P
+        if person.get('denial_forum') != 'court':
+            move('Sifra, Vayikra Dibbura DeChovah, Chapter 12 5-6 '
+                 '(Mishnah Shevuot 4:3)', 'the denial that counts is the '
+                 'one a court hears')
+            return 'exempt', P
+        if person.get('testified'):
+            ink(1, '"if he does NOT tell" — telling discharges')
+            return 'exempt', P
+        t1 = True
+    # ---- trigger 2: sanctuary tumah (5:2-3) ----
+    t2 = False
+    if person.get('trigger') == 'tumah':
+        ink(2, '"or if a soul touch any unclean thing... AND IT BE '
+               'HIDDEN from him" — the knowledge gap is the trigger')
+        ink(3, '"and HE KNEW, and he is guilty" — awareness at the END '
+               'is the ink\'s own closing bracket')
+        if not person.get('aware_at_end'):
+            return 'no offering yet', P
+        if not person.get('hidden_in_middle'):
+            ink(2, 'no hiddenness — no gap to atone')
+            return 'exempt', P
+        if not person.get('aware_at_start'):
+            move('Babylonian Talmud Shevuot 14b (R. Akiva on the doubled '
+                 '"and it be hidden", Sifra Chapter 13 11)',
+                 'awareness at the BEGINNING required — the doubled '
+                 'hidden implies a bracket on both sides')
+            return 'exempt', P
+        if not person.get('touched_sanctum'):
+            move('Sifra, Vayikra Dibbura DeChovah, Chapter 13 10',
+                 'the scope is the sanctuary and its consecrated things '
+                 '— warning, punishment, and offering aligned to one '
+                 'object')
+            return 'exempt', P
+        if person.get('forgot') == 'sanctuary_not_tumah':
+            move('Sifra, Vayikra Dibbura DeChovah, Chapter 13 7 (the '
+                 'first-tanna reading; Rabbi\'s dispute recorded)',
+                 'the hidden variable must be the TUMAH itself')
+            return 'exempt', P
+        t2 = True
+    # ---- trigger 3: the utterance oath (5:4) ----
+    t3 = False
+    if person.get('trigger') == 'utterance_oath':
+        ink(4, '"to do harm OR TO DO GOOD" — the option template: the '
+               'sworn act must be his to do')
+        if not person.get('act_is_his_option'):
+            return 'exempt', P
+        if person.get('tense') == 'past':
+            move('Sifra, Vayikra Dibbura DeChovah, Section 9 8 (Mishnah '
+                 'Shevuot 3:1)', 'the doubled pronounce-verb doubles the '
+                 'tense scope: past oaths join the future')
+        if person.get('oath_epistemics') == 'known_false':
+            ink(4, '"AND IT BE HIDDEN from him" — the known-false oath '
+                   'is never hidden: the vain class sits outside this '
+                   'offering')
+            return 'vain oath — outside the offering', P
+        if not person.get('oath_forgotten'):
+            ink(4, '"and it be hidden from him" — only the forgotten '
+                   'oath triggers')
+            return 'exempt', P
+        t3 = True
+    if not (t1 or t2 or t3):
+        return 'no offering', P
+    # ---- the discharge: confession + the means ladder (5:5-13) ----
+    out = ['CONFESS']
+    ink(5, '"then he shall CONFESS wherein he sinned" — confession '
+           'rides the offering')
+    wealth = person.get('means')
+    dat('the two thresholds — "enough for a lamb" (5:7) and "attains '
+        'two birds" (5:11) — are hand-tests whose measure the ink never '
+        'states: DATA (Onkelos renders the first as "the MEASURE of a '
+        'lamb")')
+    if wealth == 'reaches_lamb':
+        ink(6, 'a FEMALE from the flock — lamb or goat-kid — as a '
+               'sin-offering')
+        out.append('female lamb or goat (chatat)')
+    elif wealth == 'reaches_birds':
+        ink(7, '"if his hand cannot attain ENOUGH (dei) for a lamb: two '
+               'turtledoves or two young pigeons, one chatat one olah"')
+        ink(8, 'the chatat offered FIRST — "rishonah" is in the ink')
+        ink(10, 'the second "as prescribed (ka-mishpat)" — the ink\'s '
+                'own POINTER to the bird-olah rite of chapter 1')
+        out.append('two birds: chatat FIRST, then olah per Lev 1')
+    else:
+        ink(11, '"a tenth of the ephah of fine flour... he shall put NO '
+                'oil and NO frankincense upon it, for it is a chatat" — '
+                'the stripped flour tier, stripping stated in the ink')
+        dat('the SIZE of the ephah is data — the tradition computes the '
+            'tenth as one-of-ten-in-three-se\'im, and Onkelos writes '
+            'the conversion into the verse')
+        out.append('tenth of an ephah, no oil, no frankincense')
+    ink(13, '"for his sin... OF ONE of these" — any trigger rides the '
+            'ladder: the scale reads the MEANS, never the sin\'s '
+            'gravity')
+    return '; '.join(out), P
+
+
+def sacrilege(case, data):
+    """Lev 5:14-19 — me'ilah and the suspended guilt-offering."""
+    del P[:]
+    if case.get('kind') == 'meilah':
+        ink(15, '"a soul, if it commit a TRESPASS and sin unwittingly '
+                'in the holy things of the LORD"')
+        if not case.get('unwitting'):
+            ink(15, '"unwittingly" — the deliberate trespasser is '
+                    'outside this offering')
+            return 'no offering (deliberate)', P
+        if not (case.get('benefit') and case.get('damage')):
+            move('Sifra, Vayikra Dibbura DeChovah, Section 11 3 (the '
+                 'terumah likeness)', 'liability needs damage AND '
+                 'benefit together')
+            return 'exempt', P
+        out = ['repay the principal to the fund struck']
+        ink(16, '"and what he sinned from the holy he shall PAY, and '
+                'ITS FIFTH he shall add to it, and give it to the '
+                'priest"')
+        base = case.get('value')
+        fifth = base / 4.0
+        move('Sifra, Vayikra Dibbura DeChovah, Chapter 20 8 (Bava '
+             'Metzia 54a)', 'the fifth is the ADDED QUARTER: principal '
+             'plus fifth equals five parts — pay %.2f on %.2f'
+             % (fifth, base))
+        out.append('add the fifth (%.2f)' % fifth)
+        ink(15, 'and the ram "by your valuation, SILVER SHEKELS" — the '
+                'currency in ink, the amount a parameter')
+        dat('the valuation floor — two sela — is the transmitted '
+            'setting (Onkelos converts the currency to sanctuary '
+            'sela\'im in the verse itself)')
+        out.append('ram at the valuation floor (%s)' % data['ram_floor'])
+        return '; '.join(out), P
+    if case.get('kind') == 'doubt':
+        ink(17, '"and if a soul sin... AND HE DID NOT KNOW — and he is '
+                'guilty and shall bear his sin": the doubt case is the '
+                'ink\'s own')
+        if case.get('later_resolved') == 'sinned':
+            move('Sifra, Vayikra Dibbura DeChovah, Section 12 5',
+                 '"and he did not know" — once he KNOWS, the suspended '
+                 'ram lapses to the certain sin-offering')
+            return 'chatat now (the talui covered only the doubt '\
+                   'interval)', P
+        if case.get('doubt_object') == 'meilah':
+            dat('DISPUTE as two recorded settings: R. Akiva — the '
+                'suspended ram covers a sacrilege doubt; the sages — '
+                'the sacrilege class rides its own definite ram '
+                '(Mishnah Keritot 5:2)')
+            return 'DISPUTE: liable (R. Akiva) / exempt (the sages)', P
+        ink(18, 'a ram, by the valuation, "for his error which he '
+                'erred AND HE KNEW IT NOT"')
+        return 'suspended ram (asham talui)', P
+    return 'no offering', P
+
+
+def deposit_restitution(claim, data):
+    """Lev 5:20-26 — the deposit oath and its payment algebra."""
+    del P[:]
+    ink(21, 'the claim forms enumerated: deposit, hand-pledge, '
+            'robbery, oppression — "or found a lost thing" (5:22) — '
+            'each clause closing a loophole')
+    if claim.get('claim_kind') not in data['claim_forms']:
+        move('Sifra, Vayikra Dibbura DeChovah, Chapter 22 10-11',
+             'claims that cannot convert to money-payment (the fine '
+             'classes, the Sabbath-injury) are outside')
+        return 'exempt', P
+    if not claim.get('swore_falsely'):
+        ink(24, 'the fifth and the ram ride "all that he swears upon '
+                'FALSELY" — denial without an oath pays the principal '
+                'alone')
+        return 'principal only', P
+    out = []
+    ink(23, '"then he shall RETURN the theft that he stole, or the '
+            'oppression, or the deposit, or the lost thing" — '
+            'restitution FIRST, before the offering')
+    if claim.get('object_exists'):
+        ink(23, '"which was deposited WITH HIM" — while it is with '
+                'him, the thing itself returns')
+        out.append('return the object itself')
+    else:
+        out.append('pay its value')
+    ink(24, '"he shall pay it AT ITS HEAD (be-rosho)" — the principal, '
+            'not the doubles: the fine track and the oath track are '
+            'exclusive')
+    base = claim.get('value')
+    fifth = base / 4.0
+    move('Sifra, Vayikra Dibbura DeChovah, Section 13 8 (Bava Kamma '
+         '9:5-8)', 'the added-quarter fifth on the oath: %.2f' % fifth)
+    out.append('add the fifth (%.2f)' % fifth)
+    if claim.get('swore_on_fifth'):
+        ink(24, 'the ink writes "its FIFTHS" — plural: the recursion '
+                'hook is a letter')
+        move('Sifra, Vayikra Dibbura DeChovah, Section 13 12 (Mishnah '
+             'Bava Kamma 9:7)', 'the sworn-on fifth becomes principal '
+             'and bears its own fifth')
+        dat('the recursion\'s base case — less than a perutah — is the '
+            'transmitted floor')
+        out.append('fifth on the fifth, to the perutah floor')
+    ink(24, '"to WHOM IT BELONGS shall he give it, on the day of his '
+            'guilt" — delivered to the owner himself')
+    if claim.get('owner_far'):
+        out.append('carry it after him, even to Media')
+    if claim.get('victim') == 'father_deceased':
+        ink(23, '"the theft THAT HE STOLE" — his own act; the '
+                'principal goes to the heirs')
+        move('Sifra, Vayikra Dibbura DeChovah, Section 13 2-6 (Mishnah '
+             'Bava Kamma 9:9)', 'the fifth and the ram ride his OWN '
+             'oath — the father-matrix rung')
+        out.append('principal to the heirs; fifth+ram on his own oath')
+    ink(25, 'and the guilt-ram "by your valuation" closes it')
+    out.append('ram at the valuation floor')
+    if claim.get('ask') == 'valuation_date':
+        dat('DISPUTE as two recorded settings on "the day of his '
+            'guilt": Beth Shammai / Beth Hillel split who bears the '
+            'object\'s change of value between theft and conviction')
+        return 'DISPUTE: the day-of-guilt valuation (two houses)', P
+    return '; '.join(out), P
+
+# =====================================================================
+# THE TEST DATA — the Mishnah's rows, fed at run time (motion 2).
+# =====================================================================
+DATA = {
+    'ram_floor': 'two sela (Mishnah Keritot 5:2; Zevachim 10:5 class)',
+    'claim_forms': ['deposit', 'hand_pledge', 'robbery', 'oppression',
+                    'lost_object'],
+}
+CASES = [
+ ('Shevuot 4:10 — the synagogue blanket oath',
+  lambda: graded_offering({'trigger':'witness_oath','was_witness_at_oath':True,
+    'adjuration_scope':'blanket_congregation'}, DATA), 'exempt'),
+ ('Shevuot 4:9 — the oath preceded the knowledge',
+  lambda: graded_offering({'trigger':'witness_oath','was_witness_at_oath':False},
+    DATA), 'exempt'),
+ ('Shevuot 4:12 — demanded through a messenger',
+  lambda: graded_offering({'trigger':'witness_oath','was_witness_at_oath':True,
+    'adjured_by':'messenger'}, DATA), 'exempt'),
+ ('Shevuot 4:8 — the promised-gift claim',
+  lambda: graded_offering({'trigger':'witness_oath','was_witness_at_oath':True,
+    'claim_kind':'promised_gift'}, DATA), 'exempt'),
+ ('Shevuot 4:3 — denied outside court, admitted inside',
+  lambda: graded_offering({'trigger':'witness_oath','was_witness_at_oath':True,
+    'denial_forum':'outside'}, DATA), 'exempt'),
+ ('Shevuot 2:1 — aware, hidden, aware; ate consecrated food (rich man)',
+  lambda: graded_offering({'trigger':'tumah','aware_at_start':True,
+    'hidden_in_middle':True,'aware_at_end':True,'touched_sanctum':True,
+    'means':'reaches_lamb'}, DATA), 'CONFESS; female lamb or goat (chatat)'),
+ ('Shevuot (the machine): no closing awareness yet',
+  lambda: graded_offering({'trigger':'tumah','aware_at_start':True,
+    'hidden_in_middle':True,'aware_at_end':False}, DATA), 'no offering yet'),
+ ('Shevuot 14b — no opening awareness',
+  lambda: graded_offering({'trigger':'tumah','aware_at_start':False,
+    'hidden_in_middle':True,'aware_at_end':True}, DATA), 'exempt'),
+ ('Shevuot 2:5 field — forgot the sanctuary, not the tumah',
+  lambda: graded_offering({'trigger':'tumah','aware_at_start':True,
+    'hidden_in_middle':True,'aware_at_end':True,'touched_sanctum':True,
+    'forgot':'sanctuary_not_tumah'}, DATA), 'exempt'),
+ ('Shevuot 3:5 — utterance about others, his option, forgotten (middle tier)',
+  lambda: graded_offering({'trigger':'utterance_oath','act_is_his_option':True,
+    'oath_forgotten':True,'means':'reaches_birds'}, DATA),
+  'CONFESS; two birds: chatat FIRST, then olah per Lev 1'),
+ ('Sifra Section 9 3 — swore to harm another (not his option)',
+  lambda: graded_offering({'trigger':'utterance_oath','act_is_his_option':False},
+    DATA), 'exempt'),
+ ('Shevuot 3:1 — a PAST false oath, forgotten (poorest tier)',
+  lambda: graded_offering({'trigger':'utterance_oath','act_is_his_option':True,
+    'tense':'past','oath_forgotten':True,'means':'reaches_flour'}, DATA),
+  'CONFESS; tenth of an ephah, no oil, no frankincense'),
+ ('Shevuot 3:8 — the vain oath (the stone column of gold)',
+  lambda: graded_offering({'trigger':'utterance_oath','act_is_his_option':True,
+    'oath_epistemics':'known_false'}, DATA), 'vain oath — outside the offering'),
+ ('Keritot/Sifra close — gravest trigger, poorest hand: still flour',
+  lambda: graded_offering({'trigger':'tumah','aware_at_start':True,
+    'hidden_in_middle':True,'aware_at_end':True,'touched_sanctum':True,
+    'means':'reaches_flour'}, DATA),
+  'CONFESS; tenth of an ephah, no oil, no frankincense'),
+ ('Meilah 18a class — benefit without damage',
+  lambda: sacrilege({'kind':'meilah','unwitting':True,'benefit':True,
+    'damage':False}, DATA), 'exempt'),
+ ('Sifra Section 11 8 — the deliberate trespasser',
+  lambda: sacrilege({'kind':'meilah','unwitting':False}, DATA),
+  'no offering (deliberate)'),
+ ('Bava Metzia 54a — the fifth on a four-value trespass = one',
+  lambda: sacrilege({'kind':'meilah','unwitting':True,'benefit':True,
+    'damage':True,'value':4.0}, DATA),
+  'repay the principal to the fund struck; add the fifth (1.00); '
+  'ram at the valuation floor (two sela (Mishnah Keritot 5:2; '
+  'Zevachim 10:5 class))'),
+ ('Keritot — the plain doubt brings the suspended ram',
+  lambda: sacrilege({'kind':'doubt'}, DATA), 'suspended ram (asham talui)'),
+ ('Sifra Section 12 5 — the doubt resolved: he sinned',
+  lambda: sacrilege({'kind':'doubt','later_resolved':'sinned'}, DATA),
+  'chatat now (the talui covered only the doubt interval)'),
+ ('Keritot 5:2 — doubt of SACRILEGE: the recorded dispute',
+  lambda: sacrilege({'kind':'doubt','doubt_object':'meilah'}, DATA),
+  'DISPUTE: liable (R. Akiva) / exempt (the sages)'),
+ ('Shevuot 5:1 field — denial WITHOUT an oath',
+  lambda: deposit_restitution({'claim_kind':'deposit','swore_falsely':False},
+    DATA), 'principal only'),
+ ('Bava Kamma 9:5 — sworn robbery, object gone, owner far',
+  lambda: deposit_restitution({'claim_kind':'robbery','swore_falsely':True,
+    'object_exists':False,'value':4.0,'owner_far':True}, DATA),
+  'pay its value; add the fifth (1.00); carry it after him, even to '
+  'Media; ram at the valuation floor'),
+ ('Sifra Section 13 4 — the deposit still with him returns itself',
+  lambda: deposit_restitution({'claim_kind':'deposit','swore_falsely':True,
+    'object_exists':True,'value':8.0}, DATA),
+  'return the object itself; add the fifth (2.00); ram at the '
+  'valuation floor'),
+ ('Bava Kamma 9:7 — swore on the fifth: the recursion',
+  lambda: deposit_restitution({'claim_kind':'robbery','swore_falsely':True,
+    'object_exists':False,'value':4.0,'swore_on_fifth':True}, DATA),
+  'pay its value; add the fifth (1.00); fifth on the fifth, to the '
+  'perutah floor; ram at the valuation floor'),
+ ('Bava Kamma 9:9 — robbed the father, swore, the father died',
+  lambda: deposit_restitution({'claim_kind':'robbery','swore_falsely':True,
+    'object_exists':False,'value':4.0,'victim':'father_deceased'}, DATA),
+  'pay its value; add the fifth (1.00); principal to the heirs; '
+  'fifth+ram on his own oath; ram at the valuation floor'),
+ ('Sifra Chapter 22 11 — the fine-class claim (the daughter) is outside',
+  lambda: deposit_restitution({'claim_kind':'daughter_fine',
+    'swore_falsely':True}, DATA), 'exempt'),
+ ('Sifra Section 13 13 — the day-of-guilt valuation',
+  lambda: deposit_restitution({'claim_kind':'robbery','swore_falsely':True,
+    'object_exists':True,'value':4.0,'ask':'valuation_date'}, DATA),
+  'DISPUTE: the day-of-guilt valuation (two houses)'),
+]
+
+# ---- motion 3+5: run and grade --------------------------------------
+ok = 0
+frac = {'INK': 0, 'MOVE': 0, 'DATA': 0}
+print()
+for label, fn, want in CASES:
+    got, prov = fn()
+    hit = got == want
+    ok += hit
+    kinds = [k for k, _ in prov]
+    cls = 'INK' if all(k == 'INK' for k in kinds) else \
+          ('DATA' if 'DATA' in kinds and got.startswith('DISPUTE') else
+           ('MOVE' if 'MOVE' in kinds else 'DATA'))
+    frac[cls] += 1
+    print('%s  [%s]  %s' % ('PASS' if hit else 'MISS', cls, label))
+    if not hit:
+        print('      expected: %s' % want)
+        print('      got     : %s' % got)
+print()
+print('MATRIX: %d/%d cells match the answer sheet' % (ok, len(CASES)))
+tot = len(CASES)
+print('FRACTIONS: pure ink %d/%d (%.0f%%) · named moves %d/%d (%.0f%%) '
+      '· data/dispute %d/%d (%.0f%%)' %
+      (frac['INK'], tot, 100.0*frac['INK']/tot,
+       frac['MOVE'], tot, 100.0*frac['MOVE']/tot,
+       frac['DATA'], tot, 100.0*frac['DATA']/tot))
+if ok == len(CASES):
+    print('LEVITICUS 5 COMPILES — the deliverable rule\'s first function '
+          'set is live.')
+
+# ---- EFFECTS (retrofit 2026-09-03, under the effects law) -----------
+# The verdict writes the LEDGER, never the event stream. Leviticus 5's
+# routes end on HEAVEN'S DOCKET: the offering brought, the priest
+# atones, and the ink itself closes the entry — ונסלח לו ("and he shall
+# be forgiven", nine sites in Lev 4-5). Mapping is by the verdict
+# string the function actually emitted; disputes fork (both arms'
+# effects, labeled, per method law 3).
+import effects_layer as FX
+
+def effect_of(verdict):
+    v = verdict
+    if v.startswith('DISPUTE: liable (R. Akiva)'):
+        return ['atoned_forgiven', 'exempt']   # the fork's two arms
+    if v.startswith('DISPUTE: the day-of-guilt'):
+        # the dispute is the valuation DATUM; the effects stand
+        return ['restores', 'adds_fifth', 'atoned_forgiven']
+    if v == 'exempt':
+        return ['exempt']
+    if v in ('no offering', 'no offering yet', 'no offering (deliberate)',
+             'vain oath — outside the offering'):
+        return [FX.NONE]                        # pending, or routed outside
+    if v == 'principal only':
+        return ['restores']
+    fx = []
+    if 'return the object itself' in v:
+        fx.append('restores')
+    if 'pay its value' in v or 'principal' in v:
+        fx.append('pays' if 'pay its value' in v else 'restores')
+    if 'fifth' in v:
+        fx.append('adds_fifth')
+    # any route that ends at an offering closes on Heaven's docket
+    if any(w in v for w in ('chatat', 'birds', 'ephah', 'ram', 'olah')):
+        fx.append('atoned_forgiven')
+    return fx or [FX.NONE]
+
+print()
+print('EFFECTS — the state changes each verdict writes:')
+used = []
+for label, fn, want in CASES:
+    got, _ = fn()
+    fx = effect_of(got)
+    used += fx
+    tag = '  [DISPUTE FORK — both arms, labeled]' if got.startswith('DISPUTE') else ''
+    for line in FX.render(fx):
+        print('  %-44s -&gt;%s%s' % (label[:44], line, tag))
+ops = FX.summarize(used)
+print('LEDGER OPS this run writes:',
+      ', '.join('%s x%d' % (op, cnt) for op, cnt in sorted(ops.items())))
+print('effects: all %d cases carry a REGISTERED effect or an honest '
+      'no-change [effects law satisfied]' % len(CASES))
+</pre></section><section class="file"><header><div class="path">World/step9/cold_run_tzav.py · 487 lines</div><div class="desc">Leviticus 6-8 — the offering-torah layer, compiled with EFFECTS on every verdict (the simulation writes the ledger, never the event stream): 33/33.</div></header><pre>#!/usr/bin/env python3
+# THE OFFERING-TORAH SPAN (Lev 6-8) — the fourth span compiled under
+# the effects law (2026-09-03), the Tzav round's Step-5 deliverable.
+# The bare ink of the priests' law layer: the one-way altar and its
+# night windows, the vessel purge, the perpetual griddle offering's
+# halving, the rejection machine, the karet bans, the priestly dues,
+# and the installation transaction. Ink first (code/data separation);
+# the Mishnah's rows are the answer sheets fed at run time; the
+# Sifra's recorded arguments are the labeled compile moves (the
+# law-midrash spine read the same sitting). Effects from birth,
+# targeting the world_engine contract. Read-only; model layer.
+
+import sqlite3, sys
+import effects_layer as FX
+
+db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
+
+def strip(s):
+    return ''.join(c for c in s if c != '/' and not (0x0591 &lt;= ord(c) &lt;= 0x05C7))
+
+def verse_text(ch, vs):
+    rows = db.execute("""SELECT w.he FROM words w JOIN verses v
+        ON w.verse_id=v.id WHERE v.book='Lev' AND v.chapter=? AND
+        v.verse=? ORDER BY w.idx""", (ch, vs)).fetchall()
+    return ' '.join(strip(h) for (h,) in rows)
+
+PROBES = [
+    ('מוקדה',  6, 2,  'on its pyre — the night window'),
+    ('תוקד',   6, 6,  'shall burn — the perpetual fire'),
+    ('תכבה',   6, 6,  'shall not go out — the ban'),
+    ('בקמצו',  6, 8,  'his fistful'),
+    ('מחציתה', 6, 13, 'its half — the halving invariant'),
+    ('תכבס',   6, 20, 'you shall wash'),
+    ('ישבר',   6, 21, 'it shall be broken'),
+    ('ומרק',   6, 21, 'scoured'),
+    ('ושטף',   6, 21, 'and rinsed'),
+    ('תהיה',   7, 9,  "his shall it be — the due (the ink's feminine)"),
+    ('ממחרת',  7, 16, 'and on the next day'),
+    ('השלישי', 7, 17, 'the third day'),
+    ('פגול',   7, 18, 'rejected'),
+    ('ונכרתה', 7, 20, 'shall be cut off'),
+    ('חלב',    7, 23, 'fat'),
+    ('דם',     7, 26, 'blood (the ban)'),
+    ('התנופה', 7, 34, 'the waving-breast'),
+    ('המלאים', 8, 22, 'the installation ram'),
+    ('תצאו',   8, 33, 'you shall not go out'),
+]
+for tok, ch, vs, note in PROBES:
+    if tok not in verse_text(ch, vs):
+        sys.exit('ZERO-REPORT LAW: probe %r (%s) failed at Lev %d:%d'
+                 % (tok, note, ch, vs))
+print('probes: all %d fired  [zero-report law satisfied]\n' % len(PROBES))
+
+P = []
+def ink(ref, note):  P.append(('INK',  'Lev %s — %s' % (ref, note)))
+def move(src, note): P.append(('MOVE', '%s — %s' % (src, note)))
+def data(src, note): P.append(('DATA', '%s — %s' % (src, note)))
+
+def out(verdict, effects):
+    FX.validate([e for e in effects if e != FX.NONE])
+    return verdict, effects, list(P)
+
+
+# ===== F1: THE ONE-WAY ALTAR (6:2-6) =================================
+def altar_machine(case, params):
+    del P[:]
+    q = case['ask']
+    if q == 'retention':
+        ink('6:2', '"It is the OLAH on its pyre (מוקדה) on the altar" — '
+            'the burnt-offering names the class the altar keeps')
+        move('Sifra, Tzav, Chapter 1 3-6', 'the recorded classes: R. '
+             'Yehoshua fit-for-the-FIRE, Rabban Gamliel fit-for-the-'
+             'ALTAR; their delta is unfit blood and libations — both '
+             'arms carried')
+        return out('once up, does not come down (two recorded classes)',
+                   [FX.NONE])
+    if q == 'dislodged_before_midnight':
+        ink('6:2', '"all the night until the morning" — the fire\'s '
+            'claim spans the night')
+        move('Sifra, Tzav, Chapter 2 5', 'limbs sprung off before '
+             'midnight are returned and still carry sacrilege — the '
+             'midnight boundary on the mitzvah')
+        return out('restore to the fire; sacrilege stands',
+                   [FX.NONE])
+    if q == 'extinguish':
+        ink('6:6', '"a continual fire shall burn (תוקד) on the altar; '
+            'it shall NOT GO OUT (לא תכבה)" — the standing duty and '
+            'its negative')
+        move('Sifra, Tzav, Chapter 2 7', 'R. Yossi\'s sustenance pile; '
+             'extinguishing transgresses the negative commandment')
+        return out('a standing never-extinguish duty',
+                   ['perpetual_fire_duty', 'labor_barred'])
+    if q == 'wood_piles':
+        ink('6:5-6', 'the ink states the fire and the morning wood — '
+            'no count')
+        data('Mishnah Yoma 4:6', 'the COUNT is transmitted data with '
+             'three recorded settings: two (R. Yehuda), three (R. '
+             'Yosei), four (R. Meir) daily piles, one more on Yom '
+             'Kippur — the parameter never a constant')
+        return out('pile count = data (three recorded settings)',
+                   [FX.NONE])
+    return out('no verdict in span', [FX.NONE])
+
+
+# ===== F2: THE VESSEL PURGE (6:20-21) ================================
+def vessel_purge(case, params):
+    del P[:]
+    m = case['material']
+    if m == 'garment':
+        ink('6:20', '"and when of its blood is sprinkled on a garment, '
+            'you shall WASH (תכבס) that on which it was sprinkled in a '
+            'holy place"')
+        move('Sifra, Tzav, Chapter 6 3', 'the SPOT, not the whole '
+             'garment; the sprinkle-fitness criterion sorts the cases')
+        return out('launder the spot in the holy place',
+                   ['launder_blood_spot'])
+    if m == 'earthenware':
+        ink('6:21', '"an earthen vessel in which it is cooked shall be '
+            'BROKEN (ישבר)"')
+        return out('broken in the holy place', ['break_earthen_vessel'])
+    if m == 'copper':
+        ink('6:21', '"and if in a copper vessel it is cooked, it shall '
+            'be SCOURED and RINSED (ומרק ושטף) with water"')
+        move('Sifra, Tzav, Chapter 7 2-3', 'all metals included; water '
+             'any amount, water only; scour within, rinse without')
+        return out('scoured and rinsed in the holy place',
+                   ['scour_and_rinse'])
+    if m == 'touched_food':
+        ink('6:20', '"all that touches its flesh shall become holy '
+            '(יקדש)"')
+        move('Sifra, Tzav, Chapter 3 6', 'absorption required; the '
+             'touched part becomes LIKE it — cut away if unfit, eaten '
+             'under its stringencies if fit')
+        return out('becomes as the offering (absorption)',
+                   ['sanctified_by_contact'])
+    return out('no verdict in span', [FX.NONE])
+
+
+# ===== F3: THE PERPETUAL GRIDDLE OFFERING (6:13-15) ==================
+def chavitin_machine(case, params):
+    del P[:]
+    ink('6:13', '"a tenth of the ephah ... a PERPETUAL meal-offering — '
+        'ITS HALF (מחציתה) in the morning and ITS HALF in the evening" '
+        '— the possessive makes each half a half OF A WHOLE')
+    q = case['ask']
+    if q == 'halves_from_house':
+        move('Sifra, Tzav, Section 3 6', 'never two separate '
+             'half-tenths — bring whole and divide')
+        return out('barred — a whole tenth, divided', [FX.NONE])
+    if q == 'successor':
+        move('Sifra, Tzav, Section 3 8-9', 'the replacement brings a '
+             'NEW whole and offers its half: two halves offered, two '
+             'lost — the invariant survives succession')
+        return out('new whole; two halves offered, two lost',
+                   ['burn_remainder'])
+    if q == 'no_successor':
+        move('Sifra, Tzav, Chapter 5 3', 'the recorded pair: R. Yehuda '
+             '— the heirs bring it whole; R. Shimon — the congregation '
+             '(from "olam"); both arms carried')
+        return out('funded by heirs or community (recorded dispute)',
+                   [FX.NONE])
+    if q == 'loaf_count':
+        data('Mishnah Menachot 6:5', 'TWELVE loaves — with the '
+             'show-bread the two exceptions to ten-per-tenth: the '
+             'count is the data channel\'s constant')
+        return out('twelve (transmitted quantity)', [FX.NONE])
+    if q == 'conversion':
+        ink('6:13', 'the tenth of the EPHAH — the unit in the ink')
+        move('Onkelos Lev 6:13 + Sifra, Tzav, Section 3 4', 'the '
+             'received translation computes it in-verse: "one of ten '
+             'in three se\'im"; the Sifra: seven quarters and a '
+             'fraction — the conversion layer as standing behavior')
+        return out('one of ten in three se\'im', [FX.NONE])
+    return out('no verdict in span', [FX.NONE])
+
+
+# ===== F4: THE REJECTION MACHINE (7:15-18) ===========================
+def rejection_machine(case, params):
+    del P[:]
+    q = case['ask']
+    if q == 'window_todah':
+        ink('7:15', '"on the day of his offering shall it be eaten; he '
+            'shall not leave of it until morning" — one day and the '
+            'night')
+        move('Sifra, Tzav, Chapter 12 5', 'the ink permits all night; '
+             'the sages\' MIDNIGHT is the self-labeled fence')
+        return out('day and night until midnight (the fence)',
+                   ['eating_window'])
+    if q == 'window_vow':
+        ink('7:16', '"...and on the NEXT DAY (ממחרת) what remains may '
+            'be eaten" — the two-day window')
+        move('Sifra, Tzav, Chapter 12 13', 'the second NIGHT excluded '
+             '("until the third day")')
+        return out('two days and one night', ['eating_window'])
+    if q == 'leftover':
+        ink('7:17', '"what remains of the flesh of the sacrifice on '
+            'the THIRD day (השלישי) shall be burned in fire"')
+        move('Sifra, Tzav, Chapter 12 14-15', 'by DAY, not night — the '
+             'prototype for all consecrated burning; flesh only')
+        return out('burned on the third day, by day',
+                   ['burn_remainder', 'purge_deadline'])
+    if q == 'piggul_time':
+        ink('7:18', '"if eaten shall be eaten on the third day, it '
+            'shall NOT BE ACCEPTED (לא ירצה)... REJECTED (פגול) shall '
+            'it be, and the soul that eats of it shall bear its sin"')
+        move('Sifra, Tzav, Section 8 1', 'R. Eliezer\'s "incline your '
+             'ear": the verse speaks of the THOUGHT at the offering, '
+             'not the deed — the rejection enters at the service')
+        return out('rejected with karet on the eater',
+                   ['not_accepted', 'karet_cut_off'])
+    if q == 'piggul_place':
+        move('Sifra, Tzav, Chapter 13 2', 'out-of-place thought '
+             'disqualifies via Lev 19:7\'s redundancy, but "shall bear '
+             'its sin" restricts karet to TIME')
+        return out('disqualified without karet', ['not_accepted'])
+    if q == 'no_permitter':
+        move('Sifra, Tzav, Chapter 13 5', 'the permitters criterion: '
+             'the fistful, frankincense, incense, the wholly-burnt '
+             'meal-offerings, the blood — no permitters, no rejection')
+        return out('no rejection attaches', [FX.NONE])
+    return out('no verdict in span', [FX.NONE])
+
+
+# ===== F5: THE KARET BANS (7:19-27) ==================================
+def karet_machine(case, params):
+    del P[:]
+    q = case['ask']
+    if q == 'tamei_ate':
+        ink('7:20', '"the soul that eats ... with his tumah upon him, '
+            'that soul shall be CUT OFF (ונכרתה)"')
+        move('Sifra, Tzav, Chapter 14 3-6', 'the BODY\'s tumah — four '
+             'recorded routes to one law; liability begins at the '
+             'sprinkling (Section 9 8)')
+        return out('karet for the tamei eater', ['karet_cut_off'])
+    if q == 'congregational':
+        move('Sifra, Tzav, Chapter 14 1', 'what was slaughtered FOR '
+             'THE UNCLEAN carries no karet for its unclean eaters — '
+             'R. Yehoshua\'s rule')
+        return out('exempt', ['exempt'])
+    if q == 'cheilev':
+        ink('7:23-25', '"all fat (חלב) of ox or sheep or goat you '
+            'shall not eat ... the soul that eats shall be cut off"')
+        move('Sifra, Tzav, Section 10 9', 'the sacrificial-type '
+             'criterion: the fat that stands to be offered; the '
+             'chest-wall fat excluded')
+        return out('karet at an olive-bulk', ['karet_cut_off'])
+    if q == 'cheilev_noahide':
+        move('Sifra, Tzav, Section 10 1', 'Israel exhorted, NOT the '
+             'sons of Noah — the a-fortiori from the limb-of-the-'
+             'living refuted by "the children of Israel": the recorded '
+             'negative boundary of the Noahide set')
+        return out('outside the Noahide law set', [FX.NONE])
+    if q == 'blood':
+        ink('7:26', '"all blood (דם) you shall not eat, in all your '
+            'habitations, of bird and of beast"')
+        move('Sifra, Tzav, Section 10 11', 'the species criteria '
+             'exclude men, reptiles, eggs, grasshoppers, fish; the '
+             'karet blood is the lifeblood')
+        return out('karet for lifeblood of bird and beast',
+                   ['karet_cut_off'])
+    return out('no verdict in span', [FX.NONE])
+
+
+# ===== F6: THE DUES MACHINE (7:8-10, 7:28-36) ========================
+def dues_machine(case, params):
+    del P[:]
+    q = case['ask']
+    if q == 'olah_hide':
+        ink('7:8', '"the hide of the olah which he offered, to the '
+            'priest — his shall it be"')
+        move('Sifra, Tzav, Chapter 9 4', 'Rebbi: the hide FOLLOWS the '
+             'flesh — only the olah needed its own verse')
+        return out('hide to the offering priest', ['due_to_priest'])
+    if q == 'minchah_due':
+        ink('7:9', '"every meal-offering baked in the oven ... to the '
+            'priest who offers it — HIS shall it be (תהיה, the ink\'s '
+            'feminine, probe-corrected)"')
+        move('Sifra, Tzav, Chapter 10 2', 'reconciled with "to all the '
+             'sons of Aaron": the priestly HOUSEHOLD of the day')
+        return out('to the household of the day', ['due_to_priest'])
+    if q == 'breast_thigh':
+        ink('7:34', '"the breast of the WAVING (התנופה) and the thigh '
+            'of the lifting have I taken ... and given them to Aaron '
+            'and his sons"')
+        move('Sifra, Tzav, Chapter 16 4', 'reverting only AFTER the '
+             'fat smoking (Num 5:31\'s clause order); fit at both '
+             'services required (Chapter 16 7-8)')
+        return out('breast and thigh to the priests after the smoking',
+                   ['due_to_priest'])
+    if q == 'seizure':
+        move('Sifra, Tzav, Chapter 17 6', '"from the children of '
+             'Israel" — by CONSENT of Israel: the priests may not '
+             'seize the dues by force')
+        return out('a consented conveyance, never seized', [FX.NONE])
+    if q == 'eli_violation':
+        move('Sifra, Tzav, Chapter 16 5', 'the recorded indictment: '
+             'the sons of Eli demanded raw flesh BEFORE the smoking — '
+             '"the sin of the youths was very great" (1 Samuel '
+             '2:15-17): the prophetic voice matched to the OPEN '
+             'computed entry — the effects law\'s destination '
+             'witnessed in the declared reading')
+        return out('the recorded violation of the after-smoking gate',
+                   [FX.NONE])
+    return out('no verdict in span', [FX.NONE])
+
+
+# ===== F7: THE INSTALLATION TRANSACTION (8:1-36) =====================
+def installation(case, params):
+    del P[:]
+    q = case['ask']
+    if q == 'atomicity':
+        ink('8:22', '"and he brought near the SECOND ram, the ram of '
+            'the INSTALLATION (המלאים)" — the components re-stated')
+        move('Sifra, Tzav, Mekhilta DeMiluim I 19', 'bullock without '
+             'both rams — not sanctified; rams without bullock — not; '
+             'without the basket — not: one indivisible transaction')
+        return out('atomic — all components or no sanctification',
+                   [FX.NONE])
+    if q == 'commit_point':
+        move('Sifra, Tzav, Mekhilta DeMiluim I 34', 'the '
+             'sanctification CONSUMMATED only at the blood sprinkling '
+             '— the transaction\'s commit operation (the count itself '
+             'a recorded dispute: six / nine / fifteen)')
+        return out('committed at the blood sprinkling',
+                   ['invested_office'])
+    if q == 'confinement':
+        ink('8:33', '"from the door of the tent you shall NOT GO OUT '
+            '(לא תצאו) seven days, until the day of the filling of '
+            'your installation days"')
+        move('Sifra, Tzav, Mekhilta DeMiluim I 36-37', 'the computed '
+             'calendar (23 Adar to 1 Nissan) and the exported '
+             'template: the Yom Kippur high priest\'s and the '
+             'red-heifer priest\'s seven-day separations')
+        return out('a seven-day confinement timer; the template for '
+                   'the generations', ['confined_seven_days'])
+    if q == 'leftover':
+        ink('8:32', '"what remains of the flesh and of the bread you '
+            'shall burn in fire"')
+        return out('the installation\'s own leftover clause',
+                   ['burn_remainder'])
+    return out('no verdict in span', [FX.NONE])
+
+
+# ---- the test data; run, grade, effects -----------------------------
+PARAMS = {}
+CASES = [
+    ('Mishnah Zevachim 9:1 — the retention classes (both recorded)',
+     lambda: altar_machine({'ask': 'retention'}, PARAMS),
+     'once up, does not come down (two recorded classes)'),
+    ('Mishnah Zevachim 9:6 — dislodged before midnight',
+     lambda: altar_machine({'ask': 'dislodged_before_midnight'}, PARAMS),
+     'restore to the fire; sacrilege stands'),
+    ('the extinguish ban (Sifra Chapter 2 7)',
+     lambda: altar_machine({'ask': 'extinguish'}, PARAMS),
+     'a standing never-extinguish duty'),
+    ('Mishnah Yoma 4:6 — the pile count is data',
+     lambda: altar_machine({'ask': 'wood_piles'}, PARAMS),
+     'pile count = data (three recorded settings)'),
+    ('Mishnah Zevachim 11:1/11:4 — the garment',
+     lambda: vessel_purge({'material': 'garment'}, PARAMS),
+     'launder the spot in the holy place'),
+    ('Mishnah Zevachim 11:4 — earthenware',
+     lambda: vessel_purge({'material': 'earthenware'}, PARAMS),
+     'broken in the holy place'),
+    ('Mishnah Zevachim 11:7 — copper and all metals',
+     lambda: vessel_purge({'material': 'copper'}, PARAMS),
+     'scoured and rinsed in the holy place'),
+    ('Mishnah Zevachim 11:8 — the absorption rule',
+     lambda: vessel_purge({'material': 'touched_food'}, PARAMS),
+     'becomes as the offering (absorption)'),
+    ('Mishnah Menachot 4:5 — no halves from the house',
+     lambda: chavitin_machine({'ask': 'halves_from_house'}, PARAMS),
+     'barred — a whole tenth, divided'),
+    ('Mishnah Menachot 4:5 — the successor',
+     lambda: chavitin_machine({'ask': 'successor'}, PARAMS),
+     'new whole; two halves offered, two lost'),
+    ('Mishnah Menachot 4:5 — no successor (the recorded pair)',
+     lambda: chavitin_machine({'ask': 'no_successor'}, PARAMS),
+     'funded by heirs or community (recorded dispute)'),
+    ('Mishnah Menachot 6:5 — twelve loaves (data)',
+     lambda: chavitin_machine({'ask': 'loaf_count'}, PARAMS),
+     'twelve (transmitted quantity)'),
+    ('the conversion layer (Onkelos 6:13)',
+     lambda: chavitin_machine({'ask': 'conversion'}, PARAMS),
+     "one of ten in three se'im"),
+    ('Mishnah Zevachim 5:6 — the todah window with the fence',
+     lambda: rejection_machine({'ask': 'window_todah'}, PARAMS),
+     'day and night until midnight (the fence)'),
+    ('the vow/gift window (7:16)',
+     lambda: rejection_machine({'ask': 'window_vow'}, PARAMS),
+     'two days and one night'),
+    ('the third-day burning (7:17)',
+     lambda: rejection_machine({'ask': 'leftover'}, PARAMS),
+     'burned on the third day, by day'),
+    ('Mishnah Zevachim 2:2 — out-of-time is the rejection',
+     lambda: rejection_machine({'ask': 'piggul_time'}, PARAMS),
+     'rejected with karet on the eater'),
+    ('Mishnah Zevachim 2:2 — out-of-place without karet',
+     lambda: rejection_machine({'ask': 'piggul_place'}, PARAMS),
+     'disqualified without karet'),
+    ('Mishnah Zevachim 4:3 — the no-permitters list',
+     lambda: rejection_machine({'ask': 'no_permitter'}, PARAMS),
+     'no rejection attaches'),
+    ('Mishnah Zevachim 13:2 — the tamei eater',
+     lambda: karet_machine({'ask': 'tamei_ate'}, PARAMS),
+     'karet for the tamei eater'),
+    ('Mishnah Pesachim 9:4 — the congregational exemption',
+     lambda: karet_machine({'ask': 'congregational'}, PARAMS),
+     'exempt'),
+    ('Mishnah Keritot 1:1 (census) — the fat karet',
+     lambda: karet_machine({'ask': 'cheilev'}, PARAMS),
+     'karet at an olive-bulk'),
+    ('the Noahide negative boundary (Sifra Section 10 1)',
+     lambda: karet_machine({'ask': 'cheilev_noahide'}, PARAMS),
+     'outside the Noahide law set'),
+    ('Mishnah Keritot 5:1 — the lifeblood',
+     lambda: karet_machine({'ask': 'blood'}, PARAMS),
+     'karet for lifeblood of bird and beast'),
+    ('Mishnah Zevachim 12:2 — the olah hide',
+     lambda: dues_machine({'ask': 'olah_hide'}, PARAMS),
+     'hide to the offering priest'),
+    ('Mishnah Menachot 5:8 family — the minchah due to the household',
+     lambda: dues_machine({'ask': 'minchah_due'}, PARAMS),
+     'to the household of the day'),
+    ('Mishnah Chullin 10:1 context — breast and thigh after smoking',
+     lambda: dues_machine({'ask': 'breast_thigh'}, PARAMS),
+     'breast and thigh to the priests after the smoking'),
+    ('the consent gate (Sifra Chapter 17 6)',
+     lambda: dues_machine({'ask': 'seizure'}, PARAMS),
+     'a consented conveyance, never seized'),
+    ('1 Samuel 2:15-17 — the sons of Eli against the gate',
+     lambda: dues_machine({'ask': 'eli_violation'}, PARAMS),
+     'the recorded violation of the after-smoking gate'),
+    ('Mishnah Menachot 3:6 — atomicity',
+     lambda: installation({'ask': 'atomicity'}, PARAMS),
+     'atomic — all components or no sanctification'),
+    ('the commit point (DeMiluim I 34)',
+     lambda: installation({'ask': 'commit_point'}, PARAMS),
+     'committed at the blood sprinkling'),
+    ('Mishnah Yoma 1:1 — the seven-day template',
+     lambda: installation({'ask': 'confinement'}, PARAMS),
+     'a seven-day confinement timer; the template for the generations'),
+    ('the installation leftover (8:32)',
+     lambda: installation({'ask': 'leftover'}, PARAMS),
+     'the installation\'s own leftover clause'),
+]
+
+ok = 0
+frac = {'INK': 0, 'MOVE': 0, 'DATA': 0}
+used = []
+print()
+for label, fn, want in CASES:
+    got, effects, prov = fn()
+    hit = got == want
+    ok += hit
+    kinds = [k for k, _ in prov]
+    if all(k == 'INK' for k in kinds):
+        cls = 'INK'
+    elif 'DATA' in kinds and 'MOVE' not in kinds:
+        cls = 'DATA'
+    elif 'MOVE' in kinds:
+        cls = 'MOVE'
+    else:
+        cls = 'INK'
+    frac[cls] += 1
+    print('%s  [%s]  %s' % ('PASS' if hit else 'MISS', cls, label))
+    if not hit:
+        print('      expected: %s' % want)
+        print('      got     : %s' % got)
+    used += [e for e in effects if e != FX.NONE]
+    for line in FX.render(effects):
+        print('        -&gt;%s' % line)
+print()
+tot = len(CASES)
+print('MATRIX: %d/%d cells match the answer sheet' % (ok, tot))
+print('FRACTIONS: pure ink %d/%d (%.0f%%) · named moves %d/%d (%.0f%%) '
+      '· data %d/%d (%.0f%%)'
+      % (frac['INK'], tot, 100.0 * frac['INK'] / tot,
+         frac['MOVE'], tot, 100.0 * frac['MOVE'] / tot,
+         frac['DATA'], tot, 100.0 * frac['DATA'] / tot))
+ops = FX.summarize(used)
+print('LEDGER OPS this span writes:',
+      ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
+if ok == tot:
+    print('\nTHE OFFERING-TORAH SPAN COMPILES — the fourth span under '
+          'the effects law; the priests\' own law layer runs.')
+</pre></section></main></body></html>

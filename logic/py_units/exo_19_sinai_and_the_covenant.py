@@ -168,6 +168,10 @@ m.step("Exod.19.13")
 # they go-up in-mountain”) — fact holds: bimshokh-the-blast-of-a-horn-they-
 # go-up
 m.fact("bimshokh_ha_yovel_hema_yaalu")
+# witness-tier presupposed read: boundary_and_covenant_file on
+# bimshokh_ha_yovel_hema_yaalu — read, not installed
+m.witness_read("bimshokh_ha_yovel_hema_yaalu", "boundary_and_covenant_file",
+                cites=["Sanhedrin 45a:14", "Sanhedrin 45a:15", "Sanhedrin 15b:6", "Beitzah 5a:6", "Beitzah 5a:7", "Beitzah 5b:3", "Beitzah 5b:4", "Beitzah 5b:5", "Yevamot 46b:2", "Yevamot 46b:3", "Shabbat 86b:5", "Shabbat 87a:1", "Shabbat 87a:2", "Shabbat 87a:3", "Shabbat 87a:4", "Shabbat 87a:5", "Shabbat 86a:6"])
 
 # -------------------------- Exod.19.14 · MOSES_SANCTIFIES ------------------
 # וַיֵּרֶד מֹשֶׁה מִן־הָהָר אֶל־הָעָם וַיְקַדֵּשׁ אֶת־הָעָם וַיְכַבְּסוּ
@@ -241,6 +245,10 @@ m.step("Exod.19.19")
 # ‹מֹשֶׁה יְדַבֵּר וְהָאֱלֹהִים יַעֲנֶנּוּ בְקוֹל› (“Moses speak and-the-God
 # eye-him/its in-voice/sound”) — fact holds: Moses-speak-and-the-God-yaanenu
 m.fact("moshe_yedaber_ve_ha_elohim_yaanenu")
+# witness-tier presupposed read: voice_protocol_file on
+# moshe_yedaber_ve_ha_elohim_yaanenu — read, not installed
+m.witness_read("moshe_yedaber_ve_ha_elohim_yaanenu", "voice_protocol_file",
+                cites=["Sotah 33a:13", "Sotah 33a:14", "Berakhot 45a:7", "Berakhot 45a:8", "Berakhot 45a:9", "Sotah 27b:11", "Sotah 27b:12"])
 
 # -------------------------- Exod.19.20 · THE_DESCENT -----------------------
 # וַיֵּרֶד יְהוָה עַל־הַר סִינַי אֶל־רֹאשׁ הָהָר וַיִּקְרָא יְהוָה לְמֹשֶׁה
@@ -324,8 +332,14 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 9
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('three_days_ready', 'purity_window')]
-    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Shabbat 9:3']
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('bimshokh_ha_yovel_hema_yaalu', 'boundary_and_covenant_file'), ('three_days_ready', 'purity_window'), ('moshe_yedaber_ve_ha_elohim_yaanenu', 'voice_protocol_file')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sanhedrin 45a:14', 'Sanhedrin 45a:15', 'Sanhedrin 15b:6', 'Beitzah 5a:6', 'Beitzah 5a:7', 'Beitzah 5b:3', 'Beitzah 5b:4', 'Beitzah 5b:5', 'Yevamot 46b:2', 'Yevamot 46b:3', 'Shabbat 86b:5', 'Shabbat 87a:1', 'Shabbat 87a:2', 'Shabbat 87a:3', 'Shabbat 87a:4', 'Shabbat 87a:5', 'Shabbat 86a:6']
+    assert all('boundary_and_covenant_file' not in f for f in m.WORLD["facts"])
+    assert 'bimshokh_ha_yovel_hema_yaalu' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Shabbat 9:3']
     assert all('purity_window' not in f for f in m.WORLD["facts"])
     assert 'three_days_ready' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sotah 33a:13', 'Sotah 33a:14', 'Berakhot 45a:7', 'Berakhot 45a:8', 'Berakhot 45a:9', 'Sotah 27b:11', 'Sotah 27b:12']
+    assert all('voice_protocol_file' not in f for f in m.WORLD["facts"])
+    assert 'moshe_yedaber_ve_ha_elohim_yaanenu' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

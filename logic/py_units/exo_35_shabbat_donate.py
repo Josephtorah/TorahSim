@@ -38,6 +38,10 @@ m.witness_read("sabbath_first", "rest_outranks_building",
 # "[EN-AID] From top split: LEFT «לא תבערו אש בכל משבתיכם» / RIGHT «ביום
 # השבת». Derive claim from Hebrew arms, not English alone. Exod 35:3."
 m.step("Exod.35.3")
+# witness-tier presupposed read: four_courtrooms on kindling_fork — read,
+# not installed
+m.witness_read("kindling_fork", "four_courtrooms",
+                cites=["Shabbat 70a:5", "Shabbat 70a:3", "Shabbat 70a:4", "Shabbat 97b:2", "Sanhedrin 62a:7", "Sanhedrin 62a:8", "Sanhedrin 35b:6", "Sanhedrin 35b:7", "Sanhedrin 35b:8", "Yevamot 6b:4", "Yevamot 6b:5", "Shabbat 20a:5"])
 
 # -------------------------- Exod.35.4 · ETNACHTA_SPLIT ---------------------
 # ויאמר משה אל כל עדת בני ישראל לאמר … זה הדבר אשר צוה יהוה לאמר
@@ -255,20 +259,23 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('sabbath_first', 'rest_outranks_building'), ('willing_heart', 'voluntariness_condition'), ('men_and_women', 'additive_preposition'), ('wise_women', 'womens_craft'), ('leaders_late', 'defective_spelling')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('sabbath_first', 'rest_outranks_building'), ('kindling_fork', 'four_courtrooms'), ('willing_heart', 'voluntariness_condition'), ('men_and_women', 'additive_preposition'), ('wise_women', 'womens_craft'), ('leaders_late', 'defective_spelling')]
     assert m.WITNESS_READS[0]["cites"] == ['Mishnah Sanhedrin 4:1', 'Onkelos Exod 35']
     assert all('rest_outranks_building' not in f for f in m.WORLD["facts"])
     assert 'sabbath_first' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Exod 35']
+    assert m.WITNESS_READS[1]["cites"] == ['Shabbat 70a:5', 'Shabbat 70a:3', 'Shabbat 70a:4', 'Shabbat 97b:2', 'Sanhedrin 62a:7', 'Sanhedrin 62a:8', 'Sanhedrin 35b:6', 'Sanhedrin 35b:7', 'Sanhedrin 35b:8', 'Yevamot 6b:4', 'Yevamot 6b:5', 'Shabbat 20a:5']
+    assert all('four_courtrooms' not in f for f in m.WORLD["facts"])
+    assert 'kindling_fork' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Exod 35']
     assert all('voluntariness_condition' not in f for f in m.WORLD["facts"])
     assert 'willing_heart' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Midrash Tanchuma, Pekudei 11:2', 'Onkelos Exod 35']
+    assert m.WITNESS_READS[3]["cites"] == ['Midrash Tanchuma, Pekudei 11:2', 'Onkelos Exod 35']
     assert all('additive_preposition' not in f for f in m.WORLD["facts"])
     assert 'men_and_women' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Exod 35']
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Exod 35']
     assert all('womens_craft' not in f for f in m.WORLD["facts"])
     assert 'wise_women' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Midrash Tanchuma, Pekudei 11:3', 'Midrash Tanchuma, Pekudei 11:4']
+    assert m.WITNESS_READS[5]["cites"] == ['Midrash Tanchuma, Pekudei 11:3', 'Midrash Tanchuma, Pekudei 11:4']
     assert all('defective_spelling' not in f for f in m.WORLD["facts"])
     assert 'leaders_late' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

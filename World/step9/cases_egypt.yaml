@@ -1,0 +1,146 @@
+# EGYPT AND THE GENERATIONS (round 19 — the eighth Exodus
+# Talmud-first exam block, 2026-09-04; owner: "Let's do the next
+# block"). The Passover family's closing wing: the export engine's
+# derivation layer, the second Passover's statute engine, the
+# impure-Passover carve-outs, Egypt's own rite.
+# Read-source: logic/oral_triage/exodus_block_egypt_2026-09-04.md.
+
+- module: two_era_export
+  tractate: Pesachim
+  oracle: Pesachim 96a:7-25, 96b:1-2
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.3-11,
+    claims: [EX12-21, EX12-28]}
+  cases:
+  - id: Pe96a_taking
+    input: {query: era_clause_taking}
+    expected: {verdict: egypt_only_by_this}
+    class: A
+  - id: Pe96a_examination
+    input: {query: era_clause_examination}
+    expected: {verdict: generations_in_second_out}
+    class: A
+  - id: Pe96a_night
+    input: {query: era_clause_night_eating}
+    expected: {verdict: exported_zeh_to_midnight}
+    class: A
+  - id: Pe96a_arel
+    input: {query: era_clause_arel}
+    expected: {verdict: exported_bo_matza_owed}
+    class: A
+  - id: Pe96a_foreigner
+    input: {query: era_clause_foreigner}
+    expected: {verdict: exported_bo_apostasy_boundary}
+    class: A
+  - id: Pe96a_circumcision
+    input: {query: era_clause_circumcision_gate}
+    expected: {verdict: exported_bo_bars_him_alone}
+    class: A
+  - id: Pe96a_bone
+    input: {query: era_clause_bone}
+    expected: {verdict: exported_bo_valid_only}
+    class: A
+  - id: Pe96a_raw
+    input: {query: era_clause_raw}
+    expected: {verdict: exported_mimennu_reassigned}
+    class: A
+  - id: Pe96a_haste
+    input: {query: era_clause_haste}
+    expected: {verdict: egypt_only_by_oto}
+    class: A
+  - id: Pe96b_leaven
+    input: {query: era_clause_leaven_days}
+    expected: {verdict: egypt_night_and_day_generations_seven}
+    class: A
+
+- module: second_pesach_statute
+  tractate: Pesachim
+  oracle: Pesachim 95a:1-95b:9
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.8-10 + 12.46,
+    claims: [EX12-26, EX12-27, EX12-28]}
+  cases:
+  - id: Pe95a_criterion
+    input: {query: second_pesach_criterion}
+    expected: {verdict: in_body_applies}
+    class: A
+  - id: Pe95a_roast
+    input: {query: second_pesach_roast}
+    expected: {verdict: included_by_matza_general}
+    class: A
+  - id: Pe95a_carryout
+    input: {query: second_pesach_carry_out}
+    expected: {verdict: included_by_leftover_general}
+    class: A
+  - id: Pe95a_seenfound
+    input: {query: second_pesach_leaven_seen}
+    expected: {verdict: excluded_in_body_preferred}
+    class: A
+  - id: Pe95a_removal
+    input: {query: second_pesach_leaven_removal}
+    expected: {verdict: excluded_not_on_body}
+    class: A
+  - id: Pe95b_slaughterleaven
+    input: {query: second_pesach_slaughter_over_leaven}
+    expected: {verdict: excluded_off_body}
+    class: A
+  - id: Pe95a_individual
+    input: {query: second_pesach_individual}
+    expected: {verdict: seek_company}
+    class: A
+  - id: Pe95b_shabbat
+    input: {query: second_pesach_shabbat}
+    expected: {verdict: overrides}
+    class: A
+  - id: Pe95b_impurity
+    input: {query: second_pesach_impurity}
+    expected: {verdict: [not_done_in_impurity, done_in_impurity]}
+    class: A
+  - id: Pe95b_lodging
+    input: {query: second_pesach_lodging}
+    expected: {verdict: [lodging_required, lodging_exempt_by_six]}
+    class: A
+  - id: Pe95b_hallel_making
+    input: {query: hallel_at_making}
+    expected: {verdict: both_eras_required}
+    class: A
+
+- module: impure_pesach_carveouts
+  tractate: Pesachim
+  oracle: Pesachim 95b:10-96a:3
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.4 + 12.47,
+    claims: [EX12-17, EX12-25]}
+  cases:
+  - id: Pe95b_flux_eaters
+    input: {query: impure_pesach_flux_eaters}
+    expected: {verdict: exempt_from_karet}
+    class: A
+  - id: Pe95b_entry
+    input: {query: impure_pesach_temple_entry}
+    expected: {verdict: [eating_only_exempt, entry_also_exempt]}
+    class: A
+  - id: Pe96a_portions
+    input: {query: impure_pesach_portions}
+    expected: {verdict: follow_the_flesh}
+    class: A
+  - id: Pe95b_partcamp
+    input: {query: impure_pesach_part_camp}
+    expected: {verdict: sanctuary_hall_barred}
+    class: A
+
+- module: egypt_rite
+  tractate: Pesachim
+  oracle: Pesachim 96a:4-6
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.7 + 12.22,
+    claims: [EX12-21]}
+  cases:
+  - id: Pe96a_altars
+    input: {query: egypt_altars}
+    expected: {verdict: three_doorway_altars}
+    class: A
+  - id: Pe96a_portions_egypt
+    input: {query: egypt_portions_fate}
+    expected: {verdict: perhaps_roasted_whole}
+    class: A
+  - id: Pe96a_sprinkling
+    input: {query: egypt_sprinkling}
+    expected: {verdict: hyssop_egypt_only}
+    class: A

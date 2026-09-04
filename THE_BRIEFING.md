@@ -41,11 +41,11 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   running for the book of Numbers.
 - The corpus: 130 frozen units, one world, fingerprint unmoved
   through two whole books and the third's first two portions.
-- The exam engine: sixteen rounds, 590 cases, 590 answered
-  correctly, 198 compiled rules, vocabulary of 158 registered input
+- The exam engine: twenty-four rounds, 789 cases, 789 answered
+  correctly, 244 compiled rules, vocabulary of 158 registered input
   dimensions.
-- **The Exodus block campaign: OPEN — 5 of 18 blocks run
-  (2026-09-04).** On your word ("Yes go") the leaven machine and the
+- **The Exodus block campaign: OPEN — 13 of 18 blocks run; the
+  Passover family CLOSED (2026-09-04).** On your word ("Yes go") the leaven machine and the
   courts ran as the first two Talmud-first blocks: 62 new cases, all
   answered first try. Two things stood out. The leaven block found
   the machine's own frozen prose had already flagged the exact
@@ -60,7 +60,94 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   more: the machine now carries a question the Talmud itself left
   open — TEIKU, "let it stand" — as a verdict in its own right, and
   a new registered move (the revocalization read: the same letters
-  under different vowels, four recorded cases in one day).
+  under different vowels, four recorded cases in one day). The
+  sixth block ran Shabbat's own machinery — where the 39 labors
+  divide, where carrying-out is written (the camp stop order our
+  work-start chapter already held), and the LIFE TOURNAMENT: seven
+  recorded proofs that saving a life overrides Shabbat, the
+  Talmud's own elimination pass refuting six, and Shmuel's "live by
+  them — not die by them" the one survivor that covers even DOUBT.
+  Seven of the block's questions were answered by seats the machine
+  already held before the pages were opened — the campaign's
+  strongest anticipation yet. The seventh block took the eating
+  side of Passover — the first night's bread, the guarded grain,
+  the bitter-herb species, the telling — together with the
+  tefillin of the consecration chapter, and twice the machine's
+  own ink measurements met the Talmud at the letter: the
+  your-hand-with-an-extra-heh spelling the derivation had filed as
+  a census note IS the Talmud's proof for the weak arm, and the
+  deficient totafot spelling IS the four-compartment count. Even
+  the derivation's own commentary anticipated: the telling verse's
+  notes named the pointing and the every-generation reading before
+  those pages were read. The eighth block closed the Passover
+  family — 28 more cases, all first try — and found the family's
+  master switch: ONE clause ("you shall perform this service in
+  this month") is what carries the Egypt chapter's laws to every
+  later generation, the Talmud firing it clause by clause and
+  giving each leftover word a job; the derivation's own note on
+  that verse ("commanded for the land, rehearsed on the road") had
+  named its role before the page was opened. And for the second
+  time, a Leviticus module graded an Exodus case: the karet
+  exemption at an impure Passover runs on the flesh-purity verses
+  the Tzav sitting compiled. The ninth and tenth blocks ran as one
+  batched sitting — the INK block and the CONDUCT block, 37 more
+  cases, all first try. The ink block's find is the deepest of the
+  campaign: the Talmud itself argues OUR front-end question — do
+  the vowels or the consonants carry the law? — and lands on the
+  same answer our creation-week measurement did (the vowels decide
+  only where the consonants fork), argued at the very verse we
+  measured it on. It also holds the sages testifying that the
+  letter shapes never changed (proven from a verse whose word for
+  "hooks" is the name of the letter shaped like a hook), and doing
+  letter arithmetic where adding one letter turns two hundred into
+  two. The conduct block found the Sinai dialogue verse running
+  the whole liturgy — who answers in what language, how loud the
+  translator may be, how the Sea Song was sung — and for the third
+  block in a row, notes our machine wrote at derivation time
+  turned out to hold laws before the Talmud pages were opened:
+  this time "remember-and-keep in one saying," which IS the
+  Talmud's derivation of women's kiddush duty. The eleventh block
+  ran the CALENDAR: the month is sanctified only by a SEEN moon —
+  the court may stretch the calendar at need but never fabricate a
+  sighting — and the record even keeps a king who broke the
+  intercalation rule and prayed over it (Hezekiah). The book's
+  closing date ("the tabernacle was erected") turned out to anchor
+  two computations: the rule that kings' years count from Nisan,
+  and the Ninth of Av — the date of the spies' weeping — computed
+  to the day. The authority question arrived pre-answered: the law
+  that every court stands as Moses' court was already seated in
+  our covenant chapter from an earlier round. The twelfth block
+  ran the SINAI COVENANT itself, and the pattern deepened: the
+  boundary verse's own frozen notes ("for the generations:
+  pushing and stoning"; "a boundary with its expiry written in")
+  turned out to summarize both Talmud discussions behind it
+  before either page was opened — and Moses' own recorded
+  reasoning for breaking the tablets runs on the very
+  apostate-clause reading an earlier block seated: the machine's
+  seats are now answering each other, not just the answer sheet.
+  Also aboard: the verse that enumerates Scripture, Mishnah, and
+  Talmud as all given at Sinai (the second seat of the law that
+  authorizes the machine's own teacher), and a new honest state
+  in the engine — a difficulty the Talmud itself leaves standing,
+  carried unresolved, the way the open questions already are.
+  The thirteenth block (the first after the compaction, on your
+  "Go") ran the FESTIVALS AND GIFTS — and it was the TABLE
+  ROUND: the block where the oldest tables our derivation had
+  seated finally faced their own Talmud discussions, and every
+  one held. The who-must-appear-at-the-festival table (the
+  blind, the lame, women, the doubtful cases — word by word on
+  the verse's own words) was already right before the sugyot
+  were opened; the tefillin-calendar rule ("from days, not ALL
+  days — excluding Sabbaths and festivals") stood verbatim in
+  the frozen Masorah chain before its page was opened; the
+  gift-order file, the stranger-and-slave status table, and the
+  overnight-fat window all arrived answered. Deepest find: our
+  letter-level census of one word ("when He brings you" —
+  written full at verse 5 and lean at verse 11 of the same
+  chapter) turned out to be holding the two anchor points of a
+  Talmud dispute over WHEN the firstborn-consecration machine
+  switches on. A spelling claim from the ink era became the
+  skeleton of a legal argument.
 - The simulator: 48 registered effects (nine new from Tzav — the
   wash/break/scour purges, the perpetual-fire duty, the priestly
   due, the rejection, the investiture commit, the seven-day

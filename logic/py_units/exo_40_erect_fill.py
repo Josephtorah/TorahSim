@@ -139,6 +139,10 @@ m.step("Exod.40.17")
 # not installed
 m.witness_read("self_standing", "reserved_raising",
                 cites=["Midrash Tanchuma Buber, Pekudei 8:1", "Midrash Tanchuma Buber, Pekudei 8:2", "Midrash Tanchuma, Pekudei 11:7", "Midrash Tanchuma, Pekudei 11:8", "Onkelos Exod 40"])
+# witness-tier presupposed read: erection_date_chronology_anchor on
+# self_standing — read, not installed
+m.witness_read("self_standing", "erection_date_chronology_anchor",
+                cites=["Rosh Hashanah 3a:2", "Rosh Hashanah 3a:5", "Rosh Hashanah 3a:6", "Rosh Hashanah 3a:11", "Rosh Hashanah 3a:12", "Rosh Hashanah 3a:13", "Taanit 29a:2", "Taanit 29a:3", "Taanit 29a:4"])
 
 # -------------------------- Exod.40.18 · ETNACHTA_SPLIT --------------------
 # ויקם משה את המשכן ויתן את אדניו וישם את קרשיו ויתן את בריחיו … ויקם את
@@ -317,7 +321,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('install_script', 'dated_and_scheduled'), ('priests_installed', 'eternal_office'), ('self_standing', 'reserved_raising'), ('services_run', 'moses_acting_priest'), ('wash_as_rite', 'sanctification_executed'), ('glory_fills', 'indwelling_lands')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('install_script', 'dated_and_scheduled'), ('priests_installed', 'eternal_office'), ('self_standing', 'reserved_raising'), ('self_standing', 'erection_date_chronology_anchor'), ('services_run', 'moses_acting_priest'), ('wash_as_rite', 'sanctification_executed'), ('glory_fills', 'indwelling_lands')]
     assert m.WITNESS_READS[0]["cites"] == ['Midrash Tanchuma, Pekudei 11:11', 'Midrash Tanchuma, Pekudei 11:12', 'Midrash Tanchuma, Pekudei 11:13', 'Onkelos Exod 40']
     assert all('dated_and_scheduled' not in f for f in m.WORLD["facts"])
     assert 'install_script' not in m.WORLD["witnessed"]
@@ -327,13 +331,16 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[2]["cites"] == ['Midrash Tanchuma Buber, Pekudei 8:1', 'Midrash Tanchuma Buber, Pekudei 8:2', 'Midrash Tanchuma, Pekudei 11:7', 'Midrash Tanchuma, Pekudei 11:8', 'Onkelos Exod 40']
     assert all('reserved_raising' not in f for f in m.WORLD["facts"])
     assert 'self_standing' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Mishnah Shabbat 2:3', 'Onkelos Exod 40']
+    assert m.WITNESS_READS[3]["cites"] == ['Rosh Hashanah 3a:2', 'Rosh Hashanah 3a:5', 'Rosh Hashanah 3a:6', 'Rosh Hashanah 3a:11', 'Rosh Hashanah 3a:12', 'Rosh Hashanah 3a:13', 'Taanit 29a:2', 'Taanit 29a:3', 'Taanit 29a:4']
+    assert all('erection_date_chronology_anchor' not in f for f in m.WORLD["facts"])
+    assert 'self_standing' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Mishnah Shabbat 2:3', 'Onkelos Exod 40']
     assert all('moses_acting_priest' not in f for f in m.WORLD["facts"])
     assert 'services_run' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Exod 40']
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Exod 40']
     assert all('sanctification_executed' not in f for f in m.WORLD["facts"])
     assert 'wash_as_rite' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Midrash Tanchuma Buber, Pekudei 8:9', 'Midrash Tanchuma, Pekudei 11:14', 'Midrash Tanchuma, Pekudei 6:2', 'Midrash Tanchuma, Vayakhel 7:2', 'Onkelos Exod 40']
+    assert m.WITNESS_READS[6]["cites"] == ['Midrash Tanchuma Buber, Pekudei 8:9', 'Midrash Tanchuma, Pekudei 11:14', 'Midrash Tanchuma, Pekudei 6:2', 'Midrash Tanchuma, Vayakhel 7:2', 'Onkelos Exod 40']
     assert all('indwelling_lands' not in f for f in m.WORLD["facts"])
     assert 'glory_fills' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

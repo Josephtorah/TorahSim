@@ -46,6 +46,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>B</b></td><td>Trees</td><td>Every verse via taamim_tree_parse.py v1; full tree_ascii recorded.</td><td>tested</td></tr>
 <tr><td><b>C</b></td><td>Tree → steps</td><td>One STEP per verse citing left/right top-split arms. English [EN-AID] only. Condition markers (אם/כי) flagged in op when verse-initial.</td><td>hypothesis</td></tr>
 <tr><td><b>D</b></td><td>Oral dual-track</td><td>Mekhilta samples when available; dual-track only; never silent-merge.</td><td>hypothesis</td></tr>
+<tr><td><b>S17</b></td><td>Round-17 Talmud-block seat (2026-09-04)</td><td>SHABBAT&#x27;S MACHINERY — the sixth Exodus Talmud-first exam block (owner: &#x27;Yes block 9 go&#x27;; ledger logic/oral_triage/exodus_block_shabbat_2026-09-04.md; runner run_shabbat.py, 50/50). One seat under the auto-seat law: EX36-08 (F-064 — the proclamation&#x27;s two exports: R. Yochanan&#x27;s carrying-out ink on this unit&#x27;s own stop order, the Shabbat-day proof by passing-passing to the Jubilee, the shofar&#x27;s voice learned back from the same pair, and the Kehat height-and-manner riders). EX36-05 had hung the labor on the stop order before the sugya was opened.</td><td>tested</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -151,6 +152,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(overflow_halt, input_halt_on_full_buffer)</span><br><span class="gloss">= WITNESS-READ(overflow-halt, input-halt-on-full-buffer)</span><br>THE OVERFLOW PROTOCOL [claim EX36-05]. The craftsmen report upward — the people bring TOO MUCH; Moses orders a herald through the camp: let no man or woman do any more work for the sacred offering — AND THE PEOPLE STOPPED; and the audit line closes the intake: ENOUGH for all the work, AND SOME LEFT OVER (Onkelos Exod 36). R. Yohanan counts the whole intake at TWO MORNINGS from the doubled morning-word (Midrash Tanchuma, Pekudei 5:4). The case shelf hangs the CARRYING labor from this very stop order — the camp-wide ban on bringing from the tents is the Sabbath carrying-out&#x27;s derivation anchor (Mishnah Shevuot 1:1, this exam&#x27;s docket).
 </td><td>—</td><td class='cite'>Midrash Tanchuma, Pekudei 5:4, Mishnah Shevuot 1:1, Onkelos Exod 36</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(camp_proclamation, carrying_out_ink)</span><br><span class="gloss">= WITNESS-READ(camp-proclamation, carrying-out-ink)</span><br>THE PROCLAMATION&#x27;S TWO EXPORTS [claim EX36-08]. The round-17 block opens the derivation EX36-05 anticipated: R. Yochanan — WHERE IS CARRYING-OUT ITSELF WRITTEN? In this verse&#x27;s ויעבירו קול במחנה (&quot;and they passed a proclamation through the camp&quot;): Moses sat in the Levites&#x27; camp, the public domain, and told Israel — do not carry out from the private domain to it. The SHABBAT-DAY proof: against the completed-intake alternative (36:7), העברה-העברה (&quot;passing-passing&quot;) from the Jubilee shofar (Lev 25:9) — a banned-labor day both. And the SAME analogy runs the other way: the Jubilee shofar&#x27;s &quot;passing&quot; learns from Moses&#x27; proclamation to be WITH A VOICE — this verse the fixed end of both directions. The height rider: the sons of Kehat carried ABOVE TEN handbreadths (the ten-cubit boards; Moses spreading the tent; the pole-load&#x27;s third), so height does not exempt the carrier; the typical-manner gate (right hand, left, lap, shoulder — as Kehat) rides the same Tabernacle precedent. Auto-seat law, F-064.
+</td><td>—</td><td class='cite'>Shabbat 96b:1, Shabbat 96b:2, Shabbat 96b:3, Rosh Hashanah 34a:17, Shabbat 92a:5, Shabbat 92a:6, Shabbat 92a:7</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.</div>
 </div>
@@ -2403,6 +2406,10 @@ m.step(&quot;Exod.36.6&quot;)
 # — read, not installed
 m.witness_read(&quot;overflow_halt&quot;, &quot;input_halt_on_full_buffer&quot;,
                 cites=[&quot;Midrash Tanchuma, Pekudei 5:4&quot;, &quot;Mishnah Shevuot 1:1&quot;, &quot;Onkelos Exod 36&quot;])
+# witness-tier presupposed read: carrying_out_ink on camp_proclamation —
+# read, not installed
+m.witness_read(&quot;camp_proclamation&quot;, &quot;carrying_out_ink&quot;,
+                cites=[&quot;Shabbat 96b:1&quot;, &quot;Shabbat 96b:2&quot;, &quot;Shabbat 96b:3&quot;, &quot;Rosh Hashanah 34a:17&quot;, &quot;Shabbat 92a:5&quot;, &quot;Shabbat 92a:6&quot;, &quot;Shabbat 92a:7&quot;])
 
 # -------------------------- Exod.36.7 · ETNACHTA_SPLIT ---------------------
 # והמלאכה היתה דים לכל המלאכה לעשות אתה
@@ -2657,7 +2664,7 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;public_appointment&#x27;, &#x27;nepotism_answered&#x27;), (&#x27;wisdom_grant&#x27;, &#x27;prefilled_vessels&#x27;), (&#x27;teaching_grant&#x27;, &#x27;master_as_teacher&#x27;), (&#x27;three_attributes&#x27;, &#x27;worlds_own_toolchain&#x27;), (&#x27;overflow_halt&#x27;, &#x27;input_halt_on_full_buffer&#x27;), (&#x27;standing_boards&#x27;, &#x27;pledge_and_fruit_tree&#x27;), (&#x27;veil_made&#x27;, &#x27;case_shelf_spec_recited&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;public_appointment&#x27;, &#x27;nepotism_answered&#x27;), (&#x27;wisdom_grant&#x27;, &#x27;prefilled_vessels&#x27;), (&#x27;teaching_grant&#x27;, &#x27;master_as_teacher&#x27;), (&#x27;three_attributes&#x27;, &#x27;worlds_own_toolchain&#x27;), (&#x27;overflow_halt&#x27;, &#x27;input_halt_on_full_buffer&#x27;), (&#x27;camp_proclamation&#x27;, &#x27;carrying_out_ink&#x27;), (&#x27;standing_boards&#x27;, &#x27;pledge_and_fruit_tree&#x27;), (&#x27;veil_made&#x27;, &#x27;case_shelf_spec_recited&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Vayakhel 3:1&#x27;, &#x27;Midrash Tanchuma, Vayakhel 3:2&#x27;, &#x27;Onkelos Exod 35&#x27;]
     assert all(&#x27;nepotism_answered&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;public_appointment&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -2673,12 +2680,15 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Pekudei 5:4&#x27;, &#x27;Mishnah Shevuot 1:1&#x27;, &#x27;Onkelos Exod 36&#x27;]
     assert all(&#x27;input_halt_on_full_buffer&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;overflow_halt&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Vayakhel 9:1&#x27;, &#x27;Midrash Tanchuma, Vayakhel 9:2&#x27;, &#x27;Onkelos Exod 36&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Shabbat 96b:1&#x27;, &#x27;Shabbat 96b:2&#x27;, &#x27;Shabbat 96b:3&#x27;, &#x27;Rosh Hashanah 34a:17&#x27;, &#x27;Shabbat 92a:5&#x27;, &#x27;Shabbat 92a:6&#x27;, &#x27;Shabbat 92a:7&#x27;]
+    assert all(&#x27;carrying_out_ink&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;camp_proclamation&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Vayakhel 9:1&#x27;, &#x27;Midrash Tanchuma, Vayakhel 9:2&#x27;, &#x27;Onkelos Exod 36&#x27;]
     assert all(&#x27;pledge_and_fruit_tree&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;standing_boards&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Midrash Tanchuma Buber, Vayakhel 10:1&#x27;, &#x27;Mishnah Shekalim 8:4&#x27;, &#x27;Onkelos Exod 36&#x27;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Midrash Tanchuma Buber, Vayakhel 10:1&#x27;, &#x27;Mishnah Shekalim 8:4&#x27;, &#x27;Onkelos Exod 36&#x27;]
     assert all(&#x27;case_shelf_spec_recited&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;veil_made&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">Tree-derived v1 (phase 2f). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-02 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">Tree-derived v1 (phase 2f). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

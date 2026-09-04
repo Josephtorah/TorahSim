@@ -1,0 +1,177 @@
+# MATZA, HERBS, AND THE TELLING (round 18 — the seventh Exodus
+# Talmud-first exam block, 2026-09-04; owner: "Yes block 3"). The
+# Passover family's eating-side wing + the tefillin file.
+# Read-source: logic/oral_triage/exodus_block_matza_2026-09-04.md.
+
+- module: tefillin_housing
+  tractate: Menachot
+  oracle: Menachot 34b:1-5, 37a:2-4, 29b:1-2, 44a:16
+  exodus_anchor: {unit: exo_13_consecration_and_pillars, ref: Exod.13.9-16,
+    claims: [EX13-04, EX13-15, EX13-17]}
+  cases:
+  - id: Me34b_totafot
+    input: {query: totafot_compartments}
+    expected: {verdict: [four_from_ketiv, four_from_loanword]}
+    class: A
+  - id: Me34b_head
+    input: {query: tefillin_head_hides}
+    expected: {verdict: four_in_one_hide}
+    class: A
+  - id: Me34b_arm
+    input: {query: tefillin_arm_hides}
+    expected: {verdict: one_hide_one_sign}
+    class: A
+  - id: Me37a_side
+    input: {query: tefillin_arm_side}
+    expected: {verdict: [left_from_bind_write, left_from_keha]}
+    class: A
+  - id: Me44a_census
+    input: {query: tefillin_positives_census}
+    expected: {verdict: eight}
+    class: A
+  - id: Me29b_severed
+    input: {query: severed_letter_test}
+    expected: {verdict: child_reads}
+    class: A
+
+- module: tefillin_regime
+  tractate: Shabbat
+  oracle: Shabbat 108a:11-12; Makkot 11a:8-9; Arakhin 19b:5-7;
+    Eruvin 96a:10-11; Kiddushin 35a:4-6, 37b:13
+  exodus_anchor: {unit: exo_13_consecration_and_pillars, ref: Exod.13.9,
+    claims: [EX13-08, EX13-17]}
+  cases:
+  - id: Sh108a_material
+    input: {query: tefillin_material}
+    expected: {verdict: permitted_to_your_mouth}
+    class: A
+  - id: Ar19b_place
+    input: {query: tefillin_placement_height}
+    expected: {verdict: biceps}
+    class: A
+  - id: Er96a_time
+    input: {query: tefillin_time_shabbat}
+    expected: {verdict: [excluded_days_are_signs, shabbat_fit_time]}
+    class: A
+  - id: Ki35a_women
+    input: {query: women_timebound_engine}
+    expected: {verdict: exempt_by_juxtaposition}
+    class: A
+  - id: Ki37b_coming
+    input: {query: tefillin_coming_term}
+    expected: {verdict: reward_reading}
+    class: A
+
+- module: matza_obligation
+  tractate: Pesachim
+  oracle: Pesachim 120a:6-13, 28b:10-12; Kiddushin 37b:12
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.15-20,
+    claims: [EX12-04, EX12-29]}
+  cases:
+  - id: Pe120a_grade
+    input: {query: matza_first_night}
+    expected: {verdict: [both_rabbinic, torah_grade_matza_rabbinic_herbs]}
+    class: A
+  - id: Pe120a_seven
+    input: {query: matza_seven_days}
+    expected: {verdict: six_optional_first_night_owed}
+    class: A
+  - id: Pe28b_temple
+    input: {query: matza_post_temple}
+    expected: {verdict: both_routes_recorded}
+    class: A
+  - id: Pe28b_traveler
+    input: {query: matza_impure_traveler}
+    expected: {verdict: owed_matza_and_herbs}
+    class: A
+  - id: Ki37b_dwellings
+    input: {query: matza_dwellings_scope}
+    expected: {verdict: everywhere_and_always}
+    class: A
+
+- module: matza_material
+  tractate: Pesachim
+  oracle: Pesachim 38b:1-3, 40a:14-15, 36a:17-19
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.17,
+    claims: [EX12-29]}
+  cases:
+  - id: Pe38b_guarded
+    input: {query: matza_guarded}
+    expected: {verdict: guarded_for_its_sake}
+    class: A
+  - id: Pe40a_stage
+    input: {query: matza_guard_stage}
+    expected: {verdict: from_the_grain}
+    class: A
+  - id: Pe36a_firstfruits
+    input: {query: matza_first_fruits}
+    expected: {verdict: [excluded_by_habitations, excluded_by_herbs_analogy]}
+    class: A
+
+- module: herbs_table
+  tractate: Pesachim
+  oracle: Pesachim 39a:12-14
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.8,
+    claims: [EX12-09, EX12-29]}
+  cases:
+  - id: Pe39a_species
+    input: {query: herbs_species}
+    expected: {verdict: many_species_matza_bounded}
+    class: A
+  - id: Pe39a_bed
+    input: {query: herbs_planting}
+    expected: {verdict: one_bed_one_class}
+    class: A
+
+- module: the_telling
+  tractate: Pesachim
+  oracle: Pesachim 116b:2-9
+  exodus_anchor: {unit: exo_13_consecration_and_pillars, ref: Exod.13.8,
+    claims: [EX13-18]}
+  cases:
+  - id: Pe116b_forme
+    input: {query: telling_self_view}
+    expected: {verdict: every_generation_for_me}
+    class: A
+  - id: Pe116b_point
+    input: {query: telling_pointing}
+    expected: {verdict: blind_exempt_this_points}
+    class: A
+  - id: Pe116b_lift
+    input: {query: telling_lifting}
+    expected: {verdict: lift_matza_herbs_never_meat}
+    class: A
+
+- module: night_and_window
+  tractate: Pesachim
+  oracle: Pesachim 120b:4-6, 109b:4-6, 108a:3-5
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.6-8,
+    claims: [EX12-15, EX12-21, EX12-29]}
+  cases:
+  - id: Pe120b_midnight
+    input: {query: eating_deadline_analogy}
+    expected: {verdict: midnight_by_night_night}
+    class: A
+  - id: Pe109b_watchings
+    input: {query: watchings_night}
+    expected: {verdict: pairs_concern_suspended}
+    class: A
+  - id: Pe108a_window
+    input: {query: slaughter_whole_day}
+    expected: {verdict: whole_day_valid}
+    class: A
+
+- module: frame_lexicon
+  tractate: Pesachim
+  oracle: Pesachim 42a:4-5, 113b:3-5
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.1,
+    claims: [EX12-29]}
+  cases:
+  - id: Pe42a_lemor
+    input: {query: lemor_frame}
+    expected: {verdict: say_a_prohibition}
+    class: A
+  - id: Pe113b_hatred
+    input: {query: permitted_hatred}
+    expected: {verdict: lone_witness_may_hate}
+    class: A

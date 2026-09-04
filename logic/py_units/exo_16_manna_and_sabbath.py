@@ -381,6 +381,10 @@ m.declare("YHWH", "LET",
 # not installed
 m.witness_read("boundary_crown", "quantification",
                 cites=["Mishnah Eruvin 4:5", "Mishnah Shabbat 1:1", "Mishnah Horayot 1:3"])
+# witness-tier presupposed read: recorded_routes on manna_statute_book —
+# read, not installed
+m.witness_read("manna_statute_book", "recorded_routes",
+                cites=["Eruvin 48a:14", "Eruvin 48a:15", "Eruvin 51a:7", "Eruvin 51a:8", "Eruvin 51a:9", "Eruvin 17b:13", "Shabbat 117b:9", "Shabbat 117b:10", "Shabbat 117b:11", "Shabbat 117b:7", "Shabbat 117b:8", "Beitzah 2b:10", "Beitzah 2b:11", "Pesachim 47b:10", "Shabbat 114b:6", "Shabbat 114b:7"])
 
 # -------------------------- Exod.16.30 · AND_THE_PEOPLE_RESTED -------------
 # וַיִּשְׁבְּתוּ הָעָם בַּיּוֹם הַשְּׁבִעִי
@@ -475,11 +479,14 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 16
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('omer_ration', 'challah_yardstick'), ('boundary_crown', 'quantification')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('omer_ration', 'challah_yardstick'), ('boundary_crown', 'quantification'), ('manna_statute_book', 'recorded_routes')]
     assert m.WITNESS_READS[0]["cites"] == ['Mishnah Eduyot 1:2', 'Pirkei Avot 5:6']
     assert all('challah_yardstick' not in f for f in m.WORLD["facts"])
     assert 'omer_ration' not in m.WORLD["witnessed"]
     assert m.WITNESS_READS[1]["cites"] == ['Mishnah Eruvin 4:5', 'Mishnah Shabbat 1:1', 'Mishnah Horayot 1:3']
     assert all('quantification' not in f for f in m.WORLD["facts"])
     assert 'boundary_crown' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Eruvin 48a:14', 'Eruvin 48a:15', 'Eruvin 51a:7', 'Eruvin 51a:8', 'Eruvin 51a:9', 'Eruvin 17b:13', 'Shabbat 117b:9', 'Shabbat 117b:10', 'Shabbat 117b:11', 'Shabbat 117b:7', 'Shabbat 117b:8', 'Beitzah 2b:10', 'Beitzah 2b:11', 'Pesachim 47b:10', 'Shabbat 114b:6', 'Shabbat 114b:7']
+    assert all('recorded_routes' not in f for f in m.WORLD["facts"])
+    assert 'manna_statute_book' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

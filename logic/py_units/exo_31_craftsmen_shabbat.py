@@ -113,6 +113,10 @@ m.step("Exod.31.13")
 # not installed
 m.witness_read("sabbath_sign", "sign_between_word",
                 cites=["Mishnah Shabbat 7:1", "Onkelos Exod 31"])
+# witness-tier presupposed read: announced_gift_file on sabbath_sign — read,
+# not installed
+m.witness_read("sabbath_sign", "announced_gift_file",
+                cites=["Shabbat 10b:4", "Shabbat 10b:5", "Beitzah 16a:10", "Beitzah 16a:11", "Beitzah 16a:12", "Taanit 27b:9", "Sanhedrin 5b:8", "Sanhedrin 5b:9"])
 
 # -------------------------- Exod.31.14 · COND_כי ---------------------------
 # ושמרתם את השבת כי קדש הוא לכם … מחלליה מות יומת כי כל העשה בה מלאכה ונכרתה
@@ -125,6 +129,10 @@ m.step("Exod.31.14")
 # read, not installed
 m.witness_read("great_principle", "liability_grouping",
                 cites=["Mishnah Shabbat 7:1"])
+# witness-tier presupposed read: derivation_file on desecrator_clauses —
+# read, not installed
+m.witness_read("desecrator_clauses", "derivation_file",
+                cites=["Shabbat 70a:2", "Shabbat 70a:5", "Shabbat 69b:8", "Shabbat 69b:9", "Shabbat 69b:6", "Yoma 85a:14", "Yoma 85a:15", "Yoma 85b:2", "Yoma 85b:3", "Yoma 85b:4", "Yoma 85b:6", "Bava Kamma 71a:18", "Bava Kamma 71a:19", "Bava Kamma 71a:20", "Bava Kamma 71a:21", "Sanhedrin 78b:7", "Yoma 81a:21"])
 
 # -------------------------- Exod.31.15 · ETNACHTA_SPLIT --------------------
 # ששת ימים יעשה מלאכה וביום השביעי שבת שבתון קדש ליהוה … כל העשה מלאכה ביום
@@ -177,7 +185,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('call_by_name', 'pre_registration'), ('craftsman_call', 'named_engineer'), ('sabbath_sign', 'sign_between_word'), ('great_principle', 'liability_grouping'), ('tablets_clause', 'finger_kept')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('call_by_name', 'pre_registration'), ('craftsman_call', 'named_engineer'), ('sabbath_sign', 'sign_between_word'), ('sabbath_sign', 'announced_gift_file'), ('great_principle', 'liability_grouping'), ('desecrator_clauses', 'derivation_file'), ('tablets_clause', 'finger_kept')]
     assert m.WITNESS_READS[0]["cites"] == ['Midrash Tanchuma, Ki Tisa 12']
     assert all('pre_registration' not in f for f in m.WORLD["facts"])
     assert 'call_by_name' not in m.WORLD["witnessed"]
@@ -187,10 +195,16 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[2]["cites"] == ['Mishnah Shabbat 7:1', 'Onkelos Exod 31']
     assert all('sign_between_word' not in f for f in m.WORLD["facts"])
     assert 'sabbath_sign' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Mishnah Shabbat 7:1']
+    assert m.WITNESS_READS[3]["cites"] == ['Shabbat 10b:4', 'Shabbat 10b:5', 'Beitzah 16a:10', 'Beitzah 16a:11', 'Beitzah 16a:12', 'Taanit 27b:9', 'Sanhedrin 5b:8', 'Sanhedrin 5b:9']
+    assert all('announced_gift_file' not in f for f in m.WORLD["facts"])
+    assert 'sabbath_sign' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Mishnah Shabbat 7:1']
     assert all('liability_grouping' not in f for f in m.WORLD["facts"])
     assert 'great_principle' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Midrash Tanchuma, Ki Tisa 16', 'Onkelos Exod 31']
+    assert m.WITNESS_READS[5]["cites"] == ['Shabbat 70a:2', 'Shabbat 70a:5', 'Shabbat 69b:8', 'Shabbat 69b:9', 'Shabbat 69b:6', 'Yoma 85a:14', 'Yoma 85a:15', 'Yoma 85b:2', 'Yoma 85b:3', 'Yoma 85b:4', 'Yoma 85b:6', 'Bava Kamma 71a:18', 'Bava Kamma 71a:19', 'Bava Kamma 71a:20', 'Bava Kamma 71a:21', 'Sanhedrin 78b:7', 'Yoma 81a:21']
+    assert all('derivation_file' not in f for f in m.WORLD["facts"])
+    assert 'desecrator_clauses' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Midrash Tanchuma, Ki Tisa 16', 'Onkelos Exod 31']
     assert all('finger_kept' not in f for f in m.WORLD["facts"])
     assert 'tablets_clause' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

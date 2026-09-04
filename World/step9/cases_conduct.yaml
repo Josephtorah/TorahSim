@@ -1,0 +1,121 @@
+# CONDUCT AND LITURGY (round 21 — the tenth Exodus Talmud-first
+# exam block, 2026-09-04; owner: "let continue" — the small pair
+# 15+18 batched, second half). Exodus's ink under the liturgy and
+# the conduct rules.
+# Read-source: logic/oral_triage/exodus_block_conduct_2026-09-04.md.
+
+- module: recitation_modes
+  tractate: Sotah
+  oracle: Sotah 27b:11-12, 33a:14; Berakhot 45a:8-9
+  exodus_anchor: {unit: exo_19_sinai_and_the_covenant, ref: Exod.19.19,
+    claims: [EX19-15]}
+  cases:
+  - id: So27b_song
+    input: {query: song_recitation}
+    expected: {verdict: [responsive_like_hallel, together_like_shema]}
+    class: A
+  - id: So33a_levites
+    input: {query: levites_language}
+    expected: {verdict: holy_tongue_by_voice_link}
+    class: A
+  - id: Be45a_targum
+    input: {query: targum_voice}
+    expected: {verdict: not_above_reader}
+    class: A
+
+- module: liturgy_of_the_name
+  tractate: Sotah
+  oracle: Sotah 38a:9-13; Berakhot 6a:13, 54a:9
+  exodus_anchor: {unit: exo_20_the_ten_utterances, ref: Exod.20.21,
+    claims: [EX20-19]}
+  cases:
+  - id: So38a_site
+    input: {query: name_blessing_site}
+    expected: {verdict: chosen_house_by_inverted_verse}
+    class: A
+  - id: Be6a_study
+    input: {query: presence_at_study}
+    expected: {verdict: presence_with_even_one}
+    class: A
+  - id: Be54a_greeting
+    input: {query: greeting_with_name}
+    expected: {verdict: instituted_time_to_act}
+    class: A
+
+- module: kiddush_file
+  tractate: Pesachim
+  oracle: Pesachim 106a:5-7, 117b:8; Berakhot 20b:7-14
+  exodus_anchor: {unit: exo_20_the_ten_utterances, ref: Exod.20.8,
+    claims: [EX20-18]}
+  cases:
+  - id: Pe106a_wine
+    input: {query: kiddush_wine}
+    expected: {verdict: over_wine_entry_and_day}
+    class: A
+  - id: Pe117b_exodus
+    input: {query: kiddush_exodus_mention}
+    expected: {verdict: required_by_remember_link}
+    class: A
+  - id: Be20b_women_kiddush
+    input: {query: women_kiddush}
+    expected: {verdict: torah_grade_by_keep_remember}
+    class: A
+  - id: Be20b_women_grace
+    input: {query: women_grace}
+    expected: {verdict: obligated_grading_open}
+    class: A
+
+- module: blessing_derivations
+  tractate: Berakhot
+  oracle: Berakhot 48b:5-12, 54a:10-12, 54b:7-9, 60a:29
+  exodus_anchor: {unit: exo_21_the_ordinances, ref: Exod.23.25 + 24.12 + 18.10 + 17.12 + 21.19,
+    claims: [EX21-07]}
+  cases:
+  - id: Be48b_before
+    input: {query: blessing_before_food}
+    expected: {verdict: three_routes_recorded}
+    class: A
+  - id: Be48b_torah
+    input: {query: torah_blessing_source}
+    expected: {verdict: giving_pair_and_afortiori}
+    class: A
+  - id: Be54a_miracle
+    input: {query: miracle_blessing_source}
+    expected: {verdict: yitro_charter}
+    class: A
+  - id: Be54b_stone
+    input: {query: moses_stone_station}
+    expected: {verdict: blessing_station}
+    class: A
+  - id: Be60a_heal
+    input: {query: heal_license}
+    expected: {verdict: granted_by_doubled_verb}
+    class: A
+
+- module: conduct_rules
+  tractate: Berakhot
+  oracle: Berakhot 62b:23-25, 64a:9-10; Sanhedrin 5b:8-9;
+    Shabbat 10b:4-5; Taanit 27b:9; Beitzah 16a:10-12
+  exodus_anchor: {unit: exo_31_craftsmen_shabbat, ref: Exod.31.13 + 31.17,
+    claims: [EX31-07]}
+  cases:
+  - id: Be62b_mount
+    input: {query: temple_mount_conduct}
+    expected: {verdict: shoe_staff_shortcut_banned}
+    class: A
+  - id: Be64a_farewell
+    input: {query: farewell_formula}
+    expected: {verdict: to_peace_living_in_peace_dead}
+    class: A
+  - id: Sa5b_ruling
+    input: {query: ruling_jurisdiction}
+    expected: {verdict: master_leave_camp_measure}
+    class: A
+  - id: Sh10b_gift
+    input: {query: announced_gift}
+    expected: {verdict: announce_unless_self_revealing}
+    class: A
+  - id: Ta27b_soul
+    input: {query: added_soul}
+    expected: {verdict: given_taken_vai_read}
+    class: A

@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Compiling the Bible</title>
+<style>
+:root{--bg:#fdfbf4;--ink:#2a2a24;--gold:#6e5417;--line:#d8cfae;
+--soft:#57503f;--card:#fffdf6;--codebg:#171310;--codeink:#e8e0d0;
+--tal:#2f5d8a;--mish:#8a6d2f;--good:#3e6b2f}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:17px/1.65 Georgia,serif}
+main{max-width:860px;margin:0 auto;padding:2.5rem 1.4rem 5rem}
+h1{font-size:2.1rem;color:var(--gold);margin:.2rem 0 .4rem}
+h2{font-size:1.35rem;color:var(--gold);margin-top:3rem;
+border-bottom:1px solid var(--line);padding-bottom:.35rem}
+h3{font-size:1.05rem;color:var(--soft);margin-top:1.8rem}
+.partno{display:inline-block;background:var(--gold);color:#fffdf6;
+font-size:.8rem;padding:.15rem .6rem;border-radius:99px;
+letter-spacing:.06em;vertical-align:3px;margin-right:.6rem}
+p{color:#33302a}
+.box{background:var(--card);border:1px solid var(--line);
+border-radius:8px;padding:.9rem 1.1rem;margin:1rem 0}
+.law{border-left:4px solid var(--gold)}
+.verse{background:var(--card);border:1px solid var(--line);
+border-radius:8px;padding:.9rem 1.1rem;margin:1.1rem 0}
+.verse.mish{border-left:4px solid var(--mish)}
+.verse.tal{border-left:4px solid var(--tal)}
+.vref{font-size:.8rem;letter-spacing:.05em;color:var(--gold);
+font-weight:bold;text-transform:uppercase;margin-bottom:.4rem}
+.verse.tal .vref{color:var(--tal)}
+.verse.mish .vref{color:var(--mish)}
+.vhe{font-size:1.25rem;line-height:1.9;color:#1e1b14;
+font-family:"SBL Hebrew","Ezra SIL","Times New Roman",serif}
+.ven{margin-top:.45rem;color:#33302a}
+.vnote{margin-top:.55rem;padding-top:.5rem;border-top:1px dashed
+var(--line);font-size:.92rem;color:var(--soft)}
+pre{background:var(--codebg);color:var(--codeink);padding:1rem;
+border-radius:8px;overflow-x:auto;font-size:.8rem;line-height:1.5}
+.gap{background:#f7efd8;border:1px solid #cdb56a;border-radius:8px;
+padding:.9rem 1.1rem;margin:1rem 0}
+.gap b{color:#7a5a10}
+table{border-collapse:collapse;margin:1rem 0;font-size:.9rem;width:100%}
+th,td{border:1px solid var(--line);padding:.4rem .7rem;text-align:left}
+th{background:#f3eee1;color:var(--soft)}
+td.ink{background:#e4eedd}
+td.move{background:#f7ecd0}
+td.route{background:#dde7f0}
+.legend span{display:inline-block;padding:.1rem .6rem;margin-right:.6rem;
+border-radius:4px;font-size:.85rem}
+.tiny{font-size:.85rem;color:var(--soft)}
+.diagram{margin:1.4rem 0;border:1px solid var(--line);border-radius:8px;
+background:var(--card);padding:.8rem;overflow-x:auto}
+.diagram svg{display:block;max-width:100%;height:auto;margin:0 auto}
+.shape{background:var(--card);border:1px solid var(--line);
+border-radius:8px;padding:1rem 1.1rem;margin:1.3rem 0;
+border-top:4px solid var(--gold)}
+.shape h4{margin:.1rem 0 .5rem;color:var(--gold);font-size:1rem}
+hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
+a{color:var(--tal)}
+</style>
+<main>
+<h1>Compiling the Bible</h1>
+<p class="tiny">How the written Torah and the Mishnah &amp; Talmud become
+computer code that runs · a tutorial for everyone · the workshop behind
+torahsimulation.org · 2026-09-04</p>
+
+<div class="box law"><b>The claim this page teaches, in one sentence:</b>
+the law sections of the Bible are written in a real case structure a
+machine can parse — <i>the 24 books are the program; the Talmud holds the
+compile rules; the Mishnah is the answer sheet</i> — and when you write
+code from the bare verses and fill each gap with the tradition's own
+recorded arguments, the code <b>runs</b>, and its output matches the
+answer sheet, cell for cell.</p></div>
+
+<div class="box"><b>How to read this page.</b> You need no Hebrew, no
+programming, and no Bible background — everything is quoted in full and
+explained in place.
+<br><br>
+<b>“Exodus 22:6”</b> = the book of Exodus, chapter 22, verse 6. The
+Hebrew Bible has 24 books (the Five Books of Moses, the Prophets, and
+the Writings — Chronicles is the last).
+<br><br>
+<b>“Mishnah Shevuot 8:1”</b> = the Mishnah, the rabbinic law code
+compiled around the year 200, organized in 63 topical tractates
+(<i>Shevuot</i> means “Oaths”): chapter 8, paragraph 1. A Mishnah
+paragraph is a <b>ruling</b> — an input→output case table, with no
+reasoning shown.
+<br><br>
+<b>“Bava Metzia 94b”</b> = the Babylonian Talmud (compiled ~500),
+tractate <i>Bava Metzia</i> (“The Middle Gate” — property law), page 94,
+side b — Talmud pages are numbered by leaf, front (a) and back (b). The
+number after the colon (94b:6) is the paragraph on that page. A Talmud
+passage is a <b>derivation</b> — it takes a Mishnah ruling and asks
+“from where do we know this?”, walking it back to the verse, with
+objections and named authorities preserved.
+<br><br>
+Every Hebrew or Aramaic quotation on this page carries its English
+directly beneath it, and every source we use is quoted <b>in full</b> —
+no bare citations, no summaries you have to take on faith.</div>
+
+<h2><span class="partno">PART 1</span>The claim in one picture</h2>
+
+<div class="diagram"><svg viewBox="0 0 840 340" font-family="Georgia,serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6e5417"/></marker>
+<marker id="arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2f5d8a"/></marker></defs>
+<!-- program -->
+<rect x="20" y="40" width="200" height="150" rx="10" fill="#fffdf6" stroke="#6e5417" stroke-width="2"/>
+<text x="120" y="70" text-anchor="middle" font-size="15" font-weight="bold" fill="#6e5417">THE WRITTEN BIBLE</text>
+<text x="120" y="90" text-anchor="middle" font-size="12" fill="#57503f">all 24 books</text>
+<text x="120" y="118" text-anchor="middle" font-size="13" fill="#2a2a24">THE PROGRAM</text>
+<text x="120" y="140" text-anchor="middle" font-size="11" fill="#57503f">law = source code, in ink</text>
+<text x="120" y="156" text-anchor="middle" font-size="11" fill="#57503f">narrative = the world it runs in,</text>
+<text x="120" y="172" text-anchor="middle" font-size="11" fill="#57503f">and the log of its runs</text>
+<!-- machine -->
+<rect x="320" y="40" width="200" height="150" rx="10" fill="#171310"/>
+<text x="420" y="75" text-anchor="middle" font-size="15" font-weight="bold" fill="#e8e0d0">THE MACHINE</text>
+<text x="420" y="100" text-anchor="middle" font-size="11" fill="#cbbf9f">parses the verses' own</text>
+<text x="420" y="116" text-anchor="middle" font-size="11" fill="#cbbf9f">when/if keywords,</text>
+<text x="420" y="132" text-anchor="middle" font-size="11" fill="#cbbf9f">extracts events and outcomes,</text>
+<text x="420" y="148" text-anchor="middle" font-size="11" fill="#cbbf9f">emits a verdict table</text>
+<!-- talmud -->
+<rect x="270" y="245" width="300" height="70" rx="10" fill="#fffdf6" stroke="#2f5d8a" stroke-width="2"/>
+<text x="420" y="272" text-anchor="middle" font-size="14" font-weight="bold" fill="#2f5d8a">THE TALMUD</text>
+<text x="420" y="292" text-anchor="middle" font-size="11" fill="#57503f">recorded arguments = the compile moves</text>
+<text x="420" y="306" text-anchor="middle" font-size="11" fill="#57503f">(each gap in the ink filled by a sourced, labeled step)</text>
+<!-- mishnah -->
+<rect x="620" y="40" width="200" height="150" rx="10" fill="#fffdf6" stroke="#8a6d2f" stroke-width="2"/>
+<text x="720" y="70" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a6d2f">THE MISHNAH</text>
+<text x="720" y="95" text-anchor="middle" font-size="13" fill="#2a2a24">THE ANSWER SHEET</text>
+<text x="720" y="120" text-anchor="middle" font-size="11" fill="#57503f">decided cases: input → verdict,</text>
+<text x="720" y="136" text-anchor="middle" font-size="11" fill="#57503f">organized by topic</text>
+<text x="720" y="162" text-anchor="middle" font-size="12" fill="#3e6b2f" font-weight="bold">the code is graded against it</text>
+<!-- arrows -->
+<line x1="220" y1="115" x2="315" y2="115" stroke="#6e5417" stroke-width="2" marker-end="url(#ar)"/>
+<text x="268" y="105" text-anchor="middle" font-size="11" fill="#6e5417">source</text>
+<line x1="520" y1="115" x2="615" y2="115" stroke="#6e5417" stroke-width="2" marker-end="url(#ar)"/>
+<text x="568" y="105" text-anchor="middle" font-size="11" fill="#6e5417">output, graded</text>
+<line x1="420" y1="245" x2="420" y2="195" stroke="#2f5d8a" stroke-width="2" marker-end="url(#arb)"/>
+<text x="430" y="225" font-size="11" fill="#2f5d8a">fills the gaps</text>
+</svg></div>
+
+<p>Three shelves of books, three roles. The <b>written Bible</b> states
+the mechanisms — and, as you are about to see, it states them in a
+detectable case syntax. The <b>Mishnah</b> states the resulting verdict
+tables, with no reasoning shown. The <b>Talmud</b> is the bridge: it
+records, argument by argument, with the arguers' names, how you get
+from the verses to the table. Our job is to make that trip by machine:
+write code from the verses alone, and use the Talmud's recorded
+arguments — never our own inventions — wherever the bare ink leaves a
+gap. If the claim is true, the finished code reproduces the Mishnah's
+table. On this page you will watch it happen.</p>
+
+<h2><span class="partno">PART 2</span>Law and narrative — the two halves of a running system</h2>
+
+<p>Open the Bible anywhere and you find one of two kinds of writing,
+and each has a distinct job in this process:</p>
+
+<div class="diagram"><svg viewBox="0 0 840 250" font-family="Georgia,serif">
+<rect x="20" y="30" width="390" height="190" rx="10" fill="#fffdf6" stroke="#6e5417" stroke-width="2"/>
+<text x="215" y="58" text-anchor="middle" font-size="15" font-weight="bold" fill="#6e5417">LAW — the source code</text>
+<text x="215" y="84" text-anchor="middle" font-size="12" fill="#33302a">cases that open with כִּי (“when”)</text>
+<text x="215" y="102" text-anchor="middle" font-size="12" fill="#33302a">branches that open with אִם (“if”)</text>
+<text x="215" y="120" text-anchor="middle" font-size="12" fill="#33302a">alternatives joined by אוֹ (“or”)</text>
+<text x="215" y="146" text-anchor="middle" font-size="12" fill="#57503f">functions, timers, state machines,</text>
+<text x="215" y="163" text-anchor="middle" font-size="12" fill="#57503f">loops, access lists — all shown below</text>
+<text x="215" y="195" text-anchor="middle" font-size="11.5" fill="#3e6b2f" font-weight="bold">its verdicts write a LEDGER: debts, statuses, clocks</text>
+<rect x="430" y="30" width="390" height="190" rx="10" fill="#fffdf6" stroke="#8a6d2f" stroke-width="2"/>
+<text x="625" y="58" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a6d2f">NARRATIVE — the world and the run log</text>
+<text x="625" y="84" text-anchor="middle" font-size="12" fill="#33302a">the entities the law binds: persons, households,</text>
+<text x="625" y="102" text-anchor="middle" font-size="12" fill="#33302a">animals, land, altars — with their states</text>
+<text x="625" y="128" text-anchor="middle" font-size="12" fill="#33302a">the events the law responds to — acts come</text>
+<text x="625" y="146" text-anchor="middle" font-size="12" fill="#33302a">from the text, never from our imagination</text>
+<text x="625" y="176" text-anchor="middle" font-size="11.5" fill="#8a6d2f" font-weight="bold">and the later books are the EXECUTION LOG:</text>
+<text x="625" y="194" text-anchor="middle" font-size="11.5" fill="#8a6d2f" font-weight="bold">history grading itself against the written code</text>
+</svg></div>
+
+<p><b>The purpose of law</b> in this process is the obvious one: it is
+the program. The law sections are written in a case grammar — three
+little words carry the control flow, and you will meet them dozens of
+times below: <span class="vhe">כִּי</span> (<i>ki</i>, “when”) opens a
+case, <span class="vhe">אִם</span> (<i>im</i>, “if”) opens a branch
+inside it, <span class="vhe">אוֹ</span> (<i>o</i>, “or”) joins
+alternatives. A scanner that knows nothing but those tokens recovers
+the paragraph structure of the law — and, as Part 4 shows, the
+structure it recovers is the very structure the Talmud names.</p>
+
+<p><b>The purpose of narrative</b> is the half people miss. Code alone
+is inert; it needs a world to run in — entities that hold state, events
+that trigger the cases, a clock. The narrative supplies exactly that:
+it is the population of the simulation and the record of what actually
+happened. And the later books do something stronger: they <b>log
+executions of the earlier code and cite it while doing so</b>. In
+Part 6 you will see the book of Chronicles run a law from the book of
+Numbers at national scale and stamp its own deviation “not as it is
+WRITTEN” — a run log referring back to its source code by name. When
+the machine runs law, its verdicts never invent events; they write a
+<b>ledger</b> — who owes what, who holds what status, which clocks are
+running — over the world the narrative gives us.</p>
+
+<h2><span class="partno">PART 3</span>The method — five motions, in order</h2>
+
+<div class="box">
+<b>1 · COMPILE FROM THE INK ALONE.</b> Write the function from the bare
+verses: the when/if structure, the roles, the events, the outcomes.
+Anything the ink does not state — a distance, an amount, a threshold —
+becomes an input <i>parameter</i>, never a constant. No Mishnah, no
+Talmud in the source.<br><br>
+<b>2 · COLLECT THE ANSWER SHEET AS TEST DATA.</b> Quote the Mishnah's
+decided cases — input state, expected verdict — into a test file. They
+are data fed at run time, never code.<br><br>
+<b>3 · RUN.</b> Feed the cases to the ink-born function and print every
+miss.<br><br>
+<b>4 · PER MISS, OPEN THE TALMUD.</b> Each miss is where deep logic
+hides. Find the tradition's <i>recorded</i> argument for that exact
+gap and replay it as a labeled compile step, source cited on the
+changed line. Never wholesale, never invented — one gap, one recorded
+move.<br><br>
+<b>5 · WHEN THE RUN REPRODUCES THE ANSWER SHEET, THE FUNCTION SHIPS.</b>
+Every cell of its output carries provenance: ink, or a named recorded
+argument, or a routed answer-sheet ruling.</div>
+
+<p>Now watch the whole method run on a real law, start to finish.</p>
+
+<h2><span class="partno">PART 4</span>Worked example 1 — the four guardians (Exodus 22:6–14)</h2>
+
+<p>One page of Exodus holds the Bible's deposit-and-custody law: what
+happens when you leave your property in someone else's hands and
+something goes wrong. Read the nine verses slowly — they are the
+complete source code — and watch the keywords:
+<span class="vhe">כִּי</span> (“when”) three times, each opening a
+paragraph, and <span class="vhe">אִם</span> (“if”) branching inside.</p>
+
+<div class="verse"><div class="vref">Exodus 22:6 — paragraph 1 opens: money or vessels, given to keep</div>
+<div class="vhe" dir="rtl">כִּי יִתֵּן אִישׁ אֶל רֵעֵהוּ כֶּסֶף אוֹ כֵלִים לִשְׁמֹר וְגֻנַּב מִבֵּית הָאִישׁ אִם יִמָּצֵא הַגַּנָּב יְשַׁלֵּם שְׁנָיִם</div>
+<div class="ven">“WHEN [כִּי, ki] a man gives his fellow money or vessels TO KEEP, and it is stolen from the man's house — IF [אִם, im] the thief is found, he shall pay DOUBLE.”</div>
+<div class="vnote">Case opener. Input: a deposit of goods. Event: theft. First branch: thief found → the thief pays double.</div></div>
+
+<div class="verse"><div class="vref">Exodus 22:7 — the else-branch: the keeper swears</div>
+<div class="vhe" dir="rtl">אִם לֹא יִמָּצֵא הַגַּנָּב וְנִקְרַב בַּעַל הַבַּיִת אֶל הָאֱלֹהִים אִם לֹא שָׁלַח יָדוֹ בִּמְלֶאכֶת רֵעֵהוּ</div>
+<div class="ven">“IF the thief is not found, the householder shall come near to the judges — [to swear] that he has NOT LAID HIS HAND on his fellow's property.”</div>
+<div class="vnote">The oath signature — “that he has not laid his hand” — will repeat in paragraph 2. Outcome of this branch: the keeper swears, and (as verse 8's double-payment clause shows by contrast) pays nothing.</div></div>
+
+<div class="verse"><div class="vref">Exodus 22:8 — the fraud clause that closes paragraph 1</div>
+<div class="vhe" dir="rtl">עַל כָּל דְּבַר פֶּשַׁע עַל שׁוֹר עַל חֲמוֹר עַל שֶׂה עַל שַׂלְמָה עַל כָּל אֲבֵדָה אֲשֶׁר יֹאמַר כִּי הוּא זֶה עַד הָאֱלֹהִים יָבֹא דְּבַר שְׁנֵיהֶם אֲשֶׁר יַרְשִׁיעֻן אֱלֹהִים יְשַׁלֵּם שְׁנַיִם לְרֵעֵהוּ</div>
+<div class="ven">“Over every matter of trespass — over an ox, over a donkey, over a lamb, over a garment, over every lost thing of which one says ‘this is it’ — the case of BOTH parties shall come to the judges; whomever the judges condemn shall pay DOUBLE to his fellow.”</div>
+<div class="vnote">A keeper caught falsely swearing pays double, like the thief he pretended to be robbed by. Hold on to this clause — the Talmud is about to use it in an objection.</div></div>
+
+<div class="verse"><div class="vref">Exodus 22:9 — paragraph 2 opens: an animal, given to keep</div>
+<div class="vhe" dir="rtl">כִּי יִתֵּן אִישׁ אֶל רֵעֵהוּ חֲמוֹר אוֹ שׁוֹר אוֹ שֶׂה וְכָל בְּהֵמָה לִשְׁמֹר וּמֵת אוֹ נִשְׁבַּר אוֹ נִשְׁבָּה אֵין רֹאֶה</div>
+<div class="ven">“WHEN a man gives his fellow a donkey or an ox or a lamb, or any animal, TO KEEP — and it DIES or is INJURED or is CAPTURED, no one seeing —”</div>
+<div class="vnote">Second case opener. Same setup — “to keep” — different event list: died, injured, captured. Three accidents, joined by אוֹ (“or”).</div></div>
+
+<div class="verse"><div class="vref">Exodus 22:10 — the accidents: oath, no payment</div>
+<div class="vhe" dir="rtl">שְׁבֻעַת יְהוָה תִּהְיֶה בֵּין שְׁנֵיהֶם אִם לֹא שָׁלַח יָדוֹ בִּמְלֶאכֶת רֵעֵהוּ וְלָקַח בְּעָלָיו וְלֹא יְשַׁלֵּם</div>
+<div class="ven">“the OATH of the LORD shall be between the two of them — that he has not laid his hand on his fellow's property; and the owner shall accept it, and he shall NOT PAY.”</div>
+<div class="vnote">Same oath signature as paragraph 1. For the three accidents: swear and go free.</div></div>
+
+<div class="verse"><div class="vref">Exodus 22:11 — but theft: he pays</div>
+<div class="vhe" dir="rtl">וְאִם גָּנֹב יִגָּנֵב מֵעִמּוֹ יְשַׁלֵּם לִבְעָלָיו</div>
+<div class="ven">“And IF it is indeed STOLEN from him — he SHALL PAY its owner.”</div>
+<div class="vnote">Stop. Read verse 6 again, then this verse. Same event — theft. Paragraph 1's keeper swears and is exempt; paragraph 2's keeper PAYS. The code never says why. Remember this difference; it is the key that unlocks the whole function.</div></div>
+
+<div class="verse"><div class="vref">Exodus 22:12 — torn by beasts: bring the evidence</div>
+<div class="vhe" dir="rtl">אִם טָרֹף יִטָּרֵף יְבִאֵהוּ עֵד הַטְּרֵפָה לֹא יְשַׁלֵּם</div>
+<div class="ven">“IF it is indeed TORN [by a predator], let him bring it as evidence; for the torn animal he shall not pay.”</div>
+<div class="vnote">An accident with physical proof: produce the carcass, no oath needed, no payment.</div></div>
+
+<div class="verse"><div class="vref">Exodus 22:13 — paragraph 3 opens: the borrower</div>
+<div class="vhe" dir="rtl">וְכִי יִשְׁאַל אִישׁ מֵעִם רֵעֵהוּ וְנִשְׁבַּר אוֹ מֵת בְּעָלָיו אֵין עִמּוֹ שַׁלֵּם יְשַׁלֵּם</div>
+<div class="ven">“And WHEN a man BORROWS from his fellow, and it is injured or dies, its owner not with it — he shall SURELY PAY.”</div>
+<div class="vnote">Third case opener — and this one names its role in the ink: the verb is “borrows.” The borrower pays even for the accidents that freed the keepers above.</div></div>
+
+<div class="verse"><div class="vref">Exodus 22:14 — the owner-present exemption, and a strange last clause</div>
+<div class="vhe" dir="rtl">אִם בְּעָלָיו עִמּוֹ לֹא יְשַׁלֵּם אִם שָׂכִיר הוּא בָּא בִּשְׂכָרוֹ</div>
+<div class="ven">“IF its owner is with it, he shall not pay. IF it was HIRED — it came in its hire.”</div>
+<div class="vnote">The paragraph ends with four Hebrew words about hiring — “it came in its hire” — and explains nothing. That dangling clause is a hook, and the answer sheet will hang a whole fourth role on it.</div></div>
+
+<h3>What the machine sees — before any tradition is loaded</h3>
+
+<div class="diagram"><svg viewBox="0 0 840 330" font-family="Georgia,serif">
+<text x="420" y="24" text-anchor="middle" font-size="13" fill="#57503f">A keyword scan of the nine verses — nothing loaded but the tokens כִּי (“when”) and אִם (“if”)</text>
+<!-- P1 -->
+<rect x="20" y="45" width="255" height="235" rx="10" fill="#fffdf6" stroke="#6e5417" stroke-width="2"/>
+<rect x="20" y="45" width="255" height="34" rx="10" fill="#6e5417"/>
+<text x="147" y="67" text-anchor="middle" font-size="12.5" fill="#fffdf6" font-weight="bold">כִּי “WHEN” — 22:6 deposit of goods</text>
+<text x="36" y="103" font-size="12" fill="#33302a">event: theft</text>
+<text x="36" y="128" font-size="12" fill="#33302a">אִם thief found → pays double</text>
+<text x="36" y="153" font-size="12" fill="#33302a">אִם not found → keeper SWEARS,</text>
+<text x="52" y="171" font-size="12" fill="#33302a">pays nothing (22:7)</text>
+<text x="36" y="196" font-size="12" fill="#33302a">false oath → keeper pays double</text>
+<text x="52" y="214" font-size="12" fill="#33302a">(22:8)</text>
+<text x="147" y="258" text-anchor="middle" font-size="12.5" fill="#a33b1f" font-weight="bold">who IS this keeper?</text>
+<text x="147" y="274" text-anchor="middle" font-size="11.5" fill="#a33b1f">the ink doesn't say</text>
+<!-- P2 -->
+<rect x="292" y="45" width="255" height="235" rx="10" fill="#fffdf6" stroke="#6e5417" stroke-width="2"/>
+<rect x="292" y="45" width="255" height="34" rx="10" fill="#6e5417"/>
+<text x="419" y="67" text-anchor="middle" font-size="12.5" fill="#fffdf6" font-weight="bold">כִּי “WHEN” — 22:9 deposit of animal</text>
+<text x="308" y="103" font-size="12" fill="#33302a">died / injured / captured →</text>
+<text x="324" y="121" font-size="12" fill="#33302a">SWEARS, pays nothing (22:10)</text>
+<text x="308" y="146" font-size="12" fill="#33302a">אִם stolen → HE PAYS (22:11)</text>
+<text x="308" y="171" font-size="12" fill="#33302a">אִם torn → show carcass,</text>
+<text x="324" y="189" font-size="12" fill="#33302a">no payment (22:12)</text>
+<text x="419" y="258" text-anchor="middle" font-size="12.5" fill="#a33b1f" font-weight="bold">and who is THIS keeper?</text>
+<text x="419" y="274" text-anchor="middle" font-size="11.5" fill="#a33b1f">same words: “to keep”</text>
+<!-- P3 -->
+<rect x="564" y="45" width="255" height="235" rx="10" fill="#fffdf6" stroke="#6e5417" stroke-width="2"/>
+<rect x="564" y="45" width="255" height="34" rx="10" fill="#6e5417"/>
+<text x="691" y="67" text-anchor="middle" font-size="12.5" fill="#fffdf6" font-weight="bold">כִּי “WHEN” — 22:13 borrowing</text>
+<text x="580" y="103" font-size="12" fill="#33302a">injured / died → PAYS,</text>
+<text x="596" y="121" font-size="12" fill="#33302a">even for the accident</text>
+<text x="580" y="146" font-size="12" fill="#33302a">אִם owner present → exempt</text>
+<text x="580" y="171" font-size="12" fill="#33302a">אִם hired → “it came in</text>
+<text x="596" y="189" font-size="12" fill="#33302a">its hire” (22:14)</text>
+<text x="691" y="258" text-anchor="middle" font-size="12.5" fill="#3e6b2f" font-weight="bold">this one self-labels:</text>
+<text x="691" y="274" text-anchor="middle" font-size="11.5" fill="#3e6b2f">the verb “borrows” is in the ink</text>
+<text x="420" y="315" text-anchor="middle" font-size="12.5" fill="#57503f" font-style="italic">One function, three configurations — and the differing configuration parameter is nowhere on the page.</text>
+</svg></div>
+
+<div class="gap"><b>The gaps the bare ink leaves open — found by running
+motion 1 honestly:</b><br><br>
+<b>GAP A — a hidden parameter.</b> Paragraphs 1 and 2 both say “to
+keep,” yet on the identical event (theft) one keeper swears and goes
+free while the other pays. Some input distinguishes them, and it is not
+written.<br>
+<b>GAP B — a missing column.</b> The event <i>loss</i> (the keeper
+simply loses the item) appears nowhere in the nine verses. The answer
+sheet will demand a verdict for it.<br>
+<b>GAP C — an unnamed role.</b> The answer sheet lists FOUR guardians.
+The code has three paragraphs. Who is the fourth, and which paragraph's
+rules govern him?</div>
+
+<h3>The answer sheet (collected as test data — motion 2)</h3>
+
+<div class="verse mish"><div class="vref">Mishnah Shevuot 8:1 — quoted in full</div>
+<div class="vhe" dir="rtl">אַרְבָּעָה שׁוֹמְרִין הֵן, שׁוֹמֵר חִנָּם, וְהַשּׁוֹאֵל, נוֹשֵׂא שָׂכָר, וְהַשּׂוֹכֵר. שׁוֹמֵר חִנָּם נִשְׁבָּע עַל הַכֹּל. וְהַשּׁוֹאֵל מְשַׁלֵּם אֶת הַכֹּל. נוֹשֵׂא שָׂכָר וְהַשּׂוֹכֵר נִשְׁבָּעִין עַל הַשְּׁבוּרָה וְעַל הַשְּׁבוּיָה וְעַל הַמֵּתָה, וּמְשַׁלְּמִים אֶת הָאֲבֵדָה וְאֶת הַגְּנֵבָה</div>
+<div class="ven">“FOUR keepers there are: the UNPAID keeper, the BORROWER, the PAID keeper, and the HIRER. The unpaid keeper SWEARS over everything. The borrower PAYS everything. The paid keeper and the hirer SWEAR over the injured, the captured, and the dead — and PAY for the LOSS and the THEFT.”</div>
+<div class="vnote">Note everything this table has that the verses don't: the words <i>paid</i> and <i>unpaid</i> (Gap A), the event <i>loss</i> (Gap B), and a fourth role, the <i>hirer</i> (Gap C). A twelve-cell verdict matrix — four roles by three event classes — with no derivation shown. That is what an answer sheet is.</div></div>
+
+<h3>Filling the gaps with the Talmud's recorded arguments (motion 4)</h3>
+
+<p>Now the compile moves — and here is the wonder of it: every argument
+we need is already written down, with the objections and the arguers'
+names. First, the Talmud names the structure the scanner found:</p>
+
+<div class="verse tal"><div class="vref">Babylonian Talmud, Bava Metzia 94b:6</div>
+<div class="vhe" dir="rtl">מנא ה"מ דתנו רבנן פרשה ראשונה נאמרה בש"ח שניה בשומר שכר שלישית בשואל</div>
+<div class="ven">“From where are these matters? As the Rabbis taught: the FIRST passage is stated of the UNPAID keeper, the SECOND of the PAID keeper, the THIRD of the BORROWER.”</div>
+<div class="vnote">Three passages — exactly the three כִּי (“when”) blocks the keyword scan recovered. The teacher and the scanner found the same structure, the scanner mechanically, the teacher some eighteen centuries earlier.</div></div>
+
+<div class="verse tal"><div class="vref">Bava Metzia 94b:7 — the Talmud demands proof of its own labels</div>
+<div class="vhe" dir="rtl">בשלמא שלישית בשואל מפורש וכי ישאל איש מעם רעהו ונשבר או מת בעליו אין עמו שלם ישלם אלא ראשונה בשומר חנם שניה בשומר שכר איפוך אנא</div>
+<div class="ven">“Granted, the third is the borrower — it is EXPLICIT: ‘And when a man borrows from his fellow and it is injured or dies, its owner not with it, he shall surely pay’ (Exodus 22:13). But the first as the unpaid keeper and the second as the paid — I could REVERSE them! [אֵיפוּךְ אֲנָא, eipukh ana]”</div>
+<div class="vnote">This is the discipline that makes the tradition usable as compile rules: it will not assert a label without an argument. “I could reverse them” is precisely Gap A stated from the other side.</div></div>
+
+<div class="verse tal"><div class="vref">Bava Metzia 94b:8–9 — the diff, with the objection preserved</div>
+<div class="vhe" dir="rtl">מסתברא שניה בשומר שכר שכן חייב בגניבה ואבידה אדרבה ראשונה בשומר שכר שכן משלם תשלומי כפל בטוען טענת גנב — אפילו הכי קרנא בלא שבועה עדיפא מכפילא בשבועה</div>
+<div class="ven">“It stands to reason the SECOND is the paid keeper — for he is liable in theft and loss. — On the contrary! The FIRST is the paid keeper, for he pays the DOUBLE payment when he [falsely] pleads a thief took it! — Even so: PRINCIPAL without an oath is weightier than DOUBLE with an oath.”</div>
+<div class="vnote">Read what just happened as an engineer: feed both paragraphs the SAME input (theft) and compare outputs. Paragraph 1 exempts with an oath; paragraph 2 pays unconditionally. Stricter liability tracks compensation — so paragraph 2's keeper is the one being PAID. The objection (“but paragraph 1 has the double payment!”) is raised and answered (that fires only on a false oath). A hidden configuration parameter, recovered by diffing the branches — on the record.</div></div>
+
+<div class="verse tal"><div class="vref">Bava Metzia 94b:10 — the seal</div>
+<div class="vhe" dir="rtl">תדע דהא שואל כל הנאה שלו ואינו משלם אלא קרן</div>
+<div class="ven">“KNOW it [from here]: the BORROWER — ALL the benefit is his — and he pays only principal.”</div>
+<div class="vnote">The principle sealed at its extreme: liability tracks benefit. The borrower, who has all the benefit, carries the severest schedule — payment even for accidents — which is exactly what the ink of 22:13 says. The recovered parameter and the written code agree.</div></div>
+
+<p>Gap A is closed. Now Gap B — the event the verses never mention:</p>
+
+<div class="verse tal"><div class="vref">Bava Metzia 94b:13, then 94b:15 — generating the missing column</div>
+<div class="vhe" dir="rtl">בשלמא גניבה דכתיב אם גנוב יגנב מעמו ישלם לבעליו אלא אבידה מנא לן ... אמרי במערבא קל וחומר ומה גניבה שקרובה לאונס משלם אבידה שקרובה לפשיעה לא כל שכן</div>
+<div class="ven">“Granted THEFT — as it is written, ‘if it is indeed stolen from him, he shall pay its owner’ (22:11). But LOSS — from where do we know it? … In the West [the land of Israel] they say: an a-fortiori [קַל וָחוֹמֶר, kal va-chomer — the argument from the lighter to the weightier]: if THEFT, which borders on circumstances beyond control, PAYS — then LOSS, which borders on negligence, all the more so!”</div>
+<div class="vnote">The missing cell is generated by a recorded inference rule, not by guesswork. (The a-fortiori is the first of the tradition's own thirteen numbered inference rules — the compile moves have a published instruction set.)</div></div>
+
+<p>And Gap C — the fourth role. The verses' one hook is that dangling
+clause at the end of 22:14, “if it was HIRED — it came in its hire.”
+The answer sheet's own companion row files the hirer, and the Talmud
+logs the classification dispute:</p>
+
+<div class="verse tal"><div class="vref">Bava Metzia 93a:17–18 — routing the unnamed role, disagreement preserved</div>
+<div class="vhe" dir="rtl">אמר ליה רבא לרב נחמן מי איכא דלית ליה ארבעה שומרין אמר ליה הכי קאמינא לך מאן תנא שוכר כנושא שכר רבי מאיר היא — והא רבי מאיר איפכא שמעינן ליה דתניא שוכר כיצד משלם ר' מאיר אומר כשומר חנם ר' יהודה אומר כשומר שכר</div>
+<div class="ven">“Rava said to Rav Nachman: is there anyone who does not accept the FOUR keepers? He answered: what I meant is — who taught that the HIRER is like the PAID keeper? Rabbi Meir. — But we have heard Rabbi Meir the REVERSE! As it is taught: the hirer, how does he pay? Rabbi Meir says: like the UNPAID keeper. Rabbi Yehuda says: like the PAID keeper.”</div>
+<div class="vnote">The four-fold division itself is universal — nobody disputes it. What is disputed, by name, is the ROUTING: which existing paragraph's rules the new role follows. The law as ruled follows Rabbi Yehuda: the hirer runs on the paid keeper's branch. This is how a maintained codebase absorbs an input class the original code never named — file it under an existing branch, log the disagreement.</div></div>
+
+<h3>The code (motion 1's output, with motion 4's labeled patches)</h3>
+
+<p>Here is the heart of the actual runnable program — a condensed
+excerpt of the real file (<span class="tiny">World/step9/cold_run_guardians.py</span>).
+Notice that every line that goes beyond the ink carries its source in
+brackets:</p>
+
+<pre>
+# STEP 1 - PARSE: find case openers by verse-initial KI ("when")
+#   found: 22:6, 22:9, 22:13  ->  three paragraphs: 22:6-8, 22:9-12, 22:13-14
+#   (matches the three passages named at Bava Metzia 94b:6)
+
+# STEP 2 - EXTRACT events and outcomes from ink tokens per paragraph:
+#   P1: theft -> oath, no pay          (22:7, the oath signature)
+#   P2: died/injured/captured -> oath; theft -> PAY; torn -> evidence
+#   P3: injured/died -> PAY            (self-labeled: "borrows", 22:13)
+
+# STEP 3 - THE TEACHER'S RECORDED MOVES, each labeled:
+diff = outcome(P1, THEFT), outcome(P2, THEFT)     # (oath, pay)
+# stricter-on-theft = the compensated keeper  [Bava Metzia 94b:8-9]
+roles = {P1: 'unpaid keeper', P2: 'paid keeper', P3: 'borrower'}
+# benefit seal: all-benefit -> pays even accidents  [94b:10]
+
+put('paid',   LOSS, 'PAY')   # a-fortiori: theft pays, loss is
+                             # nearer negligence  [94b:13,15]
+put('renter', ALL,  like('paid'))  # routing per Rabbi Yehuda
+                             # [Mishnah BM 7:8; dispute at BM 93a:18]
+
+# STEP 4 - EMIT the 4x3 matrix and GRADE against Mishnah Shevuot 8:1
+</pre>
+
+<h3>The graded run (motions 3 and 5)</h3>
+
+<p class="legend"><span class="tiny">Where each verdict comes from:&nbsp;</span>
+<span style="background:#e4eedd">straight from the ink</span>
+<span style="background:#f7ecd0">a recorded argument, replayed</span>
+<span style="background:#dde7f0">routed per the answer sheet's recorded routing</span></p>
+
+<table>
+<tr><th>role</th><th>accidents (died / injured / captured)</th><th>theft</th><th>loss</th></tr>
+<tr><td>unpaid keeper</td><td class="move">OATH, exempt</td><td class="ink">OATH, exempt (22:7)</td><td class="move">OATH, exempt</td></tr>
+<tr><td>paid keeper</td><td class="ink">OATH, exempt (22:10)</td><td class="ink">PAYS (22:11)</td><td class="move">PAYS — the a-fortiori (94b:15)</td></tr>
+<tr><td>hirer</td><td class="route">OATH, exempt</td><td class="route">PAYS</td><td class="route">PAYS</td></tr>
+<tr><td>borrower</td><td class="ink">PAYS (22:13)</td><td class="move">PAYS — benefit argument (94b:10,19)</td><td class="move">PAYS — benefit argument</td></tr>
+</table>
+
+<p><b>Result: 12 of 12 cells match Mishnah Shevuot 8:1.</b> Six cells
+straight from ink; three by recorded arguments replayed step for step;
+three routed exactly as the answer sheet's recorded routing routes
+them. Nothing invented, and provenance on every cell. That is the whole
+method, executed once, end to end.</p>
+
+<h2><span class="partno">PART 5</span>Worked example 2 — the slave's clock and the Jubilee (Exodus 21 meets Leviticus 25)</h2>
+
+<p>The second example teaches two new shapes — a <b>timer</b>, and a
+<b>cross-book interrupt</b> — and gives you the first taste of the
+claim in this page's title: the books are one interconnected program.
+The law is the very first case of the Exodus law code:</p>
+
+<div class="verse"><div class="vref">Exodus 21:2 — the case opens, with a clock in it</div>
+<div class="vhe" dir="rtl">כִּי תִקְנֶה עֶבֶד עִבְרִי שֵׁשׁ שָׁנִים יַעֲבֹד וּבַשְּׁבִעִת יֵצֵא לַחָפְשִׁי חִנָּם</div>
+<div class="ven">“WHEN you acquire a Hebrew slave, SIX YEARS he shall serve; and in the SEVENTH he shall GO OUT FREE, for nothing.”</div>
+<div class="vnote">A case opener carrying a timer: six years, then automatic release, no payment. (The “slave” here is an indentured servant — typically a debtor working off what he cannot repay; the same chapter gives him rights his master cannot touch.)</div></div>
+
+<div class="verse"><div class="vref">Exodus 21:3 — two branches on marital state</div>
+<div class="vhe" dir="rtl">אִם בְּגַפּוֹ יָבֹא בְּגַפּוֹ יֵצֵא אִם בַּעַל אִשָּׁה הוּא וְיָצְאָה אִשְׁתּוֹ עִמּוֹ</div>
+<div class="ven">“IF he came in alone, he goes out alone; IF he was the husband of a wife, his wife goes out with him.”</div>
+<div class="vnote">Two אִם (“if”) branches: the exit event carries the entry state.</div></div>
+
+<div class="verse"><div class="vref">Exodus 21:4 — the master-given wife</div>
+<div class="vhe" dir="rtl">אִם אֲדֹנָיו יִתֶּן לוֹ אִשָּׁה וְיָלְדָה לוֹ בָנִים אוֹ בָנוֹת הָאִשָּׁה וִילָדֶיהָ תִּהְיֶה לַאדֹנֶיהָ וְהוּא יֵצֵא בְגַפּוֹ</div>
+<div class="ven">“IF his master gives him a wife and she bears him sons or daughters — the wife and her children remain her master's, and he goes out alone.”</div>
+<div class="vnote">A third branch, setting up the hard choice of the next verse.</div></div>
+
+<div class="verse"><div class="vref">Exodus 21:5 — the slave elects to stay</div>
+<div class="vhe" dir="rtl">וְאִם אָמֹר יֹאמַר הָעֶבֶד אָהַבְתִּי אֶת אֲדֹנִי אֶת אִשְׁתִּי וְאֶת בָּנָי לֹא אֵצֵא חָפְשִׁי</div>
+<div class="ven">“And IF the slave plainly says: I love my master, my wife, and my children — I will NOT go out free —”</div>
+<div class="vnote">A branch triggered by a declared choice.</div></div>
+
+<div class="verse"><div class="vref">Exodus 21:6 — the ear at the doorpost, and the word that looks absolute</div>
+<div class="vhe" dir="rtl">וְהִגִּישׁוֹ אֲדֹנָיו אֶל הָאֱלֹהִים וְהִגִּישׁוֹ אֶל הַדֶּלֶת אוֹ אֶל הַמְּזוּזָה וְרָצַע אֲדֹנָיו אֶת אָזְנוֹ בַּמַּרְצֵעַ וַעֲבָדוֹ לְעֹלָם</div>
+<div class="ven">“then his master shall bring him to the judges, and bring him to the door or to the doorpost; and his master shall PIERCE his ear with an awl — and he shall serve him FOREVER [לְעֹלָם, le-olam].”</div>
+<div class="vnote">The six-year timer is voided by the slave's own declaration, and the code says <i>forever</i>. Does forever mean forever? Exodus, read alone, gives no way out. Hold that question.</div></div>
+
+<p>Now turn the pages — four books over — to Leviticus 25, a law about
+the calendar itself. Every fiftieth year:</p>
+
+<div class="verse"><div class="vref">Leviticus 25:10 — the Jubilee</div>
+<div class="vhe" dir="rtl">וְקִדַּשְׁתֶּם אֵת שְׁנַת הַחֲמִשִּׁים שָׁנָה וּקְרָאתֶם דְּרוֹר בָּאָרֶץ לְכָל יֹשְׁבֶיהָ יוֹבֵל הִוא תִּהְיֶה לָכֶם וְשַׁבְתֶּם אִישׁ אֶל אֲחֻזָּתוֹ וְאִישׁ אֶל מִשְׁפַּחְתּוֹ תָּשֻׁבוּ</div>
+<div class="ven">“And you shall sanctify the FIFTIETH year, and proclaim LIBERTY [דְּרוֹר, deror] in the land to all its inhabitants; a JUBILEE [יוֹבֵל, yovel] it shall be for you — and you shall RETURN every man to his holding, and every man to his family you shall return.”</div>
+<div class="vnote">A global event on a fifty-year clock: everyone returns — land to its families, persons to their homes. Nothing here mentions the pierced slave of Exodus 21. Or does it?</div></div>
+
+<p>The Talmud reads the two verses <b>against each other</b> — one from
+Exodus, one from Leviticus — and shows they were written for each
+other:</p>
+
+<div class="verse tal"><div class="vref">Babylonian Talmud, Kiddushin 15a:18 — whom does “you shall return” free?</div>
+<div class="vhe" dir="rtl">אי במכרוהו ב"ד הרי כבר אמור הא אין הכתוב מדבר אלא בנרצע שתים ושלש שנים לפני היובל שהיובל מוציאו</div>
+<div class="ven">“If [the verse ‘you shall return every man to his holding’ speaks] of one sold by the court — that is already stated elsewhere. So the verse must speak of none but the PIERCED one, [pierced] two or three years before the Jubilee — teaching that THE JUBILEE TAKES HIM OUT.”</div>
+<div class="vnote">The method here is process-of-elimination over the codebase: every other release is already covered by some verse, so Leviticus's return-clause must be covering the one case nothing else covers — the man who said “forever.”</div></div>
+
+<div class="verse tal"><div class="vref">Kiddushin 15a:21–22 — why BOTH verses had to be written</div>
+<div class="vhe" dir="rtl">ואיצטריך למיכתב ושבתם ואיצטריך למיכתב לעולם דאי כתב רחמנא לעולם הוה אמינא לעולם ממש כתב רחמנא ושבתם — ואי כתב רחמנא ושבתם הוה אמינא ה"מ היכא דלא עבד שש ... קמשמע לן לעולם לעולמו של יובל</div>
+<div class="ven">“And it was NECESSARY to write ‘you shall return’ (Leviticus 25:10), and NECESSARY to write ‘forever’ (Exodus 21:6). For had the Merciful One written only ‘forever,’ I would say: forever LITERALLY — so it wrote ‘you shall return.’ And had it written only ‘you shall return,’ I would say [the release covers only one who has not finished his six years] … therefore it teaches: ‘forever’ means — unto the era of the JUBILEE.”</div>
+<div class="vnote">Two clauses in two books, each guarding against the misreading of the other. The Talmud is doing dependency analysis: neither book's clause is complete without its partner. “Forever” is a scoped constant, and its scope is set in a different book.</div></div>
+
+<p>And the answer sheet states the merged result as a plain table:</p>
+
+<div class="verse mish"><div class="vref">Mishnah Kiddushin 1:2 — quoted in full</div>
+<div class="vhe" dir="rtl">עֶבֶד עִבְרִי נִקְנֶה בְכֶסֶף וּבִשְׁטָר, וְקוֹנֶה אֶת עַצְמוֹ בַּשָּׁנִים וּבַיּוֹבֵל וּבְגִרְעוֹן כֶּסֶף. יְתֵרָה עָלָיו אָמָה הָעִבְרִיָּה, שֶׁקּוֹנָה אֶת עַצְמָהּ בְּסִימָנִין. הַנִּרְצָע נִקְנֶה בִרְצִיעָה, וְקוֹנֶה אֶת עַצְמוֹ בַיּוֹבֵל וּבְמִיתַת הָאָדוֹן</div>
+<div class="ven">“A Hebrew slave is acquired by money or by document, and acquires HIMSELF by the YEARS, by the JUBILEE, and by DEDUCTION of money [buying out the remaining years]. The Hebrew maidservant exceeds him: she also acquires herself by the signs [of maturity]. The PIERCED one is acquired by piercing, and acquires himself by the JUBILEE and by the DEATH of the master.”</div>
+<div class="vnote">Read the release list like an engineer: <i>the years</i> — Exodus's own six-year timer. <i>Deduction of money</i> — a computed early exit. And <i>the Jubilee</i> — an event declared in a different book entirely. The answer sheet's table is a MERGE of two books' code, and the Talmud passage above is the merge documentation.</div></div>
+
+<div class="diagram"><svg viewBox="0 0 840 300" font-family="Georgia,serif">
+<defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#a33b1f"/></marker></defs>
+<text x="420" y="24" text-anchor="middle" font-size="13" fill="#57503f">The timer, the “forever” branch, and the interrupt from another book</text>
+<!-- Exodus box -->
+<rect x="20" y="45" width="530" height="190" rx="10" fill="#fffdf6" stroke="#6e5417" stroke-width="2"/>
+<text x="40" y="70" font-size="12.5" font-weight="bold" fill="#6e5417">EXODUS 21 — the slave module</text>
+<!-- timeline -->
+<line x1="50" y1="120" x2="410" y2="120" stroke="#57503f" stroke-width="2"/>
+<line x1="50" y1="112" x2="50" y2="128" stroke="#57503f" stroke-width="2"/>
+<line x1="410" y1="112" x2="410" y2="128" stroke="#57503f" stroke-width="2"/>
+<text x="50" y="145" text-anchor="middle" font-size="11" fill="#33302a">year 0</text>
+<text x="410" y="145" text-anchor="middle" font-size="11" fill="#33302a">year 6</text>
+<text x="230" y="108" text-anchor="middle" font-size="11.5" fill="#3e6b2f" font-weight="bold">the six-year timer (21:2)</text>
+<text x="475" y="124" font-size="11.5" fill="#3e6b2f" font-weight="bold">→ goes free</text>
+<!-- forever branch -->
+<line x1="410" y1="120" x2="410" y2="185" stroke="#a33b1f" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line x1="410" y1="185" x2="120" y2="185" stroke="#a33b1f" stroke-width="2"/>
+<text x="265" y="176" text-anchor="middle" font-size="11.5" fill="#a33b1f">“I will not go out” → pierced ear → serves לְעֹלָם “FOREVER” (21:5–6)</text>
+<text x="265" y="212" text-anchor="middle" font-size="11" fill="#57503f" font-style="italic">…with no exit written anywhere in this book</text>
+<!-- Leviticus box -->
+<rect x="590" y="45" width="230" height="120" rx="10" fill="#fffdf6" stroke="#a33b1f" stroke-width="2.5"/>
+<text x="705" y="72" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#a33b1f">LEVITICUS 25 — the Jubilee</text>
+<text x="705" y="95" text-anchor="middle" font-size="11" fill="#33302a">a 50-year global clock:</text>
+<text x="705" y="112" text-anchor="middle" font-size="11" fill="#33302a">“proclaim LIBERTY in the land…</text>
+<text x="705" y="129" text-anchor="middle" font-size="11" fill="#33302a">RETURN every man to his holding”</text>
+<text x="705" y="152" text-anchor="middle" font-size="10.5" fill="#57503f">(25:10)</text>
+<!-- interrupt arrow -->
+<line x1="620" y1="165" x2="290" y2="183" stroke="#a33b1f" stroke-width="3" marker-end="url(#ar2)"/>
+<text x="470" y="200" text-anchor="middle" font-size="12" fill="#a33b1f" font-weight="bold">THE CROSS-BOOK INTERRUPT</text>
+<text x="470" y="217" text-anchor="middle" font-size="11" fill="#a33b1f">the Jubilee fires → even “forever” is cancelled</text>
+<text x="470" y="234" text-anchor="middle" font-size="10.5" fill="#57503f">the wiring: Kiddushin 15a — “forever” = unto the era of the Jubilee</text>
+<text x="420" y="280" text-anchor="middle" font-size="12" fill="#57503f" font-style="italic">In the running simulator this is literally implemented as timer cancellation: the Jubilee event voids the local clock.</text>
+</svg></div>
+
+<p>This is the lesson of example 2: <b>the books behave like modules of
+one program.</b> Exodus's slave law is not finished until Leviticus's
+calendar law is loaded — a word in one book (“forever”) has its scope
+set by a clause in another (“you shall return”), and the tradition
+itself documents the dependency. When our simulator ran this law, the
+pierced slave's “forever” had to cancel his own six-year exit timer,
+and the Jubilee event had to free him from another module — the
+interrupt is real, executable wiring.</p>
+
+<h2><span class="partno">PART 6</span>Worked example 3 — the second Passover: code, data, and the run log (Numbers 9 → 2 Chronicles 30)</h2>
+
+<p>The third example shows where <b>narrative</b> earns its place in
+the machine — and gives the cleanest possible picture of what is code
+and what is data. Numbers 9 records the law being <i>born from a
+case</i>:</p>
+
+<div class="verse"><div class="vref">Numbers 9:6 — a case arrives that the published rule doesn't cover</div>
+<div class="vhe" dir="rtl">וַיְהִי אֲנָשִׁים אֲשֶׁר הָיוּ טְמֵאִים לְנֶפֶשׁ אָדָם וְלֹא יָכְלוּ לַעֲשֹׂת הַפֶּסַח בַּיּוֹם הַהוּא וַיִּקְרְבוּ לִפְנֵי מֹשֶׁה וְלִפְנֵי אַהֲרֹן בַּיּוֹם הַהוּא</div>
+<div class="ven">“And there were men who were IMPURE BY A HUMAN CORPSE, and they could not perform the Passover on that day; and they came before Moses and before Aaron on that day.”</div>
+<div class="vnote">Ritual impurity from contact with the dead barred them from the Passover offering — through no fault of their own. A live input the existing rule doesn't handle.</div></div>
+
+<div class="verse"><div class="vref">Numbers 9:7 — the complaint, verbatim</div>
+<div class="vhe" dir="rtl">אֲנַחְנוּ טְמֵאִים לְנֶפֶשׁ אָדָם לָמָּה נִגָּרַע לְבִלְתִּי הַקְרִיב אֶת קָרְבַּן יְהוָה בְּמֹעֲדוֹ בְּתוֹךְ בְּנֵי יִשְׂרָאֵל</div>
+<div class="ven">“We are impure by a human corpse — WHY SHOULD WE BE DIMINISHED, not to bring the LORD's offering at its appointed time among the children of Israel?”</div>
+<div class="vnote">The bug report, filed by the affected users.</div></div>
+
+<div class="verse"><div class="vref">Numbers 9:8 — the query protocol</div>
+<div class="vhe" dir="rtl">וַיֹּאמֶר אֲלֵהֶם מֹשֶׁה עִמְדוּ וְאֶשְׁמְעָה מַה יְצַוֶּה יְהוָה לָכֶם</div>
+<div class="ven">“And Moses said to them: STAND, AND I WILL HEAR what the LORD commands concerning you.”</div>
+<div class="vnote">Hold the case, query the Author, await new code. The written Torah records this same hold-and-ask protocol four times.</div></div>
+
+<div class="verse"><div class="vref">Numbers 9:10 — the new code arrives</div>
+<div class="vhe" dir="rtl">דַּבֵּר אֶל בְּנֵי יִשְׂרָאֵל לֵאמֹר אִישׁ אִישׁ כִּי יִהְיֶה טָמֵא לָנֶפֶשׁ אוֹ בְדֶרֶךְ רְחֹקָהׄ לָכֶם אוֹ לְדֹרֹתֵיכֶם וְעָשָׂה פֶסַח לַיהוָה</div>
+<div class="ven">“Speak to the children of Israel, saying: ANY MAN, WHEN [כִּי] he is IMPURE by a corpse, OR [אוֹ] on a DISTANT JOURNEY — for you or for your generations — he shall perform a Passover to the LORD.”</div>
+<div class="vnote">The same case syntax as Exodus: כִּי (“when”) opens, אוֹ (“or”) joins the second condition. And notice two things. First: “distant” carries NO NUMBER. Second: look closely at the Hebrew word רְחֹקָהׄ (“distant”) — there is a small dot above its last letter. That dot is in the scroll itself, one of fifteen such dotted spots in the whole Bible. Keep both observations; they meet in the Mishnah below.</div></div>
+
+<div class="verse"><div class="vref">Numbers 9:11 — the deferral branch's output</div>
+<div class="vhe" dir="rtl">בַּחֹדֶשׁ הַשֵּׁנִי בְּאַרְבָּעָה עָשָׂר יוֹם בֵּין הָעַרְבַּיִם יַעֲשׂוּ אֹתוֹ עַל מַצּוֹת וּמְרֹרִים יֹאכְלֻהוּ</div>
+<div class="ven">“In the SECOND month, on the fourteenth day, at twilight, they shall perform it; with unleavened bread and bitter herbs they shall eat it.”</div>
+<div class="vnote">The fix: a second Passover, one month after the first, same statutes — for exactly the two input classes the case raised.</div></div>
+
+<div class="verse"><div class="vref">Numbers 9:13 — the else-branch, closed explicitly</div>
+<div class="vhe" dir="rtl">וְהָאִישׁ אֲשֶׁר הוּא טָהוֹר וּבְדֶרֶךְ לֹא הָיָה וְחָדַל לַעֲשׂוֹת הַפֶּסַח וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא מֵעַמֶּיהָ כִּי קָרְבַּן יְהוָה לֹא הִקְרִיב בְּמֹעֲדוֹ חֶטְאוֹ יִשָּׂא הָאִישׁ הַהוּא</div>
+<div class="ven">“But the man who is PURE, and was NOT on a journey, and REFRAINS from performing the Passover — that soul shall be CUT OFF from its people; for he did not bring the LORD's offering at its appointed time; that man shall bear his sin.”</div>
+<div class="vnote">The negative branch: pure AND present AND refusing → the penalty. The exemptions bind only those who qualify for them.</div></div>
+
+<h3>Code versus data — the parameter with two recorded settings</h3>
+
+<div class="gap"><b>The gap:</b> the code says “a DISTANT journey” and
+never says how far <i>distant</i> is. Under this method that is not a
+defect — it is a <b>parameter</b>. The threshold is data. And the
+tradition preserves the data — with TWO recorded settings, names
+attached, plus a note hanging on that dot you saw in the ink:</div>
+
+<div class="verse mish"><div class="vref">Mishnah Pesachim 9:2 — quoted in full</div>
+<div class="vhe" dir="rtl">אֵיזוֹ הִיא דֶרֶךְ רְחוֹקָה, מִן הַמּוֹדִיעִים וְלַחוּץ, וּכְמִדָּתָהּ לְכָל רוּחַ, דִּבְרֵי רַבִּי עֲקִיבָא. רַבִּי אֱלִיעֶזֶר אוֹמֵר, מֵאַסְקֻפַּת הָעֲזָרָה וְלַחוּץ. אָמַר רַבִּי יוֹסֵי, לְפִיכָךְ נָקוּד עַל ה', לוֹמַר, לֹא מִפְּנֵי שֶׁרְחוֹקָה וַדַּאי, אֶלָּא מֵאִסְקֻפַּת הָעֲזָרָה וְלַחוּץ</div>
+<div class="ven">“What is a DISTANT JOURNEY? From [the town of] MODIIM and beyond, and the like of its measure in every direction — the words of Rabbi Akiva. Rabbi Eliezer says: from the THRESHOLD of the Temple courtyard and beyond. Said Rabbi Yosei: THEREFORE there is a DOT over the letter heh — to say: not because he is truly distant, but [even] from the threshold of the Temple courtyard and beyond.”</div>
+<div class="vnote">Everything about this paragraph is instructive. The code said “distant”; the data supplies the threshold — and preserves two settings of it (about fifteen miles, per Rabbi Akiva; one step outside the courtyard, per Rabbi Eliezer). And Rabbi Yosei reads the DOT in the ink of Numbers 9:10 as the annotation channel qualifying the parameter — the scroll's own footnote, processed by the tradition. Code in ink; quantities as data; even the annotation layer is real.</div></div>
+
+<h3>The run log — narrative grading itself against the code</h3>
+
+<p>Now the payoff. Roughly seven centuries after Numbers, the book of
+Chronicles — the Bible's own history log — records King Hezekiah
+restarting the Passover after a period of national neglect. Watch the
+log invoke the deferral branch, log its reasons, and then cite the
+written code by name when the run deviates:</p>
+
+<div class="verse"><div class="vref">2 Chronicles 30:2–3 — the deferral branch invoked at national scale</div>
+<div class="vhe" dir="rtl">וַיִּוָּעַץ הַמֶּלֶךְ וְשָׂרָיו וְכָל הַקָּהָל בִּירוּשָׁלִָם לַעֲשׂוֹת הַפֶּסַח בַּחֹדֶשׁ הַשֵּׁנִי׃ כִּי לֹא יָכְלוּ לַעֲשֹׂתוֹ בָּעֵת הַהִיא כִּי הַכֹּהֲנִים לֹא הִתְקַדְּשׁוּ לְמַדַּי וְהָעָם לֹא נֶאֶסְפוּ לִירוּשָׁלִָם</div>
+<div class="ven">“And the king took counsel, and his princes, and all the assembly in Jerusalem, to perform the Passover in the SECOND MONTH. For they could NOT perform it at that time, for the priests had not sanctified themselves in sufficient number, and the people had not gathered to Jerusalem.”</div>
+<div class="vnote">The second-month clause of Numbers 9:11, running — with the two disqualifying conditions (impurity, distance/absence) logged as the reasons. An execution record.</div></div>
+
+<div class="verse"><div class="vref">2 Chronicles 30:18–19 — the run log cites the source code</div>
+<div class="vhe" dir="rtl">כִּי מַרְבִּית הָעָם רַבַּת מֵאֶפְרַיִם וּמְנַשֶּׁה יִשָּׂשכָר וּזְבֻלוּן לֹא הִטֶּהָרוּ כִּי אָכְלוּ אֶת הַפֶּסַח בְּלֹא כַכָּתוּב כִּי הִתְפַּלֵּל יְחִזְקִיָּהוּ עֲלֵיהֶם לֵאמֹר יְהוָה הַטּוֹב יְכַפֵּר בְּעַד׃ כָּל לְבָבוֹ הֵכִין לִדְרוֹשׁ הָאֱלֹהִים ... וְלֹא כְּטָהֳרַת הַקֹּדֶשׁ</div>
+<div class="ven">“For a majority of the people — many from Ephraim and Manasseh, Issachar and Zebulun — had NOT purified themselves, yet they ate the Passover NOT AS IT IS WRITTEN [בְּלֹא כַכָּתוּב, be-lo kha-katuv]; but Hezekiah prayed for them, saying: may the good LORD atone for everyone who has set his whole heart to seek God … though not according to the purity of the sanctuary.”</div>
+<div class="vnote">Read that phrase again: <b>“not as it is WRITTEN.”</b> The history log measures its own run against the written code and stamps the deviation. This is what the narrative half of the Bible is doing all along: it is the runtime record, and it knows about the program.</div></div>
+
+<div class="verse"><div class="vref">2 Chronicles 30:20 — the deviation resolved out-of-band</div>
+<div class="vhe" dir="rtl">וַיִּשְׁמַע יְהוָה אֶל יְחִזְקִיָּהוּ וַיִּרְפָּא אֶת הָעָם</div>
+<div class="ven">“And the LORD listened to Hezekiah, and healed the people.”</div>
+<div class="vnote">The exception escalated past the law to the Author, and answered — logged as such.</div></div>
+
+<p>And the teaching layer <i>audits this very run</i>. Many centuries
+later still, the Talmud reviews Hezekiah's Passover as an edge case —
+opening its review by quoting the run log's own line:</p>
+
+<div class="verse tal"><div class="vref">Babylonian Talmud, Sanhedrin 12b:1, then 12b:8 — the audit</div>
+<div class="vhe" dir="rtl">כִּי אָכְלוּ אֶת הַפֶּסַח בְּלֹא כַכָּתוּב כִּי הִתְפַּלֵּל חִזְקִיָּהוּ עֲלֵיהֶם לֵאמֹר ה' הַטּוֹב יְכַפֵּר בְּעַד ... וְלֵית לֵיהּ לְחִזְקִיָּה הַחֹדֶשׁ הַזֶּה לָכֶם זֶה נִיסָן וְאֵין אַחֵר נִיסָן</div>
+<div class="ven">“‘For they ate the Passover not as it is written, for Hezekiah prayed for them, saying: may the good LORD atone…’ (2 Chronicles 30:18) … And did Hezekiah not hold [the rule of] ‘THIS month is for you’ (Exodus 12:2) — THIS one is Nisan, and no other is Nisan?”</div>
+<div class="vnote">The audit cross-examines the run against yet another book's code — the calendar rule of Exodus 12:2, quoted next — and records exactly which rule the king's ruling strained. Code, run log, and audit, all inside the one library.</div></div>
+
+<div class="verse"><div class="vref">Exodus 12:2 — the calendar rule the audit invoked</div>
+<div class="vhe" dir="rtl">הַחֹדֶשׁ הַזֶּה לָכֶם רֹאשׁ חֳדָשִׁים רִאשׁוֹן הוּא לָכֶם לְחָדְשֵׁי הַשָּׁנָה</div>
+<div class="ven">“THIS month is for you the head of months; FIRST it is for you of the months of the year.”</div>
+<div class="vnote">The clock-zero declaration of the whole legal calendar — the very first commandment given to the nation, and the rule Sanhedrin 12b holds Hezekiah's run against.</div></div>
+
+<div class="diagram"><svg viewBox="0 0 840 190" font-family="Georgia,serif">
+<defs><marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6e5417"/></marker></defs>
+<rect x="20" y="40" width="230" height="110" rx="10" fill="#fffdf6" stroke="#6e5417" stroke-width="2"/>
+<text x="135" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#6e5417">THE CODE</text>
+<text x="135" y="90" text-anchor="middle" font-size="11.5" fill="#33302a">Numbers 9:10–13</text>
+<text x="135" y="108" text-anchor="middle" font-size="11" fill="#57503f">the deferral branch;</text>
+<text x="135" y="124" text-anchor="middle" font-size="11" fill="#57503f">“distant” left as a parameter</text>
+<rect x="305" y="40" width="230" height="110" rx="10" fill="#fffdf6" stroke="#8a6d2f" stroke-width="2"/>
+<text x="420" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#8a6d2f">THE RUN LOG</text>
+<text x="420" y="90" text-anchor="middle" font-size="11.5" fill="#33302a">2 Chronicles 30 — ~7 centuries on</text>
+<text x="420" y="108" text-anchor="middle" font-size="11" fill="#57503f">branch invoked nationally; deviation</text>
+<text x="420" y="124" text-anchor="middle" font-size="11" fill="#57503f">stamped “NOT AS WRITTEN”</text>
+<rect x="590" y="40" width="230" height="110" rx="10" fill="#fffdf6" stroke="#2f5d8a" stroke-width="2"/>
+<text x="705" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#2f5d8a">THE AUDIT</text>
+<text x="705" y="90" text-anchor="middle" font-size="11.5" fill="#33302a">Sanhedrin 12b — centuries later still</text>
+<text x="705" y="108" text-anchor="middle" font-size="11" fill="#57503f">the run reviewed against</text>
+<text x="705" y="124" text-anchor="middle" font-size="11" fill="#57503f">Exodus 12:2's calendar rule</text>
+<line x1="250" y1="95" x2="300" y2="95" stroke="#6e5417" stroke-width="2" marker-end="url(#ar3)"/>
+<line x1="535" y1="95" x2="585" y2="95" stroke="#6e5417" stroke-width="2" marker-end="url(#ar3)"/>
+<text x="420" y="175" text-anchor="middle" font-size="12" fill="#57503f" font-style="italic">One law, three layers of the library — and every layer cites the layer before it.</text>
+</svg></div>
+
+<h2><span class="partno">PART 7</span>A gallery of code shapes</h2>
+
+<p>The three worked examples showed a branching function, a timer with
+an interrupt, and a parameterized branch with its run log. The law
+holds many more shapes a programmer will recognize on sight. Each card
+below quotes its source in full.</p>
+
+<div class="shape"><h4>The state machine — the goring ox (Exodus 21:35–36)</h4>
+<div class="vhe" dir="rtl">וְכִי יִגֹּף שׁוֹר אִישׁ אֶת שׁוֹר רֵעֵהוּ וָמֵת וּמָכְרוּ אֶת הַשּׁוֹר הַחַי וְחָצוּ אֶת כַּסְפּוֹ וְגַם אֶת הַמֵּת יֶחֱצוּן׃ אוֹ נוֹדַע כִּי שׁוֹר נַגָּח הוּא מִתְּמוֹל שִׁלְשֹׁם וְלֹא יִשְׁמְרֶנּוּ בְּעָלָיו שַׁלֵּם יְשַׁלֵּם שׁוֹר תַּחַת הַשּׁוֹר וְהַמֵּת יִהְיֶה לּוֹ</div>
+<div class="ven">“And WHEN a man's ox strikes his fellow's ox and it dies — they shall SELL the live ox and SPLIT its money, and the dead one they shall also split. OR IT IS KNOWN that it is a GORING ox FROM YESTERDAY AND THE DAY BEFORE [מִתְּמֹל שִׁלְשֹׁם, mi-temol shilshom], and its owner has not guarded it — he shall SURELY PAY ox for ox, and the dead one shall be his.”</div>
+<div class="vnote">An ox carries a state variable with two values — the tradition names them תָּם (<i>tam</i>, “innocuous”: half damages, paid only out of the ox's own body) and מוּעָד (<i>mu'ad</i>, “forewarned”: full damages). The transition threshold is encoded in the verse's own time-words, and the Talmud records two named tokenizations of them — Babylonian Talmud Bava Kamma 23b:17–18: <span class="vhe">אמר אביי תמול חד מתמול תרי שלשום תלתא ולא ישמרנו בעליו אתאן לנגיחה רביעית — רבא אמר תמול מתמול חד שלשום תרי ולא ישמרנו האידנא חייב</span> — “Abaye said: ‘yesterday’ — one; ‘from yesterday’ — two; ‘the day before’ — three; and ‘its owner does not guard it’ — we arrive at the FOURTH goring [as the liable one]. Rava said: ‘from yesterday’ — one; ‘the day before’ — two; ‘and its owner does not guard it’ — NOW [at the third] he is liable.” Two engineers parsing the same tokens for the counter, dispute preserved. The answer sheet even records the reverse transition — Mishnah Bava Kamma 2:4: <span class="vhe">אֵיזֶה הוּא תָם וְאֵיזֶה הוּא מוּעָד. מוּעָד כֹּל שֶׁהֵעִידוּ בוֹ שְׁלשָׁה יָמִים. וְתָם מִשֶּׁיַּחֲזֹר בּוֹ שְׁלשָׁה יָמִים, דִּבְרֵי רַבִּי יְהוּדָה. רַבִּי מֵאִיר אוֹמֵר, מוּעָד שֶׁהֵעִידוּ בוֹ שָׁלשׁ פְּעָמִים. וְתָם כֹּל שֶׁיְּהוּ הַתִּינוֹקוֹת מְמַשְׁמְשִׁין בּוֹ וְאֵינוֹ נוֹגֵחַ</span> — “Which is innocuous and which forewarned? Forewarned — any that witnesses testified about on three days; and it returns to innocuous once it holds back three days — the words of Rabbi Yehuda. Rabbi Meir says: forewarned — that they testified about three TIMES; and innocuous — any that children handle and it does not gore.” A state machine with a forward transition, a threshold, and a decay transition.</div></div>
+
+<div class="shape"><h4>The class hierarchy — the four damages (Mishnah Bava Kamma 1:1)</h4>
+<div class="vhe" dir="rtl">אַרְבָּעָה אֲבוֹת נְזִיקִין, הַשּׁוֹר וְהַבּוֹר וְהַמַּבְעֶה וְהַהֶבְעֵר. לֹא הֲרֵי הַשּׁוֹר כַּהֲרֵי הַמַּבְעֶה, וְלֹא הֲרֵי הַמַּבְעֶה כַּהֲרֵי הַשּׁוֹר. וְלֹא זֶה וָזֶה שֶׁיֵּשׁ בָּהֶן רוּחַ חַיִּים, כַּהֲרֵי הָאֵשׁ שֶׁאֵין בּוֹ רוּחַ חַיִּים. וְלֹא זֶה וָזֶה שֶׁדַּרְכָּן לֵילֵךְ וּלְהַזִּיק, כַּהֲרֵי הַבּוֹר שֶׁאֵין דַּרְכּוֹ לֵילֵךְ וּלְהַזִּיק. הַצַּד הַשָּׁוֶה שֶׁבָּהֶן, שֶׁדַּרְכָּן לְהַזִּיק וּשְׁמִירָתָן עָלֶיךָ. וּכְשֶׁהִזִּיק, חָב הַמַּזִּיק לְשַׁלֵּם תַּשְׁלוּמֵי נֶזֶק בְּמֵיטַב הָאָרֶץ</div>
+<div class="ven">“FOUR primary categories [אֲבוֹת, avot — literally ‘fathers’] of damage: the OX, the PIT, the GRAZER, and the FIRE. The ox's defining trait is not like the grazer's, nor the grazer's like the ox's; nor are these two, which have living spirit, like the FIRE, which has no living spirit; nor are all these, whose way is to go forth and damage, like the PIT, whose way is not to go forth. The COMMON trait: their way is to damage, and their safekeeping is upon you — and when one damages, the damager is bound to pay from the best of the land.”</div>
+<div class="vnote">The Mishnah's module map is the code's case list: the ox (Exodus 21:35 — quoted in the card above), the pit (21:33: <span class="vhe">וְכִי יִפְתַּח אִישׁ בּוֹר אוֹ כִּי יִכְרֶה אִישׁ בֹּר וְלֹא יְכַסֶּנּוּ וְנָפַל שָׁמָּה שּׁוֹר אוֹ חֲמוֹר</span> — “And when a man opens a pit, or when a man digs a pit and does not cover it, and an ox or a donkey falls in…”), the grazer (22:4: <span class="vhe">כִּי יַבְעֶר אִישׁ שָׂדֶה אוֹ כֶרֶם וְשִׁלַּח אֶת בְּעִירוֹ וּבִעֵר בִּשְׂדֵה אַחֵר מֵיטַב שָׂדֵהוּ וּמֵיטַב כַּרְמוֹ יְשַׁלֵּם</span> — “When a man causes a field or vineyard to be grazed, sending his beast to graze in another's field — from the BEST of his field and the best of his vineyard he shall pay”), and the fire (22:5: <span class="vhe">כִּי תֵצֵא אֵשׁ וּמָצְאָה קֹצִים וְנֶאֱכַל גָּדִישׁ אוֹ הַקָּמָה אוֹ הַשָּׂדֶה שַׁלֵּם יְשַׁלֵּם הַמַּבְעִר אֶת הַבְּעֵרָה</span> — “When FIRE goes out and finds thorns, and a stack or the standing grain or the field is consumed — the kindler of the fire shall surely pay”). Four consecutive כִּי (“when”) cases in the code; four “fathers” in the answer sheet — and the word “fathers” implies offspring: the Talmud's opening pages sort which derivative damages inherit which parent's rules. A class hierarchy with inheritance and a shared interface (their way is to damage; you must guard; damager pays from the best), argued in the tradition's own vocabulary.</div></div>
+
+<div class="shape"><h4>The bounded loop — the skin examination (Leviticus 13:4–6)</h4>
+<div class="vhe" dir="rtl">וְאִם בַּהֶרֶת לְבָנָה הִוא בְּעוֹר בְּשָׂרוֹ ... וְהִסְגִּיר הַכֹּהֵן אֶת הַנֶּגַע שִׁבְעַת יָמִים׃ וְרָאָהוּ הַכֹּהֵן בַּיּוֹם הַשְּׁבִיעִי וְהִנֵּה הַנֶּגַע עָמַד בְּעֵינָיו לֹא פָשָׂה הַנֶּגַע בָּעוֹר וְהִסְגִּירוֹ הַכֹּהֵן שִׁבְעַת יָמִים שֵׁנִית׃ וְרָאָה הַכֹּהֵן אֹתוֹ בַּיּוֹם הַשְּׁבִיעִי שֵׁנִית וְהִנֵּה כֵּהָה הַנֶּגַע ... וְטִהֲרוֹ הַכֹּהֵן</div>
+<div class="ven">“And IF it is a white spot on the skin of his flesh [and the malignancy signs are absent] — the priest shall QUARANTINE the mark SEVEN DAYS. And the priest shall see him on the seventh day, and behold, the mark has stood unchanged, not spread in the skin — the priest shall quarantine him seven days A SECOND TIME [שֵׁנִית, shenit]. And the priest shall see him on the seventh day A SECOND TIME, and behold, the mark has faded … the priest shall pronounce him PURE.”</div>
+<div class="vnote">A diagnostic algorithm: examine; on inconclusive → wait seven days; re-examine; at most one more pass — and the loop's iteration counter, the word שֵׁנִית (“a second time”), is written in the ink, twice. Bounded at two passes, with a re-entry guard right after (13:7–8: if it spreads after the release, back to impure). The Mishnah's tractate Negaim (“Marks”) is this function's answer sheet.</div></div>
+
+<div class="shape"><h4>The access list — consulting the oracle (Mishnah Yoma 7:5)</h4>
+<div class="vhe" dir="rtl">כֹּהֵן גָּדוֹל מְשַׁמֵּשׁ בִּשְׁמֹנָה כֵלִים. וְהַהֶדְיוֹט בְּאַרְבָּעָה, בְּכֻתֹּנֶת וּמִכְנָסַיִם וּמִצְנֶפֶת וְאַבְנֵט. מוֹסִיף עָלָיו כֹּהֵן גָּדוֹל, חשֶׁן וְאֵפוֹד וּמְעִיל וָצִיץ. בְּאֵלּוּ נִשְׁאָלִין בְּאוּרִים וְתֻמִּים. וְאֵין נִשְׁאָלִין אֶלָּא לַמֶּלֶךְ וּלְבֵית דִּין וּלְמִי שֶׁהַצִּבּוּר צָרִיךְ בּוֹ</div>
+<div class="ven">“The High Priest serves in EIGHT garments, the common priest in four: tunic, breeches, mitre, and sash. The High Priest adds the breastplate, the apron, the robe, and the frontplate. IN THESE the Urim and Tummim [the breastplate oracle of Exodus 28] are consulted — and they are consulted ONLY for the KING, for the COURT, and for one whom the COMMUNITY needs.”</div>
+<div class="vnote">An interface with an authorization layer: the oracle answers only in the full vestment configuration, and only for three privileged caller classes. The vestments themselves are Exodus 28's code; the answer sheet supplies the access-control table.</div></div>
+
+<div class="shape"><h4>The language manual — the tradition documents the keywords themselves</h4>
+<div class="vhe" dir="rtl">דְּאָמַר רֵישׁ לָקִישׁ כִּי מְשַׁמֵּשׁ בְּאַרְבַּע לְשׁוֹנוֹת אִי דִּלְמָא אֶלָּא דְּהָא</div>
+<div class="ven">“As Reish Lakish said: כִּי [ki] serves in FOUR language-senses: ‘if,’ ‘perhaps,’ ‘rather,’ ‘because.’” (Babylonian Talmud, Gittin 90a)</div>
+<div class="vnote">The case-opener keyword is overloaded — sometimes כִּי means “because,” not “when” — and the teaching layer maintains exactly the dictionary entry a parser needs. It does the same for the branch keyword, with a corpus-wide census — Mekhilta of Rabbi Yishmael (the earliest law-commentary on Exodus), on Exodus 20:22: <span class="vhe">רבי ישמעאל אומר, כל אם שבתורה רשות חוץ משלשה</span> — “Rabbi Yishmael says: every אִם (‘if’) in the Torah connotes the OPTIONAL — except THREE,” and it enumerates the three mandatory ones (the firstfruits offering of Leviticus 2:14, the lending of Exodus 22:24, and the stone altar of Exodus 20:22 itself, each proven in place). A keyword census with its exceptions listed: that is what a language manual is.</div></div>
+
+<div class="shape"><h4>Effects — every verdict writes a ledger</h4>
+<div class="ven">Look back at the outputs of every law on this page: “he shall PAY double” (Exodus 22:6) — a debt entry. “He shall GO OUT FREE” (21:2) — a status change. “That soul shall be CUT OFF” (Numbers 9:13) — an entry on Heaven's docket, no earthly court involved. “You shall RETURN every man to his holding” (Leviticus 25:10) — a mass transfer on a timer.</div>
+<div class="vnote">The verdicts' verbs are the simulation's effect vocabulary — discovered in the ink, never designed. When the machine runs a case, the verdict writes the LEDGER — debts, statuses, running clocks — and never invents an event: obligations are computed; acts come only from the text. That discipline is what turns a pile of graded functions into a running world.</div></div>
+
+<h2><span class="partno">PART 8</span>The interconnected program — one law compiled through another book</h2>
+
+<p>You have already seen a cross-book interrupt (the Jubilee) and a
+cross-book audit (Chronicles graded against Exodus's calendar). Now
+the deepest case on this page: a famous Exodus law whose actual meaning
+is <b>compiled through a clause in Leviticus</b>. Here is the Exodus
+text everyone has heard quoted:</p>
+
+<div class="verse"><div class="vref">Exodus 21:23–25 — “an eye for an eye”</div>
+<div class="vhe" dir="rtl">וְאִם אָסוֹן יִהְיֶה וְנָתַתָּה נֶפֶשׁ תַּחַת נָפֶשׁ׃ עַיִן תַּחַת עַיִן שֵׁן תַּחַת שֵׁן יָד תַּחַת יָד רֶגֶל תַּחַת רָגֶל׃ כְּוִיָּה תַּחַת כְּוִיָּה פֶּצַע תַּחַת פָּצַע חַבּוּרָה תַּחַת חַבּוּרָה</div>
+<div class="ven">“But IF there is a fatality — you shall give LIFE FOR LIFE. EYE for eye, TOOTH for tooth, HAND for hand, FOOT for foot; burn for burn, wound for wound, bruise for bruise.”</div>
+<div class="vnote">Read alone, it sounds like mirror-image retaliation. The tradition has always ruled it as monetary compensation — the value of the eye, assessed and paid. Is that a dodge? Watch where the ruling actually comes from.</div></div>
+
+<p>The derivation lives in Leviticus 24 — a passage that restates the
+injury laws and, crucially, sets human injury right next to animal
+injury and closes with an equality clause:</p>
+
+<div class="verse"><div class="vref">Leviticus 24:17–22 — the parallel passage, in full</div>
+<div class="vhe" dir="rtl">וְאִישׁ כִּי יַכֶּה כָּל נֶפֶשׁ אָדָם מוֹת יוּמָת׃ וּמַכֵּה נֶפֶשׁ בְּהֵמָה יְשַׁלְּמֶנָּה נֶפֶשׁ תַּחַת נָפֶשׁ׃ וְאִישׁ כִּי יִתֵּן מוּם בַּעֲמִיתוֹ כַּאֲשֶׁר עָשָׂה כֵּן יֵעָשֶׂה לּוֹ׃ שֶׁבֶר תַּחַת שֶׁבֶר עַיִן תַּחַת עַיִן שֵׁן תַּחַת שֵׁן כַּאֲשֶׁר יִתֵּן מוּם בָּאָדָם כֵּן יִנָּתֶן בּוֹ׃ וּמַכֵּה בְהֵמָה יְשַׁלְּמֶנָּה וּמַכֵּה אָדָם יוּמָת׃ מִשְׁפַּט אֶחָד יִהְיֶה לָכֶם כַּגֵּר כָּאֶזְרָח יִהְיֶה כִּי אֲנִי יְהוָה אֱלֹהֵיכֶם</div>
+<div class="ven">“And a man, WHEN he strikes down any human life — he shall surely be put to death. And one who strikes down the life of a BEAST shall PAY for it — life for life. And a man, WHEN he gives a blemish to his fellow — as he did, so shall be done to him: break for break, EYE FOR EYE, tooth for tooth; as he gives a blemish to a person, so shall it be given in him. And one who strikes a BEAST shall PAY for it, and one who strikes a MAN shall be put to death. ONE LAW [מִשְׁפַּט אֶחָד, mishpat echad] shall there be for you — as the stranger, as the native — for I am the LORD your God.”</div>
+<div class="vnote">Notice the structure: “eye for eye” restated — sandwiched between two verses about paying for a struck BEAST, each using the same striking-verb — and closed by “one law for all.” The tradition reads that structure as an executable instruction:</div></div>
+
+<div class="verse tal"><div class="vref">Babylonian Talmud, Bava Kamma 83b:8 — the verbal analogy</div>
+<div class="vhe" dir="rtl">לא סלקא דעתך דתניא יכול סימא את עינו מסמא את עינו קטע את ידו מקטע את ידו שיבר את רגלו משבר את רגלו ת"ל מכה אדם ומכה בהמה מה מכה בהמה לתשלומין אף מכה אדם לתשלומין</div>
+<div class="ven">“It cannot enter your mind [that it is literal], as it is taught: you might think — he blinded his eye, we blind his eye; severed his hand, we sever his hand; broke his leg, we break his leg. The verse teaches: ‘one who strikes a MAN’ and ‘one who strikes a BEAST’ (Leviticus 24:21) — just as the striker of a beast is for PAYMENT, so the striker of a man is for PAYMENT.”</div>
+<div class="vnote">The compile move is the verse's own juxtaposition: the two strike-clauses share a verb, and the beast-clause explicitly says PAY — so the shared verb carries the payment semantics into the human clause. Exodus's line is being compiled through Leviticus's ink.</div></div>
+
+<div class="verse tal"><div class="vref">Bava Kamma 84a:2 — the equality clause seals it</div>
+<div class="vhe" dir="rtl">רבי שמעון בן יוחי אומר עין תחת עין ממון אתה אומר ממון או אינו אלא עין ממש הרי שהיה סומא וסימא קיטע וקיטע חיגר וחיגר היאך אני מקיים בזה עין תחת עין והתורה אמרה משפט אחד יהיה לכם משפט השוה לכולכם</div>
+<div class="ven">“Rabbi Shimon ben Yochai says: ‘eye for eye’ — MONEY. You say money — or is it nothing but an actual eye? Consider: a BLIND man who blinded, an amputee who severed, a lame man who made lame — how do I fulfill ‘eye for eye’ in such a case? And the Torah said: ‘ONE LAW shall there be for you’ (Leviticus 24:22) — a law EQUAL for all of you.”</div>
+<div class="vnote">Literal retaliation cannot execute uniformly — the blind attacker has no eye to take, and one man's eye is not another's (Rabbi Dostai ben Yehuda, on the same page, argues from the large eye and the small eye). Only monetary valuation satisfies “one law for all” on every input. In programming terms: the literal reading fails the equality constraint declared at Leviticus 24:22; the payment reading is the only implementation that passes. So the true meaning of the Exodus verse is not IN the Exodus verse — it is a measured compile dependency on another book.</div></div>
+
+<h3>The import graph — what this page has actually drawn</h3>
+
+<p>Every example above put an edge on the same picture. This is the
+page's own map — every edge on it was quoted and argued above, and the
+full measured graph across the corpus holds many more:</p>
+
+<div class="diagram"><svg viewBox="0 0 840 380" font-family="Georgia,serif">
+<defs><marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#a33b1f"/></marker></defs>
+<!-- book nodes -->
+<rect x="30" y="60" width="150" height="160" rx="10" fill="#fffdf6" stroke="#6e5417" stroke-width="2"/>
+<text x="105" y="86" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#6e5417">EXODUS</text>
+<text x="105" y="112" text-anchor="middle" font-size="11" fill="#33302a">12:2 the calendar zero</text>
+<text x="105" y="134" text-anchor="middle" font-size="11" fill="#33302a">21:2–6 the slave clock</text>
+<text x="105" y="156" text-anchor="middle" font-size="11" fill="#33302a">21:24 “eye for eye”</text>
+<text x="105" y="178" text-anchor="middle" font-size="11" fill="#33302a">22:6–14 the guardians</text>
+<rect x="250" y="60" width="150" height="160" rx="10" fill="#fffdf6" stroke="#6e5417" stroke-width="2"/>
+<text x="325" y="86" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#6e5417">LEVITICUS</text>
+<text x="325" y="112" text-anchor="middle" font-size="11" fill="#33302a">13 the diagnostic loop</text>
+<text x="325" y="134" text-anchor="middle" font-size="11" fill="#33302a">24:17–22 “one law”</text>
+<text x="325" y="156" text-anchor="middle" font-size="11" fill="#33302a">25:10 the Jubilee</text>
+<rect x="470" y="60" width="150" height="160" rx="10" fill="#fffdf6" stroke="#6e5417" stroke-width="2"/>
+<text x="545" y="86" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#6e5417">NUMBERS</text>
+<text x="545" y="112" text-anchor="middle" font-size="11" fill="#33302a">9:10–13 the second</text>
+<text x="545" y="130" text-anchor="middle" font-size="11" fill="#33302a">Passover branch</text>
+<text x="545" y="152" text-anchor="middle" font-size="11" fill="#33302a">(with its dotted letter)</text>
+<rect x="690" y="60" width="130" height="160" rx="10" fill="#fffdf6" stroke="#8a6d2f" stroke-width="2"/>
+<text x="755" y="86" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#8a6d2f">2 CHRONICLES</text>
+<text x="755" y="112" text-anchor="middle" font-size="11" fill="#33302a">30: Hezekiah's</text>
+<text x="755" y="130" text-anchor="middle" font-size="11" fill="#33302a">Passover — the</text>
+<text x="755" y="148" text-anchor="middle" font-size="11" fill="#33302a">run log: “not as</text>
+<text x="755" y="166" text-anchor="middle" font-size="11" fill="#33302a">it is written”</text>
+<!-- edges -->
+<path d="M 180 150 Q 215 130 250 148" fill="none" stroke="#a33b1f" stroke-width="2.5" marker-end="url(#ar4)"/>
+<text x="215" y="122" text-anchor="middle" font-size="10.5" fill="#a33b1f">“forever” scoped by the Jubilee</text>
+<path d="M 180 170 Q 215 195 250 172" fill="none" stroke="#a33b1f" stroke-width="2.5" marker-end="url(#ar4)"/>
+<text x="215" y="212" text-anchor="middle" font-size="10.5" fill="#a33b1f">eye-for-eye compiled as payment</text>
+<path d="M 620 140 Q 655 125 690 140" fill="none" stroke="#8a6d2f" stroke-width="2.5" marker-end="url(#ar4)"/>
+<text x="655" y="117" text-anchor="middle" font-size="10.5" fill="#8a6d2f">run cites code</text>
+<path d="M 740 220 Q 430 330 110 222" fill="none" stroke="#2f5d8a" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ar4)"/>
+<text x="425" y="316" text-anchor="middle" font-size="10.5" fill="#2f5d8a">the audit: Sanhedrin 12b grades the run against Exodus 12:2</text>
+<text x="420" y="360" text-anchor="middle" font-size="12" fill="#57503f" font-style="italic">No book is an island: the meaning of a clause routinely lives in a different book — and the tradition documents each edge.</text>
+</svg></div>
+
+<p>How are these edges found? From both directions. Walking the
+<b>scroll</b>, you compile each span in order and hit imports (the
+guardians' hire-clause). Walking the <b>Talmud</b>, each case
+discussion names its verse list across all the books — a test's
+dependency closure — and a verse from a book you haven't compiled yet
+is an arrow telling you the program is bigger than the page you are
+on. Leviticus 24 became a compile dependency of Exodus 21 exactly this
+way — discovered from the tests, before the walk ever reached it. Run
+this over the whole library and the 24 books stop looking like an
+anthology and start looking like what the tradition always called
+them: one Torah — one interconnected program, with its histories as
+the run log and its prophets, as we are beginning to measure, reading
+entries off the very ledger this machine computes.</p>
+
+<h2><span class="partno">PART 9</span>What is honestly claimed, and what comes next</h2>
+
+<div class="box"><b>What is mechanical and what is not — on the record.</b>
+The keyword parse, the token extraction, and the grading runs are fully
+mechanical, and the graded scores (the guardians' 12/12 among them) are
+real program output, reproducible from the files. The compile moves are
+hand-encoded <i>replays</i> of the Talmud's recorded arguments — the
+machine executes the tradition's logic; it does not discover it. That
+is exactly the claim under test: not that a computer invents the law,
+but that the written books carry a real program, and the tradition's
+recorded reasoning is that program's engineering documentation —
+precise enough to execute. Every quotation on this page was pulled from
+the source texts at the letter; every derived cell carries its source;
+nothing on this page was invented to make the story better — the
+disagreements you saw preserved (the hirer's routing, the ox's counter)
+are carried in the code as disagreements, both arms labeled.</div>
+
+<p><b>Where this goes.</b> The method scales exactly the way you would
+guess: walk the scroll span by span, compile every law into an
+effect-bearing function, let the Mishnah's thousands of decided cases
+grade each one, and let every miss send you to the Talmud's recorded
+argument for that gap. Each verdict writes a ledger over the world the
+narrative supplies — debts, statuses, running clocks. And then the
+question this whole workshop is built to ask: run that ledger across
+the entire Hebrew Bible's run log, and see whether the prophets'
+indictments match the entries the law had already computed as open.
+Nobody has ever computed that. The books are waiting; the method is on
+this page.</p>
+
+<hr>
+<p class="tiny">The workshop behind <b>torahsimulation.org</b> · every
+Hebrew and Aramaic quotation pulled at the letter from the
+Westminster-Leningrad text of the Bible and the standard text of the
+Mishnah and Babylonian Talmud · the runnable machines referenced here
+(the guardians' cold run, the world engine, the exam harness) live in
+the project tree · 2026-09-04</p>
+</main>
+</html>

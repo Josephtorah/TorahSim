@@ -1285,3 +1285,200 @@ checked so far agrees with the ink it teaches.
 | 2:1 | וַיְכֻלּוּ ('and they WERE FINISHED') — passive, the week's first agentless main-line event | **K** — consonants ויכלו allow active-intransitive 'and they ended' vs passive 'were completed' — same world state either way, but the VOICE is settled only by a witness: Onkelos וְאִשְׁתַּכְלָלוּ ('and they were completed'), passive. The one fact in 38 where the deciding witness is external |
 | 2:2 | וַיְכַל ('and God FINISHED') — active, dated inside day seven | **X** — subject אלהים + object מלאכתו decide active; Onkelos: וְשֵׁיצֵי ('and He finished'), active, confirms |
 | 2:2 | וַיִּשְׁבֹּת ('and He CEASED') — narrative past | **C** — letter-visible |
+
+## THE SCROLL BREAKS AS FUNCTION BOUNDARIES — the measured coincidence
+## (2026-09-04, owner: "I like this description. Lets record it...
+## for epub tutorial purposes" — written as tutorial-ready prose)
+
+WHAT THE BREAKS ARE. Every Torah scroll carries two kinds of
+paragraph mark, written as blank space and copied scribe to scribe
+as part of the received text: פ (petuchah, an "open" break — the
+rest of the line left empty) and ס (setumah, a "closed" break — a
+gap inside the line). They are far older than chapter numbers
+(those are medieval additions); a scroll written with the wrong
+breaks is unfit. The tradition treats the spacing as ink.
+
+THE MEASURED COINCIDENCE (verified live 2026-09-04 from the marks
+table of elijah_docket/tanakh.sqlite — kinds x-samekh / x-pe, mark
+recorded after its verse). The breaks around the keeper laws fall
+after Exod 22:5, after 22:8 (both ס), and after 22:12 (a פ). So
+the scroll's own segmentation of Exodus 22:6-14 is:
+
+  22:6-8    money/vessels deposited; theft; double payment; the
+            oath                    = the UNPAID CUSTODIAN
+  22:9-12   an animal deposited — death, injury, capture; the
+            oath; restitution if stolen = the PAID CUSTODIAN
+  22:13-14  the borrowed animal — full liability; the hire clause
+            riding 22:14b           = the BORROWER
+
+Babylonian Talmud Bava Metzia 94b divides the span into exactly
+these three sections — "the first section... the second... the
+third" — and Mishnah Shevuot 8:1's four-guardian grid runs on that
+division, the renter routed from the hire clause the third section
+ends with. THREE INDEPENDENT WITNESSES agree on the same cuts:
+
+  1. the scroll's SPACING (the פ/ס marks, verified above);
+  2. the grammar's verse-initial כִּי ("when") at 22:6, 22:9,
+     22:13 — which the cold-compiled guardians function found with
+     NO tradition loaded (cold_run_guardians.py);
+  3. the Talmud's NAMED sections at Bava Metzia 94b.
+
+AND IT GOES FINER. Immediately before this span the marks table
+shows breaks after 21:32, 21:34, 21:36, 22:3, 22:4, 22:5 — the
+goring ox, the pit, the grazing beast, the fire are each their own
+tiny paragraph. The scroll does not just separate the keepers from
+the damages; it gives EACH damage law its own function body.
+
+THE TRADITION'S OWN THEORY OF THE BREAKS is on the corpus record:
+the Sifra's charter (witnessed in the Vayikra round, the
+reflection-pauses rows) says the breaks exist "to give pause to
+reflect between passage and passage" — the text declaring its own
+segmentation intentional. The corpus has even witnessed a law
+CARRIED BY a break: the goat paragraph's hiatus holding the
+no-fat-tail exemption (the Tzav-era reading).
+
+CLASSIFICATION FOR THIS LOG: CODE-IN-INK — the program's block
+structure (its function boundaries) is written in the scroll's own
+layout, detectable by machine, confirmed by the Talmud's usage.
+
+HONESTY LINE: this is "where measured," not a proven universal.
+The verified case is the keeper span plus the fine-grained damages
+run before it. The OPEN RESEARCH BLOCK this entry proposes: a
+systematic sweep — every sugya's span boundaries against every
+פ/ס break in the law chapters — the marks table makes it cheap.
+
+THE OWNER'S ANALOGY FOR THIS ENTRY (2026-09-04): black fire on
+white fire — אֵשׁ שְׁחוֹרָה עַל גַּבֵּי אֵשׁ לְבָנָה ("black fire
+upon white fire," Jerusalem Talmud Shekalim 6:1; Midrash Tanchuma;
+Nachmanides' introduction). The tradition's own image of the
+pre-Sinai Torah: letters of black fire on a ground of white fire.
+This entry is that image measured: the white space IS text — the
+breaks copied as ink, a wrong-spaced scroll unfit, the blank after
+22:12 carrying the information "the borrower's function begins
+here." BLACK FIRE = the program's content; WHITE FIRE = its
+structure. Nachmanides' rider deepens it: written unbroken the
+Torah reads as divine names — the division into words and
+paragraphs is itself an act of reading. The white fire is where
+the parsing lives.
+
+THE SYSTEM-WIDE SWEEP (2026-09-04, owner: "can you do that now") —
+the proposed measurement RUN, whole Torah, both directions. Zero-
+report law honored: the keeper-case probes (breaks after Exod
+22:5/8/12; paragraph starts at 22:6/9/13; the ki-openers there)
+all fired before any counting. One instrument bug caught by the
+probe itself: the words table writes prefixes with a slash
+(ו/כי for וְכִי "and when") — the opener test missed conjunction-
+prefixed forms until normalized. The probe caught it; the false
+zero never reached the report.
+
+TEST A — THE INK-ONLY SKELETON TEST. All 5,853 Torah verses; 686
+verses carry a פ/ס break after them (11.7%); 691 verses begin a
+paragraph (11.8% — the 686 plus the five book openings, the
+arithmetic's own check). Of the 231 verses opening with כי/וכי
+("when"), 76 begin a paragraph — 32.9% against the 11.8% base:
+LIFT x2.8. Of the 157 opening with אם/ואם ("if"), only 25 do —
+15.9%, lift x1.3, barely above chance. THE WEAK IM RESULT IS
+ITSELF A CONFIRMATION: the compiler law says ki OPENS a case and
+im branches INSIDE it — and the scroll's own layout agrees,
+putting breaks before the ki-verses and not before the im-verses.
+The two markers behave differently against the white fire, exactly
+as the two-level grammar predicts.
+
+PER BOOK, the lift lives where the law lives: Genesis 0/30 (its
+ki-verses are narrative "when," never paragraph heads), Numbers
+x0.3 (same), but Exodus x2.2, Leviticus x2.0, Deuteronomy x2.4 —
+the three law-dense books. The signal is a LAW-genre phenomenon:
+in narrative, ki is a conjunction; in law, it is a function
+header, and the scroll spaces accordingly.
+
+TEST B — THE TALMUD WORKING-SPAN TEST. From the citation-links
+shelf, Babylonian Talmud tractates only (16,290 links used; 37,101
+dropped openly — commentaries, non-Torah anchors, unparsed refs);
+3,456 dafs grouped; 594 contiguous cited runs of three-plus verses
+(gap tolerance one verse) — the tradition's working spans. Run
+STARTS land on paragraph starts 135/594 (22.7%, lift x1.93); run
+ENDS land on break-carrying verses 131/594 (22.1%, lift x1.88).
+Roughly double chance, both edges, across the whole shelf. Probe:
+Bava Metzia 94b's detected run is Exod 22:9-13, starting on the
+paragraph start at 22:9 — the run misses 22:6-8 because the daf's
+citations there sit sparse in the links shelf: the instrument is
+crude (daf-grain, citation-density-dependent), and the x1.9 is
+therefore a FLOOR, not a ceiling.
+
+VERDICT FOR THE LOG: the deterministic claim ("every sugya
+boundary is a break") is NOT what the Torah-wide data shows — the
+relationship is statistical: x2.8 for the ink's own function
+headers in the law books, x1.9 for the Talmud's working spans at
+a crude grain, both far beyond chance (Test A: 76 hits where
+chance expects 27; Test B: 135 where chance expects 70).
+CLASSIFICATION: CODE-IN-INK, measured — the scroll's white fire
+carries real block structure, strongest exactly where the text is
+law; the perfect coincidences (the keeper span) are the clean
+cases of a genuinely statistical signal. NEXT INSTRUMENT if
+wanted: sugya-grain spans (segment ranges, not daf-grain) from
+the triage ledgers' own dockets — the campaign is building that
+list block by block.
+
+THE DETERMINISTIC DIRECTION RUN (2026-09-04, owner's challenge:
+"it should be 100 percent when the mishnah function needs it...
+Am I misunderstanding?"). The owner was right and the earlier
+statistics were measuring the WRONG DIRECTION through a blurry
+instrument. The refined test: enumerate EVERY break in the
+ordinances code (Exod 21:1-23:19) and ask of each — does a
+distinct legal unit begin here? RESULT: 31 breaks, 31 distinct
+unit openings, ZERO breaks falling mid-law. 100%. The full table
+(break → the law it opens): slave-daughter 21:7; the capital
+striker 21:12; the presumptuous murderer 21:14; parent-striker
+21:15; parent-curser 21:17; the quarrel injury 21:18; the
+slave-striking 21:20; the striving men 21:22; the slave's eye
+21:26; the slave's tooth 21:27; THE GORING OX 21:28 (a פ — the
+open grade at the major module seam); the pit 21:33; ox-vs-ox
+21:35; livestock theft 21:37; grazing 22:4; fire 22:5; the unpaid
+keeper 22:6; the paid keeper 22:9; the borrower 22:13 (פ); the
+seducer 22:15; the witch 22:17; bestiality 22:18; idol-sacrifice
+22:19; the lender 22:24 (פ); the curse clauses 22:27; the false
+report 23:1; the majority 23:2; the straying ox 23:4; the laden
+donkey 23:5; justice-to-the-poor 23:6; and the code's closing
+seam at 23:20 (the angel — law hands off to narrative).
+
+WHAT THE EARLIER STATISTICS ACTUALLY MEASURED: the CONVERSE
+direction — does every function get its OWN block? No, and that
+is code-like too: units GROUP into blocks the way small functions
+share a file. The scroll's groupings carry information the
+tradition reads: 21:15-16 puts the parent-striker and the
+ABDUCTOR in one block before the parent-curser — and the
+juxtaposition arguments of Sanhedrin 85b-86a (the round-14
+abduction grid, EX21-26) run on exactly that adjacency. The
+manslayer's refuge (21:13) sits INSIDE the striker's block — an
+inner branch, not a unit, and the scroll spaces it so.
+
+THE MANDATORY-IM CONVERGENCE. Two breaks open אם ("if") verses:
+the slave's tooth (21:27, a genuine parallel sub-ruling) and אם
+כסף תלוה ("if you lend money," 22:24) — and the Mekhilta itself
+rules that this 22:24 im is one of the THREE non-optional ims of
+the Torah (obligations phrased as if). The scroll grants that
+"if" a block of its own with the open-grade פ; the tradition
+says that "if" is not conditional. The white fire and the
+Mekhilta agree against the surface grammar — independently.
+
+REVISED VERDICT: in the direction the hypothesis needs — every
+break in law material opens a legal unit — the measured rate is
+31/31, 100%, on the densest code span we have. The statistical
+lifts of the Torah-wide sweep are the converse direction (unit →
+own block: a grouping choice, itself meaningful) plus instrument
+blur (daf-grain citations). CODE-IN-INK, deterministic where the
+claim is stated correctly. NEXT: the same 100%-test on Lev 1-8
+(the offering code's breaks — the reflection-pauses charter's own
+home) and Deut's law core, on the owner's word.
+
+SOURCING RULED SUFFICIENT (owner, 2026-09-04: "do we need to
+research this? do we already have a reliable source"). No
+standing diff-project opened. The Westminster Leningrad Codex
+marks are the working white-fire witness — sufficient for all
+statistical and structural claims made above; and for the
+load-bearing keeper cuts the Talmud's own section-reading at Bava
+Metzia 94b is the independent second witness. Standing discipline
+instead of research: any individual break made load-bearing in a
+publication gets a per-item check (the Talmud's usage; Maimonides'
+published break table in the Mishneh Torah, Laws of the Torah
+Scroll ch. 8, if ever contested). Spot-verification on demand.

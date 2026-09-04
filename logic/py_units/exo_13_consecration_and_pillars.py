@@ -71,6 +71,10 @@ m.step("Exod.13.5")
 # the-this in-new-moon the-this”) — fact holds: and-work/serve-obj-marker-
 # the-service/work
 m.fact("ve_avadta_et_ha_avoda")
+# witness-tier presupposed read: all_services_as_this on export_operator —
+# read, not installed
+m.witness_read("export_operator", "all_services_as_this",
+                cites=["Pesachim 96a:11", "Pesachim 96a:12", "Pesachim 96a:13", "Pesachim 96a:14", "Pesachim 96a:15", "Pesachim 96a:16", "Pesachim 96a:17", "Pesachim 96a:18", "Pesachim 96a:19", "Pesachim 96a:20", "Pesachim 96a:21", "Pesachim 96a:22", "Pesachim 96a:23", "Pesachim 96a:24", "Pesachim 96b:1", "Pesachim 96b:2"])
 
 # -------------------------- Exod.13.6 · SEVEN_DAYS_AND_A_FEAST -------------
 # שִׁבְעַת יָמִים תֹּאכַל מַצֹּת וּבַיּוֹם הַשְּׁבִיעִי חַג לַיהוָה
@@ -101,6 +105,10 @@ m.step("Exod.13.8")
 # ‹וְהִגַּדְתָּ לְבִנְךָ בַּיּוֹם הַהוּא לֵאמֹר› (“and-tell to-son-you/your
 # in-day that to-say”) — fact holds: and-tell-to-vinkha
 m.fact("ve_higadta_le_vinkha")
+# witness-tier presupposed read: pointing_and_self_view on the_telling —
+# read, not installed
+m.witness_read("the_telling", "pointing_and_self_view",
+                cites=["Pesachim 116b:3", "Pesachim 116b:7", "Pesachim 116b:8", "Pesachim 116b:9"])
 
 # -------------------------- Exod.13.9 · A_SIGN_ON_YOUR_HAND ----------------
 # וְהָיָה לְךָ לְאוֹת עַל־יָדְךָ וּלְזִכָּרוֹן בֵּין עֵינֶיךָ לְמַעַן
@@ -143,6 +151,10 @@ m.step("Exod.13.12")
 # ‹וְהַעֲבַרְתָּ כָל־פֶּטֶר־רֶחֶם לַיהֹוָה› (“and-pass-over all fissure womb
 # to-YHWH”) — fact holds: and-pass-over-all-fissure-womb
 m.fact("ve_haavarta_khol_peter_rechem")
+# witness-tier presupposed read: the_firstborn_engines_babylonian_layer on
+# passing_verb — read, not installed
+m.witness_read("passing_verb", "the_firstborn_engines_babylonian_layer",
+                cites=["Bekhorot 4b:2", "Bekhorot 4b:3", "Bekhorot 4b:11", "Bekhorot 4b:12", "Bekhorot 4b:13", "Bekhorot 4b:14", "Bekhorot 4b:17", "Bekhorot 4b:18", "Bekhorot 4b:22", "Bekhorot 4b:23", "Bekhorot 5a:2", "Bekhorot 5a:3", "Yoma 49b:7", "Yoma 49b:8", "Niddah 40a:14", "Niddah 40a:16", "Niddah 40a:17", "Temurah 5b:13", "Temurah 18b:4", "Temurah 18b:5", "Temurah 4a:3", "Temurah 4a:4", "Eruvin 96a:6", "Eruvin 96a:7"])
 
 # -------------------------- Exod.13.13 · THE_DONKEY_AND_THE_LAMB -----------
 # וְכָל־פֶּטֶר חֲמֹר תִּפְדֶּה בְשֶׂה וְאִם־לֹא תִפְדֶּה וַעֲרַפְתּוֹ וְכֹל
@@ -202,6 +214,10 @@ m.fact("le_ot_al_yadkha_he")
 # installed
 m.witness_read("frontlets", "received_form",
                 cites=["Mishnah Sanhedrin 11:3", "Mishnah Megillah 4:8"])
+# witness-tier presupposed read: received_form_argued on
+# tefillin_derivations — read, not installed
+m.witness_read("tefillin_derivations", "received_form_argued",
+                cites=["Menachot 34b:1", "Menachot 34b:2", "Menachot 34b:3", "Menachot 34b:5", "Menachot 37a:3", "Menachot 37a:4", "Menachot 44a:16", "Menachot 29b:1", "Menachot 29b:2", "Shabbat 108a:12", "Makkot 11a:8", "Arakhin 19b:6", "Eruvin 96a:10", "Eruvin 96a:11", "Kiddushin 35a:5", "Kiddushin 37b:13"])
 
 # -------------------------- Exod.13.17 · NOT_BY_THE_NEAR_WAY ---------------
 # וַיְהִי בְּשַׁלַּח פַּרְעֹה אֶת־הָעָם וְלֹא־נָחָם אֱלֹהִים דֶּרֶךְ אֶרֶץ
@@ -284,14 +300,26 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 2
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('benefit_ban', 'recorded_routes'), ('donkey_firstling', 'firstborn_cluster'), ('frontlets', 'received_form')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('benefit_ban', 'recorded_routes'), ('export_operator', 'all_services_as_this'), ('the_telling', 'pointing_and_self_view'), ('passing_verb', 'the_firstborn_engines_babylonian_layer'), ('donkey_firstling', 'firstborn_cluster'), ('frontlets', 'received_form'), ('tefillin_derivations', 'received_form_argued')]
     assert m.WITNESS_READS[0]["cites"] == ['Pesachim 21b:5', 'Pesachim 21b:11', 'Pesachim 23a:12', 'Pesachim 24a:4', 'Pesachim 28b:4', 'Pesachim 29a:4']
     assert all('recorded_routes' not in f for f in m.WORLD["facts"])
     assert 'benefit_ban' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Bekhorot 1:2', 'Mishnah Bekhorot 1:7', 'Mishnah Bekhorot 2:6', 'Mishnah Bekhorot 2:9', 'Mishnah Bekhorot 8:1', 'Mishnah Avodah Zarah 5:9']
+    assert m.WITNESS_READS[1]["cites"] == ['Pesachim 96a:11', 'Pesachim 96a:12', 'Pesachim 96a:13', 'Pesachim 96a:14', 'Pesachim 96a:15', 'Pesachim 96a:16', 'Pesachim 96a:17', 'Pesachim 96a:18', 'Pesachim 96a:19', 'Pesachim 96a:20', 'Pesachim 96a:21', 'Pesachim 96a:22', 'Pesachim 96a:23', 'Pesachim 96a:24', 'Pesachim 96b:1', 'Pesachim 96b:2']
+    assert all('all_services_as_this' not in f for f in m.WORLD["facts"])
+    assert 'export_operator' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Pesachim 116b:3', 'Pesachim 116b:7', 'Pesachim 116b:8', 'Pesachim 116b:9']
+    assert all('pointing_and_self_view' not in f for f in m.WORLD["facts"])
+    assert 'the_telling' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bekhorot 4b:2', 'Bekhorot 4b:3', 'Bekhorot 4b:11', 'Bekhorot 4b:12', 'Bekhorot 4b:13', 'Bekhorot 4b:14', 'Bekhorot 4b:17', 'Bekhorot 4b:18', 'Bekhorot 4b:22', 'Bekhorot 4b:23', 'Bekhorot 5a:2', 'Bekhorot 5a:3', 'Yoma 49b:7', 'Yoma 49b:8', 'Niddah 40a:14', 'Niddah 40a:16', 'Niddah 40a:17', 'Temurah 5b:13', 'Temurah 18b:4', 'Temurah 18b:5', 'Temurah 4a:3', 'Temurah 4a:4', 'Eruvin 96a:6', 'Eruvin 96a:7']
+    assert all('the_firstborn_engines_babylonian_layer' not in f for f in m.WORLD["facts"])
+    assert 'passing_verb' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Mishnah Bekhorot 1:2', 'Mishnah Bekhorot 1:7', 'Mishnah Bekhorot 2:6', 'Mishnah Bekhorot 2:9', 'Mishnah Bekhorot 8:1', 'Mishnah Avodah Zarah 5:9']
     assert all('firstborn_cluster' not in f for f in m.WORLD["facts"])
     assert 'donkey_firstling' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Mishnah Sanhedrin 11:3', 'Mishnah Megillah 4:8']
+    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Sanhedrin 11:3', 'Mishnah Megillah 4:8']
     assert all('received_form' not in f for f in m.WORLD["facts"])
     assert 'frontlets' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Menachot 34b:1', 'Menachot 34b:2', 'Menachot 34b:3', 'Menachot 34b:5', 'Menachot 37a:3', 'Menachot 37a:4', 'Menachot 44a:16', 'Menachot 29b:1', 'Menachot 29b:2', 'Shabbat 108a:12', 'Makkot 11a:8', 'Arakhin 19b:6', 'Eruvin 96a:10', 'Eruvin 96a:11', 'Kiddushin 35a:5', 'Kiddushin 37b:13']
+    assert all('received_form_argued' not in f for f in m.WORLD["facts"])
+    assert 'tefillin_derivations' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
