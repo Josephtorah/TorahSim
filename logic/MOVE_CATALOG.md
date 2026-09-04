@@ -321,7 +321,12 @@ lo TANIF ("you shall not CAUSE adultery") — the accessory read in
 read as inform-her — the maidservant's consent in the word's own
 letters (Abaye son of R. Abbahu, Kiddushin 19a:8). Four exemplars
 found in one sitting (2026-09-04, the courts / persons / oaths
-blocks). The move's own meta-question is RECORDED IN THE TRADITION:
+blocks). FIFTH EXEMPLAR at the campaign's finale (2026-09-04,
+round 29, the Decalogue block): לא תעשון אתי ("you shall not make
+WITH ME," Exod 20:23) read לא תעשון אותי ("you shall not make
+ME") — the human-face ban derived from the image clause's own
+consonants (Rav Huna son of Rav Idi from Abaye's lecture, Rosh
+Hashanah 24b:4): the move lands on the Decalogue itself. The move's own meta-question is RECORDED IN THE TRADITION:
 the vocalization-authority dispute at Sanhedrin 4a:15 — is the read
 text or the received consonants authoritative — block 15's docket;
 the front end's vowel measurement answered the machine's side of

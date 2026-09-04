@@ -46,6 +46,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>B</b></td><td>Trees</td><td>Every verse via taamim_tree_parse.py v1; full tree_ascii recorded.</td><td>tested</td></tr>
 <tr><td><b>C</b></td><td>Tree → steps</td><td>One STEP per verse citing left/right top-split arms. English [EN-AID] only. Condition markers (אם/כי) flagged in op when verse-initial.</td><td>hypothesis</td></tr>
 <tr><td><b>D</b></td><td>Oral dual-track</td><td>Mekhilta samples when available; dual-track only; never silent-merge.</td><td>hypothesis</td></tr>
+<tr><td><b>S26</b></td><td>Round-26 Talmud-block seat (2026-09-04)</td><td>SANCTUARY CONSTANTS — the fifteenth Exodus Talmud-first exam block (owner: &quot;next block&quot;; ledger logic/oral_triage/exodus_block_sanctuary_2026-09-04.md; runner run_sanctuary.py, 18/18 first run). One seat under the auto-seat law — the unit&#x27;s FIRST Talmud-block seat: EX38-08 (F-102 — the sanctuary maneh proven DOUBLE from this inventory&#x27;s own refusal to round 2,400 shekels into a talent: the audit chapter yielding a unit definition, the inference argued at both edges and standing). Machine ops untouched below the witness tier.</td><td>witnessed</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -289,6 +290,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <p><span class="he">ונחשת התנופה שבעים ככר … ואלפים וארבע מאות שקל</span> · <i>vnchsht htnvph shb&#x27;ym kkr … v&#x27;lpym v&#x27;rb&#x27; m&#x27;vt shql</i> · From top split: LEFT «ונחשת התנופה שבעים ככר» / RIGHT «ואלפים וארבע מאות שקל». Derive claim from Hebrew arms, not English alone. Exod 38:29.</p>
 <div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ונחשת התנופה שבעים ככר</span> · <i>vnchsht htnvph shb&#x27;ym kkr</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">ואלפים וארבע מאות שקל</span> · <i>v&#x27;lpym v&#x27;rb&#x27; m&#x27;vt shql</i> · Right arm of top binary split [EN-AID]</div></div>
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(brass_surplus, the_double_maneh_computed)</span><br><span class="gloss">= WITNESS-READ(brass-surplus, the-double-maneh-computed)</span><br>THE DOUBLE MANEH COMPUTED FROM THIS VERSE [claim EX38-08]. The round-26 sanctuary block seats the metrological constant on the inventory&#x27;s own denominations: &quot;the brass of the offering: seventy talents and 2,400 shekels&quot; — ninety-six maneh stand in the shekel figure, and the verse counted them in SMALL CHANGE rather than rounding into a talent: learn — מנה של קודש כפול היה (&quot;the sanctuary maneh was DOUBLE&quot;) — the constant derived from the ledger&#x27;s refusal to round, with the inference argued at both edges (wholes in talents? large fragments only?) and standing (Bekhorot 5a:17-19). The inventory chapter&#x27;s audit arithmetic yields a UNIT DEFINITION — the same chapter the round-9 exam read as the corpus&#x27; audit layer. Auto-seat law, F-102.
+</td><td>—</td><td class='cite'>Bekhorot 5a:17, Bekhorot 5a:18, Bekhorot 5a:19</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.</div>
 </div>
@@ -1899,6 +1902,10 @@ m.witness_read(&quot;missing_1775&quot;, &quot;reconciled_by_inventory&quot;,
 # וארבע מאות שקל». Derive claim from Hebrew arms, not English alone. Exod
 # 38:29.&quot;
 m.step(&quot;Exod.38.29&quot;)
+# witness-tier presupposed read: the_double_maneh_computed on brass_surplus
+# — read, not installed
+m.witness_read(&quot;brass_surplus&quot;, &quot;the_double_maneh_computed&quot;,
+                cites=[&quot;Bekhorot 5a:17&quot;, &quot;Bekhorot 5a:18&quot;, &quot;Bekhorot 5a:19&quot;])
 
 # -------------------------- Exod.38.30 · ETNACHTA_SPLIT --------------------
 # ויעש בה את אדני פתח אהל מועד ואת מזבח הנחשת ואת מכבר הנחשת א … ואת כל כלי
@@ -1936,7 +1943,7 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;laver_mirrors&#x27;, &#x27;two_tracks_of_the_women&#x27;), (&#x27;audit_constitution&#x27;, &#x27;two_signatories&#x27;), (&#x27;lineage_mention&#x27;, &#x27;praise_scorn_table&#x27;), (&#x27;books_published&#x27;, &#x27;currency_converted&#x27;), (&#x27;beka_rate&#x27;, &#x27;census_roll_closed&#x27;), (&#x27;missing_1775&#x27;, &#x27;reconciled_by_inventory&#x27;), (&#x27;surplus_declared&#x27;, &#x27;testimony_to_nations&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;laver_mirrors&#x27;, &#x27;two_tracks_of_the_women&#x27;), (&#x27;audit_constitution&#x27;, &#x27;two_signatories&#x27;), (&#x27;lineage_mention&#x27;, &#x27;praise_scorn_table&#x27;), (&#x27;books_published&#x27;, &#x27;currency_converted&#x27;), (&#x27;beka_rate&#x27;, &#x27;census_roll_closed&#x27;), (&#x27;missing_1775&#x27;, &#x27;reconciled_by_inventory&#x27;), (&#x27;brass_surplus&#x27;, &#x27;the_double_maneh_computed&#x27;), (&#x27;surplus_declared&#x27;, &#x27;testimony_to_nations&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Pekudei 9:2&#x27;, &#x27;Midrash Tanchuma, Pekudei 9:4&#x27;, &#x27;Onkelos Exod 38&#x27;]
     assert all(&#x27;two_tracks_of_the_women&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;laver_mirrors&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -1955,9 +1962,12 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Midrash Tanchuma Buber, Pekudei 4:1&#x27;, &#x27;Midrash Tanchuma, Pekudei 7:3&#x27;, &#x27;Onkelos Exod 38&#x27;]
     assert all(&#x27;reconciled_by_inventory&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;missing_1775&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Pekudei 2:4&#x27;, &#x27;Midrash Tanchuma, Pekudei 2:5&#x27;, &#x27;Midrash Tanchuma, Pekudei 5:5&#x27;, &#x27;Midrash Tanchuma, Pekudei 6:1&#x27;, &#x27;Onkelos Exod 38&#x27;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Bekhorot 5a:17&#x27;, &#x27;Bekhorot 5a:18&#x27;, &#x27;Bekhorot 5a:19&#x27;]
+    assert all(&#x27;the_double_maneh_computed&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;brass_surplus&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Pekudei 2:4&#x27;, &#x27;Midrash Tanchuma, Pekudei 2:5&#x27;, &#x27;Midrash Tanchuma, Pekudei 5:5&#x27;, &#x27;Midrash Tanchuma, Pekudei 6:1&#x27;, &#x27;Onkelos Exod 38&#x27;]
     assert all(&#x27;testimony_to_nations&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;surplus_declared&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">Tree-derived v1 (phase 2f). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-02 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">Tree-derived v1 (phase 2f). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

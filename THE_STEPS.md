@@ -1046,15 +1046,109 @@ frozen units' own prose: the Amram-marriage step had filed the
 aunt question "named-only, unclaimed" and its translation already
 carried the answer ("his FATHER'S sister"); the Moses-strike step
 had read the killing as one "the letter neither praises nor
-sentences" before the law arrived. Records:
+sentences" before the law arrived. And on "next block," round 26
+ran the SANCTUARY CONSTANTS (block 11) at 18/18 first run:
+**829/829 across twenty-six rounds**, catalog through R-449 (254
+compiled rules), F-098..F-102 seated across four build chapters —
+three of them (the ark-table-menorah, the curtains-and-boards,
+and the court-inventory chapters) taking their FIRST exam-era
+seats. Two headlines. ONKELOS STEPPED OUT OF THE APPARATUS: at
+the cherubim's faces the Talmud resolves the contradiction with
+a teaching in the name of "Onkelos the convert" — the cherubim
+angled "like a student taking leave of his teacher" — the very
+translator this corpus reads beside every verse, cited by name
+as the authority on the build's ink. And THE METHOD FORK: the
+candelabrum verse is the tradition's own laboratory for its two
+rival inference engines — the same ink run through
+general-and-detail yields "any metal," through amplify-and-limit
+yields "anything but earthenware": two answer tables from one
+verse, the inference rules themselves now the exam's subject
+matter (one round after the adjacency dispute at the witch
+verse). Also aboard: the sanctuary's own maneh proven DOUBLE
+from the inventory's refusal to round its shekels into a talent
+(the audit chapter yielding a unit definition), the altar's red
+line anchored in the net clause's own "half," the indispensables
+bound by the definite article, and the middle bar now carrying
+both its Genesis provenance and its recorded standing miracle.
+And on "GO," round 27 ran the
+VESTMENTS AND INVESTITURE (block 12) at 20/20 first run:
+**849/849 across twenty-seven rounds**, catalog through R-453
+(258 compiled rules), F-103..F-105 seated — the priest-garments
+and investiture chapters both taking their first exam-era seats.
+The frontplate's whole state machine was already seated: the
+frozen unit has held the plate's acceptance function AND its
+scoped jurisdiction since the Tetzaveh exam, and the sugyot
+behind them confirmed both — broken means off for everyone, and
+the famous dispute (does it accept off the forehead?) runs on
+the verse's own two clauses. And a THIRD rules-about-rules row
+landed: after the adjacency dispute (capital block) and the
+method fork (sanctuary block), the vestments block records the
+PARSE-DIRECTION rule — "a verse is expounded on what precedes
+it, not on what precedes-the-preceding" — stated as law on the
+finger clause's own syntax: three consecutive blocks of the
+tradition regulating its own compile moves on our blocks' own
+ink. Also aboard: the office literally worn (vestments on,
+priesthood on — off, a stranger, death by Heaven), the trousers
+imported by the very this-the-thing clause the frozen unit's
+translation layer had crowned, and the consecration meal as a
+STAGE of the owners' atonement. Records:
 World/step9/REPORT_LEAVEN.md + REPORT_COURTS.md +
 REPORT_PERSONS_OATHS.md + REPORT_PESACH.md + REPORT_SHABBAT.md +
 REPORT_MATZA.md + REPORT_EGYPT.md + REPORT_INK.md +
 REPORT_CONDUCT.md + REPORT_CALENDAR.md + REPORT_COVENANT.md +
-REPORT_FESTIVALS.md + REPORT_CAPITAL.md. Four blocks remain
-(~110 LAW rows); the ripest next: block 11 (sanctuary constants
-— the routed Yoma row waits there) or block 5 (the Decalogue,
-the largest left).
+REPORT_FESTIVALS.md + REPORT_CAPITAL.md + REPORT_SANCTUARY.md +
+REPORT_VESTMENTS.md. And on "one more," round 28 ran THE
+SERVICE ORDER (block 13) at 18/18 first run — the sanctuary
+family CLOSED: **867/867 across twenty-eight rounds**, catalog
+through R-458 (263 compiled rules), F-106..F-108 seated, every
+row earlier blocks had parked for this one consumed (the
+cross-block routing ledger cleared its loop). The Onkelos arc
+completed: two rounds after the Talmud cited him by name on the
+cherubim, it now COMPUTES through him — the Torah sela's value
+derived from "twenty gera the shekel" plus "AND WE TRANSLATE
+twenty ma'in": the translation layer as a load-bearing member of
+the law, exactly the corpus' own conversion-layer finding,
+confirmed at the source. The data channel self-labeled a sixth
+time: eleven incense spices "stated to Moses at Sinai" — the
+list partly unwritten, counted from the verse's own plural
+tokens — with the rival inference engine's read recorded beside
+it (the method-fork family's third seat). Also aboard: the lamp
+that must ascend BY ITSELF, the perpetual fire located at the
+outer altar with the menorah lit from it, the daily lambs
+slaughtered AGAINST the sun, and "the Holy One knows the
+tippings" — the weighing protocol with its recorded proof.
+Records through REPORT_SERVICE.md. ONE BLOCK REMAINS: the
+Decalogue (~40 rows) — the campaign's finale.
+
+And on "Go" (2026-09-04, first sitting after compaction #44),
+round 29 ran THE DECALOGUE — block 5, the finale — at 24/24
+first run: **891/891 across twenty-nine rounds, and THE EXODUS
+BLOCK CAMPAIGN IS COMPLETE — 18 of 18 mapped blocks, every one
+green on its first run, the cross-block routing ledger empty**
+(its last two parked rows consumed here). Catalog through R-464
+(269 compiled rules); vocabulary 715 query values; F-109..F-112
+seated on exo_20 — the image-making scope machine (the
+attendants ladder, the seven-lamp bar, the four faces, and the
+HUMAN FACE derived by re-reading the clause's own consonants:
+"you shall not make WITH ME" heard as "you shall not make ME" —
+the revocalization move returning at the finale on the
+Decalogue's own image clause), the vain-clause oath file (the
+past falsehood warned HERE, the broken future oath warned from
+Leviticus — a cross-book warning split; the guiltless clause
+split between the heavenly and earthly courts), the utterances'
+rider file (the visited iniquity only when the sons grasp the
+fathers' deeds; the covet ban meaning seizure WITHOUT payment;
+theft-of-persons by the context rule the tradition names on the
+verse), and the altar paragraph (the poured-frames build, the
+top dispute, the wholeness gate — with the tradition recording
+its own memory failure and repair: "a verse we held and forgot,"
+restored on the spot). The deepest anticipation form yet: the
+Shevuot sugya's own text PICKS UP AND USES the women-kiddush
+derivation the machine has held at EX20-18 since round 21 — the
+seat standing inside the sugya. Records: REPORT_DECALOGUE.md.
+Next on the owner's word: the ~11 Genesis blocks, the Leviticus
+1-8 offering-engine consolidation, Shemini, and the MIDDOT.md
+consolidation.
 
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed

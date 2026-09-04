@@ -748,3 +748,216 @@ COMPLETE five units, regression green (all 23 runners), standing
 +6 rebaked (1260 → 1266, one per seat exactly), hash
 8b8fff1fa28953af unmoved, manifests 0 FAILED, gloss_lint 0 on
 all new content.
+
+## Round 26 — SANCTUARY CONSTANTS (2026-09-04, Exodus exam block 11 of 18)
+Owner: "next block." The ark file, the structure, the
+candelabrum's method fork, the altar constants, the treasury and
+measures. 17 LAW rows credited (three route-ins honored: the
+covenant block's Yoma 3b:3 funding dispute, the courts block's
+Sanhedrin 34b:1 touch bound, the shabbat block's Yoma 52b:14
+manna jar; the lamp-oil family on 27:20-21 left standing for
+block 13, whose map line owns those verses), 49 segments opened
+fresh across 10 tractates (ledger
+logic/oral_triage/exodus_block_sanctuary_2026-09-04.md). Five
+modules (sanctuary_rules.py), 18 cases (cases_sanctuary.yaml):
+**18/18 FIRST RUN** — all priors green: **829/829 across
+twenty-six rounds**. Catalog R-445..R-449 (254 compiled rules);
+vocabulary +18 (653 on 158 dims). FIVE findings auto-seated
+across FOUR units — three taking their FIRST Talmud-block seats
+(exo_25, exo_26, exo_38): F-098 → EX25-13 (the ark file — the
+funding dispute w/ the installation's from-your-own proof; the
+making-verbs' WILL-INDEXED dispatch; the crown's
+written-stranger/read-crown; the two standing prohibitions w/
+the loosen-not-slip mechanical spec; the manna jar located by
+THREE verbal-analogy chains), F-099 → EX25-14 (THE METHOD FORK —
+the menorah verse run through BOTH rival inference engines:
+Rebbi's general-detail yields of-metal, R. Yosei b. R. Yehuda's
+amplify-limit excludes only earthenware — two valid-materials
+tables from ONE verse, middah governance measured on the unit's
+own ink; promote-never-demote w/ the scalding physics; the
+treasury split), F-100 → EX26-07 (the structure — the middle
+bar's STANDING MIRACLE landing beside EX26-05's Jacob-planted
+provenance; the beam-taper dispute; the partition resolved at
+the second Temple's doubtful cubit; the craft-words' face-count
+diagnostic; THE CHERUBIM'S ANGLED RESOLUTION TAUGHT IN THE NAME
+OF ONKELOS THE CONVERT — the corpus' own translator cited BY
+NAME in the sugya, "like a student taking leave of his teacher";
+the onyx list-boundary), F-101 → EX27-09 (the altar constants —
+the RED LINE anchored in the net clause's own "half"; the
+indispensables bound by the DEFINITE ARTICLE; the touch bound to
+the suited by two sources), F-102 → EX38-08 (the sanctuary maneh
+proven DOUBLE from the inventory's own refusal to round — the
+audit chapter yielding a unit definition). ANTICIPATIONS: the
+ink block's F-074 already held this block's letter-arithmetic
+credits (the alef of amatayim, the curtains' ayin) and the
+script witness at the pillars' vavs; EX26-05's Tanchuma seat
+held the middle bar's wonder before Shabbat 98b:5 named it a
+standing miracle; the round-9 audit-layer reading of the
+inventory chapters received its unit definition. Rituals
+COMPLETE four units, regression green (all 24 runners), standing
++5 rebaked (1266 → 1271, one per seat exactly), hash
+8b8fff1fa28953af unmoved, manifests 0 FAILED, gloss_lint 0.
+
+## Round 27 — VESTMENTS AND INVESTITURE (2026-09-04, Exodus exam block 12 of 18)
+Owner: "GO." The frontplate's state machine, the vestments' form,
+the investiture machine, the consecration foods. 21 LAW rows
+credited (Shabbat 12a:4 routed in from the shabbat block; the
+daily-lambs pair routed on to block 13), 60 segments opened fresh
+across 8 tractates (ledger
+logic/oral_triage/exodus_block_vestments_2026-09-04.md). Four
+modules (vestments_rules.py), 20 cases (cases_vestments.yaml):
+**20/20 FIRST RUN** — all priors green: **849/849 across
+twenty-seven rounds**. Catalog R-450..R-453 (258 compiled rules);
+vocabulary +20 (673 on 158 dims). THREE findings auto-seated
+across TWO units — BOTH taking their first Talmud-block seats:
+F-103 → EX28-13 (the frontplate's state machine behind
+EX28-06/EX28-11, which HELD — broken=off for all, the peg
+disputed on the verse's own two clauses [R. Yehuda's
+bear-by-contact vs R. Shimon's always-accepting w/ the Yom
+Kippur linen proof]; the impurity scope w/ R. Yehuda's lone
+permitted arm; acceptance-not-calamity w/ Rav Ashi's dative
+gate; the plate's tamid exported to the tefillin's constant
+touching), F-104 → EX28-14 (the vestments' form — the stones'
+six-and-six w/ fifty letters; woven-not-needle w/ the sleeve
+exception; the TEFILLIN SLOT between plate and turban; the
+sounding ring answering the sound-clause; the great-altar
+jurisdiction), F-105 → EX29-14 (the investiture machine — the
+unvested priest as STRANGER [the office literally worn, EX28-07
+held the shape]; the seven days' two clocks decoupled; the
+trousers imported by EX29-01's own this-the-thing crown; the
+collection by fit vested priest; the finger bound to the placing
+by the PARSE-DIRECTION META-RULE ["a verse is expounded on what
+precedes it, not before-the-before" — stated as law on 29:12's
+own syntax]; the doubled-it freed token; the consecration foods
+w/ priests-eat-owners-atoned [EX29-06 held it] and the
+personal-use boundary). ANTICIPATIONS — the table round
+continues: EX28-06/11 held the plate's function AND its scope;
+EX28-04 held both vestment prohibitions since derivation (round
+26 seated the ark's side of the same pair); EX28-05 held the
+announced entry; EX28-07 the wear-or-die; EX29-01's
+this-the-thing crown carries the trousers import; EX29-06 the
+atonement meal. NEW META-RULE LOGGED: the parse-direction rule
+(Zevachim 24b:3) joins the juxtaposition-validity and
+method-fork rows — three consecutive blocks recording the
+tradition's rules-about-rules. Rituals COMPLETE two units,
+regression green (all 25 runners), standing +3 rebaked (1271 →
+1274, one per seat exactly), hash 8b8fff1fa28953af unmoved,
+manifests 0 FAILED, gloss_lint 0.
+
+## Round 28 — THE SERVICE ORDER (2026-09-04, Exodus exam block 13 of 18)
+Owner: "one more." The sanctuary family CLOSES: the lamp, the
+morning order, the laver, the once-a-year corners, the money, the
+oil, the incense. 19 LAW rows credited (FIVE routed in and
+waiting — the shabbat block's wicks row, the sanctuary block's
+lamp-oil family, the vestments block's daily-lambs pair — all
+consumed), 51 segments opened fresh across 9 tractates (ledger
+logic/oral_triage/exodus_block_service_2026-09-04.md). Five
+modules (service_rules.py), 18 cases (cases_service.yaml):
+**18/18 FIRST RUN** — all priors green: **867/867 across
+twenty-eight rounds**. Catalog R-454..R-458 (263 compiled rules);
+vocabulary +18 (691 on 158 dims). THREE findings auto-seated
+across THREE units (exo_30's FIRST seat): F-106 → EX27-10 (the
+lamp service — the SELF-ASCENDING FLAME barring Shabbat-barred
+wicks/oils from the Temple; the perpetual fire located at the
+OUTER altar's head w/ the menorah's flame fetched from it; the
+evening-to-morning clause as the oil's QUOTA; lamps LAST — the
+oto-token sealing the day's order), F-107 → EX29-15 (the daily
+lambs behind EX29-08's heartbeat — both-equal for the mitzvah,
+valid unequal by the doubled token; two-FOR-THE-DAY read AGAINST
+the day: the slaughter positioned by the SUN), F-108 → EX30-11
+(the chapter's whole Babylonian layer — incense first by the
+DOUBLED morning w/ the tend-then-burn dispute; dress-then-wash +
+the laver's death clause; the corners' mixed-or-separate + the
+once-tokens' two exclusions; THE SELA COMPUTED THROUGH ONKELOS
+["twenty gera... AND WE TRANSLATE twenty ma'in" — the corpus'
+conversion layer confirmed AT THE SOURCE]; the anointing
+succession gate w/ zeh=TWELVE carrying the logs' perpetuity;
+two-bans-one-karet; the High Priest liable on his OWN anointed
+flesh; THE ELEVEN SPICES "stated to Moses at Sinai" — the data
+channel self-labeled at our verse, counted from the ink's own
+plural tokens, w/ the rival general-detail read beside it — the
+METHOD-FORK FAMILY'S THIRD SEAT; the weighing tippings).
+ANTICIPATIONS: EX30-01 held the incense-lamps schedule; EX30-03
+the annual protocol; EX30-05 the wash-as-sanctify layer; EX30-06
+the anti-duplication clauses; EX30-09/10 the denomination file
+that Bekhorot 50a's conversion now anchors; EX29-08 the
+heartbeat. THE ONKELOS ARC COMPLETES: round 26 cited him by name
+on the cherubim; round 28 finds the Talmud COMPUTING through his
+unit conversion — the translation layer as a load-bearing member
+of the law. Rituals COMPLETE three units, regression green (all
+26 runners), standing +3 rebaked (1274 → 1277, one per seat
+exactly), hash 8b8fff1fa28953af unmoved, manifests 0 FAILED,
+gloss_lint 0.
+
+## Round 29 — THE DECALOGUE (2026-09-04, Exodus exam block 5 of 18 —
+## THE CAMPAIGN'S FINALE: 18 of 18)
+Owner: "Go." The block the map saved for last. 15 fresh LAW rows +
+the routing ledger's LAST TWO rows (Pesachim 106a:5, Shevuot 20b:9,
+parked by the shabbat block) + 5 standing credits (the persons
+block's theft-of-persons pair, the capital block's worship trio —
+NOT re-compiled: the collision guard confirmed idol_service_machine
+already answers them). 72 segments opened fresh across NINE
+tractates (Rosh Hashanah, Avodah Zarah, Bava Kamma, Bava Metzia,
+Beitzah, Berakhot, Sanhedrin, Shevuot, Zevachim; one honest
+out-of-range probe — Rosh Hashanah 24a:21 does not exist, the amud
+ends at 20). SIX modules (image_making, duress_gate,
+vain_name_clause, visiting_iniquity, utterance_riders,
+altar_upon_it), 24 cases: **24/24 FIRST RUN — 891/891 ACROSS
+TWENTY-NINE ROUNDS. THE EXODUS BLOCK CAMPAIGN IS COMPLETE: 18 OF
+18 MAPPED BLOCKS RUN, EVERY ONE GREEN ON ITS FIRST RUN.** Catalog
+R-459..R-464 (269 compiled rules); vocabulary +24 (715 query
+values on 158 dims unchanged). THE HEADLINE — THE REVOCALIZATION
+CLOSES THE CAMPAIGN: the human-face ban derived by reading לא
+תעשון אתי ("you shall not make WITH ME") as לא תעשון אותי ("you
+shall not make ME") — the M-16 move family (born round 16 on the
+oath shelf) returns at the finale on the Decalogue's own image
+clause: the same consonants, the vowels the teacher's channel.
+SECOND HEADLINE — THE SEAT INSIDE THE SUGYA: Shevuot 20b:10's own
+text runs Rav Adda bar Ahava's women-kiddush derivation ("whoever
+is in the keeping is in the remembering") — THE EXACT LAW EX20-18
+has held since round 21: the sugya cites the machine's held seat
+as its OWN working example of the one-utterance pair. FINDINGS —
+four, all exo_20 (ONE unit ritual): F-109 → EX20-20 (the
+image-making scope machine: the replicable-attendants ladder w/
+the seven-lamp bar and the Hasmonean iron-tin-silver-gold
+progression; the four faces; the human face by revocalization;
+the four-domain serving census down to the tiny worm; the diagram
+resolutions — made-by-others w/ the many, sections,
+learn-to-understand-and-rule from Deut 18:9's own carve; the
+seal-ring state pair; the duress gate — live-by-them takes duress
+OUT, profane-not puts it back IN PUBLIC), F-110 → EX20-21 (the
+vain-clause oath file: past-false assigned HERE w/ future-broken
+sent to Lev 19:12 — a cross-book warning split; vain-and-false
+spoken as ONE utterance like remember-and-keep; the speech-lash
+trio flogged with no act; the guiltless clause split between the
+two courts on its own subject-noun; the ambiguous god-word אלהי
+כסף ["gods of silver"] powering oath-on-the-court's-understanding
+— the round-16 oaths machinery handed its Exod 20 hook), F-111 →
+EX20-22 (the utterances' rider file: visited-iniquity only
+when-grasping; the anokhi denier = the idolater; the covet ban's
+without-payment folk-parameter; eruv tavshilin on the
+remember-verb; contradicted capital witnesses FLOGGED [R. Elazar,
+the executed arm recorded against] w/ the
+death-warning-prohibition lash exemption; theft-of-persons by the
+NAMED context middah), F-112 → EX20-23 (the altar paragraph's
+Babylonian layer: Levi's poured-frames build protocol [32/30/28,
+lime-quicklime-pitch, whole stones never cut]; the upon-it top
+dispute both arms from ONE verse; the wholeness gate ["upon it"
+when whole — the verse Rav LOST and R. Shimon b. Rabbi restored:
+the tradition recording its own memory failure and repair]; the
+three-stones material census — Shiloh, Nov-and-Gibeon, the
+Eternal House). ANTICIPATIONS RAN FIVE DEEP: EX20-18 held the
+routed kiddush row AND stood inside the sugya's own text; EX20-14
+held the plotting-witness lash arithmetic under the contradicted
+file; EX20-17 held doing-vs-causing, the laden animal, the beast
+scope (the shabbat block's consumed rows); EX20-16 held the
+altars' ground-status row; EX20-12 held the sword-profanes clause
+the build baraita now implements. THE CITE GATE FIRED HONESTLY
+mid-ritual — the grouped cite index hid "Zevachim 61b:5" (the
+round-16 lesson repeating) — fixed by naming every segment fully;
+and the gloss lint caught 7 on new content, fixed to 0 (2 legacy
+flags verified pre-existing at HEAD). Rituals COMPLETE (exo_20,
+130 frozen units, regression 130/130), all 27 runners green,
+standing +4 rebaked (1277 → 1281, one per seat exactly), hash
+8b8fff1fa28953af unmoved, manifests 0 FAILED (13 verified 0
+failed), gloss_lint 0 on new content.

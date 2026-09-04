@@ -1,0 +1,112 @@
+# THE SERVICE ORDER (round 28 — the seventeenth Exodus
+# Talmud-first exam block, 2026-09-04; owner: "one more"). The
+# lamp, the morning order, the laver, the corners, the money and
+# the compounds — the sanctuary family closes.
+# Read-source: logic/oral_triage/exodus_block_service_2026-09-04.md.
+
+- module: lamp_service
+  tractate: Yoma
+  oracle: Shabbat 21a:8-10; Yoma 45b:6-8; Pesachim 59a:1-4; Zevachim 11b:29-31
+  exodus_anchor: {unit: exo_27_altar_court, ref: Exod.27.20-21,
+    claims: [EX27-10]}
+  cases:
+  - id: Sh_flame
+    input: {query: self_ascending_flame}
+    expected: {verdict: temple_wick_oil_bar}
+    class: A
+  - id: Yo_fire_source
+    input: {query: perpetual_fire_source}
+    expected: {verdict: outer_altar_head}
+    class: A
+  - id: Pe_quota
+    input: {query: lamp_oil_quota}
+    expected: {verdict: measure_for_the_night}
+    class: A
+  - id: Pe_last
+    input: {query: lamps_last}
+    expected: {verdict: only_overnight_service}
+    class: A
+
+- module: morning_order
+  tractate: Yoma
+  oracle: Yoma 14b:8-9, 62b:10-13; Pesachim 59a:2, 59a:8-10
+  exodus_anchor: {unit: exo_29_investiture + exo_30_incense_shekel, ref: Exod.29.38-39 + 30.7-8,
+    claims: [EX29-15, EX30-11]}
+  cases:
+  - id: Pe_incense_first
+    input: {query: incense_first}
+    expected: {verdict: doubled_morning_precedes}
+    class: A
+  - id: Yo_tend_burn
+    input: {query: tend_burn_order}
+    expected: {verdict: [tend_then_burn, burn_then_tend]}
+    class: A
+  - id: Yo_lambs_equal
+    input: {query: daily_lambs_equality}
+    expected: {verdict: equal_for_mitzvah_valid_unequal}
+    class: A
+  - id: Yo_lambs_sun
+    input: {query: lambs_sun_position}
+    expected: {verdict: opposite_the_day}
+    class: A
+
+- module: laver_machine
+  tractate: Yoma
+  oracle: Yoma 32b:9-11; Sanhedrin 83b:15-17
+  exodus_anchor: {unit: exo_30_incense_shekel, ref: Exod.30.20,
+    claims: [EX30-11]}
+  cases:
+  - id: Yo_dress_wash
+    input: {query: dress_wash_order}
+    expected: {verdict: dress_then_wash}
+    class: A
+  - id: Sa_unwashed
+    input: {query: unwashed_death}
+    expected: {verdict: death_by_the_lavers_clause}
+    class: A
+
+- module: atonement_corners
+  tractate: Yoma
+  oracle: Yoma 58a:1-2; Shevuot 8b:8-10
+  exodus_anchor: {unit: exo_30_incense_shekel, ref: Exod.30.10,
+    claims: [EX30-11]}
+  cases:
+  - id: Yo_corner_bloods
+    input: {query: corner_bloods}
+    expected: {verdict: [separate_presentations, mixed_presentation]}
+    class: A
+  - id: Sh_once_tokens
+    input: {query: once_tokens}
+    expected: {verdict: two_exclusions_one_year}
+    class: A
+
+- module: oil_and_incense
+  tractate: Keritot
+  oracle: Bekhorot 50a:2-4; Horayot 11b:9-11; Keritot 3a:2-4, 5a:25-27, 6b:6-8, 7a:5-7
+  exodus_anchor: {unit: exo_30_incense_shekel, ref: Exod.30.13 + 30.31-34,
+    claims: [EX30-11]}
+  cases:
+  - id: Be_sela
+    input: {query: sela_conversion}
+    expected: {verdict: computed_through_the_translation}
+    class: A
+  - id: Ho_anointing
+    input: {query: anointing_inheritance}
+    expected: {verdict: priests_son_yes_kings_son_no}
+    class: A
+  - id: Ke_two_bans
+    input: {query: two_bans_one_karet}
+    expected: {verdict: sin_offering_divides}
+    class: A
+  - id: Ke_own_flesh
+    input: {query: hp_own_flesh}
+    expected: {verdict: liable_status_never_discharges}
+    class: A
+  - id: Ke_eleven
+    input: {query: eleven_spices}
+    expected: {verdict: stated_at_sinai_counted_from_tokens}
+    class: A
+  - id: Ke_weighing
+    input: {query: weighing_protocol}
+    expected: {verdict: tippings_known_to_heaven}
+    class: A

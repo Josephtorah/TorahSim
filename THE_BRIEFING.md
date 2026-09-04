@@ -41,11 +41,13 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   running for the book of Numbers.
 - The corpus: 130 frozen units, one world, fingerprint unmoved
   through two whole books and the third's first two portions.
-- The exam engine: twenty-five rounds, 811 cases, 811 answered
-  correctly, 249 compiled rules, vocabulary of 158 registered input
+- The exam engine: twenty-nine rounds, 891 cases, 891 answered
+  correctly, 269 compiled rules, vocabulary of 158 registered input
   dimensions.
-- **The Exodus block campaign: OPEN — 14 of 18 blocks run; the
-  Passover family CLOSED (2026-09-04).** On your word ("Yes go") the leaven machine and the
+- **The Exodus block campaign: COMPLETE — 18 of 18 blocks run
+  (2026-09-04), every one green on its first run; the finale was
+  the Decalogue itself, and the cross-block routing ledger closed
+  empty.** On your word ("Yes go") the leaven machine and the
   courts ran as the first two Talmud-first blocks: 62 new cases, all
   answered first try. Two things stood out. The leaven block found
   the machine's own frozen prose had already flagged the exact
@@ -166,6 +168,71 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   filed the questions — the Amram-marriage step's translation
   already read "his FATHER'S sister," which is exactly how the
   Talmud resolves it.
+  The fifteenth block ran the SANCTUARY CONSTANTS — the build
+  chapters' law layer — and Onkelos stepped out of the
+  apparatus: at the cherubim's faces the Talmud settles the
+  contradiction with a teaching in the name of "Onkelos the
+  convert" (the cherubim angled "like a student taking leave of
+  his teacher") — the very translator this project reads beside
+  every verse, cited by name inside the discussion as the
+  authority on the build's own ink. The candelabrum verse turned
+  out to be the tradition's laboratory for its two rival
+  inference engines: the same words run through one engine give
+  "any metal," through the other "anything but clay" — the
+  reasoning rules themselves are now what the exam is measuring.
+  And the inventory chapter — the one the round-9 exam read as
+  the corpus' audit layer — yielded an actual unit definition:
+  the sanctuary's maneh proven DOUBLE because the ledger
+  refused to round 2,400 shekels into a talent. Three build
+  chapters took their first exam-era seats.
+  The sixteenth block ran the VESTMENTS — and the frontplate's
+  whole machine turned out to be already seated: the frozen page
+  has held the gold plate's acceptance function and its exact
+  jurisdiction since the Tetzaveh exam, and the Talmud
+  discussions behind them confirmed both. A third
+  rules-about-the-rules row landed in as many blocks: after
+  "may neighboring clauses teach each other?" and "which
+  inference engine runs this verse?", now "a verse is read
+  against what PRECEDES it, not two steps back" — the
+  tradition keeps regulating its own reasoning on our pages'
+  own ink. Deepest image: the office is literally WORN — while
+  the vestments are on the priest his priesthood is on him;
+  take them off and he is a stranger. And the consecration meal
+  is not a perquisite: the priests eat, and by that eating the
+  OWNERS are atoned — the frozen page held that clause too.
+  The seventeenth block ran the SERVICE ORDER and closed the
+  sanctuary family — and the Onkelos story completed: two rounds
+  after the Talmud cited the translator by name, it now does
+  ARITHMETIC through him — the Torah shekel's value computed via
+  "and we TRANSLATE twenty ma'in": the translation this project
+  reads beside every verse turns out to be a load-bearing member
+  of the law itself, exactly our conversion-layer finding,
+  confirmed at the source. The incense list self-labeled the
+  data channel a sixth time — eleven spices "stated to Moses at
+  Sinai," the list partly unwritten, counted from the verse's
+  own plural words. And every row earlier blocks had parked for
+  this one was consumed: the routing ledger closed its loop.
+  One block remains: the Decalogue.
+  THE FINALE RAN (2026-09-04, on "Go"): the eighteenth block was
+  the Decalogue itself — 24 cases, all answered first try, and
+  the campaign closed COMPLETE at 891 for 891 over twenty-nine
+  rounds. The closing image could not have been scripted: the
+  ban on making a human image is derived by re-hearing the image
+  clause's own consonants — "you shall not make WITH ME" read as
+  "you shall not make ME" — the same revocalization move this
+  campaign registered back at the oaths block, returning at the
+  finale on the Ten Utterances' own ink. And the deepest
+  anticipation yet: the Talmud's vain-oath discussion doesn't
+  just confirm a law the machine already held — it PICKS UP the
+  women-and-kiddush derivation seated at our remember-verse
+  since round 21 and uses it as its own working example. Also
+  aboard: the covet ban's recorded folk-meaning (seizure WITHOUT
+  paying); the visited-iniquity clause harmonized (only when the
+  sons grasp the fathers' deeds); the altar built by POURING
+  around frames so no iron ever touches a stone; and the
+  tradition recording its own memory failure and repair — "it is
+  a verse we held and FORGOT," and a colleague restores it on
+  the page.
 - The simulator: 48 registered effects (nine new from Tzav — the
   wash/break/scour purges, the perpetual-fire duty, the priestly
   due, the rejection, the investiture commit, the seven-day

@@ -1,0 +1,113 @@
+# VESTMENTS AND INVESTITURE (round 27 — the sixteenth Exodus
+# Talmud-first exam block, 2026-09-04; owner: "GO"). The
+# frontplate's state machine, the vestments' form, the
+# investiture machine, the consecration foods, the altar split.
+# Read-source: logic/oral_triage/exodus_block_vestments_2026-09-04.md.
+
+- module: frontplate_machine
+  tractate: Yoma
+  oracle: Yoma 7b:3-5; Pesachim 77a:11-13; Shabbat 12a:4; Yevamot 60b:13
+  exodus_anchor: {unit: exo_28_priest_garments, ref: Exod.28.38,
+    claims: [EX28-13]}
+  cases:
+  - id: Yo_state_machine
+    input: {query: plate_state_machine}
+    expected: {verdict: [forehead_contact_required, always_accepts]}
+    class: A
+  - id: Pe_impurity_scope
+    input: {query: public_impurity_scope}
+    expected: {verdict: [permitted_outright_lone_arm, pushed_aside_needs_plate]}
+    class: A
+  - id: Ye_ordeal
+    input: {query: plate_ordeal_use}
+    expected: {verdict: acceptance_not_calamity}
+    class: A
+  - id: Sh_attention
+    input: {query: attention_afortiori}
+    expected: {verdict: constant_touching_from_tamid}
+    class: A
+
+- module: vestment_form
+  tractate: Yoma
+  oracle: Sotah 36a:11-13; Yoma 72b:2-3, 44b:15-16; Arakhin 3b:12-14; Zevachim 19a:24-26, 119b:18
+  exodus_anchor: {unit: exo_28_priest_garments, ref: Exod.28.10 + 28.32-43,
+    claims: [EX28-14]}
+  cases:
+  - id: So_stones
+    input: {query: shoulder_stones}
+    expected: {verdict: six_six_birth_order_fifty}
+    class: A
+  - id: Yo_craft
+    input: {query: garment_craft}
+    expected: {verdict: woven_sleeves_excepted}
+    class: A
+  - id: Ar_slot
+    input: {query: tefillin_slot}
+    expected: {verdict: hair_between_plate_turban}
+    class: A
+  - id: Yo_ring
+    input: {query: pan_sounding_ring}
+    expected: {verdict: sound_heard_fulfilled}
+    class: A
+  - id: Ze_altar_split
+    input: {query: private_altar_priest}
+    expected: {verdict: great_altar_only}
+    class: A
+
+- module: investiture_machine
+  tractate: Zevachim
+  oracle: Sanhedrin 83b:12-14; Yoma 5a:9-11, 5b:3-5; Zevachim 13a:11-13, 24b:2-4, 12b:14
+  exodus_anchor: {unit: exo_29_investiture, ref: Exod.29.1-30,
+    claims: [EX29-14]}
+  cases:
+  - id: Sa_unvested
+    input: {query: unvested_priest}
+    expected: {verdict: stranger_death_by_heaven}
+    class: A
+  - id: Yo_week
+    input: {query: investiture_week}
+    expected: {verdict: either_clock_qualifies}
+    class: A
+  - id: Yo_trousers
+    input: {query: trousers_gap}
+    expected: {verdict: imported_this_the_thing}
+    class: A
+  - id: Ze_collection
+    input: {query: blood_collection}
+    expected: {verdict: fit_vested_priest}
+    class: A
+  - id: Ze_finger
+    input: {query: finger_placement}
+    expected: {verdict: placing_bound_parse_direction}
+    class: A
+  - id: Ze_doubled
+    input: {query: doubled_it}
+    expected: {verdict: one_freed_for_derivation}
+    class: A
+
+- module: consecration_foods
+  tractate: Zevachim
+  oracle: Pesachim 59b:3-5; Yoma 68b:18-20; Sukkah 49b:1; Zevachim 28b:4-6, 44b:5-7
+  exodus_anchor: {unit: exo_29_investiture, ref: Exod.29.33-34,
+    claims: [EX29-14]}
+  cases:
+  - id: Pe_eat_atone
+    input: {query: priests_eat_atonement}
+    expected: {verdict: owners_atoned_by_the_meal}
+    class: A
+  - id: Yo_personal_use
+    input: {query: vestment_personal_use}
+    expected: {verdict: sleep_never_eat_as_service}
+    class: A
+  - id: Su_disposal
+    input: {query: disposal_sanctity}
+    expected: {verdict: pouring_so_burning}
+    class: A
+  - id: Ze_excision
+    input: {query: leftover_excision}
+    expected: {verdict: kodesh_kodesh_notar}
+    class: A
+  - id: Ze_inclusion
+    input: {query: meal_offering_inclusion}
+    expected: {verdict: omer_jealousy_included}
+    class: A

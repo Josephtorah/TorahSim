@@ -233,6 +233,10 @@ m.step("Exod.26.28")
 # installed
 m.witness_read("middle_bar", "jacob_planted",
                 cites=["Midrash Tanchuma, Terumah 9"])
+# witness-tier presupposed read: the_structures_babylonian_layer on
+# structure_verses — read, not installed
+m.witness_read("structure_verses", "the_structures_babylonian_layer",
+                cites=["Shabbat 98b:1", "Shabbat 98b:2", "Shabbat 98b:3", "Shabbat 98b:4", "Shabbat 98b:5", "Shabbat 98b:6", "Yoma 51b:5", "Yoma 51b:6", "Yoma 72b:18", "Yoma 72b:19", "Bava Batra 99a:6", "Bava Batra 99a:7", "Avodah Zarah 24a:2"])
 
 # -------------------------- Exod.26.29 · ETNACHTA_SPLIT --------------------
 # ואת הקרשים תצפה זהב ואת טבעתיהם תעשה זהב בתים לבריחם … וצפית את הבריחם זהב
@@ -322,7 +326,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('fabric_clauses', 'craft_grades'), ('boards_clause', 'standing_enduring'), ('standing_wood', 'way_of_growth'), ('middle_bar', 'jacob_planted'), ('raising_clause', 'building_halakhah'), ('veil_clause', 'partition_and_stations')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('fabric_clauses', 'craft_grades'), ('boards_clause', 'standing_enduring'), ('standing_wood', 'way_of_growth'), ('middle_bar', 'jacob_planted'), ('structure_verses', 'the_structures_babylonian_layer'), ('raising_clause', 'building_halakhah'), ('veil_clause', 'partition_and_stations')]
     assert m.WITNESS_READS[0]["cites"] == ['Onkelos Exod 26']
     assert all('craft_grades' not in f for f in m.WORLD["facts"])
     assert 'fabric_clauses' not in m.WORLD["witnessed"]
@@ -335,10 +339,13 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[3]["cites"] == ['Midrash Tanchuma, Terumah 9']
     assert all('jacob_planted' not in f for f in m.WORLD["facts"])
     assert 'middle_bar' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Exod 26']
+    assert m.WITNESS_READS[4]["cites"] == ['Shabbat 98b:1', 'Shabbat 98b:2', 'Shabbat 98b:3', 'Shabbat 98b:4', 'Shabbat 98b:5', 'Shabbat 98b:6', 'Yoma 51b:5', 'Yoma 51b:6', 'Yoma 72b:18', 'Yoma 72b:19', 'Bava Batra 99a:6', 'Bava Batra 99a:7', 'Avodah Zarah 24a:2']
+    assert all('the_structures_babylonian_layer' not in f for f in m.WORLD["facts"])
+    assert 'structure_verses' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Exod 26']
     assert all('building_halakhah' not in f for f in m.WORLD["facts"])
     assert 'raising_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Yoma 5:1', 'Onkelos Exod 26']
+    assert m.WITNESS_READS[6]["cites"] == ['Mishnah Yoma 5:1', 'Onkelos Exod 26']
     assert all('partition_and_stations' not in f for f in m.WORLD["facts"])
     assert 'veil_clause' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

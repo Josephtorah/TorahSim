@@ -1788,3 +1788,25 @@ RULES.update(_fs.build(V))
 # capital_rules.py.
 import capital_rules as _cp
 RULES.update(_cp.build(V))
+
+# Round 26 — SANCTUARY CONSTANTS (2026-09-04, the fifteenth Exodus
+# Talmud-first exam block). 5 rules in sanctuary_rules.py.
+import sanctuary_rules as _sc
+RULES.update(_sc.build(V))
+
+# Round 27 — VESTMENTS AND INVESTITURE (2026-09-04, the sixteenth
+# Exodus Talmud-first exam block). 4 rules in vestments_rules.py.
+import vestments_rules as _vt
+RULES.update(_vt.build(V))
+
+# Round 28 — THE SERVICE ORDER (2026-09-04, the seventeenth Exodus
+# Talmud-first exam block — the sanctuary family closes). 5 rules
+# in service_rules.py.
+import service_rules as _sv
+RULES.update(_sv.build(V))
+
+# Round 29 — THE DECALOGUE (2026-09-04, the eighteenth and FINAL
+# Exodus Talmud-first exam block — the campaign's finale). 6 rules
+# in decalogue_rules.py.
+import decalogue_rules as _dc
+RULES.update(_dc.build(V))

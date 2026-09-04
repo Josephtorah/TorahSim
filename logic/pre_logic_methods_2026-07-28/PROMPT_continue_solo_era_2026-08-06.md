@@ -9753,3 +9753,228 @@ downward as route-ins consumed). Ripest next: block 11
 (sanctuary — Yoma 3b:3's route-in waits) or block 5 (decalogue,
 the largest left). Round 25 UNCOMMITTED — rides the next "commit
 push" (last commit c43863f).
+
+(commit a8ebdfb, 2026-09-04) Owner: "commit and push" — round 25
+COMMITTED AND PUSHED as a8ebdfb (c43863f..a8ebdfb on main): the
+capital block whole (ledger, cases/rules/runner, REPORT_CAPITAL,
+the six seats' five re-ritualed units, catalog R-444, vocab 635,
+exam ledger round 25, state doc, THE_STEPS, briefing). Standing
+exclusions held. The gh account switch (PeerloopLLC → Josephtorah
+→ back) ran cleanly per the recorded fix. Everything through
+round 25 is now on origin/main; the campaign resumes on the
+owner's word (ripest: block 11 sanctuary or block 5 decalogue).
+
+(round 26 — the sanctuary block) Owner: "next block" — block 11
+of 18, SANCTUARY CONSTANTS, ran end to end as round 26. 17 LAW
+rows credited (route-ins from covenant/courts/shabbat honored;
+the 27:20-21 lamp-oil family left standing for block 13), 49
+fresh segments across 10 tractates; five modules
+(sanctuary_rules.py), 18 cases: **18/18 FIRST RUN — 829/829 over
+twenty-six rounds**; R-445..R-449 (254 rules); vocab +18 (653).
+FIVE findings across FOUR units — THREE first-ever seats (exo_25,
+exo_26, exo_38): F-098 → EX25-13 (the ark file — funding dispute,
+will-indexed verb dispatch, zer/zar crown, staves'
+loosen-not-slip spec, manna jar by three analogy chains), F-099 →
+EX25-14 (THE METHOD FORK — the menorah verse through BOTH rival
+engines, two valid-materials tables from one verse — middah
+governance on the unit's own ink; promote-never-demote w/
+scalding physics; the treasury split), F-100 → EX26-07 (the
+middle bar's STANDING MIRACLE beside EX26-05's Jacob-planted
+provenance; beam-taper dispute; partition at the second Temple's
+doubtful cubit; craft-words diagnostic; THE CHERUBIM ANGLED —
+taught in the name of ONKELOS THE CONVERT, the corpus' own
+translator cited BY NAME in the sugya; onyx list-boundary),
+F-101 → EX27-09 (the RED LINE on the net clause's own half; the
+indispensables bound by the DEFINITE ARTICLE; the touch bound to
+the suited), F-102 → EX38-08 (the sanctuary maneh DOUBLE from
+the inventory's refusal to round — the audit chapter yields a
+unit definition). NOTED FOR THE MOVE CATALOG: the will-indexed
+dispatch (contradictory verses assigned to doing-the-will /
+not-doing states) fired TWICE this block — third exemplar
+registers it. Rituals COMPLETE four units, regression green all
+24 runners, standing +5 rebaked (1266 → 1271), hash
+8b8fff1fa28953af unmoved, manifests 0 FAILED, gloss_lint 0.
+Records: REPORT_SANCTUARY.md + EXAM_LEDGER round 26 + catalog +
+THE_STEPS + briefing + memory. CAMPAIGN: 15 of 18 done (~75 LAW
+rows in 3 blocks remain: 5 decalogue ~40, 12 vestments ~35, 13
+service ~30 — overlap-adjusted). Ripest next: block 12
+(vestments) or 13 (service — the routed lamp-oil family waits
+there); block 5 (decalogue) the largest. Rounds 26+ UNCOMMITTED
+— ride the next "commit push" (last commit a8ebdfb).
+
+(round 27 — the vestments block) Owner: "GO" — block 12 of 18,
+VESTMENTS AND INVESTITURE, ran end to end as round 27. 21 LAW
+rows credited (Shabbat 12a:4 routed in; the daily-lambs pair
+routed on to block 13), 60 fresh segments across 8 tractates;
+four modules (vestments_rules.py), 20 cases: **20/20 FIRST RUN —
+849/849 over twenty-seven rounds**; R-450..R-453 (258 rules);
+vocab +20 (673). THREE findings across TWO units — both FIRST
+Talmud-block seats: F-103 → EX28-13 (the frontplate's state
+machine behind EX28-06/EX28-11 which HELD — broken=off, the peg
+disputed on the verse's own clauses, R. Yehuda's lone
+impurity-permitted arm, acceptance-not-calamity w/ Rav Ashi's
+dative gate, the tamid exported to tefillin touching), F-104 →
+EX28-14 (the form file — stones six-and-six w/ fifty letters,
+woven-not-needle, the TEFILLIN SLOT between plate and turban,
+the sounding ring, the great-altar jurisdiction), F-105 →
+EX29-14 (the investiture machine — unvested = STRANGER [office
+literally worn]; two clocks decoupled; trousers imported by
+EX29-01's own this-the-thing crown; collection by fit vested
+priest; THE PARSE-DIRECTION META-RULE ["expounded on what
+precedes, not before-the-before" — Zevachim 24b:3, law on
+29:12's own syntax]; the doubled-it freed token; the foods w/
+priests-eat-owners-atoned [EX29-06 held it]). THREE CONSECUTIVE
+BLOCKS now record rules-about-rules on their own verses
+(adjacency dispute → method fork → parse direction) — the middot
+layer accumulating case law inside the exam; MIDDOT.md updates
+owed at the next consolidation. Rituals COMPLETE two units,
+regression green all 25 runners, standing +3 rebaked (1271 →
+1274), hash 8b8fff1fa28953af unmoved, manifests 0 FAILED,
+gloss_lint 0. Records: REPORT_VESTMENTS.md + EXAM_LEDGER round
+27 + catalog + THE_STEPS + briefing + memory. CAMPAIGN: 16 of 18
+done (~45 LAW rows in 2 blocks remain: 5 decalogue ~40, 13
+service ~30 — overlap-adjusted; the routed daily-lambs +
+lamp-oil families wait at 13). Ripest next: block 13 (service
+order — closes the sanctuary family) then block 5 (the Decalogue
+— the campaign's finale). Rounds 26-27 UNCOMMITTED — ride the
+next "commit push" (last commit a8ebdfb).
+
+(round 28 — the service block; THE SANCTUARY FAMILY CLOSES)
+Owner: "one more" — block 13 of 18, THE SERVICE ORDER, ran end
+to end as round 28. 19 LAW rows credited (FIVE routed in and
+waiting from three blocks — the routing ledger CLEARED), 51
+fresh segments across 9 tractates; five modules
+(service_rules.py), 18 cases: **18/18 FIRST RUN — 867/867 over
+twenty-eight rounds**; R-454..R-458 (263 rules); vocab +18
+(691). THREE findings across THREE units (exo_30's FIRST seat):
+F-106 → EX27-10 (the lamp — self-ascending flame; perpetual
+fire at the OUTER altar's head w/ the menorah's flame fetched
+from it; the oil QUOTA; lamps LAST by the oto-token), F-107 →
+EX29-15 (the daily lambs — both-equal for mitzvah/valid
+unequal; two-FOR-THE-DAY = AGAINST the day, the slaughter
+positioned by the sun), F-108 → EX30-11 (the whole ch-30 layer
+— incense first by the doubled morning w/ tend-then-burn;
+dress-then-wash + the death clause; corners mixed-or-separate +
+the once-tokens' two exclusions; THE SELA COMPUTED THROUGH
+ONKELOS ["AND WE TRANSLATE twenty ma'in" — the conversion layer
+confirmed AT THE SOURCE]; the anointing gate w/ zeh=TWELVE;
+two-bans-one-karet; the HP's own flesh; THE ELEVEN SPICES
+stated at Sinai — data channel self-labeled 6th time, counted
+from the ink's plural tokens, w/ the rival klal-perat read =
+the method-fork family's 3rd seat; the weighing tippings).
+HEADLINE — THE ONKELOS ARC: round 26 cited him BY NAME, round
+28 finds the Talmud COMPUTING through his unit conversion: the
+translation layer is load-bearing. Rituals COMPLETE three
+units, regression green all 26 runners, standing +3 rebaked
+(1274 → 1277), hash 8b8fff1fa28953af unmoved, manifests 0
+FAILED, gloss_lint 0. Records: REPORT_SERVICE.md + EXAM_LEDGER
+round 28 + catalog + THE_STEPS + briefing + memory. CAMPAIGN:
+17 of 18 done — ONE BLOCK REMAINS: block 5, THE DECALOGUE (~40
+rows, the finale; Ex 20; Rosh Hashanah 24a-b, Shevuot 20b-39a,
+Sanhedrin 86a). Rounds 26-28 UNCOMMITTED — ride the next
+"commit push" (last commit a8ebdfb).
+
+═══ COMPACTION POINT #44 (2026-09-04, owner: "Time to compact get
+ready") ═══ CLEAN POINT. This window (the first post-#43 window):
+FOUR blocks ran end to end as rounds 25-28 — block 8 CAPITAL
+(22/22, the flow reversed: R. Akiva derives the witch's stoning
+FROM the seated boundary verse Exod 19:13; first seats exo_32 +
+exo_06), block 11 SANCTUARY (18/18, ONKELOS CITED BY NAME on the
+cherubim; THE METHOD FORK — one verse through both rival engines;
+the double maneh computed; first seats exo_25/26/38), block 12
+VESTMENTS (20/20, the frontplate machine pre-seated at
+EX28-06/11; THE PARSE-DIRECTION meta-rule; first seats
+exo_28/29), block 13 SERVICE (18/18, the SANCTUARY FAMILY CLOSED;
+the routing ledger cleared; THE SELA THROUGH ONKELOS — the
+translation load-bearing; ELEVEN SPICES = the data channel's 6th
+self-label; exo_30's first seat). Also this window: round 25
+COMMITTED AND PUSHED as a8ebdfb (the gh two-account switch ran
+cleanly — if a push hangs, gh auth switch --user Josephtorah,
+push, switch back to PeerloopLLC). Standing numbers: **867/867
+across twenty-eight rounds** · 17 of 18 blocks done · catalog
+R-458 (263 compiled rules) · vocabulary 691 query values on 158
+dims · findings F-092..F-108 this window (17 seats across 14
+unit-rituals; F-046..F-108 total) · standing tripwire 1277 (1266
+→ +11 this window's seats minus... exactly ONE PER SEAT each
+round: 1266→1271→1274→1277 after rounds 26/27/28; round 25 took
+1260→1266 before its commit) · hash 8b8fff1fa28953af UNMOVED ·
+corpus 130 · regression green (26 runners) · manifests 0 FAILED ·
+gloss_lint 0 throughout. UNCOMMITTED: rounds 26-28 (sanctuary,
+vestments, service — everything since a8ebdfb) ride the next
+"commit push". ONE BLOCK REMAINS: block 5 THE DECALOGUE (~40 LAW
+rows, the campaign's FINALE — Ex 20; Rosh Hashanah 24a-b, Shevuot
+20b-39a, Sanhedrin 86a; the map line: image-making's scope run,
+the vain and false oath, remember-over-wine, theft-of-persons,
+doing-vs-causing; note EX20-18/19 already seated rounds 21, and
+the capital block consumed 61a:15/61b:20/63a:1-3 — grep prior
+ledgers per the standing rule before opening). After the finale:
+the ~11 Genesis blocks (162 rows), the Lev 1-8 offering-engine
+consolidation, Shemini, MIDDOT.md consolidation (three
+rules-about-rules rows logged: adjacency validity r25, method
+fork r26+r28, parse direction r27 — plus the will-indexed
+dispatch at 2 exemplars, third registers it as a move). THE
+METHOD stands verbatim at round 16's entry and compaction #43's
+recap (grep rows → shelf fetch [amud = 2*daf-2+side] → ledger w/
+cite index → GREP TARGET MANIFESTS FIRST → vocab append-only w/
+collision guard [grep engine.RULES — fired 4×] → cases + rules +
+runner cloned from run_covenant.py IN World/step9 [cd first —
+the stray-engine.py lesson] → engine tail import → full
+regression → auto-seat w/ WITNESS_READ + S-entry + manifest row
+→ freeze_ritual + preflight + verify_claims [manifest PATH] +
+gloss_lint per unit → corpus_world.py rebake on the tripwire →
+EXAM_LEDGER + REPORT_<block>.md + state doc + THE_STEPS +
+briefing + memory, all UNPROMPTED). POST-COMPACTION REREADS
+(mandatory, first sitting): THE_STEPS Step 2 + Step 5 + the
+compiler block + this tail. On the owner's word: the Decalogue.
+
+(round 29 — THE DECALOGUE; THE CAMPAIGN CLOSES 18 OF 18)
+First sitting post-#44. Rereads done (THE_STEPS Step 2 + Step 5 +
+compiler block + tail). Owner: "Go" — block 5 of 18, THE
+DECALOGUE, ran end to end as round 29, THE FINALE. Docket per the
+standing grep-first rule: 15 fresh LAW rows, the routing ledger's
+LAST TWO (Pesachim 106a:5 + Shevuot 20b:9, parked by shabbat),
+5 standing credits (persons' theft pair, capital's worship trio —
+collision guard's 5th firing: idol_service_machine already
+answers them, credited NOT re-compiled). 72 segments opened
+fresh, 9 tractates (one honest out-of-range probe: Rosh Hashanah
+24a:21, amud ends at 20). Six modules (decalogue_rules.py), 24
+cases: **24/24 FIRST RUN — 891/891 over TWENTY-NINE rounds. THE
+EXODUS BLOCK CAMPAIGN IS COMPLETE: 18 of 18 mapped blocks, every
+one green first run; the cross-block routing ledger EMPTY.**
+R-459..R-464 (269 rules); vocab +24 (715 on 158 dims). FOUR
+findings, ONE unit ritual (exo_20): F-109 → EX20-20 (the
+image-making scope machine — the attendants ladder w/ the
+seven-lamp bar + Hasmonean progression; four faces; HUMAN FACE
+BY REVOCALIZATION [lo taasun ITI read OTI — M-16 family returns
+at the finale on the Decalogue's own clause]; the four-domain
+serving census to the tiny worm; the diagram resolutions incl.
+learn-to-rule; the seal-ring pair; the duress gate
+private/public), F-110 → EX20-21 (the vain-clause oath file —
+past-false HERE / future-broken to Lev 19:12 cross-book split;
+one-utterance pair; the speech-lash trio; the two-courts
+guiltless split; the ambiguous god-word handing the round-16
+oaths machinery its Exod 20 hook), F-111 → EX20-22 (the riders —
+iniquity when-grasping; anokhi denier; covet without-payment
+folk-parameter; eruv on the remember-verb; contradicted capital
+witnesses flogged w/ dispute + the death-warning lash exemption;
+theft-of-persons by NAMED context middah), F-112 → EX20-23 (the
+altar paragraph — Levi's poured-frames build; upon-it both arms
+one verse; the wholeness gate w/ THE TRADITION'S OWN RECORDED
+MEMORY FAILURE AND REPAIR ["a verse we held and forgot," Rav,
+restored Zevachim 59a:10-11]; the three-stones census). HEADLINE
+2 — THE SEAT INSIDE THE SUGYA: Shevuot 20b:10's own text RUNS
+the women-kiddush derivation EX20-18 has held since round 21 —
+the sugya picks up and USES the machine's held seat: the deepest
+anticipation form yet. The cite gate fired honestly mid-ritual
+(grouped index hid Zevachim 61b:5 — the round-16 lesson on its
+own fix; every segment now fully named); gloss_lint 7 new fixed
+to 0 (2 legacy at HEAD). Rituals COMPLETE, regression 130/130 +
+all 27 runners, standing +4 rebaked (1277 → 1281, one per seat),
+hash 8b8fff1fa28953af unmoved, manifests 0 FAILED. Records:
+REPORT_DECALOGUE.md + EXAM_LEDGER round 29 + catalog + block
+ledger + THE_STEPS + briefing + memory. UNCOMMITTED: rounds
+26-29 ride the next "commit push" (last commit a8ebdfb). NEXT on
+the owner's word: the ~11 Genesis blocks (162 rows), Lev 1-8
+offering-engine consolidation, Shemini, MIDDOT.md consolidation
+(adjacency r25, method fork r26+r28, parse direction r27,
+will-indexed dispatch at 2 exemplars).

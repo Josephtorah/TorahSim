@@ -247,6 +247,10 @@ m.witness_read("missing_1775", "reconciled_by_inventory",
 # וארבע מאות שקל». Derive claim from Hebrew arms, not English alone. Exod
 # 38:29."
 m.step("Exod.38.29")
+# witness-tier presupposed read: the_double_maneh_computed on brass_surplus
+# — read, not installed
+m.witness_read("brass_surplus", "the_double_maneh_computed",
+                cites=["Bekhorot 5a:17", "Bekhorot 5a:18", "Bekhorot 5a:19"])
 
 # -------------------------- Exod.38.30 · ETNACHTA_SPLIT --------------------
 # ויעש בה את אדני פתח אהל מועד ואת מזבח הנחשת ואת מכבר הנחשת א … ואת כל כלי
@@ -284,7 +288,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('laver_mirrors', 'two_tracks_of_the_women'), ('audit_constitution', 'two_signatories'), ('lineage_mention', 'praise_scorn_table'), ('books_published', 'currency_converted'), ('beka_rate', 'census_roll_closed'), ('missing_1775', 'reconciled_by_inventory'), ('surplus_declared', 'testimony_to_nations')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('laver_mirrors', 'two_tracks_of_the_women'), ('audit_constitution', 'two_signatories'), ('lineage_mention', 'praise_scorn_table'), ('books_published', 'currency_converted'), ('beka_rate', 'census_roll_closed'), ('missing_1775', 'reconciled_by_inventory'), ('brass_surplus', 'the_double_maneh_computed'), ('surplus_declared', 'testimony_to_nations')]
     assert m.WITNESS_READS[0]["cites"] == ['Midrash Tanchuma, Pekudei 9:2', 'Midrash Tanchuma, Pekudei 9:4', 'Onkelos Exod 38']
     assert all('two_tracks_of_the_women' not in f for f in m.WORLD["facts"])
     assert 'laver_mirrors' not in m.WORLD["witnessed"]
@@ -303,7 +307,10 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[5]["cites"] == ['Midrash Tanchuma Buber, Pekudei 4:1', 'Midrash Tanchuma, Pekudei 7:3', 'Onkelos Exod 38']
     assert all('reconciled_by_inventory' not in f for f in m.WORLD["facts"])
     assert 'missing_1775' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Midrash Tanchuma, Pekudei 2:4', 'Midrash Tanchuma, Pekudei 2:5', 'Midrash Tanchuma, Pekudei 5:5', 'Midrash Tanchuma, Pekudei 6:1', 'Onkelos Exod 38']
+    assert m.WITNESS_READS[6]["cites"] == ['Bekhorot 5a:17', 'Bekhorot 5a:18', 'Bekhorot 5a:19']
+    assert all('the_double_maneh_computed' not in f for f in m.WORLD["facts"])
+    assert 'brass_surplus' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Midrash Tanchuma, Pekudei 2:4', 'Midrash Tanchuma, Pekudei 2:5', 'Midrash Tanchuma, Pekudei 5:5', 'Midrash Tanchuma, Pekudei 6:1', 'Onkelos Exod 38']
     assert all('testimony_to_nations' not in f for f in m.WORLD["facts"])
     assert 'surplus_declared' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

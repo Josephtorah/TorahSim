@@ -66,6 +66,10 @@ m.witness_read("incense_clauses", "joined_to_address",
 # בבקר בהיטיבו את הנרת יקטירנה». Derive claim from Hebrew arms, not English
 # alone. Exod 30:7."
 m.step("Exod.30.7")
+# witness-tier presupposed read: the_service_chapters_babylonian_layer on
+# chapter_thirty — read, not installed
+m.witness_read("chapter_thirty", "the_service_chapters_babylonian_layer",
+                cites=["Pesachim 59a:2", "Pesachim 59a:8", "Pesachim 59a:9", "Pesachim 59a:10", "Yoma 14b:8", "Yoma 14b:9", "Yoma 32b:10", "Sanhedrin 83b:16", "Yoma 58a:1", "Yoma 58a:2", "Shevuot 8b:9", "Shevuot 8b:10", "Bekhorot 50a:3", "Bekhorot 50a:4", "Horayot 11b:9", "Horayot 11b:10", "Horayot 11b:11", "Keritot 3a:3", "Keritot 7a:5", "Keritot 7a:6", "Keritot 7a:7", "Keritot 6b:7", "Keritot 6b:8", "Keritot 5a:26", "Keritot 5a:27"])
 
 # -------------------------- Exod.30.8 · ETNACHTA_SPLIT ---------------------
 # ובהעלת אהרן את הנרת בין הערבים יקטירנה … קטרת תמיד לפני יהוה לדרתיכם
@@ -337,35 +341,38 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('incense_clauses', 'joined_to_address'), ('strange_incense', 'input_spec'), ('annual_atonement', 'yearly_protocol'), ('ransom_reasoning', 'tort_table_pricing'), ('half_shekel', 'census_by_ransom'), ('flat_rate', 'equality_invariant'), ('half_coin', 'kalbon_fees'), ('census_laws', 'ten_censuses'), ('laver_clauses', 'washing_as_sanctification'), ('formula_clauses', 'protected_formulas')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('incense_clauses', 'joined_to_address'), ('chapter_thirty', 'the_service_chapters_babylonian_layer'), ('strange_incense', 'input_spec'), ('annual_atonement', 'yearly_protocol'), ('ransom_reasoning', 'tort_table_pricing'), ('half_shekel', 'census_by_ransom'), ('flat_rate', 'equality_invariant'), ('half_coin', 'kalbon_fees'), ('census_laws', 'ten_censuses'), ('laver_clauses', 'washing_as_sanctification'), ('formula_clauses', 'protected_formulas')]
     assert m.WITNESS_READS[0]["cites"] == ['Onkelos Exod 30']
     assert all('joined_to_address' not in f for f in m.WORLD["facts"])
     assert 'incense_clauses' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Exod 30']
+    assert m.WITNESS_READS[1]["cites"] == ['Pesachim 59a:2', 'Pesachim 59a:8', 'Pesachim 59a:9', 'Pesachim 59a:10', 'Yoma 14b:8', 'Yoma 14b:9', 'Yoma 32b:10', 'Sanhedrin 83b:16', 'Yoma 58a:1', 'Yoma 58a:2', 'Shevuot 8b:9', 'Shevuot 8b:10', 'Bekhorot 50a:3', 'Bekhorot 50a:4', 'Horayot 11b:9', 'Horayot 11b:10', 'Horayot 11b:11', 'Keritot 3a:3', 'Keritot 7a:5', 'Keritot 7a:6', 'Keritot 7a:7', 'Keritot 6b:7', 'Keritot 6b:8', 'Keritot 5a:26', 'Keritot 5a:27']
+    assert all('the_service_chapters_babylonian_layer' not in f for f in m.WORLD["facts"])
+    assert 'chapter_thirty' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Exod 30']
     assert all('input_spec' not in f for f in m.WORLD["facts"])
     assert 'strange_incense' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Midrash Tanchuma, Ki Tisa 6', 'Onkelos Exod 30']
+    assert m.WITNESS_READS[3]["cites"] == ['Midrash Tanchuma, Ki Tisa 6', 'Onkelos Exod 30']
     assert all('yearly_protocol' not in f for f in m.WORLD["facts"])
     assert 'annual_atonement' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Midrash Tanchuma, Ki Tisa 9']
+    assert m.WITNESS_READS[4]["cites"] == ['Midrash Tanchuma, Ki Tisa 9']
     assert all('tort_table_pricing' not in f for f in m.WORLD["facts"])
     assert 'ransom_reasoning' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Mishnah Shekalim 1:1', 'Onkelos Exod 30']
+    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Shekalim 1:1', 'Onkelos Exod 30']
     assert all('census_by_ransom' not in f for f in m.WORLD["facts"])
     assert 'half_shekel' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Shekalim 2:4']
+    assert m.WITNESS_READS[6]["cites"] == ['Mishnah Shekalim 2:4']
     assert all('equality_invariant' not in f for f in m.WORLD["facts"])
     assert 'flat_rate' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Mishnah Shekalim 1:6']
+    assert m.WITNESS_READS[7]["cites"] == ['Mishnah Shekalim 1:6']
     assert all('kalbon_fees' not in f for f in m.WORLD["facts"])
     assert 'half_coin' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Midrash Tanchuma, Ki Tisa 9']
+    assert m.WITNESS_READS[8]["cites"] == ['Midrash Tanchuma, Ki Tisa 9']
     assert all('ten_censuses' not in f for f in m.WORLD["facts"])
     assert 'census_laws' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Exod 30']
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Exod 30']
     assert all('washing_as_sanctification' not in f for f in m.WORLD["facts"])
     assert 'laver_clauses' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Mishnah Keritot 1:1', 'Onkelos Exod 30']
+    assert m.WITNESS_READS[10]["cites"] == ['Mishnah Keritot 1:1', 'Onkelos Exod 30']
     assert all('protected_formulas' not in f for f in m.WORLD["facts"])
     assert 'formula_clauses' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

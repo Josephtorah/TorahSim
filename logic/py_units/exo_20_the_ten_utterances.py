@@ -60,6 +60,10 @@ m.step("Exod.20.5")
 # ‹כִּי אָנֹכִי יְהוָה אֱלֹהֶיךָ אֵל קַנָּא› (“that YHWH God-you/your
 # strength jealous”) — fact holds: strength-jealous
 m.fact("el_qana")
+# witness-tier presupposed read: utterance_rider_file on poqed_avon_avot —
+# read, not installed
+m.witness_read("poqed_avon_avot", "utterance_rider_file",
+                cites=["Berakhot 7a:26", "Berakhot 7a:27", "Sanhedrin 99a:20", "Sanhedrin 99a:21", "Bava Metzia 5b:18", "Bava Metzia 5b:19", "Bava Metzia 5b:20", "Beitzah 15b:4", "Beitzah 15b:5", "Bava Kamma 74b:7", "Bava Kamma 74b:8", "Bava Kamma 74b:9", "Sanhedrin 86a:15", "Sanhedrin 86a:16", "Sanhedrin 86a:17"])
 
 # -------------------------- Exod.20.6 · MERCY_TO_THOUSANDS -----------------
 # וְעֹשֶׂה חֶסֶד לַאֲלָפִים לְאֹהֲבַי וּלְשֹׁמְרֵי מִצְוֺתָי
@@ -79,6 +83,10 @@ m.step("Exod.20.7")
 # ‹לֹא תִשָּׂא אֶת־שֵׁם־יְהוָה אֱלֹהֶיךָ לַשָּׁוְא› (“not lift/carry obj-
 # marker name YHWH God-you/your to-evil”) —
 m.statute("FORBID", "shem_la_shav")
+# witness-tier presupposed read: vain_clause_oath_file on lo_tisa_et_shem —
+# read, not installed
+m.witness_read("lo_tisa_et_shem", "vain_clause_oath_file",
+                cites=["Shevuot 20b:5", "Shevuot 20b:6", "Shevuot 20b:7", "Shevuot 20b:8", "Shevuot 20b:9", "Shevuot 20b:10", "Shevuot 21a:5", "Shevuot 21a:6", "Shevuot 21a:7", "Shevuot 29a:12", "Shevuot 29a:13", "Shevuot 29a:14"])
 
 # -------------------------- Exod.20.8 · REMEMBER_THE_SABBATH ---------------
 # זָכוֹר אֶת־יוֹם הַשַּׁבָּת לְקַדְּשׁוֹ
@@ -260,6 +268,10 @@ m.step("Exod.20.23")
 # ‹לֹא תַעֲשׂוּן אִתִּי אֱלֹהֵי כֶסֶף וֵאלֹהֵי זָהָב› (“not make-ward with-
 # me/my God silver and-God gold”) —
 m.statute("FORBID", "elohe_khesef_ve_zahav")
+# witness-tier presupposed read: image_making_scope_machine on lo_taasun_iti
+# — read, not installed
+m.witness_read("lo_taasun_iti", "image_making_scope_machine",
+                cites=["Rosh Hashanah 24a:18", "Rosh Hashanah 24a:19", "Rosh Hashanah 24a:20", "Rosh Hashanah 24b:1", "Rosh Hashanah 24b:2", "Rosh Hashanah 24b:3", "Rosh Hashanah 24b:4", "Rosh Hashanah 24b:5", "Rosh Hashanah 24b:6", "Rosh Hashanah 24b:7", "Rosh Hashanah 24b:8", "Rosh Hashanah 24b:9", "Rosh Hashanah 24b:10", "Rosh Hashanah 24b:11", "Rosh Hashanah 24b:12", "Rosh Hashanah 24b:13", "Avodah Zarah 43b:4", "Avodah Zarah 43b:5", "Avodah Zarah 43b:6", "Avodah Zarah 43b:7", "Avodah Zarah 43b:8", "Avodah Zarah 43b:9", "Avodah Zarah 43b:10", "Avodah Zarah 43b:11", "Avodah Zarah 43b:12", "Avodah Zarah 43b:13", "Avodah Zarah 43b:14", "Avodah Zarah 43b:15", "Avodah Zarah 54a:3", "Avodah Zarah 54a:4", "Avodah Zarah 54a:5"])
 
 # -------------------------- Exod.20.24 · AN_ALTAR_OF_EARTH -----------------
 # מִזְבַּח אֲדָמָה תַּעֲשֶׂה־לִּי וְזָבַחְתָּ עָלָיו אֶת־עֹלֹתֶיךָ
@@ -276,6 +288,10 @@ m.statute("BIND", "mizbach_adama")
 # be_khol_ha_maqom_asher_azkir — read, not installed
 m.witness_read("be_khol_ha_maqom_asher_azkir", "name_mention_dual_law",
                 cites=["Sotah 38a:9", "Sotah 38a:10", "Sotah 38a:11", "Sotah 38a:12", "Sotah 38a:13", "Berakhot 6a:13", "Berakhot 6a:14", "Berakhot 54a:9"])
+# witness-tier presupposed read: altar_paragraph_babylonian_layer on
+# ve_zavachta_alav — read, not installed
+m.witness_read("ve_zavachta_alav", "altar_paragraph_babylonian_layer",
+                cites=["Zevachim 54a:7", "Zevachim 54a:8", "Zevachim 54a:9", "Zevachim 58a:4", "Zevachim 58a:5", "Zevachim 58a:6", "Zevachim 59a:10", "Zevachim 59a:11", "Zevachim 59a:12", "Zevachim 61b:3", "Zevachim 61b:4", "Zevachim 61b:5"])
 
 # -------------------------- Exod.20.25 · NO_HEWN_STONES --------------------
 # וְאִם־מִזְבַּח אֲבָנִים תַּעֲשֶׂה־לִּי לֹא־תִבְנֶה אֶתְהֶן גָּזִית כִּי
@@ -313,23 +329,35 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 17
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('zakhor_et_yom_ha_shabat', 'kiddush_file'), ('rest_roster', 'recorded_runs'), ('honor_utterance', 'equal_weight'), ('false_witness_utterance', 'plotting_rows'), ('altar_speech', 'standing_rows'), ('be_khol_ha_maqom_asher_azkir', 'name_mention_dual_law')]
-    assert m.WITNESS_READS[0]["cites"] == ['Pesachim 106a:5', 'Pesachim 106a:6', 'Pesachim 106a:7', 'Pesachim 117b:8', 'Berakhot 20b:7', 'Berakhot 20b:8', 'Berakhot 20b:9', 'Berakhot 20b:10', 'Berakhot 20b:11', 'Berakhot 20b:12', 'Berakhot 20b:13', 'Berakhot 20b:14']
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('poqed_avon_avot', 'utterance_rider_file'), ('lo_tisa_et_shem', 'vain_clause_oath_file'), ('zakhor_et_yom_ha_shabat', 'kiddush_file'), ('rest_roster', 'recorded_runs'), ('honor_utterance', 'equal_weight'), ('false_witness_utterance', 'plotting_rows'), ('altar_speech', 'standing_rows'), ('lo_taasun_iti', 'image_making_scope_machine'), ('be_khol_ha_maqom_asher_azkir', 'name_mention_dual_law'), ('ve_zavachta_alav', 'altar_paragraph_babylonian_layer')]
+    assert m.WITNESS_READS[0]["cites"] == ['Berakhot 7a:26', 'Berakhot 7a:27', 'Sanhedrin 99a:20', 'Sanhedrin 99a:21', 'Bava Metzia 5b:18', 'Bava Metzia 5b:19', 'Bava Metzia 5b:20', 'Beitzah 15b:4', 'Beitzah 15b:5', 'Bava Kamma 74b:7', 'Bava Kamma 74b:8', 'Bava Kamma 74b:9', 'Sanhedrin 86a:15', 'Sanhedrin 86a:16', 'Sanhedrin 86a:17']
+    assert all('utterance_rider_file' not in f for f in m.WORLD["facts"])
+    assert 'poqed_avon_avot' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Shevuot 20b:5', 'Shevuot 20b:6', 'Shevuot 20b:7', 'Shevuot 20b:8', 'Shevuot 20b:9', 'Shevuot 20b:10', 'Shevuot 21a:5', 'Shevuot 21a:6', 'Shevuot 21a:7', 'Shevuot 29a:12', 'Shevuot 29a:13', 'Shevuot 29a:14']
+    assert all('vain_clause_oath_file' not in f for f in m.WORLD["facts"])
+    assert 'lo_tisa_et_shem' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Pesachim 106a:5', 'Pesachim 106a:6', 'Pesachim 106a:7', 'Pesachim 117b:8', 'Berakhot 20b:7', 'Berakhot 20b:8', 'Berakhot 20b:9', 'Berakhot 20b:10', 'Berakhot 20b:11', 'Berakhot 20b:12', 'Berakhot 20b:13', 'Berakhot 20b:14']
     assert all('kiddush_file' not in f for f in m.WORLD["facts"])
     assert 'zakhor_et_yom_ha_shabat' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Bava Kamma 54b:13', 'Bava Kamma 54b:14', 'Shabbat 153b:7', 'Shabbat 153b:8', 'Shabbat 120b:11', 'Shabbat 120b:12', 'Shabbat 117b:8', 'Bava Metzia 32a:15', 'Bava Metzia 32a:16']
+    assert m.WITNESS_READS[3]["cites"] == ['Bava Kamma 54b:13', 'Bava Kamma 54b:14', 'Shabbat 153b:7', 'Shabbat 153b:8', 'Shabbat 120b:11', 'Shabbat 120b:12', 'Shabbat 117b:8', 'Bava Metzia 32a:15', 'Bava Metzia 32a:16']
     assert all('recorded_runs' not in f for f in m.WORLD["facts"])
     assert 'rest_roster' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Mishnah Keritot 6:9']
+    assert m.WITNESS_READS[4]["cites"] == ['Mishnah Keritot 6:9']
     assert all('equal_weight' not in f for f in m.WORLD["facts"])
     assert 'honor_utterance' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Mishnah Makkot 1:2', 'Mishnah Makkot 1:3']
+    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Makkot 1:2', 'Mishnah Makkot 1:3']
     assert all('plotting_rows' not in f for f in m.WORLD["facts"])
     assert 'false_witness_utterance' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Mishnah Chagigah 3:8', 'Pirkei Avot 3:6', 'Mishnah Tamid 5:1', 'Mishnah Shabbat 24:1']
+    assert m.WITNESS_READS[6]["cites"] == ['Mishnah Chagigah 3:8', 'Pirkei Avot 3:6', 'Mishnah Tamid 5:1', 'Mishnah Shabbat 24:1']
     assert all('standing_rows' not in f for f in m.WORLD["facts"])
     assert 'altar_speech' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Sotah 38a:9', 'Sotah 38a:10', 'Sotah 38a:11', 'Sotah 38a:12', 'Sotah 38a:13', 'Berakhot 6a:13', 'Berakhot 6a:14', 'Berakhot 54a:9']
+    assert m.WITNESS_READS[7]["cites"] == ['Rosh Hashanah 24a:18', 'Rosh Hashanah 24a:19', 'Rosh Hashanah 24a:20', 'Rosh Hashanah 24b:1', 'Rosh Hashanah 24b:2', 'Rosh Hashanah 24b:3', 'Rosh Hashanah 24b:4', 'Rosh Hashanah 24b:5', 'Rosh Hashanah 24b:6', 'Rosh Hashanah 24b:7', 'Rosh Hashanah 24b:8', 'Rosh Hashanah 24b:9', 'Rosh Hashanah 24b:10', 'Rosh Hashanah 24b:11', 'Rosh Hashanah 24b:12', 'Rosh Hashanah 24b:13', 'Avodah Zarah 43b:4', 'Avodah Zarah 43b:5', 'Avodah Zarah 43b:6', 'Avodah Zarah 43b:7', 'Avodah Zarah 43b:8', 'Avodah Zarah 43b:9', 'Avodah Zarah 43b:10', 'Avodah Zarah 43b:11', 'Avodah Zarah 43b:12', 'Avodah Zarah 43b:13', 'Avodah Zarah 43b:14', 'Avodah Zarah 43b:15', 'Avodah Zarah 54a:3', 'Avodah Zarah 54a:4', 'Avodah Zarah 54a:5']
+    assert all('image_making_scope_machine' not in f for f in m.WORLD["facts"])
+    assert 'lo_taasun_iti' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sotah 38a:9', 'Sotah 38a:10', 'Sotah 38a:11', 'Sotah 38a:12', 'Sotah 38a:13', 'Berakhot 6a:13', 'Berakhot 6a:14', 'Berakhot 54a:9']
     assert all('name_mention_dual_law' not in f for f in m.WORLD["facts"])
     assert 'be_khol_ha_maqom_asher_azkir' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Zevachim 54a:7', 'Zevachim 54a:8', 'Zevachim 54a:9', 'Zevachim 58a:4', 'Zevachim 58a:5', 'Zevachim 58a:6', 'Zevachim 59a:10', 'Zevachim 59a:11', 'Zevachim 59a:12', 'Zevachim 61b:3', 'Zevachim 61b:4', 'Zevachim 61b:5']
+    assert all('altar_paragraph_babylonian_layer' not in f for f in m.WORLD["facts"])
+    assert 've_zavachta_alav' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -46,6 +46,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>B</b></td><td>Trees</td><td>Every verse via taamim_tree_parse.py v1; full tree_ascii recorded.</td><td>tested</td></tr>
 <tr><td><b>C</b></td><td>Tree → steps</td><td>One STEP per verse citing left/right top-split arms. English [EN-AID] only. Condition markers (אם/כי) flagged in op when verse-initial.</td><td>hypothesis</td></tr>
 <tr><td><b>D</b></td><td>Oral dual-track</td><td>Mekhilta samples when available; dual-track only; never silent-merge.</td><td>hypothesis</td></tr>
+<tr><td><b>S26</b></td><td>Round-26 Talmud-block seat (2026-09-04)</td><td>SANCTUARY CONSTANTS — the fifteenth Exodus Talmud-first exam block (owner: &quot;next block&quot;; ledger logic/oral_triage/exodus_block_sanctuary_2026-09-04.md; runner run_sanctuary.py, 18/18 first run). One seat under the auto-seat law — the unit&#x27;s FIRST Talmud-block seat: EX26-07 (F-100 — the structure&#x27;s Babylonian layer, landing beside EX26-05&#x27;s Jacob-planted bar: the middle bar&#x27;s standing miracle; the beam-taper dispute both arms; the partition&#x27;s one-or-two resolved at the second Temple&#x27;s doubtful cubit; the craft-words&#x27; face-count diagnostic; the cherubim&#x27;s angled resolution taught in the name of ONKELOS THE CONVERT — the corpus&#x27; own translator cited by name; the onyx list-boundary parse). Machine ops untouched below the witness tier.</td><td>witnessed</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -277,6 +278,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(middle_bar, jacob_planted)</span><br><span class="gloss">= WITNESS-READ(middle-bar, jacob-planted)</span><br>THE BAR THAT CAME DOWN WITH JACOB [claim EX26-05]. The end-to-end middle bar is given a provenance older than the command: planted by Jacob at the descent, carried in his hand to Egypt (Midrash Tanchuma, Terumah 9; Buber 9) — the tradition wiring this chapter&#x27;s hardware back into Genesis, with the shittim-heals-Shittim aetiology pointing forward to Numbers 25. The contained-Voice reading of the curtains (the speech that once burst into the nations&#x27; tents now housed — Tanchuma 9) pairs with EX25-05&#x27;s oracle interface. Seated under the amended spine, auto-seat law.
 </td><td>—</td><td class='cite'>Midrash Tanchuma, Terumah 9</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(structure_verses, the_structures_babylonian_layer)</span><br><span class="gloss">= WITNESS-READ(structure-verses, the-structures-babylonian-layer)</span><br>THE STRUCTURE&#x27;S BABYLONIAN LAYER [claim EX26-07]. The round-26 sanctuary block seats the chapter&#x27;s build machinery — landing beside EX26-05&#x27;s Jacob-planted bar. THE BAR ITSELF: &quot;from end to end&quot; — taught: BY MIRACLE it stood (בנס היה עומד) — the bar threading the three walls recorded as the architecture&#x27;s honest impossibility (Shabbat 98b:5). THE TAPER DISPUTE: the beams a cubit thick below — R. Yehuda: tapering to a FINGERBREADTH (tamim read with ended-cut-off); R. Nechemiah: a cubit THROUGHOUT (yachdav) — each arm on its own token, each answering the other&#x27;s, the corner geometry and the curtains&#x27; overhang computed both ways (98b:2-4, 98b:6). THE PARTITION: R. Yosei&#x27;s ONE curtain from 26:33&#x27;s own divide-verb against the Rabbis&#x27; TWO — resolved at the second Temple&#x27;s missing wall and doubtful cubit (Yoma 51b:5-6). THE CRAFT WORDS: embroiderer against designer — needle work one face, weaving two (72b:18-19). THE CHERUBIM (25:20, the facing chapter): toward-each-other against toward-the-House resolved will-indexed, and the ANGLED resolution taught in the name of אונקלוס הגר (&quot;Onkelos the convert&quot;) — &quot;like a student taking leave of his teacher&quot;: the corpus&#x27; own translator cited by name on the build&#x27;s ink (Bava Batra 99a:6-7). AND THE ONYX BOUNDARY: the contribution list&#x27;s syntax ruled at the letter grain — the vav-less onyx breaks the matter, the setting-stones re-mix it (Avodah Zarah 24a:2). Auto-seat law, F-100.
+</td><td>—</td><td class='cite'>Shabbat 98b:1, Shabbat 98b:2, Shabbat 98b:3, Shabbat 98b:4, Shabbat 98b:5, Shabbat 98b:6, Yoma 51b:5, Yoma 51b:6, Yoma 72b:18, Yoma 72b:19, Bava Batra 99a:6, Bava Batra 99a:7, Avodah Zarah 24a:2</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.</div>
 </div>
@@ -2157,6 +2160,10 @@ m.step(&quot;Exod.26.28&quot;)
 # installed
 m.witness_read(&quot;middle_bar&quot;, &quot;jacob_planted&quot;,
                 cites=[&quot;Midrash Tanchuma, Terumah 9&quot;])
+# witness-tier presupposed read: the_structures_babylonian_layer on
+# structure_verses — read, not installed
+m.witness_read(&quot;structure_verses&quot;, &quot;the_structures_babylonian_layer&quot;,
+                cites=[&quot;Shabbat 98b:1&quot;, &quot;Shabbat 98b:2&quot;, &quot;Shabbat 98b:3&quot;, &quot;Shabbat 98b:4&quot;, &quot;Shabbat 98b:5&quot;, &quot;Shabbat 98b:6&quot;, &quot;Yoma 51b:5&quot;, &quot;Yoma 51b:6&quot;, &quot;Yoma 72b:18&quot;, &quot;Yoma 72b:19&quot;, &quot;Bava Batra 99a:6&quot;, &quot;Bava Batra 99a:7&quot;, &quot;Avodah Zarah 24a:2&quot;])
 
 # -------------------------- Exod.26.29 · ETNACHTA_SPLIT --------------------
 # ואת הקרשים תצפה זהב ואת טבעתיהם תעשה זהב בתים לבריחם … וצפית את הבריחם זהב
@@ -2246,7 +2253,7 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;fabric_clauses&#x27;, &#x27;craft_grades&#x27;), (&#x27;boards_clause&#x27;, &#x27;standing_enduring&#x27;), (&#x27;standing_wood&#x27;, &#x27;way_of_growth&#x27;), (&#x27;middle_bar&#x27;, &#x27;jacob_planted&#x27;), (&#x27;raising_clause&#x27;, &#x27;building_halakhah&#x27;), (&#x27;veil_clause&#x27;, &#x27;partition_and_stations&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;fabric_clauses&#x27;, &#x27;craft_grades&#x27;), (&#x27;boards_clause&#x27;, &#x27;standing_enduring&#x27;), (&#x27;standing_wood&#x27;, &#x27;way_of_growth&#x27;), (&#x27;middle_bar&#x27;, &#x27;jacob_planted&#x27;), (&#x27;structure_verses&#x27;, &#x27;the_structures_babylonian_layer&#x27;), (&#x27;raising_clause&#x27;, &#x27;building_halakhah&#x27;), (&#x27;veil_clause&#x27;, &#x27;partition_and_stations&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Onkelos Exod 26&#x27;]
     assert all(&#x27;craft_grades&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;fabric_clauses&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -2259,12 +2266,15 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Terumah 9&#x27;]
     assert all(&#x27;jacob_planted&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;middle_bar&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Onkelos Exod 26&#x27;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Shabbat 98b:1&#x27;, &#x27;Shabbat 98b:2&#x27;, &#x27;Shabbat 98b:3&#x27;, &#x27;Shabbat 98b:4&#x27;, &#x27;Shabbat 98b:5&#x27;, &#x27;Shabbat 98b:6&#x27;, &#x27;Yoma 51b:5&#x27;, &#x27;Yoma 51b:6&#x27;, &#x27;Yoma 72b:18&#x27;, &#x27;Yoma 72b:19&#x27;, &#x27;Bava Batra 99a:6&#x27;, &#x27;Bava Batra 99a:7&#x27;, &#x27;Avodah Zarah 24a:2&#x27;]
+    assert all(&#x27;the_structures_babylonian_layer&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;structure_verses&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Onkelos Exod 26&#x27;]
     assert all(&#x27;building_halakhah&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;raising_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Mishnah Yoma 5:1&#x27;, &#x27;Onkelos Exod 26&#x27;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Mishnah Yoma 5:1&#x27;, &#x27;Onkelos Exod 26&#x27;]
     assert all(&#x27;partition_and_stations&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;veil_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">Tree-derived v1 (phase 2d). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">Tree-derived v1 (phase 2d). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
