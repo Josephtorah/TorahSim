@@ -50,6 +50,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
 <tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
 <tr><td><b>S9</b></td><td>Step 9 backfill seats (2026-09-01)</td><td>Step 9 backfill exam (2026-09-01, owner: &#x27;lets run step 9 on exodus 1 - 21 again&#x27;): the bare-Mishnah rows citing Exod 1-21 read in full (ledger logic/oral_triage/exodus_backfill_mishnah_2026-09-01.md); this unit&#x27;s unheld legs seated under the auto-seat law — claims EX02-14. Machine ops untouched below the witness tier.</td><td>tested</td></tr>
+<tr><td><b>S25</b></td><td>Round-25 Talmud-block seat (2026-09-04)</td><td>CAPITAL MODES AND IDOLATRY SERVICE — the fourteenth Exodus Talmud-first exam block (owner: &quot;go&quot;; ledger logic/oral_triage/exodus_block_capital_2026-09-04.md; runner run_capital.py, 22/22 first run). One seat under the auto-seat law: EX02-15 (F-096 — the two Moses satellites: the gentile-who-strikes law on 2:12&#x27;s own narrative, landing on prose that had already read the killing as neither praised nor sentenced; the raised-hand-wicked law on 2:13&#x27;s own imperfect verb). Machine ops untouched below the witness tier.</td><td>witnessed</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -175,6 +176,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>EVENT</td><td><span class="expr">hika(e1); Agent(e1, moshe)</span><br><span class="gloss">= hika(e1); Agent(e1, Moses)</span><br>THE STRIKE [EX02-08]. va-yifen KO va-KHO — &#x27;he turned THIS way and THAT&#x27; (the readings&#x27; two turnings named — no witness / no future proselyte in the man&#x27;s line); va-yar KI EN ISH — &#x27;he saw there was NO MAN&#x27; (the ki hung on the galgal in the precise books against the stream&#x27;s joining-stroke — the mark-split class&#x27;s next station, carried named [VERIFIED under EX02-08]; the readings: no man who would stand up — the ish-word that 2:14 will throw back at him); va- YAKH et ha-MITZRI — the strike-verb: the machine&#x27;s EVENT — Moses&#x27; first recorded deed is a killing the letter neither praises nor sentences (the smite-verb that will run through the plagues, armed); va-yitmenehu ba-CHOL — hidden in the sand: the machine files the concealment as the next verse&#x27;s fuse.
 </td><td><span class="he">וַיַּךְ אֶת־הַמִּצְרִי</span> · <i>va-yakh et-ha-mitzri</i><br><span class="gloss">= and-yakh the-mitzri</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(strike_and_rebuke, the_two_moses_satellite_laws)</span><br><span class="gloss">= WITNESS-READ(strike-and-rebuke, the-two-moses-satellite-laws)</span><br>THE TWO SATELLITE LAWS ON MOSES&#x27; OWN VERSES [claim EX02-15]. The round-25 capital block seats the Babylonian layer on 2:12-13. THE GENTILE WHO STRIKES: R. Chanina — a gentile who strikes an Israelite is liable to death, from THIS verse&#x27;s own narrative: &quot;he turned this way and that and saw there was NO MAN, and struck the Egyptian&quot; (Sanhedrin 58b:17, the slap-the-Presence escort at 58b:18) — landing on a step whose frozen prose had already read the killing as &quot;a killing the letter neither praises nor sentences&quot; and named the readings&#x27; two turnings. THE RAISED HAND: Reish Lakish — one who raises his hand though he did not strike is called WICKED: למה תכה (&quot;why WOULD you strike,&quot; 2:13) — not &quot;why did you strike&quot;: the verse&#x27;s own imperfect verb carries the law (58b:19, Zeiri&#x27;s sinner row at 58b:20) — the rebuke step&#x27;s own quoted clause (EX02-13) become a statute&#x27;s source. Auto-seat law, F-096.
+</td><td>—</td><td class='cite'>Sanhedrin 58b:16, Sanhedrin 58b:17, Sanhedrin 58b:18, Sanhedrin 58b:19, Sanhedrin 58b:20</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The strike; the machine&#x27;s first event of the unit&#x27;s second half.</div>
 </div>
@@ -627,6 +630,10 @@ m.step(&quot;Exod.2.12&quot;)
 # ‹וַיַּךְ אֶת־הַמִּצְרִי› (“and-strike obj-marker the-Egyptian”) — event:
 # hika — agent Moses
 m.event(&quot;hika&quot;, agent=&quot;moshe&quot;)
+# witness-tier presupposed read: the_two_moses_satellite_laws on
+# strike_and_rebuke — read, not installed
+m.witness_read(&quot;strike_and_rebuke&quot;, &quot;the_two_moses_satellite_laws&quot;,
+                cites=[&quot;Sanhedrin 58b:16&quot;, &quot;Sanhedrin 58b:17&quot;, &quot;Sanhedrin 58b:18&quot;, &quot;Sanhedrin 58b:19&quot;, &quot;Sanhedrin 58b:20&quot;])
 
 # -------------------------- Exod.2.13 · TWO_HEBREWS_STRIVING ---------------
 # וַיֵּצֵא בַּיּוֹם הַשֵּׁנִי וְהִנֵּה שְׁנֵי־אֲנָשִׁים עִבְרִים נִצִּים
@@ -780,9 +787,12 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 10
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;station_afar&#x27;, &#x27;good_measure&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;station_afar&#x27;, &#x27;good_measure&#x27;), (&#x27;strike_and_rebuke&#x27;, &#x27;the_two_moses_satellite_laws&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Mishnah Sotah 1:9&#x27;]
     assert all(&#x27;good_measure&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;station_afar&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Sanhedrin 58b:16&#x27;, &#x27;Sanhedrin 58b:17&#x27;, &#x27;Sanhedrin 58b:18&#x27;, &#x27;Sanhedrin 58b:19&#x27;, &#x27;Sanhedrin 58b:20&#x27;]
+    assert all(&#x27;the_two_moses_satellite_laws&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;strike_and_rebuke&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-09-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

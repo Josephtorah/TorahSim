@@ -703,3 +703,48 @@ four units (exo_23, exo_13, exo_34, exo_12), regression green
 (all 22 runners), standing +6 rebaked (1254 → 1260, one per seat
 exactly), hash 8b8fff1fa28953af unmoved, manifests 0 FAILED,
 gloss_lint 0 on all new content.
+
+## Round 25 — CAPITAL MODES AND IDOLATRY SERVICE (2026-09-04, Exodus exam block 8 of 18)
+Owner: "go." The witch, bestiality's passive, the service
+paradigm, the blasphemy verb and the ruler's gate, the satellites.
+23 LAW rows credited (the courts block's standing capital route
+honored), 65 segments opened fresh across 4 tractates (ledger
+logic/oral_triage/exodus_block_capital_2026-09-04.md). Five
+modules (capital_rules.py), 22 cases (cases_capital.yaml): **22/22
+FIRST RUN** — all priors green: **811/811 across twenty-five
+rounds**. Catalog R-440..R-444 (249 compiled rules); vocabulary
++22 (635 on 158 dims). SIX findings auto-seated across FIVE
+units: F-092 → EX22-17 (the three capital clauses — the witch's
+gender-frequency read; the mode analogy war w/ R. Akiva's peg AT
+THE SINAI BOUNDARY VERSE Exod 19:13; the juxtaposition middah
+ITSELF disputed at this verse [ben Azzai vs R. Yehuda, Rav
+Yosef's Deuteronomy meta-rule]; bestiality's passive by
+reassignment; the inside-service paradigm w/ the blemish
+exemption and the joining ban), F-093 → EX22-18 (the curse file —
+nokev fixed as cursing from Balaam's own verb w/ the warning
+here; the elohim referent dispute; the parent-curser's binyan av;
+the deeds-of-your-people gate w/ the repentance rider), F-094 →
+EX34-11 (the bowing file's office — 34:14 IS the punished bow's
+warning; Abaye's three-verse census; the one-lapse service
+unification; love-or-fear disputed), F-095 → EX32-08 (the calf
+verse's law layer — the Noahide source w/ the making-vs-worship
+fork recorded UNASSIGNED; accepting-as-god by the verse's own
+three-verb hekesh; the he'elukha vav that held the verdict),
+F-096 → EX02-15 (the two Moses satellites — gentile-strikes
+liable from 2:12's own narrative; raised-hand-wicked from 2:13's
+own IMPERFECT VERB), F-097 → EX06-15 (the aunt-marriage hearing
+the step's own prose had filed "named-only, unclaimed" — held at
+last, resolved father's-side). ANTICIPATIONS: R. Akiva's
+witch-mode peg lands on the boundary verse the covenant block
+seated one sitting earlier — a SUGYA importing OUR seat's clause;
+EX22-09 held the zevichah service-paradigm and the curse counts
+since F-017; exo_06's own translation layer already rendered
+dodato "his father's sister" — the sugya's resolution was the
+reading's standing choice; exo_02's strike prose had read the
+killing as "neither praises nor sentences" before the law
+arrived. THE FIRST TALMUD-BLOCK SEATS on exo_32 and exo_06 — the
+campaign reaches units untouched since the forward era. Rituals
+COMPLETE five units, regression green (all 23 runners), standing
++6 rebaked (1260 → 1266, one per seat exactly), hash
+8b8fff1fa28953af unmoved, manifests 0 FAILED, gloss_lint 0 on
+all new content.

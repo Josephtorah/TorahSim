@@ -9694,3 +9694,62 @@ sanctuary ~30, 12 vestments ~35, 13 service ~30). Ripest next:
 block 8 (capital modes) or block 11 (sanctuary — Yoma 3b:3's
 route-in waits there). NOTHING COMMITTED since 5923523 — rounds
 17-24 ride the next "commit push."
+
+(commit c43863f, 2026-09-04) Owner: "commit and push" — rounds
+17-24 COMMITTED AND PUSHED as c43863f (5923523..c43863f on main):
+the eight-block span (shabbat, matza, egypt, ink, conduct,
+calendar, covenant, festivals), 110 files, the three root
+deliverables (LEV_CODE.html, Tutorial_Compiling_The_Bible.html,
+Compiling_The_Bible_Audio.epub) aboard. Standing exclusions held:
+elijah_docket unstaged, DISPOSABLE_scan + the codes file +
+open_ledger (own git) + grok-mockups + logic/gork untouched. NOTE
+FOR THE NEXT PUSH: the gh CLI now holds TWO accounts — the push
+hung on a Cursor askpass prompt because the ACTIVE account was
+PeerloopLLC; fixed by gh auth switch --user Josephtorah, push,
+switch back. If a push hangs silently, check gh auth status
+first. Nothing else outstanding; the campaign resumes on the
+owner's word (ripest: block 8 capital or 11 sanctuary).
+
+(round 25 — the capital block) Owner: "go" — block 8 of 18,
+CAPITAL MODES AND IDOLATRY SERVICE, ran end to end as round 25.
+23 LAW rows credited (the courts block's standing capital route
+honored), 65 fresh segments across 4 tractates; five modules
+(capital_rules.py), 22 cases: **22/22 FIRST RUN — 811/811 over
+twenty-five rounds**; R-440..R-444 (249 rules); vocab +22 (635).
+SIX findings auto-seated across FIVE units: F-092 → EX22-17 (the
+three capital clauses — the witch's gender-frequency read + the
+mode analogy war; the juxtaposition middah ITSELF disputed at
+this verse [ben Azzai vs R. Yehuda + Rav Yosef's
+Deuteronomy-only meta-rule — a middah-governance row for
+MIDDOT.md]; bestiality's passive by reassignment; the
+inside-service paradigm w/ blemish exemption + joining ban),
+F-093 → EX22-18 (the curse file — nokev = cursing from Balaam's
+verb w/ the warning here; the elohim referent dispute; the
+parent-curser's binyan av; the deeds-of-your-people gate w/
+repentance rider), F-094 → EX34-11 (34:14 IS the punished bow's
+warning; Abaye's three-bowing census; the one-lapse unification;
+love-or-fear disputed), F-095 → EX32-08 (FIRST seat on exo_32 —
+the Noahide source w/ making-vs-worship fork UNASSIGNED;
+accepting-as-god by the three-verb hekesh; the he'elukha vav),
+F-096 → EX02-15 (gentile-strikes from 2:12's own narrative;
+raised-hand-wicked from 2:13's IMPERFECT verb), F-097 → EX06-15
+(FIRST seat on exo_06 — the aunt-marriage hearing the step's own
+prose filed "named-only, unclaimed," resolved father's-side —
+the unit's own translation layer ALREADY carried the
+resolution). HEADLINE: A SUGYA IMPORTS OUR SEAT — R. Akiva
+derives the witch's stoning from לא יחיה ("it shall not live")
+at Exod 19:13, THE SINAI BOUNDARY VERSE seated one sitting
+earlier: the flow reversed — not a seat answering a sugya, a
+sugya running on a seated clause (cross-chapter import edge).
+Rituals COMPLETE five units (exo_22 S25 ×2, exo_34 S25, exo_32
+S25 first, exo_02 S25, exo_06 S25 first), regression green all
+23 runners, standing +6 rebaked (1260 → 1266), hash
+8b8fff1fa28953af unmoved, manifests 0 FAILED, gloss_lint 0 on
+new content. Records: REPORT_CAPITAL.md + EXAM_LEDGER round 25 +
+catalog + THE_STEPS + briefing + memory. CAMPAIGN: 14 of 18 done
+(~110 LAW rows in 4 blocks remain: 5 decalogue ~40, 11 sanctuary
+~30, 12 vestments ~35, 13 service ~30 — counts overlap-adjusted
+downward as route-ins consumed). Ripest next: block 11
+(sanctuary — Yoma 3b:3's route-in waits) or block 5 (decalogue,
+the largest left). Round 25 UNCOMMITTED — rides the next "commit
+push" (last commit c43863f).

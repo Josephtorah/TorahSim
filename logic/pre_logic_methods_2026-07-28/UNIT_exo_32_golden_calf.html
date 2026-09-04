@@ -46,6 +46,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>B</b></td><td>Trees</td><td>Every verse via taamim_tree_parse.py v1; full tree_ascii recorded.</td><td>tested</td></tr>
 <tr><td><b>C</b></td><td>Tree → steps</td><td>One STEP per verse citing left/right top-split arms. English [EN-AID] only. Condition markers (אם/כי) flagged in op when verse-initial.</td><td>hypothesis</td></tr>
 <tr><td><b>D</b></td><td>Oral dual-track</td><td>Mekhilta samples when available; dual-track only; never silent-merge.</td><td>hypothesis</td></tr>
+<tr><td><b>S25</b></td><td>Round-25 Talmud-block seat (2026-09-04)</td><td>CAPITAL MODES AND IDOLATRY SERVICE — the fourteenth Exodus Talmud-first exam block (owner: &quot;go&quot;; ledger logic/oral_triage/exodus_block_capital_2026-09-04.md; runner run_capital.py, 22/22 first run). One seat under the auto-seat law — the unit&#x27;s FIRST Talmud-block seat: EX32-08 (F-095 — the calf verse&#x27;s law layer: the Noahide idolatry source with the making-vs-worship fork recorded unassigned; accepting-as-god by the verse&#x27;s own three-verb hekesh; the he&#x27;elukha vav that held the verdict, with R. Shimon ben Yochai&#x27;s joining ban). Machine ops untouched below the witness tier.</td><td>witnessed</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -113,6 +114,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <p><span class="he">סרו מהר מן הדרך אשר צויתם עשו להם עגל מסכה … וישתחוו לו ויזבחו לו ויאמרו אלה אלהיך ישראל אשר העלוך מארץ מ</span> · <i>srv mhr mn hdrk &#x27;shr tzvytm &#x27;shv lhm &#x27;gl mskh … vyshtchvv lv vyzbchv lv vy&#x27;mrv &#x27;lh &#x27;lhyk yshr&#x27;l &#x27;s</i> · From top split: LEFT «סרו מהר מן הדרך אשר צויתם עשו להם עגל מסכה» / RIGHT «וישתחוו לו ויזבחו לו ויאמרו אלה אלהיך ישראל אשר העלוך מארץ מצרים». Derive claim from Hebrew arms, not English alone. Exod 32:8.</p>
 <div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">סרו מהר מן הדרך אשר צויתם עשו להם עגל מסכה</span> · <i>srv mhr mn hdrk &#x27;shr tzvytm &#x27;shv lhm &#x27;gl mskh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">וישתחוו לו ויזבחו לו ויאמרו אלה אלהיך ישראל אשר העלוך מארץ מצרים</span> · <i>vyshtchvv lv vyzbchv lv vy&#x27;mrv &#x27;lh &#x27;lhyk yshr&#x27;l &#x27;shr h&#x27;lvk m&#x27;rtz mtzrym</i> · Right arm of top binary split [EN-AID]</div></div>
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(calf_verse, the_calf_verses_law_layer)</span><br><span class="gloss">= WITNESS-READ(calf-verse, the-calf-verses-law-layer)</span><br>THE CALF VERSE&#x27;S LAW LAYER [claim EX32-08]. The round-25 capital block seats three laws living in this verse&#x27;s own words. THE NOAHIDE SOURCE: &quot;they turned quickly from the way I COMMANDED them: they MADE a calf&quot; — one of the two recorded derivations of the Noahide idolatry command (the other Hosea&#x27;s walked-after-tzav), and THE FORK between them: a gentile who MADE an idol without worshiping — liable from the making on this verse&#x27;s arm, only on worship on the other; the arms recorded UNASSIGNED between Rav Chisda and Rav Yitzchak bar Avdimi (Sanhedrin 56b:9-11). ACCEPTING AS GOD: the verse&#x27;s three verbs chained — they BOWED, they SACRIFICED, they SAID — the saying equated by hekesh to the served acts: accepting an idol as one&#x27;s god IS worship (63a:14). AND THE VAV THAT HELD THE VERDICT: R. Yochanan (and Acherim&#x27;s arm) — but for the vav of he&#x27;elukha (&quot;they brought you up,&quot; plural), Israel&#x27;s wicked would have deserved annihilation; R. Shimon ben Yochai reads the plural as craving MANY gods, under the joining ban&#x27;s &quot;save to the LORD alone&quot; (63a:15-17). Auto-seat law, F-095.
+</td><td>—</td><td class='cite'>Sanhedrin 56b:9, Sanhedrin 56b:10, Sanhedrin 56b:11, Sanhedrin 63a:14, Sanhedrin 63a:15, Sanhedrin 63a:16, Sanhedrin 63a:17</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.</div>
 </div>
@@ -2149,6 +2152,10 @@ m.witness_read(&quot;thy_people&quot;, &quot;intake_owned&quot;,
 # מסכה» / RIGHT «וישתחוו לו ויזבחו לו ויאמרו אלה אלהיך ישראל אשר העלוך מארץ
 # מצרים». Derive claim from Hebrew arms, not English alone. Exod 32:8.&quot;
 m.step(&quot;Exod.32.8&quot;)
+# witness-tier presupposed read: the_calf_verses_law_layer on calf_verse —
+# read, not installed
+m.witness_read(&quot;calf_verse&quot;, &quot;the_calf_verses_law_layer&quot;,
+                cites=[&quot;Sanhedrin 56b:9&quot;, &quot;Sanhedrin 56b:10&quot;, &quot;Sanhedrin 56b:11&quot;, &quot;Sanhedrin 63a:14&quot;, &quot;Sanhedrin 63a:15&quot;, &quot;Sanhedrin 63a:16&quot;, &quot;Sanhedrin 63a:17&quot;])
 
 # -------------------------- Exod.32.9 · ETNACHTA_SPLIT ---------------------
 # ויאמר יהוה אל משה … ראיתי את העם הזה והנה עם קשה ערף הוא
@@ -2386,28 +2393,31 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;calf_event&#x27;, &#x27;event_dossier&#x27;), (&#x27;thy_people&#x27;, &#x27;intake_owned&#x27;), (&#x27;intercession&#x27;, &#x27;prayer_in_the_decree&#x27;), (&#x27;tablets_broken&#x27;, &#x27;distinct_writing&#x27;), (&#x27;drink_test&#x27;, &#x27;three_court_triage&#x27;), (&#x27;levite_loyalty&#x27;, &#x27;ordination_by_crisis&#x27;), (&#x27;the_book&#x27;, &#x27;deferred_accounting&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;calf_event&#x27;, &#x27;event_dossier&#x27;), (&#x27;thy_people&#x27;, &#x27;intake_owned&#x27;), (&#x27;calf_verse&#x27;, &#x27;the_calf_verses_law_layer&#x27;), (&#x27;intercession&#x27;, &#x27;prayer_in_the_decree&#x27;), (&#x27;tablets_broken&#x27;, &#x27;distinct_writing&#x27;), (&#x27;drink_test&#x27;, &#x27;three_court_triage&#x27;), (&#x27;levite_loyalty&#x27;, &#x27;ordination_by_crisis&#x27;), (&#x27;the_book&#x27;, &#x27;deferred_accounting&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Ki Tisa 19&#x27;, &#x27;Onkelos Exod 32&#x27;]
     assert all(&#x27;event_dossier&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;calf_event&#x27; not in m.WORLD[&quot;witnessed&quot;]
     assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Ki Tisa 21&#x27;]
     assert all(&#x27;intake_owned&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;thy_people&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Ki Tisa 20&#x27;, &#x27;Onkelos Exod 32&#x27;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Sanhedrin 56b:9&#x27;, &#x27;Sanhedrin 56b:10&#x27;, &#x27;Sanhedrin 56b:11&#x27;, &#x27;Sanhedrin 63a:14&#x27;, &#x27;Sanhedrin 63a:15&#x27;, &#x27;Sanhedrin 63a:16&#x27;, &#x27;Sanhedrin 63a:17&#x27;]
+    assert all(&#x27;the_calf_verses_law_layer&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;calf_verse&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Ki Tisa 20&#x27;, &#x27;Onkelos Exod 32&#x27;]
     assert all(&#x27;prayer_in_the_decree&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;intercession&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Ki Tisa 30&#x27;, &#x27;Onkelos Exod 32&#x27;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Ki Tisa 30&#x27;, &#x27;Onkelos Exod 32&#x27;]
     assert all(&#x27;distinct_writing&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;tablets_broken&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Ki Tisa 26&#x27;, &#x27;Onkelos Exod 32&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Ki Tisa 26&#x27;, &#x27;Onkelos Exod 32&#x27;]
     assert all(&#x27;three_court_triage&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;drink_test&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Onkelos Exod 32&#x27;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Onkelos Exod 32&#x27;]
     assert all(&#x27;ordination_by_crisis&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;levite_loyalty&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Onkelos Exod 32&#x27;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Onkelos Exod 32&#x27;]
     assert all(&#x27;deferred_accounting&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;the_book&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">Tree-derived v1 (phase 2e). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">Tree-derived v1 (phase 2e). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

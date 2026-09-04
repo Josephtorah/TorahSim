@@ -41,10 +41,10 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   running for the book of Numbers.
 - The corpus: 130 frozen units, one world, fingerprint unmoved
   through two whole books and the third's first two portions.
-- The exam engine: twenty-four rounds, 789 cases, 789 answered
-  correctly, 244 compiled rules, vocabulary of 158 registered input
+- The exam engine: twenty-five rounds, 811 cases, 811 answered
+  correctly, 249 compiled rules, vocabulary of 158 registered input
   dimensions.
-- **The Exodus block campaign: OPEN — 13 of 18 blocks run; the
+- **The Exodus block campaign: OPEN — 14 of 18 blocks run; the
   Passover family CLOSED (2026-09-04).** On your word ("Yes go") the leaven machine and the
   courts ran as the first two Talmud-first blocks: 62 new cases, all
   answered first try. Two things stood out. The leaven block found
@@ -148,6 +148,24 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Talmud dispute over WHEN the firstborn-consecration machine
   switches on. A spelling claim from the ink era became the
   skeleton of a legal argument.
+  The fourteenth block ran the CAPITAL MODES — the witch, the
+  beast-lier, the idol-sacrificer, the curser of judges and
+  rulers — and the signature pattern ran BACKWARD for the first
+  time: instead of our seats answering the Talmud's discussions,
+  a discussion reached out and ran on one of our seats. The
+  witch's death mode is derived from "it shall not live" at the
+  SINAI BOUNDARY verse — the very clause whose machinery the
+  covenant block had seated one sitting earlier. Also aboard:
+  the tradition arguing about its own inference rule at our
+  verse (may side-by-side clauses teach each other at all? —
+  one sage says yes, one says only in Deuteronomy); the
+  service paradigm (any Temple-style act done to an idol is the
+  capital act — and what the Temple wouldn't receive, the
+  clause doesn't punish); and two chapters taking their first
+  exam-era seats, where the frozen pages' own prose had already
+  filed the questions — the Amram-marriage step's translation
+  already read "his FATHER'S sister," which is exactly how the
+  Talmud resolves it.
 - The simulator: 48 registered effects (nine new from Tzav — the
   wash/break/scour purges, the perpetual-fire duty, the priestly
   due, the rejection, the investiture commit, the seven-day

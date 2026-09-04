@@ -1782,3 +1782,9 @@ RULES.update(_cv.build(V))
 # 5 rules in festivals_rules.py.
 import festivals_rules as _fs
 RULES.update(_fs.build(V))
+
+# Round 25 — CAPITAL MODES AND IDOLATRY SERVICE (2026-09-04, the
+# fourteenth Exodus Talmud-first exam block). 5 rules in
+# capital_rules.py.
+import capital_rules as _cp
+RULES.update(_cp.build(V))

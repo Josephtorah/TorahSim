@@ -1026,14 +1026,35 @@ overnight-fat window all arrived answered. And one deeper find:
 the ink era's letter-grain census of when-He-brings-you (written
 full at verse 5, lean at verse 11 of the same chapter) turned out
 to be holding the two pegs of a Babylonian dispute over when the
-firstborn machine switches on. Records:
+firstborn machine switches on. And on a second "go" the same
+sitting, round 25 ran CAPITAL MODES AND IDOLATRY SERVICE (block
+8) at 22/22 first run: **811/811 across twenty-five rounds**,
+catalog through R-444 (249 compiled rules), F-092..F-097 seated
+across five chapters — two of them (the golden calf and the
+I-am-the-LORD chapters) taking their FIRST exam-era seats. Its
+headline reverses the campaign's signature pattern: instead of a
+seat answering a discussion, a discussion RUNS ON a seat — R.
+Akiva derives the witch's death mode from "it shall not live" at
+the SINAI BOUNDARY VERSE (Exodus 19:13), the very clause whose
+machine the covenant block had just seated. And the inference
+rules themselves entered the case law: at the witch verse the
+tradition records a dispute about whether ADJACENCY of clauses
+may teach at all (ben Azzai yes; R. Yehuda no — except in
+Deuteronomy), the tradition regulating its own compile moves on
+our block's own ink. Two anticipations came from inside the
+frozen units' own prose: the Amram-marriage step had filed the
+aunt question "named-only, unclaimed" and its translation already
+carried the answer ("his FATHER'S sister"); the Moses-strike step
+had read the killing as one "the letter neither praises nor
+sentences" before the law arrived. Records:
 World/step9/REPORT_LEAVEN.md + REPORT_COURTS.md +
 REPORT_PERSONS_OATHS.md + REPORT_PESACH.md + REPORT_SHABBAT.md +
 REPORT_MATZA.md + REPORT_EGYPT.md + REPORT_INK.md +
 REPORT_CONDUCT.md + REPORT_CALENDAR.md + REPORT_COVENANT.md +
-REPORT_FESTIVALS.md. Five blocks remain (~133 LAW rows); the
-ripest next: block 8 (capital modes) or block 11 (sanctuary
-constants — the routed Yoma row waits there).
+REPORT_FESTIVALS.md + REPORT_CAPITAL.md. Four blocks remain
+(~110 LAW rows); the ripest next: block 11 (sanctuary constants
+— the routed Yoma row waits there) or block 5 (the Decalogue,
+the largest left).
 
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed

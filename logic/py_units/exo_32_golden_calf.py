@@ -79,6 +79,10 @@ m.witness_read("thy_people", "intake_owned",
 # מסכה» / RIGHT «וישתחוו לו ויזבחו לו ויאמרו אלה אלהיך ישראל אשר העלוך מארץ
 # מצרים». Derive claim from Hebrew arms, not English alone. Exod 32:8."
 m.step("Exod.32.8")
+# witness-tier presupposed read: the_calf_verses_law_layer on calf_verse —
+# read, not installed
+m.witness_read("calf_verse", "the_calf_verses_law_layer",
+                cites=["Sanhedrin 56b:9", "Sanhedrin 56b:10", "Sanhedrin 56b:11", "Sanhedrin 63a:14", "Sanhedrin 63a:15", "Sanhedrin 63a:16", "Sanhedrin 63a:17"])
 
 # -------------------------- Exod.32.9 · ETNACHTA_SPLIT ---------------------
 # ויאמר יהוה אל משה … ראיתי את העם הזה והנה עם קשה ערף הוא
@@ -316,26 +320,29 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('calf_event', 'event_dossier'), ('thy_people', 'intake_owned'), ('intercession', 'prayer_in_the_decree'), ('tablets_broken', 'distinct_writing'), ('drink_test', 'three_court_triage'), ('levite_loyalty', 'ordination_by_crisis'), ('the_book', 'deferred_accounting')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('calf_event', 'event_dossier'), ('thy_people', 'intake_owned'), ('calf_verse', 'the_calf_verses_law_layer'), ('intercession', 'prayer_in_the_decree'), ('tablets_broken', 'distinct_writing'), ('drink_test', 'three_court_triage'), ('levite_loyalty', 'ordination_by_crisis'), ('the_book', 'deferred_accounting')]
     assert m.WITNESS_READS[0]["cites"] == ['Midrash Tanchuma, Ki Tisa 19', 'Onkelos Exod 32']
     assert all('event_dossier' not in f for f in m.WORLD["facts"])
     assert 'calf_event' not in m.WORLD["witnessed"]
     assert m.WITNESS_READS[1]["cites"] == ['Midrash Tanchuma, Ki Tisa 21']
     assert all('intake_owned' not in f for f in m.WORLD["facts"])
     assert 'thy_people' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Midrash Tanchuma, Ki Tisa 20', 'Onkelos Exod 32']
+    assert m.WITNESS_READS[2]["cites"] == ['Sanhedrin 56b:9', 'Sanhedrin 56b:10', 'Sanhedrin 56b:11', 'Sanhedrin 63a:14', 'Sanhedrin 63a:15', 'Sanhedrin 63a:16', 'Sanhedrin 63a:17']
+    assert all('the_calf_verses_law_layer' not in f for f in m.WORLD["facts"])
+    assert 'calf_verse' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Midrash Tanchuma, Ki Tisa 20', 'Onkelos Exod 32']
     assert all('prayer_in_the_decree' not in f for f in m.WORLD["facts"])
     assert 'intercession' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Midrash Tanchuma, Ki Tisa 30', 'Onkelos Exod 32']
+    assert m.WITNESS_READS[4]["cites"] == ['Midrash Tanchuma, Ki Tisa 30', 'Onkelos Exod 32']
     assert all('distinct_writing' not in f for f in m.WORLD["facts"])
     assert 'tablets_broken' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Midrash Tanchuma, Ki Tisa 26', 'Onkelos Exod 32']
+    assert m.WITNESS_READS[5]["cites"] == ['Midrash Tanchuma, Ki Tisa 26', 'Onkelos Exod 32']
     assert all('three_court_triage' not in f for f in m.WORLD["facts"])
     assert 'drink_test' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Exod 32']
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Exod 32']
     assert all('ordination_by_crisis' not in f for f in m.WORLD["facts"])
     assert 'levite_loyalty' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Exod 32']
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Exod 32']
     assert all('deferred_accounting' not in f for f in m.WORLD["facts"])
     assert 'the_book' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

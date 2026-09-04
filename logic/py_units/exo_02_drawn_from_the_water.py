@@ -155,6 +155,10 @@ m.step("Exod.2.12")
 # ‹וַיַּךְ אֶת־הַמִּצְרִי› (“and-strike obj-marker the-Egyptian”) — event:
 # hika — agent Moses
 m.event("hika", agent="moshe")
+# witness-tier presupposed read: the_two_moses_satellite_laws on
+# strike_and_rebuke — read, not installed
+m.witness_read("strike_and_rebuke", "the_two_moses_satellite_laws",
+                cites=["Sanhedrin 58b:16", "Sanhedrin 58b:17", "Sanhedrin 58b:18", "Sanhedrin 58b:19", "Sanhedrin 58b:20"])
 
 # -------------------------- Exod.2.13 · TWO_HEBREWS_STRIVING ---------------
 # וַיֵּצֵא בַּיּוֹם הַשֵּׁנִי וְהִנֵּה שְׁנֵי־אֲנָשִׁים עִבְרִים נִצִּים
@@ -308,8 +312,11 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 10
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('station_afar', 'good_measure')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('station_afar', 'good_measure'), ('strike_and_rebuke', 'the_two_moses_satellite_laws')]
     assert m.WITNESS_READS[0]["cites"] == ['Mishnah Sotah 1:9']
     assert all('good_measure' not in f for f in m.WORLD["facts"])
     assert 'station_afar' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sanhedrin 58b:16', 'Sanhedrin 58b:17', 'Sanhedrin 58b:18', 'Sanhedrin 58b:19', 'Sanhedrin 58b:20']
+    assert all('the_two_moses_satellite_laws' not in f for f in m.WORLD["facts"])
+    assert 'strike_and_rebuke' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

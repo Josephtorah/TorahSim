@@ -225,6 +225,10 @@ m.step("Exod.6.20")
 # ‹וַיִּקַּח עַמְרָם אֶת־יוֹכֶבֶד דֹּדָתוֹ› (“and-take Amram obj-marker
 # Jochebed aunt-him/its”) — fact holds: and-take-Amram-obj-marker-Jochebed
 m.fact("va_yiqach_amram_et_yokheved")
+# witness-tier presupposed read: the_pre_sinai_incest_scope_argued on
+# aunt_marriage — read, not installed
+m.witness_read("aunt_marriage", "the_pre_sinai_incest_scope_argued",
+                cites=["Sanhedrin 58b:2", "Sanhedrin 58b:3", "Sanhedrin 58b:4"])
 
 # -------------------------- Exod.6.21 · IZHARS_SONS ------------------------
 # וּבְנֵי יִצְהָר קֹרַח וָנֶפֶג וְזִכְרִי
@@ -341,4 +345,8 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 4
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('aunt_marriage', 'the_pre_sinai_incest_scope_argued')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sanhedrin 58b:2', 'Sanhedrin 58b:3', 'Sanhedrin 58b:4']
+    assert all('the_pre_sinai_incest_scope_argued' not in f for f in m.WORLD["facts"])
+    assert 'aunt_marriage' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

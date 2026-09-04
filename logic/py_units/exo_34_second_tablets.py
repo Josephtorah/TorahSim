@@ -137,6 +137,10 @@ m.step("Exod.34.13")
 # שמו אל קנא הוא». Derive claim from Hebrew arms, not English alone. Exod
 # 34:14."
 m.step("Exod.34.14")
+# witness-tier presupposed read: the_bowing_files_office on bow_clause —
+# read, not installed
+m.witness_read("bow_clause", "the_bowing_files_office",
+                cites=["Sanhedrin 60b:11", "Sanhedrin 60b:12", "Sanhedrin 63a:1", "Sanhedrin 63a:2", "Sanhedrin 63a:3", "Sanhedrin 61b:20", "Sanhedrin 61b:21"])
 
 # -------------------------- Exod.34.15 · ETNACHTA_SPLIT --------------------
 # פן תכרת ברית ליושב הארץ … וזנו אחרי אלהיהם וזבחו לאלהיהם וקרא לך ואכלת
@@ -328,7 +332,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('second_tablets', 'joint_manufacture'), ('firstling_duties', 'precedence_table'), ('va_yaavor_va_yiqra', 'attributes_covenant_file'), ('thirteen_attributes', 'repentance_branch'), ('pardon_calendar', 'yom_kippur_fixed'), ('covenant_tariffs', 'reenacted_list'), ('tequfat_ha_shana', 'equinox_and_harvest_file'), ('covet_clause', 'the_pilgrimage_warranty_and_the_erring_court'), ('covenant_by_mouth', 'oral_charter'), ('radiant_face', 'glory_and_veil')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('second_tablets', 'joint_manufacture'), ('firstling_duties', 'precedence_table'), ('va_yaavor_va_yiqra', 'attributes_covenant_file'), ('thirteen_attributes', 'repentance_branch'), ('pardon_calendar', 'yom_kippur_fixed'), ('bow_clause', 'the_bowing_files_office'), ('covenant_tariffs', 'reenacted_list'), ('tequfat_ha_shana', 'equinox_and_harvest_file'), ('covet_clause', 'the_pilgrimage_warranty_and_the_erring_court'), ('covenant_by_mouth', 'oral_charter'), ('radiant_face', 'glory_and_veil')]
     assert m.WITNESS_READS[0]["cites"] == ['Midrash Tanchuma, Ki Tisa 31', 'Onkelos Exod 34']
     assert all('joint_manufacture' not in f for f in m.WORLD["facts"])
     assert 'second_tablets' not in m.WORLD["witnessed"]
@@ -344,19 +348,22 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[4]["cites"] == ['Midrash Tanchuma, Ki Tisa 31']
     assert all('yom_kippur_fixed' not in f for f in m.WORLD["facts"])
     assert 'pardon_calendar' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Bekhorot 1:2', 'Mishnah Pesachim 5:4', 'Mishnah Sheviit 1:4', 'Onkelos Exod 34']
+    assert m.WITNESS_READS[5]["cites"] == ['Sanhedrin 60b:11', 'Sanhedrin 60b:12', 'Sanhedrin 63a:1', 'Sanhedrin 63a:2', 'Sanhedrin 63a:3', 'Sanhedrin 61b:20', 'Sanhedrin 61b:21']
+    assert all('the_bowing_files_office' not in f for f in m.WORLD["facts"])
+    assert 'bow_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Mishnah Bekhorot 1:2', 'Mishnah Pesachim 5:4', 'Mishnah Sheviit 1:4', 'Onkelos Exod 34']
     assert all('reenacted_list' not in f for f in m.WORLD["facts"])
     assert 'covenant_tariffs' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Sanhedrin 13a:1', 'Sanhedrin 13a:2', 'Sanhedrin 13a:3', 'Sanhedrin 13b:2', 'Sanhedrin 13b:3', 'Sanhedrin 13b:4', 'Rosh Hashanah 13a:2', 'Rosh Hashanah 13a:3', 'Rosh Hashanah 13a:4', 'Rosh Hashanah 9a:3', 'Rosh Hashanah 9a:4', 'Rosh Hashanah 9a:5']
+    assert m.WITNESS_READS[7]["cites"] == ['Sanhedrin 13a:1', 'Sanhedrin 13a:2', 'Sanhedrin 13a:3', 'Sanhedrin 13b:2', 'Sanhedrin 13b:3', 'Sanhedrin 13b:4', 'Rosh Hashanah 13a:2', 'Rosh Hashanah 13a:3', 'Rosh Hashanah 13a:4', 'Rosh Hashanah 9a:3', 'Rosh Hashanah 9a:4', 'Rosh Hashanah 9a:5']
     assert all('equinox_and_harvest_file' not in f for f in m.WORLD["facts"])
     assert 'tequfat_ha_shana' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Pesachim 8b:7', 'Pesachim 8b:8', 'Horayot 4b:8', 'Horayot 4b:9', 'Horayot 4b:10']
+    assert m.WITNESS_READS[8]["cites"] == ['Pesachim 8b:7', 'Pesachim 8b:8', 'Horayot 4b:8', 'Horayot 4b:9', 'Horayot 4b:10']
     assert all('the_pilgrimage_warranty_and_the_erring_court' not in f for f in m.WORLD["facts"])
     assert 'covet_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Midrash Tanchuma, Ki Tisa 34', 'Mishnah Megillah 4:10', 'Onkelos Exod 34']
+    assert m.WITNESS_READS[9]["cites"] == ['Midrash Tanchuma, Ki Tisa 34', 'Mishnah Megillah 4:10', 'Onkelos Exod 34']
     assert all('oral_charter' not in f for f in m.WORLD["facts"])
     assert 'covenant_by_mouth' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Midrash Tanchuma, Ki Tisa 37', 'Onkelos Exod 34']
+    assert m.WITNESS_READS[10]["cites"] == ['Midrash Tanchuma, Ki Tisa 37', 'Onkelos Exod 34']
     assert all('glory_and_veil' not in f for f in m.WORLD["facts"])
     assert 'radiant_face' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
