@@ -45,6 +45,10 @@ m.step("Exod.13.3")
 # speaks a demand — LET: mark-obj-marker-the-day-the-this
 m.declare("moshe", "LET",
           "zakhor_et_ha_yom_ha_ze")
+# witness-tier presupposed read: recorded_routes on benefit_ban — read, not
+# installed
+m.witness_read("benefit_ban", "recorded_routes",
+                cites=["Pesachim 21b:5", "Pesachim 21b:11", "Pesachim 23a:12", "Pesachim 24a:4", "Pesachim 28b:4", "Pesachim 29a:4"])
 
 # -------------------------- Exod.13.4 · IN_THE_MONTH_OF_AVIV ---------------
 # הַיּוֹם אַתֶּם יֹצְאִים בְּחֹדֶשׁ הָאָבִיב
@@ -280,11 +284,14 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 2
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('donkey_firstling', 'firstborn_cluster'), ('frontlets', 'received_form')]
-    assert m.WITNESS_READS[0]["cites"] == ['Mishnah Bekhorot 1:2', 'Mishnah Bekhorot 1:7', 'Mishnah Bekhorot 2:6', 'Mishnah Bekhorot 2:9', 'Mishnah Bekhorot 8:1', 'Mishnah Avodah Zarah 5:9']
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('benefit_ban', 'recorded_routes'), ('donkey_firstling', 'firstborn_cluster'), ('frontlets', 'received_form')]
+    assert m.WITNESS_READS[0]["cites"] == ['Pesachim 21b:5', 'Pesachim 21b:11', 'Pesachim 23a:12', 'Pesachim 24a:4', 'Pesachim 28b:4', 'Pesachim 29a:4']
+    assert all('recorded_routes' not in f for f in m.WORLD["facts"])
+    assert 'benefit_ban' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Bekhorot 1:2', 'Mishnah Bekhorot 1:7', 'Mishnah Bekhorot 2:6', 'Mishnah Bekhorot 2:9', 'Mishnah Bekhorot 8:1', 'Mishnah Avodah Zarah 5:9']
     assert all('firstborn_cluster' not in f for f in m.WORLD["facts"])
     assert 'donkey_firstling' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Sanhedrin 11:3', 'Mishnah Megillah 4:8']
+    assert m.WITNESS_READS[2]["cites"] == ['Mishnah Sanhedrin 11:3', 'Mishnah Megillah 4:8']
     assert all('received_form' not in f for f in m.WORLD["facts"])
     assert 'frontlets' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

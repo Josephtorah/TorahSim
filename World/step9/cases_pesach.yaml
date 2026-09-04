@@ -1,0 +1,217 @@
+# THE PASCHAL OFFERING (round 16 — the fifth Exodus Talmud-first
+# exam block, 2026-09-04; owner: "The word lol"). The map's largest
+# block. The Mishnah layer stands seated (EX12-17/18/21); this block
+# carries the derivation layer. Read-source record:
+# logic/oral_triage/exodus_block_pesach_2026-09-04.md.
+
+- module: pesach_registration_machine
+  tractate: Pesachim
+  oracle: Pesachim 61a:8-11, 88a:6-7, 89a:21-24, 90a:12-16, 91b:2-4,
+    99a:2-3
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.3-4,
+    claims: [EX12-17, EX12-25]}
+  cases:
+  - id: P61a_indispensable
+    input: {query: registration_indispensable}
+    expected: {verdict: disqualifies}
+    class: A
+  - id: P61a_takhosu
+    input: {query: takhosu_meaning}
+    expected: {verdict: aramaic_slaughter}
+    class: A
+  - id: P89a_withdrawal
+    input: {query: withdrawal_window}
+    expected:
+      verdict: [until_slaughter, until_sprinkling]
+    class: A
+  - id: P90a_sustain
+    input: {query: sustain_from_lamb}
+    expected:
+      verdict: [festival_needs_only, all_his_needs]
+    class: A
+  - id: P88a_household
+    input: {query: household_registration}
+    expected: {verdict: minors_without_consent}
+    class: A
+  - id: P91b_women
+    input: {query: women_pesach_duty}
+    expected:
+      verdict: [first_obligated_second_ancillary,
+                both_slaughtered_for_her, first_ancillary_second_none]
+    class: A
+  - id: P99a_mingled
+    input: {query: intermingled_pesach}
+    expected:
+      verdict: [one_original_remains, never_ownerless]
+    class: A
+
+- module: pesach_window_and_gates
+  tractate: Pesachim
+  oracle: Pesachim 59a:1, 61a:6, 61b:6-7, 78b:10
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.6+43,
+    claims: [EX12-17, EX12-25]}
+  cases:
+  - id: P59a_order
+    input: {query: pesach_slaughter_order}
+    expected: {verdict: after_the_daily}
+    class: A
+  - id: P61b_arel_scope
+    input: {query: uncircumcised_rite_scope}
+    expected: {verdict: slaughter_not_sprinkling}
+    class: A
+  - id: P78b_nation
+    input: {query: one_lamb_nation}
+    expected: {verdict: all_fulfill_after_fact}
+    class: A
+
+- module: pesach_for_its_name
+  tractate: Zevachim
+  oracle: Pesachim 62b:6-7; Zevachim 7b:17-18
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.27,
+    claims: [EX12-17, EX12-28]}
+  cases:
+  - id: Z7b_assignments
+    input: {query: pesach_hu_assignments}
+    expected: {verdict: three_verses_mapped}
+    class: A
+  - id: P70b_leftover
+    input: {query: leftover_pesach_fate}
+    expected: {verdict: peace_offering}
+    class: A
+
+- module: pesach_lamb_validity
+  tractate: Zevachim
+  oracle: Zevachim 25b:15; Pesachim 96a:8-12; Arakhin 13b:1-2
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.5-6,
+    claims: [EX12-28]}
+  cases:
+  - id: Z25b_continuous
+    input: {query: continuous_validity}
+    expected: {verdict: all_four_rites}
+    class: A
+  - id: P96a_examination
+    input: {query: four_day_examination}
+    expected: {verdict: generations_and_daily}
+    class: A
+
+- module: pesach_roast_machine
+  tractate: Pesachim
+  oracle: Pesachim 41a:6-41b:18, 74a:2-3, 75a:4-5, 76a:2-3
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.8-9,
+    claims: [EX12-18, EX12-26]}
+  cases:
+  - id: P41a_liquids
+    input: {query: roast_liquid_route}
+    expected:
+      verdict: [a_fortiori_taste, bashel_mevushal]
+    class: A
+  - id: P41b_matrix
+    input: {query: roast_lash_matrix}
+    expected: {verdict: two_two_three}
+    class: A
+  - id: P41b_time_scope
+    input: {query: roast_time_scope}
+    expected: {verdict: when_arise_and_eat_binds}
+    class: A
+  - id: P74a_directness
+    input: {query: roast_fire_directness}
+    expected: {verdict: fire_not_through_another}
+    class: A
+  - id: P74a_spit
+    input: {query: spit_material}
+    expected: {verdict: pomegranate_by_elimination}
+    class: A
+  - id: P75a_swept
+    input: {query: swept_oven_roast}
+    expected: {verdict: excluded_by_doubling}
+    class: A
+  - id: P76a_gravy
+    input: {query: gravy_return}
+    expected: {verdict: remove_its_place}
+    class: A
+
+- module: pesach_chagigah_rider
+  tractate: Pesachim
+  oracle: Pesachim 70a:4-13, 70b:5-7
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.34.25,
+    claims: [EX12-28]}
+  cases:
+  - id: P70a_overnight
+    input: {query: chagigah_overnight}
+    expected: {verdict: both_barred_overnight}
+    class: A
+  - id: P70a_reach
+    input: {query: chagigah_comparison_reach}
+    expected: {verdict: complete_comparison}
+    class: A
+  - id: P70b_dortai
+    input: {query: ben_dortai_reading}
+    expected: {verdict: rejected_recorded}
+    class: A
+
+- module: pesach_bone_and_carry
+  tractate: Pesachim
+  oracle: Pesachim 83a:7-11, 84a:12-16, 85a:1-3, 85b:1-2, 86a:14-16
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.46,
+    claims: [EX12-18, EX12-27]}
+  cases:
+  - id: P85a_marrow
+    input: {query: bone_marrow_scope}
+    expected: {verdict: with_and_without}
+    class: A
+  - id: P84a_valid_scope
+    input: {query: bone_valid_scope}
+    expected:
+      verdict: [valid_only, time_of_validity_counts, fit_for_eating]
+    class: A
+  - id: P84a_leftover_lash
+    input: {query: leftover_lash_reason}
+    expected:
+      verdict: [repaired_by_burn, actless_ban]
+    class: A
+  - id: P85b_carry
+    input: {query: carry_between_groups}
+    expected: {verdict: liable_on_placing}
+    class: A
+  - id: P86a_two_groups
+    input: {query: two_groups_one_lamb}
+    expected: {verdict: houses_yes_eater_one_place}
+    class: A
+
+- module: pesach_leftover_burn
+  tractate: Pesachim
+  oracle: Pesachim 83b:11-14; Zevachim 36a:3
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.10,
+    claims: [EX12-27]}
+  cases:
+  - id: P83b_second_morning
+    input: {query: leftover_burn_day}
+    expected: {verdict: second_morning}
+    class: A
+  - id: P83b_routes
+    input: {query: burn_day_routes}
+    expected: {verdict: three_routes_recorded}
+    class: A
+  - id: Z36a_intent
+    input: {query: intent_to_leave}
+    expected: {verdict: disqualifies_r_yehuda}
+    class: A
+
+- module: pesach_two_eras
+  tractate: Pesachim
+  oracle: Pesachim 96a:6-96b:1, 95b:1-2
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.3-11,
+    claims: [EX12-21, EX12-28]}
+  cases:
+  - id: P96a_egypt_only
+    input: {query: egypt_only_clauses}
+    expected: {verdict: tenth_day_haste_one_night}
+    class: A
+  - id: P95b_includes
+    input: {query: second_pesach_includes}
+    expected: {verdict: raw_in_leaven_out}
+    class: A
+  - id: P95b_hallel
+    input: {query: pesach_hallel_at_eating}
+    expected: {verdict: first_night_only}
+    class: A

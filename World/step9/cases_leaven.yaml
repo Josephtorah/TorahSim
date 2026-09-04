@@ -1,0 +1,200 @@
+# THE LEAVEN MACHINE (round 12 — the first of the 18 Exodus
+# Talmud-first exam blocks, 2026-09-04; owner: "Yes go" on the
+# compaction-#41 order). Membership: the block's 25 LAW rows credited
+# to EXOD_TALMUD_TRIAGE_LEDGER.md, re-opened with 108 fresh segments.
+# Read-source record: logic/oral_triage/exodus_block_leaven_2026-09-04.md.
+# Provenance: talmud_source + exodus_anchor (mishnah added where a
+# Mishnah row stands above the sugya) — the Noahide precedent.
+
+- module: leaven_deadline
+  tractate: Pesachim
+  oracle: Pesachim 4b:8-5b:1 (the deadline sugya); Mishnah Pesachim 1:4
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.15+18,
+    claims: [EX12-03, EX12-19]}
+  cases:
+  - id: P4b_removal_day
+    input: {query: removal_day}
+    expected: {verdict: fourteenth_from_midday}
+    class: A
+  - id: P5a_night15_scope
+    input: {query: removal_night_scope, moment: night_of_fifteenth}
+    expected: {verdict: bound}
+    class: A
+  - id: P5a_night14_scope
+    input: {query: removal_night_scope, moment: night_of_fourteenth}
+    expected: {verdict: not_yet_bound}
+    class: A
+  - id: P4b_hour_fence
+    input: {query: eating_hour_fence}
+    expected:
+      verdict: [eat_through_five, eat_through_four]
+    class: A
+
+- module: leaven_seen_found
+  tractate: Pesachim
+  oracle: Pesachim 5b:2-6 (the two-phrase baraita); 6a:6-8
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.19,
+    claims: [EX12-19]}
+  cases:
+  - id: P5b_gentile_seen
+    input: {query: seen_vs_found, owner: gentile}
+    expected: {verdict: may_be_seen}
+    class: A
+  - id: P5b_own_seen
+    input: {query: seen_vs_found, owner: israelite}
+    expected: {verdict: neither_seen_nor_found}
+    class: A
+  - id: P6a_deposit_responsible
+    input: {query: deposit_duty, act: accepted_responsibility}
+    expected: {verdict: must_remove}
+    class: A
+  - id: P6a_designated_room
+    input: {query: deposit_duty, act: designated_room}
+    expected: {verdict: exempt}
+    class: A
+  - id: P5b_zone_scope
+    input: {query: leaven_zone_scope}
+    expected: {verdict: all_possessions}
+    class: A
+
+- module: leaven_benefit
+  tractate: Pesachim
+  oracle: Pesachim 21b:2-11; 23a:12-13; 24a:4-5
+  exodus_anchor: {unit: exo_13_consecration_and_pillars, ref: Exod.13.3,
+    claims: [EX13-16]}
+  cases:
+  - id: P21b_benefit_scope
+    input: {query: leaven_benefit_scope}
+    expected:
+      verdict: [benefit_forbidden, benefit_permitted]
+    class: A
+  - id: P21b_routes
+    input: {query: benefit_derivation_route}
+    expected:
+      verdict: [route_passive_voice, route_universal_eat_ban,
+                route_dogs_verse, route_consecration_leftover]
+    class: A
+  - id: P21b_charred
+    input: {query: charred_before_time}
+    expected: {verdict: benefit_permitted_after}
+    class: A
+  - id: P21b_betrothal
+    input: {query: betrothal_with, item: leaven, moment: from_hour_six}
+    expected: {verdict: betrothal_invalid}
+    class: A
+  - id: P21b_burning_benefit
+    input: {query: burning_benefit}
+    expected: {verdict: forbidden_while_burning}
+    class: A
+
+- module: leaven_removal_mode
+  tractate: Pesachim
+  oracle: Pesachim 27b:8-10; 28a:8-9; Mishnah Pesachim 2:1
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.15,
+    claims: [EX12-19]}
+  cases:
+  - id: P27b_mode
+    input: {query: removal_mode}
+    expected:
+      verdict: [burning_only, any_means]
+    class: A
+  - id: P27b_meta_rule
+    input: {query: inference_validity}
+    expected: {verdict: invalid_derivation}
+    class: A
+
+- module: leaven_after_passover
+  tractate: Pesachim
+  oracle: Mishnah Pesachim 2:2 via Pesachim 28a:10-29a:7
+  exodus_anchor: {unit: exo_13_consecration_and_pillars, ref: Exod.13.7,
+    claims: [EX13-16]}
+  cases:
+  - id: P29a_law_layer
+    input: {query: elapsed_leaven_law_layer}
+    expected:
+      verdict: [rabbinic_fine, torah_ban]
+    class: A
+  - id: P29a_gentile_lashes
+    input: {query: elapsed_gentile_lashes}
+    expected:
+      verdict: [flogged, not_flogged]
+    class: A
+  - id: P28b_window_census
+    input: {query: ban_window_census}
+    expected:
+      verdict: [three_windows, during_only]
+    class: A
+  - id: P28b_egypt_days
+    input: {query: egypt_passover_leaven_days}
+    expected: {verdict: one_day}
+    class: A
+
+- module: leaven_mixtures
+  tractate: Pesachim
+  oracle: Pesachim 43a:18-19 (the kutach baraita)
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.20+15,
+    claims: [EX12-02, EX12-19]}
+  cases:
+  - id: P43a_mixture
+    input: {query: leaven_mixture_liability}
+    expected: {verdict: prohibition_no_karet}
+    class: A
+  - id: P43a_full
+    input: {query: leaven_full_liability}
+    expected: {verdict: karet}
+    class: A
+  - id: P28b_other_substance
+    input: {query: leavened_by_other_substance}
+    expected: {verdict: bound}
+    class: A
+
+- module: leaven_measures_derivation
+  tractate: Yoma
+  oracle: Yoma 79b:5-6; Mishnah Beitzah 1:1 (the seated dispute)
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.19,
+    claims: [EX12-19]}
+  cases:
+  - id: Y79b_two_words
+    input: {query: leaven_two_words_reason}
+    expected: {verdict: measures_differ}
+    class: A
+  - id: Y79b_date_egg
+    input: {query: date_vs_egg_volume}
+    expected: {verdict: date_less_than_egg}
+    class: A
+
+- module: matza_standing_duty
+  tractate: Pesachim
+  oracle: Pesachim 28b:10-12; Kiddushin 37b:12; Rosh Hashanah 20b:10
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.18+20,
+    claims: [EX12-04]}
+  cases:
+  - id: P28b_after_temple
+    input: {query: matza_after_temple}
+    expected: {verdict: obligatory}
+    class: A
+  - id: P28b_impure_far
+    input: {query: matza_impure_far_traveled}
+    expected: {verdict: obligated}
+    class: A
+  - id: RH20b_day_boundary
+    input: {query: day_boundary_source}
+    expected: {verdict: evening_begins_day}
+    class: A
+
+- module: leaven_search_law
+  tractate: Pesachim
+  oracle: Mishnah Pesachim 1:1-3 + the mishnah at Pesachim 10b:13
+  exodus_anchor: {unit: exo_12_passover_and_exodus, ref: Exod.12.15+19,
+    claims: [EX12-19]}
+  cases:
+  - id: P10b_search_count
+    input: {query: search_count}
+    expected:
+      verdict: [three_searches, search_when_missed]
+    class: A
+  - id: P6b_study_window
+    input: {query: study_window}
+    expected:
+      verdict: [thirty_days, two_weeks]
+    class: A

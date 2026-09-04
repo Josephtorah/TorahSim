@@ -290,3 +290,141 @@ loaves (Temurah 3:2 = Chapter 11 2), the seven-day separation
 transmitted DATA the reading did not carry — the chavitin's twelve
 loaves and the tamid's schedule hours — the quantities channel,
 self-labeled. 71 of 73 anticipated by the reading.
+
+## Round 12 — THE LEAVEN MACHINE (2026-09-04; owner: "Yes go")
+The first of the 18 Exodus Talmud-first exam blocks (the map at the
+tail of logic/oral_triage/EXOD_TALMUD_TRIAGE_LEDGER.md), run under
+the Noahide precedent: the block's 25 LAW rows credited to the
+triage's whole-ledger read, re-opened with 108 fresh sugya segments
+verdicted in their own ledger
+(logic/oral_triage/exodus_block_leaven_2026-09-04.md); 9 rows routed
+to their home blocks on content. NINE modules compiled in
+leaven_rules.py, 30 case rows in cases_leaven.yaml: 30/30 FIRST RUN;
+all eleven prior exams re-run green — 480/480 across twelve rounds.
+Provenance carries talmud_source (mishnah beside it where a Mishnah
+row stands above). Catalog R-353..R-361; 166 compiled rules.
+Vocabulary: 32 new values (26 query, 3 moment, 2 act, 1 item), no
+new dims — 158 dims stand. THREE FINDINGS auto-seated same sitting:
+F-046 → EX12-23 (the midday deadline's FOUR recorded derivations —
+akh divides, rishon-means-previous by Job 15:7, Rava's Exod 34:25,
+R. Akiva's kindling proof — landing exactly on the chapter's two
+LEAN firsts the ink file already held at EX12-03: the derivation and
+the skeleton agree on the six kept hours); F-047 → EX12-24 (the
+seen/found division of labor with the deposit RESPONSIBILITY
+parameter and the three-searches correspondence); F-048 → EX13-16
+(the benefit ban's four recorded routes — the passive-voice read
+registered as MOVE M-15, whose target the unit's own derivation
+prose had flagged as "the leaven-ban restated in the passive" before
+the sugya was opened — plus R. Yosei HaGelili's standing dissent and
+the after-Passover machine). Both units re-rituals COMPLETE,
+regression 130/130, preflights green, gloss_lint 0. THE HEADLINE:
+the ink's grammar layer anticipated the compile move — the passive
+voice the machine had noted as style turned out to be Chizkiya's
+whole argument; and the deadline cluster is the two-channel doctrine
+in miniature: four derivations, one clock, with the lean-vav sign
+sitting on the same six hours.
+
+## Round 13 — THE COURTS (2026-09-04; same sitting)
+The second Exodus Talmud-first exam block: the composition and
+procedure sugyot (Sanhedrin 2a-36b, Shevuot 30b) over the
+appointment narrative (Exod 18:13-26), the deposit-court verses
+(22:7-8), and the justice cluster (23:1-8). 32 LAW rows credited to
+the triage, 10+ routed on content, 1 credited to the Terumah round's
+compiled extension rule; 111 fresh segments verdicted in
+logic/oral_triage/exodus_block_courts_2026-09-04.md. TEN modules in
+courts_rules.py, 32 cases in cases_courts.yaml: 32/32 FIRST RUN; all
+twelve priors green — 512/512 across thirteen rounds. Catalog
+R-362..R-371; 176 compiled rules. Vocabulary +33 values (31 query, 2
+stage), dims hold at 158. ONE COMPUTED VERDICT: the 78,600 officer
+census rerun from 18:21's own denominations over the six hundred
+thousand. THE HEADLINE — THE SEATS ANTICIPATED THE SUGYA FOUR TIMES:
+EX22-04 already held the whole three-judges derivation (R. Yoshiya's
+three god-word tokens, R. Yonatan who does not expound beginnings,
+Rebbi's plural verb — seated at the compiler hunt 2026-09-02);
+EX23-02 the convict margin; EX23-04 the return asymmetry; EX23-01
+the ex-parte warnings — the block's cases credit the standing seats
+by ID. TWO findings auto-seated: F-049 → EX23-10 (the courtroom
+conduct file — the odd-court law with its scope dissent, al riv
+read al rav, the distancing cluster, the bench-table disputes, the
+ox's one protection, the self-relative split) and F-050 → EX18-15
+(the appointment constitution — matters-of-a-great-one, the
+seventy-one as appointer, similar-to-you, the 120/230 threshold,
+the computed census, day/night times, the sat/stood posture). Rows
+whose verses live outside the block's units (Exod 17:16, 20:20,
+20:23, 21:14, 21:29) carry talmud_source-only provenance with the
+span named — unseated, openly. Both rituals COMPLETE, 130/130,
+hash unmoved, preflights green, gloss_lint 0.
+
+## Rounds 14-15 — THE ORDINANCES' PERSONS + OATHS AND DEPOSITS
+## (2026-09-04; owner: "Keep going" — the blocks that intersect the
+## compiled functions)
+Blocks 7 and 14 of the 18. PERSONS (round 14): 40 LAW rows credited,
+154 segments opened fresh across ELEVEN tractates
+(logic/oral_triage/exodus_block_persons_2026-09-04.md); ten modules
+in persons_rules.py, 35 cases: 35/35 FIRST RUN. OATHS (round 15):
+6 LAW rows, 18 segments
+(logic/oral_triage/exodus_block_oaths_2026-09-04.md); three modules
+in oaths_rules.py, 8 cases: 8/8 FIRST RUN. All priors green —
+**555/555 across fifteen rounds**. Catalog R-372..R-384; 189
+compiled rules. Vocabulary +43 query values, dims hold at 158. SIX
+findings auto-seated: F-051 → EX21-23 (forewarning from the
+intent-word + the strike grammar), F-052 → EX22-15 (the burglar
+file's Babylonian layer — the kinship default, the
+rescue-survives-the-license state, the pursuer status, the location
+extension with breaking-in-is-his-forewarning), F-053 → EX21-24
+(the striving men's file + the goring riders), F-054 → EX21-25 (the
+clock's whole-years semantics + the household file + the day-or-two
+four-way), F-055 → EX21-26 (the abduction grid with the TEIKU edge
+carried as a verdict state), F-056 → EX22-16 (the oath's
+court's-understanding rider + the
+generalization-detail-generalization scope). MOVE M-16 registered —
+THE REVOCALIZATION READ, four exemplars in one sitting (al rav, lo
+tassi, lo tanif, ye'adah-as-inform-her), its meta-question the
+tradition's own vocalization-authority dispute (block 15's docket).
+ANTICIPATIONS AGAIN: EX22-01 held the sun-as-clarity read; EX22-05
+held both-parties AND the heirs exclusion at the Mekhilta layer;
+EX22-04 the trespass middah; the backfill's L4-02 the matrilineal
+rule. THE HEADLINE: the tradition's own OPEN STATE entered the
+machine — Sanhedrin 85b:21's exploitation dilemma stands TEIKU, and
+the engine returns the recorded unresolved as a verdict; and the
+cite gate FIRED honestly mid-seat (grouped ledger rows hid
+individual refs — the cite indexes now name every segment opened).
+Rituals COMPLETE exo_21 + exo_22, regression 130/130, standing
+tripwire moved exactly +6 and rebaked, hash 8b8fff1fa28953af
+unmoved, preflights green, gloss_lint 0.
+
+## Round 16 — THE PASCHAL OFFERING (2026-09-04; owner: "The word lol")
+The fifth Exodus Talmud-first block and the map's LARGEST: 41 LAW
+rows credited, 114 segments opened fresh (Pesachim 41a-99a with
+Arakhin and Zevachim reaching in; ledger
+logic/oral_triage/exodus_block_pesach_2026-09-04.md). NINE modules
+in pesach_rules.py, 35 cases: 35/35 FIRST RUN; all fifteen priors
+green — **590/590 across sixteen rounds**. Catalog R-385..R-393;
+198 compiled rules. Vocabulary +35 query values, dims hold at 158.
+FOUR findings auto-seated on exo_12: F-057 → EX12-25 (the
+registration machine — the doubled count-verbs' indispensability,
+Rebbi's takhosu-is-Aramaic lexicon row, the withdrawal window's
+me-chayutei/me-havayatei re-readings, sustain-from-the-lamb, the
+household consent table, the women three-way, the intermingled
+lambs, the order algorithm, the rite-specific arel gate), F-058 →
+EX12-26 (the roast derivations — two liquid routes, the 2/2/3 lash
+matrix, the time-scope rule, fire-not-through-another with the
+WOOD-SPECIES ELIMINATION, the doubled roasted-in-fire excluding the
+swept oven), F-059 → EX12-27 (the bone's three scope routes, the
+ACTLESS RULE'S HOME SEAT — which the courts round had cited from
+afar, the carry grammar importing the Shabbat labor's
+lifting-and-placing, the second-morning burn with three routes,
+intent-to-leave), F-060 → EX12-28 (continuous validity at all four
+rites, the four-day examination EXPORTED to the daily offering with
+the Chamber of the Lambs as its institution, the this-token
+diff-engine, ben Teima's rider with ben Dortai's rejected reading
+recorded, Rav Safra's verse map). THE HEADLINE: the Mishnah layer
+seated in the backfill (EX12-17/18/21) anticipated the block's
+whole surface — and the Tzav round's wrong-intent table, built for
+Leviticus, already answers the paschal for-its-name grid: a
+cross-BOOK anticipation. Second: the wood-species elimination run —
+the tradition testing five materials against the verse's
+fire-directness requirement and engineering the answer
+(pomegranate) — the closest thing yet to a recorded experiment.
+Ritual COMPLETE exo_12, regression 130/130, standing +4 rebaked
+(1229), hash unmoved, preflight green, gloss_lint 0.

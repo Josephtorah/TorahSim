@@ -1,0 +1,59 @@
+# OATHS AND DEPOSITS (round 15 — the fourth Exodus Talmud-first exam
+# block, 2026-09-04; owner: "Keep going"). The compiled guardians'
+# exam shelf: cold_run_guardians.py answers Mishnah Shevuot 8:1
+# 12/12 and EX22-04 holds the deposit passage's court file — this
+# block carries the oath machinery's derivation layer. Read-source:
+# logic/oral_triage/exodus_block_oaths_2026-09-04.md.
+
+- module: oath_of_the_lord
+  tractate: Shevuot
+  oracle: Shevuot 39b:5-7, 47a:10-12, 47b:3
+  exodus_anchor: {unit: exo_22_property_social, ref: Exod.22.10,
+    claims: [EX22-16]}
+  cases:
+  - id: Sh39b_both
+    input: {query: false_oath_reach}
+    expected: {verdict: both_parties}
+    class: A
+  - id: Sh47a_heirs
+    input: {query: heirs_oath}
+    expected: {verdict: not_between_heirs}
+    class: A
+  - id: Sh39b_understanding
+    input: {query: oath_understanding}
+    expected: {verdict: courts_understanding}
+    class: A
+
+- module: oath_subject_matter
+  tractate: Shevuot
+  oracle: Shevuot 42a:12, 42b:15-43a:3
+  exodus_anchor: {unit: exo_22_property_social, ref: Exod.22.6-9,
+    claims: [EX22-04, EX22-16]}
+  cases:
+  - id: Sh43a_scope
+    input: {query: oath_subject_scope}
+    expected: {verdict: movable_intrinsic}
+    class: A
+  - id: Sh42b_double
+    input: {query: double_payment_scope}
+    expected: {verdict: movable_intrinsic}
+    class: A
+  - id: Sh42a_minor
+    input: {query: minor_claim_oath}
+    expected: {verdict: no_oath}
+    class: A
+  - id: Sh42b_undefined
+    input: {query: undefined_claim_oath}
+    expected: {verdict: exempt_until_defined}
+    class: A
+
+- module: oath_suspects
+  tractate: Shevuot
+  oracle: Shevuot 47b:4
+  exodus_anchor: {unit: exo_22_property_social, ref: Exod.22.10,
+    claims: [EX22-16]}
+  cases:
+  - id: Sh47b_accessory
+    input: {query: oath_suspect_accessory}
+    expected: {verdict: accessory_read_in}
+    class: A

@@ -9110,3 +9110,223 @@ stamp → examine → compile with effects → the engine grows. NOTHING
 COMMITTED this sitting — the whole post-#40 Tzav line awaits the
 owner's word. Clean compaction point available (all records
 current).
+
+(commit) Owner: "Commit push." COMMIT d2c363a pushed to
+Josephtorah/Torah_Grok main — 48 files, ~14.2k insertions: the whole
+Tzav sitting (five ledgers + exam docket + wip enum, five frozen
+units + manifests + py/html renderings, tzav exam machinery + engine
+scene 6 + cold_run_tzav, effect registry 48, moves M-13/M-14, stamp
+row, catalog repair, briefing + THE_STEPS + this doc). Never-commit
+set excluded as always. Working tree clean but for the standing
+excluded paths. Clean compaction point stands.
+
+(epub) Owner: "Create a huge detailed epub report... How does this
+compare to a simulation... We dont change code but we do allow
+change to the world. No em dashes. Make sure there are pauses for
+eleven reader." DELIVERED: The_World_That_Changes.md +
+The_World_That_Changes.epub at repo root (built with
+grok-mockups/tools/md_to_epub.py) — "The World That Changes, The
+Code That Does Not": 21 chapters, ~6,700 words, ~44 min listening.
+Audio style per his spec: short sentences/paragraphs, section
+pauses, ZERO em/en dashes (verified in md AND inside the built
+epub's xhtml), numbers written for speech, all Hebrew-derived terms
+glossed inline, gloss_lint 0. Content: the compiler map, ledger vs
+simulation, all six steps with where-the-world-changes commentary,
+the five constructs vs a game engine, the 48-effect registry, six
+worked engine examples (term clock, forewarned ox, keepers,
+deposit+Heaven's docket, pierced slave vs jubilee, installation
+tape), ONE VERSE THROUGH ALL SIX STEPS (Lev 6:13 the chavitin),
+disputes at runtime (verdict lists, forked effects), the
+three-layer change law (code never / evidence append-only / world
+freely), the fence + open-ledger honesty, the two channels with the
+halachah-to-Moses row, two shelves, the prophetic-indictment
+destination (Eli + Isaiah witnessed), scoreboard, next roads. File
+sent to the owner. NOT COMMITTED — awaits his word.
+
+## COMPACTION POINT #41 (2026-09-04) — NEXT: THE EXODUS EXAM BLOCKS
+Owner checked /context (58%), is compacting, and has ORDERED the next
+work: "we run the exodus blocks" — the 18 Talmud-first exam blocks
+(501 LAW rows) mapped in logic/oral_triage/EXOD_TALMUD_TRIAGE_LEDGER.md
+(THE EXAM-BLOCK MAP section at its tail, anchor sugyot named). His
+words this sitting: "So we do have unfinished runs as number 2 for
+exodus and genesis? Let's run those." — so the ~11 GENESIS blocks
+(162 rows, map noted in talmud_triage_gen_2026-09-01.md /
+World/step9 records) FOLLOW as lighter interludes after Exodus.
+METHOD = the Noahide precedent (World/step9/REPORT_NOAHIDE.md,
+THE_STEPS Step 5's Noahide paragraph): Talmud-only rules —
+provenance carries talmud_source in place of mishnah+bridge; rows
+credited to the triage's read where standing; neighbor segments
+opened for frame with their own reading ledger; case rows compiled
+into modules (engine.py + <block>_rules.py + runner), verdicts
+dual-track, vocabulary registered discovered-not-designed;
+findings AUTO-SEAT into frozen units same sitting (F-numbers
+continue from F-045); catalog R-numbers continue from R-352 in
+rule_catalog_ids.json (the JSON is canonical, keep the .md mirror
+current); all prior exam runners re-run green each round (currently
+450/450 over eleven). START with the ripest blocks per the map:
+the leaven block and the courts block; blocks 7 and 14 intersect
+the compiled functions first (noted at the map's writing). BATCH
+several blocks per sitting as density allows; per-block records in
+World/step9 (REPORT_<block>.md pattern) + EXAM_LEDGER.md rounds +
+state doc entries at every milestone unprompted.
+UNCOMMITTED AT THIS SEAM (owner aware, holding for his word):
+The_World_That_Changes.md + .epub (the architecture audio report,
+delivered to him) and this doc's tail entries since d2c363a —
+they ride the next "commit push."
+POST-COMPACTION REREADS (mandatory first sitting): THE_STEPS Step 2
+read-and-log rules + Step 5 (effects rule + deliverable rule + two
+directions + compiler block) + this doc's tail. Corpus stands at
+130 units / 1,809 facts / hash 8b8fff1fa28953af; exam 450/450;
+registry 48 effects; moves M-01..M-14.
+
+(round 12 — the leaven block) THE EXODUS BLOCK CAMPAIGN OPENED on
+the owner's "Yes go": block 1 of 18, THE LEAVEN MACHINE, ran end to
+end. 25 LAW rows credited to the triage, 9 routed out on content,
+108 sugya segments opened fresh (ledger
+logic/oral_triage/exodus_block_leaven_2026-09-04.md). Nine modules
+(leaven_rules.py), 30 cases (cases_leaven.yaml): 30/30 FIRST RUN;
+all priors green — 480/480 over twelve rounds. Catalog
+R-353..R-361 (166 rules); vocab +32 values, dims hold at 158.
+THREE findings auto-seated same sitting: F-046 → EX12-23 (the
+midday deadline's four derivations landing on EX12-03's two lean
+firsts — derivation and skeleton agreeing on the six hours),
+F-047 → EX12-24 (seen/found division, deposit responsibility
+parameter, three-searches correspondence, karet/prohibition
+split), F-048 → EX13-16 (the benefit ban's four routes + R. Yosei
+HaGelili's standing dissent + the after-Passover machine). MOVE
+M-15 registered (THE VOICE READ — Chizkiya's passive-voice scope
+operator; the unit's own frozen prose had flagged "the leaven-ban
+restated in the passive" before the sugya opened). Rituals
+COMPLETE both units, 130/130, hash unmoved, preflights green,
+gloss_lint 0. Records: REPORT_LEAVEN.md + EXAM_LEDGER round 12.
+NEXT: block 6, THE COURTS (Sanhedrin 2a-36b + Shevuot 30b).
+
+(round 13 — the courts block) SAME SITTING: block 6 of 18, THE
+COURTS, ran end to end. 32 LAW rows credited, 10+ routed, 111
+segments opened fresh (ledger
+logic/oral_triage/exodus_block_courts_2026-09-04.md). Ten modules
+(courts_rules.py), 32 cases: 32/32 FIRST RUN; all priors green —
+512/512 over thirteen rounds. Catalog R-362..R-371 (176 rules);
+vocab +33 values. HEADLINE: the seats ANTICIPATED the sugya four
+times — EX22-04 held the whole three-judges derivation (all three
+authorities named, seated at the compiler hunt), EX23-02 the
+margin, EX23-04 the return asymmetry, EX23-01 ex-parte; the block
+credits them by ID. TWO findings auto-seated: F-049 → EX23-10
+(courtroom conduct file: odd-court law + scope dissent, al riv →
+al rav, distancing cluster, bench-table disputes, ox's one
+protection, self-relative split) and F-050 → EX18-15 (appointment
+constitution: great-one docket, 71-as-appointer, similar-to-you,
+120/230 threshold, the 78,600 COMPUTED census, day/night times,
+sat/stood posture). Foreign-span rows (17:16, 20:20, 20:23,
+21:14, 21:29) carry talmud_source-only provenance, unseated
+openly. Rituals COMPLETE exo_23 + exo_18, 130/130, hash unmoved,
+preflights green, gloss_lint 0. Records: REPORT_COURTS.md +
+EXAM_LEDGER round 13. CAMPAIGN: 2 of 18 blocks done. NEXT per the
+map: blocks 7 + 14 intersect the compiled functions (the
+ordinances' persons; oaths and deposits) — or the owner's pick.
+
+(corpus truth rebake) The closing sweep's CORPUS_TRUTH tripwire
+FIRED exactly as designed: the five witness seats (EX12-23/24,
+EX13-16, EX23-10, EX18-15) raised the standing count past the baked
+1214, and the assert failed loudly. Rebaked by the documented path
+(python3 corpus_world.py — regenerate, never edit): standing now
+1219 (five seats, five rows — the era's proof arithmetic holds),
+facts 1,809, demands 341 (191 open), hash 8b8fff1fa28953af UNMOVED.
+CORPUS TRUTH GREEN. All thirteen exam runners green at 512/512 in
+the same closing sweep.
+
+(rounds 14-15 — persons + oaths blocks) Owner: "Keep going." Blocks
+7 and 14 (the compiled-function intersections) ran in one pass.
+PERSONS: 40 LAW rows, 154 fresh segments across ELEVEN tractates,
+ten modules, 35/35 FIRST RUN. OATHS: 6 rows, 18 segments, three
+modules, 8/8 FIRST RUN. All priors green — 555/555 over fifteen
+rounds. Catalog R-372..R-384 (189 rules); vocab +43 query values.
+SIX findings seated: F-051 → EX21-23 (forewarning + strike
+grammar), F-052 → EX22-15 (burglar Babylonian layer — kinship
+default, rescue-survives-license, pursuer status, location +
+breaking-in-is-forewarning), F-053 → EX21-24 (striving men +
+goring riders), F-054 → EX21-25 (whole-years clock + household +
+day-or-two four-way), F-055 → EX21-26 (abduction grid + TEIKU
+carried as a verdict state — the tradition's own OPEN filed),
+F-056 → EX22-16 (court's-understanding oath + G-D-G scope). MOVE
+M-16 registered (THE REVOCALIZATION READ — four exemplars in one
+sitting; meta-question = the vocalization-authority dispute,
+block 15). Anticipations a fourth time: EX22-01 sun-as-clarity,
+EX22-05 both-parties + heirs, EX22-04 trespass middah, L4-02
+matrilineal. HONEST FIRE: the cite gate rejected grouped ledger
+refs — cite indexes added naming every segment; the gate worked
+as written. Rituals COMPLETE exo_21 + exo_22, 130/130, standing
++6 rebaked (1225), hash unmoved, preflights green, gloss_lint 0.
+Records: REPORT_PERSONS_OATHS.md + EXAM_LEDGER rounds 14-15.
+CAMPAIGN: 4 of 18 blocks done (~370 LAW rows remain in 14 blocks).
+NEXT candidates per the map: block 2 (the paschal offering, ~45,
+the largest) or block 9 (Shabbat's machinery, ~45, twice-drawn
+import edges) — or the owner's pick.
+
+(round 16 — the paschal block) Owner: "The word lol" — the word
+given; block 2, THE PASCHAL OFFERING (the map's largest), ran end
+to end. 41 LAW rows credited, 114 segments fresh (ledger
+logic/oral_triage/exodus_block_pesach_2026-09-04.md). Nine modules
+(pesach_rules.py), 35 cases: 35/35 FIRST RUN; all priors green —
+590/590 over sixteen rounds. Catalog R-385..R-393 (198 rules);
+vocab +35 query values (414 total). FOUR findings seated on
+exo_12: F-057 → EX12-25 (registration machine: doubled
+count-verbs, takhosu lexicon, withdrawal re-readings,
+sustain-from-lamb, household consent, women three-way, mingled
+lambs, order algorithm, arel rite-gate), F-058 → EX12-26 (roast
+derivations + fire-directness with the WOOD-SPECIES ELIMINATION),
+F-059 → EX12-27 (bone scope routes, THE ACTLESS RULE'S HOME SEAT,
+carry grammar's Shabbat import, second-morning burn, intent-to-
+leave), F-060 → EX12-28 (continuous validity, the examination
+exported to the daily w/ Chamber of the Lambs, the this-token
+diff engine, ben Teima + ben Dortai, Rav Safra's map). TWO
+HEADLINES: the first CROSS-BOOK anticipation (the Tzav round's
+wrong-intent table answers the paschal for-its-name grid) and the
+recorded EXPERIMENT (five spit materials tested against the
+fire-directness spec, four failure modes named, pomegranate the
+survivor). Ritual COMPLETE, 130/130, standing +4 rebaked (1229),
+hash unmoved, gloss_lint 0. Records: REPORT_PESACH.md +
+EXAM_LEDGER round 16. CAMPAIGN: 5 of 18 done (~325 LAW rows in
+13 blocks remain). CLEAN COMPACTION POINT: all records current;
+NOTHING COMMITTED since d2c363a (the epub + five block rounds +
+all seats ride the next "commit push"). Next ripest: block 9
+(Shabbat's machinery — the twice-drawn import edge) or block 3
+(matza and the telling).
+
+## COMPACTION POINT #42 (2026-09-04) — MID-CAMPAIGN, 5 OF 18 BLOCKS
+Owner compacting at ~606k. THE EXODUS BLOCK CAMPAIGN IS MID-RUN:
+blocks 1 (leaven), 6 (courts), 7 (persons), 14 (oaths), 2 (pesach)
+are DONE — rounds 12-16, all first-run green, **590/590 across
+sixteen rounds**. Standing numbers: corpus 130 / facts 1,809 /
+hash 8b8fff1fa28953af / standing tripwire 1229 / catalog R-393
+(198 rules) / vocab 414 query values, 158 dims / findings F-060 /
+moves M-16. THIRTEEN BLOCKS REMAIN (~325 LAW rows) in the map at
+the tail of logic/oral_triage/EXOD_TALMUD_TRIAGE_LEDGER.md;
+ripest next: block 9 (Shabbat's machinery — the import edge drawn
+twice: Pesachim 5b:1 + Sanhedrin 35b:7) or block 3 (matza and the
+telling). Then the ~11 Genesis blocks (162 rows) as interludes.
+THE METHOD (proven five times this sitting): (1) grep the block's
+LAW rows from the triage ledger, route foreign rows by CONTENT;
+(2) fetch sugya texts ONE QUERY PER TRACTATE from torah_grok.sqlite
+export_texts (per-ref lookups hang); (3) block ledger in
+logic/oral_triage/exodus_block_<name>_2026-09-04.md — docket
+credited to the triage + fresh-read rows + READ-THROUGH line + a
+CITE INDEX naming every segment verbatim (the cite gate demands
+exact-match refs; grouped rows fail); (4) GREP THE TARGET UNITS'
+MANIFESTS FIRST — the seats keep anticipating the sugyot (four
+times at courts, cross-book at pesach); (5) vocabulary append-only
+with collision guard; cases + <block>_rules.py (build(V), engine
+tail import) + runner cloned from run_leaven.py; (6) findings
+auto-seat via WITNESS_READ ops + derivation_log S-entry + manifest
+rows + freeze ritual + preflight + gloss_lint; foreign-span rows
+carry talmud_source-only provenance, unseated, span named;
+(7) rebake CORPUS_TRUTH via python3 corpus_world.py when the
+standing tripwire fires (+1 per seat, exactly); (8) catalog JSON +
+.md mirror, EXAM_LEDGER round entry, REPORT_<block>.md, state doc,
+THE_STEPS campaign paragraph, briefing scoreboard, memory — all
+UNPROMPTED. UNCOMMITTED since d2c363a (owner aware): the
+architecture epub (The_World_That_Changes.md/.epub) + ALL five
+block rounds + eight re-ritualed units' seats + this doc's tail —
+one "commit push" carries everything. POST-COMPACTION REREADS
+(mandatory): THE_STEPS Step 2 + Step 5 + the compiler block + this
+tail. On the owner's word, keep running blocks.

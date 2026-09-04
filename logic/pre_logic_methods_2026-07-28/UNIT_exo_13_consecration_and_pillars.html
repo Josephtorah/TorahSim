@@ -50,6 +50,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 12/12 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
 <tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Exod 1-13 continuous.</td><td>established</td></tr>
 <tr><td><b>S9</b></td><td>Step 9 backfill seats (2026-09-01)</td><td>Step 9 backfill exam (2026-09-01, owner: &#x27;lets run step 9 on exodus 1 - 21 again&#x27;): the bare-Mishnah rows citing Exod 1-21 read in full (ledger logic/oral_triage/exodus_backfill_mishnah_2026-09-01.md); this unit&#x27;s unheld legs seated under the auto-seat law — claims EX13-14, EX13-15. Machine ops untouched below the witness tier.</td><td>tested</td></tr>
+<tr><td><b>S12</b></td><td>Round-12 Talmud-block seat (2026-09-04)</td><td>THE LEAVEN MACHINE — the first of the 18 Exodus Talmud-first exam blocks (owner: &#x27;Yes go&#x27;; ledger logic/oral_triage/exodus_block_leaven_2026-09-04.md; runner run_leaven.py, 30/30). The benefit-ban derivation file seated under the auto-seat law — claim EX13-16 (finding F-048): the passive-voice read (move M-15 registered), the four recorded routes, R. Yosei HaGelili&#x27;s dissent, the after-Passover machine on 13:7. Machine ops untouched below the witness tier.</td><td>tested</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -79,6 +80,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(moshe, LET(zakhor_et_ha_yom_ha_ze))</span><br><span class="gloss">= DECLARE(Moses, LET(zakhor-the-day-the-ze))</span><br>THE REMEMBER. va-yomer moshe el-ha-am ZAKHOR et-ha-yom ha-ze — &#x27;REMEMBER this day&#x27;: Moses&#x27; relay-deck opens (the speech runs 13:3-16: the memory-laws, the signs, the questions — one card for the relay, perpetual by content); mi-BET AVADIM — &#x27;from the house of SLAVES&#x27;: the epithet debuts (the Decalogue&#x27;s own tag for Egypt, 20:2 armed); ki BE-CHOZEQ YAD hotzi YHWH etkhem — &#x27;by STRENGTH OF HAND&#x27; (the bet DAGESHED, MS, asserted): the strength-formula that will anchor the whole passage (13:9, 13:14, 13:16 — four soundings in one chapter); ve-lo yeakhel CHAMETZ — the leaven-ban restated in the passive: the machine opens the memory-machinery of the exodus one march out of Egypt.
 </td><td><span class="he">זָכוֹר אֶת־הַיּוֹם הַזֶּה</span> · <i>zakhor et-ha-yom ha-ze</i><br><span class="gloss">= zakhor the-day the-ze</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(benefit_ban, recorded_routes)</span><br><span class="gloss">= WITNESS-READ(benefit-ban, recorded-routes)</span><br>THE BENEFIT BAN ON THE PASSIVE VOICE — AND ITS DISSENT [claim EX13-16]. The derivation the machine&#x27;s own prose anticipated (&#x27;the leaven-ban restated in the passive&#x27;) is the Talmud&#x27;s: Chizkiya reads לֹא יֵאָכֵל (&#x27;shall not be EATEN&#x27; — the passive) as no permitted consumption AT ALL — benefit converts to food money (Pesachim 21b:5, the M-15 voice read). Three more routes recorded: R. Abbahu — every eat-ban bans benefit unless released (the carcass&#x27;s give-or-sell, on R. Meir&#x27;s reading, 21b:6-10); on R. Yehuda&#x27;s as-written carcass the route is Exod 22:30&#x27;s &#x27;cast it to the DOGS&#x27; (21b:11); R. Yonatan — Exod 29:34&#x27;s spare &#x27;it shall not be eaten&#x27; reassigned to all bans and past eating to benefit, the burn mode staying home (24a:4-5). Against them the RECORDED DISSENT, carried forever: R. Yosei HaGelili — &#x27;be astounded with yourself&#x27; — benefit permitted all seven days, his hook 13:7&#x27;s &#x27;with YOU — yours&#x27; (23a:12). On 13:7 rides the after-Passover machine: the mishnah&#x27;s gentile-permitted / Jew-forbidden split read by Rava as R. Shimon plus a Sages&#x27; penalty on the seen/found transgressor, by R. Acha bar Yaakov as R. Yehuda&#x27;s Torah ban — with their lashes split at Pesachim 29a:7, and R. Yehuda&#x27;s three verses / three windows against R. Shimon&#x27;s reassignments (13:3 to Egypt&#x27;s ONE day, juxtaposed to &#x27;this day&#x27; at 13:4 — R. Yosei HaGelili) at 28b:4-8. Finding F-048, auto-seated per the standing law.
+</td><td>—</td><td class='cite'>Pesachim 21b:5, Pesachim 21b:11, Pesachim 23a:12, Pesachim 24a:4, Pesachim 28b:4, Pesachim 29a:4</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The relay opens; the zakhor-verb.</div>
 </div>
@@ -486,6 +489,10 @@ m.step(&quot;Exod.13.3&quot;)
 # speaks a demand — LET: mark-obj-marker-the-day-the-this
 m.declare(&quot;moshe&quot;, &quot;LET&quot;,
           &quot;zakhor_et_ha_yom_ha_ze&quot;)
+# witness-tier presupposed read: recorded_routes on benefit_ban — read, not
+# installed
+m.witness_read(&quot;benefit_ban&quot;, &quot;recorded_routes&quot;,
+                cites=[&quot;Pesachim 21b:5&quot;, &quot;Pesachim 21b:11&quot;, &quot;Pesachim 23a:12&quot;, &quot;Pesachim 24a:4&quot;, &quot;Pesachim 28b:4&quot;, &quot;Pesachim 29a:4&quot;])
 
 # -------------------------- Exod.13.4 · IN_THE_MONTH_OF_AVIV ---------------
 # הַיּוֹם אַתֶּם יֹצְאִים בְּחֹדֶשׁ הָאָבִיב
@@ -721,12 +728,15 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 2
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;donkey_firstling&#x27;, &#x27;firstborn_cluster&#x27;), (&#x27;frontlets&#x27;, &#x27;received_form&#x27;)]
-    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Mishnah Bekhorot 1:2&#x27;, &#x27;Mishnah Bekhorot 1:7&#x27;, &#x27;Mishnah Bekhorot 2:6&#x27;, &#x27;Mishnah Bekhorot 2:9&#x27;, &#x27;Mishnah Bekhorot 8:1&#x27;, &#x27;Mishnah Avodah Zarah 5:9&#x27;]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;benefit_ban&#x27;, &#x27;recorded_routes&#x27;), (&#x27;donkey_firstling&#x27;, &#x27;firstborn_cluster&#x27;), (&#x27;frontlets&#x27;, &#x27;received_form&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Pesachim 21b:5&#x27;, &#x27;Pesachim 21b:11&#x27;, &#x27;Pesachim 23a:12&#x27;, &#x27;Pesachim 24a:4&#x27;, &#x27;Pesachim 28b:4&#x27;, &#x27;Pesachim 29a:4&#x27;]
+    assert all(&#x27;recorded_routes&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;benefit_ban&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Mishnah Bekhorot 1:2&#x27;, &#x27;Mishnah Bekhorot 1:7&#x27;, &#x27;Mishnah Bekhorot 2:6&#x27;, &#x27;Mishnah Bekhorot 2:9&#x27;, &#x27;Mishnah Bekhorot 8:1&#x27;, &#x27;Mishnah Avodah Zarah 5:9&#x27;]
     assert all(&#x27;firstborn_cluster&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;donkey_firstling&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Mishnah Sanhedrin 11:3&#x27;, &#x27;Mishnah Megillah 4:8&#x27;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Mishnah Sanhedrin 11:3&#x27;, &#x27;Mishnah Megillah 4:8&#x27;]
     assert all(&#x27;received_form&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;frontlets&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-09-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

@@ -50,6 +50,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
 <tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-10 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Exod 1-18 continuous.</td><td>established</td></tr>
 <tr><td><b>S9</b></td><td>Step 9 backfill seats (2026-09-01)</td><td>Step 9 backfill exam (2026-09-01, owner: &#x27;lets run step 9 on exodus 1 - 21 again&#x27;): the bare-Mishnah rows citing Exod 1-21 read in full (ledger logic/oral_triage/exodus_backfill_mishnah_2026-09-01.md); this unit&#x27;s unheld legs seated under the auto-seat law — claims EX18-14. Machine ops untouched below the witness tier.</td><td>tested</td></tr>
+<tr><td><b>S13</b></td><td>Round-13 Talmud-block seat (2026-09-04)</td><td>THE COURTS — the second Exodus Talmud-first exam block (owner: &#x27;Yes go&#x27;; ledger logic/oral_triage/exodus_block_courts_2026-09-04.md; runner run_courts.py, 32/32). The appointment constitution seated under the auto-seat law — claim EX18-15 (finding F-050): matters-of-a-great-one, the seventy-one as appointer, with-you as similar-to-you, the 120/230 town threshold, the 78,600 officer census recomputed from the verse&#x27;s own denominations, the day/night trial times, the sat/stood posture. Machine ops untouched below the witness tier.</td><td>tested</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -271,6 +272,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וְהָקֵל מֵעָלֶיךָ וְנָשְׂאוּ אִתָּךְ</span> · <i>ve-haqel me-ale-kha ve-nasu et-khe</i><br><span class="gloss">= and-haqel from-ale-kha and-nasu khe</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(great_matter, court_tiers)</span><br><span class="gloss">= WITNESS-READ(great-matter, court-tiers)</span><br>THE GREAT MATTER&#x27;S STANDING DOCKET [claim EX18-14]. On this step&#x27;s routing (every great matter to Moses — the EX18-13 crown): the seventy-one docket (Mishnah Sanhedrin 1:5), the money/capital asymmetry table (Mishnah Sanhedrin 4:1), the side-first opening and capital composition (Mishnah Sanhedrin 4:2) — the Jethro architecture running as institutions. Finding F-024, auto-seated per the standing law.
 </td><td>—</td><td class='cite'>Mishnah Sanhedrin 1:5, Mishnah Sanhedrin 4:1, Mishnah Sanhedrin 4:2</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(great_matter, appointment_constitution)</span><br><span class="gloss">= WITNESS-READ(great-matter, appointment-constitution)</span><br>THE APPOINTMENT CONSTITUTION [claim EX18-15]. The round-13 Talmud-first block lands the appointment narrative&#x27;s derivation layer on this chapter&#x27;s own words. &#x27;Every GREAT matter&#x27; — read MATTERS OF A GREAT ONE (Rav Adda bar Ahava: the tribe&#x27;s Nasi tried by seventy-one) with Ulla&#x27;s border-dispute arm recorded beside it (Sanhedrin 16a:1-2). LESSER COURTS APPOINTED BY THE SEVENTY-ONE — as Moses, who stands in the great court&#x27;s place, appointed the courts for all the people (18:25-26; Sanhedrin 16b:9). &#x27;WITH YOU&#x27; = SIMILAR TO YOU — fit lineage, free of blemish (the Rabbis from this verse&#x27;s bear-with-you; R. Yehuda from Numbers 11:17; Sanhedrin 17a:2-3): the seated marriageable-bench rule&#x27;s own derivation. THE TOWN THRESHOLD: a hundred and twenty (the first tanna&#x27;s breakdown) against R. Nechemya&#x27;s TWO HUNDRED THIRTY — twenty-three ministers of TENS, each judge over his verse-given ten (18:21; Sanhedrin 17b:10-11, with Rabbi&#x27;s 277/278 variants reconciled by the 70/71 dispute). THE OFFICER CENSUS COMPUTED: 18:21&#x27;s own denominations over the six hundred thousand — 600 ministers of thousands, 6,000 of hundreds, 12,000 of fifties, 60,000 of tens — 78,600 judges (Sanhedrin 18a:3; the machine reruns the division and lands on the recorded sum). TRIAL TIMES: &#x27;they shall judge the people AT ALL TIMES&#x27; (18:22) reconciled with Deuteronomy 21:16&#x27;s &#x27;on the DAY&#x27; — the trial opens by day, the monetary verdict may conclude at night (Rava, Sanhedrin 34b:8-9). AND THE COURTROOM&#x27;S POSTURE FROM THE CHAPTER&#x27;S OWN NARRATIVE: &#x27;Moses SAT to judge the people, and the people STOOD&#x27; (18:13) — at the verdict the judges sit and the litigants stand; witnesses always stand (Shevuot 30b:2-3). Finding F-050, auto-seated per the standing law.
+</td><td>—</td><td class='cite'>Sanhedrin 16a:1, Sanhedrin 16b:9, Sanhedrin 17a:3, Sanhedrin 17b:11, Sanhedrin 18a:3, Sanhedrin 34b:8, Shevuot 30b:2</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The routing rule.</div>
 </div>
@@ -743,6 +746,10 @@ m.fact(&quot;ve_haqel_me_alekha&quot;)
 # installed
 m.witness_read(&quot;great_matter&quot;, &quot;court_tiers&quot;,
                 cites=[&quot;Mishnah Sanhedrin 1:5&quot;, &quot;Mishnah Sanhedrin 4:1&quot;, &quot;Mishnah Sanhedrin 4:2&quot;])
+# witness-tier presupposed read: appointment_constitution on great_matter —
+# read, not installed
+m.witness_read(&quot;great_matter&quot;, &quot;appointment_constitution&quot;,
+                cites=[&quot;Sanhedrin 16a:1&quot;, &quot;Sanhedrin 16b:9&quot;, &quot;Sanhedrin 17a:3&quot;, &quot;Sanhedrin 17b:11&quot;, &quot;Sanhedrin 18a:3&quot;, &quot;Sanhedrin 34b:8&quot;, &quot;Shevuot 30b:2&quot;])
 
 # -------------------------- Exod.18.23 · TO_ITS_PLACE_IN_PEACE -------------
 # אִם אֶת־הַדָּבָר הַזֶּה תַּעֲשֶׂה וְצִוְּךָ אֱלֹהִים וְיָכָלְתָּ עֲמֹד
@@ -813,9 +820,12 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 3
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;great_matter&#x27;, &#x27;court_tiers&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;great_matter&#x27;, &#x27;court_tiers&#x27;), (&#x27;great_matter&#x27;, &#x27;appointment_constitution&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Mishnah Sanhedrin 1:5&#x27;, &#x27;Mishnah Sanhedrin 4:1&#x27;, &#x27;Mishnah Sanhedrin 4:2&#x27;]
     assert all(&#x27;court_tiers&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;great_matter&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Sanhedrin 16a:1&#x27;, &#x27;Sanhedrin 16b:9&#x27;, &#x27;Sanhedrin 17a:3&#x27;, &#x27;Sanhedrin 17b:11&#x27;, &#x27;Sanhedrin 18a:3&#x27;, &#x27;Sanhedrin 34b:8&#x27;, &#x27;Shevuot 30b:2&#x27;]
+    assert all(&#x27;appointment_constitution&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;great_matter&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-09-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

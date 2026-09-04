@@ -285,3 +285,48 @@ rows ride it via Menachot 7:1's twenty-tenths table).
 **Middah correspondence:** ribbui achar ribbui (inclusion after
 inclusion restricts) — the tradition's own named operator, here
 running as arithmetic on a measure.
+
+## M-15 — THE VOICE READ (the verb's grammatical voice widens or narrows the ban)
+The teacher reads the PASSIVE form itself as a scope operator:
+Chizkiya at the leaven ban — לֹא יֵאָכֵל ("it shall not be EATEN,"
+Exodus 13:3, the passive) means there shall be NO PERMITTED
+CONSUMPTION of it at all, benefit included, since benefit converts
+to food money; had the Torah written the active ("you shall not
+eat"), only eating would be banned. Pesachim 21b:5 — the Gemara's
+own precision note makes the grammar the whole argument. The rival
+rule is R. Abbahu's (every eat-ban bans benefit regardless of
+voice, unless the verse releases it as at the carcass), and the
+routes divide by the carcass baraita's tannaitic split (R. Meir /
+R. Yehuda, Pesachim 21b:7-11) — so the move's yield is live only
+where the voice is the operative token, and the tradition itself
+records both readings. Found 2026-09-04, the leaven block (round
+12, the first Exodus Talmud-first exam block; the machine's own
+derivation prose at exo_13's step 13:3 had already flagged "the
+leaven-ban restated in the passive" before the sugya was opened —
+the ink's grammar layer anticipating the compile move).
+**Middah correspondence:** the dictionary family (M-09's neighbor)
+— but the entry here is a FORM, not a word: the binyan (verb
+pattern) carries the law.
+
+## M-16 — THE REVOCALIZATION READ (the consonants held, the vowels re-pointed, and the second reading is law)
+The teacher reads the SAME consonantal skeleton under a different
+pointing and derives law from the second reading, keeping the first:
+al RIV ("in a cause") heard as al RAV ("over the master") — the king
+off the bench and capital opinions opening from the side (Sanhedrin
+18b:9, 36a:14); lo TISSA ("you shall not bear") read lo TASSI ("you
+shall not deliver") — one verse addressing judge AND litigant
+(Sanhedrin 7b:15); lo TINAF ("you shall not commit adultery") read
+lo TANIF ("you shall not CAUSE adultery") — the accessory read in
+(Shimon ben Tarfon, Shevuot 47b:4); and יְעָדָהּ ("designate her")
+read as inform-her — the maidservant's consent in the word's own
+letters (Abaye son of R. Abbahu, Kiddushin 19a:8). Four exemplars
+found in one sitting (2026-09-04, the courts / persons / oaths
+blocks). The move's own meta-question is RECORDED IN THE TRADITION:
+the vocalization-authority dispute at Sanhedrin 4a:15 — is the read
+text or the received consonants authoritative — block 15's docket;
+the front end's vowel measurement answered the machine's side of
+that question. Distinct from M-15 (the voice read): there the
+grammatical FORM as written carries the law; here a SECOND pointing
+of the same skeleton is added to the first.
+**Middah correspondence:** the al-tikrei family ("do not read X but
+Y") — the tradition's own name for the operation.

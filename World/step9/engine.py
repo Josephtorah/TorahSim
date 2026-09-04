@@ -1704,3 +1704,31 @@ RULES.update(_vk.build(V))
 # rhythm's eighth cycle). 16 rules in tzav_rules.py.
 import tzav_rules as _tz
 RULES.update(_tz.build(V))
+
+# Round 12 — THE LEAVEN MACHINE (2026-09-04, the first of the 18
+# Exodus Talmud-first exam blocks; the Noahide precedent). 9 rules
+# in leaven_rules.py.
+import leaven_rules as _lv
+RULES.update(_lv.build(V))
+
+# Round 13 — THE COURTS (2026-09-04, the second Exodus Talmud-first
+# exam block). 10 rules in courts_rules.py.
+import courts_rules as _ct
+RULES.update(_ct.build(V))
+
+# Round 14 — THE ORDINANCES' PERSONS (2026-09-04, the third Exodus
+# Talmud-first exam block). 10 rules in persons_rules.py.
+import persons_rules as _pr
+RULES.update(_pr.build(V))
+
+# Round 15 — OATHS AND DEPOSITS (2026-09-04, the fourth Exodus
+# Talmud-first exam block — the compiled guardians' exam shelf).
+# 3 rules in oaths_rules.py.
+import oaths_rules as _oa
+RULES.update(_oa.build(V))
+
+# Round 16 — THE PASCHAL OFFERING (2026-09-04, the fifth Exodus
+# Talmud-first exam block — the map's largest). 9 rules in
+# pesach_rules.py.
+import pesach_rules as _pe
+RULES.update(_pe.build(V))

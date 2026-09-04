@@ -35,6 +35,10 @@ m.case("ki tiqne eved ivri", "eved_ivri")
 # case_syntax_and_release_list — read, not installed
 m.witness_read("case_syntax_and_release_list", "the_codes_first_case",
                 cites=["Gittin 90a:10", "Mekhilta DeRabbi Yishmael, Tractate Bachodesh 11:11", "Mishnah Kiddushin 1:2", "Kiddushin 16a:11", "Kiddushin 15a:19"])
+# witness-tier presupposed read: calendar_semantics_and_family_law on
+# slave_clock — read, not installed
+m.witness_read("slave_clock", "calendar_semantics_and_family_law",
+                cites=["Niddah 48a:2", "Kiddushin 17a:1", "Kiddushin 18a:8", "Kiddushin 19a:8", "Sotah 23b:9", "Bekhorot 50b:7", "Yevamot 70a:5", "Temurah 25b:4", "Bava Batra 50a:8"])
 
 # -------------------------- Exod.21.3 · AS_HE_CAME -------------------------
 # אִם־בְּגַפּוֹ יָבֹא בְּגַפּוֹ יֵצֵא אִם־בַּעַל אִשָּׁה הוּא וְיָצְאָה
@@ -169,6 +173,10 @@ m.step("Exod.21.14")
 # and-trickery then from-if mizbechi tiqachenu to-die
 m.handler("yazid ish al reehu le-horgo ve-arma",
           "me-im mizbechi tiqachenu la-mut")
+# witness-tier presupposed read: forewarning_and_strike_grammar on
+# intent_word — read, not installed
+m.witness_read("intent_word", "forewarning_and_strike_grammar",
+                cites=["Sanhedrin 41a:2", "Sanhedrin 84b:5", "Sanhedrin 52b:13", "Makkot 8b:14", "Bava Kamma 90b:14", "Sanhedrin 78a:19", "Sanhedrin 85b:10"])
 
 # -------------------------- Exod.21.15 · THE_STRIKER_OF_PARENTS ------------
 # וּמַכֵּה אָבִיו וְאִמּוֹ מוֹת יוּמָת
@@ -187,6 +195,10 @@ m.step("Exod.21.16")
 # ‹וְגֹנֵב אִישׁ וּמְכָרוֹ וְנִמְצָא בְיָדוֹ› (“and-steal man and-sell-
 # him/its and-find in-hand-him/its”) —
 m.statute("FORBID", "gonev_ish")
+# witness-tier presupposed read: scope_closure_and_context_middah on
+# abduction_clause — read, not installed
+m.witness_read("abduction_clause", "scope_closure_and_context_middah",
+                cites=["Sanhedrin 85b:22", "Sanhedrin 86a:14", "Sanhedrin 85b:21", "Sanhedrin 86a:16"])
 
 # -------------------------- Exod.21.17 · THE_CURSER_OF_PARENTS -------------
 # וּמְקַלֵּל אָבִיו וְאִמּוֹ מוֹת יוּמָת
@@ -266,6 +278,10 @@ m.case("ve-khi yinatzu anashim ve-nagfu isha hara ve-yatzu yeladeha", "ason_o_lo
 # miscarriage_valuation — read, not installed
 m.witness_read("miscarriage_valuation", "the_courts_algorithm",
                 cites=["Mishnah Bava Kamma 5:4"])
+# witness-tier presupposed read: pursuer_and_ox_riders on striving_men —
+# read, not installed
+m.witness_read("striving_men", "pursuer_and_ox_riders",
+                cites=["Sanhedrin 74a:3", "Sanhedrin 79a:10", "Bava Kamma 43a:4", "Arakhin 7a:12", "Bava Kamma 44b:16", "Sanhedrin 78a:14", "Sanhedrin 79b:13", "Bava Kamma 43a:9", "Gittin 42b:8", "Bava Kamma 11a:4", "Bava Kamma 71a:8"])
 
 # -------------------------- Exod.21.23 · LIFE_FOR_LIFE ---------------------
 # וְאִם־אָסוֹן יִהְיֶה וְנָתַתָּה נֶפֶשׁ תַּחַת נָפֶשׁ
@@ -483,32 +499,44 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 27
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('case_syntax_and_release_list', 'the_codes_first_case'), ('injury_indemnities', 'two_of_five_in_the_ink'), ('miscarriage_valuation', 'the_courts_algorithm'), ('tariff_call_site', 'compiled_through_leviticus_24'), ('limb_class', 'eye_and_tooth_as_exemplars'), ('stoning_statute', 'backfill_legs'), ('four_damages_class_map', 'the_answer_keys_module_list'), ('forewarned_threshold', 'parsed_from_the_temporal_tokens'), ('theft_multiples', 'constants_with_their_scope_in_ink')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('case_syntax_and_release_list', 'the_codes_first_case'), ('slave_clock', 'calendar_semantics_and_family_law'), ('intent_word', 'forewarning_and_strike_grammar'), ('abduction_clause', 'scope_closure_and_context_middah'), ('injury_indemnities', 'two_of_five_in_the_ink'), ('miscarriage_valuation', 'the_courts_algorithm'), ('striving_men', 'pursuer_and_ox_riders'), ('tariff_call_site', 'compiled_through_leviticus_24'), ('limb_class', 'eye_and_tooth_as_exemplars'), ('stoning_statute', 'backfill_legs'), ('four_damages_class_map', 'the_answer_keys_module_list'), ('forewarned_threshold', 'parsed_from_the_temporal_tokens'), ('theft_multiples', 'constants_with_their_scope_in_ink')]
     assert m.WITNESS_READS[0]["cites"] == ['Gittin 90a:10', 'Mekhilta DeRabbi Yishmael, Tractate Bachodesh 11:11', 'Mishnah Kiddushin 1:2', 'Kiddushin 16a:11', 'Kiddushin 15a:19']
     assert all('the_codes_first_case' not in f for f in m.WORLD["facts"])
     assert 'case_syntax_and_release_list' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Bava Kamma 8:1']
+    assert m.WITNESS_READS[1]["cites"] == ['Niddah 48a:2', 'Kiddushin 17a:1', 'Kiddushin 18a:8', 'Kiddushin 19a:8', 'Sotah 23b:9', 'Bekhorot 50b:7', 'Yevamot 70a:5', 'Temurah 25b:4', 'Bava Batra 50a:8']
+    assert all('calendar_semantics_and_family_law' not in f for f in m.WORLD["facts"])
+    assert 'slave_clock' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sanhedrin 41a:2', 'Sanhedrin 84b:5', 'Sanhedrin 52b:13', 'Makkot 8b:14', 'Bava Kamma 90b:14', 'Sanhedrin 78a:19', 'Sanhedrin 85b:10']
+    assert all('forewarning_and_strike_grammar' not in f for f in m.WORLD["facts"])
+    assert 'intent_word' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sanhedrin 85b:22', 'Sanhedrin 86a:14', 'Sanhedrin 85b:21', 'Sanhedrin 86a:16']
+    assert all('scope_closure_and_context_middah' not in f for f in m.WORLD["facts"])
+    assert 'abduction_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Mishnah Bava Kamma 8:1']
     assert all('two_of_five_in_the_ink' not in f for f in m.WORLD["facts"])
     assert 'injury_indemnities' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Mishnah Bava Kamma 5:4']
+    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Bava Kamma 5:4']
     assert all('the_courts_algorithm' not in f for f in m.WORLD["facts"])
     assert 'miscarriage_valuation' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Bava Kamma 83b:10', 'Bava Kamma 84a:1']
+    assert m.WITNESS_READS[6]["cites"] == ['Sanhedrin 74a:3', 'Sanhedrin 79a:10', 'Bava Kamma 43a:4', 'Arakhin 7a:12', 'Bava Kamma 44b:16', 'Sanhedrin 78a:14', 'Sanhedrin 79b:13', 'Bava Kamma 43a:9', 'Gittin 42b:8', 'Bava Kamma 11a:4', 'Bava Kamma 71a:8']
+    assert all('pursuer_and_ox_riders' not in f for f in m.WORLD["facts"])
+    assert 'striving_men' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bava Kamma 83b:10', 'Bava Kamma 84a:1']
     assert all('compiled_through_leviticus_24' not in f for f in m.WORLD["facts"])
     assert 'tariff_call_site' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Kiddushin 24a:6', 'Mishnah Negaim 6:7']
+    assert m.WITNESS_READS[8]["cites"] == ['Kiddushin 24a:6', 'Mishnah Negaim 6:7']
     assert all('eye_and_tooth_as_exemplars' not in f for f in m.WORLD["facts"])
     assert 'limb_class' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Eduyot 6:1', 'Mishnah Makkot 1:6']
+    assert m.WITNESS_READS[9]["cites"] == ['Mishnah Eduyot 6:1', 'Mishnah Makkot 1:6']
     assert all('backfill_legs' not in f for f in m.WORLD["facts"])
     assert 'stoning_statute' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Mishnah Bava Kamma 1:1', 'Bava Kamma 2a:1', 'Bava Kamma 6b:11']
+    assert m.WITNESS_READS[10]["cites"] == ['Mishnah Bava Kamma 1:1', 'Bava Kamma 2a:1', 'Bava Kamma 6b:11']
     assert all('the_answer_keys_module_list' not in f for f in m.WORLD["facts"])
     assert 'four_damages_class_map' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bava Kamma 23b:17', 'Bava Kamma 23b:18', 'Mishnah Bava Kamma 2:4', 'Bava Kamma 24a:9']
+    assert m.WITNESS_READS[11]["cites"] == ['Bava Kamma 23b:17', 'Bava Kamma 23b:18', 'Mishnah Bava Kamma 2:4', 'Bava Kamma 24a:9']
     assert all('parsed_from_the_temporal_tokens' not in f for f in m.WORLD["facts"])
     assert 'forewarned_threshold' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Mishnah Bava Kamma 7:1']
+    assert m.WITNESS_READS[12]["cites"] == ['Mishnah Bava Kamma 7:1']
     assert all('constants_with_their_scope_in_ink' not in f for f in m.WORLD["facts"])
     assert 'theft_multiples' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -14,7 +14,7 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   baked into an epub.
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
-## SCOREBOARD (as of 2026-09-03, latest)
+## SCOREBOARD (as of 2026-09-04, latest)
 
 - Genesis: DONE — derived, read, examined, stamped (73 units).
 - **Leviticus: TWO PARASHOT IN.** Vayikra (the five offering
@@ -41,8 +41,26 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   running for the book of Numbers.
 - The corpus: 130 frozen units, one world, fingerprint unmoved
   through two whole books and the third's first two portions.
-- The exam engine: eleven rounds, 450 cases, 450 answered correctly,
-  157 compiled rules, vocabulary of 158 registered input dimensions.
+- The exam engine: sixteen rounds, 590 cases, 590 answered
+  correctly, 198 compiled rules, vocabulary of 158 registered input
+  dimensions.
+- **The Exodus block campaign: OPEN — 5 of 18 blocks run
+  (2026-09-04).** On your word ("Yes go") the leaven machine and the
+  courts ran as the first two Talmud-first blocks: 62 new cases, all
+  answered first try. Two things stood out. The leaven block found
+  the machine's own frozen prose had already flagged the exact
+  grammar (the passive voice of "shall not be eaten") that the
+  Talmud turns into the whole benefit-ban argument — the ink's
+  style note became a registered compile move (M-15, the voice
+  read). The courts block found the seats ANTICIPATED the sugya
+  four separate times — the three-judges derivation was already
+  sitting in the deposit passage's claim with all three named
+  authorities, from the compiler hunt two days earlier. The second
+  sitting (the ordinances' persons; oaths and deposits) added two
+  more: the machine now carries a question the Talmud itself left
+  open — TEIKU, "let it stand" — as a verdict in its own right, and
+  a new registered move (the revocalization read: the same letters
+  under different vowels, four recorded cases in one day).
 - The simulator: 48 registered effects (nine new from Tzav — the
   wash/break/scour purges, the perpetual-fire duty, the priestly
   due, the rejection, the investiture commit, the seven-day

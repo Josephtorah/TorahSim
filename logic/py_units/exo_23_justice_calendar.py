@@ -34,6 +34,10 @@ m.step("Exod.23.2")
 # on majority_clause — read, not installed
 m.witness_read("majority_clause", "asymmetric_majority_and_the_duty_to_speak",
                 cites=["Mekhilta on Exod 23:2", "Onkelos Exod 23:2"])
+# witness-tier presupposed read: courtroom_conduct_file on majority_clause —
+# read, not installed
+m.witness_read("majority_clause", "courtroom_conduct_file",
+                cites=["Sanhedrin 3b:6", "Sanhedrin 18b:9", "Sanhedrin 36a:14", "Shevuot 30b:13", "Sanhedrin 10a:11", "Sanhedrin 15b:6", "Sanhedrin 36b:3", "Sanhedrin 9b:8"])
 
 # -------------------------- Exod.23.3 · TREE_CLAIM -------------------------
 # … לא תהדר בריבו
@@ -198,32 +202,35 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('false_report_clause', 'three_azharot_and_witness_fitness'), ('majority_clause', 'asymmetric_majority_and_the_duty_to_speak'), ('unloading_clause', 'the_ris_measure_and_the_grudge_released'), ('falsehood_clause', 'acquittal_asymmetry_and_the_circumstantial_refusal'), ('shemitah_clause', 'abandonment_lawless_by_design'), ('rest_clause', 'animal_rest_is_grazing_and_the_status_table'), ('pilgrimage_clause', 'the_exemption_table_word_by_word'), ('kid_in_milk_clause', 'the_translation_is_the_verdict'), ('kid_in_milk_clause', 'bikkurim_exam_legs_f018')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('false_report_clause', 'three_azharot_and_witness_fitness'), ('majority_clause', 'asymmetric_majority_and_the_duty_to_speak'), ('majority_clause', 'courtroom_conduct_file'), ('unloading_clause', 'the_ris_measure_and_the_grudge_released'), ('falsehood_clause', 'acquittal_asymmetry_and_the_circumstantial_refusal'), ('shemitah_clause', 'abandonment_lawless_by_design'), ('rest_clause', 'animal_rest_is_grazing_and_the_status_table'), ('pilgrimage_clause', 'the_exemption_table_word_by_word'), ('kid_in_milk_clause', 'the_translation_is_the_verdict'), ('kid_in_milk_clause', 'bikkurim_exam_legs_f018')]
     assert m.WITNESS_READS[0]["cites"] == ['Mekhilta on Exod 23:1']
     assert all('three_azharot_and_witness_fitness' not in f for f in m.WORLD["facts"])
     assert 'false_report_clause' not in m.WORLD["witnessed"]
     assert m.WITNESS_READS[1]["cites"] == ['Mekhilta on Exod 23:2', 'Onkelos Exod 23:2']
     assert all('asymmetric_majority_and_the_duty_to_speak' not in f for f in m.WORLD["facts"])
     assert 'majority_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Mekhilta on Exod 23:5', 'Mekhilta on Exod 23:4', 'Onkelos Exod 23:5']
+    assert m.WITNESS_READS[2]["cites"] == ['Sanhedrin 3b:6', 'Sanhedrin 18b:9', 'Sanhedrin 36a:14', 'Shevuot 30b:13', 'Sanhedrin 10a:11', 'Sanhedrin 15b:6', 'Sanhedrin 36b:3', 'Sanhedrin 9b:8']
+    assert all('courtroom_conduct_file' not in f for f in m.WORLD["facts"])
+    assert 'majority_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Mekhilta on Exod 23:5', 'Mekhilta on Exod 23:4', 'Onkelos Exod 23:5']
     assert all('the_ris_measure_and_the_grudge_released' not in f for f in m.WORLD["facts"])
     assert 'unloading_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Mekhilta on Exod 23:6-8', 'Onkelos Exod 23:7']
+    assert m.WITNESS_READS[4]["cites"] == ['Mekhilta on Exod 23:6-8', 'Onkelos Exod 23:7']
     assert all('acquittal_asymmetry_and_the_circumstantial_refusal' not in f for f in m.WORLD["facts"])
     assert 'falsehood_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Mekhilta on Exod 23:10-11']
+    assert m.WITNESS_READS[5]["cites"] == ['Mekhilta on Exod 23:10-11']
     assert all('abandonment_lawless_by_design' not in f for f in m.WORLD["facts"])
     assert 'shemitah_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Mekhilta on Exod 23:12']
+    assert m.WITNESS_READS[6]["cites"] == ['Mekhilta on Exod 23:12']
     assert all('animal_rest_is_grazing_and_the_status_table' not in f for f in m.WORLD["facts"])
     assert 'rest_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Mekhilta on Exod 23:14-17']
+    assert m.WITNESS_READS[7]["cites"] == ['Mekhilta on Exod 23:14-17']
     assert all('the_exemption_table_word_by_word' not in f for f in m.WORLD["facts"])
     assert 'pilgrimage_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Mekhilta on Exod 23:19', 'Onkelos Exod 23:19', 'Mekhilta on Exod 23:18', 'Onkelos Exod 23:18']
+    assert m.WITNESS_READS[8]["cites"] == ['Mekhilta on Exod 23:19', 'Onkelos Exod 23:19', 'Mekhilta on Exod 23:18', 'Onkelos Exod 23:18']
     assert all('the_translation_is_the_verdict' not in f for f in m.WORLD["facts"])
     assert 'kid_in_milk_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Mishnah Bikkurim 1:3', 'Mishnah Bikkurim 1:9', 'Mishnah Bikkurim 1:2', 'Mekhilta on Exod 23:19']
+    assert m.WITNESS_READS[9]["cites"] == ['Mishnah Bikkurim 1:3', 'Mishnah Bikkurim 1:9', 'Mishnah Bikkurim 1:2', 'Mekhilta on Exod 23:19']
     assert all('bikkurim_exam_legs_f018' not in f for f in m.WORLD["facts"])
     assert 'kid_in_milk_clause' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

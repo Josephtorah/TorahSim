@@ -265,6 +265,10 @@ m.fact("ve_haqel_me_alekha")
 # installed
 m.witness_read("great_matter", "court_tiers",
                 cites=["Mishnah Sanhedrin 1:5", "Mishnah Sanhedrin 4:1", "Mishnah Sanhedrin 4:2"])
+# witness-tier presupposed read: appointment_constitution on great_matter —
+# read, not installed
+m.witness_read("great_matter", "appointment_constitution",
+                cites=["Sanhedrin 16a:1", "Sanhedrin 16b:9", "Sanhedrin 17a:3", "Sanhedrin 17b:11", "Sanhedrin 18a:3", "Sanhedrin 34b:8", "Shevuot 30b:2"])
 
 # -------------------------- Exod.18.23 · TO_ITS_PLACE_IN_PEACE -------------
 # אִם אֶת־הַדָּבָר הַזֶּה תַּעֲשֶׂה וְצִוְּךָ אֱלֹהִים וְיָכָלְתָּ עֲמֹד
@@ -335,8 +339,11 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 3
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('great_matter', 'court_tiers')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('great_matter', 'court_tiers'), ('great_matter', 'appointment_constitution')]
     assert m.WITNESS_READS[0]["cites"] == ['Mishnah Sanhedrin 1:5', 'Mishnah Sanhedrin 4:1', 'Mishnah Sanhedrin 4:2']
     assert all('court_tiers' not in f for f in m.WORLD["facts"])
+    assert 'great_matter' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sanhedrin 16a:1', 'Sanhedrin 16b:9', 'Sanhedrin 17a:3', 'Sanhedrin 17b:11', 'Sanhedrin 18a:3', 'Sanhedrin 34b:8', 'Shevuot 30b:2']
+    assert all('appointment_constitution' not in f for f in m.WORLD["facts"])
     assert 'great_matter' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

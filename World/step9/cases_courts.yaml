@@ -1,0 +1,217 @@
+# THE COURTS (round 13 — the second Exodus Talmud-first exam block,
+# 2026-09-04; owner: "Yes go"). Membership: the block's 32 LAW rows
+# credited to EXOD_TALMUD_TRIAGE_LEDGER.md, re-opened with 111 fresh
+# segments. Read-source record:
+# logic/oral_triage/exodus_block_courts_2026-09-04.md.
+# The composition/table layer already compiled (court_architecture,
+# court_tiers, witness_fitness, stoned_ox_process) stands untouched;
+# these modules add the DERIVATION layer and the unheld rows.
+# Provenance: talmud_source + exodus_anchor (mishnah where standing).
+
+- module: three_judges_derivation
+  tractate: Sanhedrin
+  oracle: Sanhedrin 3b:2-17 (the composition sugya)
+  exodus_anchor: {unit: exo_22_property_social, ref: Exod.22.7-8,
+    claims: [EX22-04]}
+  cases:
+  - id: S3b_source
+    input: {query: three_judges_source}
+    expected:
+      verdict: [three_elohim_count, two_plus_odd, five_by_analogy]
+    class: A
+  - id: S3b_first_mention
+    input: {query: first_mention_counted}
+    expected:
+      verdict: [counted, not_counted]
+    class: A
+
+- module: odd_court_law
+  tractate: Sanhedrin
+  oracle: Sanhedrin 3b:6-13
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.2,
+    claims: [EX23-02, EX23-10]}
+  cases:
+  - id: S3b_even_court
+    input: {query: even_court_valid}
+    expected: {verdict: never_even}
+    class: A
+  - id: S3b_odd_scope
+    input: {query: odd_court_scope}
+    expected:
+      verdict: [all_courts, capital_only]
+    class: A
+  - id: S3b_majority
+    input: {query: monetary_majority}
+    expected: {verdict: majority_suffices}
+    class: A
+
+- module: capital_court_arithmetic
+  tractate: Sanhedrin
+  oracle: Mishnah Sanhedrin 1:4 + 1:6 via Sanhedrin 2a:9-16, 10a:11,
+    15a:14, 15b:6
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.2,
+    claims: [EX23-02]}
+  cases:
+  - id: S2a_23_derivation
+    input: {query: twenty_three_derivation}
+    expected: {verdict: congregation_plus_margin}
+    class: A
+  - id: S2a_margin
+    input: {query: convict_margin}
+    expected: {verdict: two_to_convict_one_to_acquit}
+    class: A
+  - id: S10a_lashes
+    input: {query: lashes_court}
+    expected:
+      verdict: [three, twenty_three]
+    class: A
+  - id: S2a_beasts
+    input: {query: beast_that_killed}
+    expected:
+      verdict: [twenty_three, kill_first_merits]
+    class: A
+  - id: S15b_sinai_ox
+    input: {query: ox_at_sinai}
+    expected: {verdict: twenty_three}
+    class: A
+
+- module: great_court_docket
+  tractate: Sanhedrin
+  oracle: Sanhedrin 16a:1-2, 16b:9, 17a:2-3
+  exodus_anchor: {unit: exo_18_jethro_and_the_judges, ref: Exod.18.22+25,
+    claims: [EX18-14, EX18-15]}
+  cases:
+  - id: S16a_great_matter
+    input: {query: great_matter_meaning}
+    expected:
+      verdict: [matters_of_a_great_one, border_disputes]
+    class: A
+  - id: S16b_appointer
+    input: {query: lesser_courts_appointer}
+    expected: {verdict: the_seventy_one}
+    class: A
+  - id: S17a_with_you
+    input: {query: judge_qualification}
+    expected: {verdict: similar_to_you}
+    class: A
+
+- module: town_court_threshold
+  tractate: Sanhedrin
+  oracle: Mishnah Sanhedrin 1:6 via Sanhedrin 17b:10-18a:3
+  exodus_anchor: {unit: exo_18_jethro_and_the_judges, ref: Exod.18.21,
+    claims: [EX18-15]}
+  cases:
+  - id: S17b_town
+    input: {query: town_court_minimum}
+    expected:
+      verdict: [one_hundred_twenty, two_hundred_thirty]
+    class: A
+  - id: S18a_census
+    input: {query: officer_census}
+    expected: {verdict: seventy_eight_thousand_six_hundred}
+    class: A
+
+- module: king_and_court
+  tractate: Sanhedrin
+  oracle: Mishnah Sanhedrin 2:2 via Sanhedrin 18b:9-20b:12
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.2,
+    claims: [EX23-10]}
+  cases:
+  - id: S18b_king_bench
+    input: {query: king_on_bench}
+    expected: {verdict: never_seated}
+    class: A
+  - id: S19a_king_judged
+    input: {query: king_judged}
+    expected:
+      verdict: [israel_kings_not_judged, davidic_judged]
+    class: A
+  - id: S20b_entrance
+    input: {query: entrance_mitzvot_order}
+    expected: {verdict: king_first}
+    class: A
+
+- module: witness_disqualification_law
+  tractate: Sanhedrin
+  oracle: Sanhedrin 9b:8, 10a:10, 25a:8-9, 27b:15-17
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.1,
+    claims: [EX23-01, EX23-10]}
+  cases:
+  - id: S9b_self
+    input: {query: self_incrimination}
+    expected: {verdict: testimony_splits}
+    class: A
+  - id: S10a_lash_source
+    input: {query: false_witness_lash_source}
+    expected: {verdict: own_derivation_needed}
+    class: A
+  - id: S27b_children
+    input: {query: children_for_fathers}
+    expected: {verdict: only_holding_the_deeds}
+    class: A
+
+- module: procedure_times_and_returns
+  tractate: Sanhedrin
+  oracle: Mishnah Sanhedrin 4:1 via Sanhedrin 33b:5-6, 34b:8-9,
+    35b:4-7, 36b:2-3
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.6-7,
+    claims: [EX23-10]}
+  cases:
+  - id: S33b_return_acquit
+    input: {query: return_for_acquittal}
+    expected: {verdict: brought_back}
+    class: A
+  - id: S33b_return_liable
+    input: {query: return_for_liability}
+    expected: {verdict: not_brought_back}
+    class: A
+  - id: S34b_times_open
+    input: {query: monetary_trial_times, stage: trial_open}
+    expected: {verdict: day_only}
+    class: A
+  - id: S34b_times_verdict
+    input: {query: monetary_trial_times, stage: verdict}
+    expected: {verdict: night_allowed}
+    class: A
+  - id: S36b_ox_class
+    input: {query: ox_stoning_class}
+    expected: {verdict: only_the_twenty_three}
+    class: A
+  - id: S35b_murder
+    input: {query: murder_overrides}
+    expected: {verdict: service_not_shabbat}
+    class: A
+
+- module: standing_and_distance
+  tractate: Shevuot
+  oracle: Shevuot 30b:2-14; Sanhedrin 7b:15
+  exodus_anchor: {unit: exo_18_jethro_and_the_judges, ref: Exod.18.13,
+    claims: [EX18-15]}
+  cases:
+  - id: Sh30b_posture
+    input: {query: court_posture}
+    expected: {verdict: judges_sit_litigants_stand}
+    class: A
+  - id: Sh30b_distance
+    input: {query: judge_advocacy}
+    expected: {verdict: distancing_cluster}
+    class: A
+  - id: S7b_ex_parte
+    input: {query: litigant_ex_parte}
+    expected: {verdict: forbidden_both_sides}
+    class: A
+
+- module: bench_integrity
+  tractate: Sanhedrin
+  oracle: Sanhedrin 7b:9-12
+  exodus_anchor: {unit: exo_23_justice_calendar, ref: Exod.23.8,
+    claims: [EX23-10]}
+  cases:
+  - id: S7b_paid_judge
+    input: {query: judge_for_payment}
+    expected: {verdict: gods_of_silver}
+    class: A
+  - id: S7b_temperance
+    input: {query: temperance_source}
+    expected: {verdict: steps_then_ordinances}
+    class: A

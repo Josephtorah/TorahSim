@@ -853,6 +853,57 @@ TRANSACTION with its commit point at the blood sprinkling. Catalog
 R-337..R-352; 157 compiled rules; vocabulary 158 dims. Full record:
 World/step9/REPORT_TZAV.md.
 
+THE EXODUS BLOCK CAMPAIGN OPENED (2026-09-04, owner: "Yes go" on
+the compaction-#41 order "we run the exodus blocks" — the
+Talmud-first direction at campaign scale): the first two of the 18
+mapped blocks ran in one sitting, rounds 12-13. THE LEAVEN MACHINE
+(block 1): 25 LAW rows credited to the triage, 108 sugya segments
+opened fresh, nine modules, 30/30 first run; findings F-046..F-048
+auto-seated (the midday deadline's FOUR derivations landing on the
+chapter's own two lean firsts — the derivation layer and the
+skeleton layer agreeing on the six kept hours; the seen/found
+division with the deposit responsibility parameter; the benefit
+ban's four routes with R. Yosei HaGelili's standing dissent); MOVE
+M-15 registered — THE VOICE READ: Chizkiya's passive-voice scope
+operator, whose target the frozen unit's own prose had flagged as
+"the leaven-ban restated in the passive" before the sugya was
+opened. THE COURTS (block 6): 32 LAW rows, 111 segments, ten
+modules, 32/32 first run; THE SEATS ANTICIPATED THE SUGYA FOUR
+TIMES (EX22-04 the whole three-judges derivation with all three
+named authorities, EX23-02 the margin, EX23-04 the return
+asymmetry, EX23-01 ex-parte); F-049..F-050 auto-seated (the
+courtroom conduct file; the appointment constitution with the
+78,600 officer census RECOMPUTED from 18:21's own denominations);
+foreign-span rows answer talmud_source-only, unseated openly.
+Standing after the first sitting: 512/512 across thirteen
+rounds. SAME DAY, on "Keep going," blocks 7 and 14 — THE
+ORDINANCES' PERSONS and OATHS AND DEPOSITS, the compiled-function
+intersections — ran as rounds 14-15: 35/35 + 8/8 first run,
+**555/555 across fifteen rounds**, catalog R-353..R-384 (189
+compiled rules), findings F-046..F-056 seated across six units,
+moves M-15 (the voice read) and M-16 (THE REVOCALIZATION READ —
+four exemplars in one sitting: al rav, lo tassi, lo tanif,
+ye'adah-as-inform-her) registered. Two headlines from the second
+sitting: the tradition's own OPEN STATE entered the machine
+(Sanhedrin 85b:21's exploitation dilemma stands TEIKU, and the
+engine returns the recorded unresolved as a verdict state); and
+the anticipation pattern held a fourth time — the Mekhilta
+reading of 2026-09-01 keeps answering the Babylonian Talmud of
+three days later (EX22-05 held both-parties AND the heirs
+exclusion before the Shevuot rows opened). And on "The word lol,"
+round 16 ran THE PASCHAL OFFERING — the map's largest block — at
+35/35 first run: **590/590 across sixteen rounds**, catalog through
+R-393 (198 compiled rules), F-057..F-060 seated on the Passover
+chapter. Its two headlines: the first CROSS-BOOK anticipation (the
+Tzav round's wrong-intent table, compiled from the Sifra for
+Leviticus, already answers the paschal for-its-name grid) and the
+recorded EXPERIMENT (five spit materials tested against the verse's
+fire-directness requirement — metal conducts, palm sweats, fig runs
+sap, the hardwoods weep at their knots — pomegranate the one
+survivor). Records: World/step9/REPORT_LEAVEN.md + REPORT_COURTS.md
++ REPORT_PERSONS_OATHS.md + REPORT_PESACH.md. Thirteen blocks
+remain (~325 LAW rows).
+
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed
 on the spot: logic/findings/FINDINGS_QUEUE.md (append-only). The owner
