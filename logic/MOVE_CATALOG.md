@@ -340,6 +340,7 @@ the front end's vowel measurement answered the machine's side of
 that question. Distinct from M-15 (the voice read): there the
 grammatical FORM as written carries the law; here a SECOND pointing
 of the same skeleton is added to the first.
+SIXTH AND SEVENTH EXEMPLARS (2026-09-05, the Acharei Mot-Kedoshim sweep) — and the move's first seats in the SIFRA ITSELF: the male-lying warning for the passive read by R. Akiva from the ban verb re-pointed in the passive voice (Sifra, Kedoshim, Chapter 10 11), and the beast clause's passive warning the same way (שכבתך re-heard — Sifra, Kedoshim, Chapter 11 2): the move now attested in the tannaitic midrash layer, not only the Babylonian Talmud.
 **Middah correspondence:** the al-tikrei family ("do not read X but
 Y") — the tradition's own name for the operation.
 
@@ -365,3 +366,29 @@ construction, not by a third verse.
 little sibling; the tradition's own form is the talmud-lomar
 pincer ("could you say X? the verse says A; then Y? the verse
 says B; how then? ...").
+
+
+## M-18 — THE FREED-TOKEN REASSIGNMENT (a clause not needed for its own matter is GIVEN to a neighboring gap)
+The teacher finds a clause REDUNDANT where it stands — its own
+matter already taught — and instead of discarding it, REASSIGNS it
+to the nearest untaught gap: the tradition's own formula is אם אינו
+ענין... תנהו ענין ("if it does not bear on its own matter, give it
+to the matter of...").
+**Exemplars:** THREE IN ONE SITTING (2026-09-05, the Acharei
+Mot-Kedoshim sweep): (1) the third-day eating clause, redundant for
+wrong-TIME, given to wrong-PLACE (Sifra, Kedoshim, Chapter 1 4);
+(2) the freed token closing the three-source common-denominator
+argument — "'judge' is not needed for itself — GIVE IT to the
+father's curse" (Sifra, Kedoshim, Chapter 10 7); (3) Exodus 22:18's
+whoever-lies-with-a-beast clause, not needed for the ACTIVE (taught
+at Lev 20), given to the PASSIVE (Sifra, Kedoshim, Chapter 11 2).
+PRECEDENT on the walk: round 19's EXPORT OPERATOR (Exod 13:5's
+freed restrictor tokens reassigned to their recorded jobs) ran the
+same shape at chapter scale before the form had a name.
+**Distinct from** M-07 (the import edge): there a clause is FETCHED
+from another span to fill a local gap; here a LOCAL surplus clause
+is PUSHED to the gap. The two are the same graph edge walked in
+opposite directions.
+**Middah correspondence:** im eino inyan — the tradition's own
+name; a governed special case of "a matter learned from its
+context," running on redundancy rather than adjacency.

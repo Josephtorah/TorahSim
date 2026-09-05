@@ -1880,3 +1880,8 @@ RULES.update(_sm.build(V))
 # citing Lev 12-15. 6 rules in tazria_rules.py.
 import tazria_rules as _tz
 RULES.update(_tz.build(V))
+
+# Round 44 — THE ACHAREI MOT-KEDOSHIM EXAM (2026-09-05). Bare Mishnah
+# rows citing Lev 16-20. 7 rules in acharei_rules.py.
+import acharei_rules as _ak
+RULES.update(_ak.build(V))

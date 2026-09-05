@@ -1433,3 +1433,61 @@ the registry at 53). Rituals: the ten units carry the round's
 claims already (the derivation preceded the exam; no new seats
 owed). Regression green across all runners and cold runners,
 hash 8b8fff1fa28953af unmoved, manifests 0 FAILED.
+
+## ROUND 44 — THE ACHAREI MOT-KEDOSHIM EXAM (2026-09-05): 79/79
+## (1182/1182 across forty-four rounds — THE LARGEST ROUND EVER RUN)
+The double parashah's exam, run the same sitting as its derivation
+(the rhythm's twelfth cycle: 574 declared read whole — Sifra
+Acharei Mot 224 rows + Kedoshim 206 + Onkelos Lev 16-20's 144
+verses — 57 claims seated into EIGHT units, seven drafts FROZEN
+and the apodictic-probe unit lev_19_holiness_duty_ledger taking
+two seats that PAY ITS OWN RECORDED DEBT: its 2026-08-07 draft
+note said 'Onkelos BUFFER PENDING' — Onkelos Lev 19 now read
+whole, the buffer closed at claim LV19L-01; corpus 143 → 150,
+standing 1472 → 1529). Docket: 83 bare Mishnah rows across
+TWENTY-EIGHT tractates citing Lev 16-20 (79 cases; three credited
+duplicates), all read whole
+(logic/oral_triage/acharei_exam_mishnah_2026-09-05.md, full cite
+index). Seven modules (acharei_rules.py): yoma_service_file,
+yk_atonement_file, outside_slaughter_file, arayot_sanctions_file,
+levirate_file, holiness_conduct_file, poor_gifts_orlah_file —
+R-534..R-540 (345 compiled rules); vocabulary +79 — THE REGISTRY
+PASSES ONE THOUSAND (1006 query values on 158 unmoved dims). THE
+HEADLINE — SEVENTEEN FIRST-CLASS VERBATIM SEATS answered before
+their rows opened, the widest anticipation yet: Mishnah Yoma 1:1
+arrives carrying THE INDUCTION LIMIT ('if so, the matter has no
+end') seated at LV16B-07 from the Sifra's own exchange hours
+earlier; Yoma 3:8/4:2/6:2 are the THREE CONFESSIONS word for
+word; Yoma 4:3 the stirrer on the fourth terrace; Yoma 4:4 the
+coal-pan quantities; Yoma 5:4/5:5 the whip-stroke count and the
+corner order; Yoma 6:1 the death mid-protocol WITH R. Yehuda's
+linked-failure law; Yoma 6:6/6:7 the two clothes windows; Yoma
+8:9 the fellow gate with R. Elazar ben Azariah's derivation;
+Shevuot 1:3/1:6 the atonement routing table's rows; Sanhedrin 3:7
+the judge's secrecy; Sanhedrin 7:3 the strangulation procedure in
+the Sifra's own words; Sanhedrin 7:7 the four-condition MOLECH
+PREDICATE; Yevamot 1:1 the FIFTEEN WOMEN to the end of the world;
+Nedarim 9:4 the vow-opener quoting the seat's own
+revenge-grudge-hate-love stack; Keritot 6:9 the equal parents;
+Keritot 2:2/2:5 the maidservant's four readings; Makkot 3:5/3:6
+the razor file; Peah 7:3/7:6/7:7 the vineyard grid; Bava Metzia
+9:11/9:12 the wage clock; Zevachim 14:1/14:2 the outside carve
+with the dispatched goat excluded by name; Menachot 3:6 the
+blockers; Parah 8:3 the handler-asymmetry riddle. THE COMPILE
+MOVEMENT (cold_run_yoma.py): THE YOM KIPPUR SERVICE MACHINE —
+18/18 cells (9 INK / 6 RECORDED / 3 ANSWER-SHEET): the FOUR-LINEN
+CENSUS machine-verified at 16:4's own tokens (four = the four
+gold garments barred), the three Azazel seats and five lot tokens
+counted, the service ORDER compiled from the verse sequence with
+its ONE recorded exception (16:23 relocated — the Sifra's order
+meta-rule 'the whole passage is in order except this verse'), THE
+ATONEMENT ROUTING TABLE dispatching by knowledge-state against
+Mishnah Shevuot 1:3/1:6's own rows, and THE FELLOW GATE
+(unappeased → NO atonement entry writes). Effects registry 53 →
+55: dispatched_to_wilderness (the ledger's first TRANSFER op —
+the iniquities loaded and carried to the uninhabited land) and
+suspends (the tradition's own tolah — the offense held open
+pending knowledge). Rituals: all EIGHT units RITUAL COMPLETE (150
+frozen); regression green across all runners and cold runners and
+the world engine tape; hash 8b8fff1fa28953af unmoved; manifests 0
+FAILED.

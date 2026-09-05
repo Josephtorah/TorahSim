@@ -1,0 +1,361 @@
+# THE ACHAREI MOT-KEDOSHIM EXAM (round 44 — 2026-09-05). Bare
+# Mishnah rows citing Lev 16-20, graded after the derivation.
+# Read-source: logic/oral_triage/acharei_exam_mishnah_2026-09-05.md.
+
+- module: yoma_service_file
+  tractate: Yoma
+  oracle: Mishnah Yoma 1:1; 1:5; 3:1; 3:6; 3:8; 4:2; 4:3; 4:4; 5:4; 5:5; 5:6; 6:1; 6:2; 6:6; 6:7; 6:8; 7:1; Sotah 7:7; Kelim 1:9; Menachot 3:6; Parah 8:3; Megillah 3:5; Horayot 2:2; Tamid 6:3
+  exodus_anchor: {unit: lev_16, ref: Lev.16.1-34, claims: [LV16A-01, LV16A-02, LV16A-03, LV16A-04, LV16A-05, LV16A-06, LV16A-07, LV16A-08, LV16B-01, LV16B-02, LV16B-03, LV16B-04]}
+  cases:
+  - id: Yo_wife
+    input: {query: substitute_wife_condition}
+    expected: {verdict: [r_yehuda_ready_wife, no_end_to_the_matter]}
+    class: A
+  - id: Yo_goats_equal
+    input: {query: unequal_goats_validity}
+    expected: {verdict: equal_required_unequal_valid}
+    class: A
+  - id: Yo_block
+    input: {query: two_goats_indispensable}
+    expected: {verdict: they_block_each_other}
+    class: A
+  - id: Yo_died
+    input: {query: goat_died_after_lottery}
+    expected: {verdict: [relot_pair_second_grazes, r_yehuda_second_dies]}
+    class: A
+  - id: Yo_linked
+    input: {query: blood_spilled_goat_link}
+    expected: {verdict: both_restart_together}
+    class: A
+  - id: Yo_conf1
+    input: {query: first_confession_formula}
+    expected: {verdict: his_own_and_his_house}
+    class: A
+  - id: Yo_conf2
+    input: {query: second_confession_formula}
+    expected: {verdict: adds_sons_of_aaron}
+    class: A
+  - id: Yo_conf3
+    input: {query: third_confession_formula}
+    expected: {verdict: your_people_house_israel}
+    class: A
+  - id: Yo_stir
+    input: {query: bull_blood_holding}
+    expected: {verdict: stirrer_fourth_terrace}
+    class: A
+  - id: Yo_pan
+    input: {query: coal_pan_today_vs_daily}
+    expected: {verdict: [gold_three_kav_today, r_yosei_seah_daily]}
+    class: A
+  - id: Yo_strokes
+    input: {query: sprinkle_geometry_count}
+    expected: {verdict: one_up_seven_down_whip_count}
+    class: A
+  - id: Yo_corners
+    input: {query: inner_altar_corner_order}
+    expected: {verdict: [ne_nw_sw_se_ends_where_outer_starts, r_eliezer_stands_in_place]}
+    class: A
+  - id: Yo_window1
+    input: {query: dispatcher_clothes_window}
+    expected: {verdict: [jerusalem_wall, r_shimon_at_the_push]}
+    class: A
+  - id: Yo_window2
+    input: {query: burner_clothes_window}
+    expected: {verdict: [azarah_wall, r_shimon_fire_holds_most]}
+    class: A
+  - id: Yo_riddle
+    input: {query: goat_defiles_dispatcher_not_itself}
+    expected: {verdict: handlers_defile_carcasses_do_not}
+    class: A
+  - id: Yo_ladder
+    input: {query: innermost_entry_gradient}
+    expected: {verdict: high_priest_yk_service_only}
+    class: A
+  - id: Yo_reading
+    input: {query: yk_reading_protocol}
+    expected: {verdict: acharei_mot_plus_tenth_by_heart}
+    class: A
+  - id: Yo_incense_care
+    input: {query: incense_start_warning}
+    expected: {verdict: not_toward_yourself_lest_burned}
+    class: A
+
+- module: yk_atonement_file
+  tractate: Shevuot
+  oracle: Mishnah Yoma 8:9; Shevuot 1:3; 1:6; Keritot 1:1; Makkot 3:15
+  exodus_anchor: {unit: lev_16, ref: Lev.16.16-34, claims: [LV16A-08, LV16B-06, LV16B-07]}
+  cases:
+  - id: Sh_fellow
+    input: {query: day_atones_fellow_sins}
+    expected: {verdict: not_until_he_appeases}
+    class: A
+  - id: Sh_outer
+    input: {query: knowledge_end_only_route}
+    expected: {verdict: outer_goat_and_day}
+    class: A
+  - id: Sh_remainder
+    input: {query: all_other_transgressions_route}
+    expected: {verdict: dispatched_goat_atones}
+    class: A
+  - id: Ke_census
+    input: {query: karet_census_count}
+    expected: {verdict: thirty_six_kritot}
+    class: A
+  - id: Ma_karet_lash
+    input: {query: lashes_discharge_karet}
+    expected: {verdict: [lashed_is_your_brother, r_shimon_live_by_them]}
+    class: A
+
+- module: outside_slaughter_file
+  tractate: Zevachim
+  oracle: Mishnah Zevachim 14:1; 14:2; Avodah Zarah 5:9; Kiddushin 2:9; Beitzah 1:2; Eduyot 4:2
+  exodus_anchor: {unit: lev_17, ref: Lev.17.1-16, claims: [LV17-01, LV17-07]}
+  cases:
+  - id: Ze_goat_out
+    input: {query: dispatched_goat_offered_outside}
+    expected: {verdict: exempt_unfit_for_the_door}
+    class: A
+  - id: Ze_unfit
+    input: {query: unfit_animal_offered_outside}
+    expected: {verdict: [exempt_before_the_tabernacle, r_shimon_deferred_negative]}
+    class: A
+  - id: Az_any
+    input: {query: dispatched_goat_benefit}
+    expected: {verdict: forbidden_in_any_amount}
+    class: A
+  - id: Ki_orlah_betrothal
+    input: {query: betrothal_by_banned_fruit}
+    expected: {verdict: void_but_proceeds_valid}
+    class: A
+  - id: Be_cover
+    input: {query: covering_blood_on_festival}
+    expected: {verdict: [shammai_dig_with_dibber, hillel_prepared_dust_only]}
+    class: A
+  - id: Ed_cover
+    input: {query: festival_cover_in_leniency_list}
+    expected: {verdict: registered_house_dispute}
+    class: A
+
+- module: arayot_sanctions_file
+  tractate: Sanhedrin
+  oracle: Mishnah Sanhedrin 1:4; 7:2; 7:3; 7:4; 7:7; 9:1; 11:1; Keritot 3:6; Megillah 4:9; Avodah Zarah 2:1
+  exodus_anchor: {unit: lev_20, ref: Lev.20.1-27, claims: [LV20-01, LV20-03, LV20-04, LV20-05, LV20-06]}
+  cases:
+  - id: Sa_court23
+    input: {query: beast_partner_court_size}
+    expected: {verdict: twenty_three_from_our_verses}
+    class: A
+  - id: Sa_burn
+    input: {query: burning_procedure}
+    expected: {verdict: lit_wick_into_the_mouth}
+    class: A
+  - id: Sa_strangle
+    input: {query: strangulation_procedure}
+    expected: {verdict: dung_scarves_two_pull}
+    class: A
+  - id: Sa_stoned_census
+    input: {query: stoned_list_membership}
+    expected: {verdict: our_chapter_supplies_the_spine}
+    class: A
+  - id: Sa_mother_count
+    input: {query: mother_double_count}
+    expected: {verdict: [two_names_mother_and_fathers_wife, r_yehuda_mother_only]}
+    class: A
+  - id: Sa_beast_why
+    input: {query: why_the_beast_dies}
+    expected: {verdict: [stumbling_through_it, market_would_name_the_sin]}
+    class: A
+  - id: Sa_molech
+    input: {query: molech_partial_acts}
+    expected: {verdict: hand_and_pass_both_required}
+    class: A
+  - id: Sa_burned_census
+    input: {query: woman_and_daughter_scope}
+    expected: {verdict: nine_relations_by_zimah_analogy}
+    class: A
+  - id: Sa_curser
+    input: {query: curser_vs_striker_after_death}
+    expected: {verdict: curser_liable_striker_exempt}
+    class: A
+  - id: Ke_seven_names
+    input: {query: mother_in_law_name_count}
+    expected: {verdict: [seven_liability_names, r_yochanan_three_names]}
+    class: A
+  - id: Me_aramaic
+    input: {query: molech_verse_aramean_rendering}
+    expected: {verdict: silenced_with_rebuke}
+    class: A
+  - id: Az_triad
+    input: {query: gentile_suspicion_triad}
+    expected: {verdict: bestiality_unions_bloodshed}
+    class: A
+
+- module: levirate_file
+  tractate: Yevamot
+  oracle: Mishnah Yevamot 1:1; 3:4; 11:1; Eduyot 4:8; Kiddushin 2:7; Bikkurim 2:11; 4:2
+  exodus_anchor: {unit: lev_18, ref: Lev.18.16-18, claims: [LV18-06, LV20-07]}
+  cases:
+  - id: Ye_fifteen
+    input: {query: fifteen_women_rivals}
+    expected: {verdict: exempt_to_the_end_of_the_world}
+    class: A
+  - id: Ye_sisters
+    input: {query: two_brothers_two_sisters}
+    expected: {verdict: release_not_levirate}
+    class: A
+  - id: Ye_rape_kin
+    input: {query: marrying_raped_womans_kin}
+    expected: {verdict: [permitted_no_marriage_path, r_yehuda_bans_fathers_victim]}
+    class: A
+  - id: Ed_rivals
+    input: {query: rivals_to_the_brothers}
+    expected: {verdict: [shammai_permit, hillel_forbid]}
+    class: A
+  - id: Ki_asone
+    input: {query: betrothing_woman_and_daughter_as_one}
+    expected: {verdict: neither_betrothed}
+    class: A
+  - id: Bi_koy
+    input: {query: koy_mixture_status}
+    expected: {verdict: kilayim_with_both_classes}
+    class: A
+  - id: Bi_andro
+    input: {query: double_sexed_male_duties}
+    expected: {verdict: bound_to_levirate_like_men}
+    class: A
+
+- module: holiness_conduct_file
+  tractate: Bava Metzia
+  oracle: Mishnah Nedarim 9:4; Sanhedrin 3:7; Bava Metzia 9:11; 9:12; 5:11; 10:5; 4:8; Shevuot 4:13; Shabbat 6:10; Kiddushin 1:7; Keritot 6:9; 2:2; 2:5; Makkot 3:2; 3:5; 3:6; 3:8; 3:9; 3:14; Bava Kamma 5:7; Zevachim 5:5
+  exodus_anchor: {unit: lev_19, ref: Lev.19.1-37, claims: [LV19A-02, LV19A-05, LV19A-06, LV19A-07, LV19A-08, LV19B-01, LV19B-02, LV19B-06, LV20-01]}
+  cases:
+  - id: Ne_opener
+    input: {query: vow_opened_by_our_verses}
+    expected: {verdict: revenge_grudge_hate_love_stack}
+    class: A
+  - id: Sa_secrecy
+    input: {query: judge_reveals_split_vote}
+    expected: {verdict: talebearing_reveals_secrets}
+    class: A
+  - id: Bm_windows
+    input: {query: wage_collection_windows}
+    expected: {verdict: day_all_night_night_all_day}
+    class: A
+  - id: Bm_claim
+    input: {query: unclaimed_wage_violation}
+    expected: {verdict: [no_claim_no_violation, shopkeeper_assignment_clears]}
+    class: A
+  - id: Bm_lender
+    input: {query: lender_stumbling_block}
+    expected: {verdict: lifnei_iver_in_the_interest_list}
+    class: A
+  - id: Bm_builder
+    input: {query: wage_paid_in_kind_refused}
+    expected: {verdict: not_heeded_wage_stands}
+    class: A
+  - id: Bm_fifths
+    input: {query: five_fifths_census}
+    expected: {verdict: fourth_year_redeemer_among_them}
+    class: A
+  - id: Sh_kinuyim
+    input: {query: oath_by_substitute_names}
+    expected: {verdict: [all_names_bind, curse_by_them_disputed]}
+    class: A
+  - id: Sb_amorite
+    input: {query: amulet_conduct_class}
+    expected: {verdict: ways_of_the_amorite}
+    class: A
+  - id: Ki_gender
+    input: {query: women_and_the_razor_bans}
+    expected: {verdict: excepted_from_the_exemption}
+    class: A
+  - id: Ke_parents
+    input: {query: father_mother_precedence}
+    expected: {verdict: both_equal_father_precedes_in_practice}
+    class: A
+  - id: Ke_mezid
+    input: {query: deliberate_as_error_census}
+    expected: {verdict: maidservant_heads_the_four}
+    class: A
+  - id: Ke_who
+    input: {query: who_is_the_maidservant}
+    expected: {verdict: [akiva_half_free, yishmael_certain_maidservant, elazar_only_case_left]}
+    class: A
+  - id: Ma_lash_census
+    input: {query: carcass_eater_lashes}
+    expected: {verdict: in_the_forty_list}
+    class: A
+  - id: Ma_corners
+    input: {query: gash_and_corner_multipliers}
+    expected: {verdict: [per_gash_per_dead, r_eliezer_all_at_once_one]}
+    class: A
+  - id: Ma_tattoo
+    input: {query: tattoo_partial_acts}
+    expected: {verdict: [write_and_engrave_both, shimon_ben_yehuda_the_name]}
+    class: A
+  - id: Ma_warnings
+    input: {query: repeat_warning_multiplier}
+    expected: {verdict: per_warning_liability}
+    class: A
+  - id: Ma_furrow
+    input: {query: one_furrow_ban_count}
+    expected: {verdict: eight_bans_on_one_furrow}
+    class: A
+  - id: Ma_liturgy
+    input: {query: flogging_reader_verses}
+    expected: {verdict: procedure_row_kept}
+    class: A
+  - id: Bk_hoveh
+    input: {query: ox_or_donkey_scope}
+    expected: {verdict: scripture_spoke_the_common_case}
+    class: A
+  - id: Ze_asham
+    input: {query: maidservant_asham_in_table}
+    expected: {verdict: north_slaughter_two_gifts_four}
+    class: A
+
+- module: poor_gifts_orlah_file
+  tractate: Peah
+  oracle: Mishnah Peah 7:3; 7:6; 7:7; Eduyot 4:3; 4:5; Niddah 6:6; Terumot 3:9; 11:3; Meilah 4:6; Sukkah 1:4
+  exodus_anchor: {unit: lev_19, ref: Lev.19.9-10; 19.23-25, claims: [LV19A-04, LV19B-03, LV17-07]}
+  cases:
+  - id: Pe_peret
+    input: {query: basket_under_the_vine}
+    expected: {verdict: robbing_the_poor}
+    class: A
+  - id: Pe_fourth
+    input: {query: fourth_year_vineyard_houses}
+    expected: {verdict: [shammai_poor_redeem_own, hillel_all_to_the_press]}
+    class: A
+  - id: Pe_olelot
+    input: {query: all_small_clusters_vineyard}
+    expected: {verdict: [r_eliezer_owner, r_akiva_poor]}
+    class: A
+  - id: Ed_hefker
+    input: {query: renunciation_to_poor_only}
+    expected: {verdict: [shammai_valid, hillel_needs_rich_too]}
+    class: A
+  - id: Ed_fourth
+    input: {query: fourth_year_in_leniency_list}
+    expected: {verdict: registered_house_dispute}
+    class: A
+  - id: Ni_implies
+    input: {query: peah_tithe_implication}
+    expected: {verdict: peah_implies_tithes_not_converse}
+    class: A
+  - id: Te_gentile
+    input: {query: gentile_fourth_year}
+    expected: {verdict: [r_yehuda_none, sages_he_has_it]}
+    class: A
+  - id: Te_liquid
+    input: {query: orlah_lashes_on_juice}
+    expected: {verdict: olive_grape_outflow_only}
+    class: A
+  - id: Me_join
+    input: {query: orlah_kilayim_combination}
+    expected: {verdict: [they_combine, r_shimon_splits]}
+    class: A
+  - id: Su_predicate
+    input: {query: sukkah_covering_class}
+    expected: {verdict: no_impurity_and_land_grown}
+    class: A

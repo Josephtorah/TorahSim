@@ -10645,3 +10645,103 @@ on the owner's word: commit push, then ACHAREI MOT-KEDOSHIM (the
 walk's next double parashah); watches: will-indexed dispatch (2
 exemplars), the demotion operator (1); Emor later brings the
 lev_24 drafts their rhythm.
+
+═══ SITTING 2026-09-05 (post-#47): ACHAREI MOT-KEDOSHIM FULL
+RHYTHM — THE LARGEST EXAM ROUND EVER RUN. Post-compaction rereads
+done (THE_STEPS Step 2 + Step 5 + compiler block + tail); owner:
+"commit and push" → 76e0b1c PUSHED (the whole Tazria-Metzora
+line); then "Acharei Mot-Kedoshim go". The rhythm end to end:
+pre-enumeration (wip_acharei/acharei_enum.json — 574 declared,
+13,720 links outside scope openly); 574 READ WHOLE (Sifra Acharei
+Mot 224 rows + Kedoshim 206 with 11 EMPTY tail rows verdicted as
+such + Onkelos Lev 16-20's 144 verses); FOUR ledgers with
+mechanical per-row cite indexes (lev_16_yom_kippur,
+lev_17_18_blood_arayot, lev_19_kedoshim, lev_20_sanctions, all
+_2026-09-05.md — 574/574 verified present); 57 claims seated
+(LV16A-01..08, LV16B-01..07, LV17-01..08, LV18-01..07,
+LV19A-01..08, LV19B-01..09, LV20-01..08 + LV19L-01..02 into the
+FROZEN apodictic-probe unit lev_19_holiness_duty_ledger, PAYING
+its own recorded "Onkelos BUFFER PENDING" debt of 2026-08-07);
+7 drafts FROZEN, 8 rituals COMPLETE — CORPUS 143 → 150, standing
+1472 → 1529 (+57, tripwire rebaked by the documented path), hash
+8b8fff1fa28953af UNMOVED. Delegated FULL RULE stamps (7 units) +
+re-affirmation (the probe unit) in STAMP_LEDGER. EXAM ROUND 44 =
+79/79 FIRST RUN (83 bare Mishnah rows / TWENTY-EIGHT tractates —
+the largest docket AND largest round; 3 credited dups) —
+1182/1182 over 44 rounds; SEVENTEEN first-class verbatim seats
+answered before their rows opened (Yoma 1:1 = the induction
+limit VERBATIM; the three confessions; the stirrer; the coal-pan
+table; linked failure; the two clothes windows; the fellow gate;
+Shevuot 1:3/1:6 = the routing table; Sanhedrin 3:7 secrecy; 7:3
+strangulation; 7:7 the Molech predicate; Yevamot 1:1 the fifteen
+women; Nedarim 9:4 the vow-opener stack; Keritot 6:9 equal
+parents; 2:2/2:5 the maidservant; Makkot 3:5/3:6 the razor file;
+Peah 7:3/7:6/7:7 the vineyard grid; BM 9:11/9:12 the wage clock;
+Zevachim 14:1/2 the outside carve). Catalog R-534..R-540 (345
+compiled rules); vocabulary +79 → 1006 QUERY VALUES (PAST ONE
+THOUSAND) on 158 unmoved dims. COMPILE: cold_run_yoma.py = THE
+YOM KIPPUR SERVICE MACHINE 18/18 (9 INK / 6 RECORDED / 3
+ANSWER-SHEET) — the four-linen census machine-counted at 16:4,
+the three Azazel seats, the service order with the ONE recorded
+relocation (16:23, the Sifra's order meta-rule), the atonement
+routing table vs Mishnah Shevuot's own rows, the fellow gate
+(unappeased → NO entry writes). EFFECTS 53 → 55:
+dispatched_to_wilderness (the ledger's FIRST TRANSFER OP) +
+suspends (the tradition's tolah). MIDDOT.md +8 case-law rows
+(open-teaches-closed; the order meta-rule; dayo #3; the
+induction limit doubly attested Sifra=Mishnah; THE FENCE
+COMPLETE — no punishing AND no warning from inference;
+joint-vs-several default; the register meta-rule's second seat
+w/ dibber-hakatuv-bahoveh; the freed-token close). MOVE_CATALOG:
+M-16 exemplars 6-7 (the revocalization's FIRST SIFRA SEATS) +
+M-18 REGISTERED (the freed-clause reassignment, im-eino-inyan —
+three exemplars in one sitting; round 19's export operator the
+precedent). Onkelos load-bearing: eternal life at 18:5, the
+scholar-elder ruled at 19:32, the DOCUMENT inserted at 19:20,
+without-child at 20:20, death-liable at 20:9/27, the demons at
+17:7, the nomos loanword at 18:3, slander-morsels at 19:16, the
+geniza verb at 16:23, for-the-Name at 16:8. Regression green
+EVERYWHERE (all runners incl. the four known non-standard tails
+each 0 misses inside; all cold runners; world engine tape);
+manifests 0 FAILED; gloss_lint 0 on ALL new content (33 flags
+found and fixed; EXAM_LEDGER 7 / MIDDOT 1 / STAMP 1 = exact HEAD
+baselines). Records: REPORT_ACHAREI.md, EXAM_LEDGER round 44,
+catalog both files, STAMP_LEDGER two rows, THE_STEPS (seventh
+compiled span), THE_BRIEFING scoreboard (SEVEN PARASHOT IN),
+this entry. UNCOMMITTED: the whole Acharei Mot-Kedoshim line
+since 76e0b1c — rides the next "commit push". NEXT on the walk:
+EMOR (Lev 21-24 — the two lev_24 drafts get their derivation
+rhythm at last); open item: Lev 11:42 large-vav repair (owner's
+word); watches: will-indexed dispatch (2), the demotion operator
+(1).
+
+═══ COMPACTION POINT #48 (2026-09-05, owner: "I need to compact")
+═══ CLEAN POINT — no work mid-flight. The window since #47 ran:
+(1) post-compaction rereads done; (2) the Tazria-Metzora line
+COMMITTED+PUSHED 76e0b1c on the owner's "commit and push";
+(3) ACHAREI MOT-KEDOSHIM FULL RHYTHM COMPLETE on "Acharei
+Mot-Kedoshim go" — the sitting entry directly above this point
+carries the full record: 574 read whole, 57 claims into EIGHT
+units (7 frozen + the probe unit's Onkelos-buffer debt PAID),
+corpus 150, standing 1529, hash 8b8fff1fa28953af UNMOVED, EXAM
+ROUND 44 = 79/79 (THE LARGEST EVER — 83 rows / 28 tractates) →
+1182/1182 over 44 rounds, R-540 (345 rules), VOCAB 1006 (PAST
+1000), 17 verbatim pre-answered seats, cold_run_yoma.py 18/18
+(the Yom Kippur service machine), effects 55 (first TRANSFER op
++ suspends), MIDDOT +8 (THE FENCE COMPLETE), M-18 registered +
+M-16's first Sifra seats. Regression green everywhere;
+gloss_lint 0 new (EXAM_LEDGER 7 / MIDDOT 1 / STAMP 1 = HEAD
+baselines); manifests 0 FAILED. UNCOMMITTED: the whole Acharei
+Mot-Kedoshim line since 76e0b1c (4 reading ledgers + exam ledger
++ 8 unit YAMLs + manifests + py/html renders + acharei_rules/
+cases/runner + cold_run_yoma.py + effect registry + vocabulary +
+catalog both files + EXAM_LEDGER round 44 + STAMP_LEDGER two
+rows + MIDDOT + MOVE_CATALOG (M-18) + REPORT_ACHAREI + THE_STEPS
++ THE_BRIEFING + state doc) — rides the next "commit push".
+POST-COMPACTION REREADS (mandatory, first sitting): THE_STEPS
+Step 2 + Step 5 + the compiler block + this tail. NEXT on the
+owner's word: commit push, then EMOR (Lev 21-24 — the walk's
+next parashah, bringing the two lev_24 drafts their derivation
+rhythm at last). Open item: the Lev 11:42 large-vav repair
+(owner's word). Watches: will-indexed dispatch (2 exemplars),
+the demotion operator (1). Memory current through the sweep.

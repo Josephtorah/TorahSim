@@ -539,7 +539,19 @@ cold_run_negaim.py (the affliction state machine, Lev 13-14: six
 tracks ink-first, 16/16 against Mishnah Negaim 3:3-8's own track
 table + the Sifra's ten-houses walk 10/10; three more effects —
 the registry at 53). Chips pending the site lap: the five lev_13
-units, lev_14_house_nega, lev_14_metzora_cleanse. The target this serves (THE_WORLD.md idea log,
+units, lev_14_house_nega, lev_14_metzora_cleanse. THE SEVENTH SPAN
+(2026-09-05, the Acharei Mot-Kedoshim sweep): cold_run_yoma.py —
+THE YOM KIPPUR SERVICE MACHINE, Lev 16 compiled ink-first: the
+four-linen census counted in the verse's own tokens, the service
+ORDER compiled from the verse sequence with its ONE recorded
+relocation (16:23 — the Sifra's "the whole passage is in order
+except this verse"), and THE ATONEMENT ROUTING TABLE dispatching
+by knowledge-state against Mishnah Shevuot 1:3/1:6's own rows —
+18/18 at honest fractions (9 ink / 6 recorded / 3 answer-sheet);
+TWO effects discovered (the registry at 55): dispatched_to_
+wilderness — the ledger's FIRST TRANSFER OPERATION — and suspends
+(the tradition's own tolah). Chips pending the site lap:
+lev_16_yk_entry_blood, lev_16_yk_goat_statute. The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law
 computed.

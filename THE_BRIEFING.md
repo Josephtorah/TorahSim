@@ -17,7 +17,34 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
 ## SCOREBOARD (as of 2026-09-05, latest)
 
 - Genesis: DONE — derived, read, examined, stamped (73 units).
-- **Leviticus: FIVE PARASHOT IN — TAZRIA-METZORA ran the whole
+- **Leviticus: SEVEN PARASHOT IN — ACHAREI MOT-KEDOSHIM ran the
+  whole rhythm in one sitting (2026-09-05), and the exam round
+  was THE LARGEST EVER RUN:** the two Sifra books whole (430
+  rows) + all 144 Aramaic-translation verses of Lev 16-20 read,
+  57 claims into EIGHT units (corpus 150 — seven new, plus the
+  frozen probe unit taking seats that pay the "Onkelos buffer
+  pending" debt its own 2026-08-07 note recorded), the exam 79
+  of 79 across 83 Mishnah rows from TWENTY-EIGHT tractates
+  (round 44 — 1182 of 1182 lifetime; the vocabulary registry
+  passed ONE THOUSAND), and THE YOM KIPPUR SERVICE MACHINE
+  compiled cold: the four-linen census counted in the verse's
+  own ink, the service order with the tradition's one recorded
+  relocation, and the atonement ROUTING TABLE dispatching by
+  who-knew-what-when against the Mishnah's own rows — 18 of 18.
+  SEVENTEEN exam rows arrived already answered word for word by
+  seats written hours earlier — the widest anticipation yet
+  (among them: the "no end to the matter" regress-stopper,
+  standing in the Sifra AND Mishnah Yoma 1:1 as one exchange).
+  Two effects discovered — the ledger's first TRANSFER operation
+  (the dispatched goat carrying the iniquities away) and
+  "suspends" (the tradition's own word for an offense held open
+  pending knowledge). Eight new rows of the inference-rules' own
+  case law (the a-fortiori's jurisdiction fence now complete: it
+  may find law but never found a penalty); a new compile move
+  registered (M-18, the freed-clause reassignment — the
+  tradition's own "if it is not needed for its own matter, give
+  it to..." — three exemplars in one sitting).
+- **Leviticus (previous): FIVE PARASHOT IN — TAZRIA-METZORA ran the whole
   rhythm in one sitting (2026-09-05), the largest sweep yet:** the
   four Sifra books whole (550 rows) + all 157 Aramaic-translation
   verses read, 60 claims into TEN units (corpus 143 — nine new,

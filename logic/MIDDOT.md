@@ -182,6 +182,69 @@ compiled into the exam engine and seated in a frozen unit:
   nothing when a rival reading survives it; two convergent tokens
   close.
 
+**THE OPEN TEACHES THE CLOSED (Sifra, Acharei Mot, Section 1 5;
+2026-09-05).** R. Yishmael's school on the paired utterances of Lev
+16:1-2 and the wine command: two utterances side by side, one OPEN
+(naming its recipient chain) and one CLOSED — the open one teaches
+the closed one's chain. A parse meta-rule about the text's own
+TRANSMISSION HEADERS, joining the parse-direction and order
+meta-rules in the rules-about-rules family.
+
+**THE ORDER META-RULE (Sifra, Acharei Mot, Chapter 6 2;
+2026-09-05).** "The WHOLE passage is said in order EXCEPT THIS
+VERSE" — sequence and scroll-placement split explicitly at Lev
+16:23, and the closing frame ("he did as the LORD commanded," 16:34)
+re-asserts order for everything else. The tradition marking its own
+program counter; compiled as the one relocation in
+cold_run_yoma.py's service order.
+
+**DAYO'S THIRD EXEMPLAR (Sifra, Acharei Mot, Chapter 12 9;
+2026-09-05).** R. Meir's a-fortiori (bird-pinching should purify
+the bird's torn-state as slaughter purifies the beast's) cut by R.
+Yosei — "ENOUGH for it to be like the beast carcass": slaughter
+yes, pinching no. The bounded-conclusion rule now three deep on the
+walk (the hard-labor seat, the Munbaz table, this).
+
+**THE INDUCTION LIMIT, DOUBLY ATTESTED (Sifra, Acharei Mot, Chapter
+8 6 = Mishnah Yoma 1:1; 2026-09-05).** The conditional-wife regress
+stopped by "if so, THE MATTER HAS NO END" — the same exchange
+standing in the Sifra AND the Mishnah word for word: the
+regress-stopper's second exemplar now carried by two independent
+records of one argument.
+
+**THE ANTI-INFERENCE FENCE, STATED COMPLETE (Sifra, Acharei Mot,
+Chapter 13 14 + Sifra, Kedoshim, Chapter 11 10; 12; 2026-09-05).**
+Three refusals on one subject: forbidden unions are NOT derivable
+by reasoning (the general-and-particular closing the class at Lev
+18:6), NO PUNISHING FROM INFERENCE, and NO WARNING FROM INFERENCE
+(both stated on the both-parent sister clause) — the a-fortiori's
+jurisdiction fence: it may find law but never found a penalty. The
+inference engine's hardest governance row, now standing in full.
+
+**THE JOINT-VS-SEVERAL DEFAULT (Sifra, Kedoshim, Chapter 10 5;
+2026-09-05).** R. Yonatan: a conjoined pair ("his father and his
+mother") means EITHER ONE ALONE unless the verse says יחדיו
+("together") — a default rule for reading conjunctions, argued
+against R. Yoshiyah's needs-a-verse position. A grammar-level
+dispatch rule recorded as case law.
+
+**THE REGISTER META-RULE, SECOND SEAT (Sifra, Kedoshim, Section 4
+1 + Mishnah Bava Kamma 5:7; 2026-09-05).** R. Yosei: the Torah
+spoke AS PEOPLE SPEAK, IN MANY TONGUES — "and ALL of them require
+exposition"; the Mishnah's twin at the exam: "ox or donkey — the
+Scripture spoke of the COMMON CASE." Human register and full
+expoundability asserted together — the double verdict that guards
+both against over-reading and against waiving the reading.
+
+**THE FREED-TOKEN CLOSE ON THE THREE-SOURCE ARGUMENT (Sifra,
+Kedoshim, Chapter 10 7; 2026-09-05).** The judge-prince-deaf
+common-denominator argument run at full depth — each source
+refuted alone, the pairs refuted, the triple closed by "in your
+people" — and the final trim executed by REASSIGNMENT: "'judge' is
+free — if not needed for itself, GIVE IT to the father." The
+building-block engine and the freed-clause operator working as one
+recorded machine.
+
 Watch item, not yet a row: WILL-INDEXED DISPATCH stands at TWO
 recorded exemplars in the campaign; per the Move Catalog's standing
 rule a third exemplar registers it as a move (M-family), not a

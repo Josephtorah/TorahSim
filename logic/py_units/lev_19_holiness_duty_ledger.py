@@ -38,6 +38,10 @@ m.declare("YHWH", "LET",
 # ‹קְדֹשִׁים תִּהְיוּ כִּי קָדוֹשׁ אֲנִי יְהוָה אֱלֹהֵיכֶם› (“sacred be that
 # sacred YHWH God-you/your(pl)”) —
 m.statute("BIND", "qedoshim_tihyu")
+# witness-tier presupposed read: the_onkelos_buffer_paid on kal_adat — read,
+# not installed
+m.witness_read("kal_adat", "the_onkelos_buffer_paid",
+                cites=["Sifra, Kedoshim, Section 1 1", "Onkelos Lev 19:2"])
 
 # -------------------------- Lev.19.3 · MOTHER_FIRST ------------------------
 # אִישׁ אִמּוֹ וְאָבִיו תִּירָאוּ וְאֶת־שַׁבְּתֹתַי תִּשְׁמֹרוּ אֲנִי יְהוָה
@@ -256,6 +260,10 @@ m.statute("FORBID", "titor_et_bene_amekha")
 # ‹וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ› (“and-have-affection-for to-associate-
 # you/your form-of-the-prefix-'k-'-you/your”) —
 m.statute("BIND", "ve_ahavta_le_reakha_kamokha")
+# witness-tier presupposed read: the_great_rule_seat on veahavta_lereacha —
+# read, not installed
+m.witness_read("veahavta_lereacha", "the_great_rule_seat",
+                cites=["Sifra, Kedoshim, Chapter 4 12", "Onkelos Lev 19:18"])
 
 # -------------------------- Lev.19.19 · THE_MIXTURES -----------------------
 # אֶת־חֻקֹּתַי תִּשְׁמֹרוּ בְּהֶמְתְּךָ לֹא־תַרְבִּיעַ כִּלְאַיִם שָׂדְךָ
@@ -514,4 +522,11 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 70
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('kal_adat', 'the_onkelos_buffer_paid'), ('veahavta_lereacha', 'the_great_rule_seat')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Kedoshim, Section 1 1', 'Onkelos Lev 19:2']
+    assert all('the_onkelos_buffer_paid' not in f for f in m.WORLD["facts"])
+    assert 'kal_adat' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Kedoshim, Chapter 4 12', 'Onkelos Lev 19:18']
+    assert all('the_great_rule_seat' not in f for f in m.WORLD["facts"])
+    assert 'veahavta_lereacha' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
