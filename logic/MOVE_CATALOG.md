@@ -144,7 +144,14 @@ through Leviticus 24:21-22 — the formula's only other exact
 occurrence in the canon (machine scan: Exodus 21:24 + Leviticus
 24:20 and nowhere else) — so the Exodus seat cannot be finished
 without the Leviticus call (Bava Kamma 83b:10, 84a:1). Cold-run:
-Jubilee, humiliation, and damage-as-money cells.
+Jubilee, humiliation, and damage-as-money cells. EXEMPLAR (c)
+EXECUTED 2026-09-05: the callee compiled — cold_run_lev24.py,
+23/23 at 70% pure ink, exporting talion() — and the Exodus
+runner's damage cell now resolves through the LIVE IMPORT
+(cold_run_mishpatim.py calls cold_run_lev24.talion()): the first
+inter-span function call of the compiled Bible. The censuses
+re-confirmed and extended: fracture-under-fracture is UNIQUE to
+Leviticus 24:20 — the callee extends the caller's tariff.
 **Middah:** mixed — the call-site derivation runs on #2 (GEZERAH
 SHAVAH, the verbal analogy on the shared striking-word) with the
 harmonization family (#13, two passages resolved together) behind

@@ -17,6 +17,11 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
 ## SCOREBOARD (as of 2026-09-05, latest)
 
 - Genesis: DONE — derived, read, examined, stamped (73 units).
+- **THE FIRST CALL (2026-09-05): Leviticus 24:10-23 compiled cold
+  (23/23, 70% pure ink) and Exodus 21's injury-tariff cell now
+  resolves by CALLING it** — the first inter-span function call
+  of the compiled Bible. The 50th effect (bears-his-sin)
+  registered from the chapter's own clause.
 - **Leviticus: THREE PARASHOT IN — Shemini ran the whole rhythm
   in one sitting (2026-09-05):** the Sifra's 243 rows + all 91
   Aramaic-translation verses read, 43 claims derived into four
@@ -329,6 +334,38 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Next alongside it: Leviticus (new spine — Sifra).
 
 ## ENTRIES (newest first)
+
+### 2026-09-05 — THE FIRST CALL: one compiled span now calls another
+
+Until today every compiled span was an island: each cold function
+carried its own verdicts, even where the record said one span
+depends on another. Today the dependency became a RUNNING call.
+Exodus 21's injury tariff says "eye under eye" — and that formula
+occurs at exactly two seats in the whole Bible: there, and in
+Leviticus 24 (the blasphemer chapter's law block). The Talmud
+derives the tariff's money-meaning from the LEVITICUS seat, so our
+Exodus function could never honestly finish alone. Now Leviticus
+24:10-23 is compiled (23 of 23 cells, 70% straight from the ink)
+and it EXPORTS a function; the Exodus runner IMPORTS it, and its
+damage cell gets its verdict by calling it. The compiled Bible has
+its first inter-span function call — the program's cross-book
+import graph stopped being a diagram and started being code.
+
+Three things the compile itself surfaced. First, the chapter is
+the code-request protocol we already knew from research, seen
+whole: a case arrives that no law yet covers, the man is held "in
+custody until it be declared by the mouth of the LORD," the answer
+comes back as NEW law — and inside that answer rides the very
+talion block Exodus calls. The program grew at runtime, and
+another book calls the growth. Second, the ancient Aramaic
+translation is load-bearing at the gate: the Mishnah's liability
+rule for the blasphemer ("not liable until he SPECIFIES the
+Name") uses the exact verb the translation chose for the verse —
+and the translation renders every "under" of the tariff as "in
+EXCHANGE for": the money reading, standing in the oldest witness.
+Third, a census find: "fracture under fracture" exists NOWHERE in
+the Bible except the Leviticus seat — the called span carries a
+tariff row the calling span lacks. The callee extends the caller.
 
 ### 2026-09-03 (night's end) — The whole rhythm runs in one sitting
 

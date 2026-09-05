@@ -10461,3 +10461,69 @@ Step 2 + Step 5 + the compiler block + this tail. NEXT on the
 owner's word: commit push, then LEV 24 — THE FIRST CALL (the
 Exod 21 talion-as-money dependency); after it Tazria-Metzora;
 MIDDOT will-indexed-dispatch watch still at 2 exemplars.
+
+(#46 addendum, same sitting — owner: "Commit push then lev 24",
+then "wait I did not compact yet") The Shemini line is now
+COMMITTED+PUSHED: 9f7112b (40 files, ~11.5k insertions) — nothing
+uncommitted remains. LEV 24 was OPENED (recon only, NOTHING
+WRITTEN): the call-site records located — EX21-18 in
+exo_21_the_ordinances (the tariff compiled through its call site;
+eye-under-eye exactly twice in the canon, Exod 21:24 + Lev 24:20;
+the money-semantics fixed by Lev 24:21 strike-animal-pays + 24:22
+one-law rider; Bava Kamma 83b:10 + 84a:1; move M-07 exemplar c);
+the two Lev 24 units (lev_24_lamp_bread, lev_24_blasphemer_talion)
+are tree-derived DRAFTS, status draft, not in the corpus. THE
+FIRST CALL's shape: cold-compile Lev 24:10-23 (the blasphemer
+protocol + the talion block) ink-first with effects, then WIRE THE
+CALL — the Mishpatim runner's talion-as-money cell resolved
+THROUGH the Lev 24 function (the first inter-span function call of
+the compiled Bible); decide at the sitting whether the two drafts
+also take the full derivation rhythm (Emor's parashah walk is
+NOT this item — Lev 24 is pulled ahead as the compile dependency
+only). FIRST ACTION next window: the mandatory rereads, then
+LEV 24 THE FIRST CALL.
+
+(2026-09-05, first sitting after compaction #46 — owner's standing
+order "Commit push then lev 24"; rereads done: THE_STEPS Step 2 +
+Step 5 + the compiler block + the #46 tail) LEV 24 — THE FIRST
+CALL, COMPLETE. The five motions ran on Lev 24:10-23 and the wire
+landed: cold_run_lev24.py 23/23 at 70% PURE INK (16 INK / 6
+RECORDED / 1 ROUTED), exporting talion(); cold_run_mishpatim.py's
+damage cell now resolves THROUGH THE LIVE IMPORT — the first
+inter-span function call of the compiled Bible (M-07 exemplar c
+EXECUTED, catalog updated). The compile's finds: (1) the span IS
+the runtime code-request protocol — the scroll's own paragraph
+marks cut 10-12 | 13-23, custody till the DECREE (Onkelos), the
+answer as new program with the called talion block inside, and
+24:23 a run log that grades itself; (2) censuses — eye/tooth-under
+at exactly the two recorded seats, life-under at exactly two with
+the Leviticus seat the PAY clause, and FRACTURE-UNDER UNIQUE to
+24:20: the callee extends the caller's tariff; (3) the translation
+load-bearing at the gate — Mishnah Sanhedrin 7:5's liability verb
+IS Onkelos' rendering of 24:11 (until he SPECIFIES the Name), and
+every under-particle of the span rendered in-EXCHANGE-for; (4) the
+Name gate from ink economy — the doubled Name token of v16
+(machine count 2, Sanhedrin 56a:5), the one-noun close at v14
+(56a:13), the 15/16 delta with R. Meir's arm kept; (5) the money
+verdict on the span's own riders (24:18 pay-on-formula; 24:21
+pays-beside-dies, Bava Kamma 83b:10; 24:22 one-law-EQUAL, 84a:1).
+50TH EFFECT registered: bears_sin (divine-ledger status debt; ink
+pair Lev 24:15 + Num 18:22 machine-scanned; Onkelos "he shall
+RECEIVE his sin"); substitution's registry entry gains its
+call-site ink. Test data: 9 bare Mishnah rows (4 tractates) read
+whole — two QUOTE the span verbatim (Sanhedrin 6:1, 4:1); 13
+Talmud segments per gap; 14 Onkelos verses. Ledger with full cite
+index: logic/oral_triage/lev_24_first_call_2026-09-05.md; report:
+World/step9/REPORT_LEV24.md; RESEARCH_LOG.md entry appended
+(owner's follow-along file). NO UNIT TOUCHED: corpus 134, standing
+1412, hash 8b8fff1fa28953af, manifests — all UNMOVED; the two
+lev_24 drafts STAY DRAFTS (the derivation rhythm arrives with
+Emor's walk; the compiled chip waits for the unit). Regression
+swept AFTER the wire: 43/43 runners + all 11 cold runners + the
+world engine green; gloss_lint 0 on all new content (7 flags
+fixed, the known ellipsis/gloss-order classes). UNCOMMITTED: the
+whole Lev 24 line (runner + wire + ledger + report + registry +
+catalog + research log + records) since 9f7112b — rides the next
+"commit push". NEXT on the standing map: Tazria-Metzora; the
+MIDDOT will-indexed-dispatch watch (still 2 exemplars); open item
+on the owner's word — the Lev 11:42 large-vav repair.

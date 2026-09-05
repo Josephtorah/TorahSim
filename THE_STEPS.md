@@ -555,7 +555,14 @@ both ends, and both are law:
   sugya's verse reaching outside the compiled spans is an IMPORT
   EDGE (moves M-07/M-10), and can drag a remote span forward —
   Leviticus 24 became Exodus 21's compile dependency this way,
-  before the walk ever reached it. The per-book TALMUD TRIAGE is
+  before the walk ever reached it. EXECUTED 2026-09-05, THE FIRST
+  CALL: Lev 24:10-23 compiled cold (cold_run_lev24.py, 23/23 at
+  70% pure ink) and the Mishpatim runner's talion cell now
+  resolves by IMPORTING and CALLING its exported talion() — the
+  first inter-span function call of the compiled Bible; the 50th
+  effect (bears_sin) registered from the chapter's own clause.
+  The two lev_24 drafts stay drafts: the derivation rhythm and
+  the compiled chip arrive with Emor's walk. The per-book TALMUD TRIAGE is
   this direction run at scale (Genesis's 958 passages yielded the
   Noahide block; EXODUS'S RAN 2026-09-03 — 2,033 rows verdicted,
   LAW 501 / CREDIT 1,109 / AGGADAH 336 / QUOTE 87, mapped into 18

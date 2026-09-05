@@ -9,6 +9,13 @@
 
 import sqlite3, sys, os
 
+# THE FIRST CALL (2026-09-05): the talion cell no longer carries its
+# verdict — it CALLS the compiled Lev 24 span, the tariff formula's
+# only other seat in the canon (EX21-18; move M-07 exemplar c,
+# EXECUTED). The first inter-span function call of the compiled Bible.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from cold_run_lev24 import talion as lev24_talion
+
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
 
@@ -110,8 +117,8 @@ cells = [
      'INK 21:19: "and healing he shall heal" [7495]', 'INK'),
     ('LOSS OF LIVELIHOOD', 'PAY', 'PAY',
      'INK 21:19: "his idleness he shall give" [7674]', 'INK'),
-    ('DAMAGE (the tariff, as money)', 'PAY-MONEY', 'PAY-MONEY',
-     'RECORDED [Bava Kamma 83b-84a]: derived THROUGH THE CALL SITE — Leviticus 24:21-22, the formula\'s second occurrence', 'RECORDED'),
+    ('DAMAGE (the tariff, as money)', lev24_talion('eye')['verdict'], 'PAY-MONEY',
+     'CALLED cold_run_lev24.talion(): resolves THROUGH the call site [Bava Kamma 83b:10, 84a:1; move M-07c EXECUTED]', 'RECORDED'),
     ('PAIN', 'PAY', 'PAY',
      'RECORDED [Bava Kamma 85a]: from "wound for wound" [6482], 21:25', 'RECORDED'),
     ('HUMILIATION', 'PAY', 'PAY',

@@ -1482,3 +1482,44 @@ instead of research: any individual break made load-bearing in a
 publication gets a per-item check (the Talmud's usage; Maimonides'
 published break table in the Mishneh Torah, Laws of the Torah
 Scroll ch. 8, if ever contested). Spot-verification on demand.
+
+---
+
+## 2026-09-05 — THE FIRST CALL EXECUTES (Lev 24:10-23 compiled;
+## the Exodus tariff cell resolves through a live import)
+
+The compile-dependency edge recorded at EX21-18 (move M-07
+exemplar c) is now a RUNNING call: cold_run_lev24.py compiles
+Leviticus 24:10-23 at 23/23 with 70% pure ink and EXPORTS
+talion(); cold_run_mishpatim.py's damage cell imports it and
+resolves through the call — the first inter-span function call of
+the compiled Bible. What the callee showed under compile:
+
+1. THE SPAN IS A RUNTIME CODE REQUEST. The scroll's own paragraph
+   marks cut 10-12 | 13-23: a case no issued code covers, custody
+   "until it be declared by the mouth of the LORD" (Onkelos: the
+   DECREE awaited), then the answer as NEW PROGRAM — with the
+   called talion block inside it. The fourth custody-pending case
+   is the one whose answer another span calls. And 24:23 is a run
+   log that grades itself: "they did as the LORD commanded."
+2. THE CENSUSES SHARPEN THE EDGE. Eye/tooth-under: exactly the
+   two recorded seats. Life-under: exactly two, and the Leviticus
+   seat is the PAY clause. New: fracture-under-fracture is UNIQUE
+   to Lev 24:20 — the callee extends the caller's tariff.
+3. THE TRANSLATION IS LOAD-BEARING AT THE GATE. Mishnah Sanhedrin
+   7:5's liability verb ("until he SPECIFIES the Name") is
+   Onkelos' own rendering of 24:11; and Onkelos renders every
+   under-particle of the span as "in EXCHANGE for" — pay clause
+   and tariff alike.
+4. THE MONEY VERDICT RUNS ON THE SPAN'S OWN RIDERS. The pay verb
+   on the exchange formula (24:18); pays-beside-dies in one verse
+   (24:21, Bava Kamma 83b:10); one-law-EQUAL-for-all (24:22, Bava
+   Kamma 84a:1) — literal talion fails the equality rider.
+5. 50th effect registered: bears_sin (the divine-ledger debt, no
+   earthly executor named; the ink pair scanned by machine —
+   Lev 24:15 + Num 18:22).
+
+Records: World/step9/REPORT_LEV24.md; ledger with full cite index
+logic/oral_triage/lev_24_first_call_2026-09-05.md. Regression:
+43/43 runners + all cold runners green after the wire; no unit
+touched (the two Lev 24 drafts stay drafts until Emor's walk).
