@@ -14,11 +14,12 @@ from machine import Machine
 m = Machine("gen_48_bethel_ladder_vow")
 
 # -------------------------- Gen.28.10 · THE_DEPARTURE_BEER_SHEVA_TO_HARAN --
-# וַיֵּצֵא יַעֲקֹב מִבְּאֵר שָׁבַע וַיֵּלֶךְ חָרָנָה
+# ‹וַיֵּצֵא יַעֲקֹב מִבְּאֵר› (“and-bring-forth Jacob from”)
+# ‹שָׁבַע וַיֵּלֶךְ חָרָנָה› (“Beer-shebah and-go Haran-ward”)
 # "[EN-AID] And Jacob went out from Beer-sheva and went toward Haran."
 m.step("Gen.28.10")
-# ‹וַיֵּצֵא … וַיֵּלֶךְ חָרָנָה› (“and-bring-forth … and-go Haran-ward”) —
-# fact holds: Jacob-departed-from-seven-toward-charan
+# ‹וַיֵּצֵא … וַיֵּלֶךְ חָרָנָה› (“and-bring-forth … and-go Haran-ward”)
+# — fact holds: Jacob-departed-from-seven-toward-charan
 m.fact("yaaqov_departed_beer_sheva_toward_charan")
 # witness-tier presupposed read:
 # the_traditions_own_grammar_rule_at_this_word on directional_ending — read,
@@ -31,14 +32,19 @@ m.witness_read("the_departure", "radiance_rule_made_comparative_to_survive",
                 cites=["Bereshit Rabbah 68:6"])
 
 # -------------------------- Gen.28.11 · THE_PLACE_SUNSET_AND_STONE_PILLOW --
-# וַיִּפְגַּע בַּמָּקוֹם וַיָּלֶן שָׁם כִּי־בָא הַשֶּׁמֶשׁ וַיִּקַּח
-# מֵאַבְנֵי הַמָּקוֹם וַיָּשֶׂם מְרַאֲשֹׁתָיו וַיִּשְׁכַּב בַּמָּקוֹם הַהוּא
+# ‹וַיִּפְגַּע בַּמָּקוֹם וַיָּלֶן› (“and-impinge in-place and-stop”)
+# ‹שָׁם כִּי־בָא הַשֶּׁמֶשׁ› (“there that come/bring the-sun”)
+# ‹וַיִּקַּח מֵאַבְנֵי הַמָּקוֹם› (“and-take from-stone the-place”)
+# ‹וַיָּשֶׂם מְרַאֲשֹׁתָיו וַיִּשְׁכַּב› (“and-put/set headpiece-him/its
+# and-lie-down”)
+# ‹בַּמָּקוֹם הַהוּא› (“in-place that”)
 # "[EN-AID] And he lit upon the place and lodged there, for the sun had set;
 # and he took of the stones of the place and set them at his head, and lay
 # down in that place."
 m.step("Gen.28.11")
-# ‹כִּי־בָא הַשֶּׁמֶשׁ … מֵאַבְנֵי הַמָּקוֹם› (“that come/bring the-sun …
-# from-stone the-place”) — fact holds: sun-set-stone-pillow-at-the-place
+# ‹כִּי־בָא הַשֶּׁמֶשׁ … מֵאַבְנֵי› (“that come/bring the-sun … from-stone”)
+# ‹הַמָּקוֹם› (“the-place”)
+# — fact holds: sun-set-stone-pillow-at-the-place
 m.fact("sun_set_stone_pillow_at_ha_maqom")
 # witness-tier presupposed read: three_counts_each_framed_as_a_test on
 # the_stones — read, not installed
@@ -50,16 +56,20 @@ m.witness_read("sunset_two_hours_early", "borrowed_time_booked_for_repayment",
                 cites=["Bereshit Rabbah 68:10"])
 
 # -------------------------- Gen.28.12 · THE_DREAM_DEBUT_AND_LADDER_HAPAX ---
-# וַיַּחֲלֹם וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה
-# וְהִנֵּה מַלְאֲכֵי אֱלֹהִים עֹלִים וְיֹרְדִים בּוֹ
+# ‹וַיַּחֲלֹם וְהִנֵּה סֻלָּם› (“and-bind-firmly and-behold stair-case”)
+# ‹מֻצָּב אַרְצָה וְרֹאשׁוֹ› (“stand earth-ward and-head-him/its”)
+# ‹מַגִּיעַ הַשָּׁמָיְמָה וְהִנֵּה› (“touch the-heavens-ward and-behold”)
+# ‹מַלְאֲכֵי אֱלֹהִים עֹלִים› (“messenger God go-up”)
+# ‹וְיֹרְדִים בּוֹ› (“and-go-down in-him/its”)
 # "[EN-AID] And he dreamed — and behold a ladder set earthward, its head
 # reaching heavenward; and behold, angels of God ascending and descending on
 # it."
 m.step("Gen.28.12")
-# ‹וַיַּחֲלֹם› (“and-bind-firmly”) — event: ?
+# ‹וַיַּחֲלֹם› (“and-bind-firmly”)
+# — event: ?
 m.event("?")
-# ‹סֻלָּם מֻצָּב אַרְצָה› (“stair-case stand earth-ward”) — fact holds:
-# stair-case-earthward-head-heavenward-angels
+# ‹סֻלָּם מֻצָּב אַרְצָה› (“stair-case stand earth-ward”)
+# — fact holds: stair-case-earthward-head-heavenward-angels
 m.fact("sulam_earthward_head_heavenward_angels")
 # witness-tier presupposed read: dreams_follow_the_interpretation on
 # the_dream — read, not installed
@@ -71,15 +81,20 @@ m.witness_read("ascending_and_descending", "kingdom_sequence_read_off_the_word_o
                 cites=["Bereshit Rabbah 68:14"])
 
 # -------------------------- Gen.28.13 · THE_STATIONED_LORD_AND_LAND_COMMITMENT -
-# וְהִנֵּה יְהוָה נִצָּב עָלָיו וַיֹּאמַר אֲנִי יְהוָה אֱלֹהֵי אַבְרָהָם
-# אָבִיךָ וֵאלֹהֵי יִצְחָק הָאָרֶץ אֲשֶׁר אַתָּה שֹׁכֵב עָלֶיהָ לְךָ
-# אֶתְּנֶנָּה וּלְזַרְעֶךָ
+# ‹וְהִנֵּה יְהוָה נִצָּב› (“and-behold YHWH stand”)
+# ‹עָלָיו וַיֹּאמַר אֲנִי› (“over-him/its and-say”)
+# ‹יְהוָה אֱלֹהֵי אַבְרָהָם› (“YHWH God Abraham”)
+# ‹אָבִיךָ וֵאלֹהֵי יִצְחָק› (“father-you/your and-God Isaac”)
+# ‹הָאָרֶץ אֲשֶׁר אַתָּה› (“the-earth which you”)
+# ‹שֹׁכֵב עָלֶיהָ לְךָ› (“lie-down over-her/its to-you/your”)
+# ‹אֶתְּנֶנָּה וּלְזַרְעֶךָ› (“set-her/its and-to-seed-you/your”)
 # "[EN-AID] And behold, YHWH stood over him and said: I am YHWH, God of
 # Abraham your father and God of Isaac; the land on which you lie, to you I
 # will give it and to your seed."
 m.step("Gen.28.13")
-# ‹נִצָּב עָלָיו … לְךָ אֶתְּנֶנָּה› (“stand over-him/its … to-you/your set-
-# her/its”) — fact holds: the-LORD-stand-self-identification-land-commitment
+# ‹נִצָּב עָלָיו … לְךָ› (“stand over-him/its … to-you/your”)
+# ‹אֶתְּנֶנָּה› (“set-her/its”)
+# — fact holds: the-LORD-stand-self-identification-land-commitment
 m.fact("YHWH_nitzav_self_identification_land_commitment")
 # witness-tier presupposed read: opened_frame_stated_leg_left_open on
 # the_eighteen_count — read, not installed
@@ -91,27 +106,38 @@ m.witness_read("the_LORD_stood_over_him", "glory_buffer_at_both_theophany_verses
                 cites=["Onkelos Genesis 28:13", "Onkelos Genesis 28:16"])
 
 # -------------------------- Gen.28.14 · THE_DUST_FORMULA_ALL_FAMILIES_NIPHAL -
-# וְהָיָה זַרְעֲךָ כַּעֲפַר הָאָרֶץ וּפָרַצְתָּ יָמָּה וָקֵדְמָה וְצָפֹנָה
-# וָנֶגְבָּה וְנִבְרֲכוּ בְךָ כָּל־מִשְׁפְּחֹת הָאֲדָמָה וּבְזַרְעֶךָ
+# ‹וְהָיָה זַרְעֲךָ כַּעֲפַר› (“and-be seed-you/your like-dust”)
+# ‹הָאָרֶץ וּפָרַצְתָּ יָמָּה› (“the-earth and-break-out seas-ward”)
+# ‹וָקֵדְמָה וְצָפֹנָה וָנֶגְבָּה› (“and-front-ward and-hidden-ward and-
+# south-ward”)
+# ‹וְנִבְרֲכוּ בְךָ כָּל־מִשְׁפְּחֹת› (“and-bless in-you/your all family”)
+# ‹הָאֲדָמָה וּבְזַרְעֶךָ› (“the-ground and-in-seed-you/your”)
 # "[EN-AID] And your seed shall be as the dust of the earth, and you shall
 # spread west and east and north and south; and all the families of the
 # ground shall be blessed in you and in your seed."
 m.step("Gen.28.14")
-# ‹כַּעֲפַר הָאָרֶץ … וְנִבְרֲכוּ בְךָ› (“like-dust the-earth … and-bless
-# in-you/your”) — fact holds: dust-seed-spread-all-families-blessed
+# ‹כַּעֲפַר הָאָרֶץ … וְנִבְרֲכוּ› (“like-dust the-earth … and-bless”)
+# ‹בְךָ› (“in-you/your”)
+# — fact holds: dust-seed-spread-all-families-blessed
 m.fact("dust_seed_spread_all_families_blessed")
 
 # -------------------------- Gen.28.15 · THE_FIVE_FOLD_PROMISE_NOT_LEAVE ----
-# וְהִנֵּה אָנֹכִי עִמָּךְ וּשְׁמַרְתִּיךָ בְּכֹל אֲשֶׁר־תֵּלֵךְ
-# וַהֲשִׁבֹתִיךָ אֶל־הָאֲדָמָה הַזֹּאת כִּי לֹא אֶעֱזָבְךָ עַד אֲשֶׁר
-# אִם־עָשִׂיתִי אֵת אֲשֶׁר־דִּבַּרְתִּי לָךְ
+# ‹וְהִנֵּה אָנֹכִי עִמָּךְ› (“and-behold with-you/your”)
+# ‹וּשְׁמַרְתִּיךָ בְּכֹל אֲשֶׁר־תֵּלֵךְ› (“and-keep/guard-you/your in-all
+# which go”)
+# ‹וַהֲשִׁבֹתִיךָ אֶל־הָאֲדָמָה הַזֹּאת› (“and-return-you/your to the-ground
+# the-this”)
+# ‹כִּי לֹא אֶעֱזָבְךָ› (“that not loosen-you/your”)
+# ‹עַד אֲשֶׁר אִם־עָשִׂיתִי› (“until which if make”)
+# ‹אֵת אֲשֶׁר־דִּבַּרְתִּי לָךְ› (“obj-marker which speak to-you/your”)
 # "[EN-AID] And behold, I am with you, and I will keep you wherever you go,
 # and I will bring you back to this ground; for I will not leave you until I
 # have done what I have spoken to you."
 m.step("Gen.28.15")
-# ‹וּשְׁמַרְתִּיךָ … וַהֲשִׁבֹתִיךָ … לֹא אֶעֱזָבְךָ› (“and-keep/guard-
-# you/your … and-return-you/your … not loosen-you/your”) — fact holds: five-
-# fold-promise-with-keep-return-not-leave-until-done
+# ‹וּשְׁמַרְתִּיךָ … וַהֲשִׁבֹתִיךָ … לֹא› (“and-keep/guard-you/your … and-
+# return-you/your … not”)
+# ‹אֶעֱזָבְךָ› (“loosen-you/your”)
+# — fact holds: five-fold-promise-with-keep-return-not-leave-until-done
 m.fact("five_fold_promise_with_keep_return_not_leave_until_done")
 # witness-tier presupposed read:
 # clause_map_against_the_vow_with_one_field_uncovered on the_promise — read,
@@ -124,23 +150,31 @@ m.witness_read("my_word_is_your_support", "condition_made_to_quote_the_promise",
                 cites=["Onkelos Genesis 28:15", "Onkelos Genesis 28:20"])
 
 # -------------------------- Gen.28.16 · THE_WAKING_AKHEN_AND_NOT_KNOWING ---
-# וַיִּיקַץ יַעֲקֹב מִשְּׁנָתוֹ וַיֹּאמֶר אָכֵן יֵשׁ יְהוָה בַּמָּקוֹם
-# הַזֶּה וְאָנֹכִי לֹא יָדָעְתִּי
+# ‹וַיִּיקַץ יַעֲקֹב מִשְּׁנָתוֹ› (“and-awake Jacob from-sleep-him/its”)
+# ‹וַיֹּאמֶר אָכֵן יֵשׁ› (“and-say firmly there-is”)
+# ‹יְהוָה בַּמָּקוֹם הַזֶּה› (“YHWH in-place the-this”)
+# ‹וְאָנֹכִי לֹא יָדָעְתִּי› (“and-I not know”)
 # "[EN-AID] And Jacob awoke from his sleep and said: Surely YHWH is in this
 # place, and I did not know."
 m.step("Gen.28.16")
-# ‹וַיִּיקַץ … אָכֵן … לֹא יָדָעְתִּי› (“and-awake … firmly … not know”) —
-# fact holds: Jacob-woke-firmly-the-LORD-in-place-unknown
+# ‹וַיִּיקַץ … אָכֵן … לֹא› (“and-awake … firmly … not”)
+# ‹יָדָעְתִּי› (“know”)
+# — fact holds: Jacob-woke-firmly-the-LORD-in-place-unknown
 m.fact("yaaqov_woke_akhen_YHWH_in_place_unknown")
 
 # -------------------------- Gen.28.17 · THE_FEAR_DOUBLET_GATE_OF_HEAVEN ----
-# וַיִּירָא וַיֹּאמַר מַה־נּוֹרָא הַמָּקוֹם הַזֶּה אֵין זֶה כִּי אִם־בֵּית
-# אֱלֹהִים וְזֶה שַׁעַר הַשָּׁמָיִם
+# ‹וַיִּירָא וַיֹּאמַר מַה־נּוֹרָא› (“and-fear and-say what fear”)
+# ‹הַמָּקוֹם הַזֶּה אֵין› (“the-place the-this there-is-not”)
+# ‹זֶה כִּי אִם־בֵּית› (“this very-widely-used-as-a-relati as-demonstrative
+# house”)
+# ‹אֱלֹהִים וְזֶה שַׁעַר› (“God and-this gate”)
+# ‹הַשָּׁמָיִם› (“the-heavens”)
 # "[EN-AID] And he feared and said: How awesome is this place! This is none
 # other than the house of God, and this is the gate of heaven."
 m.step("Gen.28.17")
-# ‹וַיִּירָא … מַה־נּוֹרָא … שַׁעַר הַשָּׁמָיִם› (“and-fear … what fear …
-# gate the-heavens”) — fact holds: fear-doublet-house-God-gate-the-heavens
+# ‹וַיִּירָא … מַה־נּוֹרָא … שַׁעַר› (“and-fear … what fear … gate”)
+# ‹הַשָּׁמָיִם› (“the-heavens”)
+# — fact holds: fear-doublet-house-God-gate-the-heavens
 m.fact("fear_doublet_bet_elohim_shaar_ha_shamayim")
 # witness-tier presupposed read: de_literalized_into_prayer_reception on
 # house_of_God — read, not installed
@@ -148,26 +182,37 @@ m.witness_read("house_of_God", "de_literalized_into_prayer_reception",
                 cites=["Onkelos Genesis 28:17", "Onkelos Genesis 28:22"])
 
 # -------------------------- Gen.28.18 · THE_PILLAR_AND_THE_OIL_DEBUT -------
-# וַיַּשְׁכֵּם יַעֲקֹב בַּבֹּקֶר וַיִּקַּח אֶת־הָאֶבֶן אֲשֶׁר־שָׂם
-# מְרַאֲשֹׁתָיו וַיָּשֶׂם אֹתָהּ מַצֵּבָה וַיִּצֹק שֶׁמֶן עַל־רֹאשָׁהּ
+# ‹וַיַּשְׁכֵּם יַעֲקֹב בַּבֹּקֶר› (“and-rise-early Jacob in-morning”)
+# ‹וַיִּקַּח אֶת־הָאֶבֶן אֲשֶׁר־שָׂם› (“and-take obj-marker the-stone which
+# put/set”)
+# ‹מְרַאֲשֹׁתָיו וַיָּשֶׂם אֹתָהּ› (“headpiece-him/its and-put/set obj-
+# marker-her/its”)
+# ‹מַצֵּבָה וַיִּצֹק שֶׁמֶן› (“pillar and-pour-out oil”)
+# ‹עַל־רֹאשָׁהּ› (“over head-her/its”)
 # "[EN-AID] And Jacob rose early in the morning and took the stone he had
 # set at his head, and set it as a pillar, and poured oil on its head."
 m.step("Gen.28.18")
-# ‹וַיָּשֶׂם אֹתָהּ מַצֵּבָה וַיִּצֹק שֶׁמֶן› (“and-put/set obj-marker-
-# her/its pillar and-pour-out oil”) — event: ?
+# ‹וַיָּשֶׂם אֹתָהּ מַצֵּבָה› (“and-put/set obj-marker-her/its pillar”)
+# ‹וַיִּצֹק שֶׁמֶן› (“and-pour-out oil”)
+# — event: ?
 m.event("?")
 # ‹וַיַּשְׁכֵּם … וַיִּקַּח אֶת־הָאֶבֶן› (“and-rise-early … and-take obj-
-# marker the-stone”) — fact holds: early-rise-stone-taken-set-as-pillar
+# marker the-stone”)
+# — fact holds: early-rise-stone-taken-set-as-pillar
 m.fact("early_rise_stone_taken_set_as_pillar")
 
 # -------------------------- Gen.28.19 · THE_NAME_WRITE_BEIT_EL -------------
-# וַיִּקְרָא אֶת־שֵׁם־הַמָּקוֹם הַהוּא בֵּית־אֵל וְאוּלָם לוּז שֵׁם־הָעִיר
-# לָרִאשֹׁנָה
+# ‹וַיִּקְרָא אֶת־שֵׁם־הַמָּקוֹם הַהוּא› (“and-call obj-marker name the-
+# place that”)
+# ‹בֵּית־אֵל וְאוּלָם לוּז› (“Beth-el and-however Luz”)
+# ‹שֵׁם־הָעִיר לָרִאשֹׁנָה› (“name the-city to-first”)
 # "[EN-AID] And he called the name of that place Bethel; but Luz was the
 # name of the city at first."
 m.step("Gen.28.19")
-# ‹וַיִּקְרָא אֶת־שֵׁם־הַמָּקוֹם הַהוּא בֵּית־אֵל› (“and-call obj-marker
-# name the-place that Beth-el”) — named: the-place-Luz := beit-to
+# ‹וַיִּקְרָא אֶת־שֵׁם־הַמָּקוֹם הַהוּא› (“and-call obj-marker name the-
+# place that”)
+# ‹בֵּית־אֵל› (“Beth-el”)
+# — named: the-place-Luz := beit-to
 m.name("ha_maqom_luz", "beit_el")
 # witness-grounded state (its own tier):
 # permanent_properties_across_the_corpus on the_city
@@ -175,16 +220,20 @@ m.witness_state("the_city", "permanent_properties_across_the_corpus",
                 cites=["Bereshit Rabbah 69:8"])
 
 # -------------------------- Gen.28.20 · THE_FIRST_VOW_CONDITIONS_OPEN ------
-# וַיִּדַּר יַעֲקֹב נֶדֶר לֵאמֹר אִם־יִהְיֶה אֱלֹהִים עִמָּדִי וּשְׁמָרַנִי
-# בַּדֶּרֶךְ הַזֶּה אֲשֶׁר אָנֹכִי הוֹלֵךְ וְנָתַן־לִי לֶחֶם לֶאֱכֹל וּבֶגֶד
-# לִלְבֹּשׁ
+# ‹וַיִּדַּר יַעֲקֹב נֶדֶר› (“and-promise Jacob promise”)
+# ‹לֵאמֹר אִם־יִהְיֶה אֱלֹהִים› (“to-say if be God”)
+# ‹עִמָּדִי וּשְׁמָרַנִי בַּדֶּרֶךְ› (“along-with-me/my and-keep/guard-me/my
+# in-way/road”)
+# ‹הַזֶּה אֲשֶׁר אָנֹכִי› (“the-this which”)
+# ‹הוֹלֵךְ וְנָתַן־לִי לֶחֶם› (“walk/go and-set to-me/my food”)
+# ‹לֶאֱכֹל וּבֶגֶד לִלְבֹּשׁ› (“to-eat and-garment to-wrap-around”)
 # "[EN-AID] And Jacob vowed a vow, saying: If God will be with me and keep
 # me on this way that I go, and give me bread to eat and a garment to wear
 # —"
 m.step("Gen.28.20")
-# ‹וַיִּדַּר יַעֲקֹב נֶדֶר … לֶחֶם … וּבֶגֶד› (“and-promise Jacob promise …
-# food … and-garment”) — fact holds: promise-opened-conditions-with-keep-
-# bread-garment
+# ‹וַיִּדַּר יַעֲקֹב נֶדֶר› (“and-promise Jacob promise”)
+# ‹… לֶחֶם … וּבֶגֶד› (“food … and-garment”)
+# — fact holds: promise-opened-conditions-with-keep-bread-garment
 m.fact("neder_opened_conditions_with_keep_bread_garment")
 # witness-tier presupposed read:
 # first_instance_chain_of_title_and_a_register on the_vow — read, not
@@ -197,29 +246,37 @@ m.witness_read("delay_in_discharge", "audit_penalty_that_explains_the_loss",
                 cites=["Bereshit Rabbah 81:1"])
 
 # -------------------------- Gen.28.21 · THE_RETURN_IN_PEACE_AND_THEN_CLAUSE -
-# וְשַׁבְתִּי בְשָׁלוֹם אֶל־בֵּית אָבִי וְהָיָה יְהוָה לִי לֵאלֹהִים
+# ‹וְשַׁבְתִּי בְשָׁלוֹם אֶל־בֵּית› (“and-return in-safe to house”)
+# ‹אָבִי וְהָיָה יְהוָה› (“father-me/my and-be YHWH”)
+# ‹לִי לֵאלֹהִים› (“to-me/my to-God”)
 # "[EN-AID] And I return in peace to my father's house — then YHWH will be
 # my God."
 m.step("Gen.28.21")
-# ‹וְשַׁבְתִּי בְשָׁלוֹם … וְהָיָה יְהוָה לִי לֵאלֹהִים› (“and-return in-
-# safe … and-be YHWH to-me/my to-God”) — fact holds: return-in-peace-
-# condition-then-the-LORD-my-God
+# ‹וְשַׁבְתִּי בְשָׁלוֹם … וְהָיָה› (“and-return in-safe … and-be”)
+# ‹יְהוָה לִי לֵאלֹהִים› (“YHWH to-me/my to-God”)
+# — fact holds: return-in-peace-condition-then-the-LORD-my-God
 m.fact("return_in_peace_condition_then_YHWH_my_God")
 
 # -------------------------- Gen.28.22 · THE_VOW_HANDLER_STONE_HOUSE_TITHE --
-# וְהָאֶבֶן הַזֹּאת אֲשֶׁר־שַׂמְתִּי מַצֵּבָה יִהְיֶה בֵּית אֱלֹהִים וְכֹל
-# אֲשֶׁר תִּתֶּן־לִי עַשֵּׂר אֲעַשְּׂרֶנּוּ לָךְ
+# ‹וְהָאֶבֶן הַזֹּאת אֲשֶׁר־שַׂמְתִּי› (“and-the-stone the-this which
+# put/set”)
+# ‹מַצֵּבָה יִהְיֶה בֵּית› (“pillar be house”)
+# ‹אֱלֹהִים וְכֹל אֲשֶׁר› (“God and-all which”)
+# ‹תִּתֶּן־לִי עַשֵּׂר אֲעַשְּׂרֶנּוּ› (“set to-me/my tithe tithe-him/its”)
+# ‹לָךְ› (“to-you/your”)
 # "[EN-AID] And this stone which I have set as a pillar shall be the house
 # of God; and all that You give me I will surely tithe to You."
 m.step("Gen.28.22")
-# ‹אִם־יִהְיֶה אֱלֹהִים עִמָּדִי … עַשֵּׂר אֲעַשְּׂרֶנּוּ לָךְ› (“if be God
-# along-with-me/my … tithe tithe-him/its to-you/your”) — standing handler —
-# if God-with-me ∧ shemarani-in-the-derekh ∧ set-food-and-garment ∧ return-
-# and-safe then the-LORD-to-me-to-God ∧ the-stone-house-God ∧ tithe-aasrenu
+# ‹אִם־יִהְיֶה אֱלֹהִים עִמָּדִי› (“if be God along-with-me/my”)
+# ‹… עַשֵּׂר אֲעַשְּׂרֶנּוּ לָךְ› (“tithe tithe-him/its to-you/your”)
+# — standing handler — if God-with-me ∧ shemarani-in-the-derekh ∧ set-food-
+# and-garment ∧ return-and-safe then the-LORD-to-me-to-God ∧ the-stone-
+# house-God ∧ tithe-aasrenu
 m.handler("elohim_imadi ∧ shemarani_ba_derekh ∧ natan_lechem_u_veged ∧ shavti_ve_shalom",
           "YHWH_li_le_Elohim ∧ ha_even_bet_Elohim ∧ aser_aasrenu")
-# ‹וְהָאֶבֶן הַזֹּאת … עַשֵּׂר אֲעַשְּׂרֶנּוּ› (“and-the-stone the-this …
-# tithe tithe-him/its”) — fact holds: stone-house-tithe-vow-content
+# ‹וְהָאֶבֶן הַזֹּאת … עַשֵּׂר› (“and-the-stone the-this … tithe”)
+# ‹אֲעַשְּׂרֶנּוּ› (“tithe-him/its”)
+# — fact holds: stone-house-tithe-vow-content
 m.fact("stone_house_tithe_vow_content")
 # witness-tier presupposed read:
 # challenged_by_arithmetic_and_rescued_by_exclusion on the_tithe_promise —

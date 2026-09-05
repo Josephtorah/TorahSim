@@ -303,10 +303,26 @@ def op_comment(op, ref=None):
         en = ""
     he = str(op.get("he", "")).strip().replace("\n", " ")
     if he and ref:
-        span_en = gloss_db.translate_span(he, ref)
-        head = ("\u2039%s\u203a (\u201c%s\u201d) \u2014 %s"
-                % (he, span_en, en)) if span_en \
-            else ("\u2039%s\u203a %s" % (he, en))
+        # a long span used to wrap mid-gloss, stranding its Hebrew from its
+        # English on the continuation line (sitting C, 2026-09-05): emit the
+        # span in chunks of up to three words, each on its own glossed line,
+        # then the English comment
+        out = []
+        chunk, count, chunks = [], 0, []
+        for tok in he.split():
+            chunk.append(tok)
+            if re.search(r"[\u05d0-\u05ea]", tok):
+                count += 1
+            if count >= 3:
+                chunks.append(" ".join(chunk)); chunk, count = [], 0
+        if chunk:
+            chunks.append(" ".join(chunk))
+        for c in chunks:
+            span_en = gloss_db.translate_span(c, ref)
+            span_en = re.sub(r"[\u05d0-\u05ea][\u0591-\u05ea\u05f0-\u05f4]*", "?", span_en or "") or "?"
+            out += _wrap_comment("\u2039%s\u203a (\u201c%s\u201d)" % (c, span_en))
+        out += _wrap_comment("\u2014 " + en) if en else []
+        return out
     elif he:
         head = "\u2039%s\u203a %s" % (he, en)
     else:
@@ -349,14 +365,58 @@ def render(uid):
 
     for st in unit["boot_steps"]:
         ref = st["ref"]
-        L.append("# " + ("-" * 26) + " %s · %s " % (ref, st.get("op", ""))
-                 + "-" * max(1, 74 - 30 - len(ref) - len(st.get("op", ""))))
+        # THE ABSOLUTE GLOSSING RULE AT THE STEP HEADER (sitting C of the
+        # audit, 2026-09-05): the step's op name may carry a Hebrew token
+        # (COND_וכי) and the step's `he` carries the verse's two arms; both
+        # were emitted bare — the renderer's one trait every render shared.
+        # Now each gets its word-by-word English right after it, the same
+        # ‹span› (“gloss”) form op_comment has always used.
+        opname = str(st.get("op", ""))
+        op_disp = opname
+        if re.search(r"[א-ת]", opname):
+            heb = re.sub(r"[^א-ת־ ]", " ", opname).strip()
+            g = gloss_db.translate_span(heb, ref) if heb else ""
+            if g:
+                op_disp = "%s (“%s”)" % (opname, g)
+        L.append("# " + ("-" * 26) + " %s · %s " % (ref, op_disp)
+                 + "-" * max(1, 74 - 30 - len(ref) - len(op_disp)))
         he = str(st.get("he", "")).strip().replace("\n", " ")
         if he:
-            L += _wrap_comment(he)
+            # emitted in SHORT CHUNKS (up to three Hebrew words each) so every
+            # line carries its own ‹chunk› (“gloss”) — a wrapped long line
+            # would strand a Hebrew run away from its English; an unglossed
+            # word shows as ? in the English rather than repeating the Hebrew
+            chunk, count = [], 0
+            chunks = []
+            for tok in he.split():
+                chunk.append(tok)
+                if re.search(r"[א-ת]", tok):
+                    count += 1
+                if count >= 3 or tok.endswith("»") or tok == "/":
+                    chunks.append(" ".join(chunk)); chunk, count = [], 0
+            if chunk:
+                chunks.append(" ".join(chunk))
+            for c in chunks:
+                if not re.search(r"[א-ת]", c):
+                    L += _wrap_comment(c)
+                    continue
+                span_en = gloss_db.translate_span(c, ref)
+                span_en = re.sub(r"[א-ת][֑-תװ-״]*", "?", span_en or "")
+                L += _wrap_comment("‹%s› (“%s”)" % (c, span_en or "?"))
         en = st.get("en", "").replace("[EN-AID/JPS] ", "")
         if en:
-            L += _wrap_comment('"%s"' % en)
+            # the tree-era EN-AID line repeats the two Hebrew arms inside its
+            # English («LEFT» / «RIGHT»); they stand glossed just above, so
+            # the repeat is elided to «…» here — and any other Hebrew run in
+            # an English line gets its ‹span› (“gloss”) inline (display only;
+            # the YAML is untouched)
+            en_disp = re.sub(r"«[^»]*[א-ת][^»]*»", "«…»", en)
+            def _inline(m):
+                g = gloss_db.translate_span(m.group(0), ref)
+                g = re.sub(r"[א-ת][֑-תװ-״]*", "?", g or "") or "?"
+                return "‹%s› (“%s”)" % (m.group(0), g)
+            en_disp = re.sub(r"[א-ת][֑-תװ-״]*(?:[ ־][א-ת][֑-תװ-״]*)*", _inline, en_disp)
+            L += _wrap_comment('"%s"' % en_disp)
         L.append('m.step("%s")' % ref)
         for op in st.get("operators", []):
             L += op_comment(op, ref)

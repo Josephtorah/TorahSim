@@ -14,59 +14,74 @@ from machine import Machine
 m = Machine("gen_35_sodom_overthrow_cave")
 
 # -------------------------- Gen.19.1 · TWO_ANGELS_AT_THE_GATE --------------
-# וַיָּבֹאוּ שְׁנֵי הַמַּלְאָכִים סְדֹמָה בָּעֶרֶב וְלוֹט יֹשֵׁב
-# בְּשַׁעַר־סְדֹם וַיַּרְא־לוֹט וַיָּקָם לִקְרָאתָם וַיִּשְׁתַּחוּ אַפַּיִם
-# אָרְצָה
+# ‹וַיָּבֹאוּ שְׁנֵי הַמַּלְאָכִים› (“and-come/bring two the-messenger”)
+# ‹סְדֹמָה בָּעֶרֶב וְלוֹט› (“Sodom-ward in-evening and-Lot”)
+# ‹יֹשֵׁב בְּשַׁעַר־סְדֹם וַיַּרְא־לוֹט› (“dwell/sit in-gate Sodom and-see
+# Lot”)
+# ‹וַיָּקָם לִקְרָאתָם וַיִּשְׁתַּחוּ› (“and-arise to-encountering-
+# them/their and-afflict”)
+# ‹אַפַּיִם אָרְצָה› (“nose earth-ward”)
 # "And the two angels came to Sodom at even; and Lot sat in the gate of
 # Sodom; and Lot saw them, and rose up to meet them; and he fell down on his
 # face to the earth;"
 m.step("Gen.19.1")
-# ‹שְׁנֵי הַמַּלְאָכִים› (“two the-messenger”) — the world gains: shnei-the-
-# messenger
+# ‹שְׁנֵי הַמַּלְאָכִים› (“two the-messenger”)
+# — the world gains: shnei-the-messenger
 m.install("shnei_ha_malakhim")
-# ‹סְדֹמָה … בְּשַׁעַר־סְדֹם› (“Sodom-ward … in-gate Sodom”) — reads without
-# prior install (flag, not fix): Sodom
+# ‹סְדֹמָה … בְּשַׁעַר־סְדֹם› (“Sodom-ward … in-gate Sodom”)
+# — reads without prior install (flag, not fix): Sodom
 m.presupposed("sedom")
-# ‹וַיָּקָם לִקְרָאתָם וַיִּשְׁתַּחוּ אַפַּיִם אָרְצָה› (“and-arise to-
-# encountering-them/their and-afflict nose earth-ward”) — event: bow — agent
-# Lot
+# ‹וַיָּקָם לִקְרָאתָם וַיִּשְׁתַּחוּ› (“and-arise to-encountering-
+# them/their and-afflict”)
+# ‹אַפַּיִם אָרְצָה› (“nose earth-ward”)
+# — event: bow — agent Lot
 m.event("bow", agent="lot")
 
 # -------------------------- Gen.19.2 · THE_COPIED_TRIPLE_AND_THE_REFUSAL ---
-# וַיֹּאמֶר הִנֶּה נָּא־אֲדֹנַי סוּרוּ נָא אֶל־בֵּית עַבְדְּכֶם וְלִינוּ
-# וְרַחֲצוּ רַגְלֵיכֶם וְהִשְׁכַּמְתֶּם וַהֲלַכְתֶּם לְדַרְכְּכֶם
-# וַיֹּאמְרוּ לֹּא כִּי בָרְחוֹב נָלִין
+# ‹וַיֹּאמֶר הִנֶּה נָּא־אֲדֹנַי› (“and-say behold please lord-me/my”)
+# ‹סוּרוּ נָא אֶל־בֵּית› (“turn-aside please to house”)
+# ‹עַבְדְּכֶם וְלִינוּ וְרַחֲצוּ› (“servant-you/your(pl) and-stop and-lave”)
+# ‹רַגְלֵיכֶם וְהִשְׁכַּמְתֶּם וַהֲלַכְתֶּם› (“foot-you/your(pl) and-rise-
+# early and-walk/go”)
+# ‹לְדַרְכְּכֶם וַיֹּאמְרוּ לֹּא› (“to-way/road-you/your(pl) and-say not”)
+# ‹כִּי בָרְחוֹב נָלִין› (“that in-width stop”)
 # "and he said: 'Behold now, my lords, turn aside, I pray you, into your
 # servant's house, and tarry all night, and wash your feet, and ye shall
 # rise up early, and go on your way.' And they said: 'Nay; but we will abide
 # in the broad place all night.'"
 m.step("Gen.19.2")
-# ‹סוּרוּ נָא … וְלִינוּ וְרַחֲצוּ רַגְלֵיכֶם› (“turn-aside please … and-
-# stop and-lave foot-you/your(pl)”) — Lot speaks a demand — LET: turn-aside-
-# stop-and-lave(raglekhem)
+# ‹סוּרוּ נָא … וְלִינוּ› (“turn-aside please … and-stop”)
+# ‹וְרַחֲצוּ רַגְלֵיכֶם› (“and-lave foot-you/your(pl)”)
+# — Lot speaks a demand — LET: turn-aside-stop-and-lave(raglekhem)
 m.declare("lot", "LET",
           "suru_linu_ve_rachatzu(raglekhem)")
-# ‹וַיֹּאמְרוּ לֹּא כִּי בָרְחוֹב נָלִין› (“and-say not that in-width stop”)
+# ‹וַיֹּאמְרוּ לֹּא כִּי› (“and-say not that”)
+# ‹בָרְחוֹב נָלִין› (“in-width stop”)
 # — fact holds: not-that-and-width-stop
 m.fact("lo_ki_va_rechov_nalin")
 
 # -------------------------- Gen.19.3 · THE_URGING_AND_THE_UNLEAVENED_FEAST -
-# וַיִּפְצַר־בָּם מְאֹד וַיָּסֻרוּ אֵלָיו וַיָּבֹאוּ אֶל־בֵּיתוֹ וַיַּעַשׂ
-# לָהֶם מִשְׁתֶּה וּמַצּוֹת אָפָה וַיֹּאכֵלוּ
+# ‹וַיִּפְצַר־בָּם מְאֹד וַיָּסֻרוּ› (“and-peck-at in-them/their very and-
+# turn-aside”)
+# ‹אֵלָיו וַיָּבֹאוּ אֶל־בֵּיתוֹ› (“to-him/its and-come/bring to house-
+# him/its”)
+# ‹וַיַּעַשׂ לָהֶם מִשְׁתֶּה› (“and-make to-them/their drink”)
+# ‹וּמַצּוֹת אָפָה וַיֹּאכֵלוּ› (“and-sweetness cook and-eat”)
 # "And he urged them greatly; and they turned in unto him, and entered into
 # his house; and he made them a feast, and did bake unleavened bread, and
 # they did eat."
 m.step("Gen.19.3")
-# ‹וַיִּפְצַר־בָּם מְאֹד› (“and-peck-at in-them/their very”) — event: urge —
-# agent Lot
+# ‹וַיִּפְצַר־בָּם מְאֹד› (“and-peck-at in-them/their very”)
+# — event: urge — agent Lot
 m.event("urge", agent="lot")
-# ‹וַיָּסֻרוּ אֵלָיו וַיָּבֹאוּ אֶל־בֵּיתוֹ› (“and-turn-aside to-him/its
-# and-come/bring to house-him/its”) — fact holds: and-turn-aside-to-him-and-
-# come/bring
+# ‹וַיָּסֻרוּ אֵלָיו וַיָּבֹאוּ› (“and-turn-aside to-him/its and-
+# come/bring”)
+# ‹אֶל־בֵּיתוֹ› (“to house-him/its”)
+# — fact holds: and-turn-aside-to-him-and-come/bring
 m.fact("va_yasuru_elav_va_yavou")
-# ‹וַיַּעַשׂ לָהֶם מִשְׁתֶּה וּמַצּוֹת אָפָה וַיֹּאכֵלוּ› (“and-make to-
-# them/their drink and-sweetness cook and-eat”) — event: feast — agent Lot;
-# theme mishteh-and-sweetness
+# ‹וַיַּעַשׂ לָהֶם מִשְׁתֶּה› (“and-make to-them/their drink”)
+# ‹וּמַצּוֹת אָפָה וַיֹּאכֵלוּ› (“and-sweetness cook and-eat”)
+# — event: feast — agent Lot; theme mishteh-and-sweetness
 m.event("feast", agent="lot", themes=["mishteh_u_matzot"])
 # witness-tier presupposed read: refusal_ladder on va_yiftzar_bam_meod —
 # read, not installed
@@ -74,35 +89,44 @@ m.witness_read("va_yiftzar_bam_meod", "refusal_ladder",
                 cites=["Bava Metzia 87a:1"])
 
 # -------------------------- Gen.19.4 · THE_SIEGE_RING ----------------------
-# טֶרֶם יִשְׁכָּבוּ וְאַנְשֵׁי הָעִיר אַנְשֵׁי סְדֹם נָסַבּוּ עַל־הַבַּיִת
-# מִנַּעַר וְעַד־זָקֵן כָּל־הָעָם מִקָּצֶה
+# ‹טֶרֶם יִשְׁכָּבוּ וְאַנְשֵׁי› (“non-occurrence lie-down and-man”)
+# ‹הָעִיר אַנְשֵׁי סְדֹם› (“the-city man Sodom”)
+# ‹נָסַבּוּ עַל־הַבַּיִת מִנַּעַר› (“revolve over the-house from-boy”)
+# ‹וְעַד־זָקֵן כָּל־הָעָם מִקָּצֶה› (“and-until old all the-people from-
+# end”)
 # "But before they lay down, the men of the city, even the men of Sodom,
 # compassed the house round, both young and old, all the people from every
 # quarter."
 m.step("Gen.19.4")
-# ‹אַנְשֵׁי הָעִיר אַנְשֵׁי סְדֹם› (“man the-city man Sodom”) — the world
-# gains: men-of-Sodom
+# ‹אַנְשֵׁי הָעִיר אַנְשֵׁי› (“man the-city man”)
+# ‹סְדֹם› (“Sodom”)
+# — the world gains: men-of-Sodom
 m.install("anshei_sedom")
-# ‹טֶרֶם יִשְׁכָּבוּ … נָסַבּוּ› (“non-occurrence lie-down … revolve”) —
-# note: zero events in this verse
+# ‹טֶרֶם יִשְׁכָּבוּ … נָסַבּוּ› (“non-occurrence lie-down … revolve”)
+# — note: zero events in this verse
 m.note_zero_events()
 
 # -------------------------- Gen.19.5 · THE_WHERE_WEAPONIZED ----------------
-# וַיִּקְרְאוּ אֶל־לוֹט וַיֹּאמְרוּ לוֹ אַיֵּה הָאֲנָשִׁים אֲשֶׁר־בָּאוּ
-# אֵלֶיךָ הַלָּיְלָה הוֹצִיאֵם אֵלֵינוּ וְנֵדְעָה אֹתָם
+# ‹וַיִּקְרְאוּ אֶל־לוֹט וַיֹּאמְרוּ› (“and-call to Lot and-say”)
+# ‹לוֹ אַיֵּה הָאֲנָשִׁים› (“to-him/its where? the-man”)
+# ‹אֲשֶׁר־בָּאוּ אֵלֶיךָ הַלָּיְלָה› (“which come/bring to-you/your the-
+# night”)
+# ‹הוֹצִיאֵם אֵלֵינוּ וְנֵדְעָה› (“bring-forth-them/their to-us/our and-
+# know”)
+# ‹אֹתָם› (“obj-marker-them/their”)
 # "And they called unto Lot, and said unto him: 'Where are the men that came
 # in to thee this night? bring them out unto us, that we may know them.'"
 m.step("Gen.19.5")
-# ‹אַיֵּה הָאֲנָשִׁים אֲשֶׁר־בָּאוּ אֵלֶיךָ הַלָּיְלָה› (“where? the-man
-# which come/bring to-you/your the-night”) — fact holds: ayeh-the-man-which-
-# come/bring
+# ‹אַיֵּה הָאֲנָשִׁים אֲשֶׁר־בָּאוּ› (“where? the-man which come/bring”)
+# ‹אֵלֶיךָ הַלָּיְלָה› (“to-you/your the-night”)
+# — fact holds: ayeh-the-man-which-come/bring
 m.fact("ayeh_ha_anashim_asher_bau")
-# ‹הוֹצִיאֵם אֵלֵינוּ› (“bring-forth-them/their to-us/our”) — men-of-Sodom
-# speaks a demand — LET: hotziem(to-the-man)
+# ‹הוֹצִיאֵם אֵלֵינוּ› (“bring-forth-them/their to-us/our”)
+# — men-of-Sodom speaks a demand — LET: hotziem(to-the-man)
 m.declare("anshei_sedom", "LET",
           "hotziem(el_ha_anashim)")
-# ‹וְנֵדְעָה אֹתָם› (“and-know obj-marker-them/their”) — men-of-Sodom speaks
-# a demand — CMD-US: nedah(otam)
+# ‹וְנֵדְעָה אֹתָם› (“and-know obj-marker-them/their”)
+# — men-of-Sodom speaks a demand — CMD-US: nedah(otam)
 m.declare("anshei_sedom", "CMD-US",
           "nedah(otam)")
 # witness-tier presupposed read: enacted_statute_not_impulse on
@@ -111,108 +135,148 @@ m.witness_read("city_practice", "enacted_statute_not_impulse",
                 cites=["Bereshit Rabbah 50:7", "Bereshit Rabbah 51:5"])
 
 # -------------------------- Gen.19.6 · THE_DOOR_SHUT_BEHIND ----------------
-# וַיֵּצֵא אֲלֵהֶם לוֹט הַפֶּתְחָה וְהַדֶּלֶת סָגַר אַחֲרָיו
+# ‹וַיֵּצֵא אֲלֵהֶם לוֹט› (“and-bring-forth to-them/their Lot”)
+# ‹הַפֶּתְחָה וְהַדֶּלֶת סָגַר› (“the-opening-ward and-the-something-
+# swinging shut-up”)
+# ‹אַחֲרָיו› (“after-him/its”)
 # "And Lot went out unto them to the door, and shut the door after him."
 m.step("Gen.19.6")
-# ‹וַיֵּצֵא … וְהַדֶּלֶת סָגַר אַחֲרָיו› (“and-bring-forth … and-the-
-# something-swinging shut-up after-him/its”) — event: exit-shut — agent Lot
+# ‹וַיֵּצֵא … וְהַדֶּלֶת סָגַר› (“and-bring-forth … and-the-something-
+# swinging shut-up”)
+# ‹אַחֲרָיו› (“after-him/its”)
+# — event: exit-shut — agent Lot
 m.event("exit_shut", agent="lot")
 
 # -------------------------- Gen.19.7 · THE_BROTHERS_PLEA -------------------
-# וַיֹּאמַר אַל־נָא אַחַי תָּרֵעוּ
+# ‹וַיֹּאמַר אַל־נָא אַחַי› (“and-say do-not please brother-me/my”)
+# ‹תָּרֵעוּ› (“spoil”)
 # "And he said: 'I pray you, my brethren, do not so wickedly."
 m.step("Gen.19.7")
-# ‹אַל־נָא אַחַי תָּרֵעוּ› (“do-not please brother-me/my spoil”) — fact
-# holds: over-please-achai-spoil
+# ‹אַל־נָא אַחַי תָּרֵעוּ› (“do-not please brother-me/my spoil”)
+# — fact holds: over-please-achai-spoil
 m.fact("al_na_achai_tareu")
 
 # -------------------------- Gen.19.8 · THE_VILE_OFFER_AND_THE_ROOF_LAW -----
-# הִנֵּה־נָא לִי שְׁתֵּי בָנוֹת אֲשֶׁר לֹא־יָדְעוּ אִישׁ אוֹצִיאָה־נָּא
-# אֶתְהֶן אֲלֵיכֶם וַעֲשׂוּ לָהֶן כַּטּוֹב בְּעֵינֵיכֶם רַק לָאֲנָשִׁים
-# הָאֵל אַל־תַּעֲשׂוּ דָבָר כִּי־עַל־כֵּן בָּאוּ בְּצֵל קֹרָתִי
+# ‹הִנֵּה־נָא לִי שְׁתֵּי› (“behold please to-me/my two”)
+# ‹בָנוֹת אֲשֶׁר לֹא־יָדְעוּ› (“daughter which not know”)
+# ‹אִישׁ אוֹצִיאָה־נָּא אֶתְהֶן› (“man bring-forth please obj-marker-
+# them/their”)
+# ‹אֲלֵיכֶם וַעֲשׂוּ לָהֶן› (“to-you/your(pl) and-make to-them/their”)
+# ‹כַּטּוֹב בְּעֵינֵיכֶם רַק› (“like-good in-eye-you/your(pl) leanness”)
+# ‹לָאֲנָשִׁים הָאֵל אַל־תַּעֲשׂוּ› (“to-man the-these do-not make”)
+# ‹דָבָר כִּי־עַל־כֵּן בָּאוּ› (“word/thing very-widely-used-as-a-relati
+# above set-upright come/bring”)
+# ‹בְּצֵל קֹרָתִי› (“in-shade rafter-me/my”)
 # "Behold now, I have two daughters that have not known man; let me, I pray
 # you, bring them out unto you, and do ye to them as is good in your eyes;
 # only unto these men do nothing; forasmuch as they are come under the
 # shadow of my roof.'"
 m.step("Gen.19.8")
-# ‹שְׁתֵּי בָנוֹת אֲשֶׁר לֹא־יָדְעוּ אִישׁ› (“two daughter which not know
-# man”) — the world gains: shtei-the-daughters
+# ‹שְׁתֵּי בָנוֹת אֲשֶׁר› (“two daughter which”)
+# ‹לֹא־יָדְעוּ אִישׁ› (“not know man”)
+# — the world gains: shtei-the-daughters
 m.install("shtei_ha_banot")
-# ‹וַעֲשׂוּ לָהֶן כַּטּוֹב בְּעֵינֵיכֶם› (“and-make to-them/their like-good
-# in-eye-you/your(pl)”) — Lot speaks a demand — LET: make(lahen-like-good-
-# in-your-eyes)
+# ‹וַעֲשׂוּ לָהֶן כַּטּוֹב› (“and-make to-them/their like-good”)
+# ‹בְּעֵינֵיכֶם› (“in-eye-you/your(pl)”)
+# — Lot speaks a demand — LET: make(lahen-like-good-in-your-eyes)
 m.declare("lot", "LET",
           "asu(lahen_ka_tov_be_eineikhem)")
-# ‹רַק לָאֲנָשִׁים הָאֵל אַל־תַּעֲשׂוּ דָבָר› (“leanness to-man the-these
-# do-not make word/thing”) — Lot speaks a demand — LET-NOT: make(to-man-the-
-# to-word/thing)
+# ‹רַק לָאֲנָשִׁים הָאֵל› (“leanness to-man the-these”)
+# ‹אַל־תַּעֲשׂוּ דָבָר› (“do-not make word/thing”)
+# — Lot speaks a demand — LET-NOT: make(to-man-the-to-word/thing)
 m.declare("lot", "LET-NOT",
           "taasu(la_anashim_ha_el_davar)")
 
 # -------------------------- Gen.19.9 · THE_JUDGE_TAUNT_AND_THE_DOOR_RUSH ---
-# וַיֹּאמְרוּ גֶּשׁ־הָלְאָה וַיֹּאמְרוּ הָאֶחָד בָּא־לָגוּר וַיִּשְׁפֹּט
-# שָׁפוֹט עַתָּה נָרַע לְךָ מֵהֶם וַיִּפְצְרוּ בָאִישׁ בְּלוֹט מְאֹד
-# וַיִּגְּשׁוּ לִשְׁבֹּר הַדָּלֶת
+# ‹וַיֹּאמְרוּ גֶּשׁ־הָלְאָה וַיֹּאמְרוּ› (“and-say be the-distance and-
+# say”)
+# ‹הָאֶחָד בָּא־לָגוּר וַיִּשְׁפֹּט› (“the-one come/bring to-turn-aside-
+# from-the-road and-judge”)
+# ‹שָׁפוֹט עַתָּה נָרַע› (“judge now spoil”)
+# ‹לְךָ מֵהֶם וַיִּפְצְרוּ› (“to-you/your from-them/their and-peck-at”)
+# ‹בָאִישׁ בְּלוֹט מְאֹד› (“in-man in-Lot very”)
+# ‹וַיִּגְּשׁוּ לִשְׁבֹּר הַדָּלֶת› (“and-be to-burst the-something-
+# swinging”)
 # "And they said: 'Stand back.' And they said: 'This one fellow came in to
 # sojourn, and he will needs play the judge; now will we deal worse with
 # thee, than with them.' And they pressed sore upon the man, even Lot, and
 # drew near to break the door."
 m.step("Gen.19.9")
-# ‹גֶּשׁ־הָלְאָה› (“be the-distance”) — men-of-Sodom speaks a demand — LET:
-# be-halah(Lot)
+# ‹גֶּשׁ־הָלְאָה› (“be the-distance”)
+# — men-of-Sodom speaks a demand — LET: be-halah(Lot)
 m.declare("anshei_sedom", "LET",
           "gesh_halah(lot)")
-# ‹הָאֶחָד בָּא־לָגוּר וַיִּשְׁפֹּט שָׁפוֹט עַתָּה נָרַע לְךָ מֵהֶם› (“the-
-# one come/bring to-turn-aside-from-the-road and-judge judge now spoil to-
-# you/your from-them/their”) — fact holds: and-judge-judge; spoil-to-you-
-# mehem
+# ‹הָאֶחָד בָּא־לָגוּר וַיִּשְׁפֹּט› (“the-one come/bring to-turn-aside-
+# from-the-road and-judge”)
+# ‹שָׁפוֹט עַתָּה נָרַע› (“judge now spoil”)
+# ‹לְךָ מֵהֶם› (“to-you/your from-them/their”)
+# — fact holds: and-judge-judge; spoil-to-you-mehem
 m.fact("va_yishpot_shafot",
        "nara_lekha_mehem")
 
 # -------------------------- Gen.19.10 · THE_INVERTED_RESCUE ----------------
-# וַיִּשְׁלְחוּ הָאֲנָשִׁים אֶת־יָדָם וַיָּבִיאוּ אֶת־לוֹט אֲלֵיהֶם
-# הַבָּיְתָה וְאֶת־הַדֶּלֶת סָגָרוּ
+# ‹וַיִּשְׁלְחוּ הָאֲנָשִׁים אֶת־יָדָם› (“and-send the-man obj-marker hand-
+# them/their”)
+# ‹וַיָּבִיאוּ אֶת־לוֹט אֲלֵיהֶם› (“and-come/bring obj-marker Lot to-
+# them/their”)
+# ‹הַבָּיְתָה וְאֶת־הַדֶּלֶת סָגָרוּ› (“the-house-ward and-obj-marker the-
+# something-swinging shut-up”)
 # "But the men put forth their hand, and brought Lot into the house to them,
 # and the door they shut."
 m.step("Gen.19.10")
-# ‹וַיָּבִיאוּ אֶת־לוֹט אֲלֵיהֶם הַבָּיְתָה וְאֶת־הַדֶּלֶת סָגָרוּ› (“and-
-# come/bring obj-marker Lot to-them/their the-house-ward and-obj-marker the-
-# something-swinging shut-up”) — event: pull-in — agent shnei-the-messenger;
-# theme Lot
+# ‹וַיָּבִיאוּ אֶת־לוֹט אֲלֵיהֶם› (“and-come/bring obj-marker Lot to-
+# them/their”)
+# ‹הַבָּיְתָה וְאֶת־הַדֶּלֶת סָגָרוּ› (“the-house-ward and-obj-marker the-
+# something-swinging shut-up”)
+# — event: pull-in — agent shnei-the-messenger; theme Lot
 m.event("pull_in", agent="shnei_ha_malakhim", themes=["lot"])
 
 # -------------------------- Gen.19.11 · THE_BLINDNESS ----------------------
-# וְאֶת־הָאֲנָשִׁים אֲשֶׁר־פֶּתַח הַבַּיִת הִכּוּ בַּסַּנְוֵרִים מִקָּטֹן
-# וְעַד־גָּדוֹל וַיִּלְאוּ לִמְצֹא הַפָּתַח
+# ‹וְאֶת־הָאֲנָשִׁים אֲשֶׁר־פֶּתַח הַבַּיִת› (“and-obj-marker the-man which
+# opening the-house”)
+# ‹הִכּוּ בַּסַּנְוֵרִים מִקָּטֹן› (“strike in-blindness from-small”)
+# ‹וְעַד־גָּדוֹל וַיִּלְאוּ לִמְצֹא› (“and-until great and-tire to-find”)
+# ‹הַפָּתַח› (“the-opening”)
 # "And they smote the men that were at the door of the house with blindness,
 # both small and great; so that they wearied themselves to find the door."
 m.step("Gen.19.11")
-# ‹הִכּוּ בַּסַּנְוֵרִים› (“strike in-blindness”) — event: smite-blind —
-# agent shnei-the-messenger; theme men-of-Sodom
+# ‹הִכּוּ בַּסַּנְוֵרִים› (“strike in-blindness”)
+# — event: smite-blind — agent shnei-the-messenger; theme men-of-Sodom
 m.event("smite_blind", agent="shnei_ha_malakhim", themes=["anshei_sedom"])
 
 # -------------------------- Gen.19.12 · THE_EVACUATION_COMMAND -------------
-# וַיֹּאמְרוּ הָאֲנָשִׁים אֶל־לוֹט עֹד מִי־לְךָ פֹה חָתָן וּבָנֶיךָ
-# וּבְנֹתֶיךָ וְכֹל אֲשֶׁר־לְךָ בָּעִיר הוֹצֵא מִן־הַמָּקוֹם
+# ‹וַיֹּאמְרוּ הָאֲנָשִׁים אֶל־לוֹט› (“and-say the-man to Lot”)
+# ‹עֹד מִי־לְךָ פֹה› (“still/again who? to-you/your this-place”)
+# ‹חָתָן וּבָנֶיךָ וּבְנֹתֶיךָ› (“relative-by-marriage and-son-you/your and-
+# daughter-you/your”)
+# ‹וְכֹל אֲשֶׁר־לְךָ בָּעִיר› (“and-all which to-you/your in-city”)
+# ‹הוֹצֵא מִן־הַמָּקוֹם› (“bring-forth from the-place”)
 # "And the men said unto Lot: 'Hast thou here any besides? son-in-law, and
 # thy sons, and thy daughters, and whomsoever thou hast in the city; bring
 # them out of the place;"
 m.step("Gen.19.12")
-# ‹הוֹצֵא מִן־הַמָּקוֹם› (“bring-forth from the-place”) — the-messenger
-# speaks a demand — LET: bring-forth(all-which-to-you-from-the-place)
+# ‹הוֹצֵא מִן־הַמָּקוֹם› (“bring-forth from the-place”)
+# — the-messenger speaks a demand — LET: bring-forth(all-which-to-you-from-
+# the-place)
 m.declare("ha_malakhim", "LET",
           "hotze(kol_asher_lekha_min_ha_maqom)")
 
 # -------------------------- Gen.19.13 · THE_MISSION_STATEMENT --------------
-# כִּי־מַשְׁחִתִים אֲנַחְנוּ אֶת־הַמָּקוֹם הַזֶּה כִּי־גָדְלָה צַעֲקָתָם
-# אֶת־פְּנֵי יְהוָה וַיְשַׁלְּחֵנוּ יְהוָה לְשַׁחֲתָהּ
+# ‹כִּי־מַשְׁחִתִים אֲנַחְנוּ אֶת־הַמָּקוֹם› (“that decay we obj-marker the-
+# place”)
+# ‹הַזֶּה כִּי־גָדְלָה צַעֲקָתָם› (“the-this that be-large shriek-
+# them/their”)
+# ‹אֶת־פְּנֵי יְהוָה וַיְשַׁלְּחֵנוּ› (“with face YHWH and-send-us/our”)
+# ‹יְהוָה לְשַׁחֲתָהּ› (“YHWH to-decay-her/its”)
 # "for we will destroy this place, because the cry of them is waxed great
 # before the LORD; and the LORD hath sent us to destroy it.'"
 m.step("Gen.19.13")
-# ‹כִּי־מַשְׁחִתִים אֲנַחְנוּ … כִּי־גָדְלָה צַעֲקָתָם … וַיְשַׁלְּחֵנוּ
-# יְהוָה› (“that decay we … that be-large shriek-them/their … and-send-
-# us/our YHWH”) — fact holds: decay-we-obj-marker-the-place; gadlah-
-# tzaaqatam-and-yeshalchenu-the-LORD
+# ‹כִּי־מַשְׁחִתִים אֲנַחְנוּ … כִּי־גָדְלָה› (“that decay we … that be-
+# large”)
+# ‹צַעֲקָתָם … וַיְשַׁלְּחֵנוּ יְהוָה› (“shriek-them/their … and-send-us/our
+# YHWH”)
+# — fact holds: decay-we-obj-marker-the-place; gadlah-tzaaqatam-and-
+# yeshalchenu-the-LORD
 m.fact("mashchitim_anachnu_et_ha_maqom",
        "gadlah_tzaaqatam_va_yeshalchenu_YHWH")
 # witness-tier presupposed read: penalty_discharged_at_the_ladder on
@@ -221,33 +285,46 @@ m.witness_read("we_are_destroying", "penalty_discharged_at_the_ladder",
                 cites=["Bereshit Rabbah 50:9", "Bereshit Rabbah 68:12"])
 
 # -------------------------- Gen.19.14 · THE_MOCKED_DEMAND ------------------
-# וַיֵּצֵא לוֹט וַיְדַבֵּר אֶל־חֲתָנָיו לֹקְחֵי בְנֹתָיו וַיֹּאמֶר קוּמוּ
-# צְּאוּ מִן־הַמָּקוֹם הַזֶּה כִּי־מַשְׁחִית יְהוָה אֶת־הָעִיר וַיְהִי
-# כִמְצַחֵק בְּעֵינֵי חֲתָנָיו
+# ‹וַיֵּצֵא לוֹט וַיְדַבֵּר› (“and-bring-forth Lot and-speak”)
+# ‹אֶל־חֲתָנָיו לֹקְחֵי בְנֹתָיו› (“to relative-by-marriage-him/its take
+# daughter-him/its”)
+# ‹וַיֹּאמֶר קוּמוּ צְּאוּ› (“and-say arise bring-forth”)
+# ‹מִן־הַמָּקוֹם הַזֶּה כִּי־מַשְׁחִית› (“from the-place the-this that
+# decay”)
+# ‹יְהוָה אֶת־הָעִיר וַיְהִי› (“YHWH obj-marker the-city and-be”)
+# ‹כִמְצַחֵק בְּעֵינֵי חֲתָנָיו› (“like-laugh-outright in-eye relative-by-
+# marriage-him/its”)
 # "And Lot went out, and spoke unto his sons-in-law, who married his
 # daughters, and said: 'Up, get you out of this place; for the LORD will
 # destroy the city.' But he seemed unto his sons-in-law as one that jested."
 m.step("Gen.19.14")
-# ‹קוּמוּ צְּאוּ מִן־הַמָּקוֹם הַזֶּה› (“arise bring-forth from the-place
-# the-this”) — Lot speaks a demand — LET: arise-bring-forth(from-the-place)
+# ‹קוּמוּ צְּאוּ מִן־הַמָּקוֹם› (“arise bring-forth from the-place”)
+# ‹הַזֶּה› (“the-this”)
+# — Lot speaks a demand — LET: arise-bring-forth(from-the-place)
 m.declare("lot", "LET",
           "qumu_tzeu(min_ha_maqom)")
-# ‹וַיְהִי כִמְצַחֵק בְּעֵינֵי חֲתָנָיו› (“and-be like-laugh-outright in-eye
-# relative-by-marriage-him/its”) — fact holds: and-be-khi-metzacheq-in-eyes-
-# of-chatanav
+# ‹וַיְהִי כִמְצַחֵק בְּעֵינֵי› (“and-be like-laugh-outright in-eye”)
+# ‹חֲתָנָיו› (“relative-by-marriage-him/its”)
+# — fact holds: and-be-khi-metzacheq-in-eyes-of-chatanav
 m.fact("va_yehi_khi_metzacheq_be_einei_chatanav")
 
 # -------------------------- Gen.19.15 · DAWN_AND_THE_PAIR_TO_LOT -----------
-# וּכְמוֹ הַשַּׁחַר עָלָה וַיָּאִיצוּ הַמַּלְאָכִים בְּלוֹט לֵאמֹר קוּם קַח
-# אֶת־אִשְׁתְּךָ וְאֶת־שְׁתֵּי בְנֹתֶיךָ הַנִּמְצָאֹת פֶּן־תִּסָּפֶה
-# בַּעֲוֺן הָעִיר
+# ‹וּכְמוֹ הַשַּׁחַר עָלָה› (“and-form-of-the-prefix-'k-' the-dawn go-up”)
+# ‹וַיָּאִיצוּ הַמַּלְאָכִים בְּלוֹט› (“and-press the-messenger in-Lot”)
+# ‹לֵאמֹר קוּם קַח› (“to-say arise take”)
+# ‹אֶת־אִשְׁתְּךָ וְאֶת־שְׁתֵּי בְנֹתֶיךָ› (“obj-marker woman-you/your and-
+# obj-marker two daughter-you/your”)
+# ‹הַנִּמְצָאֹת פֶּן־תִּסָּפֶה בַּעֲוֺן› (“the-find lest scrape-together in-
+# perversity”)
+# ‹הָעִיר› (“the-city”)
 # "And when the morning arose, then the angels hastened Lot, saying: 'Arise,
 # take thy wife, and thy two daughters that are here; lest thou be swept
 # away in the iniquity of the city.'"
 m.step("Gen.19.15")
-# ‹קוּם קַח אֶת־אִשְׁתְּךָ וְאֶת־שְׁתֵּי בְנֹתֶיךָ› (“arise take obj-marker
-# woman-you/your and-obj-marker two daughter-you/your”) — the-messenger
-# speaks a demand — LET: arise-take(ishtekha-and-shtei-venotekha)
+# ‹קוּם קַח אֶת־אִשְׁתְּךָ› (“arise take obj-marker woman-you/your”)
+# ‹וְאֶת־שְׁתֵּי בְנֹתֶיךָ› (“and-obj-marker two daughter-you/your”)
+# — the-messenger speaks a demand — LET: arise-take(ishtekha-and-shtei-
+# venotekha)
 m.declare("ha_malakhim", "LET",
           "qum_qach(ishtekha_u_shtei_venotekha)")
 # witness-tier presupposed read: standing_measure_of_time_and_distance on
@@ -256,48 +333,59 @@ m.witness_read("dawn_timestamps", "standing_measure_of_time_and_distance",
                 cites=["Bereshit Rabbah 50:10", "Bereshit Rabbah 50:3"])
 
 # -------------------------- Gen.19.16 · THE_LINGERING_AND_THE_SEIZURE ------
-# וַיִּתְמַהְמָהּ וַיַּחֲזִקוּ הָאֲנָשִׁים בְּיָדוֹ וּבְיַד־אִשְׁתּוֹ
-# וּבְיַד שְׁתֵּי בְנֹתָיו בְּחֶמְלַת יְהוָה עָלָיו וַיֹּצִאֻהוּ
-# וַיַּנִּחֻהוּ מִחוּץ לָעִיר
+# ‹וַיִּתְמַהְמָהּ וַיַּחֲזִקוּ הָאֲנָשִׁים› (“and-question and-fasten-upon
+# the-man”)
+# ‹בְּיָדוֹ וּבְיַד־אִשְׁתּוֹ וּבְיַד› (“in-hand-him/its and-in-hand woman-
+# him/its and-in-hand”)
+# ‹שְׁתֵּי בְנֹתָיו בְּחֶמְלַת› (“two daughter-him/its in-commiseration”)
+# ‹יְהוָה עָלָיו וַיֹּצִאֻהוּ› (“YHWH over-him/its and-bring-forth-him/its”)
+# ‹וַיַּנִּחֻהוּ מִחוּץ לָעִיר› (“and-deposit-him/its from-outside to-city”)
 # "But he lingered; and the men laid hold upon his hand, and upon the hand
 # of his wife, and upon the hand of his two daughters; the LORD being
 # merciful unto him. And they brought him forth, and set him without the
 # city."
 m.step("Gen.19.16")
-# ‹וַיִּתְמַהְמָהּ וַיַּחֲזִקוּ הָאֲנָשִׁים בְּיָדוֹ … וַיֹּצִאֻהוּ› (“and-
-# question and-fasten-upon the-man in-hand-him/its … and-bring-forth-
-# him/its”) — event: seize-carry — agent shnei-the-messenger; theme Lot-and-
-# veito
+# ‹וַיִּתְמַהְמָהּ וַיַּחֲזִקוּ הָאֲנָשִׁים› (“and-question and-fasten-upon
+# the-man”)
+# ‹בְּיָדוֹ … וַיֹּצִאֻהוּ› (“in-hand-him/its … and-bring-forth-him/its”)
+# — event: seize-carry — agent shnei-the-messenger; theme Lot-and-veito
 m.event("seize_carry", agent="shnei_ha_malakhim", themes=["lot_u_veito"])
 
 # -------------------------- Gen.19.17 · THE_ESCAPE_SPEECH ------------------
-# וַיְהִי כְהוֹצִיאָם אֹתָם הַחוּצָה וַיֹּאמֶר הִמָּלֵט עַל־נַפְשֶׁךָ
-# אַל־תַּבִּיט אַחֲרֶיךָ וְאַל־תַּעֲמֹד בְּכָל־הַכִּכָּר הָהָרָה הִמָּלֵט
-# פֶּן־תִּסָּפֶה
+# ‹וַיְהִי כְהוֹצִיאָם אֹתָם› (“and-be like-bring-forth-them/their obj-
+# marker-them/their”)
+# ‹הַחוּצָה וַיֹּאמֶר הִמָּלֵט› (“the-outside-ward and-say be-smooth”)
+# ‹עַל־נַפְשֶׁךָ אַל־תַּבִּיט אַחֲרֶיךָ› (“over living-being-you/your do-not
+# look after-you/your”)
+# ‹וְאַל־תַּעֲמֹד בְּכָל־הַכִּכָּר הָהָרָה› (“and-do-not stand in-all the-
+# circle the-mountain-ward”)
+# ‹הִמָּלֵט פֶּן־תִּסָּפֶה› (“be-smooth lest scrape-together”)
 # "And it came to pass, when they had brought them forth abroad, that he
 # said: 'Escape for thy life; look not behind thee, neither stay thou in all
 # the Plain; escape to the mountain, lest thou be swept away.'"
 m.step("Gen.19.17")
-# ‹הִמָּלֵט עַל־נַפְשֶׁךָ … הָהָרָה הִמָּלֵט› (“be-smooth over living-being-
-# you/your … the-mountain-ward be-smooth”) — the-messenger speaks a demand —
-# LET: be-smooth(over-nafshekha)
+# ‹הִמָּלֵט עַל־נַפְשֶׁךָ … הָהָרָה› (“be-smooth over living-being-you/your
+# … the-mountain-ward”)
+# ‹הִמָּלֵט› (“be-smooth”)
+# — the-messenger speaks a demand — LET: be-smooth(over-nafshekha)
 m.declare("ha_malakhim", "LET",
           "himalet(al_nafshekha)")
-# ‹אַל־תַּבִּיט אַחֲרֶיךָ› (“do-not look after-you/your”) — the-messenger
-# speaks a demand — LET-NOT: look(acharekha)
+# ‹אַל־תַּבִּיט אַחֲרֶיךָ› (“do-not look after-you/your”)
+# — the-messenger speaks a demand — LET-NOT: look(acharekha)
 m.declare("ha_malakhim", "LET-NOT",
           "tabit(acharekha)")
-# ‹וְאַל־תַּעֲמֹד בְּכָל־הַכִּכָּר› (“and-do-not stand in-all the-circle”) —
-# the-messenger speaks a demand — LET-NOT: stand(in-all-the-circle)
+# ‹וְאַל־תַּעֲמֹד בְּכָל־הַכִּכָּר› (“and-do-not stand in-all the-circle”)
+# — the-messenger speaks a demand — LET-NOT: stand(in-all-the-circle)
 m.declare("ha_malakhim", "LET-NOT",
           "taamod(be_khol_ha_kikar)")
 
 # -------------------------- Gen.19.18 · THE_VERBLESS_NO --------------------
-# וַיֹּאמֶר לוֹט אֲלֵהֶם אַל־נָא אֲדֹנָי
+# ‹וַיֹּאמֶר לוֹט אֲלֵהֶם› (“and-say Lot to-them/their”)
+# ‹אַל־נָא אֲדֹנָי› (“do-not please Lord-me/my”)
 # "And Lot said unto them: 'Oh, not so, my lord;"
 m.step("Gen.19.18")
-# ‹אַל־נָא אֲדֹנָי› (“do-not please Lord-me/my”) — fact holds: over-please-
-# adonai
+# ‹אַל־נָא אֲדֹנָי› (“do-not please Lord-me/my”)
+# — fact holds: over-please-adonai
 m.fact("al_na_adonai")
 # witness-grounded state (its own tier): dispute_inside_one_spine_member on
 # adonai_at_19_18
@@ -309,101 +397,138 @@ m.witness_read("al_na_adonai", "holy_exception",
                 cites=["Shevuot 35b:11", "Shevuot 35b:12"])
 
 # -------------------------- Gen.19.19 · THE_INABILITY_CLAIM ----------------
-# הִנֵּה־נָא מָצָא עַבְדְּךָ חֵן בְּעֵינֶיךָ וַתַּגְדֵּל חַסְדְּךָ אֲשֶׁר
-# עָשִׂיתָ עִמָּדִי לְהַחֲיוֹת אֶת־נַפְשִׁי וְאָנֹכִי לֹא אוּכַל לְהִמָּלֵט
-# הָהָרָה פֶּן־תִּדְבָּקַנִי הָרָעָה וָמַתִּי
+# ‹הִנֵּה־נָא מָצָא עַבְדְּךָ› (“behold please find servant-you/your”)
+# ‹חֵן בְּעֵינֶיךָ וַתַּגְדֵּל› (“graciousness in-eye-you/your and-be-
+# large”)
+# ‹חַסְדְּךָ אֲשֶׁר עָשִׂיתָ› (“kindness-you/your which make”)
+# ‹עִמָּדִי לְהַחֲיוֹת אֶת־נַפְשִׁי› (“along-with-me/my to-live obj-marker
+# living-being-me/my”)
+# ‹וְאָנֹכִי לֹא אוּכַל› (“and-I not be-able”)
+# ‹לְהִמָּלֵט הָהָרָה פֶּן־תִּדְבָּקַנִי› (“to-be-smooth the-mountain-ward
+# lest impinge-me/my”)
+# ‹הָרָעָה וָמַתִּי› (“the-bad and-die”)
 # "behold now, thy servant hath found grace in thy sight, and thou hast
 # magnified thy mercy, which thou hast shown unto me in saving my life; and
 # I cannot escape to the mountain, lest the evil overtake me, and I die."
 m.step("Gen.19.19")
-# ‹מָצָא עַבְדְּךָ חֵן … וְאָנֹכִי לֹא אוּכַל לְהִמָּלֵט› (“find servant-
-# you/your graciousness … and-I not be-able to-be-smooth”) — fact holds:
-# find-graciousness-and-be-large-chasdekha; not-be-able-to-be-smooth
+# ‹מָצָא עַבְדְּךָ חֵן› (“find servant-you/your graciousness”)
+# ‹… וְאָנֹכִי לֹא אוּכַל› (“and-I not be-able”)
+# ‹לְהִמָּלֵט› (“to-be-smooth”)
+# — fact holds: find-graciousness-and-be-large-chasdekha; not-be-able-to-be-
+# smooth
 m.fact("matza_chen_va_tagdel_chasdekha",
        "lo_ukhal_le_himalet")
 
 # -------------------------- Gen.19.20 · THE_LITTLE_CITY_PLEA ---------------
-# הִנֵּה־נָא הָעִיר הַזֹּאת קְרֹבָה לָנוּס שָׁמָּה וְהִיא מִצְעָר אִמָּלְטָה
-# נָּא שָׁמָּה הֲלֹא מִצְעָר הִוא וּתְחִי נַפְשִׁי
+# ‹הִנֵּה־נָא הָעִיר הַזֹּאת› (“behold please the-city the-this”)
+# ‹קְרֹבָה לָנוּס שָׁמָּה› (“near to-flit there-ward”)
+# ‹וְהִיא מִצְעָר אִמָּלְטָה› (“and-he/it petty be-smooth”)
+# ‹נָּא שָׁמָּה הֲלֹא› (“please there-ward is-it-not”)
+# ‹מִצְעָר הִוא וּתְחִי› (“petty he/it and-live”)
+# ‹נַפְשִׁי› (“living-being-me/my”)
 # "Behold now, this city is near to flee unto, and it is a little one; oh,
 # let me escape thither—is it not a little one?—and my soul shall live.'"
 m.step("Gen.19.20")
-# ‹אִמָּלְטָה נָּא שָׁמָּה הֲלֹא מִצְעָר הִוא› (“be-smooth please there-ward
-# is-it-not petty he/it”) — fact holds: imaltah-please-shamah-the-not-petty-
-# he/it
+# ‹אִמָּלְטָה נָּא שָׁמָּה› (“be-smooth please there-ward”)
+# ‹הֲלֹא מִצְעָר הִוא› (“is-it-not petty he/it”)
+# — fact holds: imaltah-please-shamah-the-not-petty-he/it
 m.fact("imaltah_na_shamah_ha_lo_mitzar_hi")
 
 # -------------------------- Gen.19.21 · THE_GRANT --------------------------
-# וַיֹּאמֶר אֵלָיו הִנֵּה נָשָׂאתִי פָנֶיךָ גַּם לַדָּבָר הַזֶּה לְבִלְתִּי
-# הָפְכִּי אֶת־הָעִיר אֲשֶׁר דִּבַּרְתָּ
+# ‹וַיֹּאמֶר אֵלָיו הִנֵּה› (“and-say to-him/its behold”)
+# ‹נָשָׂאתִי פָנֶיךָ גַּם› (“lift/carry face-you/your also”)
+# ‹לַדָּבָר הַזֶּה לְבִלְתִּי› (“to-word/thing the-this to-failure-of”)
+# ‹הָפְכִּי אֶת־הָעִיר אֲשֶׁר› (“turn-about-me/my obj-marker the-city
+# which”)
+# ‹דִּבַּרְתָּ› (“speak”)
 # "And he said unto him: 'See, I have accepted thee concerning this thing
 # also, that I will not overthrow the city of which thou hast spoken."
 m.step("Gen.19.21")
-# ‹נָשָׂאתִי פָנֶיךָ … לְבִלְתִּי הָפְכִּי אֶת־הָעִיר› (“lift/carry face-
-# you/your … to-failure-of turn-about-me/my obj-marker the-city”) — fact
-# holds: lift/carry-fanekha-to-failure-of-hofki-obj-marker-the-city
+# ‹נָשָׂאתִי פָנֶיךָ … לְבִלְתִּי› (“lift/carry face-you/your … to-failure-
+# of”)
+# ‹הָפְכִּי אֶת־הָעִיר› (“turn-about-me/my obj-marker the-city”)
+# — fact holds: lift/carry-fanekha-to-failure-of-hofki-obj-marker-the-city
 m.fact("nasati_fanekha_le_vilti_hofki_et_ha_ir")
 
 # -------------------------- Gen.19.22 · HURRY_AND_THE_REPORT_NAMING --------
-# מַהֵר הִמָּלֵט שָׁמָּה כִּי לֹא אוּכַל לַעֲשׂוֹת דָּבָר עַד־בֹּאֲךָ
-# שָׁמָּה עַל־כֵּן קָרָא שֵׁם־הָעִיר צוֹעַר
+# ‹מַהֵר הִמָּלֵט שָׁמָּה› (“hasten be-smooth there-ward”)
+# ‹כִּי לֹא אוּכַל› (“that not be-able”)
+# ‹לַעֲשׂוֹת דָּבָר עַד־בֹּאֲךָ› (“to-make word/thing until come/bring-
+# you/your”)
+# ‹שָׁמָּה עַל־כֵּן קָרָא› (“there-ward over so call”)
+# ‹שֵׁם־הָעִיר צוֹעַר› (“name the-city Zoar”)
 # "Hasten thou, escape thither; for I cannot do any thing till thou be come
 # thither.'—Therefore the name of the city was called Zoar.—"
 m.step("Gen.19.22")
-# ‹מַהֵר הִמָּלֵט שָׁמָּה› (“hasten be-smooth there-ward”) — the-messenger
-# speaks a demand — LET: hasten-be-smooth(shamah)
+# ‹מַהֵר הִמָּלֵט שָׁמָּה› (“hasten be-smooth there-ward”)
+# — the-messenger speaks a demand — LET: hasten-be-smooth(shamah)
 m.declare("ha_malakhim", "LET",
           "maher_himalet(shamah)")
-# ‹עַל־כֵּן קָרָא שֵׁם־הָעִיר צוֹעַר› (“over so call name the-city Zoar”) —
-# pattern recorded: over-set-upright-call-name-the-city-Zoar
+# ‹עַל־כֵּן קָרָא שֵׁם־הָעִיר› (“over so call name the-city”)
+# ‹צוֹעַר› (“Zoar”)
+# — pattern recorded: over-set-upright-call-name-the-city-Zoar
 m.pattern("al_ken_qara_shem_ha_ir_tzoar")
-# ‹צוֹעַר› (“Zoar”) — reads without prior install (flag, not fix): Zoar
+# ‹צוֹעַר› (“Zoar”)
+# — reads without prior install (flag, not fix): Zoar
 m.presupposed("tzoar")
 
 # -------------------------- Gen.19.23 · SUNRISE_AT_TZOAR -------------------
-# הַשֶּׁמֶשׁ יָצָא עַל־הָאָרֶץ וְלוֹט בָּא צֹעֲרָה
+# ‹הַשֶּׁמֶשׁ יָצָא עַל־הָאָרֶץ› (“the-sun bring-forth over the-earth”)
+# ‹וְלוֹט בָּא צֹעֲרָה› (“and-Lot come/bring Zoar-ward”)
 # "The sun was risen upon the earth when Lot came unto Zoar."
 m.step("Gen.19.23")
-# ‹הַשֶּׁמֶשׁ יָצָא … וְלוֹט בָּא› (“the-sun bring-forth … and-Lot
-# come/bring”) — fact holds: the-sun-bring-forth-and-Lot-come/bring-tzoarah
+# ‹הַשֶּׁמֶשׁ יָצָא … וְלוֹט› (“the-sun bring-forth … and-Lot”)
+# ‹בָּא› (“come/bring”)
+# — fact holds: the-sun-bring-forth-and-Lot-come/bring-tzoarah
 m.fact("ha_shemesh_yatza_ve_lot_ba_tzoarah")
-# ‹הַשֶּׁמֶשׁ יָצָא עַל־הָאָרֶץ› (“the-sun bring-forth over the-earth”) —
-# note: zero events in this verse
+# ‹הַשֶּׁמֶשׁ יָצָא עַל־הָאָרֶץ› (“the-sun bring-forth over the-earth”)
+# — note: zero events in this verse
 m.note_zero_events()
 
 # -------------------------- Gen.19.24 · THE_FIRE_RAIN ----------------------
-# וַיהוָה הִמְטִיר עַל־סְדֹם וְעַל־עֲמֹרָה גָּפְרִית וָאֵשׁ מֵאֵת יְהוָה
-# מִן־הַשָּׁמָיִם
+# ‹וַיהוָה הִמְטִיר עַל־סְדֹם› (“and-YHWH rain over Sodom”)
+# ‹וְעַל־עֲמֹרָה גָּפְרִית וָאֵשׁ› (“and-over Gomorrah cypress-resin and-
+# fire”)
+# ‹מֵאֵת יְהוָה מִן־הַשָּׁמָיִם› (“from-with YHWH from the-heavens”)
 # "Then the LORD caused to rain upon Sodom and upon Gomorrah brimstone and
 # fire from the LORD out of heaven;"
 m.step("Gen.19.24")
-# ‹וַיהוָה הִמְטִיר … גָּפְרִית וָאֵשׁ› (“and-YHWH rain … cypress-resin and-
-# fire”) — event: rain-fire — agent the-LORD; theme Sodom-and-amorah
+# ‹וַיהוָה הִמְטִיר … גָּפְרִית› (“and-YHWH rain … cypress-resin”)
+# ‹וָאֵשׁ› (“and-fire”)
+# — event: rain-fire — agent the-LORD; theme Sodom-and-amorah
 m.event("rain_fire", agent="YHWH", themes=["sedom_va_amorah"])
-# ‹וְעַל־עֲמֹרָה› (“and-over Gomorrah”) — reads without prior install (flag,
-# not fix): Gomorrah
+# ‹וְעַל־עֲמֹרָה› (“and-over Gomorrah”)
+# — reads without prior install (flag, not fix): Gomorrah
 m.presupposed("amora")
 
 # -------------------------- Gen.19.25 · THE_OVERTHROW ----------------------
-# וַיַּהֲפֹךְ אֶת־הֶעָרִים הָאֵל וְאֵת כָּל־הַכִּכָּר וְאֵת כָּל־יֹשְׁבֵי
-# הֶעָרִים וְצֶמַח הָאֲדָמָה
+# ‹וַיַּהֲפֹךְ אֶת־הֶעָרִים הָאֵל› (“and-turn-about obj-marker the-city the-
+# these”)
+# ‹וְאֵת כָּל־הַכִּכָּר וְאֵת› (“and-obj-marker all the-circle and-obj-
+# marker”)
+# ‹כָּל־יֹשְׁבֵי הֶעָרִים וְצֶמַח› (“all dwell/sit the-city and-sprout”)
+# ‹הָאֲדָמָה› (“the-ground”)
 # "and He overthrow those cities, and all the Plain, and all the inhabitants
 # of the cities, and that which grew upon the ground."
 m.step("Gen.19.25")
 # ‹וַיַּהֲפֹךְ אֶת־הֶעָרִים הָאֵל› (“and-turn-about obj-marker the-city the-
-# these”) — event: overturn — agent the-LORD; theme he-arim-and-the-circle
+# these”)
+# — event: overturn — agent the-LORD; theme he-arim-and-the-circle
 m.event("overturn", agent="YHWH", themes=["he_arim_ve_ha_kikar"])
 
 # -------------------------- Gen.19.26 · THE_BREACH_AND_THE_PILLAR ----------
-# וַתַּבֵּט אִשְׁתּוֹ מֵאַחֲרָיו וַתְּהִי נְצִיב מֶלַח
+# ‹וַתַּבֵּט אִשְׁתּוֹ מֵאַחֲרָיו› (“and-scan woman-him/its from-after-
+# him/its”)
+# ‹וַתְּהִי נְצִיב מֶלַח› (“and-be something-stationary powder”)
 # "But his wife looked back from behind him, and she became a pillar of
 # salt."
 m.step("Gen.19.26")
 # ‹וַתַּבֵּט אִשְׁתּוֹ מֵאַחֲרָיו› (“and-scan woman-him/its from-after-
-# him/its”) — event: look-back — agent wife-of-Lot
+# him/its”)
+# — event: look-back — agent wife-of-Lot
 m.event("look_back", agent="eshet_lot")
-# ‹וַתְּהִי נְצִיב מֶלַח› (“and-be something-stationary powder”) — fact
-# holds: and-be-something-stationary-powder
+# ‹וַתְּהִי נְצִיב מֶלַח› (“and-be something-stationary powder”)
+# — fact holds: and-be-something-stationary-powder
 m.fact("va_tehi_netziv_melach")
 # witness-tier presupposed read: pillar_purity on netziv_melach — read, not
 # installed
@@ -415,14 +540,15 @@ m.witness_read("netziv_melach", "salt_pillar_blessing",
                 cites=["Berakhot 54b:7", "Berakhot 54b:8", "Berakhot 54b:9", "Berakhot 54b:10", "Berakhot 54b:11"])
 
 # -------------------------- Gen.19.27 · THE_DAWN_RETURN_TO_THE_STANDING_PLACE -
-# וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר אֶל־הַמָּקוֹם אֲשֶׁר־עָמַד שָׁם
-# אֶת־פְּנֵי יְהוָה
+# ‹וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר› (“and-rise-early Abraham in-morning”)
+# ‹אֶל־הַמָּקוֹם אֲשֶׁר־עָמַד שָׁם› (“to the-place which stand there”)
+# ‹אֶת־פְּנֵי יְהוָה› (“with face YHWH”)
 # "And Abraham got up early in the morning to the place where he had stood
 # before the LORD."
 m.step("Gen.19.27")
-# ‹וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר אֶל־הַמָּקוֹם אֲשֶׁר־עָמַד שָׁם› (“and-
-# rise-early Abraham in-morning to the-place which stand there”) — event:
-# dawn-return — agent Abraham
+# ‹וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר› (“and-rise-early Abraham in-morning”)
+# ‹אֶל־הַמָּקוֹם אֲשֶׁר־עָמַד שָׁם› (“to the-place which stand there”)
+# — event: dawn-return — agent Abraham
 m.event("dawn_return", agent="avraham")
 # witness-tier presupposed read: prayer_book_founding on
 # el_ha_maqom_asher_amad — read, not installed
@@ -430,48 +556,75 @@ m.witness_read("el_ha_maqom_asher_amad", "prayer_book_founding",
                 cites=["Berakhot 26b:4", "Berakhot 26b:5", "Berakhot 26b:6", "Berakhot 26b:7", "Berakhot 26b:8", "Berakhot 26b:9", "Berakhot 26b:10", "Berakhot 6b:7", "Berakhot 6b:8", "Berakhot 27a:9", "Berakhot 27a:10", "Berakhot 27a:11"])
 
 # -------------------------- Gen.19.28 · THE_KILN_SMOKE ---------------------
-# וַיַּשְׁקֵף עַל־פְּנֵי סְדֹם וַעֲמֹרָה וְעַל־כָּל־פְּנֵי אֶרֶץ הַכִּכָּר
-# וַיַּרְא וְהִנֵּה עָלָה קִיטֹר הָאָרֶץ כְּקִיטֹר הַכִּבְשָׁן
+# ‹וַיַּשְׁקֵף עַל־פְּנֵי סְדֹם› (“and-lean-out over face Sodom”)
+# ‹וַעֲמֹרָה וְעַל־כָּל־פְּנֵי אֶרֶץ› (“and-Gomorrah and-over all face
+# earth”)
+# ‹הַכִּכָּר וַיַּרְא וְהִנֵּה› (“the-circle and-see and-behold”)
+# ‹עָלָה קִיטֹר הָאָרֶץ› (“go-up fume the-earth”)
+# ‹כְּקִיטֹר הַכִּבְשָׁן› (“like-fume the-smelting-furnace”)
 # "And he looked out toward Sodom and Gomorrah, and toward all the land of
 # the Plain, and beheld, and, lo, the smoke of the land went up as the smoke
 # of a furnace."
 m.step("Gen.19.28")
-# ‹וַיַּשְׁקֵף … וַיַּרְא וְהִנֵּה עָלָה קִיטֹר הָאָרֶץ› (“and-lean-out …
-# and-see and-behold go-up fume the-earth”) — event: look-down — agent
-# Abraham
+# ‹וַיַּשְׁקֵף … וַיַּרְא וְהִנֵּה› (“and-lean-out … and-see and-behold”)
+# ‹עָלָה קִיטֹר הָאָרֶץ› (“go-up fume the-earth”)
+# — event: look-down — agent Abraham
 m.event("look_down", agent="avraham")
 
 # -------------------------- Gen.19.29 · THE_REMEMBER_HINGE -----------------
-# וַיְהִי בְּשַׁחֵת אֱלֹהִים אֶת־עָרֵי הַכִּכָּר וַיִּזְכֹּר אֱלֹהִים
-# אֶת־אַבְרָהָם וַיְשַׁלַּח אֶת־לוֹט מִתּוֹךְ הַהֲפֵכָה בַּהֲפֹךְ
-# אֶת־הֶעָרִים אֲשֶׁר־יָשַׁב בָּהֵן לוֹט
+# ‹וַיְהִי בְּשַׁחֵת אֱלֹהִים› (“and-be in-decay God”)
+# ‹אֶת־עָרֵי הַכִּכָּר וַיִּזְכֹּר› (“obj-marker city the-circle and-mark”)
+# ‹אֱלֹהִים אֶת־אַבְרָהָם וַיְשַׁלַּח› (“God obj-marker Abraham and-send”)
+# ‹אֶת־לוֹט מִתּוֹךְ הַהֲפֵכָה› (“obj-marker Lot from-midst the-
+# destruction”)
+# ‹בַּהֲפֹךְ אֶת־הֶעָרִים אֲשֶׁר־יָשַׁב› (“in-turn-about obj-marker the-city
+# which dwell/sit”)
+# ‹בָּהֵן לוֹט› (“in-them/their Lot”)
 # "And it came to pass, when God destroyed the cities of the Plain, that God
 # remembered Abraham, and sent Lot out of the midst of the overthrow, when
 # He overthrew the cities in which Lot dwelt."
 m.step("Gen.19.29")
-# ‹וַיִּזְכֹּר אֱלֹהִים אֶת־אַבְרָהָם› (“and-mark God obj-marker Abraham”) —
-# event: remember — agent God; theme Abraham
+# ‹וַיִּזְכֹּר אֱלֹהִים אֶת־אַבְרָהָם› (“and-mark God obj-marker Abraham”)
+# — event: remember — agent God; theme Abraham
 m.event("remember", agent="elohim", themes=["avraham"])
 
 # -------------------------- Gen.19.30 · THE_ASCENT_TO_THE_CAVE -------------
-# וַיַּעַל לוֹט מִצּוֹעַר וַיֵּשֶׁב בָּהָר וּשְׁתֵּי בְנֹתָיו עִמּוֹ כִּי
-# יָרֵא לָשֶׁבֶת בְּצוֹעַר וַיֵּשֶׁב בַּמְּעָרָה הוּא וּשְׁתֵּי בְנֹתָיו
+# ‹וַיַּעַל לוֹט מִצּוֹעַר› (“and-go-up Lot from-Zoar”)
+# ‹וַיֵּשֶׁב בָּהָר וּשְׁתֵּי› (“and-dwell/sit in-mountain and-two”)
+# ‹בְנֹתָיו עִמּוֹ כִּי› (“daughter-him/its with-him/its that”)
+# ‹יָרֵא לָשֶׁבֶת בְּצוֹעַר› (“fear to-dwell/sit in-Zoar”)
+# ‹וַיֵּשֶׁב בַּמְּעָרָה הוּא› (“and-dwell/sit in-cavern he/it”)
+# ‹וּשְׁתֵּי בְנֹתָיו› (“and-two daughter-him/its”)
 # "And Lot went up out of Zoar, and dwelt in the mountain, and his two
 # daughters with him; for he feared to dwell in Zoar; and he dwelt in a
 # cave, he and his two daughters."
 m.step("Gen.19.30")
-# ‹וַיַּעַל לוֹט מִצּוֹעַר … וַיֵּשֶׁב בַּמְּעָרָה› (“and-go-up Lot from-
-# Zoar … and-dwell/sit in-cavern”) — event: ascend-dwell — agent Lot
+# ‹וַיַּעַל לוֹט מִצּוֹעַר› (“and-go-up Lot from-Zoar”)
+# ‹… וַיֵּשֶׁב בַּמְּעָרָה› (“and-dwell/sit in-cavern”)
+# — event: ascend-dwell — agent Lot
 m.event("ascend_dwell", agent="lot")
 
 # -------------------------- Gen.19.31 · THE_CAVE_COUNCILS_AND_THE_TWIN_NIGHTS -
-# וַתֹּאמֶר הַבְּכִירָה אֶל־הַצְּעִירָה אָבִינוּ זָקֵן … לְכָה נַשְׁקֶה
-# אֶת־אָבִינוּ יַיִן וְנִשְׁכְּבָה עִמּוֹ וּנְחַיֶּה מֵאָבִינוּ זָרַע …
-# וַתַּשְׁקֶיןָ אֶת־אֲבִיהֶן יַיִן בַּלַּיְלָה הוּא וַתָּבֹא הַבְּכִירָה
-# וַתִּשְׁכַּב אֶת־אָבִיהָ … נַשְׁקֶנּוּ יַיִן גַּם־הַלַּיְלָה וּבֹאִי
-# שִׁכְבִי עִמּוֹ … וַתַּשְׁקֶיןָ גַּם בַּלַּיְלָה הַהוּא … וַתָּקָם
-# הַצְּעִירָה וַתִּשְׁכַּב עִמּוֹ … וַתַּהֲרֶיןָ שְׁתֵּי בְנוֹת־לוֹט
-# מֵאֲבִיהֶן
+# ‹וַתֹּאמֶר הַבְּכִירָה אֶל־הַצְּעִירָה› (“and-say the-eldest-daughter to
+# the-little”)
+# ‹אָבִינוּ זָקֵן … לְכָה› (“father-us/our be-old … go-ward”)
+# ‹נַשְׁקֶה אֶת־אָבִינוּ יַיִן› (“give-drink obj-marker father-us/our wine”)
+# ‹וְנִשְׁכְּבָה עִמּוֹ וּנְחַיֶּה› (“and-lie-down with-him/its and-live”)
+# ‹מֵאָבִינוּ זָרַע … וַתַּשְׁקֶיןָ› (“from-father-us/our seed … and-give-
+# drink”)
+# ‹אֶת־אֲבִיהֶן יַיִן בַּלַּיְלָה› (“obj-marker father-them/their wine in-
+# night”)
+# ‹הוּא וַתָּבֹא הַבְּכִירָה› (“he/it and-come/bring the-eldest-daughter”)
+# ‹וַתִּשְׁכַּב אֶת־אָבִיהָ … נַשְׁקֶנּוּ› (“and-lie-down obj-marker father-
+# her/its … give-drink-him/its”)
+# ‹יַיִן גַּם־הַלַּיְלָה וּבֹאִי› (“wine also the-night and-come/bring”)
+# ‹שִׁכְבִי עִמּוֹ … וַתַּשְׁקֶיןָ› (“lie-down with-him/its … and-give-
+# drink”)
+# ‹גַּם בַּלַּיְלָה הַהוּא› (“also in-night that”)
+# ‹… וַתָּקָם הַצְּעִירָה וַתִּשְׁכַּב› (“and-arise the-little and-lie-
+# down”)
+# ‹עִמּוֹ … וַתַּהֲרֶיןָ שְׁתֵּי› (“with-him/its … and-be-pregnant two”)
+# ‹בְנוֹת־לוֹט מֵאֲבִיהֶן› (“daughter Lot from-father-them/their”)
 # "[EN-AID/JPS 19:31-36] And the first-born said unto the younger: 'Our
 # father is old, and there is not a man in the earth... Come, let us make
 # our father drink wine, and we will lie with him, that we may preserve seed
@@ -481,42 +634,48 @@ m.event("ascend_dwell", agent="lot")
 # father drink wine that night also. And the younger arose, and lay with
 # him... Thus were both the daughters of Lot with child by their father."
 m.step("Gen.19.31")
-# ‹אָבִינוּ זָקֵן וְאִישׁ אֵין בָּאָרֶץ לָבוֹא עָלֵינוּ› (“father-us/our be-
-# old and-man there-is-not in-earth to-come/bring over-us/our”) — fact
-# holds: avinu-old-and-man-ein-come/bring-earth
+# ‹אָבִינוּ זָקֵן וְאִישׁ› (“father-us/our be-old and-man”)
+# ‹אֵין בָּאָרֶץ לָבוֹא› (“there-is-not in-earth to-come/bring”)
+# ‹עָלֵינוּ› (“over-us/our”)
+# — fact holds: avinu-old-and-man-ein-come/bring-earth
 m.fact("avinu_zaqen_ve_ish_ein_ba_aretz")
-# ‹לְכָה נַשְׁקֶה אֶת־אָבִינוּ יַיִן› (“go-ward give-drink obj-marker
-# father-us/our wine”) — the-bekhirah speaks a demand — CMD-US?:
-# nashqeh(obj-marker-avinu-yayin)
+# ‹לְכָה נַשְׁקֶה אֶת־אָבִינוּ› (“go-ward give-drink obj-marker father-
+# us/our”)
+# ‹יַיִן› (“wine”)
+# — the-bekhirah speaks a demand — CMD-US?: nashqeh(obj-marker-avinu-yayin)
 m.declare("ha_bekhirah", "CMD-US?",
           "nashqeh(et_avinu_yayin)")
-# ‹וְנִשְׁכְּבָה עִמּוֹ› (“and-lie-down with-him/its”) — the-bekhirah speaks
-# a demand — CMD-US: nishkevah(imo)
+# ‹וְנִשְׁכְּבָה עִמּוֹ› (“and-lie-down with-him/its”)
+# — the-bekhirah speaks a demand — CMD-US: nishkevah(imo)
 m.declare("ha_bekhirah", "CMD-US",
           "nishkevah(imo)")
-# ‹וַתַּשְׁקֶיןָ אֶת־אֲבִיהֶן יַיִן בַּלַּיְלָה הוּא› (“and-give-drink obj-
-# marker father-them/their wine in-night he/it”) — demand settled (popped
-# from the queue): nashqeh(obj-marker-avinu-yayin)
+# ‹וַתַּשְׁקֶיןָ אֶת־אֲבִיהֶן יַיִן› (“and-give-drink obj-marker father-
+# them/their wine”)
+# ‹בַּלַּיְלָה הוּא› (“in-night he/it”)
+# — demand settled (popped from the queue): nashqeh(obj-marker-avinu-yayin)
 m.result("nashqeh(et_avinu_yayin)", tmark="t1")
-# ‹וַתָּבֹא הַבְּכִירָה וַתִּשְׁכַּב אֶת־אָבִיהָ› (“and-come/bring the-
-# eldest-daughter and-lie-down obj-marker father-her/its”) — demand settled
-# (popped from the queue): nishkevah(imo)
+# ‹וַתָּבֹא הַבְּכִירָה וַתִּשְׁכַּב› (“and-come/bring the-eldest-daughter
+# and-lie-down”)
+# ‹אֶת־אָבִיהָ› (“obj-marker father-her/its”)
+# — demand settled (popped from the queue): nishkevah(imo)
 m.result("nishkevah(imo)", tmark="t1")
 # ‹נַשְׁקֶנּוּ יַיִן גַּם־הַלַּיְלָה› (“give-drink-him/its wine also the-
-# night”) — the-bekhirah speaks a demand — CMD-US: nashqenu(also-the-lailah)
+# night”)
+# — the-bekhirah speaks a demand — CMD-US: nashqenu(also-the-lailah)
 m.declare("ha_bekhirah", "CMD-US",
           "nashqenu(gam_ha_lailah)")
-# ‹וּבֹאִי שִׁכְבִי עִמּוֹ› (“and-come/bring lie-down with-him/its”) — the-
-# bekhirah speaks a demand — LET: and-voi-shikhvi(imo)
+# ‹וּבֹאִי שִׁכְבִי עִמּוֹ› (“and-come/bring lie-down with-him/its”)
+# — the-bekhirah speaks a demand — LET: and-voi-shikhvi(imo)
 m.declare("ha_bekhirah", "LET",
           "u_voi_shikhvi(imo)")
-# ‹וַתַּשְׁקֶיןָ גַּם בַּלַּיְלָה הַהוּא אֶת־אֲבִיהֶן יָיִן› (“and-give-
-# drink also in-night that obj-marker father-them/their wine”) — demand
-# settled (popped from the queue): nashqenu(also-the-lailah)
+# ‹וַתַּשְׁקֶיןָ גַּם בַּלַּיְלָה› (“and-give-drink also in-night”)
+# ‹הַהוּא אֶת־אֲבִיהֶן יָיִן› (“that obj-marker father-them/their wine”)
+# — demand settled (popped from the queue): nashqenu(also-the-lailah)
 m.result("nashqenu(gam_ha_lailah)", tmark="t1")
 # ‹וַתַּשְׁקֶיןָ … וַתִּשְׁכַּב … וַתַּהֲרֶיןָ› (“and-give-drink … and-lie-
-# down … and-be-pregnant”) — fact holds: and-tashqena-obj-marker-avihen-
-# yayin; and-tishkav-and-taharena
+# down … and-be-pregnant”)
+# — fact holds: and-tashqena-obj-marker-avihen-yayin; and-tishkav-and-
+# taharena
 m.fact("va_tashqena_et_avihen_yayin",
        "va_tishkav_va_taharena")
 # witness-grounded state (its own tier): rule_parsed_and_motive_disputed on
@@ -529,21 +688,28 @@ m.witness_read("dotted_ubkumah", "second_of_the_torahs_ten",
                 cites=["Bereshit Rabbah 51:8"])
 
 # -------------------------- Gen.19.37 · THE_TWO_NAMINGS --------------------
-# וַתֵּלֶד הַבְּכִירָה בֵּן וַתִּקְרָא שְׁמוֹ מוֹאָב הוּא אֲבִי־מוֹאָב
-# עַד־הַיּוֹם וְהַצְּעִירָה גַם־הִוא יָלְדָה בֵּן וַתִּקְרָא שְׁמוֹ
-# בֶּן־עַמִּי הוּא אֲבִי בְנֵי־עַמּוֹן עַד־הַיּוֹם
+# ‹וַתֵּלֶד הַבְּכִירָה בֵּן› (“and-bear-young the-eldest-daughter son”)
+# ‹וַתִּקְרָא שְׁמוֹ מוֹאָב› (“and-call name-him/its Moab”)
+# ‹הוּא אֲבִי־מוֹאָב עַד־הַיּוֹם› (“he/it father Moab until the-day”)
+# ‹וְהַצְּעִירָה גַם־הִוא יָלְדָה› (“and-the-little also he/it bear-young”)
+# ‹בֵּן וַתִּקְרָא שְׁמוֹ› (“son and-call name-him/its”)
+# ‹בֶּן־עַמִּי הוּא אֲבִי› (“son people-me/my he/it father”)
+# ‹בְנֵי־עַמּוֹן עַד־הַיּוֹם› (“son Ammon until the-day”)
 # "[EN-AID/JPS 19:37-38] And the first-born bore a son, and called his name
 # Moab—the same is the father of the Moabites unto this day. And the
 # younger, she also bore a son, and called his name Ben-ammi—the same is the
 # father of the children of Ammon unto this day."
 m.step("Gen.19.37")
-# ‹וַתֵּלֶד הַבְּכִירָה בֵּן … וְהַצְּעִירָה גַם־הִוא יָלְדָה בֵּן› (“and-
-# bear-young the-eldest-daughter son … and-the-little also he/it bear-young
-# son”) — the world gains: Moab, son-ammi
+# ‹וַתֵּלֶד הַבְּכִירָה בֵּן› (“and-bear-young the-eldest-daughter son”)
+# ‹… וְהַצְּעִירָה גַם־הִוא יָלְדָה› (“and-the-little also he/it bear-
+# young”)
+# ‹בֵּן› (“son”)
+# — the world gains: Moab, son-ammi
 m.install("moav", "ben_ammi")
-# ‹וַתִּקְרָא שְׁמוֹ מוֹאָב … וַתִּקְרָא שְׁמוֹ בֶּן־עַמִּי› (“and-call
-# name-him/its Moab … and-call name-him/its son people-me/my”) — named: Moab
-# := Moav; son-ammi := Ben-Ammi
+# ‹וַתִּקְרָא שְׁמוֹ מוֹאָב› (“and-call name-him/its Moab”)
+# ‹… וַתִּקְרָא שְׁמוֹ בֶּן־עַמִּי› (“and-call name-him/its son people-
+# me/my”)
+# — named: Moab := Moav; son-ammi := Ben-Ammi
 m.name("moav", "Moav")
 m.name("ben_ammi", "Ben_Ammi")
 

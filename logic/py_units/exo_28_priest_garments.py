@@ -14,11 +14,15 @@ from machine import Machine
 m = Machine("exo_28_priest_garments")
 
 # -------------------------- Exod.28.1 · ETNACHTA_SPLIT ---------------------
-# ואתה הקרב אליך את אהרן אחיך ואת בניו אתו מתוך בני ישראל לכהנ … אהרן נדב
-# ואביהוא אלעזר ואיתמר בני אהרן
-# "[EN-AID] From top split: LEFT «ואתה הקרב אליך את אהרן אחיך ואת בניו אתו
-# מתוך בני ישראל לכהנו לי» / RIGHT «אהרן נדב ואביהוא אלעזר ואיתמר בני אהרן».
-# Derive claim from Hebrew arms, not English alone. Exod 28:1."
+# ‹ואתה הקרב אליך› (“and-you bring-near to-you/your”)
+# ‹את אהרן אחיך› (“obj-marker Aaron brother-you/your”)
+# ‹ואת בניו אתו› (“and-obj-marker son-him/its with-him/its”)
+# ‹מתוך בני ישראל› (“from-midst son Israel”)
+# ‹לכהנ … אהרן נדב› (“? … Aaron Nadab”)
+# ‹ואביהוא אלעזר ואיתמר› (“and-Abihu Eleazar and-Ithamar”)
+# ‹בני אהרן› (“son Aaron”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:1."
 m.step("Exod.28.1")
 # witness-tier presupposed read: service_before_me on priest_verb — read,
 # not installed
@@ -26,9 +30,11 @@ m.witness_read("priest_verb", "service_before_me",
                 cites=["Onkelos Exod 28"])
 
 # -------------------------- Exod.28.2 · ETNACHTA_SPLIT ---------------------
-# ועשית בגדי קדש לאהרן אחיך … לכבוד ולתפארת
-# "[EN-AID] From top split: LEFT «ועשית בגדי קדש לאהרן אחיך» / RIGHT «לכבוד
-# ולתפארת». Derive claim from Hebrew arms, not English alone. Exod 28:2."
+# ‹ועשית בגדי קדש› (“and-make garment holiness”)
+# ‹לאהרן אחיך … לכבוד› (“to-Aaron brother-you/your … to-weight”)
+# ‹ולתפארת› (“and-to-ornament”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:2."
 m.step("Exod.28.2")
 # witness-tier presupposed read: honor_splendor_census on garment_purpose —
 # read, not installed
@@ -36,19 +42,27 @@ m.witness_read("garment_purpose", "honor_splendor_census",
                 cites=["Mishnah Yoma 7:5", "Onkelos Exod 28"])
 
 # -------------------------- Exod.28.3 · ETNACHTA_SPLIT ---------------------
-# ואתה תדבר אל כל חכמי לב אשר מלאתיו רוח חכמה … ועשו את בגדי אהרן לקדשו
-# לכהנו לי
-# "[EN-AID] From top split: LEFT «ואתה תדבר אל כל חכמי לב אשר מלאתיו רוח
-# חכמה» / RIGHT «ועשו את בגדי אהרן לקדשו לכהנו לי». Derive claim from Hebrew
+# ‹ואתה תדבר אל› (“and-you speak to”)
+# ‹כל חכמי לב› (“all wise heart”)
+# ‹אשר מלאתיו רוח› (“which fill-him/its spirit”)
+# ‹חכמה … ועשו את› (“wisdom … and-make obj-marker”)
+# ‹בגדי אהרן לקדשו› (“garment Aaron to-sanctify-him/its”)
+# ‹לכהנו לי› (“to-officiate-as-a-priest-him/its to-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 28:3."
 m.step("Exod.28.3")
 
 # -------------------------- Exod.28.4 · ETNACHTA_SPLIT ---------------------
-# ואלה הבגדים אשר יעשו חשן ואפוד ומעיל וכתנת תשבץ מצנפת ואבנט … ועשו בגדי
-# קדש לאהרן אחיך ולבניו לכהנו לי
-# "[EN-AID] From top split: LEFT «ואלה הבגדים אשר יעשו חשן ואפוד ומעיל וכתנת
-# תשבץ מצנפת ואבנט» / RIGHT «ועשו בגדי קדש לאהרן אחיך ולבניו לכהנו לי».
-# Derive claim from Hebrew arms, not English alone. Exod 28:4."
+# ‹ואלה הבגדים אשר› (“and-these the-garment which”)
+# ‹יעשו חשן ואפוד› (“make perhaps-a-pocket and-girdle”)
+# ‹ומעיל וכתנת תשבץ› (“and-robe and-shirt checkered-stuff”)
+# ‹מצנפת ואבנט … ועשו› (“tiara and-belt … and-make”)
+# ‹בגדי קדש לאהרן› (“garment holiness to-Aaron”)
+# ‹אחיך ולבניו לכהנו› (“brother-you/your and-to-son-him/its to-officiate-as-
+# a-priest-him/its”)
+# ‹לי› (“to-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:4."
 m.step("Exod.28.4")
 # witness-tier presupposed read: mirror_table on garment_list — read, not
 # installed
@@ -60,10 +74,13 @@ m.witness_read("oracle_protocol", "access_list",
                 cites=["Mishnah Yoma 7:5"])
 
 # -------------------------- Exod.28.5 · ETNACHTA_SPLIT ---------------------
-# והם יקחו את הזהב ואת התכלת ואת הארגמן … ואת תולעת השני ואת השש
-# "[EN-AID] From top split: LEFT «והם יקחו את הזהב ואת התכלת ואת הארגמן» /
-# RIGHT «ואת תולעת השני ואת השש». Derive claim from Hebrew arms, not English
-# alone. Exod 28:5."
+# ‹והם יקחו את› (“and-they take obj-marker”)
+# ‹הזהב ואת התכלת› (“the-gold and-obj-marker the-cerulean-mussel”)
+# ‹ואת הארגמן … ואת› (“and-obj-marker the-purple … and-obj-marker”)
+# ‹תולעת השני ואת› (“crimson-grub the-crimson and-obj-marker”)
+# ‹השש› (“the-bleached-stuff”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:5."
 m.step("Exod.28.5")
 # witness-tier presupposed read: fiscal_plurality on plural_take — read, not
 # installed
@@ -71,37 +88,49 @@ m.witness_read("plural_take", "fiscal_plurality",
                 cites=["Mishnah Shekalim 5:2"])
 
 # -------------------------- Exod.28.6 · ETNACHTA_SPLIT ---------------------
-# ועשו את האפד … זהב תכלת וארגמן תולעת שני ושש משזר מעשה חשב
-# "[EN-AID] From top split: LEFT «ועשו את האפד» / RIGHT «זהב תכלת וארגמן
-# תולעת שני ושש משזר מעשה חשב». Derive claim from Hebrew arms, not English
-# alone. Exod 28:6."
+# ‹ועשו את האפד› (“and-make obj-marker the-girdle”)
+# ‹… זהב תכלת וארגמן› (“gold cerulean-mussel and-purple”)
+# ‹תולעת שני ושש› (“crimson-grub crimson and-bleached-stuff”)
+# ‹משזר מעשה חשב› (“twist deed/work plait”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:6."
 m.step("Exod.28.6")
 
 # -------------------------- Exod.28.7 · TREE_CLAIM -------------------------
-# שתי כתפת חברת יהיה לו אל שני קצותיו
-# "[EN-AID] From top split: LEFT «שתי כתפת חברת יהיה לו אל שני קצותיו» /
-# RIGHT «». Derive claim from Hebrew arms, not English alone. Exod 28:7."
+# ‹שתי כתפת חברת› (“two shoulder join”)
+# ‹יהיה לו אל› (“be to-him/its to”)
+# ‹שני קצותיו› (“two termination-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms, not English alone. Exod 28:7."
 m.step("Exod.28.7")
 
 # -------------------------- Exod.28.8 · ETNACHTA_SPLIT ---------------------
-# וחשב אפדתו אשר עליו כמעשהו ממנו יהיה … זהב תכלת וארגמן ותולעת שני ושש משזר
-# "[EN-AID] From top split: LEFT «וחשב אפדתו אשר עליו כמעשהו ממנו יהיה» /
-# RIGHT «זהב תכלת וארגמן ותולעת שני ושש משזר». Derive claim from Hebrew
+# ‹וחשב אפדתו אשר› (“and-belt girding-on-him/its which”)
+# ‹עליו כמעשהו ממנו› (“over-him/its like-deed/work-him/its from-us/our”)
+# ‹יהיה … זהב תכלת› (“be … gold cerulean-mussel”)
+# ‹וארגמן ותולעת שני› (“and-purple and-crimson-grub crimson”)
+# ‹ושש משזר› (“and-bleached-stuff twist”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 28:8."
 m.step("Exod.28.8")
 
 # -------------------------- Exod.28.9 · ETNACHTA_SPLIT ---------------------
-# ולקחת את שתי אבני שהם … ופתחת עליהם שמות בני ישראל
-# "[EN-AID] From top split: LEFT «ולקחת את שתי אבני שהם» / RIGHT «ופתחת
-# עליהם שמות בני ישראל». Derive claim from Hebrew arms, not English alone.
-# Exod 28:9."
+# ‹ולקחת את שתי› (“and-take obj-marker two”)
+# ‹אבני שהם … ופתחת› (“stone gem … and-open-wide”)
+# ‹עליהם שמות בני› (“over-them/their name son”)
+# ‹ישראל› (“Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:9."
 m.step("Exod.28.9")
 
 # -------------------------- Exod.28.10 · ETNACHTA_SPLIT --------------------
-# ששה משמתם על האבן האחת … ואת שמות הששה הנותרים על האבן השנית כתולדתם
-# "[EN-AID] From top split: LEFT «ששה משמתם על האבן האחת» / RIGHT «ואת שמות
-# הששה הנותרים על האבן השנית כתולדתם». Derive claim from Hebrew arms, not
-# English alone. Exod 28:10."
+# ‹ששה משמתם על› (“six from-name-them/their over”)
+# ‹האבן האחת … ואת› (“the-stone the-one … and-obj-marker”)
+# ‹שמות הששה הנותרים› (“name the-six the-jut-over”)
+# ‹על האבן השנית› (“over the-stone the-second”)
+# ‹כתולדתם› (“like-generations-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:10."
 m.step("Exod.28.10")
 # witness-tier presupposed read: the_vestments_form_file on stones_and_form
 # — read, not installed
@@ -109,73 +138,95 @@ m.witness_read("stones_and_form", "the_vestments_form_file",
                 cites=["Sotah 36a:11", "Sotah 36a:12", "Sotah 36a:13", "Yoma 72b:2", "Yoma 72b:3", "Arakhin 3b:13", "Arakhin 3b:14", "Zevachim 19a:25", "Zevachim 19a:26", "Yoma 44b:15", "Yoma 44b:16", "Zevachim 119b:18"])
 
 # -------------------------- Exod.28.11 · ETNACHTA_SPLIT --------------------
-# מעשה חרש אבן פתוחי חתם תפתח את שתי האבנים על שמת בני ישראל … מסבת משבצות
-# זהב תעשה אתם
-# "[EN-AID] From top split: LEFT «מעשה חרש אבן פתוחי חתם תפתח את שתי האבנים
-# על שמת בני ישראל» / RIGHT «מסבת משבצות זהב תעשה אתם». Derive claim from
-# Hebrew arms, not English alone. Exod 28:11."
+# ‹מעשה חרש אבן› (“deed/work fabricator stone”)
+# ‹פתוחי חתם תפתח› (“sculpture signature-ring open-wide”)
+# ‹את שתי האבנים› (“obj-marker two the-stone”)
+# ‹על שמת בני› (“over name son”)
+# ‹ישראל … מסבת משבצות› (“Israel … reversal brocade”)
+# ‹זהב תעשה אתם› (“gold make obj-marker-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:11."
 m.step("Exod.28.11")
 
 # -------------------------- Exod.28.12 · ETNACHTA_SPLIT --------------------
-# ושמת את שתי האבנים על כתפת האפד אבני זכרן לבני ישראל … ונשא אהרן את שמותם
-# לפני יהוה על שתי כתפיו לזכרן
-# "[EN-AID] From top split: LEFT «ושמת את שתי האבנים על כתפת האפד אבני זכרן
-# לבני ישראל» / RIGHT «ונשא אהרן את שמותם לפני יהוה על שתי כתפיו לזכרן».
-# Derive claim from Hebrew arms, not English alone. Exod 28:12."
+# ‹ושמת את שתי› (“and-put/set obj-marker two”)
+# ‹האבנים על כתפת› (“the-stone over shoulder”)
+# ‹האפד אבני זכרן› (“the-girdle stone memento”)
+# ‹לבני ישראל … ונשא› (“to-son Israel … and-lift/carry”)
+# ‹אהרן את שמותם› (“Aaron obj-marker name-them/their”)
+# ‹לפני יהוה על› (“to-face YHWH over”)
+# ‹שתי כתפיו לזכרן› (“two shoulder-him/its to-memento”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:12."
 m.step("Exod.28.12")
 
 # -------------------------- Exod.28.13 · TREE_CLAIM ------------------------
-# ועשית משבצת
-# "[EN-AID] From top split: LEFT «ועשית משבצת» / RIGHT «». Derive claim from
-# Hebrew arms, not English alone. Exod 28:13."
+# ‹ועשית משבצת› (“and-make brocade”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms, not English alone. Exod 28:13."
 m.step("Exod.28.13")
 
 # -------------------------- Exod.28.14 · ETNACHTA_SPLIT --------------------
-# ושתי שרשרת זהב טהור מגבלת תעשה אתם מעשה עבת … ונתתה את שרשרת העבתת על
-# המשבצת
-# "[EN-AID] From top split: LEFT «ושתי שרשרת זהב טהור מגבלת תעשה אתם מעשה
-# עבת» / RIGHT «ונתתה את שרשרת העבתת על המשבצת». Derive claim from Hebrew
+# ‹ושתי שרשרת זהב› (“and-two chain gold”)
+# ‹טהור מגבלת תעשה› (“pure border make”)
+# ‹אתם מעשה עבת› (“obj-marker-them/their deed/work something-intwined”)
+# ‹… ונתתה את שרשרת› (“and-set obj-marker chain”)
+# ‹העבתת על המשבצת› (“the-something-intwined over the-brocade”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 28:14."
 m.step("Exod.28.14")
 
 # -------------------------- Exod.28.15 · ETNACHTA_SPLIT --------------------
-# ועשית חשן משפט מעשה חשב כמעשה אפד תעשנו … זהב תכלת וארגמן ותולעת שני ושש
-# משזר תעשה אתו
-# "[EN-AID] From top split: LEFT «ועשית חשן משפט מעשה חשב כמעשה אפד תעשנו» /
-# RIGHT «זהב תכלת וארגמן ותולעת שני ושש משזר תעשה אתו». Derive claim from
-# Hebrew arms, not English alone. Exod 28:15."
+# ‹ועשית חשן משפט› (“and-make perhaps-a-pocket judgment”)
+# ‹מעשה חשב כמעשה› (“deed/work plait like-deed/work”)
+# ‹אפד תעשנו … זהב› (“girdle make-him/its … gold”)
+# ‹תכלת וארגמן ותולעת› (“cerulean-mussel and-purple and-crimson-grub”)
+# ‹שני ושש משזר› (“crimson and-bleached-stuff twist”)
+# ‹תעשה אתו› (“make obj-marker-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:15."
 m.step("Exod.28.15")
 
 # -------------------------- Exod.28.16 · ETNACHTA_SPLIT --------------------
-# רבוע יהיה כפול … זרת ארכו וזרת רחבו
-# "[EN-AID] From top split: LEFT «רבוע יהיה כפול» / RIGHT «זרת ארכו וזרת
-# רחבו». Derive claim from Hebrew arms, not English alone. Exod 28:16."
+# ‹רבוע יהיה כפול› (“be-quadrate be fold-together”)
+# ‹… זרת ארכו וזרת› (“spread-of-the-fingers length-him/its and-spread-of-
+# the-fingers”)
+# ‹רחבו› (“width-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:16."
 m.step("Exod.28.16")
 
 # -------------------------- Exod.28.17 · ETNACHTA_SPLIT --------------------
-# ומלאת בו מלאת אבן ארבעה טורים אבן … טור אדם פטדה וברקת הטור האחד
-# "[EN-AID] From top split: LEFT «ומלאת בו מלאת אבן ארבעה טורים אבן» / RIGHT
-# «טור אדם פטדה וברקת הטור האחד». Derive claim from Hebrew arms, not English
-# alone. Exod 28:17."
+# ‹ומלאת בו מלאת› (“and-fill in-him/its filling”)
+# ‹אבן ארבעה טורים› (“stone four row”)
+# ‹אבן … טור אדם› (“stone … row redness”)
+# ‹פטדה וברקת הטור› (“gem and-gem the-row”)
+# ‹האחד› (“the-one”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:17."
 m.step("Exod.28.17")
 
 # -------------------------- Exod.28.18 · ETNACHTA_SPLIT --------------------
-# והטור השני … נפך ספיר ויהלם
-# "[EN-AID] From top split: LEFT «והטור השני» / RIGHT «נפך ספיר ויהלם».
-# Derive claim from Hebrew arms, not English alone. Exod 28:18."
+# ‹והטור השני … נפך› (“and-the-row the-second … shining”)
+# ‹ספיר ויהלם› (“gem and-precious-stone”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:18."
 m.step("Exod.28.18")
 
 # -------------------------- Exod.28.19 · ETNACHTA_SPLIT --------------------
-# והטור השלישי … לשם שבו ואחלמה
-# "[EN-AID] From top split: LEFT «והטור השלישי» / RIGHT «לשם שבו ואחלמה».
-# Derive claim from Hebrew arms, not English alone. Exod 28:19."
+# ‹והטור השלישי … לשם› (“and-the-row the-third … gem”)
+# ‹שבו ואחלמה› (“gem and-gem”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:19."
 m.step("Exod.28.19")
 
 # -------------------------- Exod.28.20 · ETNACHTA_SPLIT --------------------
-# והטור הרביעי תרשיש ושהם וישפה … משבצים זהב יהיו במלואתם
-# "[EN-AID] From top split: LEFT «והטור הרביעי תרשיש ושהם וישפה» / RIGHT
-# «משבצים זהב יהיו במלואתם». Derive claim from Hebrew arms, not English
-# alone. Exod 28:20."
+# ‹והטור הרביעי תרשיש› (“and-the-row the-fourth gem”)
+# ‹ושהם וישפה … משבצים› (“and-gem and-gem-supposed-to-be-jasper …
+# interweave-threads-in-squar”)
+# ‹זהב יהיו במלואתם› (“gold be in-filling-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:20."
 m.step("Exod.28.20")
 # witness-tier presupposed read: shamir_engraving on stones_fullness — read,
 # not installed
@@ -183,63 +234,85 @@ m.witness_read("stones_fullness", "shamir_engraving",
                 cites=["Babylonian Talmud Sotah 48b", "Mishnah Pirkei Avot 5:6"])
 
 # -------------------------- Exod.28.21 · ETNACHTA_SPLIT --------------------
-# והאבנים תהיין על שמת בני ישראל שתים עשרה על שמתם … פתוחי חותם איש על שמו
-# תהיין לשני עשר שבט
-# "[EN-AID] From top split: LEFT «והאבנים תהיין על שמת בני ישראל שתים עשרה
-# על שמתם» / RIGHT «פתוחי חותם איש על שמו תהיין לשני עשר שבט». Derive claim
-# from Hebrew arms, not English alone. Exod 28:21."
+# ‹והאבנים תהיין על› (“and-the-stone be over”)
+# ‹שמת בני ישראל› (“name son Israel”)
+# ‹שתים עשרה על› (“two -teen over”)
+# ‹שמתם … פתוחי חותם› (“name-them/their … sculpture signature-ring”)
+# ‹איש על שמו› (“man over name-him/its”)
+# ‹תהיין לשני עשר› (“be to-two -teen”)
+# ‹שבט› (“scion”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:21."
 m.step("Exod.28.21")
 
 # -------------------------- Exod.28.22 · ETNACHTA_SPLIT --------------------
-# ועשית על החשן שרשת גבלת מעשה עבת … זהב טהור
-# "[EN-AID] From top split: LEFT «ועשית על החשן שרשת גבלת מעשה עבת» / RIGHT
-# «זהב טהור». Derive claim from Hebrew arms, not English alone. Exod 28:22."
+# ‹ועשית על החשן› (“and-make over the-perhaps-a-pocket”)
+# ‹שרשת גבלת מעשה› (“chain twisted-chain deed/work”)
+# ‹עבת … זהב טהור› (“something-intwined … gold pure”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:22."
 m.step("Exod.28.22")
 
 # -------------------------- Exod.28.23 · ETNACHTA_SPLIT --------------------
-# ועשית על החשן שתי טבעות זהב … ונתת את שתי הטבעות על שני קצות החשן
-# "[EN-AID] From top split: LEFT «ועשית על החשן שתי טבעות זהב» / RIGHT «ונתת
-# את שתי הטבעות על שני קצות החשן». Derive claim from Hebrew arms, not
-# English alone. Exod 28:23."
+# ‹ועשית על החשן› (“and-make over the-perhaps-a-pocket”)
+# ‹שתי טבעות זהב› (“two seal gold”)
+# ‹… ונתת את שתי› (“and-set obj-marker two”)
+# ‹הטבעות על שני› (“the-seal over two”)
+# ‹קצות החשן› (“termination the-perhaps-a-pocket”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:23."
 m.step("Exod.28.23")
 
 # -------------------------- Exod.28.24 · ETNACHTA_SPLIT --------------------
-# ונתתה את שתי עבתת הזהב על שתי הטבעת … אל קצות החשן
-# "[EN-AID] From top split: LEFT «ונתתה את שתי עבתת הזהב על שתי הטבעת» /
-# RIGHT «אל קצות החשן». Derive claim from Hebrew arms, not English alone.
-# Exod 28:24."
+# ‹ונתתה את שתי› (“and-set obj-marker two”)
+# ‹עבתת הזהב על› (“something-intwined the-gold over”)
+# ‹שתי הטבעת … אל› (“two the-seal … to”)
+# ‹קצות החשן› (“termination the-perhaps-a-pocket”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:24."
 m.step("Exod.28.24")
 
 # -------------------------- Exod.28.25 · ETNACHTA_SPLIT --------------------
-# ואת שתי קצות שתי העבתת תתן על שתי המשבצות … ונתתה על כתפות האפד אל מול
-# פניו
-# "[EN-AID] From top split: LEFT «ואת שתי קצות שתי העבתת תתן על שתי המשבצות»
-# / RIGHT «ונתתה על כתפות האפד אל מול פניו». Derive claim from Hebrew arms,
-# not English alone. Exod 28:25."
+# ‹ואת שתי קצות› (“and-obj-marker two termination”)
+# ‹שתי העבתת תתן› (“two the-something-intwined set”)
+# ‹על שתי המשבצות› (“over two the-brocade”)
+# ‹… ונתתה על כתפות› (“and-set over shoulder”)
+# ‹האפד אל מול› (“the-girdle to abrupt”)
+# ‹פניו› (“face-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:25."
 m.step("Exod.28.25")
 
 # -------------------------- Exod.28.26 · ETNACHTA_SPLIT --------------------
-# ועשית שתי טבעות זהב ושמת אתם על שני קצות החשן … על שפתו אשר אל עבר האפד
-# ביתה
-# "[EN-AID] From top split: LEFT «ועשית שתי טבעות זהב ושמת אתם על שני קצות
-# החשן» / RIGHT «על שפתו אשר אל עבר האפד ביתה». Derive claim from Hebrew
+# ‹ועשית שתי טבעות› (“and-make two seal”)
+# ‹זהב ושמת אתם› (“gold and-put/set obj-marker-them/their”)
+# ‹על שני קצות› (“over two termination”)
+# ‹החשן … על שפתו› (“the-perhaps-a-pocket … over lip-him/its”)
+# ‹אשר אל עבר› (“which to region-across”)
+# ‹האפד ביתה› (“the-girdle house-ward”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 28:26."
 m.step("Exod.28.26")
 
 # -------------------------- Exod.28.27 · ETNACHTA_SPLIT --------------------
-# ועשית שתי טבעות זהב ונתתה אתם על שתי כתפות האפוד מלמטה ממול  … ממעל לחשב
-# האפוד
-# "[EN-AID] From top split: LEFT «ועשית שתי טבעות זהב ונתתה אתם על שתי כתפות
-# האפוד מלמטה ממול פניו לעמת מחברתו» / RIGHT «ממעל לחשב האפוד». Derive claim
-# from Hebrew arms, not English alone. Exod 28:27."
+# ‹ועשית שתי טבעות› (“and-make two seal”)
+# ‹זהב ונתתה אתם› (“gold and-set obj-marker-them/their”)
+# ‹על שתי כתפות› (“over two shoulder”)
+# ‹האפוד מלמטה ממול› (“the-girdle from-to-downward from-abrupt”)
+# ‹… ממעל לחשב האפוד› (“from-upper-part to-belt the-girdle”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:27."
 m.step("Exod.28.27")
 
 # -------------------------- Exod.28.28 · ETNACHTA_SPLIT --------------------
-# וירכסו את החשן מטבעתו מטבעתיו אל טבעת האפד בפתיל תכלת להיות  … ולא יזח
-# החשן מעל האפוד
-# "[EN-AID] From top split: LEFT «וירכסו את החשן מטבעתו מטבעתיו אל טבעת האפד
-# בפתיל תכלת להיות על חשב האפוד» / RIGHT «ולא יזח החשן מעל האפוד». Derive
-# claim from Hebrew arms, not English alone. Exod 28:28."
+# ‹וירכסו את החשן› (“and-tie obj-marker the-perhaps-a-pocket”)
+# ‹מטבעתו מטבעתיו אל› (“from-seal-him/its from-seal-him/its to”)
+# ‹טבעת האפד בפתיל› (“seal the-girdle in-twine”)
+# ‹תכלת להיות … ולא› (“cerulean-mussel to-be … and-not”)
+# ‹יזח החשן מעל› (“shove the-perhaps-a-pocket from-over”)
+# ‹האפוד› (“the-girdle”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:28."
 m.step("Exod.28.28")
 # witness-tier presupposed read: standing_prohibitions on vestment_clauses —
 # read, not installed
@@ -247,20 +320,28 @@ m.witness_read("vestment_clauses", "standing_prohibitions",
                 cites=["Babylonian Talmud Yoma 72a", "Onkelos Exod 28"])
 
 # -------------------------- Exod.28.29 · ETNACHTA_SPLIT --------------------
-# ונשא אהרן את שמות בני ישראל בחשן המשפט על לבו בבאו אל הקדש … לזכרן לפני
-# יהוה תמיד
-# "[EN-AID] From top split: LEFT «ונשא אהרן את שמות בני ישראל בחשן המשפט על
-# לבו בבאו אל הקדש» / RIGHT «לזכרן לפני יהוה תמיד». Derive claim from Hebrew
+# ‹ונשא אהרן את› (“and-lift/carry Aaron obj-marker”)
+# ‹שמות בני ישראל› (“name son Israel”)
+# ‹בחשן המשפט על› (“in-perhaps-a-pocket the-judgment over”)
+# ‹לבו בבאו אל› (“heart-him/its in-come/bring-him/its to”)
+# ‹הקדש … לזכרן לפני› (“the-holiness … to-memento to-face”)
+# ‹יהוה תמיד› (“YHWH continuance”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 28:29."
 m.step("Exod.28.29")
 
 # -------------------------- Exod.28.30 · ETNACHTA_SPLIT --------------------
-# ונתת אל חשן המשפט את האורים ואת התמים והיו על לב אהרן בבאו ל … ונשא אהרן
-# את משפט בני ישראל על לבו לפני יהוה תמיד
-# "[EN-AID] From top split: LEFT «ונתת אל חשן המשפט את האורים ואת התמים והיו
-# על לב אהרן בבאו לפני יהוה» / RIGHT «ונשא אהרן את משפט בני ישראל על לבו
-# לפני יהוה תמיד». Derive claim from Hebrew arms, not English alone. Exod
-# 28:30."
+# ‹ונתת אל חשן› (“and-set to perhaps-a-pocket”)
+# ‹המשפט את האורים› (“the-judgment obj-marker the-Urim”)
+# ‹ואת התמים והיו› (“and-obj-marker the-perfections and-be”)
+# ‹על לב אהרן› (“over heart Aaron”)
+# ‹בבאו ל … ונשא› (“in-come/bring-him/its ? … and-lift/carry”)
+# ‹אהרן את משפט› (“Aaron obj-marker judgment”)
+# ‹בני ישראל על› (“son Israel over”)
+# ‹לבו לפני יהוה› (“heart-him/its to-face YHWH”)
+# ‹תמיד› (“continuance”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:30."
 m.step("Exod.28.30")
 # witness-tier presupposed read: judgment_organ on breastplate_clauses —
 # read, not installed
@@ -268,38 +349,51 @@ m.witness_read("breastplate_clauses", "judgment_organ",
                 cites=["Onkelos Exod 28"])
 
 # -------------------------- Exod.28.31 · TREE_CLAIM ------------------------
-# ועשית את מעיל האפוד … כליל תכלת
-# "[EN-AID] From top split: LEFT «ועשית את מעיל האפוד» / RIGHT «כליל תכלת».
-# Derive claim from Hebrew arms, not English alone. Exod 28:31."
+# ‹ועשית את מעיל› (“and-make obj-marker robe”)
+# ‹האפוד … כליל תכלת› (“the-girdle … complete cerulean-mussel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:31."
 m.step("Exod.28.31")
 
 # -------------------------- Exod.28.32 · ETNACHTA_SPLIT --------------------
-# והיה פי ראשו בתוכו … שפה יהיה לפיו סביב מעשה ארג כפי תחרא יהיה לו לא יקרע
-# "[EN-AID] From top split: LEFT «והיה פי ראשו בתוכו» / RIGHT «שפה יהיה לפיו
-# סביב מעשה ארג כפי תחרא יהיה לו לא יקרע». Derive claim from Hebrew arms,
-# not English alone. Exod 28:32."
+# ‹והיה פי ראשו› (“and-be mouth head-him/its”)
+# ‹בתוכו … שפה יהיה› (“in-midst-him/its … lip be”)
+# ‹לפיו סביב מעשה› (“to-mouth-him/its circle deed/work”)
+# ‹ארג כפי תחרא› (“plait like-mouth linen-corslet”)
+# ‹יהיה לו לא› (“be to-him/its not”)
+# ‹יקרע› (“rend”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:32."
 m.step("Exod.28.32")
 
 # -------------------------- Exod.28.33 · ETNACHTA_SPLIT --------------------
-# ועשית על שוליו רמני תכלת וארגמן ותולעת שני על שוליו סביב … ופעמני זהב
-# בתוכם סביב
-# "[EN-AID] From top split: LEFT «ועשית על שוליו רמני תכלת וארגמן ותולעת שני
-# על שוליו סביב» / RIGHT «ופעמני זהב בתוכם סביב». Derive claim from Hebrew
+# ‹ועשית על שוליו› (“and-make over skirt-him/its”)
+# ‹רמני תכלת וארגמן› (“pomegranate cerulean-mussel and-purple”)
+# ‹ותולעת שני על› (“and-crimson-grub crimson over”)
+# ‹שוליו סביב … ופעמני› (“skirt-him/its circle … and-bell”)
+# ‹זהב בתוכם סביב› (“gold in-midst-them/their circle”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 28:33."
 m.step("Exod.28.33")
 
 # -------------------------- Exod.28.34 · ETNACHTA_SPLIT --------------------
-# פעמן זהב ורמון פעמן זהב ורמון … על שולי המעיל סביב
-# "[EN-AID] From top split: LEFT «פעמן זהב ורמון פעמן זהב ורמון» / RIGHT «על
-# שולי המעיל סביב». Derive claim from Hebrew arms, not English alone. Exod
-# 28:34."
+# ‹פעמן זהב ורמון› (“bell gold and-pomegranate”)
+# ‹פעמן זהב ורמון› (“bell gold and-pomegranate”)
+# ‹… על שולי המעיל› (“over skirt the-robe”)
+# ‹סביב› (“circle”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:34."
 m.step("Exod.28.34")
 
 # -------------------------- Exod.28.35 · ETNACHTA_SPLIT --------------------
-# והיה על אהרן לשרת … ונשמע קולו בבאו אל הקדש לפני יהוה ובצאתו ולא ימות
-# "[EN-AID] From top split: LEFT «והיה על אהרן לשרת» / RIGHT «ונשמע קולו
-# בבאו אל הקדש לפני יהוה ובצאתו ולא ימות». Derive claim from Hebrew arms,
-# not English alone. Exod 28:35."
+# ‹והיה על אהרן› (“and-be over Aaron”)
+# ‹לשרת … ונשמע קולו› (“to-attend-as-a-menial … and-hear voice/sound-
+# him/its”)
+# ‹בבאו אל הקדש› (“in-come/bring-him/its to the-holiness”)
+# ‹לפני יהוה ובצאתו› (“to-face YHWH and-in-bring-forth-him/its”)
+# ‹ולא ימות› (“and-not die”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:35."
 m.step("Exod.28.35")
 # witness-tier presupposed read: announced_entry on bells_clause — read, not
 # installed
@@ -307,25 +401,34 @@ m.witness_read("bells_clause", "announced_entry",
                 cites=["Onkelos Exod 28"])
 
 # -------------------------- Exod.28.36 · ETNACHTA_SPLIT --------------------
-# ועשית ציץ זהב טהור … ופתחת עליו פתוחי חתם קדש ליהוה
-# "[EN-AID] From top split: LEFT «ועשית ציץ זהב טהור» / RIGHT «ופתחת עליו
-# פתוחי חתם קדש ליהוה». Derive claim from Hebrew arms, not English alone.
-# Exod 28:36."
+# ‹ועשית ציץ זהב› (“and-make glistening gold”)
+# ‹טהור … ופתחת עליו› (“pure … and-open-wide over-him/its”)
+# ‹פתוחי חתם קדש› (“sculpture signature-ring holiness”)
+# ‹ליהוה› (“to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:36."
 m.step("Exod.28.36")
 
 # -------------------------- Exod.28.37 · ETNACHTA_SPLIT --------------------
-# ושמת אתו על פתיל תכלת והיה על המצנפת … אל מול פני המצנפת יהיה
-# "[EN-AID] From top split: LEFT «ושמת אתו על פתיל תכלת והיה על המצנפת» /
-# RIGHT «אל מול פני המצנפת יהיה». Derive claim from Hebrew arms, not English
-# alone. Exod 28:37."
+# ‹ושמת אתו על› (“and-put/set obj-marker-him/its over”)
+# ‹פתיל תכלת והיה› (“twine cerulean-mussel and-be”)
+# ‹על המצנפת … אל› (“over the-tiara … to”)
+# ‹מול פני המצנפת› (“abrupt face the-tiara”)
+# ‹יהיה› (“be”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:37."
 m.step("Exod.28.37")
 
 # -------------------------- Exod.28.38 · ETNACHTA_SPLIT --------------------
-# והיה על מצח אהרן ונשא אהרן את עון הקדשים אשר יקדישו בני ישרא … והיה על
-# מצחו תמיד לרצון להם לפני יהוה
-# "[EN-AID] From top split: LEFT «והיה על מצח אהרן ונשא אהרן את עון הקדשים
-# אשר יקדישו בני ישראל לכל מתנת קדשיהם» / RIGHT «והיה על מצחו תמיד לרצון להם
-# לפני יהוה». Derive claim from Hebrew arms, not English alone. Exod 28:38."
+# ‹והיה על מצח› (“and-be over forehead”)
+# ‹אהרן ונשא אהרן› (“Aaron and-lift/carry Aaron”)
+# ‹את עון הקדשים› (“obj-marker perversity the-holiness”)
+# ‹אשר יקדישו בני› (“which sanctify son”)
+# ‹ישרא … והיה על› (“? … and-be over”)
+# ‹מצחו תמיד לרצון› (“forehead-him/its continuance to-delight”)
+# ‹להם לפני יהוה› (“to-them/their to-face YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:38."
 m.step("Exod.28.38")
 # witness-tier presupposed read: written_acceptance on plate_clauses — read,
 # not installed
@@ -341,40 +444,54 @@ m.witness_read("plate_clauses", "the_frontplates_state_machine",
                 cites=["Yoma 7b:3", "Yoma 7b:4", "Yoma 7b:5", "Pesachim 77a:11", "Pesachim 77a:12", "Pesachim 77a:13", "Yevamot 60b:13", "Shabbat 12a:4"])
 
 # -------------------------- Exod.28.39 · ETNACHTA_SPLIT --------------------
-# ושבצת הכתנת שש ועשית מצנפת שש … ואבנט תעשה מעשה רקם
-# "[EN-AID] From top split: LEFT «ושבצת הכתנת שש ועשית מצנפת שש» / RIGHT
-# «ואבנט תעשה מעשה רקם». Derive claim from Hebrew arms, not English alone.
-# Exod 28:39."
+# ‹ושבצת הכתנת שש› (“and-interweave-threads-in-squar the-shirt bleached-
+# stuff”)
+# ‹ועשית מצנפת שש› (“and-make tiara bleached-stuff”)
+# ‹… ואבנט תעשה מעשה› (“and-belt make deed/work”)
+# ‹רקם› (“variegate-color”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:39."
 m.step("Exod.28.39")
 
 # -------------------------- Exod.28.40 · ETNACHTA_SPLIT --------------------
-# ולבני אהרן תעשה כתנת ועשית להם אבנטים … ומגבעות תעשה להם לכבוד ולתפארת
-# "[EN-AID] From top split: LEFT «ולבני אהרן תעשה כתנת ועשית להם אבנטים» /
-# RIGHT «ומגבעות תעשה להם לכבוד ולתפארת». Derive claim from Hebrew arms, not
-# English alone. Exod 28:40."
+# ‹ולבני אהרן תעשה› (“and-to-son Aaron make”)
+# ‹כתנת ועשית להם› (“shirt and-make to-them/their”)
+# ‹אבנטים … ומגבעות תעשה› (“belt … and-cap make”)
+# ‹להם לכבוד ולתפארת› (“to-them/their to-weight and-to-ornament”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:40."
 m.step("Exod.28.40")
 
 # -------------------------- Exod.28.41 · ETNACHTA_SPLIT --------------------
-# והלבשת אתם את אהרן אחיך ואת בניו אתו … ומשחת אתם ומלאת את ידם וקדשת אתם
-# וכהנו לי
-# "[EN-AID] From top split: LEFT «והלבשת אתם את אהרן אחיך ואת בניו אתו» /
-# RIGHT «ומשחת אתם ומלאת את ידם וקדשת אתם וכהנו לי». Derive claim from
-# Hebrew arms, not English alone. Exod 28:41."
+# ‹והלבשת אתם את› (“and-wrap-around obj-marker-them/their obj-marker”)
+# ‹אהרן אחיך ואת› (“Aaron brother-you/your and-obj-marker”)
+# ‹בניו אתו … ומשחת› (“son-him/its with-him/its … and-rub-with-oil”)
+# ‹אתם ומלאת את› (“obj-marker-them/their and-fill obj-marker”)
+# ‹ידם וקדשת אתם› (“hand-them/their and-sanctify obj-marker-them/their”)
+# ‹וכהנו לי› (“and-officiate-as-a-priest to-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:41."
 m.step("Exod.28.41")
 
 # -------------------------- Exod.28.42 · ETNACHTA_SPLIT --------------------
-# ועשה להם מכנסי בד לכסות בשר ערוה … ממתנים ועד ירכים יהיו
-# "[EN-AID] From top split: LEFT «ועשה להם מכנסי בד לכסות בשר ערוה» / RIGHT
-# «ממתנים ועד ירכים יהיו». Derive claim from Hebrew arms, not English alone.
-# Exod 28:42."
+# ‹ועשה להם מכנסי› (“and-make to-them/their drawers”)
+# ‹בד לכסות בשר› (“flaxen-thread to-plump flesh”)
+# ‹ערוה … ממתנים ועד› (“nudity … from-waist and-until”)
+# ‹ירכים יהיו› (“thigh be”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:42."
 m.step("Exod.28.42")
 
 # -------------------------- Exod.28.43 · ETNACHTA_SPLIT --------------------
-# והיו על אהרן ועל בניו בבאם אל אהל מועד או בגשתם אל המזבח לשר … חקת עולם לו
-# ולזרעו אחריו
-# "[EN-AID] From top split: LEFT «והיו על אהרן ועל בניו בבאם אל אהל מועד או
-# בגשתם אל המזבח לשרת בקדש ולא ישאו עון » / RIGHT «חקת עולם לו ולזרעו
-# אחריו». Derive claim from Hebrew arms, not English alone. Exod 28:43."
+# ‹והיו על אהרן› (“and-be over Aaron”)
+# ‹ועל בניו בבאם› (“and-over son-him/its in-come/bring-them/their”)
+# ‹אל אהל מועד› (“to tent seasons”)
+# ‹או בגשתם אל› (“or in-be-them/their to”)
+# ‹המזבח לשר … חקת› (“the-altar to-officer … statute”)
+# ‹עולם לו ולזרעו› (“forever to-him/its and-to-seed-him/its”)
+# ‹אחריו› (“after-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 28:43."
 m.step("Exod.28.43")
 # witness-tier presupposed read: wear_or_die on closing_clause — read, not
 # installed

@@ -58,11 +58,40 @@ paschal regime routed to the compiled pesach engine
 (cold_run_pesach.py: Exod 12:4 registered, 12:8 night, 12:10
 morning-burn) — cross-book grading #3.
 Zero-report law: every claimed ink token is probed before anything
-runs; the pesach-engine receipt is asserted, not assumed.
+runs; the pesach-engine receipt is a LIVE CALL, not a file check.
+
+SITTING A RECOMPILE (2026-09-05, the audit run before Numbers on the
+owner's word; REVIEW_LEV1-8 items C, D, E, I, J — the ledger's
+appended section names every segment opened):
+ C  the todah and shelamim EATER cells are INK — Lev 7:19's own
+    "and the flesh: every CLEAN person may eat flesh" (probed);
+ D  the firstborn's two-days-one-night window names its segment:
+    Zevachim 57a:5 (the baraita on Num 18:18 "LIKE the wave breast
+    and LIKE the right thigh" — compared to the shelamim's breast
+    and thigh), R. Akiva's restatement 57a:11, R. Yishmael's
+    chain-limit objection 57a:14;
+ E  the outer chatat's remainder = SOUTHERN base is no longer open
+    data: Zevachim 53a:10-11 derives it from Lev 4:7's own el-yesod
+    by "let his DESCENT from the ramp be learned from his EXIT from
+    the sanctuary — to the base nearest him," and the ramp is SOUTH
+    by Lev 1:11's own "on the SIDE of the altar northward" (Sifra
+    Nedavah Section 5 8, seated LV01C-02); the R. Yishmael /
+    R. Shimon b. Yochai dispute (53a:12) and Rav Asi's geometry
+    (53a:14) recorded beside it — a MOVE;
+ I  the pesach cell CALLS cold_run_pesach.paschal_procedure() and
+    registration() and composes its value from their verdicts (the
+    first-call standard of the Mishpatim -> Lev 24 call);
+ J  the olah's north is graded TWICE — the flock's own verse (Lev
+    1:11, INK) and the herd's, which the Sifra generalizes (Nedavah
+    Chapter 7 6-7: "the north obtains in every olah," MOVE) — so the
+    two provenances show instead of one label covering both.
+The honest-pairing guard (compile_guards.py) runs first on this file.
 """
 import sqlite3, sys, os, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effects_layer as FX
+from compile_guards import check_honest_pairing
+GUARDED = check_honest_pairing(os.path.abspath(__file__))
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -108,11 +137,15 @@ PROBES = [
     ('vow/freewill: the NEXT DAY too',        'Lev', 7, 16, 'וממחרת'),
     ('the THIRD day — burn',                  'Lev', 7, 17, 'השלישי'),
     ('the wave breast (ha-tenufah)',          'Lev', 7, 34, 'התנופה'),
+    ('every CLEAN person eats the flesh (C)', 'Lev', 7, 19, 'טהור'),
+    ('olah flock: the SIDE of the altar (E)', 'Lev', 1, 11, 'ירך'),
     # cross-book receipts
     ('[IMPORT] YK between-the-poles day',     'Lev', 16, 14, 'הכפרת'),
     ('[IMPORT] the altar horns DOUBLED',      'Exod', 27, 2, 'קרנתיו', 2),
     ('[IMPORT] on its FOUR corners',          'Exod', 27, 2, 'ארבע'),
     ('[IMPORT] firstborn flesh to priest',    'Num', 18, 18, 'ובשרם'),
+    ('[IMPORT] LIKE the wave breast (D)',     'Num', 18, 18, 'כחזה'),
+    ('[IMPORT] and LIKE the right thigh (D)', 'Num', 18, 18, 'וכשוק'),
 ]
 fired = 0
 for row in PROBES:
@@ -124,13 +157,30 @@ for row in PROBES:
         sys.exit('ZERO-REPORT LAW: probe %r wanted %d of %r at %s %d:%d, '
                  'found %d — refusing to run' % (label, need, tok, book, ch, vs, hits))
     fired += 1
-print('probes: all %d ink-token probes fired (3 imports receipted) '
+print('probes: all %d ink-token probes fired (6 imports receipted) '
       '[zero-report law satisfied]' % fired)
 
-# the pesach-engine receipt for row 8's routing
-assert os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)),
-       'cold_run_pesach.py')), 'pesach engine missing — row 8 cannot route'
-print('routing receipt: cold_run_pesach.py present for the paschal regime')
+# the pesach-engine receipt for row 8's routing — a LIVE CALL (item I):
+# the pesach runner's functions import cold under its main guard; the
+# cell's value is COMPOSED from the callee's verdicts, never recited.
+import cold_run_pesach as PESACH
+PESACH_CALLS = {
+    'eating_time': PESACH.paschal_procedure({'ask': 'eating_time'}, PESACH.DATA)[0],
+    'leftover':    PESACH.paschal_procedure({'ask': 'leftover'}, PESACH.DATA)[0],
+    'nonregistrants': PESACH.registration({'ask': 'slaughter_for_nonregistrants'}, PESACH.DATA)[0],
+}
+print('routing receipt: cold_run_pesach CALLED — paschal_procedure(eating_time)=%r, '
+      'paschal_procedure(leftover)=%r, registration(slaughter_for_nonregistrants)=%r'
+      % (PESACH_CALLS['eating_time'], PESACH_CALLS['leftover'], PESACH_CALLS['nonregistrants']))
+
+def pesach_regime_from_calls():
+    """the cell's value composed from the callee: night-only-to-midnight
+    from the eating_time verdict, registered-only from the registration
+    verdict; anything else is returned as an honest UNRESOLVED string."""
+    if (PESACH_CALLS['eating_time'] == 'night only, until midnight'
+            and PESACH_CALLS['nonregistrants'] == 'invalid'):
+        return 'night_only_to_midnight_registered'
+    return 'UNRESOLVED:%s/%s' % (PESACH_CALLS['eating_time'], PESACH_CALLS['nonregistrants'])
 
 # ---- (1) THE DISPATCHER — compiled from the span's ink --------------
 # Provenance tags: INK (bare span ink), MOVE (named recorded argument,
@@ -148,9 +198,19 @@ ANYWHERE = ('Zevachim 55b:1-2 — the tripled tent token (petach at Lev 3:2; '
             'lifnei at 3:8 + 3:13): itself, the sides, the side-of-sides; '
             '55b:3 asks about the petach/lifnei difference itself')
 MIDNIGHT = 'ink bound = until morning (Lev 7:15); Mishnah Berakhot 1:1 tail self-labels the midnight cap: to distance from transgression'
+SOUTH_BASE = ('Zevachim 53a:10-11 — the baraita on Lev 4:7\'s own el-yesod: "this is the SOUTHERN base"; '
+              '"let his DESCENT from the ramp be learned from his EXIT from the sanctuary — to the base nearest him"; '
+              'the ramp is SOUTH by Lev 1:11\'s own al-yerekh... tzafona (Sifra Nedavah Section 5 8, seated LV01C-02); '
+              'the dispute beside it — R. Yishmael western, R. Shimon b. Yochai southern (53a:12), Rav Asi\'s geometry (53a:14)')
+BEKHOR_WINDOW = ('Zevachim 57a:5 — the baraita on Num 18:18 "and their flesh shall be yours LIKE the wave breast and LIKE the right thigh": '
+                 'Scripture compares the firstborn to the shelamim\'s breast and thigh — as they are eaten two days and one night, so the firstborn; '
+                 'R. Akiva\'s restatement 57a:11; R. Yishmael\'s chain-limit objection to the todah analogy 57a:14')
+CLEAN_EATER = 'Lev 7:19 — "and the flesh: every CLEAN person may eat flesh" — the span\'s own eater clause for the light offerings'
+HERD_NORTH = ('Sifra Nedavah Chapter 7 6-7 — valid without flaying, cutting, or hand-laying, INVALID without north, '
+              '"for the north obtains in every olah": the flock\'s verse (1:11) generalized to the herd, whose own verses (1:3-9) state no north')
 
 def dispatch(offering):
-    o = offering
+    o, _, variant = offering.partition(':')
     if o == 'inner_chatat_yk':
         return {
          'place': cell('north', I, NORTH_LINK),
@@ -172,15 +232,15 @@ def dispatch(offering):
          'place': cell('north', I, NORTH_LINK),
          'applications': cell('four_horns', P,
                               'Lev 4:25/4:30 horns [INK]; the count four = the altar\'s own build, Exod 27:2 [IMPORT]'),
-         'remainder': cell('southern_base', D,
-                           'which base is not stated in the span\'s ink; carried as transmitted geometry (open docket: the descent-path derivation)'),
+         'remainder': cell('southern_base', M, SOUTH_BASE),
          'eater': cell('male_priests', I, 'Lev 6:22 kol zachar ba-kohanim'),
          'eat_place': cell('within_hangings', I, 'Lev 6:19 be-makom kadosh — the courtyard'),
          'window': cell('day_night_to_midnight', F, MIDNIGHT),
         }
     if o == 'olah':
         return {
-         'place': cell('north', I, 'Lev 1:11 tzafona (the flock\'s own verse; the span states it once and the link generalizes)'),
+         'place': (cell('north', M, HERD_NORTH) if variant == 'herd'
+                   else cell('north', I, 'Lev 1:11 tzafona — the flock\'s own verse states it')),
          'applications': cell('two_that_are_four', M, TWO_FOUR),
          'procedure': cell('flay_and_cut', I, 'Lev 1:6 ve-hifshit ve-nitach'),
          'disposition': cell('wholly_to_fires', I, 'Lev 1:9 ve-hiktir... et ha-KOL'),
@@ -198,8 +258,7 @@ def dispatch(offering):
         return {
          'place': cell('anywhere_courtyard', M, ANYWHERE),
          'applications': cell('two_that_are_four', M, TWO_FOUR),
-         'eater': cell('anyone', D,
-                       'the flesh is the offerer\'s table (Lev 7:15 frame); the any-eater boundary carried as calibration'),
+         'eater': cell('anyone', I, CLEAN_EATER),
          'eat_place': cell('all_city', D, 'the city boundary = transmitted geography (the camps mapping)'),
          'window': cell('day_night_to_midnight', F,
                         'INK: eaten on the day it is offered, nothing left until morning (Lev 7:15); the midnight cap is the fence'),
@@ -210,7 +269,7 @@ def dispatch(offering):
         return {
          'place': cell('anywhere_courtyard', M, ANYWHERE),
          'applications': cell('two_that_are_four', M, TWO_FOUR),
-         'eater': cell('anyone', D, 'as the todah row'),
+         'eater': cell('anyone', I, CLEAN_EATER),
          'eat_place': cell('all_city', D, 'as the todah row'),
          'window': cell('two_days_one_night', I,
                         'Lev 7:16-17 — eaten on its day AND the morrow; the THIRD day\'s remainder is burned'),
@@ -223,10 +282,11 @@ def dispatch(offering):
                               'Zevachim 57a:1-4 — el yesod (Lev 4:7) teaches the base; the two-verses-as-one rule BARS extending two-that-are-four: ONE stands'),
          'bekhor_eater': cell('priests', P, 'Num 18:18 — its flesh is yours [IMPORT]'),
          'maaser_eater': cell('anyone', P, 'Lev 27:32 outside this span [IMPORT]; the any-eater boundary as calibration'),
-         'window': cell('two_days_one_night', M,
-                        'paired to the shelamim clock (Lev 7:16-17) by the recorded analogy in the sugya family'),
-         'pesach_regime': cell('night_only_to_midnight_registered', P,
-                               'routed to the compiled pesach engine: Exod 12:8 night, 12:4 registered, 12:10 morning-burn + the fence [IMPORT]'),
+         'window': cell('two_days_one_night', M, BEKHOR_WINDOW),
+         'pesach_regime': cell(pesach_regime_from_calls(), P,
+                               'CALLED cold_run_pesach.paschal_procedure(eating_time) -> %r; registration(slaughter_for_nonregistrants) -> %r; '
+                               'paschal_procedure(leftover) -> %r [IMPORT, live call — the first-call standard]'
+                               % (PESACH_CALLS['eating_time'], PESACH_CALLS['nonregistrants'], PESACH_CALLS['leftover'])),
         }
     return None
 
@@ -262,9 +322,12 @@ TESTS = [
    'remainder': 'southern_base', 'eater': 'male_priests',
    'eat_place': 'within_hangings', 'window': 'day_night_to_midnight'},
    ['accepted', 'due_to_priest', 'eating_window']),
- ('Zevachim 5:4', 'olah', {
+ ('Zevachim 5:4', 'olah:flock', {
    'place': 'north', 'applications': 'two_that_are_four',
    'procedure': 'flay_and_cut', 'disposition': 'wholly_to_fires'},
+   ['accepted']),
+ ('Zevachim 5:4', 'olah:herd', {
+   'place': 'north'},
    ['accepted']),
  ('Zevachim 5:5', 'communal_shelamim_and_asham', {
    'place': 'north', 'applications': 'two_that_are_four',
@@ -290,6 +353,9 @@ TESTS = [
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------
+assert len(TESTS) == GUARDED, 'guard counted %d tests, table holds %d' % (GUARDED, len(TESTS))
+print('guard: %d test rows, every expected value a literal from the answer sheet '
+      '[honest-pairing guard satisfied]' % GUARDED)
 print()
 total = ok = 0
 frac = {'INK': 0, 'MOVE': 0, 'FENCE': 0, 'DATA': 0, 'IMPORT': 0}
@@ -327,7 +393,9 @@ if ok == total:
     print('THE LEV 1-8 OFFERING ENGINE CONSOLIDATES — one dispatcher, '
           'the whole span, the tradition\'s own grid as the answer sheet; '
           'the place-link runs on the doubled verb, the blood counts on '
-          'the around-vs-throw tension, and the midnight cap arrives '
-          'self-labeled as a fence.')
+          'the around-vs-throw tension, the midnight cap arrives '
+          'self-labeled as a fence, the eater is the ink\'s own CLEAN '
+          'person, the southern base descends the ramp, and the pesach '
+          'cell is answered by a call into its own engine.')
 else:
     sys.exit('MISSES REMAIN — consult the Talmud per gap and recompile.')

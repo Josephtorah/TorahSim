@@ -14,56 +14,68 @@ from machine import Machine
 m = Machine("gen_18_the_rise")
 
 # -------------------------- Gen.7.17 · THE_LIFT_AND_THE_RISE ---------------
-# וַיְהִי הַמַּבּוּל אַרְבָּעִים יוֹם עַל־הָאָרֶץ וַיִּרְבּוּ הַמַּיִם
-# וַיִּשְׂאוּ אֶת־הַתֵּבָה וַתָּרָם מֵעַל הָאָרֶץ
+# ‹וַיְהִי הַמַּבּוּל אַרְבָּעִים› (“and-be the-deluge forty”)
+# ‹יוֹם עַל־הָאָרֶץ וַיִּרְבּוּ› (“day over the-earth and-increased”)
+# ‹הַמַּיִם וַיִּשְׂאוּ אֶת־הַתֵּבָה› (“the-waters and-they-lifted obj-
+# marker the-ark”)
+# ‹וַתָּרָם מֵעַל הָאָרֶץ› (“and-it-rose from-over the-earth”)
 # "And the flood was forty days upon the earth; and the waters increased,
 # and bore up the ark, and it was lifted up above the earth."
 m.step("Gen.7.17")
-# ‹וַיְהִי הַמַּבּוּל אַרְבָּעִים יוֹם עַל־הָאָרֶץ› (“and-be the-deluge
-# forty day over the-earth”) — fact holds: the-deluge-forty-day-over-the-
-# earth
+# ‹וַיְהִי הַמַּבּוּל אַרְבָּעִים› (“and-be the-deluge forty”)
+# ‹יוֹם עַל־הָאָרֶץ› (“day over the-earth”)
+# — fact holds: the-deluge-forty-day-over-the-earth
 m.fact("ha_mabul_arbaim_yom_al_ha_aretz")
-# ‹וַיִּרְבּוּ הַמַּיִם וַיִּשְׂאוּ אֶת־הַתֵּבָה› (“and-increased the-waters
-# and-they-lifted obj-marker the-ark”) — event: lift — agent the-waters;
-# theme the-ark
+# ‹וַיִּרְבּוּ הַמַּיִם וַיִּשְׂאוּ› (“and-increased the-waters and-they-
+# lifted”)
+# ‹אֶת־הַתֵּבָה› (“obj-marker the-ark”)
+# — event: lift — agent the-waters; theme the-ark
 m.event("lift", agent="ha_mayim", themes=["ha_tevah"])
-# ‹וַתָּרָם מֵעַל הָאָרֶץ› (“and-it-rose from-over the-earth”) — event: rise
-# — theme the-ark
+# ‹וַתָּרָם מֵעַל הָאָרֶץ› (“and-it-rose from-over the-earth”)
+# — event: rise — theme the-ark
 m.event("rise", themes=["ha_tevah"])
 # reads without prior install (flag, not fix): ark, waters
 m.presupposed("tevah", "mayim")
 
 # -------------------------- Gen.7.18 · THE_PREVAIL_DEBUT_THE_ARK_WALKS -----
-# וַיִּגְבְּרוּ הַמַּיִם וַיִּרְבּוּ מְאֹד עַל־הָאָרֶץ וַתֵּלֶךְ הַתֵּבָה
-# עַל־פְּנֵי הַמָּיִם
+# ‹וַיִּגְבְּרוּ הַמַּיִם וַיִּרְבּוּ› (“and-prevailed the-waters and-
+# increased”)
+# ‹מְאֹד עַל־הָאָרֶץ וַתֵּלֶךְ› (“very over the-earth and-it-walked”)
+# ‹הַתֵּבָה עַל־פְּנֵי הַמָּיִם› (“the-ark over face-of the-waters”)
 # "And the waters prevailed, and increased greatly upon the earth; and the
 # ark went upon the face of the waters."
 m.step("Gen.7.18")
-# ‹וַיִּגְבְּרוּ הַמַּיִם› (“and-prevailed the-waters”) — event: prevail —
-# agent the-waters
+# ‹וַיִּגְבְּרוּ הַמַּיִם› (“and-prevailed the-waters”)
+# — event: prevail — agent the-waters
 m.event("prevail", agent="ha_mayim")
-# ‹וַיִּרְבּוּ מְאֹד עַל־הָאָרֶץ› (“and-increased very over the-earth”) —
-# fact holds: and-increased-very-over-the-earth
+# ‹וַיִּרְבּוּ מְאֹד עַל־הָאָרֶץ› (“and-increased very over the-earth”)
+# — fact holds: and-increased-very-over-the-earth
 m.fact("va_yirbu_meod_al_ha_aretz")
-# ‹וַתֵּלֶךְ הַתֵּבָה עַל־פְּנֵי הַמָּיִם› (“and-it-walked the-ark over
-# face-of the-waters”) — event: walk — agent the-ark; theme over-face-of-
-# the-waters
+# ‹וַתֵּלֶךְ הַתֵּבָה עַל־פְּנֵי› (“and-it-walked the-ark over face-of”)
+# ‹הַמָּיִם› (“the-waters”)
+# — event: walk — agent the-ark; theme over-face-of-the-waters
 m.event("walk", agent="ha_tevah", themes=["al_pnei_ha_mayim"])
 
 # -------------------------- Gen.7.19 · THE_MOUNTAINS_GO_UNDER --------------
-# וְהַמַּיִם גָּבְרוּ מְאֹד מְאֹד עַל־הָאָרֶץ וַיְכֻסּוּ כָּל־הֶהָרִים
-# הַגְּבֹהִים אֲשֶׁר־תַּחַת כָּל־הַשָּׁמָיִם
+# ‹וְהַמַּיִם גָּבְרוּ מְאֹד› (“and-the-waters prevailed very”)
+# ‹מְאֹד עַל־הָאָרֶץ וַיְכֻסּוּ› (“very over the-earth and-were-covered”)
+# ‹כָּל־הֶהָרִים הַגְּבֹהִים אֲשֶׁר־תַּחַת› (“all the-mountains the-high
+# which under”)
+# ‹כָּל־הַשָּׁמָיִם› (“all the-heavens”)
 # "And the waters prevailed exceedingly upon the earth; and all the high
 # mountains that were under the whole heaven were covered."
 m.step("Gen.7.19")
-# ‹גָּבְרוּ מְאֹד מְאֹד … כָּל־הֶהָרִים הַגְּבֹהִים אֲשֶׁר־תַּחַת
-# כָּל־הַשָּׁמָיִם› (“prevailed very very … all the-mountains the-high which
-# under all the-heavens”) — fact holds: prevailed-very-very-over-the-earth;
-# all-he-mountains-the-high-under-all-the-heavens
+# ‹גָּבְרוּ מְאֹד מְאֹד› (“prevailed very very”)
+# ‹… כָּל־הֶהָרִים הַגְּבֹהִים אֲשֶׁר־תַּחַת› (“all the-mountains the-high
+# which under”)
+# ‹כָּל־הַשָּׁמָיִם› (“all the-heavens”)
+# — fact holds: prevailed-very-very-over-the-earth; all-he-mountains-the-
+# high-under-all-the-heavens
 m.fact("gavru_meod_meod_al_ha_aretz",
        "kol_he_harim_ha_gevohim_tachat_kol_ha_shamayim")
 # ‹וַיְכֻסּוּ כָּל־הֶהָרִים הַגְּבֹהִים› (“and-were-covered all the-
-# mountains the-high”) — event: cover — theme all-he-mountains-the-high
+# mountains the-high”)
+# — event: cover — theme all-he-mountains-the-high
 m.event("cover", themes=["kol_he_harim_ha_gevohim"])
 # witness-tier presupposed read: territorial_claim_defeated on
 # all_mountains_quantifier — read, not installed
@@ -71,44 +83,55 @@ m.witness_read("all_mountains_quantifier", "territorial_claim_defeated",
                 cites=["Bereshit Rabbah 32:10"])
 
 # -------------------------- Gen.7.20 · FIFTEEN_CUBITS_UPWARD ---------------
-# חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה גָּבְרוּ הַמָּיִם וַיְכֻסּוּ הֶהָרִים
+# ‹חֲמֵשׁ עֶשְׂרֵה אַמָּה› (“five teen cubit”)
+# ‹מִלְמַעְלָה גָּבְרוּ הַמָּיִם› (“upward prevailed the-waters”)
+# ‹וַיְכֻסּוּ הֶהָרִים› (“and-were-covered the-mountains”)
 # "Fifteen cubits upward did the waters prevail; and the mountains were
 # covered."
 m.step("Gen.7.20")
-# ‹חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה גָּבְרוּ הַמָּיִם› (“five teen cubit
-# upward prevailed the-waters”) — fact holds: five--teen-cubit-from-upward-
-# prevailed
+# ‹חֲמֵשׁ עֶשְׂרֵה אַמָּה› (“five teen cubit”)
+# ‹מִלְמַעְלָה גָּבְרוּ הַמָּיִם› (“upward prevailed the-waters”)
+# — fact holds: five--teen-cubit-from-upward-prevailed
 m.fact("chamesh_esreh_amah_mi_lemalah_gavru")
-# ‹וַיְכֻסּוּ הֶהָרִים› (“and-were-covered the-mountains”) — event: cover —
-# theme mountains
+# ‹וַיְכֻסּוּ הֶהָרִים› (“and-were-covered the-mountains”)
+# — event: cover — theme mountains
 m.event("cover", themes=["he_harim"])
 
 # -------------------------- Gen.7.21 · ALL_FLESH_EXPIRES -------------------
-# וַיִּגְוַע כָּל־בָּשָׂר הָרֹמֵשׂ עַל־הָאָרֶץ בָּעוֹף וּבַבְּהֵמָה
-# וּבַחַיָּה וּבְכָל־הַשֶּׁרֶץ הַשֹּׁרֵץ עַל־הָאָרֶץ וְכֹל הָאָדָם
+# ‹וַיִּגְוַע כָּל־בָּשָׂר הָרֹמֵשׂ› (“and-expired all flesh the-creeping”)
+# ‹עַל־הָאָרֶץ בָּעוֹף וּבַבְּהֵמָה› (“over the-earth in-flying-creature
+# and-in-livestock”)
+# ‹וּבַחַיָּה וּבְכָל־הַשֶּׁרֶץ הַשֹּׁרֵץ› (“and-in-beast and-in-all the-
+# swarming-creature the-swarming-creature”)
+# ‹עַל־הָאָרֶץ וְכֹל הָאָדָם› (“over the-earth and-all the-human”)
 # "And all flesh perished that moved upon the earth, both fowl, and cattle,
 # and beast, and every swarming thing that swarmeth upon the earth, and
 # every man;"
 m.step("Gen.7.21")
-# ‹וַיִּגְוַע כָּל־בָּשָׂר› (“and-expired all flesh”) — event: expire —
-# theme all-flesh
+# ‹וַיִּגְוַע כָּל־בָּשָׂר› (“and-expired all flesh”)
+# — event: expire — theme all-flesh
 m.event("expire", themes=["kol_basar"])
-# ‹בָּעוֹף וּבַבְּהֵמָה וּבַחַיָּה וּבְכָל־הַשֶּׁרֶץ … וְכֹל הָאָדָם› (“in-
-# flying-creature and-in-livestock and-in-beast and-in-all the-swarming-
-# creature … and-all the-human”) — fact holds: in-the-flying-creature-and-
-# and-livestock-and-and-beast-and-and-swarming-creature-and-all-the-human
+# ‹בָּעוֹף וּבַבְּהֵמָה וּבַחַיָּה› (“in-flying-creature and-in-livestock
+# and-in-beast”)
+# ‹וּבְכָל־הַשֶּׁרֶץ … וְכֹל הָאָדָם› (“and-in-all the-swarming-creature …
+# and-all the-human”)
+# — fact holds: in-the-flying-creature-and-and-livestock-and-and-beast-and-
+# and-swarming-creature-and-all-the-human
 m.fact("ba_of_u_va_behemah_u_va_chayah_u_va_sheretz_ve_khol_ha_adam")
 
 # -------------------------- Gen.7.22 · THE_COMPOUNDED_BREATH_CRITERION -----
-# כֹּל אֲשֶׁר נִשְׁמַת־רוּחַ חַיִּים בְּאַפָּיו מִכֹּל אֲשֶׁר בֶּחָרָבָה
-# מֵתוּ
+# ‹כֹּל אֲשֶׁר נִשְׁמַת־רוּחַ› (“all which breath-of spirit”)
+# ‹חַיִּים בְּאַפָּיו מִכֹּל› (“life in-his-nostrils from-all”)
+# ‹אֲשֶׁר בֶּחָרָבָה מֵתוּ› (“which on-dry-land died”)
 # "all in whose nostrils was the breath of the spirit of life, whatsoever
 # was in the dry land, died."
 m.step("Gen.7.22")
-# ‹נִשְׁמַת־רוּחַ חַיִּים בְּאַפָּיו … מִכֹּל אֲשֶׁר בֶּחָרָבָה מֵתוּ›
-# (“breath-of spirit life in-his-nostrils … from-all which on-dry-land
-# died”) — fact holds: breath-of-spirit-wind-life-in-his-nostrils; from-all-
-# which-in-dry-land-died
+# ‹נִשְׁמַת־רוּחַ חַיִּים בְּאַפָּיו› (“breath-of spirit life in-his-
+# nostrils”)
+# ‹… מִכֹּל אֲשֶׁר בֶּחָרָבָה› (“from-all which on-dry-land”)
+# ‹מֵתוּ› (“died”)
+# — fact holds: breath-of-spirit-wind-life-in-his-nostrils; from-all-which-
+# in-dry-land-died
 m.fact("nishmat_ruach_chayim_be_apav",
        "mi_kol_asher_be_charavah_metu")
 # witness-tier presupposed read: legal_definition_of_life on nishmat_formula
@@ -129,28 +152,36 @@ m.witness_read("nishmat_ruach_chayim_be_apav", "nose_predicate_laws",
                 cites=["Sotah 45b:16", "Sotah 45b:17", "Sotah 45b:18", "Bekhorot 46b:1", "Bekhorot 46b:2", "Bekhorot 46b:3"])
 
 # -------------------------- Gen.7.23 · THE_WIPE_EXECUTED_ONLY_NOACH_LEFT ---
-# וַיִּמַח אֶת־כָּל־הַיְקוּם אֲשֶׁר עַל־פְּנֵי הָאֲדָמָה מֵאָדָם
-# עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף הַשָּׁמַיִם וַיִּמָּחוּ מִן־הָאָרֶץ
-# וַיִשָּׁאֶר אַךְ־נֹחַ וַאֲשֶׁר אִתּוֹ בַּתֵּבָה
+# ‹וַיִּמַח אֶת־כָּל־הַיְקוּם אֲשֶׁר› (“and-He-wiped obj-marker all the-
+# standing-substance which”)
+# ‹עַל־פְּנֵי הָאֲדָמָה מֵאָדָם› (“over face-of the-ground from-human”)
+# ‹עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף› (“until livestock until creeper and-
+# until flying-creature”)
+# ‹הַשָּׁמַיִם וַיִּמָּחוּ מִן־הָאָרֶץ› (“the-heavens and-they-were-wiped
+# from the-earth”)
+# ‹וַיִשָּׁאֶר אַךְ־נֹחַ וַאֲשֶׁר› (“and-was-left only Noah and-which”)
+# ‹אִתּוֹ בַּתֵּבָה› (“with-him in-ark”)
 # "And He blotted out every living substance which was upon the face of the
 # ground, both man, and cattle, and creeping thing, and fowl of the heaven;
 # and they were blotted out from the earth; and Noah only was left, and they
 # that were with him in the ark."
 m.step("Gen.7.23")
 # ‹וַיִּמַח אֶת־כָּל־הַיְקוּם› (“and-He-wiped obj-marker all the-standing-
-# substance”) — event: wipe — theme all-the-standing-substance
+# substance”)
+# — event: wipe — theme all-the-standing-substance
 m.event("wipe", themes=["kol_ha_yequm"])
-# ‹מֵאָדָם עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף הַשָּׁמַיִם› (“from-human
-# until livestock until creeper and-until flying-creature the-heavens”) —
-# fact holds: from-human-until-livestock-until-creeper-and-until-flying-
+# ‹מֵאָדָם עַד־בְּהֵמָה עַד־רֶמֶשׂ› (“from-human until livestock until
+# creeper”)
+# ‹וְעַד־עוֹף הַשָּׁמַיִם› (“and-until flying-creature the-heavens”)
+# — fact holds: from-human-until-livestock-until-creeper-and-until-flying-
 # creature
 m.fact("me_adam_ad_behemah_ad_remes_ve_ad_of")
-# ‹וַיִּמָּחוּ מִן־הָאָרֶץ› (“and-they-were-wiped from the-earth”) — event:
-# wiped — theme all-the-standing-substance
+# ‹וַיִּמָּחוּ מִן־הָאָרֶץ› (“and-they-were-wiped from the-earth”)
+# — event: wiped — theme all-the-standing-substance
 m.event("wiped", themes=["kol_ha_yequm"])
-# ‹וַיִשָּׁאֶר אַךְ־נֹחַ וַאֲשֶׁר אִתּוֹ בַּתֵּבָה› (“and-was-left only Noah
-# and-which with-him in-ark”) — event: remain — theme only-Noach-and-which-
-# with-him
+# ‹וַיִשָּׁאֶר אַךְ־נֹחַ וַאֲשֶׁר› (“and-was-left only Noah and-which”)
+# ‹אִתּוֹ בַּתֵּבָה› (“with-him in-ark”)
+# — event: remain — theme only-Noach-and-which-with-him
 m.event("remain", themes=["akh_noach_va_asher_ito"])
 # reads without prior install (flag, not fix): Noach
 m.presupposed("noach")
@@ -164,14 +195,17 @@ m.witness_read("from_man_to_beast_order", "initiator_punished_first",
                 cites=["Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 2:8"])
 
 # -------------------------- Gen.7.24 · THE_HUNDRED_AND_FIFTY_DAYS ----------
-# וַיִּגְבְּרוּ הַמַּיִם עַל־הָאָרֶץ חֲמִשִּׁים וּמְאַת יוֹם
+# ‹וַיִּגְבְּרוּ הַמַּיִם עַל־הָאָרֶץ› (“and-prevailed the-waters over the-
+# earth”)
+# ‹חֲמִשִּׁים וּמְאַת יוֹם› (“fifty and-hundred day”)
 # "And the waters prevailed upon the earth a hundred and fifty days."
 m.step("Gen.7.24")
 # ‹וַיִּגְבְּרוּ הַמַּיִם עַל־הָאָרֶץ› (“and-prevailed the-waters over the-
-# earth”) — event: prevail — agent the-waters
+# earth”)
+# — event: prevail — agent the-waters
 m.event("prevail", agent="ha_mayim")
-# ‹חֲמִשִּׁים וּמְאַת יוֹם› (“fifty and-hundred day”) — fact holds: fifty-
-# and-hundred-day-over-the-earth
+# ‹חֲמִשִּׁים וּמְאַת יוֹם› (“fifty and-hundred day”)
+# — fact holds: fifty-and-hundred-day-over-the-earth
 m.fact("chamishim_u_meat_yom_al_ha_aretz")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

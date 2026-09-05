@@ -13,11 +13,14 @@ from machine import Machine
 
 m = Machine("lev_01_olah_flock")
 
-# -------------------------- Lev.1.10 · COND_ואם ----------------------------
-# ואם מן הצאן קרבנו מן הכשבים או מן העזים לעלה … זכר תמים יקריבנו
-# "[EN-AID] From top split: LEFT «ואם מן הצאן קרבנו מן הכשבים או מן העזים
-# לעלה» / RIGHT «זכר תמים יקריבנו». Derive claim from Hebrew arms. Lev
-# 1:10."
+# -------------------------- Lev.1.10 · COND_ואם (“and-if”) -----------------
+# ‹ואם מן הצאן› (“and-if from the-flock”)
+# ‹קרבנו מן הכשבים› (“offering-him/its from the-young-sheep”)
+# ‹או מן העזים› (“or from the-she-goat”)
+# ‹לעלה … זכר תמים› (“to-burnt-offering … male entire”)
+# ‹יקריבנו› (“bring-near-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 1:10."
 m.step("Lev.1.10")
 # witness-tier presupposed read: seam_teaches on flock_filter — read, not
 # installed
@@ -25,11 +28,14 @@ m.witness_read("flock_filter", "seam_teaches",
                 cites=["Sifra, Vayikra Dibbura DeNedavah, Section 5 2", "Sifra, Vayikra Dibbura DeNedavah, Section 5 1"])
 
 # -------------------------- Lev.1.11 · ETNACHTA_SPLIT ----------------------
-# ושחט אתו על ירך המזבח צפנה לפני יהוה … וזרקו בני אהרן הכהנים את דמו על
-# המזבח סביב
-# "[EN-AID] From top split: LEFT «ושחט אתו על ירך המזבח צפנה לפני יהוה» /
-# RIGHT «וזרקו בני אהרן הכהנים את דמו על המזבח סביב». Derive claim from
-# Hebrew arms. Lev 1:11."
+# ‹ושחט אתו על› (“and-slaughter obj-marker-him/its over”)
+# ‹ירך המזבח צפנה› (“thigh the-altar hidden-ward”)
+# ‹לפני יהוה … וזרקו› (“to-face YHWH … and-sprinkle”)
+# ‹בני אהרן הכהנים› (“son Aaron the-priest”)
+# ‹את דמו על› (“obj-marker blood-him/its over”)
+# ‹המזבח סביב› (“the-altar circle”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 1:11."
 m.step("Lev.1.11")
 # witness-tier presupposed read: environment_dependent on north_rules —
 # read, not installed
@@ -37,10 +43,13 @@ m.witness_read("north_rules", "environment_dependent",
                 cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 4 1", "Sifra, Vayikra Dibbura DeNedavah, Section 5 5", "Sifra, Vayikra Dibbura DeNedavah, Section 5 6", "Sifra, Vayikra Dibbura DeNedavah, Section 5 7", "Sifra, Vayikra Dibbura DeNedavah, Section 5 8", "Sifra, Vayikra Dibbura DeNedavah, Section 5 9", "Sifra, Vayikra Dibbura DeNedavah, Chapter 7 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 7 2"])
 
 # -------------------------- Lev.1.12 · ETNACHTA_SPLIT ----------------------
-# ונתח אתו לנתחיו ואת ראשו ואת פדרו … וערך הכהן אתם על העצים אשר על האש אשר
-# על המזבח
-# "[EN-AID] From top split: LEFT «ונתח אתו לנתחיו ואת ראשו ואת פדרו» / RIGHT
-# «וערך הכהן אתם על העצים אשר על האש אשר על המזבח». Derive claim from Hebrew
+# ‹ונתח אתו לנתחיו› (“and-dismember obj-marker-him/its to-fragment-him/its”)
+# ‹ואת ראשו ואת› (“and-obj-marker head-him/its and-obj-marker”)
+# ‹פדרו … וערך הכהן› (“suet-him/its … and-set-in-a-row the-priest”)
+# ‹אתם על העצים› (“obj-marker-them/their over the-tree”)
+# ‹אשר על האש› (“which over the-fire”)
+# ‹אשר על המזבח› (“which over the-altar”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 1:12."
 m.step("Lev.1.12")
 # witness-tier presupposed read: one_priest_two_limbs on arrangement_roster
@@ -49,11 +58,14 @@ m.witness_read("arrangement_roster", "one_priest_two_limbs",
                 cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 6 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 6 2", "Sifra, Vayikra Dibbura DeNedavah, Chapter 6 3", "Sifra, Vayikra Dibbura DeNedavah, Chapter 5 7"])
 
 # -------------------------- Lev.1.13 · ETNACHTA_SPLIT ----------------------
-# והקרב והכרעים ירחץ במים … והקריב הכהן את הכל והקטיר המזבחה עלה הוא אשה ריח
-# ניחח ליהוה
-# "[EN-AID] From top split: LEFT «והקרב והכרעים ירחץ במים» / RIGHT «והקריב
-# הכהן את הכל והקטיר המזבחה עלה הוא אשה ריח ניחח ליהוה». Derive claim from
-# Hebrew arms. Lev 1:13."
+# ‹והקרב והכרעים ירחץ› (“and-the-nearest-part and-the-leg-of-men lave”)
+# ‹במים … והקריב הכהן› (“in-waters … and-bring-near the-priest”)
+# ‹את הכל והקטיר› (“obj-marker the-all and-smoke”)
+# ‹המזבחה עלה הוא› (“the-altar-ward burnt-offering he/it”)
+# ‹אשה ריח ניחח› (“fire-offering odor restful”)
+# ‹ליהוה› (“to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 1:13."
 m.step("Lev.1.13")
 # witness-tier presupposed read: north_gates_rest_advisory on
 # criticality_sort — read, not installed

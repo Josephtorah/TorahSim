@@ -14,43 +14,58 @@ from machine import Machine
 m = Machine("gen_07_completion_sanctity")
 
 # -------------------------- Gen.2.1 · COMPLETION_PASSIVE -------------------
-# וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם
+# ‹וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ› (“and-they-were-finished the-heavens
+# and-the-earth”)
+# ‹וְכָל־צְבָאָם› (“and-all their-host”)
 # "And the heaven and the earth were finished, and all the host of them."
 m.step("Gen.2.1")
-# ‹וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם› (“and-they-were-finished
-# the-heavens and-the-earth and-all their-host”) — event: complete — theme
-# heavens, earth, their-host
+# ‹וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ› (“and-they-were-finished the-heavens
+# and-the-earth”)
+# ‹וְכָל־צְבָאָם› (“and-all their-host”)
+# — event: complete — theme heavens, earth, their-host
 m.event("complete", themes=["shamayim", "aretz", "tzevaam"])
 # reads without prior install (flag, not fix): heavens, earth
 m.presupposed("shamayim", "aretz")
 
 # -------------------------- Gen.2.2 · COMPLETE_CEASE -----------------------
-# וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה
-# וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה
+# ‹וַיְכַל אֱלֹהִים בַּיּוֹם› (“and-he-finished God on-the-day”)
+# ‹הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר› (“the-seventh his-work which”)
+# ‹עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם› (“he-made and-he-ceased on-the-day”)
+# ‹הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר› (“the-seventh from-all his-work
+# which”)
+# ‹עָשָׂה› (“he-made”)
 # "And on the seventh day God finished His work which He had made; and He
 # rested on the seventh day from all His work which He had made."
 m.step("Gen.2.2")
-# ‹וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ› (“and-he-finished God
-# on-the-day the-seventh his-work”) — event: finish — agent God
+# ‹וַיְכַל אֱלֹהִים בַּיּוֹם› (“and-he-finished God on-the-day”)
+# ‹הַשְּׁבִיעִי מְלַאכְתּוֹ› (“the-seventh his-work”)
+# — event: finish — agent God
 m.event("finish", agent="Elohim")
 # witness-grounded state (its own tier): created_with_the_day on menuchah
 m.witness_state("menuchah", "created_with_the_day",
                 cites=["Bereshit Rabbah 10:9"])
-# ‹וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ› (“and-he-ceased
-# on-the-day the-seventh from-all his-work”) — event: cease — agent God
+# ‹וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי› (“and-he-ceased on-the-day the-
+# seventh”)
+# ‹מִכָּל־מְלַאכְתּוֹ› (“from-all his-work”)
+# — event: cease — agent God
 m.event("cease", agent="Elohim")
 
 # -------------------------- Gen.2.3 · BLESS_SANCTIFY -----------------------
-# וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ
-# שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת
+# ‹וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם› (“and-blessed God obj-marker day”)
+# ‹הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ› (“the-seventh and-sanctified it”)
+# ‹כִּי בוֹ שָׁבַת› (“for in-it he-ceased”)
+# ‹מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים› (“from-all his-work which he-
+# created God”)
+# ‹לַעֲשׂוֹת› (“to-make”)
 # "And God blessed the seventh day, and hallowed it; because that in it He
 # rested from all His work which God in creating had made."
 m.step("Gen.2.3")
-# ‹וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי› (“and-blessed God obj-marker
-# day the-seventh”) — blessing: God blesses the-seventh-day
+# ‹וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם› (“and-blessed God obj-marker day”)
+# ‹הַשְּׁבִיעִי› (“the-seventh”)
+# — blessing: God blesses the-seventh-day
 m.bless("Elohim", "yom_ha_shevii")
-# ‹וַיְקַדֵּשׁ אֹתוֹ› (“and-sanctified it”) — role assigned: the-seventh-day
-# -> holy
+# ‹וַיְקַדֵּשׁ אֹתוֹ› (“and-sanctified it”)
+# — role assigned: the-seventh-day -> holy
 m.assign("yom_ha_shevii", "kadosh")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

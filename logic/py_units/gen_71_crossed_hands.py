@@ -14,14 +14,18 @@ from machine import Machine
 m = Machine("gen_71_crossed_hands")
 
 # -------------------------- Gen.48.1 · YOUR_FATHER_IS_ILL ------------------
-# וַיְהִי אַחֲרֵי הַדְּבָרִים הָאֵלֶּה וַיֹּאמֶר לְיוֹסֵף הִנֵּה אָבִיךָ
-# חֹלֶה וַיִּקַּח אֶת־שְׁנֵי בָנָיו עִמּוֹ אֶת־מְנַשֶּׁה וְאֶת־אֶפְרָיִם
+# ‹וַיְהִי אַחֲרֵי הַדְּבָרִים› (“and-be after the-word/thing”)
+# ‹הָאֵלֶּה וַיֹּאמֶר לְיוֹסֵף› (“the-these and-say to-Joseph”)
+# ‹הִנֵּה אָבִיךָ חֹלֶה› (“behold father-you/your be-rubbed”)
+# ‹וַיִּקַּח אֶת־שְׁנֵי בָנָיו› (“and-take obj-marker two son-him/its”)
+# ‹עִמּוֹ אֶת־מְנַשֶּׁה וְאֶת־אֶפְרָיִם› (“with-him/its obj-marker Manasseh
+# and-obj-marker Ephraim”)
 # "[EN-AID] And it was after these things, that one said to Joseph: Behold,
 # your father is ill. And he took his two sons with him, Manasseh and
 # Ephraim."
 m.step("Gen.48.1")
-# ‹הִנֵּה אָבִיךָ חֹלֶה› (“behold father-you/your be-rubbed”) — fact holds:
-# behold-avikha-be-rubbed
+# ‹הִנֵּה אָבִיךָ חֹלֶה› (“behold father-you/your be-rubbed”)
+# — fact holds: behold-avikha-be-rubbed
 m.fact("hine_avikha_chole")
 # witness-tier presupposed read:
 # the_suspicion_of_favouritism_at_the_deathbed on your_father_is_ill — read,
@@ -30,36 +34,48 @@ m.witness_read("your_father_is_ill", "the_suspicion_of_favouritism_at_the_deathb
                 cites=["Bereshit Rabbah 97:1", "Bereshit Rabbah 65:9"])
 
 # -------------------------- Gen.48.2 · STRENGTHENED_ON_THE_BED -------------
-# וַיַּגֵּד לְיַעֲקֹב וַיֹּאמֶר הִנֵּה בִּנְךָ יוֹסֵף בָּא אֵלֶיךָ
-# וַיִּתְחַזֵּק יִשְׂרָאֵל וַיֵּשֶׁב עַל־הַמִּטָּה
+# ‹וַיַּגֵּד לְיַעֲקֹב וַיֹּאמֶר› (“and-tell to-Jacob and-say”)
+# ‹הִנֵּה בִּנְךָ יוֹסֵף› (“behold son-you/your Joseph”)
+# ‹בָּא אֵלֶיךָ וַיִּתְחַזֵּק› (“come/bring to-you/your and-fasten-upon”)
+# ‹יִשְׂרָאֵל וַיֵּשֶׁב עַל־הַמִּטָּה› (“Israel and-dwell/sit over the-bed-
+# forsleeping”)
 # "[EN-AID] And one told Jacob, and said: Behold, your son Joseph comes to
 # you. And Israel strengthened himself, and sat upon the bed."
 m.step("Gen.48.2")
-# ‹וַיִּתְחַזֵּק יִשְׂרָאֵל וַיֵּשֶׁב עַל־הַמִּטָּה› (“and-fasten-upon
-# Israel and-dwell/sit over the-bed-forsleeping”) — fact holds: and-fasten-
-# upon-Israel-and-dwell/sit-over-the-bed-forsleeping
+# ‹וַיִּתְחַזֵּק יִשְׂרָאֵל וַיֵּשֶׁב› (“and-fasten-upon Israel and-
+# dwell/sit”)
+# ‹עַל־הַמִּטָּה› (“over the-bed-forsleeping”)
+# — fact holds: and-fasten-upon-Israel-and-dwell/sit-over-the-bed-
+# forsleeping
 m.fact("va_yitchazeq_yisrael_va_yeshev_al_ha_mita")
 
 # -------------------------- Gen.48.3 · EL_SHADAY_AT_LUZ --------------------
-# וַיֹּאמֶר יַעֲקֹב אֶל־יוֹסֵף אֵל שַׁדַּי נִרְאָה־אֵלַי בְּלוּז בְּאֶרֶץ
-# כְּנָעַן וַיְבָרֶךְ אֹתִי
+# ‹וַיֹּאמֶר יַעֲקֹב אֶל־יוֹסֵף› (“and-say Jacob to Joseph”)
+# ‹אֵל שַׁדַּי נִרְאָה־אֵלַי› (“strength Almighty see to-me/my”)
+# ‹בְּלוּז בְּאֶרֶץ כְּנָעַן› (“in-Luz in-earth Canaan”)
+# ‹וַיְבָרֶךְ אֹתִי› (“and-bless obj-marker-me/my”)
 # "[EN-AID] And Jacob said to Joseph: El Shaddai appeared to me at Luz in
 # the land of Canaan, and blessed me."
 m.step("Gen.48.3")
-# ‹אֵל שַׁדַּי נִרְאָה־אֵלַי בְּלוּז› (“strength Almighty see to-me/my in-
-# Luz”) — fact holds: to-Almighty-see-elai-in-Luz
+# ‹אֵל שַׁדַּי נִרְאָה־אֵלַי› (“strength Almighty see to-me/my”)
+# ‹בְּלוּז› (“in-Luz”)
+# — fact holds: to-Almighty-see-elai-in-Luz
 m.fact("el_shaday_nira_elai_be_luz")
 
 # -------------------------- Gen.48.4 · THE_PROMISE_RECALLED ----------------
-# וַיֹּאמֶר אֵלַי הִנְנִי מַפְרְךָ וְהִרְבִּיתִךָ וּנְתַתִּיךָ לִקְהַל
-# עַמִּים וְנָתַתִּי אֶת־הָאָרֶץ הַזֹּאת לְזַרְעֲךָ אַחֲרֶיךָ אֲחֻזַּת
-# עוֹלָם
+# ‹וַיֹּאמֶר אֵלַי הִנְנִי› (“and-say to-me/my lo!-me/my”)
+# ‹מַפְרְךָ וְהִרְבִּיתִךָ וּנְתַתִּיךָ› (“be-fruitful-you/your and-
+# multiply-you/your and-set-you/your”)
+# ‹לִקְהַל עַמִּים וְנָתַתִּי› (“to-assemblage people and-set”)
+# ‹אֶת־הָאָרֶץ הַזֹּאת לְזַרְעֲךָ› (“obj-marker the-earth the-this to-seed-
+# you/your”)
+# ‹אַחֲרֶיךָ אֲחֻזַּת עוֹלָם› (“after-you/your something-seized forever”)
 # "[EN-AID] And He said to me: Behold, I will make you fruitful and multiply
 # you, and I will make you a company of peoples; and I will give this land
 # to your seed after you, an everlasting holding."
 m.step("Gen.48.4")
-# ‹אֲחֻזַּת עוֹלָם› (“something-seized forever”) — fact holds: something-
-# seized-forever-to-zarakha
+# ‹אֲחֻזַּת עוֹלָם› (“something-seized forever”)
+# — fact holds: something-seized-forever-to-zarakha
 m.fact("achuzat_olam_le_zarakha")
 # witness-tier presupposed read: a_promise_quoted_back_and_cashed on
 # an_assembly_of_nations — read, not installed
@@ -71,27 +87,35 @@ m.witness_read("li_qehal_amim", "kahal_file",
                 cites=["Horayot 5b:14", "Horayot 5b:15", "Horayot 5b:16", "Horayot 6b:1", "Horayot 6b:2", "Horayot 6b:3", "Bava Batra 123a:9", "Bava Batra 123a:10", "Bava Batra 123a:11"])
 
 # -------------------------- Gen.48.5 · EPHRAIM_AND_MANASSEH_MINE -----------
-# וְעַתָּה שְׁנֵי־בָנֶיךָ הַנּוֹלָדִים לְךָ בְּאֶרֶץ מִצְרַיִם עַד־בֹּאִי
-# אֵלֶיךָ מִצְרַיְמָה לִי־הֵם אֶפְרַיִם וּמְנַשֶּׁה כִּרְאוּבֵן וְשִׁמְעוֹן
-# יִהְיוּ־לִי
+# ‹וְעַתָּה שְׁנֵי־בָנֶיךָ הַנּוֹלָדִים› (“and-now two son-you/your the-
+# bear-young”)
+# ‹לְךָ בְּאֶרֶץ מִצְרַיִם› (“to-you/your in-earth Egypt”)
+# ‹עַד־בֹּאִי אֵלֶיךָ מִצְרַיְמָה› (“until come/bring-me/my to-you/your
+# Egypt-ward”)
+# ‹לִי־הֵם אֶפְרַיִם וּמְנַשֶּׁה› (“to-me/my they Ephraim and-Manasseh”)
+# ‹כִּרְאוּבֵן וְשִׁמְעוֹן יִהְיוּ־לִי› (“like-Reuben and-Simeon be to-
+# me/my”)
 # "[EN-AID] And now, your two sons, who were born to you in the land of
 # Egypt before I came to you to Egypt — mine they are: Ephraim and Manasseh,
 # as Reuben and Simeon, shall be mine."
 m.step("Gen.48.5")
-# ‹אֶפְרַיִם וּמְנַשֶּׁה כִּרְאוּבֵן וְשִׁמְעוֹן יִהְיוּ־לִי› (“Ephraim and-
-# Manasseh like-Reuben and-Simeon be to-me/my”) — fact holds: Ephraim-and-
-# Manasseh-that-reuven-and-Simeon-be-to-me
+# ‹אֶפְרַיִם וּמְנַשֶּׁה כִּרְאוּבֵן› (“Ephraim and-Manasseh like-Reuben”)
+# ‹וְשִׁמְעוֹן יִהְיוּ־לִי› (“and-Simeon be to-me/my”)
+# — fact holds: Ephraim-and-Manasseh-that-reuven-and-Simeon-be-to-me
 m.fact("efrayim_u_menashe_ki_reuven_ve_shimon_yihyu_li")
 
 # -------------------------- Gen.48.6 · AFTER_THEM_YOURS --------------------
-# וּמוֹלַדְתְּךָ אֲשֶׁר־הוֹלַדְתָּ אַחֲרֵיהֶם לְךָ יִהְיוּ עַל שֵׁם אֲחֵיהֶם
-# יִקָּרְאוּ בְּנַחֲלָתָם
+# ‹וּמוֹלַדְתְּךָ אֲשֶׁר־הוֹלַדְתָּ אַחֲרֵיהֶם› (“and-nativity-you/your
+# which bear-young after-them/their”)
+# ‹לְךָ יִהְיוּ עַל› (“to-you/your be over”)
+# ‹שֵׁם אֲחֵיהֶם יִקָּרְאוּ› (“name brother-them/their call”)
+# ‹בְּנַחֲלָתָם› (“in-inheritance-them/their”)
 # "[EN-AID] And your offspring whom you beget after them shall be yours; by
 # the name of their brothers they shall be called in their inheritance."
 m.step("Gen.48.6")
-# ‹עַל שֵׁם אֲחֵיהֶם יִקָּרְאוּ בְּנַחֲלָתָם› (“over name brother-them/their
-# call in-inheritance-them/their”) — fact holds: over-name-achehem-call-in-
-# nachalatam
+# ‹עַל שֵׁם אֲחֵיהֶם› (“over name brother-them/their”)
+# ‹יִקָּרְאוּ בְּנַחֲלָתָם› (“call in-inheritance-them/their”)
+# — fact holds: over-name-achehem-call-in-nachalatam
 m.fact("al_shem_achehem_yiqaru_be_nachalatam")
 # witness-tier presupposed read: levirate_name_analogy on
 # al_shem_acheihem_be_nachalatam — read, not installed
@@ -99,92 +123,130 @@ m.witness_read("al_shem_acheihem_be_nachalatam", "levirate_name_analogy",
                 cites=["Yevamot 24a:5", "Yevamot 24a:6", "Yevamot 24a:7"])
 
 # -------------------------- Gen.48.7 · RACHEL_ON_THE_ROAD ------------------
-# וַאֲנִי בְּבֹאִי מִפַּדָּן מֵתָה עָלַי רָחֵל בְּאֶרֶץ כְּנַעַן בַּדֶּרֶךְ
-# בְּעוֹד כִּבְרַת־אֶרֶץ לָבֹא אֶפְרָתָה וָאֶקְבְּרֶהָ שָּׁם בְּדֶרֶךְ
-# אֶפְרָת הִוא בֵּית לָחֶם
+# ‹וַאֲנִי בְּבֹאִי מִפַּדָּן› (“and-I in-come/bring-me/my from-Padan”)
+# ‹מֵתָה עָלַי רָחֵל› (“die over-me/my Rachel”)
+# ‹בְּאֶרֶץ כְּנַעַן בַּדֶּרֶךְ› (“in-earth Canaan in-way/road”)
+# ‹בְּעוֹד כִּבְרַת־אֶרֶץ לָבֹא› (“in-still/again length earth to-
+# come/bring”)
+# ‹אֶפְרָתָה וָאֶקְבְּרֶהָ שָּׁם› (“'Ephrath and-inter-her/its there”)
+# ‹בְּדֶרֶךְ אֶפְרָת הִוא› (“in-way/road 'Ephrath he/it”)
+# ‹בֵּית לָחֶם› (“Bethlehem”)
 # "[EN-AID] And I — when I came from Paddan, Rachel died on me in the land
 # of Canaan, on the road, while yet a stretch of land to come to Ephrath;
 # and I buried her there on the road of Ephrath — that is Bethlehem."
 m.step("Gen.48.7")
-# ‹בְּעוֹד כִּבְרַת־אֶרֶץ לָבֹא אֶפְרָתָה› (“in-still/again length earth to-
-# come/bring 'Ephrath”) — fact holds: die-alai-Rachel-come/bring-way/road
+# ‹בְּעוֹד כִּבְרַת־אֶרֶץ לָבֹא› (“in-still/again length earth to-
+# come/bring”)
+# ‹אֶפְרָתָה› (“'Ephrath”)
+# — fact holds: die-alai-Rachel-come/bring-way/road
 m.fact("meta_alai_rachel_ba_derekh")
 
 # -------------------------- Gen.48.8 · WHO_ARE_THESE -----------------------
-# וַיַּרְא יִשְׂרָאֵל אֶת־בְּנֵי יוֹסֵף וַיֹּאמֶר מִי־אֵלֶּה
+# ‹וַיַּרְא יִשְׂרָאֵל אֶת־בְּנֵי› (“and-see Israel obj-marker son”)
+# ‹יוֹסֵף וַיֹּאמֶר מִי־אֵלֶּה› (“Joseph and-say who? these”)
 # "[EN-AID] And Israel saw Joseph's sons, and said: Who are these?"
 m.step("Gen.48.8")
-# ‹וַיַּרְא יִשְׂרָאֵל אֶת־בְּנֵי יוֹסֵף› (“and-see Israel obj-marker son
-# Joseph”) — fact holds: and-see-Israel-obj-marker-son-Joseph
+# ‹וַיַּרְא יִשְׂרָאֵל אֶת־בְּנֵי› (“and-see Israel obj-marker son”)
+# ‹יוֹסֵף› (“Joseph”)
+# — fact holds: and-see-Israel-obj-marker-son-Joseph
 m.fact("va_yar_yisrael_et_bene_yosef")
 
 # -------------------------- Gen.48.9 · TAKE_THEM_TO_ME ---------------------
-# וַיֹּאמֶר יוֹסֵף אֶל־אָבִיו בָּנַי הֵם אֲשֶׁר־נָתַן־לִי אֱלֹהִים בָּזֶה
-# וַיֹּאמַר קָחֶם־נָא אֵלַי וַאֲבָרֲכֵם
+# ‹וַיֹּאמֶר יוֹסֵף אֶל־אָבִיו› (“and-say Joseph to father-him/its”)
+# ‹בָּנַי הֵם אֲשֶׁר־נָתַן־לִי› (“son-me/my they which set to-me/my”)
+# ‹אֱלֹהִים בָּזֶה וַיֹּאמַר› (“God in-this and-say”)
+# ‹קָחֶם־נָא אֵלַי וַאֲבָרֲכֵם› (“take-them/their please to-me/my and-bless-
+# them/their”)
 # "[EN-AID] And Joseph said to his father: They are my sons, whom God has
 # given me in this place. And he said: Take them, pray, to me, and I will
 # bless them."
 m.step("Gen.48.9")
 # ‹קָחֶם־נָא אֵלַי וַאֲבָרֲכֵם› (“take-them/their please to-me/my and-bless-
-# them/their”) — Israel speaks a demand — LET: qachem-please-elai
+# them/their”)
+# — Israel speaks a demand — LET: qachem-please-elai
 m.declare("yisrael", "LET",
           "qachem_na_elai")
 
 # -------------------------- Gen.48.10 · KISSED_AND_EMBRACED ----------------
-# וְעֵינֵי יִשְׂרָאֵל כָּבְדוּ מִזֹּקֶן לֹא יוּכַל לִרְאוֹת וַיַּגֵּשׁ אֹתָם
-# אֵלָיו וַיִּשַּׁק לָהֶם וַיְחַבֵּק לָהֶם
+# ‹וְעֵינֵי יִשְׂרָאֵל כָּבְדוּ› (“and-eye Israel be-heavy”)
+# ‹מִזֹּקֶן לֹא יוּכַל› (“from-old-age not be-able”)
+# ‹לִרְאוֹת וַיַּגֵּשׁ אֹתָם› (“to-see and-be obj-marker-them/their”)
+# ‹אֵלָיו וַיִּשַּׁק לָהֶם› (“to-him/its and-kiss to-them/their”)
+# ‹וַיְחַבֵּק לָהֶם› (“and-clasp to-them/their”)
 # "[EN-AID] And Israel's eyes were heavy from age — he could not see. And he
 # brought them near to him; and he kissed them, and embraced them."
 m.step("Gen.48.10")
-# ‹וַיַּגֵּשׁ אֹתָם אֵלָיו וַיִּשַּׁק לָהֶם וַיְחַבֵּק לָהֶם› (“and-be obj-
-# marker-them/their to-him/its and-kiss to-them/their and-clasp to-
-# them/their”) — demand settled (popped from the queue): qachem-please-elai
+# ‹וַיַּגֵּשׁ אֹתָם אֵלָיו› (“and-be obj-marker-them/their to-him/its”)
+# ‹וַיִּשַּׁק לָהֶם וַיְחַבֵּק› (“and-kiss to-them/their and-clasp”)
+# ‹לָהֶם› (“to-them/their”)
+# — demand settled (popped from the queue): qachem-please-elai
 m.result("qachem_na_elai", tmark="t1")
 
 # -------------------------- Gen.48.11 · I_NEVER_JUDGED_TO_SEE --------------
-# וַיֹּאמֶר יִשְׂרָאֵל אֶל־יוֹסֵף רְאֹה פָנֶיךָ לֹא פִלָּלְתִּי וְהִנֵּה
-# הֶרְאָה אֹתִי אֱלֹהִים גַּם אֶת־זַרְעֶךָ
+# ‹וַיֹּאמֶר יִשְׂרָאֵל אֶל־יוֹסֵף› (“and-say Israel to Joseph”)
+# ‹רְאֹה פָנֶיךָ לֹא› (“see face-you/your not”)
+# ‹פִלָּלְתִּי וְהִנֵּה הֶרְאָה› (“judge and-behold see”)
+# ‹אֹתִי אֱלֹהִים גַּם› (“obj-marker-me/my God also”)
+# ‹אֶת־זַרְעֶךָ› (“obj-marker seed-you/your”)
 # "[EN-AID] And Israel said to Joseph: To see your face I had not judged —
 # and behold, God has shown me your seed too."
 m.step("Gen.48.11")
-# ‹רְאֹה פָנֶיךָ לֹא פִלָּלְתִּי› (“see face-you/your not judge”) — fact
-# holds: see-fanekha-not-judge
+# ‹רְאֹה פָנֶיךָ לֹא› (“see face-you/your not”)
+# ‹פִלָּלְתִּי› (“judge”)
+# — fact holds: see-fanekha-not-judge
 m.fact("reo_fanekha_lo_filalti")
 
 # -------------------------- Gen.48.12 · FROM_BETWEEN_HIS_KNEES -------------
-# וַיּוֹצֵא יוֹסֵף אֹתָם מֵעִם בִּרְכָּיו וַיִּשְׁתַּחוּ לְאַפָּיו אָרְצָה
+# ‹וַיּוֹצֵא יוֹסֵף אֹתָם› (“and-bring-forth Joseph obj-marker-them/their”)
+# ‹מֵעִם בִּרְכָּיו וַיִּשְׁתַּחוּ› (“from-with knee-him/its and-afflict”)
+# ‹לְאַפָּיו אָרְצָה› (“to-nose-him/its earth-ward”)
 # "[EN-AID] And Joseph brought them out from between his knees; and he bowed
 # with his face to the earth."
 m.step("Gen.48.12")
 # ‹וַיִּשְׁתַּחוּ לְאַפָּיו אָרְצָה› (“and-afflict to-nose-him/its earth-
-# ward”) — fact holds: and-afflict-to-his-nostrils-artza
+# ward”)
+# — fact holds: and-afflict-to-his-nostrils-artza
 m.fact("va_yishtachu_le_apav_artza")
 
 # -------------------------- Gen.48.13 · THE_ARRANGEMENT --------------------
-# וַיִּקַּח יוֹסֵף אֶת־שְׁנֵיהֶם אֶת־אֶפְרַיִם בִּימִינוֹ מִשְּׂמֹאל
-# יִשְׂרָאֵל וְאֶת־מְנַשֶּׁה בִשְׂמֹאלוֹ מִימִין יִשְׂרָאֵל וַיַּגֵּשׁ
-# אֵלָיו
+# ‹וַיִּקַּח יוֹסֵף אֶת־שְׁנֵיהֶם› (“and-take Joseph obj-marker two-
+# them/their”)
+# ‹אֶת־אֶפְרַיִם בִּימִינוֹ מִשְּׂמֹאל› (“obj-marker Ephraim in-right-hand-
+# him/its from-dark”)
+# ‹יִשְׂרָאֵל וְאֶת־מְנַשֶּׁה בִשְׂמֹאלוֹ› (“Israel and-obj-marker Manasseh
+# in-dark-him/its”)
+# ‹מִימִין יִשְׂרָאֵל וַיַּגֵּשׁ› (“from-right-hand Israel and-be”)
+# ‹אֵלָיו› (“to-him/its”)
 # "[EN-AID] And Joseph took the two of them — Ephraim at his right, toward
 # Israel's left, and Manasseh at his left, toward Israel's right — and
 # brought them near to him."
 m.step("Gen.48.13")
-# ‹אֶת־אֶפְרַיִם בִּימִינוֹ מִשְּׂמֹאל יִשְׂרָאֵל וְאֶת־מְנַשֶּׁה
-# בִשְׂמֹאלוֹ מִימִין יִשְׂרָאֵל› (“obj-marker Ephraim in-right-hand-him/its
-# from-dark Israel and-obj-marker Manasseh in-dark-him/its from-right-hand
-# Israel”) — fact holds: Ephraim-bimino-Manasseh-vismolo
+# ‹אֶת־אֶפְרַיִם בִּימִינוֹ מִשְּׂמֹאל› (“obj-marker Ephraim in-right-hand-
+# him/its from-dark”)
+# ‹יִשְׂרָאֵל וְאֶת־מְנַשֶּׁה בִשְׂמֹאלוֹ› (“Israel and-obj-marker Manasseh
+# in-dark-him/its”)
+# ‹מִימִין יִשְׂרָאֵל› (“from-right-hand Israel”)
+# — fact holds: Ephraim-bimino-Manasseh-vismolo
 m.fact("efrayim_bimino_menashe_vismolo")
 
 # -------------------------- Gen.48.14 · THE_HANDS_CROSSED ------------------
-# וַיִּשְׁלַח יִשְׂרָאֵל אֶת־יְמִינוֹ וַיָּשֶׁת עַל־רֹאשׁ אֶפְרַיִם וְהוּא
-# הַצָּעִיר וְאֶת־שְׂמֹאלוֹ עַל־רֹאשׁ מְנַשֶּׁה שִׂכֵּל אֶת־יָדָיו כִּי
-# מְנַשֶּׁה הַבְּכוֹר
+# ‹וַיִּשְׁלַח יִשְׂרָאֵל אֶת־יְמִינוֹ› (“and-send Israel obj-marker right-
+# hand-him/its”)
+# ‹וַיָּשֶׁת עַל־רֹאשׁ אֶפְרַיִם› (“and-place over head Ephraim”)
+# ‹וְהוּא הַצָּעִיר וְאֶת־שְׂמֹאלוֹ› (“and-he/it the-little and-obj-marker
+# dark-him/its”)
+# ‹עַל־רֹאשׁ מְנַשֶּׁה שִׂכֵּל› (“over head Manasseh be-circumspect-and-
+# hence”)
+# ‹אֶת־יָדָיו כִּי מְנַשֶּׁה› (“obj-marker hand-him/its that Manasseh”)
+# ‹הַבְּכוֹר› (“the-firstborn”)
 # "[EN-AID] And Israel sent out his right hand and set it on Ephraim's head
 # — and he was the younger — and his left hand on Manasseh's head; he
 # crossed his hands, for Manasseh was the firstborn."
 m.step("Gen.48.14")
-# ‹שִׂכֵּל אֶת־יָדָיו כִּי מְנַשֶּׁה הַבְּכוֹר› (“be-circumspect-and-hence
-# obj-marker hand-him/its that Manasseh the-firstborn”) — event: be-
-# circumspect-and-hence-yadav — agent Israel
+# ‹שִׂכֵּל אֶת־יָדָיו כִּי› (“be-circumspect-and-hence obj-marker hand-
+# him/its that”)
+# ‹מְנַשֶּׁה הַבְּכוֹר› (“Manasseh the-firstborn”)
+# — event: be-circumspect-and-hence-yadav — agent Israel
 m.event("sikel_yadav", agent="yisrael")
 # witness-tier presupposed read:
 # the_crossing_declared_deliberate_in_the_text on he_guided_his_hands —
@@ -193,15 +255,20 @@ m.witness_read("he_guided_his_hands", "the_crossing_declared_deliberate_in_the_t
                 cites=["Onkelos Genesis 48:14"])
 
 # -------------------------- Gen.48.15 · THE_SHEPHERD_GOD -------------------
-# וַיְבָרֶךְ אֶת־יוֹסֵף וַיֹּאמַר הָאֱלֹהִים אֲשֶׁר הִתְהַלְּכוּ אֲבֹתַי
-# לְפָנָיו אַבְרָהָם וְיִצְחָק הָאֱלֹהִים הָרֹעֶה אֹתִי מֵעוֹדִי עַד־הַיּוֹם
-# הַזֶּה
+# ‹וַיְבָרֶךְ אֶת־יוֹסֵף וַיֹּאמַר› (“and-bless obj-marker Joseph and-say”)
+# ‹הָאֱלֹהִים אֲשֶׁר הִתְהַלְּכוּ› (“the-God which walk/go”)
+# ‹אֲבֹתַי לְפָנָיו אַבְרָהָם› (“father-me/my to-face-him/its Abraham”)
+# ‹וְיִצְחָק הָאֱלֹהִים הָרֹעֶה› (“and-Isaac the-God the-graze”)
+# ‹אֹתִי מֵעוֹדִי עַד־הַיּוֹם› (“obj-marker-me/my from-still/again-me/my
+# until the-day”)
+# ‹הַזֶּה› (“the-this”)
 # "[EN-AID] And he blessed Joseph, and said: The God before whom my fathers
 # walked, Abraham and Isaac, the God who shepherds me from my beginning
 # until this day —"
 m.step("Gen.48.15")
-# ‹הָאֱלֹהִים הָרֹעֶה אֹתִי מֵעוֹדִי› (“the-God the-graze obj-marker-me/my
-# from-still/again-me/my”) — blessing: Israel blesses Joseph
+# ‹הָאֱלֹהִים הָרֹעֶה אֹתִי› (“the-God the-graze obj-marker-me/my”)
+# ‹מֵעוֹדִי› (“from-still/again-me/my”)
+# — blessing: Israel blesses Joseph
 m.bless("yisrael", "yosef")
 # witness-grounded state (its own tier): which_way_the_dependence_runs on
 # my_fathers_walked_before_him
@@ -209,18 +276,25 @@ m.witness_state("my_fathers_walked_before_him", "which_way_the_dependence_runs",
                 cites=["Bereshit Rabbah 97:2", "Onkelos Genesis 48:15", "Bereshit Rabbah 30:10"])
 
 # -------------------------- Gen.48.16 · THE_REDEEMING_ANGEL ----------------
-# הַמַּלְאָךְ הַגֹּאֵל אֹתִי מִכָּל־רָע יְבָרֵךְ אֶת־הַנְּעָרִים וְיִקָּרֵא
-# בָהֶם שְׁמִי וְשֵׁם אֲבֹתַי אַבְרָהָם וְיִצְחָק וְיִדְגּוּ לָרֹב בְּקֶרֶב
-# הָאָרֶץ
+# ‹הַמַּלְאָךְ הַגֹּאֵל אֹתִי› (“the-messenger the-be-the-next-of-kin obj-
+# marker-me/my”)
+# ‹מִכָּל־רָע יְבָרֵךְ אֶת־הַנְּעָרִים› (“from-all bad bless obj-marker the-
+# boy”)
+# ‹וְיִקָּרֵא בָהֶם שְׁמִי› (“and-call in-them/their name-me/my”)
+# ‹וְשֵׁם אֲבֹתַי אַבְרָהָם› (“and-name father-me/my Abraham”)
+# ‹וְיִצְחָק וְיִדְגּוּ לָרֹב› (“and-Isaac and-spawn to-abundance”)
+# ‹בְּקֶרֶב הָאָרֶץ› (“in-nearest-part the-earth”)
 # "[EN-AID] The angel who redeems me from all evil — may he bless the lads;
 # and let my name be called in them, and the name of my fathers, Abraham and
 # Isaac; and may they teem like fish into a multitude in the midst of the
 # earth."
 m.step("Gen.48.16")
-# ‹הַמַּלְאָךְ הַגֹּאֵל אֹתִי מִכָּל־רָע יְבָרֵךְ אֶת־הַנְּעָרִים› (“the-
-# messenger the-be-the-next-of-kin obj-marker-me/my from-all bad bless obj-
-# marker the-boy”) — fact holds: the-messenger-the-be-the-next-of-kin-bless-
-# obj-marker-the-boy
+# ‹הַמַּלְאָךְ הַגֹּאֵל אֹתִי› (“the-messenger the-be-the-next-of-kin obj-
+# marker-me/my”)
+# ‹מִכָּל־רָע יְבָרֵךְ אֶת־הַנְּעָרִים› (“from-all bad bless obj-marker the-
+# boy”)
+# — fact holds: the-messenger-the-be-the-next-of-kin-bless-obj-marker-the-
+# boy
 m.fact("ha_malakh_ha_goel_yevarekh_et_ha_nearim")
 # witness-tier presupposed read: an_angel_the_buffer_keeps on
 # the_angel_who_redeemed_me — read, not installed
@@ -228,41 +302,54 @@ m.witness_read("the_angel_who_redeemed_me", "an_angel_the_buffer_keeps",
                 cites=["Onkelos Genesis 48:16"])
 
 # -------------------------- Gen.48.17 · EVIL_IN_HIS_EYES -------------------
-# וַיַּרְא יוֹסֵף כִּי־יָשִׁית אָבִיו יַד־יְמִינוֹ עַל־רֹאשׁ אֶפְרַיִם
-# וַיֵּרַע בְּעֵינָיו וַיִּתְמֹךְ יַד־אָבִיו לְהָסִיר אֹתָהּ מֵעַל
-# רֹאשׁ־אֶפְרַיִם עַל־רֹאשׁ מְנַשֶּׁה
+# ‹וַיַּרְא יוֹסֵף כִּי־יָשִׁית› (“and-see Joseph that place”)
+# ‹אָבִיו יַד־יְמִינוֹ עַל־רֹאשׁ› (“father-him/its hand right-hand-him/its
+# over head”)
+# ‹אֶפְרַיִם וַיֵּרַע בְּעֵינָיו› (“Ephraim and-spoil in-eye-him/its”)
+# ‹וַיִּתְמֹךְ יַד־אָבִיו לְהָסִיר› (“and-sustain hand father-him/its to-
+# turn-aside”)
+# ‹אֹתָהּ מֵעַל רֹאשׁ־אֶפְרַיִם› (“obj-marker-her/its from-over head
+# Ephraim”)
+# ‹עַל־רֹאשׁ מְנַשֶּׁה› (“over head Manasseh”)
 # "[EN-AID] And Joseph saw that his father was setting his right hand on
 # Ephraim's head, and it was evil in his eyes; and he took hold of his
 # father's hand, to remove it from Ephraim's head onto Manasseh's head."
 m.step("Gen.48.17")
-# ‹וַיֵּרַע בְּעֵינָיו› (“and-spoil in-eye-him/its”) — fact holds: and-
-# spoil-in-enav
+# ‹וַיֵּרַע בְּעֵינָיו› (“and-spoil in-eye-him/its”)
+# — fact holds: and-spoil-in-enav
 m.fact("va_yera_be_enav")
 
 # -------------------------- Gen.48.18 · NOT_SO_MY_FATHER -------------------
-# וַיֹּאמֶר יוֹסֵף אֶל־אָבִיו לֹא־כֵן אָבִי כִּי־זֶה הַבְּכֹר שִׂים
-# יְמִינְךָ עַל־רֹאשׁוֹ
+# ‹וַיֹּאמֶר יוֹסֵף אֶל־אָבִיו› (“and-say Joseph to father-him/its”)
+# ‹לֹא־כֵן אָבִי כִּי־זֶה› (“not so father-me/my that this”)
+# ‹הַבְּכֹר שִׂים יְמִינְךָ› (“the-firstborn put/set right-hand-you/your”)
+# ‹עַל־רֹאשׁוֹ› (“over head-him/its”)
 # "[EN-AID] And Joseph said to his father: Not so, my father — for this is
 # the firstborn; set your right hand on his head."
 m.step("Gen.48.18")
-# ‹כִּי־זֶה הַבְּכֹר שִׂים יְמִינְךָ עַל־רֹאשׁוֹ› (“that this the-firstborn
-# put/set right-hand-you/your over head-him/its”) — Joseph speaks a demand —
-# LET: put/set-yeminkha-over-rosho
+# ‹כִּי־זֶה הַבְּכֹר שִׂים› (“that this the-firstborn put/set”)
+# ‹יְמִינְךָ עַל־רֹאשׁוֹ› (“right-hand-you/your over head-him/its”)
+# — Joseph speaks a demand — LET: put/set-yeminkha-over-rosho
 m.declare("yosef", "LET",
           "sim_yeminkha_al_rosho")
 
 # -------------------------- Gen.48.19 · I_KNOW_MY_SON_I_KNOW ---------------
-# וַיְמָאֵן אָבִיו וַיֹּאמֶר יָדַעְתִּי בְנִי יָדַעְתִּי גַּם־הוּא
-# יִהְיֶה־לְּעָם וְגַם־הוּא יִגְדָּל וְאוּלָם אָחִיו הַקָּטֹן יִגְדַּל
-# מִמֶּנּוּ וְזַרְעוֹ יִהְיֶה מְלֹא־הַגּוֹיִם
+# ‹וַיְמָאֵן אָבִיו וַיֹּאמֶר› (“and-refuse father-him/its and-say”)
+# ‹יָדַעְתִּי בְנִי יָדַעְתִּי› (“know son-me/my know”)
+# ‹גַּם־הוּא יִהְיֶה־לְּעָם וְגַם־הוּא› (“also he/it be to-people and-also
+# he/it”)
+# ‹יִגְדָּל וְאוּלָם אָחִיו› (“be-large and-however brother-him/its”)
+# ‹הַקָּטֹן יִגְדַּל מִמֶּנּוּ› (“the-small be-large from-us/our”)
+# ‹וְזַרְעוֹ יִהְיֶה מְלֹא־הַגּוֹיִם› (“and-seed-him/its be fulness the-
+# nation”)
 # "[EN-AID] And his father refused, and said: I know, my son, I know — he
 # too shall become a people, and he too shall be great; but his younger
 # brother shall be greater than he, and his seed shall be the fullness of
 # the nations."
 m.step("Gen.48.19")
-# ‹וַיְמָאֵן אָבִיו וַיֹּאמֶר יָדַעְתִּי בְנִי יָדַעְתִּי› (“and-refuse
-# father-him/its and-say know son-me/my know”) — fact holds: and-refuse-
-# aviv-know-veni-know
+# ‹וַיְמָאֵן אָבִיו וַיֹּאמֶר› (“and-refuse father-him/its and-say”)
+# ‹יָדַעְתִּי בְנִי יָדַעְתִּי› (“know son-me/my know”)
+# — fact holds: and-refuse-aviv-know-veni-know
 m.fact("va_yemaen_aviv_yadati_veni_yadati")
 # witness-tier presupposed read: the_refusal_carrying_what_the_father_knows
 # on i_know_my_son_i_know — read, not installed
@@ -270,16 +357,21 @@ m.witness_read("i_know_my_son_i_know", "the_refusal_carrying_what_the_father_kno
                 cites=["Bereshit Rabbah 97:4"])
 
 # -------------------------- Gen.48.20 · BY_YOU_SHALL_ISRAEL_BLESS ----------
-# וַיְבָרֲכֵם בַּיּוֹם הַהוּא לֵאמוֹר בְּךָ יְבָרֵךְ יִשְׂרָאֵל לֵאמֹר
-# יְשִׂמְךָ אֱלֹהִים כְּאֶפְרַיִם וְכִמְנַשֶּׁה וַיָּשֶׂם אֶת־אֶפְרַיִם
-# לִפְנֵי מְנַשֶּׁה
+# ‹וַיְבָרֲכֵם בַּיּוֹם הַהוּא› (“and-bless-them/their in-day that”)
+# ‹לֵאמוֹר בְּךָ יְבָרֵךְ› (“to-say in-you/your bless”)
+# ‹יִשְׂרָאֵל לֵאמֹר יְשִׂמְךָ› (“Israel to-say put/set-you/your”)
+# ‹אֱלֹהִים כְּאֶפְרַיִם וְכִמְנַשֶּׁה› (“God like-Ephraim and-like-
+# Manasseh”)
+# ‹וַיָּשֶׂם אֶת־אֶפְרַיִם לִפְנֵי› (“and-put/set obj-marker Ephraim to-
+# face”)
+# ‹מְנַשֶּׁה› (“Manasseh”)
 # "[EN-AID] And he blessed them that day, saying: By you shall Israel bless,
 # saying: God make you as Ephraim and as Manasseh. And he set Ephraim before
 # Manasseh."
 m.step("Gen.48.20")
-# ‹יְשִׂמְךָ אֱלֹהִים כְּאֶפְרַיִם וְכִמְנַשֶּׁה› (“put/set-you/your God
-# like-Ephraim and-like-Manasseh”) — blessing: Israel blesses Ephraim-and-
-# Manasseh
+# ‹יְשִׂמְךָ אֱלֹהִים כְּאֶפְרַיִם› (“put/set-you/your God like-Ephraim”)
+# ‹וְכִמְנַשֶּׁה› (“and-like-Manasseh”)
+# — blessing: Israel blesses Ephraim-and-Manasseh
 m.bless("yisrael", "efrayim_u_menashe")
 # witness-grounded state (its own tier):
 # three_torah_legs_confirmed_the_rest_unopened on ephraim_before_manasseh
@@ -287,14 +379,19 @@ m.witness_state("ephraim_before_manasseh", "three_torah_legs_confirmed_the_rest_
                 cites=["Bereshit Rabbah 97:5"])
 
 # -------------------------- Gen.48.21 · GOD_WILL_RETURN_YOU ----------------
-# וַיֹּאמֶר יִשְׂרָאֵל אֶל־יוֹסֵף הִנֵּה אָנֹכִי מֵת וְהָיָה אֱלֹהִים
-# עִמָּכֶם וְהֵשִׁיב אֶתְכֶם אֶל־אֶרֶץ אֲבֹתֵיכֶם
+# ‹וַיֹּאמֶר יִשְׂרָאֵל אֶל־יוֹסֵף› (“and-say Israel to Joseph”)
+# ‹הִנֵּה אָנֹכִי מֵת› (“behold die”)
+# ‹וְהָיָה אֱלֹהִים עִמָּכֶם› (“and-be God with-you/your(pl)”)
+# ‹וְהֵשִׁיב אֶתְכֶם אֶל־אֶרֶץ› (“and-return obj-marker-you/your(pl) to
+# earth”)
+# ‹אֲבֹתֵיכֶם› (“father-you/your(pl)”)
 # "[EN-AID] And Israel said to Joseph: Behold, I die; and God will be with
 # you, and will return you to the land of your fathers."
 m.step("Gen.48.21")
-# ‹וְהֵשִׁיב אֶתְכֶם אֶל־אֶרֶץ אֲבֹתֵיכֶם› (“and-return obj-marker-
-# you/your(pl) to earth father-you/your(pl)”) — fact holds: and-return-
-# etkhem-to-earth-avotekhem
+# ‹וְהֵשִׁיב אֶתְכֶם אֶל־אֶרֶץ› (“and-return obj-marker-you/your(pl) to
+# earth”)
+# ‹אֲבֹתֵיכֶם› (“father-you/your(pl)”)
+# — fact holds: and-return-etkhem-to-earth-avotekhem
 m.fact("ve_heshiv_etkhem_el_eretz_avotekhem")
 # witness-tier presupposed read: the_word_as_support_at_its_second_seat on
 # god_will_be_with_you — read, not installed
@@ -302,14 +399,18 @@ m.witness_read("god_will_be_with_you", "the_word_as_support_at_its_second_seat",
                 cites=["Onkelos Genesis 48:21"])
 
 # -------------------------- Gen.48.22 · SHEKHEM_ABOVE_YOUR_BROTHERS --------
-# וַאֲנִי נָתַתִּי לְךָ שְׁכֶם אַחַד עַל־אַחֶיךָ אֲשֶׁר לָקַחְתִּי מִיַּד
-# הָאֱמֹרִי בְּחַרְבִּי וּבְקַשְׁתִּי
+# ‹וַאֲנִי נָתַתִּי לְךָ› (“and-I set to-you/your”)
+# ‹שְׁכֶם אַחַד עַל־אַחֶיךָ› (“neck-as-the-place-of-burden one over brother-
+# you/your”)
+# ‹אֲשֶׁר לָקַחְתִּי מִיַּד› (“which take from-hand”)
+# ‹הָאֱמֹרִי בְּחַרְבִּי וּבְקַשְׁתִּי› (“the-Emorite in-drought-me/my and-
+# in-bow-me/my”)
 # "[EN-AID] And I give you one portion above your brothers, which I took
 # from the hand of the Amorite with my sword and with my bow."
 m.step("Gen.48.22")
-# ‹וַאֲנִי נָתַתִּי לְךָ שְׁכֶם אַחַד› (“and-I set to-you/your neck-as-the-
-# place-of-burden one”) — fact holds: set-to-you-neck-as-the-place-of-
-# burden-one
+# ‹וַאֲנִי נָתַתִּי לְךָ› (“and-I set to-you/your”)
+# ‹שְׁכֶם אַחַד› (“neck-as-the-place-of-burden one”)
+# — fact holds: set-to-you-neck-as-the-place-of-burden-one
 m.fact("natati_lekha_shekhem_achad")
 # witness-grounded state (its own tier):
 # disarmed_by_both_members_independently on my_sword_and_my_bow

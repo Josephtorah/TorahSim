@@ -15,6 +15,17 @@
 # Motion 5 — added, with the effects layer live.
 # Read-only; touches no unit; model layer.
 
+# ---- THE HONEST-PAIRING GUARD (sitting C retrofit, 2026-09-05) ------------
+# Every expected value this runner grades against must be a LITERAL typed from
+# the answer sheet; the parser checks the source before anything runs, and the
+# count below is the tripwire — it fails loudly the day the table changes.
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
+_P = _os.path.abspath(__file__)
+GUARDED = _chp(_P, 'CASES', 2)
+assert GUARDED == 24, ('the guard counted %d expectations, the tripwire holds 24' % GUARDED)
+print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys
 import effects_layer as FX
 
@@ -355,37 +366,42 @@ CASES = [
 ]
 
 # ---- Motion 3+5: run, grade, and emit effects -----------------------
-ok = 0
-frac = {'INK': 0, 'MOVE': 0, 'DATA': 0}
-used_effects = []
-print()
-for label, fn, want in CASES:
-    got, effects, prov = fn()
-    hit = got == want
-    ok += hit
-    kinds = [k for k, _ in prov]
-    cls = 'INK' if all(k == 'INK' for k in kinds) else \
-          ('MOVE' if 'MOVE' in kinds else 'DATA')
-    frac[cls] += 1
-    print('%s  [%s]  %s' % ('PASS' if hit else 'MISS', cls, label))
-    if not hit:
-        print('      expected: %s' % want)
-        print('      got     : %s' % got)
-    used_effects += effects
-    for line in FX.render(effects):
-        print('        ->%s' % line)
-print()
-print('MATRIX: %d/%d cells match the answer sheet' % (ok, len(CASES)))
-tot = len(CASES)
-print('FRACTIONS: pure ink %d/%d (%.0f%%) · named moves %d/%d (%.0f%%) '
-      '· data %d/%d (%.0f%%)' %
-      (frac['INK'], tot, 100.0 * frac['INK'] / tot,
-       frac['MOVE'], tot, 100.0 * frac['MOVE'] / tot,
-       frac['DATA'], tot, 100.0 * frac['DATA'] / tot))
-ops = FX.summarize(used_effects)
-print('LEDGER OPS this span writes:',
-      ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
-if ok == len(CASES):
-    print('\nTHE PASSOVER ENGINE COMPILES — the first span born under '
-          'the effects law, its verdicts carrying registry effects '
-          'into the world_engine contract.')
+# The run is guarded so the functions above IMPORT COLD — the Lev 1-8
+# offering dispatcher CALLS paschal_procedure() and registration() for
+# its pesach cell (sitting A, 2026-09-05, REVIEW_LEV1-8 item I: the
+# first-call standard of cold_run_mishpatim -> cold_run_lev24).
+if __name__ == '__main__':
+    ok = 0
+    frac = {'INK': 0, 'MOVE': 0, 'DATA': 0}
+    used_effects = []
+    print()
+    for label, fn, want in CASES:
+        got, effects, prov = fn()
+        hit = got == want
+        ok += hit
+        kinds = [k for k, _ in prov]
+        cls = 'INK' if all(k == 'INK' for k in kinds) else \
+              ('MOVE' if 'MOVE' in kinds else 'DATA')
+        frac[cls] += 1
+        print('%s  [%s]  %s' % ('PASS' if hit else 'MISS', cls, label))
+        if not hit:
+            print('      expected: %s' % want)
+            print('      got     : %s' % got)
+        used_effects += effects
+        for line in FX.render(effects):
+            print('        ->%s' % line)
+    print()
+    print('MATRIX: %d/%d cells match the answer sheet' % (ok, len(CASES)))
+    tot = len(CASES)
+    print('FRACTIONS: pure ink %d/%d (%.0f%%) · named moves %d/%d (%.0f%%) '
+          '· data %d/%d (%.0f%%)' %
+          (frac['INK'], tot, 100.0 * frac['INK'] / tot,
+           frac['MOVE'], tot, 100.0 * frac['MOVE'] / tot,
+           frac['DATA'], tot, 100.0 * frac['DATA'] / tot))
+    ops = FX.summarize(used_effects)
+    print('LEDGER OPS this span writes:',
+          ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
+    if ok == len(CASES):
+        print('\nTHE PASSOVER ENGINE COMPILES — the first span born under '
+              'the effects law, its verdicts carrying registry effects '
+              'into the world_engine contract.')

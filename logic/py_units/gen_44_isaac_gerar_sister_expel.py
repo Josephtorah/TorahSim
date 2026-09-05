@@ -14,25 +14,33 @@ from machine import Machine
 m = Machine("gen_44_isaac_gerar_sister_expel")
 
 # -------------------------- Gen.26.1 · THE_FAMINE_ECHO_AND_THE_PATH_TO_GERAR -
-# וַיְהִ֤י רָעָב֙ בָּאָ֔רֶץ מִלְּבַד֙ הָרָעָ֣ב הָרִאשׁ֔וֹן אֲשֶׁ֥ר הָיָ֖ה
-# בִּימֵ֣י אַבְרָהָ֑ם וַיֵּ֧לֶךְ יִצְחָ֛ק אֶל־אֲבִימֶּ֥לֶךְ
-# מֶֽלֶךְ־פְּלִשְׁתִּ֖ים גְּרָֽרָה
+# ‹וַיְהִ֤י רָעָב֙ בָּאָ֔רֶץ› (“and-be hunger in-earth”)
+# ‹מִלְּבַד֙ הָרָעָ֣ב הָרִאשׁ֔וֹן› (“from-to-separation the-hunger the-
+# first”)
+# ‹אֲשֶׁ֥ר הָיָ֖ה בִּימֵ֣י› (“which be in-day”)
+# ‹אַבְרָהָ֑ם וַיֵּ֧לֶךְ יִצְחָ֛ק› (“Abraham and-go Isaac”)
+# ‹אֶל־אֲבִימֶּ֥לֶךְ מֶֽלֶךְ־פְּלִשְׁתִּ֖ים גְּרָֽרָה› (“to Abimelech king
+# Pelishtite Gerar-ward”)
 # "[EN-AID] And there was a famine in the land, besides the first famine
 # that was in the days of Abraham; and Isaac went to Abimelech king of the
 # Philistines, to Gerar."
 m.step("Gen.26.1")
-# ‹וַיְהִי רָעָב בָּאָרֶץ› (“and-be hunger in-earth”) — event: famine
+# ‹וַיְהִי רָעָב בָּאָרֶץ› (“and-be hunger in-earth”)
+# — event: famine
 m.event("famine")
-# ‹מִלְּבַד הָרָעָב הָרִאשׁוֹן אֲשֶׁר הָיָה בִּימֵי אַבְרָהָם› (“from-to-
-# separation the-hunger the-first which be in-day Abraham”) — fact holds:
-# echo-first-famine-days-fowl-Abraham
+# ‹מִלְּבַד הָרָעָב הָרִאשׁוֹן› (“from-to-separation the-hunger the-first”)
+# ‹אֲשֶׁר הָיָה בִּימֵי› (“which be in-day”)
+# ‹אַבְרָהָם› (“Abraham”)
+# — fact holds: echo-first-famine-days-fowl-Abraham
 m.fact("echo_first_famine_days_of_avraham")
-# ‹וַיֵּלֶךְ יִצְחָק אֶל־אֲבִימֶּלֶךְ … גְּרָרָה› (“and-go Isaac to
-# Abimelech … Gerar-ward”) — event: go — agent Isaac
+# ‹וַיֵּלֶךְ יִצְחָק אֶל־אֲבִימֶּלֶךְ› (“and-go Isaac to Abimelech”)
+# ‹… גְּרָרָה› (“Gerar-ward”)
+# — event: go — agent Isaac
 m.event("go", agent="yitzchaq")
-# ‹יִצְחָק … אַבְרָהָם … אֲבִימֶּלֶךְ … גְּרָרָה› (“Isaac … Abraham …
-# Abimelech … Gerar-ward”) — reads without prior install (flag, not fix):
-# Isaac, Abraham, Abimelech, gerar, Pelishtite
+# ‹יִצְחָק … אַבְרָהָם … אֲבִימֶּלֶךְ› (“Isaac … Abraham … Abimelech”)
+# ‹… גְּרָרָה› (“Gerar-ward”)
+# — reads without prior install (flag, not fix): Isaac, Abraham, Abimelech,
+# gerar, Pelishtite
 m.presupposed("yitzchaq", "avraham", "avimelekh", "gerar", "pelishtim")
 # witness-tier presupposed read: member_of_the_ten_famines_census on
 # this_famine — read, not installed
@@ -40,21 +48,26 @@ m.witness_read("this_famine", "member_of_the_ten_famines_census",
                 cites=["Bereshit Rabbah 25:3", "Bereshit Rabbah 64:2"])
 
 # -------------------------- Gen.26.2 · THE_APPEARANCE_THE_LET_NOT_AND_THE_DWELL -
-# וַיֵּרָ֤א אֵלָי֙ו יְהוָ֔ה וַיֹּ֖אמֶר אַל־תֵּרֵ֣ד מִצְרָ֑יְמָה שְׁכֹ֣ן
-# בָּאָ֔רֶץ אֲשֶׁ֖ר אֹמַ֥ר אֵלֶֽיךָ
+# ‹וַיֵּרָ֤א אֵלָי֙ו יְהוָ֔ה› (“and-see to-him/its YHWH”)
+# ‹וַיֹּ֖אמֶר אַל־תֵּרֵ֣ד מִצְרָ֑יְמָה› (“and-say do-not go-down Egypt-
+# ward”)
+# ‹שְׁכֹ֣ן בָּאָ֔רֶץ אֲשֶׁ֖ר› (“reside in-earth which”)
+# ‹אֹמַ֥ר אֵלֶֽיךָ› (“say to-you/your”)
 # "[EN-AID] And YHWH appeared to him and said: Do not go down to Egypt;
 # dwell in the land that I say to you."
 m.step("Gen.26.2")
-# ‹וַיֵּרָא אֵלָיו יְהוָה וַיֹּאמֶר› (“and-see to-him/its YHWH and-say”) —
-# event: appear — agent the-LORD
+# ‹וַיֵּרָא אֵלָיו יְהוָה› (“and-see to-him/its YHWH”)
+# ‹וַיֹּאמֶר› (“and-say”)
+# — event: appear — agent the-LORD
 m.event("appear", agent="YHWH")
-# ‹אַל־תֵּרֵד מִצְרָיְמָה› (“do-not go-down Egypt-ward”) — the-LORD speaks a
-# demand — LET-NOT: over-go-down(Isaac, mitzrayim)
+# ‹אַל־תֵּרֵד מִצְרָיְמָה› (“do-not go-down Egypt-ward”)
+# — the-LORD speaks a demand — LET-NOT: over-go-down(Isaac, mitzrayim)
 m.declare("YHWH", "LET-NOT",
           "al_tered(yitzchaq, mitzrayim)")
-# ‹שְׁכֹן בָּאָרֶץ אֲשֶׁר אֹמַר אֵלֶיךָ› (“reside in-earth which say to-
-# you/your”) — the-LORD speaks a demand — LET: reside(Isaac, in-the-earth-
-# which-say-to-you)
+# ‹שְׁכֹן בָּאָרֶץ אֲשֶׁר› (“reside in-earth which”)
+# ‹אֹמַר אֵלֶיךָ› (“say to-you/your”)
+# — the-LORD speaks a demand — LET: reside(Isaac, in-the-earth-which-say-to-
+# you)
 m.declare("YHWH", "LET",
           "shekhon(yitzchaq, ba_aretz_asher_omar_elekha)")
 # witness-tier presupposed read:
@@ -64,31 +77,41 @@ m.witness_read("remain_in_this_land", "offering_disqualification_rule_applied_to
                 cites=["Bereshit Rabbah 64:3"])
 
 # -------------------------- Gen.26.3 · THE_SOJOURN_THE_PROMISE_AND_THE_PAST_OATH -
-# גּ֚וּר בָּאָ֣רֶץ הַזֹּ֔את וְאֶֽהְיֶ֥ה עִמְּךָ֖ וַאֲבָרְכֶ֑ךָּ כִּֽי־לְךָ֣
-# וּֽלְזַרְעֲךָ֗ אֶתֵּן֙ אֶת־כָּל־הָֽאֲרָצֹ֣ת הָאֵ֔ל וַהֲקִֽמֹתִי֙
-# אֶת־הַשְּׁבֻעָ֔ה אֲשֶׁ֥ר נִשְׁבַּ֖עְתִּי לְאַבְרָהָ֥ם אָבִֽיךָ
+# ‹גּ֚וּר בָּאָ֣רֶץ הַזֹּ֔את› (“turn-aside-from-the-road in-earth the-this”)
+# ‹וְאֶֽהְיֶ֥ה עִמְּךָ֖ וַאֲבָרְכֶ֑ךָּ› (“and-be with-you/your and-bless-
+# you/your”)
+# ‹כִּֽי־לְךָ֣ וּֽלְזַרְעֲךָ֗ אֶתֵּן֙› (“that to-you/your and-to-seed-
+# you/your set”)
+# ‹אֶת־כָּל־הָֽאֲרָצֹ֣ת הָאֵ֔ל וַהֲקִֽמֹתִי֙› (“obj-marker all the-earth
+# the-these and-arise”)
+# ‹אֶת־הַשְּׁבֻעָ֔ה אֲשֶׁ֥ר נִשְׁבַּ֖עְתִּי› (“obj-marker the-something-
+# sworn which swear”)
+# ‹לְאַבְרָהָ֥ם אָבִֽיךָ› (“to-Abraham father-you/your”)
 # "[EN-AID] Sojourn in this land, and I will be with you and will bless you;
 # for to you and to your seed I will give all these lands, and I will
 # establish the oath that I swore to Abraham your father."
 m.step("Gen.26.3")
-# ‹גּוּר בָּאָרֶץ הַזֹּאת› (“turn-aside-from-the-road in-earth the-this”) —
-# the-LORD speaks a demand — LET: turn-aside-from-the-road(Isaac, in-the-
+# ‹גּוּר בָּאָרֶץ הַזֹּאת› (“turn-aside-from-the-road in-earth the-this”)
+# — the-LORD speaks a demand — LET: turn-aside-from-the-road(Isaac, in-the-
 # earth-the-this)
 m.declare("YHWH", "LET",
           "gur(yitzchaq, ba_aretz_ha_zot)")
 # ‹וְאֶהְיֶה עִמְּךָ וַאֲבָרְכֶךָּ› (“and-be with-you/your and-bless-
-# you/your”) — fact holds: and-be-if-you/your; and-avarkhe-like
+# you/your”)
+# — fact holds: and-be-if-you/your; and-avarkhe-like
 m.fact("ve_ehye_im_kha",
        "va_avarkhe_ka")
-# ‹כִּי־לְךָ וּלְזַרְעֲךָ אֶתֵּן אֶת־כָּל־הָאֲרָצֹת הָאֵל› (“that to-
-# you/your and-to-seed-you/your set obj-marker all the-earth the-these”) —
-# fact holds: set-to-you/your-and-to-zara-you/your-obj-marker-all-the-earth-
-# the-to
+# ‹כִּי־לְךָ וּלְזַרְעֲךָ אֶתֵּן› (“that to-you/your and-to-seed-you/your
+# set”)
+# ‹אֶת־כָּל־הָאֲרָצֹת הָאֵל› (“obj-marker all the-earth the-these”)
+# — fact holds: set-to-you/your-and-to-zara-you/your-obj-marker-all-the-
+# earth-the-to
 m.fact("eten_le_kha_u_le_zara_kha_et_kal_ha_aratzot_ha_el")
-# ‹וַהֲקִמֹתִי אֶת־הַשְּׁבֻעָה אֲשֶׁר נִשְׁבַּעְתִּי לְאַבְרָהָם אָבִיךָ›
-# (“and-arise obj-marker the-something-sworn which swear to-Abraham father-
-# you/your”) — fact holds: and-arise-obj-marker-the-something-sworn; past-
-# oath-swear-to-Abraham
+# ‹וַהֲקִמֹתִי אֶת־הַשְּׁבֻעָה אֲשֶׁר› (“and-arise obj-marker the-something-
+# sworn which”)
+# ‹נִשְׁבַּעְתִּי לְאַבְרָהָם אָבִיךָ› (“swear to-Abraham father-you/your”)
+# — fact holds: and-arise-obj-marker-the-something-sworn; past-oath-swear-
+# to-Abraham
 m.fact("va_haqimoti_et_ha_shevua",
        "past_oath_nishbati_le_avraham")
 # witness-tier presupposed read: partial_grant_with_a_future_instalment on
@@ -97,35 +120,45 @@ m.witness_read("these_lands_short_form", "partial_grant_with_a_future_instalment
                 cites=["Bereshit Rabbah 64:3", "Onkelos Genesis 26:3"])
 
 # -------------------------- Gen.26.4 · THE_SEED_STARS_AND_THE_NATIONS_BLESSING -
-# וְהִרְבֵּיתִ֤י אֶֽת־זַרְעֲךָ֙ כְּכוֹכְבֵ֣י הַשָּׁמַ֔יִם וְנָתַתִּ֣י
-# לְזַרְעֲךָ֔ אֵ֥ת כָּל־הָאֲרָצֹ֖ת הָאֵ֑ל וְהִתְבָּרֲכ֣וּ בְזַרְעֲךָ֔ כֹּ֖ל
-# גּוֹיֵ֥י הָאָֽרֶץ
+# ‹וְהִרְבֵּיתִ֤י אֶֽת־זַרְעֲךָ֙ כְּכוֹכְבֵ֣י› (“and-multiply obj-marker
+# seed-you/your like-stars”)
+# ‹הַשָּׁמַ֔יִם וְנָתַתִּ֣י לְזַרְעֲךָ֔› (“the-heavens and-set to-seed-
+# you/your”)
+# ‹אֵ֥ת כָּל־הָאֲרָצֹ֖ת הָאֵ֑ל› (“obj-marker all the-earth the-these”)
+# ‹וְהִתְבָּרֲכ֣וּ בְזַרְעֲךָ֔ כֹּ֖ל› (“and-bless in-seed-you/your all”)
+# ‹גּוֹיֵ֥י הָאָֽרֶץ› (“nation the-earth”)
 # "[EN-AID] And I will multiply your seed as the stars of the heavens, and I
 # will give to your seed all these lands; and in your seed all nations of
 # the earth shall bless themselves."
 m.step("Gen.26.4")
-# ‹וְהִרְבֵּיתִי … וְנָתַתִּי לְזַרְעֲךָ אֵת כָּל־הָאֲרָצֹת הָאֵל› (“and-
-# multiply … and-set to-seed-you/your obj-marker all the-earth the-these”) —
-# fact holds: and-multiply-zara-you/your-like-stars-the-heavens; and-set-to-
-# zara-you/your-the-earth
+# ‹וְהִרְבֵּיתִי … וְנָתַתִּי לְזַרְעֲךָ› (“and-multiply … and-set to-seed-
+# you/your”)
+# ‹אֵת כָּל־הָאֲרָצֹת הָאֵל› (“obj-marker all the-earth the-these”)
+# — fact holds: and-multiply-zara-you/your-like-stars-the-heavens; and-set-
+# to-zara-you/your-the-earth
 m.fact("ve_hirbeti_zara_kha_ke_khokhve_ha_shamayim",
        "ve_natati_le_zara_kha_ha_aratzot")
-# ‹וְהִתְבָּרֲכוּ בְזַרְעֲךָ כֹּל גּוֹיֵי הָאָרֶץ› (“and-bless in-seed-
-# you/your all nation the-earth”) — fact holds: and-bless-and-zara-you/your-
-# all-nation-the-earth
+# ‹וְהִתְבָּרֲכוּ בְזַרְעֲךָ כֹּל› (“and-bless in-seed-you/your all”)
+# ‹גּוֹיֵי הָאָרֶץ› (“nation the-earth”)
+# — fact holds: and-bless-and-zara-you/your-all-nation-the-earth
 m.fact("ve_hitbarakhu_ve_zara_kha_kol_goye_ha_aretz")
 
 # -------------------------- Gen.26.5 · THE_GROUNDS_BECAUSE_ABRAHAM_LISTENED -
-# עֵ֕קֶב אֲשֶׁר־שָׁמַ֥ע אַבְרָהָ֖ם בְּקֹלִ֑י וַיִּשְׁמֹר֙ מִשְׁמַרְתִּ֔י
-# מִצְוֺתַ֖י חֻקּוֹתַ֥י וְתוֹרֹתָֽי
+# ‹עֵ֕קֶב אֲשֶׁר־שָׁמַ֥ע אַבְרָהָ֖ם› (“heel which hear Abraham”)
+# ‹בְּקֹלִ֑י וַיִּשְׁמֹר֙ מִשְׁמַרְתִּ֔י› (“in-voice/sound-me/my and-
+# keep/guard watch-me/my”)
+# ‹מִצְוֺתַ֖י חֻקּוֹתַ֥י וְתוֹרֹתָֽי› (“commandment-me/my statute-me/my and-
+# precept-me/my”)
 # "[EN-AID] because Abraham listened to My voice and kept My charge, My
 # commandments, My statutes, and My teachings."
 m.step("Gen.26.5")
-# ‹עֵקֶב אֲשֶׁר־שָׁמַע אַבְרָהָם בְּקֹלִי› (“heel which hear Abraham in-
-# voice/sound-me/my”) — fact holds: heel-which-hear-Abraham-in-qoli
+# ‹עֵקֶב אֲשֶׁר־שָׁמַע אַבְרָהָם› (“heel which hear Abraham”)
+# ‹בְּקֹלִי› (“in-voice/sound-me/my”)
+# — fact holds: heel-which-hear-Abraham-in-qoli
 m.fact("eqev_asher_shama_avraham_be_qoli")
-# ‹וַיִּשְׁמֹר מִשְׁמַרְתִּי מִצְוֺתַי חֻקּוֹתַי וְתוֹרֹתָי› (“and-
-# keep/guard watch-me/my commandment-me/my statute-me/my and-precept-me/my”)
+# ‹וַיִּשְׁמֹר מִשְׁמַרְתִּי מִצְוֺתַי› (“and-keep/guard watch-me/my
+# commandment-me/my”)
+# ‹חֻקּוֹתַי וְתוֹרֹתָי› (“statute-me/my and-precept-me/my”)
 # — fact holds: and-keep/guard-mishmarti-mitzvotai-chuqqotai-and-torotai
 m.fact("va_yishmor_mishmarti_mitzvotai_chuqqotai_ve_torotai")
 # witness-tier presupposed read: numeric_value_172_and_the_age_of_three on
@@ -138,49 +171,58 @@ m.witness_read("the_stacked_law_words", "whole_system_known_before_sinai",
                 cites=["Bereshit Rabbah 64:4", "Onkelos Genesis 26:5"])
 
 # -------------------------- Gen.26.6 · THE_DWELL_OTHER_VERB_CENTERPIECE ----
-# וַיֵּ֥שֶׁב יִצְחָ֖ק בִּגְרָֽר
+# ‹וַיֵּ֥שֶׁב יִצְחָ֖ק בִּגְרָֽר› (“and-dwell/sit Isaac in-Gerar”)
 # "[EN-AID] And Isaac dwelt in Gerar."
 m.step("Gen.26.6")
-# ‹וַיֵּשֶׁב יִצְחָק בִּגְרָר› (“and-dwell/sit Isaac in-Gerar”) — event:
-# dwell — agent Isaac
+# ‹וַיֵּשֶׁב יִצְחָק בִּגְרָר› (“and-dwell/sit Isaac in-Gerar”)
+# — event: dwell — agent Isaac
 m.event("dwell", agent="yitzchaq")
-# ‹וַיֵּשֶׁב ← שְׁכֹן / גּוּר› (“and-dwell/sit reside cub”) — fact holds:
-# other-verb-non-pop-reside-and-turn-aside-from-the-road
+# ‹וַיֵּשֶׁב ← שְׁכֹן / גּוּר› (“and-dwell/sit reside cub”)
+# — fact holds: other-verb-non-pop-reside-and-turn-aside-from-the-road
 m.fact("other_verb_non_pop_shekhon_and_gur")
 
 # -------------------------- Gen.26.7 · THE_SISTER_CLAIM_ISAAC_LIVE ---------
-# וַֽיִּשְׁאֲל֞וּ אַנְשֵׁ֤י הַמָּקוֹם֙ לְאִשְׁתּ֔וֹ וַיֹּ֖אמֶר אֲחֹ֣תִי
-# הִ֑וא כִּ֤י יָרֵא֙ לֵאמֹ֣ר אִשְׁתִּ֔י פֶּן־יַֽהַרְגֻ֜נִי אַנְשֵׁ֤י
-# הַמָּקוֹם֙ עַל־רִבְקָ֔ה כִּֽי־טוֹבַ֥ת מַרְאֶ֖ה הִֽיא
+# ‹וַֽיִּשְׁאֲל֞וּ אַנְשֵׁ֤י הַמָּקוֹם֙› (“and-inquire man the-place”)
+# ‹לְאִשְׁתּ֔וֹ וַיֹּ֖אמֶר אֲחֹ֣תִי› (“to-woman-him/its and-say sister-
+# me/my”)
+# ‹הִ֑וא כִּ֤י יָרֵא֙› (“he/it that fear”)
+# ‹לֵאמֹ֣ר אִשְׁתִּ֔י פֶּן־יַֽהַרְגֻ֜נִי› (“to-say woman-me/my lest smite-
+# with-deadly-intent-me/my”)
+# ‹אַנְשֵׁ֤י הַמָּקוֹם֙ עַל־רִבְקָ֔ה› (“man the-place over Rebekah”)
+# ‹כִּֽי־טוֹבַ֥ת מַרְאֶ֖ה הִֽיא› (“that good appearance he/it”)
 # "[EN-AID] And the men of the place asked about his wife; and he said: She
 # is my sister — for he feared to say, My wife, lest the men of the place
 # kill me on account of Rivqah, for she is good of appearance."
 m.step("Gen.26.7")
-# ‹וַיִּשְׁאֲלוּ … וַיֹּאמֶר› (“and-inquire … and-say”) — event: ?
+# ‹וַיִּשְׁאֲלוּ … וַיֹּאמֶר› (“and-inquire … and-say”)
+# — event: ?
 m.event("?")
-# ‹אֲחֹתִי הִוא› (“sister-me/my he/it”) — fact holds: achoti-he/it-claim-by-
-# Isaac
+# ‹אֲחֹתִי הִוא› (“sister-me/my he/it”)
+# — fact holds: achoti-he/it-claim-by-Isaac
 m.fact("achoti_hi_claim_by_yitzchaq")
-# ‹כִּי יָרֵא … כִּי־טוֹבַת מַרְאֶה הִיא› (“that fear … that good appearance
-# he/it”) — fact holds: fear-to-say-ishti-lest-yahargu; good-appearance-
-# he/it
+# ‹כִּי יָרֵא … כִּי־טוֹבַת› (“that fear … that good”)
+# ‹מַרְאֶה הִיא› (“appearance he/it”)
+# — fact holds: fear-to-say-ishti-lest-yahargu; good-appearance-he/it
 m.fact("yare_le_mor_ishti_pen_yahargu",
        "tovat_mareh_hi")
 
 # -------------------------- Gen.26.8 · THE_WINDOW_AND_THE_NAME_ROOT_LAUGH --
-# וַיְהִ֗י כִּ֣י אָֽרְכוּ־ל֥וֹ שָׁם֙ הַיָּמִ֔ים וַיַּשְׁקֵ֗ף אֲבִימֶ֨לֶךְ֙
-# מֶ֣לֶךְ פְּלִשְׁתִּ֔ים בְּעַ֖ד הַֽחַלּ֑וֹן וַיַּ֗רְא וְהִנֵּ֤ה יִצְחָק֙
-# מְצַחֵ֔ק אֵ֖ת רִבְקָ֥ה אִשְׁתּֽוֹ
+# ‹וַיְהִ֗י כִּ֣י אָֽרְכוּ־ל֥וֹ› (“and-be that be-long to-him/its”)
+# ‹שָׁם֙ הַיָּמִ֔ים וַיַּשְׁקֵ֗ף› (“there the-day and-lean-out”)
+# ‹אֲבִימֶ֨לֶךְ֙ מֶ֣לֶךְ פְּלִשְׁתִּ֔ים› (“Abimelech king Pelishtite”)
+# ‹בְּעַ֖ד הַֽחַלּ֑וֹן וַיַּ֗רְא› (“in-up-to the-window and-see”)
+# ‹וְהִנֵּ֤ה יִצְחָק֙ מְצַחֵ֔ק› (“and-behold Isaac laugh-outright”)
+# ‹אֵ֖ת רִבְקָ֥ה אִשְׁתּֽוֹ› (“with Rebekah woman-him/its”)
 # "[EN-AID] And it came to pass, when he had been there a long time, that
 # Abimelech king of the Philistines looked out through the window and saw,
 # and behold, Isaac was laughing/playing with Rivqah his wife."
 m.step("Gen.26.8")
-# ‹אָרְכוּ … וַיַּשְׁקֵף … וַיַּרְא› (“be-long … and-lean-out … and-see”) —
-# event: ?
+# ‹אָרְכוּ … וַיַּשְׁקֵף … וַיַּרְא› (“be-long … and-lean-out … and-see”)
+# — event: ?
 m.event("?")
-# ‹יִצְחָק מְצַחֵק אֵת רִבְקָה אִשְׁתּוֹ› (“Isaac laugh-outright with
-# Rebekah woman-him/its”) — fact holds: Isaac-laugh-outright-obj-marker-
-# rivqah-his-wife
+# ‹יִצְחָק מְצַחֵק אֵת› (“Isaac laugh-outright with”)
+# ‹רִבְקָה אִשְׁתּוֹ› (“Rebekah woman-him/its”)
+# — fact holds: Isaac-laugh-outright-obj-marker-rivqah-his-wife
 m.fact("yitzchaq_metzacheq_et_rivqah_ishto")
 # witness-tier presupposed read: modesty_law_cluster_with_its_exception on
 # the_word_playing — read, not installed
@@ -188,39 +230,48 @@ m.witness_read("the_word_playing", "modesty_law_cluster_with_its_exception",
                 cites=["Bereshit Rabbah 64:5"])
 
 # -------------------------- Gen.26.9 · THE_SUMMONS_AND_THE_RE_QUOTE --------
-# וַיִּקְרָ֨א אֲבִימֶ֜לֶךְ לְיִצְחָ֗ק וַיֹּ֨אמֶר֙ אַ֣ךְ הִנֵּ֤ה אִשְׁתְּךָ֙
-# הִ֔וא וְאֵ֥יךְ אָמַ֖רְתָּ אֲחֹ֣תִי הִ֑וא וַיֹּ֤אמֶר אֵלָי֙ו יִצְחָ֔ק כִּ֣י
-# אָמַ֔רְתִּי פֶּן־אָמ֖וּת עָלֶֽיהָ
+# ‹וַיִּקְרָ֨א אֲבִימֶ֜לֶךְ לְיִצְחָ֗ק› (“and-call Abimelech to-Isaac”)
+# ‹וַיֹּ֨אמֶר֙ אַ֣ךְ הִנֵּ֤ה› (“and-say indeed behold”)
+# ‹אִשְׁתְּךָ֙ הִ֔וא וְאֵ֥יךְ› (“woman-you/your he/it and-how?”)
+# ‹אָמַ֖רְתָּ אֲחֹ֣תִי הִ֑וא› (“say sister-me/my he/it”)
+# ‹וַיֹּ֤אמֶר אֵלָי֙ו יִצְחָ֔ק› (“and-say to-him/its Isaac”)
+# ‹כִּ֣י אָמַ֔רְתִּי פֶּן־אָמ֖וּת› (“that say lest die”)
+# ‹עָלֶֽיהָ› (“over-her/its”)
 # "[EN-AID] And Abimelech called Isaac and said: Behold, of a surety she is
 # your wife; and how did you say, She is my sister? And Isaac said to him:
 # Because I said, Lest I die because of her."
 m.step("Gen.26.9")
-# ‹וַיִּקְרָא אֲבִימֶלֶךְ לְיִצְחָק וַיֹּאמֶר … וַיֹּאמֶר אֵלָיו יִצְחָק›
-# (“and-call Abimelech to-Isaac and-say … and-say to-him/its Isaac”) —
-# event: ?
+# ‹וַיִּקְרָא אֲבִימֶלֶךְ לְיִצְחָק› (“and-call Abimelech to-Isaac”)
+# ‹וַיֹּאמֶר … וַיֹּאמֶר אֵלָיו› (“and-say … and-say to-him/its”)
+# ‹יִצְחָק› (“Isaac”)
+# — event: ?
 m.event("?")
-# ‹הִנֵּה אִשְׁתְּךָ הִוא … אָמַרְתָּ אֲחֹתִי הִוא› (“behold woman-you/your
-# he/it … say sister-me/my he/it”) — fact holds: isht-you/your-he/it; say-
-# achoti-he/it-requote
+# ‹הִנֵּה אִשְׁתְּךָ הִוא› (“behold woman-you/your he/it”)
+# ‹… אָמַרְתָּ אֲחֹתִי הִוא› (“say sister-me/my he/it”)
+# — fact holds: isht-you/your-he/it; say-achoti-he/it-requote
 m.fact("isht_kha_hiv",
        "amarta_achoti_hi_requote")
 
 # -------------------------- Gen.26.10 · THE_WHAT_HAVE_YOU_DONE_AND_THE_GUILT_DEBUT -
-# וַיֹּ֣אמֶר אֲבִימֶ֔לֶךְ מַה־זֹּ֖את עָשִׂ֣יתָ לָּ֑נוּ כִּ֠מְעַט שָׁכַ֞ב
-# אַחַ֤ד הָעָם֙ אֶת־אִשְׁתֶּ֔ךָ וְהֵבֵאתָ֥ עָלֵ֖ינוּ אָשָֽׁם
+# ‹וַיֹּ֣אמֶר אֲבִימֶ֔לֶךְ מַה־זֹּ֖את› (“and-say Abimelech what this”)
+# ‹עָשִׂ֣יתָ לָּ֑נוּ כִּ֠מְעַט› (“make to-us/our like-little”)
+# ‹שָׁכַ֞ב אַחַ֤ד הָעָם֙› (“lie-down one the-people”)
+# ‹אֶת־אִשְׁתֶּ֔ךָ וְהֵבֵאתָ֥ עָלֵ֖ינוּ› (“with woman-you/your and-
+# come/bring over-us/our”)
+# ‹אָשָֽׁם› (“guilt”)
 # "[EN-AID] And Abimelech said: What is this you have done to us? One of the
 # people might easily have lain with your wife, and you would have brought
 # guilt upon us."
 m.step("Gen.26.10")
-# ‹וַיֹּאמֶר אֲבִימֶלֶךְ› (“and-say Abimelech”) — event: say — agent
-# Abimelech
+# ‹וַיֹּאמֶר אֲבִימֶלֶךְ› (“and-say Abimelech”)
+# — event: say — agent Abimelech
 m.event("say", agent="avimelekh")
-# ‹מַה־זֹּאת עָשִׂיתָ לָּנוּ› (“what this make to-us/our”) — fact holds:
-# what-this-make-to-us/our
+# ‹מַה־זֹּאת עָשִׂיתָ לָּנוּ› (“what this make to-us/our”)
+# — fact holds: what-this-make-to-us/our
 m.fact("ma_zot_asita_la_nu")
-# ‹כִּמְעַט שָׁכַב … וְהֵבֵאתָ עָלֵינוּ אָשָׁם› (“like-little lie-down …
-# and-come/bring over-us/our guilt”) — fact holds: near-miss-lie-down-and-
-# guilt-brought
+# ‹כִּמְעַט שָׁכַב … וְהֵבֵאתָ› (“like-little lie-down … and-come/bring”)
+# ‹עָלֵינוּ אָשָׁם› (“over-us/our guilt”)
+# — fact holds: near-miss-lie-down-and-guilt-brought
 m.fact("near_miss_shakhav_and_asham_brought")
 # witness-tier presupposed read: rendered_as_the_distinguished_one on
 # one_of_the_people — read, not installed
@@ -228,30 +279,37 @@ m.witness_read("one_of_the_people", "rendered_as_the_distinguished_one",
                 cites=["Onkelos Genesis 26:10"])
 
 # -------------------------- Gen.26.11 · THE_ROYAL_DECREE_MOT_YUMAT ---------
-# וַיְצַ֣ו אֲבִימֶ֔לֶךְ אֶת־כָּל־הָעָ֖ם לֵאמֹ֑ר הַנֹּגֵ֜עַ בָּאִ֥ישׁ הַזֶּ֛ה
-# וּבְאִשְׁתּ֖וֹ מ֥וֹת יוּמָֽת
+# ‹וַיְצַ֣ו אֲבִימֶ֔לֶךְ אֶת־כָּל־הָעָ֖ם› (“and-command Abimelech obj-marker
+# all the-people”)
+# ‹לֵאמֹ֑ר הַנֹּגֵ֜עַ בָּאִ֥ישׁ› (“to-say the-touch in-man”)
+# ‹הַזֶּ֛ה וּבְאִשְׁתּ֖וֹ מ֥וֹת› (“the-this and-in-woman-him/its die”)
+# ‹יוּמָֽת› (“die”)
 # "[EN-AID] And Abimelech commanded all the people, saying: He who touches
 # this man or his wife shall surely be put to death."
 m.step("Gen.26.11")
 # ‹וַיְצַו אֲבִימֶלֶךְ אֶת־כָּל־הָעָם› (“and-command Abimelech obj-marker
-# all the-people”) — event: command — agent Abimelech
+# all the-people”)
+# — event: command — agent Abimelech
 m.event("command", agent="avimelekh")
-# ‹הַנֹּגֵעַ בָּאִישׁ הַזֶּה וּבְאִשְׁתּוֹ מוֹת יוּמָת› (“the-touch in-man
-# the-this and-in-woman-him/its die die”) — fact holds: royal-decree-no-
-# touch-die-die
+# ‹הַנֹּגֵעַ בָּאִישׁ הַזֶּה› (“the-touch in-man the-this”)
+# ‹וּבְאִשְׁתּוֹ מוֹת יוּמָת› (“and-in-woman-him/its die die”)
+# — fact holds: royal-decree-no-touch-die-die
 m.fact("royal_decree_no_touch_mot_yumat")
 
 # -------------------------- Gen.26.12 · THE_HUNDREDFOLD_AND_THE_BLESSING ---
-# וַיִּזְרַ֤ע יִצְחָק֙ בָּאָ֣רֶץ הַהִ֔וא וַיִּמְצָ֛א בַּשָּׁנָ֥ה הַהִ֖וא
-# מֵאָ֣ה שְׁעָרִ֑ים וַֽיְבָרֲכֵ֖הוּ יְהוָֽה
+# ‹וַיִּזְרַ֤ע יִצְחָק֙ בָּאָ֣רֶץ› (“and-yield-seed Isaac in-earth”)
+# ‹הַהִ֔וא וַיִּמְצָ֛א בַּשָּׁנָ֥ה› (“that and-find in-years”)
+# ‹הַהִ֖וא מֵאָ֣ה שְׁעָרִ֑ים› (“that hundred measure”)
+# ‹וַֽיְבָרֲכֵ֖הוּ יְהוָֽה› (“and-bless-him/its YHWH”)
 # "[EN-AID] And Isaac sowed in that land and found in that year a hundred
 # measures; and YHWH blessed him."
 m.step("Gen.26.12")
-# ‹וַיִּזְרַע … וַיִּמְצָא … מֵאָה שְׁעָרִים› (“and-yield-seed … and-find …
-# hundred measure”) — event: sow-and-find — agent Isaac; theme hundred-
-# measure
+# ‹וַיִּזְרַע … וַיִּמְצָא … מֵאָה› (“and-yield-seed … and-find … hundred”)
+# ‹שְׁעָרִים› (“measure”)
+# — event: sow-and-find — agent Isaac; theme hundred-measure
 m.event("sow_and_find", agent="yitzchaq", themes=["mea_shearim"])
-# ‹וַיְבָרֲכֵהוּ יְהוָה› (“and-bless-him/its YHWH”) — event: ?
+# ‹וַיְבָרֲכֵהוּ יְהוָה› (“and-bless-him/its YHWH”)
+# — event: ?
 m.event("?")
 # witness-tier presupposed read:
 # two_standing_rules_colliding_and_adjudicated on the_hundredfold — read,
@@ -264,27 +322,34 @@ m.witness_read("enrichment_of_the_host", "first_member_of_a_proximity_census",
                 cites=["Bereshit Rabbah 73:8"])
 
 # -------------------------- Gen.26.13 · THE_MAN_GREW_VERY_GREAT ------------
-# וַיִּגְדַּ֖ל הָאִ֑ישׁ וַיֵּ֤לֶךְ הָלוֹךְ֙ וְגָדֵ֔ל עַ֥ד כִּֽי־גָדַ֖ל
-# מְאֹֽד
+# ‹וַיִּגְדַּ֖ל הָאִ֑ישׁ וַיֵּ֤לֶךְ› (“and-be-large the-man and-go”)
+# ‹הָלוֹךְ֙ וְגָדֵ֔ל עַ֥ד› (“walk/go and-large until”)
+# ‹כִּֽי־גָדַ֖ל מְאֹֽד› (“that be-large very”)
 # "[EN-AID] And the man became great, and grew more and more until he became
 # very great."
 m.step("Gen.26.13")
-# ‹וַיִּגְדַּל … הָלוֹךְ וְגָדֵל … גָדַל מְאֹד› (“and-be-large … walk/go
-# and-large … be-large very”) — event: grow-great
+# ‹וַיִּגְדַּל … הָלוֹךְ וְגָדֵל› (“and-be-large … walk/go and-large”)
+# ‹… גָדַל מְאֹד› (“be-large very”)
+# — event: grow-great
 m.event("grow_great")
 
 # -------------------------- Gen.26.14 · THE_FLOCKS_AND_THE_ENVY_DEBUT ------
-# וַֽיְהִי־ל֤וֹ מִקְנֵה־צֹאן֙ וּמִקְנֵ֣ה בָקָ֔ר וַעֲבֻדָּ֖ה רַבָּ֑ה
-# וַיְקַנְא֥וּ אֹת֖וֹ פְּלִשְׁתִּֽים
+# ‹וַֽיְהִי־ל֤וֹ מִקְנֵה־צֹאן֙ וּמִקְנֵ֣ה› (“and-be to-him/its something-
+# bought flock and-something-bought”)
+# ‹בָקָ֔ר וַעֲבֻדָּ֖ה רַבָּ֑ה› (“herd and-something-wrought many/great”)
+# ‹וַיְקַנְא֥וּ אֹת֖וֹ פְּלִשְׁתִּֽים› (“and-be-zealous obj-marker-him/its
+# Pelishtite”)
 # "[EN-AID] And he had possessions of flocks and possessions of herds and a
 # great household; and the Philistines envied him."
 m.step("Gen.26.14")
-# ‹מִקְנֵה־צֹאן וּמִקְנֵה בָקָר וַעֲבֻדָּה רַבָּה› (“something-bought flock
-# and-something-bought herd and-something-wrought many/great”) — fact holds:
-# something-bought-flock-herd-and-something-wrought-many/great
+# ‹מִקְנֵה־צֹאן וּמִקְנֵה בָקָר› (“something-bought flock and-something-
+# bought herd”)
+# ‹וַעֲבֻדָּה רַבָּה› (“and-something-wrought many/great”)
+# — fact holds: something-bought-flock-herd-and-something-wrought-many/great
 m.fact("miqne_tzon_vaqar_va_avuda_raba")
 # ‹וַיְקַנְאוּ אֹתוֹ פְּלִשְׁתִּים› (“and-be-zealous obj-marker-him/its
-# Pelishtite”) — event: envy — agent Pelishtite
+# Pelishtite”)
+# — event: envy — agent Pelishtite
 m.event("envy", agent="pelishtim")
 # witness-tier presupposed read: service_maxim_on_a_missing_letter on
 # household_written_short — read, not installed
@@ -292,36 +357,44 @@ m.witness_read("household_written_short", "service_maxim_on_a_missing_letter",
                 cites=["Bereshit Rabbah 64:7"])
 
 # -------------------------- Gen.26.15 · THE_STOPPED_WELLS_OF_ABRAHAMS_DAYS -
-# וְכָל־הַבְּאֵרֹ֗ת אֲשֶׁ֤ר חָֽפְרוּ֙ עַבְדֵ֣י אָבִ֔יו בִּימֵ֖י אַבְרָהָ֣ם
-# אָבִ֑יו סִתְּמ֣וּם פְּלִשְׁתִּ֔ים וַיְמַלְא֖וּם עָפָֽר
+# ‹וְכָל־הַבְּאֵרֹ֗ת אֲשֶׁ֤ר חָֽפְרוּ֙› (“and-all the-pit which dig”)
+# ‹עַבְדֵ֣י אָבִ֔יו בִּימֵ֖י› (“servant father-him/its in-day”)
+# ‹אַבְרָהָ֣ם אָבִ֑יו סִתְּמ֣וּם› (“Abraham father-him/its stop-up-
+# them/their”)
+# ‹פְּלִשְׁתִּ֔ים וַיְמַלְא֖וּם עָפָֽר› (“Pelishtite and-fill-them/their
+# dust”)
 # "[EN-AID] And all the wells that his father's servants had dug in the days
 # of Abraham his father, the Philistines stopped them up and filled them
 # with earth."
 m.step("Gen.26.15")
-# ‹הַבְּאֵרֹת אֲשֶׁר חָפְרוּ עַבְדֵי אָבִיו בִּימֵי אַבְרָהָם אָבִיו› (“the-
-# pit which dig servant father-him/its in-day Abraham father-him/its”) —
-# fact holds: wells-dug-by-servant-Abraham-bi-yme-Abraham
+# ‹הַבְּאֵרֹת אֲשֶׁר חָפְרוּ› (“the-pit which dig”)
+# ‹עַבְדֵי אָבִיו בִּימֵי› (“servant father-him/its in-day”)
+# ‹אַבְרָהָם אָבִיו› (“Abraham father-him/its”)
+# — fact holds: wells-dug-by-servant-Abraham-bi-yme-Abraham
 m.fact("wells_dug_by_avde_avraham_bi_yme_avraham")
-# ‹סִתְּמוּם פְּלִשְׁתִּים וַיְמַלְאוּם עָפָר› (“stop-up-them/their
-# Pelishtite and-fill-them/their dust”) — event: stop-up-and-fill — agent
-# Pelishtite; theme the-pit
+# ‹סִתְּמוּם פְּלִשְׁתִּים וַיְמַלְאוּם› (“stop-up-them/their Pelishtite
+# and-fill-them/their”)
+# ‹עָפָר› (“dust”)
+# — event: stop-up-and-fill — agent Pelishtite; theme the-pit
 m.event("stop_up_and_fill", agent="pelishtim", themes=["ha_beerot"])
 
 # -------------------------- Gen.26.16 · THE_EXPULSION_SEAM_LEKH ------------
-# וַיֹּ֥אמֶר אֲבִימֶ֖לֶךְ אֶל־יִצְחָ֑ק לֵ֚ךְ מֵֽעִמָּ֔נוּ כִּֽי־עָצַֽמְתָּ
-# מִמֶּ֖נּוּ מְאֹֽד
+# ‹וַיֹּ֥אמֶר אֲבִימֶ֖לֶךְ אֶל־יִצְחָ֑ק› (“and-say Abimelech to Isaac”)
+# ‹לֵ֚ךְ מֵֽעִמָּ֔נוּ כִּֽי־עָצַֽמְתָּ› (“go from-with-us/our that bind-
+# fast”)
+# ‹מִמֶּ֖נּוּ מְאֹֽד› (“from-us/our very”)
 # "[EN-AID] And Abimelech said to Isaac: Go from us, for you have become
 # much mightier than we."
 m.step("Gen.26.16")
-# ‹וַיֹּאמֶר אֲבִימֶלֶךְ אֶל־יִצְחָק› (“and-say Abimelech to Isaac”) —
-# event: say — agent Abimelech
+# ‹וַיֹּאמֶר אֲבִימֶלֶךְ אֶל־יִצְחָק› (“and-say Abimelech to Isaac”)
+# — event: say — agent Abimelech
 m.event("say", agent="avimelekh")
-# ‹לֵךְ מֵעִמָּנוּ› (“go from-with-us/our”) — Abimelech speaks a demand —
-# LET: go(Isaac, from-imanu)
+# ‹לֵךְ מֵעִמָּנוּ› (“go from-with-us/our”)
+# — Abimelech speaks a demand — LET: go(Isaac, from-imanu)
 m.declare("avimelekh", "LET",
           "lekh(yitzchaq, me_imanu)")
-# ‹כִּי־עָצַמְתָּ מִמֶּנּוּ מְאֹד› (“that bind-fast from-us/our very”) —
-# fact holds: bind-fast-mime-us/our-very
+# ‹כִּי־עָצַמְתָּ מִמֶּנּוּ מְאֹד› (“that bind-fast from-us/our very”)
+# — fact holds: bind-fast-mime-us/our-very
 m.fact("atzamta_mime_nu_meod")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

@@ -357,6 +357,23 @@ includes the matriarchs by Genesis 49:31's "Abraham AND Sarah"
 covenant list; and the reversed order read as a FALLBACK CHAIN
 (Chapter 8 6); claim LV26-27.
 
+**AN INCLUSION AFTER AN INCLUSION COMES ONLY TO LIMIT (Vayikra, the
+Lev 2 compile — sitting B of the audit, 2026-09-05).** Lev 2:1 writes
+two adjunct clauses in parallel — "and he shall pour oil ON IT, and
+put frankincense ON IT" — and the Sifra reads the oil as covering ALL
+of the offering and the frankincense only PART of it, by a rule about
+rules: שֶׁאֵין רִבּוּי אַחַר רִבּוּי בַּתּוֹרָה אֶלָּא לְמַעֵט ("an
+inclusion after an inclusion in the Torah comes only to limit" —
+Sifra, Vayikra Dibbura DeNedavah, Chapter 10 14-16, the row-grain
+addresses). The same Sifra then records a SECOND, functional
+derivation of the same verdict (Chapter 10 17: the oil blends and is
+scooped with the flour, the frankincense neither) — the two routes to
+one verdict recorded side by side, the parse rule and the mechanism.
+The rule is the ribui-school's counterpart to the kelal-u-frat
+family's limiting move: where the amplify-and-limit school reads two
+inclusions in a row, the second narrows. Compiled at the adjunct
+cells of cold_run_minchah.py; claim LV02-02 carries both derivations.
+
 **THE PRECONDITION ON GENERAL-PARTICULAR-GENERAL (Behar, round 47).**
 Whether plowing in the seventh year incurs lashes turns, the Talmud
 says, on R. Avin's rule in R. Ila'i's name: "wherever a general is

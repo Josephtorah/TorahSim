@@ -15,33 +15,42 @@ from machine import Machine
 m = Machine("gen_50_wage_seven_years_switched_bride")
 
 # -------------------------- Gen.29.15 · THE_WAGE_QUESTION_PUSH -------------
-# וַיֹּאמֶר לָבָן לְיַעֲקֹב הֲכִי־אָחִי אַתָּה וַעֲבַדְתַּנִי חִנָּם
-# הַגִּידָה לִּי מַה־מַּשְׂכֻּרְתֶּךָ
+# ‹וַיֹּאמֶר לָבָן לְיַעֲקֹב› (“and-say Laban to-Jacob”)
+# ‹הֲכִי־אָחִי אַתָּה וַעֲבַדְתַּנִי› (“the-that brother-me/my you and-
+# work/serve-me/my”)
+# ‹חִנָּם הַגִּידָה לִּי› (“gratis tell-ward to-me/my”)
+# ‹מַה־מַּשְׂכֻּרְתֶּךָ› (“what wages-you/your”)
 # "[EN-AID] And Laban said to Jacob: Because you are my brother, should you
 # serve me for nothing? Tell me, what is your wage?"
 m.step("Gen.29.15")
 # ‹הַגִּידָה לִּי מַה־מַּשְׂכֻּרְתֶּךָ› (“tell-ward to-me/my what wages-
-# you/your”) — Laban speaks a demand — LET: hagida-maskoret(Jacob)
+# you/your”)
+# — Laban speaks a demand — LET: hagida-maskoret(Jacob)
 m.declare("lavan", "LET",
           "hagida_maskoret(yaaqov)")
 
 # -------------------------- Gen.29.16 · THE_TWO_DAUGHTERS ------------------
-# וּלְלָבָן שְׁתֵּי בָנוֹת שֵׁם הַגְּדֹלָה לֵאָה וְשֵׁם הַקְּטַנָּה רָחֵל
+# ‹וּלְלָבָן שְׁתֵּי בָנוֹת› (“and-to-Laban two daughter”)
+# ‹שֵׁם הַגְּדֹלָה לֵאָה› (“name the-great Leah”)
+# ‹וְשֵׁם הַקְּטַנָּה רָחֵל› (“and-name the-abbreviated Rachel”)
 # "[EN-AID] And Laban had two daughters: the name of the elder was Leah, and
 # the name of the younger was Rachel."
 m.step("Gen.29.16")
-# ‹שֵׁם הַגְּדֹלָה לֵאָה וְשֵׁם הַקְּטַנָּה רָחֵל› (“name the-great Leah
-# and-name the-abbreviated Rachel”) — fact holds: two-daughters-great-leah-
-# abbreviated-Rachel
+# ‹שֵׁם הַגְּדֹלָה לֵאָה› (“name the-great Leah”)
+# ‹וְשֵׁם הַקְּטַנָּה רָחֵל› (“and-name the-abbreviated Rachel”)
+# — fact holds: two-daughters-great-leah-abbreviated-Rachel
 m.fact("two_daughters_gedola_leah_qetana_rachel")
 
 # -------------------------- Gen.29.17 · THE_EYES_AND_THE_FORM --------------
-# וְעֵינֵי לֵאָה רַכּוֹת וְרָחֵל הָיְתָה יְפַת־תֹּאַר וִיפַת מַרְאֶה
+# ‹וְעֵינֵי לֵאָה רַכּוֹת› (“and-eye Leah tender”)
+# ‹וְרָחֵל הָיְתָה יְפַת־תֹּאַר› (“and-Rachel be beautiful outline”)
+# ‹וִיפַת מַרְאֶה› (“and-beautiful appearance”)
 # "[EN-AID] And Leah's eyes were tender; but Rachel was beautiful of form
 # and beautiful of appearance."
 m.step("Gen.29.17")
-# ‹וְעֵינֵי לֵאָה רַכּוֹת … יְפַת־תֹּאַר› (“and-eye Leah tender … beautiful
-# outline”) — fact holds: leah-eyes-tender-Rachel-beautiful
+# ‹וְעֵינֵי לֵאָה רַכּוֹת› (“and-eye Leah tender”)
+# ‹… יְפַת־תֹּאַר› (“beautiful outline”)
+# — fact holds: leah-eyes-tender-Rachel-beautiful
 m.fact("leah_eyes_tender_rachel_beautiful")
 # witness-tier presupposed read:
 # pejorative_rebuked_in_one_member_replaced_in_the_other on her_eyes — read,
@@ -50,16 +59,21 @@ m.witness_read("her_eyes", "pejorative_rebuked_in_one_member_replaced_in_the_oth
                 cites=["Bereshit Rabbah 70:16", "Onkelos Genesis 29:17"])
 
 # -------------------------- Gen.29.18 · THE_WAGE_TOLD_POP ------------------
-# וַיֶּאֱהַב יַעֲקֹב אֶת־רָחֵל וַיֹּאמֶר אֶעֱבָדְךָ שֶׁבַע שָׁנִים בְּרָחֵל
-# בִּתְּךָ הַקְּטַנָּה
+# ‹וַיֶּאֱהַב יַעֲקֹב אֶת־רָחֵל› (“and-have-affection-for Jacob obj-marker
+# Rachel”)
+# ‹וַיֹּאמֶר אֶעֱבָדְךָ שֶׁבַע› (“and-say work/serve-you/your seven”)
+# ‹שָׁנִים בְּרָחֵל בִּתְּךָ› (“years in-Rachel daughter-you/your”)
+# ‹הַקְּטַנָּה› (“the-abbreviated”)
 # "[EN-AID] And Jacob loved Rachel; and he said: I will serve you seven
 # years for Rachel your younger daughter."
 m.step("Gen.29.18")
-# ‹אֶעֱבָדְךָ שֶׁבַע שָׁנִים בְּרָחֵל› (“work/serve-you/your seven years in-
-# Rachel”) — demand settled (popped from the queue): hagida-maskoret(Jacob)
+# ‹אֶעֱבָדְךָ שֶׁבַע שָׁנִים› (“work/serve-you/your seven years”)
+# ‹בְּרָחֵל› (“in-Rachel”)
+# — demand settled (popped from the queue): hagida-maskoret(Jacob)
 m.result("hagida_maskoret(yaaqov)", tmark="t1")
 # ‹וַיֶּאֱהַב יַעֲקֹב אֶת־רָחֵל› (“and-have-affection-for Jacob obj-marker
-# Rachel”) — fact holds: Jacob-loves-Rachel-contract-names-her
+# Rachel”)
+# — fact holds: Jacob-loves-Rachel-contract-names-her
 m.fact("yaaqov_loves_rachel_contract_names_her")
 # witness-tier presupposed read: perfect_drafting_defeated_outside_its_scope
 # on three_specifications — read, not installed
@@ -71,37 +85,44 @@ m.witness_read("the_two_sisters", "partition_table_over_later_history",
                 cites=["Bereshit Rabbah 70:15"])
 
 # -------------------------- Gen.29.19 · THE_FENCED_TOV_AND_DWELL_PUSH ------
-# וַיֹּאמֶר לָבָן טוֹב תִּתִּי אֹתָהּ לָךְ מִתִּתִּי אֹתָהּ לְאִישׁ אַחֵר
-# שְׁבָה עִמָּדִי
+# ‹וַיֹּאמֶר לָבָן טוֹב› (“and-say Laban good”)
+# ‹תִּתִּי אֹתָהּ לָךְ› (“set-me/my obj-marker-her/its to-you/your”)
+# ‹מִתִּתִּי אֹתָהּ לְאִישׁ› (“from-set-me/my obj-marker-her/its to-man”)
+# ‹אַחֵר שְׁבָה עִמָּדִי› (“other dwell/sit-ward along-with-me/my”)
 # "[EN-AID] And Laban said: Better that I give her to you than that I give
 # her to another man — dwell with me."
 m.step("Gen.29.19")
-# ‹שְׁבָה עִמָּדִי› (“dwell/sit-ward along-with-me/my”) — Laban speaks a
-# demand — LET: seven-with-me(Jacob)
+# ‹שְׁבָה עִמָּדִי› (“dwell/sit-ward along-with-me/my”)
+# — Laban speaks a demand — LET: seven-with-me(Jacob)
 m.declare("lavan", "LET",
           "sheva_imadi(yaaqov)")
-# ‹טוֹב תִּתִּי אֹתָהּ לָךְ› (“good set-me/my obj-marker-her/its to-
-# you/your”) — fact holds: good-comparative-fenced-in-speech
+# ‹טוֹב תִּתִּי אֹתָהּ› (“good set-me/my obj-marker-her/its”)
+# ‹לָךְ› (“to-you/your”)
+# — fact holds: good-comparative-fenced-in-speech
 m.fact("tov_comparative_fenced_in_speech")
 
 # -------------------------- Gen.29.20 · THE_SEVEN_YEARS_AS_FEW_DAYS --------
-# וַיַּעֲבֹד יַעֲקֹב בְּרָחֵל שֶׁבַע שָׁנִים וַיִּהְיוּ בְעֵינָיו כְּיָמִים
-# אֲחָדִים בְּאַהֲבָתוֹ אֹתָהּ
+# ‹וַיַּעֲבֹד יַעֲקֹב בְּרָחֵל› (“and-work/serve Jacob in-Rachel”)
+# ‹שֶׁבַע שָׁנִים וַיִּהְיוּ› (“seven years and-be”)
+# ‹בְעֵינָיו כְּיָמִים אֲחָדִים› (“in-eye-him/its like-day one”)
+# ‹בְּאַהֲבָתוֹ אֹתָהּ› (“in-have-affection-for-him/its obj-marker-her/its”)
 # "[EN-AID] And Jacob served seven years for Rachel; and they were in his
 # eyes as a few days, in his love for her."
 m.step("Gen.29.20")
-# ‹וַיַּעֲבֹד … כְּיָמִים אֲחָדִים› (“and-work/serve … like-day one”) — fact
-# holds: seven-years-served-as-few-days
+# ‹וַיַּעֲבֹד … כְּיָמִים אֲחָדִים› (“and-work/serve … like-day one”)
+# — fact holds: seven-years-served-as-few-days
 m.fact("seven_years_served_as_few_days")
 
 # -------------------------- Gen.29.21 · THE_BABEL_IMPERATIVE_GIVE_MY_WIFE --
-# וַיֹּאמֶר יַעֲקֹב אֶל־לָבָן הָבָה אֶת־אִשְׁתִּי כִּי מָלְאוּ יָמָי
-# וְאָבוֹאָה אֵלֶיהָ
+# ‹וַיֹּאמֶר יַעֲקֹב אֶל־לָבָן› (“and-say Jacob to Laban”)
+# ‹הָבָה אֶת־אִשְׁתִּי כִּי› (“give-ward obj-marker woman-me/my that”)
+# ‹מָלְאוּ יָמָי וְאָבוֹאָה› (“fill day-me/my and-come/bring”)
+# ‹אֵלֶיהָ› (“to-her/its”)
 # "[EN-AID] And Jacob said to Laban: Give my wife, for my days are
 # fulfilled, that I may go in to her."
 m.step("Gen.29.21")
-# ‹הָבָה אֶת־אִשְׁתִּי› (“give-ward obj-marker woman-me/my”) — Jacob speaks
-# a demand — LET: hava-ishti(Laban)
+# ‹הָבָה אֶת־אִשְׁתִּי› (“give-ward obj-marker woman-me/my”)
+# — Jacob speaks a demand — LET: hava-ishti(Laban)
 m.declare("yaaqov", "LET",
           "hava_ishti(lavan)")
 # witness-tier presupposed read: urgency_in_one_member_contract_in_the_other
@@ -110,22 +131,28 @@ m.witness_read("give_me_my_wife", "urgency_in_one_member_contract_in_the_other",
                 cites=["Bereshit Rabbah 70:18", "Onkelos Genesis 29:21"])
 
 # -------------------------- Gen.29.22 · THE_FEAST_OF_THE_PLACE -------------
-# וַיֶּאֱסֹף לָבָן אֶת־כָּל־אַנְשֵׁי הַמָּקוֹם וַיַּעַשׂ מִשְׁתֶּה
+# ‹וַיֶּאֱסֹף לָבָן אֶת־כָּל־אַנְשֵׁי› (“and-gather-for-any-purpose Laban
+# obj-marker all man”)
+# ‹הַמָּקוֹם וַיַּעַשׂ מִשְׁתֶּה› (“the-place and-make drink”)
 # "[EN-AID] And Laban gathered all the men of the place, and made a feast."
 m.step("Gen.29.22")
-# ‹וַיַּעַשׂ מִשְׁתֶּה› (“and-make drink”) — fact holds: feast-gathered-men-
-# fowl-the-place
+# ‹וַיַּעַשׂ מִשְׁתֶּה› (“and-make drink”)
+# — fact holds: feast-gathered-men-fowl-the-place
 m.fact("feast_gathered_men_of_the_place")
 
 # -------------------------- Gen.29.23 · THE_SWITCH_OBJECT_MISMATCH_NO_POP --
-# וַיְהִי בָעֶרֶב וַיִּקַּח אֶת־לֵאָה בִתּוֹ וַיָּבֵא אֹתָהּ אֵלָיו וַיָּבֹא
-# אֵלֶיהָ
+# ‹וַיְהִי בָעֶרֶב וַיִּקַּח› (“and-be in-evening and-take”)
+# ‹אֶת־לֵאָה בִתּוֹ וַיָּבֵא› (“obj-marker Leah daughter-him/its and-
+# come/bring”)
+# ‹אֹתָהּ אֵלָיו וַיָּבֹא› (“obj-marker-her/its to-him/its and-come/bring”)
+# ‹אֵלֶיהָ› (“to-her/its”)
 # "[EN-AID] And it was in the evening: he took Leah his daughter and brought
 # her to him; and he went in to her."
 m.step("Gen.29.23")
-# ‹וַיִּקַּח אֶת־לֵאָה … וַיָּבֹא אֵלֶיהָ› (“and-take obj-marker Leah … and-
-# come/bring to-her/its”) — fact holds: leah-delivered-object-mismatch-no-
-# pop
+# ‹וַיִּקַּח אֶת־לֵאָה … וַיָּבֹא› (“and-take obj-marker Leah … and-
+# come/bring”)
+# ‹אֵלֶיהָ› (“to-her/its”)
+# — fact holds: leah-delivered-object-mismatch-no-pop
 m.fact("leah_delivered_object_mismatch_no_pop")
 # witness-tier presupposed read: financed_with_the_townsmens_own_pledges on
 # the_switch — read, not installed
@@ -133,24 +160,30 @@ m.witness_read("the_switch", "financed_with_the_townsmens_own_pledges",
                 cites=["Bereshit Rabbah 70:19"])
 
 # -------------------------- Gen.29.24 · THE_FIRST_MAID_ZILPAH --------------
-# וַיִּתֵּן לָבָן לָהּ אֶת־זִלְפָּה שִׁפְחָתוֹ לְלֵאָה בִתּוֹ שִׁפְחָה
+# ‹וַיִּתֵּן לָבָן לָהּ› (“and-set Laban to-her/its”)
+# ‹אֶת־זִלְפָּה שִׁפְחָתוֹ לְלֵאָה› (“obj-marker Zilpah female-slave-him/its
+# to-Leah”)
+# ‹בִתּוֹ שִׁפְחָה› (“daughter-him/its female-slave”)
 # "[EN-AID] And Laban gave her Zilpah his maid — to Leah his daughter as a
 # maid."
 m.step("Gen.29.24")
-# ‹אֶת־זִלְפָּה שִׁפְחָתוֹ› (“obj-marker Zilpah female-slave-him/its”) —
-# fact holds: zilpah-given-to-leah
+# ‹אֶת־זִלְפָּה שִׁפְחָתוֹ› (“obj-marker Zilpah female-slave-him/its”)
+# — fact holds: zilpah-given-to-leah
 m.fact("zilpah_given_to_leah")
 
 # -------------------------- Gen.29.25 · THE_MORNING_BEHOLD_LEAH ------------
-# וַיְהִי בַבֹּקֶר וְהִנֵּה־הִוא לֵאָה וַיֹּאמֶר אֶל־לָבָן מַה־זֹּאת
-# עָשִׂיתָ לִּי הֲלֹא בְרָחֵל עָבַדְתִּי עִמָּךְ וְלָמָּה רִמִּיתָנִי
+# ‹וַיְהִי בַבֹּקֶר וְהִנֵּה־הִוא› (“and-be in-morning and-behold he/it”)
+# ‹לֵאָה וַיֹּאמֶר אֶל־לָבָן› (“Leah and-say to Laban”)
+# ‹מַה־זֹּאת עָשִׂיתָ לִּי› (“what this make to-me/my”)
+# ‹הֲלֹא בְרָחֵל עָבַדְתִּי› (“is-it-not in-Rachel work/serve”)
+# ‹עִמָּךְ וְלָמָּה רִמִּיתָנִי› (“with-you/your and-to-what hurl-me/my”)
 # "[EN-AID] And it was in the morning — behold, she was Leah. And he said to
 # Laban: What is this you have done to me? Did I not serve with you for
 # Rachel? Why have you deceived me?"
 m.step("Gen.29.25")
-# ‹וְהִנֵּה־הִוא לֵאָה … וְלָמָּה רִמִּיתָנִי› (“and-behold he/it Leah …
-# and-to-what hurl-me/my”) — fact holds: morning-revelation-accusation-
-# rimitani
+# ‹וְהִנֵּה־הִוא לֵאָה … וְלָמָּה› (“and-behold he/it Leah … and-to-what”)
+# ‹רִמִּיתָנִי› (“hurl-me/my”)
+# — fact holds: morning-revelation-accusation-rimitani
 m.fact("morning_revelation_accusation_rimitani")
 # witness-tier presupposed read: repaid_by_the_identical_mechanism on
 # deceiver_daughter_of_a_deceiver — read, not installed
@@ -158,23 +191,31 @@ m.witness_read("deceiver_daughter_of_a_deceiver", "repaid_by_the_identical_mecha
                 cites=["Bereshit Rabbah 70:19"])
 
 # -------------------------- Gen.29.26 · THE_CUSTOM_YOUNGER_NOT_BEFORE_FIRSTBORN -
-# וַיֹּאמֶר לָבָן לֹא־יֵעָשֶׂה כֵן בִּמְקוֹמֵנוּ לָתֵת הַצְּעִירָה לִפְנֵי
-# הַבְּכִירָה
+# ‹וַיֹּאמֶר לָבָן לֹא־יֵעָשֶׂה› (“and-say Laban not make”)
+# ‹כֵן בִּמְקוֹמֵנוּ לָתֵת› (“so in-place-us/our to-set”)
+# ‹הַצְּעִירָה לִפְנֵי הַבְּכִירָה› (“the-little to-face the-eldest-
+# daughter”)
 # "[EN-AID] And Laban said: It is not done so in our place, to give the
 # younger before the firstborn."
 m.step("Gen.29.26")
 # ‹הַצְּעִירָה לִפְנֵי הַבְּכִירָה› (“the-little to-face the-eldest-
-# daughter”) — fact holds: custom-little-not-before-eldest-daughter
+# daughter”)
+# — fact holds: custom-little-not-before-eldest-daughter
 m.fact("custom_tzeira_not_before_bekhira")
 
 # -------------------------- Gen.29.27 · THE_FULFILL_WEEK_PUSH --------------
-# מַלֵּא שְׁבֻעַ זֹאת וְנִתְּנָה לְךָ גַּם־אֶת־זֹאת בַּעֲבֹדָה אֲשֶׁר
-# תַּעֲבֹד עִמָּדִי עוֹד שֶׁבַע־שָׁנִים אֲחֵרוֹת
+# ‹מַלֵּא שְׁבֻעַ זֹאת› (“fill sevened this”)
+# ‹וְנִתְּנָה לְךָ גַּם־אֶת־זֹאת› (“and-set to-you/your also obj-marker
+# this”)
+# ‹בַּעֲבֹדָה אֲשֶׁר תַּעֲבֹד› (“in-service/work which work/serve”)
+# ‹עִמָּדִי עוֹד שֶׁבַע־שָׁנִים› (“along-with-me/my still/again seven
+# years”)
+# ‹אֲחֵרוֹת› (“other”)
 # "[EN-AID] Fulfill the week of this one, and we will give you also the
 # other, for the service that you shall serve with me — seven more years."
 m.step("Gen.29.27")
-# ‹מַלֵּא שְׁבֻעַ זֹאת› (“fill sevened this”) — Laban speaks a demand — LET:
-# fill-sevened(Jacob)
+# ‹מַלֵּא שְׁבֻעַ זֹאת› (“fill sevened this”)
+# — Laban speaks a demand — LET: fill-sevened(Jacob)
 m.declare("lavan", "LET",
           "male_shevua(yaaqov)")
 # witness-tier presupposed read: mixing_of_joys_law_born_here on
@@ -183,36 +224,46 @@ m.witness_read("complete_the_week_of_this_one", "mixing_of_joys_law_born_here",
                 cites=["Bereshit Rabbah 70:19"])
 
 # -------------------------- Gen.29.28 · THE_DOUBLE_POP_RACHEL_GIVEN --------
-# וַיַּעַשׂ יַעֲקֹב כֵּן וַיְמַלֵּא שְׁבֻעַ זֹאת וַיִּתֶּן־לוֹ אֶת־רָחֵל
-# בִּתּוֹ לוֹ לְאִשָּׁה
+# ‹וַיַּעַשׂ יַעֲקֹב כֵּן› (“and-make Jacob so”)
+# ‹וַיְמַלֵּא שְׁבֻעַ זֹאת› (“and-fill sevened this”)
+# ‹וַיִּתֶּן־לוֹ אֶת־רָחֵל בִּתּוֹ› (“and-set to-him/its obj-marker Rachel
+# daughter-him/its”)
+# ‹לוֹ לְאִשָּׁה› (“to-him/its to-woman”)
 # "[EN-AID] And Jacob did so, and fulfilled her week; and he gave him Rachel
 # his daughter as his wife."
 m.step("Gen.29.28")
-# ‹וַיְמַלֵּא שְׁבֻעַ זֹאת› (“and-fill sevened this”) — demand settled
-# (popped from the queue): fill-sevened(Jacob)
+# ‹וַיְמַלֵּא שְׁבֻעַ זֹאת› (“and-fill sevened this”)
+# — demand settled (popped from the queue): fill-sevened(Jacob)
 m.result("male_shevua(yaaqov)", tmark="t1")
 # ‹וַיִּתֶּן־לוֹ אֶת־רָחֵל בִּתּוֹ› (“and-set to-him/its obj-marker Rachel
-# daughter-him/its”) — demand settled (popped from the queue): hava-
-# ishti(Laban)
+# daughter-him/its”)
+# — demand settled (popped from the queue): hava-ishti(Laban)
 m.result("hava_ishti(lavan)", tmark="t1")
 
 # -------------------------- Gen.29.29 · THE_SECOND_MAID_BILHAH -------------
-# וַיִּתֵּן לָבָן לְרָחֵל בִּתּוֹ אֶת־בִּלְהָה שִׁפְחָתוֹ לָהּ לְשִׁפְחָה
+# ‹וַיִּתֵּן לָבָן לְרָחֵל› (“and-set Laban to-Rachel”)
+# ‹בִּתּוֹ אֶת־בִּלְהָה שִׁפְחָתוֹ› (“daughter-him/its obj-marker Bilhah
+# female-slave-him/its”)
+# ‹לָהּ לְשִׁפְחָה› (“to-her/its to-female-slave”)
 # "[EN-AID] And Laban gave to Rachel his daughter Bilhah his maid, as her
 # maid."
 m.step("Gen.29.29")
-# ‹אֶת־בִּלְהָה שִׁפְחָתוֹ› (“obj-marker Bilhah female-slave-him/its”) —
-# fact holds: bilhah-given-to-Rachel
+# ‹אֶת־בִּלְהָה שִׁפְחָתוֹ› (“obj-marker Bilhah female-slave-him/its”)
+# — fact holds: bilhah-given-to-Rachel
 m.fact("bilhah_given_to_rachel")
 
 # -------------------------- Gen.29.30 · THE_PREFERENCE_AND_SEVEN_MORE ------
-# וַיָּבֹא גַּם אֶל־רָחֵל וַיֶּאֱהַב גַּם־אֶת־רָחֵל מִלֵּאָה וַיַּעֲבֹד
-# עִמּוֹ עוֹד שֶׁבַע־שָׁנִים אֲחֵרוֹת
+# ‹וַיָּבֹא גַּם אֶל־רָחֵל› (“and-come/bring also to Rachel”)
+# ‹וַיֶּאֱהַב גַּם־אֶת־רָחֵל מִלֵּאָה› (“and-have-affection-for also obj-
+# marker Rachel from-Leah”)
+# ‹וַיַּעֲבֹד עִמּוֹ עוֹד› (“and-work/serve with-him/its still/again”)
+# ‹שֶׁבַע־שָׁנִים אֲחֵרוֹת› (“seven years other”)
 # "[EN-AID] And he went in also to Rachel, and loved also Rachel more than
 # Leah; and he served with him seven more years."
 m.step("Gen.29.30")
-# ‹וַיֶּאֱהַב גַּם־אֶת־רָחֵל מִלֵּאָה … עוֹד שֶׁבַע־שָׁנִים› (“and-have-
-# affection-for also obj-marker Rachel from-Leah … still/again seven years”)
+# ‹וַיֶּאֱהַב גַּם־אֶת־רָחֵל מִלֵּאָה› (“and-have-affection-for also obj-
+# marker Rachel from-Leah”)
+# ‹… עוֹד שֶׁבַע־שָׁנִים› (“still/again seven years”)
 # — fact holds: Rachel-loved-more-seven-more-years
 m.fact("rachel_loved_more_seven_more_years")
 # witness-tier presupposed read: faithful_after_the_fraud on

@@ -14,16 +14,20 @@ from machine import Machine
 m = Machine("gen_21_blessing_blood_law")
 
 # -------------------------- Gen.9.1 · THE_BLESSING_REISSUED_SHORTER --------
-# וַיְבָרֶךְ אֱלֹהִים אֶת־נֹחַ וְאֶת־בָּנָיו וַיֹּאמֶר לָהֶם פְּרוּ וּרְבוּ
-# וּמִלְאוּ אֶת־הָאָרֶץ
+# ‹וַיְבָרֶךְ אֱלֹהִים אֶת־נֹחַ› (“and-He-blessed God obj-marker Noah”)
+# ‹וְאֶת־בָּנָיו וַיֹּאמֶר לָהֶם› (“obj-marker his-sons and-He-said to-
+# them”)
+# ‹פְּרוּ וּרְבוּ וּמִלְאוּ› (“be-fruitful and-multiply and-fill”)
+# ‹אֶת־הָאָרֶץ› (“obj-marker the-earth”)
 # "And God blessed Noah and his sons, and said unto them: 'Be fruitful and
 # multiply, and replenish the earth."
 m.step("Gen.9.1")
-# ‹וַיְבָרֶךְ אֱלֹהִים אֶת־נֹחַ וְאֶת־בָּנָיו … פְּרוּ וּרְבוּ וּמִלְאוּ
-# אֶת־הָאָרֶץ› (“and-He-blessed God obj-marker Noah obj-marker his-sons …
-# be-fruitful and-multiply and-fill obj-marker the-earth”) — blessing: God
-# blesses Noach-and-vanav — mandate: CMD!(peru), CMD!(revu), CMD!(milu(et-
-# the-aretz))
+# ‹וַיְבָרֶךְ אֱלֹהִים אֶת־נֹחַ› (“and-He-blessed God obj-marker Noah”)
+# ‹וְאֶת־בָּנָיו … פְּרוּ וּרְבוּ› (“obj-marker his-sons … be-fruitful and-
+# multiply”)
+# ‹וּמִלְאוּ אֶת־הָאָרֶץ› (“and-fill obj-marker the-earth”)
+# — blessing: God blesses Noach-and-vanav — mandate: CMD!(peru), CMD!(revu),
+# CMD!(milu(et-the-aretz))
 m.bless("elohim", "noach_u_vanav", mandate=["CMD!(peru)", "CMD!(revu)", "CMD!(milu(et_ha_aretz))"])
 # reads without prior install (flag, not fix): Noach, banav
 m.presupposed("noach", "banav")
@@ -33,17 +37,24 @@ m.witness_read("flood_span", "retained_though_legally_inoperative",
                 cites=["Jerusalem Talmud Sheviit 1:1:4"])
 
 # -------------------------- Gen.9.2 · FEAR_AND_DREAD_IN_DOMINIONS_PLACE ----
-# וּמוֹרַאֲכֶם וְחִתְּכֶם יִהְיֶה עַל כָּל־חַיַּת הָאָרֶץ וְעַל כָּל־עוֹף
-# הַשָּׁמָיִם בְּכֹל אֲשֶׁר תִּרְמֹשׂ הָאֲדָמָה וּבְכָל־דְּגֵי הַיָּם
-# בְּיֶדְכֶם נִתָּנוּ
+# ‹וּמוֹרַאֲכֶם וְחִתְּכֶם יִהְיֶה› (“and-the-fear-of-you and-the-dread-of-
+# you shall-be”)
+# ‹עַל כָּל־חַיַּת הָאָרֶץ› (“over all living the-earth”)
+# ‹וְעַל כָּל־עוֹף הַשָּׁמָיִם› (“and-over all bird-of the-heavens”)
+# ‹בְּכֹל אֲשֶׁר תִּרְמֹשׂ› (“in-all which creeps”)
+# ‹הָאֲדָמָה וּבְכָל־דְּגֵי הַיָּם› (“the-ground and-in-all the-fish-of the-
+# sea”)
+# ‹בְּיֶדְכֶם נִתָּנוּ› (“into-your-hand they-are-given”)
 # "And the fear of you and the dread of you shall be upon every beast of the
 # earth, and upon every fowl of the air, and upon all wherewith the ground
 # teemeth, and upon all the fishes of the sea: into your hand are they
 # delivered."
 m.step("Gen.9.2")
-# ‹וּמוֹרַאֲכֶם וְחִתְּכֶם … בְּיֶדְכֶם נִתָּנוּ› (“and-the-fear-of-you and-
-# the-dread-of-you … into-your-hand they-are-given”) — fact holds:
-# moraakhem-and-chitkhem-over-all-living-the-earth; in-yedkhem-nittanu
+# ‹וּמוֹרַאֲכֶם וְחִתְּכֶם … בְּיֶדְכֶם› (“and-the-fear-of-you and-the-
+# dread-of-you … into-your-hand”)
+# ‹נִתָּנוּ› (“they-are-given”)
+# — fact holds: moraakhem-and-chitkhem-over-all-living-the-earth; in-
+# yedkhem-nittanu
 m.fact("moraakhem_ve_chitkhem_al_kol_chayat_ha_aretz",
        "be_yedkhem_nittanu")
 # witness-tier presupposed read: co_residence_law_and_lapsing_right on
@@ -52,22 +63,25 @@ m.witness_read("fear_grant", "co_residence_law_and_lapsing_right",
                 cites=["Eikhah Rabbah, Petichta 34", "Shabbat 151b:9"])
 
 # -------------------------- Gen.9.3 · THE_MEAT_GRANT_CITES_THE_OLD ---------
-# כָּל־רֶמֶשׂ אֲשֶׁר הוּא־חַי לָכֶם יִהְיֶה לְאָכְלָה כְּיֶרֶק עֵשֶׂב
-# נָתַתִּי לָכֶם אֶת־כֹּל
+# ‹כָּל־רֶמֶשׂ אֲשֶׁר הוּא־חַי› (“all moving-thing which it living”)
+# ‹לָכֶם יִהְיֶה לְאָכְלָה› (“to-you shall-be for-food”)
+# ‹כְּיֶרֶק עֵשֶׂב נָתַתִּי› (“as-the-green-of herb I-have-given”)
+# ‹לָכֶם אֶת־כֹּל› (“to-you obj-marker all”)
 # "Every moving thing that liveth shall be for food for you; as the green
 # herb have I given you all."
 m.step("Gen.9.3")
-# ‹כָּל־רֶמֶשׂ אֲשֶׁר הוּא־חַי … לְאָכְלָה› (“all moving-thing which it
-# living … for-food”) — role assigned: all-moving-thing-which-it-living ->
-# food-to-you
+# ‹כָּל־רֶמֶשׂ אֲשֶׁר הוּא־חַי› (“all moving-thing which it living”)
+# ‹… לְאָכְלָה› (“for-food”)
+# — role assigned: all-moving-thing-which-it-living -> food-to-you
 m.assign("kol_remes_asher_hu_chai", "okhlah_la_khem")
-# ‹לָכֶם יִהְיֶה לְאָכְלָה› (“to-you shall-be for-food”) — God speaks a
-# demand — LET?: yihyeh(all-moving-thing-living, for-food)
+# ‹לָכֶם יִהְיֶה לְאָכְלָה› (“to-you shall-be for-food”)
+# — God speaks a demand — LET?: yihyeh(all-moving-thing-living, for-food)
 m.declare("elohim", "LET?",
           "yihyeh(kol_remes_chai, le_okhlah)")
-# ‹כְּיֶרֶק עֵשֶׂב נָתַתִּי לָכֶם אֶת־כֹּל› (“as-the-green-of herb I-have-
-# given to-you obj-marker all”) — fact holds: like-as-the-green-of-herb-I-
-# have-given-to-you-obj-marker·et-all
+# ‹כְּיֶרֶק עֵשֶׂב נָתַתִּי› (“as-the-green-of herb I-have-given”)
+# ‹לָכֶם אֶת־כֹּל› (“to-you obj-marker all”)
+# — fact holds: like-as-the-green-of-herb-I-have-given-to-you-obj-marker·et-
+# all
 m.fact("ke_yereq_esev_natati_la_khem_et_kol")
 # witness-tier presupposed read: theft_prohibition_inside_the_simile on
 # meat_grant — read, not installed
@@ -75,13 +89,14 @@ m.witness_read("meat_grant", "theft_prohibition_inside_the_simile",
                 cites=["Sanhedrin 57a:4", "Sifra, Shemini, Section 2 3", "Vayikra Rabbah 13:2"])
 
 # -------------------------- Gen.9.4 · THE_FIRST_PROHIBITION_SINCE_EDEN -----
-# אַךְ־בָּשָׂר בְּנַפְשׁוֹ דָמוֹ לֹא תֹאכֵלוּ
+# ‹אַךְ־בָּשָׂר בְּנַפְשׁוֹ דָמוֹ› (“only flesh with-its-life its-blood”)
+# ‹לֹא תֹאכֵלוּ› (“not you-shall-eat”)
 # "Only flesh with the life thereof, which is the blood thereof, shall ye
 # not eat."
 m.step("Gen.9.4")
-# ‹אַךְ־בָּשָׂר בְּנַפְשׁוֹ דָמוֹ לֹא תֹאכֵלוּ› (“only flesh with-its-life
-# its-blood not you-shall-eat”) — God speaks a demand — LET-NOT: eat(flesh-
-# in-nafsho-damo)
+# ‹אַךְ־בָּשָׂר בְּנַפְשׁוֹ דָמוֹ› (“only flesh with-its-life its-blood”)
+# ‹לֹא תֹאכֵלוּ› (“not you-shall-eat”)
+# — God speaks a demand — LET-NOT: eat(flesh-in-nafsho-damo)
 m.declare("elohim", "LET-NOT",
           "akhal(basar_be_nafsho_damo)")
 # witness-tier presupposed read: grant_creates_the_law on limb_restriction —
@@ -90,22 +105,32 @@ m.witness_read("limb_restriction", "grant_creates_the_law",
                 cites=["Bereshit Rabbah 34:13", "Sanhedrin 57a:5", "Sanhedrin 59a:6", "Sifra, Shemini, Section 2 4"])
 
 # -------------------------- Gen.9.5 · THE_RECKONING_LADDER -----------------
-# וְאַךְ אֶת־דִּמְכֶם לְנַפְשֹׁתֵיכֶם אֶדְרֹשׁ מִיַּד כָּל־חַיָּה
-# אֶדְרְשֶׁנּוּ וּמִיַּד הָאָדָם מִיַּד אִישׁ אָחִיו אֶדְרֹשׁ אֶת־נֶפֶשׁ
-# הָאָדָם
+# ‹וְאַךְ אֶת־דִּמְכֶם לְנַפְשֹׁתֵיכֶם› (“and-only obj-marker your-blood
+# for-your-lives”)
+# ‹אֶדְרֹשׁ מִיַּד כָּל־חַיָּה› (“I-will-require from-the-hand-of all
+# living”)
+# ‹אֶדְרְשֶׁנּוּ וּמִיַּד הָאָדָם› (“I-will-require-it and-from-the-hand-of
+# the-human”)
+# ‹מִיַּד אִישׁ אָחִיו› (“from-the-hand-of a-man his-brother”)
+# ‹אֶדְרֹשׁ אֶת־נֶפֶשׁ הָאָדָם› (“I-will-require obj-marker the-life-of the-
+# human”)
 # "And surely your blood of your lives will I require; at the hand of every
 # beast will I require it; and at the hand of man, even at the hand of every
 # man's brother, will I require the life of man."
 m.step("Gen.9.5")
-# ‹וְאַךְ אֶת־דִּמְכֶם לְנַפְשֹׁתֵיכֶם אֶדְרֹשׁ … אֶדְרְשֶׁנּוּ … אֶדְרֹשׁ›
-# (“and-only obj-marker your-blood for-your-lives I-will-require … I-will-
-# require-it … I-will-require”) — standing constraint: obj-marker·et-
-# dimkhem-to-nafshoteikhem-I-will-require
+# ‹וְאַךְ אֶת־דִּמְכֶם לְנַפְשֹׁתֵיכֶם› (“and-only obj-marker your-blood
+# for-your-lives”)
+# ‹אֶדְרֹשׁ … אֶדְרְשֶׁנּוּ … אֶדְרֹשׁ› (“I-will-require … I-will-require-it
+# … I-will-require”)
+# — standing constraint: obj-marker·et-dimkhem-to-nafshoteikhem-I-will-
+# require
 m.invariant("et_dimkhem_le_nafshoteikhem_edrosh")
-# ‹מִיַּד כָּל־חַיָּה … וּמִיַּד הָאָדָם מִיַּד אִישׁ אָחִיו› (“from-the-
-# hand-of all living … and-from-the-hand-of the-human from-the-hand-of a-man
-# his-brother”) — fact holds: from-hand-of-all-beast-and-from-hand-of-the-
-# human-a-man-his-brother
+# ‹מִיַּד כָּל־חַיָּה … וּמִיַּד› (“from-the-hand-of all living … and-from-
+# the-hand-of”)
+# ‹הָאָדָם מִיַּד אִישׁ› (“the-human from-the-hand-of a-man”)
+# ‹אָחִיו› (“his-brother”)
+# — fact holds: from-hand-of-all-beast-and-from-hand-of-the-human-a-man-his-
+# brother
 m.fact("mi_yad_kol_chayah_u_mi_yad_ha_adam_ish_achiv")
 # witness-tier presupposed read: two_courts_split on self_blood_clause —
 # read, not installed
@@ -113,20 +138,22 @@ m.witness_read("self_blood_clause", "two_courts_split",
                 cites=["Bava Kamma 91b:8", "Jerusalem Talmud Bava Kamma 8:6:1", "Tosefta Bava Kamma (Lieberman) 9:31"])
 
 # -------------------------- Gen.9.6 · THE_TALION_ON_THE_IMAGE_GROUND -------
-# שֹׁפֵךְ דַּם הָאָדָם בָּאָדָם דָּמוֹ יִשָּׁפֵךְ כִּי בְּצֶלֶם אֱלֹהִים
-# עָשָׂה אֶת־הָאָדָם
+# ‹שֹׁפֵךְ דַּם הָאָדָם› (“the-shedder-of the-blood-of the-human”)
+# ‹בָּאָדָם דָּמוֹ יִשָּׁפֵךְ› (“by-the-human his-blood shall-be-shed”)
+# ‹כִּי בְּצֶלֶם אֱלֹהִים› (“that in-the-image-of God”)
+# ‹עָשָׂה אֶת־הָאָדָם› (“He-made obj-marker the-human”)
 # "Whoso sheddeth man's blood, by man shall his blood be shed; for in the
 # image of God made He man."
 m.step("Gen.9.6")
-# ‹שֹׁפֵךְ דַּם הָאָדָם בָּאָדָם דָּמוֹ יִשָּׁפֵךְ› (“the-shedder-of the-
-# blood-of the-human by-the-human his-blood shall-be-shed”) — standing
-# handler — if shedder-of(blood-of-the-human) then in-the-human-damo-shall-
-# be-shed
+# ‹שֹׁפֵךְ דַּם הָאָדָם› (“the-shedder-of the-blood-of the-human”)
+# ‹בָּאָדָם דָּמוֹ יִשָּׁפֵךְ› (“by-the-human his-blood shall-be-shed”)
+# — standing handler — if shedder-of(blood-of-the-human) then in-the-human-
+# damo-shall-be-shed
 m.handler("shofekh(dam_ha_adam)",
           "ba_adam_damo_yishafekh")
-# ‹כִּי בְּצֶלֶם אֱלֹהִים עָשָׂה אֶת־הָאָדָם› (“that in-the-image-of God He-
-# made obj-marker the-human”) — fact holds: that-in-image-of-God-make-obj-
-# marker·et-the-human
+# ‹כִּי בְּצֶלֶם אֱלֹהִים› (“that in-the-image-of God”)
+# ‹עָשָׂה אֶת־הָאָדָם› (“He-made obj-marker the-human”)
+# — fact holds: that-in-image-of-God-make-obj-marker·et-the-human
 m.fact("ki_be_tzelem_elohim_asah_et_ha_adam")
 # witness-tier presupposed read: complete_criminal_procedure on
 # bloodshed_verse — read, not installed
@@ -154,13 +181,16 @@ m.witness_read("shofekh_dam_u_fru_urvu", "procreation_neglect_grades",
                 cites=["Yevamot 63b:15", "Yevamot 63b:16", "Yevamot 63b:17", "Yevamot 63b:18"])
 
 # -------------------------- Gen.9.7 · THE_FRAME_REDOUBLED ------------------
-# וְאַתֶּם פְּרוּ וּרְבוּ שִׁרְצוּ בָאָרֶץ וּרְבוּ־בָהּ
+# ‹וְאַתֶּם פְּרוּ וּרְבוּ› (“and-you be-fruitful and-multiply”)
+# ‹שִׁרְצוּ בָאָרֶץ וּרְבוּ־בָהּ› (“swarm in-the-earth and-multiply in-
+# her/its”)
 # "And you, be ye fruitful, and multiply; swarm in the earth, and multiply
 # therein.'"
 m.step("Gen.9.7")
-# ‹וְאַתֶּם פְּרוּ וּרְבוּ שִׁרְצוּ בָאָרֶץ וּרְבוּ־בָהּ› (“and-you be-
-# fruitful and-multiply swarm in-the-earth and-multiply in-her/its”) — fact
-# holds: and-you-be-fruitful-and-multiply-swarm-and-earth
+# ‹וְאַתֶּם פְּרוּ וּרְבוּ› (“and-you be-fruitful and-multiply”)
+# ‹שִׁרְצוּ בָאָרֶץ וּרְבוּ־בָהּ› (“swarm in-the-earth and-multiply in-
+# her/its”)
+# — fact holds: and-you-be-fruitful-and-multiply-swarm-and-earth
 m.fact("ve_atem_peru_u_revu_shirtzu_va_aretz")
 # witness-grounded state (its own tier): blessing_or_prohibition on
 # swarm_and_multiply

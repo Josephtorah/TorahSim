@@ -12,6 +12,17 @@ The five motions, in order:
  (5) the graded matrix printed with per-cell provenance and fractions.
 Zero-report law: every claimed ink token is probed before anything runs.
 """
+# ---- THE HONEST-PAIRING GUARD (sitting C retrofit, 2026-09-05) ------------
+# Every expected value this runner grades against must be a LITERAL typed from
+# the answer sheet; the parser checks the source before anything runs, and the
+# count below is the tripwire — it fails loudly the day the table changes.
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
+_P = _os.path.abspath(__file__)
+GUARDED = _chp(_P, 'CASES', 2)
+assert GUARDED == 27, ('the guard counted %d expectations, the tripwire holds 27' % GUARDED)
+print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys, os
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
@@ -420,81 +431,84 @@ CASES = [
 ]
 
 # ---- motion 3+5: run and grade --------------------------------------
-ok = 0
-frac = {'INK': 0, 'MOVE': 0, 'DATA': 0}
-print()
-for label, fn, want in CASES:
-    got, prov = fn()
-    hit = got == want
-    ok += hit
-    kinds = [k for k, _ in prov]
-    cls = 'INK' if all(k == 'INK' for k in kinds) else \
-          ('DATA' if 'DATA' in kinds and got.startswith('DISPUTE') else
-           ('MOVE' if 'MOVE' in kinds else 'DATA'))
-    frac[cls] += 1
-    print('%s  [%s]  %s' % ('PASS' if hit else 'MISS', cls, label))
-    if not hit:
-        print('      expected: %s' % want)
-        print('      got     : %s' % got)
-print()
-print('MATRIX: %d/%d cells match the answer sheet' % (ok, len(CASES)))
-tot = len(CASES)
-print('FRACTIONS: pure ink %d/%d (%.0f%%) · named moves %d/%d (%.0f%%) '
-      '· data/dispute %d/%d (%.0f%%)' %
-      (frac['INK'], tot, 100.0*frac['INK']/tot,
-       frac['MOVE'], tot, 100.0*frac['MOVE']/tot,
-       frac['DATA'], tot, 100.0*frac['DATA']/tot))
-if ok == len(CASES):
-    print('LEVITICUS 5 COMPILES — the deliverable rule\'s first function '
-          'set is live.')
+# Guarded so graded_offering() IMPORTS COLD — cold_run_minchah.py CALLS it for the
+# sinner's meal offering's adjuncts (sitting B, 2026-09-05; the first-call standard).
+if __name__ == '__main__':
+    ok = 0
+    frac = {'INK': 0, 'MOVE': 0, 'DATA': 0}
+    print()
+    for label, fn, want in CASES:
+        got, prov = fn()
+        hit = got == want
+        ok += hit
+        kinds = [k for k, _ in prov]
+        cls = 'INK' if all(k == 'INK' for k in kinds) else \
+              ('DATA' if 'DATA' in kinds and got.startswith('DISPUTE') else
+               ('MOVE' if 'MOVE' in kinds else 'DATA'))
+        frac[cls] += 1
+        print('%s  [%s]  %s' % ('PASS' if hit else 'MISS', cls, label))
+        if not hit:
+            print('      expected: %s' % want)
+            print('      got     : %s' % got)
+    print()
+    print('MATRIX: %d/%d cells match the answer sheet' % (ok, len(CASES)))
+    tot = len(CASES)
+    print('FRACTIONS: pure ink %d/%d (%.0f%%) · named moves %d/%d (%.0f%%) '
+          '· data/dispute %d/%d (%.0f%%)' %
+          (frac['INK'], tot, 100.0*frac['INK']/tot,
+           frac['MOVE'], tot, 100.0*frac['MOVE']/tot,
+           frac['DATA'], tot, 100.0*frac['DATA']/tot))
+    if ok == len(CASES):
+        print('LEVITICUS 5 COMPILES — the deliverable rule\'s first function '
+              'set is live.')
 
-# ---- EFFECTS (retrofit 2026-09-03, under the effects law) -----------
-# The verdict writes the LEDGER, never the event stream. Leviticus 5's
-# routes end on HEAVEN'S DOCKET: the offering brought, the priest
-# atones, and the ink itself closes the entry — ונסלח לו ("and he shall
-# be forgiven", nine sites in Lev 4-5). Mapping is by the verdict
-# string the function actually emitted; disputes fork (both arms'
-# effects, labeled, per method law 3).
-import effects_layer as FX
+    # ---- EFFECTS (retrofit 2026-09-03, under the effects law) -----------
+    # The verdict writes the LEDGER, never the event stream. Leviticus 5's
+    # routes end on HEAVEN'S DOCKET: the offering brought, the priest
+    # atones, and the ink itself closes the entry — ונסלח לו ("and he shall
+    # be forgiven", nine sites in Lev 4-5). Mapping is by the verdict
+    # string the function actually emitted; disputes fork (both arms'
+    # effects, labeled, per method law 3).
+    import effects_layer as FX
 
-def effect_of(verdict):
-    v = verdict
-    if v.startswith('DISPUTE: liable (R. Akiva)'):
-        return ['atoned_forgiven', 'exempt']   # the fork's two arms
-    if v.startswith('DISPUTE: the day-of-guilt'):
-        # the dispute is the valuation DATUM; the effects stand
-        return ['restores', 'adds_fifth', 'atoned_forgiven']
-    if v == 'exempt':
-        return ['exempt']
-    if v in ('no offering', 'no offering yet', 'no offering (deliberate)',
-             'vain oath — outside the offering'):
-        return [FX.NONE]                        # pending, or routed outside
-    if v == 'principal only':
-        return ['restores']
-    fx = []
-    if 'return the object itself' in v:
-        fx.append('restores')
-    if 'pay its value' in v or 'principal' in v:
-        fx.append('pays' if 'pay its value' in v else 'restores')
-    if 'fifth' in v:
-        fx.append('adds_fifth')
-    # any route that ends at an offering closes on Heaven's docket
-    if any(w in v for w in ('chatat', 'birds', 'ephah', 'ram', 'olah')):
-        fx.append('atoned_forgiven')
-    return fx or [FX.NONE]
+    def effect_of(verdict):
+        v = verdict
+        if v.startswith('DISPUTE: liable (R. Akiva)'):
+            return ['atoned_forgiven', 'exempt']   # the fork's two arms
+        if v.startswith('DISPUTE: the day-of-guilt'):
+            # the dispute is the valuation DATUM; the effects stand
+            return ['restores', 'adds_fifth', 'atoned_forgiven']
+        if v == 'exempt':
+            return ['exempt']
+        if v in ('no offering', 'no offering yet', 'no offering (deliberate)',
+                 'vain oath — outside the offering'):
+            return [FX.NONE]                        # pending, or routed outside
+        if v == 'principal only':
+            return ['restores']
+        fx = []
+        if 'return the object itself' in v:
+            fx.append('restores')
+        if 'pay its value' in v or 'principal' in v:
+            fx.append('pays' if 'pay its value' in v else 'restores')
+        if 'fifth' in v:
+            fx.append('adds_fifth')
+        # any route that ends at an offering closes on Heaven's docket
+        if any(w in v for w in ('chatat', 'birds', 'ephah', 'ram', 'olah')):
+            fx.append('atoned_forgiven')
+        return fx or [FX.NONE]
 
-print()
-print('EFFECTS — the state changes each verdict writes:')
-used = []
-for label, fn, want in CASES:
-    got, _ = fn()
-    fx = effect_of(got)
-    used += fx
-    tag = '  [DISPUTE FORK — both arms, labeled]' if got.startswith('DISPUTE') else ''
-    for line in FX.render(fx):
-        print('  %-44s ->%s%s' % (label[:44], line, tag))
-ops = FX.summarize(used)
-print('LEDGER OPS this run writes:',
-      ', '.join('%s x%d' % (op, cnt) for op, cnt in sorted(ops.items())))
-print('effects: all %d cases carry a REGISTERED effect or an honest '
-      'no-change [effects law satisfied]' % len(CASES))
+    print()
+    print('EFFECTS — the state changes each verdict writes:')
+    used = []
+    for label, fn, want in CASES:
+        got, _ = fn()
+        fx = effect_of(got)
+        used += fx
+        tag = '  [DISPUTE FORK — both arms, labeled]' if got.startswith('DISPUTE') else ''
+        for line in FX.render(fx):
+            print('  %-44s ->%s%s' % (label[:44], line, tag))
+    ops = FX.summarize(used)
+    print('LEDGER OPS this run writes:',
+          ', '.join('%s x%d' % (op, cnt) for op, cnt in sorted(ops.items())))
+    print('effects: all %d cases carry a REGISTERED effect or an honest '
+          'no-change [effects law satisfied]' % len(CASES))

@@ -31,7 +31,11 @@ for book, ch, vs in verses:
     if total % 2000 == 0:
         print("... %d/%d (ok %d)" % (total, len(verses), ok), flush=True)
 
-out = "<scratch>/tanakh_parse_sweep_result.json"
+import os
+# the result is a disposable measurement: written to the CURRENT session's scratchpad
+# (or the cwd) — the earlier hardcoded scratchpad path belonged to a session long
+# gone and would have failed silently (sitting C of the audit, 2026-09-05)
+out = os.environ.get("SWEEP_OUT", os.path.join(os.getcwd(), "tanakh_parse_sweep_result.json"))
 json.dump({"rules_version": version, "total": total, "ok": ok,
            "by_book": by_book, "first_fails": fails}, open(out, "w"), indent=1)
 print("RESULT: %d/%d unique+leaf_complete under rules %s" % (ok, total, version))

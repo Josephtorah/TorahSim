@@ -14,16 +14,18 @@ from machine import Machine
 m = Machine("gen_51_opened_womb_twelve_names")
 
 # -------------------------- Gen.29.31 · THE_SEEING_AND_THE_TWO_WOMBS -------
-# וַיַּרְא יְהוָה כִּי־שְׂנוּאָה לֵאָה וַיִּפְתַּח אֶת־רַחְמָהּ וְרָחֵל
-# עֲקָרָה
+# ‹וַיַּרְא יְהוָה כִּי־שְׂנוּאָה› (“and-see YHWH that hate”)
+# ‹לֵאָה וַיִּפְתַּח אֶת־רַחְמָהּ› (“Leah and-open-wide obj-marker womb-
+# her/its”)
+# ‹וְרָחֵל עֲקָרָה› (“and-Rachel sterile”)
 # "[EN-AID] And YHWH saw that Leah was hated, and He opened her womb; and
 # Rachel was barren."
 m.step("Gen.29.31")
-# ‹וַיִּפְתַּח אֶת־רַחְמָהּ› (“and-open-wide obj-marker womb-her/its”) —
-# event: patach — agent the-LORD; theme rechem-leah
+# ‹וַיִּפְתַּח אֶת־רַחְמָהּ› (“and-open-wide obj-marker womb-her/its”)
+# — event: patach — agent the-LORD; theme rechem-leah
 m.event("patach", agent="YHWH", themes=["rechem_leah"])
-# ‹וְרָחֵל עֲקָרָה› (“and-Rachel sterile”) — fact holds: hate(leah);
-# sterile(Rachel)
+# ‹וְרָחֵל עֲקָרָה› (“and-Rachel sterile”)
+# — fact holds: hate(leah); sterile(Rachel)
 m.fact("senua(leah)",
        "aqara(rachel)")
 # witness-tier presupposed read:
@@ -33,59 +35,78 @@ m.witness_read("the_opened_womb", "rendered_as_petition_and_acceptance_throughou
                 cites=["Onkelos Genesis 30:22", "Onkelos Genesis 30:6", "Onkelos Genesis 29:31"])
 
 # -------------------------- Gen.29.32 · THE_FIRST_WRITE_REUVEN -------------
-# וַתַּהַר לֵאָה וַתֵּלֶד בֵּן וַתִּקְרָא שְׁמוֹ רְאוּבֵן כִּי אָמְרָה
-# כִּי־רָאָה יְהוָה בְּעָנְיִי כִּי עַתָּה יֶאֱהָבַנִי אִישִׁי
+# ‹וַתַּהַר לֵאָה וַתֵּלֶד› (“and-be-pregnant Leah and-bear-young”)
+# ‹בֵּן וַתִּקְרָא שְׁמוֹ› (“son and-call name-him/its”)
+# ‹רְאוּבֵן כִּי אָמְרָה› (“Reuben that say”)
+# ‹כִּי־רָאָה יְהוָה בְּעָנְיִי› (“that see YHWH in-affliction-me/my”)
+# ‹כִּי עַתָּה יֶאֱהָבַנִי› (“that now have-affection-for-me/my”)
+# ‹אִישִׁי› (“man-me/my”)
 # "[EN-AID] And Leah conceived and bore a son, and she called his name
 # Reuben, for she said: Because YHWH has seen my affliction; for now my
 # husband will love me."
 m.step("Gen.29.32")
-# ‹וַתַּהַר לֵאָה וַתֵּלֶד בֵּן› (“and-be-pregnant Leah and-bear-young son”)
+# ‹וַתַּהַר לֵאָה וַתֵּלֶד› (“and-be-pregnant Leah and-bear-young”)
+# ‹בֵּן› (“son”)
 # — the world gains: son-1-leah
 m.install("ben_1_leah")
-# ‹וַתִּקְרָא שְׁמוֹ רְאוּבֵן› (“and-call name-him/its Reuben”) — named:
-# son-1-leah := Reuben
+# ‹וַתִּקְרָא שְׁמוֹ רְאוּבֵן› (“and-call name-him/its Reuben”)
+# — named: son-1-leah := Reuben
 m.name("ben_1_leah", "reuven")
 
 # -------------------------- Gen.29.33 · THE_SECOND_WRITE_SHIMON ------------
-# וַתַּהַר עוֹד וַתֵּלֶד בֵּן וַתֹּאמֶר כִּי־שָׁמַע יְהוָה כִּי־שְׂנוּאָה
-# אָנֹכִי וַיִּתֶּן־לִי גַּם־אֶת־זֶה וַתִּקְרָא שְׁמוֹ שִׁמְעוֹן
+# ‹וַתַּהַר עוֹד וַתֵּלֶד› (“and-be-pregnant still/again and-bear-young”)
+# ‹בֵּן וַתֹּאמֶר כִּי־שָׁמַע› (“son and-say that hear”)
+# ‹יְהוָה כִּי־שְׂנוּאָה אָנֹכִי› (“YHWH that hate”)
+# ‹וַיִּתֶּן־לִי גַּם־אֶת־זֶה וַתִּקְרָא› (“and-set to-me/my also obj-marker
+# this and-call”)
+# ‹שְׁמוֹ שִׁמְעוֹן› (“name-him/its Simeon”)
 # "[EN-AID] And she conceived again and bore a son, and said: Because YHWH
 # has heard that I am hated, He has given me this one also; and she called
 # his name Simeon."
 m.step("Gen.29.33")
-# ‹וַתַּהַר עוֹד וַתֵּלֶד בֵּן› (“and-be-pregnant still/again and-bear-young
-# son”) — the world gains: son-2-leah
+# ‹וַתַּהַר עוֹד וַתֵּלֶד› (“and-be-pregnant still/again and-bear-young”)
+# ‹בֵּן› (“son”)
+# — the world gains: son-2-leah
 m.install("ben_2_leah")
-# ‹וַתִּקְרָא שְׁמוֹ שִׁמְעוֹן› (“and-call name-him/its Simeon”) — named:
-# son-2-leah := Simeon
+# ‹וַתִּקְרָא שְׁמוֹ שִׁמְעוֹן› (“and-call name-him/its Simeon”)
+# — named: son-2-leah := Simeon
 m.name("ben_2_leah", "shimon")
 
 # -------------------------- Gen.29.34 · THE_THIRD_WRITE_LEVI ---------------
-# וַתַּהַר עוֹד וַתֵּלֶד בֵּן וַתֹּאמֶר עַתָּה הַפַּעַם יִלָּוֶה אִישִׁי
-# אֵלַי כִּי־יָלַדְתִּי לוֹ שְׁלֹשָׁה בָנִים עַל־כֵּן קָרָא־שְׁמוֹ לֵוִי
+# ‹וַתַּהַר עוֹד וַתֵּלֶד› (“and-be-pregnant still/again and-bear-young”)
+# ‹בֵּן וַתֹּאמֶר עַתָּה› (“son and-say now”)
+# ‹הַפַּעַם יִלָּוֶה אִישִׁי› (“the-stroke twine man-me/my”)
+# ‹אֵלַי כִּי־יָלַדְתִּי לוֹ› (“to-me/my that bear-young to-him/its”)
+# ‹שְׁלֹשָׁה בָנִים עַל־כֵּן› (“three son over so”)
+# ‹קָרָא־שְׁמוֹ לֵוִי› (“call name-him/its Levi”)
 # "[EN-AID] And she conceived again and bore a son, and said: Now this time
 # my husband will be joined to me, for I have borne him three sons;
 # therefore he called his name Levi."
 m.step("Gen.29.34")
-# ‹וַתַּהַר עוֹד וַתֵּלֶד בֵּן› (“and-be-pregnant still/again and-bear-young
-# son”) — the world gains: son-3-leah
+# ‹וַתַּהַר עוֹד וַתֵּלֶד› (“and-be-pregnant still/again and-bear-young”)
+# ‹בֵּן› (“son”)
+# — the world gains: son-3-leah
 m.install("ben_3_leah")
-# ‹קָרָא־שְׁמוֹ לֵוִי› (“call name-him/its Levi”) — named: son-3-leah :=
-# Levi
+# ‹קָרָא־שְׁמוֹ לֵוִי› (“call name-him/its Levi”)
+# — named: son-3-leah := Levi
 m.name("ben_3_leah", "levi")
 
 # -------------------------- Gen.29.35 · THE_FOURTH_WRITE_YEHUDA ------------
-# וַתַּהַר עוֹד וַתֵּלֶד בֵּן וַתֹּאמֶר הַפַּעַם אוֹדֶה אֶת־יְהוָה עַל־כֵּן
-# קָרְאָה שְׁמוֹ יְהוּדָה וַתַּעֲמֹד מִלֶּדֶת
+# ‹וַתַּהַר עוֹד וַתֵּלֶד› (“and-be-pregnant still/again and-bear-young”)
+# ‹בֵּן וַתֹּאמֶר הַפַּעַם› (“son and-say the-stroke”)
+# ‹אוֹדֶה אֶת־יְהוָה עַל־כֵּן› (“physically obj-marker YHWH over so”)
+# ‹קָרְאָה שְׁמוֹ יְהוּדָה› (“call name-him/its Judah”)
+# ‹וַתַּעֲמֹד מִלֶּדֶת› (“and-stand from-bear-young”)
 # "[EN-AID] And she conceived again and bore a son, and said: This time I
 # will praise YHWH; therefore she called his name Judah. And she ceased
 # bearing."
 m.step("Gen.29.35")
-# ‹וַתַּהַר עוֹד וַתֵּלֶד בֵּן› (“and-be-pregnant still/again and-bear-young
-# son”) — the world gains: son-4-leah
+# ‹וַתַּהַר עוֹד וַתֵּלֶד› (“and-be-pregnant still/again and-bear-young”)
+# ‹בֵּן› (“son”)
+# — the world gains: son-4-leah
 m.install("ben_4_leah")
-# ‹קָרְאָה שְׁמוֹ יְהוּדָה› (“call name-him/its Judah”) — named: son-4-leah
-# := Judah
+# ‹קָרְאָה שְׁמוֹ יְהוּדָה› (“call name-him/its Judah”)
+# — named: son-4-leah := Judah
 m.name("ben_4_leah", "yehuda")
 # witness-tier presupposed read: gratitude_begins_where_entitlement_ends on
 # thanks_at_the_fourth — read, not installed
@@ -98,14 +119,19 @@ m.witness_read("the_twelve_names", "entered_under_a_four_cell_name_conduct_table
                 cites=["Bereshit Rabbah 71:3"])
 
 # -------------------------- Gen.30.1 · THE_CHILDREN_DEMAND -----------------
-# וַתֵּרֶא רָחֵל כִּי לֹא יָלְדָה לְיַעֲקֹב וַתְּקַנֵּא רָחֵל בַּאֲחֹתָהּ
-# וַתֹּאמֶר אֶל־יַעֲקֹב הָבָה־לִּי בָנִים וְאִם־אַיִן מֵתָה אָנֹכִי
+# ‹וַתֵּרֶא רָחֵל כִּי› (“and-see Rachel that”)
+# ‹לֹא יָלְדָה לְיַעֲקֹב› (“not bear-young to-Jacob”)
+# ‹וַתְּקַנֵּא רָחֵל בַּאֲחֹתָהּ› (“and-be-zealous Rachel in-sister-
+# her/its”)
+# ‹וַתֹּאמֶר אֶל־יַעֲקֹב הָבָה־לִּי› (“and-say to Jacob give-ward to-me/my”)
+# ‹בָנִים וְאִם־אַיִן מֵתָה› (“son and-if there-is-not die”)
+# ‹אָנֹכִי› (“?”)
 # "[EN-AID] And Rachel saw that she bore Jacob no children, and Rachel
 # envied her sister; and she said to Jacob: Give me children, and if not, I
 # die."
 m.step("Gen.30.1")
-# ‹הָבָה־לִּי בָנִים› (“give-ward to-me/my son”) — Rachel speaks a demand —
-# LET: hava-banim(Jacob)
+# ‹הָבָה־לִּי בָנִים› (“give-ward to-me/my son”)
+# — Rachel speaks a demand — LET: hava-banim(Jacob)
 m.declare("rachel", "LET",
           "hava_banim(yaaqov)")
 # witness-tier presupposed read: proof_verse_for_the_living_as_dead_census
@@ -114,14 +140,17 @@ m.witness_read("give_me_children_or_i_die", "proof_verse_for_the_living_as_dead_
                 cites=["Bereshit Rabbah 71:6", "Bereshit Rabbah 45:2"])
 
 # -------------------------- Gen.30.2 · THE_REDIRECT_TO_ELOHIM --------------
-# וַיִּחַר־אַף יַעֲקֹב בְּרָחֵל וַיֹּאמֶר הֲתַחַת אֱלֹהִים אָנֹכִי
-# אֲשֶׁר־מָנַע מִמֵּךְ פְּרִי־בָטֶן
+# ‹וַיִּחַר־אַף יַעֲקֹב בְּרָחֵל› (“and-glow nose Jacob in-Rachel”)
+# ‹וַיֹּאמֶר הֲתַחַת אֱלֹהִים› (“and-say the-under God”)
+# ‹אָנֹכִי אֲשֶׁר־מָנַע מִמֵּךְ› (“which debar-from-benefit from-you/your”)
+# ‹פְּרִי־בָטֶן› (“fruit belly”)
 # "[EN-AID] And Jacob's anger burned against Rachel, and he said: Am I in
 # the place of God, who has withheld from you the fruit of the womb?"
 m.step("Gen.30.2")
-# ‹הֲתַחַת אֱלֹהִים אָנֹכִי אֲשֶׁר־מָנַע מִמֵּךְ פְּרִי־בָטֶן› (“the-under
-# God which debar-from-benefit from-you/your fruit belly”) — fact holds:
-# debar-from-benefit-God-fruit-belly(Rachel)
+# ‹הֲתַחַת אֱלֹהִים אָנֹכִי› (“the-under God”)
+# ‹אֲשֶׁר־מָנַע מִמֵּךְ פְּרִי־בָטֶן› (“which debar-from-benefit from-
+# you/your fruit belly”)
+# — fact holds: debar-from-benefit-God-fruit-belly(Rachel)
 m.fact("mana_Elohim_peri_vaten(rachel)")
 # witness-tier presupposed read:
 # criticized_here_and_rewritten_by_the_translation on am_i_in_place_of_God —
@@ -130,60 +159,77 @@ m.witness_read("am_i_in_place_of_God", "criticized_here_and_rewritten_by_the_tra
                 cites=["Bereshit Rabbah 71:7", "Onkelos Genesis 30:2"])
 
 # -------------------------- Gen.30.3 · THE_SARAI_SCRIPT_RERUN --------------
-# וַתֹּאמֶר הִנֵּה אֲמָתִי בִלְהָה בֹּא אֵלֶיהָ וְתֵלֵד עַל־בִּרְכַּי
-# וְאִבָּנֶה גַם־אָנֹכִי מִמֶּנָּה
+# ‹וַתֹּאמֶר הִנֵּה אֲמָתִי› (“and-say behold maidservant-me/my”)
+# ‹בִלְהָה בֹּא אֵלֶיהָ› (“Bilhah come/bring to-her/its”)
+# ‹וְתֵלֵד עַל־בִּרְכַּי וְאִבָּנֶה› (“and-bear-young over knee-me/my and-
+# build”)
+# ‹גַם־אָנֹכִי מִמֶּנָּה› (“also from-her/its”)
 # "[EN-AID] And she said: Behold my maid Bilhah; go in to her, that she may
 # bear upon my knees, and I too may be built from her."
 m.step("Gen.30.3")
-# ‹בֹּא אֵלֶיהָ› (“come/bring to-her/its”) — Rachel speaks a demand — LET:
-# come/bring-to-bilhah(Jacob)
+# ‹בֹּא אֵלֶיהָ› (“come/bring to-her/its”)
+# — Rachel speaks a demand — LET: come/bring-to-bilhah(Jacob)
 m.declare("rachel", "LET",
           "bo_el_bilhah(yaaqov)")
 
 # -------------------------- Gen.30.4 · THE_ROUTE_PERFORMED -----------------
-# וַתִּתֶּן־לוֹ אֶת־בִּלְהָה שִׁפְחָתָהּ לְאִשָּׁה וַיָּבֹא אֵלֶיהָ יַעֲקֹב
+# ‹וַתִּתֶּן־לוֹ אֶת־בִּלְהָה שִׁפְחָתָהּ› (“and-set to-him/its obj-marker
+# Bilhah female-slave-her/its”)
+# ‹לְאִשָּׁה וַיָּבֹא אֵלֶיהָ› (“to-woman and-come/bring to-her/its”)
+# ‹יַעֲקֹב› (“Jacob”)
 # "[EN-AID] And she gave him Bilhah her maid as a wife; and Jacob went in to
 # her."
 m.step("Gen.30.4")
-# ‹וַיָּבֹא אֵלֶיהָ יַעֲקֹב› (“and-come/bring to-her/its Jacob”) — demand
-# settled (popped from the queue): come/bring-to-bilhah(Jacob)
+# ‹וַיָּבֹא אֵלֶיהָ יַעֲקֹב› (“and-come/bring to-her/its Jacob”)
+# — demand settled (popped from the queue): come/bring-to-bilhah(Jacob)
 m.result("bo_el_bilhah(yaaqov)", tmark="t2")
 
 # -------------------------- Gen.30.5 · BILHAH_BEARS_A_SON ------------------
-# וַתַּהַר בִּלְהָה וַתֵּלֶד לְיַעֲקֹב בֵּן
+# ‹וַתַּהַר בִּלְהָה וַתֵּלֶד› (“and-be-pregnant Bilhah and-bear-young”)
+# ‹לְיַעֲקֹב בֵּן› (“to-Jacob son”)
 # "[EN-AID] And Bilhah conceived, and bore Jacob a son."
 m.step("Gen.30.5")
-# ‹וַתַּהַר בִּלְהָה וַתֵּלֶד לְיַעֲקֹב בֵּן› (“and-be-pregnant Bilhah and-
-# bear-young to-Jacob son”) — the world gains: son-1-bilhah
+# ‹וַתַּהַר בִּלְהָה וַתֵּלֶד› (“and-be-pregnant Bilhah and-bear-young”)
+# ‹לְיַעֲקֹב בֵּן› (“to-Jacob son”)
+# — the world gains: son-1-bilhah
 m.install("ben_1_bilhah")
 
 # -------------------------- Gen.30.6 · THE_FIFTH_WRITE_DAN -----------------
-# וַתֹּאמֶר רָחֵל דָּנַנִּי אֱלֹהִים וְגַם שָׁמַע בְּקֹלִי וַיִּתֶּן־לִי
-# בֵּן עַל־כֵּן קָרְאָה שְׁמוֹ דָּן
+# ‹וַתֹּאמֶר רָחֵל דָּנַנִּי› (“and-say Rachel straight-course-me/my”)
+# ‹אֱלֹהִים וְגַם שָׁמַע› (“God and-also hear”)
+# ‹בְּקֹלִי וַיִּתֶּן־לִי בֵּן› (“in-voice/sound-me/my and-set to-me/my
+# son”)
+# ‹עַל־כֵּן קָרְאָה שְׁמוֹ› (“over so call name-him/its”)
+# ‹דָּן› (“Daniel”)
 # "[EN-AID] And Rachel said: God has judged me, and has also heard my voice,
 # and has given me a son; therefore she called his name Dan."
 m.step("Gen.30.6")
-# ‹קָרְאָה שְׁמוֹ דָּן› (“call name-him/its Daniel”) — named: son-1-bilhah
-# := Daniel
+# ‹קָרְאָה שְׁמוֹ דָּן› (“call name-him/its Daniel”)
+# — named: son-1-bilhah := Daniel
 m.name("ben_1_bilhah", "dan")
 
 # -------------------------- Gen.30.7 · BILHAH_BEARS_A_SECOND ---------------
-# וַתַּהַר עוֹד וַתֵּלֶד בִּלְהָה שִׁפְחַת רָחֵל בֵּן שֵׁנִי לְיַעֲקֹב
+# ‹וַתַּהַר עוֹד וַתֵּלֶד› (“and-be-pregnant still/again and-bear-young”)
+# ‹בִּלְהָה שִׁפְחַת רָחֵל› (“Bilhah female-slave Rachel”)
+# ‹בֵּן שֵׁנִי לְיַעֲקֹב› (“son second to-Jacob”)
 # "[EN-AID] And Bilhah, Rachel's maid, conceived again, and bore Jacob a
 # second son."
 m.step("Gen.30.7")
-# ‹וַתַּהַר עוֹד וַתֵּלֶד בִּלְהָה› (“and-be-pregnant still/again and-bear-
-# young Bilhah”) — the world gains: son-2-bilhah
+# ‹וַתַּהַר עוֹד וַתֵּלֶד› (“and-be-pregnant still/again and-bear-young”)
+# ‹בִּלְהָה› (“Bilhah”)
+# — the world gains: son-2-bilhah
 m.install("ben_2_bilhah")
 
 # -------------------------- Gen.30.8 · THE_SIXTH_WRITE_NAFTALI -------------
-# וַתֹּאמֶר רָחֵל נַפְתּוּלֵי אֱלֹהִים נִפְתַּלְתִּי עִם־אֲחֹתִי
-# גַּם־יָכֹלְתִּי וַתִּקְרָא שְׁמוֹ נַפְתָּלִי
+# ‹וַתֹּאמֶר רָחֵל נַפְתּוּלֵי› (“and-say Rachel wrestled”)
+# ‹אֱלֹהִים נִפְתַּלְתִּי עִם־אֲחֹתִי› (“God twine with sister-me/my”)
+# ‹גַּם־יָכֹלְתִּי וַתִּקְרָא שְׁמוֹ› (“also be-able and-call name-him/its”)
+# ‹נַפְתָּלִי› (“Naphtali”)
 # "[EN-AID] And Rachel said: Wrestlings of God I have wrestled with my
 # sister; indeed I have prevailed. And she called his name Naphtali."
 m.step("Gen.30.8")
-# ‹וַתִּקְרָא שְׁמוֹ נַפְתָּלִי› (“and-call name-him/its Naphtali”) — named:
-# son-2-bilhah := Naphtali
+# ‹וַתִּקְרָא שְׁמוֹ נַפְתָּלִי› (“and-call name-him/its Naphtali”)
+# — named: son-2-bilhah := Naphtali
 m.name("ben_2_bilhah", "naftali")
 # witness-tier presupposed read: rebuilt_entirely_as_petition on
 # the_wrestling_name — read, not installed
@@ -191,22 +237,29 @@ m.witness_read("the_wrestling_name", "rebuilt_entirely_as_petition",
                 cites=["Onkelos Genesis 30:8", "Bereshit Rabbah 71:8"])
 
 # -------------------------- Gen.30.9 · THE_ZILPAH_MOVE ---------------------
-# וַתֵּרֶא לֵאָה כִּי עָמְדָה מִלֶּדֶת וַתִּקַּח אֶת־זִלְפָּה שִׁפְחָתָהּ
-# וַתִּתֵּן אֹתָהּ לְיַעֲקֹב לְאִשָּׁה
+# ‹וַתֵּרֶא לֵאָה כִּי› (“and-see Leah that”)
+# ‹עָמְדָה מִלֶּדֶת וַתִּקַּח› (“stand from-bear-young and-take”)
+# ‹אֶת־זִלְפָּה שִׁפְחָתָהּ וַתִּתֵּן› (“obj-marker Zilpah female-slave-
+# her/its and-set”)
+# ‹אֹתָהּ לְיַעֲקֹב לְאִשָּׁה› (“obj-marker-her/its to-Jacob to-woman”)
 # "[EN-AID] And Leah saw that she had ceased bearing; and she took Zilpah
 # her maid, and gave her to Jacob as a wife."
 m.step("Gen.30.9")
-# ‹וַתִּקַּח אֶת־זִלְפָּה שִׁפְחָתָהּ וַתִּתֵּן אֹתָהּ לְיַעֲקֹב לְאִשָּׁה›
-# (“and-take obj-marker Zilpah female-slave-her/its and-set obj-marker-
-# her/its to-Jacob to-woman”) — fact holds: zilpah-given-to-Jacob(leah)
+# ‹וַתִּקַּח אֶת־זִלְפָּה שִׁפְחָתָהּ› (“and-take obj-marker Zilpah female-
+# slave-her/its”)
+# ‹וַתִּתֵּן אֹתָהּ לְיַעֲקֹב› (“and-set obj-marker-her/its to-Jacob”)
+# ‹לְאִשָּׁה› (“to-woman”)
+# — fact holds: zilpah-given-to-Jacob(leah)
 m.fact("zilpah_given_le_yaaqov(leah)")
 
 # -------------------------- Gen.30.10 · ZILPAH_BEARS_A_SON -----------------
-# וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה לְיַעֲקֹב בֵּן
+# ‹וַתֵּלֶד זִלְפָּה שִׁפְחַת› (“and-bear-young Zilpah female-slave”)
+# ‹לֵאָה לְיַעֲקֹב בֵּן› (“Leah to-Jacob son”)
 # "[EN-AID] And Zilpah, Leah's maid, bore Jacob a son."
 m.step("Gen.30.10")
-# ‹וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה לְיַעֲקֹב בֵּן› (“and-bear-young Zilpah
-# female-slave Leah to-Jacob son”) — the world gains: son-1-zilpah
+# ‹וַתֵּלֶד זִלְפָּה שִׁפְחַת› (“and-bear-young Zilpah female-slave”)
+# ‹לֵאָה לְיַעֲקֹב בֵּן› (“Leah to-Jacob son”)
+# — the world gains: son-1-zilpah
 m.install("ben_1_zilpah")
 # witness-tier presupposed read: the_omission_is_complete_and_exact on
 # bore_without_conceived — read, not installed
@@ -214,11 +267,13 @@ m.witness_read("bore_without_conceived", "the_omission_is_complete_and_exact",
                 cites=["Bereshit Rabbah 71:9"])
 
 # -------------------------- Gen.30.11 · THE_SEVENTH_WRITE_GAD_WRITTEN_AND_READ -
-# וַתֹּאמֶר לֵאָה בגד בָּא גָד וַתִּקְרָא אֶת־שְׁמוֹ גָּד
+# ‹וַתֹּאמֶר לֵאָה בגד› (“and-say Leah in-fortune”)
+# ‹בָּא גָד וַתִּקְרָא› (“come/bring fortune and-call”)
+# ‹אֶת־שְׁמוֹ גָּד› (“obj-marker name-him/its Gad”)
 # "[EN-AID] And Leah said: Fortune has come! And she called his name Gad."
 m.step("Gen.30.11")
-# ‹וַתִּקְרָא אֶת־שְׁמוֹ גָּד› (“and-call obj-marker name-him/its Gad”) —
-# named: son-1-zilpah := fortune
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ גָּד› (“and-call obj-marker name-him/its Gad”)
+# — named: son-1-zilpah := fortune
 m.name("ben_1_zilpah", "gad")
 # witness-grounded state (its own tier):
 # resolved_in_the_record_by_its_own_subject on the_lineage_dispute
@@ -226,17 +281,21 @@ m.witness_state("the_lineage_dispute", "resolved_in_the_record_by_its_own_subjec
                 cites=["Bereshit Rabbah 71:9"])
 
 # -------------------------- Gen.30.12 · ZILPAH_BEARS_A_SECOND --------------
-# וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה בֵּן שֵׁנִי לְיַעֲקֹב
+# ‹וַתֵּלֶד זִלְפָּה שִׁפְחַת› (“and-bear-young Zilpah female-slave”)
+# ‹לֵאָה בֵּן שֵׁנִי› (“Leah son second”)
+# ‹לְיַעֲקֹב› (“to-Jacob”)
 # "[EN-AID] And Zilpah, Leah's maid, bore Jacob a second son."
 m.step("Gen.30.12")
-# ‹וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה בֵּן שֵׁנִי לְיַעֲקֹב› (“and-bear-young
-# Zilpah female-slave Leah son second to-Jacob”) — the world gains:
-# son-2-zilpah
+# ‹וַתֵּלֶד זִלְפָּה שִׁפְחַת› (“and-bear-young Zilpah female-slave”)
+# ‹לֵאָה בֵּן שֵׁנִי› (“Leah son second”)
+# ‹לְיַעֲקֹב› (“to-Jacob”)
+# — the world gains: son-2-zilpah
 m.install("ben_2_zilpah")
 
 # -------------------------- Gen.30.13 · THE_EIGHTH_WRITE_ASHER -------------
-# וַתֹּאמֶר לֵאָה בְּאָשְׁרִי כִּי אִשְּׁרוּנִי בָּנוֹת וַתִּקְרָא
-# אֶת־שְׁמוֹ אָשֵׁר
+# ‹וַתֹּאמֶר לֵאָה בְּאָשְׁרִי› (“and-say Leah in-happiness-me/my”)
+# ‹כִּי אִשְּׁרוּנִי בָּנוֹת› (“that be-straight-me/my daughter”)
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ אָשֵׁר› (“and-call obj-marker name-him/its Asher”)
 # "[EN-AID] And Leah said: In my happiness! For the daughters will call me
 # happy. And she called his name Asher."
 m.step("Gen.30.13")
@@ -245,18 +304,24 @@ m.step("Gen.30.13")
 m.name("ben_2_zilpah", "asher")
 
 # -------------------------- Gen.30.14 · THE_MANDRAKE_DEMAND ----------------
-# וַיֵּלֶךְ רְאוּבֵן בִּימֵי קְצִיר־חִטִּים וַיִּמְצָא דוּדָאִים בַּשָּׂדֶה
-# וַיָּבֵא אֹתָם אֶל־לֵאָה אִמּוֹ וַתֹּאמֶר רָחֵל אֶל־לֵאָה תְּנִי־נָא לִי
-# מִדּוּדָאֵי בְּנֵךְ
+# ‹וַיֵּלֶךְ רְאוּבֵן בִּימֵי› (“and-go Reuben in-day”)
+# ‹קְצִיר־חִטִּים וַיִּמְצָא דוּדָאִים› (“severed wheat and-find boiler”)
+# ‹בַּשָּׂדֶה וַיָּבֵא אֹתָם› (“in-field and-come/bring obj-marker-
+# them/their”)
+# ‹אֶל־לֵאָה אִמּוֹ וַתֹּאמֶר› (“to Leah mother-him/its and-say”)
+# ‹רָחֵל אֶל־לֵאָה תְּנִי־נָא› (“Rachel to Leah set please”)
+# ‹לִי מִדּוּדָאֵי בְּנֵךְ› (“to-me/my from-boiler son-you/your”)
 # "[EN-AID] And Reuben went in the days of wheat harvest and found mandrakes
 # in the field, and brought them to Leah his mother. And Rachel said to
 # Leah: Give me, please, of your son's mandrakes."
 m.step("Gen.30.14")
-# ‹וַיֵּלֶךְ רְאוּבֵן בִּימֵי קְצִיר־חִטִּים› (“and-go Reuben in-day severed
-# wheat”) — fact holds: boiler-found-by-Reuben(field)
+# ‹וַיֵּלֶךְ רְאוּבֵן בִּימֵי› (“and-go Reuben in-day”)
+# ‹קְצִיר־חִטִּים› (“severed wheat”)
+# — fact holds: boiler-found-by-Reuben(field)
 m.fact("dudaim_found_by_reuven(sade)")
-# ‹תְּנִי־נָא לִי מִדּוּדָאֵי בְּנֵךְ› (“set please to-me/my from-boiler
-# son-you/your”) — Rachel speaks a demand — LET: set-boiler(leah)
+# ‹תְּנִי־נָא לִי מִדּוּדָאֵי› (“set please to-me/my from-boiler”)
+# ‹בְּנֵךְ› (“son-you/your”)
+# — Rachel speaks a demand — LET: set-boiler(leah)
 m.declare("rachel", "LET",
           "teni_dudaim(leah)")
 # witness-tier presupposed read: dispute_mined_for_its_unanimous_residue on
@@ -265,17 +330,22 @@ m.witness_read("what_the_boy_brought", "dispute_mined_for_its_unanimous_residue"
                 cites=["Bereshit Rabbah 72:2", "Onkelos Genesis 30:14"])
 
 # -------------------------- Gen.30.15 · THE_EXCHANGE_SET -------------------
-# וַתֹּאמֶר לָהּ הַמְעַט קַחְתֵּךְ אֶת־אִישִׁי וְלָקַחַת גַּם אֶת־דּוּדָאֵי
-# בְּנִי וַתֹּאמֶר רָחֵל לָכֵן יִשְׁכַּב עִמָּךְ הַלַּיְלָה תַּחַת דּוּדָאֵי
-# בְנֵךְ
+# ‹וַתֹּאמֶר לָהּ הַמְעַט› (“and-say to-her/its the-little”)
+# ‹קַחְתֵּךְ אֶת־אִישִׁי וְלָקַחַת› (“take-you/your obj-marker man-me/my
+# and-to-take”)
+# ‹גַּם אֶת־דּוּדָאֵי בְּנִי› (“also obj-marker boiler son-me/my”)
+# ‹וַתֹּאמֶר רָחֵל לָכֵן› (“and-say Rachel to-so”)
+# ‹יִשְׁכַּב עִמָּךְ הַלַּיְלָה› (“lie-down with-you/your the-night”)
+# ‹תַּחַת דּוּדָאֵי בְנֵךְ› (“under boiler son-you/your”)
 # "[EN-AID] And she said to her: Is it a small thing that you have taken my
 # husband? And would you take also my son's mandrakes? And Rachel said:
 # Therefore he shall lie with you tonight, in exchange for your son's
 # mandrakes."
 m.step("Gen.30.15")
-# ‹לָכֵן יִשְׁכַּב עִמָּךְ הַלַּיְלָה תַּחַת דּוּדָאֵי בְנֵךְ› (“to-so lie-
-# down with-you/your the-night under boiler son-you/your”) — fact holds:
-# laila-under-boiler(exchange-set)
+# ‹לָכֵן יִשְׁכַּב עִמָּךְ› (“to-so lie-down with-you/your”)
+# ‹הַלַּיְלָה תַּחַת דּוּדָאֵי› (“the-night under boiler”)
+# ‹בְנֵךְ› (“son-you/your”)
+# — fact holds: laila-under-boiler(exchange-set)
 m.fact("laila_tachat_dudaim(exchange_set)")
 # witness-tier presupposed read: priced_on_both_sides_and_into_the_grave on
 # the_traded_night — read, not installed
@@ -283,15 +353,20 @@ m.witness_read("the_traded_night", "priced_on_both_sides_and_into_the_grave",
                 cites=["Bereshit Rabbah 72:3"])
 
 # -------------------------- Gen.30.16 · THE_HIRE_NIGHT ---------------------
-# וַיָּבֹא יַעֲקֹב מִן־הַשָּׂדֶה בָּעֶרֶב וַתֵּצֵא לֵאָה לִקְרָאתוֹ
-# וַתֹּאמֶר אֵלַי תָּבוֹא כִּי שָׂכֹר שְׂכַרְתִּיךָ בְּדוּדָאֵי בְּנִי
-# וַיִּשְׁכַּב עִמָּהּ בַּלַּיְלָה הוּא
+# ‹וַיָּבֹא יַעֲקֹב מִן־הַשָּׂדֶה› (“and-come/bring Jacob from the-field”)
+# ‹בָּעֶרֶב וַתֵּצֵא לֵאָה› (“in-evening and-bring-forth Leah”)
+# ‹לִקְרָאתוֹ וַתֹּאמֶר אֵלַי› (“to-encountering-him/its and-say to-me/my”)
+# ‹תָּבוֹא כִּי שָׂכֹר› (“come/bring that hire”)
+# ‹שְׂכַרְתִּיךָ בְּדוּדָאֵי בְּנִי› (“hire-you/your in-boiler son-me/my”)
+# ‹וַיִּשְׁכַּב עִמָּהּ בַּלַּיְלָה› (“and-lie-down with-her/its in-night”)
+# ‹הוּא› (“he/it”)
 # "[EN-AID] And Jacob came from the field in the evening, and Leah went out
 # to meet him and said: To me you shall come in, for hiring I have hired you
 # with my son's mandrakes. And he lay with her that night."
 m.step("Gen.30.16")
-# ‹שָׂכֹר שְׂכַרְתִּיךָ בְּדוּדָאֵי בְּנִי› (“hire hire-you/your in-boiler
-# son-me/my”) — fact holds: hire-sekharticha(laila)
+# ‹שָׂכֹר שְׂכַרְתִּיךָ בְּדוּדָאֵי› (“hire hire-you/your in-boiler”)
+# ‹בְּנִי› (“son-me/my”)
+# — fact holds: hire-sekharticha(laila)
 m.fact("sakhor_sekharticha(laila)")
 # witness-tier presupposed read: working_hours_defaults_with_their_exception
 # on came_in_from_the_field_at_evening — read, not installed
@@ -299,25 +374,31 @@ m.witness_read("came_in_from_the_field_at_evening", "working_hours_defaults_with
                 cites=["Bereshit Rabbah 72:4"])
 
 # -------------------------- Gen.30.17 · THE_FIFTH_SON_HEARD ----------------
-# וַיִּשְׁמַע אֱלֹהִים אֶל־לֵאָה וַתַּהַר וַתֵּלֶד לְיַעֲקֹב בֵּן חֲמִישִׁי
+# ‹וַיִּשְׁמַע אֱלֹהִים אֶל־לֵאָה› (“and-hear God to Leah”)
+# ‹וַתַּהַר וַתֵּלֶד לְיַעֲקֹב› (“and-be-pregnant and-bear-young to-Jacob”)
+# ‹בֵּן חֲמִישִׁי› (“son fifth”)
 # "[EN-AID] And God heard Leah, and she conceived and bore Jacob a fifth
 # son."
 m.step("Gen.30.17")
-# ‹וַיִּשְׁמַע אֱלֹהִים אֶל־לֵאָה› (“and-hear God to Leah”) — fact holds:
-# hear-God-to-leah
+# ‹וַיִּשְׁמַע אֱלֹהִים אֶל־לֵאָה› (“and-hear God to Leah”)
+# — fact holds: hear-God-to-leah
 m.fact("shama_Elohim_el_leah")
-# ‹וַתַּהַר וַתֵּלֶד לְיַעֲקֹב בֵּן חֲמִישִׁי› (“and-be-pregnant and-bear-
-# young to-Jacob son fifth”) — the world gains: son-5-leah
+# ‹וַתַּהַר וַתֵּלֶד לְיַעֲקֹב› (“and-be-pregnant and-bear-young to-Jacob”)
+# ‹בֵּן חֲמִישִׁי› (“son fifth”)
+# — the world gains: son-5-leah
 m.install("ben_5_leah")
 
 # -------------------------- Gen.30.18 · THE_NINTH_WRITE_YISASHKHAR ---------
-# וַתֹּאמֶר לֵאָה נָתַן אֱלֹהִים שְׂכָרִי אֲשֶׁר־נָתַתִּי שִׁפְחָתִי
-# לְאִישִׁי וַתִּקְרָא שְׁמוֹ יִשָּׂשכָר
+# ‹וַתֹּאמֶר לֵאָה נָתַן› (“and-say Leah set”)
+# ‹אֱלֹהִים שְׂכָרִי אֲשֶׁר־נָתַתִּי› (“God wage-me/my which set”)
+# ‹שִׁפְחָתִי לְאִישִׁי וַתִּקְרָא› (“female-slave-me/my to-man-me/my and-
+# call”)
+# ‹שְׁמוֹ יִשָּׂשכָר› (“name-him/its Issachar”)
 # "[EN-AID] And Leah said: God has given my wage, because I gave my maid to
 # my husband. And she called his name Issachar."
 m.step("Gen.30.18")
-# ‹וַתִּקְרָא שְׁמוֹ יִשָּׂשכָר› (“and-call name-him/its Issachar”) — named:
-# son-5-leah := Issachar
+# ‹וַתִּקְרָא שְׁמוֹ יִשָּׂשכָר› (“and-call name-him/its Issachar”)
+# — named: son-5-leah := Issachar
 m.name("ben_5_leah", "yisashkhar")
 # witness-tier presupposed read:
 # study_and_commerce_chartered_with_their_numbers on the_two_tribes — read,
@@ -326,34 +407,43 @@ m.witness_read("the_two_tribes", "study_and_commerce_chartered_with_their_number
                 cites=["Bereshit Rabbah 72:5", "Bereshit Rabbah 99:10"])
 
 # -------------------------- Gen.30.19 · THE_SIXTH_SON ----------------------
-# וַתַּהַר עוֹד לֵאָה וַתֵּלֶד בֵּן־שִׁשִּׁי לְּיַעֲקֹב
+# ‹וַתַּהַר עוֹד לֵאָה› (“and-be-pregnant still/again Leah”)
+# ‹וַתֵּלֶד בֵּן־שִׁשִּׁי לְּיַעֲקֹב› (“and-bear-young son sixth to-Jacob”)
 # "[EN-AID] And Leah conceived again, and bore Jacob a sixth son."
 m.step("Gen.30.19")
-# ‹וַתַּהַר עוֹד לֵאָה וַתֵּלֶד בֵּן־שִׁשִּׁי לְּיַעֲקֹב› (“and-be-pregnant
-# still/again Leah and-bear-young son sixth to-Jacob”) — the world gains:
-# son-6-leah
+# ‹וַתַּהַר עוֹד לֵאָה› (“and-be-pregnant still/again Leah”)
+# ‹וַתֵּלֶד בֵּן־שִׁשִּׁי לְּיַעֲקֹב› (“and-bear-young son sixth to-Jacob”)
+# — the world gains: son-6-leah
 m.install("ben_6_leah")
 
 # -------------------------- Gen.30.20 · THE_TENTH_WRITE_ZEVULUN ------------
-# וַתֹּאמֶר לֵאָה זְבָדַנִי אֱלֹהִים אֹתִי זֵבֶד טוֹב הַפַּעַם יִזְבְּלֵנִי
-# אִישִׁי כִּי־יָלַדְתִּי לוֹ שִׁשָּׁה בָנִים וַתִּקְרָא אֶת־שְׁמוֹ זְבֻלוּן
+# ‹וַתֹּאמֶר לֵאָה זְבָדַנִי› (“and-say Leah confer-me/my”)
+# ‹אֱלֹהִים אֹתִי זֵבֶד› (“God obj-marker-me/my gift”)
+# ‹טוֹב הַפַּעַם יִזְבְּלֵנִי› (“good the-stroke reside-me/my”)
+# ‹אִישִׁי כִּי־יָלַדְתִּי לוֹ› (“man-me/my that bear-young to-him/its”)
+# ‹שִׁשָּׁה בָנִים וַתִּקְרָא› (“six son and-call”)
+# ‹אֶת־שְׁמוֹ זְבֻלוּן› (“obj-marker name-him/its Zebulun”)
 # "[EN-AID] And Leah said: God has endowed me with a good endowment; this
 # time my husband will dwell with me, for I have borne him six sons. And she
 # called his name Zebulun."
 m.step("Gen.30.20")
 # ‹וַתִּקְרָא אֶת־שְׁמוֹ זְבֻלוּן› (“and-call obj-marker name-him/its
-# Zebulun”) — named: son-6-leah := Zebulun
+# Zebulun”)
+# — named: son-6-leah := Zebulun
 m.name("ben_6_leah", "zevulun")
 
 # -------------------------- Gen.30.21 · THE_ELEVENTH_WRITE_DINA ------------
-# וְאַחַר יָלְדָה בַּת וַתִּקְרָא אֶת־שְׁמָהּ דִּינָה
+# ‹וְאַחַר יָלְדָה בַּת› (“and-after bear-young daughter”)
+# ‹וַתִּקְרָא אֶת־שְׁמָהּ דִּינָה› (“and-call obj-marker name-her/its
+# Dinah”)
 # "[EN-AID] And afterward she bore a daughter, and called her name Dinah."
 m.step("Gen.30.21")
-# ‹וְאַחַר יָלְדָה בַּת› (“and-after bear-young daughter”) — the world
-# gains: daughter-leah
+# ‹וְאַחַר יָלְדָה בַּת› (“and-after bear-young daughter”)
+# — the world gains: daughter-leah
 m.install("bat_leah")
 # ‹וַתִּקְרָא אֶת־שְׁמָהּ דִּינָה› (“and-call obj-marker name-her/its
-# Dinah”) — named: daughter-leah := Dinah
+# Dinah”)
+# — named: daughter-leah := Dinah
 m.name("bat_leah", "dina")
 # witness-tier presupposed read: vain_prayer_rule_overridden_by_this_verse
 # on the_daughter — read, not installed
@@ -361,16 +451,17 @@ m.witness_read("the_daughter", "vain_prayer_rule_overridden_by_this_verse",
                 cites=["Bereshit Rabbah 72:6"])
 
 # -------------------------- Gen.30.22 · THE_REMEMBERING_AND_THE_OPENING ----
-# וַיִּזְכֹּר אֱלֹהִים אֶת־רָחֵל וַיִּשְׁמַע אֵלֶיהָ אֱלֹהִים וַיִּפְתַּח
-# אֶת־רַחְמָהּ
+# ‹וַיִּזְכֹּר אֱלֹהִים אֶת־רָחֵל› (“and-mark God obj-marker Rachel”)
+# ‹וַיִּשְׁמַע אֵלֶיהָ אֱלֹהִים› (“and-hear to-her/its God”)
+# ‹וַיִּפְתַּח אֶת־רַחְמָהּ› (“and-open-wide obj-marker womb-her/its”)
 # "[EN-AID] And God remembered Rachel, and God heard her, and opened her
 # womb."
 m.step("Gen.30.22")
-# ‹וַיִּזְכֹּר אֱלֹהִים אֶת־רָחֵל› (“and-mark God obj-marker Rachel”) —
-# event: male — agent God; theme Rachel
+# ‹וַיִּזְכֹּר אֱלֹהִים אֶת־רָחֵל› (“and-mark God obj-marker Rachel”)
+# — event: male — agent God; theme Rachel
 m.event("zakhar", agent="Elohim", themes=["rachel"])
-# ‹וַיִּפְתַּח אֶת־רַחְמָהּ› (“and-open-wide obj-marker womb-her/its”) —
-# event: patach — agent God; theme rechem-Rachel
+# ‹וַיִּפְתַּח אֶת־רַחְמָהּ› (“and-open-wide obj-marker womb-her/its”)
+# — event: patach — agent God; theme rechem-Rachel
 m.event("patach", agent="Elohim", themes=["rechem_rachel"])
 # witness-grounded state (its own tier): operations_never_delegated on
 # three_keys
@@ -382,25 +473,30 @@ m.witness_read("what_was_remembered", "a_silence_confessed_earlier_in_this_block
                 cites=["Bereshit Rabbah 71:8", "Bereshit Rabbah 73:4"])
 
 # -------------------------- Gen.30.23 · THE_REPROACH_GATHERED_NON_POP ------
-# וַתַּהַר וַתֵּלֶד בֵּן וַתֹּאמֶר אָסַף אֱלֹהִים אֶת־חֶרְפָּתִי
+# ‹וַתַּהַר וַתֵּלֶד בֵּן› (“and-be-pregnant and-bear-young son”)
+# ‹וַתֹּאמֶר אָסַף אֱלֹהִים› (“and-say gather-for-any-purpose God”)
+# ‹אֶת־חֶרְפָּתִי› (“obj-marker contumely-me/my”)
 # "[EN-AID] And she conceived and bore a son, and said: God has gathered
 # away my reproach."
 m.step("Gen.30.23")
-# ‹וַתַּהַר וַתֵּלֶד בֵּן› (“and-be-pregnant and-bear-young son”) — the
-# world gains: son-1-Rachel
+# ‹וַתַּהַר וַתֵּלֶד בֵּן› (“and-be-pregnant and-bear-young son”)
+# — the world gains: son-1-Rachel
 m.install("ben_1_rachel")
-# ‹וַתֹּאמֶר אָסַף אֱלֹהִים אֶת־חֶרְפָּתִי› (“and-say gather-for-any-purpose
-# God obj-marker contumely-me/my”) — fact holds: gather-for-any-purpose-God-
-# cherpati(Rachel)
+# ‹וַתֹּאמֶר אָסַף אֱלֹהִים› (“and-say gather-for-any-purpose God”)
+# ‹אֶת־חֶרְפָּתִי› (“obj-marker contumely-me/my”)
+# — fact holds: gather-for-any-purpose-God-cherpati(Rachel)
 m.fact("asaf_Elohim_cherpati(rachel)")
 
 # -------------------------- Gen.30.24 · THE_TWELFTH_WRITE_YOSEF_THE_OPEN_CARD -
-# וַתִּקְרָא אֶת־שְׁמוֹ יוֹסֵף לֵאמֹר יֹסֵף יְהוָה לִי בֵּן אַחֵר
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ יוֹסֵף› (“and-call obj-marker name-him/its Joseph”)
+# ‹לֵאמֹר יֹסֵף יְהוָה› (“to-say add YHWH”)
+# ‹לִי בֵּן אַחֵר› (“to-me/my son other”)
 # "[EN-AID] And she called his name Joseph, saying: May YHWH add to me
 # another son."
 m.step("Gen.30.24")
-# ‹וַתִּקְרָא אֶת־שְׁמוֹ יוֹסֵף לֵאמֹר› (“and-call obj-marker name-him/its
-# Joseph to-say”) — named: son-1-Rachel := Joseph
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ יוֹסֵף› (“and-call obj-marker name-him/its Joseph”)
+# ‹לֵאמֹר› (“to-say”)
+# — named: son-1-Rachel := Joseph
 m.name("ben_1_rachel", "yosef")
 # witness-grounded state (its own tier):
 # thanks_and_silence_as_heritable_capabilities on two_crafts

@@ -14,9 +14,11 @@ from machine import Machine
 m = Machine("lev_25_shemittah")
 
 # -------------------------- Lev.25.1 · TREE_CLAIM --------------------------
-# וידבר יהוה אל משה … בהר סיני לאמר
-# "[EN-AID] From top split: LEFT «וידבר יהוה אל משה» / RIGHT «בהר סיני
-# לאמר». Derive claim from Hebrew arms. Lev 25:1."
+# ‹וידבר יהוה אל› (“and-speak YHWH to”)
+# ‹משה … בהר סיני› (“Moses … in-mountain Sinai”)
+# ‹לאמר› (“to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:1."
 m.step("Lev.25.1")
 # witness-tier presupposed read: the_sinai_detail_rule on behar_sinai —
 # read, not installed
@@ -24,11 +26,14 @@ m.witness_read("behar_sinai", "the_sinai_detail_rule",
                 cites=["Sifra, Behar, Section 1 1", "Onkelos Lev 25:1"])
 
 # -------------------------- Lev.25.2 · ETNACHTA_SPLIT ----------------------
-# דבר אל בני ישראל ואמרת אלהם כי תבאו אל הארץ אשר אני נתן לכם … ושבתה הארץ
-# שבת ליהוה
-# "[EN-AID] From top split: LEFT «דבר אל בני ישראל ואמרת אלהם כי תבאו אל
-# הארץ אשר אני נתן לכם» / RIGHT «ושבתה הארץ שבת ליהוה». Derive claim from
-# Hebrew arms. Lev 25:2."
+# ‹דבר אל בני› (“speak to son”)
+# ‹ישראל ואמרת אלהם› (“Israel and-say to-them/their”)
+# ‹כי תבאו אל› (“that come/bring to”)
+# ‹הארץ אשר אני› (“the-earth which”)
+# ‹נתן לכם … ושבתה› (“set to-you/your(pl) … and-repose”)
+# ‹הארץ שבת ליהוה› (“the-earth intermission to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:2."
 m.step("Lev.25.2")
 # witness-tier presupposed read: onset_conditions_and_timeline on
 # ki_tavou_el_haaretz — read, not installed
@@ -36,9 +41,12 @@ m.witness_read("ki_tavou_el_haaretz", "onset_conditions_and_timeline",
                 cites=["Sifra, Behar, Section 1 2", "Sifra, Behar, Section 1 3", "Onkelos Lev 25:2"])
 
 # -------------------------- Lev.25.3 · ETNACHTA_SPLIT ----------------------
-# שש שנים תזרע שדך ושש שנים תזמר כרמך … ואספת את תבואתה
-# "[EN-AID] From top split: LEFT «שש שנים תזרע שדך ושש שנים תזמר כרמך» /
-# RIGHT «ואספת את תבואתה». Derive claim from Hebrew arms. Lev 25:3."
+# ‹שש שנים תזרע› (“six years yield-seed”)
+# ‹שדך ושש שנים› (“field-you/your and-six years”)
+# ‹תזמר כרמך … ואספת› (“trim garden-you/your … and-gather-for-any-purpose”)
+# ‹את תבואתה› (“obj-marker income-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:3."
 m.step("Lev.25.3")
 # witness-tier presupposed read: six_and_six_with_the_rooting_threshold on
 # shesh_shanim_tizra — read, not installed
@@ -46,10 +54,13 @@ m.witness_read("shesh_shanim_tizra", "six_and_six_with_the_rooting_threshold",
                 cites=["Sifra, Behar, Section 1 7", "Sifra, Behar, Section 1 8", "Sifra, Behar, Section 1 9", "Onkelos Lev 25:3"])
 
 # -------------------------- Lev.25.4 · ETNACHTA_SPLIT ----------------------
-# ובשנה השביעת שבת שבתון יהיה לארץ שבת ליהוה … שדך לא תזרע וכרמך לא תזמר
-# "[EN-AID] From top split: LEFT «ובשנה השביעת שבת שבתון יהיה לארץ שבת
-# ליהוה» / RIGHT «שדך לא תזרע וכרמך לא תזמר». Derive claim from Hebrew arms.
-# Lev 25:4."
+# ‹ובשנה השביעת שבת› (“and-in-years the-seventh intermission”)
+# ‹שבתון יהיה לארץ› (“sabbatism be to-earth”)
+# ‹שבת ליהוה … שדך› (“intermission to-YHWH … field-you/your”)
+# ‹לא תזרע וכרמך› (“not yield-seed and-garden-you/your”)
+# ‹לא תזמר› (“not trim”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:4."
 m.step("Lev.25.4")
 # witness-tier presupposed read: labor_census_and_the_class_rule on
 # shabbat_shabbaton_laaretz — read, not installed
@@ -61,10 +72,13 @@ m.witness_read("sadekha_lo_tizra", "labor_census_layer_label",
                 cites=["Babylonian Talmud Moed Katan 3a:2", "Babylonian Talmud Moed Katan 3a:3", "Babylonian Talmud Moed Katan 3a:9", "Babylonian Talmud Moed Katan 3a:11", "Babylonian Talmud Moed Katan 3a:12", "Babylonian Talmud Moed Katan 3a:16", "Babylonian Talmud Moed Katan 3a:22", "Babylonian Talmud Moed Katan 3b:5", "Babylonian Talmud Moed Katan 3b:8", "Babylonian Talmud Moed Katan 3b:10", "Babylonian Talmud Moed Katan 3b:11", "Babylonian Talmud Moed Katan 3b:12", "Babylonian Talmud Moed Katan 3b:13", "Babylonian Talmud Moed Katan 4a:1", "Babylonian Talmud Moed Katan 4a:2", "Babylonian Talmud Moed Katan 4a:7", "Babylonian Talmud Moed Katan 4a:9", "Mishnah Sheviit 1:1", "Mishnah Sheviit 1:6", "Mishnah Sheviit 2:1", "Mishnah Sheviit 2:6"])
 
 # -------------------------- Lev.25.5 · ETNACHTA_SPLIT ----------------------
-# את ספיח קצירך לא תקצור ואת ענבי נזירך לא תבצר … שנת שבתון יהיה לארץ
-# "[EN-AID] From top split: LEFT «את ספיח קצירך לא תקצור ואת ענבי נזירך לא
-# תבצר» / RIGHT «שנת שבתון יהיה לארץ». Derive claim from Hebrew arms. Lev
-# 25:5."
+# ‹את ספיח קצירך› (“obj-marker something-falling-off severed-you/your”)
+# ‹לא תקצור ואת› (“not dock-off and-obj-marker”)
+# ‹ענבי נזירך לא› (“grape separate-you/your not”)
+# ‹תבצר … שנת שבתון› (“gather-grapes … years sabbatism”)
+# ‹יהיה לארץ› (“be to-earth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:5."
 m.step("Lev.25.5")
 # witness-tier presupposed read: changed_manner_rule_and_two_clocks on
 # sefiach_ketzircha — read, not installed
@@ -72,10 +86,14 @@ m.witness_read("sefiach_ketzircha", "changed_manner_rule_and_two_clocks",
                 cites=["Sifra, Behar, Chapter 1 3", "Sifra, Behar, Chapter 1 4", "Onkelos Lev 25:5"])
 
 # -------------------------- Lev.25.6 · ETNACHTA_SPLIT ----------------------
-# והיתה שבת הארץ לכם לאכלה לך ולעבדך ולאמתך … ולשכירך ולתושבך הגרים עמך
-# "[EN-AID] From top split: LEFT «והיתה שבת הארץ לכם לאכלה לך ולעבדך ולאמתך»
-# / RIGHT «ולשכירך ולתושבך הגרים עמך». Derive claim from Hebrew arms. Lev
-# 25:6."
+# ‹והיתה שבת הארץ› (“and-be intermission the-earth”)
+# ‹לכם לאכלה לך› (“to-you/your(pl) to-food to-you/your”)
+# ‹ולעבדך ולאמתך … ולשכירך› (“and-to-servant-you/your and-to-maidservant-
+# you/your … and-to-man-at-wages-by-the-day-you/your”)
+# ‹ולתושבך הגרים עמך› (“and-to-resident-alien-you/your the-turn-aside-from-
+# the-road with-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:6."
 m.step("Lev.25.6")
 # witness-tier presupposed read: the_eaters_and_the_removal_dispute on
 # vehaytah_shabbat_haaretz_lachem — read, not installed
@@ -83,9 +101,11 @@ m.witness_read("vehaytah_shabbat_haaretz_lachem", "the_eaters_and_the_removal_di
                 cites=["Sifra, Behar, Chapter 1 5", "Sifra, Behar, Chapter 1 6", "Sifra, Behar, Chapter 1 7", "Onkelos Lev 25:6"])
 
 # -------------------------- Lev.25.7 · ETNACHTA_SPLIT ----------------------
-# ולבהמתך ולחיה אשר בארצך … תהיה כל תבואתה לאכל
-# "[EN-AID] From top split: LEFT «ולבהמתך ולחיה אשר בארצך» / RIGHT «תהיה כל
-# תבואתה לאכל». Derive claim from Hebrew arms. Lev 25:7."
+# ‹ולבהמתך ולחיה אשר› (“and-to-livestock-you/your and-to-living which”)
+# ‹בארצך … תהיה כל› (“in-earth-you/your … be all”)
+# ‹תבואתה לאכל› (“income-her/its to-eat”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:7."
 m.step("Lev.25.7")
 # witness-tier presupposed read: the_field_clock_and_the_season_table on
 # velivhemtecha_velachayah — read, not installed
@@ -93,11 +113,14 @@ m.witness_read("velivhemtecha_velachayah", "the_field_clock_and_the_season_table
                 cites=["Sifra, Behar, Chapter 1 8", "Sifra, Behar, Chapter 1 9", "Sifra, Behar, Chapter 1 10", "Sifra, Behar, Chapter 1 11", "Onkelos Lev 25:7"])
 
 # -------------------------- Lev.25.8 · ETNACHTA_SPLIT ----------------------
-# וספרת לך שבע שבתת שנים שבע שנים שבע פעמים … והיו לך ימי שבע שבתת השנים תשע
-# וארבעים שנה
-# "[EN-AID] From top split: LEFT «וספרת לך שבע שבתת שנים שבע שנים שבע פעמים»
-# / RIGHT «והיו לך ימי שבע שבתת השנים תשע וארבעים שנה». Derive claim from
-# Hebrew arms. Lev 25:8."
+# ‹וספרת לך שבע› (“and-count to-you/your seven”)
+# ‹שבתת שנים שבע› (“intermission years seven”)
+# ‹שנים שבע פעמים› (“years seven stroke”)
+# ‹… והיו לך ימי› (“and-be to-you/your day”)
+# ‹שבע שבתת השנים› (“seven intermission the-years”)
+# ‹תשע וארבעים שנה› (“nine and-forty years”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:8."
 m.step("Lev.25.8")
 # witness-tier presupposed read:
 # the_count_in_the_court_and_the_dependency_dispute on vesafarta_lecha —
@@ -110,11 +133,13 @@ m.witness_read("sheva_shabtot_shanim", "seventeen_jubilees_cycle_year",
                 cites=["Babylonian Talmud Arakhin 12b:3", "Babylonian Talmud Arakhin 12b:4", "Babylonian Talmud Arakhin 12b:5", "Babylonian Talmud Arakhin 12b:6", "Babylonian Talmud Arakhin 12b:7", "Babylonian Talmud Arakhin 12b:8", "Babylonian Talmud Arakhin 13a:2", "Babylonian Talmud Arakhin 13a:3", "Babylonian Talmud Arakhin 13a:4", "Babylonian Talmud Arakhin 13a:5", "Babylonian Talmud Arakhin 13a:6", "Babylonian Talmud Arakhin 13a:7", "Babylonian Talmud Arakhin 13a:8"])
 
 # -------------------------- Lev.25.9 · ETNACHTA_SPLIT ----------------------
-# והעברת שופר תרועה בחדש השבעי בעשור לחדש … ביום הכפרים תעבירו שופר בכל
-# ארצכם
-# "[EN-AID] From top split: LEFT «והעברת שופר תרועה בחדש השבעי בעשור לחדש» /
-# RIGHT «ביום הכפרים תעבירו שופר בכל ארצכם». Derive claim from Hebrew arms.
-# Lev 25:9."
+# ‹והעברת שופר תרועה› (“and-pass-over cornet clamor”)
+# ‹בחדש השבעי בעשור› (“in-new-moon the-seventh in-ten”)
+# ‹לחדש … ביום הכפרים› (“to-new-moon … in-day the-expiation”)
+# ‹תעבירו שופר בכל› (“pass-over cornet in-all”)
+# ‹ארצכם› (“earth-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:9."
 m.step("Lev.25.9")
 # witness-tier presupposed read: the_shofar_export on
 # vehaavarta_shofar_teruah — read, not installed
@@ -122,11 +147,16 @@ m.witness_read("vehaavarta_shofar_teruah", "the_shofar_export",
                 cites=["Sifra, Behar, Section 2 3", "Sifra, Behar, Section 2 4", "Sifra, Behar, Section 2 5", "Onkelos Lev 25:9"])
 
 # -------------------------- Lev.25.10 · ETNACHTA_SPLIT ---------------------
-# וקדשתם את שנת החמשים שנה וקראתם דרור בארץ לכל ישביה … יובל הוא תהיה לכם
-# ושבתם איש אל אחזתו ואיש אל משפחתו תשבו
-# "[EN-AID] From top split: LEFT «וקדשתם את שנת החמשים שנה וקראתם דרור בארץ
-# לכל ישביה» / RIGHT «יובל הוא תהיה לכם ושבתם איש אל אחזתו ואיש אל משפחתו
-# תשבו». Derive claim from Hebrew arms. Lev 25:10."
+# ‹וקדשתם את שנת› (“and-sanctify obj-marker years”)
+# ‹החמשים שנה וקראתם› (“the-fifty years and-call”)
+# ‹דרור בארץ לכל› (“freedom in-earth to-all”)
+# ‹ישביה … יובל הוא› (“dwell/sit-her/its … blast-of-a-horn he/it”)
+# ‹תהיה לכם ושבתם› (“be to-you/your(pl) and-return”)
+# ‹איש אל אחזתו› (“man to something-seized-him/its”)
+# ‹ואיש אל משפחתו› (“and-man to family-him/its”)
+# ‹תשבו› (“return”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:10."
 m.step("Lev.25.10")
 # witness-tier presupposed read: the_ten_day_window_and_the_jubilees_gates
 # on vekidashtem_ukratem_deror — read, not installed
@@ -134,21 +164,27 @@ m.witness_read("vekidashtem_ukratem_deror", "the_ten_day_window_and_the_jubilees
                 cites=["Sifra, Behar, Chapter 2 1", "Sifra, Behar, Chapter 2 2", "Sifra, Behar, Chapter 2 3", "Sifra, Behar, Chapter 2 4", "Sifra, Behar, Chapter 2 5", "Onkelos Lev 25:10"])
 
 # -------------------------- Lev.25.11 · ETNACHTA_SPLIT ---------------------
-# יובל הוא שנת החמשים שנה תהיה לכם … לא תזרעו ולא תקצרו את ספיחיה ולא תבצרו
-# את נזריה
-# "[EN-AID] From top split: LEFT «יובל הוא שנת החמשים שנה תהיה לכם» / RIGHT
-# «לא תזרעו ולא תקצרו את ספיחיה ולא תבצרו את נזריה». Derive claim from
-# Hebrew arms. Lev 25:11."
+# ‹יובל הוא שנת› (“blast-of-a-horn he/it years”)
+# ‹החמשים שנה תהיה› (“the-fifty years be”)
+# ‹לכם … לא תזרעו› (“to-you/your(pl) … not yield-seed”)
+# ‹ולא תקצרו את› (“and-not dock-off obj-marker”)
+# ‹ספיחיה ולא תבצרו› (“something-falling-off-her/its and-not gather-grapes”)
+# ‹את נזריה› (“obj-marker separate-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:11."
 m.step("Lev.25.11")
 # witness-tier presupposed read: the_timers_end_and_the_imported_ban on
 # yovel_hi_shnat_hachamishim — read, not installed
 m.witness_read("yovel_hi_shnat_hachamishim", "the_timers_end_and_the_imported_ban",
                 cites=["Sifra, Behar, Chapter 3 1", "Sifra, Behar, Chapter 3 2", "Onkelos Lev 25:11"])
 
-# -------------------------- Lev.25.12 · COND_כי ----------------------------
-# כי יובל הוא קדש תהיה לכם … מן השדה תאכלו את תבואתה
-# "[EN-AID] From top split: LEFT «כי יובל הוא קדש תהיה לכם» / RIGHT «מן השדה
-# תאכלו את תבואתה». Derive claim from Hebrew arms. Lev 25:12."
+# -------------------------- Lev.25.12 · COND_כי (“that”) -------------------
+# ‹כי יובל הוא› (“that blast-of-a-horn he/it”)
+# ‹קדש תהיה לכם› (“holiness be to-you/your(pl)”)
+# ‹… מן השדה תאכלו› (“from the-field eat”)
+# ‹את תבואתה› (“obj-marker income-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:12."
 m.step("Lev.25.12")
 # witness-tier presupposed read: the_substitution_chain_and_the_jar_dispute
 # on ki_yovel_hi_kodesh — read, not installed
@@ -156,19 +192,25 @@ m.witness_read("ki_yovel_hi_kodesh", "the_substitution_chain_and_the_jar_dispute
                 cites=["Sifra, Behar, Chapter 3 3", "Sifra, Behar, Chapter 3 4", "Sifra, Behar, Chapter 3 5", "Onkelos Lev 25:12"])
 
 # -------------------------- Lev.25.13 · ETNACHTA_SPLIT ---------------------
-# בשנת היובל הזאת … תשבו איש אל אחזתו
-# "[EN-AID] From top split: LEFT «בשנת היובל הזאת» / RIGHT «תשבו איש אל
-# אחזתו». Derive claim from Hebrew arms. Lev 25:13."
+# ‹בשנת היובל הזאת› (“in-years the-blast-of-a-horn the-this”)
+# ‹… תשבו איש אל› (“return man to”)
+# ‹אחזתו› (“something-seized-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:13."
 m.step("Lev.25.13")
 # witness-tier presupposed read: the_two_releases_matrix on
 # bishnat_hayovel_hazot — read, not installed
 m.witness_read("bishnat_hayovel_hazot", "the_two_releases_matrix",
                 cites=["Sifra, Behar, Chapter 3 6", "Onkelos Lev 25:13"])
 
-# -------------------------- Lev.25.14 · COND_וכי ---------------------------
-# וכי תמכרו ממכר לעמיתך או קנה מיד עמיתך … אל תונו איש את אחיו
-# "[EN-AID] From top split: LEFT «וכי תמכרו ממכר לעמיתך או קנה מיד עמיתך» /
-# RIGHT «אל תונו איש את אחיו». Derive claim from Hebrew arms. Lev 25:14."
+# -------------------------- Lev.25.14 · COND_וכי (“and-that”) --------------
+# ‹וכי תמכרו ממכר› (“and-that sell merchandise”)
+# ‹לעמיתך או קנה› (“to-companionship-you/your or possessor”)
+# ‹מיד עמיתך … אל› (“from-hand companionship-you/your … do-not”)
+# ‹תונו איש את› (“rage man obj-marker”)
+# ‹אחיו› (“brother-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:14."
 m.step("Lev.25.14")
 # witness-tier presupposed read: the_overreaching_file on
 # al_tonu_ish_et_achiv — read, not installed
@@ -176,10 +218,12 @@ m.witness_read("al_tonu_ish_et_achiv", "the_overreaching_file",
                 cites=["Sifra, Behar, Section 3 1", "Sifra, Behar, Section 3 2", "Sifra, Behar, Section 3 3", "Sifra, Behar, Section 3 4", "Sifra, Behar, Section 3 5", "Sifra, Behar, Section 3 6", "Sifra, Behar, Section 3 7", "Sifra, Behar, Section 3 8", "Sifra, Behar, Section 3 9", "Onkelos Lev 25:14"])
 
 # -------------------------- Lev.25.15 · ETNACHTA_SPLIT ---------------------
-# במספר שנים אחר היובל תקנה מאת עמיתך … במספר שני תבואת ימכר לך
-# "[EN-AID] From top split: LEFT «במספר שנים אחר היובל תקנה מאת עמיתך» /
-# RIGHT «במספר שני תבואת ימכר לך». Derive claim from Hebrew arms. Lev
-# 25:15."
+# ‹במספר שנים אחר› (“in-number years after”)
+# ‹היובל תקנה מאת› (“the-blast-of-a-horn possessor from-with”)
+# ‹עמיתך … במספר שני› (“companionship-you/your … in-number years”)
+# ‹תבואת ימכר לך› (“income sell to-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:15."
 m.step("Lev.25.15")
 # witness-tier presupposed read: the_two_year_floor on
 # bemispar_shanim_achar_hayovel — read, not installed
@@ -187,17 +231,23 @@ m.witness_read("bemispar_shanim_achar_hayovel", "the_two_year_floor",
                 cites=["Sifra, Behar, Section 3 10", "Onkelos Lev 25:15"])
 
 # -------------------------- Lev.25.16 · ETNACHTA_SPLIT ---------------------
-# לפי רב השנים תרבה מקנתו ולפי מעט השנים תמעיט מקנתו … כי מספר תבואת הוא מכר
-# לך
-# "[EN-AID] From top split: LEFT «לפי רב השנים תרבה מקנתו ולפי מעט השנים
-# תמעיט מקנתו» / RIGHT «כי מספר תבואת הוא מכר לך». Derive claim from Hebrew
+# ‹לפי רב השנים› (“to-mouth abundance the-years”)
+# ‹תרבה מקנתו ולפי› (“multiply buying-him/its and-to-mouth”)
+# ‹מעט השנים תמעיט› (“pare-off the-years pare-off”)
+# ‹מקנתו … כי מספר› (“buying-him/its … that number”)
+# ‹תבואת הוא מכר› (“income he/it sell”)
+# ‹לך› (“to-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 25:16."
 m.step("Lev.25.16")
 
 # -------------------------- Lev.25.17 · ETNACHTA_SPLIT ---------------------
-# ולא תונו איש את עמיתו ויראת מאלהיך … כי אני יהוה אלהיכם
-# "[EN-AID] From top split: LEFT «ולא תונו איש את עמיתו ויראת מאלהיך» /
-# RIGHT «כי אני יהוה אלהיכם». Derive claim from Hebrew arms. Lev 25:17."
+# ‹ולא תונו איש› (“and-not rage man”)
+# ‹את עמיתו ויראת› (“obj-marker companionship-him/its and-fear”)
+# ‹מאלהיך … כי אני› (“from-God-you/your … that”)
+# ‹יהוה אלהיכם› (“YHWH God-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:17."
 m.step("Lev.25.17")
 # witness-tier presupposed read: verbal_wronging_and_the_heart_clause_rule
 # on velo_tonu_ish_et_amito — read, not installed
@@ -205,21 +255,30 @@ m.witness_read("velo_tonu_ish_et_amito", "verbal_wronging_and_the_heart_clause_r
                 cites=["Sifra, Behar, Chapter 4 1", "Sifra, Behar, Chapter 4 2", "Onkelos Lev 25:17"])
 
 # -------------------------- Lev.25.18 · ETNACHTA_SPLIT ---------------------
-# ועשיתם את חקתי ואת משפטי תשמרו ועשיתם אתם … וישבתם על הארץ לבטח
-# "[EN-AID] From top split: LEFT «ועשיתם את חקתי ואת משפטי תשמרו ועשיתם אתם»
-# / RIGHT «וישבתם על הארץ לבטח». Derive claim from Hebrew arms. Lev 25:18."
+# ‹ועשיתם את חקתי› (“and-make obj-marker statute-me/my”)
+# ‹ואת משפטי תשמרו› (“and-obj-marker judgment-me/my keep/guard”)
+# ‹ועשיתם אתם … וישבתם› (“and-make obj-marker-them/their … and-dwell/sit”)
+# ‹על הארץ לבטח› (“over the-earth to-place-of-refuge”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:18."
 m.step("Lev.25.18")
 
 # -------------------------- Lev.25.19 · ETNACHTA_SPLIT ---------------------
-# ונתנה הארץ פריה ואכלתם לשבע … וישבתם לבטח עליה
-# "[EN-AID] From top split: LEFT «ונתנה הארץ פריה ואכלתם לשבע» / RIGHT
-# «וישבתם לבטח עליה». Derive claim from Hebrew arms. Lev 25:19."
+# ‹ונתנה הארץ פריה› (“and-set the-earth fruit-her/its”)
+# ‹ואכלתם לשבע … וישבתם› (“and-eat to-satisfaction-joy) … and-dwell/sit”)
+# ‹לבטח עליה› (“to-place-of-refuge over-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:19."
 m.step("Lev.25.19")
 
-# -------------------------- Lev.25.20 · COND_וכי ---------------------------
-# וכי תאמרו מה נאכל בשנה השביעת … הן לא נזרע ולא נאסף את תבואתנו
-# "[EN-AID] From top split: LEFT «וכי תאמרו מה נאכל בשנה השביעת» / RIGHT «הן
-# לא נזרע ולא נאסף את תבואתנו». Derive claim from Hebrew arms. Lev 25:20."
+# -------------------------- Lev.25.20 · COND_וכי (“and-that”) --------------
+# ‹וכי תאמרו מה› (“and-that say what”)
+# ‹נאכל בשנה השביעת› (“eat in-years the-seventh”)
+# ‹… הן לא נזרע› (“lo! not yield-seed”)
+# ‹ולא נאסף את› (“and-not gather-for-any-purpose obj-marker”)
+# ‹תבואתנו› (“income-us/our”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:20."
 m.step("Lev.25.20")
 # witness-tier presupposed read: the_aftergrowth_bans_provenance on
 # mah_nochal_bashanah_hasheviit — read, not installed
@@ -227,9 +286,12 @@ m.witness_read("mah_nochal_bashanah_hasheviit", "the_aftergrowth_bans_provenance
                 cites=["Sifra, Behar, Chapter 4 5", "Onkelos Lev 25:20"])
 
 # -------------------------- Lev.25.21 · ETNACHTA_SPLIT ---------------------
-# וצויתי את ברכתי לכם בשנה הששית … ועשת את התבואה לשלש השנים
-# "[EN-AID] From top split: LEFT «וצויתי את ברכתי לכם בשנה הששית» / RIGHT
-# «ועשת את התבואה לשלש השנים». Derive claim from Hebrew arms. Lev 25:21."
+# ‹וצויתי את ברכתי› (“and-command obj-marker blessing-me/my”)
+# ‹לכם בשנה הששית› (“to-you/your(pl) in-years the-sixth”)
+# ‹… ועשת את התבואה› (“and-make obj-marker the-income”)
+# ‹לשלש השנים› (“to-three the-years”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:21."
 m.step("Lev.25.21")
 # witness-tier presupposed read:
 # the_blessings_arithmetic_and_the_year_ladder on vetzivviti_et_birchati —
@@ -238,11 +300,14 @@ m.witness_read("vetzivviti_et_birchati", "the_blessings_arithmetic_and_the_year_
                 cites=["Sifra, Behar, Chapter 4 6", "Sifra, Behar, Chapter 4 7", "Onkelos Lev 25:21", "Onkelos Lev 25:22"])
 
 # -------------------------- Lev.25.22 · ETNACHTA_SPLIT ---------------------
-# וזרעתם את השנה השמינת ואכלתם מן התבואה ישן … עד השנה התשיעת עד בוא תבואתה
-# תאכלו ישן
-# "[EN-AID] From top split: LEFT «וזרעתם את השנה השמינת ואכלתם מן התבואה
-# ישן» / RIGHT «עד השנה התשיעת עד בוא תבואתה תאכלו ישן». Derive claim from
-# Hebrew arms. Lev 25:22."
+# ‹וזרעתם את השנה› (“and-yield-seed obj-marker the-years”)
+# ‹השמינת ואכלתם מן› (“the-eight and-eat from”)
+# ‹התבואה ישן … עד› (“the-income old … until”)
+# ‹השנה התשיעת עד› (“the-years the-ninth until”)
+# ‹בוא תבואתה תאכלו› (“come/bring income-her/its eat”)
+# ‹ישן› (“old”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 25:22."
 m.step("Lev.25.22")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

@@ -14,17 +14,21 @@ from machine import Machine
 m = Machine("lev_12_childbirth")
 
 # -------------------------- Lev.12.1 · TREE_CLAIM --------------------------
-# וידבר יהוה … אל משה לאמר
-# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
-# claim from Hebrew arms. Lev 12:1."
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 12:1."
 m.step("Lev.12.1")
 
 # -------------------------- Lev.12.2 · ETNACHTA_SPLIT ----------------------
-# דבר אל בני ישראל לאמר אשה כי תזריע וילדה זכר … וטמאה שבעת ימים כימי נדת
-# דותה תטמא
-# "[EN-AID] From top split: LEFT «דבר אל בני ישראל לאמר אשה כי תזריע וילדה
-# זכר» / RIGHT «וטמאה שבעת ימים כימי נדת דותה תטמא». Derive claim from
-# Hebrew arms. Lev 12:2."
+# ‹דבר אל בני› (“speak to son”)
+# ‹ישראל לאמר אשה› (“Israel to-say woman”)
+# ‹כי תזריע וילדה› (“that yield-seed and-bear-young”)
+# ‹זכר … וטמאה שבעת› (“male … and-be-foul seven”)
+# ‹ימים כימי נדת› (“day like-day rejection”)
+# ‹דותה תטמא› (“be-sick-her/its be-foul”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 12:2."
 m.step("Lev.12.2")
 # witness-tier presupposed read: last_child_consecutive on shivat_yamim —
 # read, not installed
@@ -32,9 +36,10 @@ m.witness_read("shivat_yamim", "last_child_consecutive",
                 cites=["Sifra, Tazria Parashat Yoledet, Section 1 4", "Sifra, Tazria Parashat Yoledet, Section 1 9", "Sifra, Tazria Parashat Yoledet, Section 1 11", "Sifra, Tazria Parashat Yoledet, Section 1 12", "Sifra, Tazria Parashat Yoledet, Section 1 13", "Sifra, Tazria Parashat Yoledet, Section 1 14"])
 
 # -------------------------- Lev.12.3 · ETNACHTA_SPLIT ----------------------
-# וביום השמיני … ימול בשר ערלתו
-# "[EN-AID] From top split: LEFT «וביום השמיני» / RIGHT «ימול בשר ערלתו».
-# Derive claim from Hebrew arms. Lev 12:3."
+# ‹וביום השמיני … ימול› (“and-in-day the-eight … circumcise”)
+# ‹בשר ערלתו› (“flesh foreskin-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 12:3."
 m.step("Lev.12.3")
 # witness-tier presupposed read: milah_overrides_shabbat on uvayom_hashmini
 # — read, not installed
@@ -42,22 +47,29 @@ m.witness_read("uvayom_hashmini", "milah_overrides_shabbat",
                 cites=["Sifra, Tazria Parashat Yoledet, Chapter 1 1", "Sifra, Tazria Parashat Yoledet, Chapter 1 3", "Sifra, Tazria Parashat Yoledet, Chapter 1 5", "Sifra, Tazria Parashat Yoledet, Chapter 1 6"])
 
 # -------------------------- Lev.12.4 · ETNACHTA_SPLIT ----------------------
-# ושלשים יום ושלשת ימים תשב בדמי טהרה … בכל קדש לא תגע ואל המקדש לא תבא עד
-# מלאת ימי טהרה
-# "[EN-AID] From top split: LEFT «ושלשים יום ושלשת ימים תשב בדמי טהרה» /
-# RIGHT «בכל קדש לא תגע ואל המקדש לא תבא עד מלאת ימי טהרה». Derive claim
-# from Hebrew arms. Lev 12:4."
+# ‹ושלשים יום ושלשת› (“and-thirty day and-three”)
+# ‹ימים תשב בדמי› (“day dwell/sit in-blood”)
+# ‹טהרה … בכל קדש› (“ceremonial-purification … in-all holiness”)
+# ‹לא תגע ואל› (“not touch and-to”)
+# ‹המקדש לא תבא› (“the-consecrated-thing not come/bring”)
+# ‹עד מלאת ימי› (“until fill day”)
+# ‹טהרה› (“ceremonial-purification”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 12:4."
 m.step("Lev.12.4")
 # witness-tier presupposed read: middah_case_law on dayo — read, not
 # installed
 m.witness_read("dayo", "middah_case_law",
                 cites=["Sifra, Tazria Parashat Yoledet, Chapter 2 4", "Sifra, Tazria Parashat Yoledet, Section 1 5"])
 
-# -------------------------- Lev.12.5 · COND_ואם ----------------------------
-# ואם נקבה תלד וטמאה שבעים כנדתה … וששים יום וששת ימים תשב על דמי טהרה
-# "[EN-AID] From top split: LEFT «ואם נקבה תלד וטמאה שבעים כנדתה» / RIGHT
-# «וששים יום וששת ימים תשב על דמי טהרה». Derive claim from Hebrew arms. Lev
-# 12:5."
+# -------------------------- Lev.12.5 · COND_ואם (“and-if”) -----------------
+# ‹ואם נקבה תלד› (“and-if female bear-young”)
+# ‹וטמאה שבעים כנדתה› (“and-be-foul sevened like-rejection-her/its”)
+# ‹… וששים יום וששת› (“and-sixty day and-six”)
+# ‹ימים תשב על› (“day dwell/sit over”)
+# ‹דמי טהרה› (“blood ceremonial-purification”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 12:5."
 m.step("Lev.12.5")
 # witness-tier presupposed read: the_vocalization_seat on shvuayim — read,
 # not installed
@@ -65,17 +77,24 @@ m.witness_read("shvuayim", "the_vocalization_seat",
                 cites=["Sifra, Tazria Parashat Yoledet, Chapter 2 2", "Onkelos Lev 12:5"])
 
 # -------------------------- Lev.12.6 · ETNACHTA_SPLIT ----------------------
-# ובמלאת ימי טהרה לבן או לבת תביא כבש בן שנתו לעלה ובן יונה או … אל פתח אהל
-# מועד אל הכהן
-# "[EN-AID] From top split: LEFT «ובמלאת ימי טהרה לבן או לבת תביא כבש בן
-# שנתו לעלה ובן יונה או תר לחטאת» / RIGHT «אל פתח אהל מועד אל הכהן». Derive
-# claim from Hebrew arms. Lev 12:6."
+# ‹ובמלאת ימי טהרה› (“and-in-fill day ceremonial-purification-her/its”)
+# ‹לבן או לבת› (“to-son or to-daughter”)
+# ‹תביא כבש בן› (“come/bring ram son”)
+# ‹שנתו לעלה ובן› (“years-him/its to-burnt-offering and-son”)
+# ‹יונה או … אל› (“dove or … to”)
+# ‹פתח אהל מועד› (“opening tent seasons”)
+# ‹אל הכהן› (“to the-priest”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 12:6."
 m.step("Lev.12.6")
 
 # -------------------------- Lev.12.7 · ETNACHTA_SPLIT ----------------------
-# והקריבו לפני יהוה וכפר עליה וטהרה ממקר דמיה … זאת תורת הילדת לזכר או לנקבה
-# "[EN-AID] From top split: LEFT «והקריבו לפני יהוה וכפר עליה וטהרה ממקר
-# דמיה» / RIGHT «זאת תורת הילדת לזכר או לנקבה». Derive claim from Hebrew
+# ‹והקריבו לפני יהוה› (“and-bring-near-him/its to-face YHWH”)
+# ‹וכפר עליה וטהרה› (“and-atone over-her/its and-be-pure”)
+# ‹ממקר דמיה … זאת› (“from-something-dug blood-her/its … this”)
+# ‹תורת הילדת לזכר› (“precept the-bear-young to-male”)
+# ‹או לנקבה› (“or to-female”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 12:7."
 m.step("Lev.12.7")
 # witness-tier presupposed read: five_bloods_and_the_market on mekor_dameha
@@ -83,12 +102,16 @@ m.step("Lev.12.7")
 m.witness_read("mekor_dameha", "five_bloods_and_the_market",
                 cites=["Sifra, Tazria Parashat Yoledet, Chapter 3 6"])
 
-# -------------------------- Lev.12.8 · COND_ואם ----------------------------
-# ואם לא תמצא ידה די שה ולקחה שתי תרים או שני בני יונה אחד לעל … וכפר עליה
-# הכהן וטהרה
-# "[EN-AID] From top split: LEFT «ואם לא תמצא ידה די שה ולקחה שתי תרים או
-# שני בני יונה אחד לעלה ואחד לחטאת» / RIGHT «וכפר עליה הכהן וטהרה». Derive
-# claim from Hebrew arms. Lev 12:8."
+# -------------------------- Lev.12.8 · COND_ואם (“and-if”) -----------------
+# ‹ואם לא תמצא› (“and-if not find”)
+# ‹ידה די שה› (“hand-her/its enough member-of-a-flock”)
+# ‹ולקחה שתי תרים› (“and-take two ring-dove”)
+# ‹או שני בני› (“or two son”)
+# ‹יונה אחד לעל› (“dove one ?”)
+# ‹… וכפר עליה הכהן› (“and-atone over-her/its the-priest”)
+# ‹וטהרה› (“and-be-pure”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 12:8."
 m.step("Lev.12.8")
 # witness-tier presupposed read: order_swap_and_dignity on seder_korban —
 # read, not installed

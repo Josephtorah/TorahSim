@@ -14,19 +14,25 @@ from machine import Machine
 m = Machine("exo_35_shabbat_donate")
 
 # -------------------------- Exod.35.1 · ETNACHTA_SPLIT ---------------------
-# ויקהל משה את כל עדת בני ישראל ויאמר אלהם … אלה הדברים אשר צוה יהוה לעשת
-# אתם
-# "[EN-AID] From top split: LEFT «ויקהל משה את כל עדת בני ישראל ויאמר אלהם»
-# / RIGHT «אלה הדברים אשר צוה יהוה לעשת אתם». Derive claim from Hebrew arms,
-# not English alone. Exod 35:1."
+# ‹ויקהל משה את› (“and-convoke Moses obj-marker”)
+# ‹כל עדת בני› (“all congregation son”)
+# ‹ישראל ויאמר אלהם› (“Israel and-say to-them/their”)
+# ‹… אלה הדברים אשר› (“these the-word/thing which”)
+# ‹צוה יהוה לעשת› (“command YHWH to-make”)
+# ‹אתם› (“obj-marker-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:1."
 m.step("Exod.35.1")
 
 # -------------------------- Exod.35.2 · ETNACHTA_SPLIT ---------------------
-# ששת ימים תעשה מלאכה וביום השביעי יהיה לכם קדש שבת שבתון ליהו … כל העשה בו
-# מלאכה יומת
-# "[EN-AID] From top split: LEFT «ששת ימים תעשה מלאכה וביום השביעי יהיה לכם
-# קדש שבת שבתון ליהוה» / RIGHT «כל העשה בו מלאכה יומת». Derive claim from
-# Hebrew arms, not English alone. Exod 35:2."
+# ‹ששת ימים תעשה› (“six day make”)
+# ‹מלאכה וביום השביעי› (“work and-in-day the-seventh”)
+# ‹יהיה לכם קדש› (“be to-you/your(pl) holiness”)
+# ‹שבת שבתון ליהו› (“intermission sabbatism ?”)
+# ‹… כל העשה בו› (“all the-make in-him/its”)
+# ‹מלאכה יומת› (“work die”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:2."
 m.step("Exod.35.2")
 # witness-tier presupposed read: rest_outranks_building on sabbath_first —
 # read, not installed
@@ -34,9 +40,11 @@ m.witness_read("sabbath_first", "rest_outranks_building",
                 cites=["Mishnah Sanhedrin 4:1", "Onkelos Exod 35"])
 
 # -------------------------- Exod.35.3 · ETNACHTA_SPLIT ---------------------
-# לא תבערו אש בכל משבתיכם … ביום השבת
-# "[EN-AID] From top split: LEFT «לא תבערו אש בכל משבתיכם» / RIGHT «ביום
-# השבת». Derive claim from Hebrew arms, not English alone. Exod 35:3."
+# ‹לא תבערו אש› (“not kindle fire”)
+# ‹בכל משבתיכם … ביום› (“in-all seat-you/your(pl) … in-day”)
+# ‹השבת› (“the-intermission”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:3."
 m.step("Exod.35.3")
 # witness-tier presupposed read: four_courtrooms on kindling_fork — read,
 # not installed
@@ -44,17 +52,23 @@ m.witness_read("kindling_fork", "four_courtrooms",
                 cites=["Shabbat 70a:5", "Shabbat 70a:3", "Shabbat 70a:4", "Shabbat 97b:2", "Sanhedrin 62a:7", "Sanhedrin 62a:8", "Sanhedrin 35b:6", "Sanhedrin 35b:7", "Sanhedrin 35b:8", "Yevamot 6b:4", "Yevamot 6b:5", "Shabbat 20a:5"])
 
 # -------------------------- Exod.35.4 · ETNACHTA_SPLIT ---------------------
-# ויאמר משה אל כל עדת בני ישראל לאמר … זה הדבר אשר צוה יהוה לאמר
-# "[EN-AID] From top split: LEFT «ויאמר משה אל כל עדת בני ישראל לאמר» /
-# RIGHT «זה הדבר אשר צוה יהוה לאמר». Derive claim from Hebrew arms, not
-# English alone. Exod 35:4."
+# ‹ויאמר משה אל› (“and-say Moses to”)
+# ‹כל עדת בני› (“all congregation son”)
+# ‹ישראל לאמר … זה› (“Israel to-say … this”)
+# ‹הדבר אשר צוה› (“the-word/thing which command”)
+# ‹יהוה לאמר› (“YHWH to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:4."
 m.step("Exod.35.4")
 
 # -------------------------- Exod.35.5 · ETNACHTA_SPLIT ---------------------
-# קחו מאתכם תרומה ליהוה כל נדיב לבו יביאה את תרומת יהוה … זהב וכסף ונחשת
-# "[EN-AID] From top split: LEFT «קחו מאתכם תרומה ליהוה כל נדיב לבו יביאה את
-# תרומת יהוה» / RIGHT «זהב וכסף ונחשת». Derive claim from Hebrew arms, not
-# English alone. Exod 35:5."
+# ‹קחו מאתכם תרומה› (“take from-with-you/your(pl) present”)
+# ‹ליהוה כל נדיב› (“to-YHWH all voluntary”)
+# ‹לבו יביאה את› (“heart-him/its come/bring-her/its obj-marker”)
+# ‹תרומת יהוה … זהב› (“present YHWH … gold”)
+# ‹וכסף ונחשת› (“and-silver and-copper”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:5."
 m.step("Exod.35.5")
 # witness-tier presupposed read: voluntariness_condition on willing_heart —
 # read, not installed
@@ -62,120 +76,159 @@ m.witness_read("willing_heart", "voluntariness_condition",
                 cites=["Onkelos Exod 35"])
 
 # -------------------------- Exod.35.6 · TREE_CLAIM -------------------------
-# ותכלת וארגמן ותולעת שני … ושש ועזים
-# "[EN-AID] From top split: LEFT «ותכלת וארגמן ותולעת שני» / RIGHT «ושש
-# ועזים». Derive claim from Hebrew arms, not English alone. Exod 35:6."
+# ‹ותכלת וארגמן ותולעת› (“and-cerulean-mussel and-purple and-crimson-grub”)
+# ‹שני … ושש ועזים› (“crimson … and-bleached-stuff and-she-goat”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:6."
 m.step("Exod.35.6")
 
 # -------------------------- Exod.35.7 · TREE_CLAIM -------------------------
-# וערת אילם מאדמים וערת תחשים … ועצי שטים
-# "[EN-AID] From top split: LEFT «וערת אילם מאדמים וערת תחשים» / RIGHT «ועצי
-# שטים». Derive claim from Hebrew arms, not English alone. Exod 35:7."
+# ‹וערת אילם מאדמים› (“and-skin ram flush”)
+# ‹וערת תחשים … ועצי› (“and-skin animal-with-fur … and-tree”)
+# ‹שטים› (“acacia”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:7."
 m.step("Exod.35.7")
 
 # -------------------------- Exod.35.8 · ETNACHTA_SPLIT ---------------------
-# ושמן למאור … ובשמים לשמן המשחה ולקטרת הסמים
-# "[EN-AID] From top split: LEFT «ושמן למאור» / RIGHT «ובשמים לשמן המשחה
-# ולקטרת הסמים». Derive claim from Hebrew arms, not English alone. Exod
-# 35:8."
+# ‹ושמן למאור … ובשמים› (“and-oil to-lights … and-fragrance”)
+# ‹לשמן המשחה ולקטרת› (“to-oil the-unction and-to-fumigation”)
+# ‹הסמים› (“the-aroma”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:8."
 m.step("Exod.35.8")
 
 # -------------------------- Exod.35.9 · ETNACHTA_SPLIT ---------------------
-# ואבני שהם ואבני מלאים … לאפוד ולחשן
-# "[EN-AID] From top split: LEFT «ואבני שהם ואבני מלאים» / RIGHT «לאפוד
-# ולחשן». Derive claim from Hebrew arms, not English alone. Exod 35:9."
+# ‹ואבני שהם ואבני› (“and-stone gem and-stone”)
+# ‹מלאים … לאפוד ולחשן› (“fulfilling … to-girdle and-to-perhaps-a-pocket”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:9."
 m.step("Exod.35.9")
 
 # -------------------------- Exod.35.10 · ETNACHTA_SPLIT --------------------
-# וכל חכם לב בכם … יבאו ויעשו את כל אשר צוה יהוה
-# "[EN-AID] From top split: LEFT «וכל חכם לב בכם» / RIGHT «יבאו ויעשו את כל
-# אשר צוה יהוה». Derive claim from Hebrew arms, not English alone. Exod
-# 35:10."
+# ‹וכל חכם לב› (“and-all wise heart”)
+# ‹בכם … יבאו ויעשו› (“in-you/your(pl) … come/bring and-make”)
+# ‹את כל אשר› (“obj-marker all which”)
+# ‹צוה יהוה› (“command YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:10."
 m.step("Exod.35.10")
 
 # -------------------------- Exod.35.11 · ETNACHTA_SPLIT --------------------
-# את המשכן את אהלו ואת מכסהו … את קרסיו ואת קרשיו את בריחו את עמדיו ואת
-# אדניו
-# "[EN-AID] From top split: LEFT «את המשכן את אהלו ואת מכסהו» / RIGHT «את
-# קרסיו ואת קרשיו את בריחו את עמדיו ואת אדניו». Derive claim from Hebrew
+# ‹את המשכן את› (“obj-marker the-tabernacle obj-marker”)
+# ‹אהלו ואת מכסהו› (“tent-him/its and-obj-marker covering-him/its”)
+# ‹… את קרסיו ואת› (“obj-marker knob-him/its and-obj-marker”)
+# ‹קרשיו את בריחו› (“slab-him/its obj-marker bolt-him/its”)
+# ‹את עמדיו ואת› (“obj-marker column-him/its and-obj-marker”)
+# ‹אדניו› (“basis-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 35:11."
 m.step("Exod.35.11")
 
 # -------------------------- Exod.35.12 · ETNACHTA_SPLIT --------------------
-# את הארן ואת בדיו את הכפרת … ואת פרכת המסך
-# "[EN-AID] From top split: LEFT «את הארן ואת בדיו את הכפרת» / RIGHT «ואת
-# פרכת המסך». Derive claim from Hebrew arms, not English alone. Exod 35:12."
+# ‹את הארן ואת› (“obj-marker the-ark and-obj-marker”)
+# ‹בדיו את הכפרת› (“separation-him/its obj-marker the-lid”)
+# ‹… ואת פרכת המסך› (“and-obj-marker separatrix the-cover”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:12."
 m.step("Exod.35.12")
 
 # -------------------------- Exod.35.13 · ETNACHTA_SPLIT --------------------
-# את השלחן ואת בדיו ואת כל כליו … ואת לחם הפנים
-# "[EN-AID] From top split: LEFT «את השלחן ואת בדיו ואת כל כליו» / RIGHT
-# «ואת לחם הפנים». Derive claim from Hebrew arms, not English alone. Exod
-# 35:13."
+# ‹את השלחן ואת› (“obj-marker the-table and-obj-marker”)
+# ‹בדיו ואת כל› (“separation-him/its and-obj-marker all”)
+# ‹כליו … ואת לחם› (“vessel-him/its … and-obj-marker food”)
+# ‹הפנים› (“the-face”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:13."
 m.step("Exod.35.13")
 
 # -------------------------- Exod.35.14 · ETNACHTA_SPLIT --------------------
-# ואת מנרת המאור ואת כליה ואת נרתיה … ואת שמן המאור
-# "[EN-AID] From top split: LEFT «ואת מנרת המאור ואת כליה ואת נרתיה» / RIGHT
-# «ואת שמן המאור». Derive claim from Hebrew arms, not English alone. Exod
-# 35:14."
+# ‹ואת מנרת המאור› (“and-obj-marker chandelier the-lights”)
+# ‹ואת כליה ואת› (“and-obj-marker vessel-her/its and-obj-marker”)
+# ‹נרתיה … ואת שמן› (“lamp-her/its … and-obj-marker oil”)
+# ‹המאור› (“the-lights”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:14."
 m.step("Exod.35.14")
 
 # -------------------------- Exod.35.15 · ETNACHTA_SPLIT --------------------
-# ואת מזבח הקטרת ואת בדיו ואת שמן המשחה ואת קטרת הסמים … ואת מסך הפתח לפתח
-# המשכן
-# "[EN-AID] From top split: LEFT «ואת מזבח הקטרת ואת בדיו ואת שמן המשחה ואת
-# קטרת הסמים» / RIGHT «ואת מסך הפתח לפתח המשכן». Derive claim from Hebrew
+# ‹ואת מזבח הקטרת› (“and-obj-marker altar the-fumigation”)
+# ‹ואת בדיו ואת› (“and-obj-marker separation-him/its and-obj-marker”)
+# ‹שמן המשחה ואת› (“oil the-unction and-obj-marker”)
+# ‹קטרת הסמים … ואת› (“fumigation the-aroma … and-obj-marker”)
+# ‹מסך הפתח לפתח› (“cover the-opening to-opening”)
+# ‹המשכן› (“the-tabernacle”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 35:15."
 m.step("Exod.35.15")
 
 # -------------------------- Exod.35.16 · ETNACHTA_SPLIT --------------------
-# את מזבח העלה ואת מכבר הנחשת אשר לו את בדיו ואת כל כליו … את הכיר ואת כנו
-# "[EN-AID] From top split: LEFT «את מזבח העלה ואת מכבר הנחשת אשר לו את בדיו
-# ואת כל כליו» / RIGHT «את הכיר ואת כנו». Derive claim from Hebrew arms, not
-# English alone. Exod 35:16."
+# ‹את מזבח העלה› (“obj-marker altar the-burnt-offering”)
+# ‹ואת מכבר הנחשת› (“and-obj-marker grate the-copper”)
+# ‹אשר לו את› (“which to-him/its obj-marker”)
+# ‹בדיו ואת כל› (“separation-him/its and-obj-marker all”)
+# ‹כליו … את הכיר› (“vessel-him/its … obj-marker the-something-round”)
+# ‹ואת כנו› (“and-obj-marker stand-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:16."
 m.step("Exod.35.16")
 
 # -------------------------- Exod.35.17 · ETNACHTA_SPLIT --------------------
-# את קלעי החצר את עמדיו ואת אדניה … ואת מסך שער החצר
-# "[EN-AID] From top split: LEFT «את קלעי החצר את עמדיו ואת אדניה» / RIGHT
-# «ואת מסך שער החצר». Derive claim from Hebrew arms, not English alone. Exod
-# 35:17."
+# ‹את קלעי החצר› (“obj-marker sling the-yard”)
+# ‹את עמדיו ואת› (“obj-marker column-him/its and-obj-marker”)
+# ‹אדניה … ואת מסך› (“basis-her/its … and-obj-marker cover”)
+# ‹שער החצר› (“gate the-yard”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:17."
 m.step("Exod.35.17")
 
 # -------------------------- Exod.35.18 · TREE_CLAIM ------------------------
-# את יתדת המשכן ואת יתדת החצר … ואת מיתריהם
-# "[EN-AID] From top split: LEFT «את יתדת המשכן ואת יתדת החצר» / RIGHT «ואת
-# מיתריהם». Derive claim from Hebrew arms, not English alone. Exod 35:18."
+# ‹את יתדת המשכן› (“obj-marker peg the-tabernacle”)
+# ‹ואת יתדת החצר› (“and-obj-marker peg the-yard”)
+# ‹… ואת מיתריהם› (“and-obj-marker cord-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:18."
 m.step("Exod.35.18")
 
 # -------------------------- Exod.35.19 · ETNACHTA_SPLIT --------------------
-# את בגדי השרד לשרת בקדש … את בגדי הקדש לאהרן הכהן ואת בגדי בניו לכהן
-# "[EN-AID] From top split: LEFT «את בגדי השרד לשרת בקדש» / RIGHT «את בגדי
-# הקדש לאהרן הכהן ואת בגדי בניו לכהן». Derive claim from Hebrew arms, not
-# English alone. Exod 35:19."
+# ‹את בגדי השרד› (“obj-marker garment the-stitching”)
+# ‹לשרת בקדש … את› (“to-attend-as-a-menial in-holiness … obj-marker”)
+# ‹בגדי הקדש לאהרן› (“garment the-holiness to-Aaron”)
+# ‹הכהן ואת בגדי› (“the-priest and-obj-marker garment”)
+# ‹בניו לכהן› (“son-him/its to-officiate-as-a-priest”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:19."
 m.step("Exod.35.19")
 
 # -------------------------- Exod.35.20 · TREE_CLAIM ------------------------
-# ויצאו כל עדת בני ישראל … מלפני משה
-# "[EN-AID] From top split: LEFT «ויצאו כל עדת בני ישראל» / RIGHT «מלפני
-# משה». Derive claim from Hebrew arms, not English alone. Exod 35:20."
+# ‹ויצאו כל עדת› (“and-bring-forth all congregation”)
+# ‹בני ישראל … מלפני› (“son Israel … from-to-face”)
+# ‹משה› (“Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:20."
 m.step("Exod.35.20")
 
 # -------------------------- Exod.35.21 · ETNACHTA_SPLIT --------------------
-# ויבאו כל איש אשר נשאו לבו … וכל אשר נדבה רוחו אתו הביאו את תרומת יהוה
-# למלאכת אהל מועד ול
-# "[EN-AID] From top split: LEFT «ויבאו כל איש אשר נשאו לבו» / RIGHT «וכל
-# אשר נדבה רוחו אתו הביאו את תרומת יהוה למלאכת אהל מועד ולכל עבדתו ולבגדי
-# הקדש». Derive claim from Hebrew arms, not English alone. Exod 35:21."
+# ‹ויבאו כל איש› (“and-come/bring all man”)
+# ‹אשר נשאו לבו› (“which lift/carry-him/its heart-him/its”)
+# ‹… וכל אשר נדבה› (“and-all which impel”)
+# ‹רוחו אתו הביאו› (“spirit-him/its obj-marker-him/its come/bring”)
+# ‹את תרומת יהוה› (“obj-marker present YHWH”)
+# ‹למלאכת אהל מועד› (“to-work tent seasons”)
+# ‹ול› (“?”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:21."
 m.step("Exod.35.21")
 
 # -------------------------- Exod.35.22 · ETNACHTA_SPLIT --------------------
-# ויבאו האנשים על הנשים … כל נדיב לב הביאו חח ונזם וטבעת וכומז כל כלי זהב
-# וכל איש אשר
-# "[EN-AID] From top split: LEFT «ויבאו האנשים על הנשים» / RIGHT «כל נדיב לב
-# הביאו חח ונזם וטבעת וכומז כל כלי זהב וכל איש אשר הניף תנופת זהב ליהוה».
-# Derive claim from Hebrew arms, not English alone. Exod 35:22."
+# ‹ויבאו האנשים על› (“and-come/bring the-man over”)
+# ‹הנשים … כל נדיב› (“the-woman … all voluntary”)
+# ‹לב הביאו חח› (“heart come/bring ring-for-the-nose”)
+# ‹ונזם וטבעת וכומז› (“and-nose-ring and-seal and-jewel”)
+# ‹כל כלי זהב› (“all vessel gold”)
+# ‹וכל איש אשר› (“and-all man which”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:22."
 m.step("Exod.35.22")
 # witness-tier presupposed read: additive_preposition on men_and_women —
 # read, not installed
@@ -183,26 +236,36 @@ m.witness_read("men_and_women", "additive_preposition",
                 cites=["Midrash Tanchuma, Pekudei 11:2", "Onkelos Exod 35"])
 
 # -------------------------- Exod.35.23 · ETNACHTA_SPLIT --------------------
-# וכל איש אשר נמצא אתו תכלת וארגמן ותולעת שני ושש ועזים … וערת אילם מאדמים
-# וערת תחשים הביאו
-# "[EN-AID] From top split: LEFT «וכל איש אשר נמצא אתו תכלת וארגמן ותולעת
-# שני ושש ועזים» / RIGHT «וערת אילם מאדמים וערת תחשים הביאו». Derive claim
-# from Hebrew arms, not English alone. Exod 35:23."
+# ‹וכל איש אשר› (“and-all man which”)
+# ‹נמצא אתו תכלת› (“find with-him/its cerulean-mussel”)
+# ‹וארגמן ותולעת שני› (“and-purple and-crimson-grub crimson”)
+# ‹ושש ועזים … וערת› (“and-bleached-stuff and-she-goat … and-skin”)
+# ‹אילם מאדמים וערת› (“ram flush and-skin”)
+# ‹תחשים הביאו› (“animal-with-fur come/bring”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:23."
 m.step("Exod.35.23")
 
 # -------------------------- Exod.35.24 · ETNACHTA_SPLIT --------------------
-# כל מרים תרומת כסף ונחשת הביאו את תרומת יהוה … וכל אשר נמצא אתו עצי שטים
-# לכל מלאכת העבדה הביאו
-# "[EN-AID] From top split: LEFT «כל מרים תרומת כסף ונחשת הביאו את תרומת
-# יהוה» / RIGHT «וכל אשר נמצא אתו עצי שטים לכל מלאכת העבדה הביאו». Derive
-# claim from Hebrew arms, not English alone. Exod 35:24."
+# ‹כל מרים תרומת› (“all rise-high present”)
+# ‹כסף ונחשת הביאו› (“silver and-copper come/bring”)
+# ‹את תרומת יהוה› (“obj-marker present YHWH”)
+# ‹… וכל אשר נמצא› (“and-all which find”)
+# ‹אתו עצי שטים› (“with-him/its tree acacia”)
+# ‹לכל מלאכת העבדה› (“to-all work the-service/work”)
+# ‹הביאו› (“come/bring”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:24."
 m.step("Exod.35.24")
 
 # -------------------------- Exod.35.25 · ETNACHTA_SPLIT --------------------
-# וכל אשה חכמת לב בידיה טוו … ויביאו מטוה את התכלת ואת הארגמן את תולעת השני
-# ואת השש
-# "[EN-AID] From top split: LEFT «וכל אשה חכמת לב בידיה טוו» / RIGHT «ויביאו
-# מטוה את התכלת ואת הארגמן את תולעת השני ואת השש». Derive claim from Hebrew
+# ‹וכל אשה חכמת› (“and-all woman wise”)
+# ‹לב בידיה טוו› (“heart in-hand-her/its spin”)
+# ‹… ויביאו מטוה את› (“and-come/bring something-spun obj-marker”)
+# ‹התכלת ואת הארגמן› (“the-cerulean-mussel and-obj-marker the-purple”)
+# ‹את תולעת השני› (“obj-marker crimson-grub the-crimson”)
+# ‹ואת השש› (“and-obj-marker the-bleached-stuff”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 35:25."
 m.step("Exod.35.25")
 # witness-tier presupposed read: womens_craft on wise_women — read, not
@@ -211,17 +274,21 @@ m.witness_read("wise_women", "womens_craft",
                 cites=["Onkelos Exod 35"])
 
 # -------------------------- Exod.35.26 · ETNACHTA_SPLIT --------------------
-# וכל הנשים אשר נשא לבן אתנה בחכמה … טוו את העזים
-# "[EN-AID] From top split: LEFT «וכל הנשים אשר נשא לבן אתנה בחכמה» / RIGHT
-# «טוו את העזים». Derive claim from Hebrew arms, not English alone. Exod
-# 35:26."
+# ‹וכל הנשים אשר› (“and-all the-woman which”)
+# ‹נשא לבן אתנה› (“lift/carry heart-them/their obj-marker-them/their”)
+# ‹בחכמה … טוו את› (“in-wisdom … spin obj-marker”)
+# ‹העזים› (“the-she-goat”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:26."
 m.step("Exod.35.26")
 
 # -------------------------- Exod.35.27 · ETNACHTA_SPLIT --------------------
-# והנשאם הביאו את אבני השהם ואת אבני המלאים … לאפוד ולחשן
-# "[EN-AID] From top split: LEFT «והנשאם הביאו את אבני השהם ואת אבני המלאים»
-# / RIGHT «לאפוד ולחשן». Derive claim from Hebrew arms, not English alone.
-# Exod 35:27."
+# ‹והנשאם הביאו את› (“and-the-prince come/bring obj-marker”)
+# ‹אבני השהם ואת› (“stone the-gem and-obj-marker”)
+# ‹אבני המלאים … לאפוד› (“stone the-fulfilling … to-girdle”)
+# ‹ולחשן› (“and-to-perhaps-a-pocket”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:27."
 m.step("Exod.35.27")
 # witness-tier presupposed read: defective_spelling on leaders_late — read,
 # not installed
@@ -229,18 +296,23 @@ m.witness_read("leaders_late", "defective_spelling",
                 cites=["Midrash Tanchuma, Pekudei 11:3", "Midrash Tanchuma, Pekudei 11:4"])
 
 # -------------------------- Exod.35.28 · ETNACHTA_SPLIT --------------------
-# ואת הבשם ואת השמן … למאור ולשמן המשחה ולקטרת הסמים
-# "[EN-AID] From top split: LEFT «ואת הבשם ואת השמן» / RIGHT «למאור ולשמן
-# המשחה ולקטרת הסמים». Derive claim from Hebrew arms, not English alone.
-# Exod 35:28."
+# ‹ואת הבשם ואת› (“and-obj-marker the-fragrance and-obj-marker”)
+# ‹השמן … למאור ולשמן› (“the-oil … to-lights and-to-oil”)
+# ‹המשחה ולקטרת הסמים› (“the-unction and-to-fumigation the-aroma”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:28."
 m.step("Exod.35.28")
 
 # -------------------------- Exod.35.29 · ETNACHTA_SPLIT --------------------
-# כל איש ואשה אשר נדב לבם אתם להביא לכל המלאכה אשר צוה יהוה לע … הביאו בני
-# ישראל נדבה ליהוה
-# "[EN-AID] From top split: LEFT «כל איש ואשה אשר נדב לבם אתם להביא לכל
-# המלאכה אשר צוה יהוה לעשות ביד משה» / RIGHT «הביאו בני ישראל נדבה ליהוה».
-# Derive claim from Hebrew arms, not English alone. Exod 35:29."
+# ‹כל איש ואשה› (“all man and-woman”)
+# ‹אשר נדב לבם› (“which impel heart-them/their”)
+# ‹אתם להביא לכל› (“obj-marker-them/their to-come/bring to-all”)
+# ‹המלאכה אשר צוה› (“the-work which command”)
+# ‹יהוה לע … הביאו› (“YHWH ? … come/bring”)
+# ‹בני ישראל נדבה› (“son Israel spontaneity”)
+# ‹ליהוה› (“to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 35:29."
 m.step("Exod.35.29")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

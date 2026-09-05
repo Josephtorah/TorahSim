@@ -14,11 +14,13 @@ from machine import Machine
 m = Machine("gen_25_babel")
 
 # -------------------------- Gen.11.1 · ONE_LIP_ONE_WORDS -------------------
-# וַיְהִי כָל־הָאָרֶץ שָׂפָה אֶחָת וּדְבָרִים אֲחָדִים
+# ‹וַיְהִי כָל־הָאָרֶץ שָׂפָה› (“and-be all the-earth lip”)
+# ‹אֶחָת וּדְבָרִים אֲחָדִים› (“one and-words one”)
 # "And the whole earth was of one language and of one speech."
 m.step("Gen.11.1")
-# ‹כָל־הָאָרֶץ שָׂפָה אֶחָת וּדְבָרִים אֲחָדִים› (“all the-earth lip one
-# and-words one”) — fact holds: all-the-earth-safah-one-and-words-one
+# ‹כָל־הָאָרֶץ שָׂפָה אֶחָת› (“all the-earth lip one”)
+# ‹וּדְבָרִים אֲחָדִים› (“and-words one”)
+# — fact holds: all-the-earth-safah-one-and-words-one
 m.fact("kol_ha_aretz_safah_echat_u_devarim_achadim")
 # witness-tier presupposed read: parsed_four_ways_and_name_as_idolatry on
 # one_speech — read, not installed
@@ -26,19 +28,21 @@ m.witness_read("one_speech", "parsed_four_ways_and_name_as_idolatry",
                 cites=["Bereshit Rabbah 38:6", "Mekhilta DeRabbi Yishmael, Tractate Kaspa 4:5"])
 
 # -------------------------- Gen.11.2 · THE_JOURNEY_EAST_TO_SHINAR ----------
-# וַיְהִי בְּנָסְעָם מִקֶּדֶם וַיִּמְצְאוּ בִקְעָה בְּאֶרֶץ שִׁנְעָר
-# וַיֵּשְׁבוּ שָׁם
+# ‹וַיְהִי בְּנָסְעָם מִקֶּדֶם› (“and-be as-they-journeyed from-the-east”)
+# ‹וַיִּמְצְאוּ בִקְעָה בְּאֶרֶץ› (“and-find a-valley in-earth”)
+# ‹שִׁנְעָר וַיֵּשְׁבוּ שָׁם› (“Shinar and-they-settled there”)
 # "And it came to pass, as they journeyed east, that they found a plain in
 # the land of Shinar; and they dwelt there."
 m.step("Gen.11.2")
-# ‹בְּנָסְעָם מִקֶּדֶם› (“as-they-journeyed from-the-east”) — fact holds:
-# in-nasam-from-east
+# ‹בְּנָסְעָם מִקֶּדֶם› (“as-they-journeyed from-the-east”)
+# — fact holds: in-nasam-from-east
 m.fact("be_nasam_mi_qedem")
-# ‹וַיִּמְצְאוּ בִקְעָה בְּאֶרֶץ שִׁנְעָר› (“and-find a-valley in-earth
-# Shinar”) — event: find — theme viqah-in-earth-Shinar
+# ‹וַיִּמְצְאוּ בִקְעָה בְּאֶרֶץ› (“and-find a-valley in-earth”)
+# ‹שִׁנְעָר› (“Shinar”)
+# — event: find — theme viqah-in-earth-Shinar
 m.event("find", themes=["viqah_be_eretz_shinar"])
-# ‹וַיֵּשְׁבוּ שָׁם› (“and-they-settled there”) — event: settle — theme
-# there
+# ‹וַיֵּשְׁבוּ שָׁם› (“and-they-settled there”)
+# — event: settle — theme there
 m.event("settle", themes=["sham"])
 # reads without prior install (flag, not fix): Shinar
 m.presupposed("shinar")
@@ -48,51 +52,64 @@ m.witness_read("sitting_verb", "satisfaction_cause_chain",
                 cites=["Mekhilta DeRabbi Yishmael, Tractate Shirah 5:9", "Sifrei Devarim 43:9", "Tosefta Sotah 3:3"])
 
 # -------------------------- Gen.11.3 · COME_LET_US_BRICK -------------------
-# וַיֹּאמְרוּ אִישׁ אֶל־רֵעֵהוּ הָבָה נִלְבְּנָה לְבֵנִים וְנִשְׂרְפָה
-# לִשְׂרֵפָה וַתְּהִי לָהֶם הַלְּבֵנָה לְאָבֶן וְהַחֵמָר הָיָה לָהֶם לַחֹמֶר
+# ‹וַיֹּאמְרוּ אִישׁ אֶל־רֵעֵהוּ› (“and-say man to his-fellow”)
+# ‹הָבָה נִלְבְּנָה לְבֵנִים› (“come let-us-brick bricks”)
+# ‹וְנִשְׂרְפָה לִשְׂרֵפָה וַתְּהִי› (“and-let-us-burn a-burning and-be”)
+# ‹לָהֶם הַלְּבֵנָה לְאָבֶן› (“for-them the-brick for-stone”)
+# ‹וְהַחֵמָר הָיָה לָהֶם› (“and-the-bitumen be for-them”)
+# ‹לַחֹמֶר› (“for-mortar”)
 # "And they said one to another: 'Come, let us make brick, and burn them
 # thoroughly.' And they had brick for stone, and slime had they for mortar."
 m.step("Gen.11.3")
-# ‹וַיֹּאמְרוּ אִישׁ אֶל־רֵעֵהוּ הָבָה› (“and-say man to his-fellow come”) —
-# event: speak — agent man-to-reehu
+# ‹וַיֹּאמְרוּ אִישׁ אֶל־רֵעֵהוּ› (“and-say man to his-fellow”)
+# ‹הָבָה› (“come”)
+# — event: speak — agent man-to-reehu
 m.event("speak", agent="ish_el_reehu")
-# ‹נִלְבְּנָה לְבֵנִים› (“let-us-brick bricks”) — man-to-reehu speaks a
-# demand — CMD-US: nilbenah(bricks)
+# ‹נִלְבְּנָה לְבֵנִים› (“let-us-brick bricks”)
+# — man-to-reehu speaks a demand — CMD-US: nilbenah(bricks)
 m.declare("ish_el_reehu", "CMD-US",
           "nilbenah(levenim)")
-# ‹וְנִשְׂרְפָה לִשְׂרֵפָה› (“and-let-us-burn a-burning”) — man-to-reehu
-# speaks a demand — CMD-US: nisrefah(to-me-serefah)
+# ‹וְנִשְׂרְפָה לִשְׂרֵפָה› (“and-let-us-burn a-burning”)
+# — man-to-reehu speaks a demand — CMD-US: nisrefah(to-me-serefah)
 m.declare("ish_el_reehu", "CMD-US",
           "nisrefah(li_serefah)")
-# ‹וַתְּהִי לָהֶם הַלְּבֵנָה לְאָבֶן וְהַחֵמָר הָיָה לָהֶם לַחֹמֶר› (“and-be
-# for-them the-brick for-stone and-the-bitumen be for-them for-mortar”) —
-# fact holds: and-be-to-them-the-levenah-to-stone; and-the-bitumen-was-to-
+# ‹וַתְּהִי לָהֶם הַלְּבֵנָה› (“and-be for-them the-brick”)
+# ‹לְאָבֶן וְהַחֵמָר הָיָה› (“for-stone and-the-bitumen be”)
+# ‹לָהֶם לַחֹמֶר› (“for-them for-mortar”)
+# — fact holds: and-be-to-them-the-levenah-to-stone; and-the-bitumen-was-to-
 # them-to-mortar
 m.fact("va_tehi_lahem_ha_levenah_le_aven",
        "ve_ha_chemar_hayah_lahem_la_chomer")
 
 # -------------------------- Gen.11.4 · CITY_TOWER_NAME_AND_FEAR ------------
-# וַיֹּאמְרוּ הָבָה נִבְנֶה־לָּנוּ עִיר וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם
-# וְנַעֲשֶׂה־לָּנוּ שֵׁם פֶּן־נָפוּץ עַל־פְּנֵי כָל־הָאָרֶץ
+# ‹וַיֹּאמְרוּ הָבָה נִבְנֶה־לָּנוּ› (“and-say come let-us-build for-us”)
+# ‹עִיר וּמִגְדָּל וְרֹאשׁוֹ› (“a-city and-a-tower and-its-head”)
+# ‹בַשָּׁמַיִם וְנַעֲשֶׂה־לָּנוּ שֵׁם› (“in-the-heavens and-let-us-make for-
+# us a-name”)
+# ‹פֶּן־נָפוּץ עַל־פְּנֵי כָל־הָאָרֶץ› (“lest we-be-scattered over the-face-
+# of all the-earth”)
 # "And they said: 'Come, let us build us a city, and a tower, with its top
 # in heaven, and let us make us a name; lest we be scattered abroad upon the
 # face of the whole earth.'"
 m.step("Gen.11.4")
-# ‹וַיֹּאמְרוּ הָבָה› (“and-say come”) — event: speak — agent man-to-reehu
+# ‹וַיֹּאמְרוּ הָבָה› (“and-say come”)
+# — event: speak — agent man-to-reehu
 m.event("speak", agent="ish_el_reehu")
-# ‹נִבְנֶה־לָּנוּ עִיר וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם› (“let-us-build for-
-# us a-city and-a-tower and-its-head in-the-heavens”) — man-to-reehu speaks
-# a demand — CMD-US?: nivneh(a-city-and-a-tower)
+# ‹נִבְנֶה־לָּנוּ עִיר וּמִגְדָּל› (“let-us-build for-us a-city and-a-
+# tower”)
+# ‹וְרֹאשׁוֹ בַשָּׁמַיִם› (“and-its-head in-the-heavens”)
+# — man-to-reehu speaks a demand — CMD-US?: nivneh(a-city-and-a-tower)
 m.declare("ish_el_reehu", "CMD-US?",
           "nivneh(ir_u_migdal)")
-# ‹וְנַעֲשֶׂה־לָּנוּ שֵׁם› (“and-let-us-make for-us a-name”) — man-to-reehu
-# speaks a demand — CMD-US?: naaseh(lanu-a-name)
+# ‹וְנַעֲשֶׂה־לָּנוּ שֵׁם› (“and-let-us-make for-us a-name”)
+# — man-to-reehu speaks a demand — CMD-US?: naaseh(lanu-a-name)
 m.declare("ish_el_reehu", "CMD-US?",
           "naaseh(lanu_shem)")
-# ‹וְרֹאשׁוֹ בַשָּׁמַיִם … פֶּן־נָפוּץ עַל־פְּנֵי כָל־הָאָרֶץ› (“and-its-
-# head in-the-heavens … lest we-be-scattered over the-face-of all the-
-# earth”) — fact holds: and-rosho-and-heavens; lest-we-be-scattered-over-
-# face-of-all-the-earth
+# ‹וְרֹאשׁוֹ בַשָּׁמַיִם … פֶּן־נָפוּץ› (“and-its-head in-the-heavens … lest
+# we-be-scattered”)
+# ‹עַל־פְּנֵי כָל־הָאָרֶץ› (“over the-face-of all the-earth”)
+# — fact holds: and-rosho-and-heavens; lest-we-be-scattered-over-face-of-
+# all-the-earth
 m.fact("ve_rosho_va_shamayim",
        "pen_nafutz_al_pnei_khol_ha_aretz")
 # witness-tier presupposed read:
@@ -106,49 +123,60 @@ m.witness_read("beit_nimrod", "annulment_precedent",
                 cites=["Avodah Zarah 53b:12", "Avodah Zarah 53b:13", "Avodah Zarah 53b:14"])
 
 # -------------------------- Gen.11.5 · THE_DESCENT_TO_SEE ------------------
-# וַיֵּרֶד יְהוָה לִרְאֹת אֶת־הָעִיר וְאֶת־הַמִּגְדָּל אֲשֶׁר בָּנוּ בְּנֵי
-# הָאָדָם
+# ‹וַיֵּרֶד יְהוָה לִרְאֹת› (“and-He-descended YHWH to-see”)
+# ‹אֶת־הָעִיר וְאֶת־הַמִּגְדָּל אֲשֶׁר› (“obj-marker the-city obj-marker
+# the-tower which”)
+# ‹בָּנוּ בְּנֵי הָאָדָם› (“they-built son the-humankind”)
 # "And the LORD came down to see the city and the tower, which the children
 # of men builded."
 m.step("Gen.11.5")
-# ‹וַיֵּרֶד יְהוָה לִרְאֹת› (“and-He-descended YHWH to-see”) — event:
-# descend — agent the-LORD; theme lirot-obj-marker·et-the-a-city-and-obj-
-# marker·et-the-a-tower
+# ‹וַיֵּרֶד יְהוָה לִרְאֹת› (“and-He-descended YHWH to-see”)
+# — event: descend — agent the-LORD; theme lirot-obj-marker·et-the-a-city-
+# and-obj-marker·et-the-a-tower
 m.event("descend", agent="YHWH", themes=["lirot_et_ha_ir_ve_et_ha_migdal"])
-# ‹אֲשֶׁר בָּנוּ בְּנֵי הָאָדָם› (“which they-built son the-humankind”) —
-# fact holds: which-they-built-sons-of-the-humankind
+# ‹אֲשֶׁר בָּנוּ בְּנֵי› (“which they-built son”)
+# ‹הָאָדָם› (“the-humankind”)
+# — fact holds: which-they-built-sons-of-the-humankind
 m.fact("asher_banu_bnei_ha_adam")
 
 # -------------------------- Gen.11.6 · ONE_PEOPLE_THE_ASSESSMENT -----------
-# וַיֹּאמֶר יְהוָה הֵן עַם אֶחָד וְשָׂפָה אַחַת לְכֻלָּם וְזֶה הַחִלָּם
-# לַעֲשׂוֹת וְעַתָּה לֹא־יִבָּצֵר מֵהֶם כֹּל אֲשֶׁר יָזְמוּ לַעֲשׂוֹת
+# ‹וַיֹּאמֶר יְהוָה הֵן› (“and-say YHWH behold”)
+# ‹עַם אֶחָד וְשָׂפָה› (“people one and-lip”)
+# ‹אַחַת לְכֻלָּם וְזֶה› (“one for-all-of-them and-this”)
+# ‹הַחִלָּם לַעֲשׂוֹת וְעַתָּה› (“their-beginning to-do and-now”)
+# ‹לֹא־יִבָּצֵר מֵהֶם כֹּל› (“not will-be-withheld from-them all”)
+# ‹אֲשֶׁר יָזְמוּ לַעֲשׂוֹת› (“which they-plan to-do”)
 # "And the LORD said: 'Behold, they are one people, and they have all one
 # language; and this is what they begin to do; and now nothing will be
 # withholden from them, which they purpose to do.'"
 m.step("Gen.11.6")
-# ‹וַיֹּאמֶר יְהוָה הֵן עַם אֶחָד› (“and-say YHWH behold people one”) —
-# event: speak — agent the-LORD; theme behold-people-one
+# ‹וַיֹּאמֶר יְהוָה הֵן› (“and-say YHWH behold”)
+# ‹עַם אֶחָד› (“people one”)
+# — event: speak — agent the-LORD; theme behold-people-one
 m.event("speak", agent="YHWH", themes=["hen_am_echad"])
-# ‹הֵן עַם אֶחָד … וְזֶה הַחִלָּם לַעֲשׂוֹת … לֹא־יִבָּצֵר מֵהֶם› (“behold
-# people one … and-this their-beginning to-do … not will-be-withheld from-
-# them”) — fact holds: behold-people-one-and-safah-one-to-khulam; and-this-
+# ‹הֵן עַם אֶחָד› (“behold people one”)
+# ‹… וְזֶה הַחִלָּם לַעֲשׂוֹת› (“and-this their-beginning to-do”)
+# ‹… לֹא־יִבָּצֵר מֵהֶם› (“not will-be-withheld from-them”)
+# — fact holds: behold-people-one-and-safah-one-to-khulam; and-this-
 # hachillam-to-do; not-will-be-withheld-mehem-all-which-they-plan
 m.fact("hen_am_echad_ve_safah_achat_le_khulam",
        "ve_zeh_hachillam_la_asot",
        "lo_yibatzer_mehem_kol_asher_yazmu")
 
 # -------------------------- Gen.11.7 · THE_MIRRORED_COUNTER_COUNCIL --------
-# הָבָה נֵרְדָה וְנָבְלָה שָׁם שְׂפָתָם אֲשֶׁר לֹא יִשְׁמְעוּ אִישׁ שְׂפַת
-# רֵעֵהוּ
+# ‹הָבָה נֵרְדָה וְנָבְלָה› (“come let-Us-descend and-let-Us-confuse”)
+# ‹שָׁם שְׂפָתָם אֲשֶׁר› (“there their-lip which”)
+# ‹לֹא יִשְׁמְעוּ אִישׁ› (“not understand man”)
+# ‹שְׂפַת רֵעֵהוּ› (“lip-of his-fellow”)
 # "'Come, let us go down, and there confound their language, that they may
 # not understand one another's speech.'"
 m.step("Gen.11.7")
-# ‹הָבָה נֵרְדָה› (“come let-Us-descend”) — the-LORD speaks a demand — CMD-
-# US: nerdah(there)
+# ‹הָבָה נֵרְדָה› (“come let-Us-descend”)
+# — the-LORD speaks a demand — CMD-US: nerdah(there)
 m.declare("YHWH", "CMD-US",
           "nerdah(sham)")
-# ‹וְנָבְלָה שָׁם שְׂפָתָם› (“and-let-Us-confuse there their-lip”) — the-
-# LORD speaks a demand — CMD-US: navlah(there-sefatam)
+# ‹וְנָבְלָה שָׁם שְׂפָתָם› (“and-let-Us-confuse there their-lip”)
+# — the-LORD speaks a demand — CMD-US: navlah(there-sefatam)
 m.declare("YHWH", "CMD-US",
           "navlah(sham_sefatam)")
 # witness-tier presupposed read: translation_alteration_canon_member on
@@ -157,36 +185,44 @@ m.witness_read("let_us_descend", "translation_alteration_canon_member",
                 cites=["Bereshit Rabbah 38:10"])
 
 # -------------------------- Gen.11.8 · THE_SCATTER_AND_THE_CEASING ---------
-# וַיָּפֶץ יְהוָה אֹתָם מִשָּׁם עַל־פְּנֵי כָל־הָאָרֶץ וַיַּחְדְּלוּ לִבְנֹת
-# הָעִיר
+# ‹וַיָּפֶץ יְהוָה אֹתָם› (“and-He-scattered YHWH obj-marker”)
+# ‹מִשָּׁם עַל־פְּנֵי כָל־הָאָרֶץ› (“from-there over the-face-of all the-
+# earth”)
+# ‹וַיַּחְדְּלוּ לִבְנֹת הָעִיר› (“and-they-ceased to-build the-city”)
 # "So the LORD scattered them abroad from thence upon the face of all the
 # earth; and they left off to build the city."
 m.step("Gen.11.8")
-# ‹וַיָּפֶץ יְהוָה אֹתָם מִשָּׁם› (“and-He-scattered YHWH obj-marker from-
-# there”) — event: scatter — agent the-LORD; theme from-there-over-face-of-
-# all-the-earth
+# ‹וַיָּפֶץ יְהוָה אֹתָם› (“and-He-scattered YHWH obj-marker”)
+# ‹מִשָּׁם› (“from-there”)
+# — event: scatter — agent the-LORD; theme from-there-over-face-of-all-the-
+# earth
 m.event("scatter", agent="YHWH", themes=["mi_sham_al_pnei_khol_ha_aretz"])
-# ‹וַיַּחְדְּלוּ לִבְנֹת הָעִיר› (“and-they-ceased to-build the-city”) —
-# fact holds: and-yachdelu-livnot-the-a-city
+# ‹וַיַּחְדְּלוּ לִבְנֹת הָעִיר› (“and-they-ceased to-build the-city”)
+# — fact holds: and-yachdelu-livnot-the-a-city
 m.fact("va_yachdelu_livnot_ha_ir")
 
 # -------------------------- Gen.11.9 · THE_NAME_ETIOLOGY_AND_THE_ECHO ------
-# עַל־כֵּן קָרָא שְׁמָהּ בָּבֶל כִּי־שָׁם בָּלַל יְהוָה שְׂפַת כָּל־הָאָרֶץ
-# וּמִשָּׁם הֱפִיצָם יְהוָה עַל־פְּנֵי כָּל־הָאָרֶץ
+# ‹עַל־כֵּן קָרָא שְׁמָהּ› (“over so one-called its-name”)
+# ‹בָּבֶל כִּי־שָׁם בָּלַל› (“Babel for there He-confused”)
+# ‹יְהוָה שְׂפַת כָּל־הָאָרֶץ› (“YHWH lip-of all the-earth”)
+# ‹וּמִשָּׁם הֱפִיצָם יְהוָה› (“and-from-there He-scattered-them YHWH”)
+# ‹עַל־פְּנֵי כָּל־הָאָרֶץ› (“over the-face-of all the-earth”)
 # "Therefore was the name of it called Babel; because the LORD did there
 # confound the language of all the earth; and from thence did the LORD
 # scatter them abroad upon the face of all the earth."
 m.step("Gen.11.9")
-# ‹כִּי־שָׁם בָּלַל יְהוָה שְׂפַת כָּל־הָאָרֶץ› (“for there He-confused YHWH
-# lip-of all the-earth”) — demand settled (popped from the queue):
-# navlah(there-sefatam)
+# ‹כִּי־שָׁם בָּלַל יְהוָה› (“for there He-confused YHWH”)
+# ‹שְׂפַת כָּל־הָאָרֶץ› (“lip-of all the-earth”)
+# — demand settled (popped from the queue): navlah(there-sefatam)
 m.result("navlah(sham_sefatam)", tmark="t2")
-# ‹עַל־כֵּן קָרָא שְׁמָהּ בָּבֶל› (“over so one-called its-name Babel”) —
-# pattern recorded: over-so-kara-shemah-Babel
+# ‹עַל־כֵּן קָרָא שְׁמָהּ› (“over so one-called its-name”)
+# ‹בָּבֶל› (“Babel”)
+# — pattern recorded: over-so-kara-shemah-Babel
 m.pattern("al_ken_kara_shemah_bavel")
-# ‹כִּי־שָׁם בָּלַל … וּמִשָּׁם הֱפִיצָם› (“for there He-confused … and-
-# from-there He-scattered-them”) — fact holds: for-there-He-confused-yhwh-
-# lip-of-all-the-earth; and-from-there-hefitzam-yhwh
+# ‹כִּי־שָׁם בָּלַל … וּמִשָּׁם› (“for there He-confused … and-from-there”)
+# ‹הֱפִיצָם› (“He-scattered-them”)
+# — fact holds: for-there-He-confused-yhwh-lip-of-all-the-earth; and-from-
+# there-hefitzam-yhwh
 m.fact("ki_sham_balal_yhwh_sefat_kol_ha_aretz",
        "u_mi_sham_hefitzam_yhwh")
 # witness-tier presupposed read: one_of_three_fates on scattering_outcome —

@@ -13,12 +13,16 @@ from machine import Machine
 
 m = Machine("exo_32_golden_calf")
 
-# -------------------------- Exod.32.1 · COND_כי ----------------------------
-# וירא העם כי בשש משה לרדת מן ההר … ויקהל העם על אהרן ויאמרו אליו קום עשה
-# לנו אלהים אשר ילכו לפנ
-# "[EN-AID] From top split: LEFT «וירא העם כי בשש משה לרדת מן ההר» / RIGHT
-# «ויקהל העם על אהרן ויאמרו אליו קום עשה לנו אלהים אשר ילכו לפנינו כי זה משה
-# האיש א». Derive claim from Hebrew arms, not English alone. Exod 32:1."
+# -------------------------- Exod.32.1 · COND_כי (“that”) -------------------
+# ‹וירא העם כי› (“and-see the-people that”)
+# ‹בשש משה לרדת› (“pale Moses to-go-down”)
+# ‹מן ההר … ויקהל› (“from the-mountain … and-convoke”)
+# ‹העם על אהרן› (“the-people over Aaron”)
+# ‹ויאמרו אליו קום› (“and-say to-him/its arise”)
+# ‹עשה לנו אלהים› (“make to-us/our God”)
+# ‹אשר ילכו לפנ› (“which go ?”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:1."
 m.step("Exod.32.1")
 # witness-tier presupposed read: event_dossier on calf_event — read, not
 # installed
@@ -26,46 +30,63 @@ m.witness_read("calf_event", "event_dossier",
                 cites=["Midrash Tanchuma, Ki Tisa 19", "Onkelos Exod 32"])
 
 # -------------------------- Exod.32.2 · ETNACHTA_SPLIT ---------------------
-# ויאמר אלהם אהרן פרקו נזמי הזהב אשר באזני נשיכם בניכם ובנתיכם … והביאו אלי
-# "[EN-AID] From top split: LEFT «ויאמר אלהם אהרן פרקו נזמי הזהב אשר באזני
-# נשיכם בניכם ובנתיכם» / RIGHT «והביאו אלי». Derive claim from Hebrew arms,
-# not English alone. Exod 32:2."
+# ‹ויאמר אלהם אהרן› (“and-say to-them/their Aaron”)
+# ‹פרקו נזמי הזהב› (“break-off nose-ring the-gold”)
+# ‹אשר באזני נשיכם› (“which in-broadness.-i.e.-the-ear woman-you/your(pl)”)
+# ‹בניכם ובנתיכם … והביאו› (“son-you/your(pl) and-daughter-you/your(pl) …
+# and-come/bring”)
+# ‹אלי› (“to-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:2."
 m.step("Exod.32.2")
 
 # -------------------------- Exod.32.3 · ETNACHTA_SPLIT ---------------------
-# ויתפרקו כל העם את נזמי הזהב אשר באזניהם … ויביאו אל אהרן
-# "[EN-AID] From top split: LEFT «ויתפרקו כל העם את נזמי הזהב אשר באזניהם» /
-# RIGHT «ויביאו אל אהרן». Derive claim from Hebrew arms, not English alone.
-# Exod 32:3."
+# ‹ויתפרקו כל העם› (“and-break-off all the-people”)
+# ‹את נזמי הזהב› (“obj-marker nose-ring the-gold”)
+# ‹אשר באזניהם … ויביאו› (“which in-broadness.-i.e.-the-ear-them/their …
+# and-come/bring”)
+# ‹אל אהרן› (“to Aaron”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:3."
 m.step("Exod.32.3")
 
 # -------------------------- Exod.32.4 · ETNACHTA_SPLIT ---------------------
-# ויקח מידם ויצר אתו בחרט ויעשהו עגל מסכה … ויאמרו אלה אלהיך ישראל אשר העלוך
-# מארץ מצרים
-# "[EN-AID] From top split: LEFT «ויקח מידם ויצר אתו בחרט ויעשהו עגל מסכה» /
-# RIGHT «ויאמרו אלה אלהיך ישראל אשר העלוך מארץ מצרים». Derive claim from
-# Hebrew arms, not English alone. Exod 32:4."
+# ‹ויקח מידם ויצר› (“and-take from-hand-them/their and-mould-into-a-form”)
+# ‹אתו בחרט ויעשהו› (“obj-marker-him/its in-chisel and-make-him/its”)
+# ‹עגל מסכה … ויאמרו› (“calf pouring-over … and-say”)
+# ‹אלה אלהיך ישראל› (“these God-you/your Israel”)
+# ‹אשר העלוך מארץ› (“which go-up-you/your from-earth”)
+# ‹מצרים› (“Egypt”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:4."
 m.step("Exod.32.4")
 
 # -------------------------- Exod.32.5 · ETNACHTA_SPLIT ---------------------
-# וירא אהרן ויבן מזבח לפניו … ויקרא אהרן ויאמר חג ליהוה מחר
-# "[EN-AID] From top split: LEFT «וירא אהרן ויבן מזבח לפניו» / RIGHT «ויקרא
-# אהרן ויאמר חג ליהוה מחר». Derive claim from Hebrew arms, not English
-# alone. Exod 32:5."
+# ‹וירא אהרן ויבן› (“and-see Aaron and-build”)
+# ‹מזבח לפניו … ויקרא› (“altar to-face-him/its … and-call”)
+# ‹אהרן ויאמר חג› (“Aaron and-say festival”)
+# ‹ליהוה מחר› (“to-YHWH deferred”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:5."
 m.step("Exod.32.5")
 
 # -------------------------- Exod.32.6 · ETNACHTA_SPLIT ---------------------
-# וישכימו ממחרת ויעלו עלת ויגשו שלמים … וישב העם לאכל ושתו ויקמו לצחק
-# "[EN-AID] From top split: LEFT «וישכימו ממחרת ויעלו עלת ויגשו שלמים» /
-# RIGHT «וישב העם לאכל ושתו ויקמו לצחק». Derive claim from Hebrew arms, not
-# English alone. Exod 32:6."
+# ‹וישכימו ממחרת ויעלו› (“and-rise-early from-morrow and-go-up”)
+# ‹עלת ויגשו שלמים› (“burnt-offering and-be requital”)
+# ‹… וישב העם לאכל› (“and-dwell/sit the-people to-eat”)
+# ‹ושתו ויקמו לצחק› (“and-drink and-arise to-laugh-outright”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:6."
 m.step("Exod.32.6")
 
 # -------------------------- Exod.32.7 · ETNACHTA_SPLIT ---------------------
-# וידבר יהוה אל משה … לך רד כי שחת עמך אשר העלית מארץ מצרים
-# "[EN-AID] From top split: LEFT «וידבר יהוה אל משה» / RIGHT «לך רד כי שחת
-# עמך אשר העלית מארץ מצרים». Derive claim from Hebrew arms, not English
-# alone. Exod 32:7."
+# ‹וידבר יהוה אל› (“and-speak YHWH to”)
+# ‹משה … לך רד› (“Moses … go go-down”)
+# ‹כי שחת עמך› (“that decay people-you/your”)
+# ‹אשר העלית מארץ› (“which go-up from-earth”)
+# ‹מצרים› (“Egypt”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:7."
 m.step("Exod.32.7")
 # witness-tier presupposed read: intake_owned on thy_people — read, not
 # installed
@@ -73,11 +94,16 @@ m.witness_read("thy_people", "intake_owned",
                 cites=["Midrash Tanchuma, Ki Tisa 21"])
 
 # -------------------------- Exod.32.8 · ETNACHTA_SPLIT ---------------------
-# סרו מהר מן הדרך אשר צויתם עשו להם עגל מסכה … וישתחוו לו ויזבחו לו ויאמרו
-# אלה אלהיך ישראל אשר העלוך מארץ מ
-# "[EN-AID] From top split: LEFT «סרו מהר מן הדרך אשר צויתם עשו להם עגל
-# מסכה» / RIGHT «וישתחוו לו ויזבחו לו ויאמרו אלה אלהיך ישראל אשר העלוך מארץ
-# מצרים». Derive claim from Hebrew arms, not English alone. Exod 32:8."
+# ‹סרו מהר מן› (“turn-aside hurrying from”)
+# ‹הדרך אשר צויתם› (“the-way/road which command-them/their”)
+# ‹עשו להם עגל› (“make to-them/their calf”)
+# ‹מסכה … וישתחוו לו› (“pouring-over … and-afflict to-him/its”)
+# ‹ויזבחו לו ויאמרו› (“and-slaughter-an-animal to-him/its and-say”)
+# ‹אלה אלהיך ישראל› (“these God-you/your Israel”)
+# ‹אשר העלוך מארץ› (“which go-up-you/your from-earth”)
+# ‹מ› (“?”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:8."
 m.step("Exod.32.8")
 # witness-tier presupposed read: the_calf_verses_law_layer on calf_verse —
 # read, not installed
@@ -85,17 +111,23 @@ m.witness_read("calf_verse", "the_calf_verses_law_layer",
                 cites=["Sanhedrin 56b:9", "Sanhedrin 56b:10", "Sanhedrin 56b:11", "Sanhedrin 63a:14", "Sanhedrin 63a:15", "Sanhedrin 63a:16", "Sanhedrin 63a:17"])
 
 # -------------------------- Exod.32.9 · ETNACHTA_SPLIT ---------------------
-# ויאמר יהוה אל משה … ראיתי את העם הזה והנה עם קשה ערף הוא
-# "[EN-AID] From top split: LEFT «ויאמר יהוה אל משה» / RIGHT «ראיתי את העם
-# הזה והנה עם קשה ערף הוא». Derive claim from Hebrew arms, not English
-# alone. Exod 32:9."
+# ‹ויאמר יהוה אל› (“and-say YHWH to”)
+# ‹משה … ראיתי את› (“Moses … see obj-marker”)
+# ‹העם הזה והנה› (“the-people the-this and-behold”)
+# ‹עם קשה ערף› (“people severe nape”)
+# ‹הוא› (“he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:9."
 m.step("Exod.32.9")
 
 # -------------------------- Exod.32.10 · ETNACHTA_SPLIT --------------------
-# ועתה הניחה לי ויחר אפי בהם ואכלם … ואעשה אותך לגוי גדול
-# "[EN-AID] From top split: LEFT «ועתה הניחה לי ויחר אפי בהם ואכלם» / RIGHT
-# «ואעשה אותך לגוי גדול». Derive claim from Hebrew arms, not English alone.
-# Exod 32:10."
+# ‹ועתה הניחה לי› (“and-now deposit-ward to-me/my”)
+# ‹ויחר אפי בהם› (“and-glow nose-me/my in-them/their”)
+# ‹ואכלם … ואעשה אותך› (“and-be-complete-them/their … and-make obj-marker-
+# you/your”)
+# ‹לגוי גדול› (“to-nation great”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:10."
 m.step("Exod.32.10")
 # witness-tier presupposed read: prayer_in_the_decree on intercession —
 # read, not installed
@@ -103,49 +135,69 @@ m.witness_read("intercession", "prayer_in_the_decree",
                 cites=["Midrash Tanchuma, Ki Tisa 20", "Onkelos Exod 32"])
 
 # -------------------------- Exod.32.11 · ETNACHTA_SPLIT --------------------
-# ויחל משה את פני יהוה אלהיו … ויאמר למה יהוה יחרה אפך בעמך אשר הוצאת מארץ
-# מצרים בכח גדול ו
-# "[EN-AID] From top split: LEFT «ויחל משה את פני יהוה אלהיו» / RIGHT «ויאמר
-# למה יהוה יחרה אפך בעמך אשר הוצאת מארץ מצרים בכח גדול וביד חזקה». Derive
-# claim from Hebrew arms, not English alone. Exod 32:11."
+# ‹ויחל משה את› (“and-be-rubbed Moses obj-marker”)
+# ‹פני יהוה אלהיו› (“face YHWH God-him/its”)
+# ‹… ויאמר למה יהוה› (“and-say to-what YHWH”)
+# ‹יחרה אפך בעמך› (“glow nose-you/your in-people-you/your”)
+# ‹אשר הוצאת מארץ› (“which bring-forth from-earth”)
+# ‹מצרים בכח גדול› (“Egypt in-vigor great”)
+# ‹ו› (“?”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:11."
 m.step("Exod.32.11")
 
 # -------------------------- Exod.32.12 · ETNACHTA_SPLIT --------------------
-# למה יאמרו מצרים לאמר ברעה הוציאם להרג אתם בהרים ולכלתם מעל פ … שוב מחרון
-# אפך והנחם על הרעה לעמך
-# "[EN-AID] From top split: LEFT «למה יאמרו מצרים לאמר ברעה הוציאם להרג אתם
-# בהרים ולכלתם מעל פני האדמה» / RIGHT «שוב מחרון אפך והנחם על הרעה לעמך».
-# Derive claim from Hebrew arms, not English alone. Exod 32:12."
+# ‹למה יאמרו מצרים› (“to-what say Egyptian”)
+# ‹לאמר ברעה הוציאם› (“to-say in-bad bring-forth-them/their”)
+# ‹להרג אתם בהרים› (“to-smite-with-deadly-intent obj-marker-them/their in-
+# mountain”)
+# ‹ולכלתם מעל פ› (“and-to-be-complete-them/their from-over ?”)
+# ‹… שוב מחרון אפך› (“return from-burning-of-anger nose-you/your”)
+# ‹והנחם על הרעה› (“and-sigh over the-bad”)
+# ‹לעמך› (“to-people-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:12."
 m.step("Exod.32.12")
 
 # -------------------------- Exod.32.13 · ETNACHTA_SPLIT --------------------
-# זכר לאברהם ליצחק ולישראל עבדיך אשר נשבעת להם בך ותדבר אלהם א … וכל הארץ
-# הזאת אשר אמרתי אתן לזרעכם ונחלו לעלם
-# "[EN-AID] From top split: LEFT «זכר לאברהם ליצחק ולישראל עבדיך אשר נשבעת
-# להם בך ותדבר אלהם ארבה את זרעכם ככוכבי » / RIGHT «וכל הארץ הזאת אשר אמרתי
-# אתן לזרעכם ונחלו לעלם». Derive claim from Hebrew arms, not English alone.
-# Exod 32:13."
+# ‹זכר לאברהם ליצחק› (“mark to-Abraham to-Isaac”)
+# ‹ולישראל עבדיך אשר› (“and-to-Israel servant-you/your which”)
+# ‹נשבעת להם בך› (“swear to-them/their in-you/your”)
+# ‹ותדבר אלהם א› (“and-speak to-them/their ?”)
+# ‹… וכל הארץ הזאת› (“and-all the-earth the-this”)
+# ‹אשר אמרתי אתן› (“which say set”)
+# ‹לזרעכם ונחלו לעלם› (“to-seed-you/your(pl) and-inherit-mode-of-
+# generations) to-forever”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:13."
 m.step("Exod.32.13")
 
 # -------------------------- Exod.32.14 · ETNACHTA_SPLIT --------------------
-# וינחם יהוה … על הרעה אשר דבר לעשות לעמו
-# "[EN-AID] From top split: LEFT «וינחם יהוה» / RIGHT «על הרעה אשר דבר לעשות
-# לעמו». Derive claim from Hebrew arms, not English alone. Exod 32:14."
+# ‹וינחם יהוה … על› (“and-sigh YHWH … over”)
+# ‹הרעה אשר דבר› (“the-bad which speak”)
+# ‹לעשות לעמו› (“to-make to-people-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:14."
 m.step("Exod.32.14")
 
 # -------------------------- Exod.32.15 · ETNACHTA_SPLIT --------------------
-# ויפן וירד משה מן ההר ושני לחת העדת בידו … לחת כתבים משני עבריהם מזה ומזה
-# הם כתבים
-# "[EN-AID] From top split: LEFT «ויפן וירד משה מן ההר ושני לחת העדת בידו» /
-# RIGHT «לחת כתבים משני עבריהם מזה ומזה הם כתבים». Derive claim from Hebrew
+# ‹ויפן וירד משה› (“and-turn and-go-down Moses”)
+# ‹מן ההר ושני› (“from the-mountain and-two”)
+# ‹לחת העדת בידו› (“meaning-to-glisten the-testimony in-hand-him/its”)
+# ‹… לחת כתבים משני› (“meaning-to-glisten grave from-two”)
+# ‹עבריהם מזה ומזה› (“region-across-them/their from-this and-from-this”)
+# ‹הם כתבים› (“they grave”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 32:15."
 m.step("Exod.32.15")
 
 # -------------------------- Exod.32.16 · ETNACHTA_SPLIT --------------------
-# והלחת מעשה אלהים המה … והמכתב מכתב אלהים הוא חרות על הלחת
-# "[EN-AID] From top split: LEFT «והלחת מעשה אלהים המה» / RIGHT «והמכתב מכתב
-# אלהים הוא חרות על הלחת». Derive claim from Hebrew arms, not English alone.
-# Exod 32:16."
+# ‹והלחת מעשה אלהים› (“and-the-meaning-to-glisten deed/work God”)
+# ‹המה … והמכתב מכתב› (“they … and-the-thing-written thing-written”)
+# ‹אלהים הוא חרות› (“God he/it engrave”)
+# ‹על הלחת› (“over the-meaning-to-glisten”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:16."
 m.step("Exod.32.16")
 # witness-tier presupposed read: distinct_writing on tablets_broken — read,
 # not installed
@@ -153,33 +205,46 @@ m.witness_read("tablets_broken", "distinct_writing",
                 cites=["Midrash Tanchuma, Ki Tisa 30", "Onkelos Exod 32"])
 
 # -------------------------- Exod.32.17 · ETNACHTA_SPLIT --------------------
-# וישמע יהושע את קול העם ברעה … ויאמר אל משה קול מלחמה במחנה
-# "[EN-AID] From top split: LEFT «וישמע יהושע את קול העם ברעה» / RIGHT
-# «ויאמר אל משה קול מלחמה במחנה». Derive claim from Hebrew arms, not English
-# alone. Exod 32:17."
+# ‹וישמע יהושע את› (“and-hear Jehoshua obj-marker”)
+# ‹קול העם ברעה› (“voice/sound the-people in-crash-him/its”)
+# ‹… ויאמר אל משה› (“and-say to Moses”)
+# ‹קול מלחמה במחנה› (“voice/sound battle in-camp”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:17."
 m.step("Exod.32.17")
 
 # -------------------------- Exod.32.18 · ETNACHTA_SPLIT --------------------
-# ויאמר אין קול ענות גבורה ואין קול ענות חלושה … קול ענות אנכי שמע
-# "[EN-AID] From top split: LEFT «ויאמר אין קול ענות גבורה ואין קול ענות
-# חלושה» / RIGHT «קול ענות אנכי שמע». Derive claim from Hebrew arms, not
-# English alone. Exod 32:18."
+# ‹ויאמר אין קול› (“and-say there-is-not voice/sound”)
+# ‹ענות גבורה ואין› (“eye force and-there-is-not”)
+# ‹קול ענות חלושה› (“voice/sound eye defeat”)
+# ‹… קול ענות אנכי› (“voice/sound eye”)
+# ‹שמע› (“hear”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:18."
 m.step("Exod.32.18")
 
 # -------------------------- Exod.32.19 · ETNACHTA_SPLIT --------------------
-# ויהי כאשר קרב אל המחנה וירא את העגל ומחלת … ויחר אף משה וישלך מידו מידיו
-# את הלחת וישבר אתם תחת ההר
-# "[EN-AID] From top split: LEFT «ויהי כאשר קרב אל המחנה וירא את העגל ומחלת»
-# / RIGHT «ויחר אף משה וישלך מידו מידיו את הלחת וישבר אתם תחת ההר». Derive
-# claim from Hebrew arms, not English alone. Exod 32:19."
+# ‹ויהי כאשר קרב› (“and-be like-as/which bring-near”)
+# ‹אל המחנה וירא› (“to the-camp and-see”)
+# ‹את העגל ומחלת› (“obj-marker the-calf and-dance”)
+# ‹… ויחר אף משה› (“and-glow nose Moses”)
+# ‹וישלך מידו מידיו› (“and-throw-out from-hand-him/its from-hand-him/its”)
+# ‹את הלחת וישבר› (“obj-marker the-meaning-to-glisten and-burst”)
+# ‹אתם תחת ההר› (“obj-marker-them/their under the-mountain”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:19."
 m.step("Exod.32.19")
 
 # -------------------------- Exod.32.20 · ETNACHTA_SPLIT --------------------
-# ויקח את העגל אשר עשו וישרף באש ויטחן עד אשר דק … ויזר על פני המים וישק את
-# בני ישראל
-# "[EN-AID] From top split: LEFT «ויקח את העגל אשר עשו וישרף באש ויטחן עד
-# אשר דק» / RIGHT «ויזר על פני המים וישק את בני ישראל». Derive claim from
-# Hebrew arms, not English alone. Exod 32:20."
+# ‹ויקח את העגל› (“and-take obj-marker the-calf”)
+# ‹אשר עשו וישרף› (“which make and-be-on-fire”)
+# ‹באש ויטחן עד› (“in-fire and-grind-meal until”)
+# ‹אשר דק … ויזר› (“which crush-crumble … and-toss-about”)
+# ‹על פני המים› (“over face the-waters”)
+# ‹וישק את בני› (“and-give-drink obj-marker son”)
+# ‹ישראל› (“Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:20."
 m.step("Exod.32.20")
 # witness-tier presupposed read: three_court_triage on drink_test — read,
 # not installed
@@ -187,69 +252,98 @@ m.witness_read("drink_test", "three_court_triage",
                 cites=["Midrash Tanchuma, Ki Tisa 26", "Onkelos Exod 32"])
 
 # -------------------------- Exod.32.21 · ETNACHTA_SPLIT --------------------
-# ויאמר משה אל אהרן מה עשה לך העם הזה … כי הבאת עליו חטאה גדלה
-# "[EN-AID] From top split: LEFT «ויאמר משה אל אהרן מה עשה לך העם הזה» /
-# RIGHT «כי הבאת עליו חטאה גדלה». Derive claim from Hebrew arms, not English
-# alone. Exod 32:21."
+# ‹ויאמר משה אל› (“and-say Moses to”)
+# ‹אהרן מה עשה› (“Aaron what make”)
+# ‹לך העם הזה› (“to-you/your the-people the-this”)
+# ‹… כי הבאת עליו› (“that come/bring over-him/its”)
+# ‹חטאה גדלה› (“offence great”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:21."
 m.step("Exod.32.21")
 
 # -------------------------- Exod.32.22 · ETNACHTA_SPLIT --------------------
-# ויאמר אהרן אל יחר אף אדני … אתה ידעת את העם כי ברע הוא
-# "[EN-AID] From top split: LEFT «ויאמר אהרן אל יחר אף אדני» / RIGHT «אתה
-# ידעת את העם כי ברע הוא». Derive claim from Hebrew arms, not English alone.
-# Exod 32:22."
+# ‹ויאמר אהרן אל› (“and-say Aaron do-not”)
+# ‹יחר אף אדני› (“glow nose lord-me/my”)
+# ‹… אתה ידעת את› (“you know obj-marker”)
+# ‹העם כי ברע› (“the-people that in-bad”)
+# ‹הוא› (“he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:22."
 m.step("Exod.32.22")
 
 # -------------------------- Exod.32.23 · ETNACHTA_SPLIT --------------------
-# ויאמרו לי עשה לנו אלהים אשר ילכו לפנינו … כי זה משה האיש אשר העלנו מארץ
-# מצרים לא ידענו מה היה לו
-# "[EN-AID] From top split: LEFT «ויאמרו לי עשה לנו אלהים אשר ילכו לפנינו» /
-# RIGHT «כי זה משה האיש אשר העלנו מארץ מצרים לא ידענו מה היה לו». Derive
-# claim from Hebrew arms, not English alone. Exod 32:23."
+# ‹ויאמרו לי עשה› (“and-say to-me/my make”)
+# ‹לנו אלהים אשר› (“to-us/our God which”)
+# ‹ילכו לפנינו … כי› (“go to-face-us/our … that”)
+# ‹זה משה האיש› (“this Moses the-man”)
+# ‹אשר העלנו מארץ› (“which go-up-us/our from-earth”)
+# ‹מצרים לא ידענו› (“Egypt not know”)
+# ‹מה היה לו› (“what be to-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:23."
 m.step("Exod.32.23")
 
 # -------------------------- Exod.32.24 · ETNACHTA_SPLIT --------------------
-# ואמר להם למי זהב התפרקו ויתנו לי … ואשלכהו באש ויצא העגל הזה
-# "[EN-AID] From top split: LEFT «ואמר להם למי זהב התפרקו ויתנו לי» / RIGHT
-# «ואשלכהו באש ויצא העגל הזה». Derive claim from Hebrew arms, not English
-# alone. Exod 32:24."
+# ‹ואמר להם למי› (“and-say to-them/their to-who?”)
+# ‹זהב התפרקו ויתנו› (“gold break-off and-set”)
+# ‹לי … ואשלכהו באש› (“to-me/my … and-throw-out-them/their in-fire”)
+# ‹ויצא העגל הזה› (“and-bring-forth the-calf the-this”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:24."
 m.step("Exod.32.24")
 
 # -------------------------- Exod.32.25 · ETNACHTA_SPLIT --------------------
-# וירא משה את העם כי פרע הוא … כי פרעה אהרן לשמצה בקמיהם
-# "[EN-AID] From top split: LEFT «וירא משה את העם כי פרע הוא» / RIGHT «כי
-# פרעה אהרן לשמצה בקמיהם». Derive claim from Hebrew arms, not English alone.
-# Exod 32:25."
+# ‹וירא משה את› (“and-see Moses obj-marker”)
+# ‹העם כי פרע› (“the-people that loosen”)
+# ‹הוא … כי פרעה› (“he/it … that loosen-him/its”)
+# ‹אהרן לשמצה בקמיהם› (“Aaron to-scornful-whispering in-arise-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:25."
 m.step("Exod.32.25")
 
 # -------------------------- Exod.32.26 · ETNACHTA_SPLIT --------------------
-# ויעמד משה בשער המחנה ויאמר מי ליהוה אלי … ויאספו אליו כל בני לוי
-# "[EN-AID] From top split: LEFT «ויעמד משה בשער המחנה ויאמר מי ליהוה אלי» /
-# RIGHT «ויאספו אליו כל בני לוי». Derive claim from Hebrew arms, not English
-# alone. Exod 32:26."
+# ‹ויעמד משה בשער› (“and-stand Moses in-gate”)
+# ‹המחנה ויאמר מי› (“the-camp and-say who?”)
+# ‹ליהוה אלי … ויאספו› (“to-YHWH to-me/my … and-gather-for-any-purpose”)
+# ‹אליו כל בני› (“to-him/its all son”)
+# ‹לוי› (“Levi”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:26."
 m.step("Exod.32.26")
 
 # -------------------------- Exod.32.27 · ETNACHTA_SPLIT --------------------
-# ויאמר להם כה אמר יהוה אלהי ישראל שימו איש חרבו על ירכו … עברו ושובו משער
-# לשער במחנה והרגו איש את אחיו ואיש את רעהו וא
-# "[EN-AID] From top split: LEFT «ויאמר להם כה אמר יהוה אלהי ישראל שימו איש
-# חרבו על ירכו» / RIGHT «עברו ושובו משער לשער במחנה והרגו איש את אחיו ואיש
-# את רעהו ואיש את קרבו». Derive claim from Hebrew arms, not English alone.
-# Exod 32:27."
+# ‹ויאמר להם כה› (“and-say to-them/their like-this”)
+# ‹אמר יהוה אלהי› (“say YHWH God”)
+# ‹ישראל שימו איש› (“Israel put/set man”)
+# ‹חרבו על ירכו› (“drought-him/its over thigh-him/its”)
+# ‹… עברו ושובו משער› (“pass-over and-return from-gate”)
+# ‹לשער במחנה והרגו› (“to-gate in-camp and-smite-with-deadly-intent”)
+# ‹איש את אחיו› (“man obj-marker brother-him/its”)
+# ‹ואיש את רעהו› (“and-man obj-marker associate-him/its”)
+# ‹וא› (“?”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:27."
 m.step("Exod.32.27")
 
 # -------------------------- Exod.32.28 · ETNACHTA_SPLIT --------------------
-# ויעשו בני לוי כדבר משה … ויפל מן העם ביום ההוא כשלשת אלפי איש
-# "[EN-AID] From top split: LEFT «ויעשו בני לוי כדבר משה» / RIGHT «ויפל מן
-# העם ביום ההוא כשלשת אלפי איש». Derive claim from Hebrew arms, not English
-# alone. Exod 32:28."
+# ‹ויעשו בני לוי› (“and-make son Levi”)
+# ‹כדבר משה … ויפל› (“like-word/thing Moses … and-fall”)
+# ‹מן העם ביום› (“from the-people in-day”)
+# ‹ההוא כשלשת אלפי› (“that like-three thousand”)
+# ‹איש› (“man”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:28."
 m.step("Exod.32.28")
 
 # -------------------------- Exod.32.29 · ETNACHTA_SPLIT --------------------
-# ויאמר משה מלאו ידכם היום ליהוה כי איש בבנו ובאחיו … ולתת עליכם היום ברכה
-# "[EN-AID] From top split: LEFT «ויאמר משה מלאו ידכם היום ליהוה כי איש בבנו
-# ובאחיו» / RIGHT «ולתת עליכם היום ברכה». Derive claim from Hebrew arms, not
-# English alone. Exod 32:29."
+# ‹ויאמר משה מלאו› (“and-say Moses fill”)
+# ‹ידכם היום ליהוה› (“hand-you/your(pl) the-day to-YHWH”)
+# ‹כי איש בבנו› (“that man in-son-him/its”)
+# ‹ובאחיו … ולתת עליכם› (“and-in-brother-him/its … and-to-set over-
+# you/your(pl)”)
+# ‹היום ברכה› (“the-day blessing”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:29."
 m.step("Exod.32.29")
 # witness-tier presupposed read: ordination_by_crisis on levite_loyalty —
 # read, not installed
@@ -257,32 +351,42 @@ m.witness_read("levite_loyalty", "ordination_by_crisis",
                 cites=["Onkelos Exod 32"])
 
 # -------------------------- Exod.32.30 · ETNACHTA_SPLIT --------------------
-# ויהי ממחרת ויאמר משה אל העם אתם חטאתם חטאה גדלה … ועתה אעלה אל יהוה אולי
-# אכפרה בעד חטאתכם
-# "[EN-AID] From top split: LEFT «ויהי ממחרת ויאמר משה אל העם אתם חטאתם חטאה
-# גדלה» / RIGHT «ועתה אעלה אל יהוה אולי אכפרה בעד חטאתכם». Derive claim from
-# Hebrew arms, not English alone. Exod 32:30."
+# ‹ויהי ממחרת ויאמר› (“and-be from-morrow and-say”)
+# ‹משה אל העם› (“Moses to the-people”)
+# ‹אתם חטאתם חטאה› (“you sin offence”)
+# ‹גדלה … ועתה אעלה› (“great … and-now go-up”)
+# ‹אל יהוה אולי› (“to YHWH if-not”)
+# ‹אכפרה בעד חטאתכם› (“atone in-up-to sin-offering-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:30."
 m.step("Exod.32.30")
 
 # -------------------------- Exod.32.31 · ETNACHTA_SPLIT --------------------
-# וישב משה אל יהוה ויאמר … אנא חטא העם הזה חטאה גדלה ויעשו להם אלהי זהב
-# "[EN-AID] From top split: LEFT «וישב משה אל יהוה ויאמר» / RIGHT «אנא חטא
-# העם הזה חטאה גדלה ויעשו להם אלהי זהב». Derive claim from Hebrew arms, not
-# English alone. Exod 32:31."
+# ‹וישב משה אל› (“and-return Moses to”)
+# ‹יהוה ויאמר … אנא› (“YHWH and-say … oh-now!”)
+# ‹חטא העם הזה› (“sin the-people the-this”)
+# ‹חטאה גדלה ויעשו› (“offence great and-make”)
+# ‹להם אלהי זהב› (“to-them/their God gold”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:31."
 m.step("Exod.32.31")
 
-# -------------------------- Exod.32.32 · COND_אם ---------------------------
-# ועתה אם תשא חטאתם … ואם אין מחני נא מספרך אשר כתבת
-# "[EN-AID] From top split: LEFT «ועתה אם תשא חטאתם» / RIGHT «ואם אין מחני
-# נא מספרך אשר כתבת». Derive claim from Hebrew arms, not English alone. Exod
-# 32:32."
+# -------------------------- Exod.32.32 · COND_אם (“if”) --------------------
+# ‹ועתה אם תשא› (“and-now if lift/carry”)
+# ‹חטאתם … ואם אין› (“sin-offering-them/their … and-if there-is-not”)
+# ‹מחני נא מספרך› (“stroke-me/my please from-writing-you/your”)
+# ‹אשר כתבת› (“which grave”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:32."
 m.step("Exod.32.32")
 
 # -------------------------- Exod.32.33 · ETNACHTA_SPLIT --------------------
-# ויאמר יהוה אל משה … מי אשר חטא לי אמחנו מספרי
-# "[EN-AID] From top split: LEFT «ויאמר יהוה אל משה» / RIGHT «מי אשר חטא לי
-# אמחנו מספרי». Derive claim from Hebrew arms, not English alone. Exod
-# 32:33."
+# ‹ויאמר יהוה אל› (“and-say YHWH to”)
+# ‹משה … מי אשר› (“Moses … who? which”)
+# ‹חטא לי אמחנו› (“sin to-me/my stroke-him/its”)
+# ‹מספרי› (“from-writing-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:33."
 m.step("Exod.32.33")
 # witness-tier presupposed read: deferred_accounting on the_book — read, not
 # installed
@@ -290,18 +394,24 @@ m.witness_read("the_book", "deferred_accounting",
                 cites=["Onkelos Exod 32"])
 
 # -------------------------- Exod.32.34 · ETNACHTA_SPLIT --------------------
-# ועתה לך נחה את העם אל אשר דברתי לך הנה מלאכי ילך לפניך … וביום פקדי ופקדתי
-# עליהם חטאתם
-# "[EN-AID] From top split: LEFT «ועתה לך נחה את העם אל אשר דברתי לך הנה
-# מלאכי ילך לפניך» / RIGHT «וביום פקדי ופקדתי עליהם חטאתם». Derive claim
-# from Hebrew arms, not English alone. Exod 32:34."
+# ‹ועתה לך נחה› (“and-now go guide”)
+# ‹את העם אל› (“obj-marker the-people to”)
+# ‹אשר דברתי לך› (“which speak to-you/your”)
+# ‹הנה מלאכי ילך› (“behold messenger-me/my go”)
+# ‹לפניך … וביום פקדי› (“to-face-you/your … and-in-day count/visit-me/my”)
+# ‹ופקדתי עליהם חטאתם› (“and-count/visit over-them/their sin-offering-
+# them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:34."
 m.step("Exod.32.34")
 
 # -------------------------- Exod.32.35 · ETNACHTA_SPLIT --------------------
-# ויגף יהוה את העם … על אשר עשו את העגל אשר עשה אהרן
-# "[EN-AID] From top split: LEFT «ויגף יהוה את העם» / RIGHT «על אשר עשו את
-# העגל אשר עשה אהרן». Derive claim from Hebrew arms, not English alone. Exod
-# 32:35."
+# ‹ויגף יהוה את› (“and-push YHWH obj-marker”)
+# ‹העם … על אשר› (“the-people … over which”)
+# ‹עשו את העגל› (“make obj-marker the-calf”)
+# ‹אשר עשה אהרן› (“which make Aaron”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 32:35."
 m.step("Exod.32.35")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

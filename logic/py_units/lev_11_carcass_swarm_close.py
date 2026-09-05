@@ -14,9 +14,11 @@ from machine import Machine
 m = Machine("lev_11_carcass_swarm_close")
 
 # -------------------------- Lev.11.24 · ETNACHTA_SPLIT ---------------------
-# ולאלה תטמאו … כל הנגע בנבלתם יטמא עד הערב
-# "[EN-AID] From top split: LEFT «ולאלה תטמאו» / RIGHT «כל הנגע בנבלתם יטמא
-# עד הערב». Derive claim from Hebrew arms. Lev 11:24."
+# ‹ולאלה תטמאו … כל› (“and-to-these be-foul … all”)
+# ‹הנגע בנבלתם יטמא› (“the-touch in-flabby-thing-them/their be-foul”)
+# ‹עד הערב› (“until the-evening”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:24."
 m.step("Lev.11.24")
 # witness-tier presupposed read: limb_from_living on ulealeh_titamau — read,
 # not installed
@@ -24,25 +26,33 @@ m.witness_read("ulealeh_titamau", "limb_from_living",
                 cites=["Sifra, Shemini, Section 4 1", "Sifra, Shemini, Section 4 2", "Sifra, Shemini, Section 4 6", "Sifra, Shemini, Section 4 7", "Sifra, Shemini, Section 4 8", "Sifra, Shemini, Section 4 9"])
 
 # -------------------------- Lev.11.25 · ETNACHTA_SPLIT ---------------------
-# וכל הנשא מנבלתם … יכבס בגדיו וטמא עד הערב
-# "[EN-AID] From top split: LEFT «וכל הנשא מנבלתם» / RIGHT «יכבס בגדיו וטמא
-# עד הערב». Derive claim from Hebrew arms. Lev 11:25."
+# ‹וכל הנשא מנבלתם› (“and-all the-lift/carry from-flabby-thing-them/their”)
+# ‹… יכבס בגדיו וטמא› (“trample garment-him/its and-be-foul”)
+# ‹עד הערב› (“until the-evening”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:25."
 m.step("Lev.11.25")
 
 # -------------------------- Lev.11.26 · ETNACHTA_SPLIT ---------------------
-# לכל הבהמה אשר הוא מפרסת פרסה ושסע איננה שסעת וגרה איננה מעלה … כל הנגע בהם
-# יטמא
-# "[EN-AID] From top split: LEFT «לכל הבהמה אשר הוא מפרסת פרסה ושסע איננה
-# שסעת וגרה איננה מעלה טמאים הם לכם» / RIGHT «כל הנגע בהם יטמא». Derive
-# claim from Hebrew arms. Lev 11:26."
+# ‹לכל הבהמה אשר› (“to-all the-livestock which”)
+# ‹הוא מפרסת פרסה› (“he/it break-in-pieces claw”)
+# ‹ושסע איננה שסעת› (“and-split there-is-not-her/its fissure”)
+# ‹וגרה איננה מעלה› (“and-cud there-is-not-her/its go-up”)
+# ‹… כל הנגע בהם› (“all the-touch in-them/their”)
+# ‹יטמא› (“be-foul”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:26."
 m.step("Lev.11.26")
 
 # -------------------------- Lev.11.27 · ETNACHTA_SPLIT ---------------------
-# וכל הולך על כפיו בכל החיה ההלכת על ארבע טמאים הם לכם … כל הנגע בנבלתם יטמא
-# עד הערב
-# "[EN-AID] From top split: LEFT «וכל הולך על כפיו בכל החיה ההלכת על ארבע
-# טמאים הם לכם» / RIGHT «כל הנגע בנבלתם יטמא עד הערב». Derive claim from
-# Hebrew arms. Lev 11:27."
+# ‹וכל הולך על› (“and-all walk/go over”)
+# ‹כפיו בכל החיה› (“palm-of-hand-him/its in-all the-living”)
+# ‹ההלכת על ארבע› (“the-walk/go over four”)
+# ‹טמאים הם לכם› (“foul-in-a-religious-sense they to-you/your(pl)”)
+# ‹… כל הנגע בנבלתם› (“all the-touch in-flabby-thing-them/their”)
+# ‹יטמא עד הערב› (“be-foul until the-evening”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:27."
 m.step("Lev.11.27")
 # witness-tier presupposed read: paws_and_lattice on holekh_al_kapav — read,
 # not installed
@@ -50,15 +60,21 @@ m.witness_read("holekh_al_kapav", "paws_and_lattice",
                 cites=["Sifra, Shemini, Chapter 6 1", "Sifra, Shemini, Chapter 6 4", "Sifra, Shemini, Chapter 6 5", "Sifra, Shemini, Chapter 6 6", "Sifra, Shemini, Chapter 6 9", "Sifra, Shemini, Chapter 6 10"])
 
 # -------------------------- Lev.11.28 · ETNACHTA_SPLIT ---------------------
-# והנשא את נבלתם יכבס בגדיו וטמא עד הערב … טמאים המה לכם
-# "[EN-AID] From top split: LEFT «והנשא את נבלתם יכבס בגדיו וטמא עד הערב» /
-# RIGHT «טמאים המה לכם». Derive claim from Hebrew arms. Lev 11:28."
+# ‹והנשא את נבלתם› (“and-the-lift/carry obj-marker flabby-thing-them/their”)
+# ‹יכבס בגדיו וטמא› (“trample garment-him/its and-be-foul”)
+# ‹עד הערב … טמאים› (“until the-evening … foul-in-a-religious-sense”)
+# ‹המה לכם› (“they to-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:28."
 m.step("Lev.11.28")
 
 # -------------------------- Lev.11.29 · ETNACHTA_SPLIT ---------------------
-# וזה לכם הטמא בשרץ השרץ על הארץ … החלד והעכבר והצב למינהו
-# "[EN-AID] From top split: LEFT «וזה לכם הטמא בשרץ השרץ על הארץ» / RIGHT
-# «החלד והעכבר והצב למינהו». Derive claim from Hebrew arms. Lev 11:29."
+# ‹וזה לכם הטמא› (“and-this to-you/your(pl) the-foul-in-a-religious-sense”)
+# ‹בשרץ השרץ על› (“in-swarming-creature the-swarm over”)
+# ‹הארץ … החלד והעכבר› (“the-earth … the-weasel and-the-mouse”)
+# ‹והצב למינהו› (“and-the-palanquin to-kind-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:29."
 m.step("Lev.11.29")
 # witness-tier presupposed read: the_eight on zeh_lakhem_hatamei — read, not
 # installed
@@ -66,15 +82,20 @@ m.witness_read("zeh_lakhem_hatamei", "the_eight",
                 cites=["Sifra, Shemini, Section 5 1", "Sifra, Shemini, Section 5 2", "Sifra, Shemini, Section 5 3", "Sifra, Shemini, Section 5 4", "Sifra, Shemini, Section 5 5", "Sifra, Shemini, Section 5 6", "Sifra, Shemini, Section 5 7"])
 
 # -------------------------- Lev.11.30 · ETNACHTA_SPLIT ---------------------
-# והאנקה והכח והלטאה … והחמט והתנשמת
-# "[EN-AID] From top split: LEFT «והאנקה והכח והלטאה» / RIGHT «והחמט
-# והתנשמת». Derive claim from Hebrew arms. Lev 11:30."
+# ‹והאנקה והכח והלטאה› (“and-the-some-kind-of-lizard and-the-vigor and-the-
+# kind-of-lizard”)
+# ‹… והחמט והתנשמת› (“and-the-lizard and-the-hard-breather”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:30."
 m.step("Lev.11.30")
 
 # -------------------------- Lev.11.31 · ETNACHTA_SPLIT ---------------------
-# אלה הטמאים לכם בכל השרץ … כל הנגע בהם במתם יטמא עד הערב
-# "[EN-AID] From top split: LEFT «אלה הטמאים לכם בכל השרץ» / RIGHT «כל הנגע
-# בהם במתם יטמא עד הערב». Derive claim from Hebrew arms. Lev 11:31."
+# ‹אלה הטמאים לכם› (“these the-foul-in-a-religious-sense to-you/your(pl)”)
+# ‹בכל השרץ … כל› (“in-all the-swarming-creature … all”)
+# ‹הנגע בהם במתם› (“the-touch in-them/their in-death-them/their”)
+# ‹יטמא עד הערב› (“be-foul until the-evening”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:31."
 m.step("Lev.11.31")
 # witness-tier presupposed read: skins_egg_lentil on kol_hanogea_bahem —
 # read, not installed
@@ -82,11 +103,16 @@ m.witness_read("kol_hanogea_bahem", "skins_egg_lentil",
                 cites=["Sifra, Shemini, Chapter 7 1", "Sifra, Shemini, Chapter 7 2", "Sifra, Shemini, Chapter 7 3", "Sifra, Shemini, Chapter 7 4", "Sifra, Shemini, Chapter 7 5", "Sifra, Shemini, Chapter 7 6"])
 
 # -------------------------- Lev.11.32 · ETNACHTA_SPLIT ---------------------
-# וכל אשר יפל עליו מהם במתם יטמא מכל כלי עץ או בגד או עור או ש … במים יובא
-# וטמא עד הערב וטהר
-# "[EN-AID] From top split: LEFT «וכל אשר יפל עליו מהם במתם יטמא מכל כלי עץ
-# או בגד או עור או שק כל כלי אשר יעשה מל» / RIGHT «במים יובא וטמא עד הערב
-# וטהר». Derive claim from Hebrew arms. Lev 11:32."
+# ‹וכל אשר יפל› (“and-all which fall”)
+# ‹עליו מהם במתם› (“over-him/its from-them/their in-death-them/their”)
+# ‹יטמא מכל כלי› (“be-foul from-all vessel”)
+# ‹עץ או בגד› (“tree or garment”)
+# ‹או עור או› (“or skin or”)
+# ‹ש … במים יובא› (“? … in-waters come/bring”)
+# ‹וטמא עד הערב› (“and-be-foul until the-evening”)
+# ‹וטהר› (“and-be-pure”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:32."
 m.step("Lev.11.32")
 # witness-tier presupposed read: vessel_classifier on mikol_klei_etz — read,
 # not installed
@@ -94,9 +120,13 @@ m.witness_read("mikol_klei_etz", "vessel_classifier",
                 cites=["Sifra, Shemini, Section 6 4", "Sifra, Shemini, Section 6 5", "Sifra, Shemini, Section 6 6", "Sifra, Shemini, Section 6 7", "Sifra, Shemini, Section 6 9", "Sifra, Shemini, Section 6 10", "Sifra, Shemini, Section 6 11", "Sifra, Shemini, Chapter 8 1", "Sifra, Shemini, Chapter 8 3", "Sifra, Shemini, Chapter 8 4", "Sifra, Shemini, Chapter 8 6", "Sifra, Shemini, Chapter 8 7", "Sifra, Shemini, Chapter 8 8", "Sifra, Shemini, Chapter 8 9"])
 
 # -------------------------- Lev.11.33 · ETNACHTA_SPLIT ---------------------
-# וכל כלי חרש אשר יפל מהם אל תוכו … כל אשר בתוכו יטמא ואתו תשברו
-# "[EN-AID] From top split: LEFT «וכל כלי חרש אשר יפל מהם אל תוכו» / RIGHT
-# «כל אשר בתוכו יטמא ואתו תשברו». Derive claim from Hebrew arms. Lev 11:33."
+# ‹וכל כלי חרש› (“and-all vessel piece-of-pottery”)
+# ‹אשר יפל מהם› (“which fall from-them/their”)
+# ‹אל תוכו … כל› (“to midst-him/its … all”)
+# ‹אשר בתוכו יטמא› (“which in-midst-him/its be-foul”)
+# ‹ואתו תשברו› (“and-obj-marker-him/its burst”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:33."
 m.step("Lev.11.33")
 # witness-tier presupposed read: earthenware on kli_cheres_tokho — read, not
 # installed
@@ -104,10 +134,14 @@ m.witness_read("kli_cheres_tokho", "earthenware",
                 cites=["Sifra, Shemini, Section 7 1", "Sifra, Shemini, Section 7 2", "Sifra, Shemini, Section 7 3", "Sifra, Shemini, Section 7 4", "Sifra, Shemini, Section 7 5", "Sifra, Shemini, Section 7 6", "Sifra, Shemini, Section 7 7", "Sifra, Shemini, Section 7 8", "Sifra, Shemini, Section 7 9", "Sifra, Shemini, Section 7 10", "Sifra, Shemini, Section 7 11", "Sifra, Shemini, Section 7 12", "Sifra, Shemini, Section 7 13"])
 
 # -------------------------- Lev.11.34 · ETNACHTA_SPLIT ---------------------
-# מכל האכל אשר יאכל אשר יבוא עליו מים יטמא … וכל משקה אשר ישתה בכל כלי יטמא
-# "[EN-AID] From top split: LEFT «מכל האכל אשר יאכל אשר יבוא עליו מים יטמא»
-# / RIGHT «וכל משקה אשר ישתה בכל כלי יטמא». Derive claim from Hebrew arms.
-# Lev 11:34."
+# ‹מכל האכל אשר› (“from-all the-food which”)
+# ‹יאכל אשר יבוא› (“eat which come/bring”)
+# ‹עליו מים יטמא› (“over-him/its waters be-foul”)
+# ‹… וכל משקה אשר› (“and-all causing-to-drink which”)
+# ‹ישתה בכל כלי› (“drink in-all vessel”)
+# ‹יטמא› (“be-foul”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:34."
 m.step("Lev.11.34")
 # witness-tier presupposed read: airspace_foods on mikol_haokhel — read, not
 # installed
@@ -115,10 +149,14 @@ m.witness_read("mikol_haokhel", "airspace_foods",
                 cites=["Sifra, Shemini, Chapter 9 1", "Sifra, Shemini, Chapter 9 2"])
 
 # -------------------------- Lev.11.35 · ETNACHTA_SPLIT ---------------------
-# וכל אשר יפל מנבלתם עליו יטמא תנור וכירים יתץ טמאים הם … וטמאים יהיו לכם
-# "[EN-AID] From top split: LEFT «וכל אשר יפל מנבלתם עליו יטמא תנור וכירים
-# יתץ טמאים הם» / RIGHT «וטמאים יהיו לכם». Derive claim from Hebrew arms.
-# Lev 11:35."
+# ‹וכל אשר יפל› (“and-all which fall”)
+# ‹מנבלתם עליו יטמא› (“from-flabby-thing-them/their over-him/its be-foul”)
+# ‹תנור וכירים יתץ› (“fire-pot and-cooking-range tear-down”)
+# ‹טמאים הם … וטמאים› (“foul-in-a-religious-sense they … and-foul-in-a-
+# religious-sense”)
+# ‹יהיו לכם› (“be to-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:35."
 m.step("Lev.11.35")
 # witness-tier presupposed read: the_ovens on tanur_vekhirayim_yutatz —
 # read, not installed
@@ -126,40 +164,53 @@ m.witness_read("tanur_vekhirayim_yutatz", "the_ovens",
                 cites=["Sifra, Shemini, Chapter 10 1", "Sifra, Shemini, Chapter 10 2", "Sifra, Shemini, Chapter 10 3", "Sifra, Shemini, Chapter 10 4", "Sifra, Shemini, Chapter 10 5", "Sifra, Shemini, Chapter 10 6", "Sifra, Shemini, Chapter 10 7", "Sifra, Shemini, Chapter 10 8", "Sifra, Shemini, Chapter 10 9", "Sifra, Shemini, Chapter 10 10"])
 
 # -------------------------- Lev.11.36 · ETNACHTA_SPLIT ---------------------
-# אך מעין ובור מקוה מים יהיה טהור … ונגע בנבלתם יטמא
-# "[EN-AID] From top split: LEFT «אך מעין ובור מקוה מים יהיה טהור» / RIGHT
-# «ונגע בנבלתם יטמא». Derive claim from Hebrew arms. Lev 11:36."
+# ‹אך מעין ובור› (“indeed fountain and-pit”)
+# ‹מקוה מים יהיה› (“gathering waters be”)
+# ‹טהור … ונגע בנבלתם› (“pure … and-touch in-flabby-thing-them/their”)
+# ‹יטמא› (“be-foul”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:36."
 m.step("Lev.11.36")
 # witness-tier presupposed read: the_mikveh on mayan_uvor_mikveh — read, not
 # installed
 m.witness_read("mayan_uvor_mikveh", "the_mikveh",
                 cites=["Sifra, Shemini, Section 9 1", "Sifra, Shemini, Section 9 2", "Sifra, Shemini, Section 9 3", "Sifra, Shemini, Section 9 4", "Sifra, Shemini, Section 9 5", "Sifra, Shemini, Section 9 6", "Sifra, Shemini, Section 9 7", "Onkelos Lev 11:36"])
 
-# -------------------------- Lev.11.37 · COND_וכי ---------------------------
-# וכי יפל מנבלתם על כל זרע זרוע אשר יזרע … טהור הוא
-# "[EN-AID] From top split: LEFT «וכי יפל מנבלתם על כל זרע זרוע אשר יזרע» /
-# RIGHT «טהור הוא». Derive claim from Hebrew arms. Lev 11:37."
+# -------------------------- Lev.11.37 · COND_וכי (“and-that”) --------------
+# ‹וכי יפל מנבלתם› (“and-that fall from-flabby-thing-them/their”)
+# ‹על כל זרע› (“over all seed”)
+# ‹זרוע אשר יזרע› (“something-sown which yield-seed”)
+# ‹… טהור הוא› (“pure he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:37."
 m.step("Lev.11.37")
 # witness-tier presupposed read: seed_and_minimization on zera_zerua — read,
 # not installed
 m.witness_read("zera_zerua", "seed_and_minimization",
                 cites=["Sifra, Shemini, Chapter 11 1", "Sifra, Shemini, Chapter 11 2", "Sifra, Shemini, Chapter 11 3", "Sifra, Shemini, Chapter 11 4", "Sifra, Shemini, Chapter 11 9"])
 
-# -------------------------- Lev.11.38 · COND_וכי ---------------------------
-# וכי יתן מים על זרע ונפל מנבלתם עליו … טמא הוא לכם
-# "[EN-AID] From top split: LEFT «וכי יתן מים על זרע ונפל מנבלתם עליו» /
-# RIGHT «טמא הוא לכם». Derive claim from Hebrew arms. Lev 11:38."
+# -------------------------- Lev.11.38 · COND_וכי (“and-that”) --------------
+# ‹וכי יתן מים› (“and-that set waters”)
+# ‹על זרע ונפל› (“over seed and-fall”)
+# ‹מנבלתם עליו … טמא› (“from-flabby-thing-them/their over-him/its … foul-in-
+# a-religious-sense”)
+# ‹הוא לכם› (“he/it to-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:38."
 m.step("Lev.11.38")
 # witness-tier presupposed read: hekhsher_machine on vekhi_yutan_mayim —
 # read, not installed
 m.witness_read("vekhi_yutan_mayim", "hekhsher_machine",
                 cites=["Sifra, Shemini, Chapter 11 5", "Sifra, Shemini, Chapter 11 6", "Sifra, Shemini, Chapter 11 7", "Sifra, Shemini, Chapter 11 8", "Sifra, Shemini, Section 8 1", "Sifra, Shemini, Section 8 2", "Sifra, Shemini, Section 8 3", "Sifra, Shemini, Section 8 4", "Sifra, Shemini, Section 8 5"])
 
-# -------------------------- Lev.11.39 · COND_וכי ---------------------------
-# וכי ימות מן הבהמה אשר היא לכם לאכלה … הנגע בנבלתה יטמא עד הערב
-# "[EN-AID] From top split: LEFT «וכי ימות מן הבהמה אשר היא לכם לאכלה» /
-# RIGHT «הנגע בנבלתה יטמא עד הערב». Derive claim from Hebrew arms. Lev
-# 11:39."
+# -------------------------- Lev.11.39 · COND_וכי (“and-that”) --------------
+# ‹וכי ימות מן› (“and-that die from”)
+# ‹הבהמה אשר היא› (“the-livestock which he/it”)
+# ‹לכם לאכלה … הנגע› (“to-you/your(pl) to-food … the-touch”)
+# ‹בנבלתה יטמא עד› (“in-flabby-thing-her/its be-foul until”)
+# ‹הערב› (“the-evening”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:39."
 m.step("Lev.11.39")
 # witness-tier presupposed read: carcass_file on vekhi_yamut — read, not
 # installed
@@ -167,17 +218,21 @@ m.witness_read("vekhi_yamut", "carcass_file",
                 cites=["Sifra, Shemini, Section 10 1", "Sifra, Shemini, Section 10 3", "Sifra, Shemini, Section 10 4", "Sifra, Shemini, Section 10 5", "Sifra, Shemini, Section 10 6", "Sifra, Shemini, Section 10 7", "Sifra, Shemini, Section 10 8", "Onkelos Lev 11:40"])
 
 # -------------------------- Lev.11.40 · ETNACHTA_SPLIT ---------------------
-# והאכל מנבלתה יכבס בגדיו וטמא עד הערב … והנשא את נבלתה יכבס בגדיו וטמא עד
-# הערב
-# "[EN-AID] From top split: LEFT «והאכל מנבלתה יכבס בגדיו וטמא עד הערב» /
-# RIGHT «והנשא את נבלתה יכבס בגדיו וטמא עד הערב». Derive claim from Hebrew
+# ‹והאכל מנבלתה יכבס› (“and-the-eat from-flabby-thing-her/its trample”)
+# ‹בגדיו וטמא עד› (“garment-him/its and-be-foul until”)
+# ‹הערב … והנשא את› (“the-evening … and-the-lift/carry obj-marker”)
+# ‹נבלתה יכבס בגדיו› (“flabby-thing-her/its trample garment-him/its”)
+# ‹וטמא עד הערב› (“and-be-foul until the-evening”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 11:40."
 m.step("Lev.11.40")
 
 # -------------------------- Lev.11.41 · ETNACHTA_SPLIT ---------------------
-# וכל השרץ השרץ על הארץ … שקץ הוא לא יאכל
-# "[EN-AID] From top split: LEFT «וכל השרץ השרץ על הארץ» / RIGHT «שקץ הוא לא
-# יאכל». Derive claim from Hebrew arms. Lev 11:41."
+# ‹וכל השרץ השרץ› (“and-all the-swarming-creature the-swarm”)
+# ‹על הארץ … שקץ› (“over the-earth … filth”)
+# ‹הוא לא יאכל› (“he/it not eat”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:41."
 m.step("Lev.11.41")
 # witness-tier presupposed read: exemplar_classes on sheretz_hashoretz —
 # read, not installed
@@ -185,44 +240,60 @@ m.witness_read("sheretz_hashoretz", "exemplar_classes",
                 cites=["Sifra, Shemini, Chapter 12 1", "Sifra, Shemini, Chapter 12 2"])
 
 # -------------------------- Lev.11.42 · ETNACHTA_SPLIT ---------------------
-# כל הולך על גח וכל הולך על ארבע עד כל מרבה רגלים לכל השרץ השרץ … לא תאכלום
-# כי שקץ הם
-# "[EN-AID] From top split: LEFT «כל הולך על גח וכל הולך על ארבע עד כל מרבה
-# רגלים לכל השרץ השרץ על הארץ» / RIGHT «לא תאכלום כי שקץ הם». Derive claim
-# from Hebrew arms. Lev 11:42."
+# ‹כל הולך על› (“all walk/go over”)
+# ‹גח וכל הולך› (“external-abdomen and-all walk/go”)
+# ‹על ארבע עד› (“over four until”)
+# ‹כל מרבה רגלים› (“all multiply foot”)
+# ‹לכל השרץ השרץ› (“to-all the-swarming-creature the-swarm”)
+# ‹… לא תאכלום כי› (“not eat-them/their that”)
+# ‹שקץ הם› (“filth they”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:42."
 m.step("Lev.11.42")
 
 # -------------------------- Lev.11.43 · ETNACHTA_SPLIT ---------------------
-# אל תשקצו את נפשתיכם בכל השרץ השרץ … ולא תטמאו בהם ונטמתם בם
-# "[EN-AID] From top split: LEFT «אל תשקצו את נפשתיכם בכל השרץ השרץ» / RIGHT
-# «ולא תטמאו בהם ונטמתם בם». Derive claim from Hebrew arms. Lev 11:43."
+# ‹אל תשקצו את› (“do-not be-filthy obj-marker”)
+# ‹נפשתיכם בכל השרץ› (“living-being-ward in-all the-swarming-creature”)
+# ‹השרץ … ולא תטמאו› (“the-swarming-creature … and-not be-foul”)
+# ‹בהם ונטמתם בם› (“in-them/their and-be-foul in-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:43."
 m.step("Lev.11.43")
 # witness-tier presupposed read: the_end_clause on venitmetem_bam — read,
 # not installed
 m.witness_read("venitmetem_bam", "the_end_clause",
                 cites=["Sifra, Shemini, Chapter 12 3", "Sifra, Shemini, Chapter 12 4", "Onkelos Lev 11:43"])
 
-# -------------------------- Lev.11.44 · COND_כי ----------------------------
-# כי אני יהוה אלהיכם והתקדשתם והייתם קדשים כי קדוש אני … ולא תטמאו את
-# נפשתיכם בכל השרץ הרמש על הארץ
-# "[EN-AID] From top split: LEFT «כי אני יהוה אלהיכם והתקדשתם והייתם קדשים
-# כי קדוש אני» / RIGHT «ולא תטמאו את נפשתיכם בכל השרץ הרמש על הארץ». Derive
-# claim from Hebrew arms. Lev 11:44."
+# -------------------------- Lev.11.44 · COND_כי (“that”) -------------------
+# ‹כי אני יהוה› (“that YHWH”)
+# ‹אלהיכם והתקדשתם והייתם› (“God-you/your(pl) and-sanctify and-be”)
+# ‹קדשים כי קדוש› (“sacred that sacred”)
+# ‹אני … ולא תטמאו› (“ … and-not be-foul”)
+# ‹את נפשתיכם בכל› (“obj-marker living-being-ward in-all”)
+# ‹השרץ הרמש על› (“the-swarming-creature the-creep over”)
+# ‹הארץ› (“the-earth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:44."
 m.step("Lev.11.44")
 
-# -------------------------- Lev.11.45 · COND_כי ----------------------------
-# כי אני יהוה המעלה אתכם מארץ מצרים להית לכם לאלהים … והייתם קדשים כי קדוש
-# אני
-# "[EN-AID] From top split: LEFT «כי אני יהוה המעלה אתכם מארץ מצרים להית לכם
-# לאלהים» / RIGHT «והייתם קדשים כי קדוש אני». Derive claim from Hebrew arms.
-# Lev 11:45."
+# -------------------------- Lev.11.45 · COND_כי (“that”) -------------------
+# ‹כי אני יהוה› (“that YHWH”)
+# ‹המעלה אתכם מארץ› (“the-go-up obj-marker-you/your(pl) from-earth”)
+# ‹מצרים להית לכם› (“Egypt to-be to-you/your(pl)”)
+# ‹לאלהים … והייתם קדשים› (“to-God … and-be sacred”)
+# ‹כי קדוש אני› (“that sacred”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:45."
 m.step("Lev.11.45")
 
 # -------------------------- Lev.11.46 · ETNACHTA_SPLIT ---------------------
-# זאת תורת הבהמה והעוף וכל נפש החיה הרמשת במים … ולכל נפש השרצת על הארץ
-# "[EN-AID] From top split: LEFT «זאת תורת הבהמה והעוף וכל נפש החיה הרמשת
-# במים» / RIGHT «ולכל נפש השרצת על הארץ». Derive claim from Hebrew arms. Lev
-# 11:46."
+# ‹זאת תורת הבהמה› (“this precept the-livestock”)
+# ‹והעוף וכל נפש› (“and-the-flying-creature and-all living-being”)
+# ‹החיה הרמשת במים› (“the-living the-creep in-waters”)
+# ‹… ולכל נפש השרצת› (“and-to-all living-being the-swarm”)
+# ‹על הארץ› (“over the-earth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:46."
 m.step("Lev.11.46")
 # witness-tier presupposed read: hairbreadth_close on zot_torat_habehemah —
 # read, not installed
@@ -230,10 +301,13 @@ m.witness_read("zot_torat_habehemah", "hairbreadth_close",
                 cites=["Sifra, Shemini, Chapter 12 5", "Sifra, Shemini, Chapter 12 6", "Sifra, Shemini, Chapter 12 7", "Sifra, Shemini, Chapter 12 8"])
 
 # -------------------------- Lev.11.47 · ETNACHTA_SPLIT ---------------------
-# להבדיל בין הטמא ובין הטהר … ובין החיה הנאכלת ובין החיה אשר לא תאכל
-# "[EN-AID] From top split: LEFT «להבדיל בין הטמא ובין הטהר» / RIGHT «ובין
-# החיה הנאכלת ובין החיה אשר לא תאכל». Derive claim from Hebrew arms. Lev
-# 11:47."
+# ‹להבדיל בין הטמא› (“to-divide between the-foul-in-a-religious-sense”)
+# ‹ובין הטהר … ובין› (“and-between the-pure … and-between”)
+# ‹החיה הנאכלת ובין› (“the-living the-eat and-between”)
+# ‹החיה אשר לא› (“the-living which not”)
+# ‹תאכל› (“eat”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 11:47."
 m.step("Lev.11.47")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

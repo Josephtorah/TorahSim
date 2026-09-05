@@ -14,16 +14,20 @@ from machine import Machine
 m = Machine("lev_19_holiness_neighbor")
 
 # -------------------------- Lev.19.1 · TREE_CLAIM --------------------------
-# וידבר יהוה … אל משה לאמר
-# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
-# claim from Hebrew arms. Lev 19:1."
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:1."
 m.step("Lev.19.1")
 
 # -------------------------- Lev.19.2 · ETNACHTA_SPLIT ----------------------
-# דבר אל כל עדת בני ישראל ואמרת אלהם קדשים תהיו … כי קדוש אני יהוה אלהיכם
-# "[EN-AID] From top split: LEFT «דבר אל כל עדת בני ישראל ואמרת אלהם קדשים
-# תהיו» / RIGHT «כי קדוש אני יהוה אלהיכם». Derive claim from Hebrew arms.
-# Lev 19:2."
+# ‹דבר אל כל› (“speak to all”)
+# ‹עדת בני ישראל› (“congregation son Israel”)
+# ‹ואמרת אלהם קדשים› (“and-say to-them/their sacred”)
+# ‹תהיו … כי קדוש› (“be … that sacred”)
+# ‹אני יהוה אלהיכם› (“YHWH God-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:2."
 m.step("Lev.19.2")
 # witness-tier presupposed read: most_torah_bodies on kedoshim_tihyu — read,
 # not installed
@@ -31,9 +35,12 @@ m.witness_read("kedoshim_tihyu", "most_torah_bodies",
                 cites=["Sifra, Kedoshim, Section 1 1", "Onkelos Lev 19:2"])
 
 # -------------------------- Lev.19.3 · ETNACHTA_SPLIT ----------------------
-# איש אמו ואביו תיראו ואת שבתתי תשמרו … אני יהוה אלהיכם
-# "[EN-AID] From top split: LEFT «איש אמו ואביו תיראו ואת שבתתי תשמרו» /
-# RIGHT «אני יהוה אלהיכם». Derive claim from Hebrew arms. Lev 19:3."
+# ‹איש אמו ואביו› (“man mother-him/its and-father-him/its”)
+# ‹תיראו ואת שבתתי› (“fear and-obj-marker intermission-me/my”)
+# ‹תשמרו … אני יהוה› (“keep/guard … YHWH”)
+# ‹אלהיכם› (“God-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:3."
 m.step("Lev.19.3")
 # witness-tier presupposed read: three_partners on imo_veaviv_tirau — read,
 # not installed
@@ -41,15 +48,20 @@ m.witness_read("imo_veaviv_tirau", "three_partners",
                 cites=["Sifra, Kedoshim, Section 1 2", "Sifra, Kedoshim, Section 1 4", "Sifra, Kedoshim, Section 1 7", "Sifra, Kedoshim, Section 1 9", "Sifra, Kedoshim, Section 1 10"])
 
 # -------------------------- Lev.19.4 · ETNACHTA_SPLIT ----------------------
-# אל תפנו אל האלילים ואלהי מסכה לא תעשו לכם … אני יהוה אלהיכם
-# "[EN-AID] From top split: LEFT «אל תפנו אל האלילים ואלהי מסכה לא תעשו לכם»
-# / RIGHT «אני יהוה אלהיכם». Derive claim from Hebrew arms. Lev 19:4."
+# ‹אל תפנו אל› (“do-not turn to”)
+# ‹האלילים ואלהי מסכה› (“the-good-for-nothing and-God pouring-over”)
+# ‹לא תעשו לכם› (“not make to-you/your(pl)”)
+# ‹… אני יהוה אלהיכם› (“YHWH God-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:4."
 m.step("Lev.19.4")
 
-# -------------------------- Lev.19.5 · COND_וכי ----------------------------
-# וכי תזבחו זבח שלמים ליהוה … לרצנכם תזבחהו
-# "[EN-AID] From top split: LEFT «וכי תזבחו זבח שלמים ליהוה» / RIGHT «לרצנכם
-# תזבחהו». Derive claim from Hebrew arms. Lev 19:5."
+# -------------------------- Lev.19.5 · COND_וכי (“and-that”) ---------------
+# ‹וכי תזבחו זבח› (“and-that slaughter-an-animal sacrifice”)
+# ‹שלמים ליהוה … לרצנכם› (“requital to-YHWH … to-delight-you/your(pl)”)
+# ‹תזבחהו› (“slaughter-an-animal-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:5."
 m.step("Lev.19.5")
 # witness-tier presupposed read: intent_binds_at_slaughter on
 # lirtzonchem_tizbachuhu — read, not installed
@@ -57,28 +69,39 @@ m.witness_read("lirtzonchem_tizbachuhu", "intent_binds_at_slaughter",
                 cites=["Sifra, Kedoshim, Chapter 1 1", "Sifra, Kedoshim, Chapter 1 2", "Sifra, Kedoshim, Chapter 1 3", "Sifra, Kedoshim, Chapter 1 4", "Sifra, Kedoshim, Chapter 1 5"])
 
 # -------------------------- Lev.19.6 · ETNACHTA_SPLIT ----------------------
-# ביום זבחכם יאכל וממחרת … והנותר עד יום השלישי באש ישרף
-# "[EN-AID] From top split: LEFT «ביום זבחכם יאכל וממחרת» / RIGHT «והנותר עד
-# יום השלישי באש ישרף». Derive claim from Hebrew arms. Lev 19:6."
+# ‹ביום זבחכם יאכל› (“in-day sacrifice-you/your(pl) eat”)
+# ‹וממחרת … והנותר עד› (“and-from-morrow … and-the-jut-over until”)
+# ‹יום השלישי באש› (“day the-third in-fire”)
+# ‹ישרף› (“be-on-fire”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:6."
 m.step("Lev.19.6")
 
-# -------------------------- Lev.19.7 · COND_ואם ----------------------------
-# ואם האכל יאכל ביום השלישי … פגול הוא לא ירצה
-# "[EN-AID] From top split: LEFT «ואם האכל יאכל ביום השלישי» / RIGHT «פגול
-# הוא לא ירצה». Derive claim from Hebrew arms. Lev 19:7."
+# -------------------------- Lev.19.7 · COND_ואם (“and-if”) -----------------
+# ‹ואם האכל יאכל› (“and-if eat eat”)
+# ‹ביום השלישי … פגול› (“in-day the-third … fetid”)
+# ‹הוא לא ירצה› (“he/it not be-pleased-with”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:7."
 m.step("Lev.19.7")
 
-# -------------------------- Lev.19.8 · COND_כי -----------------------------
-# ואכליו עונו ישא כי את קדש יהוה חלל … ונכרתה הנפש ההוא מעמיה
-# "[EN-AID] From top split: LEFT «ואכליו עונו ישא כי את קדש יהוה חלל» /
-# RIGHT «ונכרתה הנפש ההוא מעמיה». Derive claim from Hebrew arms. Lev 19:8."
+# -------------------------- Lev.19.8 · COND_כי (“that”) --------------------
+# ‹ואכליו עונו ישא› (“and-eat-him/its perversity-him/its lift/carry”)
+# ‹כי את קדש› (“that obj-marker holiness”)
+# ‹יהוה חלל … ונכרתה› (“YHWH bore … and-cut”)
+# ‹הנפש ההוא מעמיה› (“the-living-being that from-people-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:8."
 m.step("Lev.19.8")
 
 # -------------------------- Lev.19.9 · ETNACHTA_SPLIT ----------------------
-# ובקצרכם את קציר ארצכם לא תכלה פאת שדך לקצר … ולקט קצירך לא תלקט
-# "[EN-AID] From top split: LEFT «ובקצרכם את קציר ארצכם לא תכלה פאת שדך
-# לקצר» / RIGHT «ולקט קצירך לא תלקט». Derive claim from Hebrew arms. Lev
-# 19:9."
+# ‹ובקצרכם את קציר› (“and-in-dock-off-you/your(pl) obj-marker severed”)
+# ‹ארצכם לא תכלה› (“earth-you/your(pl) not be-complete”)
+# ‹פאת שדך לקצר› (“mouth-in-a-figurative-sense field-you/your to-dock-off”)
+# ‹… ולקט קצירך לא› (“and-gleaning severed-you/your not”)
+# ‹תלקט› (“pick-up”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:9."
 m.step("Lev.19.9")
 # witness-tier presupposed read: the_poor_gifts_engine on peah_leket — read,
 # not installed
@@ -86,16 +109,21 @@ m.witness_read("peah_leket", "the_poor_gifts_engine",
                 cites=["Sifra, Kedoshim, Chapter 1 7", "Sifra, Kedoshim, Chapter 1 9", "Sifra, Kedoshim, Chapter 1 10", "Sifra, Kedoshim, Chapter 2 1", "Sifra, Kedoshim, Chapter 2 4", "Sifra, Kedoshim, Chapter 2 5", "Sifra, Kedoshim, Chapter 3 2", "Sifra, Kedoshim, Chapter 3 3", "Sifra, Kedoshim, Chapter 3 5", "Sifra, Kedoshim, Chapter 3 7"])
 
 # -------------------------- Lev.19.10 · ETNACHTA_SPLIT ---------------------
-# וכרמך לא תעולל ופרט כרמך לא תלקט … לעני ולגר תעזב אתם אני יהוה אלהיכם
-# "[EN-AID] From top split: LEFT «וכרמך לא תעולל ופרט כרמך לא תלקט» / RIGHT
-# «לעני ולגר תעזב אתם אני יהוה אלהיכם». Derive claim from Hebrew arms. Lev
-# 19:10."
+# ‹וכרמך לא תעולל› (“and-garden-you/your not effect-thoroughly”)
+# ‹ופרט כרמך לא› (“and-stray garden-you/your not”)
+# ‹תלקט … לעני ולגר› (“pick-up … to-afflicted and-to-sojourner”)
+# ‹תעזב אתם אני› (“loosen obj-marker-them/their”)
+# ‹יהוה אלהיכם› (“YHWH God-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:10."
 m.step("Lev.19.10")
 
 # -------------------------- Lev.19.11 · ETNACHTA_SPLIT ---------------------
-# לא תגנבו … ולא תכחשו ולא תשקרו איש בעמיתו
-# "[EN-AID] From top split: LEFT «לא תגנבו» / RIGHT «ולא תכחשו ולא תשקרו איש
-# בעמיתו». Derive claim from Hebrew arms. Lev 19:11."
+# ‹לא תגנבו … ולא› (“not steal … and-not”)
+# ‹תכחשו ולא תשקרו› (“be-untrue and-not cheat”)
+# ‹איש בעמיתו› (“man in-companionship-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:11."
 m.step("Lev.19.11")
 # witness-tier presupposed read: warning_completion on lo_tignovu — read,
 # not installed
@@ -103,15 +131,22 @@ m.witness_read("lo_tignovu", "warning_completion",
                 cites=["Sifra, Kedoshim, Section 2 1", "Sifra, Kedoshim, Section 2 2", "Sifra, Kedoshim, Section 2 3", "Sifra, Kedoshim, Section 2 5", "Sifra, Kedoshim, Section 2 6", "Sifra, Kedoshim, Section 2 7"])
 
 # -------------------------- Lev.19.12 · ETNACHTA_SPLIT ---------------------
-# ולא תשבעו בשמי לשקר … וחללת את שם אלהיך אני יהוה
-# "[EN-AID] From top split: LEFT «ולא תשבעו בשמי לשקר» / RIGHT «וחללת את שם
-# אלהיך אני יהוה». Derive claim from Hebrew arms. Lev 19:12."
+# ‹ולא תשבעו בשמי› (“and-not swear in-name-me/my”)
+# ‹לשקר … וחללת את› (“to-untruth … and-bore obj-marker”)
+# ‹שם אלהיך אני› (“name God-you/your”)
+# ‹יהוה› (“YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:12."
 m.step("Lev.19.12")
 
 # -------------------------- Lev.19.13 · ETNACHTA_SPLIT ---------------------
-# לא תעשק את רעך ולא תגזל … לא תלין פעלת שכיר אתך עד בקר
-# "[EN-AID] From top split: LEFT «לא תעשק את רעך ולא תגזל» / RIGHT «לא תלין
-# פעלת שכיר אתך עד בקר». Derive claim from Hebrew arms. Lev 19:13."
+# ‹לא תעשק את› (“not press-upon obj-marker”)
+# ‹רעך ולא תגזל› (“associate-you/your and-not pluck-off”)
+# ‹… לא תלין פעלת› (“not stop work”)
+# ‹שכיר אתך עד› (“man-at-wages-by-the-day with-you/your until”)
+# ‹בקר› (“morning”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:13."
 m.step("Lev.19.13")
 # witness-tier presupposed read: the_wage_clock on lo_talin — read, not
 # installed
@@ -119,9 +154,12 @@ m.witness_read("lo_talin", "the_wage_clock",
                 cites=["Sifra, Kedoshim, Section 2 9", "Sifra, Kedoshim, Section 2 10", "Sifra, Kedoshim, Section 2 11", "Sifra, Kedoshim, Section 2 12", "Onkelos Lev 19:13"])
 
 # -------------------------- Lev.19.14 · ETNACHTA_SPLIT ---------------------
-# לא תקלל חרש ולפני עור לא תתן מכשל … ויראת מאלהיך אני יהוה
-# "[EN-AID] From top split: LEFT «לא תקלל חרש ולפני עור לא תתן מכשל» / RIGHT
-# «ויראת מאלהיך אני יהוה». Derive claim from Hebrew arms. Lev 19:14."
+# ‹לא תקלל חרש› (“not be-light deaf”)
+# ‹ולפני עור לא› (“and-to-face blind not”)
+# ‹תתן מכשל … ויראת› (“set stumbling-block … and-fear”)
+# ‹מאלהיך אני יהוה› (“from-God-you/your YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:14."
 m.step("Lev.19.14")
 # witness-tier presupposed read: blind_in_the_matter on lifnei_iver — read,
 # not installed
@@ -129,10 +167,13 @@ m.witness_read("lifnei_iver", "blind_in_the_matter",
                 cites=["Sifra, Kedoshim, Section 2 13", "Sifra, Kedoshim, Section 2 14", "Onkelos Lev 19:14"])
 
 # -------------------------- Lev.19.15 · ETNACHTA_SPLIT ---------------------
-# לא תעשו עול במשפט לא תשא פני דל ולא תהדר פני גדול … בצדק תשפט עמיתך
-# "[EN-AID] From top split: LEFT «לא תעשו עול במשפט לא תשא פני דל ולא תהדר
-# פני גדול» / RIGHT «בצדק תשפט עמיתך». Derive claim from Hebrew arms. Lev
-# 19:15."
+# ‹לא תעשו עול› (“not make evil”)
+# ‹במשפט לא תשא› (“in-judgment not lift/carry”)
+# ‹פני דל ולא› (“face dangling and-not”)
+# ‹תהדר פני גדול› (“swell-up face great”)
+# ‹… בצדק תשפט עמיתך› (“in-right judge companionship-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:15."
 m.step("Lev.19.15")
 # witness-tier presupposed read: the_court_file on betzedek_tishpot — read,
 # not installed
@@ -140,21 +181,32 @@ m.witness_read("betzedek_tishpot", "the_court_file",
                 cites=["Sifra, Kedoshim, Chapter 4 1", "Sifra, Kedoshim, Chapter 4 4", "Sifra, Kedoshim, Chapter 4 6", "Sifra, Kedoshim, Chapter 4 7", "Sifra, Kedoshim, Chapter 4 8", "Sifra, Kedoshim, Chapter 4 10", "Sifra, Kedoshim, Chapter 4 11", "Sifra, Kedoshim, Chapter 4 12", "Onkelos Lev 19:16", "Onkelos Lev 19:18"])
 
 # -------------------------- Lev.19.16 · ETNACHTA_SPLIT ---------------------
-# לא תלך רכיל בעמיך לא תעמד על דם רעך … אני יהוה
-# "[EN-AID] From top split: LEFT «לא תלך רכיל בעמיך לא תעמד על דם רעך» /
-# RIGHT «אני יהוה». Derive claim from Hebrew arms. Lev 19:16."
+# ‹לא תלך רכיל› (“not go scandal-monger”)
+# ‹בעמיך לא תעמד› (“in-people-you/your not stand”)
+# ‹על דם רעך› (“over blood associate-you/your”)
+# ‹… אני יהוה› (“YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:16."
 m.step("Lev.19.16")
 
 # -------------------------- Lev.19.17 · ETNACHTA_SPLIT ---------------------
-# לא תשנא את אחיך בלבבך … הוכח תוכיח את עמיתך ולא תשא עליו חטא
-# "[EN-AID] From top split: LEFT «לא תשנא את אחיך בלבבך» / RIGHT «הוכח תוכיח
-# את עמיתך ולא תשא עליו חטא». Derive claim from Hebrew arms. Lev 19:17."
+# ‹לא תשנא את› (“not hate obj-marker”)
+# ‹אחיך בלבבך … הוכח› (“brother-you/your in-heart-you/your … be-right”)
+# ‹תוכיח את עמיתך› (“be-right obj-marker companionship-you/your”)
+# ‹ולא תשא עליו› (“and-not lift/carry over-him/its”)
+# ‹חטא› (“crime”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:17."
 m.step("Lev.19.17")
 
 # -------------------------- Lev.19.18 · ETNACHTA_SPLIT ---------------------
-# לא תקם ולא תטר את בני עמך ואהבת לרעך כמוך … אני יהוה
-# "[EN-AID] From top split: LEFT «לא תקם ולא תטר את בני עמך ואהבת לרעך כמוך»
-# / RIGHT «אני יהוה». Derive claim from Hebrew arms. Lev 19:18."
+# ‹לא תקם ולא› (“not grudge and-not”)
+# ‹תטר את בני› (“guard obj-marker son”)
+# ‹עמך ואהבת לרעך› (“people-you/your and-have-affection-for to-associate-
+# you/your”)
+# ‹כמוך … אני יהוה› (“form-of-the-prefix-'k-'-you/your … YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 19:18."
 m.step("Lev.19.18")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

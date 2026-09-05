@@ -462,3 +462,36 @@ opposite directions.
 **Middah correspondence:** im eino inyan — the tradition's own
 name; a governed special case of "a matter learned from its
 context," running on redundancy rather than adjacency.
+
+## M-19 — THE TEMPLATE BROADCAST (one kind's clause is carried across every kind of the class)
+The teacher finds a clause written on ONE member of a class — one
+kind of meal offering, one species of burnt offering — and reads it
+as the class's template: the tradition's own formula is לִתֵּן אֶת
+הָאָמוּר כָּאן בְּכָל הַמְּנָחוֹת וְאֶת הָאָמוּר בְּכָל הַמְּנָחוֹת כָּאן ("to
+give what is said HERE to all the meal offerings, and what is said
+of all the meal offerings HERE" — Sifra, Vayikra Dibbura DeNedavah,
+Chapter 10 1, the row-grain address). The ink states the rule once
+and the compiler broadcasts it; the fraction stays honest because the
+broadcast cell is labeled MOVE and the source cell INK.
+**Exemplars:** (1) THE NORTH FOR EVERY OLAH — Lev 1:11 states "northward"
+for the flock alone; the Sifra generalizes it to the herd by the
+include-then-exclude sort — "the north obtains in every burnt
+offering" (Nedavah Chapter 7 6-7): sitting A's olah row graded twice,
+flock INK, herd MOVE (cold_run_offerings.py, 2026-09-05). (2) THE
+ADJUNCTS AND THE BREAKING ACROSS THE FIVE KINDS — frankincense is
+written at 2:1 (the fine flour) and 2:15 (the first fruits) only;
+breaking at 2:6 (the griddle) only; the three oil forms one per kind
+(pour 2:1/2:6, mix 2:4-5, made-in-oil 2:7): the Sifra's Chapter 10 1
+carries each across all five, and Mishnah Menachot 5:3, 6:3, 6:4
+("ALL the meal offerings made in a vessel require...") are the
+broadcast's output (cold_run_minchah.py, sitting B, 2026-09-05).
+(3) THE SALT ON EVERY OFFERING — written at the meal offering (2:13)
+with its own broadcast clause in the ink, "on ALL your offerings":
+the bird burnt offering is "rubbed with salt" at Zevachim 6:5 — the
+one case where the broadcast is the verse's own word, so the cell is
+INK (the same runner).
+**Middah correspondence:** binyan av — "a father built from one
+verse" (the third of R. Yishmael's thirteen) — run as a class
+operation rather than an analogy: the clause is not argued across,
+it is declared the class's own. The Sifra's formula is the
+declaration.

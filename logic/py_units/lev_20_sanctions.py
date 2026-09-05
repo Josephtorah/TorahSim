@@ -14,17 +14,21 @@ from machine import Machine
 m = Machine("lev_20_sanctions")
 
 # -------------------------- Lev.20.1 · TREE_CLAIM --------------------------
-# וידבר יהוה … אל משה לאמר
-# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
-# claim from Hebrew arms. Lev 20:1."
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:1."
 m.step("Lev.20.1")
 
 # -------------------------- Lev.20.2 · ETNACHTA_SPLIT ----------------------
-# ואל בני ישראל תאמר איש איש מבני ישראל ומן הגר הגר בישראל אשר … עם הארץ
-# ירגמהו באבן
-# "[EN-AID] From top split: LEFT «ואל בני ישראל תאמר איש איש מבני ישראל ומן
-# הגר הגר בישראל אשר יתן מזרעו למלך מות » / RIGHT «עם הארץ ירגמהו באבן».
-# Derive claim from Hebrew arms. Lev 20:2."
+# ‹ואל בני ישראל› (“and-to son Israel”)
+# ‹תאמר איש איש› (“say man man”)
+# ‹מבני ישראל ומן› (“from-son Israel and-from”)
+# ‹הגר הגר בישראל› (“the-sojourner the-turn-aside-from-the-road in-Israel”)
+# ‹אשר … עם הארץ› (“which … people the-earth”)
+# ‹ירגמהו באבן› (“cast-together-him/its in-stone”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:2."
 m.step("Lev.20.2")
 # witness-tier presupposed read: the_molech_predicate on asher_yiten_mizaro
 # — read, not installed
@@ -32,18 +36,26 @@ m.witness_read("asher_yiten_mizaro", "the_molech_predicate",
                 cites=["Sifra, Kedoshim, Section 4 1", "Sifra, Kedoshim, Section 4 3", "Sifra, Kedoshim, Section 4 4", "Sifra, Kedoshim, Section 4 6", "Sifra, Kedoshim, Section 4 7"])
 
 # -------------------------- Lev.20.3 · ETNACHTA_SPLIT ----------------------
-# ואני אתן את פני באיש ההוא והכרתי אתו מקרב עמו … כי מזרעו נתן למלך למען טמא
-# את מקדשי ולחלל את שם קדשי
-# "[EN-AID] From top split: LEFT «ואני אתן את פני באיש ההוא והכרתי אתו מקרב
-# עמו» / RIGHT «כי מזרעו נתן למלך למען טמא את מקדשי ולחלל את שם קדשי».
-# Derive claim from Hebrew arms. Lev 20:3."
+# ‹ואני אתן את› (“and-I set obj-marker”)
+# ‹פני באיש ההוא› (“face-me/my in-man that”)
+# ‹והכרתי אתו מקרב› (“and-cut obj-marker-him/its from-nearest-part”)
+# ‹עמו … כי מזרעו› (“people-him/its … that from-seed-him/its”)
+# ‹נתן למלך למען› (“set to-Molech so-that”)
+# ‹טמא את מקדשי› (“be-foul obj-marker consecrated-thing-me/my”)
+# ‹ולחלל את שם› (“and-to-bore obj-marker name”)
+# ‹קדשי› (“holiness-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:3."
 m.step("Lev.20.3")
 
-# -------------------------- Lev.20.4 · COND_ואם ----------------------------
-# ואם העלם יעלימו עם הארץ את עיניהם מן האיש ההוא בתתו מזרעו למ … לבלתי המית
-# אתו
-# "[EN-AID] From top split: LEFT «ואם העלם יעלימו עם הארץ את עיניהם מן האיש
-# ההוא בתתו מזרעו למלך» / RIGHT «לבלתי המית אתו». Derive claim from Hebrew
+# -------------------------- Lev.20.4 · COND_ואם (“and-if”) -----------------
+# ‹ואם העלם יעלימו› (“and-if veil-from-sight veil-from-sight”)
+# ‹עם הארץ את› (“people the-earth obj-marker”)
+# ‹עיניהם מן האיש› (“eye-them/their from the-man”)
+# ‹ההוא בתתו מזרעו› (“that in-set-him/its from-seed-him/its”)
+# ‹למ … לבלתי המית› (“? … to-failure-of die”)
+# ‹אתו› (“obj-marker-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 20:4."
 m.step("Lev.20.4")
 # witness-tier presupposed read: the_concealment_ladder on haalem_yalimu —
@@ -52,38 +64,54 @@ m.witness_read("haalem_yalimu", "the_concealment_ladder",
                 cites=["Sifra, Kedoshim, Section 4 9", "Sifra, Kedoshim, Section 4 10", "Sifra, Kedoshim, Section 4 11", "Sifra, Kedoshim, Section 4 13", "Sifra, Kedoshim, Section 4 14", "Onkelos Lev 20:4", "Onkelos Lev 20:5"])
 
 # -------------------------- Lev.20.5 · ETNACHTA_SPLIT ----------------------
-# ושמתי אני את פני באיש ההוא ובמשפחתו … והכרתי אתו ואת כל הזנים אחריו לזנות
-# אחרי המלך מקרב עמם
-# "[EN-AID] From top split: LEFT «ושמתי אני את פני באיש ההוא ובמשפחתו» /
-# RIGHT «והכרתי אתו ואת כל הזנים אחריו לזנות אחרי המלך מקרב עמם». Derive
-# claim from Hebrew arms. Lev 20:5."
+# ‹ושמתי אני את› (“and-put/set obj-marker”)
+# ‹פני באיש ההוא› (“face-me/my in-man that”)
+# ‹ובמשפחתו … והכרתי אתו› (“and-in-family-him/its … and-cut obj-marker-
+# him/its”)
+# ‹ואת כל הזנים› (“and-obj-marker all the-commit-adultery”)
+# ‹אחריו לזנות אחרי› (“after-him/its to-commit-adultery after”)
+# ‹המלך מקרב עמם› (“the-Molech from-nearest-part people-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:5."
 m.step("Lev.20.5")
 
 # -------------------------- Lev.20.6 · ETNACHTA_SPLIT ----------------------
-# והנפש אשר תפנה אל האבת ואל הידענים לזנות אחריהם … ונתתי את פני בנפש ההוא
-# והכרתי אתו מקרב עמו
-# "[EN-AID] From top split: LEFT «והנפש אשר תפנה אל האבת ואל הידענים לזנות
-# אחריהם» / RIGHT «ונתתי את פני בנפש ההוא והכרתי אתו מקרב עמו». Derive claim
-# from Hebrew arms. Lev 20:6."
+# ‹והנפש אשר תפנה› (“and-the-living-being which turn”)
+# ‹אל האבת ואל› (“to the-mumble and-to”)
+# ‹הידענים לזנות אחריהם› (“the-knowing-one to-commit-adultery after-
+# them/their”)
+# ‹… ונתתי את פני› (“and-set obj-marker face-me/my”)
+# ‹בנפש ההוא והכרתי› (“in-living-being that and-cut”)
+# ‹אתו מקרב עמו› (“obj-marker-him/its from-nearest-part people-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:6."
 m.step("Lev.20.6")
 
-# -------------------------- Lev.20.7 · COND_כי -----------------------------
-# והתקדשתם והייתם קדשים … כי אני יהוה אלהיכם
-# "[EN-AID] From top split: LEFT «והתקדשתם והייתם קדשים» / RIGHT «כי אני
-# יהוה אלהיכם». Derive claim from Hebrew arms. Lev 20:7."
+# -------------------------- Lev.20.7 · COND_כי (“that”) --------------------
+# ‹והתקדשתם והייתם קדשים› (“and-sanctify and-be sacred”)
+# ‹… כי אני יהוה› (“that YHWH”)
+# ‹אלהיכם› (“God-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:7."
 m.step("Lev.20.7")
 
 # -------------------------- Lev.20.8 · ETNACHTA_SPLIT ----------------------
-# ושמרתם את חקתי ועשיתם אתם … אני יהוה מקדשכם
-# "[EN-AID] From top split: LEFT «ושמרתם את חקתי ועשיתם אתם» / RIGHT «אני
-# יהוה מקדשכם». Derive claim from Hebrew arms. Lev 20:8."
+# ‹ושמרתם את חקתי› (“and-keep/guard obj-marker statute-me/my”)
+# ‹ועשיתם אתם … אני› (“and-make obj-marker-them/their … ”)
+# ‹יהוה מקדשכם› (“YHWH sanctify-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:8."
 m.step("Lev.20.8")
 
-# -------------------------- Lev.20.9 · COND_כי -----------------------------
-# כי איש איש אשר יקלל את אביו ואת אמו מות יומת … אביו ואמו קלל דמיו בו
-# "[EN-AID] From top split: LEFT «כי איש איש אשר יקלל את אביו ואת אמו מות
-# יומת» / RIGHT «אביו ואמו קלל דמיו בו». Derive claim from Hebrew arms. Lev
-# 20:9."
+# -------------------------- Lev.20.9 · COND_כי (“that”) --------------------
+# ‹כי איש איש› (“that man man”)
+# ‹אשר יקלל את› (“which be-light obj-marker”)
+# ‹אביו ואת אמו› (“father-him/its and-obj-marker mother-him/its”)
+# ‹מות יומת … אביו› (“die die … father-him/its”)
+# ‹ואמו קלל דמיו› (“and-mother-him/its be-light blood-him/its”)
+# ‹בו› (“in-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:9."
 m.step("Lev.20.9")
 # witness-tier presupposed read: the_curse_file on aviv_veimo_kilel — read,
 # not installed
@@ -91,10 +119,13 @@ m.witness_read("aviv_veimo_kilel", "the_curse_file",
                 cites=["Sifra, Kedoshim, Chapter 9 1", "Sifra, Kedoshim, Chapter 9 2", "Sifra, Kedoshim, Chapter 9 3", "Sifra, Kedoshim, Chapter 9 14", "Sifra, Kedoshim, Chapter 10 5", "Sifra, Kedoshim, Chapter 10 6", "Sifra, Kedoshim, Chapter 10 7", "Onkelos Lev 20:9"])
 
 # -------------------------- Lev.20.10 · ETNACHTA_SPLIT ---------------------
-# ואיש אשר ינאף את אשת איש אשר ינאף את אשת רעהו … מות יומת הנאף והנאפת
-# "[EN-AID] From top split: LEFT «ואיש אשר ינאף את אשת איש אשר ינאף את אשת
-# רעהו» / RIGHT «מות יומת הנאף והנאפת». Derive claim from Hebrew arms. Lev
-# 20:10."
+# ‹ואיש אשר ינאף› (“and-man which commit-adultery”)
+# ‹את אשת איש› (“with woman man”)
+# ‹אשר ינאף את› (“which commit-adultery with”)
+# ‹אשת רעהו … מות› (“woman associate-him/its … die”)
+# ‹יומת הנאף והנאפת› (“die the-commit-adultery and-the-commit-adultery”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:10."
 m.step("Lev.20.10")
 # witness-tier presupposed read: the_strangulation_default on
 # mot_yumat_hanoef — read, not installed
@@ -102,23 +133,32 @@ m.witness_read("mot_yumat_hanoef", "the_strangulation_default",
                 cites=["Sifra, Kedoshim, Chapter 10 8", "Onkelos Lev 20:10"])
 
 # -------------------------- Lev.20.11 · ETNACHTA_SPLIT ---------------------
-# ואיש אשר ישכב את אשת אביו ערות אביו גלה … מות יומתו שניהם דמיהם בם
-# "[EN-AID] From top split: LEFT «ואיש אשר ישכב את אשת אביו ערות אביו גלה» /
-# RIGHT «מות יומתו שניהם דמיהם בם». Derive claim from Hebrew arms. Lev
-# 20:11."
+# ‹ואיש אשר ישכב› (“and-man which lie-down”)
+# ‹את אשת אביו› (“with woman father-him/its”)
+# ‹ערות אביו גלה› (“nudity father-him/its denude”)
+# ‹… מות יומתו שניהם› (“die die two-them/their”)
+# ‹דמיהם בם› (“blood-them/their in-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:11."
 m.step("Lev.20.11")
 
 # -------------------------- Lev.20.12 · ETNACHTA_SPLIT ---------------------
-# ואיש אשר ישכב את כלתו מות יומתו שניהם … תבל עשו דמיהם בם
-# "[EN-AID] From top split: LEFT «ואיש אשר ישכב את כלתו מות יומתו שניהם» /
-# RIGHT «תבל עשו דמיהם בם». Derive claim from Hebrew arms. Lev 20:12."
+# ‹ואיש אשר ישכב› (“and-man which lie-down”)
+# ‹את כלתו מות› (“with bride-him/its die”)
+# ‹יומתו שניהם … תבל› (“die two-them/their … mixture”)
+# ‹עשו דמיהם בם› (“make blood-them/their in-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:12."
 m.step("Lev.20.12")
 
 # -------------------------- Lev.20.13 · ETNACHTA_SPLIT ---------------------
-# ואיש אשר ישכב את זכר משכבי אשה תועבה עשו שניהם … מות יומתו דמיהם בם
-# "[EN-AID] From top split: LEFT «ואיש אשר ישכב את זכר משכבי אשה תועבה עשו
-# שניהם» / RIGHT «מות יומתו דמיהם בם». Derive claim from Hebrew arms. Lev
-# 20:13."
+# ‹ואיש אשר ישכב› (“and-man which lie-down”)
+# ‹את זכר משכבי› (“with male bed”)
+# ‹אשה תועבה עשו› (“woman something-disgusting make”)
+# ‹שניהם … מות יומתו› (“two-them/their … die die”)
+# ‹דמיהם בם› (“blood-them/their in-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:13."
 m.step("Lev.20.13")
 # witness-tier presupposed read: revocalization_and_paths on mishkevei_isha
 # — read, not installed
@@ -126,24 +166,33 @@ m.witness_read("mishkevei_isha", "revocalization_and_paths",
                 cites=["Sifra, Kedoshim, Chapter 10 9", "Sifra, Kedoshim, Chapter 10 11", "Sifra, Kedoshim, Chapter 10 12", "Sifra, Kedoshim, Chapter 10 15", "Sifra, Kedoshim, Chapter 11 2", "Onkelos Lev 20:14"])
 
 # -------------------------- Lev.20.14 · ETNACHTA_SPLIT ---------------------
-# ואיש אשר יקח את אשה ואת אמה זמה הוא … באש ישרפו אתו ואתהן ולא תהיה זמה
-# בתוככם
-# "[EN-AID] From top split: LEFT «ואיש אשר יקח את אשה ואת אמה זמה הוא» /
-# RIGHT «באש ישרפו אתו ואתהן ולא תהיה זמה בתוככם». Derive claim from Hebrew
+# ‹ואיש אשר יקח› (“and-man which take”)
+# ‹את אשה ואת› (“obj-marker woman and-obj-marker”)
+# ‹אמה זמה הוא› (“mother-her/its plan he/it”)
+# ‹… באש ישרפו אתו› (“in-fire be-on-fire obj-marker-him/its”)
+# ‹ואתהן ולא תהיה› (“and-obj-marker-them/their and-not be”)
+# ‹זמה בתוככם› (“plan in-midst-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 20:14."
 m.step("Lev.20.14")
 
 # -------------------------- Lev.20.15 · ETNACHTA_SPLIT ---------------------
-# ואיש אשר יתן שכבתו בבהמה מות יומת … ואת הבהמה תהרגו
-# "[EN-AID] From top split: LEFT «ואיש אשר יתן שכבתו בבהמה מות יומת» / RIGHT
-# «ואת הבהמה תהרגו». Derive claim from Hebrew arms. Lev 20:15."
+# ‹ואיש אשר יתן› (“and-man which set”)
+# ‹שכבתו בבהמה מות› (“lying-with-him/its in-livestock die”)
+# ‹יומת … ואת הבהמה› (“die … and-obj-marker the-livestock”)
+# ‹תהרגו› (“smite-with-deadly-intent”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:15."
 m.step("Lev.20.15")
 
 # -------------------------- Lev.20.16 · ETNACHTA_SPLIT ---------------------
-# ואשה אשר תקרב אל כל בהמה לרבעה אתה והרגת את האשה ואת הבהמה … מות יומתו
-# דמיהם בם
-# "[EN-AID] From top split: LEFT «ואשה אשר תקרב אל כל בהמה לרבעה אתה והרגת
-# את האשה ואת הבהמה» / RIGHT «מות יומתו דמיהם בם». Derive claim from Hebrew
+# ‹ואשה אשר תקרב› (“and-woman which bring-near”)
+# ‹אל כל בהמה› (“to all livestock”)
+# ‹לרבעה אתה והרגת› (“to-squat with-her/its and-smite-with-deadly-intent”)
+# ‹את האשה ואת› (“obj-marker the-woman and-obj-marker”)
+# ‹הבהמה … מות יומתו› (“the-livestock … die die”)
+# ‹דמיהם בם› (“blood-them/their in-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 20:16."
 m.step("Lev.20.16")
 # witness-tier presupposed read: the_moral_hazard_row on
@@ -152,11 +201,15 @@ m.witness_read("veet_habehema_taharogu", "the_moral_hazard_row",
                 cites=["Sifra, Kedoshim, Chapter 11 5", "Sifra, Kedoshim, Chapter 11 8", "Sifra, Kedoshim, Chapter 11 9"])
 
 # -------------------------- Lev.20.17 · ETNACHTA_SPLIT ---------------------
-# ואיש אשר יקח את אחתו בת אביו או בת אמו וראה את ערותה והיא תר … ערות אחתו
-# גלה עונו ישא
-# "[EN-AID] From top split: LEFT «ואיש אשר יקח את אחתו בת אביו או בת אמו
-# וראה את ערותה והיא תראה את ערותו חסד הוא » / RIGHT «ערות אחתו גלה עונו
-# ישא». Derive claim from Hebrew arms. Lev 20:17."
+# ‹ואיש אשר יקח› (“and-man which take”)
+# ‹את אחתו בת› (“obj-marker sister-him/its daughter”)
+# ‹אביו או בת› (“father-him/its or daughter”)
+# ‹אמו וראה את› (“mother-him/its and-see obj-marker”)
+# ‹ערותה והיא תר› (“nudity-her/its and-he/it ring-dove”)
+# ‹… ערות אחתו גלה› (“nudity sister-him/its denude”)
+# ‹עונו ישא› (“perversity-him/its lift/carry”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:17."
 m.step("Lev.20.17")
 # witness-tier presupposed read: the_fence_complete on achoto_chesed_hu —
 # read, not installed
@@ -164,77 +217,116 @@ m.witness_read("achoto_chesed_hu", "the_fence_complete",
                 cites=["Sifra, Kedoshim, Chapter 11 10", "Sifra, Kedoshim, Chapter 11 11", "Sifra, Kedoshim, Chapter 11 12", "Sifra, Kedoshim, Chapter 12 2", "Sifra, Kedoshim, Chapter 12 4", "Sifra, Kedoshim, Chapter 12 6", "Sifra, Kedoshim, Chapter 12 8", "Onkelos Lev 20:17", "Onkelos Lev 20:20"])
 
 # -------------------------- Lev.20.18 · ETNACHTA_SPLIT ---------------------
-# ואיש אשר ישכב את אשה דוה וגלה את ערותה את מקרה הערה והיא גלת … ונכרתו
-# שניהם מקרב עמם
-# "[EN-AID] From top split: LEFT «ואיש אשר ישכב את אשה דוה וגלה את ערותה את
-# מקרה הערה והיא גלתה את מקור דמיה» / RIGHT «ונכרתו שניהם מקרב עמם». Derive
-# claim from Hebrew arms. Lev 20:18."
+# ‹ואיש אשר ישכב› (“and-man which lie-down”)
+# ‹את אשה דוה› (“with woman sick”)
+# ‹וגלה את ערותה› (“and-denude obj-marker nudity-her/its”)
+# ‹את מקרה הערה› (“obj-marker something-dug-her/its be-bare”)
+# ‹והיא גלת … ונכרתו› (“and-he/it ? … and-cut”)
+# ‹שניהם מקרב עמם› (“two-them/their from-nearest-part people-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:18."
 m.step("Lev.20.18")
 
 # -------------------------- Lev.20.19 · ETNACHTA_SPLIT ---------------------
-# וערות אחות אמך ואחות אביך לא תגלה … כי את שארו הערה עונם ישאו
-# "[EN-AID] From top split: LEFT «וערות אחות אמך ואחות אביך לא תגלה» / RIGHT
-# «כי את שארו הערה עונם ישאו». Derive claim from Hebrew arms. Lev 20:19."
+# ‹וערות אחות אמך› (“and-nudity sister mother-you/your”)
+# ‹ואחות אביך לא› (“and-sister father-you/your not”)
+# ‹תגלה … כי את› (“denude … that obj-marker”)
+# ‹שארו הערה עונם› (“flesh-him/its be-bare perversity-them/their”)
+# ‹ישאו› (“lift/carry”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:19."
 m.step("Lev.20.19")
 
 # -------------------------- Lev.20.20 · ETNACHTA_SPLIT ---------------------
-# ואיש אשר ישכב את דדתו ערות דדו גלה … חטאם ישאו ערירים ימתו
-# "[EN-AID] From top split: LEFT «ואיש אשר ישכב את דדתו ערות דדו גלה» /
-# RIGHT «חטאם ישאו ערירים ימתו». Derive claim from Hebrew arms. Lev 20:20."
+# ‹ואיש אשר ישכב› (“and-man which lie-down”)
+# ‹את דדתו ערות› (“with aunt-him/its nudity”)
+# ‹דדו גלה … חטאם› (“love-him/its denude … crime-them/their”)
+# ‹ישאו ערירים ימתו› (“lift/carry bare die”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:20."
 m.step("Lev.20.20")
 
 # -------------------------- Lev.20.21 · ETNACHTA_SPLIT ---------------------
-# ואיש אשר יקח את אשת אחיו נדה הוא … ערות אחיו גלה ערירים יהיו
-# "[EN-AID] From top split: LEFT «ואיש אשר יקח את אשת אחיו נדה הוא» / RIGHT
-# «ערות אחיו גלה ערירים יהיו». Derive claim from Hebrew arms. Lev 20:21."
+# ‹ואיש אשר יקח› (“and-man which take”)
+# ‹את אשת אחיו› (“obj-marker woman brother-him/its”)
+# ‹נדה הוא … ערות› (“rejection he/it … nudity”)
+# ‹אחיו גלה ערירים› (“brother-him/its denude bare”)
+# ‹יהיו› (“be”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:21."
 m.step("Lev.20.21")
 
 # -------------------------- Lev.20.22 · ETNACHTA_SPLIT ---------------------
-# ושמרתם את כל חקתי ואת כל משפטי ועשיתם אתם … ולא תקיא אתכם הארץ אשר אני
-# מביא אתכם שמה לשבת בה
-# "[EN-AID] From top split: LEFT «ושמרתם את כל חקתי ואת כל משפטי ועשיתם אתם»
-# / RIGHT «ולא תקיא אתכם הארץ אשר אני מביא אתכם שמה לשבת בה». Derive claim
-# from Hebrew arms. Lev 20:22."
+# ‹ושמרתם את כל› (“and-keep/guard obj-marker all”)
+# ‹חקתי ואת כל› (“statute-me/my and-obj-marker all”)
+# ‹משפטי ועשיתם אתם› (“judgment-me/my and-make obj-marker-them/their”)
+# ‹… ולא תקיא אתכם› (“and-not vomit obj-marker-you/your(pl)”)
+# ‹הארץ אשר אני› (“the-earth which”)
+# ‹מביא אתכם שמה› (“come/bring obj-marker-you/your(pl) there-ward”)
+# ‹לשבת בה› (“to-dwell/sit in-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:22."
 m.step("Lev.20.22")
 
 # -------------------------- Lev.20.23 · ETNACHTA_SPLIT ---------------------
-# ולא תלכו בחקת הגוי אשר אני משלח מפניכם … כי את כל אלה עשו ואקץ בם
-# "[EN-AID] From top split: LEFT «ולא תלכו בחקת הגוי אשר אני משלח מפניכם» /
-# RIGHT «כי את כל אלה עשו ואקץ בם». Derive claim from Hebrew arms. Lev
-# 20:23."
+# ‹ולא תלכו בחקת› (“and-not go in-statute”)
+# ‹הגוי אשר אני› (“the-nation which”)
+# ‹משלח מפניכם … כי› (“send from-face-you/your(pl) … that”)
+# ‹את כל אלה› (“obj-marker all these”)
+# ‹עשו ואקץ בם› (“make and-be-disgusted in-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:23."
 m.step("Lev.20.23")
 
 # -------------------------- Lev.20.24 · ETNACHTA_SPLIT ---------------------
-# ואמר לכם אתם תירשו את אדמתם ואני אתננה לכם לרשת אתה ארץ זבת  … אני יהוה
-# אלהיכם אשר הבדלתי אתכם מן העמים
-# "[EN-AID] From top split: LEFT «ואמר לכם אתם תירשו את אדמתם ואני אתננה לכם
-# לרשת אתה ארץ זבת חלב ודבש» / RIGHT «אני יהוה אלהיכם אשר הבדלתי אתכם מן
-# העמים». Derive claim from Hebrew arms. Lev 20:24."
+# ‹ואמר לכם אתם› (“and-say to-you/your(pl) you”)
+# ‹תירשו את אדמתם› (“possess/inherit obj-marker ground-them/their”)
+# ‹ואני אתננה לכם› (“and-I set-her/its to-you/your(pl)”)
+# ‹לרשת אתה ארץ› (“to-possess/inherit obj-marker-her/its earth”)
+# ‹זבת … אני יהוה› (“flow-freely … YHWH”)
+# ‹אלהיכם אשר הבדלתי› (“God-you/your(pl) which divide”)
+# ‹אתכם מן העמים› (“obj-marker-you/your(pl) from the-people”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:24."
 m.step("Lev.20.24")
 
 # -------------------------- Lev.20.25 · ETNACHTA_SPLIT ---------------------
-# והבדלתם בין הבהמה הטהרה לטמאה ובין העוף הטמא לטהר … ולא תשקצו את נפשתיכם
-# בבהמה ובעוף ובכל אשר תרמש האדמה אשר הבד
-# "[EN-AID] From top split: LEFT «והבדלתם בין הבהמה הטהרה לטמאה ובין העוף
-# הטמא לטהר» / RIGHT «ולא תשקצו את נפשתיכם בבהמה ובעוף ובכל אשר תרמש האדמה
-# אשר הבדלתי לכם לטמא». Derive claim from Hebrew arms. Lev 20:25."
+# ‹והבדלתם בין הבהמה› (“and-divide between the-livestock”)
+# ‹הטהרה לטמאה ובין› (“the-pure to-foul-in-a-religious-sense and-between”)
+# ‹העוף הטמא לטהר› (“the-flying-creature the-foul-in-a-religious-sense to-
+# pure”)
+# ‹… ולא תשקצו את› (“and-not be-filthy obj-marker”)
+# ‹נפשתיכם בבהמה ובעוף› (“living-being-you/your(pl) in-livestock and-in-
+# flying-creature”)
+# ‹ובכל אשר תרמש› (“and-in-all which creep”)
+# ‹האדמה אשר הבד› (“the-ground which the-flaxen-thread”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:25."
 m.step("Lev.20.25")
 # witness-tier presupposed read: the_hairs_breadth on vehivdaltem — read,
 # not installed
 m.witness_read("vehivdaltem", "the_hairs_breadth",
                 cites=["Sifra, Kedoshim, Chapter 9 9", "Sifra, Kedoshim, Chapter 9 12", "Sifra, Kedoshim, Chapter 12 14", "Onkelos Lev 20:25", "Onkelos Lev 20:26", "Onkelos Lev 20:27"])
 
-# -------------------------- Lev.20.26 · COND_כי ----------------------------
-# והייתם לי קדשים כי קדוש אני יהוה … ואבדל אתכם מן העמים להיות לי
-# "[EN-AID] From top split: LEFT «והייתם לי קדשים כי קדוש אני יהוה» / RIGHT
-# «ואבדל אתכם מן העמים להיות לי». Derive claim from Hebrew arms. Lev 20:26."
+# -------------------------- Lev.20.26 · COND_כי (“that”) -------------------
+# ‹והייתם לי קדשים› (“and-be to-me/my sacred”)
+# ‹כי קדוש אני› (“that sacred”)
+# ‹יהוה … ואבדל אתכם› (“YHWH … and-divide obj-marker-you/your(pl)”)
+# ‹מן העמים להיות› (“from the-people to-be”)
+# ‹לי› (“to-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:26."
 m.step("Lev.20.26")
 
-# -------------------------- Lev.20.27 · COND_כי ----------------------------
-# ואיש או אשה כי יהיה בהם אוב או ידעני מות יומתו … באבן ירגמו אתם דמיהם בם
-# "[EN-AID] From top split: LEFT «ואיש או אשה כי יהיה בהם אוב או ידעני מות
-# יומתו» / RIGHT «באבן ירגמו אתם דמיהם בם». Derive claim from Hebrew arms.
-# Lev 20:27."
+# -------------------------- Lev.20.27 · COND_כי (“that”) -------------------
+# ‹ואיש או אשה› (“and-man or woman”)
+# ‹כי יהיה בהם› (“that be in-them/their”)
+# ‹אוב או ידעני› (“mumble or knowing-one”)
+# ‹מות יומתו … באבן› (“die die … in-stone”)
+# ‹ירגמו אתם דמיהם› (“cast-together obj-marker-them/their blood-them/their”)
+# ‹בם› (“in-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 20:27."
 m.step("Lev.20.27")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

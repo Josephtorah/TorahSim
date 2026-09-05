@@ -13,11 +13,15 @@ from machine import Machine
 
 m = Machine("lev_05_asham_graded")
 
-# -------------------------- Lev.5.1 · COND_כי ------------------------------
-# ונפש כי תחטא ושמעה קול אלה והוא עד או ראה או ידע … אם לוא יגיד ונשא עונו
-# "[EN-AID] From top split: LEFT «ונפש כי תחטא ושמעה קול אלה והוא עד או ראה
-# או ידע» / RIGHT «אם לוא יגיד ונשא עונו». Derive claim from Hebrew arms.
-# Lev 5:1."
+# -------------------------- Lev.5.1 · COND_כי (“that”) ---------------------
+# ‹ונפש כי תחטא› (“and-living-being that sin”)
+# ‹ושמעה קול אלה› (“and-hear voice/sound imprecation”)
+# ‹והוא עד או› (“and-he/it concretely or”)
+# ‹ראה או ידע› (“see or know”)
+# ‹… אם לוא יגיד› (“if not tell”)
+# ‹ונשא עונו› (“and-lift/carry perversity-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 5:1."
 m.step("Lev.5.1")
 # witness-tier presupposed read: court_forum_specificity on witness_oath —
 # read, not installed
@@ -25,11 +29,15 @@ m.witness_read("witness_oath", "court_forum_specificity",
                 cites=["Sifra, Vayikra Dibbura DeChovah, Section 8 1", "Sifra, Vayikra Dibbura DeChovah, Section 8 4", "Sifra, Vayikra Dibbura DeChovah, Section 8 5", "Sifra, Vayikra Dibbura DeChovah, Section 8 6", "Sifra, Vayikra Dibbura DeChovah, Section 8 7", "Sifra, Vayikra Dibbura DeChovah, Chapter 12 1", "Sifra, Vayikra Dibbura DeChovah, Chapter 12 5", "Sifra, Vayikra Dibbura DeChovah, Chapter 12 6", "Sifra, Vayikra Dibbura DeChovah, Chapter 12 7"])
 
 # -------------------------- Lev.5.2 · ETNACHTA_SPLIT -----------------------
-# או נפש אשר תגע בכל דבר טמא או בנבלת חיה טמאה או בנבלת בהמה ט … ונעלם ממנו
-# והוא טמא ואשם
-# "[EN-AID] From top split: LEFT «או נפש אשר תגע בכל דבר טמא או בנבלת חיה
-# טמאה או בנבלת בהמה טמאה או בנבלת שרץ טמא» / RIGHT «ונעלם ממנו והוא טמא
-# ואשם». Derive claim from Hebrew arms. Lev 5:2."
+# ‹או נפש אשר› (“or living-being which”)
+# ‹תגע בכל דבר› (“touch in-all word/thing”)
+# ‹טמא או בנבלת› (“foul-in-a-religious-sense or in-flabby-thing”)
+# ‹חיה טמאה או› (“living foul-in-a-religious-sense or”)
+# ‹בנבלת בהמה ט› (“in-flabby-thing livestock ?”)
+# ‹… ונעלם ממנו והוא› (“and-veil-from-sight from-us/our and-he/it”)
+# ‹טמא ואשם› (“foul-in-a-religious-sense and-be-guilty”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 5:2."
 m.step("Lev.5.2")
 # witness-tier presupposed read: aware_hidden_aware on tumah_trigger — read,
 # not installed
@@ -40,29 +48,37 @@ m.witness_read("tumah_trigger", "aware_hidden_aware",
 m.witness_read("tumah_trigger", "quick_exit_branch",
                 cites=["Mishnah Shevuot 2:3"])
 
-# -------------------------- Lev.5.3 · COND_כי ------------------------------
-# או כי יגע בטמאת אדם לכל טמאתו אשר יטמא בה … ונעלם ממנו והוא ידע ואשם
-# "[EN-AID] From top split: LEFT «או כי יגע בטמאת אדם לכל טמאתו אשר יטמא בה»
-# / RIGHT «ונעלם ממנו והוא ידע ואשם». Derive claim from Hebrew arms. Lev
-# 5:3."
+# -------------------------- Lev.5.3 · COND_כי (“that”) ---------------------
+# ‹או כי יגע› (“or that touch”)
+# ‹בטמאת אדם לכל› (“in-religious-impurity human to-all”)
+# ‹טמאתו אשר יטמא› (“religious-impurity-him/its which be-foul”)
+# ‹בה … ונעלם ממנו› (“in-her/its … and-veil-from-sight from-us/our”)
+# ‹והוא ידע ואשם› (“and-he/it know and-be-guilty”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 5:3."
 m.step("Lev.5.3")
 
-# -------------------------- Lev.5.4 · COND_כי ------------------------------
-# או נפש כי תשבע לבטא בשפתים להרע או להיטיב לכל אשר יבטא האדם  … והוא ידע
-# ואשם לאחת מאלה
-# "[EN-AID] From top split: LEFT «או נפש כי תשבע לבטא בשפתים להרע או להיטיב
-# לכל אשר יבטא האדם בשבעה ונעלם ממנו» / RIGHT «והוא ידע ואשם לאחת מאלה».
-# Derive claim from Hebrew arms. Lev 5:4."
+# -------------------------- Lev.5.4 · COND_כי (“that”) ---------------------
+# ‹או נפש כי› (“or living-being that”)
+# ‹תשבע לבטא בשפתים› (“swear to-babble in-lip”)
+# ‹להרע או להיטיב› (“to-spoil or to-be-make-well”)
+# ‹לכל אשר יבטא› (“to-all which babble”)
+# ‹האדם … והוא ידע› (“the-human … and-he/it know”)
+# ‹ואשם לאחת מאלה› (“and-be-guilty to-one from-these”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 5:4."
 m.step("Lev.5.4")
 # witness-tier presupposed read: lips_option_bound_forgotten on
 # utterance_oath — read, not installed
 m.witness_read("utterance_oath", "lips_option_bound_forgotten",
                 cites=["Sifra, Vayikra Dibbura DeChovah, Section 9 1", "Sifra, Vayikra Dibbura DeChovah, Section 9 2", "Sifra, Vayikra Dibbura DeChovah, Section 9 3", "Sifra, Vayikra Dibbura DeChovah, Section 9 6", "Sifra, Vayikra Dibbura DeChovah, Section 9 8", "Sifra, Vayikra Dibbura DeChovah, Section 9 9", "Onkelos Lev 5:4"])
 
-# -------------------------- Lev.5.5 · COND_כי ------------------------------
-# והיה כי יאשם לאחת מאלה … והתודה אשר חטא עליה
-# "[EN-AID] From top split: LEFT «והיה כי יאשם לאחת מאלה» / RIGHT «והתודה
-# אשר חטא עליה». Derive claim from Hebrew arms. Lev 5:5."
+# -------------------------- Lev.5.5 · COND_כי (“that”) ---------------------
+# ‹והיה כי יאשם› (“and-be that be-guilty”)
+# ‹לאחת מאלה … והתודה› (“to-one from-these … and-physically”)
+# ‹אשר חטא עליה› (“which sin over-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 5:5."
 m.step("Lev.5.5")
 # witness-tier presupposed read: general_one_enumerated_each on
 # individuation — read, not installed
@@ -70,19 +86,26 @@ m.witness_read("individuation", "general_one_enumerated_each",
                 cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 17 1", "Sifra, Vayikra Dibbura DeChovah, Section 10 1", "Sifra, Vayikra Dibbura DeChovah, Chapter 14 1", "Sifra, Vayikra Dibbura DeChovah, Chapter 15 1", "Sifra, Vayikra Dibbura DeChovah, Chapter 16 2"])
 
 # -------------------------- Lev.5.6 · ETNACHTA_SPLIT -----------------------
-# והביא את אשמו ליהוה על חטאתו אשר חטא נקבה מן הצאן כשבה או שע … וכפר עליו
-# הכהן מחטאתו
-# "[EN-AID] From top split: LEFT «והביא את אשמו ליהוה על חטאתו אשר חטא נקבה
-# מן הצאן כשבה או שעירת עזים לחטאת» / RIGHT «וכפר עליו הכהן מחטאתו». Derive
-# claim from Hebrew arms. Lev 5:6."
+# ‹והביא את אשמו› (“and-come/bring obj-marker guilt-him/its”)
+# ‹ליהוה על חטאתו› (“to-YHWH over sin-offering-him/its”)
+# ‹אשר חטא נקבה› (“which sin female”)
+# ‹מן הצאן כשבה› (“from the-flock young-ewe”)
+# ‹או שע … וכפר› (“or ? … and-atone”)
+# ‹עליו הכהן מחטאתו› (“over-him/its the-priest from-sin-offering-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 5:6."
 m.step("Lev.5.6")
 
-# -------------------------- Lev.5.7 · COND_ואם -----------------------------
-# ואם לא תגיע ידו די שה והביא את אשמו אשר חטא שתי תרים או שני  … אחד לחטאת
-# ואחד לעלה
-# "[EN-AID] From top split: LEFT «ואם לא תגיע ידו די שה והביא את אשמו אשר
-# חטא שתי תרים או שני בני יונה ליהוה» / RIGHT «אחד לחטאת ואחד לעלה». Derive
-# claim from Hebrew arms. Lev 5:7."
+# -------------------------- Lev.5.7 · COND_ואם (“and-if”) ------------------
+# ‹ואם לא תגיע› (“and-if not touch”)
+# ‹ידו די שה› (“hand-him/its enough member-of-a-flock”)
+# ‹והביא את אשמו› (“and-come/bring obj-marker guilt-him/its”)
+# ‹אשר חטא שתי› (“which sin two”)
+# ‹תרים או שני› (“ring-dove or two”)
+# ‹… אחד לחטאת ואחד› (“one to-sin-offering and-one”)
+# ‹לעלה› (“to-burnt-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 5:7."
 m.step("Lev.5.7")
 # witness-tier presupposed read: dynamic_hand_test on poverty_ladder — read,
 # not installed
@@ -90,11 +113,14 @@ m.witness_read("poverty_ladder", "dynamic_hand_test",
                 cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 18 1", "Sifra, Vayikra Dibbura DeChovah, Section 10 10", "Sifra, Vayikra Dibbura DeChovah, Section 10 9", "Sifra, Vayikra Dibbura DeChovah, Chapter 18 3", "Sifra, Vayikra Dibbura DeChovah, Chapter 18 4", "Sifra, Vayikra Dibbura DeChovah, Chapter 18 5", "Onkelos Lev 5:7"])
 
 # -------------------------- Lev.5.8 · ETNACHTA_SPLIT -----------------------
-# והביא אתם אל הכהן והקריב את אשר לחטאת ראשונה … ומלק את ראשו ממול ערפו ולא
-# יבדיל
-# "[EN-AID] From top split: LEFT «והביא אתם אל הכהן והקריב את אשר לחטאת
-# ראשונה» / RIGHT «ומלק את ראשו ממול ערפו ולא יבדיל». Derive claim from
-# Hebrew arms. Lev 5:8."
+# ‹והביא אתם אל› (“and-come/bring obj-marker-them/their to”)
+# ‹הכהן והקריב את› (“the-priest and-bring-near obj-marker”)
+# ‹אשר לחטאת ראשונה› (“which to-sin-offering first”)
+# ‹… ומלק את ראשו› (“and-crack-a-joint obj-marker head-him/its”)
+# ‹ממול ערפו ולא› (“from-abrupt nape-him/its and-not”)
+# ‹יבדיל› (“divide”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 5:8."
 m.step("Lev.5.8")
 # witness-tier presupposed read: one_sign_lower_wall on sin_bird_rite —
 # read, not installed
@@ -102,25 +128,37 @@ m.witness_read("sin_bird_rite", "one_sign_lower_wall",
                 cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 18 7", "Sifra, Vayikra Dibbura DeChovah, Chapter 18 8"])
 
 # -------------------------- Lev.5.9 · ETNACHTA_SPLIT -----------------------
-# והזה מדם החטאת על קיר המזבח והנשאר בדם ימצה אל יסוד המזבח … חטאת הוא
-# "[EN-AID] From top split: LEFT «והזה מדם החטאת על קיר המזבח והנשאר בדם
-# ימצה אל יסוד המזבח» / RIGHT «חטאת הוא». Derive claim from Hebrew arms. Lev
-# 5:9."
+# ‹והזה מדם החטאת› (“and-spirt from-blood the-sin-offering”)
+# ‹על קיר המזבח› (“over wall the-altar”)
+# ‹והנשאר בדם ימצה› (“and-the-swell-up in-blood suck-out”)
+# ‹אל יסוד המזבח› (“to foundation the-altar”)
+# ‹… חטאת הוא› (“sin-offering he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 5:9."
 m.step("Lev.5.9")
 
 # -------------------------- Lev.5.10 · ETNACHTA_SPLIT ----------------------
-# ואת השני יעשה עלה כמשפט … וכפר עליו הכהן מחטאתו אשר חטא ונסלח לו
-# "[EN-AID] From top split: LEFT «ואת השני יעשה עלה כמשפט» / RIGHT «וכפר
-# עליו הכהן מחטאתו אשר חטא ונסלח לו». Derive claim from Hebrew arms. Lev
-# 5:10."
+# ‹ואת השני יעשה› (“and-obj-marker the-second make”)
+# ‹עלה כמשפט … וכפר› (“burnt-offering like-judgment … and-atone”)
+# ‹עליו הכהן מחטאתו› (“over-him/its the-priest from-sin-offering-him/its”)
+# ‹אשר חטא ונסלח› (“which sin and-forgive”)
+# ‹לו› (“to-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 5:10."
 m.step("Lev.5.10")
 
-# -------------------------- Lev.5.11 · COND_ואם ----------------------------
-# ואם לא תשיג ידו לשתי תרים או לשני בני יונה והביא את קרבנו אש … לא ישים
-# עליה שמן ולא יתן עליה לבנה כי חטאת היא
-# "[EN-AID] From top split: LEFT «ואם לא תשיג ידו לשתי תרים או לשני בני יונה
-# והביא את קרבנו אשר חטא עשירת האפה סלת» / RIGHT «לא ישים עליה שמן ולא יתן
-# עליה לבנה כי חטאת היא». Derive claim from Hebrew arms. Lev 5:11."
+# -------------------------- Lev.5.11 · COND_ואם (“and-if”) -----------------
+# ‹ואם לא תשיג› (“and-if not reach”)
+# ‹ידו לשתי תרים› (“hand-him/its to-two ring-dove”)
+# ‹או לשני בני› (“or to-two son”)
+# ‹יונה והביא את› (“dove and-come/bring obj-marker”)
+# ‹קרבנו אש … לא› (“offering-him/its fire … not”)
+# ‹ישים עליה שמן› (“put/set over-her/its oil”)
+# ‹ולא יתן עליה› (“and-not set over-her/its”)
+# ‹לבנה כי חטאת› (“frankincense that sin-offering”)
+# ‹היא› (“he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 5:11."
 m.step("Lev.5.11")
 # witness-tier presupposed read: unit_converted_stripped_now on flour_tier —
 # read, not installed
@@ -128,17 +166,23 @@ m.witness_read("flour_tier", "unit_converted_stripped_now",
                 cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 19 5", "Sifra, Vayikra Dibbura DeChovah, Chapter 19 6", "Sifra, Vayikra Dibbura DeChovah, Chapter 19 1", "Onkelos Lev 5:11"])
 
 # -------------------------- Lev.5.12 · ETNACHTA_SPLIT ----------------------
-# והביאה אל הכהן וקמץ הכהן ממנה מלוא קמצו את אזכרתה והקטיר המז … חטאת הוא
-# "[EN-AID] From top split: LEFT «והביאה אל הכהן וקמץ הכהן ממנה מלוא קמצו את
-# אזכרתה והקטיר המזבחה על אשי יהוה» / RIGHT «חטאת הוא». Derive claim from
-# Hebrew arms. Lev 5:12."
+# ‹והביאה אל הכהן› (“and-come/bring-her/its to the-priest”)
+# ‹וקמץ הכהן ממנה› (“and-grasp-with-the-hand the-priest from-her/its”)
+# ‹מלוא קמצו את› (“fulness grasp-him/its obj-marker”)
+# ‹אזכרתה והקטיר המז› (“reminder-her/its and-smoke ?”)
+# ‹… חטאת הוא› (“sin-offering he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 5:12."
 m.step("Lev.5.12")
 
 # -------------------------- Lev.5.13 · ETNACHTA_SPLIT ----------------------
-# וכפר עליו הכהן על חטאתו אשר חטא מאחת מאלה ונסלח לו … והיתה לכהן כמנחה
-# "[EN-AID] From top split: LEFT «וכפר עליו הכהן על חטאתו אשר חטא מאחת מאלה
-# ונסלח לו» / RIGHT «והיתה לכהן כמנחה». Derive claim from Hebrew arms. Lev
-# 5:13."
+# ‹וכפר עליו הכהן› (“and-atone over-him/its the-priest”)
+# ‹על חטאתו אשר› (“over sin-offering-him/its which”)
+# ‹חטא מאחת מאלה› (“sin from-one from-these”)
+# ‹ונסלח לו … והיתה› (“and-forgive to-him/its … and-be”)
+# ‹לכהן כמנחה› (“to-priest like-grain-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 5:13."
 m.step("Lev.5.13")
 # witness-tier presupposed read: means_not_gravity on tier_orthogonality —
 # read, not installed

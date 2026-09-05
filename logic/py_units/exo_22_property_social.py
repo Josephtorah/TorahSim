@@ -13,17 +13,22 @@ from machine import Machine
 
 m = Machine("exo_22_property_social")
 
-# -------------------------- Exod.22.1 · COND_אם ----------------------------
-# אם במחתרת ימצא הגנב והכה ומת … אין לו דמים
-# "[EN-AID] From top split: LEFT «אם במחתרת ימצא הגנב והכה ומת» / RIGHT «אין
-# לו דמים». Derive claim from Hebrew arms, not English alone. Exod 22:1."
+# -------------------------- Exod.22.1 · COND_אם (“if”) ---------------------
+# ‹אם במחתרת ימצא› (“if in-burglary find”)
+# ‹הגנב והכה ומת› (“the-stealer and-strike and-die”)
+# ‹… אין לו דמים› (“there-is-not to-him/its blood”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:1."
 m.step("Exod.22.1")
 
-# -------------------------- Exod.22.2 · COND_אם ----------------------------
-# אם זרחה השמש עליו דמים לו … שלם ישלם אם אין לו ונמכר בגנבתו
-# "[EN-AID] From top split: LEFT «אם זרחה השמש עליו דמים לו» / RIGHT «שלם
-# ישלם אם אין לו ונמכר בגנבתו». Derive claim from Hebrew arms, not English
-# alone. Exod 22:2."
+# -------------------------- Exod.22.2 · COND_אם (“if”) ---------------------
+# ‹אם זרחה השמש› (“if irradiate the-sun”)
+# ‹עליו דמים לו› (“over-him/its blood to-him/its”)
+# ‹… שלם ישלם אם› (“be-safe be-safe if”)
+# ‹אין לו ונמכר› (“there-is-not to-him/its and-sell”)
+# ‹בגנבתו› (“in-stealing-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:2."
 m.step("Exod.22.2")
 # witness-tier presupposed read: sun_as_peace_and_the_life_override_seed on
 # burglar_clause — read, not installed
@@ -34,41 +39,54 @@ m.witness_read("burglar_clause", "sun_as_peace_and_the_life_override_seed",
 m.witness_read("burglar_clause", "babylonian_layer",
                 cites=["Sanhedrin 72b:1", "Sanhedrin 72b:5", "Sanhedrin 72b:6", "Sanhedrin 72b:11"])
 
-# -------------------------- Exod.22.3 · COND_אם ----------------------------
-# אם המצא תמצא בידו הגנבה משור עד חמור עד שה חיים … שנים ישלם
-# "[EN-AID] From top split: LEFT «אם המצא תמצא בידו הגנבה משור עד חמור עד שה
-# חיים» / RIGHT «שנים ישלם». Derive claim from Hebrew arms, not English
-# alone. Exod 22:3."
+# -------------------------- Exod.22.3 · COND_אם (“if”) ---------------------
+# ‹אם המצא תמצא› (“if find find”)
+# ‹בידו הגנבה משור› (“in-hand-him/its the-stealing from-bullock”)
+# ‹עד חמור עד› (“until male-ass until”)
+# ‹שה חיים … שנים› (“member-of-a-flock living … two”)
+# ‹ישלם› (“be-safe”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:3."
 m.step("Exod.22.3")
 
-# -------------------------- Exod.22.4 · COND_כי ----------------------------
-# כי יבער איש שדה או כרם ושלח את בעירה בעירו ובער בשדה אחר … מיטב שדהו ומיטב
-# כרמו ישלם
-# "[EN-AID] From top split: LEFT «כי יבער איש שדה או כרם ושלח את בעירה בעירו
-# ובער בשדה אחר» / RIGHT «מיטב שדהו ומיטב כרמו ישלם». Derive claim from
-# Hebrew arms, not English alone. Exod 22:4."
+# -------------------------- Exod.22.4 · COND_כי (“that”) -------------------
+# ‹כי יבער איש› (“that kindle man”)
+# ‹שדה או כרם› (“field or garden”)
+# ‹ושלח את בעירה› (“and-send obj-marker cattle-him/its”)
+# ‹בעירו ובער בשדה› (“cattle-him/its and-kindle in-field”)
+# ‹אחר … מיטב שדהו› (“other … best-part field-him/its”)
+# ‹ומיטב כרמו ישלם› (“and-best-part garden-him/its be-safe”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:4."
 m.step("Exod.22.4")
 # witness-tier presupposed read: tooth_category_and_the_domain_matrix on
 # grazing_clause — read, not installed
 m.witness_read("grazing_clause", "tooth_category_and_the_domain_matrix",
                 cites=["Mekhilta on Exod 22:4"])
 
-# -------------------------- Exod.22.5 · COND_כי ----------------------------
-# כי תצא אש ומצאה קצים ונאכל גדיש או הקמה או השדה … שלם ישלם המבער את הבערה
-# "[EN-AID] From top split: LEFT «כי תצא אש ומצאה קצים ונאכל גדיש או הקמה או
-# השדה» / RIGHT «שלם ישלם המבער את הבערה». Derive claim from Hebrew arms,
-# not English alone. Exod 22:5."
+# -------------------------- Exod.22.5 · COND_כי (“that”) -------------------
+# ‹כי תצא אש› (“that bring-forth fire”)
+# ‹ומצאה קצים ונאכל› (“and-find thorn and-eat”)
+# ‹גדיש או הקמה› (“stack-of-sheaves or the-something-that-rises”)
+# ‹או השדה … שלם› (“or the-field … be-safe”)
+# ‹ישלם המבער את› (“be-safe the-kindle obj-marker”)
+# ‹הבערה› (“the-burning”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:5."
 m.step("Exod.22.5")
 # witness-tier presupposed read: accident_as_intent_and_woman_as_man on
 # fire_clause — read, not installed
 m.witness_read("fire_clause", "accident_as_intent_and_woman_as_man",
                 cites=["Mekhilta on Exod 22:5"])
 
-# -------------------------- Exod.22.6 · COND_כי ----------------------------
-# כי יתן איש אל רעהו כסף או כלים לשמר וגנב מבית האיש … אם ימצא הגנב ישלם
-# שנים
-# "[EN-AID] From top split: LEFT «כי יתן איש אל רעהו כסף או כלים לשמר וגנב
-# מבית האיש» / RIGHT «אם ימצא הגנב ישלם שנים». Derive claim from Hebrew
+# -------------------------- Exod.22.6 · COND_כי (“that”) -------------------
+# ‹כי יתן איש› (“that set man”)
+# ‹אל רעהו כסף› (“to associate-him/its silver”)
+# ‹או כלים לשמר› (“or vessel to-keep/guard”)
+# ‹וגנב מבית האיש› (“and-steal from-house the-man”)
+# ‹… אם ימצא הגנב› (“if find the-stealer”)
+# ‹ישלם שנים› (“be-safe two”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 22:6."
 m.step("Exod.22.6")
 # witness-tier presupposed read: the_hidden_parameter_diff on
@@ -76,19 +94,27 @@ m.step("Exod.22.6")
 m.witness_read("three_keeper_passages", "the_hidden_parameter_diff",
                 cites=["Bava Metzia 94b:6", "Bava Metzia 94b:8", "Bava Metzia 94b:9", "Bava Metzia 94b:10"])
 
-# -------------------------- Exod.22.7 · COND_אם ----------------------------
-# אם לא ימצא הגנב ונקרב בעל הבית אל האלהים … אם לא שלח ידו במלאכת רעהו
-# "[EN-AID] From top split: LEFT «אם לא ימצא הגנב ונקרב בעל הבית אל האלהים»
-# / RIGHT «אם לא שלח ידו במלאכת רעהו». Derive claim from Hebrew arms, not
-# English alone. Exod 22:7."
+# -------------------------- Exod.22.7 · COND_אם (“if”) ---------------------
+# ‹אם לא ימצא› (“if not find”)
+# ‹הגנב ונקרב בעל› (“the-stealer and-bring-near master”)
+# ‹הבית אל האלהים› (“the-house to the-God”)
+# ‹… אם לא שלח› (“if not send”)
+# ‹ידו במלאכת רעהו› (“hand-him/its in-work associate-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:7."
 m.step("Exod.22.7")
 
 # -------------------------- Exod.22.8 · ETNACHTA_SPLIT ---------------------
-# על כל דבר פשע על שור על חמור על שה על שלמה על כל אבדה אשר יא … אשר ירשיען
-# אלהים ישלם שנים לרעהו
-# "[EN-AID] From top split: LEFT «על כל דבר פשע על שור על חמור על שה על שלמה
-# על כל אבדה אשר יאמר כי הוא זה עד האלה» / RIGHT «אשר ירשיען אלהים ישלם שנים
-# לרעהו». Derive claim from Hebrew arms, not English alone. Exod 22:8."
+# ‹על כל דבר› (“over all word/thing”)
+# ‹פשע על שור› (“revolt over bullock”)
+# ‹על חמור על› (“over male-ass over”)
+# ‹שה על שלמה› (“member-of-a-flock over dress”)
+# ‹על כל אבדה› (“over all concrete”)
+# ‹אשר יא … אשר› (“which ? … which”)
+# ‹ירשיען אלהים ישלם› (“be-wrong-ward God be-safe”)
+# ‹שנים לרעהו› (“two to-associate-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:8."
 m.step("Exod.22.8")
 # witness-tier presupposed read: judges_three_and_partial_admission on
 # keeper_oath_clause — read, not installed
@@ -99,19 +125,26 @@ m.witness_read("keeper_oath_clause", "judges_three_and_partial_admission",
 m.witness_read("keeper_oath_clause", "exam_legs_f017",
                 cites=["Mekhilta on Exod 22:24", "Mekhilta on Exod 22:19", "Mekhilta on Exod 22:27", "Mishnah Bava Metzia 5:11", "Mishnah Sanhedrin 7:6", "Mishnah Shevuot 4:13", "Mishnah Ketubot 3:9"])
 
-# -------------------------- Exod.22.9 · COND_כי ----------------------------
-# כי יתן איש אל רעהו חמור או שור או שה וכל בהמה לשמר … ומת או נשבר או נשבה
-# אין ראה
-# "[EN-AID] From top split: LEFT «כי יתן איש אל רעהו חמור או שור או שה וכל
-# בהמה לשמר» / RIGHT «ומת או נשבר או נשבה אין ראה». Derive claim from Hebrew
+# -------------------------- Exod.22.9 · COND_כי (“that”) -------------------
+# ‹כי יתן איש› (“that set man”)
+# ‹אל רעהו חמור› (“to associate-him/its male-ass”)
+# ‹או שור או› (“or bullock or”)
+# ‹שה וכל בהמה› (“member-of-a-flock and-all livestock”)
+# ‹לשמר … ומת או› (“to-keep/guard … and-die or”)
+# ‹נשבר או נשבה› (“burst or transport-into-captivity”)
+# ‹אין ראה› (“there-is-not see”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 22:9."
 m.step("Exod.22.9")
 
 # -------------------------- Exod.22.10 · ETNACHTA_SPLIT --------------------
-# שבעת יהוה תהיה בין שניהם אם לא שלח ידו במלאכת רעהו … ולקח בעליו ולא ישלם
-# "[EN-AID] From top split: LEFT «שבעת יהוה תהיה בין שניהם אם לא שלח ידו
-# במלאכת רעהו» / RIGHT «ולקח בעליו ולא ישלם». Derive claim from Hebrew arms,
-# not English alone. Exod 22:10."
+# ‹שבעת יהוה תהיה› (“something-sworn YHWH be”)
+# ‹בין שניהם אם› (“between two-them/their if”)
+# ‹לא שלח ידו› (“not send hand-him/its”)
+# ‹במלאכת רעהו … ולקח› (“in-work associate-him/its … and-take”)
+# ‹בעליו ולא ישלם› (“master-him/its and-not be-safe”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:10."
 m.step("Exod.22.10")
 # witness-tier presupposed read: all_torah_oaths_by_the_name on oath_clause
 # — read, not installed
@@ -122,33 +155,42 @@ m.witness_read("oath_clause", "all_torah_oaths_by_the_name",
 m.witness_read("oath_clause", "administration_and_scope",
                 cites=["Shevuot 39b:7", "Shevuot 43a:1", "Shevuot 42b:16", "Shevuot 42a:12", "Shevuot 42b:15"])
 
-# -------------------------- Exod.22.11 · COND_ואם --------------------------
-# ואם גנב יגנב מעמו … ישלם לבעליו
-# "[EN-AID] From top split: LEFT «ואם גנב יגנב מעמו» / RIGHT «ישלם לבעליו».
-# Derive claim from Hebrew arms, not English alone. Exod 22:11."
+# -------------------------- Exod.22.11 · COND_ואם (“and-if”) ---------------
+# ‹ואם גנב יגנב› (“and-if steal steal”)
+# ‹מעמו … ישלם לבעליו› (“from-with-him/its … be-safe to-master-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:11."
 m.step("Exod.22.11")
 # witness-tier presupposed read: the_missing_column_generated on
 # loss_by_a_fortiori — read, not installed
 m.witness_read("loss_by_a_fortiori", "the_missing_column_generated",
                 cites=["Bava Metzia 94b:15", "Bava Metzia 94b:19"])
 
-# -------------------------- Exod.22.12 · COND_אם ---------------------------
-# אם טרף יטרף יבאהו עד … הטרפה לא ישלם
-# "[EN-AID] From top split: LEFT «אם טרף יטרף יבאהו עד» / RIGHT «הטרפה לא
-# ישלם». Derive claim from Hebrew arms, not English alone. Exod 22:12."
+# -------------------------- Exod.22.12 · COND_אם (“if”) --------------------
+# ‹אם טרף יטרף› (“if pluck-off pluck-off”)
+# ‹יבאהו עד … הטרפה› (“come/bring-him/its concretely … the-prey”)
+# ‹לא ישלם› (“not be-safe”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:12."
 m.step("Exod.22.12")
 
-# -------------------------- Exod.22.13 · COND_וכי --------------------------
-# וכי ישאל איש מעם רעהו ונשבר או מת … בעליו אין עמו שלם ישלם
-# "[EN-AID] From top split: LEFT «וכי ישאל איש מעם רעהו ונשבר או מת» / RIGHT
-# «בעליו אין עמו שלם ישלם». Derive claim from Hebrew arms, not English
-# alone. Exod 22:13."
+# -------------------------- Exod.22.13 · COND_וכי (“and-that”) -------------
+# ‹וכי ישאל איש› (“and-that inquire man”)
+# ‹מעם רעהו ונשבר› (“from-with associate-him/its and-burst”)
+# ‹או מת … בעליו› (“or die … master-him/its”)
+# ‹אין עמו שלם› (“there-is-not with-him/its be-safe”)
+# ‹ישלם› (“be-safe”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:13."
 m.step("Exod.22.13")
 
-# -------------------------- Exod.22.14 · COND_אם ---------------------------
-# אם בעליו עמו לא ישלם … אם שכיר הוא בא בשכרו
-# "[EN-AID] From top split: LEFT «אם בעליו עמו לא ישלם» / RIGHT «אם שכיר הוא
-# בא בשכרו». Derive claim from Hebrew arms, not English alone. Exod 22:14."
+# -------------------------- Exod.22.14 · COND_אם (“if”) --------------------
+# ‹אם בעליו עמו› (“if master-him/its with-him/its”)
+# ‹לא ישלם … אם› (“not be-safe … if”)
+# ‹שכיר הוא בא› (“man-at-wages-by-the-day he/it come/bring”)
+# ‹בשכרו› (“in-wage-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:14."
 m.step("Exod.22.14")
 # witness-tier presupposed read: four_keepers_table_closes on
 # borrower_clause — read, not installed
@@ -159,11 +201,14 @@ m.witness_read("borrower_clause", "four_keepers_table_closes",
 m.witness_read("renter_routing", "the_fourth_role_on_the_hire_clause",
                 cites=["Mishnah Bava Metzia 7:8", "Bava Metzia 93a:17"])
 
-# -------------------------- Exod.22.15 · COND_וכי --------------------------
-# וכי יפתה איש בתולה אשר לא ארשה ושכב עמה … מהר ימהרנה לו לאשה
-# "[EN-AID] From top split: LEFT «וכי יפתה איש בתולה אשר לא ארשה ושכב עמה» /
-# RIGHT «מהר ימהרנה לו לאשה». Derive claim from Hebrew arms, not English
-# alone. Exod 22:15."
+# -------------------------- Exod.22.15 · COND_וכי (“and-that”) -------------
+# ‹וכי יפתה איש› (“and-that open man”)
+# ‹בתולה אשר לא› (“virgin which not”)
+# ‹ארשה ושכב עמה› (“engage-for-matrimony and-lie-down with-her/its”)
+# ‹… מהר ימהרנה לו› (“bargain bargain-her/its to-him/its”)
+# ‹לאשה› (“to-woman”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:15."
 m.step("Exod.22.15")
 # witness-tier presupposed read: mohar_is_the_ketubah on seducer_clause —
 # read, not installed
@@ -174,17 +219,19 @@ m.witness_read("seducer_clause", "mohar_is_the_ketubah",
 m.witness_read("dowry_pointer", "the_constant_in_another_book",
                 cites=["Ketubot 29b:3", "Mishnah Ketubot 3:4"])
 
-# -------------------------- Exod.22.16 · COND_אם ---------------------------
-# אם מאן ימאן אביה לתתה לו … כסף ישקל כמהר הבתולת
-# "[EN-AID] From top split: LEFT «אם מאן ימאן אביה לתתה לו» / RIGHT «כסף
-# ישקל כמהר הבתולת». Derive claim from Hebrew arms, not English alone. Exod
-# 22:16."
+# -------------------------- Exod.22.16 · COND_אם (“if”) --------------------
+# ‹אם מאן ימאן› (“if refuse refuse”)
+# ‹אביה לתתה לו› (“father-her/its to-set-her/its to-him/its”)
+# ‹… כסף ישקל כמהר› (“silver suspend like-price”)
+# ‹הבתולת› (“the-virgin”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:16."
 m.step("Exod.22.16")
 
 # -------------------------- Exod.22.17 · TREE_CLAIM ------------------------
-# … לא תחיה
-# "[EN-AID] From top split: LEFT «» / RIGHT «לא תחיה». Derive claim from
-# Hebrew arms, not English alone. Exod 22:17."
+# ‹… לא תחיה› (“not live”)
+# "[EN-AID] From top split: LEFT «» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:17."
 m.step("Exod.22.17")
 # witness-tier presupposed read: the_three_capital_clauses_derivation_layer
 # on capital_clauses — read, not installed
@@ -192,69 +239,91 @@ m.witness_read("capital_clauses", "the_three_capital_clauses_derivation_layer",
                 cites=["Sanhedrin 67a:19", "Sanhedrin 67a:20", "Sanhedrin 67a:21", "Sanhedrin 60a:1", "Yevamot 4a:4", "Yevamot 4a:5", "Yevamot 4a:6", "Berakhot 21b:9", "Berakhot 21b:10", "Berakhot 21b:11", "Sanhedrin 54b:5", "Sanhedrin 54b:6", "Sanhedrin 54b:7", "Sanhedrin 60b:8", "Sanhedrin 60b:9", "Sanhedrin 60b:13", "Avodah Zarah 51a:13", "Avodah Zarah 51a:14", "Sanhedrin 63a:15", "Sanhedrin 63a:16", "Sanhedrin 63a:17", "Sanhedrin 61a:15", "Sanhedrin 61a:16"])
 
 # -------------------------- Exod.22.18 · TREE_CLAIM ------------------------
-# כל שכב עם בהמה … מות יומת
-# "[EN-AID] From top split: LEFT «כל שכב עם בהמה» / RIGHT «מות יומת». Derive
-# claim from Hebrew arms, not English alone. Exod 22:18."
+# ‹כל שכב עם› (“all lie-down with”)
+# ‹בהמה … מות יומת› (“livestock … die die”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:18."
 m.step("Exod.22.18")
 
 # -------------------------- Exod.22.19 · ETNACHTA_SPLIT --------------------
-# זבח לאלהים יחרם … בלתי ליהוה לבדו
-# "[EN-AID] From top split: LEFT «זבח לאלהים יחרם» / RIGHT «בלתי ליהוה
-# לבדו». Derive claim from Hebrew arms, not English alone. Exod 22:19."
+# ‹זבח לאלהים יחרם› (“slaughter-an-animal to-God seclude”)
+# ‹… בלתי ליהוה לבדו› (“failure-of to-YHWH to-separation-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:19."
 m.step("Exod.22.19")
 
 # -------------------------- Exod.22.20 · ETNACHTA_SPLIT --------------------
-# וגר לא תונה ולא תלחצנו … כי גרים הייתם בארץ מצרים
-# "[EN-AID] From top split: LEFT «וגר לא תונה ולא תלחצנו» / RIGHT «כי גרים
-# הייתם בארץ מצרים». Derive claim from Hebrew arms, not English alone. Exod
-# 22:20."
+# ‹וגר לא תונה› (“and-sojourner not rage”)
+# ‹ולא תלחצנו … כי› (“and-not press-him/its … that”)
+# ‹גרים הייתם בארץ› (“sojourner be in-earth”)
+# ‹מצרים› (“Egypt”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:20."
 m.step("Exod.22.20")
 
 # -------------------------- Exod.22.21 · TREE_CLAIM ------------------------
-# כל אלמנה ויתום … לא תענון
-# "[EN-AID] From top split: LEFT «כל אלמנה ויתום» / RIGHT «לא תענון». Derive
-# claim from Hebrew arms, not English alone. Exod 22:21."
+# ‹כל אלמנה ויתום› (“all widow and-bereaved-person”)
+# ‹… לא תענון› (“not afflict-literally-ward”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:21."
 m.step("Exod.22.21")
 
-# -------------------------- Exod.22.22 · COND_אם ---------------------------
-# אם ענה תענה אתו … כי אם צעק יצעק אלי שמע אשמע צעקתו
-# "[EN-AID] From top split: LEFT «אם ענה תענה אתו» / RIGHT «כי אם צעק יצעק
-# אלי שמע אשמע צעקתו». Derive claim from Hebrew arms, not English alone.
-# Exod 22:22."
+# -------------------------- Exod.22.22 · COND_אם (“if”) --------------------
+# ‹אם ענה תענה› (“if afflict-literally afflict-literally”)
+# ‹אתו … כי אם› (“obj-marker-him/its … very-widely-used-as-a-relati as-
+# demonstrative”)
+# ‹צעק יצעק אלי› (“shriek shriek to-me/my”)
+# ‹שמע אשמע צעקתו› (“hear hear shriek-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:22."
 m.step("Exod.22.22")
 
 # -------------------------- Exod.22.23 · ETNACHTA_SPLIT --------------------
-# וחרה אפי והרגתי אתכם בחרב … והיו נשיכם אלמנות ובניכם יתמים
-# "[EN-AID] From top split: LEFT «וחרה אפי והרגתי אתכם בחרב» / RIGHT «והיו
-# נשיכם אלמנות ובניכם יתמים». Derive claim from Hebrew arms, not English
-# alone. Exod 22:23."
+# ‹וחרה אפי והרגתי› (“and-glow nose-me/my and-smite-with-deadly-intent”)
+# ‹אתכם בחרב … והיו› (“obj-marker-you/your(pl) in-drought … and-be”)
+# ‹נשיכם אלמנות ובניכם› (“woman-you/your(pl) widow and-son-you/your(pl)”)
+# ‹יתמים› (“bereaved-person”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:23."
 m.step("Exod.22.23")
 
-# -------------------------- Exod.22.24 · COND_אם ---------------------------
-# אם כסף תלוה את עמי את העני עמך לא תהיה לו כנשה … לא תשימון עליו נשך
-# "[EN-AID] From top split: LEFT «אם כסף תלוה את עמי את העני עמך לא תהיה לו
-# כנשה» / RIGHT «לא תשימון עליו נשך». Derive claim from Hebrew arms, not
-# English alone. Exod 22:24."
+# -------------------------- Exod.22.24 · COND_אם (“if”) --------------------
+# ‹אם כסף תלוה› (“if silver twine”)
+# ‹את עמי את› (“obj-marker people-me/my obj-marker”)
+# ‹העני עמך לא› (“the-afflicted with-you/your not”)
+# ‹תהיה לו כנשה› (“be to-him/its like-lend”)
+# ‹… לא תשימון עליו› (“not put/set-ward over-him/its”)
+# ‹נשך› (“interest-on-a-debt”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:24."
 m.step("Exod.22.24")
 
-# -------------------------- Exod.22.25 · COND_אם ---------------------------
-# אם חבל תחבל שלמת רעך … עד בא השמש תשיבנו לו
-# "[EN-AID] From top split: LEFT «אם חבל תחבל שלמת רעך» / RIGHT «עד בא השמש
-# תשיבנו לו». Derive claim from Hebrew arms, not English alone. Exod 22:25."
+# -------------------------- Exod.22.25 · COND_אם (“if”) --------------------
+# ‹אם חבל תחבל› (“if wind-tightly wind-tightly”)
+# ‹שלמת רעך … עד› (“dress associate-you/your … until”)
+# ‹בא השמש תשיבנו› (“come/bring the-sun return-him/its”)
+# ‹לו› (“to-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:25."
 m.step("Exod.22.25")
 
-# -------------------------- Exod.22.26 · COND_כי ---------------------------
-# כי הוא כסותה כסותו לבדה הוא שמלתו לערו … במה ישכב והיה כי יצעק אלי ושמעתי
-# כי חנון אני
-# "[EN-AID] From top split: LEFT «כי הוא כסותה כסותו לבדה הוא שמלתו לערו» /
-# RIGHT «במה ישכב והיה כי יצעק אלי ושמעתי כי חנון אני». Derive claim from
-# Hebrew arms, not English alone. Exod 22:26."
+# -------------------------- Exod.22.26 · COND_כי (“that”) ------------------
+# ‹כי הוא כסותה› (“that he/it cover-him/its”)
+# ‹כסותו לבדה הוא› (“cover-him/its to-separation-her/its he/it”)
+# ‹שמלתו לערו … במה› (“dress-him/its to-skin-him/its … in-what”)
+# ‹ישכב והיה כי› (“lie-down and-be that”)
+# ‹יצעק אלי ושמעתי› (“shriek to-me/my and-hear”)
+# ‹כי חנון אני› (“that gracious”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:26."
 m.step("Exod.22.26")
 
 # -------------------------- Exod.22.27 · ETNACHTA_SPLIT --------------------
-# אלהים לא תקלל … ונשיא בעמך לא תאר
-# "[EN-AID] From top split: LEFT «אלהים לא תקלל» / RIGHT «ונשיא בעמך לא
-# תאר». Derive claim from Hebrew arms, not English alone. Exod 22:27."
+# ‹אלהים לא תקלל› (“God not be-light”)
+# ‹… ונשיא בעמך לא› (“and-prince in-people-you/your not”)
+# ‹תאר› (“execrate”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:27."
 m.step("Exod.22.27")
 # witness-tier presupposed read: the_curse_files_derivation_layer on
 # curse_clauses — read, not installed
@@ -262,9 +331,11 @@ m.witness_read("curse_clauses", "the_curse_files_derivation_layer",
                 cites=["Sanhedrin 56a:5", "Sanhedrin 56a:6", "Sanhedrin 56a:7", "Sanhedrin 66a:11", "Sanhedrin 66a:12", "Sanhedrin 66a:13", "Sanhedrin 66a:22", "Sanhedrin 66a:23", "Sanhedrin 66a:24", "Sanhedrin 85a:13", "Sanhedrin 85a:14", "Sanhedrin 85a:15", "Yevamot 22b:6", "Yevamot 22b:7", "Yevamot 22b:8"])
 
 # -------------------------- Exod.22.28 · ETNACHTA_SPLIT --------------------
-# מלאתך ודמעך לא תאחר … בכור בניך תתן לי
-# "[EN-AID] From top split: LEFT «מלאתך ודמעך לא תאחר» / RIGHT «בכור בניך
-# תתן לי». Derive claim from Hebrew arms, not English alone. Exod 22:28."
+# ‹מלאתך ודמעך לא› (“something-fulfilled-you/your and-tear-you/your not”)
+# ‹תאחר … בכור בניך› (“loiter … firstborn son-you/your”)
+# ‹תתן לי› (“set to-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:28."
 m.step("Exod.22.28")
 # witness-tier presupposed read: gift_order_and_the_standing_act on
 # fullness_clause — read, not installed
@@ -272,17 +343,22 @@ m.witness_read("fullness_clause", "gift_order_and_the_standing_act",
                 cites=["Mekhilta on Exod 22:28", "Mishnah Terumot 3:6", "Mishnah Terumot 3:7", "Onkelos Exod 22:28"])
 
 # -------------------------- Exod.22.29 · ETNACHTA_SPLIT --------------------
-# כן תעשה לשרך לצאנך … שבעת ימים יהיה עם אמו ביום השמיני תתנו לי
-# "[EN-AID] From top split: LEFT «כן תעשה לשרך לצאנך» / RIGHT «שבעת ימים
-# יהיה עם אמו ביום השמיני תתנו לי». Derive claim from Hebrew arms, not
-# English alone. Exod 22:29."
+# ‹כן תעשה לשרך› (“so make to-bullock-you/your”)
+# ‹לצאנך … שבעת ימים› (“to-flock-you/your … seven day”)
+# ‹יהיה עם אמו› (“be with mother-him/its”)
+# ‹ביום השמיני תתנו› (“in-day the-eight set-him/its”)
+# ‹לי› (“to-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:29."
 m.step("Exod.22.29")
 
 # -------------------------- Exod.22.30 · ETNACHTA_SPLIT --------------------
-# ואנשי קדש תהיון לי … ובשר בשדה טרפה לא תאכלו לכלב תשלכון אתו
-# "[EN-AID] From top split: LEFT «ואנשי קדש תהיון לי» / RIGHT «ובשר בשדה
-# טרפה לא תאכלו לכלב תשלכון אתו». Derive claim from Hebrew arms, not English
-# alone. Exod 22:30."
+# ‹ואנשי קדש תהיון› (“and-man holiness be-ward”)
+# ‹לי … ובשר בשדה› (“to-me/my … and-flesh in-field”)
+# ‹טרפה לא תאכלו› (“prey not eat”)
+# ‹לכלב תשלכון אתו› (“to-dog throw-out-ward obj-marker-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 22:30."
 m.step("Exod.22.30")
 # witness-tier presupposed read:
 # terefah_in_limb_vocabulary_and_the_dogs_wage on torn_flesh_clause — read,

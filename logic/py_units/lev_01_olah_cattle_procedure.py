@@ -14,9 +14,11 @@ from machine import Machine
 m = Machine("lev_01_olah_cattle_procedure")
 
 # -------------------------- Lev.1.4 · ETNACHTA_SPLIT -----------------------
-# וסמך ידו על ראש העלה … ונרצה לו לכפר עליו
-# "[EN-AID] From top split: LEFT «וסמך ידו על ראש העלה» / RIGHT «ונרצה לו
-# לכפר עליו». Derive claim from Hebrew arms. Lev 1:4."
+# ‹וסמך ידו על› (“and-lay hand-him/its over”)
+# ‹ראש העלה … ונרצה› (“head the-burnt-offering … and-be-pleased-with”)
+# ‹לו לכפר עליו› (“to-him/its to-atone over-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 1:4."
 m.step("Lev.1.4")
 # witness-tier presupposed read: no_delegation_sons on semichah — read, not
 # installed
@@ -24,11 +26,15 @@ m.witness_read("semichah", "no_delegation_sons",
                 cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 4 2", "Sifra, Vayikra Dibbura DeNedavah, Section 2 2", "Sifra, Vayikra Dibbura DeNedavah, Chapter 4 8", "Sifra, Vayikra Dibbura DeNedavah, Chapter 4 9"])
 
 # -------------------------- Lev.1.5 · ETNACHTA_SPLIT -----------------------
-# ושחט את בן הבקר לפני יהוה … והקריבו בני אהרן הכהנים את הדם וזרקו את הדם על
-# המזבח סביב אש
-# "[EN-AID] From top split: LEFT «ושחט את בן הבקר לפני יהוה» / RIGHT
-# «והקריבו בני אהרן הכהנים את הדם וזרקו את הדם על המזבח סביב אשר פתח אהל
-# מועד». Derive claim from Hebrew arms. Lev 1:5."
+# ‹ושחט את בן› (“and-slaughter obj-marker son”)
+# ‹הבקר לפני יהוה› (“the-herd to-face YHWH”)
+# ‹… והקריבו בני אהרן› (“and-bring-near son Aaron”)
+# ‹הכהנים את הדם› (“the-priest obj-marker the-blood”)
+# ‹וזרקו את הדם› (“and-sprinkle obj-marker the-blood”)
+# ‹על המזבח סביב› (“over the-altar circle”)
+# ‹אש› (“fire”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 1:5."
 m.step("Lev.1.5")
 # witness-tier presupposed read: caller_to_priest_handoff on role_table —
 # read, not installed
@@ -40,15 +46,20 @@ m.witness_read("blood_stage", "two_that_are_four",
                 cites=["Sifra, Vayikra Dibbura DeNedavah, Section 4 9", "Sifra, Vayikra Dibbura DeNedavah, Section 4 10", "Sifra, Vayikra Dibbura DeNedavah, Section 4 11", "Sifra, Vayikra Dibbura DeNedavah, Section 4 13", "Sifra, Vayikra Dibbura DeNedavah, Section 4 14", "Sifra, Vayikra Dibbura DeNedavah, Section 4 7"])
 
 # -------------------------- Lev.1.6 · ETNACHTA_SPLIT -----------------------
-# והפשיט את העלה … ונתח אתה לנתחיה
-# "[EN-AID] From top split: LEFT «והפשיט את העלה» / RIGHT «ונתח אתה לנתחיה».
-# Derive claim from Hebrew arms. Lev 1:6."
+# ‹והפשיט את העלה› (“and-spread-out obj-marker the-burnt-offering”)
+# ‹… ונתח אתה לנתחיה› (“and-dismember obj-marker-her/its to-fragment-
+# her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 1:6."
 m.step("Lev.1.6")
 
 # -------------------------- Lev.1.7 · ETNACHTA_SPLIT -----------------------
-# ונתנו בני אהרן הכהן אש על המזבח … וערכו עצים על האש
-# "[EN-AID] From top split: LEFT «ונתנו בני אהרן הכהן אש על המזבח» / RIGHT
-# «וערכו עצים על האש». Derive claim from Hebrew arms. Lev 1:7."
+# ‹ונתנו בני אהרן› (“and-set son Aaron”)
+# ‹הכהן אש על› (“the-priest fire over”)
+# ‹המזבח … וערכו עצים› (“the-altar … and-set-in-a-row tree”)
+# ‹על האש› (“over the-fire”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 1:7."
 m.step("Lev.1.7")
 # witness-tier presupposed read: man_made_uniform_checked on fire_stage —
 # read, not installed
@@ -56,17 +67,24 @@ m.witness_read("fire_stage", "man_made_uniform_checked",
                 cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 5 8", "Sifra, Vayikra Dibbura DeNedavah, Chapter 5 9", "Sifra, Vayikra Dibbura DeNedavah, Chapter 5 10", "Sifra, Vayikra Dibbura DeNedavah, Chapter 5 11", "Sifra, Vayikra Dibbura DeNedavah, Chapter 6 4", "Sifra, Vayikra Dibbura DeNedavah, Chapter 6 5"])
 
 # -------------------------- Lev.1.8 · ETNACHTA_SPLIT -----------------------
-# וערכו בני אהרן הכהנים את הנתחים את הראש ואת הפדר … על העצים אשר על האש אשר
-# על המזבח
-# "[EN-AID] From top split: LEFT «וערכו בני אהרן הכהנים את הנתחים את הראש
-# ואת הפדר» / RIGHT «על העצים אשר על האש אשר על המזבח». Derive claim from
-# Hebrew arms. Lev 1:8."
+# ‹וערכו בני אהרן› (“and-set-in-a-row son Aaron”)
+# ‹הכהנים את הנתחים› (“the-priest obj-marker the-fragment”)
+# ‹את הראש ואת› (“obj-marker the-head and-obj-marker”)
+# ‹הפדר … על העצים› (“the-suet … over the-tree”)
+# ‹אשר על האש› (“which over the-fire”)
+# ‹אשר על המזבח› (“which over the-altar”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 1:8."
 m.step("Lev.1.8")
 
 # -------------------------- Lev.1.9 · ETNACHTA_SPLIT -----------------------
-# וקרבו וכרעיו ירחץ במים … והקטיר הכהן את הכל המזבחה עלה אשה ריח ניחוח ליהוה
-# "[EN-AID] From top split: LEFT «וקרבו וכרעיו ירחץ במים» / RIGHT «והקטיר
-# הכהן את הכל המזבחה עלה אשה ריח ניחוח ליהוה». Derive claim from Hebrew
+# ‹וקרבו וכרעיו ירחץ› (“and-nearest-part-him/its and-leg-of-men-him/its
+# lave”)
+# ‹במים … והקטיר הכהן› (“in-waters … and-smoke the-priest”)
+# ‹את הכל המזבחה› (“obj-marker the-all the-altar-ward”)
+# ‹עלה אשה ריח› (“burnt-offering fire-offering odor”)
+# ‹ניחוח ליהוה› (“restful to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 1:9."
 m.step("Lev.1.9")
 # witness-tier presupposed read: no_return_intent_ladder on burn_close —

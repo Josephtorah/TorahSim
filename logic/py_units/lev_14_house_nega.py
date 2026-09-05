@@ -14,16 +14,22 @@ from machine import Machine
 m = Machine("lev_14_house_nega")
 
 # -------------------------- Lev.14.33 · TREE_CLAIM -------------------------
-# וידבר יהוה … אל משה ואל אהרן לאמר
-# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה ואל אהרן
-# לאמר». Derive claim from Hebrew arms. Lev 14:33."
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה ואל אהרן› (“Moses and-to Aaron”)
+# ‹לאמר› (“to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:33."
 m.step("Lev.14.33")
 
-# -------------------------- Lev.14.34 · COND_כי ----------------------------
-# כי תבאו אל ארץ כנען אשר אני נתן לכם לאחזה … ונתתי נגע צרעת בבית ארץ אחזתכם
-# "[EN-AID] From top split: LEFT «כי תבאו אל ארץ כנען אשר אני נתן לכם לאחזה»
-# / RIGHT «ונתתי נגע צרעת בבית ארץ אחזתכם». Derive claim from Hebrew arms.
-# Lev 14:34."
+# -------------------------- Lev.14.34 · COND_כי (“that”) -------------------
+# ‹כי תבאו אל› (“that come/bring to”)
+# ‹ארץ כנען אשר› (“earth Canaan which”)
+# ‹אני נתן לכם› (“set to-you/your(pl)”)
+# ‹לאחזה … ונתתי נגע› (“to-something-seized … and-set blow”)
+# ‹צרעת בבית ארץ› (“leprosy in-house earth”)
+# ‹אחזתכם› (“something-seized-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:34."
 m.step("Lev.14.34")
 # witness-tier presupposed read: the_ownership_gate on eretz_achuzatchem —
 # read, not installed
@@ -31,9 +37,12 @@ m.witness_read("eretz_achuzatchem", "the_ownership_gate",
                 cites=["Sifra, Metzora, Section 5 1", "Sifra, Metzora, Section 5 3", "Sifra, Metzora, Section 5 4", "Sifra, Metzora, Section 5 5", "Sifra, Metzora, Section 5 6"])
 
 # -------------------------- Lev.14.35 · ETNACHTA_SPLIT ---------------------
-# ובא אשר לו הבית והגיד לכהן לאמר … כנגע נראה לי בבית
-# "[EN-AID] From top split: LEFT «ובא אשר לו הבית והגיד לכהן לאמר» / RIGHT
-# «כנגע נראה לי בבית». Derive claim from Hebrew arms. Lev 14:35."
+# ‹ובא אשר לו› (“and-come/bring which to-him/its”)
+# ‹הבית והגיד לכהן› (“the-house and-tell to-priest”)
+# ‹לאמר … כנגע נראה› (“to-say … like-blow see”)
+# ‹לי בבית› (“to-me/my in-house”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:35."
 m.step("Lev.14.35")
 # witness-tier presupposed read: the_humility_protocol on kenega_nirah_li —
 # read, not installed
@@ -41,11 +50,15 @@ m.witness_read("kenega_nirah_li", "the_humility_protocol",
                 cites=["Sifra, Metzora, Section 5 7", "Sifra, Metzora, Section 5 8", "Sifra, Metzora, Section 5 9", "Sifra, Metzora, Section 5 10", "Sifra, Metzora, Section 5 11", "Onkelos Lev 14:35"])
 
 # -------------------------- Lev.14.36 · ETNACHTA_SPLIT ---------------------
-# וצוה הכהן ופנו את הבית בטרם יבא הכהן לראות את הנגע ולא יטמא  … ואחר כן יבא
-# הכהן לראות את הבית
-# "[EN-AID] From top split: LEFT «וצוה הכהן ופנו את הבית בטרם יבא הכהן לראות
-# את הנגע ולא יטמא כל אשר בבית» / RIGHT «ואחר כן יבא הכהן לראות את הבית».
-# Derive claim from Hebrew arms. Lev 14:36."
+# ‹וצוה הכהן ופנו› (“and-command the-priest and-turn”)
+# ‹את הבית בטרם› (“obj-marker the-house in-non-occurrence”)
+# ‹יבא הכהן לראות› (“come/bring the-priest to-see”)
+# ‹את הנגע ולא› (“obj-marker the-blow and-not”)
+# ‹יטמא … ואחר כן› (“be-foul … and-after so”)
+# ‹יבא הכהן לראות› (“come/bring the-priest to-see”)
+# ‹את הבית› (“obj-marker the-house”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:36."
 m.step("Lev.14.36")
 # witness-tier presupposed read: the_evacuation on ufinu_et_habayit — read,
 # not installed
@@ -53,10 +66,12 @@ m.witness_read("ufinu_et_habayit", "the_evacuation",
                 cites=["Sifra, Metzora, Section 5 12", "Sifra, Metzora, Section 5 13"])
 
 # -------------------------- Lev.14.37 · ETNACHTA_SPLIT ---------------------
-# וראה את הנגע והנה הנגע בקירת הבית שקערורת ירקרקת או אדמדמת … ומראיהן שפל
-# מן הקיר
-# "[EN-AID] From top split: LEFT «וראה את הנגע והנה הנגע בקירת הבית שקערורת
-# ירקרקת או אדמדמת» / RIGHT «ומראיהן שפל מן הקיר». Derive claim from Hebrew
+# ‹וראה את הנגע› (“and-see obj-marker the-blow”)
+# ‹והנה הנגע בקירת› (“and-behold the-blow in-wall”)
+# ‹הבית שקערורת ירקרקת› (“the-house affliction yellowishness”)
+# ‹או אדמדמת … ומראיהן› (“or reddish … and-appearance-them/their”)
+# ‹שפל מן הקיר› (“afflicted from the-wall”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 14:37."
 m.step("Lev.14.37")
 # witness-tier presupposed read: the_geometry_gate on kirot_habayit — read,
@@ -65,22 +80,31 @@ m.witness_read("kirot_habayit", "the_geometry_gate",
                 cites=["Sifra, Metzora, Section 6 1", "Sifra, Metzora, Section 6 2", "Sifra, Metzora, Section 6 3", "Sifra, Metzora, Section 6 4", "Sifra, Metzora, Section 6 5", "Sifra, Metzora, Section 6 6", "Sifra, Metzora, Section 6 11", "Sifra, Metzora, Chapter 5 1", "Sifra, Metzora, Chapter 5 2"])
 
 # -------------------------- Lev.14.38 · ETNACHTA_SPLIT ---------------------
-# ויצא הכהן מן הבית אל פתח הבית … והסגיר את הבית שבעת ימים
-# "[EN-AID] From top split: LEFT «ויצא הכהן מן הבית אל פתח הבית» / RIGHT
-# «והסגיר את הבית שבעת ימים». Derive claim from Hebrew arms. Lev 14:38."
+# ‹ויצא הכהן מן› (“and-bring-forth the-priest from”)
+# ‹הבית אל פתח› (“the-house to opening”)
+# ‹הבית … והסגיר את› (“the-house … and-shut-up obj-marker”)
+# ‹הבית שבעת ימים› (“the-house seven day”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:38."
 m.step("Lev.14.38")
 
 # -------------------------- Lev.14.39 · ETNACHTA_SPLIT ---------------------
-# ושב הכהן ביום השביעי … וראה והנה פשה הנגע בקירת הבית
-# "[EN-AID] From top split: LEFT «ושב הכהן ביום השביעי» / RIGHT «וראה והנה
-# פשה הנגע בקירת הבית». Derive claim from Hebrew arms. Lev 14:39."
+# ‹ושב הכהן ביום› (“and-return the-priest in-day”)
+# ‹השביעי … וראה והנה› (“the-seventh … and-see and-behold”)
+# ‹פשה הנגע בקירת› (“spread the-blow in-wall”)
+# ‹הבית› (“the-house”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:39."
 m.step("Lev.14.39")
 
 # -------------------------- Lev.14.40 · ETNACHTA_SPLIT ---------------------
-# וצוה הכהן וחלצו את האבנים אשר בהן הנגע … והשליכו אתהן אל מחוץ לעיר אל מקום
-# טמא
-# "[EN-AID] From top split: LEFT «וצוה הכהן וחלצו את האבנים אשר בהן הנגע» /
-# RIGHT «והשליכו אתהן אל מחוץ לעיר אל מקום טמא». Derive claim from Hebrew
+# ‹וצוה הכהן וחלצו› (“and-command the-priest and-pull-off”)
+# ‹את האבנים אשר› (“obj-marker the-stone which”)
+# ‹בהן הנגע … והשליכו› (“in-them/their the-blow … and-throw-out”)
+# ‹אתהן אל מחוץ› (“obj-marker-them/their to from-outside”)
+# ‹לעיר אל מקום› (“to-city to place”)
+# ‹טמא› (“foul-in-a-religious-sense”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 14:40."
 m.step("Lev.14.40")
 # witness-tier presupposed read: the_shared_wall on vechiltzu_et_haavanim —
@@ -89,24 +113,34 @@ m.witness_read("vechiltzu_et_haavanim", "the_shared_wall",
                 cites=["Sifra, Metzora, Chapter 4 2", "Sifra, Metzora, Chapter 4 3", "Sifra, Metzora, Chapter 4 4", "Sifra, Metzora, Chapter 4 7", "Sifra, Metzora, Chapter 4 8", "Sifra, Metzora, Chapter 4 9", "Sifra, Metzora, Chapter 4 10"])
 
 # -------------------------- Lev.14.41 · ETNACHTA_SPLIT ---------------------
-# ואת הבית יקצע מבית סביב … ושפכו את העפר אשר הקצו אל מחוץ לעיר אל מקום טמא
-# "[EN-AID] From top split: LEFT «ואת הבית יקצע מבית סביב» / RIGHT «ושפכו את
-# העפר אשר הקצו אל מחוץ לעיר אל מקום טמא». Derive claim from Hebrew arms.
-# Lev 14:41."
+# ‹ואת הבית יקצע› (“and-obj-marker the-house strip-off”)
+# ‹מבית סביב … ושפכו› (“from-house circle … and-spill-forth”)
+# ‹את העפר אשר› (“obj-marker the-dust which”)
+# ‹הקצו אל מחוץ› (“cut-off to from-outside”)
+# ‹לעיר אל מקום› (“to-city to place”)
+# ‹טמא› (“foul-in-a-religious-sense”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:41."
 m.step("Lev.14.41")
 
 # -------------------------- Lev.14.42 · ETNACHTA_SPLIT ---------------------
-# ולקחו אבנים אחרות והביאו אל תחת האבנים … ועפר אחר יקח וטח את הבית
-# "[EN-AID] From top split: LEFT «ולקחו אבנים אחרות והביאו אל תחת האבנים» /
-# RIGHT «ועפר אחר יקח וטח את הבית». Derive claim from Hebrew arms. Lev
-# 14:42."
+# ‹ולקחו אבנים אחרות› (“and-take stone other”)
+# ‹והביאו אל תחת› (“and-come/bring to under”)
+# ‹האבנים … ועפר אחר› (“the-stone … and-dust other”)
+# ‹יקח וטח את› (“take and-smear obj-marker”)
+# ‹הבית› (“the-house”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:42."
 m.step("Lev.14.42")
 
-# -------------------------- Lev.14.43 · COND_ואם ---------------------------
-# ואם ישוב הנגע ופרח בבית אחר חלץ את האבנים … ואחרי הקצות את הבית ואחרי הטוח
-# "[EN-AID] From top split: LEFT «ואם ישוב הנגע ופרח בבית אחר חלץ את האבנים»
-# / RIGHT «ואחרי הקצות את הבית ואחרי הטוח». Derive claim from Hebrew arms.
-# Lev 14:43."
+# -------------------------- Lev.14.43 · COND_ואם (“and-if”) ----------------
+# ‹ואם ישוב הנגע› (“and-if return the-blow”)
+# ‹ופרח בבית אחר› (“and-break-forth-as-a-bud in-house after”)
+# ‹חלץ את האבנים› (“pull-off obj-marker the-stone”)
+# ‹… ואחרי הקצות את› (“and-after cut-off obj-marker”)
+# ‹הבית ואחרי הטוח› (“the-house and-after smear”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:43."
 m.step("Lev.14.43")
 # witness-tier presupposed read: the_ten_houses on im_yashuv_hanega — read,
 # not installed
@@ -114,23 +148,33 @@ m.witness_read("im_yashuv_hanega", "the_ten_houses",
                 cites=["Sifra, Metzora, Section 7 1", "Sifra, Metzora, Section 7 5", "Sifra, Metzora, Section 7 6", "Sifra, Metzora, Section 7 12", "Sifra, Metzora, Section 7 13", "Sifra, Metzora, Chapter 5 3"])
 
 # -------------------------- Lev.14.44 · ETNACHTA_SPLIT ---------------------
-# ובא הכהן וראה והנה פשה הנגע בבית … צרעת ממארת הוא בבית טמא הוא
-# "[EN-AID] From top split: LEFT «ובא הכהן וראה והנה פשה הנגע בבית» / RIGHT
-# «צרעת ממארת הוא בבית טמא הוא». Derive claim from Hebrew arms. Lev 14:44."
+# ‹ובא הכהן וראה› (“and-come/bring the-priest and-see”)
+# ‹והנה פשה הנגע› (“and-behold spread the-blow”)
+# ‹בבית … צרעת ממארת› (“in-house … leprosy be-bitter”)
+# ‹הוא בבית טמא› (“he/it in-house foul-in-a-religious-sense”)
+# ‹הוא› (“he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:44."
 m.step("Lev.14.44")
 
 # -------------------------- Lev.14.45 · ETNACHTA_SPLIT ---------------------
-# ונתץ את הבית את אבניו ואת עציו ואת כל עפר הבית … והוציא אל מחוץ לעיר אל
-# מקום טמא
-# "[EN-AID] From top split: LEFT «ונתץ את הבית את אבניו ואת עציו ואת כל עפר
-# הבית» / RIGHT «והוציא אל מחוץ לעיר אל מקום טמא». Derive claim from Hebrew
+# ‹ונתץ את הבית› (“and-tear-down obj-marker the-house”)
+# ‹את אבניו ואת› (“obj-marker stone-him/its and-obj-marker”)
+# ‹עציו ואת כל› (“tree-him/its and-obj-marker all”)
+# ‹עפר הבית … והוציא› (“dust the-house … and-bring-forth”)
+# ‹אל מחוץ לעיר› (“to from-outside to-city”)
+# ‹אל מקום טמא› (“to place foul-in-a-religious-sense”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 14:45."
 m.step("Lev.14.45")
 
 # -------------------------- Lev.14.46 · ETNACHTA_SPLIT ---------------------
-# והבא אל הבית כל ימי הסגיר אתו … יטמא עד הערב
-# "[EN-AID] From top split: LEFT «והבא אל הבית כל ימי הסגיר אתו» / RIGHT
-# «יטמא עד הערב». Derive claim from Hebrew arms. Lev 14:46."
+# ‹והבא אל הבית› (“and-the-come/bring to the-house”)
+# ‹כל ימי הסגיר› (“all day shut-up”)
+# ‹אתו … יטמא עד› (“obj-marker-him/its … be-foul until”)
+# ‹הערב› (“the-evening”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:46."
 m.step("Lev.14.46")
 # witness-tier presupposed read: the_entry_quantum on vehaba_el_habayit —
 # read, not installed
@@ -138,76 +182,102 @@ m.witness_read("vehaba_el_habayit", "the_entry_quantum",
                 cites=["Sifra, Metzora, Chapter 5 4", "Sifra, Metzora, Chapter 5 8", "Sifra, Metzora, Chapter 5 9", "Sifra, Metzora, Chapter 5 10", "Sifra, Metzora, Chapter 5 13", "Sifra, Metzora, Chapter 5 14", "Sifra, Metzora, Chapter 5 16", "Sifra, Metzora, Chapter 5 17"])
 
 # -------------------------- Lev.14.47 · ETNACHTA_SPLIT ---------------------
-# והשכב בבית יכבס את בגדיו … והאכל בבית יכבס את בגדיו
-# "[EN-AID] From top split: LEFT «והשכב בבית יכבס את בגדיו» / RIGHT «והאכל
-# בבית יכבס את בגדיו». Derive claim from Hebrew arms. Lev 14:47."
+# ‹והשכב בבית יכבס› (“and-the-lie-down in-house trample”)
+# ‹את בגדיו … והאכל› (“obj-marker garment-him/its … and-the-eat”)
+# ‹בבית יכבס את› (“in-house trample obj-marker”)
+# ‹בגדיו› (“garment-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:47."
 m.step("Lev.14.47")
 
-# -------------------------- Lev.14.48 · COND_ואם ---------------------------
-# ואם בא יבא הכהן וראה והנה לא פשה הנגע בבית אחרי הטח את הבית … וטהר הכהן את
-# הבית כי נרפא הנגע
-# "[EN-AID] From top split: LEFT «ואם בא יבא הכהן וראה והנה לא פשה הנגע בבית
-# אחרי הטח את הבית» / RIGHT «וטהר הכהן את הבית כי נרפא הנגע». Derive claim
-# from Hebrew arms. Lev 14:48."
+# -------------------------- Lev.14.48 · COND_ואם (“and-if”) ----------------
+# ‹ואם בא יבא› (“and-if come/bring come/bring”)
+# ‹הכהן וראה והנה› (“the-priest and-see and-behold”)
+# ‹לא פשה הנגע› (“not spread the-blow”)
+# ‹בבית אחרי הטח› (“in-house after smear”)
+# ‹את הבית … וטהר› (“obj-marker the-house … and-be-pure”)
+# ‹הכהן את הבית› (“the-priest obj-marker the-house”)
+# ‹כי נרפא הנגע› (“that mend the-blow”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:48."
 m.step("Lev.14.48")
 
 # -------------------------- Lev.14.49 · ETNACHTA_SPLIT ---------------------
-# ולקח לחטא את הבית שתי צפרים … ועץ ארז ושני תולעת ואזב
-# "[EN-AID] From top split: LEFT «ולקח לחטא את הבית שתי צפרים» / RIGHT «ועץ
-# ארז ושני תולעת ואזב». Derive claim from Hebrew arms. Lev 14:49."
+# ‹ולקח לחטא את› (“and-take to-sin obj-marker”)
+# ‹הבית שתי צפרים› (“the-house two little-bird”)
+# ‹… ועץ ארז ושני› (“and-tree cedar-tree and-crimson”)
+# ‹תולעת ואזב› (“crimson-grub and-hyssop”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:49."
 m.step("Lev.14.49")
 
 # -------------------------- Lev.14.50 · ETNACHTA_SPLIT ---------------------
-# ושחט את הצפר האחת … אל כלי חרש על מים חיים
-# "[EN-AID] From top split: LEFT «ושחט את הצפר האחת» / RIGHT «אל כלי חרש על
-# מים חיים». Derive claim from Hebrew arms. Lev 14:50."
+# ‹ושחט את הצפר› (“and-slaughter obj-marker the-little-bird”)
+# ‹האחת … אל כלי› (“the-one … to vessel”)
+# ‹חרש על מים› (“piece-of-pottery over waters”)
+# ‹חיים› (“living”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:50."
 m.step("Lev.14.50")
 
 # -------------------------- Lev.14.51 · ETNACHTA_SPLIT ---------------------
-# ולקח את עץ הארז ואת האזב ואת שני התולעת ואת הצפר החיה וטבל א … והזה אל
-# הבית שבע פעמים
-# "[EN-AID] From top split: LEFT «ולקח את עץ הארז ואת האזב ואת שני התולעת
-# ואת הצפר החיה וטבל אתם בדם הצפר השחוטה ו» / RIGHT «והזה אל הבית שבע
-# פעמים». Derive claim from Hebrew arms. Lev 14:51."
+# ‹ולקח את עץ› (“and-take obj-marker tree”)
+# ‹הארז ואת האזב› (“the-cedar-tree and-obj-marker the-hyssop”)
+# ‹ואת שני התולעת› (“and-obj-marker crimson the-crimson-grub”)
+# ‹ואת הצפר החיה› (“and-obj-marker the-little-bird the-living”)
+# ‹וטבל א … והזה› (“and-dip ? … and-spirt”)
+# ‹אל הבית שבע› (“to the-house seven”)
+# ‹פעמים› (“stroke”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:51."
 m.step("Lev.14.51")
 
 # -------------------------- Lev.14.52 · ETNACHTA_SPLIT ---------------------
-# וחטא את הבית בדם הצפור ובמים החיים … ובצפר החיה ובעץ הארז ובאזב ובשני
-# התולעת
-# "[EN-AID] From top split: LEFT «וחטא את הבית בדם הצפור ובמים החיים» /
-# RIGHT «ובצפר החיה ובעץ הארז ובאזב ובשני התולעת». Derive claim from Hebrew
+# ‹וחטא את הבית› (“and-sin obj-marker the-house”)
+# ‹בדם הצפור ובמים› (“in-blood the-little-bird and-in-waters”)
+# ‹החיים … ובצפר החיה› (“the-living … and-in-little-bird the-living”)
+# ‹ובעץ הארז ובאזב› (“and-in-tree the-cedar-tree and-in-hyssop”)
+# ‹ובשני התולעת› (“and-in-crimson the-crimson-grub”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 14:52."
 m.step("Lev.14.52")
 
 # -------------------------- Lev.14.53 · ETNACHTA_SPLIT ---------------------
-# ושלח את הצפר החיה אל מחוץ לעיר אל פני השדה … וכפר על הבית וטהר
-# "[EN-AID] From top split: LEFT «ושלח את הצפר החיה אל מחוץ לעיר אל פני
-# השדה» / RIGHT «וכפר על הבית וטהר». Derive claim from Hebrew arms. Lev
-# 14:53."
+# ‹ושלח את הצפר› (“and-send obj-marker the-little-bird”)
+# ‹החיה אל מחוץ› (“the-living to from-outside”)
+# ‹לעיר אל פני› (“to-city to face”)
+# ‹השדה … וכפר על› (“the-field … and-atone over”)
+# ‹הבית וטהר› (“the-house and-be-pure”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:53."
 m.step("Lev.14.53")
 
 # -------------------------- Lev.14.54 · ETNACHTA_SPLIT ---------------------
-# זאת התורה … לכל נגע הצרעת ולנתק
-# "[EN-AID] From top split: LEFT «זאת התורה» / RIGHT «לכל נגע הצרעת ולנתק».
-# Derive claim from Hebrew arms. Lev 14:54."
+# ‹זאת התורה … לכל› (“this the-precept … to-all”)
+# ‹נגע הצרעת ולנתק› (“blow the-leprosy and-to-scurf”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:54."
 m.step("Lev.14.54")
 
 # -------------------------- Lev.14.55 · TREE_CLAIM -------------------------
-# ולצרעת הבגד
-# "[EN-AID] From top split: LEFT «ולצרעת הבגד» / RIGHT «». Derive claim from
-# Hebrew arms. Lev 14:55."
+# ‹ולצרעת הבגד› (“and-to-leprosy the-garment”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Lev 14:55."
 m.step("Lev.14.55")
 
 # -------------------------- Lev.14.56 · TREE_CLAIM -------------------------
-# ולשאת ולספחת
-# "[EN-AID] From top split: LEFT «ולשאת ולספחת» / RIGHT «». Derive claim
-# from Hebrew arms. Lev 14:56."
+# ‹ולשאת ולספחת› (“and-to-Most-High and-to-mange”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Lev 14:56."
 m.step("Lev.14.56")
 
 # -------------------------- Lev.14.57 · ETNACHTA_SPLIT ---------------------
-# להורת ביום הטמא וביום הטהר … זאת תורת הצרעת
-# "[EN-AID] From top split: LEFT «להורת ביום הטמא וביום הטהר» / RIGHT «זאת
-# תורת הצרעת». Derive claim from Hebrew arms. Lev 14:57."
+# ‹להורת ביום הטמא› (“to-flow-as-water in-day the-foul-in-a-religious-
+# sense”)
+# ‹וביום הטהר … זאת› (“and-in-day the-pure … this”)
+# ‹תורת הצרעת› (“precept the-leprosy”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:57."
 m.step("Lev.14.57")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

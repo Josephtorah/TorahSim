@@ -14,42 +14,52 @@ from machine import Machine
 m = Machine("gen_29_separation_promise")
 
 # -------------------------- Gen.13.1 · THE_ASCENT_WITH_ALL -----------------
-# וַיַּעַל אַבְרָם מִמִּצְרַיִם הוּא וְאִשְׁתּוֹ וְכָל־אֲשֶׁר־לוֹ וְלוֹט
-# עִמּוֹ הַנֶּגְבָּה
+# ‹וַיַּעַל אַבְרָם מִמִּצְרַיִם› (“and-go-up Abram from-Egypt”)
+# ‹הוּא וְאִשְׁתּוֹ וְכָל־אֲשֶׁר־לוֹ› (“he/it and-woman-him/its and-all
+# which to-him/its”)
+# ‹וְלוֹט עִמּוֹ הַנֶּגְבָּה› (“and-Lot with-him/its the-south-ward”)
 # "And Abram went up out of Egypt, he, and his wife, and all that he had,
 # and Lot with him, into the South."
 m.step("Gen.13.1")
-# ‹וַיַּעַל אַבְרָם מִמִּצְרַיִם› (“and-go-up Abram from-Egypt”) — event:
-# go-up — agent Abram
+# ‹וַיַּעַל אַבְרָם מִמִּצְרַיִם› (“and-go-up Abram from-Egypt”)
+# — event: go-up — agent Abram
 m.event("go_up", agent="avram")
-# ‹הוּא וְאִשְׁתּוֹ וְכָל־אֲשֶׁר־לוֹ וְלוֹט עִמּוֹ› (“he/it and-woman-
-# him/its and-all which to-him/its and-Lot with-him/its”) — fact holds:
-# he/it-and-his-wife-and-all-which-not-and-Lot-imo
+# ‹הוּא וְאִשְׁתּוֹ וְכָל־אֲשֶׁר־לוֹ› (“he/it and-woman-him/its and-all
+# which to-him/its”)
+# ‹וְלוֹט עִמּוֹ› (“and-Lot with-him/its”)
+# — fact holds: he/it-and-his-wife-and-all-which-not-and-Lot-imo
 m.fact("hu_ve_ishto_ve_khol_asher_lo_ve_lot_imo")
 # reads without prior install (flag, not fix): Egypt, the-south
 m.presupposed("mitzrayim", "ha_negev")
 
 # -------------------------- Gen.13.2 · THE_HEAVY_WEALTH --------------------
-# וְאַבְרָם כָּבֵד מְאֹד בַּמִּקְנֶה בַּכֶּסֶף וּבַזָּהָב
+# ‹וְאַבְרָם כָּבֵד מְאֹד› (“and-Abram be-heavy very”)
+# ‹בַּמִּקְנֶה בַּכֶּסֶף וּבַזָּהָב› (“in-something-bought in-silver and-in-
+# gold”)
 # "And Abram was very rich in cattle, in silver, and in gold."
 m.step("Gen.13.2")
-# ‹כָּבֵד מְאֹד בַּמִּקְנֶה בַּכֶּסֶף וּבַזָּהָב› (“be-heavy very in-
-# something-bought in-silver and-in-gold”) — fact holds: be-heavy-very-in-
-# the-miqneh-in-the-kesef-and-and-gold
+# ‹כָּבֵד מְאֹד בַּמִּקְנֶה› (“be-heavy very in-something-bought”)
+# ‹בַּכֶּסֶף וּבַזָּהָב› (“in-silver and-in-gold”)
+# — fact holds: be-heavy-very-in-the-miqneh-in-the-kesef-and-and-gold
 m.fact("kaved_meod_ba_miqneh_ba_kesef_u_va_zahav")
 
 # -------------------------- Gen.13.3 · THE_RETRACED_STAGES -----------------
-# וַיֵּלֶךְ לְמַסָּעָיו מִנֶּגֶב וְעַד־בֵּית־אֵל עַד־הַמָּקוֹם אֲשֶׁר־הָיָה
-# שָׁם אהלה אָהֳלוֹ בַּתְּחִלָּה בֵּין בֵּית־אֵל וּבֵין הָעָי
+# ‹וַיֵּלֶךְ לְמַסָּעָיו מִנֶּגֶב› (“and-go to-departure-him/its from-
+# south”)
+# ‹וְעַד־בֵּית־אֵל עַד־הַמָּקוֹם אֲשֶׁר־הָיָה› (“and-until Beth-el until
+# the-place which be”)
+# ‹שָׁם אהלה אָהֳלוֹ› (“there tent-him/its tent-him/its”)
+# ‹בַּתְּחִלָּה בֵּין בֵּית־אֵל› (“in-commencement between Beth-el”)
+# ‹וּבֵין הָעָי› (“and-between the-Ai”)
 # "And he went on his journeys from the South even to Beth-el, unto the
 # place where his tent had been at the beginning, between Beth-el and Ai;"
 m.step("Gen.13.3")
-# ‹וַיֵּלֶךְ לְמַסָּעָיו› (“and-go to-departure-him/its”) — event: go —
-# agent Abram
+# ‹וַיֵּלֶךְ לְמַסָּעָיו› (“and-go to-departure-him/its”)
+# — event: go — agent Abram
 m.event("go", agent="avram")
-# ‹אֲשֶׁר־הָיָה שָׁם אהלה אָהֳלוֹ בַּתְּחִלָּה› (“which be there tent-
-# him/its tent-him/its in-commencement”) — fact holds: which-was-there-
-# aholo-in-the-techillah
+# ‹אֲשֶׁר־הָיָה שָׁם אהלה› (“which be there tent-him/its”)
+# ‹אָהֳלוֹ בַּתְּחִלָּה› (“tent-him/its in-commencement”)
+# — fact holds: which-was-there-aholo-in-the-techillah
 m.fact("asher_hayah_sham_aholo_ba_techillah")
 # reads without prior install (flag, not fix): beit-Beth-el, the-ai
 m.presupposed("beit_el", "ha_ai")
@@ -59,52 +69,68 @@ m.witness_read("return_to_the_place", "lodging_law_derived_twice",
                 cites=["Arakhin 16b:17", "Arakhin 16b:18"])
 
 # -------------------------- Gen.13.4 · THE_RETURN_CALL_AT_THE_FIRST_ALTAR --
-# אֶל־מְקוֹם הַמִּזְבֵּחַ אֲשֶׁר־עָשָׂה שָׁם בָּרִאשֹׁנָה וַיִּקְרָא שָׁם
-# אַבְרָם בְּשֵׁם יְהוָה
+# ‹אֶל־מְקוֹם הַמִּזְבֵּחַ אֲשֶׁר־עָשָׂה› (“to place the-altar which make”)
+# ‹שָׁם בָּרִאשֹׁנָה וַיִּקְרָא› (“there in-first and-call”)
+# ‹שָׁם אַבְרָם בְּשֵׁם› (“there Abram in-name”)
+# ‹יְהוָה› (“YHWH”)
 # "unto the place of the altar, which he had made there at the first; and
 # Abram called there on the name of the LORD."
 m.step("Gen.13.4")
-# ‹מְקוֹם הַמִּזְבֵּחַ אֲשֶׁר־עָשָׂה שָׁם› (“place the-altar which make
-# there”) — reads without prior install (flag, not fix): altar-beit-Beth-el
+# ‹מְקוֹם הַמִּזְבֵּחַ אֲשֶׁר־עָשָׂה› (“place the-altar which make”)
+# ‹שָׁם› (“there”)
+# — reads without prior install (flag, not fix): altar-beit-Beth-el
 m.presupposed("mizbeach_beit_el")
-# ‹וַיִּקְרָא שָׁם אַבְרָם בְּשֵׁם יְהוָה› (“and-call there Abram in-name
-# YHWH”) — event: call — agent Abram; theme name-the-LORD
+# ‹וַיִּקְרָא שָׁם אַבְרָם› (“and-call there Abram”)
+# ‹בְּשֵׁם יְהוָה› (“in-name YHWH”)
+# — event: call — agent Abram; theme name-the-LORD
 m.event("call", agent="avram", themes=["shem_YHWH"])
 
 # -------------------------- Gen.13.5 · LOTS_HOLDINGS -----------------------
-# וְגַם־לְלוֹט הַהֹלֵךְ אֶת־אַבְרָם הָיָה צֹאן־וּבָקָר וְאֹהָלִים
+# ‹וְגַם־לְלוֹט הַהֹלֵךְ אֶת־אַבְרָם› (“and-also to-Lot the-walk/go with
+# Abram”)
+# ‹הָיָה צֹאן־וּבָקָר וְאֹהָלִים› (“be flock and-herd and-tent”)
 # "And Lot also, who went with Abram, had flocks, and herds, and tents."
 m.step("Gen.13.5")
-# ‹וְגַם־לְלוֹט ... הָיָה צֹאן־וּבָקָר וְאֹהָלִים› (“and-also to-Lot be
-# flock and-herd and-tent”) — fact holds: and-also-to-Lot-flock-and-herd-
-# and-tent
+# ‹וְגַם־לְלוֹט ... הָיָה צֹאן־וּבָקָר› (“and-also to-Lot be flock and-
+# herd”)
+# ‹וְאֹהָלִים› (“and-tent”)
+# — fact holds: and-also-to-Lot-flock-and-herd-and-tent
 m.fact("ve_gam_le_lot_tzon_u_vaqar_ve_ohalim")
 
 # -------------------------- Gen.13.6 · THE_LAND_THAT_COULD_NOT_BEAR --------
-# וְלֹא־נָשָׂא אֹתָם הָאָרֶץ לָשֶׁבֶת יַחְדָּו כִּי־הָיָה רְכוּשָׁם רָב
-# וְלֹא יָכְלוּ לָשֶׁבֶת יַחְדָּו
+# ‹וְלֹא־נָשָׂא אֹתָם הָאָרֶץ› (“and-not lift/carry obj-marker-them/their
+# the-earth”)
+# ‹לָשֶׁבֶת יַחְדָּו כִּי־הָיָה› (“to-dwell/sit unit that be”)
+# ‹רְכוּשָׁם רָב וְלֹא› (“property-them/their many/great and-not”)
+# ‹יָכְלוּ לָשֶׁבֶת יַחְדָּו› (“be-able to-dwell/sit unit”)
 # "And the land was not able to bear them, that they might dwell together;
 # for their substance was great, so that they could not dwell together."
 m.step("Gen.13.6")
-# ‹וְלֹא־נָשָׂא אֹתָם הָאָרֶץ ... כִּי־הָיָה רְכוּשָׁם רָב› (“and-not
-# lift/carry obj-marker-them/their the-earth that be property-them/their
-# many/great”) — fact holds: not-lift/carry-otam-the-earth-to-dwell/sit-
-# unit; that-was-rekhusham-many/great
+# ‹וְלֹא־נָשָׂא אֹתָם הָאָרֶץ› (“and-not lift/carry obj-marker-them/their
+# the-earth”)
+# ‹... כִּי־הָיָה רְכוּשָׁם רָב› (“that be property-them/their many/great”)
+# — fact holds: not-lift/carry-otam-the-earth-to-dwell/sit-unit; that-was-
+# rekhusham-many/great
 m.fact("lo_nasa_otam_ha_aretz_la_shevet_yachdav",
        "ki_hayah_rekhusham_rav")
 
 # -------------------------- Gen.13.7 · THE_STRIFE_AND_THE_WATCHING_LAND ----
-# וַיְהִי־רִיב בֵּין רֹעֵי מִקְנֵה־אַבְרָם וּבֵין רֹעֵי מִקְנֵה־לוֹט
-# וְהַכְּנַעֲנִי וְהַפְּרִזִּי אָז יֹשֵׁב בָּאָרֶץ
+# ‹וַיְהִי־רִיב בֵּין רֹעֵי› (“and-be contest between pastoral”)
+# ‹מִקְנֵה־אַבְרָם וּבֵין רֹעֵי› (“something-bought Abram and-between
+# pastoral”)
+# ‹מִקְנֵה־לוֹט וְהַכְּנַעֲנִי וְהַפְּרִזִּי› (“something-bought Lot and-
+# the-Kenaanite and-the-Perizzite”)
+# ‹אָז יֹשֵׁב בָּאָרֶץ› (“at-that-time dwell/sit in-earth”)
 # "And there was a strife between the herdmen of Abram's cattle and the
 # herdmen of Lot's cattle. And the Canaanite and the Perizzite dwelt then in
 # the land."
 m.step("Gen.13.7")
-# ‹וַיְהִי־רִיב ... וְהַכְּנַעֲנִי וְהַפְּרִזִּי אָז יֹשֵׁב בָּאָרֶץ› (“and-
-# be contest and-the-Kenaanite and-the-Perizzite at-that-time dwell/sit in-
-# earth”) — fact holds: and-be-contest-between-roei-miqneh-Abram-and-vein-
-# roei-miqneh-Lot; and-the-Kenaanite-and-the-Perizzite-at-that-time-
-# dwell/sit-in-the-earth
+# ‹וַיְהִי־רִיב ... וְהַכְּנַעֲנִי וְהַפְּרִזִּי› (“and-be contest and-the-
+# Kenaanite and-the-Perizzite”)
+# ‹אָז יֹשֵׁב בָּאָרֶץ› (“at-that-time dwell/sit in-earth”)
+# — fact holds: and-be-contest-between-roei-miqneh-Abram-and-vein-roei-
+# miqneh-Lot; and-the-Kenaanite-and-the-Perizzite-at-that-time-dwell/sit-in-
+# the-earth
 m.fact("va_yehi_riv_bein_roei_miqneh_avram_u_vein_roei_miqneh_lot",
        "ve_ha_kenaani_ve_ha_perizi_az_yoshev_ba_aretz")
 # witness-tier presupposed read: paradigm_at_the_head_of_two_laws on
@@ -113,21 +139,26 @@ m.witness_read("herdsmen_quarrel", "paradigm_at_the_head_of_two_laws",
                 cites=["Mekhilta DeRabbi Shimon Ben Yochai 21:18", "Sifrei Devarim 286:1"])
 
 # -------------------------- Gen.13.8 · THE_PEACE_PLEA_WE_ARE_BROTHERS ------
-# וַיֹּאמֶר אַבְרָם אֶל־לוֹט אַל־נָא תְהִי מְרִיבָה בֵּינִי וּבֵינֶיךָ
-# וּבֵין רֹעַי וּבֵין רֹעֶיךָ כִּי־אֲנָשִׁים אַחִים אֲנָחְנוּ
+# ‹וַיֹּאמֶר אַבְרָם אֶל־לוֹט› (“and-say Abram to Lot”)
+# ‹אַל־נָא תְהִי מְרִיבָה› (“do-not please be quarrel”)
+# ‹בֵּינִי וּבֵינֶיךָ וּבֵין› (“between-me/my and-between-you/your and-
+# between”)
+# ‹רֹעַי וּבֵין רֹעֶיךָ› (“pastoral-me/my and-between pastoral-you/your”)
+# ‹כִּי־אֲנָשִׁים אַחִים אֲנָחְנוּ› (“that man brother we”)
 # "And Abram said unto Lot: 'Let there be no strife, I pray thee, between me
 # and thee, and between my herdmen and thy herdmen; for we are brethren."
 m.step("Gen.13.8")
-# ‹וַיֹּאמֶר אַבְרָם אֶל־לוֹט› (“and-say Abram to Lot”) — event: say — agent
-# Abram
+# ‹וַיֹּאמֶר אַבְרָם אֶל־לוֹט› (“and-say Abram to Lot”)
+# — event: say — agent Abram
 m.event("say", agent="avram")
-# ‹אַל־נָא תְהִי מְרִיבָה בֵּינִי וּבֵינֶיךָ› (“do-not please be quarrel
-# between-me/my and-between-you/your”) — Abram speaks a demand — LET-NOT:
-# be(merivah, between-Abram-and-between-Lot)
+# ‹אַל־נָא תְהִי מְרִיבָה› (“do-not please be quarrel”)
+# ‹בֵּינִי וּבֵינֶיךָ› (“between-me/my and-between-you/your”)
+# — Abram speaks a demand — LET-NOT: be(merivah, between-Abram-and-between-
+# Lot)
 m.declare("avram", "LET-NOT",
           "tehi(merivah, bein_avram_u_ven_lot)")
-# ‹כִּי־אֲנָשִׁים אַחִים אֲנָחְנוּ› (“that man brother we”) — fact holds:
-# that-man-brother-we
+# ‹כִּי־אֲנָשִׁים אַחִים אֲנָחְנוּ› (“that man brother we”)
+# — fact holds: that-man-brother-we
 m.fact("ki_anashim_achim_anachnu")
 # witness-grounded state (its own tier): analogy_candidate_declined on
 # we_are_brothers
@@ -135,8 +166,11 @@ m.witness_state("we_are_brothers", "analogy_candidate_declined",
                 cites=["Yevamot 17b:6"])
 
 # -------------------------- Gen.13.9 · THE_OFFER_OF_THE_WHOLE_LAND ---------
-# הֲלֹא כָל־הָאָרֶץ לְפָנֶיךָ הִפָּרֶד נָא מֵעָלָי אִם־הַשְּׂמֹאל וְאֵימִנָה
-# וְאִם־הַיָּמִין וְאַשְׂמְאִילָה
+# ‹הֲלֹא כָל־הָאָרֶץ לְפָנֶיךָ› (“is-it-not all the-earth to-face-you/your”)
+# ‹הִפָּרֶד נָא מֵעָלָי› (“break-through please from-over-me/my”)
+# ‹אִם־הַשְּׂמֹאל וְאֵימִנָה וְאִם־הַיָּמִין› (“if the-dark and-be-right-
+# handed and-if the-right-hand”)
+# ‹וְאַשְׂמְאִילָה› (“and-use-the-left-hand”)
 # "Is not the whole land before thee? separate thyself, I pray thee, from
 # me; if thou wilt take the left hand, then I will go to the right; or if
 # thou take the right hand, then I will go to the left.'"
@@ -144,35 +178,46 @@ m.step("Gen.13.9")
 # ‹הֲלֹא כָל־הָאָרֶץ לְפָנֶיךָ› (“is-it-not all the-earth to-face-you/your”)
 # — fact holds: the-not-all-the-earth-lefanekha
 m.fact("ha_lo_khol_ha_aretz_lefanekha")
-# ‹הִפָּרֶד נָא מֵעָלָי› (“break-through please from-over-me/my”) — Abram
-# speaks a demand — LET: break-through(Lot, from-over-Abram)
+# ‹הִפָּרֶד נָא מֵעָלָי› (“break-through please from-over-me/my”)
+# — Abram speaks a demand — LET: break-through(Lot, from-over-Abram)
 m.declare("avram", "LET",
           "hipared(lot, me_al_avram)")
-# ‹אִם־הַשְּׂמֹאל וְאֵימִנָה וְאִם־הַיָּמִין וְאַשְׂמְאִילָה› (“if the-dark
-# and-be-right-handed and-if the-right-hand and-use-the-left-hand”) — fact
-# holds: if-the-dark-and-eminah-and-if-the-right-hand-and-asmilah
+# ‹אִם־הַשְּׂמֹאל וְאֵימִנָה וְאִם־הַיָּמִין› (“if the-dark and-be-right-
+# handed and-if the-right-hand”)
+# ‹וְאַשְׂמְאִילָה› (“and-use-the-left-hand”)
+# — fact holds: if-the-dark-and-eminah-and-if-the-right-hand-and-asmilah
 m.fact("im_ha_semol_ve_eminah_ve_im_ha_yamin_ve_asmilah")
 
 # -------------------------- Gen.13.10 · THE_EYES_LIFT_TOWARD_EDEN_GROUND ---
-# וַיִּשָּׂא־לוֹט אֶת־עֵינָיו וַיַּרְא אֶת־כָּל־כִּכַּר הַיַּרְדֵּן כִּי
-# כֻלָּהּ מַשְׁקֶה לִפְנֵי שַׁחֵת יְהוָה אֶת־סְדֹם וְאֶת־עֲמֹרָה
-# כְּגַן־יְהוָה כְּאֶרֶץ מִצְרַיִם בֹּאֲכָה צֹעַר
+# ‹וַיִּשָּׂא־לוֹט אֶת־עֵינָיו וַיַּרְא› (“and-lift/carry Lot obj-marker
+# eye-him/its and-see”)
+# ‹אֶת־כָּל־כִּכַּר הַיַּרְדֵּן כִּי› (“obj-marker all circle the-Jordan
+# that”)
+# ‹כֻלָּהּ מַשְׁקֶה לִפְנֵי› (“all-her/its causing-to-drink to-face”)
+# ‹שַׁחֵת יְהוָה אֶת־סְדֹם› (“decay YHWH obj-marker Sodom”)
+# ‹וְאֶת־עֲמֹרָה כְּגַן־יְהוָה כְּאֶרֶץ› (“and-obj-marker Gomorrah like-
+# garden YHWH like-earth”)
+# ‹מִצְרַיִם בֹּאֲכָה צֹעַר› (“Egypt come/bring-you/your Zoar”)
 # "And Lot lifted up his eyes, and beheld all the plain of the Jordan, that
 # it was well watered every where, before the LORD destroyed Sodom and
 # Gomorrah, like the garden of the LORD, like the land of Egypt, as thou
 # goest unto Zoar."
 m.step("Gen.13.10")
 # ‹וַיִּשָּׂא־לוֹט אֶת־עֵינָיו› (“and-lift/carry Lot obj-marker eye-
-# him/its”) — event: lift-eyes — agent Lot; theme einav
+# him/its”)
+# — event: lift-eyes — agent Lot; theme einav
 m.event("lift_eyes", agent="lot", themes=["einav"])
 # ‹וַיַּרְא אֶת־כָּל־כִּכַּר הַיַּרְדֵּן› (“and-see obj-marker all circle
-# the-Jordan”) — event: see — agent Lot; theme all-circle-the-Jordan
+# the-Jordan”)
+# — event: see — agent Lot; theme all-circle-the-Jordan
 m.event("see", agent="lot", themes=["kol_kikar_ha_yarden"])
-# ‹כִּי כֻלָּהּ מַשְׁקֶה לִפְנֵי שַׁחֵת יְהוָה אֶת־סְדֹם וְאֶת־עֲמֹרָה
-# כְּגַן־יְהוָה כְּאֶרֶץ מִצְרַיִם› (“that all-her/its causing-to-drink to-
-# face decay YHWH obj-marker Sodom and-obj-marker Gomorrah like-garden YHWH
-# like-earth Egypt”) — fact holds: that-khulah-mashqeh-lifnei-decay-the-
-# LORD-with-Sodom-and-with-amorah
+# ‹כִּי כֻלָּהּ מַשְׁקֶה› (“that all-her/its causing-to-drink”)
+# ‹לִפְנֵי שַׁחֵת יְהוָה› (“to-face decay YHWH”)
+# ‹אֶת־סְדֹם וְאֶת־עֲמֹרָה כְּגַן־יְהוָה› (“obj-marker Sodom and-obj-marker
+# Gomorrah like-garden YHWH”)
+# ‹כְּאֶרֶץ מִצְרַיִם› (“like-earth Egypt”)
+# — fact holds: that-khulah-mashqeh-lifnei-decay-the-LORD-with-Sodom-and-
+# with-amorah
 m.fact("ki_khulah_mashqeh_lifnei_shachet_YHWH_et_sedom_ve_et_amorah")
 # reads without prior install (flag, not fix): the-Jordan, Sodom, Gomorrah,
 # Zoar
@@ -183,48 +228,55 @@ m.witness_read("kikar_description", "ruled_wholly_figurative_for_sin",
                 cites=["Bereshit Rabbah 41:7", "Nazir 23a:15", "Sifrei Devarim 36:10"])
 
 # -------------------------- Gen.13.11 · THE_CHOICE_AND_THE_SEPARATION ------
-# וַיִּבְחַר־לוֹ לוֹט אֵת כָּל־כִּכַּר הַיַּרְדֵּן וַיִּסַּע לוֹט מִקֶּדֶם
-# וַיִּפָּרְדוּ אִישׁ מֵעַל אָחִיו
+# ‹וַיִּבְחַר־לוֹ לוֹט אֵת› (“and-try to-him/its Lot obj-marker”)
+# ‹כָּל־כִּכַּר הַיַּרְדֵּן וַיִּסַּע› (“all circle the-Jordan and-journey”)
+# ‹לוֹט מִקֶּדֶם וַיִּפָּרְדוּ› (“Lot from-the-east and-break-through”)
+# ‹אִישׁ מֵעַל אָחִיו› (“man from-over brother-him/its”)
 # "So Lot chose him all the plain of the Jordan; and Lot journeyed east; and
 # they separated themselves the one from the other."
 m.step("Gen.13.11")
-# ‹וַיִּבְחַר־לוֹ לוֹט אֵת כָּל־כִּכַּר הַיַּרְדֵּן› (“and-try to-him/its
-# Lot obj-marker all circle the-Jordan”) — event: choose — agent Lot; theme
-# all-circle-the-Jordan
+# ‹וַיִּבְחַר־לוֹ לוֹט אֵת› (“and-try to-him/its Lot obj-marker”)
+# ‹כָּל־כִּכַּר הַיַּרְדֵּן› (“all circle the-Jordan”)
+# — event: choose — agent Lot; theme all-circle-the-Jordan
 m.event("choose", agent="lot", themes=["kol_kikar_ha_yarden"])
-# ‹וַיִּסַּע לוֹט מִקֶּדֶם› (“and-journey Lot from-the-east”) — event:
-# journey — agent Lot
+# ‹וַיִּסַּע לוֹט מִקֶּדֶם› (“and-journey Lot from-the-east”)
+# — event: journey — agent Lot
 m.event("journey", agent="lot")
-# ‹וַיִּפָּרְדוּ אִישׁ מֵעַל אָחִיו› (“and-break-through man from-over
-# brother-him/its”) — demand settled (popped from the queue): break-
-# through(Lot, from-over-Abram)
+# ‹וַיִּפָּרְדוּ אִישׁ מֵעַל› (“and-break-through man from-over”)
+# ‹אָחִיו› (“brother-him/its”)
+# — demand settled (popped from the queue): break-through(Lot, from-over-
+# Abram)
 m.result("hipared(lot, me_al_avram)", tmark="t1")
 
 # -------------------------- Gen.13.12 · THE_TWO_SETTLINGS ------------------
-# אַבְרָם יָשַׁב בְּאֶרֶץ־כְּנָעַן וְלוֹט יָשַׁב בְּעָרֵי הַכִּכָּר
-# וַיֶּאֱהַל עַד־סְדֹם
+# ‹אַבְרָם יָשַׁב בְּאֶרֶץ־כְּנָעַן› (“Abram dwell/sit in-earth Canaan”)
+# ‹וְלוֹט יָשַׁב בְּעָרֵי› (“and-Lot dwell/sit in-city”)
+# ‹הַכִּכָּר וַיֶּאֱהַל עַד־סְדֹם› (“the-circle and-tent until Sodom”)
 # "Abram dwelt in the land of Canaan, and Lot dwelt in the cities of the
 # Plain, and moved his tent as far as Sodom."
 m.step("Gen.13.12")
-# ‹אַבְרָם יָשַׁב בְּאֶרֶץ־כְּנָעַן› (“Abram dwell/sit in-earth Canaan”) —
-# event: dwell — agent Abram
+# ‹אַבְרָם יָשַׁב בְּאֶרֶץ־כְּנָעַן› (“Abram dwell/sit in-earth Canaan”)
+# — event: dwell — agent Abram
 m.event("dwell", agent="avram")
-# ‹וְלוֹט יָשַׁב בְּעָרֵי הַכִּכָּר› (“and-Lot dwell/sit in-city the-
-# circle”) — event: dwell — agent Lot
+# ‹וְלוֹט יָשַׁב בְּעָרֵי› (“and-Lot dwell/sit in-city”)
+# ‹הַכִּכָּר› (“the-circle”)
+# — event: dwell — agent Lot
 m.event("dwell", agent="lot")
-# ‹וַיֶּאֱהַל עַד־סְדֹם› (“and-tent until Sodom”) — event: tent — agent Lot
+# ‹וַיֶּאֱהַל עַד־סְדֹם› (“and-tent until Sodom”)
+# — event: tent — agent Lot
 m.event("tent", agent="lot")
 # reads without prior install (flag, not fix): earth-Canaan
 m.presupposed("eretz_kenaan")
 
 # -------------------------- Gen.13.13 · THE_SODOM_VERDICT ------------------
-# וְאַנְשֵׁי סְדֹם רָעִים וְחַטָּאִים לַיהוָה מְאֹד
+# ‹וְאַנְשֵׁי סְדֹם רָעִים› (“and-man Sodom bad”)
+# ‹וְחַטָּאִים לַיהוָה מְאֹד› (“and-criminal to-YHWH very”)
 # "Now the men of Sodom were wicked and sinners against the LORD
 # exceedingly."
 m.step("Gen.13.13")
-# ‹וְאַנְשֵׁי סְדֹם רָעִים וְחַטָּאִים לַיהוָה מְאֹד› (“and-man Sodom bad
-# and-criminal to-YHWH very”) — fact holds: and-men-of-Sodom-bad-and-
-# criminal-to-the-LORD-very
+# ‹וְאַנְשֵׁי סְדֹם רָעִים› (“and-man Sodom bad”)
+# ‹וְחַטָּאִים לַיהוָה מְאֹד› (“and-criminal to-YHWH very”)
+# — fact holds: and-men-of-Sodom-bad-and-criminal-to-the-LORD-very
 m.fact("ve_anshei_sedom_raim_ve_chataim_la_YHWH_meod")
 # witness-grounded state (its own tier):
 # split_by_tense_and_reversed_at_one_seat on sodom_verdict
@@ -236,47 +288,63 @@ m.witness_state("sodom_in_judgment", "disputed_whether_they_stand",
                 cites=["Mishnah Sanhedrin 10:3"])
 
 # -------------------------- Gen.13.14 · THE_SPEECH_AFTER_THE_SEPARATING ----
-# וַיהוָה אָמַר אֶל־אַבְרָם אַחֲרֵי הִפָּרֶד־לוֹט מֵעִמּוֹ שָׂא נָא עֵינֶיךָ
-# וּרְאֵה מִן־הַמָּקוֹם אֲשֶׁר־אַתָּה שָׁם צָפֹנָה וָנֶגְבָּה וָקֵדְמָה
-# וָיָמָּה
+# ‹וַיהוָה אָמַר אֶל־אַבְרָם› (“and-YHWH say to Abram”)
+# ‹אַחֲרֵי הִפָּרֶד־לוֹט מֵעִמּוֹ› (“after break-through Lot from-with-
+# him/its”)
+# ‹שָׂא נָא עֵינֶיךָ› (“lift/carry please eye-you/your”)
+# ‹וּרְאֵה מִן־הַמָּקוֹם אֲשֶׁר־אַתָּה› (“and-see from the-place which you”)
+# ‹שָׁם צָפֹנָה וָנֶגְבָּה› (“there hidden-ward and-south-ward”)
+# ‹וָקֵדְמָה וָיָמָּה› (“and-front-ward and-seas-ward”)
 # "And the LORD said unto Abram, after that Lot was separated from him:
 # 'Lift up now thine eyes, and look from the place where thou art, northward
 # and southward and eastward and westward;"
 m.step("Gen.13.14")
-# ‹וַיהוָה אָמַר אֶל־אַבְרָם אַחֲרֵי הִפָּרֶד־לוֹט מֵעִמּוֹ› (“and-YHWH say
-# to Abram after break-through Lot from-with-him/its”) — event: say — agent
-# the-LORD
+# ‹וַיהוָה אָמַר אֶל־אַבְרָם› (“and-YHWH say to Abram”)
+# ‹אַחֲרֵי הִפָּרֶד־לוֹט מֵעִמּוֹ› (“after break-through Lot from-with-
+# him/its”)
+# — event: say — agent the-LORD
 m.event("say", agent="YHWH")
-# ‹שָׂא נָא עֵינֶיךָ וּרְאֵה ... צָפֹנָה וָנֶגְבָּה וָקֵדְמָה וָיָמָּה›
-# (“lift/carry please eye-you/your and-see hidden-ward and-south-ward and-
-# front-ward and-seas-ward”) — the-LORD speaks a demand — LET: lift/carry-
-# and-see(Abram, tzafonah-and-negbah-and-qedmah-and-yamah)
+# ‹שָׂא נָא עֵינֶיךָ› (“lift/carry please eye-you/your”)
+# ‹וּרְאֵה ... צָפֹנָה וָנֶגְבָּה› (“and-see hidden-ward and-south-ward”)
+# ‹וָקֵדְמָה וָיָמָּה› (“and-front-ward and-seas-ward”)
+# — the-LORD speaks a demand — LET: lift/carry-and-see(Abram, tzafonah-and-
+# negbah-and-qedmah-and-yamah)
 m.declare("YHWH", "LET",
           "sa_u_ree(avram, tzafonah_va_negbah_va_qedmah_va_yamah)")
 
 # -------------------------- Gen.13.15 · THE_GIFT_FOREVER -------------------
-# כִּי אֶת־כָּל־הָאָרֶץ אֲשֶׁר־אַתָּה רֹאֶה לְךָ אֶתְּנֶנָּה וּלְזַרְעֲךָ
-# עַד־עוֹלָם
+# ‹כִּי אֶת־כָּל־הָאָרֶץ אֲשֶׁר־אַתָּה› (“that obj-marker all the-earth
+# which you”)
+# ‹רֹאֶה לְךָ אֶתְּנֶנָּה› (“see to-you/your set-her/its”)
+# ‹וּלְזַרְעֲךָ עַד־עוֹלָם› (“and-to-seed-you/your until forever”)
 # "for all the land which thou seest, to thee will I give it, and to thy
 # seed for ever."
 m.step("Gen.13.15")
-# ‹כִּי אֶת־כָּל־הָאָרֶץ אֲשֶׁר־אַתָּה רֹאֶה לְךָ אֶתְּנֶנָּה וּלְזַרְעֲךָ
-# עַד־עוֹלָם› (“that obj-marker all the-earth which you see to-you/your set-
-# her/its and-to-seed-you/your until forever”) — fact holds: with-all-the-
-# earth-which-you-shepherd-to-you-etnenah; and-to-zarakha-until-forever
+# ‹כִּי אֶת־כָּל־הָאָרֶץ אֲשֶׁר־אַתָּה› (“that obj-marker all the-earth
+# which you”)
+# ‹רֹאֶה לְךָ אֶתְּנֶנָּה› (“see to-you/your set-her/its”)
+# ‹וּלְזַרְעֲךָ עַד־עוֹלָם› (“and-to-seed-you/your until forever”)
+# — fact holds: with-all-the-earth-which-you-shepherd-to-you-etnenah; and-
+# to-zarakha-until-forever
 m.fact("et_kol_ha_aretz_asher_ata_roeh_lekha_etnenah",
        "u_le_zarakha_ad_olam")
 
 # -------------------------- Gen.13.16 · THE_DUST_MEASURE -------------------
-# וְשַׂמְתִּי אֶת־זַרְעֲךָ כַּעֲפַר הָאָרֶץ אֲשֶׁר אִם־יוּכַל אִישׁ לִמְנוֹת
-# אֶת־עֲפַר הָאָרֶץ גַּם־זַרְעֲךָ יִמָּנֶה
+# ‹וְשַׂמְתִּי אֶת־זַרְעֲךָ כַּעֲפַר› (“and-put/set obj-marker seed-you/your
+# like-dust”)
+# ‹הָאָרֶץ אֲשֶׁר אִם־יוּכַל› (“the-earth which if be-able”)
+# ‹אִישׁ לִמְנוֹת אֶת־עֲפַר› (“man to-weigh-out obj-marker dust”)
+# ‹הָאָרֶץ גַּם־זַרְעֲךָ יִמָּנֶה› (“the-earth also seed-you/your weigh-
+# out”)
 # "And I will make thy seed as the dust of the earth; so that if a man can
 # number the dust of the earth, then shall thy seed also be numbered."
 m.step("Gen.13.16")
-# ‹וְשַׂמְתִּי אֶת־זַרְעֲךָ כַּעֲפַר הָאָרֶץ ... גַּם־זַרְעֲךָ יִמָּנֶה›
-# (“and-put/set obj-marker seed-you/your like-dust the-earth also seed-
-# you/your weigh-out”) — fact holds: and-put/set-with-zarakha-like-dust-the-
-# earth; if-be-able-man-limnot-also-zarakha-yimaneh
+# ‹וְשַׂמְתִּי אֶת־זַרְעֲךָ כַּעֲפַר› (“and-put/set obj-marker seed-you/your
+# like-dust”)
+# ‹הָאָרֶץ ... גַּם־זַרְעֲךָ יִמָּנֶה› (“the-earth also seed-you/your weigh-
+# out”)
+# — fact holds: and-put/set-with-zarakha-like-dust-the-earth; if-be-able-
+# man-limnot-also-zarakha-yimaneh
 m.fact("ve_samti_et_zarakha_ka_afar_ha_aretz",
        "im_yukhal_ish_limnot_gam_zarakha_yimaneh")
 # witness-tier presupposed read: graded_literal_not_hyperbole on dust_simile
@@ -285,17 +353,21 @@ m.witness_read("dust_simile", "graded_literal_not_hyperbole",
                 cites=["Sifrei Devarim 25:4", "Bereshit Rabbah 41:9", "Megillah 16a:15"])
 
 # -------------------------- Gen.13.17 · THE_WALK_COMMAND -------------------
-# קוּם הִתְהַלֵּךְ בָּאָרֶץ לְאָרְכָּהּ וּלְרָחְבָּהּ כִּי לְךָ אֶתְּנֶנָּה
+# ‹קוּם הִתְהַלֵּךְ בָּאָרֶץ› (“arise walk/go in-earth”)
+# ‹לְאָרְכָּהּ וּלְרָחְבָּהּ כִּי› (“to-length-her/its and-to-width-her/its
+# that”)
+# ‹לְךָ אֶתְּנֶנָּה› (“to-you/your set-her/its”)
 # "Arise, walk through the land in the length of it and in the breadth of
 # it; for unto thee will I give it.'"
 m.step("Gen.13.17")
-# ‹קוּם הִתְהַלֵּךְ בָּאָרֶץ לְאָרְכָּהּ וּלְרָחְבָּהּ› (“arise walk/go in-
-# earth to-length-her/its and-to-width-her/its”) — the-LORD speaks a demand
-# — LET: arise-walk/go(Abram, in-the-earth-to-arkah-and-to-rachbah)
+# ‹קוּם הִתְהַלֵּךְ בָּאָרֶץ› (“arise walk/go in-earth”)
+# ‹לְאָרְכָּהּ וּלְרָחְבָּהּ› (“to-length-her/its and-to-width-her/its”)
+# — the-LORD speaks a demand — LET: arise-walk/go(Abram, in-the-earth-to-
+# arkah-and-to-rachbah)
 m.declare("YHWH", "LET",
           "qum_hithalekh(avram, ba_aretz_le_arkah_u_le_rachbah)")
-# ‹כִּי לְךָ אֶתְּנֶנָּה› (“that to-you/your set-her/its”) — fact holds:
-# that-to-you-etnenah
+# ‹כִּי לְךָ אֶתְּנֶנָּה› (“that to-you/your set-her/its”)
+# — fact holds: that-to-you-etnenah
 m.fact("ki_lekha_etnenah")
 # witness-tier presupposed read: acquisition_by_walking on walk_the_land —
 # read, not installed
@@ -303,22 +375,27 @@ m.witness_read("walk_the_land", "acquisition_by_walking",
                 cites=["Bava Batra 100a:7", "Bereshit Rabbah 41:10", "Jerusalem Talmud Kiddushin 1:3:5"])
 
 # -------------------------- Gen.13.18 · THE_HEBRON_ALTAR -------------------
-# וַיֶּאֱהַל אַבְרָם וַיָּבֹא וַיֵּשֶׁב בְּאֵלֹנֵי מַמְרֵא אֲשֶׁר
-# בְּחֶבְרוֹן וַיִּבֶן־שָׁם מִזְבֵּחַ לַיהוָה
+# ‹וַיֶּאֱהַל אַבְרָם וַיָּבֹא› (“and-tent Abram and-come/bring”)
+# ‹וַיֵּשֶׁב בְּאֵלֹנֵי מַמְרֵא› (“and-dwell/sit in-oak Mamre”)
+# ‹אֲשֶׁר בְּחֶבְרוֹן וַיִּבֶן־שָׁם› (“which in-Hebron and-build there”)
+# ‹מִזְבֵּחַ לַיהוָה› (“altar to-YHWH”)
 # "And Abram moved his tent, and came and dwelt by the terebinths of Mamre,
 # which are in Hebron, and built there an altar unto the LORD."
 m.step("Gen.13.18")
-# ‹וַיֶּאֱהַל אַבְרָם› (“and-tent Abram”) — event: tent — agent Abram
+# ‹וַיֶּאֱהַל אַבְרָם› (“and-tent Abram”)
+# — event: tent — agent Abram
 m.event("tent", agent="avram")
-# ‹וַיָּבֹא› (“and-come/bring”) — event: come — agent Abram
+# ‹וַיָּבֹא› (“and-come/bring”)
+# — event: come — agent Abram
 m.event("come", agent="avram")
-# ‹וַיֵּשֶׁב בְּאֵלֹנֵי מַמְרֵא› (“and-dwell/sit in-oak Mamre”) — event:
-# dwell — agent Abram
+# ‹וַיֵּשֶׁב בְּאֵלֹנֵי מַמְרֵא› (“and-dwell/sit in-oak Mamre”)
+# — event: dwell — agent Abram
 m.event("dwell", agent="avram")
-# ‹וַיִּבֶן־שָׁם מִזְבֵּחַ לַיהוָה› (“and-build there altar to-YHWH”) —
-# event: build — agent Abram; theme altar
+# ‹וַיִּבֶן־שָׁם מִזְבֵּחַ לַיהוָה› (“and-build there altar to-YHWH”)
+# — event: build — agent Abram; theme altar
 m.event("build", agent="avram", themes=["mizbeach"])
-# ‹מִזְבֵּחַ› (“altar”) — the world gains: altar-Hebron
+# ‹מִזְבֵּחַ› (“altar”)
+# — the world gains: altar-Hebron
 m.install("mizbeach_chevron")
 # reads without prior install (flag, not fix): Mamre, Hebron
 m.presupposed("mamre", "chevron")

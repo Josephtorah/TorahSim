@@ -11163,3 +11163,343 @@ uncommitted appends from that thread (its idea log's tail); exclude
 rides. Replied with two facts: the registry is 71 (not 53), and
 effects_layer.summarize() already yields fired-op counts. Watch, not
 built: cascade depth + cycle detection in world_engine.py.
+═══ 2026-09-05, owner: "include the world and architexture files in
+commit. commit push" — COMMITTED+PUSHED dba2c6d (37 files: the whole
+round-47 line + REVIEW_BEHAR + THE_WORLD.md's two cross-thread appends +
+the ARCHITECTURE tree's six files, on the owner's word; trailer Claude
+Fable 5.1; NEVER-COMMIT set excluded, verified by dry run). Working tree
+clean but the never-commit set. Compaction point #52 stands as written;
+NEXT: Numbers (Bamidbar's substitute spine decided at the sitting).
+═══ 2026-09-05, owner: "I want everything fixed first" — THE AUDIT'S
+DEFERRAL IS REVERSED: the audit pass runs NOW, before Numbers (the
+2026-09-05 "review after Deuteronomy" ruling superseded by this one).
+THE AUDIT LIST, in the order proposed to the owner (three sittings, a
+fourth conditional): SITTING A — REVIEW_LEV1-8 fix pass steps 1-4 and
+6: read Sifra Nedavah Chapter 10 11-19 + verdict Chovah Section 7 11
+empty (append to lev_02_minchah_2026-09-03.md), seat what is material,
+re-ritual, stamp re-affirmation, correct the "648 = whole" line by an
+appended note; recompile cold_run_offerings.py (C the 7:19 ink, D
+Zevachim 57a:5 cited, E the southern base as MOVE on 53a:10-14 +
+LV01C-02, I the live paschal_procedure call, J the north split) with
+the consolidation ledger's cite index appended; G the lev_03 stamp
+row; F amend LV03-10's text and cites; H the compiled chips in
+THE_STEPS + the honest coverage sentence; K run_cold_all.py. SITTING B
+— the two compiles: cold_run_minchah.py (Lev 2's offerer's meal
+offering against Mishnah Menachot's rows, routed by topic; the bird
+burnt offering of Lev 1:14-17 against Zevachim 6:4-5) and Lev 27's
+remainder as its own cold function (REVIEW_BEHAR item 3), plus item 4
+(the 25:35 support duty effect) and item 5's two cells (the
+auction-stone ban, the in-your-sight bound). SITTING C — hygiene: the
+honest-pairing guard retrofitted to the ten older cold runners; the
+py-render gloss flags fixed at the renderer and every render
+regenerated; the vocabulary YAML linted and round 44's placeholder
+glosses repaired; the four lev_04 chatat drafts decided (drafts by
+design per item H, or frozen); the Lev 11:42 large-vav repair in
+tanakh.sqlite with the letter-census tripwires rebaked (the owner's
+word stands as given today). SITTING D, CONDITIONAL — the seventy's
+decomposition (cold_run_tochacha.py's OPEN cell) only if Seder Olam
+Rabbah reaches the local shelf. Numbers follows the audit.
+
+═══ COMPACTION POINT #53 (2026-09-05, owner at 533k: "is that ok" —
+═══ recommended compacting before sitting A)
+═══ CLEAN POINT — no work mid-flight. dba2c6d COMMITTED+PUSHED (round
+47 whole + THE_WORLD.md appends + ARCHITECTURE files on the owner's
+word); working tree clean but the never-commit set; the only
+uncommitted text is this doc's tail from the commit note onward +
+memory. THE ORDER NOW: THE AUDIT FIRST (owner: "I want everything fixed
+first"), Numbers after — sittings A / B / C (+ D conditional) as
+enumerated in the entry above; the owner has not yet said "go" for
+sitting A. POST-COMPACTION REREADS (mandatory, first sitting):
+THE_STEPS Step 2 + Step 5 + the compiler block + this tail +
+World/step9/REVIEW_LEV1-8_2026-09-05.md (its "fix pass, in order") +
+World/step9/REVIEW_BEHAR_2026-09-05.md. Then sitting A on the owner's
+word. Never-commit set unchanged; watches unchanged; the Chronicle
+discussion is the other thread's (change nothing).
+═══ 2026-09-05 (after compaction #53), owner: "reread resume then go" → the
+mandatory rereads done (THE_STEPS Step 2 + Step 5 + the compiler block +
+the tail + REVIEW_LEV1-8's fix pass + REVIEW_BEHAR) → SITTING A OF THE
+AUDIT RUN END TO END (REVIEW_LEV1-8 fix pass steps 1-4 and 6; step 5 =
+item B is sitting B). THE FINDING UNDER ITEM A — A FALSE DEFICIT OF THE
+REVERSE KIND: the review said Sifra Nedavah Chapter 10 rows 11-19 were
+unread; measured by script over all 58 sections of both Vayikra
+dibburot against Data/sifra_he.json (keys "Vayikra Dibbura d'Nedavah" /
+"d'Chovah" — NOT "DeNedavah"), every section's ledger addresses match
+the shelf's rows EXCEPT Chapter 10 (ledger 10 addresses = the source's
+bracketed paragraph marks; shelf 19 rows — every row's content verdicted
+under a paragraph address: ledger "10 4" = the bird-refutation paragraph
+= shelf row 10, "10 10" = any-person pouring = shelf row 19) and Chovah
+Section 7 row 11 (an EMPTY string, unverdicted). 648 + 9 + 1 = 658. NO
+new claim (the content is LV02-01/02/05's already). FIXES, all by
+append: lev_02 ledger re-addressing block (19 row-grain rows mapped to
+their paragraph rows; completion line 116 of 116 — the gate takes the
+LAST completion line); lev_04 ledger empty-row verdict (207 of 207);
+coverage 658/658 by script, missing 0 extra 0; lev_02_minchah.yaml
+Chapter 10 cites re-pointed to the row grain (10 6→10 8/12/13; 10 7-10→
+10 14/16/17/18/19; 10 2→10 6/7) with a meta.changelog line (the gate
+counts "  changelog:" lines or derivation_log "- step:" entries);
+STAMP_LEDGER correction row beside the unedited 648 stamp; THE_STEPS
+Step 2 new rule ADDRESS AT THE SHELF'S GRAIN; the 648 line in Step 5's
+Vayikra paragraph corrected in place (THE_STEPS is a living reference,
+not a stamp). ITEMS C/D/E/I/J — cold_run_offerings.py RECOMPILED 40 →
+41 cells, 41/41: eater cells INK on Lev 7:19 טָהוֹר ("clean"); the
+firstborn window cites Zevachim 57a:5 (Num 18:18 כַּחֲזֵה "like the
+breast" probed) + 57a:11 + 57a:14; the southern base = MOVE on 53a:10-11
+(descent-from-ramp analogy) + LV01C-02 (ramp south from Lev 1:11 יֶרֶךְ
+"side" probed), dispute 53a:12 + Rav Asi 53a:14 beside; the pesach cell
+CALLS cold_run_pesach.paschal_procedure()/registration() (the pesach
+runner gained a __main__ guard — its run section indented under it — so
+its functions import cold) and composes its value; the olah's place
+graded TWICE via dispatch('olah:flock' | 'olah:herd') — flock INK Lev
+1:11, herd MOVE Sifra Nedavah Chapter 7 6-7; the honest-pairing guard
+wired in (GUARDED = 9 rows). Fractions 17 INK / 14 MOVE / 3 FENCE / 2
+DATA / 5 IMPORT = 41%. Consolidation ledger appended: Zevachim 53a
+opened WHOLE (4-14, the amud 14/14) + 57a WHOLE (5-21, 21/21) + 3 Sifra
+credits + the ink row + the cite index (53 Talmud segments in all).
+ITEMS F/G — LV03-10 (F-200) text+cites amended (names LV03-03 + Sifra
+Nedavah Chapter 17 11-12 as the spine's all-sides verdict; consolidation
+credited for the count + open-doors only), manifest row updated,
+meta.changelog line, STAMP_LEDGER re-affirmation row (the one item G
+found missing). ITEM H — THE_STEPS Step 5 chips paragraph (six earned:
+lev_05_asham_graded, lev_05_asham_sancta, lev_01_olah_cattle_procedure,
+lev_01_olah_flock, lev_03_shelamim, lev_04_inadvertence_case_tree; NOT
+earned with the sentence why: lev_02_minchah, lev_01_olah_bird → sitting
+B). ITEM K — World/step9/run_cold_all.py (glob cold_run_*.py, rc is the
+verdict, the last "n/n cells|checkpoints|match|test" score line must
+agree; 16/16 green, 392 cells; mishpatim_2 prints no score line —
+rc-only, reported as such). GATES: rituals lev_02_minchah +
+lev_03_shelamim COMPLETE (regression 163/163); changelog gate GREEN;
+manifests 0 FAILED (10 no-check each — witness claims); corpus_world
+hash 8b8fff1fa28953af UNMOVED, standing 1713 UNMOVED (no new claim),
+CORPUS_TRUTH GREEN; gloss_lint 0 on every new/appended block, THE_STEPS
+1 = HEAD baseline 1, STAMP_LEDGER 1 = baseline 1. RECORDS: REVIEW_LEV1-8
+outcome section appended; THE_BRIEFING top bullet; this doc; memory.
+CROSS-THREAD (informational, from "Torah Grok Main"): ARCHITECTURE/
+CHRONICLE.md now exists (untracked; the observation-deck design doc) and
+THE_WORLD.md carries a THIRD idea-log append — both the other thread's,
+UNCOMMITTED; they ride the owner's next "commit push" if he says so
+(last time he said "include the world and architecture files"). Nothing
+of mine touched there.
+UNCOMMITTED (mine, since dba2c6d): THE_STEPS.md, THE_BRIEFING.md,
+World/step9/{REVIEW_LEV1-8_2026-09-05.md, cold_run_offerings.py,
+cold_run_pesach.py, run_cold_all.py (new)}, logic/findings/
+STAMP_LEDGER.md, logic/oral_audit/manifests/lev_03_shelamim_claims.json,
+logic/oral_triage/{lev_02_minchah_2026-09-03.md,
+lev_04_inadvertence_case_tree_2026-09-03.md,
+lev_offering_consolidation_2026-09-04.md}, logic/units/{lev_02_minchah,
+lev_03_shelamim}.yaml + their py renders + UNIT htmls, this doc, memory.
+NOT MINE: THE_WORLD.md (M), ARCHITECTURE/CHRONICLE.md (??). NEVER-COMMIT
+set unchanged.
+
+═══ COMPACTION POINT #54 (2026-09-05 — written unprompted at sitting A's
+═══ close)
+═══ CLEAN POINT — no work mid-flight. SITTING A DONE (REVIEW_LEV1-8 items
+A, C, D, E, F, G, H, I, J, K closed; B → sitting B). Everything above is
+UNCOMMITTED (rides the owner's "commit push"; staging by exclusion —
+NEVER-COMMIT set: Data/discord_backup_codes.txt, DISPOSABLE_scan/*.zip,
+open_ledger/, elijah_docket, grok-mockups/, logic/gork/, cases_pilot.yaml;
+THE_WORLD.md + ARCHITECTURE/CHRONICLE.md are the other thread's — include
+only on the owner's word). POST-COMPACTION REREADS (mandatory, first
+sitting): THE_STEPS Step 2 + Step 5 + the compiler block + this tail +
+REVIEW_LEV1-8's "SITTING A" section + REVIEW_BEHAR. NEXT on the owner's
+word: SITTING B — cold_run_minchah.py (Lev 2's offerer's meal offering
+compiled ink-first against Mishnah Menachot's rows ROUTED BY TOPIC — the
+union rule; the bird burnt offering Lev 1:14-17 against Zevachim 6:4-5),
+sized like the Lev 5 compile, guard wired from birth, effects discovered
+from the chapter's verbs; then Lev 27's remainder as its own cold
+function (REVIEW_BEHAR item 3), the 25:35 support-duty effect (item 4),
+the auction-stone ban + in-your-sight bound cells (item 5). Then SITTING
+C (guard retrofit to the older runners; py-render gloss flags at the
+renderer; vocabulary YAML lint + round-44 placeholder glosses; the four
+lev_04 chatat drafts decided; the Lev 11:42 large-vav repair with the
+letter-census tripwires rebaked). SITTING D conditional on Seder Olam
+reaching the shelf. Then NUMBERS (Bamidbar's substitute spine decided at
+the sitting). Watches unchanged: will-indexed dispatch (2), demotion
+(1), consonant-fragment read (1); world-engine cascade depth + cycle
+detection (the Chronicle design's requirement, not built).
+═══ 2026-09-05, owner: "go sitting b" → SITTING B OF THE AUDIT RUN END TO
+END (REVIEW_LEV1-8 item B; REVIEW_BEHAR items 3, 4, 5 — BOTH REVIEW FILES
+NOW CLOSED). THE DOCKET BY TOPIC: enumeration by script
+(scratchpad/minchah_enum.json — Menachot 93 rows, 32 named anywhere, 61
+never before the engine; Zevachim 6-7 13 rows, 10 unread) → read WHOLE →
+ledger logic/oral_triage/menachot_topic_docket_2026-09-05.md generated
+from ONE verdict table (scratchpad/gen_menachot_ledger.py), coverage
+computed (106/106, missing 0 extra 0; LAW 24 / CREDIT 32 / ROUTED 20 /
+CONTEXT 30); the LAW rows graded BY THE COLD FUNCTION (the compiler law's
+instrument) — no cases_*.yaml / rules module / exam round built for them,
+exam counters unmoved at 1595/1595, stated in the ledger. THE COMPILES:
+World/step9/cold_run_minchah.py — Lev 2:1-16 + Lev 1:14-17, 66 probes (15
+imports), censuses asserted (KINDS 5 by token; AZKARAH [2,9,16]; MOST_HOLY
+[3,10]; salt root 3 nouns + 1 verb at 2:13; OIL_FORMS pour [1,6] / mix
+[4,5] / in_oil [7]; FRANKINCENSE [1,2,15,16] by the noun's two forms —
+the bare substring matched ולבניו "and to his sons" at 2:3/2:10, caught by
+the tripwire; ODOR classes 3), the sinner's adjuncts by a CALL into
+cold_run_vayikra5.graded_offering(reaches_flour) → 'CONFESS; tenth of an
+ephah, no oil, no frankincense'; 84/84, 27 INK / 33 MOVE / 9 A / 4 D / 11
+IMPORT = 32%. cold_run_temurah.py — Lev 27:9-15 + 26-33, 39 probes,
+FIFTH census by regex ^חמי?שי?ת ("fifth" — plene at 13, 15; defective at
+19, 27, 31; the substring draft matched the valuation table's fives and
+missed the plene forms — caught), SUBST [10,33]; CALLS
+cold_run_yovel.tithe_naming({9:'tenth',10:'ninth',11:'tenth'})[9]/[11] and
+cold_run_pesach.firstborn({'kind':'donkey'}, PESACH.DATA); 40/40, 24 INK
+/ 10 MOVE / 3 A / 0 D / 3 IMPORT = 60%. cold_run_yovel.py extended 69 →
+75 (support_duty / sale_manner / rigor_visibility; SHEET2 rows tagged
+('sifra', book, section, n, token) — the untagged first draft broke
+_bavli's arity, fixed). IMPORT GUARDS added (if __name__ == '__main__':
+around the run section, body indented) to cold_run_vayikra5.py,
+cold_run_yovel.py (pesach's in sitting A) — their functions now import
+cold; tithe_naming takes {position: name}. EFFECTS +8 → 79
+(azkarah_to_fire HEAVEN, most_holy STATUS, salted / presented / pinched
+BODY, crop_cast_to_ash_place DESTROY, supports_kinsman DEBIT, consecrated
+STATUS). SEATS F-204 → LV02-11 (lev_02_minchah, STEP_Lv_2_1) + F-205 →
+LV01D-05 (lev_01_olah_bird, STEP_Lv_1_15) by scratchpad/seat_sitting_b.py
+(pre-check allows the "(Lev x:y)" parenthetical between cite and dash);
+rituals COMPLETE; corpus_world standing 1713 → 1715, CORPUS_TRUTH
+rebaked (assert 1715), hash 8b8fff1fa28953af UNMOVED; changelog gate
+fired RED on lev_01_olah_bird (a seat needs its meta.changelog line —
+added) → GREEN; manifests 0 FAILED (11 + 5 no-check). run_cold_all.py
+18/18 runners, 522 cells. RECORDS: REPORT_MINCHAH_TEMURAH.md; THE_STEPS
+Step 5 (THE ELEVENTH AND TWELFTH SPANS + chips lev_02_minchah,
+lev_01_olah_bird); MOVE_CATALOG M-19 THE TEMPLATE BROADCAST (3
+exemplars); MIDDOT.md +1 (an inclusion after an inclusion limits, with
+the functional second derivation); STAMP_LEDGER row; REVIEW_LEV1-8 +
+REVIEW_BEHAR closing sections; THE_BRIEFING audit bullet extended; this
+doc; memory. gloss_lint 0 on all new files; THE_STEPS 1 / MIDDOT 1 /
+STAMP 1 / MOVE_CATALOG = HEAD baselines; state doc 147.
+UNCOMMITTED (mine, since dba2c6d): sitting A's list + this sitting's:
+World/step9/{cold_run_minchah.py, cold_run_temurah.py (new),
+cold_run_yovel.py, cold_run_vayikra5.py, effect_vocabulary.yaml,
+REPORT_MINCHAH_TEMURAH.md (new), REVIEW_*.md}, logic/oral_triage/
+menachot_topic_docket_2026-09-05.md (new), logic/units/{lev_02_minchah,
+lev_01_olah_bird}.yaml + manifests + py renders + UNIT htmls,
+logic/MOVE_CATALOG.md, logic/MIDDOT.md, logic/corpus/CORPUS_TRUTH.py,
+corpus_world.sqlite, logic/findings/STAMP_LEDGER.md, THE_STEPS.md,
+THE_BRIEFING.md, this doc, memory. NOT MINE: THE_WORLD.md (M),
+ARCHITECTURE/CHRONICLE.md (??). NEVER-COMMIT set unchanged.
+
+═══ COMPACTION POINT #55 (2026-09-05 — written unprompted at sitting B's
+═══ close; the window is heavy: two sittings since #53)
+═══ CLEAN POINT — no work mid-flight. SITTINGS A AND B DONE; both review
+files CLOSED (REVIEW_LEV1-8 A-K; REVIEW_BEHAR 1-6). Everything since
+dba2c6d UNCOMMITTED (rides the owner's "commit push"; staging by
+exclusion — NEVER-COMMIT set: Data/discord_backup_codes.txt,
+DISPOSABLE_scan/*.zip, open_ledger/, elijah_docket, grok-mockups/,
+logic/gork/, cases_pilot.yaml; THE_WORLD.md + ARCHITECTURE/CHRONICLE.md
+are the other thread's — include only on the owner's word).
+POST-COMPACTION REREADS (mandatory, first sitting): THE_STEPS Step 2 +
+Step 5 + the compiler block + this tail. NEXT on the owner's word:
+SITTING C — hygiene: the honest-pairing guard retrofitted to the older
+cold runners (calendar, decalogue, guardians, lev24, mishpatim,
+mishpatim_2, moadim, negaim, pesach, shemini, tzav, vayikra5, yoma —
+those with a TESTS/CASES table of a different shape; compile_guards.py
+takes table_name/expected_index); the py-render gloss flags fixed at
+the renderer (lev_25_shemittah 3, lev_26 13 — the renderer's trait) and
+every render regenerated; the vocabulary YAML linted + round 44's
+placeholder glosses repaired; the four lev_04 chatat drafts decided
+(drafts by design per REVIEW_LEV1-8 item H, or frozen); the Lev 11:42
+גחון ("belly") large-vav repair in elijah_docket/tanakh.sqlite with the
+letter-census tripwires rebaked (the owner's word stands). SITTING D
+conditional on Seder Olam Rabbah reaching the shelf. Then NUMBERS
+(parashat Bamidbar, substitute spine decided at the sitting; docket =
+links UNION topic rows). Watches unchanged: will-indexed dispatch (2),
+demotion (1), consonant-fragment read (1); world-engine cascade depth +
+cycle detection (design only).
+═══ 2026-09-05, owner: "go sitting c" → SITTING C OF THE AUDIT (the hygiene
+pass) RUN END TO END — THE AUDIT LIST CLOSED (A/B/C done; D waits on Seder
+Olam). THE SHELF (the headline): the deferred Lev 11:42 large-vav
+truncation was ELEVEN words across 39 books — every <seg> inside a <w>
+in Data/*.xml (types x-large, x-small, x-suspended) had been dropped by
+the parser that built elijah_docket/tanakh.sqlite: Lev 11:42 גָּחוֹן
+("belly"), Num 27:5 מִשְׁפָּטָן ("their judgment"), Deut 6:4 שְׁמַע
+("Hear") + אֶחָד ("one"), Isa 44:14, Jer 39:13, Job 38:13, 38:15, Judg
+18:30 מְנַשֶּׁה ("Manasseh"), Prov 16:28, Ps 80:14. Census by script
+(regex over the XML verses → words with '<' inside → compare full text
+vs the DB word at (book, ch, vs, idx)); all 11 UPDATEd to the source
+text on the owner's standing word; re-census 11/11 matching; the 18 cold
+runners' probes unmoved. NOTE: tanakh.sqlite is TRACKED in the nested
+elijah_docket git (now 'M' there, uncommitted — a nested repo, never
+staged from here); the words table columns: id, verse_id, idx, he,
+lemma, morph, wtype. full_tanakh_parse_sweep.py's hardcoded output path
+pointed at a DEAD scratchpad (session 4ca32657…) — fixed to $SWEEP_OUT
+or cwd; the sweep re-run launched from this session's scratchpad (result
+line appended below when it lands). THE GUARD: compile_guards.py +
+check_honest_dict(path, 'ORACLE') + check_honest_calls(path, func,
+expected_index, cells_arg=None) (+ CLI --table/--index, --dict,
+--calls/--index/--cells-arg); wired into the 11 unguarded runners with
+a TRIPWIRE assert on the count (calendar CASES 14, decalogue 12, pesach
+24, tzav 33, vayikra5 27; guardians dict 12; negaim TEN@1 10 +
+grade-cells 8 = 18; lev24 grade 18; mishpatim 20; mishpatim_2 9; yoma
+cell() 18); run_cold_all 18/18, 522 cells. THE RENDERS: the "renderer's
+trait" was the step header — render_unit_py.py emitted the step's `he`
+(the two Hebrew arms «LEFT» / RIGHT «…») and the EN-AID `en` repeat
+bare, and gloss_db.set_unit_tree took the tree-era units' structural
+labels "leaf N (token)" as word glosses (displacing the DB's English).
+FIXED at the renderer + gloss_db (display layer; no frozen file
+touched): step `he` emitted in 3-word chunks each as ‹chunk› (“gloss”);
+Hebrew op names glossed; EN-AID «arms» elided to «…» with any other
+inline Hebrew glossed; op-level spans chunked likewise; unglossed words
+show as ? not Hebrew; set_unit_tree skips r'^leaf \d+' labels. ALL 163
+renders regenerated (`python3 logic/pre_logic_methods_2026-07-28/
+render_unit_py.py` with no args = all frozen; each self-proof green);
+ALL_UNITS.py rebuilt in the standing order by
+scratchpad/rebuild_all_units.py (the ritual's insert only ADDS; a full
+rebuild replaces each banner body) and green. gloss_lint over all
+renders: Hebrew-unglossed 0 (was thousands; ALL_UNITS 3778 → 330);
+RESIDUAL 334 transliteration-fallback flags in 70 renders (G(token)
+joining Hebrew-derived tokens with hyphens, "mishteh-and-sweetness") —
+content work, counted, OPEN. The UNIT html renders do NOT embed the py
+text (they run run_unit.py live) — no html regeneration needed. THE
+VOCABULARY: World/step9/vocab_lint.py (structural: empty/placeholder
+gloss; he shared by >4 values in a dimension; Hebrew-only gloss);
+found + repaired in place: 79 round-44 values whose he/gloss were the
+DOCKET TOPIC copied (7 stubs — he cleared to '', gloss = the value's
+English + topic as context + "stub cleared"), 57 'X exam query (date)'
+stubs (2026-09-01 Exodus rounds), 3 quote-wrapped glosses; 1779 values /
+150 dims / 0 flags; 48/48 exam runners green after. THE lev_04 DRAFTS:
+DRAFT BY DESIGN — decision_note_en + changelog line in each of the four
+(changelog gate GREEN, 7 YAMLs). RECORDS: REPORT_AUDIT_SITTING_C.md;
+THE_STEPS Step 1 (THE SPECIAL-LETTER REPAIR), Step 5 (THE HYGIENE
+PASS), Step 6 (THE RENDERS GLOSSED AT THE RENDERER); STAMP_LEDGER
+provenance row (all units, display layer + the shelf); THE_BRIEFING
+audit bullet extended; memory (era file + index line). Watches
+unchanged. UNCOMMITTED since dba2c6d: sittings A+B's list + this
+sitting's: all 163 logic/py_units/*.py + ALL_UNITS.py, gloss_db.py,
+logic/pre_logic_methods_2026-07-28/render_unit_py.py,
+logic/solo_tools/full_tanakh_parse_sweep.py, World/step9/{compile_guards.py,
+vocab_lint.py (new), vocabulary.yaml, the 11 guarded runners,
+REPORT_AUDIT_SITTING_C.md (new)}, the 4 lev_04 draft YAMLs, THE_STEPS,
+THE_BRIEFING, STAMP_LEDGER, this doc, memory. NOT MINE: THE_WORLD.md,
+ARCHITECTURE/CHRONICLE.md. NESTED: elijah_docket/tanakh.sqlite (M in its
+own repo). NEVER-COMMIT set unchanged.
+
+═══ COMPACTION POINT #56 (2026-09-05 — written unprompted at sitting C's
+═══ close; three sittings since #53, the window is heavy)
+═══ CLEAN POINT — no work mid-flight (the parse sweep re-run is a
+confirmation check; its result line is appended below this point when it
+lands, and changes nothing else). THE AUDIT IS CLOSED: sittings A, B, C
+done; D only if Seder Olam Rabbah reaches the shelf. Everything since
+dba2c6d UNCOMMITTED (rides the owner's "commit push"; staging by
+exclusion — NEVER-COMMIT set: Data/discord_backup_codes.txt,
+DISPOSABLE_scan/*.zip, open_ledger/, elijah_docket, grok-mockups/,
+logic/gork/, cases_pilot.yaml; THE_WORLD.md + ARCHITECTURE/CHRONICLE.md
+are the other thread's — include only on the owner's word; the nested
+elijah_docket repo's modified tanakh.sqlite is committed there only on
+the owner's word). POST-COMPACTION REREADS (mandatory, first sitting):
+THE_STEPS Step 2 + Step 5 + the compiler block + this tail. NEXT on the
+owner's word: NUMBERS — parashat Bamidbar (Num 1-4): the Sifrei on
+Numbers begins at Num 5:2 on the shelf, so Num 1-4 needs a SUBSTITUTE
+SPINE by the Exod 25-40 precedent (Bamidbar Rabbah 1-5 the
+verse-anchored candidate; check Data/ for bamidbar_rabbah / tanchuma),
+decided at the sitting and recorded in CORE_SHELF.md + THE_STEPS Step 2
+BEFORE reading; every Numbers docket = links UNION topic-routed rows
+(Mishnah topics for Num 1-4: Sotah 7-8? no — the camp/census/Levite
+service rows: Menachot? none direct; enumerate by script from
+MISHNAH_TOPICS.md at the sitting). OPEN (counted, not blocking): the
+334 transliteration-fallback render lines (authored English per machine
+token); the seventy's decomposition (Seder Olam). Watches: will-indexed
+dispatch (2), demotion (1), consonant-fragment read (1); world-engine
+cascade depth + cycle detection (design only).
+═══ 2026-09-05 (after #56 was written): the full-Tanakh parse sweep re-run
+LANDED — RESULT 23213/23213 unique + leaf_complete under rules v3, fails
+[] — Step 1's parse count unchanged by the eleven repaired words (the
+sweep's output now in this session's scratchpad, tanakh_parse_sweep_result
+.json). Sitting C fully closed; compaction point #56 stands as written.

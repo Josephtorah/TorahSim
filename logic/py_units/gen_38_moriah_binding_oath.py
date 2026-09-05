@@ -14,14 +14,18 @@ from machine import Machine
 m = Machine("gen_38_moriah_binding_oath")
 
 # -------------------------- Gen.22.1 · THE_FRAME_AND_THE_TEST --------------
-# וַיְהִי אַחַר הַדְּבָרִים הָאֵלֶּה וְהָאֱלֹהִים נִסָּה אֶת־אַבְרָהָם
-# וַיֹּאמֶר אֵלָיו אַבְרָהָם וַיֹּאמֶר הִנֵּנִי
+# ‹וַיְהִי אַחַר הַדְּבָרִים› (“and-be after the-word/thing”)
+# ‹הָאֵלֶּה וְהָאֱלֹהִים נִסָּה› (“the-these and-the-God test”)
+# ‹אֶת־אַבְרָהָם וַיֹּאמֶר אֵלָיו› (“obj-marker Abraham and-say to-him/its”)
+# ‹אַבְרָהָם וַיֹּאמֶר הִנֵּנִי› (“Abraham and-say behold-me/my”)
 # "And it came to pass after these things, that God did prove Abraham, and
 # said unto him: 'Abraham'; and he said: 'Here am I.'"
 m.step("Gen.22.1")
-# ‹וְהָאֱלֹהִים נִסָּה אֶת־אַבְרָהָם … הִנֵּנִי› (“and-the-God test obj-
-# marker Abraham … behold-me/my”) — fact holds: after-the-word/thing-and-
-# the-God-nisah-obj-marker-Abraham; and-say-behold-I
+# ‹וְהָאֱלֹהִים נִסָּה אֶת־אַבְרָהָם› (“and-the-God test obj-marker
+# Abraham”)
+# ‹… הִנֵּנִי› (“behold-me/my”)
+# — fact holds: after-the-word/thing-and-the-God-nisah-obj-marker-Abraham;
+# and-say-behold-I
 m.fact("achar_ha_devarim_ve_ha_elohim_nisah_et_avraham",
        "va_yomer_hineni")
 # witness-grounded state (its own tier):
@@ -30,47 +34,62 @@ m.witness_state("the_test", "nature_disputed_and_deliberation_guaranteed",
                 cites=["Bereshit Rabbah 55:6", "Bereshit Rabbah 55:5"])
 
 # -------------------------- Gen.22.2 · THE_CROWN_COMMAND -------------------
-# וַיֹּאמֶר קַח־נָא אֶת־בִּנְךָ אֶת־יְחִידְךָ אֲשֶׁר־אָהַבְתָּ אֶת־יִצְחָק
-# וְלֶךְ־לְךָ אֶל־אֶרֶץ הַמֹּרִיָּה וְהַעֲלֵהוּ שָׁם לְעֹלָה עַל אַחַד
-# הֶהָרִים אֲשֶׁר אֹמַר אֵלֶיךָ
+# ‹וַיֹּאמֶר קַח־נָא אֶת־בִּנְךָ› (“and-say take please obj-marker son-
+# you/your”)
+# ‹אֶת־יְחִידְךָ אֲשֶׁר־אָהַבְתָּ אֶת־יִצְחָק› (“obj-marker united-you/your
+# which have-affection-for obj-marker Isaac”)
+# ‹וְלֶךְ־לְךָ אֶל־אֶרֶץ הַמֹּרִיָּה› (“and-go to-you/your to earth the-
+# Moriah”)
+# ‹וְהַעֲלֵהוּ שָׁם לְעֹלָה› (“and-go-up-him/its there to-burnt-offering”)
+# ‹עַל אַחַד הֶהָרִים› (“over one the-mountain”)
+# ‹אֲשֶׁר אֹמַר אֵלֶיךָ› (“which say to-you/your”)
 # "And He said: 'Take now thy son, thine only son, whom thou lovest, even
 # Isaac, and get thee into the land of Moriah; and offer him there for a
 # burnt-offering upon one of the mountains which I will tell thee of.'"
 m.step("Gen.22.2")
-# ‹קַח־נָא … וְלֶךְ־לְךָ … וְהַעֲלֵהוּ שָׁם לְעֹלָה› (“take please … and-go
-# to-you/your … and-go-up-him/its there to-burnt-offering”) — God speaks a
-# demand — LET: take-go-and-haalehu(obj-marker-binkha, to-burnt-offering)
+# ‹קַח־נָא … וְלֶךְ־לְךָ … וְהַעֲלֵהוּ› (“take please … and-go to-you/your …
+# and-go-up-him/its”)
+# ‹שָׁם לְעֹלָה› (“there to-burnt-offering”)
+# — God speaks a demand — LET: take-go-and-haalehu(obj-marker-binkha, to-
+# burnt-offering)
 m.declare("elohim", "LET",
           "qach_lekh_ve_haalehu(et_binkha, le_olah)")
-# ‹אֶת־בִּנְךָ אֶת־יְחִידְךָ אֲשֶׁר־אָהַבְתָּ אֶת־יִצְחָק› (“obj-marker son-
-# you/your obj-marker united-you/your which have-affection-for obj-marker
-# Isaac”) — fact holds: obj-marker-binkha-obj-marker-yechidkha-which-have-
-# affection-for-obj-marker-Isaac; to-earth-the-moriyah-which-say-to-you
+# ‹אֶת־בִּנְךָ אֶת־יְחִידְךָ אֲשֶׁר־אָהַבְתָּ› (“obj-marker son-you/your
+# obj-marker united-you/your which have-affection-for”)
+# ‹אֶת־יִצְחָק› (“obj-marker Isaac”)
+# — fact holds: obj-marker-binkha-obj-marker-yechidkha-which-have-affection-
+# for-obj-marker-Isaac; to-earth-the-moriyah-which-say-to-you
 m.fact("et_binkha_et_yechidkha_asher_ahavta_et_yitzchaq",
        "el_eretz_ha_moriyah_asher_omar_elekha")
 
 # -------------------------- Gen.22.3 · THE_DAWN_OBEDIENCE_TWO_ROOTS_RETURN -
-# וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר וַיַּחֲבֹשׁ אֶת־חֲמֹרוֹ וַיִּקַּח
-# אֶת־שְׁנֵי נְעָרָיו אִתּוֹ וְאֵת יִצְחָק בְּנוֹ וַיְבַקַּע עֲצֵי עֹלָה
-# וַיָּקָם וַיֵּלֶךְ אֶל־הַמָּקוֹם אֲשֶׁר־אָמַר־לוֹ הָאֱלֹהִים
+# ‹וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר› (“and-rise-early Abraham in-morning”)
+# ‹וַיַּחֲבֹשׁ אֶת־חֲמֹרוֹ וַיִּקַּח› (“and-wrap-firmly obj-marker male-ass-
+# him/its and-take”)
+# ‹אֶת־שְׁנֵי נְעָרָיו אִתּוֹ› (“obj-marker two boy-him/its with-him/its”)
+# ‹וְאֵת יִצְחָק בְּנוֹ› (“and-obj-marker Isaac son-him/its”)
+# ‹וַיְבַקַּע עֲצֵי עֹלָה› (“and-cleave tree burnt-offering”)
+# ‹וַיָּקָם וַיֵּלֶךְ אֶל־הַמָּקוֹם› (“and-arise and-go to the-place”)
+# ‹אֲשֶׁר־אָמַר־לוֹ הָאֱלֹהִים› (“which say to-him/its the-God”)
 # "And Abraham rose early in the morning, and saddled his ass, and took two
 # of his young men with him, and Isaac his son; and he cleaved the wood for
 # the burnt-offering, and rose up, and went unto the place of which God had
 # told him."
 m.step("Gen.22.3")
-# ‹וְאֵת יִצְחָק בְּנוֹ› (“and-obj-marker Isaac son-him/its”) — the world
-# gains: Isaac
+# ‹וְאֵת יִצְחָק בְּנוֹ› (“and-obj-marker Isaac son-him/its”)
+# — the world gains: Isaac
 m.install("yitzchaq")
-# ‹אֶת־שְׁנֵי נְעָרָיו› (“obj-marker two boy-him/its”) — the world gains:
-# shnei-nearav
+# ‹אֶת־שְׁנֵי נְעָרָיו› (“obj-marker two boy-him/its”)
+# — the world gains: shnei-nearav
 m.install("shnei_nearav")
-# ‹וַיַּשְׁכֵּם … וַיַּחֲבֹשׁ … וַיִּקַּח … וַיְבַקַּע … וַיָּקָם וַיֵּלֶךְ›
-# (“and-rise-early … and-wrap-firmly … and-take … and-cleave … and-arise
-# and-go”) — event: dawn-journey — agent Abraham
+# ‹וַיַּשְׁכֵּם … וַיַּחֲבֹשׁ … וַיִּקַּח› (“and-rise-early … and-wrap-
+# firmly … and-take”)
+# ‹… וַיְבַקַּע … וַיָּקָם וַיֵּלֶךְ› (“and-cleave … and-arise and-go”)
+# — event: dawn-journey — agent Abraham
 m.event("dawn_journey", agent="avraham")
-# ‹וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר וַיַּחֲבֹשׁ אֶת־חֲמֹרוֹ› (“and-rise-
-# early Abraham in-morning and-wrap-firmly obj-marker male-ass-him/its”) —
-# fact holds: and-rise-early-in-the-morning-and-wrap-firmly-obj-marker-
+# ‹וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר› (“and-rise-early Abraham in-morning”)
+# ‹וַיַּחֲבֹשׁ אֶת־חֲמֹרוֹ› (“and-wrap-firmly obj-marker male-ass-him/its”)
+# — fact holds: and-rise-early-in-the-morning-and-wrap-firmly-obj-marker-
 # chamoro
 m.fact("va_yashkem_ba_boqer_va_yachavosh_et_chamoro")
 # witness-tier presupposed read: love_upsets_the_order on
@@ -83,12 +102,15 @@ m.witness_read("va_yashkem_avraham", "zealous_timing",
                 cites=["Pesachim 4a:5", "Pesachim 4a:6", "Pesachim 4a:7"])
 
 # -------------------------- Gen.22.4 · THE_THIRD_DAY_SIGHTING --------------
-# בַּיּוֹם הַשְּׁלִישִׁי וַיִּשָּׂא אַבְרָהָם אֶת־עֵינָיו וַיַּרְא
-# אֶת־הַמָּקוֹם מֵרָחֹק
+# ‹בַּיּוֹם הַשְּׁלִישִׁי וַיִּשָּׂא› (“in-day the-third and-lift/carry”)
+# ‹אַבְרָהָם אֶת־עֵינָיו וַיַּרְא› (“Abraham obj-marker eye-him/its and-
+# see”)
+# ‹אֶת־הַמָּקוֹם מֵרָחֹק› (“obj-marker the-place from-remote”)
 # "On the third day Abraham lifted up his eyes, and saw the place afar off."
 m.step("Gen.22.4")
-# ‹בַּיּוֹם הַשְּׁלִישִׁי … מֵרָחֹק› (“in-day the-third … from-remote”) —
-# fact holds: in-the-day-the-third-and-see-obj-marker-the-place-from-remote
+# ‹בַּיּוֹם הַשְּׁלִישִׁי … מֵרָחֹק› (“in-day the-third … from-remote”)
+# — fact holds: in-the-day-the-third-and-see-obj-marker-the-place-from-
+# remote
 m.fact("ba_yom_ha_shelishi_va_yar_et_ha_maqom_me_rachoq")
 # witness-tier presupposed read: member_of_a_corpus_wide_pattern on
 # third_day — read, not installed
@@ -96,19 +118,24 @@ m.witness_read("third_day", "member_of_a_corpus_wide_pattern",
                 cites=["Bereshit Rabbah 56:1"])
 
 # -------------------------- Gen.22.5 · THE_STAY_DEMAND_AND_THE_EXCLUSIVE_WE -
-# וַיֹּאמֶר אַבְרָהָם אֶל־נְעָרָיו שְׁבוּ־לָכֶם פֹּה עִם־הַחֲמוֹר וַאֲנִי
-# וְהַנַּעַר נֵלְכָה עַד־כֹּה וְנִשְׁתַּחֲוֶה וְנָשׁוּבָה אֲלֵיכֶם
+# ‹וַיֹּאמֶר אַבְרָהָם אֶל־נְעָרָיו› (“and-say Abraham to boy-him/its”)
+# ‹שְׁבוּ־לָכֶם פֹּה עִם־הַחֲמוֹר› (“dwell/sit to-you/your(pl) this-place
+# with the-male-ass”)
+# ‹וַאֲנִי וְהַנַּעַר נֵלְכָה› (“and-I and-the-boy go”)
+# ‹עַד־כֹּה וְנִשְׁתַּחֲוֶה וְנָשׁוּבָה› (“until like-this and-afflict and-
+# return”)
+# ‹אֲלֵיכֶם› (“to-you/your(pl)”)
 # "And Abraham said unto his young men: 'Abide ye here with the ass, and I
 # and the lad will go yonder; and we will worship, and come back to you.'"
 m.step("Gen.22.5")
 # ‹שְׁבוּ־לָכֶם פֹּה עִם־הַחֲמוֹר› (“dwell/sit to-you/your(pl) this-place
-# with the-male-ass”) — Abraham speaks a demand — LET: dwell/sit(this-place-
-# with-the-male-ass)
+# with the-male-ass”)
+# — Abraham speaks a demand — LET: dwell/sit(this-place-with-the-male-ass)
 m.declare("avraham", "LET",
           "shevu(po_im_ha_chamor)")
-# ‹נֵלְכָה … וְנִשְׁתַּחֲוֶה וְנָשׁוּבָה אֲלֵיכֶם› (“go … and-afflict and-
-# return to-you/your(pl)”) — fact holds: go-and-nishtachaveh-and-nashuvah-
-# aleikhem
+# ‹נֵלְכָה … וְנִשְׁתַּחֲוֶה וְנָשׁוּבָה› (“go … and-afflict and-return”)
+# ‹אֲלֵיכֶם› (“to-you/your(pl)”)
+# — fact holds: go-and-nishtachaveh-and-nashuvah-aleikhem
 m.fact("nelkha_ve_nishtachaveh_ve_nashuvah_aleikhem")
 # witness-tier presupposed read: lips_covenant on ve_nashuva_aleikhem —
 # read, not installed
@@ -120,59 +147,84 @@ m.witness_read("im_ha_chamor", "damages_class",
                 cites=["Bava Kamma 49a:4", "Bava Kamma 49a:5", "Bava Kamma 49a:6"])
 
 # -------------------------- Gen.22.6 · THE_LOADED_WALK_TOGETHER ------------
-# וַיִּקַּח אַבְרָהָם אֶת־עֲצֵי הָעֹלָה וַיָּשֶׂם עַל־יִצְחָק בְּנוֹ
-# וַיִּקַּח בְּיָדוֹ אֶת־הָאֵשׁ וְאֶת־הַמַּאֲכֶלֶת וַיֵּלְכוּ שְׁנֵיהֶם
-# יַחְדָּו
+# ‹וַיִּקַּח אַבְרָהָם אֶת־עֲצֵי› (“and-take Abraham obj-marker tree”)
+# ‹הָעֹלָה וַיָּשֶׂם עַל־יִצְחָק› (“the-burnt-offering and-put/set over
+# Isaac”)
+# ‹בְּנוֹ וַיִּקַּח בְּיָדוֹ› (“son-him/its and-take in-hand-him/its”)
+# ‹אֶת־הָאֵשׁ וְאֶת־הַמַּאֲכֶלֶת וַיֵּלְכוּ› (“obj-marker the-fire and-obj-
+# marker the-something-to-eat-with and-go”)
+# ‹שְׁנֵיהֶם יַחְדָּו› (“two-them/their unit”)
 # "And Abraham took the wood of the burnt-offering, and laid it upon Isaac
 # his son; and he took in his hand the fire and the knife; and they went
 # both of them together."
 m.step("Gen.22.6")
-# ‹וַיָּשֶׂם עַל־יִצְחָק בְּנוֹ … וַיֵּלְכוּ שְׁנֵיהֶם יַחְדָּו› (“and-
-# put/set over Isaac son-him/its … and-go two-them/their unit”) — event:
-# load-and-walk — agent Abraham
+# ‹וַיָּשֶׂם עַל־יִצְחָק בְּנוֹ› (“and-put/set over Isaac son-him/its”)
+# ‹… וַיֵּלְכוּ שְׁנֵיהֶם יַחְדָּו› (“and-go two-them/their unit”)
+# — event: load-and-walk — agent Abraham
 m.event("load_and_walk", agent="avraham")
 
 # -------------------------- Gen.22.7 · THE_WHERE_IS_THE_LAMB ---------------
-# וַיֹּאמֶר יִצְחָק אֶל־אַבְרָהָם אָבִיו וַיֹּאמֶר אָבִי וַיֹּאמֶר הִנֶּנִּי
-# בְנִי וַיֹּאמֶר הִנֵּה הָאֵשׁ וְהָעֵצִים וְאַיֵּה הַשֶּׂה לְעֹלָה
+# ‹וַיֹּאמֶר יִצְחָק אֶל־אַבְרָהָם› (“and-say Isaac to Abraham”)
+# ‹אָבִיו וַיֹּאמֶר אָבִי› (“father-him/its and-say father-me/my”)
+# ‹וַיֹּאמֶר הִנֶּנִּי בְנִי› (“and-say behold-me/my son-me/my”)
+# ‹וַיֹּאמֶר הִנֵּה הָאֵשׁ› (“and-say behold the-fire”)
+# ‹וְהָעֵצִים וְאַיֵּה הַשֶּׂה› (“and-the-tree and-where? the-member-of-a-
+# flock”)
+# ‹לְעֹלָה› (“to-burnt-offering”)
 # "And Isaac spoke unto Abraham his father, and said: 'My father.' And he
 # said: 'Here am I, my son.' And he said: 'Behold the fire and the wood; but
 # where is the lamb for a burnt-offering?'"
 m.step("Gen.22.7")
-# ‹אָבִי … הִנֶּנִּי בְנִי … וְאַיֵּה הַשֶּׂה לְעֹלָה› (“father-me/my …
-# behold-me/my son-me/my … and-where? the-member-of-a-flock to-burnt-
-# offering”) — fact holds: father-and-say-behold-I-veni; and-ayeh-the-seh-
-# to-burnt-offering
+# ‹אָבִי … הִנֶּנִּי בְנִי› (“father-me/my … behold-me/my son-me/my”)
+# ‹… וְאַיֵּה הַשֶּׂה לְעֹלָה› (“and-where? the-member-of-a-flock to-burnt-
+# offering”)
+# — fact holds: father-and-say-behold-I-veni; and-ayeh-the-seh-to-burnt-
+# offering
 m.fact("avi_va_yomer_hineni_veni",
        "ve_ayeh_ha_seh_le_olah")
 
 # -------------------------- Gen.22.8 · THE_PROVIDE_ANSWER ------------------
-# וַיֹּאמֶר אַבְרָהָם אֱלֹהִים יִרְאֶה־לּוֹ הַשֶּׂה לְעֹלָה בְּנִי
-# וַיֵּלְכוּ שְׁנֵיהֶם יַחְדָּו
+# ‹וַיֹּאמֶר אַבְרָהָם אֱלֹהִים› (“and-say Abraham God”)
+# ‹יִרְאֶה־לּוֹ הַשֶּׂה לְעֹלָה› (“see to-him/its the-member-of-a-flock to-
+# burnt-offering”)
+# ‹בְּנִי וַיֵּלְכוּ שְׁנֵיהֶם› (“son-me/my and-go two-them/their”)
+# ‹יַחְדָּו› (“unit”)
 # "And Abraham said: 'God will provide Himself the lamb for a burnt-
 # offering, my son.' So they went both of them together."
 m.step("Gen.22.8")
-# ‹אֱלֹהִים יִרְאֶה־לּוֹ הַשֶּׂה לְעֹלָה בְּנִי› (“God see to-him/its the-
-# member-of-a-flock to-burnt-offering son-me/my”) — fact holds: God-yireh-
-# not-the-seh-to-burnt-offering-beni
+# ‹אֱלֹהִים יִרְאֶה־לּוֹ הַשֶּׂה› (“God see to-him/its the-member-of-a-
+# flock”)
+# ‹לְעֹלָה בְּנִי› (“to-burnt-offering son-me/my”)
+# — fact holds: God-yireh-not-the-seh-to-burnt-offering-beni
 m.fact("elohim_yireh_lo_ha_seh_le_olah_beni")
 
 # -------------------------- Gen.22.9 · THE_BINDING -------------------------
-# וַיָּבֹאוּ אֶל־הַמָּקוֹם אֲשֶׁר אָמַר־לוֹ הָאֱלֹהִים וַיִּבֶן שָׁם
-# אַבְרָהָם אֶת־הַמִּזְבֵּחַ וַיַּעֲרֹךְ אֶת־הָעֵצִים וַיַּעֲקֹד אֶת־יִצְחָק
-# בְּנוֹ וַיָּשֶׂם אֹתוֹ עַל־הַמִּזְבֵּחַ מִמַּעַל לָעֵצִים
+# ‹וַיָּבֹאוּ אֶל־הַמָּקוֹם אֲשֶׁר› (“and-come/bring to the-place which”)
+# ‹אָמַר־לוֹ הָאֱלֹהִים וַיִּבֶן› (“say to-him/its the-God and-build”)
+# ‹שָׁם אַבְרָהָם אֶת־הַמִּזְבֵּחַ› (“there Abraham obj-marker the-altar”)
+# ‹וַיַּעֲרֹךְ אֶת־הָעֵצִים וַיַּעֲקֹד› (“and-set-in-a-row obj-marker the-
+# tree and-tie-with-thongs”)
+# ‹אֶת־יִצְחָק בְּנוֹ וַיָּשֶׂם› (“obj-marker Isaac son-him/its and-
+# put/set”)
+# ‹אֹתוֹ עַל־הַמִּזְבֵּחַ מִמַּעַל› (“obj-marker-him/its over the-altar
+# from-upper-part”)
+# ‹לָעֵצִים› (“to-tree”)
 # "And they came to the place which God had told him of; and Abraham built
 # the altar there, and laid the wood in order, and bound Isaac his son, and
 # laid him on the altar, upon the wood."
 m.step("Gen.22.9")
-# ‹וַיַּעֲקֹד אֶת־יִצְחָק בְּנוֹ וַיָּשֶׂם אֹתוֹ עַל־הַמִּזְבֵּחַ› (“and-
-# tie-with-thongs obj-marker Isaac son-him/its and-put/set obj-marker-
-# him/its over the-altar”) — event: bind — agent Abraham; theme Isaac
+# ‹וַיַּעֲקֹד אֶת־יִצְחָק בְּנוֹ› (“and-tie-with-thongs obj-marker Isaac
+# son-him/its”)
+# ‹וַיָּשֶׂם אֹתוֹ עַל־הַמִּזְבֵּחַ› (“and-put/set obj-marker-him/its over
+# the-altar”)
+# — event: bind — agent Abraham; theme Isaac
 m.event("bind", agent="avraham", themes=["yitzchaq"])
-# ‹וַיַּעֲקֹד אֶת־יִצְחָק בְּנוֹ וַיָּשֶׂם אֹתוֹ עַל־הַמִּזְבֵּחַ› (“and-
-# tie-with-thongs obj-marker Isaac son-him/its and-put/set obj-marker-
-# him/its over the-altar”) — fact holds: and-tie-with-thongs-obj-marker-
-# Isaac-and-put/set-over-the-altar
+# ‹וַיַּעֲקֹד אֶת־יִצְחָק בְּנוֹ› (“and-tie-with-thongs obj-marker Isaac
+# son-him/its”)
+# ‹וַיָּשֶׂם אֹתוֹ עַל־הַמִּזְבֵּחַ› (“and-put/set obj-marker-him/its over
+# the-altar”)
+# — fact holds: and-tie-with-thongs-obj-marker-Isaac-and-put/set-over-the-
+# altar
 m.fact("va_yaaqod_et_yitzchaq_va_yasem_al_ha_mizbeach")
 # witness-tier presupposed read: fitness_law_in_the_subjects_mouth on
 # binding_request — read, not installed
@@ -180,14 +232,19 @@ m.witness_read("binding_request", "fitness_law_in_the_subjects_mouth",
                 cites=["Bereshit Rabbah 56:8"])
 
 # -------------------------- Gen.22.10 · THE_HAND_AND_THE_KNIFE -------------
-# וַיִּשְׁלַח אַבְרָהָם אֶת־יָדוֹ וַיִּקַּח אֶת־הַמַּאֲכֶלֶת לִשְׁחֹט
-# אֶת־בְּנוֹ
+# ‹וַיִּשְׁלַח אַבְרָהָם אֶת־יָדוֹ› (“and-send Abraham obj-marker hand-
+# him/its”)
+# ‹וַיִּקַּח אֶת־הַמַּאֲכֶלֶת לִשְׁחֹט› (“and-take obj-marker the-something-
+# to-eat-with to-slaughter”)
+# ‹אֶת־בְּנוֹ› (“obj-marker son-him/its”)
 # "And Abraham stretched forth his hand, and took the knife to slay his
 # son."
 m.step("Gen.22.10")
-# ‹וַיִּשְׁלַח … אֶת־יָדוֹ וַיִּקַּח אֶת־הַמַּאֲכֶלֶת לִשְׁחֹט› (“and-send …
-# obj-marker hand-him/its and-take obj-marker the-something-to-eat-with to-
-# slaughter”) — event: reach-knife — agent Abraham
+# ‹וַיִּשְׁלַח … אֶת־יָדוֹ וַיִּקַּח› (“and-send … obj-marker hand-him/its
+# and-take”)
+# ‹אֶת־הַמַּאֲכֶלֶת לִשְׁחֹט› (“obj-marker the-something-to-eat-with to-
+# slaughter”)
+# — event: reach-knife — agent Abraham
 m.event("reach_knife", agent="avraham")
 # witness-tier presupposed read: detached_instrument_required on
 # extended_his_hand — read, not installed
@@ -199,16 +256,18 @@ m.witness_read("et_ha_maakhelet", "detached_blade",
                 cites=["Chullin 16a:4", "Chullin 16a:5", "Chullin 16a:6"])
 
 # -------------------------- Gen.22.11 · THE_FIRST_DOUBLED_NAME_CALL --------
-# וַיִּקְרָא אֵלָיו מַלְאַךְ יְהוָה מִן־הַשָּׁמַיִם וַיֹּאמֶר אַבְרָהָם
-# אַבְרָהָם וַיֹּאמֶר הִנֵּנִי
+# ‹וַיִּקְרָא אֵלָיו מַלְאַךְ› (“and-call to-him/its messenger”)
+# ‹יְהוָה מִן־הַשָּׁמַיִם וַיֹּאמֶר› (“YHWH from the-heavens and-say”)
+# ‹אַבְרָהָם אַבְרָהָם וַיֹּאמֶר› (“Abraham Abraham and-say”)
+# ‹הִנֵּנִי› (“behold-me/my”)
 # "And the angel of the LORD called unto him out of heaven, and said:
 # 'Abraham, Abraham.' And he said: 'Here am I.'"
 m.step("Gen.22.11")
-# ‹מַלְאַךְ יְהוָה מִן־הַשָּׁמַיִם› (“messenger YHWH from the-heavens”) —
-# the world gains: messenger-the-LORD
+# ‹מַלְאַךְ יְהוָה מִן־הַשָּׁמַיִם› (“messenger YHWH from the-heavens”)
+# — the world gains: messenger-the-LORD
 m.install("malakh_YHWH")
-# ‹אַבְרָהָם אַבְרָהָם … הִנֵּנִי› (“Abraham Abraham … behold-me/my”) — fact
-# holds: Abraham-Abraham-and-say-behold-I
+# ‹אַבְרָהָם אַבְרָהָם … הִנֵּנִי› (“Abraham Abraham … behold-me/my”)
+# — fact holds: Abraham-Abraham-and-say-behold-I
 m.fact("avraham_avraham_va_yomer_hineni")
 # witness-tier presupposed read: affection_exhortation_and_recurrence on
 # doubled_name — read, not installed
@@ -216,48 +275,62 @@ m.witness_read("doubled_name", "affection_exhortation_and_recurrence",
                 cites=["Bereshit Rabbah 56:7"])
 
 # -------------------------- Gen.22.12 · THE_COUNTERMAND_AND_THE_CONFERRED_TITLE -
-# וַיֹּאמֶר אַל־תִּשְׁלַח יָדְךָ אֶל־הַנַּעַר וְאַל־תַּעַשׂ לוֹ מְאוּמָה
-# כִּי עַתָּה יָדַעְתִּי כִּי־יְרֵא אֱלֹהִים אַתָּה וְלֹא חָשַׂכְתָּ
-# אֶת־בִּנְךָ אֶת־יְחִידְךָ מִמֶּנִּי
+# ‹וַיֹּאמֶר אַל־תִּשְׁלַח יָדְךָ› (“and-say do-not send hand-you/your”)
+# ‹אֶל־הַנַּעַר וְאַל־תַּעַשׂ לוֹ› (“to the-boy and-do-not make to-him/its”)
+# ‹מְאוּמָה כִּי עַתָּה› (“speck that now”)
+# ‹יָדַעְתִּי כִּי־יְרֵא אֱלֹהִים› (“know that fearing God”)
+# ‹אַתָּה וְלֹא חָשַׂכְתָּ› (“you and-not restrain”)
+# ‹אֶת־בִּנְךָ אֶת־יְחִידְךָ מִמֶּנִּי› (“obj-marker son-you/your obj-marker
+# united-you/your from-me/my”)
 # "And he said: 'Lay not thy hand upon the lad, neither do thou any thing
 # unto him; for now I know that thou art a God-fearing man, seeing thou hast
 # not withheld thy son, thine only son, from Me.'"
 m.step("Gen.22.12")
 # ‹אַל־תִּשְׁלַח יָדְךָ אֶל־הַנַּעַר› (“do-not send hand-you/your to the-
-# boy”) — messenger-the-LORD speaks a demand — LET-NOT: send(yadkha-to-the-
-# boy)
+# boy”)
+# — messenger-the-LORD speaks a demand — LET-NOT: send(yadkha-to-the-boy)
 m.declare("malakh_YHWH", "LET-NOT",
           "tishlach(yadkha_el_ha_naar)")
-# ‹וְאַל־תַּעַשׂ לוֹ מְאוּמָה› (“and-do-not make to-him/its speck”) —
-# messenger-the-LORD speaks a demand — LET-NOT: make(not-meumah)
+# ‹וְאַל־תַּעַשׂ לוֹ מְאוּמָה› (“and-do-not make to-him/its speck”)
+# — messenger-the-LORD speaks a demand — LET-NOT: make(not-meumah)
 m.declare("malakh_YHWH", "LET-NOT",
           "taas(lo_meumah)")
-# ‹כִּי עַתָּה יָדַעְתִּי כִּי־יְרֵא אֱלֹהִים אַתָּה וְלֹא חָשַׂכְתָּ›
-# (“that now know that fearing God you and-not restrain”) — fact holds: you-
-# know-that-fearing-God-you; and-not-restrain-obj-marker-binkha-obj-marker-
-# yechidkha
+# ‹כִּי עַתָּה יָדַעְתִּי› (“that now know”)
+# ‹כִּי־יְרֵא אֱלֹהִים אַתָּה› (“that fearing God you”)
+# ‹וְלֹא חָשַׂכְתָּ› (“and-not restrain”)
+# — fact holds: you-know-that-fearing-God-you; and-not-restrain-obj-marker-
+# binkha-obj-marker-yechidkha
 m.fact("atah_yadati_ki_yere_elohim_atah",
        "ve_lo_chasakhta_et_binkha_et_yechidkha")
 
 # -------------------------- Gen.22.13 · THE_RAM_AND_THE_CROWN_FORK ---------
-# וַיִּשָּׂא אַבְרָהָם אֶת־עֵינָיו וַיַּרְא וְהִנֵּה־אַיִל אַחַר נֶאֱחַז
-# בַּסְּבַךְ בְּקַרְנָיו וַיֵּלֶךְ אַבְרָהָם וַיִּקַּח אֶת־הָאַיִל
-# וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ
+# ‹וַיִּשָּׂא אַבְרָהָם אֶת־עֵינָיו› (“and-lift/carry Abraham obj-marker
+# eye-him/its”)
+# ‹וַיַּרְא וְהִנֵּה־אַיִל אַחַר› (“and-see and-behold ram after”)
+# ‹נֶאֱחַז בַּסְּבַךְ בְּקַרְנָיו› (“seize in-copse in-horn-him/its”)
+# ‹וַיֵּלֶךְ אַבְרָהָם וַיִּקַּח› (“and-go Abraham and-take”)
+# ‹אֶת־הָאַיִל וַיַּעֲלֵהוּ לְעֹלָה› (“obj-marker the-ram and-go-up-him/its
+# to-burnt-offering”)
+# ‹תַּחַת בְּנוֹ› (“under son-him/its”)
 # "And Abraham lifted up his eyes, and looked, and behold behind him a ram
 # caught in the thicket by his horns. And Abraham went and took the ram, and
 # offered him up for a burnt-offering in the stead of his son."
 m.step("Gen.22.13")
-# ‹וְהִנֵּה־אַיִל אַחַר נֶאֱחַז בַּסְּבַךְ בְּקַרְנָיו› (“and-behold ram
-# after seize in-copse in-horn-him/its”) — event: see-ram — agent Abraham
+# ‹וְהִנֵּה־אַיִל אַחַר נֶאֱחַז› (“and-behold ram after seize”)
+# ‹בַּסְּבַךְ בְּקַרְנָיו› (“in-copse in-horn-him/its”)
+# — event: see-ram — agent Abraham
 m.event("see_ram", agent="avraham")
-# ‹וַיֵּלֶךְ אַבְרָהָם וַיִּקַּח אֶת־הָאַיִל וַיַּעֲלֵהוּ לְעֹלָה תַּחַת
-# בְּנוֹ› (“and-go Abraham and-take obj-marker the-ram and-go-up-him/its to-
-# burnt-offering under son-him/its”) — event: offer-substitute — agent
-# Abraham; theme the-ram
+# ‹וַיֵּלֶךְ אַבְרָהָם וַיִּקַּח› (“and-go Abraham and-take”)
+# ‹אֶת־הָאַיִל וַיַּעֲלֵהוּ לְעֹלָה› (“obj-marker the-ram and-go-up-him/its
+# to-burnt-offering”)
+# ‹תַּחַת בְּנוֹ› (“under son-him/its”)
+# — event: offer-substitute — agent Abraham; theme the-ram
 m.event("offer_substitute", agent="avraham", themes=["ha_ayil"])
-# ‹אַיִל … נֶאֱחַז בַּסְּבַךְ … וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ› (“ram …
-# seize in-copse … and-go-up-him/its to-burnt-offering under son-him/its”) —
-# fact holds: ram-seize-in-the-sevakh-in-qarnav; and-yaalehu-to-burnt-
+# ‹אַיִל … נֶאֱחַז בַּסְּבַךְ› (“ram … seize in-copse”)
+# ‹… וַיַּעֲלֵהוּ לְעֹלָה תַּחַת› (“and-go-up-him/its to-burnt-offering
+# under”)
+# ‹בְּנוֹ› (“son-him/its”)
+# — fact holds: ram-seize-in-the-sevakh-in-qarnav; and-yaalehu-to-burnt-
 # offering-under-beno
 m.fact("ayil_neechaz_ba_sevakh_be_qarnav",
        "va_yaalehu_le_olah_tachat_beno")
@@ -271,18 +344,20 @@ m.witness_read("va_yaalehu_le_olah", "vessel_duty",
                 cites=["Zevachim 97b:8", "Zevachim 97b:9", "Zevachim 97b:10"])
 
 # -------------------------- Gen.22.14 · THE_SENTENCE_NAME_AND_THE_SAYING ---
-# וַיִּקְרָא אַבְרָהָם שֵׁם־הַמָּקוֹם הַהוּא יְהוָה יִרְאֶה אֲשֶׁר יֵאָמֵר
-# הַיּוֹם בְּהַר יְהוָה יֵרָאֶה
+# ‹וַיִּקְרָא אַבְרָהָם שֵׁם־הַמָּקוֹם› (“and-call Abraham name the-place”)
+# ‹הַהוּא יְהוָה יִרְאֶה› (“that YHWH see”)
+# ‹אֲשֶׁר יֵאָמֵר הַיּוֹם› (“which say the-day”)
+# ‹בְּהַר יְהוָה יֵרָאֶה› (“in-mountain YHWH see”)
 # "And Abraham called the name of that place Adonai-jireh; as it is said to
 # this day: 'In the mount where the LORD is seen.'"
 m.step("Gen.22.14")
-# ‹וַיִּקְרָא אַבְרָהָם שֵׁם־הַמָּקוֹם הַהוּא יְהוָה יִרְאֶה› (“and-call
-# Abraham name the-place that YHWH see”) — named: the-place := the-LORD-
-# Yireh
+# ‹וַיִּקְרָא אַבְרָהָם שֵׁם־הַמָּקוֹם› (“and-call Abraham name the-place”)
+# ‹הַהוּא יְהוָה יִרְאֶה› (“that YHWH see”)
+# — named: the-place := the-LORD-Yireh
 m.name("ha_maqom", "YHWH_Yireh")
-# ‹אֲשֶׁר יֵאָמֵר הַיּוֹם בְּהַר יְהוָה יֵרָאֶה› (“which say the-day in-
-# mountain YHWH see”) — pattern recorded: which-say-the-day-in-mountain-the-
-# LORD-yeraeh
+# ‹אֲשֶׁר יֵאָמֵר הַיּוֹם› (“which say the-day”)
+# ‹בְּהַר יְהוָה יֵרָאֶה› (“in-mountain YHWH see”)
+# — pattern recorded: which-say-the-day-in-mountain-the-LORD-yeraeh
 m.pattern("asher_yeamer_ha_yom_be_har_YHWH_yeraeh")
 # witness-tier presupposed read: rewritten_as_the_worship_institution on
 # the_naming — read, not installed
@@ -290,23 +365,30 @@ m.witness_read("the_naming", "rewritten_as_the_worship_institution",
                 cites=["Onkelos Genesis 22:14", "Onkelos Genesis 22:16"])
 
 # -------------------------- Gen.22.15 · THE_SECOND_SKY_CALL ----------------
-# וַיִּקְרָא מַלְאַךְ יְהוָה אֶל־אַבְרָהָם שֵׁנִית מִן־הַשָּׁמָיִם
+# ‹וַיִּקְרָא מַלְאַךְ יְהוָה› (“and-call messenger YHWH”)
+# ‹אֶל־אַבְרָהָם שֵׁנִית מִן־הַשָּׁמָיִם› (“to Abraham second from the-
+# heavens”)
 # "And the angel of the LORD called unto Abraham a second time out of
 # heaven,"
 m.step("Gen.22.15")
 # ‹וַיִּקְרָא … שֵׁנִית מִן־הַשָּׁמָיִם› (“and-call … second from the-
-# heavens”) — event: sky-call — agent messenger-the-LORD
+# heavens”)
+# — event: sky-call — agent messenger-the-LORD
 m.event("sky_call", agent="malakh_YHWH")
 
 # -------------------------- Gen.22.16 · THE_DIVINE_SELF_OATH ---------------
-# וַיֹּאמֶר בִּי נִשְׁבַּעְתִּי נְאֻם־יְהוָה כִּי יַעַן אֲשֶׁר עָשִׂיתָ
-# אֶת־הַדָּבָר הַזֶּה וְלֹא חָשַׂכְתָּ אֶת־בִּנְךָ אֶת־יְחִידֶךָ
+# ‹וַיֹּאמֶר בִּי נִשְׁבַּעְתִּי› (“and-say in-me/my swear”)
+# ‹נְאֻם־יְהוָה כִּי יַעַן› (“oracle YHWH that heed”)
+# ‹אֲשֶׁר עָשִׂיתָ אֶת־הַדָּבָר› (“which make obj-marker the-word/thing”)
+# ‹הַזֶּה וְלֹא חָשַׂכְתָּ› (“the-this and-not restrain”)
+# ‹אֶת־בִּנְךָ אֶת־יְחִידֶךָ› (“obj-marker son-you/your obj-marker united-
+# you/your”)
 # "and said: 'By Myself have I sworn, saith the LORD, because thou hast done
 # this thing, and hast not withheld thy son, thine only son,"
 m.step("Gen.22.16")
-# ‹בִּי נִשְׁבַּעְתִּי נְאֻם־יְהוָה … יַעַן אֲשֶׁר עָשִׂיתָ› (“in-me/my
-# swear oracle YHWH … heed which make”) — fact holds: bi-swear-oracle-the-
-# LORD; heed-which-make-and-not-restrain
+# ‹בִּי נִשְׁבַּעְתִּי נְאֻם־יְהוָה› (“in-me/my swear oracle YHWH”)
+# ‹… יַעַן אֲשֶׁר עָשִׂיתָ› (“heed which make”)
+# — fact holds: bi-swear-oracle-the-LORD; heed-which-make-and-not-restrain
 m.fact("bi_nishbati_neum_YHWH",
        "yaan_asher_asita_ve_lo_chasakhta")
 # witness-tier presupposed read: answering_a_demand_for_no_further_tests on
@@ -315,49 +397,68 @@ m.witness_read("the_oath", "answering_a_demand_for_no_further_tests",
                 cites=["Bereshit Rabbah 56:11"])
 
 # -------------------------- Gen.22.17 · THE_DOUBLED_BLESSINGS --------------
-# כִּי־בָרֵךְ אֲבָרֶכְךָ וְהַרְבָּה אַרְבֶּה אֶת־זַרְעֲךָ כְּכוֹכְבֵי
-# הַשָּׁמַיִם וְכַחוֹל אֲשֶׁר עַל־שְׂפַת הַיָּם וְיִרַשׁ זַרְעֲךָ אֵת שַׁעַר
-# אֹיְבָיו
+# ‹כִּי־בָרֵךְ אֲבָרֶכְךָ וְהַרְבָּה› (“that bless bless-you/your and-
+# multiply”)
+# ‹אַרְבֶּה אֶת־זַרְעֲךָ כְּכוֹכְבֵי› (“multiply obj-marker seed-you/your
+# like-stars”)
+# ‹הַשָּׁמַיִם וְכַחוֹל אֲשֶׁר› (“the-heavens and-like-sand which”)
+# ‹עַל־שְׂפַת הַיָּם וְיִרַשׁ› (“over lip the-seas and-possess/inherit”)
+# ‹זַרְעֲךָ אֵת שַׁעַר› (“seed-you/your obj-marker gate”)
+# ‹אֹיְבָיו› (“hating-him/its”)
 # "that in blessing I will bless thee, and in multiplying I will multiply
 # thy seed as the stars of the heaven, and as the sand which is upon the
 # seashore; and thy seed shall possess the gate of his enemies;"
 m.step("Gen.22.17")
-# ‹בָרֵךְ אֲבָרֶכְךָ וְהַרְבָּה אַרְבֶּה … כְּכוֹכְבֵי … וְכַחוֹל› (“bless
-# bless-you/your and-multiply multiply … like-stars … and-like-sand”) — fact
-# holds: bless-avarekhkha-and-greatly-I-will-multiply; like-khokhvei-and-
-# you/your-chol-and-possess/inherit-gate-oyvav
+# ‹בָרֵךְ אֲבָרֶכְךָ וְהַרְבָּה› (“bless bless-you/your and-multiply”)
+# ‹אַרְבֶּה … כְּכוֹכְבֵי … וְכַחוֹל› (“multiply … like-stars … and-like-
+# sand”)
+# — fact holds: bless-avarekhkha-and-greatly-I-will-multiply; like-khokhvei-
+# and-you/your-chol-and-possess/inherit-gate-oyvav
 m.fact("varekh_avarekhkha_ve_harbah_arbeh",
        "ke_khokhvei_ve_kha_chol_ve_yirash_shaar_oyvav")
 
 # -------------------------- Gen.22.18 · THE_LISTENED_VOICE_GROUND ----------
-# וְהִתְבָּרְכוּ בְזַרְעֲךָ כֹּל גּוֹיֵי הָאָרֶץ עֵקֶב אֲשֶׁר שָׁמַעְתָּ
-# בְּקֹלִי
+# ‹וְהִתְבָּרְכוּ בְזַרְעֲךָ כֹּל› (“and-bless in-seed-you/your all”)
+# ‹גּוֹיֵי הָאָרֶץ עֵקֶב› (“nation the-earth heel”)
+# ‹אֲשֶׁר שָׁמַעְתָּ בְּקֹלִי› (“which hear in-voice/sound-me/my”)
 # "and in thy seed shall all the nations of the earth be blessed; because
 # thou hast hearkened to My voice.'"
 m.step("Gen.22.18")
-# ‹וְהִתְבָּרְכוּ … עֵקֶב אֲשֶׁר שָׁמַעְתָּ בְּקֹלִי› (“and-bless … heel
-# which hear in-voice/sound-me/my”) — fact holds: and-bless-and-zarakha-all-
-# goyei-the-earth; ekev-which-hear-in-qoli
+# ‹וְהִתְבָּרְכוּ … עֵקֶב אֲשֶׁר› (“and-bless … heel which”)
+# ‹שָׁמַעְתָּ בְּקֹלִי› (“hear in-voice/sound-me/my”)
+# — fact holds: and-bless-and-zarakha-all-goyei-the-earth; ekev-which-hear-
+# in-qoli
 m.fact("ve_hitbarakhu_ve_zarakha_kol_goyei_ha_aretz",
        "ekev_asher_shamata_be_qoli")
 
 # -------------------------- Gen.22.19 · THE_RETURN_AND_THE_DWELL -----------
-# וַיָּשָׁב אַבְרָהָם אֶל־נְעָרָיו וַיָּקֻמוּ וַיֵּלְכוּ יַחְדָּו אֶל־בְּאֵר
-# שָׁבַע וַיֵּשֶׁב אַבְרָהָם בִּבְאֵר שָׁבַע
+# ‹וַיָּשָׁב אַבְרָהָם אֶל־נְעָרָיו› (“and-return Abraham to boy-him/its”)
+# ‹וַיָּקֻמוּ וַיֵּלְכוּ יַחְדָּו› (“and-arise and-go unit”)
+# ‹אֶל־בְּאֵר שָׁבַע וַיֵּשֶׁב› (“to Beer-shebah and-dwell/sit”)
+# ‹אַבְרָהָם בִּבְאֵר שָׁבַע› (“Abraham in Beer-shebah”)
 # "So Abraham returned unto his young men, and they rose up and went
 # together to Beer-sheba; and Abraham dwelt at Beer-sheba."
 m.step("Gen.22.19")
-# ‹וַיָּשָׁב … וַיָּקֻמוּ וַיֵּלְכוּ יַחְדָּו … וַיֵּשֶׁב› (“and-return …
-# and-arise and-go unit … and-return”) — event: return-dwell — agent Abraham
+# ‹וַיָּשָׁב … וַיָּקֻמוּ וַיֵּלְכוּ› (“and-return … and-arise and-go”)
+# ‹יַחְדָּו … וַיֵּשֶׁב› (“unit … and-return”)
+# — event: return-dwell — agent Abraham
 m.event("return_dwell", agent="avraham")
-# ‹אֶל־בְּאֵר שָׁבַע … בִּבְאֵר שָׁבַע› (“to Beer-shebah … in Beer-shebah”)
+# ‹אֶל־בְּאֵר שָׁבַע … בִּבְאֵר› (“to Beer-shebah … in”)
+# ‹שָׁבַע› (“Beer-shebah”)
 # — reads without prior install (flag, not fix): beer-seven
 m.presupposed("beer_sheva")
 
 # -------------------------- Gen.22.20-24 · THE_CODA_REPORT_THE_BRIDE_MINTED -
-# וַיְהִי אַחֲרֵי הַדְּבָרִים הָאֵלֶּה וַיֻּגַּד לְאַבְרָהָם לֵאמֹר הִנֵּה
-# יָלְדָה מִלְכָּה גַם־הִוא בָּנִים לְנָחוֹר אָחִיךָ … וּבְתוּאֵל יָלַד
-# אֶת־רִבְקָה … וּפִילַגְשׁוֹ וּשְׁמָהּ רְאוּמָה וַתֵּלֶד גַּם־הִוא
+# ‹וַיְהִי אַחֲרֵי הַדְּבָרִים› (“and-be after the-word/thing”)
+# ‹הָאֵלֶּה וַיֻּגַּד לְאַבְרָהָם› (“the-these and-tell to-Abraham”)
+# ‹לֵאמֹר הִנֵּה יָלְדָה› (“to-say behold bear-young”)
+# ‹מִלְכָּה גַם־הִוא בָּנִים› (“Milcah also he/it son”)
+# ‹לְנָחוֹר אָחִיךָ … וּבְתוּאֵל› (“to-Nahor brother-you/your … and-
+# Bethuel”)
+# ‹יָלַד אֶת־רִבְקָה … וּפִילַגְשׁוֹ› (“bear-young obj-marker Rebekah … and-
+# concubine-him/its”)
+# ‹וּשְׁמָהּ רְאוּמָה וַתֵּלֶד› (“and-name-her/its Reumah and-bear-young”)
+# ‹גַּם־הִוא› (“also he/it”)
 # "And it came to pass after these things, that it was told Abraham, saying:
 # 'Behold, Milcah, she also hath borne children unto thy brother Nahor: Uz
 # his first-born, and Buz his brother, and Kemuel the father of Aram; and
@@ -366,17 +467,19 @@ m.presupposed("beer_sheva")
 # his concubine, whose name was Reumah, she also bore Tebah, and Gaham, and
 # Tahash, and Maacah."
 m.step("Gen.22.20-24")
-# ‹וַיֻּגַּד לְאַבְרָהָם … הִנֵּה יָלְדָה מִלְכָּה גַם־הִוא … וּבְתוּאֵל
-# יָלַד אֶת־רִבְקָה› (“and-tell to-Abraham … behold bear-young Milcah also
-# he/it … and-Bethuel bear-young obj-marker Rebekah”) — fact holds: and-
-# tell-to-Abraham-behold-yaldah-milkah-also-hi; and-Bethuel-bear-young-obj-
-# marker-rivqah
+# ‹וַיֻּגַּד לְאַבְרָהָם … הִנֵּה› (“and-tell to-Abraham … behold”)
+# ‹יָלְדָה מִלְכָּה גַם־הִוא› (“bear-young Milcah also he/it”)
+# ‹… וּבְתוּאֵל יָלַד אֶת־רִבְקָה› (“and-Bethuel bear-young obj-marker
+# Rebekah”)
+# — fact holds: and-tell-to-Abraham-behold-yaldah-milkah-also-hi; and-
+# Bethuel-bear-young-obj-marker-rivqah
 m.fact("va_yugad_le_avraham_hinneh_yaldah_milkah_gam_hi",
        "u_vetuel_yalad_et_rivqah")
-# ‹שְׁמֹנָה אֵלֶּה יָלְדָה מִלְכָּה … וּפִילַגְשׁוֹ … וַתֵּלֶד גַּם־הִוא›
-# (“number these bear-young Milcah … and-concubine-him/its … and-bear-young
-# also he/it”) — fact holds: shmonah-these-yaldah-milkah-and-filagsho-
-# reumah-four
+# ‹שְׁמֹנָה אֵלֶּה יָלְדָה› (“number these bear-young”)
+# ‹מִלְכָּה … וּפִילַגְשׁוֹ … וַתֵּלֶד› (“Milcah … and-concubine-him/its …
+# and-bear-young”)
+# ‹גַּם־הִוא› (“also he/it”)
+# — fact holds: shmonah-these-yaldah-milkah-and-filagsho-reumah-four
 m.fact("shmonah_ele_yaldah_milkah_u_filagsho_reumah_arbaah")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

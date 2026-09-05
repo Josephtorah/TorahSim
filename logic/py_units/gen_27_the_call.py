@@ -14,20 +14,26 @@ from machine import Machine
 m = Machine("gen_27_the_call")
 
 # -------------------------- Gen.12.1 · THE_CALL_WITH_THE_OBJECT_WITHHELD ---
-# וַיֹּאמֶר יְהוָה אֶל־אַבְרָם לֶךְ־לְךָ מֵאַרְצְךָ וּמִמּוֹלַדְתְּךָ
-# וּמִבֵּית אָבִיךָ אֶל־הָאָרֶץ אֲשֶׁר אַרְאֶךָּ
+# ‹וַיֹּאמֶר יְהוָה אֶל־אַבְרָם› (“and-say YHWH to Abram”)
+# ‹לֶךְ־לְךָ מֵאַרְצְךָ וּמִמּוֹלַדְתְּךָ› (“go to-you/your from-earth-
+# you/your and-from-nativity-you/your”)
+# ‹וּמִבֵּית אָבִיךָ אֶל־הָאָרֶץ› (“and-from-house father-you/your to the-
+# earth”)
+# ‹אֲשֶׁר אַרְאֶךָּ› (“which see-you/your”)
 # "Now the LORD said unto Abram: 'Get thee out of thy country, and from thy
 # kindred, and from thy father's house, unto the land that I will show
 # thee.'"
 m.step("Gen.12.1")
-# ‹לֶךְ־לְךָ … אֶל־הָאָרֶץ אֲשֶׁר אַרְאֶךָּ› (“go to-you/your … to the-earth
-# which see-you/your”) — the-LORD speaks a demand — LET: go(Abram, to-the-
-# earth-which-areka)
+# ‹לֶךְ־לְךָ … אֶל־הָאָרֶץ אֲשֶׁר› (“go to-you/your … to the-earth which”)
+# ‹אַרְאֶךָּ› (“see-you/your”)
+# — the-LORD speaks a demand — LET: go(Abram, to-the-earth-which-areka)
 m.declare("YHWH", "LET",
           "lekh(avram, el_ha_aretz_asher_areka)")
-# ‹מֵאַרְצְךָ וּמִמּוֹלַדְתְּךָ וּמִבֵּית אָבִיךָ› (“from-earth-you/your
-# and-from-nativity-you/your and-from-house father-you/your”) — fact holds:
-# go-to-you-from-artzekha-and-from-moladtekha-and-from-beit-avikha
+# ‹מֵאַרְצְךָ וּמִמּוֹלַדְתְּךָ וּמִבֵּית› (“from-earth-you/your and-from-
+# nativity-you/your and-from-house”)
+# ‹אָבִיךָ› (“father-you/your”)
+# — fact holds: go-to-you-from-artzekha-and-from-moladtekha-and-from-beit-
+# avikha
 m.fact("lekh_lekha_me_artzekha_u_mi_moladtekha_u_mi_beit_avikha")
 # witness-tier presupposed read: reward_per_stride_and_decree_annulment on
 # withheld_destination — read, not installed
@@ -35,18 +41,21 @@ m.witness_read("withheld_destination", "reward_per_stride_and_decree_annulment",
                 cites=["Bereshit Rabbah 39:9", "Rosh Hashanah 16b:7", "Bereshit Rabbah 44:12"])
 
 # -------------------------- Gen.12.2 · THE_PROMISE_LADDER_AND_THE_SECOND_IMPERATIVE -
-# וְאֶעֶשְׂךָ לְגוֹי גָּדוֹל וַאֲבָרֶכְךָ וַאֲגַדְּלָה שְׁמֶךָ וֶהְיֵה
-# בְּרָכָה
+# ‹וְאֶעֶשְׂךָ לְגוֹי גָּדוֹל› (“and-make-you/your to-nation great”)
+# ‹וַאֲבָרֶכְךָ וַאֲגַדְּלָה שְׁמֶךָ› (“and-bless-you/your and-be-large
+# name-you/your”)
+# ‹וֶהְיֵה בְּרָכָה› (“and-be blessing”)
 # "And I will make of thee a great nation, and I will bless thee, and make
 # thy name great; and be thou a blessing."
 m.step("Gen.12.2")
-# ‹וְאֶעֶשְׂךָ לְגוֹי גָּדוֹל וַאֲבָרֶכְךָ וַאֲגַדְּלָה שְׁמֶךָ› (“and-make-
-# you/your to-nation great and-bless-you/your and-be-large name-you/your”) —
-# fact holds: e-eskha-to-nation-great; and-avarekhkha-and-agadlah-shmekha
+# ‹וְאֶעֶשְׂךָ לְגוֹי גָּדוֹל› (“and-make-you/your to-nation great”)
+# ‹וַאֲבָרֶכְךָ וַאֲגַדְּלָה שְׁמֶךָ› (“and-bless-you/your and-be-large
+# name-you/your”)
+# — fact holds: e-eskha-to-nation-great; and-avarekhkha-and-agadlah-shmekha
 m.fact("e_eskha_le_goy_gadol",
        "va_avarekhkha_va_agadlah_shmekha")
-# ‹וֶהְיֵה בְּרָכָה› (“and-be blessing”) — the-LORD speaks a demand — LET:
-# heyeh(Abram, berakhah)
+# ‹וֶהְיֵה בְּרָכָה› (“and-be blessing”)
+# — the-LORD speaks a demand — LET: heyeh(Abram, berakhah)
 m.declare("YHWH", "LET",
           "heyeh(avram, berakhah)")
 # witness-tier presupposed read: structure_of_a_standing_prayer on
@@ -55,19 +64,22 @@ m.witness_read("promise_clauses", "structure_of_a_standing_prayer",
                 cites=["Bereshit Rabbah 39:11", "Pesachim 117b:11"])
 
 # -------------------------- Gen.12.3 · THE_ASYMMETRY_AND_THE_FAMILIES ------
-# וַאֲבָרֲכָה מְבָרְכֶיךָ וּמְקַלֶּלְךָ אָאֹר וְנִבְרְכוּ בְךָ כֹּל
-# מִשְׁפְּחֹת הָאֲדָמָה
+# ‹וַאֲבָרֲכָה מְבָרְכֶיךָ וּמְקַלֶּלְךָ› (“and-bless bless-you/your and-be-
+# light-you/your”)
+# ‹אָאֹר וְנִבְרְכוּ בְךָ› (“execrate and-bless in-you/your”)
+# ‹כֹּל מִשְׁפְּחֹת הָאֲדָמָה› (“all family the-ground”)
 # "And I will bless them that bless thee, and him that curseth thee will I
 # curse; and in thee shall all the families of the earth be blessed.'"
 m.step("Gen.12.3")
-# ‹וַאֲבָרֲכָה מְבָרְכֶיךָ וּמְקַלֶּלְךָ אָאֹר› (“and-bless bless-you/your
-# and-be-light-you/your execrate”) — fact holds: and-avarakhah-mevarakhekha;
-# and-meqallelkha-execrate
+# ‹וַאֲבָרֲכָה מְבָרְכֶיךָ וּמְקַלֶּלְךָ› (“and-bless bless-you/your and-be-
+# light-you/your”)
+# ‹אָאֹר› (“execrate”)
+# — fact holds: and-avarakhah-mevarakhekha; and-meqallelkha-execrate
 m.fact("va_avarakhah_mevarakhekha",
        "u_meqallelkha_aor")
-# ‹וְנִבְרְכוּ בְךָ כֹּל מִשְׁפְּחֹת הָאֲדָמָה› (“and-bless in-you/your all
-# family the-ground”) — fact holds: and-nivrekhu-vekha-all-mishpechot-the-
-# ground
+# ‹וְנִבְרְכוּ בְךָ כֹּל› (“and-bless in-you/your all”)
+# ‹מִשְׁפְּחֹת הָאֲדָמָה› (“family the-ground”)
+# — fact holds: and-nivrekhu-vekha-all-mishpechot-the-ground
 m.fact("ve_nivrekhu_vekha_kol_mishpechot_ha_adamah")
 # witness-tier presupposed read: warrant_for_the_priestly_blessing on
 # blessing_clause — read, not installed
@@ -75,20 +87,28 @@ m.witness_read("blessing_clause", "warrant_for_the_priestly_blessing",
                 cites=["Chullin 49a:18", "Sotah 38b:3", "Berakhot 55a:8"])
 
 # -------------------------- Gen.12.4 · THE_RECEIPT_IN_THE_LETTERS_OWN_GRAMMAR -
-# וַיֵּלֶךְ אַבְרָם כַּאֲשֶׁר דִּבֶּר אֵלָיו יְהוָה וַיֵּלֶךְ אִתּוֹ לוֹט
-# וְאַבְרָם בֶּן־חָמֵשׁ שָׁנִים וְשִׁבְעִים שָׁנָה בְּצֵאתוֹ מֵחָרָן
+# ‹וַיֵּלֶךְ אַבְרָם כַּאֲשֶׁר› (“and-go Abram like-as/which”)
+# ‹דִּבֶּר אֵלָיו יְהוָה› (“speak to-him/its YHWH”)
+# ‹וַיֵּלֶךְ אִתּוֹ לוֹט› (“and-go with-him/its Lot”)
+# ‹וְאַבְרָם בֶּן־חָמֵשׁ שָׁנִים› (“and-Abram son five years”)
+# ‹וְשִׁבְעִים שָׁנָה בְּצֵאתוֹ› (“and-seventy years in-bring-forth-
+# him/its”)
+# ‹מֵחָרָן› (“from-Haran”)
 # "So Abram went, as the LORD had spoken unto him; and Lot went with him;
 # and Abram was seventy and five years old when he departed out of Haran."
 m.step("Gen.12.4")
-# ‹וַיֵּלֶךְ אַבְרָם … וַיֵּלֶךְ אִתּוֹ לוֹט› (“and-go Abram … and-go with-
-# him/its Lot”) — event: go — agent Abram
+# ‹וַיֵּלֶךְ אַבְרָם … וַיֵּלֶךְ› (“and-go Abram … and-go”)
+# ‹אִתּוֹ לוֹט› (“with-him/its Lot”)
+# — event: go — agent Abram
 m.event("go", agent="avram")
-# ‹וַיֵּלֶךְ אַבְרָם כַּאֲשֶׁר דִּבֶּר אֵלָיו יְהוָה› (“and-go Abram like-
-# as/which speak to-him/its YHWH”) — demand settled (popped from the queue):
-# go(Abram, to-the-earth-which-areka)
+# ‹וַיֵּלֶךְ אַבְרָם כַּאֲשֶׁר› (“and-go Abram like-as/which”)
+# ‹דִּבֶּר אֵלָיו יְהוָה› (“speak to-him/its YHWH”)
+# — demand settled (popped from the queue): go(Abram, to-the-earth-which-
+# areka)
 m.result("lekh(avram, el_ha_aretz_asher_areka)", tmark="t1")
-# ‹כַּאֲשֶׁר דִּבֶּר אֵלָיו יְהוָה … בֶּן־חָמֵשׁ שָׁנִים וְשִׁבְעִים שָׁנָה›
-# (“like-as/which speak to-him/its YHWH … son five years and-seventy years”)
+# ‹כַּאֲשֶׁר דִּבֶּר אֵלָיו› (“like-as/which speak to-him/its”)
+# ‹יְהוָה … בֶּן־חָמֵשׁ שָׁנִים› (“YHWH … son five years”)
+# ‹וְשִׁבְעִים שָׁנָה› (“and-seventy years”)
 # — fact holds: like-which-dibber-to-him-the-LORD; Abram-son-75-year-in-
 # tzeto-from-Haran
 m.fact("ka_asher_dibber_elav_YHWH",
@@ -97,29 +117,41 @@ m.fact("ka_asher_dibber_elav_YHWH",
 m.presupposed("charan")
 
 # -------------------------- Gen.12.5 · THE_ARRIVAL_THE_FROZEN_WALL_WAITED_FOR -
-# וַיִּקַּח אַבְרָם אֶת־שָׂרַי אִשְׁתּוֹ וְאֶת־לוֹט בֶּן־אָחִיו
-# וְאֶת־כָּל־רְכוּשָׁם אֲשֶׁר רָכָשׁוּ וְאֶת־הַנֶּפֶשׁ אֲשֶׁר־עָשׂוּ בְחָרָן
-# וַיֵּצְאוּ לָלֶכֶת אַרְצָה כְּנַעַן וַיָּבֹאוּ אַרְצָה כְּנָעַן
+# ‹וַיִּקַּח אַבְרָם אֶת־שָׂרַי› (“and-take Abram obj-marker Sarai”)
+# ‹אִשְׁתּוֹ וְאֶת־לוֹט בֶּן־אָחִיו› (“woman-him/its and-obj-marker Lot son
+# brother-him/its”)
+# ‹וְאֶת־כָּל־רְכוּשָׁם אֲשֶׁר רָכָשׁוּ› (“and-obj-marker all property-
+# them/their which lay-up”)
+# ‹וְאֶת־הַנֶּפֶשׁ אֲשֶׁר־עָשׂוּ בְחָרָן› (“and-obj-marker the-living-being
+# which make in-Haran”)
+# ‹וַיֵּצְאוּ לָלֶכֶת אַרְצָה› (“and-bring-forth to-go earth-ward”)
+# ‹כְּנַעַן וַיָּבֹאוּ אַרְצָה› (“Canaan and-come/bring earth-ward”)
+# ‹כְּנָעַן› (“Canaan”)
 # "And Abram took Sarai his wife, and Lot his brother's son, and all their
 # substance that they had gathered, and the souls that they had gotten in
 # Haran; and they went forth to go into the land of Canaan; and into the
 # land of Canaan they came."
 m.step("Gen.12.5")
-# ‹וַיִּקַּח אַבְרָם אֶת־שָׂרַי אִשְׁתּוֹ וְאֶת־לוֹט בֶּן־אָחִיו …› (“and-
-# take Abram obj-marker Sarai woman-him/its and-obj-marker Lot son brother-
-# him/its”) — event: take — agent Abram; theme Sarai, Lot, all-rekhusham,
-# the-living-being-which-make
+# ‹וַיִּקַּח אַבְרָם אֶת־שָׂרַי› (“and-take Abram obj-marker Sarai”)
+# ‹אִשְׁתּוֹ וְאֶת־לוֹט בֶּן־אָחִיו› (“woman-him/its and-obj-marker Lot son
+# brother-him/its”)
+# ‹…› (“?”)
+# — event: take — agent Abram; theme Sarai, Lot, all-rekhusham, the-living-
+# being-which-make
 m.event("take", agent="avram", themes=["saray", "lot", "kol_rekhusham", "ha_nefesh_asher_asu"])
-# ‹וַיֵּצְאוּ לָלֶכֶת אַרְצָה כְּנַעַן› (“and-bring-forth to-go earth-ward
-# Canaan”) — event: go-out — agent Abram
+# ‹וַיֵּצְאוּ לָלֶכֶת אַרְצָה› (“and-bring-forth to-go earth-ward”)
+# ‹כְּנַעַן› (“Canaan”)
+# — event: go-out — agent Abram
 m.event("go_out", agent="avram")
-# ‹וַיָּבֹאוּ אַרְצָה כְּנָעַן› (“and-come/bring earth-ward Canaan”) —
-# event: come — agent Abram
+# ‹וַיָּבֹאוּ אַרְצָה כְּנָעַן› (“and-come/bring earth-ward Canaan”)
+# — event: come — agent Abram
 m.event("come", agent="avram")
-# ‹וְאֶת־כָּל־רְכוּשָׁם אֲשֶׁר רָכָשׁוּ וְאֶת־הַנֶּפֶשׁ אֲשֶׁר־עָשׂוּ
-# בְחָרָן› (“and-obj-marker all property-them/their which lay-up and-obj-
-# marker the-living-being which make in-Haran”) — fact holds: all-rekhusham-
-# which-lay-up; and-obj-marker-the-living-being-which-make-and-Haran
+# ‹וְאֶת־כָּל־רְכוּשָׁם אֲשֶׁר רָכָשׁוּ› (“and-obj-marker all property-
+# them/their which lay-up”)
+# ‹וְאֶת־הַנֶּפֶשׁ אֲשֶׁר־עָשׂוּ בְחָרָן› (“and-obj-marker the-living-being
+# which make in-Haran”)
+# — fact holds: all-rekhusham-which-lay-up; and-obj-marker-the-living-being-
+# which-make-and-Haran
 m.fact("kol_rekhusham_asher_rakhashu",
        "ve_et_ha_nefesh_asher_asu_ve_charan")
 # reads without prior install (flag, not fix): earth-Canaan
@@ -130,14 +162,17 @@ m.witness_read("souls_made_in_haran", "conversion_counted_as_creation",
                 cites=["Bereshit Rabbah 39:14", "Sanhedrin 99b:12", "Avodah Zarah 9a:7"])
 
 # -------------------------- Gen.12.6 · THE_PASS_AND_THE_THEN ---------------
-# וַיַּעֲבֹר אַבְרָם בָּאָרֶץ עַד מְקוֹם שְׁכֶם עַד אֵלוֹן מוֹרֶה
-# וְהַכְּנַעֲנִי אָז בָּאָרֶץ
+# ‹וַיַּעֲבֹר אַבְרָם בָּאָרֶץ› (“and-pass-over Abram in-earth”)
+# ‹עַד מְקוֹם שְׁכֶם› (“until place Shechem”)
+# ‹עַד אֵלוֹן מוֹרֶה› (“until oak Moreh”)
+# ‹וְהַכְּנַעֲנִי אָז בָּאָרֶץ› (“and-the-Kenaanite at-that-time in-earth”)
 # "And Abram passed through the land unto the place of Shechem, unto the
 # terebinth of Moreh. And the Canaanite was then in the land."
 m.step("Gen.12.6")
-# ‹וַיַּעֲבֹר אַבְרָם בָּאָרֶץ עַד מְקוֹם שְׁכֶם עַד אֵלוֹן מוֹרֶה› (“and-
-# pass-over Abram in-earth until place Shechem until oak Moreh”) — event:
-# pass — agent Abram; theme until-place-Shechem-until-oak-moreh
+# ‹וַיַּעֲבֹר אַבְרָם בָּאָרֶץ› (“and-pass-over Abram in-earth”)
+# ‹עַד מְקוֹם שְׁכֶם› (“until place Shechem”)
+# ‹עַד אֵלוֹן מוֹרֶה› (“until oak Moreh”)
+# — event: pass — agent Abram; theme until-place-Shechem-until-oak-moreh
 m.event("pass", agent="avram", themes=["ad_meqom_shekhem_ad_elon_moreh"])
 # ‹וְהַכְּנַעֲנִי אָז בָּאָרֶץ› (“and-the-Kenaanite at-that-time in-earth”)
 # — fact holds: and-the-Kenaanite-at-that-time-in-the-earth
@@ -150,52 +185,65 @@ m.witness_read("elon_moreh", "ceremony_site_by_equal_cut",
                 cites=["Jerusalem Talmud Sotah 7:3:1", "Mishnah Sotah 7:5", "Jerusalem Talmud Sotah 7:3:4"])
 
 # -------------------------- Gen.12.7 · THE_APPEARANCE_THE_PLEDGE_THE_FIRST_ALTAR -
-# וַיֵּרָא יְהוָה אֶל־אַבְרָם וַיֹּאמֶר לְזַרְעֲךָ אֶתֵּן אֶת־הָאָרֶץ
-# הַזֹּאת וַיִּבֶן שָׁם מִזְבֵּחַ לַיהוָה הַנִּרְאֶה אֵלָיו
+# ‹וַיֵּרָא יְהוָה אֶל־אַבְרָם› (“and-see YHWH to Abram”)
+# ‹וַיֹּאמֶר לְזַרְעֲךָ אֶתֵּן› (“and-say to-seed-you/your set”)
+# ‹אֶת־הָאָרֶץ הַזֹּאת וַיִּבֶן› (“obj-marker the-earth the-this and-build”)
+# ‹שָׁם מִזְבֵּחַ לַיהוָה› (“there altar to-YHWH”)
+# ‹הַנִּרְאֶה אֵלָיו› (“the-see to-him/its”)
 # "And the LORD appeared unto Abram, and said: 'Unto thy seed will I give
 # this land'; and he builded there an altar unto the LORD, who appeared unto
 # him."
 m.step("Gen.12.7")
-# ‹וַיֵּרָא יְהוָה אֶל־אַבְרָם› (“and-see YHWH to Abram”) — event: appear —
-# agent the-LORD
+# ‹וַיֵּרָא יְהוָה אֶל־אַבְרָם› (“and-see YHWH to Abram”)
+# — event: appear — agent the-LORD
 m.event("appear", agent="YHWH")
-# ‹וַיֹּאמֶר› (“and-say”) — event: say — agent the-LORD
+# ‹וַיֹּאמֶר› (“and-say”)
+# — event: say — agent the-LORD
 m.event("say", agent="YHWH")
-# ‹לְזַרְעֲךָ אֶתֵּן אֶת־הָאָרֶץ הַזֹּאת› (“to-seed-you/your set obj-marker
-# the-earth the-this”) — fact holds: to-zarakha-etten-obj-marker-the-earth-
-# the-this
+# ‹לְזַרְעֲךָ אֶתֵּן אֶת־הָאָרֶץ› (“to-seed-you/your set obj-marker the-
+# earth”)
+# ‹הַזֹּאת› (“the-this”)
+# — fact holds: to-zarakha-etten-obj-marker-the-earth-the-this
 m.fact("le_zarakha_etten_et_ha_aretz_ha_zot")
-# ‹וַיִּבֶן שָׁם מִזְבֵּחַ לַיהוָה הַנִּרְאֶה אֵלָיו› (“and-build there
-# altar to-YHWH the-see to-him/its”) — event: build — agent Abram; theme
-# altar-Shechem
+# ‹וַיִּבֶן שָׁם מִזְבֵּחַ› (“and-build there altar”)
+# ‹לַיהוָה הַנִּרְאֶה אֵלָיו› (“to-YHWH the-see to-him/its”)
+# — event: build — agent Abram; theme altar-Shechem
 m.event("build", agent="avram", themes=["mizbeach_shekhem"])
-# ‹מִזְבֵּחַ› (“altar”) — the world gains: altar-Shechem
+# ‹מִזְבֵּחַ› (“altar”)
+# — the world gains: altar-Shechem
 m.install("mizbeach_shekhem")
 
 # -------------------------- Gen.12.8 · THE_TENT_THE_SECOND_ALTAR_THE_NAME_CALLED -
-# וַיַּעְתֵּק מִשָּׁם הָהָרָה מִקֶּדֶם לְבֵית־אֵל וַיֵּט אָהֳלֹה בֵּית־אֵל
-# מִיָּם וְהָעַי מִקֶּדֶם וַיִּבֶן־שָׁם מִזְבֵּחַ לַיהוָה וַיִּקְרָא בְּשֵׁם
-# יְהוָה
+# ‹וַיַּעְתֵּק מִשָּׁם הָהָרָה› (“and-moved-on from-there the-mountain-
+# ward”)
+# ‹מִקֶּדֶם לְבֵית־אֵל וַיֵּט› (“from-the-east to Beth-el and-stretch”)
+# ‹אָהֳלֹה בֵּית־אֵל מִיָּם› (“tent-him/its Beth-el from-seas”)
+# ‹וְהָעַי מִקֶּדֶם וַיִּבֶן־שָׁם› (“and-the-Ai from-the-east and-build
+# there”)
+# ‹מִזְבֵּחַ לַיהוָה וַיִּקְרָא› (“altar to-YHWH and-call”)
+# ‹בְּשֵׁם יְהוָה› (“in-name YHWH”)
 # "And he removed from thence unto the mountain on the east of Beth-el, and
 # pitched his tent, having Beth-el on the west, and Ai on the east; and he
 # builded there an altar unto the LORD, and called upon the name of the
 # LORD."
 m.step("Gen.12.8")
-# ‹וַיַּעְתֵּק מִשָּׁם הָהָרָה מִקֶּדֶם לְבֵית־אֵל› (“and-moved-on from-
-# there the-mountain-ward from-the-east to Beth-el”) — event: move-on —
-# agent Abram
+# ‹וַיַּעְתֵּק מִשָּׁם הָהָרָה› (“and-moved-on from-there the-mountain-
+# ward”)
+# ‹מִקֶּדֶם לְבֵית־אֵל› (“from-the-east to Beth-el”)
+# — event: move-on — agent Abram
 m.event("move_on", agent="avram")
-# ‹וַיֵּט אָהֳלֹה בֵּית־אֵל מִיָּם וְהָעַי מִקֶּדֶם› (“and-stretch tent-
-# him/its Beth-el from-seas and-the-Ai from-the-east”) — event: pitch —
-# agent Abram; theme ohel
+# ‹וַיֵּט אָהֳלֹה בֵּית־אֵל› (“and-stretch tent-him/its Beth-el”)
+# ‹מִיָּם וְהָעַי מִקֶּדֶם› (“from-seas and-the-Ai from-the-east”)
+# — event: pitch — agent Abram; theme ohel
 m.event("pitch", agent="avram", themes=["ohel"])
-# ‹וַיִּבֶן־שָׁם מִזְבֵּחַ לַיהוָה› (“and-build there altar to-YHWH”) —
-# event: build — agent Abram; theme altar-beit-to
+# ‹וַיִּבֶן־שָׁם מִזְבֵּחַ לַיהוָה› (“and-build there altar to-YHWH”)
+# — event: build — agent Abram; theme altar-beit-to
 m.event("build", agent="avram", themes=["mizbeach_beit_el"])
-# ‹מִזְבֵּחַ› (“altar”) — the world gains: altar-beit-to
+# ‹מִזְבֵּחַ› (“altar”)
+# — the world gains: altar-beit-to
 m.install("mizbeach_beit_el")
-# ‹וַיִּקְרָא בְּשֵׁם יְהוָה› (“and-call in-name YHWH”) — event: call —
-# agent Abram; theme in-name-the-LORD
+# ‹וַיִּקְרָא בְּשֵׁם יְהוָה› (“and-call in-name YHWH”)
+# — event: call — agent Abram; theme in-name-the-LORD
 m.event("call", agent="avram", themes=["be_shem_YHWH"])
 # reads without prior install (flag, not fix): beit-to, the-ai
 m.presupposed("beit_el", "ha_ai")
@@ -205,11 +253,13 @@ m.witness_read("oholoh_final_heh", "her_tent_pitched_first",
                 cites=["Bereshit Rabbah 39:15"])
 
 # -------------------------- Gen.12.9 · THE_ROAD_SOUTH_STAYS_OPEN -----------
-# וַיִּסַּע אַבְרָם הָלוֹךְ וְנָסוֹעַ הַנֶּגְבָּה
+# ‹וַיִּסַּע אַבְרָם הָלוֹךְ› (“and-journey Abram walk/go”)
+# ‹וְנָסוֹעַ הַנֶּגְבָּה› (“and-journey the-south-ward”)
 # "And Abram journeyed, going on still toward the South."
 m.step("Gen.12.9")
-# ‹וַיִּסַּע אַבְרָם הָלוֹךְ וְנָסוֹעַ הַנֶּגְבָּה› (“and-journey Abram
-# walk/go and-journey the-south-ward”) — event: journey — agent Abram
+# ‹וַיִּסַּע אַבְרָם הָלוֹךְ› (“and-journey Abram walk/go”)
+# ‹וְנָסוֹעַ הַנֶּגְבָּה› (“and-journey the-south-ward”)
+# — event: journey — agent Abram
 m.event("journey", agent="avram")
 # reads without prior install (flag, not fix): the-negev
 m.presupposed("ha_negev")

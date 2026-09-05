@@ -14,27 +14,36 @@ from machine import Machine
 m = Machine("lev_21_priest_blemish")
 
 # -------------------------- Lev.21.16 · TREE_CLAIM -------------------------
-# וידבר יהוה … אל משה לאמר
-# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
-# claim from Hebrew arms. Lev 21:16."
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 21:16."
 m.step("Lev.21.16")
 
 # -------------------------- Lev.21.17 · ETNACHTA_SPLIT ---------------------
-# דבר אל אהרן לאמר … איש מזרעך לדרתם אשר יהיה בו מום לא יקרב להקריב לחם
-# אלהיו
-# "[EN-AID] From top split: LEFT «דבר אל אהרן לאמר» / RIGHT «איש מזרעך לדרתם
-# אשר יהיה בו מום לא יקרב להקריב לחם אלהיו». Derive claim from Hebrew arms.
-# Lev 21:17."
+# ‹דבר אל אהרן› (“speak to Aaron”)
+# ‹לאמר … איש מזרעך› (“to-say … man from-seed-you/your”)
+# ‹לדרתם אשר יהיה› (“to-generation-them/their which be”)
+# ‹בו מום לא› (“in-him/its stain not”)
+# ‹יקרב להקריב לחם› (“bring-near to-bring-near food”)
+# ‹אלהיו› (“God-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 21:17."
 m.step("Lev.21.17")
 # witness-tier presupposed read: age_ladder_and_service_census on
 # asher_yihyeh_bo_mum — read, not installed
 m.witness_read("asher_yihyeh_bo_mum", "age_ladder_and_service_census",
                 cites=["Sifra, Emor, Section 3 1", "Sifra, Emor, Section 3 2", "Sifra, Emor, Section 3 3", "Sifra, Emor, Section 3 4", "Sifra, Emor, Section 3 5", "Onkelos Lev 21:17"])
 
-# -------------------------- Lev.21.18 · COND_כי ----------------------------
-# כי כל איש אשר בו מום לא יקרב … איש עור או פסח או חרם או שרוע
-# "[EN-AID] From top split: LEFT «כי כל איש אשר בו מום לא יקרב» / RIGHT «איש
-# עור או פסח או חרם או שרוע». Derive claim from Hebrew arms. Lev 21:18."
+# -------------------------- Lev.21.18 · COND_כי (“that”) -------------------
+# ‹כי כל איש› (“that all man”)
+# ‹אשר בו מום› (“which in-him/its stain”)
+# ‹לא יקרב … איש› (“not bring-near … man”)
+# ‹עור או פסח› (“blind or lame”)
+# ‹או חרם או› (“or seclude or”)
+# ‹שרוע› (“prolong”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 21:18."
 m.step("Lev.21.18")
 # witness-tier presupposed read: the_first_blemish_row on iver_o_piseach —
 # read, not installed
@@ -42,9 +51,12 @@ m.witness_read("iver_o_piseach", "the_first_blemish_row",
                 cites=["Sifra, Emor, Section 3 6", "Sifra, Emor, Section 3 7", "Sifra, Emor, Section 3 8", "Sifra, Emor, Section 3 9", "Onkelos Lev 21:18"])
 
 # -------------------------- Lev.21.19 · ETNACHTA_SPLIT ---------------------
-# או איש אשר יהיה בו שבר רגל … או שבר יד
-# "[EN-AID] From top split: LEFT «או איש אשר יהיה בו שבר רגל» / RIGHT «או
-# שבר יד». Derive claim from Hebrew arms. Lev 21:19."
+# ‹או איש אשר› (“or man which”)
+# ‹יהיה בו שבר› (“be in-him/its fracture”)
+# ‹רגל … או שבר› (“foot … or fracture”)
+# ‹יד› (“hand”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 21:19."
 m.step("Lev.21.19")
 # witness-tier presupposed read: the_fracture_row on shever_regel_o_yad —
 # read, not installed
@@ -52,9 +64,13 @@ m.witness_read("shever_regel_o_yad", "the_fracture_row",
                 cites=["Sifra, Emor, Section 3 10", "Sifra, Emor, Section 3 11"])
 
 # -------------------------- Lev.21.20 · ETNACHTA_SPLIT ---------------------
-# או גבן או דק או תבלל בעינו … או גרב או ילפת או מרוח אשך
-# "[EN-AID] From top split: LEFT «או גבן או דק או תבלל בעינו» / RIGHT «או
-# גרב או ילפת או מרוח אשך». Derive claim from Hebrew arms. Lev 21:20."
+# ‹או גבן או› (“or hunch-backed or”)
+# ‹דק או תבלל› (“thin or cataract”)
+# ‹בעינו … או גרב› (“in-eye-him/its … or scurf”)
+# ‹או ילפת או› (“or scurf or”)
+# ‹מרוח אשך› (“bruised testicle”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 21:20."
 m.step("Lev.21.20")
 # witness-tier presupposed read: eye_and_skin_row_onkelos_rulings on
 # giben_dak_tevalul — read, not installed
@@ -62,11 +78,16 @@ m.witness_read("giben_dak_tevalul", "eye_and_skin_row_onkelos_rulings",
                 cites=["Sifra, Emor, Section 3 12", "Sifra, Emor, Section 3 13", "Sifra, Emor, Section 3 14", "Sifra, Emor, Section 3 15", "Onkelos Lev 21:20"])
 
 # -------------------------- Lev.21.21 · ETNACHTA_SPLIT ---------------------
-# כל איש אשר בו מום מזרע אהרן הכהן לא יגש להקריב את אשי יהוה … מום בו את לחם
-# אלהיו לא יגש להקריב
-# "[EN-AID] From top split: LEFT «כל איש אשר בו מום מזרע אהרן הכהן לא יגש
-# להקריב את אשי יהוה» / RIGHT «מום בו את לחם אלהיו לא יגש להקריב». Derive
-# claim from Hebrew arms. Lev 21:21."
+# ‹כל איש אשר› (“all man which”)
+# ‹בו מום מזרע› (“in-him/its stain from-seed”)
+# ‹אהרן הכהן לא› (“Aaron the-priest not”)
+# ‹יגש להקריב את› (“be to-bring-near obj-marker”)
+# ‹אשי יהוה … מום› (“fire-offering YHWH … stain”)
+# ‹בו את לחם› (“in-him/its obj-marker food”)
+# ‹אלהיו לא יגש› (“God-him/its not be”)
+# ‹להקריב› (“to-bring-near”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 21:21."
 m.step("Lev.21.21")
 # witness-tier presupposed read: man_beast_difference_table on
 # kol_ish_asher_bo_mum — read, not installed
@@ -74,9 +95,11 @@ m.witness_read("kol_ish_asher_bo_mum", "man_beast_difference_table",
                 cites=["Sifra, Emor, Chapter 3 1", "Sifra, Emor, Chapter 3 2", "Sifra, Emor, Chapter 3 3", "Sifra, Emor, Chapter 3 4", "Sifra, Emor, Chapter 3 5", "Sifra, Emor, Chapter 3 6", "Sifra, Emor, Chapter 3 7"])
 
 # -------------------------- Lev.21.22 · ETNACHTA_SPLIT ---------------------
-# לחם אלהיו מקדשי הקדשים … ומן הקדשים יאכל
-# "[EN-AID] From top split: LEFT «לחם אלהיו מקדשי הקדשים» / RIGHT «ומן
-# הקדשים יאכל». Derive claim from Hebrew arms. Lev 21:22."
+# ‹לחם אלהיו מקדשי› (“food God-him/its from-holiness”)
+# ‹הקדשים … ומן הקדשים› (“the-holiness … and-from the-holiness”)
+# ‹יאכל› (“eat”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 21:22."
 m.step("Lev.21.22")
 # witness-tier presupposed read: the_blemished_eat_everything on
 # lechem_elohav_yochel — read, not installed
@@ -84,11 +107,15 @@ m.witness_read("lechem_elohav_yochel", "the_blemished_eat_everything",
                 cites=["Sifra, Emor, Chapter 3 8", "Sifra, Emor, Chapter 3 9", "Onkelos Lev 21:22"])
 
 # -------------------------- Lev.21.23 · ETNACHTA_SPLIT ---------------------
-# אך אל הפרכת לא יבא ואל המזבח לא יגש כי מום בו … ולא יחלל את מקדשי כי אני
-# יהוה מקדשם
-# "[EN-AID] From top split: LEFT «אך אל הפרכת לא יבא ואל המזבח לא יגש כי מום
-# בו» / RIGHT «ולא יחלל את מקדשי כי אני יהוה מקדשם». Derive claim from
-# Hebrew arms. Lev 21:23."
+# ‹אך אל הפרכת› (“indeed to the-separatrix”)
+# ‹לא יבא ואל› (“not come/bring and-to”)
+# ‹המזבח לא יגש› (“the-altar not be”)
+# ‹כי מום בו› (“that stain in-him/its”)
+# ‹… ולא יחלל את› (“and-not bore obj-marker”)
+# ‹מקדשי כי אני› (“consecrated-thing-me/my that”)
+# ‹יהוה מקדשם› (“YHWH sanctify-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 21:23."
 m.step("Lev.21.23")
 # witness-tier presupposed read: entry_hierarchy_and_transmission_chain on
 # ach_el_haparochet — read, not installed
@@ -96,9 +123,12 @@ m.witness_read("ach_el_haparochet", "entry_hierarchy_and_transmission_chain",
                 cites=["Sifra, Emor, Chapter 3 10", "Sifra, Emor, Chapter 3 11", "Sifra, Emor, Chapter 3 12", "Onkelos Lev 21:23"])
 
 # -------------------------- Lev.21.24 · ETNACHTA_SPLIT ---------------------
-# וידבר משה אל אהרן ואל בניו … ואל כל בני ישראל
-# "[EN-AID] From top split: LEFT «וידבר משה אל אהרן ואל בניו» / RIGHT «ואל
-# כל בני ישראל». Derive claim from Hebrew arms. Lev 21:24."
+# ‹וידבר משה אל› (“and-speak Moses to”)
+# ‹אהרן ואל בניו› (“Aaron and-to son-him/its”)
+# ‹… ואל כל בני› (“and-to all son”)
+# ‹ישראל› (“Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 21:24."
 m.step("Lev.21.24")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

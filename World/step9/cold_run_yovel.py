@@ -616,6 +616,58 @@ NAMED_FENCES = cell(['advance', 'after', 'words'], A, 'Rabban Gamliel\'s advance
                     'R. Shimon\'s interest of words (Mishnah Bava Metzia 5:10) — the fence\'s three named '
                     'outer classes, no ink beneath', ['interest_barred'])
 
+
+# ---- REVIEW_BEHAR items 4 and 5 (sitting B, 2026-09-05) ---------------
+def support_duty(state):
+    """Lev 25:35 — 'when your brother becomes poor and his hand falters with
+    you, you shall STRENGTHEN him' — the obligation entry on the kinsman."""
+    if state == 'faltering':
+        return cell('uphold_before_he_falls', M,
+                    'INK: והחזקת בו (and you shall strengthen him, 25:35) — the duty; '
+                    'its TIMING is the Sifra\'s: like a load on a donkey — while it is still '
+                    'in place one man holds it up, fallen to the ground five cannot raise it '
+                    '(Sifra Behar Section 5 1)', ['supports_kinsman'])
+    if state == 'supported_four_or_five_times':
+        return cell('support_again', I,
+                    'והחזקת בו — the verb bears no count; the Sifra reads the repeat off it: '
+                    '"even four or five times, support again" (Section 5 1)', ['supports_kinsman'])
+    if state == 'your_life_against_his':
+        return cell('your_life_first', M,
+                    'וחי עמך (that he live WITH you, 25:35-36) — "your life comes first" '
+                    '(Sifra Behar Section 5 1)', [FX.NONE])
+    return cell('no_duty_stated', I, 'no faltering hand in the case', [FX.NONE])
+
+
+def sale_manner(manner):
+    """Lev 25:42 — 'they shall not be sold as a slave is sold' — the market form."""
+    if manner in ('auction_stone', 'alley_stand'):
+        return cell('barred', M,
+                    'INK: לא ימכרו ממכרת עבד (they shall not be sold as slaves are sold, 25:42) '
+                    '— the ban; the FORM it names is the Sifra\'s: "not stood in the alley nor '
+                    'on the auction stone" (Sifra Behar Section 6 1); Onkelos keeps the noun '
+                    'of a slave-sale', ['barred_from_it'])
+    return cell('permitted', I, 'a private sale is not the slave-market\'s form', [FX.NONE])
+
+
+def rigor_visibility(where):
+    """Lev 25:53 — 'he shall not rule over him with rigor IN YOUR SIGHT' —
+    the visibility bound on the bystander's duty."""
+    if where == 'in_your_sight':
+        return cell('you_are_commanded', I,
+                    'לא ירדנו בפרך לעיניך (he shall not rule him with rigor in your sight, 25:53) '
+                    '— the bystander\'s duty runs where he sees', ['barred_from_it'])
+    if where == 'inside_his_house':
+        return cell('not_commanded', M,
+                    '"could he enter his house to know what he does to him? the verse says IN '
+                    'YOUR SIGHT — you are commanded only in your sight" (Sifra Behar Chapter 8 8)',
+                    ['exempt'])
+    return cell('no_case', I, '', [FX.NONE])
+
+
+SUPPORT = {s: support_duty(s) for s in ('faltering', 'supported_four_or_five_times', 'your_life_against_his')}
+SALE = {m: sale_manner(m) for m in ('auction_stone', 'private')}
+RIGOR = {w: rigor_visibility(w) for w in ('in_your_sight', 'inside_his_house')}
+
 SHEET = [
     ('Rosh Hashanah 1:1', 'rosh_hashanah', 1, 1, 'וליובלות'),
     ('Kiddushin 1:2', 'kiddushin', 1, 2, 'וביובל'),
@@ -657,6 +709,9 @@ SHEET = [
     ('Bava Metzia 5:10', 'bava_metzia', 5, 10, 'מקדמת'),
 ]
 SHEET2 = [   # the Sifra and Talmud rows the sabbatical cells cite, verified in their own ink
+    ('sifra', 'Behar', 'Section 5', 1, 'והחזקת'),   # sitting B: the falling load — 'strengthen him'
+    ('sifra', 'Behar', 'Section 6', 1, 'ממכרת'),    # sitting B: not sold as slaves are sold — the auction stone
+    ('sifra', 'Behar', 'Chapter 8', 8, 'לעיניך'),   # sitting B: in your sight — you are commanded only in your sight
     ('sifra', 'Behar', 'Chapter 1', 3, 'הבוצרים'),
     ('sifra', 'Behar', 'Chapter 1', 6, 'לאכלה'),
     ('sifra', 'Behar', 'Chapter 1', 9, 'לסוריא'),
@@ -807,49 +862,65 @@ TESTS = [
  ('Bava Metzia 5:6 / Deut 23:21 — the foreigner: permitted (import edge)', IS_F, 'permitted'),
  ('Bava Metzia 5:2 — increase on rent, not on sale [ANSWER-SHEET]', RENT_SALE, 'increase_on_rent_not_sale'),
  ('Bava Metzia 5:10 — the three named fences [ANSWER-SHEET]', NAMED_FENCES, ['advance', 'after', 'words']),
+ # ---- REVIEW_BEHAR items 4 and 5 (sitting B, 2026-09-05): the Sifra's own case rows
+ ('Sifra Behar Section 5 1 — the faltering hand: hold him up BEFORE he falls', SUPPORT['faltering'],
+  'uphold_before_he_falls'),
+ ('Sifra Behar Section 5 1 — supported four or five times: support again',
+  SUPPORT['supported_four_or_five_times'], 'support_again'),
+ ('Sifra Behar Section 5 1 — "that he live with you": your life comes first',
+  SUPPORT['your_life_against_his'], 'your_life_first'),
+ ('Sifra Behar Section 6 1 — not stood in the alley nor on the auction stone', SALE['auction_stone'],
+  'barred'),
+ ('Sifra Behar Chapter 8 8 — rigor in your sight: you are commanded', RIGOR['in_your_sight'],
+  'you_are_commanded'),
+ ('Sifra Behar Chapter 8 8 — inside his house: not commanded', RIGOR['inside_his_house'],
+  'not_commanded'),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------
-print()
-ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0}
-for name, c, want in TESTS:
-    hit = c['v'] == want
-    ok += hit
-    frac[c['p']] += 1
-    print('%s %-76s [%s] %s' % ('OK ' if hit else 'MISS', name[:76], c['p'],
-                                '' if hit else 'got=%r' % (c['v'],)))
-    print('     effects: %s' % ', '.join(c['fx']))
-n = len(TESTS)
-assert n == GUARDED, (n, GUARDED)
-print()
-print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
-print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · '
-      'answer-sheet %d/%d · data %d/%d' % (
-      frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n,
-      frac[A], n, frac[D], n))
-print('computed, not graded: the release day is Yom Kippur of the fiftieth '
-      '(INK); the precondition is all inhabitants on the land (INK) and the '
-      'cessation is the tribes\' exile (MOVE); the gentile slave forever '
-      '(INK); the sela is twenty gerah (INK); the field\'s fifth (INK); the '
-      'unredeemed field to the priest at the Jubilee (INK); the field owed '
-      'over a full cycle = %s' % FV['owed']['v'])
-print('the sabbatical year extended 2026-09-05 (REVIEW_BEHAR item 2): %d cells graded against '
-      'Mishnah Sheviit, Bekhorot 9, Arakhin 8, Bava Metzia 5 and the Sifra/Talmud rows the seats '
-      'cite; the tithe naming machine written' % (n - 33))
-print('effects: every cell carries REGISTERED effects — four discovered in '
-      'this span\'s own verbs: returns_to_holding (TRANSFER), '
-      'sold_in_perpetuity, redemption_right, interest_barred [effects law '
-      'satisfied]')
-if ok == n:
+# Guarded so tithe_naming() IMPORTS COLD — cold_run_temurah.py CALLS it for the
+# animal tithe's naming cells (sitting B, 2026-09-05; the first-call standard).
+if __name__ == '__main__':
     print()
-    print('THE JUBILEE ENGINE STANDS — the cycle\'s product read off the '
-          'verse that states it, the return verbs censused, the harvest-year '
-          'pricing and the surplus computed from the ink, the four house '
-          'classes by their own clauses, the two interest nouns, the Hebrew '
-          'slave\'s hireling status with his Jubilee exit and hireling-days '
-          'redemption, the valuation table by bracket with the boundary year '
-          'counting below, and the field\'s fifty per homer deducted by the '
-          'years to a sela and a pundion.')
-else:
-    sys.exit('MISSES REMAIN — consult the Talmud per gap and recompile.')
+    ok = 0
+    frac = {I: 0, M: 0, A: 0, D: 0}
+    for name, c, want in TESTS:
+        hit = c['v'] == want
+        ok += hit
+        frac[c['p']] += 1
+        print('%s %-76s [%s] %s' % ('OK ' if hit else 'MISS', name[:76], c['p'],
+                                    '' if hit else 'got=%r' % (c['v'],)))
+        print('     effects: %s' % ', '.join(c['fx']))
+    n = len(TESTS)
+    assert n == GUARDED, (n, GUARDED)
+    print()
+    print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
+    print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · '
+          'answer-sheet %d/%d · data %d/%d' % (
+          frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n,
+          frac[A], n, frac[D], n))
+    print('computed, not graded: the release day is Yom Kippur of the fiftieth '
+          '(INK); the precondition is all inhabitants on the land (INK) and the '
+          'cessation is the tribes\' exile (MOVE); the gentile slave forever '
+          '(INK); the sela is twenty gerah (INK); the field\'s fifth (INK); the '
+          'unredeemed field to the priest at the Jubilee (INK); the field owed '
+          'over a full cycle = %s' % FV['owed']['v'])
+    print('the sabbatical year extended 2026-09-05 (REVIEW_BEHAR item 2): %d cells graded against '
+          'Mishnah Sheviit, Bekhorot 9, Arakhin 8, Bava Metzia 5 and the Sifra/Talmud rows the seats '
+          'cite; the tithe naming machine written' % (n - 33))
+    print('effects: every cell carries REGISTERED effects — four discovered in '
+          'this span\'s own verbs: returns_to_holding (TRANSFER), '
+          'sold_in_perpetuity, redemption_right, interest_barred [effects law '
+          'satisfied]')
+    if ok == n:
+        print()
+        print('THE JUBILEE ENGINE STANDS — the cycle\'s product read off the '
+              'verse that states it, the return verbs censused, the harvest-year '
+              'pricing and the surplus computed from the ink, the four house '
+              'classes by their own clauses, the two interest nouns, the Hebrew '
+              'slave\'s hireling status with his Jubilee exit and hireling-days '
+              'redemption, the valuation table by bracket with the boundary year '
+              'counting below, and the field\'s fifty per homer deducted by the '
+              'years to a sela and a pundion.')
+    else:
+        sys.exit('MISSES REMAIN — consult the Talmud per gap and recompile.')

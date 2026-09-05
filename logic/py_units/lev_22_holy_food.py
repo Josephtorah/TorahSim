@@ -14,17 +14,22 @@ from machine import Machine
 m = Machine("lev_22_holy_food")
 
 # -------------------------- Lev.22.1 · TREE_CLAIM --------------------------
-# וידבר יהוה … אל משה לאמר
-# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
-# claim from Hebrew arms. Lev 22:1."
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:1."
 m.step("Lev.22.1")
 
 # -------------------------- Lev.22.2 · ETNACHTA_SPLIT ----------------------
-# דבר אל אהרן ואל בניו וינזרו מקדשי בני ישראל ולא יחללו את שם  … אשר הם
-# מקדשים לי אני יהוה
-# "[EN-AID] From top split: LEFT «דבר אל אהרן ואל בניו וינזרו מקדשי בני
-# ישראל ולא יחללו את שם קדשי» / RIGHT «אשר הם מקדשים לי אני יהוה». Derive
-# claim from Hebrew arms. Lev 22:2."
+# ‹דבר אל אהרן› (“speak to Aaron”)
+# ‹ואל בניו וינזרו› (“and-to son-him/its and-hold-aloof”)
+# ‹מקדשי בני ישראל› (“from-holiness son Israel”)
+# ‹ולא יחללו את› (“and-not bore obj-marker”)
+# ‹שם … אשר הם› (“name … which they”)
+# ‹מקדשים לי אני› (“sanctify to-me/my”)
+# ‹יהוה› (“YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:2."
 m.step("Lev.22.2")
 # witness-tier presupposed read: separation_and_the_triple_import on
 # veyinazru — read, not installed
@@ -32,11 +37,15 @@ m.witness_read("veyinazru", "separation_and_the_triple_import",
                 cites=["Sifra, Emor, Section 4 1", "Sifra, Emor, Section 4 2", "Sifra, Emor, Section 4 3", "Sifra, Emor, Section 4 4", "Onkelos Lev 22:2"])
 
 # -------------------------- Lev.22.3 · ETNACHTA_SPLIT ----------------------
-# אמר אלהם לדרתיכם כל איש אשר יקרב מכל זרעכם אל הקדשים אשר יקד … ונכרתה הנפש
-# ההוא מלפני אני יהוה
-# "[EN-AID] From top split: LEFT «אמר אלהם לדרתיכם כל איש אשר יקרב מכל זרעכם
-# אל הקדשים אשר יקדישו בני ישראל ליהוה » / RIGHT «ונכרתה הנפש ההוא מלפני אני
-# יהוה». Derive claim from Hebrew arms. Lev 22:3."
+# ‹אמר אלהם לדרתיכם› (“say to-them/their to-generation-you/your(pl)”)
+# ‹כל איש אשר› (“all man which”)
+# ‹יקרב מכל זרעכם› (“bring-near from-all seed-you/your(pl)”)
+# ‹אל הקדשים אשר› (“to the-holiness which”)
+# ‹יקד … ונכרתה הנפש› (“? … and-cut the-living-being”)
+# ‹ההוא מלפני אני› (“that from-to-face-me/my”)
+# ‹יהוה› (“YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:3."
 m.step("Lev.22.3")
 # witness-tier presupposed read: karet_extension_and_readiness_threshold on
 # asher_yikrav_vetumato_alav — read, not installed
@@ -44,11 +53,17 @@ m.witness_read("asher_yikrav_vetumato_alav", "karet_extension_and_readiness_thre
                 cites=["Sifra, Emor, Section 4 5", "Sifra, Emor, Section 4 6", "Sifra, Emor, Section 4 7", "Sifra, Emor, Section 4 8", "Onkelos Lev 22:3"])
 
 # -------------------------- Lev.22.4 · ETNACHTA_SPLIT ----------------------
-# איש איש מזרע אהרן והוא צרוע או זב בקדשים לא יאכל עד אשר יטהר … והנגע בכל
-# טמא נפש או איש אשר תצא ממנו שכבת זרע
-# "[EN-AID] From top split: LEFT «איש איש מזרע אהרן והוא צרוע או זב בקדשים
-# לא יאכל עד אשר יטהר» / RIGHT «והנגע בכל טמא נפש או איש אשר תצא ממנו שכבת
-# זרע». Derive claim from Hebrew arms. Lev 22:4."
+# ‹איש איש מזרע› (“man man from-seed”)
+# ‹אהרן והוא צרוע› (“Aaron and-he/it scourge”)
+# ‹או זב בקדשים› (“or flow-freely in-holiness”)
+# ‹לא יאכל עד› (“not eat until”)
+# ‹אשר יטהר … והנגע› (“which be-pure … and-the-touch”)
+# ‹בכל טמא נפש› (“in-all foul-in-a-religious-sense living-being”)
+# ‹או איש אשר› (“or man which”)
+# ‹תצא ממנו שכבת› (“bring-forth from-us/our lying-down”)
+# ‹זרע› (“seed”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:4."
 m.step("Lev.22.4")
 # witness-tier presupposed read: the_impurity_measures_census on
 # tzarua_o_zav — read, not installed
@@ -56,17 +71,25 @@ m.witness_read("tzarua_o_zav", "the_impurity_measures_census",
                 cites=["Sifra, Emor, Chapter 4 1", "Sifra, Emor, Chapter 4 2", "Sifra, Emor, Chapter 4 3", "Sifra, Emor, Chapter 4 4", "Onkelos Lev 22:4"])
 
 # -------------------------- Lev.22.5 · ETNACHTA_SPLIT ----------------------
-# או איש אשר יגע בכל שרץ אשר יטמא לו … או באדם אשר יטמא לו לכל טמאתו
-# "[EN-AID] From top split: LEFT «או איש אשר יגע בכל שרץ אשר יטמא לו» /
-# RIGHT «או באדם אשר יטמא לו לכל טמאתו». Derive claim from Hebrew arms. Lev
-# 22:5."
+# ‹או איש אשר› (“or man which”)
+# ‹יגע בכל שרץ› (“touch in-all swarming-creature”)
+# ‹אשר יטמא לו› (“which be-foul to-him/its”)
+# ‹… או באדם אשר› (“or in-human which”)
+# ‹יטמא לו לכל› (“be-foul to-him/its to-all”)
+# ‹טמאתו› (“religious-impurity-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:5."
 m.step("Lev.22.5")
 
 # -------------------------- Lev.22.6 · ETNACHTA_SPLIT ----------------------
-# נפש אשר תגע בו וטמאה עד הערב … ולא יאכל מן הקדשים כי אם רחץ בשרו במים
-# "[EN-AID] From top split: LEFT «נפש אשר תגע בו וטמאה עד הערב» / RIGHT «ולא
-# יאכל מן הקדשים כי אם רחץ בשרו במים». Derive claim from Hebrew arms. Lev
-# 22:6."
+# ‹נפש אשר תגע› (“living-being which touch”)
+# ‹בו וטמאה עד› (“in-him/its and-be-foul until”)
+# ‹הערב … ולא יאכל› (“the-evening … and-not eat”)
+# ‹מן הקדשים כי› (“from the-holiness very-widely-used-as-a-relati”)
+# ‹אם רחץ בשרו› (“as-demonstrative lave flesh-him/its”)
+# ‹במים› (“in-waters”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:6."
 m.step("Lev.22.6")
 # witness-tier presupposed read: mixture_grid_and_two_gates on
 # nefesh_asher_tiga_bo — read, not installed
@@ -74,15 +97,20 @@ m.witness_read("nefesh_asher_tiga_bo", "mixture_grid_and_two_gates",
                 cites=["Sifra, Emor, Chapter 4 5", "Sifra, Emor, Chapter 4 6", "Sifra, Emor, Chapter 4 7", "Sifra, Emor, Chapter 4 8", "Sifra, Emor, Chapter 4 9", "Sifra, Emor, Chapter 4 10", "Sifra, Emor, Chapter 4 11", "Onkelos Lev 22:7"])
 
 # -------------------------- Lev.22.7 · ETNACHTA_SPLIT ----------------------
-# ובא השמש וטהר … ואחר יאכל מן הקדשים כי לחמו הוא
-# "[EN-AID] From top split: LEFT «ובא השמש וטהר» / RIGHT «ואחר יאכל מן
-# הקדשים כי לחמו הוא». Derive claim from Hebrew arms. Lev 22:7."
+# ‹ובא השמש וטהר› (“and-come/bring the-sun and-be-pure”)
+# ‹… ואחר יאכל מן› (“and-after eat from”)
+# ‹הקדשים כי לחמו› (“the-holiness that food-him/its”)
+# ‹הוא› (“he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:7."
 m.step("Lev.22.7")
 
 # -------------------------- Lev.22.8 · ETNACHTA_SPLIT ----------------------
-# נבלה וטרפה לא יאכל לטמאה בה … אני יהוה
-# "[EN-AID] From top split: LEFT «נבלה וטרפה לא יאכל לטמאה בה» / RIGHT «אני
-# יהוה». Derive claim from Hebrew arms. Lev 22:8."
+# ‹נבלה וטרפה לא› (“flabby-thing and-prey not”)
+# ‹יאכל לטמאה בה› (“eat to-be-foul in-her/its”)
+# ‹… אני יהוה› (“YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:8."
 m.step("Lev.22.8")
 # witness-tier presupposed read: gullet_carve_and_the_courts_charge on
 # nevelah_utrefah_lo_yochal — read, not installed
@@ -90,59 +118,78 @@ m.witness_read("nevelah_utrefah_lo_yochal", "gullet_carve_and_the_courts_charge"
                 cites=["Sifra, Emor, Chapter 4 12", "Sifra, Emor, Chapter 4 13", "Sifra, Emor, Chapter 4 14", "Sifra, Emor, Chapter 4 15", "Onkelos Lev 22:9"])
 
 # -------------------------- Lev.22.9 · ETNACHTA_SPLIT ----------------------
-# ושמרו את משמרתי ולא ישאו עליו חטא ומתו בו כי יחללהו … אני יהוה מקדשם
-# "[EN-AID] From top split: LEFT «ושמרו את משמרתי ולא ישאו עליו חטא ומתו בו
-# כי יחללהו» / RIGHT «אני יהוה מקדשם». Derive claim from Hebrew arms. Lev
-# 22:9."
+# ‹ושמרו את משמרתי› (“and-keep/guard obj-marker watch-me/my”)
+# ‹ולא ישאו עליו› (“and-not lift/carry over-him/its”)
+# ‹חטא ומתו בו› (“crime and-die in-him/its”)
+# ‹כי יחללהו … אני› (“that bore-him/its … ”)
+# ‹יהוה מקדשם› (“YHWH sanctify-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:9."
 m.step("Lev.22.9")
 
 # -------------------------- Lev.22.10 · ETNACHTA_SPLIT ---------------------
-# וכל זר לא יאכל קדש … תושב כהן ושכיר לא יאכל קדש
-# "[EN-AID] From top split: LEFT «וכל זר לא יאכל קדש» / RIGHT «תושב כהן
-# ושכיר לא יאכל קדש». Derive claim from Hebrew arms. Lev 22:10."
+# ‹וכל זר לא› (“and-all turn-aside not”)
+# ‹יאכל קדש … תושב› (“eat holiness … resident-alien”)
+# ‹כהן ושכיר לא› (“priest and-man-at-wages-by-the-day not”)
+# ‹יאכל קדש› (“eat holiness”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:10."
 m.step("Lev.22.10")
 # witness-tier presupposed read: the_stranger_and_the_uncircumcised on
 # kol_zar_toshav_vesachir — read, not installed
 m.witness_read("kol_zar_toshav_vesachir", "the_stranger_and_the_uncircumcised",
                 cites=["Sifra, Emor, Chapter 4 16", "Sifra, Emor, Chapter 4 17", "Sifra, Emor, Chapter 4 18", "Onkelos Lev 22:10"])
 
-# -------------------------- Lev.22.11 · COND_כי ----------------------------
-# וכהן כי יקנה נפש קנין כספו הוא יאכל בו … ויליד ביתו הם יאכלו בלחמו
-# "[EN-AID] From top split: LEFT «וכהן כי יקנה נפש קנין כספו הוא יאכל בו» /
-# RIGHT «ויליד ביתו הם יאכלו בלחמו». Derive claim from Hebrew arms. Lev
-# 22:11."
+# -------------------------- Lev.22.11 · COND_כי (“that”) -------------------
+# ‹וכהן כי יקנה› (“and-priest that possessor”)
+# ‹נפש קנין כספו› (“living-being creation silver-him/its”)
+# ‹הוא יאכל בו› (“he/it eat in-him/its”)
+# ‹… ויליד ביתו הם› (“and-born house-him/its they”)
+# ‹יאכלו בלחמו› (“eat in-food-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:11."
 m.step("Lev.22.11")
 # witness-tier presupposed read: the_household_feeder on
 # kinyan_kaspo_yelid_beito — read, not installed
 m.witness_read("kinyan_kaspo_yelid_beito", "the_household_feeder",
                 cites=["Sifra, Emor, Section 5 1", "Sifra, Emor, Section 5 2", "Sifra, Emor, Section 5 3", "Sifra, Emor, Section 5 4", "Sifra, Emor, Section 5 5", "Sifra, Emor, Section 5 6"])
 
-# -------------------------- Lev.22.12 · COND_כי ----------------------------
-# ובת כהן כי תהיה לאיש זר … הוא בתרומת הקדשים לא תאכל
-# "[EN-AID] From top split: LEFT «ובת כהן כי תהיה לאיש זר» / RIGHT «הוא
-# בתרומת הקדשים לא תאכל». Derive claim from Hebrew arms. Lev 22:12."
+# -------------------------- Lev.22.12 · COND_כי (“that”) -------------------
+# ‹ובת כהן כי› (“and-daughter priest that”)
+# ‹תהיה לאיש זר› (“be to-man turn-aside”)
+# ‹… הוא בתרומת הקדשים› (“he/it in-present the-holiness”)
+# ‹לא תאכל› (“not eat”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:12."
 m.step("Lev.22.12")
 # witness-tier presupposed read: the_daughter_to_a_stranger on
 # bat_kohen_leish_zar — read, not installed
 m.witness_read("bat_kohen_leish_zar", "the_daughter_to_a_stranger",
                 cites=["Sifra, Emor, Section 5 7", "Sifra, Emor, Section 5 8", "Sifra, Emor, Section 5 9", "Sifra, Emor, Section 5 10", "Sifra, Emor, Section 6 1", "Onkelos Lev 22:12"])
 
-# -------------------------- Lev.22.13 · COND_כי ----------------------------
-# ובת כהן כי תהיה אלמנה וגרושה וזרע אין לה ושבה אל בית אביה כנ … וכל זר לא
-# יאכל בו
-# "[EN-AID] From top split: LEFT «ובת כהן כי תהיה אלמנה וגרושה וזרע אין לה
-# ושבה אל בית אביה כנעוריה מלחם אביה תאכל» / RIGHT «וכל זר לא יאכל בו».
-# Derive claim from Hebrew arms. Lev 22:13."
+# -------------------------- Lev.22.13 · COND_כי (“that”) -------------------
+# ‹ובת כהן כי› (“and-daughter priest that”)
+# ‹תהיה אלמנה וגרושה› (“be widow and-drive-out-from-a-possession”)
+# ‹וזרע אין לה› (“and-seed there-is-not to-her/its”)
+# ‹ושבה אל בית› (“and-return to house”)
+# ‹אביה כנ … וכל› (“father-her/its ? … and-all”)
+# ‹זר לא יאכל› (“turn-aside not eat”)
+# ‹בו› (“in-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:13."
 m.step("Lev.22.13")
 # witness-tier presupposed read: the_return_and_the_seeds_seed on
 # veshavah_el_beit_aviha — read, not installed
 m.witness_read("veshavah_el_beit_aviha", "the_return_and_the_seeds_seed",
                 cites=["Sifra, Emor, Chapter 5 1", "Sifra, Emor, Chapter 5 2", "Sifra, Emor, Chapter 5 3", "Sifra, Emor, Chapter 5 4", "Sifra, Emor, Chapter 5 5", "Sifra, Emor, Chapter 6 1", "Onkelos Lev 22:13"])
 
-# -------------------------- Lev.22.14 · COND_כי ----------------------------
-# ואיש כי יאכל קדש בשגגה … ויסף חמשיתו עליו ונתן לכהן את הקדש
-# "[EN-AID] From top split: LEFT «ואיש כי יאכל קדש בשגגה» / RIGHT «ויסף
-# חמשיתו עליו ונתן לכהן את הקדש». Derive claim from Hebrew arms. Lev 22:14."
+# -------------------------- Lev.22.14 · COND_כי (“that”) -------------------
+# ‹ואיש כי יאכל› (“and-man that eat”)
+# ‹קדש בשגגה … ויסף› (“holiness in-mistake … and-add”)
+# ‹חמשיתו עליו ונתן› (“fifth-him/its over-him/its and-set”)
+# ‹לכהן את הקדש› (“to-priest obj-marker the-holiness”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:14."
 m.step("Lev.22.14")
 # witness-tier presupposed read: the_fifths_algebra on veyasaf_chamishito —
 # read, not installed
@@ -150,9 +197,12 @@ m.witness_read("veyasaf_chamishito", "the_fifths_algebra",
                 cites=["Sifra, Emor, Chapter 6 2", "Sifra, Emor, Chapter 6 3", "Sifra, Emor, Chapter 6 4", "Sifra, Emor, Chapter 6 5", "Sifra, Emor, Chapter 6 6", "Sifra, Emor, Chapter 6 7", "Onkelos Lev 22:14"])
 
 # -------------------------- Lev.22.15 · ETNACHTA_SPLIT ---------------------
-# ולא יחללו את קדשי בני ישראל … את אשר ירימו ליהוה
-# "[EN-AID] From top split: LEFT «ולא יחללו את קדשי בני ישראל» / RIGHT «את
-# אשר ירימו ליהוה». Derive claim from Hebrew arms. Lev 22:15."
+# ‹ולא יחללו את› (“and-not bore obj-marker”)
+# ‹קדשי בני ישראל› (“holiness son Israel”)
+# ‹… את אשר ירימו› (“obj-marker which rise-high”)
+# ‹ליהוה› (“to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:15."
 m.step("Lev.22.15")
 # witness-tier presupposed read: the_profaners_and_onkelos_condition on
 # velo_yechalelu — read, not installed
@@ -160,9 +210,12 @@ m.witness_read("velo_yechalelu", "the_profaners_and_onkelos_condition",
                 cites=["Sifra, Emor, Chapter 6 8", "Sifra, Emor, Chapter 6 9", "Sifra, Emor, Chapter 6 10", "Onkelos Lev 22:16"])
 
 # -------------------------- Lev.22.16 · ETNACHTA_SPLIT ---------------------
-# והשיאו אותם עון אשמה באכלם את קדשיהם … כי אני יהוה מקדשם
-# "[EN-AID] From top split: LEFT «והשיאו אותם עון אשמה באכלם את קדשיהם» /
-# RIGHT «כי אני יהוה מקדשם». Derive claim from Hebrew arms. Lev 22:16."
+# ‹והשיאו אותם עון› (“and-lift/carry obj-marker-them/their perversity”)
+# ‹אשמה באכלם את› (“guiltiness in-eat-them/their obj-marker”)
+# ‹קדשיהם … כי אני› (“holiness-them/their … that”)
+# ‹יהוה מקדשם› (“YHWH sanctify-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 22:16."
 m.step("Lev.22.16")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

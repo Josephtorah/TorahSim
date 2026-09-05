@@ -14,17 +14,22 @@ from machine import Machine
 m = Machine("lev_08_milluim")
 
 # -------------------------- Lev.8.1 · TREE_CLAIM ---------------------------
-# וידבר יהוה … אל משה לאמר
-# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
-# claim from Hebrew arms. Lev 8:1."
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:1."
 m.step("Lev.8.1")
 
 # -------------------------- Lev.8.2 · ETNACHTA_SPLIT -----------------------
-# קח את אהרן ואת בניו אתו ואת הבגדים ואת שמן המשחה … ואת פר החטאת ואת שני
-# האילים ואת סל המצות
-# "[EN-AID] From top split: LEFT «קח את אהרן ואת בניו אתו ואת הבגדים ואת שמן
-# המשחה» / RIGHT «ואת פר החטאת ואת שני האילים ואת סל המצות». Derive claim
-# from Hebrew arms. Lev 8:2."
+# ‹קח את אהרן› (“take obj-marker Aaron”)
+# ‹ואת בניו אתו› (“and-obj-marker son-him/its with-him/its”)
+# ‹ואת הבגדים ואת› (“and-obj-marker the-garment and-obj-marker”)
+# ‹שמן המשחה … ואת› (“oil the-unction … and-obj-marker”)
+# ‹פר החטאת ואת› (“bullock the-sin-offering and-obj-marker”)
+# ‹שני האילים ואת› (“two the-ram and-obj-marker”)
+# ‹סל המצות› (“willow-twig the-sweetness”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:2."
 m.step("Lev.8.2")
 # witness-tier presupposed read: spec_audit on installation_intake — read,
 # not installed
@@ -32,35 +37,49 @@ m.witness_read("installation_intake", "spec_audit",
                 cites=["Sifra, Tzav, Mekhilta DeMiluim I 1", "Sifra, Tzav, Mekhilta DeMiluim I 2", "Sifra, Tzav, Mekhilta DeMiluim I 3", "Onkelos Lev 8:2"])
 
 # -------------------------- Lev.8.3 · ETNACHTA_SPLIT -----------------------
-# ואת כל העדה הקהל … אל פתח אהל מועד
-# "[EN-AID] From top split: LEFT «ואת כל העדה הקהל» / RIGHT «אל פתח אהל
-# מועד». Derive claim from Hebrew arms. Lev 8:3."
+# ‹ואת כל העדה› (“and-obj-marker all the-congregation”)
+# ‹הקהל … אל פתח› (“convoke … to opening”)
+# ‹אהל מועד› (“tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:3."
 m.step("Lev.8.3")
 
 # -------------------------- Lev.8.4 · ETNACHTA_SPLIT -----------------------
-# ויעש משה כאשר צוה יהוה אתו … ותקהל העדה אל פתח אהל מועד
-# "[EN-AID] From top split: LEFT «ויעש משה כאשר צוה יהוה אתו» / RIGHT «ותקהל
-# העדה אל פתח אהל מועד». Derive claim from Hebrew arms. Lev 8:4."
+# ‹ויעש משה כאשר› (“and-make Moses like-as/which”)
+# ‹צוה יהוה אתו› (“command YHWH obj-marker-him/its”)
+# ‹… ותקהל העדה אל› (“and-convoke the-congregation to”)
+# ‹פתח אהל מועד› (“opening tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:4."
 m.step("Lev.8.4")
 
 # -------------------------- Lev.8.5 · ETNACHTA_SPLIT -----------------------
-# ויאמר משה אל העדה … זה הדבר אשר צוה יהוה לעשות
-# "[EN-AID] From top split: LEFT «ויאמר משה אל העדה» / RIGHT «זה הדבר אשר
-# צוה יהוה לעשות». Derive claim from Hebrew arms. Lev 8:5."
+# ‹ויאמר משה אל› (“and-say Moses to”)
+# ‹העדה … זה הדבר› (“the-congregation … this the-word/thing”)
+# ‹אשר צוה יהוה› (“which command YHWH”)
+# ‹לעשות› (“to-make”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:5."
 m.step("Lev.8.5")
 
 # -------------------------- Lev.8.6 · ETNACHTA_SPLIT -----------------------
-# ויקרב משה את אהרן ואת בניו … וירחץ אתם במים
-# "[EN-AID] From top split: LEFT «ויקרב משה את אהרן ואת בניו» / RIGHT «וירחץ
-# אתם במים». Derive claim from Hebrew arms. Lev 8:6."
+# ‹ויקרב משה את› (“and-bring-near Moses obj-marker”)
+# ‹אהרן ואת בניו› (“Aaron and-obj-marker son-him/its”)
+# ‹… וירחץ אתם במים› (“and-lave obj-marker-them/their in-waters”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:6."
 m.step("Lev.8.6")
 
 # -------------------------- Lev.8.7 · ETNACHTA_SPLIT -----------------------
-# ויתן עליו את הכתנת ויחגר אתו באבנט וילבש אתו את המעיל ויתן ע … ויחגר אתו
-# בחשב האפד ויאפד לו בו
-# "[EN-AID] From top split: LEFT «ויתן עליו את הכתנת ויחגר אתו באבנט וילבש
-# אתו את המעיל ויתן עליו את האפד» / RIGHT «ויחגר אתו בחשב האפד ויאפד לו בו».
-# Derive claim from Hebrew arms. Lev 8:7."
+# ‹ויתן עליו את› (“and-set over-him/its obj-marker”)
+# ‹הכתנת ויחגר אתו› (“the-shirt and-gird-on obj-marker-him/its”)
+# ‹באבנט וילבש אתו› (“in-belt and-wrap-around obj-marker-him/its”)
+# ‹את המעיל ויתן› (“with the-robe and-set”)
+# ‹ע … ויחגר אתו› (“? … and-gird-on obj-marker-him/its”)
+# ‹בחשב האפד ויאפד› (“in-belt the-girdle and-gird-on”)
+# ‹לו בו› (“to-him/its in-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:7."
 m.step("Lev.8.7")
 # witness-tier presupposed read: for_generations on dressing_protocol —
 # read, not installed
@@ -68,51 +87,75 @@ m.witness_read("dressing_protocol", "for_generations",
                 cites=["Sifra, Tzav, Mekhilta DeMiluim I 6", "Sifra, Tzav, Mekhilta DeMiluim I 7", "Sifra, Tzav, Mekhilta DeMiluim I 9", "Sifra, Tzav, Mekhilta DeMiluim I 10", "Onkelos Lev 8:10"])
 
 # -------------------------- Lev.8.8 · ETNACHTA_SPLIT -----------------------
-# וישם עליו את החשן … ויתן אל החשן את האורים ואת התמים
-# "[EN-AID] From top split: LEFT «וישם עליו את החשן» / RIGHT «ויתן אל החשן
-# את האורים ואת התמים». Derive claim from Hebrew arms. Lev 8:8."
+# ‹וישם עליו את› (“and-put/set over-him/its obj-marker”)
+# ‹החשן … ויתן אל› (“the-perhaps-a-pocket … and-set to”)
+# ‹החשן את האורים› (“the-perhaps-a-pocket obj-marker the-Urim”)
+# ‹ואת התמים› (“and-obj-marker the-perfections”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:8."
 m.step("Lev.8.8")
 
 # -------------------------- Lev.8.9 · ETNACHTA_SPLIT -----------------------
-# וישם את המצנפת על ראשו … וישם על המצנפת אל מול פניו את ציץ הזהב נזר הקדש
-# כאשר צוה יהו
-# "[EN-AID] From top split: LEFT «וישם את המצנפת על ראשו» / RIGHT «וישם על
-# המצנפת אל מול פניו את ציץ הזהב נזר הקדש כאשר צוה יהוה את משה». Derive
-# claim from Hebrew arms. Lev 8:9."
+# ‹וישם את המצנפת› (“and-put/set obj-marker the-tiara”)
+# ‹על ראשו … וישם› (“over head-him/its … and-put/set”)
+# ‹על המצנפת אל› (“over the-tiara to”)
+# ‹מול פניו את› (“abrupt face-him/its obj-marker”)
+# ‹ציץ הזהב נזר› (“glistening the-gold something-set-apart”)
+# ‹הקדש כאשר צוה› (“the-holiness like-as/which command”)
+# ‹יהו› (“?”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:9."
 m.step("Lev.8.9")
 
 # -------------------------- Lev.8.10 · ETNACHTA_SPLIT ----------------------
-# ויקח משה את שמן המשחה וימשח את המשכן ואת כל אשר בו … ויקדש אתם
-# "[EN-AID] From top split: LEFT «ויקח משה את שמן המשחה וימשח את המשכן ואת
-# כל אשר בו» / RIGHT «ויקדש אתם». Derive claim from Hebrew arms. Lev 8:10."
+# ‹ויקח משה את› (“and-take Moses obj-marker”)
+# ‹שמן המשחה וימשח› (“oil the-unction and-rub-with-oil”)
+# ‹את המשכן ואת› (“obj-marker the-tabernacle and-obj-marker”)
+# ‹כל אשר בו› (“all which in-him/its”)
+# ‹… ויקדש אתם› (“and-sanctify obj-marker-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:10."
 m.step("Lev.8.10")
 
 # -------------------------- Lev.8.11 · ETNACHTA_SPLIT ----------------------
-# ויז ממנו על המזבח שבע פעמים … וימשח את המזבח ואת כל כליו ואת הכיר ואת כנו
-# לקדשם
-# "[EN-AID] From top split: LEFT «ויז ממנו על המזבח שבע פעמים» / RIGHT
-# «וימשח את המזבח ואת כל כליו ואת הכיר ואת כנו לקדשם». Derive claim from
-# Hebrew arms. Lev 8:11."
+# ‹ויז ממנו על› (“and-spirt from-us/our over”)
+# ‹המזבח שבע פעמים› (“the-altar seven stroke”)
+# ‹… וימשח את המזבח› (“and-rub-with-oil obj-marker the-altar”)
+# ‹ואת כל כליו› (“and-obj-marker all vessel-him/its”)
+# ‹ואת הכיר ואת› (“and-obj-marker the-something-round and-obj-marker”)
+# ‹כנו לקדשם› (“stand-him/its to-sanctify-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:11."
 m.step("Lev.8.11")
 
 # -------------------------- Lev.8.12 · ETNACHTA_SPLIT ----------------------
-# ויצק משמן המשחה על ראש אהרן … וימשח אתו לקדשו
-# "[EN-AID] From top split: LEFT «ויצק משמן המשחה על ראש אהרן» / RIGHT
-# «וימשח אתו לקדשו». Derive claim from Hebrew arms. Lev 8:12."
+# ‹ויצק משמן המשחה› (“and-pour-out from-oil the-unction”)
+# ‹על ראש אהרן› (“over head Aaron”)
+# ‹… וימשח אתו לקדשו› (“and-rub-with-oil obj-marker-him/its to-sanctify-
+# him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:12."
 m.step("Lev.8.12")
 
 # -------------------------- Lev.8.13 · ETNACHTA_SPLIT ----------------------
-# ויקרב משה את בני אהרן וילבשם כתנת ויחגר אתם אבנט ויחבש להם מ … כאשר צוה
-# יהוה את משה
-# "[EN-AID] From top split: LEFT «ויקרב משה את בני אהרן וילבשם כתנת ויחגר
-# אתם אבנט ויחבש להם מגבעות» / RIGHT «כאשר צוה יהוה את משה». Derive claim
-# from Hebrew arms. Lev 8:13."
+# ‹ויקרב משה את› (“and-bring-near Moses obj-marker”)
+# ‹בני אהרן וילבשם› (“son Aaron and-wrap-around-them/their”)
+# ‹כתנת ויחגר אתם› (“shirt and-gird-on obj-marker-them/their”)
+# ‹אבנט ויחבש להם› (“belt and-wrap-firmly to-them/their”)
+# ‹מ … כאשר צוה› (“? … like-as/which command”)
+# ‹יהוה את משה› (“YHWH obj-marker Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:13."
 m.step("Lev.8.13")
 
 # -------------------------- Lev.8.14 · ETNACHTA_SPLIT ----------------------
-# ויגש את פר החטאת … ויסמך אהרן ובניו את ידיהם על ראש פר החטאת
-# "[EN-AID] From top split: LEFT «ויגש את פר החטאת» / RIGHT «ויסמך אהרן
-# ובניו את ידיהם על ראש פר החטאת». Derive claim from Hebrew arms. Lev 8:14."
+# ‹ויגש את פר› (“and-be obj-marker bullock”)
+# ‹החטאת … ויסמך אהרן› (“the-sin-offering … and-lay Aaron”)
+# ‹ובניו את ידיהם› (“and-son-him/its obj-marker hand-them/their”)
+# ‹על ראש פר› (“over head bullock”)
+# ‹החטאת› (“the-sin-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:14."
 m.step("Lev.8.14")
 # witness-tier presupposed read: each_hand on partners_semichah — read, not
 # installed
@@ -120,11 +163,15 @@ m.witness_read("partners_semichah", "each_hand",
                 cites=["Sifra, Tzav, Mekhilta DeMiluim I 12", "Sifra, Tzav, Mekhilta DeMiluim I 13"])
 
 # -------------------------- Lev.8.15 · ETNACHTA_SPLIT ----------------------
-# וישחט ויקח משה את הדם ויתן על קרנות המזבח סביב באצבעו ויחטא  … ואת הדם יצק
-# אל יסוד המזבח ויקדשהו לכפר עליו
-# "[EN-AID] From top split: LEFT «וישחט ויקח משה את הדם ויתן על קרנות המזבח
-# סביב באצבעו ויחטא את המזבח» / RIGHT «ואת הדם יצק אל יסוד המזבח ויקדשהו
-# לכפר עליו». Derive claim from Hebrew arms. Lev 8:15."
+# ‹וישחט ויקח משה› (“and-slaughter and-take Moses”)
+# ‹את הדם ויתן› (“obj-marker the-blood and-set”)
+# ‹על קרנות המזבח› (“over horn the-altar”)
+# ‹סביב באצבעו ויחטא› (“circle in-something-to-sieze-with-him/its and-sin”)
+# ‹… ואת הדם יצק› (“and-obj-marker the-blood pour-out”)
+# ‹אל יסוד המזבח› (“to foundation the-altar”)
+# ‹ויקדשהו לכפר עליו› (“and-sanctify-him/its to-atone over-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:15."
 m.step("Lev.8.15")
 # witness-tier presupposed read: no_theft_atonement on bootstrap_officiant —
 # read, not installed
@@ -132,25 +179,34 @@ m.witness_read("bootstrap_officiant", "no_theft_atonement",
                 cites=["Sifra, Tzav, Mekhilta DeMiluim I 14", "Sifra, Tzav, Mekhilta DeMiluim I 15"])
 
 # -------------------------- Lev.8.16 · ETNACHTA_SPLIT ----------------------
-# ויקח את כל החלב אשר על הקרב ואת יתרת הכבד ואת שתי הכלית ואת  … ויקטר משה
-# המזבחה
-# "[EN-AID] From top split: LEFT «ויקח את כל החלב אשר על הקרב ואת יתרת הכבד
-# ואת שתי הכלית ואת חלבהן» / RIGHT «ויקטר משה המזבחה». Derive claim from
-# Hebrew arms. Lev 8:16."
+# ‹ויקח את כל› (“and-take obj-marker all”)
+# ‹החלב אשר על› (“the-fat which over”)
+# ‹הקרב ואת יתרת› (“the-nearest-part and-obj-marker lobe”)
+# ‹הכבד ואת שתי› (“the-liver and-obj-marker two”)
+# ‹הכלית ואת … ויקטר› (“the-kidney and-obj-marker … and-smoke”)
+# ‹משה המזבחה› (“Moses the-altar-ward”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:16."
 m.step("Lev.8.16")
 
 # -------------------------- Lev.8.17 · ETNACHTA_SPLIT ----------------------
-# ואת הפר ואת ערו ואת בשרו ואת פרשו שרף באש מחוץ למחנה … כאשר צוה יהוה את
-# משה
-# "[EN-AID] From top split: LEFT «ואת הפר ואת ערו ואת בשרו ואת פרשו שרף באש
-# מחוץ למחנה» / RIGHT «כאשר צוה יהוה את משה». Derive claim from Hebrew arms.
-# Lev 8:17."
+# ‹ואת הפר ואת› (“and-obj-marker the-bullock and-obj-marker”)
+# ‹ערו ואת בשרו› (“skin-him/its and-obj-marker flesh-him/its”)
+# ‹ואת פרשו שרף› (“and-obj-marker excrement-him/its be-on-fire”)
+# ‹באש מחוץ למחנה› (“in-fire from-outside to-camp”)
+# ‹… כאשר צוה יהוה› (“like-as/which command YHWH”)
+# ‹את משה› (“obj-marker Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:17."
 m.step("Lev.8.17")
 
 # -------------------------- Lev.8.18 · ETNACHTA_SPLIT ----------------------
-# ויקרב את איל העלה … ויסמכו אהרן ובניו את ידיהם על ראש האיל
-# "[EN-AID] From top split: LEFT «ויקרב את איל העלה» / RIGHT «ויסמכו אהרן
-# ובניו את ידיהם על ראש האיל». Derive claim from Hebrew arms. Lev 8:18."
+# ‹ויקרב את איל› (“and-bring-near obj-marker ram”)
+# ‹העלה … ויסמכו אהרן› (“the-burnt-offering … and-lay Aaron”)
+# ‹ובניו את ידיהם› (“and-son-him/its obj-marker hand-them/their”)
+# ‹על ראש האיל› (“over head the-ram”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:18."
 m.step("Lev.8.18")
 # witness-tier presupposed read: recorded_run on olah_execution — read, not
 # installed
@@ -158,30 +214,42 @@ m.witness_read("olah_execution", "recorded_run",
                 cites=["Sifra, Tzav, Mekhilta DeMiluim I 16", "Sifra, Tzav, Mekhilta DeMiluim I 17", "Sifra, Tzav, Mekhilta DeMiluim I 18"])
 
 # -------------------------- Lev.8.19 · ETNACHTA_SPLIT ----------------------
-# … ויזרק משה את הדם על המזבח סביב
-# "[EN-AID] From top split: LEFT «» / RIGHT «ויזרק משה את הדם על המזבח
-# סביב». Derive claim from Hebrew arms. Lev 8:19."
+# ‹… ויזרק משה את› (“and-sprinkle Moses obj-marker”)
+# ‹הדם על המזבח› (“the-blood over the-altar”)
+# ‹סביב› (“circle”)
+# "[EN-AID] From top split: LEFT «» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:19."
 m.step("Lev.8.19")
 
 # -------------------------- Lev.8.20 · ETNACHTA_SPLIT ----------------------
-# ואת האיל נתח לנתחיו … ויקטר משה את הראש ואת הנתחים ואת הפדר
-# "[EN-AID] From top split: LEFT «ואת האיל נתח לנתחיו» / RIGHT «ויקטר משה את
-# הראש ואת הנתחים ואת הפדר». Derive claim from Hebrew arms. Lev 8:20."
+# ‹ואת האיל נתח› (“and-obj-marker the-ram dismember”)
+# ‹לנתחיו … ויקטר משה› (“to-fragment-him/its … and-smoke Moses”)
+# ‹את הראש ואת› (“obj-marker the-head and-obj-marker”)
+# ‹הנתחים ואת הפדר› (“the-fragment and-obj-marker the-suet”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:20."
 m.step("Lev.8.20")
 
 # -------------------------- Lev.8.21 · ETNACHTA_SPLIT ----------------------
-# ואת הקרב ואת הכרעים רחץ במים … ויקטר משה את כל האיל המזבחה עלה הוא לריח
-# ניחח אשה הוא ליהוה
-# "[EN-AID] From top split: LEFT «ואת הקרב ואת הכרעים רחץ במים» / RIGHT
-# «ויקטר משה את כל האיל המזבחה עלה הוא לריח ניחח אשה הוא ליהוה כאשר צוה יהוה
-# את משה». Derive claim from Hebrew arms. Lev 8:21."
+# ‹ואת הקרב ואת› (“and-obj-marker the-nearest-part and-obj-marker”)
+# ‹הכרעים רחץ במים› (“the-leg-of-men lave in-waters”)
+# ‹… ויקטר משה את› (“and-smoke Moses obj-marker”)
+# ‹כל האיל המזבחה› (“all the-ram the-altar-ward”)
+# ‹עלה הוא לריח› (“burnt-offering he/it to-odor”)
+# ‹ניחח אשה הוא› (“restful fire-offering he/it”)
+# ‹ליהוה› (“to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:21."
 m.step("Lev.8.21")
 
 # -------------------------- Lev.8.22 · ETNACHTA_SPLIT ----------------------
-# ויקרב את האיל השני איל המלאים … ויסמכו אהרן ובניו את ידיהם על ראש האיל
-# "[EN-AID] From top split: LEFT «ויקרב את האיל השני איל המלאים» / RIGHT
-# «ויסמכו אהרן ובניו את ידיהם על ראש האיל». Derive claim from Hebrew arms.
-# Lev 8:22."
+# ‹ויקרב את האיל› (“and-bring-near obj-marker the-ram”)
+# ‹השני איל המלאים› (“the-second ram the-fulfilling”)
+# ‹… ויסמכו אהרן ובניו› (“and-lay Aaron and-son-him/its”)
+# ‹את ידיהם על› (“obj-marker hand-them/their over”)
+# ‹ראש האיל› (“head the-ram”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:22."
 m.step("Lev.8.22")
 # witness-tier presupposed read: atomic_commit on installation_transaction —
 # read, not installed
@@ -189,88 +257,126 @@ m.witness_read("installation_transaction", "atomic_commit",
                 cites=["Sifra, Tzav, Mekhilta DeMiluim I 19", "Sifra, Tzav, Mekhilta DeMiluim I 20", "Sifra, Tzav, Mekhilta DeMiluim I 21", "Sifra, Tzav, Mekhilta DeMiluim I 33", "Sifra, Tzav, Mekhilta DeMiluim I 34", "Sifra, Tzav, Mekhilta DeMiluim I 31", "Onkelos Lev 8:23"])
 
 # -------------------------- Lev.8.23 · ETNACHTA_SPLIT ----------------------
-# וישחט ויקח משה מדמו ויתן על תנוך אזן אהרן הימנית … ועל בהן ידו הימנית ועל
-# בהן רגלו הימנית
-# "[EN-AID] From top split: LEFT «וישחט ויקח משה מדמו ויתן על תנוך אזן אהרן
-# הימנית» / RIGHT «ועל בהן ידו הימנית ועל בהן רגלו הימנית». Derive claim
-# from Hebrew arms. Lev 8:23."
+# ‹וישחט ויקח משה› (“and-slaughter and-take Moses”)
+# ‹מדמו ויתן על› (“from-blood-him/its and-set over”)
+# ‹תנוך אזן אהרן› (“pinnacle broadness.-i.e.-the-ear Aaron”)
+# ‹הימנית … ועל בהן› (“the-right … and-over thumb-of-the-hand”)
+# ‹ידו הימנית ועל› (“hand-him/its the-right and-over”)
+# ‹בהן רגלו הימנית› (“thumb-of-the-hand foot-him/its the-right”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:23."
 m.step("Lev.8.23")
 
 # -------------------------- Lev.8.24 · ETNACHTA_SPLIT ----------------------
-# ויקרב את בני אהרן ויתן משה מן הדם על תנוך אזנם הימנית ועל בה … ויזרק משה
-# את הדם על המזבח סביב
-# "[EN-AID] From top split: LEFT «ויקרב את בני אהרן ויתן משה מן הדם על תנוך
-# אזנם הימנית ועל בהן ידם הימנית ועל בהן» / RIGHT «ויזרק משה את הדם על המזבח
-# סביב». Derive claim from Hebrew arms. Lev 8:24."
+# ‹ויקרב את בני› (“and-bring-near obj-marker son”)
+# ‹אהרן ויתן משה› (“Aaron and-set Moses”)
+# ‹מן הדם על› (“from the-blood over”)
+# ‹תנוך אזנם הימנית› (“pinnacle broadness.-i.e.-the-ear-them/their the-
+# right”)
+# ‹ועל בה … ויזרק› (“and-over in-her/its … and-sprinkle”)
+# ‹משה את הדם› (“Moses obj-marker the-blood”)
+# ‹על המזבח סביב› (“over the-altar circle”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:24."
 m.step("Lev.8.24")
 
 # -------------------------- Lev.8.25 · ETNACHTA_SPLIT ----------------------
-# ויקח את החלב ואת האליה ואת כל החלב אשר על הקרב ואת יתרת הכבד … ואת שוק
-# הימין
-# "[EN-AID] From top split: LEFT «ויקח את החלב ואת האליה ואת כל החלב אשר על
-# הקרב ואת יתרת הכבד ואת שתי הכלית ואת ח» / RIGHT «ואת שוק הימין». Derive
-# claim from Hebrew arms. Lev 8:25."
+# ‹ויקח את החלב› (“and-take obj-marker the-fat”)
+# ‹ואת האליה ואת› (“and-obj-marker the-stout-part and-obj-marker”)
+# ‹כל החלב אשר› (“all the-fat which”)
+# ‹על הקרב ואת› (“over the-nearest-part and-obj-marker”)
+# ‹יתרת הכבד … ואת› (“lobe the-liver … and-obj-marker”)
+# ‹שוק הימין› (“leg the-right-hand”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:25."
 m.step("Lev.8.25")
 
 # -------------------------- Lev.8.26 · ETNACHTA_SPLIT ----------------------
-# ומסל המצות אשר לפני יהוה לקח חלת מצה אחת וחלת לחם שמן אחת ור … וישם על
-# החלבים ועל שוק הימין
-# "[EN-AID] From top split: LEFT «ומסל המצות אשר לפני יהוה לקח חלת מצה אחת
-# וחלת לחם שמן אחת ורקיק אחד» / RIGHT «וישם על החלבים ועל שוק הימין». Derive
-# claim from Hebrew arms. Lev 8:26."
+# ‹ומסל המצות אשר› (“and-from-willow-twig the-sweetness which”)
+# ‹לפני יהוה לקח› (“to-face YHWH take”)
+# ‹חלת מצה אחת› (“cake sweetness one”)
+# ‹וחלת לחם שמן› (“and-cake food oil”)
+# ‹אחת ור … וישם› (“one ? … and-put/set”)
+# ‹על החלבים ועל› (“over the-fat and-over”)
+# ‹שוק הימין› (“leg the-right-hand”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:26."
 m.step("Lev.8.26")
 
 # -------------------------- Lev.8.27 · ETNACHTA_SPLIT ----------------------
-# ויתן את הכל על כפי אהרן ועל כפי בניו … וינף אתם תנופה לפני יהוה
-# "[EN-AID] From top split: LEFT «ויתן את הכל על כפי אהרן ועל כפי בניו» /
-# RIGHT «וינף אתם תנופה לפני יהוה». Derive claim from Hebrew arms. Lev
-# 8:27."
+# ‹ויתן את הכל› (“and-set obj-marker the-all”)
+# ‹על כפי אהרן› (“over palm-of-hand Aaron”)
+# ‹ועל כפי בניו› (“and-over palm-of-hand son-him/its”)
+# ‹… וינף אתם תנופה› (“and-quiver obj-marker-them/their brandishing”)
+# ‹לפני יהוה› (“to-face YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:27."
 m.step("Lev.8.27")
 
 # -------------------------- Lev.8.28 · ETNACHTA_SPLIT ----------------------
-# ויקח משה אתם מעל כפיהם ויקטר המזבחה על העלה … מלאים הם לריח ניחח אשה הוא
-# ליהוה
-# "[EN-AID] From top split: LEFT «ויקח משה אתם מעל כפיהם ויקטר המזבחה על
-# העלה» / RIGHT «מלאים הם לריח ניחח אשה הוא ליהוה». Derive claim from Hebrew
+# ‹ויקח משה אתם› (“and-take Moses obj-marker-them/their”)
+# ‹מעל כפיהם ויקטר› (“from-over palm-of-hand-them/their and-smoke”)
+# ‹המזבחה על העלה› (“the-altar-ward over the-burnt-offering”)
+# ‹… מלאים הם לריח› (“fulfilling they to-odor”)
+# ‹ניחח אשה הוא› (“restful fire-offering he/it”)
+# ‹ליהוה› (“to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 8:28."
 m.step("Lev.8.28")
 
 # -------------------------- Lev.8.29 · ETNACHTA_SPLIT ----------------------
-# ויקח משה את החזה ויניפהו תנופה לפני יהוה … מאיל המלאים למשה היה למנה כאשר
-# צוה יהוה את משה
-# "[EN-AID] From top split: LEFT «ויקח משה את החזה ויניפהו תנופה לפני יהוה»
-# / RIGHT «מאיל המלאים למשה היה למנה כאשר צוה יהוה את משה». Derive claim
-# from Hebrew arms. Lev 8:29."
+# ‹ויקח משה את› (“and-take Moses obj-marker”)
+# ‹החזה ויניפהו תנופה› (“the-breast and-quiver-him/its brandishing”)
+# ‹לפני יהוה … מאיל› (“to-face YHWH … from-ram”)
+# ‹המלאים למשה היה› (“the-fulfilling to-Moses be”)
+# ‹למנה כאשר צוה› (“to-something-weighed-out like-as/which command”)
+# ‹יהוה את משה› (“YHWH obj-marker Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:29."
 m.step("Lev.8.29")
 
 # -------------------------- Lev.8.30 · ETNACHTA_SPLIT ----------------------
-# ויקח משה משמן המשחה ומן הדם אשר על המזבח ויז על אהרן על בגדי … ויקדש את
-# אהרן את בגדיו ואת בניו ואת בגדי בניו אתו
-# "[EN-AID] From top split: LEFT «ויקח משה משמן המשחה ומן הדם אשר על המזבח
-# ויז על אהרן על בגדיו ועל בניו ועל בגדי » / RIGHT «ויקדש את אהרן את בגדיו
-# ואת בניו ואת בגדי בניו אתו». Derive claim from Hebrew arms. Lev 8:30."
+# ‹ויקח משה משמן› (“and-take Moses from-oil”)
+# ‹המשחה ומן הדם› (“the-unction and-from the-blood”)
+# ‹אשר על המזבח› (“which over the-altar”)
+# ‹ויז על אהרן› (“and-spirt over Aaron”)
+# ‹על בגדי … ויקדש› (“over garment … and-sanctify”)
+# ‹את אהרן את› (“obj-marker Aaron obj-marker”)
+# ‹בגדיו ואת בניו› (“garment-him/its and-obj-marker son-him/its”)
+# ‹ואת בגדי בניו› (“and-obj-marker garment son-him/its”)
+# ‹אתו› (“with-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:30."
 m.step("Lev.8.30")
 
 # -------------------------- Lev.8.31 · ETNACHTA_SPLIT ----------------------
-# ויאמר משה אל אהרן ואל בניו בשלו את הבשר פתח אהל מועד ושם תאכ … כאשר צויתי
-# לאמר אהרן ובניו יאכלהו
-# "[EN-AID] From top split: LEFT «ויאמר משה אל אהרן ואל בניו בשלו את הבשר
-# פתח אהל מועד ושם תאכלו אתו ואת הלחם אשר » / RIGHT «כאשר צויתי לאמר אהרן
-# ובניו יאכלהו». Derive claim from Hebrew arms. Lev 8:31."
+# ‹ויאמר משה אל› (“and-say Moses to”)
+# ‹אהרן ואל בניו› (“Aaron and-to son-him/its”)
+# ‹בשלו את הבשר› (“boil-up obj-marker the-flesh”)
+# ‹פתח אהל מועד› (“opening tent seasons”)
+# ‹ושם תאכ … כאשר› (“and-there ? … like-as/which”)
+# ‹צויתי לאמר אהרן› (“command to-say Aaron”)
+# ‹ובניו יאכלהו› (“and-son-him/its eat-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:31."
 m.step("Lev.8.31")
 
 # -------------------------- Lev.8.32 · ETNACHTA_SPLIT ----------------------
-# והנותר בבשר ובלחם … באש תשרפו
-# "[EN-AID] From top split: LEFT «והנותר בבשר ובלחם» / RIGHT «באש תשרפו».
-# Derive claim from Hebrew arms. Lev 8:32."
+# ‹והנותר בבשר ובלחם› (“and-the-jut-over in-flesh and-in-food”)
+# ‹… באש תשרפו› (“in-fire be-on-fire”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:32."
 m.step("Lev.8.32")
 
 # -------------------------- Lev.8.33 · ETNACHTA_SPLIT ----------------------
-# ומפתח אהל מועד לא תצאו שבעת ימים עד יום מלאת ימי מלאיכם … כי שבעת ימים
-# ימלא את ידכם
-# "[EN-AID] From top split: LEFT «ומפתח אהל מועד לא תצאו שבעת ימים עד יום
-# מלאת ימי מלאיכם» / RIGHT «כי שבעת ימים ימלא את ידכם». Derive claim from
-# Hebrew arms. Lev 8:33."
+# ‹ומפתח אהל מועד› (“and-from-opening tent seasons”)
+# ‹לא תצאו שבעת› (“not bring-forth seven”)
+# ‹ימים עד יום› (“day until day”)
+# ‹מלאת ימי מלאיכם› (“fill day fulfilling-you/your(pl)”)
+# ‹… כי שבעת ימים› (“that seven day”)
+# ‹ימלא את ידכם› (“fill obj-marker hand-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:33."
 m.step("Lev.8.33")
 # witness-tier presupposed read: seven_day_build on installation_calendar —
 # read, not installed
@@ -278,16 +384,21 @@ m.witness_read("installation_calendar", "seven_day_build",
                 cites=["Sifra, Tzav, Mekhilta DeMiluim I 35", "Sifra, Tzav, Mekhilta DeMiluim I 36", "Onkelos Lev 8:33"])
 
 # -------------------------- Lev.8.34 · ETNACHTA_SPLIT ----------------------
-# כאשר עשה ביום הזה … צוה יהוה לעשת לכפר עליכם
-# "[EN-AID] From top split: LEFT «כאשר עשה ביום הזה» / RIGHT «צוה יהוה לעשת
-# לכפר עליכם». Derive claim from Hebrew arms. Lev 8:34."
+# ‹כאשר עשה ביום› (“like-as/which make in-day”)
+# ‹הזה … צוה יהוה› (“the-this … command YHWH”)
+# ‹לעשת לכפר עליכם› (“to-make to-atone over-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:34."
 m.step("Lev.8.34")
 
 # -------------------------- Lev.8.35 · ETNACHTA_SPLIT ----------------------
-# ופתח אהל מועד תשבו יומם ולילה שבעת ימים ושמרתם את משמרת יהוה … כי כן צויתי
-# "[EN-AID] From top split: LEFT «ופתח אהל מועד תשבו יומם ולילה שבעת ימים
-# ושמרתם את משמרת יהוה ולא תמותו» / RIGHT «כי כן צויתי». Derive claim from
-# Hebrew arms. Lev 8:35."
+# ‹ופתח אהל מועד› (“and-opening tent seasons”)
+# ‹תשבו יומם ולילה› (“dwell/sit daily and-night”)
+# ‹שבעת ימים ושמרתם› (“seven day and-keep/guard”)
+# ‹את משמרת יהוה› (“obj-marker watch YHWH”)
+# ‹… כי כן צויתי› (“that so command”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:35."
 m.step("Lev.8.35")
 # witness-tier presupposed read: charge_toward_the_word on
 # separation_template — read, not installed
@@ -295,9 +406,12 @@ m.witness_read("separation_template", "charge_toward_the_word",
                 cites=["Sifra, Tzav, Mekhilta DeMiluim I 37", "Sifra, Tzav, Mekhilta DeMiluim I 38", "Sifra, Tzav, Mekhilta DeMiluim I 23", "Sifra, Tzav, Mekhilta DeMiluim I 26", "Sifra, Tzav, Mekhilta DeMiluim I 27", "Onkelos Lev 8:35"])
 
 # -------------------------- Lev.8.36 · ETNACHTA_SPLIT ----------------------
-# ויעש אהרן ובניו … את כל הדברים אשר צוה יהוה ביד משה
-# "[EN-AID] From top split: LEFT «ויעש אהרן ובניו» / RIGHT «את כל הדברים אשר
-# צוה יהוה ביד משה». Derive claim from Hebrew arms. Lev 8:36."
+# ‹ויעש אהרן ובניו› (“and-make Aaron and-son-him/its”)
+# ‹… את כל הדברים› (“obj-marker all the-word/thing”)
+# ‹אשר צוה יהוה› (“which command YHWH”)
+# ‹ביד משה› (“in-hand Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 8:36."
 m.step("Lev.8.36")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

@@ -14,15 +14,19 @@ from machine import Machine
 m = Machine("lev_07_fat_blood_dues")
 
 # -------------------------- Lev.7.22 · TREE_CLAIM --------------------------
-# וידבר יהוה … אל משה לאמר
-# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
-# claim from Hebrew arms. Lev 7:22."
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:22."
 m.step("Lev.7.22")
 
 # -------------------------- Lev.7.23 · ETNACHTA_SPLIT ----------------------
-# דבר אל בני ישראל לאמר … כל חלב שור וכשב ועז לא תאכלו
-# "[EN-AID] From top split: LEFT «דבר אל בני ישראל לאמר» / RIGHT «כל חלב שור
-# וכשב ועז לא תאכלו». Derive claim from Hebrew arms. Lev 7:23."
+# ‹דבר אל בני› (“speak to son”)
+# ‹ישראל לאמר … כל› (“Israel to-say … all”)
+# ‹חלב שור וכשב› (“fat bullock and-young-sheep”)
+# ‹ועז לא תאכלו› (“and-she-goat not eat”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:23."
 m.step("Lev.7.23")
 # witness-tier presupposed read: israel_scope on cheilev_ban — read, not
 # installed
@@ -30,20 +34,26 @@ m.witness_read("cheilev_ban", "israel_scope",
                 cites=["Sifra, Tzav, Section 10 1", "Sifra, Tzav, Section 10 2", "Sifra, Tzav, Section 10 4"])
 
 # -------------------------- Lev.7.24 · ETNACHTA_SPLIT ----------------------
-# וחלב נבלה וחלב טרפה יעשה לכל מלאכה … ואכל לא תאכלהו
-# "[EN-AID] From top split: LEFT «וחלב נבלה וחלב טרפה יעשה לכל מלאכה» /
-# RIGHT «ואכל לא תאכלהו». Derive claim from Hebrew arms. Lev 7:24."
+# ‹וחלב נבלה וחלב› (“and-fat flabby-thing and-fat”)
+# ‹טרפה יעשה לכל› (“prey make to-all”)
+# ‹מלאכה … ואכל לא› (“work … and-eat not”)
+# ‹תאכלהו› (“eat-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:24."
 m.step("Lev.7.24")
 # witness-tier presupposed read: inversion on carrion_fat — read, not
 # installed
 m.witness_read("carrion_fat", "inversion",
                 cites=["Sifra, Tzav, Section 10 5", "Sifra, Tzav, Section 10 6", "Sifra, Tzav, Section 10 7", "Sifra, Tzav, Section 10 8"])
 
-# -------------------------- Lev.7.25 · COND_כי -----------------------------
-# כי כל אכל חלב מן הבהמה אשר יקריב ממנה אשה ליהוה … ונכרתה הנפש האכלת מעמיה
-# "[EN-AID] From top split: LEFT «כי כל אכל חלב מן הבהמה אשר יקריב ממנה אשה
-# ליהוה» / RIGHT «ונכרתה הנפש האכלת מעמיה». Derive claim from Hebrew arms.
-# Lev 7:25."
+# -------------------------- Lev.7.25 · COND_כי (“that”) --------------------
+# ‹כי כל אכל› (“that all eat”)
+# ‹חלב מן הבהמה› (“fat from the-livestock”)
+# ‹אשר יקריב ממנה› (“which bring-near from-her/its”)
+# ‹אשה ליהוה … ונכרתה› (“fire-offering to-YHWH … and-cut”)
+# ‹הנפש האכלת מעמיה› (“the-living-being the-eat from-people-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:25."
 m.step("Lev.7.25")
 # witness-tier presupposed read: sacrificial_type on cheilev_karet — read,
 # not installed
@@ -51,9 +61,11 @@ m.witness_read("cheilev_karet", "sacrificial_type",
                 cites=["Sifra, Tzav, Section 10 9", "Sifra, Tzav, Section 10 10"])
 
 # -------------------------- Lev.7.26 · ETNACHTA_SPLIT ----------------------
-# וכל דם לא תאכלו בכל מושבתיכם … לעוף ולבהמה
-# "[EN-AID] From top split: LEFT «וכל דם לא תאכלו בכל מושבתיכם» / RIGHT
-# «לעוף ולבהמה». Derive claim from Hebrew arms. Lev 7:26."
+# ‹וכל דם לא› (“and-all blood not”)
+# ‹תאכלו בכל מושבתיכם› (“eat in-all seat-you/your(pl)”)
+# ‹… לעוף ולבהמה› (“to-flying-creature and-to-livestock”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:26."
 m.step("Lev.7.26")
 # witness-tier presupposed read: species_criteria on blood_ban — read, not
 # installed
@@ -61,31 +73,41 @@ m.witness_read("blood_ban", "species_criteria",
                 cites=["Sifra, Tzav, Section 10 11"])
 
 # -------------------------- Lev.7.27 · ETNACHTA_SPLIT ----------------------
-# כל נפש אשר תאכל כל דם … ונכרתה הנפש ההוא מעמיה
-# "[EN-AID] From top split: LEFT «כל נפש אשר תאכל כל דם» / RIGHT «ונכרתה
-# הנפש ההוא מעמיה». Derive claim from Hebrew arms. Lev 7:27."
+# ‹כל נפש אשר› (“all living-being which”)
+# ‹תאכל כל דם› (“eat all blood”)
+# ‹… ונכרתה הנפש ההוא› (“and-cut the-living-being that”)
+# ‹מעמיה› (“from-people-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:27."
 m.step("Lev.7.27")
 
 # -------------------------- Lev.7.28 · TREE_CLAIM --------------------------
-# וידבר יהוה … אל משה לאמר
-# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
-# claim from Hebrew arms. Lev 7:28."
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:28."
 m.step("Lev.7.28")
 
 # -------------------------- Lev.7.29 · ETNACHTA_SPLIT ----------------------
-# דבר אל בני ישראל לאמר … המקריב את זבח שלמיו ליהוה יביא את קרבנו ליהוה מזבח
-# שלמיו
-# "[EN-AID] From top split: LEFT «דבר אל בני ישראל לאמר» / RIGHT «המקריב את
-# זבח שלמיו ליהוה יביא את קרבנו ליהוה מזבח שלמיו». Derive claim from Hebrew
+# ‹דבר אל בני› (“speak to son”)
+# ‹ישראל לאמר … המקריב› (“Israel to-say … the-bring-near”)
+# ‹את זבח שלמיו› (“obj-marker sacrifice requital-him/its”)
+# ‹ליהוה יביא את› (“to-YHWH come/bring obj-marker”)
+# ‹קרבנו ליהוה מזבח› (“offering-him/its to-YHWH from-sacrifice”)
+# ‹שלמיו› (“requital-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 7:29."
 m.step("Lev.7.29")
 
 # -------------------------- Lev.7.30 · ETNACHTA_SPLIT ----------------------
-# ידיו תביאינה את אשי יהוה … את החלב על החזה יביאנו את החזה להניף אתו תנופה
-# לפני יהוה
-# "[EN-AID] From top split: LEFT «ידיו תביאינה את אשי יהוה» / RIGHT «את החלב
-# על החזה יביאנו את החזה להניף אתו תנופה לפני יהוה». Derive claim from
-# Hebrew arms. Lev 7:30."
+# ‹ידיו תביאינה את› (“hand-him/its come/bring obj-marker”)
+# ‹אשי יהוה … את› (“fire-offering YHWH … obj-marker”)
+# ‹החלב על החזה› (“the-fat over the-breast”)
+# ‹יביאנו את החזה› (“come/bring-him/its obj-marker the-breast”)
+# ‹להניף אתו תנופה› (“to-quiver obj-marker-him/its brandishing”)
+# ‹לפני יהוה› (“to-face YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:30."
 m.step("Lev.7.30")
 # witness-tier presupposed read: stacked_hands on tenufah_engine — read, not
 # installed
@@ -93,52 +115,76 @@ m.witness_read("tenufah_engine", "stacked_hands",
                 cites=["Sifra, Tzav, Section 11 1", "Sifra, Tzav, Section 11 2", "Sifra, Tzav, Section 11 3", "Sifra, Tzav, Section 11 6", "Sifra, Tzav, Section 11 9", "Sifra, Tzav, Section 11 10", "Sifra, Tzav, Section 11 11", "Sifra, Tzav, Chapter 16 2", "Sifra, Tzav, Chapter 16 3", "Onkelos Lev 7:30"])
 
 # -------------------------- Lev.7.31 · ETNACHTA_SPLIT ----------------------
-# והקטיר הכהן את החלב המזבחה … והיה החזה לאהרן ולבניו
-# "[EN-AID] From top split: LEFT «והקטיר הכהן את החלב המזבחה» / RIGHT «והיה
-# החזה לאהרן ולבניו». Derive claim from Hebrew arms. Lev 7:31."
+# ‹והקטיר הכהן את› (“and-smoke the-priest obj-marker”)
+# ‹החלב המזבחה … והיה› (“the-fat the-altar-ward … and-be”)
+# ‹החזה לאהרן ולבניו› (“the-breast to-Aaron and-to-son-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:31."
 m.step("Lev.7.31")
 
 # -------------------------- Lev.7.32 · ETNACHTA_SPLIT ----------------------
-# ואת שוק הימין תתנו תרומה לכהן … מזבחי שלמיכם
-# "[EN-AID] From top split: LEFT «ואת שוק הימין תתנו תרומה לכהן» / RIGHT
-# «מזבחי שלמיכם». Derive claim from Hebrew arms. Lev 7:32."
+# ‹ואת שוק הימין› (“and-obj-marker leg the-right-hand”)
+# ‹תתנו תרומה לכהן› (“set present to-priest”)
+# ‹… מזבחי שלמיכם› (“from-sacrifice requital-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:32."
 m.step("Lev.7.32")
 
 # -------------------------- Lev.7.33 · ETNACHTA_SPLIT ----------------------
-# המקריב את דם השלמים ואת החלב מבני אהרן … לו תהיה שוק הימין למנה
-# "[EN-AID] From top split: LEFT «המקריב את דם השלמים ואת החלב מבני אהרן» /
-# RIGHT «לו תהיה שוק הימין למנה». Derive claim from Hebrew arms. Lev 7:33."
+# ‹המקריב את דם› (“the-bring-near obj-marker blood”)
+# ‹השלמים ואת החלב› (“the-requital and-obj-marker the-fat”)
+# ‹מבני אהרן … לו› (“from-son Aaron … to-him/its”)
+# ‹תהיה שוק הימין› (“be leg the-right-hand”)
+# ‹למנה› (“to-something-weighed-out”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:33."
 m.step("Lev.7.33")
 # witness-tier presupposed read: consent_and_acknowledgment on dues_gates —
 # read, not installed
 m.witness_read("dues_gates", "consent_and_acknowledgment",
                 cites=["Sifra, Tzav, Chapter 16 4", "Sifra, Tzav, Chapter 16 5", "Sifra, Tzav, Chapter 16 7", "Sifra, Tzav, Chapter 16 8", "Sifra, Tzav, Chapter 16 9", "Sifra, Tzav, Chapter 17 5", "Sifra, Tzav, Chapter 17 6"])
 
-# -------------------------- Lev.7.34 · COND_כי -----------------------------
-# כי את חזה התנופה ואת שוק התרומה לקחתי מאת בני ישראל מזבחי של … ואתן אתם
-# לאהרן הכהן ולבניו לחק עולם מאת בני ישראל
-# "[EN-AID] From top split: LEFT «כי את חזה התנופה ואת שוק התרומה לקחתי מאת
-# בני ישראל מזבחי שלמיהם» / RIGHT «ואתן אתם לאהרן הכהן ולבניו לחק עולם מאת
-# בני ישראל». Derive claim from Hebrew arms. Lev 7:34."
+# -------------------------- Lev.7.34 · COND_כי (“that”) --------------------
+# ‹כי את חזה› (“that obj-marker breast”)
+# ‹התנופה ואת שוק› (“the-brandishing and-obj-marker leg”)
+# ‹התרומה לקחתי מאת› (“the-present take from-with”)
+# ‹בני ישראל מזבחי› (“son Israel from-sacrifice”)
+# ‹של … ואתן אתם› (“pluck-off … and-set obj-marker-them/their”)
+# ‹לאהרן הכהן ולבניו› (“to-Aaron the-priest and-to-son-him/its”)
+# ‹לחק עולם מאת› (“to-enactment forever from-with”)
+# ‹בני ישראל› (“son Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:34."
 m.step("Lev.7.34")
 
 # -------------------------- Lev.7.35 · ETNACHTA_SPLIT ----------------------
-# זאת משחת אהרן ומשחת בניו מאשי יהוה … ביום הקריב אתם לכהן ליהוה
-# "[EN-AID] From top split: LEFT «זאת משחת אהרן ומשחת בניו מאשי יהוה» /
-# RIGHT «ביום הקריב אתם לכהן ליהוה». Derive claim from Hebrew arms. Lev
-# 7:35."
+# ‹זאת משחת אהרן› (“this unction Aaron”)
+# ‹ומשחת בניו מאשי› (“and-unction son-him/its from-fire-offering”)
+# ‹יהוה … ביום הקריב› (“YHWH … in-day bring-near”)
+# ‹אתם לכהן ליהוה› (“obj-marker-them/their to-officiate-as-a-priest to-
+# YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:35."
 m.step("Lev.7.35")
 
 # -------------------------- Lev.7.36 · ETNACHTA_SPLIT ----------------------
-# אשר צוה יהוה לתת להם ביום משחו אתם מאת בני ישראל … חקת עולם לדרתם
-# "[EN-AID] From top split: LEFT «אשר צוה יהוה לתת להם ביום משחו אתם מאת בני
-# ישראל» / RIGHT «חקת עולם לדרתם». Derive claim from Hebrew arms. Lev 7:36."
+# ‹אשר צוה יהוה› (“which command YHWH”)
+# ‹לתת להם ביום› (“to-set to-them/their in-day”)
+# ‹משחו אתם מאת› (“rub-with-oil-him/its obj-marker-them/their from-with”)
+# ‹בני ישראל … חקת› (“son Israel … statute”)
+# ‹עולם לדרתם› (“forever to-generation-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:36."
 m.step("Lev.7.36")
 
 # -------------------------- Lev.7.37 · ETNACHTA_SPLIT ----------------------
-# זאת התורה לעלה למנחה ולחטאת ולאשם … ולמלואים ולזבח השלמים
-# "[EN-AID] From top split: LEFT «זאת התורה לעלה למנחה ולחטאת ולאשם» / RIGHT
-# «ולמלואים ולזבח השלמים». Derive claim from Hebrew arms. Lev 7:37."
+# ‹זאת התורה לעלה› (“this the-precept to-burnt-offering”)
+# ‹למנחה ולחטאת ולאשם› (“to-grain-offering and-to-sin-offering and-to-
+# guilt”)
+# ‹… ולמלואים ולזבח השלמים› (“and-to-fulfilling and-to-sacrifice the-
+# requital”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:37."
 m.step("Lev.7.37")
 # witness-tier presupposed read: two_channel_charter on sinai_colophon —
 # read, not installed
@@ -146,11 +192,14 @@ m.witness_read("sinai_colophon", "two_channel_charter",
                 cites=["Sifra, Tzav, Chapter 18 2", "Sifra, Tzav, Chapter 18 3", "Sifra, Tzav, Chapter 18 4", "Sifra, Tzav, Chapter 18 6", "Sifra, Tzav, Chapter 18 7", "Sifra, Tzav, Chapter 18 8", "Sifra, Tzav, Chapter 18 10", "Onkelos Lev 7:35"])
 
 # -------------------------- Lev.7.38 · ETNACHTA_SPLIT ----------------------
-# אשר צוה יהוה את משה בהר סיני … ביום צותו את בני ישראל להקריב את קרבניהם
-# ליהוה במדבר סיני
-# "[EN-AID] From top split: LEFT «אשר צוה יהוה את משה בהר סיני» / RIGHT
-# «ביום צותו את בני ישראל להקריב את קרבניהם ליהוה במדבר סיני». Derive claim
-# from Hebrew arms. Lev 7:38."
+# ‹אשר צוה יהוה› (“which command YHWH”)
+# ‹את משה בהר› (“obj-marker Moses in-mountain”)
+# ‹סיני … ביום צותו› (“Sinai … in-day command-him/its”)
+# ‹את בני ישראל› (“obj-marker son Israel”)
+# ‹להקריב את קרבניהם› (“to-bring-near obj-marker offering-them/their”)
+# ‹ליהוה במדבר סיני› (“to-YHWH in-pasture Sinai”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:38."
 m.step("Lev.7.38")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

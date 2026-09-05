@@ -14,10 +14,12 @@ from machine import Machine
 m = Machine("gen_20_exit_altar")
 
 # -------------------------- Gen.8.15 · THE_SPEAK_VERB_DEBUTS ---------------
-# וַיְדַבֵּר אֱלֹהִים אֶל־נֹחַ לֵאמֹר
+# ‹וַיְדַבֵּר אֱלֹהִים אֶל־נֹחַ› (“and-He-spoke God to Noah”)
+# ‹לֵאמֹר› (“saying”)
 # "And God spoke unto Noah, saying:"
 m.step("Gen.8.15")
-# ‹וַיְדַבֵּר אֱלֹהִים אֶל־נֹחַ לֵאמֹר› (“and-He-spoke God to Noah saying”)
+# ‹וַיְדַבֵּר אֱלֹהִים אֶל־נֹחַ› (“and-He-spoke God to Noah”)
+# ‹לֵאמֹר› (“saying”)
 # — event: speak — agent God; theme to-Noach
 m.event("speak", agent="elohim", themes=["el_noach"])
 # reads without prior install (flag, not fix): Noach, ark
@@ -28,31 +30,43 @@ m.witness_read("dibber_operator", "speech_verb_distinction_as_law",
                 cites=["Jerusalem Talmud Makkot 2:6:11"])
 
 # -------------------------- Gen.8.16 · THE_EXIT_COMMAND --------------------
-# צֵא מִן־הַתֵּבָה אַתָּה וְאִשְׁתְּךָ וּבָנֶיךָ וּנְשֵׁי־בָנֶיךָ אִתָּךְ
+# ‹צֵא מִן־הַתֵּבָה אַתָּה› (“go-out from the-ark you”)
+# ‹וְאִשְׁתְּךָ וּבָנֶיךָ וּנְשֵׁי־בָנֶיךָ› (“and-your-wife and-your-sons
+# and-the-wives-of your-sons”)
+# ‹אִתָּךְ› (“with-you”)
 # "'Go forth from the ark, thou, and thy wife, and thy sons, and thy sons'
 # wives with thee."
 m.step("Gen.8.16")
-# ‹צֵא מִן־הַתֵּבָה› (“go-out from the-ark”) — God speaks a demand — LET:
-# go-out(Noach, from-the-ark)
+# ‹צֵא מִן־הַתֵּבָה› (“go-out from the-ark”)
+# — God speaks a demand — LET: go-out(Noach, from-the-ark)
 m.declare("elohim", "LET",
           "tze(noach, min_ha_tevah)")
 
 # -------------------------- Gen.8.17 · THE_BRING_OUT_AND_THE_CHARGE --------
-# כָּל־הַחַיָּה אֲשֶׁר־אִתְּךָ מִכָּל־בָּשָׂר בָּעוֹף וּבַבְּהֵמָה
-# וּבְכָל־הָרֶמֶשׂ הָרֹמֵשׂ עַל־הָאָרֶץ הוצא הַיְצֵא אִתָּךְ וְשָׁרְצוּ
-# בָאָרֶץ וּפָרוּ וְרָבוּ עַל־הָאָרֶץ
+# ‹כָּל־הַחַיָּה אֲשֶׁר־אִתְּךָ מִכָּל־בָּשָׂר› (“all the-beast which with-
+# you from-all flesh”)
+# ‹בָּעוֹף וּבַבְּהֵמָה וּבְכָל־הָרֶמֶשׂ› (“in-flying-creature and-in-
+# livestock and-in-all the-creeper”)
+# ‹הָרֹמֵשׂ עַל־הָאָרֶץ הוצא› (“the-creeper over the-earth bring-out-
+# written”)
+# ‹הַיְצֵא אִתָּךְ וְשָׁרְצוּ› (“bring-out-read with-you and-they-shall-
+# swarm”)
+# ‹בָאָרֶץ וּפָרוּ וְרָבוּ› (“in-earth and-be-fruitful and-multiply”)
+# ‹עַל־הָאָרֶץ› (“over the-earth”)
 # "Bring forth with thee every living thing that is with thee, of all flesh,
 # both fowl, and cattle, and every creeping thing that creepeth upon the
 # earth; that they may swarm in the earth, and be fruitful, and multiply
 # upon the earth.'"
 m.step("Gen.8.17")
-# ‹הוצא הַיְצֵא אִתָּךְ› (“bring-out-written bring-out-read with-you”) — God
-# speaks a demand — LET: bring-out(all-the-beast, with-you)
+# ‹הוצא הַיְצֵא אִתָּךְ› (“bring-out-written bring-out-read with-you”)
+# — God speaks a demand — LET: bring-out(all-the-beast, with-you)
 m.declare("elohim", "LET",
           "hotze(kol_ha_chayah, itakh)")
-# ‹וְשָׁרְצוּ בָאָרֶץ וּפָרוּ וְרָבוּ עַל־הָאָרֶץ› (“and-they-shall-swarm
-# in-earth and-be-fruitful and-multiply over the-earth”) — fact holds: and-
-# they-shall-swarm-and-be-fruitful-and-multiply-over-the-earth
+# ‹וְשָׁרְצוּ בָאָרֶץ וּפָרוּ› (“and-they-shall-swarm in-earth and-be-
+# fruitful”)
+# ‹וְרָבוּ עַל־הָאָרֶץ› (“and-multiply over the-earth”)
+# — fact holds: and-they-shall-swarm-and-be-fruitful-and-multiply-over-the-
+# earth
 m.fact("ve_shartzu_u_faru_ve_ravu_al_ha_aretz")
 # witness-tier presupposed read: written_and_read_pair_encoding_reluctance
 # on exit_command — read, not installed
@@ -60,28 +74,35 @@ m.witness_read("exit_command", "written_and_read_pair_encoding_reluctance",
                 cites=["Bereshit Rabbah 34:8"])
 
 # -------------------------- Gen.8.18 · THE_EXIT_RECEIPT --------------------
-# וַיֵּצֵא־נֹחַ וּבָנָיו וְאִשְׁתּוֹ וּנְשֵׁי־בָנָיו אִתּוֹ
+# ‹וַיֵּצֵא־נֹחַ וּבָנָיו וְאִשְׁתּוֹ› (“and-he-went-out Noah and-his-sons
+# and-his-wife”)
+# ‹וּנְשֵׁי־בָנָיו אִתּוֹ› (“and-the-wives-of his-sons with-him”)
 # "And Noah went forth, and his sons, and his wife, and his sons' wives with
 # him;"
 m.step("Gen.8.18")
-# ‹וַיֵּצֵא־נֹחַ› (“and-he-went-out Noah”) — event: go-out — agent Noach
+# ‹וַיֵּצֵא־נֹחַ› (“and-he-went-out Noah”)
+# — event: go-out — agent Noach
 m.event("go_out", agent="noach")
-# ‹וַיֵּצֵא־נֹחַ … אִתּוֹ› (“and-he-went-out Noah … with-him”) — demand
-# settled (popped from the queue): go-out(Noach, from-the-ark)
+# ‹וַיֵּצֵא־נֹחַ … אִתּוֹ› (“and-he-went-out Noah … with-him”)
+# — demand settled (popped from the queue): go-out(Noach, from-the-ark)
 m.result("tze(noach, min_ha_tevah)", tmark="t1")
 
 # -------------------------- Gen.8.19 · OUT_BY_FAMILIES ---------------------
-# כָּל־הַחַיָּה כָּל־הָרֶמֶשׂ וְכָל־הָעוֹף כֹּל רוֹמֵשׂ עַל־הָאָרֶץ
-# לְמִשְׁפְּחֹתֵיהֶם יָצְאוּ מִן־הַתֵּבָה
+# ‹כָּל־הַחַיָּה כָּל־הָרֶמֶשׂ וְכָל־הָעוֹף› (“all the-beast all the-creeper
+# and-all the-flying-creature”)
+# ‹כֹּל רוֹמֵשׂ עַל־הָאָרֶץ› (“all creep over the-earth”)
+# ‹לְמִשְׁפְּחֹתֵיהֶם יָצְאוּ מִן־הַתֵּבָה› (“by-their-families they-went-
+# out from the-ark”)
 # "every beast, every creeping thing, and every fowl, whatsoever moveth upon
 # the earth, after their families, went forth out of the ark."
 m.step("Gen.8.19")
 # ‹לְמִשְׁפְּחֹתֵיהֶם יָצְאוּ מִן־הַתֵּבָה› (“by-their-families they-went-
-# out from the-ark”) — fact holds: to-mishpechoteihem-they-went-out-from-
-# the-ark
+# out from the-ark”)
+# — fact holds: to-mishpechoteihem-they-went-out-from-the-ark
 m.fact("le_mishpechoteihem_yatzu_min_ha_tevah")
-# ‹יָצְאוּ מִן־הַתֵּבָה› (“they-went-out from the-ark”) — demand settled
-# (popped from the queue): bring-out(all-the-beast, with-you)
+# ‹יָצְאוּ מִן־הַתֵּבָה› (“they-went-out from the-ark”)
+# — demand settled (popped from the queue): bring-out(all-the-beast, with-
+# you)
 m.result("hotze(kol_ha_chayah, itakh)", tmark="t1")
 # witness-tier presupposed read: mortality_inside_read_off_a_plural on
 # emergence_roster — read, not installed
@@ -89,24 +110,32 @@ m.witness_read("emergence_roster", "mortality_inside_read_off_a_plural",
                 cites=["Sanhedrin 108b:18", "Sanhedrin 108b:19"])
 
 # -------------------------- Gen.8.20 · THE_FIRST_ALTAR ---------------------
-# וַיִּבֶן נֹחַ מִזְבֵּחַ לַיהוָה וַיִּקַּח מִכֹּל הַבְּהֵמָה הַטְּהוֹרָה
-# וּמִכֹּל הָעוֹף הַטָּהֹר וַיַּעַל עֹלֹת בַּמִּזְבֵּחַ
+# ‹וַיִּבֶן נֹחַ מִזְבֵּחַ› (“and-he-built Noah altar”)
+# ‹לַיהוָה וַיִּקַּח מִכֹּל› (“to-YHWH and-he-took from-all”)
+# ‹הַבְּהֵמָה הַטְּהוֹרָה וּמִכֹּל› (“the-livestock the-clean and-from-all”)
+# ‹הָעוֹף הַטָּהֹר וַיַּעַל› (“the-flying-creature the-clean and-he-offered-
+# up”)
+# ‹עֹלֹת בַּמִּזְבֵּחַ› (“burnt-offerings on-the-altar”)
 # "And Noah builded an altar unto the LORD; and took of every clean beast,
 # and of every clean fowl, and offered burnt-offerings on the altar."
 m.step("Gen.8.20")
-# ‹וַיִּבֶן נֹחַ מִזְבֵּחַ לַיהוָה› (“and-he-built Noah altar to-YHWH”) —
-# event: build — agent Noach; theme altar
+# ‹וַיִּבֶן נֹחַ מִזְבֵּחַ› (“and-he-built Noah altar”)
+# ‹לַיהוָה› (“to-YHWH”)
+# — event: build — agent Noach; theme altar
 m.event("build", agent="noach", themes=["mizbeach"])
-# ‹מִזְבֵּחַ› (“altar”) — the world gains: altar
+# ‹מִזְבֵּחַ› (“altar”)
+# — the world gains: altar
 m.install("mizbeach")
-# ‹וַיִּקַּח מִכֹּל הַבְּהֵמָה הַטְּהוֹרָה וּמִכֹּל הָעוֹף הַטָּהֹר› (“and-
-# he-took from-all the-livestock the-clean and-from-all the-flying-creature
-# the-clean”) — event: take — agent Noach; theme from-the-livestock-the-
-# clean-and-from-the-flying-creature-the-clean
+# ‹וַיִּקַּח מִכֹּל הַבְּהֵמָה› (“and-he-took from-all the-livestock”)
+# ‹הַטְּהוֹרָה וּמִכֹּל הָעוֹף› (“the-clean and-from-all the-flying-
+# creature”)
+# ‹הַטָּהֹר› (“the-clean”)
+# — event: take — agent Noach; theme from-the-livestock-the-clean-and-from-
+# the-flying-creature-the-clean
 m.event("take", agent="noach", themes=["min_ha_behemah_ha_tehorah_u_min_ha_of_ha_tahor"])
 # ‹וַיַּעַל עֹלֹת בַּמִּזְבֵּחַ› (“and-he-offered-up burnt-offerings on-the-
-# altar”) — event: offer-up — agent Noach; theme burnt-offerings-in-the-
-# altar
+# altar”)
+# — event: offer-up — agent Noach; theme burnt-offerings-in-the-altar
 m.event("offer_up", agent="noach", themes=["olot_ba_mizbeach"])
 # witness-tier presupposed read:
 # celebrant_reassigned_and_purity_vocabulary_anchored on altar_op — read,
@@ -119,33 +148,44 @@ m.witness_read("va_yiven_noach_mizbeach", "noah_altar_law",
                 cites=["Zevachim 108b:14", "Zevachim 108b:15", "Zevachim 108b:16", "Zevachim 115b:17", "Zevachim 115b:18"])
 
 # -------------------------- Gen.8.21 · THE_SMELL_THE_HEART_THE_NEVER_AGAINS -
-# וַיָּרַח יְהוָה אֶת־רֵיחַ הַנִּיחֹחַ וַיֹּאמֶר יְהוָה אֶל־לִבּוֹ לֹא־אֹסִף
-# לְקַלֵּל עוֹד אֶת־הָאֲדָמָה בַּעֲבוּר הָאָדָם כִּי יֵצֶר לֵב הָאָדָם רַע
-# מִנְּעֻרָיו וְלֹא־אֹסִף עוֹד לְהַכּוֹת אֶת־כָּל־חַי כַּאֲשֶׁר עָשִׂיתִי
+# ‹וַיָּרַח יְהוָה אֶת־רֵיחַ› (“and-He-smelled YHWH obj-marker odor-of”)
+# ‹הַנִּיחֹחַ וַיֹּאמֶר יְהוָה› (“the-pleasing and-He-said YHWH”)
+# ‹אֶל־לִבּוֹ לֹא־אֹסִף לְקַלֵּל› (“to His-heart not will-I-again to-curse”)
+# ‹עוֹד אֶת־הָאֲדָמָה בַּעֲבוּר› (“again obj-marker the-ground for-the-sake-
+# of”)
+# ‹הָאָדָם כִּי יֵצֶר› (“the-human for inclination-of”)
+# ‹לֵב הָאָדָם רַע› (“heart-of the-human evil”)
+# ‹מִנְּעֻרָיו וְלֹא־אֹסִף עוֹד› (“from-his-youth and-not will-I-again
+# again”)
+# ‹לְהַכּוֹת אֶת־כָּל־חַי כַּאֲשֶׁר› (“to-strike obj-marker all living as”)
+# ‹עָשִׂיתִי› (“I-have-done”)
 # "And the LORD smelled the sweet savour; and the LORD said in His heart: 'I
 # will not again curse the ground any more for man's sake; for the
 # imagination of man's heart is evil from his youth; neither will I again
 # smite any more every thing living, as I have done."
 m.step("Gen.8.21")
-# ‹וַיָּרַח יְהוָה אֶת־רֵיחַ הַנִּיחֹחַ› (“and-He-smelled YHWH obj-marker
-# odor-of the-pleasing”) — event: smell — agent the-LORD; theme odor-the-
-# pleasing-savor
+# ‹וַיָּרַח יְהוָה אֶת־רֵיחַ› (“and-He-smelled YHWH obj-marker odor-of”)
+# ‹הַנִּיחֹחַ› (“the-pleasing”)
+# — event: smell — agent the-LORD; theme odor-the-pleasing-savor
 m.event("smell", agent="YHWH", themes=["reiach_ha_nichoach"])
-# ‹רֵיחַ הַנִּיחֹחַ› (“odor-of the-pleasing”) — test PASS — oracle-word
-# pleasing-savor, on the-burnt-offering
+# ‹רֵיחַ הַנִּיחֹחַ› (“odor-of the-pleasing”)
+# — test PASS — oracle-word pleasing-savor, on the-burnt-offering
 m.test("PASS", "nichoach", "ha_olah")
-# ‹וַיֹּאמֶר יְהוָה אֶל־לִבּוֹ› (“and-He-said YHWH to His-heart”) — event:
-# say — agent the-LORD; theme to-His-heart
+# ‹וַיֹּאמֶר יְהוָה אֶל־לִבּוֹ› (“and-He-said YHWH to His-heart”)
+# — event: say — agent the-LORD; theme to-His-heart
 m.event("say", agent="YHWH", themes=["el_libo"])
-# ‹לֹא־אֹסִף לְקַלֵּל עוֹד אֶת־הָאֲדָמָה בַּעֲבוּר הָאָדָם כִּי יֵצֶר לֵב
-# הָאָדָם רַע מִנְּעֻרָיו› (“not will-I-again to-curse again obj-marker the-
-# ground for-the-sake-of the-human for inclination-of heart-of the-human
-# evil from-his-youth”) — standing constraint: not-will-I-again-to-curse-
-# again-obj-marker·et-the-ground
+# ‹לֹא־אֹסִף לְקַלֵּל עוֹד› (“not will-I-again to-curse again”)
+# ‹אֶת־הָאֲדָמָה בַּעֲבוּר הָאָדָם› (“obj-marker the-ground for-the-sake-of
+# the-human”)
+# ‹כִּי יֵצֶר לֵב› (“for inclination-of heart-of”)
+# ‹הָאָדָם רַע מִנְּעֻרָיו› (“the-human evil from-his-youth”)
+# — standing constraint: not-will-I-again-to-curse-again-obj-marker·et-the-
+# ground
 m.invariant("lo_osif_le_qalel_od_et_ha_adamah")
-# ‹וְלֹא־אֹסִף עוֹד לְהַכּוֹת אֶת־כָּל־חַי כַּאֲשֶׁר עָשִׂיתִי› (“and-not
-# will-I-again again to-strike obj-marker all living as I-have-done”) —
-# standing constraint: not-will-I-again-again-to-strike-obj-marker·et-all-
+# ‹וְלֹא־אֹסִף עוֹד לְהַכּוֹת› (“and-not will-I-again again to-strike”)
+# ‹אֶת־כָּל־חַי כַּאֲשֶׁר עָשִׂיתִי› (“obj-marker all living as I-have-
+# done”)
+# — standing constraint: not-will-I-again-again-to-strike-obj-marker·et-all-
 # living
 m.invariant("lo_osif_od_le_hakot_et_kol_chai")
 # witness-tier presupposed read: appeasement_and_comparative_ranking on
@@ -158,16 +198,20 @@ m.witness_read("doubled_clause", "oath_force_and_youth_clause_law",
                 cites=["Bereshit Rabbah 34:10", "Jerusalem Talmud Berakhot 3:5:7"])
 
 # -------------------------- Gen.8.22 · THE_SEASONS_PLEDGE ------------------
-# עֹד כָּל־יְמֵי הָאָרֶץ זֶרַע וְקָצִיר וְקֹר וָחֹם וְקַיִץ וָחֹרֶף וְיוֹם
-# וָלַיְלָה לֹא יִשְׁבֹּתוּ
+# ‹עֹד כָּל־יְמֵי הָאָרֶץ› (“while-yet all the-days-of the-earth”)
+# ‹זֶרַע וְקָצִיר וְקֹר› (“seedtime and-harvest and-cold”)
+# ‹וָחֹם וְקַיִץ וָחֹרֶף› (“and-heat and-summer and-winter”)
+# ‹וְיוֹם וָלַיְלָה לֹא› (“and-day and-night not”)
+# ‹יִשְׁבֹּתוּ› (“shall-cease”)
 # "While the earth remaineth, seedtime and harvest, and cold and heat, and
 # summer and winter, and day and night shall not cease.'"
 m.step("Gen.8.22")
-# ‹זֶרַע וְקָצִיר וְקֹר וָחֹם וְקַיִץ וָחֹרֶף וְיוֹם וָלַיְלָה לֹא
-# יִשְׁבֹּתוּ› (“seedtime and-harvest and-cold and-heat and-summer and-
-# winter and-day and-night not shall-cease”) — standing constraint:
-# seedtime-and-harvest-and-cold-and-heat-and-summer-and-winter-and-day-and-
-# night-not-shall-cease
+# ‹זֶרַע וְקָצִיר וְקֹר› (“seedtime and-harvest and-cold”)
+# ‹וָחֹם וְקַיִץ וָחֹרֶף› (“and-heat and-summer and-winter”)
+# ‹וְיוֹם וָלַיְלָה לֹא› (“and-day and-night not”)
+# ‹יִשְׁבֹּתוּ› (“shall-cease”)
+# — standing constraint: seedtime-and-harvest-and-cold-and-heat-and-summer-
+# and-winter-and-day-and-night-not-shall-cease
 m.invariant("zera_ve_qatzir_ve_qor_va_chom_ve_qayitz_va_choref_ve_yom_va_laylah_lo_yishbotu")
 # witness-tier presupposed read: termination_condition_and_new_parameters on
 # seasons_covenant — read, not installed

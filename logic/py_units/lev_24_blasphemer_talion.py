@@ -14,11 +14,14 @@ from machine import Machine
 m = Machine("lev_24_blasphemer_talion")
 
 # -------------------------- Lev.24.10 · ETNACHTA_SPLIT ---------------------
-# ויצא בן אשה ישראלית והוא בן איש מצרי בתוך בני ישראל … וינצו במחנה בן
-# הישראלית ואיש הישראלי
-# "[EN-AID] From top split: LEFT «ויצא בן אשה ישראלית והוא בן איש מצרי בתוך
-# בני ישראל» / RIGHT «וינצו במחנה בן הישראלית ואיש הישראלי». Derive claim
-# from Hebrew arms. Lev 24:10."
+# ‹ויצא בן אשה› (“and-bring-forth son woman”)
+# ‹ישראלית והוא בן› (“Jisreelitess and-he/it son”)
+# ‹איש מצרי בתוך› (“man Egyptian in-midst”)
+# ‹בני ישראל … וינצו› (“son Israel … and-go-forth”)
+# ‹במחנה בן הישראלית› (“in-camp son the-Jisreelitess”)
+# ‹ואיש הישראלי› (“and-man the-Jisreelite”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 24:10."
 m.step("Lev.24.10")
 # witness-tier presupposed read: the_blasphemers_origin on
 # vayetze_ben_ishah_yisreelit — read, not installed
@@ -26,17 +29,22 @@ m.witness_read("vayetze_ben_ishah_yisreelit", "the_blasphemers_origin",
                 cites=["Sifra, Emor, Section 14 1", "Sifra, Emor, Section 14 2", "Onkelos Lev 24:11"])
 
 # -------------------------- Lev.24.11 · ETNACHTA_SPLIT ---------------------
-# ויקב בן האשה הישראלית את השם ויקלל ויביאו אתו אל משה … ושם אמו שלמית בת
-# דברי למטה דן
-# "[EN-AID] From top split: LEFT «ויקב בן האשה הישראלית את השם ויקלל ויביאו
-# אתו אל משה» / RIGHT «ושם אמו שלמית בת דברי למטה דן». Derive claim from
-# Hebrew arms. Lev 24:11."
+# ‹ויקב בן האשה› (“and-puncture son the-woman”)
+# ‹הישראלית את השם› (“the-Jisreelitess obj-marker the-name”)
+# ‹ויקלל ויביאו אתו› (“and-be-light and-come/bring obj-marker-him/its”)
+# ‹אל משה … ושם› (“to Moses … and-name”)
+# ‹אמו שלמית בת› (“mother-him/its Shelomith daughter”)
+# ‹דברי למטה דן› (“Dibri to-staff/tribe Daniel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 24:11."
 m.step("Lev.24.11")
 
 # -------------------------- Lev.24.12 · ETNACHTA_SPLIT ---------------------
-# ויניחהו במשמר … לפרש להם על פי יהוה
-# "[EN-AID] From top split: LEFT «ויניחהו במשמר» / RIGHT «לפרש להם על פי
-# יהוה». Derive claim from Hebrew arms. Lev 24:12."
+# ‹ויניחהו במשמר … לפרש› (“and-deposit-him/its in-guard … to-separate”)
+# ‹להם על פי› (“to-them/their over mouth”)
+# ‹יהוה› (“YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 24:12."
 m.step("Lev.24.12")
 # witness-tier presupposed read: court_procedure_and_two_custody_cases on
 # vayanichuhu_bamishmar — read, not installed
@@ -44,17 +52,21 @@ m.witness_read("vayanichuhu_bamishmar", "court_procedure_and_two_custody_cases",
                 cites=["Sifra, Emor, Section 14 3", "Sifra, Emor, Section 14 4", "Sifra, Emor, Section 14 5", "Onkelos Lev 24:12"])
 
 # -------------------------- Lev.24.13 · TREE_CLAIM -------------------------
-# וידבר יהוה … אל משה לאמר
-# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
-# claim from Hebrew arms. Lev 24:13."
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 24:13."
 m.step("Lev.24.13")
 
 # -------------------------- Lev.24.14 · ETNACHTA_SPLIT ---------------------
-# הוצא את המקלל אל מחוץ למחנה וסמכו כל השמעים את ידיהם על ראשו … ורגמו אתו
-# כל העדה
-# "[EN-AID] From top split: LEFT «הוצא את המקלל אל מחוץ למחנה וסמכו כל
-# השמעים את ידיהם על ראשו» / RIGHT «ורגמו אתו כל העדה». Derive claim from
-# Hebrew arms. Lev 24:14."
+# ‹הוצא את המקלל› (“bring-forth obj-marker the-be-light”)
+# ‹אל מחוץ למחנה› (“to from-outside to-camp”)
+# ‹וסמכו כל השמעים› (“and-lay all the-hear”)
+# ‹את ידיהם על› (“obj-marker hand-them/their over”)
+# ‹ראשו … ורגמו אתו› (“head-him/its … and-cast-together obj-marker-him/its”)
+# ‹כל העדה› (“all the-congregation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 24:14."
 m.step("Lev.24.14")
 # witness-tier presupposed read: the_stoning_protocol on hotze_et_hamekalel
 # — read, not installed
@@ -62,9 +74,12 @@ m.witness_read("hotze_et_hamekalel", "the_stoning_protocol",
                 cites=["Sifra, Emor, Chapter 19 1", "Sifra, Emor, Chapter 19 2", "Sifra, Emor, Chapter 19 3", "Onkelos Lev 24:14"])
 
 # -------------------------- Lev.24.15 · ETNACHTA_SPLIT ---------------------
-# ואל בני ישראל תדבר לאמר … איש איש כי יקלל אלהיו ונשא חטאו
-# "[EN-AID] From top split: LEFT «ואל בני ישראל תדבר לאמר» / RIGHT «איש איש
-# כי יקלל אלהיו ונשא חטאו». Derive claim from Hebrew arms. Lev 24:15."
+# ‹ואל בני ישראל› (“and-to son Israel”)
+# ‹תדבר לאמר … איש› (“speak to-say … man”)
+# ‹איש כי יקלל› (“man that be-light”)
+# ‹אלהיו ונשא חטאו› (“God-him/its and-lift/carry crime-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 24:15."
 m.step("Lev.24.15")
 # witness-tier presupposed read: the_predicates_domain on
 # ish_ish_ki_yekalel_elohav — read, not installed
@@ -72,16 +87,22 @@ m.witness_read("ish_ish_ki_yekalel_elohav", "the_predicates_domain",
                 cites=["Sifra, Emor, Chapter 19 4", "Sifra, Emor, Chapter 19 5", "Sifra, Emor, Chapter 19 6", "Sifra, Emor, Chapter 19 7", "Onkelos Lev 24:15", "Onkelos Lev 24:16"])
 
 # -------------------------- Lev.24.16 · ETNACHTA_SPLIT ---------------------
-# ונקב שם יהוה מות יומת רגום ירגמו בו כל העדה … כגר כאזרח בנקבו שם יומת
-# "[EN-AID] From top split: LEFT «ונקב שם יהוה מות יומת רגום ירגמו בו כל
-# העדה» / RIGHT «כגר כאזרח בנקבו שם יומת». Derive claim from Hebrew arms.
-# Lev 24:16."
+# ‹ונקב שם יהוה› (“and-puncture name YHWH”)
+# ‹מות יומת רגום› (“die die cast-together”)
+# ‹ירגמו בו כל› (“cast-together in-him/its all”)
+# ‹העדה … כגר כאזרח› (“the-congregation … like-sojourner like-spontaneous-
+# growth”)
+# ‹בנקבו שם יומת› (“in-puncture-him/its name die”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 24:16."
 m.step("Lev.24.16")
 
-# -------------------------- Lev.24.17 · COND_כי ----------------------------
-# ואיש כי יכה כל נפש אדם … מות יומת
-# "[EN-AID] From top split: LEFT «ואיש כי יכה כל נפש אדם» / RIGHT «מות
-# יומת». Derive claim from Hebrew arms. Lev 24:17."
+# -------------------------- Lev.24.17 · COND_כי (“that”) -------------------
+# ‹ואיש כי יכה› (“and-man that strike”)
+# ‹כל נפש אדם› (“all living-being human”)
+# ‹… מות יומת› (“die die”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 24:17."
 m.step("Lev.24.17")
 # witness-tier presupposed read: the_striker_and_the_whole_soul on
 # ish_ki_yakeh_kol_nefesh — read, not installed
@@ -89,15 +110,20 @@ m.witness_read("ish_ki_yakeh_kol_nefesh", "the_striker_and_the_whole_soul",
                 cites=["Sifra, Emor, Chapter 20 1", "Sifra, Emor, Chapter 20 2", "Onkelos Lev 24:18"])
 
 # -------------------------- Lev.24.18 · ETNACHTA_SPLIT ---------------------
-# ומכה נפש בהמה ישלמנה … נפש תחת נפש
-# "[EN-AID] From top split: LEFT «ומכה נפש בהמה ישלמנה» / RIGHT «נפש תחת
-# נפש». Derive claim from Hebrew arms. Lev 24:18."
+# ‹ומכה נפש בהמה› (“and-strike living-being livestock”)
+# ‹ישלמנה … נפש תחת› (“be-safe-her/its … living-being under”)
+# ‹נפש› (“living-being”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 24:18."
 m.step("Lev.24.18")
 
-# -------------------------- Lev.24.19 · COND_כי ----------------------------
-# ואיש כי יתן מום בעמיתו … כאשר עשה כן יעשה לו
-# "[EN-AID] From top split: LEFT «ואיש כי יתן מום בעמיתו» / RIGHT «כאשר עשה
-# כן יעשה לו». Derive claim from Hebrew arms. Lev 24:19."
+# -------------------------- Lev.24.19 · COND_כי (“that”) -------------------
+# ‹ואיש כי יתן› (“and-man that set”)
+# ‹מום בעמיתו … כאשר› (“stain in-companionship-him/its … like-as/which”)
+# ‹עשה כן יעשה› (“make so make”)
+# ‹לו› (“to-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 24:19."
 m.step("Lev.24.19")
 # witness-tier presupposed read: shame_class_hand_boundary_talion_is_payment
 # on kaasher_asah_ken_yeaseh_lo — read, not installed
@@ -105,15 +131,21 @@ m.witness_read("kaasher_asah_ken_yeaseh_lo", "shame_class_hand_boundary_talion_i
                 cites=["Sifra, Emor, Chapter 20 3", "Sifra, Emor, Chapter 20 4", "Sifra, Emor, Chapter 20 5", "Sifra, Emor, Chapter 20 6", "Sifra, Emor, Chapter 20 7", "Onkelos Lev 24:20"])
 
 # -------------------------- Lev.24.20 · ETNACHTA_SPLIT ---------------------
-# שבר תחת שבר עין תחת עין שן תחת שן … כאשר יתן מום באדם כן ינתן בו
-# "[EN-AID] From top split: LEFT «שבר תחת שבר עין תחת עין שן תחת שן» / RIGHT
-# «כאשר יתן מום באדם כן ינתן בו». Derive claim from Hebrew arms. Lev 24:20."
+# ‹שבר תחת שבר› (“fracture under fracture”)
+# ‹עין תחת עין› (“eye under eye”)
+# ‹שן תחת שן› (“tooth under tooth”)
+# ‹… כאשר יתן מום› (“like-as/which set stain”)
+# ‹באדם כן ינתן› (“in-human so set”)
+# ‹בו› (“in-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 24:20."
 m.step("Lev.24.20")
 
 # -------------------------- Lev.24.21 · ETNACHTA_SPLIT ---------------------
-# ומכה בהמה ישלמנה … ומכה אדם יומת
-# "[EN-AID] From top split: LEFT «ומכה בהמה ישלמנה» / RIGHT «ומכה אדם יומת».
-# Derive claim from Hebrew arms. Lev 24:21."
+# ‹ומכה בהמה ישלמנה› (“and-strike livestock be-safe-her/its”)
+# ‹… ומכה אדם יומת› (“and-strike human die”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 24:21."
 m.step("Lev.24.21")
 # witness-tier presupposed read:
 # parent_striker_one_judgment_and_the_protocol on
@@ -122,17 +154,24 @@ m.witness_read("mishpat_echad_yihyeh_lachem", "parent_striker_one_judgment_and_t
                 cites=["Sifra, Emor, Chapter 20 8", "Sifra, Emor, Chapter 20 9", "Sifra, Emor, Chapter 20 10", "Onkelos Lev 24:22"])
 
 # -------------------------- Lev.24.22 · ETNACHTA_SPLIT ---------------------
-# משפט אחד יהיה לכם כגר כאזרח יהיה … כי אני יהוה אלהיכם
-# "[EN-AID] From top split: LEFT «משפט אחד יהיה לכם כגר כאזרח יהיה» / RIGHT
-# «כי אני יהוה אלהיכם». Derive claim from Hebrew arms. Lev 24:22."
+# ‹משפט אחד יהיה› (“judgment one be”)
+# ‹לכם כגר כאזרח› (“to-you/your(pl) like-sojourner like-spontaneous-growth”)
+# ‹יהיה … כי אני› (“be … that”)
+# ‹יהוה אלהיכם› (“YHWH God-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 24:22."
 m.step("Lev.24.22")
 
 # -------------------------- Lev.24.23 · ETNACHTA_SPLIT ---------------------
-# וידבר משה אל בני ישראל ויוציאו את המקלל אל מחוץ למחנה וירגמו … ובני ישראל
-# עשו כאשר צוה יהוה את משה
-# "[EN-AID] From top split: LEFT «וידבר משה אל בני ישראל ויוציאו את המקלל אל
-# מחוץ למחנה וירגמו אתו אבן» / RIGHT «ובני ישראל עשו כאשר צוה יהוה את משה».
-# Derive claim from Hebrew arms. Lev 24:23."
+# ‹וידבר משה אל› (“and-speak Moses to”)
+# ‹בני ישראל ויוציאו› (“son Israel and-bring-forth”)
+# ‹את המקלל אל› (“obj-marker the-be-light to”)
+# ‹מחוץ למחנה וירגמו› (“from-outside to-camp and-cast-together”)
+# ‹… ובני ישראל עשו› (“and-son Israel make”)
+# ‹כאשר צוה יהוה› (“like-as/which command YHWH”)
+# ‹את משה› (“obj-marker Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 24:23."
 m.step("Lev.24.23")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

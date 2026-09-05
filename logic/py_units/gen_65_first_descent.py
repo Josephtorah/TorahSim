@@ -14,13 +14,15 @@ from machine import Machine
 m = Machine("gen_65_first_descent")
 
 # -------------------------- Gen.42.1 · WHY_DO_YOU_LOOK_AT_ONE_ANOTHER ------
-# וַיַּרְא יַעֲקֹב כִּי יֶשׁ־שֶׁבֶר בְּמִצְרָיִם וַיֹּאמֶר יַעֲקֹב לְבָנָיו
-# לָמָּה תִּתְרָאוּ
+# ‹וַיַּרְא יַעֲקֹב כִּי› (“and-see Jacob that”)
+# ‹יֶשׁ־שֶׁבֶר בְּמִצְרָיִם וַיֹּאמֶר› (“there-is grain in-Egypt and-say”)
+# ‹יַעֲקֹב לְבָנָיו לָמָּה› (“Jacob to-son-him/its to-what”)
+# ‹תִּתְרָאוּ› (“see”)
 # "[EN-AID] And Jacob saw that there was grain in Egypt; and Jacob said to
 # his sons: Why do you look at one another?"
 m.step("Gen.42.1")
-# ‹כִּי יֶשׁ־שֶׁבֶר בְּמִצְרָיִם› (“that there-is grain in-Egypt”) — fact
-# holds: there-is-grain-in-Egypt
+# ‹כִּי יֶשׁ־שֶׁבֶר בְּמִצְרָיִם› (“that there-is grain in-Egypt”)
+# — fact holds: there-is-grain-in-Egypt
 m.fact("yesh_shever_be_mitzrayim")
 # witness-tier presupposed read: a_pun_the_chain_builds_on on grain_in_egypt
 # — read, not installed
@@ -32,14 +34,17 @@ m.witness_read("lama_titrau", "satiety_display",
                 cites=["Taanit 10b:5", "Taanit 10b:6"])
 
 # -------------------------- Gen.42.2 · GO_DOWN_AND_BUY ---------------------
-# וַיֹּאמֶר הִנֵּה שָׁמַעְתִּי כִּי יֶשׁ־שֶׁבֶר בְּמִצְרָיִם רְדוּ־שָׁמָּה
-# וְשִׁבְרוּ־לָנוּ מִשָּׁם וְנִחְיֶה וְלֹא נָמוּת
+# ‹וַיֹּאמֶר הִנֵּה שָׁמַעְתִּי› (“and-say behold hear”)
+# ‹כִּי יֶשׁ־שֶׁבֶר בְּמִצְרָיִם› (“that there-is grain in-Egypt”)
+# ‹רְדוּ־שָׁמָּה וְשִׁבְרוּ־לָנוּ מִשָּׁם› (“go-down there-ward and-deal-in-
+# grain to-us/our from-there”)
+# ‹וְנִחְיֶה וְלֹא נָמוּת› (“and-live and-not die”)
 # "[EN-AID] And he said: Behold, I have heard that there is grain in Egypt;
 # go down there and buy for us from there, that we may live and not die."
 m.step("Gen.42.2")
 # ‹רְדוּ־שָׁמָּה וְשִׁבְרוּ־לָנוּ› (“go-down there-ward and-deal-in-grain
-# to-us/our”) — Jacob speaks a demand — LET: go-down-shamah-and-deal-in-
-# grain-lanu
+# to-us/our”)
+# — Jacob speaks a demand — LET: go-down-shamah-and-deal-in-grain-lanu
 m.declare("yaaqov", "LET",
           "redu_shamah_ve_shivru_lanu")
 # witness-grounded state (its own tier):
@@ -48,14 +53,17 @@ m.witness_state("go_down", "the_imperative_carries_the_years_of_the_bondage",
                 cites=["Bereshit Rabbah 91:2", "Bereshit Rabbah 91:6"])
 
 # -------------------------- Gen.42.3 · TEN_GO_DOWN -------------------------
-# וַיֵּרְדוּ אֲחֵי־יוֹסֵף עֲשָׂרָה לִשְׁבֹּר בָּר מִמִּצְרָיִם
+# ‹וַיֵּרְדוּ אֲחֵי־יוֹסֵף עֲשָׂרָה› (“and-go-down brother Joseph ten”)
+# ‹לִשְׁבֹּר בָּר מִמִּצְרָיִם› (“to-deal-in-grain grain-of-any-kind from-
+# Egypt”)
 # "[EN-AID] And the ten brothers of Joseph went down to buy grain from
 # Egypt."
 m.step("Gen.42.3")
-# ‹וַיֵּרְדוּ אֲחֵי־יוֹסֵף עֲשָׂרָה לִשְׁבֹּר בָּר מִמִּצְרָיִם› (“and-go-
-# down brother Joseph ten to-deal-in-grain grain-of-any-kind from-Egypt”) —
-# demand settled (popped from the queue): go-down-shamah-and-deal-in-grain-
-# lanu
+# ‹וַיֵּרְדוּ אֲחֵי־יוֹסֵף עֲשָׂרָה› (“and-go-down brother Joseph ten”)
+# ‹לִשְׁבֹּר בָּר מִמִּצְרָיִם› (“to-deal-in-grain grain-of-any-kind from-
+# Egypt”)
+# — demand settled (popped from the queue): go-down-shamah-and-deal-in-
+# grain-lanu
 m.result("redu_shamah_ve_shivru_lanu", tmark="t1")
 # witness-tier presupposed read: nine_parts_brotherhood_one_part_grain on
 # ten_brothers_went_down — read, not installed
@@ -63,13 +71,16 @@ m.witness_read("ten_brothers_went_down", "nine_parts_brotherhood_one_part_grain"
                 cites=["Bereshit Rabbah 91:2"])
 
 # -------------------------- Gen.42.4 · BENJAMIN_WITHHELD -------------------
-# וְאֶת־בִּנְיָמִין אֲחִי יוֹסֵף לֹא־שָׁלַח יַעֲקֹב אֶת־אֶחָיו כִּי אָמַר
-# פֶּן־יִקְרָאֶנּוּ אָסוֹן
+# ‹וְאֶת־בִּנְיָמִין אֲחִי יוֹסֵף› (“and-obj-marker Benjamin brother
+# Joseph”)
+# ‹לֹא־שָׁלַח יַעֲקֹב אֶת־אֶחָיו› (“not send Jacob with brother-him/its”)
+# ‹כִּי אָמַר פֶּן־יִקְרָאֶנּוּ› (“that say lest encounter-him/its”)
+# ‹אָסוֹן› (“hurt”)
 # "[EN-AID] But Benjamin, Joseph's brother, Jacob did not send with his
 # brothers — for he said: Lest harm befall him."
 m.step("Gen.42.4")
-# ‹וְאֶת־בִּנְיָמִין› (“and-obj-marker Benjamin”) — fact holds: obj-marker-
-# Benjamin-not-send-lest-hurt
+# ‹וְאֶת־בִּנְיָמִין› (“and-obj-marker Benjamin”)
+# — fact holds: obj-marker-Benjamin-not-send-lest-hurt
 m.fact("et_binyamin_lo_shalach_pen_ason")
 # witness-grounded state (its own tier):
 # the_word_lives_only_here_and_in_the_capital_law on lest_harm_befall_him
@@ -77,14 +88,18 @@ m.witness_state("lest_harm_befall_him", "the_word_lives_only_here_and_in_the_cap
                 cites=["Onkelos Genesis 42:4", "Onkelos Genesis 42:38"])
 
 # -------------------------- Gen.42.5 · AMONG_THE_COMERS --------------------
-# וַיָּבֹאוּ בְּנֵי יִשְׂרָאֵל לִשְׁבֹּר בְּתוֹךְ הַבָּאִים כִּי־הָיָה
-# הָרָעָב בְּאֶרֶץ כְּנָעַן
+# ‹וַיָּבֹאוּ בְּנֵי יִשְׂרָאֵל› (“and-come/bring son Israel”)
+# ‹לִשְׁבֹּר בְּתוֹךְ הַבָּאִים› (“to-deal-in-grain in-midst the-
+# come/bring”)
+# ‹כִּי־הָיָה הָרָעָב בְּאֶרֶץ› (“that be the-hunger in-earth”)
+# ‹כְּנָעַן› (“Canaan”)
 # "[EN-AID] And the sons of Israel came to buy among those who came, for the
 # famine was in the land of Canaan."
 m.step("Gen.42.5")
-# ‹וַיָּבֹאוּ בְּנֵי יִשְׂרָאֵל לִשְׁבֹּר בְּתוֹךְ הַבָּאִים› (“and-
-# come/bring son Israel to-deal-in-grain in-midst the-come/bring”) — fact
-# holds: in-midst-the-come/bring-that-the-hunger-in-earth-Canaan
+# ‹וַיָּבֹאוּ בְּנֵי יִשְׂרָאֵל› (“and-come/bring son Israel”)
+# ‹לִשְׁבֹּר בְּתוֹךְ הַבָּאִים› (“to-deal-in-grain in-midst the-
+# come/bring”)
+# — fact holds: in-midst-the-come/bring-that-the-hunger-in-earth-Canaan
 m.fact("be_tokh_ha_baim_ki_ha_raav_be_eretz_kenaan")
 # witness-tier presupposed read: the_quorum_of_ten_derived_here on
 # among_those_who_came — read, not installed
@@ -92,15 +107,21 @@ m.witness_read("among_those_who_came", "the_quorum_of_ten_derived_here",
                 cites=["Bereshit Rabbah 91:3"])
 
 # -------------------------- Gen.42.6 · THE_SHEAVES_BOW ---------------------
-# וְיוֹסֵף הוּא הַשַּׁלִּיט עַל־הָאָרֶץ הוּא הַמַּשְׁבִּיר לְכָל־עַם הָאָרֶץ
-# וַיָּבֹאוּ אֲחֵי יוֹסֵף וַיִּשְׁתַּחֲווּ־לוֹ אַפַּיִם אָרְצָה
+# ‹וְיוֹסֵף הוּא הַשַּׁלִּיט› (“and-Joseph he/it the-potent”)
+# ‹עַל־הָאָרֶץ הוּא הַמַּשְׁבִּיר› (“over the-earth he/it the-deal-in-
+# grain”)
+# ‹לְכָל־עַם הָאָרֶץ וַיָּבֹאוּ› (“to-all people the-earth and-come/bring”)
+# ‹אֲחֵי יוֹסֵף וַיִּשְׁתַּחֲווּ־לוֹ› (“brother Joseph and-afflict to-
+# him/its”)
+# ‹אַפַּיִם אָרְצָה› (“nose earth-ward”)
 # "[EN-AID] And Joseph — he was the governor over the land, he the seller to
 # all the people of the land; and Joseph's brothers came and bowed down to
 # him, faces to the earth."
 m.step("Gen.42.6")
-# ‹וַיָּבֹאוּ אֲחֵי יוֹסֵף וַיִּשְׁתַּחֲווּ־לוֹ אַפַּיִם אָרְצָה› (“and-
-# come/bring brother Joseph and-afflict to-him/its nose earth-ward”) —
-# event: hishtachavu — agent achei-Joseph
+# ‹וַיָּבֹאוּ אֲחֵי יוֹסֵף› (“and-come/bring brother Joseph”)
+# ‹וַיִּשְׁתַּחֲווּ־לוֹ אַפַּיִם אָרְצָה› (“and-afflict to-him/its nose
+# earth-ward”)
+# — event: hishtachavu — agent achei-Joseph
 m.event("hishtachavu", agent="achei_yosef")
 # witness-tier presupposed read: three_edicts_that_make_the_finding_possible
 # on the_governor_over_the_land — read, not installed
@@ -108,16 +129,21 @@ m.witness_read("the_governor_over_the_land", "three_edicts_that_make_the_finding
                 cites=["Bereshit Rabbah 91:4"])
 
 # -------------------------- Gen.42.7 · HE_KNEW_THEM_THEY_KNEW_HIM_NOT ------
-# וַיַּרְא יוֹסֵף אֶת־אֶחָיו וַיַּכִּרֵם וַיִּתְנַכֵּר אֲלֵיהֶם וַיְדַבֵּר
-# אִתָּם קָשׁוֹת וַיֹּאמֶר אֲלֵהֶם מֵאַיִן בָּאתֶם וַיֹּאמְרוּ מֵאֶרֶץ
-# כְּנַעַן לִשְׁבָּר־אֹכֶל
+# ‹וַיַּרְא יוֹסֵף אֶת־אֶחָיו› (“and-see Joseph obj-marker brother-him/its”)
+# ‹וַיַּכִּרֵם וַיִּתְנַכֵּר אֲלֵיהֶם› (“and-scrutinize-them/their and-
+# scrutinize to-them/their”)
+# ‹וַיְדַבֵּר אִתָּם קָשׁוֹת› (“and-speak with-them/their severe”)
+# ‹וַיֹּאמֶר אֲלֵהֶם מֵאַיִן› (“and-say to-them/their from-where?”)
+# ‹בָּאתֶם וַיֹּאמְרוּ מֵאֶרֶץ› (“come/bring and-say from-earth”)
+# ‹כְּנַעַן לִשְׁבָּר־אֹכֶל› (“Canaan to-deal-in-grain food”)
 # "[EN-AID] And Joseph saw his brothers and recognized them, and made
 # himself strange to them, and spoke with them harshly; and he said to them:
 # From where do you come? And they said: From the land of Canaan, to buy
 # food."
 m.step("Gen.42.7")
 # ‹וַיַּכִּרֵם וַיִּתְנַכֵּר אֲלֵיהֶם› (“and-scrutinize-them/their and-
-# scrutinize to-them/their”) — fact holds: and-yakirem-and-scrutinize-alehem
+# scrutinize to-them/their”)
+# — fact holds: and-yakirem-and-scrutinize-alehem
 m.fact("va_yakirem_va_yitnaker_alehem")
 # witness-grounded state (its own tier):
 # disguise_against_deliberation_unresolved on he_made_himself_strange
@@ -125,12 +151,14 @@ m.witness_state("he_made_himself_strange", "disguise_against_deliberation_unreso
                 cites=["Onkelos Genesis 42:7", "Bereshit Rabbah 91:7"])
 
 # -------------------------- Gen.42.8 · THE_ONE_WAY_KNOWING -----------------
-# וַיַּכֵּר יוֹסֵף אֶת־אֶחָיו וְהֵם לֹא הִכִּרֻהוּ
+# ‹וַיַּכֵּר יוֹסֵף אֶת־אֶחָיו› (“and-scrutinize Joseph obj-marker brother-
+# him/its”)
+# ‹וְהֵם לֹא הִכִּרֻהוּ› (“and-they not scrutinize-him/its”)
 # "[EN-AID] And Joseph recognized his brothers, but they did not recognize
 # him."
 m.step("Gen.42.8")
-# ‹וְהֵם לֹא הִכִּרֻהוּ› (“and-they not scrutinize-him/its”) — fact holds:
-# and-they-not-hikiruhu
+# ‹וְהֵם לֹא הִכִּרֻהוּ› (“and-they not scrutinize-him/its”)
+# — fact holds: and-they-not-hikiruhu
 m.fact("ve_hem_lo_hikiruhu")
 # witness-tier presupposed read: the_beard_as_the_recognition_variable on
 # he_knew_them_they_knew_him_not — read, not installed
@@ -142,14 +170,18 @@ m.witness_read("va_yaker_yosef", "beard_evidence",
                 cites=["Yevamot 88a:12", "Yevamot 88a:13", "Yevamot 88a:14"])
 
 # -------------------------- Gen.42.9 · THE_DREAMS_REMEMBERED ---------------
-# וַיִּזְכֹּר יוֹסֵף אֵת הַחֲלֹמוֹת אֲשֶׁר חָלַם לָהֶם וַיֹּאמֶר אֲלֵהֶם
-# מְרַגְּלִים אַתֶּם לִרְאוֹת אֶת־עֶרְוַת הָאָרֶץ בָּאתֶם
+# ‹וַיִּזְכֹּר יוֹסֵף אֵת› (“and-mark Joseph obj-marker”)
+# ‹הַחֲלֹמוֹת אֲשֶׁר חָלַם› (“the-dream which bind-firmly”)
+# ‹לָהֶם וַיֹּאמֶר אֲלֵהֶם› (“to-them/their and-say to-them/their”)
+# ‹מְרַגְּלִים אַתֶּם לִרְאוֹת› (“walk-along you to-see”)
+# ‹אֶת־עֶרְוַת הָאָרֶץ בָּאתֶם› (“obj-marker nudity the-earth come/bring”)
 # "[EN-AID] And Joseph remembered the dreams which he dreamed of them; and
 # he said to them: You are spies! To see the nakedness of the land you have
 # come."
 m.step("Gen.42.9")
-# ‹וַיִּזְכֹּר יוֹסֵף אֵת הַחֲלֹמוֹת› (“and-mark Joseph obj-marker the-
-# dream”) — event: male — agent Joseph; theme the-dream
+# ‹וַיִּזְכֹּר יוֹסֵף אֵת› (“and-mark Joseph obj-marker”)
+# ‹הַחֲלֹמוֹת› (“the-dream”)
+# — event: male — agent Joseph; theme the-dream
 m.event("zakhar", agent="yosef", themes=["ha_chalomot"])
 # witness-tier presupposed read: rendered_as_the_breach_in_the_defenses on
 # the_nakedness_of_the_land — read, not installed
@@ -157,68 +189,89 @@ m.witness_read("the_nakedness_of_the_land", "rendered_as_the_breach_in_the_defen
                 cites=["Onkelos Genesis 42:9", "Onkelos Genesis 42:12"])
 
 # -------------------------- Gen.42.10 · NO_MY_LORD -------------------------
-# וַיֹּאמְרוּ אֵלָיו לֹא אֲדֹנִי וַעֲבָדֶיךָ בָּאוּ לִשְׁבָּר־אֹכֶל
+# ‹וַיֹּאמְרוּ אֵלָיו לֹא› (“and-say to-him/its not”)
+# ‹אֲדֹנִי וַעֲבָדֶיךָ בָּאוּ› (“lord-me/my and-servant-you/your
+# come/bring”)
+# ‹לִשְׁבָּר־אֹכֶל› (“to-deal-in-grain food”)
 # "[EN-AID] And they said to him: No, my lord; your servants have come to
 # buy food."
 m.step("Gen.42.10")
-# ‹לֹא אֲדֹנִי וַעֲבָדֶיךָ בָּאוּ› (“not lord-me/my and-servant-you/your
-# come/bring”) — fact holds: not-adoni-avadekha-come/bring-lishbor-food
+# ‹לֹא אֲדֹנִי וַעֲבָדֶיךָ› (“not lord-me/my and-servant-you/your”)
+# ‹בָּאוּ› (“come/bring”)
+# — fact holds: not-adoni-avadekha-come/bring-lishbor-food
 m.fact("lo_adoni_avadekha_bau_lishbor_okhel")
 
 # -------------------------- Gen.42.11 · WE_ARE_TWELVE_HONEST_MEN -----------
-# כֻּלָּנוּ בְּנֵי אִישׁ־אֶחָד נָחְנוּ כֵּנִים אֲנַחְנוּ לֹא־הָיוּ עֲבָדֶיךָ
-# מְרַגְּלִים
+# ‹כֻּלָּנוּ בְּנֵי אִישׁ־אֶחָד› (“all-us/our son man one”)
+# ‹נָחְנוּ כֵּנִים אֲנַחְנוּ› (“we set-upright we”)
+# ‹לֹא־הָיוּ עֲבָדֶיךָ מְרַגְּלִים› (“not be servant-you/your walk-along”)
 # "[EN-AID] We are all sons of one man; we are honest; your servants have
 # never been spies."
 m.step("Gen.42.11")
-# ‹כֻּלָּנוּ בְּנֵי אִישׁ־אֶחָד נָחְנוּ› (“all-us/our son man one we”) —
-# fact holds: kulanu-son-man-one-we
+# ‹כֻּלָּנוּ בְּנֵי אִישׁ־אֶחָד› (“all-us/our son man one”)
+# ‹נָחְנוּ› (“we”)
+# — fact holds: kulanu-son-man-one-we
 m.fact("kulanu_bene_ish_echad_nachnu")
 
 # -------------------------- Gen.42.12 · THE_CHARGE_REPEATED ----------------
-# וַיֹּאמֶר אֲלֵהֶם לֹא כִּי־עֶרְוַת הָאָרֶץ בָּאתֶם לִרְאוֹת
+# ‹וַיֹּאמֶר אֲלֵהֶם לֹא› (“and-say to-them/their not”)
+# ‹כִּי־עֶרְוַת הָאָרֶץ בָּאתֶם› (“that nudity the-earth come/bring”)
+# ‹לִרְאוֹת› (“to-see”)
 # "[EN-AID] And he said to them: No — for the nakedness of the land you have
 # come to see."
 m.step("Gen.42.12")
-# ‹וַיֹּאמֶר אֲלֵהֶם לֹא כִּי־עֶרְוַת הָאָרֶץ בָּאתֶם לִרְאוֹת› (“and-say
-# to-them/their not that nudity the-earth come/bring to-see”) — fact holds:
-# nudity-the-earth-come/bring-lirot
+# ‹וַיֹּאמֶר אֲלֵהֶם לֹא› (“and-say to-them/their not”)
+# ‹כִּי־עֶרְוַת הָאָרֶץ בָּאתֶם› (“that nudity the-earth come/bring”)
+# ‹לִרְאוֹת› (“to-see”)
+# — fact holds: nudity-the-earth-come/bring-lirot
 m.fact("ervat_ha_aretz_batem_lirot")
 
 # -------------------------- Gen.42.13 · TWELVE_MINUS_ONE_ACCOUNTING --------
-# וַיֹּאמְרוּ שְׁנֵים עָשָׂר עֲבָדֶיךָ אַחִים אֲנַחְנוּ בְּנֵי אִישׁ־אֶחָד
-# בְּאֶרֶץ כְּנָעַן וְהִנֵּה הַקָּטֹן אֶת־אָבִינוּ הַיּוֹם וְהָאֶחָד
-# אֵינֶנּוּ
+# ‹וַיֹּאמְרוּ שְׁנֵים עָשָׂר› (“and-say two -teen”)
+# ‹עֲבָדֶיךָ אַחִים אֲנַחְנוּ› (“servant-you/your brother we”)
+# ‹בְּנֵי אִישׁ־אֶחָד בְּאֶרֶץ› (“son man one in-earth”)
+# ‹כְּנָעַן וְהִנֵּה הַקָּטֹן› (“Canaan and-behold the-small”)
+# ‹אֶת־אָבִינוּ הַיּוֹם וְהָאֶחָד› (“with father-us/our the-day and-the-
+# one”)
+# ‹אֵינֶנּוּ› (“there-is-not-him/its”)
 # "[EN-AID] And they said: Your servants are twelve brothers, sons of one
 # man in the land of Canaan; and behold, the youngest is with our father
 # today, and the one — he is not."
 m.step("Gen.42.13")
-# ‹וְהִנֵּה הַקָּטֹן אֶת־אָבִינוּ הַיּוֹם וְהָאֶחָד אֵינֶנּוּ› (“and-behold
-# the-small with father-us/our the-day and-the-one there-is-not-him/its”) —
-# fact holds: two--teen-and-the-one-enennu
+# ‹וְהִנֵּה הַקָּטֹן אֶת־אָבִינוּ› (“and-behold the-small with father-
+# us/our”)
+# ‹הַיּוֹם וְהָאֶחָד אֵינֶנּוּ› (“the-day and-the-one there-is-not-him/its”)
+# — fact holds: two--teen-and-the-one-enennu
 m.fact("shenem_asar_ve_ha_echad_enennu")
 
 # -------------------------- Gen.42.14 · IT_IS_WHAT_I_SAID ------------------
-# וַיֹּאמֶר אֲלֵהֶם יוֹסֵף הוּא אֲשֶׁר דִּבַּרְתִּי אֲלֵכֶם לֵאמֹר
-# מְרַגְּלִים אַתֶּם
+# ‹וַיֹּאמֶר אֲלֵהֶם יוֹסֵף› (“and-say to-them/their Joseph”)
+# ‹הוּא אֲשֶׁר דִּבַּרְתִּי› (“he/it which speak”)
+# ‹אֲלֵכֶם לֵאמֹר מְרַגְּלִים› (“to-you/your(pl) to-say walk-along”)
+# ‹אַתֶּם› (“you”)
 # "[EN-AID] And Joseph said to them: It is what I spoke to you, saying: You
 # are spies."
 m.step("Gen.42.14")
-# ‹וַיֹּאמֶר אֲלֵהֶם יוֹסֵף הוּא אֲשֶׁר דִּבַּרְתִּי אֲלֵכֶם לֵאמֹר
-# מְרַגְּלִים אַתֶּם› (“and-say to-them/their Joseph he/it which speak to-
-# you/your(pl) to-say walk-along you”) — fact holds: he/it-which-speak-walk-
-# along-you
+# ‹וַיֹּאמֶר אֲלֵהֶם יוֹסֵף› (“and-say to-them/their Joseph”)
+# ‹הוּא אֲשֶׁר דִּבַּרְתִּי› (“he/it which speak”)
+# ‹אֲלֵכֶם לֵאמֹר מְרַגְּלִים› (“to-you/your(pl) to-say walk-along”)
+# ‹אַתֶּם› (“you”)
+# — fact holds: he/it-which-speak-walk-along-you
 m.fact("hu_asher_dibarti_meraglim_atem")
 
 # -------------------------- Gen.42.15 · BY_THIS_YOU_SHALL_BE_TESTED --------
-# בְּזֹאת תִּבָּחֵנוּ חֵי פַרְעֹה אִם־תֵּצְאוּ מִזֶּה כִּי אִם־בְּבוֹא
-# אֲחִיכֶם הַקָּטֹן הֵנָּה
+# ‹בְּזֹאת תִּבָּחֵנוּ חֵי› (“in-this test living”)
+# ‹פַרְעֹה אִם־תֵּצְאוּ מִזֶּה› (“Pharaoh if bring-forth from-this”)
+# ‹כִּי אִם־בְּבוֹא אֲחִיכֶם› (“very-widely-used-as-a-relati as-
+# demonstrative in-come/bring brother-you/your(pl)”)
+# ‹הַקָּטֹן הֵנָּה› (“the-small hither”)
 # "[EN-AID] By this you shall be tested — by the life of Pharaoh! — you
 # shall not go out from here except by the coming of your youngest brother
 # here."
 m.step("Gen.42.15")
-# ‹בְּזֹאת תִּבָּחֵנוּ חֵי פַרְעֹה› (“in-this test living Pharaoh”) — fact
-# holds: in-this-test-chei-Pharaoh
+# ‹בְּזֹאת תִּבָּחֵנוּ חֵי› (“in-this test living”)
+# ‹פַרְעֹה› (“Pharaoh”)
+# — fact holds: in-this-test-chei-Pharaoh
 m.fact("be_zot_tibachenu_chei_faro")
 # witness-tier presupposed read: identified_as_a_false_oath_formula on
 # by_pharaohs_life — read, not installed
@@ -226,35 +279,46 @@ m.witness_read("by_pharaohs_life", "identified_as_a_false_oath_formula",
                 cites=["Bereshit Rabbah 91:7"])
 
 # -------------------------- Gen.42.16 · THE_FIRST_PLAN ---------------------
-# שִׁלְחוּ מִכֶּם אֶחָד וְיִקַּח אֶת־אֲחִיכֶם וְאַתֶּם הֵאָסְרוּ
-# וְיִבָּחֲנוּ דִּבְרֵיכֶם הַאֱמֶת אִתְּכֶם וְאִם־לֹא חֵי פַרְעֹה כִּי
-# מְרַגְּלִים אַתֶּם
+# ‹שִׁלְחוּ מִכֶּם אֶחָד› (“send from-you/your(pl) one”)
+# ‹וְיִקַּח אֶת־אֲחִיכֶם וְאַתֶּם› (“and-take obj-marker brother-
+# you/your(pl) and-you”)
+# ‹הֵאָסְרוּ וְיִבָּחֲנוּ דִּבְרֵיכֶם› (“yoke and-test word/thing-
+# you/your(pl)”)
+# ‹הַאֱמֶת אִתְּכֶם וְאִם־לֹא› (“the-stability with-you/your(pl) and-if
+# not”)
+# ‹חֵי פַרְעֹה כִּי› (“living Pharaoh that”)
+# ‹מְרַגְּלִים אַתֶּם› (“walk-along you”)
 # "[EN-AID] Send one of you and let him take your brother, and you — be
 # bound! — and your words will be tested, whether truth is with you; and if
 # not — by the life of Pharaoh — you are spies."
 m.step("Gen.42.16")
-# ‹שִׁלְחוּ מִכֶּם אֶחָד› (“send from-you/your(pl) one”) — Joseph speaks a
-# demand — LET: send-mikem-one
+# ‹שִׁלְחוּ מִכֶּם אֶחָד› (“send from-you/your(pl) one”)
+# — Joseph speaks a demand — LET: send-mikem-one
 m.declare("yosef", "LET",
           "shilchu_mikem_echad")
 
 # -------------------------- Gen.42.17 · THREE_DAYS_IN_CUSTODY --------------
-# וַיֶּאֱסֹף אֹתָם אֶל־מִשְׁמָר שְׁלֹשֶׁת יָמִים
+# ‹וַיֶּאֱסֹף אֹתָם אֶל־מִשְׁמָר› (“and-gather-for-any-purpose obj-marker-
+# them/their to guard”)
+# ‹שְׁלֹשֶׁת יָמִים› (“three day”)
 # "[EN-AID] And he gathered them into custody three days."
 m.step("Gen.42.17")
-# ‹וַיֶּאֱסֹף אֹתָם אֶל־מִשְׁמָר שְׁלֹשֶׁת יָמִים› (“and-gather-for-any-
-# purpose obj-marker-them/their to guard three day”) — fact holds: to-guard-
-# three-day
+# ‹וַיֶּאֱסֹף אֹתָם אֶל־מִשְׁמָר› (“and-gather-for-any-purpose obj-marker-
+# them/their to guard”)
+# ‹שְׁלֹשֶׁת יָמִים› (“three day”)
+# — fact holds: to-guard-three-day
 m.fact("el_mishmar_sheloshet_yamim")
 
 # -------------------------- Gen.42.18 · THE_THIRD_DAY_REVISION -------------
-# וַיֹּאמֶר אֲלֵהֶם יוֹסֵף בַּיּוֹם הַשְּׁלִישִׁי זֹאת עֲשׂוּ וִחְיוּ
-# אֶת־הָאֱלֹהִים אֲנִי יָרֵא
+# ‹וַיֹּאמֶר אֲלֵהֶם יוֹסֵף› (“and-say to-them/their Joseph”)
+# ‹בַּיּוֹם הַשְּׁלִישִׁי זֹאת› (“in-day the-third this”)
+# ‹עֲשׂוּ וִחְיוּ אֶת־הָאֱלֹהִים› (“make and-live obj-marker the-God”)
+# ‹אֲנִי יָרֵא› (“fear”)
 # "[EN-AID] And Joseph said to them on the third day: This do, and live — I
 # fear God."
 m.step("Gen.42.18")
-# ‹זֹאת עֲשׂוּ וִחְיוּ› (“this make and-live”) — Joseph speaks a demand —
-# LET: this-make-vichyu
+# ‹זֹאת עֲשׂוּ וִחְיוּ› (“this make and-live”)
+# — Joseph speaks a demand — LET: this-make-vichyu
 m.declare("yosef", "LET",
           "zot_asu_vichyu")
 # witness-tier presupposed read: an_enumerated_member_of_the_canon_pattern
@@ -263,41 +327,55 @@ m.witness_read("on_the_third_day", "an_enumerated_member_of_the_canon_pattern",
                 cites=["Bereshit Rabbah 56:1", "Onkelos Genesis 42:18"])
 
 # -------------------------- Gen.42.19 · ONE_BOUND_NINE_CARRY ---------------
-# אִם־כֵּנִים אַתֶּם אֲחִיכֶם אֶחָד יֵאָסֵר בְּבֵית מִשְׁמַרְכֶם וְאַתֶּם
-# לְכוּ הָבִיאוּ שֶׁבֶר רַעֲבוֹן בָּתֵּיכֶם
+# ‹אִם־כֵּנִים אַתֶּם אֲחִיכֶם› (“if set-upright you brother-you/your(pl)”)
+# ‹אֶחָד יֵאָסֵר בְּבֵית› (“one yoke in-house”)
+# ‹מִשְׁמַרְכֶם וְאַתֶּם לְכוּ› (“guard-you/your(pl) and-you go”)
+# ‹הָבִיאוּ שֶׁבֶר רַעֲבוֹן› (“come/bring grain famine”)
+# ‹בָּתֵּיכֶם› (“house-you/your(pl)”)
 # "[EN-AID] If you are honest, let one brother of yours be bound in the
 # house of your custody; and you — go, carry grain for the famine of your
 # households."
 m.step("Gen.42.19")
-# ‹אֲחִיכֶם אֶחָד יֵאָסֵר› (“brother-you/your(pl) one yoke”) — fact holds:
-# achikhem-one-yoke-and-you-go
+# ‹אֲחִיכֶם אֶחָד יֵאָסֵר› (“brother-you/your(pl) one yoke”)
+# — fact holds: achikhem-one-yoke-and-you-go
 m.fact("achikhem_echad_yeaser_ve_atem_lekhu")
 
 # -------------------------- Gen.42.20 · BRING_THE_YOUNGEST_AND_THE_RECEIPT -
-# וְאֶת־אֲחִיכֶם הַקָּטֹן תָּבִיאוּ אֵלַי וְיֵאָמְנוּ דִבְרֵיכֶם וְלֹא
-# תָמוּתוּ וַיַּעֲשׂוּ־כֵן
+# ‹וְאֶת־אֲחִיכֶם הַקָּטֹן תָּבִיאוּ› (“and-obj-marker brother-you/your(pl)
+# the-small come/bring”)
+# ‹אֵלַי וְיֵאָמְנוּ דִבְרֵיכֶם› (“to-me/my and-build-up word/thing-
+# you/your(pl)”)
+# ‹וְלֹא תָמוּתוּ וַיַּעֲשׂוּ־כֵן› (“and-not die and-make so”)
 # "[EN-AID] And your youngest brother you shall bring to me, and your words
 # will be confirmed, and you shall not die. And they did so."
 m.step("Gen.42.20")
-# ‹וְאֶת־אֲחִיכֶם הַקָּטֹן תָּבִיאוּ אֵלַי› (“and-obj-marker brother-
-# you/your(pl) the-small come/bring to-me/my”) — Joseph speaks a demand —
-# LET: obj-marker-achikhem-the-small-come/bring-elai
+# ‹וְאֶת־אֲחִיכֶם הַקָּטֹן תָּבִיאוּ› (“and-obj-marker brother-you/your(pl)
+# the-small come/bring”)
+# ‹אֵלַי› (“to-me/my”)
+# — Joseph speaks a demand — LET: obj-marker-achikhem-the-small-come/bring-
+# elai
 m.declare("yosef", "LET",
           "et_achikhem_ha_qaton_taviu_elai")
-# ‹וַיַּעֲשׂוּ־כֵן› (“and-make so”) — demand settled (popped from the
-# queue): this-make-vichyu
+# ‹וַיַּעֲשׂוּ־כֵן› (“and-make so”)
+# — demand settled (popped from the queue): this-make-vichyu
 m.result("zot_asu_vichyu", tmark="t2")
 
 # -------------------------- Gen.42.21 · THE_GUILT_SURFACES -----------------
-# וַיֹּאמְרוּ אִישׁ אֶל־אָחִיו אֲבָל אֲשֵׁמִים אֲנַחְנוּ עַל־אָחִינוּ אֲשֶׁר
-# רָאִינוּ צָרַת נַפְשׁוֹ בְּהִתְחַנְנוֹ אֵלֵינוּ וְלֹא שָׁמָעְנוּ עַל־כֵּן
-# בָּאָה אֵלֵינוּ הַצָּרָה הַזֹּאת
+# ‹וַיֹּאמְרוּ אִישׁ אֶל־אָחִיו› (“and-say man to brother-him/its”)
+# ‹אֲבָל אֲשֵׁמִים אֲנַחְנוּ› (“nay guilty we”)
+# ‹עַל־אָחִינוּ אֲשֶׁר רָאִינוּ› (“over brother-us/our which see”)
+# ‹צָרַת נַפְשׁוֹ בְּהִתְחַנְנוֹ› (“tightness living-being-him/its in-bend-
+# him/its”)
+# ‹אֵלֵינוּ וְלֹא שָׁמָעְנוּ› (“to-us/our and-not hear”)
+# ‹עַל־כֵּן בָּאָה אֵלֵינוּ› (“over so come/bring to-us/our”)
+# ‹הַצָּרָה הַזֹּאת› (“the-tightness the-this”)
 # "[EN-AID] And they said, each to his brother: Truly we are guilty
 # concerning our brother, whose soul's distress we saw when he pleaded to us
 # and we did not hear — therefore this distress has come to us."
 m.step("Gen.42.21")
-# ‹אֲבָל אֲשֵׁמִים אֲנַחְנוּ עַל־אָחִינוּ› (“nay guilty we over brother-
-# us/our”) — fact holds: nay-guilty-we-over-achinu
+# ‹אֲבָל אֲשֵׁמִים אֲנַחְנוּ› (“nay guilty we”)
+# ‹עַל־אָחִינוּ› (“over brother-us/our”)
+# — fact holds: nay-guilty-we-over-achinu
 m.fact("aval_ashemim_anachnu_al_achinu")
 # witness-tier presupposed read:
 # the_pit_entered_as_evidence_and_hearing_read_as_obedience on
@@ -306,18 +384,23 @@ m.witness_read("the_confession", "the_pit_entered_as_evidence_and_hearing_read_a
                 cites=["Bereshit Rabbah 91:8", "Onkelos Genesis 42:21", "Onkelos Genesis 42:22"])
 
 # -------------------------- Gen.42.22 · REUBEN_CITES_HIS_DEAD_DEMANDS ------
-# וַיַּעַן רְאוּבֵן אֹתָם לֵאמֹר הֲלוֹא אָמַרְתִּי אֲלֵיכֶם לֵאמֹר
-# אַל־תֶּחֶטְאוּ בַיֶּלֶד וְלֹא שְׁמַעְתֶּם וְגַם־דָּמוֹ הִנֵּה נִדְרָשׁ
+# ‹וַיַּעַן רְאוּבֵן אֹתָם› (“and-eye Reuben obj-marker-them/their”)
+# ‹לֵאמֹר הֲלוֹא אָמַרְתִּי› (“to-say is-it-not say”)
+# ‹אֲלֵיכֶם לֵאמֹר אַל־תֶּחֶטְאוּ› (“to-you/your(pl) to-say do-not sin”)
+# ‹בַיֶּלֶד וְלֹא שְׁמַעְתֶּם› (“in-child and-not hear”)
+# ‹וְגַם־דָּמוֹ הִנֵּה נִדְרָשׁ› (“and-also blood-him/its behold tread”)
 # "[EN-AID] And Reuben answered them, saying: Did I not say to you, saying:
 # Do not sin against the boy — and you did not hear; and also his blood —
 # behold, it is required."
 m.step("Gen.42.22")
-# ‹הֲלוֹא אָמַרְתִּי› (“is-it-not say”) — fact holds: halo-say-over-sin-and-
-# child
+# ‹הֲלוֹא אָמַרְתִּי› (“is-it-not say”)
+# — fact holds: halo-say-over-sin-and-child
 m.fact("halo_amarti_al_techetu_va_yeled")
 
 # -------------------------- Gen.42.23 · THE_INTERPRETER_BETWEEN ------------
-# וְהֵם לֹא יָדְעוּ כִּי שֹׁמֵעַ יוֹסֵף כִּי הַמֵּלִיץ בֵּינֹתָם
+# ‹וְהֵם לֹא יָדְעוּ› (“and-they not know”)
+# ‹כִּי שֹׁמֵעַ יוֹסֵף› (“that hear Joseph”)
+# ‹כִּי הַמֵּלִיץ בֵּינֹתָם› (“that the-make-mouths-at between-them/their”)
 # "[EN-AID] And they did not know that Joseph heard — for the interpreter
 # was between them."
 m.step("Gen.42.23")
@@ -330,18 +413,27 @@ m.witness_state("the_interpreter", "identified_as_the_viceroys_elder_son",
                 cites=["Bereshit Rabbah 91:8"])
 
 # -------------------------- Gen.42.24 · WEEPING_AND_THE_SOFT_BINDING -------
-# וַיִּסֹּב מֵעֲלֵיהֶם וַיֵּבְךְּ וַיָּשָׁב אֲלֵהֶם וַיְדַבֵּר אֲלֵהֶם
-# וַיִּקַּח מֵאִתָּם אֶת־שִׁמְעוֹן וַיֶּאֱסֹר אֹתוֹ לְעֵינֵיהֶם
+# ‹וַיִּסֹּב מֵעֲלֵיהֶם וַיֵּבְךְּ› (“and-revolve from-over-them/their and-
+# weep”)
+# ‹וַיָּשָׁב אֲלֵהֶם וַיְדַבֵּר› (“and-return to-them/their and-speak”)
+# ‹אֲלֵהֶם וַיִּקַּח מֵאִתָּם› (“to-them/their and-take from-with-
+# them/their”)
+# ‹אֶת־שִׁמְעוֹן וַיֶּאֱסֹר אֹתוֹ› (“obj-marker Simeon and-yoke obj-marker-
+# him/its”)
+# ‹לְעֵינֵיהֶם› (“to-eye-them/their”)
 # "[EN-AID] And he turned from them and wept; and he returned to them and
 # spoke to them; and he took Simeon from them and bound him before their
 # eyes."
 m.step("Gen.42.24")
 # ‹וַיִּסֹּב מֵעֲלֵיהֶם וַיֵּבְךְּ› (“and-revolve from-over-them/their and-
-# weep”) — event: bakha — agent Joseph
+# weep”)
+# — event: bakha — agent Joseph
 m.event("bakha", agent="yosef")
-# ‹וַיִּקַּח מֵאִתָּם אֶת־שִׁמְעוֹן וַיֶּאֱסֹר אֹתוֹ לְעֵינֵיהֶם› (“and-take
-# from-with-them/their obj-marker Simeon and-yoke obj-marker-him/its to-eye-
-# them/their”) — fact holds: and-yikach-obj-marker-Simeon-and-yoke
+# ‹וַיִּקַּח מֵאִתָּם אֶת־שִׁמְעוֹן› (“and-take from-with-them/their obj-
+# marker Simeon”)
+# ‹וַיֶּאֱסֹר אֹתוֹ לְעֵינֵיהֶם› (“and-yoke obj-marker-him/its to-eye-
+# them/their”)
+# — fact holds: and-yikach-obj-marker-Simeon-and-yoke
 m.fact("va_yikach_et_shimon_va_yeesor")
 # witness-tier presupposed read: the_promised_repayment_arrives on
 # simeon_bound_before_their_eyes — read, not installed
@@ -349,50 +441,70 @@ m.witness_read("simeon_bound_before_their_eyes", "the_promised_repayment_arrives
                 cites=["Bereshit Rabbah 84:16", "Bereshit Rabbah 99:7"])
 
 # -------------------------- Gen.42.25 · VESSELS_SILVER_PROVISIONS ----------
-# וַיְצַו יוֹסֵף וַיְמַלְאוּ אֶת־כְּלֵיהֶם בָּר וּלְהָשִׁיב כַּסְפֵּיהֶם
-# אִישׁ אֶל־שַׂקּוֹ וְלָתֵת לָהֶם צֵדָה לַדָּרֶךְ וַיַּעַשׂ לָהֶם כֵּן
+# ‹וַיְצַו יוֹסֵף וַיְמַלְאוּ› (“and-command Joseph and-fill”)
+# ‹אֶת־כְּלֵיהֶם בָּר וּלְהָשִׁיב› (“obj-marker vessel-them/their grain-of-
+# any-kind and-to-return”)
+# ‹כַּסְפֵּיהֶם אִישׁ אֶל־שַׂקּוֹ› (“silver-them/their man to mesh-him/its”)
+# ‹וְלָתֵת לָהֶם צֵדָה› (“and-to-set to-them/their food”)
+# ‹לַדָּרֶךְ וַיַּעַשׂ לָהֶם› (“to-way/road and-make to-them/their”)
+# ‹כֵּן› (“so”)
 # "[EN-AID] And Joseph commanded, and they filled their vessels with grain,
 # and returned their silver each to his sack, and gave them provisions for
 # the way; and he did for them so."
 m.step("Gen.42.25")
-# ‹וַיְצַו יוֹסֵף וַיְמַלְאוּ אֶת־כְּלֵיהֶם בָּר וּלְהָשִׁיב כַּסְפֵּיהֶם›
-# (“and-command Joseph and-fill obj-marker vessel-them/their grain-of-any-
-# kind and-to-return silver-them/their”) — fact holds: and-command-and-to-
-# return-kaspehem
+# ‹וַיְצַו יוֹסֵף וַיְמַלְאוּ› (“and-command Joseph and-fill”)
+# ‹אֶת־כְּלֵיהֶם בָּר וּלְהָשִׁיב› (“obj-marker vessel-them/their grain-of-
+# any-kind and-to-return”)
+# ‹כַּסְפֵּיהֶם› (“silver-them/their”)
+# — fact holds: and-command-and-to-return-kaspehem
 m.fact("va_yetzav_u_le_hashiv_kaspehem")
 
 # -------------------------- Gen.42.26 · THEY_DEPART ------------------------
-# וַיִּשְׂאוּ אֶת־שִׁבְרָם עַל־חֲמֹרֵיהֶם וַיֵּלְכוּ מִשָּׁם
+# ‹וַיִּשְׂאוּ אֶת־שִׁבְרָם עַל־חֲמֹרֵיהֶם› (“and-lift/carry obj-marker
+# grain-them/their over male-ass-them/their”)
+# ‹וַיֵּלְכוּ מִשָּׁם› (“and-go from-there”)
 # "[EN-AID] And they carried their grain on their donkeys, and went from
 # there."
 m.step("Gen.42.26")
 # ‹וַיִּשְׂאוּ אֶת־שִׁבְרָם עַל־חֲמֹרֵיהֶם› (“and-lift/carry obj-marker
-# grain-them/their over male-ass-them/their”) — fact holds: and-lift/carry-
-# obj-marker-shivram-over-chamorehem
+# grain-them/their over male-ass-them/their”)
+# — fact holds: and-lift/carry-obj-marker-shivram-over-chamorehem
 m.fact("va_yisu_et_shivram_al_chamorehem")
 
 # -------------------------- Gen.42.27 · THE_FIRST_SACK_OPENS ---------------
-# וַיִּפְתַּח הָאֶחָד אֶת־שַׂקּוֹ לָתֵת מִסְפּוֹא לַחֲמֹרוֹ בַּמָּלוֹן
-# וַיַּרְא אֶת־כַּסְפּוֹ וְהִנֵּה־הוּא בְּפִי אַמְתַּחְתּוֹ
+# ‹וַיִּפְתַּח הָאֶחָד אֶת־שַׂקּוֹ› (“and-open-wide the-one obj-marker mesh-
+# him/its”)
+# ‹לָתֵת מִסְפּוֹא לַחֲמֹרוֹ› (“to-set fodder to-male-ass-him/its”)
+# ‹בַּמָּלוֹן וַיַּרְא אֶת־כַּסְפּוֹ› (“in-lodgment and-see obj-marker
+# silver-him/its”)
+# ‹וְהִנֵּה־הוּא בְּפִי אַמְתַּחְתּוֹ› (“and-behold he/it in-mouth
+# something-expansive-him/its”)
 # "[EN-AID] And the one opened his sack to give fodder to his donkey at the
 # lodging place, and he saw his silver — and behold, it was in the mouth of
 # his bag."
 m.step("Gen.42.27")
-# ‹וַיַּרְא אֶת־כַּסְפּוֹ וְהִנֵּה־הוּא בְּפִי אַמְתַּחְתּוֹ› (“and-see obj-
-# marker silver-him/its and-behold he/it in-mouth something-expansive-
-# him/its”) — fact holds: and-see-obj-marker-kaspo-in-mouth-amtachto
+# ‹וַיַּרְא אֶת־כַּסְפּוֹ וְהִנֵּה־הוּא› (“and-see obj-marker silver-him/its
+# and-behold he/it”)
+# ‹בְּפִי אַמְתַּחְתּוֹ› (“in-mouth something-expansive-him/its”)
+# — fact holds: and-see-obj-marker-kaspo-in-mouth-amtachto
 m.fact("va_yar_et_kaspo_be_fi_amtachto")
 
 # -------------------------- Gen.42.28 · WHAT_IS_THIS_GOD_HAS_DONE ----------
-# וַיֹּאמֶר אֶל־אֶחָיו הוּשַׁב כַּסְפִּי וְגַם הִנֵּה בְאַמְתַּחְתִּי
-# וַיֵּצֵא לִבָּם וַיֶּחֶרְדוּ אִישׁ אֶל־אָחִיו לֵאמֹר מַה־זֹּאת עָשָׂה
-# אֱלֹהִים לָנוּ
+# ‹וַיֹּאמֶר אֶל־אֶחָיו הוּשַׁב› (“and-say to brother-him/its return”)
+# ‹כַּסְפִּי וְגַם הִנֵּה› (“silver-me/my and-also behold”)
+# ‹בְאַמְתַּחְתִּי וַיֵּצֵא לִבָּם› (“in-something-expansive-me/my and-
+# bring-forth heart-them/their”)
+# ‹וַיֶּחֶרְדוּ אִישׁ אֶל־אָחִיו› (“and-shudder-with-terror man to brother-
+# him/its”)
+# ‹לֵאמֹר מַה־זֹּאת עָשָׂה› (“to-say what this make”)
+# ‹אֱלֹהִים לָנוּ› (“God to-us/our”)
 # "[EN-AID] And he said to his brothers: My silver has been returned — and
 # also, behold, it is in my bag! And their heart went out, and they
 # trembled, each to his brother, saying: What is this God has done to us?"
 m.step("Gen.42.28")
-# ‹מַה־זֹּאת עָשָׂה אֱלֹהִים לָנוּ› (“what this make God to-us/our”) — fact
-# holds: and-bring-forth-libam-what-this-make-God
+# ‹מַה־זֹּאת עָשָׂה אֱלֹהִים› (“what this make God”)
+# ‹לָנוּ› (“to-us/our”)
+# — fact holds: and-bring-forth-libam-what-this-make-God
 m.fact("va_yetze_libam_ma_zot_asa_Elohim")
 # witness-tier presupposed read: the_faculty_named_and_the_organ_removed on
 # their_heart_went_out — read, not installed
@@ -400,79 +512,107 @@ m.witness_read("their_heart_went_out", "the_faculty_named_and_the_organ_removed"
                 cites=["Onkelos Genesis 42:28"])
 
 # -------------------------- Gen.42.29 · THE_REPORT_BEGINS ------------------
-# וַיָּבֹאוּ אֶל־יַעֲקֹב אֲבִיהֶם אַרְצָה כְּנָעַן וַיַּגִּידוּ לוֹ אֵת
-# כָּל־הַקֹּרֹת אֹתָם לֵאמֹר
+# ‹וַיָּבֹאוּ אֶל־יַעֲקֹב אֲבִיהֶם› (“and-come/bring to Jacob father-
+# them/their”)
+# ‹אַרְצָה כְּנָעַן וַיַּגִּידוּ› (“earth-ward Canaan and-tell”)
+# ‹לוֹ אֵת כָּל־הַקֹּרֹת› (“to-him/its obj-marker all the-light-upon”)
+# ‹אֹתָם לֵאמֹר› (“obj-marker-them/their to-say”)
 # "[EN-AID] And they came to Jacob their father, to the land of Canaan; and
 # they told him all that had befallen them, saying:"
 m.step("Gen.42.29")
-# ‹וַיַּגִּידוּ לוֹ› (“and-tell to-him/its”) — fact holds: and-tell-not-obj-
-# marker-all-the-light-upon
+# ‹וַיַּגִּידוּ לוֹ› (“and-tell to-him/its”)
+# — fact holds: and-tell-not-obj-marker-all-the-light-upon
 m.fact("va_yagidu_lo_et_kol_ha_qorot")
 
 # -------------------------- Gen.42.30 · THE_HARSH_LORD_RETOLD --------------
-# דִּבֶּר הָאִישׁ אֲדֹנֵי הָאָרֶץ אִתָּנוּ קָשׁוֹת וַיִּתֵּן אֹתָנוּ
-# כִּמְרַגְּלִים אֶת־הָאָרֶץ
+# ‹דִּבֶּר הָאִישׁ אֲדֹנֵי› (“speak the-man lord”)
+# ‹הָאָרֶץ אִתָּנוּ קָשׁוֹת› (“the-earth with-us/our severe”)
+# ‹וַיִּתֵּן אֹתָנוּ כִּמְרַגְּלִים› (“and-set obj-marker-us/our like-walk-
+# along”)
+# ‹אֶת־הָאָרֶץ› (“obj-marker the-earth”)
 # "[EN-AID] The man, the lord of the land, spoke with us harshly, and made
 # us as spies of the land."
 m.step("Gen.42.30")
-# ‹דִּבֶּר הָאִישׁ אֲדֹנֵי הָאָרֶץ אִתָּנוּ קָשׁוֹת› (“speak the-man lord
-# the-earth with-us/our severe”) — fact holds: speak-the-man-lord-the-earth-
-# severe
+# ‹דִּבֶּר הָאִישׁ אֲדֹנֵי› (“speak the-man lord”)
+# ‹הָאָרֶץ אִתָּנוּ קָשׁוֹת› (“the-earth with-us/our severe”)
+# — fact holds: speak-the-man-lord-the-earth-severe
 m.fact("diber_ha_ish_adone_ha_aretz_qashot")
 
 # -------------------------- Gen.42.31 · WE_SAID_HONEST ---------------------
-# וַנֹּאמֶר אֵלָיו כֵּנִים אֲנָחְנוּ לֹא הָיִינוּ מְרַגְּלִים
+# ‹וַנֹּאמֶר אֵלָיו כֵּנִים› (“and-say to-him/its set-upright”)
+# ‹אֲנָחְנוּ לֹא הָיִינוּ› (“we not be”)
+# ‹מְרַגְּלִים› (“walk-along”)
 # "[EN-AID] And we said to him: We are honest; we have never been spies."
 m.step("Gen.42.31")
-# ‹כֵּנִים אֲנָחְנוּ לֹא הָיִינוּ מְרַגְּלִים› (“set-upright we not be walk-
-# along”) — fact holds: set-upright-we-not-be-walk-along
+# ‹כֵּנִים אֲנָחְנוּ לֹא› (“set-upright we not”)
+# ‹הָיִינוּ מְרַגְּלִים› (“be walk-along”)
+# — fact holds: set-upright-we-not-be-walk-along
 m.fact("kenim_anachnu_lo_hayinu_meraglim")
 
 # -------------------------- Gen.42.32 · TWELVE_RETOLD ----------------------
-# שְׁנֵים־עָשָׂר אֲנַחְנוּ אַחִים בְּנֵי אָבִינוּ הָאֶחָד אֵינֶנּוּ
-# וְהַקָּטֹן הַיּוֹם אֶת־אָבִינוּ בְּאֶרֶץ כְּנָעַן
+# ‹שְׁנֵים־עָשָׂר אֲנַחְנוּ אַחִים› (“two -teen we brother”)
+# ‹בְּנֵי אָבִינוּ הָאֶחָד› (“son father-us/our the-one”)
+# ‹אֵינֶנּוּ וְהַקָּטֹן הַיּוֹם› (“there-is-not-him/its and-the-small the-
+# day”)
+# ‹אֶת־אָבִינוּ בְּאֶרֶץ כְּנָעַן› (“with father-us/our in-earth Canaan”)
 # "[EN-AID] We are twelve brothers, sons of our father: the one is not, and
 # the youngest is today with our father in the land of Canaan."
 m.step("Gen.42.32")
-# ‹שְׁנֵים־עָשָׂר אֲנַחְנוּ אַחִים› (“two -teen we brother”) — fact holds:
-# two--teen-we-the-one-enennu
+# ‹שְׁנֵים־עָשָׂר אֲנַחְנוּ אַחִים› (“two -teen we brother”)
+# — fact holds: two--teen-we-the-one-enennu
 m.fact("shenem_asar_anachnu_ha_echad_enennu")
 
 # -------------------------- Gen.42.33 · LEAVE_ONE_TAKE_GO ------------------
-# וַיֹּאמֶר אֵלֵינוּ הָאִישׁ אֲדֹנֵי הָאָרֶץ בְּזֹאת אֵדַע כִּי כֵנִים
-# אַתֶּם אֲחִיכֶם הָאֶחָד הַנִּיחוּ אִתִּי וְאֶת־רַעֲבוֹן בָּתֵּיכֶם קְחוּ
-# וָלֵכוּ
+# ‹וַיֹּאמֶר אֵלֵינוּ הָאִישׁ› (“and-say to-us/our the-man”)
+# ‹אֲדֹנֵי הָאָרֶץ בְּזֹאת› (“lord the-earth in-this”)
+# ‹אֵדַע כִּי כֵנִים› (“know that set-upright”)
+# ‹אַתֶּם אֲחִיכֶם הָאֶחָד› (“you brother-you/your(pl) the-one”)
+# ‹הַנִּיחוּ אִתִּי וְאֶת־רַעֲבוֹן› (“deposit with-me/my and-obj-marker
+# famine”)
+# ‹בָּתֵּיכֶם קְחוּ וָלֵכוּ› (“house-you/your(pl) take and-go”)
 # "[EN-AID] And the man, the lord of the land, said to us: By this I shall
 # know that you are honest — leave one brother of yours with me, and the
 # famine of your households take, and go."
 m.step("Gen.42.33")
-# ‹אֲחִיכֶם הָאֶחָד הַנִּיחוּ אִתִּי› (“brother-you/your(pl) the-one deposit
-# with-me/my”) — fact holds: achikhem-the-one-deposit-iti
+# ‹אֲחִיכֶם הָאֶחָד הַנִּיחוּ› (“brother-you/your(pl) the-one deposit”)
+# ‹אִתִּי› (“with-me/my”)
+# — fact holds: achikhem-the-one-deposit-iti
 m.fact("achikhem_ha_echad_hanichu_iti")
 
 # -------------------------- Gen.42.34 · BRING_AND_TRADE --------------------
-# וְהָבִיאוּ אֶת־אֲחִיכֶם הַקָּטֹן אֵלַי וְאֵדְעָה כִּי לֹא מְרַגְּלִים
-# אַתֶּם כִּי כֵנִים אַתֶּם אֶת־אֲחִיכֶם אֶתֵּן לָכֶם וְאֶת־הָאָרֶץ
-# תִּסְחָרוּ
+# ‹וְהָבִיאוּ אֶת־אֲחִיכֶם הַקָּטֹן› (“and-come/bring obj-marker brother-
+# you/your(pl) the-small”)
+# ‹אֵלַי וְאֵדְעָה כִּי› (“to-me/my and-know that”)
+# ‹לֹא מְרַגְּלִים אַתֶּם› (“not walk-along you”)
+# ‹כִּי כֵנִים אַתֶּם› (“that set-upright you”)
+# ‹אֶת־אֲחִיכֶם אֶתֵּן לָכֶם› (“obj-marker brother-you/your(pl) set to-
+# you/your(pl)”)
+# ‹וְאֶת־הָאָרֶץ תִּסְחָרוּ› (“and-obj-marker the-earth travel-round”)
 # "[EN-AID] And bring your youngest brother to me, that I may know you are
 # not spies, that you are honest; your brother I will give to you, and the
 # land you shall trade."
 m.step("Gen.42.34")
-# ‹וְאֶת־הָאָרֶץ תִּסְחָרוּ› (“and-obj-marker the-earth travel-round”) —
-# fact holds: and-obj-marker-the-earth-travel-round
+# ‹וְאֶת־הָאָרֶץ תִּסְחָרוּ› (“and-obj-marker the-earth travel-round”)
+# — fact holds: and-obj-marker-the-earth-travel-round
 m.fact("ve_et_ha_aretz_tischaru")
 
 # -------------------------- Gen.42.35 · THE_BUNDLES_AND_THE_FEAR -----------
-# וַיְהִי הֵם מְרִיקִים שַׂקֵּיהֶם וְהִנֵּה־אִישׁ צְרוֹר־כַּסְפּוֹ
-# בְּשַׂקּוֹ וַיִּרְאוּ אֶת־צְרֹרוֹת כַּסְפֵּיהֶם הֵמָּה וַאֲבִיהֶם
-# וַיִּירָאוּ
+# ‹וַיְהִי הֵם מְרִיקִים› (“and-be they pour-out”)
+# ‹שַׂקֵּיהֶם וְהִנֵּה־אִישׁ צְרוֹר־כַּסְפּוֹ› (“mesh-them/their and-behold
+# man parcel silver-him/its”)
+# ‹בְּשַׂקּוֹ וַיִּרְאוּ אֶת־צְרֹרוֹת› (“in-mesh-him/its and-see obj-marker
+# parcel”)
+# ‹כַּסְפֵּיהֶם הֵמָּה וַאֲבִיהֶם› (“silver-them/their they and-father-
+# them/their”)
+# ‹וַיִּירָאוּ› (“and-fear”)
 # "[EN-AID] And it was, as they were emptying their sacks — and behold, each
 # man's bundle of silver was in his sack; and they saw their bundles of
 # silver, they and their father, and they feared."
 m.step("Gen.42.35")
-# ‹וַיִּרְאוּ אֶת־צְרֹרוֹת כַּסְפֵּיהֶם הֵמָּה וַאֲבִיהֶם וַיִּירָאוּ›
-# (“and-see obj-marker parcel silver-them/their they and-father-them/their
-# and-fear”) — fact holds: and-see-obj-marker-parcel-kaspehem-and-fear
+# ‹וַיִּרְאוּ אֶת־צְרֹרוֹת כַּסְפֵּיהֶם› (“and-see obj-marker parcel silver-
+# them/their”)
+# ‹הֵמָּה וַאֲבִיהֶם וַיִּירָאוּ› (“they and-father-them/their and-fear”)
+# — fact holds: and-see-obj-marker-parcel-kaspehem-and-fear
 m.fact("va_yiru_et_tzerorot_kaspehem_va_yirau")
 # witness-grounded state (its own tier): the_father_suspects_his_own_sons on
 # the_silver_reappearing
@@ -480,15 +620,21 @@ m.witness_state("the_silver_reappearing", "the_father_suspects_his_own_sons",
                 cites=["Bereshit Rabbah 91:9"])
 
 # -------------------------- Gen.42.36 · YOU_HAVE_BEREAVED_ME ---------------
-# וַיֹּאמֶר אֲלֵהֶם יַעֲקֹב אֲבִיהֶם אֹתִי שִׁכַּלְתֶּם יוֹסֵף אֵינֶנּוּ
-# וְשִׁמְעוֹן אֵינֶנּוּ וְאֶת־בִּנְיָמִן תִּקָּחוּ עָלַי הָיוּ כֻלָּנָה
+# ‹וַיֹּאמֶר אֲלֵהֶם יַעֲקֹב› (“and-say to-them/their Jacob”)
+# ‹אֲבִיהֶם אֹתִי שִׁכַּלְתֶּם› (“father-them/their obj-marker-me/my
+# miscarry”)
+# ‹יוֹסֵף אֵינֶנּוּ וְשִׁמְעוֹן› (“Joseph there-is-not-him/its and-Simeon”)
+# ‹אֵינֶנּוּ וְאֶת־בִּנְיָמִן תִּקָּחוּ› (“there-is-not-him/its and-obj-
+# marker Benjamin take”)
+# ‹עָלַי הָיוּ כֻלָּנָה› (“over-me/my be all-them/their”)
 # "[EN-AID] And Jacob their father said to them: Me you have bereaved —
 # Joseph is not, and Simeon is not, and Benjamin you would take: upon me are
 # they all."
 m.step("Gen.42.36")
-# ‹אֹתִי שִׁכַּלְתֶּם יוֹסֵף אֵינֶנּוּ וְשִׁמְעוֹן אֵינֶנּוּ› (“obj-marker-
-# me/my miscarry Joseph there-is-not-him/its and-Simeon there-is-not-
-# him/its”) — fact holds: me-miscarry-Joseph-enennu-and-Simeon-enennu
+# ‹אֹתִי שִׁכַּלְתֶּם יוֹסֵף› (“obj-marker-me/my miscarry Joseph”)
+# ‹אֵינֶנּוּ וְשִׁמְעוֹן אֵינֶנּוּ› (“there-is-not-him/its and-Simeon there-
+# is-not-him/its”)
+# — fact holds: me-miscarry-Joseph-enennu-and-Simeon-enennu
 m.fact("oti_shikaltem_yosef_enennu_ve_shimon_enennu")
 # witness-tier presupposed read: chazakah_count on
 # yosef_einenu_ve_shimon_einenu — read, not installed
@@ -496,14 +642,18 @@ m.witness_read("yosef_einenu_ve_shimon_einenu", "chazakah_count",
                 cites=["Chullin 95b:13", "Chullin 95b:14", "Chullin 95b:15"])
 
 # -------------------------- Gen.42.37 · REUBENS_PLEDGE ---------------------
-# וַיֹּאמֶר רְאוּבֵן אֶל־אָבִיו לֵאמֹר אֶת־שְׁנֵי בָנַי תָּמִית אִם־לֹא
-# אֲבִיאֶנּוּ אֵלֶיךָ תְּנָה אֹתוֹ עַל־יָדִי וַאֲנִי אֲשִׁיבֶנּוּ אֵלֶיךָ
+# ‹וַיֹּאמֶר רְאוּבֵן אֶל־אָבִיו› (“and-say Reuben to father-him/its”)
+# ‹לֵאמֹר אֶת־שְׁנֵי בָנַי› (“to-say obj-marker two son-me/my”)
+# ‹תָּמִית אִם־לֹא אֲבִיאֶנּוּ› (“die if not come/bring-him/its”)
+# ‹אֵלֶיךָ תְּנָה אֹתוֹ› (“to-you/your set-ward obj-marker-him/its”)
+# ‹עַל־יָדִי וַאֲנִי אֲשִׁיבֶנּוּ› (“over hand-me/my and-I return-him/its”)
+# ‹אֵלֶיךָ› (“to-you/your”)
 # "[EN-AID] And Reuben said to his father, saying: My two sons you may kill
 # if I do not bring him to you; give him into my hand, and I will return him
 # to you."
 m.step("Gen.42.37")
-# ‹תְּנָה אֹתוֹ עַל־יָדִי› (“set-ward obj-marker-him/its over hand-me/my”) —
-# Reuben speaks a demand — LET: tena-it-over-yadi
+# ‹תְּנָה אֹתוֹ עַל־יָדִי› (“set-ward obj-marker-him/its over hand-me/my”)
+# — Reuben speaks a demand — LET: tena-it-over-yadi
 m.declare("reuven", "LET",
           "tena_oto_al_yadi")
 # witness-tier presupposed read: pledge_and_brotherhood on tenah_oto_al_yadi
@@ -512,15 +662,20 @@ m.witness_read("tenah_oto_al_yadi", "pledge_and_brotherhood",
                 cites=["Bava Batra 173b:10", "Bava Batra 110b:8", "Bava Batra 110b:9", "Bava Batra 110b:10"])
 
 # -------------------------- Gen.42.38 · MY_SON_SHALL_NOT_GO_DOWN -----------
-# וַיֹּאמֶר לֹא־יֵרֵד בְּנִי עִמָּכֶם כִּי־אָחִיו מֵת וְהוּא לְבַדּוֹ
-# נִשְׁאָר וּקְרָאָהוּ אָסוֹן בַּדֶּרֶךְ אֲשֶׁר תֵּלְכוּ־בָהּ וְהוֹרַדְתֶּם
-# אֶת־שֵׂיבָתִי בְּיָגוֹן שְׁאוֹלָה
+# ‹וַיֹּאמֶר לֹא־יֵרֵד בְּנִי› (“and-say not go-down son-me/my”)
+# ‹עִמָּכֶם כִּי־אָחִיו מֵת› (“with-you/your(pl) that brother-him/its die”)
+# ‹וְהוּא לְבַדּוֹ נִשְׁאָר› (“and-he/it to-separation-him/its swell-up”)
+# ‹וּקְרָאָהוּ אָסוֹן בַּדֶּרֶךְ› (“and-encounter-him/its hurt in-way/road”)
+# ‹אֲשֶׁר תֵּלְכוּ־בָהּ וְהוֹרַדְתֶּם› (“which go in-her/its and-go-down”)
+# ‹אֶת־שֵׂיבָתִי בְּיָגוֹן שְׁאוֹלָה› (“obj-marker old-age-me/my in-
+# affliction Shᵉ'Owl-ward”)
 # "[EN-AID] And he said: My son shall not go down with you — for his brother
 # is dead, and he alone is left; and should harm befall him on the way you
 # go, you would bring down my gray hair in sorrow to Sheol."
 m.step("Gen.42.38")
-# ‹וַיֹּאמֶר לֹא־יֵרֵד בְּנִי עִמָּכֶם› (“and-say not go-down son-me/my
-# with-you/your(pl)”) — fact holds: not-go-down-beni-imakhem
+# ‹וַיֹּאמֶר לֹא־יֵרֵד בְּנִי› (“and-say not go-down son-me/my”)
+# ‹עִמָּכֶם› (“with-you/your(pl)”)
+# — fact holds: not-go-down-beni-imakhem
 m.fact("lo_yered_beni_imakhem")
 # witness-tier presupposed read: the_accuser_accuses_only_in_danger on
 # lest_disaster_on_the_way — read, not installed

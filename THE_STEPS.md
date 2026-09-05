@@ -135,6 +135,19 @@ genuinely fork (Genesis 1:1's time anchor; 2:1's voice).
 The cantillation parse (all 23,213 verses, one legal tree each,
 rules v3) and the full morphology tagging remain prepared and
 shipped — display, lint, and confirmation.
+THE SPECIAL-LETTER REPAIR (2026-09-05, sitting C of the audit). The
+full-Tanakh shelf the cold runners probe (elijah_docket/tanakh.sqlite)
+had been built by a parser that dropped every letter marked inside a
+word — the scroll's LARGE, SMALL, and SUSPENDED letters, which the
+source marks with an inner tag. A census of every marked word in the
+39 source files against the shelf found eleven, all cut at the mark:
+the Shema's great ayin and dalet (Deut 6:4), "belly" at Lev 11:42,
+"their judgment" at Num 27:5, and seven more in the Prophets and
+Writings. Restored to the source text on the owner's word; 11 of 11
+match; the probes did not move. The lesson for the front end: a
+letter channel the scribe writes (Step 1's own list) must survive the
+parse, and a census against the source is the tripwire. The parse
+sweep re-run after the repair: 23,213 of 23,213, unchanged.
    → shows as: the verse tree window, the leaf rows, and the morph
      table on every verse.
 
@@ -375,6 +388,27 @@ unit and step 6 renders the machine, each line naming the sources
 that licensed it; the grammar sketch stays, moved beneath a label
 that says what it honestly is. When a number refuses to move, ask
 what it is actually counting before you trust it as a constant.
+ADDRESS AT THE SHELF'S GRAIN (2026-09-05, sitting A of the audit —
+the reverse false deficit). The Lev 1-8 review reported nine Sifra
+rows unread (Nedavah Chapter 10 rows 11-19: "the ledger stops at
+10:10"). Checked row by row against the shelf, every one had been
+read — but that one chapter was addressed in the ledger by the
+source's own bracketed PARAGRAPH marks (ten) while every other
+section of both Vayikra dibburot was addressed by the shelf's ROWS
+(nineteen there). So "Chapter 10 7" in the ledger meant the seventh
+paragraph (the oil-and-frankincense rule) while the shelf's row 7 is
+R. Shimon's exemption: a reader checking the ledger against the
+shelf finds the wrong text under the right number, and a count of
+"rows read" comes out ten short of the source without a single row
+having been skipped. The rule: a ledger's addresses are the SHELF'S
+row grain, and coverage is computed by script against the source's
+own row counts per section (missing 0, extra 0), never by hand from
+the source's paragraph marks. A mismatch is fixed by APPENDING a
+re-addressing block (the paragraph-grain rows stand, append-only),
+re-pointing the unit's cites (a changelog line), and a correction
+row in the stamp ledger — never by editing the stamp. The other
+thing that count found: one row of the shelf is an EMPTY string
+(Chovah Section 7 row 11), owed its "empty" verdict like any row.
    → shows as: chip "in reading 39/63" or "read through"; grid cell fill.
 
 ## Step 3 — The code: extract claims, write the logic
@@ -632,6 +666,99 @@ source. And the Jubilee engine's sabbatical cell became a graded
 function (cold_run_yovel.py 33 → 69 cells, with the animal tithe's
 naming machine written at last). Chip pending the site lap:
 lev_26_bless_curse.
+THE CHIPS THE LEVITICUS 1-8 COMPILES EARNED (recorded 2026-09-05,
+sitting A of the audit — REVIEW_LEV1-8 item H; the two compiles had
+never recorded theirs): the Lev 5 compile (cold_run_vayikra5.py,
+27/27, 2026-09-03) — lev_05_asham_graded, lev_05_asham_sancta; the
+Lev 1-8 offering-engine consolidation (cold_run_offerings.py, the
+span dispatcher against Mishnah Zevachim 5:1-8, recompiled this
+sitting at 41/41 and 41% pure ink — the eater cells on Lev 7:19's own
+"every CLEAN person," the southern base descending the ramp on
+Zevachim 53a:10-11 with Lev 1:11's ramp-south, the firstborn's window
+naming Zevachim 57a:5, the olah's north graded twice so the flock's
+ink and the herd's Sifra move both show, and the pesach cell answered
+by CALLING cold_run_pesach.paschal_procedure() — the first-call
+standard) — lev_01_olah_cattle_procedure, lev_01_olah_flock,
+lev_03_shelamim, lev_04_inadvertence_case_tree. HONESTLY NOT EARNED:
+lev_02_minchah (the offerer's meal offering, Lev 2:1-16) and
+lev_01_olah_bird (Lev 1:14-17) have NO cold function anywhere —
+Mishnah Zevachim 5's grid has no row for either (the meal offering is
+Menachot's, the bird Zevachim 6-7's); their compile is the audit's
+sitting B (cold_run_minchah.py); lev_01_call_and_korban_opening is
+framing; the four lev_04 chatat drafts are drafts by design. The
+sweep itself is now one command: World/step9/run_cold_all.py runs
+every cold_run_*.py and reports each (item K).
+THE ELEVENTH AND TWELFTH SPANS (2026-09-05, sitting B of the audit —
+REVIEW_LEV1-8 item B and REVIEW_BEHAR items 3-5; the owner: "go
+sitting b"): cold_run_minchah.py — THE MEAL OFFERING AND THE BIRD
+BURNT OFFERING, Lev 2:1-16 and Lev 1:14-17 compiled ink-first against
+an answer sheet ROUTED BY TOPIC under the union rule: Mishnah Menachot
+read whole (93 rows, the tractate the link-driven docket had never put
+before the engine) with Zevachim 6-7 (13 rows), the ledger
+logic/oral_triage/menachot_topic_docket_2026-09-05.md with its coverage
+computed — the five kinds counted by their own tokens (the answer to
+13:2's "brings the five of them" is the chapter's census), the three
+oil forms censused (pour, mix, made-in-oil — Menachot 6:3's "three
+applications" are the ink's three verbs), the fistful's subject read
+off 2:2's "the priests," the memorial three times and most-holy twice,
+the salt root four times in one verse, the doubled "you shall offer"
+at 2:14 carrying the omer's fallback, and the bird's four verbs —
+pinch, press on the wall, cast the crop eastward to the ash place,
+rend by the wings — against Zevachim 6:5's walk, which is the Sifra's
+own walk word for word; 84 of 84 at honest fractions (27 ink / 33
+recorded / 9 answer-sheet / 4 data / 11 imports — the meal offering is
+mostly the Sifra's layer, and the sheet says so), with the sinner's
+adjuncts answered by a CALL into the Lev 5 engine (the third
+inter-span call). SIX effects discovered in the two spans' verbs (the
+registry at 79 with the sister compile's two): azkarah_to_fire (a
+HEAVEN entry), most_holy (STATUS), salted, presented, pinched (BODY),
+crop_cast_to_ash_place (DESTROY). And cold_run_temurah.py — THE
+CONSECRATION, SUBSTITUTION, AND DEVOTION MACHINE, Lev 27:9-15 and
+27:26-33 (the remainder the Jubilee engine had left as scaffold): the
+two substitution verbs, "beast for beast," "it and its substitute" at
+the vow and again at the tithe, the FIFTH censused five times in the
+chapter (two spellings — the census caught its own first draft
+matching the valuation table's fives), the partitive "from all that he
+has," the ordinal tenth under the rod — 40 of 40 at 60% pure ink,
+against Mishnah Temurah, Arakhin 8, Bekhorot 9 and one Menachot row,
+with THREE calls into sister engines (the Jubilee engine's tithe naming
+twice, the Passover engine's firstling donkey); effect discovered:
+consecrated (STATUS, from 27:9's own "shall be holy"). The Jubilee
+engine itself grew to 75 cells with the support duty (25:35's
+"strengthen him" — the effect supports_kinsman, a DEBIT on the one who
+has), the auction-stone ban, and the in-your-sight bound (the Sifra's
+own case rows as the sheet). Two findings auto-seated: F-204 (the vow
+parser's answer sheet, verbatim the Sifra's tables; LV02-11) and F-205
+(the bird's walk graded, ink verbs against recorded additions;
+LV01D-05). CHIPS EARNED: lev_02_minchah, lev_01_olah_bird — the last
+two uncompiled units of Leviticus 1-8; lev_27_vows_valuations now
+compiled whole. Three older runners (Lev 5, Passover, Jubilee) gained
+import guards so their functions are callable cold. Move M-19 (THE
+TEMPLATE BROADCAST) registered from three exemplars.
+THE HYGIENE PASS (2026-09-05, sitting C of the audit — the owner: "go
+sitting c"): THE HONEST-PAIRING GUARD NOW COVERS EVERY COLD RUNNER —
+the guard learned the two older table shapes (a literal dict of
+expectations, and expectations at call sites: grade(fn, sheet, cells)
+and cell(name, got, want)) and was wired into the eleven runners that
+had none, each with its count as a TRIPWIRE that fails the day the
+table changes: 18 of 18 runners guarded, 522 graded cells, every
+expectation a literal from its answer sheet. THE VOCABULARY LINTED —
+gloss_lint skips YAML by design, so World/step9/vocab_lint.py checks
+what the inline rule cannot: no empty or placeholder gloss, no Hebrew
+copied into more than four values of one dimension, no gloss in Hebrew
+alone. It found three defects and they were repaired in place: round
+44's generator had written the DOCKET TOPIC ("the Day of Atonement
+service") as the Hebrew and gloss of 79 values — a false attribution,
+now cleared to each value's own English with the topic kept as context;
+57 query values from the 2026-09-01 Exodus rounds carried the stub
+"exam query (date)"; three glosses were wrapped in stray quotes. 1779
+values on 150 dimensions, 0 flags; all 48 exam runners green after.
+THE FOUR LEV_04 DRAFTS DECIDED — drafts by design, on the exo_21
+precedent (the frozen home is lev_04_inadvertence_case_tree, whole
+chapter; the per-rank splits earn no chip and take no seats), the
+decision written into each draft's own file with a changelog line, the
+owner free to overrule. And the shelf repair and the render fix are
+recorded under Step 1 and Step 6.
 The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law
@@ -907,7 +1034,11 @@ this" — THE BOOK OF LEVITICUS OPENS, the rhythm's seventh cycle and
 the first under the SIX-STEP law): eight units derived and frozen
 FULL RULE + the law-era chapter-4 unit re-affirmed (corpus 117 →
 125) from the book's first SIFRA-SPINE sweep — the Sifra's two
-Vayikra sections whole (648 rows) + Onkelos Lev 1:1-5:26 (111
+Vayikra sections whole (648 rows as the ledgers addressed them; the
+shelf's own row grain holds 658 — one chapter had been addressed by
+its paragraph marks and one empty row left unverdicted, both
+re-addressed by append 2026-09-05 in the audit's sitting A, coverage
+658 of 658 by script) + Onkelos Lev 1:1-5:26 (111
 verses), 759 declared sources across nine ledgers, 61 claims seated.
 The exam: all 68 bare Mishnah rows citing Lev 1-5 (59 fresh, 9
 credits), 17 modules, 48/48 first full run; 377/377 across all ten
@@ -1379,6 +1510,25 @@ code the owner hasn't seen.
 
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.
+
+THE RENDERS GLOSSED AT THE RENDERER (2026-09-05, sitting C of the
+audit). Every frozen unit's Python rendering (logic/py_units/) is
+generated from its YAML, and the generator had one trait every render
+shared: the step header emitted the verse's two Hebrew arms bare, and
+the tree-era units' "EN-AID" line repeated them, so the absolute
+glossing rule was broken thousands of times across the 163 renders
+(the flags stood as a known baseline). Fixed at the renderer, never in
+a frozen file: the arms are emitted in three-word chunks, each on its
+own line as ‹span› ("word-by-word English"); a Hebrew token in a step's
+op name gets its gloss; the EN-AID repeat is elided to «…»; and the
+gloss layer no longer takes a tree-era STRUCTURAL label ("leaf 3") for
+a word's English. All 163 renders regenerated, every self-proof green,
+the aggregate rebuilt and green: HEBREW WITHOUT ENGLISH IN THE RENDERS
+IS NOW ZERO. What remains is a different, smaller trait — 334 lines in
+70 renders where a machine token's gloss falls back to transliteration
+joined by hyphens ("mishteh-and-sweetness") because no authored English
+exists for that token; that is content work (an English entry per
+token in the gloss tables), counted here and left honestly open.
 
 ## The chip, decoded
   ⓘ read through · 10 material · first pass · proven

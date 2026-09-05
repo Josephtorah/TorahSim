@@ -250,3 +250,8 @@ Sifra, Vayikra Dibbura DeChovah, Chapter 10 9
 Sifra, Vayikra Dibbura DeChovah, Chapter 10 10
 Sifra, Vayikra Dibbura DeChovah, Chapter 11 1
 Sifra, Vayikra Dibbura DeChovah, Chapter 11 2
+
+## APPENDED 2026-09-05, sitting A (REVIEW_LEV1-8 item A) — the one row the 2026-09-03 sweep left unverdicted
+- Sifra, Vayikra Dibbura DeChovah, Section 7 11 (Lev 4:24-26) — empty: the shelf's row is an empty string (Data/sifra_he.json), owed its "empty" verdict as Kedoshim's tail rows got; nothing to read.
+
+**read: 207 of 207 — COMPLETE** (35 Onkelos verses + 172 Sifra rows at the shelf's row grain — the 171 of 2026-09-03 plus the empty row above; the two Vayikra dibburot now verdicted 658 of 658 shelf rows across the nine Vayikra ledgers, computed by script: missing 0, extra 0)

@@ -13,10 +13,13 @@ from machine import Machine
 
 m = Machine("lev_13_head_isolation")
 
-# -------------------------- Lev.13.29 · COND_כי ----------------------------
-# ואיש או אשה כי יהיה בו נגע … בראש או בזקן
-# "[EN-AID] From top split: LEFT «ואיש או אשה כי יהיה בו נגע» / RIGHT «בראש
-# או בזקן». Derive claim from Hebrew arms. Lev 13:29."
+# -------------------------- Lev.13.29 · COND_כי (“that”) -------------------
+# ‹ואיש או אשה› (“and-man or woman”)
+# ‹כי יהיה בו› (“that be in-him/its”)
+# ‹נגע … בראש או› (“blow … in-head or”)
+# ‹בזקן› (“in-beard”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:29."
 m.step("Lev.13.29")
 # witness-tier presupposed read: region_isolation on rosh_o_zakan — read,
 # not installed
@@ -24,19 +27,28 @@ m.witness_read("rosh_o_zakan", "region_isolation",
                 cites=["Sifra, Tazria Parashat Nega'im, Section 5 1", "Sifra, Tazria Parashat Nega'im, Section 5 2", "Sifra, Tazria Parashat Nega'im, Section 5 4", "Sifra, Tazria Parashat Nega'im, Section 5 7", "Sifra, Tazria Parashat Nega'im, Section 5 8", "Sifra, Tazria Parashat Nega'im, Section 5 9"])
 
 # -------------------------- Lev.13.30 · ETNACHTA_SPLIT ---------------------
-# וראה הכהן את הנגע והנה מראהו עמק מן העור ובו שער צהב דק … וטמא אתו הכהן
-# נתק הוא צרעת הראש או הזקן הוא
-# "[EN-AID] From top split: LEFT «וראה הכהן את הנגע והנה מראהו עמק מן העור
-# ובו שער צהב דק» / RIGHT «וטמא אתו הכהן נתק הוא צרעת הראש או הזקן הוא».
-# Derive claim from Hebrew arms. Lev 13:30."
+# ‹וראה הכהן את› (“and-see the-priest obj-marker”)
+# ‹הנגע והנה מראהו› (“the-blow and-behold appearance-him/its”)
+# ‹עמק מן העור› (“deep from the-skin”)
+# ‹ובו שער צהב› (“and-in-him/its hair golden-in-color”)
+# ‹דק … וטמא אתו› (“thin … and-be-foul obj-marker-him/its”)
+# ‹הכהן נתק הוא› (“the-priest scurf he/it”)
+# ‹צרעת הראש או› (“leprosy the-head or”)
+# ‹הזקן הוא› (“the-beard he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:30."
 m.step("Lev.13.30")
 
-# -------------------------- Lev.13.31 · COND_וכי ---------------------------
-# וכי יראה הכהן את נגע הנתק והנה אין מראהו עמק מן העור ושער שח … והסגיר הכהן
-# את נגע הנתק שבעת ימים
-# "[EN-AID] From top split: LEFT «וכי יראה הכהן את נגע הנתק והנה אין מראהו
-# עמק מן העור ושער שחר אין בו» / RIGHT «והסגיר הכהן את נגע הנתק שבעת ימים».
-# Derive claim from Hebrew arms. Lev 13:31."
+# -------------------------- Lev.13.31 · COND_וכי (“and-that”) --------------
+# ‹וכי יראה הכהן› (“and-that see the-priest”)
+# ‹את נגע הנתק› (“obj-marker blow the-scurf”)
+# ‹והנה אין מראהו› (“and-behold there-is-not appearance-him/its”)
+# ‹עמק מן העור› (“deep from the-skin”)
+# ‹ושער שח … והסגיר› (“and-hair ? … and-shut-up”)
+# ‹הכהן את נגע› (“the-priest obj-marker blow”)
+# ‹הנתק שבעת ימים› (“the-scurf seven day”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:31."
 m.step("Lev.13.31")
 # witness-tier presupposed read: black_hair_saves on sear_shachor — read,
 # not installed
@@ -44,17 +56,24 @@ m.witness_read("sear_shachor", "black_hair_saves",
                 cites=["Sifra, Tazria Parashat Nega'im, Section 5 5", "Sifra, Tazria Parashat Nega'im, Section 5 6", "Sifra, Tazria Parashat Nega'im, Chapter 8 5", "Sifra, Tazria Parashat Nega'im, Chapter 8 6", "Sifra, Tazria Parashat Nega'im, Chapter 8 7", "Sifra, Tazria Parashat Nega'im, Chapter 8 8", "Sifra, Tazria Parashat Nega'im, Chapter 8 9"])
 
 # -------------------------- Lev.13.32 · ETNACHTA_SPLIT ---------------------
-# וראה הכהן את הנגע ביום השביעי והנה לא פשה הנתק ולא היה בו שע … ומראה הנתק
-# אין עמק מן העור
-# "[EN-AID] From top split: LEFT «וראה הכהן את הנגע ביום השביעי והנה לא פשה
-# הנתק ולא היה בו שער צהב» / RIGHT «ומראה הנתק אין עמק מן העור». Derive
-# claim from Hebrew arms. Lev 13:32."
+# ‹וראה הכהן את› (“and-see the-priest obj-marker”)
+# ‹הנגע ביום השביעי› (“the-blow in-day the-seventh”)
+# ‹והנה לא פשה› (“and-behold not spread”)
+# ‹הנתק ולא היה› (“the-scurf and-not be”)
+# ‹בו שע … ומראה› (“in-him/its ? … and-appearance”)
+# ‹הנתק אין עמק› (“the-scurf there-is-not deep”)
+# ‹מן העור› (“from the-skin”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:32."
 m.step("Lev.13.32")
 
 # -------------------------- Lev.13.33 · ETNACHTA_SPLIT ---------------------
-# והתגלח ואת הנתק לא יגלח … והסגיר הכהן את הנתק שבעת ימים שנית
-# "[EN-AID] From top split: LEFT «והתגלח ואת הנתק לא יגלח» / RIGHT «והסגיר
-# הכהן את הנתק שבעת ימים שנית». Derive claim from Hebrew arms. Lev 13:33."
+# ‹והתגלח ואת הנתק› (“and-be-bald and-obj-marker the-scurf”)
+# ‹לא יגלח … והסגיר› (“not be-bald … and-shut-up”)
+# ‹הכהן את הנתק› (“the-priest obj-marker the-scurf”)
+# ‹שבעת ימים שנית› (“seven day second”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:33."
 m.step("Lev.13.33")
 # witness-tier presupposed read: the_gauge_rule on vehitgalach — read, not
 # installed
@@ -62,66 +81,93 @@ m.witness_read("vehitgalach", "the_gauge_rule",
                 cites=["Sifra, Tazria Parashat Nega'im, Chapter 9 4", "Sifra, Tazria Parashat Nega'im, Chapter 9 5", "Sifra, Tazria Parashat Nega'im, Chapter 9 6", "Sifra, Tazria Parashat Nega'im, Chapter 9 7"])
 
 # -------------------------- Lev.13.34 · ETNACHTA_SPLIT ---------------------
-# וראה הכהן את הנתק ביום השביעי והנה לא פשה הנתק בעור ומראהו א … וטהר אתו
-# הכהן וכבס בגדיו וטהר
-# "[EN-AID] From top split: LEFT «וראה הכהן את הנתק ביום השביעי והנה לא פשה
-# הנתק בעור ומראהו איננו עמק מן העור» / RIGHT «וטהר אתו הכהן וכבס בגדיו
-# וטהר». Derive claim from Hebrew arms. Lev 13:34."
+# ‹וראה הכהן את› (“and-see the-priest obj-marker”)
+# ‹הנתק ביום השביעי› (“the-scurf in-day the-seventh”)
+# ‹והנה לא פשה› (“and-behold not spread”)
+# ‹הנתק בעור ומראהו› (“the-scurf in-skin and-appearance-him/its”)
+# ‹א … וטהר אתו› (“? … and-be-pure obj-marker-him/its”)
+# ‹הכהן וכבס בגדיו› (“the-priest and-trample garment-him/its”)
+# ‹וטהר› (“and-be-pure”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:34."
 m.step("Lev.13.34")
 
-# -------------------------- Lev.13.35 · COND_ואם ---------------------------
-# ואם פשה יפשה הנתק בעור … אחרי טהרתו
-# "[EN-AID] From top split: LEFT «ואם פשה יפשה הנתק בעור» / RIGHT «אחרי
-# טהרתו». Derive claim from Hebrew arms. Lev 13:35."
+# -------------------------- Lev.13.35 · COND_ואם (“and-if”) ----------------
+# ‹ואם פשה יפשה› (“and-if spread spread”)
+# ‹הנתק בעור … אחרי› (“the-scurf in-skin … after”)
+# ‹טהרתו› (“ceremonial-purification-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:35."
 m.step("Lev.13.35")
 
 # -------------------------- Lev.13.36 · ETNACHTA_SPLIT ---------------------
-# וראהו הכהן והנה פשה הנתק בעור … לא יבקר הכהן לשער הצהב טמא הוא
-# "[EN-AID] From top split: LEFT «וראהו הכהן והנה פשה הנתק בעור» / RIGHT «לא
-# יבקר הכהן לשער הצהב טמא הוא». Derive claim from Hebrew arms. Lev 13:36."
+# ‹וראהו הכהן והנה› (“and-see-him/its the-priest and-behold”)
+# ‹פשה הנתק בעור› (“spread the-scurf in-skin”)
+# ‹… לא יבקר הכהן› (“not plough the-priest”)
+# ‹לשער הצהב טמא› (“to-hair the-golden-in-color foul-in-a-religious-sense”)
+# ‹הוא› (“he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:36."
 m.step("Lev.13.36")
 
-# -------------------------- Lev.13.37 · COND_ואם ---------------------------
-# ואם בעיניו עמד הנתק ושער שחר צמח בו נרפא הנתק טהור הוא … וטהרו הכהן
-# "[EN-AID] From top split: LEFT «ואם בעיניו עמד הנתק ושער שחר צמח בו נרפא
-# הנתק טהור הוא» / RIGHT «וטהרו הכהן». Derive claim from Hebrew arms. Lev
-# 13:37."
+# -------------------------- Lev.13.37 · COND_ואם (“and-if”) ----------------
+# ‹ואם בעיניו עמד› (“and-if in-eye-him/its stand”)
+# ‹הנתק ושער שחר› (“the-scurf and-hair dusky”)
+# ‹צמח בו נרפא› (“sprout in-him/its mend”)
+# ‹הנתק טהור הוא› (“the-scurf pure he/it”)
+# ‹… וטהרו הכהן› (“and-be-pure-him/its the-priest”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:37."
 m.step("Lev.13.37")
 # witness-tier presupposed read: the_hillel_truth_gate on vetiharo_hakohen —
 # read, not installed
 m.witness_read("vetiharo_hakohen", "the_hillel_truth_gate",
                 cites=["Sifra, Tazria Parashat Nega'im, Chapter 9 14", "Sifra, Tazria Parashat Nega'im, Chapter 9 15", "Sifra, Tazria Parashat Nega'im, Chapter 9 16"])
 
-# -------------------------- Lev.13.38 · COND_כי ----------------------------
-# ואיש או אשה כי יהיה בעור בשרם בהרת … בהרת לבנת
-# "[EN-AID] From top split: LEFT «ואיש או אשה כי יהיה בעור בשרם בהרת» /
-# RIGHT «בהרת לבנת». Derive claim from Hebrew arms. Lev 13:38."
+# -------------------------- Lev.13.38 · COND_כי (“that”) -------------------
+# ‹ואיש או אשה› (“and-man or woman”)
+# ‹כי יהיה בעור› (“that be in-skin”)
+# ‹בשרם בהרת … בהרת› (“flesh-them/their whitish-spot-on-the-skin … whitish-
+# spot-on-the-skin”)
+# ‹לבנת› (“white”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:38."
 m.step("Lev.13.38")
 
 # -------------------------- Lev.13.39 · ETNACHTA_SPLIT ---------------------
-# וראה הכהן והנה בעור בשרם בהרת כהות לבנת … בהק הוא פרח בעור טהור הוא
-# "[EN-AID] From top split: LEFT «וראה הכהן והנה בעור בשרם בהרת כהות לבנת» /
-# RIGHT «בהק הוא פרח בעור טהור הוא». Derive claim from Hebrew arms. Lev
-# 13:39."
+# ‹וראה הכהן והנה› (“and-see the-priest and-behold”)
+# ‹בעור בשרם בהרת› (“in-skin flesh-them/their whitish-spot-on-the-skin”)
+# ‹כהות לבנת … בהק› (“feeble white … white-scurf”)
+# ‹הוא פרח בעור› (“he/it break-forth-as-a-bud in-skin”)
+# ‹טהור הוא› (“pure he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:39."
 m.step("Lev.13.39")
 
-# -------------------------- Lev.13.40 · COND_כי ----------------------------
-# ואיש כי ימרט ראשו … קרח הוא טהור הוא
-# "[EN-AID] From top split: LEFT «ואיש כי ימרט ראשו» / RIGHT «קרח הוא טהור
-# הוא». Derive claim from Hebrew arms. Lev 13:40."
+# -------------------------- Lev.13.40 · COND_כי (“that”) -------------------
+# ‹ואיש כי ימרט› (“and-man that polish”)
+# ‹ראשו … קרח הוא› (“head-him/its … bald he/it”)
+# ‹טהור הוא› (“pure he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:40."
 m.step("Lev.13.40")
 
-# -------------------------- Lev.13.41 · COND_ואם ---------------------------
-# ואם מפאת פניו ימרט ראשו … גבח הוא טהור הוא
-# "[EN-AID] From top split: LEFT «ואם מפאת פניו ימרט ראשו» / RIGHT «גבח הוא
-# טהור הוא». Derive claim from Hebrew arms. Lev 13:41."
+# -------------------------- Lev.13.41 · COND_ואם (“and-if”) ----------------
+# ‹ואם מפאת פניו› (“and-if from-mouth-in-a-figurative-sense face-him/its”)
+# ‹ימרט ראשו … גבח› (“polish head-him/its … bald-in-the-forehead”)
+# ‹הוא טהור הוא› (“he/it pure he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:41."
 m.step("Lev.13.41")
 
-# -------------------------- Lev.13.42 · COND_וכי ---------------------------
-# וכי יהיה בקרחת או בגבחת נגע לבן אדמדם … צרעת פרחת הוא בקרחתו או בגבחתו
-# "[EN-AID] From top split: LEFT «וכי יהיה בקרחת או בגבחת נגע לבן אדמדם» /
-# RIGHT «צרעת פרחת הוא בקרחתו או בגבחתו». Derive claim from Hebrew arms. Lev
-# 13:42."
+# -------------------------- Lev.13.42 · COND_וכי (“and-that”) --------------
+# ‹וכי יהיה בקרחת› (“and-that be in-bald-spot”)
+# ‹או בגבחת נגע› (“or in-baldness-in-the-forehead blow”)
+# ‹לבן אדמדם … צרעת› (“white reddish … leprosy”)
+# ‹פרחת הוא בקרחתו› (“break-forth-as-a-bud he/it in-bald-spot-him/its”)
+# ‹או בגבחתו› (“or in-baldness-in-the-forehead-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:42."
 m.step("Lev.13.42")
 # witness-tier presupposed read: the_bald_spots on karachat_gabachat — read,
 # not installed
@@ -129,24 +175,34 @@ m.witness_read("karachat_gabachat", "the_bald_spots",
                 cites=["Sifra, Tazria Parashat Nega'im, Chapter 10 2", "Sifra, Tazria Parashat Nega'im, Chapter 10 5", "Sifra, Tazria Parashat Nega'im, Chapter 10 6", "Sifra, Tazria Parashat Nega'im, Chapter 10 7", "Sifra, Tazria Parashat Nega'im, Chapter 10 8", "Sifra, Tazria Parashat Nega'im, Chapter 11 1", "Sifra, Tazria Parashat Nega'im, Chapter 11 2", "Sifra, Tazria Parashat Nega'im, Chapter 11 3"])
 
 # -------------------------- Lev.13.43 · ETNACHTA_SPLIT ---------------------
-# וראה אתו הכהן והנה שאת הנגע לבנה אדמדמת בקרחתו או בגבחתו … כמראה צרעת עור
-# בשר
-# "[EN-AID] From top split: LEFT «וראה אתו הכהן והנה שאת הנגע לבנה אדמדמת
-# בקרחתו או בגבחתו» / RIGHT «כמראה צרעת עור בשר». Derive claim from Hebrew
+# ‹וראה אתו הכהן› (“and-see obj-marker-him/its the-priest”)
+# ‹והנה שאת הנגע› (“and-behold Most-High the-blow”)
+# ‹לבנה אדמדמת בקרחתו› (“white reddish in-bald-spot-him/its”)
+# ‹או בגבחתו … כמראה› (“or in-baldness-in-the-forehead-him/its … like-
+# appearance”)
+# ‹צרעת עור בשר› (“leprosy skin flesh”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 13:43."
 m.step("Lev.13.43")
 
 # -------------------------- Lev.13.44 · ETNACHTA_SPLIT ---------------------
-# איש צרוע הוא טמא הוא … טמא יטמאנו הכהן בראשו נגעו
-# "[EN-AID] From top split: LEFT «איש צרוע הוא טמא הוא» / RIGHT «טמא יטמאנו
-# הכהן בראשו נגעו». Derive claim from Hebrew arms. Lev 13:44."
+# ‹איש צרוע הוא› (“man scourge he/it”)
+# ‹טמא הוא … טמא› (“foul-in-a-religious-sense he/it … foul-in-a-religious-
+# sense”)
+# ‹יטמאנו הכהן בראשו› (“be-foul-him/its the-priest in-head-him/its”)
+# ‹נגעו› (“blow-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:44."
 m.step("Lev.13.44")
 
 # -------------------------- Lev.13.45 · ETNACHTA_SPLIT ---------------------
-# והצרוע אשר בו הנגע בגדיו יהיו פרמים וראשו יהיה פרוע ועל שפם  … וטמא טמא
-# יקרא
-# "[EN-AID] From top split: LEFT «והצרוע אשר בו הנגע בגדיו יהיו פרמים וראשו
-# יהיה פרוע ועל שפם יעטה» / RIGHT «וטמא טמא יקרא». Derive claim from Hebrew
+# ‹והצרוע אשר בו› (“and-the-scourge which in-him/its”)
+# ‹הנגע בגדיו יהיו› (“the-blow garment-him/its be”)
+# ‹פרמים וראשו יהיה› (“tear and-head-him/its be”)
+# ‹פרוע ועל שפם› (“loosen and-over beard”)
+# ‹… וטמא טמא יקרא› (“and-foul-in-a-religious-sense foul-in-a-religious-
+# sense call”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 13:45."
 m.step("Lev.13.45")
 # witness-tier presupposed read: the_decreed_leper on tamei_tamei_yikra —
@@ -155,9 +211,13 @@ m.witness_read("tamei_tamei_yikra", "the_decreed_leper",
                 cites=["Sifra, Tazria Parashat Nega'im, Chapter 12 1", "Sifra, Tazria Parashat Nega'im, Chapter 12 5", "Sifra, Tazria Parashat Nega'im, Chapter 12 7", "Sifra, Tazria Parashat Nega'im, Chapter 12 9", "Sifra, Tazria Parashat Nega'im, Chapter 12 10", "Sifra, Tazria Parashat Nega'im, Chapter 12 13", "Sifra, Tazria Parashat Nega'im, Chapter 12 14", "Onkelos Lev 13:45"])
 
 # -------------------------- Lev.13.46 · ETNACHTA_SPLIT ---------------------
-# כל ימי אשר הנגע בו יטמא טמא הוא … בדד ישב מחוץ למחנה מושבו
-# "[EN-AID] From top split: LEFT «כל ימי אשר הנגע בו יטמא טמא הוא» / RIGHT
-# «בדד ישב מחוץ למחנה מושבו». Derive claim from Hebrew arms. Lev 13:46."
+# ‹כל ימי אשר› (“all day which”)
+# ‹הנגע בו יטמא› (“the-blow in-him/its be-foul”)
+# ‹טמא הוא … בדד› (“foul-in-a-religious-sense he/it … divide”)
+# ‹ישב מחוץ למחנה› (“dwell/sit from-outside to-camp”)
+# ‹מושבו› (“seat-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 13:46."
 m.step("Lev.13.46")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

@@ -14,27 +14,33 @@ from machine import Machine
 m = Machine("gen_26_shem_ledger")
 
 # -------------------------- Gen.11.10-11 · SHEM_HEADER_AND_THE_FIRST_DEATHLESS_ROW -
-# אֵלֶּה תּוֹלְדֹת שֵׁם שֵׁם בֶּן־מְאַת שָׁנָה וַיּוֹלֶד אֶת־אַרְפַּכְשָׁד
-# שְׁנָתַיִם אַחַר הַמַּבּוּל … וַיּוֹלֶד בָּנִים וּבָנוֹת
+# ‹אֵלֶּה תּוֹלְדֹת שֵׁם› (“these generations Sem”)
+# ‹שֵׁם בֶּן־מְאַת שָׁנָה› (“Sem son hundred years”)
+# ‹וַיּוֹלֶד אֶת־אַרְפַּכְשָׁד שְׁנָתַיִם› (“and-bear-young obj-marker
+# Arphaxad years”)
+# ‹אַחַר הַמַּבּוּל … וַיּוֹלֶד› (“after the-deluge … and-bear-young”)
+# ‹בָּנִים וּבָנוֹת› (“son and-daughter”)
 # "These are the generations of Shem. Shem was a hundred years old, and
 # begot Arpachshad two years after the flood. And Shem lived after he begot
 # Arpachshad five hundred years, and begot sons and daughters."
 m.step("Gen.11.10-11")
-# ‹אֵלֶּה תּוֹלְדֹת שֵׁם› (“these generations Sem”) — section generations-
-# Sem: eleh toldot shem — the sixth toledot header labels; installs nothing
+# ‹אֵלֶּה תּוֹלְדֹת שֵׁם› (“these generations Sem”)
+# — section generations-Sem: eleh toldot shem — the sixth toledot header
+# labels; installs nothing
 m.section("toledot_shem", "eleh toldot shem — the sixth toledot header labels; installs nothing")
-# ‹שֵׁם בֶּן־מְאַת שָׁנָה … שְׁנָתַיִם אַחַר הַמַּבּוּל› (“Sem son hundred
-# years … years after the-deluge”) — fact holds: Sem-son-hundred-year;
-# years-after-the-deluge
+# ‹שֵׁם בֶּן־מְאַת שָׁנָה› (“Sem son hundred years”)
+# ‹… שְׁנָתַיִם אַחַר הַמַּבּוּל› (“years after the-deluge”)
+# — fact holds: Sem-son-hundred-year; years-after-the-deluge
 m.fact("shem_ben_meat_shanah",
        "shenatayim_achar_ha_mabul")
-# ‹וַיּוֹלֶד אֶת־אַרְפַּכְשָׁד› (“and-bear-young obj-marker Arphaxad”) —
-# event: beget — agent Sem; theme Arphaxad
+# ‹וַיּוֹלֶד אֶת־אַרְפַּכְשָׁד› (“and-bear-young obj-marker Arphaxad”)
+# — event: beget — agent Sem; theme Arphaxad
 m.event("beget", agent="shem", themes=["arpakhshad"])
-# ‹וַיְחִי־שֵׁם אַחֲרֵי הוֹלִידוֹ אֶת־אַרְפַּכְשָׁד חֲמֵשׁ מֵאוֹת שָׁנָה
-# וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-live Sem after bear-young-him/its obj-
-# marker Arphaxad five hundred years and-bear-young son and-daughter”) —
-# fact holds: son-and-daughter(Sem)
+# ‹וַיְחִי־שֵׁם אַחֲרֵי הוֹלִידוֹ› (“and-live Sem after bear-young-him/its”)
+# ‹אֶת־אַרְפַּכְשָׁד חֲמֵשׁ מֵאוֹת› (“obj-marker Arphaxad five hundred”)
+# ‹שָׁנָה וַיּוֹלֶד בָּנִים› (“years and-bear-young son”)
+# ‹וּבָנוֹת› (“and-daughter”)
+# — fact holds: son-and-daughter(Sem)
 m.fact("banim_u_vanot(shem)")
 # witness-tier presupposed read: canonical_case_table_subject on
 # ten_generations_ledger — read, not installed
@@ -42,156 +48,191 @@ m.witness_read("ten_generations_ledger", "canonical_case_table_subject",
                 cites=["Pirkei Avot 5:2"])
 
 # -------------------------- Gen.11.12-13 · ARPACHSHAD_ROW_FRONTED_PERFECT --
-# וְאַרְפַּכְשַׁד חַי חָמֵשׁ וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־שָׁלַח …
-# וַיּוֹלֶד בָּנִים וּבָנוֹת
+# ‹וְאַרְפַּכְשַׁד חַי חָמֵשׁ› (“and-Arphaxad live five”)
+# ‹וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד› (“and-thirty years and-bear-young”)
+# ‹אֶת־שָׁלַח … וַיּוֹלֶד בָּנִים› (“obj-marker Salah … and-bear-young son”)
+# ‹וּבָנוֹת› (“and-daughter”)
 # "And Arpachshad lived five and thirty years, and begot Shelah. And
 # Arpachshad lived after he begot Shelah four hundred and three years, and
 # begot sons and daughters."
 m.step("Gen.11.12-13")
-# ‹וְאַרְפַּכְשַׁד חַי חָמֵשׁ וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־שָׁלַח›
-# (“and-Arphaxad live five and-thirty years and-bear-young obj-marker
-# Salah”) — event: beget — agent Arphaxad; theme Salah
+# ‹וְאַרְפַּכְשַׁד חַי חָמֵשׁ› (“and-Arphaxad live five”)
+# ‹וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד› (“and-thirty years and-bear-young”)
+# ‹אֶת־שָׁלַח› (“obj-marker Salah”)
+# — event: beget — agent Arphaxad; theme Salah
 m.event("beget", agent="arpakhshad", themes=["shelach"])
-# ‹וַיְחִי אַרְפַּכְשַׁד … שָׁלֹשׁ שָׁנִים וְאַרְבַּע מֵאוֹת שָׁנָה
-# וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-live Arphaxad … three years and-four
-# hundred years and-bear-young son and-daughter”) — fact holds: son-and-
-# daughter(Arphaxad)
+# ‹וַיְחִי אַרְפַּכְשַׁד … שָׁלֹשׁ› (“and-live Arphaxad … three”)
+# ‹שָׁנִים וְאַרְבַּע מֵאוֹת› (“years and-four hundred”)
+# ‹שָׁנָה וַיּוֹלֶד בָּנִים› (“years and-bear-young son”)
+# ‹וּבָנוֹת› (“and-daughter”)
+# — fact holds: son-and-daughter(Arphaxad)
 m.fact("banim_u_vanot(arpakhshad)")
 
 # -------------------------- Gen.11.14-15 · SHELACH_ROW_FRONTED_PERFECT -----
-# וְשֶׁלַח חַי שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־עֵבֶר … וַיּוֹלֶד בָּנִים
-# וּבָנוֹת
+# ‹וְשֶׁלַח חַי שְׁלֹשִׁים› (“and-Salah live thirty”)
+# ‹שָׁנָה וַיּוֹלֶד אֶת־עֵבֶר› (“years and-bear-young obj-marker Eber”)
+# ‹… וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-bear-young son and-daughter”)
 # "And Shelah lived thirty years, and begot Eber. And Shelah lived after he
 # begot Eber four hundred and three years, and begot sons and daughters."
 m.step("Gen.11.14-15")
-# ‹וְשֶׁלַח חַי שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־עֵבֶר› (“and-Salah live
-# thirty years and-bear-young obj-marker Eber”) — event: beget — agent
-# Salah; theme Eber
+# ‹וְשֶׁלַח חַי שְׁלֹשִׁים› (“and-Salah live thirty”)
+# ‹שָׁנָה וַיּוֹלֶד אֶת־עֵבֶר› (“years and-bear-young obj-marker Eber”)
+# — event: beget — agent Salah; theme Eber
 m.event("beget", agent="shelach", themes=["ever"])
-# ‹וַיְחִי־שֶׁלַח … שָׁלֹשׁ שָׁנִים וְאַרְבַּע מֵאוֹת שָׁנָה וַיּוֹלֶד
-# בָּנִים וּבָנוֹת› (“and-live Salah … three years and-four hundred years
-# and-bear-young son and-daughter”) — fact holds: son-and-daughter(Salah)
+# ‹וַיְחִי־שֶׁלַח … שָׁלֹשׁ שָׁנִים› (“and-live Salah … three years”)
+# ‹וְאַרְבַּע מֵאוֹת שָׁנָה› (“and-four hundred years”)
+# ‹וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-bear-young son and-daughter”)
+# — fact holds: son-and-daughter(Salah)
 m.fact("banim_u_vanot(shelach)")
 
 # -------------------------- Gen.11.16-17 · EVER_ROW_WAYYIQTOL_RESUMES ------
-# וַיְחִי־עֵבֶר אַרְבַּע וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־פָּלֶג …
-# וַיּוֹלֶד בָּנִים וּבָנוֹת
+# ‹וַיְחִי־עֵבֶר אַרְבַּע וּשְׁלֹשִׁים› (“and-live Eber four and-thirty”)
+# ‹שָׁנָה וַיּוֹלֶד אֶת־פָּלֶג› (“years and-bear-young obj-marker Peleg”)
+# ‹… וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-bear-young son and-daughter”)
 # "And Eber lived four and thirty years, and begot Peleg. And Eber lived
 # after he begot Peleg four hundred and thirty years, and begot sons and
 # daughters."
 m.step("Gen.11.16-17")
-# ‹וַיְחִי־עֵבֶר אַרְבַּע וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־פָּלֶג› (“and-
-# live Eber four and-thirty years and-bear-young obj-marker Peleg”) — event:
-# beget — agent Eber; theme Peleg
+# ‹וַיְחִי־עֵבֶר אַרְבַּע וּשְׁלֹשִׁים› (“and-live Eber four and-thirty”)
+# ‹שָׁנָה וַיּוֹלֶד אֶת־פָּלֶג› (“years and-bear-young obj-marker Peleg”)
+# — event: beget — agent Eber; theme Peleg
 m.event("beget", agent="ever", themes=["peleg"])
-# ‹וַיְחִי־עֵבֶר אַחֲרֵי הוֹלִידוֹ אֶת־פֶּלֶג שְׁלֹשִׁים שָׁנָה וְאַרְבַּע
-# מֵאוֹת שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-live Eber after bear-
-# young-him/its obj-marker Peleg thirty years and-four hundred years and-
-# bear-young son and-daughter”) — fact holds: son-and-daughter(Eber)
+# ‹וַיְחִי־עֵבֶר אַחֲרֵי הוֹלִידוֹ› (“and-live Eber after bear-young-
+# him/its”)
+# ‹אֶת־פֶּלֶג שְׁלֹשִׁים שָׁנָה› (“obj-marker Peleg thirty years”)
+# ‹וְאַרְבַּע מֵאוֹת שָׁנָה› (“and-four hundred years”)
+# ‹וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-bear-young son and-daughter”)
+# — fact holds: son-and-daughter(Eber)
 m.fact("banim_u_vanot(ever)")
 
 # -------------------------- Gen.11.18-19 · PELEG_ROW_CAREER_CLOSES ---------
-# וַיְחִי־פֶלֶג שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־רְעוּ … וַיּוֹלֶד בָּנִים
-# וּבָנוֹת
+# ‹וַיְחִי־פֶלֶג שְׁלֹשִׁים שָׁנָה› (“and-live Peleg thirty years”)
+# ‹וַיּוֹלֶד אֶת־רְעוּ … וַיּוֹלֶד› (“and-bear-young obj-marker Reu … and-
+# bear-young”)
+# ‹בָּנִים וּבָנוֹת› (“son and-daughter”)
 # "And Peleg lived thirty years, and begot Reu. And Peleg lived after he
 # begot Reu two hundred and nine years, and begot sons and daughters."
 m.step("Gen.11.18-19")
-# ‹וַיְחִי־פֶלֶג שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־רְעוּ› (“and-live Peleg
-# thirty years and-bear-young obj-marker Reu”) — event: beget — agent Peleg;
-# theme Reu
+# ‹וַיְחִי־פֶלֶג שְׁלֹשִׁים שָׁנָה› (“and-live Peleg thirty years”)
+# ‹וַיּוֹלֶד אֶת־רְעוּ› (“and-bear-young obj-marker Reu”)
+# — event: beget — agent Peleg; theme Reu
 m.event("beget", agent="peleg", themes=["reu"])
-# ‹וַיְחִי־פֶלֶג אַחֲרֵי הוֹלִידוֹ אֶת־רְעוּ תֵּשַׁע שָׁנִים וּמָאתַיִם
-# שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-live Peleg after bear-young-
-# him/its obj-marker Reu nine years and-hundred years and-bear-young son
-# and-daughter”) — fact holds: son-and-daughter(Peleg)
+# ‹וַיְחִי־פֶלֶג אַחֲרֵי הוֹלִידוֹ› (“and-live Peleg after bear-young-
+# him/its”)
+# ‹אֶת־רְעוּ תֵּשַׁע שָׁנִים› (“obj-marker Reu nine years”)
+# ‹וּמָאתַיִם שָׁנָה וַיּוֹלֶד› (“and-hundred years and-bear-young”)
+# ‹בָּנִים וּבָנוֹת› (“son and-daughter”)
+# — fact holds: son-and-daughter(Peleg)
 m.fact("banim_u_vanot(peleg)")
 
 # -------------------------- Gen.11.20-21 · REU_ROW_WHOLE_CAREER_IN_SPAN ----
-# וַיְחִי רְעוּ שְׁתַּיִם וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־שְׂרוּג …
-# וַיּוֹלֶד בָּנִים וּבָנוֹת
+# ‹וַיְחִי רְעוּ שְׁתַּיִם› (“and-live Reu two”)
+# ‹וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד› (“and-thirty years and-bear-young”)
+# ‹אֶת־שְׂרוּג … וַיּוֹלֶד בָּנִים› (“obj-marker Serug … and-bear-young
+# son”)
+# ‹וּבָנוֹת› (“and-daughter”)
 # "And Reu lived two and thirty years, and begot Serug. And Reu lived after
 # he begot Serug two hundred and seven years, and begot sons and daughters."
 m.step("Gen.11.20-21")
-# ‹וַיְחִי רְעוּ שְׁתַּיִם וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־שְׂרוּג› (“and-
-# live Reu two and-thirty years and-bear-young obj-marker Serug”) — event:
-# beget — agent Reu; theme Serug
+# ‹וַיְחִי רְעוּ שְׁתַּיִם› (“and-live Reu two”)
+# ‹וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד› (“and-thirty years and-bear-young”)
+# ‹אֶת־שְׂרוּג› (“obj-marker Serug”)
+# — event: beget — agent Reu; theme Serug
 m.event("beget", agent="reu", themes=["serug"])
-# ‹וַיְחִי רְעוּ אַחֲרֵי הוֹלִידוֹ אֶת־שְׂרוּג שֶׁבַע שָׁנִים וּמָאתַיִם
-# שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-live Reu after bear-young-him/its
-# obj-marker Serug seven years and-hundred years and-bear-young son and-
-# daughter”) — fact holds: son-and-daughter(Reu)
+# ‹וַיְחִי רְעוּ אַחֲרֵי› (“and-live Reu after”)
+# ‹הוֹלִידוֹ אֶת־שְׂרוּג שֶׁבַע› (“bear-young-him/its obj-marker Serug
+# seven”)
+# ‹שָׁנִים וּמָאתַיִם שָׁנָה› (“years and-hundred years”)
+# ‹וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-bear-young son and-daughter”)
+# — fact holds: son-and-daughter(Reu)
 m.fact("banim_u_vanot(reu)")
 
 # -------------------------- Gen.11.22-23 · SERUG_ROW_BEGETS_THE_FIRST_NACHOR -
-# וַיְחִי שְׂרוּג שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־נָחוֹר … וַיּוֹלֶד בָּנִים
-# וּבָנוֹת
+# ‹וַיְחִי שְׂרוּג שְׁלֹשִׁים› (“and-live Serug thirty”)
+# ‹שָׁנָה וַיּוֹלֶד אֶת־נָחוֹר› (“years and-bear-young obj-marker Nahor”)
+# ‹… וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-bear-young son and-daughter”)
 # "And Serug lived thirty years, and begot Nahor. And Serug lived after he
 # begot Nahor two hundred years, and begot sons and daughters."
 m.step("Gen.11.22-23")
-# ‹וַיְחִי שְׂרוּג שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־נָחוֹר› (“and-live Serug
-# thirty years and-bear-young obj-marker Nahor”) — event: beget — agent
-# Serug; theme Nahor-son-Serug
+# ‹וַיְחִי שְׂרוּג שְׁלֹשִׁים› (“and-live Serug thirty”)
+# ‹שָׁנָה וַיּוֹלֶד אֶת־נָחוֹר› (“years and-bear-young obj-marker Nahor”)
+# — event: beget — agent Serug; theme Nahor-son-Serug
 m.event("beget", agent="serug", themes=["nachor_ben_serug"])
-# ‹וַיְחִי שְׂרוּג אַחֲרֵי הוֹלִידוֹ אֶת־נָחוֹר מָאתַיִם שָׁנָה וַיּוֹלֶד
-# בָּנִים וּבָנוֹת› (“and-live Serug after bear-young-him/its obj-marker
-# Nahor hundred years and-bear-young son and-daughter”) — fact holds: son-
-# and-daughter(Serug)
+# ‹וַיְחִי שְׂרוּג אַחֲרֵי› (“and-live Serug after”)
+# ‹הוֹלִידוֹ אֶת־נָחוֹר מָאתַיִם› (“bear-young-him/its obj-marker Nahor
+# hundred”)
+# ‹שָׁנָה וַיּוֹלֶד בָּנִים› (“years and-bear-young son”)
+# ‹וּבָנוֹת› (“and-daughter”)
+# — fact holds: son-and-daughter(Serug)
 m.fact("banim_u_vanot(serug)")
 
 # -------------------------- Gen.11.24-25 · NACHOR_ROW_BEGETS_TERACH --------
-# וַיְחִי נָחוֹר תֵּשַׁע וְעֶשְׂרִים שָׁנָה וַיּוֹלֶד אֶת־תָּרַח … וַיּוֹלֶד
-# בָּנִים וּבָנוֹת
+# ‹וַיְחִי נָחוֹר תֵּשַׁע› (“and-live Nahor nine”)
+# ‹וְעֶשְׂרִים שָׁנָה וַיּוֹלֶד› (“and-twenty years and-bear-young”)
+# ‹אֶת־תָּרַח … וַיּוֹלֶד בָּנִים› (“obj-marker Tarah … and-bear-young son”)
+# ‹וּבָנוֹת› (“and-daughter”)
 # "And Nahor lived nine and twenty years, and begot Terah. And Nahor lived
 # after he begot Terah a hundred and nineteen years, and begot sons and
 # daughters."
 m.step("Gen.11.24-25")
-# ‹וַיְחִי נָחוֹר תֵּשַׁע וְעֶשְׂרִים שָׁנָה וַיּוֹלֶד אֶת־תָּרַח› (“and-
-# live Nahor nine and-twenty years and-bear-young obj-marker Tarah”) —
-# event: beget — agent Nahor-son-Serug; theme Tarah
+# ‹וַיְחִי נָחוֹר תֵּשַׁע› (“and-live Nahor nine”)
+# ‹וְעֶשְׂרִים שָׁנָה וַיּוֹלֶד› (“and-twenty years and-bear-young”)
+# ‹אֶת־תָּרַח› (“obj-marker Tarah”)
+# — event: beget — agent Nahor-son-Serug; theme Tarah
 m.event("beget", agent="nachor_ben_serug", themes=["terach"])
-# ‹וַיְחִי נָחוֹר אַחֲרֵי הוֹלִידוֹ אֶת־תֶּרַח תְּשַׁע־עֶשְׂרֵה שָׁנָה
-# וּמְאַת שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-live Nahor after bear-
-# young-him/its obj-marker Tarah nine -teen years and-hundred years and-
-# bear-young son and-daughter”) — fact holds: son-and-daughter(Nahor-son-
-# Serug)
+# ‹וַיְחִי נָחוֹר אַחֲרֵי› (“and-live Nahor after”)
+# ‹הוֹלִידוֹ אֶת־תֶּרַח תְּשַׁע־עֶשְׂרֵה› (“bear-young-him/its obj-marker
+# Tarah nine -teen”)
+# ‹שָׁנָה וּמְאַת שָׁנָה› (“years and-hundred years”)
+# ‹וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-bear-young son and-daughter”)
+# — fact holds: son-and-daughter(Nahor-son-Serug)
 m.fact("banim_u_vanot(nachor_ben_serug)")
 
 # -------------------------- Gen.11.26 · TERACH_ROW_OPENS_THREE_SONS --------
-# וַיְחִי־תֶרַח שִׁבְעִים שָׁנָה וַיּוֹלֶד אֶת־אַבְרָם אֶת־נָחוֹר
-# וְאֶת־הָרָן
+# ‹וַיְחִי־תֶרַח שִׁבְעִים שָׁנָה› (“and-live Tarah seventy years”)
+# ‹וַיּוֹלֶד אֶת־אַבְרָם אֶת־נָחוֹר› (“and-bear-young obj-marker Abram obj-
+# marker Nahor”)
+# ‹וְאֶת־הָרָן› (“and-obj-marker Haran”)
 # "And Terah lived seventy years, and begot Abram, Nahor, and Haran."
 m.step("Gen.11.26")
-# ‹וַיְחִי־תֶרַח שִׁבְעִים שָׁנָה וַיּוֹלֶד אֶת־אַבְרָם אֶת־נָחוֹר
-# וְאֶת־הָרָן› (“and-live Tarah seventy years and-bear-young obj-marker
-# Abram obj-marker Nahor and-obj-marker Haran”) — event: beget — agent
-# Tarah; theme Abram, Nahor-son-Tarah, Haran
+# ‹וַיְחִי־תֶרַח שִׁבְעִים שָׁנָה› (“and-live Tarah seventy years”)
+# ‹וַיּוֹלֶד אֶת־אַבְרָם אֶת־נָחוֹר› (“and-bear-young obj-marker Abram obj-
+# marker Nahor”)
+# ‹וְאֶת־הָרָן› (“and-obj-marker Haran”)
+# — event: beget — agent Tarah; theme Abram, Nahor-son-Tarah, Haran
 m.event("beget", agent="terach", themes=["avram", "nachor_ben_terach", "haran"])
 
 # -------------------------- Gen.11.27 · TERACH_HEADER_INSIDE_THE_OPEN_ROW --
-# וְאֵלֶּה תּוֹלְדֹת תֶּרַח תֶּרַח הוֹלִיד אֶת־אַבְרָם אֶת־נָחוֹר
-# וְאֶת־הָרָן וְהָרָן הוֹלִיד אֶת־לוֹט
+# ‹וְאֵלֶּה תּוֹלְדֹת תֶּרַח› (“and-these generations Tarah”)
+# ‹תֶּרַח הוֹלִיד אֶת־אַבְרָם› (“Tarah bear-young obj-marker Abram”)
+# ‹אֶת־נָחוֹר וְאֶת־הָרָן וְהָרָן› (“obj-marker Nahor and-obj-marker Haran
+# and-Haran”)
+# ‹הוֹלִיד אֶת־לוֹט› (“bear-young obj-marker Lot”)
 # "Now these are the generations of Terah. Terah begot Abram, Nahor, and
 # Haran; and Haran begot Lot."
 m.step("Gen.11.27")
-# ‹וְאֵלֶּה תּוֹלְדֹת תֶּרַח› (“and-these generations Tarah”) — section
-# generations-Tarah: ve-eleh toldot terach — the seventh toledot header
-# labels; installs nothing
+# ‹וְאֵלֶּה תּוֹלְדֹת תֶּרַח› (“and-these generations Tarah”)
+# — section generations-Tarah: ve-eleh toldot terach — the seventh toledot
+# header labels; installs nothing
 m.section("toledot_terach", "ve-eleh toldot terach — the seventh toledot header labels; installs nothing")
-# ‹וְהָרָן הוֹלִיד אֶת־לוֹט› (“and-Haran bear-young obj-marker Lot”) —
-# event: beget — agent Haran; theme Lot
+# ‹וְהָרָן הוֹלִיד אֶת־לוֹט› (“and-Haran bear-young obj-marker Lot”)
+# — event: beget — agent Haran; theme Lot
 m.event("beget", agent="haran", themes=["lot"])
 
 # -------------------------- Gen.11.28 · HARAN_DIES_BEFORE_HIS_FATHER -------
-# וַיָּמָת הָרָן עַל־פְּנֵי תֶּרַח אָבִיו בְּאֶרֶץ מוֹלַדְתּוֹ בְּאוּר
-# כַּשְׂדִּים
+# ‹וַיָּמָת הָרָן עַל־פְּנֵי› (“and-die Haran over face”)
+# ‹תֶּרַח אָבִיו בְּאֶרֶץ› (“Tarah father-him/its in-earth”)
+# ‹מוֹלַדְתּוֹ בְּאוּר כַּשְׂדִּים› (“nativity-him/its in-Ur Chaldeans”)
 # "And Haran died in the presence of his father Terah in the land of his
 # nativity, in Ur of the Chaldees."
 m.step("Gen.11.28")
-# ‹וַיָּמָת הָרָן עַל־פְּנֵי תֶּרַח אָבִיו› (“and-die Haran over face Tarah
-# father-him/its”) — event: die — agent Haran
+# ‹וַיָּמָת הָרָן עַל־פְּנֵי› (“and-die Haran over face”)
+# ‹תֶּרַח אָבִיו› (“Tarah father-him/its”)
+# — event: die — agent Haran
 m.event("die", agent="haran")
-# ‹בְּאֶרֶץ מוֹלַדְתּוֹ בְּאוּר כַּשְׂדִּים› (“in-earth nativity-him/its in-
-# Ur Chaldeans”) — fact holds: in-earth-moladto-in-Ur-Chaldeans(Haran)
+# ‹בְּאֶרֶץ מוֹלַדְתּוֹ בְּאוּר› (“in-earth nativity-him/its in-Ur”)
+# ‹כַּשְׂדִּים› (“Chaldeans”)
+# — fact holds: in-earth-moladto-in-Ur-Chaldeans(Haran)
 m.fact("be_eretz_moladto_be_ur_kasdim(haran)")
 # reads without prior install (flag, not fix): Ur-Chaldeans
 m.presupposed("ur_kasdim")
@@ -201,23 +242,28 @@ m.witness_read("al_penei_phrase", "proof_text_in_a_priestly_law_dispute",
                 cites=["Megillah 14a:13", "Pesikta DeRav Kahana 26:10"])
 
 # -------------------------- Gen.11.29 · THE_WIVES_TAKEN_ONE_GENEALOGY_WITHHELD -
-# וַיִּקַּח אַבְרָם וְנָחוֹר לָהֶם נָשִׁים שֵׁם אֵשֶׁת־אַבְרָם שָׂרָי וְשֵׁם
-# אֵשֶׁת־נָחוֹר מִלְכָּה בַּת־הָרָן אֲבִי־מִלְכָּה וַאֲבִי יִסְכָּה
+# ‹וַיִּקַּח אַבְרָם וְנָחוֹר› (“and-take Abram and-Nahor”)
+# ‹לָהֶם נָשִׁים שֵׁם› (“to-them/their woman name”)
+# ‹אֵשֶׁת־אַבְרָם שָׂרָי וְשֵׁם› (“woman Abram Sarai and-name”)
+# ‹אֵשֶׁת־נָחוֹר מִלְכָּה בַּת־הָרָן› (“woman Nahor Milcah daughter Haran”)
+# ‹אֲבִי־מִלְכָּה וַאֲבִי יִסְכָּה› (“father Milcah and-father Iscah”)
 # "And Abram and Nahor took them wives: the name of Abram's wife was Sarai;
 # and the name of Nahor's wife, Milcah, the daughter of Haran, the father of
 # Milcah, and the father of Iscah."
 m.step("Gen.11.29")
-# ‹וַיִּקַּח אַבְרָם וְנָחוֹר לָהֶם נָשִׁים› (“and-take Abram and-Nahor to-
-# them/their woman”) — event: take — agent Abram; theme woman
+# ‹וַיִּקַּח אַבְרָם וְנָחוֹר› (“and-take Abram and-Nahor”)
+# ‹לָהֶם נָשִׁים› (“to-them/their woman”)
+# — event: take — agent Abram; theme woman
 m.event("take", agent="avram", themes=["nashim"])
-# ‹שֵׁם אֵשֶׁת־אַבְרָם שָׂרָי וְשֵׁם אֵשֶׁת־נָחוֹר מִלְכָּה› (“name woman
-# Abram Sarai and-name woman Nahor Milcah”) — fact holds: Sem-woman-Abram-
-# Sarai; Sem-woman-Nahor-milkah
+# ‹שֵׁם אֵשֶׁת־אַבְרָם שָׂרָי› (“name woman Abram Sarai”)
+# ‹וְשֵׁם אֵשֶׁת־נָחוֹר מִלְכָּה› (“and-name woman Nahor Milcah”)
+# — fact holds: Sem-woman-Abram-Sarai; Sem-woman-Nahor-milkah
 m.fact("shem_eshet_avram_saray",
        "shem_eshet_nachor_milkah")
-# ‹מִלְכָּה בַּת־הָרָן אֲבִי־מִלְכָּה וַאֲבִי יִסְכָּה› (“Milcah daughter
-# Haran father Milcah and-father Iscah”) — fact holds: milkah-daughter-
-# Haran; Haran-father-milkah-and-father-yiskah
+# ‹מִלְכָּה בַּת־הָרָן אֲבִי־מִלְכָּה› (“Milcah daughter Haran father
+# Milcah”)
+# ‹וַאֲבִי יִסְכָּה› (“and-father Iscah”)
+# — fact holds: milkah-daughter-Haran; Haran-father-milkah-and-father-yiskah
 m.fact("milkah_bat_haran",
        "haran_avi_milkah_va_avi_yiskah")
 # witness-tier presupposed read: cited_as_paternity_age_precedent on
@@ -226,14 +272,15 @@ m.witness_read("ledger_arithmetic", "cited_as_paternity_age_precedent",
                 cites=["Bereshit Rabbah 38:14", "Jerusalem Talmud Yevamot 10:7:8", "Bereshit Rabbah 45:1"])
 
 # -------------------------- Gen.11.30 · SARAI_BARREN_THE_DOUBLED_ABSENCE ---
-# וַתְּהִי שָׂרַי עֲקָרָה אֵין לָהּ וָלָד
+# ‹וַתְּהִי שָׂרַי עֲקָרָה› (“and-be Sarai sterile”)
+# ‹אֵין לָהּ וָלָד› (“there-is-not to-her/its boy”)
 # "And Sarai was barren; she had no child."
 m.step("Gen.11.30")
-# ‹וַתְּהִי שָׂרַי עֲקָרָה› (“and-be Sarai sterile”) — fact holds: Sarai-
-# akarah
+# ‹וַתְּהִי שָׂרַי עֲקָרָה› (“and-be Sarai sterile”)
+# — fact holds: Sarai-akarah
 m.fact("saray_akarah")
-# ‹אֵין לָהּ וָלָד› (“there-is-not to-her/its boy”) — fact holds: ein-lah-
-# boy
+# ‹אֵין לָהּ וָלָד› (“there-is-not to-her/its boy”)
+# — fact holds: ein-lah-boy
 m.fact("ein_lah_valad")
 # witness-tier presupposed read: redundancy_read_as_anatomy on barren_clause
 # — read, not installed
@@ -241,45 +288,57 @@ m.witness_read("barren_clause", "redundancy_read_as_anatomy",
                 cites=["Yevamot 64b:2", "Bereshit Rabbah 45:1"])
 
 # -------------------------- Gen.11.31 · THE_JOURNEY_STATED_STOPPED_SETTLED -
-# וַיִּקַּח תֶּרַח אֶת־אַבְרָם בְּנוֹ וְאֶת־לוֹט בֶּן־הָרָן בֶּן־בְּנוֹ
-# וְאֵת שָׂרַי כַּלָּתוֹ אֵשֶׁת אַבְרָם בְּנוֹ וַיֵּצְאוּ אִתָּם מֵאוּר
-# כַּשְׂדִּים לָלֶכֶת אַרְצָה כְּנַעַן וַיָּבֹאוּ עַד־חָרָן וַיֵּשְׁבוּ שָׁם
+# ‹וַיִּקַּח תֶּרַח אֶת־אַבְרָם› (“and-take Tarah obj-marker Abram”)
+# ‹בְּנוֹ וְאֶת־לוֹט בֶּן־הָרָן› (“son-him/its and-obj-marker Lot son
+# Haran”)
+# ‹בֶּן־בְּנוֹ וְאֵת שָׂרַי› (“son son-him/its and-obj-marker Sarai”)
+# ‹כַּלָּתוֹ אֵשֶׁת אַבְרָם› (“bride-him/its woman Abram”)
+# ‹בְּנוֹ וַיֵּצְאוּ אִתָּם› (“son-him/its and-bring-forth with-them/their”)
+# ‹מֵאוּר כַּשְׂדִּים לָלֶכֶת› (“from-Ur Chaldeans to-go”)
+# ‹אַרְצָה כְּנַעַן וַיָּבֹאוּ› (“earth-ward Canaan and-come/bring”)
+# ‹עַד־חָרָן וַיֵּשְׁבוּ שָׁם› (“until Haran and-dwell/sit there”)
 # "And Terah took Abram his son, and Lot the son of Haran, his son's son,
 # and Sarai his daughter-in-law, his son Abram's wife; and they went forth
 # with them from Ur of the Chaldees, to go into the land of Canaan; and they
 # came unto Haran, and dwelt there."
 m.step("Gen.11.31")
-# ‹וַיִּקַּח תֶּרַח אֶת־אַבְרָם בְּנוֹ וְאֶת־לוֹט בֶּן־הָרָן בֶּן־בְּנוֹ
-# וְאֵת שָׂרַי כַּלָּתוֹ אֵשֶׁת אַבְרָם בְּנוֹ› (“and-take Tarah obj-marker
-# Abram son-him/its and-obj-marker Lot son Haran son son-him/its and-obj-
-# marker Sarai bride-him/its woman Abram son-him/its”) — event: take — agent
-# Tarah; theme Abram, Lot, Sarai
+# ‹וַיִּקַּח תֶּרַח אֶת־אַבְרָם› (“and-take Tarah obj-marker Abram”)
+# ‹בְּנוֹ וְאֶת־לוֹט בֶּן־הָרָן› (“son-him/its and-obj-marker Lot son
+# Haran”)
+# ‹בֶּן־בְּנוֹ וְאֵת שָׂרַי› (“son son-him/its and-obj-marker Sarai”)
+# ‹כַּלָּתוֹ אֵשֶׁת אַבְרָם› (“bride-him/its woman Abram”)
+# ‹בְּנוֹ› (“son-him/its”)
+# — event: take — agent Tarah; theme Abram, Lot, Sarai
 m.event("take", agent="terach", themes=["avram", "lot", "saray"])
-# ‹וַיֵּצְאוּ אִתָּם מֵאוּר כַּשְׂדִּים› (“and-bring-forth with-them/their
-# from-Ur Chaldeans”) — event: go-out — agent Tarah
+# ‹וַיֵּצְאוּ אִתָּם מֵאוּר› (“and-bring-forth with-them/their from-Ur”)
+# ‹כַּשְׂדִּים› (“Chaldeans”)
+# — event: go-out — agent Tarah
 m.event("go_out", agent="terach")
-# ‹לָלֶכֶת אַרְצָה כְּנַעַן› (“to-go earth-ward Canaan”) — fact holds: to-
-# go-artzah-Canaan
+# ‹לָלֶכֶת אַרְצָה כְּנַעַן› (“to-go earth-ward Canaan”)
+# — fact holds: to-go-artzah-Canaan
 m.fact("la_lekhet_artzah_kenaan")
-# ‹וַיָּבֹאוּ עַד־חָרָן› (“and-come/bring until Haran”) — event: come —
-# agent Tarah
+# ‹וַיָּבֹאוּ עַד־חָרָן› (“and-come/bring until Haran”)
+# — event: come — agent Tarah
 m.event("come", agent="terach")
-# ‹וַיֵּשְׁבוּ שָׁם› (“and-dwell/sit there”) — event: settle — agent Tarah
+# ‹וַיֵּשְׁבוּ שָׁם› (“and-dwell/sit there”)
+# — event: settle — agent Tarah
 m.event("settle", agent="terach")
 # reads without prior install (flag, not fix): Haran, earth-Canaan
 m.presupposed("charan", "eretz_kenaan")
 
 # -------------------------- Gen.11.32 · TERACH_ROW_CLOSES_WITHOUT_ALL ------
-# וַיִּהְיוּ יְמֵי־תֶרַח חָמֵשׁ שָׁנִים וּמָאתַיִם שָׁנָה וַיָּמָת תֶּרַח
-# בְּחָרָן
+# ‹וַיִּהְיוּ יְמֵי־תֶרַח חָמֵשׁ› (“and-be day Tarah five”)
+# ‹שָׁנִים וּמָאתַיִם שָׁנָה› (“years and-hundred years”)
+# ‹וַיָּמָת תֶּרַח בְּחָרָן› (“and-die Tarah in-Haran”)
 # "And the days of Terah were two hundred and five years; and Terah died in
 # Haran."
 m.step("Gen.11.32")
-# ‹וַיִּהְיוּ יְמֵי־תֶרַח חָמֵשׁ שָׁנִים וּמָאתַיִם שָׁנָה› (“and-be day
-# Tarah five years and-hundred years”) — fact holds: days-of-Tarah-205-year
+# ‹וַיִּהְיוּ יְמֵי־תֶרַח חָמֵשׁ› (“and-be day Tarah five”)
+# ‹שָׁנִים וּמָאתַיִם שָׁנָה› (“years and-hundred years”)
+# — fact holds: days-of-Tarah-205-year
 m.fact("yemei_terach_205_shanah")
-# ‹וַיָּמָת תֶּרַח בְּחָרָן› (“and-die Tarah in-Haran”) — event: die — agent
-# Tarah
+# ‹וַיָּמָת תֶּרַח בְּחָרָן› (“and-die Tarah in-Haran”)
+# — event: die — agent Tarah
 m.event("die", agent="terach")
 # witness-tier presupposed read: narrated_out_of_order_on_purpose on
 # terach_death_notice — read, not installed

@@ -1826,3 +1826,23 @@ vocabulary keeps its own append-only history). The tripwire this
 buys: an effect registered but never fired across work that should
 fire it is a defect report, not a constant — the standing
 instrument rule applied to the physics itself.
+
+**2026-09-05 (second rider — the founding correction, and the
+design lands a file).** The owner: "we should not look at this as
+ledger only. We don't know what will happen when this is all
+compiled. We may have recursive inputs we can't predict." The
+input tape is known (the text is the event source — a replay);
+the COMPUTED side is emergent: daemons firing unasked off each
+other's effects, timers firing with no local text event, the
+program growing at runtime (the Leviticus 24 pattern). The same
+day supplied the star witness: the land_repays_sabbaths timer
+found compiling Leviticus 26, its discharge recorded books later
+at 2 Chronicles 36:21. Consequences ruled into the design:
+exogenous vs endogenous events visually distinct everywhere; the
+viewport a CAUSAL TRACE (click a fired effect, see its chain);
+the clock two-grained (step a verse, or micro-step one effect);
+an engine watch opened — cascade-depth limits + cycle detection
+needed before the whole Bible compiles, with an anomaly lane.
+On the owner's "ok do it," the design moved to its own file:
+ARCHITECTURE/CHRONICLE.md — these idea-log entries stay as the
+history pointing there.

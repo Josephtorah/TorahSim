@@ -14,11 +14,14 @@ from machine import Machine
 m = Machine("lev_26_bless_curse")
 
 # -------------------------- Lev.26.1 · ETNACHTA_SPLIT ----------------------
-# לא תעשו לכם אלילם ופסל ומצבה לא תקימו לכם ואבן משכית לא תתנו … כי אני יהוה
-# אלהיכם
-# "[EN-AID] From top split: LEFT «לא תעשו לכם אלילם ופסל ומצבה לא תקימו לכם
-# ואבן משכית לא תתנו בארצכם להשתחות עליה» / RIGHT «כי אני יהוה אלהיכם».
-# Derive claim from Hebrew arms. Lev 26:1."
+# ‹לא תעשו לכם› (“not make to-you/your(pl)”)
+# ‹אלילם ופסל ומצבה› (“good-for-nothing and-idol and-pillar”)
+# ‹לא תקימו לכם› (“not arise to-you/your(pl)”)
+# ‹ואבן משכית לא› (“and-stone figure not”)
+# ‹תתנו … כי אני› (“set … that”)
+# ‹יהוה אלהיכם› (“YHWH God-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:1."
 m.step("Lev.26.1")
 # witness-tier presupposed read: the_idols_ban_with_the_sanctuary_carve_out
 # on lo_taasu_lachem_elilim — read, not installed
@@ -26,19 +29,23 @@ m.witness_read("lo_taasu_lachem_elilim", "the_idols_ban_with_the_sanctuary_carve
                 cites=["Sifra, Behar, Chapter 9 5", "Onkelos Lev 26:1"])
 
 # -------------------------- Lev.26.2 · ETNACHTA_SPLIT ----------------------
-# את שבתתי תשמרו ומקדשי תיראו … אני יהוה
-# "[EN-AID] From top split: LEFT «את שבתתי תשמרו ומקדשי תיראו» / RIGHT «אני
-# יהוה». Derive claim from Hebrew arms. Lev 26:2."
+# ‹את שבתתי תשמרו› (“obj-marker intermission-me/my keep/guard”)
+# ‹ומקדשי תיראו … אני› (“and-consecrated-thing-me/my fear … ”)
+# ‹יהוה› (“YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:2."
 m.step("Lev.26.2")
 # witness-tier presupposed read: the_sold_mans_charter on
 # et_shabtotai_tishmoru — read, not installed
 m.witness_read("et_shabtotai_tishmoru", "the_sold_mans_charter",
                 cites=["Sifra, Behar, Chapter 9 6", "Onkelos Lev 26:2"])
 
-# -------------------------- Lev.26.3 · COND_אם -----------------------------
-# אם בחקתי תלכו … ואת מצותי תשמרו ועשיתם אתם
-# "[EN-AID] From top split: LEFT «אם בחקתי תלכו» / RIGHT «ואת מצותי תשמרו
-# ועשיתם אתם». Derive claim from Hebrew arms. Lev 26:3."
+# -------------------------- Lev.26.3 · COND_אם (“if”) ----------------------
+# ‹אם בחקתי תלכו› (“if in-statute-me/my go”)
+# ‹… ואת מצותי תשמרו› (“and-obj-marker commandment-me/my keep/guard”)
+# ‹ועשיתם אתם› (“and-make obj-marker-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:3."
 m.step("Lev.26.3")
 # witness-tier presupposed read:
 # the_two_clause_split_and_the_remember_verb_rule on im_bechukotai_telechu —
@@ -47,9 +54,12 @@ m.witness_read("im_bechukotai_telechu", "the_two_clause_split_and_the_remember_v
                 cites=["Sifra, Bechukotai, Section 1 1", "Sifra, Bechukotai, Section 1 2", "Sifra, Bechukotai, Section 1 3", "Sifra, Bechukotai, Section 1 5", "Onkelos Lev 26:3"])
 
 # -------------------------- Lev.26.4 · ETNACHTA_SPLIT ----------------------
-# ונתתי גשמיכם בעתם … ונתנה הארץ יבולה ועץ השדה יתן פריו
-# "[EN-AID] From top split: LEFT «ונתתי גשמיכם בעתם» / RIGHT «ונתנה הארץ
-# יבולה ועץ השדה יתן פריו». Derive claim from Hebrew arms. Lev 26:4."
+# ‹ונתתי גשמיכם בעתם› (“and-set shower-you/your(pl) in-time-them/their”)
+# ‹… ונתנה הארץ יבולה› (“and-set the-earth produce-her/its”)
+# ‹ועץ השדה יתן› (“and-tree the-field set”)
+# ‹פריו› (“fruit-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:4."
 m.step("Lev.26.4")
 # witness-tier presupposed read: the_rains_schedule_scoped_to_the_land on
 # venatati_gishmeichem_beitam — read, not installed
@@ -57,10 +67,13 @@ m.witness_read("venatati_gishmeichem_beitam", "the_rains_schedule_scoped_to_the_
                 cites=["Sifra, Bechukotai, Chapter 1 1", "Sifra, Bechukotai, Chapter 1 2", "Onkelos Lev 26:4"])
 
 # -------------------------- Lev.26.5 · ETNACHTA_SPLIT ----------------------
-# והשיג לכם דיש את בציר ובציר ישיג את זרע … ואכלתם לחמכם לשבע וישבתם לבטח
-# בארצכם
-# "[EN-AID] From top split: LEFT «והשיג לכם דיש את בציר ובציר ישיג את זרע» /
-# RIGHT «ואכלתם לחמכם לשבע וישבתם לבטח בארצכם». Derive claim from Hebrew
+# ‹והשיג לכם דיש› (“and-reach to-you/your(pl) threshing-time”)
+# ‹את בציר ובציר› (“obj-marker clipped and-clipped”)
+# ‹ישיג את זרע› (“reach obj-marker seed”)
+# ‹… ואכלתם לחמכם לשבע› (“and-eat food-you/your(pl) to-satisfaction-joy)”)
+# ‹וישבתם לבטח בארצכם› (“and-dwell/sit to-place-of-refuge in-earth-
+# you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 26:5."
 m.step("Lev.26.5")
 # witness-tier presupposed read: the_seasons_chained_and_the_land_clause on
@@ -69,10 +82,12 @@ m.witness_read("vehisig_lachem_dayish", "the_seasons_chained_and_the_land_clause
                 cites=["Sifra, Bechukotai, Chapter 1 7", "Onkelos Lev 26:5"])
 
 # -------------------------- Lev.26.6 · ETNACHTA_SPLIT ----------------------
-# ונתתי שלום בארץ ושכבתם ואין מחריד … והשבתי חיה רעה מן הארץ וחרב לא תעבר
-# בארצכם
-# "[EN-AID] From top split: LEFT «ונתתי שלום בארץ ושכבתם ואין מחריד» / RIGHT
-# «והשבתי חיה רעה מן הארץ וחרב לא תעבר בארצכם». Derive claim from Hebrew
+# ‹ונתתי שלום בארץ› (“and-set safe in-earth”)
+# ‹ושכבתם ואין מחריד› (“and-lie-down and-there-is-not shudder-with-terror”)
+# ‹… והשבתי חיה רעה› (“and-cease living bad”)
+# ‹מן הארץ וחרב› (“from the-earth and-drought”)
+# ‹לא תעבר בארצכם› (“not pass-over in-earth-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 26:6."
 m.step("Lev.26.6")
 # witness-tier presupposed read:
@@ -82,16 +97,21 @@ m.witness_read("venatati_shalom_baaretz", "peace_weighed_against_all_and_the_bea
                 cites=["Sifra, Bechukotai, Chapter 1 8", "Sifra, Bechukotai, Chapter 2 1", "Sifra, Bechukotai, Chapter 2 3", "Onkelos Lev 26:6"])
 
 # -------------------------- Lev.26.7 · ETNACHTA_SPLIT ----------------------
-# ורדפתם את איביכם … ונפלו לפניכם לחרב
-# "[EN-AID] From top split: LEFT «ורדפתם את איביכם» / RIGHT «ונפלו לפניכם
-# לחרב». Derive claim from Hebrew arms. Lev 26:7."
+# ‹ורדפתם את איביכם› (“and-run-after-gone-by) obj-marker hating-
+# you/your(pl)”)
+# ‹… ונפלו לפניכם לחרב› (“and-fall to-face-you/your(pl) to-drought”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:7."
 m.step("Lev.26.7")
 
 # -------------------------- Lev.26.8 · ETNACHTA_SPLIT ----------------------
-# ורדפו מכם חמשה מאה ומאה מכם רבבה ירדפו … ונפלו איביכם לפניכם לחרב
-# "[EN-AID] From top split: LEFT «ורדפו מכם חמשה מאה ומאה מכם רבבה ירדפו» /
-# RIGHT «ונפלו איביכם לפניכם לחרב». Derive claim from Hebrew arms. Lev
-# 26:8."
+# ‹ורדפו מכם חמשה› (“and-run-after-gone-by) from-you/your(pl) five”)
+# ‹מאה ומאה מכם› (“hundred and-hundred from-you/your(pl)”)
+# ‹רבבה ירדפו … ונפלו› (“abundance run-after-gone-by) … and-fall”)
+# ‹איביכם לפניכם לחרב› (“hating-you/your(pl) to-face-you/your(pl) to-
+# drought”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:8."
 m.step("Lev.26.8")
 # witness-tier presupposed read: the_non_linear_scaling on
 # veradfu_mikem_chamishah_meah — read, not installed
@@ -99,9 +119,13 @@ m.witness_read("veradfu_mikem_chamishah_meah", "the_non_linear_scaling",
                 cites=["Sifra, Bechukotai, Chapter 2 4", "Onkelos Lev 26:8"])
 
 # -------------------------- Lev.26.9 · ETNACHTA_SPLIT ----------------------
-# ופניתי אליכם והפריתי אתכם והרביתי אתכם … והקימתי את בריתי אתכם
-# "[EN-AID] From top split: LEFT «ופניתי אליכם והפריתי אתכם והרביתי אתכם» /
-# RIGHT «והקימתי את בריתי אתכם». Derive claim from Hebrew arms. Lev 26:9."
+# ‹ופניתי אליכם והפריתי› (“and-turn to-you/your(pl) and-be-fruitful”)
+# ‹אתכם והרביתי אתכם› (“obj-marker-you/your(pl) and-multiply obj-marker-
+# you/your(pl)”)
+# ‹… והקימתי את בריתי› (“and-arise obj-marker covenant-me/my”)
+# ‹אתכם› (“obj-marker-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:9."
 m.step("Lev.26.9")
 # witness-tier presupposed read: turning_in_good_and_the_new_covenant on
 # ufaniti_aleichem — read, not installed
@@ -109,9 +133,11 @@ m.witness_read("ufaniti_aleichem", "turning_in_good_and_the_new_covenant",
                 cites=["Sifra, Bechukotai, Chapter 2 5", "Onkelos Lev 26:9"])
 
 # -------------------------- Lev.26.10 · ETNACHTA_SPLIT ---------------------
-# ואכלתם ישן נושן … וישן מפני חדש תוציאו
-# "[EN-AID] From top split: LEFT «ואכלתם ישן נושן» / RIGHT «וישן מפני חדש
-# תוציאו». Derive claim from Hebrew arms. Lev 26:10."
+# ‹ואכלתם ישן נושן› (“and-eat old be-slack”)
+# ‹… וישן מפני חדש› (“and-old from-face new”)
+# ‹תוציאו› (“bring-forth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:10."
 m.step("Lev.26.10")
 # witness-tier presupposed read: old_of_old on yashan_noshan — read, not
 # installed
@@ -119,9 +145,11 @@ m.witness_read("yashan_noshan", "old_of_old",
                 cites=["Sifra, Bechukotai, Chapter 3 1", "Onkelos Lev 26:10"])
 
 # -------------------------- Lev.26.11 · ETNACHTA_SPLIT ---------------------
-# ונתתי משכני בתוככם … ולא תגעל נפשי אתכם
-# "[EN-AID] From top split: LEFT «ונתתי משכני בתוככם» / RIGHT «ולא תגעל נפשי
-# אתכם». Derive claim from Hebrew arms. Lev 26:11."
+# ‹ונתתי משכני בתוככם› (“and-set tabernacle-me/my in-midst-you/your(pl)”)
+# ‹… ולא תגעל נפשי› (“and-not detest living-being-me/my”)
+# ‹אתכם› (“obj-marker-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:11."
 m.step("Lev.26.11")
 # witness-tier presupposed read:
 # my_dwelling_is_the_temple_and_the_presence_walks on
@@ -130,38 +158,50 @@ m.witness_read("venatati_mishkani_betochechem", "my_dwelling_is_the_temple_and_t
                 cites=["Sifra, Bechukotai, Chapter 3 2", "Sifra, Bechukotai, Chapter 3 3", "Sifra, Bechukotai, Chapter 3 4", "Onkelos Lev 26:11", "Onkelos Lev 26:12"])
 
 # -------------------------- Lev.26.12 · ETNACHTA_SPLIT ---------------------
-# והתהלכתי בתוככם והייתי לכם לאלהים … ואתם תהיו לי לעם
-# "[EN-AID] From top split: LEFT «והתהלכתי בתוככם והייתי לכם לאלהים» / RIGHT
-# «ואתם תהיו לי לעם». Derive claim from Hebrew arms. Lev 26:12."
+# ‹והתהלכתי בתוככם והייתי› (“and-walk/go in-midst-you/your(pl) and-be”)
+# ‹לכם לאלהים … ואתם› (“to-you/your(pl) to-God … and-you”)
+# ‹תהיו לי לעם› (“be to-me/my to-people”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:12."
 m.step("Lev.26.12")
 
 # -------------------------- Lev.26.13 · ETNACHTA_SPLIT ---------------------
-# אני יהוה אלהיכם אשר הוצאתי אתכם מארץ מצרים מהית להם עבדים … ואשבר מטת עלכם
-# ואולך אתכם קוממיות
-# "[EN-AID] From top split: LEFT «אני יהוה אלהיכם אשר הוצאתי אתכם מארץ מצרים
-# מהית להם עבדים» / RIGHT «ואשבר מטת עלכם ואולך אתכם קוממיות». Derive claim
-# from Hebrew arms. Lev 26:13."
+# ‹אני יהוה אלהיכם› (“YHWH God-you/your(pl)”)
+# ‹אשר הוצאתי אתכם› (“which bring-forth obj-marker-you/your(pl)”)
+# ‹מארץ מצרים מהית› (“from-earth Egypt from-be”)
+# ‹להם עבדים … ואשבר› (“to-them/their servant … and-burst”)
+# ‹מטת עלכם ואולך› (“pole yoke-you/your(pl) and-go”)
+# ‹אתכם קוממיות› (“obj-marker-you/your(pl) Most-High”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:13."
 m.step("Lev.26.13")
 # witness-tier presupposed read: slaves_to_kings_and_the_upright_measure on
 # miheyot_lahem_avadim_komemiyut — read, not installed
 m.witness_read("miheyot_lahem_avadim_komemiyut", "slaves_to_kings_and_the_upright_measure",
                 cites=["Sifra, Bechukotai, Chapter 3 5", "Sifra, Bechukotai, Chapter 3 7", "Onkelos Lev 26:13"])
 
-# -------------------------- Lev.26.14 · COND_ואם ---------------------------
-# ואם לא תשמעו לי … ולא תעשו את כל המצות האלה
-# "[EN-AID] From top split: LEFT «ואם לא תשמעו לי» / RIGHT «ולא תעשו את כל
-# המצות האלה». Derive claim from Hebrew arms. Lev 26:14."
+# -------------------------- Lev.26.14 · COND_ואם (“and-if”) ----------------
+# ‹ואם לא תשמעו› (“and-if not hear”)
+# ‹לי … ולא תעשו› (“to-me/my … and-not make”)
+# ‹את כל המצות› (“obj-marker all the-commandment”)
+# ‹האלה› (“the-these”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:14."
 m.step("Lev.26.14")
 # witness-tier presupposed read: the_curses_condition_and_the_knowing_rebel
 # on veim_lo_tishmeu_li — read, not installed
 m.witness_read("veim_lo_tishmeu_li", "the_curses_condition_and_the_knowing_rebel",
                 cites=["Sifra, Bechukotai, Section 2 1", "Sifra, Bechukotai, Section 2 2", "Onkelos Lev 26:14"])
 
-# -------------------------- Lev.26.15 · COND_ואם ---------------------------
-# ואם בחקתי תמאסו ואם את משפטי תגעל נפשכם … לבלתי עשות את כל מצותי להפרכם את
-# בריתי
-# "[EN-AID] From top split: LEFT «ואם בחקתי תמאסו ואם את משפטי תגעל נפשכם» /
-# RIGHT «לבלתי עשות את כל מצותי להפרכם את בריתי». Derive claim from Hebrew
+# -------------------------- Lev.26.15 · COND_ואם (“and-if”) ----------------
+# ‹ואם בחקתי תמאסו› (“and-if in-statute-me/my spurn”)
+# ‹ואם את משפטי› (“and-if obj-marker judgment-me/my”)
+# ‹תגעל נפשכם … לבלתי› (“detest living-being-you/your(pl) … to-failure-of”)
+# ‹עשות את כל› (“make obj-marker all”)
+# ‹מצותי להפרכם את› (“commandment-me/my to-break-up-you/your(pl) obj-
+# marker”)
+# ‹בריתי› (“covenant-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 26:15."
 m.step("Lev.26.15")
 # witness-tier presupposed read: the_seven_step_descent on
@@ -170,11 +210,15 @@ m.witness_read("veim_bechukotai_timasu", "the_seven_step_descent",
                 cites=["Sifra, Bechukotai, Section 2 3", "Onkelos Lev 26:15"])
 
 # -------------------------- Lev.26.16 · ETNACHTA_SPLIT ---------------------
-# אף אני אעשה זאת לכם והפקדתי עליכם בהלה את השחפת ואת הקדחת מכ … וזרעתם לריק
-# זרעכם ואכלהו איביכם
-# "[EN-AID] From top split: LEFT «אף אני אעשה זאת לכם והפקדתי עליכם בהלה את
-# השחפת ואת הקדחת מכלות עינים ומדיבת נפש» / RIGHT «וזרעתם לריק זרעכם ואכלהו
-# איביכם». Derive claim from Hebrew arms. Lev 26:16."
+# ‹אף אני אעשה› (“meaning-accession make”)
+# ‹זאת לכם והפקדתי› (“this to-you/your(pl) and-count/visit”)
+# ‹עליכם בהלה את› (“over-you/your(pl) panic obj-marker”)
+# ‹השחפת ואת הקדחת› (“the-emaciation and-obj-marker the-inflammation”)
+# ‹מכ … וזרעתם לריק› (“? … and-yield-seed to-emptiness”)
+# ‹זרעכם ואכלהו איביכם› (“seed-you/your(pl) and-eat-him/its hating-
+# you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:16."
 m.step("Lev.26.16")
 # witness-tier presupposed read: the_name_as_creditor_and_the_illness_ladder
 # on af_ani_eeseh_zot — read, not installed
@@ -182,20 +226,26 @@ m.witness_read("af_ani_eeseh_zot", "the_name_as_creditor_and_the_illness_ladder"
                 cites=["Sifra, Bechukotai, Chapter 4 1", "Sifra, Bechukotai, Chapter 4 2", "Sifra, Bechukotai, Chapter 4 3", "Onkelos Lev 26:16"])
 
 # -------------------------- Lev.26.17 · ETNACHTA_SPLIT ---------------------
-# ונתתי פני בכם ונגפתם לפני איביכם … ורדו בכם שנאיכם ונסתם ואין רדף אתכם
-# "[EN-AID] From top split: LEFT «ונתתי פני בכם ונגפתם לפני איביכם» / RIGHT
-# «ורדו בכם שנאיכם ונסתם ואין רדף אתכם». Derive claim from Hebrew arms. Lev
-# 26:17."
+# ‹ונתתי פני בכם› (“and-set face-me/my in-you/your(pl)”)
+# ‹ונגפתם לפני איביכם› (“and-push to-face hating-you/your(pl)”)
+# ‹… ורדו בכם שנאיכם› (“and-rule-over in-you/your(pl) hate-you/your(pl)”)
+# ‹ונסתם ואין רדף› (“and-flit and-there-is-not run-after-gone-by)”)
+# ‹אתכם› (“obj-marker-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:17."
 m.step("Lev.26.17")
 # witness-tier presupposed read: the_good_evil_mirror_and_from_among_you on
 # venatati_fanai_bachem — read, not installed
 m.witness_read("venatati_fanai_bachem", "the_good_evil_mirror_and_from_among_you",
                 cites=["Sifra, Bechukotai, Chapter 4 4", "Sifra, Bechukotai, Chapter 4 5", "Onkelos Lev 26:17"])
 
-# -------------------------- Lev.26.18 · COND_ואם ---------------------------
-# ואם עד אלה לא תשמעו לי … ויספתי ליסרה אתכם שבע על חטאתיכם
-# "[EN-AID] From top split: LEFT «ואם עד אלה לא תשמעו לי» / RIGHT «ויספתי
-# ליסרה אתכם שבע על חטאתיכם». Derive claim from Hebrew arms. Lev 26:18."
+# -------------------------- Lev.26.18 · COND_ואם (“and-if”) ----------------
+# ‹ואם עד אלה› (“and-if until these”)
+# ‹לא תשמעו לי› (“not hear to-me/my”)
+# ‹… ויספתי ליסרה אתכם› (“and-add to-chastise obj-marker-you/your(pl)”)
+# ‹שבע על חטאתיכם› (“seven over sin-offering-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:18."
 m.step("Lev.26.18")
 # witness-tier presupposed read: warning_first_and_the_sevenfold_rule on
 # veim_ad_eleh_sheva_al_chatoteichem — read, not installed
@@ -203,9 +253,13 @@ m.witness_read("veim_ad_eleh_sheva_al_chatoteichem", "warning_first_and_the_seve
                 cites=["Sifra, Bechukotai, Chapter 5 1", "Sifra, Bechukotai, Chapter 5 2", "Onkelos Lev 26:18"])
 
 # -------------------------- Lev.26.19 · ETNACHTA_SPLIT ---------------------
-# ושברתי את גאון עזכם … ונתתי את שמיכם כברזל ואת ארצכם כנחשה
-# "[EN-AID] From top split: LEFT «ושברתי את גאון עזכם» / RIGHT «ונתתי את
-# שמיכם כברזל ואת ארצכם כנחשה». Derive claim from Hebrew arms. Lev 26:19."
+# ‹ושברתי את גאון› (“and-burst obj-marker arrogance”)
+# ‹עזכם … ונתתי את› (“strength-in-various-applicat-you/your(pl) … and-set
+# obj-marker”)
+# ‹שמיכם כברזל ואת› (“heavens-you/your(pl) like-iron and-obj-marker”)
+# ‹ארצכם כנחשה› (“earth-you/your(pl) like-copper”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:19."
 m.step("Lev.26.19")
 # witness-tier presupposed read: the_metals_physics on
 # shmeichem_kabarzel_artzechem_kanechushah — read, not installed
@@ -213,16 +267,23 @@ m.witness_read("shmeichem_kabarzel_artzechem_kanechushah", "the_metals_physics",
                 cites=["Sifra, Bechukotai, Chapter 5 3", "Sifra, Bechukotai, Chapter 5 4", "Onkelos Lev 26:19"])
 
 # -------------------------- Lev.26.20 · ETNACHTA_SPLIT ---------------------
-# ותם לריק כחכם … ולא תתן ארצכם את יבולה ועץ הארץ לא יתן פריו
-# "[EN-AID] From top split: LEFT «ותם לריק כחכם» / RIGHT «ולא תתן ארצכם את
-# יבולה ועץ הארץ לא יתן פריו». Derive claim from Hebrew arms. Lev 26:20."
+# ‹ותם לריק כחכם› (“and-complete to-emptiness vigor-you/your(pl)”)
+# ‹… ולא תתן ארצכם› (“and-not set earth-you/your(pl)”)
+# ‹את יבולה ועץ› (“obj-marker produce-her/its and-tree”)
+# ‹הארץ לא יתן› (“the-earth not set”)
+# ‹פריו› (“fruit-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:20."
 m.step("Lev.26.20")
 
-# -------------------------- Lev.26.21 · COND_ואם ---------------------------
-# ואם תלכו עמי קרי ולא תאבו לשמע לי … ויספתי עליכם מכה שבע כחטאתיכם
-# "[EN-AID] From top split: LEFT «ואם תלכו עמי קרי ולא תאבו לשמע לי» / RIGHT
-# «ויספתי עליכם מכה שבע כחטאתיכם». Derive claim from Hebrew arms. Lev
-# 26:21."
+# -------------------------- Lev.26.21 · COND_ואם (“and-if”) ----------------
+# ‹ואם תלכו עמי› (“and-if go with-me/my”)
+# ‹קרי ולא תאבו› (“hostile-encounter and-not breathe-after”)
+# ‹לשמע לי … ויספתי› (“to-hear to-me/my … and-add”)
+# ‹עליכם מכה שבע› (“over-you/your(pl) wound seven”)
+# ‹כחטאתיכם› (“like-sin-offering-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:21."
 m.step("Lev.26.21")
 # witness-tier presupposed read: keri_as_casual_and_the_beasts on
 # veim_telchu_imi_keri — read, not installed
@@ -230,31 +291,42 @@ m.witness_read("veim_telchu_imi_keri", "keri_as_casual_and_the_beasts",
                 cites=["Sifra, Bechukotai, Chapter 5 5", "Sifra, Bechukotai, Chapter 5 6", "Sifra, Bechukotai, Chapter 5 7", "Onkelos Lev 26:21"])
 
 # -------------------------- Lev.26.22 · ETNACHTA_SPLIT ---------------------
-# והשלחתי בכם את חית השדה ושכלה אתכם והכריתה את בהמתכם והמעיטה … ונשמו
-# דרכיכם
-# "[EN-AID] From top split: LEFT «והשלחתי בכם את חית השדה ושכלה אתכם והכריתה
-# את בהמתכם והמעיטה אתכם» / RIGHT «ונשמו דרכיכם». Derive claim from Hebrew
+# ‹והשלחתי בכם את› (“and-send in-you/your(pl) obj-marker”)
+# ‹חית השדה ושכלה› (“living the-field and-miscarry”)
+# ‹אתכם והכריתה את› (“obj-marker-you/your(pl) and-cut obj-marker”)
+# ‹בהמתכם והמעיטה … ונשמו› (“livestock-you/your(pl) and-pare-off … and-
+# stun”)
+# ‹דרכיכם› (“way/road-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 26:22."
 m.step("Lev.26.22")
 
-# -------------------------- Lev.26.23 · COND_ואם ---------------------------
-# ואם באלה לא תוסרו לי … והלכתם עמי קרי
-# "[EN-AID] From top split: LEFT «ואם באלה לא תוסרו לי» / RIGHT «והלכתם עמי
-# קרי». Derive claim from Hebrew arms. Lev 26:23."
+# -------------------------- Lev.26.23 · COND_ואם (“and-if”) ----------------
+# ‹ואם באלה לא› (“and-if in-these not”)
+# ‹תוסרו לי … והלכתם› (“chastise to-me/my … and-walk/go”)
+# ‹עמי קרי› (“with-me/my hostile-encounter”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:23."
 m.step("Lev.26.23")
 
 # -------------------------- Lev.26.24 · ETNACHTA_SPLIT ---------------------
-# והלכתי אף אני עמכם בקרי … והכיתי אתכם גם אני שבע על חטאתיכם
-# "[EN-AID] From top split: LEFT «והלכתי אף אני עמכם בקרי» / RIGHT «והכיתי
-# אתכם גם אני שבע על חטאתיכם». Derive claim from Hebrew arms. Lev 26:24."
+# ‹והלכתי אף אני› (“and-walk/go meaning-accession”)
+# ‹עמכם בקרי … והכיתי› (“with-you/your(pl) in-hostile-encounter … and-
+# strike”)
+# ‹אתכם גם אני› (“obj-marker-you/your(pl) also”)
+# ‹שבע על חטאתיכם› (“seven over sin-offering-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:24."
 m.step("Lev.26.24")
 
 # -------------------------- Lev.26.25 · ETNACHTA_SPLIT ---------------------
-# והבאתי עליכם חרב נקמת נקם ברית ונאספתם אל עריכם … ושלחתי דבר בתוככם ונתתם
-# ביד אויב
-# "[EN-AID] From top split: LEFT «והבאתי עליכם חרב נקמת נקם ברית ונאספתם אל
-# עריכם» / RIGHT «ושלחתי דבר בתוככם ונתתם ביד אויב». Derive claim from
-# Hebrew arms. Lev 26:25."
+# ‹והבאתי עליכם חרב› (“and-come/bring over-you/your(pl) drought”)
+# ‹נקמת נקם ברית› (“grudge revenge covenant”)
+# ‹ונאספתם אל עריכם› (“and-gather-for-any-purpose to city-you/your(pl)”)
+# ‹… ושלחתי דבר בתוככם› (“and-send pestilence in-midst-you/your(pl)”)
+# ‹ונתתם ביד אויב› (“and-set in-hand hating”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:25."
 m.step("Lev.26.25")
 # witness-tier presupposed read:
 # the_sword_the_corpse_law_and_the_staff_of_bread on
@@ -263,37 +335,49 @@ m.witness_read("cherev_nokemet_nekam_berit", "the_sword_the_corpse_law_and_the_s
                 cites=["Sifra, Bechukotai, Chapter 6 1", "Sifra, Bechukotai, Chapter 6 2", "Onkelos Lev 26:25", "Onkelos Lev 26:26"])
 
 # -------------------------- Lev.26.26 · ETNACHTA_SPLIT ---------------------
-# בשברי לכם מטה לחם ואפו עשר נשים לחמכם בתנור אחד והשיבו לחמכם … ואכלתם ולא
-# תשבעו
-# "[EN-AID] From top split: LEFT «בשברי לכם מטה לחם ואפו עשר נשים לחמכם
-# בתנור אחד והשיבו לחמכם במשקל» / RIGHT «ואכלתם ולא תשבעו». Derive claim
-# from Hebrew arms. Lev 26:26."
+# ‹בשברי לכם מטה› (“in-burst-me/my to-you/your(pl) staff/tribe”)
+# ‹לחם ואפו עשר› (“food and-cook ten”)
+# ‹נשים לחמכם בתנור› (“woman food-you/your(pl) in-fire-pot”)
+# ‹אחד והשיבו לחמכם› (“one and-return food-you/your(pl)”)
+# ‹… ואכלתם ולא תשבעו› (“and-eat and-not sate”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:26."
 m.step("Lev.26.26")
 
-# -------------------------- Lev.26.27 · COND_ואם ---------------------------
-# ואם בזאת לא תשמעו לי … והלכתם עמי בקרי
-# "[EN-AID] From top split: LEFT «ואם בזאת לא תשמעו לי» / RIGHT «והלכתם עמי
-# בקרי». Derive claim from Hebrew arms. Lev 26:27."
+# -------------------------- Lev.26.27 · COND_ואם (“and-if”) ----------------
+# ‹ואם בזאת לא› (“and-if in-this not”)
+# ‹תשמעו לי … והלכתם› (“hear to-me/my … and-walk/go”)
+# ‹עמי בקרי› (“with-me/my in-hostile-encounter”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:27."
 m.step("Lev.26.27")
 
 # -------------------------- Lev.26.28 · ETNACHTA_SPLIT ---------------------
-# והלכתי עמכם בחמת קרי … ויסרתי אתכם אף אני שבע על חטאתיכם
-# "[EN-AID] From top split: LEFT «והלכתי עמכם בחמת קרי» / RIGHT «ויסרתי אתכם
-# אף אני שבע על חטאתיכם». Derive claim from Hebrew arms. Lev 26:28."
+# ‹והלכתי עמכם בחמת› (“and-walk/go with-you/your(pl) in-heat”)
+# ‹קרי … ויסרתי אתכם› (“hostile-encounter … and-chastise obj-marker-
+# you/your(pl)”)
+# ‹אף אני שבע› (“meaning-accession seven”)
+# ‹על חטאתיכם› (“over sin-offering-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:28."
 m.step("Lev.26.28")
 
 # -------------------------- Lev.26.29 · ETNACHTA_SPLIT ---------------------
-# ואכלתם בשר בניכם … ובשר בנתיכם תאכלו
-# "[EN-AID] From top split: LEFT «ואכלתם בשר בניכם» / RIGHT «ובשר בנתיכם
-# תאכלו». Derive claim from Hebrew arms. Lev 26:29."
+# ‹ואכלתם בשר בניכם› (“and-eat flesh son-you/your(pl)”)
+# ‹… ובשר בנתיכם תאכלו› (“and-flesh daughter-you/your(pl) eat”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:29."
 m.step("Lev.26.29")
 
 # -------------------------- Lev.26.30 · ETNACHTA_SPLIT ---------------------
-# והשמדתי את במתיכם והכרתי את חמניכם ונתתי את פגריכם על פגרי ג … וגעלה נפשי
-# אתכם
-# "[EN-AID] From top split: LEFT «והשמדתי את במתיכם והכרתי את חמניכם ונתתי
-# את פגריכם על פגרי גלוליכם» / RIGHT «וגעלה נפשי אתכם». Derive claim from
-# Hebrew arms. Lev 26:30."
+# ‹והשמדתי את במתיכם› (“and-desolate obj-marker Most-High-you/your(pl)”)
+# ‹והכרתי את חמניכם› (“and-cut obj-marker sun-pillar-you/your(pl)”)
+# ‹ונתתי את פגריכם› (“and-set obj-marker carcase-you/your(pl)”)
+# ‹על פגרי ג› (“over carcase ?”)
+# ‹… וגעלה נפשי אתכם› (“and-detest living-being-me/my obj-marker-
+# you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:30."
 m.step("Lev.26.30")
 # witness-tier presupposed read:
 # synagogues_in_sanctuaries_and_the_paired_measures on
@@ -302,30 +386,40 @@ m.witness_read("vehishmadti_et_bamoteichem", "synagogues_in_sanctuaries_and_the_
                 cites=["Sifra, Bechukotai, Chapter 6 4", "Sifra, Bechukotai, Chapter 6 5", "Sifra, Bechukotai, Chapter 6 6", "Sifra, Bechukotai, Chapter 6 7", "Sifra, Bechukotai, Chapter 7 1", "Onkelos Lev 26:30", "Onkelos Lev 26:31"])
 
 # -------------------------- Lev.26.31 · ETNACHTA_SPLIT ---------------------
-# ונתתי את עריכם חרבה והשמותי את מקדשיכם … ולא אריח בריח ניחחכם
-# "[EN-AID] From top split: LEFT «ונתתי את עריכם חרבה והשמותי את מקדשיכם» /
-# RIGHT «ולא אריח בריח ניחחכם». Derive claim from Hebrew arms. Lev 26:31."
+# ‹ונתתי את עריכם› (“and-set obj-marker city-you/your(pl)”)
+# ‹חרבה והשמותי את› (“drought and-stun obj-marker”)
+# ‹מקדשיכם … ולא אריח› (“consecrated-thing-you/your(pl) … and-not blow”)
+# ‹בריח ניחחכם› (“in-odor restful-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:31."
 m.step("Lev.26.31")
 
 # -------------------------- Lev.26.32 · ETNACHTA_SPLIT ---------------------
-# והשמתי אני את הארץ … ושממו עליה איביכם הישבים בה
-# "[EN-AID] From top split: LEFT «והשמתי אני את הארץ» / RIGHT «ושממו עליה
-# איביכם הישבים בה». Derive claim from Hebrew arms. Lev 26:32."
+# ‹והשמתי אני את› (“and-stun obj-marker”)
+# ‹הארץ … ושממו עליה› (“the-earth … and-stun over-her/its”)
+# ‹איביכם הישבים בה› (“hating-you/your(pl) the-dwell/sit in-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:32."
 m.step("Lev.26.32")
 
 # -------------------------- Lev.26.33 · ETNACHTA_SPLIT ---------------------
-# ואתכם אזרה בגוים והריקתי אחריכם חרב … והיתה ארצכם שממה ועריכם יהיו חרבה
-# "[EN-AID] From top split: LEFT «ואתכם אזרה בגוים והריקתי אחריכם חרב» /
-# RIGHT «והיתה ארצכם שממה ועריכם יהיו חרבה». Derive claim from Hebrew arms.
-# Lev 26:33."
+# ‹ואתכם אזרה בגוים› (“and-obj-marker-you/your(pl) toss-about in-nation”)
+# ‹והריקתי אחריכם חרב› (“and-pour-out after-you/your(pl) drought”)
+# ‹… והיתה ארצכם שממה› (“and-be earth-you/your(pl) devastation”)
+# ‹ועריכם יהיו חרבה› (“and-city-you/your(pl) be drought”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:33."
 m.step("Lev.26.33")
 
 # -------------------------- Lev.26.34 · ETNACHTA_SPLIT ---------------------
-# אז תרצה הארץ את שבתתיה כל ימי השמה ואתם בארץ איביכם … אז תשבת הארץ והרצת
-# את שבתתיה
-# "[EN-AID] From top split: LEFT «אז תרצה הארץ את שבתתיה כל ימי השמה ואתם
-# בארץ איביכם» / RIGHT «אז תשבת הארץ והרצת את שבתתיה». Derive claim from
-# Hebrew arms. Lev 26:34."
+# ‹אז תרצה הארץ› (“at-that-time be-pleased-with the-earth”)
+# ‹את שבתתיה כל› (“obj-marker intermission-her/its all”)
+# ‹ימי השמה ואתם› (“day stun-her/its and-you”)
+# ‹בארץ איביכם … אז› (“in-earth hating-you/your(pl) … at-that-time”)
+# ‹תשבת הארץ והרצת› (“cease the-earth and-be-pleased-with”)
+# ‹את שבתתיה› (“obj-marker intermission-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:34."
 m.step("Lev.26.34")
 # witness-tier presupposed read: the_sabbath_debt on
 # az_tirtzeh_haaretz_et_shabtoteha — read, not installed
@@ -337,17 +431,24 @@ m.witness_read("az_tirtzeh_haaretz", "the_seventy_epoch_run",
                 cites=["Babylonian Talmud Megillah 11b:6", "Babylonian Talmud Megillah 11b:7", "Babylonian Talmud Megillah 11b:8", "Babylonian Talmud Megillah 11b:9", "Babylonian Talmud Megillah 11b:10", "Babylonian Talmud Megillah 11b:11", "Babylonian Talmud Megillah 11b:12", "Babylonian Talmud Megillah 11b:13", "Babylonian Talmud Megillah 11b:14", "Babylonian Talmud Megillah 12a:1", "Babylonian Talmud Megillah 12a:2", "Babylonian Talmud Megillah 12a:3", "Babylonian Talmud Megillah 12a:4", "Sifra, Bechukotai, Chapter 7 2"])
 
 # -------------------------- Lev.26.35 · ETNACHTA_SPLIT ---------------------
-# כל ימי השמה תשבת … את אשר לא שבתה בשבתתיכם בשבתכם עליה
-# "[EN-AID] From top split: LEFT «כל ימי השמה תשבת» / RIGHT «את אשר לא שבתה
-# בשבתתיכם בשבתכם עליה». Derive claim from Hebrew arms. Lev 26:35."
+# ‹כל ימי השמה› (“all day stun-her/its”)
+# ‹תשבת … את אשר› (“cease … obj-marker which”)
+# ‹לא שבתה בשבתתיכם› (“not cease in-intermission-you/your(pl)”)
+# ‹בשבתכם עליה› (“in-dwell/sit-you/your(pl) over-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:35."
 m.step("Lev.26.35")
 
 # -------------------------- Lev.26.36 · ETNACHTA_SPLIT ---------------------
-# והנשארים בכם והבאתי מרך בלבבם בארצת איביהם … ורדף אתם קול עלה נדף ונסו
-# מנסת חרב ונפלו ואין רדף
-# "[EN-AID] From top split: LEFT «והנשארים בכם והבאתי מרך בלבבם בארצת
-# איביהם» / RIGHT «ורדף אתם קול עלה נדף ונסו מנסת חרב ונפלו ואין רדף».
-# Derive claim from Hebrew arms. Lev 26:36."
+# ‹והנשארים בכם והבאתי› (“and-the-swell-up in-you/your(pl) and-come/bring”)
+# ‹מרך בלבבם בארצת› (“softness in-heart-them/their in-earth”)
+# ‹איביהם … ורדף אתם› (“hating-them/their … and-run-after-gone-by) obj-
+# marker-them/their”)
+# ‹קול עלה נדף› (“voice/sound leaf shove-asunder”)
+# ‹ונסו מנסת חרב› (“and-flit retreat drought”)
+# ‹ונפלו ואין רדף› (“and-fall and-there-is-not run-after-gone-by)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:36."
 m.step("Lev.26.36")
 # witness-tier presupposed read: faintness_and_the_driven_leaf on
 # vehevaeti_morech_bilvavam — read, not installed
@@ -355,10 +456,13 @@ m.witness_read("vehevaeti_morech_bilvavam", "faintness_and_the_driven_leaf",
                 cites=["Sifra, Bechukotai, Chapter 7 3", "Sifra, Bechukotai, Chapter 7 4", "Onkelos Lev 26:36"])
 
 # -------------------------- Lev.26.37 · ETNACHTA_SPLIT ---------------------
-# וכשלו איש באחיו כמפני חרב ורדף אין … ולא תהיה לכם תקומה לפני איביכם
-# "[EN-AID] From top split: LEFT «וכשלו איש באחיו כמפני חרב ורדף אין» /
-# RIGHT «ולא תהיה לכם תקומה לפני איביכם». Derive claim from Hebrew arms. Lev
-# 26:37."
+# ‹וכשלו איש באחיו› (“and-totter man in-brother-him/its”)
+# ‹כמפני חרב ורדף› (“like-from-face drought and-run-after-gone-by)”)
+# ‹אין … ולא תהיה› (“there-is-not … and-not be”)
+# ‹לכם תקומה לפני› (“to-you/your(pl) resistfulness to-face”)
+# ‹איביכם› (“hating-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:37."
 m.step("Lev.26.37")
 # witness-tier presupposed read: the_surety_rule on vechashlu_ish_beachiv —
 # read, not installed
@@ -366,9 +470,10 @@ m.witness_read("vechashlu_ish_beachiv", "the_surety_rule",
                 cites=["Sifra, Bechukotai, Chapter 7 5", "Sifra, Bechukotai, Chapter 7 6", "Onkelos Lev 26:37"])
 
 # -------------------------- Lev.26.38 · ETNACHTA_SPLIT ---------------------
-# ואבדתם בגוים … ואכלה אתכם ארץ איביכם
-# "[EN-AID] From top split: LEFT «ואבדתם בגוים» / RIGHT «ואכלה אתכם ארץ
-# איביכם». Derive claim from Hebrew arms. Lev 26:38."
+# ‹ואבדתם בגוים … ואכלה› (“and-wander-away in-nation … and-eat”)
+# ‹אתכם ארץ איביכם› (“obj-marker-you/your(pl) earth hating-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:38."
 m.step("Lev.26.38")
 # witness-tier presupposed read: perishing_is_exile on vaavadtem_bagoyim —
 # read, not installed
@@ -376,10 +481,14 @@ m.witness_read("vaavadtem_bagoyim", "perishing_is_exile",
                 cites=["Sifra, Bechukotai, Chapter 8 1", "Onkelos Lev 26:38"])
 
 # -------------------------- Lev.26.39 · ETNACHTA_SPLIT ---------------------
-# והנשארים בכם ימקו בעונם בארצת איביכם … ואף בעונת אבתם אתם ימקו
-# "[EN-AID] From top split: LEFT «והנשארים בכם ימקו בעונם בארצת איביכם» /
-# RIGHT «ואף בעונת אבתם אתם ימקו». Derive claim from Hebrew arms. Lev
-# 26:39."
+# ‹והנשארים בכם ימקו› (“and-the-swell-up in-you/your(pl) melt”)
+# ‹בעונם בארצת איביכם› (“in-perversity-them/their in-earth hating-
+# you/your(pl)”)
+# ‹… ואף בעונת אבתם› (“and-meaning-accession in-perversity father-
+# them/their”)
+# ‹אתם ימקו› (“with-them/their melt”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:39."
 m.step("Lev.26.39")
 # witness-tier presupposed read: the_fathers_sins_reconciled on
 # veaf_baavonot_avotam_itam_yimaku — read, not installed
@@ -387,10 +496,13 @@ m.witness_read("veaf_baavonot_avotam_itam_yimaku", "the_fathers_sins_reconciled"
                 cites=["Sifra, Bechukotai, Chapter 8 2", "Onkelos Lev 26:39"])
 
 # -------------------------- Lev.26.40 · ETNACHTA_SPLIT ---------------------
-# והתודו את עונם ואת עון אבתם במעלם אשר מעלו בי … ואף אשר הלכו עמי בקרי
-# "[EN-AID] From top split: LEFT «והתודו את עונם ואת עון אבתם במעלם אשר מעלו
-# בי» / RIGHT «ואף אשר הלכו עמי בקרי». Derive claim from Hebrew arms. Lev
-# 26:40."
+# ‹והתודו את עונם› (“and-physically obj-marker perversity-them/their”)
+# ‹ואת עון אבתם› (“and-obj-marker perversity father-them/their”)
+# ‹במעלם אשר מעלו› (“in-treachery-them/their which cover-up”)
+# ‹בי … ואף אשר› (“in-me/my … and-meaning-accession which”)
+# ‹הלכו עמי בקרי› (“walk/go with-me/my in-hostile-encounter”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:40."
 m.step("Lev.26.40")
 # witness-tier presupposed read: confession_and_the_humbled_heart on
 # vehitvadu_et_avonam — read, not installed
@@ -398,18 +510,23 @@ m.witness_read("vehitvadu_et_avonam", "confession_and_the_humbled_heart",
                 cites=["Sifra, Bechukotai, Chapter 8 3", "Sifra, Bechukotai, Chapter 8 4", "Sifra, Bechukotai, Chapter 8 5", "Onkelos Lev 26:40", "Onkelos Lev 26:41"])
 
 # -------------------------- Lev.26.41 · ETNACHTA_SPLIT ---------------------
-# אף אני אלך עמם בקרי והבאתי אתם בארץ איביהם … או אז יכנע לבבם הערל ואז ירצו
-# את עונם
-# "[EN-AID] From top split: LEFT «אף אני אלך עמם בקרי והבאתי אתם בארץ
-# איביהם» / RIGHT «או אז יכנע לבבם הערל ואז ירצו את עונם». Derive claim from
-# Hebrew arms. Lev 26:41."
+# ‹אף אני אלך› (“meaning-accession go”)
+# ‹עמם בקרי והבאתי› (“with-them/their in-hostile-encounter and-come/bring”)
+# ‹אתם בארץ איביהם› (“obj-marker-them/their in-earth hating-them/their”)
+# ‹… או אז יכנע› (“or at-that-time bend-the-knee”)
+# ‹לבבם הערל ואז› (“heart-them/their the-uncircumcised and-at-that-time”)
+# ‹ירצו את עונם› (“be-pleased-with obj-marker perversity-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:41."
 m.step("Lev.26.41")
 
 # -------------------------- Lev.26.42 · ETNACHTA_SPLIT ---------------------
-# וזכרתי את בריתי יעקוב … ואף את בריתי יצחק ואף את בריתי אברהם אזכר והארץ
-# אזכר
-# "[EN-AID] From top split: LEFT «וזכרתי את בריתי יעקוב» / RIGHT «ואף את
-# בריתי יצחק ואף את בריתי אברהם אזכר והארץ אזכר». Derive claim from Hebrew
+# ‹וזכרתי את בריתי› (“and-mark obj-marker covenant-me/my”)
+# ‹יעקוב … ואף את› (“Jacob … and-meaning-accession obj-marker”)
+# ‹בריתי יצחק ואף› (“covenant-me/my Isaac and-meaning-accession”)
+# ‹את בריתי אברהם› (“obj-marker covenant-me/my Abraham”)
+# ‹אזכר והארץ אזכר› (“mark and-the-earth mark”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 26:42."
 m.step("Lev.26.42")
 # witness-tier presupposed read:
@@ -419,19 +536,26 @@ m.witness_read("vezacharti_et_briti_yaakov", "the_fathers_backward_and_the_coven
                 cites=["Sifra, Bechukotai, Chapter 8 6", "Sifra, Bechukotai, Chapter 8 7", "Sifra, Bechukotai, Chapter 8 8", "Onkelos Lev 26:42"])
 
 # -------------------------- Lev.26.43 · ETNACHTA_SPLIT ---------------------
-# והארץ תעזב מהם ותרץ את שבתתיה בהשמה מהם והם ירצו את עונם … יען וביען
-# במשפטי מאסו ואת חקתי געלה נפשם
-# "[EN-AID] From top split: LEFT «והארץ תעזב מהם ותרץ את שבתתיה בהשמה מהם
-# והם ירצו את עונם» / RIGHT «יען וביען במשפטי מאסו ואת חקתי געלה נפשם».
-# Derive claim from Hebrew arms. Lev 26:43."
+# ‹והארץ תעזב מהם› (“and-the-earth loosen from-them/their”)
+# ‹ותרץ את שבתתיה› (“and-be-pleased-with obj-marker intermission-her/its”)
+# ‹בהשמה מהם והם› (“in-stun-her/its from-them/their and-they”)
+# ‹ירצו את עונם› (“be-pleased-with obj-marker perversity-them/their”)
+# ‹… יען וביען במשפטי› (“heed and-in-heed in-judgment-me/my”)
+# ‹מאסו ואת חקתי› (“spurn and-obj-marker statute-me/my”)
+# ‹געלה נפשם› (“detest living-being-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:43."
 m.step("Lev.26.43")
 
 # -------------------------- Lev.26.44 · ETNACHTA_SPLIT ---------------------
-# ואף גם זאת בהיותם בארץ איביהם לא מאסתים ולא געלתים לכלתם להפ … כי אני יהוה
-# אלהיהם
-# "[EN-AID] From top split: LEFT «ואף גם זאת בהיותם בארץ איביהם לא מאסתים
-# ולא געלתים לכלתם להפר בריתי אתם» / RIGHT «כי אני יהוה אלהיהם». Derive
-# claim from Hebrew arms. Lev 26:44."
+# ‹ואף גם זאת› (“and-meaning-accession also this”)
+# ‹בהיותם בארץ איביהם› (“in-be-them/their in-earth hating-them/their”)
+# ‹לא מאסתים ולא› (“not spurn-them/their and-not”)
+# ‹געלתים לכלתם להפ› (“detest-them/their to-be-complete-them/their ?”)
+# ‹… כי אני יהוה› (“that YHWH”)
+# ‹אלהיהם› (“God-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:44."
 m.step("Lev.26.44")
 # witness-tier presupposed read: the_four_eras_and_one_in_a_hundred on
 # lo_meastim_velo_gealtim — read, not installed
@@ -439,18 +563,23 @@ m.witness_read("lo_meastim_velo_gealtim", "the_four_eras_and_one_in_a_hundred",
                 cites=["Sifra, Bechukotai, Chapter 8 9", "Sifra, Bechukotai, Chapter 8 10", "Onkelos Lev 26:43", "Onkelos Lev 26:44", "Onkelos Lev 26:45"])
 
 # -------------------------- Lev.26.45 · ETNACHTA_SPLIT ---------------------
-# וזכרתי להם ברית ראשנים … אשר הוצאתי אתם מארץ מצרים לעיני הגוים להית להם
-# לאלהים אני יה
-# "[EN-AID] From top split: LEFT «וזכרתי להם ברית ראשנים» / RIGHT «אשר
-# הוצאתי אתם מארץ מצרים לעיני הגוים להית להם לאלהים אני יהוה». Derive claim
-# from Hebrew arms. Lev 26:45."
+# ‹וזכרתי להם ברית› (“and-mark to-them/their covenant”)
+# ‹ראשנים … אשר הוצאתי› (“first … which bring-forth”)
+# ‹אתם מארץ מצרים› (“obj-marker-them/their from-earth Egypt”)
+# ‹לעיני הגוים להית› (“to-eye the-nation to-be”)
+# ‹להם לאלהים אני› (“to-them/their to-God”)
+# ‹יה› (“Jah”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 26:45."
 m.step("Lev.26.45")
 
 # -------------------------- Lev.26.46 · ETNACHTA_SPLIT ---------------------
-# אלה החקים והמשפטים והתורת אשר נתן יהוה בינו ובין בני ישראל … בהר סיני ביד
-# משה
-# "[EN-AID] From top split: LEFT «אלה החקים והמשפטים והתורת אשר נתן יהוה
-# בינו ובין בני ישראל» / RIGHT «בהר סיני ביד משה». Derive claim from Hebrew
+# ‹אלה החקים והמשפטים› (“these the-enactment and-the-judgment”)
+# ‹והתורת אשר נתן› (“and-the-precept which set”)
+# ‹יהוה בינו ובין› (“YHWH between-him/its and-between”)
+# ‹בני ישראל … בהר› (“son Israel … in-mountain”)
+# ‹סיני ביד משה› (“Sinai in-hand Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 26:46."
 m.step("Lev.26.46")
 # witness-tier presupposed read: two_torahs on

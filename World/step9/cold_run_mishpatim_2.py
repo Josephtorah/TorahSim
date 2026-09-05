@@ -3,6 +3,17 @@
 # before the listening epub, at the owner's word ("feel free to find a
 # few more"). Same discipline as cold_run_mishpatim.py.
 
+# ---- THE HONEST-PAIRING GUARD (sitting C retrofit, 2026-09-05) ------------
+# Every expected value this runner grades against must be a LITERAL typed from
+# the answer sheet; the parser checks the source before anything runs, and the
+# count below is the tripwire — it fails loudly the day the table changes.
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
+_P = _os.path.abspath(__file__)
+GUARDED = _chc(_P, 'grade', 2, 2)
+assert GUARDED == 9, ('the guard counted %d expectations, the tripwire holds 9' % GUARDED)
+print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys
 
 db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')

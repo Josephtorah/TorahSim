@@ -14,16 +14,19 @@ from machine import Machine
 m = Machine("exo_40_erect_fill")
 
 # -------------------------- Exod.40.1 · TREE_CLAIM -------------------------
-# וידבר יהוה … אל משה לאמר
-# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
-# claim from Hebrew arms, not English alone. Exod 40:1."
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:1."
 m.step("Exod.40.1")
 
 # -------------------------- Exod.40.2 · ETNACHTA_SPLIT ---------------------
-# ביום החדש הראשון באחד לחדש … תקים את משכן אהל מועד
-# "[EN-AID] From top split: LEFT «ביום החדש הראשון באחד לחדש» / RIGHT «תקים
-# את משכן אהל מועד». Derive claim from Hebrew arms, not English alone. Exod
-# 40:2."
+# ‹ביום החדש הראשון› (“in-day the-new-moon the-first”)
+# ‹באחד לחדש … תקים› (“in-one to-new-moon … arise”)
+# ‹את משכן אהל› (“obj-marker tabernacle tent”)
+# ‹מועד› (“seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:2."
 m.step("Exod.40.2")
 # witness-tier presupposed read: dated_and_scheduled on install_script —
 # read, not installed
@@ -31,91 +34,119 @@ m.witness_read("install_script", "dated_and_scheduled",
                 cites=["Midrash Tanchuma, Pekudei 11:11", "Midrash Tanchuma, Pekudei 11:12", "Midrash Tanchuma, Pekudei 11:13", "Onkelos Exod 40"])
 
 # -------------------------- Exod.40.3 · ETNACHTA_SPLIT ---------------------
-# ושמת שם את ארון העדות … וסכת על הארן את הפרכת
-# "[EN-AID] From top split: LEFT «ושמת שם את ארון העדות» / RIGHT «וסכת על
-# הארן את הפרכת». Derive claim from Hebrew arms, not English alone. Exod
-# 40:3."
+# ‹ושמת שם את› (“and-put/set there obj-marker”)
+# ‹ארון העדות … וסכת› (“ark the-testimony … and-entwine-as-ascreen”)
+# ‹על הארן את› (“over the-ark with”)
+# ‹הפרכת› (“the-separatrix”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:3."
 m.step("Exod.40.3")
 
 # -------------------------- Exod.40.4 · ETNACHTA_SPLIT ---------------------
-# והבאת את השלחן וערכת את ערכו … והבאת את המנרה והעלית את נרתיה
-# "[EN-AID] From top split: LEFT «והבאת את השלחן וערכת את ערכו» / RIGHT
-# «והבאת את המנרה והעלית את נרתיה». Derive claim from Hebrew arms, not
-# English alone. Exod 40:4."
+# ‹והבאת את השלחן› (“and-come/bring obj-marker the-table”)
+# ‹וערכת את ערכו› (“and-set-in-a-row obj-marker pile-him/its”)
+# ‹… והבאת את המנרה› (“and-come/bring obj-marker the-chandelier”)
+# ‹והעלית את נרתיה› (“and-go-up obj-marker lamp-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:4."
 m.step("Exod.40.4")
 
 # -------------------------- Exod.40.5 · ETNACHTA_SPLIT ---------------------
-# ונתתה את מזבח הזהב לקטרת לפני ארון העדת … ושמת את מסך הפתח למשכן
-# "[EN-AID] From top split: LEFT «ונתתה את מזבח הזהב לקטרת לפני ארון העדת» /
-# RIGHT «ושמת את מסך הפתח למשכן». Derive claim from Hebrew arms, not English
-# alone. Exod 40:5."
+# ‹ונתתה את מזבח› (“and-set obj-marker altar”)
+# ‹הזהב לקטרת לפני› (“the-gold to-fumigation to-face”)
+# ‹ארון העדת … ושמת› (“ark the-testimony … and-put/set”)
+# ‹את מסך הפתח› (“obj-marker cover the-opening”)
+# ‹למשכן› (“to-tabernacle”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:5."
 m.step("Exod.40.5")
 
 # -------------------------- Exod.40.6 · ETNACHTA_SPLIT ---------------------
-# ונתתה את מזבח העלה … לפני פתח משכן אהל מועד
-# "[EN-AID] From top split: LEFT «ונתתה את מזבח העלה» / RIGHT «לפני פתח משכן
-# אהל מועד». Derive claim from Hebrew arms, not English alone. Exod 40:6."
+# ‹ונתתה את מזבח› (“and-set obj-marker altar”)
+# ‹העלה … לפני פתח› (“the-burnt-offering … to-face opening”)
+# ‹משכן אהל מועד› (“tabernacle tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:6."
 m.step("Exod.40.6")
 
 # -------------------------- Exod.40.7 · ETNACHTA_SPLIT ---------------------
-# ונתת את הכיר בין אהל מועד ובין המזבח … ונתת שם מים
-# "[EN-AID] From top split: LEFT «ונתת את הכיר בין אהל מועד ובין המזבח» /
-# RIGHT «ונתת שם מים». Derive claim from Hebrew arms, not English alone.
-# Exod 40:7."
+# ‹ונתת את הכיר› (“and-set obj-marker the-something-round”)
+# ‹בין אהל מועד› (“between tent seasons”)
+# ‹ובין המזבח … ונתת› (“and-between the-altar … and-set”)
+# ‹שם מים› (“there waters”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:7."
 m.step("Exod.40.7")
 
 # -------------------------- Exod.40.8 · ETNACHTA_SPLIT ---------------------
-# ושמת את החצר סביב … ונתת את מסך שער החצר
-# "[EN-AID] From top split: LEFT «ושמת את החצר סביב» / RIGHT «ונתת את מסך
-# שער החצר». Derive claim from Hebrew arms, not English alone. Exod 40:8."
+# ‹ושמת את החצר› (“and-put/set obj-marker the-yard”)
+# ‹סביב … ונתת את› (“circle … and-set obj-marker”)
+# ‹מסך שער החצר› (“cover gate the-yard”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:8."
 m.step("Exod.40.8")
 
 # -------------------------- Exod.40.9 · ETNACHTA_SPLIT ---------------------
-# ולקחת את שמן המשחה ומשחת את המשכן ואת כל אשר בו … וקדשת אתו ואת כל כליו
-# והיה קדש
-# "[EN-AID] From top split: LEFT «ולקחת את שמן המשחה ומשחת את המשכן ואת כל
-# אשר בו» / RIGHT «וקדשת אתו ואת כל כליו והיה קדש». Derive claim from Hebrew
+# ‹ולקחת את שמן› (“and-take obj-marker oil”)
+# ‹המשחה ומשחת את› (“the-unction and-rub-with-oil obj-marker”)
+# ‹המשכן ואת כל› (“the-tabernacle and-obj-marker all”)
+# ‹אשר בו … וקדשת› (“which in-him/its … and-sanctify”)
+# ‹אתו ואת כל› (“obj-marker-him/its and-obj-marker all”)
+# ‹כליו והיה קדש› (“vessel-him/its and-be holiness”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 40:9."
 m.step("Exod.40.9")
 
 # -------------------------- Exod.40.10 · ETNACHTA_SPLIT --------------------
-# ומשחת את מזבח העלה ואת כל כליו … וקדשת את המזבח והיה המזבח קדש קדשים
-# "[EN-AID] From top split: LEFT «ומשחת את מזבח העלה ואת כל כליו» / RIGHT
-# «וקדשת את המזבח והיה המזבח קדש קדשים». Derive claim from Hebrew arms, not
-# English alone. Exod 40:10."
+# ‹ומשחת את מזבח› (“and-rub-with-oil obj-marker altar”)
+# ‹העלה ואת כל› (“the-burnt-offering and-obj-marker all”)
+# ‹כליו … וקדשת את› (“vessel-him/its … and-sanctify obj-marker”)
+# ‹המזבח והיה המזבח› (“the-altar and-be the-altar”)
+# ‹קדש קדשים› (“holiness holiness”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:10."
 m.step("Exod.40.10")
 
 # -------------------------- Exod.40.11 · ETNACHTA_SPLIT --------------------
-# ומשחת את הכיר ואת כנו … וקדשת אתו
-# "[EN-AID] From top split: LEFT «ומשחת את הכיר ואת כנו» / RIGHT «וקדשת
-# אתו». Derive claim from Hebrew arms, not English alone. Exod 40:11."
+# ‹ומשחת את הכיר› (“and-rub-with-oil obj-marker the-something-round”)
+# ‹ואת כנו … וקדשת› (“and-obj-marker stand-him/its … and-sanctify”)
+# ‹אתו› (“obj-marker-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:11."
 m.step("Exod.40.11")
 
 # -------------------------- Exod.40.12 · ETNACHTA_SPLIT --------------------
-# והקרבת את אהרן ואת בניו אל פתח אהל מועד … ורחצת אתם במים
-# "[EN-AID] From top split: LEFT «והקרבת את אהרן ואת בניו אל פתח אהל מועד» /
-# RIGHT «ורחצת אתם במים». Derive claim from Hebrew arms, not English alone.
-# Exod 40:12."
+# ‹והקרבת את אהרן› (“and-bring-near obj-marker Aaron”)
+# ‹ואת בניו אל› (“and-obj-marker son-him/its to”)
+# ‹פתח אהל מועד› (“opening tent seasons”)
+# ‹… ורחצת אתם במים› (“and-lave obj-marker-them/their in-waters”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:12."
 m.step("Exod.40.12")
 
 # -------------------------- Exod.40.13 · ETNACHTA_SPLIT --------------------
-# והלבשת את אהרן את בגדי הקדש … ומשחת אתו וקדשת אתו וכהן לי
-# "[EN-AID] From top split: LEFT «והלבשת את אהרן את בגדי הקדש» / RIGHT
-# «ומשחת אתו וקדשת אתו וכהן לי». Derive claim from Hebrew arms, not English
-# alone. Exod 40:13."
+# ‹והלבשת את אהרן› (“and-wrap-around obj-marker Aaron”)
+# ‹את בגדי הקדש› (“with garment the-holiness”)
+# ‹… ומשחת אתו וקדשת› (“and-rub-with-oil obj-marker-him/its and-sanctify”)
+# ‹אתו וכהן לי› (“obj-marker-him/its and-officiate-as-a-priest to-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:13."
 m.step("Exod.40.13")
 
 # -------------------------- Exod.40.14 · ETNACHTA_SPLIT --------------------
-# ואת בניו תקריב … והלבשת אתם כתנת
-# "[EN-AID] From top split: LEFT «ואת בניו תקריב» / RIGHT «והלבשת אתם כתנת».
-# Derive claim from Hebrew arms, not English alone. Exod 40:14."
+# ‹ואת בניו תקריב› (“and-obj-marker son-him/its bring-near”)
+# ‹… והלבשת אתם כתנת› (“and-wrap-around obj-marker-them/their shirt”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:14."
 m.step("Exod.40.14")
 
 # -------------------------- Exod.40.15 · ETNACHTA_SPLIT --------------------
-# ומשחת אתם כאשר משחת את אביהם וכהנו לי … והיתה להית להם משחתם לכהנת עולם
-# לדרתם
-# "[EN-AID] From top split: LEFT «ומשחת אתם כאשר משחת את אביהם וכהנו לי» /
-# RIGHT «והיתה להית להם משחתם לכהנת עולם לדרתם». Derive claim from Hebrew
+# ‹ומשחת אתם כאשר› (“and-rub-with-oil obj-marker-them/their like-as/which”)
+# ‹משחת את אביהם› (“rub-with-oil obj-marker father-them/their”)
+# ‹וכהנו לי … והיתה› (“and-officiate-as-a-priest to-me/my … and-be”)
+# ‹להית להם משחתם› (“to-be to-them/their unction-them/their”)
+# ‹לכהנת עולם לדרתם› (“to-priesthood forever to-generation-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 40:15."
 m.step("Exod.40.15")
 # witness-tier presupposed read: eternal_office on priests_installed — read,
@@ -124,16 +155,19 @@ m.witness_read("priests_installed", "eternal_office",
                 cites=["Onkelos Exod 40"])
 
 # -------------------------- Exod.40.16 · ETNACHTA_SPLIT --------------------
-# ויעש משה … ככל אשר צוה יהוה אתו כן עשה
-# "[EN-AID] From top split: LEFT «ויעש משה» / RIGHT «ככל אשר צוה יהוה אתו כן
-# עשה». Derive claim from Hebrew arms, not English alone. Exod 40:16."
+# ‹ויעש משה … ככל› (“and-make Moses … like-all”)
+# ‹אשר צוה יהוה› (“which command YHWH”)
+# ‹אתו כן עשה› (“obj-marker-him/its so make”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:16."
 m.step("Exod.40.16")
 
 # -------------------------- Exod.40.17 · ETNACHTA_SPLIT --------------------
-# ויהי בחדש הראשון בשנה השנית באחד לחדש … הוקם המשכן
-# "[EN-AID] From top split: LEFT «ויהי בחדש הראשון בשנה השנית באחד לחדש» /
-# RIGHT «הוקם המשכן». Derive claim from Hebrew arms, not English alone. Exod
-# 40:17."
+# ‹ויהי בחדש הראשון› (“and-be in-new-moon the-first”)
+# ‹בשנה השנית באחד› (“in-years the-second in-one”)
+# ‹לחדש … הוקם המשכן› (“to-new-moon … arise the-tabernacle”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:17."
 m.step("Exod.40.17")
 # witness-tier presupposed read: reserved_raising on self_standing — read,
 # not installed
@@ -145,18 +179,25 @@ m.witness_read("self_standing", "erection_date_chronology_anchor",
                 cites=["Rosh Hashanah 3a:2", "Rosh Hashanah 3a:5", "Rosh Hashanah 3a:6", "Rosh Hashanah 3a:11", "Rosh Hashanah 3a:12", "Rosh Hashanah 3a:13", "Taanit 29a:2", "Taanit 29a:3", "Taanit 29a:4"])
 
 # -------------------------- Exod.40.18 · ETNACHTA_SPLIT --------------------
-# ויקם משה את המשכן ויתן את אדניו וישם את קרשיו ויתן את בריחיו … ויקם את
-# עמודיו
-# "[EN-AID] From top split: LEFT «ויקם משה את המשכן ויתן את אדניו וישם את
-# קרשיו ויתן את בריחיו» / RIGHT «ויקם את עמודיו». Derive claim from Hebrew
+# ‹ויקם משה את› (“and-arise Moses obj-marker”)
+# ‹המשכן ויתן את› (“the-tabernacle and-set obj-marker”)
+# ‹אדניו וישם את› (“basis-him/its and-put/set obj-marker”)
+# ‹קרשיו ויתן את› (“slab-him/its and-set obj-marker”)
+# ‹בריחיו … ויקם את› (“bolt-him/its … and-arise obj-marker”)
+# ‹עמודיו› (“column-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 40:18."
 m.step("Exod.40.18")
 
 # -------------------------- Exod.40.19 · ETNACHTA_SPLIT --------------------
-# ויפרש את האהל על המשכן וישם את מכסה האהל עליו מלמעלה … כאשר צוה יהוה את
-# משה
-# "[EN-AID] From top split: LEFT «ויפרש את האהל על המשכן וישם את מכסה האהל
-# עליו מלמעלה» / RIGHT «כאשר צוה יהוה את משה». Derive claim from Hebrew
+# ‹ויפרש את האהל› (“and-break-apart obj-marker the-tent”)
+# ‹על המשכן וישם› (“over the-tabernacle and-put/set”)
+# ‹את מכסה האהל› (“obj-marker covering the-tent”)
+# ‹עליו מלמעלה … כאשר› (“over-him/its from-to-upper-part-ward … like-
+# as/which”)
+# ‹צוה יהוה את› (“command YHWH obj-marker”)
+# ‹משה› (“Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 40:19."
 m.step("Exod.40.19")
 # witness-tier presupposed read: moses_acting_priest on services_run — read,
@@ -165,88 +206,112 @@ m.witness_read("services_run", "moses_acting_priest",
                 cites=["Mishnah Shabbat 2:3", "Onkelos Exod 40"])
 
 # -------------------------- Exod.40.20 · ETNACHTA_SPLIT --------------------
-# ויקח ויתן את העדת אל הארן וישם את הבדים על הארן … ויתן את הכפרת על הארן
-# מלמעלה
-# "[EN-AID] From top split: LEFT «ויקח ויתן את העדת אל הארן וישם את הבדים על
-# הארן» / RIGHT «ויתן את הכפרת על הארן מלמעלה». Derive claim from Hebrew
+# ‹ויקח ויתן את› (“and-take and-set obj-marker”)
+# ‹העדת אל הארן› (“the-testimony to the-ark”)
+# ‹וישם את הבדים› (“and-put/set obj-marker the-separation”)
+# ‹על הארן … ויתן› (“over the-ark … and-set”)
+# ‹את הכפרת על› (“obj-marker the-lid over”)
+# ‹הארן מלמעלה› (“the-ark from-to-upper-part-ward”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 40:20."
 m.step("Exod.40.20")
 
 # -------------------------- Exod.40.21 · ETNACHTA_SPLIT --------------------
-# ויבא את הארן אל המשכן וישם את פרכת המסך ויסך על ארון העדות … כאשר צוה יהוה
-# את משה
-# "[EN-AID] From top split: LEFT «ויבא את הארן אל המשכן וישם את פרכת המסך
-# ויסך על ארון העדות» / RIGHT «כאשר צוה יהוה את משה». Derive claim from
-# Hebrew arms, not English alone. Exod 40:21."
+# ‹ויבא את הארן› (“and-come/bring obj-marker the-ark”)
+# ‹אל המשכן וישם› (“to the-tabernacle and-put/set”)
+# ‹את פרכת המסך› (“obj-marker separatrix the-cover”)
+# ‹ויסך על ארון› (“and-entwine-as-ascreen over ark”)
+# ‹העדות … כאשר צוה› (“the-testimony … like-as/which command”)
+# ‹יהוה את משה› (“YHWH obj-marker Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:21."
 m.step("Exod.40.21")
 
 # -------------------------- Exod.40.22 · ETNACHTA_SPLIT --------------------
-# ויתן את השלחן באהל מועד על ירך המשכן צפנה … מחוץ לפרכת
-# "[EN-AID] From top split: LEFT «ויתן את השלחן באהל מועד על ירך המשכן צפנה»
-# / RIGHT «מחוץ לפרכת». Derive claim from Hebrew arms, not English alone.
-# Exod 40:22."
+# ‹ויתן את השלחן› (“and-set obj-marker the-table”)
+# ‹באהל מועד על› (“in-tent seasons over”)
+# ‹ירך המשכן צפנה› (“thigh the-tabernacle hidden-ward”)
+# ‹… מחוץ לפרכת› (“from-outside to-separatrix”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:22."
 m.step("Exod.40.22")
 
 # -------------------------- Exod.40.23 · ETNACHTA_SPLIT --------------------
-# ויערך עליו ערך לחם לפני יהוה … כאשר צוה יהוה את משה
-# "[EN-AID] From top split: LEFT «ויערך עליו ערך לחם לפני יהוה» / RIGHT
-# «כאשר צוה יהוה את משה». Derive claim from Hebrew arms, not English alone.
-# Exod 40:23."
+# ‹ויערך עליו ערך› (“and-set-in-a-row over-him/its pile”)
+# ‹לחם לפני יהוה› (“food to-face YHWH”)
+# ‹… כאשר צוה יהוה› (“like-as/which command YHWH”)
+# ‹את משה› (“obj-marker Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:23."
 m.step("Exod.40.23")
 
 # -------------------------- Exod.40.24 · ETNACHTA_SPLIT --------------------
-# וישם את המנרה באהל מועד נכח השלחן … על ירך המשכן נגבה
-# "[EN-AID] From top split: LEFT «וישם את המנרה באהל מועד נכח השלחן» / RIGHT
-# «על ירך המשכן נגבה». Derive claim from Hebrew arms, not English alone.
-# Exod 40:24."
+# ‹וישם את המנרה› (“and-put/set obj-marker the-chandelier”)
+# ‹באהל מועד נכח› (“in-tent seasons front-part”)
+# ‹השלחן … על ירך› (“the-table … over thigh”)
+# ‹המשכן נגבה› (“the-tabernacle south-ward”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:24."
 m.step("Exod.40.24")
 
 # -------------------------- Exod.40.25 · ETNACHTA_SPLIT --------------------
-# ויעל הנרת לפני יהוה … כאשר צוה יהוה את משה
-# "[EN-AID] From top split: LEFT «ויעל הנרת לפני יהוה» / RIGHT «כאשר צוה
-# יהוה את משה». Derive claim from Hebrew arms, not English alone. Exod
-# 40:25."
+# ‹ויעל הנרת לפני› (“and-go-up the-lamp to-face”)
+# ‹יהוה … כאשר צוה› (“YHWH … like-as/which command”)
+# ‹יהוה את משה› (“YHWH obj-marker Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:25."
 m.step("Exod.40.25")
 
 # -------------------------- Exod.40.26 · ETNACHTA_SPLIT --------------------
-# וישם את מזבח הזהב באהל מועד … לפני הפרכת
-# "[EN-AID] From top split: LEFT «וישם את מזבח הזהב באהל מועד» / RIGHT «לפני
-# הפרכת». Derive claim from Hebrew arms, not English alone. Exod 40:26."
+# ‹וישם את מזבח› (“and-put/set obj-marker altar”)
+# ‹הזהב באהל מועד› (“the-gold in-tent seasons”)
+# ‹… לפני הפרכת› (“to-face the-separatrix”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:26."
 m.step("Exod.40.26")
 
 # -------------------------- Exod.40.27 · ETNACHTA_SPLIT --------------------
-# ויקטר עליו קטרת סמים … כאשר צוה יהוה את משה
-# "[EN-AID] From top split: LEFT «ויקטר עליו קטרת סמים» / RIGHT «כאשר צוה
-# יהוה את משה». Derive claim from Hebrew arms, not English alone. Exod
-# 40:27."
+# ‹ויקטר עליו קטרת› (“and-smoke over-him/its fumigation”)
+# ‹סמים … כאשר צוה› (“aroma … like-as/which command”)
+# ‹יהוה את משה› (“YHWH obj-marker Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:27."
 m.step("Exod.40.27")
 
 # -------------------------- Exod.40.28 · TREE_CLAIM ------------------------
-# וישם את מסך הפתח
-# "[EN-AID] From top split: LEFT «וישם את מסך הפתח» / RIGHT «». Derive claim
-# from Hebrew arms, not English alone. Exod 40:28."
+# ‹וישם את מסך› (“and-put/set obj-marker cover”)
+# ‹הפתח› (“the-opening”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms, not English alone. Exod 40:28."
 m.step("Exod.40.28")
 
 # -------------------------- Exod.40.29 · ETNACHTA_SPLIT --------------------
-# ואת מזבח העלה שם פתח משכן אהל מועד … ויעל עליו את העלה ואת המנחה כאשר צוה
-# יהוה את משה
-# "[EN-AID] From top split: LEFT «ואת מזבח העלה שם פתח משכן אהל מועד» /
-# RIGHT «ויעל עליו את העלה ואת המנחה כאשר צוה יהוה את משה». Derive claim
-# from Hebrew arms, not English alone. Exod 40:29."
+# ‹ואת מזבח העלה› (“and-obj-marker altar the-burnt-offering”)
+# ‹שם פתח משכן› (“put/set opening tabernacle”)
+# ‹אהל מועד … ויעל› (“tent seasons … and-go-up”)
+# ‹עליו את העלה› (“over-him/its obj-marker the-burnt-offering”)
+# ‹ואת המנחה כאשר› (“and-obj-marker the-grain-offering like-as/which”)
+# ‹צוה יהוה את› (“command YHWH obj-marker”)
+# ‹משה› (“Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:29."
 m.step("Exod.40.29")
 
 # -------------------------- Exod.40.30 · ETNACHTA_SPLIT --------------------
-# וישם את הכיר בין אהל מועד ובין המזבח … ויתן שמה מים לרחצה
-# "[EN-AID] From top split: LEFT «וישם את הכיר בין אהל מועד ובין המזבח» /
-# RIGHT «ויתן שמה מים לרחצה». Derive claim from Hebrew arms, not English
-# alone. Exod 40:30."
+# ‹וישם את הכיר› (“and-put/set obj-marker the-something-round”)
+# ‹בין אהל מועד› (“between tent seasons”)
+# ‹ובין המזבח … ויתן› (“and-between the-altar … and-set”)
+# ‹שמה מים לרחצה› (“there-ward waters to-lave”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:30."
 m.step("Exod.40.30")
 
 # -------------------------- Exod.40.31 · ETNACHTA_SPLIT --------------------
-# ורחצו ממנו משה ואהרן ובניו … את ידיהם ואת רגליהם
-# "[EN-AID] From top split: LEFT «ורחצו ממנו משה ואהרן ובניו» / RIGHT «את
-# ידיהם ואת רגליהם». Derive claim from Hebrew arms, not English alone. Exod
-# 40:31."
+# ‹ורחצו ממנו משה› (“and-lave from-us/our Moses”)
+# ‹ואהרן ובניו … את› (“and-Aaron and-son-him/its … obj-marker”)
+# ‹ידיהם ואת רגליהם› (“hand-them/their and-obj-marker foot-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:31."
 m.step("Exod.40.31")
 # witness-tier presupposed read: sanctification_executed on wash_as_rite —
 # read, not installed
@@ -254,24 +319,32 @@ m.witness_read("wash_as_rite", "sanctification_executed",
                 cites=["Onkelos Exod 40"])
 
 # -------------------------- Exod.40.32 · ETNACHTA_SPLIT --------------------
-# בבאם אל אהל מועד ובקרבתם אל המזבח ירחצו … כאשר צוה יהוה את משה
-# "[EN-AID] From top split: LEFT «בבאם אל אהל מועד ובקרבתם אל המזבח ירחצו» /
-# RIGHT «כאשר צוה יהוה את משה». Derive claim from Hebrew arms, not English
-# alone. Exod 40:32."
+# ‹בבאם אל אהל› (“in-come/bring-them/their to tent”)
+# ‹מועד ובקרבתם אל› (“seasons and-in-bring-near-them/their to”)
+# ‹המזבח ירחצו … כאשר› (“the-altar lave … like-as/which”)
+# ‹צוה יהוה את› (“command YHWH obj-marker”)
+# ‹משה› (“Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:32."
 m.step("Exod.40.32")
 
 # -------------------------- Exod.40.33 · ETNACHTA_SPLIT --------------------
-# ויקם את החצר סביב למשכן ולמזבח ויתן את מסך שער החצר … ויכל משה את המלאכה
-# "[EN-AID] From top split: LEFT «ויקם את החצר סביב למשכן ולמזבח ויתן את מסך
-# שער החצר» / RIGHT «ויכל משה את המלאכה». Derive claim from Hebrew arms, not
-# English alone. Exod 40:33."
+# ‹ויקם את החצר› (“and-arise obj-marker the-yard”)
+# ‹סביב למשכן ולמזבח› (“circle to-tabernacle and-to-altar”)
+# ‹ויתן את מסך› (“and-set obj-marker cover”)
+# ‹שער החצר … ויכל› (“gate the-yard … and-be-complete”)
+# ‹משה את המלאכה› (“Moses obj-marker the-work”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:33."
 m.step("Exod.40.33")
 
 # -------------------------- Exod.40.34 · ETNACHTA_SPLIT --------------------
-# ויכס הענן את אהל מועד … וכבוד יהוה מלא את המשכן
-# "[EN-AID] From top split: LEFT «ויכס הענן את אהל מועד» / RIGHT «וכבוד יהוה
-# מלא את המשכן». Derive claim from Hebrew arms, not English alone. Exod
-# 40:34."
+# ‹ויכס הענן את› (“and-plump the-cloud obj-marker”)
+# ‹אהל מועד … וכבוד› (“tent seasons … and-weight”)
+# ‹יהוה מלא את› (“YHWH fill obj-marker”)
+# ‹המשכן› (“the-tabernacle”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:34."
 m.step("Exod.40.34")
 # witness-tier presupposed read: indwelling_lands on glory_fills — read, not
 # installed
@@ -279,29 +352,40 @@ m.witness_read("glory_fills", "indwelling_lands",
                 cites=["Midrash Tanchuma Buber, Pekudei 8:9", "Midrash Tanchuma, Pekudei 11:14", "Midrash Tanchuma, Pekudei 6:2", "Midrash Tanchuma, Vayakhel 7:2", "Onkelos Exod 40"])
 
 # -------------------------- Exod.40.35 · ETNACHTA_SPLIT --------------------
-# ולא יכל משה לבוא אל אהל מועד כי שכן עליו הענן … וכבוד יהוה מלא את המשכן
-# "[EN-AID] From top split: LEFT «ולא יכל משה לבוא אל אהל מועד כי שכן עליו
-# הענן» / RIGHT «וכבוד יהוה מלא את המשכן». Derive claim from Hebrew arms,
-# not English alone. Exod 40:35."
+# ‹ולא יכל משה› (“and-not be-able Moses”)
+# ‹לבוא אל אהל› (“to-come/bring to tent”)
+# ‹מועד כי שכן› (“seasons that reside”)
+# ‹עליו הענן … וכבוד› (“over-him/its the-cloud … and-weight”)
+# ‹יהוה מלא את› (“YHWH fill obj-marker”)
+# ‹המשכן› (“the-tabernacle”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:35."
 m.step("Exod.40.35")
 
 # -------------------------- Exod.40.36 · ETNACHTA_SPLIT --------------------
-# ובהעלות הענן מעל המשכן יסעו בני ישראל … בכל מסעיהם
-# "[EN-AID] From top split: LEFT «ובהעלות הענן מעל המשכן יסעו בני ישראל» /
-# RIGHT «בכל מסעיהם». Derive claim from Hebrew arms, not English alone. Exod
-# 40:36."
+# ‹ובהעלות הענן מעל› (“and-in-go-up the-cloud from-over”)
+# ‹המשכן יסעו בני› (“the-tabernacle journey son”)
+# ‹ישראל … בכל מסעיהם› (“Israel … in-all departure-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:36."
 m.step("Exod.40.36")
 
-# -------------------------- Exod.40.37 · COND_ואם --------------------------
-# ואם לא יעלה הענן … ולא יסעו עד יום העלתו
-# "[EN-AID] From top split: LEFT «ואם לא יעלה הענן» / RIGHT «ולא יסעו עד יום
-# העלתו». Derive claim from Hebrew arms, not English alone. Exod 40:37."
+# -------------------------- Exod.40.37 · COND_ואם (“and-if”) ---------------
+# ‹ואם לא יעלה› (“and-if not go-up”)
+# ‹הענן … ולא יסעו› (“the-cloud … and-not journey”)
+# ‹עד יום העלתו› (“until day go-up-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 40:37."
 m.step("Exod.40.37")
 
-# -------------------------- Exod.40.38 · COND_כי ---------------------------
-# כי ענן יהוה על המשכן יומם ואש תהיה לילה בו … לעיני כל בית ישראל בכל מסעיהם
-# "[EN-AID] From top split: LEFT «כי ענן יהוה על המשכן יומם ואש תהיה לילה
-# בו» / RIGHT «לעיני כל בית ישראל בכל מסעיהם». Derive claim from Hebrew
+# -------------------------- Exod.40.38 · COND_כי (“that”) ------------------
+# ‹כי ענן יהוה› (“that cloud YHWH”)
+# ‹על המשכן יומם› (“over the-tabernacle daily”)
+# ‹ואש תהיה לילה› (“and-fire be night”)
+# ‹בו … לעיני כל› (“in-him/its … to-eye all”)
+# ‹בית ישראל בכל› (“house Israel in-all”)
+# ‹מסעיהם› (“departure-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 40:38."
 m.step("Exod.40.38")
 

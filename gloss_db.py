@@ -191,6 +191,13 @@ def set_unit_tree(unit):
         for w in verse.get("words", []):
             plain = norm_plain(str(w.get("he", "")))
             en = _fix_gloss(str(w.get("en", "")))
+            # The tree-era units (Leviticus's tree-derived v1 blocks) store a
+            # STRUCTURAL label here — "leaf 3 (ומקדשי)" — not English; taken
+            # as the authored gloss it displaced the DB's real word gloss in
+            # every step header (sitting C of the audit, 2026-09-05). A label
+            # is not a gloss: skip it and let the DB layer answer.
+            if re.match(r"^\s*leaf\s+\d+", en) or not re.search(r"[A-Za-z]", en):
+                continue
             if plain and en and plain not in m:
                 m[plain] = en
         if m:

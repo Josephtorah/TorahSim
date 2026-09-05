@@ -14,9 +14,10 @@ from machine import Machine
 m = Machine("lev_07_asham_procedure")
 
 # -------------------------- Lev.7.1 · ETNACHTA_SPLIT -----------------------
-# וזאת תורת האשם … קדש קדשים הוא
-# "[EN-AID] From top split: LEFT «וזאת תורת האשם» / RIGHT «קדש קדשים הוא».
-# Derive claim from Hebrew arms. Lev 7:1."
+# ‹וזאת תורת האשם› (“and-this precept the-guilt”)
+# ‹… קדש קדשים הוא› (“holiness holiness he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:1."
 m.step("Lev.7.1")
 # witness-tier presupposed read: blood_below on asham_law — read, not
 # installed
@@ -24,10 +25,13 @@ m.witness_read("asham_law", "blood_below",
                 cites=["Sifra, Tzav, Section 5 1", "Sifra, Tzav, Section 5 2"])
 
 # -------------------------- Lev.7.2 · ETNACHTA_SPLIT -----------------------
-# במקום אשר ישחטו את העלה ישחטו את האשם … ואת דמו יזרק על המזבח סביב
-# "[EN-AID] From top split: LEFT «במקום אשר ישחטו את העלה ישחטו את האשם» /
-# RIGHT «ואת דמו יזרק על המזבח סביב». Derive claim from Hebrew arms. Lev
-# 7:2."
+# ‹במקום אשר ישחטו› (“in-place which slaughter”)
+# ‹את העלה ישחטו› (“obj-marker the-burnt-offering slaughter”)
+# ‹את האשם … ואת› (“obj-marker the-guilt … and-obj-marker”)
+# ‹דמו יזרק על› (“blood-him/its sprinkle over”)
+# ‹המזבח סביב› (“the-altar circle”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:2."
 m.step("Lev.7.2")
 # witness-tier presupposed read: open_class on slaughterers — read, not
 # installed
@@ -35,23 +39,31 @@ m.witness_read("slaughterers", "open_class",
                 cites=["Sifra, Tzav, Section 5 3"])
 
 # -------------------------- Lev.7.3 · ETNACHTA_SPLIT -----------------------
-# ואת כל חלבו יקריב ממנו … את האליה ואת החלב המכסה את הקרב
-# "[EN-AID] From top split: LEFT «ואת כל חלבו יקריב ממנו» / RIGHT «את האליה
-# ואת החלב המכסה את הקרב». Derive claim from Hebrew arms. Lev 7:3."
+# ‹ואת כל חלבו› (“and-obj-marker all fat-him/its”)
+# ‹יקריב ממנו … את› (“bring-near from-us/our … obj-marker”)
+# ‹האליה ואת החלב› (“the-stout-part and-obj-marker the-fat”)
+# ‹המכסה את הקרב› (“the-plump obj-marker the-nearest-part”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:3."
 m.step("Lev.7.3")
 
 # -------------------------- Lev.7.4 · ETNACHTA_SPLIT -----------------------
-# ואת שתי הכלית ואת החלב אשר עליהן אשר על הכסלים … ואת היתרת על הכבד על
-# הכלית יסירנה
-# "[EN-AID] From top split: LEFT «ואת שתי הכלית ואת החלב אשר עליהן אשר על
-# הכסלים» / RIGHT «ואת היתרת על הכבד על הכלית יסירנה». Derive claim from
-# Hebrew arms. Lev 7:4."
+# ‹ואת שתי הכלית› (“and-obj-marker two the-kidney”)
+# ‹ואת החלב אשר› (“and-obj-marker the-fat which”)
+# ‹עליהן אשר על› (“over-them/their which over”)
+# ‹הכסלים … ואת היתרת› (“the-fatness … and-obj-marker the-lobe”)
+# ‹על הכבד על› (“over the-liver over”)
+# ‹הכלית יסירנה› (“the-kidney turn-aside-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:4."
 m.step("Lev.7.4")
 
 # -------------------------- Lev.7.5 · ETNACHTA_SPLIT -----------------------
-# והקטיר אתם הכהן המזבחה אשה ליהוה … אשם הוא
-# "[EN-AID] From top split: LEFT «והקטיר אתם הכהן המזבחה אשה ליהוה» / RIGHT
-# «אשם הוא». Derive claim from Hebrew arms. Lev 7:5."
+# ‹והקטיר אתם הכהן› (“and-smoke obj-marker-them/their the-priest”)
+# ‹המזבחה אשה ליהוה› (“the-altar-ward fire-offering to-YHWH”)
+# ‹… אשם הוא› (“guilt he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:5."
 m.step("Lev.7.5")
 # witness-tier presupposed read: word_position on asham_intent — read, not
 # installed
@@ -59,9 +71,12 @@ m.witness_read("asham_intent", "word_position",
                 cites=["Sifra, Tzav, Section 5 5", "Sifra, Tzav, Section 5 6", "Sifra, Tzav, Section 5 7", "Sifra, Tzav, Section 5 8"])
 
 # -------------------------- Lev.7.6 · ETNACHTA_SPLIT -----------------------
-# כל זכר בכהנים יאכלנו … במקום קדוש יאכל קדש קדשים הוא
-# "[EN-AID] From top split: LEFT «כל זכר בכהנים יאכלנו» / RIGHT «במקום קדוש
-# יאכל קדש קדשים הוא». Derive claim from Hebrew arms. Lev 7:6."
+# ‹כל זכר בכהנים› (“all male in-priest”)
+# ‹יאכלנו … במקום קדוש› (“eat-him/its … in-place sacred”)
+# ‹יאכל קדש קדשים› (“eat holiness holiness”)
+# ‹הוא› (“he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:6."
 m.step("Lev.7.6")
 # witness-tier presupposed read: born_blemished on blemish_ladder — read,
 # not installed
@@ -69,9 +84,12 @@ m.witness_read("blemish_ladder", "born_blemished",
                 cites=["Sifra, Tzav, Section 5 9", "Sifra, Tzav, Section 5 10"])
 
 # -------------------------- Lev.7.7 · ETNACHTA_SPLIT -----------------------
-# כחטאת כאשם תורה אחת להם … הכהן אשר יכפר בו לו יהיה
-# "[EN-AID] From top split: LEFT «כחטאת כאשם תורה אחת להם» / RIGHT «הכהן אשר
-# יכפר בו לו יהיה». Derive claim from Hebrew arms. Lev 7:7."
+# ‹כחטאת כאשם תורה› (“like-sin-offering like-guilt precept”)
+# ‹אחת להם … הכהן› (“one to-them/their … the-priest”)
+# ‹אשר יכפר בו› (“which atone in-him/its”)
+# ‹לו יהיה› (“to-him/its be”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:7."
 m.step("Lev.7.7")
 # witness-tier presupposed read: follows_flesh on hide_distribution — read,
 # not installed
@@ -79,15 +97,21 @@ m.witness_read("hide_distribution", "follows_flesh",
                 cites=["Sifra, Tzav, Chapter 9 1", "Sifra, Tzav, Chapter 9 2", "Sifra, Tzav, Chapter 9 4", "Sifra, Tzav, Chapter 9 5"])
 
 # -------------------------- Lev.7.8 · ETNACHTA_SPLIT -----------------------
-# והכהן המקריב את עלת איש … עור העלה אשר הקריב לכהן לו יהיה
-# "[EN-AID] From top split: LEFT «והכהן המקריב את עלת איש» / RIGHT «עור העלה
-# אשר הקריב לכהן לו יהיה». Derive claim from Hebrew arms. Lev 7:8."
+# ‹והכהן המקריב את› (“and-the-priest the-bring-near obj-marker”)
+# ‹עלת איש … עור› (“burnt-offering man … skin”)
+# ‹העלה אשר הקריב› (“the-burnt-offering which bring-near”)
+# ‹לכהן לו יהיה› (“to-priest to-him/its be”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:8."
 m.step("Lev.7.8")
 
 # -------------------------- Lev.7.9 · ETNACHTA_SPLIT -----------------------
-# וכל מנחה אשר תאפה בתנור וכל נעשה במרחשת ועל מחבת … לכהן המקריב אתה לו תהיה
-# "[EN-AID] From top split: LEFT «וכל מנחה אשר תאפה בתנור וכל נעשה במרחשת
-# ועל מחבת» / RIGHT «לכהן המקריב אתה לו תהיה». Derive claim from Hebrew
+# ‹וכל מנחה אשר› (“and-all grain-offering which”)
+# ‹תאפה בתנור וכל› (“cook in-fire-pot and-all”)
+# ‹נעשה במרחשת ועל› (“make in-stewpan and-over”)
+# ‹מחבת … לכהן המקריב› (“pan-for-baking-in … to-priest the-bring-near”)
+# ‹אתה לו תהיה› (“obj-marker-her/its to-him/its be”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 7:9."
 m.step("Lev.7.9")
 # witness-tier presupposed read: no_trades on dues_apportionment — read, not
@@ -96,9 +120,12 @@ m.witness_read("dues_apportionment", "no_trades",
                 cites=["Sifra, Tzav, Chapter 10 1", "Sifra, Tzav, Chapter 10 2", "Sifra, Tzav, Chapter 10 3", "Sifra, Tzav, Chapter 10 8", "Sifra, Tzav, Chapter 10 9", "Onkelos Lev 7:10"])
 
 # -------------------------- Lev.7.10 · ETNACHTA_SPLIT ----------------------
-# וכל מנחה בלולה בשמן וחרבה … לכל בני אהרן תהיה איש כאחיו
-# "[EN-AID] From top split: LEFT «וכל מנחה בלולה בשמן וחרבה» / RIGHT «לכל
-# בני אהרן תהיה איש כאחיו». Derive claim from Hebrew arms. Lev 7:10."
+# ‹וכל מנחה בלולה› (“and-all grain-offering overflow”)
+# ‹בשמן וחרבה … לכל› (“in-oil and-parched … to-all”)
+# ‹בני אהרן תהיה› (“son Aaron be”)
+# ‹איש כאחיו› (“man like-brother-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:10."
 m.step("Lev.7.10")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

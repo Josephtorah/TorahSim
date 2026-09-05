@@ -14,56 +14,73 @@ from machine import Machine
 m = Machine("gen_55_two_camps_wrestled_name")
 
 # -------------------------- Gen.32.1 · THE_FAREWELL_KISS -------------------
-# וַיַּשְׁכֵּם לָבָן בַּבֹּקֶר וַיְנַשֵּׁק לְבָנָיו וְלִבְנוֹתָיו וַיְבָרֶךְ
-# אֶתְהֶם וַיֵּלֶךְ וַיָּשָׁב לָבָן לִמְקֹמוֹ
+# ‹וַיַּשְׁכֵּם לָבָן בַּבֹּקֶר› (“and-rise-early Laban in-morning”)
+# ‹וַיְנַשֵּׁק לְבָנָיו וְלִבְנוֹתָיו› (“and-kiss to-son-him/its and-to-
+# daughter-him/its”)
+# ‹וַיְבָרֶךְ אֶתְהֶם וַיֵּלֶךְ› (“and-bless obj-marker-them/their and-go”)
+# ‹וַיָּשָׁב לָבָן לִמְקֹמוֹ› (“and-return Laban to-place-him/its”)
 # "[EN-AID] And Laban rose early in the morning and kissed his sons and his
 # daughters and blessed them; and Laban went and returned to his place."
 m.step("Gen.32.1")
-# ‹וַיַּשְׁכֵּם לָבָן בַּבֹּקֶר וַיְנַשֵּׁק› (“and-rise-early Laban in-
-# morning and-kiss”) — fact holds: and-kiss-and-bless-and-return(Laban, to-
-# me-meqomo)
+# ‹וַיַּשְׁכֵּם לָבָן בַּבֹּקֶר› (“and-rise-early Laban in-morning”)
+# ‹וַיְנַשֵּׁק› (“and-kiss”)
+# — fact holds: and-kiss-and-bless-and-return(Laban, to-me-meqomo)
 m.fact("va_yenasheq_va_yevarekh_va_yashav(lavan, li_meqomo)")
 
 # -------------------------- Gen.32.2 · THE_ANGEL_ENCOUNTER -----------------
-# וְיַעֲקֹב הָלַךְ לְדַרְכּוֹ וַיִּפְגְּעוּ־בוֹ מַלְאֲכֵי אֱלֹהִים
+# ‹וְיַעֲקֹב הָלַךְ לְדַרְכּוֹ› (“and-Jacob walk/go to-way/road-him/its”)
+# ‹וַיִּפְגְּעוּ־בוֹ מַלְאֲכֵי אֱלֹהִים› (“and-impinge in-him/its messenger
+# God”)
 # "[EN-AID] And Jacob went on his way, and messengers of God met him."
 m.step("Gen.32.2")
 # ‹וַיִּפְגְּעוּ־בוֹ מַלְאֲכֵי אֱלֹהִים› (“and-impinge in-him/its messenger
-# God”) — fact holds: and-impinge-vo-messenger-God(Jacob, come/bring-derekh)
+# God”)
+# — fact holds: and-impinge-vo-messenger-God(Jacob, come/bring-derekh)
 m.fact("va_yifgu_vo_malakhe_Elohim(yaaqov, ba_derekh)")
 
 # -------------------------- Gen.32.3 · THE_DUAL_NAME -----------------------
-# וַיֹּאמֶר יַעֲקֹב כַּאֲשֶׁר רָאָם מַחֲנֵה אֱלֹהִים זֶה וַיִּקְרָא
-# שֵׁם־הַמָּקוֹם הַהוּא מַחֲנָיִם
+# ‹וַיֹּאמֶר יַעֲקֹב כַּאֲשֶׁר› (“and-say Jacob like-as/which”)
+# ‹רָאָם מַחֲנֵה אֱלֹהִים› (“see-them/their camp God”)
+# ‹זֶה וַיִּקְרָא שֵׁם־הַמָּקוֹם› (“this and-call name the-place”)
+# ‹הַהוּא מַחֲנָיִם› (“that Mahanaim”)
 # "[EN-AID] And Jacob said when he saw them: This is God's camp. And he
 # called the name of that place Machanayim [Two Camps]."
 m.step("Gen.32.3")
-# ‹מַחֲנֵה אֱלֹהִים זֶה› (“camp God this”) — the world gains: place-Mahanaim
+# ‹מַחֲנֵה אֱלֹהִים זֶה› (“camp God this”)
+# — the world gains: place-Mahanaim
 m.install("maqom_machanayim")
-# ‹וַיִּקְרָא שֵׁם־הַמָּקוֹם הַהוּא מַחֲנָיִם› (“and-call name the-place
-# that Mahanaim”) — named: place-Mahanaim := Mahanaim
+# ‹וַיִּקְרָא שֵׁם־הַמָּקוֹם הַהוּא› (“and-call name the-place that”)
+# ‹מַחֲנָיִם› (“Mahanaim”)
+# — named: place-Mahanaim := Mahanaim
 m.name("maqom_machanayim", "machanayim")
 
 # -------------------------- Gen.32.4 · THE_ENVOYS --------------------------
-# וַיִּשְׁלַח יַעֲקֹב מַלְאָכִים לְפָנָיו אֶל־עֵשָׂו אָחִיו אַרְצָה שֵׂעִיר
-# שְׂדֵה אֱדוֹם
+# ‹וַיִּשְׁלַח יַעֲקֹב מַלְאָכִים› (“and-send Jacob messenger”)
+# ‹לְפָנָיו אֶל־עֵשָׂו אָחִיו› (“to-face-him/its to Esau brother-him/its”)
+# ‹אַרְצָה שֵׂעִיר שְׂדֵה› (“earth-ward Seir field”)
+# ‹אֱדוֹם› (“Edom”)
 # "[EN-AID] And Jacob sent messengers before him to Esau his brother, to the
 # land of Seir, the field of Edom."
 m.step("Gen.32.4")
-# ‹וַיִּשְׁלַח יַעֲקֹב מַלְאָכִים לְפָנָיו› (“and-send Jacob messenger to-
-# face-him/its”) — fact holds: and-send-messenger-to-Esau(Jacob, artza-Seir)
+# ‹וַיִּשְׁלַח יַעֲקֹב מַלְאָכִים› (“and-send Jacob messenger”)
+# ‹לְפָנָיו› (“to-face-him/its”)
+# — fact holds: and-send-messenger-to-Esau(Jacob, artza-Seir)
 m.fact("va_yishlach_malakhim_el_esav(yaaqov, artza_seir)")
 
 # -------------------------- Gen.32.5 · THE_SAY_INSTRUCTION -----------------
-# וַיְצַו אֹתָם לֵאמֹר כֹּה תֹאמְרוּן לַאדֹנִי לְעֵשָׂו כֹּה אָמַר עַבְדְּךָ
-# יַעֲקֹב עִם־לָבָן גַּרְתִּי וָאֵחַר עַד־עָתָּה
+# ‹וַיְצַו אֹתָם לֵאמֹר› (“and-command obj-marker-them/their to-say”)
+# ‹כֹּה תֹאמְרוּן לַאדֹנִי› (“like-this say-ward to-lord-me/my”)
+# ‹לְעֵשָׂו כֹּה אָמַר› (“to-Esau like-this say”)
+# ‹עַבְדְּךָ יַעֲקֹב עִם־לָבָן› (“servant-you/your Jacob with Laban”)
+# ‹גַּרְתִּי וָאֵחַר עַד־עָתָּה› (“turn-aside-from-the-road and-loiter until
+# now”)
 # "[EN-AID] And he commanded them, saying: Thus shall you say to my lord, to
 # Esau: Thus said your servant Jacob: With Laban I have sojourned, and I
 # have tarried until now."
 m.step("Gen.32.5")
-# ‹כֹּה תֹאמְרוּן לַאדֹנִי לְעֵשָׂו› (“like-this say-ward to-lord-me/my to-
-# Esau”) — Jacob speaks a demand — LET?: tomrun(the-messenger, to-doni-to-
-# Esau)
+# ‹כֹּה תֹאמְרוּן לַאדֹנִי› (“like-this say-ward to-lord-me/my”)
+# ‹לְעֵשָׂו› (“to-Esau”)
+# — Jacob speaks a demand — LET?: tomrun(the-messenger, to-doni-to-Esau)
 m.declare("yaaqov", "LET?",
           "tomrun(ha_malakhim, la_doni_le_esav)")
 # witness-tier presupposed read: priced_in_dynasties_and_paid_at_gen_59 on
@@ -77,37 +94,50 @@ m.witness_read("the_embassy", "criticized_by_the_chain_against_its_own_subject",
                 cites=["Bereshit Rabbah 75:2", "Bereshit Rabbah 75:3"])
 
 # -------------------------- Gen.32.6 · THE_INVENTORY_MESSAGE ---------------
-# וַיְהִי־לִי שׁוֹר וַחֲמוֹר צֹאן וְעֶבֶד וְשִׁפְחָה וָאֶשְׁלְחָה לְהַגִּיד
-# לַאדֹנִי לִמְצֹא־חֵן בְּעֵינֶיךָ
+# ‹וַיְהִי־לִי שׁוֹר וַחֲמוֹר› (“and-be to-me/my bullock and-male-ass”)
+# ‹צֹאן וְעֶבֶד וְשִׁפְחָה› (“flock and-servant and-female-slave”)
+# ‹וָאֶשְׁלְחָה לְהַגִּיד לַאדֹנִי› (“and-send-ward to-tell to-lord-me/my”)
+# ‹לִמְצֹא־חֵן בְּעֵינֶיךָ› (“to-find graciousness in-eye-you/your”)
 # "[EN-AID] And I have ox and donkey, flock and servant and maid; and I send
 # to tell my lord, to find grace in your eyes."
 m.step("Gen.32.6")
-# ‹וַיְהִי־לִי שׁוֹר וַחֲמוֹר צֹאן וְעֶבֶד וְשִׁפְחָה› (“and-be to-me/my
-# bullock and-male-ass flock and-servant and-female-slave”) — fact holds:
-# and-be-to-me-bullock-and-male-ass(divre-the-shelichut)
+# ‹וַיְהִי־לִי שׁוֹר וַחֲמוֹר› (“and-be to-me/my bullock and-male-ass”)
+# ‹צֹאן וְעֶבֶד וְשִׁפְחָה› (“flock and-servant and-female-slave”)
+# — fact holds: and-be-to-me-bullock-and-male-ass(divre-the-shelichut)
 m.fact("va_yehi_li_shor_va_chamor(divre_ha_shelichut)")
 
 # -------------------------- Gen.32.7 · THE_FOUR_HUNDRED --------------------
-# וַיָּשֻׁבוּ הַמַּלְאָכִים אֶל־יַעֲקֹב לֵאמֹר בָּאנוּ אֶל־אָחִיךָ
-# אֶל־עֵשָׂו וְגַם הֹלֵךְ לִקְרָאתְךָ וְאַרְבַּע־מֵאוֹת אִישׁ עִמּוֹ
+# ‹וַיָּשֻׁבוּ הַמַּלְאָכִים אֶל־יַעֲקֹב› (“and-return the-messenger to
+# Jacob”)
+# ‹לֵאמֹר בָּאנוּ אֶל־אָחִיךָ› (“to-say come/bring to brother-you/your”)
+# ‹אֶל־עֵשָׂו וְגַם הֹלֵךְ› (“to Esau and-also walk/go”)
+# ‹לִקְרָאתְךָ וְאַרְבַּע־מֵאוֹת אִישׁ› (“to-encountering-you/your and-four
+# hundred man”)
+# ‹עִמּוֹ› (“with-him/its”)
 # "[EN-AID] And the messengers returned to Jacob, saying: We came to your
 # brother, to Esau — and he also is coming to meet you, and four hundred men
 # with him."
 m.step("Gen.32.7")
 # ‹בָּאנוּ אֶל־אָחִיךָ אֶל־עֵשָׂו› (“come/bring to brother-you/your to
-# Esau”) — fact holds: come/bring-to-your-brother-and-four-hundred-
-# man(report)
+# Esau”)
+# — fact holds: come/bring-to-your-brother-and-four-hundred-man(report)
 m.fact("banu_el_achikha_ve_arba_meot_ish(report)")
 
 # -------------------------- Gen.32.8 · THE_SPLIT ---------------------------
-# וַיִּירָא יַעֲקֹב מְאֹד וַיֵּצֶר לוֹ וַיַּחַץ אֶת־הָעָם אֲשֶׁר־אִתּוֹ
-# וְאֶת־הַצֹּאן וְאֶת־הַבָּקָר וְהַגְּמַלִּים לִשְׁנֵי מַחֲנוֹת
+# ‹וַיִּירָא יַעֲקֹב מְאֹד› (“and-fear Jacob very”)
+# ‹וַיֵּצֶר לוֹ וַיַּחַץ› (“and-press to-him/its and-cut”)
+# ‹אֶת־הָעָם אֲשֶׁר־אִתּוֹ וְאֶת־הַצֹּאן› (“obj-marker the-people which
+# with-him/its and-obj-marker the-flock”)
+# ‹וְאֶת־הַבָּקָר וְהַגְּמַלִּים לִשְׁנֵי› (“and-obj-marker the-herd and-
+# the-camel to-two”)
+# ‹מַחֲנוֹת› (“camp”)
 # "[EN-AID] And Jacob feared greatly, and it distressed him; and he divided
 # the people that were with him, and the flock and the herd and the camels,
 # into two camps."
 m.step("Gen.32.8")
-# ‹וַיִּירָא יַעֲקֹב מְאֹד וַיֵּצֶר› (“and-fear Jacob very and-press”) —
-# fact holds: and-fear-and-cut-to-me-shene-camp(Jacob)
+# ‹וַיִּירָא יַעֲקֹב מְאֹד› (“and-fear Jacob very”)
+# ‹וַיֵּצֶר› (“and-press”)
+# — fact holds: and-fear-and-cut-to-me-shene-camp(Jacob)
 m.fact("va_yira_va_yachatz_li_shene_machanot(yaaqov)")
 # witness-tier presupposed read: risk_distribution_maxim_minted_here on
 # divided_the_camp — read, not installed
@@ -115,26 +145,35 @@ m.witness_read("divided_the_camp", "risk_distribution_maxim_minted_here",
                 cites=["Bereshit Rabbah 76:3"])
 
 # -------------------------- Gen.32.9 · THE_REMNANT_ARITHMETIC --------------
-# וַיֹּאמֶר אִם־יָבוֹא עֵשָׂו אֶל־הַמַּחֲנֶה הָאַחַת וְהִכָּהוּ וְהָיָה
-# הַמַּחֲנֶה הַנִּשְׁאָר לִפְלֵיטָה
+# ‹וַיֹּאמֶר אִם־יָבוֹא עֵשָׂו› (“and-say if come/bring Esau”)
+# ‹אֶל־הַמַּחֲנֶה הָאַחַת וְהִכָּהוּ› (“to the-camp the-one and-strike-
+# him/its”)
+# ‹וְהָיָה הַמַּחֲנֶה הַנִּשְׁאָר› (“and-be the-camp the-swell-up”)
+# ‹לִפְלֵיטָה› (“to-deliverance”)
 # "[EN-AID] And he said: If Esau comes to the one camp and strikes it, the
 # remaining camp will become a remnant."
 m.step("Gen.32.9")
-# ‹וְהָיָה הַמַּחֲנֶה הַנִּשְׁאָר לִפְלֵיטָה› (“and-be the-camp the-swell-up
-# to-deliverance”) — fact holds: with-come/bring-and-hikahu-and-be-to-me-
-# feleta(tokhnit)
+# ‹וְהָיָה הַמַּחֲנֶה הַנִּשְׁאָר› (“and-be the-camp the-swell-up”)
+# ‹לִפְלֵיטָה› (“to-deliverance”)
+# — fact holds: with-come/bring-and-hikahu-and-be-to-me-feleta(tokhnit)
 m.fact("im_yavo_ve_hikahu_ve_haya_li_feleta(tokhnit)")
 
 # -------------------------- Gen.32.10 · THE_REQUOTE_LADDER_OPENS -----------
-# וַיֹּאמֶר יַעֲקֹב אֱלֹהֵי אָבִי אַבְרָהָם וֵאלֹהֵי אָבִי יִצְחָק יְהוָה
-# הָאֹמֵר אֵלַי שׁוּב לְאַרְצְךָ וּלְמוֹלַדְתְּךָ וְאֵיטִיבָה עִמָּךְ
+# ‹וַיֹּאמֶר יַעֲקֹב אֱלֹהֵי› (“and-say Jacob God”)
+# ‹אָבִי אַבְרָהָם וֵאלֹהֵי› (“father-me/my Abraham and-God”)
+# ‹אָבִי יִצְחָק יְהוָה› (“father-me/my Isaac YHWH”)
+# ‹הָאֹמֵר אֵלַי שׁוּב› (“the-say to-me/my return”)
+# ‹לְאַרְצְךָ וּלְמוֹלַדְתְּךָ וְאֵיטִיבָה› (“to-earth-you/your and-to-
+# nativity-you/your and-be-make-well”)
+# ‹עִמָּךְ› (“with-you/your”)
 # "[EN-AID] And Jacob said: God of my father Abraham and God of my father
 # Isaac, YHWH, who says to me: Return to your land and to your kindred, and
 # I will do good with you."
 m.step("Gen.32.10")
-# ‹שׁוּב לְאַרְצְךָ וּלְמוֹלַדְתְּךָ וְאֵיטִיבָה עִמָּךְ› (“return to-earth-
-# you/your and-to-nativity-you/your and-be-make-well with-you/your”) — fact
-# holds: retell-return-to-artzekha-and-be-make-well(tefila, delta-x2)
+# ‹שׁוּב לְאַרְצְךָ וּלְמוֹלַדְתְּךָ› (“return to-earth-you/your and-to-
+# nativity-you/your”)
+# ‹וְאֵיטִיבָה עִמָּךְ› (“and-be-make-well with-you/your”)
+# — fact holds: retell-return-to-artzekha-and-be-make-well(tefila, delta-x2)
 m.fact("retell_shuv_le_artzekha_ve_etiva(tefila, delta_x2)")
 # witness-tier presupposed read: descent_does_not_secure_the_name on
 # God_of_my_fathers_and_not_of_esau — read, not installed
@@ -142,16 +181,22 @@ m.witness_read("God_of_my_fathers_and_not_of_esau", "descent_does_not_secure_the
                 cites=["Bereshit Rabbah 76:4"])
 
 # -------------------------- Gen.32.11 · THE_TOO_SMALL ----------------------
-# קָטֹנְתִּי מִכֹּל הַחֲסָדִים וּמִכָּל־הָאֱמֶת אֲשֶׁר עָשִׂיתָ
-# אֶת־עַבְדֶּךָ כִּי בְמַקְלִי עָבַרְתִּי אֶת־הַיַּרְדֵּן הַזֶּה וְעַתָּה
-# הָיִיתִי לִשְׁנֵי מַחֲנוֹת
+# ‹קָטֹנְתִּי מִכֹּל הַחֲסָדִים› (“diminish from-all the-kindness”)
+# ‹וּמִכָּל־הָאֱמֶת אֲשֶׁר עָשִׂיתָ› (“and-from-all the-stability which
+# make”)
+# ‹אֶת־עַבְדֶּךָ כִּי בְמַקְלִי› (“with servant-you/your that in-shoot-
+# me/my”)
+# ‹עָבַרְתִּי אֶת־הַיַּרְדֵּן הַזֶּה› (“pass-over obj-marker the-Jordan the-
+# this”)
+# ‹וְעַתָּה הָיִיתִי לִשְׁנֵי› (“and-now be to-two”)
+# ‹מַחֲנוֹת› (“camp”)
 # "[EN-AID] I am too small for all the kindnesses and all the truth that You
 # have done for Your servant; for with my staff I crossed this Jordan, and
 # now I have become two camps."
 m.step("Gen.32.11")
-# ‹קָטֹנְתִּי מִכֹּל הַחֲסָדִים וּמִכָּל־הָאֱמֶת› (“diminish from-all the-
-# kindness and-from-all the-stability”) — fact holds: diminish-who?-all-the-
-# kindness(tefila)
+# ‹קָטֹנְתִּי מִכֹּל הַחֲסָדִים› (“diminish from-all the-kindness”)
+# ‹וּמִכָּל־הָאֱמֶת› (“and-from-all the-stability”)
+# — fact holds: diminish-who?-all-the-kindness(tefila)
 m.fact("qatonti_mi_kol_ha_chasadim(tefila)")
 # witness-tier presupposed read: merit_as_a_finite_balance_drawn_down on
 # i_am_small — read, not installed
@@ -163,14 +208,17 @@ m.witness_read("katonti", "miracle_reliance",
                 cites=["Shabbat 32a:3", "Shabbat 32a:4", "Shabbat 32a:5"])
 
 # -------------------------- Gen.32.12 · THE_RESCUE_DEMAND ------------------
-# הַצִּילֵנִי נָא מִיַּד אָחִי מִיַּד עֵשָׂו כִּי־יָרֵא אָנֹכִי אֹתוֹ
-# פֶּן־יָבוֹא וְהִכַּנִי אֵם עַל־בָּנִים
+# ‹הַצִּילֵנִי נָא מִיַּד› (“snatch-away-me/my please from-hand”)
+# ‹אָחִי מִיַּד עֵשָׂו› (“brother-me/my from-hand Esau”)
+# ‹כִּי־יָרֵא אָנֹכִי אֹתוֹ› (“that fearing obj-marker-him/its”)
+# ‹פֶּן־יָבוֹא וְהִכַּנִי אֵם› (“lest come/bring and-strike-me/my mother”)
+# ‹עַל־בָּנִים› (“over son”)
 # "[EN-AID] Rescue me, please, from the hand of my brother, from the hand of
 # Esau; for I fear him, lest he come and strike me, mother upon children."
 m.step("Gen.32.12")
-# ‹הַצִּילֵנִי נָא מִיַּד אָחִי מִיַּד עֵשָׂו› (“snatch-away-me/my please
-# from-hand brother-me/my from-hand Esau”) — Jacob speaks a demand — LET:
-# hatzileni(the-LORD, who?-hand-Esau)
+# ‹הַצִּילֵנִי נָא מִיַּד› (“snatch-away-me/my please from-hand”)
+# ‹אָחִי מִיַּד עֵשָׂו› (“brother-me/my from-hand Esau”)
+# — Jacob speaks a demand — LET: hatzileni(the-LORD, who?-hand-Esau)
 m.declare("yaaqov", "LET",
           "hatzileni(YHWH, mi_yad_esav)")
 # witness-tier presupposed read: argued_from_a_statute_not_yet_given on
@@ -179,158 +227,203 @@ m.witness_read("the_plea", "argued_from_a_statute_not_yet_given",
                 cites=["Bereshit Rabbah 75:13"])
 
 # -------------------------- Gen.32.13 · THE_UNSOURCED_DOUBLET --------------
-# וְאַתָּה אָמַרְתָּ הֵיטֵב אֵיטִיב עִמָּךְ וְשַׂמְתִּי אֶת־זַרְעֲךָ כְּחוֹל
-# הַיָּם אֲשֶׁר לֹא־יִסָּפֵר מֵרֹב
+# ‹וְאַתָּה אָמַרְתָּ הֵיטֵב› (“and-you say do-well”)
+# ‹אֵיטִיב עִמָּךְ וְשַׂמְתִּי› (“do-well with-you/your and-put/set”)
+# ‹אֶת־זַרְעֲךָ כְּחוֹל הַיָּם› (“obj-marker seed-you/your like-sand the-
+# seas”)
+# ‹אֲשֶׁר לֹא־יִסָּפֵר מֵרֹב› (“which not count from-abundance”)
 # "[EN-AID] And You said: Doing good I will do good with you, and I will
 # make your seed as the sand of the sea, which cannot be counted for
 # multitude."
 m.step("Gen.32.13")
-# ‹וְאַתָּה אָמַרְתָּ הֵיטֵב אֵיטִיב עִמָּךְ› (“and-you say do-well do-well
-# with-you/your”) — fact holds: say-do-well-do-well-like-sand-the-
-# seas(tefila, delta-x2)
+# ‹וְאַתָּה אָמַרְתָּ הֵיטֵב› (“and-you say do-well”)
+# ‹אֵיטִיב עִמָּךְ› (“do-well with-you/your”)
+# — fact holds: say-do-well-do-well-like-sand-the-seas(tefila, delta-x2)
 m.fact("amarta_hetev_etiv_ke_chol_ha_yam(tefila, delta_x2)")
 
 # -------------------------- Gen.32.14 · THE_GIFT_TAKEN ---------------------
-# וַיָּלֶן שָׁם בַּלַּיְלָה הַהוּא וַיִּקַּח מִן־הַבָּא בְיָדוֹ מִנְחָה
-# לְעֵשָׂו אָחִיו
+# ‹וַיָּלֶן שָׁם בַּלַּיְלָה› (“and-stop there in-night”)
+# ‹הַהוּא וַיִּקַּח מִן־הַבָּא› (“that and-take from the-come/bring”)
+# ‹בְיָדוֹ מִנְחָה לְעֵשָׂו› (“in-hand-him/its grain-offering to-Esau”)
+# ‹אָחִיו› (“brother-him/its”)
 # "[EN-AID] And he lodged there that night; and he took from what came to
 # his hand a gift for Esau his brother."
 m.step("Gen.32.14")
-# ‹וַיִּקַּח מִן־הַבָּא בְיָדוֹ מִנְחָה לְעֵשָׂו אָחִיו› (“and-take from
-# the-come/bring in-hand-him/its grain-offering to-Esau brother-him/its”) —
-# fact holds: and-take-grain-offering-to-Esau(Jacob, from-the-come/bring-
+# ‹וַיִּקַּח מִן־הַבָּא בְיָדוֹ› (“and-take from the-come/bring in-hand-
+# him/its”)
+# ‹מִנְחָה לְעֵשָׂו אָחִיו› (“grain-offering to-Esau brother-him/its”)
+# — fact holds: and-take-grain-offering-to-Esau(Jacob, from-the-come/bring-
 # and-his-hand)
 m.fact("va_yiqach_mincha_le_esav(yaaqov, min_ha_ba_ve_yado)")
 
 # -------------------------- Gen.32.15 · THE_HERD_LIST_ONE ------------------
-# עִזִּים מָאתַיִם וּתְיָשִׁים עֶשְׂרִים רְחֵלִים מָאתַיִם וְאֵילִים
-# עֶשְׂרִים
+# ‹עִזִּים מָאתַיִם וּתְיָשִׁים› (“she-goat hundred and-buck”)
+# ‹עֶשְׂרִים רְחֵלִים מָאתַיִם› (“twenty ewe hundred”)
+# ‹וְאֵילִים עֶשְׂרִים› (“and-ram twenty”)
 # "[EN-AID] Two hundred she-goats and twenty he-goats, two hundred ewes and
 # twenty rams,"
 m.step("Gen.32.15")
-# ‹עִזִּים מָאתַיִם וּתְיָשִׁים עֶשְׂרִים› (“she-goat hundred and-buck
-# twenty”) — fact holds: she-goat-buck-ewe-ram(minchat-the-flock)
+# ‹עִזִּים מָאתַיִם וּתְיָשִׁים› (“she-goat hundred and-buck”)
+# ‹עֶשְׂרִים› (“twenty”)
+# — fact holds: she-goat-buck-ewe-ram(minchat-the-flock)
 m.fact("izim_teyashim_rechelim_elim(minchat_ha_tzon)")
 
 # -------------------------- Gen.32.16 · THE_HERD_LIST_TWO ------------------
-# גְּמַלִּים מֵינִיקוֹת וּבְנֵיהֶם שְׁלֹשִׁים פָּרוֹת אַרְבָּעִים וּפָרִים
-# עֲשָׂרָה אֲתֹנֹת עֶשְׂרִים וַעְיָרִם עֲשָׂרָה
+# ‹גְּמַלִּים מֵינִיקוֹת וּבְנֵיהֶם› (“camel suck and-son-them/their”)
+# ‹שְׁלֹשִׁים פָּרוֹת אַרְבָּעִים› (“thirty cow forty”)
+# ‹וּפָרִים עֲשָׂרָה אֲתֹנֹת› (“and-bullock ten female-donkey”)
+# ‹עֶשְׂרִים וַעְיָרִם עֲשָׂרָה› (“twenty and-young-ass ten”)
 # "[EN-AID] Thirty nursing camels with their young, forty cows and ten
 # bulls, twenty she-donkeys and ten colts."
 m.step("Gen.32.16")
-# ‹גְּמַלִּים מֵינִיקוֹת וּבְנֵיהֶם שְׁלֹשִׁים› (“camel suck and-son-
-# them/their thirty”) — fact holds: camel-cow-parim-female-donkey-young-
-# ass(minchat-the-beemot)
+# ‹גְּמַלִּים מֵינִיקוֹת וּבְנֵיהֶם› (“camel suck and-son-them/their”)
+# ‹שְׁלֹשִׁים› (“thirty”)
+# — fact holds: camel-cow-parim-female-donkey-young-ass(minchat-the-beemot)
 m.fact("gemalim_parot_parim_atonot_eyarim(minchat_ha_beemot)")
 
 # -------------------------- Gen.32.17 · THE_PASS_ORDER ---------------------
-# וַיִּתֵּן בְּיַד־עֲבָדָיו עֵדֶר עֵדֶר לְבַדּוֹ וַיֹּאמֶר אֶל־עֲבָדָיו
-# עִבְרוּ לְפָנַי וְרֶוַח תָּשִׂימוּ בֵּין עֵדֶר וּבֵין עֵדֶר
+# ‹וַיִּתֵּן בְּיַד־עֲבָדָיו עֵדֶר› (“and-set in-hand servant-him/its
+# arrangement”)
+# ‹עֵדֶר לְבַדּוֹ וַיֹּאמֶר› (“arrangement to-separation-him/its and-say”)
+# ‹אֶל־עֲבָדָיו עִבְרוּ לְפָנַי› (“to servant-him/its pass-over to-face-
+# me/my”)
+# ‹וְרֶוַח תָּשִׂימוּ בֵּין› (“and-room put/set between”)
+# ‹עֵדֶר וּבֵין עֵדֶר› (“arrangement and-between arrangement”)
 # "[EN-AID] And he gave them into the hand of his servants, drove by drove
 # alone, and said to his servants: Pass over before me, and put a space
 # between drove and drove."
 m.step("Gen.32.17")
-# ‹עִבְרוּ לְפָנַי› (“pass-over to-face-me/my”) — Jacob speaks a demand —
-# LET: pass-over(avadav, to-fanai)
+# ‹עִבְרוּ לְפָנַי› (“pass-over to-face-me/my”)
+# — Jacob speaks a demand — LET: pass-over(avadav, to-fanai)
 m.declare("yaaqov", "LET",
           "ivru(avadav, le_fanai)")
-# ‹וְרֶוַח תָּשִׂימוּ בֵּין עֵדֶר וּבֵין עֵדֶר› (“and-room put/set between
-# arrangement and-between arrangement”) — Jacob speaks a demand — LET?:
-# put/set(room, between-arrangement-and-between-arrangement)
+# ‹וְרֶוַח תָּשִׂימוּ בֵּין› (“and-room put/set between”)
+# ‹עֵדֶר וּבֵין עֵדֶר› (“arrangement and-between arrangement”)
+# — Jacob speaks a demand — LET?: put/set(room, between-arrangement-and-
+# between-arrangement)
 m.declare("yaaqov", "LET?",
           "tasimu(revach, ben_eder_u_ven_eder)")
 
 # -------------------------- Gen.32.18 · THE_FIRST_WAVE_SCRIPT --------------
-# וַיְצַו אֶת־הָרִאשׁוֹן לֵאמֹר כִּי יִפְגָּשְׁךָ עֵשָׂו אָחִי וִשְׁאֵלְךָ
-# לֵאמֹר לְמִי־אַתָּה וְאָנָה תֵלֵךְ וּלְמִי אֵלֶּה לְפָנֶיךָ
+# ‹וַיְצַו אֶת־הָרִאשׁוֹן לֵאמֹר› (“and-command obj-marker the-first to-
+# say”)
+# ‹כִּי יִפְגָּשְׁךָ עֵשָׂו› (“that come-in-contact-with-you/your Esau”)
+# ‹אָחִי וִשְׁאֵלְךָ לֵאמֹר› (“brother-me/my and-inquire-you/your to-say”)
+# ‹לְמִי־אַתָּה וְאָנָה תֵלֵךְ› (“to-who? you and-where? go”)
+# ‹וּלְמִי אֵלֶּה לְפָנֶיךָ› (“and-to-who? these to-face-you/your”)
 # "[EN-AID] And he commanded the first, saying: When Esau my brother meets
 # you and asks you, saying: Whose are you, and where do you go, and whose
 # are these before you?"
 m.step("Gen.32.18")
-# ‹כִּי יִפְגָּשְׁךָ עֵשָׂו אָחִי וִשְׁאֵלְךָ› (“that come-in-contact-with-
-# you/your Esau brother-me/my and-inquire-you/your”) — fact holds: that-
-# yifgashkha-Esau-and-sheelkha(tzav-first)
+# ‹כִּי יִפְגָּשְׁךָ עֵשָׂו› (“that come-in-contact-with-you/your Esau”)
+# ‹אָחִי וִשְׁאֵלְךָ› (“brother-me/my and-inquire-you/your”)
+# — fact holds: that-yifgashkha-Esau-and-sheelkha(tzav-first)
 m.fact("ki_yifgashkha_esav_u_sheelkha(tzav_rishon)")
 
 # -------------------------- Gen.32.19 · THE_SCRIPTED_ANSWER ----------------
-# וְאָמַרְתָּ לְעַבְדְּךָ לְיַעֲקֹב מִנְחָה הִוא שְׁלוּחָה לַאדֹנִי לְעֵשָׂו
-# וְהִנֵּה גַם־הוּא אַחֲרֵינוּ
+# ‹וְאָמַרְתָּ לְעַבְדְּךָ לְיַעֲקֹב› (“and-say to-servant-you/your to-
+# Jacob”)
+# ‹מִנְחָה הִוא שְׁלוּחָה› (“grain-offering he/it send”)
+# ‹לַאדֹנִי לְעֵשָׂו וְהִנֵּה› (“to-lord-me/my to-Esau and-behold”)
+# ‹גַם־הוּא אַחֲרֵינוּ› (“also he/it after-us/our”)
 # "[EN-AID] Then you shall say: Your servant Jacob's — it is a gift sent to
 # my lord, to Esau; and behold, he also is behind us."
 m.step("Gen.32.19")
-# ‹מִנְחָה הִוא שְׁלוּחָה לַאדֹנִי› (“grain-offering he/it send to-lord-
-# me/my”) — fact holds: grain-offering-hi-send-and-behold-that-
-# acharenu(maane)
+# ‹מִנְחָה הִוא שְׁלוּחָה› (“grain-offering he/it send”)
+# ‹לַאדֹנִי› (“to-lord-me/my”)
+# — fact holds: grain-offering-hi-send-and-behold-that-acharenu(maane)
 m.fact("mincha_hi_shelucha_ve_hine_hu_acharenu(maane)")
 
 # -------------------------- Gen.32.20 · THE_SECOND_SAY_CARD ----------------
-# וַיְצַו גַּם אֶת־הַשֵּׁנִי גַּם אֶת־הַשְּׁלִישִׁי גַּם אֶת־כָּל־הַהֹלְכִים
-# אַחֲרֵי הָעֲדָרִים לֵאמֹר כַּדָּבָר הַזֶּה תְּדַבְּרוּן אֶל־עֵשָׂו
-# בְּמֹצַאֲכֶם אֹתוֹ
+# ‹וַיְצַו גַּם אֶת־הַשֵּׁנִי› (“and-command also obj-marker the-second”)
+# ‹גַּם אֶת־הַשְּׁלִישִׁי גַּם› (“also obj-marker the-third also”)
+# ‹אֶת־כָּל־הַהֹלְכִים אַחֲרֵי הָעֲדָרִים› (“obj-marker all the-walk/go
+# after the-arrangement”)
+# ‹לֵאמֹר כַּדָּבָר הַזֶּה› (“to-say like-word/thing the-this”)
+# ‹תְּדַבְּרוּן אֶל־עֵשָׂו בְּמֹצַאֲכֶם› (“speak-ward to Esau in-find-
+# you/your(pl)”)
+# ‹אֹתוֹ› (“obj-marker-him/its”)
 # "[EN-AID] And he commanded also the second, also the third, also all who
 # walked behind the droves, saying: According to this word shall you speak
 # to Esau when you find him."
 m.step("Gen.32.20")
-# ‹כַּדָּבָר הַזֶּה תְּדַבְּרוּן אֶל־עֵשָׂו בְּמֹצַאֲכֶם אֹתוֹ› (“like-
-# word/thing the-this speak-ward to Esau in-find-you/your(pl) obj-marker-
-# him/its”) — Jacob speaks a demand — LET?: tedabrun(all-the-walk/go, to-
-# Esau)
+# ‹כַּדָּבָר הַזֶּה תְּדַבְּרוּן› (“like-word/thing the-this speak-ward”)
+# ‹אֶל־עֵשָׂו בְּמֹצַאֲכֶם אֹתוֹ› (“to Esau in-find-you/your(pl) obj-marker-
+# him/its”)
+# — Jacob speaks a demand — LET?: tedabrun(all-the-walk/go, to-Esau)
 m.declare("yaaqov", "LET?",
           "tedabrun(kol_ha_holkhim, el_esav)")
 
 # -------------------------- Gen.32.21 · THE_ATONEMENT_VERB -----------------
-# וַאֲמַרְתֶּם גַּם הִנֵּה עַבְדְּךָ יַעֲקֹב אַחֲרֵינוּ כִּי־אָמַר
-# אֲכַפְּרָה פָנָיו בַּמִּנְחָה הַהֹלֶכֶת לְפָנָי וְאַחֲרֵי־כֵן אֶרְאֶה
-# פָנָיו אוּלַי יִשָּׂא פָנָי
+# ‹וַאֲמַרְתֶּם גַּם הִנֵּה› (“and-say also behold”)
+# ‹עַבְדְּךָ יַעֲקֹב אַחֲרֵינוּ› (“servant-you/your Jacob after-us/our”)
+# ‹כִּי־אָמַר אֲכַפְּרָה פָנָיו› (“that say atone face-him/its”)
+# ‹בַּמִּנְחָה הַהֹלֶכֶת לְפָנָי› (“in-grain-offering the-walk/go to-face-
+# me/my”)
+# ‹וְאַחֲרֵי־כֵן אֶרְאֶה פָנָיו› (“and-after so see face-him/its”)
+# ‹אוּלַי יִשָּׂא פָנָי› (“if-not lift/carry face-me/my”)
 # "[EN-AID] And you shall say: Also, behold, your servant Jacob is behind
 # us. For he said: Let me cover his face with the gift that walks before my
 # face; and afterwards I will see his face — perhaps he will lift my face."
 m.step("Gen.32.21")
-# ‹אֲכַפְּרָה פָנָיו בַּמִּנְחָה הַהֹלֶכֶת לְפָנָי› (“atone face-him/its in-
-# grain-offering the-walk/go to-face-me/my”) — fact holds: atone-fanav-
-# come/bring-grain-offering(machshevet-Jacob)
+# ‹אֲכַפְּרָה פָנָיו בַּמִּנְחָה› (“atone face-him/its in-grain-offering”)
+# ‹הַהֹלֶכֶת לְפָנָי› (“the-walk/go to-face-me/my”)
+# — fact holds: atone-fanav-come/bring-grain-offering(machshevet-Jacob)
 m.fact("akhapra_fanav_ba_mincha(machshevet_yaaqov)")
 
 # -------------------------- Gen.32.22 · THE_WRONG_SUBJECT_PASSES -----------
-# וַתַּעֲבֹר הַמִּנְחָה עַל־פָּנָיו וְהוּא לָן בַּלַּיְלָה־הַהוּא
-# בַּמַּחֲנֶה
+# ‹וַתַּעֲבֹר הַמִּנְחָה עַל־פָּנָיו› (“and-pass-over the-grain-offering
+# over face-him/its”)
+# ‹וְהוּא לָן בַּלַּיְלָה־הַהוּא› (“and-he/it stop in-night that”)
+# ‹בַּמַּחֲנֶה› (“in-camp”)
 # "[EN-AID] And the gift passed over before his face; and he lodged that
 # night in the camp."
 m.step("Gen.32.22")
 # ‹וַתַּעֲבֹר הַמִּנְחָה עַל־פָּנָיו› (“and-pass-over the-grain-offering
-# over face-him/its”) — fact holds: and-pass-over-the-grain-offering-over-
-# panav(that-stop-come/bring-camp)
+# over face-him/its”)
+# — fact holds: and-pass-over-the-grain-offering-over-panav(that-stop-
+# come/bring-camp)
 m.fact("va_taavor_ha_mincha_al_panav(hu_lan_ba_machane)")
 
 # -------------------------- Gen.32.23 · THE_NIGHT_CROSSING -----------------
-# וַיָּקָם בַּלַּיְלָה הוּא וַיִּקַּח אֶת־שְׁתֵּי נָשָׁיו וְאֶת־שְׁתֵּי
-# שִׁפְחֹתָיו וְאֶת־אַחַד עָשָׂר יְלָדָיו וַיַּעֲבֹר אֵת מַעֲבַר יַבֹּק
+# ‹וַיָּקָם בַּלַּיְלָה הוּא› (“and-arise in-night he/it”)
+# ‹וַיִּקַּח אֶת־שְׁתֵּי נָשָׁיו› (“and-take obj-marker two woman-him/its”)
+# ‹וְאֶת־שְׁתֵּי שִׁפְחֹתָיו וְאֶת־אַחַד› (“and-obj-marker two female-slave-
+# him/its and-obj-marker one”)
+# ‹עָשָׂר יְלָדָיו וַיַּעֲבֹר› (“-teen child-him/its and-pass-over”)
+# ‹אֵת מַעֲבַר יַבֹּק› (“obj-marker crossing-place Jabbok”)
 # "[EN-AID] And he rose that night and took his two wives and his two maids
 # and his eleven children, and crossed the ford of the Jabbok."
 m.step("Gen.32.23")
-# ‹וַיַּעֲבֹר אֵת מַעֲבַר יַבֹּק› (“and-pass-over obj-marker crossing-place
-# Jabbok”) — fact holds: and-pass-over-obj-marker-crossing-place-
-# Jabbok(night, one--teen-yeladav)
+# ‹וַיַּעֲבֹר אֵת מַעֲבַר› (“and-pass-over obj-marker crossing-place”)
+# ‹יַבֹּק› (“Jabbok”)
+# — fact holds: and-pass-over-obj-marker-crossing-place-Jabbok(night, one--
+# teen-yeladav)
 m.fact("va_yaavor_et_maavar_yaboq(ba_layla, achad_asar_yeladav)")
 
 # -------------------------- Gen.32.24 · THE_FERRYING -----------------------
-# וַיִּקָּחֵם וַיַּעֲבִרֵם אֶת־הַנָּחַל וַיַּעֲבֵר אֶת־אֲשֶׁר־לוֹ
+# ‹וַיִּקָּחֵם וַיַּעֲבִרֵם אֶת־הַנָּחַל› (“and-take-them/their and-pass-
+# over-them/their obj-marker the-river”)
+# ‹וַיַּעֲבֵר אֶת־אֲשֶׁר־לוֹ› (“and-pass-over obj-marker which to-him/its”)
 # "[EN-AID] And he took them and crossed them over the stream, and crossed
 # over what was his."
 m.step("Gen.32.24")
 # ‹וַיִּקָּחֵם וַיַּעֲבִרֵם אֶת־הַנָּחַל› (“and-take-them/their and-pass-
-# over-them/their obj-marker the-river”) — fact holds: and-yaavirem-obj-
-# marker-the-river(all-which-not)
+# over-them/their obj-marker the-river”)
+# — fact holds: and-yaavirem-obj-marker-the-river(all-which-not)
 m.fact("va_yaavirem_et_ha_nachal(kol_asher_lo)")
 
 # -------------------------- Gen.32.25 · THE_ALONE_AND_THE_WRESTLE ----------
-# וַיִּוָּתֵר יַעֲקֹב לְבַדּוֹ וַיֵּאָבֵק אִישׁ עִמּוֹ עַד עֲלוֹת הַשָּׁחַר
+# ‹וַיִּוָּתֵר יַעֲקֹב לְבַדּוֹ› (“and-jut-over Jacob to-separation-
+# him/its”)
+# ‹וַיֵּאָבֵק אִישׁ עִמּוֹ› (“and-bedust man with-him/its”)
+# ‹עַד עֲלוֹת הַשָּׁחַר› (“until go-up the-dawn”)
 # "[EN-AID] And Jacob was left alone; and a man wrestled with him until the
 # rising of the dawn."
 m.step("Gen.32.25")
-# ‹וַיֵּאָבֵק אִישׁ עִמּוֹ עַד עֲלוֹת הַשָּׁחַר› (“and-bedust man with-
-# him/its until go-up the-dawn”) — fact holds: and-bedust-man-imo(Jacob-
-# alone, until-go-up-the-dawn)
+# ‹וַיֵּאָבֵק אִישׁ עִמּוֹ› (“and-bedust man with-him/its”)
+# ‹עַד עֲלוֹת הַשָּׁחַר› (“until go-up the-dawn”)
+# — fact holds: and-bedust-man-imo(Jacob-alone, until-go-up-the-dawn)
 m.fact("va_yeaveq_ish_imo(yaaqov_levado, ad_alot_ha_shachar)")
 # witness-tier presupposed read: ignorance_stated_then_decided_by_a_verb on
 # who_prevailed — read, not installed
@@ -338,25 +431,33 @@ m.witness_read("who_prevailed", "ignorance_stated_then_decided_by_a_verb",
                 cites=["Bereshit Rabbah 77:3"])
 
 # -------------------------- Gen.32.26 · THE_TOUCH --------------------------
-# וַיַּרְא כִּי לֹא יָכֹל לוֹ וַיִּגַּע בְּכַף־יְרֵכוֹ וַתֵּקַע כַּף־יֶרֶךְ
-# יַעֲקֹב בְּהֵאָבְקוֹ עִמּוֹ
+# ‹וַיַּרְא כִּי לֹא› (“and-see that not”)
+# ‹יָכֹל לוֹ וַיִּגַּע› (“be-able to-him/its and-touch”)
+# ‹בְּכַף־יְרֵכוֹ וַתֵּקַע כַּף־יֶרֶךְ› (“in-palm-of-hand thigh-him/its and-
+# sever-oneself palm-of-hand thigh”)
+# ‹יַעֲקֹב בְּהֵאָבְקוֹ עִמּוֹ› (“Jacob in-bedust-him/its with-him/its”)
 # "[EN-AID] And he saw that he could not prevail against him, and he touched
 # the socket of his thigh; and the socket of Jacob's thigh was wrenched as
 # he wrestled with him."
 m.step("Gen.32.26")
-# ‹וַתֵּקַע כַּף־יֶרֶךְ יַעֲקֹב בְּהֵאָבְקוֹ עִמּוֹ› (“and-sever-oneself
-# palm-of-hand thigh Jacob in-bedust-him/its with-him/its”) — fact holds:
-# and-touch-in-palm-of-hand-yerekho(and-sever-oneself, in-heavqo)
+# ‹וַתֵּקַע כַּף־יֶרֶךְ יַעֲקֹב› (“and-sever-oneself palm-of-hand thigh
+# Jacob”)
+# ‹בְּהֵאָבְקוֹ עִמּוֹ› (“in-bedust-him/its with-him/its”)
+# — fact holds: and-touch-in-palm-of-hand-yerekho(and-sever-oneself, in-
+# heavqo)
 m.fact("va_yiga_be_khaf_yerekho(va_teqa, be_heavqo)")
 
 # -------------------------- Gen.32.27 · THE_WRESTLERS_SEND_ME --------------
-# וַיֹּאמֶר שַׁלְּחֵנִי כִּי עָלָה הַשָּׁחַר וַיֹּאמֶר לֹא אֲשַׁלֵּחֲךָ כִּי
-# אִם־בֵּרַכְתָּנִי
+# ‹וַיֹּאמֶר שַׁלְּחֵנִי כִּי› (“and-say send-me/my that”)
+# ‹עָלָה הַשָּׁחַר וַיֹּאמֶר› (“go-up the-dawn and-say”)
+# ‹לֹא אֲשַׁלֵּחֲךָ כִּי› (“not send-you/your very-widely-used-as-a-relati”)
+# ‹אִם־בֵּרַכְתָּנִי› (“as-demonstrative bless-me/my”)
 # "[EN-AID] And he said: Send me away, for the dawn has risen. And he said:
 # I will not send you away unless you have blessed me."
 m.step("Gen.32.27")
-# ‹שַׁלְּחֵנִי כִּי עָלָה הַשָּׁחַר› (“send-me/my that go-up the-dawn”) —
-# the-man speaks a demand — LET: shalcheni(Jacob)
+# ‹שַׁלְּחֵנִי כִּי עָלָה› (“send-me/my that go-up”)
+# ‹הַשָּׁחַר› (“the-dawn”)
+# — the-man speaks a demand — LET: shalcheni(Jacob)
 m.declare("ha_ish", "LET",
           "shalcheni(yaaqov)")
 # witness-tier presupposed read:
@@ -366,23 +467,29 @@ m.witness_read("release_me", "precedence_table_and_a_penalty_in_the_angels_mouth
                 cites=["Bereshit Rabbah 78:1", "Bereshit Rabbah 78:2"])
 
 # -------------------------- Gen.32.28 · THE_NAME_SURRENDERED ---------------
-# וַיֹּאמֶר אֵלָיו מַה־שְּׁמֶךָ וַיֹּאמֶר יַעֲקֹב
+# ‹וַיֹּאמֶר אֵלָיו מַה־שְּׁמֶךָ› (“and-say to-him/its what name-you/your”)
+# ‹וַיֹּאמֶר יַעֲקֹב› (“and-say Jacob”)
 # "[EN-AID] And he said to him: What is your name? And he said: Jacob."
 m.step("Gen.32.28")
-# ‹מַה־שְּׁמֶךָ וַיֹּאמֶר יַעֲקֹב› (“what name-you/your and-say Jacob”) —
-# fact holds: what-shemekha-and-say-Jacob(the-man-shoel)
+# ‹מַה־שְּׁמֶךָ וַיֹּאמֶר יַעֲקֹב› (“what name-you/your and-say Jacob”)
+# — fact holds: what-shemekha-and-say-Jacob(the-man-shoel)
 m.fact("ma_shemekha_va_yomer_yaaqov(ha_ish_shoel)")
 
 # -------------------------- Gen.32.29 · THE_DECREE_THAT_WRITES_NOTHING -----
-# וַיֹּאמֶר לֹא יַעֲקֹב יֵאָמֵר עוֹד שִׁמְךָ כִּי אִם־יִשְׂרָאֵל
-# כִּי־שָׂרִיתָ עִם־אֱלֹהִים וְעִם־אֲנָשִׁים וַתּוּכָל
+# ‹וַיֹּאמֶר לֹא יַעֲקֹב› (“and-say not Jacob”)
+# ‹יֵאָמֵר עוֹד שִׁמְךָ› (“say still/again name-you/your”)
+# ‹כִּי אִם־יִשְׂרָאֵל כִּי־שָׂרִיתָ› (“very-widely-used-as-a-relati as-
+# demonstrative Israel that prevail”)
+# ‹עִם־אֱלֹהִים וְעִם־אֲנָשִׁים וַתּוּכָל› (“with God and-with man and-be-
+# able”)
 # "[EN-AID] And he said: No more Jacob shall your name be said, but Israel;
 # for you have striven with God and with men, and have prevailed."
 m.step("Gen.32.29")
-# ‹לֹא יַעֲקֹב יֵאָמֵר עוֹד שִׁמְךָ כִּי אִם־יִשְׂרָאֵל› (“not Jacob say
-# still/again name-you/your very-widely-used-as-a-relati as-demonstrative
-# Israel”) — fact holds: not-Jacob-say-still/again-that-with-Israel(decree-
-# fact)
+# ‹לֹא יַעֲקֹב יֵאָמֵר› (“not Jacob say”)
+# ‹עוֹד שִׁמְךָ כִּי› (“still/again name-you/your very-widely-used-as-a-
+# relati”)
+# ‹אִם־יִשְׂרָאֵל› (“as-demonstrative Israel”)
+# — fact holds: not-Jacob-say-still/again-that-with-Israel(decree-fact)
 m.fact("lo_yaaqov_yeamer_od_ki_im_yisrael(decree_fact)")
 # witness-tier presupposed read: etymology_refused_by_the_translation on
 # the_new_name — read, not installed
@@ -390,13 +497,17 @@ m.witness_read("the_new_name", "etymology_refused_by_the_translation",
                 cites=["Onkelos Genesis 32:29"])
 
 # -------------------------- Gen.32.30 · THE_NAME_REFUSED -------------------
-# וַיִּשְׁאַל יַעֲקֹב וַיֹּאמֶר הַגִּידָה־נָּא שְׁמֶךָ וַיֹּאמֶר לָמָּה זֶּה
-# תִּשְׁאַל לִשְׁמִי וַיְבָרֶךְ אֹתוֹ שָׁם
+# ‹וַיִּשְׁאַל יַעֲקֹב וַיֹּאמֶר› (“and-inquire Jacob and-say”)
+# ‹הַגִּידָה־נָּא שְׁמֶךָ וַיֹּאמֶר› (“tell-ward please name-you/your and-
+# say”)
+# ‹לָמָּה זֶּה תִּשְׁאַל› (“to-what this inquire”)
+# ‹לִשְׁמִי וַיְבָרֶךְ אֹתוֹ› (“to-name-me/my and-bless obj-marker-him/its”)
+# ‹שָׁם› (“there”)
 # "[EN-AID] And Jacob asked and said: Tell, please, your name. And he said:
 # Why is it that you ask my name? And he blessed him there."
 m.step("Gen.32.30")
-# ‹הַגִּידָה־נָּא שְׁמֶךָ› (“tell-ward please name-you/your”) — Jacob speaks
-# a demand — LET: hagida(the-man, obj-marker-shimkha)
+# ‹הַגִּידָה־נָּא שְׁמֶךָ› (“tell-ward please name-you/your”)
+# — Jacob speaks a demand — LET: hagida(the-man, obj-marker-shimkha)
 m.declare("yaaqov", "LET",
           "hagida(ha_ish, et_shimkha)")
 # witness-tier presupposed read: a_class_with_no_fixed_names on
@@ -405,25 +516,31 @@ m.witness_read("why_ask_my_name", "a_class_with_no_fixed_names",
                 cites=["Bereshit Rabbah 78:4"])
 
 # -------------------------- Gen.32.31 · THE_FACE_AND_THE_WRONG_RESCUE ------
-# וַיִּקְרָא יַעֲקֹב שֵׁם הַמָּקוֹם פְּנִיאֵל כִּי־רָאִיתִי אֱלֹהִים פָּנִים
-# אֶל־פָּנִים וַתִּנָּצֵל נַפְשִׁי
+# ‹וַיִּקְרָא יַעֲקֹב שֵׁם› (“and-call Jacob name”)
+# ‹הַמָּקוֹם פְּנִיאֵל כִּי־רָאִיתִי› (“the-place Peniel that see”)
+# ‹אֱלֹהִים פָּנִים אֶל־פָּנִים› (“God face to face”)
+# ‹וַתִּנָּצֵל נַפְשִׁי› (“and-snatch-away living-being-me/my”)
 # "[EN-AID] And Jacob called the name of the place Peniel: for I have seen
 # God face to face, and my soul was delivered."
 m.step("Gen.32.31")
-# ‹וַיִּקְרָא יַעֲקֹב שֵׁם הַמָּקוֹם פְּנִיאֵל› (“and-call Jacob name the-
-# place Peniel”) — the world gains: place-Peniel
+# ‹וַיִּקְרָא יַעֲקֹב שֵׁם› (“and-call Jacob name”)
+# ‹הַמָּקוֹם פְּנִיאֵל› (“the-place Peniel”)
+# — the world gains: place-Peniel
 m.install("maqom_peniel")
-# ‹פְּנִיאֵל› (“Peniel”) — named: place-Peniel := Peniel
+# ‹פְּנִיאֵל› (“Peniel”)
+# — named: place-Peniel := Peniel
 m.name("maqom_peniel", "peniel")
 
 # -------------------------- Gen.32.32 · THE_SUNRISE_AND_THE_LIMP -----------
-# וַיִּזְרַח־לוֹ הַשֶּׁמֶשׁ כַּאֲשֶׁר עָבַר אֶת־פְּנוּאֵל וְהוּא צֹלֵעַ
-# עַל־יְרֵכוֹ
+# ‹וַיִּזְרַח־לוֹ הַשֶּׁמֶשׁ כַּאֲשֶׁר› (“and-irradiate to-him/its the-sun
+# like-as/which”)
+# ‹עָבַר אֶת־פְּנוּאֵל וְהוּא› (“pass-over obj-marker Peniel and-he/it”)
+# ‹צֹלֵעַ עַל־יְרֵכוֹ› (“limp over thigh-him/its”)
 # "[EN-AID] And the sun rose upon him as he passed Penuel, and he was
 # limping on his thigh."
 m.step("Gen.32.32")
-# ‹וַיִּזְרַח־לוֹ הַשֶּׁמֶשׁ› (“and-irradiate to-him/its the-sun”) — fact
-# holds: and-irradiate-the-sun-and-that-limp(over-obj-marker-Peniel)
+# ‹וַיִּזְרַח־לוֹ הַשֶּׁמֶשׁ› (“and-irradiate to-him/its the-sun”)
+# — fact holds: and-irradiate-the-sun-and-that-limp(over-obj-marker-Peniel)
 m.fact("va_yizrach_ha_shemesh_ve_hu_tzolea(over_et_penuel)")
 # witness-tier presupposed read: borrowed_hours_repaid_with_interest on
 # the_sun_rose_for_him — read, not installed
@@ -431,16 +548,19 @@ m.witness_read("the_sun_rose_for_him", "borrowed_hours_repaid_with_interest",
                 cites=["Bereshit Rabbah 78:5", "Bereshit Rabbah 68:10"])
 
 # -------------------------- Gen.32.33 · THE_FIRST_NARRATOR_LAW -------------
-# עַל־כֵּן לֹא־יֹאכְלוּ בְנֵי־יִשְׂרָאֵל אֶת־גִּיד הַנָּשֶׁה אֲשֶׁר עַל־כַּף
-# הַיָּרֵךְ עַד הַיּוֹם הַזֶּה כִּי נָגַע בְּכַף־יֶרֶךְ יַעֲקֹב בְּגִיד
-# הַנָּשֶׁה
+# ‹עַל־כֵּן לֹא־יֹאכְלוּ בְנֵי־יִשְׂרָאֵל› (“over so not eat son Israel”)
+# ‹אֶת־גִּיד הַנָּשֶׁה אֲשֶׁר› (“obj-marker thong the-rheumatic which”)
+# ‹עַל־כַּף הַיָּרֵךְ עַד› (“over palm-of-hand the-thigh until”)
+# ‹הַיּוֹם הַזֶּה כִּי› (“the-day the-this that”)
+# ‹נָגַע בְּכַף־יֶרֶךְ יַעֲקֹב› (“touch in-palm-of-hand thigh Jacob”)
+# ‹בְּגִיד הַנָּשֶׁה› (“in-thong the-rheumatic”)
 # "[EN-AID] Therefore the children of Israel eat not the sinew of the thigh-
 # vein which is upon the socket of the thigh, to this day; for he touched
 # the socket of Jacob's thigh in the sinew of the thigh-vein."
 m.step("Gen.32.33")
-# ‹עַל־כֵּן לֹא־יֹאכְלוּ בְנֵי־יִשְׂרָאֵל אֶת־גִּיד הַנָּשֶׁה› (“over so not
-# eat son Israel obj-marker thong the-rheumatic”) — pattern recorded: not-
-# eat-bene-Israel-obj-marker-thong-the-rheumatic
+# ‹עַל־כֵּן לֹא־יֹאכְלוּ בְנֵי־יִשְׂרָאֵל› (“over so not eat son Israel”)
+# ‹אֶת־גִּיד הַנָּשֶׁה› (“obj-marker thong the-rheumatic”)
+# — pattern recorded: not-eat-bene-Israel-obj-marker-thong-the-rheumatic
 m.pattern("lo_yokhlu_bene_yisrael_et_gid_ha_nashe")
 # witness-tier presupposed read:
 # first_food_prohibition_with_an_admitted_self_stringency on the_sinew —

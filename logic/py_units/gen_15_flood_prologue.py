@@ -14,16 +14,18 @@ from machine import Machine
 m = Machine("gen_15_flood_prologue")
 
 # -------------------------- Gen.6.1 · MULTIPLYING_AND_DAUGHTERS ------------
-# וַיְהִי כִּי־הֵחֵל הָאָדָם לָרֹב עַל־פְּנֵי הָאֲדָמָה וּבָנוֹת יֻלְּדוּ
-# לָהֶם
+# ‹וַיְהִי כִּי־הֵחֵל הָאָדָם› (“and-it-was when began the-human”)
+# ‹לָרֹב עַל־פְּנֵי הָאֲדָמָה› (“to-multiply upon face-of the-ground”)
+# ‹וּבָנוֹת יֻלְּדוּ לָהֶם› (“and-daughters were-born to-them”)
 # "And it came to pass, when men began to multiply on the face of the earth,
 # and daughters were born unto them,"
 m.step("Gen.6.1")
-# ‹כִּי־הֵחֵל הָאָדָם לָרֹב עַל־פְּנֵי הָאֲדָמָה› (“when began the-human to-
-# multiply upon face-of the-ground”) — event: multiply — agent the-human
+# ‹כִּי־הֵחֵל הָאָדָם לָרֹב› (“when began the-human to-multiply”)
+# ‹עַל־פְּנֵי הָאֲדָמָה› (“upon face-of the-ground”)
+# — event: multiply — agent the-human
 m.event("multiply", agent="ha_adam")
-# ‹וּבָנוֹת יֻלְּדוּ לָהֶם› (“and-daughters were-born to-them”) — event:
-# born — theme daughters
+# ‹וּבָנוֹת יֻלְּדוּ לָהֶם› (“and-daughters were-born to-them”)
+# — event: born — theme daughters
 m.event("born", themes=["banot"])
 # reads without prior install (flag, not fix): human
 m.presupposed("adam")
@@ -32,29 +34,36 @@ m.witness_state("larov", "propagation_or_strife",
                 cites=["Bava Batra 16b:6", "Bereshit Rabbah 26:4"])
 
 # -------------------------- Gen.6.2 · STOLEN_FORMULA_THE_TAKING ------------
-# וַיִּרְאוּ בְנֵי־הָאֱלֹהִים אֶת־בְּנוֹת הָאָדָם כִּי טֹבֹת הֵנָּה
-# וַיִּקְחוּ לָהֶם נָשִׁים מִכֹּל אֲשֶׁר בָּחָרוּ
+# ‹וַיִּרְאוּ בְנֵי־הָאֱלֹהִים אֶת־בְּנוֹת› (“and-they-saw sons-of the-God
+# obj-marker daughters-of”)
+# ‹הָאָדָם כִּי טֹבֹת› (“the-human that good”)
+# ‹הֵנָּה וַיִּקְחוּ לָהֶם› (“they and-they-took for-themselves”)
+# ‹נָשִׁים מִכֹּל אֲשֶׁר› (“wives from-all that”)
+# ‹בָּחָרוּ› (“they-chose”)
 # "that the sons of God saw the daughters of men that they were fair; and
 # they took them wives, whomsoever they chose."
 m.step("Gen.6.2")
-# ‹וַיִּרְאוּ בְנֵי־הָאֱלֹהִים אֶת־בְּנוֹת הָאָדָם› (“and-they-saw sons-of
-# the-God obj-marker daughters-of the-human”) — event: see — agent sons-of-
-# the-God; theme daughters-of-the-human
+# ‹וַיִּרְאוּ בְנֵי־הָאֱלֹהִים אֶת־בְּנוֹת› (“and-they-saw sons-of the-God
+# obj-marker daughters-of”)
+# ‹הָאָדָם› (“the-human”)
+# — event: see — agent sons-of-the-God; theme daughters-of-the-human
 m.event("see", agent="bnei_ha_elohim", themes=["benot_ha_adam"])
-# ‹כִּי טֹבֹת הֵנָּה› (“that good they”) — test PASS — oracle-word good, on
-# daughters-of-the-human
+# ‹כִּי טֹבֹת הֵנָּה› (“that good they”)
+# — test PASS — oracle-word good, on daughters-of-the-human
 m.test("PASS", "tovot", "benot_ha_adam")
-# ‹וַיִּרְאוּ … כִּי טֹבֹת … וַיִּקְחוּ› (“and-they-saw … that good … and-
-# they-took”) — spec-delta — spec said and-He-saw God when-good — the Maker
-# inspects His work and verdicts it good (the frozen week units), delivery
-# says and-they-saw sons-of-the-God obj-marker·et-daughters-of the-human
-# when good — creature subjects, human daughters as object, and a TAKING as
-# the consequence (6:2)
+# ‹וַיִּרְאוּ … כִּי טֹבֹת› (“and-they-saw … that good”)
+# ‹… וַיִּקְחוּ› (“and-they-took”)
+# — spec-delta — spec said and-He-saw God when-good — the Maker inspects His
+# work and verdicts it good (the frozen week units), delivery says and-they-
+# saw sons-of-the-God obj-marker·et-daughters-of the-human when good —
+# creature subjects, human daughters as object, and a TAKING as the
+# consequence (6:2)
 m.spec_delta("va-yar Elohim ki-tov — the Maker inspects His work and verdicts it good (the frozen week units)",
              "va-yiru bnei-ha-elohim et-bnot ha-adam ki tovot — creature subjects, human daughters as object, and a TAKING as the consequence (6:2)")
-# ‹וַיִּקְחוּ לָהֶם נָשִׁים מִכֹּל אֲשֶׁר בָּחָרוּ› (“and-they-took for-
-# themselves wives from-all that they-chose”) — event: take — agent sons-of-
-# the-God; theme wives-from-all-that-they-chose
+# ‹וַיִּקְחוּ לָהֶם נָשִׁים› (“and-they-took for-themselves wives”)
+# ‹מִכֹּל אֲשֶׁר בָּחָרוּ› (“from-all that they-chose”)
+# — event: take — agent sons-of-the-God; theme wives-from-all-that-they-
+# chose
 m.event("take", agent="bnei_ha_elohim", themes=["nashim_mi_kol_asher_bacharu"])
 # witness-grounded state (its own tier): identity_machloket_one_side_cursing
 # on benei_ha_elohim
@@ -62,18 +71,23 @@ m.witness_state("benei_ha_elohim", "identity_machloket_one_side_cursing",
                 cites=["Bereshit Rabbah 26:5", "Yoma 67b:7"])
 
 # -------------------------- Gen.6.3 · DECREE_120_YEARS ---------------------
-# וַיֹּאמֶר יְהוָה לֹא־יָדוֹן רוּחִי בָאָדָם לְעֹלָם בְּשַׁגַּם הוּא בָשָׂר
-# וְהָיוּ יָמָיו מֵאָה וְעֶשְׂרִים שָׁנָה
+# ‹וַיֹּאמֶר יְהוָה לֹא־יָדוֹן› (“and-He-said YHWH not shall-abide-judge”)
+# ‹רוּחִי בָאָדָם לְעֹלָם› (“My-spirit in-man forever”)
+# ‹בְּשַׁגַּם הוּא בָשָׂר› (“in-that-also he flesh”)
+# ‹וְהָיוּ יָמָיו מֵאָה› (“and-shall-be his-days hundred”)
+# ‹וְעֶשְׂרִים שָׁנָה› (“and-twenty year”)
 # "And the LORD said: 'My spirit shall not abide in man for ever, for that
 # he also is flesh; therefore shall his days be a hundred and twenty
 # years.'"
 m.step("Gen.6.3")
-# ‹וַיֹּאמֶר יְהוָה› (“and-He-said YHWH”) — event: say — agent the-LORD
+# ‹וַיֹּאמֶר יְהוָה› (“and-He-said YHWH”)
+# — event: say — agent the-LORD
 m.event("say", agent="YHWH")
-# ‹לֹא־יָדוֹן רוּחִי בָאָדָם לְעֹלָם … וְהָיוּ יָמָיו מֵאָה וְעֶשְׂרִים
-# שָׁנָה› (“not shall-abide-judge My-spirit in-man forever … and-shall-be
-# his-days hundred and-twenty year”) — fact holds: not-shall-abide-judge-My-
-# spirit-and-human-to-forever; and-shall-be-his-days-hundred-and-twenty-year
+# ‹לֹא־יָדוֹן רוּחִי בָאָדָם› (“not shall-abide-judge My-spirit in-man”)
+# ‹לְעֹלָם … וְהָיוּ יָמָיו› (“forever … and-shall-be his-days”)
+# ‹מֵאָה וְעֶשְׂרִים שָׁנָה› (“hundred and-twenty year”)
+# — fact holds: not-shall-abide-judge-My-spirit-and-human-to-forever; and-
+# shall-be-his-days-hundred-and-twenty-year
 m.fact("lo_yadon_ruchi_va_adam_le_olam",
        "ve_hayu_yamav_meah_ve_esrim_shanah")
 # witness-tier presupposed read: lawgiver_in_cipher on beshagam_clause —
@@ -90,41 +104,53 @@ m.witness_read("hundred_twenty_years", "grace_period_with_warning_function",
                 cites=["Mekhilta DeRabbi Yishmael, Tractate Shirah 5:8", "Sifrei Devarim 43:31", "Bereshit Rabbah 30:7"])
 
 # -------------------------- Gen.6.4 · NEPHILIM_PARENTHESIS -----------------
-# הַנְּפִלִים הָיוּ בָאָרֶץ בַּיָּמִים הָהֵם וְגַם אַחֲרֵי־כֵן אֲשֶׁר
-# יָבֹאוּ בְּנֵי הָאֱלֹהִים אֶל־בְּנוֹת הָאָדָם וְיָלְדוּ לָהֶם הֵמָּה
-# הַגִּבֹּרִים אֲשֶׁר מֵעוֹלָם אַנְשֵׁי הַשֵּׁם
+# ‹הַנְּפִלִים הָיוּ בָאָרֶץ› (“the-Nephilim were in-the-earth”)
+# ‹בַּיָּמִים הָהֵם וְגַם› (“in-days those and-also”)
+# ‹אַחֲרֵי־כֵן אֲשֶׁר יָבֹאוּ› (“after so when would-come”)
+# ‹בְּנֵי הָאֱלֹהִים אֶל־בְּנוֹת› (“sons-of the-God to daughters-of”)
+# ‹הָאָדָם וְיָלְדוּ לָהֶם› (“the-human and-they-bore to-them”)
+# ‹הֵמָּה הַגִּבֹּרִים אֲשֶׁר› (“they the-mighty when”)
+# ‹מֵעוֹלָם אַנְשֵׁי הַשֵּׁם› (“from-of-old men-of the-name”)
 # "The Nephilim were in the earth in those days, and also after that, when
 # the sons of God came in unto the daughters of men, and they bore children
 # to them; the same were the mighty men that were of old, the men of
 # renown."
 m.step("Gen.6.4")
-# ‹הַנְּפִלִים הָיוּ בָאָרֶץ … הֵמָּה הַגִּבֹּרִים אֲשֶׁר מֵעוֹלָם אַנְשֵׁי
-# הַשֵּׁם› (“the-Nephilim were in-the-earth … they the-mighty when from-of-
-# old men-of the-name”) — fact holds: the-Nephilim-shall-be-and-earth; men-
-# of-the-name-from-forever
+# ‹הַנְּפִלִים הָיוּ בָאָרֶץ› (“the-Nephilim were in-the-earth”)
+# ‹… הֵמָּה הַגִּבֹּרִים אֲשֶׁר› (“they the-mighty when”)
+# ‹מֵעוֹלָם אַנְשֵׁי הַשֵּׁם› (“from-of-old men-of the-name”)
+# — fact holds: the-Nephilim-shall-be-and-earth; men-of-the-name-from-
+# forever
 m.fact("ha_nefilim_hayu_va_aretz",
        "anshei_ha_shem_me_olam")
 
 # -------------------------- Gen.6.5 · INVERTED_INSPECTION_TOTAL_DIAGNOSIS --
-# וַיַּרְא יְהוָה כִּי רַבָּה רָעַת הָאָדָם בָּאָרֶץ וְכָל־יֵצֶר מַחְשְׁבֹת
-# לִבּוֹ רַק רַע כָּל־הַיּוֹם
+# ‹וַיַּרְא יְהוָה כִּי› (“and-He-saw YHWH that”)
+# ‹רַבָּה רָעַת הָאָדָם› (“great evil-of the-human”)
+# ‹בָּאָרֶץ וְכָל־יֵצֶר מַחְשְׁבֹת› (“in-the-earth and-every devising-of
+# thoughts-of”)
+# ‹לִבּוֹ רַק רַע› (“his-heart only evil”)
+# ‹כָּל־הַיּוֹם› (“all the-day”)
 # "And the LORD saw that the wickedness of man was great in the earth, and
 # that every imagination of the thoughts of his heart was only evil
 # continually."
 m.step("Gen.6.5")
-# ‹וַיַּרְא יְהוָה כִּי רַבָּה רָעַת הָאָדָם› (“and-He-saw YHWH that great
-# evil-of the-human”) — event: see — agent the-LORD; theme evil-of-the-human
+# ‹וַיַּרְא יְהוָה כִּי› (“and-He-saw YHWH that”)
+# ‹רַבָּה רָעַת הָאָדָם› (“great evil-of the-human”)
+# — event: see — agent the-LORD; theme evil-of-the-human
 m.event("see", agent="YHWH", themes=["raat_ha_adam"])
-# ‹וַיַּרְא … כִּי רַבָּה רָעַת› (“and-He-saw … that great evil-of”) — spec-
-# delta — spec said and-He-saw God obj-marker·et-all-that make and-behold
-# good very — He saw all He had made: very good (1:31, frozen day 6),
+# ‹וַיַּרְא … כִּי רַבָּה› (“and-He-saw … that great”)
+# ‹רָעַת› (“evil-of”)
+# — spec-delta — spec said and-He-saw God obj-marker·et-all-that make and-
+# behold good very — He saw all He had made: very good (1:31, frozen day 6),
 # delivery says and-He-saw the-LORD when great evil-of the-human — He saw:
 # GREAT was the EVIL bird-of man (6:5)
 m.spec_delta("va-yar Elohim et-kol-asher asah ve-hinneh tov meod — He saw all He had made: very good (1:31, frozen day 6)",
              "va-yar YHWH ki rabbah raat ha-adam — He saw: GREAT was the EVIL of man (6:5)")
-# ‹וְכָל־יֵצֶר מַחְשְׁבֹת לִבּוֹ רַק רַע כָּל־הַיּוֹם› (“and-every devising-
-# of thoughts-of his-heart only evil all the-day”) — fact holds: all-
-# devising-of-thoughts-His-heart-only-evil-all-the-day
+# ‹וְכָל־יֵצֶר מַחְשְׁבֹת לִבּוֹ› (“and-every devising-of thoughts-of his-
+# heart”)
+# ‹רַק רַע כָּל־הַיּוֹם› (“only evil all the-day”)
+# — fact holds: all-devising-of-thoughts-His-heart-only-evil-all-the-day
 m.fact("kol_yetzer_machshevot_libo_raq_ra_kol_ha_yom")
 # witness-tier presupposed read: persistent_adversary_process on
 # yetzer_clause — read, not installed
@@ -136,16 +162,19 @@ m.witness_read("chamas_trigger", "theft_engineered_below_jurisdiction",
                 cites=["Jerusalem Talmud Bava Metzia 4:2:2", "Sanhedrin 108a:12"])
 
 # -------------------------- Gen.6.6 · REGRET_AND_GRIEF ---------------------
-# וַיִּנָּחֶם יְהוָה כִּי־עָשָׂה אֶת־הָאָדָם בָּאָרֶץ וַיִּתְעַצֵּב
-# אֶל־לִבּוֹ
+# ‹וַיִּנָּחֶם יְהוָה כִּי־עָשָׂה› (“and-He-regretted YHWH that He-made”)
+# ‹אֶת־הָאָדָם בָּאָרֶץ וַיִּתְעַצֵּב› (“obj-marker the-human in-the-earth
+# and-He-grieved”)
+# ‹אֶל־לִבּוֹ› (“to His-heart”)
 # "And it repented the LORD that He had made man on the earth, and it
 # grieved Him at His heart."
 m.step("Gen.6.6")
-# ‹וַיִּנָּחֶם יְהוָה כִּי־עָשָׂה אֶת־הָאָדָם› (“and-He-regretted YHWH that
-# He-made obj-marker the-human”) — event: regret — agent the-LORD
+# ‹וַיִּנָּחֶם יְהוָה כִּי־עָשָׂה› (“and-He-regretted YHWH that He-made”)
+# ‹אֶת־הָאָדָם› (“obj-marker the-human”)
+# — event: regret — agent the-LORD
 m.event("regret", agent="YHWH")
-# ‹וַיִּתְעַצֵּב אֶל־לִבּוֹ› (“and-He-grieved to His-heart”) — event: grieve
-# — agent the-LORD; theme His-heart
+# ‹וַיִּתְעַצֵּב אֶל־לִבּוֹ› (“and-He-grieved to His-heart”)
+# — event: grieve — agent the-LORD; theme His-heart
 m.event("grieve", agent="YHWH", themes=["libo"])
 # witness-grounded state (its own tier): polarity_dispute_regret_or_solace
 # on vayinachem
@@ -153,24 +182,32 @@ m.witness_state("vayinachem", "polarity_dispute_regret_or_solace",
                 cites=["Bereshit Rabbah 27:4", "Sanhedrin 108a:15", "Sifrei Devarim 326:1"])
 
 # -------------------------- Gen.6.7 · WIPE_RESOLVE_PUSHED ------------------
-# וַיֹּאמֶר יְהוָה אֶמְחֶה אֶת־הָאָדָם אֲשֶׁר־בָּרָאתִי מֵעַל פְּנֵי
-# הָאֲדָמָה מֵאָדָם עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף הַשָּׁמָיִם כִּי
-# נִחַמְתִּי כִּי עֲשִׂיתִם
+# ‹וַיֹּאמֶר יְהוָה אֶמְחֶה› (“and-He-said YHWH I-will-wipe”)
+# ‹אֶת־הָאָדָם אֲשֶׁר־בָּרָאתִי מֵעַל› (“obj-marker the-human whom I-created
+# from-upon”)
+# ‹פְּנֵי הָאֲדָמָה מֵאָדָם› (“face-of the-ground from-human”)
+# ‹עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף› (“to livestock to creeper and-to
+# bird-of”)
+# ‹הַשָּׁמָיִם כִּי נִחַמְתִּי› (“the-heavens for I-regret”)
+# ‹כִּי עֲשִׂיתִם› (“for I-made-them”)
 # "And the LORD said: 'I will blot out man whom I have created from the face
 # of the earth; both man, and beast, and creeping thing, and fowl of the
 # air; for it repenteth Me that I have made them.'"
 m.step("Gen.6.7")
-# ‹וַיֹּאמֶר יְהוָה› (“and-He-said YHWH”) — event: say — agent the-LORD
+# ‹וַיֹּאמֶר יְהוָה› (“and-He-said YHWH”)
+# — event: say — agent the-LORD
 m.event("say", agent="YHWH")
-# ‹אֶמְחֶה אֶת־הָאָדָם אֲשֶׁר־בָּרָאתִי מֵעַל פְּנֵי הָאֲדָמָה› (“I-will-
-# wipe obj-marker the-human whom I-created from-upon face-of the-ground”) —
-# the-LORD speaks a demand — CMD-US?: wipe(the-human, from-upon-face-of-the-
-# ground)
+# ‹אֶמְחֶה אֶת־הָאָדָם אֲשֶׁר־בָּרָאתִי› (“I-will-wipe obj-marker the-human
+# whom I-created”)
+# ‹מֵעַל פְּנֵי הָאֲדָמָה› (“from-upon face-of the-ground”)
+# — the-LORD speaks a demand — CMD-US?: wipe(the-human, from-upon-face-of-
+# the-ground)
 m.declare("YHWH", "CMD-US?",
           "machah(ha_adam, me_al_pnei_ha_adamah)")
-# ‹מֵאָדָם עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף הַשָּׁמָיִם› (“from-human to
-# livestock to creeper and-to bird-of the-heavens”) — fact holds: from-
-# human-to-livestock-to-creeper-and-to-bird-of-the-heavens
+# ‹מֵאָדָם עַד־בְּהֵמָה עַד־רֶמֶשׂ› (“from-human to livestock to creeper”)
+# ‹וְעַד־עוֹף הַשָּׁמָיִם› (“and-to bird-of the-heavens”)
+# — fact holds: from-human-to-livestock-to-creeper-and-to-bird-of-the-
+# heavens
 m.fact("me_adam_ad_behemah_ad_remes_ve_ad_of_ha_shamayim")
 # witness-tier presupposed read: animals_included_and_earth_strayed on
 # emcheh_scope — read, not installed
@@ -178,11 +215,13 @@ m.witness_read("emcheh_scope", "animals_included_and_earth_strayed",
                 cites=["Bereshit Rabbah 28:6", "Bereshit Rabbah 28:8", "Bereshit Rabbah 28:3"])
 
 # -------------------------- Gen.6.8 · FIVE_WORDS_FAVOR ---------------------
-# וְנֹחַ מָצָא חֵן בְּעֵינֵי יְהוָה
+# ‹וְנֹחַ מָצָא חֵן› (“and-Noach found favor”)
+# ‹בְּעֵינֵי יְהוָה› (“in-eyes-of YHWH”)
 # "But Noah found grace in the eyes of the LORD."
 m.step("Gen.6.8")
-# ‹וְנֹחַ מָצָא חֵן בְּעֵינֵי יְהוָה› (“and-Noach found favor in-eyes-of
-# YHWH”) — fact holds: Noach-found-favor-in-eyes-of-the-LORD
+# ‹וְנֹחַ מָצָא חֵן› (“and-Noach found favor”)
+# ‹בְּעֵינֵי יְהוָה› (“in-eyes-of YHWH”)
+# — fact holds: Noach-found-favor-in-eyes-of-the-LORD
 m.fact("noach_matza_chen_be_einei_YHWH")
 # witness-grounded state (its own tier): direction_grade_and_ground_disputed
 # on chen_found

@@ -14,15 +14,20 @@ from machine import Machine
 m = Machine("lev_27_vows_valuations")
 
 # -------------------------- Lev.27.1 · TREE_CLAIM --------------------------
-# וידבר יהוה … אל משה לאמר
-# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
-# claim from Hebrew arms. Lev 27:1."
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:1."
 m.step("Lev.27.1")
 
 # -------------------------- Lev.27.2 · ETNACHTA_SPLIT ----------------------
-# דבר אל בני ישראל ואמרת אלהם איש כי יפלא נדר … בערכך נפשת ליהוה
-# "[EN-AID] From top split: LEFT «דבר אל בני ישראל ואמרת אלהם איש כי יפלא
-# נדר» / RIGHT «בערכך נפשת ליהוה». Derive claim from Hebrew arms. Lev 27:2."
+# ‹דבר אל בני› (“speak to son”)
+# ‹ישראל ואמרת אלהם› (“Israel and-say to-them/their”)
+# ‹איש כי יפלא› (“man that perhaps-to-separate”)
+# ‹נדר … בערכך נפשת› (“promise … in-pile-you/your living-being”)
+# ‹ליהוה› (“to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:2."
 m.step("Lev.27.2")
 # witness-tier presupposed read:
 # the_valuer_valued_split_and_the_delay_import on
@@ -31,10 +36,13 @@ m.witness_read("ish_ki_yafli_neder_beerkecha", "the_valuer_valued_split_and_the_
                 cites=["Sifra, Bechukotai, Section 3 1", "Sifra, Bechukotai, Section 3 2", "Sifra, Bechukotai, Section 3 3", "Sifra, Bechukotai, Section 3 4", "Onkelos Lev 27:2"])
 
 # -------------------------- Lev.27.3 · ETNACHTA_SPLIT ----------------------
-# והיה ערכך הזכר מבן עשרים שנה ועד בן ששים שנה … והיה ערכך חמשים שקל כסף
-# בשקל הקדש
-# "[EN-AID] From top split: LEFT «והיה ערכך הזכר מבן עשרים שנה ועד בן ששים
-# שנה» / RIGHT «והיה ערכך חמשים שקל כסף בשקל הקדש». Derive claim from Hebrew
+# ‹והיה ערכך הזכר› (“and-be pile-you/your the-male”)
+# ‹מבן עשרים שנה› (“from-son twenty years”)
+# ‹ועד בן ששים› (“and-until son sixty”)
+# ‹שנה … והיה ערכך› (“years … and-be pile-you/your”)
+# ‹חמשים שקל כסף› (“fifty weight silver”)
+# ‹בשקל הקדש› (“in-weight the-holiness”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 27:3."
 m.step("Lev.27.3")
 # witness-tier presupposed read:
@@ -43,52 +51,69 @@ m.step("Lev.27.3")
 m.witness_read("vehayah_erkecha_hazachar", "the_standing_predicate_and_the_boundary_year_rule",
                 cites=["Sifra, Bechukotai, Section 3 5", "Sifra, Bechukotai, Section 3 6", "Sifra, Bechukotai, Section 3 7", "Sifra, Bechukotai, Section 3 8", "Sifra, Bechukotai, Section 3 9", "Sifra, Bechukotai, Section 3 10", "Sifra, Bechukotai, Section 3 11", "Sifra, Bechukotai, Section 3 12", "Onkelos Lev 27:3"])
 
-# -------------------------- Lev.27.4 · COND_ואם ----------------------------
-# ואם נקבה הוא … והיה ערכך שלשים שקל
-# "[EN-AID] From top split: LEFT «ואם נקבה הוא» / RIGHT «והיה ערכך שלשים
-# שקל». Derive claim from Hebrew arms. Lev 27:4."
+# -------------------------- Lev.27.4 · COND_ואם (“and-if”) -----------------
+# ‹ואם נקבה הוא› (“and-if female he/it”)
+# ‹… והיה ערכך שלשים› (“and-be pile-you/your thirty”)
+# ‹שקל› (“weight”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:4."
 m.step("Lev.27.4")
 
-# -------------------------- Lev.27.5 · COND_ואם ----------------------------
-# ואם מבן חמש שנים ועד בן עשרים שנה והיה ערכך הזכר עשרים שקלים … ולנקבה עשרת
-# שקלים
-# "[EN-AID] From top split: LEFT «ואם מבן חמש שנים ועד בן עשרים שנה והיה
-# ערכך הזכר עשרים שקלים» / RIGHT «ולנקבה עשרת שקלים». Derive claim from
-# Hebrew arms. Lev 27:5."
+# -------------------------- Lev.27.5 · COND_ואם (“and-if”) -----------------
+# ‹ואם מבן חמש› (“and-if from-son five”)
+# ‹שנים ועד בן› (“years and-until son”)
+# ‹עשרים שנה והיה› (“twenty years and-be”)
+# ‹ערכך הזכר עשרים› (“pile-you/your the-male twenty”)
+# ‹שקלים … ולנקבה עשרת› (“weight … and-to-female ten”)
+# ‹שקלים› (“weight”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:5."
 m.step("Lev.27.5")
 
-# -------------------------- Lev.27.6 · COND_ואם ----------------------------
-# ואם מבן חדש ועד בן חמש שנים והיה ערכך הזכר חמשה שקלים כסף … ולנקבה ערכך
-# שלשת שקלים כסף
-# "[EN-AID] From top split: LEFT «ואם מבן חדש ועד בן חמש שנים והיה ערכך הזכר
-# חמשה שקלים כסף» / RIGHT «ולנקבה ערכך שלשת שקלים כסף». Derive claim from
-# Hebrew arms. Lev 27:6."
+# -------------------------- Lev.27.6 · COND_ואם (“and-if”) -----------------
+# ‹ואם מבן חדש› (“and-if from-son new-moon”)
+# ‹ועד בן חמש› (“and-until son five”)
+# ‹שנים והיה ערכך› (“years and-be pile-you/your”)
+# ‹הזכר חמשה שקלים› (“the-male five weight”)
+# ‹כסף … ולנקבה ערכך› (“silver … and-to-female pile-you/your”)
+# ‹שלשת שקלים כסף› (“three weight silver”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:6."
 m.step("Lev.27.6")
 
-# -------------------------- Lev.27.7 · COND_ואם ----------------------------
-# ואם מבן ששים שנה ומעלה אם זכר והיה ערכך חמשה עשר שקל … ולנקבה עשרה שקלים
-# "[EN-AID] From top split: LEFT «ואם מבן ששים שנה ומעלה אם זכר והיה ערכך
-# חמשה עשר שקל» / RIGHT «ולנקבה עשרה שקלים». Derive claim from Hebrew arms.
-# Lev 27:7."
+# -------------------------- Lev.27.7 · COND_ואם (“and-if”) -----------------
+# ‹ואם מבן ששים› (“and-if from-son sixty”)
+# ‹שנה ומעלה אם› (“years and-upper-part-ward if”)
+# ‹זכר והיה ערכך› (“male and-be pile-you/your”)
+# ‹חמשה עשר שקל› (“five -teen weight”)
+# ‹… ולנקבה עשרה שקלים› (“and-to-female ten weight”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:7."
 m.step("Lev.27.7")
 
-# -------------------------- Lev.27.8 · COND_ואם ----------------------------
-# ואם מך הוא מערכך והעמידו לפני הכהן והעריך אתו הכהן … על פי אשר תשיג יד
-# הנדר יעריכנו הכהן
-# "[EN-AID] From top split: LEFT «ואם מך הוא מערכך והעמידו לפני הכהן והעריך
-# אתו הכהן» / RIGHT «על פי אשר תשיג יד הנדר יעריכנו הכהן». Derive claim from
-# Hebrew arms. Lev 27:8."
+# -------------------------- Lev.27.8 · COND_ואם (“and-if”) -----------------
+# ‹ואם מך הוא› (“and-if become-thin he/it”)
+# ‹מערכך והעמידו לפני› (“from-pile-you/your and-stand-him/its to-face”)
+# ‹הכהן והעריך אתו› (“the-priest and-set-in-a-row obj-marker-him/its”)
+# ‹הכהן … על פי› (“the-priest … over mouth”)
+# ‹אשר תשיג יד› (“which reach hand”)
+# ‹הנדר יעריכנו הכהן› (“the-promise set-in-a-row-him/its the-priest”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:8."
 m.step("Lev.27.8")
 # witness-tier presupposed read: the_four_clocks on veim_mach_hu_meerkecha —
 # read, not installed
 m.witness_read("veim_mach_hu_meerkecha", "the_four_clocks",
                 cites=["Sifra, Bechukotai, Section 3 13", "Sifra, Bechukotai, Section 3 14", "Onkelos Lev 27:8"])
 
-# -------------------------- Lev.27.9 · COND_ואם ----------------------------
-# ואם בהמה אשר יקריבו ממנה קרבן ליהוה … כל אשר יתן ממנו ליהוה יהיה קדש
-# "[EN-AID] From top split: LEFT «ואם בהמה אשר יקריבו ממנה קרבן ליהוה» /
-# RIGHT «כל אשר יתן ממנו ליהוה יהיה קדש». Derive claim from Hebrew arms. Lev
-# 27:9."
+# -------------------------- Lev.27.9 · COND_ואם (“and-if”) -----------------
+# ‹ואם בהמה אשר› (“and-if livestock which”)
+# ‹יקריבו ממנה קרבן› (“bring-near from-her/its offering”)
+# ‹ליהוה … כל אשר› (“to-YHWH … all which”)
+# ‹יתן ממנו ליהוה› (“set from-us/our to-YHWH”)
+# ‹יהיה קדש› (“be holiness”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:9."
 m.step("Lev.27.9")
 # witness-tier presupposed read: limb_sanctification_and_individuals_only on
 # veim_behemah_asher_yakrivu — read, not installed
@@ -96,11 +121,15 @@ m.witness_read("veim_behemah_asher_yakrivu", "limb_sanctification_and_individual
                 cites=["Sifra, Bechukotai, Chapter 9 1", "Sifra, Bechukotai, Chapter 9 2", "Sifra, Bechukotai, Chapter 9 3", "Sifra, Bechukotai, Chapter 9 4", "Onkelos Lev 27:9"])
 
 # -------------------------- Lev.27.10 · ETNACHTA_SPLIT ---------------------
-# לא יחליפנו ולא ימיר אתו טוב ברע או רע בטוב … ואם המר ימיר בהמה בבהמה והיה
-# הוא ותמורתו יהיה קדש
-# "[EN-AID] From top split: LEFT «לא יחליפנו ולא ימיר אתו טוב ברע או רע
-# בטוב» / RIGHT «ואם המר ימיר בהמה בבהמה והיה הוא ותמורתו יהיה קדש». Derive
-# claim from Hebrew arms. Lev 27:10."
+# ‹לא יחליפנו ולא› (“not slide-by-him/its and-not”)
+# ‹ימיר אתו טוב› (“alter obj-marker-him/its good”)
+# ‹ברע או רע› (“in-bad or bad”)
+# ‹בטוב … ואם המר› (“in-good … and-if alter”)
+# ‹ימיר בהמה בבהמה› (“alter livestock in-livestock”)
+# ‹והיה הוא ותמורתו› (“and-be he/it and-barter-him/its”)
+# ‹יהיה קדש› (“be holiness”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:10."
 m.step("Lev.27.10")
 # witness-tier presupposed read:
 # substitution_not_transitive_and_the_firstborn_argument on
@@ -108,11 +137,14 @@ m.step("Lev.27.10")
 m.witness_read("lo_yachalifenu_velo_yamir", "substitution_not_transitive_and_the_firstborn_argument",
                 cites=["Sifra, Bechukotai, Chapter 9 5", "Sifra, Bechukotai, Chapter 9 6", "Sifra, Bechukotai, Chapter 9 7", "Sifra, Bechukotai, Chapter 9 8", "Sifra, Bechukotai, Chapter 9 9", "Sifra, Bechukotai, Chapter 9 10", "Sifra, Bechukotai, Chapter 9 11", "Sifra, Bechukotai, Chapter 9 12", "Sifra, Bechukotai, Chapter 9 13", "Sifra, Bechukotai, Chapter 9 14", "Sifra, Bechukotai, Chapter 9 15", "Sifra, Bechukotai, Chapter 9 16", "Onkelos Lev 27:10"])
 
-# -------------------------- Lev.27.11 · COND_ואם ---------------------------
-# ואם כל בהמה טמאה אשר לא יקריבו ממנה קרבן ליהוה … והעמיד את הבהמה לפני הכהן
-# "[EN-AID] From top split: LEFT «ואם כל בהמה טמאה אשר לא יקריבו ממנה קרבן
-# ליהוה» / RIGHT «והעמיד את הבהמה לפני הכהן». Derive claim from Hebrew arms.
-# Lev 27:11."
+# -------------------------- Lev.27.11 · COND_ואם (“and-if”) ----------------
+# ‹ואם כל בהמה› (“and-if all livestock”)
+# ‹טמאה אשר לא› (“foul-in-a-religious-sense which not”)
+# ‹יקריבו ממנה קרבן› (“bring-near from-her/its offering”)
+# ‹ליהוה … והעמיד את› (“to-YHWH … and-stand obj-marker”)
+# ‹הבהמה לפני הכהן› (“the-livestock to-face the-priest”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:11."
 m.step("Lev.27.11")
 # witness-tier presupposed read: disqualified_consecrated_beasts on
 # veim_kol_behemah_temeah — read, not installed
@@ -120,31 +152,40 @@ m.witness_read("veim_kol_behemah_temeah", "disqualified_consecrated_beasts",
                 cites=["Sifra, Bechukotai, Section 4 1", "Sifra, Bechukotai, Section 4 2", "Sifra, Bechukotai, Section 4 3", "Sifra, Bechukotai, Section 4 4", "Sifra, Bechukotai, Section 4 5", "Onkelos Lev 27:11"])
 
 # -------------------------- Lev.27.12 · ETNACHTA_SPLIT ---------------------
-# והעריך הכהן אתה בין טוב ובין רע … כערכך הכהן כן יהיה
-# "[EN-AID] From top split: LEFT «והעריך הכהן אתה בין טוב ובין רע» / RIGHT
-# «כערכך הכהן כן יהיה». Derive claim from Hebrew arms. Lev 27:12."
+# ‹והעריך הכהן אתה› (“and-set-in-a-row the-priest obj-marker-her/its”)
+# ‹בין טוב ובין› (“between good and-between”)
+# ‹רע … כערכך הכהן› (“bad … like-pile-you/your the-priest”)
+# ‹כן יהיה› (“so be”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:12."
 m.step("Lev.27.12")
 # witness-tier presupposed read: not_by_estimate_and_the_bidding_ladder on
 # veherich_hakohen_otah — read, not installed
 m.witness_read("veherich_hakohen_otah", "not_by_estimate_and_the_bidding_ladder",
                 cites=["Sifra, Bechukotai, Section 4 6", "Onkelos Lev 27:12"])
 
-# -------------------------- Lev.27.13 · COND_ואם ---------------------------
-# ואם גאל יגאלנה … ויסף חמישתו על ערכך
-# "[EN-AID] From top split: LEFT «ואם גאל יגאלנה» / RIGHT «ויסף חמישתו על
-# ערכך». Derive claim from Hebrew arms. Lev 27:13."
+# -------------------------- Lev.27.13 · COND_ואם (“and-if”) ----------------
+# ‹ואם גאל יגאלנה› (“and-if be-the-next-of-kin be-the-next-of-kin-her/its”)
+# ‹… ויסף חמישתו על› (“and-add fifth-him/its over”)
+# ‹ערכך› (“pile-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:13."
 m.step("Lev.27.13")
 # witness-tier presupposed read: the_fifth_owner_only on veyasaf_chamishito
 # — read, not installed
 m.witness_read("veyasaf_chamishito", "the_fifth_owner_only",
                 cites=["Sifra, Bechukotai, Section 4 7", "Onkelos Lev 27:13"])
 
-# -------------------------- Lev.27.14 · COND_כי ----------------------------
-# ואיש כי יקדש את ביתו קדש ליהוה והעריכו הכהן בין טוב ובין רע … כאשר יעריך
-# אתו הכהן כן יקום
-# "[EN-AID] From top split: LEFT «ואיש כי יקדש את ביתו קדש ליהוה והעריכו
-# הכהן בין טוב ובין רע» / RIGHT «כאשר יעריך אתו הכהן כן יקום». Derive claim
-# from Hebrew arms. Lev 27:14."
+# -------------------------- Lev.27.14 · COND_כי (“that”) -------------------
+# ‹ואיש כי יקדש› (“and-man that sanctify”)
+# ‹את ביתו קדש› (“obj-marker house-him/its holiness”)
+# ‹ליהוה והעריכו הכהן› (“to-YHWH and-set-in-a-row-him/its the-priest”)
+# ‹בין טוב ובין› (“between good and-between”)
+# ‹רע … כאשר יעריך› (“bad … like-as/which set-in-a-row”)
+# ‹אתו הכהן כן› (“obj-marker-him/its the-priest so”)
+# ‹יקום› (“arise”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:14."
 m.step("Lev.27.14")
 # witness-tier presupposed read:
 # unspecified_to_upkeep_and_the_owners_precedence on ish_ki_yakdish_et_beito
@@ -152,17 +193,23 @@ m.step("Lev.27.14")
 m.witness_read("ish_ki_yakdish_et_beito", "unspecified_to_upkeep_and_the_owners_precedence",
                 cites=["Sifra, Bechukotai, Section 4 8", "Sifra, Bechukotai, Section 4 9", "Sifra, Bechukotai, Chapter 10 1", "Sifra, Bechukotai, Chapter 10 2", "Onkelos Lev 27:14", "Onkelos Lev 27:15"])
 
-# -------------------------- Lev.27.15 · COND_ואם ---------------------------
-# ואם המקדיש יגאל את ביתו … ויסף חמישית כסף ערכך עליו והיה לו
-# "[EN-AID] From top split: LEFT «ואם המקדיש יגאל את ביתו» / RIGHT «ויסף
-# חמישית כסף ערכך עליו והיה לו». Derive claim from Hebrew arms. Lev 27:15."
+# -------------------------- Lev.27.15 · COND_ואם (“and-if”) ----------------
+# ‹ואם המקדיש יגאל› (“and-if the-sanctify be-the-next-of-kin”)
+# ‹את ביתו … ויסף› (“obj-marker house-him/its … and-add”)
+# ‹חמישית כסף ערכך› (“fifth silver pile-you/your”)
+# ‹עליו והיה לו› (“over-him/its and-be to-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:15."
 m.step("Lev.27.15")
 
-# -------------------------- Lev.27.16 · COND_ואם ---------------------------
-# ואם משדה אחזתו יקדיש איש ליהוה והיה ערכך לפי זרעו … זרע חמר שערים בחמשים
-# שקל כסף
-# "[EN-AID] From top split: LEFT «ואם משדה אחזתו יקדיש איש ליהוה והיה ערכך
-# לפי זרעו» / RIGHT «זרע חמר שערים בחמשים שקל כסף». Derive claim from Hebrew
+# -------------------------- Lev.27.16 · COND_ואם (“and-if”) ----------------
+# ‹ואם משדה אחזתו› (“and-if from-field something-seized-him/its”)
+# ‹יקדיש איש ליהוה› (“sanctify man to-YHWH”)
+# ‹והיה ערכך לפי› (“and-be pile-you/your to-mouth”)
+# ‹זרעו … זרע חמר› (“seed-him/its … seed bubbling-up”)
+# ‹שערים בחמשים שקל› (“barley in-fifty weight”)
+# ‹כסף› (“silver”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 27:16."
 m.step("Lev.27.16")
 # witness-tier presupposed read: the_kings_decree on
@@ -170,10 +217,12 @@ m.step("Lev.27.16")
 m.witness_read("zera_chomer_seorim_bachamishim", "the_kings_decree",
                 cites=["Sifra, Bechukotai, Chapter 10 3", "Onkelos Lev 27:16"])
 
-# -------------------------- Lev.27.17 · COND_אם ----------------------------
-# אם משנת היבל יקדיש שדהו … כערכך יקום
-# "[EN-AID] From top split: LEFT «אם משנת היבל יקדיש שדהו» / RIGHT «כערכך
-# יקום». Derive claim from Hebrew arms. Lev 27:17."
+# -------------------------- Lev.27.17 · COND_אם (“if”) ---------------------
+# ‹אם משנת היבל› (“if from-years the-blast-of-a-horn”)
+# ‹יקדיש שדהו … כערכך› (“sanctify field-him/its … like-pile-you/your”)
+# ‹יקום› (“arise”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:17."
 m.step("Lev.27.17")
 # witness-tier presupposed read:
 # the_jubilee_year_and_forty_nine_and_forty_nine on
@@ -181,11 +230,15 @@ m.step("Lev.27.17")
 m.witness_read("im_mishnat_hayovel_yakdish", "the_jubilee_year_and_forty_nine_and_forty_nine",
                 cites=["Sifra, Bechukotai, Chapter 10 4", "Sifra, Bechukotai, Chapter 10 5", "Sifra, Bechukotai, Chapter 10 6", "Onkelos Lev 27:17"])
 
-# -------------------------- Lev.27.18 · COND_ואם ---------------------------
-# ואם אחר היבל יקדיש שדהו וחשב לו הכהן את הכסף על פי השנים הנו … ונגרע מערכך
-# "[EN-AID] From top split: LEFT «ואם אחר היבל יקדיש שדהו וחשב לו הכהן את
-# הכסף על פי השנים הנותרת עד שנת היבל» / RIGHT «ונגרע מערכך». Derive claim
-# from Hebrew arms. Lev 27:18."
+# -------------------------- Lev.27.18 · COND_ואם (“and-if”) ----------------
+# ‹ואם אחר היבל› (“and-if after the-blast-of-a-horn”)
+# ‹יקדיש שדהו וחשב› (“sanctify field-him/its and-plait”)
+# ‹לו הכהן את› (“to-him/its the-priest obj-marker”)
+# ‹הכסף על פי› (“the-silver over mouth”)
+# ‹השנים הנו … ונגרע› (“the-years ? … and-scrape-off”)
+# ‹מערכך› (“from-pile-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:18."
 m.step("Lev.27.18")
 # witness-tier presupposed read:
 # the_floors_all_at_once_and_the_sanctuarys_side on
@@ -193,21 +246,28 @@ m.step("Lev.27.18")
 m.witness_read("vechishav_lo_hakohen_et_hakesef", "the_floors_all_at_once_and_the_sanctuarys_side",
                 cites=["Sifra, Bechukotai, Chapter 10 7", "Sifra, Bechukotai, Chapter 10 8", "Sifra, Bechukotai, Chapter 10 9", "Sifra, Bechukotai, Chapter 10 10", "Onkelos Lev 27:18"])
 
-# -------------------------- Lev.27.19 · COND_ואם ---------------------------
-# ואם גאל יגאל את השדה המקדיש אתו … ויסף חמשית כסף ערכך עליו וקם לו
-# "[EN-AID] From top split: LEFT «ואם גאל יגאל את השדה המקדיש אתו» / RIGHT
-# «ויסף חמשית כסף ערכך עליו וקם לו». Derive claim from Hebrew arms. Lev
-# 27:19."
+# -------------------------- Lev.27.19 · COND_ואם (“and-if”) ----------------
+# ‹ואם גאל יגאל› (“and-if be-the-next-of-kin be-the-next-of-kin”)
+# ‹את השדה המקדיש› (“obj-marker the-field the-sanctify”)
+# ‹אתו … ויסף חמשית› (“obj-marker-him/its … and-add fifth”)
+# ‹כסף ערכך עליו› (“silver pile-you/your over-him/its”)
+# ‹וקם לו› (“and-arise to-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:19."
 m.step("Lev.27.19")
 # witness-tier presupposed read: redeem_any_size_paid on
 # veim_gaol_yigal_et_hasadeh — read, not installed
 m.witness_read("veim_gaol_yigal_et_hasadeh", "redeem_any_size_paid",
                 cites=["Sifra, Bechukotai, Chapter 10 11", "Onkelos Lev 27:19"])
 
-# -------------------------- Lev.27.20 · COND_ואם ---------------------------
-# ואם לא יגאל את השדה ואם מכר את השדה לאיש אחר … לא יגאל עוד
-# "[EN-AID] From top split: LEFT «ואם לא יגאל את השדה ואם מכר את השדה לאיש
-# אחר» / RIGHT «לא יגאל עוד». Derive claim from Hebrew arms. Lev 27:20."
+# -------------------------- Lev.27.20 · COND_ואם (“and-if”) ----------------
+# ‹ואם לא יגאל› (“and-if not be-the-next-of-kin”)
+# ‹את השדה ואם› (“obj-marker the-field and-if”)
+# ‹מכר את השדה› (“sell obj-marker the-field”)
+# ‹לאיש אחר … לא› (“to-man other … not”)
+# ‹יגאל עוד› (“be-the-next-of-kin still/again”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:20."
 m.step("Lev.27.20")
 # witness-tier presupposed read: son_in_brother_out on
 # veim_lo_yigal_et_hasadeh — read, not installed
@@ -215,19 +275,25 @@ m.witness_read("veim_lo_yigal_et_hasadeh", "son_in_brother_out",
                 cites=["Sifra, Bechukotai, Chapter 10 12", "Sifra, Bechukotai, Chapter 10 13", "Onkelos Lev 27:20"])
 
 # -------------------------- Lev.27.21 · ETNACHTA_SPLIT ---------------------
-# והיה השדה בצאתו ביבל קדש ליהוה כשדה החרם … לכהן תהיה אחזתו
-# "[EN-AID] From top split: LEFT «והיה השדה בצאתו ביבל קדש ליהוה כשדה החרם»
-# / RIGHT «לכהן תהיה אחזתו». Derive claim from Hebrew arms. Lev 27:21."
+# ‹והיה השדה בצאתו› (“and-be the-field in-bring-forth-him/its”)
+# ‹ביבל קדש ליהוה› (“in-blast-of-a-horn holiness to-YHWH”)
+# ‹כשדה החרם … לכהן› (“like-field the-physical-a-net … to-priest”)
+# ‹תהיה אחזתו› (“be something-seized-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:21."
 m.step("Lev.27.21")
 # witness-tier presupposed read: the_abandoned_field_and_all_brother_priests
 # on vehayah_hasadeh_betzeto_bayovel — read, not installed
 m.witness_read("vehayah_hasadeh_betzeto_bayovel", "the_abandoned_field_and_all_brother_priests",
                 cites=["Sifra, Bechukotai, Chapter 11 1", "Sifra, Bechukotai, Chapter 11 2", "Sifra, Bechukotai, Chapter 11 3", "Onkelos Lev 27:21"])
 
-# -------------------------- Lev.27.22 · COND_ואם ---------------------------
-# ואם את שדה מקנתו אשר לא משדה אחזתו … יקדיש ליהוה
-# "[EN-AID] From top split: LEFT «ואם את שדה מקנתו אשר לא משדה אחזתו» /
-# RIGHT «יקדיש ליהוה». Derive claim from Hebrew arms. Lev 27:22."
+# -------------------------- Lev.27.22 · COND_ואם (“and-if”) ----------------
+# ‹ואם את שדה› (“and-if obj-marker field”)
+# ‹מקנתו אשר לא› (“buying-him/its which not”)
+# ‹משדה אחזתו … יקדיש› (“from-field something-seized-him/its … sanctify”)
+# ‹ליהוה› (“to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:22."
 m.step("Lev.27.22")
 # witness-tier presupposed read: the_purchased_field_and_that_day on
 # veim_et_sdeh_miknato — read, not installed
@@ -235,16 +301,23 @@ m.witness_read("veim_et_sdeh_miknato", "the_purchased_field_and_that_day",
                 cites=["Sifra, Bechukotai, Chapter 11 4", "Sifra, Bechukotai, Chapter 11 5", "Sifra, Bechukotai, Chapter 11 6", "Onkelos Lev 27:22", "Onkelos Lev 27:23"])
 
 # -------------------------- Lev.27.23 · ETNACHTA_SPLIT ---------------------
-# וחשב לו הכהן את מכסת הערכך עד שנת היבל … ונתן את הערכך ביום ההוא קדש ליהוה
-# "[EN-AID] From top split: LEFT «וחשב לו הכהן את מכסת הערכך עד שנת היבל» /
-# RIGHT «ונתן את הערכך ביום ההוא קדש ליהוה». Derive claim from Hebrew arms.
-# Lev 27:23."
+# ‹וחשב לו הכהן› (“and-plait to-him/its the-priest”)
+# ‹את מכסת הערכך› (“obj-marker enumeration the-pile-you/your”)
+# ‹עד שנת היבל› (“until years the-blast-of-a-horn”)
+# ‹… ונתן את הערכך› (“and-set obj-marker the-pile-you/your”)
+# ‹ביום ההוא קדש› (“in-day that holiness”)
+# ‹ליהוה› (“to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:23."
 m.step("Lev.27.23")
 
 # -------------------------- Lev.27.24 · ETNACHTA_SPLIT ---------------------
-# בשנת היובל ישוב השדה לאשר קנהו מאתו … לאשר לו אחזת הארץ
-# "[EN-AID] From top split: LEFT «בשנת היובל ישוב השדה לאשר קנהו מאתו» /
-# RIGHT «לאשר לו אחזת הארץ». Derive claim from Hebrew arms. Lev 27:24."
+# ‹בשנת היובל ישוב› (“in-years the-blast-of-a-horn return”)
+# ‹השדה לאשר קנהו› (“the-field to-which erect-him/its”)
+# ‹מאתו … לאשר לו› (“from-with-him/its … to-which to-him/its”)
+# ‹אחזת הארץ› (“something-seized the-earth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:24."
 m.step("Lev.27.24")
 # witness-tier presupposed read: the_sela_floor_and_the_twenty_gerah on
 # vechol_erkecha_yihyeh_beshekel_hakodesh — read, not installed
@@ -252,16 +325,22 @@ m.witness_read("vechol_erkecha_yihyeh_beshekel_hakodesh", "the_sela_floor_and_th
                 cites=["Sifra, Bechukotai, Chapter 11 7", "Sifra, Bechukotai, Chapter 11 8", "Onkelos Lev 27:24", "Onkelos Lev 27:25"])
 
 # -------------------------- Lev.27.25 · ETNACHTA_SPLIT ---------------------
-# וכל ערכך יהיה בשקל הקדש … עשרים גרה יהיה השקל
-# "[EN-AID] From top split: LEFT «וכל ערכך יהיה בשקל הקדש» / RIGHT «עשרים
-# גרה יהיה השקל». Derive claim from Hebrew arms. Lev 27:25."
+# ‹וכל ערכך יהיה› (“and-all pile-you/your be”)
+# ‹בשקל הקדש … עשרים› (“in-weight the-holiness … twenty”)
+# ‹גרה יהיה השקל› (“gerah be the-weight”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:25."
 m.step("Lev.27.25")
 
 # -------------------------- Lev.27.26 · ETNACHTA_SPLIT ---------------------
-# אך בכור אשר יבכר ליהוה בבהמה לא יקדיש איש אתו … אם שור אם שה ליהוה הוא
-# "[EN-AID] From top split: LEFT «אך בכור אשר יבכר ליהוה בבהמה לא יקדיש איש
-# אתו» / RIGHT «אם שור אם שה ליהוה הוא». Derive claim from Hebrew arms. Lev
-# 27:26."
+# ‹אך בכור אשר› (“indeed firstborn which”)
+# ‹יבכר ליהוה בבהמה› (“give-the-birthright to-YHWH in-livestock”)
+# ‹לא יקדיש איש› (“not sanctify man”)
+# ‹אתו … אם שור› (“obj-marker-him/its … if bullock”)
+# ‹אם שה ליהוה› (“if member-of-a-flock to-YHWH”)
+# ‹הוא› (“he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:26."
 m.step("Lev.27.26")
 # witness-tier presupposed read:
 # outwitting_the_firstborn_and_no_change_of_holiness on
@@ -269,11 +348,14 @@ m.step("Lev.27.26")
 m.witness_read("ach_bechor_lo_yakdish", "outwitting_the_firstborn_and_no_change_of_holiness",
                 cites=["Sifra, Bechukotai, Section 5 1", "Sifra, Bechukotai, Section 5 2", "Sifra, Bechukotai, Section 5 3", "Sifra, Bechukotai, Section 5 4", "Sifra, Bechukotai, Section 5 5", "Sifra, Bechukotai, Section 5 6", "Sifra, Bechukotai, Section 5 7", "Sifra, Bechukotai, Section 5 8", "Sifra, Bechukotai, Section 5 9", "Onkelos Lev 27:26"])
 
-# -------------------------- Lev.27.27 · COND_ואם ---------------------------
-# ואם בבהמה הטמאה ופדה בערכך ויסף חמשתו עליו … ואם לא יגאל ונמכר בערכך
-# "[EN-AID] From top split: LEFT «ואם בבהמה הטמאה ופדה בערכך ויסף חמשתו
-# עליו» / RIGHT «ואם לא יגאל ונמכר בערכך». Derive claim from Hebrew arms.
-# Lev 27:27."
+# -------------------------- Lev.27.27 · COND_ואם (“and-if”) ----------------
+# ‹ואם בבהמה הטמאה› (“and-if in-livestock the-foul-in-a-religious-sense”)
+# ‹ופדה בערכך ויסף› (“and-sever in-pile-you/your and-add”)
+# ‹חמשתו עליו … ואם› (“fifth-him/its over-him/its … and-if”)
+# ‹לא יגאל ונמכר› (“not be-the-next-of-kin and-sell”)
+# ‹בערכך› (“in-pile-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:27."
 m.step("Lev.27.27")
 # witness-tier presupposed read: assessed_in_money_and_five on
 # veim_babehemah_hatemeah_ufadah — read, not installed
@@ -281,11 +363,15 @@ m.witness_read("veim_babehemah_hatemeah_ufadah", "assessed_in_money_and_five",
                 cites=["Sifra, Bechukotai, Chapter 12 1", "Sifra, Bechukotai, Chapter 12 2", "Onkelos Lev 27:27"])
 
 # -------------------------- Lev.27.28 · ETNACHTA_SPLIT ---------------------
-# אך כל חרם אשר יחרם איש ליהוה מכל אשר לו מאדם ובהמה ומשדה אחז … כל חרם קדש
-# קדשים הוא ליהוה
-# "[EN-AID] From top split: LEFT «אך כל חרם אשר יחרם איש ליהוה מכל אשר לו
-# מאדם ובהמה ומשדה אחזתו לא ימכר ולא יגאל» / RIGHT «כל חרם קדש קדשים הוא
-# ליהוה». Derive claim from Hebrew arms. Lev 27:28."
+# ‹אך כל חרם› (“indeed all physical-a-net”)
+# ‹אשר יחרם איש› (“which seclude man”)
+# ‹ליהוה מכל אשר› (“to-YHWH from-all which”)
+# ‹לו מאדם ובהמה› (“to-him/its from-human and-livestock”)
+# ‹ומשדה אחז … כל› (“and-from-field seize … all”)
+# ‹חרם קדש קדשים› (“physical-a-net holiness holiness”)
+# ‹הוא ליהוה› (“he/it to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:28."
 m.step("Lev.27.28")
 # witness-tier presupposed read:
 # devoting_not_all_and_the_priests_levites_dispute on ach_kol_cherem — read,
@@ -294,9 +380,12 @@ m.witness_read("ach_kol_cherem", "devoting_not_all_and_the_priests_levites_dispu
                 cites=["Sifra, Bechukotai, Chapter 12 3", "Sifra, Bechukotai, Chapter 12 4", "Sifra, Bechukotai, Chapter 12 5", "Sifra, Bechukotai, Chapter 12 6", "Onkelos Lev 27:28"])
 
 # -------------------------- Lev.27.29 · ETNACHTA_SPLIT ---------------------
-# כל חרם אשר יחרם מן האדם לא יפדה … מות יומת
-# "[EN-AID] From top split: LEFT «כל חרם אשר יחרם מן האדם לא יפדה» / RIGHT
-# «מות יומת». Derive claim from Hebrew arms. Lev 27:29."
+# ‹כל חרם אשר› (“all physical-a-net which”)
+# ‹יחרם מן האדם› (“seclude from the-human”)
+# ‹לא יפדה … מות› (“not sever … die”)
+# ‹יומת› (“die”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:29."
 m.step("Lev.27.29")
 # witness-tier presupposed read: the_condemneds_valuation on
 # kol_cherem_asher_yocharam_min_haadam — read, not installed
@@ -304,25 +393,34 @@ m.witness_read("kol_cherem_asher_yocharam_min_haadam", "the_condemneds_valuation
                 cites=["Sifra, Bechukotai, Chapter 12 7", "Sifra, Bechukotai, Chapter 12 8", "Onkelos Lev 27:29"])
 
 # -------------------------- Lev.27.30 · ETNACHTA_SPLIT ---------------------
-# וכל מעשר הארץ מזרע הארץ מפרי העץ ליהוה הוא … קדש ליהוה
-# "[EN-AID] From top split: LEFT «וכל מעשר הארץ מזרע הארץ מפרי העץ ליהוה
-# הוא» / RIGHT «קדש ליהוה». Derive claim from Hebrew arms. Lev 27:30."
+# ‹וכל מעשר הארץ› (“and-all tenth the-earth”)
+# ‹מזרע הארץ מפרי› (“from-seed the-earth from-fruit”)
+# ‹העץ ליהוה הוא› (“the-tree to-YHWH he/it”)
+# ‹… קדש ליהוה› (“holiness to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:30."
 m.step("Lev.27.30")
 # witness-tier presupposed read: tithes_domain_and_redemption on
 # vechol_maasar_haaretz — read, not installed
 m.witness_read("vechol_maasar_haaretz", "tithes_domain_and_redemption",
                 cites=["Sifra, Bechukotai, Chapter 12 9", "Sifra, Bechukotai, Chapter 12 10", "Onkelos Lev 27:30", "Onkelos Lev 27:31"])
 
-# -------------------------- Lev.27.31 · COND_ואם ---------------------------
-# ואם גאל יגאל איש ממעשרו … חמשיתו יסף עליו
-# "[EN-AID] From top split: LEFT «ואם גאל יגאל איש ממעשרו» / RIGHT «חמשיתו
-# יסף עליו». Derive claim from Hebrew arms. Lev 27:31."
+# -------------------------- Lev.27.31 · COND_ואם (“and-if”) ----------------
+# ‹ואם גאל יגאל› (“and-if be-the-next-of-kin be-the-next-of-kin”)
+# ‹איש ממעשרו … חמשיתו› (“man from-tenth-him/its … fifth-him/its”)
+# ‹יסף עליו› (“add over-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:31."
 m.step("Lev.27.31")
 
 # -------------------------- Lev.27.32 · ETNACHTA_SPLIT ---------------------
-# וכל מעשר בקר וצאן כל אשר יעבר תחת השבט … העשירי יהיה קדש ליהוה
-# "[EN-AID] From top split: LEFT «וכל מעשר בקר וצאן כל אשר יעבר תחת השבט» /
-# RIGHT «העשירי יהיה קדש ליהוה». Derive claim from Hebrew arms. Lev 27:32."
+# ‹וכל מעשר בקר› (“and-all tenth herd”)
+# ‹וצאן כל אשר› (“and-flock all which”)
+# ‹יעבר תחת השבט› (“pass-over under the-scion”)
+# ‹… העשירי יהיה קדש› (“the-tenth be holiness”)
+# ‹ליהוה› (“to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:32."
 m.step("Lev.27.32")
 # witness-tier presupposed read: the_passing_predicate_and_the_error_rule on
 # kol_asher_yaavor_tachat_hashavet — read, not installed
@@ -330,11 +428,14 @@ m.witness_read("kol_asher_yaavor_tachat_hashavet", "the_passing_predicate_and_th
                 cites=["Sifra, Bechukotai, Chapter 12 11", "Sifra, Bechukotai, Chapter 12 12", "Sifra, Bechukotai, Chapter 12 13", "Sifra, Bechukotai, Chapter 13 1", "Sifra, Bechukotai, Chapter 13 2", "Sifra, Bechukotai, Chapter 13 3", "Onkelos Lev 27:32"])
 
 # -------------------------- Lev.27.33 · ETNACHTA_SPLIT ---------------------
-# לא יבקר בין טוב לרע ולא ימירנו … ואם המר ימירנו והיה הוא ותמורתו יהיה קדש
-# לא יגאל
-# "[EN-AID] From top split: LEFT «לא יבקר בין טוב לרע ולא ימירנו» / RIGHT
-# «ואם המר ימירנו והיה הוא ותמורתו יהיה קדש לא יגאל». Derive claim from
-# Hebrew arms. Lev 27:33."
+# ‹לא יבקר בין› (“not plough between”)
+# ‹טוב לרע ולא› (“good to-bad and-not”)
+# ‹ימירנו … ואם המר› (“alter-him/its … and-if alter”)
+# ‹ימירנו והיה הוא› (“alter-him/its and-be he/it”)
+# ‹ותמורתו יהיה קדש› (“and-barter-him/its be holiness”)
+# ‹לא יגאל› (“not be-the-next-of-kin”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:33."
 m.step("Lev.27.33")
 # witness-tier presupposed read: lashes_and_sold_versus_neither on
 # lo_yevaker_bein_tov_lara — read, not installed
@@ -342,9 +443,12 @@ m.witness_read("lo_yevaker_bein_tov_lara", "lashes_and_sold_versus_neither",
                 cites=["Sifra, Bechukotai, Chapter 13 4", "Sifra, Bechukotai, Chapter 13 5", "Sifra, Bechukotai, Chapter 13 6", "Onkelos Lev 27:33"])
 
 # -------------------------- Lev.27.34 · ETNACHTA_SPLIT ---------------------
-# אלה המצות אשר צוה יהוה את משה אל בני ישראל … בהר סיני
-# "[EN-AID] From top split: LEFT «אלה המצות אשר צוה יהוה את משה אל בני
-# ישראל» / RIGHT «בהר סיני». Derive claim from Hebrew arms. Lev 27:34."
+# ‹אלה המצות אשר› (“these the-commandment which”)
+# ‹צוה יהוה את› (“command YHWH obj-marker”)
+# ‹משה אל בני› (“Moses to son”)
+# ‹ישראל … בהר סיני› (“Israel … in-mountain Sinai”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 27:34."
 m.step("Lev.27.34")
 # witness-tier presupposed read: no_prophet_may_innovate on eleh_hamitzvot —
 # read, not installed

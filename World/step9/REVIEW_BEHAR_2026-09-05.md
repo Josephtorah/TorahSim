@@ -72,3 +72,19 @@ when the next compile is written.
 Standing items unchanged: the four lev_04 chatat drafts, the
 py-render gloss flags, the vocabulary YAML never linted (all on the
 deferred audit's list, REVIEW_LEV1-8_2026-09-05.md).
+
+## ITEMS 3, 4, 5 CLOSED — sitting B of the audit (2026-09-05)
+3. cold_run_temurah.py — Lev 27:9-15 and 27:26-33 as their own cold
+   function: 40/40 at 60% pure ink against Mishnah Temurah, Arakhin 8,
+   Bekhorot 9, Menachot 12:1; substitution's formulas from the two
+   written verbs; the house's fifth; the firstborn's value-consecration;
+   devotion; the tithe under the rod; three calls into the Jubilee and
+   Passover engines. Effect: consecrated.
+4. The 25:35 support duty: supports_kinsman registered (a DEBIT on the
+   kinsman), three cells in cold_run_yovel.py on the Sifra's falling-load
+   row. (27:10's "it and its substitute shall be holy" is the temurah
+   engine's consecrated + substitution pair.)
+5. The auction-stone ban (25:42, Sifra Behar Section 6 1) and the
+   in-your-sight bound (25:53, Chapter 8 8) — cells in cold_run_yovel.py
+   (75/75). Items 1, 2, 6 were round 47's. Every item of this review is
+   now closed.

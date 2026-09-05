@@ -14,9 +14,11 @@ from machine import Machine
 m = Machine("lev_01_call_and_korban_opening")
 
 # -------------------------- Lev.1.1 · ETNACHTA_SPLIT -----------------------
-# ויקרא אל משה … וידבר יהוה אליו מאהל מועד לאמר
-# "[EN-AID] From top split: LEFT «ויקרא אל משה» / RIGHT «וידבר יהוה אליו
-# מאהל מועד לאמר». Derive claim from Hebrew arms. Lev 1:1."
+# ‹ויקרא אל משה› (“and-call to Moses”)
+# ‹… וידבר יהוה אליו› (“and-speak YHWH to-him/its”)
+# ‹מאהל מועד לאמר› (“from-tent seasons to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 1:1."
 m.step("Lev.1.1")
 # witness-tier presupposed read: kriyah_precedes_dibbur on call_protocol —
 # read, not installed
@@ -31,11 +33,15 @@ m.witness_read("paragraph_channel", "reflection_pauses_chartered",
                 cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 1 8", "Sifra, Vayikra Dibbura DeNedavah, Chapter 1 9"])
 
 # -------------------------- Lev.1.2 · ETNACHTA_SPLIT -----------------------
-# דבר אל בני ישראל ואמרת אלהם אדם כי יקריב מכם קרבן ליהוה … מן הבהמה מן הבקר
-# ומן הצאן תקריבו את קרבנכם
-# "[EN-AID] From top split: LEFT «דבר אל בני ישראל ואמרת אלהם אדם כי יקריב
-# מכם קרבן ליהוה» / RIGHT «מן הבהמה מן הבקר ומן הצאן תקריבו את קרבנכם».
-# Derive claim from Hebrew arms. Lev 1:2."
+# ‹דבר אל בני› (“speak to son”)
+# ‹ישראל ואמרת אלהם› (“Israel and-say to-them/their”)
+# ‹אדם כי יקריב› (“human that bring-near”)
+# ‹מכם קרבן ליהוה› (“from-you/your(pl) offering to-YHWH”)
+# ‹… מן הבהמה מן› (“from the-livestock from”)
+# ‹הבקר ומן הצאן› (“the-herd and-from the-flock”)
+# ‹תקריבו את קרבנכם› (“bring-near obj-marker offering-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 1:2."
 m.step("Lev.1.2")
 # witness-tier presupposed read: covenant_keyed_optional on caller_domain —
 # read, not installed
@@ -46,12 +52,15 @@ m.witness_read("caller_domain", "covenant_keyed_optional",
 m.witness_read("input_filter", "domesticated_with_exclusions",
                 cites=["Sifra, Vayikra Dibbura DeNedavah, Section 2 6", "Sifra, Vayikra Dibbura DeNedavah, Section 2 7", "Sifra, Vayikra Dibbura DeNedavah, Section 2 9", "Sifra, Vayikra Dibbura DeNedavah, Section 2 10", "Sifra, Vayikra Dibbura DeNedavah, Section 2 11", "Sifra, Vayikra Dibbura DeNedavah, Chapter 3 1", "Sifra, Vayikra Dibbura DeNedavah, Chapter 3 4"])
 
-# -------------------------- Lev.1.3 · COND_אם ------------------------------
-# אם עלה קרבנו מן הבקר זכר תמים יקריבנו … אל פתח אהל מועד יקריב אתו לרצנו
-# לפני יהוה
-# "[EN-AID] From top split: LEFT «אם עלה קרבנו מן הבקר זכר תמים יקריבנו» /
-# RIGHT «אל פתח אהל מועד יקריב אתו לרצנו לפני יהוה». Derive claim from
-# Hebrew arms. Lev 1:3."
+# -------------------------- Lev.1.3 · COND_אם (“if”) -----------------------
+# ‹אם עלה קרבנו› (“if burnt-offering offering-him/its”)
+# ‹מן הבקר זכר› (“from the-herd male”)
+# ‹תמים יקריבנו … אל› (“entire bring-near-him/its … to”)
+# ‹פתח אהל מועד› (“opening tent seasons”)
+# ‹יקריב אתו לרצנו› (“bring-near obj-marker-him/its to-delight-him/its”)
+# ‹לפני יהוה› (“to-face YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 1:3."
 m.step("Lev.1.3")
 # witness-tier presupposed read: tamim_owner_coercion on acceptance_gate —
 # read, not installed

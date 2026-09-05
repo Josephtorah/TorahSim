@@ -14,136 +14,176 @@ from machine import Machine
 m = Machine("exo_17_massah_and_amalek")
 
 # -------------------------- Exod.17.1 · NO_WATER_IN_REPHIDIM ---------------
-# וַיִּסְעוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל מִמִּדְבַּר־סִין לְמַסְעֵיהֶם
-# עַל־פִּי יְהוָה וַיַּחֲנוּ בִּרְפִידִים וְאֵין מַיִם לִשְׁתֹּת הָעָם
+# ‹וַיִּסְעוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל› (“and-journey all congregation
+# son Israel”)
+# ‹מִמִּדְבַּר־סִין לְמַסְעֵיהֶם עַל־פִּי› (“from-pasture Sin to-departure-
+# them/their over mouth”)
+# ‹יְהוָה וַיַּחֲנוּ בִּרְפִידִים› (“YHWH and-encamp in-Rephidim”)
+# ‹וְאֵין מַיִם לִשְׁתֹּת› (“and-there-is-not waters to-drink”)
+# ‹הָעָם› (“the-people”)
 # "[EN-AID] And all the congregation of the sons of Israel journeyed from
 # the wilderness of Sin, by their journeys, according to the mouth of the
 # LORD; and they camped in Rephidim — and there was no water for the people
 # to drink."
 m.step("Exod.17.1")
-# ‹וַיַּחֲנוּ בִּרְפִידִים וְאֵין מַיִם לִשְׁתֹּת הָעָם› (“and-encamp in-
-# Rephidim and-there-is-not waters to-drink the-people”) — fact holds: and-
-# encamp-bi-refidim-and-there-is-not-waters
+# ‹וַיַּחֲנוּ בִּרְפִידִים וְאֵין› (“and-encamp in-Rephidim and-there-is-
+# not”)
+# ‹מַיִם לִשְׁתֹּת הָעָם› (“waters to-drink the-people”)
+# — fact holds: and-encamp-bi-refidim-and-there-is-not-waters
 m.fact("va_yachanu_bi_refidim_ve_en_mayim")
 
 # -------------------------- Exod.17.2 · GIVE_US_WATER ----------------------
-# וַיָּרֶב הָעָם עִם־מֹשֶׁה וַיֹּאמְרוּ תְּנוּ־לָנוּ מַיִם וְנִשְׁתֶּה
-# וַיֹּאמֶר לָהֶם מֹשֶׁה מַה־תְּרִיבוּן עִמָּדִי מַה־תְּנַסּוּן אֶת־יְהוָה
+# ‹וַיָּרֶב הָעָם עִם־מֹשֶׁה› (“and-toss the-people with Moses”)
+# ‹וַיֹּאמְרוּ תְּנוּ־לָנוּ מַיִם› (“and-say set to-us/our waters”)
+# ‹וְנִשְׁתֶּה וַיֹּאמֶר לָהֶם› (“and-drink and-say to-them/their”)
+# ‹מֹשֶׁה מַה־תְּרִיבוּן עִמָּדִי› (“Moses what toss-ward along-with-me/my”)
+# ‹מַה־תְּנַסּוּן אֶת־יְהוָה› (“what test-ward obj-marker YHWH”)
 # "[EN-AID] And the people quarreled with Moses, and said: Give us water,
 # that we may drink. And Moses said to them: Why do you quarrel with me? Why
 # do you test the LORD?"
 m.step("Exod.17.2")
-# ‹תְּנוּ־לָנוּ מַיִם וְנִשְׁתֶּה› (“set to-us/our waters and-drink”) — the-
-# people speaks a demand — LET: set-lanu-waters
+# ‹תְּנוּ־לָנוּ מַיִם וְנִשְׁתֶּה› (“set to-us/our waters and-drink”)
+# — the-people speaks a demand — LET: set-lanu-waters
 m.declare("ha_am", "LET",
           "tenu_lanu_mayim")
 
 # -------------------------- Exod.17.3 · WHY_DID_YOU_BRING_US_UP ------------
-# וַיִּצְמָא שָׁם הָעָם לַמַּיִם וַיָּלֶן הָעָם עַל־מֹשֶׁה וַיֹּאמֶר לָמָּה
-# זֶּה הֶעֱלִיתָנוּ מִמִּצְרַיִם לְהָמִית אֹתִי וְאֶת־בָּנַי וְאֶת־מִקְנַי
-# בַּצָּמָא
+# ‹וַיִּצְמָא שָׁם הָעָם› (“and-thirst there the-people”)
+# ‹לַמַּיִם וַיָּלֶן הָעָם› (“to-waters and-stop the-people”)
+# ‹עַל־מֹשֶׁה וַיֹּאמֶר לָמָּה› (“over Moses and-say to-what”)
+# ‹זֶּה הֶעֱלִיתָנוּ מִמִּצְרַיִם› (“this go-up-us/our from-Egypt”)
+# ‹לְהָמִית אֹתִי וְאֶת־בָּנַי› (“to-die obj-marker-me/my and-obj-marker
+# son-me/my”)
+# ‹וְאֶת־מִקְנַי בַּצָּמָא› (“and-obj-marker something-bought-me/my in-
+# thirst”)
 # "[EN-AID] And the people thirsted there for water, and the people murmured
 # against Moses, and said: Why is this — you brought us up from Egypt, to
 # kill me and my sons and my cattle with thirst?"
 m.step("Exod.17.3")
-# ‹וַיָּלֶן הָעָם עַל־מֹשֶׁה› (“and-stop the-people over Moses”) — fact
-# holds: and-stop-the-people-over-Moses
+# ‹וַיָּלֶן הָעָם עַל־מֹשֶׁה› (“and-stop the-people over Moses”)
+# — fact holds: and-stop-the-people-over-Moses
 m.fact("va_yalen_ha_am_al_moshe")
 
 # -------------------------- Exod.17.4 · THEY_WILL_STONE_ME -----------------
-# וַיִּצְעַק מֹשֶׁה אֶל־יְהוָה לֵאמֹר מָה אֶעֱשֶׂה לָעָם הַזֶּה עוֹד מְעַט
-# וּסְקָלֻנִי
+# ‹וַיִּצְעַק מֹשֶׁה אֶל־יְהוָה› (“and-shriek Moses to YHWH”)
+# ‹לֵאמֹר מָה אֶעֱשֶׂה› (“to-say what make”)
+# ‹לָעָם הַזֶּה עוֹד› (“to-people the-this still/again”)
+# ‹מְעַט וּסְקָלֻנִי› (“little and-be-weighty-me/my”)
 # "[EN-AID] And Moses cried to the LORD, saying: What shall I do for this
 # people? Yet a little — and they will stone me."
 m.step("Exod.17.4")
-# ‹עוֹד מְעַט וּסְקָלֻנִי› (“still/again little and-be-weighty-me/my”) —
-# fact holds: still/again-little-and-seqaluni
+# ‹עוֹד מְעַט וּסְקָלֻנִי› (“still/again little and-be-weighty-me/my”)
+# — fact holds: still/again-little-and-seqaluni
 m.fact("od_meat_u_seqaluni")
 
 # -------------------------- Exod.17.5 · PASS_BEFORE_THE_PEOPLE -------------
-# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה עֲבֹר לִפְנֵי הָעָם וְקַח אִתְּךָ מִזִּקְנֵי
-# יִשְׂרָאֵל וּמַטְּךָ אֲשֶׁר הִכִּיתָ בּוֹ אֶת־הַיְאֹר קַח בְּיָדְךָ
-# וְהָלָכְתָּ
+# ‹וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה› (“and-say YHWH to Moses”)
+# ‹עֲבֹר לִפְנֵי הָעָם› (“pass-over to-face the-people”)
+# ‹וְקַח אִתְּךָ מִזִּקְנֵי› (“and-take with-you/your from-old”)
+# ‹יִשְׂרָאֵל וּמַטְּךָ אֲשֶׁר› (“Israel and-staff/tribe-you/your which”)
+# ‹הִכִּיתָ בּוֹ אֶת־הַיְאֹר› (“strike in-him/its obj-marker the-Nile”)
+# ‹קַח בְּיָדְךָ וְהָלָכְתָּ› (“take in-hand-you/your and-walk/go”)
 # "[EN-AID] And the LORD said to Moses: Pass before the people, and take
 # with you of the elders of Israel; and your staff, with which you struck
 # the Nile, take in your hand — and go."
 m.step("Exod.17.5")
-# ‹עֲבֹר לִפְנֵי הָעָם וְקַח אִתְּךָ מִזִּקְנֵי יִשְׂרָאֵל› (“pass-over to-
-# face the-people and-take with-you/your from-old Israel”) — the-LORD speaks
-# a demand — LET: pass-over-lifne-the-people-and-strike
+# ‹עֲבֹר לִפְנֵי הָעָם› (“pass-over to-face the-people”)
+# ‹וְקַח אִתְּךָ מִזִּקְנֵי› (“and-take with-you/your from-old”)
+# ‹יִשְׂרָאֵל› (“Israel”)
+# — the-LORD speaks a demand — LET: pass-over-lifne-the-people-and-strike
 m.declare("YHWH", "LET",
           "avor_lifne_ha_am_ve_hikita")
 
 # -------------------------- Exod.17.6 · THE_ROCK_AT_HOREB ------------------
-# הִנְנִי עֹמֵד לְפָנֶיךָ שָּׁם עַל־הַצּוּר בְּחֹרֵב וְהִכִּיתָ בַצּוּר
-# וְיָצְאוּ מִמֶּנּוּ מַיִם וְשָׁתָה הָעָם וַיַּעַשׂ כֵּן מֹשֶׁה לְעֵינֵי
-# זִקְנֵי יִשְׂרָאֵל
+# ‹הִנְנִי עֹמֵד לְפָנֶיךָ› (“lo!-me/my stand to-face-you/your”)
+# ‹שָּׁם עַל־הַצּוּר בְּחֹרֵב› (“there over the-cliff in-Horeb”)
+# ‹וְהִכִּיתָ בַצּוּר וְיָצְאוּ› (“and-strike in-cliff and-bring-forth”)
+# ‹מִמֶּנּוּ מַיִם וְשָׁתָה› (“from-us/our waters and-drink”)
+# ‹הָעָם וַיַּעַשׂ כֵּן› (“the-people and-make so”)
+# ‹מֹשֶׁה לְעֵינֵי זִקְנֵי› (“Moses to-eye old”)
+# ‹יִשְׂרָאֵל› (“Israel”)
 # "[EN-AID] Behold, I stand before you there on the rock at Horeb; and you
 # shall strike the rock, and water shall come out of it, and the people
 # shall drink. And Moses did so before the eyes of the elders of Israel."
 m.step("Exod.17.6")
-# ‹וַיַּעַשׂ כֵּן מֹשֶׁה› (“and-make so Moses”) — demand settled (popped
-# from the queue): pass-over-lifne-the-people-and-strike
+# ‹וַיַּעַשׂ כֵּן מֹשֶׁה› (“and-make so Moses”)
+# — demand settled (popped from the queue): pass-over-lifne-the-people-and-
+# strike
 m.result("avor_lifne_ha_am_ve_hikita", tmark="t1")
-# ‹וְיָצְאוּ מִמֶּנּוּ מַיִם וְשָׁתָה הָעָם› (“and-bring-forth from-us/our
-# waters and-drink the-people”) — demand settled (popped from the queue):
-# set-lanu-waters
+# ‹וְיָצְאוּ מִמֶּנּוּ מַיִם› (“and-bring-forth from-us/our waters”)
+# ‹וְשָׁתָה הָעָם› (“and-drink the-people”)
+# — demand settled (popped from the queue): set-lanu-waters
 m.result("tenu_lanu_mayim", tmark="t1")
 
 # -------------------------- Exod.17.7 · MASSAH_AND_MERIBAH -----------------
-# וַיִּקְרָא שֵׁם הַמָּקוֹם מַסָּה וּמְרִיבָה עַל־רִיב בְּנֵי יִשְׂרָאֵל
-# וְעַל נַסֹּתָם אֶת־יְהוָה לֵאמֹר הֲיֵשׁ יְהוָה בְּקִרְבֵּנוּ אִם־אָיִן
+# ‹וַיִּקְרָא שֵׁם הַמָּקוֹם› (“and-call name the-place”)
+# ‹מַסָּה וּמְרִיבָה עַל־רִיב› (“Massah and-Meribah over contest”)
+# ‹בְּנֵי יִשְׂרָאֵל וְעַל› (“son Israel and-over”)
+# ‹נַסֹּתָם אֶת־יְהוָה לֵאמֹר› (“test-them/their obj-marker YHWH to-say”)
+# ‹הֲיֵשׁ יְהוָה בְּקִרְבֵּנוּ› (“the-there-is YHWH in-nearest-part-us/our”)
+# ‹אִם־אָיִן› (“if there-is-not”)
 # "[EN-AID] And he called the name of the place Massah and Meribah, for the
 # quarrel of the sons of Israel, and for their testing the LORD, saying: Is
 # the LORD in our midst, or not?"
 m.step("Exod.17.7")
-# ‹וַיִּקְרָא שֵׁם הַמָּקוֹם מַסָּה וּמְרִיבָה› (“and-call name the-place
-# Massah and-Meribah”) — named: place-refidim := Masa-and-Meriva
+# ‹וַיִּקְרָא שֵׁם הַמָּקוֹם› (“and-call name the-place”)
+# ‹מַסָּה וּמְרִיבָה› (“Massah and-Meribah”)
+# — named: place-refidim := Masa-and-Meriva
 m.name("maqom_refidim", "Masa_u_Meriva")
 
 # -------------------------- Exod.17.8 · AMALEK_COMES -----------------------
-# וַיָּבֹא עֲמָלֵק וַיִּלָּחֶם עִם־יִשְׂרָאֵל בִּרְפִידִם
+# ‹וַיָּבֹא עֲמָלֵק וַיִּלָּחֶם› (“and-come/bring Amalek and-feed-on”)
+# ‹עִם־יִשְׂרָאֵל בִּרְפִידִם› (“with Israel in-Rephidim”)
 # "[EN-AID] And Amalek came, and fought with Israel in Rephidim."
 m.step("Exod.17.8")
-# ‹וַיָּבֹא עֲמָלֵק וַיִּלָּחֶם עִם־יִשְׂרָאֵל בִּרְפִידִם› (“and-come/bring
-# Amalek and-feed-on with Israel in-Rephidim”) — event: milchemet-Amalek —
-# agent Amalek; theme Israel
+# ‹וַיָּבֹא עֲמָלֵק וַיִּלָּחֶם› (“and-come/bring Amalek and-feed-on”)
+# ‹עִם־יִשְׂרָאֵל בִּרְפִידִם› (“with Israel in-Rephidim”)
+# — event: milchemet-Amalek — agent Amalek; theme Israel
 m.event("milchemet_amaleq", agent="amaleq", themes=["yisrael"])
 
 # -------------------------- Exod.17.9 · CHOOSE_US_MEN ----------------------
-# וַיֹּאמֶר מֹשֶׁה אֶל־יְהוֹשֻׁעַ בְּחַר־לָנוּ אֲנָשִׁים וְצֵא הִלָּחֵם
-# בַּעֲמָלֵק מָחָר אָנֹכִי נִצָּב עַל־רֹאשׁ הַגִּבְעָה וּמַטֵּה הָאֱלֹהִים
-# בְּיָדִי
+# ‹וַיֹּאמֶר מֹשֶׁה אֶל־יְהוֹשֻׁעַ› (“and-say Moses to Jehoshua”)
+# ‹בְּחַר־לָנוּ אֲנָשִׁים וְצֵא› (“try to-us/our man and-bring-forth”)
+# ‹הִלָּחֵם בַּעֲמָלֵק מָחָר› (“feed-on in-Amalek deferred”)
+# ‹אָנֹכִי נִצָּב עַל־רֹאשׁ› (“stand over head”)
+# ‹הַגִּבְעָה וּמַטֵּה הָאֱלֹהִים› (“the-hillock and-staff/tribe the-God”)
+# ‹בְּיָדִי› (“in-hand-me/my”)
 # "[EN-AID] And Moses said to Joshua: Choose us men, and go out, fight
 # against Amalek; tomorrow I stand on the top of the hill, and the staff of
 # God in my hand."
 m.step("Exod.17.9")
-# ‹בְּחַר־לָנוּ אֲנָשִׁים וְצֵא הִלָּחֵם בַּעֲמָלֵק› (“try to-us/our man
-# and-bring-forth feed-on in-Amalek”) — Moses speaks a demand — LET: try-
-# lanu-man-and-bring-forth
+# ‹בְּחַר־לָנוּ אֲנָשִׁים וְצֵא› (“try to-us/our man and-bring-forth”)
+# ‹הִלָּחֵם בַּעֲמָלֵק› (“feed-on in-Amalek”)
+# — Moses speaks a demand — LET: try-lanu-man-and-bring-forth
 m.declare("moshe", "LET",
           "bechar_lanu_anashim_ve_tze")
 
 # -------------------------- Exod.17.10 · UP_THE_HILL -----------------------
-# וַיַּעַשׂ יְהוֹשֻׁעַ כַּאֲשֶׁר אָמַר־לוֹ מֹשֶׁה לְהִלָּחֵם בַּעֲמָלֵק
-# וּמֹשֶׁה אַהֲרֹן וְחוּר עָלוּ רֹאשׁ הַגִּבְעָה
+# ‹וַיַּעַשׂ יְהוֹשֻׁעַ כַּאֲשֶׁר› (“and-make Jehoshua like-as/which”)
+# ‹אָמַר־לוֹ מֹשֶׁה לְהִלָּחֵם› (“say to-him/its Moses to-feed-on”)
+# ‹בַּעֲמָלֵק וּמֹשֶׁה אַהֲרֹן› (“in-Amalek and-Moses Aaron”)
+# ‹וְחוּר עָלוּ רֹאשׁ› (“and-Hur go-up head”)
+# ‹הַגִּבְעָה› (“the-hillock”)
 # "[EN-AID] And Joshua did as Moses had said to him, to fight against
 # Amalek; and Moses, Aaron, and Hur went up the top of the hill."
 m.step("Exod.17.10")
-# ‹וַיַּעַשׂ יְהוֹשֻׁעַ כַּאֲשֶׁר אָמַר־לוֹ מֹשֶׁה› (“and-make Jehoshua
-# like-as/which say to-him/its Moses”) — demand settled (popped from the
-# queue): try-lanu-man-and-bring-forth
+# ‹וַיַּעַשׂ יְהוֹשֻׁעַ כַּאֲשֶׁר› (“and-make Jehoshua like-as/which”)
+# ‹אָמַר־לוֹ מֹשֶׁה› (“say to-him/its Moses”)
+# — demand settled (popped from the queue): try-lanu-man-and-bring-forth
 m.result("bechar_lanu_anashim_ve_tze", tmark="t1")
 
 # -------------------------- Exod.17.11 · THE_HANDS_AND_THE_BATTLE ----------
-# וְהָיָה כַּאֲשֶׁר יָרִים מֹשֶׁה יָדוֹ וְגָבַר יִשְׂרָאֵל וְכַאֲשֶׁר
-# יָנִיחַ יָדוֹ וְגָבַר עֲמָלֵק
+# ‹וְהָיָה כַּאֲשֶׁר יָרִים› (“and-be like-as/which rise-high”)
+# ‹מֹשֶׁה יָדוֹ וְגָבַר› (“Moses hand-him/its and-be-strong”)
+# ‹יִשְׂרָאֵל וְכַאֲשֶׁר יָנִיחַ› (“Israel and-like-as/which rest”)
+# ‹יָדוֹ וְגָבַר עֲמָלֵק› (“hand-him/its and-be-strong Amalek”)
 # "[EN-AID] And it was, when Moses would raise his hand, that Israel
 # prevailed; and when he would rest his hand, that Amalek prevailed."
 m.step("Exod.17.11")
-# ‹וְהָיָה כַּאֲשֶׁר יָרִים מֹשֶׁה יָדוֹ וְגָבַר יִשְׂרָאֵל› (“and-be like-
-# as/which rise-high Moses hand-him/its and-be-strong Israel”) — fact holds:
-# like-which-rise-high-and-be-strong-Israel
+# ‹וְהָיָה כַּאֲשֶׁר יָרִים› (“and-be like-as/which rise-high”)
+# ‹מֹשֶׁה יָדוֹ וְגָבַר› (“Moses hand-him/its and-be-strong”)
+# ‹יִשְׂרָאֵל› (“Israel”)
+# — fact holds: like-which-rise-high-and-be-strong-Israel
 m.fact("ka_asher_yarim_ve_gavar_yisrael")
 # witness-tier presupposed read: instrument_reading on raised_hands — read,
 # not installed
@@ -151,61 +191,82 @@ m.witness_read("raised_hands", "instrument_reading",
                 cites=["Mishnah Rosh Hashanah 3:8"])
 
 # -------------------------- Exod.17.12 · HANDS_OF_FAITHFULNESS -------------
-# וִידֵי מֹשֶׁה כְּבֵדִים וַיִּקְחוּ־אֶבֶן וַיָּשִׂימוּ תַחְתָּיו וַיֵּשֶׁב
-# עָלֶיהָ וְאַהֲרֹן וְחוּר תָּמְכוּ בְיָדָיו מִזֶּה אֶחָד וּמִזֶּה אֶחָד
-# וַיְהִי יָדָיו אֱמוּנָה עַד־בֹּא הַשָּׁמֶשׁ
+# ‹וִידֵי מֹשֶׁה כְּבֵדִים› (“and-hand Moses heavy”)
+# ‹וַיִּקְחוּ־אֶבֶן וַיָּשִׂימוּ תַחְתָּיו› (“and-take stone and-put/set
+# under-him/its”)
+# ‹וַיֵּשֶׁב עָלֶיהָ וְאַהֲרֹן› (“and-dwell/sit over-her/its and-Aaron”)
+# ‹וְחוּר תָּמְכוּ בְיָדָיו› (“and-Hur sustain in-hand-him/its”)
+# ‹מִזֶּה אֶחָד וּמִזֶּה› (“from-this one and-from-this”)
+# ‹אֶחָד וַיְהִי יָדָיו› (“one and-be hand-him/its”)
+# ‹אֱמוּנָה עַד־בֹּא הַשָּׁמֶשׁ› (“firmness until come/bring the-sun”)
 # "[EN-AID] And Moses' hands were heavy; and they took a stone and put it
 # under him, and he sat on it; and Aaron and Hur supported his hands, from
 # this side one and from this side one; and his hands were faithfulness
 # until the coming of the sun."
 m.step("Exod.17.12")
-# ‹וַיְהִי יָדָיו אֱמוּנָה עַד־בֹּא הַשָּׁמֶשׁ› (“and-be hand-him/its
-# firmness until come/bring the-sun”) — fact holds: yadav-firmness-until-
-# come/bring-the-sun
+# ‹וַיְהִי יָדָיו אֱמוּנָה› (“and-be hand-him/its firmness”)
+# ‹עַד־בֹּא הַשָּׁמֶשׁ› (“until come/bring the-sun”)
+# — fact holds: yadav-firmness-until-come/bring-the-sun
 m.fact("yadav_emuna_ad_bo_ha_shamesh")
 
 # -------------------------- Exod.17.13 · BY_THE_MOUTH_OF_THE_SWORD ---------
-# וַיַּחֲלֹשׁ יְהוֹשֻׁעַ אֶת־עֲמָלֵק וְאֶת־עַמּוֹ לְפִי־חָרֶב
+# ‹וַיַּחֲלֹשׁ יְהוֹשֻׁעַ אֶת־עֲמָלֵק› (“and-prostrate Jehoshua obj-marker
+# Amalek”)
+# ‹וְאֶת־עַמּוֹ לְפִי־חָרֶב› (“and-obj-marker people-him/its to-mouth
+# drought”)
 # "[EN-AID] And Joshua weakened Amalek and his people by the mouth of the
 # sword."
 m.step("Exod.17.13")
-# ‹וַיַּחֲלֹשׁ יְהוֹשֻׁעַ אֶת־עֲמָלֵק וְאֶת־עַמּוֹ לְפִי־חָרֶב› (“and-
-# prostrate Jehoshua obj-marker Amalek and-obj-marker people-him/its to-
-# mouth drought”) — event: and-prostrate-Jehoshua — agent Jehoshua; theme
-# Amalek
+# ‹וַיַּחֲלֹשׁ יְהוֹשֻׁעַ אֶת־עֲמָלֵק› (“and-prostrate Jehoshua obj-marker
+# Amalek”)
+# ‹וְאֶת־עַמּוֹ לְפִי־חָרֶב› (“and-obj-marker people-him/its to-mouth
+# drought”)
+# — event: and-prostrate-Jehoshua — agent Jehoshua; theme Amalek
 m.event("va_yachalosh_yehoshua", agent="yehoshua", themes=["amaleq"])
 
 # -------------------------- Exod.17.14 · WRITE_THIS_IN_THE_BOOK ------------
-# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה כְּתֹב זֹאת זִכָּרוֹן בַּסֵּפֶר וְשִׂים
-# בְּאָזְנֵי יְהוֹשֻׁעַ כִּי־מָחֹה אֶמְחֶה אֶת־זֵכֶר עֲמָלֵק מִתַּחַת
-# הַשָּׁמָיִם
+# ‹וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה› (“and-say YHWH to Moses”)
+# ‹כְּתֹב זֹאת זִכָּרוֹן› (“grave this memento”)
+# ‹בַּסֵּפֶר וְשִׂים בְּאָזְנֵי› (“in-writing and-put/set in-
+# broadness.-i.e.-the-ear”)
+# ‹יְהוֹשֻׁעַ כִּי־מָחֹה אֶמְחֶה› (“Jehoshua that stroke stroke”)
+# ‹אֶת־זֵכֶר עֲמָלֵק מִתַּחַת› (“obj-marker memento Amalek from-under”)
+# ‹הַשָּׁמָיִם› (“the-heavens”)
 # "[EN-AID] And the LORD said to Moses: Write this, a memorial in the book,
 # and set it in the ears of Joshua: that I will utterly blot out the memory
 # of Amalek from under the heavens."
 m.step("Exod.17.14")
-# ‹כְּתֹב זֹאת זִכָּרוֹן בַּסֵּפֶר וְשִׂים בְּאָזְנֵי יְהוֹשֻׁעַ› (“grave
-# this memento in-writing and-put/set in-broadness.-i.e.-the-ear Jehoshua”)
+# ‹כְּתֹב זֹאת זִכָּרוֹן› (“grave this memento”)
+# ‹בַּסֵּפֶר וְשִׂים בְּאָזְנֵי› (“in-writing and-put/set in-
+# broadness.-i.e.-the-ear”)
+# ‹יְהוֹשֻׁעַ› (“Jehoshua”)
 # — the-LORD speaks a demand — LET: grave-this-memento-in-the-sefer
 m.declare("YHWH", "LET",
           "ketov_zot_zikaron_ba_sefer")
 
 # -------------------------- Exod.17.15 · THE_LORD_IS_MY_BANNER -------------
-# וַיִּבֶן מֹשֶׁה מִזְבֵּחַ וַיִּקְרָא שְׁמוֹ יְהוָה נִסִּי
+# ‹וַיִּבֶן מֹשֶׁה מִזְבֵּחַ› (“and-build Moses altar”)
+# ‹וַיִּקְרָא שְׁמוֹ יְהוָה› (“and-call name-him/its”)
+# ‹נִסִּי› (“Jehovah-Nissi-me/my”)
 # "[EN-AID] And Moses built an altar, and called its name: The LORD is my
 # banner."
 m.step("Exod.17.15")
-# ‹וַיִּקְרָא שְׁמוֹ יְהוָה נִסִּי› (“and-call name-him/its Jehovah-Nissi-
-# me/my”) — named: altar := the-LORD-Nisi
+# ‹וַיִּקְרָא שְׁמוֹ יְהוָה› (“and-call name-him/its”)
+# ‹נִסִּי› (“Jehovah-Nissi-me/my”)
+# — named: altar := the-LORD-Nisi
 m.name("mizbeach", "YHWH_Nisi")
 
 # -------------------------- Exod.17.16 · THE_THRONE_OATH -------------------
-# וַיֹּאמֶר כִּי־יָד עַל־כֵּס יָהּ מִלְחָמָה לַיהוָה בַּעֲמָלֵק מִדֹּר דֹּר
+# ‹וַיֹּאמֶר כִּי־יָד עַל־כֵּס› (“and-say that hand over flag”)
+# ‹יָהּ מִלְחָמָה לַיהוָה› (“Jah battle to-YHWH”)
+# ‹בַּעֲמָלֵק מִדֹּר דֹּר› (“in-Amalek from-generation generation”)
 # "[EN-AID] And he said: For a hand is upon the throne of YH — war for the
 # LORD against Amalek, from generation to generation."
 m.step("Exod.17.16")
-# ‹וַיֹּאמֶר כִּי־יָד עַל־כֵּס יָהּ מִלְחָמָה לַיהוָה בַּעֲמָלֵק› (“and-say
-# that hand over flag Jah battle to-YHWH in-Amalek”) — fact holds: battle-
-# to-the-LORD-in-the-Amalek-from-generation-generation
+# ‹וַיֹּאמֶר כִּי־יָד עַל־כֵּס› (“and-say that hand over flag”)
+# ‹יָהּ מִלְחָמָה לַיהוָה› (“Jah battle to-YHWH”)
+# ‹בַּעֲמָלֵק› (“in-Amalek”)
+# — fact holds: battle-to-the-LORD-in-the-Amalek-from-generation-generation
 m.fact("milchama_la_YHWH_ba_amaleq_mi_dor_dor")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

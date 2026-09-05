@@ -14,13 +14,16 @@ from machine import Machine
 m = Machine("gen_01_creation_boot")
 
 # -------------------------- Gen.1.1 · EVENT_CREATE -------------------------
-# בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
+# ‹בְּרֵאשִׁית בָּרָא אֱלֹהִים› (“in-beginning created God”)
+# ‹אֵת הַשָּׁמַיִם וְאֵת› (“obj-marker the-heavens and-obj-marker”)
+# ‹הָאָרֶץ› (“the-earth”)
 # "[EN-AID] In the beginning God created the heavens and the earth."
 m.step("Gen.1.1")
 # clock anchored: t0 := beginning
 m.time_anchor("reshit")
-# ‹אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ› (“obj-marker the-heavens and-obj-marker
-# the-earth”) — event: create — agent God; theme heavens, earth
+# ‹אֵת הַשָּׁמַיִם וְאֵת› (“obj-marker the-heavens and-obj-marker”)
+# ‹הָאָרֶץ› (“the-earth”)
+# — event: create — agent God; theme heavens, earth
 m.event("create", agent="Elohim", themes=["shamayim", "aretz"])
 # the world gains: heavens, earth
 m.install("shamayim", "aretz")
@@ -28,16 +31,18 @@ m.install("shamayim", "aretz")
 m.utterance(1, "bulk-create")
 
 # -------------------------- Gen.1.2 · STATE_BLOCK --------------------------
-# וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם וְרוּחַ
-# אֱלֹהִים מְרַחֶפֶת עַל־פְּנֵי הַמָּיִם
+# ‹וְהָאָרֶץ הָיְתָה תֹהוּ› (“and-the-earth was formless”)
+# ‹וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי› (“and-void and-darkness over face-of”)
+# ‹תְהוֹם וְרוּחַ אֱלֹהִים› (“deep and-spirit God”)
+# ‹מְרַחֶפֶת עַל־פְּנֵי הַמָּיִם› (“hovering over face-of the-waters”)
 # "[EN-AID] The earth was formless and void, darkness over the deep, God's
 # spirit hovering over the waters."
 m.step("Gen.1.2")
 # fact holds: formless(earth) ∧ void(earth); over(darkness, face(deep))
 m.fact("tohu(aretz) ∧ vohu(aretz)",
        "over(choshekh, face(tehom))")
-# ‹מְרַחֶפֶת› (“hovering”) — standing constraint: hover(spirit-God,
-# face(waters))
+# ‹מְרַחֶפֶת› (“hovering”)
+# — standing constraint: hover(spirit-God, face(waters))
 m.invariant("hover(ruach-Elohim, face(mayim))")
 # note: zero events in this verse
 m.note_zero_events()
@@ -48,47 +53,57 @@ m.presupposed("choshekh", "tehom", "mayim", "ruach")
 m.utterance_disputed("is ruach ('wind/spirit') the tenth utterance? R. Yaakov ben Kurshai: counts; Menachem bar Yosei: Gen 2:18 instead — machloket ('recorded dispute') carried, never decided (amendment 2026-08-20)")
 
 # -------------------------- Gen.1.3 · DECLARE_LET_RESULT -------------------
-# וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי־אוֹר
+# ‹וַיֹּאמֶר אֱלֹהִים יְהִי› (“and-said God let-there-be”)
+# ‹אוֹר וַיְהִי־אוֹר› (“light and-there-was light”)
 # "[EN-AID] God said: let there be light — and there was light."
 m.step("Gen.1.3")
 # utterance #2 of the ten (ma'amar census)
 m.utterance(2, "fiat")
-# ‹יְהִי אוֹר› (“let-there-be light”) — God speaks a demand — LET:
-# exists(light)
+# ‹יְהִי אוֹר› (“let-there-be light”)
+# — God speaks a demand — LET: exists(light)
 m.declare("Elohim", "LET",
           "exists(or)")
 # open question logged: exists(light)
 m.triple("exists(or)")
-# ‹וַיְהִי־אוֹר› (“and-there-was light”) — demand settled (popped from the
-# queue): exists(light)
+# ‹וַיְהִי־אוֹר› (“and-there-was light”)
+# — demand settled (popped from the queue): exists(light)
 m.result("exists(or)", tmark="t1")
 
 # -------------------------- Gen.1.4 · TEST_AND_PARTITION -------------------
-# וַיַּרְא אֱלֹהִים אֶת־הָאוֹר כִּי־טוֹב וַיַּבְדֵּל אֱלֹהִים בֵּין הָאוֹר
-# וּבֵין הַחֹשֶׁךְ
+# ‹וַיַּרְא אֱלֹהִים אֶת־הָאוֹר› (“and-saw God obj-marker the-light”)
+# ‹כִּי־טוֹב וַיַּבְדֵּל אֱלֹהִים› (“that good and-divided God”)
+# ‹בֵּין הָאוֹר וּבֵין› (“between the-light and-between”)
+# ‹הַחֹשֶׁךְ› (“the-darkness”)
 # "[EN-AID] God saw the light, that it was good; and God divided the light
 # from the darkness."
 m.step("Gen.1.4")
-# ‹כִּי־טוֹב› (“that good”) — test PASS — oracle-word good, on light
+# ‹כִּי־טוֹב› (“that good”)
+# — test PASS — oracle-word good, on light
 m.test("PASS", "tov", "or")
-# ‹בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ› (“between the-light and-between the-
-# darkness”) — partition between light and darkness
+# ‹בֵּין הָאוֹר וּבֵין› (“between the-light and-between”)
+# ‹הַחֹשֶׁךְ› (“the-darkness”)
+# — partition between light and darkness
 m.partition("or", "choshekh")
 # witness-grounded state (its own tier): or_ha_ganuz on or
 m.witness_state("or", "or_ha_ganuz",
                 cites=["Bereshit Rabbah 3:6", "Chagigah 12a:10"])
 
 # -------------------------- Gen.1.5 · NAME_AND_COMMIT ----------------------
-# וַיִּקְרָא אֱלֹהִים לָאוֹר יוֹם וְלַחֹשֶׁךְ קָרָא לָיְלָה וַיְהִי־עֶרֶב
-# וַיְהִי־בֹקֶר יוֹם אֶחָד
+# ‹וַיִּקְרָא אֱלֹהִים לָאוֹר› (“and-called God to-the-light”)
+# ‹יוֹם וְלַחֹשֶׁךְ קָרָא› (“Day and-to-the-darkness called”)
+# ‹לָיְלָה וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר› (“Night and-there-was evening and-
+# there-was morning”)
+# ‹יוֹם אֶחָד› (“Day one”)
 # "[EN-AID] God called the light Day and the darkness Night; evening,
 # morning — day one."
 m.step("Gen.1.5")
-# ‹לָאוֹר יוֹם … וְלַחֹשֶׁךְ … לָיְלָה› (“to-the-light Day … and-to-the-
-# darkness … Night”) — named: light := Day; darkness := Night
+# ‹לָאוֹר יוֹם … וְלַחֹשֶׁךְ› (“to-the-light Day … and-to-the-darkness”)
+# ‹… לָיְלָה› (“Night”)
+# — named: light := Day; darkness := Night
 m.name("or", "yom")
 m.name("choshekh", "layla")
-# ‹יוֹם אֶחָד› (“Day one”) — ledger: day 1 committed
+# ‹יוֹם אֶחָד› (“Day one”)
+# — ledger: day 1 committed
 m.commit(1, label_form="cardinal", label_translit="yom echad")
 # witness-tier presupposed read: day_boundary_liturgy_jobs on
 # va_yehi_erev_va_yehi_voqer — read, not installed
