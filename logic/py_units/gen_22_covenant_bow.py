@@ -140,6 +140,10 @@ m.fact("ve_zakharti_et_briti_beini_u_veineikhem",
 # never_again_oath — read, not installed
 m.witness_read("never_again_oath", "standing_law_with_disputed_scope",
                 cites=["Tosefta Ta'anit 2:11", "Sifrei Devarim 343:9"])
+# witness-tier presupposed read: no_is_oath on ve_lo_yihye_od — read, not
+# installed
+m.witness_read("ve_lo_yihye_od", "no_is_oath",
+                cites=["Shevuot 36a:12", "Shevuot 36a:13", "Shevuot 36a:14"])
 
 # -------------------------- Gen.9.16 · TO_REMEMBER_THE_EVERLASTING ---------
 # וְהָיְתָה הַקֶּשֶׁת בֶּעָנָן וּרְאִיתִיהָ לִזְכֹּר בְּרִית עוֹלָם בֵּין
@@ -187,7 +191,7 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['address_widened']
     assert m.WORLD["witnessed"]['address_widened']["cites"] == ['Bereshit Rabbah 35:1']
     assert all('demotion_or_elevation' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ledorot_clause', 'exemptions_written_in_the_missing_letters'), ('bow_sign', 'placed_not_made'), ('never_again_oath', 'standing_law_with_disputed_scope')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ledorot_clause', 'exemptions_written_in_the_missing_letters'), ('bow_sign', 'placed_not_made'), ('never_again_oath', 'standing_law_with_disputed_scope'), ('ve_lo_yihye_od', 'no_is_oath')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 35:2']
     assert all('exemptions_written_in_the_missing_letters' not in f for f in m.WORLD["facts"])
     assert 'ledorot_clause' not in m.WORLD["witnessed"]
@@ -197,4 +201,7 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[2]["cites"] == ["Tosefta Ta'anit 2:11", 'Sifrei Devarim 343:9']
     assert all('standing_law_with_disputed_scope' not in f for f in m.WORLD["facts"])
     assert 'never_again_oath' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Shevuot 36a:12', 'Shevuot 36a:13', 'Shevuot 36a:14']
+    assert all('no_is_oath' not in f for f in m.WORLD["facts"])
+    assert 've_lo_yihye_od' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

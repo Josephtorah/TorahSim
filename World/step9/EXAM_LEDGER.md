@@ -961,3 +961,388 @@ flags verified pre-existing at HEAD). Rituals COMPLETE (exo_20,
 standing +4 rebaked (1277 → 1281, one per seat exactly), hash
 8b8fff1fa28953af unmoved, manifests 0 FAILED (13 verified 0
 failed), gloss_lint 0 on new content.
+
+## Round 30 — THE PRAYER BOOK OF THE PATRIARCHS (2026-09-04,
+## Genesis exam block 1 of 12 — THE GENESIS CAMPAIGN OPENS)
+Owner: "Do 3 then 2" — the MIDDOT.md consolidation landed first
+(three rules-about-rules rows filed: adjacency validity, the
+method fork's three seats, parse direction; will-indexed dispatch
+watch-listed at two exemplars), then the Genesis campaign's map
+was DRAWN (the 206 LAW rows of the 958-triage clustered into 12
+blocks at the triage ledger's tail, the Noahide block's ~44
+already consumed) and block 1 ran. 12 docket rows: 9 opened
+fresh, 3 STANDING SEATS credited (G33-20 the Abram-name ban both
+arms, G27-22 the Amidah's clause map, G27-18 the priests'
+return-blessing — the reading anticipated the exam three rows
+deep before the block opened). 25 segments fresh across 3
+tractates. FIVE modules (prayerbook_rules.py), 14 cases: **14/14
+FIRST RUN — 905/905 across thirty rounds.** Catalog R-465..R-469
+(274 compiled rules); vocabulary +14 (729 query values, 158 dims
+unchanged). THE HEADLINE — THE THIRD STRATUM CALLS IT AGAIN:
+gen_35's frozen operator prose at 19:27 had already named
+Abraham's standing PRAYER ("ministered there in prayer... the
+prayer-family's predicted firing") — the baraita's own
+standing-is-prayer verbal analogy, held in the unit's prose
+before the sugya was opened. FINDINGS — four, four units:
+F-113 → G35-26 (the founding machine: patriarchs-vs-offerings w/
+BOTH baraitot kept; three founders by three verbal analogies
+[standing/meditation/encounter]; the fixed place; the
+offering-indexed clocks w/ R. Yehuda's arms; the six-hours
+constant at 18:1's heat-token vs the manna's four), F-114 →
+G72-34 (the silent line born at 49:1's own scene — the withheld
+end, the sons' Shema, Jacob's blessed-be-the-Name, the sages'
+whisper enactment w/ the princess parable), F-115 → G37-30
+(visited-Sarah as remembrance-verse: R. Yosei vs R. Yehuda, the
+individual bar lifted by many-came-from-her), F-116 → G01-07
+(the day boundary's TWO liturgy jobs: Shema evening-first from
+the creation of the world; the makeup-prayer's one-day hinge w/
+R. Yochanan's prayer-is-mercy ruling — the unit's own
+ledger-commit shape the measured object). Rituals COMPLETE four
+units (130 frozen, regression 130/130), all 28 runners green,
+standing +4 rebaked (1281 → 1285, one per seat), hash
+8b8fff1fa28953af unmoved, manifests 0 FAILED, gloss_lint 0 on
+new content (13 legacy flags verified at HEAD).
+
+## Round 31 — THE CIRCUMCISION MACHINE (2026-09-04, Genesis exam
+## block 2 of 12)
+13 docket rows: 7 fresh, 6 STANDING SEATS credited at gen_33
+(G33-21 the three weighed analogies with the discarded candidates
+named, G33-24 the cascade, G33-25 the eighth-day double duty) —
+the reading anticipated the exam SIX rows deep. 18 segments, 3
+tractates. FOUR modules (circumcision_rules.py), 12 cases: **12/12
+FIRST RUN — 917/917 across thirty-one rounds.** R-470..R-473 (278
+rules); vocab +12 (741). FINDING — one, one unit: F-117 → G33-32
+(the machine's fresh layer: the adult's covenant-token challenge
+refused on the karet ["excision"] distinction; leprosy overridden
+by the flesh-token; the IN-BETWEEN derived from-between-them
+[Abaye's common side — the mi-beinaya construction on the unit's
+own two flesh-tokens]; the site's TWO recorded routes
+[fruit-making place vs male-female place — R. Yoshiya vs R.
+Natan]; the agent scope at every-male-among-you; the dusk wound
+[the overconfident craftsman's unfinished cut = a wound under
+excision, Rav Ashi]; the suction safety clause; the mother exempt
+by him-and-not-her at 21:4; the drawn foreskin re-circumcised
+EVEN A HUNDRED TIMES with Ben Koziva's precedent answering R.
+Yehuda's danger arm). THE CLAIM-ID COLLISION TRAP fired mid-seat
+— G33-27 already existed (gen_33 runs to G33-31) — caught by the
+manifest's own assert, renamed G33-32 everywhere before any gate
+ran: the trap's documented behavior, working. Ritual COMPLETE
+(gen_33), regression 130/130, all 29 runners green, standing +1
+rebaked (1285 → 1286), hash 8b8fff1fa28953af unmoved, manifests 0
+FAILED, gloss_lint 0 on new content.
+
+## Round 32 — BETROTHAL AND THE HOUSE (2026-09-04, Genesis exam
+## block 3 of 12)
+14 docket rows: 11 fresh-opened, 3 STANDING (G09-13
+not-without-a-wife + the community-marries leg, G09-17 the wedding
+blessing's building quote, G11-21 conjugal-before-journey). 27
+segments, 5 tractates, two honest out-of-range probes (Kiddushin
+2a:6, Yoma 77a:15). FOUR modules (betrothal_rules.py), 10 cases:
+**10/10 FIRST RUN — 927/927 across thirty-two rounds.**
+R-474..R-477 (282 rules); vocab +10 (751). THE HEADLINE — THE
+PURCHASE POWERS THE TRACTATE: Kiddushin's OPENING derivation runs
+on gen_39's own field — money betrothal by kichah-kichah from "I
+have given the silver of the field, TAKE from me," and
+taking-called-ACQUISITION from "the field that Abraham acquired":
+both legs of the tractate's verb-equation are this corpus's
+Machpelah purchase. The Beit Hillel peruta challenge lands
+answered — Ephron's verse powers the MEDIUM, never the amount —
+with the Tyrian/provincial silver-grade table beside it. SIX
+findings, six units: F-118 → G39-34 (the money machine), F-119 →
+G41-35 (the bride's YEAR from days-or-ten via redemption-days,
+the two-days and month arms refused; the maiden-definition at
+24:16 cross-ref'd), F-120 → G36-20 (rises-with-him — Rav Huna on
+married-to-a-MASTER + R. Elazar's mother-of-all-living: two
+routes one standing), F-121 → G54-42 (marital deprivation =
+AFFLICTION from Laban's oath clause — the Yom Kippur roster's
+source on the unit's own afflict-ban), F-122 → G64-35 (the
+famine-years ban from the before-the-famine birth notice; the
+childless excepted), F-123 → G09-20 (the orphan groom's ORDER —
+house, bed, then wife — Deut 15:8 parsed and SEALED by
+I-will-make-FOR-HIM-a-helper, beside standing G09-13). Rituals
+COMPLETE six units, regression 130/130 + 30 runners, standing +6
+rebaked (1286 → 1292, one per seat), hash 8b8fff1fa28953af
+unmoved, manifests 0 FAILED, gloss_lint 0 on new content.
+
+## Round 33 — LEVIRATE, SEED, AND UNIONS (2026-09-04, Genesis exam
+## block 4 of 12)
+A ONE-TRACTATE block: 8 docket rows all Yevamot — 6 fresh, 2
+STANDING at G33-27 (the 17:7 clause's three family laws: the
+three-month wait, the union ban). 14 segments. FIVE modules
+(levirate_rules.py), 7 cases: **7/7 FIRST RUN — 934/934 across
+thirty-three rounds.** R-478..R-482 (287 rules); vocab +7 (758).
+THE HEADLINE — THE TRIPLE VERDICT: procreation's neglect runs as a
+THREE-ARM recorded dispute (sheds-blood [R. Eliezer] /
+diminishes-the-image [R. Yaakov] / both [Ben Azzai, with his
+recorded self-exception]) — all three arms derived from gen_21's
+own 9:6-7 juxtaposition, the exam's first triple set since the
+Noahide rounds. FOUR findings, four units: F-124 → G71-28 (the
+levirate NAME resolved to INHERITANCE by verbal analogy to 48:6's
+own in-their-inheritance token), F-125 → G61-18 (the Er/Onan file
+— Onan written, Er by the him-TOO same-death inference, the
+motive split recorded), F-126 → G21-18 (the three-way above),
+F-127 → G65-33 (the beard rule — 42:8's recognition asymmetry as
+evidence law with Rav Chisda's aging parameter). PROCESS NOTE,
+honest: the seats were inserted BEFORE the block ledger existed
+and the cite gate refused all four units — the gate proving it
+checks reads, not intentions; the ledger was written and the
+rituals re-ran green. Rituals COMPLETE four units, regression
+130/130 + 31 runners, standing +4 rebaked (1292 → 1296, one per
+seat), hash 8b8fff1fa28953af unmoved, manifests 0 FAILED,
+gloss_lint 0 on new content.
+
+## Round 34 — INHERITANCE, DEEDS, AND SURETY (2026-09-04, Genesis
+## exam block 5 of 12)
+14 docket rows: 13 fresh, 1 STANDING (G29-18
+walking-acquisition). 35 segments, 4 tractates. FIVE modules
+(inheritance_rules.py), 14 cases: **14/14 FIRST RUN — 948/948
+across thirty-four rounds.** R-483..R-487 (292 rules); vocab +14
+(772). THE HEADLINE — THE SEATS ANSWER EACH OTHER AGAIN, ONE
+ROUND APART: Rava bounds the kahal count with 48:6's
+in-their-inheritance token ("equated for INHERITANCE, not for
+another matter," Horayot 6b:3) — the very token round 33 seated
+as the levirate name's resolution (G71-28): two blocks, two
+tractates, one token doing both jobs on the same frozen unit.
+SECOND HEADLINE — THE PURCHASE KEEPS PAYING: the deed's border
+clause is drafted from Machpelah's own "in all its border round
+about" (boundaries-from-the-Torah, Rav Mesharshiya), and Ephron's
+silver is the recorded EXCEPTION to R. Chanina's three-corpus
+currency table — the round-28 sela finding's table met from the
+other side. Also: the guarantor taxonomy drawn between JUDAH'S
+and REUBEN'S own pledge clauses (surety vs unconditional); the
+slave-property and gift-deed doctrines argued from the ink ALONE
+before Alexander (Geviha ben Pesisa's recorded adjudications,
+with the claimants' flight); the bnei-canon (one child written
+plural) opened at 46:23 with Rava's deflection kept; the
+covenant's land list as tithe-boundary law. EIGHT findings,
+eight units: F-128 → G39-35, F-129 → G31-21, F-130 → G71-29,
+F-131 → G66-35, F-132 → G65-34, F-133 → G23-16, F-134 → G42-29,
+F-135 → G69-30. Rituals COMPLETE ×8, regression 130/130 + 32
+runners, standing +8 rebaked (1296 → 1304, one per seat), hash
+8b8fff1fa28953af unmoved, manifests 0 FAILED, gloss_lint 0 on new
+content (the ellipsis-split-Hebrew lint class fixed at 12 flags).
+
+## Round 35 — THE COURTS' GENESIS LAYER (2026-09-04, Genesis exam
+## block 6 of 12)
+10 docket rows: 7 fresh, 3 STANDING (gen_10's own prose +
+G12-15/G12-19 — the adds-subtracts rule, the doubled condition,
+exile-atones-half all pre-held). 20 segments, 6 tractates. FIVE
+modules (courts_gen_rules.py), 10 cases: **10/10 FIRST RUN —
+958/958 across thirty-five rounds.** R-488..R-492 (297 rules);
+vocab +10 (782). THE HEADLINE — ONE VERSE, TWO MACHINES, TWO
+ROUNDS: Judah's 43:9 pledge powered surety law in round 34
+(G66-35) and now powers EXCOMMUNICATION law (the conditional ban
+binds absent release — the bones rolling forty years though
+Benjamin was brought) — G66-36 seated BESIDE it. Also aboard: the
+scepter as the exilarchs' judging license (the testament's clause
+as authority GEOGRAPHY); Heaven's jurisdiction assigned by 20:6's
+against-ME dative; the ason verbal analogy (42:38 + Exod 21:23)
+carrying R. Nechunya ben HaKanah's whole exemption; the lips
+covenant sourced at the binding's own we-will-return plural; and
+the TOWER OF BABEL as the idol-annulment doctrine's founding
+precedent (could-have-returned, did not — annulled). SEVEN
+findings, seven units: F-136 → G72-35, F-137 → G39-36, F-138 →
+G36-21, F-139 → G66-36, F-140 → G65-35, F-141 → G38-40, F-142 →
+G25-17. Rituals COMPLETE ×7, regression 130/130 + 33 runners,
+standing +7 rebaked (1304 → 1311, one per seat), hash
+8b8fff1fa28953af unmoved, manifests 0 FAILED, gloss_lint 0 on new
+content (one ellipsis-split pair caught and fixed).
+
+## Round 36 — THE NAME AND THE INK (2026-09-04, Genesis exam block
+## 7 of 12)
+13 docket rows: 11 fresh, 2 STANDING (G17-02/10 the eight-curved-
+letters canon MACHINE-VERIFIED at derivation, G33-19 the
+word-splitting acrostic proof-seat). 28 segments, 6 tractates, one honest out-of-range
+probe. FOUR modules (name_ink_rules.py), 11 cases: **11/11 FIRST
+RUN — 969/969 across thirty-six rounds. THE CATALOG PASSES 300
+COMPILED RULES (R-496, 301).** Vocab +11 (793). THE HEADLINE — THE
+ERASURE CENSUS RULES OUR OWN TOKENS: all of Abraham's Names holy
+except 18:3 (addressed to the guests — with the recorded dissent
+that rules hospitality greater than receiving the Presence); all
+of Lot's profane except 19:18 (the KILL-AND-REVIVE capability
+test) — and gen_35's derivation had ALREADY recorded the
+sacred-or-profane fork at that very token between the spine
+members: the exam shelf now rules the fork the reading flagged.
+SECOND HEADLINE — LAW FROM PURE INK STRUCTURE three ways: the ark
+cohabitation ban read from OPERAND ORDER alone (separated entry
+roster, rejoined exit roster); the Kedorlaomer LAYOUT law (two
+words, never two lines); Rava's oath-doubling cap drawn from the
+covenant's OWN doubled negation (9:11 + 9:15 — the repetition is
+the law's form). Also: the Torah's oath formula at 24:3 with the
+thigh-grasp as object protocol; the found-found chain opening at
+the goblet scene (the bridge the sweep predicted, read at its
+seat); the scribes' adornment catalog with two of five readings on
+our verses; Eden's rivers as vow-scope law. EIGHT findings, eight
+units: F-143 → G34-25, F-144 → G35-27, F-145 → G22-12, F-146 →
+G40-35, F-147 → G67-33, F-148 → G30-31, F-149 → G16-20, F-150 →
+G08-31. A seat-inserter gap surfaced honestly: gen_40's host step
+carries an INLINE comment (not the block form) — the anchor missed
+it and the run stopped BEFORE any partial write to that unit;
+extended the anchor, re-ran, all eight seated. Rituals COMPLETE
+×8, regression 130/130 + 34 runners, standing +8 rebaked (1311 →
+1319, one per seat), hash 8b8fff1fa28953af unmoved, manifests 0
+FAILED, gloss_lint 0 on new content.
+
+## Round 37 — THE TABLE AND THE KNIFE (2026-09-04, Genesis exam
+## block 8 of 12)
+12 docket rows, ALL FRESH — the Genesis campaign's first
+zero-credit block (a near-one-tractate block: Chullin + two Bava
+Kamma satellites). 35 segments, one honest out-of-range probe.
+FOUR modules (table_knife_rules.py), 11 cases: **11/11 FIRST RUN —
+980/980 across thirty-seven rounds. THE CATALOG REACHES R-500 (305
+compiled rules).** Vocab +11 (804). THE HEADLINE — DEFINITIONS BY
+GENESIS EXEMPLAR five ways: the slaughter blade defined at the
+binding's own knife (22:10, w/ the recorded zeal rider); divination
+DEFINED by Eliezer's maiden-test as paradigm (24:14); the
+three-time chazakah COUNTED from Jacob's own sentence (Joseph
+gone, Simeon gone, Benjamin — 42:36); the meat-milk kid defined at
+Judah's pledge-kid (38:20, both legs w/ the two-as-one
+discipline); the day-old ram from Jacob's protest clause (31:38).
+SECOND HEADLINE — THE CANON'S OWN SELF-AUDIT RUBRIC lands on our
+verse: Reish Lakish's "verses fit to burn, and they are the BODY
+of Torah" — Abimelech's oath (21:23) barred the conquest three
+generations deep, and the Avvim notice exists to record the
+ROUTE AROUND the patriarch's oath. Also: consumed robbery
+unrestorable at Abram's save-what-the-lads-ate; the sinew ban's
+subject-scope by grammar (Israel, not the altar); the ark's
+bird-wing tokens as the pure-bird sugya's test verse; SEA KILAYIM
+from day five's its-kind read through the land token — gen_05's
+FIRST Talmud seat. ELEVEN findings, eleven units (the campaign's
+widest spread): F-151..F-161 → G38-41, G37-31, G66-37, G30-32,
+G55-37, G40-36, G65-36, G61-19, G17-18, G54-43, G05-08. Rituals
+COMPLETE ×11, regression 130/130 + 35 runners, standing +11
+rebaked (1319 → 1330, one per seat), hash 8b8fff1fa28953af
+unmoved, manifests 0 FAILED, gloss_lint 0 on new content.
+
+## Round 38 — THE ALTAR BEFORE SINAI (2026-09-04, Genesis exam
+## block 9 of 12)
+9 docket rows, all fresh (Zevachim + Nedarim). 25 segments, one
+honest out-of-range probe. FIVE modules (altar_presinai_rules.py),
+9 cases: **9/9 FIRST RUN — 989/989 across thirty-eight rounds.**
+R-501..R-505 (310 rules); vocab +9 (813). THE HEADLINE — THE
+PRE-SINAI OFFERING MACHINE assembles from Genesis alone: Noah's
+altar is the outside-slaughter CRITERION (liability rides the
+offering-up because Noah BUILT AN ALTAR — R. Yosei, w/ R.
+Shimon's Manoach-rock counter) AND the species warrant (every
+clean beast and fowl); the self-presenting animals (the
+came-verb as purity filter); Abel's FATS proving the Noahide
+peace-offering arm (what has its fat offered but not all of it?)
+— the dispute both arms; the binding supplying the olah's VESSEL
+duty (the knife + the ram's for-a-burnt-offering clause — beside
+round 37's blade seat on the same step). SECOND HEADLINE — the
+TESTAMENT ASSIGNS TEMPLE GEOMETRY: the foundationless southeast
+corner explained by Benjamin-the-WOLF's portion, the strip out of
+Judah's with the recorded grief; and the priesthood's TRANSFER
+from Shem to Abraham at the blessing-order slip, sealed by
+he-and-not-his-seed. Also: the tunic's bloodshed atonement
+assigned at the dipped tunic. SEVEN findings, seven units:
+F-162..F-168 → G72-36, G60-23, G38-42, G20-20, G17-19, G12-23,
+G30-33. Rituals COMPLETE ×7, regression 130/130 + 36 runners,
+standing +7 rebaked (1330 → 1337, one per seat), hash
+8b8fff1fa28953af unmoved, manifests 0 FAILED, gloss_lint 0 on new
+content.
+
+## Round 39 — BIRTH AND THE BODY (2026-09-04, Genesis exam block
+## 10 of 12) — THE EXAM PASSES ONE THOUSAND
+11 docket rows: 7 fresh, 4 STANDING (G08-25 forming-forming,
+G11-24 formed-skin, G21-10 self-injury both courts, G08-19 the
+phrase census). 21 segments, 4 tractates. SIX modules
+(birth_body_rules.py), 11 cases: **11/11 FIRST RUN — 1000/1000
+ACROSS THIRTY-NINE ROUNDS: ONE THOUSAND RECORDED CASES POSED, ONE
+THOUSAND ANSWERED, ZERO MISSES SINCE THE PILOT.** R-506..R-511
+(316 rules); vocab +11 (824). THE HEADLINE — THE BODY'S LAW FROM
+GENESIS EXEMPLARS: pregnancy recognized at three months by
+TAMAR'S OWN about-three-months (the evidence grade weighed on the
+record); birth's onset at ZERACH'S returned hand; the
+nose-predicate's second and third laws completing the scan's
+career list at 7:22 (the corpse measured from the nose; the
+emerging head counting only with breath in its nostrils); the
+sex-determination rule proven by R. TZADOK from the descent
+roster's own gender grammar (the sons hung on Leah, the daughter
+on Jacob); the salt pillar ruled non-defiling on its own
+artifact; and fetus damages computed by the donkey clause — the
+tradition's own doctrine seated with its harshness on the page.
+FIVE findings, five units: F-169 → G61-20, F-170 → G18-11 (the
+7:22 host corrected mid-seat from gen_17 to gen_18_the_rise — the
+anchor hunt caught the wrong-unit guess BEFORE any write), F-171
+→ G69-31, F-172 → G35-28, F-173 → G38-43. Rituals COMPLETE ×5,
+regression 130/130 + 37 runners, standing +5 rebaked (1337 →
+1342, one per seat), hash 8b8fff1fa28953af unmoved, manifests 0
+FAILED, gloss_lint 0 on new content.
+
+## Round 40 — THE CONDUCT TORAH (2026-09-04, Genesis exam block
+## 11 of 12; gates run first sitting post-compaction #45)
+20 docket rows: 16 fresh, 4 STANDING (gen_29's lodging read,
+gen_23's nakedness-bars-the-Shema read, G09-17 hair-plaiting as
+building, gen_21's dread-grant read). 40 segments, 7 tractates —
+the campaign's widest block. FIVE modules (conduct_gen_rules.py),
+19 cases: **19/19 FIRST RUN — 1019/1019 ACROSS FORTY ROUNDS.**
+R-512..R-516 (321 rules); vocab +19 (843 on 158 dims; one YAML
+apostrophe-escape fix in a gloss). THE HEADLINE — THE CONDUCT
+TORAH FROM GENESIS EXEMPLARS: the road code (famine-scatter at
+Abram's descent; the traveler's widened road as Jacob's Seir
+ruse; no engrossment in law on the way at 45:24 with the
+recite-yes-delve-no counter; never count on a miracle, with the
+merit DEDUCTION read out of "I am diminished," 32:11); the
+household code (honor your wife — "he did good to Abram FOR HER
+SAKE"; refuse a lesser host, never a greater; say little and do
+much, with EPHRON the recorded wicked exemplar — the inheritance
+block's currency row met again from the conduct side); the
+speech code (praise's presence rule read off the NARRATOR-VS-
+ADDRESS ink delta between 6:9 and 7:1 — part to the face, all of
+it away); the body-of-practice rows (the bowing taxonomy's
+full-prostration defined at 37:10; dreams follow the mouth with
+Rava's fit cap at 41:12-13; the escort duty from He-brought-her;
+riding behind, not before, at 24:61; the satiety-display ban at
+42:1); and the labor measures (the paid keeper's CEILING from
+Jacob's own heat-and-frost clause at 31:40; the six two-month
+agricultural seasons implementing 8:22's roster as the
+sharecropper calendar). FOURTEEN findings, fourteen units:
+F-174..F-187 → G56-31, G28-14 (the 12:10 + 12:16 pair), G68-30,
+G55-38, G35-29, G34-26, G09-21, G41-36, G17-21, G64-36, G60-24,
+G65-37, G54-44, G20-21. Rituals COMPLETE ×14 (the campaign's
+widest seat spread), regression 130/130 + 38 runners, standing
++14 rebaked (1342 → 1356, one per seat), hash 8b8fff1fa28953af
+unmoved, manifests 0 FAILED, gloss_lint 0 on new content. Method
+note for the record: the owner's compaction call landed between
+the seats and the gates — the six gate steps were enumerated in
+the state doc tail and run to green as the next window's FIRST
+action, exactly as written.
+
+## Round 41 — KINDNESS, MOURNING, AND CHARITY (2026-09-04, Genesis
+## exam block 12 of 12 — THE GENESIS CAMPAIGN CLOSES)
+13 docket rows fresh + the imitatio dossier STANDING (G11-24's
+garments install has cited Sotah 14a:4 since the derivation) +
+five recorded duplicates folded to their primaries. 41 segments,
+7 tractates. FIVE modules (kindness_rules.py), 13 cases: **13/13
+FIRST RUN — 1032/1032 ACROSS FORTY-ONE ROUNDS. THE GENESIS
+CAMPAIGN CLOSES: 12 OF 12 BLOCKS, EVERY ONE GREEN ON ITS FIRST
+RUN.** R-517..R-521 (326 rules); vocab +13 (856 on 158 dims). THE
+HEADLINE — THE KINDNESS TORAH VERSE BY VERSE: the imitatio ladder
+standing seated since the gen_11 derivation (clothe the naked,
+visit the sick at Mamre's third day, comfort mourners at 25:11);
+hospitality's rank climbing to greater-than-receiving-the-
+Presence on 18:3's own do-not-pass-by; the furnace before shaming
+from Tamar's pledges-not-name with the recognize-for-recognize
+echo in the ink's repeated token; the whole MOURNING FILE
+assembled from Genesis alone — seven days from Joseph's mourning,
+the before-burial exemption from the doubled from-before token,
+parting from the dead IN peace from the covenant vision's own
+promise clause, and the consolation formula quoting 18:19's
+kindness lineage; the forgiveness protocols — pray for your
+fellow first (the 20:17-to-21:1 as-he-had-said receipt), ask at
+most three times (the brothers' triple plea), the invoker
+punished first (Sarai's cry answered at Sarah's eulogy); the
+zealous-early rule sourced at the binding's rose-early; the
+CHARITY CAP read off pure ink grammar — Jacob's doubled tithe
+verb = two tenths, with Rav Ashi's second-like-first making them
+equal (the campaign's fourth law-from-ink-structure); and the
+blessing stations resolving the punishment-among-miracles
+objection into two blessings, beside round 39's standing purity
+seat on the same salt pillar. TWELVE findings, ten units:
+F-188..F-199 → G61-21, G34-27, G34-28, G73-31, G73-32, G36-22,
+G32-23, G38-44, G39-37, G35-30, G31-22, G48-36 (gen_73 and
+gen_48 their FIRST exam seats). Rituals COMPLETE ×10, regression
+130/130 + 41 runners, standing +12 rebaked (1356 → 1368, one per
+seat), hash 8b8fff1fa28953af unmoved, manifests 0 FAILED,
+gloss_lint 0 on new content.

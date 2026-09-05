@@ -64,6 +64,10 @@ m.fact("hinkha_met_al_ha_ishah",
 # installed
 m.witness_read("gentile_dream", "prophecy_grade_carried_by_both_spine_members",
                 cites=["Bereshit Rabbah 52:5", "Bereshit Rabbah 74:7", "Onkelos Genesis 20:3"])
+# witness-tier presupposed read: rises_not_descends on beulat_baal — read,
+# not installed
+m.witness_read("beulat_baal", "rises_not_descends",
+                cites=["Ketubot 61a:2", "Ketubot 61a:3", "Ketubot 61a:4"])
 
 # -------------------------- Gen.20.4 · THE_KINGS_COUNT_QUESTION ------------
 # וַאֲבִימֶלֶךְ לֹא קָרַב אֵלֶיהָ וַיֹּאמַר אֲדֹנָי הֲגוֹי גַּם־צַדִּיק
@@ -110,6 +114,10 @@ m.fact("gam_anokhi_yadati_ve_tom_levavkha",
 # withheld_sin — read, not installed
 m.witness_read("withheld_sin", "agency_assigned_away_from_the_subject",
                 cites=["Bereshit Rabbah 52:7"])
+# witness-tier presupposed read: heaven_jurisdiction on me_chato_li — read,
+# not installed
+m.witness_read("me_chato_li", "heaven_jurisdiction",
+                cites=["Makkot 9a:9", "Makkot 9a:10", "Makkot 9a:11"])
 
 # -------------------------- Gen.20.7 · THE_PROPHET_AND_THE_RETURN_COMMAND --
 # וְעַתָּה הָשֵׁב אֵשֶׁת־הָאִישׁ כִּי־נָבִיא הוּא וְיִתְפַּלֵּל בַּעַדְךָ
@@ -270,6 +278,10 @@ m.event("heal", agent="elohim", themes=["beit_avimelekh"])
 # on forgiveness_law — read, not installed
 m.witness_read("forgiveness_law", "payment_insufficient_and_cruelty_forbidden",
                 cites=["Mishnah Bava Kamma 8:7"])
+# witness-tier presupposed read: pray_for_fellow_first on
+# va_yitpalel_avraham — read, not installed
+m.witness_read("va_yitpalel_avraham", "pray_for_fellow_first",
+                cites=["Bava Kamma 92a:15", "Bava Kamma 92a:16", "Bava Kamma 92a:17"])
 
 # -------------------------- Gen.20.18 · THE_SHUT_WOMB_CLOSER ---------------
 # כִּי־עָצֹר עָצַר יְהוָה בְּעַד כָּל־רֶחֶם לְבֵית אֲבִימֶלֶךְ עַל־דְּבַר
@@ -300,26 +312,35 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 9
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('gentile_dream', 'prophecy_grade_carried_by_both_spine_members'), ('withheld_sin', 'agency_assigned_away_from_the_subject'), ('know_you_shall_die', 'second_leg_of_no_forewarning'), ('achoti_vat_avi_akh_lo_vat_imi', 'sister_law_proof_attempted_and_deflected'), ('plural_verb_crux', 're_subjected_in_translation'), ('thousand_silver', 'read_as_compensation_with_a_right'), ('forgiveness_law', 'payment_insufficient_and_cruelty_forbidden')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('gentile_dream', 'prophecy_grade_carried_by_both_spine_members'), ('beulat_baal', 'rises_not_descends'), ('withheld_sin', 'agency_assigned_away_from_the_subject'), ('me_chato_li', 'heaven_jurisdiction'), ('know_you_shall_die', 'second_leg_of_no_forewarning'), ('achoti_vat_avi_akh_lo_vat_imi', 'sister_law_proof_attempted_and_deflected'), ('plural_verb_crux', 're_subjected_in_translation'), ('thousand_silver', 'read_as_compensation_with_a_right'), ('forgiveness_law', 'payment_insufficient_and_cruelty_forbidden'), ('va_yitpalel_avraham', 'pray_for_fellow_first')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 52:5', 'Bereshit Rabbah 74:7', 'Onkelos Genesis 20:3']
     assert all('prophecy_grade_carried_by_both_spine_members' not in f for f in m.WORLD["facts"])
     assert 'gentile_dream' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 52:7']
+    assert m.WITNESS_READS[1]["cites"] == ['Ketubot 61a:2', 'Ketubot 61a:3', 'Ketubot 61a:4']
+    assert all('rises_not_descends' not in f for f in m.WORLD["facts"])
+    assert 'beulat_baal' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 52:7']
     assert all('agency_assigned_away_from_the_subject' not in f for f in m.WORLD["facts"])
     assert 'withheld_sin' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 52:8']
+    assert m.WITNESS_READS[3]["cites"] == ['Makkot 9a:9', 'Makkot 9a:10', 'Makkot 9a:11']
+    assert all('heaven_jurisdiction' not in f for f in m.WORLD["facts"])
+    assert 'me_chato_li' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 52:8']
     assert all('second_leg_of_no_forewarning' not in f for f in m.WORLD["facts"])
     assert 'know_you_shall_die' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Sanhedrin 58b:5', 'Sanhedrin 58b:6']
+    assert m.WITNESS_READS[5]["cites"] == ['Sanhedrin 58b:5', 'Sanhedrin 58b:6']
     assert all('sister_law_proof_attempted_and_deflected' not in f for f in m.WORLD["facts"])
     assert 'achoti_vat_avi_akh_lo_vat_imi' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Genesis 20:13']
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Genesis 20:13']
     assert all('re_subjected_in_translation' not in f for f in m.WORLD["facts"])
     assert 'plural_verb_crux' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 52:10', 'Onkelos Genesis 20:16']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 52:10', 'Onkelos Genesis 20:16']
     assert all('read_as_compensation_with_a_right' not in f for f in m.WORLD["facts"])
     assert 'thousand_silver' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Mishnah Bava Kamma 8:7']
+    assert m.WITNESS_READS[8]["cites"] == ['Mishnah Bava Kamma 8:7']
     assert all('payment_insufficient_and_cruelty_forbidden' not in f for f in m.WORLD["facts"])
     assert 'forgiveness_law' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Bava Kamma 92a:15', 'Bava Kamma 92a:16', 'Bava Kamma 92a:17']
+    assert all('pray_for_fellow_first' not in f for f in m.WORLD["facts"])
+    assert 'va_yitpalel_avraham' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

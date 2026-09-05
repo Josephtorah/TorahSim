@@ -27,6 +27,10 @@ m.section("divre_yaaqov_le_vanav", "bene_lea", "bene_ha_shefachot", "bene_rachel
 # on the_end_of_days
 m.witness_state("the_end_of_days", "revealed_then_sealed_mid_sentence",
                 cites=["Bereshit Rabbah 98:2", "Bereshit Rabbah 99:5"])
+# witness-tier presupposed read: silent_line_birth on
+# va_yiqra_yaaqov_el_banav — read, not installed
+m.witness_read("va_yiqra_yaaqov_el_banav", "silent_line_birth",
+                cites=["Pesachim 56a:6", "Pesachim 56a:7", "Pesachim 56a:8"])
 
 # -------------------------- Gen.49.2 · HEAR_TO_ISRAEL_YOUR_FATHER ----------
 # הִקָּבְצוּ וְשִׁמְעוּ בְּנֵי יַעֲקֹב וְשִׁמְעוּ אֶל־יִשְׂרָאֵל אֲבִיכֶם
@@ -134,6 +138,10 @@ m.fact("lo_yasur_shevet_mi_yhuda_ad_ki_yavo_shilo")
 # until_shiloh_comes — read, not installed
 m.witness_read("until_shiloh_comes", "a_place_name_resolved_into_a_person",
                 cites=["Onkelos Genesis 49:10", "Bereshit Rabbah 98:8"])
+# witness-tier presupposed read: scepter_license on lo_yasur_shevet — read,
+# not installed
+m.witness_read("lo_yasur_shevet", "scepter_license",
+                cites=["Sanhedrin 5a:5", "Sanhedrin 5a:6", "Sanhedrin 5a:7"])
 
 # -------------------------- Gen.49.11 · BINDING_HIS_FOAL_TO_THE_VINE -------
 # אֹסְרִי לַגֶּפֶן עירה עִירוֹ וְלַשֹּׂרֵקָה בְּנִי אֲתֹנוֹ כִּבֵּס
@@ -322,6 +330,10 @@ m.fact("binyamin_zeev_yitraf")
 # — read, not installed
 m.witness_read("benjamin_a_ravening_wolf", "the_sanctuary_awarded_by_absence_from_a_crime",
                 cites=["Bereshit Rabbah 99:1", "Onkelos Genesis 49:27", "Bereshit Rabbah 99:3"])
+# witness-tier presupposed read: altar_strip on binyamin_zeev — read, not
+# installed
+m.witness_read("binyamin_zeev", "altar_strip",
+                cites=["Zevachim 53b:7", "Zevachim 53b:8", "Zevachim 53b:9"])
 
 # -------------------------- Gen.49.28 · EACH_BY_HIS_BLESSING ---------------
 # כָּל־אֵלֶּה שִׁבְטֵי יִשְׂרָאֵל שְׁנֵים עָשָׂר וְזֹאת אֲשֶׁר־דִּבֶּר לָהֶם
@@ -425,29 +437,38 @@ if __name__ == "__main__":
     assert all('ceasing_to_translate_for_one_chapter' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['they_hamstrung_an_ox']["cites"] == ['Bereshit Rabbah 98:5', 'Onkelos Genesis 49:5']
     assert all('three_layers_standing_on_one_verse' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('hear_israel_your_father', 'the_daily_liturgy_sourced_to_this_verse'), ('your_brothers_shall_praise_you', 'the_name_read_to_the_confession'), ('until_shiloh_comes', 'a_place_name_resolved_into_a_person'), ('zebulun_at_the_shore', 'a_prophets_parentage_and_a_patronage_rule'), ('they_embittered_him_and_shot_at_him', 'the_slander_model_stated_in_full'), ('his_bow_abode_in_strength', 'one_noun_read_three_ways'), ('benjamin_a_ravening_wolf', 'the_sanctuary_awarded_by_absence_from_a_crime'), ('he_finished_commanding_his_sons', 'a_funeral_order_that_becomes_a_camp')]
-    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 98:3', 'Onkelos Genesis 49:2']
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('va_yiqra_yaaqov_el_banav', 'silent_line_birth'), ('hear_israel_your_father', 'the_daily_liturgy_sourced_to_this_verse'), ('your_brothers_shall_praise_you', 'the_name_read_to_the_confession'), ('until_shiloh_comes', 'a_place_name_resolved_into_a_person'), ('lo_yasur_shevet', 'scepter_license'), ('zebulun_at_the_shore', 'a_prophets_parentage_and_a_patronage_rule'), ('they_embittered_him_and_shot_at_him', 'the_slander_model_stated_in_full'), ('his_bow_abode_in_strength', 'one_noun_read_three_ways'), ('benjamin_a_ravening_wolf', 'the_sanctuary_awarded_by_absence_from_a_crime'), ('binyamin_zeev', 'altar_strip'), ('he_finished_commanding_his_sons', 'a_funeral_order_that_becomes_a_camp')]
+    assert m.WITNESS_READS[0]["cites"] == ['Pesachim 56a:6', 'Pesachim 56a:7', 'Pesachim 56a:8']
+    assert all('silent_line_birth' not in f for f in m.WORLD["facts"])
+    assert 'va_yiqra_yaaqov_el_banav' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 98:3', 'Onkelos Genesis 49:2']
     assert all('the_daily_liturgy_sourced_to_this_verse' not in f for f in m.WORLD["facts"])
     assert 'hear_israel_your_father' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Genesis 49:8', 'Bereshit Rabbah 98:7']
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Genesis 49:8', 'Bereshit Rabbah 98:7']
     assert all('the_name_read_to_the_confession' not in f for f in m.WORLD["facts"])
     assert 'your_brothers_shall_praise_you' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Genesis 49:10', 'Bereshit Rabbah 98:8']
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Genesis 49:10', 'Bereshit Rabbah 98:8']
     assert all('a_place_name_resolved_into_a_person' not in f for f in m.WORLD["facts"])
     assert 'until_shiloh_comes' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 98:11', 'Bereshit Rabbah 99:9']
+    assert m.WITNESS_READS[4]["cites"] == ['Sanhedrin 5a:5', 'Sanhedrin 5a:6', 'Sanhedrin 5a:7']
+    assert all('scepter_license' not in f for f in m.WORLD["facts"])
+    assert 'lo_yasur_shevet' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 98:11', 'Bereshit Rabbah 99:9']
     assert all('a_prophets_parentage_and_a_patronage_rule' not in f for f in m.WORLD["facts"])
     assert 'zebulun_at_the_shore' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 98:19']
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 98:19']
     assert all('the_slander_model_stated_in_full' not in f for f in m.WORLD["facts"])
     assert 'they_embittered_him_and_shot_at_him' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Genesis 49:24', 'Bereshit Rabbah 98:20']
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Genesis 49:24', 'Bereshit Rabbah 98:20']
     assert all('one_noun_read_three_ways' not in f for f in m.WORLD["facts"])
     assert 'his_bow_abode_in_strength' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 99:1', 'Onkelos Genesis 49:27', 'Bereshit Rabbah 99:3']
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 99:1', 'Onkelos Genesis 49:27', 'Bereshit Rabbah 99:3']
     assert all('the_sanctuary_awarded_by_absence_from_a_crime' not in f for f in m.WORLD["facts"])
     assert 'benjamin_a_ravening_wolf' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 100:2', 'Bereshit Rabbah 100:1']
+    assert m.WITNESS_READS[9]["cites"] == ['Zevachim 53b:7', 'Zevachim 53b:8', 'Zevachim 53b:9']
+    assert all('altar_strip' not in f for f in m.WORLD["facts"])
+    assert 'binyamin_zeev' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 100:2', 'Bereshit Rabbah 100:1']
     assert all('a_funeral_order_that_becomes_a_camp' not in f for f in m.WORLD["facts"])
     assert 'he_finished_commanding_his_sons' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

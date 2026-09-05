@@ -100,6 +100,10 @@ m.fact("ve_rosho_va_shamayim",
 # installed
 m.witness_read("tower_motive", "firmament_supports_on_the_floods_own_interval",
                 cites=["Bereshit Rabbah 38:1"])
+# witness-tier presupposed read: annulment_precedent on beit_nimrod — read,
+# not installed
+m.witness_read("beit_nimrod", "annulment_precedent",
+                cites=["Avodah Zarah 53b:12", "Avodah Zarah 53b:13", "Avodah Zarah 53b:14"])
 
 # -------------------------- Gen.11.5 · THE_DESCENT_TO_SEE ------------------
 # וַיֵּרֶד יְהוָה לִרְאֹת אֶת־הָעִיר וְאֶת־הַמִּגְדָּל אֲשֶׁר בָּנוּ בְּנֵי
@@ -210,7 +214,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 15
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('one_speech', 'parsed_four_ways_and_name_as_idolatry'), ('sitting_verb', 'satisfaction_cause_chain'), ('tower_motive', 'firmament_supports_on_the_floods_own_interval'), ('let_us_descend', 'translation_alteration_canon_member'), ('scattering_outcome', 'one_of_three_fates'), ('doubled_scattering', 'eternal_verdict_from_two_tokens')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('one_speech', 'parsed_four_ways_and_name_as_idolatry'), ('sitting_verb', 'satisfaction_cause_chain'), ('tower_motive', 'firmament_supports_on_the_floods_own_interval'), ('beit_nimrod', 'annulment_precedent'), ('let_us_descend', 'translation_alteration_canon_member'), ('scattering_outcome', 'one_of_three_fates'), ('doubled_scattering', 'eternal_verdict_from_two_tokens')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 38:6', 'Mekhilta DeRabbi Yishmael, Tractate Kaspa 4:5']
     assert all('parsed_four_ways_and_name_as_idolatry' not in f for f in m.WORLD["facts"])
     assert 'one_speech' not in m.WORLD["witnessed"]
@@ -220,13 +224,16 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 38:1']
     assert all('firmament_supports_on_the_floods_own_interval' not in f for f in m.WORLD["facts"])
     assert 'tower_motive' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 38:10']
+    assert m.WITNESS_READS[3]["cites"] == ['Avodah Zarah 53b:12', 'Avodah Zarah 53b:13', 'Avodah Zarah 53b:14']
+    assert all('annulment_precedent' not in f for f in m.WORLD["facts"])
+    assert 'beit_nimrod' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 38:10']
     assert all('translation_alteration_canon_member' not in f for f in m.WORLD["facts"])
     assert 'let_us_descend' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Sanhedrin 109a:5', 'Sanhedrin 109a:4']
+    assert m.WITNESS_READS[5]["cites"] == ['Sanhedrin 109a:5', 'Sanhedrin 109a:4']
     assert all('one_of_three_fates' not in f for f in m.WORLD["facts"])
     assert 'scattering_outcome' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Sanhedrin 10:3']
+    assert m.WITNESS_READS[6]["cites"] == ['Mishnah Sanhedrin 10:3']
     assert all('eternal_verdict_from_two_tokens' not in f for f in m.WORLD["facts"])
     assert 'doubled_scattering' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

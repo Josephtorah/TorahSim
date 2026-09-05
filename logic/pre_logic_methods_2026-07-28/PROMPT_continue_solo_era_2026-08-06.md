@@ -9978,3 +9978,327 @@ the owner's word: the ~11 Genesis blocks (162 rows), Lev 1-8
 offering-engine consolidation, Shemini, MIDDOT.md consolidation
 (adjacency r25, method fork r26+r28, parse direction r27,
 will-indexed dispatch at 2 exemplars).
+
+(commit note, 2026-09-04) Owner: "Commit push" — rounds 26-29
+(sanctuary, vestments, service, decalogue: the campaign's close)
+committed as 4c6f783 and pushed a8ebdfb..4c6f783. 62 files; the
+never-commit set honored (secrets file, DISPOSABLE zips,
+open_ledger, elijah_docket gitlink, grok-mockups, logic/gork,
+cases_pilot.yaml all left out). The gh two-account switch ran
+cleanly (Josephtorah for the push, back to PeerloopLLC after).
+NOTHING UNCOMMITTED — the tree is clean but for the standing
+never-commit set. The campaign is sealed in the record: 18 of 18,
+891/891. NEXT on the owner's word: the ~11 Genesis blocks, Lev
+1-8 offering consolidation, Shemini, MIDDOT.md consolidation.
+
+(round 30 — MIDDOT CONSOLIDATION + THE GENESIS CAMPAIGN OPENS)
+Owner: "Do 3 then 2." TASK 3 FIRST: logic/MIDDOT.md gains "The
+middot's own case law" — adjacency validity (r25, Yevamot 4a:4-5
+w/ Rav Yosef's Deuteronomy parameter), THE METHOD FORK's three
+seats (r25 witch-adjacency, r26 candelabrum Sukkah 50b:5-7, r28
+eleven spices Keritot 6b:7-8 — middah choice = a MODEL PARAMETER
+with recorded arms), parse direction (r27, Zevachim 24b:2-3);
+will-indexed dispatch watch-listed at 2 exemplars (3rd = a move).
+Lint 0 new (1 legacy). THEN TASK 2: THE GENESIS MAP DRAWN — 206
+LAW rows of the 958-triage clustered into 12 blocks, appended to
+talmud_triage_gen_2026-09-01.md's tail (Noahide's ~44 already
+consumed): 1 prayer book, 2 circumcision, 3 betrothal/house, 4
+levirate/seed, 5 inheritance/deeds, 6 courts, 7 name-and-ink, 8
+table-and-knife, 9 altar-before-Sinai, 10 birth/body, 11 conduct,
+12 kindness/mourning/charity. BLOCK 1 RAN as round 30: THE PRAYER
+BOOK OF THE PATRIARCHS — 12 docket rows (9 fresh + 3 STANDING
+CREDITS: G33-20 Abram-name both arms, G27-22 Amidah clause map,
+G27-18 return-blessing), 25 segments, 3 tractates; 5 modules
+(prayerbook_rules.py), 14 cases: **14/14 FIRST RUN — 905/905 over
+THIRTY rounds.** R-465..R-469 (274 rules); vocab +14 (729).
+HEADLINE — THIRD STRATUM AGAIN: gen_35's frozen prose at 19:27
+had named the standing PRAYER ("the prayer-family's predicted
+firing") before the sugya opened — the baraita runs the same
+standing-is-prayer analogy. FOUR findings, FOUR unit rituals:
+F-113 → G35-26 (the founding machine: both baraitot kept; three
+founders by three verbal analogies; fixed place; offering clocks;
+six-hours at 18:1), F-114 → G72-34 (the silent line born at
+49:1's own scene), F-115 → G37-30 (visited-Sarah remembrance
+dispute w/ many-from-her), F-116 → G01-07 (the day boundary's two
+liturgy jobs — gen_01_creation_boot's FIRST Talmud seat). Rituals
+COMPLETE ×4, regression 130/130 + 28 runners, standing +4 rebaked
+(1281 → 1285), hash 8b8fff1fa28953af unmoved, manifests 0 FAILED,
+gloss_lint 0 new (13 legacy at HEAD). Records:
+REPORT_PRAYERBOOK.md + EXAM_LEDGER round 30 + catalog + block
+ledger + MIDDOT.md + THE_STEPS + briefing + memory. UNCOMMITTED:
+round 30 + the MIDDOT consolidation ride the next "commit push"
+(last commit 4c6f783). NEXT: Genesis blocks 2-12 in map order on
+the standing word.
+
+(round 31 — the circumcision block; Genesis 2 of 12)
+Standing word continues. 13 docket rows: 7 fresh + 6 STANDING at
+gen_33 (G33-21 weighed analogies, G33-24 cascade, G33-25
+eighth-day) — anticipation SIX deep. 18 segments, 3 tractates; 4
+modules (circumcision_rules.py), 12 cases: **12/12 FIRST RUN —
+917/917 over THIRTY-ONE rounds.** R-470..R-473 (278 rules); vocab
++12 (741). ONE finding: F-117 → G33-32 (the fresh layer: adult
+challenge refused on karet; leprosy override; IN-BETWEEN by
+mi-beinaya [Abaye's common side]; the site's two routes; agent
+scope; the dusk wound; suction clause; mother-exempt at 21:4;
+drawn foreskin ×100 w/ Ben Koziva precedent). ⚠ CLAIM-ID
+COLLISION TRAP FIRED: G33-27 already existed (gen_33 → G33-31) —
+manifest assert caught it, renamed G33-32 everywhere pre-gate.
+Ritual COMPLETE, regression 130/130 + 29 runners, standing +1
+rebaked (1285 → 1286), hash unmoved, lint 0 new. Records:
+REPORT_CIRCUMCISION.md + EXAM_LEDGER r31 + catalog + ledger.
+UNCOMMITTED: rounds 30-31 + MIDDOT ride next "commit push" (last
+4c6f783). NEXT: block 3 BETROTHAL AND THE HOUSE in map order.
+
+(round 32 — the betrothal block; Genesis 3 of 12)
+14 docket rows: 11 fresh + 3 STANDING (G09-13/17, G11-21). 27
+segments, 5 tractates, 2 honest OOR probes. 4 modules
+(betrothal_rules.py), 10 cases: **10/10 FIRST RUN — 927/927 over
+THIRTY-TWO rounds.** R-474..R-477 (282 rules); vocab +10 (751).
+HEADLINE — THE PURCHASE POWERS THE TRACTATE: Kiddushin's OPENING
+derivation runs on gen_39's field (kichah-kichah from "take from
+me" + taking-called-acquisition from "the field Abraham
+acquired"); the peruta challenge answered (medium-not-amount) w/
+the Tyrian/provincial table. SIX findings, six rituals: F-118 →
+G39-34, F-119 → G41-35 (bride's YEAR), F-120 → G36-20
+(rises-with-him), F-121 → G54-42 (innuy at Laban's oath — YK
+roster source), F-122 → G64-35 (famine ban), F-123 → G09-20
+(orphan order). Standing +6 rebaked (1286 → 1292), hash unmoved,
+lint 0 new (one tanna-jargon flag caught+fixed). Records:
+REPORT_BETROTHAL.md + EXAM_LEDGER r32 + catalog + ledger.
+UNCOMMITTED: rounds 30-32 + MIDDOT (last commit 4c6f783). NEXT:
+block 4 LEVIRATE, SEED, AND UNIONS.
+
+(round 33 — the levirate block; Genesis 4 of 12)
+One-tractate block (Yevamot): 8 rows — 6 fresh + 2 STANDING
+(G33-27). 14 segments; 5 modules (levirate_rules.py), 7 cases:
+**7/7 FIRST RUN — 934/934 over THIRTY-THREE rounds.** R-478..482
+(287 rules); vocab +7 (758). HEADLINE — THE TRIPLE VERDICT:
+procreation neglect = 3-arm dispute (sheds-blood/diminishes-
+image/both w/ Ben Azzai's recorded self-exception), all from
+gen_21's 9:6-7 juxtaposition. FOUR findings: F-124 → G71-28
+(levirate NAME=INHERITANCE via 48:6), F-125 → G61-18 (Er/Onan w/
+same-death inference), F-126 → G21-18, F-127 → G65-33 (the beard
+rule w/ aging parameter). ⚠ PROCESS: seats inserted BEFORE the
+block ledger — cite gate refused all four (checks READS not
+intentions); ledger written, rituals re-ran green: LEDGER FIRST,
+then seats. Standing +4 (1292 → 1296), hash unmoved, lint 0.
+UNCOMMITTED: rounds 30-33 + MIDDOT (last 4c6f783). NEXT: block 5
+INHERITANCE, DEEDS, AND SURETY.
+
+(round 34 — the inheritance block; Genesis 5 of 12)
+14 rows: 13 fresh + 1 STANDING (G29-18). 35 segments, 4
+tractates; 5 modules (inheritance_rules.py), 14 cases: **14/14
+FIRST RUN — 948/948 over THIRTY-FOUR rounds.** R-483..487 (292
+rules); vocab +14 (772). HEADLINES: (1) THE SEATS ANSWER EACH
+OTHER ONE ROUND APART — Rava bounds the kahal count w/ 48:6's
+token, the SAME token r33 seated for the levirate name; (2) THE
+PURCHASE KEEPS PAYING — deed border clause from Machpelah
+(boundaries-from-the-Torah) + Ephron's centenaria exception to
+the 3-corpus currency table (the r28 sela table met from the
+other side); guarantor taxonomy from Judah vs Reuben's own
+clauses; Geviha b. Pesisa's two ink-alone adjudications before
+Alexander; bnei-canon at 46:23. EIGHT findings/rituals: F-128 →
+G39-35, F-129 → G31-21, F-130 → G71-29, F-131 → G66-35, F-132 →
+G65-34, F-133 → G23-16, F-134 → G42-29, F-135 → G69-30. Standing
++8 (1296 → 1304), hash unmoved, lint 0 new (the ellipsis-split-
+Hebrew class caught at 12 and fixed — Hebrew spans must not be
+split by ellipses before their gloss). UNCOMMITTED: rounds 30-34
++ MIDDOT (last 4c6f783). NEXT: block 6 THE COURTS' GENESIS
+LAYER.
+
+(round 35 — the courts block; Genesis 6 of 12 — HALFWAY)
+10 rows: 7 fresh + 3 STANDING (gen_10 prose, G12-15, G12-19). 20
+segments, 6 tractates; 5 modules (courts_gen_rules.py), 10 cases:
+**10/10 FIRST RUN — 958/958 over THIRTY-FIVE rounds.** R-488..492
+(297 rules); vocab +10 (782). HEADLINE — ONE VERSE TWO MACHINES:
+Judah's 43:9 powered surety (r34, G66-35) and now the conditional
+ban (G66-36 beside it — bones rolled 40 years though the
+condition was met). Also: scepter = exilarch license; Heaven's
+jurisdiction by 20:6's against-ME; the ason analogy; the lips
+covenant at 22:5's plural; BABEL = the idol-annulment founding
+precedent. SEVEN findings/rituals: F-136..F-142 → G72-35, G39-36,
+G36-21, G66-36, G65-35, G38-40, G25-17. Standing +7 (1304 →
+1311), hash unmoved, lint 0 new. UNCOMMITTED: rounds 30-35 +
+MIDDOT (last 4c6f783). NEXT: block 7 THE NAME AND THE INK.
+
+(round 36 — the name-and-ink block; Genesis 7 of 12)
+13 rows: 11 fresh + 2 STANDING (G17-02/10, G33-19). 28 segments,
+6 tractates, 1 OOR probe. 4 modules (name_ink_rules.py), 11
+cases: **11/11 FIRST RUN — 969/969 over THIRTY-SIX rounds; THE
+CATALOG PASSES 300 (R-496, 301 rules).** Vocab +11 (793).
+HEADLINES: (1) THE ERASURE CENSUS on our own tokens — Abraham's
+Names holy except 18:3, Lot's profane except 19:18
+(kill-and-revive test) — and gen_35's derivation had ALREADY
+flagged the sacred/profane fork at that token; (2) LAW FROM PURE
+INK STRUCTURE ×3 — operand order (ark ban), layout (Kedorlaomer),
+repetition (the oath-doubling cap from the covenant's own doubled
+negation). Also: oath formula + thigh-grasp protocol; found-found
+chain at the goblet; ittur sofrim 2-of-5 ours; Eden rivers as
+vow scope. EIGHT findings/rituals: F-143..150 → G34-25, G35-27,
+G22-12, G40-35, G67-33, G30-31, G16-20, G08-31. ⚠ seat-inserter
+lesson: gen_40's step has an INLINE comment — anchor extended to
+both forms. Standing +8 (1311 → 1319), hash unmoved, lint 0 new.
+UNCOMMITTED: rounds 30-36 + MIDDOT (last 4c6f783). NEXT: block 8
+THE TABLE AND THE KNIFE.
+
+(round 37 — the table-and-knife block; Genesis 8 of 12)
+12 rows ALL FRESH (first zero-credit block; Chullin + 2 BK
+satellites). 35 segments, 1 OOR; 4 modules (table_knife_rules.py),
+11 cases: **11/11 FIRST RUN — 980/980 over THIRTY-SEVEN rounds;
+CATALOG REACHES R-500 (305 rules).** Vocab +11 (804). HEADLINES:
+(1) DEFINITIONS BY GENESIS EXEMPLAR ×5 — blade (22:10), divination
+paradigm (24:14), 3-time chazakah counted from 42:36, kid (38:20),
+day-old ram (31:38); (2) the canon's SELF-AUDIT rubric
+(verses-fit-to-burn = body of Torah) proven on Abimelech's oath
+bar + the conquest's recorded route-around. ELEVEN findings,
+eleven rituals (widest spread): F-151..F-161 → G38-41, G37-31,
+G66-37, G30-32, G55-37, G40-36, G65-36, G61-19, G17-18, G54-43,
+G05-08 (gen_05's FIRST seat). Standing +11 (1319 → 1330), hash
+unmoved, lint 0 new. UNCOMMITTED: rounds 30-37 + MIDDOT (last
+4c6f783). NEXT: block 9 THE ALTAR BEFORE SINAI.
+
+(round 38 — the altar-before-Sinai block; Genesis 9 of 12)
+9 rows all fresh (Zevachim + Nedarim). 25 segments, 1 OOR; 5
+modules (altar_presinai_rules.py), 9 cases: **9/9 FIRST RUN —
+989/989 over THIRTY-EIGHT rounds.** R-501..505 (310 rules); vocab
++9 (813). HEADLINES: (1) THE PRE-SINAI OFFERING MACHINE from
+Genesis alone — Noah's altar as criterion + species warrant, the
+self-presenting animals, Abel's fats proving the peace-offering
+arm (dispute both arms), the binding's knife = the olah's VESSEL
+duty; (2) the TESTAMENT ASSIGNS TEMPLE GEOMETRY (the wolf's
+portion + the strip) and the priesthood TRANSFER (Shem →
+Abraham, he-and-not-his-seed). SEVEN findings/rituals:
+F-162..168 → G72-36, G60-23, G38-42, G20-20, G17-19, G12-23,
+G30-33. Standing +7 (1330 → 1337), hash unmoved, lint 0 new.
+UNCOMMITTED: rounds 30-38 + MIDDOT (last 4c6f783). NEXT: block
+10 BIRTH AND THE BODY.
+
+(round 39 — the birth-and-body block; Genesis 10 of 12 — THE EXAM
+PASSES ONE THOUSAND)
+11 rows: 7 fresh + 4 STANDING (G08-25, G11-24, G21-10, G08-19).
+21 segments, 4 tractates; 6 modules (birth_body_rules.py), 11
+cases: **11/11 FIRST RUN — 1000/1000 over THIRTY-NINE rounds: ONE
+THOUSAND CASES, ZERO MISSES SINCE THE PILOT.** R-506..511 (316
+rules); vocab +11 (824). Body law from Genesis exemplars: Tamar's
+3 months (grade weighed), Zerach's returned hand, the
+nose-predicate's 2nd+3rd laws at 7:22, R. Tzadok's roster-grammar
+proof at 46:15, the salt pillar non-defiling, fetus damages by
+the donkey clause (harshness on the page). FIVE findings/rituals:
+F-169 → G61-20, F-170 → G18-11 (⚠ host corrected mid-seat gen_17
+→ gen_18_the_rise — 7:22 lives in the rise unit; anchor hunt
+caught it pre-write), F-171 → G69-31, F-172 → G35-28, F-173 →
+G38-43. Standing +5 (1337 → 1342), hash unmoved, lint 0 new.
+UNCOMMITTED: rounds 30-39 + MIDDOT (last 4c6f783). NEXT: block
+11 THE CONDUCT TORAH.
+
+(round 40 — the conduct block; Genesis 11 of 12 — ⚠ MID-ROUND AT
+COMPACTION)
+20 rows: 16 fresh + 4 STANDING. 40 segments, 7 tractates; 5
+modules (conduct_gen_rules.py), 19 cases: **19/19 FIRST RUN —
+1019/1019 over FORTY rounds.** Vocab +19 (843; one YAML
+apostrophe-escape fix in a gloss). DONE: cases + rules + runner
+(run_conduct_gen.py) + engine import + block ledger
+(genesis_block_conduct_2026-09-04.md w/ full cite index) +
+FOURTEEN seats INSERTED (ops + changelogs + manifest rows):
+F-174..F-187 → G56-31, G28-14 (12:10+12:16 pair), G68-30, G55-38,
+G35-29, G34-26 (w/ Ephron the wicked exemplar — the G39-35
+currency row met from the conduct side), G09-21, G41-36, G17-21,
+G64-36, G60-24, G65-37, G54-44, G20-21. ⚠ NOT DONE (owner
+interrupted for compaction): (1) freeze_ritual + preflight +
+verify_claims + py + gloss_lint on the 14 units; (2) corpus
+rebake — THE TRIPWIRE WILL FIRE: CORPUS_TRUTH baked at 1342,
+actual standing now 1356 (+14, one per seat) — rebake via python3
+corpus_world.py then CORPUS_TRUTH green; (3) RULE_CATALOG
+R-512..R-516 (5 modules → 321 rules) both files; (4) EXAM_LEDGER
+round-40 entry; (5) REPORT_CONDUCT_GEN.md; (6) full regression
+sweep (38 runners). FIRST SITTING POST-COMPACTION: finish those
+six steps BEFORE anything else, then block 12 KINDNESS, MOURNING,
+AND CHARITY (~12 rows — the Genesis campaign's FINALE; docket in
+the map at talmud_triage_gen tail; grep-first per standing rule).
+
+═══ COMPACTION POINT #45 (2026-09-04, owner: "I need to compact")
+═══ MID-ROUND POINT — round 40's seats are in, its gates are NOT
+yet run (the six steps above). The window ran: the MIDDOT
+consolidation (logic/MIDDOT.md "The middot's own case law" —
+owner's "Do 3"), THE GENESIS MAP (12 blocks at
+talmud_triage_gen_2026-09-01.md's tail), and ELEVEN Genesis
+blocks as rounds 30-40 (prayer book 14/14, circumcision 12/12,
+betrothal 10/10, levirate 7/7, inheritance 14/14, courts 10/10,
+name-and-ink 11/11, table-and-knife 11/11, altar-before-Sinai
+9/9, birth-and-body 11/11 — THE EXAM PASSED 1000 AT ROUND 39 —
+conduct 19/19 pending gates). Standing numbers: **1019/1019
+across forty rounds** · Genesis 11 of 12 blocks (+ Noahide
+flagship) · catalog R-511 BAKED (316 rules; R-512..516 pending
+round-40's catalog step) · vocabulary 843 query values on 158
+dims · findings F-113..F-187 this window (75 seats; F-046..F-187
+total) · standing tripwire BAKED 1342 / actual 1356 (rebake
+pending) · hash 8b8fff1fa28953af UNMOVED throughout · corpus 130
+· manifests 0 FAILED at every gate that ran · gloss_lint 0 on all
+new content (recurring catch: NEVER split a Hebrew span with an
+ellipsis before its gloss). Committed: through 4c6f783 (the
+Exodus campaign's close). UNCOMMITTED: MIDDOT.md + the Genesis
+map + rounds 30-40 (everything since 4c6f783) — ride the next
+"commit push". THE METHOD: unchanged from #44's recap, plus the
+window's lessons — LEDGER BEFORE SEATS (the cite gate checks
+reads, not intentions); claim-ID ceilings checked in BOTH strata
+(YAML + manifest — the G33-27 collision); the seat-inserter
+anchors BOTH comment forms (block + inline); verse→unit hosts
+verified by STEP-ID grep against the FROZEN per-parashah units,
+never the draft block-grain files (the gen_17-vs-gen_18 7:22
+catch). After block 12: the Lev 1-8 offering consolidation,
+Shemini, Lev 24. POST-COMPACTION REREADS (mandatory, first
+sitting): THE_STEPS Step 2 + Step 5 + the compiler block + this
+tail. FIRST ACTION: round 40's six pending steps.
+
+(round 40 GATES CLOSED — first sitting post-#45, owner: "Go")
+All six pending steps ran to green in order: (1) rituals COMPLETE
+×14 (130 frozen units), preflight ALL SCENARIOS GREEN ×14,
+manifests 0 FAILED ×14, py renderings ALL ASSERTIONS GREEN ×14
+(note: verify_claims.py lives at logic/solo_tools/, not
+logic/oral_audit/); (2) tripwire fired at 1342 as predicted,
+rebaked 1342 → 1356 (exactly +14, one per seat), CORPUS TRUTH
+GREEN, hash 8b8fff1fa28953af unmoved; (3) R-512..R-516 appended
+both files (506 ids, 321 compiled rules); (4) EXAM_LEDGER
+round-40 entry; (5) REPORT_CONDUCT_GEN.md; (6) regression: ALL
+runners green 0 misses (40 runner files; 5 report non-"0 misses"
+final-line formats — backfill/exam/mishpatim/noahide/sweep —
+each verified green inside). gloss_lint: 3 new-content fixes —
+the two recurring ellipsis-split Hebrew spans in
+conduct_gen_rules.py (24:61, 37:10 — restructured, block re-ran
+19/19) + round-36 entry's word-splitting-acrostic jargon glossed;
+EXAM_LEDGER now 0 new flags vs HEAD. THE_STEPS + THE_BRIEFING
+brought current through round 40. NEXT: block 12 KINDNESS,
+MOURNING, AND CHARITY — the Genesis finale.
+
+(round 41 — the kindness block; Genesis 12 of 12 — THE GENESIS
+CAMPAIGN CLOSES)
+13 fresh rows + the imitatio dossier STANDING (G11-24 has cited
+Sotah 14a:4 since the gen_11 derivation — the campaign's namesake
+dossier held before the block opened) + 5 dups folded. 41
+segments, 7 tractates; 5 modules (kindness_rules.py), 13 cases:
+**13/13 FIRST RUN — 1032/1032 over FORTY-ONE rounds. THE GENESIS
+CAMPAIGN CLOSES: 12 of 12 blocks, 141 cases rounds 30-41, zero
+misses.** R-517..521 (326 rules); vocab +13 (856). HEADLINES: the
+mourning file assembled from Genesis alone (seven days at 50:10,
+before-burial exemption off the doubled from-before token,
+IN-peace parting from 15:15's promise clause, the consolation
+formula quoting 18:19); the charity cap = LAW FROM INK GRAMMAR #4
+(28:22's doubled tithe verb = two equal tenths, Rav Ashi); the
+blessing stations beside round 39's purity seat — one salt-pillar
+artifact, two machines, two rounds; hospitality above the
+Presence on 18:3's own do-not-pass-by; furnace-before-shaming
+with the recognize-for-recognize echo. TWELVE findings, TEN
+units: F-188..F-199 → G61-21, G34-27, G34-28, G73-31, G73-32,
+G36-22, G32-23, G38-44, G39-37, G35-30, G31-22, G48-36 (gen_73 +
+gen_48 first seats — the last untouched hosts joined on the final
+round). Rituals COMPLETE ×10, standing +12 rebaked (1356 → 1368),
+hash 8b8fff1fa28953af unmoved, manifests 0 FAILED, regression
+130/130 + 41/41 runners, lint 0 new. Seat-inserter note: the
+plain-text ceiling assert trips on a changelog entry naming a
+sibling seat — check for the '[claim ID]' marker instead (fixed,
+skip-if-fully-seated added). UNCOMMITTED: MIDDOT + the Genesis
+map + rounds 30-41 (last 4c6f783). NEXT on the owner's word:
+commit; then Lev 1-8 offering-engine consolidation, Shemini,
+Lev 24 (the first CALL), ~the remaining MIDDOT consolidations
+(adjacency r25, method fork r26/r28, parse direction r27,
+will-indexed dispatch).

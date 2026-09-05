@@ -27,6 +27,10 @@ m.fact("paqad_ka_asher_amar_va_yaas_ka_asher_diber")
 # remembering — read, not installed
 m.witness_read("remembering", "argued_by_a_fortiori_from_sotah_law",
                 cites=["Bereshit Rabbah 53:6"])
+# witness-tier presupposed read: remembrance_verse_status on
+# va_YHWH_paqad_et_sarah — read, not installed
+m.witness_read("va_YHWH_paqad_et_sarah", "remembrance_verse_status",
+                cites=["Rosh Hashanah 32b:4", "Rosh Hashanah 32b:5", "Rosh Hashanah 32b:6"])
 
 # -------------------------- Gen.21.2 · THE_BIRTH_AT_THE_APPOINTED_TIME -----
 # וַתַּהַר וַתֵּלֶד שָׂרָה לְאַבְרָהָם בֵּן לִזְקֻנָיו לַמּוֹעֵד
@@ -339,6 +343,10 @@ m.declare("avimelekh", "LET",
           "hishava(li_ve_elohim)")
 # ‹אָנֹכִי אִשָּׁבֵעַ› (“swear”) — fact holds: anokhi-swear
 m.fact("anokhi_ishavea")
+# witness-tier presupposed read: standing_oath_bar on im_tishkor_li — read,
+# not installed
+m.witness_read("im_tishkor_li", "standing_oath_bar",
+                cites=["Chullin 60b:11", "Chullin 60b:12", "Chullin 60b:13"])
 
 # -------------------------- Gen.21.25 · THE_REPROOF_OVER_THE_STOLEN_WELL ---
 # וְהוֹכִחַ אַבְרָהָם אֶת־אֲבִימֶלֶךְ עַל־אֹדוֹת בְּאֵר הַמַּיִם אֲשֶׁר
@@ -468,26 +476,32 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['metzachek']
     assert m.WORLD["witnessed"]['metzachek']["cites"] == ['Bereshit Rabbah 53:11']
     assert all('four_readings_of_one_participle' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('remembering', 'argued_by_a_fortiori_from_sotah_law'), ('milel_verb', 'age_encoded_in_the_word_choice'), ('be_yitzchak', 'partitive_preposition_as_descent_statute'), ('ba_asher_hu_sham', 'judged_by_present_state'), ('rebuke_at_the_well', 'public_robber_defined'), ('seven_ewes', 'penalty_ledger_and_proof_by_sign'), ('the_planting', 'chain_of_custody_into_the_tabernacle')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('remembering', 'argued_by_a_fortiori_from_sotah_law'), ('va_YHWH_paqad_et_sarah', 'remembrance_verse_status'), ('milel_verb', 'age_encoded_in_the_word_choice'), ('be_yitzchak', 'partitive_preposition_as_descent_statute'), ('ba_asher_hu_sham', 'judged_by_present_state'), ('im_tishkor_li', 'standing_oath_bar'), ('rebuke_at_the_well', 'public_robber_defined'), ('seven_ewes', 'penalty_ledger_and_proof_by_sign'), ('the_planting', 'chain_of_custody_into_the_tabernacle')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 53:6']
     assert all('argued_by_a_fortiori_from_sotah_law' not in f for f in m.WORLD["facts"])
     assert 'remembering' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 53:9']
+    assert m.WITNESS_READS[1]["cites"] == ['Rosh Hashanah 32b:4', 'Rosh Hashanah 32b:5', 'Rosh Hashanah 32b:6']
+    assert all('remembrance_verse_status' not in f for f in m.WORLD["facts"])
+    assert 'va_YHWH_paqad_et_sarah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 53:9']
     assert all('age_encoded_in_the_word_choice' not in f for f in m.WORLD["facts"])
     assert 'milel_verb' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 53:12']
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 53:12']
     assert all('partitive_preposition_as_descent_statute' not in f for f in m.WORLD["facts"])
     assert 'be_yitzchak' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 53:14']
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 53:14']
     assert all('judged_by_present_state' not in f for f in m.WORLD["facts"])
     assert 'ba_asher_hu_sham' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 54:3']
+    assert m.WITNESS_READS[5]["cites"] == ['Chullin 60b:11', 'Chullin 60b:12', 'Chullin 60b:13']
+    assert all('standing_oath_bar' not in f for f in m.WORLD["facts"])
+    assert 'im_tishkor_li' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 54:3']
     assert all('public_robber_defined' not in f for f in m.WORLD["facts"])
     assert 'rebuke_at_the_well' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 54:4', 'Bereshit Rabbah 54:5']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 54:4', 'Bereshit Rabbah 54:5']
     assert all('penalty_ledger_and_proof_by_sign' not in f for f in m.WORLD["facts"])
     assert 'seven_ewes' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 94:4', 'Onkelos Genesis 21:33']
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 94:4', 'Onkelos Genesis 21:33']
     assert all('chain_of_custody_into_the_tabernacle' not in f for f in m.WORLD["facts"])
     assert 'the_planting' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -79,6 +79,10 @@ m.test("PASS", "shaah", "hevel_u_minchato")
 # minchah_accepted — read, not installed
 m.witness_read("minchah_accepted", "pursued_census_and_offering_species_law",
                 cites=["Pesikta DeRav Kahana 9:4", "Sifra, Shemini, Mekhilta DeMiluim II 31"])
+# witness-tier presupposed read: peace_offering_arm on u_me_chelvehen —
+# read, not installed
+m.witness_read("u_me_chelvehen", "peace_offering_arm",
+                cites=["Zevachim 116a:12", "Zevachim 116a:13", "Zevachim 116a:14", "Zevachim 116a:15"])
 
 # -------------------------- Gen.4.5 · NON_REGARD_FIRST_ANGER ---------------
 # וְאֶל־קַיִן וְאֶל־מִנְחָתוֹ לֹא שָׁעָה וַיִּחַר לְקַיִן מְאֹד וַיִּפְּלוּ
@@ -291,29 +295,32 @@ if __name__ == "__main__":
     assert all('three_recorded_readings' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['seet_cut_point']["cites"] == ['Bereshit Rabbah 80:6', 'Sifrei Devarim 54:1']
     assert all('undecidable_parse_on_record' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('double_et', 'twin_sisters_and_procreation_measure'), ('minchah_accepted', 'pursued_census_and_offering_species_law'), ('chatat_rovetz', 'gender_mismatch_as_growth_curve'), ('conditional_op', 'torah_antidote_and_condition_syntax_law'), ('empty_quote', 'filled_three_ways'), ('demei_plural', 'capital_court_witness_warning'), ('na_va_nad_decree', 'half_remitted_visible_in_the_ink'), ('seven_generations_clause', 'discharged_at_the_flood')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('double_et', 'twin_sisters_and_procreation_measure'), ('minchah_accepted', 'pursued_census_and_offering_species_law'), ('u_me_chelvehen', 'peace_offering_arm'), ('chatat_rovetz', 'gender_mismatch_as_growth_curve'), ('conditional_op', 'torah_antidote_and_condition_syntax_law'), ('empty_quote', 'filled_three_ways'), ('demei_plural', 'capital_court_witness_warning'), ('na_va_nad_decree', 'half_remitted_visible_in_the_ink'), ('seven_generations_clause', 'discharged_at_the_flood')]
     assert m.WITNESS_READS[0]["cites"] == ['Yevamot 62a:7', 'Bereshit Rabbah 22:3', 'Bereshit Rabbah 61:4']
     assert all('twin_sisters_and_procreation_measure' not in f for f in m.WORLD["facts"])
     assert 'double_et' not in m.WORLD["witnessed"]
     assert m.WITNESS_READS[1]["cites"] == ['Pesikta DeRav Kahana 9:4', 'Sifra, Shemini, Mekhilta DeMiluim II 31']
     assert all('pursued_census_and_offering_species_law' not in f for f in m.WORLD["facts"])
     assert 'minchah_accepted' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 22:6', 'Berakhot 61a:27']
+    assert m.WITNESS_READS[2]["cites"] == ['Zevachim 116a:12', 'Zevachim 116a:13', 'Zevachim 116a:14', 'Zevachim 116a:15']
+    assert all('peace_offering_arm' not in f for f in m.WORLD["facts"])
+    assert 'u_me_chelvehen' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 22:6', 'Berakhot 61a:27']
     assert all('gender_mismatch_as_growth_curve' not in f for f in m.WORLD["facts"])
     assert 'chatat_rovetz' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Kiddushin 30b:4', 'Kiddushin 30b:5', 'Kiddushin 61b:9', 'Sanhedrin 91b:7', 'Niddah 30b:23']
+    assert m.WITNESS_READS[4]["cites"] == ['Kiddushin 30b:4', 'Kiddushin 30b:5', 'Kiddushin 61b:9', 'Sanhedrin 91b:7', 'Niddah 30b:23']
     assert all('torah_antidote_and_condition_syntax_law' not in f for f in m.WORLD["facts"])
     assert 'conditional_op' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 22:7', 'Bereshit Rabbah 22:8']
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 22:7', 'Bereshit Rabbah 22:8']
     assert all('filled_three_ways' not in f for f in m.WORLD["facts"])
     assert 'empty_quote' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Sanhedrin 4:5', 'Bereshit Rabbah 22:9', 'Sanhedrin 37b:10', 'Jerusalem Talmud Sanhedrin 4:9:1']
+    assert m.WITNESS_READS[6]["cites"] == ['Mishnah Sanhedrin 4:5', 'Bereshit Rabbah 22:9', 'Sanhedrin 37b:10', 'Jerusalem Talmud Sanhedrin 4:9:1']
     assert all('capital_court_witness_warning' not in f for f in m.WORLD["facts"])
     assert 'demei_plural' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Pesikta DeRav Kahana 24:11', 'Sanhedrin 37b:12', 'Vayikra Rabbah 10:5']
+    assert m.WITNESS_READS[7]["cites"] == ['Pesikta DeRav Kahana 24:11', 'Sanhedrin 37b:12', 'Vayikra Rabbah 10:5']
     assert all('half_remitted_visible_in_the_ink' not in f for f in m.WORLD["facts"])
     assert 'na_va_nad_decree' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 32:5']
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 32:5']
     assert all('discharged_at_the_flood' not in f for f in m.WORLD["facts"])
     assert 'seven_generations_clause' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

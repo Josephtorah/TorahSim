@@ -1150,6 +1150,65 @@ Next on the owner's word: the ~11 Genesis blocks, the Leviticus
 1-8 offering-engine consolidation, Shemini, and the MIDDOT.md
 consolidation.
 
+And on "Do 3 then 2" (2026-09-04), the MIDDOT consolidation
+landed — logic/MIDDOT.md now carries "The middot's own case law":
+the campaign's three rules-about-rules rows (adjacency validity
+with its per-book parameter; THE METHOD FORK's three seats, where
+the two rival inference engines process the same verse and middah
+choice becomes a recorded model parameter; parse direction) —
+and THE GENESIS CAMPAIGN OPENED: the 206 LAW rows of the
+958-passage triage mapped into twelve blocks (the map at the
+Genesis triage ledger's tail), and block 1, THE PRAYER BOOK OF
+THE PATRIARCHS, ran as round 30 at 14/14 first run: **905/905
+across thirty rounds.** The opening headline mirrors the Exodus
+finale: gen_35's frozen prose at Gen 19:27 had called Abraham's
+standing PRAYER before the sugya was opened — the baraita's own
+standing-is-prayer analogy held in advance — and three docket
+rows were already seated claims (the Abram-name ban both arms,
+the Amidah's clause map, the priests' return-blessing). Four
+seats: the founding machine (both baraitot kept — patriarchs AND
+offerings), the silent line born at Jacob's own deathbed scene,
+the visited-Sarah remembrance dispute, and the day boundary's two
+liturgy jobs on gen_01_creation_boot — the creation unit's FIRST
+Talmud seat. Records: REPORT_PRAYERBOOK.md. Genesis blocks 2-12
+follow in map order.
+
+Blocks 2 through 11 then ran the same day as rounds 31-40 —
+circumcision, betrothal, levirate, inheritance, courts, the name
+and the ink, the table and the knife, the altar before Sinai,
+birth and the body, and the conduct Torah — every one green on
+its first run: **1019/1019 across forty rounds, and the exam
+passed ONE THOUSAND recorded cases at round 39 with zero misses
+since the pilot.** Seventy-five findings (F-113..F-187) seated
+into some forty frozen units by the normal ritual; the catalog
+stands at R-516 (321 compiled rules), the vocabulary at 843
+registered query values; corpus standing 1356, fingerprint
+unmoved. The campaign's banked headlines: Kiddushin's opening
+betrothal derivation runs on the machine's own Machpelah-field
+seat; the seats ANSWER EACH OTHER one round apart (the same 48:6
+token feeding the levirate name in round 33 and the assembly
+count in round 34); one verse feeds two machines (43:9's surety
+in round 34, its conditional ban in round 35); law read off pure
+ink STRUCTURE three separate times (operand order, layout,
+repetition); definitions supplied by Genesis exemplar five times
+in one block; the pre-Sinai offering machine assembled from
+Genesis alone; and the conduct Torah closing the walk with the
+paid keeper's ceiling taken from Jacob's own heat-and-frost
+clause. Round 40's gates ran to green first sitting after
+compaction point #45, exactly as the state doc's tail enumerated
+them. And the finale ran the same sitting: KINDNESS, MOURNING,
+AND CHARITY — 13 cases, 13 answered, **THE GENESIS CAMPAIGN
+CLOSED at 12 of 12 blocks, 1032/1032 across forty-one rounds.**
+The finale's own poetry: the campaign's namesake dossier (walk
+after His attributes — clothe, visit, comfort) was ALREADY SEATED
+— the garments claim in the Eden unit has cited that very Talmud
+row since its derivation. The mourning file assembled from
+Genesis alone; the charity cap read off pure ink grammar (Jacob's
+doubled tithe verb = two equal tenths); and the last two
+untouched hosts (the coffin unit and the Bethel vow unit) joined
+the exam on its final round. Twelve more seats (F-188..F-199),
+standing 1368, fingerprint still unmoved.
+
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed
 on the spot: logic/findings/FINDINGS_QUEUE.md (append-only). The owner

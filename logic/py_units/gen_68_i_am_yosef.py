@@ -318,6 +318,10 @@ m.declare("yosef", "LET-NOT",
 # on do_not_be_agitated_on_the_way — read, not installed
 m.witness_read("do_not_be_agitated_on_the_way", "three_travel_rules_and_the_buffers_premise",
                 cites=["Bereshit Rabbah 94:2", "Onkelos Genesis 45:24"])
+# witness-tier presupposed read: road_engrossment on al_tirgezu_va_darekh —
+# read, not installed
+m.witness_read("al_tirgezu_va_darekh", "road_engrossment",
+                cites=["Taanit 10b:7", "Taanit 10b:8"])
 
 # -------------------------- Gen.45.25 · UP_FROM_EGYPT ----------------------
 # וַיַּעֲלוּ מִמִּצְרָיִם וַיָּבֹאוּ אֶרֶץ כְּנַעַן אֶל־יַעֲקֹב אֲבִיהֶם
@@ -397,7 +401,7 @@ if __name__ == "__main__":
     assert all('a_form_that_stands_once_in_the_torah' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['the_wagons']["cites"] == ['Bereshit Rabbah 94:3', 'Onkelos Genesis 45:27']
     assert all('a_password_whose_two_ends_are_both_in_the_torah' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('he_could_not_restrain_himself', 'the_speech_of_gen_67_completing_here'), ('his_brothers_could_not_answer_him', 'one_inference_stated_twice_by_two_authorities'), ('come_near_to_me', 'the_body_entered_as_evidence'), ('my_mouth_speaking_to_you', 'the_language_itself_as_credential'), ('the_news_heard_in_pharaohs_house', 'a_seat_predicted_four_chapters_early'), ('grain_and_bread_and_food', 'a_vow_rule_grounded_on_an_inventory'), ('do_not_be_agitated_on_the_way', 'three_travel_rules_and_the_buffers_premise'), ('he_did_not_believe_them', 'the_liars_penalty_and_the_faculty_named'), ('rav_yosef_beni_chai', 'two_refusals_of_the_plain_sense')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('he_could_not_restrain_himself', 'the_speech_of_gen_67_completing_here'), ('his_brothers_could_not_answer_him', 'one_inference_stated_twice_by_two_authorities'), ('come_near_to_me', 'the_body_entered_as_evidence'), ('my_mouth_speaking_to_you', 'the_language_itself_as_credential'), ('the_news_heard_in_pharaohs_house', 'a_seat_predicted_four_chapters_early'), ('grain_and_bread_and_food', 'a_vow_rule_grounded_on_an_inventory'), ('do_not_be_agitated_on_the_way', 'three_travel_rules_and_the_buffers_premise'), ('al_tirgezu_va_darekh', 'road_engrossment'), ('he_did_not_believe_them', 'the_liars_penalty_and_the_faculty_named'), ('rav_yosef_beni_chai', 'two_refusals_of_the_plain_sense')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 93:9', 'Bereshit Rabbah 93:8']
     assert all('the_speech_of_gen_67_completing_here' not in f for f in m.WORLD["facts"])
     assert 'he_could_not_restrain_himself' not in m.WORLD["witnessed"]
@@ -419,10 +423,13 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 94:2', 'Onkelos Genesis 45:24']
     assert all('three_travel_rules_and_the_buffers_premise' not in f for f in m.WORLD["facts"])
     assert 'do_not_be_agitated_on_the_way' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 94:3', 'Onkelos Genesis 45:26']
+    assert m.WITNESS_READS[7]["cites"] == ['Taanit 10b:7', 'Taanit 10b:8']
+    assert all('road_engrossment' not in f for f in m.WORLD["facts"])
+    assert 'al_tirgezu_va_darekh' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 94:3', 'Onkelos Genesis 45:26']
     assert all('the_liars_penalty_and_the_faculty_named' not in f for f in m.WORLD["facts"])
     assert 'he_did_not_believe_them' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 94:3', 'Onkelos Genesis 45:28']
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 94:3', 'Onkelos Genesis 45:28']
     assert all('two_refusals_of_the_plain_sense' not in f for f in m.WORLD["facts"])
     assert 'rav_yosef_beni_chai' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -37,6 +37,10 @@ m.witness_read("ezer_kenegdo", "merit_conditional_semantics",
 # lo_tov_verdict — read, not installed
 m.witness_read("lo_tov_verdict", "standing_obligation_and_charity_measure",
                 cites=["Yevamot 61b:16", "Ketubot 67b:2", "Tosefta Ketubot 6:9", "Tosefta Peah 4:10", "Sifrei Devarim 116:18"])
+# witness-tier presupposed read: orphan_groom_order on eese_lo_ezer — read,
+# not installed
+m.witness_read("eese_lo_ezer", "orphan_groom_order",
+                cites=["Ketubot 67b:1", "Ketubot 67b:2", "Ketubot 67b:3"])
 
 # -------------------------- Gen.2.19 · FORM_BRING_DELEGATE -----------------
 # וַיִּצֶר יְהוָה אֱלֹהִים מִן־הָאֲדָמָה כָּל־חַיַּת הַשָּׂדֶה וְאֵת
@@ -135,6 +139,10 @@ m.spec_delta("e'eseh (I will MAKE — asah, the week's build verb)",
 # vayiven_build — read, not installed
 m.witness_read("vayiven_build", "capacity_law_labor_category_and_liturgy",
                 cites=["Bereshit Rabbah 18:1", "Niddah 45b:11", "Shabbat 95a:1", "Ketubot 8a:3"])
+# witness-tier presupposed read: escort_duty on va_yevieha_el_ha_adam —
+# read, not installed
+m.witness_read("va_yevieha_el_ha_adam", "escort_duty",
+                cites=["Berakhot 61a:18", "Berakhot 61a:19"])
 
 # -------------------------- Gen.2.23 · FIRST_HUMAN_SPEECH_NAME -------------
 # וַיֹּאמֶר הָאָדָם זֹאת הַפַּעַם עֶצֶם מֵעֲצָמַי וּבָשָׂר מִבְּשָׂרִי
@@ -198,23 +206,29 @@ if __name__ == "__main__":
     assert all('three_slumbers_type_register' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['tzela']["cites"] == ['Eruvin 18a:15', 'Berakhot 61a:15', 'Berakhot 61a:16']
     assert all('face_or_tail_recorded_dispute' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ezer_kenegdo', 'merit_conditional_semantics'), ('lo_tov_verdict', 'standing_obligation_and_charity_measure'), ('birds_source_delta', 'brought_for_naming_only'), ('vayiven_build', 'capacity_law_labor_category_and_liturgy'), ('ish_isha_naming', 'sacred_tongue_proof'), ('pattern_op', 'noachide_family_law_crown')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ezer_kenegdo', 'merit_conditional_semantics'), ('lo_tov_verdict', 'standing_obligation_and_charity_measure'), ('eese_lo_ezer', 'orphan_groom_order'), ('birds_source_delta', 'brought_for_naming_only'), ('vayiven_build', 'capacity_law_labor_category_and_liturgy'), ('va_yevieha_el_ha_adam', 'escort_duty'), ('ish_isha_naming', 'sacred_tongue_proof'), ('pattern_op', 'noachide_family_law_crown')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 17:3', 'Yevamot 63a:3']
     assert all('merit_conditional_semantics' not in f for f in m.WORLD["facts"])
     assert 'ezer_kenegdo' not in m.WORLD["witnessed"]
     assert m.WITNESS_READS[1]["cites"] == ['Yevamot 61b:16', 'Ketubot 67b:2', 'Tosefta Ketubot 6:9', 'Tosefta Peah 4:10', 'Sifrei Devarim 116:18']
     assert all('standing_obligation_and_charity_measure' not in f for f in m.WORLD["facts"])
     assert 'lo_tov_verdict' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Chullin 27b:12']
+    assert m.WITNESS_READS[2]["cites"] == ['Ketubot 67b:1', 'Ketubot 67b:2', 'Ketubot 67b:3']
+    assert all('orphan_groom_order' not in f for f in m.WORLD["facts"])
+    assert 'eese_lo_ezer' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Chullin 27b:12']
     assert all('brought_for_naming_only' not in f for f in m.WORLD["facts"])
     assert 'birds_source_delta' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 18:1', 'Niddah 45b:11', 'Shabbat 95a:1', 'Ketubot 8a:3']
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 18:1', 'Niddah 45b:11', 'Shabbat 95a:1', 'Ketubot 8a:3']
     assert all('capacity_law_labor_category_and_liturgy' not in f for f in m.WORLD["facts"])
     assert 'vayiven_build' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 18:4']
+    assert m.WITNESS_READS[5]["cites"] == ['Berakhot 61a:18', 'Berakhot 61a:19']
+    assert all('escort_duty' not in f for f in m.WORLD["facts"])
+    assert 'va_yevieha_el_ha_adam' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 18:4']
     assert all('sacred_tongue_proof' not in f for f in m.WORLD["facts"])
     assert 'ish_isha_naming' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 18:5', 'Sanhedrin 58a:8', 'Sanhedrin 58a:7', 'Sanhedrin 57b:10', 'Sanhedrin 58b:14', 'Jerusalem Talmud Kiddushin 1:1:13', 'Jerusalem Talmud Yevamot 11:2:6']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 18:5', 'Sanhedrin 58a:8', 'Sanhedrin 58a:7', 'Sanhedrin 57b:10', 'Sanhedrin 58b:14', 'Jerusalem Talmud Kiddushin 1:1:13', 'Jerusalem Talmud Yevamot 11:2:6']
     assert all('noachide_family_law_crown' not in f for f in m.WORLD["facts"])
     assert 'pattern_op' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

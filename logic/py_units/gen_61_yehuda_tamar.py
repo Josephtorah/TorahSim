@@ -118,6 +118,10 @@ m.step("Gen.38.9")
 # to-failure-of set seed to-brother-him/its”) — fact holds: decay-artza-so-
 # as-not-set-seed(Onan)
 m.fact("shichet_artza_levilti_netan_zera(onan)")
+# witness-tier presupposed read: er_onan_acts on ve_shichet_artzah — read,
+# not installed
+m.witness_read("ve_shichet_artzah", "er_onan_acts",
+                cites=["Yevamot 34b:2", "Yevamot 34b:3", "Yevamot 34b:4", "Yevamot 34b:5"])
 
 # -------------------------- Gen.38.10 · ONAN_DIES --------------------------
 # וַיֵּרַע בְּעֵינֵי יְהוָה אֲשֶׁר עָשָׂה וַיָּמֶת גַּם־אֹתוֹ
@@ -262,6 +266,10 @@ m.step("Gen.38.20")
 # him/its the-Adullamite”) — fact holds: shalach-the-young-goat-and-not-
 # metzaa(Hirah)
 m.fact("shalach_ha_gedi_ve_lo_metzaa(chira)")
+# witness-tier presupposed read: kid_definition on gedi_ha_izim — read, not
+# installed
+m.witness_read("gedi_ha_izim", "kid_definition",
+                cites=["Chullin 113a:19", "Chullin 113a:20", "Chullin 113b:1", "Chullin 113b:2", "Chullin 113b:3"])
 
 # -------------------------- Gen.38.21 · THE_ASKING -------------------------
 # וַיִּשְׁאַל אֶת־אַנְשֵׁי מְקֹמָהּ לֵאמֹר אַיֵּה הַקְּדֵשָׁה הִוא
@@ -310,6 +318,10 @@ m.step("Gen.38.24")
 # on-fire
 m.declare("yehuda", "LET",
           "hotziu_ha_ve_tisaref")
+# witness-tier presupposed read: pregnancy_file on ke_mishlosh_chodashim —
+# read, not installed
+m.witness_read("ke_mishlosh_chodashim", "pregnancy_file",
+                cites=["Niddah 8b:16", "Niddah 8b:17", "Niddah 8b:18", "Niddah 28a:8", "Niddah 28a:9", "Niddah 28a:10"])
 
 # -------------------------- Gen.38.25 · HAKER_NA_RETURNS -------------------
 # הִוא מוּצֵאת וְהִיא שָׁלְחָה אֶל־חָמִיהָ לֵאמֹר לְאִישׁ אֲשֶׁר־אֵלֶּה לּוֹ
@@ -326,6 +338,10 @@ m.declare("tamar", "LET",
 # ‹הִוא מוּצֵאת› (“he/it bring-forth”) — fact holds: that-bring-forth-and-
 # the-twine(Tamar)
 m.fact("hiv_mutzet_ve_ha_petilim(tamar)")
+# witness-tier presupposed read: shaming_furnace on hi_mutzet — read, not
+# installed
+m.witness_read("hi_mutzet", "shaming_furnace",
+                cites=["Sotah 10b:5", "Sotah 10b:6", "Sotah 10b:7"])
 
 # -------------------------- Gen.38.26 · THE_RECOGNITION_AND_CONFESSION -----
 # וַיַּכֵּר יְהוּדָה וַיֹּאמֶר צָדְקָה מִמֶּנִּי כִּי־עַל־כֵּן
@@ -412,17 +428,29 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['eravon']
     assert m.WORLD["witnessed"]['eravon']["cites"] == ['Bereshit Rabbah 85:9']
     assert all('three_crowns' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('yibum', 'first_performance'), ('gedi_izzim', 'repayment_pair'), ('tzadka_mimeni', 'voice_testimony'), ('yad_count', 'four_forward')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('yibum', 'first_performance'), ('ve_shichet_artzah', 'er_onan_acts'), ('gedi_izzim', 'repayment_pair'), ('gedi_ha_izim', 'kid_definition'), ('ke_mishlosh_chodashim', 'pregnancy_file'), ('hi_mutzet', 'shaming_furnace'), ('tzadka_mimeni', 'voice_testimony'), ('yad_count', 'four_forward')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 85:5']
     assert all('first_performance' not in f for f in m.WORLD["facts"])
     assert 'yibum' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 85:9']
+    assert m.WITNESS_READS[1]["cites"] == ['Yevamot 34b:2', 'Yevamot 34b:3', 'Yevamot 34b:4', 'Yevamot 34b:5']
+    assert all('er_onan_acts' not in f for f in m.WORLD["facts"])
+    assert 've_shichet_artzah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 85:9']
     assert all('repayment_pair' not in f for f in m.WORLD["facts"])
     assert 'gedi_izzim' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 85:12', 'Onkelos Genesis 38:26']
+    assert m.WITNESS_READS[3]["cites"] == ['Chullin 113a:19', 'Chullin 113a:20', 'Chullin 113b:1', 'Chullin 113b:2', 'Chullin 113b:3']
+    assert all('kid_definition' not in f for f in m.WORLD["facts"])
+    assert 'gedi_ha_izim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Niddah 8b:16', 'Niddah 8b:17', 'Niddah 8b:18', 'Niddah 28a:8', 'Niddah 28a:9', 'Niddah 28a:10']
+    assert all('pregnancy_file' not in f for f in m.WORLD["facts"])
+    assert 'ke_mishlosh_chodashim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sotah 10b:5', 'Sotah 10b:6', 'Sotah 10b:7']
+    assert all('shaming_furnace' not in f for f in m.WORLD["facts"])
+    assert 'hi_mutzet' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 85:12', 'Onkelos Genesis 38:26']
     assert all('voice_testimony' not in f for f in m.WORLD["facts"])
     assert 'tzadka_mimeni' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 85:14']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 85:14']
     assert all('four_forward' not in f for f in m.WORLD["facts"])
     assert 'yad_count' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

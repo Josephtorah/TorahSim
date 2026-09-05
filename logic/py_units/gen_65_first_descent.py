@@ -26,6 +26,10 @@ m.fact("yesh_shever_be_mitzrayim")
 # — read, not installed
 m.witness_read("grain_in_egypt", "a_pun_the_chain_builds_on",
                 cites=["Bereshit Rabbah 91:1", "Onkelos Genesis 42:1"])
+# witness-tier presupposed read: satiety_display on lama_titrau — read, not
+# installed
+m.witness_read("lama_titrau", "satiety_display",
+                cites=["Taanit 10b:5", "Taanit 10b:6"])
 
 # -------------------------- Gen.42.2 · GO_DOWN_AND_BUY ---------------------
 # וַיֹּאמֶר הִנֵּה שָׁמַעְתִּי כִּי יֶשׁ־שֶׁבֶר בְּמִצְרָיִם רְדוּ־שָׁמָּה
@@ -132,6 +136,10 @@ m.fact("ve_hem_lo_hikiruhu")
 # he_knew_them_they_knew_him_not — read, not installed
 m.witness_read("he_knew_them_they_knew_him_not", "the_beard_as_the_recognition_variable",
                 cites=["Bereshit Rabbah 91:7"])
+# witness-tier presupposed read: beard_evidence on va_yaker_yosef — read,
+# not installed
+m.witness_read("va_yaker_yosef", "beard_evidence",
+                cites=["Yevamot 88a:12", "Yevamot 88a:13", "Yevamot 88a:14"])
 
 # -------------------------- Gen.42.9 · THE_DREAMS_REMEMBERED ---------------
 # וַיִּזְכֹּר יוֹסֵף אֵת הַחֲלֹמוֹת אֲשֶׁר חָלַם לָהֶם וַיֹּאמֶר אֲלֵהֶם
@@ -482,6 +490,10 @@ m.step("Gen.42.36")
 # me/my miscarry Joseph there-is-not-him/its and-Simeon there-is-not-
 # him/its”) — fact holds: me-miscarry-Joseph-enennu-and-Simeon-enennu
 m.fact("oti_shikaltem_yosef_enennu_ve_shimon_enennu")
+# witness-tier presupposed read: chazakah_count on
+# yosef_einenu_ve_shimon_einenu — read, not installed
+m.witness_read("yosef_einenu_ve_shimon_einenu", "chazakah_count",
+                cites=["Chullin 95b:13", "Chullin 95b:14", "Chullin 95b:15"])
 
 # -------------------------- Gen.42.37 · REUBENS_PLEDGE ---------------------
 # וַיֹּאמֶר רְאוּבֵן אֶל־אָבִיו לֵאמֹר אֶת־שְׁנֵי בָנַי תָּמִית אִם־לֹא
@@ -494,6 +506,10 @@ m.step("Gen.42.37")
 # Reuben speaks a demand — LET: tena-it-over-yadi
 m.declare("reuven", "LET",
           "tena_oto_al_yadi")
+# witness-tier presupposed read: pledge_and_brotherhood on tenah_oto_al_yadi
+# — read, not installed
+m.witness_read("tenah_oto_al_yadi", "pledge_and_brotherhood",
+                cites=["Bava Batra 173b:10", "Bava Batra 110b:8", "Bava Batra 110b:9", "Bava Batra 110b:10"])
 
 # -------------------------- Gen.42.38 · MY_SON_SHALL_NOT_GO_DOWN -----------
 # וַיֹּאמֶר לֹא־יֵרֵד בְּנִי עִמָּכֶם כִּי־אָחִיו מֵת וְהוּא לְבַדּוֹ
@@ -510,6 +526,10 @@ m.fact("lo_yered_beni_imakhem")
 # lest_disaster_on_the_way — read, not installed
 m.witness_read("lest_disaster_on_the_way", "the_accuser_accuses_only_in_danger",
                 cites=["Bereshit Rabbah 91:9", "Onkelos Genesis 42:38"])
+# witness-tier presupposed read: ason_analogy on pen_yikraenu_ason — read,
+# not installed
+m.witness_read("pen_yikraenu_ason", "ason_analogy",
+                cites=["Ketubot 30a:5", "Ketubot 30a:6", "Ketubot 30a:7"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -538,41 +558,56 @@ if __name__ == "__main__":
     assert all('identified_as_the_viceroys_elder_son' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['the_silver_reappearing']["cites"] == ['Bereshit Rabbah 91:9']
     assert all('the_father_suspects_his_own_sons' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('grain_in_egypt', 'a_pun_the_chain_builds_on'), ('ten_brothers_went_down', 'nine_parts_brotherhood_one_part_grain'), ('among_those_who_came', 'the_quorum_of_ten_derived_here'), ('the_governor_over_the_land', 'three_edicts_that_make_the_finding_possible'), ('he_knew_them_they_knew_him_not', 'the_beard_as_the_recognition_variable'), ('the_nakedness_of_the_land', 'rendered_as_the_breach_in_the_defenses'), ('by_pharaohs_life', 'identified_as_a_false_oath_formula'), ('on_the_third_day', 'an_enumerated_member_of_the_canon_pattern'), ('the_confession', 'the_pit_entered_as_evidence_and_hearing_read_as_obedience'), ('simeon_bound_before_their_eyes', 'the_promised_repayment_arrives'), ('their_heart_went_out', 'the_faculty_named_and_the_organ_removed'), ('lest_disaster_on_the_way', 'the_accuser_accuses_only_in_danger')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('grain_in_egypt', 'a_pun_the_chain_builds_on'), ('lama_titrau', 'satiety_display'), ('ten_brothers_went_down', 'nine_parts_brotherhood_one_part_grain'), ('among_those_who_came', 'the_quorum_of_ten_derived_here'), ('the_governor_over_the_land', 'three_edicts_that_make_the_finding_possible'), ('he_knew_them_they_knew_him_not', 'the_beard_as_the_recognition_variable'), ('va_yaker_yosef', 'beard_evidence'), ('the_nakedness_of_the_land', 'rendered_as_the_breach_in_the_defenses'), ('by_pharaohs_life', 'identified_as_a_false_oath_formula'), ('on_the_third_day', 'an_enumerated_member_of_the_canon_pattern'), ('the_confession', 'the_pit_entered_as_evidence_and_hearing_read_as_obedience'), ('simeon_bound_before_their_eyes', 'the_promised_repayment_arrives'), ('their_heart_went_out', 'the_faculty_named_and_the_organ_removed'), ('yosef_einenu_ve_shimon_einenu', 'chazakah_count'), ('tenah_oto_al_yadi', 'pledge_and_brotherhood'), ('lest_disaster_on_the_way', 'the_accuser_accuses_only_in_danger'), ('pen_yikraenu_ason', 'ason_analogy')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 91:1', 'Onkelos Genesis 42:1']
     assert all('a_pun_the_chain_builds_on' not in f for f in m.WORLD["facts"])
     assert 'grain_in_egypt' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 91:2']
+    assert m.WITNESS_READS[1]["cites"] == ['Taanit 10b:5', 'Taanit 10b:6']
+    assert all('satiety_display' not in f for f in m.WORLD["facts"])
+    assert 'lama_titrau' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 91:2']
     assert all('nine_parts_brotherhood_one_part_grain' not in f for f in m.WORLD["facts"])
     assert 'ten_brothers_went_down' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 91:3']
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 91:3']
     assert all('the_quorum_of_ten_derived_here' not in f for f in m.WORLD["facts"])
     assert 'among_those_who_came' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 91:4']
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 91:4']
     assert all('three_edicts_that_make_the_finding_possible' not in f for f in m.WORLD["facts"])
     assert 'the_governor_over_the_land' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 91:7']
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 91:7']
     assert all('the_beard_as_the_recognition_variable' not in f for f in m.WORLD["facts"])
     assert 'he_knew_them_they_knew_him_not' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Genesis 42:9', 'Onkelos Genesis 42:12']
+    assert m.WITNESS_READS[6]["cites"] == ['Yevamot 88a:12', 'Yevamot 88a:13', 'Yevamot 88a:14']
+    assert all('beard_evidence' not in f for f in m.WORLD["facts"])
+    assert 'va_yaker_yosef' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Genesis 42:9', 'Onkelos Genesis 42:12']
     assert all('rendered_as_the_breach_in_the_defenses' not in f for f in m.WORLD["facts"])
     assert 'the_nakedness_of_the_land' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 91:7']
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 91:7']
     assert all('identified_as_a_false_oath_formula' not in f for f in m.WORLD["facts"])
     assert 'by_pharaohs_life' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 56:1', 'Onkelos Genesis 42:18']
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 56:1', 'Onkelos Genesis 42:18']
     assert all('an_enumerated_member_of_the_canon_pattern' not in f for f in m.WORLD["facts"])
     assert 'on_the_third_day' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 91:8', 'Onkelos Genesis 42:21', 'Onkelos Genesis 42:22']
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 91:8', 'Onkelos Genesis 42:21', 'Onkelos Genesis 42:22']
     assert all('the_pit_entered_as_evidence_and_hearing_read_as_obedience' not in f for f in m.WORLD["facts"])
     assert 'the_confession' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 84:16', 'Bereshit Rabbah 99:7']
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 84:16', 'Bereshit Rabbah 99:7']
     assert all('the_promised_repayment_arrives' not in f for f in m.WORLD["facts"])
     assert 'simeon_bound_before_their_eyes' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[10]["cites"] == ['Onkelos Genesis 42:28']
+    assert m.WITNESS_READS[12]["cites"] == ['Onkelos Genesis 42:28']
     assert all('the_faculty_named_and_the_organ_removed' not in f for f in m.WORLD["facts"])
     assert 'their_heart_went_out' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 91:9', 'Onkelos Genesis 42:38']
+    assert m.WITNESS_READS[13]["cites"] == ['Chullin 95b:13', 'Chullin 95b:14', 'Chullin 95b:15']
+    assert all('chazakah_count' not in f for f in m.WORLD["facts"])
+    assert 'yosef_einenu_ve_shimon_einenu' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[14]["cites"] == ['Bava Batra 173b:10', 'Bava Batra 110b:8', 'Bava Batra 110b:9', 'Bava Batra 110b:10']
+    assert all('pledge_and_brotherhood' not in f for f in m.WORLD["facts"])
+    assert 'tenah_oto_al_yadi' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[15]["cites"] == ['Bereshit Rabbah 91:9', 'Onkelos Genesis 42:38']
     assert all('the_accuser_accuses_only_in_danger' not in f for f in m.WORLD["facts"])
     assert 'lest_disaster_on_the_way' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[16]["cites"] == ['Ketubot 30a:5', 'Ketubot 30a:6', 'Ketubot 30a:7']
+    assert all('ason_analogy' not in f for f in m.WORLD["facts"])
+    assert 'pen_yikraenu_ason' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

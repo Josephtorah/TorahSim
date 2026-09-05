@@ -84,6 +84,63 @@ narrative strength. By cluster:
   strictly chronological — cf. our order-carries-no-claim finding,
   Mekhilta on Gen 1:1).
 
+## The middot's own case law (consolidated 2026-09-04, from the
+## Exodus block campaign — owner's word "Do 3")
+
+The campaign's exam rounds banked RULES-ABOUT-RULES on the corpus's
+own seated verses: the tradition regulating its own inference
+machinery, recorded where the machinery runs. Three rows, each
+compiled into the exam engine and seated in a frozen unit:
+
+- **ADJACENCY VALIDITY (round 25, the capital block — Yevamot 4a:4-5
+  = Berakhot 21b:10, on Exod 22:17-18).** Is juxtaposition
+  (semukhin, "adjacent verses") a licensed derivation channel? The
+  witch was PLACED beside the beast-lier to teach: as he is stoned,
+  so she — and Rav Yosef's meta-rule stands beside it: even one who
+  rejects adjacency arguments GENERALLY expounds them in
+  DEUTERONOMY. A channel-validity rule with a per-book parameter,
+  stated as law. (Compiled: capital_rules.py
+  juxtaposition_validity; seated at exo_22 / the capital round's
+  claims.) Relation to the catalog: adjacency is the law-side use
+  of E28's from-the-preceding family; the tradition itself disputes
+  its license and records the settlement.
+
+- **THE METHOD FORK (rounds 25, 26, 28 — three seats).** The two
+  rival inference ENGINES — the general-and-particular school
+  (kelal u-frat, I4–I7) and the amplify-and-limit school (ribui
+  u-miut, the E1–E4 particles at law strength) — are both on the
+  record processing THE SAME verse, yielding DIFFERENT tables, with
+  the fork itself named in the text:
+  (1) the witch-verse adjacency dispute (round 25);
+  (2) the candelabrum's valid materials (Sukkah 50b:5-7 on Exod
+  25:31): Rebbi runs general–detail–general → like the detail, all
+  METALS; R. Yosei b. R. Yehuda runs amplified–limited–amplified →
+  ALL materials except earthenware — two valid-materials tables
+  from one verse, the fork named at 50b:5 (seated EX25-14);
+  (3) the eleven spices (Keritot 6b:7-8 on Exod 30:34): Rav Huna
+  counts the list from the verse's own plural tokens while the
+  rival general-detail read derives what-rises-in-smoke-and-smells
+  (seated EX30-11).
+  Consequence for the machine: middah choice is a MODEL PARAMETER
+  with recorded arms, never a silent default — where the fork is
+  recorded, the engine returns both arms with authorities, exactly
+  like any dispute.
+
+- **PARSE DIRECTION (round 27, the vestments block — Zevachim
+  24b:2-3 on Exod 29:12).** מקרא נדרש לפניו ("a verse is expounded
+  on what PRECEDES it — not before-the-before, and not after"): a
+  limiting clause binds the phrase it follows, not the whole
+  sentence — "with your finger" binds the PLACING, the collection
+  stays free. A parsing-direction meta-rule stated as law on the
+  verse's own syntax — the precision layer of I12 (context), fixed
+  to adjacency range. (Compiled: vestments_rules.py
+  finger_placement; seated EX29-14.)
+
+Watch item, not yet a row: WILL-INDEXED DISPATCH stands at TWO
+recorded exemplars in the campaign; per the Move Catalog's standing
+rule a third exemplar registers it as a move (M-family), not a
+middah.
+
 ## How the middot enter the process (THE_STEPS.md)
 
 - **Step 4 (read and log):** when a source ARGUES by a middah, the

@@ -1,0 +1,76 @@
+# THE TABLE AND THE KNIFE (round 37 — Genesis exam block 8 of 12,
+# 2026-09-04). The slaughter file, the definition file, the sign
+# file, robbery and the standing oath.
+# Read-source: logic/oral_triage/genesis_block_table_knife_2026-09-04.md.
+
+- module: slaughter_file
+  tractate: Chullin
+  oracle: Chullin 16a:4-6, 85a:11-13, 90b:3-5
+  exodus_anchor: {unit: gen_38 + gen_66 + gen_55, ref: Gen.22.10 + 43.16 + 32.33,
+    claims: [G38-41, G66-37, G55-37]}
+  cases:
+  - id: Ch_blade
+    input: {query: detached_blade}
+    expected: {verdict: valid_with_detached}
+    class: A
+  - id: Ch_fitting
+    input: {query: fitting_slaughter}
+    expected: {verdict: r_shimon_fit_slaughter_source}
+    class: A
+  - id: Ch_sinew
+    input: {query: sinew_subject_scope}
+    expected: {verdict: israel_not_the_altar}
+    class: A
+
+- module: definition_file
+  tractate: Chullin
+  oracle: Chullin 113a:19-20, 113b:1-3, 139b:18-20; Bava Kamma 55a:11-13, 65b:17-19
+  exodus_anchor: {unit: gen_61 + gen_17 + gen_54 + gen_05, ref: Gen.38.20 + 7.14 + 31.38 + 1.21,
+    claims: [G61-19, G17-18, G54-43, G05-08]}
+  cases:
+  - id: Ch_kid
+    input: {query: kid_definition}
+    expected: {verdict: plain_kid_includes_cow_ewe}
+    class: A
+  - id: Ch_bird
+    input: {query: bird_wing_tokens}
+    expected: {verdict: ark_tokens_in_bird_law}
+    class: A
+  - id: BK_ram
+    input: {query: day_old_ram}
+    expected: {verdict: day_old_called_ram}
+    class: A
+  - id: BK_sea
+    input: {query: sea_kilayim}
+    expected: {verdict: lashes_by_land_analogy}
+    class: A
+
+- module: sign_file
+  tractate: Chullin
+  oracle: Chullin 95b:7-9, 95b:13-15
+  exodus_anchor: {unit: gen_40 + gen_65, ref: Gen.24.14 + 42.36,
+    claims: [G40-36, G65-36]}
+  cases:
+  - id: Ch_nachash
+    input: {query: divination_paradigm}
+    expected: {verdict: eliezer_test_defines_ban}
+    class: A
+  - id: Ch_chazakah
+    input: {query: three_time_chazakah}
+    expected: {verdict: established_three_times}
+    class: A
+
+- module: robbery_and_oath
+  tractate: Chullin
+  oracle: Chullin 89a:3-5, 60b:11-13
+  exodus_anchor: {unit: gen_30 + gen_37, ref: Gen.14.24 + 21.23,
+    claims: [G30-32, G37-31]}
+  cases:
+  - id: Ch_robbery
+    input: {query: consumed_robbery}
+    expected: {verdict: unrestorable_even_by_righteous}
+    class: A
+  - id: Ch_oathbar
+    input: {query: standing_oath_bar}
+    expected: {verdict: conquest_routed_around_oath}
+    class: A

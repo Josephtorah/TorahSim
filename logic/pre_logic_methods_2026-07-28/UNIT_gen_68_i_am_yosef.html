@@ -308,6 +308,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">אַל־תִּרְגְּזוּ בַּדָּרֶךְ</span> · <i>el-tirgzu ba-darekh</i><br><span class="gloss">= to-tirgzu in-the-darekh</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(do_not_be_agitated_on_the_way, three_travel_rules_and_the_buffers_premise)</span><br><span class="gloss">= WITNESS-READ(do-not-in-agitated-on-the-way, three-travel-rules-and-the-buffers-premise)</span><br>PRACTICAL LAW EXTRACTED FROM A FAREWELL [claim G68-26]. Do not take long strides; do not break off from study; enter the city while the sun still shines. Onkelos gives the verb as do not be troubled or QUARREL along the way - the sense those rules assume, a warning about conduct between travellers rather than about fear. [folded shape: dual-track translation]
 </td><td>—</td><td class='cite'>Bereshit Rabbah 94:2, Onkelos Genesis 45:24</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(al_tirgezu_va_darekh, road_engrossment)</span><br><span class="gloss">= WITNESS-READ(upon-tirgezu-and-darekh, road-engrossment)</span><br>THE ROAD-ENGROSSMENT BAN [claim G68-30]. The round-40 conduct block seats R. Elazar&#x27;s reading of this unit&#x27;s farewell: al tirgezu va-darekh (&#x27;do not QUARREL on the way,&#x27; our 45:24) — Joseph to his brothers: do not ENGROSS yourselves in a matter of law lest the road rage upon you; reconciled with the fit-to-burn- without-Torah row — recite yes, delve no (Taanit 10b:7-8). Auto- seat law, F-176 (round 40, the conduct block).
+</td><td>—</td><td class='cite'>Taanit 10b:7, Taanit 10b:8</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The last order: a fear-not-class push.</div>
 </div>
@@ -874,6 +876,10 @@ m.declare(&quot;yosef&quot;, &quot;LET-NOT&quot;,
 # on do_not_be_agitated_on_the_way — read, not installed
 m.witness_read(&quot;do_not_be_agitated_on_the_way&quot;, &quot;three_travel_rules_and_the_buffers_premise&quot;,
                 cites=[&quot;Bereshit Rabbah 94:2&quot;, &quot;Onkelos Genesis 45:24&quot;])
+# witness-tier presupposed read: road_engrossment on al_tirgezu_va_darekh —
+# read, not installed
+m.witness_read(&quot;al_tirgezu_va_darekh&quot;, &quot;road_engrossment&quot;,
+                cites=[&quot;Taanit 10b:7&quot;, &quot;Taanit 10b:8&quot;])
 
 # -------------------------- Gen.45.25 · UP_FROM_EGYPT ----------------------
 # וַיַּעֲלוּ מִמִּצְרָיִם וַיָּבֹאוּ אֶרֶץ כְּנַעַן אֶל־יַעֲקֹב אֲבִיהֶם
@@ -953,7 +959,7 @@ if __name__ == &quot;__main__&quot;:
     assert all(&#x27;a_form_that_stands_once_in_the_torah&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert m.WORLD[&quot;witnessed&quot;][&#x27;the_wagons&#x27;][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 94:3&#x27;, &#x27;Onkelos Genesis 45:27&#x27;]
     assert all(&#x27;a_password_whose_two_ends_are_both_in_the_torah&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;he_could_not_restrain_himself&#x27;, &#x27;the_speech_of_gen_67_completing_here&#x27;), (&#x27;his_brothers_could_not_answer_him&#x27;, &#x27;one_inference_stated_twice_by_two_authorities&#x27;), (&#x27;come_near_to_me&#x27;, &#x27;the_body_entered_as_evidence&#x27;), (&#x27;my_mouth_speaking_to_you&#x27;, &#x27;the_language_itself_as_credential&#x27;), (&#x27;the_news_heard_in_pharaohs_house&#x27;, &#x27;a_seat_predicted_four_chapters_early&#x27;), (&#x27;grain_and_bread_and_food&#x27;, &#x27;a_vow_rule_grounded_on_an_inventory&#x27;), (&#x27;do_not_be_agitated_on_the_way&#x27;, &#x27;three_travel_rules_and_the_buffers_premise&#x27;), (&#x27;he_did_not_believe_them&#x27;, &#x27;the_liars_penalty_and_the_faculty_named&#x27;), (&#x27;rav_yosef_beni_chai&#x27;, &#x27;two_refusals_of_the_plain_sense&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;he_could_not_restrain_himself&#x27;, &#x27;the_speech_of_gen_67_completing_here&#x27;), (&#x27;his_brothers_could_not_answer_him&#x27;, &#x27;one_inference_stated_twice_by_two_authorities&#x27;), (&#x27;come_near_to_me&#x27;, &#x27;the_body_entered_as_evidence&#x27;), (&#x27;my_mouth_speaking_to_you&#x27;, &#x27;the_language_itself_as_credential&#x27;), (&#x27;the_news_heard_in_pharaohs_house&#x27;, &#x27;a_seat_predicted_four_chapters_early&#x27;), (&#x27;grain_and_bread_and_food&#x27;, &#x27;a_vow_rule_grounded_on_an_inventory&#x27;), (&#x27;do_not_be_agitated_on_the_way&#x27;, &#x27;three_travel_rules_and_the_buffers_premise&#x27;), (&#x27;al_tirgezu_va_darekh&#x27;, &#x27;road_engrossment&#x27;), (&#x27;he_did_not_believe_them&#x27;, &#x27;the_liars_penalty_and_the_faculty_named&#x27;), (&#x27;rav_yosef_beni_chai&#x27;, &#x27;two_refusals_of_the_plain_sense&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 93:9&#x27;, &#x27;Bereshit Rabbah 93:8&#x27;]
     assert all(&#x27;the_speech_of_gen_67_completing_here&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;he_could_not_restrain_himself&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -975,11 +981,14 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 94:2&#x27;, &#x27;Onkelos Genesis 45:24&#x27;]
     assert all(&#x27;three_travel_rules_and_the_buffers_premise&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;do_not_be_agitated_on_the_way&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 94:3&#x27;, &#x27;Onkelos Genesis 45:26&#x27;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Taanit 10b:7&#x27;, &#x27;Taanit 10b:8&#x27;]
+    assert all(&#x27;road_engrossment&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;al_tirgezu_va_darekh&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[8][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 94:3&#x27;, &#x27;Onkelos Genesis 45:26&#x27;]
     assert all(&#x27;the_liars_penalty_and_the_faculty_named&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;he_did_not_believe_them&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[8][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 94:3&#x27;, &#x27;Onkelos Genesis 45:28&#x27;]
+    assert m.WITNESS_READS[9][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 94:3&#x27;, &#x27;Onkelos Genesis 45:28&#x27;]
     assert all(&#x27;two_refusals_of_the_plain_sense&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;rav_yosef_beni_chai&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

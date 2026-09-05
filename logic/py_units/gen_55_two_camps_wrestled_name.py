@@ -157,6 +157,10 @@ m.fact("qatonti_mi_kol_ha_chasadim(tefila)")
 # i_am_small — read, not installed
 m.witness_read("i_am_small", "merit_as_a_finite_balance_drawn_down",
                 cites=["Bereshit Rabbah 76:5", "Onkelos Genesis 32:11"])
+# witness-tier presupposed read: miracle_reliance on katonti — read, not
+# installed
+m.witness_read("katonti", "miracle_reliance",
+                cites=["Shabbat 32a:3", "Shabbat 32a:4", "Shabbat 32a:5"])
 
 # -------------------------- Gen.32.12 · THE_RESCUE_DEMAND ------------------
 # הַצִּילֵנִי נָא מִיַּד אָחִי מִיַּד עֵשָׂו כִּי־יָרֵא אָנֹכִי אֹתוֹ
@@ -455,6 +459,10 @@ m.witness_read("sinew_law_provenance", "repeated_at_sinai_framework",
 # what_is_yours_shall_be_yours — read, not installed
 m.witness_read("what_is_yours_shall_be_yours", "ratification_by_the_losing_signatory",
                 cites=["Bereshit Rabbah 78:11"])
+# witness-tier presupposed read: sinew_scope on lo_yokhlu_venei_yisrael —
+# read, not installed
+m.witness_read("lo_yokhlu_venei_yisrael", "sinew_scope",
+                cites=["Chullin 90b:3", "Chullin 90b:4", "Chullin 90b:5"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -475,7 +483,7 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['sinew_law_provenance']
     assert m.WORLD["witnessed"]['sinew_law_provenance']["cites"] == ['Mishnah Chullin 7:6']
     assert all('sinai_or_the_sons_of_jacob' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('my_lord_eight_times', 'priced_in_dynasties_and_paid_at_gen_59'), ('the_embassy', 'criticized_by_the_chain_against_its_own_subject'), ('divided_the_camp', 'risk_distribution_maxim_minted_here'), ('God_of_my_fathers_and_not_of_esau', 'descent_does_not_secure_the_name'), ('i_am_small', 'merit_as_a_finite_balance_drawn_down'), ('the_plea', 'argued_from_a_statute_not_yet_given'), ('who_prevailed', 'ignorance_stated_then_decided_by_a_verb'), ('release_me', 'precedence_table_and_a_penalty_in_the_angels_mouth'), ('the_new_name', 'etymology_refused_by_the_translation'), ('why_ask_my_name', 'a_class_with_no_fixed_names'), ('the_sun_rose_for_him', 'borrowed_hours_repaid_with_interest'), ('the_sinew', 'first_food_prohibition_with_an_admitted_self_stringency'), ('sinew_law_provenance', 'repeated_at_sinai_framework'), ('what_is_yours_shall_be_yours', 'ratification_by_the_losing_signatory')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('my_lord_eight_times', 'priced_in_dynasties_and_paid_at_gen_59'), ('the_embassy', 'criticized_by_the_chain_against_its_own_subject'), ('divided_the_camp', 'risk_distribution_maxim_minted_here'), ('God_of_my_fathers_and_not_of_esau', 'descent_does_not_secure_the_name'), ('i_am_small', 'merit_as_a_finite_balance_drawn_down'), ('katonti', 'miracle_reliance'), ('the_plea', 'argued_from_a_statute_not_yet_given'), ('who_prevailed', 'ignorance_stated_then_decided_by_a_verb'), ('release_me', 'precedence_table_and_a_penalty_in_the_angels_mouth'), ('the_new_name', 'etymology_refused_by_the_translation'), ('why_ask_my_name', 'a_class_with_no_fixed_names'), ('the_sun_rose_for_him', 'borrowed_hours_repaid_with_interest'), ('the_sinew', 'first_food_prohibition_with_an_admitted_self_stringency'), ('sinew_law_provenance', 'repeated_at_sinai_framework'), ('what_is_yours_shall_be_yours', 'ratification_by_the_losing_signatory'), ('lo_yokhlu_venei_yisrael', 'sinew_scope')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 75:11']
     assert all('priced_in_dynasties_and_paid_at_gen_59' not in f for f in m.WORLD["facts"])
     assert 'my_lord_eight_times' not in m.WORLD["witnessed"]
@@ -491,30 +499,36 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 76:5', 'Onkelos Genesis 32:11']
     assert all('merit_as_a_finite_balance_drawn_down' not in f for f in m.WORLD["facts"])
     assert 'i_am_small' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 75:13']
+    assert m.WITNESS_READS[5]["cites"] == ['Shabbat 32a:3', 'Shabbat 32a:4', 'Shabbat 32a:5']
+    assert all('miracle_reliance' not in f for f in m.WORLD["facts"])
+    assert 'katonti' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 75:13']
     assert all('argued_from_a_statute_not_yet_given' not in f for f in m.WORLD["facts"])
     assert 'the_plea' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 77:3']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 77:3']
     assert all('ignorance_stated_then_decided_by_a_verb' not in f for f in m.WORLD["facts"])
     assert 'who_prevailed' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 78:1', 'Bereshit Rabbah 78:2']
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 78:1', 'Bereshit Rabbah 78:2']
     assert all('precedence_table_and_a_penalty_in_the_angels_mouth' not in f for f in m.WORLD["facts"])
     assert 'release_me' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Genesis 32:29']
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Genesis 32:29']
     assert all('etymology_refused_by_the_translation' not in f for f in m.WORLD["facts"])
     assert 'the_new_name' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 78:4']
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 78:4']
     assert all('a_class_with_no_fixed_names' not in f for f in m.WORLD["facts"])
     assert 'why_ask_my_name' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 78:5', 'Bereshit Rabbah 68:10']
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 78:5', 'Bereshit Rabbah 68:10']
     assert all('borrowed_hours_repaid_with_interest' not in f for f in m.WORLD["facts"])
     assert 'the_sun_rose_for_him' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 78:6']
+    assert m.WITNESS_READS[12]["cites"] == ['Bereshit Rabbah 78:6']
     assert all('first_food_prohibition_with_an_admitted_self_stringency' not in f for f in m.WORLD["facts"])
     assert 'the_sinew' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[12]["cites"] == ['Sanhedrin 59a:11', 'Sanhedrin 59a:12', 'Sanhedrin 59b:1', 'Sanhedrin 59b:3']
+    assert m.WITNESS_READS[13]["cites"] == ['Sanhedrin 59a:11', 'Sanhedrin 59a:12', 'Sanhedrin 59b:1', 'Sanhedrin 59b:3']
     assert all('repeated_at_sinai_framework' not in f for f in m.WORLD["facts"])
-    assert m.WITNESS_READS[13]["cites"] == ['Bereshit Rabbah 78:11']
+    assert m.WITNESS_READS[14]["cites"] == ['Bereshit Rabbah 78:11']
     assert all('ratification_by_the_losing_signatory' not in f for f in m.WORLD["facts"])
     assert 'what_is_yours_shall_be_yours' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[15]["cites"] == ['Chullin 90b:3', 'Chullin 90b:4', 'Chullin 90b:5']
+    assert all('sinew_scope' not in f for f in m.WORLD["facts"])
+    assert 'lo_yokhlu_venei_yisrael' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

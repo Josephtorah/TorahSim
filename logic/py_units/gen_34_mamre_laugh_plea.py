@@ -66,6 +66,14 @@ m.declare("avraham", "LET-NOT",
 # on adonai_address
 m.witness_state("adonai_address", "spine_members_in_recorded_dispute",
                 cites=["Onkelos Genesis 18:3", "Bereshit Rabbah 48:10", "Onkelos Genesis 18:21", "Bereshit Rabbah 49:6"])
+# witness-tier presupposed read: name_exception_and_adornment on
+# adonai_im_na — read, not installed
+m.witness_read("adonai_im_na", "name_exception_and_adornment",
+                cites=["Shevuot 35b:8", "Shevuot 35b:9", "Shevuot 35b:10", "Nedarim 37b:7", "Nedarim 37b:8", "Nedarim 37b:9"])
+# witness-tier presupposed read: hospitality_rank on al_na_taavor — read,
+# not installed
+m.witness_read("al_na_taavor", "hospitality_rank",
+                cites=["Shabbat 127a:12", "Shabbat 127a:13", "Shabbat 127a:14"])
 
 # -------------------------- Gen.18.4 · WATER_AND_THE_RARE_PASSIVE ----------
 # יֻקַּח־נָא מְעַט־מַיִם וְרַחֲצוּ רַגְלֵיכֶם וְהִשָּׁעֲנוּ תַּחַת הָעֵץ
@@ -103,6 +111,10 @@ m.fact("ken_taaseh_ka_asher_dibarta")
 # single_bet_heart — read, not installed
 m.witness_read("single_bet_heart", "visitors_without_the_inclination",
                 cites=["Bereshit Rabbah 48:11"])
+# witness-tier presupposed read: little_much on pat_lechem — read, not
+# installed
+m.witness_read("pat_lechem", "little_much",
+                cites=["Bava Metzia 87a:2", "Bava Metzia 87a:3"])
 
 # -------------------------- Gen.18.6 · THE_TRIPLE_TO_SARAH -----------------
 # וַיְמַהֵר אַבְרָהָם הָאֹהֱלָה אֶל־שָׂרָה וַיֹּאמֶר מַהֲרִי שְׁלֹשׁ סְאִים
@@ -313,6 +325,10 @@ m.fact("ve_shamru_derekh_YHWH_la_asot_tzedaqah_u_mishpat")
 # come/bring YHWH over Abraham obj-marker which speak over-him/its”) — fact
 # holds: so-that-come/bring-the-LORD-over-Abraham-obj-marker-which-speak
 m.fact("lemaan_havi_YHWH_al_avraham_et_asher_diber")
+# witness-tier presupposed read: consolation_formula on ki_yedativ — read,
+# not installed
+m.witness_read("ki_yedativ", "consolation_formula",
+                cites=["Ketubot 8b:9", "Ketubot 8b:10", "Ketubot 8b:11"])
 
 # -------------------------- Gen.18.20 · THE_OUTCRY_DOUBLED -----------------
 # וַיֹּאמֶר יְהוָה זַעֲקַת סְדֹם וַעֲמֹרָה כִּי־רָבָּה וְחַטָּאתָם כִּי
@@ -464,23 +480,35 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['adonai_address']
     assert m.WORLD["witnessed"]['adonai_address']["cites"] == ['Onkelos Genesis 18:3', 'Bereshit Rabbah 48:10', 'Onkelos Genesis 18:21', 'Bereshit Rabbah 49:6']
     assert all('spine_members_in_recorded_dispute' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('heat_of_the_day', 'six_hours_by_comparison'), ('single_bet_heart', 'visitors_without_the_inclination'), ('dotted_elav', 'expound_the_dots_meta_rule'), ('altered_quotation', 'canon_edits_for_peace'), ('standing_before_the_lord', 'scribal_emendation_claim'), ('the_plea', 'courtroom_procedure_on_a_cited_precedent')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('heat_of_the_day', 'six_hours_by_comparison'), ('adonai_im_na', 'name_exception_and_adornment'), ('al_na_taavor', 'hospitality_rank'), ('single_bet_heart', 'visitors_without_the_inclination'), ('pat_lechem', 'little_much'), ('dotted_elav', 'expound_the_dots_meta_rule'), ('altered_quotation', 'canon_edits_for_peace'), ('ki_yedativ', 'consolation_formula'), ('standing_before_the_lord', 'scribal_emendation_claim'), ('the_plea', 'courtroom_procedure_on_a_cited_precedent')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 48:8', 'Bereshit Rabbah 48:7']
     assert all('six_hours_by_comparison' not in f for f in m.WORLD["facts"])
     assert 'heat_of_the_day' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 48:11']
+    assert m.WITNESS_READS[1]["cites"] == ['Shevuot 35b:8', 'Shevuot 35b:9', 'Shevuot 35b:10', 'Nedarim 37b:7', 'Nedarim 37b:8', 'Nedarim 37b:9']
+    assert all('name_exception_and_adornment' not in f for f in m.WORLD["facts"])
+    assert 'adonai_im_na' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Shabbat 127a:12', 'Shabbat 127a:13', 'Shabbat 127a:14']
+    assert all('hospitality_rank' not in f for f in m.WORLD["facts"])
+    assert 'al_na_taavor' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 48:11']
     assert all('visitors_without_the_inclination' not in f for f in m.WORLD["facts"])
     assert 'single_bet_heart' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 48:15']
+    assert m.WITNESS_READS[4]["cites"] == ['Bava Metzia 87a:2', 'Bava Metzia 87a:3']
+    assert all('little_much' not in f for f in m.WORLD["facts"])
+    assert 'pat_lechem' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 48:15']
     assert all('expound_the_dots_meta_rule' not in f for f in m.WORLD["facts"])
     assert 'dotted_elav' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 48:18']
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 48:18']
     assert all('canon_edits_for_peace' not in f for f in m.WORLD["facts"])
     assert 'altered_quotation' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 49:7']
+    assert m.WITNESS_READS[7]["cites"] == ['Ketubot 8b:9', 'Ketubot 8b:10', 'Ketubot 8b:11']
+    assert all('consolation_formula' not in f for f in m.WORLD["facts"])
+    assert 'ki_yedativ' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 49:7']
     assert all('scribal_emendation_claim' not in f for f in m.WORLD["facts"])
     assert 'standing_before_the_lord' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 39:6', 'Bereshit Rabbah 49:10', 'Bereshit Rabbah 49:12', 'Bereshit Rabbah 49:13']
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 39:6', 'Bereshit Rabbah 49:10', 'Bereshit Rabbah 49:12', 'Bereshit Rabbah 49:13']
     assert all('courtroom_procedure_on_a_cited_precedent' not in f for f in m.WORLD["facts"])
     assert 'the_plea' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

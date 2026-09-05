@@ -86,6 +86,10 @@ m.witness_read("oath_by_the_word", "reverence_buffer_supplies_the_object",
 # double_divine_title — read, not installed
 m.witness_read("double_divine_title", "biography_read_off_an_ink_difference",
                 cites=["Bereshit Rabbah 59:8"])
+# witness-tier presupposed read: oath_formula on ve_ashbiakha_ba_H — read,
+# not installed
+m.witness_read("ve_ashbiakha_ba_H", "oath_formula",
+                cites=["Shevuot 38b:19", "Shevuot 38b:20", "Shevuot 38b:21", "Shevuot 38b:22", "Shevuot 38b:23"])
 
 # -------------------------- Gen.24.4 · THE_GO_AND_THE_TAKE_DUTY ------------
 # כִּ֧י אֶל־אַרְצִ֛י וְאֶל־מוֹלַדְתִּ֖י תֵּלֵ֑ךְ וְלָקַחְתָּ֥ אִשָּׁ֖ה
@@ -269,6 +273,10 @@ m.fact("hokhachta_appointment_criterion")
 # open_conditional_request — read, not installed
 m.witness_read("open_conditional_request", "enrolled_in_a_void_vow_class",
                 cites=["Bereshit Rabbah 60:3", "Mishnah Temurah 5:6"])
+# witness-tier presupposed read: divination_paradigm on ve_haya_ha_naara —
+# read, not installed
+m.witness_read("ve_haya_ha_naara", "divination_paradigm",
+                cites=["Chullin 95b:7", "Chullin 95b:8", "Chullin 95b:9", "Chullin 95b:13"])
 
 # -------------------------- Gen.24.15 · RIVQAH_APPEARS ---------------------
 # וַֽיְהִי־ה֗וּא טֶרֶם֮ כִּלָּ֣ה לְדַבֵּר֒ וְהִנֵּ֧ה רִבְקָ֣ה יֹצֵ֗את
@@ -539,7 +547,7 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['the_repetition_ahead']
     assert m.WORLD["witnessed"]['the_repetition_ahead']["cites"] == ['Bereshit Rabbah 60:8']
     assert all('ink_economy_rule_stated_at_its_seat' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('first_aging_census', 'chain_premise_not_carried_by_our_ink'), ('the_word_old', 'read_as_a_compressed_sentence'), ('blessed_with_everything', 'four_way_dispute_wired_to_two_blocks'), ('hand_under_the_thigh', 'oath_object_procedure'), ('oath_by_the_word', 'reverence_buffer_supplies_the_object'), ('double_divine_title', 'biography_read_off_an_ink_difference'), ('oath_preamble', 'registry_of_prior_events'), ('made_the_camels_kneel', 'one_verb_three_readings_and_a_collision'), ('open_conditional_request', 'enrolled_in_a_void_vow_class'), ('before_he_had_finished_speaking', 'answered_before_finishing_census'), ('astonished_at_her', 'rendered_as_observation_protocol'), ('betrothal_gifts', 'numeric_foreshadow_by_weight_and_count'), ('will_not_eat_until_I_have_spoken', 'disclosure_before_negotiation')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('first_aging_census', 'chain_premise_not_carried_by_our_ink'), ('the_word_old', 'read_as_a_compressed_sentence'), ('blessed_with_everything', 'four_way_dispute_wired_to_two_blocks'), ('hand_under_the_thigh', 'oath_object_procedure'), ('oath_by_the_word', 'reverence_buffer_supplies_the_object'), ('double_divine_title', 'biography_read_off_an_ink_difference'), ('ve_ashbiakha_ba_H', 'oath_formula'), ('oath_preamble', 'registry_of_prior_events'), ('made_the_camels_kneel', 'one_verb_three_readings_and_a_collision'), ('open_conditional_request', 'enrolled_in_a_void_vow_class'), ('ve_haya_ha_naara', 'divination_paradigm'), ('before_he_had_finished_speaking', 'answered_before_finishing_census'), ('astonished_at_her', 'rendered_as_observation_protocol'), ('betrothal_gifts', 'numeric_foreshadow_by_weight_and_count'), ('will_not_eat_until_I_have_spoken', 'disclosure_before_negotiation')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 65:9']
     assert all('chain_premise_not_carried_by_our_ink' not in f for f in m.WORLD["facts"])
     assert 'first_aging_census' not in m.WORLD["witnessed"]
@@ -558,25 +566,31 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 59:8']
     assert all('biography_read_off_an_ink_difference' not in f for f in m.WORLD["facts"])
     assert 'double_divine_title' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 59:10']
+    assert m.WITNESS_READS[6]["cites"] == ['Shevuot 38b:19', 'Shevuot 38b:20', 'Shevuot 38b:21', 'Shevuot 38b:22', 'Shevuot 38b:23']
+    assert all('oath_formula' not in f for f in m.WORLD["facts"])
+    assert 've_ashbiakha_ba_H' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 59:10']
     assert all('registry_of_prior_events' not in f for f in m.WORLD["facts"])
     assert 'oath_preamble' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 59:11', 'Bereshit Rabbah 60:8', 'Onkelos Genesis 24:11', 'Mishnah Demai 1:3']
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 59:11', 'Bereshit Rabbah 60:8', 'Onkelos Genesis 24:11', 'Mishnah Demai 1:3']
     assert all('one_verb_three_readings_and_a_collision' not in f for f in m.WORLD["facts"])
     assert 'made_the_camels_kneel' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 60:3', 'Mishnah Temurah 5:6']
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 60:3', 'Mishnah Temurah 5:6']
     assert all('enrolled_in_a_void_vow_class' not in f for f in m.WORLD["facts"])
     assert 'open_conditional_request' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 60:4']
+    assert m.WITNESS_READS[10]["cites"] == ['Chullin 95b:7', 'Chullin 95b:8', 'Chullin 95b:9', 'Chullin 95b:13']
+    assert all('divination_paradigm' not in f for f in m.WORLD["facts"])
+    assert 've_haya_ha_naara' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 60:4']
     assert all('answered_before_finishing_census' not in f for f in m.WORLD["facts"])
     assert 'before_he_had_finished_speaking' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[10]["cites"] == ['Onkelos Genesis 24:21']
+    assert m.WITNESS_READS[12]["cites"] == ['Onkelos Genesis 24:21']
     assert all('rendered_as_observation_protocol' not in f for f in m.WORLD["facts"])
     assert 'astonished_at_her' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 60:6']
+    assert m.WITNESS_READS[13]["cites"] == ['Bereshit Rabbah 60:6']
     assert all('numeric_foreshadow_by_weight_and_count' not in f for f in m.WORLD["facts"])
     assert 'betrothal_gifts' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[12]["cites"] == ['Bereshit Rabbah 60:9']
+    assert m.WITNESS_READS[14]["cites"] == ['Bereshit Rabbah 60:9']
     assert all('disclosure_before_negotiation' not in f for f in m.WORLD["facts"])
     assert 'will_not_eat_until_I_have_spoken' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

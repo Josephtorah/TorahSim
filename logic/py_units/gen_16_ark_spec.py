@@ -190,6 +190,10 @@ m.fact("va_hakimoti_et_briti_itakh",
 # covenant_entry_listing — read, not installed
 m.witness_read("covenant_entry_listing", "ark_abstinence_from_the_order",
                 cites=["Bereshit Rabbah 34:7", "Jerusalem Talmud Taanit 1:6:10"])
+# witness-tier presupposed read: operand_order on atah_u_vanekha — read, not
+# installed
+m.witness_read("atah_u_vanekha", "operand_order",
+                cites=["Sanhedrin 108b:13", "Sanhedrin 108b:14", "Sanhedrin 108b:15"])
 
 # -------------------------- Gen.6.19 · MANIFEST_TWO_OF_ALL -----------------
 # וּמִכָּל־הָחַי מִכָּל־בָּשָׂר שְׁנַיִם מִכֹּל תָּבִיא אֶל־הַתֵּבָה
@@ -275,7 +279,7 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['noach_epithets']
     assert m.WORLD["witnessed"]['noach_epithets']["cites"] == ['Bereshit Rabbah 30:9', 'Avodah Zarah 6a:2', 'Bereshit Rabbah 30:10']
     assert all('two_domains_and_disputed_qualifier' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('eleh_header', 'exclusion_particle'), ('chamas_vocabulary', 'threshold_definition_and_capital_list'), ('build_command', 'make_for_yourself_census'), ('ark_dimensions', 'shipwright_ratios_and_disputed_compartments'), ('vessel_spec_delta', 'pitch_regime_compared_to_the_basket'), ('covenant_entry_listing', 'ark_abstinence_from_the_order'), ('intake_roster', 'offering_fitness_standard'), ('compliance_note', 'praise_law_from_an_ink_diff')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('eleh_header', 'exclusion_particle'), ('chamas_vocabulary', 'threshold_definition_and_capital_list'), ('build_command', 'make_for_yourself_census'), ('ark_dimensions', 'shipwright_ratios_and_disputed_compartments'), ('vessel_spec_delta', 'pitch_regime_compared_to_the_basket'), ('covenant_entry_listing', 'ark_abstinence_from_the_order'), ('atah_u_vanekha', 'operand_order'), ('intake_roster', 'offering_fitness_standard'), ('compliance_note', 'praise_law_from_an_ink_diff')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 30:3']
     assert all('exclusion_particle' not in f for f in m.WORLD["facts"])
     assert 'eleh_header' not in m.WORLD["witnessed"]
@@ -294,10 +298,13 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 34:7', 'Jerusalem Talmud Taanit 1:6:10']
     assert all('ark_abstinence_from_the_order' not in f for f in m.WORLD["facts"])
     assert 'covenant_entry_listing' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Avodah Zarah 51a:15', 'Avodah Zarah 51a:18', 'Jerusalem Talmud Pesachim 9:5:2', 'Sanhedrin 57a:7']
+    assert m.WITNESS_READS[6]["cites"] == ['Sanhedrin 108b:13', 'Sanhedrin 108b:14', 'Sanhedrin 108b:15']
+    assert all('operand_order' not in f for f in m.WORLD["facts"])
+    assert 'atah_u_vanekha' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Avodah Zarah 51a:15', 'Avodah Zarah 51a:18', 'Jerusalem Talmud Pesachim 9:5:2', 'Sanhedrin 57a:7']
     assert all('offering_fitness_standard' not in f for f in m.WORLD["facts"])
     assert 'intake_roster' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 32:3']
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 32:3']
     assert all('praise_law_from_an_ink_diff' not in f for f in m.WORLD["facts"])
     assert 'compliance_note' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

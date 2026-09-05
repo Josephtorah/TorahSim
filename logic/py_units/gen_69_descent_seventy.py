@@ -180,6 +180,10 @@ m.step("Gen.46.15")
 # him/its thirty and-three”) — fact holds: all-living-being-banav-and-
 # venotav-thirty-and-three
 m.fact("kol_nefesh_banav_u_venotav_sheloshim_ve_shalosh")
+# witness-tier presupposed read: sex_ledger on bnei_leah_ve_dinah_bito —
+# read, not installed
+m.witness_read("bnei_leah_ve_dinah_bito", "sex_ledger",
+                cites=["Niddah 31a:23", "Niddah 31a:24", "Niddah 31a:25"])
 
 # -------------------------- Gen.46.16 · GADS_SONS --------------------------
 # וּבְנֵי גָד צִפְיוֹן וְחַגִּי שׁוּנִי וְאֶצְבֹּן עֵרִי וַאֲרוֹדִי
@@ -257,6 +261,10 @@ m.fact("u_vene_dan_chushim")
 # plural_heading_confirmed_variant_unopened on the_sons_of_dan_over_one_name
 m.witness_state("the_sons_of_dan_over_one_name", "plural_heading_confirmed_variant_unopened",
                 cites=["Bereshit Rabbah 94:9"])
+# witness-tier presupposed read: bnei_canon on u_venei_dan_chushim — read,
+# not installed
+m.witness_read("u_venei_dan_chushim", "bnei_canon",
+                cites=["Bava Batra 143b:5", "Bava Batra 143b:6", "Bava Batra 143b:7"])
 
 # -------------------------- Gen.46.24 · NAPHTALIS_SONS ---------------------
 # וּבְנֵי נַפְתָּלִי יַחְצְאֵל וְגוּנִי וְיֵצֶר וְשִׁלֵּם
@@ -422,7 +430,7 @@ if __name__ == "__main__":
     assert all('a_total_the_texts_own_numbers_do_not_reach' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['the_sons_of_dan_over_one_name']["cites"] == ['Bereshit Rabbah 94:9']
     assert all('plural_heading_confirmed_variant_unopened' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('beersheba_sacrifices', 'the_middle_seat_of_the_cedars_arc'), ('i_will_bring_you_up', 'a_personal_promise_widened_to_a_general_clause'), ('the_roster_phrasing', 'sons_daughters_count_and_daughters_sons_do_not'), ('shaul_son_of_the_canaanite_woman', 'a_standing_dossier_cashing_on_the_roster'), ('the_tally', 'a_capital_law_arriving_through_a_genealogy'), ('harnessed_his_own_chariot', 'the_conduct_rule_firing_again'), ('now_let_me_die', 'the_death_wish_converted_to_consolation'), ('every_shepherd_an_abomination', 'the_taboo_restated_as_practice')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('beersheba_sacrifices', 'the_middle_seat_of_the_cedars_arc'), ('i_will_bring_you_up', 'a_personal_promise_widened_to_a_general_clause'), ('the_roster_phrasing', 'sons_daughters_count_and_daughters_sons_do_not'), ('shaul_son_of_the_canaanite_woman', 'a_standing_dossier_cashing_on_the_roster'), ('bnei_leah_ve_dinah_bito', 'sex_ledger'), ('u_venei_dan_chushim', 'bnei_canon'), ('the_tally', 'a_capital_law_arriving_through_a_genealogy'), ('harnessed_his_own_chariot', 'the_conduct_rule_firing_again'), ('now_let_me_die', 'the_death_wish_converted_to_consolation'), ('every_shepherd_an_abomination', 'the_taboo_restated_as_practice')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 94:4', 'Bereshit Rabbah 94:5']
     assert all('the_middle_seat_of_the_cedars_arc' not in f for f in m.WORLD["facts"])
     assert 'beersheba_sacrifices' not in m.WORLD["witnessed"]
@@ -435,16 +443,22 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 80:11', 'Bereshit Rabbah 73:2']
     assert all('a_standing_dossier_cashing_on_the_roster' not in f for f in m.WORLD["facts"])
     assert 'shaul_son_of_the_canaanite_woman' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 94:9']
+    assert m.WITNESS_READS[4]["cites"] == ['Niddah 31a:23', 'Niddah 31a:24', 'Niddah 31a:25']
+    assert all('sex_ledger' not in f for f in m.WORLD["facts"])
+    assert 'bnei_leah_ve_dinah_bito' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bava Batra 143b:5', 'Bava Batra 143b:6', 'Bava Batra 143b:7']
+    assert all('bnei_canon' not in f for f in m.WORLD["facts"])
+    assert 'u_venei_dan_chushim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 94:9']
     assert all('a_capital_law_arriving_through_a_genealogy' not in f for f in m.WORLD["facts"])
     assert 'the_tally' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 55:8']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 55:8']
     assert all('the_conduct_rule_firing_again' not in f for f in m.WORLD["facts"])
     assert 'harnessed_his_own_chariot' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Genesis 46:30']
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Genesis 46:30']
     assert all('the_death_wish_converted_to_consolation' not in f for f in m.WORLD["facts"])
     assert 'now_let_me_die' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Genesis 46:34']
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Genesis 46:34']
     assert all('the_taboo_restated_as_practice' not in f for f in m.WORLD["facts"])
     assert 'every_shepherd_an_abomination' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

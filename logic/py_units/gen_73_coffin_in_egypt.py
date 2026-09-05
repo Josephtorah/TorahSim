@@ -134,6 +134,10 @@ m.fact("evel_shivat_yamim")
 # the_threshing_floor_of_atad
 m.witness_state("the_threshing_floor_of_atad", "a_search_of_scripture_reported_and_confirmed_where_we_can_see",
                 cites=["Bereshit Rabbah 100:6", "Bereshit Rabbah 100:7"])
+# witness-tier presupposed read: mourning_duration on evel_shivat_yamim —
+# read, not installed
+m.witness_read("evel_shivat_yamim", "mourning_duration",
+                cites=["Shabbat 152a:14", "Shabbat 152a:15", "Shabbat 152a:16"])
 
 # -------------------------- Gen.50.11 · MOURNING_OF_EGYPT ------------------
 # וַיַּרְא יוֹשֵׁב הָאָרֶץ הַכְּנַעֲנִי אֶת־הָאֵבֶל בְּגֹרֶן הָאָטָד
@@ -223,6 +227,10 @@ m.step("Gen.50.17")
 # demand — LET: lift/carry-please-to-revolt-servant-God-avikha
 m.declare("ache_yosef", "LET",
           "sa_na_le_fesha_avde_elohe_avikha")
+# witness-tier presupposed read: forgiveness_ask_limit on sa_na_ve_ata_sa_na
+# — read, not installed
+m.witness_read("sa_na_ve_ata_sa_na", "forgiveness_ask_limit",
+                cites=["Yoma 87a:12", "Yoma 87a:13", "Yoma 87a:14"])
 
 # -------------------------- Gen.50.18 · BEHOLD_US_AS_SERVANTS --------------
 # וַיֵּלְכוּ גַּם־אֶחָיו וַיִּפְּלוּ לְפָנָיו וַיֹּאמְרוּ הִנֶּנּוּ לְךָ
@@ -369,14 +377,20 @@ if __name__ == "__main__":
     assert all('the_hinge_into_the_next_book' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['your_father_commanded']["cites"] == ['Bereshit Rabbah 100:8']
     assert all('an_untruth_licensed_by_its_absence_from_the_record' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('he_fell_on_his_fathers_face', 'the_bill_for_the_silences_falling_due'), ('they_buried_him_in_the_cave', 'the_deed_produced_against_a_contest'), ('he_spoke_to_their_heart', 'consolation_argued_from_cosmology_and_self_interest')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('he_fell_on_his_fathers_face', 'the_bill_for_the_silences_falling_due'), ('evel_shivat_yamim', 'mourning_duration'), ('they_buried_him_in_the_cave', 'the_deed_produced_against_a_contest'), ('sa_na_ve_ata_sa_na', 'forgiveness_ask_limit'), ('he_spoke_to_their_heart', 'consolation_argued_from_cosmology_and_self_interest')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 100:3']
     assert all('the_bill_for_the_silences_falling_due' not in f for f in m.WORLD["facts"])
     assert 'he_fell_on_his_fathers_face' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 98:17', 'Bereshit Rabbah 100:5']
+    assert m.WITNESS_READS[1]["cites"] == ['Shabbat 152a:14', 'Shabbat 152a:15', 'Shabbat 152a:16']
+    assert all('mourning_duration' not in f for f in m.WORLD["facts"])
+    assert 'evel_shivat_yamim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 98:17', 'Bereshit Rabbah 100:5']
     assert all('the_deed_produced_against_a_contest' not in f for f in m.WORLD["facts"])
     assert 'they_buried_him_in_the_cave' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 100:9']
+    assert m.WITNESS_READS[3]["cites"] == ['Yoma 87a:12', 'Yoma 87a:13', 'Yoma 87a:14']
+    assert all('forgiveness_ask_limit' not in f for f in m.WORLD["facts"])
+    assert 'sa_na_ve_ata_sa_na' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 100:9']
     assert all('consolation_argued_from_cosmology_and_self_interest' not in f for f in m.WORLD["facts"])
     assert 'he_spoke_to_their_heart' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

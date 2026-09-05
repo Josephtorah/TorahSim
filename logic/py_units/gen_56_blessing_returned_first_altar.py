@@ -199,6 +199,10 @@ m.declare("yaaqov", "LET",
 # read, not installed
 m.witness_read("i_will_come_to_seir", "audited_unkept_and_reclassified_as_outstanding",
                 cites=["Bereshit Rabbah 78:14"])
+# witness-tier presupposed read: travelers_ruse on ad_asher_avo_seirah —
+# read, not installed
+m.witness_read("ad_asher_avo_seirah", "travelers_ruse",
+                cites=["Avodah Zarah 25b:7", "Avodah Zarah 25b:8", "Avodah Zarah 25b:9"])
 
 # -------------------------- Gen.33.15 · THE_DECLINED_GARRISON --------------
 # וַיֹּאמֶר עֵשָׂו אַצִּיגָה־נָּא עִמְּךָ מִן־הָעָם אֲשֶׁר אִתִּי וַיֹּאמֶר
@@ -302,7 +306,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 6
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('dividing_the_children', 'collective_merit_disaggregated_under_test'), ('the_dotted_kiss', 'the_rules_own_tie_case_confirmed_in_our_ink'), ('the_children_God_graced', 'one_grace_outstanding_until_43_29'), ('as_the_face_of_God', 'comparison_removed_by_both_members'), ('the_gift', 'booked_as_a_reversible_transfer'), ('i_will_come_to_seir', 'audited_unkept_and_reclassified_as_outstanding'), ('the_portion', 'run_as_procedure_with_its_one_logged_failure'), ('he_camped', 'gratitude_to_the_place_and_a_fence_enforced_twice'), ('the_hundred_units', 'third_uncontestable_purchase_completing_the_set'), ('the_altars_name', 'offence_priced_here_and_deleted_there')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('dividing_the_children', 'collective_merit_disaggregated_under_test'), ('the_dotted_kiss', 'the_rules_own_tie_case_confirmed_in_our_ink'), ('the_children_God_graced', 'one_grace_outstanding_until_43_29'), ('as_the_face_of_God', 'comparison_removed_by_both_members'), ('the_gift', 'booked_as_a_reversible_transfer'), ('i_will_come_to_seir', 'audited_unkept_and_reclassified_as_outstanding'), ('ad_asher_avo_seirah', 'travelers_ruse'), ('the_portion', 'run_as_procedure_with_its_one_logged_failure'), ('he_camped', 'gratitude_to_the_place_and_a_fence_enforced_twice'), ('the_hundred_units', 'third_uncontestable_purchase_completing_the_set'), ('the_altars_name', 'offence_priced_here_and_deleted_there')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 78:7']
     assert all('collective_merit_disaggregated_under_test' not in f for f in m.WORLD["facts"])
     assert 'dividing_the_children' not in m.WORLD["witnessed"]
@@ -321,16 +325,19 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 78:14']
     assert all('audited_unkept_and_reclassified_as_outstanding' not in f for f in m.WORLD["facts"])
     assert 'i_will_come_to_seir' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 78:15']
+    assert m.WITNESS_READS[6]["cites"] == ['Avodah Zarah 25b:7', 'Avodah Zarah 25b:8', 'Avodah Zarah 25b:9']
+    assert all('travelers_ruse' not in f for f in m.WORLD["facts"])
+    assert 'ad_asher_avo_seirah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 78:15']
     assert all('run_as_procedure_with_its_one_logged_failure' not in f for f in m.WORLD["facts"])
     assert 'the_portion' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 79:6']
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 79:6']
     assert all('gratitude_to_the_place_and_a_fence_enforced_twice' not in f for f in m.WORLD["facts"])
     assert 'he_camped' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 79:7', 'Onkelos Genesis 33:19']
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 79:7', 'Onkelos Genesis 33:19']
     assert all('third_uncontestable_purchase_completing_the_set' not in f for f in m.WORLD["facts"])
     assert 'the_hundred_units' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 79:8', 'Onkelos Genesis 33:20']
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 79:8', 'Onkelos Genesis 33:20']
     assert all('offence_priced_here_and_deleted_there' not in f for f in m.WORLD["facts"])
     assert 'the_altars_name' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

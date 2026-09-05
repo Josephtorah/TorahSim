@@ -206,6 +206,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kol_nefesh_banav_u_venotav_sheloshim_ve_shalosh, t0)</span><br><span class="gloss">= HOLDS(all-nefesh-banav-and-venotav-sheloshim-and-shalosh, t0)</span><br>THIRTY-THREE. sheloshim ve-SHALOSH — the subtotal counts thirty- three where the names count thirty-two: the reading tradition&#x27;s answers (Yocheved born between the walls; Jacob himself heads his own count) are named, never merged — the machine files the arithmetic tension as the ledger&#x27;s own open question (letter-fact, the readings named).
 </td><td><span class="he">בָּנָיו וּבְנוֹתָיו שְׁלֹשִׁים וְשָׁלֹשׁ</span> · <i>banay-v u-venotay-v sheloshim ve-shalosh</i><br><span class="gloss">= banay-v and-venotay-v sheloshim and-shalosh</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(bnei_leah_ve_dinah_bito, sex_ledger)</span><br><span class="gloss">= WITNESS-READ(sons-of-leah-and-dinah-bito, sex-ledger)</span><br>THE SEX-DETERMINATION RULE PROVEN FROM THIS ROSTER [claim G69-31]. The round-39 birth block seats R. Tzadok&#x27;s proof: the early rule (the woman first — a male; the man first — a female) stood unexplained until R. TZADOK read it off our ledger&#x27;s own attributions — eleh bnei LEAH... ve-et DINAH bito (&#x27;these are the SONS of Leah... and DINAH his DAUGHTER,&#x27; 46:15): talah ha-zekharim ba-nekevot (&#x27;he hung the MALES on the females and the females on the males&#x27;) — the descent roster&#x27;s gender grammar as the rule&#x27;s proof (Niddah 31a:23-24). Auto-seat law, F-171 (round 39, the birth-and-body block — the exam&#x27;s thousandth case round).
+</td><td>—</td><td class='cite'>Niddah 31a:23, Niddah 31a:24, Niddah 31a:25</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The first subtotal; the famous missing one.</div>
 </div>
@@ -288,6 +290,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וּבְנֵי־דָן חֻשִׁים</span> · <i>u-vene-dan chushim</i><br><span class="gloss">= and-vene-dan chushim</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>WITNESS_STATE</td><td><span class="expr">WITNESS(the_sons_of_dan_over_one_name, plural_heading_confirmed_variant_unopened)</span><br><span class="gloss">= WITNESS(the-sons-fowl-dan-over-one-name, plural-heading-confirmed-variant-unopened)</span><br>A PLURAL HEADING OVER A SINGLE NAME, WITH THE NEXT VERSE AS CONTROL [claim G69-22, machine-checked]. One of the five answers to the missing member reads the plural &#x27;and the SONS of Dan&#x27; over one son as licensing a double count. Verified: this verse carries exactly three tokens - plural heading, tribe, one name - while the very next verse puts the identical heading over FOUR. THE OTHER LEG IS DECLARED UNOPENED: the same passage reports that in one master&#x27;s own scroll the word stood SINGULAR. That is a manuscript variant outside this corpus, which carries one consonantal text; the machine confirms the plural it has and cannot speak to the scroll it does not hold. [folded shape: ink count]
 </td><td>—</td><td class='cite'>Bereshit Rabbah 94:9</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(u_venei_dan_chushim, bnei_canon)</span><br><span class="gloss">= WITNESS-READ(and-venei-dan-chushim, sons-of-canon)</span><br>THE BNEI-CANON OPENS AT THIS TOKEN [claim G69-30]. The round-34 inheritance block seats the ink-canon: do people call ONE son &#x27;sons&#x27;? Abaye — u-venei Dan Chushim (&#x27;and the SONS of Dan — CHUSHIM,&#x27; our 46:23: one child written plural); Rava&#x27;s recorded deflection (perhaps &#x27;many as reed-thickets,&#x27; the school of Chizkiya) with the two replacement seats — &#x27;the sons of Pallu: Eliav&#x27; (Num 26:8) and &#x27;the sons of Ethan: Azariah&#x27; (1 Chr 2:8): a three-verse canon for the plural-of-one, our token the opener and its deflection kept on the record (Bava Batra 143b:5-7). Auto-seat law, F-135 (round 34, the inheritance block).
+</td><td>—</td><td class='cite'>Bava Batra 143b:5, Bava Batra 143b:6, Bava Batra 143b:7</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The plural of one.</div>
 </div>
@@ -815,6 +819,10 @@ m.step(&quot;Gen.46.15&quot;)
 # him/its thirty and-three”) — fact holds: all-living-being-banav-and-
 # venotav-thirty-and-three
 m.fact(&quot;kol_nefesh_banav_u_venotav_sheloshim_ve_shalosh&quot;)
+# witness-tier presupposed read: sex_ledger on bnei_leah_ve_dinah_bito —
+# read, not installed
+m.witness_read(&quot;bnei_leah_ve_dinah_bito&quot;, &quot;sex_ledger&quot;,
+                cites=[&quot;Niddah 31a:23&quot;, &quot;Niddah 31a:24&quot;, &quot;Niddah 31a:25&quot;])
 
 # -------------------------- Gen.46.16 · GADS_SONS --------------------------
 # וּבְנֵי גָד צִפְיוֹן וְחַגִּי שׁוּנִי וְאֶצְבֹּן עֵרִי וַאֲרוֹדִי
@@ -892,6 +900,10 @@ m.fact(&quot;u_vene_dan_chushim&quot;)
 # plural_heading_confirmed_variant_unopened on the_sons_of_dan_over_one_name
 m.witness_state(&quot;the_sons_of_dan_over_one_name&quot;, &quot;plural_heading_confirmed_variant_unopened&quot;,
                 cites=[&quot;Bereshit Rabbah 94:9&quot;])
+# witness-tier presupposed read: bnei_canon on u_venei_dan_chushim — read,
+# not installed
+m.witness_read(&quot;u_venei_dan_chushim&quot;, &quot;bnei_canon&quot;,
+                cites=[&quot;Bava Batra 143b:5&quot;, &quot;Bava Batra 143b:6&quot;, &quot;Bava Batra 143b:7&quot;])
 
 # -------------------------- Gen.46.24 · NAPHTALIS_SONS ---------------------
 # וּבְנֵי נַפְתָּלִי יַחְצְאֵל וְגוּנִי וְיֵצֶר וְשִׁלֵּם
@@ -1057,7 +1069,7 @@ if __name__ == &quot;__main__&quot;:
     assert all(&#x27;a_total_the_texts_own_numbers_do_not_reach&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert m.WORLD[&quot;witnessed&quot;][&#x27;the_sons_of_dan_over_one_name&#x27;][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 94:9&#x27;]
     assert all(&#x27;plural_heading_confirmed_variant_unopened&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;beersheba_sacrifices&#x27;, &#x27;the_middle_seat_of_the_cedars_arc&#x27;), (&#x27;i_will_bring_you_up&#x27;, &#x27;a_personal_promise_widened_to_a_general_clause&#x27;), (&#x27;the_roster_phrasing&#x27;, &#x27;sons_daughters_count_and_daughters_sons_do_not&#x27;), (&#x27;shaul_son_of_the_canaanite_woman&#x27;, &#x27;a_standing_dossier_cashing_on_the_roster&#x27;), (&#x27;the_tally&#x27;, &#x27;a_capital_law_arriving_through_a_genealogy&#x27;), (&#x27;harnessed_his_own_chariot&#x27;, &#x27;the_conduct_rule_firing_again&#x27;), (&#x27;now_let_me_die&#x27;, &#x27;the_death_wish_converted_to_consolation&#x27;), (&#x27;every_shepherd_an_abomination&#x27;, &#x27;the_taboo_restated_as_practice&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;beersheba_sacrifices&#x27;, &#x27;the_middle_seat_of_the_cedars_arc&#x27;), (&#x27;i_will_bring_you_up&#x27;, &#x27;a_personal_promise_widened_to_a_general_clause&#x27;), (&#x27;the_roster_phrasing&#x27;, &#x27;sons_daughters_count_and_daughters_sons_do_not&#x27;), (&#x27;shaul_son_of_the_canaanite_woman&#x27;, &#x27;a_standing_dossier_cashing_on_the_roster&#x27;), (&#x27;bnei_leah_ve_dinah_bito&#x27;, &#x27;sex_ledger&#x27;), (&#x27;u_venei_dan_chushim&#x27;, &#x27;bnei_canon&#x27;), (&#x27;the_tally&#x27;, &#x27;a_capital_law_arriving_through_a_genealogy&#x27;), (&#x27;harnessed_his_own_chariot&#x27;, &#x27;the_conduct_rule_firing_again&#x27;), (&#x27;now_let_me_die&#x27;, &#x27;the_death_wish_converted_to_consolation&#x27;), (&#x27;every_shepherd_an_abomination&#x27;, &#x27;the_taboo_restated_as_practice&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 94:4&#x27;, &#x27;Bereshit Rabbah 94:5&#x27;]
     assert all(&#x27;the_middle_seat_of_the_cedars_arc&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;beersheba_sacrifices&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -1070,17 +1082,23 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 80:11&#x27;, &#x27;Bereshit Rabbah 73:2&#x27;]
     assert all(&#x27;a_standing_dossier_cashing_on_the_roster&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;shaul_son_of_the_canaanite_woman&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 94:9&#x27;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Niddah 31a:23&#x27;, &#x27;Niddah 31a:24&#x27;, &#x27;Niddah 31a:25&#x27;]
+    assert all(&#x27;sex_ledger&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;bnei_leah_ve_dinah_bito&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Bava Batra 143b:5&#x27;, &#x27;Bava Batra 143b:6&#x27;, &#x27;Bava Batra 143b:7&#x27;]
+    assert all(&#x27;bnei_canon&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;u_venei_dan_chushim&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 94:9&#x27;]
     assert all(&#x27;a_capital_law_arriving_through_a_genealogy&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;the_tally&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 55:8&#x27;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 55:8&#x27;]
     assert all(&#x27;the_conduct_rule_firing_again&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;harnessed_his_own_chariot&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Onkelos Genesis 46:30&#x27;]
+    assert m.WITNESS_READS[8][&quot;cites&quot;] == [&#x27;Onkelos Genesis 46:30&#x27;]
     assert all(&#x27;the_death_wish_converted_to_consolation&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;now_let_me_die&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Onkelos Genesis 46:34&#x27;]
+    assert m.WITNESS_READS[9][&quot;cites&quot;] == [&#x27;Onkelos Genesis 46:34&#x27;]
     assert all(&#x27;the_taboo_restated_as_practice&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;every_shepherd_an_abomination&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

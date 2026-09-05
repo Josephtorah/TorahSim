@@ -31,6 +31,10 @@ m.presupposed("mitzrayim")
 # descent_episode — read, not installed
 m.witness_read("descent_episode", "paved_way_template_of_eleven_ink_pairs",
                 cites=["Bereshit Rabbah 40:6", "Yevamot 13b:6"])
+# witness-tier presupposed read: descent_conduct on va_yered_avram — read,
+# not installed
+m.witness_read("va_yered_avram", "descent_conduct",
+                cites=["Bava Kamma 60b:5", "Bava Kamma 60b:6", "Bava Kamma 60b:7", "Bava Metzia 59a:10", "Bava Metzia 59a:11"])
 
 # -------------------------- Gen.12.11 · THE_FIRST_SPEECH_IS_FEAR_AND_BEAUTY -
 # וַיְהִי כַּאֲשֶׁר הִקְרִיב לָבוֹא מִצְרָיְמָה וַיֹּאמֶר אֶל־שָׂרַי
@@ -208,17 +212,20 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 14
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('descent_episode', 'paved_way_template_of_eleven_ink_pairs'), ('request_particle', 'consent_established_by_one_word'), ('affliction_op', 'named_disease_carried_into_divorce_law'), ('escort_and_release', 'four_steps_priced_at_four_hundred_years')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('descent_episode', 'paved_way_template_of_eleven_ink_pairs'), ('va_yered_avram', 'descent_conduct'), ('request_particle', 'consent_established_by_one_word'), ('affliction_op', 'named_disease_carried_into_divorce_law'), ('escort_and_release', 'four_steps_priced_at_four_hundred_years')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 40:6', 'Yevamot 13b:6']
     assert all('paved_way_template_of_eleven_ink_pairs' not in f for f in m.WORLD["facts"])
     assert 'descent_episode' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 52:4', 'Sanhedrin 39b:21']
+    assert m.WITNESS_READS[1]["cites"] == ['Bava Kamma 60b:5', 'Bava Kamma 60b:6', 'Bava Kamma 60b:7', 'Bava Metzia 59a:10', 'Bava Metzia 59a:11']
+    assert all('descent_conduct' not in f for f in m.WORLD["facts"])
+    assert 'va_yered_avram' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 52:4', 'Sanhedrin 39b:21']
     assert all('consent_established_by_one_word' not in f for f in m.WORLD["facts"])
     assert 'request_particle' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 41:2', 'Jerusalem Talmud Ketubot 7:9:3', 'Vayikra Rabbah 16:1', 'Arakhin 16a:9']
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 41:2', 'Jerusalem Talmud Ketubot 7:9:3', 'Vayikra Rabbah 16:1', 'Arakhin 16a:9']
     assert all('named_disease_carried_into_divorce_law' not in f for f in m.WORLD["facts"])
     assert 'affliction_op' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Sotah 46b:14', 'Mekhilta DeRabbi Shimon Ben Yochai 3:1']
+    assert m.WITNESS_READS[4]["cites"] == ['Sotah 46b:14', 'Mekhilta DeRabbi Shimon Ben Yochai 3:1']
     assert all('four_steps_priced_at_four_hundred_years' not in f for f in m.WORLD["facts"])
     assert 'escort_and_release' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -96,6 +96,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">כָּל … לְמִינֵהֶם … כָּל־עוֹף כָּנָף לְמִינֵהוּ</span> · <i>kol … le-minehem … kol-of kanaf le-minehu</i><br><span class="gloss">= every by-their-kinds every-flier wing by-its-kind</span></td><td class='cite'>—</td><td>delta tested (letter-visible)</td></tr>
 <tr class="opline"><td>TEST</td><td><span class="expr">PASS(tov, nefesh_chaya)</span><br><span class="gloss">= PASS(good, living-being)</span><br>The day&#x27;s single test — no explicit et-object (like days 3-4): the inspection covers the delivered work as a whole. Position note: the test rides the DELIVERY verse, BEFORE the blessing — the oracle passes the work, then the work is blessed: quality gate precedes benediction, letter-visible order. Three deltas stand flagged; the oracle passes the delivery AS DELIVERED.
 </td><td><span class="he">כִּי־טוֹב</span> · <i>ki-tov</i><br><span class="gloss">= that-good</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(le_minehu_ba_yam, sea_kilayim)</span><br><span class="gloss">= WITNESS-READ(to-by-its-kind-in-the-yam, sea-kilayim)</span><br>SEA KILAYIM BY THE LAND ANALOGY [claim G05-08]. The round-37 table-and-knife block seats the creation ink&#x27;s forbidden-mixture law: R. Yirmiya citing Reish Lakish — one who breeds two SEA species is LASHED: atya le-minehu le-minehu mi-yabasha (&#x27;derived by ITS-KIND from ITS-KIND, from the DRY LAND&#x27;) — this unit&#x27;s own le-minehu at the sea-swarms (1:21) read through the land kinds&#x27; token (1:25): the kinds-boundary of day five running as lash- bearing law, with Rachava&#x27;s goat-and-shibbuta driving query beside (Bava Kamma 55a:11-13). Auto-seat law, F-161 (round 37, the table- and-knife block).
+</td><td>—</td><td class='cite'>Bava Kamma 55a:11, Bava Kamma 55a:12, Bava Kamma 55a:13</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The densest verse of the unit: creation verb returned, inventory credited to its delegate mid-list, three deltas on the books, test passed — all before the day&#x27;s most novel act (1:22). The receipt convention of days 1-4 is replaced by a relative clause doing receipt work inside the delivery itself.</div>
 </div>
@@ -426,6 +428,10 @@ m.spec_delta(&quot;sheretz nefesh chaya; of (bare classes)&quot;,
              &quot;kol- totality x2, kind-keys le-minehem / le-minehu, of differentiated as of KANAF&quot;)
 # ‹כִּי־טוֹב› (“that good”) — test PASS — oracle-word good, on living-being
 m.test(&quot;PASS&quot;, &quot;tov&quot;, &quot;nefesh_chaya&quot;)
+# witness-tier presupposed read: sea_kilayim on le_minehu_ba_yam — read, not
+# installed
+m.witness_read(&quot;le_minehu_ba_yam&quot;, &quot;sea_kilayim&quot;,
+                cites=[&quot;Bava Kamma 55a:11&quot;, &quot;Bava Kamma 55a:12&quot;, &quot;Bava Kamma 55a:13&quot;])
 
 # -------------------------- Gen.1.22 · BLESS_MANDATE -----------------------
 # וַיְבָרֶךְ אֹתָם אֱלֹהִים לֵאמֹר פְּרוּ וּרְבוּ וּמִלְאוּ אֶת־הַמַּיִם
@@ -469,6 +475,10 @@ if __name__ == &quot;__main__&quot;:
     assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;taninim&#x27;]
     assert m.WORLD[&quot;witnessed&quot;][&#x27;taninim&#x27;][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 7:4&#x27;, &#x27;Bava Batra 74b:5&#x27;, &#x27;Bava Batra 74b:6&#x27;]
     assert all(&#x27;no_propagating_pair&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;le_minehu_ba_yam&#x27;, &#x27;sea_kilayim&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Bava Kamma 55a:11&#x27;, &#x27;Bava Kamma 55a:12&#x27;, &#x27;Bava Kamma 55a:13&#x27;]
+    assert all(&#x27;sea_kilayim&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;le_minehu_ba_yam&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-07-30 (owner approved): fifth logic-derived unit, second under the calibrated coverage protocol. Central findings: TWO live LET? demands (the interpreter&#x27;s own S7 rehearsal example made real); the week&#x27;s only missing receipt token (no va-yehi khen, MT and Onkelos), receipt work relocated into the delivery&#x27;s relative clause; bara returning for the corpus&#x27;s first LIVING entities with the unordered great taninim leading; the delegation answered by direct divine creation with the delegate credited (dual agency — Onkelos resolves via the causative archishu); the first BLESSING with the corpus&#x27;s first second-person imperatives and a mood-split, rationed mandate recorded as standing WORLD facts (new op BLESS — interpreter extension at freeze, ASSIGN precedent); zero REGISTRY writes; the defective taninim ktiv verified from own letter data. Not binding religious law.</div><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-07-30 (owner approved): fifth logic-derived unit, second under the calibrated coverage protocol. Central findings: TWO live LET? demands (the interpreter&#x27;s own S7 rehearsal example made real); the week&#x27;s only missing receipt token (no va-yehi khen, MT and Onkelos), receipt work relocated into the delivery&#x27;s relative clause; bara returning for the corpus&#x27;s first LIVING entities with the unordered great taninim leading; the delegation answered by direct divine creation with the delegate credited (dual agency — Onkelos resolves via the causative archishu); the first BLESSING with the corpus&#x27;s first second-person imperatives and a mood-split, rationed mandate recorded as standing WORLD facts (new op BLESS — interpreter extension at freeze, ASSIGN precedent); zero REGISTRY writes; the defective taninim ktiv verified from own letter data. Not binding religious law.</div><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

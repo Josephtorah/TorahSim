@@ -113,6 +113,10 @@ m.event("offer_up", agent="noach", themes=["olot_ba_mizbeach"])
 # not installed
 m.witness_read("altar_op", "celebrant_reassigned_and_purity_vocabulary_anchored",
                 cites=["Bereshit Rabbah 30:6", "Jerusalem Talmud Nazir 6:1:8"])
+# witness-tier presupposed read: noah_altar_law on va_yiven_noach_mizbeach —
+# read, not installed
+m.witness_read("va_yiven_noach_mizbeach", "noah_altar_law",
+                cites=["Zevachim 108b:14", "Zevachim 108b:15", "Zevachim 108b:16", "Zevachim 115b:17", "Zevachim 115b:18"])
 
 # -------------------------- Gen.8.21 · THE_SMELL_THE_HEART_THE_NEVER_AGAINS -
 # וַיָּרַח יְהוָה אֶת־רֵיחַ הַנִּיחֹחַ וַיֹּאמֶר יְהוָה אֶל־לִבּוֹ לֹא־אֹסִף
@@ -173,6 +177,10 @@ m.witness_read("seasons_covenant", "termination_condition_and_new_parameters",
 # seasons_covenant — read, not installed
 m.witness_read("seasons_covenant", "gentile_rest_prohibition",
                 cites=["Sanhedrin 58b:25", "Sanhedrin 57a:12"])
+# witness-tier presupposed read: six_seasons on zera_ve_katzir — read, not
+# installed
+m.witness_read("zera_ve_katzir", "six_seasons",
+                cites=["Bava Metzia 106b:4", "Bava Metzia 106b:5", "Bava Metzia 106b:6"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -190,7 +198,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == ['lo_osif_le_qalel_od_et_ha_adamah', 'lo_osif_od_le_hakot_et_kol_chai', 'zera_ve_qatzir_ve_qor_va_chom_ve_qayitz_va_choref_ve_yom_va_laylah_lo_yishbotu']
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 11
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('dibber_operator', 'speech_verb_distinction_as_law'), ('exit_command', 'written_and_read_pair_encoding_reluctance'), ('emergence_roster', 'mortality_inside_read_off_a_plural'), ('altar_op', 'celebrant_reassigned_and_purity_vocabulary_anchored'), ('aroma_op', 'appeasement_and_comparative_ranking'), ('doubled_clause', 'oath_force_and_youth_clause_law'), ('seasons_covenant', 'termination_condition_and_new_parameters'), ('seasons_covenant', 'gentile_rest_prohibition')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('dibber_operator', 'speech_verb_distinction_as_law'), ('exit_command', 'written_and_read_pair_encoding_reluctance'), ('emergence_roster', 'mortality_inside_read_off_a_plural'), ('altar_op', 'celebrant_reassigned_and_purity_vocabulary_anchored'), ('va_yiven_noach_mizbeach', 'noah_altar_law'), ('aroma_op', 'appeasement_and_comparative_ranking'), ('doubled_clause', 'oath_force_and_youth_clause_law'), ('seasons_covenant', 'termination_condition_and_new_parameters'), ('seasons_covenant', 'gentile_rest_prohibition'), ('zera_ve_katzir', 'six_seasons')]
     assert m.WITNESS_READS[0]["cites"] == ['Jerusalem Talmud Makkot 2:6:11']
     assert all('speech_verb_distinction_as_law' not in f for f in m.WORLD["facts"])
     assert 'dibber_operator' not in m.WORLD["witnessed"]
@@ -203,16 +211,22 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 30:6', 'Jerusalem Talmud Nazir 6:1:8']
     assert all('celebrant_reassigned_and_purity_vocabulary_anchored' not in f for f in m.WORLD["facts"])
     assert 'altar_op' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Eruvin 65a:18', 'Vayikra Rabbah 7:4']
+    assert m.WITNESS_READS[4]["cites"] == ['Zevachim 108b:14', 'Zevachim 108b:15', 'Zevachim 108b:16', 'Zevachim 115b:17', 'Zevachim 115b:18']
+    assert all('noah_altar_law' not in f for f in m.WORLD["facts"])
+    assert 'va_yiven_noach_mizbeach' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Eruvin 65a:18', 'Vayikra Rabbah 7:4']
     assert all('appeasement_and_comparative_ranking' not in f for f in m.WORLD["facts"])
     assert 'aroma_op' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 34:10', 'Jerusalem Talmud Berakhot 3:5:7']
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 34:10', 'Jerusalem Talmud Berakhot 3:5:7']
     assert all('oath_force_and_youth_clause_law' not in f for f in m.WORLD["facts"])
     assert 'doubled_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 34:11']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 34:11']
     assert all('termination_condition_and_new_parameters' not in f for f in m.WORLD["facts"])
     assert 'seasons_covenant' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Sanhedrin 58b:25', 'Sanhedrin 57a:12']
+    assert m.WITNESS_READS[8]["cites"] == ['Sanhedrin 58b:25', 'Sanhedrin 57a:12']
     assert all('gentile_rest_prohibition' not in f for f in m.WORLD["facts"])
     assert 'seasons_covenant' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Bava Metzia 106b:4', 'Bava Metzia 106b:5', 'Bava Metzia 106b:6']
+    assert all('six_seasons' not in f for f in m.WORLD["facts"])
+    assert 'zera_ve_katzir' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -123,6 +123,10 @@ m.witness_read("rescue_override", "bounded_by_its_own_purpose",
 # dry_land_limiter — read, not installed
 m.witness_read("dry_land_limiter", "fish_exempted_by_the_wording",
                 cites=["Kiddushin 13a:14"])
+# witness-tier presupposed read: nose_predicate_laws on
+# nishmat_ruach_chayim_be_apav — read, not installed
+m.witness_read("nishmat_ruach_chayim_be_apav", "nose_predicate_laws",
+                cites=["Sotah 45b:16", "Sotah 45b:17", "Sotah 45b:18", "Bekhorot 46b:1", "Bekhorot 46b:2", "Bekhorot 46b:3"])
 
 # -------------------------- Gen.7.23 · THE_WIPE_EXECUTED_ONLY_NOACH_LEFT ---
 # וַיִּמַח אֶת־כָּל־הַיְקוּם אֲשֶׁר עַל־פְּנֵי הָאֲדָמָה מֵאָדָם
@@ -186,7 +190,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 11
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('all_mountains_quantifier', 'territorial_claim_defeated'), ('nishmat_formula', 'legal_definition_of_life'), ('rescue_override', 'bounded_by_its_own_purpose'), ('dry_land_limiter', 'fish_exempted_by_the_wording'), ('double_wipe_verb', 'two_worlds_two_verbs'), ('from_man_to_beast_order', 'initiator_punished_first')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('all_mountains_quantifier', 'territorial_claim_defeated'), ('nishmat_formula', 'legal_definition_of_life'), ('rescue_override', 'bounded_by_its_own_purpose'), ('dry_land_limiter', 'fish_exempted_by_the_wording'), ('nishmat_ruach_chayim_be_apav', 'nose_predicate_laws'), ('double_wipe_verb', 'two_worlds_two_verbs'), ('from_man_to_beast_order', 'initiator_punished_first')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 32:10']
     assert all('territorial_claim_defeated' not in f for f in m.WORLD["facts"])
     assert 'all_mountains_quantifier' not in m.WORLD["witnessed"]
@@ -199,10 +203,13 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[3]["cites"] == ['Kiddushin 13a:14']
     assert all('fish_exempted_by_the_wording' not in f for f in m.WORLD["facts"])
     assert 'dry_land_limiter' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Jerusalem Talmud Sanhedrin 10:3:2']
+    assert m.WITNESS_READS[4]["cites"] == ['Sotah 45b:16', 'Sotah 45b:17', 'Sotah 45b:18', 'Bekhorot 46b:1', 'Bekhorot 46b:2', 'Bekhorot 46b:3']
+    assert all('nose_predicate_laws' not in f for f in m.WORLD["facts"])
+    assert 'nishmat_ruach_chayim_be_apav' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Jerusalem Talmud Sanhedrin 10:3:2']
     assert all('two_worlds_two_verbs' not in f for f in m.WORLD["facts"])
     assert 'double_wipe_verb' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 2:8']
+    assert m.WITNESS_READS[6]["cites"] == ['Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 2:8']
     assert all('initiator_punished_first' not in f for f in m.WORLD["facts"])
     assert 'from_man_to_beast_order' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -22,6 +22,7 @@ meta:
   status: frozen
   rev: 3
   changelog:
+    - "2026-09-04 rev +1: ROUND-30 TALMUD-BLOCK SEAT (the prayer-book block; ledger logic/oral_triage/genesis_block_prayerbook_2026-09-04.md; runner run_prayerbook.py, 14/14). One seat under the auto-seat law: G01-07 (F-116 — the day boundary's two liturgy jobs at 1:5: the Shema's evening-first order learned from the creation of the world, and the makeup-prayer hinge's one-day definition, R. Yochanan ruling prayer as mercy). Machine ops untouched below the witness tier."
     - "rev 3 (2026-08-23): FULL-RULE STAMP on owner word ('lets declare day 1 and 4 good') — tree_derive_version logic_derived_v1 -> logic_derived_v2_full_rule; span 1:1-5 read through (O3), logic rebuilt from that reading (rev 2); records-only, no operator or state change"
     - "rev 2 (2026-08-20/21): day-one readings-first amendment — utterance census (ORAL_UTTERANCE), presupposed-flag forks, witness-grounded hidden light (WITNESS_STATE, owner tier ruling), 15 read-source citations; rationale corrected: span 1:1-5 is read through, unit full-rule-eligible, stamp awaits owner order"
   frozen_note_en: >
@@ -369,6 +370,31 @@ boot_steps:
         en: "echad = CARDINAL 'one' (days 2-6 use ordinals) — marked form. The mixed-series question is the chain's own, asked and answered (amendment 2026-08-20): BR 3:9 — repaid at the Mishkan's dedication; Onkelos preserves yoma chad unordinalized. And the close itself is seder zemanim ('order of times'): time becomes ordered at this commit"
         cites: ["Bereshit Rabbah 3:9", "Onkelos Genesis 1:5", "Bereshit Rabbah 3:7"]
         confidence: "commit tested; cardinal significance chain-answered (BR 3:9)"
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(va_yehi_erev_va_yehi_voqer, day_boundary_liturgy_jobs)"
+        en: >
+          THE DAY BOUNDARY'S TWO LITURGY JOBS [claim G01-07]. The
+          round-30 prayer-book block — the Genesis campaign's
+          opening — finds the tradition running THIS verse's
+          evening-first commit as a legal constant twice. JOB ONE,
+          the Shema's order: why does the Mishnah teach the
+          EVENING recitation first? — yalif mi-beriyato shel olam
+          ('learned from the CREATION OF THE WORLD'): va-yehi erev
+          va-yehi voqer yom echad ('and it was evening and it was
+          morning, one day') — night precedes day in the liturgy
+          because it precedes day in the world's boot sequence
+          (Berakhot 2a:9). JOB TWO, the makeup-prayer hinge:
+          missed-evening gives morning-twice mishum de-chad yoma
+          hu ('because it is ONE DAY' — this verse quoted as the
+          day's definition), and R. Yochanan rules missed-
+          afternoon prays evening twice — prayer is mercy, no
+          'its day passed, its offering lapsed' (Berakhot
+          26a:17-18). The unit's own LEDGER-commit shape — the
+          evening-to-morning cycle closing day 1 — is the
+          measured object both rulings compute with. Auto-seat
+          law, F-116 (round 30, the prayer-book block).
+        cites: ["Berakhot 2a:8", "Berakhot 2a:9", "Berakhot 2a:10", "Berakhot 26a:16", "Berakhot 26a:17", "Berakhot 26a:18"]
+        confidence: witnessed
     comment: >
       Day-1 transaction closes complete: P (1:2) -> fiat (1:3) -> test+partition (1:4)
       -> names+commit (1:5). This shape is the baseline the other days deviate from.

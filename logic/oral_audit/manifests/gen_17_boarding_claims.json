@@ -1,202 +1,220 @@
 [
-  {
-    "id": "G17-01",
-    "source": "Minchat Shai on Gen 7:2 (Ramah; corrected Masorah)",
-    "ref": "Gen 7:2",
-    "claim_en": "הטהורה (\"the pure one,\" with the article) — the Ramah: plene with vav exactly TWICE in the Torah, \"both verse-openings\" — the boarding commands 7:2 and 7:8; every other pure-form defective (Minchat Shai calls our printed Masorah here \"words of error\"). SNAPSHOT holds THREE plene tokens: the Ramah's verse-initial pair AND 8:20 (the altar verse) — the third is a deviation from his rule, banked as a discrepancy for the gen_20 audit. (The pure LAMPSTAND's tokens and Lev 20:25, same pronunciation, are all defective — consistent with the rule.)",
-    "check": {
-      "type": "spelling_variants",
-      "where": {
-        "translit": "ha-tehora"
-      },
-      "pattern_full": "טהורה",
-      "expect_full_refs": [
-        "Gen 7:2",
-        "Gen 7:8",
-        "Gen 8:20"
-      ]
-    }
-  },
-  {
-    "id": "G17-02",
-    "source": "Minchat Shai on Gen 7:8 (Pesachim 3a; Bereshit Rabbah 32)",
-    "ref": "Gen 7:8",
-    "claim_en": "DISCREPANCY OBSERVATION, the tradition's own — the Talmud: \"the verse BENT EIGHT LETTERS rather than utter an ugly word\" (אשר איננה טהרה, \"which is not pure,\" for הטמאה, \"the impure\"). Minchat Shai's challenge: טהרה here is written DEFECTIVE (four letters), so the detour is SEVEN letters, not eight — and he resolves it by Bereshit Rabbah's version, which counts WORDS (\"two and three words\"), not letters. SNAPSHOT sides with his arithmetic: the defective spelling locked.",
-    "check": {
-      "type": "letters_multiset",
-      "ref": "Gen 7:8",
-      "idx": 7,
-      "equals_letters_of": "טהרה"
-    }
-  },
-  {
-    "id": "G17-03",
-    "source": "Minchat Shai on Gen 7:11 (Hilleli vs Yerushalmi; Ramah; Or Torah)",
-    "ref": "Gen 7:11",
-    "claim_en": "DISCREPANCY OBSERVATION — מעינות (\"fountains\"): \"a great dispute on this word.\" The Hilleli codex, the Ramah, and Or Torah rule 7:11 PLENE — \"full when the fountains were full\" — and 8:2's closing token defective, \"drained when they drained\": the spelling-homily rides the ruling. SNAPSHOT writes BOTH tokens defective (מעינת) — the Yerushalmi camp — against the Ramah's ruling and its homily. Both camps recorded; the check locks zero plene tokens.",
-    "check": {
-      "type": "spelling_variants",
-      "where": {
-        "translit": "maynot"
-      },
-      "pattern_full": "מעינות",
-      "expect_full_refs": []
-    }
-  },
-  {
-    "id": "G17-04",
-    "source": "Kitzur Baal HaTurim on Gen 7:4 (Masorah)",
-    "ref": "Gen 7:4",
-    "claim_en": "היקום (\"the standing-substance\") — the Kitzur's Masorah trio, all THREE in the Torah: \"and I will wipe out all the standing\" (7:4), \"and He wiped out all the standing\" (7:23), \"and all the standing at their feet\" (Deut 11:6 — Korach's household): \"as the flood generation sinned from too much good, so Korach from his wealth.\" SNAPSHOT: exactly three tokens.",
-    "check": {
-      "type": "token_count",
-      "where": {
-        "translit": "ha-yequm"
-      },
-      "expect_total": 3,
-      "expect_refs": [
-        "Gen 7:4",
-        "Gen 7:23",
-        "Deut 11:6"
-      ]
-    }
-  },
-  {
-    "id": "G17-05",
-    "source": "Kitzur Baal HaTurim on Gen 7:16 (Masorah)",
-    "ref": "Gen 7:16",
-    "scope": "scripture",
-    "claim_en": "והבאים (\"and those coming\") — the Kitzur's Masorah pair spans out of the Torah: the boarding animals (7:16) and \"those who came with Zerubbabel\" (the return list): \"as here they came OF THEMSELVES, so there they went up of themselves.\" Torah-side: this is the word's only token — and the pair is an inheritance edge (Torah → Writings) of exactly the class the edge layer records.",
-    "check": {
-      "type": "token_count",
-      "where": {
-        "translit": "ve-ha-baim"
-      },
-      "expect_total": 1,
-      "expect_refs": [
-        "Gen 7:16"
-      ]
-    }
-  },
-  {
-    "id": "G17-06",
-    "source": "Minchat Shai on Gen 7:6",
-    "ref": "Gen 7:6",
-    "claim_en": "ונח בן שש מאות שנה (\"and Noah was six hundred years old\") — שש with its own accent and NO maqqef (joining hyphen): Noah's age stands unjoined. SNAPSHOT: no maqqef after שש.",
-    "check": {
-      "type": "maqqef_after",
-      "ref": "Gen 7:6",
-      "idx": 2,
-      "expect": 0
-    }
-  },
-  {
-    "id": "G17-07",
-    "source": "Minchat Shai on Gen 7:11",
-    "ref": "Gen 7:11",
-    "claim_en": "בשנת שש מאות שנה (\"in the six-hundredth year,\" the date formula) — here שש WITH maqqef and no lengthening mark: the same number, joined when it dates the flood and free when it ages the man — Minchat Shai notes both pointings five verses apart. SNAPSHOT: maqqef after שש.",
-    "check": {
-      "type": "maqqef_after",
-      "ref": "Gen 7:11",
-      "idx": 1,
-      "expect": 1
-    }
-  },
-  {
-    "id": "G17-08",
-    "source": "Minchat Shai on Gen 7:11",
-    "ref": "Gen 7:11",
-    "claim_en": "בחדש השני (\"in the second month\") — zaqef qatan (\"small upright\" pause accent) on the nun. SNAPSHOT agrees.",
-    "check": {
-      "type": "mark",
-      "ref": "Gen 7:11",
-      "idx": 7,
-      "expect_mark": "zaqef_qatan"
-    }
-  },
-  {
-    "id": "G17-09",
-    "source": "Minchat Shai on Gen 7:12",
-    "ref": "Gen 7:12",
-    "claim_en": "ויהי הגשם על הארץ (\"and the rain was upon the earth\") — על joined by maqqef (joining hyphen). SNAPSHOT agrees.",
-    "check": {
-      "type": "maqqef_after",
-      "ref": "Gen 7:12",
-      "idx": 2,
-      "expect": 1
-    }
-  },
-  {
-    "id": "G17-10",
-    "source": "Bereshit Rabbah 32:4; Pesachim 3a:10; Bava Batra 123a:14; Vayikra Rabbah 26:1",
-    "claim_en": "A LAW OF CLEAN SPEECH READ OFF A CIRCUMLOCUTION IN OUR OWN INK. Where a single word טְמֵאָה (temeah, 'impure') was available, our 7:2 writes אֲשֶׁר לֹא טְהֹרָה ('which is NOT pure') and our 7:8 writes אֲשֶׁר אֵינֶנָּה טְהֹרָה ('which is not pure') - both verified in the ink at derivation. From this the rule: a person should never let a coarse word leave his mouth, since Scripture spent extra letters to avoid one even about a non-kosher animal, and all the more so about the righteous. The seats give the cost differently - one counting eight extra letters at 7:8, another two or three extra WORDS at 7:2 - and the accounting variance is carried rather than harmonised.",
-    "check": {
-      "type": "manual",
-      "note": "The circumlocution itself is verified in the ink at both verses; the extra-letter arithmetic is the chain's own and is counted differently at two seats, so both accountings are recorded rather than one asserted."
-    }
-  },
-  {
-    "id": "G17-11",
-    "source": "Bereshit Rabbah 33:7; Mishnah Eduyot 2:10; Bereshit Rabbah 32:6",
-    "claim_en": "THE FLOOD IS WORKED AS A TWELVE-MONTH CALENDAR TO THE DAY, and the ruling that it lasted twelve months is a canonical case-table row - the first of the five twelve-month judgments. The chain reconstructs the schedule from our date-formulas: forty days of rain, a hundred and fifty of swell, the ark resting on the seventeenth, recession at one cubit per four days - from which the ARK'S DRAFT is computed at eleven cubits. Whether the flood year counts in the man's age is disputed, and one seat excludes it from his count while including it in calendrical reckoning.",
-    "check": {
-      "type": "manual",
-      "note": "A calendar reconstructed from the unit's own date operators, yielding a computed draft; the year-counting question disputed."
-    }
-  },
-  {
-    "id": "G17-12",
-    "source": "Rosh Hashanah 11b:6; Jerusalem Talmud Taanit 1:3:2",
-    "claim_en": "THE FLOOD'S START DATE IS DISPUTED BECAUSE THE YEAR'S START IS DISPUTED. Our 7:11 dates the breach to 'the SECOND month', and the ordinal resolves differently depending on whether the year begins in Nisan or in Tishrei: R. Eliezer's reckoning gives Marcheshvan, R. Yehoshua's gives Iyar. Both are tied to the setting of the Pleiades, and R. Yehoshua reads God as having removed two stars from that constellation to open the flood. The rainfall-season law is anchored to the same date.",
-    "check": {
-      "type": "manual",
-      "note": "An ordinal date operator whose referent depends on an unresolved calendar dispute, with a standing rainfall law hooked to it."
-    }
-  },
-  {
-    "id": "G17-13",
-    "source": "Jerusalem Talmud Moed Katan 3:5:14; Sanhedrin 108b:4; Tosefta Sotah (Lieberman) 10:3",
-    "claim_en": "THE SEVEN DAYS OF OUR 7:10 ARE READ AS MOURNING, AND A LAW FOLLOWS. The delay is explained as the seven days of mourning for Methuselah the righteous, whose merit DELAYED the punishment - the righteous suspending wrath in life and in death - or as God keeping seven days of mourning for His world before destroying it. From the latter the allowance of mourning BEFORE a death is noted as unique to the One who knows the future.",
-    "check": {
-      "type": "manual",
-      "note": "A delay operator read as a mourning period, grounding a rule about the timing of mourning."
-    }
-  },
-  {
-    "id": "G17-14",
-    "source": "Mekhilta DeRabbi Yishmael, Tractate Shirah 2:5",
-    "claim_en": "MEASURE FOR MEASURE ARGUED ON A SHARED LEXEME. They set their EYES on what was forbidden, and He opened the WELLSPRINGS above and below - the two words sharing a root, so the punishment is read as spelled out of the crime's own vocabulary. Our 7:11 is the verse the argument runs on.",
-    "check": {
-      "type": "manual",
-      "note": "A measure-for-measure argument built on a shared root between the crime's word and the punishment's."
-    }
-  },
-  {
-    "id": "G17-15",
-    "source": "Bereshit Rabbah 33:4",
-    "claim_en": "AN INK-DIFF BETWEEN OPENING AND CLOSING LEAVES AN EXCEPTION CLASS STANDING. Our 7:11 breaches ALL the wellsprings of the great deep; but 8:2 dams 'the wellsprings' WITHOUT the word all. R. Elazar reads the missing quantifier as leaving some open - and names them: the hot springs of Tiberias, of Chamat Gader, and the cave of Banyas. A quantifier present at the open and absent at the close is read as a permanent physical remainder in the world.",
-    "check": {
-      "type": "manual",
-      "note": "A quantifier present in the opening operator and absent in its closing counterpart, read as leaving a standing exception in the world."
-    }
-  },
-  {
-    "id": "G17-16",
-    "source": "Yoma 76a:6; Yoma 76a:10; Mekhilta DeRabbi Yishmael, Tractate Vayassa 4:17",
-    "middah": "E7",
-    "claim_en": "TWO OF OUR NUMBERS ARE SEQUENCED INTO ONE HYDRAULIC MODEL, AND THEN USED TO MEASURE A LATER MIRACLE. The waters of the deep are read as rising LEVEL with the mountains first, and only then the fifteen cubits of 7:20 above them - the two verses resolved into one sequence rather than a contradiction. On the same numbers R. Elazar HaModai argues the height of the manna by verbal analogy on the opening-word shared between our 7:11 and Psalms 78:23, reasoning that if the measure of punishment reached this far the measure of good reaches further.",
-    "check": {
-      "type": "manual",
-      "note": "Two numeric operators sequenced into one physical model, then used as the base of a light-and-heavy argument licensed by a verbal analogy (middah E7). | SEATED (2026-08-31, owner: seat the two claims): WITNESS_READ on STEP_Gn_7_11 at rev 5."
-    }
-  },
-  {
-    "id": "G17-17",
-    "source": "Bereshit Rabbah 34:4; Bereshit Rabbah 34:6; Bereshit Rabbah 34:1",
-    "claim_en": "THE PERMISSION DISCIPLINE IS READ AS A FOUR-VERSE MACHINE. He entered by leave and therefore exits only by leave: the entry command and its compliance, then the exit command and its compliance, form a closed obedience loop across two units. He is read as REFUSING to exit and resume procreation until given an oath that no second flood will come. And the shutting-in of our 7:16 is read through the psalm's 'release me from confinement' - twelve months shut in.",
-    "check": {
-      "type": "manual",
-      "note": "A four-verse permission loop spanning two units, with a refusal-until-oath recorded on the exit side."
-    }
+ {
+  "id": "G17-01",
+  "source": "Minchat Shai on Gen 7:2 (Ramah; corrected Masorah)",
+  "ref": "Gen 7:2",
+  "claim_en": "הטהורה (\"the pure one,\" with the article) — the Ramah: plene with vav exactly TWICE in the Torah, \"both verse-openings\" — the boarding commands 7:2 and 7:8; every other pure-form defective (Minchat Shai calls our printed Masorah here \"words of error\"). SNAPSHOT holds THREE plene tokens: the Ramah's verse-initial pair AND 8:20 (the altar verse) — the third is a deviation from his rule, banked as a discrepancy for the gen_20 audit. (The pure LAMPSTAND's tokens and Lev 20:25, same pronunciation, are all defective — consistent with the rule.)",
+  "check": {
+   "type": "spelling_variants",
+   "where": {
+    "translit": "ha-tehora"
+   },
+   "pattern_full": "טהורה",
+   "expect_full_refs": [
+    "Gen 7:2",
+    "Gen 7:8",
+    "Gen 8:20"
+   ]
   }
+ },
+ {
+  "id": "G17-02",
+  "source": "Minchat Shai on Gen 7:8 (Pesachim 3a; Bereshit Rabbah 32)",
+  "ref": "Gen 7:8",
+  "claim_en": "DISCREPANCY OBSERVATION, the tradition's own — the Talmud: \"the verse BENT EIGHT LETTERS rather than utter an ugly word\" (אשר איננה טהרה, \"which is not pure,\" for הטמאה, \"the impure\"). Minchat Shai's challenge: טהרה here is written DEFECTIVE (four letters), so the detour is SEVEN letters, not eight — and he resolves it by Bereshit Rabbah's version, which counts WORDS (\"two and three words\"), not letters. SNAPSHOT sides with his arithmetic: the defective spelling locked.",
+  "check": {
+   "type": "letters_multiset",
+   "ref": "Gen 7:8",
+   "idx": 7,
+   "equals_letters_of": "טהרה"
+  }
+ },
+ {
+  "id": "G17-03",
+  "source": "Minchat Shai on Gen 7:11 (Hilleli vs Yerushalmi; Ramah; Or Torah)",
+  "ref": "Gen 7:11",
+  "claim_en": "DISCREPANCY OBSERVATION — מעינות (\"fountains\"): \"a great dispute on this word.\" The Hilleli codex, the Ramah, and Or Torah rule 7:11 PLENE — \"full when the fountains were full\" — and 8:2's closing token defective, \"drained when they drained\": the spelling-homily rides the ruling. SNAPSHOT writes BOTH tokens defective (מעינת) — the Yerushalmi camp — against the Ramah's ruling and its homily. Both camps recorded; the check locks zero plene tokens.",
+  "check": {
+   "type": "spelling_variants",
+   "where": {
+    "translit": "maynot"
+   },
+   "pattern_full": "מעינות",
+   "expect_full_refs": []
+  }
+ },
+ {
+  "id": "G17-04",
+  "source": "Kitzur Baal HaTurim on Gen 7:4 (Masorah)",
+  "ref": "Gen 7:4",
+  "claim_en": "היקום (\"the standing-substance\") — the Kitzur's Masorah trio, all THREE in the Torah: \"and I will wipe out all the standing\" (7:4), \"and He wiped out all the standing\" (7:23), \"and all the standing at their feet\" (Deut 11:6 — Korach's household): \"as the flood generation sinned from too much good, so Korach from his wealth.\" SNAPSHOT: exactly three tokens.",
+  "check": {
+   "type": "token_count",
+   "where": {
+    "translit": "ha-yequm"
+   },
+   "expect_total": 3,
+   "expect_refs": [
+    "Gen 7:4",
+    "Gen 7:23",
+    "Deut 11:6"
+   ]
+  }
+ },
+ {
+  "id": "G17-05",
+  "source": "Kitzur Baal HaTurim on Gen 7:16 (Masorah)",
+  "ref": "Gen 7:16",
+  "scope": "scripture",
+  "claim_en": "והבאים (\"and those coming\") — the Kitzur's Masorah pair spans out of the Torah: the boarding animals (7:16) and \"those who came with Zerubbabel\" (the return list): \"as here they came OF THEMSELVES, so there they went up of themselves.\" Torah-side: this is the word's only token — and the pair is an inheritance edge (Torah → Writings) of exactly the class the edge layer records.",
+  "check": {
+   "type": "token_count",
+   "where": {
+    "translit": "ve-ha-baim"
+   },
+   "expect_total": 1,
+   "expect_refs": [
+    "Gen 7:16"
+   ]
+  }
+ },
+ {
+  "id": "G17-06",
+  "source": "Minchat Shai on Gen 7:6",
+  "ref": "Gen 7:6",
+  "claim_en": "ונח בן שש מאות שנה (\"and Noah was six hundred years old\") — שש with its own accent and NO maqqef (joining hyphen): Noah's age stands unjoined. SNAPSHOT: no maqqef after שש.",
+  "check": {
+   "type": "maqqef_after",
+   "ref": "Gen 7:6",
+   "idx": 2,
+   "expect": 0
+  }
+ },
+ {
+  "id": "G17-07",
+  "source": "Minchat Shai on Gen 7:11",
+  "ref": "Gen 7:11",
+  "claim_en": "בשנת שש מאות שנה (\"in the six-hundredth year,\" the date formula) — here שש WITH maqqef and no lengthening mark: the same number, joined when it dates the flood and free when it ages the man — Minchat Shai notes both pointings five verses apart. SNAPSHOT: maqqef after שש.",
+  "check": {
+   "type": "maqqef_after",
+   "ref": "Gen 7:11",
+   "idx": 1,
+   "expect": 1
+  }
+ },
+ {
+  "id": "G17-08",
+  "source": "Minchat Shai on Gen 7:11",
+  "ref": "Gen 7:11",
+  "claim_en": "בחדש השני (\"in the second month\") — zaqef qatan (\"small upright\" pause accent) on the nun. SNAPSHOT agrees.",
+  "check": {
+   "type": "mark",
+   "ref": "Gen 7:11",
+   "idx": 7,
+   "expect_mark": "zaqef_qatan"
+  }
+ },
+ {
+  "id": "G17-09",
+  "source": "Minchat Shai on Gen 7:12",
+  "ref": "Gen 7:12",
+  "claim_en": "ויהי הגשם על הארץ (\"and the rain was upon the earth\") — על joined by maqqef (joining hyphen). SNAPSHOT agrees.",
+  "check": {
+   "type": "maqqef_after",
+   "ref": "Gen 7:12",
+   "idx": 2,
+   "expect": 1
+  }
+ },
+ {
+  "id": "G17-10",
+  "source": "Bereshit Rabbah 32:4; Pesachim 3a:10; Bava Batra 123a:14; Vayikra Rabbah 26:1",
+  "claim_en": "A LAW OF CLEAN SPEECH READ OFF A CIRCUMLOCUTION IN OUR OWN INK. Where a single word טְמֵאָה (temeah, 'impure') was available, our 7:2 writes אֲשֶׁר לֹא טְהֹרָה ('which is NOT pure') and our 7:8 writes אֲשֶׁר אֵינֶנָּה טְהֹרָה ('which is not pure') - both verified in the ink at derivation. From this the rule: a person should never let a coarse word leave his mouth, since Scripture spent extra letters to avoid one even about a non-kosher animal, and all the more so about the righteous. The seats give the cost differently - one counting eight extra letters at 7:8, another two or three extra WORDS at 7:2 - and the accounting variance is carried rather than harmonised.",
+  "check": {
+   "type": "manual",
+   "note": "The circumlocution itself is verified in the ink at both verses; the extra-letter arithmetic is the chain's own and is counted differently at two seats, so both accountings are recorded rather than one asserted."
+  }
+ },
+ {
+  "id": "G17-11",
+  "source": "Bereshit Rabbah 33:7; Mishnah Eduyot 2:10; Bereshit Rabbah 32:6",
+  "claim_en": "THE FLOOD IS WORKED AS A TWELVE-MONTH CALENDAR TO THE DAY, and the ruling that it lasted twelve months is a canonical case-table row - the first of the five twelve-month judgments. The chain reconstructs the schedule from our date-formulas: forty days of rain, a hundred and fifty of swell, the ark resting on the seventeenth, recession at one cubit per four days - from which the ARK'S DRAFT is computed at eleven cubits. Whether the flood year counts in the man's age is disputed, and one seat excludes it from his count while including it in calendrical reckoning.",
+  "check": {
+   "type": "manual",
+   "note": "A calendar reconstructed from the unit's own date operators, yielding a computed draft; the year-counting question disputed."
+  }
+ },
+ {
+  "id": "G17-12",
+  "source": "Rosh Hashanah 11b:6; Jerusalem Talmud Taanit 1:3:2",
+  "claim_en": "THE FLOOD'S START DATE IS DISPUTED BECAUSE THE YEAR'S START IS DISPUTED. Our 7:11 dates the breach to 'the SECOND month', and the ordinal resolves differently depending on whether the year begins in Nisan or in Tishrei: R. Eliezer's reckoning gives Marcheshvan, R. Yehoshua's gives Iyar. Both are tied to the setting of the Pleiades, and R. Yehoshua reads God as having removed two stars from that constellation to open the flood. The rainfall-season law is anchored to the same date.",
+  "check": {
+   "type": "manual",
+   "note": "An ordinal date operator whose referent depends on an unresolved calendar dispute, with a standing rainfall law hooked to it."
+  }
+ },
+ {
+  "id": "G17-13",
+  "source": "Jerusalem Talmud Moed Katan 3:5:14; Sanhedrin 108b:4; Tosefta Sotah (Lieberman) 10:3",
+  "claim_en": "THE SEVEN DAYS OF OUR 7:10 ARE READ AS MOURNING, AND A LAW FOLLOWS. The delay is explained as the seven days of mourning for Methuselah the righteous, whose merit DELAYED the punishment - the righteous suspending wrath in life and in death - or as God keeping seven days of mourning for His world before destroying it. From the latter the allowance of mourning BEFORE a death is noted as unique to the One who knows the future.",
+  "check": {
+   "type": "manual",
+   "note": "A delay operator read as a mourning period, grounding a rule about the timing of mourning."
+  }
+ },
+ {
+  "id": "G17-14",
+  "source": "Mekhilta DeRabbi Yishmael, Tractate Shirah 2:5",
+  "claim_en": "MEASURE FOR MEASURE ARGUED ON A SHARED LEXEME. They set their EYES on what was forbidden, and He opened the WELLSPRINGS above and below - the two words sharing a root, so the punishment is read as spelled out of the crime's own vocabulary. Our 7:11 is the verse the argument runs on.",
+  "check": {
+   "type": "manual",
+   "note": "A measure-for-measure argument built on a shared root between the crime's word and the punishment's."
+  }
+ },
+ {
+  "id": "G17-15",
+  "source": "Bereshit Rabbah 33:4",
+  "claim_en": "AN INK-DIFF BETWEEN OPENING AND CLOSING LEAVES AN EXCEPTION CLASS STANDING. Our 7:11 breaches ALL the wellsprings of the great deep; but 8:2 dams 'the wellsprings' WITHOUT the word all. R. Elazar reads the missing quantifier as leaving some open - and names them: the hot springs of Tiberias, of Chamat Gader, and the cave of Banyas. A quantifier present at the open and absent at the close is read as a permanent physical remainder in the world.",
+  "check": {
+   "type": "manual",
+   "note": "A quantifier present in the opening operator and absent in its closing counterpart, read as leaving a standing exception in the world."
+  }
+ },
+ {
+  "id": "G17-16",
+  "source": "Yoma 76a:6; Yoma 76a:10; Mekhilta DeRabbi Yishmael, Tractate Vayassa 4:17",
+  "middah": "E7",
+  "claim_en": "TWO OF OUR NUMBERS ARE SEQUENCED INTO ONE HYDRAULIC MODEL, AND THEN USED TO MEASURE A LATER MIRACLE. The waters of the deep are read as rising LEVEL with the mountains first, and only then the fifteen cubits of 7:20 above them - the two verses resolved into one sequence rather than a contradiction. On the same numbers R. Elazar HaModai argues the height of the manna by verbal analogy on the opening-word shared between our 7:11 and Psalms 78:23, reasoning that if the measure of punishment reached this far the measure of good reaches further.",
+  "check": {
+   "type": "manual",
+   "note": "Two numeric operators sequenced into one physical model, then used as the base of a light-and-heavy argument licensed by a verbal analogy (middah E7). | SEATED (2026-08-31, owner: seat the two claims): WITNESS_READ on STEP_Gn_7_11 at rev 5."
+  }
+ },
+ {
+  "id": "G17-17",
+  "source": "Bereshit Rabbah 34:4; Bereshit Rabbah 34:6; Bereshit Rabbah 34:1",
+  "claim_en": "THE PERMISSION DISCIPLINE IS READ AS A FOUR-VERSE MACHINE. He entered by leave and therefore exits only by leave: the entry command and its compliance, then the exit command and its compliance, form a closed obedience loop across two units. He is read as REFUSING to exit and resume procreation until given an oath that no second flood will come. And the shutting-in of our 7:16 is read through the psalm's 'release me from confinement' - twelve months shut in.",
+  "check": {
+   "type": "manual",
+   "note": "A four-verse permission loop spanning two units, with a refusal-until-oath recorded on the exit side."
+  }
+ },
+ {
+  "id": "G17-18",
+  "source": "Chullin 139b:18-20",
+  "ref": "Gen 7:14",
+  "claim_en": "THE BIRD-WING TOKENS. The boarding roster's every-bird-every-wing pair serves the pure-bird sugya as its class test — tzippor the pure, kanaf the winged — alongside the Psalms and Ezekiel probes. Filed F-159, auto-seated (round 37, the table-and-knife block)."
+ },
+ {
+  "id": "G17-19",
+  "source": "Zevachim 116a:10-11",
+  "ref": "Gen 7:16",
+  "claim_en": "THE SELF-PRESENTING ANIMALS. How Noah knew the clean: those that CAME — of themselves — with the ark-acceptance arm beside: the boarding verb as the selection protocol. Filed F-166, auto-seated (round 38, the altar-before-Sinai block)."
+ },
+ {
+  "id": "G17-21",
+  "source": "Eruvin 18b:13-14",
+  "ref": "Gen 7:1 (with 6:9)",
+  "claim_en": "PRAISE'S PRESENCE RULE. Part of a man's praise to his face, all of it away — derived from the delta between the narrator's PERFECT and the address's bare RIGHTEOUS. Filed F-182, auto-seated (round 40, the conduct block)."
+ }
 ]

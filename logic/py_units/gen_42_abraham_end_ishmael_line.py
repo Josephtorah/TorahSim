@@ -87,6 +87,10 @@ m.witness_read("all_that_he_had", "four_way_dispute_resolved_by_deferral",
 # gift_plus_severance — read, not installed
 m.witness_read("gift_plus_severance", "argued_as_property_law_in_a_tribunal",
                 cites=["Bereshit Rabbah 61:7"])
+# witness-tier presupposed read: lifetime_deeds on va_yiten_avraham — read,
+# not installed
+m.witness_read("va_yiten_avraham", "lifetime_deeds",
+                cites=["Sanhedrin 91a:15", "Sanhedrin 91a:16", "Sanhedrin 91a:17"])
 
 # -------------------------- Gen.25.6 · THE_PILEGESH_GIFTS_AND_SEND_EAST ----
 # וְלִבְנֵ֤י הַפִּֽילַגְשִׁים֙ אֲשֶׁ֣ר לְאַבְרָהָ֔ם נָתַ֥ן אַבְרָהָ֖ם
@@ -280,7 +284,7 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['after_the_death_formula']
     assert m.WORLD["witnessed"]['after_the_death_formula']["cites"] == ['Bereshit Rabbah 62:3']
     assert all('regression_rule_with_an_ink_guard' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('remarriage_in_old_age', 'evening_sowing_of_a_four_way_proverb'), ('ketura_identified_as_hagar', 'ink_leg_recorded_but_not_applied'), ('three_names', 'declared_shelf_splitting_three_ways_by_name'), ('all_that_he_had', 'four_way_dispute_resolved_by_deferral'), ('gift_plus_severance', 'argued_as_property_law_in_a_tribunal'), ('isaac_named_before_ishmael', 'order_read_as_repentance_evidence'), ('and_sarah_his_wife', 'kindness_receipted_after_thirty_eight_years'), ('ninth_sons_of_chet_mention', 'one_conveyance_counted_across_three_blocks'), ('God_blessed_isaac', 'deferred_blessing_discharged_in_this_block'), ('one_hundred_thirty_seven', 'genealogy_number_used_to_date_another_block'), ('he_fell_before_his_brethren', 'polarity_completed_and_then_flattened')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('remarriage_in_old_age', 'evening_sowing_of_a_four_way_proverb'), ('ketura_identified_as_hagar', 'ink_leg_recorded_but_not_applied'), ('three_names', 'declared_shelf_splitting_three_ways_by_name'), ('all_that_he_had', 'four_way_dispute_resolved_by_deferral'), ('gift_plus_severance', 'argued_as_property_law_in_a_tribunal'), ('va_yiten_avraham', 'lifetime_deeds'), ('isaac_named_before_ishmael', 'order_read_as_repentance_evidence'), ('and_sarah_his_wife', 'kindness_receipted_after_thirty_eight_years'), ('ninth_sons_of_chet_mention', 'one_conveyance_counted_across_three_blocks'), ('God_blessed_isaac', 'deferred_blessing_discharged_in_this_block'), ('one_hundred_thirty_seven', 'genealogy_number_used_to_date_another_block'), ('he_fell_before_his_brethren', 'polarity_completed_and_then_flattened')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 61:3']
     assert all('evening_sowing_of_a_four_way_proverb' not in f for f in m.WORLD["facts"])
     assert 'remarriage_in_old_age' not in m.WORLD["witnessed"]
@@ -296,22 +300,25 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 61:7']
     assert all('argued_as_property_law_in_a_tribunal' not in f for f in m.WORLD["facts"])
     assert 'gift_plus_severance' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 62:2']
+    assert m.WITNESS_READS[5]["cites"] == ['Sanhedrin 91a:15', 'Sanhedrin 91a:16', 'Sanhedrin 91a:17']
+    assert all('lifetime_deeds' not in f for f in m.WORLD["facts"])
+    assert 'va_yiten_avraham' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 62:2']
     assert all('order_read_as_repentance_evidence' not in f for f in m.WORLD["facts"])
     assert 'isaac_named_before_ishmael' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 62:2', 'Bereshit Rabbah 58:4']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 62:2', 'Bereshit Rabbah 58:4']
     assert all('kindness_receipted_after_thirty_eight_years' not in f for f in m.WORLD["facts"])
     assert 'and_sarah_his_wife' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 58:8']
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 58:8']
     assert all('one_conveyance_counted_across_three_blocks' not in f for f in m.WORLD["facts"])
     assert 'ninth_sons_of_chet_mention' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 61:6']
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 61:6']
     assert all('deferred_blessing_discharged_in_this_block' not in f for f in m.WORLD["facts"])
     assert 'God_blessed_isaac' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 62:4', 'Megillah 17a']
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 62:4', 'Megillah 17a']
     assert all('genealogy_number_used_to_date_another_block' not in f for f in m.WORLD["facts"])
     assert 'one_hundred_thirty_seven' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 45:9', 'Onkelos Genesis 25:18']
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 45:9', 'Onkelos Genesis 25:18']
     assert all('polarity_completed_and_then_flattened' not in f for f in m.WORLD["facts"])
     assert 'he_fell_before_his_brethren' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

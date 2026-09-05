@@ -66,6 +66,10 @@ m.event("strike", agent="kedarlaomer_ve_ha_melakhim", themes=["refaim_zuzim_emim
 # reads without prior install (flag, not fix): ashterot-qarnayim, ham,
 # shaveh-qiryatayim, har-seir, to-paran, en-mishpat-qadesh, chatzetzon-tamar
 m.presupposed("ashterot_qarnayim", "ham", "shaveh_qiryatayim", "har_seir", "el_paran", "en_mishpat_qadesh", "chatzetzon_tamar")
+# witness-tier presupposed read: layout_law on kedor_laomer — read, not
+# installed
+m.witness_read("kedor_laomer", "layout_law",
+                cites=["Chullin 65a:1", "Chullin 65a:2", "Chullin 65a:3"])
 
 # -------------------------- Gen.14.8 · THE_BATTLE_THE_PITS_THE_PLUNDER -----
 # וַיֵּצֵא מֶלֶךְ־סְדֹם … וַיַּעַרְכוּ אִתָּם מִלְחָמָה בְּעֵמֶק הַשִּׂדִּים
@@ -225,6 +229,10 @@ m.event("bring_out", agent="malki_tzedeq", themes=["lechem_va_yayin"])
 m.fact("ve_hu_khohen_le_el_elyon")
 # reads without prior install (flag, not fix): Salem
 m.presupposed("shalem")
+# witness-tier presupposed read: priesthood_transfer on
+# ve_hu_khohen_le_el_elyon — read, not installed
+m.witness_read("ve_hu_khohen_le_el_elyon", "priesthood_transfer",
+                cites=["Nedarim 32b:5", "Nedarim 32b:6", "Nedarim 32b:7", "Nedarim 32b:8"])
 
 # -------------------------- Gen.14.19 · THE_BLESSING_OF_ABRAM --------------
 # וַיְבָרְכֵהוּ וַיֹּאמַר בָּרוּךְ אַבְרָם לְאֵל עֶלְיוֹן קֹנֵה שָׁמַיִם
@@ -325,6 +333,10 @@ m.fact("biladai_raq_asher_akhlu_ha_nearim")
 # take(Aner-Eshcol-Mamre, chelqam)
 m.declare("avram", "LET",
           "yiqchu(aner_eshkol_mamre, chelqam)")
+# witness-tier presupposed read: consumed_robbery on asher_akhlu_ha_nearim —
+# read, not installed
+m.witness_read("asher_akhlu_ha_nearim", "consumed_robbery",
+                cites=["Chullin 89a:3", "Chullin 89a:4", "Chullin 89a:5"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -342,23 +354,32 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 25
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('written_hu_at_14_3', 'member_of_the_three_scrolls_census'), ('four_kings_roster', 'type_of_the_four_kingdoms'), ('three_hundred_eighteen', 'name_value_read_as_one_man'), ('divided_night', 'bound_to_the_exodus_midnight'), ('blessing_word_order', 'priesthood_transferred'), ('raised_hand', 'three_parses_and_the_first_tithe')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('written_hu_at_14_3', 'member_of_the_three_scrolls_census'), ('kedor_laomer', 'layout_law'), ('four_kings_roster', 'type_of_the_four_kingdoms'), ('three_hundred_eighteen', 'name_value_read_as_one_man'), ('divided_night', 'bound_to_the_exodus_midnight'), ('ve_hu_khohen_le_el_elyon', 'priesthood_transfer'), ('blessing_word_order', 'priesthood_transferred'), ('raised_hand', 'three_parses_and_the_first_tithe'), ('asher_akhlu_ha_nearim', 'consumed_robbery')]
     assert m.WITNESS_READS[0]["cites"] == ['Jerusalem Talmud Taanit 4:2:12']
     assert all('member_of_the_three_scrolls_census' not in f for f in m.WORLD["facts"])
     assert 'written_hu_at_14_3' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 42:2', 'Bereshit Rabbah 42:8', 'Niddah 61a:20', 'Pirkei Avot 6:10']
+    assert m.WITNESS_READS[1]["cites"] == ['Chullin 65a:1', 'Chullin 65a:2', 'Chullin 65a:3']
+    assert all('layout_law' not in f for f in m.WORLD["facts"])
+    assert 'kedor_laomer' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 42:2', 'Bereshit Rabbah 42:8', 'Niddah 61a:20', 'Pirkei Avot 6:10']
     assert all('type_of_the_four_kingdoms' not in f for f in m.WORLD["facts"])
     assert 'four_kings_roster' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 44:9', 'Bereshit Rabbah 43:2']
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 44:9', 'Bereshit Rabbah 43:2']
     assert all('name_value_read_as_one_man' not in f for f in m.WORLD["facts"])
     assert 'three_hundred_eighteen' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Mekhilta DeRabbi Yishmael, Tractate Pischa 13:3', 'Bereshit Rabbah 43:3']
+    assert m.WITNESS_READS[4]["cites"] == ['Mekhilta DeRabbi Yishmael, Tractate Pischa 13:3', 'Bereshit Rabbah 43:3']
     assert all('bound_to_the_exodus_midnight' not in f for f in m.WORLD["facts"])
     assert 'divided_night' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Vayikra Rabbah 25:6', 'Bereshit Rabbah 43:7', 'Bereshit Rabbah 56:10']
+    assert m.WITNESS_READS[5]["cites"] == ['Nedarim 32b:5', 'Nedarim 32b:6', 'Nedarim 32b:7', 'Nedarim 32b:8']
+    assert all('priesthood_transfer' not in f for f in m.WORLD["facts"])
+    assert 've_hu_khohen_le_el_elyon' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Vayikra Rabbah 25:6', 'Bereshit Rabbah 43:7', 'Bereshit Rabbah 56:10']
     assert all('priesthood_transferred' not in f for f in m.WORLD["facts"])
     assert 'blessing_word_order' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 43:9', 'Pesikta DeRav Kahana 10:6', 'Sifrei Devarim 33:4', 'Sotah 17a:21']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 43:9', 'Pesikta DeRav Kahana 10:6', 'Sifrei Devarim 33:4', 'Sotah 17a:21']
     assert all('three_parses_and_the_first_tithe' not in f for f in m.WORLD["facts"])
     assert 'raised_hand' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Chullin 89a:3', 'Chullin 89a:4', 'Chullin 89a:5']
+    assert all('consumed_robbery' not in f for f in m.WORLD["facts"])
+    assert 'asher_akhlu_ha_nearim' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

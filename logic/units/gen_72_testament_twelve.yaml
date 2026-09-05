@@ -9,6 +9,9 @@ meta:
   id: "gen_72_testament_twelve"
   rev: 4
   changelog:
+    - "2026-09-04 rev +1: ROUND-38 TALMUD-BLOCK SEAT (the altar-before-Sinai block, Genesis 9 of 12; runner run_altar_presinai.py, 9/9 first run). One seat: G72-36 (F-162 — the altar's strip assigned by 49:27's wolf emblem; the foundationless southeast corner explained)."
+    - "2026-09-04 rev +1: ROUND-35 TALMUD-BLOCK SEAT (the courts block, Genesis 6 of 12; runner run_courts_gen.py, 10/10 first run). One seat: G72-35 (F-136 — 49:10's scepter read as the exilarchs' judging license, with the license geography and Rabbah bar Chana's case)."
+    - "2026-09-04 rev +1: ROUND-30 TALMUD-BLOCK SEAT (the prayer-book block; ledger logic/oral_triage/genesis_block_prayerbook_2026-09-04.md; runner run_prayerbook.py, 14/14). One seat under the auto-seat law: G72-34 (F-114 — the silent line's birth at 49:1's own gathering: the withheld end, the sons' Shema, Jacob's blessed-be-the-Name, and the sages' whisper enactment with the princess parable). Machine ops untouched below the witness tier."
     - "2026-08-31 rev 4 (exhaustive 13-block audit, owner's order): AUDIT FIX: manifest claim G72-29 (the written-and-read pair at Psalms 100:3, carried both ways) was extracted at Step 5 but never tagged in an operator; its content already rode in the three-commands operator citing Bereshit Rabbah 100:1, which now carries both IDs. No ops, cites, text, tree, or morphology changed."
     - "rev 3 (2026-08-30): logic rebuilt from the 2026-08-28 parashah-grain reading (82 of 82 declared, COMPLETE — the densest block of the walk, 6,024 sources enumerated and the only block where every fresh section came back material) under the spine default. Thirteen claims seated, two machine-checked. THE STRONGEST LITURGICAL CLAIM OF THE WALK lands here: the twice-daily recitation and its undertone line are sourced to this deathbed, the sons answering their father by name. THE SALE'S FURTHEST CONSEQUENCE also lands: eleven tribes disqualified from the sanctuary for their part in it, the site's title awarded to the one who was absent. Machine-checked: the pooling rule's proof, this chapter's serpent being Moses' blessing's lion cub, both in our ink; and the ox at 49:6, on the verse where THREE layers stand at once — our Hebrew, Onkelos, and a rival Greek rendering the chain preserves BY NAME as a deliberate emendation made for a king. And the block carries the largest translation-layer finding of the Genesis walk: ONKELOS CHANGES GENRE HERE, ceasing to translate and becoming an interpretive paraphrase for the length of one chapter — recorded so that no later reader weighs this chapter's translation as the same kind of witness as chapter forty-eight's."
     - "2026-08-28 rev 2: RE-era reading pass (parashat Miketz sweep, 4 blocks one sitting — SEVENTH RUN UNDER THE SPINE DEFAULT, owner 2026-08-27: Bereshit Rabbah + Onkelos declared, Mishnah/Talmud held for the Step 9 exam): ledger logic/oral_triage/gen_72_testament_twelve_2026-08-28.md; ORAL_reading_pass block appended; no machine ops changed."
@@ -595,6 +598,27 @@ boot_steps:
       shape: recorded dispute]
     cites: ["Bereshit Rabbah 98:2", "Bereshit Rabbah 99:5"]
     confidence: witnessed
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(va_yiqra_yaaqov_el_banav, silent_line_birth)"
+    en: >
+      THE SILENT LINE'S BIRTH AT THIS SCENE [claim G72-34]. The
+      round-30 prayer-book block seats the liturgy's whispered
+      sentence on this verse's own gathering. Jacob sought to
+      reveal the end and the Presence departed; he asked whether
+      his bed was flawed — like Abraham with Ishmael, like Isaac
+      with Esau; the sons answered SHEMA ('as your heart holds
+      only One, so ours hold only One'), and Jacob answered barukh
+      shem kevod malkhuto le-olam va-ed ('Blessed is the Name of
+      His glorious kingdom forever,' Pesachim 56a:7). The sages'
+      dilemma made law: say it — Moses did not say it; omit it —
+      Jacob said it; hitkinu she-yehu omrim oto ba-chashai ('they
+      instituted saying it SILENTLY'), with the princess who
+      smelled the gravy as the recorded parable (Pesachim 56a:8).
+      A liturgical institution whose full derivation is this
+      unit's own scene. Auto-seat law, F-114 (round 30, the
+      prayer-book block).
+    cites: ["Pesachim 56a:6", "Pesachim 56a:7", "Pesachim 56a:8"]
+    confidence: witnessed
   comment: >
     The testament convened; the end withheld.
   confidence: tested
@@ -994,6 +1018,21 @@ boot_steps:
       standing rule resting on a document rather than a verse. [folded
       shape: dual-track translation]
     cites: ["Onkelos Genesis 49:10", "Bereshit Rabbah 98:8"]
+    confidence: witnessed
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(lo_yasur_shevet, scepter_license)"
+    en: >
+      THE SCEPTER AS JUDGING LICENSE [claim G72-35]. The round-35 courts
+      block seats the authority law: lo yasur shevet mi-Yehuda ('the
+      SCEPTER shall not depart from Judah,' our 49:10) — the EXILARCHS
+      in Babylon who rule Israel with the staff; u-mechokek mi-bein
+      raglav ('and the lawgiver from between his feet') — the
+      descendants of Hillel who teach Torah publicly: the testament's
+      clause read as the license GEOGRAPHY of judicial authority (staff
+      here, lawgiver there; authority from here serves there), with
+      Rabbah bar Chana's license-in-hand case beside (Sanhedrin 5a:5-7).
+      Auto-seat law, F-136 (round 35, the courts block).
+    cites: ["Sanhedrin 5a:5", "Sanhedrin 5a:6", "Sanhedrin 5a:7"]
     confidence: witnessed
   comment: >
     The crux carried whole.
@@ -1714,6 +1753,20 @@ boot_steps:
       schedule out of the wolf's two feeding times. [folded shape: kept
       record]
     cites: ["Bereshit Rabbah 99:1", "Onkelos Genesis 49:27", "Bereshit Rabbah 99:3"]
+    confidence: witnessed
+  - op: WITNESS_READ
+    expr_en: "WITNESS-READ(binyamin_zeev, altar_strip)"
+    en: >
+      THE ALTAR'S STRIP ASSIGNED BY THE WOLF EMBLEM [claim G72-36]. The
+      round-38 altar block seats Temple geometry on this blessing: why
+      did the southeast corner have no foundation? — because it was not
+      in the portion of THE TORN ONE (Binyamin zeev yitraf, 'Benjamin, a
+      WOLF that tears,' our 49:27): the altar eats a cubit in Judah's
+      portion, and a STRIP went out of Judah's into Benjamin's —
+      righteous Benjamin grieving daily over it: the testament's animal
+      emblem assigning the altar's ground (Zevachim 53b:7-9). Auto-seat
+      law, F-162 (round 38, the altar-before-Sinai block).
+    cites: ["Zevachim 53b:7", "Zevachim 53b:8", "Zevachim 53b:9"]
     confidence: witnessed
   comment: >
     The seventh full Benjamin; the sun-and-moon arithmetic.

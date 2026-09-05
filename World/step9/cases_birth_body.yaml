@@ -1,0 +1,91 @@
+# BIRTH AND THE BODY (round 39 — Genesis exam block 10 of 12,
+# 2026-09-04). The pregnancy file, the nose-predicate pair, the
+# lineage ledger, the purity objects, the damages class, and four
+# standing credits.
+# Read-source: logic/oral_triage/genesis_block_birth_2026-09-04.md.
+
+- module: pregnancy_file
+  tractate: Niddah
+  oracle: Niddah 8b:16-18, 28a:8-10
+  exodus_anchor: {unit: gen_61_yehuda_tamar, ref: Gen.38.24 + 38.28,
+    claims: [G61-20]}
+  cases:
+  - id: Ni_months
+    input: {query: pregnancy_recognition}
+    expected: {verdict: three_months_by_tamar}
+    class: A
+  - id: Ni_hand
+    input: {query: returned_hand}
+    expected: {verdict: mother_birth_impure}
+    class: A
+
+- module: body_predicates
+  tractate: Bekhorot
+  oracle: Bekhorot 46b:1-3; Sotah 45b:16-18
+  exodus_anchor: {unit: gen_18_the_rise, ref: Gen.7.22,
+    claims: [G18-11]}
+  cases:
+  - id: Bk_nose
+    input: {query: nose_firstborn_law}
+    expected: {verdict: head_counts_by_nostril_breath}
+    class: A
+  - id: So_nose
+    input: {query: nose_corpse_law}
+    expected: {verdict: life_measured_at_the_nose}
+    class: A
+
+- module: lineage_ledger
+  tractate: Niddah
+  oracle: Niddah 31a:23-25
+  exodus_anchor: {unit: gen_69_descent_seventy, ref: Gen.46.15,
+    claims: [G69-31]}
+  cases:
+  - id: Ni_sex
+    input: {query: sex_determination_ledger}
+    expected: {verdict: males_hung_on_females}
+    class: A
+
+- module: purity_objects
+  tractate: Niddah
+  oracle: Niddah 70b:6-8
+  exodus_anchor: {unit: gen_35_sodom_overthrow_cave, ref: Gen.19.26,
+    claims: [G35-28]}
+  cases:
+  - id: Ni_pillar
+    input: {query: salt_pillar_purity}
+    expected: {verdict: pillar_does_not_defile}
+    class: A
+
+- module: damages_class
+  tractate: Bava Kamma
+  oracle: Bava Kamma 49a:4-6
+  exodus_anchor: {unit: gen_38_moriah_binding_oath, ref: Gen.22.5,
+    claims: [G38-43]}
+  cases:
+  - id: BK_fetus
+    input: {query: fetus_damages_class}
+    expected: {verdict: paid_as_animal_loss}
+    class: A
+
+- module: body_credits
+  tractate: Niddah
+  oracle: Niddah 22b:13; Niddah 25a:9; Bava Kamma 91b:8; Taanit 22b:11 (all standing)
+  exodus_anchor: {unit: gen_08 + gen_11 + gen_21, ref: Gen.2.7 + 3.21 + 9.5,
+    claims: [G08-25, G11-24, G21-10, G08-19]}
+  cases:
+  - id: Ni_form
+    input: {query: miscarriage_form_rule}
+    expected: {verdict: forming_forming_analogy}
+    class: A
+  - id: Ni_skin
+    input: {query: formed_skin_rule}
+    expected: {verdict: skin_only_for_the_formed}
+    class: A
+  - id: BK_self
+    input: {query: self_injury_ban}
+    expected: {verdict: forbidden_courts_split}
+    class: A
+  - id: Ta_afflict
+    input: {query: self_affliction_limit}
+    expected: {verdict: keep_the_soul_alive}
+    class: A

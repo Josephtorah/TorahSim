@@ -65,6 +65,10 @@ m.fact("achuzat_olam_le_zarakha")
 # an_assembly_of_nations — read, not installed
 m.witness_read("an_assembly_of_nations", "a_promise_quoted_back_and_cashed",
                 cites=["Bereshit Rabbah 82:4"])
+# witness-tier presupposed read: kahal_file on li_qehal_amim — read, not
+# installed
+m.witness_read("li_qehal_amim", "kahal_file",
+                cites=["Horayot 5b:14", "Horayot 5b:15", "Horayot 5b:16", "Horayot 6b:1", "Horayot 6b:2", "Horayot 6b:3", "Bava Batra 123a:9", "Bava Batra 123a:10", "Bava Batra 123a:11"])
 
 # -------------------------- Gen.48.5 · EPHRAIM_AND_MANASSEH_MINE -----------
 # וְעַתָּה שְׁנֵי־בָנֶיךָ הַנּוֹלָדִים לְךָ בְּאֶרֶץ מִצְרַיִם עַד־בֹּאִי
@@ -89,6 +93,10 @@ m.step("Gen.48.6")
 # call in-inheritance-them/their”) — fact holds: over-name-achehem-call-in-
 # nachalatam
 m.fact("al_shem_achehem_yiqaru_be_nachalatam")
+# witness-tier presupposed read: levirate_name_analogy on
+# al_shem_acheihem_be_nachalatam — read, not installed
+m.witness_read("al_shem_acheihem_be_nachalatam", "levirate_name_analogy",
+                cites=["Yevamot 24a:5", "Yevamot 24a:6", "Yevamot 24a:7"])
 
 # -------------------------- Gen.48.7 · RACHEL_ON_THE_ROAD ------------------
 # וַאֲנִי בְּבֹאִי מִפַּדָּן מֵתָה עָלַי רָחֵל בְּאֶרֶץ כְּנַעַן בַּדֶּרֶךְ
@@ -331,23 +339,29 @@ if __name__ == "__main__":
     assert all('which_way_the_dependence_runs' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['my_sword_and_my_bow']["cites"] == ['Onkelos Genesis 48:22', 'Bereshit Rabbah 99:7', 'Bereshit Rabbah 97:6']
     assert all('disarmed_by_both_members_independently' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('your_father_is_ill', 'the_suspicion_of_favouritism_at_the_deathbed'), ('an_assembly_of_nations', 'a_promise_quoted_back_and_cashed'), ('he_guided_his_hands', 'the_crossing_declared_deliberate_in_the_text'), ('the_angel_who_redeemed_me', 'an_angel_the_buffer_keeps'), ('i_know_my_son_i_know', 'the_refusal_carrying_what_the_father_knows'), ('god_will_be_with_you', 'the_word_as_support_at_its_second_seat')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('your_father_is_ill', 'the_suspicion_of_favouritism_at_the_deathbed'), ('an_assembly_of_nations', 'a_promise_quoted_back_and_cashed'), ('li_qehal_amim', 'kahal_file'), ('al_shem_acheihem_be_nachalatam', 'levirate_name_analogy'), ('he_guided_his_hands', 'the_crossing_declared_deliberate_in_the_text'), ('the_angel_who_redeemed_me', 'an_angel_the_buffer_keeps'), ('i_know_my_son_i_know', 'the_refusal_carrying_what_the_father_knows'), ('god_will_be_with_you', 'the_word_as_support_at_its_second_seat')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 97:1', 'Bereshit Rabbah 65:9']
     assert all('the_suspicion_of_favouritism_at_the_deathbed' not in f for f in m.WORLD["facts"])
     assert 'your_father_is_ill' not in m.WORLD["witnessed"]
     assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 82:4']
     assert all('a_promise_quoted_back_and_cashed' not in f for f in m.WORLD["facts"])
     assert 'an_assembly_of_nations' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Genesis 48:14']
+    assert m.WITNESS_READS[2]["cites"] == ['Horayot 5b:14', 'Horayot 5b:15', 'Horayot 5b:16', 'Horayot 6b:1', 'Horayot 6b:2', 'Horayot 6b:3', 'Bava Batra 123a:9', 'Bava Batra 123a:10', 'Bava Batra 123a:11']
+    assert all('kahal_file' not in f for f in m.WORLD["facts"])
+    assert 'li_qehal_amim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Yevamot 24a:5', 'Yevamot 24a:6', 'Yevamot 24a:7']
+    assert all('levirate_name_analogy' not in f for f in m.WORLD["facts"])
+    assert 'al_shem_acheihem_be_nachalatam' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Genesis 48:14']
     assert all('the_crossing_declared_deliberate_in_the_text' not in f for f in m.WORLD["facts"])
     assert 'he_guided_his_hands' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Genesis 48:16']
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Genesis 48:16']
     assert all('an_angel_the_buffer_keeps' not in f for f in m.WORLD["facts"])
     assert 'the_angel_who_redeemed_me' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 97:4']
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 97:4']
     assert all('the_refusal_carrying_what_the_father_knows' not in f for f in m.WORLD["facts"])
     assert 'i_know_my_son_i_know' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Genesis 48:21']
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Genesis 48:21']
     assert all('the_word_as_support_at_its_second_seat' not in f for f in m.WORLD["facts"])
     assert 'god_will_be_with_you' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

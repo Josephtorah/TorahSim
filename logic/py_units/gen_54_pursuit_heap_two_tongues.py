@@ -222,6 +222,10 @@ m.step("Gen.31.38")
 # ‹זֶה עֶשְׂרִים שָׁנָה אָנֹכִי עִמָּךְ› (“this twenty years with-you/your”)
 # — fact holds: twenty-years-not-miscarry(Jacob, cheshbon)
 m.fact("esrim_shana_lo_shikelu(yaaqov, cheshbon)")
+# witness-tier presupposed read: day_old_ram on ve_eilei_tzonkha — read, not
+# installed
+m.witness_read("ve_eilei_tzonkha", "day_old_ram",
+                cites=["Bava Kamma 65b:17", "Bava Kamma 65b:18", "Bava Kamma 65b:19"])
 
 # -------------------------- Gen.31.39 · THE_SHEPHERD_LAW_SEED --------------
 # טְרֵפָה לֹא־הֵבֵאתִי אֵלֶיךָ אָנֹכִי אֲחַטֶּנָּה מִיָּדִי תְּבַקְשֶׁנָּה
@@ -247,6 +251,10 @@ m.step("Gen.31.40")
 # me/my drought and-ice in-night”) — fact holds: drought-ice-nadad-
 # shena(Jacob, cheshbon)
 m.fact("chorev_qerach_nadad_shena(yaaqov, cheshbon)")
+# witness-tier presupposed read: keeper_ceiling on akhalani_chorev_va_kerach
+# — read, not installed
+m.witness_read("akhalani_chorev_va_kerach", "keeper_ceiling",
+                cites=["Bava Metzia 93b:2", "Bava Metzia 93b:3", "Bava Metzia 93b:4"])
 
 # -------------------------- Gen.31.41 · THE_TWENTY_YEARS_LEDGER ------------
 # זֶה־לִּי עֶשְׂרִים שָׁנָה בְּבֵיתֶךָ עֲבַדְתִּיךָ אַרְבַּע־עֶשְׂרֵה שָׁנָה
@@ -394,6 +402,10 @@ m.fact("im_teane_im_tiqach_oath_content(lavan)")
 # the_two_clauses — read, not installed
 m.witness_read("the_two_clauses", "family_law_partitioning_time",
                 cites=["Bereshit Rabbah 74:14"])
+# witness-tier presupposed read: affliction_token on im_teane_et_benotai —
+# read, not installed
+m.witness_read("im_teane_et_benotai", "affliction_token",
+                cites=["Yoma 77a:13", "Yoma 77a:14"])
 
 # -------------------------- Gen.31.51 · THE_CLAIMED_CASTER -----------------
 # וַיֹּאמֶר לָבָן לְיַעֲקֹב הִנֵּה הַגַּל הַזֶּה וְהִנֵּה הַמַצֵּבָה אֲשֶׁר
@@ -472,35 +484,44 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['labour']
     assert m.WORLD["witnessed"]['labour']["cites"] == ['Bereshit Rabbah 74:12']
     assert all('ranked_above_the_merit_of_the_fathers' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('a_word_came_by_night', 'prophecy_guard_stated_and_rendered_at_one_verse'), ('the_quarrel', 'audited_and_found_to_contain_appeasement'), ('the_shepherds_defence', 'refiled_under_the_bailment_statutes'), ('the_attribution', 'flagged_uncertain_by_the_transmitter'), ('my_daughters_doubled', 'all_four_mothers_one_house'), ('the_two_names', 'one_member_honouring_the_others_language'), ('the_watch_and_the_witness', 'both_routed_through_the_word'), ('the_two_clauses', 'family_law_partitioning_time'), ('the_boundary', 'carve_out_and_a_legal_afterlife_in_court'), ('the_oath_formula', 'graded_sacred_profane_and_both')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('a_word_came_by_night', 'prophecy_guard_stated_and_rendered_at_one_verse'), ('the_quarrel', 'audited_and_found_to_contain_appeasement'), ('ve_eilei_tzonkha', 'day_old_ram'), ('the_shepherds_defence', 'refiled_under_the_bailment_statutes'), ('akhalani_chorev_va_kerach', 'keeper_ceiling'), ('the_attribution', 'flagged_uncertain_by_the_transmitter'), ('my_daughters_doubled', 'all_four_mothers_one_house'), ('the_two_names', 'one_member_honouring_the_others_language'), ('the_watch_and_the_witness', 'both_routed_through_the_word'), ('the_two_clauses', 'family_law_partitioning_time'), ('im_teane_et_benotai', 'affliction_token'), ('the_boundary', 'carve_out_and_a_legal_afterlife_in_court'), ('the_oath_formula', 'graded_sacred_profane_and_both')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 74:7', 'Onkelos Genesis 31:24']
     assert all('prophecy_guard_stated_and_rendered_at_one_verse' not in f for f in m.WORLD["facts"])
     assert 'a_word_came_by_night' not in m.WORLD["witnessed"]
     assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 74:10']
     assert all('audited_and_found_to_contain_appeasement' not in f for f in m.WORLD["facts"])
     assert 'the_quarrel' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Genesis 31:39']
+    assert m.WITNESS_READS[2]["cites"] == ['Bava Kamma 65b:17', 'Bava Kamma 65b:18', 'Bava Kamma 65b:19']
+    assert all('day_old_ram' not in f for f in m.WORLD["facts"])
+    assert 've_eilei_tzonkha' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Genesis 31:39']
     assert all('refiled_under_the_bailment_statutes' not in f for f in m.WORLD["facts"])
     assert 'the_shepherds_defence' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 74:12']
+    assert m.WITNESS_READS[4]["cites"] == ['Bava Metzia 93b:2', 'Bava Metzia 93b:3', 'Bava Metzia 93b:4']
+    assert all('keeper_ceiling' not in f for f in m.WORLD["facts"])
+    assert 'akhalani_chorev_va_kerach' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 74:12']
     assert all('flagged_uncertain_by_the_transmitter' not in f for f in m.WORLD["facts"])
     assert 'the_attribution' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 74:13']
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 74:13']
     assert all('all_four_mothers_one_house' not in f for f in m.WORLD["facts"])
     assert 'my_daughters_doubled' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 74:14']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 74:14']
     assert all('one_member_honouring_the_others_language' not in f for f in m.WORLD["facts"])
     assert 'the_two_names' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Genesis 31:49', 'Onkelos Genesis 31:50']
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Genesis 31:49', 'Onkelos Genesis 31:50']
     assert all('both_routed_through_the_word' not in f for f in m.WORLD["facts"])
     assert 'the_watch_and_the_witness' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 74:14']
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 74:14']
     assert all('family_law_partitioning_time' not in f for f in m.WORLD["facts"])
     assert 'the_two_clauses' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 74:15']
+    assert m.WITNESS_READS[10]["cites"] == ['Yoma 77a:13', 'Yoma 77a:14']
+    assert all('affliction_token' not in f for f in m.WORLD["facts"])
+    assert 'im_teane_et_benotai' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 74:15']
     assert all('carve_out_and_a_legal_afterlife_in_court' not in f for f in m.WORLD["facts"])
     assert 'the_boundary' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 74:16', 'Onkelos Genesis 31:53']
+    assert m.WITNESS_READS[12]["cites"] == ['Bereshit Rabbah 74:16', 'Onkelos Genesis 31:53']
     assert all('graded_sacred_profane_and_both' not in f for f in m.WORLD["facts"])
     assert 'the_oath_formula' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

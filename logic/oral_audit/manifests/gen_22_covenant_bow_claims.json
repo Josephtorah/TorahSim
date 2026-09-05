@@ -1,128 +1,134 @@
 [
-  {
-    "id": "G22-01",
-    "source": "Minchat Shai on Gen 9:10",
-    "ref": "Gen 9:10",
-    "claim_en": "בבהמה (\"among the livestock,\" the covenant's partner-list) — BOTH bets carry a dagesh (doubling dot): SNAPSHOT's raw string holds the prefix-bet and stem-bet each dotted.",
-    "check": {
-      "type": "he_contains",
-      "ref": "Gen 9:10",
-      "idx": 7,
-      "contains": "בַּ/בְּ"
-    }
-  },
-  {
-    "id": "G22-02",
-    "source": "Minchat Shai on Gen 9:11 (Ramah)",
-    "ref": "Gen 9:11",
-    "claim_en": "והקמתי (\"and I will ESTABLISH My covenant\") — one old book reads plene with yod; the precise books and the Ramah rule doubly defective. SNAPSHOT: defective, the ruling's side.",
-    "check": {
-      "type": "letters_multiset",
-      "ref": "Gen 9:11",
-      "idx": 0,
-      "equals_letters_of": "והקמתי"
-    }
-  },
-  {
-    "id": "G22-03",
-    "source": "Minchat Shai on Gen 9:12",
-    "ref": "Gen 9:12",
-    "claim_en": "אשר אני נתן (\"which I am giving\") — אשר joined by maqqef (the joining hyphen), \"without galgal on the shin and without paseq (the separator bar)\": SNAPSHOT's maqqef column joins it (the galgal and paseq layers stay uninstrumented — noted).",
-    "check": {
-      "type": "maqqef_after",
-      "ref": "Gen 9:12",
-      "idx": 5,
-      "expect": 1
-    }
-  },
-  {
-    "id": "G22-04",
-    "source": "Minchat Shai on Gen 9:12 (Bereshit Rabbah 35, R. Yudan; Rabbeinu Bachya)",
-    "ref": "Gen 9:12",
-    "claim_en": "לדרת עולם (\"for everlasting GENERATIONS\") — written DOUBLY DEFECTIVE, no vav in either slot, and the chain reads the missing letters: R. Yudan — \"לדרת is written: EXCLUDING two generations, Hezekiah's and the Men of the Great Assembly's\" (some add R. Shimon bar Yochai's) — generations of the wholly righteous need no bow; Rabbeinu Bachya — \"לדרת defective, and immediately beside it את קשתי ('My bow'): the sign appears only in the deficient generations.\" SNAPSHOT: the bare three-letter stem locked.",
-    "check": {
-      "type": "letters_multiset",
-      "ref": "Gen 9:12",
-      "idx": 16,
-      "equals_letters_of": "לדרת"
-    }
-  },
-  {
-    "id": "G22-05",
-    "source": "Minchat Shai on Gen 9:14 (Sepharad books; Hilleli; vs Zanvuki; Radak)",
-    "ref": "Gen 9:14",
-    "claim_en": "בענני (\"when I cloud a cloud\") — the Sepharad books and the Hilleli point the first nun with SHEVA ALONE; the Zanvuki copy with sheva-patach; Radak notes the form is \"lightened against the custom.\" SNAPSHOT: sheva alone — the Sepharad/Hilleli camp.",
-    "check": {
-      "type": "he_contains",
-      "ref": "Gen 9:14",
-      "idx": 1,
-      "contains": "נְנִ"
-    }
-  },
-  {
-    "id": "G22-06",
-    "source": "Minchat Shai on Gen 9:16",
-    "ref": "Gen 9:16",
-    "claim_en": "בין אלהים (\"between GOD and every living soul\") — zaqef qatan (\"small upright\" pause accent) on the Name. SNAPSHOT agrees.",
-    "check": {
-      "type": "mark",
-      "ref": "Gen 9:16",
-      "idx": 8,
-      "expect_mark": "zaqef_qatan"
-    }
-  },
-  {
-    "id": "G22-07",
-    "source": "Minchat Shai on Gen 9:17 (Hilleli vs Yerushalmi)",
-    "ref": "Gen 9:17",
-    "claim_en": "הקמתי (\"I have established,\" the covenant's closing seal) — the Hilleli copy defective, the Yerushalmi plene with yod; the precise books and the Bechukotai Masorah rule defective. SNAPSHOT: defective — the frame's opening verb (9:11) and its seal (9:17) spelled identically bare.",
-    "check": {
-      "type": "letters_multiset",
-      "ref": "Gen 9:17",
-      "idx": 8,
-      "equals_letters_of": "הקמתי"
-    }
-  },
-  {
-    "id": "G22-08",
-    "source": "Bereshit Rabbah 35:2",
-    "claim_en": "THE SIGN'S DURATION CLAUSE IS WRITTEN SHORT, AND THE MISSING LETTERS ARE READ AS EXEMPTIONS. Our 9:12 says the covenant sign is given לְדֹרֹת (le-dorot, 'for generations') - and the word is written DOUBLY DEFECTIVE, lacking both of its vav letters. Machine-checked at derivation: this spelling stands in the Torah exactly ONCE, here. The chain reads the missing letters as generations that needed no rainbow, naming them - the generation of Hezekiah and the men of the Great Assembly - so that the operator's own duration parameter carries its exceptions in the ink.",
-    "check": {
-      "type": "token_count",
-      "where": {
-        "he_plain_joined": "לדרת"
-      },
-      "expect_total": 1,
-      "expect_refs": [
-        "Gen 9:12"
-      ]
-    }
-  },
-  {
-    "id": "G22-09",
-    "source": "Pirkei Avot 5:6; Mekhilta DeRabbi Shimon Ben Yochai 31:6",
-    "claim_en": "THE SIGN PREDATES THE COVENANT THAT USES IT. A canonical case-table row counts the rainbow among the TEN THINGS CREATED AT TWILIGHT on the eve of the first Sabbath - so at our 9:13 the bow is PLACED, not made, and this unit installs a pointer to an object created in an earlier unit's final moments. The same object heads a ten-member census of covenant-bearing things, ours the first, with circumcision, the Sabbath, Torah study, the release of slaves, the priesthood and the kingship following.",
-    "check": {
-      "type": "manual",
-      "note": "A sign operator whose object is ruled to have been created earlier - the verse placing rather than making it."
-    }
-  },
-  {
-    "id": "G22-10",
-    "source": "Tosefta Ta'anit 2:11; Sifrei Devarim 343:9",
-    "claim_en": "THE OATH OF OUR 9:15 IS TREATED AS STANDING LAW GENERATIONS LATER, AND ITS SCOPE IS DISPUTED. The pious man will not pray against rain, 'for we are certain the Place brings no flood' - the verse cited as live legal ground. And at Sinai's thunder the nations gather to ask whether He is flooding the world, and are answered from this verse. But what the oath does NOT foreclose is disputed: R. Meir holds a flood of FIRE AND BRIMSTONE remains possible, the guarantee covering water only.",
-    "check": {
-      "type": "manual",
-      "note": "An oath operator relied on as standing law in later units, with an explicit dispute over the scope of what it forecloses."
-    }
-  },
-  {
-    "id": "G22-11",
-    "source": "Bereshit Rabbah 35:1",
-    "claim_en": "WHY THE SPEECH IS ADDRESSED TO 'NOAH AND HIS SONS' RATHER THAN TO HIM ALONE IS A POLARITY DISPUTE. R. Yehuda reads it as a DEMOTION - because he broke the order about resuming procreation, the speech is no longer his alone; R. Nechemya reads it as an ELEVATION - his abstinence earned his sons a share in the address. The same widening of an operator's audience is read as punishment and as reward.",
-    "check": {
-      "type": "manual",
-      "note": "The widening of a speech operator's addressee list read as demotion at one seat and elevation at another."
-    }
+ {
+  "id": "G22-01",
+  "source": "Minchat Shai on Gen 9:10",
+  "ref": "Gen 9:10",
+  "claim_en": "בבהמה (\"among the livestock,\" the covenant's partner-list) — BOTH bets carry a dagesh (doubling dot): SNAPSHOT's raw string holds the prefix-bet and stem-bet each dotted.",
+  "check": {
+   "type": "he_contains",
+   "ref": "Gen 9:10",
+   "idx": 7,
+   "contains": "בַּ/בְּ"
   }
+ },
+ {
+  "id": "G22-02",
+  "source": "Minchat Shai on Gen 9:11 (Ramah)",
+  "ref": "Gen 9:11",
+  "claim_en": "והקמתי (\"and I will ESTABLISH My covenant\") — one old book reads plene with yod; the precise books and the Ramah rule doubly defective. SNAPSHOT: defective, the ruling's side.",
+  "check": {
+   "type": "letters_multiset",
+   "ref": "Gen 9:11",
+   "idx": 0,
+   "equals_letters_of": "והקמתי"
+  }
+ },
+ {
+  "id": "G22-03",
+  "source": "Minchat Shai on Gen 9:12",
+  "ref": "Gen 9:12",
+  "claim_en": "אשר אני נתן (\"which I am giving\") — אשר joined by maqqef (the joining hyphen), \"without galgal on the shin and without paseq (the separator bar)\": SNAPSHOT's maqqef column joins it (the galgal and paseq layers stay uninstrumented — noted).",
+  "check": {
+   "type": "maqqef_after",
+   "ref": "Gen 9:12",
+   "idx": 5,
+   "expect": 1
+  }
+ },
+ {
+  "id": "G22-04",
+  "source": "Minchat Shai on Gen 9:12 (Bereshit Rabbah 35, R. Yudan; Rabbeinu Bachya)",
+  "ref": "Gen 9:12",
+  "claim_en": "לדרת עולם (\"for everlasting GENERATIONS\") — written DOUBLY DEFECTIVE, no vav in either slot, and the chain reads the missing letters: R. Yudan — \"לדרת is written: EXCLUDING two generations, Hezekiah's and the Men of the Great Assembly's\" (some add R. Shimon bar Yochai's) — generations of the wholly righteous need no bow; Rabbeinu Bachya — \"לדרת defective, and immediately beside it את קשתי ('My bow'): the sign appears only in the deficient generations.\" SNAPSHOT: the bare three-letter stem locked.",
+  "check": {
+   "type": "letters_multiset",
+   "ref": "Gen 9:12",
+   "idx": 16,
+   "equals_letters_of": "לדרת"
+  }
+ },
+ {
+  "id": "G22-05",
+  "source": "Minchat Shai on Gen 9:14 (Sepharad books; Hilleli; vs Zanvuki; Radak)",
+  "ref": "Gen 9:14",
+  "claim_en": "בענני (\"when I cloud a cloud\") — the Sepharad books and the Hilleli point the first nun with SHEVA ALONE; the Zanvuki copy with sheva-patach; Radak notes the form is \"lightened against the custom.\" SNAPSHOT: sheva alone — the Sepharad/Hilleli camp.",
+  "check": {
+   "type": "he_contains",
+   "ref": "Gen 9:14",
+   "idx": 1,
+   "contains": "נְנִ"
+  }
+ },
+ {
+  "id": "G22-06",
+  "source": "Minchat Shai on Gen 9:16",
+  "ref": "Gen 9:16",
+  "claim_en": "בין אלהים (\"between GOD and every living soul\") — zaqef qatan (\"small upright\" pause accent) on the Name. SNAPSHOT agrees.",
+  "check": {
+   "type": "mark",
+   "ref": "Gen 9:16",
+   "idx": 8,
+   "expect_mark": "zaqef_qatan"
+  }
+ },
+ {
+  "id": "G22-07",
+  "source": "Minchat Shai on Gen 9:17 (Hilleli vs Yerushalmi)",
+  "ref": "Gen 9:17",
+  "claim_en": "הקמתי (\"I have established,\" the covenant's closing seal) — the Hilleli copy defective, the Yerushalmi plene with yod; the precise books and the Bechukotai Masorah rule defective. SNAPSHOT: defective — the frame's opening verb (9:11) and its seal (9:17) spelled identically bare.",
+  "check": {
+   "type": "letters_multiset",
+   "ref": "Gen 9:17",
+   "idx": 8,
+   "equals_letters_of": "הקמתי"
+  }
+ },
+ {
+  "id": "G22-08",
+  "source": "Bereshit Rabbah 35:2",
+  "claim_en": "THE SIGN'S DURATION CLAUSE IS WRITTEN SHORT, AND THE MISSING LETTERS ARE READ AS EXEMPTIONS. Our 9:12 says the covenant sign is given לְדֹרֹת (le-dorot, 'for generations') - and the word is written DOUBLY DEFECTIVE, lacking both of its vav letters. Machine-checked at derivation: this spelling stands in the Torah exactly ONCE, here. The chain reads the missing letters as generations that needed no rainbow, naming them - the generation of Hezekiah and the men of the Great Assembly - so that the operator's own duration parameter carries its exceptions in the ink.",
+  "check": {
+   "type": "token_count",
+   "where": {
+    "he_plain_joined": "לדרת"
+   },
+   "expect_total": 1,
+   "expect_refs": [
+    "Gen 9:12"
+   ]
+  }
+ },
+ {
+  "id": "G22-09",
+  "source": "Pirkei Avot 5:6; Mekhilta DeRabbi Shimon Ben Yochai 31:6",
+  "claim_en": "THE SIGN PREDATES THE COVENANT THAT USES IT. A canonical case-table row counts the rainbow among the TEN THINGS CREATED AT TWILIGHT on the eve of the first Sabbath - so at our 9:13 the bow is PLACED, not made, and this unit installs a pointer to an object created in an earlier unit's final moments. The same object heads a ten-member census of covenant-bearing things, ours the first, with circumcision, the Sabbath, Torah study, the release of slaves, the priesthood and the kingship following.",
+  "check": {
+   "type": "manual",
+   "note": "A sign operator whose object is ruled to have been created earlier - the verse placing rather than making it."
+  }
+ },
+ {
+  "id": "G22-10",
+  "source": "Tosefta Ta'anit 2:11; Sifrei Devarim 343:9",
+  "claim_en": "THE OATH OF OUR 9:15 IS TREATED AS STANDING LAW GENERATIONS LATER, AND ITS SCOPE IS DISPUTED. The pious man will not pray against rain, 'for we are certain the Place brings no flood' - the verse cited as live legal ground. And at Sinai's thunder the nations gather to ask whether He is flooding the world, and are answered from this verse. But what the oath does NOT foreclose is disputed: R. Meir holds a flood of FIRE AND BRIMSTONE remains possible, the guarantee covering water only.",
+  "check": {
+   "type": "manual",
+   "note": "An oath operator relied on as standing law in later units, with an explicit dispute over the scope of what it forecloses."
+  }
+ },
+ {
+  "id": "G22-11",
+  "source": "Bereshit Rabbah 35:1",
+  "claim_en": "WHY THE SPEECH IS ADDRESSED TO 'NOAH AND HIS SONS' RATHER THAN TO HIM ALONE IS A POLARITY DISPUTE. R. Yehuda reads it as a DEMOTION - because he broke the order about resuming procreation, the speech is no longer his alone; R. Nechemya reads it as an ELEVATION - his abstinence earned his sons a share in the address. The same widening of an operator's audience is read as punishment and as reward.",
+  "check": {
+   "type": "manual",
+   "note": "The widening of a speech operator's addressee list read as demotion at one seat and elevation at another."
+  }
+ },
+ {
+  "id": "G22-12",
+  "source": "Shevuot 36a:13-14",
+  "ref": "Gen 9:11-15",
+  "claim_en": "NO IS AN OATH, WITH THE DOUBLING CAP. The flood covenant's no-more clause read with Isaiah's I-have-sworn makes NO an oath; Rava caps it at the doubled form — exactly the covenant's own two negations: the repetition is the law's form. Filed F-145, auto-seated (round 36, the name-and-ink block)."
+ }
 ]

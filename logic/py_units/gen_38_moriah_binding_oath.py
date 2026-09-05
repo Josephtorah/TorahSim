@@ -77,6 +77,10 @@ m.fact("va_yashkem_ba_boqer_va_yachavosh_et_chamoro")
 # saddled_his_own_donkey — read, not installed
 m.witness_read("saddled_his_own_donkey", "love_upsets_the_order",
                 cites=["Bereshit Rabbah 55:8"])
+# witness-tier presupposed read: zealous_timing on va_yashkem_avraham —
+# read, not installed
+m.witness_read("va_yashkem_avraham", "zealous_timing",
+                cites=["Pesachim 4a:5", "Pesachim 4a:6", "Pesachim 4a:7"])
 
 # -------------------------- Gen.22.4 · THE_THIRD_DAY_SIGHTING --------------
 # בַּיּוֹם הַשְּׁלִישִׁי וַיִּשָּׂא אַבְרָהָם אֶת־עֵינָיו וַיַּרְא
@@ -106,6 +110,14 @@ m.declare("avraham", "LET",
 # return to-you/your(pl)”) — fact holds: go-and-nishtachaveh-and-nashuvah-
 # aleikhem
 m.fact("nelkha_ve_nishtachaveh_ve_nashuvah_aleikhem")
+# witness-tier presupposed read: lips_covenant on ve_nashuva_aleikhem —
+# read, not installed
+m.witness_read("ve_nashuva_aleikhem", "lips_covenant",
+                cites=["Moed Katan 18a:3", "Moed Katan 18a:4", "Moed Katan 18a:5"])
+# witness-tier presupposed read: damages_class on im_ha_chamor — read, not
+# installed
+m.witness_read("im_ha_chamor", "damages_class",
+                cites=["Bava Kamma 49a:4", "Bava Kamma 49a:5", "Bava Kamma 49a:6"])
 
 # -------------------------- Gen.22.6 · THE_LOADED_WALK_TOGETHER ------------
 # וַיִּקַּח אַבְרָהָם אֶת־עֲצֵי הָעֹלָה וַיָּשֶׂם עַל־יִצְחָק בְּנוֹ
@@ -181,6 +193,10 @@ m.event("reach_knife", agent="avraham")
 # extended_his_hand — read, not installed
 m.witness_read("extended_his_hand", "detached_instrument_required",
                 cites=["Bereshit Rabbah 56:6"])
+# witness-tier presupposed read: detached_blade on et_ha_maakhelet — read,
+# not installed
+m.witness_read("et_ha_maakhelet", "detached_blade",
+                cites=["Chullin 16a:4", "Chullin 16a:5", "Chullin 16a:6"])
 
 # -------------------------- Gen.22.11 · THE_FIRST_DOUBLED_NAME_CALL --------
 # וַיִּקְרָא אֵלָיו מַלְאַךְ יְהוָה מִן־הַשָּׁמַיִם וַיֹּאמֶר אַבְרָהָם
@@ -249,6 +265,10 @@ m.fact("ayil_neechaz_ba_sevakh_be_qarnav",
 # the_ram — read, not installed
 m.witness_read("the_ram", "shofar_instituted_and_parts_inventoried",
                 cites=["Bereshit Rabbah 56:9"])
+# witness-tier presupposed read: vessel_duty on va_yaalehu_le_olah — read,
+# not installed
+m.witness_read("va_yaalehu_le_olah", "vessel_duty",
+                cites=["Zevachim 97b:8", "Zevachim 97b:9", "Zevachim 97b:10"])
 
 # -------------------------- Gen.22.14 · THE_SENTENCE_NAME_AND_THE_SAYING ---
 # וַיִּקְרָא אַבְרָהָם שֵׁם־הַמָּקוֹם הַהוּא יְהוָה יִרְאֶה אֲשֶׁר יֵאָמֵר
@@ -378,29 +398,44 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['the_test']
     assert m.WORLD["witnessed"]['the_test']["cites"] == ['Bereshit Rabbah 55:6', 'Bereshit Rabbah 55:5']
     assert all('nature_disputed_and_deliberation_guaranteed' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('saddled_his_own_donkey', 'love_upsets_the_order'), ('third_day', 'member_of_a_corpus_wide_pattern'), ('binding_request', 'fitness_law_in_the_subjects_mouth'), ('extended_his_hand', 'detached_instrument_required'), ('doubled_name', 'affection_exhortation_and_recurrence'), ('the_ram', 'shofar_instituted_and_parts_inventoried'), ('the_naming', 'rewritten_as_the_worship_institution'), ('the_oath', 'answering_a_demand_for_no_further_tests')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('saddled_his_own_donkey', 'love_upsets_the_order'), ('va_yashkem_avraham', 'zealous_timing'), ('third_day', 'member_of_a_corpus_wide_pattern'), ('ve_nashuva_aleikhem', 'lips_covenant'), ('im_ha_chamor', 'damages_class'), ('binding_request', 'fitness_law_in_the_subjects_mouth'), ('extended_his_hand', 'detached_instrument_required'), ('et_ha_maakhelet', 'detached_blade'), ('doubled_name', 'affection_exhortation_and_recurrence'), ('the_ram', 'shofar_instituted_and_parts_inventoried'), ('va_yaalehu_le_olah', 'vessel_duty'), ('the_naming', 'rewritten_as_the_worship_institution'), ('the_oath', 'answering_a_demand_for_no_further_tests')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 55:8']
     assert all('love_upsets_the_order' not in f for f in m.WORLD["facts"])
     assert 'saddled_his_own_donkey' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 56:1']
+    assert m.WITNESS_READS[1]["cites"] == ['Pesachim 4a:5', 'Pesachim 4a:6', 'Pesachim 4a:7']
+    assert all('zealous_timing' not in f for f in m.WORLD["facts"])
+    assert 'va_yashkem_avraham' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 56:1']
     assert all('member_of_a_corpus_wide_pattern' not in f for f in m.WORLD["facts"])
     assert 'third_day' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 56:8']
+    assert m.WITNESS_READS[3]["cites"] == ['Moed Katan 18a:3', 'Moed Katan 18a:4', 'Moed Katan 18a:5']
+    assert all('lips_covenant' not in f for f in m.WORLD["facts"])
+    assert 've_nashuva_aleikhem' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bava Kamma 49a:4', 'Bava Kamma 49a:5', 'Bava Kamma 49a:6']
+    assert all('damages_class' not in f for f in m.WORLD["facts"])
+    assert 'im_ha_chamor' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 56:8']
     assert all('fitness_law_in_the_subjects_mouth' not in f for f in m.WORLD["facts"])
     assert 'binding_request' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 56:6']
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 56:6']
     assert all('detached_instrument_required' not in f for f in m.WORLD["facts"])
     assert 'extended_his_hand' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 56:7']
+    assert m.WITNESS_READS[7]["cites"] == ['Chullin 16a:4', 'Chullin 16a:5', 'Chullin 16a:6']
+    assert all('detached_blade' not in f for f in m.WORLD["facts"])
+    assert 'et_ha_maakhelet' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 56:7']
     assert all('affection_exhortation_and_recurrence' not in f for f in m.WORLD["facts"])
     assert 'doubled_name' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 56:9']
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 56:9']
     assert all('shofar_instituted_and_parts_inventoried' not in f for f in m.WORLD["facts"])
     assert 'the_ram' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Genesis 22:14', 'Onkelos Genesis 22:16']
+    assert m.WITNESS_READS[10]["cites"] == ['Zevachim 97b:8', 'Zevachim 97b:9', 'Zevachim 97b:10']
+    assert all('vessel_duty' not in f for f in m.WORLD["facts"])
+    assert 'va_yaalehu_le_olah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Onkelos Genesis 22:14', 'Onkelos Genesis 22:16']
     assert all('rewritten_as_the_worship_institution' not in f for f in m.WORLD["facts"])
     assert 'the_naming' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 56:11']
+    assert m.WITNESS_READS[12]["cites"] == ['Bereshit Rabbah 56:11']
     assert all('answering_a_demand_for_no_further_tests' not in f for f in m.WORLD["facts"])
     assert 'the_oath' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

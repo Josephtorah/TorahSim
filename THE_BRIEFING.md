@@ -41,9 +41,33 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   running for the book of Numbers.
 - The corpus: 130 frozen units, one world, fingerprint unmoved
   through two whole books and the third's first two portions.
-- The exam engine: twenty-nine rounds, 891 cases, 891 answered
-  correctly, 269 compiled rules, vocabulary of 158 registered input
-  dimensions.
+- The exam engine: forty-one rounds, 1,032 cases, 1,032 answered
+  correctly — the exam passed ONE THOUSAND recorded cases at round
+  39 with zero misses since the pilot — 326 compiled rules,
+  vocabulary of 158 registered input dimensions.
+- **The Genesis campaign: COMPLETE — 12 of 12 blocks run
+  (2026-09-04), every one green on its first run: the prayer
+  book, circumcision, betrothal, levirate marriage, inheritance,
+  the courts, the name and the ink, the table and the knife, the
+  altar before Sinai, birth and the body, the conduct Torah, and
+  the finale — kindness, mourning, and charity.** The finale's
+  find: the campaign's namesake teaching (walk after God's
+  attributes — clothe the naked, visit the sick, comfort
+  mourners) was already sitting inside the frozen Eden unit,
+  citing that exact Talmud row, from the day the unit was
+  derived — the machine held the kindness Torah's charter before
+  the kindness block was ever opened. Also banked on the last
+  round: the charity cap read off pure ink grammar (Jacob's
+  doubled tithe verb meaning two equal tenths — a fifth), and
+  the whole seven-day mourning file assembled from Genesis
+  verses alone. The opening find: the frozen
+  page at Genesis 19:27 had already called Abraham's standing
+  PRAYER — written at derivation, before the Talmud page that
+  derives exactly that was ever opened. The tradition's own
+  rulebook file (the middot) now also carries the case law the
+  Exodus campaign banked about the rules themselves — including
+  the recorded fork where two rival inference methods read the
+  same verse and produce two different tables, both kept.
 - **The Exodus block campaign: COMPLETE — 18 of 18 blocks run
   (2026-09-04), every one green on its first run; the finale was
   the Decalogue itself, and the cross-block routing ledger closed

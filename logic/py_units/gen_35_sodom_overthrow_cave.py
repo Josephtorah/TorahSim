@@ -68,6 +68,10 @@ m.fact("va_yasuru_elav_va_yavou")
 # them/their drink and-sweetness cook and-eat”) — event: feast — agent Lot;
 # theme mishteh-and-sweetness
 m.event("feast", agent="lot", themes=["mishteh_u_matzot"])
+# witness-tier presupposed read: refusal_ladder on va_yiftzar_bam_meod —
+# read, not installed
+m.witness_read("va_yiftzar_bam_meod", "refusal_ladder",
+                cites=["Bava Metzia 87a:1"])
 
 # -------------------------- Gen.19.4 · THE_SIEGE_RING ----------------------
 # טֶרֶם יִשְׁכָּבוּ וְאַנְשֵׁי הָעִיר אַנְשֵׁי סְדֹם נָסַבּוּ עַל־הַבַּיִת
@@ -299,6 +303,10 @@ m.fact("al_na_adonai")
 # adonai_at_19_18
 m.witness_state("adonai_at_19_18", "dispute_inside_one_spine_member",
                 cites=["Onkelos Genesis 19:18", "Onkelos Genesis 19:27", "Bereshit Rabbah 68:9"])
+# witness-tier presupposed read: holy_exception on al_na_adonai — read, not
+# installed
+m.witness_read("al_na_adonai", "holy_exception",
+                cites=["Shevuot 35b:11", "Shevuot 35b:12"])
 
 # -------------------------- Gen.19.19 · THE_INABILITY_CLAIM ----------------
 # הִנֵּה־נָא מָצָא עַבְדְּךָ חֵן בְּעֵינֶיךָ וַתַּגְדֵּל חַסְדְּךָ אֲשֶׁר
@@ -397,6 +405,14 @@ m.event("look_back", agent="eshet_lot")
 # ‹וַתְּהִי נְצִיב מֶלַח› (“and-be something-stationary powder”) — fact
 # holds: and-be-something-stationary-powder
 m.fact("va_tehi_netziv_melach")
+# witness-tier presupposed read: pillar_purity on netziv_melach — read, not
+# installed
+m.witness_read("netziv_melach", "pillar_purity",
+                cites=["Niddah 70b:6", "Niddah 70b:7", "Niddah 70b:8"])
+# witness-tier presupposed read: salt_pillar_blessing on netziv_melach —
+# read, not installed
+m.witness_read("netziv_melach", "salt_pillar_blessing",
+                cites=["Berakhot 54b:7", "Berakhot 54b:8", "Berakhot 54b:9", "Berakhot 54b:10", "Berakhot 54b:11"])
 
 # -------------------------- Gen.19.27 · THE_DAWN_RETURN_TO_THE_STANDING_PLACE -
 # וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר אֶל־הַמָּקוֹם אֲשֶׁר־עָמַד שָׁם
@@ -408,6 +424,10 @@ m.step("Gen.19.27")
 # rise-early Abraham in-morning to the-place which stand there”) — event:
 # dawn-return — agent Abraham
 m.event("dawn_return", agent="avraham")
+# witness-tier presupposed read: prayer_book_founding on
+# el_ha_maqom_asher_amad — read, not installed
+m.witness_read("el_ha_maqom_asher_amad", "prayer_book_founding",
+                cites=["Berakhot 26b:4", "Berakhot 26b:5", "Berakhot 26b:6", "Berakhot 26b:7", "Berakhot 26b:8", "Berakhot 26b:9", "Berakhot 26b:10", "Berakhot 6b:7", "Berakhot 6b:8", "Berakhot 27a:9", "Berakhot 27a:10", "Berakhot 27a:11"])
 
 # -------------------------- Gen.19.28 · THE_KILN_SMOKE ---------------------
 # וַיַּשְׁקֵף עַל־פְּנֵי סְדֹם וַעֲמֹרָה וְעַל־כָּל־פְּנֵי אֶרֶץ הַכִּכָּר
@@ -548,17 +568,32 @@ if __name__ == "__main__":
     assert all('dispute_inside_one_spine_member' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['cave_episode']["cites"] == ['Bereshit Rabbah 51:9', 'Bereshit Rabbah 51:10']
     assert all('rule_parsed_and_motive_disputed' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('city_practice', 'enacted_statute_not_impulse'), ('we_are_destroying', 'penalty_discharged_at_the_ladder'), ('dawn_timestamps', 'standing_measure_of_time_and_distance'), ('dotted_ubkumah', 'second_of_the_torahs_ten')]
-    assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 50:7', 'Bereshit Rabbah 51:5']
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('va_yiftzar_bam_meod', 'refusal_ladder'), ('city_practice', 'enacted_statute_not_impulse'), ('we_are_destroying', 'penalty_discharged_at_the_ladder'), ('dawn_timestamps', 'standing_measure_of_time_and_distance'), ('al_na_adonai', 'holy_exception'), ('netziv_melach', 'pillar_purity'), ('netziv_melach', 'salt_pillar_blessing'), ('el_ha_maqom_asher_amad', 'prayer_book_founding'), ('dotted_ubkumah', 'second_of_the_torahs_ten')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bava Metzia 87a:1']
+    assert all('refusal_ladder' not in f for f in m.WORLD["facts"])
+    assert 'va_yiftzar_bam_meod' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 50:7', 'Bereshit Rabbah 51:5']
     assert all('enacted_statute_not_impulse' not in f for f in m.WORLD["facts"])
     assert 'city_practice' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 50:9', 'Bereshit Rabbah 68:12']
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 50:9', 'Bereshit Rabbah 68:12']
     assert all('penalty_discharged_at_the_ladder' not in f for f in m.WORLD["facts"])
     assert 'we_are_destroying' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 50:10', 'Bereshit Rabbah 50:3']
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 50:10', 'Bereshit Rabbah 50:3']
     assert all('standing_measure_of_time_and_distance' not in f for f in m.WORLD["facts"])
     assert 'dawn_timestamps' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 51:8']
+    assert m.WITNESS_READS[4]["cites"] == ['Shevuot 35b:11', 'Shevuot 35b:12']
+    assert all('holy_exception' not in f for f in m.WORLD["facts"])
+    assert 'al_na_adonai' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Niddah 70b:6', 'Niddah 70b:7', 'Niddah 70b:8']
+    assert all('pillar_purity' not in f for f in m.WORLD["facts"])
+    assert 'netziv_melach' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Berakhot 54b:7', 'Berakhot 54b:8', 'Berakhot 54b:9', 'Berakhot 54b:10', 'Berakhot 54b:11']
+    assert all('salt_pillar_blessing' not in f for f in m.WORLD["facts"])
+    assert 'netziv_melach' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Berakhot 26b:4', 'Berakhot 26b:5', 'Berakhot 26b:6', 'Berakhot 26b:7', 'Berakhot 26b:8', 'Berakhot 26b:9', 'Berakhot 26b:10', 'Berakhot 6b:7', 'Berakhot 6b:8', 'Berakhot 27a:9', 'Berakhot 27a:10', 'Berakhot 27a:11']
+    assert all('prayer_book_founding' not in f for f in m.WORLD["facts"])
+    assert 'el_ha_maqom_asher_amad' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 51:8']
     assert all('second_of_the_torahs_ten' not in f for f in m.WORLD["facts"])
     assert 'dotted_ubkumah' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

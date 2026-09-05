@@ -226,6 +226,10 @@ m.fact("stone_house_tithe_vow_content")
 # read, not installed
 m.witness_read("the_tithe_promise", "challenged_by_arithmetic_and_rescued_by_exclusion",
                 cites=["Bereshit Rabbah 70:7"])
+# witness-tier presupposed read: charity_cap on aser_aasrenu — read, not
+# installed
+m.witness_read("aser_aasrenu", "charity_cap",
+                cites=["Ketubot 50a:2", "Ketubot 50a:3", "Ketubot 50a:4"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -246,7 +250,7 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['the_city']
     assert m.WORLD["witnessed"]['the_city']["cites"] == ['Bereshit Rabbah 69:8']
     assert all('permanent_properties_across_the_corpus' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('directional_ending', 'the_traditions_own_grammar_rule_at_this_word'), ('the_departure', 'radiance_rule_made_comparative_to_survive'), ('the_stones', 'three_counts_each_framed_as_a_test'), ('sunset_two_hours_early', 'borrowed_time_booked_for_repayment'), ('the_dream', 'dreams_follow_the_interpretation'), ('ascending_and_descending', 'kingdom_sequence_read_off_the_word_order'), ('the_eighteen_count', 'opened_frame_stated_leg_left_open'), ('the_LORD_stood_over_him', 'glory_buffer_at_both_theophany_verses'), ('the_promise', 'clause_map_against_the_vow_with_one_field_uncovered'), ('my_word_is_your_support', 'condition_made_to_quote_the_promise'), ('house_of_God', 'de_literalized_into_prayer_reception'), ('the_vow', 'first_instance_chain_of_title_and_a_register'), ('delay_in_discharge', 'audit_penalty_that_explains_the_loss'), ('the_tithe_promise', 'challenged_by_arithmetic_and_rescued_by_exclusion')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('directional_ending', 'the_traditions_own_grammar_rule_at_this_word'), ('the_departure', 'radiance_rule_made_comparative_to_survive'), ('the_stones', 'three_counts_each_framed_as_a_test'), ('sunset_two_hours_early', 'borrowed_time_booked_for_repayment'), ('the_dream', 'dreams_follow_the_interpretation'), ('ascending_and_descending', 'kingdom_sequence_read_off_the_word_order'), ('the_eighteen_count', 'opened_frame_stated_leg_left_open'), ('the_LORD_stood_over_him', 'glory_buffer_at_both_theophany_verses'), ('the_promise', 'clause_map_against_the_vow_with_one_field_uncovered'), ('my_word_is_your_support', 'condition_made_to_quote_the_promise'), ('house_of_God', 'de_literalized_into_prayer_reception'), ('the_vow', 'first_instance_chain_of_title_and_a_register'), ('delay_in_discharge', 'audit_penalty_that_explains_the_loss'), ('the_tithe_promise', 'challenged_by_arithmetic_and_rescued_by_exclusion'), ('aser_aasrenu', 'charity_cap')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 68:8']
     assert all('the_traditions_own_grammar_rule_at_this_word' not in f for f in m.WORLD["facts"])
     assert 'directional_ending' not in m.WORLD["witnessed"]
@@ -289,4 +293,7 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[13]["cites"] == ['Bereshit Rabbah 70:7']
     assert all('challenged_by_arithmetic_and_rescued_by_exclusion' not in f for f in m.WORLD["facts"])
     assert 'the_tithe_promise' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[14]["cites"] == ['Ketubot 50a:2', 'Ketubot 50a:3', 'Ketubot 50a:4']
+    assert all('charity_cap' not in f for f in m.WORLD["facts"])
+    assert 'aser_aasrenu' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -280,6 +280,10 @@ m.fact("tavo_el_avotekha_be_shalom",
 # read, not installed
 m.witness_read("in_peace_clause", "leave_taking_formula",
                 cites=["Berakhot 64a:10"])
+# witness-tier presupposed read: parting_from_dead on tavo_be_shalom — read,
+# not installed
+m.witness_read("tavo_be_shalom", "parting_from_dead",
+                cites=["Berakhot 64a:9", "Berakhot 64a:10", "Berakhot 64a:11"])
 
 # -------------------------- Gen.15.16 · THE_FOURTH_GENERATION_AND_THE_UNFULL_INIQUITY -
 # וְדוֹר רְבִיעִי יָשׁוּבוּ הֵנָּה כִּי לֹא־שָׁלֵם עֲוֺן הָאֱמֹרִי
@@ -339,6 +343,10 @@ m.presupposed("nahar_mitzrayim", "nehar_perat")
 # read, not installed
 m.witness_read("natati_past_tense", "statement_is_a_deed",
                 cites=["Bereshit Rabbah 44:22", "Jerusalem Talmud Challah 2:1:3"])
+# witness-tier presupposed read: land_list_boundary on keini_kenizi_kadmoni
+# — read, not installed
+m.witness_read("keini_kenizi_kadmoni", "land_list_boundary",
+                cites=["Bava Batra 56a:8", "Bava Batra 56a:9"])
 
 # -------------------------- Gen.15.19 · THE_GRANT_ROSTER_ROW_ONE -----------
 # אֶת־הַקֵּינִי וְאֶת־הַקְּנִזִּי וְאֵת הַקַּדְמֹנִי
@@ -393,7 +401,7 @@ if __name__ == "__main__":
     assert all('decoded_three_ways_with_transposition' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['two_clocks']["cites"] == ['Mishnah Eduyot 2:9', 'Tosefta Eduyot 1:11', 'Mekhilta DeRabbi Yishmael, Tractate Pischa 14:16']
     assert all('conditional_on_conduct' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('brought_him_outside', 'exemption_from_astrology'), ('bamah_eda_question', 'order_of_offerings_instituted'), ('pieces_rite', 'standing_covenant_form'), ('four_hundred_years', 'dated_before_the_call_by_arithmetic'), ('in_peace_clause', 'leave_taking_formula'), ('natati_past_tense', 'statement_is_a_deed')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('brought_him_outside', 'exemption_from_astrology'), ('bamah_eda_question', 'order_of_offerings_instituted'), ('pieces_rite', 'standing_covenant_form'), ('four_hundred_years', 'dated_before_the_call_by_arithmetic'), ('in_peace_clause', 'leave_taking_formula'), ('tavo_be_shalom', 'parting_from_dead'), ('natati_past_tense', 'statement_is_a_deed'), ('keini_kenizi_kadmoni', 'land_list_boundary')]
     assert m.WITNESS_READS[0]["cites"] == ['Shabbat 156a:13', 'Bereshit Rabbah 44:12']
     assert all('exemption_from_astrology' not in f for f in m.WORLD["facts"])
     assert 'brought_him_outside' not in m.WORLD["witnessed"]
@@ -409,7 +417,13 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[4]["cites"] == ['Berakhot 64a:10']
     assert all('leave_taking_formula' not in f for f in m.WORLD["facts"])
     assert 'in_peace_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 44:22', 'Jerusalem Talmud Challah 2:1:3']
+    assert m.WITNESS_READS[5]["cites"] == ['Berakhot 64a:9', 'Berakhot 64a:10', 'Berakhot 64a:11']
+    assert all('parting_from_dead' not in f for f in m.WORLD["facts"])
+    assert 'tavo_be_shalom' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 44:22', 'Jerusalem Talmud Challah 2:1:3']
     assert all('statement_is_a_deed' not in f for f in m.WORLD["facts"])
     assert 'natati_past_tense' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Bava Batra 56a:8', 'Bava Batra 56a:9']
+    assert all('land_list_boundary' not in f for f in m.WORLD["facts"])
+    assert 'keini_kenizi_kadmoni' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

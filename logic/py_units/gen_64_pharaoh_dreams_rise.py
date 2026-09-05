@@ -175,6 +175,10 @@ m.fact("ka_asher_patar_ken_haya")
 # so_it_was — read, not installed
 m.witness_read("so_it_was", "dreams_follow_the_mouth_with_its_denial",
                 cites=["Bereshit Rabbah 89:8"])
+# witness-tier presupposed read: dreams_mouth on kaasher_patar_lanu_ken_haya
+# — read, not installed
+m.witness_read("kaasher_patar_lanu_ken_haya", "dreams_mouth",
+                cites=["Berakhot 55b:16", "Berakhot 55b:17", "Berakhot 55b:18"])
 
 # -------------------------- Gen.41.14 · RUSHED_FROM_THE_PIT ----------------
 # וַיִּשְׁלַח פַּרְעֹה וַיִּקְרָא אֶת־יוֹסֵף וַיְרִיצֻהוּ מִן־הַבּוֹר
@@ -621,6 +625,10 @@ m.fact("yulad_shene_vanim_be_terem_shenat_ha_raav")
 # two_sons_before_the_famine — read, not installed
 m.witness_read("two_sons_before_the_famine", "a_standing_law_seated_on_this_ink",
                 cites=["Bereshit Rabbah 34:7"])
+# witness-tier presupposed read: famine_ban on be_terem_tavo_shenat_ha_raav
+# — read, not installed
+m.witness_read("be_terem_tavo_shenat_ha_raav", "famine_ban",
+                cites=["Taanit 11a:3", "Taanit 11a:4", "Taanit 11a:5"])
 
 # -------------------------- Gen.41.51 · MENASHE_NAMED ----------------------
 # וַיִּקְרָא יוֹסֵף אֶת־שֵׁם הַבְּכוֹר מְנַשֶּׁה כִּי־נַשַּׁנִי אֱלֹהִים
@@ -748,7 +756,7 @@ if __name__ == "__main__":
     assert all('disputed_four_ways_in_the_chain' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['troubled_spirit_one_tav']["cites"] == ['Bereshit Rabbah 89:5']
     assert all('near_leg_exact_far_leg_unopened' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_two_year_delay', 'a_set_term_not_neglect'), ('the_magicians', 'wrong_reading_kept_as_a_negative_control'), ('a_hebrew_lad_a_slave', 'three_slurs_and_a_foreign_statute'), ('so_it_was', 'dreams_follow_the_mouth_with_its_denial'), ('not_by_me', 'the_disclaimer_witnessed_twice'), ('the_spirit_of_god_in_him', 'the_buffer_decides_which_spirit'), ('only_the_throne', 'a_particle_rule_learned_from_a_wicked_king'), ('the_ring_the_garments_the_chain', 'a_refusal_repaid_limb_by_limb'), ('hand_and_foot', 'an_idiom_given_its_instruments'), ('the_egyptian_name', 'translated_not_carried_and_the_priesthood_withheld'), ('by_handfuls', 'abundance_rewritten_as_administration'), ('two_sons_before_the_famine', 'a_standing_law_seated_on_this_ink'), ('what_he_says_to_you_do', 'a_condition_attached_to_the_grain'), ('on_the_face_of_all_the_earth', 'an_order_of_arrival_read_off_one_word')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_two_year_delay', 'a_set_term_not_neglect'), ('the_magicians', 'wrong_reading_kept_as_a_negative_control'), ('a_hebrew_lad_a_slave', 'three_slurs_and_a_foreign_statute'), ('so_it_was', 'dreams_follow_the_mouth_with_its_denial'), ('kaasher_patar_lanu_ken_haya', 'dreams_mouth'), ('not_by_me', 'the_disclaimer_witnessed_twice'), ('the_spirit_of_god_in_him', 'the_buffer_decides_which_spirit'), ('only_the_throne', 'a_particle_rule_learned_from_a_wicked_king'), ('the_ring_the_garments_the_chain', 'a_refusal_repaid_limb_by_limb'), ('hand_and_foot', 'an_idiom_given_its_instruments'), ('the_egyptian_name', 'translated_not_carried_and_the_priesthood_withheld'), ('by_handfuls', 'abundance_rewritten_as_administration'), ('two_sons_before_the_famine', 'a_standing_law_seated_on_this_ink'), ('be_terem_tavo_shenat_ha_raav', 'famine_ban'), ('what_he_says_to_you_do', 'a_condition_attached_to_the_grain'), ('on_the_face_of_all_the_earth', 'an_order_of_arrival_read_off_one_word')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 89:1', 'Bereshit Rabbah 89:2', 'Bereshit Rabbah 89:3', 'Bereshit Rabbah 89:4']
     assert all('a_set_term_not_neglect' not in f for f in m.WORLD["facts"])
     assert 'the_two_year_delay' not in m.WORLD["witnessed"]
@@ -761,34 +769,40 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 89:8']
     assert all('dreams_follow_the_mouth_with_its_denial' not in f for f in m.WORLD["facts"])
     assert 'so_it_was' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 89:9', 'Onkelos Genesis 41:16']
+    assert m.WITNESS_READS[4]["cites"] == ['Berakhot 55b:16', 'Berakhot 55b:17', 'Berakhot 55b:18']
+    assert all('dreams_mouth' not in f for f in m.WORLD["facts"])
+    assert 'kaasher_patar_lanu_ken_haya' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 89:9', 'Onkelos Genesis 41:16']
     assert all('the_disclaimer_witnessed_twice' not in f for f in m.WORLD["facts"])
     assert 'not_by_me' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Genesis 41:38', 'Bereshit Rabbah 90:1']
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Genesis 41:38', 'Bereshit Rabbah 90:1']
     assert all('the_buffer_decides_which_spirit' not in f for f in m.WORLD["facts"])
     assert 'the_spirit_of_god_in_him' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 90:2', 'Onkelos Genesis 41:40']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 90:2', 'Onkelos Genesis 41:40']
     assert all('a_particle_rule_learned_from_a_wicked_king' not in f for f in m.WORLD["facts"])
     assert 'only_the_throne' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 90:3', 'Bereshit Rabbah 87:6']
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 90:3', 'Bereshit Rabbah 87:6']
     assert all('a_refusal_repaid_limb_by_limb' not in f for f in m.WORLD["facts"])
     assert 'the_ring_the_garments_the_chain' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Genesis 41:44', 'Bereshit Rabbah 90:3']
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Genesis 41:44', 'Bereshit Rabbah 90:3']
     assert all('an_idiom_given_its_instruments' not in f for f in m.WORLD["facts"])
     assert 'hand_and_foot' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Genesis 41:45', 'Bereshit Rabbah 90:4']
+    assert m.WITNESS_READS[10]["cites"] == ['Onkelos Genesis 41:45', 'Bereshit Rabbah 90:4']
     assert all('translated_not_carried_and_the_priesthood_withheld' not in f for f in m.WORLD["facts"])
     assert 'the_egyptian_name' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[10]["cites"] == ['Onkelos Genesis 41:47', 'Bereshit Rabbah 90:5']
+    assert m.WITNESS_READS[11]["cites"] == ['Onkelos Genesis 41:47', 'Bereshit Rabbah 90:5']
     assert all('abundance_rewritten_as_administration' not in f for f in m.WORLD["facts"])
     assert 'by_handfuls' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 34:7']
+    assert m.WITNESS_READS[12]["cites"] == ['Bereshit Rabbah 34:7']
     assert all('a_standing_law_seated_on_this_ink' not in f for f in m.WORLD["facts"])
     assert 'two_sons_before_the_famine' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[12]["cites"] == ['Bereshit Rabbah 90:6', 'Bereshit Rabbah 91:5']
+    assert m.WITNESS_READS[13]["cites"] == ['Taanit 11a:3', 'Taanit 11a:4', 'Taanit 11a:5']
+    assert all('famine_ban' not in f for f in m.WORLD["facts"])
+    assert 'be_terem_tavo_shenat_ha_raav' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[14]["cites"] == ['Bereshit Rabbah 90:6', 'Bereshit Rabbah 91:5']
     assert all('a_condition_attached_to_the_grain' not in f for f in m.WORLD["facts"])
     assert 'what_he_says_to_you_do' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[13]["cites"] == ['Bereshit Rabbah 91:5']
+    assert m.WITNESS_READS[15]["cites"] == ['Bereshit Rabbah 91:5']
     assert all('an_order_of_arrival_read_off_one_word' not in f for f in m.WORLD["facts"])
     assert 'on_the_face_of_all_the_earth' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

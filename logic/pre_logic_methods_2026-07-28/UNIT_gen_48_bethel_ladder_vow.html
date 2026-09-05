@@ -214,6 +214,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וְהָאֶבֶן הַזֹּאת … עַשֵּׂר אֲעַשְּׂרֶנּוּ</span> · <i>ve-ha-even ha-zot … aser aasrenu</i><br><span class="gloss">= and-the-even the-this aser aasrenu</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_tithe_promise, challenged_by_arithmetic_and_rescued_by_exclusion)</span><br><span class="gloss">= WITNESS-READ(the-tithe-promise, challenged-by-arithmetic-and-rescued-by-exclusion)</span><br>A PROMISE IS AUDITED BY ARITHMETIC FROM OUTSIDE [claim G48-29]. The objection: Levi is one tribe of twelve, which is not a tenth. The answer is a recount - fourteen tribes once the two Joseph tribes are separated, then the four firstborn of the four mothers removed because the firstborn is already sacred and SACRED DOES NOT TITHE SACRED - leaving ten, of which Levi is the tenth. The promise is defended by a rule of exclusion, not by rhetoric. [folded shape: priced law]
 </td><td>—</td><td class='cite'>Bereshit Rabbah 70:7</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(aser_aasrenu, charity_cap)</span><br><span class="gloss">= WITNESS-READ(aser-aasrenu, charity-cap)</span><br>THE CHARITY CAP FROM THE DOUBLED VERB [claim G48-36]. At Usha they ordained: spend no more than a FIFTH, lest the giver need the creatures — and the verse is ours: &#x27;all You give me I will surely TITHE-TITHE to You&#x27; (28:22), Jacob&#x27;s vow verb doubled = two tenths; Rav Ashi answers the arithmetic press — &#x27;the second like the first&#x27;: the doubled verb&#x27;s own grammar makes the tenths equal and the cap exactly a fifth (Ketubot 50a:2-4). Auto-seat law, F-199 (round 41, the kindness block).
+</td><td>—</td><td class='cite'>Ketubot 50a:2, Ketubot 50a:3, Ketubot 50a:4</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The vow installs as a standing handler; stone-house and tithe content; unit ends SPECS 0, REGISTRY 1. END OF UNIT.</div>
 </div>
@@ -538,6 +540,10 @@ m.fact(&quot;stone_house_tithe_vow_content&quot;)
 # read, not installed
 m.witness_read(&quot;the_tithe_promise&quot;, &quot;challenged_by_arithmetic_and_rescued_by_exclusion&quot;,
                 cites=[&quot;Bereshit Rabbah 70:7&quot;])
+# witness-tier presupposed read: charity_cap on aser_aasrenu — read, not
+# installed
+m.witness_read(&quot;aser_aasrenu&quot;, &quot;charity_cap&quot;,
+                cites=[&quot;Ketubot 50a:2&quot;, &quot;Ketubot 50a:3&quot;, &quot;Ketubot 50a:4&quot;])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
@@ -558,7 +564,7 @@ if __name__ == &quot;__main__&quot;:
     assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;the_city&#x27;]
     assert m.WORLD[&quot;witnessed&quot;][&#x27;the_city&#x27;][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 69:8&#x27;]
     assert all(&#x27;permanent_properties_across_the_corpus&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;directional_ending&#x27;, &#x27;the_traditions_own_grammar_rule_at_this_word&#x27;), (&#x27;the_departure&#x27;, &#x27;radiance_rule_made_comparative_to_survive&#x27;), (&#x27;the_stones&#x27;, &#x27;three_counts_each_framed_as_a_test&#x27;), (&#x27;sunset_two_hours_early&#x27;, &#x27;borrowed_time_booked_for_repayment&#x27;), (&#x27;the_dream&#x27;, &#x27;dreams_follow_the_interpretation&#x27;), (&#x27;ascending_and_descending&#x27;, &#x27;kingdom_sequence_read_off_the_word_order&#x27;), (&#x27;the_eighteen_count&#x27;, &#x27;opened_frame_stated_leg_left_open&#x27;), (&#x27;the_LORD_stood_over_him&#x27;, &#x27;glory_buffer_at_both_theophany_verses&#x27;), (&#x27;the_promise&#x27;, &#x27;clause_map_against_the_vow_with_one_field_uncovered&#x27;), (&#x27;my_word_is_your_support&#x27;, &#x27;condition_made_to_quote_the_promise&#x27;), (&#x27;house_of_God&#x27;, &#x27;de_literalized_into_prayer_reception&#x27;), (&#x27;the_vow&#x27;, &#x27;first_instance_chain_of_title_and_a_register&#x27;), (&#x27;delay_in_discharge&#x27;, &#x27;audit_penalty_that_explains_the_loss&#x27;), (&#x27;the_tithe_promise&#x27;, &#x27;challenged_by_arithmetic_and_rescued_by_exclusion&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;directional_ending&#x27;, &#x27;the_traditions_own_grammar_rule_at_this_word&#x27;), (&#x27;the_departure&#x27;, &#x27;radiance_rule_made_comparative_to_survive&#x27;), (&#x27;the_stones&#x27;, &#x27;three_counts_each_framed_as_a_test&#x27;), (&#x27;sunset_two_hours_early&#x27;, &#x27;borrowed_time_booked_for_repayment&#x27;), (&#x27;the_dream&#x27;, &#x27;dreams_follow_the_interpretation&#x27;), (&#x27;ascending_and_descending&#x27;, &#x27;kingdom_sequence_read_off_the_word_order&#x27;), (&#x27;the_eighteen_count&#x27;, &#x27;opened_frame_stated_leg_left_open&#x27;), (&#x27;the_LORD_stood_over_him&#x27;, &#x27;glory_buffer_at_both_theophany_verses&#x27;), (&#x27;the_promise&#x27;, &#x27;clause_map_against_the_vow_with_one_field_uncovered&#x27;), (&#x27;my_word_is_your_support&#x27;, &#x27;condition_made_to_quote_the_promise&#x27;), (&#x27;house_of_God&#x27;, &#x27;de_literalized_into_prayer_reception&#x27;), (&#x27;the_vow&#x27;, &#x27;first_instance_chain_of_title_and_a_register&#x27;), (&#x27;delay_in_discharge&#x27;, &#x27;audit_penalty_that_explains_the_loss&#x27;), (&#x27;the_tithe_promise&#x27;, &#x27;challenged_by_arithmetic_and_rescued_by_exclusion&#x27;), (&#x27;aser_aasrenu&#x27;, &#x27;charity_cap&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 68:8&#x27;]
     assert all(&#x27;the_traditions_own_grammar_rule_at_this_word&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;directional_ending&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -601,5 +607,8 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[13][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 70:7&#x27;]
     assert all(&#x27;challenged_by_arithmetic_and_rescued_by_exclusion&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;the_tithe_promise&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[14][&quot;cites&quot;] == [&#x27;Ketubot 50a:2&#x27;, &#x27;Ketubot 50a:3&#x27;, &#x27;Ketubot 50a:4&#x27;]
+    assert all(&#x27;charity_cap&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;aser_aasrenu&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

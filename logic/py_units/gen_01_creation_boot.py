@@ -90,6 +90,10 @@ m.name("or", "yom")
 m.name("choshekh", "layla")
 # ‹יוֹם אֶחָד› (“Day one”) — ledger: day 1 committed
 m.commit(1, label_form="cardinal", label_translit="yom echad")
+# witness-tier presupposed read: day_boundary_liturgy_jobs on
+# va_yehi_erev_va_yehi_voqer — read, not installed
+m.witness_read("va_yehi_erev_va_yehi_voqer", "day_boundary_liturgy_jobs",
+                cites=["Berakhot 2a:8", "Berakhot 2a:9", "Berakhot 2a:10", "Berakhot 26a:16", "Berakhot 26a:17", "Berakhot 26a:18"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -112,4 +116,8 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['or']
     assert m.WORLD["witnessed"]['or']["cites"] == ['Bereshit Rabbah 3:6', 'Chagigah 12a:10']
     assert all('or_ha_ganuz' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('va_yehi_erev_va_yehi_voqer', 'day_boundary_liturgy_jobs')]
+    assert m.WITNESS_READS[0]["cites"] == ['Berakhot 2a:8', 'Berakhot 2a:9', 'Berakhot 2a:10', 'Berakhot 26a:16', 'Berakhot 26a:17', 'Berakhot 26a:18']
+    assert all('day_boundary_liturgy_jobs' not in f for f in m.WORLD["facts"])
+    assert 'va_yehi_erev_va_yehi_voqer' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -148,6 +148,10 @@ m.witness_state("bloodshed_verse", "refuses_conviction_yet_licenses_killing",
 # — read, not installed
 m.witness_read("image_clause", "affirmative_body_care_duty",
                 cites=["Vayikra Rabbah 34:3"])
+# witness-tier presupposed read: procreation_neglect_grades on
+# shofekh_dam_u_fru_urvu — read, not installed
+m.witness_read("shofekh_dam_u_fru_urvu", "procreation_neglect_grades",
+                cites=["Yevamot 63b:15", "Yevamot 63b:16", "Yevamot 63b:17", "Yevamot 63b:18"])
 
 # -------------------------- Gen.9.7 · THE_FRAME_REDOUBLED ------------------
 # וְאַתֶּם פְּרוּ וּרְבוּ שִׁרְצוּ בָאָרֶץ וּרְבוּ־בָהּ
@@ -184,7 +188,7 @@ if __name__ == "__main__":
     assert all('refuses_conviction_yet_licenses_killing' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['swarm_and_multiply']["cites"] == ['Sanhedrin 57a:6', 'Bereshit Rabbah 34:15']
     assert all('blessing_or_prohibition' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('flood_span', 'retained_though_legally_inoperative'), ('fear_grant', 'co_residence_law_and_lapsing_right'), ('meat_grant', 'theft_prohibition_inside_the_simile'), ('limb_restriction', 'grant_creates_the_law'), ('self_blood_clause', 'two_courts_split'), ('bloodshed_verse', 'complete_criminal_procedure'), ('bloodshed_verse', 'procedure_witness_and_gender_legs'), ('bloodshed_verse', 'quoted_inside_the_forewarning_liturgy'), ('image_clause', 'affirmative_body_care_duty')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('flood_span', 'retained_though_legally_inoperative'), ('fear_grant', 'co_residence_law_and_lapsing_right'), ('meat_grant', 'theft_prohibition_inside_the_simile'), ('limb_restriction', 'grant_creates_the_law'), ('self_blood_clause', 'two_courts_split'), ('bloodshed_verse', 'complete_criminal_procedure'), ('bloodshed_verse', 'procedure_witness_and_gender_legs'), ('bloodshed_verse', 'quoted_inside_the_forewarning_liturgy'), ('image_clause', 'affirmative_body_care_duty'), ('shofekh_dam_u_fru_urvu', 'procreation_neglect_grades')]
     assert m.WITNESS_READS[0]["cites"] == ['Jerusalem Talmud Sheviit 1:1:4']
     assert all('retained_though_legally_inoperative' not in f for f in m.WORLD["facts"])
     assert 'flood_span' not in m.WORLD["witnessed"]
@@ -209,4 +213,7 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[8]["cites"] == ['Vayikra Rabbah 34:3']
     assert all('affirmative_body_care_duty' not in f for f in m.WORLD["facts"])
     assert 'image_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Yevamot 63b:15', 'Yevamot 63b:16', 'Yevamot 63b:17', 'Yevamot 63b:18']
+    assert all('procreation_neglect_grades' not in f for f in m.WORLD["facts"])
+    assert 'shofekh_dam_u_fru_urvu' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

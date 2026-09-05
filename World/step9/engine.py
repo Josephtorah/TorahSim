@@ -1810,3 +1810,63 @@ RULES.update(_sv.build(V))
 # in decalogue_rules.py.
 import decalogue_rules as _dc
 RULES.update(_dc.build(V))
+
+# Round 30 — THE PRAYER BOOK OF THE PATRIARCHS (2026-09-04, the
+# GENESIS campaign's first block). 5 rules in prayerbook_rules.py.
+import prayerbook_rules as _pb
+RULES.update(_pb.build(V))
+
+# Round 31 — THE CIRCUMCISION MACHINE (2026-09-04, Genesis block 2
+# of 12). 4 rules in circumcision_rules.py.
+import circumcision_rules as _cc
+RULES.update(_cc.build(V))
+
+# Round 32 — BETROTHAL AND THE HOUSE (2026-09-04, Genesis block 3
+# of 12). 4 rules in betrothal_rules.py.
+import betrothal_rules as _bt
+RULES.update(_bt.build(V))
+
+# Round 33 — LEVIRATE, SEED, AND UNIONS (2026-09-04, Genesis block
+# 4 of 12). 5 rules in levirate_rules.py.
+import levirate_rules as _lv
+RULES.update(_lv.build(V))
+
+# Round 34 — INHERITANCE, DEEDS, AND SURETY (2026-09-04, Genesis
+# block 5 of 12). 5 rules in inheritance_rules.py.
+import inheritance_rules as _ih
+RULES.update(_ih.build(V))
+
+# Round 35 — THE COURTS' GENESIS LAYER (2026-09-04, Genesis block
+# 6 of 12). 5 rules in courts_gen_rules.py.
+import courts_gen_rules as _cg
+RULES.update(_cg.build(V))
+
+# Round 36 — THE NAME AND THE INK (2026-09-04, Genesis block 7 of
+# 12). 4 rules in name_ink_rules.py.
+import name_ink_rules as _ni
+RULES.update(_ni.build(V))
+
+# Round 37 — THE TABLE AND THE KNIFE (2026-09-04, Genesis block 8
+# of 12). 4 rules in table_knife_rules.py.
+import table_knife_rules as _tk
+RULES.update(_tk.build(V))
+
+# Round 38 — THE ALTAR BEFORE SINAI (2026-09-04, Genesis block 9
+# of 12). 5 rules in altar_presinai_rules.py.
+import altar_presinai_rules as _ap
+RULES.update(_ap.build(V))
+
+# Round 39 — BIRTH AND THE BODY (2026-09-04, Genesis block 10 of
+# 12). 6 rules in birth_body_rules.py.
+import birth_body_rules as _bb
+RULES.update(_bb.build(V))
+
+# Round 40 — THE CONDUCT TORAH (2026-09-04, Genesis block 11 of
+# 12). 5 rules in conduct_gen_rules.py.
+import conduct_gen_rules as _cn
+RULES.update(_cn.build(V))
+
+# Round 41 — KINDNESS, MOURNING, AND CHARITY (2026-09-04, Genesis
+# block 12 of 12 — THE FINALE). 5 rules in kindness_rules.py.
+import kindness_rules as _kn
+RULES.update(_kn.build(V))

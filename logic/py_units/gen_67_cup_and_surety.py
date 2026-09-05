@@ -155,6 +155,10 @@ m.fact("va_yimatze_ha_gavia_be_amtachat_binyamin")
 # the_goblet_found_in_benjamins_sack — read, not installed
 m.witness_read("the_goblet_found_in_benjamins_sack", "an_old_theft_thrown_back",
                 cites=["Bereshit Rabbah 92:8"])
+# witness-tier presupposed read: found_found on va_yechapes_va_yimatze —
+# read, not installed
+m.witness_read("va_yechapes_va_yimatze", "found_found",
+                cites=["Pesachim 7b:13", "Pesachim 7b:14", "Pesachim 7b:15"])
 
 # -------------------------- Gen.44.13 · THE_GARMENTS_TORN ------------------
 # וַיִּקְרְעוּ שִׂמְלֹתָם וַיַּעֲמֹס אִישׁ עַל־חֲמֹרוֹ וַיָּשֻׁבוּ הָעִירָה
@@ -466,32 +470,35 @@ if __name__ == "__main__":
     assert all('breaking_off_at_an_open_edge' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['the_whole_speech']["cites"] == ['Bereshit Rabbah 93:9']
     assert all('three_estrangements_discharged_at_once' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_goblet_found_in_benjamins_sack', 'an_old_theft_thrown_back'), ('they_rent_their_garments', 'the_first_installment_of_the_rending_table'), ('judah_and_his_brothers_came', 'the_second_of_three_crowning_speeches'), ('god_has_found_the_iniquity', 'the_chain_personalizes_where_the_buffer_depersonalizes'), ('judah_approached_him', 'persuasion_as_incremental_extraction'), ('a_word_spoken_on_its_wheel', 'a_rival_translator_named_inside_the_midrash'), ('the_confrontation', 'a_test_of_strength_resolved_by_a_judgment_of_piety'), ('lest_harm_befall_him', 'the_third_seat_of_the_word_that_lives_in_one_law'), ('his_soul_is_bound_up_with_his_soul', 'rendered_as_love_which_is_the_arguments_premise')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_goblet_found_in_benjamins_sack', 'an_old_theft_thrown_back'), ('va_yechapes_va_yimatze', 'found_found'), ('they_rent_their_garments', 'the_first_installment_of_the_rending_table'), ('judah_and_his_brothers_came', 'the_second_of_three_crowning_speeches'), ('god_has_found_the_iniquity', 'the_chain_personalizes_where_the_buffer_depersonalizes'), ('judah_approached_him', 'persuasion_as_incremental_extraction'), ('a_word_spoken_on_its_wheel', 'a_rival_translator_named_inside_the_midrash'), ('the_confrontation', 'a_test_of_strength_resolved_by_a_judgment_of_piety'), ('lest_harm_befall_him', 'the_third_seat_of_the_word_that_lives_in_one_law'), ('his_soul_is_bound_up_with_his_soul', 'rendered_as_love_which_is_the_arguments_premise')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 92:8']
     assert all('an_old_theft_thrown_back' not in f for f in m.WORLD["facts"])
     assert 'the_goblet_found_in_benjamins_sack' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 84:20']
+    assert m.WITNESS_READS[1]["cites"] == ['Pesachim 7b:13', 'Pesachim 7b:14', 'Pesachim 7b:15']
+    assert all('found_found' not in f for f in m.WORLD["facts"])
+    assert 'va_yechapes_va_yimatze' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 84:20']
     assert all('the_first_installment_of_the_rending_table' not in f for f in m.WORLD["facts"])
     assert 'they_rent_their_garments' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 84:17']
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 84:17']
     assert all('the_second_of_three_crowning_speeches' not in f for f in m.WORLD["facts"])
     assert 'judah_and_his_brothers_came' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Genesis 44:16', 'Bereshit Rabbah 92:9']
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Genesis 44:16', 'Bereshit Rabbah 92:9']
     assert all('the_chain_personalizes_where_the_buffer_depersonalizes' not in f for f in m.WORLD["facts"])
     assert 'god_has_found_the_iniquity' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 93:4']
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 93:4']
     assert all('persuasion_as_incremental_extraction' not in f for f in m.WORLD["facts"])
     assert 'judah_approached_him' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 93:3']
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 93:3']
     assert all('a_rival_translator_named_inside_the_midrash' not in f for f in m.WORLD["facts"])
     assert 'a_word_spoken_on_its_wheel' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 93:7', 'Onkelos Genesis 44:18']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 93:7', 'Onkelos Genesis 44:18']
     assert all('a_test_of_strength_resolved_by_a_judgment_of_piety' not in f for f in m.WORLD["facts"])
     assert 'the_confrontation' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Genesis 44:29', 'Onkelos Genesis 42:4']
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Genesis 44:29', 'Onkelos Genesis 42:4']
     assert all('the_third_seat_of_the_word_that_lives_in_one_law' not in f for f in m.WORLD["facts"])
     assert 'lest_harm_befall_him' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Genesis 44:30', 'Onkelos Genesis 44:32']
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Genesis 44:30', 'Onkelos Genesis 44:32']
     assert all('rendered_as_love_which_is_the_arguments_premise' not in f for f in m.WORLD["facts"])
     assert 'his_soul_is_bound_up_with_his_soul' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

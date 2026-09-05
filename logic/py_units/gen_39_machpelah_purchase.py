@@ -59,6 +59,10 @@ m.presupposed("chevron")
 # came_to_mourn — read, not installed
 m.witness_read("came_to_mourn", "cause_supplied_by_adjacency",
                 cites=["Bereshit Rabbah 58:5"])
+# witness-tier presupposed read: eulogy_question on lispod_le_sarah — read,
+# not installed
+m.witness_read("lispod_le_sarah", "eulogy_question",
+                cites=["Sanhedrin 46b:20", "Sanhedrin 46b:21", "Sanhedrin 46b:22"])
 
 # -------------------------- Gen.23.3 · THE_RISING_FROM_THE_DEAD_FACE -------
 # וַיָּקָם אַבְרָהָם מֵעַל פְּנֵי מֵתוֹ וַיְדַבֵּר אֶל־בְּנֵי־חֵת לֵאמֹר
@@ -72,6 +76,10 @@ m.event("rise_speak", agent="avraham")
 # rose_from_before_his_dead — read, not installed
 m.witness_read("rose_from_before_his_dead", "mourner_exemption_law_seated_here",
                 cites=["Bereshit Rabbah 58:6", "Mishnah Berakhot 3:1"])
+# witness-tier presupposed read: premourner_exemption on me_al_pene_meto —
+# read, not installed
+m.witness_read("me_al_pene_meto", "premourner_exemption",
+                cites=["Berakhot 18a:2", "Berakhot 18a:3", "Berakhot 18a:4"])
 
 # -------------------------- Gen.23.4 · THE_SOJOURNER_ASKS_FOR_A_GRAVE ------
 # גֵּר־וְתוֹשָׁב אָנֹכִי עִמָּכֶם תְּנוּ לִי אֲחֻזַּת־קֶבֶר עִמָּכֶם
@@ -227,6 +235,10 @@ m.declare("avraham", "LET",
 # hear_me_idiom — read, not installed
 m.witness_read("hear_me_idiom", "rendered_as_offer_and_acceptance",
                 cites=["Onkelos Genesis 23:13", "Onkelos Genesis 23:8"])
+# witness-tier presupposed read: betrothal_money_machine on qach_mimeni —
+# read, not installed
+m.witness_read("qach_mimeni", "betrothal_money_machine",
+                cites=["Kiddushin 2a:3", "Kiddushin 2a:4", "Kiddushin 2a:5", "Kiddushin 4b:2", "Kiddushin 4b:3", "Kiddushin 4b:4", "Kiddushin 11b:4", "Kiddushin 11b:5", "Kiddushin 11b:6"])
 
 # -------------------------- Gen.23.14 · THE_SECOND_ANSWER_FRAME ------------
 # וַיַּעַן עֶפְרוֹן אֶת־אַבְרָהָם לֵאמֹר לוֹ
@@ -278,6 +290,10 @@ m.witness_read("vendor_name_defective_at_the_weighing", "diminished_where_he_tak
 # four_hundred_shekels — read, not installed
 m.witness_read("four_hundred_shekels", "weight_table_applied_not_quoted",
                 cites=["Onkelos Genesis 23:16", "Bereshit Rabbah 58:7"])
+# witness-tier presupposed read: deed_file on over_la_socher — read, not
+# installed
+m.witness_read("over_la_socher", "deed_file",
+                cites=["Bava Batra 69b:1", "Bava Batra 69b:2", "Bekhorot 50a:7", "Bekhorot 50a:8", "Bekhorot 50a:9"])
 
 # -------------------------- Gen.23.17 · THE_FIELD_ARISES -------------------
 # וַיָּקָם שְׂדֵה עֶפְרוֹן אֲשֶׁר בַּמַּכְפֵּלָה אֲשֶׁר לִפְנֵי מַמְרֵא
@@ -363,7 +379,7 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['the_cave']
     assert m.WORLD["witnessed"]['the_cave']["cites"] == ['Bereshit Rabbah 58:4', 'Bereshit Rabbah 58:8']
     assert all('standing_occupant_registry' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('split_lifespan', 'parsed_clause_against_clause'), ('one_hundred_twenty_seven', 'inheritance_wire_to_a_later_reign'), ('came_to_mourn', 'cause_supplied_by_adjacency'), ('rose_from_before_his_dead', 'mourner_exemption_law_seated_here'), ('prince_of_God', 'honorific_solved_two_ways'), ('defective_participle_sitting', 'seated_that_very_day'), ('hear_me_idiom', 'rendered_as_offer_and_acceptance'), ('vendor_name_defective_at_the_weighing', 'diminished_where_he_takes_the_silver'), ('four_hundred_shekels', 'weight_table_applied_not_quoted'), ('field_cave_trees_borders', 'deed_specification_law'), ('purchase_on_the_record', 'standing_title_against_future_claim'), ('sons_of_chet_census', 'ten_and_every_one_a_title_mention')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('split_lifespan', 'parsed_clause_against_clause'), ('one_hundred_twenty_seven', 'inheritance_wire_to_a_later_reign'), ('came_to_mourn', 'cause_supplied_by_adjacency'), ('lispod_le_sarah', 'eulogy_question'), ('rose_from_before_his_dead', 'mourner_exemption_law_seated_here'), ('me_al_pene_meto', 'premourner_exemption'), ('prince_of_God', 'honorific_solved_two_ways'), ('defective_participle_sitting', 'seated_that_very_day'), ('hear_me_idiom', 'rendered_as_offer_and_acceptance'), ('qach_mimeni', 'betrothal_money_machine'), ('vendor_name_defective_at_the_weighing', 'diminished_where_he_takes_the_silver'), ('four_hundred_shekels', 'weight_table_applied_not_quoted'), ('over_la_socher', 'deed_file'), ('field_cave_trees_borders', 'deed_specification_law'), ('purchase_on_the_record', 'standing_title_against_future_claim'), ('sons_of_chet_census', 'ten_and_every_one_a_title_mention')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 58:1']
     assert all('parsed_clause_against_clause' not in f for f in m.WORLD["facts"])
     assert 'split_lifespan' not in m.WORLD["witnessed"]
@@ -373,31 +389,43 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 58:5']
     assert all('cause_supplied_by_adjacency' not in f for f in m.WORLD["facts"])
     assert 'came_to_mourn' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 58:6', 'Mishnah Berakhot 3:1']
+    assert m.WITNESS_READS[3]["cites"] == ['Sanhedrin 46b:20', 'Sanhedrin 46b:21', 'Sanhedrin 46b:22']
+    assert all('eulogy_question' not in f for f in m.WORLD["facts"])
+    assert 'lispod_le_sarah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 58:6', 'Mishnah Berakhot 3:1']
     assert all('mourner_exemption_law_seated_here' not in f for f in m.WORLD["facts"])
     assert 'rose_from_before_his_dead' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Genesis 23:6', 'Bereshit Rabbah 43:5']
+    assert m.WITNESS_READS[5]["cites"] == ['Berakhot 18a:2', 'Berakhot 18a:3', 'Berakhot 18a:4']
+    assert all('premourner_exemption' not in f for f in m.WORLD["facts"])
+    assert 'me_al_pene_meto' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Genesis 23:6', 'Bereshit Rabbah 43:5']
     assert all('honorific_solved_two_ways' not in f for f in m.WORLD["facts"])
     assert 'prince_of_God' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 58:7']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 58:7']
     assert all('seated_that_very_day' not in f for f in m.WORLD["facts"])
     assert 'defective_participle_sitting' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Genesis 23:13', 'Onkelos Genesis 23:8']
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Genesis 23:13', 'Onkelos Genesis 23:8']
     assert all('rendered_as_offer_and_acceptance' not in f for f in m.WORLD["facts"])
     assert 'hear_me_idiom' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 58:7']
+    assert m.WITNESS_READS[9]["cites"] == ['Kiddushin 2a:3', 'Kiddushin 2a:4', 'Kiddushin 2a:5', 'Kiddushin 4b:2', 'Kiddushin 4b:3', 'Kiddushin 4b:4', 'Kiddushin 11b:4', 'Kiddushin 11b:5', 'Kiddushin 11b:6']
+    assert all('betrothal_money_machine' not in f for f in m.WORLD["facts"])
+    assert 'qach_mimeni' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 58:7']
     assert all('diminished_where_he_takes_the_silver' not in f for f in m.WORLD["facts"])
     assert 'vendor_name_defective_at_the_weighing' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Genesis 23:16', 'Bereshit Rabbah 58:7']
+    assert m.WITNESS_READS[11]["cites"] == ['Onkelos Genesis 23:16', 'Bereshit Rabbah 58:7']
     assert all('weight_table_applied_not_quoted' not in f for f in m.WORLD["facts"])
     assert 'four_hundred_shekels' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 58:8']
+    assert m.WITNESS_READS[12]["cites"] == ['Bava Batra 69b:1', 'Bava Batra 69b:2', 'Bekhorot 50a:7', 'Bekhorot 50a:8', 'Bekhorot 50a:9']
+    assert all('deed_file' not in f for f in m.WORLD["facts"])
+    assert 'over_la_socher' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[13]["cites"] == ['Bereshit Rabbah 58:8']
     assert all('deed_specification_law' not in f for f in m.WORLD["facts"])
     assert 'field_cave_trees_borders' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 79:7']
+    assert m.WITNESS_READS[14]["cites"] == ['Bereshit Rabbah 79:7']
     assert all('standing_title_against_future_claim' not in f for f in m.WORLD["facts"])
     assert 'purchase_on_the_record' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 58:8']
+    assert m.WITNESS_READS[15]["cites"] == ['Bereshit Rabbah 58:8']
     assert all('ten_and_every_one_a_title_mention' not in f for f in m.WORLD["facts"])
     assert 'sons_of_chet_census' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

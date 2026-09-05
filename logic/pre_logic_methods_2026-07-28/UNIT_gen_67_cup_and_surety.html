@@ -174,6 +174,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">וַיִּמָּצֵא הַגָּבִיעַ בְּאַמְתַּחַת בִּנְיָמִן</span> · <i>va-yimatze ha-gavia be-amtachat binyamin</i><br><span class="gloss">= and-yimatze the-gavia in-amtachat binyamin</span></td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_goblet_found_in_benjamins_sack, an_old_theft_thrown_back)</span><br><span class="gloss">= WITNESS-READ(the-goblet-found-in-benjamins-sack, an-old-theft-thrown-back)</span><br>THE ACCUSATION REACHES BACK THIRTEEN CHAPTERS [credit at its home seat]. The brothers taunt - thief, son of a thief - reaching back to the mother&#x27;s theft of the household gods, and the answer comes straight: is the man who sold Joseph here? are there goats here? The retort names the two crimes the accusers actually committed. A standing row seated on this verse. [folded shape: kept record]
 </td><td>—</td><td class='cite'>Bereshit Rabbah 92:8</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(va_yechapes_va_yimatze, found_found)</span><br><span class="gloss">= WITNESS-READ(and-yechapes-and-yimatze, found-found)</span><br>THE FOUND-FOUND CHAIN&#x27;S FIRST LINK [claim G67-33]. The round-36 name-and-ink block seats the leaven-search derivation: Rav Chisda&#x27;s chain — &#x27;we learned FINDING from FINDING&#x27;: &#x27;leaven shall not be FOUND in your houses&#x27; beside va-yechapes... va-yimatze (&#x27;he SEARCHED — beginning with the eldest and ending with the youngest — and it was FOUND,&#x27; our 44:12, the goblet); then finding-from- searching, searching-from-candles, candles-from-candle: the four- link verbal-analogy chain that carries the Passover search law, its first link this unit&#x27;s own search scene — the bridge the Genesis sweep predicted, verbatim (Pesachim 7b:13-15). Auto-seat law, F-147 (round 36, the name-and-ink block).
+</td><td>—</td><td class='cite'>Pesachim 7b:13, Pesachim 7b:14, Pesachim 7b:15</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The staged search lands.</div>
 </div>
@@ -797,6 +799,10 @@ m.fact(&quot;va_yimatze_ha_gavia_be_amtachat_binyamin&quot;)
 # the_goblet_found_in_benjamins_sack — read, not installed
 m.witness_read(&quot;the_goblet_found_in_benjamins_sack&quot;, &quot;an_old_theft_thrown_back&quot;,
                 cites=[&quot;Bereshit Rabbah 92:8&quot;])
+# witness-tier presupposed read: found_found on va_yechapes_va_yimatze —
+# read, not installed
+m.witness_read(&quot;va_yechapes_va_yimatze&quot;, &quot;found_found&quot;,
+                cites=[&quot;Pesachim 7b:13&quot;, &quot;Pesachim 7b:14&quot;, &quot;Pesachim 7b:15&quot;])
 
 # -------------------------- Gen.44.13 · THE_GARMENTS_TORN ------------------
 # וַיִּקְרְעוּ שִׂמְלֹתָם וַיַּעֲמֹס אִישׁ עַל־חֲמֹרוֹ וַיָּשֻׁבוּ הָעִירָה
@@ -1108,33 +1114,36 @@ if __name__ == &quot;__main__&quot;:
     assert all(&#x27;breaking_off_at_an_open_edge&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert m.WORLD[&quot;witnessed&quot;][&#x27;the_whole_speech&#x27;][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 93:9&#x27;]
     assert all(&#x27;three_estrangements_discharged_at_once&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;the_goblet_found_in_benjamins_sack&#x27;, &#x27;an_old_theft_thrown_back&#x27;), (&#x27;they_rent_their_garments&#x27;, &#x27;the_first_installment_of_the_rending_table&#x27;), (&#x27;judah_and_his_brothers_came&#x27;, &#x27;the_second_of_three_crowning_speeches&#x27;), (&#x27;god_has_found_the_iniquity&#x27;, &#x27;the_chain_personalizes_where_the_buffer_depersonalizes&#x27;), (&#x27;judah_approached_him&#x27;, &#x27;persuasion_as_incremental_extraction&#x27;), (&#x27;a_word_spoken_on_its_wheel&#x27;, &#x27;a_rival_translator_named_inside_the_midrash&#x27;), (&#x27;the_confrontation&#x27;, &#x27;a_test_of_strength_resolved_by_a_judgment_of_piety&#x27;), (&#x27;lest_harm_befall_him&#x27;, &#x27;the_third_seat_of_the_word_that_lives_in_one_law&#x27;), (&#x27;his_soul_is_bound_up_with_his_soul&#x27;, &#x27;rendered_as_love_which_is_the_arguments_premise&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;the_goblet_found_in_benjamins_sack&#x27;, &#x27;an_old_theft_thrown_back&#x27;), (&#x27;va_yechapes_va_yimatze&#x27;, &#x27;found_found&#x27;), (&#x27;they_rent_their_garments&#x27;, &#x27;the_first_installment_of_the_rending_table&#x27;), (&#x27;judah_and_his_brothers_came&#x27;, &#x27;the_second_of_three_crowning_speeches&#x27;), (&#x27;god_has_found_the_iniquity&#x27;, &#x27;the_chain_personalizes_where_the_buffer_depersonalizes&#x27;), (&#x27;judah_approached_him&#x27;, &#x27;persuasion_as_incremental_extraction&#x27;), (&#x27;a_word_spoken_on_its_wheel&#x27;, &#x27;a_rival_translator_named_inside_the_midrash&#x27;), (&#x27;the_confrontation&#x27;, &#x27;a_test_of_strength_resolved_by_a_judgment_of_piety&#x27;), (&#x27;lest_harm_befall_him&#x27;, &#x27;the_third_seat_of_the_word_that_lives_in_one_law&#x27;), (&#x27;his_soul_is_bound_up_with_his_soul&#x27;, &#x27;rendered_as_love_which_is_the_arguments_premise&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 92:8&#x27;]
     assert all(&#x27;an_old_theft_thrown_back&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;the_goblet_found_in_benjamins_sack&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:20&#x27;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Pesachim 7b:13&#x27;, &#x27;Pesachim 7b:14&#x27;, &#x27;Pesachim 7b:15&#x27;]
+    assert all(&#x27;found_found&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;va_yechapes_va_yimatze&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:20&#x27;]
     assert all(&#x27;the_first_installment_of_the_rending_table&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;they_rent_their_garments&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:17&#x27;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:17&#x27;]
     assert all(&#x27;the_second_of_three_crowning_speeches&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;judah_and_his_brothers_came&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Onkelos Genesis 44:16&#x27;, &#x27;Bereshit Rabbah 92:9&#x27;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Onkelos Genesis 44:16&#x27;, &#x27;Bereshit Rabbah 92:9&#x27;]
     assert all(&#x27;the_chain_personalizes_where_the_buffer_depersonalizes&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;god_has_found_the_iniquity&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 93:4&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 93:4&#x27;]
     assert all(&#x27;persuasion_as_incremental_extraction&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;judah_approached_him&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 93:3&#x27;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 93:3&#x27;]
     assert all(&#x27;a_rival_translator_named_inside_the_midrash&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;a_word_spoken_on_its_wheel&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 93:7&#x27;, &#x27;Onkelos Genesis 44:18&#x27;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 93:7&#x27;, &#x27;Onkelos Genesis 44:18&#x27;]
     assert all(&#x27;a_test_of_strength_resolved_by_a_judgment_of_piety&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;the_confrontation&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Onkelos Genesis 44:29&#x27;, &#x27;Onkelos Genesis 42:4&#x27;]
+    assert m.WITNESS_READS[8][&quot;cites&quot;] == [&#x27;Onkelos Genesis 44:29&#x27;, &#x27;Onkelos Genesis 42:4&#x27;]
     assert all(&#x27;the_third_seat_of_the_word_that_lives_in_one_law&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;lest_harm_befall_him&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[8][&quot;cites&quot;] == [&#x27;Onkelos Genesis 44:30&#x27;, &#x27;Onkelos Genesis 44:32&#x27;]
+    assert m.WITNESS_READS[9][&quot;cites&quot;] == [&#x27;Onkelos Genesis 44:30&#x27;, &#x27;Onkelos Genesis 44:32&#x27;]
     assert all(&#x27;rendered_as_love_which_is_the_arguments_premise&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;his_soul_is_bound_up_with_his_soul&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

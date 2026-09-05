@@ -1,0 +1,98 @@
+# THE PRAYER BOOK OF THE PATRIARCHS (round 30 — the first block of
+# the GENESIS campaign, 2026-09-04; owner: "Do 3 then 2"). The three
+# instituted prayers with the offerings arm, the fixed place, the
+# six-hours constant, the day boundary's two liturgy jobs, the
+# silent line, the visited-Sarah dispute, and three standing seats
+# consumed as credits.
+# Read-source: logic/oral_triage/genesis_block_prayerbook_2026-09-04.md.
+
+- module: patriarch_prayers
+  tractate: Berakhot
+  oracle: Berakhot 26b:4-10, 27a:9-11
+  exodus_anchor: {unit: gen_35_sodom_overthrow_cave (with gen_41 + gen_48 + gen_34 cross-refs), ref: Gen.19.27 + 24.63 + 28.11 + 18.1,
+    claims: [G35-26]}
+  cases:
+  - id: Be_source
+    input: {query: three_prayers_source}
+    expected: {verdict: [patriarchs_instituted, against_daily_offerings]}
+    class: A
+  - id: Be_morning
+    input: {query: morning_prayer_founder}
+    expected: {verdict: abraham_standing}
+    class: A
+  - id: Be_afternoon
+    input: {query: afternoon_prayer_founder}
+    expected: {verdict: isaac_meditation}
+    class: A
+  - id: Be_evening
+    input: {query: evening_prayer_founder}
+    expected: {verdict: jacob_encounter}
+    class: A
+  - id: Be_limits
+    input: {query: prayer_time_limits}
+    expected: {verdict: [until_midday, until_four_hours]}
+    class: A
+  - id: Be_heat
+    input: {query: heat_of_day_hours}
+    expected: {verdict: six_hours}
+    class: A
+
+- module: prayer_practice
+  tractate: Berakhot
+  oracle: Berakhot 2a:8-10, 6b:7-9, 26a:16-18
+  exodus_anchor: {unit: gen_35_sodom_overthrow_cave + gen_01_creation_boot, ref: Gen.19.27 + 1.5,
+    claims: [G35-26, G01-07]}
+  cases:
+  - id: Be_place
+    input: {query: fixed_prayer_place}
+    expected: {verdict: abraham_precedent}
+    class: A
+  - id: Be_makeup
+    input: {query: missed_prayer_makeup}
+    expected: {verdict: next_prayer_twice}
+    class: A
+  - id: Be_shema
+    input: {query: shema_evening_first}
+    expected: {verdict: creation_order}
+    class: A
+
+- module: silent_line
+  tractate: Pesachim
+  oracle: Pesachim 56a:6-8
+  exodus_anchor: {unit: gen_72_testament_twelve, ref: Gen.49.1,
+    claims: [G72-34]}
+  cases:
+  - id: Pe_silent
+    input: {query: blessed_name_silent}
+    expected: {verdict: said_in_a_whisper}
+    class: A
+
+- module: remembrance_verses
+  tractate: Rosh Hashanah
+  oracle: Rosh Hashanah 32b:4-6
+  exodus_anchor: {unit: gen_37_laughter_wilderness_oath, ref: Gen.21.1,
+    claims: [G37-30]}
+  cases:
+  - id: RH_sarah
+    input: {query: visited_sarah_status}
+    expected: {verdict: [counts_as_remembrance, not_a_remembrance]}
+    class: A
+
+- module: patriarch_liturgy
+  tractate: Berakhot
+  oracle: Berakhot 13a:8; Pesachim 117b:11; Chullin 49a:18 (all standing seats)
+  exodus_anchor: {unit: gen_33_shaddai_covenant_flesh + gen_27_the_call, ref: Gen.17.5 + 12.2-3,
+    claims: [G33-20, G27-18, G27-22]}
+  cases:
+  - id: Be_abram
+    input: {query: abram_name_ban}
+    expected: {verdict: [positive_command_breached, negative_command_breached]}
+    class: A
+  - id: Pe_amidah
+    input: {query: amidah_patriarch_opening}
+    expected: {verdict: clause_mapped_blessing}
+    class: A
+  - id: Ch_return
+    input: {query: priests_return_blessing}
+    expected: {verdict: blessers_blessed}
+    class: A

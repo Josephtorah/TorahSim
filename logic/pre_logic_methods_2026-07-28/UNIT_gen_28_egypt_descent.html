@@ -68,6 +68,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">mitzrayim are READ without prior install (known geography)</span><br>flag, not fix (Egypt — the table&#x27;s name, 10:6, read here as a place)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(descent_episode, paved_way_template_of_eleven_ink_pairs)</span><br><span class="gloss">= WITNESS-READ(descent-episode, paved-way-template-fowl-eleven-ink-pairs)</span><br>THIS EPISODE IS A SPECIFICATION THE NATION LATER EXECUTES [claim G28-08]. &#x27;Go and pave the way before your descendants&#x27; - and the chain enumerates ELEVEN matched ink-pairs between this descent and Israel&#x27;s, word answering word: famine and famine, descended and descended, to-sojourn and to-sojourn, severe and severe. Not a precedent but a TEMPLATE, checked token by token against the later text; its pairs return as credited seats across the rest of Genesis. The directional token of this very verse is separately named in the grammar rule&#x27;s own census [claim G28-12]. [folded shape: cross-corpus link]
 </td><td>—</td><td class='cite'>Bereshit Rabbah 40:6, Yevamot 13b:6</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(va_yered_avram, descent_conduct)</span><br><span class="gloss">= WITNESS-READ(and-yered-avram, descent-conduct)</span><br>THE DESCENT UNIT&#x27;S TWO CONDUCT LAWS [claim G28-14]. The round-40 conduct block seats a pair. THE SCATTER RULE: raav ba-ir pazer raglekha (&#x27;FAMINE in the city — SCATTER your feet&#x27;) — va-yered Avram Mitzrayma (&#x27;and Abram went DOWN to Egypt to sojourn,&#x27; our 12:10), with the mortal-doubt extension (Bava Kamma 60b:6-7). THE WIFE&#x27;S HONOR: blessing is found in a man&#x27;s house only for his WIFE&#x27;S sake — u-le-Avram heitiv baavurah (&#x27;and he did good to Abram FOR HER SAKE,&#x27; our 12:16), with Rava&#x27;s honor-your-wives-and- grow-rich practice (Bava Metzia 59a:11). Auto-seat law, F-175 (round 40, the conduct block).
+</td><td>—</td><td class='cite'>Bava Kamma 60b:5, Bava Kamma 60b:6, Bava Kamma 60b:7, Bava Metzia 59a:10, Bava Metzia 59a:11</td><td>witnessed</td></tr>
 </table>
 <div class="meta">One verse bracketed by ba-aretz (&#x27;in the land&#x27;) at both rest and end: the land of the pledge empties, and the pledge&#x27;s man goes down the road two divine descents opened.</div>
 </div>
@@ -527,6 +529,10 @@ m.presupposed(&quot;mitzrayim&quot;)
 # descent_episode — read, not installed
 m.witness_read(&quot;descent_episode&quot;, &quot;paved_way_template_of_eleven_ink_pairs&quot;,
                 cites=[&quot;Bereshit Rabbah 40:6&quot;, &quot;Yevamot 13b:6&quot;])
+# witness-tier presupposed read: descent_conduct on va_yered_avram — read,
+# not installed
+m.witness_read(&quot;va_yered_avram&quot;, &quot;descent_conduct&quot;,
+                cites=[&quot;Bava Kamma 60b:5&quot;, &quot;Bava Kamma 60b:6&quot;, &quot;Bava Kamma 60b:7&quot;, &quot;Bava Metzia 59a:10&quot;, &quot;Bava Metzia 59a:11&quot;])
 
 # -------------------------- Gen.12.11 · THE_FIRST_SPEECH_IS_FEAR_AND_BEAUTY -
 # וַיְהִי כַּאֲשֶׁר הִקְרִיב לָבוֹא מִצְרָיְמָה וַיֹּאמֶר אֶל־שָׂרַי
@@ -704,18 +710,21 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 14
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;descent_episode&#x27;, &#x27;paved_way_template_of_eleven_ink_pairs&#x27;), (&#x27;request_particle&#x27;, &#x27;consent_established_by_one_word&#x27;), (&#x27;affliction_op&#x27;, &#x27;named_disease_carried_into_divorce_law&#x27;), (&#x27;escort_and_release&#x27;, &#x27;four_steps_priced_at_four_hundred_years&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;descent_episode&#x27;, &#x27;paved_way_template_of_eleven_ink_pairs&#x27;), (&#x27;va_yered_avram&#x27;, &#x27;descent_conduct&#x27;), (&#x27;request_particle&#x27;, &#x27;consent_established_by_one_word&#x27;), (&#x27;affliction_op&#x27;, &#x27;named_disease_carried_into_divorce_law&#x27;), (&#x27;escort_and_release&#x27;, &#x27;four_steps_priced_at_four_hundred_years&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 40:6&#x27;, &#x27;Yevamot 13b:6&#x27;]
     assert all(&#x27;paved_way_template_of_eleven_ink_pairs&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;descent_episode&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 52:4&#x27;, &#x27;Sanhedrin 39b:21&#x27;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Bava Kamma 60b:5&#x27;, &#x27;Bava Kamma 60b:6&#x27;, &#x27;Bava Kamma 60b:7&#x27;, &#x27;Bava Metzia 59a:10&#x27;, &#x27;Bava Metzia 59a:11&#x27;]
+    assert all(&#x27;descent_conduct&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;va_yered_avram&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 52:4&#x27;, &#x27;Sanhedrin 39b:21&#x27;]
     assert all(&#x27;consent_established_by_one_word&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;request_particle&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 41:2&#x27;, &#x27;Jerusalem Talmud Ketubot 7:9:3&#x27;, &#x27;Vayikra Rabbah 16:1&#x27;, &#x27;Arakhin 16a:9&#x27;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 41:2&#x27;, &#x27;Jerusalem Talmud Ketubot 7:9:3&#x27;, &#x27;Vayikra Rabbah 16:1&#x27;, &#x27;Arakhin 16a:9&#x27;]
     assert all(&#x27;named_disease_carried_into_divorce_law&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;affliction_op&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Sotah 46b:14&#x27;, &#x27;Mekhilta DeRabbi Shimon Ben Yochai 3:1&#x27;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Sotah 46b:14&#x27;, &#x27;Mekhilta DeRabbi Shimon Ben Yochai 3:1&#x27;]
     assert all(&#x27;four_steps_priced_at_four_hundred_years&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;escort_and_release&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

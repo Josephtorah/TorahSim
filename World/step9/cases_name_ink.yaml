@@ -1,0 +1,76 @@
+# THE NAME AND THE INK (round 36 — Genesis exam block 7 of 12,
+# 2026-09-04). Name sanctity, the oath formula, the ink canon, the
+# scope geography.
+# Read-source: logic/oral_triage/genesis_block_name_ink_2026-09-04.md.
+
+- module: name_sanctity
+  tractate: Shevuot
+  oracle: Shevuot 35b:8-12
+  exodus_anchor: {unit: gen_34 + gen_35, ref: Gen.18.3 + 19.18,
+    claims: [G34-25, G35-27]}
+  cases:
+  - id: Sh_abraham
+    input: {query: abraham_names_exception}
+    expected: {verdict: [profane_addressed_to_guests, holy_even_this]}
+    class: A
+  - id: Sh_lot
+    input: {query: lot_names_exception}
+    expected: {verdict: holy_kill_and_revive}
+    class: A
+
+- module: oath_formula
+  tractate: Shevuot
+  oracle: Shevuot 36a:12-15, 38b:19-23
+  exodus_anchor: {unit: gen_22 + gen_40, ref: Gen.9.11-15 + 24.2-3,
+    claims: [G22-12, G40-35]}
+  cases:
+  - id: Sh_no
+    input: {query: no_is_oath}
+    expected: {verdict: doubled_no_doubled_yes}
+    class: A
+  - id: Sh_swear
+    input: {query: oath_by_the_name}
+    expected: {verdict: torah_formula_with_object_grasp}
+    class: A
+
+- module: ink_canon_gen
+  tractate: Chullin
+  oracle: Chullin 65a:1-2; Nedarim 37b:7-9; Sanhedrin 108b:13-15; Pesachim 7b:13-15; Pesachim 3a:10 + Shabbat 105a:2 (standing)
+  exodus_anchor: {unit: gen_30 + gen_34 + gen_16 + gen_67 + gen_17 + gen_33, ref: Gen.14.4 + 18.5 + 6.18 + 44.12 + 7.8 + 17.5,
+    claims: [G30-31, G34-25, G16-20, G67-33, G17-10, G33-19]}
+  cases:
+  - id: Ch_kedor
+    input: {query: kedorlaomer_layout}
+    expected: {verdict: two_words_never_two_lines}
+    class: A
+  - id: Ne_ittur
+    input: {query: scribes_adornment}
+    expected: {verdict: five_adornments_two_ours}
+    class: A
+  - id: Sa_order
+    input: {query: operand_order_law}
+    expected: {verdict: separated_entry_rejoined_exit}
+    class: A
+  - id: Pe_found
+    input: {query: found_found_chain}
+    expected: {verdict: four_link_analogy_chain}
+    class: A
+  - id: Pe_clean
+    input: {query: clean_language_canon}
+    expected: {verdict: eight_letters_curved}
+    class: A
+  - id: Sh_notarikon
+    input: {query: notarikon_license}
+    expected: {verdict: av_hamon_proof_seat}
+    class: A
+
+- module: scope_geography
+  tractate: Bekhorot
+  oracle: Bekhorot 55a:21-22
+  exodus_anchor: {unit: gen_08_toledot_garden_first_rule, ref: Gen.2.11-14,
+    claims: [G08-31]}
+  cases:
+  - id: Bk_rivers
+    input: {query: rivers_below_euphrates}
+    expected: {verdict: euphrates_above_all}
+    class: A

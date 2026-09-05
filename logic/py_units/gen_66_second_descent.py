@@ -120,6 +120,14 @@ m.fact("anokhi_eervenu_mi_yadi_tevaqshenu")
 # judahs_pledge — read, not installed
 m.witness_read("judahs_pledge", "read_clause_by_clause_through_a_proverb",
                 cites=["Bereshit Rabbah 93:1", "Onkelos Genesis 43:9"])
+# witness-tier presupposed read: surety_root on anokhi_eervenu — read, not
+# installed
+m.witness_read("anokhi_eervenu", "surety_root",
+                cites=["Bava Batra 173b:8", "Bava Batra 173b:9", "Bava Batra 173b:10", "Bava Batra 173b:11"])
+# witness-tier presupposed read: conditional_ban on ve_chatati_kol_ha_yamim
+# — read, not installed
+m.witness_read("ve_chatati_kol_ha_yamim", "conditional_ban",
+                cites=["Makkot 11b:1", "Makkot 11b:2"])
 
 # -------------------------- Gen.43.10 · WE_COULD_HAVE_RETURNED_TWICE -------
 # כִּי לוּלֵא הִתְמַהְמָהְנוּ כִּי־עַתָּה שַׁבְנוּ זֶה פַעֲמָיִם
@@ -229,6 +237,10 @@ m.declare("yosef", "LET",
 # slaughter_and_prepare — read, not installed
 m.witness_read("slaughter_and_prepare", "a_sabbath_kept_before_it_was_given",
                 cites=["Bereshit Rabbah 92:4", "Onkelos Genesis 43:16"])
+# witness-tier presupposed read: fitting_slaughter on
+# u_tvoach_tevach_ve_hakhen — read, not installed
+m.witness_read("u_tvoach_tevach_ve_hakhen", "fitting_slaughter",
+                cites=["Chullin 85a:11", "Chullin 85a:12", "Chullin 85a:13"])
 
 # -------------------------- Gen.43.17 · AS_JOSEPH_SAID ---------------------
 # וַיַּעַשׂ הָאִישׁ כַּאֲשֶׁר אָמַר יוֹסֵף וַיָּבֵא הָאִישׁ אֶת־הָאֲנָשִׁים
@@ -481,29 +493,38 @@ if __name__ == "__main__":
     assert all('twenty_two_years_hanging_on_one_suffix' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['your_servant_our_father']["cites"] == ['Bereshit Rabbah 100:3']
     assert all('the_fifth_seat_and_the_reason_for_almost' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_famine_was_severe', 'an_enumerated_member_of_the_paved_way'), ('judahs_pledge', 'read_clause_by_clause_through_a_proverb'), ('may_god_almighty_give_you_mercy', 'prayer_sited_where_the_accounting_ends'), ('slaughter_and_prepare', 'a_sabbath_kept_before_it_was_given'), ('to_roll_and_to_fall_upon_us', 'resolved_into_domination_and_false_charge'), ('god_be_gracious_to_you_my_son', 'a_withheld_grace_paid_by_another_hand'), ('an_abomination_to_the_egyptians', 'the_taboo_explained_rather_than_translated'), ('the_men_looked_at_one_another', 'the_duel_already_under_way')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_famine_was_severe', 'an_enumerated_member_of_the_paved_way'), ('judahs_pledge', 'read_clause_by_clause_through_a_proverb'), ('anokhi_eervenu', 'surety_root'), ('ve_chatati_kol_ha_yamim', 'conditional_ban'), ('may_god_almighty_give_you_mercy', 'prayer_sited_where_the_accounting_ends'), ('slaughter_and_prepare', 'a_sabbath_kept_before_it_was_given'), ('u_tvoach_tevach_ve_hakhen', 'fitting_slaughter'), ('to_roll_and_to_fall_upon_us', 'resolved_into_domination_and_false_charge'), ('god_be_gracious_to_you_my_son', 'a_withheld_grace_paid_by_another_hand'), ('an_abomination_to_the_egyptians', 'the_taboo_explained_rather_than_translated'), ('the_men_looked_at_one_another', 'the_duel_already_under_way')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 40:6']
     assert all('an_enumerated_member_of_the_paved_way' not in f for f in m.WORLD["facts"])
     assert 'the_famine_was_severe' not in m.WORLD["witnessed"]
     assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 93:1', 'Onkelos Genesis 43:9']
     assert all('read_clause_by_clause_through_a_proverb' not in f for f in m.WORLD["facts"])
     assert 'judahs_pledge' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 92:2']
+    assert m.WITNESS_READS[2]["cites"] == ['Bava Batra 173b:8', 'Bava Batra 173b:9', 'Bava Batra 173b:10', 'Bava Batra 173b:11']
+    assert all('surety_root' not in f for f in m.WORLD["facts"])
+    assert 'anokhi_eervenu' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Makkot 11b:1', 'Makkot 11b:2']
+    assert all('conditional_ban' not in f for f in m.WORLD["facts"])
+    assert 've_chatati_kol_ha_yamim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 92:2']
     assert all('prayer_sited_where_the_accounting_ends' not in f for f in m.WORLD["facts"])
     assert 'may_god_almighty_give_you_mercy' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 92:4', 'Onkelos Genesis 43:16']
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 92:4', 'Onkelos Genesis 43:16']
     assert all('a_sabbath_kept_before_it_was_given' not in f for f in m.WORLD["facts"])
     assert 'slaughter_and_prepare' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Genesis 43:18']
+    assert m.WITNESS_READS[6]["cites"] == ['Chullin 85a:11', 'Chullin 85a:12', 'Chullin 85a:13']
+    assert all('fitting_slaughter' not in f for f in m.WORLD["facts"])
+    assert 'u_tvoach_tevach_ve_hakhen' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Genesis 43:18']
     assert all('resolved_into_domination_and_false_charge' not in f for f in m.WORLD["facts"])
     assert 'to_roll_and_to_fall_upon_us' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 78:10', 'Onkelos Genesis 43:29', 'Bereshit Rabbah 95:1']
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 78:10', 'Onkelos Genesis 43:29', 'Bereshit Rabbah 95:1']
     assert all('a_withheld_grace_paid_by_another_hand' not in f for f in m.WORLD["facts"])
     assert 'god_be_gracious_to_you_my_son' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Genesis 43:32']
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Genesis 43:32']
     assert all('the_taboo_explained_rather_than_translated' not in f for f in m.WORLD["facts"])
     assert 'an_abomination_to_the_egyptians' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 93:2', 'Onkelos Genesis 43:33', 'Bereshit Rabbah 92:5']
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 93:2', 'Onkelos Genesis 43:33', 'Bereshit Rabbah 92:5']
     assert all('the_duel_already_under_way' not in f for f in m.WORLD["facts"])
     assert 'the_men_looked_at_one_another' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -86,6 +86,10 @@ m.spec_delta("sheretz nefesh chaya; of (bare classes)",
              "kol- totality x2, kind-keys le-minehem / le-minehu, of differentiated as of KANAF")
 # ‹כִּי־טוֹב› (“that good”) — test PASS — oracle-word good, on living-being
 m.test("PASS", "tov", "nefesh_chaya")
+# witness-tier presupposed read: sea_kilayim on le_minehu_ba_yam — read, not
+# installed
+m.witness_read("le_minehu_ba_yam", "sea_kilayim",
+                cites=["Bava Kamma 55a:11", "Bava Kamma 55a:12", "Bava Kamma 55a:13"])
 
 # -------------------------- Gen.1.22 · BLESS_MANDATE -----------------------
 # וַיְבָרֶךְ אֹתָם אֱלֹהִים לֵאמֹר פְּרוּ וּרְבוּ וּמִלְאוּ אֶת־הַמַּיִם
@@ -129,4 +133,8 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['taninim']
     assert m.WORLD["witnessed"]['taninim']["cites"] == ['Bereshit Rabbah 7:4', 'Bava Batra 74b:5', 'Bava Batra 74b:6']
     assert all('no_propagating_pair' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('le_minehu_ba_yam', 'sea_kilayim')]
+    assert m.WITNESS_READS[0]["cites"] == ['Bava Kamma 55a:11', 'Bava Kamma 55a:12', 'Bava Kamma 55a:13']
+    assert all('sea_kilayim' not in f for f in m.WORLD["facts"])
+    assert 'le_minehu_ba_yam' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

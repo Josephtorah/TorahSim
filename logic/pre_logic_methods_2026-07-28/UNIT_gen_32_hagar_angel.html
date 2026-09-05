@@ -129,6 +129,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td><span class="he">יִשְׁפֹּט יְהוָה בֵּינִי וּבֵינֶיךָ</span> · <i>yishpot YHWH beini u-veinekha</i><br><span class="gloss">= yishpot the-LORD beini and-veinekha</span></td><td class='cite'>TIR-026</td><td>tested</td></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(let_the_lord_judge, rule_stated_then_narrowed)</span><br><span class="gloss">= WITNESS-READ(let-the-lord-judge, rule-stated-then-narrowed)</span><br>A RULE DERIVED HERE AND LIMITED LATER [claim G32-17]. R. Chanan holds that whoever passes judgment on another to Heaven is punished first, with this verse&#x27;s &#x27;let the Lord judge between me and you&#x27; the proof and the later death the sequel. The Babylonian seat then supplies the limiting clause the earlier statement lacked: only where earthly recourse exists. Both forms carried, the refinement recorded rather than merged. [folded shape: priced law]
 </td><td>—</td><td class='cite'>Bava Kamma 93a:3, Rosh Hashanah 16b:5</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(chamasi_alekha, invoking_heaven)</span><br><span class="gloss">= WITNESS-READ(chamasi-alekha, invoking-heaven)</span><br>THE INVOKER PUNISHED FIRST [claim G32-23]. Rav Chanan: who hands his fellow to Heaven&#x27;s judgment is punished FIRST — Sarai&#x27;s cry at our 16:5, &#x27;my WRONG be upon you,&#x27; answered by the record at 23:2, Abraham come to eulogize Sarah; the condition rides the row — only where earthly recourse exists — and R. Yitzchak&#x27;s woe-to-the-crier rider follows (Bava Kamma 93a:3-4). Auto-seat law, F-194 (round 41, the kindness block).
+</td><td>—</td><td class='cite'>Bava Kamma 93a:2, Bava Kamma 93a:3, Bava Kamma 93a:4</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The grievance escalates past its addressee: a flood-word for a household wrong, a covenant-perfect for a gift gone sour — and then over the husband&#x27;s head to the only court left, in a mood the machine must file as the corpus&#x27;s first human demand on God.</div>
 </div>
@@ -837,6 +839,10 @@ m.declare(&quot;saray&quot;, &quot;LET&quot;,
 # let_the_lord_judge — read, not installed
 m.witness_read(&quot;let_the_lord_judge&quot;, &quot;rule_stated_then_narrowed&quot;,
                 cites=[&quot;Bava Kamma 93a:3&quot;, &quot;Rosh Hashanah 16b:5&quot;])
+# witness-tier presupposed read: invoking_heaven on chamasi_alekha — read,
+# not installed
+m.witness_read(&quot;chamasi_alekha&quot;, &quot;invoking_heaven&quot;,
+                cites=[&quot;Bava Kamma 93a:2&quot;, &quot;Bava Kamma 93a:3&quot;, &quot;Bava Kamma 93a:4&quot;])
 
 # -------------------------- Gen.16.6 · THE_PERMISSION_THE_AFFLICTION_THE_FLIGHT -
 # וַיֹּאמֶר אַבְרָם אֶל־שָׂרַי הִנֵּה שִׁפְחָתֵךְ בְּיָדֵךְ עֲשִׂי־לָהּ
@@ -1041,7 +1047,7 @@ if __name__ == &quot;__main__&quot;:
     assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;angel_and_naming_censuses&#x27;]
     assert m.WORLD[&quot;witnessed&quot;][&#x27;angel_and_naming_censuses&#x27;][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 45:7&#x27;, &#x27;Jerusalem Talmud Berakhot 1:6:10&#x27;, &#x27;Bereshit Rabbah 45:8&#x27;]
     assert all(&#x27;both_disputed&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;ten_years_clause&#x27;, &#x27;binding_rule_on_a_self_graded_hint&#x27;), (&#x27;ten_years_clock&#x27;, &#x27;restarted_by_miscarriage&#x27;), (&#x27;let_the_lord_judge&#x27;, &#x27;rule_stated_then_narrowed&#x27;), (&#x27;affliction_scene&#x27;, &#x27;statutes_pleaded_and_precedent_set&#x27;), (&#x27;angel_of_the_lord&#x27;, &#x27;divine_name_marks_the_mode&#x27;), (&#x27;el_roi&#x27;, &#x27;name_coined_here_still_in_use&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;ten_years_clause&#x27;, &#x27;binding_rule_on_a_self_graded_hint&#x27;), (&#x27;ten_years_clock&#x27;, &#x27;restarted_by_miscarriage&#x27;), (&#x27;let_the_lord_judge&#x27;, &#x27;rule_stated_then_narrowed&#x27;), (&#x27;chamasi_alekha&#x27;, &#x27;invoking_heaven&#x27;), (&#x27;affliction_scene&#x27;, &#x27;statutes_pleaded_and_precedent_set&#x27;), (&#x27;angel_of_the_lord&#x27;, &#x27;divine_name_marks_the_mode&#x27;), (&#x27;el_roi&#x27;, &#x27;name_coined_here_still_in_use&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Tosefta Yevamot 8:4&#x27;, &#x27;Yevamot 64a:5&#x27;, &#x27;Bereshit Rabbah 45:3&#x27;, &#x27;Jerusalem Talmud Yevamot 6:6:3&#x27;, &#x27;Mishnah Yevamot 6:6&#x27;]
     assert all(&#x27;binding_rule_on_a_self_graded_hint&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;ten_years_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -1051,14 +1057,17 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Bava Kamma 93a:3&#x27;, &#x27;Rosh Hashanah 16b:5&#x27;]
     assert all(&#x27;rule_stated_then_narrowed&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;let_the_lord_judge&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 45:6&#x27;, &#x27;Bereshit Rabbah 71:7&#x27;, &#x27;Bava Kamma 92b:5&#x27;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Bava Kamma 93a:2&#x27;, &#x27;Bava Kamma 93a:3&#x27;, &#x27;Bava Kamma 93a:4&#x27;]
+    assert all(&#x27;invoking_heaven&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;chamasi_alekha&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 45:6&#x27;, &#x27;Bereshit Rabbah 71:7&#x27;, &#x27;Bava Kamma 92b:5&#x27;]
     assert all(&#x27;statutes_pleaded_and_precedent_set&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;affliction_scene&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 5:4&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 5:4&#x27;]
     assert all(&#x27;divine_name_marks_the_mode&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;angel_of_the_lord&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Jerusalem Talmud Peah 8:8:13&#x27;, &#x27;Bereshit Rabbah 45:10&#x27;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Jerusalem Talmud Peah 8:8:13&#x27;, &#x27;Bereshit Rabbah 45:10&#x27;]
     assert all(&#x27;name_coined_here_still_in_use&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;el_roi&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

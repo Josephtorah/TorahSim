@@ -1049,3 +1049,96 @@ TALLY: 955 rows — LAW 206 · AGGADAH 488 · CREDIT 174 · QUOTE 87
 - **Zevachim 88b:6** [LAW] (Gen 37:31) — the tunic atones for bloodshed: 'they dipped the tunic in the blood' (37:31)
 - **Zevachim 97b:9** [LAW] (Gen 22:10, 22:13) — the knife and the burnt-offering from the binding (22:10, 22:13)
 
+
+## THE EXAM-BLOCK MAP — the 206 LAW rows clustered for Step 5
+(Mapped 2026-09-04 at the Genesis campaign's opening — owner's word
+"Do 3 then 2" — the Exodus 18-block pattern at Genesis scale. The
+NOAHIDE BLOCK already ran 2026-09-01 (round 3, 41/41): the Sanhedrin
+56a-59b sugya, the pursuer, the offering satellites (Avodah Zarah
+51a), the court of Shem (Avodah Zarah 36b:7) and the
+circumcision-agent rows (Avodah Zarah 26b:12, 27a:6) — ~44 rows
+consumed there. The ~162 remaining cluster below; counts are
+approximate row-shares; the standing grep-first rule checks
+consumption per block before opening.)
+
+ 1. THE PRAYER BOOK OF THE PATRIARCHS (~11) — the three instituted
+    prayers, the fixed place, the six-hours constant, the missed-
+    evening makeup on the day boundary, night-precedes-day for the
+    Shema, the Amidah's three-patriarch opening, the silent blessed-
+    be-the-Name, the Abram-name command, the priests' return-
+    blessing, the remembrance-verse dispute. Berakhot 2a, 6b, 13a,
+    26a-27a; Pesachim 56a, 117b; Rosh Hashanah 32b; Chullin 49a.
+ 2. THE CIRCUMCISION MACHINE (~13) — overrides Shabbat (sign-sign,
+    covenant-covenant, generations), day-not-night, eighth-not-
+    seventh, adult/minor/flesh, the overconfident circumciser, where
+    it is done, the cascade (father/court/self, mother exempt), the
+    drawn foreskin. Shabbat 108a, 132a-137a; Kiddushin 29a; Yevamot
+    72a.
+ 3. BETROTHAL AND THE HOUSE (~13) — kichah-kichah money betrothal
+    from the field of Ephron (three seats), taking-as-acquisition,
+    the bride's preparation year, rises-with-him, provisioning the
+    orphan groom, the wedding blessing's building, the maiden
+    defined, not-without-a-wife, conjugal duty before a journey,
+    famine-years relations, affliction defined at Gen 31:50.
+    Kiddushin 2a, 4b, 11b; Ketubot 57b, 61a, 67b, 8a; Yevamot 61b,
+    62b; Taanit 11a; Yoma 77a.
+ 4. LEVIRATE, SEED, AND UNIONS (~8) — levirate name-means-
+    inheritance, Er and Onan defined, the wait between husbands,
+    neglecting procreation as bloodshed/diminishing the image, the
+    gentile-and-slave union ban, identity evidence (the beard
+    rule). Yevamot 24a, 34b, 42a, 63b, 88a, 100b.
+ 5. INHERITANCE, DEEDS, AND SURETY (~14) — the guarantor's root and
+    the unconditional guarantor, paternal-brother inheritance, the
+    cleave-word, Ephraim-and-Manasseh double portion, the bnei-
+    canon, deed boundary clauses from Machpelah, acquisition by
+    walking, the covenant's land list, lifetime deeds, slave-
+    property doctrine, kahal defined, Ephron's centenaria. Bava
+    Batra 56a-173b; Sanhedrin 91a; Horayot 5b-6b; Bekhorot 50a.
+ 6. THE COURTS' GENESIS LAYER (~10) — the scepter as judicial
+    license, whoever-adds-subtracts, exile atones half, eulogy law,
+    Heaven's jurisdiction, the conditional ban's release, the
+    doubled condition, ason by Heaven's hand, a covenant cut to the
+    lips, the idol-annulment precedent. Sanhedrin 5a, 29a, 37b,
+    46b; Makkot 9a, 11b; Kiddushin 61b; Ketubot 30a; Moed Katan
+    18a; Avodah Zarah 53b.
+ 7. THE NAME AND THE INK (~14) — name-sanctity and erasure law on
+    our own verses, NO-as-oath and the doubled negation, the oath
+    by-the-LORD with the thigh grasp, the clean-language canon's
+    eight curved letters, found-found, Kedorlaomer's two words on
+    one line, the scribes' adornment readings, notarikon licensed,
+    law from operand order (the ark's couples), vow-scope
+    geography. Shevuot 35b-38b; Pesachim 3a, 7b; Chullin 65a;
+    Nedarim 37b; Shabbat 105a; Sanhedrin 108b; Bekhorot 55a.
+ 8. THE TABLE AND THE KNIFE (~12) — the detached blade from the
+    binding, fitting-slaughter, consumed robbery, the sinew's
+    subject-scope, divination's paradigm case, the three-time
+    chazakah, the kid defined (both legs), the bird distinction,
+    sea kilayim, the day-old ram, Abimelech's standing oath.
+    Chullin 16a-139b; Bava Kamma 55a, 65b.
+ 9. THE ALTAR BEFORE SINAI (~9) — outside-slaughter's source, all
+    species on a private altar, the self-presenting animals, Abel's
+    fats, Benjamin's strip, the tunic that atones, the knife and
+    the burnt-offering, the priesthood from Shem to Abraham.
+    Zevachim 53b, 88b, 97b, 108b, 115b-116a; Nedarim 32b.
+10. BIRTH AND THE BODY (~11) — the nose-predicate's second and
+    third laws, the three-month presumption, the miscarriage form,
+    skin for the formed, the returned hand, the sex-determination
+    ledger, the salt pillar's purity, fetus damages, self-injury,
+    the self-affliction limit. Niddah 8b-70b; Bekhorot 46b; Sotah
+    45b; Bava Kamma 49a, 91b; Taanit 22b.
+11. THE CONDUCT TORAH (~16) — lodging, the traveler's ruse, famine
+    rules (scatter, satiety, the road), the host ladder, say-
+    little-do-much, honor-your-wife, the paid keeper's standard,
+    the six seasons, escort and riding order, dreams follow the
+    mouth, partial praise, the dread grant, hair-plaiting as
+    building, counting on miracles. Arakhin 16b; Avodah Zarah 25b;
+    Bava Kamma 60b; Bava Metzia 59a, 87a, 93b, 106b; Berakhot 25b,
+    34b, 55b, 61a; Eruvin 18b; Shabbat 32a, 95a, 151b; Taanit 10b.
+12. KINDNESS, MOURNING, AND CHARITY (~12) — imitatio dei verse by
+    verse, hospitality above the Presence, the furnace before
+    shaming, pray-for-your-fellow-first, invoking Heaven, the
+    zealous-early rule, three-times forgiveness, seven-day
+    mourning, the mourner-before-burial exemption, parting from
+    the dead, the consolation formula, the charity cap. Sotah 10b,
+    14a; Shabbat 127a, 152a; Bava Kamma 92a, 93a; Pesachim 4a;
+    Yoma 87a; Berakhot 18a, 54b, 64a; Ketubot 8b, 50a.

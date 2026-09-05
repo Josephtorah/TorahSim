@@ -160,6 +160,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(gaar_bo_aviv_ma_ha_chalom(yaaqov), t0)</span><br><span class="gloss">= HOLDS(gaar-in-it-aviv-ma-the-chalom(yaaqov), t0)</span><br>THE REBUKE. va-yigar bo aviv — the Kitzur&#x27;s Masorah pair rides this rebuke-verb: its partner is the rebuke of the Sea (Ps 106:9, outside the instrument) — read as the sea splitting in the merit of this rebuker, Israel the elder. Named; the Torah-side token stands here.
 </td><td><span class="he">וַיִּגְעַר־בּוֹ אָבִיו וַיֹּאמֶר</span> · <i>va-yigar-b-o avi-v va-yomer</i><br><span class="gloss">= and-yigar-b-o avi-v and-yomer</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(le_hishtachavot_lekha_artzah, bowing_taxonomy)</span><br><span class="gloss">= WITNESS-READ(to-hishtachavot-to-you-artzah, bowing-taxonomy)</span><br>THE BOWING TAXONOMY&#x27;S FULL-PROSTRATION DEFINITION [claim G60-24]. The round-40 conduct block seats the baraita&#x27;s ladder on this unit&#x27;s dream: kidah on the FACE; keriah on the KNEES; hishtachavaah — zo pishut yadayim ve-raglayim (&#x27;PROSTRATION — the spreading of hands and feet&#x27;): havo navo... le-hishtachavot lekha ARTZAH (&#x27;shall we come... to BOW to you to the GROUND,&#x27; our 37:10) — Jacob&#x27;s protest supplying the full-prostration definition (Berakhot 34b:2-4). Auto-seat law, F-184 (round 40, the conduct block).
+</td><td>—</td><td class='cite'>Berakhot 34b:2, Berakhot 34b:3, Berakhot 34b:4</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The rebuke spoken, the matter kept (37:11).</div>
 </div>
@@ -394,6 +396,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>EVENT</td><td><span class="expr">taval(e5); Agent(e5, achim); Theme(e5, ha_kutonet_ba_dam)</span><br><span class="gloss">= taval(e5); Agent(e5, achim); Theme(e5, the-kutonet-in-the-blood)</span><br>THE DIPPING. va-yishchatu seir izim va-yitbelu et ha-kutonet ba-dam — the goat&#x27;s blood plays Joseph&#x27;s: the same animal-class whose skins played Esau&#x27;s hands (27:16) now plays a son&#x27;s death to the man who wore them; letter-note, the deceit-instrument returning to its first user.
 </td><td><span class="he">וַיִּשְׁחֲטוּ שְׂעִיר עִזִּים וַיִּטְבְּלוּ אֶת־הַכֻּתֹּנֶת בַּדָּם</span> · <i>va-yishchatu seir izim va-yitblu et-ha-kutonet ba-dam</i><br><span class="gloss">= and-yishchatu seir izim and-yitblu the-kutonet blood</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(va_yitbelu_et_ha_kutonet, tunic_atonement)</span><br><span class="gloss">= WITNESS-READ(and-yitbelu-the-kutonet, tunic-atonement)</span><br>THE TUNIC&#x27;S BLOODSHED ATONEMENT [claim G60-23]. The round-38 altar block seats the atonement map&#x27;s entry: the priestly garments atone as the offerings do — and the TUNIC atones for BLOODSHED: va- yitbelu et-ha-kutonet ba-dam (&#x27;and they dipped THE TUNIC in the blood,&#x27; our 37:31): the brothers&#x27; cover-up becomes the garment&#x27;s atonement assignment, the whole garment-by-garment table recorded beside (trousers, turban, belt, breastplate, ephod) (Zevachim 88b:5-7). Auto-seat law, F-163 (round 38, the altar-before-Sinai block).
+</td><td>—</td><td class='cite'>Zevachim 88b:5, Zevachim 88b:6, Zevachim 88b:7</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The coat&#x27;s third verb; the goat enters the deception.</div>
 </div>
@@ -843,6 +847,10 @@ m.step(&quot;Gen.37.10&quot;)
 # ‹וַיִּגְעַר־בּוֹ אָבִיו וַיֹּאמֶר› (“and-chide in-him/its father-him/its
 # and-say”) — fact holds: gaar-in-it-aviv-what-the-dream(Jacob)
 m.fact(&quot;gaar_bo_aviv_ma_ha_chalom(yaaqov)&quot;)
+# witness-tier presupposed read: bowing_taxonomy on
+# le_hishtachavot_lekha_artzah — read, not installed
+m.witness_read(&quot;le_hishtachavot_lekha_artzah&quot;, &quot;bowing_taxonomy&quot;,
+                cites=[&quot;Berakhot 34b:2&quot;, &quot;Berakhot 34b:3&quot;, &quot;Berakhot 34b:4&quot;])
 
 # -------------------------- Gen.37.11 · THE_KEPT_WORD ----------------------
 # וַיְקַנְאוּ־בוֹ אֶחָיו וְאָבִיו שָׁמַר אֶת־הַדָּבָר
@@ -1130,6 +1138,10 @@ m.step(&quot;Gen.37.31&quot;)
 # (“and-slaughter shaggy she-goat and-dip obj-marker the-shirt in-blood”) —
 # event: taval — agent achim; theme the-shirt-come/bring-blood
 m.event(&quot;taval&quot;, agent=&quot;achim&quot;, themes=[&quot;ha_kutonet_ba_dam&quot;])
+# witness-tier presupposed read: tunic_atonement on va_yitbelu_et_ha_kutonet
+# — read, not installed
+m.witness_read(&quot;va_yitbelu_et_ha_kutonet&quot;, &quot;tunic_atonement&quot;,
+                cites=[&quot;Zevachim 88b:5&quot;, &quot;Zevachim 88b:6&quot;, &quot;Zevachim 88b:7&quot;])
 
 # -------------------------- Gen.37.32 · THE_RECOGNIZE_DEMAND ---------------
 # וַיְשַׁלְּחוּ אֶת־כְּתֹנֶת הַפַּסִּים וַיָּבִיאוּ אֶל־אֲבִיהֶם וַיֹּאמְרוּ
@@ -1215,7 +1227,7 @@ if __name__ == &quot;__main__&quot;:
     assert sorted(m.WORLD[&quot;witnessed&quot;]) == [&#x27;chalom_sheni&#x27;]
     assert m.WORLD[&quot;witnessed&quot;][&#x27;chalom_sheni&#x27;][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:11&#x27;, &#x27;Bereshit Rabbah 97:4&#x27;, &#x27;Bereshit Rabbah 6:9&#x27;]
     assert all(&#x27;enforceable_instrument&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;dibat_ra&#x27;, &#x27;three_slanders_owed&#x27;), (&#x27;ben_zequnim&#x27;, &#x27;wisdom_sense&#x27;), (&#x27;alumah_words&#x27;, &#x27;count_five&#x27;), (&#x27;shamar_et_ha_davar&#x27;, &#x27;dated_record&#x27;), (&#x27;shtarot_mekhira&#x27;, &#x27;count_disputed&#x27;), (&#x27;esrim_kesef&#x27;, &#x27;five_selaim_measure&#x27;), (&#x27;tarof_toraf&#x27;, &#x27;keeper_evidence_formula&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;dibat_ra&#x27;, &#x27;three_slanders_owed&#x27;), (&#x27;ben_zequnim&#x27;, &#x27;wisdom_sense&#x27;), (&#x27;alumah_words&#x27;, &#x27;count_five&#x27;), (&#x27;le_hishtachavot_lekha_artzah&#x27;, &#x27;bowing_taxonomy&#x27;), (&#x27;shamar_et_ha_davar&#x27;, &#x27;dated_record&#x27;), (&#x27;shtarot_mekhira&#x27;, &#x27;count_disputed&#x27;), (&#x27;esrim_kesef&#x27;, &#x27;five_selaim_measure&#x27;), (&#x27;va_yitbelu_et_ha_kutonet&#x27;, &#x27;tunic_atonement&#x27;), (&#x27;tarof_toraf&#x27;, &#x27;keeper_evidence_formula&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:7&#x27;]
     assert all(&#x27;three_slanders_owed&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;dibat_ra&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -1225,17 +1237,23 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:10&#x27;]
     assert all(&#x27;count_five&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;alumah_words&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:12&#x27;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Berakhot 34b:2&#x27;, &#x27;Berakhot 34b:3&#x27;, &#x27;Berakhot 34b:4&#x27;]
+    assert all(&#x27;bowing_taxonomy&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;le_hishtachavot_lekha_artzah&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:12&#x27;]
     assert all(&#x27;dated_record&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;shamar_et_ha_davar&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:22&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:22&#x27;]
     assert all(&#x27;count_disputed&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;shtarot_mekhira&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:18&#x27;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:18&#x27;]
     assert all(&#x27;five_selaim_measure&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;esrim_kesef&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:16&#x27;, &#x27;Onkelos Genesis 37:33&#x27;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Zevachim 88b:5&#x27;, &#x27;Zevachim 88b:6&#x27;, &#x27;Zevachim 88b:7&#x27;]
+    assert all(&#x27;tunic_atonement&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;va_yitbelu_et_ha_kutonet&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[8][&quot;cites&quot;] == [&#x27;Bereshit Rabbah 84:16&#x27;, &#x27;Onkelos Genesis 37:33&#x27;]
     assert all(&#x27;keeper_evidence_formula&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;tarof_toraf&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-31 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

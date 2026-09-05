@@ -294,6 +294,10 @@ m.fact("family_counter_teshev_yamim_o_asor")
 # not installed
 m.witness_read("missing_father", "death_overnight_and_the_delay_reread_as_mourning",
                 cites=["Bereshit Rabbah 60:12", "Mishnah Ketubot 5:2"])
+# witness-tier presupposed read: bride_year on yamim_o_asor — read, not
+# installed
+m.witness_read("yamim_o_asor", "bride_year",
+                cites=["Ketubot 57b:1", "Ketubot 57b:2", "Ketubot 57b:3", "Ketubot 57b:4", "Yevamot 61b:12", "Yevamot 61b:13", "Yevamot 61b:14"])
 
 # -------------------------- Gen.24.56 · THE_AL_TEACHARU_AND_SHALCHUNI_REPEAT -
 # וַיֹּ֤אמֶר אֲלֵהֶם֙ אַל־תְּאַחֲר֣וּ אֹתִ֔י וַֽיהוָ֖ה הִצְלִ֣יחַ דַּרְכִּ֑י
@@ -389,6 +393,10 @@ m.result("qach_va_lekh(rivqah)", tmark="t2")
 # not installed
 m.witness_read("the_camel_marks", "twins_foreshadowed_with_the_plain_answer_kept",
                 cites=["Bereshit Rabbah 60:14"])
+# witness-tier presupposed read: riding_order on va_telakhna_acharei_ha_ish
+# — read, not installed
+m.witness_read("va_telakhna_acharei_ha_ish", "riding_order",
+                cites=["Berakhot 61a:23", "Berakhot 61a:24", "Berakhot 61a:25"])
 
 # -------------------------- Gen.24.62 · THE_BEER_LACHAI_ROI_ADDRESS --------
 # וְיִצְחָק֙ בָּ֣א מִבּ֔וֹא בְּאֵ֥ר לַחַ֖י רֹאִ֑י וְה֥וּא יוֹשֵׁ֖ב בְּאֶ֥רֶץ
@@ -502,7 +510,7 @@ if __name__ == "__main__":
     assert all('generalities_exceed_details_second_seat' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['the_tent']["cites"] == ['Bereshit Rabbah 60:16', 'Onkelos Genesis 24:67']
     assert all('four_conditions_ceased_and_returned' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('right_or_left', 'alternative_brides_on_the_family_map'), ('the_matter_came_from_the_LORD', 'traced_to_moriah_and_disputed'), ('missing_father', 'death_overnight_and_the_delay_reread_as_mourning'), ('we_will_ask_her', 'consent_law_and_translation_converging'), ('her_single_word', 'read_as_defiance_of_the_questioners'), ('farewell_blessing', 'insincere_and_therefore_needing_a_later_prayer'), ('thousands_and_myriads', 'divided_by_one_member_joined_by_the_other'), ('the_camel_marks', 'twins_foreshadowed_with_the_plain_answer_kept'), ('went_out_toward_evening', 'afternoon_prayer_instituted_by_both_members'), ('she_fell', 'softened_to_inclined_by_two_devices'), ('marriage_before_remarriage', 'precedence_read_off_verse_order')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('right_or_left', 'alternative_brides_on_the_family_map'), ('the_matter_came_from_the_LORD', 'traced_to_moriah_and_disputed'), ('missing_father', 'death_overnight_and_the_delay_reread_as_mourning'), ('yamim_o_asor', 'bride_year'), ('we_will_ask_her', 'consent_law_and_translation_converging'), ('her_single_word', 'read_as_defiance_of_the_questioners'), ('farewell_blessing', 'insincere_and_therefore_needing_a_later_prayer'), ('thousands_and_myriads', 'divided_by_one_member_joined_by_the_other'), ('the_camel_marks', 'twins_foreshadowed_with_the_plain_answer_kept'), ('va_telakhna_acharei_ha_ish', 'riding_order'), ('went_out_toward_evening', 'afternoon_prayer_instituted_by_both_members'), ('she_fell', 'softened_to_inclined_by_two_devices'), ('marriage_before_remarriage', 'precedence_read_off_verse_order')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 60:9']
     assert all('alternative_brides_on_the_family_map' not in f for f in m.WORLD["facts"])
     assert 'right_or_left' not in m.WORLD["witnessed"]
@@ -512,28 +520,34 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 60:12', 'Mishnah Ketubot 5:2']
     assert all('death_overnight_and_the_delay_reread_as_mourning' not in f for f in m.WORLD["facts"])
     assert 'missing_father' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 60:12', 'Onkelos Genesis 24:57']
+    assert m.WITNESS_READS[3]["cites"] == ['Ketubot 57b:1', 'Ketubot 57b:2', 'Ketubot 57b:3', 'Ketubot 57b:4', 'Yevamot 61b:12', 'Yevamot 61b:13', 'Yevamot 61b:14']
+    assert all('bride_year' not in f for f in m.WORLD["facts"])
+    assert 'yamim_o_asor' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 60:12', 'Onkelos Genesis 24:57']
     assert all('consent_law_and_translation_converging' not in f for f in m.WORLD["facts"])
     assert 'we_will_ask_her' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Bereshit Rabbah 60:12']
+    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 60:12']
     assert all('read_as_defiance_of_the_questioners' not in f for f in m.WORLD["facts"])
     assert 'her_single_word' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 60:13']
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 60:13']
     assert all('insincere_and_therefore_needing_a_later_prayer' not in f for f in m.WORLD["facts"])
     assert 'farewell_blessing' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 60:13', 'Onkelos Genesis 24:60']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 60:13', 'Onkelos Genesis 24:60']
     assert all('divided_by_one_member_joined_by_the_other' not in f for f in m.WORLD["facts"])
     assert 'thousands_and_myriads' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 60:14']
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 60:14']
     assert all('twins_foreshadowed_with_the_plain_answer_kept' not in f for f in m.WORLD["facts"])
     assert 'the_camel_marks' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 68:9', 'Onkelos Genesis 24:63']
+    assert m.WITNESS_READS[9]["cites"] == ['Berakhot 61a:23', 'Berakhot 61a:24', 'Berakhot 61a:25']
+    assert all('riding_order' not in f for f in m.WORLD["facts"])
+    assert 'va_telakhna_acharei_ha_ish' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 68:9', 'Onkelos Genesis 24:63']
     assert all('afternoon_prayer_instituted_by_both_members' not in f for f in m.WORLD["facts"])
     assert 'went_out_toward_evening' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 60:15', 'Onkelos Genesis 24:64']
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 60:15', 'Onkelos Genesis 24:64']
     assert all('softened_to_inclined_by_two_devices' not in f for f in m.WORLD["facts"])
     assert 'she_fell' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 60:16']
+    assert m.WITNESS_READS[12]["cites"] == ['Bereshit Rabbah 60:16']
     assert all('precedence_read_off_verse_order' not in f for f in m.WORLD["facts"])
     assert 'marriage_before_remarriage' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
