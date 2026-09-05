@@ -47,6 +47,7 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <tr><td><b>C</b></td><td>Tree → steps</td><td>One STEP per verse citing left/right top-split arms. English [EN-AID] only.</td><td>hypothesis</td></tr>
 <tr><td><b>D</b></td><td>Oral dual-track</td><td>Sifra samples when available; dual-track only; never silent-merge.</td><td>hypothesis</td></tr>
 <tr><td><b>E</b></td><td>Vayikra derivation 2026-09-03</td><td>Parashat Vayikra sweep. 67 declared sources read (ledger 2026-09-03): the three-way distribution, the mourner gate, multi- caller hand-laying with the heir dispute, the Deut 12:21 cross- book license, the six-field intent vector, the anatomy predicate, the pesach type-conversion, the three smoke-verbs, the goat&#x27;s hiatus law, and the place-independent scope seated as claims LV03-01..09.</td><td>tested</td></tr>
+<tr><td><b>F</b></td><td>Offering-engine consolidation 2026-09-04</td><td>The Lev 1-8 span dispatcher (cold_run_offerings.py, 40/40 against Mishnah Zevachim 5:1-8; ledger logic/oral_triage/lev_offering_consolidation_2026-09-04.md). One seat under the auto-seat law: LV03-10 (F-200 — the tripled tent clause&#x27;s second law: the anywhere-in-the-courtyard derivation with the open-doors condition on the petach/lifnei difference).</td><td>tested</td></tr>
 </table>
 <h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
 <div class="step">
@@ -68,6 +69,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td>—</td><td class='cite'>Sifra, Vayikra Dibbura DeNedavah, Chapter 17 2, Sifra, Vayikra Dibbura DeNedavah, Chapter 17 3, Sifra, Vayikra Dibbura DeNedavah, Chapter 17 4, Sifra, Vayikra Dibbura DeNedavah, Chapter 17 5, Sifra, Vayikra Dibbura DeNedavah, Chapter 17 6, Sifra, Vayikra Dibbura DeNedavah, Chapter 16 8</td><td>witnessed</td></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(slaughter_license, deut_hook_all_sides) — the tripled slaughter-verb licenses Deut 12:21 secular slaughter; all sides of the court</span><br><span class="gloss">= WITNESS-READ(slaughter-license, deut-hook-all-sides) — the tripled slaughter-verb licenses Deut 12:21 secular slaughter; all sides fowl the court</span><br>THE CROSS-BOOK LICENSE [claim LV03-03]. The slaughter-verb written THREE times (3:2, 3:8, 3:13) anchors Deuteronomy 12:21&#x27;s distant- place permission — SECULAR slaughter hangs on this verse&#x27;s hook (and what is slaughtered near, unconsecrated in the court, is not eaten, not even fed to the dog of Exod 22:30). Site: shelamim are slaughtered on ALL SIDES of the court — the north binds only the higher orders.
 </td><td>—</td><td class='cite'>Sifra, Vayikra Dibbura DeNedavah, Chapter 17 7, Sifra, Vayikra Dibbura DeNedavah, Chapter 17 9, Sifra, Vayikra Dibbura DeNedavah, Chapter 17 10, Sifra, Vayikra Dibbura DeNedavah, Chapter 17 11</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(petach_lifnei_triple, anywhere_courtyard)</span><br><span class="gloss">= WITNESS-READ(door-opening-lifnei-triple, anywhere-courtyard)</span><br>THE TRIPLE&#x27;S SECOND LAW [claim LV03-10]. The tripled slaughter clause (petach &#x27;the ENTRANCE of the tent&#x27; at our 3:2; lifnei &#x27;BEFORE the tent&#x27; at 3:8 and 3:13) already carries the Deut 12:21 license at LV03-03; the offering-engine consolidation surfaces its SECOND machine: Zevachim 55b:1-2 counts the three tokens — one for itself, one to validate the SIDES, one to bar the side-of-sides — deriving ANYWHERE-IN-THE-COURTYARD for every light offering, and 55b:3 hangs the open-doors condition (invalid while the doors are locked, Rav Yehuda in Shmuel&#x27;s name) on the very petach/lifnei difference the compile&#x27;s probe layer caught when its wrong guess was refused by the ink. One tripled clause, two compiled laws. Auto-seat law, F-200 (the Lev 1-8 consolidation).
+</td><td>—</td><td class='cite'>Zevachim 55b:1, Zevachim 55b:2, Zevachim 55b:3</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
 </div>
@@ -1104,6 +1107,10 @@ m.witness_read(&quot;shared_semichah&quot;, &quot;partners_in_turn_heir_out&quot
 # read, not installed
 m.witness_read(&quot;slaughter_license&quot;, &quot;deut_hook_all_sides&quot;,
                 cites=[&quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 17 7&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 17 9&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 17 10&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 17 11&quot;])
+# witness-tier presupposed read: anywhere_courtyard on petach_lifnei_triple
+# — read, not installed
+m.witness_read(&quot;petach_lifnei_triple&quot;, &quot;anywhere_courtyard&quot;,
+                cites=[&quot;Zevachim 55b:1&quot;, &quot;Zevachim 55b:2&quot;, &quot;Zevachim 55b:3&quot;])
 
 # -------------------------- Lev.3.3 · ETNACHTA_SPLIT -----------------------
 # והקריב מזבח השלמים אשה ליהוה … את החלב המכסה את הקרב ואת כל החלב אשר על
@@ -1253,7 +1260,7 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;shelamim_signature&#x27;, &#x27;three_way_distribution&#x27;), (&#x27;shared_semichah&#x27;, &#x27;partners_in_turn_heir_out&#x27;), (&#x27;slaughter_license&#x27;, &#x27;deut_hook_all_sides&#x27;), (&#x27;intent_vector&#x27;, &#x27;six_fields&#x27;), (&#x27;anatomy_table&#x27;, &#x27;two_kidneys_lobe_settled&#x27;), (&#x27;fat_tail&#x27;, &#x27;pesach_converts_at_boundary&#x27;), (&#x27;smoke_verbs&#x27;, &#x27;three_variants_three_constraints&#x27;), (&#x27;goat_hiatus&#x27;, &#x27;paragraph_carries_exemption&#x27;), (&#x27;eating_ban_scope&#x27;, &#x27;all_dwellings_place_free&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;shelamim_signature&#x27;, &#x27;three_way_distribution&#x27;), (&#x27;shared_semichah&#x27;, &#x27;partners_in_turn_heir_out&#x27;), (&#x27;slaughter_license&#x27;, &#x27;deut_hook_all_sides&#x27;), (&#x27;petach_lifnei_triple&#x27;, &#x27;anywhere_courtyard&#x27;), (&#x27;intent_vector&#x27;, &#x27;six_fields&#x27;), (&#x27;anatomy_table&#x27;, &#x27;two_kidneys_lobe_settled&#x27;), (&#x27;fat_tail&#x27;, &#x27;pesach_converts_at_boundary&#x27;), (&#x27;smoke_verbs&#x27;, &#x27;three_variants_three_constraints&#x27;), (&#x27;goat_hiatus&#x27;, &#x27;paragraph_carries_exemption&#x27;), (&#x27;eating_ban_scope&#x27;, &#x27;all_dwellings_place_free&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 16 2&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 16 3&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 16 4&#x27;, &#x27;Onkelos Lev 3:1&#x27;]
     assert all(&#x27;three_way_distribution&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;shelamim_signature&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -1263,24 +1270,27 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 17 7&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 17 9&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 17 10&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 17 11&#x27;]
     assert all(&#x27;deut_hook_all_sides&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;slaughter_license&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 2&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 1&#x27;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Zevachim 55b:1&#x27;, &#x27;Zevachim 55b:2&#x27;, &#x27;Zevachim 55b:3&#x27;]
+    assert all(&#x27;anywhere_courtyard&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;petach_lifnei_triple&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 2&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 1&#x27;]
     assert all(&#x27;six_fields&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;intent_vector&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 7&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 8&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 6&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 9&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 7&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 8&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 6&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 9&#x27;]
     assert all(&#x27;two_kidneys_lobe_settled&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;anatomy_table&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 19 3&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 18 4&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 19 4&#x27;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 19 3&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 18 4&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 19 4&#x27;]
     assert all(&#x27;pesach_converts_at_boundary&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;fat_tail&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 10&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 19 5&#x27;, &#x27;Onkelos Lev 3:11&#x27;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 10&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 19 5&#x27;, &#x27;Onkelos Lev 3:11&#x27;]
     assert all(&#x27;three_variants_three_constraints&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;smoke_verbs&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 1&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 2&#x27;]
+    assert m.WITNESS_READS[8][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 1&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 2&#x27;]
     assert all(&#x27;paragraph_carries_exemption&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;goat_hiatus&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[8][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 6&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 7&#x27;, &#x27;Onkelos Lev 3:17&#x27;]
+    assert m.WITNESS_READS[9][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 6&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 7&#x27;, &#x27;Onkelos Lev 3:17&#x27;]
     assert all(&#x27;all_dwellings_place_free&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;eating_ban_scope&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">Tree-derived v1 (phase A). One STEP per verse from top-split arms. Not binding religious law.</div><p class='meta'>Rendered 2026-09-03 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">Tree-derived v1 (phase A). One STEP per verse from top-split arms. Not binding religious law.</div><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

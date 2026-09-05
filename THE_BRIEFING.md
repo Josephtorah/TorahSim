@@ -41,6 +41,16 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   running for the book of Numbers.
 - The corpus: 130 frozen units, one world, fingerprint unmoved
   through two whole books and the third's first two portions.
+- **The offering engine consolidated (2026-09-04):** one
+  dispatcher compiled from Leviticus 1-8's bare ink answers the
+  tradition's own master table (Mishnah Zevachim chapter 5) in 40
+  of 40 cells on the first graded run — 37% pure ink, the rest
+  filled by named recorded arguments opened one gap at a time. It
+  banked a new compile move (two words in one clause pulling in
+  opposite directions — "throw" and "around" — with the law being
+  the geometry that satisfies both), and the probe layer caught a
+  wrong guess that turned out to be the exact textual difference
+  the Talmud itself asks about.
 - The exam engine: forty-one rounds, 1,032 cases, 1,032 answered
   correctly — the exam passed ONE THOUSAND recorded cases at round
   39 with zero misses since the pilot — 326 compiled rules,

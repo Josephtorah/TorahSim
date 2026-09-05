@@ -335,3 +335,26 @@ grammatical FORM as written carries the law; here a SECOND pointing
 of the same skeleton is added to the first.
 **Middah correspondence:** the al-tikrei family ("do not read X but
 Y") — the tradition's own name for the operation.
+
+## M-17 — THE TENSION RESOLUTION (two tokens in one clause pull opposite ways; the law is the geometry satisfying both)
+Registered 2026-09-04 (the Lev 1-8 offering-engine consolidation,
+cold_run_offerings.py). Exemplar: Lev 1:5 writes both וזרקו ("and
+they shall THROW" — a discrete cast) and סביב ("AROUND" — a full
+circuit) of the same blood. The recorded compile (Zevachim 53b:5):
+one throw? — the verse says AROUND; a thread-circuit? — the verse
+says THROW. The law is the construction satisfying BOTH
+constraints at once: the corner hit shaped like a gamma, TWO
+applications that are FOUR — each corner feeding two sides, four
+sides from two casts. The same page carries the recorded
+alternative route (53b:6, R. Yishmael's verbal analogy to the
+installation's own סביב at Lev 8:15 — inside the derived span),
+so the move stands beside a named second derivation, both kept.
+Distinct from M-14 (doubling arithmetic): there repetition is an
+operator; here two DIFFERENT tokens constrain one act. Distinct
+from the middah of two contradicting VERSES resolved by a third
+(I13): the tension lives inside ONE clause and resolves by
+construction, not by a third verse.
+**Middah correspondence:** the two-verses middah's in-clause
+little sibling; the tradition's own form is the talmud-lomar
+pincer ("could you say X? the verse says A; then Y? the verse
+says B; how then? ...").

@@ -40,6 +40,10 @@ m.witness_read("shared_semichah", "partners_in_turn_heir_out",
 # read, not installed
 m.witness_read("slaughter_license", "deut_hook_all_sides",
                 cites=["Sifra, Vayikra Dibbura DeNedavah, Chapter 17 7", "Sifra, Vayikra Dibbura DeNedavah, Chapter 17 9", "Sifra, Vayikra Dibbura DeNedavah, Chapter 17 10", "Sifra, Vayikra Dibbura DeNedavah, Chapter 17 11"])
+# witness-tier presupposed read: anywhere_courtyard on petach_lifnei_triple
+# — read, not installed
+m.witness_read("petach_lifnei_triple", "anywhere_courtyard",
+                cites=["Zevachim 55b:1", "Zevachim 55b:2", "Zevachim 55b:3"])
 
 # -------------------------- Lev.3.3 · ETNACHTA_SPLIT -----------------------
 # והקריב מזבח השלמים אשה ליהוה … את החלב המכסה את הקרב ואת כל החלב אשר על
@@ -189,7 +193,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('shelamim_signature', 'three_way_distribution'), ('shared_semichah', 'partners_in_turn_heir_out'), ('slaughter_license', 'deut_hook_all_sides'), ('intent_vector', 'six_fields'), ('anatomy_table', 'two_kidneys_lobe_settled'), ('fat_tail', 'pesach_converts_at_boundary'), ('smoke_verbs', 'three_variants_three_constraints'), ('goat_hiatus', 'paragraph_carries_exemption'), ('eating_ban_scope', 'all_dwellings_place_free')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('shelamim_signature', 'three_way_distribution'), ('shared_semichah', 'partners_in_turn_heir_out'), ('slaughter_license', 'deut_hook_all_sides'), ('petach_lifnei_triple', 'anywhere_courtyard'), ('intent_vector', 'six_fields'), ('anatomy_table', 'two_kidneys_lobe_settled'), ('fat_tail', 'pesach_converts_at_boundary'), ('smoke_verbs', 'three_variants_three_constraints'), ('goat_hiatus', 'paragraph_carries_exemption'), ('eating_ban_scope', 'all_dwellings_place_free')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 16 2', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 16 3', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 16 4', 'Onkelos Lev 3:1']
     assert all('three_way_distribution' not in f for f in m.WORLD["facts"])
     assert 'shelamim_signature' not in m.WORLD["witnessed"]
@@ -199,22 +203,25 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[2]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 17 7', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 17 9', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 17 10', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 17 11']
     assert all('deut_hook_all_sides' not in f for f in m.WORLD["facts"])
     assert 'slaughter_license' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 14 2', 'Sifra, Vayikra Dibbura DeNedavah, Section 14 1']
+    assert m.WITNESS_READS[3]["cites"] == ['Zevachim 55b:1', 'Zevachim 55b:2', 'Zevachim 55b:3']
+    assert all('anywhere_courtyard' not in f for f in m.WORLD["facts"])
+    assert 'petach_lifnei_triple' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 14 2', 'Sifra, Vayikra Dibbura DeNedavah, Section 14 1']
     assert all('six_fields' not in f for f in m.WORLD["facts"])
     assert 'intent_vector' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 14 7', 'Sifra, Vayikra Dibbura DeNedavah, Section 14 8', 'Sifra, Vayikra Dibbura DeNedavah, Section 14 6', 'Sifra, Vayikra Dibbura DeNedavah, Section 14 9']
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 14 7', 'Sifra, Vayikra Dibbura DeNedavah, Section 14 8', 'Sifra, Vayikra Dibbura DeNedavah, Section 14 6', 'Sifra, Vayikra Dibbura DeNedavah, Section 14 9']
     assert all('two_kidneys_lobe_settled' not in f for f in m.WORLD["facts"])
     assert 'anatomy_table' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 19 3', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 18 4', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 19 4']
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 19 3', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 18 4', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 19 4']
     assert all('pesach_converts_at_boundary' not in f for f in m.WORLD["facts"])
     assert 'fat_tail' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 14 10', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 19 5', 'Onkelos Lev 3:11']
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Section 14 10', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 19 5', 'Onkelos Lev 3:11']
     assert all('three_variants_three_constraints' not in f for f in m.WORLD["facts"])
     assert 'smoke_verbs' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 20 1', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 20 2']
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 20 1', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 20 2']
     assert all('paragraph_carries_exemption' not in f for f in m.WORLD["facts"])
     assert 'goat_hiatus' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 20 6', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 20 7', 'Onkelos Lev 3:17']
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Vayikra Dibbura DeNedavah, Chapter 20 6', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 20 7', 'Onkelos Lev 3:17']
     assert all('all_dwellings_place_free' not in f for f in m.WORLD["facts"])
     assert 'eating_ban_scope' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

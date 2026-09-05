@@ -85,6 +85,18 @@ narrative strength. By cluster:
   Mekhilta on Gen 1:1).
 
 ## The middot's own case law (consolidated 2026-09-04, from the
+- **The two-verses-as-one limit** (Zevachim 57a:3-4, opened at the
+  Lev 1-8 offering consolidation 2026-09-04): שני כתובין הבאין
+  כאחד אין מלמדין ("two verses arriving as one do NOT teach
+  onward") — a law stated twice in parallel (the around-token at
+  both the burnt offering and the sin-offering) is BARRED from
+  extending to a third case; the firstborn keeps ONE blood
+  application because the extension route is closed. The rule has
+  a recorded dissent arm (the school that lets two teach), and the
+  sugya's closer: with the guilt-offering the tokens are THREE,
+  and three certainly do not teach. A recorded LIMIT on analogy
+  propagation — the inference engine's own overfitting guard.
+
 ## Exodus block campaign — owner's word "Do 3")
 
 The campaign's exam rounds banked RULES-ABOUT-RULES on the corpus's

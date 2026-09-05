@@ -1209,6 +1209,24 @@ untouched hosts (the coffin unit and the Bethel vow unit) joined
 the exam on its final round. Twelve more seats (F-188..F-199),
 standing 1368, fingerprint still unmoved.
 
+And the same day, the offering span CONSOLIDATED: one dispatcher
+compiled from Leviticus 1-8's bare ink and graded against the
+tradition's own consolidation table (Mishnah Zevachim chapter 5 —
+every offering class, its place, blood pattern, eater, and clock,
+in one grid): 40 of 40 cells on the first graded run, 37% pure
+ink, every gap filled by a named recorded argument opened per
+miss. Three finds rode the compile: a NEW MOVE (M-17, the tension
+resolution — two tokens in one clause pulling opposite ways,
+around versus throw, and the law is the geometry satisfying
+both); the until-midnight cap arriving SELF-LABELED as a fence in
+the Mishnah's own words ("why did the sages say until midnight?
+to distance a man from the transgression"); and the probe layer's
+third recorded catch — the wrong-token guess the ink refused
+turned out to be the very difference the Talmud's own question
+asks about. One seat (F-200): the peace-offering chapter's
+tripled clause carries a second law beside the one already
+derived. Standing 1369, fingerprint unmoved.
+
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed
 on the spot: logic/findings/FINDINGS_QUEUE.md (append-only). The owner

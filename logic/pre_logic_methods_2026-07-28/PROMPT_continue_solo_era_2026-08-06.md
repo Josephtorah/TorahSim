@@ -10302,3 +10302,44 @@ commit; then Lev 1-8 offering-engine consolidation, Shemini,
 Lev 24 (the first CALL), ~the remaining MIDDOT consolidations
 (adjacency r25, method fork r26/r28, parse direction r27,
 will-indexed dispatch).
+
+(the Lev 1-8 offering-engine consolidation — owner: "Commit push
+then 2")
+COMMITTED first: da524c9 pushed (241 files — MIDDOT + the Genesis
+map + rounds 30-41, the campaign close). THEN THE CONSOLIDATION:
+cold_run_offerings.py — ONE span dispatcher compiled from Lev
+1-8's bare ink, graded against the tradition's own consolidation
+table, Mishnah Zevachim 5:1-8 read whole from the local shelf:
+**40/40 CELLS FIRST GRADED RUN** (fractions: pure ink 15/40
+= 37%, named moves 12/40 = 30%, fence 3, data 5, imports 5;
+effects on all 8 rows — accepted/due_to_priest/eating_window/
+burn_remainder, all registered; the pesach regime routed to the
+compiled pesach engine = cross-book grading #3). The compile's
+spine: the PLACE LINK on the doubled slaughter verb (Lev 6:18 +
+7:2, both probed at count 2) + Lev 1:11's own tzafona; the blood
+counts born from the AROUND-VS-THROW tension at Lev 1:5 (Zevachim
+53b:5) — registered as **M-17 THE TENSION RESOLUTION** (new move
+form; R. Yishmael's alternative at 53b:6 runs a verbal analogy to
+the installation's own saviv at Lev 8:15, inside the derived
+span); the ANYWHERE derivation on the shelamim chapter's tripled
+tent token; the midnight cap arriving SELF-LABELED as a fence
+(Mishnah Berakhot 1:1 tail); and the two-verses-as-one LIMIT
+(Zevachim 57a:3-4 — analogy propagation barred; entered in
+MIDDOT.md's case-law section as the inference engine's own
+overfitting guard). ZERO-REPORT CATCH #3 ON THE RECORD: the probe
+guessed petach at Lev 3:2+3:8+3:13 — the ink refused (petach
+ONCE, lifnei twice) and Zevachim 55b:3's own question rides
+exactly that difference (the open-doors condition). Motion-4
+consultations all per-gap and ledgered:
+logic/oral_triage/lev_offering_consolidation_2026-09-04.md (25
+Talmud segments + 9 Mishnah rows, full cite index). ONE FINDING:
+F-200 → LV03-10 (lev_03_shelamim — THE TRIPLE'S SECOND LAW: the
+same tripled clause that carries LV03-03's Deut 12:21 license
+also carries the anywhere-in-the-courtyard machine; step-F log
+entry, the Lev units' lettered-log form). Ritual COMPLETE,
+preflight GREEN, manifest 0 FAILED, py GREEN, standing +1 rebaked
+(1368 → 1369), hash 8b8fff1fa28953af unmoved, lint 0 new; the
+three span runners regress green (27/27 vayikra5, 33/33 tzav,
+40/40 offerings). UNCOMMITTED: the consolidation (runner, ledger,
+lev_03 seat, M-17, MIDDOT entry, records). NEXT on the owner's
+word: Shemini (Lev 9-11), then Lev 24 (the first CALL).
