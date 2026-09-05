@@ -1491,3 +1491,214 @@ pending knowledge). Rituals: all EIGHT units RITUAL COMPLETE (150
 frozen); regression green across all runners and cold runners and
 the world engine tape; hash 8b8fff1fa28953af unmoved; manifests 0
 FAILED.
+
+## ROUND 45 — THE EMOR EXAM (2026-09-05): 135/135
+## (1317/1317 across forty-five rounds — the first round under Claude Fable 5.1)
+The parashah's exam, run the same sitting as its derivation (the
+rhythm's thirteenth cycle: 458 declared read whole — Sifra Emor's
+334 rows + Onkelos Lev 21-24's 124 verses — with the coverage line
+COMPUTED against the source's own row counts (334/334 + 124/124,
+no duplicates) rather than recited, the Lev 1-8 review's lesson
+applied the same day; 79 claims seated into EIGHT units, all eight
+drafts FROZEN including the two lev_24 drafts that had waited since
+the first call compiled their span; corpus 150 → 158, standing 1529
+→ 1608). Docket: 88 bare Mishnah rows across TWENTY-NINE tractates
+citing Lev 21-24 (79 LAW rows carrying 135 cells; six context, three
+credited), all read whole
+(logic/oral_triage/emor_exam_mishnah_2026-09-05.md, full cite
+index). Seven modules (emor_rules.py): priest_purity_file,
+priest_blemish_file, terumah_eaters_file, acceptable_offerings_file,
+calendar_spring_file, fall_festivals_file, lamp_bread_blasphemer_file
+— R-541..R-547 (352 compiled rules); vocabulary +135 → 1141 query
+values on 158 unmoved dims, each value carrying its own Hebrew and
+gloss. THE GATES FIRED HONESTLY TWICE: the vocabulary gate refused
+two query names already registered in earlier rounds
+(table_dimensions, curser_vs_striker_after_death — renamed with
+their subject), and the compile's answer-sheet check refused a
+wrong token guess (Mishnah Menachot 3:6 says "two LOAVES," not "the
+bread") — both fixed before anything ran. THE HEADLINE —
+FORTY-TWO VERBATIM ROWS: the Sifra spine carrying the Mishnah's text
+word for word at the seat before the docket opened — Kiddushin 1:7's
+"do not defile for the dead" exemption (the daughters of Aaron
+defile), Makkot 3:5's per-gash count, Sanhedrin 2:1's "they hidden
+and he revealed... to the city gate" with R. Yehuda's not-at-all,
+Horayot 3:4's many-garmented rules, Yevamot 6:4 sentence by sentence
+(the adult disputed, Yehoshua ben Gamla's widow, the levirate widow
+after ma'amar), Yevamot 6:5's zonah three ways, Yevamot 10:3's
+"divorced from her husband, not from one who is not," Sanhedrin
+11:1 twice (the priest's daughter's partner strangled; the
+parent-striker only with a wound), Bekhorot 7:2/7:5's blemish
+definitions with their three-way readings, Berakhot 1:1's sunset
+gate, Ketubot 5:3's yavam, Niddah 5:3's day-old feeder, Yevamot 7:2
+and 7:5's grandmother cases from Sifra Chapter 5 4-5, Yevamot 9:6
+quoting the return verse, Terumot 6:6's cucumbers, Shekalim 1:5's
+no-shekels-from-gentiles, Chullin 5:3's four periods and 5:5's ben
+Zoma, Menachot 3:6's blockers, Rosh Hashanah 1:9/2:9's "which you
+shall proclaim," Megillah 3:6's each-in-its-time, Menachot 10:5's
+new-grain clock, Sukkah 3:12's ordinance, Rosh Hashanah 4:5's
+blessing order, Yoma 8:1's afflictions, Sukkah 2:8/3:3/3:13/4:2's
+sukkah and lulav rows, Menachot 8:4/8:5's three olives and nine
+grades, Sanhedrin 7:5's court procedure, 6:1's stoning place, 4:1's
+one judgment, Shevuot 4:13's substitute names, Bava Kamma 8:2/8:3's
+talion as payment. ONKELOS LOAD-BEARING fourteen ways: the fork on
+בעל (ba'al — "husband" or "the great one") at 21:4; the blemish
+rulings at 21:20 (his yalefet word is the Sifra's lichen; "crushed
+testicles" = R. Yishmael's arm); the separating verb at 22:2; the
+inserted "in impurity" at 22:16; the extra-and-lacking fork at
+22:23; THE FEMINIZED VERSE at 22:28 (a cow or a ewe — her and her
+young: the Sifra's argued female rule performed by grammar); "after
+the festival day" at 23:11 and 23:15 (the contested morrow written
+into the verse); the broken cry at 23:24; THE FOUR SPECIES NAMED at
+23:40; the clouds of glory at 23:43 (R. Akiva's arm chosen); "the
+order... and taught" at 23:44; "explicitly uttered" at 24:11/16;
+"in exchange for" on every talion pair at 24:20. THE COMPILE
+MOVEMENT (cold_run_moadim.py): THE APPOINTED TIMES ENGINE — 24/24
+cells (14 INK / 8 RECORDED / 2 ANSWER-SHEET, 58% pure ink): the TWO
+WORK CLASSES read off two token forms and censused per verse (כל
+מלאכה "all work" at 23:3, 28, 30, 31 — the Sabbath and Yom Kippur
+only; מלאכת עבדה "servile work" at 23:7, 8, 21, 25, 35, 36 — the
+festivals), the fast's two sanctions in their own verbs (ונכרתה
+"cut off" for not afflicting, והאבדתי "I will destroy" for
+working), the omer's arithmetic (seven whole weeks + fifty days =
+count forty-nine, sanctify the fiftieth) and its gate ("until you
+bring" with the Temple, "until this very day" without), the four
+species COUNTED BY GRAMMATICAL NUMBER (singular etrog and defective
+כפת one each, plural willows two, the myrtle a recorded dispute),
+the lulav's "before the LORD seven days" vs "on the first day"
+giving Temple-seven and province-one from the ink, and the morrow
+ruled by the Sifra's four routes with Onkelos writing it in. Three
+effects DISCOVERED in the span's verbs (registry 55 → 58):
+counts_omer (a TIMER — each person's forty-nine days),
+dwells_in_booths (a TIMER — seven days), takes_four_species (a
+status). MIDDOT.md +6 case-law rows (the two-way transfer; the
+profanation triple-import; the strict-to-lenient meta-rule; the
+three-constraint pin; the unwritten warning from a redundant
+punishment; the demonstrative fence). MOVE_CATALOG: M-18 exemplars
+4-5 (the eating clause given to slaughter; Numbers 28:26's new
+offering given to barley — the reassignment crossing a book) and
+M-16 exemplar 8 (ben Chakinai's consonant-fragment read of "in your
+land" as "in you," logged with its difference named). Regression
+green everywhere; manifests 0 FAILED; gloss_lint 0 on all new
+content, legacy files at exact HEAD baselines.
+
+## ROUND 46 — THE BEHAR-BECHUKOTAI EXAM (2026-09-05): 89/89
+## (1406/1406 across forty-six rounds — LEVITICUS'S LAST ROUND)
+The double parashah's exam, run the same sitting as its derivation
+(the rhythm's fourteenth cycle and the second under Claude Fable
+5.1): 397 declared read whole — Sifra Behar's 109 rows + Sifra
+Bechukotai's 153 rows + Onkelos Lev 25-27's 135 verses — with the
+coverage COMPUTED by the ledger script against the source row counts
+(262/262 + 135/135, no duplicates); 102 claims seated into FIVE
+units — the five tree-era drafts that had waited since the phase-H
+generation (lev_25_shemittah, lev_25_redeem_poor,
+lev_25_slave_jubilee, lev_26_bless_curse, lev_27_vows_valuations)
+frozen at last, corpus 158 → 163, standing 1608 → 1710, hash
+8b8fff1fa28953af unmoved. EVERY LEVITICUS UNIT NOW FROZEN but the
+four lev_04 sin-offering drafts held for the deferred audit. THE
+DOCKET: 61 bare Mishnah rows across TWENTY-ONE tractates (10,078
+link rows enumerated; the commentaries sharing the Mishnah category
+excluded openly), verdicted LAW 47 / CONTEXT 13 / CREDIT 1 — seven
+modules, 89 cells, 89/89 on the first graded run, zero misses (the
+vocabulary gate and the collision guard both silent this round: the
+cases table and the registry were generated from ONE list, so no
+drift could arise between them — the round-45 lesson made a
+mechanism). TWENTY-NINE VERBATIM ROWS — the deepest pre-answering of
+the walk: the whole of Mishnah Arakhin 9 (the land chapter — 9:1
+the two-year floor with the blight years and R. Elazar's three
+harvests; 9:2 the reckoning counterpart and the sanctuary's
+inversion; 9:4 Hillel's ordinance; 9:7 the village houses; 9:8 the
+Levite heir and the zoning rule) and the valuation rows of Arakhin
+1, 3, 4, 7 (1:1 the valuer/valued split with both widths; 3:2 the
+king's decree; 4:1 the four clocks; 4:4 the boundary year with R.
+Elazar's month and a day; 7:1 the floors, the crevices, the sela and
+pundion; 7:5 the purchased field) sit in the Sifra's rows as the
+seats read them; Bava Metzia 4:3's sixth with R. Tarfon's third,
+4:9's four exclusions, 4:10's verbal wronging, 5:1's two interest
+nouns; Kiddushin 1:3's money-deed-possession; Makkot 2:8's exile and
+his office; Megillah 3:3's ruined synagogue; Nedarim 9:4's vow
+opened from "that your brother live with you"; Rosh Hashanah 3:2's
+"horn of the Jubilee" and 4:9's "every individual is obligated";
+Sanhedrin 3:3's renamed traders; Temurah 1:1's owner's-house verse
+overruling R. Yochanan b. Nuri, 1:2's one-for-a-hundred, 1:6's
+birds and public; Arakhin 8:5's priests-and-Levites split; Bekhorot
+9:1's flock-is-one and 9:7's rod; Nazir 5:3's misnamed ninth. THE
+DERIVATION'S CROWNS: THE SINAI-DETAIL RULE opening the parashah and
+closing the book; THE ONSET TIMELINE (a dated schedule from the
+crossing to year sixty-four); THE CLASS RULE by went-out-to-teach;
+THE FIELD-CLOCK (the house's stock keyed to the field's state) with
+Rabban Gamliel's jar ruling; THE COUNT IN THE COURT with the
+two-verse pin and the seventh-Jubilee dependency dispute; THE SHOFAR
+EXPORT (the source side of the moadim engine's imported instrument);
+THE TEN-DAY WINDOW (the year sanctified from Tishrei, the release
+firing at Yom Kippur); THE JUBILEE'S PRECONDITION (ceased when two
+and a half tribes went into exile); THE SUBSTITUTION CHAIN (holiness
+seizing the last payment while the fruit stays bound); THE TWO
+RELEASES MATRIX (money to the seventh, slaves to the Jubilee, both
+diagonals refused); THE OVERREACHING FILE with the sixth and the
+upper hand; THE HEART-CLAUSE META-RULE in two seats; THE YEAR LADDER
+to the eleventh; THE SANCTUARY'S INVERSION and fields-and-money
+together; THE WALLED-CITY ROSTER and Hillel's repair of the hiding
+buyer; THE VILLAGE THRESHOLD; THE LEVITES' THREE EXEMPTIONS; THE
+ZONING RULE; THE FALLING LOAD and THE ONE FLASK; THE SELF-SALE GATE
+with the asymmetric protocol; THE HIRELING TABLE; MY DEED CAME FIRST;
+THE THREE ACQUISITION MODES; ROBBING A GENTILE IS ROBBERY; THE SOLD
+MAN'S CHARTER; THE TWO-CLAUSE SPLIT and THE REMEMBER-VERB RULE; THE
+NON-LINEAR SCALING off the verse's own numbers; THE SEVEN-STEP
+DESCENT (a state machine of decline); THE NAME AS CREDITOR; THE
+SEVENFOLD RULE; THE METALS' PHYSICS; THE SABBATH-DEBT (the land
+collecting its unkept releases in exile — the simulator's own
+vocabulary in the Sifra's mouth); THE SURETY RULE; THE FATHERS' SINS
+RECONCILED; TWO TORAHS in the book's closing self-description; THE
+VALUER/VALUED SPLIT; THE STANDING PREDICATE; THE FOUR CLOCKS;
+SUBSTITUTION NOT TRANSITIVE with ARGUMENT OVERRULED BY INK; THE
+BIDDING LADDER and THE OWNER'S PRECEDENCE; THE KING'S DECREE
+self-labeled; THE SELA FLOOR; THE CONDEMNED'S VALUATION; THE ERROR
+RULE (the naming machine); NO PROPHET MAY INNOVATE. ONKELOS
+LOAD-BEARING twelve ways: release BEFORE the LORD (25:2, 25:4);
+seven RELEASES of years (25:8); freedom for liberty (25:10); the
+left-alone vine (25:5); irrevocably (25:23, 25:30) — the Sifra's
+gloss as translation; ONE Aramaic word for the master's rigor and
+the people's hostility toward God (25:43 with 26:21-28); the
+uncircumcised residents (25:45, 47); the beast made to CEASE (26:6,
+R. Shimon's arm); armies in transit (26:6); the metals' EFFECTS
+written into 26:19; "which they hold in their hands" writing the
+Sifra's condition into 26:39; RELEASES for sabbaths at 26:34-35;
+shekel = sela and the twenty ma'in at 27:3/25 — round 28's
+translation-mediated sela read at its own seat. THE COMPILE
+MOVEMENT (cold_run_yovel.py): THE JUBILEE ENGINE — 33/33 cells (17
+INK / 14 RECORDED / 1 ANSWER-SHEET / 1 DATA, 51% pure ink): the
+cycle's product read off the verse that STATES it (seven years seven
+times = תשע וארבעים "forty-nine" at 25:8; the fiftieth at 25:10),
+the RETURN verbs censused (25:10, 13, 27, 28, 41), the harvest-year
+pricing and the surplus computed (price × remaining ÷ total), the
+four house classes by their own clauses (the walled city's year then
+perpetuity; the village as field but at once; the Levites forever;
+the pasture unsellable), the two interest nouns, the Hebrew slave's
+hireling status with his Jubilee exit and hireling-days redemption
+(the six-year exit an IMPORT from Exodus 21:2, M-07, for the one
+sold to an Israelite only), the valuation table by bracket with the
+boundary year counting below, the field's fifty per homer deducted
+by the years to a sela and a pundion (50 ÷ 49 against 1 + 1/48 —
+the coin nearest the remainder), and THE PRIEST CENSUS SPLIT BY
+FORM: הכהן ("THE priest," the definite subject) ten times as the
+assessor, לכהן ("TO the priest," the dative) once as a destination —
+the answer sheet's ten (Megillah 4:3) read off the form; the gap
+"nine Israelites and one priest" consulted PER GAP and filled from
+Sanhedrin 15a:6 (Shmuel's limitation-after-limitation). Four effects
+DISCOVERED in the span's verbs (registry 58 → 62): returns_to_holding
+— the ledger's SECOND TRANSFER operation after the wilderness
+dispatch — sold_in_perpetuity, redemption_right, interest_barred.
+The dishonest-pairing trap caught in self-review again (the first
+draft graded the priest count against itself) and fixed by grading
+against the sheet's ten. MIDDOT.md +7 case-law rows (the two-verse
+pin; went-out-to-teach as classifier; the heart-clause meta-rule;
+the a-fortiori refused both ways by two texts; argument overruled by
+ink; the boundary year by verbal analogy lenient and strict alike;
+the particle for the matriarchs with the reversed-order fallback).
+MOVE_CATALOG: M-18 exemplars 6-7 (the redeemer's constraints from
+a freed clause; the doublet's object-partition) and M-07 exemplar
+(a) closed from the Leviticus side. Catalog R-548..R-554 (359
+compiled rules); vocabulary +89 → 1230 query values on 158 unmoved
+dims. Regression green everywhere (46 runners, all cold runners,
+the world engine); manifests 0 FAILED; gloss_lint 0 on all new
+content, legacy files at exact HEAD baselines.

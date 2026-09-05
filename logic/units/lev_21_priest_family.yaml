@@ -17,7 +17,7 @@ meta:
   refs: "21:1-15"
   data_paths_he:
     - "Data/Lev.xml"
-  status: draft
+  status: frozen
   tree_derive_version: tree_derived_v1
   tree_derive_phase: "F"
   confidence_overall: hypothesis
@@ -60,6 +60,22 @@ derivation_log:
     confidence: hypothesis
     tags: ["[ORAL]"]
 
+  - step: E
+    name_en: "Emor derivation 2026-09-05"
+    comment: >
+      Emor sweep, first unit. Declared: Sifra Emor whole (334 rows) +
+      Onkelos Lev 21-24 (this unit's ledger
+      lev_21_priests_2026-09-05.md, coverage computed 76/76 + 24/24):
+      the addressee census with the abandoned-corpse override, the
+      relative table by token pairs, the sister's carve with the forced
+      defilement, the husband split with Onkelos's fork, the mourning
+      marks' two-way transfer, holy by compulsion, the forbidden wives
+      file, sanctify-him-by-force, the priest's daughter, greatness and
+      the one-hour rule, the onen split, the virgin command, and the
+      profaned-seed layer — seated as claims LV21A-01..13.
+    confidence: tested
+    tags: ["[ORAL]","[HE-WRITTEN]"]
+
 boot_steps:
   - id: STEP_Lv_21_1
     order: 1
@@ -76,6 +92,22 @@ boot_steps:
       he: ואמרת אלהם לנפש לא יטמא בעמיו
       he_translit: "v'mrt 'lhm lnpsh l' ytm' b'myv"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(emor_el_hakohanim, addressee_census_and_override)"
+        en: >
+          THE ADDRESSEE CENSUS AND THE ABANDONED-CORPSE OVERRIDE [claim
+          LV21A-01]. 'Sons of Aaron' — the SONS do not defile for the
+          dead, the DAUGHTERS do; 'the priests' excludes the profaned
+          (חללים, chalalim); 'sons of Aaron' INCLUDES the blemished and
+          the minors — four populations from two tokens. 'For a soul' —
+          not the corpse alone: BLOOD by 'the blood is the soul' (a
+          quarter-log), and the impurities that DEPART from the dead.
+          'Among his people' — when his people are present he does not
+          defile, but for a מת מצוה (met mitzvah, an abandoned corpse) he
+          DOES: the override built from the presence condition.
+        cites: ["Sifra, Emor, Section 1 1", "Sifra, Emor, Section 1 2", "Sifra, Emor, Section 1 3"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -96,6 +128,25 @@ boot_steps:
       he: לאמו ולאביו ולבנו ולבתו ולאחיו
       he_translit: "l'mv vl'byv vlbnv vlbtv vl'chyv"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(lisheero_hakarov, relative_table_by_token_pairs)"
+        en: >
+          THE RELATIVE TABLE BY TOKEN PAIRS [claim LV21A-02]. שְׁאֵרוֹ
+          (she'ero, 'his flesh') = HIS WIFE; 'the near' excludes the
+          BETROTHED, 'to him' the DIVORCED. Every relative of 21:2 is
+          proven non-derivable from its neighbor by a MIRRORED PAIR of
+          arguments: the mother covers the PROFANED line, the father
+          covers PRESUMPTION (חזקה, chazakah); the parents' honor-duty
+          would have derived the children but admitted STILLBORNS — so the
+          children must be VIABLE; son and daughter each named because the
+          father's DUTIES to a son (circumcise, redeem, teach Torah and a
+          craft, marry off) and his RIGHTS in a daughter (finds,
+          handiwork, vows) differ; the siblings must be PATERNAL — those
+          who INHERIT him — as the children teach. A table built from
+          redundancy, one pair per row.
+        cites: ["Sifra, Emor, Section 1 4", "Sifra, Emor, Section 1 5", "Sifra, Emor, Section 1 6", "Sifra, Emor, Section 1 7", "Sifra, Emor, Section 1 8"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -116,6 +167,23 @@ boot_steps:
       he: לה יטמא
       he_translit: "lh ytm'"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(achoto_habetulah, sister_carve_and_forced_defilement)"
+        en: >
+          THE SISTER'S CARVE AND THE FORCED DEFILEMENT [claim LV21A-03].
+          'His virgin sister' — the MINOR sister; the brother at any age
+          (each token needed for the age carve); 'the virgin' excludes the
+          raped and the seduced, 'who has not BEEN to a man' keeps the one
+          injured by wood — the AGENT-OF-LOSS test; 'the near' includes
+          the betrothed, 'to him' the adult. And 'for her he shall defile'
+          is A COMMAND: Yosef the priest, his wife dead on Passover eve,
+          refused — and the Sages pushed him and defiled him BY FORCE; for
+          the CERTAIN not the doubtful; not for others alongside her; not
+          for her LIMBS — no one defiles for a limb of a living parent
+          (Yosef ben Paksas sending his son away at the surgeon's cut).
+        cites: ["Sifra, Emor, Section 1 9", "Sifra, Emor, Section 1 10", "Sifra, Emor, Section 1 11", "Sifra, Emor, Section 1 12", "Sifra, Emor, Section 1 13", "Sifra, Emor, Section 1 14"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -136,6 +204,24 @@ boot_steps:
       he: ""
       he_translit: ""
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(lo_yitama_baal, husband_split_toggle_onkelos_fork)"
+        en: >
+          THE HUSBAND SPLIT, THE TOGGLING PROFANATION, AND ONKELOS'S FORK
+          [claim LV21A-04]. 'A husband shall not defile among his people'
+          — there IS a husband who defiles and one who does not: for a FIT
+          wife yes, for an UNFIT wife (a forbidden marriage) no. 'Among
+          his people' — while they act as his people, not when he has left
+          the community's ways; 'to profane himself' — profane WHILE
+          occupied with the dead, back in his holiness on withdrawal: a
+          status flag, not a stain. And ONKELOS READS THE TOKEN
+          DIFFERENTLY: לָא יִסְתָּאַב רַבָּא בְעַמֵּיהּ ('the GREAT ONE
+          among his people shall not defile himself') — בעל (ba'al) as
+          CHIEF, not husband. Two readings of one word inside the declared
+          scope, recorded as a fork.
+        cites: ["Sifra, Emor, Section 1 15", "Sifra, Emor, Section 1 16", "Onkelos Lev 21:4"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -156,6 +242,19 @@ boot_steps:
       he: ובבשרם לא ישרטו שרטת
       he_translit: "vbbshrm l' yshrtv shrtt"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(lo_yikrechu_korchah, mourning_marks_two_way_transfer)"
+        en: >
+          THE MOURNING MARKS AND THE TWO-WAY TRANSFER [claim LV21A-05].
+          Baldness — liable PER BALD SPOT; 'on their head' — the whole
+          head, not only between the eyes; gashing — PER GASH. And the
+          TWO-WAY verbal analogy: 'baldness'-'baldness' and 'gash'-'gash'
+          carry per-spot and whole-head FROM the priests TO Israel (Deut
+          14:1, Lev 19:28), and FOR-THE-DEAD-ONLY from Israel back to the
+          priests — one analogy settling both ledgers in both directions.
+        cites: ["Sifra, Emor, Chapter 1 1", "Sifra, Emor, Chapter 1 2", "Sifra, Emor, Chapter 1 3", "Sifra, Emor, Chapter 1 4", "Sifra, Emor, Chapter 1 5"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -176,6 +275,20 @@ boot_steps:
       he: כי את אשי יהוה לחם אלהיהם הם מקריבם והיו קדש
       he_translit: "ky 't 'shy yhvh lchm 'lhyhm hm mqrybm vhyv qdsh"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(kedoshim_yihyu, holy_by_compulsion)"
+        en: >
+          HOLY BY COMPULSION [claim LV21A-06]. 'Holy to their God' — BY
+          COMPULSION (against their will); 'the bread of their God THEY
+          offer' — not the Levites; 'they shall be holy' — INCLUDES THE
+          BLEMISHED: holiness is not service-conditioned. Onkelos performs
+          the de-anthropomorphizing pair: 'holy BEFORE their God,' and
+          'the bread of their God' → קֻרְבָּן אֱלָהֲהוֹן ('the OFFERING of
+          their God') — the food-metaphor removed, the Sifra's bread-
+          equals-offerings performed as translation.
+        cites: ["Sifra, Emor, Chapter 1 6", "Onkelos Lev 21:6"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -196,6 +309,27 @@ boot_steps:
       he: כי קדש הוא לאלהיו
       he_translit: "ky qdsh hv' l'lhyv"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(zonah_chalalah_gerushah, the_forbidden_wives_file)"
+        en: >
+          THE FORBIDDEN WIVES FILE [claim LV21A-07]. זונה (zonah) DEFINED
+          THREE WAYS — R. Yehuda: the woman incapable of bearing; the
+          Sages: the convert, the freed slavewoman, and one who had
+          illicit intercourse; R. Eliezer: even the unmarried pair not for
+          marriage — and ONKELOS sits on the Sages' arm: מַטְעֲיָא ('one
+          who goes ASTRAY'). חללה (chalalah) = born of any disqualified
+          union. THE RIVAL REFUTES: the released widow (חלוצה, chalutzah)
+          by a-fortiori from the divorcee — but the rival wife, barred
+          from the releaser yet FIT, refutes it; the test: a DEED done to
+          her; 'and a woman' amplifies the chalutzah, 'divorced FROM HER
+          HUSBAND' excludes the rival. R. Elazar ben Matya: the husband
+          reported dead, she betrothed another, he returns — the second's
+          bill does NOT bar her: not from one who is not her husband. And
+          'shall not take... shall not take' — THE WOMAN IS WARNED THROUGH
+          THE MAN.
+        cites: ["Sifra, Emor, Chapter 1 7", "Sifra, Emor, Chapter 1 8", "Sifra, Emor, Chapter 1 9", "Sifra, Emor, Chapter 1 10", "Sifra, Emor, Chapter 1 11", "Sifra, Emor, Chapter 1 12", "Onkelos Lev 21:7"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -216,6 +350,18 @@ boot_steps:
       he: קדש יהיה לך כי קדוש אני יהוה מקדשכם
       he_translit: "qdsh yhyh lk ky qdvsh 'ny yhvh mqdshkm"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(vekidashto, sanctify_him_by_force)"
+        en: >
+          SANCTIFY HIM BY FORCE [claim LV21A-08]. 'You shall sanctify him'
+          — if he refuses, BEAT HIM; 'the bread of your God he offers' —
+          tells what caused it; 'holy to you' — includes the blemished; 'I
+          the LORD sanctify you' — THE COURT IS WARNED: the enforcement of
+          the priest's marriage law addressed to the court, not to the
+          priest alone.
+        cites: ["Sifra, Emor, Chapter 1 13"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -236,6 +382,23 @@ boot_steps:
       he: את אביה היא מחללת באש תשרף
       he_translit: "'t 'byh hy' mchllt b'sh tshrp"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(bat_kohen_ki_techel, the_priests_daughter_file)"
+        en: >
+          THE PRIEST'S DAUGHTER [claim LV21A-09]. 'When she profanes
+          herself BY WHORING' — not by another profanation; the unmarried
+          excluded by 'her father'-'her father' (Deut 22:21) — whoring
+          WITH A HUSBAND'S BOND; all ages and states — betrothed girl,
+          married, adult, even old ('daughter of a priest' in any case);
+          married to a Levite, an Israelite, even a Netin or a mamzer
+          ('daughter of a MAN priest'); R. Eliezer: with her father
+          BURNING, with her father-in-law STONING; 'SHE by fire' — she
+          burns, not her partner, not the perjured witnesses. Onkelos:
+          לְמִטְעֵי מִקְּדֻשַּׁת אֲבוּהָ ('to stray FROM HER FATHER'S
+          HOLINESS') — the profanation as departure from a status.
+        cites: ["Sifra, Emor, Chapter 1 14", "Sifra, Emor, Chapter 1 15", "Sifra, Emor, Chapter 1 16", "Sifra, Emor, Chapter 1 17", "Sifra, Emor, Chapter 1 18", "Onkelos Lev 21:9"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -256,6 +419,23 @@ boot_steps:
       he: את ראשו לא יפרע ובגדיו לא יפרם
       he_translit: "'t r'shv l' ypr' vbgdyv l' yprm"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(hakohen_hagadol, greatness_and_the_one_hour_rule)"
+        en: >
+          THE HIGH PRIEST'S GREATNESS AND THE ONE-HOUR RULE [claim
+          LV21A-10]. 'Greater than his brothers' — in beauty, wealth,
+          strength, wisdom, appearance; lacking wealth, MAKE HIM GREAT
+          from his brothers' means (Pinchas of Chavata, the quarry filled
+          with gold). THE ONE-HOUR RULE: anointed seven and invested
+          seven, or one and one, EVEN ONE HOUR — the office attaches at
+          the pouring, not at the week. Head and garments: R. Yehuda — not
+          at all; R. Meir — not for his dead as people do; the high priest
+          rends BELOW, the commoner ABOVE. Onkelos: 'filled his hand' →
+          'OFFERED HIS OFFERING'; the anointing oil → 'the oil of
+          GREATNESS.'
+        cites: ["Sifra, Emor, Section 2 1", "Sifra, Emor, Section 2 2", "Sifra, Emor, Section 2 3", "Onkelos Lev 21:10"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -276,6 +456,24 @@ boot_steps:
       he: לאביו ולאמו לא יטמא
       he_translit: "l'byv vl'mv l' ytm'"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(al_kol_nafshot_met, the_dead_the_sanctuary_and_the_onen_split)"
+        en: >
+          THE DEAD, THE SANCTUARY, AND THE ONEN SPLIT [claim LV21A-11].
+          'All souls of the dead' — R. Akiva: a quarter-log of blood FROM
+          TWO corpses defiles; 'shall not come... shall not defile' — TWO
+          prohibitions, the commoner priest carrying both by 'not
+          defile'-'not defile'; father and mother — yet the abandoned
+          corpse overrides. 'From the sanctuary he shall not go out' —
+          WITH them no, AFTER them yes, alternating hidden and revealed to
+          the city gate (R. Meir); not at all (R. Yehuda). THE ONEN SPLIT:
+          the high priest serving on his death day — service VALID; the
+          commoner — INVALID: one act, two verdicts keyed to rank. The
+          many-garmented included by 'the CROWN of the oil' (Onkelos:
+          כְּלִיל, 'crown').
+        cites: ["Sifra, Emor, Section 2 4", "Sifra, Emor, Section 2 5", "Sifra, Emor, Section 2 6", "Onkelos Lev 21:12"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -316,6 +514,21 @@ boot_steps:
       he: אשה בבתוליה יקח
       he_translit: "'shh bbtvlyh yqch"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(ishah_bivtuleha, the_virgin_command)"
+        en: >
+          THE VIRGIN COMMAND AND THE APPOINTED WIDOWER [claim LV21A-12].
+          'He' — not the KING, not the NAZIRITE; the war-anointed priest
+          INCLUDED; 'a wife in her virginity' excludes the adult whose
+          virginity has ended (R. Eliezer and R. Shimon permit her); 'but
+          a virgin' — a positive COMMAND; 'from his people' — the daughter
+          of an Ammonite convert-woman fit; 'take a wife' — betrothed a
+          widow THEN appointed high priest, he MAY marry her (Yehoshua ben
+          Gamla and Marta bat Baitos); not a levirate widow by the
+          levirate betrothal — 'take a WIFE.'
+        cites: ["Sifra, Emor, Section 2 7", "Sifra, Emor, Chapter 2 6"]
+        confidence: witnessed
     comment: >
       Top split L mark=n/a; maps_to this verse only.
     confidence: hypothesis
@@ -336,6 +549,23 @@ boot_steps:
       he: כי אם בתולה מעמיו יקח אשה
       he_translit: "ky 'm btvlh m'myv yqch 'shh"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(almanah_ugrushah, the_profaned_seed_layer)"
+        en: >
+          THE PROFANED-SEED LAYER [claim LV21A-13]. Widow AND divorcee
+          both written — the divorcee alone would have made her seed
+          MAMZER by a-fortiori: widow to be STRINGENT, divorcee to be
+          LENIENT — chalal, not mamzer. 'Zonah'-'zonah' exports the rule
+          DOWN THE RANKS: the commoner's seed from the disqualified is
+          chalal too. THE FENCE: 'THESE he shall not take' — the seed from
+          a niddah is NOT chalal though her intercourse is karet-level;
+          the demonstrative refuses the inference. 'Shall not profane his
+          seed' — SHE HERSELF is profaned (the man never is, the woman
+          everywhere); 'among his people' — the daughter of a male chalal
+          disqualified, R. Yehuda adding the male convert's daughter.
+        cites: ["Sifra, Emor, Chapter 2 1", "Sifra, Emor, Chapter 2 2", "Sifra, Emor, Chapter 2 4", "Sifra, Emor, Chapter 2 5", "Sifra, Emor, Chapter 2 7", "Sifra, Emor, Chapter 2 8", "Onkelos Lev 21:14"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -458,26 +688,26 @@ oral_notes:
 
 scenarios:
   - id: S1
-    title_en: "After Lev 21:1 (STEP_Lv_21_1)"
-    expect_en: "Advances via tree-derived STEP_Lv_21_1; arms in boot_steps."
+    title_en: "after STEP_Lv_21_1 — Lev 21:1"
+    expect_en: "no test, no name."
   - id: S2
-    title_en: "After Lev 21:2 (STEP_Lv_21_2)"
-    expect_en: "Advances via tree-derived STEP_Lv_21_2; arms in boot_steps."
+    title_en: "after STEP_Lv_21_2 — Lev 21:2"
+    expect_en: "no test, no name."
   - id: S3
-    title_en: "After Lev 21:3 (STEP_Lv_21_3)"
-    expect_en: "Advances via tree-derived STEP_Lv_21_3; arms in boot_steps."
+    title_en: "after STEP_Lv_21_3 — Lev 21:3"
+    expect_en: "no test, no name."
   - id: S4
-    title_en: "After Lev 21:4 (STEP_Lv_21_4)"
-    expect_en: "Advances via tree-derived STEP_Lv_21_4; arms in boot_steps."
+    title_en: "after STEP_Lv_21_4 — Lev 21:4"
+    expect_en: "no test, no name."
   - id: S5
-    title_en: "After Lev 21:5 (STEP_Lv_21_5)"
-    expect_en: "Advances via tree-derived STEP_Lv_21_5; arms in boot_steps."
+    title_en: "after STEP_Lv_21_5 — Lev 21:5"
+    expect_en: "no test, no name."
   - id: S6
-    title_en: "After Lev 21:6 (STEP_Lv_21_6)"
-    expect_en: "Advances via tree-derived STEP_Lv_21_6; arms in boot_steps."
+    title_en: "after STEP_Lv_21_6 — Lev 21:6"
+    expect_en: "no test, no name."
   - id: S_last
-    title_en: "After final verse 21:15"
-    expect_en: "Block closed via STEP_Lv_21_15."
+    title_en: "after STEP_Lv_21_15 — Lev 21:15"
+    expect_en: "no test, no name."
 
 binary_trees:
   display_policy_en: >

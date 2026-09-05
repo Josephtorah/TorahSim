@@ -551,7 +551,45 @@ by knowledge-state against Mishnah Shevuot 1:3/1:6's own rows —
 TWO effects discovered (the registry at 55): dispatched_to_
 wilderness — the ledger's FIRST TRANSFER OPERATION — and suspends
 (the tradition's own tolah). Chips pending the site lap:
-lev_16_yk_entry_blood, lev_16_yk_goat_statute. The target this serves (THE_WORLD.md idea log,
+lev_16_yk_entry_blood, lev_16_yk_goat_statute. THE EIGHTH SPAN
+(2026-09-05, the Emor sweep — the first under Claude Fable 5.1):
+cold_run_moadim.py — THE APPOINTED TIMES ENGINE, Lev 23 compiled
+ink-first: the two work classes read off two token forms and
+censused per verse (all-work at 23:3, 28, 30, 31; servile-work at
+23:7, 8, 21, 25, 35, 36), the fast's two sanctions in their own
+verbs, the omer's arithmetic and gate, the four species counted by
+grammatical number, the lulav's Temple-seven and province-one from
+"before the LORD" and "the first day," and the morrow ruled by the
+Sifra's four routes with Onkelos writing it into the verse — 24/24
+at honest fractions (14 ink / 8 recorded / 2 answer-sheet); THREE
+effects discovered (the registry at 58): counts_omer and
+dwells_in_booths — the simulator's first per-person and per-
+household TIMERS from a calendar chapter — and takes_four_species.
+Chips pending the site lap: lev_23_spring_festivals,
+lev_23_fall_festivals. THE NINTH SPAN (2026-09-05, the Behar-
+Bechukotai sweep — the compile that closes Leviticus):
+cold_run_yovel.py — THE JUBILEE ENGINE, Lev 25 with Lev 27's
+valuation table compiled ink-first: the cycle's product read off the
+verse that STATES it (seven years seven times = forty-nine at 25:8,
+the fiftieth sanctified), the RETURN verbs censused, the
+harvest-year pricing and the surplus computed from the ink, the four
+house classes by their own clauses, the two interest nouns, the
+Hebrew slave's hireling status with his Jubilee exit and
+hireling-days redemption (the six-year exit an IMPORT from Exodus
+21:2, M-07, for the one sold to an Israelite only), the valuation
+table by bracket with the boundary year counting below, the field's
+fifty per homer deducted by the years to a sela and a pundion, and
+THE PRIEST CENSUS SPLIT BY FORM — הַכֹּהֵן ("THE priest," the
+definite subject) ten times as assessor, לַכֹּהֵן ("TO the priest,"
+the dative) once as destination — the answer sheet's ten read off
+the form and the "nine Israelites and one priest" gap consulted PER
+GAP from Sanhedrin 15a:6 — 33/33 at honest fractions (17 ink / 14
+recorded / 1 answer-sheet / 1 data, 51%); FOUR effects discovered
+(the registry at 62): returns_to_holding — the ledger's SECOND
+TRANSFER operation — sold_in_perpetuity, redemption_right,
+interest_barred. Chips pending the site lap: lev_25_shemittah,
+lev_25_redeem_poor, lev_25_slave_jubilee, lev_27_vows_valuations.
+The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law
 computed.

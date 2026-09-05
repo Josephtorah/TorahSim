@@ -1,0 +1,587 @@
+# THE EMOR EXAM (round 45 — 2026-09-05). Bare Mishnah rows citing
+# Lev 21-24, graded after the derivation (79 claims, LV21A..LV24B).
+# Read-source: logic/oral_triage/emor_exam_mishnah_2026-09-05.md.
+# 79 LAW rows carry 135 cells; a list-valued expectation is a
+# recorded dispute the engine must return whole, each arm labeled.
+
+- module: priest_purity_file
+  tractate: Yevamot
+  oracle: Mishnah Kiddushin 1:7; Makkot 3:5; 3:8; 3:9; Bava Metzia 2:10; Sanhedrin 2:1; Horayot 3:4; Yevamot 6:4; 6:5; 10:3; Makkot 3:1; Sotah 8:3; Makkot 1:1; Sanhedrin 11:1
+  exodus_anchor: {unit: lev_21_priest_family, ref: Lev.21.1-15, claims: [LV21A-01, LV21A-03, LV21A-05, LV21A-07, LV21A-09, LV21A-10, LV21A-11, LV21A-12]}
+  cases:
+  - id: Pp_daughters_defile
+    input: {query: priestess_defiles_for_dead}
+    expected: {verdict: daughters_of_aaron_defile}
+    class: A
+  - id: Pp_per_gash
+    input: {query: gash_count_liability}
+    expected: {verdict: liable_per_gash_and_per_dead}
+    class: A
+  - id: Pp_baldness_head
+    input: {query: baldness_on_head_liable}
+    expected: {verdict: whole_head_liable}
+    class: A
+  - id: Pp_unwarned
+    input: {query: defiling_all_day_unwarned}
+    expected: {verdict: one_liability}
+    class: A
+  - id: Pp_warned
+    input: {query: defiling_all_day_warned_each}
+    expected: {verdict: liable_for_each}
+    class: A
+  - id: Pp_furrow
+    input: {query: priest_in_cemetery_furrow}
+    expected: {verdict: one_of_eight_prohibitions}
+    class: A
+  - id: Pp_lost_object
+    input: {query: lost_object_in_cemetery}
+    expected: {verdict: priest_does_not_defile}
+    class: A
+  - id: Pp_father_orders
+    input: {query: father_orders_defilement}
+    expected: {verdict: do_not_obey}
+    class: A
+  - id: Pp_bier
+    input: {query: high_priest_follows_bier}
+    expected: {verdict: [r_meir_hidden_revealed_to_gate, r_yehuda_not_out_at_all]}
+    class: A
+  - id: Pp_hp_levirate
+    input: {query: high_priest_levirate}
+    expected: {verdict: chalitzah_not_yibbum}
+    class: A
+  - id: Pp_many_garmented
+    input: {query: many_garmented_priest_rules}
+    expected: {verdict: virgin_widow_relatives_hair_as_anointed}
+    class: A
+  - id: Pp_widow_betrothal
+    input: {query: high_priest_widow_from_betrothal}
+    expected: {verdict: forbidden}
+    class: A
+  - id: Pp_bogeret
+    input: {query: high_priest_bogeret}
+    expected: {verdict: [forbidden, r_eliezer_r_shimon_permit]}
+    class: A
+  - id: Pp_appointed
+    input: {query: betrothed_widow_then_appointed}
+    expected: {verdict: may_marry_her}
+    class: A
+  - id: Pp_maamar
+    input: {query: yevamah_maamar_then_appointed}
+    expected: {verdict: may_not_marry}
+    class: A
+  - id: Pp_zonah_def
+    input: {query: zonah_definition}
+    expected: {verdict: [r_yehuda_aylonit, sages_convert_freed_illicit]}
+    class: A
+  - id: Pp_husband_returned
+    input: {query: husband_returned_after_second_betrothal}
+    expected: {verdict: permitted_to_first_second_get_no_bar}
+    class: A
+  - id: Pp_two_names
+    input: {query: widow_and_divorcee_lashes}
+    expected: {verdict: two_names}
+    class: A
+  - id: Pp_one_name
+    input: {query: divorcee_and_chalutzah_lashes}
+    expected: {verdict: one_name}
+    class: A
+  - id: Pp_war_return
+    input: {query: widow_to_high_priest_war}
+    expected: {verdict: does_not_return}
+    class: A
+  - id: Pp_zomemim_status
+    input: {query: zomemim_son_of_divorcee}
+    expected: {verdict: lashes_not_status}
+    class: A
+  - id: Pp_daughter_partner
+    input: {query: priests_daughter_partner_and_zomemim}
+    expected: {verdict: strangled_she_burns}
+    class: A
+
+- module: priest_blemish_file
+  tractate: Bekhorot
+  oracle: Mishnah Bekhorot 7:2; 7:5; Eruvin 10:13
+  exodus_anchor: {unit: lev_21_priest_blemish, ref: Lev.21.16-24, claims: [LV21B-02, LV21B-04, LV21B-05]}
+  cases:
+  - id: Pb_giben
+    input: {query: giben_definition}
+    expected: {verdict: [no_eyebrows_or_one, r_dosa_lying, r_chanina_two_backs]}
+    class: A
+  - id: Pb_bald
+    input: {query: kereach_priest}
+    expected: {verdict: unfit_without_hair_ring}
+    class: A
+  - id: Pb_meroach
+    input: {query: meroach_ashekh_definition}
+    expected: {verdict: [no_testicles_or_one, r_yishmael_crushed, r_akiva_wind, r_chanina_dark]}
+    class: A
+  - id: Pb_teeth
+    input: {query: teeth_removed_priest}
+    expected: {verdict: unfit_by_appearance}
+    class: A
+  - id: Pb_wart
+    input: {query: cut_wart_in_temple_sabbath}
+    expected: {verdict: permitted_in_temple_not_province}
+    class: A
+
+- module: terumah_eaters_file
+  tractate: Yevamot
+  oracle: Mishnah Berakhot 1:1; Chagigah 3:3; Ketubot 5:2; 5:3; Niddah 5:3; Yevamot 6:3; 7:2; 7:5; 9:5; 9:6; Pesachim 2:4; Terumot 3:9; 6:6; Makkot 3:2; Shabbat 19:6
+  exodus_anchor: {unit: lev_22_holy_food, ref: Lev.22.1-16, claims: [LV22A-04, LV22A-06, LV22A-07, LV22A-08, LV22A-09, LV22A-10, LV22A-11]}
+  cases:
+  - id: Te_sunset
+    input: {query: priests_terumah_entry_time}
+    expected: {verdict: sunset}
+    class: A
+  - id: Te_onen
+    input: {query: onen_mechusar_kippurim_terumah}
+    expected: {verdict: immersion_for_kodesh_not_terumah}
+    class: A
+  - id: Te_time_arrived
+    input: {query: betrothed_time_arrived_unmarried}
+    expected: {verdict: eats_terumah_from_his_food}
+    class: A
+  - id: Te_portion
+    input: {query: terumah_portion_for_betrothed}
+    expected: {verdict: [r_tarfon_all_terumah, r_akiva_half]}
+    class: A
+  - id: Te_yavam
+    input: {query: yavam_feeds_terumah}
+    expected: {verdict: does_not_feed}
+    class: A
+  - id: Te_chuppah
+    input: {query: betrothed_eats_terumah_when}
+    expected: {verdict: [first_mishnah_at_time, later_court_at_chuppah]}
+    class: A
+  - id: Te_day_old
+    input: {query: day_old_son_terumah}
+    expected: {verdict: feeds_and_disqualifies}
+    class: A
+  - id: Te_betrothal_forbidden
+    input: {query: forbidden_union_from_betrothal_eats}
+    expected: {verdict: [does_not_eat, r_eliezer_r_shimon_permit]}
+    class: A
+  - id: Te_widowed
+    input: {query: widowed_from_forbidden_marriage}
+    expected: {verdict: disqualified_from_marriage_fit_from_betrothal}
+    class: A
+  - id: Te_wife_slaves
+    input: {query: wife_brought_slaves_to_priest}
+    expected: {verdict: they_eat}
+    class: A
+  - id: Te_daughter_slaves
+    input: {query: priests_daughter_brought_slaves_to_israelite}
+    expected: {verdict: they_do_not_eat}
+    class: A
+  - id: Te_rapist
+    input: {query: rapist_seducer_fool_effect}
+    expected: {verdict: neither_disqualify_nor_feed}
+    class: A
+  - id: Te_slave_seed
+    input: {query: slave_disqualifies_by}
+    expected: {verdict: intercourse_not_seed}
+    class: A
+  - id: Te_mamzer_seed
+    input: {query: mamzer_grandson_effect}
+    expected: {verdict: disqualifies_and_feeds}
+    class: A
+  - id: Te_israelite_table
+    input: {query: israelite_woman_to_priest_widowed_with_son}
+    expected: {verdict: eats_terumah}
+    class: A
+  - id: Te_return
+    input: {query: priests_daughter_son_by_israelite_died}
+    expected: {verdict: returns_to_fathers_house}
+    class: A
+  - id: Te_chametz
+    input: {query: leavened_terumah_passover_in_error}
+    expected: {verdict: principal_and_fifth}
+    class: A
+  - id: Te_chametz_deliberate
+    input: {query: leavened_terumah_passover_deliberate}
+    expected: {verdict: exempt_from_payment}
+    class: A
+  - id: Te_gentile_fifth
+    input: {query: fifth_on_gentiles_terumah}
+    expected: {verdict: [liable_fifth, r_shimon_exempt]}
+    class: A
+  - id: Te_kind
+    input: {query: restitution_kind}
+    expected: {verdict: [r_eliezer_any_kind_if_better, r_akiva_kind_for_kind]}
+    class: A
+  - id: Te_tevel_measure
+    input: {query: tevel_eating_measure}
+    expected: {verdict: [r_shimon_any_amount, sages_olive]}
+    class: A
+  - id: Te_uncircumcised
+    input: {query: uncircumcised_eats_terumah}
+    expected: {verdict: barred}
+    class: A
+
+- module: acceptable_offerings_file
+  tractate: Chullin
+  oracle: Mishnah Shekalim 1:5; 4:8; 7:6; Zevachim 14:2; Chullin 5:1; 5:3; 5:5; Menachot 3:6
+  exodus_anchor: {unit: lev_22_acceptable_offerings, ref: Lev.22.17-33, claims: [LV22B-01, LV22B-04, LV22B-05, LV22B-06, LV22B-07, LV22B-08]}
+  cases:
+  - id: Ao_shekels
+    input: {query: gentile_shekels}
+    expected: {verdict: not_accepted}
+    class: A
+  - id: Ao_gentile_vows
+    input: {query: gentile_vows_and_freewill}
+    expected: {verdict: accepted}
+    class: A
+  - id: Ao_altar_fit
+    input: {query: consecrated_property_altar_fit_items}
+    expected: {verdict: sold_for_burnt_offerings}
+    class: A
+  - id: Ao_libations
+    input: {query: gentile_olah_from_abroad_no_libations}
+    expected: {verdict: from_public_funds}
+    class: A
+  - id: Ao_outside_blemished
+    input: {query: blemished_offered_outside}
+    expected: {verdict: [exempt, r_shimon_passing_blemish_prohibition]}
+    class: A
+  - id: Ao_outside_underage
+    input: {query: under_age_offered_outside}
+    expected: {verdict: [exempt, r_shimon_prohibition_no_karet]}
+    class: A
+  - id: Ao_common_outside
+    input: {query: oto_veet_beno_common_outside}
+    expected: {verdict: both_valid_second_lashed}
+    class: A
+  - id: Ao_consecrated_outside
+    input: {query: oto_veet_beno_consecrated_outside}
+    expected: {verdict: first_karet_both_unfit_both_lashed}
+    class: A
+  - id: Ao_terefah
+    input: {query: slaughtered_found_terefah_oto_veet_beno}
+    expected: {verdict: [sages_liable, r_shimon_exempt]}
+    class: A
+  - id: Ao_failed
+    input: {query: failed_slaughter_oto_veet_beno}
+    expected: {verdict: exempt}
+    class: A
+  - id: Ao_two_buyers
+    input: {query: two_bought_cow_and_calf}
+    expected: {verdict: first_buyer_slaughters_first}
+    class: A
+  - id: Ao_eighty
+    input: {query: cow_then_two_calves}
+    expected: {verdict: eighty_lashes}
+    class: A
+  - id: Ao_forty
+    input: {query: two_calves_then_cow}
+    expected: {verdict: forty_lashes}
+    class: A
+  - id: Ao_granddaughter
+    input: {query: cow_granddaughter_then_daughter}
+    expected: {verdict: [forty_lashes, sumchos_eighty]}
+    class: A
+  - id: Ao_periods
+    input: {query: seller_must_inform_periods}
+    expected: {verdict: four_periods_inform_mother_sold}
+    class: A
+  - id: Ao_gap
+    input: {query: seller_inform_condition}
+    expected: {verdict: r_yehuda_when_no_time_gap}
+    class: A
+  - id: Ao_groom_bride
+    input: {query: mother_to_groom_daughter_to_bride}
+    expected: {verdict: must_inform}
+    class: A
+  - id: Ao_day_night
+    input: {query: one_day_boundary_oto_veet_beno}
+    expected: {verdict: day_follows_night_ben_zoma}
+    class: A
+  - id: Ao_block
+    input: {query: two_atzeret_lambs_block}
+    expected: {verdict: they_block_each_other}
+    class: A
+
+- module: calendar_spring_file
+  tractate: Rosh Hashanah
+  oracle: Mishnah Rosh Hashanah 1:9; 2:7; 2:9; Chagigah 2:4; Megillah 3:5; 3:6; Menachot 5:3; 5:6; 6:7; 10:5; Kiddushin 1:9; Sukkah 3:12; Rosh Hashanah 4:3; Sukkah 5:7
+  exodus_anchor: {unit: lev_23_spring_festivals, ref: Lev.23.1-22, claims: [LV23A-01, LV23A-03, LV23A-07, LV23A-08, LV23A-09, LV23A-11, LV23A-12, LV23B-12, LV24A-03, LV24A-04]}
+  cases:
+  - id: Cs_carry_witness
+    input: {query: new_moon_witness_cannot_walk}
+    expected: {verdict: carried_even_on_bed}
+    class: A
+  - id: Cs_profane
+    input: {query: profane_sabbath_for_moon_testimony}
+    expected: {verdict: permitted_in_their_season}
+    class: A
+  - id: Cs_sanctified
+    input: {query: court_says_sanctified}
+    expected: {verdict: people_answer_sanctified}
+    class: A
+  - id: Cs_not_in_time
+    input: {query: moon_not_seen_in_its_time}
+    expected: {verdict: [sanctify_it, r_elazar_heaven_sanctified]}
+    class: A
+  - id: Cs_gamliel
+    input: {query: court_erred_festival_binding}
+    expected: {verdict: binding_no_festivals_but_these}
+    class: A
+  - id: Cs_every_court
+    input: {query: court_authority_like_moses}
+    expected: {verdict: every_three_as_moses_court}
+    class: A
+  - id: Cs_atzeret_friday
+    input: {query: atzeret_on_friday_slaughter_day}
+    expected: {verdict: [beit_shammai_after_sabbath, beit_hillel_none]}
+    class: A
+  - id: Cs_atzeret_sabbath
+    input: {query: atzeret_on_sabbath}
+    expected: {verdict: slaughter_day_after_no_vestments_eulogy_permitted}
+    class: A
+  - id: Cs_reading
+    input: {query: passover_torah_reading}
+    expected: {verdict: festivals_section_torat_kohanim}
+    class: A
+  - id: Cs_each_in_time
+    input: {query: festival_readings_rule}
+    expected: {verdict: each_read_in_its_time}
+    class: A
+  - id: Cs_omer_oil
+    input: {query: omer_minchah_oil_frankincense}
+    expected: {verdict: requires_both}
+    class: A
+  - id: Cs_loaves_oil
+    input: {query: two_loaves_oil_frankincense}
+    expected: {verdict: neither}
+    class: A
+  - id: Cs_waving_geometry
+    input: {query: two_loaves_waving_placement}
+    expected: {verdict: loaves_on_lambs_hands_beneath}
+    class: A
+  - id: Cs_omer_waving
+    input: {query: omer_minchah_waving_presenting}
+    expected: {verdict: both_waving_and_presenting}
+    class: A
+  - id: Cs_sieves
+    input: {query: omer_sieve_count}
+    expected: {verdict: [thirteen_sieves, r_shimon_no_fixed_number]}
+    class: A
+  - id: Cs_market
+    input: {query: flour_market_after_omer}
+    expected: {verdict: [r_meir_against_sages, r_yehuda_with_sages]}
+    class: A
+  - id: Cs_new_grain
+    input: {query: new_grain_after_omer}
+    expected: {verdict: permitted_immediately_distant_from_midday}
+    class: A
+  - id: Cs_waving_day
+    input: {query: waving_day_after_destruction}
+    expected: {verdict: [rybz_whole_day_forbidden, r_yehuda_torah_until_this_day]}
+    class: A
+  - id: Cs_abroad
+    input: {query: land_laws_abroad}
+    expected: {verdict: [orlah_and_kilayim, r_eliezer_also_new_grain]}
+    class: A
+  - id: Cs_lulav_province
+    input: {query: lulav_in_provinces}
+    expected: {verdict: [temple_seven_province_one, rybz_seven_remembrance]}
+    class: A
+  - id: Cs_watches
+    input: {query: watches_equal_at_atzeret}
+    expected: {verdict: matzah_and_leaven_offered}
+    class: A
+
+- module: fall_festivals_file
+  tractate: Sukkah
+  oracle: Mishnah Rosh Hashanah 4:5; Yoma 8:1; 8:2; Sukkah 1:1; 2:4; 2:6; 2:8; 3:1; 3:3; 3:5; 3:13; 4:2; 4:6
+  exodus_anchor: {unit: lev_23_fall_festivals, ref: Lev.23.23-44, claims: [LV23B-01, LV23B-04, LV23B-09, LV23B-11]}
+  cases:
+  - id: Ff_order
+    input: {query: rosh_hashanah_blessing_order}
+    expected: {verdict: [r_yochanan_ben_nuri_malkhuyot_no_blast, r_akiva_malkhuyot_with_day_and_blast]}
+    class: A
+  - id: Ff_afflictions
+    input: {query: yom_kippur_forbidden_list}
+    expected: {verdict: eating_drinking_washing_anointing_sandals_relations}
+    class: A
+  - id: Ff_king_bride
+    input: {query: king_and_bride_wash_faces}
+    expected: {verdict: [r_eliezer_permit, sages_forbid]}
+    class: A
+  - id: Ff_measure
+    input: {query: eating_measure_yom_kippur}
+    expected: {verdict: large_date}
+    class: A
+  - id: Ff_drink
+    input: {query: drinking_measure_yom_kippur}
+    expected: {verdict: mouthful}
+    class: A
+  - id: Ff_combine
+    input: {query: food_and_drink_combine}
+    expected: {verdict: do_not_combine}
+    class: A
+  - id: Ff_twenty
+    input: {query: sukkah_above_twenty_cubits}
+    expected: {verdict: [invalid, r_yehuda_valid]}
+    class: A
+  - id: Ff_old
+    input: {query: old_sukkah}
+    expected: {verdict: [beit_shammai_invalid, beit_hillel_valid]}
+    class: A
+  - id: Ff_trees
+    input: {query: sukkah_among_trees_walls}
+    expected: {verdict: valid}
+    class: A
+  - id: Ff_agents
+    input: {query: agents_of_mitzvah_sick}
+    expected: {verdict: exempt}
+    class: A
+  - id: Ff_meals
+    input: {query: sukkah_meal_count}
+    expected: {verdict: [r_eliezer_fourteen, sages_first_night_only]}
+    class: A
+  - id: Ff_makeup
+    input: {query: missed_first_night_meal}
+    expected: {verdict: [r_eliezer_make_up_last_night, sages_no_make_up]}
+    class: A
+  - id: Ff_exempt
+    input: {query: women_slaves_minors_sukkah}
+    expected: {verdict: exempt_minor_not_needing_mother_obligated}
+    class: A
+  - id: Ff_stolen_lulav
+    input: {query: stolen_or_dry_lulav}
+    expected: {verdict: invalid}
+    class: A
+  - id: Ff_split
+    input: {query: lulav_leaves_split_or_spread}
+    expected: {verdict: [split_invalid_spread_valid, r_yehuda_bind]}
+    class: A
+  - id: Ff_field_willow
+    input: {query: willow_of_field}
+    expected: {verdict: valid}
+    class: A
+  - id: Ff_poplar
+    input: {query: poplar_as_willow}
+    expected: {verdict: invalid}
+    class: A
+  - id: Ff_etrog_terumah
+    input: {query: etrog_of_pure_terumah}
+    expected: {verdict: not_taken_but_valid}
+    class: A
+  - id: Ff_fellow
+    input: {query: fellows_lulav_first_day}
+    expected: {verdict: not_discharged}
+    class: A
+  - id: Ff_fellow_other
+    input: {query: fellows_lulav_other_days}
+    expected: {verdict: discharged}
+    class: A
+  - id: Ff_seven
+    input: {query: lulav_seven_days_when}
+    expected: {verdict: first_day_on_sabbath}
+    class: A
+  - id: Ff_willow_sabbath
+    input: {query: willow_rite_on_sabbath}
+    expected: {verdict: gathered_friday_golden_basins}
+    class: A
+
+- module: lamp_bread_blasphemer_file
+  tractate: Sanhedrin
+  oracle: Mishnah Menachot 8:4; 8:5; 11:5; Sanhedrin 7:5; 6:1; 6:3; 4:1; 11:1; Shevuot 4:13; Makkot 1:6; Bava Kamma 3:10; 8:2; 8:3
+  exodus_anchor: {unit: lev_24_lamp_bread + lev_24_blasphemer_talion, ref: Lev.24.1-23, claims: [LV24A-01, LV24A-04, LV24B-01, LV24B-02, LV24B-03, LV24B-04, LV24B-05, LV24B-06, LV24B-07]}
+  cases:
+  - id: Lb_olives
+    input: {query: three_olives_three_oils}
+    expected: {verdict: first_for_menorah_rest_for_menachot}
+    class: A
+  - id: Lb_method
+    input: {query: olive_pressing_method}
+    expected: {verdict: [mill_and_beam, r_yehuda_mortar_and_stones]}
+    class: A
+  - id: Lb_grades
+    input: {query: nine_grade_order}
+    expected: {verdict: first_of_first_top_third_of_third_bottom}
+    class: A
+  - id: Lb_beaten
+    input: {query: beaten_oil_for_menachot}
+    expected: {verdict: not_required_only_for_light}
+    class: A
+  - id: Lb_table
+    input: {query: showbread_table_dimensions}
+    expected: {verdict: [r_yehuda_ten_by_five, r_meir_twelve_by_six]}
+    class: A
+  - id: Lb_dishes
+    input: {query: frankincense_dishes_place}
+    expected: {verdict: [on_the_row, abba_shaul_between_rows]}
+    class: A
+  - id: Bl_name
+    input: {query: blasphemer_liability_condition}
+    expected: {verdict: pronounces_the_name}
+    class: A
+  - id: Bl_procedure
+    input: {query: blasphemy_witness_procedure}
+    expected: {verdict: substitute_in_trial_explicit_at_verdict_judges_rend}
+    class: A
+  - id: Bl_stoning_place
+    input: {query: stoning_place_location}
+    expected: {verdict: outside_the_court}
+    class: A
+  - id: Bl_herald
+    input: {query: herald_before_execution}
+    expected: {verdict: announces_name_offense_witnesses}
+    class: A
+  - id: Bl_stripped
+    input: {query: stoned_clothing}
+    expected: {verdict: [r_yehuda_man_front_woman_both, sages_man_naked_woman_not]}
+    class: A
+  - id: Bl_one_judgment
+    input: {query: monetary_and_capital_inquiry}
+    expected: {verdict: both_by_inquiry_and_examination}
+    class: A
+  - id: Bl_judges
+    input: {query: judge_count_monetary_vs_capital}
+    expected: {verdict: three_vs_twenty_three}
+    class: A
+  - id: Bl_parent_wound
+    input: {query: parent_striker_liability}
+    expected: {verdict: only_with_a_wound}
+    class: A
+  - id: Bl_after_death
+    input: {query: parent_curser_vs_striker_after_death}
+    expected: {verdict: curser_liable_striker_exempt}
+    class: A
+  - id: Bl_substitutes
+    input: {query: cursing_with_substitute_names}
+    expected: {verdict: [r_meir_liable, sages_exempt]}
+    class: A
+  - id: Bl_parent_substitutes
+    input: {query: parent_curser_substitute_names}
+    expected: {verdict: [r_meir_liable, sages_exempt]}
+    class: A
+  - id: Bl_zomemim
+    input: {query: zomemim_execution_timing}
+    expected: {verdict: not_until_verdict_finished}
+    class: A
+  - id: Bl_shame_ox
+    input: {query: ox_shamed_vs_man_shamed}
+    expected: {verdict: ox_exempt_man_liable}
+    class: A
+  - id: Bl_parents_ox
+    input: {query: ox_wounded_parents_vs_man}
+    expected: {verdict: ox_pays_man_exempt_capital}
+    class: A
+  - id: Bl_five
+    input: {query: man_pays_for_injury}
+    expected: {verdict: damage_pain_healing_idleness_shame}
+    class: A
+  - id: Bl_ox_pays
+    input: {query: ox_pays_for_injury}
+    expected: {verdict: damage_only}
+    class: A
+  - id: Bl_no_wound
+    input: {query: struck_parents_without_wound}
+    expected: {verdict: liable_all_five}
+    class: A
+  - id: Bl_slave_shame
+    input: {query: canaanite_slave_shame}
+    expected: {verdict: [liable_all, r_yehuda_no_shame_for_slaves]}
+    class: A

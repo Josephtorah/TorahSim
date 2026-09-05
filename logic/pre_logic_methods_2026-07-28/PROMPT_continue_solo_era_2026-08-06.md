@@ -10745,3 +10745,265 @@ next parashah, bringing the two lev_24 drafts their derivation
 rhythm at last). Open item: the Lev 11:42 large-vav repair
 (owner's word). Watches: will-indexed dispatch (2 exemplars),
 the demotion operator (1). Memory current through the sweep.
+
+═══ 2026-09-05 (post-#48) — THE MODEL SWITCH AND THE OWNER'S AUDIT RULING
+COMMITTED+PUSHED first: 61edabe (the Acharei Mot-Kedoshim line) on
+"Commit push then run next". Then, mid-turn, the harness switched
+the session's attribution to Claude Fable 5.1 (Fable 5.1 announced
+2026-09-01); everything through 61edabe ran under Fable 5 — the
+full provenance is in MODEL_LEDGER.md at the repo root (217 of 238
+commits Fable 5; 10 Opus 5 on 08-30; 9 Grok + 2 untrailered on
+08-05/06). The owner paused the Emor block to discuss, then asked
+for a REVIEW of the Lev 1-8 consolidation (cafe7bf): ELEVEN gaps
+found and graded in World/step9/REVIEW_LEV1-8_2026-09-05.md — the
+Vayikra reading 10 Sifra rows short of "whole" (Nedavah Chapter 10
+rows 11-19 + Chovah Section 7 row 11 empty), no cold function for
+the Lev 2 meal offering or the bird burnt offering, Lev 7:19 ink
+mislabeled DATA, the firstborn window's move uncited (Zevachim
+57a:5), the southern-base cell declared open though seated at
+LV01C-02 + recorded at Zevachim 53a:10-14, F-200 overstating
+novelty (LV03-03 already held the all-sides law), no re-affirmation
+row for lev_03, no chips for Lev 1-5 units, the pesach receipt a
+file-existence check, the olah-north label, no cold-runner harness.
+No verdict was wrong; the self-reports outran the coverage.
+⚠ OWNER RULING (2026-09-05, verbatim): "Let's continue arriving
+[deriving] the logic and we will go back and review once we're done
+with Deuteronomy" — THE AUDIT PASS IS DEFERRED until the walk
+reaches the end of Deuteronomy; the proposed order stands on the
+record for then (mechanical audits whole-corpus first — coverage,
+cites, stamps/chips, DATA cells, open dockets — then the cold
+runners one by one, then units sampled by sitting speed, every
+audit becoming a standing gate). The walk continues: EMOR now.
+Lesson carried forward into every sweep from here (no rule change,
+the existing Step 2 rule applied): the reading ledger's coverage
+line is COMPUTED against the source's row count, never recited.
+
+═══ 2026-09-05 — EMOR FULL RHYTHM (the first sweep under Claude Fable 5.1;
+owner: "Commit push then run next", then "Let's continue deriving the
+logic and we will go back and review once we're done with Deuteronomy")
+COMMITTED+PUSHED first: 61edabe (the Acharei line). Then the model
+switch was recorded (MODEL_LEDGER.md; STAMP_LEDGER provenance row),
+the Lev 1-8 review written (World/step9/REVIEW_LEV1-8_2026-09-05.md,
+eleven gaps, the audit DEFERRED to after Deuteronomy on the owner's
+word), and EMOR RAN: pre-enumeration wip_emor/emor_enum.json (458
+declared = Sifra Emor 334 + Onkelos 124; 10,320 links outside scope;
+88 Mishnah rows / 29 tractates — two "Mishnah Berurah" regex hits
+excluded as a modern commentary); FOUR reading ledgers with the
+coverage COMPUTED by script against the source row counts (334/334 +
+124/124, no dups — the review's lesson applied the same day) and
+full cite indexes (lev_21_priests, lev_22_holy_food_offerings,
+lev_23_festivals, lev_24_lamp_bread_blasphemer — 355 MATERIAL / 90
+CONTEXT / 11 NOT-BEARING / 2 DUPLICATE); 79 claims seated by
+scratchpad/seat_emor.py into all EIGHT drafts (LV21A-01..13,
+LV21B-01..07, LV22A-01..11, LV22B-01..10, LV23A-01..13, LV23B-01..12,
+LV24A-01..06, LV24B-01..07 — the two lev_24 drafts finally frozen;
+the exported talion() has its spine seat at LV24B-06); 8 rituals
+COMPLETE (corpus 150 → 158; one transient ALL_UNITS red settled on
+the next ritual, as documented); rebake from ROOT: standing 1529 →
+1608, hash 8b8fff1fa28953af UNMOVED; STAMP_LEDGER delegated FULL
+RULE row for the eight. EXAM ROUND 45 = 135/135 FIRST GRADED RUN
+(1317/1317 over 45 rounds): 79 LAW rows → 135 cells in 7 modules
+(emor_rules.py; cases_emor.yaml; run_emor.py cloned clean — and
+run_acharei.py's stale "Lev 12-15" docstring fixed while at it);
+THE VOCABULARY GATE FIRED (table_dimensions,
+curser_vs_striker_after_death already registered → renamed with
+their subject); vocab +135 → 1141 (every value with its own he +
+gloss, unlike round 44's placeholder glosses — noted for the
+deferred audit); catalog R-541..R-547 (352 rules); FORTY-TWO
+VERBATIM rows. COMPILE: cold_run_moadim.py — THE APPOINTED TIMES
+ENGINE 24/24 (14 INK / 8 RECORDED / 2 ANSWER-SHEET = 58% ink): the
+two work classes read off two token forms censused per verse, the
+fast's two sanctions in their own verbs, the omer arithmetic and two
+gates, the four species by grammatical number, Temple-seven /
+province-one from the ink, the morrow by four routes + Onkelos; THE
+ANSWER-SHEET CHECK FIRED (Menachot 3:6 says "two LOAVES" — my token
+guess "the bread" refused; fixed); one dishonest test pairing caught
+in self-review before the run (RH date vs Pesachim 5:3 → replaced by
+the slaughter-window cell). EFFECTS 55 → 58: counts_omer (TIMER),
+dwells_in_booths (TIMER), takes_four_species. MIDDOT +6 (two-way
+transfer; profanation triple-import; strict-to-lenient meta-rule;
+three-constraint pin; unwritten warning from a redundant punishment;
+demonstrative fence). MOVE_CATALOG: M-18 exemplars 4-5, M-16
+exemplar 8 (consonant-fragment cousin — a third registers a move).
+Onkelos load-bearing 14 ways (21:4 fork, 21:20, 22:2, 22:16, 22:23
+fork, 22:28 FEMINIZED, 23:11/15, 23:24, 23:40, 23:43, 23:44,
+24:11/16, 24:20). Regression green everywhere (four non-standard
+tails each 0 inside; run_exam 10/10; all cold runners; world
+engine); manifests 0 FAILED; gloss_lint 0 new (MIDDOT 1 /
+MOVE_CATALOG 5 / STAMP 1 = exact HEAD baselines; NOTE for the audit:
+gloss_lint skips .yaml by extension — vocabulary/effects YAMLs are
+not actually linted). Records: REPORT_EMOR.md, EXAM_LEDGER round
+45, THE_STEPS (eighth span), THE_BRIEFING (EIGHT PARASHOT IN), this
+entry, memory. UNCOMMITTED: the whole Emor line + MODEL_LEDGER.md +
+REVIEW_LEV1-8 — rides the next "commit push". NEXT on the walk:
+BEHAR (Lev 25-26) then BECHUKOTAI (Lev 26-27) — Leviticus closes;
+watches: will-indexed dispatch (2), demotion operator (1),
+consonant-fragment read (1).
+
+═══ COMPACTION POINT #49 (2026-09-05, owner: "Get ready for compact")
+═══ CLEAN POINT — no work mid-flight. The window since #48 ran:
+(1) post-compaction rereads done; (2) the Acharei Mot-Kedoshim line
+COMMITTED+PUSHED 61edabe on "Commit push then run next" — the LAST
+commit under Claude Fable 5 (the harness switched this session to
+Fable 5.1 mid-turn right after it; MODEL_LEDGER.md at the repo root
+holds the full commit-level provenance: 217 of 238 commits Fable 5,
+10 Opus 5, 9 Grok, 2 untrailered; a STAMP_LEDGER provenance row
+marks the switch); (3) on the owner's request, THE LEV 1-8 REVIEW —
+World/step9/REVIEW_LEV1-8_2026-09-05.md, eleven graded gaps (the
+Vayikra reading 10 Sifra rows short of "whole"; no cold function for
+the Lev 2 meal offering or the bird olah; Lev 7:19 ink mislabeled
+DATA; Zevachim 57a:5 uncited; the southern-base cell declared open
+though seated at LV01C-02 and recorded at Zevachim 53a:10-14; F-200
+overstating novelty vs LV03-03; no re-affirmation row for lev_03; no
+chips for Lev 1-5 units; the pesach receipt a file-existence check;
+the olah-north label; no cold-runner harness) — no verdict wrong,
+the self-reports outran the coverage; ⚠ OWNER RULING: "continue
+deriving the logic and we will go back and review once we're done
+with Deuteronomy" — THE AUDIT PASS IS DEFERRED to the end of
+Deuteronomy, the review file holds its order (mechanical audits
+first, then the cold runners, then units by sitting speed, every
+audit becoming a gate); (4) EMOR FULL RHYTHM COMPLETE — the sitting
+entry directly above carries the record: 458 read whole with the
+coverage COMPUTED (334/334 + 124/124), 79 claims into all EIGHT
+drafts (the lev_24 pair frozen at last), corpus 158, standing 1608,
+hash 8b8fff1fa28953af UNMOVED, EXAM ROUND 45 = 135/135 first graded
+run → 1317/1317 over 45 rounds (88 rows / 29 tractates, 42 VERBATIM),
+R-547 (352 rules), vocab 1141 (per-value he + gloss), cold_run_
+moadim.py 24/24 (THE APPOINTED TIMES ENGINE, 58% ink), effects 58
+(the first calendar TIMERS: counts_omer, dwells_in_booths; +
+takes_four_species), MIDDOT +6, M-18 exemplars 4-5, M-16 exemplar 8;
+both gates fired honestly (vocabulary collisions ×2 renamed; the
+answer-sheet token for Menachot 3:6 refused) and were fixed before
+anything ran. Regression green everywhere (four non-standard tails
+each 0 misses inside; run_exam 10/10; all cold runners; the world
+engine); manifests 0 FAILED; gloss_lint 0 new — EXAM_LEDGER 7 /
+THE_STEPS 1 / MIDDOT 1 / MOVE_CATALOG 5 / STAMP 1 / state doc 147 =
+exact HEAD baselines (NOTE for the deferred audit: gloss_lint SKIPS
+.yaml by extension — the vocabulary and effects registries have
+never actually been linted; round 44's vocabulary entries carry one
+placeholder he/gloss for all 79 values). Records current:
+REPORT_EMOR.md, EXAM_LEDGER round 45, catalog both files,
+STAMP_LEDGER (provenance row + the delegated FULL RULE row for the
+eight), MIDDOT, MOVE_CATALOG, THE_STEPS (the eighth span),
+THE_BRIEFING (EIGHT PARASHOT IN), MODEL_LEDGER.md, memory
+(step9-exam-era.md + MEMORY.md index), this doc. Also fixed in
+passing: run_acharei.py's stale "Lev 12-15" docstring. UNCOMMITTED:
+the whole Emor line (62 paths: 4 reading ledgers + the exam docket
+ledger + wip_emor/ (enum + query glosses) + 8 unit YAMLs + 8
+manifests + 8 py renders + 8 UNIT html + UNIT_INDEX/ALL_UNITS/
+CORPUS_TRUTH + emor_rules/cases_emor/run_emor + engine tail +
+vocabulary + effect registry + cold_run_moadim.py + catalog both
+files + EXAM_LEDGER + STAMP_LEDGER + MIDDOT + MOVE_CATALOG +
+REPORT_EMOR + THE_STEPS + THE_BRIEFING + state doc) + MODEL_LEDGER.md
++ REVIEW_LEV1-8_2026-09-05.md + the run_acharei.py fix — rides the
+next "commit push" (trailer now "Claude Fable 5.1"; NEVER-COMMIT set
+excluded as always: Data/discord_backup_codes.txt,
+DISPOSABLE_scan/*.zip, open_ledger/, elijah_docket, grok-mockups/,
+logic/gork/, cases_pilot.yaml).
+POST-COMPACTION REREADS (mandatory, first sitting): THE_STEPS Step 2
++ Step 5 + the compiler block + this tail. NEXT on the owner's word:
+commit push, then BEHAR (Lev 25-26 — the Jubilee's own chapter; the
+jubilee_release effect already registered; spine = Sifra Behar +
+Onkelos; pre-enumerate by script; coverage COMPUTED), then
+BECHUKOTAI (Lev 26-27) closes Leviticus. Open item: the Lev 11:42
+large-vav repair (owner's word). Watches: will-indexed dispatch (2),
+the demotion operator (1), the consonant-fragment read (1 — a third
+registers a move). Memory current through the sweep.
+
+═══ SITTING 2026-09-05 (post-#49, owner: "Re read compact resume
+═══ files" → "How much of lev is left" → "continue"): BEHAR-BECHUKOTAI
+═══ FULL RHYTHM — LEVITICUS CLOSED ON THE WALK
+Rereads done first (THE_STEPS Step 2 + Step 5 + the compiler block +
+the #49 tail). The owner asked how much of Leviticus remained (three
+chapters, 135 of 859 verses, five tree-era drafts) and said
+"continue"; the double parashah ran as ONE sitting under the
+parashah-grain rule, declared openly as Behar-Bechukotai. THE
+READING: pre-enumeration by script (logic/oral_triage/wip_behar/
+behar_enum.json — 397 declared: Sifra Behar 109 + Sifra Bechukotai
+153 + Onkelos Lev 25-27 135; 10,078 links outside scope; 61 bare
+Mishnah rows / 21 tractates, the commentaries excluded openly); five
+append-only ledgers (lev_25_shemittah_yovel, lev_25_redemption,
+lev_25_slave_jubilee, lev_26_blessings_curses, lev_27_valuations —
+all _2026-09-05.md), verdicts MATERIAL 348 / CONTEXT 40 / ENRICHMENT
+9, CITE INDEXES appended with coverage COMPUTED by
+scratchpad/cite_index_behar.py (262/262 + 135/135, WHOLE asserted),
+gloss_lint 0 on all five (two flags fixed: a transliteration and a
+hyphen jargon). THE SEATS: 102 claims by scratchpad/seat_behar.py
+(claims in seat_behar_a/b/c.py; pre-check: py_compile, every cite
+present in a ledger as a verdicted row, every step id present, every
+Hebrew span glossed) — LV25A-01..18, LV25B-01..15, LV25C-01..15,
+LV26-01..29, LV27-01..25; Sifra Behar Chapter 9 5-6 + Onkelos 26:1-2
+(read in the slave ledger) seated in lev_26_bless_curse; five
+rituals COMPLETE (transient ALL_UNITS reds settled on re-run as
+always), corpus 158 → 163, standing 1608 → 1710, hash
+8b8fff1fa28953af UNMOVED, manifests 0 FAILED; delegated FULL RULE
+stamp row appended. NOTE for the deferred audit: the py renders
+carry gloss_lint flags from the tree-comment wrapping the renderer
+emits (3/6/5/13/5 here; Emor's renders 9 — the same generator
+trait, never claimed 0); the freeze gate's "READING DEBT STANDING"
+line refers to the pre-revision jsonl ledgers and is the standing
+message for every pre-08-21 draft. THE EXAM (round 46): docket
+ledger behar_exam_mishnah_2026-09-05.md (61 rows verdicted LAW 47 /
+CONTEXT 13 / CREDIT 1 — Makkot 3:8 credited to round 45 — VERBATIM
+29, all computed by script; cite index complete); ONE TABLE
+(scratchpad/gen_behar_cases.py) generated cases_behar.yaml (7
+modules, 89 cells) AND registered the 89 query values with their own
+he/gloss — no drift possible, both gates silent; behar_rules.py;
+run_behar.py cloned; engine tail `import behar_rules as _bh`; 89/89
+FIRST RUN → 1406/1406 over 46 rounds; regression green (46 runners
+incl. run_exam 10/10, all cold runners, the world engine); catalog
+R-548..R-554 (544 ids, 359 compiled rules); vocab 1230 on 158 dims.
+THE COMPILE: cold_run_yovel.py — THE JUBILEE ENGINE (Lev 25 + Lev
+27's valuation table), 59 probes, censuses (seven x4 at 25:8 — the
+first draft asserted 3 and the ink corrected it; RETURN verbs [10,
+13, 27, 28, 41]; ביבל (in the Jubilee) [28, 30, 31, 33] with 25:54's
+בשנת היבל (in the Jubilee year) censused separately; priest tokens 10 definite + 1 dative), 16-row
+answer sheet with token checks, 33/33 at 17 INK / 14 MOVE / 1 A / 1
+D (51%); the dishonest-pairing trap caught again in self-review (the
+priest count first graded against itself) and fixed by grading
+against the sheet's ten, with the "nine Israelites and one priest"
+gap READ PER GAP from Data/bavli_sanhedrin_he.json 15a:6 (Shmuel);
+effects 58 → 62 (returns_to_holding TRANSFER, sold_in_perpetuity,
+redemption_right, interest_barred), gloss_lint 0 after three
+ellipsis spans were rewritten. RECORDS: EXAM_LEDGER round 46,
+REPORT_BEHAR.md, STAMP_LEDGER, MIDDOT +7 rows (before the watch
+anchor), MOVE_CATALOG (M-18 ex. 6-7; M-07 ex. (a) closed from the
+Leviticus side), THE_STEPS (THE NINTH SPAN), THE_BRIEFING (LEVITICUS
+CLOSED bullet), this doc; memory next. UNCOMMITTED since 61edabe: the
+Emor line (62 paths) + MODEL_LEDGER + REVIEW_LEV1-8 + the
+run_acharei fix + the whole Behar-Bechukotai line (5 reading
+ledgers + docket + wip_behar/ + 5 unit YAMLs + 5 manifests + 5 py
+renders + 5 UNIT html + UNIT_INDEX/ALL_UNITS/CORPUS_TRUTH +
+behar_rules/cases_behar/run_behar + engine tail + vocabulary +
+effect registry + cold_run_yovel.py + catalog both files +
+EXAM_LEDGER + STAMP_LEDGER + MIDDOT + MOVE_CATALOG + REPORT_BEHAR +
+THE_STEPS + THE_BRIEFING + state doc). NEVER-COMMIT set unchanged.
+
+═══ COMPACTION POINT #50 (2026-09-05 — written unprompted at the
+═══ sitting's close; the window is heavy)
+═══ CLEAN POINT — no work mid-flight. LEVITICUS CLOSED ON THE WALK:
+ten parashot derived, corpus 163, standing 1710, exam 1406/1406 over
+46 rounds, 359 compiled rules, vocab 1230, effects 62, nine cold
+compiles, hash 8b8fff1fa28953af unmoved. Everything since 61edabe is
+UNCOMMITTED (the Emor line + the Behar-Bechukotai line, enumerated
+in the entry above) and rides the owner's next "commit push"
+(trailer Claude Fable 5.1; NEVER-COMMIT set: Data/discord_backup_
+codes.txt, DISPOSABLE_scan/*.zip, open_ledger/, elijah_docket,
+grok-mockups/, logic/gork/, cases_pilot.yaml). POST-COMPACTION
+REREADS (mandatory, first sitting): THE_STEPS Step 2 + Step 5 + the
+compiler block + this tail. NEXT on the owner's word: commit push,
+then NUMBERS — parashat Bamidbar (Num 1-4): spine = the Sifrei on
+Numbers + Onkelos, BUT the Sifrei's running text BEGINS AT NUMBERS
+5:1 (Piska 1 on "send out of the camp"), so Num 1-4 needs a
+SUBSTITUTE SPINE by the Exod 25-40 precedent (delegated ruling
+2026-09-01: Tanchuma both recensions beside Onkelos; Bamidbar Rabbah
+1-5 is the verse-anchored candidate for Num 1-4 — decide at the
+sitting, record in CORE_SHELF.md and THE_STEPS Step 2); check
+Data/ for sifrei_bamidbar / bamidbar_rabbah / tanchuma shelves
+before declaring. The audit pass stays DEFERRED to the end of
+Deuteronomy (REVIEW_LEV1-8 holds the order; add: the lev_04 chatat
+drafts, the py-render gloss flags, the vocabulary yaml never linted,
+round 44's placeholder glosses). Open item: the Lev 11:42 large-vav
+repair (owner's word). Watches: will-indexed dispatch (2), the
+demotion operator (1), the consonant-fragment read (1 — a third
+registers a move). Memory current through this sweep.

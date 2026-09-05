@@ -1,0 +1,656 @@
+# THE BEHAR-BECHUKOTAI EXAM (round 46 — 2026-09-05, Leviticus's last
+# round). Bare Mishnah rows citing Lev 25-27, graded after the
+# derivation (102 claims, LV25A..LV27). Read-source:
+# logic/oral_triage/behar_exam_mishnah_2026-09-05.md.
+# 47 LAW rows carry 89 cells; a list-valued expectation is a
+# recorded dispute the engine must return whole, each arm labeled.
+
+- module: shemittah_land_file
+  tractate: Rosh Hashanah
+  oracle: Mishnah Makkot 3:9; Rosh Hashanah 1:8; Sanhedrin 3:3; Shevuot 7:4; Rosh Hashanah 3:2; 4:9
+  exodus_anchor:
+    unit: lev_25_shemittah
+    ref: Lev.25.1-22
+    claims:
+    - LV25A-04
+    - LV25A-05
+    - LV25A-09
+  cases:
+  - id: Sh_plow_seventh
+    input:
+      query: shemittah_plowing_in_seventh
+    expected:
+      verdict: banned_field_labor
+    class: A
+  - id: Sh_trader_witness
+    input:
+      query: shemittah_produce_trader_witness
+    expected:
+      verdict: disqualified
+    class: A
+  - id: Sh_trader_other_craft
+    input:
+      query: shemittah_trader_with_other_craft
+    expected:
+      verdict: r_yehuda_fit
+    class: A
+  - id: Sh_shofar_cow
+    input:
+      query: yovel_shofar_of_a_cow
+    expected:
+      verdict: invalid_it_is_a_horn
+    class: A
+  - id: Sh_blast_order
+    input:
+      query: yovel_blast_order
+    expected:
+      verdict: plain_broken_plain_three_times
+    class: A
+  - id: Sh_blast_scope
+    input:
+      query: yovel_blast_obligation_scope
+    expected:
+      verdict: every_individual
+    class: A
+- module: overreaching_file
+  tractate: Bava Metzia
+  oracle: Mishnah Bava Metzia 4:3; 4:9; 4:10; Arakhin 9:1
+  exodus_anchor:
+    unit: lev_25_shemittah
+    ref: Lev.25.14-17
+    claims:
+    - LV25A-14
+    - LV25A-15
+    - LV25A-16
+  cases:
+  - id: On_measure
+    input:
+      query: onaah_measure
+    expected:
+      verdict: sixth_of_purchase
+    class: A
+  - id: On_window
+    input:
+      query: onaah_return_window
+    expected:
+      verdict: until_shown_to_merchant_or_kinsman
+    class: A
+  - id: On_tarfon
+    input:
+      query: onaah_r_tarfon_at_lod
+    expected:
+      verdict: third_then_reverted
+    class: A
+  - id: On_exempt
+    input:
+      query: onaah_slaves_documents_land_hekdesh
+    expected:
+      verdict: no_overreaching
+    class: A
+  - id: On_price
+    input:
+      query: onaah_asking_price_without_buying
+    expected:
+      verdict: verbal_wronging
+    class: A
+  - id: On_penitent
+    input:
+      query: onaah_reminding_penitent
+    expected:
+      verdict: verbal_wronging
+    class: A
+  - id: On_two_year
+    input:
+      query: geulah_field_sold_in_jubilee_year
+    expected:
+      verdict: not_redeemed_under_two_years
+    class: A
+  - id: On_blight
+    input:
+      query: geulah_blight_year_count
+    expected:
+      verdict: not_counted
+    class: A
+  - id: On_three_harvests
+    input:
+      query: geulah_three_harvests_two_years
+    expected:
+      verdict: r_elazar_allowed
+    class: A
+- module: land_redemption_file
+  tractate: Arakhin
+  oracle: Mishnah Arakhin 9:2; 9:3; 9:4; 9:7; 9:8; Shekalim 4:9
+  exodus_anchor:
+    unit: lev_25_redeem_poor
+    ref: Lev.25.23-34
+    claims:
+    - LV25B-04
+    - LV25B-05
+    - LV25B-06
+    - LV25B-07
+    - LV25B-08
+    - LV25B-09
+    - LV25B-11
+    - LV25B-12
+  cases:
+  - id: Ge_first
+    input:
+      query: geulah_resold_dearer
+    expected:
+      verdict: reckon_with_first
+    class: A
+  - id: Ge_last
+    input:
+      query: geulah_resold_cheaper
+    expected:
+      verdict: reckon_with_last
+    class: A
+  - id: Ge_constraints
+    input:
+      query: geulah_layman_borrow_or_halves
+    expected:
+      verdict: forbidden
+    class: A
+  - id: Ge_hekdesh_all
+    input:
+      query: geulah_hekdesh_borrow_or_halves
+    expected:
+      verdict: permitted
+    class: A
+  - id: Ge_walled_window
+    input:
+      query: walled_city_house_redemption_window
+    expected:
+      verdict: at_once_through_twelve_months
+    class: A
+  - id: Ge_walled_start
+    input:
+      query: walled_city_year_count_start
+    expected:
+      verdict: from_the_sale
+    class: A
+  - id: Ge_intercalary
+    input:
+      query: walled_city_intercalated_year
+    expected:
+      verdict: intercalated_for_the_seller
+    class: A
+  - id: Ge_hillel
+    input:
+      query: walled_city_buyer_hides
+    expected:
+      verdict: hillel_deposit_in_chamber
+    class: A
+  - id: Ge_gift
+    input:
+      query: walled_city_house_given_as_gift
+    expected:
+      verdict: irrevocable_after_year
+    class: A
+  - id: Ge_village
+    input:
+      query: village_house_status
+    expected:
+      verdict: best_of_both
+    class: A
+  - id: Ge_village_def
+    input:
+      query: village_house_definition
+    expected:
+      verdict: two_courtyards_of_two_houses
+    class: A
+  - id: Ge_levite_heir
+    input:
+      query: israelite_heir_of_levite_grandfather
+    expected:
+      verdict: not_by_levite_order
+    class: A
+  - id: Ge_zoning
+    input:
+      query: levite_city_field_to_pasture
+    expected:
+      verdict: forbidden
+    class: A
+  - id: Ge_israel_zoning
+    input:
+      query: israel_city_field_to_pasture
+    expected:
+      verdict: permitted_upward_only
+    class: A
+  - id: Ge_hekdesh_upper
+    input:
+      query: hekdesh_supplier_price_moved
+    expected:
+      verdict: sanctuary_hand_on_top
+    class: A
+- module: interest_and_slaves_file
+  tractate: Bava Metzia
+  oracle: Mishnah Bava Metzia 5:1; 5:11; Nedarim 9:4; Bava Metzia 1:5; Kiddushin 1:3; 1:5; Makkot 2:8
+  exodus_anchor:
+    unit: lev_25_slave_jubilee
+    ref: Lev.25.35-55
+    claims:
+    - LV25B-14
+    - LV25C-02
+    - LV25C-03
+    - LV25C-07
+    - LV25C-08
+  cases:
+  - id: Ri_neshekh
+    input:
+      query: ribbit_sela_for_five_dinars
+    expected:
+      verdict: neshekh
+    class: A
+  - id: Ri_tarbit
+    input:
+      query: ribbit_wheat_price_rise_wine
+    expected:
+      verdict: tarbit
+    class: A
+  - id: Ri_who
+    input:
+      query: ribbit_who_transgresses
+    expected:
+      verdict: lender_borrower_guarantor_witnesses
+    class: A
+  - id: Ri_scribe
+    input:
+      query: ribbit_scribe_liability
+    expected:
+      verdict: sages_scribe_too
+    class: A
+  - id: Ri_vow
+    input:
+      query: neder_opening_by_brother_live_with_you
+    expected:
+      verdict: vow_released
+    class: A
+  - id: Sl_find
+    input:
+      query: hebrew_slave_find
+    expected:
+      verdict: belongs_to_slave
+    class: A
+  - id: Sl_canaanite_find
+    input:
+      query: canaanite_slave_find
+    expected:
+      verdict: belongs_to_master
+    class: A
+  - id: Sl_acquire
+    input:
+      query: canaanite_slave_acquisition
+    expected:
+      verdict: money_deed_possession
+    class: A
+  - id: Sl_land
+    input:
+      query: land_acquisition_modes
+    expected:
+      verdict: money_deed_possession
+    class: A
+  - id: Sl_exile_office
+    input:
+      query: exile_returns_to_office
+    expected:
+      verdict:
+      - r_meir_returns
+      - r_yehuda_does_not
+    class: A
+- module: covenant_curses_file
+  tractate: Megillah
+  oracle: Mishnah Megillah 3:3; 3:6; Taanit 3:5
+  exodus_anchor:
+    unit: lev_26_bless_curse
+    ref: Lev.26.1-46
+    claims:
+    - LV26-06
+    - LV26-13
+    - LV26-19
+    - LV26-20
+  cases:
+  - id: Cv_ruin
+    input:
+      query: ruined_synagogue_sanctity
+    expected:
+      verdict: remains_holy
+    class: A
+  - id: Cv_reading
+    input:
+      query: tochacha_reading_interruption
+    expected:
+      verdict: one_reader_whole
+    class: A
+  - id: Cv_fast
+    input:
+      query: fast_day_torah_reading
+    expected:
+      verdict: blessings_and_curses
+    class: A
+  - id: Cv_beast
+    input:
+      query: alarm_for_evil_beast
+    expected:
+      verdict: sound_alarm_everywhere
+    class: A
+  - id: Cv_sword
+    input:
+      query: alarm_for_passing_army
+    expected:
+      verdict: sound_alarm_everywhere
+    class: A
+- module: valuations_file
+  tractate: Arakhin
+  oracle: Mishnah Arakhin 1:1; 3:1; 3:2; 4:1; 4:4; 7:1; 7:5; Megillah 4:3; Sanhedrin 1:3; Bekhorot 1:7; Bava Metzia
+    4:8
+  exodus_anchor:
+    unit: lev_27_vows_valuations
+    ref: Lev.27.1-25
+    claims:
+    - LV27-01
+    - LV27-02
+    - LV27-03
+    - LV27-07
+    - LV27-08
+    - LV27-09
+    - LV27-10
+    - LV27-11
+    - LV27-12
+    - LV27-16
+    - LV27-19
+    - LV27-22
+  cases:
+  - id: Er_tumtum
+    input:
+      query: erech_tumtum_androgynos
+    expected:
+      verdict: vow_and_value_not_valued
+    class: A
+  - id: Er_minor
+    input:
+      query: erech_deaf_mute_imbecile_minor
+    expected:
+      verdict: valued_not_valuing
+    class: A
+  - id: Er_under_month
+    input:
+      query: erech_under_a_month
+    expected:
+      verdict: vowed_not_valued
+    class: A
+  - id: Er_fixed
+    input:
+      query: erech_handsome_vs_ugly
+    expected:
+      verdict: fifty_selas_each
+    class: A
+  - id: Er_worth
+    input:
+      query: erech_worth_vow
+    expected:
+      verdict: his_worth
+    class: A
+  - id: Er_field_rate
+    input:
+      query: erech_field_sandy_vs_orchard
+    expected:
+      verdict: fifty_per_homer_seed
+    class: A
+  - id: Er_purchased
+    input:
+      query: erech_purchased_field_rate
+    expected:
+      verdict:
+      - sages_its_worth
+      - r_eliezer_fifty_per_homer
+    class: A
+  - id: Er_means
+    input:
+      query: erech_poor_values_rich
+    expected:
+      verdict: poor_valuation
+    class: A
+  - id: Er_years
+    input:
+      query: erech_child_values_old
+    expected:
+      verdict: old_valuation
+    class: A
+  - id: Er_sex
+    input:
+      query: erech_man_values_woman
+    expected:
+      verdict: woman_valuation
+    class: A
+  - id: Er_time
+    input:
+      query: erech_age_crossed_before_payment
+    expected:
+      verdict: at_valuation_time
+    class: A
+  - id: Er_boundary
+    input:
+      query: erech_year_five_or_twenty_boundary
+    expected:
+      verdict:
+      - sages_counts_below
+      - r_elazar_month_and_day_past
+    class: A
+  - id: Er_two_years
+    input:
+      query: erech_field_consecrated_near_jubilee
+    expected:
+      verdict: not_less_than_two_years_before
+    class: A
+  - id: Er_months
+    input:
+      query: erech_months_reckoned
+    expected:
+      verdict: sanctuary_may_layman_not
+    class: A
+  - id: Er_crevices
+    input:
+      query: erech_field_crevices_ten_handbreadths
+    expected:
+      verdict: not_measured
+    class: A
+  - id: Er_per_year
+    input:
+      query: erech_field_per_year_rate
+    expected:
+      verdict: sela_and_pundion
+    class: A
+  - id: Er_installments
+    input:
+      query: erech_field_pay_yearly
+    expected:
+      verdict: refused_lump_sum
+    class: A
+  - id: Er_father_died
+    input:
+      query: erech_field_bought_father_died_then_consecrated
+    expected:
+      verdict: holding_field
+    class: A
+  - id: Er_consecrated_first
+    input:
+      query: erech_field_consecrated_then_father_died
+    expected:
+      verdict:
+      - r_meir_purchased_field
+      - r_yehuda_r_shimon_holding_field
+    class: A
+  - id: Er_priests_levites
+    input:
+      query: erech_priests_levites_consecrate_redeem
+    expected:
+      verdict: always
+    class: A
+  - id: Er_land_assessors
+    input:
+      query: erech_land_assessors
+    expected:
+      verdict: nine_and_a_priest
+    class: A
+  - id: Er_movable_assessors
+    input:
+      query: erech_movable_assessors
+    expected:
+      verdict: three
+    class: A
+  - id: Er_owner_first
+    input:
+      query: hekdesh_redemption_owner_precedence
+    expected:
+      verdict: owner_first
+    class: A
+  - id: Er_fifth
+    input:
+      query: hekdesh_redeemer_adds_fifth
+    expected:
+      verdict: owner_adds_fifth
+    class: A
+- module: temurah_herem_tithe_file
+  tractate: Temurah
+  oracle: Mishnah Temurah 1:1; 1:2; 1:6; Arakhin 8:5; 8:6; 8:7; Challah 4:9; Bekhorot 9:1; 9:7; Nazir 5:3
+  exodus_anchor:
+    unit: lev_27_vows_valuations
+    ref: Lev.27.9-34
+    claims:
+    - LV27-04
+    - LV27-05
+    - LV27-18
+    - LV27-20
+    - LV27-23
+    - LV27-24
+  cases:
+  - id: Tm_who
+    input:
+      query: temurah_who_substitutes
+    expected:
+      verdict: all_men_and_women
+    class: A
+  - id: Tm_penalty
+    input:
+      query: temurah_penalty
+    expected:
+      verdict: holds_and_lashes
+    class: A
+  - id: Tm_firstborn
+    input:
+      query: temurah_priest_substitutes_firstborn
+    expected:
+      verdict: not
+    class: A
+  - id: Tm_cattle_flock
+    input:
+      query: temurah_cattle_for_flock
+    expected:
+      verdict: valid
+    class: A
+  - id: Tm_blemish
+    input:
+      query: temurah_whole_for_blemished
+    expected:
+      verdict: valid
+    class: A
+  - id: Tm_hundred
+    input:
+      query: temurah_one_for_a_hundred
+    expected:
+      verdict:
+      - sages_valid
+      - r_shimon_one_for_one
+    class: A
+  - id: Tm_birds
+    input:
+      query: temurah_birds_meal_offerings
+    expected:
+      verdict: no_substitution
+    class: A
+  - id: Tm_public
+    input:
+      query: temurah_public_or_partners
+    expected:
+      verdict: no_substitution
+    class: A
+  - id: Tm_upkeep
+    input:
+      query: temurah_temple_upkeep
+    expected:
+      verdict: no_substitution
+    class: A
+  - id: Hr_own
+    input:
+      query: herem_son_or_hebrew_slave_or_purchased_field
+    expected:
+      verdict: not_devoted
+    class: A
+  - id: Hr_priests
+    input:
+      query: herem_by_priests_levites
+    expected:
+      verdict:
+      - r_yehuda_neither
+      - r_shimon_levites_only
+      - rabbi_land_vs_movables
+    class: A
+  - id: Hr_unspecified
+    input:
+      query: herem_unspecified_destination
+    expected:
+      verdict:
+      - r_yehuda_b_betera_upkeep
+      - sages_priests
+    class: A
+  - id: Hr_gift
+    input:
+      query: herem_given_to_which_priest
+    expected:
+      verdict: any_priest
+    class: A
+  - id: Hr_ilui
+    input:
+      query: firstborn_consecration_type
+    expected:
+      verdict: value_not_altar
+    class: A
+  - id: Mt_kinds
+    input:
+      query: maaser_cattle_on_flock
+    expected:
+      verdict: not_tithed_together
+    class: A
+  - id: Mt_sheep_goats
+    input:
+      query: maaser_sheep_on_goats
+    expected:
+      verdict: tithed_together
+    class: A
+  - id: Mt_new_old
+    input:
+      query: maaser_new_on_old
+    expected:
+      verdict: not_tithed_together
+    class: A
+  - id: Mt_count
+    input:
+      query: maaser_counted_lying_or_standing
+    expected:
+      verdict: tithed
+    class: A
+  - id: Mt_ten_of_hundred
+    input:
+      query: maaser_took_ten_of_hundred
+    expected:
+      verdict:
+      - sages_not_tithe
+      - r_yosei_b_yehuda_tithe
+    class: A
+  - id: Mt_error
+    input:
+      query: maaser_ninth_called_tenth
+    expected:
+      verdict: all_three_sanctified
+    class: A

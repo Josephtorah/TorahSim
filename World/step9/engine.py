@@ -1885,3 +1885,13 @@ RULES.update(_tz.build(V))
 # rows citing Lev 16-20. 7 rules in acharei_rules.py.
 import acharei_rules as _ak
 RULES.update(_ak.build(V))
+
+# Round 45 — THE EMOR EXAM (2026-09-05). Bare Mishnah rows citing
+# Lev 21-24. 7 rules in emor_rules.py.
+import emor_rules as _em
+RULES.update(_em.build(V))
+
+# Round 46 — THE BEHAR-BECHUKOTAI EXAM (2026-09-05, Leviticus's last
+# round). Bare Mishnah rows citing Lev 25-27. 7 rules in behar_rules.py.
+import behar_rules as _bh
+RULES.update(_bh.build(V))

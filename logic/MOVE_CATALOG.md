@@ -152,6 +152,17 @@ runner's damage cell now resolves through the LIVE IMPORT
 inter-span function call of the compiled Bible. The censuses
 re-confirmed and extended: fracture-under-fracture is UNIQUE to
 Leviticus 24:20 — the callee extends the caller's tariff.
+EXEMPLAR (a) RUN FROM THE OTHER END (2026-09-05, the Behar-
+Bechukotai compile): cold_run_yovel.py — THE JUBILEE ENGINE — states
+the Hebrew slave's exits from Lev 25's own ink (the Jubilee, with his
+children; the deduction of money by hireling-days) and takes the
+SIX-YEAR exit as an IMPORT from Exodus 21:2's term clock, labeled
+M-07, for the one sold to an Israelite only; for the one sold to a
+gentile the Sifra denies it ("from the year of his sale until the
+Jubilee" — Behar, Chapter 8 4). Mishnah Kiddushin 1:2's three exits
+(years, Jubilee, money) thus grade against two spans joined by one
+edge — the same wiring exemplar (a) recorded from the Exodus side,
+now closed from the Leviticus side.
 **Middah:** mixed — the call-site derivation runs on #2 (GEZERAH
 SHAVAH, the verbal analogy on the shared striking-word) with the
 harmonization family (#13, two passages resolved together) behind
@@ -344,6 +355,18 @@ SIXTH AND SEVENTH EXEMPLARS (2026-09-05, the Acharei Mot-Kedoshim sweep) — and
 **Middah correspondence:** the al-tikrei family ("do not read X but
 Y") — the tradition's own name for the operation.
 
+
+**Exemplar 8 (2026-09-05, the Emor sweep — a CONSONANT-FRAGMENT
+cousin, logged here with its difference named):** the castration ban
+"in your land you shall not do" (Lev 22:24) — ben Chakinai reads
+וּבְאַרְצְכֶם ("and in your land") as וּבָכֶם ("and in YOU"): the ban
+extended to HUMANS by re-hearing the token with its middle letters
+dropped (Sifra, Emor, Chapter 7 11; claim LV22B-05). Not a
+re-pointing of held consonants but a re-cutting of them — the
+same family (the sound of the token re-heard as a second law), one
+step further from the ink; a third such consonant-fragment exemplar
+would register its own move.
+
 ## M-17 — THE TENSION RESOLUTION (two tokens in one clause pull opposite ways; the law is the geometry satisfying both)
 Registered 2026-09-04 (the Lev 1-8 offering-engine consolidation,
 cold_run_offerings.py). Exemplar: Lev 1:5 writes both וזרקו ("and
@@ -385,6 +408,32 @@ at Lev 20), given to the PASSIVE (Sifra, Kedoshim, Chapter 11 2).
 PRECEDENT on the walk: round 19's EXPORT OPERATOR (Exod 13:5's
 freed restrictor tokens reassigned to their recorded jobs) ran the
 same shape at chapter scale before the form had a name.
+
+**Exemplars 4-5 (2026-09-05, the Emor sweep — the operator recurring
+in the very next parashah):** (4) "on that day it shall be eaten"
+(Lev 22:29) — redundant for EATING (Lev 7:15 already teaches it) —
+"if it does not bear on eating, GIVE IT to slaughter": the slaughter
+itself must be on condition of one-day eating, extended to every
+one-day offering (Sifra, Emor, Chapter 9 1-2; claim LV22B-09);
+(5) Numbers 28:26's "a new grain offering" — not needed for the
+WHEAT offering (Lev 23:16 has it) — "GIVE IT to the BARLEY offering"
+(Sifra, Emor, Chapter 12 9; claim LV23A-10): the omer's barley
+minchah made "new" by a freed clause from another book — the
+reassignment crossing the span boundary, M-07's import walked as
+M-18's push.
+**Exemplars 6-7 (2026-09-05, the Behar-Bechukotai sweep — the
+operator's third consecutive parashah):** (6) "if his hand has not
+found" (Lev 25:28) — not needed for the field's OWNER, whose
+redemption was already taught — "GIVE IT to the REDEEMER, that he
+redeem by this same order" (Sifra, Behar, Chapter 5 5; claim
+LV25B-06): the kinsman-redeemer's constraints (no borrowing, no
+halves) supplied by a freed clause; (7) the doublets of Lev 26:31-32
+— "your cities a waste" not needed for the people ("I will desolate
+the land" says that) — given to the PASSERS-BY; "your sanctuaries
+desolate" not needed for the offerings ("I will not smell" says
+that) — given to the PILGRIM BANDS (Sifra, Bechukotai, Section 1 4;
+claim LV26-20's neighbor row): the reassignment as object-partition
+across a doublet.
 **Distinct from** M-07 (the import edge): there a clause is FETCHED
 from another span to fill a local gap; here a LOCAL surplus clause
 is PUSHED to the gap. The two are the same graph edge walked in

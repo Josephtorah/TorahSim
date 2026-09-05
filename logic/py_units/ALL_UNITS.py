@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ALL_UNITS.py — frozen only (lev_20 frozen 2026-09-05; 150 frozen units)."""
+"""ALL_UNITS.py — frozen only (lev_27 frozen 2026-09-05; 163 frozen units)."""
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
@@ -40561,6 +40561,3397 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[7]["cites"] == ['Sifra, Kedoshim, Chapter 9 9', 'Sifra, Kedoshim, Chapter 9 12', 'Sifra, Kedoshim, Chapter 12 14', 'Onkelos Lev 20:25', 'Onkelos Lev 20:26', 'Onkelos Lev 20:27']
     assert all('the_hairs_breadth' not in f for f in m.WORLD["facts"])
     assert 'vehivdaltem' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_21_priest_family
+###############################################################################
+
+m = Machine("lev_21_priest_family")
+
+# -------------------------- Lev.21.1 · ETNACHTA_SPLIT ----------------------
+# ויאמר יהוה אל משה אמר אל הכהנים בני אהרן … ואמרת אלהם לנפש לא יטמא בעמיו
+# "[EN-AID] From top split: LEFT «ויאמר יהוה אל משה אמר אל הכהנים בני אהרן»
+# / RIGHT «ואמרת אלהם לנפש לא יטמא בעמיו». Derive claim from Hebrew arms.
+# Lev 21:1."
+m.step("Lev.21.1")
+# witness-tier presupposed read: addressee_census_and_override on
+# emor_el_hakohanim — read, not installed
+m.witness_read("emor_el_hakohanim", "addressee_census_and_override",
+                cites=["Sifra, Emor, Section 1 1", "Sifra, Emor, Section 1 2", "Sifra, Emor, Section 1 3"])
+
+# -------------------------- Lev.21.2 · COND_כי -----------------------------
+# כי אם לשארו הקרב אליו … לאמו ולאביו ולבנו ולבתו ולאחיו
+# "[EN-AID] From top split: LEFT «כי אם לשארו הקרב אליו» / RIGHT «לאמו
+# ולאביו ולבנו ולבתו ולאחיו». Derive claim from Hebrew arms. Lev 21:2."
+m.step("Lev.21.2")
+# witness-tier presupposed read: relative_table_by_token_pairs on
+# lisheero_hakarov — read, not installed
+m.witness_read("lisheero_hakarov", "relative_table_by_token_pairs",
+                cites=["Sifra, Emor, Section 1 4", "Sifra, Emor, Section 1 5", "Sifra, Emor, Section 1 6", "Sifra, Emor, Section 1 7", "Sifra, Emor, Section 1 8"])
+
+# -------------------------- Lev.21.3 · ETNACHTA_SPLIT ----------------------
+# ולאחתו הבתולה הקרובה אליו אשר לא היתה לאיש … לה יטמא
+# "[EN-AID] From top split: LEFT «ולאחתו הבתולה הקרובה אליו אשר לא היתה
+# לאיש» / RIGHT «לה יטמא». Derive claim from Hebrew arms. Lev 21:3."
+m.step("Lev.21.3")
+# witness-tier presupposed read: sister_carve_and_forced_defilement on
+# achoto_habetulah — read, not installed
+m.witness_read("achoto_habetulah", "sister_carve_and_forced_defilement",
+                cites=["Sifra, Emor, Section 1 9", "Sifra, Emor, Section 1 10", "Sifra, Emor, Section 1 11", "Sifra, Emor, Section 1 12", "Sifra, Emor, Section 1 13", "Sifra, Emor, Section 1 14"])
+
+# -------------------------- Lev.21.4 · ETNACHTA_SPLIT ----------------------
+# לא יטמא בעל בעמיו
+# "[EN-AID] From top split: LEFT «לא יטמא בעל בעמיו» / RIGHT «». Derive
+# claim from Hebrew arms. Lev 21:4."
+m.step("Lev.21.4")
+# witness-tier presupposed read: husband_split_toggle_onkelos_fork on
+# lo_yitama_baal — read, not installed
+m.witness_read("lo_yitama_baal", "husband_split_toggle_onkelos_fork",
+                cites=["Sifra, Emor, Section 1 15", "Sifra, Emor, Section 1 16", "Onkelos Lev 21:4"])
+
+# -------------------------- Lev.21.5 · ETNACHTA_SPLIT ----------------------
+# לא יקרחה יקרחו קרחה בראשם ופאת זקנם לא יגלחו … ובבשרם לא ישרטו שרטת
+# "[EN-AID] From top split: LEFT «לא יקרחה יקרחו קרחה בראשם ופאת זקנם לא
+# יגלחו» / RIGHT «ובבשרם לא ישרטו שרטת». Derive claim from Hebrew arms. Lev
+# 21:5."
+m.step("Lev.21.5")
+# witness-tier presupposed read: mourning_marks_two_way_transfer on
+# lo_yikrechu_korchah — read, not installed
+m.witness_read("lo_yikrechu_korchah", "mourning_marks_two_way_transfer",
+                cites=["Sifra, Emor, Chapter 1 1", "Sifra, Emor, Chapter 1 2", "Sifra, Emor, Chapter 1 3", "Sifra, Emor, Chapter 1 4", "Sifra, Emor, Chapter 1 5"])
+
+# -------------------------- Lev.21.6 · ETNACHTA_SPLIT ----------------------
+# קדשים יהיו לאלהיהם ולא יחללו שם אלהיהם … כי את אשי יהוה לחם אלהיהם הם
+# מקריבם והיו קדש
+# "[EN-AID] From top split: LEFT «קדשים יהיו לאלהיהם ולא יחללו שם אלהיהם» /
+# RIGHT «כי את אשי יהוה לחם אלהיהם הם מקריבם והיו קדש». Derive claim from
+# Hebrew arms. Lev 21:6."
+m.step("Lev.21.6")
+# witness-tier presupposed read: holy_by_compulsion on kedoshim_yihyu —
+# read, not installed
+m.witness_read("kedoshim_yihyu", "holy_by_compulsion",
+                cites=["Sifra, Emor, Chapter 1 6", "Onkelos Lev 21:6"])
+
+# -------------------------- Lev.21.7 · ETNACHTA_SPLIT ----------------------
+# אשה זנה וחללה לא יקחו ואשה גרושה מאישה לא יקחו … כי קדש הוא לאלהיו
+# "[EN-AID] From top split: LEFT «אשה זנה וחללה לא יקחו ואשה גרושה מאישה לא
+# יקחו» / RIGHT «כי קדש הוא לאלהיו». Derive claim from Hebrew arms. Lev
+# 21:7."
+m.step("Lev.21.7")
+# witness-tier presupposed read: the_forbidden_wives_file on
+# zonah_chalalah_gerushah — read, not installed
+m.witness_read("zonah_chalalah_gerushah", "the_forbidden_wives_file",
+                cites=["Sifra, Emor, Chapter 1 7", "Sifra, Emor, Chapter 1 8", "Sifra, Emor, Chapter 1 9", "Sifra, Emor, Chapter 1 10", "Sifra, Emor, Chapter 1 11", "Sifra, Emor, Chapter 1 12", "Onkelos Lev 21:7"])
+
+# -------------------------- Lev.21.8 · COND_כי -----------------------------
+# וקדשתו כי את לחם אלהיך הוא מקריב … קדש יהיה לך כי קדוש אני יהוה מקדשכם
+# "[EN-AID] From top split: LEFT «וקדשתו כי את לחם אלהיך הוא מקריב» / RIGHT
+# «קדש יהיה לך כי קדוש אני יהוה מקדשכם». Derive claim from Hebrew arms. Lev
+# 21:8."
+m.step("Lev.21.8")
+# witness-tier presupposed read: sanctify_him_by_force on vekidashto — read,
+# not installed
+m.witness_read("vekidashto", "sanctify_him_by_force",
+                cites=["Sifra, Emor, Chapter 1 13"])
+
+# -------------------------- Lev.21.9 · COND_כי -----------------------------
+# ובת איש כהן כי תחל לזנות … את אביה היא מחללת באש תשרף
+# "[EN-AID] From top split: LEFT «ובת איש כהן כי תחל לזנות» / RIGHT «את אביה
+# היא מחללת באש תשרף». Derive claim from Hebrew arms. Lev 21:9."
+m.step("Lev.21.9")
+# witness-tier presupposed read: the_priests_daughter_file on
+# bat_kohen_ki_techel — read, not installed
+m.witness_read("bat_kohen_ki_techel", "the_priests_daughter_file",
+                cites=["Sifra, Emor, Chapter 1 14", "Sifra, Emor, Chapter 1 15", "Sifra, Emor, Chapter 1 16", "Sifra, Emor, Chapter 1 17", "Sifra, Emor, Chapter 1 18", "Onkelos Lev 21:9"])
+
+# -------------------------- Lev.21.10 · ETNACHTA_SPLIT ---------------------
+# והכהן הגדול מאחיו אשר יוצק על ראשו שמן המשחה ומלא את ידו ללב … את ראשו לא
+# יפרע ובגדיו לא יפרם
+# "[EN-AID] From top split: LEFT «והכהן הגדול מאחיו אשר יוצק על ראשו שמן
+# המשחה ומלא את ידו ללבש את הבגדים» / RIGHT «את ראשו לא יפרע ובגדיו לא
+# יפרם». Derive claim from Hebrew arms. Lev 21:10."
+m.step("Lev.21.10")
+# witness-tier presupposed read: greatness_and_the_one_hour_rule on
+# hakohen_hagadol — read, not installed
+m.witness_read("hakohen_hagadol", "greatness_and_the_one_hour_rule",
+                cites=["Sifra, Emor, Section 2 1", "Sifra, Emor, Section 2 2", "Sifra, Emor, Section 2 3", "Onkelos Lev 21:10"])
+
+# -------------------------- Lev.21.11 · ETNACHTA_SPLIT ---------------------
+# ועל כל נפשת מת לא יבא … לאביו ולאמו לא יטמא
+# "[EN-AID] From top split: LEFT «ועל כל נפשת מת לא יבא» / RIGHT «לאביו
+# ולאמו לא יטמא». Derive claim from Hebrew arms. Lev 21:11."
+m.step("Lev.21.11")
+# witness-tier presupposed read: the_dead_the_sanctuary_and_the_onen_split
+# on al_kol_nafshot_met — read, not installed
+m.witness_read("al_kol_nafshot_met", "the_dead_the_sanctuary_and_the_onen_split",
+                cites=["Sifra, Emor, Section 2 4", "Sifra, Emor, Section 2 5", "Sifra, Emor, Section 2 6", "Onkelos Lev 21:12"])
+
+# -------------------------- Lev.21.12 · ETNACHTA_SPLIT ---------------------
+# ומן המקדש לא יצא ולא יחלל את מקדש אלהיו … כי נזר שמן משחת אלהיו עליו אני
+# יהוה
+# "[EN-AID] From top split: LEFT «ומן המקדש לא יצא ולא יחלל את מקדש אלהיו» /
+# RIGHT «כי נזר שמן משחת אלהיו עליו אני יהוה». Derive claim from Hebrew
+# arms. Lev 21:12."
+m.step("Lev.21.12")
+
+# -------------------------- Lev.21.13 · TREE_CLAIM -------------------------
+# … אשה בבתוליה יקח
+# "[EN-AID] From top split: LEFT «» / RIGHT «אשה בבתוליה יקח». Derive claim
+# from Hebrew arms. Lev 21:13."
+m.step("Lev.21.13")
+# witness-tier presupposed read: the_virgin_command on ishah_bivtuleha —
+# read, not installed
+m.witness_read("ishah_bivtuleha", "the_virgin_command",
+                cites=["Sifra, Emor, Section 2 7", "Sifra, Emor, Chapter 2 6"])
+
+# -------------------------- Lev.21.14 · ETNACHTA_SPLIT ---------------------
+# אלמנה וגרושה וחללה זנה את אלה לא יקח … כי אם בתולה מעמיו יקח אשה
+# "[EN-AID] From top split: LEFT «אלמנה וגרושה וחללה זנה את אלה לא יקח» /
+# RIGHT «כי אם בתולה מעמיו יקח אשה». Derive claim from Hebrew arms. Lev
+# 21:14."
+m.step("Lev.21.14")
+# witness-tier presupposed read: the_profaned_seed_layer on almanah_ugrushah
+# — read, not installed
+m.witness_read("almanah_ugrushah", "the_profaned_seed_layer",
+                cites=["Sifra, Emor, Chapter 2 1", "Sifra, Emor, Chapter 2 2", "Sifra, Emor, Chapter 2 4", "Sifra, Emor, Chapter 2 5", "Sifra, Emor, Chapter 2 7", "Sifra, Emor, Chapter 2 8", "Onkelos Lev 21:14"])
+
+# -------------------------- Lev.21.15 · ETNACHTA_SPLIT ---------------------
+# ולא יחלל זרעו בעמיו … כי אני יהוה מקדשו
+# "[EN-AID] From top split: LEFT «ולא יחלל זרעו בעמיו» / RIGHT «כי אני יהוה
+# מקדשו». Derive claim from Hebrew arms. Lev 21:15."
+m.step("Lev.21.15")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('emor_el_hakohanim', 'addressee_census_and_override'), ('lisheero_hakarov', 'relative_table_by_token_pairs'), ('achoto_habetulah', 'sister_carve_and_forced_defilement'), ('lo_yitama_baal', 'husband_split_toggle_onkelos_fork'), ('lo_yikrechu_korchah', 'mourning_marks_two_way_transfer'), ('kedoshim_yihyu', 'holy_by_compulsion'), ('zonah_chalalah_gerushah', 'the_forbidden_wives_file'), ('vekidashto', 'sanctify_him_by_force'), ('bat_kohen_ki_techel', 'the_priests_daughter_file'), ('hakohen_hagadol', 'greatness_and_the_one_hour_rule'), ('al_kol_nafshot_met', 'the_dead_the_sanctuary_and_the_onen_split'), ('ishah_bivtuleha', 'the_virgin_command'), ('almanah_ugrushah', 'the_profaned_seed_layer')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Emor, Section 1 1', 'Sifra, Emor, Section 1 2', 'Sifra, Emor, Section 1 3']
+    assert all('addressee_census_and_override' not in f for f in m.WORLD["facts"])
+    assert 'emor_el_hakohanim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Emor, Section 1 4', 'Sifra, Emor, Section 1 5', 'Sifra, Emor, Section 1 6', 'Sifra, Emor, Section 1 7', 'Sifra, Emor, Section 1 8']
+    assert all('relative_table_by_token_pairs' not in f for f in m.WORLD["facts"])
+    assert 'lisheero_hakarov' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Emor, Section 1 9', 'Sifra, Emor, Section 1 10', 'Sifra, Emor, Section 1 11', 'Sifra, Emor, Section 1 12', 'Sifra, Emor, Section 1 13', 'Sifra, Emor, Section 1 14']
+    assert all('sister_carve_and_forced_defilement' not in f for f in m.WORLD["facts"])
+    assert 'achoto_habetulah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Emor, Section 1 15', 'Sifra, Emor, Section 1 16', 'Onkelos Lev 21:4']
+    assert all('husband_split_toggle_onkelos_fork' not in f for f in m.WORLD["facts"])
+    assert 'lo_yitama_baal' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Emor, Chapter 1 1', 'Sifra, Emor, Chapter 1 2', 'Sifra, Emor, Chapter 1 3', 'Sifra, Emor, Chapter 1 4', 'Sifra, Emor, Chapter 1 5']
+    assert all('mourning_marks_two_way_transfer' not in f for f in m.WORLD["facts"])
+    assert 'lo_yikrechu_korchah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Emor, Chapter 1 6', 'Onkelos Lev 21:6']
+    assert all('holy_by_compulsion' not in f for f in m.WORLD["facts"])
+    assert 'kedoshim_yihyu' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Emor, Chapter 1 7', 'Sifra, Emor, Chapter 1 8', 'Sifra, Emor, Chapter 1 9', 'Sifra, Emor, Chapter 1 10', 'Sifra, Emor, Chapter 1 11', 'Sifra, Emor, Chapter 1 12', 'Onkelos Lev 21:7']
+    assert all('the_forbidden_wives_file' not in f for f in m.WORLD["facts"])
+    assert 'zonah_chalalah_gerushah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Emor, Chapter 1 13']
+    assert all('sanctify_him_by_force' not in f for f in m.WORLD["facts"])
+    assert 'vekidashto' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Emor, Chapter 1 14', 'Sifra, Emor, Chapter 1 15', 'Sifra, Emor, Chapter 1 16', 'Sifra, Emor, Chapter 1 17', 'Sifra, Emor, Chapter 1 18', 'Onkelos Lev 21:9']
+    assert all('the_priests_daughter_file' not in f for f in m.WORLD["facts"])
+    assert 'bat_kohen_ki_techel' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Emor, Section 2 1', 'Sifra, Emor, Section 2 2', 'Sifra, Emor, Section 2 3', 'Onkelos Lev 21:10']
+    assert all('greatness_and_the_one_hour_rule' not in f for f in m.WORLD["facts"])
+    assert 'hakohen_hagadol' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Sifra, Emor, Section 2 4', 'Sifra, Emor, Section 2 5', 'Sifra, Emor, Section 2 6', 'Onkelos Lev 21:12']
+    assert all('the_dead_the_sanctuary_and_the_onen_split' not in f for f in m.WORLD["facts"])
+    assert 'al_kol_nafshot_met' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Sifra, Emor, Section 2 7', 'Sifra, Emor, Chapter 2 6']
+    assert all('the_virgin_command' not in f for f in m.WORLD["facts"])
+    assert 'ishah_bivtuleha' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[12]["cites"] == ['Sifra, Emor, Chapter 2 1', 'Sifra, Emor, Chapter 2 2', 'Sifra, Emor, Chapter 2 4', 'Sifra, Emor, Chapter 2 5', 'Sifra, Emor, Chapter 2 7', 'Sifra, Emor, Chapter 2 8', 'Onkelos Lev 21:14']
+    assert all('the_profaned_seed_layer' not in f for f in m.WORLD["facts"])
+    assert 'almanah_ugrushah' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_21_priest_blemish
+###############################################################################
+
+m = Machine("lev_21_priest_blemish")
+
+# -------------------------- Lev.21.16 · TREE_CLAIM -------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 21:16."
+m.step("Lev.21.16")
+
+# -------------------------- Lev.21.17 · ETNACHTA_SPLIT ---------------------
+# דבר אל אהרן לאמר … איש מזרעך לדרתם אשר יהיה בו מום לא יקרב להקריב לחם
+# אלהיו
+# "[EN-AID] From top split: LEFT «דבר אל אהרן לאמר» / RIGHT «איש מזרעך לדרתם
+# אשר יהיה בו מום לא יקרב להקריב לחם אלהיו». Derive claim from Hebrew arms.
+# Lev 21:17."
+m.step("Lev.21.17")
+# witness-tier presupposed read: age_ladder_and_service_census on
+# asher_yihyeh_bo_mum — read, not installed
+m.witness_read("asher_yihyeh_bo_mum", "age_ladder_and_service_census",
+                cites=["Sifra, Emor, Section 3 1", "Sifra, Emor, Section 3 2", "Sifra, Emor, Section 3 3", "Sifra, Emor, Section 3 4", "Sifra, Emor, Section 3 5", "Onkelos Lev 21:17"])
+
+# -------------------------- Lev.21.18 · COND_כי ----------------------------
+# כי כל איש אשר בו מום לא יקרב … איש עור או פסח או חרם או שרוע
+# "[EN-AID] From top split: LEFT «כי כל איש אשר בו מום לא יקרב» / RIGHT «איש
+# עור או פסח או חרם או שרוע». Derive claim from Hebrew arms. Lev 21:18."
+m.step("Lev.21.18")
+# witness-tier presupposed read: the_first_blemish_row on iver_o_piseach —
+# read, not installed
+m.witness_read("iver_o_piseach", "the_first_blemish_row",
+                cites=["Sifra, Emor, Section 3 6", "Sifra, Emor, Section 3 7", "Sifra, Emor, Section 3 8", "Sifra, Emor, Section 3 9", "Onkelos Lev 21:18"])
+
+# -------------------------- Lev.21.19 · ETNACHTA_SPLIT ---------------------
+# או איש אשר יהיה בו שבר רגל … או שבר יד
+# "[EN-AID] From top split: LEFT «או איש אשר יהיה בו שבר רגל» / RIGHT «או
+# שבר יד». Derive claim from Hebrew arms. Lev 21:19."
+m.step("Lev.21.19")
+# witness-tier presupposed read: the_fracture_row on shever_regel_o_yad —
+# read, not installed
+m.witness_read("shever_regel_o_yad", "the_fracture_row",
+                cites=["Sifra, Emor, Section 3 10", "Sifra, Emor, Section 3 11"])
+
+# -------------------------- Lev.21.20 · ETNACHTA_SPLIT ---------------------
+# או גבן או דק או תבלל בעינו … או גרב או ילפת או מרוח אשך
+# "[EN-AID] From top split: LEFT «או גבן או דק או תבלל בעינו» / RIGHT «או
+# גרב או ילפת או מרוח אשך». Derive claim from Hebrew arms. Lev 21:20."
+m.step("Lev.21.20")
+# witness-tier presupposed read: eye_and_skin_row_onkelos_rulings on
+# giben_dak_tevalul — read, not installed
+m.witness_read("giben_dak_tevalul", "eye_and_skin_row_onkelos_rulings",
+                cites=["Sifra, Emor, Section 3 12", "Sifra, Emor, Section 3 13", "Sifra, Emor, Section 3 14", "Sifra, Emor, Section 3 15", "Onkelos Lev 21:20"])
+
+# -------------------------- Lev.21.21 · ETNACHTA_SPLIT ---------------------
+# כל איש אשר בו מום מזרע אהרן הכהן לא יגש להקריב את אשי יהוה … מום בו את לחם
+# אלהיו לא יגש להקריב
+# "[EN-AID] From top split: LEFT «כל איש אשר בו מום מזרע אהרן הכהן לא יגש
+# להקריב את אשי יהוה» / RIGHT «מום בו את לחם אלהיו לא יגש להקריב». Derive
+# claim from Hebrew arms. Lev 21:21."
+m.step("Lev.21.21")
+# witness-tier presupposed read: man_beast_difference_table on
+# kol_ish_asher_bo_mum — read, not installed
+m.witness_read("kol_ish_asher_bo_mum", "man_beast_difference_table",
+                cites=["Sifra, Emor, Chapter 3 1", "Sifra, Emor, Chapter 3 2", "Sifra, Emor, Chapter 3 3", "Sifra, Emor, Chapter 3 4", "Sifra, Emor, Chapter 3 5", "Sifra, Emor, Chapter 3 6", "Sifra, Emor, Chapter 3 7"])
+
+# -------------------------- Lev.21.22 · ETNACHTA_SPLIT ---------------------
+# לחם אלהיו מקדשי הקדשים … ומן הקדשים יאכל
+# "[EN-AID] From top split: LEFT «לחם אלהיו מקדשי הקדשים» / RIGHT «ומן
+# הקדשים יאכל». Derive claim from Hebrew arms. Lev 21:22."
+m.step("Lev.21.22")
+# witness-tier presupposed read: the_blemished_eat_everything on
+# lechem_elohav_yochel — read, not installed
+m.witness_read("lechem_elohav_yochel", "the_blemished_eat_everything",
+                cites=["Sifra, Emor, Chapter 3 8", "Sifra, Emor, Chapter 3 9", "Onkelos Lev 21:22"])
+
+# -------------------------- Lev.21.23 · ETNACHTA_SPLIT ---------------------
+# אך אל הפרכת לא יבא ואל המזבח לא יגש כי מום בו … ולא יחלל את מקדשי כי אני
+# יהוה מקדשם
+# "[EN-AID] From top split: LEFT «אך אל הפרכת לא יבא ואל המזבח לא יגש כי מום
+# בו» / RIGHT «ולא יחלל את מקדשי כי אני יהוה מקדשם». Derive claim from
+# Hebrew arms. Lev 21:23."
+m.step("Lev.21.23")
+# witness-tier presupposed read: entry_hierarchy_and_transmission_chain on
+# ach_el_haparochet — read, not installed
+m.witness_read("ach_el_haparochet", "entry_hierarchy_and_transmission_chain",
+                cites=["Sifra, Emor, Chapter 3 10", "Sifra, Emor, Chapter 3 11", "Sifra, Emor, Chapter 3 12", "Onkelos Lev 21:23"])
+
+# -------------------------- Lev.21.24 · ETNACHTA_SPLIT ---------------------
+# וידבר משה אל אהרן ואל בניו … ואל כל בני ישראל
+# "[EN-AID] From top split: LEFT «וידבר משה אל אהרן ואל בניו» / RIGHT «ואל
+# כל בני ישראל». Derive claim from Hebrew arms. Lev 21:24."
+m.step("Lev.21.24")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('asher_yihyeh_bo_mum', 'age_ladder_and_service_census'), ('iver_o_piseach', 'the_first_blemish_row'), ('shever_regel_o_yad', 'the_fracture_row'), ('giben_dak_tevalul', 'eye_and_skin_row_onkelos_rulings'), ('kol_ish_asher_bo_mum', 'man_beast_difference_table'), ('lechem_elohav_yochel', 'the_blemished_eat_everything'), ('ach_el_haparochet', 'entry_hierarchy_and_transmission_chain')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Emor, Section 3 1', 'Sifra, Emor, Section 3 2', 'Sifra, Emor, Section 3 3', 'Sifra, Emor, Section 3 4', 'Sifra, Emor, Section 3 5', 'Onkelos Lev 21:17']
+    assert all('age_ladder_and_service_census' not in f for f in m.WORLD["facts"])
+    assert 'asher_yihyeh_bo_mum' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Emor, Section 3 6', 'Sifra, Emor, Section 3 7', 'Sifra, Emor, Section 3 8', 'Sifra, Emor, Section 3 9', 'Onkelos Lev 21:18']
+    assert all('the_first_blemish_row' not in f for f in m.WORLD["facts"])
+    assert 'iver_o_piseach' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Emor, Section 3 10', 'Sifra, Emor, Section 3 11']
+    assert all('the_fracture_row' not in f for f in m.WORLD["facts"])
+    assert 'shever_regel_o_yad' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Emor, Section 3 12', 'Sifra, Emor, Section 3 13', 'Sifra, Emor, Section 3 14', 'Sifra, Emor, Section 3 15', 'Onkelos Lev 21:20']
+    assert all('eye_and_skin_row_onkelos_rulings' not in f for f in m.WORLD["facts"])
+    assert 'giben_dak_tevalul' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Emor, Chapter 3 1', 'Sifra, Emor, Chapter 3 2', 'Sifra, Emor, Chapter 3 3', 'Sifra, Emor, Chapter 3 4', 'Sifra, Emor, Chapter 3 5', 'Sifra, Emor, Chapter 3 6', 'Sifra, Emor, Chapter 3 7']
+    assert all('man_beast_difference_table' not in f for f in m.WORLD["facts"])
+    assert 'kol_ish_asher_bo_mum' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Emor, Chapter 3 8', 'Sifra, Emor, Chapter 3 9', 'Onkelos Lev 21:22']
+    assert all('the_blemished_eat_everything' not in f for f in m.WORLD["facts"])
+    assert 'lechem_elohav_yochel' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Emor, Chapter 3 10', 'Sifra, Emor, Chapter 3 11', 'Sifra, Emor, Chapter 3 12', 'Onkelos Lev 21:23']
+    assert all('entry_hierarchy_and_transmission_chain' not in f for f in m.WORLD["facts"])
+    assert 'ach_el_haparochet' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_22_holy_food
+###############################################################################
+
+m = Machine("lev_22_holy_food")
+
+# -------------------------- Lev.22.1 · TREE_CLAIM --------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 22:1."
+m.step("Lev.22.1")
+
+# -------------------------- Lev.22.2 · ETNACHTA_SPLIT ----------------------
+# דבר אל אהרן ואל בניו וינזרו מקדשי בני ישראל ולא יחללו את שם  … אשר הם
+# מקדשים לי אני יהוה
+# "[EN-AID] From top split: LEFT «דבר אל אהרן ואל בניו וינזרו מקדשי בני
+# ישראל ולא יחללו את שם קדשי» / RIGHT «אשר הם מקדשים לי אני יהוה». Derive
+# claim from Hebrew arms. Lev 22:2."
+m.step("Lev.22.2")
+# witness-tier presupposed read: separation_and_the_triple_import on
+# veyinazru — read, not installed
+m.witness_read("veyinazru", "separation_and_the_triple_import",
+                cites=["Sifra, Emor, Section 4 1", "Sifra, Emor, Section 4 2", "Sifra, Emor, Section 4 3", "Sifra, Emor, Section 4 4", "Onkelos Lev 22:2"])
+
+# -------------------------- Lev.22.3 · ETNACHTA_SPLIT ----------------------
+# אמר אלהם לדרתיכם כל איש אשר יקרב מכל זרעכם אל הקדשים אשר יקד … ונכרתה הנפש
+# ההוא מלפני אני יהוה
+# "[EN-AID] From top split: LEFT «אמר אלהם לדרתיכם כל איש אשר יקרב מכל זרעכם
+# אל הקדשים אשר יקדישו בני ישראל ליהוה » / RIGHT «ונכרתה הנפש ההוא מלפני אני
+# יהוה». Derive claim from Hebrew arms. Lev 22:3."
+m.step("Lev.22.3")
+# witness-tier presupposed read: karet_extension_and_readiness_threshold on
+# asher_yikrav_vetumato_alav — read, not installed
+m.witness_read("asher_yikrav_vetumato_alav", "karet_extension_and_readiness_threshold",
+                cites=["Sifra, Emor, Section 4 5", "Sifra, Emor, Section 4 6", "Sifra, Emor, Section 4 7", "Sifra, Emor, Section 4 8", "Onkelos Lev 22:3"])
+
+# -------------------------- Lev.22.4 · ETNACHTA_SPLIT ----------------------
+# איש איש מזרע אהרן והוא צרוע או זב בקדשים לא יאכל עד אשר יטהר … והנגע בכל
+# טמא נפש או איש אשר תצא ממנו שכבת זרע
+# "[EN-AID] From top split: LEFT «איש איש מזרע אהרן והוא צרוע או זב בקדשים
+# לא יאכל עד אשר יטהר» / RIGHT «והנגע בכל טמא נפש או איש אשר תצא ממנו שכבת
+# זרע». Derive claim from Hebrew arms. Lev 22:4."
+m.step("Lev.22.4")
+# witness-tier presupposed read: the_impurity_measures_census on
+# tzarua_o_zav — read, not installed
+m.witness_read("tzarua_o_zav", "the_impurity_measures_census",
+                cites=["Sifra, Emor, Chapter 4 1", "Sifra, Emor, Chapter 4 2", "Sifra, Emor, Chapter 4 3", "Sifra, Emor, Chapter 4 4", "Onkelos Lev 22:4"])
+
+# -------------------------- Lev.22.5 · ETNACHTA_SPLIT ----------------------
+# או איש אשר יגע בכל שרץ אשר יטמא לו … או באדם אשר יטמא לו לכל טמאתו
+# "[EN-AID] From top split: LEFT «או איש אשר יגע בכל שרץ אשר יטמא לו» /
+# RIGHT «או באדם אשר יטמא לו לכל טמאתו». Derive claim from Hebrew arms. Lev
+# 22:5."
+m.step("Lev.22.5")
+
+# -------------------------- Lev.22.6 · ETNACHTA_SPLIT ----------------------
+# נפש אשר תגע בו וטמאה עד הערב … ולא יאכל מן הקדשים כי אם רחץ בשרו במים
+# "[EN-AID] From top split: LEFT «נפש אשר תגע בו וטמאה עד הערב» / RIGHT «ולא
+# יאכל מן הקדשים כי אם רחץ בשרו במים». Derive claim from Hebrew arms. Lev
+# 22:6."
+m.step("Lev.22.6")
+# witness-tier presupposed read: mixture_grid_and_two_gates on
+# nefesh_asher_tiga_bo — read, not installed
+m.witness_read("nefesh_asher_tiga_bo", "mixture_grid_and_two_gates",
+                cites=["Sifra, Emor, Chapter 4 5", "Sifra, Emor, Chapter 4 6", "Sifra, Emor, Chapter 4 7", "Sifra, Emor, Chapter 4 8", "Sifra, Emor, Chapter 4 9", "Sifra, Emor, Chapter 4 10", "Sifra, Emor, Chapter 4 11", "Onkelos Lev 22:7"])
+
+# -------------------------- Lev.22.7 · ETNACHTA_SPLIT ----------------------
+# ובא השמש וטהר … ואחר יאכל מן הקדשים כי לחמו הוא
+# "[EN-AID] From top split: LEFT «ובא השמש וטהר» / RIGHT «ואחר יאכל מן
+# הקדשים כי לחמו הוא». Derive claim from Hebrew arms. Lev 22:7."
+m.step("Lev.22.7")
+
+# -------------------------- Lev.22.8 · ETNACHTA_SPLIT ----------------------
+# נבלה וטרפה לא יאכל לטמאה בה … אני יהוה
+# "[EN-AID] From top split: LEFT «נבלה וטרפה לא יאכל לטמאה בה» / RIGHT «אני
+# יהוה». Derive claim from Hebrew arms. Lev 22:8."
+m.step("Lev.22.8")
+# witness-tier presupposed read: gullet_carve_and_the_courts_charge on
+# nevelah_utrefah_lo_yochal — read, not installed
+m.witness_read("nevelah_utrefah_lo_yochal", "gullet_carve_and_the_courts_charge",
+                cites=["Sifra, Emor, Chapter 4 12", "Sifra, Emor, Chapter 4 13", "Sifra, Emor, Chapter 4 14", "Sifra, Emor, Chapter 4 15", "Onkelos Lev 22:9"])
+
+# -------------------------- Lev.22.9 · ETNACHTA_SPLIT ----------------------
+# ושמרו את משמרתי ולא ישאו עליו חטא ומתו בו כי יחללהו … אני יהוה מקדשם
+# "[EN-AID] From top split: LEFT «ושמרו את משמרתי ולא ישאו עליו חטא ומתו בו
+# כי יחללהו» / RIGHT «אני יהוה מקדשם». Derive claim from Hebrew arms. Lev
+# 22:9."
+m.step("Lev.22.9")
+
+# -------------------------- Lev.22.10 · ETNACHTA_SPLIT ---------------------
+# וכל זר לא יאכל קדש … תושב כהן ושכיר לא יאכל קדש
+# "[EN-AID] From top split: LEFT «וכל זר לא יאכל קדש» / RIGHT «תושב כהן
+# ושכיר לא יאכל קדש». Derive claim from Hebrew arms. Lev 22:10."
+m.step("Lev.22.10")
+# witness-tier presupposed read: the_stranger_and_the_uncircumcised on
+# kol_zar_toshav_vesachir — read, not installed
+m.witness_read("kol_zar_toshav_vesachir", "the_stranger_and_the_uncircumcised",
+                cites=["Sifra, Emor, Chapter 4 16", "Sifra, Emor, Chapter 4 17", "Sifra, Emor, Chapter 4 18", "Onkelos Lev 22:10"])
+
+# -------------------------- Lev.22.11 · COND_כי ----------------------------
+# וכהן כי יקנה נפש קנין כספו הוא יאכל בו … ויליד ביתו הם יאכלו בלחמו
+# "[EN-AID] From top split: LEFT «וכהן כי יקנה נפש קנין כספו הוא יאכל בו» /
+# RIGHT «ויליד ביתו הם יאכלו בלחמו». Derive claim from Hebrew arms. Lev
+# 22:11."
+m.step("Lev.22.11")
+# witness-tier presupposed read: the_household_feeder on
+# kinyan_kaspo_yelid_beito — read, not installed
+m.witness_read("kinyan_kaspo_yelid_beito", "the_household_feeder",
+                cites=["Sifra, Emor, Section 5 1", "Sifra, Emor, Section 5 2", "Sifra, Emor, Section 5 3", "Sifra, Emor, Section 5 4", "Sifra, Emor, Section 5 5", "Sifra, Emor, Section 5 6"])
+
+# -------------------------- Lev.22.12 · COND_כי ----------------------------
+# ובת כהן כי תהיה לאיש זר … הוא בתרומת הקדשים לא תאכל
+# "[EN-AID] From top split: LEFT «ובת כהן כי תהיה לאיש זר» / RIGHT «הוא
+# בתרומת הקדשים לא תאכל». Derive claim from Hebrew arms. Lev 22:12."
+m.step("Lev.22.12")
+# witness-tier presupposed read: the_daughter_to_a_stranger on
+# bat_kohen_leish_zar — read, not installed
+m.witness_read("bat_kohen_leish_zar", "the_daughter_to_a_stranger",
+                cites=["Sifra, Emor, Section 5 7", "Sifra, Emor, Section 5 8", "Sifra, Emor, Section 5 9", "Sifra, Emor, Section 5 10", "Sifra, Emor, Section 6 1", "Onkelos Lev 22:12"])
+
+# -------------------------- Lev.22.13 · COND_כי ----------------------------
+# ובת כהן כי תהיה אלמנה וגרושה וזרע אין לה ושבה אל בית אביה כנ … וכל זר לא
+# יאכל בו
+# "[EN-AID] From top split: LEFT «ובת כהן כי תהיה אלמנה וגרושה וזרע אין לה
+# ושבה אל בית אביה כנעוריה מלחם אביה תאכל» / RIGHT «וכל זר לא יאכל בו».
+# Derive claim from Hebrew arms. Lev 22:13."
+m.step("Lev.22.13")
+# witness-tier presupposed read: the_return_and_the_seeds_seed on
+# veshavah_el_beit_aviha — read, not installed
+m.witness_read("veshavah_el_beit_aviha", "the_return_and_the_seeds_seed",
+                cites=["Sifra, Emor, Chapter 5 1", "Sifra, Emor, Chapter 5 2", "Sifra, Emor, Chapter 5 3", "Sifra, Emor, Chapter 5 4", "Sifra, Emor, Chapter 5 5", "Sifra, Emor, Chapter 6 1", "Onkelos Lev 22:13"])
+
+# -------------------------- Lev.22.14 · COND_כי ----------------------------
+# ואיש כי יאכל קדש בשגגה … ויסף חמשיתו עליו ונתן לכהן את הקדש
+# "[EN-AID] From top split: LEFT «ואיש כי יאכל קדש בשגגה» / RIGHT «ויסף
+# חמשיתו עליו ונתן לכהן את הקדש». Derive claim from Hebrew arms. Lev 22:14."
+m.step("Lev.22.14")
+# witness-tier presupposed read: the_fifths_algebra on veyasaf_chamishito —
+# read, not installed
+m.witness_read("veyasaf_chamishito", "the_fifths_algebra",
+                cites=["Sifra, Emor, Chapter 6 2", "Sifra, Emor, Chapter 6 3", "Sifra, Emor, Chapter 6 4", "Sifra, Emor, Chapter 6 5", "Sifra, Emor, Chapter 6 6", "Sifra, Emor, Chapter 6 7", "Onkelos Lev 22:14"])
+
+# -------------------------- Lev.22.15 · ETNACHTA_SPLIT ---------------------
+# ולא יחללו את קדשי בני ישראל … את אשר ירימו ליהוה
+# "[EN-AID] From top split: LEFT «ולא יחללו את קדשי בני ישראל» / RIGHT «את
+# אשר ירימו ליהוה». Derive claim from Hebrew arms. Lev 22:15."
+m.step("Lev.22.15")
+# witness-tier presupposed read: the_profaners_and_onkelos_condition on
+# velo_yechalelu — read, not installed
+m.witness_read("velo_yechalelu", "the_profaners_and_onkelos_condition",
+                cites=["Sifra, Emor, Chapter 6 8", "Sifra, Emor, Chapter 6 9", "Sifra, Emor, Chapter 6 10", "Onkelos Lev 22:16"])
+
+# -------------------------- Lev.22.16 · ETNACHTA_SPLIT ---------------------
+# והשיאו אותם עון אשמה באכלם את קדשיהם … כי אני יהוה מקדשם
+# "[EN-AID] From top split: LEFT «והשיאו אותם עון אשמה באכלם את קדשיהם» /
+# RIGHT «כי אני יהוה מקדשם». Derive claim from Hebrew arms. Lev 22:16."
+m.step("Lev.22.16")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('veyinazru', 'separation_and_the_triple_import'), ('asher_yikrav_vetumato_alav', 'karet_extension_and_readiness_threshold'), ('tzarua_o_zav', 'the_impurity_measures_census'), ('nefesh_asher_tiga_bo', 'mixture_grid_and_two_gates'), ('nevelah_utrefah_lo_yochal', 'gullet_carve_and_the_courts_charge'), ('kol_zar_toshav_vesachir', 'the_stranger_and_the_uncircumcised'), ('kinyan_kaspo_yelid_beito', 'the_household_feeder'), ('bat_kohen_leish_zar', 'the_daughter_to_a_stranger'), ('veshavah_el_beit_aviha', 'the_return_and_the_seeds_seed'), ('veyasaf_chamishito', 'the_fifths_algebra'), ('velo_yechalelu', 'the_profaners_and_onkelos_condition')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Emor, Section 4 1', 'Sifra, Emor, Section 4 2', 'Sifra, Emor, Section 4 3', 'Sifra, Emor, Section 4 4', 'Onkelos Lev 22:2']
+    assert all('separation_and_the_triple_import' not in f for f in m.WORLD["facts"])
+    assert 'veyinazru' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Emor, Section 4 5', 'Sifra, Emor, Section 4 6', 'Sifra, Emor, Section 4 7', 'Sifra, Emor, Section 4 8', 'Onkelos Lev 22:3']
+    assert all('karet_extension_and_readiness_threshold' not in f for f in m.WORLD["facts"])
+    assert 'asher_yikrav_vetumato_alav' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Emor, Chapter 4 1', 'Sifra, Emor, Chapter 4 2', 'Sifra, Emor, Chapter 4 3', 'Sifra, Emor, Chapter 4 4', 'Onkelos Lev 22:4']
+    assert all('the_impurity_measures_census' not in f for f in m.WORLD["facts"])
+    assert 'tzarua_o_zav' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Emor, Chapter 4 5', 'Sifra, Emor, Chapter 4 6', 'Sifra, Emor, Chapter 4 7', 'Sifra, Emor, Chapter 4 8', 'Sifra, Emor, Chapter 4 9', 'Sifra, Emor, Chapter 4 10', 'Sifra, Emor, Chapter 4 11', 'Onkelos Lev 22:7']
+    assert all('mixture_grid_and_two_gates' not in f for f in m.WORLD["facts"])
+    assert 'nefesh_asher_tiga_bo' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Emor, Chapter 4 12', 'Sifra, Emor, Chapter 4 13', 'Sifra, Emor, Chapter 4 14', 'Sifra, Emor, Chapter 4 15', 'Onkelos Lev 22:9']
+    assert all('gullet_carve_and_the_courts_charge' not in f for f in m.WORLD["facts"])
+    assert 'nevelah_utrefah_lo_yochal' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Emor, Chapter 4 16', 'Sifra, Emor, Chapter 4 17', 'Sifra, Emor, Chapter 4 18', 'Onkelos Lev 22:10']
+    assert all('the_stranger_and_the_uncircumcised' not in f for f in m.WORLD["facts"])
+    assert 'kol_zar_toshav_vesachir' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Emor, Section 5 1', 'Sifra, Emor, Section 5 2', 'Sifra, Emor, Section 5 3', 'Sifra, Emor, Section 5 4', 'Sifra, Emor, Section 5 5', 'Sifra, Emor, Section 5 6']
+    assert all('the_household_feeder' not in f for f in m.WORLD["facts"])
+    assert 'kinyan_kaspo_yelid_beito' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Emor, Section 5 7', 'Sifra, Emor, Section 5 8', 'Sifra, Emor, Section 5 9', 'Sifra, Emor, Section 5 10', 'Sifra, Emor, Section 6 1', 'Onkelos Lev 22:12']
+    assert all('the_daughter_to_a_stranger' not in f for f in m.WORLD["facts"])
+    assert 'bat_kohen_leish_zar' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Emor, Chapter 5 1', 'Sifra, Emor, Chapter 5 2', 'Sifra, Emor, Chapter 5 3', 'Sifra, Emor, Chapter 5 4', 'Sifra, Emor, Chapter 5 5', 'Sifra, Emor, Chapter 6 1', 'Onkelos Lev 22:13']
+    assert all('the_return_and_the_seeds_seed' not in f for f in m.WORLD["facts"])
+    assert 'veshavah_el_beit_aviha' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Emor, Chapter 6 2', 'Sifra, Emor, Chapter 6 3', 'Sifra, Emor, Chapter 6 4', 'Sifra, Emor, Chapter 6 5', 'Sifra, Emor, Chapter 6 6', 'Sifra, Emor, Chapter 6 7', 'Onkelos Lev 22:14']
+    assert all('the_fifths_algebra' not in f for f in m.WORLD["facts"])
+    assert 'veyasaf_chamishito' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Sifra, Emor, Chapter 6 8', 'Sifra, Emor, Chapter 6 9', 'Sifra, Emor, Chapter 6 10', 'Onkelos Lev 22:16']
+    assert all('the_profaners_and_onkelos_condition' not in f for f in m.WORLD["facts"])
+    assert 'velo_yechalelu' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_22_acceptable_offerings
+###############################################################################
+
+m = Machine("lev_22_acceptable_offerings")
+
+# -------------------------- Lev.22.17 · TREE_CLAIM -------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 22:17."
+m.step("Lev.22.17")
+
+# -------------------------- Lev.22.18 · ETNACHTA_SPLIT ---------------------
+# דבר אל אהרן ואל בניו ואל כל בני ישראל ואמרת אלהם … איש איש מבית ישראל ומן
+# הגר בישראל אשר יקריב קרבנו לכל נדריהם
+# "[EN-AID] From top split: LEFT «דבר אל אהרן ואל בניו ואל כל בני ישראל
+# ואמרת אלהם» / RIGHT «איש איש מבית ישראל ומן הגר בישראל אשר יקריב קרבנו לכל
+# נדריהם ולכל נדבותם אשר יקר». Derive claim from Hebrew arms. Lev 22:18."
+m.step("Lev.22.18")
+# witness-tier presupposed read: the_vow_class_census on
+# ish_ish_mibeit_yisrael — read, not installed
+m.witness_read("ish_ish_mibeit_yisrael", "the_vow_class_census",
+                cites=["Sifra, Emor, Section 7 1", "Sifra, Emor, Section 7 2", "Onkelos Lev 22:18", "Onkelos Lev 22:19"])
+
+# -------------------------- Lev.22.19 · ETNACHTA_SPLIT ---------------------
+# … תמים זכר בבקר בכשבים ובעזים
+# "[EN-AID] From top split: LEFT «» / RIGHT «תמים זכר בבקר בכשבים ובעזים».
+# Derive claim from Hebrew arms. Lev 22:19."
+m.step("Lev.22.19")
+
+# -------------------------- Lev.22.20 · ETNACHTA_SPLIT ---------------------
+# כל אשר בו מום לא תקריבו … כי לא לרצון יהיה לכם
+# "[EN-AID] From top split: LEFT «כל אשר בו מום לא תקריבו» / RIGHT «כי לא
+# לרצון יהיה לכם». Derive claim from Hebrew arms. Lev 22:20."
+m.step("Lev.22.20")
+# witness-tier presupposed read: the_five_count_and_the_two_jobs on
+# kol_asher_bo_mum_lo_takrivu — read, not installed
+m.witness_read("kol_asher_bo_mum_lo_takrivu", "the_five_count_and_the_two_jobs",
+                cites=["Sifra, Emor, Section 7 3", "Sifra, Emor, Section 7 4", "Sifra, Emor, Section 7 5", "Sifra, Emor, Section 7 6", "Sifra, Emor, Section 7 7", "Sifra, Emor, Section 7 8", "Sifra, Emor, Section 7 9", "Sifra, Emor, Section 7 10", "Onkelos Lev 22:21"])
+
+# -------------------------- Lev.22.21 · COND_כי ----------------------------
+# ואיש כי יקריב זבח שלמים ליהוה לפלא נדר או לנדבה בבקר או בצאן … תמים יהיה
+# לרצון כל מום לא יהיה בו
+# "[EN-AID] From top split: LEFT «ואיש כי יקריב זבח שלמים ליהוה לפלא נדר או
+# לנדבה בבקר או בצאן» / RIGHT «תמים יהיה לרצון כל מום לא יהיה בו». Derive
+# claim from Hebrew arms. Lev 22:21."
+m.step("Lev.22.21")
+
+# -------------------------- Lev.22.22 · ETNACHTA_SPLIT ---------------------
+# עורת או שבור או חרוץ או יבלת או גרב או ילפת לא תקריבו אלה לי … ואשה לא
+# תתנו מהם על המזבח ליהוה
+# "[EN-AID] From top split: LEFT «עורת או שבור או חרוץ או יבלת או גרב או
+# ילפת לא תקריבו אלה ליהוה» / RIGHT «ואשה לא תתנו מהם על המזבח ליהוה».
+# Derive claim from Hebrew arms. Lev 22:22."
+m.step("Lev.22.22")
+# witness-tier presupposed read: beast_blemish_row_and_cross_list_transfer
+# on averet_o_shavur — read, not installed
+m.witness_read("averet_o_shavur", "beast_blemish_row_and_cross_list_transfer",
+                cites=["Sifra, Emor, Section 7 11", "Sifra, Emor, Section 7 12", "Sifra, Emor, Section 7 13", "Sifra, Emor, Chapter 7 1", "Sifra, Emor, Chapter 7 2", "Sifra, Emor, Chapter 7 3", "Sifra, Emor, Chapter 7 4", "Onkelos Lev 22:22"])
+
+# -------------------------- Lev.22.23 · ETNACHTA_SPLIT ---------------------
+# ושור ושה שרוע וקלוט … נדבה תעשה אתו ולנדר לא ירצה
+# "[EN-AID] From top split: LEFT «ושור ושה שרוע וקלוט» / RIGHT «נדבה תעשה
+# אתו ולנדר לא ירצה». Derive claim from Hebrew arms. Lev 22:23."
+m.step("Lev.22.23")
+# witness-tier presupposed read: temple_upkeep_not_the_altar on
+# sarua_vekalut — read, not installed
+m.witness_read("sarua_vekalut", "temple_upkeep_not_the_altar",
+                cites=["Sifra, Emor, Chapter 7 5", "Sifra, Emor, Chapter 7 6", "Sifra, Emor, Chapter 7 7", "Sifra, Emor, Chapter 7 8", "Onkelos Lev 22:23"])
+
+# -------------------------- Lev.22.24 · ETNACHTA_SPLIT ---------------------
+# ומעוך וכתות ונתוק וכרות לא תקריבו ליהוה … ובארצכם לא תעשו
+# "[EN-AID] From top split: LEFT «ומעוך וכתות ונתוק וכרות לא תקריבו ליהוה» /
+# RIGHT «ובארצכם לא תעשו». Derive claim from Hebrew arms. Lev 22:24."
+m.step("Lev.22.24")
+# witness-tier presupposed read: the_castration_ban_and_the_foreigner on
+# umauch_vekatut — read, not installed
+m.witness_read("umauch_vekatut", "the_castration_ban_and_the_foreigner",
+                cites=["Sifra, Emor, Chapter 7 9", "Sifra, Emor, Chapter 7 10", "Sifra, Emor, Chapter 7 11", "Sifra, Emor, Chapter 7 12", "Onkelos Lev 22:24", "Onkelos Lev 22:25"])
+
+# -------------------------- Lev.22.25 · ETNACHTA_SPLIT ---------------------
+# ומיד בן נכר לא תקריבו את לחם אלהיכם מכל אלה … כי משחתם בהם מום בם לא ירצו
+# לכם
+# "[EN-AID] From top split: LEFT «ומיד בן נכר לא תקריבו את לחם אלהיכם מכל
+# אלה» / RIGHT «כי משחתם בהם מום בם לא ירצו לכם». Derive claim from Hebrew
+# arms. Lev 22:25."
+m.step("Lev.22.25")
+
+# -------------------------- Lev.22.26 · TREE_CLAIM -------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 22:26."
+m.step("Lev.22.26")
+
+# -------------------------- Lev.22.27 · ETNACHTA_SPLIT ---------------------
+# שור או כשב או עז כי יולד והיה שבעת ימים תחת אמו … ומיום השמיני והלאה ירצה
+# לקרבן אשה ליהוה
+# "[EN-AID] From top split: LEFT «שור או כשב או עז כי יולד והיה שבעת ימים
+# תחת אמו» / RIGHT «ומיום השמיני והלאה ירצה לקרבן אשה ליהוה». Derive claim
+# from Hebrew arms. Lev 22:27."
+m.step("Lev.22.27")
+# witness-tier presupposed read: the_birth_quality_list on
+# shor_o_chesev_ki_yivaled — read, not installed
+m.witness_read("shor_o_chesev_ki_yivaled", "the_birth_quality_list",
+                cites=["Sifra, Emor, Section 8 1", "Sifra, Emor, Section 8 2", "Sifra, Emor, Section 8 3", "Sifra, Emor, Section 8 4", "Sifra, Emor, Section 8 5", "Sifra, Emor, Section 8 6", "Sifra, Emor, Section 8 7", "Onkelos Lev 22:27"])
+
+# -------------------------- Lev.22.28 · ETNACHTA_SPLIT ---------------------
+# ושור או שה … אתו ואת בנו לא תשחטו ביום אחד
+# "[EN-AID] From top split: LEFT «ושור או שה» / RIGHT «אתו ואת בנו לא תשחטו
+# ביום אחד». Derive claim from Hebrew arms. Lev 22:28."
+m.step("Lev.22.28")
+# witness-tier presupposed read: the_predicate_and_the_female_rule on
+# oto_veet_beno — read, not installed
+m.witness_read("oto_veet_beno", "the_predicate_and_the_female_rule",
+                cites=["Sifra, Emor, Section 8 8", "Sifra, Emor, Section 8 9", "Sifra, Emor, Section 8 10", "Sifra, Emor, Section 8 11", "Sifra, Emor, Section 8 12", "Sifra, Emor, Chapter 8 1", "Sifra, Emor, Chapter 8 2", "Sifra, Emor, Chapter 8 3", "Sifra, Emor, Chapter 8 4", "Onkelos Lev 22:28"])
+# witness-tier presupposed read: slaughter_carve_four_periods_day_boundary
+# on lo_tishchatu_beyom_echad — read, not installed
+m.witness_read("lo_tishchatu_beyom_echad", "slaughter_carve_four_periods_day_boundary",
+                cites=["Sifra, Emor, Chapter 8 5", "Sifra, Emor, Chapter 8 6", "Sifra, Emor, Chapter 8 7", "Sifra, Emor, Chapter 8 8", "Sifra, Emor, Chapter 8 9"])
+
+# -------------------------- Lev.22.29 · COND_וכי ---------------------------
+# וכי תזבחו זבח תודה ליהוה … לרצנכם תזבחו
+# "[EN-AID] From top split: LEFT «וכי תזבחו זבח תודה ליהוה» / RIGHT «לרצנכם
+# תזבחו». Derive claim from Hebrew arms. Lev 22:29."
+m.step("Lev.22.29")
+# witness-tier presupposed read: the_reassignment_to_slaughter on
+# bayom_hahu_yeachel — read, not installed
+m.witness_read("bayom_hahu_yeachel", "the_reassignment_to_slaughter",
+                cites=["Sifra, Emor, Chapter 9 1", "Sifra, Emor, Chapter 9 2", "Onkelos Lev 22:29"])
+
+# -------------------------- Lev.22.30 · ETNACHTA_SPLIT ---------------------
+# ביום ההוא יאכל לא תותירו ממנו עד בקר … אני יהוה
+# "[EN-AID] From top split: LEFT «ביום ההוא יאכל לא תותירו ממנו עד בקר» /
+# RIGHT «אני יהוה». Derive claim from Hebrew arms. Lev 22:30."
+m.step("Lev.22.30")
+
+# -------------------------- Lev.22.31 · ETNACHTA_SPLIT ---------------------
+# ושמרתם מצותי ועשיתם אתם … אני יהוה
+# "[EN-AID] From top split: LEFT «ושמרתם מצותי ועשיתם אתם» / RIGHT «אני
+# יהוה». Derive claim from Hebrew arms. Lev 22:31."
+m.step("Lev.22.31")
+# witness-tier presupposed read: keep_is_mishnah_and_the_sanctified_name on
+# venikdashti_betoch — read, not installed
+m.witness_read("venikdashti_betoch", "keep_is_mishnah_and_the_sanctified_name",
+                cites=["Sifra, Emor, Chapter 9 3", "Sifra, Emor, Chapter 9 4", "Sifra, Emor, Chapter 9 5", "Sifra, Emor, Chapter 9 6", "Onkelos Lev 22:32"])
+
+# -------------------------- Lev.22.32 · ETNACHTA_SPLIT ---------------------
+# ולא תחללו את שם קדשי ונקדשתי בתוך בני ישראל … אני יהוה מקדשכם
+# "[EN-AID] From top split: LEFT «ולא תחללו את שם קדשי ונקדשתי בתוך בני
+# ישראל» / RIGHT «אני יהוה מקדשכם». Derive claim from Hebrew arms. Lev
+# 22:32."
+m.step("Lev.22.32")
+
+# -------------------------- Lev.22.33 · ETNACHTA_SPLIT ---------------------
+# המוציא אתכם מארץ מצרים להיות לכם לאלהים … אני יהוה
+# "[EN-AID] From top split: LEFT «המוציא אתכם מארץ מצרים להיות לכם לאלהים» /
+# RIGHT «אני יהוה». Derive claim from Hebrew arms. Lev 22:33."
+m.step("Lev.22.33")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ish_ish_mibeit_yisrael', 'the_vow_class_census'), ('kol_asher_bo_mum_lo_takrivu', 'the_five_count_and_the_two_jobs'), ('averet_o_shavur', 'beast_blemish_row_and_cross_list_transfer'), ('sarua_vekalut', 'temple_upkeep_not_the_altar'), ('umauch_vekatut', 'the_castration_ban_and_the_foreigner'), ('shor_o_chesev_ki_yivaled', 'the_birth_quality_list'), ('oto_veet_beno', 'the_predicate_and_the_female_rule'), ('lo_tishchatu_beyom_echad', 'slaughter_carve_four_periods_day_boundary'), ('bayom_hahu_yeachel', 'the_reassignment_to_slaughter'), ('venikdashti_betoch', 'keep_is_mishnah_and_the_sanctified_name')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Emor, Section 7 1', 'Sifra, Emor, Section 7 2', 'Onkelos Lev 22:18', 'Onkelos Lev 22:19']
+    assert all('the_vow_class_census' not in f for f in m.WORLD["facts"])
+    assert 'ish_ish_mibeit_yisrael' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Emor, Section 7 3', 'Sifra, Emor, Section 7 4', 'Sifra, Emor, Section 7 5', 'Sifra, Emor, Section 7 6', 'Sifra, Emor, Section 7 7', 'Sifra, Emor, Section 7 8', 'Sifra, Emor, Section 7 9', 'Sifra, Emor, Section 7 10', 'Onkelos Lev 22:21']
+    assert all('the_five_count_and_the_two_jobs' not in f for f in m.WORLD["facts"])
+    assert 'kol_asher_bo_mum_lo_takrivu' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Emor, Section 7 11', 'Sifra, Emor, Section 7 12', 'Sifra, Emor, Section 7 13', 'Sifra, Emor, Chapter 7 1', 'Sifra, Emor, Chapter 7 2', 'Sifra, Emor, Chapter 7 3', 'Sifra, Emor, Chapter 7 4', 'Onkelos Lev 22:22']
+    assert all('beast_blemish_row_and_cross_list_transfer' not in f for f in m.WORLD["facts"])
+    assert 'averet_o_shavur' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Emor, Chapter 7 5', 'Sifra, Emor, Chapter 7 6', 'Sifra, Emor, Chapter 7 7', 'Sifra, Emor, Chapter 7 8', 'Onkelos Lev 22:23']
+    assert all('temple_upkeep_not_the_altar' not in f for f in m.WORLD["facts"])
+    assert 'sarua_vekalut' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Emor, Chapter 7 9', 'Sifra, Emor, Chapter 7 10', 'Sifra, Emor, Chapter 7 11', 'Sifra, Emor, Chapter 7 12', 'Onkelos Lev 22:24', 'Onkelos Lev 22:25']
+    assert all('the_castration_ban_and_the_foreigner' not in f for f in m.WORLD["facts"])
+    assert 'umauch_vekatut' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Emor, Section 8 1', 'Sifra, Emor, Section 8 2', 'Sifra, Emor, Section 8 3', 'Sifra, Emor, Section 8 4', 'Sifra, Emor, Section 8 5', 'Sifra, Emor, Section 8 6', 'Sifra, Emor, Section 8 7', 'Onkelos Lev 22:27']
+    assert all('the_birth_quality_list' not in f for f in m.WORLD["facts"])
+    assert 'shor_o_chesev_ki_yivaled' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Emor, Section 8 8', 'Sifra, Emor, Section 8 9', 'Sifra, Emor, Section 8 10', 'Sifra, Emor, Section 8 11', 'Sifra, Emor, Section 8 12', 'Sifra, Emor, Chapter 8 1', 'Sifra, Emor, Chapter 8 2', 'Sifra, Emor, Chapter 8 3', 'Sifra, Emor, Chapter 8 4', 'Onkelos Lev 22:28']
+    assert all('the_predicate_and_the_female_rule' not in f for f in m.WORLD["facts"])
+    assert 'oto_veet_beno' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Emor, Chapter 8 5', 'Sifra, Emor, Chapter 8 6', 'Sifra, Emor, Chapter 8 7', 'Sifra, Emor, Chapter 8 8', 'Sifra, Emor, Chapter 8 9']
+    assert all('slaughter_carve_four_periods_day_boundary' not in f for f in m.WORLD["facts"])
+    assert 'lo_tishchatu_beyom_echad' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Emor, Chapter 9 1', 'Sifra, Emor, Chapter 9 2', 'Onkelos Lev 22:29']
+    assert all('the_reassignment_to_slaughter' not in f for f in m.WORLD["facts"])
+    assert 'bayom_hahu_yeachel' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Emor, Chapter 9 3', 'Sifra, Emor, Chapter 9 4', 'Sifra, Emor, Chapter 9 5', 'Sifra, Emor, Chapter 9 6', 'Onkelos Lev 22:32']
+    assert all('keep_is_mishnah_and_the_sanctified_name' not in f for f in m.WORLD["facts"])
+    assert 'venikdashti_betoch' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_23_spring_festivals
+###############################################################################
+
+m = Machine("lev_23_spring_festivals")
+
+# -------------------------- Lev.23.1 · TREE_CLAIM --------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 23:1."
+m.step("Lev.23.1")
+
+# -------------------------- Lev.23.2 · ETNACHTA_SPLIT ----------------------
+# דבר אל בני ישראל ואמרת אלהם מועדי יהוה אשר תקראו אתם מקראי ק … אלה הם
+# מועדי
+# "[EN-AID] From top split: LEFT «דבר אל בני ישראל ואמרת אלהם מועדי יהוה אשר
+# תקראו אתם מקראי קדש» / RIGHT «אלה הם מועדי». Derive claim from Hebrew
+# arms. Lev 23:2."
+m.step("Lev.23.2")
+# witness-tier presupposed read: the_calendar_is_the_courts_utterance on
+# asher_tikreu_otam — read, not installed
+m.witness_read("asher_tikreu_otam", "the_calendar_is_the_courts_utterance",
+                cites=["Sifra, Emor, Section 9 1", "Sifra, Emor, Section 9 2", "Sifra, Emor, Section 9 3", "Sifra, Emor, Section 9 4", "Sifra, Emor, Section 9 5", "Sifra, Emor, Section 9 6", "Onkelos Lev 23:2"])
+
+# -------------------------- Lev.23.3 · ETNACHTA_SPLIT ----------------------
+# ששת ימים תעשה מלאכה וביום השביעי שבת שבתון מקרא קדש כל מלאכה … שבת הוא
+# ליהוה בכל מושבתיכם
+# "[EN-AID] From top split: LEFT «ששת ימים תעשה מלאכה וביום השביעי שבת שבתון
+# מקרא קדש כל מלאכה לא תעשו» / RIGHT «שבת הוא ליהוה בכל מושבתיכם». Derive
+# claim from Hebrew arms. Lev 23:3."
+m.step("Lev.23.3")
+# witness-tier presupposed read: sabbath_beside_the_festivals on
+# sheshet_yamim_shabbat — read, not installed
+m.witness_read("sheshet_yamim_shabbat", "sabbath_beside_the_festivals",
+                cites=["Sifra, Emor, Section 9 7", "Sifra, Emor, Section 9 8", "Onkelos Lev 23:3"])
+
+# -------------------------- Lev.23.4 · ETNACHTA_SPLIT ----------------------
+# אלה מועדי יהוה מקראי קדש … אשר תקראו אתם במועדם
+# "[EN-AID] From top split: LEFT «אלה מועדי יהוה מקראי קדש» / RIGHT «אשר
+# תקראו אתם במועדם». Derive claim from Hebrew arms. Lev 23:4."
+m.step("Lev.23.4")
+# witness-tier presupposed read: the_month_and_the_asymmetry on
+# eleh_moadei_hashem — read, not installed
+m.witness_read("eleh_moadei_hashem", "the_month_and_the_asymmetry",
+                cites=["Sifra, Emor, Chapter 10 1", "Sifra, Emor, Chapter 10 2", "Sifra, Emor, Chapter 10 3", "Sifra, Emor, Chapter 10 4", "Sifra, Emor, Chapter 10 5", "Sifra, Emor, Chapter 10 6", "Sifra, Emor, Chapter 10 7", "Onkelos Lev 23:4"])
+
+# -------------------------- Lev.23.5 · ETNACHTA_SPLIT ----------------------
+# בחדש הראשון בארבעה עשר לחדש בין הערבים … פסח ליהוה
+# "[EN-AID] From top split: LEFT «בחדש הראשון בארבעה עשר לחדש בין הערבים» /
+# RIGHT «פסח ליהוה». Derive claim from Hebrew arms. Lev 23:5."
+m.step("Lev.23.5")
+# witness-tier presupposed read: evenings_and_the_optional_seven on
+# bein_haarbayim_pesach — read, not installed
+m.witness_read("bein_haarbayim_pesach", "evenings_and_the_optional_seven",
+                cites=["Sifra, Emor, Chapter 11 1", "Sifra, Emor, Chapter 11 2", "Sifra, Emor, Chapter 11 3", "Sifra, Emor, Chapter 11 4", "Onkelos Lev 23:5"])
+
+# -------------------------- Lev.23.6 · ETNACHTA_SPLIT ----------------------
+# ובחמשה עשר יום לחדש הזה חג המצות ליהוה … שבעת ימים מצות תאכלו
+# "[EN-AID] From top split: LEFT «ובחמשה עשר יום לחדש הזה חג המצות ליהוה» /
+# RIGHT «שבעת ימים מצות תאכלו». Derive claim from Hebrew arms. Lev 23:6."
+m.step("Lev.23.6")
+
+# -------------------------- Lev.23.7 · ETNACHTA_SPLIT ----------------------
+# ביום הראשון מקרא קדש יהיה לכם … כל מלאכת עבדה לא תעשו
+# "[EN-AID] From top split: LEFT «ביום הראשון מקרא קדש יהיה לכם» / RIGHT «כל
+# מלאכת עבדה לא תעשו». Derive claim from Hebrew arms. Lev 23:7."
+m.step("Lev.23.7")
+
+# -------------------------- Lev.23.8 · ETNACHTA_SPLIT ----------------------
+# והקרבתם אשה ליהוה שבעת ימים … ביום השביעי מקרא קדש כל מלאכת עבדה לא תעשו
+# "[EN-AID] From top split: LEFT «והקרבתם אשה ליהוה שבעת ימים» / RIGHT «ביום
+# השביעי מקרא קדש כל מלאכת עבדה לא תעשו». Derive claim from Hebrew arms. Lev
+# 23:8."
+m.step("Lev.23.8")
+# witness-tier presupposed read: the_fallback_ladder on
+# vehikravtem_isheh_shivat_yamim — read, not installed
+m.witness_read("vehikravtem_isheh_shivat_yamim", "the_fallback_ladder",
+                cites=["Sifra, Emor, Chapter 11 5"])
+
+# -------------------------- Lev.23.9 · TREE_CLAIM --------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 23:9."
+m.step("Lev.23.9")
+
+# -------------------------- Lev.23.10 · ETNACHTA_SPLIT ---------------------
+# דבר אל בני ישראל ואמרת אלהם כי תבאו אל הארץ אשר אני נתן לכם  … והבאתם את
+# עמר ראשית קצירכם אל הכהן
+# "[EN-AID] From top split: LEFT «דבר אל בני ישראל ואמרת אלהם כי תבאו אל
+# הארץ אשר אני נתן לכם וקצרתם את קצירה» / RIGHT «והבאתם את עמר ראשית קצירכם
+# אל הכהן». Derive claim from Hebrew arms. Lev 23:10."
+m.step("Lev.23.10")
+# witness-tier presupposed read: the_omers_field on uktzartem_et_ketzirah —
+# read, not installed
+m.witness_read("uktzartem_et_ketzirah", "the_omers_field",
+                cites=["Sifra, Emor, Section 10 1", "Sifra, Emor, Section 10 2", "Sifra, Emor, Section 10 3", "Sifra, Emor, Section 10 4", "Onkelos Lev 23:10"])
+
+# -------------------------- Lev.23.11 · ETNACHTA_SPLIT ---------------------
+# והניף את העמר לפני יהוה לרצנכם … ממחרת השבת יניפנו הכהן
+# "[EN-AID] From top split: LEFT «והניף את העמר לפני יהוה לרצנכם» / RIGHT
+# «ממחרת השבת יניפנו הכהן». Derive claim from Hebrew arms. Lev 23:11."
+m.step("Lev.23.11")
+# witness-tier presupposed read: the_morrow_by_four_routes_and_onkelos on
+# mimachorat_hashabbat — read, not installed
+m.witness_read("mimachorat_hashabbat", "the_morrow_by_four_routes_and_onkelos",
+                cites=["Sifra, Emor, Section 10 5", "Sifra, Emor, Chapter 12 1", "Sifra, Emor, Chapter 12 2", "Sifra, Emor, Chapter 12 3", "Sifra, Emor, Chapter 12 4", "Sifra, Emor, Chapter 12 5", "Onkelos Lev 23:11"])
+
+# -------------------------- Lev.23.12 · ETNACHTA_SPLIT ---------------------
+# ועשיתם ביום הניפכם את העמר … כבש תמים בן שנתו לעלה ליהוה
+# "[EN-AID] From top split: LEFT «ועשיתם ביום הניפכם את העמר» / RIGHT «כבש
+# תמים בן שנתו לעלה ליהוה». Derive claim from Hebrew arms. Lev 23:12."
+m.step("Lev.23.12")
+# witness-tier presupposed read: the_omers_lamb_and_its_doubled_flour on
+# keves_tamim_uminchato — read, not installed
+m.witness_read("keves_tamim_uminchato", "the_omers_lamb_and_its_doubled_flour",
+                cites=["Sifra, Emor, Section 10 6", "Sifra, Emor, Section 10 7", "Sifra, Emor, Section 10 8", "Onkelos Lev 23:13"])
+
+# -------------------------- Lev.23.13 · ETNACHTA_SPLIT ---------------------
+# ומנחתו שני עשרנים סלת בלולה בשמן אשה ליהוה ריח ניחח … ונסכה יין רביעת ההין
+# "[EN-AID] From top split: LEFT «ומנחתו שני עשרנים סלת בלולה בשמן אשה ליהוה
+# ריח ניחח» / RIGHT «ונסכה יין רביעת ההין». Derive claim from Hebrew arms.
+# Lev 23:13."
+m.step("Lev.23.13")
+
+# -------------------------- Lev.23.14 · ETNACHTA_SPLIT ---------------------
+# ולחם וקלי וכרמל לא תאכלו עד עצם היום הזה עד הביאכם את קרבן א … חקת עולם
+# לדרתיכם בכל משבתיכם
+# "[EN-AID] From top split: LEFT «ולחם וקלי וכרמל לא תאכלו עד עצם היום הזה
+# עד הביאכם את קרבן אלהיכם» / RIGHT «חקת עולם לדרתיכם בכל משבתיכם». Derive
+# claim from Hebrew arms. Lev 23:14."
+m.step("Lev.23.14")
+# witness-tier presupposed read: the_new_grains_clock on
+# velechem_vekali_vecharmel — read, not installed
+m.witness_read("velechem_vekali_vecharmel", "the_new_grains_clock",
+                cites=["Sifra, Emor, Section 10 9", "Sifra, Emor, Section 10 10", "Sifra, Emor, Section 10 11", "Onkelos Lev 23:14"])
+
+# -------------------------- Lev.23.15 · ETNACHTA_SPLIT ---------------------
+# וספרתם לכם ממחרת השבת מיום הביאכם את עמר התנופה … שבע שבתות תמימת תהיינה
+# "[EN-AID] From top split: LEFT «וספרתם לכם ממחרת השבת מיום הביאכם את עמר
+# התנופה» / RIGHT «שבע שבתות תמימת תהיינה». Derive claim from Hebrew arms.
+# Lev 23:15."
+m.step("Lev.23.15")
+# witness-tier presupposed read: the_counts_three_clocks on usfartem_lachem
+# — read, not installed
+m.witness_read("usfartem_lachem", "the_counts_three_clocks",
+                cites=["Sifra, Emor, Chapter 12 6", "Sifra, Emor, Chapter 12 7", "Sifra, Emor, Chapter 12 8", "Sifra, Emor, Chapter 12 9", "Onkelos Lev 23:15"])
+
+# -------------------------- Lev.23.16 · ETNACHTA_SPLIT ---------------------
+# עד ממחרת השבת השביעת תספרו חמשים יום … והקרבתם מנחה חדשה ליהוה
+# "[EN-AID] From top split: LEFT «עד ממחרת השבת השביעת תספרו חמשים יום» /
+# RIGHT «והקרבתם מנחה חדשה ליהוה». Derive claim from Hebrew arms. Lev
+# 23:16."
+m.step("Lev.23.16")
+
+# -------------------------- Lev.23.17 · ETNACHTA_SPLIT ---------------------
+# ממושבתיכם תביאו לחם תנופה שתים שני עשרנים סלת תהיינה חמץ תאפ … בכורים
+# ליהוה
+# "[EN-AID] From top split: LEFT «ממושבתיכם תביאו לחם תנופה שתים שני עשרנים
+# סלת תהיינה חמץ תאפינה» / RIGHT «בכורים ליהוה». Derive claim from Hebrew
+# arms. Lev 23:17."
+m.step("Lev.23.17")
+# witness-tier presupposed read: the_two_loaves_spec on
+# lechem_tenufah_shtayim — read, not installed
+m.witness_read("lechem_tenufah_shtayim", "the_two_loaves_spec",
+                cites=["Sifra, Emor, Chapter 13 1", "Sifra, Emor, Chapter 13 2", "Sifra, Emor, Chapter 13 3", "Onkelos Lev 23:17"])
+
+# -------------------------- Lev.23.18 · ETNACHTA_SPLIT ---------------------
+# והקרבתם על הלחם שבעת כבשים תמימם בני שנה ופר בן בקר אחד ואיל … יהיו עלה
+# ליהוה ומנחתם ונסכיהם אשה ריח ניחח ליהוה
+# "[EN-AID] From top split: LEFT «והקרבתם על הלחם שבעת כבשים תמימם בני שנה
+# ופר בן בקר אחד ואילם שנים» / RIGHT «יהיו עלה ליהוה ומנחתם ונסכיהם אשה ריח
+# ניחח ליהוה». Derive claim from Hebrew arms. Lev 23:18."
+m.step("Lev.23.18")
+# witness-tier presupposed read: two_sets_and_the_waving_geometry on
+# vehikravtem_al_halechem — read, not installed
+m.witness_read("vehikravtem_al_halechem", "two_sets_and_the_waving_geometry",
+                cites=["Sifra, Emor, Chapter 13 4", "Sifra, Emor, Chapter 13 5", "Sifra, Emor, Chapter 13 6", "Sifra, Emor, Chapter 13 7", "Sifra, Emor, Chapter 13 8", "Sifra, Emor, Chapter 13 9", "Sifra, Emor, Chapter 13 10", "Onkelos Lev 23:18", "Onkelos Lev 23:20"])
+
+# -------------------------- Lev.23.19 · ETNACHTA_SPLIT ---------------------
+# ועשיתם שעיר עזים אחד לחטאת … ושני כבשים בני שנה לזבח שלמים
+# "[EN-AID] From top split: LEFT «ועשיתם שעיר עזים אחד לחטאת» / RIGHT «ושני
+# כבשים בני שנה לזבח שלמים». Derive claim from Hebrew arms. Lev 23:19."
+m.step("Lev.23.19")
+
+# -------------------------- Lev.23.20 · ETNACHTA_SPLIT ---------------------
+# והניף הכהן אתם על לחם הבכורים תנופה לפני יהוה על שני כבשים … קדש יהיו
+# ליהוה לכהן
+# "[EN-AID] From top split: LEFT «והניף הכהן אתם על לחם הבכורים תנופה לפני
+# יהוה על שני כבשים» / RIGHT «קדש יהיו ליהוה לכהן». Derive claim from Hebrew
+# arms. Lev 23:20."
+m.step("Lev.23.20")
+
+# -------------------------- Lev.23.21 · ETNACHTA_SPLIT ---------------------
+# וקראתם בעצם היום הזה מקרא קדש יהיה לכם כל מלאכת עבדה לא תעשו … חקת עולם
+# בכל מושבתיכם לדרתיכם
+# "[EN-AID] From top split: LEFT «וקראתם בעצם היום הזה מקרא קדש יהיה לכם כל
+# מלאכת עבדה לא תעשו» / RIGHT «חקת עולם בכל מושבתיכם לדרתיכם». Derive claim
+# from Hebrew arms. Lev 23:21."
+m.step("Lev.23.21")
+
+# -------------------------- Lev.23.22 · ETNACHTA_SPLIT ---------------------
+# ובקצרכם את קציר ארצכם לא תכלה פאת שדך בקצרך ולקט קצירך לא תל … לעני ולגר
+# תעזב אתם אני יהוה אלהיכם
+# "[EN-AID] From top split: LEFT «ובקצרכם את קציר ארצכם לא תכלה פאת שדך
+# בקצרך ולקט קצירך לא תלקט» / RIGHT «לעני ולגר תעזב אתם אני יהוה אלהיכם».
+# Derive claim from Hebrew arms. Lev 23:22."
+m.step("Lev.23.22")
+# witness-tier presupposed read: why_peah_among_the_festivals on
+# uvekutzrechem_lo_techaleh — read, not installed
+m.witness_read("uvekutzrechem_lo_techaleh", "why_peah_among_the_festivals",
+                cites=["Sifra, Emor, Chapter 13 11", "Onkelos Lev 23:22"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('asher_tikreu_otam', 'the_calendar_is_the_courts_utterance'), ('sheshet_yamim_shabbat', 'sabbath_beside_the_festivals'), ('eleh_moadei_hashem', 'the_month_and_the_asymmetry'), ('bein_haarbayim_pesach', 'evenings_and_the_optional_seven'), ('vehikravtem_isheh_shivat_yamim', 'the_fallback_ladder'), ('uktzartem_et_ketzirah', 'the_omers_field'), ('mimachorat_hashabbat', 'the_morrow_by_four_routes_and_onkelos'), ('keves_tamim_uminchato', 'the_omers_lamb_and_its_doubled_flour'), ('velechem_vekali_vecharmel', 'the_new_grains_clock'), ('usfartem_lachem', 'the_counts_three_clocks'), ('lechem_tenufah_shtayim', 'the_two_loaves_spec'), ('vehikravtem_al_halechem', 'two_sets_and_the_waving_geometry'), ('uvekutzrechem_lo_techaleh', 'why_peah_among_the_festivals')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Emor, Section 9 1', 'Sifra, Emor, Section 9 2', 'Sifra, Emor, Section 9 3', 'Sifra, Emor, Section 9 4', 'Sifra, Emor, Section 9 5', 'Sifra, Emor, Section 9 6', 'Onkelos Lev 23:2']
+    assert all('the_calendar_is_the_courts_utterance' not in f for f in m.WORLD["facts"])
+    assert 'asher_tikreu_otam' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Emor, Section 9 7', 'Sifra, Emor, Section 9 8', 'Onkelos Lev 23:3']
+    assert all('sabbath_beside_the_festivals' not in f for f in m.WORLD["facts"])
+    assert 'sheshet_yamim_shabbat' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Emor, Chapter 10 1', 'Sifra, Emor, Chapter 10 2', 'Sifra, Emor, Chapter 10 3', 'Sifra, Emor, Chapter 10 4', 'Sifra, Emor, Chapter 10 5', 'Sifra, Emor, Chapter 10 6', 'Sifra, Emor, Chapter 10 7', 'Onkelos Lev 23:4']
+    assert all('the_month_and_the_asymmetry' not in f for f in m.WORLD["facts"])
+    assert 'eleh_moadei_hashem' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Emor, Chapter 11 1', 'Sifra, Emor, Chapter 11 2', 'Sifra, Emor, Chapter 11 3', 'Sifra, Emor, Chapter 11 4', 'Onkelos Lev 23:5']
+    assert all('evenings_and_the_optional_seven' not in f for f in m.WORLD["facts"])
+    assert 'bein_haarbayim_pesach' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Emor, Chapter 11 5']
+    assert all('the_fallback_ladder' not in f for f in m.WORLD["facts"])
+    assert 'vehikravtem_isheh_shivat_yamim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Emor, Section 10 1', 'Sifra, Emor, Section 10 2', 'Sifra, Emor, Section 10 3', 'Sifra, Emor, Section 10 4', 'Onkelos Lev 23:10']
+    assert all('the_omers_field' not in f for f in m.WORLD["facts"])
+    assert 'uktzartem_et_ketzirah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Emor, Section 10 5', 'Sifra, Emor, Chapter 12 1', 'Sifra, Emor, Chapter 12 2', 'Sifra, Emor, Chapter 12 3', 'Sifra, Emor, Chapter 12 4', 'Sifra, Emor, Chapter 12 5', 'Onkelos Lev 23:11']
+    assert all('the_morrow_by_four_routes_and_onkelos' not in f for f in m.WORLD["facts"])
+    assert 'mimachorat_hashabbat' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Emor, Section 10 6', 'Sifra, Emor, Section 10 7', 'Sifra, Emor, Section 10 8', 'Onkelos Lev 23:13']
+    assert all('the_omers_lamb_and_its_doubled_flour' not in f for f in m.WORLD["facts"])
+    assert 'keves_tamim_uminchato' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Emor, Section 10 9', 'Sifra, Emor, Section 10 10', 'Sifra, Emor, Section 10 11', 'Onkelos Lev 23:14']
+    assert all('the_new_grains_clock' not in f for f in m.WORLD["facts"])
+    assert 'velechem_vekali_vecharmel' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Emor, Chapter 12 6', 'Sifra, Emor, Chapter 12 7', 'Sifra, Emor, Chapter 12 8', 'Sifra, Emor, Chapter 12 9', 'Onkelos Lev 23:15']
+    assert all('the_counts_three_clocks' not in f for f in m.WORLD["facts"])
+    assert 'usfartem_lachem' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Sifra, Emor, Chapter 13 1', 'Sifra, Emor, Chapter 13 2', 'Sifra, Emor, Chapter 13 3', 'Onkelos Lev 23:17']
+    assert all('the_two_loaves_spec' not in f for f in m.WORLD["facts"])
+    assert 'lechem_tenufah_shtayim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Sifra, Emor, Chapter 13 4', 'Sifra, Emor, Chapter 13 5', 'Sifra, Emor, Chapter 13 6', 'Sifra, Emor, Chapter 13 7', 'Sifra, Emor, Chapter 13 8', 'Sifra, Emor, Chapter 13 9', 'Sifra, Emor, Chapter 13 10', 'Onkelos Lev 23:18', 'Onkelos Lev 23:20']
+    assert all('two_sets_and_the_waving_geometry' not in f for f in m.WORLD["facts"])
+    assert 'vehikravtem_al_halechem' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[12]["cites"] == ['Sifra, Emor, Chapter 13 11', 'Onkelos Lev 23:22']
+    assert all('why_peah_among_the_festivals' not in f for f in m.WORLD["facts"])
+    assert 'uvekutzrechem_lo_techaleh' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_23_fall_festivals
+###############################################################################
+
+m = Machine("lev_23_fall_festivals")
+
+# -------------------------- Lev.23.23 · TREE_CLAIM -------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 23:23."
+m.step("Lev.23.23")
+
+# -------------------------- Lev.23.24 · ETNACHTA_SPLIT ---------------------
+# דבר אל בני ישראל לאמר … בחדש השביעי באחד לחדש יהיה לכם שבתון זכרון תרועה
+# מקרא קדש
+# "[EN-AID] From top split: LEFT «דבר אל בני ישראל לאמר» / RIGHT «בחדש
+# השביעי באחד לחדש יהיה לכם שבתון זכרון תרועה מקרא קדש». Derive claim from
+# Hebrew arms. Lev 23:24."
+m.step("Lev.23.24")
+# witness-tier presupposed read: the_four_token_liturgy on
+# shabbaton_zichron_teruah — read, not installed
+m.witness_read("shabbaton_zichron_teruah", "the_four_token_liturgy",
+                cites=["Sifra, Emor, Section 11 1", "Sifra, Emor, Section 11 2", "Sifra, Emor, Section 11 3", "Sifra, Emor, Section 11 4", "Sifra, Emor, Section 11 5", "Onkelos Lev 23:24"])
+# witness-tier presupposed read: the_shofar_imported_from_the_jubilee on
+# teruah — read, not installed
+m.witness_read("teruah", "the_shofar_imported_from_the_jubilee",
+                cites=["Sifra, Emor, Section 11 6", "Sifra, Emor, Section 11 7", "Sifra, Emor, Section 11 8", "Sifra, Emor, Section 11 9"])
+
+# -------------------------- Lev.23.25 · ETNACHTA_SPLIT ---------------------
+# כל מלאכת עבדה לא תעשו … והקרבתם אשה ליהוה
+# "[EN-AID] From top split: LEFT «כל מלאכת עבדה לא תעשו» / RIGHT «והקרבתם
+# אשה ליהוה». Derive claim from Hebrew arms. Lev 23:25."
+m.step("Lev.23.25")
+
+# -------------------------- Lev.23.26 · TREE_CLAIM -------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 23:26."
+m.step("Lev.23.26")
+
+# -------------------------- Lev.23.27 · ETNACHTA_SPLIT ---------------------
+# אך בעשור לחדש השביעי הזה יום הכפרים הוא מקרא קדש יהיה לכם וע … והקרבתם אשה
+# ליהוה
+# "[EN-AID] From top split: LEFT «אך בעשור לחדש השביעי הזה יום הכפרים הוא
+# מקרא קדש יהיה לכם ועניתם את נפשתיכם» / RIGHT «והקרבתם אשה ליהוה». Derive
+# claim from Hebrew arms. Lev 23:27."
+m.step("Lev.23.27")
+# witness-tier presupposed read: the_day_atones_only_the_penitent on
+# yom_hakippurim_hu — read, not installed
+m.witness_read("yom_hakippurim_hu", "the_day_atones_only_the_penitent",
+                cites=["Sifra, Emor, Chapter 14 1", "Sifra, Emor, Chapter 14 2", "Sifra, Emor, Chapter 14 3", "Onkelos Lev 23:27"])
+
+# -------------------------- Lev.23.28 · ETNACHTA_SPLIT ---------------------
+# וכל מלאכה לא תעשו בעצם היום הזה … כי יום כפרים הוא לכפר עליכם לפני יהוה
+# אלהיכם
+# "[EN-AID] From top split: LEFT «וכל מלאכה לא תעשו בעצם היום הזה» / RIGHT
+# «כי יום כפרים הוא לכפר עליכם לפני יהוה אלהיכם». Derive claim from Hebrew
+# arms. Lev 23:28."
+m.step("Lev.23.28")
+
+# -------------------------- Lev.23.29 · COND_כי ----------------------------
+# כי כל הנפש אשר לא תענה בעצם היום הזה … ונכרתה מעמיה
+# "[EN-AID] From top split: LEFT «כי כל הנפש אשר לא תענה בעצם היום הזה» /
+# RIGHT «ונכרתה מעמיה». Derive claim from Hebrew arms. Lev 23:29."
+m.step("Lev.23.29")
+# witness-tier presupposed read:
+# karet_is_destruction_and_the_five_afflictions on vehaavadti — read, not
+# installed
+m.witness_read("vehaavadti", "karet_is_destruction_and_the_five_afflictions",
+                cites=["Sifra, Emor, Chapter 14 4", "Onkelos Lev 23:30"])
+
+# -------------------------- Lev.23.30 · ETNACHTA_SPLIT ---------------------
+# וכל הנפש אשר תעשה כל מלאכה בעצם היום הזה … והאבדתי את הנפש ההוא מקרב עמה
+# "[EN-AID] From top split: LEFT «וכל הנפש אשר תעשה כל מלאכה בעצם היום הזה»
+# / RIGHT «והאבדתי את הנפש ההוא מקרב עמה». Derive claim from Hebrew arms.
+# Lev 23:30."
+m.step("Lev.23.30")
+
+# -------------------------- Lev.23.31 · ETNACHTA_SPLIT ---------------------
+# כל מלאכה לא תעשו … חקת עולם לדרתיכם בכל משבתיכם
+# "[EN-AID] From top split: LEFT «כל מלאכה לא תעשו» / RIGHT «חקת עולם
+# לדרתיכם בכל משבתיכם». Derive claim from Hebrew arms. Lev 23:31."
+m.step("Lev.23.31")
+
+# -------------------------- Lev.23.32 · ETNACHTA_SPLIT ---------------------
+# שבת שבתון הוא לכם ועניתם את נפשתיכם … בתשעה לחדש בערב מערב עד ערב תשבתו
+# שבתכם
+# "[EN-AID] From top split: LEFT «שבת שבתון הוא לכם ועניתם את נפשתיכם» /
+# RIGHT «בתשעה לחדש בערב מערב עד ערב תשבתו שבתכם». Derive claim from Hebrew
+# arms. Lev 23:32."
+m.step("Lev.23.32")
+# witness-tier presupposed read: the_addition_and_the_unwritten_warning on
+# betishah_lachodesh_baerev — read, not installed
+m.witness_read("betishah_lachodesh_baerev", "the_addition_and_the_unwritten_warning",
+                cites=["Sifra, Emor, Chapter 14 5", "Sifra, Emor, Chapter 14 6", "Sifra, Emor, Chapter 14 7", "Sifra, Emor, Chapter 14 8", "Sifra, Emor, Chapter 14 9", "Onkelos Lev 23:32"])
+
+# -------------------------- Lev.23.33 · TREE_CLAIM -------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 23:33."
+m.step("Lev.23.33")
+
+# -------------------------- Lev.23.34 · ETNACHTA_SPLIT ---------------------
+# דבר אל בני ישראל לאמר … בחמשה עשר יום לחדש השביעי הזה חג הסכות שבעת ימים
+# ליהוה
+# "[EN-AID] From top split: LEFT «דבר אל בני ישראל לאמר» / RIGHT «בחמשה עשר
+# יום לחדש השביעי הזה חג הסכות שבעת ימים ליהוה». Derive claim from Hebrew
+# arms. Lev 23:34."
+m.step("Lev.23.34")
+# witness-tier presupposed read: the_first_seven_and_sanctify_it on
+# chag_hasukkot_shivat_yamim — read, not installed
+m.witness_read("chag_hasukkot_shivat_yamim", "the_first_seven_and_sanctify_it",
+                cites=["Sifra, Emor, Section 12 1", "Sifra, Emor, Section 12 2", "Sifra, Emor, Section 12 3", "Sifra, Emor, Section 12 4", "Onkelos Lev 23:34"])
+
+# -------------------------- Lev.23.35 · ETNACHTA_SPLIT ---------------------
+# ביום הראשון מקרא קדש … כל מלאכת עבדה לא תעשו
+# "[EN-AID] From top split: LEFT «ביום הראשון מקרא קדש» / RIGHT «כל מלאכת
+# עבדה לא תעשו». Derive claim from Hebrew arms. Lev 23:35."
+m.step("Lev.23.35")
+
+# -------------------------- Lev.23.36 · ETNACHTA_SPLIT ---------------------
+# שבעת ימים תקריבו אשה ליהוה … ביום השמיני מקרא קדש יהיה לכם והקרבתם אשה
+# ליהוה עצרת הוא כל
+# "[EN-AID] From top split: LEFT «שבעת ימים תקריבו אשה ליהוה» / RIGHT «ביום
+# השמיני מקרא קדש יהיה לכם והקרבתם אשה ליהוה עצרת הוא כל מלאכת עבדה לא
+# תעשו». Derive claim from Hebrew arms. Lev 23:36."
+m.step("Lev.23.36")
+# witness-tier presupposed read: intermediate_days_order_rule_and_the_timer
+# on atzeret_hi_devar_yom_beyomo — read, not installed
+m.witness_read("atzeret_hi_devar_yom_beyomo", "intermediate_days_order_rule_and_the_timer",
+                cites=["Sifra, Emor, Section 12 5", "Sifra, Emor, Section 12 6", "Sifra, Emor, Section 12 7", "Sifra, Emor, Section 12 8", "Sifra, Emor, Section 12 9", "Sifra, Emor, Section 12 10", "Sifra, Emor, Chapter 15 1", "Sifra, Emor, Chapter 15 2", "Sifra, Emor, Chapter 15 3", "Sifra, Emor, Chapter 15 4", "Sifra, Emor, Chapter 15 5", "Onkelos Lev 23:36"])
+
+# -------------------------- Lev.23.37 · ETNACHTA_SPLIT ---------------------
+# אלה מועדי יהוה אשר תקראו אתם מקראי קדש … להקריב אשה ליהוה עלה ומנחה זבח
+# ונסכים דבר יום ביומו
+# "[EN-AID] From top split: LEFT «אלה מועדי יהוה אשר תקראו אתם מקראי קדש» /
+# RIGHT «להקריב אשה ליהוה עלה ומנחה זבח ונסכים דבר יום ביומו». Derive claim
+# from Hebrew arms. Lev 23:37."
+m.step("Lev.23.37")
+
+# -------------------------- Lev.23.38 · ETNACHTA_SPLIT ---------------------
+# מלבד שבתת יהוה … ומלבד מתנותיכם ומלבד כל נדריכם ומלבד כל נדבותיכם אשר תתנו
+# לי
+# "[EN-AID] From top split: LEFT «מלבד שבתת יהוה» / RIGHT «ומלבד מתנותיכם
+# ומלבד כל נדריכם ומלבד כל נדבותיכם אשר תתנו ליהוה». Derive claim from
+# Hebrew arms. Lev 23:38."
+m.step("Lev.23.38")
+
+# -------------------------- Lev.23.39 · ETNACHTA_SPLIT ---------------------
+# אך בחמשה עשר יום לחדש השביעי באספכם את תבואת הארץ תחגו את חג … ביום הראשון
+# שבתון וביום השמיני שבתון
+# "[EN-AID] From top split: LEFT «אך בחמשה עשר יום לחדש השביעי באספכם את
+# תבואת הארץ תחגו את חג יהוה שבעת ימים» / RIGHT «ביום הראשון שבתון וביום
+# השמיני שבתון». Derive claim from Hebrew arms. Lev 23:39."
+m.step("Lev.23.39")
+# witness-tier presupposed read: the_ingathering_rule on
+# beospechem_et_tevuat_haaretz — read, not installed
+m.witness_read("beospechem_et_tevuat_haaretz", "the_ingathering_rule",
+                cites=["Sifra, Emor, Chapter 15 6", "Sifra, Emor, Chapter 15 7", "Sifra, Emor, Chapter 15 8", "Onkelos Lev 23:39"])
+
+# -------------------------- Lev.23.40 · ETNACHTA_SPLIT ---------------------
+# ולקחתם לכם ביום הראשון פרי עץ הדר כפת תמרים וענף עץ עבת וערב … ושמחתם לפני
+# יהוה אלהיכם שבעת ימים
+# "[EN-AID] From top split: LEFT «ולקחתם לכם ביום הראשון פרי עץ הדר כפת
+# תמרים וענף עץ עבת וערבי נחל» / RIGHT «ושמחתם לפני יהוה אלהיכם שבעת ימים».
+# Derive claim from Hebrew arms. Lev 23:40."
+m.step("Lev.23.40")
+# witness-tier presupposed read: the_four_species_file on pri_etz_hadar —
+# read, not installed
+m.witness_read("pri_etz_hadar", "the_four_species_file",
+                cites=["Sifra, Emor, Chapter 16 1", "Sifra, Emor, Chapter 16 2", "Sifra, Emor, Chapter 16 3", "Sifra, Emor, Chapter 16 4", "Sifra, Emor, Chapter 16 5", "Sifra, Emor, Chapter 16 6", "Sifra, Emor, Chapter 16 7", "Sifra, Emor, Chapter 16 8", "Sifra, Emor, Chapter 16 9", "Onkelos Lev 23:40"])
+
+# -------------------------- Lev.23.41 · ETNACHTA_SPLIT ---------------------
+# וחגתם אתו חג ליהוה שבעת ימים בשנה … חקת עולם לדרתיכם בחדש השביעי תחגו אתו
+# "[EN-AID] From top split: LEFT «וחגתם אתו חג ליהוה שבעת ימים בשנה» / RIGHT
+# «חקת עולם לדרתיכם בחדש השביעי תחגו אתו». Derive claim from Hebrew arms.
+# Lev 23:41."
+m.step("Lev.23.41")
+# witness-tier presupposed read: the_chagigahs_one_day on vechagotem_oto —
+# read, not installed
+m.witness_read("vechagotem_oto", "the_chagigahs_one_day",
+                cites=["Sifra, Emor, Chapter 17 1", "Sifra, Emor, Chapter 17 2", "Sifra, Emor, Chapter 17 3", "Onkelos Lev 23:41"])
+
+# -------------------------- Lev.23.42 · ETNACHTA_SPLIT ---------------------
+# בסכת תשבו שבעת ימים … כל האזרח בישראל ישבו בסכת
+# "[EN-AID] From top split: LEFT «בסכת תשבו שבעת ימים» / RIGHT «כל האזרח
+# בישראל ישבו בסכת». Derive claim from Hebrew arms. Lev 23:42."
+m.step("Lev.23.42")
+# witness-tier presupposed read: the_sukkah_file_and_the_clouds on
+# basukkot_teshvu — read, not installed
+m.witness_read("basukkot_teshvu", "the_sukkah_file_and_the_clouds",
+                cites=["Sifra, Emor, Chapter 17 4", "Sifra, Emor, Chapter 17 5", "Sifra, Emor, Chapter 17 6", "Sifra, Emor, Chapter 17 7", "Sifra, Emor, Chapter 17 8", "Sifra, Emor, Chapter 17 9", "Sifra, Emor, Chapter 17 10", "Sifra, Emor, Chapter 17 11", "Onkelos Lev 23:42", "Onkelos Lev 23:43"])
+
+# -------------------------- Lev.23.43 · COND_כי ----------------------------
+# למען ידעו דרתיכם כי בסכות הושבתי את בני ישראל בהוציאי אותם מ … אני יהוה
+# אלהיכם
+# "[EN-AID] From top split: LEFT «למען ידעו דרתיכם כי בסכות הושבתי את בני
+# ישראל בהוציאי אותם מארץ מצרים» / RIGHT «אני יהוה אלהיכם». Derive claim
+# from Hebrew arms. Lev 23:43."
+m.step("Lev.23.43")
+
+# -------------------------- Lev.23.44 · ETNACHTA_SPLIT ---------------------
+# וידבר משה את מעדי יהוה … אל בני ישראל
+# "[EN-AID] From top split: LEFT «וידבר משה את מעדי יהוה» / RIGHT «אל בני
+# ישראל». Derive claim from Hebrew arms. Lev 23:44."
+m.step("Lev.23.44")
+# witness-tier presupposed read: moses_taught_each_in_its_season on
+# vayedaber_moshe_et_moadei — read, not installed
+m.witness_read("vayedaber_moshe_et_moadei", "moses_taught_each_in_its_season",
+                cites=["Sifra, Emor, Chapter 17 12", "Sifra, Emor, Chapter 17 13", "Onkelos Lev 23:44"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('shabbaton_zichron_teruah', 'the_four_token_liturgy'), ('teruah', 'the_shofar_imported_from_the_jubilee'), ('yom_hakippurim_hu', 'the_day_atones_only_the_penitent'), ('vehaavadti', 'karet_is_destruction_and_the_five_afflictions'), ('betishah_lachodesh_baerev', 'the_addition_and_the_unwritten_warning'), ('chag_hasukkot_shivat_yamim', 'the_first_seven_and_sanctify_it'), ('atzeret_hi_devar_yom_beyomo', 'intermediate_days_order_rule_and_the_timer'), ('beospechem_et_tevuat_haaretz', 'the_ingathering_rule'), ('pri_etz_hadar', 'the_four_species_file'), ('vechagotem_oto', 'the_chagigahs_one_day'), ('basukkot_teshvu', 'the_sukkah_file_and_the_clouds'), ('vayedaber_moshe_et_moadei', 'moses_taught_each_in_its_season')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Emor, Section 11 1', 'Sifra, Emor, Section 11 2', 'Sifra, Emor, Section 11 3', 'Sifra, Emor, Section 11 4', 'Sifra, Emor, Section 11 5', 'Onkelos Lev 23:24']
+    assert all('the_four_token_liturgy' not in f for f in m.WORLD["facts"])
+    assert 'shabbaton_zichron_teruah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Emor, Section 11 6', 'Sifra, Emor, Section 11 7', 'Sifra, Emor, Section 11 8', 'Sifra, Emor, Section 11 9']
+    assert all('the_shofar_imported_from_the_jubilee' not in f for f in m.WORLD["facts"])
+    assert 'teruah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Emor, Chapter 14 1', 'Sifra, Emor, Chapter 14 2', 'Sifra, Emor, Chapter 14 3', 'Onkelos Lev 23:27']
+    assert all('the_day_atones_only_the_penitent' not in f for f in m.WORLD["facts"])
+    assert 'yom_hakippurim_hu' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Emor, Chapter 14 4', 'Onkelos Lev 23:30']
+    assert all('karet_is_destruction_and_the_five_afflictions' not in f for f in m.WORLD["facts"])
+    assert 'vehaavadti' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Emor, Chapter 14 5', 'Sifra, Emor, Chapter 14 6', 'Sifra, Emor, Chapter 14 7', 'Sifra, Emor, Chapter 14 8', 'Sifra, Emor, Chapter 14 9', 'Onkelos Lev 23:32']
+    assert all('the_addition_and_the_unwritten_warning' not in f for f in m.WORLD["facts"])
+    assert 'betishah_lachodesh_baerev' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Emor, Section 12 1', 'Sifra, Emor, Section 12 2', 'Sifra, Emor, Section 12 3', 'Sifra, Emor, Section 12 4', 'Onkelos Lev 23:34']
+    assert all('the_first_seven_and_sanctify_it' not in f for f in m.WORLD["facts"])
+    assert 'chag_hasukkot_shivat_yamim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Emor, Section 12 5', 'Sifra, Emor, Section 12 6', 'Sifra, Emor, Section 12 7', 'Sifra, Emor, Section 12 8', 'Sifra, Emor, Section 12 9', 'Sifra, Emor, Section 12 10', 'Sifra, Emor, Chapter 15 1', 'Sifra, Emor, Chapter 15 2', 'Sifra, Emor, Chapter 15 3', 'Sifra, Emor, Chapter 15 4', 'Sifra, Emor, Chapter 15 5', 'Onkelos Lev 23:36']
+    assert all('intermediate_days_order_rule_and_the_timer' not in f for f in m.WORLD["facts"])
+    assert 'atzeret_hi_devar_yom_beyomo' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Emor, Chapter 15 6', 'Sifra, Emor, Chapter 15 7', 'Sifra, Emor, Chapter 15 8', 'Onkelos Lev 23:39']
+    assert all('the_ingathering_rule' not in f for f in m.WORLD["facts"])
+    assert 'beospechem_et_tevuat_haaretz' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Emor, Chapter 16 1', 'Sifra, Emor, Chapter 16 2', 'Sifra, Emor, Chapter 16 3', 'Sifra, Emor, Chapter 16 4', 'Sifra, Emor, Chapter 16 5', 'Sifra, Emor, Chapter 16 6', 'Sifra, Emor, Chapter 16 7', 'Sifra, Emor, Chapter 16 8', 'Sifra, Emor, Chapter 16 9', 'Onkelos Lev 23:40']
+    assert all('the_four_species_file' not in f for f in m.WORLD["facts"])
+    assert 'pri_etz_hadar' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Emor, Chapter 17 1', 'Sifra, Emor, Chapter 17 2', 'Sifra, Emor, Chapter 17 3', 'Onkelos Lev 23:41']
+    assert all('the_chagigahs_one_day' not in f for f in m.WORLD["facts"])
+    assert 'vechagotem_oto' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Sifra, Emor, Chapter 17 4', 'Sifra, Emor, Chapter 17 5', 'Sifra, Emor, Chapter 17 6', 'Sifra, Emor, Chapter 17 7', 'Sifra, Emor, Chapter 17 8', 'Sifra, Emor, Chapter 17 9', 'Sifra, Emor, Chapter 17 10', 'Sifra, Emor, Chapter 17 11', 'Onkelos Lev 23:42', 'Onkelos Lev 23:43']
+    assert all('the_sukkah_file_and_the_clouds' not in f for f in m.WORLD["facts"])
+    assert 'basukkot_teshvu' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Sifra, Emor, Chapter 17 12', 'Sifra, Emor, Chapter 17 13', 'Onkelos Lev 23:44']
+    assert all('moses_taught_each_in_its_season' not in f for f in m.WORLD["facts"])
+    assert 'vayedaber_moshe_et_moadei' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_24_lamp_bread
+###############################################################################
+
+m = Machine("lev_24_lamp_bread")
+
+# -------------------------- Lev.24.1 · TREE_CLAIM --------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 24:1."
+m.step("Lev.24.1")
+
+# -------------------------- Lev.24.2 · ETNACHTA_SPLIT ----------------------
+# צו את בני ישראל ויקחו אליך שמן זית זך כתית למאור … להעלת נר תמיד
+# "[EN-AID] From top split: LEFT «צו את בני ישראל ויקחו אליך שמן זית זך כתית
+# למאור» / RIGHT «להעלת נר תמיד». Derive claim from Hebrew arms. Lev 24:2."
+m.step("Lev.24.2")
+# witness-tier presupposed read: three_olives_nine_grades on
+# shemen_zayit_zach_katit — read, not installed
+m.witness_read("shemen_zayit_zach_katit", "three_olives_nine_grades",
+                cites=["Sifra, Emor, Section 13 1", "Sifra, Emor, Section 13 2", "Sifra, Emor, Section 13 3", "Sifra, Emor, Section 13 4", "Sifra, Emor, Section 13 5", "Sifra, Emor, Section 13 6", "Onkelos Lev 24:2"])
+
+# -------------------------- Lev.24.3 · ETNACHTA_SPLIT ----------------------
+# מחוץ לפרכת העדת באהל מועד יערך אתו אהרן מערב עד בקר לפני יהו … חקת עולם
+# לדרתיכם
+# "[EN-AID] From top split: LEFT «מחוץ לפרכת העדת באהל מועד יערך אתו אהרן
+# מערב עד בקר לפני יהוה תמיד» / RIGHT «חקת עולם לדרתיכם». Derive claim from
+# Hebrew arms. Lev 24:3."
+m.step("Lev.24.3")
+# witness-tier presupposed read: the_western_lamp_and_the_position on
+# michutz_leparochet_yaaroch — read, not installed
+m.witness_read("michutz_leparochet_yaaroch", "the_western_lamp_and_the_position",
+                cites=["Sifra, Emor, Section 13 7", "Sifra, Emor, Section 13 8", "Sifra, Emor, Section 13 9", "Sifra, Emor, Section 13 10", "Sifra, Emor, Section 13 11", "Sifra, Emor, Section 13 12", "Onkelos Lev 24:3", "Onkelos Lev 24:4"])
+
+# -------------------------- Lev.24.4 · ETNACHTA_SPLIT ----------------------
+# על המנרה הטהרה יערך את הנרות … לפני יהוה תמיד
+# "[EN-AID] From top split: LEFT «על המנרה הטהרה יערך את הנרות» / RIGHT
+# «לפני יהוה תמיד». Derive claim from Hebrew arms. Lev 24:4."
+m.step("Lev.24.4")
+
+# -------------------------- Lev.24.5 · ETNACHTA_SPLIT ----------------------
+# ולקחת סלת ואפית אתה שתים עשרה חלות … שני עשרנים יהיה החלה האחת
+# "[EN-AID] From top split: LEFT «ולקחת סלת ואפית אתה שתים עשרה חלות» /
+# RIGHT «שני עשרנים יהיה החלה האחת». Derive claim from Hebrew arms. Lev
+# 24:5."
+m.step("Lev.24.5")
+# witness-tier presupposed read:
+# the_twelve_loaves_and_the_three_verse_arrangement on shteim_esreh_chalot —
+# read, not installed
+m.witness_read("shteim_esreh_chalot", "the_twelve_loaves_and_the_three_verse_arrangement",
+                cites=["Sifra, Emor, Chapter 18 1", "Sifra, Emor, Chapter 18 2", "Sifra, Emor, Chapter 18 3", "Onkelos Lev 24:5"])
+
+# -------------------------- Lev.24.6 · ETNACHTA_SPLIT ----------------------
+# ושמת אותם שתים מערכות שש המערכת … על השלחן הטהר לפני יהוה
+# "[EN-AID] From top split: LEFT «ושמת אותם שתים מערכות שש המערכת» / RIGHT
+# «על השלחן הטהר לפני יהוה». Derive claim from Hebrew arms. Lev 24:6."
+m.step("Lev.24.6")
+
+# -------------------------- Lev.24.7 · ETNACHTA_SPLIT ----------------------
+# ונתת על המערכת לבנה זכה … והיתה ללחם לאזכרה אשה ליהוה
+# "[EN-AID] From top split: LEFT «ונתת על המערכת לבנה זכה» / RIGHT «והיתה
+# ללחם לאזכרה אשה ליהוה». Derive claim from Hebrew arms. Lev 24:7."
+m.step("Lev.24.7")
+# witness-tier presupposed read: the_props_and_the_frankincense on
+# levonah_zakah_leazkarah — read, not installed
+m.witness_read("levonah_zakah_leazkarah", "the_props_and_the_frankincense",
+                cites=["Sifra, Emor, Chapter 18 4", "Sifra, Emor, Chapter 18 5", "Sifra, Emor, Chapter 18 6", "Sifra, Emor, Chapter 18 7", "Onkelos Lev 24:7"])
+
+# -------------------------- Lev.24.8 · ETNACHTA_SPLIT ----------------------
+# ביום השבת ביום השבת יערכנו לפני יהוה תמיד … מאת בני ישראל ברית עולם
+# "[EN-AID] From top split: LEFT «ביום השבת ביום השבת יערכנו לפני יהוה תמיד»
+# / RIGHT «מאת בני ישראל ברית עולם». Derive claim from Hebrew arms. Lev
+# 24:8."
+m.step("Lev.24.8")
+# witness-tier presupposed read: the_sabbath_exchange on
+# beyom_hashabbat_beyom_hashabbat — read, not installed
+m.witness_read("beyom_hashabbat_beyom_hashabbat", "the_sabbath_exchange",
+                cites=["Sifra, Emor, Chapter 18 8", "Sifra, Emor, Chapter 18 9", "Onkelos Lev 24:8"])
+
+# -------------------------- Lev.24.9 · ETNACHTA_SPLIT ----------------------
+# והיתה לאהרן ולבניו ואכלהו במקום קדש … כי קדש קדשים הוא לו מאשי יהוה חק
+# עולם
+# "[EN-AID] From top split: LEFT «והיתה לאהרן ולבניו ואכלהו במקום קדש» /
+# RIGHT «כי קדש קדשים הוא לו מאשי יהוה חק עולם». Derive claim from Hebrew
+# arms. Lev 24:9."
+m.step("Lev.24.9")
+# witness-tier presupposed read: eaten_in_a_holy_place on
+# vehaytah_leaharon_ulevanav — read, not installed
+m.witness_read("vehaytah_leaharon_ulevanav", "eaten_in_a_holy_place",
+                cites=["Sifra, Emor, Chapter 18 10", "Sifra, Emor, Chapter 18 11", "Onkelos Lev 24:9"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('shemen_zayit_zach_katit', 'three_olives_nine_grades'), ('michutz_leparochet_yaaroch', 'the_western_lamp_and_the_position'), ('shteim_esreh_chalot', 'the_twelve_loaves_and_the_three_verse_arrangement'), ('levonah_zakah_leazkarah', 'the_props_and_the_frankincense'), ('beyom_hashabbat_beyom_hashabbat', 'the_sabbath_exchange'), ('vehaytah_leaharon_ulevanav', 'eaten_in_a_holy_place')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Emor, Section 13 1', 'Sifra, Emor, Section 13 2', 'Sifra, Emor, Section 13 3', 'Sifra, Emor, Section 13 4', 'Sifra, Emor, Section 13 5', 'Sifra, Emor, Section 13 6', 'Onkelos Lev 24:2']
+    assert all('three_olives_nine_grades' not in f for f in m.WORLD["facts"])
+    assert 'shemen_zayit_zach_katit' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Emor, Section 13 7', 'Sifra, Emor, Section 13 8', 'Sifra, Emor, Section 13 9', 'Sifra, Emor, Section 13 10', 'Sifra, Emor, Section 13 11', 'Sifra, Emor, Section 13 12', 'Onkelos Lev 24:3', 'Onkelos Lev 24:4']
+    assert all('the_western_lamp_and_the_position' not in f for f in m.WORLD["facts"])
+    assert 'michutz_leparochet_yaaroch' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Emor, Chapter 18 1', 'Sifra, Emor, Chapter 18 2', 'Sifra, Emor, Chapter 18 3', 'Onkelos Lev 24:5']
+    assert all('the_twelve_loaves_and_the_three_verse_arrangement' not in f for f in m.WORLD["facts"])
+    assert 'shteim_esreh_chalot' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Emor, Chapter 18 4', 'Sifra, Emor, Chapter 18 5', 'Sifra, Emor, Chapter 18 6', 'Sifra, Emor, Chapter 18 7', 'Onkelos Lev 24:7']
+    assert all('the_props_and_the_frankincense' not in f for f in m.WORLD["facts"])
+    assert 'levonah_zakah_leazkarah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Emor, Chapter 18 8', 'Sifra, Emor, Chapter 18 9', 'Onkelos Lev 24:8']
+    assert all('the_sabbath_exchange' not in f for f in m.WORLD["facts"])
+    assert 'beyom_hashabbat_beyom_hashabbat' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Emor, Chapter 18 10', 'Sifra, Emor, Chapter 18 11', 'Onkelos Lev 24:9']
+    assert all('eaten_in_a_holy_place' not in f for f in m.WORLD["facts"])
+    assert 'vehaytah_leaharon_ulevanav' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_24_blasphemer_talion
+###############################################################################
+
+m = Machine("lev_24_blasphemer_talion")
+
+# -------------------------- Lev.24.10 · ETNACHTA_SPLIT ---------------------
+# ויצא בן אשה ישראלית והוא בן איש מצרי בתוך בני ישראל … וינצו במחנה בן
+# הישראלית ואיש הישראלי
+# "[EN-AID] From top split: LEFT «ויצא בן אשה ישראלית והוא בן איש מצרי בתוך
+# בני ישראל» / RIGHT «וינצו במחנה בן הישראלית ואיש הישראלי». Derive claim
+# from Hebrew arms. Lev 24:10."
+m.step("Lev.24.10")
+# witness-tier presupposed read: the_blasphemers_origin on
+# vayetze_ben_ishah_yisreelit — read, not installed
+m.witness_read("vayetze_ben_ishah_yisreelit", "the_blasphemers_origin",
+                cites=["Sifra, Emor, Section 14 1", "Sifra, Emor, Section 14 2", "Onkelos Lev 24:11"])
+
+# -------------------------- Lev.24.11 · ETNACHTA_SPLIT ---------------------
+# ויקב בן האשה הישראלית את השם ויקלל ויביאו אתו אל משה … ושם אמו שלמית בת
+# דברי למטה דן
+# "[EN-AID] From top split: LEFT «ויקב בן האשה הישראלית את השם ויקלל ויביאו
+# אתו אל משה» / RIGHT «ושם אמו שלמית בת דברי למטה דן». Derive claim from
+# Hebrew arms. Lev 24:11."
+m.step("Lev.24.11")
+
+# -------------------------- Lev.24.12 · ETNACHTA_SPLIT ---------------------
+# ויניחהו במשמר … לפרש להם על פי יהוה
+# "[EN-AID] From top split: LEFT «ויניחהו במשמר» / RIGHT «לפרש להם על פי
+# יהוה». Derive claim from Hebrew arms. Lev 24:12."
+m.step("Lev.24.12")
+# witness-tier presupposed read: court_procedure_and_two_custody_cases on
+# vayanichuhu_bamishmar — read, not installed
+m.witness_read("vayanichuhu_bamishmar", "court_procedure_and_two_custody_cases",
+                cites=["Sifra, Emor, Section 14 3", "Sifra, Emor, Section 14 4", "Sifra, Emor, Section 14 5", "Onkelos Lev 24:12"])
+
+# -------------------------- Lev.24.13 · TREE_CLAIM -------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 24:13."
+m.step("Lev.24.13")
+
+# -------------------------- Lev.24.14 · ETNACHTA_SPLIT ---------------------
+# הוצא את המקלל אל מחוץ למחנה וסמכו כל השמעים את ידיהם על ראשו … ורגמו אתו
+# כל העדה
+# "[EN-AID] From top split: LEFT «הוצא את המקלל אל מחוץ למחנה וסמכו כל
+# השמעים את ידיהם על ראשו» / RIGHT «ורגמו אתו כל העדה». Derive claim from
+# Hebrew arms. Lev 24:14."
+m.step("Lev.24.14")
+# witness-tier presupposed read: the_stoning_protocol on hotze_et_hamekalel
+# — read, not installed
+m.witness_read("hotze_et_hamekalel", "the_stoning_protocol",
+                cites=["Sifra, Emor, Chapter 19 1", "Sifra, Emor, Chapter 19 2", "Sifra, Emor, Chapter 19 3", "Onkelos Lev 24:14"])
+
+# -------------------------- Lev.24.15 · ETNACHTA_SPLIT ---------------------
+# ואל בני ישראל תדבר לאמר … איש איש כי יקלל אלהיו ונשא חטאו
+# "[EN-AID] From top split: LEFT «ואל בני ישראל תדבר לאמר» / RIGHT «איש איש
+# כי יקלל אלהיו ונשא חטאו». Derive claim from Hebrew arms. Lev 24:15."
+m.step("Lev.24.15")
+# witness-tier presupposed read: the_predicates_domain on
+# ish_ish_ki_yekalel_elohav — read, not installed
+m.witness_read("ish_ish_ki_yekalel_elohav", "the_predicates_domain",
+                cites=["Sifra, Emor, Chapter 19 4", "Sifra, Emor, Chapter 19 5", "Sifra, Emor, Chapter 19 6", "Sifra, Emor, Chapter 19 7", "Onkelos Lev 24:15", "Onkelos Lev 24:16"])
+
+# -------------------------- Lev.24.16 · ETNACHTA_SPLIT ---------------------
+# ונקב שם יהוה מות יומת רגום ירגמו בו כל העדה … כגר כאזרח בנקבו שם יומת
+# "[EN-AID] From top split: LEFT «ונקב שם יהוה מות יומת רגום ירגמו בו כל
+# העדה» / RIGHT «כגר כאזרח בנקבו שם יומת». Derive claim from Hebrew arms.
+# Lev 24:16."
+m.step("Lev.24.16")
+
+# -------------------------- Lev.24.17 · COND_כי ----------------------------
+# ואיש כי יכה כל נפש אדם … מות יומת
+# "[EN-AID] From top split: LEFT «ואיש כי יכה כל נפש אדם» / RIGHT «מות
+# יומת». Derive claim from Hebrew arms. Lev 24:17."
+m.step("Lev.24.17")
+# witness-tier presupposed read: the_striker_and_the_whole_soul on
+# ish_ki_yakeh_kol_nefesh — read, not installed
+m.witness_read("ish_ki_yakeh_kol_nefesh", "the_striker_and_the_whole_soul",
+                cites=["Sifra, Emor, Chapter 20 1", "Sifra, Emor, Chapter 20 2", "Onkelos Lev 24:18"])
+
+# -------------------------- Lev.24.18 · ETNACHTA_SPLIT ---------------------
+# ומכה נפש בהמה ישלמנה … נפש תחת נפש
+# "[EN-AID] From top split: LEFT «ומכה נפש בהמה ישלמנה» / RIGHT «נפש תחת
+# נפש». Derive claim from Hebrew arms. Lev 24:18."
+m.step("Lev.24.18")
+
+# -------------------------- Lev.24.19 · COND_כי ----------------------------
+# ואיש כי יתן מום בעמיתו … כאשר עשה כן יעשה לו
+# "[EN-AID] From top split: LEFT «ואיש כי יתן מום בעמיתו» / RIGHT «כאשר עשה
+# כן יעשה לו». Derive claim from Hebrew arms. Lev 24:19."
+m.step("Lev.24.19")
+# witness-tier presupposed read: shame_class_hand_boundary_talion_is_payment
+# on kaasher_asah_ken_yeaseh_lo — read, not installed
+m.witness_read("kaasher_asah_ken_yeaseh_lo", "shame_class_hand_boundary_talion_is_payment",
+                cites=["Sifra, Emor, Chapter 20 3", "Sifra, Emor, Chapter 20 4", "Sifra, Emor, Chapter 20 5", "Sifra, Emor, Chapter 20 6", "Sifra, Emor, Chapter 20 7", "Onkelos Lev 24:20"])
+
+# -------------------------- Lev.24.20 · ETNACHTA_SPLIT ---------------------
+# שבר תחת שבר עין תחת עין שן תחת שן … כאשר יתן מום באדם כן ינתן בו
+# "[EN-AID] From top split: LEFT «שבר תחת שבר עין תחת עין שן תחת שן» / RIGHT
+# «כאשר יתן מום באדם כן ינתן בו». Derive claim from Hebrew arms. Lev 24:20."
+m.step("Lev.24.20")
+
+# -------------------------- Lev.24.21 · ETNACHTA_SPLIT ---------------------
+# ומכה בהמה ישלמנה … ומכה אדם יומת
+# "[EN-AID] From top split: LEFT «ומכה בהמה ישלמנה» / RIGHT «ומכה אדם יומת».
+# Derive claim from Hebrew arms. Lev 24:21."
+m.step("Lev.24.21")
+# witness-tier presupposed read:
+# parent_striker_one_judgment_and_the_protocol on
+# mishpat_echad_yihyeh_lachem — read, not installed
+m.witness_read("mishpat_echad_yihyeh_lachem", "parent_striker_one_judgment_and_the_protocol",
+                cites=["Sifra, Emor, Chapter 20 8", "Sifra, Emor, Chapter 20 9", "Sifra, Emor, Chapter 20 10", "Onkelos Lev 24:22"])
+
+# -------------------------- Lev.24.22 · ETNACHTA_SPLIT ---------------------
+# משפט אחד יהיה לכם כגר כאזרח יהיה … כי אני יהוה אלהיכם
+# "[EN-AID] From top split: LEFT «משפט אחד יהיה לכם כגר כאזרח יהיה» / RIGHT
+# «כי אני יהוה אלהיכם». Derive claim from Hebrew arms. Lev 24:22."
+m.step("Lev.24.22")
+
+# -------------------------- Lev.24.23 · ETNACHTA_SPLIT ---------------------
+# וידבר משה אל בני ישראל ויוציאו את המקלל אל מחוץ למחנה וירגמו … ובני ישראל
+# עשו כאשר צוה יהוה את משה
+# "[EN-AID] From top split: LEFT «וידבר משה אל בני ישראל ויוציאו את המקלל אל
+# מחוץ למחנה וירגמו אתו אבן» / RIGHT «ובני ישראל עשו כאשר צוה יהוה את משה».
+# Derive claim from Hebrew arms. Lev 24:23."
+m.step("Lev.24.23")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('vayetze_ben_ishah_yisreelit', 'the_blasphemers_origin'), ('vayanichuhu_bamishmar', 'court_procedure_and_two_custody_cases'), ('hotze_et_hamekalel', 'the_stoning_protocol'), ('ish_ish_ki_yekalel_elohav', 'the_predicates_domain'), ('ish_ki_yakeh_kol_nefesh', 'the_striker_and_the_whole_soul'), ('kaasher_asah_ken_yeaseh_lo', 'shame_class_hand_boundary_talion_is_payment'), ('mishpat_echad_yihyeh_lachem', 'parent_striker_one_judgment_and_the_protocol')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Emor, Section 14 1', 'Sifra, Emor, Section 14 2', 'Onkelos Lev 24:11']
+    assert all('the_blasphemers_origin' not in f for f in m.WORLD["facts"])
+    assert 'vayetze_ben_ishah_yisreelit' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Emor, Section 14 3', 'Sifra, Emor, Section 14 4', 'Sifra, Emor, Section 14 5', 'Onkelos Lev 24:12']
+    assert all('court_procedure_and_two_custody_cases' not in f for f in m.WORLD["facts"])
+    assert 'vayanichuhu_bamishmar' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Emor, Chapter 19 1', 'Sifra, Emor, Chapter 19 2', 'Sifra, Emor, Chapter 19 3', 'Onkelos Lev 24:14']
+    assert all('the_stoning_protocol' not in f for f in m.WORLD["facts"])
+    assert 'hotze_et_hamekalel' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Emor, Chapter 19 4', 'Sifra, Emor, Chapter 19 5', 'Sifra, Emor, Chapter 19 6', 'Sifra, Emor, Chapter 19 7', 'Onkelos Lev 24:15', 'Onkelos Lev 24:16']
+    assert all('the_predicates_domain' not in f for f in m.WORLD["facts"])
+    assert 'ish_ish_ki_yekalel_elohav' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Emor, Chapter 20 1', 'Sifra, Emor, Chapter 20 2', 'Onkelos Lev 24:18']
+    assert all('the_striker_and_the_whole_soul' not in f for f in m.WORLD["facts"])
+    assert 'ish_ki_yakeh_kol_nefesh' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Emor, Chapter 20 3', 'Sifra, Emor, Chapter 20 4', 'Sifra, Emor, Chapter 20 5', 'Sifra, Emor, Chapter 20 6', 'Sifra, Emor, Chapter 20 7', 'Onkelos Lev 24:20']
+    assert all('shame_class_hand_boundary_talion_is_payment' not in f for f in m.WORLD["facts"])
+    assert 'kaasher_asah_ken_yeaseh_lo' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Emor, Chapter 20 8', 'Sifra, Emor, Chapter 20 9', 'Sifra, Emor, Chapter 20 10', 'Onkelos Lev 24:22']
+    assert all('parent_striker_one_judgment_and_the_protocol' not in f for f in m.WORLD["facts"])
+    assert 'mishpat_echad_yihyeh_lachem' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_25_shemittah
+###############################################################################
+
+m = Machine("lev_25_shemittah")
+
+# -------------------------- Lev.25.1 · TREE_CLAIM --------------------------
+# וידבר יהוה אל משה … בהר סיני לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה אל משה» / RIGHT «בהר סיני
+# לאמר». Derive claim from Hebrew arms. Lev 25:1."
+m.step("Lev.25.1")
+# witness-tier presupposed read: the_sinai_detail_rule on behar_sinai —
+# read, not installed
+m.witness_read("behar_sinai", "the_sinai_detail_rule",
+                cites=["Sifra, Behar, Section 1 1", "Onkelos Lev 25:1"])
+
+# -------------------------- Lev.25.2 · ETNACHTA_SPLIT ----------------------
+# דבר אל בני ישראל ואמרת אלהם כי תבאו אל הארץ אשר אני נתן לכם … ושבתה הארץ
+# שבת ליהוה
+# "[EN-AID] From top split: LEFT «דבר אל בני ישראל ואמרת אלהם כי תבאו אל
+# הארץ אשר אני נתן לכם» / RIGHT «ושבתה הארץ שבת ליהוה». Derive claim from
+# Hebrew arms. Lev 25:2."
+m.step("Lev.25.2")
+# witness-tier presupposed read: onset_conditions_and_timeline on
+# ki_tavou_el_haaretz — read, not installed
+m.witness_read("ki_tavou_el_haaretz", "onset_conditions_and_timeline",
+                cites=["Sifra, Behar, Section 1 2", "Sifra, Behar, Section 1 3", "Onkelos Lev 25:2"])
+
+# -------------------------- Lev.25.3 · ETNACHTA_SPLIT ----------------------
+# שש שנים תזרע שדך ושש שנים תזמר כרמך … ואספת את תבואתה
+# "[EN-AID] From top split: LEFT «שש שנים תזרע שדך ושש שנים תזמר כרמך» /
+# RIGHT «ואספת את תבואתה». Derive claim from Hebrew arms. Lev 25:3."
+m.step("Lev.25.3")
+# witness-tier presupposed read: six_and_six_with_the_rooting_threshold on
+# shesh_shanim_tizra — read, not installed
+m.witness_read("shesh_shanim_tizra", "six_and_six_with_the_rooting_threshold",
+                cites=["Sifra, Behar, Section 1 7", "Sifra, Behar, Section 1 8", "Sifra, Behar, Section 1 9", "Onkelos Lev 25:3"])
+
+# -------------------------- Lev.25.4 · ETNACHTA_SPLIT ----------------------
+# ובשנה השביעת שבת שבתון יהיה לארץ שבת ליהוה … שדך לא תזרע וכרמך לא תזמר
+# "[EN-AID] From top split: LEFT «ובשנה השביעת שבת שבתון יהיה לארץ שבת
+# ליהוה» / RIGHT «שדך לא תזרע וכרמך לא תזמר». Derive claim from Hebrew arms.
+# Lev 25:4."
+m.step("Lev.25.4")
+# witness-tier presupposed read: labor_census_and_the_class_rule on
+# shabbat_shabbaton_laaretz — read, not installed
+m.witness_read("shabbat_shabbaton_laaretz", "labor_census_and_the_class_rule",
+                cites=["Sifra, Behar, Section 1 4", "Sifra, Behar, Section 1 5", "Sifra, Behar, Section 1 6", "Sifra, Behar, Chapter 1 1", "Sifra, Behar, Chapter 1 2", "Onkelos Lev 25:4"])
+
+# -------------------------- Lev.25.5 · ETNACHTA_SPLIT ----------------------
+# את ספיח קצירך לא תקצור ואת ענבי נזירך לא תבצר … שנת שבתון יהיה לארץ
+# "[EN-AID] From top split: LEFT «את ספיח קצירך לא תקצור ואת ענבי נזירך לא
+# תבצר» / RIGHT «שנת שבתון יהיה לארץ». Derive claim from Hebrew arms. Lev
+# 25:5."
+m.step("Lev.25.5")
+# witness-tier presupposed read: changed_manner_rule_and_two_clocks on
+# sefiach_ketzircha — read, not installed
+m.witness_read("sefiach_ketzircha", "changed_manner_rule_and_two_clocks",
+                cites=["Sifra, Behar, Chapter 1 3", "Sifra, Behar, Chapter 1 4", "Onkelos Lev 25:5"])
+
+# -------------------------- Lev.25.6 · ETNACHTA_SPLIT ----------------------
+# והיתה שבת הארץ לכם לאכלה לך ולעבדך ולאמתך … ולשכירך ולתושבך הגרים עמך
+# "[EN-AID] From top split: LEFT «והיתה שבת הארץ לכם לאכלה לך ולעבדך ולאמתך»
+# / RIGHT «ולשכירך ולתושבך הגרים עמך». Derive claim from Hebrew arms. Lev
+# 25:6."
+m.step("Lev.25.6")
+# witness-tier presupposed read: the_eaters_and_the_removal_dispute on
+# vehaytah_shabbat_haaretz_lachem — read, not installed
+m.witness_read("vehaytah_shabbat_haaretz_lachem", "the_eaters_and_the_removal_dispute",
+                cites=["Sifra, Behar, Chapter 1 5", "Sifra, Behar, Chapter 1 6", "Sifra, Behar, Chapter 1 7", "Onkelos Lev 25:6"])
+
+# -------------------------- Lev.25.7 · ETNACHTA_SPLIT ----------------------
+# ולבהמתך ולחיה אשר בארצך … תהיה כל תבואתה לאכל
+# "[EN-AID] From top split: LEFT «ולבהמתך ולחיה אשר בארצך» / RIGHT «תהיה כל
+# תבואתה לאכל». Derive claim from Hebrew arms. Lev 25:7."
+m.step("Lev.25.7")
+# witness-tier presupposed read: the_field_clock_and_the_season_table on
+# velivhemtecha_velachayah — read, not installed
+m.witness_read("velivhemtecha_velachayah", "the_field_clock_and_the_season_table",
+                cites=["Sifra, Behar, Chapter 1 8", "Sifra, Behar, Chapter 1 9", "Sifra, Behar, Chapter 1 10", "Sifra, Behar, Chapter 1 11", "Onkelos Lev 25:7"])
+
+# -------------------------- Lev.25.8 · ETNACHTA_SPLIT ----------------------
+# וספרת לך שבע שבתת שנים שבע שנים שבע פעמים … והיו לך ימי שבע שבתת השנים תשע
+# וארבעים שנה
+# "[EN-AID] From top split: LEFT «וספרת לך שבע שבתת שנים שבע שנים שבע פעמים»
+# / RIGHT «והיו לך ימי שבע שבתת השנים תשע וארבעים שנה». Derive claim from
+# Hebrew arms. Lev 25:8."
+m.step("Lev.25.8")
+# witness-tier presupposed read:
+# the_count_in_the_court_and_the_dependency_dispute on vesafarta_lecha —
+# read, not installed
+m.witness_read("vesafarta_lecha", "the_count_in_the_court_and_the_dependency_dispute",
+                cites=["Sifra, Behar, Section 2 1", "Sifra, Behar, Section 2 2", "Onkelos Lev 25:8"])
+
+# -------------------------- Lev.25.9 · ETNACHTA_SPLIT ----------------------
+# והעברת שופר תרועה בחדש השבעי בעשור לחדש … ביום הכפרים תעבירו שופר בכל
+# ארצכם
+# "[EN-AID] From top split: LEFT «והעברת שופר תרועה בחדש השבעי בעשור לחדש» /
+# RIGHT «ביום הכפרים תעבירו שופר בכל ארצכם». Derive claim from Hebrew arms.
+# Lev 25:9."
+m.step("Lev.25.9")
+# witness-tier presupposed read: the_shofar_export on
+# vehaavarta_shofar_teruah — read, not installed
+m.witness_read("vehaavarta_shofar_teruah", "the_shofar_export",
+                cites=["Sifra, Behar, Section 2 3", "Sifra, Behar, Section 2 4", "Sifra, Behar, Section 2 5", "Onkelos Lev 25:9"])
+
+# -------------------------- Lev.25.10 · ETNACHTA_SPLIT ---------------------
+# וקדשתם את שנת החמשים שנה וקראתם דרור בארץ לכל ישביה … יובל הוא תהיה לכם
+# ושבתם איש אל אחזתו ואיש אל משפחתו תשבו
+# "[EN-AID] From top split: LEFT «וקדשתם את שנת החמשים שנה וקראתם דרור בארץ
+# לכל ישביה» / RIGHT «יובל הוא תהיה לכם ושבתם איש אל אחזתו ואיש אל משפחתו
+# תשבו». Derive claim from Hebrew arms. Lev 25:10."
+m.step("Lev.25.10")
+# witness-tier presupposed read: the_ten_day_window_and_the_jubilees_gates
+# on vekidashtem_ukratem_deror — read, not installed
+m.witness_read("vekidashtem_ukratem_deror", "the_ten_day_window_and_the_jubilees_gates",
+                cites=["Sifra, Behar, Chapter 2 1", "Sifra, Behar, Chapter 2 2", "Sifra, Behar, Chapter 2 3", "Sifra, Behar, Chapter 2 4", "Sifra, Behar, Chapter 2 5", "Onkelos Lev 25:10"])
+
+# -------------------------- Lev.25.11 · ETNACHTA_SPLIT ---------------------
+# יובל הוא שנת החמשים שנה תהיה לכם … לא תזרעו ולא תקצרו את ספיחיה ולא תבצרו
+# את נזריה
+# "[EN-AID] From top split: LEFT «יובל הוא שנת החמשים שנה תהיה לכם» / RIGHT
+# «לא תזרעו ולא תקצרו את ספיחיה ולא תבצרו את נזריה». Derive claim from
+# Hebrew arms. Lev 25:11."
+m.step("Lev.25.11")
+# witness-tier presupposed read: the_timers_end_and_the_imported_ban on
+# yovel_hi_shnat_hachamishim — read, not installed
+m.witness_read("yovel_hi_shnat_hachamishim", "the_timers_end_and_the_imported_ban",
+                cites=["Sifra, Behar, Chapter 3 1", "Sifra, Behar, Chapter 3 2", "Onkelos Lev 25:11"])
+
+# -------------------------- Lev.25.12 · COND_כי ----------------------------
+# כי יובל הוא קדש תהיה לכם … מן השדה תאכלו את תבואתה
+# "[EN-AID] From top split: LEFT «כי יובל הוא קדש תהיה לכם» / RIGHT «מן השדה
+# תאכלו את תבואתה». Derive claim from Hebrew arms. Lev 25:12."
+m.step("Lev.25.12")
+# witness-tier presupposed read: the_substitution_chain_and_the_jar_dispute
+# on ki_yovel_hi_kodesh — read, not installed
+m.witness_read("ki_yovel_hi_kodesh", "the_substitution_chain_and_the_jar_dispute",
+                cites=["Sifra, Behar, Chapter 3 3", "Sifra, Behar, Chapter 3 4", "Sifra, Behar, Chapter 3 5", "Onkelos Lev 25:12"])
+
+# -------------------------- Lev.25.13 · ETNACHTA_SPLIT ---------------------
+# בשנת היובל הזאת … תשבו איש אל אחזתו
+# "[EN-AID] From top split: LEFT «בשנת היובל הזאת» / RIGHT «תשבו איש אל
+# אחזתו». Derive claim from Hebrew arms. Lev 25:13."
+m.step("Lev.25.13")
+# witness-tier presupposed read: the_two_releases_matrix on
+# bishnat_hayovel_hazot — read, not installed
+m.witness_read("bishnat_hayovel_hazot", "the_two_releases_matrix",
+                cites=["Sifra, Behar, Chapter 3 6", "Onkelos Lev 25:13"])
+
+# -------------------------- Lev.25.14 · COND_וכי ---------------------------
+# וכי תמכרו ממכר לעמיתך או קנה מיד עמיתך … אל תונו איש את אחיו
+# "[EN-AID] From top split: LEFT «וכי תמכרו ממכר לעמיתך או קנה מיד עמיתך» /
+# RIGHT «אל תונו איש את אחיו». Derive claim from Hebrew arms. Lev 25:14."
+m.step("Lev.25.14")
+# witness-tier presupposed read: the_overreaching_file on
+# al_tonu_ish_et_achiv — read, not installed
+m.witness_read("al_tonu_ish_et_achiv", "the_overreaching_file",
+                cites=["Sifra, Behar, Section 3 1", "Sifra, Behar, Section 3 2", "Sifra, Behar, Section 3 3", "Sifra, Behar, Section 3 4", "Sifra, Behar, Section 3 5", "Sifra, Behar, Section 3 6", "Sifra, Behar, Section 3 7", "Sifra, Behar, Section 3 8", "Sifra, Behar, Section 3 9", "Onkelos Lev 25:14"])
+
+# -------------------------- Lev.25.15 · ETNACHTA_SPLIT ---------------------
+# במספר שנים אחר היובל תקנה מאת עמיתך … במספר שני תבואת ימכר לך
+# "[EN-AID] From top split: LEFT «במספר שנים אחר היובל תקנה מאת עמיתך» /
+# RIGHT «במספר שני תבואת ימכר לך». Derive claim from Hebrew arms. Lev
+# 25:15."
+m.step("Lev.25.15")
+# witness-tier presupposed read: the_two_year_floor on
+# bemispar_shanim_achar_hayovel — read, not installed
+m.witness_read("bemispar_shanim_achar_hayovel", "the_two_year_floor",
+                cites=["Sifra, Behar, Section 3 10", "Onkelos Lev 25:15"])
+
+# -------------------------- Lev.25.16 · ETNACHTA_SPLIT ---------------------
+# לפי רב השנים תרבה מקנתו ולפי מעט השנים תמעיט מקנתו … כי מספר תבואת הוא מכר
+# לך
+# "[EN-AID] From top split: LEFT «לפי רב השנים תרבה מקנתו ולפי מעט השנים
+# תמעיט מקנתו» / RIGHT «כי מספר תבואת הוא מכר לך». Derive claim from Hebrew
+# arms. Lev 25:16."
+m.step("Lev.25.16")
+
+# -------------------------- Lev.25.17 · ETNACHTA_SPLIT ---------------------
+# ולא תונו איש את עמיתו ויראת מאלהיך … כי אני יהוה אלהיכם
+# "[EN-AID] From top split: LEFT «ולא תונו איש את עמיתו ויראת מאלהיך» /
+# RIGHT «כי אני יהוה אלהיכם». Derive claim from Hebrew arms. Lev 25:17."
+m.step("Lev.25.17")
+# witness-tier presupposed read: verbal_wronging_and_the_heart_clause_rule
+# on velo_tonu_ish_et_amito — read, not installed
+m.witness_read("velo_tonu_ish_et_amito", "verbal_wronging_and_the_heart_clause_rule",
+                cites=["Sifra, Behar, Chapter 4 1", "Sifra, Behar, Chapter 4 2", "Onkelos Lev 25:17"])
+
+# -------------------------- Lev.25.18 · ETNACHTA_SPLIT ---------------------
+# ועשיתם את חקתי ואת משפטי תשמרו ועשיתם אתם … וישבתם על הארץ לבטח
+# "[EN-AID] From top split: LEFT «ועשיתם את חקתי ואת משפטי תשמרו ועשיתם אתם»
+# / RIGHT «וישבתם על הארץ לבטח». Derive claim from Hebrew arms. Lev 25:18."
+m.step("Lev.25.18")
+
+# -------------------------- Lev.25.19 · ETNACHTA_SPLIT ---------------------
+# ונתנה הארץ פריה ואכלתם לשבע … וישבתם לבטח עליה
+# "[EN-AID] From top split: LEFT «ונתנה הארץ פריה ואכלתם לשבע» / RIGHT
+# «וישבתם לבטח עליה». Derive claim from Hebrew arms. Lev 25:19."
+m.step("Lev.25.19")
+
+# -------------------------- Lev.25.20 · COND_וכי ---------------------------
+# וכי תאמרו מה נאכל בשנה השביעת … הן לא נזרע ולא נאסף את תבואתנו
+# "[EN-AID] From top split: LEFT «וכי תאמרו מה נאכל בשנה השביעת» / RIGHT «הן
+# לא נזרע ולא נאסף את תבואתנו». Derive claim from Hebrew arms. Lev 25:20."
+m.step("Lev.25.20")
+# witness-tier presupposed read: the_aftergrowth_bans_provenance on
+# mah_nochal_bashanah_hasheviit — read, not installed
+m.witness_read("mah_nochal_bashanah_hasheviit", "the_aftergrowth_bans_provenance",
+                cites=["Sifra, Behar, Chapter 4 5", "Onkelos Lev 25:20"])
+
+# -------------------------- Lev.25.21 · ETNACHTA_SPLIT ---------------------
+# וצויתי את ברכתי לכם בשנה הששית … ועשת את התבואה לשלש השנים
+# "[EN-AID] From top split: LEFT «וצויתי את ברכתי לכם בשנה הששית» / RIGHT
+# «ועשת את התבואה לשלש השנים». Derive claim from Hebrew arms. Lev 25:21."
+m.step("Lev.25.21")
+# witness-tier presupposed read:
+# the_blessings_arithmetic_and_the_year_ladder on vetzivviti_et_birchati —
+# read, not installed
+m.witness_read("vetzivviti_et_birchati", "the_blessings_arithmetic_and_the_year_ladder",
+                cites=["Sifra, Behar, Chapter 4 6", "Sifra, Behar, Chapter 4 7", "Onkelos Lev 25:21", "Onkelos Lev 25:22"])
+
+# -------------------------- Lev.25.22 · ETNACHTA_SPLIT ---------------------
+# וזרעתם את השנה השמינת ואכלתם מן התבואה ישן … עד השנה התשיעת עד בוא תבואתה
+# תאכלו ישן
+# "[EN-AID] From top split: LEFT «וזרעתם את השנה השמינת ואכלתם מן התבואה
+# ישן» / RIGHT «עד השנה התשיעת עד בוא תבואתה תאכלו ישן». Derive claim from
+# Hebrew arms. Lev 25:22."
+m.step("Lev.25.22")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('behar_sinai', 'the_sinai_detail_rule'), ('ki_tavou_el_haaretz', 'onset_conditions_and_timeline'), ('shesh_shanim_tizra', 'six_and_six_with_the_rooting_threshold'), ('shabbat_shabbaton_laaretz', 'labor_census_and_the_class_rule'), ('sefiach_ketzircha', 'changed_manner_rule_and_two_clocks'), ('vehaytah_shabbat_haaretz_lachem', 'the_eaters_and_the_removal_dispute'), ('velivhemtecha_velachayah', 'the_field_clock_and_the_season_table'), ('vesafarta_lecha', 'the_count_in_the_court_and_the_dependency_dispute'), ('vehaavarta_shofar_teruah', 'the_shofar_export'), ('vekidashtem_ukratem_deror', 'the_ten_day_window_and_the_jubilees_gates'), ('yovel_hi_shnat_hachamishim', 'the_timers_end_and_the_imported_ban'), ('ki_yovel_hi_kodesh', 'the_substitution_chain_and_the_jar_dispute'), ('bishnat_hayovel_hazot', 'the_two_releases_matrix'), ('al_tonu_ish_et_achiv', 'the_overreaching_file'), ('bemispar_shanim_achar_hayovel', 'the_two_year_floor'), ('velo_tonu_ish_et_amito', 'verbal_wronging_and_the_heart_clause_rule'), ('mah_nochal_bashanah_hasheviit', 'the_aftergrowth_bans_provenance'), ('vetzivviti_et_birchati', 'the_blessings_arithmetic_and_the_year_ladder')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Behar, Section 1 1', 'Onkelos Lev 25:1']
+    assert all('the_sinai_detail_rule' not in f for f in m.WORLD["facts"])
+    assert 'behar_sinai' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Behar, Section 1 2', 'Sifra, Behar, Section 1 3', 'Onkelos Lev 25:2']
+    assert all('onset_conditions_and_timeline' not in f for f in m.WORLD["facts"])
+    assert 'ki_tavou_el_haaretz' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Behar, Section 1 7', 'Sifra, Behar, Section 1 8', 'Sifra, Behar, Section 1 9', 'Onkelos Lev 25:3']
+    assert all('six_and_six_with_the_rooting_threshold' not in f for f in m.WORLD["facts"])
+    assert 'shesh_shanim_tizra' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Behar, Section 1 4', 'Sifra, Behar, Section 1 5', 'Sifra, Behar, Section 1 6', 'Sifra, Behar, Chapter 1 1', 'Sifra, Behar, Chapter 1 2', 'Onkelos Lev 25:4']
+    assert all('labor_census_and_the_class_rule' not in f for f in m.WORLD["facts"])
+    assert 'shabbat_shabbaton_laaretz' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Behar, Chapter 1 3', 'Sifra, Behar, Chapter 1 4', 'Onkelos Lev 25:5']
+    assert all('changed_manner_rule_and_two_clocks' not in f for f in m.WORLD["facts"])
+    assert 'sefiach_ketzircha' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Behar, Chapter 1 5', 'Sifra, Behar, Chapter 1 6', 'Sifra, Behar, Chapter 1 7', 'Onkelos Lev 25:6']
+    assert all('the_eaters_and_the_removal_dispute' not in f for f in m.WORLD["facts"])
+    assert 'vehaytah_shabbat_haaretz_lachem' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Behar, Chapter 1 8', 'Sifra, Behar, Chapter 1 9', 'Sifra, Behar, Chapter 1 10', 'Sifra, Behar, Chapter 1 11', 'Onkelos Lev 25:7']
+    assert all('the_field_clock_and_the_season_table' not in f for f in m.WORLD["facts"])
+    assert 'velivhemtecha_velachayah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Behar, Section 2 1', 'Sifra, Behar, Section 2 2', 'Onkelos Lev 25:8']
+    assert all('the_count_in_the_court_and_the_dependency_dispute' not in f for f in m.WORLD["facts"])
+    assert 'vesafarta_lecha' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Behar, Section 2 3', 'Sifra, Behar, Section 2 4', 'Sifra, Behar, Section 2 5', 'Onkelos Lev 25:9']
+    assert all('the_shofar_export' not in f for f in m.WORLD["facts"])
+    assert 'vehaavarta_shofar_teruah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Behar, Chapter 2 1', 'Sifra, Behar, Chapter 2 2', 'Sifra, Behar, Chapter 2 3', 'Sifra, Behar, Chapter 2 4', 'Sifra, Behar, Chapter 2 5', 'Onkelos Lev 25:10']
+    assert all('the_ten_day_window_and_the_jubilees_gates' not in f for f in m.WORLD["facts"])
+    assert 'vekidashtem_ukratem_deror' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Sifra, Behar, Chapter 3 1', 'Sifra, Behar, Chapter 3 2', 'Onkelos Lev 25:11']
+    assert all('the_timers_end_and_the_imported_ban' not in f for f in m.WORLD["facts"])
+    assert 'yovel_hi_shnat_hachamishim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Sifra, Behar, Chapter 3 3', 'Sifra, Behar, Chapter 3 4', 'Sifra, Behar, Chapter 3 5', 'Onkelos Lev 25:12']
+    assert all('the_substitution_chain_and_the_jar_dispute' not in f for f in m.WORLD["facts"])
+    assert 'ki_yovel_hi_kodesh' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[12]["cites"] == ['Sifra, Behar, Chapter 3 6', 'Onkelos Lev 25:13']
+    assert all('the_two_releases_matrix' not in f for f in m.WORLD["facts"])
+    assert 'bishnat_hayovel_hazot' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[13]["cites"] == ['Sifra, Behar, Section 3 1', 'Sifra, Behar, Section 3 2', 'Sifra, Behar, Section 3 3', 'Sifra, Behar, Section 3 4', 'Sifra, Behar, Section 3 5', 'Sifra, Behar, Section 3 6', 'Sifra, Behar, Section 3 7', 'Sifra, Behar, Section 3 8', 'Sifra, Behar, Section 3 9', 'Onkelos Lev 25:14']
+    assert all('the_overreaching_file' not in f for f in m.WORLD["facts"])
+    assert 'al_tonu_ish_et_achiv' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[14]["cites"] == ['Sifra, Behar, Section 3 10', 'Onkelos Lev 25:15']
+    assert all('the_two_year_floor' not in f for f in m.WORLD["facts"])
+    assert 'bemispar_shanim_achar_hayovel' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[15]["cites"] == ['Sifra, Behar, Chapter 4 1', 'Sifra, Behar, Chapter 4 2', 'Onkelos Lev 25:17']
+    assert all('verbal_wronging_and_the_heart_clause_rule' not in f for f in m.WORLD["facts"])
+    assert 'velo_tonu_ish_et_amito' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[16]["cites"] == ['Sifra, Behar, Chapter 4 5', 'Onkelos Lev 25:20']
+    assert all('the_aftergrowth_bans_provenance' not in f for f in m.WORLD["facts"])
+    assert 'mah_nochal_bashanah_hasheviit' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[17]["cites"] == ['Sifra, Behar, Chapter 4 6', 'Sifra, Behar, Chapter 4 7', 'Onkelos Lev 25:21', 'Onkelos Lev 25:22']
+    assert all('the_blessings_arithmetic_and_the_year_ladder' not in f for f in m.WORLD["facts"])
+    assert 'vetzivviti_et_birchati' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_25_redeem_poor
+###############################################################################
+
+m = Machine("lev_25_redeem_poor")
+
+# -------------------------- Lev.25.23 · ETNACHTA_SPLIT ---------------------
+# והארץ לא תמכר לצמתת כי לי הארץ … כי גרים ותושבים אתם עמדי
+# "[EN-AID] From top split: LEFT «והארץ לא תמכר לצמתת כי לי הארץ» / RIGHT
+# «כי גרים ותושבים אתם עמדי». Derive claim from Hebrew arms. Lev 25:23."
+m.step("Lev.25.23")
+# witness-tier presupposed read: irrevocably_and_the_strangers_clause on
+# vehaaretz_lo_timacher_litzmitut — read, not installed
+m.witness_read("vehaaretz_lo_timacher_litzmitut", "irrevocably_and_the_strangers_clause",
+                cites=["Sifra, Behar, Chapter 4 8", "Onkelos Lev 25:23"])
+
+# -------------------------- Lev.25.24 · ETNACHTA_SPLIT ---------------------
+# ובכל ארץ אחזתכם … גאלה תתנו לארץ
+# "[EN-AID] From top split: LEFT «ובכל ארץ אחזתכם» / RIGHT «גאלה תתנו לארץ».
+# Derive claim from Hebrew arms. Lev 25:24."
+m.step("Lev.25.24")
+# witness-tier presupposed read: the_redemption_domain on
+# geulah_titnu_laaretz — read, not installed
+m.witness_read("geulah_titnu_laaretz", "the_redemption_domain",
+                cites=["Sifra, Behar, Chapter 4 9", "Onkelos Lev 25:24"])
+
+# -------------------------- Lev.25.25 · COND_כי ----------------------------
+# כי ימוך אחיך ומכר מאחזתו … ובא גאלו הקרב אליו וגאל את ממכר אחיו
+# "[EN-AID] From top split: LEFT «כי ימוך אחיך ומכר מאחזתו» / RIGHT «ובא
+# גאלו הקרב אליו וגאל את ממכר אחיו». Derive claim from Hebrew arms. Lev
+# 25:25."
+m.step("Lev.25.25")
+# witness-tier presupposed read: the_sale_gate_and_nearest_first on
+# ki_yamuch_achicha_umachar — read, not installed
+m.witness_read("ki_yamuch_achicha_umachar", "the_sale_gate_and_nearest_first",
+                cites=["Sifra, Behar, Chapter 5 1", "Onkelos Lev 25:25"])
+
+# -------------------------- Lev.25.26 · COND_כי ----------------------------
+# ואיש כי לא יהיה לו גאל … והשיגה ידו ומצא כדי גאלתו
+# "[EN-AID] From top split: LEFT «ואיש כי לא יהיה לו גאל» / RIGHT «והשיגה
+# ידו ומצא כדי גאלתו». Derive claim from Hebrew arms. Lev 25:26."
+m.step("Lev.25.26")
+# witness-tier presupposed read: the_four_constraints on
+# vehisigah_yado_umatza — read, not installed
+m.witness_read("vehisigah_yado_umatza", "the_four_constraints",
+                cites=["Sifra, Behar, Chapter 5 2", "Onkelos Lev 25:26"])
+
+# -------------------------- Lev.25.27 · ETNACHTA_SPLIT ---------------------
+# וחשב את שני ממכרו והשיב את העדף לאיש אשר מכר לו … ושב לאחזתו
+# "[EN-AID] From top split: LEFT «וחשב את שני ממכרו והשיב את העדף לאיש אשר
+# מכר לו» / RIGHT «ושב לאחזתו». Derive claim from Hebrew arms. Lev 25:27."
+m.step("Lev.25.27")
+# witness-tier presupposed read:
+# the_reckoning_counterpart_and_the_lesser_figure on
+# vechishav_et_shnei_mimkaro — read, not installed
+m.witness_read("vechishav_et_shnei_mimkaro", "the_reckoning_counterpart_and_the_lesser_figure",
+                cites=["Sifra, Behar, Chapter 5 3", "Sifra, Behar, Chapter 5 4", "Onkelos Lev 25:27"])
+
+# -------------------------- Lev.25.28 · COND_ואם ---------------------------
+# ואם לא מצאה ידו די השיב לו והיה ממכרו ביד הקנה אתו עד שנת הי … ויצא ביבל
+# ושב לאחזתו
+# "[EN-AID] From top split: LEFT «ואם לא מצאה ידו די השיב לו והיה ממכרו ביד
+# הקנה אתו עד שנת היובל» / RIGHT «ויצא ביבל ושב לאחזתו». Derive claim from
+# Hebrew arms. Lev 25:28."
+m.step("Lev.25.28")
+# witness-tier presupposed read:
+# the_sanctuarys_inversion_and_fields_with_money on
+# vehayah_mimkaro_beyad_hakoneh — read, not installed
+m.witness_read("vehayah_mimkaro_beyad_hakoneh", "the_sanctuarys_inversion_and_fields_with_money",
+                cites=["Sifra, Behar, Chapter 5 5", "Sifra, Behar, Chapter 5 6", "Sifra, Behar, Chapter 5 7", "Onkelos Lev 25:28"])
+
+# -------------------------- Lev.25.29 · COND_כי ----------------------------
+# ואיש כי ימכר בית מושב עיר חומה והיתה גאלתו עד תם שנת ממכרו … ימים תהיה
+# גאלתו
+# "[EN-AID] From top split: LEFT «ואיש כי ימכר בית מושב עיר חומה והיתה גאלתו
+# עד תם שנת ממכרו» / RIGHT «ימים תהיה גאלתו». Derive claim from Hebrew arms.
+# Lev 25:29."
+m.step("Lev.25.29")
+# witness-tier presupposed read: the_walled_city_roster on
+# beit_moshav_ir_chomah — read, not installed
+m.witness_read("beit_moshav_ir_chomah", "the_walled_city_roster",
+                cites=["Sifra, Behar, Section 4 1", "Sifra, Behar, Section 4 2", "Sifra, Behar, Section 4 3", "Onkelos Lev 25:29"])
+
+# -------------------------- Lev.25.30 · COND_ואם ---------------------------
+# ואם לא יגאל עד מלאת לו שנה תמימה וקם הבית אשר בעיר אשר לא לו … לא יצא ביבל
+# "[EN-AID] From top split: LEFT «ואם לא יגאל עד מלאת לו שנה תמימה וקם הבית
+# אשר בעיר אשר לא לו חמה לצמיתת לקנה אתו» / RIGHT «לא יצא ביבל». Derive
+# claim from Hebrew arms. Lev 25:30."
+m.step("Lev.25.30")
+# witness-tier presupposed read: the_full_year_and_hillels_ordinance on
+# shanah_temimah_vekam_habayit — read, not installed
+m.witness_read("shanah_temimah_vekam_habayit", "the_full_year_and_hillels_ordinance",
+                cites=["Sifra, Behar, Section 4 4", "Sifra, Behar, Section 4 5", "Sifra, Behar, Section 4 6", "Sifra, Behar, Section 4 7", "Sifra, Behar, Section 4 8", "Sifra, Behar, Section 4 9", "Sifra, Behar, Section 4 10", "Onkelos Lev 25:30"])
+
+# -------------------------- Lev.25.31 · ETNACHTA_SPLIT ---------------------
+# ובתי החצרים אשר אין להם חמה סביב על שדה הארץ יחשב … גאלה תהיה לו וביבל יצא
+# "[EN-AID] From top split: LEFT «ובתי החצרים אשר אין להם חמה סביב על שדה
+# הארץ יחשב» / RIGHT «גאלה תהיה לו וביבל יצא». Derive claim from Hebrew
+# arms. Lev 25:31."
+m.step("Lev.25.31")
+# witness-tier presupposed read: the_village_threshold_and_best_of_both on
+# batei_hachatzerim — read, not installed
+m.witness_read("batei_hachatzerim", "the_village_threshold_and_best_of_both",
+                cites=["Sifra, Behar, Chapter 6 1", "Sifra, Behar, Chapter 6 2", "Sifra, Behar, Chapter 6 3", "Onkelos Lev 25:31"])
+
+# -------------------------- Lev.25.32 · ETNACHTA_SPLIT ---------------------
+# וערי הלוים בתי ערי אחזתם … גאלת עולם תהיה ללוים
+# "[EN-AID] From top split: LEFT «וערי הלוים בתי ערי אחזתם» / RIGHT «גאלת
+# עולם תהיה ללוים». Derive claim from Hebrew arms. Lev 25:32."
+m.step("Lev.25.32")
+# witness-tier presupposed read: the_levites_three_exemptions on
+# geulat_olam_laleviim — read, not installed
+m.witness_read("geulat_olam_laleviim", "the_levites_three_exemptions",
+                cites=["Sifra, Behar, Chapter 6 4", "Sifra, Behar, Chapter 6 5", "Onkelos Lev 25:32"])
+
+# -------------------------- Lev.25.33 · ETNACHTA_SPLIT ---------------------
+# ואשר יגאל מן הלוים ויצא ממכר בית ועיר אחזתו ביבל … כי בתי ערי הלוים הוא
+# אחזתם בתוך בני ישראל
+# "[EN-AID] From top split: LEFT «ואשר יגאל מן הלוים ויצא ממכר בית ועיר
+# אחזתו ביבל» / RIGHT «כי בתי ערי הלוים הוא אחזתם בתוך בני ישראל». Derive
+# claim from Hebrew arms. Lev 25:33."
+m.step("Lev.25.33")
+# witness-tier presupposed read: levite_from_levite_and_the_exclusions on
+# vaasher_yigal_min_haleviim — read, not installed
+m.witness_read("vaasher_yigal_min_haleviim", "levite_from_levite_and_the_exclusions",
+                cites=["Sifra, Behar, Chapter 6 6", "Sifra, Behar, Chapter 6 7", "Sifra, Behar, Chapter 6 8", "Onkelos Lev 25:33"])
+
+# -------------------------- Lev.25.34 · ETNACHTA_SPLIT ---------------------
+# ושדה מגרש עריהם לא ימכר … כי אחזת עולם הוא להם
+# "[EN-AID] From top split: LEFT «ושדה מגרש עריהם לא ימכר» / RIGHT «כי אחזת
+# עולם הוא להם». Derive claim from Hebrew arms. Lev 25:34."
+m.step("Lev.25.34")
+# witness-tier presupposed read: the_zoning_rule on usdeh_migrash_areihem —
+# read, not installed
+m.witness_read("usdeh_migrash_areihem", "the_zoning_rule",
+                cites=["Sifra, Behar, Chapter 6 9", "Onkelos Lev 25:34"])
+
+# -------------------------- Lev.25.35 · COND_וכי ---------------------------
+# וכי ימוך אחיך ומטה ידו עמך … והחזקת בו גר ותושב וחי עמך
+# "[EN-AID] From top split: LEFT «וכי ימוך אחיך ומטה ידו עמך» / RIGHT
+# «והחזקת בו גר ותושב וחי עמך». Derive claim from Hebrew arms. Lev 25:35."
+m.step("Lev.25.35")
+# witness-tier presupposed read: the_falling_load on vehechezakta_bo — read,
+# not installed
+m.witness_read("vehechezakta_bo", "the_falling_load",
+                cites=["Sifra, Behar, Section 5 1", "Onkelos Lev 25:35"])
+
+# -------------------------- Lev.25.36 · ETNACHTA_SPLIT ---------------------
+# אל תקח מאתו נשך ותרבית ויראת מאלהיך … וחי אחיך עמך
+# "[EN-AID] From top split: LEFT «אל תקח מאתו נשך ותרבית ויראת מאלהיך» /
+# RIGHT «וחי אחיך עמך». Derive claim from Hebrew arms. Lev 25:36."
+m.step("Lev.25.36")
+# witness-tier presupposed read: the_interest_definitions_and_the_one_flask
+# on neshech_vetarbit — read, not installed
+m.witness_read("neshech_vetarbit", "the_interest_definitions_and_the_one_flask",
+                cites=["Sifra, Behar, Section 5 2", "Sifra, Behar, Section 5 3", "Onkelos Lev 25:36", "Onkelos Lev 25:37"])
+
+# -------------------------- Lev.25.37 · ETNACHTA_SPLIT ---------------------
+# את כספך לא תתן לו בנשך … ובמרבית לא תתן אכלך
+# "[EN-AID] From top split: LEFT «את כספך לא תתן לו בנשך» / RIGHT «ובמרבית
+# לא תתן אכלך». Derive claim from Hebrew arms. Lev 25:37."
+m.step("Lev.25.37")
+
+# -------------------------- Lev.25.38 · ETNACHTA_SPLIT ---------------------
+# אני יהוה אלהיכם אשר הוצאתי אתכם מארץ מצרים … לתת לכם את ארץ כנען להיות לכם
+# לאלהים
+# "[EN-AID] From top split: LEFT «אני יהוה אלהיכם אשר הוצאתי אתכם מארץ
+# מצרים» / RIGHT «לתת לכם את ארץ כנען להיות לכם לאלהים». Derive claim from
+# Hebrew arms. Lev 25:38."
+m.step("Lev.25.38")
+# witness-tier presupposed read: the_land_clause_as_status on
+# latet_lachem_et_eretz_kenaan — read, not installed
+m.witness_read("latet_lachem_et_eretz_kenaan", "the_land_clause_as_status",
+                cites=["Sifra, Behar, Section 5 4", "Onkelos Lev 25:38"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('vehaaretz_lo_timacher_litzmitut', 'irrevocably_and_the_strangers_clause'), ('geulah_titnu_laaretz', 'the_redemption_domain'), ('ki_yamuch_achicha_umachar', 'the_sale_gate_and_nearest_first'), ('vehisigah_yado_umatza', 'the_four_constraints'), ('vechishav_et_shnei_mimkaro', 'the_reckoning_counterpart_and_the_lesser_figure'), ('vehayah_mimkaro_beyad_hakoneh', 'the_sanctuarys_inversion_and_fields_with_money'), ('beit_moshav_ir_chomah', 'the_walled_city_roster'), ('shanah_temimah_vekam_habayit', 'the_full_year_and_hillels_ordinance'), ('batei_hachatzerim', 'the_village_threshold_and_best_of_both'), ('geulat_olam_laleviim', 'the_levites_three_exemptions'), ('vaasher_yigal_min_haleviim', 'levite_from_levite_and_the_exclusions'), ('usdeh_migrash_areihem', 'the_zoning_rule'), ('vehechezakta_bo', 'the_falling_load'), ('neshech_vetarbit', 'the_interest_definitions_and_the_one_flask'), ('latet_lachem_et_eretz_kenaan', 'the_land_clause_as_status')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Behar, Chapter 4 8', 'Onkelos Lev 25:23']
+    assert all('irrevocably_and_the_strangers_clause' not in f for f in m.WORLD["facts"])
+    assert 'vehaaretz_lo_timacher_litzmitut' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Behar, Chapter 4 9', 'Onkelos Lev 25:24']
+    assert all('the_redemption_domain' not in f for f in m.WORLD["facts"])
+    assert 'geulah_titnu_laaretz' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Behar, Chapter 5 1', 'Onkelos Lev 25:25']
+    assert all('the_sale_gate_and_nearest_first' not in f for f in m.WORLD["facts"])
+    assert 'ki_yamuch_achicha_umachar' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Behar, Chapter 5 2', 'Onkelos Lev 25:26']
+    assert all('the_four_constraints' not in f for f in m.WORLD["facts"])
+    assert 'vehisigah_yado_umatza' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Behar, Chapter 5 3', 'Sifra, Behar, Chapter 5 4', 'Onkelos Lev 25:27']
+    assert all('the_reckoning_counterpart_and_the_lesser_figure' not in f for f in m.WORLD["facts"])
+    assert 'vechishav_et_shnei_mimkaro' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Behar, Chapter 5 5', 'Sifra, Behar, Chapter 5 6', 'Sifra, Behar, Chapter 5 7', 'Onkelos Lev 25:28']
+    assert all('the_sanctuarys_inversion_and_fields_with_money' not in f for f in m.WORLD["facts"])
+    assert 'vehayah_mimkaro_beyad_hakoneh' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Behar, Section 4 1', 'Sifra, Behar, Section 4 2', 'Sifra, Behar, Section 4 3', 'Onkelos Lev 25:29']
+    assert all('the_walled_city_roster' not in f for f in m.WORLD["facts"])
+    assert 'beit_moshav_ir_chomah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Behar, Section 4 4', 'Sifra, Behar, Section 4 5', 'Sifra, Behar, Section 4 6', 'Sifra, Behar, Section 4 7', 'Sifra, Behar, Section 4 8', 'Sifra, Behar, Section 4 9', 'Sifra, Behar, Section 4 10', 'Onkelos Lev 25:30']
+    assert all('the_full_year_and_hillels_ordinance' not in f for f in m.WORLD["facts"])
+    assert 'shanah_temimah_vekam_habayit' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Behar, Chapter 6 1', 'Sifra, Behar, Chapter 6 2', 'Sifra, Behar, Chapter 6 3', 'Onkelos Lev 25:31']
+    assert all('the_village_threshold_and_best_of_both' not in f for f in m.WORLD["facts"])
+    assert 'batei_hachatzerim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Behar, Chapter 6 4', 'Sifra, Behar, Chapter 6 5', 'Onkelos Lev 25:32']
+    assert all('the_levites_three_exemptions' not in f for f in m.WORLD["facts"])
+    assert 'geulat_olam_laleviim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Sifra, Behar, Chapter 6 6', 'Sifra, Behar, Chapter 6 7', 'Sifra, Behar, Chapter 6 8', 'Onkelos Lev 25:33']
+    assert all('levite_from_levite_and_the_exclusions' not in f for f in m.WORLD["facts"])
+    assert 'vaasher_yigal_min_haleviim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Sifra, Behar, Chapter 6 9', 'Onkelos Lev 25:34']
+    assert all('the_zoning_rule' not in f for f in m.WORLD["facts"])
+    assert 'usdeh_migrash_areihem' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[12]["cites"] == ['Sifra, Behar, Section 5 1', 'Onkelos Lev 25:35']
+    assert all('the_falling_load' not in f for f in m.WORLD["facts"])
+    assert 'vehechezakta_bo' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[13]["cites"] == ['Sifra, Behar, Section 5 2', 'Sifra, Behar, Section 5 3', 'Onkelos Lev 25:36', 'Onkelos Lev 25:37']
+    assert all('the_interest_definitions_and_the_one_flask' not in f for f in m.WORLD["facts"])
+    assert 'neshech_vetarbit' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[14]["cites"] == ['Sifra, Behar, Section 5 4', 'Onkelos Lev 25:38']
+    assert all('the_land_clause_as_status' not in f for f in m.WORLD["facts"])
+    assert 'latet_lachem_et_eretz_kenaan' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_25_slave_jubilee
+###############################################################################
+
+m = Machine("lev_25_slave_jubilee")
+
+# -------------------------- Lev.25.39 · COND_וכי ---------------------------
+# וכי ימוך אחיך עמך ונמכר לך … לא תעבד בו עבדת עבד
+# "[EN-AID] From top split: LEFT «וכי ימוך אחיך עמך ונמכר לך» / RIGHT «לא
+# תעבד בו עבדת עבד». Derive claim from Hebrew arms. Lev 25:39."
+m.step("Lev.25.39")
+# witness-tier presupposed read:
+# the_self_sale_gate_and_the_asymmetric_protocol on
+# venimkar_lach_lo_taavod_bo — read, not installed
+m.witness_read("venimkar_lach_lo_taavod_bo", "the_self_sale_gate_and_the_asymmetric_protocol",
+                cites=["Sifra, Behar, Chapter 7 1", "Sifra, Behar, Chapter 7 2", "Onkelos Lev 25:39"])
+
+# -------------------------- Lev.25.40 · ETNACHTA_SPLIT ---------------------
+# כשכיר כתושב יהיה עמך … עד שנת היבל יעבד עמך
+# "[EN-AID] From top split: LEFT «כשכיר כתושב יהיה עמך» / RIGHT «עד שנת היבל
+# יעבד עמך». Derive claim from Hebrew arms. Lev 25:40."
+m.step("Lev.25.40")
+# witness-tier presupposed read: the_hireling_table on kesachir_ketoshav —
+# read, not installed
+m.witness_read("kesachir_ketoshav", "the_hireling_table",
+                cites=["Sifra, Behar, Chapter 7 3", "Onkelos Lev 25:40"])
+
+# -------------------------- Lev.25.41 · ETNACHTA_SPLIT ---------------------
+# ויצא מעמך הוא ובניו עמו … ושב אל משפחתו ואל אחזת אבתיו ישוב
+# "[EN-AID] From top split: LEFT «ויצא מעמך הוא ובניו עמו» / RIGHT «ושב אל
+# משפחתו ואל אחזת אבתיו ישוב». Derive claim from Hebrew arms. Lev 25:41."
+m.step("Lev.25.41")
+# witness-tier presupposed read: the_return_reaching_the_exile on
+# veshav_el_mishpachto — read, not installed
+m.witness_read("veshav_el_mishpachto", "the_return_reaching_the_exile",
+                cites=["Sifra, Behar, Chapter 7 4", "Onkelos Lev 25:41"])
+
+# -------------------------- Lev.25.42 · COND_כי ----------------------------
+# כי עבדי הם אשר הוצאתי אתם מארץ מצרים … לא ימכרו ממכרת עבד
+# "[EN-AID] From top split: LEFT «כי עבדי הם אשר הוצאתי אתם מארץ מצרים» /
+# RIGHT «לא ימכרו ממכרת עבד». Derive claim from Hebrew arms. Lev 25:42."
+m.step("Lev.25.42")
+# witness-tier presupposed read: my_deed_came_first_and_the_market_ban on
+# ki_avadai_hem — read, not installed
+m.witness_read("ki_avadai_hem", "my_deed_came_first_and_the_market_ban",
+                cites=["Sifra, Behar, Section 6 1", "Onkelos Lev 25:42"])
+
+# -------------------------- Lev.25.43 · ETNACHTA_SPLIT ---------------------
+# לא תרדה בו בפרך … ויראת מאלהיך
+# "[EN-AID] From top split: LEFT «לא תרדה בו בפרך» / RIGHT «ויראת מאלהיך».
+# Derive claim from Hebrew arms. Lev 25:43."
+m.step("Lev.25.43")
+# witness-tier presupposed read: needless_work_is_rigor on
+# lo_tirdeh_bo_befarech — read, not installed
+m.witness_read("lo_tirdeh_bo_befarech", "needless_work_is_rigor",
+                cites=["Sifra, Behar, Section 6 2", "Onkelos Lev 25:43"])
+
+# -------------------------- Lev.25.44 · ETNACHTA_SPLIT ---------------------
+# ועבדך ואמתך אשר יהיו לך … מאת הגוים אשר סביבתיכם מהם תקנו עבד ואמה
+# "[EN-AID] From top split: LEFT «ועבדך ואמתך אשר יהיו לך» / RIGHT «מאת
+# הגוים אשר סביבתיכם מהם תקנו עבד ואמה». Derive claim from Hebrew arms. Lev
+# 25:44."
+m.step("Lev.25.44")
+# witness-tier presupposed read: the_gentile_slave_and_no_betrothal on
+# veavdecha_vaamatcha_min_hagoyim — read, not installed
+m.witness_read("veavdecha_vaamatcha_min_hagoyim", "the_gentile_slave_and_no_betrothal",
+                cites=["Sifra, Behar, Section 6 3", "Onkelos Lev 25:44"])
+
+# -------------------------- Lev.25.45 · ETNACHTA_SPLIT ---------------------
+# וגם מבני התושבים הגרים עמכם מהם תקנו וממשפחתם אשר עמכם אשר ה … והיו לכם
+# לאחזה
+# "[EN-AID] From top split: LEFT «וגם מבני התושבים הגרים עמכם מהם תקנו
+# וממשפחתם אשר עמכם אשר הולידו בארצכם» / RIGHT «והיו לכם לאחזה». Derive
+# claim from Hebrew arms. Lev 25:45."
+m.step("Lev.25.45")
+# witness-tier presupposed read: the_three_acquisition_modes on
+# mibnei_hatoshavim — read, not installed
+m.witness_read("mibnei_hatoshavim", "the_three_acquisition_modes",
+                cites=["Sifra, Behar, Section 6 4", "Onkelos Lev 25:45"])
+
+# -------------------------- Lev.25.46 · ETNACHTA_SPLIT ---------------------
+# והתנחלתם אתם לבניכם אחריכם לרשת אחזה לעלם בהם תעבדו … ובאחיכם בני ישראל
+# איש באחיו לא תרדה בו בפרך
+# "[EN-AID] From top split: LEFT «והתנחלתם אתם לבניכם אחריכם לרשת אחזה לעלם
+# בהם תעבדו» / RIGHT «ובאחיכם בני ישראל איש באחיו לא תרדה בו בפרך». Derive
+# claim from Hebrew arms. Lev 25:46."
+m.step("Lev.25.46")
+# witness-tier presupposed read: inheritance_work_only_and_both_sexes on
+# vehitnachaltem_otam — read, not installed
+m.witness_read("vehitnachaltem_otam", "inheritance_work_only_and_both_sexes",
+                cites=["Sifra, Behar, Section 6 5", "Sifra, Behar, Section 6 6", "Onkelos Lev 25:46"])
+
+# -------------------------- Lev.25.47 · COND_וכי ---------------------------
+# וכי תשיג יד גר ותושב עמך ומך אחיך עמו … ונמכר לגר תושב עמך או לעקר משפחת
+# גר
+# "[EN-AID] From top split: LEFT «וכי תשיג יד גר ותושב עמך ומך אחיך עמו» /
+# RIGHT «ונמכר לגר תושב עמך או לעקר משפחת גר». Derive claim from Hebrew
+# arms. Lev 25:47."
+m.step("Lev.25.47")
+# witness-tier presupposed read: sold_to_a_gentile_the_cleaving_and_the_gate
+# on venimkar_leger_toshav — read, not installed
+m.witness_read("venimkar_leger_toshav", "sold_to_a_gentile_the_cleaving_and_the_gate",
+                cites=["Sifra, Behar, Chapter 8 1", "Onkelos Lev 25:47"])
+
+# -------------------------- Lev.25.48 · ETNACHTA_SPLIT ---------------------
+# אחרי נמכר גאלה תהיה לו … אחד מאחיו יגאלנו
+# "[EN-AID] From top split: LEFT «אחרי נמכר גאלה תהיה לו» / RIGHT «אחד מאחיו
+# יגאלנו». Derive claim from Hebrew arms. Lev 25:48."
+m.step("Lev.25.48")
+# witness-tier presupposed read: the_redeemer_ladder_for_persons on
+# echad_meechav_yigalenu — read, not installed
+m.witness_read("echad_meechav_yigalenu", "the_redeemer_ladder_for_persons",
+                cites=["Sifra, Behar, Chapter 8 2", "Sifra, Behar, Chapter 8 3", "Onkelos Lev 25:48", "Onkelos Lev 25:49"])
+
+# -------------------------- Lev.25.49 · ETNACHTA_SPLIT ---------------------
+# או דדו או בן דדו יגאלנו או משאר בשרו ממשפחתו יגאלנו … או השיגה ידו ונגאל
+# "[EN-AID] From top split: LEFT «או דדו או בן דדו יגאלנו או משאר בשרו
+# ממשפחתו יגאלנו» / RIGHT «או השיגה ידו ונגאל». Derive claim from Hebrew
+# arms. Lev 25:49."
+m.step("Lev.25.49")
+
+# -------------------------- Lev.25.50 · ETNACHTA_SPLIT ---------------------
+# וחשב עם קנהו משנת המכרו לו עד שנת היבל … והיה כסף ממכרו במספר שנים כימי
+# שכיר יהיה עמו
+# "[EN-AID] From top split: LEFT «וחשב עם קנהו משנת המכרו לו עד שנת היבל» /
+# RIGHT «והיה כסף ממכרו במספר שנים כימי שכיר יהיה עמו». Derive claim from
+# Hebrew arms. Lev 25:50."
+m.step("Lev.25.50")
+# witness-tier presupposed read: not_the_heirs_not_at_six_money_only on
+# vechishav_im_konehu — read, not installed
+m.witness_read("vechishav_im_konehu", "not_the_heirs_not_at_six_money_only",
+                cites=["Sifra, Behar, Chapter 8 4", "Onkelos Lev 25:50"])
+
+# -------------------------- Lev.25.51 · COND_אם ----------------------------
+# אם עוד רבות בשנים … לפיהן ישיב גאלתו מכסף מקנתו
+# "[EN-AID] From top split: LEFT «אם עוד רבות בשנים» / RIGHT «לפיהן ישיב
+# גאלתו מכסף מקנתו». Derive claim from Hebrew arms. Lev 25:51."
+m.step("Lev.25.51")
+# witness-tier presupposed read: the_deduction_and_the_upper_hand on
+# im_od_rabot_bashanim — read, not installed
+m.witness_read("im_od_rabot_bashanim", "the_deduction_and_the_upper_hand",
+                cites=["Sifra, Behar, Chapter 8 5", "Sifra, Behar, Chapter 8 6", "Onkelos Lev 25:51", "Onkelos Lev 25:52"])
+
+# -------------------------- Lev.25.52 · COND_ואם ---------------------------
+# ואם מעט נשאר בשנים עד שנת היבל וחשב לו … כפי שניו ישיב את גאלתו
+# "[EN-AID] From top split: LEFT «ואם מעט נשאר בשנים עד שנת היבל וחשב לו» /
+# RIGHT «כפי שניו ישיב את גאלתו». Derive claim from Hebrew arms. Lev 25:52."
+m.step("Lev.25.52")
+
+# -------------------------- Lev.25.53 · ETNACHTA_SPLIT ---------------------
+# כשכיר שנה בשנה יהיה עמו … לא ירדנו בפרך לעיניך
+# "[EN-AID] From top split: LEFT «כשכיר שנה בשנה יהיה עמו» / RIGHT «לא ירדנו
+# בפרך לעיניך». Derive claim from Hebrew arms. Lev 25:53."
+m.step("Lev.25.53")
+# witness-tier presupposed read: the_yearly_hireling_and_the_sight_bound on
+# kischir_shanah_beshanah_leeinecha — read, not installed
+m.witness_read("kischir_shanah_beshanah_leeinecha", "the_yearly_hireling_and_the_sight_bound",
+                cites=["Sifra, Behar, Chapter 8 7", "Sifra, Behar, Chapter 8 8", "Onkelos Lev 25:53"])
+
+# -------------------------- Lev.25.54 · COND_ואם ---------------------------
+# ואם לא יגאל באלה … ויצא בשנת היבל הוא ובניו עמו
+# "[EN-AID] From top split: LEFT «ואם לא יגאל באלה» / RIGHT «ויצא בשנת היבל
+# הוא ובניו עמו». Derive claim from Hebrew arms. Lev 25:54."
+m.step("Lev.25.54")
+# witness-tier presupposed read: two_open_variables_and_robbing_a_gentile on
+# veim_lo_yigael_beeleh — read, not installed
+m.witness_read("veim_lo_yigael_beeleh", "two_open_variables_and_robbing_a_gentile",
+                cites=["Sifra, Behar, Chapter 9 1", "Sifra, Behar, Chapter 9 2", "Sifra, Behar, Chapter 9 3", "Onkelos Lev 25:54"])
+
+# -------------------------- Lev.25.55 · COND_כי ----------------------------
+# כי לי בני ישראל עבדים עבדי הם אשר הוצאתי אותם מארץ מצרים … אני יהוה אלהיכם
+# "[EN-AID] From top split: LEFT «כי לי בני ישראל עבדים עבדי הם אשר הוצאתי
+# אותם מארץ מצרים» / RIGHT «אני יהוה אלהיכם». Derive claim from Hebrew arms.
+# Lev 25:55."
+m.step("Lev.25.55")
+# witness-tier presupposed read: servants_to_me_below_and_above on
+# ki_li_bnei_yisrael_avadim — read, not installed
+m.witness_read("ki_li_bnei_yisrael_avadim", "servants_to_me_below_and_above",
+                cites=["Sifra, Behar, Chapter 9 4", "Onkelos Lev 25:55"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('venimkar_lach_lo_taavod_bo', 'the_self_sale_gate_and_the_asymmetric_protocol'), ('kesachir_ketoshav', 'the_hireling_table'), ('veshav_el_mishpachto', 'the_return_reaching_the_exile'), ('ki_avadai_hem', 'my_deed_came_first_and_the_market_ban'), ('lo_tirdeh_bo_befarech', 'needless_work_is_rigor'), ('veavdecha_vaamatcha_min_hagoyim', 'the_gentile_slave_and_no_betrothal'), ('mibnei_hatoshavim', 'the_three_acquisition_modes'), ('vehitnachaltem_otam', 'inheritance_work_only_and_both_sexes'), ('venimkar_leger_toshav', 'sold_to_a_gentile_the_cleaving_and_the_gate'), ('echad_meechav_yigalenu', 'the_redeemer_ladder_for_persons'), ('vechishav_im_konehu', 'not_the_heirs_not_at_six_money_only'), ('im_od_rabot_bashanim', 'the_deduction_and_the_upper_hand'), ('kischir_shanah_beshanah_leeinecha', 'the_yearly_hireling_and_the_sight_bound'), ('veim_lo_yigael_beeleh', 'two_open_variables_and_robbing_a_gentile'), ('ki_li_bnei_yisrael_avadim', 'servants_to_me_below_and_above')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Behar, Chapter 7 1', 'Sifra, Behar, Chapter 7 2', 'Onkelos Lev 25:39']
+    assert all('the_self_sale_gate_and_the_asymmetric_protocol' not in f for f in m.WORLD["facts"])
+    assert 'venimkar_lach_lo_taavod_bo' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Behar, Chapter 7 3', 'Onkelos Lev 25:40']
+    assert all('the_hireling_table' not in f for f in m.WORLD["facts"])
+    assert 'kesachir_ketoshav' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Behar, Chapter 7 4', 'Onkelos Lev 25:41']
+    assert all('the_return_reaching_the_exile' not in f for f in m.WORLD["facts"])
+    assert 'veshav_el_mishpachto' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Behar, Section 6 1', 'Onkelos Lev 25:42']
+    assert all('my_deed_came_first_and_the_market_ban' not in f for f in m.WORLD["facts"])
+    assert 'ki_avadai_hem' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Behar, Section 6 2', 'Onkelos Lev 25:43']
+    assert all('needless_work_is_rigor' not in f for f in m.WORLD["facts"])
+    assert 'lo_tirdeh_bo_befarech' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Behar, Section 6 3', 'Onkelos Lev 25:44']
+    assert all('the_gentile_slave_and_no_betrothal' not in f for f in m.WORLD["facts"])
+    assert 'veavdecha_vaamatcha_min_hagoyim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Behar, Section 6 4', 'Onkelos Lev 25:45']
+    assert all('the_three_acquisition_modes' not in f for f in m.WORLD["facts"])
+    assert 'mibnei_hatoshavim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Behar, Section 6 5', 'Sifra, Behar, Section 6 6', 'Onkelos Lev 25:46']
+    assert all('inheritance_work_only_and_both_sexes' not in f for f in m.WORLD["facts"])
+    assert 'vehitnachaltem_otam' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Behar, Chapter 8 1', 'Onkelos Lev 25:47']
+    assert all('sold_to_a_gentile_the_cleaving_and_the_gate' not in f for f in m.WORLD["facts"])
+    assert 'venimkar_leger_toshav' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Behar, Chapter 8 2', 'Sifra, Behar, Chapter 8 3', 'Onkelos Lev 25:48', 'Onkelos Lev 25:49']
+    assert all('the_redeemer_ladder_for_persons' not in f for f in m.WORLD["facts"])
+    assert 'echad_meechav_yigalenu' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Sifra, Behar, Chapter 8 4', 'Onkelos Lev 25:50']
+    assert all('not_the_heirs_not_at_six_money_only' not in f for f in m.WORLD["facts"])
+    assert 'vechishav_im_konehu' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Sifra, Behar, Chapter 8 5', 'Sifra, Behar, Chapter 8 6', 'Onkelos Lev 25:51', 'Onkelos Lev 25:52']
+    assert all('the_deduction_and_the_upper_hand' not in f for f in m.WORLD["facts"])
+    assert 'im_od_rabot_bashanim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[12]["cites"] == ['Sifra, Behar, Chapter 8 7', 'Sifra, Behar, Chapter 8 8', 'Onkelos Lev 25:53']
+    assert all('the_yearly_hireling_and_the_sight_bound' not in f for f in m.WORLD["facts"])
+    assert 'kischir_shanah_beshanah_leeinecha' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[13]["cites"] == ['Sifra, Behar, Chapter 9 1', 'Sifra, Behar, Chapter 9 2', 'Sifra, Behar, Chapter 9 3', 'Onkelos Lev 25:54']
+    assert all('two_open_variables_and_robbing_a_gentile' not in f for f in m.WORLD["facts"])
+    assert 'veim_lo_yigael_beeleh' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[14]["cites"] == ['Sifra, Behar, Chapter 9 4', 'Onkelos Lev 25:55']
+    assert all('servants_to_me_below_and_above' not in f for f in m.WORLD["facts"])
+    assert 'ki_li_bnei_yisrael_avadim' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_26_bless_curse
+###############################################################################
+
+m = Machine("lev_26_bless_curse")
+
+# -------------------------- Lev.26.1 · ETNACHTA_SPLIT ----------------------
+# לא תעשו לכם אלילם ופסל ומצבה לא תקימו לכם ואבן משכית לא תתנו … כי אני יהוה
+# אלהיכם
+# "[EN-AID] From top split: LEFT «לא תעשו לכם אלילם ופסל ומצבה לא תקימו לכם
+# ואבן משכית לא תתנו בארצכם להשתחות עליה» / RIGHT «כי אני יהוה אלהיכם».
+# Derive claim from Hebrew arms. Lev 26:1."
+m.step("Lev.26.1")
+# witness-tier presupposed read: the_idols_ban_with_the_sanctuary_carve_out
+# on lo_taasu_lachem_elilim — read, not installed
+m.witness_read("lo_taasu_lachem_elilim", "the_idols_ban_with_the_sanctuary_carve_out",
+                cites=["Sifra, Behar, Chapter 9 5", "Onkelos Lev 26:1"])
+
+# -------------------------- Lev.26.2 · ETNACHTA_SPLIT ----------------------
+# את שבתתי תשמרו ומקדשי תיראו … אני יהוה
+# "[EN-AID] From top split: LEFT «את שבתתי תשמרו ומקדשי תיראו» / RIGHT «אני
+# יהוה». Derive claim from Hebrew arms. Lev 26:2."
+m.step("Lev.26.2")
+# witness-tier presupposed read: the_sold_mans_charter on
+# et_shabtotai_tishmoru — read, not installed
+m.witness_read("et_shabtotai_tishmoru", "the_sold_mans_charter",
+                cites=["Sifra, Behar, Chapter 9 6", "Onkelos Lev 26:2"])
+
+# -------------------------- Lev.26.3 · COND_אם -----------------------------
+# אם בחקתי תלכו … ואת מצותי תשמרו ועשיתם אתם
+# "[EN-AID] From top split: LEFT «אם בחקתי תלכו» / RIGHT «ואת מצותי תשמרו
+# ועשיתם אתם». Derive claim from Hebrew arms. Lev 26:3."
+m.step("Lev.26.3")
+# witness-tier presupposed read:
+# the_two_clause_split_and_the_remember_verb_rule on im_bechukotai_telechu —
+# read, not installed
+m.witness_read("im_bechukotai_telechu", "the_two_clause_split_and_the_remember_verb_rule",
+                cites=["Sifra, Bechukotai, Section 1 1", "Sifra, Bechukotai, Section 1 2", "Sifra, Bechukotai, Section 1 3", "Sifra, Bechukotai, Section 1 5", "Onkelos Lev 26:3"])
+
+# -------------------------- Lev.26.4 · ETNACHTA_SPLIT ----------------------
+# ונתתי גשמיכם בעתם … ונתנה הארץ יבולה ועץ השדה יתן פריו
+# "[EN-AID] From top split: LEFT «ונתתי גשמיכם בעתם» / RIGHT «ונתנה הארץ
+# יבולה ועץ השדה יתן פריו». Derive claim from Hebrew arms. Lev 26:4."
+m.step("Lev.26.4")
+# witness-tier presupposed read: the_rains_schedule_scoped_to_the_land on
+# venatati_gishmeichem_beitam — read, not installed
+m.witness_read("venatati_gishmeichem_beitam", "the_rains_schedule_scoped_to_the_land",
+                cites=["Sifra, Bechukotai, Chapter 1 1", "Sifra, Bechukotai, Chapter 1 2", "Onkelos Lev 26:4"])
+
+# -------------------------- Lev.26.5 · ETNACHTA_SPLIT ----------------------
+# והשיג לכם דיש את בציר ובציר ישיג את זרע … ואכלתם לחמכם לשבע וישבתם לבטח
+# בארצכם
+# "[EN-AID] From top split: LEFT «והשיג לכם דיש את בציר ובציר ישיג את זרע» /
+# RIGHT «ואכלתם לחמכם לשבע וישבתם לבטח בארצכם». Derive claim from Hebrew
+# arms. Lev 26:5."
+m.step("Lev.26.5")
+# witness-tier presupposed read: the_seasons_chained_and_the_land_clause on
+# vehisig_lachem_dayish — read, not installed
+m.witness_read("vehisig_lachem_dayish", "the_seasons_chained_and_the_land_clause",
+                cites=["Sifra, Bechukotai, Chapter 1 7", "Onkelos Lev 26:5"])
+
+# -------------------------- Lev.26.6 · ETNACHTA_SPLIT ----------------------
+# ונתתי שלום בארץ ושכבתם ואין מחריד … והשבתי חיה רעה מן הארץ וחרב לא תעבר
+# בארצכם
+# "[EN-AID] From top split: LEFT «ונתתי שלום בארץ ושכבתם ואין מחריד» / RIGHT
+# «והשבתי חיה רעה מן הארץ וחרב לא תעבר בארצכם». Derive claim from Hebrew
+# arms. Lev 26:6."
+m.step("Lev.26.6")
+# witness-tier presupposed read:
+# peace_weighed_against_all_and_the_beast_that_ceases on
+# venatati_shalom_baaretz — read, not installed
+m.witness_read("venatati_shalom_baaretz", "peace_weighed_against_all_and_the_beast_that_ceases",
+                cites=["Sifra, Bechukotai, Chapter 1 8", "Sifra, Bechukotai, Chapter 2 1", "Sifra, Bechukotai, Chapter 2 3", "Onkelos Lev 26:6"])
+
+# -------------------------- Lev.26.7 · ETNACHTA_SPLIT ----------------------
+# ורדפתם את איביכם … ונפלו לפניכם לחרב
+# "[EN-AID] From top split: LEFT «ורדפתם את איביכם» / RIGHT «ונפלו לפניכם
+# לחרב». Derive claim from Hebrew arms. Lev 26:7."
+m.step("Lev.26.7")
+
+# -------------------------- Lev.26.8 · ETNACHTA_SPLIT ----------------------
+# ורדפו מכם חמשה מאה ומאה מכם רבבה ירדפו … ונפלו איביכם לפניכם לחרב
+# "[EN-AID] From top split: LEFT «ורדפו מכם חמשה מאה ומאה מכם רבבה ירדפו» /
+# RIGHT «ונפלו איביכם לפניכם לחרב». Derive claim from Hebrew arms. Lev
+# 26:8."
+m.step("Lev.26.8")
+# witness-tier presupposed read: the_non_linear_scaling on
+# veradfu_mikem_chamishah_meah — read, not installed
+m.witness_read("veradfu_mikem_chamishah_meah", "the_non_linear_scaling",
+                cites=["Sifra, Bechukotai, Chapter 2 4", "Onkelos Lev 26:8"])
+
+# -------------------------- Lev.26.9 · ETNACHTA_SPLIT ----------------------
+# ופניתי אליכם והפריתי אתכם והרביתי אתכם … והקימתי את בריתי אתכם
+# "[EN-AID] From top split: LEFT «ופניתי אליכם והפריתי אתכם והרביתי אתכם» /
+# RIGHT «והקימתי את בריתי אתכם». Derive claim from Hebrew arms. Lev 26:9."
+m.step("Lev.26.9")
+# witness-tier presupposed read: turning_in_good_and_the_new_covenant on
+# ufaniti_aleichem — read, not installed
+m.witness_read("ufaniti_aleichem", "turning_in_good_and_the_new_covenant",
+                cites=["Sifra, Bechukotai, Chapter 2 5", "Onkelos Lev 26:9"])
+
+# -------------------------- Lev.26.10 · ETNACHTA_SPLIT ---------------------
+# ואכלתם ישן נושן … וישן מפני חדש תוציאו
+# "[EN-AID] From top split: LEFT «ואכלתם ישן נושן» / RIGHT «וישן מפני חדש
+# תוציאו». Derive claim from Hebrew arms. Lev 26:10."
+m.step("Lev.26.10")
+# witness-tier presupposed read: old_of_old on yashan_noshan — read, not
+# installed
+m.witness_read("yashan_noshan", "old_of_old",
+                cites=["Sifra, Bechukotai, Chapter 3 1", "Onkelos Lev 26:10"])
+
+# -------------------------- Lev.26.11 · ETNACHTA_SPLIT ---------------------
+# ונתתי משכני בתוככם … ולא תגעל נפשי אתכם
+# "[EN-AID] From top split: LEFT «ונתתי משכני בתוככם» / RIGHT «ולא תגעל נפשי
+# אתכם». Derive claim from Hebrew arms. Lev 26:11."
+m.step("Lev.26.11")
+# witness-tier presupposed read:
+# my_dwelling_is_the_temple_and_the_presence_walks on
+# venatati_mishkani_betochechem — read, not installed
+m.witness_read("venatati_mishkani_betochechem", "my_dwelling_is_the_temple_and_the_presence_walks",
+                cites=["Sifra, Bechukotai, Chapter 3 2", "Sifra, Bechukotai, Chapter 3 3", "Sifra, Bechukotai, Chapter 3 4", "Onkelos Lev 26:11", "Onkelos Lev 26:12"])
+
+# -------------------------- Lev.26.12 · ETNACHTA_SPLIT ---------------------
+# והתהלכתי בתוככם והייתי לכם לאלהים … ואתם תהיו לי לעם
+# "[EN-AID] From top split: LEFT «והתהלכתי בתוככם והייתי לכם לאלהים» / RIGHT
+# «ואתם תהיו לי לעם». Derive claim from Hebrew arms. Lev 26:12."
+m.step("Lev.26.12")
+
+# -------------------------- Lev.26.13 · ETNACHTA_SPLIT ---------------------
+# אני יהוה אלהיכם אשר הוצאתי אתכם מארץ מצרים מהית להם עבדים … ואשבר מטת עלכם
+# ואולך אתכם קוממיות
+# "[EN-AID] From top split: LEFT «אני יהוה אלהיכם אשר הוצאתי אתכם מארץ מצרים
+# מהית להם עבדים» / RIGHT «ואשבר מטת עלכם ואולך אתכם קוממיות». Derive claim
+# from Hebrew arms. Lev 26:13."
+m.step("Lev.26.13")
+# witness-tier presupposed read: slaves_to_kings_and_the_upright_measure on
+# miheyot_lahem_avadim_komemiyut — read, not installed
+m.witness_read("miheyot_lahem_avadim_komemiyut", "slaves_to_kings_and_the_upright_measure",
+                cites=["Sifra, Bechukotai, Chapter 3 5", "Sifra, Bechukotai, Chapter 3 7", "Onkelos Lev 26:13"])
+
+# -------------------------- Lev.26.14 · COND_ואם ---------------------------
+# ואם לא תשמעו לי … ולא תעשו את כל המצות האלה
+# "[EN-AID] From top split: LEFT «ואם לא תשמעו לי» / RIGHT «ולא תעשו את כל
+# המצות האלה». Derive claim from Hebrew arms. Lev 26:14."
+m.step("Lev.26.14")
+# witness-tier presupposed read: the_curses_condition_and_the_knowing_rebel
+# on veim_lo_tishmeu_li — read, not installed
+m.witness_read("veim_lo_tishmeu_li", "the_curses_condition_and_the_knowing_rebel",
+                cites=["Sifra, Bechukotai, Section 2 1", "Sifra, Bechukotai, Section 2 2", "Onkelos Lev 26:14"])
+
+# -------------------------- Lev.26.15 · COND_ואם ---------------------------
+# ואם בחקתי תמאסו ואם את משפטי תגעל נפשכם … לבלתי עשות את כל מצותי להפרכם את
+# בריתי
+# "[EN-AID] From top split: LEFT «ואם בחקתי תמאסו ואם את משפטי תגעל נפשכם» /
+# RIGHT «לבלתי עשות את כל מצותי להפרכם את בריתי». Derive claim from Hebrew
+# arms. Lev 26:15."
+m.step("Lev.26.15")
+# witness-tier presupposed read: the_seven_step_descent on
+# veim_bechukotai_timasu — read, not installed
+m.witness_read("veim_bechukotai_timasu", "the_seven_step_descent",
+                cites=["Sifra, Bechukotai, Section 2 3", "Onkelos Lev 26:15"])
+
+# -------------------------- Lev.26.16 · ETNACHTA_SPLIT ---------------------
+# אף אני אעשה זאת לכם והפקדתי עליכם בהלה את השחפת ואת הקדחת מכ … וזרעתם לריק
+# זרעכם ואכלהו איביכם
+# "[EN-AID] From top split: LEFT «אף אני אעשה זאת לכם והפקדתי עליכם בהלה את
+# השחפת ואת הקדחת מכלות עינים ומדיבת נפש» / RIGHT «וזרעתם לריק זרעכם ואכלהו
+# איביכם». Derive claim from Hebrew arms. Lev 26:16."
+m.step("Lev.26.16")
+# witness-tier presupposed read: the_name_as_creditor_and_the_illness_ladder
+# on af_ani_eeseh_zot — read, not installed
+m.witness_read("af_ani_eeseh_zot", "the_name_as_creditor_and_the_illness_ladder",
+                cites=["Sifra, Bechukotai, Chapter 4 1", "Sifra, Bechukotai, Chapter 4 2", "Sifra, Bechukotai, Chapter 4 3", "Onkelos Lev 26:16"])
+
+# -------------------------- Lev.26.17 · ETNACHTA_SPLIT ---------------------
+# ונתתי פני בכם ונגפתם לפני איביכם … ורדו בכם שנאיכם ונסתם ואין רדף אתכם
+# "[EN-AID] From top split: LEFT «ונתתי פני בכם ונגפתם לפני איביכם» / RIGHT
+# «ורדו בכם שנאיכם ונסתם ואין רדף אתכם». Derive claim from Hebrew arms. Lev
+# 26:17."
+m.step("Lev.26.17")
+# witness-tier presupposed read: the_good_evil_mirror_and_from_among_you on
+# venatati_fanai_bachem — read, not installed
+m.witness_read("venatati_fanai_bachem", "the_good_evil_mirror_and_from_among_you",
+                cites=["Sifra, Bechukotai, Chapter 4 4", "Sifra, Bechukotai, Chapter 4 5", "Onkelos Lev 26:17"])
+
+# -------------------------- Lev.26.18 · COND_ואם ---------------------------
+# ואם עד אלה לא תשמעו לי … ויספתי ליסרה אתכם שבע על חטאתיכם
+# "[EN-AID] From top split: LEFT «ואם עד אלה לא תשמעו לי» / RIGHT «ויספתי
+# ליסרה אתכם שבע על חטאתיכם». Derive claim from Hebrew arms. Lev 26:18."
+m.step("Lev.26.18")
+# witness-tier presupposed read: warning_first_and_the_sevenfold_rule on
+# veim_ad_eleh_sheva_al_chatoteichem — read, not installed
+m.witness_read("veim_ad_eleh_sheva_al_chatoteichem", "warning_first_and_the_sevenfold_rule",
+                cites=["Sifra, Bechukotai, Chapter 5 1", "Sifra, Bechukotai, Chapter 5 2", "Onkelos Lev 26:18"])
+
+# -------------------------- Lev.26.19 · ETNACHTA_SPLIT ---------------------
+# ושברתי את גאון עזכם … ונתתי את שמיכם כברזל ואת ארצכם כנחשה
+# "[EN-AID] From top split: LEFT «ושברתי את גאון עזכם» / RIGHT «ונתתי את
+# שמיכם כברזל ואת ארצכם כנחשה». Derive claim from Hebrew arms. Lev 26:19."
+m.step("Lev.26.19")
+# witness-tier presupposed read: the_metals_physics on
+# shmeichem_kabarzel_artzechem_kanechushah — read, not installed
+m.witness_read("shmeichem_kabarzel_artzechem_kanechushah", "the_metals_physics",
+                cites=["Sifra, Bechukotai, Chapter 5 3", "Sifra, Bechukotai, Chapter 5 4", "Onkelos Lev 26:19"])
+
+# -------------------------- Lev.26.20 · ETNACHTA_SPLIT ---------------------
+# ותם לריק כחכם … ולא תתן ארצכם את יבולה ועץ הארץ לא יתן פריו
+# "[EN-AID] From top split: LEFT «ותם לריק כחכם» / RIGHT «ולא תתן ארצכם את
+# יבולה ועץ הארץ לא יתן פריו». Derive claim from Hebrew arms. Lev 26:20."
+m.step("Lev.26.20")
+
+# -------------------------- Lev.26.21 · COND_ואם ---------------------------
+# ואם תלכו עמי קרי ולא תאבו לשמע לי … ויספתי עליכם מכה שבע כחטאתיכם
+# "[EN-AID] From top split: LEFT «ואם תלכו עמי קרי ולא תאבו לשמע לי» / RIGHT
+# «ויספתי עליכם מכה שבע כחטאתיכם». Derive claim from Hebrew arms. Lev
+# 26:21."
+m.step("Lev.26.21")
+# witness-tier presupposed read: keri_as_casual_and_the_beasts on
+# veim_telchu_imi_keri — read, not installed
+m.witness_read("veim_telchu_imi_keri", "keri_as_casual_and_the_beasts",
+                cites=["Sifra, Bechukotai, Chapter 5 5", "Sifra, Bechukotai, Chapter 5 6", "Sifra, Bechukotai, Chapter 5 7", "Onkelos Lev 26:21"])
+
+# -------------------------- Lev.26.22 · ETNACHTA_SPLIT ---------------------
+# והשלחתי בכם את חית השדה ושכלה אתכם והכריתה את בהמתכם והמעיטה … ונשמו
+# דרכיכם
+# "[EN-AID] From top split: LEFT «והשלחתי בכם את חית השדה ושכלה אתכם והכריתה
+# את בהמתכם והמעיטה אתכם» / RIGHT «ונשמו דרכיכם». Derive claim from Hebrew
+# arms. Lev 26:22."
+m.step("Lev.26.22")
+
+# -------------------------- Lev.26.23 · COND_ואם ---------------------------
+# ואם באלה לא תוסרו לי … והלכתם עמי קרי
+# "[EN-AID] From top split: LEFT «ואם באלה לא תוסרו לי» / RIGHT «והלכתם עמי
+# קרי». Derive claim from Hebrew arms. Lev 26:23."
+m.step("Lev.26.23")
+
+# -------------------------- Lev.26.24 · ETNACHTA_SPLIT ---------------------
+# והלכתי אף אני עמכם בקרי … והכיתי אתכם גם אני שבע על חטאתיכם
+# "[EN-AID] From top split: LEFT «והלכתי אף אני עמכם בקרי» / RIGHT «והכיתי
+# אתכם גם אני שבע על חטאתיכם». Derive claim from Hebrew arms. Lev 26:24."
+m.step("Lev.26.24")
+
+# -------------------------- Lev.26.25 · ETNACHTA_SPLIT ---------------------
+# והבאתי עליכם חרב נקמת נקם ברית ונאספתם אל עריכם … ושלחתי דבר בתוככם ונתתם
+# ביד אויב
+# "[EN-AID] From top split: LEFT «והבאתי עליכם חרב נקמת נקם ברית ונאספתם אל
+# עריכם» / RIGHT «ושלחתי דבר בתוככם ונתתם ביד אויב». Derive claim from
+# Hebrew arms. Lev 26:25."
+m.step("Lev.26.25")
+# witness-tier presupposed read:
+# the_sword_the_corpse_law_and_the_staff_of_bread on
+# cherev_nokemet_nekam_berit — read, not installed
+m.witness_read("cherev_nokemet_nekam_berit", "the_sword_the_corpse_law_and_the_staff_of_bread",
+                cites=["Sifra, Bechukotai, Chapter 6 1", "Sifra, Bechukotai, Chapter 6 2", "Onkelos Lev 26:25", "Onkelos Lev 26:26"])
+
+# -------------------------- Lev.26.26 · ETNACHTA_SPLIT ---------------------
+# בשברי לכם מטה לחם ואפו עשר נשים לחמכם בתנור אחד והשיבו לחמכם … ואכלתם ולא
+# תשבעו
+# "[EN-AID] From top split: LEFT «בשברי לכם מטה לחם ואפו עשר נשים לחמכם
+# בתנור אחד והשיבו לחמכם במשקל» / RIGHT «ואכלתם ולא תשבעו». Derive claim
+# from Hebrew arms. Lev 26:26."
+m.step("Lev.26.26")
+
+# -------------------------- Lev.26.27 · COND_ואם ---------------------------
+# ואם בזאת לא תשמעו לי … והלכתם עמי בקרי
+# "[EN-AID] From top split: LEFT «ואם בזאת לא תשמעו לי» / RIGHT «והלכתם עמי
+# בקרי». Derive claim from Hebrew arms. Lev 26:27."
+m.step("Lev.26.27")
+
+# -------------------------- Lev.26.28 · ETNACHTA_SPLIT ---------------------
+# והלכתי עמכם בחמת קרי … ויסרתי אתכם אף אני שבע על חטאתיכם
+# "[EN-AID] From top split: LEFT «והלכתי עמכם בחמת קרי» / RIGHT «ויסרתי אתכם
+# אף אני שבע על חטאתיכם». Derive claim from Hebrew arms. Lev 26:28."
+m.step("Lev.26.28")
+
+# -------------------------- Lev.26.29 · ETNACHTA_SPLIT ---------------------
+# ואכלתם בשר בניכם … ובשר בנתיכם תאכלו
+# "[EN-AID] From top split: LEFT «ואכלתם בשר בניכם» / RIGHT «ובשר בנתיכם
+# תאכלו». Derive claim from Hebrew arms. Lev 26:29."
+m.step("Lev.26.29")
+
+# -------------------------- Lev.26.30 · ETNACHTA_SPLIT ---------------------
+# והשמדתי את במתיכם והכרתי את חמניכם ונתתי את פגריכם על פגרי ג … וגעלה נפשי
+# אתכם
+# "[EN-AID] From top split: LEFT «והשמדתי את במתיכם והכרתי את חמניכם ונתתי
+# את פגריכם על פגרי גלוליכם» / RIGHT «וגעלה נפשי אתכם». Derive claim from
+# Hebrew arms. Lev 26:30."
+m.step("Lev.26.30")
+# witness-tier presupposed read:
+# synagogues_in_sanctuaries_and_the_paired_measures on
+# vehishmadti_et_bamoteichem — read, not installed
+m.witness_read("vehishmadti_et_bamoteichem", "synagogues_in_sanctuaries_and_the_paired_measures",
+                cites=["Sifra, Bechukotai, Chapter 6 4", "Sifra, Bechukotai, Chapter 6 5", "Sifra, Bechukotai, Chapter 6 6", "Sifra, Bechukotai, Chapter 6 7", "Sifra, Bechukotai, Chapter 7 1", "Onkelos Lev 26:30", "Onkelos Lev 26:31"])
+
+# -------------------------- Lev.26.31 · ETNACHTA_SPLIT ---------------------
+# ונתתי את עריכם חרבה והשמותי את מקדשיכם … ולא אריח בריח ניחחכם
+# "[EN-AID] From top split: LEFT «ונתתי את עריכם חרבה והשמותי את מקדשיכם» /
+# RIGHT «ולא אריח בריח ניחחכם». Derive claim from Hebrew arms. Lev 26:31."
+m.step("Lev.26.31")
+
+# -------------------------- Lev.26.32 · ETNACHTA_SPLIT ---------------------
+# והשמתי אני את הארץ … ושממו עליה איביכם הישבים בה
+# "[EN-AID] From top split: LEFT «והשמתי אני את הארץ» / RIGHT «ושממו עליה
+# איביכם הישבים בה». Derive claim from Hebrew arms. Lev 26:32."
+m.step("Lev.26.32")
+
+# -------------------------- Lev.26.33 · ETNACHTA_SPLIT ---------------------
+# ואתכם אזרה בגוים והריקתי אחריכם חרב … והיתה ארצכם שממה ועריכם יהיו חרבה
+# "[EN-AID] From top split: LEFT «ואתכם אזרה בגוים והריקתי אחריכם חרב» /
+# RIGHT «והיתה ארצכם שממה ועריכם יהיו חרבה». Derive claim from Hebrew arms.
+# Lev 26:33."
+m.step("Lev.26.33")
+
+# -------------------------- Lev.26.34 · ETNACHTA_SPLIT ---------------------
+# אז תרצה הארץ את שבתתיה כל ימי השמה ואתם בארץ איביכם … אז תשבת הארץ והרצת
+# את שבתתיה
+# "[EN-AID] From top split: LEFT «אז תרצה הארץ את שבתתיה כל ימי השמה ואתם
+# בארץ איביכם» / RIGHT «אז תשבת הארץ והרצת את שבתתיה». Derive claim from
+# Hebrew arms. Lev 26:34."
+m.step("Lev.26.34")
+# witness-tier presupposed read: the_sabbath_debt on
+# az_tirtzeh_haaretz_et_shabtoteha — read, not installed
+m.witness_read("az_tirtzeh_haaretz_et_shabtoteha", "the_sabbath_debt",
+                cites=["Sifra, Bechukotai, Chapter 7 2", "Sifra, Bechukotai, Chapter 8 9", "Onkelos Lev 26:34", "Onkelos Lev 26:35"])
+
+# -------------------------- Lev.26.35 · ETNACHTA_SPLIT ---------------------
+# כל ימי השמה תשבת … את אשר לא שבתה בשבתתיכם בשבתכם עליה
+# "[EN-AID] From top split: LEFT «כל ימי השמה תשבת» / RIGHT «את אשר לא שבתה
+# בשבתתיכם בשבתכם עליה». Derive claim from Hebrew arms. Lev 26:35."
+m.step("Lev.26.35")
+
+# -------------------------- Lev.26.36 · ETNACHTA_SPLIT ---------------------
+# והנשארים בכם והבאתי מרך בלבבם בארצת איביהם … ורדף אתם קול עלה נדף ונסו
+# מנסת חרב ונפלו ואין רדף
+# "[EN-AID] From top split: LEFT «והנשארים בכם והבאתי מרך בלבבם בארצת
+# איביהם» / RIGHT «ורדף אתם קול עלה נדף ונסו מנסת חרב ונפלו ואין רדף».
+# Derive claim from Hebrew arms. Lev 26:36."
+m.step("Lev.26.36")
+# witness-tier presupposed read: faintness_and_the_driven_leaf on
+# vehevaeti_morech_bilvavam — read, not installed
+m.witness_read("vehevaeti_morech_bilvavam", "faintness_and_the_driven_leaf",
+                cites=["Sifra, Bechukotai, Chapter 7 3", "Sifra, Bechukotai, Chapter 7 4", "Onkelos Lev 26:36"])
+
+# -------------------------- Lev.26.37 · ETNACHTA_SPLIT ---------------------
+# וכשלו איש באחיו כמפני חרב ורדף אין … ולא תהיה לכם תקומה לפני איביכם
+# "[EN-AID] From top split: LEFT «וכשלו איש באחיו כמפני חרב ורדף אין» /
+# RIGHT «ולא תהיה לכם תקומה לפני איביכם». Derive claim from Hebrew arms. Lev
+# 26:37."
+m.step("Lev.26.37")
+# witness-tier presupposed read: the_surety_rule on vechashlu_ish_beachiv —
+# read, not installed
+m.witness_read("vechashlu_ish_beachiv", "the_surety_rule",
+                cites=["Sifra, Bechukotai, Chapter 7 5", "Sifra, Bechukotai, Chapter 7 6", "Onkelos Lev 26:37"])
+
+# -------------------------- Lev.26.38 · ETNACHTA_SPLIT ---------------------
+# ואבדתם בגוים … ואכלה אתכם ארץ איביכם
+# "[EN-AID] From top split: LEFT «ואבדתם בגוים» / RIGHT «ואכלה אתכם ארץ
+# איביכם». Derive claim from Hebrew arms. Lev 26:38."
+m.step("Lev.26.38")
+# witness-tier presupposed read: perishing_is_exile on vaavadtem_bagoyim —
+# read, not installed
+m.witness_read("vaavadtem_bagoyim", "perishing_is_exile",
+                cites=["Sifra, Bechukotai, Chapter 8 1", "Onkelos Lev 26:38"])
+
+# -------------------------- Lev.26.39 · ETNACHTA_SPLIT ---------------------
+# והנשארים בכם ימקו בעונם בארצת איביכם … ואף בעונת אבתם אתם ימקו
+# "[EN-AID] From top split: LEFT «והנשארים בכם ימקו בעונם בארצת איביכם» /
+# RIGHT «ואף בעונת אבתם אתם ימקו». Derive claim from Hebrew arms. Lev
+# 26:39."
+m.step("Lev.26.39")
+# witness-tier presupposed read: the_fathers_sins_reconciled on
+# veaf_baavonot_avotam_itam_yimaku — read, not installed
+m.witness_read("veaf_baavonot_avotam_itam_yimaku", "the_fathers_sins_reconciled",
+                cites=["Sifra, Bechukotai, Chapter 8 2", "Onkelos Lev 26:39"])
+
+# -------------------------- Lev.26.40 · ETNACHTA_SPLIT ---------------------
+# והתודו את עונם ואת עון אבתם במעלם אשר מעלו בי … ואף אשר הלכו עמי בקרי
+# "[EN-AID] From top split: LEFT «והתודו את עונם ואת עון אבתם במעלם אשר מעלו
+# בי» / RIGHT «ואף אשר הלכו עמי בקרי». Derive claim from Hebrew arms. Lev
+# 26:40."
+m.step("Lev.26.40")
+# witness-tier presupposed read: confession_and_the_humbled_heart on
+# vehitvadu_et_avonam — read, not installed
+m.witness_read("vehitvadu_et_avonam", "confession_and_the_humbled_heart",
+                cites=["Sifra, Bechukotai, Chapter 8 3", "Sifra, Bechukotai, Chapter 8 4", "Sifra, Bechukotai, Chapter 8 5", "Onkelos Lev 26:40", "Onkelos Lev 26:41"])
+
+# -------------------------- Lev.26.41 · ETNACHTA_SPLIT ---------------------
+# אף אני אלך עמם בקרי והבאתי אתם בארץ איביהם … או אז יכנע לבבם הערל ואז ירצו
+# את עונם
+# "[EN-AID] From top split: LEFT «אף אני אלך עמם בקרי והבאתי אתם בארץ
+# איביהם» / RIGHT «או אז יכנע לבבם הערל ואז ירצו את עונם». Derive claim from
+# Hebrew arms. Lev 26:41."
+m.step("Lev.26.41")
+
+# -------------------------- Lev.26.42 · ETNACHTA_SPLIT ---------------------
+# וזכרתי את בריתי יעקוב … ואף את בריתי יצחק ואף את בריתי אברהם אזכר והארץ
+# אזכר
+# "[EN-AID] From top split: LEFT «וזכרתי את בריתי יעקוב» / RIGHT «ואף את
+# בריתי יצחק ואף את בריתי אברהם אזכר והארץ אזכר». Derive claim from Hebrew
+# arms. Lev 26:42."
+m.step("Lev.26.42")
+# witness-tier presupposed read:
+# the_fathers_backward_and_the_covenant_to_the_land on
+# vezacharti_et_briti_yaakov — read, not installed
+m.witness_read("vezacharti_et_briti_yaakov", "the_fathers_backward_and_the_covenant_to_the_land",
+                cites=["Sifra, Bechukotai, Chapter 8 6", "Sifra, Bechukotai, Chapter 8 7", "Sifra, Bechukotai, Chapter 8 8", "Onkelos Lev 26:42"])
+
+# -------------------------- Lev.26.43 · ETNACHTA_SPLIT ---------------------
+# והארץ תעזב מהם ותרץ את שבתתיה בהשמה מהם והם ירצו את עונם … יען וביען
+# במשפטי מאסו ואת חקתי געלה נפשם
+# "[EN-AID] From top split: LEFT «והארץ תעזב מהם ותרץ את שבתתיה בהשמה מהם
+# והם ירצו את עונם» / RIGHT «יען וביען במשפטי מאסו ואת חקתי געלה נפשם».
+# Derive claim from Hebrew arms. Lev 26:43."
+m.step("Lev.26.43")
+
+# -------------------------- Lev.26.44 · ETNACHTA_SPLIT ---------------------
+# ואף גם זאת בהיותם בארץ איביהם לא מאסתים ולא געלתים לכלתם להפ … כי אני יהוה
+# אלהיהם
+# "[EN-AID] From top split: LEFT «ואף גם זאת בהיותם בארץ איביהם לא מאסתים
+# ולא געלתים לכלתם להפר בריתי אתם» / RIGHT «כי אני יהוה אלהיהם». Derive
+# claim from Hebrew arms. Lev 26:44."
+m.step("Lev.26.44")
+# witness-tier presupposed read: the_four_eras_and_one_in_a_hundred on
+# lo_meastim_velo_gealtim — read, not installed
+m.witness_read("lo_meastim_velo_gealtim", "the_four_eras_and_one_in_a_hundred",
+                cites=["Sifra, Bechukotai, Chapter 8 9", "Sifra, Bechukotai, Chapter 8 10", "Onkelos Lev 26:43", "Onkelos Lev 26:44", "Onkelos Lev 26:45"])
+
+# -------------------------- Lev.26.45 · ETNACHTA_SPLIT ---------------------
+# וזכרתי להם ברית ראשנים … אשר הוצאתי אתם מארץ מצרים לעיני הגוים להית להם
+# לאלהים אני יה
+# "[EN-AID] From top split: LEFT «וזכרתי להם ברית ראשנים» / RIGHT «אשר
+# הוצאתי אתם מארץ מצרים לעיני הגוים להית להם לאלהים אני יהוה». Derive claim
+# from Hebrew arms. Lev 26:45."
+m.step("Lev.26.45")
+
+# -------------------------- Lev.26.46 · ETNACHTA_SPLIT ---------------------
+# אלה החקים והמשפטים והתורת אשר נתן יהוה בינו ובין בני ישראל … בהר סיני ביד
+# משה
+# "[EN-AID] From top split: LEFT «אלה החקים והמשפטים והתורת אשר נתן יהוה
+# בינו ובין בני ישראל» / RIGHT «בהר סיני ביד משה». Derive claim from Hebrew
+# arms. Lev 26:46."
+m.step("Lev.26.46")
+# witness-tier presupposed read: two_torahs on
+# eleh_hachukim_vehamishpatim_vehatorot — read, not installed
+m.witness_read("eleh_hachukim_vehamishpatim_vehatorot", "two_torahs",
+                cites=["Sifra, Bechukotai, Chapter 8 10", "Onkelos Lev 26:46"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('lo_taasu_lachem_elilim', 'the_idols_ban_with_the_sanctuary_carve_out'), ('et_shabtotai_tishmoru', 'the_sold_mans_charter'), ('im_bechukotai_telechu', 'the_two_clause_split_and_the_remember_verb_rule'), ('venatati_gishmeichem_beitam', 'the_rains_schedule_scoped_to_the_land'), ('vehisig_lachem_dayish', 'the_seasons_chained_and_the_land_clause'), ('venatati_shalom_baaretz', 'peace_weighed_against_all_and_the_beast_that_ceases'), ('veradfu_mikem_chamishah_meah', 'the_non_linear_scaling'), ('ufaniti_aleichem', 'turning_in_good_and_the_new_covenant'), ('yashan_noshan', 'old_of_old'), ('venatati_mishkani_betochechem', 'my_dwelling_is_the_temple_and_the_presence_walks'), ('miheyot_lahem_avadim_komemiyut', 'slaves_to_kings_and_the_upright_measure'), ('veim_lo_tishmeu_li', 'the_curses_condition_and_the_knowing_rebel'), ('veim_bechukotai_timasu', 'the_seven_step_descent'), ('af_ani_eeseh_zot', 'the_name_as_creditor_and_the_illness_ladder'), ('venatati_fanai_bachem', 'the_good_evil_mirror_and_from_among_you'), ('veim_ad_eleh_sheva_al_chatoteichem', 'warning_first_and_the_sevenfold_rule'), ('shmeichem_kabarzel_artzechem_kanechushah', 'the_metals_physics'), ('veim_telchu_imi_keri', 'keri_as_casual_and_the_beasts'), ('cherev_nokemet_nekam_berit', 'the_sword_the_corpse_law_and_the_staff_of_bread'), ('vehishmadti_et_bamoteichem', 'synagogues_in_sanctuaries_and_the_paired_measures'), ('az_tirtzeh_haaretz_et_shabtoteha', 'the_sabbath_debt'), ('vehevaeti_morech_bilvavam', 'faintness_and_the_driven_leaf'), ('vechashlu_ish_beachiv', 'the_surety_rule'), ('vaavadtem_bagoyim', 'perishing_is_exile'), ('veaf_baavonot_avotam_itam_yimaku', 'the_fathers_sins_reconciled'), ('vehitvadu_et_avonam', 'confession_and_the_humbled_heart'), ('vezacharti_et_briti_yaakov', 'the_fathers_backward_and_the_covenant_to_the_land'), ('lo_meastim_velo_gealtim', 'the_four_eras_and_one_in_a_hundred'), ('eleh_hachukim_vehamishpatim_vehatorot', 'two_torahs')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Behar, Chapter 9 5', 'Onkelos Lev 26:1']
+    assert all('the_idols_ban_with_the_sanctuary_carve_out' not in f for f in m.WORLD["facts"])
+    assert 'lo_taasu_lachem_elilim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Behar, Chapter 9 6', 'Onkelos Lev 26:2']
+    assert all('the_sold_mans_charter' not in f for f in m.WORLD["facts"])
+    assert 'et_shabtotai_tishmoru' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Bechukotai, Section 1 1', 'Sifra, Bechukotai, Section 1 2', 'Sifra, Bechukotai, Section 1 3', 'Sifra, Bechukotai, Section 1 5', 'Onkelos Lev 26:3']
+    assert all('the_two_clause_split_and_the_remember_verb_rule' not in f for f in m.WORLD["facts"])
+    assert 'im_bechukotai_telechu' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Bechukotai, Chapter 1 1', 'Sifra, Bechukotai, Chapter 1 2', 'Onkelos Lev 26:4']
+    assert all('the_rains_schedule_scoped_to_the_land' not in f for f in m.WORLD["facts"])
+    assert 'venatati_gishmeichem_beitam' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Bechukotai, Chapter 1 7', 'Onkelos Lev 26:5']
+    assert all('the_seasons_chained_and_the_land_clause' not in f for f in m.WORLD["facts"])
+    assert 'vehisig_lachem_dayish' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Bechukotai, Chapter 1 8', 'Sifra, Bechukotai, Chapter 2 1', 'Sifra, Bechukotai, Chapter 2 3', 'Onkelos Lev 26:6']
+    assert all('peace_weighed_against_all_and_the_beast_that_ceases' not in f for f in m.WORLD["facts"])
+    assert 'venatati_shalom_baaretz' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Bechukotai, Chapter 2 4', 'Onkelos Lev 26:8']
+    assert all('the_non_linear_scaling' not in f for f in m.WORLD["facts"])
+    assert 'veradfu_mikem_chamishah_meah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Bechukotai, Chapter 2 5', 'Onkelos Lev 26:9']
+    assert all('turning_in_good_and_the_new_covenant' not in f for f in m.WORLD["facts"])
+    assert 'ufaniti_aleichem' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Bechukotai, Chapter 3 1', 'Onkelos Lev 26:10']
+    assert all('old_of_old' not in f for f in m.WORLD["facts"])
+    assert 'yashan_noshan' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Bechukotai, Chapter 3 2', 'Sifra, Bechukotai, Chapter 3 3', 'Sifra, Bechukotai, Chapter 3 4', 'Onkelos Lev 26:11', 'Onkelos Lev 26:12']
+    assert all('my_dwelling_is_the_temple_and_the_presence_walks' not in f for f in m.WORLD["facts"])
+    assert 'venatati_mishkani_betochechem' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Sifra, Bechukotai, Chapter 3 5', 'Sifra, Bechukotai, Chapter 3 7', 'Onkelos Lev 26:13']
+    assert all('slaves_to_kings_and_the_upright_measure' not in f for f in m.WORLD["facts"])
+    assert 'miheyot_lahem_avadim_komemiyut' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Sifra, Bechukotai, Section 2 1', 'Sifra, Bechukotai, Section 2 2', 'Onkelos Lev 26:14']
+    assert all('the_curses_condition_and_the_knowing_rebel' not in f for f in m.WORLD["facts"])
+    assert 'veim_lo_tishmeu_li' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[12]["cites"] == ['Sifra, Bechukotai, Section 2 3', 'Onkelos Lev 26:15']
+    assert all('the_seven_step_descent' not in f for f in m.WORLD["facts"])
+    assert 'veim_bechukotai_timasu' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[13]["cites"] == ['Sifra, Bechukotai, Chapter 4 1', 'Sifra, Bechukotai, Chapter 4 2', 'Sifra, Bechukotai, Chapter 4 3', 'Onkelos Lev 26:16']
+    assert all('the_name_as_creditor_and_the_illness_ladder' not in f for f in m.WORLD["facts"])
+    assert 'af_ani_eeseh_zot' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[14]["cites"] == ['Sifra, Bechukotai, Chapter 4 4', 'Sifra, Bechukotai, Chapter 4 5', 'Onkelos Lev 26:17']
+    assert all('the_good_evil_mirror_and_from_among_you' not in f for f in m.WORLD["facts"])
+    assert 'venatati_fanai_bachem' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[15]["cites"] == ['Sifra, Bechukotai, Chapter 5 1', 'Sifra, Bechukotai, Chapter 5 2', 'Onkelos Lev 26:18']
+    assert all('warning_first_and_the_sevenfold_rule' not in f for f in m.WORLD["facts"])
+    assert 'veim_ad_eleh_sheva_al_chatoteichem' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[16]["cites"] == ['Sifra, Bechukotai, Chapter 5 3', 'Sifra, Bechukotai, Chapter 5 4', 'Onkelos Lev 26:19']
+    assert all('the_metals_physics' not in f for f in m.WORLD["facts"])
+    assert 'shmeichem_kabarzel_artzechem_kanechushah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[17]["cites"] == ['Sifra, Bechukotai, Chapter 5 5', 'Sifra, Bechukotai, Chapter 5 6', 'Sifra, Bechukotai, Chapter 5 7', 'Onkelos Lev 26:21']
+    assert all('keri_as_casual_and_the_beasts' not in f for f in m.WORLD["facts"])
+    assert 'veim_telchu_imi_keri' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[18]["cites"] == ['Sifra, Bechukotai, Chapter 6 1', 'Sifra, Bechukotai, Chapter 6 2', 'Onkelos Lev 26:25', 'Onkelos Lev 26:26']
+    assert all('the_sword_the_corpse_law_and_the_staff_of_bread' not in f for f in m.WORLD["facts"])
+    assert 'cherev_nokemet_nekam_berit' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[19]["cites"] == ['Sifra, Bechukotai, Chapter 6 4', 'Sifra, Bechukotai, Chapter 6 5', 'Sifra, Bechukotai, Chapter 6 6', 'Sifra, Bechukotai, Chapter 6 7', 'Sifra, Bechukotai, Chapter 7 1', 'Onkelos Lev 26:30', 'Onkelos Lev 26:31']
+    assert all('synagogues_in_sanctuaries_and_the_paired_measures' not in f for f in m.WORLD["facts"])
+    assert 'vehishmadti_et_bamoteichem' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[20]["cites"] == ['Sifra, Bechukotai, Chapter 7 2', 'Sifra, Bechukotai, Chapter 8 9', 'Onkelos Lev 26:34', 'Onkelos Lev 26:35']
+    assert all('the_sabbath_debt' not in f for f in m.WORLD["facts"])
+    assert 'az_tirtzeh_haaretz_et_shabtoteha' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[21]["cites"] == ['Sifra, Bechukotai, Chapter 7 3', 'Sifra, Bechukotai, Chapter 7 4', 'Onkelos Lev 26:36']
+    assert all('faintness_and_the_driven_leaf' not in f for f in m.WORLD["facts"])
+    assert 'vehevaeti_morech_bilvavam' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[22]["cites"] == ['Sifra, Bechukotai, Chapter 7 5', 'Sifra, Bechukotai, Chapter 7 6', 'Onkelos Lev 26:37']
+    assert all('the_surety_rule' not in f for f in m.WORLD["facts"])
+    assert 'vechashlu_ish_beachiv' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[23]["cites"] == ['Sifra, Bechukotai, Chapter 8 1', 'Onkelos Lev 26:38']
+    assert all('perishing_is_exile' not in f for f in m.WORLD["facts"])
+    assert 'vaavadtem_bagoyim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[24]["cites"] == ['Sifra, Bechukotai, Chapter 8 2', 'Onkelos Lev 26:39']
+    assert all('the_fathers_sins_reconciled' not in f for f in m.WORLD["facts"])
+    assert 'veaf_baavonot_avotam_itam_yimaku' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[25]["cites"] == ['Sifra, Bechukotai, Chapter 8 3', 'Sifra, Bechukotai, Chapter 8 4', 'Sifra, Bechukotai, Chapter 8 5', 'Onkelos Lev 26:40', 'Onkelos Lev 26:41']
+    assert all('confession_and_the_humbled_heart' not in f for f in m.WORLD["facts"])
+    assert 'vehitvadu_et_avonam' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[26]["cites"] == ['Sifra, Bechukotai, Chapter 8 6', 'Sifra, Bechukotai, Chapter 8 7', 'Sifra, Bechukotai, Chapter 8 8', 'Onkelos Lev 26:42']
+    assert all('the_fathers_backward_and_the_covenant_to_the_land' not in f for f in m.WORLD["facts"])
+    assert 'vezacharti_et_briti_yaakov' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[27]["cites"] == ['Sifra, Bechukotai, Chapter 8 9', 'Sifra, Bechukotai, Chapter 8 10', 'Onkelos Lev 26:43', 'Onkelos Lev 26:44', 'Onkelos Lev 26:45']
+    assert all('the_four_eras_and_one_in_a_hundred' not in f for f in m.WORLD["facts"])
+    assert 'lo_meastim_velo_gealtim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[28]["cites"] == ['Sifra, Bechukotai, Chapter 8 10', 'Onkelos Lev 26:46']
+    assert all('two_torahs' not in f for f in m.WORLD["facts"])
+    assert 'eleh_hachukim_vehamishpatim_vehatorot' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_27_vows_valuations
+###############################################################################
+
+m = Machine("lev_27_vows_valuations")
+
+# -------------------------- Lev.27.1 · TREE_CLAIM --------------------------
+# וידבר יהוה … אל משה לאמר
+# "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 27:1."
+m.step("Lev.27.1")
+
+# -------------------------- Lev.27.2 · ETNACHTA_SPLIT ----------------------
+# דבר אל בני ישראל ואמרת אלהם איש כי יפלא נדר … בערכך נפשת ליהוה
+# "[EN-AID] From top split: LEFT «דבר אל בני ישראל ואמרת אלהם איש כי יפלא
+# נדר» / RIGHT «בערכך נפשת ליהוה». Derive claim from Hebrew arms. Lev 27:2."
+m.step("Lev.27.2")
+# witness-tier presupposed read:
+# the_valuer_valued_split_and_the_delay_import on
+# ish_ki_yafli_neder_beerkecha — read, not installed
+m.witness_read("ish_ki_yafli_neder_beerkecha", "the_valuer_valued_split_and_the_delay_import",
+                cites=["Sifra, Bechukotai, Section 3 1", "Sifra, Bechukotai, Section 3 2", "Sifra, Bechukotai, Section 3 3", "Sifra, Bechukotai, Section 3 4", "Onkelos Lev 27:2"])
+
+# -------------------------- Lev.27.3 · ETNACHTA_SPLIT ----------------------
+# והיה ערכך הזכר מבן עשרים שנה ועד בן ששים שנה … והיה ערכך חמשים שקל כסף
+# בשקל הקדש
+# "[EN-AID] From top split: LEFT «והיה ערכך הזכר מבן עשרים שנה ועד בן ששים
+# שנה» / RIGHT «והיה ערכך חמשים שקל כסף בשקל הקדש». Derive claim from Hebrew
+# arms. Lev 27:3."
+m.step("Lev.27.3")
+# witness-tier presupposed read:
+# the_standing_predicate_and_the_boundary_year_rule on
+# vehayah_erkecha_hazachar — read, not installed
+m.witness_read("vehayah_erkecha_hazachar", "the_standing_predicate_and_the_boundary_year_rule",
+                cites=["Sifra, Bechukotai, Section 3 5", "Sifra, Bechukotai, Section 3 6", "Sifra, Bechukotai, Section 3 7", "Sifra, Bechukotai, Section 3 8", "Sifra, Bechukotai, Section 3 9", "Sifra, Bechukotai, Section 3 10", "Sifra, Bechukotai, Section 3 11", "Sifra, Bechukotai, Section 3 12", "Onkelos Lev 27:3"])
+
+# -------------------------- Lev.27.4 · COND_ואם ----------------------------
+# ואם נקבה הוא … והיה ערכך שלשים שקל
+# "[EN-AID] From top split: LEFT «ואם נקבה הוא» / RIGHT «והיה ערכך שלשים
+# שקל». Derive claim from Hebrew arms. Lev 27:4."
+m.step("Lev.27.4")
+
+# -------------------------- Lev.27.5 · COND_ואם ----------------------------
+# ואם מבן חמש שנים ועד בן עשרים שנה והיה ערכך הזכר עשרים שקלים … ולנקבה עשרת
+# שקלים
+# "[EN-AID] From top split: LEFT «ואם מבן חמש שנים ועד בן עשרים שנה והיה
+# ערכך הזכר עשרים שקלים» / RIGHT «ולנקבה עשרת שקלים». Derive claim from
+# Hebrew arms. Lev 27:5."
+m.step("Lev.27.5")
+
+# -------------------------- Lev.27.6 · COND_ואם ----------------------------
+# ואם מבן חדש ועד בן חמש שנים והיה ערכך הזכר חמשה שקלים כסף … ולנקבה ערכך
+# שלשת שקלים כסף
+# "[EN-AID] From top split: LEFT «ואם מבן חדש ועד בן חמש שנים והיה ערכך הזכר
+# חמשה שקלים כסף» / RIGHT «ולנקבה ערכך שלשת שקלים כסף». Derive claim from
+# Hebrew arms. Lev 27:6."
+m.step("Lev.27.6")
+
+# -------------------------- Lev.27.7 · COND_ואם ----------------------------
+# ואם מבן ששים שנה ומעלה אם זכר והיה ערכך חמשה עשר שקל … ולנקבה עשרה שקלים
+# "[EN-AID] From top split: LEFT «ואם מבן ששים שנה ומעלה אם זכר והיה ערכך
+# חמשה עשר שקל» / RIGHT «ולנקבה עשרה שקלים». Derive claim from Hebrew arms.
+# Lev 27:7."
+m.step("Lev.27.7")
+
+# -------------------------- Lev.27.8 · COND_ואם ----------------------------
+# ואם מך הוא מערכך והעמידו לפני הכהן והעריך אתו הכהן … על פי אשר תשיג יד
+# הנדר יעריכנו הכהן
+# "[EN-AID] From top split: LEFT «ואם מך הוא מערכך והעמידו לפני הכהן והעריך
+# אתו הכהן» / RIGHT «על פי אשר תשיג יד הנדר יעריכנו הכהן». Derive claim from
+# Hebrew arms. Lev 27:8."
+m.step("Lev.27.8")
+# witness-tier presupposed read: the_four_clocks on veim_mach_hu_meerkecha —
+# read, not installed
+m.witness_read("veim_mach_hu_meerkecha", "the_four_clocks",
+                cites=["Sifra, Bechukotai, Section 3 13", "Sifra, Bechukotai, Section 3 14", "Onkelos Lev 27:8"])
+
+# -------------------------- Lev.27.9 · COND_ואם ----------------------------
+# ואם בהמה אשר יקריבו ממנה קרבן ליהוה … כל אשר יתן ממנו ליהוה יהיה קדש
+# "[EN-AID] From top split: LEFT «ואם בהמה אשר יקריבו ממנה קרבן ליהוה» /
+# RIGHT «כל אשר יתן ממנו ליהוה יהיה קדש». Derive claim from Hebrew arms. Lev
+# 27:9."
+m.step("Lev.27.9")
+# witness-tier presupposed read: limb_sanctification_and_individuals_only on
+# veim_behemah_asher_yakrivu — read, not installed
+m.witness_read("veim_behemah_asher_yakrivu", "limb_sanctification_and_individuals_only",
+                cites=["Sifra, Bechukotai, Chapter 9 1", "Sifra, Bechukotai, Chapter 9 2", "Sifra, Bechukotai, Chapter 9 3", "Sifra, Bechukotai, Chapter 9 4", "Onkelos Lev 27:9"])
+
+# -------------------------- Lev.27.10 · ETNACHTA_SPLIT ---------------------
+# לא יחליפנו ולא ימיר אתו טוב ברע או רע בטוב … ואם המר ימיר בהמה בבהמה והיה
+# הוא ותמורתו יהיה קדש
+# "[EN-AID] From top split: LEFT «לא יחליפנו ולא ימיר אתו טוב ברע או רע
+# בטוב» / RIGHT «ואם המר ימיר בהמה בבהמה והיה הוא ותמורתו יהיה קדש». Derive
+# claim from Hebrew arms. Lev 27:10."
+m.step("Lev.27.10")
+# witness-tier presupposed read:
+# substitution_not_transitive_and_the_firstborn_argument on
+# lo_yachalifenu_velo_yamir — read, not installed
+m.witness_read("lo_yachalifenu_velo_yamir", "substitution_not_transitive_and_the_firstborn_argument",
+                cites=["Sifra, Bechukotai, Chapter 9 5", "Sifra, Bechukotai, Chapter 9 6", "Sifra, Bechukotai, Chapter 9 7", "Sifra, Bechukotai, Chapter 9 8", "Sifra, Bechukotai, Chapter 9 9", "Sifra, Bechukotai, Chapter 9 10", "Sifra, Bechukotai, Chapter 9 11", "Sifra, Bechukotai, Chapter 9 12", "Sifra, Bechukotai, Chapter 9 13", "Sifra, Bechukotai, Chapter 9 14", "Sifra, Bechukotai, Chapter 9 15", "Sifra, Bechukotai, Chapter 9 16", "Onkelos Lev 27:10"])
+
+# -------------------------- Lev.27.11 · COND_ואם ---------------------------
+# ואם כל בהמה טמאה אשר לא יקריבו ממנה קרבן ליהוה … והעמיד את הבהמה לפני הכהן
+# "[EN-AID] From top split: LEFT «ואם כל בהמה טמאה אשר לא יקריבו ממנה קרבן
+# ליהוה» / RIGHT «והעמיד את הבהמה לפני הכהן». Derive claim from Hebrew arms.
+# Lev 27:11."
+m.step("Lev.27.11")
+# witness-tier presupposed read: disqualified_consecrated_beasts on
+# veim_kol_behemah_temeah — read, not installed
+m.witness_read("veim_kol_behemah_temeah", "disqualified_consecrated_beasts",
+                cites=["Sifra, Bechukotai, Section 4 1", "Sifra, Bechukotai, Section 4 2", "Sifra, Bechukotai, Section 4 3", "Sifra, Bechukotai, Section 4 4", "Sifra, Bechukotai, Section 4 5", "Onkelos Lev 27:11"])
+
+# -------------------------- Lev.27.12 · ETNACHTA_SPLIT ---------------------
+# והעריך הכהן אתה בין טוב ובין רע … כערכך הכהן כן יהיה
+# "[EN-AID] From top split: LEFT «והעריך הכהן אתה בין טוב ובין רע» / RIGHT
+# «כערכך הכהן כן יהיה». Derive claim from Hebrew arms. Lev 27:12."
+m.step("Lev.27.12")
+# witness-tier presupposed read: not_by_estimate_and_the_bidding_ladder on
+# veherich_hakohen_otah — read, not installed
+m.witness_read("veherich_hakohen_otah", "not_by_estimate_and_the_bidding_ladder",
+                cites=["Sifra, Bechukotai, Section 4 6", "Onkelos Lev 27:12"])
+
+# -------------------------- Lev.27.13 · COND_ואם ---------------------------
+# ואם גאל יגאלנה … ויסף חמישתו על ערכך
+# "[EN-AID] From top split: LEFT «ואם גאל יגאלנה» / RIGHT «ויסף חמישתו על
+# ערכך». Derive claim from Hebrew arms. Lev 27:13."
+m.step("Lev.27.13")
+# witness-tier presupposed read: the_fifth_owner_only on veyasaf_chamishito
+# — read, not installed
+m.witness_read("veyasaf_chamishito", "the_fifth_owner_only",
+                cites=["Sifra, Bechukotai, Section 4 7", "Onkelos Lev 27:13"])
+
+# -------------------------- Lev.27.14 · COND_כי ----------------------------
+# ואיש כי יקדש את ביתו קדש ליהוה והעריכו הכהן בין טוב ובין רע … כאשר יעריך
+# אתו הכהן כן יקום
+# "[EN-AID] From top split: LEFT «ואיש כי יקדש את ביתו קדש ליהוה והעריכו
+# הכהן בין טוב ובין רע» / RIGHT «כאשר יעריך אתו הכהן כן יקום». Derive claim
+# from Hebrew arms. Lev 27:14."
+m.step("Lev.27.14")
+# witness-tier presupposed read:
+# unspecified_to_upkeep_and_the_owners_precedence on ish_ki_yakdish_et_beito
+# — read, not installed
+m.witness_read("ish_ki_yakdish_et_beito", "unspecified_to_upkeep_and_the_owners_precedence",
+                cites=["Sifra, Bechukotai, Section 4 8", "Sifra, Bechukotai, Section 4 9", "Sifra, Bechukotai, Chapter 10 1", "Sifra, Bechukotai, Chapter 10 2", "Onkelos Lev 27:14", "Onkelos Lev 27:15"])
+
+# -------------------------- Lev.27.15 · COND_ואם ---------------------------
+# ואם המקדיש יגאל את ביתו … ויסף חמישית כסף ערכך עליו והיה לו
+# "[EN-AID] From top split: LEFT «ואם המקדיש יגאל את ביתו» / RIGHT «ויסף
+# חמישית כסף ערכך עליו והיה לו». Derive claim from Hebrew arms. Lev 27:15."
+m.step("Lev.27.15")
+
+# -------------------------- Lev.27.16 · COND_ואם ---------------------------
+# ואם משדה אחזתו יקדיש איש ליהוה והיה ערכך לפי זרעו … זרע חמר שערים בחמשים
+# שקל כסף
+# "[EN-AID] From top split: LEFT «ואם משדה אחזתו יקדיש איש ליהוה והיה ערכך
+# לפי זרעו» / RIGHT «זרע חמר שערים בחמשים שקל כסף». Derive claim from Hebrew
+# arms. Lev 27:16."
+m.step("Lev.27.16")
+# witness-tier presupposed read: the_kings_decree on
+# zera_chomer_seorim_bachamishim — read, not installed
+m.witness_read("zera_chomer_seorim_bachamishim", "the_kings_decree",
+                cites=["Sifra, Bechukotai, Chapter 10 3", "Onkelos Lev 27:16"])
+
+# -------------------------- Lev.27.17 · COND_אם ----------------------------
+# אם משנת היבל יקדיש שדהו … כערכך יקום
+# "[EN-AID] From top split: LEFT «אם משנת היבל יקדיש שדהו» / RIGHT «כערכך
+# יקום». Derive claim from Hebrew arms. Lev 27:17."
+m.step("Lev.27.17")
+# witness-tier presupposed read:
+# the_jubilee_year_and_forty_nine_and_forty_nine on
+# im_mishnat_hayovel_yakdish — read, not installed
+m.witness_read("im_mishnat_hayovel_yakdish", "the_jubilee_year_and_forty_nine_and_forty_nine",
+                cites=["Sifra, Bechukotai, Chapter 10 4", "Sifra, Bechukotai, Chapter 10 5", "Sifra, Bechukotai, Chapter 10 6", "Onkelos Lev 27:17"])
+
+# -------------------------- Lev.27.18 · COND_ואם ---------------------------
+# ואם אחר היבל יקדיש שדהו וחשב לו הכהן את הכסף על פי השנים הנו … ונגרע מערכך
+# "[EN-AID] From top split: LEFT «ואם אחר היבל יקדיש שדהו וחשב לו הכהן את
+# הכסף על פי השנים הנותרת עד שנת היבל» / RIGHT «ונגרע מערכך». Derive claim
+# from Hebrew arms. Lev 27:18."
+m.step("Lev.27.18")
+# witness-tier presupposed read:
+# the_floors_all_at_once_and_the_sanctuarys_side on
+# vechishav_lo_hakohen_et_hakesef — read, not installed
+m.witness_read("vechishav_lo_hakohen_et_hakesef", "the_floors_all_at_once_and_the_sanctuarys_side",
+                cites=["Sifra, Bechukotai, Chapter 10 7", "Sifra, Bechukotai, Chapter 10 8", "Sifra, Bechukotai, Chapter 10 9", "Sifra, Bechukotai, Chapter 10 10", "Onkelos Lev 27:18"])
+
+# -------------------------- Lev.27.19 · COND_ואם ---------------------------
+# ואם גאל יגאל את השדה המקדיש אתו … ויסף חמשית כסף ערכך עליו וקם לו
+# "[EN-AID] From top split: LEFT «ואם גאל יגאל את השדה המקדיש אתו» / RIGHT
+# «ויסף חמשית כסף ערכך עליו וקם לו». Derive claim from Hebrew arms. Lev
+# 27:19."
+m.step("Lev.27.19")
+# witness-tier presupposed read: redeem_any_size_paid on
+# veim_gaol_yigal_et_hasadeh — read, not installed
+m.witness_read("veim_gaol_yigal_et_hasadeh", "redeem_any_size_paid",
+                cites=["Sifra, Bechukotai, Chapter 10 11", "Onkelos Lev 27:19"])
+
+# -------------------------- Lev.27.20 · COND_ואם ---------------------------
+# ואם לא יגאל את השדה ואם מכר את השדה לאיש אחר … לא יגאל עוד
+# "[EN-AID] From top split: LEFT «ואם לא יגאל את השדה ואם מכר את השדה לאיש
+# אחר» / RIGHT «לא יגאל עוד». Derive claim from Hebrew arms. Lev 27:20."
+m.step("Lev.27.20")
+# witness-tier presupposed read: son_in_brother_out on
+# veim_lo_yigal_et_hasadeh — read, not installed
+m.witness_read("veim_lo_yigal_et_hasadeh", "son_in_brother_out",
+                cites=["Sifra, Bechukotai, Chapter 10 12", "Sifra, Bechukotai, Chapter 10 13", "Onkelos Lev 27:20"])
+
+# -------------------------- Lev.27.21 · ETNACHTA_SPLIT ---------------------
+# והיה השדה בצאתו ביבל קדש ליהוה כשדה החרם … לכהן תהיה אחזתו
+# "[EN-AID] From top split: LEFT «והיה השדה בצאתו ביבל קדש ליהוה כשדה החרם»
+# / RIGHT «לכהן תהיה אחזתו». Derive claim from Hebrew arms. Lev 27:21."
+m.step("Lev.27.21")
+# witness-tier presupposed read: the_abandoned_field_and_all_brother_priests
+# on vehayah_hasadeh_betzeto_bayovel — read, not installed
+m.witness_read("vehayah_hasadeh_betzeto_bayovel", "the_abandoned_field_and_all_brother_priests",
+                cites=["Sifra, Bechukotai, Chapter 11 1", "Sifra, Bechukotai, Chapter 11 2", "Sifra, Bechukotai, Chapter 11 3", "Onkelos Lev 27:21"])
+
+# -------------------------- Lev.27.22 · COND_ואם ---------------------------
+# ואם את שדה מקנתו אשר לא משדה אחזתו … יקדיש ליהוה
+# "[EN-AID] From top split: LEFT «ואם את שדה מקנתו אשר לא משדה אחזתו» /
+# RIGHT «יקדיש ליהוה». Derive claim from Hebrew arms. Lev 27:22."
+m.step("Lev.27.22")
+# witness-tier presupposed read: the_purchased_field_and_that_day on
+# veim_et_sdeh_miknato — read, not installed
+m.witness_read("veim_et_sdeh_miknato", "the_purchased_field_and_that_day",
+                cites=["Sifra, Bechukotai, Chapter 11 4", "Sifra, Bechukotai, Chapter 11 5", "Sifra, Bechukotai, Chapter 11 6", "Onkelos Lev 27:22", "Onkelos Lev 27:23"])
+
+# -------------------------- Lev.27.23 · ETNACHTA_SPLIT ---------------------
+# וחשב לו הכהן את מכסת הערכך עד שנת היבל … ונתן את הערכך ביום ההוא קדש ליהוה
+# "[EN-AID] From top split: LEFT «וחשב לו הכהן את מכסת הערכך עד שנת היבל» /
+# RIGHT «ונתן את הערכך ביום ההוא קדש ליהוה». Derive claim from Hebrew arms.
+# Lev 27:23."
+m.step("Lev.27.23")
+
+# -------------------------- Lev.27.24 · ETNACHTA_SPLIT ---------------------
+# בשנת היובל ישוב השדה לאשר קנהו מאתו … לאשר לו אחזת הארץ
+# "[EN-AID] From top split: LEFT «בשנת היובל ישוב השדה לאשר קנהו מאתו» /
+# RIGHT «לאשר לו אחזת הארץ». Derive claim from Hebrew arms. Lev 27:24."
+m.step("Lev.27.24")
+# witness-tier presupposed read: the_sela_floor_and_the_twenty_gerah on
+# vechol_erkecha_yihyeh_beshekel_hakodesh — read, not installed
+m.witness_read("vechol_erkecha_yihyeh_beshekel_hakodesh", "the_sela_floor_and_the_twenty_gerah",
+                cites=["Sifra, Bechukotai, Chapter 11 7", "Sifra, Bechukotai, Chapter 11 8", "Onkelos Lev 27:24", "Onkelos Lev 27:25"])
+
+# -------------------------- Lev.27.25 · ETNACHTA_SPLIT ---------------------
+# וכל ערכך יהיה בשקל הקדש … עשרים גרה יהיה השקל
+# "[EN-AID] From top split: LEFT «וכל ערכך יהיה בשקל הקדש» / RIGHT «עשרים
+# גרה יהיה השקל». Derive claim from Hebrew arms. Lev 27:25."
+m.step("Lev.27.25")
+
+# -------------------------- Lev.27.26 · ETNACHTA_SPLIT ---------------------
+# אך בכור אשר יבכר ליהוה בבהמה לא יקדיש איש אתו … אם שור אם שה ליהוה הוא
+# "[EN-AID] From top split: LEFT «אך בכור אשר יבכר ליהוה בבהמה לא יקדיש איש
+# אתו» / RIGHT «אם שור אם שה ליהוה הוא». Derive claim from Hebrew arms. Lev
+# 27:26."
+m.step("Lev.27.26")
+# witness-tier presupposed read:
+# outwitting_the_firstborn_and_no_change_of_holiness on
+# ach_bechor_lo_yakdish — read, not installed
+m.witness_read("ach_bechor_lo_yakdish", "outwitting_the_firstborn_and_no_change_of_holiness",
+                cites=["Sifra, Bechukotai, Section 5 1", "Sifra, Bechukotai, Section 5 2", "Sifra, Bechukotai, Section 5 3", "Sifra, Bechukotai, Section 5 4", "Sifra, Bechukotai, Section 5 5", "Sifra, Bechukotai, Section 5 6", "Sifra, Bechukotai, Section 5 7", "Sifra, Bechukotai, Section 5 8", "Sifra, Bechukotai, Section 5 9", "Onkelos Lev 27:26"])
+
+# -------------------------- Lev.27.27 · COND_ואם ---------------------------
+# ואם בבהמה הטמאה ופדה בערכך ויסף חמשתו עליו … ואם לא יגאל ונמכר בערכך
+# "[EN-AID] From top split: LEFT «ואם בבהמה הטמאה ופדה בערכך ויסף חמשתו
+# עליו» / RIGHT «ואם לא יגאל ונמכר בערכך». Derive claim from Hebrew arms.
+# Lev 27:27."
+m.step("Lev.27.27")
+# witness-tier presupposed read: assessed_in_money_and_five on
+# veim_babehemah_hatemeah_ufadah — read, not installed
+m.witness_read("veim_babehemah_hatemeah_ufadah", "assessed_in_money_and_five",
+                cites=["Sifra, Bechukotai, Chapter 12 1", "Sifra, Bechukotai, Chapter 12 2", "Onkelos Lev 27:27"])
+
+# -------------------------- Lev.27.28 · ETNACHTA_SPLIT ---------------------
+# אך כל חרם אשר יחרם איש ליהוה מכל אשר לו מאדם ובהמה ומשדה אחז … כל חרם קדש
+# קדשים הוא ליהוה
+# "[EN-AID] From top split: LEFT «אך כל חרם אשר יחרם איש ליהוה מכל אשר לו
+# מאדם ובהמה ומשדה אחזתו לא ימכר ולא יגאל» / RIGHT «כל חרם קדש קדשים הוא
+# ליהוה». Derive claim from Hebrew arms. Lev 27:28."
+m.step("Lev.27.28")
+# witness-tier presupposed read:
+# devoting_not_all_and_the_priests_levites_dispute on ach_kol_cherem — read,
+# not installed
+m.witness_read("ach_kol_cherem", "devoting_not_all_and_the_priests_levites_dispute",
+                cites=["Sifra, Bechukotai, Chapter 12 3", "Sifra, Bechukotai, Chapter 12 4", "Sifra, Bechukotai, Chapter 12 5", "Sifra, Bechukotai, Chapter 12 6", "Onkelos Lev 27:28"])
+
+# -------------------------- Lev.27.29 · ETNACHTA_SPLIT ---------------------
+# כל חרם אשר יחרם מן האדם לא יפדה … מות יומת
+# "[EN-AID] From top split: LEFT «כל חרם אשר יחרם מן האדם לא יפדה» / RIGHT
+# «מות יומת». Derive claim from Hebrew arms. Lev 27:29."
+m.step("Lev.27.29")
+# witness-tier presupposed read: the_condemneds_valuation on
+# kol_cherem_asher_yocharam_min_haadam — read, not installed
+m.witness_read("kol_cherem_asher_yocharam_min_haadam", "the_condemneds_valuation",
+                cites=["Sifra, Bechukotai, Chapter 12 7", "Sifra, Bechukotai, Chapter 12 8", "Onkelos Lev 27:29"])
+
+# -------------------------- Lev.27.30 · ETNACHTA_SPLIT ---------------------
+# וכל מעשר הארץ מזרע הארץ מפרי העץ ליהוה הוא … קדש ליהוה
+# "[EN-AID] From top split: LEFT «וכל מעשר הארץ מזרע הארץ מפרי העץ ליהוה
+# הוא» / RIGHT «קדש ליהוה». Derive claim from Hebrew arms. Lev 27:30."
+m.step("Lev.27.30")
+# witness-tier presupposed read: tithes_domain_and_redemption on
+# vechol_maasar_haaretz — read, not installed
+m.witness_read("vechol_maasar_haaretz", "tithes_domain_and_redemption",
+                cites=["Sifra, Bechukotai, Chapter 12 9", "Sifra, Bechukotai, Chapter 12 10", "Onkelos Lev 27:30", "Onkelos Lev 27:31"])
+
+# -------------------------- Lev.27.31 · COND_ואם ---------------------------
+# ואם גאל יגאל איש ממעשרו … חמשיתו יסף עליו
+# "[EN-AID] From top split: LEFT «ואם גאל יגאל איש ממעשרו» / RIGHT «חמשיתו
+# יסף עליו». Derive claim from Hebrew arms. Lev 27:31."
+m.step("Lev.27.31")
+
+# -------------------------- Lev.27.32 · ETNACHTA_SPLIT ---------------------
+# וכל מעשר בקר וצאן כל אשר יעבר תחת השבט … העשירי יהיה קדש ליהוה
+# "[EN-AID] From top split: LEFT «וכל מעשר בקר וצאן כל אשר יעבר תחת השבט» /
+# RIGHT «העשירי יהיה קדש ליהוה». Derive claim from Hebrew arms. Lev 27:32."
+m.step("Lev.27.32")
+# witness-tier presupposed read: the_passing_predicate_and_the_error_rule on
+# kol_asher_yaavor_tachat_hashavet — read, not installed
+m.witness_read("kol_asher_yaavor_tachat_hashavet", "the_passing_predicate_and_the_error_rule",
+                cites=["Sifra, Bechukotai, Chapter 12 11", "Sifra, Bechukotai, Chapter 12 12", "Sifra, Bechukotai, Chapter 12 13", "Sifra, Bechukotai, Chapter 13 1", "Sifra, Bechukotai, Chapter 13 2", "Sifra, Bechukotai, Chapter 13 3", "Onkelos Lev 27:32"])
+
+# -------------------------- Lev.27.33 · ETNACHTA_SPLIT ---------------------
+# לא יבקר בין טוב לרע ולא ימירנו … ואם המר ימירנו והיה הוא ותמורתו יהיה קדש
+# לא יגאל
+# "[EN-AID] From top split: LEFT «לא יבקר בין טוב לרע ולא ימירנו» / RIGHT
+# «ואם המר ימירנו והיה הוא ותמורתו יהיה קדש לא יגאל». Derive claim from
+# Hebrew arms. Lev 27:33."
+m.step("Lev.27.33")
+# witness-tier presupposed read: lashes_and_sold_versus_neither on
+# lo_yevaker_bein_tov_lara — read, not installed
+m.witness_read("lo_yevaker_bein_tov_lara", "lashes_and_sold_versus_neither",
+                cites=["Sifra, Bechukotai, Chapter 13 4", "Sifra, Bechukotai, Chapter 13 5", "Sifra, Bechukotai, Chapter 13 6", "Onkelos Lev 27:33"])
+
+# -------------------------- Lev.27.34 · ETNACHTA_SPLIT ---------------------
+# אלה המצות אשר צוה יהוה את משה אל בני ישראל … בהר סיני
+# "[EN-AID] From top split: LEFT «אלה המצות אשר צוה יהוה את משה אל בני
+# ישראל» / RIGHT «בהר סיני». Derive claim from Hebrew arms. Lev 27:34."
+m.step("Lev.27.34")
+# witness-tier presupposed read: no_prophet_may_innovate on eleh_hamitzvot —
+# read, not installed
+m.witness_read("eleh_hamitzvot", "no_prophet_may_innovate",
+                cites=["Sifra, Bechukotai, Chapter 13 7", "Sifra, Bechukotai, Chapter 13 8", "Onkelos Lev 27:34"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ish_ki_yafli_neder_beerkecha', 'the_valuer_valued_split_and_the_delay_import'), ('vehayah_erkecha_hazachar', 'the_standing_predicate_and_the_boundary_year_rule'), ('veim_mach_hu_meerkecha', 'the_four_clocks'), ('veim_behemah_asher_yakrivu', 'limb_sanctification_and_individuals_only'), ('lo_yachalifenu_velo_yamir', 'substitution_not_transitive_and_the_firstborn_argument'), ('veim_kol_behemah_temeah', 'disqualified_consecrated_beasts'), ('veherich_hakohen_otah', 'not_by_estimate_and_the_bidding_ladder'), ('veyasaf_chamishito', 'the_fifth_owner_only'), ('ish_ki_yakdish_et_beito', 'unspecified_to_upkeep_and_the_owners_precedence'), ('zera_chomer_seorim_bachamishim', 'the_kings_decree'), ('im_mishnat_hayovel_yakdish', 'the_jubilee_year_and_forty_nine_and_forty_nine'), ('vechishav_lo_hakohen_et_hakesef', 'the_floors_all_at_once_and_the_sanctuarys_side'), ('veim_gaol_yigal_et_hasadeh', 'redeem_any_size_paid'), ('veim_lo_yigal_et_hasadeh', 'son_in_brother_out'), ('vehayah_hasadeh_betzeto_bayovel', 'the_abandoned_field_and_all_brother_priests'), ('veim_et_sdeh_miknato', 'the_purchased_field_and_that_day'), ('vechol_erkecha_yihyeh_beshekel_hakodesh', 'the_sela_floor_and_the_twenty_gerah'), ('ach_bechor_lo_yakdish', 'outwitting_the_firstborn_and_no_change_of_holiness'), ('veim_babehemah_hatemeah_ufadah', 'assessed_in_money_and_five'), ('ach_kol_cherem', 'devoting_not_all_and_the_priests_levites_dispute'), ('kol_cherem_asher_yocharam_min_haadam', 'the_condemneds_valuation'), ('vechol_maasar_haaretz', 'tithes_domain_and_redemption'), ('kol_asher_yaavor_tachat_hashavet', 'the_passing_predicate_and_the_error_rule'), ('lo_yevaker_bein_tov_lara', 'lashes_and_sold_versus_neither'), ('eleh_hamitzvot', 'no_prophet_may_innovate')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifra, Bechukotai, Section 3 1', 'Sifra, Bechukotai, Section 3 2', 'Sifra, Bechukotai, Section 3 3', 'Sifra, Bechukotai, Section 3 4', 'Onkelos Lev 27:2']
+    assert all('the_valuer_valued_split_and_the_delay_import' not in f for f in m.WORLD["facts"])
+    assert 'ish_ki_yafli_neder_beerkecha' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Bechukotai, Section 3 5', 'Sifra, Bechukotai, Section 3 6', 'Sifra, Bechukotai, Section 3 7', 'Sifra, Bechukotai, Section 3 8', 'Sifra, Bechukotai, Section 3 9', 'Sifra, Bechukotai, Section 3 10', 'Sifra, Bechukotai, Section 3 11', 'Sifra, Bechukotai, Section 3 12', 'Onkelos Lev 27:3']
+    assert all('the_standing_predicate_and_the_boundary_year_rule' not in f for f in m.WORLD["facts"])
+    assert 'vehayah_erkecha_hazachar' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Bechukotai, Section 3 13', 'Sifra, Bechukotai, Section 3 14', 'Onkelos Lev 27:8']
+    assert all('the_four_clocks' not in f for f in m.WORLD["facts"])
+    assert 'veim_mach_hu_meerkecha' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Bechukotai, Chapter 9 1', 'Sifra, Bechukotai, Chapter 9 2', 'Sifra, Bechukotai, Chapter 9 3', 'Sifra, Bechukotai, Chapter 9 4', 'Onkelos Lev 27:9']
+    assert all('limb_sanctification_and_individuals_only' not in f for f in m.WORLD["facts"])
+    assert 'veim_behemah_asher_yakrivu' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Bechukotai, Chapter 9 5', 'Sifra, Bechukotai, Chapter 9 6', 'Sifra, Bechukotai, Chapter 9 7', 'Sifra, Bechukotai, Chapter 9 8', 'Sifra, Bechukotai, Chapter 9 9', 'Sifra, Bechukotai, Chapter 9 10', 'Sifra, Bechukotai, Chapter 9 11', 'Sifra, Bechukotai, Chapter 9 12', 'Sifra, Bechukotai, Chapter 9 13', 'Sifra, Bechukotai, Chapter 9 14', 'Sifra, Bechukotai, Chapter 9 15', 'Sifra, Bechukotai, Chapter 9 16', 'Onkelos Lev 27:10']
+    assert all('substitution_not_transitive_and_the_firstborn_argument' not in f for f in m.WORLD["facts"])
+    assert 'lo_yachalifenu_velo_yamir' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Bechukotai, Section 4 1', 'Sifra, Bechukotai, Section 4 2', 'Sifra, Bechukotai, Section 4 3', 'Sifra, Bechukotai, Section 4 4', 'Sifra, Bechukotai, Section 4 5', 'Onkelos Lev 27:11']
+    assert all('disqualified_consecrated_beasts' not in f for f in m.WORLD["facts"])
+    assert 'veim_kol_behemah_temeah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Bechukotai, Section 4 6', 'Onkelos Lev 27:12']
+    assert all('not_by_estimate_and_the_bidding_ladder' not in f for f in m.WORLD["facts"])
+    assert 'veherich_hakohen_otah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Bechukotai, Section 4 7', 'Onkelos Lev 27:13']
+    assert all('the_fifth_owner_only' not in f for f in m.WORLD["facts"])
+    assert 'veyasaf_chamishito' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Bechukotai, Section 4 8', 'Sifra, Bechukotai, Section 4 9', 'Sifra, Bechukotai, Chapter 10 1', 'Sifra, Bechukotai, Chapter 10 2', 'Onkelos Lev 27:14', 'Onkelos Lev 27:15']
+    assert all('unspecified_to_upkeep_and_the_owners_precedence' not in f for f in m.WORLD["facts"])
+    assert 'ish_ki_yakdish_et_beito' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Bechukotai, Chapter 10 3', 'Onkelos Lev 27:16']
+    assert all('the_kings_decree' not in f for f in m.WORLD["facts"])
+    assert 'zera_chomer_seorim_bachamishim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Sifra, Bechukotai, Chapter 10 4', 'Sifra, Bechukotai, Chapter 10 5', 'Sifra, Bechukotai, Chapter 10 6', 'Onkelos Lev 27:17']
+    assert all('the_jubilee_year_and_forty_nine_and_forty_nine' not in f for f in m.WORLD["facts"])
+    assert 'im_mishnat_hayovel_yakdish' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Sifra, Bechukotai, Chapter 10 7', 'Sifra, Bechukotai, Chapter 10 8', 'Sifra, Bechukotai, Chapter 10 9', 'Sifra, Bechukotai, Chapter 10 10', 'Onkelos Lev 27:18']
+    assert all('the_floors_all_at_once_and_the_sanctuarys_side' not in f for f in m.WORLD["facts"])
+    assert 'vechishav_lo_hakohen_et_hakesef' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[12]["cites"] == ['Sifra, Bechukotai, Chapter 10 11', 'Onkelos Lev 27:19']
+    assert all('redeem_any_size_paid' not in f for f in m.WORLD["facts"])
+    assert 'veim_gaol_yigal_et_hasadeh' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[13]["cites"] == ['Sifra, Bechukotai, Chapter 10 12', 'Sifra, Bechukotai, Chapter 10 13', 'Onkelos Lev 27:20']
+    assert all('son_in_brother_out' not in f for f in m.WORLD["facts"])
+    assert 'veim_lo_yigal_et_hasadeh' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[14]["cites"] == ['Sifra, Bechukotai, Chapter 11 1', 'Sifra, Bechukotai, Chapter 11 2', 'Sifra, Bechukotai, Chapter 11 3', 'Onkelos Lev 27:21']
+    assert all('the_abandoned_field_and_all_brother_priests' not in f for f in m.WORLD["facts"])
+    assert 'vehayah_hasadeh_betzeto_bayovel' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[15]["cites"] == ['Sifra, Bechukotai, Chapter 11 4', 'Sifra, Bechukotai, Chapter 11 5', 'Sifra, Bechukotai, Chapter 11 6', 'Onkelos Lev 27:22', 'Onkelos Lev 27:23']
+    assert all('the_purchased_field_and_that_day' not in f for f in m.WORLD["facts"])
+    assert 'veim_et_sdeh_miknato' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[16]["cites"] == ['Sifra, Bechukotai, Chapter 11 7', 'Sifra, Bechukotai, Chapter 11 8', 'Onkelos Lev 27:24', 'Onkelos Lev 27:25']
+    assert all('the_sela_floor_and_the_twenty_gerah' not in f for f in m.WORLD["facts"])
+    assert 'vechol_erkecha_yihyeh_beshekel_hakodesh' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[17]["cites"] == ['Sifra, Bechukotai, Section 5 1', 'Sifra, Bechukotai, Section 5 2', 'Sifra, Bechukotai, Section 5 3', 'Sifra, Bechukotai, Section 5 4', 'Sifra, Bechukotai, Section 5 5', 'Sifra, Bechukotai, Section 5 6', 'Sifra, Bechukotai, Section 5 7', 'Sifra, Bechukotai, Section 5 8', 'Sifra, Bechukotai, Section 5 9', 'Onkelos Lev 27:26']
+    assert all('outwitting_the_firstborn_and_no_change_of_holiness' not in f for f in m.WORLD["facts"])
+    assert 'ach_bechor_lo_yakdish' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[18]["cites"] == ['Sifra, Bechukotai, Chapter 12 1', 'Sifra, Bechukotai, Chapter 12 2', 'Onkelos Lev 27:27']
+    assert all('assessed_in_money_and_five' not in f for f in m.WORLD["facts"])
+    assert 'veim_babehemah_hatemeah_ufadah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[19]["cites"] == ['Sifra, Bechukotai, Chapter 12 3', 'Sifra, Bechukotai, Chapter 12 4', 'Sifra, Bechukotai, Chapter 12 5', 'Sifra, Bechukotai, Chapter 12 6', 'Onkelos Lev 27:28']
+    assert all('devoting_not_all_and_the_priests_levites_dispute' not in f for f in m.WORLD["facts"])
+    assert 'ach_kol_cherem' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[20]["cites"] == ['Sifra, Bechukotai, Chapter 12 7', 'Sifra, Bechukotai, Chapter 12 8', 'Onkelos Lev 27:29']
+    assert all('the_condemneds_valuation' not in f for f in m.WORLD["facts"])
+    assert 'kol_cherem_asher_yocharam_min_haadam' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[21]["cites"] == ['Sifra, Bechukotai, Chapter 12 9', 'Sifra, Bechukotai, Chapter 12 10', 'Onkelos Lev 27:30', 'Onkelos Lev 27:31']
+    assert all('tithes_domain_and_redemption' not in f for f in m.WORLD["facts"])
+    assert 'vechol_maasar_haaretz' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[22]["cites"] == ['Sifra, Bechukotai, Chapter 12 11', 'Sifra, Bechukotai, Chapter 12 12', 'Sifra, Bechukotai, Chapter 12 13', 'Sifra, Bechukotai, Chapter 13 1', 'Sifra, Bechukotai, Chapter 13 2', 'Sifra, Bechukotai, Chapter 13 3', 'Onkelos Lev 27:32']
+    assert all('the_passing_predicate_and_the_error_rule' not in f for f in m.WORLD["facts"])
+    assert 'kol_asher_yaavor_tachat_hashavet' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[23]["cites"] == ['Sifra, Bechukotai, Chapter 13 4', 'Sifra, Bechukotai, Chapter 13 5', 'Sifra, Bechukotai, Chapter 13 6', 'Onkelos Lev 27:33']
+    assert all('lashes_and_sold_versus_neither' not in f for f in m.WORLD["facts"])
+    assert 'lo_yevaker_bein_tov_lara' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[24]["cites"] == ['Sifra, Bechukotai, Chapter 13 7', 'Sifra, Bechukotai, Chapter 13 8', 'Onkelos Lev 27:34']
+    assert all('no_prophet_may_innovate' not in f for f in m.WORLD["facts"])
+    assert 'eleh_hamitzvot' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
 
 

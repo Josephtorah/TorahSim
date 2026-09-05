@@ -1,0 +1,1124 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>lev_22_acceptable_offerings — derived logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/lev_22_acceptable_offerings?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Acceptable offerings: no blemish; freewill vs vow; desecration ban (22:17–33) <span class='badge frozen'>MODEL · REV 1 · GATES GREEN</span></h1>
+<div class="meta">unit <b>lev_22_acceptable_offerings</b> · Leviticus 22:17-33 · derive tree_derived_v1 · phase F</div>
+<div class="meta"><a href="/#Lev/22/17">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">תָּמִים — מוּם לֹא תַקְרִיבוּ</span> · <i>tamim — mum lo takrivu</i> · Whole — do not bring a blemish</p>
+<div class="note">Tree-derived v1: each verse top binary split (left/right) grounds one STEP. Not multi-verse English smear. Not full TIR yet.</div>
+<div class="meta">confidence: hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Reprocess lev_22_acceptable_offerings (22:17-33, 17 vv) tree-first phase F.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Trees</td><td>Every verse via taamim_tree_parse.py v1; full tree_ascii recorded.</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Tree → steps</td><td>One STEP per verse citing left/right top-split arms. English [EN-AID] only.</td><td>hypothesis</td></tr>
+<tr><td><b>D</b></td><td>Oral dual-track</td><td>Sifra samples when available; dual-track only; never silent-merge.</td><td>hypothesis</td></tr>
+<tr><td><b>E</b></td><td>Emor derivation 2026-09-05</td><td>Emor sweep, fourth unit. Declared as above (ledger lev_22_holy_food_offerings_2026-09-05.md): the vow-class census, the five-count with the verb&#x27;s two jobs, the beast&#x27;s blemish row with the cross-list transfer, sarua and kalut, the castration ban with the foreigner&#x27;s hand, the birth-quality list, it-and-its- young with the female rule, the four periods with the day-boundary fork, the reassignment to slaughter, and keep-is-Mishnah with the sanctified Name — seated as claims LV22B-01..10.</td><td>tested</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Lv_22_17 · Lev.22.17 · <span class='expr'>TREE_CLAIM</span></h3>
+<p><span class="he">וידבר יהוה … אל משה לאמר</span> · <i>vydbr yhvh … &#x27;l mshh l&#x27;mr</i> · From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive claim from Hebrew arms. Lev 22:17.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וידבר יהוה</span> · <i>vydbr yhvh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">אל משה לאמר</span> · <i>&#x27;l mshh l&#x27;mr</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=tifcha; maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_18 · Lev.22.18 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">דבר אל אהרן ואל בניו ואל כל בני ישראל ואמרת אלהם … איש איש מבית ישראל ומן הגר בישראל אשר יקריב קרבנו לכל נדריהם</span> · <i>dbr &#x27;l &#x27;hrn v&#x27;l bnyv v&#x27;l kl bny yshr&#x27;l v&#x27;mrt &#x27;lhm … &#x27;ysh &#x27;ysh mbyt yshr&#x27;l vmn hgr byshr&#x27;l &#x27;shr yqryb q</i> · From top split: LEFT «דבר אל אהרן ואל בניו ואל כל בני ישראל ואמרת אלהם» / RIGHT «איש איש מבית ישראל ומן הגר בישראל אשר יקריב קרבנו לכל נדריהם ולכל נדבותם אשר יקר». Derive claim from Hebrew arms. Lev 22:18.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">דבר אל אהרן ואל בניו ואל כל בני ישראל ואמרת אלהם</span> · <i>dbr &#x27;l &#x27;hrn v&#x27;l bnyv v&#x27;l kl bny yshr&#x27;l v&#x27;mrt &#x27;lhm</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">איש איש מבית ישראל ומן הגר בישראל אשר יקריב קרבנו לכל נדריהם ולכל נדבותם אשר יקריבו ליהוה לעלה</span> · <i>&#x27;ysh &#x27;ysh mbyt yshr&#x27;l vmn hgr byshr&#x27;l &#x27;shr yqryb qrbnv lkl ndryhm vlkl ndbvtm &#x27;shr yqrybv lyhvh l&#x27;lh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(ish_ish_mibeit_yisrael, the_vow_class_census)</span><br><span class="gloss">= WITNESS-READ(man-man-mibeit-yisrael, the-vow-class-census)</span><br>THE VOW-CLASS CENSUS [claim LV22B-01]. &#x27;Israel,&#x27; &#x27;convert,&#x27; &#x27;THE convert&#x27; = converts&#x27; wives, &#x27;in Israel&#x27; = women and slaves; &#x27;man, man&#x27; — GENTILES vow vows and freewill offerings like Israel; from &#x27;burnt offering&#x27; the class widens by &#x27;ALL their vows&#x27; and &#x27;ALL their freewill offerings&#x27; — shelamim, todah, birds, grain offerings, wine, frankincense, wood; the NAZIRITE excluded by &#x27;for a burnt offering&#x27; (R. Akiva; R. Yosei HaGelili: only the burnt offering is here); &#x27;for your acceptance&#x27; — NO COMPULSION of the public; wholeness and maleness in BEASTS not BIRDS — yet a bird with a dried wing, a gouged eye, a cut leg is out (&#x27;from the bird&#x27;). Onkelos: &#x27;for FAVOR for you.&#x27;
+</td><td>—</td><td class='cite'>Sifra, Emor, Section 7 1, Sifra, Emor, Section 7 2, Onkelos Lev 22:18, Onkelos Lev 22:19</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_19 · Lev.22.19 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he"> … תמים זכר בבקר בכשבים ובעזים</span> · <i> … tmym zkr bbqr bkshbym vb&#x27;zym</i> · From top split: LEFT «» / RIGHT «תמים זכר בבקר בכשבים ובעזים». Derive claim from Hebrew arms. Lev 22:19.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br>Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">תמים זכר בבקר בכשבים ובעזים</span> · <i>tmym zkr bbqr bkshbym vb&#x27;zym</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=n/a; maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_20 · Lev.22.20 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">כל אשר בו מום לא תקריבו … כי לא לרצון יהיה לכם</span> · <i>kl &#x27;shr bv mvm l&#x27; tqrybv … ky l&#x27; lrtzvn yhyh lkm</i> · From top split: LEFT «כל אשר בו מום לא תקריבו» / RIGHT «כי לא לרצון יהיה לכם». Derive claim from Hebrew arms. Lev 22:20.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כל אשר בו מום לא תקריבו</span> · <i>kl &#x27;shr bv mvm l&#x27; tqrybv</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">כי לא לרצון יהיה לכם</span> · <i>ky l&#x27; lrtzvn yhyh lkm</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(kol_asher_bo_mum_lo_takrivu, the_five_count_and_the_two_jobs)</span><br><span class="gloss">= WITNESS-READ(all-which-in-it-mum-not-takrivu, the-five-count-and-the-two-jobs)</span><br>THE FIVE-COUNT AND THE VERB&#x27;S TWO JOBS [claim LV22B-02]. A PASSING blemish included; &#x27;do not offer&#x27; at 22:20 = the ban on CONSECRATING (slaughter is banned below); THE FIVE-COUNT — consecrate, slaughter, throw the blood, burn the fat, burn part (R. Yosei b. R. Yehuda: a sixth, receive the blood); &#x27;not for acceptance&#x27; — it does not APPEASE. &#x27;A man&#x27; — the INDIVIDUAL brings a freewill shelamim, the PUBLIC does not, partners do; the CLASS SWEEP — burnt offering, todah, the mother&#x27;s and nazirite&#x27;s offerings, sin and guilt offerings, the tithe, offspring and substitutes; &#x27;whole for acceptance&#x27; positive, &#x27;no blemish shall be&#x27; negative; FELL and broke — no transgression (&#x27;do not PUT a blemish&#x27;); the bekhor with a blood-rush — three arms recorded. Onkelos: &#x27;to SPECIFY a vow.&#x27;
+</td><td>—</td><td class='cite'>Sifra, Emor, Section 7 3, Sifra, Emor, Section 7 4, Sifra, Emor, Section 7 5, Sifra, Emor, Section 7 6, Sifra, Emor, Section 7 7, Sifra, Emor, Section 7 8, Sifra, Emor, Section 7 9, Sifra, Emor, Section 7 10, Onkelos Lev 22:21</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_21 · Lev.22.21 · <span class='expr'>COND_כי</span></h3>
+<p><span class="he">ואיש כי יקריב זבח שלמים ליהוה לפלא נדר או לנדבה בבקר או בצאן … תמים יהיה לרצון כל מום לא יהיה בו</span> · <i>v&#x27;ysh ky yqryb zbch shlmym lyhvh lpl&#x27; ndr &#x27;v lndbh … tmym yhyh lrtzvn kl mvm l&#x27; yhyh bv</i> · From top split: LEFT «ואיש כי יקריב זבח שלמים ליהוה לפלא נדר או לנדבה בבקר או בצאן» / RIGHT «תמים יהיה לרצון כל מום לא יהיה בו». Derive claim from Hebrew arms. Lev 22:21.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואיש כי יקריב זבח שלמים ליהוה לפלא נדר או לנדבה בבקר או בצאן</span> · <i>v&#x27;ysh ky yqryb zbch shlmym lyhvh lpl&#x27; ndr &#x27;v lndbh bbqr &#x27;v btz&#x27;n</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">תמים יהיה לרצון כל מום לא יהיה בו</span> · <i>tmym yhyh lrtzvn kl mvm l&#x27; yhyh bv</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_22 · Lev.22.22 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">עורת או שבור או חרוץ או יבלת או גרב או ילפת לא תקריבו אלה לי … ואשה לא תתנו מהם על המזבח ליהוה</span> · <i>&#x27;vrt &#x27;v shbvr &#x27;v chrvtz &#x27;v yblt &#x27;v grb &#x27;v ylpt l&#x27;  … v&#x27;shh l&#x27; ttnv mhm &#x27;l hmzbch lyhvh</i> · From top split: LEFT «עורת או שבור או חרוץ או יבלת או גרב או ילפת לא תקריבו אלה ליהוה» / RIGHT «ואשה לא תתנו מהם על המזבח ליהוה». Derive claim from Hebrew arms. Lev 22:22.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">עורת או שבור או חרוץ או יבלת או גרב או ילפת לא תקריבו אלה ליהוה</span> · <i>&#x27;vrt &#x27;v shbvr &#x27;v chrvtz &#x27;v yblt &#x27;v grb &#x27;v ylpt l&#x27; tqrybv &#x27;lh lyhvh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">ואשה לא תתנו מהם על המזבח ליהוה</span> · <i>v&#x27;shh l&#x27; ttnv mhm &#x27;l hmzbch lyhvh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(averet_o_shavur, beast_blemish_row_and_cross_list_transfer)</span><br><span class="gloss">= WITNESS-READ(averet-o-shavur, beast-blemish-row-and-cross-list-transfer)</span><br>THE BEAST&#x27;S BLEMISH ROW AND THE CROSS-LIST TRANSFER [claim LV22B-03]. Blind — both or one; &#x27;broken&#x27; — the TAIL too, not a hidden RIB (visible and non-healing like hand and leg); חָרוּץ (charutz) — the eyelid, the lip, the teeth (outer notched, inner uprooted; R. Chanina b. Antigonus: not from the molars inward); wart, scab, lichen. THE TRANSFER: wart here, cloud-and-tevallul there — &#x27;garav&#x27;-&#x27;garav&#x27; and &#x27;yalefet&#x27;-&#x27;yalefet&#x27; carry the beast&#x27;s list to man and man&#x27;s to the beast, unifying the two tables. &#x27;Do not offer&#x27; at 22:22 = the ban on SLAUGHTERING; &#x27;THESE&#x27; you do not offer — but the animal WORKED with, yes (the heifer a-fortiori refused); THE FOUR-TOKEN ASSIGNMENT: &#x27;fire offering&#x27; = the FATS, &#x27;of them&#x27; = even PART, &#x27;on the altar&#x27; = the BLOOD, &#x27;to the LORD&#x27; = THE DISPATCHED GOAT — Azazel&#x27;s goat must be whole though never offered. Onkelos: charutz → פְסִיק (&#x27;SPLIT&#x27;); the shared garav/yalefet words.
+</td><td>—</td><td class='cite'>Sifra, Emor, Section 7 11, Sifra, Emor, Section 7 12, Sifra, Emor, Section 7 13, Sifra, Emor, Chapter 7 1, Sifra, Emor, Chapter 7 2, Sifra, Emor, Chapter 7 3, Sifra, Emor, Chapter 7 4, Onkelos Lev 22:22</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_23 · Lev.22.23 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ושור ושה שרוע וקלוט … נדבה תעשה אתו ולנדר לא ירצה</span> · <i>vshvr vshh shrv&#x27; vqlvt … ndbh t&#x27;shh &#x27;tv vlndr l&#x27; yrtzh</i> · From top split: LEFT «ושור ושה שרוע וקלוט» / RIGHT «נדבה תעשה אתו ולנדר לא ירצה». Derive claim from Hebrew arms. Lev 22:23.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ושור ושה שרוע וקלוט</span> · <i>vshvr vshh shrv&#x27; vqlvt</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">נדבה תעשה אתו ולנדר לא ירצה</span> · <i>ndbh t&#x27;shh &#x27;tv vlndr l&#x27; yrtzh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(sarua_vekalut, temple_upkeep_not_the_altar)</span><br><span class="gloss">= WITNESS-READ(sarua-vekalut, temple-upkeep-not-the-altar)</span><br>SARUA AND KALUT — TEMPLE UPKEEP, NOT THE ALTAR [claim LV22B-04]. &#x27;Ox and sheep&#x27; — all their disqualifications; sarua the DISLOCATED hip, kalut the hoof like a HORSE&#x27;S or a DONKEY&#x27;S (uncloven); &#x27;freewill you make it&#x27; = for TEMPLE UPKEEP, vow too; &#x27;not accepted&#x27; — not the ALTAR; Rabbi: decided from its own place — which holy thing APPEASES? the altar&#x27;s. &#x27;Freewill you make IT&#x27; — it, not a WHOLE animal for upkeep: a positive transgression; a negative too? R. Yehuda from the speech frame; the Sages: none. Onkelos&#x27;s fork: יַתִּיר וְחַסִּיר (&#x27;EXTRA and LACKING&#x27;) — kalut as a deficient limb, not the uncloven hoof.
+</td><td>—</td><td class='cite'>Sifra, Emor, Chapter 7 5, Sifra, Emor, Chapter 7 6, Sifra, Emor, Chapter 7 7, Sifra, Emor, Chapter 7 8, Onkelos Lev 22:23</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_24 · Lev.22.24 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ומעוך וכתות ונתוק וכרות לא תקריבו ליהוה … ובארצכם לא תעשו</span> · <i>vm&#x27;vk vktvt vntvq vkrvt l&#x27; tqrybv lyhvh … vb&#x27;rtzkm l&#x27; t&#x27;shv</i> · From top split: LEFT «ומעוך וכתות ונתוק וכרות לא תקריבו ליהוה» / RIGHT «ובארצכם לא תעשו». Derive claim from Hebrew arms. Lev 22:24.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ומעוך וכתות ונתוק וכרות לא תקריבו ליהוה</span> · <i>vm&#x27;vk vktvt vntvq vkrvt l&#x27; tqrybv lyhvh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">ובארצכם לא תעשו</span> · <i>vb&#x27;rtzkm l&#x27; t&#x27;shv</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(umauch_vekatut, the_castration_ban_and_the_foreigner)</span><br><span class="gloss">= WITNESS-READ(umauch-vekatut, the-castration-ban-and-the-foreigner)</span><br>THE CASTRATION BAN AND THE FOREIGNER&#x27;S HAND [claim LV22B-05]. The four terms — R. Yehuda: all in the testicles; R. Eliezer: all in the member; R. Yosei: two and two; &#x27;do not offer&#x27; (22:24) — the SIXTH: receive the blood. &#x27;Do not DO&#x27; — castration itself banned; the blemished too; wild animals and BIRDS (&#x27;in your land&#x27;); OUTSIDE the land; even HUMANS — ben Chakinai reading ובארצכם (&#x27;and in your land&#x27;) as ובכם (&#x27;and in you&#x27;), the revocalization move. NO SHEKELS FROM GENTILES (&#x27;from a foreigner&#x27;s hand do not offer the bread of your God&#x27;); the tamidim and all public offerings; FEMALES in the ban (R. Yehuda: not); &#x27;not accepted for you&#x27; — no appeasement. Onkelos: the four terms rendered, no arm chosen; &#x27;son of the peoples.&#x27;
+</td><td>—</td><td class='cite'>Sifra, Emor, Chapter 7 9, Sifra, Emor, Chapter 7 10, Sifra, Emor, Chapter 7 11, Sifra, Emor, Chapter 7 12, Onkelos Lev 22:24, Onkelos Lev 22:25</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_25 · Lev.22.25 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ומיד בן נכר לא תקריבו את לחם אלהיכם מכל אלה … כי משחתם בהם מום בם לא ירצו לכם</span> · <i>vmyd bn nkr l&#x27; tqrybv &#x27;t lchm &#x27;lhykm mkl &#x27;lh … ky mshchtm bhm mvm bm l&#x27; yrtzv lkm</i> · From top split: LEFT «ומיד בן נכר לא תקריבו את לחם אלהיכם מכל אלה» / RIGHT «כי משחתם בהם מום בם לא ירצו לכם». Derive claim from Hebrew arms. Lev 22:25.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ומיד בן נכר לא תקריבו את לחם אלהיכם מכל אלה</span> · <i>vmyd bn nkr l&#x27; tqrybv &#x27;t lchm &#x27;lhykm mkl &#x27;lh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">כי משחתם בהם מום בם לא ירצו לכם</span> · <i>ky mshchtm bhm mvm bm l&#x27; yrtzv lkm</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_26 · Lev.22.26 · <span class='expr'>TREE_CLAIM</span></h3>
+<p><span class="he">וידבר יהוה … אל משה לאמר</span> · <i>vydbr yhvh … &#x27;l mshh l&#x27;mr</i> · From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive claim from Hebrew arms. Lev 22:26.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וידבר יהוה</span> · <i>vydbr yhvh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">אל משה לאמר</span> · <i>&#x27;l mshh l&#x27;mr</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=tifcha; maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_27 · Lev.22.27 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">שור או כשב או עז כי יולד והיה שבעת ימים תחת אמו … ומיום השמיני והלאה ירצה לקרבן אשה ליהוה</span> · <i>shvr &#x27;v kshb &#x27;v &#x27;z ky yvld vhyh shb&#x27;t ymym tcht &#x27;m … vmyvm hshmyny vhl&#x27;h yrtzh lqrbn &#x27;shh lyhvh</i> · From top split: LEFT «שור או כשב או עז כי יולד והיה שבעת ימים תחת אמו» / RIGHT «ומיום השמיני והלאה ירצה לקרבן אשה ליהוה». Derive claim from Hebrew arms. Lev 22:27.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">שור או כשב או עז כי יולד והיה שבעת ימים תחת אמו</span> · <i>shvr &#x27;v kshb &#x27;v &#x27;z ky yvld vhyh shb&#x27;t ymym tcht &#x27;mv</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">ומיום השמיני והלאה ירצה לקרבן אשה ליהוה</span> · <i>vmyvm hshmyny vhl&#x27;h yrtzh lqrbn &#x27;shh lyhvh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(shor_o_chesev_ki_yivaled, the_birth_quality_list)</span><br><span class="gloss">= WITNESS-READ(shor-o-chesev-when-yivaled, the-birth-quality-list)</span><br>THE BIRTH-QUALITY LIST AND THE EIGHTH-DAY JOIN [claim LV22B-06]. &#x27;An ox WHEN BORN&#x27; — not a human when born (the Caesarean argument refuted by the blemished); &#x27;ox or sheep&#x27; excludes HYBRIDS, &#x27;or goat&#x27; the LOOK-ALIKE, &#x27;when born&#x27; the CAESAREAN, &#x27;seven days&#x27; the UNDER-AGE, &#x27;under its mother&#x27; the ORPHAN; &#x27;under&#x27;-&#x27;under&#x27; (Lev 27:32) carries the list to the TITHE and the tithe&#x27;s torn-exclusion back. &#x27;WITH its mother&#x27; (Exod 22:29) vs &#x27;UNDER its mother&#x27; — alive with her even ONE HOUR suffices. THE EIGHTH-DAY JOIN: &#x27;from the eighth ONWARD&#x27; here, &#x27;ON the eighth&#x27; at the firstborn — &#x27;its mother&#x27;-&#x27;its mother&#x27; gives both readings to both. &#x27;Accepted&#x27; for the fire; upkeep by &#x27;for an offering&#x27;; &#x27;to the LORD&#x27; — the DISPATCHED GOAT again; it-and- its-young among consecrated animals — &#x27;not accepted.&#x27; Onkelos: &#x27;accepted&#x27; → יִתִּרְעֵי.
+</td><td>—</td><td class='cite'>Sifra, Emor, Section 8 1, Sifra, Emor, Section 8 2, Sifra, Emor, Section 8 3, Sifra, Emor, Section 8 4, Sifra, Emor, Section 8 5, Sifra, Emor, Section 8 6, Sifra, Emor, Section 8 7, Onkelos Lev 22:27</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_28 · Lev.22.28 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ושור או שה … אתו ואת בנו לא תשחטו ביום אחד</span> · <i>vshvr &#x27;v shh … &#x27;tv v&#x27;t bnv l&#x27; tshchtv byvm &#x27;chd</i> · From top split: LEFT «ושור או שה» / RIGHT «אתו ואת בנו לא תשחטו ביום אחד». Derive claim from Hebrew arms. Lev 22:28.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ושור או שה</span> · <i>vshvr &#x27;v shh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">אתו ואת בנו לא תשחטו ביום אחד</span> · <i>&#x27;tv v&#x27;t bnv l&#x27; tshchtv byvm &#x27;chd</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(oto_veet_beno, the_predicate_and_the_female_rule)</span><br><span class="gloss">= WITNESS-READ(it-veet-beno, the-predicate-and-the-female-rule)</span><br>IT AND ITS YOUNG — THE PREDICATE AND THE FEMALE RULE [claim LV22B-07]. &#x27;Ox&#x27; — not a WILD animal (the covering-law a-fortiori refused); &#x27;sheep&#x27; — not BIRDS (the mother-bird a-fortiori refused); &#x27;or&#x27; — either one. MALES? — the mother-bird parallel exempts them; and the fallback: &#x27;it and its YOUNG&#x27; — one whose young FOLLOWS it: the FEMALE alone — and ONKELOS PERFORMS IT BY GRAMMAR: וְתוֹרְתָּא אוֹ שֵׂיתָא לַהּ וְלִבְרַהּ (&#x27;a COW or a EWE — HER and HER young&#x27;), every noun and pronoun feminized. It and its MOTHER by the plural &#x27;you shall not slaughter&#x27;; THE ORDER CASES — the cow, then its mother, then its daughter: the LAST TWO liable; five siblings then the mother — one; the mother then five — each; the grandmother and granddaughter cases with FORTY or EIGHTY lashes (Sumchos in R. Meir&#x27;s name).
+</td><td>—</td><td class='cite'>Sifra, Emor, Section 8 8, Sifra, Emor, Section 8 9, Sifra, Emor, Section 8 10, Sifra, Emor, Section 8 11, Sifra, Emor, Section 8 12, Sifra, Emor, Chapter 8 1, Sifra, Emor, Chapter 8 2, Sifra, Emor, Chapter 8 3, Sifra, Emor, Chapter 8 4, Onkelos Lev 22:28</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(lo_tishchatu_beyom_echad, slaughter_carve_four_periods_day_boundary)</span><br><span class="gloss">= WITNESS-READ(not-tishchatu-beyom-echad, slaughter-carve-four-periods-day-boundary)</span><br>THE SLAUGHTER CARVE, THE FOUR PERIODS, AND THE DAY-BOUNDARY FORK [claim LV22B-08]. &#x27;You shall not SLAUGHTER&#x27; — excludes the one whose slaughter became a carcass, the stabber, the tearer; INCLUDES slaughter for gentiles&#x27; food and for dogs; slaughtered and found torn, for idolatry, the red cow, the stoned ox, the broken-necked heifer — R. Meir liable, R. Shimon exempt. &#x27;On one day&#x27; — R. Meir: a DESIGNATED day requiring PROCLAMATION — THE FOUR PERIODS (the eve of Sukkot&#x27;s last day, of Passover&#x27;s first, of Atzeret, of Rosh Hashanah; the Galilee adds Yom Kippur&#x27;s eve): the SELLER MUST INFORM the buyer &#x27;I sold its mother to slaughter&#x27; (R. Yehuda: only when no time gap; the groom and the bride agreed); the butcher COMPELLED — a thousand-dinar ox for a one-dinar buyer — it dies, the BUYER&#x27;S loss; the rest of the year the seller&#x27;s. And THE DAY-BOUNDARY FORK: &#x27;one day&#x27; here — THE DAY FOLLOWS THE NIGHT — ben Zoma: the whole context is consecrated things where night follows day, but &#x27;one day&#x27;-&#x27;one day&#x27; to CREATION (Gen 1:5) imports the civil day into the sanctuary chapter.
+</td><td>—</td><td class='cite'>Sifra, Emor, Chapter 8 5, Sifra, Emor, Chapter 8 6, Sifra, Emor, Chapter 8 7, Sifra, Emor, Chapter 8 8, Sifra, Emor, Chapter 8 9</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_29 · Lev.22.29 · <span class='expr'>COND_וכי</span></h3>
+<p><span class="he">וכי תזבחו זבח תודה ליהוה … לרצנכם תזבחו</span> · <i>vky tzbchv zbch tvdh lyhvh … lrtznkm tzbchv</i> · From top split: LEFT «וכי תזבחו זבח תודה ליהוה» / RIGHT «לרצנכם תזבחו». Derive claim from Hebrew arms. Lev 22:29.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וכי תזבחו זבח תודה ליהוה</span> · <i>vky tzbchv zbch tvdh lyhvh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">לרצנכם תזבחו</span> · <i>lrtznkm tzbchv</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(bayom_hahu_yeachel, the_reassignment_to_slaughter)</span><br><span class="gloss">= WITNESS-READ(bayom-hahu-yeachel, the-reassignment-to-slaughter)</span><br>THE REASSIGNMENT TO SLAUGHTER [claim LV22B-09]. &#x27;On that day it shall be eaten&#x27; is REDUNDANT for eating (Lev 7:15) — &#x27;if it does not bear on eating, give it to SLAUGHTER&#x27;: the slaughter itself must be ON CONDITION of eating within one day, extended to ALL one-day offerings by the doubled &#x27;when you slaughter a sacrifice.&#x27; The freed-clause reassignment (M-18) on this span&#x27;s own verse. Onkelos: &#x27;for FAVOR for you.&#x27;
+</td><td>—</td><td class='cite'>Sifra, Emor, Chapter 9 1, Sifra, Emor, Chapter 9 2, Onkelos Lev 22:29</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_30 · Lev.22.30 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ביום ההוא יאכל לא תותירו ממנו עד בקר … אני יהוה</span> · <i>byvm hhv&#x27; y&#x27;kl l&#x27; tvtyrv mmnv &#x27;d bqr … &#x27;ny yhvh</i> · From top split: LEFT «ביום ההוא יאכל לא תותירו ממנו עד בקר» / RIGHT «אני יהוה». Derive claim from Hebrew arms. Lev 22:30.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ביום ההוא יאכל לא תותירו ממנו עד בקר</span> · <i>byvm hhv&#x27; y&#x27;kl l&#x27; tvtyrv mmnv &#x27;d bqr</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">אני יהוה</span> · <i>&#x27;ny yhvh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_31 · Lev.22.31 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ושמרתם מצותי ועשיתם אתם … אני יהוה</span> · <i>vshmrtm mtzvty v&#x27;shytm &#x27;tm … &#x27;ny yhvh</i> · From top split: LEFT «ושמרתם מצותי ועשיתם אתם» / RIGHT «אני יהוה». Derive claim from Hebrew arms. Lev 22:31.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ושמרתם מצותי ועשיתם אתם</span> · <i>vshmrtm mtzvty v&#x27;shytm &#x27;tm</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">אני יהוה</span> · <i>&#x27;ny yhvh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(venikdashti_betoch, keep_is_mishnah_and_the_sanctified_name)</span><br><span class="gloss">= WITNESS-READ(venikdashti-betoch, keep-is-mishnah-and-the-sanctified-name)</span><br>KEEP = MISHNAH, DO = DEED; THE SANCTIFIED NAME [claim LV22B-10]. &#x27;Keep&#x27; = the MISHNAH, &#x27;do&#x27; = the DEED — whoever is not in Mishnah is not in deed: the canon channel&#x27;s fifth seat; &#x27;I the LORD&#x27; — faithful to pay reward. &#x27;Do not profane&#x27; — from it, SANCTIFY: &#x27;and I shall be sanctified&#x27; — HAND YOURSELF OVER and sanctify My Name; not alone — &#x27;among the children of Israel&#x27; = THE MANY, the public threshold of Lev 18:5 from its own side; whoever hands himself over ON CONDITION of a miracle gets none (Chananiah, Mishael, Azariah; Pappus and Lulianus before the Roman at Lodkia). &#x27;Who brought you out of Egypt&#x27; — ON CONDITION that you hand yourselves over; &#x27;to be your God&#x27; — by compulsion. Onkelos keeps &#x27;among the children of Israel.&#x27;
+</td><td>—</td><td class='cite'>Sifra, Emor, Chapter 9 3, Sifra, Emor, Chapter 9 4, Sifra, Emor, Chapter 9 5, Sifra, Emor, Chapter 9 6, Onkelos Lev 22:32</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_32 · Lev.22.32 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ולא תחללו את שם קדשי ונקדשתי בתוך בני ישראל … אני יהוה מקדשכם</span> · <i>vl&#x27; tchllv &#x27;t shm qdshy vnqdshty btvk bny yshr&#x27;l … &#x27;ny yhvh mqdshkm</i> · From top split: LEFT «ולא תחללו את שם קדשי ונקדשתי בתוך בני ישראל» / RIGHT «אני יהוה מקדשכם». Derive claim from Hebrew arms. Lev 22:32.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ולא תחללו את שם קדשי ונקדשתי בתוך בני ישראל</span> · <i>vl&#x27; tchllv &#x27;t shm qdshy vnqdshty btvk bny yshr&#x27;l</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">אני יהוה מקדשכם</span> · <i>&#x27;ny yhvh mqdshkm</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_22_33 · Lev.22.33 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">המוציא אתכם מארץ מצרים להיות לכם לאלהים … אני יהוה</span> · <i>hmvtzy&#x27; &#x27;tkm m&#x27;rtz mtzrym lhyvt lkm l&#x27;lhym … &#x27;ny yhvh</i> · From top split: LEFT «המוציא אתכם מארץ מצרים להיות לכם לאלהים» / RIGHT «אני יהוה». Derive claim from Hebrew arms. Lev 22:33.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">המוציא אתכם מארץ מצרים להיות לכם לאלהים</span> · <i>hmvtzy&#x27; &#x27;tkm m&#x27;rtz mtzrym lhyvt lkm l&#x27;lhym</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">אני יהוה</span> · <i>&#x27;ny yhvh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">Coarse states for lev_22_acceptable_offerings after tree-derived steps.</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_block_open</b></td><td>Entered 22:17-33</td></tr>
+<tr><td><b>S_block_mid</b></td><td>Mid-block after ~half of verse steps</td></tr>
+<tr><td><b>S_block_closed</b></td><td>Completed tree-derived steps for 22:17-33</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_block_open</td><td>S_block_mid</td><td>STEP_Lv_22_25</td></tr>
+<tr><td>S_block_mid</td><td>S_block_closed</td><td>STEP_Lv_22_33</td></tr>
+</table>
+<div class="note"><b>AFTER_S_block_closed</b> — Tree-derived v1 complete for lev_22_acceptable_offerings</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Lv_22_17 — Lev 22:17</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Lv_22_18 — Lev 22:18</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Lv_22_19 — Lev 22:19</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Lv_22_20 — Lev 22:20</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Lv_22_21 — Lev 22:21</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Lv_22_22 — Lev 22:22</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S_last</b></td><td>after STEP_Lv_22_33 — Lev 22:33</td><td></td><td>no test, no name.</td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_tamim_korban</td><td><span class="he">תָּמִים</span> · <i>tamim</i> · Unblemished requirement for vow/freewill altar animals</td></tr>
+<tr><td>EXPORT_day8_animal</td><td><span class="he">וּמִיּוֹם הַשְּׁמִינִי</span> · <i>u-mi-yom ha-shemini</i> · Animal accepted from eighth day</td></tr>
+<tr><td>EXPORT_tree_derived_v1_lev_22_acceptable_offerings</td><td>Unit reprocessed tree-first (one STEP per verse, arm-cited)</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Leviticus tree-derive oral policy</b><br><br><i>Written trees first. Prefer Sifra on law densification; MH possible; never silent-merge.</i></div>
+<div class="note"><span class="badge tier-o">dual_track</span> <b>Sifra</b><br><i>see Hebrew sample in local Data dump</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<div class="note"><span class="badge tier-o">dual_track</span> <b>Sifra</b><br><i>see Hebrew sample in local Data dump</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<div class="note"><span class="badge tier-o">dual_track</span> <b>Sifra</b><br><i>see Hebrew sample in local Data dump</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Lev.22.17 · parser unique · 5 words</h3>
+<div class="meta"><span class="he">וידבר יהוה אל משה לאמר</span> · <i>vydbr yhvh &#x27;l mshh l&#x27;mr</i> · Free gloss — structure from Hebrew tree. 22:17.</div>
+<pre>PHRASE (binary 5w) וַ/יְדַבֵּ֥ר יְהוָ֖ה אֶל מֹשֶׁ֥ה לֵּ/אמֹֽר
+├── PHRASE (binary 2w) וַ/יְדַבֵּ֥ר יְהוָ֖ה
+│   ├── [0] וַ/יְדַבֵּ֥ר (mercha (conjunctive), rank=9)
+│   └── [1] יְהוָ֖ה (tifcha, rank=2)
+└── PHRASE (3-ary 3w) אֶל מֹשֶׁ֥ה לֵּ/אמֹֽר
+    ├── [2] אֶל (no cantillation mark — bind as conjunctive, rank=9)
+    ├── [3] מֹשֶׁ֥ה (mercha (conjunctive), rank=9)
+    └── [4] לֵּ/אמֹֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.18 · parser unique · 29 words</h3>
+<div class="meta"><span class="he">דבר אל אהרן ואל בניו ואל כל בני ישראל ואמרת אלהם איש איש מבית ישראל ומן הגר בישראל אשר יקריב קרבנו לכל נדריהם ולכל נדבותם אשר יקריבו ליהוה לעלה</span> · <i>dbr &#x27;l &#x27;hrn v&#x27;l bnyv v&#x27;l kl bny yshr&#x27;l v&#x27;mrt &#x27;lhm &#x27;ysh &#x27;ysh mbyt yshr&#x27;l vmn hgr byshr&#x27;l &#x27;shr yqryb qrbnv lkl ndryhm vlkl ndbvtm &#x27;shr yqrybv lyhvh l&#x27;lh</i> · Free gloss — structure from Hebrew tree. 22:18.</div>
+<pre>PHRASE (binary 29w) דַּבֵּ֨ר אֶֽל אַהֲרֹ֜ן וְ/אֶל בָּנָ֗י/ו וְ/אֶל֙…
+├── PHRASE (binary 11w) דַּבֵּ֨ר אֶֽל אַהֲרֹ֜ן וְ/אֶל בָּנָ֗י/ו וְ/אֶל֙…
+│   ├── PHRASE (binary 9w) דַּבֵּ֨ר אֶֽל אַהֲרֹ֜ן וְ/אֶל בָּנָ֗י/ו וְ/אֶל֙…
+│   │   ├── PHRASE (binary 5w) דַּבֵּ֨ר אֶֽל אַהֲרֹ֜ן וְ/אֶל בָּנָ֗י/ו
+│   │   │   ├── PHRASE (3-ary 3w) דַּבֵּ֨ר אֶֽל אַהֲרֹ֜ן
+│   │   │   │   ├── [0] דַּבֵּ֨ר (qadma (conjunctive), rank=9)
+│   │   │   │   ├── [1] אֶֽל (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │   │   └── [2] אַהֲרֹ֜ן (geresh, rank=4)
+│   │   │   └── PHRASE (binary 2w) וְ/אֶל בָּנָ֗י/ו
+│   │   │       ├── [3] וְ/אֶל (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │       └── [4] בָּנָ֗י/ו (revia, rank=3)
+│   │   └── PHRASE (binary 4w) וְ/אֶל֙ כָּל בְּנֵ֣י יִשְׂרָאֵ֔ל
+│   │       ├── [5] וְ/אֶל֙ (pashta, rank=3)
+│   │       └── PHRASE (3-ary 3w) כָּל בְּנֵ֣י יִשְׂרָאֵ֔ל
+│   │           ├── [6] כָּל (no cantillation mark — bind as conjunctive, rank=9)
+│   │           ├── [7] בְּנֵ֣י (munach (conjunctive), rank=9)
+│   │           └── [8] יִשְׂרָאֵ֔ל (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) וְ/אָמַרְתָּ֖ אֲלֵ/הֶ֑ם
+│       ├── [9] וְ/אָמַרְתָּ֖ (tifcha, rank=2)
+│       └── [10] אֲלֵ/הֶ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 18w) אִ֣ישׁ אִישׁ֩ מִ/בֵּ֨ית יִשְׂרָאֵ֜ל וּ/מִן הַ/ג…
+    ├── PHRASE (binary 14w) אִ֣ישׁ אִישׁ֩ מִ/בֵּ֨ית יִשְׂרָאֵ֜ל וּ/מִן הַ/ג…
+    │   ├── PHRASE (binary 7w) אִ֣ישׁ אִישׁ֩ מִ/בֵּ֨ית יִשְׂרָאֵ֜ל וּ/מִן הַ/ג…
+    │   │   ├── PHRASE (4-ary 4w) אִ֣ישׁ אִישׁ֩ מִ/בֵּ֨ית יִשְׂרָאֵ֜ל
+    │   │   │   ├── [11] אִ֣ישׁ (munach (conjunctive), rank=9)
+    │   │   │   ├── [12] אִישׁ֩ (telisha qetana (conjunctive), rank=9)
+    │   │   │   ├── [13] מִ/בֵּ֨ית (qadma (conjunctive), rank=9)
+    │   │   │   └── [14] יִשְׂרָאֵ֜ל (geresh, rank=4)
+    │   │   └── PHRASE (3-ary 3w) וּ/מִן הַ/גֵּ֣ר בְּ/יִשְׂרָאֵ֗ל
+    │   │       ├── [15] וּ/מִן (no cantillation mark — bind as conjunctive, rank=9)
+    │   │       ├── [16] הַ/גֵּ֣ר (munach (conjunctive), rank=9)
+    │   │       └── [17] בְּ/יִשְׂרָאֵ֗ל (revia, rank=3)
+    │   └── PHRASE (binary 7w) אֲשֶׁ֨ר יַקְרִ֤יב קָרְבָּנ/וֹ֙ לְ/כָל נִדְרֵי/ה…
+    │       ├── PHRASE (3-ary 3w) אֲשֶׁ֨ר יַקְרִ֤יב קָרְבָּנ/וֹ֙
+    │       │   ├── [18] אֲשֶׁ֨ר (qadma (conjunctive), rank=9)
+    │       │   ├── [19] יַקְרִ֤יב (mahpach (conjunctive), rank=9)
+    │       │   └── [20] קָרְבָּנ/וֹ֙ (pashta, rank=3)
+    │       └── PHRASE (binary 4w) לְ/כָל נִדְרֵי/הֶם֙ וּ/לְ/כָל נִדְבוֹתָ֔/ם
+    │           ├── PHRASE (binary 2w) לְ/כָל נִדְרֵי/הֶם֙
+    │           │   ├── [21] לְ/כָל (no cantillation mark — bind as conjunctive, rank=9)
+    │           │   └── [22] נִדְרֵי/הֶם֙ (pashta, rank=3)
+    │           └── PHRASE (binary 2w) וּ/לְ/כָל נִדְבוֹתָ֔/ם
+    │               ├── [23] וּ/לְ/כָל (no cantillation mark — bind as conjunctive, rank=9)
+    │               └── [24] נִדְבוֹתָ֔/ם (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) אֲשֶׁר יַקְרִ֥יבוּ לַ/יהוָ֖ה לְ/עֹלָֽה
+        ├── PHRASE (3-ary 3w) אֲשֶׁר יַקְרִ֥יבוּ לַ/יהוָ֖ה
+        │   ├── [25] אֲשֶׁר (no cantillation mark — bind as conjunctive, rank=9)
+        │   ├── [26] יַקְרִ֥יבוּ (mercha (conjunctive), rank=9)
+        │   └── [27] לַ/יהוָ֖ה (tifcha, rank=2)
+        └── [28] לְ/עֹלָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.19 · parser unique · 6 words</h3>
+<div class="meta"><span class="he">לרצנכם תמים זכר בבקר בכשבים ובעזים</span> · <i>lrtznkm tmym zkr bbqr bkshbym vb&#x27;zym</i> · Free gloss — structure from Hebrew tree. 22:19.</div>
+<pre>PHRASE (binary 6w) לִֽ/רְצֹנְ/כֶ֑ם תָּמִ֣ים זָכָ֔ר בַּ/בָּקָ֕ר בַּ…
+├── [0] לִֽ/רְצֹנְ/כֶ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) תָּמִ֣ים זָכָ֔ר בַּ/בָּקָ֕ר בַּ/כְּשָׂבִ֖ים וּ/…
+    ├── PHRASE (binary 2w) תָּמִ֣ים זָכָ֔ר
+    │   ├── [1] תָּמִ֣ים (munach (conjunctive), rank=9)
+    │   └── [2] זָכָ֔ר (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) בַּ/בָּקָ֕ר בַּ/כְּשָׂבִ֖ים וּ/בָֽ/עִזִּֽים
+        ├── [3] בַּ/בָּקָ֕ר (zaqef gadol, rank=2)
+        └── PHRASE (binary 2w) בַּ/כְּשָׂבִ֖ים וּ/בָֽ/עִזִּֽים
+            ├── [4] בַּ/כְּשָׂבִ֖ים (tifcha, rank=2)
+            └── [5] וּ/בָֽ/עִזִּֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.20 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">כל אשר בו מום לא תקריבו כי לא לרצון יהיה לכם</span> · <i>kl &#x27;shr bv mvm l&#x27; tqrybv ky l&#x27; lrtzvn yhyh lkm</i> · Free gloss — structure from Hebrew tree. 22:20.</div>
+<pre>PHRASE (binary 11w) כֹּ֛ל אֲשֶׁר בּ֥/וֹ מ֖וּם לֹ֣א תַקְרִ֑יבוּ כִּי…
+├── PHRASE (binary 6w) כֹּ֛ל אֲשֶׁר בּ֥/וֹ מ֖וּם לֹ֣א תַקְרִ֑יבוּ
+│   ├── PHRASE (binary 4w) כֹּ֛ל אֲשֶׁר בּ֥/וֹ מ֖וּם
+│   │   ├── [0] כֹּ֛ל (tevir, rank=3)
+│   │   └── PHRASE (3-ary 3w) אֲשֶׁר בּ֥/וֹ מ֖וּם
+│   │       ├── [1] אֲשֶׁר (no cantillation mark — bind as conjunctive, rank=9)
+│   │       ├── [2] בּ֥/וֹ (mercha (conjunctive), rank=9)
+│   │       └── [3] מ֖וּם (tifcha, rank=2)
+│   └── PHRASE (binary 2w) לֹ֣א תַקְרִ֑יבוּ
+│       ├── [4] לֹ֣א (munach (conjunctive), rank=9)
+│       └── [5] תַקְרִ֑יבוּ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) כִּי לֹ֥א לְ/רָצ֖וֹן יִהְיֶ֥ה לָ/כֶֽם
+    ├── PHRASE (3-ary 3w) כִּי לֹ֥א לְ/רָצ֖וֹן
+    │   ├── [6] כִּי (no cantillation mark — bind as conjunctive, rank=9)
+    │   ├── [7] לֹ֥א (mercha (conjunctive), rank=9)
+    │   └── [8] לְ/רָצ֖וֹן (tifcha, rank=2)
+    └── PHRASE (binary 2w) יִהְיֶ֥ה לָ/כֶֽם
+        ├── [9] יִהְיֶ֥ה (mercha (conjunctive), rank=9)
+        └── [10] לָ/כֶֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.21 · parser unique · 21 words</h3>
+<div class="meta"><span class="he">ואיש כי יקריב זבח שלמים ליהוה לפלא נדר או לנדבה בבקר או בצאן תמים יהיה לרצון כל מום לא יהיה בו</span> · <i>v&#x27;ysh ky yqryb zbch shlmym lyhvh lpl&#x27; ndr &#x27;v lndbh bbqr &#x27;v btz&#x27;n tmym yhyh lrtzvn kl mvm l&#x27; yhyh bv</i> · Free gloss — structure from Hebrew tree. 22:21.</div>
+<pre>PHRASE (binary 21w) וְ/אִ֗ישׁ כִּֽי יַקְרִ֤יב זֶֽבַח שְׁלָמִים֙ לַ/…
+├── PHRASE (binary 13w) וְ/אִ֗ישׁ כִּֽי יַקְרִ֤יב זֶֽבַח שְׁלָמִים֙ לַ/…
+│   ├── PHRASE (binary 6w) וְ/אִ֗ישׁ כִּֽי יַקְרִ֤יב זֶֽבַח שְׁלָמִים֙ לַ/…
+│   │   ├── [0] וְ/אִ֗ישׁ (revia, rank=3)
+│   │   └── PHRASE (binary 5w) כִּֽי יַקְרִ֤יב זֶֽבַח שְׁלָמִים֙ לַ/יהוָ֔ה
+│   │       ├── PHRASE (4-ary 4w) כִּֽי יַקְרִ֤יב זֶֽבַח שְׁלָמִים֙
+│   │       │   ├── [1] כִּֽי (no cantillation mark — bind as conjunctive, rank=9)
+│   │       │   ├── [2] יַקְרִ֤יב (mahpach (conjunctive), rank=9)
+│   │       │   ├── [3] זֶֽבַח (no cantillation mark — bind as conjunctive, rank=9)
+│   │       │   └── [4] שְׁלָמִים֙ (pashta, rank=3)
+│   │       └── [5] לַ/יהוָ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 7w) לְ/פַלֵּא נֶ֨דֶר֙ א֣וֹ לִ/נְדָבָ֔ה בַּ/בָּקָ֖ר …
+│       ├── PHRASE (binary 4w) לְ/פַלֵּא נֶ֨דֶר֙ א֣וֹ לִ/נְדָבָ֔ה
+│       │   ├── PHRASE (binary 2w) לְ/פַלֵּא נֶ֨דֶר֙
+│       │   │   ├── [6] לְ/פַלֵּא (no cantillation mark — bind as conjunctive, rank=9)
+│       │   │   └── [7] נֶ֨דֶר֙ (pashta, rank=3)
+│       │   └── PHRASE (binary 2w) א֣וֹ לִ/נְדָבָ֔ה
+│       │       ├── [8] א֣וֹ (munach (conjunctive), rank=9)
+│       │       └── [9] לִ/נְדָבָ֔ה (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) בַּ/בָּקָ֖ר א֣וֹ בַ/צֹּ֑אן
+│           ├── [10] בַּ/בָּקָ֖ר (tifcha, rank=2)
+│           └── PHRASE (binary 2w) א֣וֹ בַ/צֹּ֑אן
+│               ├── [11] א֣וֹ (munach (conjunctive), rank=9)
+│               └── [12] בַ/צֹּ֑אן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) תָּמִ֤ים יִֽהְיֶה֙ לְ/רָצ֔וֹן כָּל מ֖וּם לֹ֥א י…
+    ├── PHRASE (binary 3w) תָּמִ֤ים יִֽהְיֶה֙ לְ/רָצ֔וֹן
+    │   ├── PHRASE (binary 2w) תָּמִ֤ים יִֽהְיֶה֙
+    │   │   ├── [13] תָּמִ֤ים (mahpach (conjunctive), rank=9)
+    │   │   └── [14] יִֽהְיֶה֙ (pashta, rank=3)
+    │   └── [15] לְ/רָצ֔וֹן (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) כָּל מ֖וּם לֹ֥א יִהְיֶה בּֽ/וֹ
+        ├── PHRASE (binary 2w) כָּל מ֖וּם
+        │   ├── [16] כָּל (no cantillation mark — bind as conjunctive, rank=9)
+        │   └── [17] מ֖וּם (tifcha, rank=2)
+        └── PHRASE (3-ary 3w) לֹ֥א יִהְיֶה בּֽ/וֹ
+            ├── [18] לֹ֥א (mercha (conjunctive), rank=9)
+            ├── [19] יִהְיֶה (no cantillation mark — bind as conjunctive, rank=9)
+            └── [20] בּֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.22 · parser unique · 22 words</h3>
+<div class="meta"><span class="he">עורת או שבור או חרוץ או יבלת או גרב או ילפת לא תקריבו אלה ליהוה ואשה לא תתנו מהם על המזבח ליהוה</span> · <i>&#x27;vrt &#x27;v shbvr &#x27;v chrvtz &#x27;v yblt &#x27;v grb &#x27;v ylpt l&#x27; tqrybv &#x27;lh lyhvh v&#x27;shh l&#x27; ttnv mhm &#x27;l hmzbch lyhvh</i> · Free gloss — structure from Hebrew tree. 22:22.</div>
+<pre>PHRASE (binary 22w) עַוֶּרֶת֩ א֨וֹ שָׁב֜וּר אוֹ חָר֣וּץ אֽוֹ יַבֶּ֗…
+├── PHRASE (binary 15w) עַוֶּרֶת֩ א֨וֹ שָׁב֜וּר אוֹ חָר֣וּץ אֽוֹ יַבֶּ֗…
+│   ├── PHRASE (binary 11w) עַוֶּרֶת֩ א֨וֹ שָׁב֜וּר אוֹ חָר֣וּץ אֽוֹ יַבֶּ֗…
+│   │   ├── PHRASE (binary 7w) עַוֶּרֶת֩ א֨וֹ שָׁב֜וּר אוֹ חָר֣וּץ אֽוֹ יַבֶּ֗…
+│   │   │   ├── PHRASE (3-ary 3w) עַוֶּרֶת֩ א֨וֹ שָׁב֜וּר
+│   │   │   │   ├── [0] עַוֶּרֶת֩ (telisha qetana (conjunctive), rank=9)
+│   │   │   │   ├── [1] א֨וֹ (qadma (conjunctive), rank=9)
+│   │   │   │   └── [2] שָׁב֜וּר (geresh, rank=4)
+│   │   │   └── PHRASE (4-ary 4w) אוֹ חָר֣וּץ אֽוֹ יַבֶּ֗לֶת
+│   │   │       ├── [3] אוֹ (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │       ├── [4] חָר֣וּץ (munach (conjunctive), rank=9)
+│   │   │       ├── [5] אֽוֹ (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │       └── [6] יַבֶּ֗לֶת (revia, rank=3)
+│   │   └── PHRASE (binary 4w) א֤וֹ גָרָב֙ א֣וֹ יַלֶּ֔פֶת
+│   │       ├── PHRASE (binary 2w) א֤וֹ גָרָב֙
+│   │       │   ├── [7] א֤וֹ (mahpach (conjunctive), rank=9)
+│   │       │   └── [8] גָרָב֙ (pashta, rank=3)
+│   │       └── PHRASE (binary 2w) א֣וֹ יַלֶּ֔פֶת
+│   │           ├── [9] א֣וֹ (munach (conjunctive), rank=9)
+│   │           └── [10] יַלֶּ֔פֶת (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) לֹא תַקְרִ֥יבוּ אֵ֖לֶּה לַ/יהוָ֑ה
+│       ├── PHRASE (3-ary 3w) לֹא תַקְרִ֥יבוּ אֵ֖לֶּה
+│       │   ├── [11] לֹא (no cantillation mark — bind as conjunctive, rank=9)
+│       │   ├── [12] תַקְרִ֥יבוּ (mercha (conjunctive), rank=9)
+│       │   └── [13] אֵ֖לֶּה (tifcha, rank=2)
+│       └── [14] לַ/יהוָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) וְ/אִשֶּׁ֗ה לֹא תִתְּנ֥וּ מֵ/הֶ֛ם עַל הַ/מִּזְב…
+    ├── PHRASE (binary 6w) וְ/אִשֶּׁ֗ה לֹא תִתְּנ֥וּ מֵ/הֶ֛ם עַל הַ/מִּזְב…
+    │   ├── [15] וְ/אִשֶּׁ֗ה (revia, rank=3)
+    │   └── PHRASE (binary 5w) לֹא תִתְּנ֥וּ מֵ/הֶ֛ם עַל הַ/מִּזְבֵּ֖חַ
+    │       ├── PHRASE (3-ary 3w) לֹא תִתְּנ֥וּ מֵ/הֶ֛ם
+    │       │   ├── [16] לֹא (no cantillation mark — bind as conjunctive, rank=9)
+    │       │   ├── [17] תִתְּנ֥וּ (mercha (conjunctive), rank=9)
+    │       │   └── [18] מֵ/הֶ֛ם (tevir, rank=3)
+    │       └── PHRASE (binary 2w) עַל הַ/מִּזְבֵּ֖חַ
+    │           ├── [19] עַל (no cantillation mark — bind as conjunctive, rank=9)
+    │           └── [20] הַ/מִּזְבֵּ֖חַ (tifcha, rank=2)
+    └── [21] לַ/יהוָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.23 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ושור ושה שרוע וקלוט נדבה תעשה אתו ולנדר לא ירצה</span> · <i>vshvr vshh shrv&#x27; vqlvt ndbh t&#x27;shh &#x27;tv vlndr l&#x27; yrtzh</i> · Free gloss — structure from Hebrew tree. 22:23.</div>
+<pre>PHRASE (binary 10w) וְ/שׁ֥וֹר וָ/שֶׂ֖ה שָׂר֣וּעַ וְ/קָל֑וּט נְדָבָה…
+├── PHRASE (binary 4w) וְ/שׁ֥וֹר וָ/שֶׂ֖ה שָׂר֣וּעַ וְ/קָל֑וּט
+│   ├── PHRASE (binary 2w) וְ/שׁ֥וֹר וָ/שֶׂ֖ה
+│   │   ├── [0] וְ/שׁ֥וֹר (mercha (conjunctive), rank=9)
+│   │   └── [1] וָ/שֶׂ֖ה (tifcha, rank=2)
+│   └── PHRASE (binary 2w) שָׂר֣וּעַ וְ/קָל֑וּט
+│       ├── [2] שָׂר֣וּעַ (munach (conjunctive), rank=9)
+│       └── [3] וְ/קָל֑וּט (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) נְדָבָה֙ תַּעֲשֶׂ֣ה אֹת֔/וֹ וּ/לְ/נֵ֖דֶר לֹ֥א י…
+    ├── PHRASE (binary 3w) נְדָבָה֙ תַּעֲשֶׂ֣ה אֹת֔/וֹ
+    │   ├── [4] נְדָבָה֙ (pashta, rank=3)
+    │   └── PHRASE (binary 2w) תַּעֲשֶׂ֣ה אֹת֔/וֹ
+    │       ├── [5] תַּעֲשֶׂ֣ה (munach (conjunctive), rank=9)
+    │       └── [6] אֹת֔/וֹ (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וּ/לְ/נֵ֖דֶר לֹ֥א יֵרָצֶֽה
+        ├── [7] וּ/לְ/נֵ֖דֶר (tifcha, rank=2)
+        └── PHRASE (binary 2w) לֹ֥א יֵרָצֶֽה
+            ├── [8] לֹ֥א (mercha (conjunctive), rank=9)
+            └── [9] יֵרָצֶֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.24 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ומעוך וכתות ונתוק וכרות לא תקריבו ליהוה ובארצכם לא תעשו</span> · <i>vm&#x27;vk vktvt vntvq vkrvt l&#x27; tqrybv lyhvh vb&#x27;rtzkm l&#x27; t&#x27;shv</i> · Free gloss — structure from Hebrew tree. 22:24.</div>
+<pre>PHRASE (binary 10w) וּ/מָע֤וּךְ וְ/כָתוּת֙ וְ/נָת֣וּק וְ/כָר֔וּת לֹ…
+├── PHRASE (binary 7w) וּ/מָע֤וּךְ וְ/כָתוּת֙ וְ/נָת֣וּק וְ/כָר֔וּת לֹ…
+│   ├── PHRASE (binary 4w) וּ/מָע֤וּךְ וְ/כָתוּת֙ וְ/נָת֣וּק וְ/כָר֔וּת
+│   │   ├── PHRASE (binary 2w) וּ/מָע֤וּךְ וְ/כָתוּת֙
+│   │   │   ├── [0] וּ/מָע֤וּךְ (mahpach (conjunctive), rank=9)
+│   │   │   └── [1] וְ/כָתוּת֙ (pashta, rank=3)
+│   │   └── PHRASE (binary 2w) וְ/נָת֣וּק וְ/כָר֔וּת
+│   │       ├── [2] וְ/נָת֣וּק (munach (conjunctive), rank=9)
+│   │       └── [3] וְ/כָר֔וּת (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) לֹ֥א תַקְרִ֖יבוּ לַֽ/יהוָ֑ה
+│       ├── PHRASE (binary 2w) לֹ֥א תַקְרִ֖יבוּ
+│       │   ├── [4] לֹ֥א (mercha (conjunctive), rank=9)
+│       │   └── [5] תַקְרִ֖יבוּ (tifcha, rank=2)
+│       └── [6] לַֽ/יהוָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וּֽ/בְ/אַרְצְ/כֶ֖ם לֹ֥א תַעֲשֽׂוּ
+    ├── [7] וּֽ/בְ/אַרְצְ/כֶ֖ם (tifcha, rank=2)
+    └── PHRASE (binary 2w) לֹ֥א תַעֲשֽׂוּ
+        ├── [8] לֹ֥א (mercha (conjunctive), rank=9)
+        └── [9] תַעֲשֽׂוּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.25 · parser unique · 18 words</h3>
+<div class="meta"><span class="he">ומיד בן נכר לא תקריבו את לחם אלהיכם מכל אלה כי משחתם בהם מום בם לא ירצו לכם</span> · <i>vmyd bn nkr l&#x27; tqrybv &#x27;t lchm &#x27;lhykm mkl &#x27;lh ky mshchtm bhm mvm bm l&#x27; yrtzv lkm</i> · Free gloss — structure from Hebrew tree. 22:25.</div>
+<pre>PHRASE (binary 18w) וּ/מִ/יַּ֣ד בֶּן נֵכָ֗ר לֹ֥א תַקְרִ֛יבוּ אֶת לֶ…
+├── PHRASE (binary 10w) וּ/מִ/יַּ֣ד בֶּן נֵכָ֗ר לֹ֥א תַקְרִ֛יבוּ אֶת לֶ…
+│   ├── PHRASE (binary 8w) וּ/מִ/יַּ֣ד בֶּן נֵכָ֗ר לֹ֥א תַקְרִ֛יבוּ אֶת לֶ…
+│   │   ├── PHRASE (3-ary 3w) וּ/מִ/יַּ֣ד בֶּן נֵכָ֗ר
+│   │   │   ├── [0] וּ/מִ/יַּ֣ד (munach (conjunctive), rank=9)
+│   │   │   ├── [1] בֶּן (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │   └── [2] נֵכָ֗ר (revia, rank=3)
+│   │   └── PHRASE (binary 5w) לֹ֥א תַקְרִ֛יבוּ אֶת לֶ֥חֶם אֱלֹהֵי/כֶ֖ם
+│   │       ├── PHRASE (binary 2w) לֹ֥א תַקְרִ֛יבוּ
+│   │       │   ├── [3] לֹ֥א (mercha (conjunctive), rank=9)
+│   │       │   └── [4] תַקְרִ֛יבוּ (tevir, rank=3)
+│   │       └── PHRASE (3-ary 3w) אֶת לֶ֥חֶם אֱלֹהֵי/כֶ֖ם
+│   │           ├── [5] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│   │           ├── [6] לֶ֥חֶם (mercha (conjunctive), rank=9)
+│   │           └── [7] אֱלֹהֵי/כֶ֖ם (tifcha, rank=2)
+│   └── PHRASE (binary 2w) מִ/כָּל אֵ֑לֶּה
+│       ├── [8] מִ/כָּל (no cantillation mark — bind as conjunctive, rank=9)
+│       └── [9] אֵ֑לֶּה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) כִּ֣י מָשְׁחָתָ֤/ם בָּ/הֶם֙ מ֣וּם בָּ֔/ם לֹ֥א י…
+    ├── PHRASE (binary 5w) כִּ֣י מָשְׁחָתָ֤/ם בָּ/הֶם֙ מ֣וּם בָּ֔/ם
+    │   ├── PHRASE (3-ary 3w) כִּ֣י מָשְׁחָתָ֤/ם בָּ/הֶם֙
+    │   │   ├── [10] כִּ֣י (munach (conjunctive), rank=9)
+    │   │   ├── [11] מָשְׁחָתָ֤/ם (mahpach (conjunctive), rank=9)
+    │   │   └── [12] בָּ/הֶם֙ (pashta, rank=3)
+    │   └── PHRASE (binary 2w) מ֣וּם בָּ֔/ם
+    │       ├── [13] מ֣וּם (munach (conjunctive), rank=9)
+    │       └── [14] בָּ֔/ם (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) לֹ֥א יֵרָצ֖וּ לָ/כֶֽם
+        ├── PHRASE (binary 2w) לֹ֥א יֵרָצ֖וּ
+        │   ├── [15] לֹ֥א (mercha (conjunctive), rank=9)
+        │   └── [16] יֵרָצ֖וּ (tifcha, rank=2)
+        └── [17] לָ/כֶֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.26 · parser unique · 5 words</h3>
+<div class="meta"><span class="he">וידבר יהוה אל משה לאמר</span> · <i>vydbr yhvh &#x27;l mshh l&#x27;mr</i> · Free gloss — structure from Hebrew tree. 22:26.</div>
+<pre>PHRASE (binary 5w) וַ/יְדַבֵּ֥ר יְהוָ֖ה אֶל מֹשֶׁ֥ה לֵּ/אמֹֽר
+├── PHRASE (binary 2w) וַ/יְדַבֵּ֥ר יְהוָ֖ה
+│   ├── [0] וַ/יְדַבֵּ֥ר (mercha (conjunctive), rank=9)
+│   └── [1] יְהוָ֖ה (tifcha, rank=2)
+└── PHRASE (3-ary 3w) אֶל מֹשֶׁ֥ה לֵּ/אמֹֽר
+    ├── [2] אֶל (no cantillation mark — bind as conjunctive, rank=9)
+    ├── [3] מֹשֶׁ֥ה (mercha (conjunctive), rank=9)
+    └── [4] לֵּ/אמֹֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.27 · parser unique · 19 words</h3>
+<div class="meta"><span class="he">שור או כשב או עז כי יולד והיה שבעת ימים תחת אמו ומיום השמיני והלאה ירצה לקרבן אשה ליהוה</span> · <i>shvr &#x27;v kshb &#x27;v &#x27;z ky yvld vhyh shb&#x27;t ymym tcht &#x27;mv vmyvm hshmyny vhl&#x27;h yrtzh lqrbn &#x27;shh lyhvh</i> · Free gloss — structure from Hebrew tree. 22:27.</div>
+<pre>PHRASE (binary 19w) שׁ֣וֹר אוֹ כֶ֤שֶׂב אוֹ עֵז֙ כִּ֣י יִוָּלֵ֔ד וְ/…
+├── PHRASE (binary 12w) שׁ֣וֹר אוֹ כֶ֤שֶׂב אוֹ עֵז֙ כִּ֣י יִוָּלֵ֔ד וְ/…
+│   ├── PHRASE (binary 7w) שׁ֣וֹר אוֹ כֶ֤שֶׂב אוֹ עֵז֙ כִּ֣י יִוָּלֵ֔ד
+│   │   ├── PHRASE (5-ary 5w) שׁ֣וֹר אוֹ כֶ֤שֶׂב אוֹ עֵז֙
+│   │   │   ├── [0] שׁ֣וֹר (munach (conjunctive), rank=9)
+│   │   │   ├── [1] אוֹ (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │   ├── [2] כֶ֤שֶׂב (mahpach (conjunctive), rank=9)
+│   │   │   ├── [3] אוֹ (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │   └── [4] עֵז֙ (pashta, rank=3)
+│   │   └── PHRASE (binary 2w) כִּ֣י יִוָּלֵ֔ד
+│   │       ├── [5] כִּ֣י (munach (conjunctive), rank=9)
+│   │       └── [6] יִוָּלֵ֔ד (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וְ/הָיָ֛ה שִׁבְעַ֥ת יָמִ֖ים תַּ֣חַת אִמּ֑/וֹ
+│       ├── PHRASE (binary 3w) וְ/הָיָ֛ה שִׁבְעַ֥ת יָמִ֖ים
+│       │   ├── [7] וְ/הָיָ֛ה (tevir, rank=3)
+│       │   └── PHRASE (binary 2w) שִׁבְעַ֥ת יָמִ֖ים
+│       │       ├── [8] שִׁבְעַ֥ת (mercha (conjunctive), rank=9)
+│       │       └── [9] יָמִ֖ים (tifcha, rank=2)
+│       └── PHRASE (binary 2w) תַּ֣חַת אִמּ֑/וֹ
+│           ├── [10] תַּ֣חַת (munach (conjunctive), rank=9)
+│           └── [11] אִמּ֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) וּ/מִ/יּ֤וֹם הַ/שְּׁמִינִי֙ וָ/הָ֔לְאָה יֵרָצֶ֕…
+    ├── PHRASE (binary 3w) וּ/מִ/יּ֤וֹם הַ/שְּׁמִינִי֙ וָ/הָ֔לְאָה
+    │   ├── PHRASE (binary 2w) וּ/מִ/יּ֤וֹם הַ/שְּׁמִינִי֙
+    │   │   ├── [12] וּ/מִ/יּ֤וֹם (mahpach (conjunctive), rank=9)
+    │   │   └── [13] הַ/שְּׁמִינִי֙ (pashta, rank=3)
+    │   └── [14] וָ/הָ֔לְאָה (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) יֵרָצֶ֕ה לְ/קָרְבַּ֥ן אִשֶּׁ֖ה לַ/יהוָֽה
+        ├── [15] יֵרָצֶ֕ה (zaqef gadol, rank=2)
+        └── PHRASE (binary 3w) לְ/קָרְבַּ֥ן אִשֶּׁ֖ה לַ/יהוָֽה
+            ├── PHRASE (binary 2w) לְ/קָרְבַּ֥ן אִשֶּׁ֖ה
+            │   ├── [16] לְ/קָרְבַּ֥ן (mercha (conjunctive), rank=9)
+            │   └── [17] אִשֶּׁ֖ה (tifcha, rank=2)
+            └── [18] לַ/יהוָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.28 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ושור או שה אתו ואת בנו לא תשחטו ביום אחד</span> · <i>vshvr &#x27;v shh &#x27;tv v&#x27;t bnv l&#x27; tshchtv byvm &#x27;chd</i> · Free gloss — structure from Hebrew tree. 22:28.</div>
+<pre>PHRASE (binary 10w) וְ/שׁ֖וֹר אוֹ שֶׂ֑ה אֹת֣/וֹ וְ/אֶת בְּנ֔/וֹ לֹ֥…
+├── PHRASE (binary 3w) וְ/שׁ֖וֹר אוֹ שֶׂ֑ה
+│   ├── [0] וְ/שׁ֖וֹר (tifcha, rank=2)
+│   └── PHRASE (binary 2w) אוֹ שֶׂ֑ה
+│       ├── [1] אוֹ (no cantillation mark — bind as conjunctive, rank=9)
+│       └── [2] שֶׂ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) אֹת֣/וֹ וְ/אֶת בְּנ֔/וֹ לֹ֥א תִשְׁחֲט֖וּ בְּ/י֥…
+    ├── PHRASE (3-ary 3w) אֹת֣/וֹ וְ/אֶת בְּנ֔/וֹ
+    │   ├── [3] אֹת֣/וֹ (munach (conjunctive), rank=9)
+    │   ├── [4] וְ/אֶת (no cantillation mark — bind as conjunctive, rank=9)
+    │   └── [5] בְּנ֔/וֹ (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) לֹ֥א תִשְׁחֲט֖וּ בְּ/י֥וֹם אֶחָֽד
+        ├── PHRASE (binary 2w) לֹ֥א תִשְׁחֲט֖וּ
+        │   ├── [6] לֹ֥א (mercha (conjunctive), rank=9)
+        │   └── [7] תִשְׁחֲט֖וּ (tifcha, rank=2)
+        └── PHRASE (binary 2w) בְּ/י֥וֹם אֶחָֽד
+            ├── [8] בְּ/י֥וֹם (mercha (conjunctive), rank=9)
+            └── [9] אֶחָֽד (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.29 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">וכי תזבחו זבח תודה ליהוה לרצנכם תזבחו</span> · <i>vky tzbchv zbch tvdh lyhvh lrtznkm tzbchv</i> · Free gloss — structure from Hebrew tree. 22:29.</div>
+<pre>PHRASE (binary 7w) וְ/כִֽי תִזְבְּח֥וּ זֶֽבַח תּוֹדָ֖ה לַ/יהוָ֑ה ל…
+├── PHRASE (binary 5w) וְ/כִֽי תִזְבְּח֥וּ זֶֽבַח תּוֹדָ֖ה לַ/יהוָ֑ה
+│   ├── PHRASE (4-ary 4w) וְ/כִֽי תִזְבְּח֥וּ זֶֽבַח תּוֹדָ֖ה
+│   │   ├── [0] וְ/כִֽי (no cantillation mark — bind as conjunctive, rank=9)
+│   │   ├── [1] תִזְבְּח֥וּ (mercha (conjunctive), rank=9)
+│   │   ├── [2] זֶֽבַח (no cantillation mark — bind as conjunctive, rank=9)
+│   │   └── [3] תּוֹדָ֖ה (tifcha, rank=2)
+│   └── [4] לַ/יהוָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) לִֽ/רְצֹנְ/כֶ֖ם תִּזְבָּֽחוּ
+    ├── [5] לִֽ/רְצֹנְ/כֶ֖ם (tifcha, rank=2)
+    └── [6] תִּזְבָּֽחוּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.30 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ביום ההוא יאכל לא תותירו ממנו עד בקר אני יהוה</span> · <i>byvm hhv&#x27; y&#x27;kl l&#x27; tvtyrv mmnv &#x27;d bqr &#x27;ny yhvh</i> · Free gloss — structure from Hebrew tree. 22:30.</div>
+<pre>PHRASE (binary 10w) בַּ/יּ֤וֹם הַ/הוּא֙ יֵאָכֵ֔ל לֹֽא תוֹתִ֥ירוּ מִ…
+├── PHRASE (binary 8w) בַּ/יּ֤וֹם הַ/הוּא֙ יֵאָכֵ֔ל לֹֽא תוֹתִ֥ירוּ מִ…
+│   ├── PHRASE (binary 3w) בַּ/יּ֤וֹם הַ/הוּא֙ יֵאָכֵ֔ל
+│   │   ├── PHRASE (binary 2w) בַּ/יּ֤וֹם הַ/הוּא֙
+│   │   │   ├── [0] בַּ/יּ֤וֹם (mahpach (conjunctive), rank=9)
+│   │   │   └── [1] הַ/הוּא֙ (pashta, rank=3)
+│   │   └── [2] יֵאָכֵ֔ל (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) לֹֽא תוֹתִ֥ירוּ מִמֶּ֖/נּוּ עַד בֹּ֑קֶר
+│       ├── PHRASE (3-ary 3w) לֹֽא תוֹתִ֥ירוּ מִמֶּ֖/נּוּ
+│       │   ├── [3] לֹֽא (no cantillation mark — bind as conjunctive, rank=9)
+│       │   ├── [4] תוֹתִ֥ירוּ (mercha (conjunctive), rank=9)
+│       │   └── [5] מִמֶּ֖/נּוּ (tifcha, rank=2)
+│       └── PHRASE (binary 2w) עַד בֹּ֑קֶר
+│           ├── [6] עַד (no cantillation mark — bind as conjunctive, rank=9)
+│           └── [7] בֹּ֑קֶר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) אֲנִ֖י יְהוָֽה
+    ├── [8] אֲנִ֖י (tifcha, rank=2)
+    └── [9] יְהוָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.31 · parser unique · 6 words</h3>
+<div class="meta"><span class="he">ושמרתם מצותי ועשיתם אתם אני יהוה</span> · <i>vshmrtm mtzvty v&#x27;shytm &#x27;tm &#x27;ny yhvh</i> · Free gloss — structure from Hebrew tree. 22:31.</div>
+<pre>PHRASE (binary 6w) וּ/שְׁמַרְתֶּם֙ מִצְוֺתַ֔/י וַ/עֲשִׂיתֶ֖ם אֹתָ֑…
+├── PHRASE (binary 4w) וּ/שְׁמַרְתֶּם֙ מִצְוֺתַ֔/י וַ/עֲשִׂיתֶ֖ם אֹתָ֑…
+│   ├── PHRASE (binary 2w) וּ/שְׁמַרְתֶּם֙ מִצְוֺתַ֔/י
+│   │   ├── [0] וּ/שְׁמַרְתֶּם֙ (pashta, rank=3)
+│   │   └── [1] מִצְוֺתַ֔/י (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) וַ/עֲשִׂיתֶ֖ם אֹתָ֑/ם
+│       ├── [2] וַ/עֲשִׂיתֶ֖ם (tifcha, rank=2)
+│       └── [3] אֹתָ֑/ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) אֲנִ֖י יְהוָֽה
+    ├── [4] אֲנִ֖י (tifcha, rank=2)
+    └── [5] יְהוָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.32 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ולא תחללו את שם קדשי ונקדשתי בתוך בני ישראל אני יהוה מקדשכם</span> · <i>vl&#x27; tchllv &#x27;t shm qdshy vnqdshty btvk bny yshr&#x27;l &#x27;ny yhvh mqdshkm</i> · Free gloss — structure from Hebrew tree. 22:32.</div>
+<pre>PHRASE (binary 12w) וְ/לֹ֤א תְחַלְּלוּ֙ אֶת שֵׁ֣ם קָדְשִׁ֔/י וְ/נִ֨…
+├── PHRASE (binary 9w) וְ/לֹ֤א תְחַלְּלוּ֙ אֶת שֵׁ֣ם קָדְשִׁ֔/י וְ/נִ֨…
+│   ├── PHRASE (binary 5w) וְ/לֹ֤א תְחַלְּלוּ֙ אֶת שֵׁ֣ם קָדְשִׁ֔/י
+│   │   ├── PHRASE (binary 2w) וְ/לֹ֤א תְחַלְּלוּ֙
+│   │   │   ├── [0] וְ/לֹ֤א (mahpach (conjunctive), rank=9)
+│   │   │   └── [1] תְחַלְּלוּ֙ (pashta, rank=3)
+│   │   └── PHRASE (3-ary 3w) אֶת שֵׁ֣ם קָדְשִׁ֔/י
+│   │       ├── [2] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│   │       ├── [3] שֵׁ֣ם (munach (conjunctive), rank=9)
+│   │       └── [4] קָדְשִׁ֔/י (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וְ/נִ֨קְדַּשְׁתִּ֔י בְּ/ת֖וֹךְ בְּנֵ֣י יִשְׂרָא…
+│       ├── [5] וְ/נִ֨קְדַּשְׁתִּ֔י (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) בְּ/ת֖וֹךְ בְּנֵ֣י יִשְׂרָאֵ֑ל
+│           ├── [6] בְּ/ת֖וֹךְ (tifcha, rank=2)
+│           └── PHRASE (binary 2w) בְּנֵ֣י יִשְׂרָאֵ֑ל
+│               ├── [7] בְּנֵ֣י (munach (conjunctive), rank=9)
+│               └── [8] יִשְׂרָאֵ֑ל (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) אֲנִ֥י יְהוָ֖ה מְקַדִּשְׁ/כֶֽם
+    ├── PHRASE (binary 2w) אֲנִ֥י יְהוָ֖ה
+    │   ├── [9] אֲנִ֥י (mercha (conjunctive), rank=9)
+    │   └── [10] יְהוָ֖ה (tifcha, rank=2)
+    └── [11] מְקַדִּשְׁ/כֶֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.22.33 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">המוציא אתכם מארץ מצרים להיות לכם לאלהים אני יהוה</span> · <i>hmvtzy&#x27; &#x27;tkm m&#x27;rtz mtzrym lhyvt lkm l&#x27;lhym &#x27;ny yhvh</i> · Free gloss — structure from Hebrew tree. 22:33.</div>
+<pre>PHRASE (binary 9w) הַ/מּוֹצִ֤יא אֶתְ/כֶם֙ מֵ/אֶ֣רֶץ מִצְרַ֔יִם לִ/…
+├── PHRASE (binary 7w) הַ/מּוֹצִ֤יא אֶתְ/כֶם֙ מֵ/אֶ֣רֶץ מִצְרַ֔יִם לִ/…
+│   ├── PHRASE (binary 4w) הַ/מּוֹצִ֤יא אֶתְ/כֶם֙ מֵ/אֶ֣רֶץ מִצְרַ֔יִם
+│   │   ├── PHRASE (binary 2w) הַ/מּוֹצִ֤יא אֶתְ/כֶם֙
+│   │   │   ├── [0] הַ/מּוֹצִ֤יא (mahpach (conjunctive), rank=9)
+│   │   │   └── [1] אֶתְ/כֶם֙ (pashta, rank=3)
+│   │   └── PHRASE (binary 2w) מֵ/אֶ֣רֶץ מִצְרַ֔יִם
+│   │       ├── [2] מֵ/אֶ֣רֶץ (munach (conjunctive), rank=9)
+│   │       └── [3] מִצְרַ֔יִם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) לִ/הְי֥וֹת לָ/כֶ֖ם לֵ/אלֹהִ֑ים
+│       ├── PHRASE (binary 2w) לִ/הְי֥וֹת לָ/כֶ֖ם
+│       │   ├── [4] לִ/הְי֥וֹת (mercha (conjunctive), rank=9)
+│       │   └── [5] לָ/כֶ֖ם (tifcha, rank=2)
+│       └── [6] לֵ/אלֹהִ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) אֲנִ֖י יְהוָֽה
+    ├── [7] אֲנִ֖י (tifcha, rank=2)
+    └── [8] יְהוָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 210/210 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Lev.22.17</td><td>0</td><td class='he-cell'>וידבר</td><td>vydbr</td><td>leaf 0 (וידבר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.17</td><td>1</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 1 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.17</td><td>2</td><td class='he-cell'>אל</td><td>&#x27;l</td><td>leaf 2 (אל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.17</td><td>3</td><td class='he-cell'>משה</td><td>mshh</td><td>leaf 3 (משה)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.17</td><td>4</td><td class='he-cell'>לאמר</td><td>l&#x27;mr</td><td>leaf 4 (לאמר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>0</td><td class='he-cell'>דבר</td><td>dbr</td><td>leaf 0 (דבר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>1</td><td class='he-cell'>אל</td><td>&#x27;l</td><td>leaf 1 (אל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>2</td><td class='he-cell'>אהרן</td><td>&#x27;hrn</td><td>leaf 2 (אהרן)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>3</td><td class='he-cell'>ואל</td><td>v&#x27;l</td><td>leaf 3 (ואל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>4</td><td class='he-cell'>בניו</td><td>bnyv</td><td>leaf 4 (בניו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>5</td><td class='he-cell'>ואל</td><td>v&#x27;l</td><td>leaf 5 (ואל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>6</td><td class='he-cell'>כל</td><td>kl</td><td>leaf 6 (כל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>7</td><td class='he-cell'>בני</td><td>bny</td><td>leaf 7 (בני)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>8</td><td class='he-cell'>ישראל</td><td>yshr&#x27;l</td><td>leaf 8 (ישראל)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>9</td><td class='he-cell'>ואמרת</td><td>v&#x27;mrt</td><td>leaf 9 (ואמרת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>10</td><td class='he-cell'>אלהם</td><td>&#x27;lhm</td><td>leaf 10 (אלהם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>11</td><td class='he-cell'>איש</td><td>&#x27;ysh</td><td>leaf 11 (איש)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>12</td><td class='he-cell'>איש</td><td>&#x27;ysh</td><td>leaf 12 (איש)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>13</td><td class='he-cell'>מבית</td><td>mbyt</td><td>leaf 13 (מבית)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>14</td><td class='he-cell'>ישראל</td><td>yshr&#x27;l</td><td>leaf 14 (ישראל)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>15</td><td class='he-cell'>ומן</td><td>vmn</td><td>leaf 15 (ומן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>16</td><td class='he-cell'>הגר</td><td>hgr</td><td>leaf 16 (הגר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>17</td><td class='he-cell'>בישראל</td><td>byshr&#x27;l</td><td>leaf 17 (בישראל)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>18</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 18 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>19</td><td class='he-cell'>יקריב</td><td>yqryb</td><td>leaf 19 (יקריב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>20</td><td class='he-cell'>קרבנו</td><td>qrbnv</td><td>leaf 20 (קרבנו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>21</td><td class='he-cell'>לכל</td><td>lkl</td><td>leaf 21 (לכל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>22</td><td class='he-cell'>נדריהם</td><td>ndryhm</td><td>leaf 22 (נדריהם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>23</td><td class='he-cell'>ולכל</td><td>vlkl</td><td>leaf 23 (ולכל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>24</td><td class='he-cell'>נדבותם</td><td>ndbvtm</td><td>leaf 24 (נדבותם)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>25</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 25 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>26</td><td class='he-cell'>יקריבו</td><td>yqrybv</td><td>leaf 26 (יקריבו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>27</td><td class='he-cell'>ליהוה</td><td>lyhvh</td><td>leaf 27 (ליהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.18</td><td>28</td><td class='he-cell'>לעלה</td><td>l&#x27;lh</td><td>leaf 28 (לעלה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.19</td><td>0</td><td class='he-cell'>לרצנכם</td><td>lrtznkm</td><td>leaf 0 (לרצנכם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.19</td><td>1</td><td class='he-cell'>תמים</td><td>tmym</td><td>leaf 1 (תמים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.19</td><td>2</td><td class='he-cell'>זכר</td><td>zkr</td><td>leaf 2 (זכר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.19</td><td>3</td><td class='he-cell'>בבקר</td><td>bbqr</td><td>leaf 3 (בבקר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.19</td><td>4</td><td class='he-cell'>בכשבים</td><td>bkshbym</td><td>leaf 4 (בכשבים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.19</td><td>5</td><td class='he-cell'>ובעזים</td><td>vb&#x27;zym</td><td>leaf 5 (ובעזים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.20</td><td>0</td><td class='he-cell'>כל</td><td>kl</td><td>leaf 0 (כל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.20</td><td>1</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 1 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.20</td><td>2</td><td class='he-cell'>בו</td><td>bv</td><td>leaf 2 (בו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.20</td><td>3</td><td class='he-cell'>מום</td><td>mvm</td><td>leaf 3 (מום)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.20</td><td>4</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 4 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.20</td><td>5</td><td class='he-cell'>תקריבו</td><td>tqrybv</td><td>leaf 5 (תקריבו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.20</td><td>6</td><td class='he-cell'>כי</td><td>ky</td><td>leaf 6 (כי)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.20</td><td>7</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 7 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.20</td><td>8</td><td class='he-cell'>לרצון</td><td>lrtzvn</td><td>leaf 8 (לרצון)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.20</td><td>9</td><td class='he-cell'>יהיה</td><td>yhyh</td><td>leaf 9 (יהיה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.20</td><td>10</td><td class='he-cell'>לכם</td><td>lkm</td><td>leaf 10 (לכם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>0</td><td class='he-cell'>ואיש</td><td>v&#x27;ysh</td><td>leaf 0 (ואיש)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>1</td><td class='he-cell'>כי</td><td>ky</td><td>leaf 1 (כי)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>2</td><td class='he-cell'>יקריב</td><td>yqryb</td><td>leaf 2 (יקריב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>3</td><td class='he-cell'>זבח</td><td>zbch</td><td>leaf 3 (זבח)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>4</td><td class='he-cell'>שלמים</td><td>shlmym</td><td>leaf 4 (שלמים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>5</td><td class='he-cell'>ליהוה</td><td>lyhvh</td><td>leaf 5 (ליהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>6</td><td class='he-cell'>לפלא</td><td>lpl&#x27;</td><td>leaf 6 (לפלא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>7</td><td class='he-cell'>נדר</td><td>ndr</td><td>leaf 7 (נדר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>8</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 8 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>9</td><td class='he-cell'>לנדבה</td><td>lndbh</td><td>leaf 9 (לנדבה)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>10</td><td class='he-cell'>בבקר</td><td>bbqr</td><td>leaf 10 (בבקר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>11</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 11 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>12</td><td class='he-cell'>בצאן</td><td>btz&#x27;n</td><td>leaf 12 (בצאן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>13</td><td class='he-cell'>תמים</td><td>tmym</td><td>leaf 13 (תמים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>14</td><td class='he-cell'>יהיה</td><td>yhyh</td><td>leaf 14 (יהיה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>15</td><td class='he-cell'>לרצון</td><td>lrtzvn</td><td>leaf 15 (לרצון)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>16</td><td class='he-cell'>כל</td><td>kl</td><td>leaf 16 (כל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>17</td><td class='he-cell'>מום</td><td>mvm</td><td>leaf 17 (מום)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>18</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 18 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>19</td><td class='he-cell'>יהיה</td><td>yhyh</td><td>leaf 19 (יהיה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.21</td><td>20</td><td class='he-cell'>בו</td><td>bv</td><td>leaf 20 (בו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>0</td><td class='he-cell'>עורת</td><td>&#x27;vrt</td><td>leaf 0 (עורת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>1</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 1 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>2</td><td class='he-cell'>שבור</td><td>shbvr</td><td>leaf 2 (שבור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>3</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 3 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>4</td><td class='he-cell'>חרוץ</td><td>chrvtz</td><td>leaf 4 (חרוץ)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>5</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 5 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>6</td><td class='he-cell'>יבלת</td><td>yblt</td><td>leaf 6 (יבלת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>7</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 7 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>8</td><td class='he-cell'>גרב</td><td>grb</td><td>leaf 8 (גרב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>9</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 9 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>10</td><td class='he-cell'>ילפת</td><td>ylpt</td><td>leaf 10 (ילפת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>11</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 11 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>12</td><td class='he-cell'>תקריבו</td><td>tqrybv</td><td>leaf 12 (תקריבו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>13</td><td class='he-cell'>אלה</td><td>&#x27;lh</td><td>leaf 13 (אלה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>14</td><td class='he-cell'>ליהוה</td><td>lyhvh</td><td>leaf 14 (ליהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>15</td><td class='he-cell'>ואשה</td><td>v&#x27;shh</td><td>leaf 15 (ואשה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>16</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 16 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>17</td><td class='he-cell'>תתנו</td><td>ttnv</td><td>leaf 17 (תתנו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>18</td><td class='he-cell'>מהם</td><td>mhm</td><td>leaf 18 (מהם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>19</td><td class='he-cell'>על</td><td>&#x27;l</td><td>leaf 19 (על)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>20</td><td class='he-cell'>המזבח</td><td>hmzbch</td><td>leaf 20 (המזבח)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.22</td><td>21</td><td class='he-cell'>ליהוה</td><td>lyhvh</td><td>leaf 21 (ליהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.23</td><td>0</td><td class='he-cell'>ושור</td><td>vshvr</td><td>leaf 0 (ושור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.23</td><td>1</td><td class='he-cell'>ושה</td><td>vshh</td><td>leaf 1 (ושה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.23</td><td>2</td><td class='he-cell'>שרוע</td><td>shrv&#x27;</td><td>leaf 2 (שרוע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.23</td><td>3</td><td class='he-cell'>וקלוט</td><td>vqlvt</td><td>leaf 3 (וקלוט)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.23</td><td>4</td><td class='he-cell'>נדבה</td><td>ndbh</td><td>leaf 4 (נדבה)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.23</td><td>5</td><td class='he-cell'>תעשה</td><td>t&#x27;shh</td><td>leaf 5 (תעשה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.23</td><td>6</td><td class='he-cell'>אתו</td><td>&#x27;tv</td><td>leaf 6 (אתו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.23</td><td>7</td><td class='he-cell'>ולנדר</td><td>vlndr</td><td>leaf 7 (ולנדר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.23</td><td>8</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 8 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.23</td><td>9</td><td class='he-cell'>ירצה</td><td>yrtzh</td><td>leaf 9 (ירצה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.24</td><td>0</td><td class='he-cell'>ומעוך</td><td>vm&#x27;vk</td><td>leaf 0 (ומעוך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.24</td><td>1</td><td class='he-cell'>וכתות</td><td>vktvt</td><td>leaf 1 (וכתות)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.24</td><td>2</td><td class='he-cell'>ונתוק</td><td>vntvq</td><td>leaf 2 (ונתוק)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.24</td><td>3</td><td class='he-cell'>וכרות</td><td>vkrvt</td><td>leaf 3 (וכרות)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.24</td><td>4</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 4 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.24</td><td>5</td><td class='he-cell'>תקריבו</td><td>tqrybv</td><td>leaf 5 (תקריבו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.24</td><td>6</td><td class='he-cell'>ליהוה</td><td>lyhvh</td><td>leaf 6 (ליהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.24</td><td>7</td><td class='he-cell'>ובארצכם</td><td>vb&#x27;rtzkm</td><td>leaf 7 (ובארצכם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.24</td><td>8</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 8 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.24</td><td>9</td><td class='he-cell'>תעשו</td><td>t&#x27;shv</td><td>leaf 9 (תעשו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>0</td><td class='he-cell'>ומיד</td><td>vmyd</td><td>leaf 0 (ומיד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>1</td><td class='he-cell'>בן</td><td>bn</td><td>leaf 1 (בן)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>2</td><td class='he-cell'>נכר</td><td>nkr</td><td>leaf 2 (נכר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>3</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 3 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>4</td><td class='he-cell'>תקריבו</td><td>tqrybv</td><td>leaf 4 (תקריבו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>5</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 5 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>6</td><td class='he-cell'>לחם</td><td>lchm</td><td>leaf 6 (לחם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>7</td><td class='he-cell'>אלהיכם</td><td>&#x27;lhykm</td><td>leaf 7 (אלהיכם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>8</td><td class='he-cell'>מכל</td><td>mkl</td><td>leaf 8 (מכל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>9</td><td class='he-cell'>אלה</td><td>&#x27;lh</td><td>leaf 9 (אלה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>10</td><td class='he-cell'>כי</td><td>ky</td><td>leaf 10 (כי)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>11</td><td class='he-cell'>משחתם</td><td>mshchtm</td><td>leaf 11 (משחתם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>12</td><td class='he-cell'>בהם</td><td>bhm</td><td>leaf 12 (בהם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>13</td><td class='he-cell'>מום</td><td>mvm</td><td>leaf 13 (מום)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>14</td><td class='he-cell'>בם</td><td>bm</td><td>leaf 14 (בם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>15</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 15 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>16</td><td class='he-cell'>ירצו</td><td>yrtzv</td><td>leaf 16 (ירצו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.25</td><td>17</td><td class='he-cell'>לכם</td><td>lkm</td><td>leaf 17 (לכם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.26</td><td>0</td><td class='he-cell'>וידבר</td><td>vydbr</td><td>leaf 0 (וידבר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.26</td><td>1</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 1 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.26</td><td>2</td><td class='he-cell'>אל</td><td>&#x27;l</td><td>leaf 2 (אל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.26</td><td>3</td><td class='he-cell'>משה</td><td>mshh</td><td>leaf 3 (משה)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.26</td><td>4</td><td class='he-cell'>לאמר</td><td>l&#x27;mr</td><td>leaf 4 (לאמר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>0</td><td class='he-cell'>שור</td><td>shvr</td><td>leaf 0 (שור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>1</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 1 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>2</td><td class='he-cell'>כשב</td><td>kshb</td><td>leaf 2 (כשב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>3</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 3 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>4</td><td class='he-cell'>עז</td><td>&#x27;z</td><td>leaf 4 (עז)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>5</td><td class='he-cell'>כי</td><td>ky</td><td>leaf 5 (כי)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>6</td><td class='he-cell'>יולד</td><td>yvld</td><td>leaf 6 (יולד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>7</td><td class='he-cell'>והיה</td><td>vhyh</td><td>leaf 7 (והיה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>8</td><td class='he-cell'>שבעת</td><td>shb&#x27;t</td><td>leaf 8 (שבעת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>9</td><td class='he-cell'>ימים</td><td>ymym</td><td>leaf 9 (ימים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>10</td><td class='he-cell'>תחת</td><td>tcht</td><td>leaf 10 (תחת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>11</td><td class='he-cell'>אמו</td><td>&#x27;mv</td><td>leaf 11 (אמו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>12</td><td class='he-cell'>ומיום</td><td>vmyvm</td><td>leaf 12 (ומיום)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>13</td><td class='he-cell'>השמיני</td><td>hshmyny</td><td>leaf 13 (השמיני)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>14</td><td class='he-cell'>והלאה</td><td>vhl&#x27;h</td><td>leaf 14 (והלאה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>15</td><td class='he-cell'>ירצה</td><td>yrtzh</td><td>leaf 15 (ירצה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>16</td><td class='he-cell'>לקרבן</td><td>lqrbn</td><td>leaf 16 (לקרבן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>17</td><td class='he-cell'>אשה</td><td>&#x27;shh</td><td>leaf 17 (אשה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.27</td><td>18</td><td class='he-cell'>ליהוה</td><td>lyhvh</td><td>leaf 18 (ליהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.28</td><td>0</td><td class='he-cell'>ושור</td><td>vshvr</td><td>leaf 0 (ושור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.28</td><td>1</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 1 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.28</td><td>2</td><td class='he-cell'>שה</td><td>shh</td><td>leaf 2 (שה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.28</td><td>3</td><td class='he-cell'>אתו</td><td>&#x27;tv</td><td>leaf 3 (אתו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.28</td><td>4</td><td class='he-cell'>ואת</td><td>v&#x27;t</td><td>leaf 4 (ואת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.28</td><td>5</td><td class='he-cell'>בנו</td><td>bnv</td><td>leaf 5 (בנו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.28</td><td>6</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 6 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.28</td><td>7</td><td class='he-cell'>תשחטו</td><td>tshchtv</td><td>leaf 7 (תשחטו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.28</td><td>8</td><td class='he-cell'>ביום</td><td>byvm</td><td>leaf 8 (ביום)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.28</td><td>9</td><td class='he-cell'>אחד</td><td>&#x27;chd</td><td>leaf 9 (אחד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.29</td><td>0</td><td class='he-cell'>וכי</td><td>vky</td><td>leaf 0 (וכי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.29</td><td>1</td><td class='he-cell'>תזבחו</td><td>tzbchv</td><td>leaf 1 (תזבחו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.29</td><td>2</td><td class='he-cell'>זבח</td><td>zbch</td><td>leaf 2 (זבח)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.29</td><td>3</td><td class='he-cell'>תודה</td><td>tvdh</td><td>leaf 3 (תודה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.29</td><td>4</td><td class='he-cell'>ליהוה</td><td>lyhvh</td><td>leaf 4 (ליהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.29</td><td>5</td><td class='he-cell'>לרצנכם</td><td>lrtznkm</td><td>leaf 5 (לרצנכם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.29</td><td>6</td><td class='he-cell'>תזבחו</td><td>tzbchv</td><td>leaf 6 (תזבחו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.30</td><td>0</td><td class='he-cell'>ביום</td><td>byvm</td><td>leaf 0 (ביום)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.30</td><td>1</td><td class='he-cell'>ההוא</td><td>hhv&#x27;</td><td>leaf 1 (ההוא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.30</td><td>2</td><td class='he-cell'>יאכל</td><td>y&#x27;kl</td><td>leaf 2 (יאכל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.30</td><td>3</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 3 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.30</td><td>4</td><td class='he-cell'>תותירו</td><td>tvtyrv</td><td>leaf 4 (תותירו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.30</td><td>5</td><td class='he-cell'>ממנו</td><td>mmnv</td><td>leaf 5 (ממנו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.30</td><td>6</td><td class='he-cell'>עד</td><td>&#x27;d</td><td>leaf 6 (עד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.30</td><td>7</td><td class='he-cell'>בקר</td><td>bqr</td><td>leaf 7 (בקר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.30</td><td>8</td><td class='he-cell'>אני</td><td>&#x27;ny</td><td>leaf 8 (אני)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.30</td><td>9</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 9 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.31</td><td>0</td><td class='he-cell'>ושמרתם</td><td>vshmrtm</td><td>leaf 0 (ושמרתם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.31</td><td>1</td><td class='he-cell'>מצותי</td><td>mtzvty</td><td>leaf 1 (מצותי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.31</td><td>2</td><td class='he-cell'>ועשיתם</td><td>v&#x27;shytm</td><td>leaf 2 (ועשיתם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.31</td><td>3</td><td class='he-cell'>אתם</td><td>&#x27;tm</td><td>leaf 3 (אתם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.31</td><td>4</td><td class='he-cell'>אני</td><td>&#x27;ny</td><td>leaf 4 (אני)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.31</td><td>5</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 5 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.32</td><td>0</td><td class='he-cell'>ולא</td><td>vl&#x27;</td><td>leaf 0 (ולא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.32</td><td>1</td><td class='he-cell'>תחללו</td><td>tchllv</td><td>leaf 1 (תחללו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.32</td><td>2</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 2 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.22.32</td><td>3</td><td class='he-cell'>שם</td><td>shm</td><td>leaf 3 (שם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.32</td><td>4</td><td class='he-cell'>קדשי</td><td>qdshy</td><td>leaf 4 (קדשי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.32</td><td>5</td><td class='he-cell'>ונקדשתי</td><td>vnqdshty</td><td>leaf 5 (ונקדשתי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.32</td><td>6</td><td class='he-cell'>בתוך</td><td>btvk</td><td>leaf 6 (בתוך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.32</td><td>7</td><td class='he-cell'>בני</td><td>bny</td><td>leaf 7 (בני)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.32</td><td>8</td><td class='he-cell'>ישראל</td><td>yshr&#x27;l</td><td>leaf 8 (ישראל)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.32</td><td>9</td><td class='he-cell'>אני</td><td>&#x27;ny</td><td>leaf 9 (אני)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.32</td><td>10</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 10 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.32</td><td>11</td><td class='he-cell'>מקדשכם</td><td>mqdshkm</td><td>leaf 11 (מקדשכם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.33</td><td>0</td><td class='he-cell'>המוציא</td><td>hmvtzy&#x27;</td><td>leaf 0 (המוציא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.33</td><td>1</td><td class='he-cell'>אתכם</td><td>&#x27;tkm</td><td>leaf 1 (אתכם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.33</td><td>2</td><td class='he-cell'>מארץ</td><td>m&#x27;rtz</td><td>leaf 2 (מארץ)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.33</td><td>3</td><td class='he-cell'>מצרים</td><td>mtzrym</td><td>leaf 3 (מצרים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.33</td><td>4</td><td class='he-cell'>להיות</td><td>lhyvt</td><td>leaf 4 (להיות)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.33</td><td>5</td><td class='he-cell'>לכם</td><td>lkm</td><td>leaf 5 (לכם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.33</td><td>6</td><td class='he-cell'>לאלהים</td><td>l&#x27;lhym</td><td>leaf 6 (לאלהים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.33</td><td>7</td><td class='he-cell'>אני</td><td>&#x27;ny</td><td>leaf 7 (אני)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.22.33</td><td>8</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 8 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: lev_22_acceptable_offerings — Acceptable offerings: no blemish; freewill vs vow; desecration ban (22:17–33) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Lv_22_17 — Lev 22:17
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Lv_22_18 — Lev 22:18
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Lv_22_19 — Lev 22:19
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Lv_22_20 — Lev 22:20
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Lv_22_21 — Lev 22:21
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Lv_22_22 — Lev 22:22
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S_last — after STEP_Lv_22_33 — Lev 22:33
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the canonical YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/lev_22_acceptable_offerings.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# lev_22_acceptable_offerings — 22:17-33
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/lev_22_acceptable_offerings.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Acceptable offerings: no blemish; freewill vs vow; desecration ban (22:17–33)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;lev_22_acceptable_offerings&quot;)
+
+# -------------------------- Lev.22.17 · TREE_CLAIM -------------------------
+# וידבר יהוה … אל משה לאמר
+# &quot;[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 22:17.&quot;
+m.step(&quot;Lev.22.17&quot;)
+
+# -------------------------- Lev.22.18 · ETNACHTA_SPLIT ---------------------
+# דבר אל אהרן ואל בניו ואל כל בני ישראל ואמרת אלהם … איש איש מבית ישראל ומן
+# הגר בישראל אשר יקריב קרבנו לכל נדריהם
+# &quot;[EN-AID] From top split: LEFT «דבר אל אהרן ואל בניו ואל כל בני ישראל
+# ואמרת אלהם» / RIGHT «איש איש מבית ישראל ומן הגר בישראל אשר יקריב קרבנו לכל
+# נדריהם ולכל נדבותם אשר יקר». Derive claim from Hebrew arms. Lev 22:18.&quot;
+m.step(&quot;Lev.22.18&quot;)
+# witness-tier presupposed read: the_vow_class_census on
+# ish_ish_mibeit_yisrael — read, not installed
+m.witness_read(&quot;ish_ish_mibeit_yisrael&quot;, &quot;the_vow_class_census&quot;,
+                cites=[&quot;Sifra, Emor, Section 7 1&quot;, &quot;Sifra, Emor, Section 7 2&quot;, &quot;Onkelos Lev 22:18&quot;, &quot;Onkelos Lev 22:19&quot;])
+
+# -------------------------- Lev.22.19 · ETNACHTA_SPLIT ---------------------
+# … תמים זכר בבקר בכשבים ובעזים
+# &quot;[EN-AID] From top split: LEFT «» / RIGHT «תמים זכר בבקר בכשבים ובעזים».
+# Derive claim from Hebrew arms. Lev 22:19.&quot;
+m.step(&quot;Lev.22.19&quot;)
+
+# -------------------------- Lev.22.20 · ETNACHTA_SPLIT ---------------------
+# כל אשר בו מום לא תקריבו … כי לא לרצון יהיה לכם
+# &quot;[EN-AID] From top split: LEFT «כל אשר בו מום לא תקריבו» / RIGHT «כי לא
+# לרצון יהיה לכם». Derive claim from Hebrew arms. Lev 22:20.&quot;
+m.step(&quot;Lev.22.20&quot;)
+# witness-tier presupposed read: the_five_count_and_the_two_jobs on
+# kol_asher_bo_mum_lo_takrivu — read, not installed
+m.witness_read(&quot;kol_asher_bo_mum_lo_takrivu&quot;, &quot;the_five_count_and_the_two_jobs&quot;,
+                cites=[&quot;Sifra, Emor, Section 7 3&quot;, &quot;Sifra, Emor, Section 7 4&quot;, &quot;Sifra, Emor, Section 7 5&quot;, &quot;Sifra, Emor, Section 7 6&quot;, &quot;Sifra, Emor, Section 7 7&quot;, &quot;Sifra, Emor, Section 7 8&quot;, &quot;Sifra, Emor, Section 7 9&quot;, &quot;Sifra, Emor, Section 7 10&quot;, &quot;Onkelos Lev 22:21&quot;])
+
+# -------------------------- Lev.22.21 · COND_כי ----------------------------
+# ואיש כי יקריב זבח שלמים ליהוה לפלא נדר או לנדבה בבקר או בצאן … תמים יהיה
+# לרצון כל מום לא יהיה בו
+# &quot;[EN-AID] From top split: LEFT «ואיש כי יקריב זבח שלמים ליהוה לפלא נדר או
+# לנדבה בבקר או בצאן» / RIGHT «תמים יהיה לרצון כל מום לא יהיה בו». Derive
+# claim from Hebrew arms. Lev 22:21.&quot;
+m.step(&quot;Lev.22.21&quot;)
+
+# -------------------------- Lev.22.22 · ETNACHTA_SPLIT ---------------------
+# עורת או שבור או חרוץ או יבלת או גרב או ילפת לא תקריבו אלה לי … ואשה לא
+# תתנו מהם על המזבח ליהוה
+# &quot;[EN-AID] From top split: LEFT «עורת או שבור או חרוץ או יבלת או גרב או
+# ילפת לא תקריבו אלה ליהוה» / RIGHT «ואשה לא תתנו מהם על המזבח ליהוה».
+# Derive claim from Hebrew arms. Lev 22:22.&quot;
+m.step(&quot;Lev.22.22&quot;)
+# witness-tier presupposed read: beast_blemish_row_and_cross_list_transfer
+# on averet_o_shavur — read, not installed
+m.witness_read(&quot;averet_o_shavur&quot;, &quot;beast_blemish_row_and_cross_list_transfer&quot;,
+                cites=[&quot;Sifra, Emor, Section 7 11&quot;, &quot;Sifra, Emor, Section 7 12&quot;, &quot;Sifra, Emor, Section 7 13&quot;, &quot;Sifra, Emor, Chapter 7 1&quot;, &quot;Sifra, Emor, Chapter 7 2&quot;, &quot;Sifra, Emor, Chapter 7 3&quot;, &quot;Sifra, Emor, Chapter 7 4&quot;, &quot;Onkelos Lev 22:22&quot;])
+
+# -------------------------- Lev.22.23 · ETNACHTA_SPLIT ---------------------
+# ושור ושה שרוע וקלוט … נדבה תעשה אתו ולנדר לא ירצה
+# &quot;[EN-AID] From top split: LEFT «ושור ושה שרוע וקלוט» / RIGHT «נדבה תעשה
+# אתו ולנדר לא ירצה». Derive claim from Hebrew arms. Lev 22:23.&quot;
+m.step(&quot;Lev.22.23&quot;)
+# witness-tier presupposed read: temple_upkeep_not_the_altar on
+# sarua_vekalut — read, not installed
+m.witness_read(&quot;sarua_vekalut&quot;, &quot;temple_upkeep_not_the_altar&quot;,
+                cites=[&quot;Sifra, Emor, Chapter 7 5&quot;, &quot;Sifra, Emor, Chapter 7 6&quot;, &quot;Sifra, Emor, Chapter 7 7&quot;, &quot;Sifra, Emor, Chapter 7 8&quot;, &quot;Onkelos Lev 22:23&quot;])
+
+# -------------------------- Lev.22.24 · ETNACHTA_SPLIT ---------------------
+# ומעוך וכתות ונתוק וכרות לא תקריבו ליהוה … ובארצכם לא תעשו
+# &quot;[EN-AID] From top split: LEFT «ומעוך וכתות ונתוק וכרות לא תקריבו ליהוה» /
+# RIGHT «ובארצכם לא תעשו». Derive claim from Hebrew arms. Lev 22:24.&quot;
+m.step(&quot;Lev.22.24&quot;)
+# witness-tier presupposed read: the_castration_ban_and_the_foreigner on
+# umauch_vekatut — read, not installed
+m.witness_read(&quot;umauch_vekatut&quot;, &quot;the_castration_ban_and_the_foreigner&quot;,
+                cites=[&quot;Sifra, Emor, Chapter 7 9&quot;, &quot;Sifra, Emor, Chapter 7 10&quot;, &quot;Sifra, Emor, Chapter 7 11&quot;, &quot;Sifra, Emor, Chapter 7 12&quot;, &quot;Onkelos Lev 22:24&quot;, &quot;Onkelos Lev 22:25&quot;])
+
+# -------------------------- Lev.22.25 · ETNACHTA_SPLIT ---------------------
+# ומיד בן נכר לא תקריבו את לחם אלהיכם מכל אלה … כי משחתם בהם מום בם לא ירצו
+# לכם
+# &quot;[EN-AID] From top split: LEFT «ומיד בן נכר לא תקריבו את לחם אלהיכם מכל
+# אלה» / RIGHT «כי משחתם בהם מום בם לא ירצו לכם». Derive claim from Hebrew
+# arms. Lev 22:25.&quot;
+m.step(&quot;Lev.22.25&quot;)
+
+# -------------------------- Lev.22.26 · TREE_CLAIM -------------------------
+# וידבר יהוה … אל משה לאמר
+# &quot;[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
+# claim from Hebrew arms. Lev 22:26.&quot;
+m.step(&quot;Lev.22.26&quot;)
+
+# -------------------------- Lev.22.27 · ETNACHTA_SPLIT ---------------------
+# שור או כשב או עז כי יולד והיה שבעת ימים תחת אמו … ומיום השמיני והלאה ירצה
+# לקרבן אשה ליהוה
+# &quot;[EN-AID] From top split: LEFT «שור או כשב או עז כי יולד והיה שבעת ימים
+# תחת אמו» / RIGHT «ומיום השמיני והלאה ירצה לקרבן אשה ליהוה». Derive claim
+# from Hebrew arms. Lev 22:27.&quot;
+m.step(&quot;Lev.22.27&quot;)
+# witness-tier presupposed read: the_birth_quality_list on
+# shor_o_chesev_ki_yivaled — read, not installed
+m.witness_read(&quot;shor_o_chesev_ki_yivaled&quot;, &quot;the_birth_quality_list&quot;,
+                cites=[&quot;Sifra, Emor, Section 8 1&quot;, &quot;Sifra, Emor, Section 8 2&quot;, &quot;Sifra, Emor, Section 8 3&quot;, &quot;Sifra, Emor, Section 8 4&quot;, &quot;Sifra, Emor, Section 8 5&quot;, &quot;Sifra, Emor, Section 8 6&quot;, &quot;Sifra, Emor, Section 8 7&quot;, &quot;Onkelos Lev 22:27&quot;])
+
+# -------------------------- Lev.22.28 · ETNACHTA_SPLIT ---------------------
+# ושור או שה … אתו ואת בנו לא תשחטו ביום אחד
+# &quot;[EN-AID] From top split: LEFT «ושור או שה» / RIGHT «אתו ואת בנו לא תשחטו
+# ביום אחד». Derive claim from Hebrew arms. Lev 22:28.&quot;
+m.step(&quot;Lev.22.28&quot;)
+# witness-tier presupposed read: the_predicate_and_the_female_rule on
+# oto_veet_beno — read, not installed
+m.witness_read(&quot;oto_veet_beno&quot;, &quot;the_predicate_and_the_female_rule&quot;,
+                cites=[&quot;Sifra, Emor, Section 8 8&quot;, &quot;Sifra, Emor, Section 8 9&quot;, &quot;Sifra, Emor, Section 8 10&quot;, &quot;Sifra, Emor, Section 8 11&quot;, &quot;Sifra, Emor, Section 8 12&quot;, &quot;Sifra, Emor, Chapter 8 1&quot;, &quot;Sifra, Emor, Chapter 8 2&quot;, &quot;Sifra, Emor, Chapter 8 3&quot;, &quot;Sifra, Emor, Chapter 8 4&quot;, &quot;Onkelos Lev 22:28&quot;])
+# witness-tier presupposed read: slaughter_carve_four_periods_day_boundary
+# on lo_tishchatu_beyom_echad — read, not installed
+m.witness_read(&quot;lo_tishchatu_beyom_echad&quot;, &quot;slaughter_carve_four_periods_day_boundary&quot;,
+                cites=[&quot;Sifra, Emor, Chapter 8 5&quot;, &quot;Sifra, Emor, Chapter 8 6&quot;, &quot;Sifra, Emor, Chapter 8 7&quot;, &quot;Sifra, Emor, Chapter 8 8&quot;, &quot;Sifra, Emor, Chapter 8 9&quot;])
+
+# -------------------------- Lev.22.29 · COND_וכי ---------------------------
+# וכי תזבחו זבח תודה ליהוה … לרצנכם תזבחו
+# &quot;[EN-AID] From top split: LEFT «וכי תזבחו זבח תודה ליהוה» / RIGHT «לרצנכם
+# תזבחו». Derive claim from Hebrew arms. Lev 22:29.&quot;
+m.step(&quot;Lev.22.29&quot;)
+# witness-tier presupposed read: the_reassignment_to_slaughter on
+# bayom_hahu_yeachel — read, not installed
+m.witness_read(&quot;bayom_hahu_yeachel&quot;, &quot;the_reassignment_to_slaughter&quot;,
+                cites=[&quot;Sifra, Emor, Chapter 9 1&quot;, &quot;Sifra, Emor, Chapter 9 2&quot;, &quot;Onkelos Lev 22:29&quot;])
+
+# -------------------------- Lev.22.30 · ETNACHTA_SPLIT ---------------------
+# ביום ההוא יאכל לא תותירו ממנו עד בקר … אני יהוה
+# &quot;[EN-AID] From top split: LEFT «ביום ההוא יאכל לא תותירו ממנו עד בקר» /
+# RIGHT «אני יהוה». Derive claim from Hebrew arms. Lev 22:30.&quot;
+m.step(&quot;Lev.22.30&quot;)
+
+# -------------------------- Lev.22.31 · ETNACHTA_SPLIT ---------------------
+# ושמרתם מצותי ועשיתם אתם … אני יהוה
+# &quot;[EN-AID] From top split: LEFT «ושמרתם מצותי ועשיתם אתם» / RIGHT «אני
+# יהוה». Derive claim from Hebrew arms. Lev 22:31.&quot;
+m.step(&quot;Lev.22.31&quot;)
+# witness-tier presupposed read: keep_is_mishnah_and_the_sanctified_name on
+# venikdashti_betoch — read, not installed
+m.witness_read(&quot;venikdashti_betoch&quot;, &quot;keep_is_mishnah_and_the_sanctified_name&quot;,
+                cites=[&quot;Sifra, Emor, Chapter 9 3&quot;, &quot;Sifra, Emor, Chapter 9 4&quot;, &quot;Sifra, Emor, Chapter 9 5&quot;, &quot;Sifra, Emor, Chapter 9 6&quot;, &quot;Onkelos Lev 22:32&quot;])
+
+# -------------------------- Lev.22.32 · ETNACHTA_SPLIT ---------------------
+# ולא תחללו את שם קדשי ונקדשתי בתוך בני ישראל … אני יהוה מקדשכם
+# &quot;[EN-AID] From top split: LEFT «ולא תחללו את שם קדשי ונקדשתי בתוך בני
+# ישראל» / RIGHT «אני יהוה מקדשכם». Derive claim from Hebrew arms. Lev
+# 22:32.&quot;
+m.step(&quot;Lev.22.32&quot;)
+
+# -------------------------- Lev.22.33 · ETNACHTA_SPLIT ---------------------
+# המוציא אתכם מארץ מצרים להיות לכם לאלהים … אני יהוה
+# &quot;[EN-AID] From top split: LEFT «המוציא אתכם מארץ מצרים להיות לכם לאלהים» /
+# RIGHT «אני יהוה». Derive claim from Hebrew arms. Lev 22:33.&quot;
+m.step(&quot;Lev.22.33&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 0
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;ish_ish_mibeit_yisrael&#x27;, &#x27;the_vow_class_census&#x27;), (&#x27;kol_asher_bo_mum_lo_takrivu&#x27;, &#x27;the_five_count_and_the_two_jobs&#x27;), (&#x27;averet_o_shavur&#x27;, &#x27;beast_blemish_row_and_cross_list_transfer&#x27;), (&#x27;sarua_vekalut&#x27;, &#x27;temple_upkeep_not_the_altar&#x27;), (&#x27;umauch_vekatut&#x27;, &#x27;the_castration_ban_and_the_foreigner&#x27;), (&#x27;shor_o_chesev_ki_yivaled&#x27;, &#x27;the_birth_quality_list&#x27;), (&#x27;oto_veet_beno&#x27;, &#x27;the_predicate_and_the_female_rule&#x27;), (&#x27;lo_tishchatu_beyom_echad&#x27;, &#x27;slaughter_carve_four_periods_day_boundary&#x27;), (&#x27;bayom_hahu_yeachel&#x27;, &#x27;the_reassignment_to_slaughter&#x27;), (&#x27;venikdashti_betoch&#x27;, &#x27;keep_is_mishnah_and_the_sanctified_name&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Sifra, Emor, Section 7 1&#x27;, &#x27;Sifra, Emor, Section 7 2&#x27;, &#x27;Onkelos Lev 22:18&#x27;, &#x27;Onkelos Lev 22:19&#x27;]
+    assert all(&#x27;the_vow_class_census&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;ish_ish_mibeit_yisrael&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Sifra, Emor, Section 7 3&#x27;, &#x27;Sifra, Emor, Section 7 4&#x27;, &#x27;Sifra, Emor, Section 7 5&#x27;, &#x27;Sifra, Emor, Section 7 6&#x27;, &#x27;Sifra, Emor, Section 7 7&#x27;, &#x27;Sifra, Emor, Section 7 8&#x27;, &#x27;Sifra, Emor, Section 7 9&#x27;, &#x27;Sifra, Emor, Section 7 10&#x27;, &#x27;Onkelos Lev 22:21&#x27;]
+    assert all(&#x27;the_five_count_and_the_two_jobs&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;kol_asher_bo_mum_lo_takrivu&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Sifra, Emor, Section 7 11&#x27;, &#x27;Sifra, Emor, Section 7 12&#x27;, &#x27;Sifra, Emor, Section 7 13&#x27;, &#x27;Sifra, Emor, Chapter 7 1&#x27;, &#x27;Sifra, Emor, Chapter 7 2&#x27;, &#x27;Sifra, Emor, Chapter 7 3&#x27;, &#x27;Sifra, Emor, Chapter 7 4&#x27;, &#x27;Onkelos Lev 22:22&#x27;]
+    assert all(&#x27;beast_blemish_row_and_cross_list_transfer&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;averet_o_shavur&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Sifra, Emor, Chapter 7 5&#x27;, &#x27;Sifra, Emor, Chapter 7 6&#x27;, &#x27;Sifra, Emor, Chapter 7 7&#x27;, &#x27;Sifra, Emor, Chapter 7 8&#x27;, &#x27;Onkelos Lev 22:23&#x27;]
+    assert all(&#x27;temple_upkeep_not_the_altar&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;sarua_vekalut&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Sifra, Emor, Chapter 7 9&#x27;, &#x27;Sifra, Emor, Chapter 7 10&#x27;, &#x27;Sifra, Emor, Chapter 7 11&#x27;, &#x27;Sifra, Emor, Chapter 7 12&#x27;, &#x27;Onkelos Lev 22:24&#x27;, &#x27;Onkelos Lev 22:25&#x27;]
+    assert all(&#x27;the_castration_ban_and_the_foreigner&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;umauch_vekatut&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Sifra, Emor, Section 8 1&#x27;, &#x27;Sifra, Emor, Section 8 2&#x27;, &#x27;Sifra, Emor, Section 8 3&#x27;, &#x27;Sifra, Emor, Section 8 4&#x27;, &#x27;Sifra, Emor, Section 8 5&#x27;, &#x27;Sifra, Emor, Section 8 6&#x27;, &#x27;Sifra, Emor, Section 8 7&#x27;, &#x27;Onkelos Lev 22:27&#x27;]
+    assert all(&#x27;the_birth_quality_list&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;shor_o_chesev_ki_yivaled&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Sifra, Emor, Section 8 8&#x27;, &#x27;Sifra, Emor, Section 8 9&#x27;, &#x27;Sifra, Emor, Section 8 10&#x27;, &#x27;Sifra, Emor, Section 8 11&#x27;, &#x27;Sifra, Emor, Section 8 12&#x27;, &#x27;Sifra, Emor, Chapter 8 1&#x27;, &#x27;Sifra, Emor, Chapter 8 2&#x27;, &#x27;Sifra, Emor, Chapter 8 3&#x27;, &#x27;Sifra, Emor, Chapter 8 4&#x27;, &#x27;Onkelos Lev 22:28&#x27;]
+    assert all(&#x27;the_predicate_and_the_female_rule&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;oto_veet_beno&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Sifra, Emor, Chapter 8 5&#x27;, &#x27;Sifra, Emor, Chapter 8 6&#x27;, &#x27;Sifra, Emor, Chapter 8 7&#x27;, &#x27;Sifra, Emor, Chapter 8 8&#x27;, &#x27;Sifra, Emor, Chapter 8 9&#x27;]
+    assert all(&#x27;slaughter_carve_four_periods_day_boundary&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;lo_tishchatu_beyom_echad&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[8][&quot;cites&quot;] == [&#x27;Sifra, Emor, Chapter 9 1&#x27;, &#x27;Sifra, Emor, Chapter 9 2&#x27;, &#x27;Onkelos Lev 22:29&#x27;]
+    assert all(&#x27;the_reassignment_to_slaughter&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;bayom_hahu_yeachel&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[9][&quot;cites&quot;] == [&#x27;Sifra, Emor, Chapter 9 3&#x27;, &#x27;Sifra, Emor, Chapter 9 4&#x27;, &#x27;Sifra, Emor, Chapter 9 5&#x27;, &#x27;Sifra, Emor, Chapter 9 6&#x27;, &#x27;Onkelos Lev 22:32&#x27;]
+    assert all(&#x27;keep_is_mishnah_and_the_sanctified_name&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;venikdashti_betoch&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">Tree-derived v1 (phase F). One STEP per verse from top-split arms. Not binding religious law.</div><p class='meta'>Rendered 2026-09-05 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

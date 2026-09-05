@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""run_acharei.py — run round 44 (THE ACHAREI MOT-KEDOSHIM EXAM — bare Mishnah rows, Lev 12-15) against the engine.
+"""run_acharei.py — run round 44 (THE ACHAREI MOT-KEDOSHIM EXAM — bare Mishnah rows, Lev 16-20) against the engine.
 
 Loads cases_acharei.yaml, validates every input against the vocabulary
 registry, poses each case, and compares the engine's verdict set to the

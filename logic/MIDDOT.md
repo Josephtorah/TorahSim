@@ -245,6 +245,118 @@ free — if not needed for itself, GIVE IT to the father." The
 building-block engine and the freed-clause operator working as one
 recorded machine.
 
+**THE TWO-WAY TRANSFER (Sifra, Emor, Chapter 1 3 and 5; 2026-09-05).**
+One verbal analogy — "baldness"-"baldness", "gash"-"gash" between
+the priests (Lev 21:5) and Israel (Deut 14:1, Lev 19:28) — carries
+per-spot and whole-head FROM the priests TO Israel and
+for-the-dead-only FROM Israel BACK to the priests in the same
+breath: the gezerah shavah (verbal analogy) as a BIDIRECTIONAL edge,
+each side supplying the parameter the other lacks. Recorded twice
+in five rows; claim LV21A-05.
+
+**THE PROFANATION TRIPLE-IMPORT (Sifra, Emor, Section 4 2;
+2026-09-05).** "Profanation"-"profanation" (Lev 22:2 to Lev 19:8)
+imports THREE parameters at once — time-disqualification, death,
+and acceptance-dependence — and R. Yehuda's rival analogy on "I the
+LORD" imports KARET: one edge, three payloads, with a recorded
+alternative edge carrying a fourth. The analogy's payload is not
+one law but the whole parameter block of the source clause; claim
+LV22A-01.
+
+**THE STRICT-TO-LENIENT META-RULE (Sifra, Emor, Chapter 17 10;
+2026-09-05).** R. Yehuda argues the sukkah must be built of the four
+species (an a-fortiori from the lulav); the Sages refuse it by a
+rule about reasoning itself: "any reasoning whose beginning is
+STRICT and whose end is LENIENT is no reasoning" — for a man who
+found no species would then sit in no sukkah at all. An inference
+is rejected not on its premises but on the SIGN of its consequence:
+a stringency that would produce a leniency is invalid as a form.
+The fence's cousin (no punishing from inference) generalized to
+direction; claim LV23B-11.
+
+**THE THREE-CONSTRAINT PIN (Sifra, Emor, Chapter 18 3;
+2026-09-05).** The showbread's arrangement: "two rows" alone admits
+eight-and-four; "six the row" alone admits six-six-six; "twelve"
+alone admits four-four-four — "until THREE verses say it, we have
+not heard": the reading is pinned only when three independent
+constraints stand together, each closing a solution the others
+leave open. A recorded statement of how many tokens a determination
+needs — the tradition counting its own degrees of freedom; claim
+LV24A-03.
+
+**THE UNWRITTEN WARNING FROM A REDUNDANT PUNISHMENT (Sifra, Emor,
+Chapter 14 9; 2026-09-05).** Yom Kippur's work carries a written
+warning and a written punishment; its affliction carries a written
+punishment and NO warning. The punishment for work is REDUNDANT
+(derivable a fortiori from affliction's), so it is written to teach:
+as work's punishment follows a warning, so affliction's punishment
+follows one — the warning for the fast EXISTS though unwritten. The
+rule "no punishment without a warning" run backward as a derivation
+engine: a redundant punishment is the evidence of a missing warning;
+claim LV23B-05.
+
+**THE DEMONSTRATIVE FENCE (Sifra, Emor, Chapter 2 5; Chapter 7 2-3;
+Chapter 11 2; Section 12 2; 2026-09-05).** Four refusals of inference
+by a demonstrative token in one parashah: "THESE he shall not take"
+— the niddah's seed is not profaned though the a-fortiori from karet
+says it should be; "THESE you shall not offer" — the animal worked
+with is offered though the heifer a-fortiori says not; "THIS day"
+needs matzah and Sukkot does not; "THIS festival" needs a sukkah and
+Passover does not. The anti-inference fence (Acharei Mot) has a
+lexical form — זה/אלה ("this/these") closes the class against
+extension; claims LV21A-13, LV22B-03, LV23A-04, LV23B-06.
+
+**THE TWO-VERSE PIN (Behar-Bechukotai, 2026-09-05).** "Until both
+verses are said we would not know" — the Sifra's own formula for a
+rule that NEITHER verse yields alone: "seven sabbaths of years" and
+"seven years seven times" together fix the count (Sifra, Behar,
+Section 2 1); "to the buyer" and "to his generations" together fix
+the perpetuity's holder (Section 4 9). A middah of joint sufficiency:
+each verse a necessary premise, the rule the conjunction; claims
+LV25A-08, LV25B-08.
+
+**THE WENT-OUT-TO-TEACH CLASS RULE (Behar).** "Sowing and pruning
+were inside the class and went out — to teach the class: labor in
+the land and in the tree" (Sifra, Behar, Section 1 6): R. Ishmael's
+eighth rule run as a classifier — the named members define the
+predicate that admits or excludes the unnamed (loosening under
+olives out; plowing in); claim LV25A-04.
+
+**THE HEART-CLAUSE META-RULE (Behar, two seats).** "Of everything
+given to the heart it says 'you shall fear your God'" (Sifra, Behar,
+Chapter 4 2 on verbal wronging; Section 6 2 on needless commands as
+rigor): the fear clause marks the cases whose deciding fact is an
+intent no court can observe — a rule about which rules the court can
+run; claims LV25A-16, LV25C-05.
+
+**THE A-FORTIORI REFUSED BOTH WAYS BY TWO TEXTS (Behar).** The
+seventh releases money, the Jubilee frees slaves; each inference to
+the other's object is blocked by its own verse — "in THIS Jubilee
+year" and "this is the matter of the release" (Sifra, Behar, Chapter
+3 6): a two-by-two whose diagonals the ink closes; claim LV25A-13.
+
+**ARGUMENT OVERRULED BY INK (Bechukotai).** "You have answered the
+argument — what do you answer the VERSE?" (R. Akiva to R. Yochanan
+b. Nuri, Sifra, Bechukotai, Chapter 9 11): a valid distinction
+defeating an analogy does not defeat a text; the verse "it and its
+substitute shall be holy" decides the firstborn; claim LV27-05.
+
+**THE BOUNDARY YEAR BY VERBAL ANALOGY, LENIENT AND STRICT ALIKE
+(Bechukotai).** The sixtieth year counts below (a stringency); the
+fifth and twentieth cannot be inferred from it because there it
+would be a leniency — so "year"-"year" carries the rule as a verbal
+analogy, which runs "whether lenient or strict" (Sifra, Bechukotai,
+Section 3 10-11): the a-fortiori's direction-sensitivity against the
+gezerah shavah's direction-blindness, stated on the page; claim
+LV27-02.
+
+**THE PARTICLE FOR THE MATRIARCHS (Bechukotai).** אֶת (et, the
+object marker) in "My covenant with Jacob... Isaac... Abraham"
+includes the matriarchs by Genesis 49:31's "Abraham AND Sarah"
+(Sifra, Bechukotai, Chapter 8 8): the amplifying particle run on the
+covenant list; and the reversed order read as a FALLBACK CHAIN
+(Chapter 8 6); claim LV26-27.
+
 Watch item, not yet a row: WILL-INDEXED DISPATCH stands at TWO
 recorded exemplars in the campaign; per the Move Catalog's standing
 rule a third exemplar registers it as a move (M-family), not a
