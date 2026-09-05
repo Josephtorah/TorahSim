@@ -1,0 +1,610 @@
+# THE TOPIC-ROUTED DOCKET SUPPLEMENT — Mishnah Sheviit whole + the unread
+# rows of Arakhin, Temurah, Bekhorot 9, and Bava Metzia 5 (round 47,
+# 2026-09-05, after compaction #51 — REVIEW_BEHAR item 2; owner: 'now
+# lets correct the misses we found before compact'). THE TWO SHELVES
+# ruling (owner 2026-08-27) routes the testing shelf BY TOPIC: the
+# link-driven docket produced ZERO Sheviit rows for Lev 25:1-7 and
+# 25:20-22 because the tractate barely quotes verses. Enumeration by
+# script (scratchpad/supplement_enum.json) from logic/MISHNAH_TOPICS.md's
+# tractate list against every cases_*.yaml and every docket ledger:
+# rows already GRADED or READ are excluded; the remainder is read here
+# WHOLE from the local shelf (Data/mishnah_<tractate>_he.json). Verdicts:
+# LAW = a case row for the exam (seat noted; VERBATIM where the Sifra
+# spine or the Talmud carries the row's text); CONTEXT = not a case for
+# this span (route noted); CREDIT = graded in a prior round; ROUTED = a
+# case row for Deuteronomy's span, carried openly and answered
+# talmud_source-only until that walk. The Talmud segments opened for
+# the compile's gaps (Megillah 11b-12a the seventy's epoch; Arakhin
+# 12b-13a the seventeen Jubilees; Moed Katan 3a-4a the labors' layer)
+# are verdicted below, every segment of each amud, MATERIAL/CONTEXT.
+# Append-only. Ledger written BEFORE the cells and the seats.
+
+## COVERAGE (computed by the generator, never recited)
+- Mishnah Sheviit (whole tractate): 89 rows on the shelf (tractate total 89); 1 graded in prior rounds; 88 unread → 89 verdicted here (+ 1 graded row(s) carried as CREDIT); missing 0, extra 0.
+- Mishnah Arakhin (whole tractate): 50 rows on the shelf (tractate total 50); 19 graded in prior rounds; 31 unread → 32 verdicted here (+ 1 graded row(s) carried as CREDIT); missing 0, extra 0.
+- Mishnah Temurah (whole tractate): 35 rows on the shelf (tractate total 35); 4 graded in prior rounds; 31 unread → 31 verdicted here; missing 0, extra 0.
+- Mishnah Bekhorot (chapter 9): 8 rows on the shelf (tractate total 73); 2 graded in prior rounds; 6 unread → 6 verdicted here; missing 0, extra 0.
+- Mishnah Bava Metzia (chapter 5): 11 rows on the shelf (tractate total 101); 2 graded in prior rounds; 9 unread → 9 verdicted here; missing 0, extra 0.
+- TOTAL Mishnah rows verdicted: 167 — LAW 131 / CONTEXT 25 / CREDIT 2 / ROUTED 9; VERBATIM 26 (computed from the notes).
+- Babylonian Talmud Arakhin 12b: 11/11 segments opened and verdicted.
+- Babylonian Talmud Arakhin 13a: 11/11 segments opened and verdicted.
+- Babylonian Talmud Megillah 11b: 14/14 segments opened and verdicted.
+- Babylonian Talmud Megillah 12a: 19/19 segments opened and verdicted.
+- Babylonian Talmud Moed Katan 3a: 22/22 segments opened and verdicted.
+- Babylonian Talmud Moed Katan 3b: 13/13 segments opened and verdicted.
+- Babylonian Talmud Moed Katan 4a: 22/22 segments opened and verdicted.
+- TOTAL Talmud segments: 112 — MATERIAL 70 / CONTEXT 42.
+
+## Mishnah Sheviit (the seventh year) — whole
+- Mishnah Sheviit 1:1 — LAW. The orchard's plowing cutoff before the seventh: Beit Shammai while it benefits the fruit, Beit Hillel until Atzeret (the Feast of Weeks), 'and the words of these are near the words of those' — THE PRE-YEAR ADDITION (Sifra Behar Chapter 1 1's thirty days, LV25A-02's timeline); the Talmud labels the layer: the Passover/Atzeret cutoffs are the sages' own with a repeal condition, abolished by Rabban Gamliel's court (Moed Katan 3b:5-10 below). VERBATIM at Moed Katan 3b:5.
+- Mishnah Sheviit 1:2 — LAW. What is an orchard: three trees to the standard plot that can yield a sixty-maneh cake of pressed figs — plow the whole plot for them; fewer — only the picker's reach and his basket. A threshold PARAMETER (data), the ink stating no count.
+- Mishnah Sheviit 1:3 — LAW. A barren tree and a fruit tree alike are viewed as figs against the sixty-maneh threshold.
+- Mishnah Sheviit 1:4 — CREDIT. Graded in a prior round (the Exod 34:21 reading — the eve's plowing entering the seventh, the seventh's harvest exiting; R. Yishmael's optional-plowing/optional-harvest excluding the omer). VERBATIM at Moed Katan 3b:13-4a:2.
+- Mishnah Sheviit 1:5 — LAW. Three trees of three owners combine to one plot; Rabban Gamliel's spacing — an ox passing with its gear. A parameter.
+- Mishnah Sheviit 1:6 — LAW. Ten saplings scattered over the plot — plow the whole plot for them until the New Year; in a row or a crown — only their need. THE DATA CHANNEL: 'ten saplings' is a halakhah to Moses from Sinai (Moed Katan 3b:11).
+- Mishnah Sheviit 1:7 — LAW. Saplings and gourds combine; Rabban Shimon b. Gamliel: ten gourds to the plot, plow until the New Year.
+- Mishnah Sheviit 1:8 — LAW. When saplings stop being saplings: R. Elazar b. Azaryah until they are profane (the fourth year), R. Yehoshua seven years, R. Akiva 'a sapling as its name'; a cut tree regrowing — a handbreadth and below as a sapling, above as a tree (R. Shimon). A three-way dispute plus a height parameter.
+- Mishnah Sheviit 2:1 — LAW. The grain field's cutoff: until the moisture ends, as long as men plow to plant cucumber and gourd beds; R. Shimon: 'you have put each man's law in his own hand' — the grain field until Passover, the orchard until Atzeret. VERBATIM at Moed Katan 3b:6-7.
+- Mishnah Sheviit 2:2 — LAW. Fertilizing and hoeing cucumber and gourd beds until the New Year, and irrigated fields; trimming, removing stones, dusting, smoking — until the New Year; R. Shimon: even removing the leaf from the cluster IN the seventh. The derivative labors — Moed Katan 3a:4-9 rules their LAYER: rabbinic, the verse a mere support (LV25A-04's census with the label added, this sitting's seat).
+- Mishnah Sheviit 2:3 — LAW. Clearing stones, pruning shoots, trimming, cutting dead wood until the New Year; R. Yehoshua: the fifth year's trimming as the sixth's; R. Shimon: as long as I may work the tree I may trim it.
+- Mishnah Sheviit 2:4 — LAW. Smearing saplings, binding them, cutting them back, building them shelters, watering them until the New Year; R. Elazar b. Tzadok: water the foliage IN the seventh, not the root.
+- Mishnah Sheviit 2:5 — LAW. Oiling and piercing unripe figs until the New Year; figs of the eve that entered the seventh and of the seventh that left — neither; R. Yehuda by local custom ('it is labor'); R. Shimon permits on the tree.
+- Mishnah Sheviit 2:6 — LAW. No planting, sinking, or grafting on the eve less than THIRTY DAYS before the New Year; done — uproot; R. Yehuda: a graft not taking in three days never takes; R. Yosei and R. Shimon: two weeks. The thirty days = Sifra Behar Chapter 1 1's addition (LV25A-02), Moed Katan 3b:12's halakhah.
+- Mishnah Sheviit 2:7 — LAW. Rice, millet, poppy, sesame that rooted before the New Year — tithed as the past year, permitted in the seventh; not — forbidden in the seventh, tithed as the coming year. VERBATIM Sifra Behar Section 1 7 (LV25A-03's rooting rule).
+- Mishnah Sheviit 2:8 — LAW. R. Shimon Shezuri: Egyptian beans sown for seed alike; R. Shimon: large peas alike; R. Elazar: large peas once they pod before the New Year. Three species rows on the rooting rule.
+- Mishnah Sheviit 2:9 — LAW. Seedless onions and Egyptian beans denied water thirty days before the New Year — as the past year, permitted in the seventh; rain-fed denied two seasons (R. Meir), three (the Sages). A parameter with two recorded settings.
+- Mishnah Sheviit 2:10 — LAW. Gourds kept for seed that hardened before the New Year and left human food — may be kept in the seventh; their shoots forbidden; sprinkling white earth — R. Shimon permits, R. Eliezer b. Yaakov forbids; weeding rice — R. Shimon, but not cutting it back.
+- Mishnah Sheviit 3:1 — LAW. When dung may be carried out to the heaps in the seventh: when the field-workers cease (R. Meir), when the sweet grass dries (R. Yehuda), when it knots (R. Yosei) — the appearance-of-labor clock, three settings.
+- Mishnah Sheviit 3:2 — LAW. How much: three heaps to the plot of ten baskets of a letekh each; add to the baskets, not the heaps; R. Shimon: to the heaps too. Parameters.
+- Mishnah Sheviit 3:3 — LAW. More than three heaps — 'quarrying' (R. Shimon); the Sages forbid unless he digs three or raises three; a dung store; a little added to — R. Elazar b. Azaryah forbids unless deepened, raised, or on rock.
+- Mishnah Sheviit 3:4 — LAW. Penning cattle: a fold of two plots, three sides moved and the middle left — four plots; Rabban Shimon b. Gamliel eight; a whole field of four plots — leave part for appearance's sake; carry out of the fold as the manurers do.
+- Mishnah Sheviit 3:5 — LAW. No new quarry opened in a field unless it holds three layers of three by three by three — twenty-seven stones. A parameter stated as a computed product.
+- Mishnah Sheviit 3:6 — LAW. A fence of ten stones of two-man loads may be removed; a fence's measure ten handbreadths; less — a quarry, leveled to under a handbreadth; from his own, not his fellow's; not begun before the eve.
+- Mishnah Sheviit 3:7 — LAW. Stones the plow turned up or that were uncovered — two of two-man loads may be taken; one clearing his field takes the top ones and leaves those touching the ground; a heap of pebbles likewise; rock or straw beneath — all taken.
+- Mishnah Sheviit 3:8 — LAW. No steps built at ravine mouths on the eve once the rains cease — he readies them for the seventh; in the seventh once the rains cease — for the eighth; no earth backing, a partition yes; any stone he can reach and take.
+- Mishnah Sheviit 3:9 — LAW. Shoulder stones from anywhere, the contractor from anywhere; a shoulder stone: not liftable in one hand (R. Meir); as its name, two or three on the shoulder (R. Yosei).
+- Mishnah Sheviit 3:10 — LAW. A fence against the public domain: dig to the rock; the earth — heap it in the public domain and fix it (R. Yehoshua); as one does not damage the public domain one does not fix it — heap it in his field as the manurers do (R. Akiva); so a pit, a ditch, a cave.
+- Mishnah Sheviit 4:1 — LAW. At first: gather wood, stones, and grass from one's own as from a fellow's — the coarse; when transgressors multiplied THEY ORDAINED that each gather from the other's without favor, let alone with rations. A recorded ordinance with its trigger (the appearance rule made law).
+- Mishnah Sheviit 4:2 — LAW. A field cleared of thorns may be sown after the seventh; improved or penned — not; the improved field's produce: Beit Shammai not eaten in the seventh, Beit Hillel eaten; seventh produce eaten as a favor: Beit Shammai no, Beit Hillel with and without; R. Yehuda reverses the houses — 'one of Beit Shammai's leniencies and Beit Hillel's stringencies.'
+- Mishnah Sheviit 4:3 — LAW. Plowed fields leased from gentiles in the seventh, not from Israelites; gentiles' hands strengthened, not Israelites'; greeted — for the ways of peace. The border of the duty runs on the person's status.
+- Mishnah Sheviit 4:4 — LAW. Thinning olives: Beit Shammai cut, Beit Hillel uproot; both agree on 'smoothing' — cut; thinning one or two, smoothing three abreast; from a fellow's even smoothing uproots.
+- Mishnah Sheviit 4:5 — LAW. Splitting an olive not covered with earth but with stones or straw; sycamore beams likewise; a virgin sycamore not cut in the seventh — it is labor; R. Yehuda: not as usual — ten handbreadths up or level with the ground.
+- Mishnah Sheviit 4:6 — LAW. Trimming vines and cutting reeds: R. Yosei HaGelili a handbreadth away, R. Akiva as usual with any tool; a split tree bound in the seventh — not that it grow, that it not worsen.
+- Mishnah Sheviit 4:7 — LAW. When tree fruit may be eaten in the seventh: unripe figs from when they glisten — bread with them in the field; ripened — into the house; in other years liable to tithes. VERBATIM Sifra Behar Chapter 1 11 — THE SEASON TABLE, LV25A-07.
+- Mishnah Sheviit 4:8 — LAW. Unripe grapes from when they hold juice — in the field; soured — into the house; other years tithable. VERBATIM Sifra Behar Chapter 1 11 (LV25A-07).
+- Mishnah Sheviit 4:9 — LAW. Olives: a quarter-log to the seah — crack and eat in the field; a half-log — crush and anoint in the field; a third — crush in the field and bring in; other years tithable; all other tree fruit: as its tithe season, so its seventh-year season. VERBATIM Sifra Behar Chapter 1 11 (LV25A-07, the tithe-season import).
+- Mishnah Sheviit 4:10 — LAW. When trees may not be cut in the seventh: Beit Shammai from budding; Beit Hillel carobs from drooping, vines from berry set, olives from blossoming, the rest from budding; at tithe season — cut; the olive's quarter-kab floor, Rabban Shimon b. Gamliel by the olive.
+- Mishnah Sheviit 5:1 — LAW. White figs: their seventh year is the SECOND year, for they bear at three years; R. Yehuda: Persian figs' seventh is the year after, bearing at two — 'they spoke only of white figs.' VERBATIM Sifra Behar Chapter 1 1 (LV25A-02 — the fruit lag).
+- Mishnah Sheviit 5:2 — LAW. Burying arum in the seventh: R. Meir no less than two seahs, three handbreadths high, a handbreadth of earth over; the Sages four kabs, a handbreadth high; in a trodden place. Parameters, two settings.
+- Mishnah Sheviit 5:3 — LAW. Arum that passed the seventh: R. Eliezer — if the poor gathered its leaves, gathered; if not, he reckons with the poor; R. Yehoshua — no reckoning.
+- Mishnah Sheviit 5:4 — LAW. Arum of the eve that entered the seventh, summer onions, madder of good soil: Beit Shammai uprooted with wooden rakes, Beit Hillel with metal spades; agree on ridge madder — metal.
+- Mishnah Sheviit 5:5 — LAW. Buying arum after the seventh: R. Yehuda at once; the Sages when the new is plentiful.
+- Mishnah Sheviit 5:6 — LAW. Tools the craftsman may not sell in the seventh: the plow and its gear, the yoke, the winnowing fork, the mattock; may sell the hand sickle, the harvest sickle, the wagon and its gear — THE RULE: work specific to transgression forbidden, work for both permitted. The abetting fence stated as a classifier.
+- Mishnah Sheviit 5:7 — LAW. The potter sells five oil jars and fifteen wine jars — the measure one brings from the ownerless; more — permitted; to gentiles in the land and Israelites abroad.
+- Mishnah Sheviit 5:8 — LAW. Beit Shammai: no plowing cow sold to a seventh-year suspect; Beit Hillel permit — he can slaughter it; sells him produce even at sowing time, lends his measure though he knows he has a threshing floor, changes his coins though he knows he has workers — all when unspecified; explicit, forbidden.
+- Mishnah Sheviit 5:9 — LAW. A woman lends her suspect neighbor a sieve, a sifter, a mill, an oven; not sort or grind with her; a member's wife with a commoner's wife — sorts and grinds; once water is added, no — no strengthening transgressors' hands; all for the ways of peace; gentiles' hands strengthened, greeted. Repeats 4:3's border.
+- Mishnah Sheviit 6:1 — LAW. THREE LANDS for the seventh: what the returnees from Babylon held (the land to Keziv) — not eaten, not worked; what the returnees from Egypt held (Keziv to the River and Amanah) — eaten, not worked; beyond — eaten and worked. The zone map is DATA over the ink's 'which is in your land' (25:7, Sifra Behar Chapter 1 9).
+- Mishnah Sheviit 6:2 — LAW. In Syria: detached work yes (threshing, winnowing, treading, sheaving), attached no (reaping, vintaging, picking olives); R. Akiva's rule: what is permitted in the land is done in Syria.
+- Mishnah Sheviit 6:3 — LAW. Onions rained on and sprouted: black leaves forbidden, green permitted; R. Chanina b. Antigonus: if pulled by their leaves, forbidden; after the seventh the reverse.
+- Mishnah Sheviit 6:4 — LAW. Buying greens after the seventh: when the like has grown; the early permits the late; Rabbi permitted at once.
+- Mishnah Sheviit 6:5 — LAW. No exporting burning-oil or seventh produce from the land abroad; R. Shimon: 'I heard explicitly that it goes out to Syria and not abroad.' VERBATIM Sifra Behar Chapter 1 9 (THE EXPORT BORDER, LV25A-06/07's land clause).
+- Mishnah Sheviit 6:6 — CONTEXT. No importing terumah (the priests' share) from abroad; R. Shimon: from Syria yes — the priestly gift's border, routed to Mishnah Terumot; not a seventh-year case.
+- Mishnah Sheviit 7:1 — LAW. THE GREAT RULE: human food, animal food, dye species, not enduring in the ground — has seventh-sanctity and its money has it, has removal and its money has it; the lists. Sifra Behar Chapter 1 6-7 (fit for man, fit for beast) and Chapter 3 4 (removal) — LV25A-06, LV25A-07.
+- Mishnah Sheviit 7:2 — LAW. The second rule: not enduring? — enduring in the ground: sanctity yes, removal no; the lists; R. Meir: their money removed by the New Year; the Sages: an a-fortiori — no removal for them, the more so for their money.
+- Mishnah Sheviit 7:3 — LAW. Pomegranate and nut peels, blossoms and pits: sanctity; the dyer dyes for himself not for pay — NO COMMERCE in seventh produce, firstborns, priestly gifts, carcasses, torn beasts, abominations, creeping things; no buying field greens to sell in the market — he gathers and his son sells; a surplus may be sold. Sifra Behar Chapter 1 6 'for eating' — LV25A-05.
+- Mishnah Sheviit 7:4 — LAW. A firstborn bought for a son's feast or a festival and not needed — sold; trappers who chanced on impure kinds — sold; R. Yehuda: even one who chanced on them casually, provided it is not his craft; the Sages forbid. The commerce rule's edge on the unintended.
+- Mishnah Sheviit 7:5 — LAW. Sprouts of the shoot-tree and carobs: sanctity and removal; of terebinth, pistachio, and thorn: sanctity, no removal; their leaves — removal, since they drop from their parent.
+- Mishnah Sheviit 7:6 — LAW. Rose, henna, balsam, ladanum: sanctity; R. Shimon: balsam none — it is not a fruit.
+- Mishnah Sheviit 7:7 — LAW. A new rose pickled in old oil — pick out the rose; old in new — removal; new carobs in old wine and old in new — removal; THE RULE: what imparts taste requires removal, kind in other kind; kind in its kind, any amount; the seventh forbids in its kind by any amount, in another kind by taste.
+- Mishnah Sheviit 8:1 — LAW. The great rule: designated for human food — no poultice for man, let alone beast; not designated for man — poultice for man, not beast; for neither — his intent decides; intended for wood — as wood (savory, hyssop, thyme).
+- Mishnah Sheviit 8:2 — LAW. The seventh's produce is given for eating, drinking, anointing — each as its way; no anointing with wine or vinegar, oil yes; so priestly gifts and second tithe; the seventh is lighter — given for the lamp. INK 25:6 'for food' (Sifra Behar Chapter 1 6: not for meal offerings or libations).
+- Mishnah Sheviit 8:3 — LAW. Seventh produce not sold by measure, weight, or number — not figs by number, greens by weight; Beit Shammai not in bundles; Beit Hillel: what is bundled at home is bundled in the market (leeks, star-of-Bethlehem).
+- Mishnah Sheviit 8:4 — LAW. 'Take this coin and gather me greens today' — his wage permitted; 'gather me greens FOR it' — forbidden; the baker's loaf against field greens — permitted; unspecified — not paid from seventh money: NO DEBT PAID FROM SEVENTH MONEY.
+- Mishnah Sheviit 8:5 — LAW. No giving seventh money to the well-digger, the bath-attendant, the barber, the sailor; the well-digger to drink; to all a free gift.
+- Mishnah Sheviit 8:6 — LAW. Seventh figs not cut in the drying-yard but in a ruin; grapes not trodden in the press but in a trough; olives not in the press-beam and press-stone but crushed and put in a small press; R. Shimon: even ground in the press-house and put in the small press. VERBATIM Sifra Behar Chapter 1 3 — THE CHANGED-MANNER RULE, LV25A-05.
+- Mishnah Sheviit 8:7 — LAW. No cooking seventh greens in oil of the priests' share — lest it be disqualified; R. Shimon permits; 'the last and the last is seized in the seventh, and the fruit itself forbidden.' VERBATIM Sifra Behar Chapter 3 3 — THE SUBSTITUTION CHAIN, LV25A-12.
+- Mishnah Sheviit 8:8 — LAW. No buying slaves, land, or impure beasts with seventh money — bought, eat corresponding; no bird offerings of the discharger or the childbearer from it — brought, eat corresponding; no oiling vessels — oiled, eat corresponding. The money's sanctity keyed to eating (Sifra Behar Chapter 3 3 'seizes its money').
+- Mishnah Sheviit 8:9 — LAW. A hide oiled with seventh oil: R. Eliezer burn, the Sages eat corresponding; R. Akiva's recorded silence over R. Eliezer's ruling.
+- Mishnah Sheviit 8:10 — CONTEXT. R. Eliezer on Cuthean bread as pig flesh — R. Akiva's second silence; not a seventh-year case.
+- Mishnah Sheviit 8:11 — LAW. A bathhouse heated with seventh straw or stubble — one may bathe; a man of standing should not (appearance).
+- Mishnah Sheviit 9:1 — LAW. Rue, wild amaranth, purslane, mountain coriander, river celery, meadow rocket — exempt from tithes and bought from anyone in the seventh, for their like is not guarded; R. Yehuda: mustard aftergrowth permitted; R. Shimon: all aftergrowth permitted but cabbage; the Sages: ALL AFTERGROWTH FORBIDDEN. VERBATIM Sifra Behar Chapter 1 3 and Chapter 4 5 ('from here the sages relied') — THE AFTERGROWTH BAN'S PROVENANCE, LV25A-17.
+- Mishnah Sheviit 9:2 — LAW. Three lands for removal — Judah, Transjordan, Galilee — and three in each: upper Galilee, lower Galilee, the valley (by the sycamore line at Kefar Chananya); Judah's hill, lowland, valley; Lod's lowland as the south's; Beit Choron to the sea one province. Geography = DATA.
+- Mishnah Sheviit 9:3 — LAW. Why three lands: eat in each until the last in it is gone; R. Shimon: three only in Judah, the rest as the King's Mountain; all lands as one for olives and dates. THE FIELD-CLOCK — Sifra Behar Chapter 3 4 'gone from the field, gone from the house' (LV25A-07).
+- Mishnah Sheviit 9:4 — LAW. Eat on the strength of the ownerless, not the guarded; R. Yosei even the guarded; on the late figs and the twice-bearer, not the autumn grapes; R. Yehuda while they ripen before summer's end. Sifra Behar Chapter 1 3 'from the guarded you do not gather' (LV25A-05).
+- Mishnah Sheviit 9:5 — LAW. Three pickled kinds in one jar: R. Eliezer eat on the first; R. Yehoshua even on the last; Rabban Gamliel: each kind gone from the field is removed from the jar — AND THE LAW FOLLOWS HIM; R. Shimon: all greens one for removal; purslane until the thistles of Beit Netofah's valley are gone. VERBATIM Sifra Behar Chapter 3 5 — THE JAR DISPUTE, LV25A-12.
+- Mishnah Sheviit 9:6 — LAW. Gathering fresh grass until the sweet dries; dry, until the second rain; reed and vine leaves until they fall; R. Akiva: all until the second rain. The removal clock by species.
+- Mishnah Sheviit 9:7 — LAW. Likewise: a house rented 'until the rains' — the second rain; a vow of benefit 'until the rains' — the second rain; the poor entering orchards — until the second rain; straw and stubble of the seventh used and burned — from the second rain.
+- Mishnah Sheviit 9:8 — LAW. One holding seventh produce at the removal hour distributes three meals' food to each; after the removal the poor eat, not the rich (R. Yehuda); R. Yosei: poor and rich alike. THE REMOVAL DISPUTE — Sifra Behar Chapter 1 6 (LV25A-06).
+- Mishnah Sheviit 9:9 — LAW. Seventh produce inherited or received as a gift: R. Eliezer — given to its eaters; the Sages — the sinner does not profit: sold to its eaters and the money divided to all; one eating seventh dough before its dough-share is taken — liable to death (the last clause routed to Challah).
+- Mishnah Sheviit 10:1 — ROUTED. THE MONEY RELEASE — Deuteronomy 15's span: the seventh releases the loan, written or not; shop credit not, made a loan yes; R. Yehuda: the first and first released; a hireling's wage not, made a loan yes; R. Yosei: work that stops in the seventh releases, work that does not does not. Held at LV25A-13 (THE TWO RELEASES MATRIX: money to the seventh, slaves to the Jubilee); the walk's Re'eh sitting will compile it.
+- Mishnah Sheviit 10:2 — ROUTED. One slaughtering a cow and dividing it on the New Year — an intercalated month releases, else not; the rapist, the seducer, the slanderer, and every court act — not released; a loan on a pledge, documents handed to the court — not released. Deuteronomy 15's span.
+- Mishnah Sheviit 10:3 — ROUTED. THE PROSBUL does not release — one of the things Hillel the Elder ordained when he saw the people refrain from lending and transgress 'guard yourself lest there be a base thought in your heart' (Deut 15:9): an ordinance SELF-LABELED with its reason and its verse, the second Hillel repair on the record beside Arakhin 9:4's chamber deposit.
+- Mishnah Sheviit 10:4 — ROUTED. The prosbul's text: 'I hand over to you, judges of such a place, that any debt I have I may collect whenever I wish' — the judges or the witnesses sign below.
+- Mishnah Sheviit 10:5 — ROUTED. An antedated prosbul valid, postdated invalid; antedated bonds invalid, postdated valid; one borrowing from five — a prosbul for each; five from one — one prosbul.
+- Mishnah Sheviit 10:6 — ROUTED. A prosbul only on land; none — he grants him any amount in his field; a field pledged in the city — written on it; R. Chutzpit: for a man on his wife's property, for orphans on the guardian's.
+- Mishnah Sheviit 10:7 — ROUTED. A beehive: R. Eliezer — as land: a prosbul on it, no impurity in place, the Sabbath scraper liable; the Sages — not as land, the three reversed.
+- Mishnah Sheviit 10:8 — ROUTED. One repaying a debt in the seventh — 'I release' — 'even so' — accept it, 'and this is the word of the release' (Deut 15:2); likewise the murderer fleeing to the refuge city — 'I am a murderer' — 'even so' — accept, 'and this is the word of the murderer' (Deut 19:4). One idiom read twice.
+- Mishnah Sheviit 10:9 — ROUTED. One repaying in the seventh — the sages are pleased with him; one borrowing from a convert whose sons converted with him need not repay the sons — repaid, the sages are pleased; all movables acquired by pulling; whoever keeps his word — the sages are pleased.
+## Mishnah Arakhin (valuations) — the unread rows
+- Mishnah Arakhin 1:2 — LAW. The gentile: R. Meir valued but not valuer; R. Yehuda valuer but not valued; both agree he vows and is vowed. THE VALUER/VALUED SPLIT (LV27-01) with the gentile's cell disputed both ways.
+- Mishnah Arakhin 1:3 — LAW. The dying and the one going out to be executed — not vowed, not valued; R. Chanina b. Akavya: valued, for his sum is fixed, not vowed, for his worth is not; R. Yosei: vows, values, consecrates, and pays damages. THE CONDEMNED'S VALUATION (LV27-21). VERBATIM at the Sifra's 'shall not be redeemed' row.
+- Mishnah Arakhin 1:4 — CONTEXT. The condemned pregnant woman not delayed for birth unless in labor; her hair permitted, the executed beast forbidden — Sanhedrin's procedure, not a valuation case.
+- Mishnah Arakhin 2:1 — LAW. No valuation under a sela nor over fifty sela — THE SELA FLOOR (LV27-17); gave a sela and grew rich — nothing more; under a sela and grew rich — fifty; five selas in hand: R. Meir one only, the Sages all five. The rest of the row (the menstruant's seven to seventeen, the plagues' one to three weeks) is the chapter's 'no fewer than' coda — context.
+- Mishnah Arakhin 2:2 — CONTEXT. No fewer than four intercalated months, no more than eight seen; the two loaves two to three days; the showbread nine to eleven; circumcision eight to twelve — the coda's calendar and Temple rows, not valuation cases.
+- Mishnah Arakhin 2:3 — CONTEXT. Trumpet blasts twenty-one to forty-eight; lyres two to six; flutes two to twelve, the twelve flute days — Temple music, context.
+- Mishnah Arakhin 2:4 — CONTEXT. Who the flute-players were — R. Meir priests' slaves, R. Yosei the marrying families, R. Chanina b. Antigonus Levites — context.
+- Mishnah Arakhin 2:5 — CONTEXT. Six inspected lambs in the chamber, two trumpets, nine harps, one cymbal — VERBATIM at Arakhin 13a:9 (the Talmud's mishnah), context.
+- Mishnah Arakhin 2:6 — CONTEXT. Twelve Levites on the platform; minors in the song; the voice not the instrument — context.
+- Mishnah Arakhin 3:4 — CONTEXT. The rapist and the seducer — fifty sela alike for the greatest priestess and the least Israelite; shame and blemish by the parties — Deuteronomy 22's span, routed.
+- Mishnah Arakhin 3:5 — CONTEXT. The slanderer — a hundred sela; 'the speaker pays more than the doer' with the spies' decree (Num 14:22) — Deuteronomy 22's span, routed.
+- Mishnah Arakhin 4:2 — CREDIT. Graded in round 46 (the standing predicate on 27:8); carried openly. In offerings not so: 'this leper's offering upon me' — by the LEPER's means; Rabbi: even in valuations — the rich man saying 'my valuation' and the poor man 'what he said upon me' gives the rich valuation; poor then rich, rich then poor — the rich valuation; R. Yehuda: even poor, rich, poor again. THE STANDING PREDICATE on 27:8's 'the vower's hand' (LV27-02).
+- Mishnah Arakhin 4:3 — LAW. In offerings not so: even if his father died and left him a myriad, his ship came in with myriads — the sanctuary has nothing of them. The offering's means fixed at its vow.
+- Mishnah Arakhin 5:1 — LAW. 'My weight upon me' — his weight, silver or gold as said; Yirmatya's mother's gold; 'my hand's weight' — R. Yehuda's barrel of water filled with donkey flesh, sinew, and bone; R. Yosei: assess what the hand would weigh. WORTH-VOWS beside valuations (LV27-01).
+- Mishnah Arakhin 5:2 — LAW. 'My hand's worth' — assessed with and without the hand; vows stricter than valuations here; valuations stricter: 'my valuation' and died — the heirs pay; 'my worth' and died — no worth for the dead; 'my hand's valuation' — nothing; 'my head's, my liver's' — the whole: THE RULE — a limb the soul depends on gives the whole. LIMB-SANCTIFICATION (LV27-04) VERBATIM.
+- Mishnah Arakhin 5:3 — LAW. 'Half my valuation' — half; 'the valuation of my half' — the whole; 'half my worth' — half; 'the worth of my half' — the whole; the same soul-dependence rule.
+- Mishnah Arakhin 5:4 — LAW. 'So-and-so's valuation upon me' — the vower and the valued died — the heirs pay; 'so-and-so's worth' — the vower died, the heirs pay; the valued died — not, no worth for the dead.
+- Mishnah Arakhin 5:5 — LAW. 'This ox an olah, this house an offering' — died or fell, not liable; 'the worth of this ox upon me' — died or fell, liable. The object vow versus the sum vow.
+- Mishnah Arakhin 6:1 — LAW. Orphans' property assessed thirty days, the sanctuary's sixty, announced morning and evening; consecrating with a wife's marriage-debt outstanding: R. Eliezer — on divorce he vows off benefit; R. Yehoshua — no need; Rabban Shimon b. Gamliel on the guarantor. Procedure parameters.
+- Mishnah Arakhin 6:2 — LAW. Consecrated property with a wife's marriage-debt and a creditor: neither collects from the sanctuary; the redeemer redeems on condition of paying them; ninety maneh consecrated against a hundred owed — add a dinar and redeem. The sanctuary's lien rank.
+- Mishnah Arakhin 6:3 — LAW. Though valuation-debtors are seized, he is left thirty days' food, twelve months' clothing, a made bed, sandals, and phylacteries — for him, not his wife or children; a craftsman two tools of each kind; a carpenter two adzes and two saws; R. Eliezer: the farmer his team, the donkey-driver his donkey. The seizure floor (27:8's means).
+- Mishnah Arakhin 6:4 — LAW. One kind many and one kind few — not told to sell the many to buy the few; two of the many and all of the few; his phylacteries redeemed for him.
+- Mishnah Arakhin 6:5 — LAW. Consecrating his property or valuing himself — not his wife's or children's clothing, not dyed for them, not new sandals bought for them; though slaves sell better dressed, a cow held for the market, a pearl carried to the city — THE SANCTUARY HAS ONLY ITS PLACE AND ITS HOUR. Assessment at the spot.
+- Mishnah Arakhin 7:2 — LAW. The owner and anyone alike — but the owner adds a fifth and no one else. VERBATIM the Sifra's 'the one who consecrated it' — THE FIFTH, OWNER ONLY (LV27-08).
+- Mishnah Arakhin 7:3 — LAW. Consecrated and redeemed by himself — does not leave his hand at the Jubilee; his son redeemed — leaves to the father at the Jubilee; another or a kinsman redeemed and he redeemed from his hand — does not leave; a priest redeemed and holds it — not 'mine since it leaves to the priests' — it leaves to all his brother priests. SON IN, BROTHER OUT (LV27-14); ALL BROTHER PRIESTS (LV27-15). VERBATIM.
+- Mishnah Arakhin 7:4 — LAW. The Jubilee came unredeemed: the priests enter and pay (R. Yehuda); enter and do not pay (R. Shimon); neither — it is called THE ABANDONED FIELD until the second Jubilee, then abandoned of abandoned until the third; the priests never enter until another redeems it (R. Eliezer). LV27-15 VERBATIM.
+- Mishnah Arakhin 8:1 — LAW. Consecrating a field off the Jubilee: 'you open first' — the owner adds a fifth; the man who consecrated his field for its badness — 'it is mine for an issar'; R. Yosei: an egg's worth, for the sanctuary is redeemed by money or money's worth; 'it is yours' — he loses an issar and his field is before him. THE BIDDING LADDER opens (LV27-07).
+- Mishnah Arakhin 8:2 — LAW. Bids of ten, twenty, thirty, forty, fifty sela; the fifty retracted — seized to ten, and so each down; the ten retracted — sold at its worth and the shortfall collected from him; owner and all at twenty — THE OWNER FIRST, for he adds a fifth. VERBATIM the Sifra's ladder (LV27-07).
+- Mishnah Arakhin 8:3 — LAW. THE FIFTH'S ARITHMETIC: another at twenty-one, the owner gives twenty-six; twenty-two — twenty-seven; twenty-three — twenty-eight; twenty-four — twenty-nine; twenty-five — thirty — no fifth on the other's raise; at twenty-six the owner must give thirty-one and a dinar to be first, else 'it is yours.' A computable table (compiled this sitting in the Jubilee engine).
+- Mishnah Arakhin 8:4 — LAW. A man devotes FROM his flock, herd, Canaanite slaves, and ancestral field; devoted all — not devoted (R. Elazar); R. Elazar b. Azaryah's a-fortiori: if for Heaven a man may not devote all he has, how much more must he spare his property. INK 27:28 'from all that he has' — the partitive.
+- Mishnah Arakhin 9:5 — LAW. All within the wall is as walled-city houses, except fields; R. Meir even fields; a house built into the wall — R. Yehuda not as walled-city houses, R. Shimon its outer wall is its wall. THE WALLED-CITY ROSTER's edge (LV25B-07).
+- Mishnah Arakhin 9:6 — LAW. A city whose roofs are its wall, or not walled since Joshua's days — not as walled-city houses; these are: three courtyards of two houses each walled since Joshua — Sepphoris' old fort, Gush Chalav's citadel, old Yodfat, Gamla, Gedod, Chadid, Ono, Jerusalem, and the like. VERBATIM Sifra Behar Section 4 1 (LV25B-07).
+## Mishnah Temurah (substitution) — the unread rows
+- Mishnah Temurah 1:3 — LAW. No substituting limbs for embryos nor embryos for limbs, nor limbs and embryos for whole beasts nor whole for them; R. Yosei: limbs for whole, not whole for limbs — 'the leg of this is an olah' makes the whole an olah, so 'the leg of this in place of that' makes the whole a substitute. LIMB-SANCTIFICATION (LV27-04).
+- Mishnah Temurah 1:4 — CONTEXT. Mixing, leavening, and drawn water disqualify only by proportion — Terumot and Mikvaot rows, not substitution.
+- Mishnah Temurah 1:5 — LAW. Purification water needs the ash; no grave-plowed field makes another; no priestly gift after a gift; NO SUBSTITUTE MAKES A SUBSTITUTE, nor the offspring — R. Yehuda: the offspring does; they said: the consecrated makes a substitute, not the offspring nor the substitute. SUBSTITUTION NOT TRANSITIVE (LV27-05) VERBATIM.
+- Mishnah Temurah 2:1 — LAW. The individual's offerings versus the community's: the individual's make substitutes, the community's do not; sexes; responsibility for the beast and its libations; the community's override the Sabbath and impurity; R. Meir: the high priest's griddle cakes and the Day of Atonement bull — fixed-time. The first difference = 27:10's 'he' (LV27-04, INDIVIDUALS ONLY).
+- Mishnah Temurah 2:2 — CONTEXT. The individual's sin offering whose owner atoned — dies; the community's — not; R. Yehuda dies; R. Shimon's three rules — Leviticus 4's dying sin offerings, routed to the lev_04 drafts.
+- Mishnah Temurah 2:3 — LAW. Stringencies: the consecrated makes a substitute, the substitute does not; community and partners consecrate, do not substitute; limbs and embryos consecrated, not substituted; the substitute's holiness lands on a permanent blemish and does not leave for shearing and work; R. Yosei b. R. Yehuda: inadvertent as deliberate in substitution; R. Elazar: mixed kinds, torn, caesarean, and the doubtful sexes neither holy nor consecrating. INK 27:10 'it and its substitute shall be holy' — the blemish cell.
+- Mishnah Temurah 3:1 — LAW. The peace offering's offspring and substitute, their offspring to the world's end — as peace offerings: laying on, libations, waving, breast and thigh; R. Eliezer: the offspring not offered; the Sages: offered; R. Shimon narrows the dispute; R. Yehoshua and R. Pappias' testimony (the cow eaten at Passover, its calf at the festival). The substitute takes the source's CLASS.
+- Mishnah Temurah 3:3 — LAW. A female set aside for an olah that bore a male — grazes till blemished, sold, an olah from its price; R. Eliezer: itself offered; a female for a guilt offering — grazes, sold, a guilt offering from its price; once his guilt offering was brought — its price to the freewill fund; R. Shimon sold unblemished; the guilt offering's substitute and offspring — graze, sold, prices to the fund; R. Eliezer die; R. Elazar olahs; a guilt offering whose owner died or atoned — likewise. The class router with three arms.
+- Mishnah Temurah 3:4 — CONTEXT. The obligatory versus freewill olah: laying on, libations from his own, the priest's service and hide — Leviticus 1 and 7's span, routed to the offering engine.
+- Mishnah Temurah 3:5 — LAW. The firstborn's and the tithe's substitutes and offspring — as firstborn and tithe: eaten blemished by the owners; the differences from all consecrated: not sold or slaughtered in the market nor weighed by the pound; no redemption for them or their substitutes; not brought from abroad — unblemished offered, blemished eaten; R. Shimon's reason: they have provision in their place. INK 27:33 'it shall not be redeemed' (LV27-22).
+- Mishnah Temurah 4:1 — CONTEXT. The sin offering's offspring, substitute, and orphaned one — die; the year-old, the lost and found blemished — after atonement dies and makes no substitute; before — grazes, sold, another brought, makes a substitute, misuse applies — Leviticus 4's span, routed to the lev_04 drafts.
+- Mishnah Temurah 4:2 — CONTEXT. The lost sin offering replaced and found — dies; lost money replaced and found — to the Dead Sea. Leviticus 4, routed.
+- Mishnah Temurah 4:3 — CONTEXT. The five permutations of lost money and lost beasts found before the offering; Rabbi versus the Sages on 'found after atonement'. Leviticus 4, routed.
+- Mishnah Temurah 4:4 — CONTEXT. The blemished sin offering sold and replaced; R. Elazar b. R. Shimon on the second offered before the first is slaughtered. Leviticus 4, routed.
+- Mishnah Temurah 5:1 — LAW. HOW ONE OUTWITS THE FIRSTBORN: a firstling-bearing animal pregnant — 'what is in her womb, if male an olah' — born male, offered an olah; if female, peace offerings; both said — each by its sex. The sanctification BEFORE birth around 27:26's 'no man shall sanctify it' — OUTWITTING THE FIRSTBORN (LV27-18) VERBATIM.
+- Mishnah Temurah 5:2 — LAW. Two males born — one an olah, the second sold to olah-owers, its price profane; two females likewise for peace offerings; a doubtful sex — Rabban Shimon b. Gamliel: no holiness lands.
+- Mishnah Temurah 5:3 — LAW. 'Her offspring an olah and she a peace offering' — his words stand; 'she a peace offering and her offspring an olah' — a peace offering's offspring (R. Meir); R. Yosei: if he meant it from the start — since two names cannot be called at once — his words stand; if he changed his mind after 'peace offering' — the offspring is a peace offering's. The utterance-order machine.
+- Mishnah Temurah 5:4 — LAW. 'This is the substitute of an olah and of a peace offering' — the olah's (R. Meir); R. Yosei: intent from the start — both stand; changed after the first — the olah's. The same order rule on substitutes.
+- Mishnah Temurah 5:5 — LAW. THE FORMULAS: 'this instead of that,' 'the substitute of that,' 'the exchange of that' — a substitute; 'this desanctified on that' — not; a blemished consecrated beast so desanctified leaves to profane use and the value is owed. The verse's two verbs (27:10 'exchange' / 'substitute') as the formula set.
+- Mishnah Temurah 5:6 — LAW. 'This instead of a sin offering,' 'instead of an olah' — he said nothing; 'instead of THIS sin offering,' 'instead of the sin offering I have at home' when he has one — his words stand; on an impure beast or a blemished one 'these are an olah' — nothing; 'these are FOR an olah' — sold and an olah brought from the price. The formula's object must be IDENTIFIED — 27:10's 'it and its substitute' binds a named beast.
+- Mishnah Temurah 6:1 — CONTEXT. All altar-forbidden classes forbid in any amount — the coupler, the coupled, the set-aside, the worshipped, the harlot's hire, the dog's price, mixed kinds, the torn, the caesarean — Leviticus 22 and Deuteronomy 23's span, routed.
+- Mishnah Temurah 6:2 — CONTEXT. What is a harlot's hire — 'this lamb for your hire,' even a hundred; the fellow's maidservant lodging — Rabbi versus the Sages. Deuteronomy 23, routed.
+- Mishnah Temurah 6:3 — CONTEXT. What is a dog's price; partners dividing with a dog; a dog's hire and a harlot's price permitted — 'two, not four'; their offspring permitted — 'they, not their offspring.' Deuteronomy 23, routed.
+- Mishnah Temurah 6:4 — CONTEXT. Money, wine, oil, flour, birds given as hire — the bird's inclusion from 'for any vow.' Deuteronomy 23, routed.
+- Mishnah Temurah 6:5 — CONTEXT. The altar-forbidden's offspring permitted; the torn one's offspring — R. Eliezer / the Sages; the sound one that nursed from the torn; consecrated animals that became torn are not redeemed to feed dogs. Leviticus 22, routed.
+- Mishnah Temurah 7:1 — LAW. Altar-holy versus upkeep-holy: the altar's make substitutes, bear piggul, remainder, and impurity, their offspring and milk forbidden after redemption, slaughtered outside — liable, not given to craftsmen as wages; none of these for the upkeep's. The first difference is 27:9's beast against 27:14's house — INK.
+- Mishnah Temurah 7:2 — LAW. Upkeep-holy: unspecified consecrations go to the upkeep; its holiness lands on everything; misuse on its growth; no benefit to priests. UNSPECIFIED TO UPKEEP (LV27-09) VERBATIM the Sifra.
+- Mishnah Temurah 7:3 — LAW. Both: not changed from holiness to holiness; consecrated as value-consecration; devoted; if they died — buried; R. Shimon: the upkeep's, if they died — redeemed. The shared constraints with R. Shimon's arm.
+- Mishnah Temurah 7:4 — CONTEXT. The buried: miscarried consecrated, the afterbirth, the stoned ox, the broken-necked heifer, the leper's birds, the nazirite's hair, the firstling donkey, meat in milk, profane slaughtered in the court — a cross-book list, routed to each span.
+- Mishnah Temurah 7:5 — CONTEXT. The burned: leaven on Passover, impure priestly gifts, the uncircumcised fruit, the vineyard's mixed kinds — by their way; lighting with the priestly gift's bread and oil — a cross-book list, routed.
+- Mishnah Temurah 7:6 — CONTEXT. Consecrated slaughtered out of time or place — burned; the suspended guilt offering burned (R. Yehuda buried); the doubtful bird sin offering burned (R. Yehuda to the channel); the burned not buried and the buried not burned; R. Yehuda's stringency refused — 'one may not change.' Leviticus 7's span, routed.
+## Mishnah Bekhorot 9 (the animal tithe) — the unread rows
+- Mishnah Bekhorot 9:2 — LAW. The tithe combines within a grazing beast's walk — sixteen mil; thirty-two apart do not combine; a middle flock brings and tithes in the middle; R. Meir: the Jordan divides. A DISTANCE PARAMETER over 27:32's one flock passing under the rod.
+- Mishnah Bekhorot 9:3 — LAW. The bought and the gifted exempt from the tithe; brother-partners liable to the surcharge exempt from the tithe and the reverse; bought from the estate's common stock — liable; divided and re-partnered — surcharge yes, tithe no. THE TITHE'S DOMAIN (LV27-22): 'passes' — born in his domain.
+- Mishnah Bekhorot 9:4 — LAW. All enter the pen to be tithed except mixed kinds, the torn, the caesarean, the underage, and the orphan — whose mother died or was slaughtered; R. Yehoshua: even slaughtered with the hide intact is no orphan. DISQUALIFIED CONSECRATED BEASTS (LV27-06) VERBATIM the Sifra's exclusions on 'all that passes.'
+- Mishnah Bekhorot 9:5 — LAW. Three threshing seasons for the animal tithe — before Passover, Atzeret, and the festival (R. Akiva); ben Azzai's dates; R. Eliezer and R. Shimon's dates; why the twenty-ninth of Elul and not the first of Tishrei — a festival, no tithing on it; R. Meir: the first of Elul the new year for the animal tithe; ben Azzai: the Elul-born tithed alone. THE FOUR CLOCKS (LV27-03) with the season DATA.
+- Mishnah Bekhorot 9:6 — LAW. Born from the first of Tishrei to the twenty-ninth of Elul combine; five before and five after the New Year do not; five before and five after the season do; the season's office: before it — sell and slaughter freely; arrived — no slaughter; slaughtered — exempt. The year boundary on the tithe's flock.
+- Mishnah Bekhorot 9:8 — LAW. Two out as one — count them two by two; counted as one — the ninth and tenth spoiled; ninth and tenth out together — spoiled; CALLED the ninth tenth, the tenth ninth, the eleventh tenth — all three sanctified: the ninth eaten blemished, the tenth tithe, the eleventh a peace offering that makes a substitute (R. Meir; R. Yehuda: does a substitute make a substitute?); called ninth tenth, tenth tenth, eleventh tenth — the eleventh not sanctified; THE RULE: unless the name 'tenth' was uprooted from the tenth, the eleventh is not sanctified. THE ERROR RULE (LV27-23) VERBATIM — compiled this sitting as the naming machine.
+## Mishnah Bava Metzia 5 (interest) — the unread rows
+- Mishnah Bava Metzia 5:2 — LAW. The lender may not dwell free in the borrower's courtyard nor rent it cheaper — it is interest; INCREASE ON RENT, NOT ON SALE: 'ten sela a year now or a sela a month' permitted; 'a thousand now or twelve maneh at threshing' forbidden. The answer sheet's own rent/sale asymmetry over the two nouns of 25:36-37 (LV25B-14).
+- Mishnah Bava Metzia 5:3 — LAW. A field sold on part payment with 'bring the rest whenever and take yours' — forbidden; lent on his field with 'if you do not pay within three years it is mine' — it is his, as Boethus b. Zonin did by the Sages' word. A recorded practice as a permitted form.
+- Mishnah Bava Metzia 5:4 — LAW. No shopkeeper set for half the profit, no money given to buy produce for half, unless he pays him a laborer's wage; no chickens at half, no calves and foals appraised at half, unless wage and food; calves and foals accepted at half and raised to a third, a donkey until it bears. The risk-share fence with the wage repair.
+- Mishnah Bava Metzia 5:5 — LAW. A cow, a donkey, anything that works and eats — appraised at half; by local custom the young divided at once or raised; Rabban Shimon b. Gamliel: the calf with its mother, the foal with its mother; and he may pay more for his field without fear of interest.
+- Mishnah Bava Metzia 5:6 — LAW. IRON SHEEP not accepted from an Israelite — interest; accepted from gentiles; from them one borrows and to them one lends at interest, and to the resident alien; an Israelite lends a gentile's money with the gentile's knowledge, not an Israelite's. THE SCOPE: 25:36's 'your brother' with Deuteronomy 23:21's 'to the foreigner you may lend at interest' — an import edge.
+- Mishnah Bava Metzia 5:7 — LAW. No fixing a price on produce until the market rate is out; out — fixed, though this one lacks and that one has; first to the reapers — on the stack, the grape vat, the olive vat, the potter's clay, lime once sunk in the kiln; dung all year (R. Yosei: only with dung on the heap; the Sages permit); at the high rate; R. Yehuda: even unfixed he may say 'give me as this or my money.' The forward-price fence.
+- Mishnah Bava Metzia 5:8 — LAW. A man lends his sharecroppers wheat for wheat FOR SEED, not for food; Rabban Gamliel's own practice — took the cheaper rate either way, not as law but as his stringency. A recorded self-stringency labeled as such.
+- Mishnah Bava Metzia 5:9 — LAW. Not 'lend me a kor of wheat and I will repay at threshing'; 'until my son comes' or 'until I find the key' yes; Hillel forbids; Hillel: a woman may not lend her neighbor a loaf until she values it — lest wheat rise and it come to interest. The produce-loan fence with Hillel's dissent.
+- Mishnah Bava Metzia 5:10 — LAW. 'Weed with me and I will weed with you,' 'hoe and I will hoe' — yes; not weed for hoe; dry-season days alike, rain-season days alike, not plow in the dry for plow in the rain; Rabban Gamliel: ADVANCE INTEREST and AFTER-INTEREST (the gift sent to obtain a loan, the gift sent after repayment); R. Shimon: INTEREST OF WORDS — 'know that so-and-so has come from such a place.' The fence's three named outer classes.
+
+## Babylonian Talmud Megillah 11b — opened for the compile (14 segments)
+- Babylonian Talmud Megillah 11b:1 — CONTEXT. the world-rulers roll (Solomon, Sennacherib, Darius, Cyrus) — the Esther exposition's frame, not the count
+- Babylonian Talmud Megillah 11b:2 — CONTEXT. the world-rulers roll (Solomon, Sennacherib, Darius, Cyrus) — the Esther exposition's frame, not the count
+- Babylonian Talmud Megillah 11b:3 — CONTEXT. the world-rulers roll (Solomon, Sennacherib, Darius, Cyrus) — the Esther exposition's frame, not the count
+- Babylonian Talmud Megillah 11b:4 — CONTEXT. the world-rulers roll (Solomon, Sennacherib, Darius, Cyrus) — the Esther exposition's frame, not the count
+- Babylonian Talmud Megillah 11b:5 — CONTEXT. the world-rulers roll (Solomon, Sennacherib, Darius, Cyrus) — the Esther exposition's frame, not the count
+- Babylonian Talmud Megillah 11b:6 — MATERIAL. 'When the king sat' — after his mind settled: 'Belshazzar reckoned and erred; I reckon and do not err' — THE COUNTING EXERCISE OPENS.
+- Babylonian Talmud Megillah 11b:7 — MATERIAL. The two verses: 'when seventy years are full FOR BABYLON I will visit you' (Jeremiah 29:10) and 'to fulfill FOR THE RUINS OF JERUSALEM seventy years' (Daniel 9:2); Belshazzar counted forty-five of Nebuchadnezzar, twenty-three of Evil-Merodach, two of his own = seventy — brought out the Temple vessels and used them.
+- Babylonian Talmud Megillah 11b:8 — MATERIAL. Nebuchadnezzar's forty-five — from the exile schedule: exiled in seven, in eight, in eighteen, in nineteen.
+- Babylonian Talmud Megillah 11b:9 — MATERIAL. The schedule decoded: the seventh of Jehoiakim's conquest = the eighth of Nebuchadnezzar (Jehoiachin's exile); the eighteenth = the nineteenth (Zedekiah's) — 'the first year he conquered Nineveh, the second Jehoiakim'; Jeremiah 52:31: in the thirty-seventh year of Jehoiachin's exile Evil-Merodach in his accession year lifted his head.
+- Babylonian Talmud Megillah 11b:10 — MATERIAL. Eight and thirty-seven = forty-five of Nebuchadnezzar; twenty-three of Evil-Merodach — GEMARA (a received figure, no verse: the data channel self-labeled); two of his own = seventy; 'now surely they will not be redeemed' — the vessels used.
+- Babylonian Talmud Megillah 11b:11 — MATERIAL. Daniel's rebuke (Daniel 5:23), 'that night Belshazzar was killed' (5:30), 'Darius the Mede received the kingdom at sixty-two' (6:1) — the log's entries at the first count's failure.
+- Babylonian Talmud Megillah 11b:12 — MATERIAL. Ahasuerus: 'he erred, I do not' — 'FOR BABYLON' means the exile of Babylon: how many short? eight; substitute them — one of Belshazzar, five of Darius and Cyrus, two of his own = seventy; seeing seventy full and no redemption he used the vessels; 'the adversary came and danced among them and killed Vashti.' The second epoch's run and failure.
+- Babylonian Talmud Megillah 11b:13 — MATERIAL. He too erred — he should have counted FROM THE RUINS OF JERUSALEM. The third epoch named.
+- Babylonian Talmud Megillah 11b:14 — MATERIAL. How many short? eleven; he reigned fourteen — in his fourteenth the house should have been built; then why 'the work of the house of God ceased' (Ezra 4:24)? Rava: broken years.
+## Babylonian Talmud Megillah 12a — opened for the compile (19 segments)
+- Babylonian Talmud Megillah 12a:1 — MATERIAL. A baraita likewise: one more year for Babylon, and Darius arose and completed it.
+- Babylonian Talmud Megillah 12a:2 — MATERIAL. Rava: EVEN DANIEL ERRED in this count — 'I understood by the books' (Daniel 9:2): 'understood' implies he had erred.
+- Babylonian Talmud Megillah 12a:3 — MATERIAL. Still the verses conflict: 'full for Babylon' against 'for the ruins of Jerusalem.'
+- Babylonian Talmud Megillah 12a:4 — MATERIAL. Rava: the first is a mere REMEMBRANCE — Cyrus's 'the LORD charged me to build Him a house in Jerusalem' (Ezra 1:2): the seventy for Babylon fires the decree, the seventy for the ruins the building. The two verses assigned two outputs.
+- Babylonian Talmud Megillah 12a:5 — CONTEXT. the Esther exposition (Cyrus, the feast, the garden, the vessels, Vashti) — not the count
+- Babylonian Talmud Megillah 12a:6 — CONTEXT. the Esther exposition (Cyrus, the feast, the garden, the vessels, Vashti) — not the count
+- Babylonian Talmud Megillah 12a:7 — CONTEXT. the Esther exposition (Cyrus, the feast, the garden, the vessels, Vashti) — not the count
+- Babylonian Talmud Megillah 12a:8 — CONTEXT. the Esther exposition (Cyrus, the feast, the garden, the vessels, Vashti) — not the count
+- Babylonian Talmud Megillah 12a:9 — CONTEXT. the Esther exposition (Cyrus, the feast, the garden, the vessels, Vashti) — not the count
+- Babylonian Talmud Megillah 12a:10 — CONTEXT. the Esther exposition (Cyrus, the feast, the garden, the vessels, Vashti) — not the count
+- Babylonian Talmud Megillah 12a:11 — CONTEXT. the Esther exposition (Cyrus, the feast, the garden, the vessels, Vashti) — not the count
+- Babylonian Talmud Megillah 12a:12 — CONTEXT. the Esther exposition (Cyrus, the feast, the garden, the vessels, Vashti) — not the count
+- Babylonian Talmud Megillah 12a:13 — CONTEXT. the Esther exposition (Cyrus, the feast, the garden, the vessels, Vashti) — not the count
+- Babylonian Talmud Megillah 12a:14 — CONTEXT. the Esther exposition (Cyrus, the feast, the garden, the vessels, Vashti) — not the count
+- Babylonian Talmud Megillah 12a:15 — CONTEXT. the Esther exposition (Cyrus, the feast, the garden, the vessels, Vashti) — not the count
+- Babylonian Talmud Megillah 12a:16 — CONTEXT. the Esther exposition (Cyrus, the feast, the garden, the vessels, Vashti) — not the count
+- Babylonian Talmud Megillah 12a:17 — CONTEXT. the Esther exposition (Cyrus, the feast, the garden, the vessels, Vashti) — not the count
+- Babylonian Talmud Megillah 12a:18 — CONTEXT. the Esther exposition (Cyrus, the feast, the garden, the vessels, Vashti) — not the count
+- Babylonian Talmud Megillah 12a:19 — CONTEXT. the Esther exposition (Cyrus, the feast, the garden, the vessels, Vashti) — not the count
+## Babylonian Talmud Arakhin 12b — opened for the compile (11 segments)
+- Babylonian Talmud Arakhin 12b:1 — CONTEXT. the second year he conquered Jehoiakim — the tail of the prior segment
+- Babylonian Talmud Arakhin 12b:2 — CONTEXT. 'and so in the second' — the mishnah's phrase under discussion
+- Babylonian Talmud Arakhin 12b:3 — MATERIAL. The second house fell at a sabbatical's exit? it stood 420 years: eight Jubilees = 400, two weeks = 14, six remain — the SIXTH of the week.
+- Babylonian Talmud Arakhin 12b:4 — MATERIAL. This is R. YEHUDA, who says the fiftieth year counts for both — bring eight from the eight Jubilees: six and eight = fourteen — it fell at a sabbatical's exit. THE CYCLE MODEL AS A RECORDED PARAMETER.
+- Babylonian Talmud Arakhin 12b:5 — MATERIAL. But under R. Yehuda the first house cannot be placed: 'SEVENTEEN JUBILEES Israel counted from entering the land until they left, and you cannot say they counted from entry — else the house fell at a Jubilee's start and you do not find Ezekiel's fourteenth year after the city was smitten' (40:1).
+- Babylonian Talmud Arakhin 12b:6 — MATERIAL. Subtract the seven of conquest and the seven of division — and you find 'in the fourteenth year after the city was smitten.'
+- Babylonian Talmud Arakhin 12b:7 — MATERIAL. Under R. Yehuda bring seventeen from the seventeen Jubilees — it falls in the THIRD of the week.
+- Babylonian Talmud Arakhin 12b:8 — MATERIAL. The years Sennacherib exiled them, until Jeremiah returned them, are not counted — a data adjustment on the count.
+- Babylonian Talmud Arakhin 12b:9 — CONTEXT. or the Rabbis, and 'so in the second' refers to the rest
+- Babylonian Talmud Arakhin 12b:10 — CONTEXT. the watch of Jehoiarib in the second house
+- Babylonian Talmud Arakhin 12b:11 — CONTEXT. the four watches that came up from the exile
+## Babylonian Talmud Arakhin 13a — opened for the compile (11 segments)
+- Babylonian Talmud Arakhin 13a:1 — CONTEXT. the watches' lots — Jedaiah first, Jehoiarib subordinate
+- Babylonian Talmud Arakhin 13a:2 — MATERIAL. Rav Ashi: the six years until Ezra came up and sanctified are not counted.
+- Babylonian Talmud Arakhin 13a:3 — MATERIAL. Ezra 4:24 (the work ceased) and Ezra 6:15 (the house finished on the third of Adar in Darius's sixth year) — the log's dates.
+- Babylonian Talmud Arakhin 13a:4 — MATERIAL. The next year Ezra came up with his exiles — Ezra 7:8, the seventh year of the king.
+- Babylonian Talmud Arakhin 13a:5 — MATERIAL. The baraita itself: seventeen Jubilees from entering to leaving; not from entry, else the house falls at a Jubilee's start against Ezekiel 40:1.
+- Babylonian Talmud Arakhin 13a:6 — MATERIAL. The seven of conquest from Caleb: 'forty years old when Moses sent me from Kadesh Barnea' (Joshua 14:7), 'now eighty-five' (14:10).
+- Babylonian Talmud Arakhin 13a:7 — MATERIAL. The arithmetic: the first year the tabernacle made, the second erected and the spies sent — at the Jordan Caleb was seventy-eight; at the division eighty-five — SEVEN of conquest.
+- Babylonian Talmud Arakhin 13a:8 — MATERIAL. The seven of division: from the seven of conquest by analogy, or because Ezekiel's fourteen is not otherwise found.
+- Babylonian Talmud Arakhin 13a:9 — CONTEXT. the lambs mishnah (six inspected lambs; two trumpets, nine harps) — Arakhin 2:5's own text and gemara
+- Babylonian Talmud Arakhin 13a:10 — CONTEXT. the lambs mishnah (six inspected lambs; two trumpets, nine harps) — Arakhin 2:5's own text and gemara
+- Babylonian Talmud Arakhin 13a:11 — CONTEXT. the lambs mishnah (six inspected lambs; two trumpets, nine harps) — Arakhin 2:5's own text and gemara
+## Babylonian Talmud Moed Katan 3a — opened for the compile (22 segments)
+- Babylonian Talmud Moed Katan 3a:1 — MATERIAL. DERIVATIVES THE MERCIFUL DID NOT FORBID — 'in the seventh year a sabbath of rest for the land, your field you shall not sow' (Lev 25:4) — the four verbs are the written layer.
+- Babylonian Talmud Moed Katan 3a:2 — MATERIAL. Pruning is under sowing and vintaging under reaping — why did the Merciful write them?
+- Babylonian Talmud Moed Katan 3a:3 — MATERIAL. To say: for THESE derivatives one is liable, for other derivatives not.
+- Babylonian Talmud Moed Katan 3a:4 — MATERIAL. The baraita: 'your field you shall not sow, your vineyard not prune' — only sowing and pruning? weeding, hoeing, cutting from 'your field NOT... your vineyard NOT' — no labor in your field, none in your vineyard. The Sifra's census (Section 1 4-5, LV25A-04) restated.
+- Babylonian Talmud Moed Katan 3a:5 — MATERIAL. Nor trimming, pruning shoots, or cutting dead wood from the tree — from the same 'NOT... NOT.'
+- Babylonian Talmud Moed Katan 3a:6 — MATERIAL. Nor fertilizing, removing stones, dusting, or smoking the tree — from the same.
+- Babylonian Talmud Moed Katan 3a:7 — MATERIAL. Might one not hoe under olives, dig under vines, fill cracks with water, make basins for vines? 'your field you shall not SOW.'
+- Babylonian Talmud Moed Katan 3a:8 — MATERIAL. Sowing was in the general and went out to compare: as sowing is labor in field and vineyard, so all that is labor in field and vineyard. THE CLASS RULE (Sifra Section 1 6, LV25A-04) — the tradition's went-out-to-teach middah.
+- Babylonian Talmud Moed Katan 3a:9 — MATERIAL. RABBINIC, AND THE VERSE A MERE SUPPORT. The derivative labors' LAYER ruled — the census is the sages', the verse its peg.
+- Babylonian Talmud Moed Katan 3a:10 — MATERIAL. Is hoeing permitted in the seventh? 'the seventh you shall release it and abandon it' (Exod 23:11) — release from hoeing, abandon from clearing stones.
+- Babylonian Talmud Moed Katan 3a:11 — MATERIAL. Rav Ukva b. Chama: two hoeings — strengthening the trees forbidden, closing cracks permitted.
+- Babylonian Talmud Moed Katan 3a:12 — MATERIAL. PLOWING in the seventh: R. Yochanan and R. Elazar — one says lashes, one says no lashes; does it turn on R. Avin's rule in R. Ila'i's name: wherever a general is stated in a positive command and a particular in a negative, it is not run as general-particular-general? A MIDDOT CASE-LAW ROW (the inference rule's own precondition).
+- Babylonian Talmud Moed Katan 3a:13 — MATERIAL. The one who says lashes rejects R. Avin's rule.
+- Babylonian Talmud Moed Katan 3a:14 — MATERIAL. The one who says no lashes accepts it.
+- Babylonian Talmud Moed Katan 3a:15 — MATERIAL. No — both reject it; the one who says lashes is straightforward.
+- Babylonian Talmud Moed Katan 3a:16 — MATERIAL. The one who says no lashes: pruning under sowing, vintaging under reaping — written to say: THESE derivatives incur liability, no other derivative does.
+- Babylonian Talmud Moed Katan 3a:17 — MATERIAL. the baraita repeated for the second position — the census, the tree labors, the hoeing exemption, the class rule (3a:4-8 again)
+- Babylonian Talmud Moed Katan 3a:18 — MATERIAL. the baraita repeated for the second position — the census, the tree labors, the hoeing exemption, the class rule (3a:4-8 again)
+- Babylonian Talmud Moed Katan 3a:19 — MATERIAL. the baraita repeated for the second position — the census, the tree labors, the hoeing exemption, the class rule (3a:4-8 again)
+- Babylonian Talmud Moed Katan 3a:20 — MATERIAL. the baraita repeated for the second position — the census, the tree labors, the hoeing exemption, the class rule (3a:4-8 again)
+- Babylonian Talmud Moed Katan 3a:21 — MATERIAL. the baraita repeated for the second position — the census, the tree labors, the hoeing exemption, the class rule (3a:4-8 again)
+- Babylonian Talmud Moed Katan 3a:22 — MATERIAL. RABBINIC, AND THE VERSE A MERE SUPPORT — the layer ruled a second time.
+## Babylonian Talmud Moed Katan 3b — opened for the compile (13 segments)
+- Babylonian Talmud Moed Katan 3b:1 — MATERIAL. Rav Dimi: 'might one be flogged for the ADDITION? the Talmud takes it for exemption' — and he did not know which Talmud or which addition.
+- Babylonian Talmud Moed Katan 3b:2 — MATERIAL. R. Elazar: plowing — 'might one be flogged for plowing, which comes from general-particular-general? the Talmud takes it for exemption.'
+- Babylonian Talmud Moed Katan 3b:3 — MATERIAL. For if so, why all these particulars?
+- Babylonian Talmud Moed Katan 3b:4 — MATERIAL. R. Yochanan: THE DAYS THE SAGES ADDED BEFORE THE NEW YEAR — 'might one be flogged for the New Year's addition, which comes from in plowing and in harvest you shall rest (Exod 34:21)? the Talmud takes it for exemption.'
+- Babylonian Talmud Moed Katan 3b:5 — MATERIAL. What are the days before the New Year? as we learned: until when do they plow an orchard on the eve — Beit Shammai while it benefits the fruit, Beit Hillel until Atzeret, and the words of these are near those. VERBATIM Mishnah Sheviit 1:1.
+- Babylonian Talmud Moed Katan 3b:6 — MATERIAL. And a grain field — until the moisture ends, while men plow to plant cucumber and gourd beds. VERBATIM Mishnah Sheviit 2:1.
+- Babylonian Talmud Moed Katan 3b:7 — MATERIAL. R. Shimon: then the Torah gave each man's measure into his hand — the grain field until Passover, the orchard until Atzeret; Beit Hillel: until Passover. VERBATIM Sheviit 2:1's close.
+- Babylonian Talmud Moed Katan 3b:8 — MATERIAL. R. Shimon b. Pazi in R. Yehoshua b. Levi's name from bar Kappara: RABBAN GAMLIEL AND HIS COURT VOTED ON THESE TWO PERIODS AND ABOLISHED THEM.
+- Babylonian Talmud Moed Katan 3b:9 — MATERIAL. How could they abolish an ordinance of Beit Shammai and Beit Hillel? 'no court may annul its fellow's words unless greater in wisdom and number.'
+- Babylonian Talmud Moed Katan 3b:10 — MATERIAL. He was silent an hour, then: say they stipulated among themselves — WHOEVER WISHES TO ABOLISH MAY COME AND ABOLISH. The repeal condition.
+- Babylonian Talmud Moed Katan 3b:11 — MATERIAL. Theirs? it is a HALAKHAH TO MOSES FROM SINAI — R. Asi in R. Yochanan's name from R. Nechunya of Bikat Beit Chortan: ten saplings, the willow, the water libation. THE DATA CHANNEL self-labeled on Sheviit 1:6.
+- Babylonian Talmud Moed Katan 3b:12 — MATERIAL. R. Yitzchak: the halakhah received is THIRTY DAYS before the New Year; the Passover and Atzeret periods they ordained and stipulated that whoever wishes may abolish. Three layers on one addition.
+- Babylonian Talmud Moed Katan 3b:13 — MATERIAL. Are these halakhot? they are verses: 'in plowing and in harvest you shall rest' — R. Akiva: not the seventh's plowing and harvest, already 'your field you shall not sow, your vineyard not prune' (Lev 25:4) — but the eve's plowing entering the seventh. VERBATIM Mishnah Sheviit 1:4.
+## Babylonian Talmud Moed Katan 4a — opened for the compile (22 segments)
+- Babylonian Talmud Moed Katan 4a:1 — MATERIAL. and the seventh's harvest exiting into the year after. VERBATIM Sheviit 1:4 continued.
+- Babylonian Talmud Moed Katan 4a:2 — MATERIAL. R. Yishmael: as plowing is optional so harvest is optional — the omer's harvest, a command, excluded. VERBATIM Sheviit 1:4's close.
+- Babylonian Talmud Moed Katan 4a:3 — MATERIAL. Rav Nachman b. Yitzchak: the halakhah was received to PERMIT the young tree, the verses to FORBID the old.
+- Babylonian Talmud Moed Katan 4a:4 — MATERIAL. If the halakhah permits the young, the old is forbidden of itself?
+- Babylonian Talmud Moed Katan 4a:5 — MATERIAL. Rather: the halakhah for R. Yishmael, the verses for R. Akiva — the two routes assigned to two authorities.
+- Babylonian Talmud Moed Katan 4a:6 — MATERIAL. R. Yochanan: Rabban Gamliel and his court abolished them BY TORAH AUTHORITY.
+- Babylonian Talmud Moed Katan 4a:7 — MATERIAL. How? a verbal analogy 'sabbath'-'sabbath' from the creation Sabbath: as there it is forbidden itself and permitted before and after, so here. An import from the creation week's Sabbath.
+- Babylonian Talmud Moed Katan 4a:8 — MATERIAL. Rav Ashi objects: for the one who says halakhah, does an analogy uproot a halakhah? for the one who says verse, does it uproot a verse?
+- Babylonian Talmud Moed Katan 4a:9 — MATERIAL. Rav Ashi: Rabban Gamliel and his court held with R. Yishmael that it is a received halakhah — and the halakhah was received ONLY WHILE THE TEMPLE STANDS, like the water libation; with no Temple, not. THE TEMPLE-DEPENDENCY PARAMETER on the addition.
+- Babylonian Talmud Moed Katan 4a:10 — CONTEXT. festival-week watering (rain water, drawn water, channels, the two beds) — the tractate's own subject, not the seventh
+- Babylonian Talmud Moed Katan 4a:11 — CONTEXT. festival-week watering (rain water, drawn water, channels, the two beds) — the tractate's own subject, not the seventh
+- Babylonian Talmud Moed Katan 4a:12 — CONTEXT. festival-week watering (rain water, drawn water, channels, the two beds) — the tractate's own subject, not the seventh
+- Babylonian Talmud Moed Katan 4a:13 — CONTEXT. festival-week watering (rain water, drawn water, channels, the two beds) — the tractate's own subject, not the seventh
+- Babylonian Talmud Moed Katan 4a:14 — CONTEXT. festival-week watering (rain water, drawn water, channels, the two beds) — the tractate's own subject, not the seventh
+- Babylonian Talmud Moed Katan 4a:15 — CONTEXT. festival-week watering (rain water, drawn water, channels, the two beds) — the tractate's own subject, not the seventh
+- Babylonian Talmud Moed Katan 4a:16 — CONTEXT. festival-week watering (rain water, drawn water, channels, the two beds) — the tractate's own subject, not the seventh
+- Babylonian Talmud Moed Katan 4a:17 — CONTEXT. festival-week watering (rain water, drawn water, channels, the two beds) — the tractate's own subject, not the seventh
+- Babylonian Talmud Moed Katan 4a:18 — CONTEXT. festival-week watering (rain water, drawn water, channels, the two beds) — the tractate's own subject, not the seventh
+- Babylonian Talmud Moed Katan 4a:19 — CONTEXT. festival-week watering (rain water, drawn water, channels, the two beds) — the tractate's own subject, not the seventh
+- Babylonian Talmud Moed Katan 4a:20 — CONTEXT. festival-week watering (rain water, drawn water, channels, the two beds) — the tractate's own subject, not the seventh
+- Babylonian Talmud Moed Katan 4a:21 — CONTEXT. festival-week watering (rain water, drawn water, channels, the two beds) — the tractate's own subject, not the seventh
+- Babylonian Talmud Moed Katan 4a:22 — CONTEXT. festival-week watering (rain water, drawn water, channels, the two beds) — the tractate's own subject, not the seventh
+
+## CITE INDEX (every row above, one line each — nothing grouped)
+- Mishnah Sheviit 1:1 — LAW
+- Mishnah Sheviit 1:2 — LAW
+- Mishnah Sheviit 1:3 — LAW
+- Mishnah Sheviit 1:4 — CREDIT
+- Mishnah Sheviit 1:5 — LAW
+- Mishnah Sheviit 1:6 — LAW
+- Mishnah Sheviit 1:7 — LAW
+- Mishnah Sheviit 1:8 — LAW
+- Mishnah Sheviit 2:1 — LAW
+- Mishnah Sheviit 2:2 — LAW
+- Mishnah Sheviit 2:3 — LAW
+- Mishnah Sheviit 2:4 — LAW
+- Mishnah Sheviit 2:5 — LAW
+- Mishnah Sheviit 2:6 — LAW
+- Mishnah Sheviit 2:7 — LAW
+- Mishnah Sheviit 2:8 — LAW
+- Mishnah Sheviit 2:9 — LAW
+- Mishnah Sheviit 2:10 — LAW
+- Mishnah Sheviit 3:1 — LAW
+- Mishnah Sheviit 3:2 — LAW
+- Mishnah Sheviit 3:3 — LAW
+- Mishnah Sheviit 3:4 — LAW
+- Mishnah Sheviit 3:5 — LAW
+- Mishnah Sheviit 3:6 — LAW
+- Mishnah Sheviit 3:7 — LAW
+- Mishnah Sheviit 3:8 — LAW
+- Mishnah Sheviit 3:9 — LAW
+- Mishnah Sheviit 3:10 — LAW
+- Mishnah Sheviit 4:1 — LAW
+- Mishnah Sheviit 4:2 — LAW
+- Mishnah Sheviit 4:3 — LAW
+- Mishnah Sheviit 4:4 — LAW
+- Mishnah Sheviit 4:5 — LAW
+- Mishnah Sheviit 4:6 — LAW
+- Mishnah Sheviit 4:7 — LAW
+- Mishnah Sheviit 4:8 — LAW
+- Mishnah Sheviit 4:9 — LAW
+- Mishnah Sheviit 4:10 — LAW
+- Mishnah Sheviit 5:1 — LAW
+- Mishnah Sheviit 5:2 — LAW
+- Mishnah Sheviit 5:3 — LAW
+- Mishnah Sheviit 5:4 — LAW
+- Mishnah Sheviit 5:5 — LAW
+- Mishnah Sheviit 5:6 — LAW
+- Mishnah Sheviit 5:7 — LAW
+- Mishnah Sheviit 5:8 — LAW
+- Mishnah Sheviit 5:9 — LAW
+- Mishnah Sheviit 6:1 — LAW
+- Mishnah Sheviit 6:2 — LAW
+- Mishnah Sheviit 6:3 — LAW
+- Mishnah Sheviit 6:4 — LAW
+- Mishnah Sheviit 6:5 — LAW
+- Mishnah Sheviit 6:6 — CONTEXT
+- Mishnah Sheviit 7:1 — LAW
+- Mishnah Sheviit 7:2 — LAW
+- Mishnah Sheviit 7:3 — LAW
+- Mishnah Sheviit 7:4 — LAW
+- Mishnah Sheviit 7:5 — LAW
+- Mishnah Sheviit 7:6 — LAW
+- Mishnah Sheviit 7:7 — LAW
+- Mishnah Sheviit 8:1 — LAW
+- Mishnah Sheviit 8:2 — LAW
+- Mishnah Sheviit 8:3 — LAW
+- Mishnah Sheviit 8:4 — LAW
+- Mishnah Sheviit 8:5 — LAW
+- Mishnah Sheviit 8:6 — LAW
+- Mishnah Sheviit 8:7 — LAW
+- Mishnah Sheviit 8:8 — LAW
+- Mishnah Sheviit 8:9 — LAW
+- Mishnah Sheviit 8:10 — CONTEXT
+- Mishnah Sheviit 8:11 — LAW
+- Mishnah Sheviit 9:1 — LAW
+- Mishnah Sheviit 9:2 — LAW
+- Mishnah Sheviit 9:3 — LAW
+- Mishnah Sheviit 9:4 — LAW
+- Mishnah Sheviit 9:5 — LAW
+- Mishnah Sheviit 9:6 — LAW
+- Mishnah Sheviit 9:7 — LAW
+- Mishnah Sheviit 9:8 — LAW
+- Mishnah Sheviit 9:9 — LAW
+- Mishnah Sheviit 10:1 — ROUTED
+- Mishnah Sheviit 10:2 — ROUTED
+- Mishnah Sheviit 10:3 — ROUTED
+- Mishnah Sheviit 10:4 — ROUTED
+- Mishnah Sheviit 10:5 — ROUTED
+- Mishnah Sheviit 10:6 — ROUTED
+- Mishnah Sheviit 10:7 — ROUTED
+- Mishnah Sheviit 10:8 — ROUTED
+- Mishnah Sheviit 10:9 — ROUTED
+- Mishnah Arakhin 1:2 — LAW
+- Mishnah Arakhin 1:3 — LAW
+- Mishnah Arakhin 1:4 — CONTEXT
+- Mishnah Arakhin 2:1 — LAW
+- Mishnah Arakhin 2:2 — CONTEXT
+- Mishnah Arakhin 2:3 — CONTEXT
+- Mishnah Arakhin 2:4 — CONTEXT
+- Mishnah Arakhin 2:5 — CONTEXT
+- Mishnah Arakhin 2:6 — CONTEXT
+- Mishnah Arakhin 3:4 — CONTEXT
+- Mishnah Arakhin 3:5 — CONTEXT
+- Mishnah Arakhin 4:2 — CREDIT
+- Mishnah Arakhin 4:3 — LAW
+- Mishnah Arakhin 5:1 — LAW
+- Mishnah Arakhin 5:2 — LAW
+- Mishnah Arakhin 5:3 — LAW
+- Mishnah Arakhin 5:4 — LAW
+- Mishnah Arakhin 5:5 — LAW
+- Mishnah Arakhin 6:1 — LAW
+- Mishnah Arakhin 6:2 — LAW
+- Mishnah Arakhin 6:3 — LAW
+- Mishnah Arakhin 6:4 — LAW
+- Mishnah Arakhin 6:5 — LAW
+- Mishnah Arakhin 7:2 — LAW
+- Mishnah Arakhin 7:3 — LAW
+- Mishnah Arakhin 7:4 — LAW
+- Mishnah Arakhin 8:1 — LAW
+- Mishnah Arakhin 8:2 — LAW
+- Mishnah Arakhin 8:3 — LAW
+- Mishnah Arakhin 8:4 — LAW
+- Mishnah Arakhin 9:5 — LAW
+- Mishnah Arakhin 9:6 — LAW
+- Mishnah Temurah 1:3 — LAW
+- Mishnah Temurah 1:4 — CONTEXT
+- Mishnah Temurah 1:5 — LAW
+- Mishnah Temurah 2:1 — LAW
+- Mishnah Temurah 2:2 — CONTEXT
+- Mishnah Temurah 2:3 — LAW
+- Mishnah Temurah 3:1 — LAW
+- Mishnah Temurah 3:3 — LAW
+- Mishnah Temurah 3:4 — CONTEXT
+- Mishnah Temurah 3:5 — LAW
+- Mishnah Temurah 4:1 — CONTEXT
+- Mishnah Temurah 4:2 — CONTEXT
+- Mishnah Temurah 4:3 — CONTEXT
+- Mishnah Temurah 4:4 — CONTEXT
+- Mishnah Temurah 5:1 — LAW
+- Mishnah Temurah 5:2 — LAW
+- Mishnah Temurah 5:3 — LAW
+- Mishnah Temurah 5:4 — LAW
+- Mishnah Temurah 5:5 — LAW
+- Mishnah Temurah 5:6 — LAW
+- Mishnah Temurah 6:1 — CONTEXT
+- Mishnah Temurah 6:2 — CONTEXT
+- Mishnah Temurah 6:3 — CONTEXT
+- Mishnah Temurah 6:4 — CONTEXT
+- Mishnah Temurah 6:5 — CONTEXT
+- Mishnah Temurah 7:1 — LAW
+- Mishnah Temurah 7:2 — LAW
+- Mishnah Temurah 7:3 — LAW
+- Mishnah Temurah 7:4 — CONTEXT
+- Mishnah Temurah 7:5 — CONTEXT
+- Mishnah Temurah 7:6 — CONTEXT
+- Mishnah Bekhorot 9:2 — LAW
+- Mishnah Bekhorot 9:3 — LAW
+- Mishnah Bekhorot 9:4 — LAW
+- Mishnah Bekhorot 9:5 — LAW
+- Mishnah Bekhorot 9:6 — LAW
+- Mishnah Bekhorot 9:8 — LAW
+- Mishnah Bava Metzia 5:2 — LAW
+- Mishnah Bava Metzia 5:3 — LAW
+- Mishnah Bava Metzia 5:4 — LAW
+- Mishnah Bava Metzia 5:5 — LAW
+- Mishnah Bava Metzia 5:6 — LAW
+- Mishnah Bava Metzia 5:7 — LAW
+- Mishnah Bava Metzia 5:8 — LAW
+- Mishnah Bava Metzia 5:9 — LAW
+- Mishnah Bava Metzia 5:10 — LAW
+- Babylonian Talmud Megillah 11b:1 — CONTEXT
+- Babylonian Talmud Megillah 11b:2 — CONTEXT
+- Babylonian Talmud Megillah 11b:3 — CONTEXT
+- Babylonian Talmud Megillah 11b:4 — CONTEXT
+- Babylonian Talmud Megillah 11b:5 — CONTEXT
+- Babylonian Talmud Megillah 11b:6 — MATERIAL
+- Babylonian Talmud Megillah 11b:7 — MATERIAL
+- Babylonian Talmud Megillah 11b:8 — MATERIAL
+- Babylonian Talmud Megillah 11b:9 — MATERIAL
+- Babylonian Talmud Megillah 11b:10 — MATERIAL
+- Babylonian Talmud Megillah 11b:11 — MATERIAL
+- Babylonian Talmud Megillah 11b:12 — MATERIAL
+- Babylonian Talmud Megillah 11b:13 — MATERIAL
+- Babylonian Talmud Megillah 11b:14 — MATERIAL
+- Babylonian Talmud Megillah 12a:1 — MATERIAL
+- Babylonian Talmud Megillah 12a:2 — MATERIAL
+- Babylonian Talmud Megillah 12a:3 — MATERIAL
+- Babylonian Talmud Megillah 12a:4 — MATERIAL
+- Babylonian Talmud Megillah 12a:5 — CONTEXT
+- Babylonian Talmud Megillah 12a:6 — CONTEXT
+- Babylonian Talmud Megillah 12a:7 — CONTEXT
+- Babylonian Talmud Megillah 12a:8 — CONTEXT
+- Babylonian Talmud Megillah 12a:9 — CONTEXT
+- Babylonian Talmud Megillah 12a:10 — CONTEXT
+- Babylonian Talmud Megillah 12a:11 — CONTEXT
+- Babylonian Talmud Megillah 12a:12 — CONTEXT
+- Babylonian Talmud Megillah 12a:13 — CONTEXT
+- Babylonian Talmud Megillah 12a:14 — CONTEXT
+- Babylonian Talmud Megillah 12a:15 — CONTEXT
+- Babylonian Talmud Megillah 12a:16 — CONTEXT
+- Babylonian Talmud Megillah 12a:17 — CONTEXT
+- Babylonian Talmud Megillah 12a:18 — CONTEXT
+- Babylonian Talmud Megillah 12a:19 — CONTEXT
+- Babylonian Talmud Arakhin 12b:1 — CONTEXT
+- Babylonian Talmud Arakhin 12b:2 — CONTEXT
+- Babylonian Talmud Arakhin 12b:3 — MATERIAL
+- Babylonian Talmud Arakhin 12b:4 — MATERIAL
+- Babylonian Talmud Arakhin 12b:5 — MATERIAL
+- Babylonian Talmud Arakhin 12b:6 — MATERIAL
+- Babylonian Talmud Arakhin 12b:7 — MATERIAL
+- Babylonian Talmud Arakhin 12b:8 — MATERIAL
+- Babylonian Talmud Arakhin 12b:9 — CONTEXT
+- Babylonian Talmud Arakhin 12b:10 — CONTEXT
+- Babylonian Talmud Arakhin 12b:11 — CONTEXT
+- Babylonian Talmud Arakhin 13a:1 — CONTEXT
+- Babylonian Talmud Arakhin 13a:2 — MATERIAL
+- Babylonian Talmud Arakhin 13a:3 — MATERIAL
+- Babylonian Talmud Arakhin 13a:4 — MATERIAL
+- Babylonian Talmud Arakhin 13a:5 — MATERIAL
+- Babylonian Talmud Arakhin 13a:6 — MATERIAL
+- Babylonian Talmud Arakhin 13a:7 — MATERIAL
+- Babylonian Talmud Arakhin 13a:8 — MATERIAL
+- Babylonian Talmud Arakhin 13a:9 — CONTEXT
+- Babylonian Talmud Arakhin 13a:10 — CONTEXT
+- Babylonian Talmud Arakhin 13a:11 — CONTEXT
+- Babylonian Talmud Moed Katan 3a:1 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:2 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:3 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:4 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:5 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:6 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:7 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:8 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:9 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:10 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:11 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:12 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:13 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:14 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:15 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:16 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:17 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:18 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:19 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:20 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:21 — MATERIAL
+- Babylonian Talmud Moed Katan 3a:22 — MATERIAL
+- Babylonian Talmud Moed Katan 3b:1 — MATERIAL
+- Babylonian Talmud Moed Katan 3b:2 — MATERIAL
+- Babylonian Talmud Moed Katan 3b:3 — MATERIAL
+- Babylonian Talmud Moed Katan 3b:4 — MATERIAL
+- Babylonian Talmud Moed Katan 3b:5 — MATERIAL
+- Babylonian Talmud Moed Katan 3b:6 — MATERIAL
+- Babylonian Talmud Moed Katan 3b:7 — MATERIAL
+- Babylonian Talmud Moed Katan 3b:8 — MATERIAL
+- Babylonian Talmud Moed Katan 3b:9 — MATERIAL
+- Babylonian Talmud Moed Katan 3b:10 — MATERIAL
+- Babylonian Talmud Moed Katan 3b:11 — MATERIAL
+- Babylonian Talmud Moed Katan 3b:12 — MATERIAL
+- Babylonian Talmud Moed Katan 3b:13 — MATERIAL
+- Babylonian Talmud Moed Katan 4a:1 — MATERIAL
+- Babylonian Talmud Moed Katan 4a:2 — MATERIAL
+- Babylonian Talmud Moed Katan 4a:3 — MATERIAL
+- Babylonian Talmud Moed Katan 4a:4 — MATERIAL
+- Babylonian Talmud Moed Katan 4a:5 — MATERIAL
+- Babylonian Talmud Moed Katan 4a:6 — MATERIAL
+- Babylonian Talmud Moed Katan 4a:7 — MATERIAL
+- Babylonian Talmud Moed Katan 4a:8 — MATERIAL
+- Babylonian Talmud Moed Katan 4a:9 — MATERIAL
+- Babylonian Talmud Moed Katan 4a:10 — CONTEXT
+- Babylonian Talmud Moed Katan 4a:11 — CONTEXT
+- Babylonian Talmud Moed Katan 4a:12 — CONTEXT
+- Babylonian Talmud Moed Katan 4a:13 — CONTEXT
+- Babylonian Talmud Moed Katan 4a:14 — CONTEXT
+- Babylonian Talmud Moed Katan 4a:15 — CONTEXT
+- Babylonian Talmud Moed Katan 4a:16 — CONTEXT
+- Babylonian Talmud Moed Katan 4a:17 — CONTEXT
+- Babylonian Talmud Moed Katan 4a:18 — CONTEXT
+- Babylonian Talmud Moed Katan 4a:19 — CONTEXT
+- Babylonian Talmud Moed Katan 4a:20 — CONTEXT
+- Babylonian Talmud Moed Katan 4a:21 — CONTEXT
+- Babylonian Talmud Moed Katan 4a:22 — CONTEXT

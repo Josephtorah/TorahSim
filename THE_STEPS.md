@@ -238,6 +238,20 @@ behind them, and the tradition labels both itself as decrees ("a
 king's decree"). One breath: the Mishnah writes as if it is adding;
 the Talmud shows most of it was derived; the true remainder arrives
 self-labeled.
+THE TOPIC ROUTE EXECUTED (2026-09-05, round 47 — REVIEW_BEHAR item 2):
+the citation links had put ZERO rows of Mishnah Sheviit (the
+seventh-year tractate) before the engine for Lev 25:1-7, because the
+tractate barely quotes verses. The remedy is this ruling's own: the
+testing shelf is enumerated BY TOPIC from logic/MISHNAH_TOPICS.md's
+tractate list, by script, against every prior cases table and docket
+ledger — the unread rows (Sheviit whole plus the unread rows of
+Arakhin, Temurah, Bekhorot 9, Bava Metzia 5: 165) read whole and
+verdicted in an append-only ledger with the coverage COMPUTED
+(logic/oral_triage/sheviit_topic_docket_2026-09-05.md), then graded
+189/189 on the first run. STANDING RULE from it: a law span's exam
+docket is the UNION of the link-driven rows and the topic-routed rows
+of its implementing tractates; a tractate that cites no verse is not a
+tractate that tests nothing.
 SPEED RULINGS (owner, 2026-08-25, binding for the Genesis walk):
 (a) READ AT THE PARASHAH GRAIN — one sequential pass over a weekly
 portion's primaries covers all its blocks; the ledgers stay
@@ -589,6 +603,35 @@ recorded / 1 answer-sheet / 1 data, 51%); FOUR effects discovered
 TRANSFER operation — sold_in_perpetuity, redemption_right,
 interest_barred. Chips pending the site lap: lev_25_shemittah,
 lev_25_redeem_poor, lev_25_slave_jubilee, lev_27_vows_valuations.
+THE TENTH SPAN (2026-09-05, after compaction #51 — the owner: "now
+lets correct the misses we found before compact," REVIEW_BEHAR items
+1 and 2 as one sitting): cold_run_tochacha.py — THE COVENANT CASCADE,
+Lev 26 compiled ink-first at 37/37 and 81% pure ink (30 ink / 7
+recorded / 0 answer-sheet / 0 data): the FIVE GATES computed from the
+"and if" tokens, the sevenfold multiplier at the four seven-tokens,
+the chain bound by its own back-references (Mishnah Megillah 3:6's
+no-interruption as ink structure), the sabbath-debt as a land-entity
+DEBIT and TIMER, and — the compiler law's demonstrate-by-RUN form
+executed — the answer sheet NOT the Mishnah but the Writings' own log:
+2 Chronicles 36:21 quotes the clause at the timer's discharge, and the
+Babylonian Talmud (Megillah 11b-12a) runs the seventy from three
+recorded epochs with two logged failures; the Jubilee cycle run
+against the chronology (Arakhin 12b-13a) reproduces both recorded
+cycle models' residues — THE METHOD FORK on the calendar. NINE effects
+discovered (the registry at 71): covenant_upheld, chastised_sevenfold,
+land_desolate, scattered_among_nations (the ledger's third TRANSFER),
+sabbath_debt (a DEBIT), land_repays_sabbaths (a TIMER), confessed,
+iniquity_paid, covenant_remembered. One cell OPEN and printed, not
+graded: the seventy decomposed into unkept releases waits for a source
+not on the local shelf. THE HONEST-PAIRING GUARD landed the same
+sitting (World/step9/compile_guards.py): every expected value in a
+runner's TESTS table must be a LITERAL typed from the answer sheet —
+an expectation derived from engine state is refused by the parser
+before anything is graded; both compiles run it first on their own
+source. And the Jubilee engine's sabbatical cell became a graded
+function (cold_run_yovel.py 33 → 69 cells, with the animal tithe's
+naming machine written at last). Chip pending the site lap:
+lev_26_bless_curse.
 The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law

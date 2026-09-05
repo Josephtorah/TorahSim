@@ -1776,3 +1776,53 @@ the frozen corpus becomes the input tape. The existing Python is
 demoted from "the program" to "the program's parts"; the simulator
 is the new main loop wrapping them. "Compile the law spans"
 henceforth means: compiled WITH effects, feeding this engine.
+
+**2026-09-05 — THE CHRONICLE: the simulation's observation deck
+(owner opened the design conversation: "a ui interface to show what
+is going on in this simulation... when anything is created, when it
+changes, but in summary with ability to expand").** The thing being
+watched already has a shape: the engine's TAPE (events in verse
+order) and its LEDGER (statuses, debts, timers written by effects).
+The UI's job is a READ-ONLY PROJECTION of those two — it renders
+the tape, it never touches the physics. Working name: THE
+CHRONICLE. The trade calls this whole family EVENT SOURCING (an
+append-only event log is truth; every view is a projection), and
+the monitoring problem is universal — simulation builders solve it
+the same three ways every time: (1) a TIMELINE with severity/type
+lanes (the trace-viewer pattern); (2) an ENTITY INSPECTOR — click
+any person and see their whole life as ledger rows (Dwarf
+Fortress's Legends mode is the canonical game-world precedent: a
+browsable history of every entity, born from exactly our problem);
+(3) COUNTERS with drill-down — every number on the dashboard must
+expand to the rows it counts (our own zero-report law applied to
+UI: a summary figure with no click-through is a recital). Proposed
+first cut, one page: verse-order timeline with parashah-grain
+summary rows that expand to raw effect rows with full provenance
+(verse → unit → claim → effect); an entity drawer; a counters
+strip (persons, open demands, active timers, effects fired); facet
+filters by effect type — the 53-effect registry IS the legend, the
+UI's color/icon vocabulary arriving discovered, not designed. The
+census as of tonight's fold: 163 units on the tape, 1,809 facts,
+557 events, 341 demands (191 open), 81 names; the entity registry
+holds 72 (56 persons, 9 collectives, 3 places, 2 divine) — animals
+and the world's furniture (heavens, earth, rivers) live in facts
+but are NOT yet registered entities: the placement layer is the
+open work, and the Chronicle would make that gap visible on day
+one, which is an argument for building it. Build shape: static
+export first (fold once, render a page), live later. Nothing here
+is ruled; awaiting the owner's word.
+
+**2026-09-05 (rider, same conversation) — THE VOCABULARY LANE:
+the effects themselves are monitored as a changing thing.** The
+owner's follow-up: "the effects we allow in this world — do those
+get monitored as they change?" Today's honest answer: gate-guarded
+(effects_layer.py refuses unregistered effects at emission; growth
+26 → 39 → 48 → 53 recorded in git and reports) but NOT monitored.
+The Chronicle therefore gets a REGISTRY PAGE: one row per effect —
+birth date, its three witness layers, the functions that emit it,
+and its FIRED-COUNT from the tape — and registry changes become
+events in their own lane beside world events (the physics
+vocabulary keeps its own append-only history). The tripwire this
+buys: an effect registered but never fired across work that should
+fire it is a defect report, not a constant — the standing
+instrument rule applied to the physics itself.

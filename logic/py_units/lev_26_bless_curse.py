@@ -331,6 +331,10 @@ m.step("Lev.26.34")
 # az_tirtzeh_haaretz_et_shabtoteha — read, not installed
 m.witness_read("az_tirtzeh_haaretz_et_shabtoteha", "the_sabbath_debt",
                 cites=["Sifra, Bechukotai, Chapter 7 2", "Sifra, Bechukotai, Chapter 8 9", "Onkelos Lev 26:34", "Onkelos Lev 26:35"])
+# witness-tier presupposed read: the_seventy_epoch_run on az_tirtzeh_haaretz
+# — read, not installed
+m.witness_read("az_tirtzeh_haaretz", "the_seventy_epoch_run",
+                cites=["Babylonian Talmud Megillah 11b:6", "Babylonian Talmud Megillah 11b:7", "Babylonian Talmud Megillah 11b:8", "Babylonian Talmud Megillah 11b:9", "Babylonian Talmud Megillah 11b:10", "Babylonian Talmud Megillah 11b:11", "Babylonian Talmud Megillah 11b:12", "Babylonian Talmud Megillah 11b:13", "Babylonian Talmud Megillah 11b:14", "Babylonian Talmud Megillah 12a:1", "Babylonian Talmud Megillah 12a:2", "Babylonian Talmud Megillah 12a:3", "Babylonian Talmud Megillah 12a:4", "Sifra, Bechukotai, Chapter 7 2"])
 
 # -------------------------- Lev.26.35 · ETNACHTA_SPLIT ---------------------
 # כל ימי השמה תשבת … את אשר לא שבתה בשבתתיכם בשבתכם עליה
@@ -470,7 +474,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('lo_taasu_lachem_elilim', 'the_idols_ban_with_the_sanctuary_carve_out'), ('et_shabtotai_tishmoru', 'the_sold_mans_charter'), ('im_bechukotai_telechu', 'the_two_clause_split_and_the_remember_verb_rule'), ('venatati_gishmeichem_beitam', 'the_rains_schedule_scoped_to_the_land'), ('vehisig_lachem_dayish', 'the_seasons_chained_and_the_land_clause'), ('venatati_shalom_baaretz', 'peace_weighed_against_all_and_the_beast_that_ceases'), ('veradfu_mikem_chamishah_meah', 'the_non_linear_scaling'), ('ufaniti_aleichem', 'turning_in_good_and_the_new_covenant'), ('yashan_noshan', 'old_of_old'), ('venatati_mishkani_betochechem', 'my_dwelling_is_the_temple_and_the_presence_walks'), ('miheyot_lahem_avadim_komemiyut', 'slaves_to_kings_and_the_upright_measure'), ('veim_lo_tishmeu_li', 'the_curses_condition_and_the_knowing_rebel'), ('veim_bechukotai_timasu', 'the_seven_step_descent'), ('af_ani_eeseh_zot', 'the_name_as_creditor_and_the_illness_ladder'), ('venatati_fanai_bachem', 'the_good_evil_mirror_and_from_among_you'), ('veim_ad_eleh_sheva_al_chatoteichem', 'warning_first_and_the_sevenfold_rule'), ('shmeichem_kabarzel_artzechem_kanechushah', 'the_metals_physics'), ('veim_telchu_imi_keri', 'keri_as_casual_and_the_beasts'), ('cherev_nokemet_nekam_berit', 'the_sword_the_corpse_law_and_the_staff_of_bread'), ('vehishmadti_et_bamoteichem', 'synagogues_in_sanctuaries_and_the_paired_measures'), ('az_tirtzeh_haaretz_et_shabtoteha', 'the_sabbath_debt'), ('vehevaeti_morech_bilvavam', 'faintness_and_the_driven_leaf'), ('vechashlu_ish_beachiv', 'the_surety_rule'), ('vaavadtem_bagoyim', 'perishing_is_exile'), ('veaf_baavonot_avotam_itam_yimaku', 'the_fathers_sins_reconciled'), ('vehitvadu_et_avonam', 'confession_and_the_humbled_heart'), ('vezacharti_et_briti_yaakov', 'the_fathers_backward_and_the_covenant_to_the_land'), ('lo_meastim_velo_gealtim', 'the_four_eras_and_one_in_a_hundred'), ('eleh_hachukim_vehamishpatim_vehatorot', 'two_torahs')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('lo_taasu_lachem_elilim', 'the_idols_ban_with_the_sanctuary_carve_out'), ('et_shabtotai_tishmoru', 'the_sold_mans_charter'), ('im_bechukotai_telechu', 'the_two_clause_split_and_the_remember_verb_rule'), ('venatati_gishmeichem_beitam', 'the_rains_schedule_scoped_to_the_land'), ('vehisig_lachem_dayish', 'the_seasons_chained_and_the_land_clause'), ('venatati_shalom_baaretz', 'peace_weighed_against_all_and_the_beast_that_ceases'), ('veradfu_mikem_chamishah_meah', 'the_non_linear_scaling'), ('ufaniti_aleichem', 'turning_in_good_and_the_new_covenant'), ('yashan_noshan', 'old_of_old'), ('venatati_mishkani_betochechem', 'my_dwelling_is_the_temple_and_the_presence_walks'), ('miheyot_lahem_avadim_komemiyut', 'slaves_to_kings_and_the_upright_measure'), ('veim_lo_tishmeu_li', 'the_curses_condition_and_the_knowing_rebel'), ('veim_bechukotai_timasu', 'the_seven_step_descent'), ('af_ani_eeseh_zot', 'the_name_as_creditor_and_the_illness_ladder'), ('venatati_fanai_bachem', 'the_good_evil_mirror_and_from_among_you'), ('veim_ad_eleh_sheva_al_chatoteichem', 'warning_first_and_the_sevenfold_rule'), ('shmeichem_kabarzel_artzechem_kanechushah', 'the_metals_physics'), ('veim_telchu_imi_keri', 'keri_as_casual_and_the_beasts'), ('cherev_nokemet_nekam_berit', 'the_sword_the_corpse_law_and_the_staff_of_bread'), ('vehishmadti_et_bamoteichem', 'synagogues_in_sanctuaries_and_the_paired_measures'), ('az_tirtzeh_haaretz_et_shabtoteha', 'the_sabbath_debt'), ('az_tirtzeh_haaretz', 'the_seventy_epoch_run'), ('vehevaeti_morech_bilvavam', 'faintness_and_the_driven_leaf'), ('vechashlu_ish_beachiv', 'the_surety_rule'), ('vaavadtem_bagoyim', 'perishing_is_exile'), ('veaf_baavonot_avotam_itam_yimaku', 'the_fathers_sins_reconciled'), ('vehitvadu_et_avonam', 'confession_and_the_humbled_heart'), ('vezacharti_et_briti_yaakov', 'the_fathers_backward_and_the_covenant_to_the_land'), ('lo_meastim_velo_gealtim', 'the_four_eras_and_one_in_a_hundred'), ('eleh_hachukim_vehamishpatim_vehatorot', 'two_torahs')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Behar, Chapter 9 5', 'Onkelos Lev 26:1']
     assert all('the_idols_ban_with_the_sanctuary_carve_out' not in f for f in m.WORLD["facts"])
     assert 'lo_taasu_lachem_elilim' not in m.WORLD["witnessed"]
@@ -534,28 +538,31 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[20]["cites"] == ['Sifra, Bechukotai, Chapter 7 2', 'Sifra, Bechukotai, Chapter 8 9', 'Onkelos Lev 26:34', 'Onkelos Lev 26:35']
     assert all('the_sabbath_debt' not in f for f in m.WORLD["facts"])
     assert 'az_tirtzeh_haaretz_et_shabtoteha' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[21]["cites"] == ['Sifra, Bechukotai, Chapter 7 3', 'Sifra, Bechukotai, Chapter 7 4', 'Onkelos Lev 26:36']
+    assert m.WITNESS_READS[21]["cites"] == ['Babylonian Talmud Megillah 11b:6', 'Babylonian Talmud Megillah 11b:7', 'Babylonian Talmud Megillah 11b:8', 'Babylonian Talmud Megillah 11b:9', 'Babylonian Talmud Megillah 11b:10', 'Babylonian Talmud Megillah 11b:11', 'Babylonian Talmud Megillah 11b:12', 'Babylonian Talmud Megillah 11b:13', 'Babylonian Talmud Megillah 11b:14', 'Babylonian Talmud Megillah 12a:1', 'Babylonian Talmud Megillah 12a:2', 'Babylonian Talmud Megillah 12a:3', 'Babylonian Talmud Megillah 12a:4', 'Sifra, Bechukotai, Chapter 7 2']
+    assert all('the_seventy_epoch_run' not in f for f in m.WORLD["facts"])
+    assert 'az_tirtzeh_haaretz' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[22]["cites"] == ['Sifra, Bechukotai, Chapter 7 3', 'Sifra, Bechukotai, Chapter 7 4', 'Onkelos Lev 26:36']
     assert all('faintness_and_the_driven_leaf' not in f for f in m.WORLD["facts"])
     assert 'vehevaeti_morech_bilvavam' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[22]["cites"] == ['Sifra, Bechukotai, Chapter 7 5', 'Sifra, Bechukotai, Chapter 7 6', 'Onkelos Lev 26:37']
+    assert m.WITNESS_READS[23]["cites"] == ['Sifra, Bechukotai, Chapter 7 5', 'Sifra, Bechukotai, Chapter 7 6', 'Onkelos Lev 26:37']
     assert all('the_surety_rule' not in f for f in m.WORLD["facts"])
     assert 'vechashlu_ish_beachiv' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[23]["cites"] == ['Sifra, Bechukotai, Chapter 8 1', 'Onkelos Lev 26:38']
+    assert m.WITNESS_READS[24]["cites"] == ['Sifra, Bechukotai, Chapter 8 1', 'Onkelos Lev 26:38']
     assert all('perishing_is_exile' not in f for f in m.WORLD["facts"])
     assert 'vaavadtem_bagoyim' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[24]["cites"] == ['Sifra, Bechukotai, Chapter 8 2', 'Onkelos Lev 26:39']
+    assert m.WITNESS_READS[25]["cites"] == ['Sifra, Bechukotai, Chapter 8 2', 'Onkelos Lev 26:39']
     assert all('the_fathers_sins_reconciled' not in f for f in m.WORLD["facts"])
     assert 'veaf_baavonot_avotam_itam_yimaku' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[25]["cites"] == ['Sifra, Bechukotai, Chapter 8 3', 'Sifra, Bechukotai, Chapter 8 4', 'Sifra, Bechukotai, Chapter 8 5', 'Onkelos Lev 26:40', 'Onkelos Lev 26:41']
+    assert m.WITNESS_READS[26]["cites"] == ['Sifra, Bechukotai, Chapter 8 3', 'Sifra, Bechukotai, Chapter 8 4', 'Sifra, Bechukotai, Chapter 8 5', 'Onkelos Lev 26:40', 'Onkelos Lev 26:41']
     assert all('confession_and_the_humbled_heart' not in f for f in m.WORLD["facts"])
     assert 'vehitvadu_et_avonam' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[26]["cites"] == ['Sifra, Bechukotai, Chapter 8 6', 'Sifra, Bechukotai, Chapter 8 7', 'Sifra, Bechukotai, Chapter 8 8', 'Onkelos Lev 26:42']
+    assert m.WITNESS_READS[27]["cites"] == ['Sifra, Bechukotai, Chapter 8 6', 'Sifra, Bechukotai, Chapter 8 7', 'Sifra, Bechukotai, Chapter 8 8', 'Onkelos Lev 26:42']
     assert all('the_fathers_backward_and_the_covenant_to_the_land' not in f for f in m.WORLD["facts"])
     assert 'vezacharti_et_briti_yaakov' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[27]["cites"] == ['Sifra, Bechukotai, Chapter 8 9', 'Sifra, Bechukotai, Chapter 8 10', 'Onkelos Lev 26:43', 'Onkelos Lev 26:44', 'Onkelos Lev 26:45']
+    assert m.WITNESS_READS[28]["cites"] == ['Sifra, Bechukotai, Chapter 8 9', 'Sifra, Bechukotai, Chapter 8 10', 'Onkelos Lev 26:43', 'Onkelos Lev 26:44', 'Onkelos Lev 26:45']
     assert all('the_four_eras_and_one_in_a_hundred' not in f for f in m.WORLD["facts"])
     assert 'lo_meastim_velo_gealtim' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[28]["cites"] == ['Sifra, Bechukotai, Chapter 8 10', 'Onkelos Lev 26:46']
+    assert m.WITNESS_READS[29]["cites"] == ['Sifra, Bechukotai, Chapter 8 10', 'Onkelos Lev 26:46']
     assert all('two_torahs' not in f for f in m.WORLD["facts"])
     assert 'eleh_hachukim_vehamishpatim_vehatorot' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -1702,3 +1702,158 @@ compiled rules); vocabulary +89 → 1230 query values on 158 unmoved
 dims. Regression green everywhere (46 runners, all cold runners,
 the world engine); manifests 0 FAILED; gloss_lint 0 on all new
 content, legacy files at exact HEAD baselines.
+
+## ROUND 47 — THE TOPIC-ROUTED DOCKET SUPPLEMENT + THE COVENANT CASCADE
+## (2026-09-05, after compaction #51): 189/189
+## (1595/1595 across forty-seven rounds — the first round routed BY TOPIC)
+The owner's word after the compaction: "now lets correct the misses we
+found before compact" — REVIEW_BEHAR_2026-09-05.md items 1 and 2 as one
+sitting, before Numbers. ITEM 2 FIRST, the reading: the link-driven
+docket had produced ZERO rows of Mishnah Sheviit (the seventh-year
+tractate, 89 rows) for Lev 25:1-7 and 25:20-22, because the tractate
+barely quotes verses — THE TWO SHELVES ruling (owner 2026-08-27) routes
+the testing shelf BY TOPIC, and this round is its first execution. The
+enumeration by script (scratchpad/supplement_enum.json, from
+logic/MISHNAH_TOPICS.md's tractate list against every cases_*.yaml and
+every docket ledger): Sheviit 89 rows on the shelf, 1 graded, 88
+unread; Arakhin 50, 19 graded, 31 unread; Temurah 35, 4, 31; Bekhorot
+9 8, 2, 6; Bava Metzia 5 11, 2, 9 — 165 unread rows read WHOLE from
+the local shelf and verdicted in an append-only ledger
+(logic/oral_triage/sheviit_topic_docket_2026-09-05.md, generated from
+ONE verdict table with the coverage COMPUTED against the shelf's row
+counts, missing 0, extra 0): 167 rows verdicted (two graded rows
+carried openly as CREDIT) — LAW 131 / CONTEXT 25 / CREDIT 2 / ROUTED 9
+(Sheviit 10, the money release, is Deuteronomy 15's span: carried
+openly, answered talmud_source-only until the Re'eh walk) — TWENTY-SIX
+VERBATIM (the Sifra Behar spine or the Talmud carrying the row's text:
+the season table of Sheviit 4:7-9 in Sifra Behar Chapter 1 11; the
+white figs of 5:1 in Chapter 1 1; the export border of 6:5 in Chapter
+1 9; the changed manner of 8:6 in Chapter 1 3; the money chain of 8:7
+in Chapter 3 3; the aftergrowth of 9:1 in Chapter 1 3 and 4 5; the jar
+of 9:5 in Chapter 3 5 with "the law follows him"; Sheviit 1:1, 1:4,
+2:1 inside Moed Katan 3b-4a; the whole valuation and substitution
+files — Arakhin 5:2's soul-dependent limb, 7:2-7:4's fifth, son, and
+abandoned field, 8:2's ladder, 9:6's roster; Temurah 1:5's not-
+transitive, 5:1's outwitting, 7:2's unspecified-to-upkeep; Bekhorot
+9:4's exclusions and 9:8's error rule). The Talmud segments the
+compile's gaps needed were opened WHOLE by amud and verdicted every
+segment: Megillah 11b (14) + 12a (19), Arakhin 12b (11) + 13a (11),
+Moed Katan 3a (22) + 3b (13) + 4a (22) — 112 segments, MATERIAL 70 /
+CONTEXT 42. THE EXAM: eight modules, 189 cells over the 131 LAW rows,
+189/189 ON THE FIRST GRADED RUN — the cases table, the vocabulary
+registration, AND the rules module all GENERATED FROM ONE TABLE
+(scratchpad/gen_sheviit_cases.py → cases_sheviit.yaml + vocabulary +
+sheviit_rules.py): three artifacts that cannot drift, the round-46
+mechanism extended to the rules module; every dispute returned whole
+with its arms labeled (the two-authority arms of Moed Katan 3a:12's
+plowing dispute carried as "one each way," as the sugya leaves them).
+Catalog R-555..R-562 (367 compiled rules); vocabulary +189 → 1419
+query values on 158 unmoved dims.
+THREE FINDINGS AUTO-SEATED (F-201..F-203), the ledger written first
+and every cite a verdicted row (48 cites pre-checked): F-201 = LV25A-19
+THE LAYER LABEL ON THE LABOR CENSUS (lev_25_shemittah at 25:4 — the
+Talmud reads the Sifra's own census and RULES ITS LAYER: "rabbinic, and
+the verse a mere support," Moed Katan 3a:9 and 3a:22; the four written
+verbs the Torah's; plowing's lashes disputed on R. Avin's meta-rule;
+the pre-year addition in THREE LAYERS — thirty days a halakhah to Moses
+from Sinai with the ten saplings, the Passover/Atzeret cutoffs the
+sages' own with a repeal condition and abolished by Rabban Gamliel's
+court, and Rav Ashi's Temple-dependency parameter); F-202 = LV26-30
+THE SEVENTY'S EPOCH (lev_26_bless_curse at 26:34 — the sabbath-debt
+clause QUOTED by the Writings' log at its discharge, 2 Chronicles
+36:21, and the seventy-year timer RUN THREE TIMES in Megillah 11b-12a
+from three recorded epochs with two logged failures; Rava's
+remembrance-versus-rebuilding); F-203 = LV25A-20 SEVENTEEN JUBILEES
+AND THE DESTRUCTION'S CYCLE-YEAR (lev_25_shemittah at 25:8 — Arakhin
+12b-13a's count run against the chronology under both recorded cycle
+models). Rituals COMPLETE, corpus 163, standing 1710 → 1713 (+3, one
+per seat), hash 8b8fff1fa28953af UNMOVED, manifests 0 FAILED.
+ITEM 1, THE COMPILE — cold_run_tochacha.py, THE COVENANT CASCADE (Lev
+26), the TENTH span under the deliverable rule: 37/37 at 30 INK / 7
+MOVE / 0 ANSWER-SHEET / 0 DATA = 81% PURE INK, the highest fraction of
+any law span after the species classifier. The answer sheet here is
+NOT the Mishnah: it is the Writings' own RUN LOG and the Talmud's
+recorded computations on it, per the compiler law's demonstrate-by-RUN
+form. The machine: the FIVE GATES computed from the "and if" tokens (an
+"and if" verse not continuing the one before it — [14, 18, 21, 23, 27]
+from seven tokens at [14, 15, 18, 21, 23, 27]); the sevenfold
+multiplier read at the four SEVEN tokens [18, 21, 24, 28]; the chain
+bound by its own BACK-REFERENCES ("until these," "by these," "in this"
+at 18, 23, 27 — Mishnah Megillah 3:6's no-interruption rule as ink
+structure); the "hostile" token counted SEVEN times [21, 23, 24, 27,
+28, 40, 41]; the entry clause's six verb tokens read as the Sifra's
+seven states; the sabbath-debt as a land-entity DEBIT (one release per
+unkept seventh, 26:35) and TIMER (the desolation runs the debt, 26:34)
+whose discharge the log records IN THE CLAUSE'S OWN WORDS — the token
+run "all the days of desolation" verbatim in both, the one delta the
+fuller spelling of "its sabbaths"; THE SEVENTY run three times: from
+the accession 45 + 23 + 2 (Nebuchadnezzar's forty-five = the eighth
+year of 2 Kings 24:12 plus the thirty-seven of Jeremiah 52:31, both
+ink; Evil-Merodach's twenty-three a received figure the Talmud labels
+GEMARA — the data channel's seventh self-label) → not redeemed, killed
+that night (Daniel 5:30); from the exile, Daniel 6:1's sixty-two read
+as the count, 62 + 1 + 5 + 2 → not redeemed; from the ruins — eleven
+years later, 2 Kings 25:8's nineteenth against 24:12's eighth — the
+house rebuilt (Ezra 4:24, 6:15); Rava's remembrance for Babylon,
+rebuilding for the ruins; THE JUBILEE COUNT run against the
+chronology: 850 years in the land (480 of 1 Kings 6:1 less forty plus
+410), seventeen Jubilees, the count begun fourteen years in — the seven
+of conquest COMPUTED FROM CALEB'S AGES (forty at Kadesh, thirty-eight
+to the Zered, eighty-five at the division: Joshua 14:7, Deuteronomy
+2:14, Joshua 14:10) — so that the first house fell in cycle-year 36
+and Ezekiel 40:1's "fourteen years after" lands on a Jubilee whose
+"new year on the TENTH of the month" shares Lev 25:9's own token; and
+THE METHOD FORK ON THE CALENDAR: under the plain fifty the first house
+fell the year after a sabbatical (residue 1) and the second in the
+sixth of the week (residue 6); under R. Yehuda's forty-nine the third
+of the week (residue 3) and a sabbatical's exit (residue 0) — all four
+residues the Talmud states (Arakhin 12b:3-7) reproduced by the machine
+from the two recorded cycle models. NINE EFFECTS discovered in the
+chapter's own verbs (the registry 62 → 71): covenant_upheld,
+chastised_sevenfold, land_desolate, scattered_among_nations — the
+ledger's THIRD TRANSFER operation — sabbath_debt (a DEBIT),
+land_repays_sabbaths (a TIMER), confessed, iniquity_paid,
+covenant_remembered. ONE CELL STANDS OPEN, printed and not graded: the
+seventy decomposed into unkept releases — Ezekiel 4:5-6's sin span
+390 + 40 = 430 years yields 68 releases by the plain cycle and 69 by R.
+Yehuda's, against the log's seventy; the recorded reconciliation
+(Seder Olam as Rashi cites it on 26:35) is NOT on the local shelf, so
+the gap is filed OPEN for that source, not filled by invention.
+THE JUBILEE ENGINE EXTENDED (cold_run_yovel.py, REVIEW_BEHAR items 2, 3
+and 5 in part): 33 → 69 cells, 69/69 — the sabbatical year as a graded
+function (the four ink verbs; the derivative labors' rabbinic layer;
+plowing's lashes both arms; the two hoeings; the addition's thirty days
+[DATA] with the abolished cutoffs and the Temple parameter; the SEVEN
+EATERS counted at 25:6-7; the removal dispute; the aftergrowth's ink
+and its three-arm ban; the field-clock; the jar; the export border; no
+commerce; the changed manner; the money chain; the blessing's three
+years and the Jubilee's four; the old until the ninth; the three lands
+[DATA]; the money release routed; the tools rule [ANSWER-SHEET]); THE
+ANIMAL TITHE'S NAMING MACHINE written at last — tithe_naming(): the
+tenth is the tithe by the ink whatever it was called, an error
+sanctifies the neighbor it names "tenth," the eleventh only if the name
+was uprooted from the tenth (Bekhorot 9:8 graded three ways); the
+passing predicate, the exclusions, the sixteen mil [DATA]; THE OWNER'S
+PRECEDENCE arithmetic of Arakhin 8:3 (the fifth on the owner's own
+twenty, no fifth on the other's raise: 21 → 26 ... 25 → 30, 26 →
+thirty-one and a dinar); the interest scope — the brother barred by
+ink, the foreigner permitted by the Deuteronomy 23:21 import — with the
+answer sheet's rent/sale asymmetry and its three named fences. The
+combined engine's honest fractions: 24 INK / 34 MOVE / 7 ANSWER-SHEET /
+4 DATA = 34% (the original 33 cells stood at 51%; the sabbatical's
+rows are mostly the sages' layer, as the Talmud itself labels them).
+THE HONEST-PAIRING GUARD (REVIEW_BEHAR item 6) built into the shared
+helper compile_guards.py and run first by both compiles on their own
+source: every expected value in the TESTS table must be a LITERAL
+typed from the answer sheet — an expectation derived from engine state
+is refused by the parser before anything is graded (37 + 69 tests
+checked); the three other runners with literal tables (moadim,
+offerings, shemini) pass the check from the command line; the ten with
+older table shapes wait for the deferred audit's retrofit.
+MIDDOT.md +1 case-law row (R. Avin's precondition on
+general-particular-general); MOVE_CATALOG: M-07 exemplars (the
+foreigner's interest from Deuteronomy 23:21; the creation-Sabbath
+analogy licensing the addition's abolition). Records: REPORT_SHEVIIT_
+TOCHACHA.md; STAMP_LEDGER re-affirmation row; regression green
+everywhere (47 exam runners, 16 cold runners, the world engine);
+gloss_lint 0 on all new content.

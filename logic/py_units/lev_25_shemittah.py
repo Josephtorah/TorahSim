@@ -55,6 +55,10 @@ m.step("Lev.25.4")
 # shabbat_shabbaton_laaretz — read, not installed
 m.witness_read("shabbat_shabbaton_laaretz", "labor_census_and_the_class_rule",
                 cites=["Sifra, Behar, Section 1 4", "Sifra, Behar, Section 1 5", "Sifra, Behar, Section 1 6", "Sifra, Behar, Chapter 1 1", "Sifra, Behar, Chapter 1 2", "Onkelos Lev 25:4"])
+# witness-tier presupposed read: labor_census_layer_label on
+# sadekha_lo_tizra — read, not installed
+m.witness_read("sadekha_lo_tizra", "labor_census_layer_label",
+                cites=["Babylonian Talmud Moed Katan 3a:2", "Babylonian Talmud Moed Katan 3a:3", "Babylonian Talmud Moed Katan 3a:9", "Babylonian Talmud Moed Katan 3a:11", "Babylonian Talmud Moed Katan 3a:12", "Babylonian Talmud Moed Katan 3a:16", "Babylonian Talmud Moed Katan 3a:22", "Babylonian Talmud Moed Katan 3b:5", "Babylonian Talmud Moed Katan 3b:8", "Babylonian Talmud Moed Katan 3b:10", "Babylonian Talmud Moed Katan 3b:11", "Babylonian Talmud Moed Katan 3b:12", "Babylonian Talmud Moed Katan 3b:13", "Babylonian Talmud Moed Katan 4a:1", "Babylonian Talmud Moed Katan 4a:2", "Babylonian Talmud Moed Katan 4a:7", "Babylonian Talmud Moed Katan 4a:9", "Mishnah Sheviit 1:1", "Mishnah Sheviit 1:6", "Mishnah Sheviit 2:1", "Mishnah Sheviit 2:6"])
 
 # -------------------------- Lev.25.5 · ETNACHTA_SPLIT ----------------------
 # את ספיח קצירך לא תקצור ואת ענבי נזירך לא תבצר … שנת שבתון יהיה לארץ
@@ -100,6 +104,10 @@ m.step("Lev.25.8")
 # read, not installed
 m.witness_read("vesafarta_lecha", "the_count_in_the_court_and_the_dependency_dispute",
                 cites=["Sifra, Behar, Section 2 1", "Sifra, Behar, Section 2 2", "Onkelos Lev 25:8"])
+# witness-tier presupposed read: seventeen_jubilees_cycle_year on
+# sheva_shabtot_shanim — read, not installed
+m.witness_read("sheva_shabtot_shanim", "seventeen_jubilees_cycle_year",
+                cites=["Babylonian Talmud Arakhin 12b:3", "Babylonian Talmud Arakhin 12b:4", "Babylonian Talmud Arakhin 12b:5", "Babylonian Talmud Arakhin 12b:6", "Babylonian Talmud Arakhin 12b:7", "Babylonian Talmud Arakhin 12b:8", "Babylonian Talmud Arakhin 13a:2", "Babylonian Talmud Arakhin 13a:3", "Babylonian Talmud Arakhin 13a:4", "Babylonian Talmud Arakhin 13a:5", "Babylonian Talmud Arakhin 13a:6", "Babylonian Talmud Arakhin 13a:7", "Babylonian Talmud Arakhin 13a:8"])
 
 # -------------------------- Lev.25.9 · ETNACHTA_SPLIT ----------------------
 # והעברת שופר תרועה בחדש השבעי בעשור לחדש … ביום הכפרים תעבירו שופר בכל
@@ -253,7 +261,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('behar_sinai', 'the_sinai_detail_rule'), ('ki_tavou_el_haaretz', 'onset_conditions_and_timeline'), ('shesh_shanim_tizra', 'six_and_six_with_the_rooting_threshold'), ('shabbat_shabbaton_laaretz', 'labor_census_and_the_class_rule'), ('sefiach_ketzircha', 'changed_manner_rule_and_two_clocks'), ('vehaytah_shabbat_haaretz_lachem', 'the_eaters_and_the_removal_dispute'), ('velivhemtecha_velachayah', 'the_field_clock_and_the_season_table'), ('vesafarta_lecha', 'the_count_in_the_court_and_the_dependency_dispute'), ('vehaavarta_shofar_teruah', 'the_shofar_export'), ('vekidashtem_ukratem_deror', 'the_ten_day_window_and_the_jubilees_gates'), ('yovel_hi_shnat_hachamishim', 'the_timers_end_and_the_imported_ban'), ('ki_yovel_hi_kodesh', 'the_substitution_chain_and_the_jar_dispute'), ('bishnat_hayovel_hazot', 'the_two_releases_matrix'), ('al_tonu_ish_et_achiv', 'the_overreaching_file'), ('bemispar_shanim_achar_hayovel', 'the_two_year_floor'), ('velo_tonu_ish_et_amito', 'verbal_wronging_and_the_heart_clause_rule'), ('mah_nochal_bashanah_hasheviit', 'the_aftergrowth_bans_provenance'), ('vetzivviti_et_birchati', 'the_blessings_arithmetic_and_the_year_ladder')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('behar_sinai', 'the_sinai_detail_rule'), ('ki_tavou_el_haaretz', 'onset_conditions_and_timeline'), ('shesh_shanim_tizra', 'six_and_six_with_the_rooting_threshold'), ('shabbat_shabbaton_laaretz', 'labor_census_and_the_class_rule'), ('sadekha_lo_tizra', 'labor_census_layer_label'), ('sefiach_ketzircha', 'changed_manner_rule_and_two_clocks'), ('vehaytah_shabbat_haaretz_lachem', 'the_eaters_and_the_removal_dispute'), ('velivhemtecha_velachayah', 'the_field_clock_and_the_season_table'), ('vesafarta_lecha', 'the_count_in_the_court_and_the_dependency_dispute'), ('sheva_shabtot_shanim', 'seventeen_jubilees_cycle_year'), ('vehaavarta_shofar_teruah', 'the_shofar_export'), ('vekidashtem_ukratem_deror', 'the_ten_day_window_and_the_jubilees_gates'), ('yovel_hi_shnat_hachamishim', 'the_timers_end_and_the_imported_ban'), ('ki_yovel_hi_kodesh', 'the_substitution_chain_and_the_jar_dispute'), ('bishnat_hayovel_hazot', 'the_two_releases_matrix'), ('al_tonu_ish_et_achiv', 'the_overreaching_file'), ('bemispar_shanim_achar_hayovel', 'the_two_year_floor'), ('velo_tonu_ish_et_amito', 'verbal_wronging_and_the_heart_clause_rule'), ('mah_nochal_bashanah_hasheviit', 'the_aftergrowth_bans_provenance'), ('vetzivviti_et_birchati', 'the_blessings_arithmetic_and_the_year_ladder')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Behar, Section 1 1', 'Onkelos Lev 25:1']
     assert all('the_sinai_detail_rule' not in f for f in m.WORLD["facts"])
     assert 'behar_sinai' not in m.WORLD["witnessed"]
@@ -266,46 +274,52 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[3]["cites"] == ['Sifra, Behar, Section 1 4', 'Sifra, Behar, Section 1 5', 'Sifra, Behar, Section 1 6', 'Sifra, Behar, Chapter 1 1', 'Sifra, Behar, Chapter 1 2', 'Onkelos Lev 25:4']
     assert all('labor_census_and_the_class_rule' not in f for f in m.WORLD["facts"])
     assert 'shabbat_shabbaton_laaretz' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Behar, Chapter 1 3', 'Sifra, Behar, Chapter 1 4', 'Onkelos Lev 25:5']
+    assert m.WITNESS_READS[4]["cites"] == ['Babylonian Talmud Moed Katan 3a:2', 'Babylonian Talmud Moed Katan 3a:3', 'Babylonian Talmud Moed Katan 3a:9', 'Babylonian Talmud Moed Katan 3a:11', 'Babylonian Talmud Moed Katan 3a:12', 'Babylonian Talmud Moed Katan 3a:16', 'Babylonian Talmud Moed Katan 3a:22', 'Babylonian Talmud Moed Katan 3b:5', 'Babylonian Talmud Moed Katan 3b:8', 'Babylonian Talmud Moed Katan 3b:10', 'Babylonian Talmud Moed Katan 3b:11', 'Babylonian Talmud Moed Katan 3b:12', 'Babylonian Talmud Moed Katan 3b:13', 'Babylonian Talmud Moed Katan 4a:1', 'Babylonian Talmud Moed Katan 4a:2', 'Babylonian Talmud Moed Katan 4a:7', 'Babylonian Talmud Moed Katan 4a:9', 'Mishnah Sheviit 1:1', 'Mishnah Sheviit 1:6', 'Mishnah Sheviit 2:1', 'Mishnah Sheviit 2:6']
+    assert all('labor_census_layer_label' not in f for f in m.WORLD["facts"])
+    assert 'sadekha_lo_tizra' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Behar, Chapter 1 3', 'Sifra, Behar, Chapter 1 4', 'Onkelos Lev 25:5']
     assert all('changed_manner_rule_and_two_clocks' not in f for f in m.WORLD["facts"])
     assert 'sefiach_ketzircha' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Behar, Chapter 1 5', 'Sifra, Behar, Chapter 1 6', 'Sifra, Behar, Chapter 1 7', 'Onkelos Lev 25:6']
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Behar, Chapter 1 5', 'Sifra, Behar, Chapter 1 6', 'Sifra, Behar, Chapter 1 7', 'Onkelos Lev 25:6']
     assert all('the_eaters_and_the_removal_dispute' not in f for f in m.WORLD["facts"])
     assert 'vehaytah_shabbat_haaretz_lachem' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Behar, Chapter 1 8', 'Sifra, Behar, Chapter 1 9', 'Sifra, Behar, Chapter 1 10', 'Sifra, Behar, Chapter 1 11', 'Onkelos Lev 25:7']
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Behar, Chapter 1 8', 'Sifra, Behar, Chapter 1 9', 'Sifra, Behar, Chapter 1 10', 'Sifra, Behar, Chapter 1 11', 'Onkelos Lev 25:7']
     assert all('the_field_clock_and_the_season_table' not in f for f in m.WORLD["facts"])
     assert 'velivhemtecha_velachayah' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Behar, Section 2 1', 'Sifra, Behar, Section 2 2', 'Onkelos Lev 25:8']
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Behar, Section 2 1', 'Sifra, Behar, Section 2 2', 'Onkelos Lev 25:8']
     assert all('the_count_in_the_court_and_the_dependency_dispute' not in f for f in m.WORLD["facts"])
     assert 'vesafarta_lecha' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Behar, Section 2 3', 'Sifra, Behar, Section 2 4', 'Sifra, Behar, Section 2 5', 'Onkelos Lev 25:9']
+    assert m.WITNESS_READS[9]["cites"] == ['Babylonian Talmud Arakhin 12b:3', 'Babylonian Talmud Arakhin 12b:4', 'Babylonian Talmud Arakhin 12b:5', 'Babylonian Talmud Arakhin 12b:6', 'Babylonian Talmud Arakhin 12b:7', 'Babylonian Talmud Arakhin 12b:8', 'Babylonian Talmud Arakhin 13a:2', 'Babylonian Talmud Arakhin 13a:3', 'Babylonian Talmud Arakhin 13a:4', 'Babylonian Talmud Arakhin 13a:5', 'Babylonian Talmud Arakhin 13a:6', 'Babylonian Talmud Arakhin 13a:7', 'Babylonian Talmud Arakhin 13a:8']
+    assert all('seventeen_jubilees_cycle_year' not in f for f in m.WORLD["facts"])
+    assert 'sheva_shabtot_shanim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Sifra, Behar, Section 2 3', 'Sifra, Behar, Section 2 4', 'Sifra, Behar, Section 2 5', 'Onkelos Lev 25:9']
     assert all('the_shofar_export' not in f for f in m.WORLD["facts"])
     assert 'vehaavarta_shofar_teruah' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Behar, Chapter 2 1', 'Sifra, Behar, Chapter 2 2', 'Sifra, Behar, Chapter 2 3', 'Sifra, Behar, Chapter 2 4', 'Sifra, Behar, Chapter 2 5', 'Onkelos Lev 25:10']
+    assert m.WITNESS_READS[11]["cites"] == ['Sifra, Behar, Chapter 2 1', 'Sifra, Behar, Chapter 2 2', 'Sifra, Behar, Chapter 2 3', 'Sifra, Behar, Chapter 2 4', 'Sifra, Behar, Chapter 2 5', 'Onkelos Lev 25:10']
     assert all('the_ten_day_window_and_the_jubilees_gates' not in f for f in m.WORLD["facts"])
     assert 'vekidashtem_ukratem_deror' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[10]["cites"] == ['Sifra, Behar, Chapter 3 1', 'Sifra, Behar, Chapter 3 2', 'Onkelos Lev 25:11']
+    assert m.WITNESS_READS[12]["cites"] == ['Sifra, Behar, Chapter 3 1', 'Sifra, Behar, Chapter 3 2', 'Onkelos Lev 25:11']
     assert all('the_timers_end_and_the_imported_ban' not in f for f in m.WORLD["facts"])
     assert 'yovel_hi_shnat_hachamishim' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[11]["cites"] == ['Sifra, Behar, Chapter 3 3', 'Sifra, Behar, Chapter 3 4', 'Sifra, Behar, Chapter 3 5', 'Onkelos Lev 25:12']
+    assert m.WITNESS_READS[13]["cites"] == ['Sifra, Behar, Chapter 3 3', 'Sifra, Behar, Chapter 3 4', 'Sifra, Behar, Chapter 3 5', 'Onkelos Lev 25:12']
     assert all('the_substitution_chain_and_the_jar_dispute' not in f for f in m.WORLD["facts"])
     assert 'ki_yovel_hi_kodesh' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[12]["cites"] == ['Sifra, Behar, Chapter 3 6', 'Onkelos Lev 25:13']
+    assert m.WITNESS_READS[14]["cites"] == ['Sifra, Behar, Chapter 3 6', 'Onkelos Lev 25:13']
     assert all('the_two_releases_matrix' not in f for f in m.WORLD["facts"])
     assert 'bishnat_hayovel_hazot' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[13]["cites"] == ['Sifra, Behar, Section 3 1', 'Sifra, Behar, Section 3 2', 'Sifra, Behar, Section 3 3', 'Sifra, Behar, Section 3 4', 'Sifra, Behar, Section 3 5', 'Sifra, Behar, Section 3 6', 'Sifra, Behar, Section 3 7', 'Sifra, Behar, Section 3 8', 'Sifra, Behar, Section 3 9', 'Onkelos Lev 25:14']
+    assert m.WITNESS_READS[15]["cites"] == ['Sifra, Behar, Section 3 1', 'Sifra, Behar, Section 3 2', 'Sifra, Behar, Section 3 3', 'Sifra, Behar, Section 3 4', 'Sifra, Behar, Section 3 5', 'Sifra, Behar, Section 3 6', 'Sifra, Behar, Section 3 7', 'Sifra, Behar, Section 3 8', 'Sifra, Behar, Section 3 9', 'Onkelos Lev 25:14']
     assert all('the_overreaching_file' not in f for f in m.WORLD["facts"])
     assert 'al_tonu_ish_et_achiv' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[14]["cites"] == ['Sifra, Behar, Section 3 10', 'Onkelos Lev 25:15']
+    assert m.WITNESS_READS[16]["cites"] == ['Sifra, Behar, Section 3 10', 'Onkelos Lev 25:15']
     assert all('the_two_year_floor' not in f for f in m.WORLD["facts"])
     assert 'bemispar_shanim_achar_hayovel' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[15]["cites"] == ['Sifra, Behar, Chapter 4 1', 'Sifra, Behar, Chapter 4 2', 'Onkelos Lev 25:17']
+    assert m.WITNESS_READS[17]["cites"] == ['Sifra, Behar, Chapter 4 1', 'Sifra, Behar, Chapter 4 2', 'Onkelos Lev 25:17']
     assert all('verbal_wronging_and_the_heart_clause_rule' not in f for f in m.WORLD["facts"])
     assert 'velo_tonu_ish_et_amito' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[16]["cites"] == ['Sifra, Behar, Chapter 4 5', 'Onkelos Lev 25:20']
+    assert m.WITNESS_READS[18]["cites"] == ['Sifra, Behar, Chapter 4 5', 'Onkelos Lev 25:20']
     assert all('the_aftergrowth_bans_provenance' not in f for f in m.WORLD["facts"])
     assert 'mah_nochal_bashanah_hasheviit' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[17]["cites"] == ['Sifra, Behar, Chapter 4 6', 'Sifra, Behar, Chapter 4 7', 'Onkelos Lev 25:21', 'Onkelos Lev 25:22']
+    assert m.WITNESS_READS[19]["cites"] == ['Sifra, Behar, Chapter 4 6', 'Sifra, Behar, Chapter 4 7', 'Onkelos Lev 25:21', 'Onkelos Lev 25:22']
     assert all('the_blessings_arithmetic_and_the_year_ladder' not in f for f in m.WORLD["facts"])
     assert 'vetzivviti_et_birchati' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

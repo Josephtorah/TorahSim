@@ -11007,3 +11007,159 @@ round 44's placeholder glosses). Open item: the Lev 11:42 large-vav
 repair (owner's word). Watches: will-indexed dispatch (2), the
 demotion operator (1), the consonant-fragment read (1 — a third
 registers a move). Memory current through this sweep.
+═══ 2026-09-05, owner: "commit push" — COMMITTED+PUSHED 245d150 (115
+files: the Emor line + the Behar-Bechukotai line + MODEL_LEDGER +
+REVIEW_LEV1-8 + the run_acharei fix; trailer Claude Fable 5.1;
+NEVER-COMMIT set excluded, verified by name). Working tree clean but
+the never-commit set. Compaction point #50 stands as written; NEXT:
+Numbers (Bamidbar's substitute spine decided at the sitting).
+
+═══ COMPACTION POINT #51 (2026-09-05, owner: "yes but first we need
+═══ to compact. get ready to resume after")
+═══ CLEAN POINT — no work mid-flight. 245d150 COMMITTED+PUSHED
+(Leviticus closed on the walk: corpus 163, standing 1710, exam
+1406/1406 over 46 rounds, 359 rules, vocab 1230, effects 62, hash
+8b8fff1fa28953af unmoved). After the push the owner asked for a
+short review of obviously MISSED CODE, discussed not done — written
+to World/step9/REVIEW_BEHAR_2026-09-05.md (six items) — and SAID
+YES to items 1 and 2 as the next sitting, BEFORE Numbers:
+ (1) LEV 26 HAS NO COMPILED FUNCTION — the covenant's cascade as a
+     state machine + THE SABBATH-DEBT as a land-entity timer + the
+     RUN cell against 2 Chronicles 36:21 / Jeremiah 25:11 (the
+     seventy years: the Writings' own log as the answer sheet —
+     demonstrate-by-RUN per the compiler law); effects to discover
+     from the chapter's verbs (exile, scattering, desolation, the
+     land-debt timer). Runner name: cold_run_tochacha.py.
+ (2) THE DOCKET IS LINK-DRIVEN — Mishnah Sheviit (89 rows) never
+     met the engine; route BY TOPIC (THE TWO SHELVES ruling): read
+     Sheviit whole + the unread rows of Arakhin, Temurah, Bekhorot 9,
+     Bava Metzia 5 in an append-only supplement ledger; new
+     seventh-year modules; extend cold_run_yovel.py's sabbatical
+     cell into a graded function. Enumerate from
+     logic/MISHNAH_TOPICS.md by script (its tractate labels: check
+     the file's format first — a plain grep for "Sheviit" found no
+     line; the spelling may differ).
+Items 3-6 (Lev 27's remainder; undiscovered effects; Jubilee-engine
+gaps; the dishonest-pairing mechanical check) recorded for later —
+item 6's check should be built INTO the next compile's test helper.
+UNCOMMITTED at this point: REVIEW_BEHAR_2026-09-05.md + this doc's
+tail + memory. NEVER-COMMIT set unchanged. POST-COMPACTION REREADS
+(mandatory, first sitting): THE_STEPS Step 2 + Step 5 + the
+compiler block + this tail + REVIEW_BEHAR_2026-09-05.md. Then run
+(1)+(2) as one sitting; then Numbers (Bamidbar's substitute spine —
+Sifrei Bamidbar begins at Num 5:2 on the shelf, verified). Audit
+deferred to after Deuteronomy; Lev 11:42 open; watches unchanged.
+
+═══ 2026-09-05 (after compaction #51), owner: "read resume prompts" → the
+mandatory rereads done (THE_STEPS Step 2 + Step 5 + the compiler block +
+the tail + REVIEW_BEHAR) → owner: "now lets correct the misses we found
+before compact" → REVIEW_BEHAR items 1 and 2 RUN AS ONE SITTING (round
+47). ITEM 2 (the topic route): enumeration by script
+(scratchpad/supplement_enum.json — Sheviit 88 unread of 89, Arakhin 31 of
+50, Temurah 31 of 35, Bekhorot 9 6 of 8, Bava Metzia 5 9 of 11); the
+reading ledger logic/oral_triage/sheviit_topic_docket_2026-09-05.md
+generated from ONE verdict table (scratchpad/gen_supplement_ledger.py)
+with coverage COMPUTED against the shelf (missing 0 / extra 0): 167
+Mishnah rows LAW 131 / CONTEXT 25 / CREDIT 2 / ROUTED 9 (Sheviit 10 →
+Deut 15), VERBATIM 26; the Talmud opened WHOLE by amud for the compile's
+gaps — Megillah 11b+12a, Arakhin 12b+13a, Moed Katan 3a+3b+4a = 112
+segments, MATERIAL 70 / CONTEXT 42; gloss_lint 0. THE EXAM: ONE TABLE
+(scratchpad/gen_sheviit_cases.py) → cases_sheviit.yaml (8 modules, 189
+cells) + vocabulary (+189 → 1419 query values on 158 dims; the step made
+idempotent — values already tagged as ours are skipped) + sheviit_rules.py
+(GENERATED, pprint table + build(V)); run_sheviit.py cloned; engine tail
+`import sheviit_rules as _sv`; 189/189 FIRST RUN → 1595/1595 over 47
+rounds; catalog R-555..R-562 (552 ids; 367 compiled rules). SEATS: three
+findings F-201..F-203 by scratchpad/seat_supplement.py (pre-check: 48
+cites all verdicted ledger rows; English-only bodies) — LV25A-19 (the
+labor census's LAYER LABEL, at STEP_Lv_25_4), LV25A-20 (seventeen
+Jubilees and the cycle-year, at STEP_Lv_25_8), LV26-30 (the seventy's
+epoch, at STEP_Lv_26_34); rituals lev_25_shemittah + lev_26_bless_curse
+COMPLETE first pass; corpus_world: standing 1710 → 1713, hash
+8b8fff1fa28953af UNMOVED, CORPUS_TRUTH rebaked (assert 1713); manifests
+20 + 30 claims; py-render flags unchanged (3 + 13, the renderer's trait).
+ITEM 1 (the compile): World/step9/cold_run_tochacha.py — THE COVENANT
+CASCADE, 37/37 at 30 INK / 7 MOVE = 81% (55 ink probes + 26 run-log
+probes; censuses: and-if x7 at [14,15,18,21,23,27] → GATES [14,18,21,
+23,27]; seven-tokens [18,21,24,28]; hostile x7; covenant x8; remember
+x4; desolation root [31,32,33,34,35,43] — the destroy verb at 26:30
+excluded as another root; pay verb x5; the enemies'-land phrase x6; scatter [33];
+back-references [18,23,27]; entry verbs 6; the dwelling homograph at
+26:35 set aside); the log quotes the code (shared tokens + the phrase
+"all the days of desolation" verbatim in both; plene delta on "its
+sabbaths"); the seventy timer with three epochs (NEB 45 = 8 + 37 INK;
+Evil-Merodach 23 DATA "gemara"; the rest DATA); the Jubilee count (850 =
+480 − 40 + 410 [DATA Yoma 9a:4]; conquest 7 = 85 − 40 − 38 INK; division
+7 MOVE; residues 1/3/6/0 all matching Arakhin 12b:3-7); sheet: 10
+Talmud + 5 Sifra rows token-verified (the check fired once honestly —
+Section 2 3 needed a different token — and was fixed); OPEN cell printed
+not graded: 430 sin years → 68 (plain) / 69 (R. Yehuda) vs the log's 70
+— Seder Olam not on the shelf. EFFECTS: +9 → 71 (covenant_upheld,
+chastised_sevenfold, land_desolate, scattered_among_nations TRANSFER,
+sabbath_debt DEBIT, land_repays_sabbaths TIMER, confessed, iniquity_paid,
+covenant_remembered). ITEM 6 (the guard): World/step9/compile_guards.py
+— check_honest_pairing() parses the runner's TESTS table and refuses a
+non-literal expected value; wired into cold_run_tochacha.py and
+cold_run_yovel.py (assert n == GUARDED); moadim/offerings/shemini pass
+from the CLI; the ten older-shaped runners → the deferred audit. ITEM
+2's compile leg: cold_run_yovel.py extended 33 → 69 cells (sabbatical(),
+tithe_naming(), owner_price(), interest_scope(); 18 new probes; SHEET +23
+Mishnah rows + SHEET2 of 14 Sifra/Talmud rows), 69/69, combined 24/34/7/4
+= 34% (the original 33 at 51%). REGRESSION: 47 exam runners 0 failed, 16
+cold runners 0 failed, world_engine.py stands. RECORDS: EXAM_LEDGER round
+47 (7 flags = HEAD baseline), REPORT_SHEVIIT_TOCHACHA.md, catalog both
+files, STAMP_LEDGER re-affirmation row, MIDDOT +1 (R. Avin's
+precondition), MOVE_CATALOG M-07 exemplars (e)(f) + the run-log-as-
+answer-sheet note, THE_STEPS (THE TENTH SPAN in Step 5; THE TOPIC ROUTE
+EXECUTED in Step 2 with the union rule), THE_BRIEFING top bullet, this
+doc. NOT MINE, left alone: the ARCHITECTURE/ tree moved from outside this
+sitting — untracked ARCHITECTURE/program/The_Program_In_Narrative.{epub,
+md} + ARCHITECTURE/tools/build_narrative_epub.py, and MODIFIED
+ARCHITECTURE/NARRATIVE.md, ARCHITECTURE/README.md, ARCHITECTURE/program/
+LINKED_NARRATIVE.html (the owner's; excluded from any commit I stage
+unless told).
+UNCOMMITTED: everything since 245d150 (REVIEW_BEHAR + the whole round-47
+line + the state doc tail + memory). NEVER-COMMIT set unchanged.
+
+═══ COMPACTION POINT #52 (2026-09-05 — written unprompted at the
+═══ sitting's close; the window is heavy)
+═══ CLEAN POINT — no work mid-flight. REVIEW_BEHAR items 1 + 2 (+ 6, and
+items 3/5 in part) DONE as round 47: exam 1595/1595 over 47 rounds,
+corpus 163, standing 1713, hash unmoved, 367 rules, vocab 1419, effects
+71, TEN cold-compiled spans, F-201..F-203 seated, guard live. UNCOMMITTED
+since 245d150 (rides the owner's next "commit push"; trailer Claude Fable
+5.1; staging by exclusion — ADD ':!ARCHITECTURE' to the exclusions this
+time (its six changed files are the owner's, not this sitting's) unless
+the owner says they ride; NEVER-COMMIT set: Data/discord_backup_codes.txt, DISPOSABLE_scan/
+*.zip, open_ledger/, elijah_docket, grok-mockups/, logic/gork/,
+cases_pilot.yaml). POST-COMPACTION REREADS (mandatory, first sitting):
+THE_STEPS Step 2 + Step 5 + the compiler block + this tail. NEXT on the
+owner's word: NUMBERS — parashat Bamidbar (Num 1-4): spine = the Sifrei
+on Numbers + Onkelos, BUT the Sifrei's running text begins at Numbers
+5:2 (verified on the shelf), so Num 1-4 needs a SUBSTITUTE SPINE by the
+Exod 25-40 precedent — decide at the sitting (Bamidbar Rabbah 1-5 the
+verse-anchored candidate; check Data/ for bamidbar_rabbah / tanchuma
+shelves), record in CORE_SHELF.md and THE_STEPS Step 2 BEFORE reading;
+the exam docket for every Numbers span = links UNION the topic-routed
+rows (THE_STEPS Step 2's new standing rule). Still open from
+REVIEW_BEHAR: item 3 (Lev 27's remainder as its own cold function), item
+4 (the support duty at 25:35), item 5's auction-stone ban and sight
+bound; the seventy's decomposition (Seder Olam not on the shelf); the
+guard's retrofit to the ten older runners — all for the deferred audit
+after Deuteronomy (REVIEW_LEV1-8 holds the order). Open item: the Lev
+11:42 large-vav repair (owner's word). Watches: will-indexed dispatch
+(2), the demotion operator (1), the consonant-fragment read (1). Memory
+current through this sitting.
+═══ 2026-09-05, cross-session note (after #52 was written): the owner's
+second thread reports a design discussion of a simulation-monitoring UI
+(working name THE CHRONICLE — a read-only projection of the engine's
+tape and ledger; exogenous text events vs endogenous computed events
+distinguished; a causal trace; two clock grains; an engine requirement
+of cascade-depth limits + cycle detection before a whole-Bible compile).
+Shared context only — CHANGE NOTHING from this thread; the owner
+directs next steps. Working-tree consequence: THE_WORLD.md carries TWO
+uncommitted appends from that thread (its idea log's tail); exclude
+':!THE_WORLD.md' from this thread's staging unless the owner says it
+rides. Replied with two facts: the registry is 71 (not 53), and
+effects_layer.summarize() already yields fired-op counts. Watch, not
+built: cascade depth + cycle detection in world_engine.py.

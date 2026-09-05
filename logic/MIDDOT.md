@@ -357,6 +357,24 @@ includes the matriarchs by Genesis 49:31's "Abraham AND Sarah"
 covenant list; and the reversed order read as a FALLBACK CHAIN
 (Chapter 8 6); claim LV26-27.
 
+**THE PRECONDITION ON GENERAL-PARTICULAR-GENERAL (Behar, round 47).**
+Whether plowing in the seventh year incurs lashes turns, the Talmud
+says, on R. Avin's rule in R. Ila'i's name: "wherever a general is
+stated in a POSITIVE command and a particular in a NEGATIVE, it is not
+run as general-particular-general" — Lev 25:4's general ("a sabbath of
+rest for the land," positive) and its particulars ("your field you
+shall not sow," negative) fail the precondition, so plowing cannot be
+derived by that middah and its lashes stay disputed (R. Yochanan and
+R. Elazar, Babylonian Talmud Moed Katan 3a:12-16; the derivative
+labors ruled rabbinic with the verse a mere support, 3a:9). A rule
+about when a middah may run at all, stated on this book's own ink;
+claim LV25A-19. Beside it the same page's WENT-OUT-TO-TEACH classifier
+(3a:8) restates the Sifra's class rule, and the ABOLITION of the
+pre-year addition is warranted by a verbal analogy "sabbath"-"sabbath"
+from the creation week (4a:7) — with Rav Ashi's objection that an
+analogy cannot uproot a received halakhah or a verse (4a:8), resolved
+by keying the halakhah to the standing Temple (4a:9).
+
 Watch item, not yet a row: WILL-INDEXED DISPATCH stands at TWO
 recorded exemplars in the campaign; per the Move Catalog's standing
 rule a third exemplar registers it as a move (M-family), not a

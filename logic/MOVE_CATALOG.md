@@ -163,6 +163,27 @@ Jubilee" — Behar, Chapter 8 4). Mishnah Kiddushin 1:2's three exits
 (years, Jubilee, money) thus grade against two spans joined by one
 edge — the same wiring exemplar (a) recorded from the Exodus side,
 now closed from the Leviticus side.
+EXEMPLARS FROM THE SEVENTH-YEAR SUPPLEMENT (2026-09-05, round 47):
+(e) THE FOREIGNER'S INTEREST — Lev 25:36-37 bars the bite and the
+increase toward "your brother" and says nothing of anyone else; the
+scope's other half is fetched from Deuteronomy 23:21, "to the
+foreigner you may lend at interest, and to your brother you shall
+not" — Mishnah Bava Metzia 5:6's iron sheep accepted from gentiles
+(cold_run_yovel.py, interest_scope). (f) THE CREATION-SABBATH ANALOGY
+— the pre-year addition's ABOLITION by Rabban Gamliel's court is
+warranted from Genesis 2's Sabbath by a verbal analogy
+"sabbath"-"sabbath": as that day is forbidden itself and free before
+and after, so the land's (Babylonian Talmud Moed Katan 4a:7); the
+Sifra's thirty days (Behar Chapter 1 1) thereby keyed to the standing
+Temple (4a:9); claim LV25A-19. And a form worth naming beside the
+import, not as a move: THE RUN LOG AS ANSWER SHEET — Lev 26:34-35's
+sabbath-debt clause is QUOTED by 2 Chronicles 36:21 at the timer's
+discharge, and the seventy-year timer is run three times in the
+Babylonian Talmud (Megillah 11b-12a) from three recorded epochs with
+two logged failures — the tradition's second recorded EXPERIMENT on
+the record after the spit materials of round 16 (claim LV26-30;
+cold_run_tochacha.py).
+
 **Middah:** mixed — the call-site derivation runs on #2 (GEZERAH
 SHAVAH, the verbal analogy on the shared striking-word) with the
 harmonization family (#13, two passages resolved together) behind

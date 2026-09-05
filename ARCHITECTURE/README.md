@@ -27,8 +27,13 @@ paragraph opens beneath it, three to five sentences in a fixed shape
 tradition adds with its source named, what carries forward). The
 paragraphs live in [NARRATIVE.md](NARRATIVE.md), one heading per block,
 editable by hand; `tools/build_linked.py --narrative` rebuilds the page
-from it. As of 2026-09-05 the four Bereshit bullets have paragraphs and
-the other 74 await the owner's word on the voice. It opens as a block summary,
+from it. As of 2026-09-05 all 78 bullets carry a paragraph, written from
+the units' own state summaries, exports, and witness notes; the four
+Bereshit paragraphs were approved first and the rest follow their shape.
+The paragraphs alone, one chapter per block, are also a listening book:
+[program/The_Program_In_Narrative.epub](program/The_Program_In_Narrative.epub)
+with its markdown twin beside it, built by `tools/build_narrative_epub.py`
+from the same narrative file (33 chapters, 78 paragraphs, about an hour). It opens as a block summary,
 thirty-three blocks cut at the scroll's weekly-portion breaks, each with
 its mode, its operator counts, and two to four plain sentences. Under each
 block a link opens its units; under each unit, its verses in plain

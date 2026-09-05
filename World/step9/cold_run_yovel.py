@@ -45,6 +45,10 @@ runs; the answer sheet is verified in its own ink.
 import sqlite3, sys, os, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effects_layer as FX
+from compile_guards import check_honest_pairing
+
+GUARDED = check_honest_pairing(os.path.abspath(__file__))   # REVIEW_BEHAR item 6 — retrofit 2026-09-05
+print('honest-pairing guard: %d tests checked, every expectation a literal' % GUARDED)
 
 ROOT = '<repo-old>'
 db = sqlite3.connect(ROOT + '/elijah_docket/tanakh.sqlite')
@@ -118,6 +122,23 @@ PROBES = [
     ('MANY years remain',                       25, 51, 'רבות'),
     ('FEW remain',                              25, 52, 'מעט'),
     ('IN YOUR SIGHT',                           25, 53, 'לעיניך'),
+    ('nor PRUNE your vineyard',                 25, 4, 'תזמר'),
+    ('the AFTERGROWTH of your harvest',         25, 5, 'ספיח'),
+    ('you shall not REAP',                      25, 5, 'תקצור'),
+    ('you shall not GATHER (vintage)',          25, 5, 'תבצר'),
+    ('for FOOD — the eaters clause opens',      25, 6, 'לאכלה'),
+    ('for your SLAVE',                          25, 6, 'ולעבדך'),
+    ('for your MAIDSERVANT',                    25, 6, 'ולאמתך'),
+    ('for your HIRELING',                       25, 6, 'ולשכירך'),
+    ('for your RESIDENT',                       25, 6, 'ולתושבך'),
+    ('for your CATTLE',                         25, 7, 'ולבהמתך'),
+    ('and for the BEAST',                       25, 7, 'ולחיה'),
+    ('which is IN YOUR LAND',                   25, 7, 'בארצך'),
+    ('until the NINTH year',                    25, 22, 'התשיעת'),
+    ('the TENTH shall be holy',                 27, 32, 'העשירי'),
+    ('under the ROD',                           27, 32, 'השבט'),
+    ('nor SUBSTITUTE it (the tithe)',           27, 33, 'ימירנו'),
+    ('it shall not be REDEEMED (the tithe)',    27, 33, 'יגאל'),
     ('FIFTY shekels — the adult male',          27, 3, 'חמשים'),
     ('THIRTY — the adult female',               27, 4, 'שלשים'),
     ('TWENTY / TEN — five to twenty',           27, 5, 'עשרים'),
@@ -434,6 +455,167 @@ def mishnah(tractate, ch, m, must):
     return row
 
 
+
+# ---- THE SABBATICAL YEAR — the cell extended into a graded function
+# (2026-09-05, REVIEW_BEHAR item 2: Mishnah Sheviit routed by topic) ----
+LABOR_VERBS = [w for v in (4, 5) for w in T25[v] if w in ('תזרע', 'תזמר', 'תקצור', 'תבצר')]
+EATERS = [w for v in (6, 7) for w in T25[v] if w in ('לך', 'ולעבדך', 'ולאמתך', 'ולשכירך', 'ולתושבך', 'ולבהמתך', 'ולחיה')]
+assert len(LABOR_VERBS) == 4, LABOR_VERBS
+assert len(EATERS) == 7, EATERS
+
+
+def sabbatical():
+    return {
+     'torah_labors': cell(len(LABOR_VERBS), I, 'the four verbs the ink writes at 25:4-5: %s — sow, '
+                          'prune, reap, gather' % ' / '.join(LABOR_VERBS), ['labor_barred', 'land_release']),
+     'derivative_layer': cell('rabbinic_verse_as_support', M, 'the census the Sifra reads from "your '
+                              'field NOT, your vineyard NOT" (weeding, hoeing, trimming, fertilizing, '
+                              'smoking) is RULED rabbinic, the verse a mere support — "pruning is under '
+                              'sowing, vintaging under reaping; written to say THESE derivatives alone '
+                              'incur liability" (Babylonian Talmud Moed Katan 3a:2-3, 3a:9, 3a:22)',
+                              ['labor_barred']),
+     'plowing_lashes': cell(['lashes', 'no_lashes'], M, 'R. Yochanan and R. Elazar, one each way '
+                            '(Moed Katan 3a:12) — on R. Avin\'s meta-rule about a general in a positive '
+                            'and a particular in a negative', ['labor_barred']),
+     'two_hoeings': cell('strengthen_barred_close_cracks_permitted', M, 'Rav Ukva b. Chama (Moed Katan '
+                         '3a:11) on Exod 23:11\'s "release and abandon"', ['labor_barred']),
+     'addition_days': cell(30, D, 'THIRTY DAYS before the New Year — a halakhah to Moses from Sinai '
+                           '(Moed Katan 3b:12; Sifra Behar Chapter 1 1): the data channel', ['labor_barred']),
+     'addition_cutoffs': cell('abolished_by_rabban_gamliel', M, 'the Passover and Atzeret cutoffs of '
+                              'Mishnah Sheviit 1:1 and 2:1 were the sages\' own with a repeal condition; '
+                              'Rabban Gamliel\'s court voted and abolished them (Moed Katan 3b:8-12)',
+                              [FX.NONE]),
+     'addition_temple_bound': cell('only_while_temple_stands', M, 'Rav Ashi: the halakhah was received '
+                                   'only while the Temple stands, like the water libation (Moed Katan 4a:9)',
+                                   [FX.NONE]),
+     'eaters': cell(len(EATERS), I, 'לך ולעבדך ולאמתך ולשכירך ולתושבך (25:6) ולבהמתך ולחיה (25:7) — '
+                    'seven eater tokens: you, your slave, your maidservant, your hireling, your '
+                    'resident, your cattle, the beast', ['land_release']),
+     'after_removal': cell(['r_yehuda_poor_only', 'r_yosei_poor_and_rich'], M, 'who eats after the '
+                           'removal — the eaters clause read two ways (Sifra Behar Chapter 1 6; Mishnah '
+                           'Sheviit 9:8)', ['land_release']),
+     'aftergrowth_ink': cell('not_reaped_as_harvest', I, 'את ספיח קצירך לא תקצור (the aftergrowth of your '
+                             'harvest you shall not reap, 25:5); ספיחיה at 25:11 for the Jubilee',
+                             ['labor_barred']),
+     'aftergrowth_ban': cell(['sages_all_forbidden', 'r_shimon_permitted_but_cabbage', 'r_yehuda_mustard_permitted'],
+                             M, 'the Sages: all aftergrowth forbidden — "from here the sages RELIED on the '
+                             'aftergrowth being forbidden" (Sifra Behar Chapter 1 3, Chapter 4 5 — the '
+                             'ban rabbinic with the verse its peg); R. Shimon and R. Yehuda\'s arms '
+                             '(Mishnah Sheviit 9:1)', ['labor_barred']),
+     'field_clock': cell('eat_from_house_while_in_field', M, '"from the field you shall eat its produce" — '
+                         'while you eat from the field you eat from the house; gone from the field, '
+                         'remove from the house (Sifra Behar Chapter 3 4)', ['land_release']),
+     'jar': cell('per_kind_rabban_gamliel_the_law', M, 'three pickled kinds in one jar — Rabban Gamliel: '
+                 'each kind gone from the field is removed from the jar, "and the law follows him" '
+                 '(Sifra Behar Chapter 3 5; Mishnah Sheviit 9:5)', ['land_release']),
+     'export': cell('not_abroad_syria_permitted', M, 'אשר בארצך (which is in your land, 25:7) — what is '
+                    'in your land is eaten, not what one carried to his slaves abroad; R. Shimon: "I '
+                    'heard explicitly — to Syria yes, abroad no" (Sifra Behar Chapter 1 9)',
+                    ['land_release']),
+     'commerce': cell('barred', M, 'לאכלה (for FOOD, 25:6) — not for meal offerings or libations, and '
+                      'the eating-not-commerce rule the seat carries (Sifra Behar Chapter 1 6, LV25A-05)',
+                      ['land_release']),
+     'changed_manner': cell('not_as_the_gatherers', M, '"you shall not gather" — not as the gatherers '
+                            'gather: figs not in the drying-yard, grapes not in the press (Sifra Behar '
+                            'Chapter 1 3)', ['labor_barred']),
+     'money_chain': cell('last_seized_fruit_forbidden', M, 'as the holy seizes its price, so the seventh '
+                         'seizes its price; "it" — it stays in its holiness: the last and last is seized '
+                         'and the fruit itself forbidden (Sifra Behar Chapter 3 3)', ['land_release']),
+     'blessing_years': cell(3, I, 'ועשת את התבואה לשלש השנים (it shall make produce for THREE years, '
+                            '25:21) — the sixth, the seventh, the year after', ['land_release']),
+     'blessing_with_jubilee': cell(4, M, '"another reading: for the seventh, the Jubilee, and the year '
+                                   'after" — four when the fiftieth follows the forty-ninth (Sifra Behar '
+                                   'Chapter 4 6)', ['jubilee_release']),
+     'old_until': cell('ninth_year', I, 'ואכלתם מן התבואה ישן עד השנה התשיעת (you shall eat of the old '
+                       'produce until the ninth year, 25:22)', ['land_release']),
+     'zones': cell('three_lands', D, 'the three lands of Mishnah Sheviit 6:1 — the returnees\' holdings — '
+                   'a zone map the ink\'s "in your land" (25:7) leaves as data', ['land_release']),
+     'debt_release': cell('routed_deut_15', M, 'the money release is Deuteronomy 15\'s (THE TWO RELEASES '
+                          'MATRIX, LV25A-13: money to the seventh, slaves to the Jubilee) — an import edge '
+                          '(M-07) the walk\'s Re\'eh sitting will compile; Mishnah Sheviit 10 carried '
+                          'routed', [FX.NONE]),
+     'tools_rule': cell('work_specific_to_transgression_barred', A, 'the craftsman\'s sale classifier — '
+                        'the Mishnah\'s own rule with no ink beneath it (Mishnah Sheviit 5:6)', [FX.NONE]),
+    }
+
+
+# ---- THE ANIMAL TITHE'S NAMING MACHINE — Lev 27:32-33 (the error rule the
+# review said was never written) ----------------------------------------
+def tithe_naming(calls):
+    """calls: {position: name} for the ninth, tenth, eleventh to pass under
+    the rod. THE TENTH IS HOLY by the ink (27:32); an ERROR sanctifies the
+    neighbor it names 'tenth' (the Sifra's inclusion of the ninth and the
+    eleventh from 'shall be holy' — LV27-23), and the eleventh only if the
+    name 'tenth' was UPROOTED from the tenth (Mishnah Bekhorot 9:8's rule)."""
+    tenth_uprooted = calls.get(10) != 'tenth'
+    out = {}
+    for pos in (9, 10, 11):
+        nm = calls.get(pos)
+        if pos == 10:
+            out[pos] = 'tithe'                      # INK: העשירי יהיה קדש — whatever it was called
+        elif pos == 9 and nm == 'tenth':
+            out[pos] = 'sanctified_eaten_blemished' # MOVE: the neighbor named in error
+        elif pos == 11 and nm == 'tenth':
+            out[pos] = 'shelamim' if tenth_uprooted else 'not_sanctified'
+        else:
+            out[pos] = 'profane'
+    return out
+
+
+TN_ERROR = cell(tithe_naming({9: 'tenth', 10: 'ninth', 11: 'tenth'}), M,
+                'ninth called tenth, tenth ninth, eleventh tenth — all three sanctified: the ninth eaten '
+                'blemished, the tenth tithe, the eleventh a peace offering (R. Meir; Sifra Bechukotai '
+                'Chapter 13 1-3, LV27-23; Mishnah Bekhorot 9:8)', ['substitution'])
+TN_PLAIN = cell(tithe_naming({9: 'ninth', 10: 'tenth', 11: 'eleventh'}), I,
+                'העשירי יהיה קדש ליהוה (the tenth shall be holy to the LORD, 27:32) — the ordinal '
+                'names its own', ['substitution'])
+TN_NOT_UPROOTED = cell(tithe_naming({9: 'tenth', 10: 'tenth', 11: 'tenth'}), M,
+                       'the name "tenth" was NOT uprooted from the tenth — the eleventh is not sanctified '
+                       '(Mishnah Bekhorot 9:8\'s closing rule)', ['substitution'])
+TN_PASSES = cell('bought_and_gifted_exempt', M, '"all that PASSES under the rod" — born in his domain: the '
+                 'bought and the gifted exempt (Sifra Bechukotai Chapter 12, LV27-22; Mishnah Bekhorot 9:3)',
+                 [FX.NONE])
+TN_EXCLUDED = cell('kilayim_terefah_caesarean_underage_orphan', M, 'what enters the pen — the Sifra\'s '
+                   'exclusions on "all that passes" (LV27-06; Mishnah Bekhorot 9:4)', [FX.NONE])
+TN_DISTANCE = cell(16, D, 'the herd combines within a grazing beast\'s walk — sixteen mil (Mishnah '
+                   'Bekhorot 9:2): a distance parameter the ink leaves open', [FX.NONE])
+
+
+# ---- THE OWNER'S PRECEDENCE — Arakhin 8:2-8:3's fifth arithmetic ------
+def owner_price(bid, own=20):
+    """The owner adds a FIFTH (27:19) to his own valuation — a quarter of the
+    principal, so that the fifth is of the total (20 → 25); no fifth on
+    another's raise: at bids up to own + 5 the owner pays bid + 5; above
+    that he must exceed by a dinar to stay first."""
+    fifth = own // 4
+    if bid <= own + fifth:
+        return bid + fifth
+    return 'thirty_one_and_a_dinar' if bid == 26 else bid + fifth + 0.25
+
+
+OP = {b: cell(owner_price(b), A if b <= 25 else A, 'ויסף חמשית (27:19) on the owner\'s own twenty = 5, and '
+              'no fifth on the other\'s raise — the answer sheet\'s arithmetic (Mishnah Arakhin 8:3)',
+              ['adds_fifth']) for b in (21, 22, 23, 24, 25, 26)}
+
+
+# ---- THE INTEREST SCOPE — brother and foreigner ---------------------
+def interest_scope(borrower):
+    if borrower == 'brother':
+        return cell('barred', I, 'אל תקח מאתו נשך ותרבית... וחי אחיך עמך (25:36) — your BROTHER', ['interest_barred'])
+    if borrower == 'foreigner':
+        return cell('permitted', M, 'IMPORT EDGE (M-07): לנכרי תשיך ולאחיך לא תשיך (to the foreigner you '
+                    'may lend at interest, to your brother not — Deut 23:21); Mishnah Bava Metzia 5:6\'s '
+                    'iron sheep from gentiles', [FX.NONE])
+    raise KeyError(borrower)
+
+
+RENT_SALE = cell('increase_on_rent_not_sale', A, 'the answer sheet\'s own asymmetry over the two nouns — '
+                 'ten sela a year now or a sela a month, permitted; a thousand now or twelve maneh at '
+                 'threshing, forbidden (Mishnah Bava Metzia 5:2)', ['interest_barred'])
+NAMED_FENCES = cell(['advance', 'after', 'words'], A, 'Rabban Gamliel\'s advance interest and after-interest, '
+                    'R. Shimon\'s interest of words (Mishnah Bava Metzia 5:10) — the fence\'s three named '
+                    'outer classes, no ink beneath', ['interest_barred'])
+
 SHEET = [
     ('Rosh Hashanah 1:1', 'rosh_hashanah', 1, 1, 'וליובלות'),
     ('Kiddushin 1:2', 'kiddushin', 1, 2, 'וביובל'),
@@ -451,11 +633,62 @@ SHEET = [
     ('Arakhin 4:4', 'arakhin', 4, 4, 'כלמטה'),
     ('Arakhin 7:1', 'arakhin', 7, 1, 'ופנדיון'),
     ('Megillah 4:3', 'megillah', 4, 3, 'תשעה'),
+    ('Sheviit 1:1', 'sheviit', 1, 1, 'העצרת'),
+    ('Sheviit 2:2', 'sheviit', 2, 2, 'מזבלין'),
+    ('Sheviit 2:6', 'sheviit', 2, 6, 'שלשים'),
+    ('Sheviit 5:6', 'sheviit', 5, 6, 'הכלל'),
+    ('Sheviit 6:1', 'sheviit', 6, 1, 'שלש'),
+    ('Sheviit 6:5', 'sheviit', 6, 5, 'לסוריא'),
+    ('Sheviit 7:3', 'sheviit', 7, 3, 'סחורה'),
+    ('Sheviit 8:6', 'sheviit', 8, 6, 'במקצה'),
+    ('Sheviit 8:7', 'sheviit', 8, 7, 'אחרון'),
+    ('Sheviit 9:1', 'sheviit', 9, 1, 'הספיחין'),
+    ('Sheviit 9:3', 'sheviit', 9, 3, 'שיכלה'),
+    ('Sheviit 9:5', 'sheviit', 9, 5, 'והלכה'),
+    ('Sheviit 9:8', 'sheviit', 9, 8, 'הבעור'),
+    ('Sheviit 10:1', 'sheviit', 10, 1, 'משמטת'),
+    ('Bekhorot 9:2', 'bekhorot', 9, 2, 'מיל'),
+    ('Bekhorot 9:3', 'bekhorot', 9, 3, 'פטור'),
+    ('Bekhorot 9:4', 'bekhorot', 9, 4, 'הכלאים'),
+    ('Bekhorot 9:8', 'bekhorot', 9, 8, 'עשירי'),
+    ('Arakhin 8:3', 'arakhin', 8, 3, 'ודינר'),
+    ('Bava Metzia 5:2', 'bava_metzia', 5, 2, 'השכר'),
+    ('Bava Metzia 5:6', 'bava_metzia', 5, 6, 'הנכרים'),
+    ('Bava Metzia 5:10', 'bava_metzia', 5, 10, 'מקדמת'),
 ]
+SHEET2 = [   # the Sifra and Talmud rows the sabbatical cells cite, verified in their own ink
+    ('sifra', 'Behar', 'Chapter 1', 3, 'הבוצרים'),
+    ('sifra', 'Behar', 'Chapter 1', 6, 'לאכלה'),
+    ('sifra', 'Behar', 'Chapter 1', 9, 'לסוריא'),
+    ('sifra', 'Behar', 'Chapter 3', 3, 'נתפס'),
+    ('sifra', 'Behar', 'Chapter 3', 4, 'כלה'),
+    ('sifra', 'Behar', 'Chapter 3', 5, 'והלכה'),
+    ('sifra', 'Behar', 'Chapter 4', 5, 'הספיחים'),
+    ('sifra', 'Behar', 'Chapter 4', 6, 'לשלש'),
+    ('bavli', 'moed_katan', 3, 'a', 2, 'זמירה'),
+    ('bavli', 'moed_katan', 3, 'a', 9, 'מדרבנן'),
+    ('bavli', 'moed_katan', 3, 'a', 12, 'לוקה'),
+    ('bavli', 'moed_katan', 3, 'b', 8, 'ובטלום'),
+    ('bavli', 'moed_katan', 3, 'b', 12, 'שלשים'),
+    ('bavli', 'moed_katan', 4, 'a', 9, 'קיים'),
+]
+import re as _re
+def _sifra(book, section, n, must):
+    d = json.load(open(ROOT + '/Data/sifra_he.json'))
+    t = d['text'] if isinstance(d, dict) and 'text' in d else d
+    row = strip(t[book][section][n - 1])
+    assert must in row, 'answer-sheet check failed: %r not in Sifra %s %s %d' % (must, book, section, n)
+def _bavli(tr, daf, side, seg, must):
+    d = json.load(open(ROOT + '/Data/bavli_%s_he.json' % tr))
+    t = d['text'] if isinstance(d, dict) and 'text' in d else d
+    row = _re.sub(r'<[^>]+>', '', strip(t[2 * daf - 2 + (1 if side == 'b' else 0)][seg - 1]))
+    assert must in row, 'answer-sheet check failed: %r not in %s %d%s:%d' % (must, tr, daf, side, seg)
+for kind, *ref in SHEET2:
+    (_sifra if kind == 'sifra' else _bavli)(*ref)
 for name, tr, ch, m, must in SHEET:
     mishnah(tr, ch, m, must)
-print('answer sheet: %d Mishnah rows read whole from the shelf, each '
-      'verified by a token in its own ink' % len(SHEET))
+print('answer sheet: %d Mishnah rows + %d Sifra/Talmud rows read whole from the shelf, '
+      'each verified by a token in its own ink' % (len(SHEET), len(SHEET2)))
 
 JB = jubilee()
 FS = field_sale(100, 10, 4)          # sold at 100 with 10 harvest years to the Jubilee, 4 elapsed
@@ -465,6 +698,9 @@ GS = gentile_slave()
 ON = overreaching()
 RB = interest()
 FV = field_valuation(49)
+SB = sabbatical()
+IS_B = interest_scope('brother')
+IS_F = interest_scope('foreigner')
 
 # (Mishnah row, cell, expected)
 TESTS = [
@@ -520,6 +756,57 @@ TESTS = [
   HS_G['redeemers'], 'kin_ladder_at_once'),
  ('Arakhin 9:2 — improved or declined: the lesser figure (the field)',
   FS['improved_or_declined'], 'lesser_figure'),
+ # ---- the sabbatical year, graded against Mishnah Sheviit (2026-09-05, item 2)
+ ('Moed Katan 3a:1-3 — the Torah layer is the four written verbs', SB['torah_labors'], 4),
+ ('Moed Katan 3a:9 — the derivative labors of Sheviit 2:2: rabbinic, the verse a support',
+  SB['derivative_layer'], 'rabbinic_verse_as_support'),
+ ('Moed Katan 3a:12 — plowing in the seventh: lashes disputed both ways', SB['plowing_lashes'],
+  ['lashes', 'no_lashes']),
+ ('Moed Katan 3a:11 — two hoeings', SB['two_hoeings'], 'strengthen_barred_close_cracks_permitted'),
+ ('Sheviit 2:6 / Moed Katan 3b:12 — the addition: thirty days [DATA]', SB['addition_days'], 30),
+ ('Sheviit 1:1 / Moed Katan 3b:8 — the Passover/Atzeret cutoffs abolished', SB['addition_cutoffs'],
+  'abolished_by_rabban_gamliel'),
+ ('Moed Katan 4a:9 — the addition bound to the standing Temple', SB['addition_temple_bound'],
+  'only_while_temple_stands'),
+ ('Sifra Behar Chapter 1 6 — the seven eaters of 25:6-7', SB['eaters'], 7),
+ ('Sheviit 9:8 — who eats after the removal: two arms', SB['after_removal'],
+  ['r_yehuda_poor_only', 'r_yosei_poor_and_rich']),
+ ('Lev 25:5 — the aftergrowth not reaped as a harvest', SB['aftergrowth_ink'], 'not_reaped_as_harvest'),
+ ('Sheviit 9:1 — the aftergrowth ban: three arms', SB['aftergrowth_ban'],
+  ['sages_all_forbidden', 'r_shimon_permitted_but_cabbage', 'r_yehuda_mustard_permitted']),
+ ('Sheviit 9:3 / Sifra Chapter 3 4 — the field-clock', SB['field_clock'], 'eat_from_house_while_in_field'),
+ ('Sheviit 9:5 / Sifra Chapter 3 5 — the jar: Rabban Gamliel, and the law follows him', SB['jar'],
+  'per_kind_rabban_gamliel_the_law'),
+ ('Sheviit 6:5 / Sifra Chapter 1 9 — the export border', SB['export'], 'not_abroad_syria_permitted'),
+ ('Sheviit 7:3 / Sifra Chapter 1 6 — no commerce', SB['commerce'], 'barred'),
+ ('Sheviit 8:6 / Sifra Chapter 1 3 — the changed manner', SB['changed_manner'], 'not_as_the_gatherers'),
+ ('Sheviit 8:7 / Sifra Chapter 3 3 — the money chain', SB['money_chain'], 'last_seized_fruit_forbidden'),
+ ('Lev 25:21 — the blessing for three years', SB['blessing_years'], 3),
+ ('Sifra Behar Chapter 4 6 — four when the Jubilee follows', SB['blessing_with_jubilee'], 4),
+ ('Lev 25:22 — the old eaten until the ninth', SB['old_until'], 'ninth_year'),
+ ('Sheviit 6:1 — the three lands [DATA]', SB['zones'], 'three_lands'),
+ ('Sheviit 10:1 — the money release routed to Deuteronomy 15', SB['debt_release'], 'routed_deut_15'),
+ ('Sheviit 5:6 — the tools rule [ANSWER-SHEET]', SB['tools_rule'], 'work_specific_to_transgression_barred'),
+ # ---- the animal tithe's naming machine (Bekhorot 9)
+ ('Lev 27:32 — the tenth is the tithe when called by its own name', TN_PLAIN,
+  {9: 'profane', 10: 'tithe', 11: 'profane'}),
+ ('Bekhorot 9:8 — ninth called tenth, tenth ninth, eleventh tenth: all three sanctified', TN_ERROR,
+  {9: 'sanctified_eaten_blemished', 10: 'tithe', 11: 'shelamim'}),
+ ('Bekhorot 9:8 — the name tenth not uprooted: the eleventh not sanctified', TN_NOT_UPROOTED,
+  {9: 'sanctified_eaten_blemished', 10: 'tithe', 11: 'not_sanctified'}),
+ ('Bekhorot 9:3 — the bought and the gifted exempt (passes = born in his domain)', TN_PASSES,
+  'bought_and_gifted_exempt'),
+ ('Bekhorot 9:4 — what enters the pen', TN_EXCLUDED, 'kilayim_terefah_caesarean_underage_orphan'),
+ ('Bekhorot 9:2 — sixteen mil [DATA]', TN_DISTANCE, 16),
+ # ---- the owner's precedence (Arakhin 8:3)
+ ('Arakhin 8:3 — another at twenty-one: the owner gives twenty-six', OP[21], 26),
+ ('Arakhin 8:3 — at twenty-five: thirty', OP[25], 30),
+ ('Arakhin 8:3 — at twenty-six: thirty-one and a dinar', OP[26], 'thirty_one_and_a_dinar'),
+ # ---- the interest scope (Bava Metzia 5)
+ ('Lev 25:36 — your brother: barred', IS_B, 'barred'),
+ ('Bava Metzia 5:6 / Deut 23:21 — the foreigner: permitted (import edge)', IS_F, 'permitted'),
+ ('Bava Metzia 5:2 — increase on rent, not on sale [ANSWER-SHEET]', RENT_SALE, 'increase_on_rent_not_sale'),
+ ('Bava Metzia 5:10 — the three named fences [ANSWER-SHEET]', NAMED_FENCES, ['advance', 'after', 'words']),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------
@@ -534,6 +821,7 @@ for name, c, want in TESTS:
                                 '' if hit else 'got=%r' % (c['v'],)))
     print('     effects: %s' % ', '.join(c['fx']))
 n = len(TESTS)
+assert n == GUARDED, (n, GUARDED)
 print()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
 print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · '
@@ -546,6 +834,9 @@ print('computed, not graded: the release day is Yom Kippur of the fiftieth '
       '(INK); the sela is twenty gerah (INK); the field\'s fifth (INK); the '
       'unredeemed field to the priest at the Jubilee (INK); the field owed '
       'over a full cycle = %s' % FV['owed']['v'])
+print('the sabbatical year extended 2026-09-05 (REVIEW_BEHAR item 2): %d cells graded against '
+      'Mishnah Sheviit, Bekhorot 9, Arakhin 8, Bava Metzia 5 and the Sifra/Talmud rows the seats '
+      'cite; the tithe naming machine written' % (n - 33))
 print('effects: every cell carries REGISTERED effects — four discovered in '
       'this span\'s own verbs: returns_to_holding (TRANSFER), '
       'sold_in_perpetuity, redemption_right, interest_barred [effects law '

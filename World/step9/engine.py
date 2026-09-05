@@ -1895,3 +1895,10 @@ RULES.update(_em.build(V))
 # round). Bare Mishnah rows citing Lev 25-27. 7 rules in behar_rules.py.
 import behar_rules as _bh
 RULES.update(_bh.build(V))
+
+# Round 47 — THE TOPIC-ROUTED DOCKET SUPPLEMENT (2026-09-05, after
+# compaction #51; REVIEW_BEHAR item 2). Mishnah Sheviit whole + the unread
+# rows of Arakhin, Temurah, Bekhorot 9, Bava Metzia 5, routed BY TOPIC.
+# 8 rules in sheviit_rules.py (generated from the cases table).
+import sheviit_rules as _sv
+RULES.update(_sv.build(V))

@@ -1,0 +1,1356 @@
+# THE TOPIC-ROUTED DOCKET SUPPLEMENT (round 47 — 2026-09-05, after
+# compaction #51; REVIEW_BEHAR item 2). Mishnah Sheviit whole + the
+# unread rows of Arakhin, Temurah, Bekhorot 9, and Bava Metzia 5,
+# routed BY TOPIC (the two-shelves ruling), graded against the
+# Behar-Bechukotai seats. Read-source:
+# logic/oral_triage/sheviit_topic_docket_2026-09-05.md.
+# 131 LAW rows carry 189 cells; a list-valued expectation is a
+# recorded dispute the engine must return whole, each arm labeled.
+# The cases, the vocabulary, AND sheviit_rules.py are generated from
+# ONE table (scratchpad/gen_sheviit_cases.py) — no drift possible.
+
+- module: sheviit_labor_file
+  tractate: Sheviit
+  oracle: Mishnah Sheviit 1:1; 1:2; 1:3; 1:5; 1:6; 1:7; 1:8; 2:1; 2:2; 2:3; 2:4; 2:5; 2:6; 2:7; 2:8; 2:9; 2:10;
+    3:1; 3:2; 3:3; 3:4; 3:5; 3:6; 3:7; 3:8; 3:9; 3:10; 4:1; 4:2; 4:3; 4:4; 4:5; 4:6; 4:10; Babylonian Talmud Moed
+    Katan 3a:1; 3a:9; 3a:11; 3a:12; 3b:8; 3b:12; 4a:9
+  exodus_anchor:
+    unit: lev_25_shemittah
+    ref: Lev.25.1-7
+    claims:
+    - LV25A-02
+    - LV25A-03
+    - LV25A-04
+    - LV25A-19
+  cases:
+  - id: Sv_orchard_cutoff
+    input:
+      query: sheviit_orchard_plow_cutoff_eve
+    expected:
+      verdict:
+      - beit_shammai_while_it_benefits
+      - beit_hillel_until_atzeret
+    class: A
+  - id: Sv_orchard_def
+    input:
+      query: sheviit_orchard_definition
+    expected:
+      verdict: three_trees_sixty_maneh_cake
+    class: A
+  - id: Sv_barren_as_figs
+    input:
+      query: sheviit_barren_tree_threshold
+    expected:
+      verdict: viewed_as_figs
+    class: A
+  - id: Sv_three_owners
+    input:
+      query: sheviit_three_trees_three_owners
+    expected:
+      verdict: combine_ox_with_gear_spacing
+    class: A
+  - id: Sv_ten_saplings
+    input:
+      query: sheviit_ten_saplings_scattered
+    expected:
+      verdict: plow_whole_plot_until_new_year
+    class: A
+  - id: Sv_saplings_gourds
+    input:
+      query: sheviit_saplings_and_gourds
+    expected:
+      verdict: combine
+    class: A
+  - id: Sv_sapling_name
+    input:
+      query: sheviit_when_sapling_becomes_tree
+    expected:
+      verdict:
+      - r_elazar_b_azaryah_until_profane
+      - r_yehoshua_seven_years
+      - r_akiva_as_its_name
+    class: A
+  - id: Sv_grain_cutoff
+    input:
+      query: sheviit_grain_field_plow_cutoff_eve
+    expected:
+      verdict: until_moisture_ends
+    class: A
+  - id: Sv_r_shimon_fixed
+    input:
+      query: sheviit_r_shimon_fixed_cutoffs
+    expected:
+      verdict: grain_passover_orchard_atzeret
+    class: A
+  - id: Sv_fertilize_beds
+    input:
+      query: sheviit_fertilize_hoe_beds_eve
+    expected:
+      verdict: until_new_year
+    class: A
+  - id: Sv_leaf_cluster
+    input:
+      query: sheviit_remove_leaf_from_cluster_in_seventh
+    expected:
+      verdict: r_shimon_permits
+    class: A
+  - id: Sv_trim_eve
+    input:
+      query: sheviit_trim_prune_shoots_eve
+    expected:
+      verdict: until_new_year
+    class: A
+  - id: Sv_water_saplings
+    input:
+      query: sheviit_water_saplings_eve
+    expected:
+      verdict: until_new_year
+    class: A
+  - id: Sv_water_foliage
+    input:
+      query: sheviit_water_foliage_in_seventh
+    expected:
+      verdict: r_elazar_b_tzadok_foliage_not_root
+    class: A
+  - id: Sv_oil_figs
+    input:
+      query: sheviit_oil_unripe_figs_crossing_year
+    expected:
+      verdict: not_oiled
+    class: A
+  - id: Sv_plant_30
+    input:
+      query: sheviit_plant_sink_graft_before_new_year
+    expected:
+      verdict: thirty_days_else_uproot
+    class: A
+  - id: Sv_graft_take
+    input:
+      query: sheviit_graft_taking_time
+    expected:
+      verdict:
+      - r_yehuda_three_days
+      - r_yosei_r_shimon_two_weeks
+    class: A
+  - id: Sv_rooted
+    input:
+      query: sheviit_rice_millet_rooted_before_new_year
+    expected:
+      verdict: past_year_permitted_in_seventh
+    class: A
+  - id: Sv_bean_seed
+    input:
+      query: sheviit_egyptian_bean_sown_for_seed
+    expected:
+      verdict: like_rooted_rule
+    class: A
+  - id: Sv_onions_water
+    input:
+      query: sheviit_seedless_onions_water_withheld
+    expected:
+      verdict: thirty_days_past_year
+    class: A
+  - id: Sv_rainfed_seasons
+    input:
+      query: sheviit_rainfed_water_withheld_seasons
+    expected:
+      verdict:
+      - r_meir_two
+      - sages_three
+    class: A
+  - id: Sv_gourds_seed
+    input:
+      query: sheviit_gourds_kept_for_seed_hardened
+    expected:
+      verdict: permitted_to_keep
+    class: A
+  - id: Sv_dung_out
+    input:
+      query: sheviit_dung_carried_to_heaps_when
+    expected:
+      verdict:
+      - r_meir_workers_cease
+      - r_yehuda_sweet_dries
+      - r_yosei_knots
+    class: A
+  - id: Sv_heaps_measure
+    input:
+      query: sheviit_dung_heaps_measure
+    expected:
+      verdict: three_heaps_ten_baskets_letekh
+    class: A
+  - id: Sv_more_heaps
+    input:
+      query: sheviit_more_than_three_heaps
+    expected:
+      verdict:
+      - r_shimon_permitted
+      - sages_dig_or_raise_three
+    class: A
+  - id: Sv_fold
+    input:
+      query: sheviit_penning_cattle_fold
+    expected:
+      verdict: two_seah_fold_move_sides
+    class: A
+  - id: Sv_quarry
+    input:
+      query: sheviit_new_quarry_threshold
+    expected:
+      verdict: twenty_seven_stones
+    class: A
+  - id: Sv_fence_stones
+    input:
+      query: sheviit_fence_ten_two_man_stones
+    expected:
+      verdict: may_be_removed
+    class: A
+  - id: Sv_plow_stones
+    input:
+      query: sheviit_stones_turned_by_plow
+    expected:
+      verdict: top_taken_ground_touching_left
+    class: A
+  - id: Sv_steps
+    input:
+      query: sheviit_steps_at_ravines_eve_after_rains
+    expected:
+      verdict: forbidden_readies_for_seventh
+    class: A
+  - id: Sv_shoulder
+    input:
+      query: sheviit_shoulder_stones
+    expected:
+      verdict:
+      - r_meir_not_one_hand
+      - r_yosei_two_three_on_shoulder
+    class: A
+  - id: Sv_public_fence
+    input:
+      query: sheviit_fence_earth_public_domain
+    expected:
+      verdict:
+      - r_yehoshua_heap_and_fix
+      - r_akiva_into_his_field
+    class: A
+  - id: Sv_gather_ordinance
+    input:
+      query: sheviit_gather_wood_stones_own_field
+    expected:
+      verdict: ordained_from_each_others_without_favor
+    class: A
+  - id: Sv_thorned
+    input:
+      query: sheviit_thorn_cleared_field_after
+    expected:
+      verdict: may_be_sown
+    class: A
+  - id: Sv_favor
+    input:
+      query: sheviit_produce_eaten_as_favor
+    expected:
+      verdict:
+      - beit_shammai_not
+      - beit_hillel_with_and_without
+    class: A
+  - id: Sv_gentile_lease
+    input:
+      query: sheviit_lease_plowed_from_gentiles
+    expected:
+      verdict: permitted_not_from_israelites
+    class: A
+  - id: Sv_thin_olives
+    input:
+      query: sheviit_thinning_olives
+    expected:
+      verdict:
+      - beit_shammai_cut
+      - beit_hillel_uproot
+    class: A
+  - id: Sv_virgin_sycamore
+    input:
+      query: sheviit_virgin_sycamore_cut
+    expected:
+      verdict: forbidden_it_is_labor
+    class: A
+  - id: Sv_trim_vines
+    input:
+      query: sheviit_trimming_vines_cutting_reeds
+    expected:
+      verdict:
+      - r_yosei_hagelili_handbreadth
+      - r_akiva_as_usual
+    class: A
+  - id: Sv_cut_tree
+    input:
+      query: sheviit_cutting_fruit_tree_when_banned
+    expected:
+      verdict:
+      - beit_shammai_from_budding
+      - beit_hillel_by_species
+    class: A
+  - id: Sv_layer
+    input:
+      query: sheviit_derivative_labors_layer
+    expected:
+      verdict: rabbinic_verse_as_support
+    class: A
+  - id: Sv_four_verbs
+    input:
+      query: sheviit_torah_labors
+    expected:
+      verdict: sow_prune_reap_gather
+    class: A
+  - id: Sv_plow_lashes
+    input:
+      query: sheviit_plowing_lashes
+    expected:
+      verdict:
+      - lashes
+      - no_lashes
+    class: A
+  - id: Sv_two_hoeings
+    input:
+      query: sheviit_two_hoeings
+    expected:
+      verdict: strengthen_barred_close_cracks_permitted
+    class: A
+  - id: Sv_addition_layers
+    input:
+      query: sheviit_addition_layers
+    expected:
+      verdict: thirty_days_halakhah_cutoffs_ordained
+    class: A
+  - id: Sv_abolished
+    input:
+      query: sheviit_cutoffs_abolished
+    expected:
+      verdict: rabban_gamliel_court_by_stipulation
+    class: A
+  - id: Sv_temple_bound
+    input:
+      query: sheviit_addition_temple_dependency
+    expected:
+      verdict: only_while_temple_stands
+    class: A
+- module: sheviit_produce_file
+  tractate: Sheviit
+  oracle: Mishnah Sheviit 4:7; 4:8; 4:9; 5:1; 5:2; 5:3; 5:4; 5:5; 5:6; 5:7; 5:8; 5:9; 6:1; 6:2; 6:3; 6:4; 6:5; 7:1;
+    7:2; 7:3; 7:4; 7:5; 7:6; 7:7; 8:1; 8:2; 8:3; 8:4; 8:5; 8:6; 8:7; 8:8; 8:9; 8:11; 9:1
+  exodus_anchor:
+    unit: lev_25_shemittah
+    ref: Lev.25.5-7
+    claims:
+    - LV25A-05
+    - LV25A-06
+    - LV25A-07
+    - LV25A-12
+    - LV25A-17
+    - LV25A-18
+  cases:
+  - id: Sp_figs_when
+    input:
+      query: sheviit_unripe_figs_eaten_when
+    expected:
+      verdict: glisten_field_ripened_house
+    class: A
+  - id: Sp_grapes_when
+    input:
+      query: sheviit_grapes_eaten_when
+    expected:
+      verdict: juice_field_soured_house
+    class: A
+  - id: Sp_olives_when
+    input:
+      query: sheviit_olives_eaten_when
+    expected:
+      verdict: quarter_log_field_third_house
+    class: A
+  - id: Sp_tithe_season
+    input:
+      query: sheviit_other_fruit_season_rule
+    expected:
+      verdict: as_tithe_season
+    class: A
+  - id: Sp_white_figs
+    input:
+      query: sheviit_white_figs_year
+    expected:
+      verdict: second_year
+    class: A
+  - id: Sp_luf_bury
+    input:
+      query: sheviit_burying_arum_measure
+    expected:
+      verdict:
+      - r_meir_two_seahs
+      - sages_four_kabs
+    class: A
+  - id: Sp_luf_poor
+    input:
+      query: sheviit_arum_after_seventh_poor
+    expected:
+      verdict:
+      - r_eliezer_reckons
+      - r_yehoshua_no_reckoning
+    class: A
+  - id: Sp_luf_tools
+    input:
+      query: sheviit_arum_eve_uprooting_tool
+    expected:
+      verdict:
+      - beit_shammai_wooden
+      - beit_hillel_metal
+    class: A
+  - id: Sp_luf_buy
+    input:
+      query: sheviit_buying_arum_after
+    expected:
+      verdict:
+      - r_yehuda_at_once
+      - sages_when_new_plentiful
+    class: A
+  - id: Sp_tools
+    input:
+      query: sheviit_tools_sale_rule
+    expected:
+      verdict: work_specific_to_transgression_barred
+    class: A
+  - id: Sp_potter
+    input:
+      query: sheviit_potter_jars
+    expected:
+      verdict: five_oil_fifteen_wine
+    class: A
+  - id: Sp_cow
+    input:
+      query: sheviit_plowing_cow_to_suspect
+    expected:
+      verdict:
+      - beit_shammai_forbidden
+      - beit_hillel_can_slaughter
+    class: A
+  - id: Sp_explicit
+    input:
+      query: sheviit_sale_to_suspect_explicit
+    expected:
+      verdict: forbidden
+    class: A
+  - id: Sp_sieve
+    input:
+      query: sheviit_lending_sieve_to_suspect
+    expected:
+      verdict: permitted_ways_of_peace
+    class: A
+  - id: Sp_water
+    input:
+      query: sheviit_helping_after_water_added
+    expected:
+      verdict: forbidden
+    class: A
+  - id: Sp_zones
+    input:
+      query: sheviit_three_lands
+    expected:
+      verdict: babylon_egypt_beyond
+    class: A
+  - id: Sp_syria
+    input:
+      query: sheviit_syria_work
+    expected:
+      verdict: detached_yes_attached_no
+    class: A
+  - id: Sp_onions_rain
+    input:
+      query: sheviit_onions_sprouted_after_rain
+    expected:
+      verdict: black_forbidden_green_permitted
+    class: A
+  - id: Sp_greens_after
+    input:
+      query: sheviit_buying_greens_after
+    expected:
+      verdict: when_like_has_grown
+    class: A
+  - id: Sp_export
+    input:
+      query: sheviit_export_abroad
+    expected:
+      verdict: forbidden_syria_permitted
+    class: A
+  - id: Sp_great_rule
+    input:
+      query: sheviit_great_rule_sanctity_removal
+    expected:
+      verdict: food_dye_not_enduring_both
+    class: A
+  - id: Sp_enduring
+    input:
+      query: sheviit_enduring_in_ground
+    expected:
+      verdict: sanctity_no_removal
+    class: A
+  - id: Sp_commerce
+    input:
+      query: sheviit_commerce_in_produce
+    expected:
+      verdict: barred
+    class: A
+  - id: Sp_son_sells
+    input:
+      query: sheviit_gathered_greens_sold_by_son
+    expected:
+      verdict: permitted
+    class: A
+  - id: Sp_chanced
+    input:
+      query: sheviit_chanced_impure_kinds_sale
+    expected:
+      verdict:
+      - r_yehuda_casual_permitted
+      - sages_forbid
+    class: A
+  - id: Sp_sprouts
+    input:
+      query: sheviit_sprouts_removal
+    expected:
+      verdict: zeradim_carobs_yes_terebinth_no
+    class: A
+  - id: Sp_balsam
+    input:
+      query: sheviit_balsam_sanctity
+    expected:
+      verdict:
+      - sanctity
+      - r_shimon_none_not_fruit
+    class: A
+  - id: Sp_taste
+    input:
+      query: sheviit_mixture_rule
+    expected:
+      verdict: taste_other_kind_any_amount_same_kind
+    class: A
+  - id: Sp_poultice
+    input:
+      query: sheviit_poultice_rule
+    expected:
+      verdict: human_food_none_other_for_man_intent_decides
+    class: A
+  - id: Sp_uses
+    input:
+      query: sheviit_produce_uses
+    expected:
+      verdict: eating_drinking_anointing_lamp
+    class: A
+  - id: Sp_measure
+    input:
+      query: sheviit_sale_by_measure
+    expected:
+      verdict: forbidden
+    class: A
+  - id: Sp_bundles
+    input:
+      query: sheviit_sale_in_bundles
+    expected:
+      verdict:
+      - beit_shammai_not
+      - beit_hillel_home_bundled
+    class: A
+  - id: Sp_wage
+    input:
+      query: sheviit_wage_for_gathering
+    expected:
+      verdict: today_permitted_for_it_forbidden
+    class: A
+  - id: Sp_debt
+    input:
+      query: sheviit_debt_paid_from_produce_money
+    expected:
+      verdict: forbidden
+    class: A
+  - id: Sp_bathhouse
+    input:
+      query: sheviit_paying_bath_attendant
+    expected:
+      verdict: forbidden_free_gift_permitted
+    class: A
+  - id: Sp_manner
+    input:
+      query: sheviit_changed_manner_processing
+    expected:
+      verdict: not_press_but_trough
+    class: A
+  - id: Sp_terumah_oil
+    input:
+      query: sheviit_cooking_in_priestly_oil
+    expected:
+      verdict:
+      - forbidden_lest_disqualified
+      - r_shimon_permits
+    class: A
+  - id: Sp_chain
+    input:
+      query: sheviit_money_chain
+    expected:
+      verdict: last_seized_fruit_forbidden
+    class: A
+  - id: Sp_buy_land
+    input:
+      query: sheviit_buying_land_slaves_with_money
+    expected:
+      verdict: forbidden_eat_corresponding
+    class: A
+  - id: Sp_hide
+    input:
+      query: sheviit_hide_oiled
+    expected:
+      verdict:
+      - r_eliezer_burn
+      - sages_eat_corresponding
+    class: A
+  - id: Sp_bath_straw
+    input:
+      query: sheviit_bathhouse_heated_with_straw
+    expected:
+      verdict: permitted_man_of_standing_not
+    class: A
+  - id: Sp_aftergrowth
+    input:
+      query: sheviit_aftergrowth
+    expected:
+      verdict:
+      - sages_all_forbidden
+      - r_shimon_permitted_but_cabbage
+      - r_yehuda_mustard_permitted
+    class: A
+  - id: Sp_unguarded_herbs
+    input:
+      query: sheviit_unguarded_herbs_bought_from_anyone
+    expected:
+      verdict: permitted_not_guarded
+    class: A
+- module: sheviit_biur_file
+  tractate: Sheviit
+  oracle: Mishnah Sheviit 9:2; 9:3; 9:4; 9:5; 9:6; 9:7; 9:8; 9:9
+  exodus_anchor:
+    unit: lev_25_shemittah
+    ref: Lev.25.6-7
+    claims:
+    - LV25A-06
+    - LV25A-07
+    - LV25A-12
+  cases:
+  - id: Sb_lands
+    input:
+      query: sheviit_removal_three_lands
+    expected:
+      verdict: judah_transjordan_galilee
+    class: A
+  - id: Sb_why
+    input:
+      query: sheviit_removal_why_three_lands
+    expected:
+      verdict: eat_until_last_in_each
+    class: A
+  - id: Sb_olives_dates
+    input:
+      query: sheviit_removal_olives_dates
+    expected:
+      verdict: all_lands_as_one
+    class: A
+  - id: Sb_guarded
+    input:
+      query: sheviit_eat_on_guarded
+    expected:
+      verdict:
+      - not_on_guarded
+      - r_yosei_even_guarded
+    class: A
+  - id: Sb_jar
+    input:
+      query: sheviit_three_pickled_one_jar
+    expected:
+      verdict:
+      - r_eliezer_on_first
+      - r_yehoshua_on_last
+      - rabban_gamliel_per_kind_the_law
+    class: A
+  - id: Sb_grass
+    input:
+      query: sheviit_gathering_grass_until
+    expected:
+      verdict: fresh_sweet_dries_dry_second_rain
+    class: A
+  - id: Sb_rains_idiom
+    input:
+      query: sheviit_until_the_rains_idiom
+    expected:
+      verdict: second_rain
+    class: A
+  - id: Sb_protocol
+    input:
+      query: sheviit_removal_protocol
+    expected:
+      verdict: three_meals_to_each
+    class: A
+  - id: Sb_after
+    input:
+      query: sheviit_eating_after_removal
+    expected:
+      verdict:
+      - r_yehuda_poor_only
+      - r_yosei_poor_and_rich
+    class: A
+  - id: Sb_inherit
+    input:
+      query: sheviit_produce_inherited
+    expected:
+      verdict:
+      - r_eliezer_to_eaters
+      - sages_sold_money_divided
+    class: A
+- module: sheviit_release_file
+  tractate: Sheviit
+  oracle: Mishnah Sheviit 10:1; 10:2; 10:3; 10:4; 10:5; 10:6; 10:7; 10:8; 10:9 (ROUTED — Deuteronomy 15's span,
+    answered talmud_source-only until the Re'eh walk)
+  exodus_anchor:
+    unit: lev_25_shemittah
+    ref: Deut.15.1-11 (routed; held at LV25A-13, the two releases matrix)
+    claims:
+    - LV25A-13
+  cases:
+  - id: Sr_loans
+    input:
+      query: shemittah_money_release_loans
+    expected:
+      verdict: released_written_or_not
+    class: A
+  - id: Sr_shop
+    input:
+      query: shemittah_shop_credit_wage
+    expected:
+      verdict: not_released_unless_made_loan
+    class: A
+  - id: Sr_court
+    input:
+      query: shemittah_court_acts_pledge
+    expected:
+      verdict: not_released
+    class: A
+  - id: Sr_prosbul
+    input:
+      query: shemittah_prosbul
+    expected:
+      verdict: not_released_hillel_ordinance
+    class: A
+  - id: Sr_prosbul_text
+    input:
+      query: shemittah_prosbul_text
+    expected:
+      verdict: handing_debts_to_judges
+    class: A
+  - id: Sr_dates
+    input:
+      query: shemittah_prosbul_dating
+    expected:
+      verdict: antedated_valid_postdated_invalid
+    class: A
+  - id: Sr_land
+    input:
+      query: shemittah_prosbul_on_land
+    expected:
+      verdict: land_required_any_amount
+    class: A
+  - id: Sr_hive
+    input:
+      query: shemittah_beehive_as_land
+    expected:
+      verdict:
+      - r_eliezer_as_land
+      - sages_not_land
+    class: A
+  - id: Sr_return
+    input:
+      query: shemittah_returning_debt_in_seventh
+    expected:
+      verdict: say_i_release_then_accept
+    class: A
+  - id: Sr_pleased
+    input:
+      query: shemittah_sages_pleased
+    expected:
+      verdict: spirit_of_sages_pleased
+    class: A
+- module: arakhin_supplement_file
+  tractate: Arakhin
+  oracle: Mishnah Arakhin 1:2; 1:3; 2:1; 4:3; 5:1; 5:2; 5:3; 5:4; 5:5; 6:1; 6:2; 6:3; 6:4; 6:5; 7:2; 7:3; 7:4; 8:1;
+    8:2; 8:3; 8:4; 9:5; 9:6
+  exodus_anchor:
+    unit: lev_27_vows_valuations
+    ref: Lev.27.1-25 (with Lev.25.29-30 for 9:5-9:6, lev_25_redeem_poor LV25B-07)
+    claims:
+    - LV27-01
+    - LV27-02
+    - LV27-04
+    - LV27-07
+    - LV27-08
+    - LV27-14
+    - LV27-15
+    - LV27-17
+    - LV27-21
+    - LV25B-07
+  cases:
+  - id: Ar_gentile
+    input:
+      query: arakhin_gentile_valuer_valued
+    expected:
+      verdict:
+      - r_meir_valued_not_valuer
+      - r_yehuda_valuer_not_valued
+    class: A
+  - id: Ar_condemned
+    input:
+      query: arakhin_dying_and_condemned
+    expected:
+      verdict:
+      - not_vowed_not_valued
+      - r_chanina_valued_fixed_sum
+      - r_yosei_vows_values_pays
+    class: A
+  - id: Ar_floor
+    input:
+      query: arakhin_floor_ceiling
+    expected:
+      verdict: sela_to_fifty
+    class: A
+  - id: Ar_five_selas
+    input:
+      query: arakhin_five_selas_in_hand
+    expected:
+      verdict:
+      - r_meir_one
+      - sages_all
+    class: A
+  - id: Ar_windfall
+    input:
+      query: arakhin_offering_means_windfall
+    expected:
+      verdict: sanctuary_has_nothing
+    class: A
+  - id: Ar_weight
+    input:
+      query: arakhin_my_weight_upon_me
+    expected:
+      verdict: gives_his_weight_as_said
+    class: A
+  - id: Ar_hand_weight
+    input:
+      query: arakhin_hand_weight
+    expected:
+      verdict:
+      - r_yehuda_barrel
+      - r_yosei_assess
+    class: A
+  - id: Ar_soul_limb
+    input:
+      query: arakhin_limb_soul_depends
+    expected:
+      verdict: gives_whole_valuation
+    class: A
+  - id: Ar_dead_worth
+    input:
+      query: arakhin_worth_of_dead
+    expected:
+      verdict: none_valuation_heirs_pay
+    class: A
+  - id: Ar_half
+    input:
+      query: arakhin_half_valuation_vs_valuation_of_half
+    expected:
+      verdict: half_vs_whole
+    class: A
+  - id: Ar_heirs
+    input:
+      query: arakhin_vower_or_valued_died
+    expected:
+      verdict: valuation_heirs_pay_worth_not_for_dead
+    class: A
+  - id: Ar_object_sum
+    input:
+      query: arakhin_object_vow_vs_sum_vow
+    expected:
+      verdict: object_dies_exempt_sum_liable
+    class: A
+  - id: Ar_assess_days
+    input:
+      query: arakhin_assessment_days
+    expected:
+      verdict: orphans_thirty_sanctuary_sixty
+    class: A
+  - id: Ar_lien
+    input:
+      query: arakhin_consecrated_with_ketubah_creditor
+    expected:
+      verdict: redeem_on_condition_add_dinar
+    class: A
+  - id: Ar_seizure_floor
+    input:
+      query: arakhin_seizure_leaves
+    expected:
+      verdict: thirty_days_food_twelve_months_clothing
+    class: A
+  - id: Ar_tools
+    input:
+      query: arakhin_craftsman_tools_left
+    expected:
+      verdict: two_of_each_kind
+    class: A
+  - id: Ar_many_few
+    input:
+      query: arakhin_many_of_one_kind_few_of_another
+    expected:
+      verdict: two_of_many_all_of_few
+    class: A
+  - id: Ar_place_hour
+    input:
+      query: arakhin_sanctuary_place_and_hour
+    expected:
+      verdict: assessed_at_spot
+    class: A
+  - id: Ar_fifth_owner
+    input:
+      query: arakhin_fifth_owner_only
+    expected:
+      verdict: owner_adds_fifth
+    class: A
+  - id: Ar_son_redeems
+    input:
+      query: arakhin_field_redeemed_by_son
+    expected:
+      verdict: returns_to_father_at_jubilee
+    class: A
+  - id: Ar_priest_redeems
+    input:
+      query: arakhin_field_redeemed_by_priest
+    expected:
+      verdict: to_all_brother_priests
+    class: A
+  - id: Ar_abandoned
+    input:
+      query: arakhin_jubilee_unredeemed_field
+    expected:
+      verdict:
+      - r_yehuda_enter_and_pay
+      - r_shimon_enter_not_pay
+      - r_eliezer_abandoned_field
+    class: A
+  - id: Ar_open_first
+    input:
+      query: arakhin_owner_opens_first
+    expected:
+      verdict: owner_first_adds_fifth
+    class: A
+  - id: Ar_issar
+    input:
+      query: arakhin_bid_of_an_issar
+    expected:
+      verdict:
+      - it_is_yours_loses_issar
+      - r_yosei_egg_worth
+    class: A
+  - id: Ar_retract
+    input:
+      query: arakhin_bidder_retracts
+    expected:
+      verdict: seized_to_ten
+    class: A
+  - id: Ar_precedence
+    input:
+      query: arakhin_owner_and_all_at_twenty
+    expected:
+      verdict: owner_first
+    class: A
+  - id: Ar_fifth_table
+    input:
+      query: arakhin_fifth_arithmetic_twenty_five
+    expected:
+      verdict: thirty
+    class: A
+  - id: Ar_fifth_26
+    input:
+      query: arakhin_fifth_arithmetic_twenty_six
+    expected:
+      verdict: thirty_one_and_a_dinar
+    class: A
+  - id: Ar_herem_all
+    input:
+      query: arakhin_devoting_all_property
+    expected:
+      verdict:
+      - r_elazar_not_devoted
+      - r_elazar_b_azaryah_spare
+    class: A
+  - id: Ar_within_wall
+    input:
+      query: arakhin_within_wall_fields
+    expected:
+      verdict:
+      - fields_excluded
+      - r_meir_even_fields
+    class: A
+  - id: Ar_house_in_wall
+    input:
+      query: arakhin_house_built_in_wall
+    expected:
+      verdict:
+      - r_yehuda_not_walled
+      - r_shimon_outer_wall_is_wall
+    class: A
+  - id: Ar_roster
+    input:
+      query: arakhin_walled_city_roster
+    expected:
+      verdict: since_joshua_three_courtyards
+    class: A
+- module: temurah_supplement_file
+  tractate: Temurah
+  oracle: Mishnah Temurah 1:3; 1:5; 2:1; 2:3; 3:1; 3:3; 3:5; 5:1; 5:2; 5:3; 5:4; 5:5; 5:6; 7:1; 7:2; 7:3
+  exodus_anchor:
+    unit: lev_27_vows_valuations
+    ref: Lev.27.9-15 and 27:26-33
+    claims:
+    - LV27-04
+    - LV27-05
+    - LV27-06
+    - LV27-09
+    - LV27-18
+    - LV27-22
+  cases:
+  - id: Tm_limbs
+    input:
+      query: temurah_limbs_embryos
+    expected:
+      verdict:
+      - not_substituted
+      - r_yosei_limbs_for_whole
+    class: A
+  - id: Tm_not_transitive
+    input:
+      query: temurah_substitute_makes_substitute
+    expected:
+      verdict:
+      - 'no'
+      - r_yehuda_offspring_does
+    class: A
+  - id: Tm_community
+    input:
+      query: temurah_community_offerings
+    expected:
+      verdict: do_not_substitute
+    class: A
+  - id: Tm_blemish
+    input:
+      query: temurah_holiness_on_permanent_blemish
+    expected:
+      verdict: lands_no_exit_for_shearing
+    class: A
+  - id: Tm_inadvertent
+    input:
+      query: temurah_inadvertent_as_deliberate
+    expected:
+      verdict: r_yosei_b_r_yehuda_yes
+    class: A
+  - id: Tm_offspring_class
+    input:
+      query: temurah_shelamim_offspring_class
+    expected:
+      verdict:
+      - as_shelamim_offered
+      - r_eliezer_not_offered
+    class: A
+  - id: Tm_female_olah
+    input:
+      query: temurah_female_for_olah_bore_male
+    expected:
+      verdict:
+      - graze_sell_bring_olah
+      - r_eliezer_itself_offered
+    class: A
+  - id: Tm_firstborn_tithe
+    input:
+      query: temurah_firstborn_tithe_substitute
+    expected:
+      verdict: as_source_eaten_blemished
+    class: A
+  - id: Tm_no_redemption
+    input:
+      query: temurah_firstborn_tithe_redemption
+    expected:
+      verdict: none
+    class: A
+  - id: Tm_outwit
+    input:
+      query: temurah_outwitting_firstborn
+    expected:
+      verdict: sanctify_in_womb_by_sex
+    class: A
+  - id: Tm_twins
+    input:
+      query: temurah_two_males_born
+    expected:
+      verdict: one_olah_other_sold_profane
+    class: A
+  - id: Tm_order
+    input:
+      query: temurah_utterance_order
+    expected:
+      verdict:
+      - r_meir_first_name_wins
+      - r_yosei_intent_from_start
+    class: A
+  - id: Tm_two_names
+    input:
+      query: temurah_substitute_of_olah_and_shelamim
+    expected:
+      verdict:
+      - r_meir_olah
+      - r_yosei_intent_both
+    class: A
+  - id: Tm_formulas
+    input:
+      query: temurah_formulas
+    expected:
+      verdict: instead_substitute_exchange_yes_desanctified_no
+    class: A
+  - id: Tm_unnamed
+    input:
+      query: temurah_unnamed_object
+    expected:
+      verdict: said_nothing
+    class: A
+  - id: Tm_altar_vs_upkeep
+    input:
+      query: temurah_altar_holy_vs_upkeep
+    expected:
+      verdict: altar_substitutes_upkeep_not
+    class: A
+  - id: Tm_unspecified
+    input:
+      query: temurah_unspecified_consecration
+    expected:
+      verdict: to_upkeep
+    class: A
+  - id: Tm_died
+    input:
+      query: temurah_consecrated_died
+    expected:
+      verdict:
+      - buried
+      - r_shimon_upkeep_redeemed
+    class: A
+- module: bekhorot_tithe_file
+  tractate: Bekhorot
+  oracle: Mishnah Bekhorot 9:2; 9:3; 9:4; 9:5; 9:6; 9:8
+  exodus_anchor:
+    unit: lev_27_vows_valuations
+    ref: Lev.27.32-33
+    claims:
+    - LV27-03
+    - LV27-06
+    - LV27-22
+    - LV27-23
+  cases:
+  - id: Bk_distance
+    input:
+      query: maaser_behemah_joining_distance
+    expected:
+      verdict: sixteen_mil
+    class: A
+  - id: Bk_jordan
+    input:
+      query: maaser_behemah_jordan_divides
+    expected:
+      verdict: r_meir_yes
+    class: A
+  - id: Bk_bought
+    input:
+      query: maaser_behemah_bought_or_gifted
+    expected:
+      verdict: exempt
+    class: A
+  - id: Bk_partners
+    input:
+      query: maaser_behemah_partners_surcharge
+    expected:
+      verdict: inverse_of_surcharge
+    class: A
+  - id: Bk_excluded
+    input:
+      query: maaser_behemah_excluded_kinds
+    expected:
+      verdict: kilayim_terefah_caesarean_underage_orphan
+    class: A
+  - id: Bk_orphan
+    input:
+      query: maaser_behemah_orphan_definition
+    expected:
+      verdict:
+      - mother_died_or_slaughtered
+      - r_yehoshua_hide_intact_not_orphan
+    class: A
+  - id: Bk_seasons
+    input:
+      query: maaser_behemah_threshing_seasons
+    expected:
+      verdict:
+      - r_akiva_festival_eves
+      - ben_azzai_dates
+      - r_eliezer_r_shimon_dates
+    class: A
+  - id: Bk_new_year
+    input:
+      query: maaser_behemah_new_year
+    expected:
+      verdict:
+      - r_meir_first_of_elul
+      - first_of_tishrei
+    class: A
+  - id: Bk_year_join
+    input:
+      query: maaser_behemah_year_boundary
+    expected:
+      verdict: same_year_combines
+    class: A
+  - id: Bk_season_office
+    input:
+      query: maaser_behemah_season_office
+    expected:
+      verdict: before_free_after_no_slaughter
+    class: A
+  - id: Bk_two_out
+    input:
+      query: maaser_behemah_two_out_as_one
+    expected:
+      verdict: count_two_by_two
+    class: A
+  - id: Bk_error
+    input:
+      query: maaser_behemah_error_ninth_tenth_eleventh
+    expected:
+      verdict: all_three_sanctified
+    class: A
+  - id: Bk_eleventh
+    input:
+      query: maaser_behemah_eleventh_status
+    expected:
+      verdict:
+      - r_meir_shelamim_makes_substitute
+      - r_yehuda_questions_substitute
+    class: A
+  - id: Bk_rule
+    input:
+      query: maaser_behemah_eleventh_rule
+    expected:
+      verdict: only_if_tenth_name_uprooted
+    class: A
+- module: ribbit_file
+  tractate: Bava Metzia
+  oracle: Mishnah Bava Metzia 5:2; 5:3; 5:4; 5:5; 5:6; 5:7; 5:8; 5:9; 5:10
+  exodus_anchor:
+    unit: lev_25_redeem_poor
+    ref: Lev.25.35-38
+    claims:
+    - LV25B-14
+  cases:
+  - id: Rb_courtyard
+    input:
+      query: ribbit_lender_dwells_free
+    expected:
+      verdict: forbidden_interest
+    class: A
+  - id: Rb_rent_sale
+    input:
+      query: ribbit_increase_on_rent_vs_sale
+    expected:
+      verdict: rent_permitted_sale_forbidden
+    class: A
+  - id: Rb_three_years
+    input:
+      query: ribbit_field_forfeit_after_three_years
+    expected:
+      verdict: permitted_boethus
+    class: A
+  - id: Rb_shopkeeper
+    input:
+      query: ribbit_shopkeeper_half_profit
+    expected:
+      verdict: forbidden_unless_laborers_wage
+    class: A
+  - id: Rb_calves
+    input:
+      query: ribbit_calves_at_half
+    expected:
+      verdict: accepted_raised_to_a_third
+    class: A
+  - id: Rb_appraise
+    input:
+      query: ribbit_appraise_working_animal
+    expected:
+      verdict: permitted_at_half
+    class: A
+  - id: Rb_iron_sheep
+    input:
+      query: ribbit_iron_sheep
+    expected:
+      verdict: israelite_forbidden_gentile_permitted
+    class: A
+  - id: Rb_gentile_money
+    input:
+      query: ribbit_lending_gentiles_money
+    expected:
+      verdict: with_gentiles_knowledge
+    class: A
+  - id: Rb_forward
+    input:
+      query: ribbit_forward_price
+    expected:
+      verdict: not_before_market_rate
+    class: A
+  - id: Rb_stack
+    input:
+      query: ribbit_first_to_reapers
+    expected:
+      verdict: may_fix_on_stack
+    class: A
+  - id: Rb_seed_loan
+    input:
+      query: ribbit_wheat_for_wheat_sharecroppers
+    expected:
+      verdict: seed_yes_food_no
+    class: A
+  - id: Rb_kor
+    input:
+      query: ribbit_lend_kor_until_threshing
+    expected:
+      verdict:
+      - forbidden_until_son_comes_permitted
+      - hillel_forbids
+    class: A
+  - id: Rb_labor
+    input:
+      query: ribbit_labor_exchange
+    expected:
+      verdict: same_labor_same_season_only
+    class: A
+  - id: Rb_advance
+    input:
+      query: ribbit_advance_and_after
+    expected:
+      verdict: rabban_gamliel_both_named
+    class: A
+  - id: Rb_words
+    input:
+      query: ribbit_of_words
+    expected:
+      verdict: r_shimon_named
+    class: A
