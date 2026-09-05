@@ -1870,3 +1870,8 @@ RULES.update(_cn.build(V))
 # block 12 of 12 — THE FINALE). 5 rules in kindness_rules.py.
 import kindness_rules as _kn
 RULES.update(_kn.build(V))
+
+# Round 42 — THE SHEMINI EXAM (2026-09-05). Bare Mishnah rows
+# citing Lev 9-11. 6 rules in shemini_rules.py.
+import shemini_rules as _sm
+RULES.update(_sm.build(V))

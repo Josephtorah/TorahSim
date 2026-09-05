@@ -1,0 +1,125 @@
+# THE SHEMINI EXAM (round 42 — 2026-09-05). Bare Mishnah rows
+# citing Lev 9-11, graded after the derivation.
+# Read-source: logic/oral_triage/shemini_exam_mishnah_2026-09-05.md.
+
+- module: blessing_palms
+  tractate: Sotah
+  oracle: Mishnah Sotah 7:6; Tamid 7:2; Menachot 5:6
+  exodus_anchor: {unit: lev_09, ref: Lev.9.22, claims: [LV09-08]}
+  cases:
+  - id: So_regime
+    input: {query: blessing_regime_table}
+    expected: {verdict: temple_one_name_as_written}
+    class: A
+  - id: Ta_steps
+    input: {query: temple_service_blessing}
+    expected: {verdict: one_blessing_on_the_steps}
+    class: A
+  - id: Me_wave
+    input: {query: wave_required_list}
+    expected: {verdict: waved_not_presented}
+    class: A
+
+- module: onen_file
+  tractate: Horayot
+  oracle: Mishnah Horayot 3:5; Pesachim 8:8
+  exodus_anchor: {unit: lev_10, ref: Lev.10.19, claims: [LV10-10]}
+  cases:
+  - id: Ho_split
+    input: {query: onen_priest_split}
+    expected: {verdict: hp_offers_not_eats}
+    class: A
+  - id: Pe_evening
+    input: {query: onen_pesach_evening}
+    expected: {verdict: immerses_eats_pesach_at_evening}
+    class: A
+
+- module: wine_and_fire
+  tractate: Nazir
+  oracle: Mishnah Nazir 6:1; Sanhedrin 7:2
+  exodus_anchor: {unit: lev_10, ref: Lev.10.9 + 10.6, claims: [LV10-07, LV10-05]}
+  cases:
+  - id: Na_rebiit
+    input: {query: nazir_wine_measure}
+    expected: {verdict: quarter_log_attested_again}
+    class: A
+  - id: Sa_burning
+    input: {query: burning_execution_mode}
+    expected: {verdict: soul_burned_body_intact}
+    class: A
+
+- module: species_file
+  tractate: Niddah
+  oracle: Mishnah Niddah 6:9; Bikkurim 2:11; Berakhot 6:3; Shabbat 14:1; Makkot 3:2; Shabbat 6:10
+  exodus_anchor: {unit: lev_11_animals + lev_11_carcass, ref: Lev.11.3-29,
+    claims: [LV11A-02, LV11A-07, LV11A-09, LV11B-03]}
+  cases:
+  - id: Ni_corr
+    input: {query: sign_correlations}
+    expected: {verdict: scale_implies_fin}
+    class: A
+  - id: Bi_koy
+    input: {query: koy_class}
+    expected: {verdict: slaughter_and_impurity_like_both}
+    class: A
+  - id: Be_locust
+    input: {query: locust_blessing}
+    expected: {verdict: shehakol_with_curse_arm}
+    class: A
+  - id: Sh_hides
+    input: {query: eight_have_hides}
+    expected: {verdict: wounder_liable_on_eight}
+    class: A
+  - id: Ma_lashes
+    input: {query: dietary_lash_layer}
+    expected: {verdict: lashes_for_the_bans}
+    class: A
+  - id: Sh_egg
+    input: {query: chargol_egg_cure}
+    expected: {verdict: cure_dispute_recorded}
+    class: A
+
+- module: purity_file
+  tractate: Chullin
+  oracle: Mishnah Chullin 9:5; Sotah 5:2; Eduyot 6:3; Eduyot 7:8; Eruvin 10:15; Pesachim 1:6
+  exodus_anchor: {unit: lev_11_carcass, ref: Lev.11.24-39,
+    claims: [LV11B-01, LV11B-05, LV11B-06, LV11B-12]}
+  cases:
+  - id: Ch_kulit
+    input: {query: thigh_bone_grid}
+    expected: {verdict: sealed_pure_pierced_impure}
+    class: A
+  - id: So_yitma
+    input: {query: third_loaf_yitma}
+    expected: {verdict: second_renders_third}
+    class: A
+  - id: Ed_pieces
+    input: {query: separated_piece_disputes}
+    expected: {verdict: three_cornered_dispute}
+    class: A
+  - id: Ed_cauldron
+    input: {query: cauldron_rim_testimony}
+    expected: {verdict: olive_cookers_impure_dyers_pure}
+    class: A
+  - id: Er_temple
+    input: {query: temple_swarmer_removal}
+    expected: {verdict: belt_or_tongs_dispute}
+    class: A
+  - id: Pe_adding
+    input: {query: adding_impurity_practice}
+    expected: {verdict: never_refrained_from_adding}
+    class: A
+
+- module: hekhsher_file
+  tractate: Makhshirin
+  oracle: Mishnah Makhshirin 1:3; Eduyot 4:6
+  exodus_anchor: {unit: lev_11_carcass, ref: Lev.11.38, claims: [LV11B-08]}
+  cases:
+  - id: Mk_intent
+    input: {query: intent_gate_mishnah}
+    expected: {verdict: until_intends_and_gives}
+    class: A
+  - id: Ed_jar
+    input: {query: olive_jar_piercing}
+    expected: {verdict: hillel_pierce_with_concession}
+    class: A

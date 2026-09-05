@@ -14,10 +14,24 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   baked into an epub.
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
-## SCOREBOARD (as of 2026-09-04, latest)
+## SCOREBOARD (as of 2026-09-05, latest)
 
 - Genesis: DONE — derived, read, examined, stamped (73 units).
-- **Leviticus: TWO PARASHOT IN.** Vayikra (the five offering
+- **Leviticus: THREE PARASHOT IN — Shemini ran the whole rhythm
+  in one sitting (2026-09-05):** the Sifra's 243 rows + all 91
+  Aramaic-translation verses read, 43 claims derived into four
+  new units (corpus 134), the exam 21 of 21, and the SPECIES
+  CLASSIFIER compiled cold at 89% pure ink — the highest ink
+  fraction of any compiled span. The finds: the answer sheet
+  itself labels its layers (the Mishnah says the beast's signs
+  were "said from the Torah" but the bird's signs "were not
+  said — the sages said": the code/data split in the answer
+  key's own words); five exam rows arrived already answered by
+  seats written hours earlier; and the text gate caught the
+  toolchain dropping the belly-word of Leviticus 11:42 — the
+  word whose LARGE letter is the Torah's middle-letter landmark
+  (the database repair waits for your word).
+- **Leviticus (the opening): TWO PARASHOT IN.** Vayikra (the five offering
   chapters) derived under the book's own spine — the Sifra, the
   tradition's verse-by-verse law commentary — examined against all
   68 of its Mishnah rows, and stamped, in one sitting; the reading
@@ -39,8 +53,8 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   from chapter 25 ("that I may dwell among them") discharged on
   the last page, with the cloud-and-fire travel signal left
   running for the book of Numbers.
-- The corpus: 130 frozen units, one world, fingerprint unmoved
-  through two whole books and the third's first two portions.
+- The corpus: 134 frozen units, one world, fingerprint unmoved
+  through two whole books and the third's first three portions.
 - **The offering engine consolidated (2026-09-04):** one
   dispatcher compiled from Leviticus 1-8's bare ink answers the
   tradition's own master table (Mishnah Zevachim chapter 5) in 40
@@ -51,9 +65,9 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   the geometry that satisfies both), and the probe layer caught a
   wrong guess that turned out to be the exact textual difference
   the Talmud itself asks about.
-- The exam engine: forty-one rounds, 1,032 cases, 1,032 answered
+- The exam engine: forty-two rounds, 1,053 cases, 1,053 answered
   correctly — the exam passed ONE THOUSAND recorded cases at round
-  39 with zero misses since the pilot — 326 compiled rules,
+  39 with zero misses since the pilot — 332 compiled rules,
   vocabulary of 158 registered input dimensions.
 - **The Genesis campaign: COMPLETE — 12 of 12 blocks run
   (2026-09-04), every one green on its first run: the prayer

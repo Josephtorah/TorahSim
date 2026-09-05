@@ -1346,3 +1346,40 @@ gen_48 their FIRST exam seats). Rituals COMPLETE ×10, regression
 130/130 + 41 runners, standing +12 rebaked (1356 → 1368, one per
 seat), hash 8b8fff1fa28953af unmoved, manifests 0 FAILED,
 gloss_lint 0 on new content.
+
+## Round 42 — THE SHEMINI EXAM (2026-09-05; bare Mishnah rows
+## citing Lev 9-11, run after the same sitting's derivation)
+Docket by links scan: 21 bare rows across SIXTEEN tractates (the
+dietary system's big case tables live in Chullin and Toharot
+without verse citations — they met the machine at the compile).
+All 21 read whole. SIX modules (shemini_rules.py), 21 cases:
+**21/21 FIRST RUN — 1053/1053 ACROSS FORTY-TWO ROUNDS.**
+R-522..R-527 (332 rules); vocab +21 (877 on 158 dims). THE
+HEADLINE — FIVE SEATS ANSWERED BEFORE THEIR ROWS OPENED, in a
+21-row docket, all seated THE SAME SITTING from the Sifra:
+Mishnah Sotah 5:2 IS R. Akiva's yitma teaching with R. Yehoshua's
+dust-from-your-eyes — the same teaching, same exclamation,
+standing at LV11B-06; Pesachim 8:8's onen-immerses-and-eats is
+the very proof Rabbi cited inside LV10-10; Chullin 9:5's
+thigh-bone grid at LV11B-12; Makhshirin 1:3's intent gate at
+LV11B-08; Sotah 7:6's blessing regime at LV09-08's transposed-
+blessing seat. Also banked: the nazirite's QUARTER-LOG attesting
+the priests' wine measure at a second machine (the data value
+confirmed across tractates); the burning-execution mode running
+the Miluim soul-not-body analogy as court procedure; Niddah 6:9's
+sign-correlation engineering (every scale-haver has fins); the
+koy running the class-inclusion machine; the eight-have-hides
+Shabbat shadow. AND THE COMPILE MOVEMENT (cold_run_shemini.py):
+the SPECIES CLASSIFIER from Lev 11's bare ink — 19/19 against the
+recorded classifications at **89% PURE INK, the highest ink
+fraction of any compiled span** — with the answer sheet ITSELF
+dividing the layers: Chullin 3:6's own words, 'the signs of the
+beast were said FROM THE TORAH; the signs of the bird were NOT
+said — but the SAGES said' — the code/data separation attested by
+the answer key; the 49th effect (impure_until_evening) harvested
+from the chapter's own eightfold clause, verified by machine count at 8
+verses. Rituals: the four Shemini units carry the round's claims
+already (the derivation preceded the exam this sitting; no new
+seats owed). Regression 134/134 + 43 runners green, standing 1412
+unmoved this round, hash 8b8fff1fa28953af unmoved, manifests 0
+FAILED, gloss_lint 0 on new content.

@@ -1227,6 +1227,25 @@ asks about. One seat (F-200): the peace-offering chapter's
 tripled clause carries a second law beside the one already
 derived. Standing 1369, fingerprint unmoved.
 
+And the next day (2026-09-05) SHEMINI ran the whole rhythm — the
+tenth cycle: the Sifra's 243 rows and all 91 Onkelos verses read,
+43 claims derived into four new units (the corpus reaching 134),
+delegated FULL RULE stamps, the exam green 21 of 21 (round 42 —
+1,053 recorded cases without a miss), and the SPECIES CLASSIFIER
+compiled cold at 19 of 19 with 89 PERCENT PURE INK — the highest
+ink fraction of any compiled span. The day's deepest find: the
+answer sheet itself divides the layers — the Mishnah's own words
+say the beast's signs were "said from the Torah" while the
+bird's signs "were not said, but the sages said" — the
+code/data separation attested by the answer key. Five exam rows
+arrived already answered by seats written hours earlier from the
+Sifra. And the text gate caught the tree pipeline dropping the
+belly-word of Leviticus 11:42 — the word whose LARGE VAV is the
+Torah's middle-letter landmark; the derived word-database
+truncates at that exact letter, and its repair waits for the
+owner's word because it would move standing letter-census
+tripwires.
+
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed
 on the spot: logic/findings/FINDINGS_QUEUE.md (append-only). The owner

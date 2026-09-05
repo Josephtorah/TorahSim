@@ -10343,3 +10343,121 @@ three span runners regress green (27/27 vayikra5, 33/33 tzav,
 40/40 offerings). UNCOMMITTED: the consolidation (runner, ledger,
 lev_03 seat, M-17, MIDDOT entry, records). NEXT on the owner's
 word: Shemini (Lev 9-11), then Lev 24 (the first CALL).
+
+## 2026-09-05 — SHEMINI (owner: "commit push and consolidate, then
+## shemini")
+COMMITTED first: cafe7bf pushed (the Lev 1-8 consolidation, 14
+files). THEN SHEMINI DERIVED AND STAMPED — the rhythm's ninth
+cycle, Steps 2-4 in one sitting. Pre-enumeration by script
+(logic/oral_triage/wip_shemini/shemini_enum.json): Sifra Shemini
+whole = 243 rows (Mechilta d'Miluim 2 + Sections 1-10 + Chapters
+1-12) + Onkelos 91 verses = 334 declared; 5,982 links enumerated
+outside declared scope, openly. The Miluim-2 straddle (Lev 9 vs
+10) split by CONTENT (rows 1-20+29-31 vs 21-28+32-43) — the Tzav
+Section-6 lesson applied. READ THROUGH: all 334, four append-only
+ledgers (lev_09/lev_10/lev_11_animals/lev_11_carcass
+_2026-09-05.md), era completion lines, gloss_lint 0 after 15
+fixes (the Hebrew-adjacent-gloss classes). Sifra crowns: the
+KA-MISHPAT PROCEDURE POINTER at 9:16 (one word imports the whole
+Lev-1 olah table — the dispatcher's own operator witnessed at its
+narrative execution, Onkelos rendering it as-is-fitting); the
+CURRICULUM VERSE (Section 1 9 — the canon layers enumerated AND
+the Targum's status asked on the page); the EATING-ATONES machine
+stated plainly (priests eat, owners atoned — Chapter 2 4); MOSES'
+RECORDED ADMISSION ("I heard and FORGOT," anger the cause —
+Chapter 2 12); the OSTENSIVE REGISTRY (Moses holds-and-shows all
+four classes); the PINCER of the four exceptions (both escape
+routes blocked = both signs required); the TEREFAH TABLE with the
+nevelah-paired survivability predicate; the BIRD CLASSIFIER
+trained from labeled exemplars (eagle vs dove paradigms); waters
+classified BY CREATION VERSES; the MINIMAL-CONTAMINATION
+SELECTION argument (Chapter 11 3-4 — the reading chosen because
+alternatives contaminate everything: optimization on the page);
+R. AKIVA'S YITMA with R. Yehoshua's dust-from-your-eyes (the
+future-proofing recorded); the HAIRBREADTH CLOSE (majority-vs-
+half of the windpipe = a hair); Onkelos: the atoned-with-its-
+blood decode at 9:15, the father's-brother kinship decode at
+10:4, the mikveh as BET KENISHUT MAYA, and the pon-particle at
+11:43 IMPLEMENTING the Sifra's end-is-defilement reading of the
+short spelling. DERIVED: 43 witness ops (LV09-01..09,
+LV10-01..10, LV11A-01..09, LV11B-01..15) seated by script into
+the four tree-derived drafts (+ step E logs, era scenarios,
+manifests); 4 rituals COMPLETE — corpus 130 → 134; preflights ALL
+GREEN; manifests 0 FAILED; standing 1369 → 1412 (+43, one per
+claim); hash 8b8fff1fa28953af unmoved; DELEGATED FULL RULE stamps
+in STAMP_LEDGER.md. ⚠ TOOLCHAIN FINDING (deferred to owner): the
+text gate FIRED AT LEV 11:42 — the tree pipeline dropped, and
+tanakh.sqlite TRUNCATES, the word גחון ("belly"), whose LARGE VAV
+the source XML marks x-large — THE TORAH'S MIDDLE-LETTER LANDMARK
+(the tradition's own letter-midpoint claim); step repaired to the
+gate's current evidence line; the DB repair would move standing
+letter-census tripwires, so it waits for the owner's word.
+Seat-inserter lessons: the drafts' S_last scenario needs the era
+anchor too; cite tokens never wrapped mid-name (the round-29
+lesson re-fired once, fixed). NEXT: the Shemini exam (bare
+Mishnah rows citing Lev 9-11), then the cold compile with
+effects.
+
+(the Shemini exam + compile — round 42, same sitting)
+THE EXAM: docket by links scan — 21 bare Mishnah rows across
+SIXTEEN tractates citing Lev 9-11 (the big dietary case tables
+live in Chullin/Toharot verse-uncited — they met the machine at
+the compile); all 21 read whole
+(logic/oral_triage/shemini_exam_mishnah_2026-09-05.md, full cite
+index). 6 modules (shemini_rules.py), 21 cases: **21/21 FIRST RUN
+— 1053/1053 over FORTY-TWO rounds.** R-522..527 (332 rules);
+vocab +21 (877). FIVE SEATS ANSWERED BEFORE THEIR ROWS OPENED —
+all seated the same sitting from the Sifra: Sotah 5:2 IS the
+yitma teaching (same words, same exclamation — LV11B-06);
+Pesachim 8:8 is Rabbi's cited proof inside LV10-10; Chullin 9:5's
+thigh-bone grid at LV11B-12; Makhshirin 1:3's intent gate at
+LV11B-08; Sotah 7:6's blessing regime at LV09-08. The nazirite's
+QUARTER-LOG attests the wine measure at a second machine. THE
+COMPILE: cold_run_shemini.py — the SPECIES CLASSIFIER from Lev
+11's bare ink, 19/19 at **89% PURE INK (the highest ink fraction
+of any compiled span)** — and the answer sheet ITSELF labels the
+layers: Chullin 3:6's own words, 'the beast's signs SAID FROM THE
+TORAH; the bird's signs NOT said — but the SAGES said' — the
+code/data separation attested by the answer key. 49th effect
+registered (impure_until_evening — harvested, three witness
+layers, the eightfold clause verified by machine count at 8
+verses). Records: EXAM_LEDGER round 42, REPORT_SHEMINI.md,
+catalog both files. Regression 42/42 runners + 134/134, lint 0
+new, standing 1412 unmoved this round, hash unmoved. UNCOMMITTED:
+the whole Shemini line (4 units + 4 ledgers + exam + compile +
+records) since cafe7bf. NEXT on the owner's word: LEV 24 — the
+first CALL (the Exod 21 talion dependency).
+
+═══ COMPACTION POINT #46 (2026-09-05, owner: "I need to compact")
+═══ CLEAN POINT — no work mid-flight. The window since #45 ran:
+(1) round 40's six gates CLOSED (rituals ×14, rebake 1342→1356,
+R-512..516, ledger, report, 40/40 runners); (2) ROUND 41 = block
+12 KINDNESS 13/13 — THE GENESIS CAMPAIGN COMPLETE 12/12,
+1032/1032 over 41 rounds, F-188..F-199, standing 1368 — COMMITTED
++PUSHED da524c9; (3) THE LEV 1-8 OFFERING CONSOLIDATION —
+cold_run_offerings.py 40/40 vs Mishnah Zevachim 5 whole, M-17 THE
+TENSION RESOLUTION registered, two-verses-as-one limit in MIDDOT
+case law, zero-report catch #3 (petach/lifnei), F-200 → LV03-10,
+standing 1369 — COMMITTED+PUSHED cafe7bf; (4) SHEMINI FULL RHYTHM
+(rounds' tenth cycle): 334 declared read (Sifra Shemini 243 whole
++ Onkelos 91), 43 claims into 4 units — CORPUS 130 → 134, FULL
+RULE stamps delegated, standing 1412, hash 8b8fff1fa28953af
+UNMOVED; exam round 42 = 21/21 (1053/1053 over 42 rounds, R-527 /
+332 rules, vocab 877; FIVE seats answered before their rows
+opened — Sotah 5:2 IS the yitma seat); compile
+cold_run_shemini.py 19/19 at 89% PURE INK (highest of any span;
+the answer sheet SELF-LABELS its layers — Chullin 3:6); 49th
+effect impure_until_evening registered. ⚠ OPEN ITEM FOR THE
+OWNER: the Lev 11:42 גחון ("belly") large-vav TRUNCATION in
+tanakh.sqlite (the Torah's middle-letter landmark) — repair
+deferred, would move letter-census tripwires. UNCOMMITTED: the
+whole Shemini line (4 units + manifests + py/html + 5 ledgers +
+exam + compile + effect registry + records) since cafe7bf — rides
+the next "commit push". Records all current: THE_STEPS,
+THE_BRIEFING scoreboard (134 / 1053 / 332 / three-parashot line),
+EXAM_LEDGER round 42, REPORT_SHEMINI.md, STAMP_LEDGER, memory.
+POST-COMPACTION REREADS (mandatory, first sitting): THE_STEPS
+Step 2 + Step 5 + the compiler block + this tail. NEXT on the
+owner's word: commit push, then LEV 24 — THE FIRST CALL (the
+Exod 21 talion-as-money dependency); after it Tazria-Metzora;
+MIDDOT will-indexed-dispatch watch still at 2 exemplars.
