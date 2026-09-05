@@ -17,6 +17,21 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
 ## SCOREBOARD (as of 2026-09-05, latest)
 
 - Genesis: DONE — derived, read, examined, stamped (73 units).
+- **Leviticus: FIVE PARASHOT IN — TAZRIA-METZORA ran the whole
+  rhythm in one sitting (2026-09-05), the largest sweep yet:** the
+  four Sifra books whole (550 rows) + all 157 Aramaic-translation
+  verses read, 60 claims into TEN units (corpus 143 — nine new,
+  plus the corpus's FIRST LAW UNIT taking seats that pay a debt
+  its own 2026-07-31 log recorded), the exam 50 of 50 (round 43 —
+  1103 of 1103 lifetime), and the AFFLICTION STATE MACHINE
+  compiled cold: six diagnostic tracks from the bare ink — the
+  one-week boil/burn track read off the ink's own SILENCE — graded
+  against the tradition's own track table, with the Sifra's
+  self-enumerated TEN-HOUSES decision tree reproduced 10 of 10.
+  Eight exam rows arrived already answered by seats written hours
+  earlier. Five new rows of the inference-rules' own case law
+  (including the "you would add forever" regress-stopper) entered
+  the middot file.
 - **THE FIRST CALL (2026-09-05): Leviticus 24:10-23 compiled cold
   (23/23, 70% pure ink) and Exodus 21's injury-tariff cell now
   resolves by CALLING it** — the first inter-span function call

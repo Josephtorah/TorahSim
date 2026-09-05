@@ -10527,3 +10527,121 @@ catalog + research log + records) since 9f7112b — rides the next
 "commit push". NEXT on the standing map: Tazria-Metzora; the
 MIDDOT will-indexed-dispatch watch (still 2 exemplars); open item
 on the owner's word — the Lev 11:42 large-vav repair.
+
+(2026-09-05, same sitting — owner: "Commit push then tazria-metzora")
+THE FIRST CALL COMMITTED+PUSHED: 5702a25. Then TAZRIA-METZORA ran
+THE FULL RHYTHM — THE LARGEST SWEEP YET (the double parashah,
+eleventh cycle): PRE-ENUMERATION
+logic/oral_triage/wip_tazria/tazria_enum.json — 707 DECLARED (the
+four Sifra books whole: Yoledet 35 + Nega'im 213 + Metzora 147 +
+Zavim 155 = 550 rows, + Onkelos Lev 12-15 in full, 157 verses),
+5,839 links enumerated outside scope openly. READ WHOLE into four
+ledgers (lev_12_childbirth / lev_13_negaim / lev_14_metzora /
+lev_15_discharges _2026-09-05.md, each with a full per-row cite
+index appended mechanically — the round-16 lesson armed). CROWNS:
+the VOCALIZATION SEAT at 12:5 (two-weeks vs seventy, "the reading
+has a mother," Onkelos's fourteen); MIDDAH CASE LAW FIVE DEEP
+(voided stringent-to-lenient form; dayo argued in full; Munbaz's
+regress stopped "you would ADD FOREVER"; the quantity-reading
+triple — minimal seizure / bounded measure / open-not-lock; the
+two-verses refrain) — ALL IN logic/MIDDOT.md now, plus the
+DEMOTION-OPERATOR watch (severe-to-light detachment, 1 exemplar);
+the DECLARATION PROTOCOL with the HILLEL TRUTH GATE ("on this
+matter Hillel came up from Babylon"); the CALIBRATION LAYER
+(middling standard, painters' swatch, hours table, certification +
+teacher's license); REGION-SCOPED SPREAD + the containment
+topology; the GAUGE RULE; THE TEN HOUSES (the Sifra's own numbered
+transition table, Section 7 12); the STAND-UP TEST + DESPAIR
+CRITERION; the 40-SEAH DERIVATION + the hand-washing peg; the
+PRESENCE CLAUSE; the ADORNMENT REVISION; the GOLD-DINAR market
+story; Onkelos load-bearing (tzaraat = SEGIRU the shutting-in; the
+doubled warning cry; mamre'et = causes-loss; worn-or-new performed;
+the ke-particle; niddah = RICHUK separation; vehizartem =
+you-shall-SEPARATE). DERIVED: 60 witness ops seated by script
+(scratchpad seat_tazria.py — LV12-01..06, LV13A-01..06,
+LV13B-01..05, LV13C-01..06, LV13D-01..05, LV14A-01..07,
+LV14B-01..07, LV15A-01..08, LV15B-01..06 into the NINE drafts, +
+L13-05..08 into the FROZEN INTAKE UNIT whose own step G had
+recorded the Sifra as an unpaid debt — step K records the closure);
+10 rituals COMPLETE (8 first-pass transient corpus-proof reds
+settled on re-run — the Shemini pattern) — CORPUS 134 → 143;
+standing 1412 → 1472 (+60, one per claim; tripwire fired and
+rebaked by the documented path); hash 8b8fff1fa28953af UNMOVED;
+manifests 0 FAILED; py renderings all generated. STAMPS: delegated
+FULL RULE row (9 units) + re-affirmation row (the intake's
+step-G-debt-paid seat) in STAMP_LEDGER.md. EXAM ROUND 43: 47 bare
+Mishnah rows / 20 tractates read whole (50 cases; ledger
+tazria_exam_mishnah_2026-09-05.md) — **50/50 FIRST RUN, 1103/1103
+over 43 rounds**; R-528..533 (338 rules); vocab +50 (927 on 158
+dims); EIGHT SEATS ANSWERED BEFORE THEIR ROWS OPENED (Nazir 9:4 =
+the seven-ways row VERBATIM at LV15A-01; Negaim 12:5 = the
+humility protocol at LV14B-02; Negaim 2:3 both calibration halves;
+Negaim 14:10 the thumbs-rite complex; Negaim 12:7 the three
+grades; Nazir 8:2 the gauge rider; Nazir 6:6 the shave-sunset
+exchange; Eduyot 5:6 the Akavya dispute). COMPILE:
+cold_run_negaim.py — THE AFFLICTION STATE MACHINE, six tracks
+ink-first (the one-week boil/burn track read off THE INK'S OWN
+SILENCE — the shut-again census: 13:5/13:33/13:54 and nowhere in
+13:18-28), 16/16 vs Mishnah Negaim 3:3-8's own track table (signs
++ weeks + the shared-day arithmetic: 13 and 19 computed from the
+recorded junction rule) + THE TEN-HOUSES WALK 10/10; effects
+registry 50 → 53 (isolated_outside_camp, burned_in_fire,
+demolished); the 13:33 large-letter site checked INTACT (11:42
+stays the one deferred case). Regression: all runners + cold
+runners + world engine GREEN; gloss_lint 0 new (EXAM_LEDGER at its
+7-flag HEAD baseline, MIDDOT/STAMP at 1 legacy each). Records:
+REPORT_TAZRIA.md, EXAM_LEDGER round 43, catalog both files,
+MIDDOT.md five case-law rows + the demotion watch. UNCOMMITTED:
+the whole Tazria-Metzora line since 5702a25 — rides the next
+"commit push". NEXT on the walk: ACHAREI MOT-KEDOSHIM; open item
+on the owner's word — the Lev 11:42 large-vav repair; watches:
+will-indexed dispatch (2 exemplars), the demotion operator (1).
+
+═══ COMPACTION POINT #47 (2026-09-05, owner: "I need to compact")
+═══ CLEAN POINT — no work mid-flight. The window since #46 ran:
+(1) LEV 24 — THE FIRST CALL: cold_run_lev24.py 23/23 (70% pure
+ink) exporting talion(); cold_run_mishpatim.py's damage cell
+resolves THROUGH the live import — the compiled Bible's first
+inter-span function call (M-07c EXECUTED); 50th effect bears_sin;
+fracture-under-fracture unique to 24:20; Mishnah Sanhedrin 7:5
+speaks Onkelos' verb; the two lev_24 drafts STAY DRAFTS till
+Emor — COMMITTED+PUSHED 5702a25. (2) TAZRIA-METZORA FULL RHYTHM,
+the largest sweep by units and claims (declared count second to
+Vayikra's 759): 707 declared read whole (4 Sifra books 550 rows +
+Onkelos 157 verses; 4 ledgers with mechanical per-row cite
+indexes), 60 claims seated into TEN units — 9 drafts FROZEN + the
+frozen intake unit's step-G Sifra debt PAID (L13-05..08, step K) —
+CORPUS 134 → 143, standing 1412 → 1472 (+60, tripwire rebaked by
+the documented path), hash 8b8fff1fa28953af UNMOVED; delegated
+FULL RULE stamps + the re-affirmation row in STAMP_LEDGER; EXAM
+ROUND 43 = 50/50 FIRST RUN (47 rows / 20 tractates) — 1103/1103
+over 43 rounds, R-528..533 (338 rules), vocab 927 on 158 dims,
+EIGHT seats answered before their rows opened (Nazir 9:4 the
+seven-ways row VERBATIM; Negaim 12:5 the humility protocol;
+Negaim 2:3 + 14:10 + 12:7; Nazir 8:2 + 6:6; Eduyot 5:6); COMPILE
+cold_run_negaim.py = THE AFFLICTION STATE MACHINE 16/16 + the
+TEN-HOUSES WALK 10/10 (the one-week boil/burn track from the
+ink's own silence — the shut-again census; 13/19-day arithmetic
+from the shared-junction rule; Mishnah Negaim 3:3-8 the answer
+sheet); effects registry 53 (isolated_outside_camp,
+burned_in_fire, demolished); MIDDOT.md +5 case-law rows + the
+DEMOTION-OPERATOR watch (1 exemplar); 13:33 large-letter site
+verified INTACT. Regression green everywhere (all runners, all
+cold runners, world engine); gloss_lint 0 new (EXAM_LEDGER at its
+7-flag HEAD baseline; MIDDOT/STAMP 1 legacy each). ⚠ OPEN ITEM
+FOR THE OWNER: the Lev 11:42 גחון ("belly") large-vav TRUNCATION
+in tanakh.sqlite — repair still deferred. UNCOMMITTED: the whole
+Tazria-Metzora line since 5702a25 (4 reading ledgers + exam
+ledger + 10 unit YAMLs + manifests + py/html renders + rules/
+cases/runner + cold_run_negaim.py + effect registry + vocabulary
++ catalog both files + EXAM_LEDGER round 43 + STAMP_LEDGER +
+MIDDOT + REPORT_TAZRIA + THE_STEPS + THE_BRIEFING + state doc) —
+rides the next "commit push". Records all current: THE_STEPS
+(fifth+sixth compiled spans), THE_BRIEFING scoreboard (FIVE
+PARASHOT IN, corpus 143, 1103, 338 rules), memory through the
+sweep. POST-COMPACTION REREADS (mandatory, first sitting):
+THE_STEPS Step 2 + Step 5 + the compiler block + this tail. NEXT
+on the owner's word: commit push, then ACHAREI MOT-KEDOSHIM (the
+walk's next double parashah); watches: will-indexed dispatch (2
+exemplars), the demotion operator (1); Emor later brings the
+lev_24 drafts their rhythm.

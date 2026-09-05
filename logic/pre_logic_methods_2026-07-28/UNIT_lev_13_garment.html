@@ -1,0 +1,1075 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>lev_13_garment — derived logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/lev_13_garment?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Garment nega: wool linen leather (13:47–59) <span class='badge frozen'>MODEL · REV 1 · GATES GREEN</span></h1>
+<div class="meta">unit <b>lev_13_garment</b> · Leviticus 13:47-59 · derive tree_derived_v1 · phase C</div>
+<div class="meta"><a href="/#Lev/13/47">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">צָרַעַת הַבֶּגֶד</span> · <i>tzara&#x27;at ha-beged</i> · Scale disease of the garment</p>
+<div class="note">Tree-derived v1: each verse top binary split (left/right) grounds one STEP. Not multi-verse English smear. Not full TIR yet.</div>
+<div class="meta">confidence: hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Reprocess lev_13_garment (13:47-59, 13 vv) tree-first phase C.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Trees</td><td>Every verse via taamim_tree_parse.py v1; full tree_ascii recorded.</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Tree → steps</td><td>One STEP per verse citing left/right top-split arms. English [EN-AID] only.</td><td>hypothesis</td></tr>
+<tr><td><b>D</b></td><td>Oral dual-track</td><td>Sifra samples when available; dual-track only; never silent-merge.</td><td>hypothesis</td></tr>
+<tr><td><b>E</b></td><td>Tazria-Metzora derivation 2026-09-05</td><td>Tazria-Metzora sweep, fifth unit. Declared as above: the species and work gate, the intensest shades, the benefit ban with Onkelos&#x27;s causes-loss, standing-burns with the worn-or-new decode and the patch grid, and the close — seated as claims LV13D-01..05.</td><td>tested</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Lv_13_47 · Lev.13.47 · <span class='expr'>COND_כי</span></h3>
+<p><span class="he">והבגד כי יהיה בו נגע צרעת … בבגד צמר או בבגד פשתים</span> · <i>vhbgd ky yhyh bv ng&#x27; tzr&#x27;t … bbgd tzmr &#x27;v bbgd pshtym</i> · From top split: LEFT «והבגד כי יהיה בו נגע צרעת» / RIGHT «בבגד צמר או בבגד פשתים». Derive claim from Hebrew arms. Lev 13:47.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והבגד כי יהיה בו נגע צרעת</span> · <i>vhbgd ky yhyh bv ng&#x27; tzr&#x27;t</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">בבגד צמר או בבגד פשתים</span> · <i>bbgd tzmr &#x27;v bbgd pshtym</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(beged_tzemer_o_fishtim, species_and_work_gate)</span><br><span class="gloss">= WITNESS-READ(beged-tzemer-o-fishtim, species-and-work-gate)</span><br>THE SPECIES AND WORK GATE [claim LV13D-01]. Wool and linen only — silks, camel-wool, hare-wool, goat-down excluded; mixtures included; AS-CREATED only (man-dyed excluded; R. Yehuda&#x27;s split — heaven-dyed defiles); THE WORK-FINISHED GATE: warp after boiling, weft IMMEDIATELY, flax bundles after whitening; minimum a 3x3 weave; sea-hides excluded by the grown-on-land rule — one land-grown thread attached the normal way re-includes; unworked hides and non-vessel straps out, TENT hides in. R. Eliezer to R. Yishmael on the row: &#x27;you say to the verse BE SILENT till I expound — you are an uprooter of mountains.&#x27;
+</td><td>—</td><td class='cite'>Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 1, Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 2, Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 3, Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 7, Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 9, Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 12, Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 1</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_48 · Lev.13.48 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">או בשתי או בערב לפשתים ולצמר … או בעור או בכל מלאכת עור</span> · <i>&#x27;v bshty &#x27;v b&#x27;rb lpshtym vltzmr … &#x27;v b&#x27;vr &#x27;v bkl ml&#x27;kt &#x27;vr</i> · From top split: LEFT «או בשתי או בערב לפשתים ולצמר» / RIGHT «או בעור או בכל מלאכת עור». Derive claim from Hebrew arms. Lev 13:48.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">או בשתי או בערב לפשתים ולצמר</span> · <i>&#x27;v bshty &#x27;v b&#x27;rb lpshtym vltzmr</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">או בעור או בכל מלאכת עור</span> · <i>&#x27;v b&#x27;vr &#x27;v bkl ml&#x27;kt &#x27;vr</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_49 · Lev.13.49 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">והיה הנגע ירקרק או אדמדם בבגד או בעור או בשתי או בערב או בכל … והראה את הכהן</span> · <i>vhyh hng&#x27; yrqrq &#x27;v &#x27;dmdm bbgd &#x27;v b&#x27;vr &#x27;v bshty &#x27;v  … vhr&#x27;h &#x27;t hkhn</i> · From top split: LEFT «והיה הנגע ירקרק או אדמדם בבגד או בעור או בשתי או בערב או בכל כלי עור נגע צרעת הו» / RIGHT «והראה את הכהן». Derive claim from Hebrew arms. Lev 13:49.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והיה הנגע ירקרק או אדמדם בבגד או בעור או בשתי או בערב או בכל כלי עור נגע צרעת הוא</span> · <i>vhyh hng&#x27; yrqrq &#x27;v &#x27;dmdm bbgd &#x27;v b&#x27;vr &#x27;v bshty &#x27;v b&#x27;rb &#x27;v bkl kly &#x27;vr ng&#x27; tzr&#x27;t hv&#x27;</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">והראה את הכהן</span> · <i>vhr&#x27;h &#x27;t hkhn</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(yerakrak_adamdam, intensest_shades)</span><br><span class="gloss">= WITNESS-READ(yerakrak-adamdam, intensest-shades)</span><br>THE INTENSEST SHADES [claim LV13D-02]. GREEN-OF-GREENS or RED- OF-REDS — the deepest of each, no mixed shade in garments — and THEY COMBINE with each other (&#x27;and it becomes&#x27;); not the fringes; at the bean (the skin analogy settled over the houses&#x27; two-bean rival); rich-and-poor availability immaterial.
+</td><td>—</td><td class='cite'>Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 2, Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 3, Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 4-6</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_50 · Lev.13.50 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">וראה הכהן את הנגע … והסגיר את הנגע שבעת ימים</span> · <i>vr&#x27;h hkhn &#x27;t hng&#x27; … vhsgyr &#x27;t hng&#x27; shb&#x27;t ymym</i> · From top split: LEFT «וראה הכהן את הנגע» / RIGHT «והסגיר את הנגע שבעת ימים». Derive claim from Hebrew arms. Lev 13:50.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וראה הכהן את הנגע</span> · <i>vr&#x27;h hkhn &#x27;t hng&#x27;</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">והסגיר את הנגע שבעת ימים</span> · <i>vhsgyr &#x27;t hng&#x27; shb&#x27;t ymym</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_51 · Lev.13.51 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">וראה את הנגע ביום השביעי כי פשה הנגע בבגד או בשתי או בערב או … צרעת ממארת הנגע טמא הוא</span> · <i>vr&#x27;h &#x27;t hng&#x27; byvm hshby&#x27;y ky pshh hng&#x27; bbgd &#x27;v bsh … tzr&#x27;t mm&#x27;rt hng&#x27; tm&#x27; hv&#x27;</i> · From top split: LEFT «וראה את הנגע ביום השביעי כי פשה הנגע בבגד או בשתי או בערב או בעור לכל אשר יעשה ה» / RIGHT «צרעת ממארת הנגע טמא הוא». Derive claim from Hebrew arms. Lev 13:51.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וראה את הנגע ביום השביעי כי פשה הנגע בבגד או בשתי או בערב או בעור לכל אשר יעשה העור למלאכה</span> · <i>vr&#x27;h &#x27;t hng&#x27; byvm hshby&#x27;y ky pshh hng&#x27; bbgd &#x27;v bshty &#x27;v b&#x27;rb &#x27;v b&#x27;vr lkl &#x27;shr y&#x27;shh h&#x27;vr lml&#x27;kh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">צרעת ממארת הנגע טמא הוא</span> · <i>tzr&#x27;t mm&#x27;rt hng&#x27; tm&#x27; hv&#x27;</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(tzaraat_mameret, the_benefit_ban)</span><br><span class="gloss">= WITNESS-READ(the-disease-mameret, the-benefit-ban)</span><br>THE BENEFIT BAN [claim LV13D-03]. &#x27;MALIGNANT tzaraat&#x27; read by its own etymology — &#x27;put it under a CURSE and derive no benefit&#x27;: the decided garment shredded to stuffing stays banned, the quarantined does not; and Onkelos renders the word &#x27;that CAUSES LOSS&#x27; — the curse-as-loss decode in the oldest witness. Adjacent spread any amount, distant spread at the bean, the returning at the bean.
+</td><td>—</td><td class='cite'>Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 11, Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 9, Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 10, Onkelos Lev 13:51, Onkelos Lev 13:52</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_52 · Lev.13.52 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ושרף את הבגד או את השתי או את הערב בצמר או בפשתים או את כל כ … כי צרעת ממארת הוא באש תשרף</span> · <i>vshrp &#x27;t hbgd &#x27;v &#x27;t hshty &#x27;v &#x27;t h&#x27;rb btzmr &#x27;v bpsh … ky tzr&#x27;t mm&#x27;rt hv&#x27; b&#x27;sh tshrp</i> · From top split: LEFT «ושרף את הבגד או את השתי או את הערב בצמר או בפשתים או את כל כלי העור אשר יהיה בו » / RIGHT «כי צרעת ממארת הוא באש תשרף». Derive claim from Hebrew arms. Lev 13:52.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ושרף את הבגד או את השתי או את הערב בצמר או בפשתים או את כל כלי העור אשר יהיה בו הנגע</span> · <i>vshrp &#x27;t hbgd &#x27;v &#x27;t hshty &#x27;v &#x27;t h&#x27;rb btzmr &#x27;v bpshtym &#x27;v &#x27;t kl kly h&#x27;vr &#x27;shr yhyh bv hng&#x27;</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">כי צרעת ממארת הוא באש תשרף</span> · <i>ky tzr&#x27;t mm&#x27;rt hv&#x27; b&#x27;sh tshrp</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_53 · Lev.13.53 · <span class='expr'>COND_ואם</span></h3>
+<p><span class="he">ואם יראה הכהן והנה לא פשה הנגע בבגד או בשתי או בערב … או בכל כלי עור</span> · <i>v&#x27;m yr&#x27;h hkhn vhnh l&#x27; pshh hng&#x27; bbgd &#x27;v bshty &#x27;v b … &#x27;v bkl kly &#x27;vr</i> · From top split: LEFT «ואם יראה הכהן והנה לא פשה הנגע בבגד או בשתי או בערב» / RIGHT «או בכל כלי עור». Derive claim from Hebrew arms. Lev 13:53.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואם יראה הכהן והנה לא פשה הנגע בבגד או בשתי או בערב</span> · <i>v&#x27;m yr&#x27;h hkhn vhnh l&#x27; pshh hng&#x27; bbgd &#x27;v bshty &#x27;v b&#x27;rb</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">או בכל כלי עור</span> · <i>&#x27;v bkl kly &#x27;vr</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_54 · Lev.13.54 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">וצוה הכהן וכבסו את אשר בו הנגע … והסגירו שבעת ימים שנית</span> · <i>vtzvh hkhn vkbsv &#x27;t &#x27;shr bv hng&#x27; … vhsgyrv shb&#x27;t ymym shnyt</i> · From top split: LEFT «וצוה הכהן וכבסו את אשר בו הנגע» / RIGHT «והסגירו שבעת ימים שנית». Derive claim from Hebrew arms. Lev 13:54.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וצוה הכהן וכבסו את אשר בו הנגע</span> · <i>vtzvh hkhn vkbsv &#x27;t &#x27;shr bv hng&#x27;</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">והסגירו שבעת ימים שנית</span> · <i>vhsgyrv shb&#x27;t ymym shnyt</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_55 · Lev.13.55 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">וראה הכהן אחרי הכבס את הנגע והנה לא הפך הנגע את עינו והנגע ל … פחתת הוא בקרחתו או בגבחתו</span> · <i>vr&#x27;h hkhn &#x27;chry hkbs &#x27;t hng&#x27; vhnh l&#x27; hpk hng&#x27; &#x27;t &#x27; … pchtt hv&#x27; bqrchtv &#x27;v bgbchtv</i> · From top split: LEFT «וראה הכהן אחרי הכבס את הנגע והנה לא הפך הנגע את עינו והנגע לא פשה טמא הוא באש תש» / RIGHT «פחתת הוא בקרחתו או בגבחתו». Derive claim from Hebrew arms. Lev 13:55.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וראה הכהן אחרי הכבס את הנגע והנה לא הפך הנגע את עינו והנגע לא פשה טמא הוא באש תשרפנו</span> · <i>vr&#x27;h hkhn &#x27;chry hkbs &#x27;t hng&#x27; vhnh l&#x27; hpk hng&#x27; &#x27;t &#x27;ynv vhng&#x27; l&#x27; pshh tm&#x27; hv&#x27; b&#x27;sh tshrpnv</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">פחתת הוא בקרחתו או בגבחתו</span> · <i>pchtt hv&#x27; bqrchtv &#x27;v bgbchtv</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(lo_hafach_velo_pasah, standing_burns)</span><br><span class="gloss">= WITNESS-READ(not-hafach-velo-pasah, standing-burns)</span><br>STANDING BURNS — AND THE WORN-OR-NEW DECODE [claim LV13D-04]. The garment standing unchanged at week two is IMPURE and BURNS (where the person is released — the recorded asymmetry; R. Yehuda&#x27;s re-quarantine arm kept); &#x27;in its bald-back or bald- front&#x27; read as the cloth&#x27;s WORN or NEW faces — and Onkelos performs the decode (&#x27;in its wornness or its newness&#x27;); dimmed to the second grade at week two — TEAR IT OUT, burn the piece, PATCH the tear; the patch-return grid (return on the garment saves the patch, on the patch burns the garment; the moved patch carries its regime into the second garment); TRADITION- PRESERVATION PROTOCOL #2 at the striped garment — &#x27;a GREAT sage are you, for you upheld the sages&#x27; words.&#x27;
+</td><td>—</td><td class='cite'>Sifra, Tazria Parashat Nega&#x27;im, Chapter 2* 8, Sifra, Tazria Parashat Nega&#x27;im, Chapter 15 7, Sifra, Tazria Parashat Nega&#x27;im, Chapter 15 9, Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 1, Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 4, Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 5, Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 9, Onkelos Lev 13:55</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_56 · Lev.13.56 · <span class='expr'>COND_ואם</span></h3>
+<p><span class="he">ואם ראה הכהן והנה כהה הנגע אחרי הכבס אתו … וקרע אתו מן הבגד או מן העור או מן השתי או מן הערב</span> · <i>v&#x27;m r&#x27;h hkhn vhnh khh hng&#x27; &#x27;chry hkbs &#x27;tv … vqr&#x27; &#x27;tv mn hbgd &#x27;v mn h&#x27;vr &#x27;v mn hshty &#x27;v mn h&#x27;rb</i> · From top split: LEFT «ואם ראה הכהן והנה כהה הנגע אחרי הכבס אתו» / RIGHT «וקרע אתו מן הבגד או מן העור או מן השתי או מן הערב». Derive claim from Hebrew arms. Lev 13:56.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואם ראה הכהן והנה כהה הנגע אחרי הכבס אתו</span> · <i>v&#x27;m r&#x27;h hkhn vhnh khh hng&#x27; &#x27;chry hkbs &#x27;tv</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">וקרע אתו מן הבגד או מן העור או מן השתי או מן הערב</span> · <i>vqr&#x27; &#x27;tv mn hbgd &#x27;v mn h&#x27;vr &#x27;v mn hshty &#x27;v mn h&#x27;rb</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_57 · Lev.13.57 · <span class='expr'>COND_ואם</span></h3>
+<p><span class="he">ואם תראה עוד בבגד או בשתי או בערב או בכל כלי עור פרחת הוא … באש תשרפנו את אשר בו הנגע</span> · <i>v&#x27;m tr&#x27;h &#x27;vd bbgd &#x27;v bshty &#x27;v b&#x27;rb &#x27;v bkl kly &#x27;vr  … b&#x27;sh tshrpnv &#x27;t &#x27;shr bv hng&#x27;</i> · From top split: LEFT «ואם תראה עוד בבגד או בשתי או בערב או בכל כלי עור פרחת הוא» / RIGHT «באש תשרפנו את אשר בו הנגע». Derive claim from Hebrew arms. Lev 13:57.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואם תראה עוד בבגד או בשתי או בערב או בכל כלי עור פרחת הוא</span> · <i>v&#x27;m tr&#x27;h &#x27;vd bbgd &#x27;v bshty &#x27;v b&#x27;rb &#x27;v bkl kly &#x27;vr prcht hv&#x27;</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">באש תשרפנו את אשר בו הנגע</span> · <i>b&#x27;sh tshrpnv &#x27;t &#x27;shr bv hng&#x27;</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_58 · Lev.13.58 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">והבגד או השתי או הערב או כל כלי העור אשר תכבס וסר מהם הנגע … וכבס שנית וטהר</span> · <i>vhbgd &#x27;v hshty &#x27;v h&#x27;rb &#x27;v kl kly h&#x27;vr &#x27;shr tkbs vs … vkbs shnyt vthr</i> · From top split: LEFT «והבגד או השתי או הערב או כל כלי העור אשר תכבס וסר מהם הנגע» / RIGHT «וכבס שנית וטהר». Derive claim from Hebrew arms. Lev 13:58.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והבגד או השתי או הערב או כל כלי העור אשר תכבס וסר מהם הנגע</span> · <i>vhbgd &#x27;v hshty &#x27;v h&#x27;rb &#x27;v kl kly h&#x27;vr &#x27;shr tkbs vsr mhm hng&#x27;</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">וכבס שנית וטהר</span> · <i>vkbs shnyt vthr</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_59 · Lev.13.59 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">זאת תורת נגע צרעת בגד הצמר או הפשתים או השתי או הערב או כל כ … לטהרו או לטמאו</span> · <i>z&#x27;t tvrt ng&#x27; tzr&#x27;t bgd htzmr &#x27;v hpshtym &#x27;v hshty &#x27; … lthrv &#x27;v ltm&#x27;v</i> · From top split: LEFT «זאת תורת נגע צרעת בגד הצמר או הפשתים או השתי או הערב או כל כלי עור» / RIGHT «לטהרו או לטמאו». Derive claim from Hebrew arms. Lev 13:59.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">זאת תורת נגע צרעת בגד הצמר או הפשתים או השתי או הערב או כל כלי עור</span> · <i>z&#x27;t tvrt ng&#x27; tzr&#x27;t bgd htzmr &#x27;v hpshtym &#x27;v hshty &#x27;v h&#x27;rb &#x27;v kl kly &#x27;vr</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">לטהרו או לטמאו</span> · <i>lthrv &#x27;v ltm&#x27;v</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(zot_torat, the_close)</span><br><span class="gloss">= WITNESS-READ(this-torat, the-close)</span><br>THE CLOSE: ENTRY, ABROAD, ONE PRIEST [claim LV13D-05]. The second washing purifies (the first was the quarantine&#x27;s); the mark must be GONE from the wash, not moved side-to-side; the garment defiles BY ENTRY like the house (the closing verse&#x27;s list read as one system); the Land and abroad alike; purify and declare-impure equally commanded; the SAME priest for both — if he died, another.
+</td><td>—</td><td class='cite'>Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 10, Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 11, Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 12, Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 13</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">Coarse states for lev_13_garment after tree-derived steps.</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_block_open</b></td><td>Entered 13:47-59</td></tr>
+<tr><td><b>S_block_mid</b></td><td>Mid-block after ~half of verse steps</td></tr>
+<tr><td><b>S_block_closed</b></td><td>Completed tree-derived steps for 13:47-59</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_block_open</td><td>S_block_mid</td><td>STEP_Lv_13_53</td></tr>
+<tr><td>S_block_mid</td><td>S_block_closed</td><td>STEP_Lv_13_59</td></tr>
+</table>
+<div class="note"><b>AFTER_S_block_closed</b> — Tree-derived v1 complete for lev_13_garment</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Lv_13_47 — Lev 13:47</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Lv_13_48 — Lev 13:48</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Lv_13_49 — Lev 13:49</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Lv_13_50 — Lev 13:50</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Lv_13_51 — Lev 13:51</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Lv_13_52 — Lev 13:52</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S_last</b></td><td>after STEP_Lv_13_59 — Lev 13:59</td><td></td><td>no test, no name.</td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_tzaraat_beged</td><td><span class="he">צָרַעַת בֶּגֶד</span> · <i>tzara&#x27;at beged</i> · Garment scale-disease rules</td></tr>
+<tr><td>EXPORT_tree_derived_v1_lev_13_garment</td><td>Unit reprocessed tree-first (one STEP per verse, arm-cited)</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Leviticus tree-derive oral policy</b><br><br><i>Written trees first. Prefer Sifra on law densification; MH possible; never silent-merge.</i></div>
+<div class="note"><span class="badge tier-o">dual_track</span> <b>Sifra</b><br><i>see Hebrew sample in local Data dump</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<div class="note"><span class="badge tier-o">dual_track</span> <b>Sifra</b><br><i>see Hebrew sample in local Data dump</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<div class="note"><span class="badge tier-o">dual_track</span> <b>Sifra</b><br><i>see Hebrew sample in local Data dump</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Lev.13.47 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">והבגד כי יהיה בו נגע צרעת בבגד צמר או בבגד פשתים</span> · <i>vhbgd ky yhyh bv ng&#x27; tzr&#x27;t bbgd tzmr &#x27;v bbgd pshtym</i> · Free gloss — structure from Hebrew tree. 13:47.</div>
+<pre>PHRASE (binary 11w) וְ/הַ/בֶּ֕גֶד כִּֽי יִהְיֶ֥ה ב֖/וֹ נֶ֣גַע צָרָ֑…
+├── PHRASE (binary 6w) וְ/הַ/בֶּ֕גֶד כִּֽי יִהְיֶ֥ה ב֖/וֹ נֶ֣גַע צָרָ֑…
+│   ├── [0] וְ/הַ/בֶּ֕גֶד (zaqef gadol, rank=2)
+│   └── PHRASE (binary 5w) כִּֽי יִהְיֶ֥ה ב֖/וֹ נֶ֣גַע צָרָ֑עַת
+│       ├── PHRASE (3-ary 3w) כִּֽי יִהְיֶ֥ה ב֖/וֹ
+│       │   ├── [1] כִּֽי (no cantillation mark — bind as conjunctive, rank=9)
+│       │   ├── [2] יִהְיֶ֥ה (mercha (conjunctive), rank=9)
+│       │   └── [3] ב֖/וֹ (tifcha, rank=2)
+│       └── PHRASE (binary 2w) נֶ֣גַע צָרָ֑עַת
+│           ├── [4] נֶ֣גַע (munach (conjunctive), rank=9)
+│           └── [5] צָרָ֑עַת (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) בְּ/בֶ֣גֶד צֶ֔מֶר א֖וֹ בְּ/בֶ֥גֶד פִּשְׁתִּֽים
+    ├── PHRASE (binary 2w) בְּ/בֶ֣גֶד צֶ֔מֶר
+    │   ├── [6] בְּ/בֶ֣גֶד (munach (conjunctive), rank=9)
+    │   └── [7] צֶ֔מֶר (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) א֖וֹ בְּ/בֶ֥גֶד פִּשְׁתִּֽים
+        ├── [8] א֖וֹ (tifcha, rank=2)
+        └── PHRASE (binary 2w) בְּ/בֶ֥גֶד פִּשְׁתִּֽים
+            ├── [9] בְּ/בֶ֥גֶד (mercha (conjunctive), rank=9)
+            └── [10] פִּשְׁתִּֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.48 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">או בשתי או בערב לפשתים ולצמר או בעור או בכל מלאכת עור</span> · <i>&#x27;v bshty &#x27;v b&#x27;rb lpshtym vltzmr &#x27;v b&#x27;vr &#x27;v bkl ml&#x27;kt &#x27;vr</i> · Free gloss — structure from Hebrew tree. 13:48.</div>
+<pre>PHRASE (binary 12w) א֤וֹ בִֽ/שְׁתִי֙ א֣וֹ בְ/עֵ֔רֶב לַ/פִּשְׁתִּ֖ים…
+├── PHRASE (binary 6w) א֤וֹ בִֽ/שְׁתִי֙ א֣וֹ בְ/עֵ֔רֶב לַ/פִּשְׁתִּ֖ים…
+│   ├── PHRASE (binary 4w) א֤וֹ בִֽ/שְׁתִי֙ א֣וֹ בְ/עֵ֔רֶב
+│   │   ├── PHRASE (binary 2w) א֤וֹ בִֽ/שְׁתִי֙
+│   │   │   ├── [0] א֤וֹ (mahpach (conjunctive), rank=9)
+│   │   │   └── [1] בִֽ/שְׁתִי֙ (pashta, rank=3)
+│   │   └── PHRASE (binary 2w) א֣וֹ בְ/עֵ֔רֶב
+│   │       ├── [2] א֣וֹ (munach (conjunctive), rank=9)
+│   │       └── [3] בְ/עֵ֔רֶב (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) לַ/פִּשְׁתִּ֖ים וְ/לַ/צָּ֑מֶר
+│       ├── [4] לַ/פִּשְׁתִּ֖ים (tifcha, rank=2)
+│       └── [5] וְ/לַ/צָּ֑מֶר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) א֣וֹ בְ/ע֔וֹר א֖וֹ בְּ/כָל מְלֶ֥אכֶת עֽוֹר
+    ├── PHRASE (binary 2w) א֣וֹ בְ/ע֔וֹר
+    │   ├── [6] א֣וֹ (munach (conjunctive), rank=9)
+    │   └── [7] בְ/ע֔וֹר (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) א֖וֹ בְּ/כָל מְלֶ֥אכֶת עֽוֹר
+        ├── [8] א֖וֹ (tifcha, rank=2)
+        └── PHRASE (3-ary 3w) בְּ/כָל מְלֶ֥אכֶת עֽוֹר
+            ├── [9] בְּ/כָל (no cantillation mark — bind as conjunctive, rank=9)
+            ├── [10] מְלֶ֥אכֶת (mercha (conjunctive), rank=9)
+            └── [11] עֽוֹר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.49 · parser unique · 22 words</h3>
+<div class="meta"><span class="he">והיה הנגע ירקרק או אדמדם בבגד או בעור או בשתי או בערב או בכל כלי עור נגע צרעת הוא והראה את הכהן</span> · <i>vhyh hng&#x27; yrqrq &#x27;v &#x27;dmdm bbgd &#x27;v b&#x27;vr &#x27;v bshty &#x27;v b&#x27;rb &#x27;v bkl kly &#x27;vr ng&#x27; tzr&#x27;t hv&#x27; vhr&#x27;h &#x27;t hkhn</i> · Free gloss — structure from Hebrew tree. 13:49.</div>
+<pre>PHRASE (binary 22w) וְ/הָיָ֨ה הַ/נֶּ֜גַע יְרַקְרַ֣ק א֣וֹ אֲדַמְדָּ֗…
+├── PHRASE (binary 19w) וְ/הָיָ֨ה הַ/נֶּ֜גַע יְרַקְרַ֣ק א֣וֹ אֲדַמְדָּ֗…
+│   ├── PHRASE (binary 16w) וְ/הָיָ֨ה הַ/נֶּ֜גַע יְרַקְרַ֣ק א֣וֹ אֲדַמְדָּ֗…
+│   │   ├── PHRASE (binary 5w) וְ/הָיָ֨ה הַ/נֶּ֜גַע יְרַקְרַ֣ק א֣וֹ אֲדַמְדָּ֗ם
+│   │   │   ├── PHRASE (binary 2w) וְ/הָיָ֨ה הַ/נֶּ֜גַע
+│   │   │   │   ├── [0] וְ/הָיָ֨ה (qadma (conjunctive), rank=9)
+│   │   │   │   └── [1] הַ/נֶּ֜גַע (geresh, rank=4)
+│   │   │   └── PHRASE (3-ary 3w) יְרַקְרַ֣ק א֣וֹ אֲדַמְדָּ֗ם
+│   │   │       ├── [2] יְרַקְרַ֣ק (munach (conjunctive), rank=9)
+│   │   │       ├── [3] א֣וֹ (munach (conjunctive), rank=9)
+│   │   │       └── [4] אֲדַמְדָּ֗ם (revia, rank=3)
+│   │   └── PHRASE (binary 11w) בַּ/בֶּגֶד֩ א֨וֹ בָ/ע֜וֹר אֽוֹ בַ/שְּׁתִ֤י אוֹ …
+│   │       ├── PHRASE (binary 7w) בַּ/בֶּגֶד֩ א֨וֹ בָ/ע֜וֹר אֽוֹ בַ/שְּׁתִ֤י אוֹ …
+│   │       │   ├── PHRASE (3-ary 3w) בַּ/בֶּגֶד֩ א֨וֹ בָ/ע֜וֹר
+│   │       │   │   ├── [5] בַּ/בֶּגֶד֩ (telisha qetana (conjunctive), rank=9)
+│   │       │   │   ├── [6] א֨וֹ (qadma (conjunctive), rank=9)
+│   │       │   │   └── [7] בָ/ע֜וֹר (geresh, rank=4)
+│   │       │   └── PHRASE (4-ary 4w) אֽוֹ בַ/שְּׁתִ֤י אוֹ בָ/עֵ֨רֶב֙
+│   │       │       ├── [8] אֽוֹ (no cantillation mark — bind as conjunctive, rank=9)
+│   │       │       ├── [9] בַ/שְּׁתִ֤י (mahpach (conjunctive), rank=9)
+│   │       │       ├── [10] אוֹ (no cantillation mark — bind as conjunctive, rank=9)
+│   │       │       └── [11] בָ/עֵ֨רֶב֙ (pashta, rank=3)
+│   │       └── PHRASE (4-ary 4w) א֣וֹ בְ/כָל כְּלִי ע֔וֹר
+│   │           ├── [12] א֣וֹ (munach (conjunctive), rank=9)
+│   │           ├── [13] בְ/כָל (no cantillation mark — bind as conjunctive, rank=9)
+│   │           ├── [14] כְּלִי (no cantillation mark — bind as conjunctive, rank=9)
+│   │           └── [15] ע֔וֹר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) נֶ֥גַע צָרַ֖עַת ה֑וּא
+│       ├── PHRASE (binary 2w) נֶ֥גַע צָרַ֖עַת
+│       │   ├── [16] נֶ֥גַע (mercha (conjunctive), rank=9)
+│       │   └── [17] צָרַ֖עַת (tifcha, rank=2)
+│       └── [18] ה֑וּא (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וְ/הָרְאָ֖ה אֶת הַ/כֹּהֵֽן
+    ├── [19] וְ/הָרְאָ֖ה (tifcha, rank=2)
+    └── PHRASE (binary 2w) אֶת הַ/כֹּהֵֽן
+        ├── [20] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+        └── [21] הַ/כֹּהֵֽן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.50 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">וראה הכהן את הנגע והסגיר את הנגע שבעת ימים</span> · <i>vr&#x27;h hkhn &#x27;t hng&#x27; vhsgyr &#x27;t hng&#x27; shb&#x27;t ymym</i> · Free gloss — structure from Hebrew tree. 13:50.</div>
+<pre>PHRASE (binary 9w) וְ/רָאָ֥ה הַ/כֹּהֵ֖ן אֶת הַ/נָּ֑גַע וְ/הִסְגִּ֥…
+├── PHRASE (binary 4w) וְ/רָאָ֥ה הַ/כֹּהֵ֖ן אֶת הַ/נָּ֑גַע
+│   ├── PHRASE (binary 2w) וְ/רָאָ֥ה הַ/כֹּהֵ֖ן
+│   │   ├── [0] וְ/רָאָ֥ה (mercha (conjunctive), rank=9)
+│   │   └── [1] הַ/כֹּהֵ֖ן (tifcha, rank=2)
+│   └── PHRASE (binary 2w) אֶת הַ/נָּ֑גַע
+│       ├── [2] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│       └── [3] הַ/נָּ֑גַע (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וְ/הִסְגִּ֥יר אֶת הַ/נֶּ֖גַע שִׁבְעַ֥ת יָמִֽים
+    ├── PHRASE (3-ary 3w) וְ/הִסְגִּ֥יר אֶת הַ/נֶּ֖גַע
+    │   ├── [4] וְ/הִסְגִּ֥יר (mercha (conjunctive), rank=9)
+    │   ├── [5] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+    │   └── [6] הַ/נֶּ֖גַע (tifcha, rank=2)
+    └── PHRASE (binary 2w) שִׁבְעַ֥ת יָמִֽים
+        ├── [7] שִׁבְעַ֥ת (mercha (conjunctive), rank=9)
+        └── [8] יָמִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.51 · parser unique · 25 words</h3>
+<div class="meta"><span class="he">וראה את הנגע ביום השביעי כי פשה הנגע בבגד או בשתי או בערב או בעור לכל אשר יעשה העור למלאכה צרעת ממארת הנגע טמא הוא</span> · <i>vr&#x27;h &#x27;t hng&#x27; byvm hshby&#x27;y ky pshh hng&#x27; bbgd &#x27;v bshty &#x27;v b&#x27;rb &#x27;v b&#x27;vr lkl &#x27;shr y&#x27;shh h&#x27;vr lml&#x27;kh tzr&#x27;t mm&#x27;rt hng&#x27; tm&#x27; hv&#x27;</i> · Free gloss — structure from Hebrew tree. 13:51.</div>
+<pre>PHRASE (binary 25w) וְ/רָאָ֨ה אֶת הַ/נֶּ֜גַע בַּ/יּ֣וֹם הַ/שְּׁבִיע…
+├── PHRASE (binary 20w) וְ/רָאָ֨ה אֶת הַ/נֶּ֜גַע בַּ/יּ֣וֹם הַ/שְּׁבִיע…
+│   ├── PHRASE (binary 15w) וְ/רָאָ֨ה אֶת הַ/נֶּ֜גַע בַּ/יּ֣וֹם הַ/שְּׁבִיע…
+│   │   ├── PHRASE (binary 5w) וְ/רָאָ֨ה אֶת הַ/נֶּ֜גַע בַּ/יּ֣וֹם הַ/שְּׁבִיע…
+│   │   │   ├── PHRASE (3-ary 3w) וְ/רָאָ֨ה אֶת הַ/נֶּ֜גַע
+│   │   │   │   ├── [0] וְ/רָאָ֨ה (qadma (conjunctive), rank=9)
+│   │   │   │   ├── [1] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │   │   └── [2] הַ/נֶּ֜גַע (geresh, rank=4)
+│   │   │   └── PHRASE (binary 2w) בַּ/יּ֣וֹם הַ/שְּׁבִיעִ֗י
+│   │   │       ├── [3] בַּ/יּ֣וֹם (munach (conjunctive), rank=9)
+│   │   │       └── [4] הַ/שְּׁבִיעִ֗י (revia, rank=3)
+│   │   └── PHRASE (binary 10w) כִּֽי פָשָׂ֤ה הַ/נֶּ֨גַע֙ בַּ֠/בֶּגֶד אֽוֹ בַ/ש…
+│   │       ├── PHRASE (3-ary 3w) כִּֽי פָשָׂ֤ה הַ/נֶּ֨גַע֙
+│   │       │   ├── [5] כִּֽי (no cantillation mark — bind as conjunctive, rank=9)
+│   │       │   ├── [6] פָשָׂ֤ה (mahpach (conjunctive), rank=9)
+│   │       │   └── [7] הַ/נֶּ֨גַע֙ (pashta, rank=3)
+│   │       └── PHRASE (binary 7w) בַּ֠/בֶּגֶד אֽוֹ בַ/שְּׁתִ֤י אֽוֹ בָ/עֵ֨רֶב֙ א֣…
+│   │           ├── PHRASE (binary 5w) בַּ֠/בֶּגֶד אֽוֹ בַ/שְּׁתִ֤י אֽוֹ בָ/עֵ֨רֶב֙
+│   │           │   ├── [8] בַּ֠/בֶּגֶד (telisha gedola, rank=4)
+│   │           │   └── PHRASE (4-ary 4w) אֽוֹ בַ/שְּׁתִ֤י אֽוֹ בָ/עֵ֨רֶב֙
+│   │           │       ├── [9] אֽוֹ (no cantillation mark — bind as conjunctive, rank=9)
+│   │           │       ├── [10] בַ/שְּׁתִ֤י (mahpach (conjunctive), rank=9)
+│   │           │       ├── [11] אֽוֹ (no cantillation mark — bind as conjunctive, rank=9)
+│   │           │       └── [12] בָ/עֵ֨רֶב֙ (pashta, rank=3)
+│   │           └── PHRASE (binary 2w) א֣וֹ בָ/ע֔וֹר
+│   │               ├── [13] א֣וֹ (munach (conjunctive), rank=9)
+│   │               └── [14] בָ/ע֔וֹר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) לְ/כֹ֛ל אֲשֶׁר יֵעָשֶׂ֥ה הָ/ע֖וֹר לִ/מְלָאכָ֑ה
+│       ├── PHRASE (binary 4w) לְ/כֹ֛ל אֲשֶׁר יֵעָשֶׂ֥ה הָ/ע֖וֹר
+│       │   ├── [15] לְ/כֹ֛ל (tevir, rank=3)
+│       │   └── PHRASE (3-ary 3w) אֲשֶׁר יֵעָשֶׂ֥ה הָ/ע֖וֹר
+│       │       ├── [16] אֲשֶׁר (no cantillation mark — bind as conjunctive, rank=9)
+│       │       ├── [17] יֵעָשֶׂ֥ה (mercha (conjunctive), rank=9)
+│       │       └── [18] הָ/ע֖וֹר (tifcha, rank=2)
+│       └── [19] לִ/מְלָאכָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) צָרַ֧עַת מַמְאֶ֛רֶת הַ/נֶּ֖גַע טָמֵ֥א הֽוּא
+    ├── PHRASE (binary 3w) צָרַ֧עַת מַמְאֶ֛רֶת הַ/נֶּ֖גַע
+    │   ├── PHRASE (binary 2w) צָרַ֧עַת מַמְאֶ֛רֶת
+    │   │   ├── [20] צָרַ֧עַת (darga (conjunctive), rank=9)
+    │   │   └── [21] מַמְאֶ֛רֶת (tevir, rank=3)
+    │   └── [22] הַ/נֶּ֖גַע (tifcha, rank=2)
+    └── PHRASE (binary 2w) טָמֵ֥א הֽוּא
+        ├── [23] טָמֵ֥א (mercha (conjunctive), rank=9)
+        └── [24] הֽוּא (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.52 · parser unique · 27 words</h3>
+<div class="meta"><span class="he">ושרף את הבגד או את השתי או את הערב בצמר או בפשתים או את כל כלי העור אשר יהיה בו הנגע כי צרעת ממארת הוא באש תשרף</span> · <i>vshrp &#x27;t hbgd &#x27;v &#x27;t hshty &#x27;v &#x27;t h&#x27;rb btzmr &#x27;v bpshtym &#x27;v &#x27;t kl kly h&#x27;vr &#x27;shr yhyh bv hng&#x27; ky tzr&#x27;t mm&#x27;rt hv&#x27; b&#x27;sh tshrp</i> · Free gloss — structure from Hebrew tree. 13:52.</div>
+<pre>PHRASE (binary 27w) וְ/שָׂרַ֨ף אֶת הַ/בֶּ֜גֶד א֥וֹ אֶֽת הַ/שְּׁתִ֣י…
+├── PHRASE (binary 21w) וְ/שָׂרַ֨ף אֶת הַ/בֶּ֜גֶד א֥וֹ אֶֽת הַ/שְּׁתִ֣י…
+│   ├── PHRASE (binary 12w) וְ/שָׂרַ֨ף אֶת הַ/בֶּ֜גֶד א֥וֹ אֶֽת הַ/שְּׁתִ֣י…
+│   │   ├── PHRASE (binary 9w) וְ/שָׂרַ֨ף אֶת הַ/בֶּ֜גֶד א֥וֹ אֶֽת הַ/שְּׁתִ֣י…
+│   │   │   ├── PHRASE (3-ary 3w) וְ/שָׂרַ֨ף אֶת הַ/בֶּ֜גֶד
+│   │   │   │   ├── [0] וְ/שָׂרַ֨ף (qadma (conjunctive), rank=9)
+│   │   │   │   ├── [1] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │   │   └── [2] הַ/בֶּ֜גֶד (geresh, rank=4)
+│   │   │   └── PHRASE (6-ary 6w) א֥וֹ אֶֽת הַ/שְּׁתִ֣י א֣וֹ אֶת הָ/עֵ֗רֶב
+│   │   │       ├── [3] א֥וֹ (mercha (conjunctive), rank=9)
+│   │   │       ├── [4] אֶֽת (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │       ├── [5] הַ/שְּׁתִ֣י (munach (conjunctive), rank=9)
+│   │   │       ├── [6] א֣וֹ (munach (conjunctive), rank=9)
+│   │   │       ├── [7] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │       └── [8] הָ/עֵ֗רֶב (revia, rank=3)
+│   │   └── PHRASE (binary 3w) בַּ/צֶּ֨מֶר֙ א֣וֹ בַ/פִּשְׁתִּ֔ים
+│   │       ├── [9] בַּ/צֶּ֨מֶר֙ (pashta, rank=3)
+│   │       └── PHRASE (binary 2w) א֣וֹ בַ/פִּשְׁתִּ֔ים
+│   │           ├── [10] א֣וֹ (munach (conjunctive), rank=9)
+│   │           └── [11] בַ/פִּשְׁתִּ֔ים (zaqef qatan, rank=2)
+│   └── PHRASE (binary 9w) א֚וֹ אֶת כָּל כְּלִ֣י הָ/ע֔וֹר אֲשֶׁר יִהְיֶ֥ה …
+│       ├── PHRASE (binary 5w) א֚וֹ אֶת כָּל כְּלִ֣י הָ/ע֔וֹר
+│       │   ├── [12] א֚וֹ (yetiv, rank=3)
+│       │   └── PHRASE (4-ary 4w) אֶת כָּל כְּלִ֣י הָ/ע֔וֹר
+│       │       ├── [13] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│       │       ├── [14] כָּל (no cantillation mark — bind as conjunctive, rank=9)
+│       │       ├── [15] כְּלִ֣י (munach (conjunctive), rank=9)
+│       │       └── [16] הָ/ע֔וֹר (zaqef qatan, rank=2)
+│       └── PHRASE (binary 4w) אֲשֶׁר יִהְיֶ֥ה ב֖/וֹ הַ/נָּ֑גַע
+│           ├── PHRASE (3-ary 3w) אֲשֶׁר יִהְיֶ֥ה ב֖/וֹ
+│           │   ├── [17] אֲשֶׁר (no cantillation mark — bind as conjunctive, rank=9)
+│           │   ├── [18] יִהְיֶ֥ה (mercha (conjunctive), rank=9)
+│           │   └── [19] ב֖/וֹ (tifcha, rank=2)
+│           └── [20] הַ/נָּ֑גַע (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) כִּֽי צָרַ֤עַת מַמְאֶ֨רֶת֙ הִ֔וא בָּ/אֵ֖שׁ תִּש…
+    ├── PHRASE (binary 4w) כִּֽי צָרַ֤עַת מַמְאֶ֨רֶת֙ הִ֔וא
+    │   ├── PHRASE (3-ary 3w) כִּֽי צָרַ֤עַת מַמְאֶ֨רֶת֙
+    │   │   ├── [21] כִּֽי (no cantillation mark — bind as conjunctive, rank=9)
+    │   │   ├── [22] צָרַ֤עַת (mahpach (conjunctive), rank=9)
+    │   │   └── [23] מַמְאֶ֨רֶת֙ (pashta, rank=3)
+    │   └── [24] הִ֔וא (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) בָּ/אֵ֖שׁ תִּשָּׂרֵֽף
+        ├── [25] בָּ/אֵ֖שׁ (tifcha, rank=2)
+        └── [26] תִּשָּׂרֵֽף (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.53 · parser unique · 16 words</h3>
+<div class="meta"><span class="he">ואם יראה הכהן והנה לא פשה הנגע בבגד או בשתי או בערב או בכל כלי עור</span> · <i>v&#x27;m yr&#x27;h hkhn vhnh l&#x27; pshh hng&#x27; bbgd &#x27;v bshty &#x27;v b&#x27;rb &#x27;v bkl kly &#x27;vr</i> · Free gloss — structure from Hebrew tree. 13:53.</div>
+<pre>PHRASE (binary 16w) וְ/אִם֮ יִרְאֶ֣ה הַ/כֹּהֵן֒ וְ/הִנֵּה֙ לֹא פָשׂ…
+├── PHRASE (binary 12w) וְ/אִם֮ יִרְאֶ֣ה הַ/כֹּהֵן֒ וְ/הִנֵּה֙ לֹא פָשׂ…
+│   ├── PHRASE (binary 3w) וְ/אִם֮ יִרְאֶ֣ה הַ/כֹּהֵן֒
+│   │   ├── [0] וְ/אִם֮ (zinor (poetic cousin; rare in prose), rank=3)
+│   │   └── PHRASE (binary 2w) יִרְאֶ֣ה הַ/כֹּהֵן֒
+│   │       ├── [1] יִרְאֶ֣ה (munach (conjunctive), rank=9)
+│   │       └── [2] הַ/כֹּהֵן֒ (segol, rank=2)
+│   └── PHRASE (binary 9w) וְ/הִנֵּה֙ לֹא פָשָׂ֣ה הַ/נֶּ֔גַע בַּ/בֶּ֕גֶד א…
+│       ├── PHRASE (binary 4w) וְ/הִנֵּה֙ לֹא פָשָׂ֣ה הַ/נֶּ֔גַע
+│       │   ├── [3] וְ/הִנֵּה֙ (pashta, rank=3)
+│       │   └── PHRASE (3-ary 3w) לֹא פָשָׂ֣ה הַ/נֶּ֔גַע
+│       │       ├── [4] לֹא (no cantillation mark — bind as conjunctive, rank=9)
+│       │       ├── [5] פָשָׂ֣ה (munach (conjunctive), rank=9)
+│       │       └── [6] הַ/נֶּ֔גַע (zaqef qatan, rank=2)
+│       └── PHRASE (binary 5w) בַּ/בֶּ֕גֶד א֥וֹ בַ/שְּׁתִ֖י א֣וֹ בָ/עֵ֑רֶב
+│           ├── [7] בַּ/בֶּ֕גֶד (zaqef gadol, rank=2)
+│           └── PHRASE (binary 4w) א֥וֹ בַ/שְּׁתִ֖י א֣וֹ בָ/עֵ֑רֶב
+│               ├── PHRASE (binary 2w) א֥וֹ בַ/שְּׁתִ֖י
+│               │   ├── [8] א֥וֹ (mercha (conjunctive), rank=9)
+│               │   └── [9] בַ/שְּׁתִ֖י (tifcha, rank=2)
+│               └── PHRASE (binary 2w) א֣וֹ בָ/עֵ֑רֶב
+│                   ├── [10] א֣וֹ (munach (conjunctive), rank=9)
+│                   └── [11] בָ/עֵ֑רֶב (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) א֖וֹ בְּ/כָל כְּלִי עֽוֹר
+    ├── [12] א֖וֹ (tifcha, rank=2)
+    └── PHRASE (3-ary 3w) בְּ/כָל כְּלִי עֽוֹר
+        ├── [13] בְּ/כָל (no cantillation mark — bind as conjunctive, rank=9)
+        ├── [14] כְּלִי (no cantillation mark — bind as conjunctive, rank=9)
+        └── [15] עֽוֹר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.54 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">וצוה הכהן וכבסו את אשר בו הנגע והסגירו שבעת ימים שנית</span> · <i>vtzvh hkhn vkbsv &#x27;t &#x27;shr bv hng&#x27; vhsgyrv shb&#x27;t ymym shnyt</i> · Free gloss — structure from Hebrew tree. 13:54.</div>
+<pre>PHRASE (binary 11w) וְ/צִוָּה֙ הַ/כֹּהֵ֔ן וְ/כִ֨בְּס֔וּ אֵ֥ת אֲשֶׁר…
+├── PHRASE (binary 7w) וְ/צִוָּה֙ הַ/כֹּהֵ֔ן וְ/כִ֨בְּס֔וּ אֵ֥ת אֲשֶׁר…
+│   ├── PHRASE (binary 2w) וְ/צִוָּה֙ הַ/כֹּהֵ֔ן
+│   │   ├── [0] וְ/צִוָּה֙ (pashta, rank=3)
+│   │   └── [1] הַ/כֹּהֵ֔ן (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וְ/כִ֨בְּס֔וּ אֵ֥ת אֲשֶׁר בּ֖/וֹ הַ/נָּ֑גַע
+│       ├── [2] וְ/כִ֨בְּס֔וּ (zaqef qatan, rank=2)
+│       └── PHRASE (binary 4w) אֵ֥ת אֲשֶׁר בּ֖/וֹ הַ/נָּ֑גַע
+│           ├── PHRASE (3-ary 3w) אֵ֥ת אֲשֶׁר בּ֖/וֹ
+│           │   ├── [3] אֵ֥ת (mercha (conjunctive), rank=9)
+│           │   ├── [4] אֲשֶׁר (no cantillation mark — bind as conjunctive, rank=9)
+│           │   └── [5] בּ֖/וֹ (tifcha, rank=2)
+│           └── [6] הַ/נָּ֑גַע (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/הִסְגִּיר֥/וֹ שִׁבְעַת יָמִ֖ים שֵׁנִֽית
+    ├── PHRASE (3-ary 3w) וְ/הִסְגִּיר֥/וֹ שִׁבְעַת יָמִ֖ים
+    │   ├── [7] וְ/הִסְגִּיר֥/וֹ (mercha (conjunctive), rank=9)
+    │   ├── [8] שִׁבְעַת (no cantillation mark — bind as conjunctive, rank=9)
+    │   └── [9] יָמִ֖ים (tifcha, rank=2)
+    └── [10] שֵׁנִֽית (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.55 · parser unique · 24 words</h3>
+<div class="meta"><span class="he">וראה הכהן אחרי הכבס את הנגע והנה לא הפך הנגע את עינו והנגע לא פשה טמא הוא באש תשרפנו פחתת הוא בקרחתו או בגבחתו</span> · <i>vr&#x27;h hkhn &#x27;chry hkbs &#x27;t hng&#x27; vhnh l&#x27; hpk hng&#x27; &#x27;t &#x27;ynv vhng&#x27; l&#x27; pshh tm&#x27; hv&#x27; b&#x27;sh tshrpnv pchtt hv&#x27; bqrchtv &#x27;v bgbchtv</i> · Free gloss — structure from Hebrew tree. 13:55.</div>
+<pre>PHRASE (binary 24w) וְ/רָאָ֨ה הַ/כֹּהֵ֜ן אַחֲרֵ֣י הֻכַּבֵּ֣ס אֶת הַ…
+├── PHRASE (binary 19w) וְ/רָאָ֨ה הַ/כֹּהֵ֜ן אַחֲרֵ֣י הֻכַּבֵּ֣ס אֶת הַ…
+│   ├── PHRASE (binary 15w) וְ/רָאָ֨ה הַ/כֹּהֵ֜ן אַחֲרֵ֣י הֻכַּבֵּ֣ס אֶת הַ…
+│   │   ├── PHRASE (binary 6w) וְ/רָאָ֨ה הַ/כֹּהֵ֜ן אַחֲרֵ֣י הֻכַּבֵּ֣ס אֶת הַ…
+│   │   │   ├── PHRASE (binary 2w) וְ/רָאָ֨ה הַ/כֹּהֵ֜ן
+│   │   │   │   ├── [0] וְ/רָאָ֨ה (qadma (conjunctive), rank=9)
+│   │   │   │   └── [1] הַ/כֹּהֵ֜ן (geresh, rank=4)
+│   │   │   └── PHRASE (4-ary 4w) אַחֲרֵ֣י הֻכַּבֵּ֣ס אֶת הַ/נֶּ֗גַע
+│   │   │       ├── [2] אַחֲרֵ֣י (munach (conjunctive), rank=9)
+│   │   │       ├── [3] הֻכַּבֵּ֣ס (munach (conjunctive), rank=9)
+│   │   │       ├── [4] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │       └── [5] הַ/נֶּ֗גַע (revia, rank=3)
+│   │   └── PHRASE (binary 9w) וְ֠/הִנֵּה לֹֽא הָפַ֨ךְ הַ/נֶּ֤גַע אֶת עֵינ/וֹ֙…
+│   │       ├── PHRASE (binary 6w) וְ֠/הִנֵּה לֹֽא הָפַ֨ךְ הַ/נֶּ֤גַע אֶת עֵינ/וֹ֙
+│   │       │   ├── [6] וְ֠/הִנֵּה (telisha gedola, rank=4)
+│   │       │   └── PHRASE (5-ary 5w) לֹֽא הָפַ֨ךְ הַ/נֶּ֤גַע אֶת עֵינ/וֹ֙
+│   │       │       ├── [7] לֹֽא (no cantillation mark — bind as conjunctive, rank=9)
+│   │       │       ├── [8] הָפַ֨ךְ (qadma (conjunctive), rank=9)
+│   │       │       ├── [9] הַ/נֶּ֤גַע (mahpach (conjunctive), rank=9)
+│   │       │       ├── [10] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│   │       │       └── [11] עֵינ/וֹ֙ (pashta, rank=3)
+│   │       └── PHRASE (3-ary 3w) וְ/הַ/נֶּ֣גַע לֹֽא פָשָׂ֔ה
+│   │           ├── [12] וְ/הַ/נֶּ֣גַע (munach (conjunctive), rank=9)
+│   │           ├── [13] לֹֽא (no cantillation mark — bind as conjunctive, rank=9)
+│   │           └── [14] פָשָׂ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) טָמֵ֣א ה֔וּא בָּ/אֵ֖שׁ תִּשְׂרְפֶ֑/נּוּ
+│       ├── PHRASE (binary 2w) טָמֵ֣א ה֔וּא
+│       │   ├── [15] טָמֵ֣א (munach (conjunctive), rank=9)
+│       │   └── [16] ה֔וּא (zaqef qatan, rank=2)
+│       └── PHRASE (binary 2w) בָּ/אֵ֖שׁ תִּשְׂרְפֶ֑/נּוּ
+│           ├── [17] בָּ/אֵ֖שׁ (tifcha, rank=2)
+│           └── [18] תִּשְׂרְפֶ֑/נּוּ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) פְּחֶ֣תֶת הִ֔וא בְּ/קָרַחְתּ֖/וֹ א֥וֹ בְ/גַבַּח…
+    ├── PHRASE (binary 2w) פְּחֶ֣תֶת הִ֔וא
+    │   ├── [19] פְּחֶ֣תֶת (munach (conjunctive), rank=9)
+    │   └── [20] הִ֔וא (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) בְּ/קָרַחְתּ֖/וֹ א֥וֹ בְ/גַבַּחְתּֽ/וֹ
+        ├── [21] בְּ/קָרַחְתּ֖/וֹ (tifcha, rank=2)
+        └── PHRASE (binary 2w) א֥וֹ בְ/גַבַּחְתּֽ/וֹ
+            ├── [22] א֥וֹ (mercha (conjunctive), rank=9)
+            └── [23] בְ/גַבַּחְתּֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.56 · parser unique · 22 words</h3>
+<div class="meta"><span class="he">ואם ראה הכהן והנה כהה הנגע אחרי הכבס אתו וקרע אתו מן הבגד או מן העור או מן השתי או מן הערב</span> · <i>v&#x27;m r&#x27;h hkhn vhnh khh hng&#x27; &#x27;chry hkbs &#x27;tv vqr&#x27; &#x27;tv mn hbgd &#x27;v mn h&#x27;vr &#x27;v mn hshty &#x27;v mn h&#x27;rb</i> · Free gloss — structure from Hebrew tree. 13:56.</div>
+<pre>PHRASE (binary 22w) וְ/אִם֮ רָאָ֣ה הַ/כֹּהֵן֒ וְ/הִנֵּה֙ כֵּהָ֣ה הַ…
+├── PHRASE (binary 9w) וְ/אִם֮ רָאָ֣ה הַ/כֹּהֵן֒ וְ/הִנֵּה֙ כֵּהָ֣ה הַ…
+│   ├── PHRASE (binary 3w) וְ/אִם֮ רָאָ֣ה הַ/כֹּהֵן֒
+│   │   ├── [0] וְ/אִם֮ (zinor (poetic cousin; rare in prose), rank=3)
+│   │   └── PHRASE (binary 2w) רָאָ֣ה הַ/כֹּהֵן֒
+│   │       ├── [1] רָאָ֣ה (munach (conjunctive), rank=9)
+│   │       └── [2] הַ/כֹּהֵן֒ (segol, rank=2)
+│   └── PHRASE (binary 6w) וְ/הִנֵּה֙ כֵּהָ֣ה הַ/נֶּ֔גַע אַחֲרֵ֖י הֻכַּבֵּ…
+│       ├── PHRASE (binary 3w) וְ/הִנֵּה֙ כֵּהָ֣ה הַ/נֶּ֔גַע
+│       │   ├── [3] וְ/הִנֵּה֙ (pashta, rank=3)
+│       │   └── PHRASE (binary 2w) כֵּהָ֣ה הַ/נֶּ֔גַע
+│       │       ├── [4] כֵּהָ֣ה (munach (conjunctive), rank=9)
+│       │       └── [5] הַ/נֶּ֔גַע (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) אַחֲרֵ֖י הֻכַּבֵּ֣ס אֹת֑/וֹ
+│           ├── [6] אַחֲרֵ֖י (tifcha, rank=2)
+│           └── PHRASE (binary 2w) הֻכַּבֵּ֣ס אֹת֑/וֹ
+│               ├── [7] הֻכַּבֵּ֣ס (munach (conjunctive), rank=9)
+│               └── [8] אֹת֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 13w) וְ/קָרַ֣ע אֹת֗/וֹ מִן הַ/בֶּ֨גֶד֙ א֣וֹ מִן הָ/ע…
+    ├── PHRASE (binary 7w) וְ/קָרַ֣ע אֹת֗/וֹ מִן הַ/בֶּ֨גֶד֙ א֣וֹ מִן הָ/ע…
+    │   ├── PHRASE (binary 2w) וְ/קָרַ֣ע אֹת֗/וֹ
+    │   │   ├── [9] וְ/קָרַ֣ע (munach (conjunctive), rank=9)
+    │   │   └── [10] אֹת֗/וֹ (revia, rank=3)
+    │   └── PHRASE (binary 5w) מִן הַ/בֶּ֨גֶד֙ א֣וֹ מִן הָ/ע֔וֹר
+    │       ├── PHRASE (binary 2w) מִן הַ/בֶּ֨גֶד֙
+    │       │   ├── [11] מִן (no cantillation mark — bind as conjunctive, rank=9)
+    │       │   └── [12] הַ/בֶּ֨גֶד֙ (pashta, rank=3)
+    │       └── PHRASE (3-ary 3w) א֣וֹ מִן הָ/ע֔וֹר
+    │           ├── [13] א֣וֹ (munach (conjunctive), rank=9)
+    │           ├── [14] מִן (no cantillation mark — bind as conjunctive, rank=9)
+    │           └── [15] הָ/ע֔וֹר (zaqef qatan, rank=2)
+    └── PHRASE (binary 6w) א֥וֹ מִן הַ/שְּׁתִ֖י א֥וֹ מִן הָ/עֵֽרֶב
+        ├── PHRASE (3-ary 3w) א֥וֹ מִן הַ/שְּׁתִ֖י
+        │   ├── [16] א֥וֹ (mercha (conjunctive), rank=9)
+        │   ├── [17] מִן (no cantillation mark — bind as conjunctive, rank=9)
+        │   └── [18] הַ/שְּׁתִ֖י (tifcha, rank=2)
+        └── PHRASE (3-ary 3w) א֥וֹ מִן הָ/עֵֽרֶב
+            ├── [19] א֥וֹ (mercha (conjunctive), rank=9)
+            ├── [20] מִן (no cantillation mark — bind as conjunctive, rank=9)
+            └── [21] הָ/עֵֽרֶב (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.57 · parser unique · 20 words</h3>
+<div class="meta"><span class="he">ואם תראה עוד בבגד או בשתי או בערב או בכל כלי עור פרחת הוא באש תשרפנו את אשר בו הנגע</span> · <i>v&#x27;m tr&#x27;h &#x27;vd bbgd &#x27;v bshty &#x27;v b&#x27;rb &#x27;v bkl kly &#x27;vr prcht hv&#x27; b&#x27;sh tshrpnv &#x27;t &#x27;shr bv hng&#x27;</i> · Free gloss — structure from Hebrew tree. 13:57.</div>
+<pre>PHRASE (binary 20w) וְ/אִם תֵּרָאֶ֨ה ע֜וֹד בַּ֠/בֶּגֶד אֽוֹ בַ/שְּׁ…
+├── PHRASE (binary 14w) וְ/אִם תֵּרָאֶ֨ה ע֜וֹד בַּ֠/בֶּגֶד אֽוֹ בַ/שְּׁ…
+│   ├── PHRASE (binary 12w) וְ/אִם תֵּרָאֶ֨ה ע֜וֹד בַּ֠/בֶּגֶד אֽוֹ בַ/שְּׁ…
+│   │   ├── PHRASE (binary 8w) וְ/אִם תֵּרָאֶ֨ה ע֜וֹד בַּ֠/בֶּגֶד אֽוֹ בַ/שְּׁ…
+│   │   │   ├── PHRASE (3-ary 3w) וְ/אִם תֵּרָאֶ֨ה ע֜וֹד
+│   │   │   │   ├── [0] וְ/אִם (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │   │   ├── [1] תֵּרָאֶ֨ה (qadma (conjunctive), rank=9)
+│   │   │   │   └── [2] ע֜וֹד (geresh, rank=4)
+│   │   │   └── PHRASE (binary 5w) בַּ֠/בֶּגֶד אֽוֹ בַ/שְּׁתִ֤י אֽוֹ בָ/עֵ֨רֶב֙
+│   │   │       ├── [3] בַּ֠/בֶּגֶד (telisha gedola, rank=4)
+│   │   │       └── PHRASE (4-ary 4w) אֽוֹ בַ/שְּׁתִ֤י אֽוֹ בָ/עֵ֨רֶב֙
+│   │   │           ├── [4] אֽוֹ (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │           ├── [5] בַ/שְּׁתִ֤י (mahpach (conjunctive), rank=9)
+│   │   │           ├── [6] אֽוֹ (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │           └── [7] בָ/עֵ֨רֶב֙ (pashta, rank=3)
+│   │   └── PHRASE (4-ary 4w) א֣וֹ בְ/כָל כְּלִי ע֔וֹר
+│   │       ├── [8] א֣וֹ (munach (conjunctive), rank=9)
+│   │       ├── [9] בְ/כָל (no cantillation mark — bind as conjunctive, rank=9)
+│   │       ├── [10] כְּלִי (no cantillation mark — bind as conjunctive, rank=9)
+│   │       └── [11] ע֔וֹר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) פֹּרַ֖חַת הִ֑וא
+│       ├── [12] פֹּרַ֖חַת (tifcha, rank=2)
+│       └── [13] הִ֑וא (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) בָּ/אֵ֣שׁ תִּשְׂרְפֶ֔/נּוּ אֵ֥ת אֲשֶׁר בּ֖/וֹ ה…
+    ├── PHRASE (binary 2w) בָּ/אֵ֣שׁ תִּשְׂרְפֶ֔/נּוּ
+    │   ├── [14] בָּ/אֵ֣שׁ (munach (conjunctive), rank=9)
+    │   └── [15] תִּשְׂרְפֶ֔/נּוּ (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) אֵ֥ת אֲשֶׁר בּ֖/וֹ הַ/נָּֽגַע
+        ├── PHRASE (3-ary 3w) אֵ֥ת אֲשֶׁר בּ֖/וֹ
+        │   ├── [16] אֵ֥ת (mercha (conjunctive), rank=9)
+        │   ├── [17] אֲשֶׁר (no cantillation mark — bind as conjunctive, rank=9)
+        │   └── [18] בּ֖/וֹ (tifcha, rank=2)
+        └── [19] הַ/נָּֽגַע (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.58 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">והבגד או השתי או הערב או כל כלי העור אשר תכבס וסר מהם הנגע וכבס שנית וטהר</span> · <i>vhbgd &#x27;v hshty &#x27;v h&#x27;rb &#x27;v kl kly h&#x27;vr &#x27;shr tkbs vsr mhm hng&#x27; vkbs shnyt vthr</i> · Free gloss — structure from Hebrew tree. 13:58.</div>
+<pre>PHRASE (binary 17w) וְ/הַ/בֶּ֡גֶד אֽוֹ הַ/שְּׁתִ֨י אוֹ הָ/עֵ֜רֶב אֽ…
+├── PHRASE (binary 14w) וְ/הַ/בֶּ֡גֶד אֽוֹ הַ/שְּׁתִ֨י אוֹ הָ/עֵ֜רֶב אֽ…
+│   ├── PHRASE (binary 11w) וְ/הַ/בֶּ֡גֶד אֽוֹ הַ/שְּׁתִ֨י אוֹ הָ/עֵ֜רֶב אֽ…
+│   │   ├── PHRASE (binary 9w) וְ/הַ/בֶּ֡גֶד אֽוֹ הַ/שְּׁתִ֨י אוֹ הָ/עֵ֜רֶב אֽ…
+│   │   │   ├── [0] וְ/הַ/בֶּ֡גֶד (pazer, rank=4)
+│   │   │   └── PHRASE (binary 8w) אֽוֹ הַ/שְּׁתִ֨י אוֹ הָ/עֵ֜רֶב אֽוֹ כָל כְּלִ֤י…
+│   │   │       ├── PHRASE (4-ary 4w) אֽוֹ הַ/שְּׁתִ֨י אוֹ הָ/עֵ֜רֶב
+│   │   │       │   ├── [1] אֽוֹ (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │       │   ├── [2] הַ/שְּׁתִ֨י (qadma (conjunctive), rank=9)
+│   │   │       │   ├── [3] אוֹ (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │       │   └── [4] הָ/עֵ֜רֶב (geresh, rank=4)
+│   │   │       └── PHRASE (4-ary 4w) אֽוֹ כָל כְּלִ֤י הָ/עוֹר֙
+│   │   │           ├── [5] אֽוֹ (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │           ├── [6] כָל (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │           ├── [7] כְּלִ֤י (mahpach (conjunctive), rank=9)
+│   │   │           └── [8] הָ/עוֹר֙ (pashta, rank=3)
+│   │   └── PHRASE (binary 2w) אֲשֶׁ֣ר תְּכַבֵּ֔ס
+│   │       ├── [9] אֲשֶׁ֣ר (munach (conjunctive), rank=9)
+│   │       └── [10] תְּכַבֵּ֔ס (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וְ/סָ֥ר מֵ/הֶ֖ם הַ/נָּ֑גַע
+│       ├── PHRASE (binary 2w) וְ/סָ֥ר מֵ/הֶ֖ם
+│       │   ├── [11] וְ/סָ֥ר (mercha (conjunctive), rank=9)
+│       │   └── [12] מֵ/הֶ֖ם (tifcha, rank=2)
+│       └── [13] הַ/נָּ֑גַע (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וְ/כֻבַּ֥ס שֵׁנִ֖ית וְ/טָהֵֽר
+    ├── PHRASE (binary 2w) וְ/כֻבַּ֥ס שֵׁנִ֖ית
+    │   ├── [14] וְ/כֻבַּ֥ס (mercha (conjunctive), rank=9)
+    │   └── [15] שֵׁנִ֖ית (tifcha, rank=2)
+    └── [16] וְ/טָהֵֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.59 · parser unique · 19 words</h3>
+<div class="meta"><span class="he">זאת תורת נגע צרעת בגד הצמר או הפשתים או השתי או הערב או כל כלי עור לטהרו או לטמאו</span> · <i>z&#x27;t tvrt ng&#x27; tzr&#x27;t bgd htzmr &#x27;v hpshtym &#x27;v hshty &#x27;v h&#x27;rb &#x27;v kl kly &#x27;vr lthrv &#x27;v ltm&#x27;v</i> · Free gloss — structure from Hebrew tree. 13:59.</div>
+<pre>PHRASE (binary 19w) זֹ֠את תּוֹרַ֨ת נֶֽגַע צָרַ֜עַת בֶּ֥גֶד הַ/צֶּ֣מ…
+├── PHRASE (binary 16w) זֹ֠את תּוֹרַ֨ת נֶֽגַע צָרַ֜עַת בֶּ֥גֶד הַ/צֶּ֣מ…
+│   ├── PHRASE (binary 12w) זֹ֠את תּוֹרַ֨ת נֶֽגַע צָרַ֜עַת בֶּ֥גֶד הַ/צֶּ֣מ…
+│   │   ├── PHRASE (binary 8w) זֹ֠את תּוֹרַ֨ת נֶֽגַע צָרַ֜עַת בֶּ֥גֶד הַ/צֶּ֣מ…
+│   │   │   ├── [0] זֹ֠את (telisha gedola, rank=4)
+│   │   │   └── PHRASE (binary 7w) תּוֹרַ֨ת נֶֽגַע צָרַ֜עַת בֶּ֥גֶד הַ/צֶּ֣מֶר א֣ו…
+│   │   │       ├── PHRASE (3-ary 3w) תּוֹרַ֨ת נֶֽגַע צָרַ֜עַת
+│   │   │       │   ├── [1] תּוֹרַ֨ת (qadma (conjunctive), rank=9)
+│   │   │       │   ├── [2] נֶֽגַע (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │       │   └── [3] צָרַ֜עַת (geresh, rank=4)
+│   │   │       └── PHRASE (4-ary 4w) בֶּ֥גֶד הַ/צֶּ֣מֶר א֣וֹ הַ/פִּשְׁתִּ֗ים
+│   │   │           ├── [4] בֶּ֥גֶד (mercha (conjunctive), rank=9)
+│   │   │           ├── [5] הַ/צֶּ֣מֶר (munach (conjunctive), rank=9)
+│   │   │           ├── [6] א֣וֹ (munach (conjunctive), rank=9)
+│   │   │           └── [7] הַ/פִּשְׁתִּ֗ים (revia, rank=3)
+│   │   └── PHRASE (binary 4w) א֤וֹ הַ/שְּׁתִי֙ א֣וֹ הָ/עֵ֔רֶב
+│   │       ├── PHRASE (binary 2w) א֤וֹ הַ/שְּׁתִי֙
+│   │       │   ├── [8] א֤וֹ (mahpach (conjunctive), rank=9)
+│   │       │   └── [9] הַ/שְּׁתִי֙ (pashta, rank=3)
+│   │       └── PHRASE (binary 2w) א֣וֹ הָ/עֵ֔רֶב
+│   │           ├── [10] א֣וֹ (munach (conjunctive), rank=9)
+│   │           └── [11] הָ/עֵ֔רֶב (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) א֖וֹ כָּל כְּלִי ע֑וֹר
+│       ├── [12] א֖וֹ (tifcha, rank=2)
+│       └── PHRASE (3-ary 3w) כָּל כְּלִי ע֑וֹר
+│           ├── [13] כָּל (no cantillation mark — bind as conjunctive, rank=9)
+│           ├── [14] כְּלִי (no cantillation mark — bind as conjunctive, rank=9)
+│           └── [15] ע֑וֹר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) לְ/טַהֲר֖/וֹ א֥וֹ לְ/טַמְּאֽ/וֹ
+    ├── [16] לְ/טַהֲר֖/וֹ (tifcha, rank=2)
+    └── PHRASE (binary 2w) א֥וֹ לְ/טַמְּאֽ/וֹ
+        ├── [17] א֥וֹ (mercha (conjunctive), rank=9)
+        └── [18] לְ/טַמְּאֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 235/235 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Lev.13.47</td><td>0</td><td class='he-cell'>והבגד</td><td>vhbgd</td><td>leaf 0 (והבגד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.47</td><td>1</td><td class='he-cell'>כי</td><td>ky</td><td>leaf 1 (כי)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.47</td><td>2</td><td class='he-cell'>יהיה</td><td>yhyh</td><td>leaf 2 (יהיה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.47</td><td>3</td><td class='he-cell'>בו</td><td>bv</td><td>leaf 3 (בו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.47</td><td>4</td><td class='he-cell'>נגע</td><td>ng&#x27;</td><td>leaf 4 (נגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.47</td><td>5</td><td class='he-cell'>צרעת</td><td>tzr&#x27;t</td><td>leaf 5 (צרעת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.47</td><td>6</td><td class='he-cell'>בבגד</td><td>bbgd</td><td>leaf 6 (בבגד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.47</td><td>7</td><td class='he-cell'>צמר</td><td>tzmr</td><td>leaf 7 (צמר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.47</td><td>8</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 8 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.47</td><td>9</td><td class='he-cell'>בבגד</td><td>bbgd</td><td>leaf 9 (בבגד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.47</td><td>10</td><td class='he-cell'>פשתים</td><td>pshtym</td><td>leaf 10 (פשתים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.48</td><td>0</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 0 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.48</td><td>1</td><td class='he-cell'>בשתי</td><td>bshty</td><td>leaf 1 (בשתי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.48</td><td>2</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 2 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.48</td><td>3</td><td class='he-cell'>בערב</td><td>b&#x27;rb</td><td>leaf 3 (בערב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.48</td><td>4</td><td class='he-cell'>לפשתים</td><td>lpshtym</td><td>leaf 4 (לפשתים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.48</td><td>5</td><td class='he-cell'>ולצמר</td><td>vltzmr</td><td>leaf 5 (ולצמר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.48</td><td>6</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 6 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.48</td><td>7</td><td class='he-cell'>בעור</td><td>b&#x27;vr</td><td>leaf 7 (בעור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.48</td><td>8</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 8 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.48</td><td>9</td><td class='he-cell'>בכל</td><td>bkl</td><td>leaf 9 (בכל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.48</td><td>10</td><td class='he-cell'>מלאכת</td><td>ml&#x27;kt</td><td>leaf 10 (מלאכת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.48</td><td>11</td><td class='he-cell'>עור</td><td>&#x27;vr</td><td>leaf 11 (עור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>0</td><td class='he-cell'>והיה</td><td>vhyh</td><td>leaf 0 (והיה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>1</td><td class='he-cell'>הנגע</td><td>hng&#x27;</td><td>leaf 1 (הנגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>2</td><td class='he-cell'>ירקרק</td><td>yrqrq</td><td>leaf 2 (ירקרק)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>3</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 3 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>4</td><td class='he-cell'>אדמדם</td><td>&#x27;dmdm</td><td>leaf 4 (אדמדם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>5</td><td class='he-cell'>בבגד</td><td>bbgd</td><td>leaf 5 (בבגד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>6</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 6 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>7</td><td class='he-cell'>בעור</td><td>b&#x27;vr</td><td>leaf 7 (בעור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>8</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 8 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>9</td><td class='he-cell'>בשתי</td><td>bshty</td><td>leaf 9 (בשתי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>10</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 10 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>11</td><td class='he-cell'>בערב</td><td>b&#x27;rb</td><td>leaf 11 (בערב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>12</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 12 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>13</td><td class='he-cell'>בכל</td><td>bkl</td><td>leaf 13 (בכל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>14</td><td class='he-cell'>כלי</td><td>kly</td><td>leaf 14 (כלי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>15</td><td class='he-cell'>עור</td><td>&#x27;vr</td><td>leaf 15 (עור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>16</td><td class='he-cell'>נגע</td><td>ng&#x27;</td><td>leaf 16 (נגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>17</td><td class='he-cell'>צרעת</td><td>tzr&#x27;t</td><td>leaf 17 (צרעת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>18</td><td class='he-cell'>הוא</td><td>hv&#x27;</td><td>leaf 18 (הוא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>19</td><td class='he-cell'>והראה</td><td>vhr&#x27;h</td><td>leaf 19 (והראה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>20</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 20 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.49</td><td>21</td><td class='he-cell'>הכהן</td><td>hkhn</td><td>leaf 21 (הכהן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.50</td><td>0</td><td class='he-cell'>וראה</td><td>vr&#x27;h</td><td>leaf 0 (וראה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.50</td><td>1</td><td class='he-cell'>הכהן</td><td>hkhn</td><td>leaf 1 (הכהן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.50</td><td>2</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 2 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.50</td><td>3</td><td class='he-cell'>הנגע</td><td>hng&#x27;</td><td>leaf 3 (הנגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.50</td><td>4</td><td class='he-cell'>והסגיר</td><td>vhsgyr</td><td>leaf 4 (והסגיר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.50</td><td>5</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 5 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.50</td><td>6</td><td class='he-cell'>הנגע</td><td>hng&#x27;</td><td>leaf 6 (הנגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.50</td><td>7</td><td class='he-cell'>שבעת</td><td>shb&#x27;t</td><td>leaf 7 (שבעת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.50</td><td>8</td><td class='he-cell'>ימים</td><td>ymym</td><td>leaf 8 (ימים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>0</td><td class='he-cell'>וראה</td><td>vr&#x27;h</td><td>leaf 0 (וראה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>1</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 1 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>2</td><td class='he-cell'>הנגע</td><td>hng&#x27;</td><td>leaf 2 (הנגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>3</td><td class='he-cell'>ביום</td><td>byvm</td><td>leaf 3 (ביום)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>4</td><td class='he-cell'>השביעי</td><td>hshby&#x27;y</td><td>leaf 4 (השביעי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>5</td><td class='he-cell'>כי</td><td>ky</td><td>leaf 5 (כי)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>6</td><td class='he-cell'>פשה</td><td>pshh</td><td>leaf 6 (פשה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>7</td><td class='he-cell'>הנגע</td><td>hng&#x27;</td><td>leaf 7 (הנגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>8</td><td class='he-cell'>בבגד</td><td>bbgd</td><td>leaf 8 (בבגד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>9</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 9 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>10</td><td class='he-cell'>בשתי</td><td>bshty</td><td>leaf 10 (בשתי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>11</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 11 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>12</td><td class='he-cell'>בערב</td><td>b&#x27;rb</td><td>leaf 12 (בערב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>13</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 13 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>14</td><td class='he-cell'>בעור</td><td>b&#x27;vr</td><td>leaf 14 (בעור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>15</td><td class='he-cell'>לכל</td><td>lkl</td><td>leaf 15 (לכל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>16</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 16 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>17</td><td class='he-cell'>יעשה</td><td>y&#x27;shh</td><td>leaf 17 (יעשה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>18</td><td class='he-cell'>העור</td><td>h&#x27;vr</td><td>leaf 18 (העור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>19</td><td class='he-cell'>למלאכה</td><td>lml&#x27;kh</td><td>leaf 19 (למלאכה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>20</td><td class='he-cell'>צרעת</td><td>tzr&#x27;t</td><td>leaf 20 (צרעת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>21</td><td class='he-cell'>ממארת</td><td>mm&#x27;rt</td><td>leaf 21 (ממארת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>22</td><td class='he-cell'>הנגע</td><td>hng&#x27;</td><td>leaf 22 (הנגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>23</td><td class='he-cell'>טמא</td><td>tm&#x27;</td><td>leaf 23 (טמא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.51</td><td>24</td><td class='he-cell'>הוא</td><td>hv&#x27;</td><td>leaf 24 (הוא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>0</td><td class='he-cell'>ושרף</td><td>vshrp</td><td>leaf 0 (ושרף)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>1</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 1 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>2</td><td class='he-cell'>הבגד</td><td>hbgd</td><td>leaf 2 (הבגד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>3</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 3 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>4</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 4 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>5</td><td class='he-cell'>השתי</td><td>hshty</td><td>leaf 5 (השתי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>6</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 6 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>7</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 7 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>8</td><td class='he-cell'>הערב</td><td>h&#x27;rb</td><td>leaf 8 (הערב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>9</td><td class='he-cell'>בצמר</td><td>btzmr</td><td>leaf 9 (בצמר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>10</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 10 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>11</td><td class='he-cell'>בפשתים</td><td>bpshtym</td><td>leaf 11 (בפשתים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>12</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 12 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>13</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 13 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>14</td><td class='he-cell'>כל</td><td>kl</td><td>leaf 14 (כל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>15</td><td class='he-cell'>כלי</td><td>kly</td><td>leaf 15 (כלי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>16</td><td class='he-cell'>העור</td><td>h&#x27;vr</td><td>leaf 16 (העור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>17</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 17 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>18</td><td class='he-cell'>יהיה</td><td>yhyh</td><td>leaf 18 (יהיה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>19</td><td class='he-cell'>בו</td><td>bv</td><td>leaf 19 (בו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>20</td><td class='he-cell'>הנגע</td><td>hng&#x27;</td><td>leaf 20 (הנגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>21</td><td class='he-cell'>כי</td><td>ky</td><td>leaf 21 (כי)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>22</td><td class='he-cell'>צרעת</td><td>tzr&#x27;t</td><td>leaf 22 (צרעת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>23</td><td class='he-cell'>ממארת</td><td>mm&#x27;rt</td><td>leaf 23 (ממארת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>24</td><td class='he-cell'>הוא</td><td>hv&#x27;</td><td>leaf 24 (הוא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>25</td><td class='he-cell'>באש</td><td>b&#x27;sh</td><td>leaf 25 (באש)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.52</td><td>26</td><td class='he-cell'>תשרף</td><td>tshrp</td><td>leaf 26 (תשרף)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>0</td><td class='he-cell'>ואם</td><td>v&#x27;m</td><td>leaf 0 (ואם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>1</td><td class='he-cell'>יראה</td><td>yr&#x27;h</td><td>leaf 1 (יראה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>2</td><td class='he-cell'>הכהן</td><td>hkhn</td><td>leaf 2 (הכהן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>3</td><td class='he-cell'>והנה</td><td>vhnh</td><td>leaf 3 (והנה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>4</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 4 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>5</td><td class='he-cell'>פשה</td><td>pshh</td><td>leaf 5 (פשה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>6</td><td class='he-cell'>הנגע</td><td>hng&#x27;</td><td>leaf 6 (הנגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>7</td><td class='he-cell'>בבגד</td><td>bbgd</td><td>leaf 7 (בבגד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>8</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 8 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>9</td><td class='he-cell'>בשתי</td><td>bshty</td><td>leaf 9 (בשתי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>10</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 10 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>11</td><td class='he-cell'>בערב</td><td>b&#x27;rb</td><td>leaf 11 (בערב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>12</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 12 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>13</td><td class='he-cell'>בכל</td><td>bkl</td><td>leaf 13 (בכל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>14</td><td class='he-cell'>כלי</td><td>kly</td><td>leaf 14 (כלי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.53</td><td>15</td><td class='he-cell'>עור</td><td>&#x27;vr</td><td>leaf 15 (עור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.54</td><td>0</td><td class='he-cell'>וצוה</td><td>vtzvh</td><td>leaf 0 (וצוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.54</td><td>1</td><td class='he-cell'>הכהן</td><td>hkhn</td><td>leaf 1 (הכהן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.54</td><td>2</td><td class='he-cell'>וכבסו</td><td>vkbsv</td><td>leaf 2 (וכבסו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.54</td><td>3</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 3 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.54</td><td>4</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 4 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.54</td><td>5</td><td class='he-cell'>בו</td><td>bv</td><td>leaf 5 (בו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.54</td><td>6</td><td class='he-cell'>הנגע</td><td>hng&#x27;</td><td>leaf 6 (הנגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.54</td><td>7</td><td class='he-cell'>והסגירו</td><td>vhsgyrv</td><td>leaf 7 (והסגירו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.54</td><td>8</td><td class='he-cell'>שבעת</td><td>shb&#x27;t</td><td>leaf 8 (שבעת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.54</td><td>9</td><td class='he-cell'>ימים</td><td>ymym</td><td>leaf 9 (ימים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.54</td><td>10</td><td class='he-cell'>שנית</td><td>shnyt</td><td>leaf 10 (שנית)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>0</td><td class='he-cell'>וראה</td><td>vr&#x27;h</td><td>leaf 0 (וראה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>1</td><td class='he-cell'>הכהן</td><td>hkhn</td><td>leaf 1 (הכהן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>2</td><td class='he-cell'>אחרי</td><td>&#x27;chry</td><td>leaf 2 (אחרי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>3</td><td class='he-cell'>הכבס</td><td>hkbs</td><td>leaf 3 (הכבס)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>4</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 4 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>5</td><td class='he-cell'>הנגע</td><td>hng&#x27;</td><td>leaf 5 (הנגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>6</td><td class='he-cell'>והנה</td><td>vhnh</td><td>leaf 6 (והנה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>7</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 7 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>8</td><td class='he-cell'>הפך</td><td>hpk</td><td>leaf 8 (הפך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>9</td><td class='he-cell'>הנגע</td><td>hng&#x27;</td><td>leaf 9 (הנגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>10</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 10 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>11</td><td class='he-cell'>עינו</td><td>&#x27;ynv</td><td>leaf 11 (עינו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>12</td><td class='he-cell'>והנגע</td><td>vhng&#x27;</td><td>leaf 12 (והנגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>13</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 13 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>14</td><td class='he-cell'>פשה</td><td>pshh</td><td>leaf 14 (פשה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>15</td><td class='he-cell'>טמא</td><td>tm&#x27;</td><td>leaf 15 (טמא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>16</td><td class='he-cell'>הוא</td><td>hv&#x27;</td><td>leaf 16 (הוא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>17</td><td class='he-cell'>באש</td><td>b&#x27;sh</td><td>leaf 17 (באש)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>18</td><td class='he-cell'>תשרפנו</td><td>tshrpnv</td><td>leaf 18 (תשרפנו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>19</td><td class='he-cell'>פחתת</td><td>pchtt</td><td>leaf 19 (פחתת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>20</td><td class='he-cell'>הוא</td><td>hv&#x27;</td><td>leaf 20 (הוא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>21</td><td class='he-cell'>בקרחתו</td><td>bqrchtv</td><td>leaf 21 (בקרחתו)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>22</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 22 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.55</td><td>23</td><td class='he-cell'>בגבחתו</td><td>bgbchtv</td><td>leaf 23 (בגבחתו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>0</td><td class='he-cell'>ואם</td><td>v&#x27;m</td><td>leaf 0 (ואם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>1</td><td class='he-cell'>ראה</td><td>r&#x27;h</td><td>leaf 1 (ראה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>2</td><td class='he-cell'>הכהן</td><td>hkhn</td><td>leaf 2 (הכהן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>3</td><td class='he-cell'>והנה</td><td>vhnh</td><td>leaf 3 (והנה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>4</td><td class='he-cell'>כהה</td><td>khh</td><td>leaf 4 (כהה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>5</td><td class='he-cell'>הנגע</td><td>hng&#x27;</td><td>leaf 5 (הנגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>6</td><td class='he-cell'>אחרי</td><td>&#x27;chry</td><td>leaf 6 (אחרי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>7</td><td class='he-cell'>הכבס</td><td>hkbs</td><td>leaf 7 (הכבס)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>8</td><td class='he-cell'>אתו</td><td>&#x27;tv</td><td>leaf 8 (אתו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>9</td><td class='he-cell'>וקרע</td><td>vqr&#x27;</td><td>leaf 9 (וקרע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>10</td><td class='he-cell'>אתו</td><td>&#x27;tv</td><td>leaf 10 (אתו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>11</td><td class='he-cell'>מן</td><td>mn</td><td>leaf 11 (מן)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>12</td><td class='he-cell'>הבגד</td><td>hbgd</td><td>leaf 12 (הבגד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>13</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 13 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>14</td><td class='he-cell'>מן</td><td>mn</td><td>leaf 14 (מן)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>15</td><td class='he-cell'>העור</td><td>h&#x27;vr</td><td>leaf 15 (העור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>16</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 16 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>17</td><td class='he-cell'>מן</td><td>mn</td><td>leaf 17 (מן)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>18</td><td class='he-cell'>השתי</td><td>hshty</td><td>leaf 18 (השתי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>19</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 19 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>20</td><td class='he-cell'>מן</td><td>mn</td><td>leaf 20 (מן)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.56</td><td>21</td><td class='he-cell'>הערב</td><td>h&#x27;rb</td><td>leaf 21 (הערב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>0</td><td class='he-cell'>ואם</td><td>v&#x27;m</td><td>leaf 0 (ואם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>1</td><td class='he-cell'>תראה</td><td>tr&#x27;h</td><td>leaf 1 (תראה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>2</td><td class='he-cell'>עוד</td><td>&#x27;vd</td><td>leaf 2 (עוד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>3</td><td class='he-cell'>בבגד</td><td>bbgd</td><td>leaf 3 (בבגד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>4</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 4 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>5</td><td class='he-cell'>בשתי</td><td>bshty</td><td>leaf 5 (בשתי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>6</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 6 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>7</td><td class='he-cell'>בערב</td><td>b&#x27;rb</td><td>leaf 7 (בערב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>8</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 8 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>9</td><td class='he-cell'>בכל</td><td>bkl</td><td>leaf 9 (בכל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>10</td><td class='he-cell'>כלי</td><td>kly</td><td>leaf 10 (כלי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>11</td><td class='he-cell'>עור</td><td>&#x27;vr</td><td>leaf 11 (עור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>12</td><td class='he-cell'>פרחת</td><td>prcht</td><td>leaf 12 (פרחת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>13</td><td class='he-cell'>הוא</td><td>hv&#x27;</td><td>leaf 13 (הוא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>14</td><td class='he-cell'>באש</td><td>b&#x27;sh</td><td>leaf 14 (באש)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>15</td><td class='he-cell'>תשרפנו</td><td>tshrpnv</td><td>leaf 15 (תשרפנו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>16</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 16 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>17</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 17 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>18</td><td class='he-cell'>בו</td><td>bv</td><td>leaf 18 (בו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.57</td><td>19</td><td class='he-cell'>הנגע</td><td>hng&#x27;</td><td>leaf 19 (הנגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>0</td><td class='he-cell'>והבגד</td><td>vhbgd</td><td>leaf 0 (והבגד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>1</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 1 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>2</td><td class='he-cell'>השתי</td><td>hshty</td><td>leaf 2 (השתי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>3</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 3 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>4</td><td class='he-cell'>הערב</td><td>h&#x27;rb</td><td>leaf 4 (הערב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>5</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 5 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>6</td><td class='he-cell'>כל</td><td>kl</td><td>leaf 6 (כל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>7</td><td class='he-cell'>כלי</td><td>kly</td><td>leaf 7 (כלי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>8</td><td class='he-cell'>העור</td><td>h&#x27;vr</td><td>leaf 8 (העור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>9</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 9 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>10</td><td class='he-cell'>תכבס</td><td>tkbs</td><td>leaf 10 (תכבס)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>11</td><td class='he-cell'>וסר</td><td>vsr</td><td>leaf 11 (וסר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>12</td><td class='he-cell'>מהם</td><td>mhm</td><td>leaf 12 (מהם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>13</td><td class='he-cell'>הנגע</td><td>hng&#x27;</td><td>leaf 13 (הנגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>14</td><td class='he-cell'>וכבס</td><td>vkbs</td><td>leaf 14 (וכבס)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>15</td><td class='he-cell'>שנית</td><td>shnyt</td><td>leaf 15 (שנית)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.58</td><td>16</td><td class='he-cell'>וטהר</td><td>vthr</td><td>leaf 16 (וטהר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>0</td><td class='he-cell'>זאת</td><td>z&#x27;t</td><td>leaf 0 (זאת)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>1</td><td class='he-cell'>תורת</td><td>tvrt</td><td>leaf 1 (תורת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>2</td><td class='he-cell'>נגע</td><td>ng&#x27;</td><td>leaf 2 (נגע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>3</td><td class='he-cell'>צרעת</td><td>tzr&#x27;t</td><td>leaf 3 (צרעת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>4</td><td class='he-cell'>בגד</td><td>bgd</td><td>leaf 4 (בגד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>5</td><td class='he-cell'>הצמר</td><td>htzmr</td><td>leaf 5 (הצמר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>6</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 6 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>7</td><td class='he-cell'>הפשתים</td><td>hpshtym</td><td>leaf 7 (הפשתים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>8</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 8 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>9</td><td class='he-cell'>השתי</td><td>hshty</td><td>leaf 9 (השתי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>10</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 10 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>11</td><td class='he-cell'>הערב</td><td>h&#x27;rb</td><td>leaf 11 (הערב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>12</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 12 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>13</td><td class='he-cell'>כל</td><td>kl</td><td>leaf 13 (כל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>14</td><td class='he-cell'>כלי</td><td>kly</td><td>leaf 14 (כלי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>15</td><td class='he-cell'>עור</td><td>&#x27;vr</td><td>leaf 15 (עור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>16</td><td class='he-cell'>לטהרו</td><td>lthrv</td><td>leaf 16 (לטהרו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>17</td><td class='he-cell'>או</td><td>&#x27;v</td><td>leaf 17 (או)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Lev.13.59</td><td>18</td><td class='he-cell'>לטמאו</td><td>ltm&#x27;v</td><td>leaf 18 (לטמאו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: lev_13_garment — Garment nega: wool linen leather (13:47–59) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Lv_13_47 — Lev 13:47
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Lv_13_48 — Lev 13:48
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Lv_13_49 — Lev 13:49
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Lv_13_50 — Lev 13:50
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Lv_13_51 — Lev 13:51
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Lv_13_52 — Lev 13:52
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S_last — after STEP_Lv_13_59 — Lev 13:59
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the canonical YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/lev_13_garment.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# lev_13_garment — 13:47-59
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/lev_13_garment.yaml) is CANONICAL (Pre-Code); this
+# file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Garment nega: wool linen leather (13:47–59)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;lev_13_garment&quot;)
+
+# -------------------------- Lev.13.47 · COND_כי ----------------------------
+# והבגד כי יהיה בו נגע צרעת … בבגד צמר או בבגד פשתים
+# &quot;[EN-AID] From top split: LEFT «והבגד כי יהיה בו נגע צרעת» / RIGHT «בבגד
+# צמר או בבגד פשתים». Derive claim from Hebrew arms. Lev 13:47.&quot;
+m.step(&quot;Lev.13.47&quot;)
+# witness-tier presupposed read: species_and_work_gate on
+# beged_tzemer_o_fishtim — read, not installed
+m.witness_read(&quot;beged_tzemer_o_fishtim&quot;, &quot;species_and_work_gate&quot;,
+                cites=[&quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 1&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 2&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 3&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 7&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 9&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 12&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 1&quot;])
+
+# -------------------------- Lev.13.48 · ETNACHTA_SPLIT ---------------------
+# או בשתי או בערב לפשתים ולצמר … או בעור או בכל מלאכת עור
+# &quot;[EN-AID] From top split: LEFT «או בשתי או בערב לפשתים ולצמר» / RIGHT «או
+# בעור או בכל מלאכת עור». Derive claim from Hebrew arms. Lev 13:48.&quot;
+m.step(&quot;Lev.13.48&quot;)
+
+# -------------------------- Lev.13.49 · ETNACHTA_SPLIT ---------------------
+# והיה הנגע ירקרק או אדמדם בבגד או בעור או בשתי או בערב או בכל … והראה את
+# הכהן
+# &quot;[EN-AID] From top split: LEFT «והיה הנגע ירקרק או אדמדם בבגד או בעור או
+# בשתי או בערב או בכל כלי עור נגע צרעת הו» / RIGHT «והראה את הכהן». Derive
+# claim from Hebrew arms. Lev 13:49.&quot;
+m.step(&quot;Lev.13.49&quot;)
+# witness-tier presupposed read: intensest_shades on yerakrak_adamdam —
+# read, not installed
+m.witness_read(&quot;yerakrak_adamdam&quot;, &quot;intensest_shades&quot;,
+                cites=[&quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 2&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 3&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 4-6&quot;])
+
+# -------------------------- Lev.13.50 · ETNACHTA_SPLIT ---------------------
+# וראה הכהן את הנגע … והסגיר את הנגע שבעת ימים
+# &quot;[EN-AID] From top split: LEFT «וראה הכהן את הנגע» / RIGHT «והסגיר את הנגע
+# שבעת ימים». Derive claim from Hebrew arms. Lev 13:50.&quot;
+m.step(&quot;Lev.13.50&quot;)
+
+# -------------------------- Lev.13.51 · ETNACHTA_SPLIT ---------------------
+# וראה את הנגע ביום השביעי כי פשה הנגע בבגד או בשתי או בערב או … צרעת ממארת
+# הנגע טמא הוא
+# &quot;[EN-AID] From top split: LEFT «וראה את הנגע ביום השביעי כי פשה הנגע בבגד
+# או בשתי או בערב או בעור לכל אשר יעשה ה» / RIGHT «צרעת ממארת הנגע טמא הוא».
+# Derive claim from Hebrew arms. Lev 13:51.&quot;
+m.step(&quot;Lev.13.51&quot;)
+# witness-tier presupposed read: the_benefit_ban on tzaraat_mameret — read,
+# not installed
+m.witness_read(&quot;tzaraat_mameret&quot;, &quot;the_benefit_ban&quot;,
+                cites=[&quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 11&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 9&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 10&quot;, &quot;Onkelos Lev 13:51&quot;, &quot;Onkelos Lev 13:52&quot;])
+
+# -------------------------- Lev.13.52 · ETNACHTA_SPLIT ---------------------
+# ושרף את הבגד או את השתי או את הערב בצמר או בפשתים או את כל כ … כי צרעת
+# ממארת הוא באש תשרף
+# &quot;[EN-AID] From top split: LEFT «ושרף את הבגד או את השתי או את הערב בצמר או
+# בפשתים או את כל כלי העור אשר יהיה בו » / RIGHT «כי צרעת ממארת הוא באש
+# תשרף». Derive claim from Hebrew arms. Lev 13:52.&quot;
+m.step(&quot;Lev.13.52&quot;)
+
+# -------------------------- Lev.13.53 · COND_ואם ---------------------------
+# ואם יראה הכהן והנה לא פשה הנגע בבגד או בשתי או בערב … או בכל כלי עור
+# &quot;[EN-AID] From top split: LEFT «ואם יראה הכהן והנה לא פשה הנגע בבגד או
+# בשתי או בערב» / RIGHT «או בכל כלי עור». Derive claim from Hebrew arms. Lev
+# 13:53.&quot;
+m.step(&quot;Lev.13.53&quot;)
+
+# -------------------------- Lev.13.54 · ETNACHTA_SPLIT ---------------------
+# וצוה הכהן וכבסו את אשר בו הנגע … והסגירו שבעת ימים שנית
+# &quot;[EN-AID] From top split: LEFT «וצוה הכהן וכבסו את אשר בו הנגע» / RIGHT
+# «והסגירו שבעת ימים שנית». Derive claim from Hebrew arms. Lev 13:54.&quot;
+m.step(&quot;Lev.13.54&quot;)
+
+# -------------------------- Lev.13.55 · ETNACHTA_SPLIT ---------------------
+# וראה הכהן אחרי הכבס את הנגע והנה לא הפך הנגע את עינו והנגע ל … פחתת הוא
+# בקרחתו או בגבחתו
+# &quot;[EN-AID] From top split: LEFT «וראה הכהן אחרי הכבס את הנגע והנה לא הפך
+# הנגע את עינו והנגע לא פשה טמא הוא באש תש» / RIGHT «פחתת הוא בקרחתו או
+# בגבחתו». Derive claim from Hebrew arms. Lev 13:55.&quot;
+m.step(&quot;Lev.13.55&quot;)
+# witness-tier presupposed read: standing_burns on lo_hafach_velo_pasah —
+# read, not installed
+m.witness_read(&quot;lo_hafach_velo_pasah&quot;, &quot;standing_burns&quot;,
+                cites=[&quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 2* 8&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 15 7&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 15 9&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 1&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 4&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 5&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 9&quot;, &quot;Onkelos Lev 13:55&quot;])
+
+# -------------------------- Lev.13.56 · COND_ואם ---------------------------
+# ואם ראה הכהן והנה כהה הנגע אחרי הכבס אתו … וקרע אתו מן הבגד או מן העור או
+# מן השתי או מן הערב
+# &quot;[EN-AID] From top split: LEFT «ואם ראה הכהן והנה כהה הנגע אחרי הכבס אתו»
+# / RIGHT «וקרע אתו מן הבגד או מן העור או מן השתי או מן הערב». Derive claim
+# from Hebrew arms. Lev 13:56.&quot;
+m.step(&quot;Lev.13.56&quot;)
+
+# -------------------------- Lev.13.57 · COND_ואם ---------------------------
+# ואם תראה עוד בבגד או בשתי או בערב או בכל כלי עור פרחת הוא … באש תשרפנו את
+# אשר בו הנגע
+# &quot;[EN-AID] From top split: LEFT «ואם תראה עוד בבגד או בשתי או בערב או בכל
+# כלי עור פרחת הוא» / RIGHT «באש תשרפנו את אשר בו הנגע». Derive claim from
+# Hebrew arms. Lev 13:57.&quot;
+m.step(&quot;Lev.13.57&quot;)
+
+# -------------------------- Lev.13.58 · ETNACHTA_SPLIT ---------------------
+# והבגד או השתי או הערב או כל כלי העור אשר תכבס וסר מהם הנגע … וכבס שנית
+# וטהר
+# &quot;[EN-AID] From top split: LEFT «והבגד או השתי או הערב או כל כלי העור אשר
+# תכבס וסר מהם הנגע» / RIGHT «וכבס שנית וטהר». Derive claim from Hebrew
+# arms. Lev 13:58.&quot;
+m.step(&quot;Lev.13.58&quot;)
+
+# -------------------------- Lev.13.59 · ETNACHTA_SPLIT ---------------------
+# זאת תורת נגע צרעת בגד הצמר או הפשתים או השתי או הערב או כל כ … לטהרו או
+# לטמאו
+# &quot;[EN-AID] From top split: LEFT «זאת תורת נגע צרעת בגד הצמר או הפשתים או
+# השתי או הערב או כל כלי עור» / RIGHT «לטהרו או לטמאו». Derive claim from
+# Hebrew arms. Lev 13:59.&quot;
+m.step(&quot;Lev.13.59&quot;)
+# witness-tier presupposed read: the_close on zot_torat — read, not
+# installed
+m.witness_read(&quot;zot_torat&quot;, &quot;the_close&quot;,
+                cites=[&quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 10&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 11&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 12&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 13&quot;])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 0
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;beged_tzemer_o_fishtim&#x27;, &#x27;species_and_work_gate&#x27;), (&#x27;yerakrak_adamdam&#x27;, &#x27;intensest_shades&#x27;), (&#x27;tzaraat_mameret&#x27;, &#x27;the_benefit_ban&#x27;), (&#x27;lo_hafach_velo_pasah&#x27;, &#x27;standing_burns&#x27;), (&#x27;zot_torat&#x27;, &#x27;the_close&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 1&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 2&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 3&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 7&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 9&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 13 12&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 1&quot;]
+    assert all(&#x27;species_and_work_gate&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;beged_tzemer_o_fishtim&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 2&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 3&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 4-6&quot;]
+    assert all(&#x27;intensest_shades&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;yerakrak_adamdam&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 11&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 9&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 14 10&quot;, &#x27;Onkelos Lev 13:51&#x27;, &#x27;Onkelos Lev 13:52&#x27;]
+    assert all(&#x27;the_benefit_ban&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;tzaraat_mameret&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 2* 8&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 15 7&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 15 9&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 1&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 4&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 5&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 9&quot;, &#x27;Onkelos Lev 13:55&#x27;]
+    assert all(&#x27;standing_burns&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;lo_hafach_velo_pasah&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 10&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 11&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 12&quot;, &quot;Sifra, Tazria Parashat Nega&#x27;im, Chapter 16 13&quot;]
+    assert all(&#x27;the_close&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;zot_torat&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">Tree-derived v1 (phase C). One STEP per verse from top-split arms. Not binding religious law.</div><p class='meta'>Rendered 2026-09-05 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

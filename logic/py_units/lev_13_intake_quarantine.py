@@ -39,6 +39,10 @@ m.case("adam, mark_in_or_basar(seet_o_sapachat_o_baheret) -> nega_tzaraat", "hov
 # reads without prior install (flag, not fix): human, skin-of-flesh, the-
 # priest
 m.presupposed("adam", "or_basar", "ha_kohen")
+# witness-tier presupposed read: the_declaration_protocol on el_hakohen —
+# read, not installed
+m.witness_read("el_hakohen", "the_declaration_protocol",
+                cites=["Sifra, Tazria Parashat Nega'im, Section 1 8", "Sifra, Tazria Parashat Nega'im, Section 1 9", "Sifra, Tazria Parashat Nega'im, Section 1 10"])
 
 # -------------------------- Lev.13.3 · HANDLER_VERDICT_TAMEI ---------------
 # וְרָאָה הַכֹּהֵן אֶת־הַנֶּגַע בְּעוֹר־הַבָּשָׂר וְשֵׂעָר בַּנֶּגַע הָפַךְ
@@ -56,6 +60,10 @@ m.step("Lev.13.3")
 # declare-impure(status-impure)
 m.handler("sear_hafakh_lavan ∧ mareh_amok_me_or",
           "classify(nega_tzaraat_hu) ∧ timme(status_tamei)")
+# witness-tier presupposed read: the_calibration_layer on vera_ah_hakohen —
+# read, not installed
+m.witness_read("vera_ah_hakohen", "the_calibration_layer",
+                cites=["Sifra, Tazria Parashat Nega'im, Section 1 4", "Sifra, Tazria Parashat Nega'im, Section 1 5", "Sifra, Tazria Parashat Nega'im, Section 2 6", "Sifra, Tazria Parashat Nega'im, Chapter 2* 2", "Sifra, Tazria Parashat Nega'im, Chapter 2* 3"])
 
 # -------------------------- Lev.13.4 · HANDLER_CONFINE_FIRST ---------------
 # וְאִם־בַּהֶרֶת לְבָנָה הִוא בְּעוֹר בְּשָׂרוֹ וְעָמֹק אֵין־מַרְאֶהָ
@@ -72,6 +80,10 @@ m.step("Lev.13.4")
 # then he-shall-confine(obj-marker-the-into-a-mark-of, seven-of-days)
 m.handler("baheret_levanah ∧ ein_amok_mareha ∧ lo_hafakh_lavan",
           "hisgir(et_ha_nega, shivat_yamim)")
+# witness-tier presupposed read: order_and_doubt on vesear_lo_hafach — read,
+# not installed
+m.witness_read("vesear_lo_hafach", "order_and_doubt",
+                cites=["Sifra, Tazria Parashat Nega'im, Chapter 2 2", "Sifra, Tazria Parashat Nega'im, Chapter 2 3", "Sifra, Tazria Parashat Nega'im, Section 2 9"])
 
 # -------------------------- Lev.13.5 · HANDLER_RECHECK_CONFINE_SECOND ------
 # וְרָאָהוּ הַכֹּהֵן בַּיּוֹם הַשְּׁבִיעִי וְהִנֵּה הַנֶּגַע עָמַד
@@ -88,6 +100,10 @@ m.step("Lev.13.5")
 # second-time)
 m.handler("ba_yom_ha_shevii ∧ amad_be_einav ∧ lo_fasah",
           "hisgiro(shivat_yamim_shenit)")
+# witness-tier presupposed read: shared_seventh_idempotence on bayom_hashvii
+# — read, not installed
+m.witness_read("bayom_hashvii", "shared_seventh_idempotence",
+                cites=["Sifra, Tazria Parashat Nega'im, Chapter 2* 4", "Sifra, Tazria Parashat Nega'im, Chapter 2* 5", "Sifra, Tazria Parashat Nega'im, Chapter 2* 6", "Sifra, Tazria Parashat Nega'im, Chapter 2* 7"])
 
 # -------------------------- Lev.13.6 · HANDLER_RELEASE ---------------------
 # וְרָאָה הַכֹּהֵן אֹתוֹ בַּיּוֹם הַשְּׁבִיעִי שֵׁנִית וְהִנֵּה כֵּהָה
@@ -149,4 +165,17 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 8
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('el_hakohen', 'the_declaration_protocol'), ('vera_ah_hakohen', 'the_calibration_layer'), ('vesear_lo_hafach', 'order_and_doubt'), ('bayom_hashvii', 'shared_seventh_idempotence')]
+    assert m.WITNESS_READS[0]["cites"] == ["Sifra, Tazria Parashat Nega'im, Section 1 8", "Sifra, Tazria Parashat Nega'im, Section 1 9", "Sifra, Tazria Parashat Nega'im, Section 1 10"]
+    assert all('the_declaration_protocol' not in f for f in m.WORLD["facts"])
+    assert 'el_hakohen' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ["Sifra, Tazria Parashat Nega'im, Section 1 4", "Sifra, Tazria Parashat Nega'im, Section 1 5", "Sifra, Tazria Parashat Nega'im, Section 2 6", "Sifra, Tazria Parashat Nega'im, Chapter 2* 2", "Sifra, Tazria Parashat Nega'im, Chapter 2* 3"]
+    assert all('the_calibration_layer' not in f for f in m.WORLD["facts"])
+    assert 'vera_ah_hakohen' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ["Sifra, Tazria Parashat Nega'im, Chapter 2 2", "Sifra, Tazria Parashat Nega'im, Chapter 2 3", "Sifra, Tazria Parashat Nega'im, Section 2 9"]
+    assert all('order_and_doubt' not in f for f in m.WORLD["facts"])
+    assert 'vesear_lo_hafach' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ["Sifra, Tazria Parashat Nega'im, Chapter 2* 4", "Sifra, Tazria Parashat Nega'im, Chapter 2* 5", "Sifra, Tazria Parashat Nega'im, Chapter 2* 6", "Sifra, Tazria Parashat Nega'im, Chapter 2* 7"]
+    assert all('shared_seventh_idempotence' not in f for f in m.WORLD["facts"])
+    assert 'bayom_hashvii' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

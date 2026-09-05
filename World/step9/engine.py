@@ -1875,3 +1875,8 @@ RULES.update(_kn.build(V))
 # citing Lev 9-11. 6 rules in shemini_rules.py.
 import shemini_rules as _sm
 RULES.update(_sm.build(V))
+
+# Round 43 — THE TAZRIA-METZORA EXAM (2026-09-05). Bare Mishnah rows
+# citing Lev 12-15. 6 rules in tazria_rules.py.
+import tazria_rules as _tz
+RULES.update(_tz.build(V))

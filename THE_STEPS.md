@@ -533,7 +533,13 @@ engine's SCENE 6 — the installation tape replaying Lev 8's own
 narrative (the atomic intake gate, the confinement timer, the
 commit at the sprinkling, the day-7 release) — 6/6 checkpoints.
 Chips added pending the site lap: lev_06, the three lev_07 units,
-lev_08. The target this serves (THE_WORLD.md idea log,
+lev_08. THE FIFTH AND SIXTH SPANS (2026-09-05): cold_run_lev24.py
+(Lev 24:10-23, 23/23 — the exporting callee of THE FIRST CALL) and
+cold_run_negaim.py (the affliction state machine, Lev 13-14: six
+tracks ink-first, 16/16 against Mishnah Negaim 3:3-8's own track
+table + the Sifra's ten-houses walk 10/10; three more effects —
+the registry at 53). Chips pending the site lap: the five lev_13
+units, lev_14_house_nega, lev_14_metzora_cleanse. The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law
 computed.

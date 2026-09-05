@@ -1,0 +1,239 @@
+# THE TAZRIA-METZORA EXAM (round 43 — 2026-09-05). Bare Mishnah rows
+# citing Lev 12-15, graded after the derivation.
+# Read-source: logic/oral_triage/tazria_exam_mishnah_2026-09-05.md.
+
+- module: yoledet_file
+  tractate: Keritot
+  oracle: Mishnah Keritot 1:6; 2:3; 6:9; Eduyot 4:10; 5:1; Niddah 3:2; 5:1; Makkot 3:2; Nedarim 4:3
+  exodus_anchor: {unit: lev_12, ref: Lev.12.2-8, claims: [LV12-03, LV12-05, LV12-06]}
+  cases:
+  - id: Ke_eve81
+    input: {query: eve_of_eighty_one}
+    expected: {verdict: [shammai_exempt, hillel_liable]}
+    class: A
+  - id: Ed_eve81
+    input: {query: eve81_in_leniency_list}
+    expected: {verdict: listed_shammai_leniency}
+    class: A
+  - id: Ke_many
+    input: {query: one_offering_many_births}
+    expected: {verdict: one_per_term}
+    class: A
+  - id: Ke_equal
+    input: {query: dove_or_turtledove_rank}
+    expected: {verdict: both_equal}
+    class: A
+  - id: Ni_forms
+    input: {query: miscarried_forms_grid}
+    expected: {verdict: human_form_decides}
+    class: A
+  - id: Ni_dofen
+    input: {query: caesarean_status}
+    expected: {verdict: [not_a_birth, r_shimon_as_born]}
+    class: A
+  - id: Ma_lash
+    input: {query: impure_ate_holy_lash}
+    expected: {verdict: in_the_lash_list}
+    class: A
+  - id: Ne_kinim
+    input: {query: benefactor_brings_kinim}
+    expected: {verdict: birds_not_his_benefit}
+    class: A
+  - id: Ed_blood
+    input: {query: leper_purity_blood}
+    expected: {verdict: [shammai_pure, hillel_like_her_spittle]}
+    class: A
+
+- module: milah_shabbat_file
+  tractate: Shabbat
+  oracle: Mishnah Shabbat 19:3; 19:5; Megillah 2:4; Nedarim 3:11
+  exodus_anchor: {unit: lev_12, ref: Lev.12.3, claims: [LV12-04]}
+  cases:
+  - id: Sh_doubt
+    input: {query: doubtful_androgynous_shabbat}
+    expected: {verdict: no_override_r_yehuda_permits}
+    class: A
+  - id: Sh_table
+    input: {query: milah_day_table}
+    expected: {verdict: eight_to_twelve_only}
+    class: A
+  - id: Me_daylight
+    input: {query: milah_daylight_gate}
+    expected: {verdict: sunrise_proper_dawn_valid}
+    class: A
+  - id: Ne_orlah
+    input: {query: foreskin_name_scope}
+    expected: {verdict: named_for_the_nations}
+    class: A
+
+- module: negaim_exam_file
+  tractate: Negaim
+  oracle: Mishnah Negaim 2:3; 10:2; Shevuot 1:1; Eduyot 5:6; Moed Katan 1:5; Nazir 8:2; 9:4; Megillah 1:7
+  exodus_anchor: {unit: lev_13, ref: Lev.13.2-46, claims: [L13-05, L13-06, LV13C-02, LV13C-03]}
+  cases:
+  - id: Sv_marks
+    input: {query: marks_two_that_are_four}
+    expected: {verdict: national_two_by_two}
+    class: A
+  - id: Ng_dim
+    input: {query: dim_priest_dark_house}
+    expected: {verdict: neither_examines}
+    class: A
+  - id: Ng_yellow
+    input: {query: yellow_hair_turned_dispute}
+    expected: {verdict: [r_yehuda_even_unturned, r_shimon_turned_only]}
+    class: A
+  - id: Ed_akavya
+    input: {query: akavya_four_things}
+    expected: {verdict: returning_hair_defiled_refused_office}
+    class: A
+  - id: Mk_leniency
+    input: {query: festival_mark_exam}
+    expected: {verdict: [r_meir_lenient_only, sages_neither]}
+    class: A
+  - id: Nz_doubt_shave
+    input: {query: doubtful_mark_nazirite}
+    expected: {verdict: certain_overrides_doubt_not}
+    class: A
+  - id: Nz_seven
+    input: {query: seven_ways_zav_exam}
+    expected: {verdict: before_threshold_only}
+    class: A
+  - id: Mg_deltas
+    input: {query: quarantine_decision_deltas}
+    expected: {verdict: only_loosing_rending_and_birds}
+    class: A
+
+- module: metzora_rite_file
+  tractate: Negaim
+  oracle: Mishnah Negaim 14:2; 14:10; Menachot 3:6; 5:6; 5:7; 9:3; Zevachim 5:5; Arakhin 4:2; Keritot 2:3; Sotah 1:5; Moed Katan 3:1; Nazir 6:5; 6:6; 7:3; Avodah Zarah 5:9; Megillah 2:5
+  exodus_anchor: {unit: lev_14, ref: Lev.14.2-32, claims: [LV14A-03, LV14A-05, LV14A-06, LV14A-07]}
+  cases:
+  - id: Ng_send
+    input: {query: bird_release_geography}
+    expected: {verdict: city_out_field_ward}
+    class: A
+  - id: Ng_oil
+    input: {query: oil_on_blood_place}
+    expected: {verdict: place_causes_not_blood}
+    class: A
+  - id: Mn_four
+    input: {query: leper_four_species_withhold}
+    expected: {verdict: mutually_withholding}
+    class: A
+  - id: Mn_wave
+    input: {query: log_and_asham_waved}
+    expected: {verdict: waved_not_presented_again}
+    class: A
+  - id: Mn_live
+    input: {query: asham_metzora_waving_grid}
+    expected: {verdict: laid_and_waved_alive}
+    class: A
+  - id: Mn_quarter
+    input: {query: quarter_log_water_leper}
+    expected: {verdict: the_visibility_quarter}
+    class: A
+  - id: Mn_log60
+    input: {query: log_per_minchah_dispute}
+    expected: {verdict: [sages_log_per_tenth, reby_one_log_even_sixty]}
+    class: A
+  - id: Zv_north
+    input: {query: asham_metzora_regime}
+    expected: {verdict: north_slaughter_two_that_are_four}
+    class: A
+  - id: Ar_vower
+    input: {query: leper_offering_by_vower}
+    expected: {verdict: his_status_not_the_vowers}
+    class: A
+  - id: Ke_remark
+    input: {query: birds_then_remarked}
+    expected: {verdict: [needs_his_chatat, r_yehuda_his_asham]}
+    class: A
+  - id: So_nicanor
+    input: {query: nicanor_station_shared}
+    expected: {verdict: sotah_yoledet_metzora_stand_there}
+    class: A
+  - id: Mo_shave
+    input: {query: festival_shave_list}
+    expected: {verdict: rising_leper_shaves}
+    class: A
+  - id: Nz_stir
+    input: {query: leper_days_nazir_count}
+    expected: {verdict: counting_days_count_for_him}
+    class: A
+  - id: Nz_sunset
+    input: {query: shave_sunset_offerings}
+    expected: {verdict: purity_hangs_on_his_shave}
+    class: A
+  - id: Az_any
+    input: {query: leper_birds_any_amount}
+    expected: {verdict: forbidden_in_any_amount}
+    class: A
+  - id: Mg_day
+    input: {query: whole_day_leper_purification}
+    expected: {verdict: all_day_valid}
+    class: A
+
+- module: house_file
+  tractate: Negaim
+  oracle: Mishnah Negaim 12:5; 12:6; 12:7
+  exodus_anchor: {unit: lev_14, ref: Lev.14.33-45, claims: [LV14B-02, LV14B-03, LV14B-04, LV14B-05, LV14B-06]}
+  cases:
+  - id: Ng_kenega
+    input: {query: kenega_humility_row}
+    expected: {verdict: even_the_expert_says_like}
+    class: A
+  - id: Ng_lintel
+    input: {query: lintel_quarantine_station}
+    expected: {verdict: stands_at_the_door_and_shuts}
+    class: A
+  - id: Ng_grades
+    input: {query: house_spread_grades}
+    expected: {verdict: adjacent_any_distant_bean_return_two}
+    class: A
+
+- module: zavim_file
+  tractate: Niddah
+  oracle: Mishnah Niddah 5:1; 8:3; Eduyot 1:11; 5:1; 6:2; Beitzah 2:10; Chagigah 2:7; Horayot 1:3; Shabbat 9:1; 9:3; Megillah 2:4
+  exodus_anchor: {unit: lev_15, ref: Lev.15.2-33, claims: [LV15A-02, LV15A-06, LV15B-01, LV15B-05]}
+  cases:
+  - id: Ni_inner
+    input: {query: inner_house_asymmetry}
+    expected: {verdict: she_inside_he_outside}
+    class: A
+  - id: Ni_stain
+    input: {query: blood_not_stain}
+    expected: {verdict: dam_not_ketem_lenient}
+    class: A
+  - id: Ed_chair
+    input: {query: bridal_chair_midras}
+    expected: {verdict: [shammai_defile, hillel_purify]}
+    class: A
+  - id: Ed_limb
+    input: {query: living_greater_than_dead}
+    expected: {verdict: bed_below_madaf_above}
+    class: A
+  - id: Be_wagon
+    input: {query: childs_wagon_midras}
+    expected: {verdict: midras_impure_pressing}
+    class: A
+  - id: Ch_ladder
+    input: {query: garments_midras_ladder}
+    expected: {verdict: each_grade_midras_to_the_next}
+    class: A
+  - id: Ho_partial
+    input: {query: court_partial_uprooting}
+    expected: {verdict: day_watcher_case_liable}
+    class: A
+  - id: Sh_idol
+    input: {query: idol_carried_like_niddah}
+    expected: {verdict: carry_defiles_by_the_verse}
+    class: A
+  - id: Sh_third
+    input: {query: third_day_discharge_sinai}
+    expected: {verdict: ready_for_three_days}
+    class: A
+  - id: Mg_watcher
+    input: {query: day_watcher_immersion_hour}
+    expected: {verdict: after_sunrise_dawn_valid}
+    class: A

@@ -148,10 +148,48 @@ compiled into the exam engine and seated in a frozen unit:
   to adjacency range. (Compiled: vestments_rules.py
   finger_placement; seated EX29-14.)
 
+- **THE VOIDED FORM (Tazria sweep 2026-09-05 — Sifra, Tazria
+  Parashat Yoledet, Section 1 5).** "Any inference that BEGINS to be
+  stringent and ENDS to be lenient is NO inference" — an a-fortiori
+  rejected on its FORM alone (R. Yehuda's stillbirth argument), the
+  conclusion then re-derived from a written token instead. A
+  validity precondition on I1 itself, stated as law.
+- **DAYO ARGUED IN FULL (same sweep — Sifra, Tazria Parashat
+  Yoledet, Chapter 2 4).** R. Eliezer holds the a-fortiori's
+  limiting rule against every rephrasing of the hard-labor argument:
+  "even if you answer me ALL DAY — enough for the derived to be like
+  its source." The dayo cap exercised as a live defense, not a
+  footnote — I1's ceiling at its own case.
+- **THE INDUCTION LIMIT (same sweep — Sifra, Metzora, Section 1
+  3).** Munbaz's regress before R. Akiva: granting the completion
+  days seven makes them counting days, which grants seven more —
+  "you would ADD FOREVER." An infinite-regress rebuttal recorded as
+  the argument's formal stopper: an a-fortiori whose conclusion
+  re-feeds its premise is void.
+- **THE QUANTITY-READING TRIPLE (same sweep — Sifra, Metzora
+  Parashat Zavim, Section 5 5-7).** Three rules for reading bare
+  plurals, argued together at "days... many": R. Akiva's MINIMAL
+  SEIZURE ("grasp the many — you did not grasp; grasp the few — you
+  GRASPED"); R. Yehuda b. Beteira's BOUNDED MEASURE (measure the
+  measure that ends, never the endless); R. Nechemya's OPEN-NOT-LOCK
+  (the verse comes to open — "else say a hundred! a thousand! a
+  myriad!"). The minimum-quantity parser's three independent
+  derivations, one seat.
+- **THE TWO-VERSES REFRAIN (same sweep — Sifra, Metzora, Chapter 4
+  3, 6, 8-9; Section 4 1).** Four times in one chapter and again at
+  the poverty scale: "until TWO verses say it, we have not heard" —
+  a double-witness floor for exegesis itself: one token licenses
+  nothing when a rival reading survives it; two convergent tokens
+  close.
+
 Watch item, not yet a row: WILL-INDEXED DISPATCH stands at TWO
 recorded exemplars in the campaign; per the Move Catalog's standing
 rule a third exemplar registers it as a move (M-family), not a
-middah.
+middah. SECOND WATCH (2026-09-05): THE DEMOTION OPERATOR — "the
+verse DETACHED him from the severe impurity and brought him to the
+light" (Sifra, Metzora Parashat Zavim, Chapter 7 3, the menstruant's
+partner) — a grade-shift instruction in the tradition's own words;
+ONE exemplar, watching for a second.
 
 ## How the middot enter the process (THE_STEPS.md)
 

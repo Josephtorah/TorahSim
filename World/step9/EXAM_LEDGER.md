@@ -1383,3 +1383,53 @@ already (the derivation preceded the exam this sitting; no new
 seats owed). Regression 134/134 + 43 runners green, standing 1412
 unmoved this round, hash 8b8fff1fa28953af unmoved, manifests 0
 FAILED, gloss_lint 0 on new content.
+
+## ROUND 43 — THE TAZRIA-METZORA EXAM (2026-09-05): 50/50
+## (1103/1103 across forty-three rounds)
+The double parashah's exam, run the same sitting as its derivation
+(the rhythm's eleventh cycle — the largest derivation sitting yet:
+707 declared read whole, 60 claims seated into TEN units, corpus
+134 → 143, standing 1412 → 1472). Docket: 47 bare Mishnah rows
+across TWENTY tractates citing Lev 12-15 (50 cases — three rows
+carry two clauses), all read whole
+(logic/oral_triage/tazria_exam_mishnah_2026-09-05.md, full cite
+index). Six modules (tazria_rules.py): yoledet_file,
+milah_shabbat_file, negaim_exam_file, metzora_rite_file,
+house_file, zavim_file — R-528..R-533 (338 compiled rules);
+vocabulary +50 (927 query values on 158 dims). THE HEADLINE —
+EIGHT SEATS ANSWERED BEFORE THEIR ROWS OPENED, all seated this
+sitting from the Sifra: Nazir 9:4 IS the seven-examination-ways
+row VERBATIM ('the matter has legs' — LV15A-01); Negaim 12:5 IS
+the humility protocol word for word (LV14B-02); Negaim 2:3 both
+halves of the calibration carve in one row (L13-06 + LV14B-02);
+Negaim 14:10 the whole thumbs-rite complex — fellow's palm, seven
+dips, place-not-blood, head-oil dispute, log-deficit fork
+(LV14A-06); Negaim 12:7 the three spread grades as the Sifra
+states them (LV14B-06); Nazir 8:2 the gauge rule's
+certain-not-doubtful rider with the 60/120 computation (LV13C-03);
+Nazir 6:6 the R. Akiva/R. Tarfon shave-sunset exchange whole
+(LV14A-05); Eduyot 5:6 Akavya's returning-hair dispute with the
+man's own refusal price (LV13A-02). Also banked: Megillah 1:7's
+deltas table (the machine-diff row); Sotah 1:5's NICANOR'S GATE
+shared by three protocols; Menachot 9:3's quarter-log-of-water —
+the Sifra's visibility ratio QUANTIFIED in the measures table;
+Eduyot 6:2's living-greater-than-dead testimony carrying the
+bed-below/madaf-above lattice; Niddah 8:3's blood-not-stain
+leniency on 15:19's own noun; Horayot 1:3 running the day-watcher
+as the recorded exemplar of partial uprooting. AND THE COMPILE MOVEMENT
+(cold_run_negaim.py): THE AFFLICTION STATE MACHINE — six tracks
+compiled ink-first (the one-week boil/burn track read off THE
+INK'S OWN SILENCE: the shut-again census finds the second-week
+token at 13:5, 13:33, 13:54 and nowhere in 13:18-28), graded
+16/16 against Mishnah Negaim 3:3-8's own track table — which
+states the signs, the weeks, AND the shared-day arithmetic ('two
+weeks THAT ARE thirteen days'; the houses 'three weeks that are
+NINETEEN' — the machine computes 13 and 19 from the recorded
+shared-junction rule); THE TEN-HOUSES WALK 10/10 — the Sifra's
+own numbered transition table (Section 7 12) reproduced by the
+compiled house machine; three effects registered from the span's
+own verbs (isolated_outside_camp, burned_in_fire, demolished —
+the registry at 53). Rituals: the ten units carry the round's
+claims already (the derivation preceded the exam; no new seats
+owed). Regression green across all runners and cold runners,
+hash 8b8fff1fa28953af unmoved, manifests 0 FAILED.
