@@ -21,7 +21,7 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chc(_P, 'cell', 2)
-assert GUARDED == 18, ('the guard counted %d expectations, the tripwire holds 18' % GUARDED)
+assert GUARDED == 22, ('the guard counted %d expectations, the tripwire holds 22' % GUARDED)
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, os
 
@@ -271,12 +271,43 @@ def main():
          < [s[0] for s in seq].index('16:14'), True,
          'the cloud before the strokes — verse order kept', 'INK')
 
+    # ---- THE CALLS (2026-09-06, the dependency-debt sitting) ------
+    # The chapter names the sin offering at eleven verses and the burnt
+    # offering at five, and this runner imported nothing: the bull and
+    # goat are Lev 4's inner sin offerings, the rams Lev 1:10's, the
+    # burnt pair Lev 4:12's, the fast Lev 23:27-32's. Resolved live.
+    import io as _io, contextlib as _ctx
+    with _ctx.redirect_stdout(_io.StringIO()):
+        import cold_run_offerings as OFF
+        import cold_run_chatat as CH
+        import cold_run_moadim as MO
+    print('\n== THE CALLS (the pointers into other engines, live) ==')
+    cell('the bull and goat: inner sin offerings (CALLED offerings)',
+         OFF.dispatch('inner_chatat_yk')['stations']['v'],
+         'poles+curtain+golden_altar',
+         '16:14-18 — between the poles, the curtain, the golden altar: '
+         'the offerings dispatcher\'s own Lev 16:14 import, closed as a '
+         'call from this side', 'IMPORT')
+    cell('the two rams: burnt offerings (CALLED offerings)',
+         OFF.dispatch('olah:flock')['disposition']['v'], 'wholly_to_fires',
+         '16:3, 16:5, 16:24 — the rams of Lev 1:10', 'IMPORT')
+    cell('the burnt pair outside the camp (CALLED chatat)',
+         CH.burn_site('as_commanded')['v'], 'ash_house_defiles_garments',
+         '16:27-28 — as Lev 4:12 and 4:21; the burner\'s garments at '
+         '16:28 are the sin-offering engine\'s own import', 'IMPORT')
+    _yk = MO.yom_kippur()
+    cell('the fast: one function at two seats (CALLED moadim)',
+         _yk['affliction']['v'] + '/' + _yk['not_afflicting']['v'],
+         'required/karet',
+         '16:29-31 = Lev 23:27-32: afflict yourselves, the karet', 'IMPORT')
+
     n_ok = sum(cells)
     ink = 9
     rec = 6
     ans = 3
+    imp = 4
     print(f'\nYOM KIPPUR MACHINE: {n_ok}/{len(cells)} cells '
-          f'({ink} INK / {rec} RECORDED / {ans} ANSWER-SHEET '
+          f'({ink} INK / {rec} RECORDED / {ans} ANSWER-SHEET / {imp} IMPORT '
           f'— the fractions honest)')
     assert n_ok == len(cells), 'mismatches above'
     db.close()

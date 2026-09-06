@@ -146,6 +146,24 @@ PROBES = [
     ('[IMPORT] firstborn flesh to priest',    'Num', 18, 18, 'ובשרם'),
     ('[IMPORT] LIKE the wave breast (D)',     'Num', 18, 18, 'כחזה'),
     ('[IMPORT] and LIKE the right thigh (D)', 'Num', 18, 18, 'וכשוק'),
+    # THE FAT INVENTORY (the dependency-debt sitting, 2026-09-06 — Lev 3:3-17
+    # had been cited by no cell in any runner while four Lev 4 pointers named it)
+    ('fat: the COVERING fat (the ox, 3:3)',           'Lev', 3,  3, 'המכסה'),
+    ('fat: on the ENTRAILS, doubled (3:3)',           'Lev', 3,  3, 'הקרב', 2),
+    ('fat: the TWO kidneys (3:4)',                    'Lev', 3,  4, 'הכלית'),
+    ('fat: the LOBE on the liver (3:4)',              'Lev', 3,  4, 'היתרת'),
+    ('fat: the lamb\'s FAT TAIL whole (3:9)',         'Lev', 3,  9, 'האליה'),
+    ('fat: close by the BACKBONE (3:9)',              'Lev', 3,  9, 'העצה'),
+    ('fat: the goat\'s covering fat (3:14, no tail)', 'Lev', 3, 14, 'המכסה'),
+    ('fat: ALL fat is the LORD\'s (3:16)',            'Lev', 3, 16, 'חלב'),
+    ('fat: the BAN — you shall not eat (3:17)',       'Lev', 3, 17, 'תאכלו'),
+    ('fat: in ALL your dwellings (3:17)',             'Lev', 3, 17, 'מושבתיכם'),
+    ('the asham\'s fat tail — a ram (7:3)',           'Lev', 7,  3, 'האליה'),
+    ('the karet on the fat-eater (7:25)',             'Lev', 7, 25, 'ונכרתה'),
+    ('blood of FOWL and BEAST (7:26)',                'Lev', 7, 26, 'לעוף'),
+    ('4:10 AS lifted from the OX of the peace offering', 'Lev', 4, 10, 'משור'),
+    ('4:26 AS the fat of the peace offering',         'Lev', 4, 26, 'כחלב'),
+    ('4:35 AS the fat of the LAMB is removed',        'Lev', 4, 35, 'הכשב'),
 ]
 fired = 0
 for row in PROBES:
@@ -288,7 +306,67 @@ def dispatch(offering):
                                'paschal_procedure(leftover) -> %r [IMPORT, live call — the first-call standard]'
                                % (PESACH_CALLS['eating_time'], PESACH_CALLS['nonregistrants'], PESACH_CALLS['leftover'])),
         }
+    if o == 'fat':
+        return fat_inventory(variant)
     return None
+
+# ---- THE FAT INVENTORY — compiled from Lev 3:3-4 (the ox), 3:9-10 (the
+# lamb), 3:14-15 (the goat) — the parts the peace offering's own verses
+# name per species; the four Lev 4 pointers ("as it is lifted from the
+# OX of the peace offering" 4:10; "as the fat of the peace offering"
+# 4:26, 4:31; "as the fat of the LAMB is removed" 4:35) resolve HERE by
+# live call (cold_run_chatat), and the guilt offering's list (7:3-4) is
+# graded against the lamb's (cold_run_tzav). Added at the dependency-
+# debt sitting (2026-09-06): the sub-span had been cited by no cell.
+FAT_VERSES = {'ox': (3, 4), 'lamb': (9, 10), 'goat': (14, 15)}
+def fat_parts(species):
+    a, b = FAT_VERSES[species]
+    ws = toks('Lev', 3, a) + toks('Lev', 3, b)
+    parts = []
+    if any('המכסה' in w for w in ws): parts.append('covering_fat')
+    if sum(1 for w in ws if 'הקרב' in w) >= 2: parts.append('fat_on_entrails')
+    if any(w in ('הכלית', 'הכליות') for w in ws): parts.append('two_kidneys_with_loin_fat')
+    if any('היתרת' in w for w in ws): parts.append('lobe_of_liver')
+    if any('האליה' in w for w in ws): parts.append('fat_tail_whole_by_backbone')
+    return parts
+# the tail token's census across the span: the lamb's verse and the asham's ram, nowhere else
+TAIL_SEATS = [(c, v) for c in (3, 4, 7) for v in range(1, 39)
+              if any('האליה' in w for w in toks('Lev', c, v))]
+assert TAIL_SEATS == [(3, 9), (7, 3)], TAIL_SEATS
+def fat_inventory(species):
+    if species == 'ban':
+        return {
+         'sanction': cell('karet_and_lashes', M,
+                          'Lev 3:17 "all fat and all blood you shall NOT EAT" [INK, the warning]; Lev 7:25 "the soul that eats... '
+                          'shall be CUT OFF" [INK, the karet]; the lashes for the warning are the sheet\'s general rule '
+                          '(Mishnah Makkot 3:2 lists the fat-eater; Keritot 1:1 the karet)'),
+         'scope': cell('ox_sheep_goat', I, 'Lev 7:23 — "all fat of OX or SHEEP or GOAT you shall not eat": the ban\'s species '
+                       'are the offerable three (Mishnah Chullin 8:6: the fat applies only to the pure beast)'),
+         'blood_scope': cell('fowl_beast_and_wild', P, 'Lev 7:26 "of FOWL or of BEAST" [INK]; the wild animal from Lev 17:13 '
+                             '[IMPORT — cold_run_sanctions.covering]: the blood wider than the fat (Chullin 8:6)'),
+         'offered_hence_sacrilege': cell(True, I, 'Lev 3:16 "all fat is the LORD\'s" — the fat is OFFERED, so sacrilege, piggul, '
+                                         'leftover, and impurity ride it (Chullin 8:6\'s own reason: "because the fat is offered")'),
+         'dwellings': cell('all_dwellings', I, 'Lev 3:17 "in ALL your dwellings" — the eating ban is place-independent where the '
+                           'altar acts are place-bound (Sifra Nedavah Chapter 20 6)'),
+        }
+    parts = fat_parts(species)
+    a, b = FAT_VERSES[species]
+    return {
+     'parts': cell('+'.join(parts), I, 'Lev 3:%d-%d — the parts the %s\'s own verses name, read token by token' % (a, b, species)),
+     'tail': cell('fat_tail_whole_by_backbone' in parts, I,
+                  'the fat-tail token stands at %s only: the LAMB\'s verse (3:9, "the whole fat tail close by the backbone") and '
+                  'the guilt offering\'s ram (7:3); the ox (3:3-4) and the goat (3:14-15 — its own paragraph, Sifra Nedavah '
+                  'Chapter 20 1 reads the break as the exemption) have none' % (TAIL_SEATS,)),
+     'smoke': cell('fire_offering_bread_pleasing_odor', I,
+                   'Lev 3:5 "a fire-offering of pleasing odor"; 3:11 "BREAD of a fire-offering"; 3:16 "bread of a fire-offering '
+                   'for a pleasing odor — all fat is the LORD\'s": the three smoke verbs (Sifra Nedavah Section 14 10: it / he / them)'),
+     'pointer_4_10': cell(species == 'ox' and not ('fat_tail_whole_by_backbone' in parts), I,
+                          'Lev 4:10 "as it is lifted from the OX of the peace offering" — the anointed priest\'s bull takes the ox\'s '
+                          'list, no tail (Sifra Chovah Chapter 4 2-3)'),
+     'pointer_4_35': cell(species == 'lamb' and ('fat_tail_whole_by_backbone' in parts), I,
+                          'Lev 4:35 "as the fat of the LAMB is removed from the peace offering" — the individual\'s ewe takes the '
+                          'lamb\'s list, TAIL INCLUDED: the pointer names the species whose inventory carries the tail'),
+    }
 
 # ---- (2) TEST DATA — the Mishnah's own grid, read from the shelf ----
 mz = json.load(open('<repo-old>/Data/mishnah_zevachim_he.json'))
@@ -350,6 +428,24 @@ TESTS = [
    'window': 'two_days_one_night',
    'pesach_regime': 'night_only_to_midnight_registered'},
    ['accepted', 'due_to_priest', 'eating_window']),
+ # ---- THE FAT INVENTORY (2026-09-06, the dependency-debt sitting) ----
+ ('Tamid 4:3', 'fat:lamb', {
+   'parts': 'covering_fat+fat_on_entrails+two_kidneys_with_loin_fat+lobe_of_liver+fat_tail_whole_by_backbone',
+   'tail': True, 'smoke': 'fire_offering_bread_pleasing_odor', 'pointer_4_35': True},
+   ['smoked_to_the_lord']),
+ ('Sifra Nedavah Ch 20 1', 'fat:goat', {
+   'parts': 'covering_fat+fat_on_entrails+two_kidneys_with_loin_fat+lobe_of_liver',
+   'tail': False, 'pointer_4_10': False, 'pointer_4_35': False},
+   ['smoked_to_the_lord']),
+ ('Sifra Chovah Ch 4 2-3', 'fat:ox', {
+   'parts': 'covering_fat+fat_on_entrails+two_kidneys_with_loin_fat+lobe_of_liver',
+   'tail': False, 'pointer_4_10': True},
+   ['smoked_to_the_lord']),
+ ('Chullin 8:6', 'fat:ban', {
+   'sanction': 'karet_and_lashes', 'scope': 'ox_sheep_goat',
+   'blood_scope': 'fowl_beast_and_wild', 'offered_hence_sacrilege': True,
+   'dwellings': 'all_dwellings'},
+   ['barred_from_it', 'karet_cut_off', 'lashes']),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------

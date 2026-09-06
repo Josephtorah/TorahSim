@@ -19,10 +19,28 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chp(_P, 'CASES', 2)
-assert GUARDED == 33, ('the guard counted %d expectations, the tripwire holds 33' % GUARDED)
+assert GUARDED == 53, ('the guard counted %d expectations, the tripwire holds 53' % GUARDED)
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys
 import effects_layer as FX
+# the callees (cold) — the dependency-debt sitting (2026-09-06): the guilt
+# offering's law (7:1-7) resolves its place, blood, fat, and eater through
+# the offerings dispatcher; the meal offering's law (6:7-11) its fistful and
+# remainder through the meal-offering engine. Until this sitting tzav
+# imported nothing and named every offering type at thirty verses.
+import io as _io, contextlib as _ctx
+with _ctx.redirect_stdout(_io.StringIO()):
+    import cold_run_offerings as OFF
+    import cold_run_minchah as MIN
+ASHAM_ROW = OFF.dispatch('communal_shelamim_and_asham')
+ASHAM_FAT = OFF.dispatch('fat:lamb')
+MIN_FIST = MIN.fistful('fistful_and_frankincense')
+MIN_REM = MIN.remainder('soleth')
+MIN_REM_SINNER = MIN.remainder('sinner')
+print('routing receipts: cold_run_offerings CALLED — asham row place=%r applications=%r eater=%r; fat:lamb parts=%r tail=%r; '
+      'cold_run_minchah CALLED — fistful(fistful_and_frankincense)=%r, remainder(soleth)=%r, remainder(sinner)=%r [IMPORT, live calls]'
+      % (ASHAM_ROW['place']['v'], ASHAM_ROW['applications']['v'], ASHAM_ROW['eater']['v'], ASHAM_FAT['parts']['v'],
+         ASHAM_FAT['tail']['v'], MIN_FIST['v'], MIN_REM['v'], MIN_REM_SINNER['v']))
 
 db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
 
@@ -352,6 +370,179 @@ def installation(case, params):
     return out('no verdict in span', [FX.NONE])
 
 
+# ===== F8: THE GUILT OFFERING'S LAW (7:1-7) — added 2026-09-06 ==========
+# The dependency audit found 7:1-7 cited by no cell in any runner while
+# the sliding-scale engine (Lev 5) and the leper's cleansing (Lev 14:12-13)
+# both run on it. Compiled from the ink; the shared procedure fetched by
+# LIVE CALL from the offerings dispatcher (the asham's row) and the fat
+# inventory (the lamb's list — the asham is a ram, 7:3 names its tail).
+def asham_law(case, params):
+    del P[:]
+    q = case['ask']
+    if q == 'grade':
+        ink('7:1', '"this is the law of the guilt offering: it is MOST HOLY '
+            '(קדש קדשים)"')
+        return out('most holy', ['most_holy'])
+    if q == 'place':
+        ink('7:2', '"in the place where they slaughter the OLAH they shall '
+            'slaughter the asham" — the place-link, the verb doubled')
+        move('cold_run_offerings.dispatch(communal_shelamim_and_asham) '
+             '[IMPORT, live call]', 'place -> %r (Lev 1:11\'s north through '
+             'the doubled verb)' % ASHAM_ROW['place']['v'])
+        return out('north (CALLED offerings -> %s)' % ASHAM_ROW['place']['v'], ['accepted'])
+    if q == 'blood':
+        ink('7:2', '"and its blood he shall throw on the altar AROUND '
+            '(סביב)"')
+        move('cold_run_offerings [IMPORT, live call]', 'applications -> %r '
+             '(Zevachim 53b:5\'s around-vs-throw)' % ASHAM_ROW['applications']['v'])
+        return out('around = %s (CALLED offerings)' % ASHAM_ROW['applications']['v'], ['accepted'])
+    if q == 'fat':
+        ink('7:3-4', '"all its fat he shall offer: the FAT TAIL (האליה) and the '
+            'fat covering the entrails, the two kidneys with their fat on '
+            'the loins, the lobe on the liver" — the ram\'s list, the tail named')
+        move('cold_run_offerings.dispatch(fat:lamb) [IMPORT, live call]',
+             'parts -> %r, tail -> %r: the guilt offering\'s inventory IS the '
+             'lamb\'s of Lev 3:9-10' % (ASHAM_FAT['parts']['v'], ASHAM_FAT['tail']['v']))
+        same = ASHAM_FAT['tail']['v'] and 'fat_tail' in ASHAM_FAT['parts']['v']
+        return out('the lamb\'s inventory, tail included (CALLED offerings fat:lamb: %s)'
+                   % ('match' if same else 'MISMATCH'), ['smoked_to_the_lord'])
+    if q == 'smoke':
+        ink('7:5', '"and the priest shall turn them to smoke on the altar, a '
+            'fire-offering to the LORD; it is an asham"')
+        return out('turned to smoke as a fire-offering', ['smoked_to_the_lord'])
+    if q == 'eater':
+        ink('7:6', '"every MALE among the priests shall eat it, in a HOLY '
+            'place shall it be eaten; it is most holy"')
+        move('cold_run_offerings [IMPORT, live call]', 'eater -> %r, place -> %r, '
+             'window -> %r (Mishnah Zevachim 5:5\'s row)' % (ASHAM_ROW['eater']['v'],
+             ASHAM_ROW['eat_place']['v'], ASHAM_ROW['window']['v']))
+        return out('%s within the hangings, a day and a night (CALLED offerings)' % ASHAM_ROW['eater']['v'],
+                   ['due_to_priest', 'eating_window'])
+    if q == 'one_law':
+        ink('7:7', '"AS the sin offering, SO the guilt offering — ONE LAW for '
+            'them; the priest who atones with it, his shall it be"')
+        move('Sifra, Tzav, Chapter 9 1', 'the comparison\'s content: from '
+             'profane stock, by day, with the right hand — and "one law" = '
+             'HAND-LAYING for both; "the priest who atones" excludes the '
+             'tevul yom, the atonement-lacking, the mourner')
+        return out('as the sin offering: hand-laying, day, right hand; the atoning priest takes it',
+                   ['due_to_priest'])
+    if q == 'blood_entered_sanctuary':
+        ink('7:7', '"as the sin offering, so the guilt offering" — the clause '
+            'R. Eliezer reads')
+        move('Mishnah Zevachim 8:11', 'bloods that entered the hall to atone: '
+             'R. Akiva — all invalid; the sages — the sin offering alone (Lev '
+             '6:23); R. ELIEZER — the guilt offering too, "as the chatat so the '
+             'asham": a recorded three-way dispute, all arms carried')
+        return out('DISPUTE: invalid for all (R. Akiva) / chatat alone (sages) / '
+                   'chatat and asham (R. Eliezer, by 7:7)', ['disqualified'])
+    if q == 'wrong_intent':
+        ink('7:5', '"it (הוא) is an asham" — the pronoun sits AFTER the smoking')
+        move('Sifra, Tzav, Section 5 5-8', 'R. Eliezer\'s analogy to the chatat '
+             'refuted by word position: the chatat and the pesach carry "it" '
+             'at the SLAUGHTER, the asham after the smoking — slaughtered '
+             'wrong-intent it STAYS FIT (Mishnah Zevachim 1:1: valid, not '
+             'credited)')
+        return out('valid, not credited to the owner', ['accepted', 'not_accepted'])
+    if q == 'precedence':
+        ink('7:1-2', 'most holy, thrown around (two-that-are-four) — against '
+            'the sin offering\'s FOUR HORNS and the base (4:25, 4:30)')
+        move('Mishnah Zevachim 10:2, 10:5', 'the sin offering precedes the '
+             'guilt offering (its blood on the four horns and the base); '
+             'EXCEPT the leper\'s asham, which comes to make him fit')
+        return out('chatat first, except the leper\'s asham', [FX.NONE])
+    if q == 'age_and_price':
+        move('Mishnah Zevachim 10:5', 'all guilt offerings come two years old '
+             'and in silver shekels (Lev 5:15\'s "by your valuation in silver '
+             'shekels" [IMPORT — cold_run_vayikra5\'s ram floor]) EXCEPT the '
+             'nazirite\'s and the leper\'s: a year old, no shekel floor — Lev '
+             '14:10\'s "lambs" beside "a ewe of its first year", the shekel '
+             'phrase absent from 14:10-12 [the census]')
+        return out('two-year-old in silver shekels, except the nazirite\'s and the leper\'s',
+                   [FX.NONE])
+    if q == 'leper_blood':
+        ink('7:1', '"the LAW of the guilt offering" — one law for all guilt '
+            'offerings')
+        move('Sifra, Tzav, Section 5 1-2', 'the leper\'s asham included: its '
+             'blood BELOW the red line like every asham; Lev 14:13\'s "as the '
+             'chatat so the asham" defeated for blood placement by "the law"')
+        return out('blood below the red line, the leper\'s included', ['accepted'])
+    return out('no verdict in span', [FX.NONE])
+
+
+# ===== F9: THE MEAL OFFERING'S LAW (6:7-11) — added 2026-09-06 ===========
+def minchah_law(case, params):
+    del P[:]
+    q = case['ask']
+    if q == 'presentation':
+        ink('6:7', '"the sons of Aaron shall bring it near BEFORE THE LORD, '
+            'to the FRONT of the altar"')
+        move('Sifra, Tzav, Section 2 4-5', 'the two clauses intersected — '
+             '"before the LORD" and "in front of the altar" = the SOUTHWEST '
+             'corner (R. Eliezer\'s two-verse resolution rule); fit priests, '
+             'the sons not the daughters, all at once')
+        return out('presented at the southwest corner by the sons of Aaron',
+                   ['presented'])
+    if q == 'fistful':
+        ink('6:8', '"he shall lift from it in his FISTFUL (בקמצו) of the fine '
+            'flour and of its oil and ALL the frankincense, and turn it to '
+            'smoke, a memorial (אזכרתה)"')
+        move('cold_run_minchah.fistful(fistful_and_frankincense) [IMPORT, '
+             'live call]', '-> %r (Lev 2:2\'s own fistful, graded against '
+             'Mishnah Menachot 1-3)' % MIN_FIST['v'])
+        return out('the fistful with all the frankincense to the fire (CALLED minchah: %s)' % MIN_FIST['v'],
+                   ['azkarah_to_fire'])
+    if q == 'remainder':
+        ink('6:9', '"the REMAINDER of it Aaron and his sons shall eat; '
+            'UNLEAVENED shall it be eaten, in a HOLY place, in the court of '
+            'the tent of meeting"')
+        move('cold_run_minchah.remainder(soleth) [IMPORT, live call]',
+             '-> %r (Lev 2:3, 2:10 — the remainder to the priests, most holy)'
+             % MIN_REM['v'])
+        return out('eaten unleavened in the court by Aaron and his sons (CALLED minchah: %s)' % MIN_REM['v'],
+                   ['due_to_priest', 'most_holy'])
+    if q == 'sinner_remainder':
+        ink('6:9', 'the remainder eaten — one law for every meal offering '
+            '(6:7 "the law of the meal offering")')
+        move('cold_run_minchah.remainder(sinner) [IMPORT, live call]',
+             '-> %r: Lev 5:13\'s "it shall be the priest\'s AS THE MEAL '
+             'OFFERING" resolves here (Mishnah Menachot 6:1 lists the '
+             'sinner\'s among the scooped)' % MIN_REM_SINNER['v'])
+        return out('the sinner\'s remainder to the priests as every meal offering (CALLED minchah: %s)'
+                   % MIN_REM_SINNER['v'], ['due_to_priest'])
+    if q == 'leaven':
+        ink('6:10', '"it shall NOT be baked LEAVENED"')
+        move('Sifra, Tzav, Chapter 3 1', 'baking singled out to teach '
+             'PER-OPERATION liability: kneading, rolling, baking each its own')
+        return out('leaven barred, liable per operation', ['barred_from_it'])
+    if q == 'most_holy_like':
+        ink('6:10', '"their portion have I given it from My fire-offerings; '
+            'it is MOST HOLY, AS the sin offering and AS the guilt offering"')
+        move('Sifra, Tzav, Chapter 3 3-4', 'the two-anchor comparison: from '
+             'profane stock, by day, with the right hand (as the chatat); the '
+             'fistful taken not-for-its-name stays FIT (as the asham); R. '
+             'Shimon partitions — the sinner\'s rides the chatat rule, the '
+             'gift the asham rule (dual track)')
+        return out('as the chatat in stock, day, hand; as the asham in wrong intent — R. Shimon partitions',
+                   ['most_holy'])
+    if q == 'every_male':
+        ink('6:11', '"every MALE among the sons of Aaron shall eat it — a '
+            'statute forever for your generations from the fire-offerings"')
+        move('Sifra, Tzav, Chapter 3 5', '"every male" includes the BLEMISHED '
+             'for apportionment; eaten only after the fire\'s part is burned')
+        return out('every male priest, the blemished sharing, after the burning',
+                   ['due_to_priest'])
+    if q == 'contact':
+        ink('6:11', '"whatever TOUCHES them shall become HOLY (יקדש)"')
+        move('Sifra, Tzav, Chapter 3 6', 'absorption required ("in them"); '
+             'partial contact taints the touched part only — he cuts it away; '
+             '"becomes holy" = becomes LIKE it: unfit to unfit, fit under its '
+             'stringencies')
+        return out('becomes like it — absorption required, the touched part alone',
+                   ['sanctified_by_contact'])
+    return out('no verdict in span', [FX.NONE])
+
+
 # ---- the test data; run, grade, effects -----------------------------
 PARAMS = {}
 CASES = [
@@ -454,6 +645,60 @@ CASES = [
     ('the installation leftover (8:32)',
      lambda: installation({'ask': 'leftover'}, PARAMS),
      'the installation\'s own leftover clause'),
+    # ---- F8: the guilt offering's law (7:1-7) — 2026-09-06 ----
+    ('Lev 7:1 — most holy',
+     lambda: asham_law({'ask': 'grade'}, PARAMS), 'most holy'),
+    ('Mishnah Zevachim 5:5 — the asham slaughtered in the north (by call)',
+     lambda: asham_law({'ask': 'place'}, PARAMS), 'north (CALLED offerings -> north)'),
+    ('Mishnah Zevachim 5:5 — two applications that are four (by call)',
+     lambda: asham_law({'ask': 'blood'}, PARAMS), 'around = two_that_are_four (CALLED offerings)'),
+    ('Lev 7:3-4 against Lev 3:9-10 — the ram\'s fat list is the lamb\'s, tail included (by call)',
+     lambda: asham_law({'ask': 'fat'}, PARAMS),
+     'the lamb\'s inventory, tail included (CALLED offerings fat:lamb: match)'),
+    ('Lev 7:5 — the fat parts to the fire',
+     lambda: asham_law({'ask': 'smoke'}, PARAMS), 'turned to smoke as a fire-offering'),
+    ('Mishnah Zevachim 5:5 — eaten by male priests within the hangings (by call)',
+     lambda: asham_law({'ask': 'eater'}, PARAMS),
+     'male_priests within the hangings, a day and a night (CALLED offerings)'),
+    ('Sifra Tzav Chapter 9 1 — as the chatat so the asham: one law',
+     lambda: asham_law({'ask': 'one_law'}, PARAMS),
+     'as the sin offering: hand-laying, day, right hand; the atoning priest takes it'),
+    ('Mishnah Zevachim 8:11 — blood that entered the sanctuary: the three arms',
+     lambda: asham_law({'ask': 'blood_entered_sanctuary'}, PARAMS),
+     'DISPUTE: invalid for all (R. Akiva) / chatat alone (sages) / chatat and asham (R. Eliezer, by 7:7)'),
+    ('Mishnah Zevachim 1:1 / Sifra Section 5 8 — slaughtered wrong-intent: valid, not credited',
+     lambda: asham_law({'ask': 'wrong_intent'}, PARAMS), 'valid, not credited to the owner'),
+    ('Mishnah Zevachim 10:2, 10:5 — the chatat precedes, except the leper\'s asham',
+     lambda: asham_law({'ask': 'precedence'}, PARAMS), 'chatat first, except the leper\'s asham'),
+    ('Mishnah Zevachim 10:5 — two-year-old in silver shekels, the nazirite\'s and leper\'s excepted',
+     lambda: asham_law({'ask': 'age_and_price'}, PARAMS),
+     'two-year-old in silver shekels, except the nazirite\'s and the leper\'s'),
+    ('Sifra Tzav Section 5 1-2 — the leper\'s asham: blood below like every asham',
+     lambda: asham_law({'ask': 'leper_blood'}, PARAMS), 'blood below the red line, the leper\'s included'),
+    # ---- F9: the meal offering's law (6:7-11) — 2026-09-06 ----
+    ('Sifra Tzav Section 2 4-5 — presented at the southwest corner',
+     lambda: minchah_law({'ask': 'presentation'}, PARAMS),
+     'presented at the southwest corner by the sons of Aaron'),
+    ('Mishnah Menachot 3:5 class — the fistful and the frankincense indispensable to each other (by call)',
+     lambda: minchah_law({'ask': 'fistful'}, PARAMS),
+     'the fistful with all the frankincense to the fire (CALLED minchah: indispensable_pair)'),
+    ('Mishnah Menachot 6:1 — the remainder to the priests, most holy (by call)',
+     lambda: minchah_law({'ask': 'remainder'}, PARAMS),
+     'eaten unleavened in the court by Aaron and his sons (CALLED minchah: aaron_and_sons_most_holy)'),
+    ('Mishnah Menachot 6:1 — the sinner\'s meal offering among the scooped (Lev 5:13 "as the meal offering", by call)',
+     lambda: minchah_law({'ask': 'sinner_remainder'}, PARAMS),
+     'the sinner\'s remainder to the priests as every meal offering (CALLED minchah: aaron_and_sons_most_holy)'),
+    ('Sifra Tzav Chapter 3 1 — leaven barred per operation',
+     lambda: minchah_law({'ask': 'leaven'}, PARAMS), 'leaven barred, liable per operation'),
+    ('Sifra Tzav Chapter 3 3-4 — most holy as the chatat and as the asham',
+     lambda: minchah_law({'ask': 'most_holy_like'}, PARAMS),
+     'as the chatat in stock, day, hand; as the asham in wrong intent — R. Shimon partitions'),
+    ('Sifra Tzav Chapter 3 5 — every male, the blemished sharing',
+     lambda: minchah_law({'ask': 'every_male'}, PARAMS),
+     'every male priest, the blemished sharing, after the burning'),
+    ('Sifra Tzav Chapter 3 6 — whatever touches them becomes holy',
+     lambda: minchah_law({'ask': 'contact'}, PARAMS),
+     'becomes like it — absorption required, the touched part alone'),
 ]
 
 ok = 0

@@ -11893,3 +11893,114 @@ memory). UNCOMMITTED now 35 repo files (L3 + L4a) + logic/MOVE_CATALOG.md. OPEN
 (counted): 334 translit-fallback render lines; the seventy's decomposition (Seder Olam). Watches:
 will-indexed dispatch (2), demotion (1), consonant-fragment read (1); world-engine cascade depth + cycle
 detection (design only).
+═══ 2026-09-06, owner: "I need to compact. get ready" → #61 confirmed clean; "commit push" → L3 + L4a
+COMMITTED+PUSHED f196642 (35 files, 485d083..f196642 on origin/main); the repo tree is clean against
+origin except this line and memory. COMPACTION POINT #61 above STANDS as the resume point (L4b next on
+"go"); the only change since it: the commit itself.
+═══ 2026-09-06, post-#61 rereads DONE (Step 2, Step 5, compiler block, this tail, COMPILE_DEBT). A peer
+thread (the UI session) asked whether the bird burnt-offering rite Lev 1:14-17 was skipped → answered: COMPILED
+at audit sitting B in cold_run_minchah.bird(), Zevachim 6-7 graded whole, F-205; the one true observation: Lev
+5:10's "as prescribed" pointer in cold_run_vayikra5 is a NOTE, not a live call. THEN the owner: "how many of
+these have we missed during our compile? are we compiling correctly or overlooking all of these dependencies"
+→ THE DEPENDENCY AUDIT, measured by script (scratchpad/pointer_census.py + pointer_deps2.py), written to
+World/step9/REPORT_DEPENDENCIES.md, NO code changed: (1) SIX explicit cross-runner pointers inside compiled
+spans, NONE fully live — Exod 23:15→pesach SILENT; Lev 4:10/26/31/35→Lev 3's fat = a CALL INTO AN EMPTY SEAT
+(offerings.dispatch('shelamim') holds no fat list; Lev 3:3-17 uncited anywhere); 5:10→bird NOTE; 5:13→Lev 2
+SILENT; 10:15/18→tzav NOTE; 14:13→north SILENT; (2) 33 real type-name edges: 9 CALL / 4 NOTE / 20 SILENT —
+tzav an ISLAND (0 imports, 0 importers), yoma/negaim/moadim/vayikra5/calendar silent; FOUR institutions compiled
+twice with no call (seventh year, first fruits, omer, the fast); (3) FOUR sub-spans UNCOMPILED behind check
+marks: Lev 14:1-32 (the leper's cleansing), Lev 3:3-17 (the fat inventory), Lev 7:1-7 + 6:7-11 (the guilt and
+meal offerings' laws), Lev 23:18-19 (Shavuot's animals); cleared on check: shemini 11:24-40, yovel 25:23-28,
+mishpatim's pit/fire, pesach 13:13. VERDICT: the process has no step that censuses a span's pointers before
+compiling — calls were wired only where the sheet forced them. PROPOSED (owner's call, nothing done): the
+census as a GATE in motion (1) with dispositions CALL/OWED/PARAMETER; a repair sitting THE DEPENDENCY DEBT;
+COMPILE_DEBT line items for the four sub-spans + Lev 9 as the run of Lev 1-4. L4b still waits on "go".
+═══ 2026-09-06, owner: "I don't understand your options. can we fix all of the overlooked sections, then make
+sure we code properly going forward" → THE DEPENDENCY DEBT PAID AND THE GATE INSTALLED, one sitting, by the
+rhythm. THE LEDGER FIRST: logic/oral_triage/dependency_debt_docket_2026-09-06.md (scratchpad/gen_deps_ledger.py) —
+59 rows: Mishnah Negaim 14 + Tamid 4 + Chullin 8 read WHOLE (22) + the 26 link rows on the four sub-spans + topic
+rows (37); coverage computed (missing 0, extra 0); LAW 11 / CREDIT 34 (every one verified by script) / ROUTED 10 /
+CONTEXT 4; 368 Talmud addresses indexed, NONE opened. EIGHT EFFECTS registered first (109 → 117): smoked_to_the_
+lord (heaven), sprinkled_seven, shaved_whole, oil_on_the_blood (body), sent_over_the_field (transfer), outside_
+his_tent (timer), declared_pure, waved (status). THE FOUR SUB-SPANS COMPILED: (1) Lev 3:3-17 THE FAT INVENTORY
+into cold_run_offerings.py (45 → 57 cells, 54% ink) — fat_parts(species) reads each species' own verses; the tail
+token at EXACTLY TWO SEATS of Lev 1-8 (3:9 the lamb, 7:3 the ram; asserted); the ox and the goat (its own
+paragraph, Nedavah Chapter 20 1) have none; dispatch('fat:ox/lamb/goat/ban'); (2) Lev 7:1-7 THE GUILT OFFERING'S
+LAW + 6:7-11 THE MEAL OFFERING'S LAW into cold_run_tzav.py (33 → 53) — asham_law(): place/blood/eater by CALL into
+the offerings row, the fat list by CALL into fat:lamb (match), 'one law' (Chapter 9 1), Zevachim 8:11's three arms,
+wrong intent fit by 7:5's 'it', Zevachim 10:2/10:5 precedence and age-price, the leper's blood below (Section 5
+1-2); minchah_law(): the fistful and remainder by CALL into cold_run_minchah (the sinner's — Lev 5:13's pointer),
+leaven per operation, most-holy-like, every male, contact — tzav (which imported NOTHING) now imports offerings +
+minchah; (3) Lev 14:1-32 THE LEPER'S CLEANSING — NEW cold_run_metzora.py, 77/77 ON THE FIRST GRADED RUN (27% ink /
+28% moves / 21 sheet / 3 data / 10 imports; guard 77) — the day/priest, the kit of four, the birds (coupled fates,
+the quarter-log = data), seven sprinklings, the sending geography, the first shave + the tent week (his wife), the
+second shave (three sites, 'all his hair' x2), THE THREE PURITIES ON THE PURITY VERB'S FOUR SEATS (וטהר "and he shall be pure" at 14:7,
+8, 9, 20 = Negaim 14:3 + Keritot 2:1), the eighth day (asham waved alive with the log; north by CALL offerings; most
+holy + blood-below by CALL tzav.asham_law; the three right members — THE CENSUS CORRECTED ME TWICE: 'the right' at
+SIX verses (the priest's right FINGER at 16, 27), the log at five seats incl. 14:15's 'מלג' ("from the log"); the
+oil on the blood's PLACE 14:28 vs 14:17; the head-oil dispute; chatat (CH.rank commoner) then olah (CALL)), the
+poor scale (asham never scaled; bird order by CALL vayikra5; status SAMPLED AT THE ASHAM — Section 4 13 = Negaim
+14:11's R. Yehuda), reach-forms censused [22,30,31,32]; five engines called; (4) Lev 23:18-19 SHAVUOT'S ANIMALS
+into cold_run_moadim.py (24 → 41; the guard NEWLY WIRED there) — three kinds by numerals; olah/chatat/the two lambs
+by CALL — the lambs = the COMMUNAL peace offering's row (Zevachim 5:5), which 23:20's own 'holy to the LORD, for
+the PRIEST' states; Menachot 4:2-3, 3:6, 5:6, Emor Chapter 13 4-8; plus 23:5 pesach, 23:12 olah, the omer's grain
+(minchah.omer), the first fruits + pilgrimage (calendar) by CALL. THE SIX POINTERS LIVE: Exod 23:15 → pesach
+(calendar.matzah; 14 → 16); Lev 4:10/26/31/35 → fat inventory (chatat.fat — THE POINTER NAMES THE SPECIES; 187 →
+194); 5:10 → minchah.bird, 5:13 → minchah.remainder, 5:6 → chatat.rank, 5:15 → tzav.asham_law (vayikra5.pointers,
+function-local imports since those engines import it; 27 → 31); 10:15 → tzav.dues_machine; 10:18 → INNER; 14:13 →
+tzav. THE FOUR DUPLICATES = ONE FUNCTION AT TWO SEATS: calendar.sabbatical('home_engine') → yovel.sabbatical;
+moadim → calendar.first_fruits/pilgrimage; moadim → minchah.omer; yoma → moadim.yom_kippur (18 → 22). Also wired:
+yoma → offerings (inner_chatat_yk, olah) + chatat.burn_site; sanctions → offerings (17:5, 17:8); clocks →
+offerings (12:6's lamb); minchah → offerings (the bird's frame). THE GATE: World/step9/dependency_census.py +
+dependency_dispositions.yaml, run FIRST by run_cold_all.py — 23 runners declare spans (mishpatim_2 = 21:22, 21:26-27,
+22:15-16, 22:29; negaim = 13 + 14:33-57; metzora = 14:1-32); 905 verses scanned, 22 type tokens + 5 pointer forms;
+48 required edges + 42 pointers ALL dispositioned (CALL verified live / OWED names a COMPILE_DEBT line / REVERSE
+verified / VIA verified / PARAMETER / INTERNAL / RUN_CITATION / FALSE naming the homograph); 40 live import edges; a
+live edge the file understates FAILS. Homograph classes the census surfaced: 'commandments' vs 'unleavened'
+(the matzah token restricted to המצות "the [feast of] unleavened bread"), first fruits vs firstborn, the seventh
+SABBATH (23:16) vs the seventh year, the prepositions תחת ("under / in place of / for") vs the talion formula;
+YAML's bare FALSE read as the boolean — normalized. fix_percent lifted 22 formats across nine runners before their
+first runs (chatat 10, clocks 6, sanctions 3, metzora 3). run_cold_all 23/23, 1297 → 1444 cells. SEATS (scratchpad/
+seat_deps.py; 66 cites pre-checked; two anchors re-pointed to ops-bearing steps): L04-20 (F-217 THE POINTER NAMES
+THE SPECIES) at STEP_Lv_4_35; LV14A-08 (F-218 THE CLEANSING ON THE PURITY VERB'S FOUR SEATS) at STEP_Lv_14_8;
+LV07A-07 (F-219 ONE LAW, AND THE RAM'S LIST IS THE LAMB'S) at STEP_Lv_7_7; LV23A-14 (F-220 SHAVUOT'S TWO LAMBS ARE
+THE COMMUNAL PEACE OFFERING) at STEP_Lv_23_18; LV03-11 (F-221 THE FAT INVENTORY PER SPECIES) at STEP_Lv_3_9; verify
+0 failed ×5; rituals COMPLETE ×5 (regression 163/163); ALL_UNITS rebuilt; corpus_world standing 1726 → 1731, hash
+8b8fff1fa28953af UNMOVED, CORPUS_TRUTH GREEN. RECORDS: REPORT_DEPENDENCIES.md (the audit + THE REPAIR section; the
+'zero importers' line corrected — holiness called tzav); THE_STEPS Step 5 motion (1) ⚠ CENSUS THE SPAN'S POINTERS
+FIRST + THE DEPENDENCY DEBT paragraph; COMPILE_DEBT.md THE DEPENDENCY DEBT section D1-D7 [x], D8 Lev 9 as the run
+of Lev 1-4 PROPOSED (not ordered); MOVE_CATALOG M-07 exemplars (g)-(l) + the gate; STAMP_LEDGER delegated row;
+THE_BRIEFING entry + scoreboard; the ledger's MOTION-4 note; gloss_lint at baseline everywhere; memory. Watches
+unchanged. Exam counters unmoved.
+
+═══ COMPACTION POINT #62 (2026-09-06 — written unprompted at the dependency-debt sitting's close)
+═══ CLEAN POINT — no work mid-flight. UNCOMMITTED since f196642: 41 modified + 5 new — World/step9/{cold_run_
+offerings, tzav, chatat, vayikra5, calendar, sanctions, clocks, minchah, moadim, yoma}.py (edited), cold_run_
+metzora.py + dependency_census.py + dependency_dispositions.yaml + REPORT_DEPENDENCIES.md (NEW), run_cold_all.py,
+effect_vocabulary.yaml, COMPILE_DEBT.md, logic/oral_triage/dependency_debt_docket_2026-09-06.md (NEW), logic/units/
+{lev_04_inadvertence_case_tree, lev_14_metzora_cleanse, lev_07_asham_procedure, lev_23_spring_festivals, lev_03_
+shelamim}.yaml + manifests + py_units + html + UNIT_INDEX + ALL_UNITS, CORPUS_TRUTH.py + corpus_world.sqlite,
+STAMP_LEDGER, MOVE_CATALOG, THE_STEPS, THE_BRIEFING, this doc, memory — rides the owner's "commit push" (staging by
+exclusion; NEVER-COMMIT set unchanged; ⚠ every git command begins with `cd <repo-old> &&`; ⚠ the shell
+cwd drifted into World/step9 this sitting — always absolute paths). POST-COMPACTION REREADS (mandatory, first
+sitting): THE_STEPS Step 2 + Step 5 (the deliverable rule, the five motions INCLUDING the new census sentence in
+motion (1), the effects rule, THE COMPILE DEBT, THE SIXTEENTH SPAN + THE DEPENDENCY DEBT paragraph) + the compiler
+block + this tail + World/step9/COMPILE_DEBT.md + World/step9/dependency_dispositions.yaml's header. THEN, on the
+owner's "go": SITTING L4b exactly as #61 enumerates — WITH THE NEW RULE: declare cold_run_holiness_b's span in
+dependency_dispositions.yaml FIRST, run dependency_census.py, disposition every edge (expect: 19:20-22 → vayikra5/
+tzav asham CALL; 19:23-25 orlah — no home yet (its own); 19:31 → sanctions.ov CALL; 19:5-8 already holiness's),
+then the ledger, then the cells; run_cold_all's gate must be green before the sitting closes. ⚠ NEW RUNNERS MUST
+DECLARE THEIR SPAN or the sweep fails. OPEN (counted): 334 translit-fallback render lines; the seventy's
+decomposition (Seder Olam); D8 Lev 9 as the run of Lev 1-4 (proposed). Watches: will-indexed dispatch (2), demotion
+(1), consonant-fragment read (1); world-engine cascade depth + cycle detection (design only).
+═══ 2026-09-06 (after #62), the owner directed a two-thread DESIGN DISCUSSION on the dependency overhaul (discussion
+only), then "this is your call. what do you recommend?" → CONSENSUS reached (the other thread withdrew its
+late-binding registry: a callee must fail its caller AT LOAD; the required edges come from the INK, not the code —
+generate-from-code cannot find a silent edge) and ADOPTED on my call: (1) imports + the ink-driven gate stay; (2)
+BUILT: the ungated carries: field (value/count/procedure/status/window/place/inventory/verdict — on 29 CALL edges),
+the --debt worklist listing (today: 0 owed), the generated World/step9/DEPENDENCY_INDEX.md written by the gate each
+run (documentation, never runtime); (3) LATE binding reserved per proven cycle, unbuilt; (4) the daemon campaign a
+separate future order with its own trigger-and-effect gate (COMPILE_DEBT D9, the other thread's rider); D8 (Lev 9
+as the run of Lev 1-4) recommended as one short sitting after L5. Records: REPORT_DEPENDENCIES THE CONSENSUS
+section; COMPILE_DEBT D8/D9-a/D9; the yaml header; THE_STEPS motion (1); this doc; memory. Gate green, index
+regenerated; the sweep is rerun below. #62 STANDS as the resume point (L4b next on "go"; declare its span first).

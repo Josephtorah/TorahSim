@@ -754,6 +754,11 @@ m.step("Lev.4.35")
 # sheep then smoke-over-fire-offering-the-LORD ∧ kiper ∧ forgive-not
 m.handler("kol_chelbah_ka_asher_yusar_chelev_ha_kesev",
           "hiqtir_al_ishe_YHWH ∧ kiper ∧ nislach_lo")
+# witness-tier presupposed read:
+# four_as_the_fat_clauses_resolved_by_live_call on
+# the_pointer_names_the_species — read, not installed
+m.witness_read("the_pointer_names_the_species", "four_as_the_fat_clauses_resolved_by_live_call",
+                cites=["Sifra, Vayikra Dibbura DeChovah, Chapter 4 2", "Sifra, Vayikra Dibbura DeChovah, Chapter 4 3", "Sifra, Vayikra Dibbura DeChovah, Chapter 9 4", "Sifra, Vayikra Dibbura DeNedavah, Chapter 19 3", "Sifra, Vayikra Dibbura DeNedavah, Chapter 20 1", "Sifra, Vayikra Dibbura DeNedavah, Section 14 10", "Mishnah Tamid 4:3", "Mishnah Chullin 8:6", "Mishnah Zevachim 10:2"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -771,7 +776,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 35
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('aggregation_keys', 'knowledge_indexed_counts'), ('blood_algorithms', 'dip_per_sprinkle_staves'), ('court_error_machine', 'unanimity_partial_located'), ('tribal_arithmetic', 'four_positions'), ('elders_quorum', 'five_or_three'), ('chatat_censuses_at_their_talmud_seats', 'cold_compile'), ('epistemic_triggers', 'self_knowledge_specificity'), ('tier_fences', 'dependent_actor_exempt'), ('order_equivalence', 'no_rank_lost_replaced')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('aggregation_keys', 'knowledge_indexed_counts'), ('blood_algorithms', 'dip_per_sprinkle_staves'), ('court_error_machine', 'unanimity_partial_located'), ('tribal_arithmetic', 'four_positions'), ('elders_quorum', 'five_or_three'), ('chatat_censuses_at_their_talmud_seats', 'cold_compile'), ('epistemic_triggers', 'self_knowledge_specificity'), ('tier_fences', 'dependent_actor_exempt'), ('order_equivalence', 'no_rank_lost_replaced'), ('the_pointer_names_the_species', 'four_as_the_fat_clauses_resolved_by_live_call')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 1 7', 'Sifra, Vayikra Dibbura DeChovah, Chapter 1 4', 'Sifra, Vayikra Dibbura DeChovah, Chapter 1 5', 'Sifra, Vayikra Dibbura DeChovah, Section 5 4', 'Sifra, Vayikra Dibbura DeChovah, Section 7 8', 'Sifra, Vayikra Dibbura DeChovah, Section 7 9', 'Sifra, Vayikra Dibbura DeChovah, Chapter 1 8', 'Sifra, Vayikra Dibbura DeChovah, Chapter 1 13']
     assert all('knowledge_indexed_counts' not in f for f in m.WORLD["facts"])
     assert 'aggregation_keys' not in m.WORLD["witnessed"]
@@ -799,4 +804,7 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[8]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 10 9', 'Sifra, Vayikra Dibbura DeChovah, Chapter 10 10', 'Sifra, Vayikra Dibbura DeChovah, Chapter 11 1', 'Sifra, Vayikra Dibbura DeChovah, Chapter 11 2']
     assert all('no_rank_lost_replaced' not in f for f in m.WORLD["facts"])
     assert 'order_equivalence' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 4 2', 'Sifra, Vayikra Dibbura DeChovah, Chapter 4 3', 'Sifra, Vayikra Dibbura DeChovah, Chapter 9 4', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 19 3', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 20 1', 'Sifra, Vayikra Dibbura DeNedavah, Section 14 10', 'Mishnah Tamid 4:3', 'Mishnah Chullin 8:6', 'Mishnah Zevachim 10:2']
+    assert all('four_as_the_fat_clauses_resolved_by_live_call' not in f for f in m.WORLD["facts"])
+    assert 'the_pointer_names_the_species' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

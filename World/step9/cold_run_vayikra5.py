@@ -21,7 +21,7 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chp(_P, 'CASES', 2)
-assert GUARDED == 27, ('the guard counted %d expectations, the tripwire holds 27' % GUARDED)
+assert GUARDED == 31, ('the guard counted %d expectations, the tripwire holds 31' % GUARDED)
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys, os
 
@@ -322,6 +322,55 @@ def deposit_restitution(claim, data):
     return '; '.join(out), P
 
 # =====================================================================
+# THE CHAPTER'S OWN POINTERS, RESOLVED BY LIVE CALL (2026-09-06, the
+# dependency-debt sitting). This runner was the first Leviticus compile;
+# every later engine calls INTO it, and its own cross-references stood as
+# notes. 5:10 "as prescribed" points to the bird burnt offering (Lev
+# 1:14-17); 5:13 "as the meal offering" to Lev 2's remainder; 5:6's female
+# of the flock to Lev 4:27-35's commoner; 5:15-19's ram to Lev 7:1-7's
+# procedure. The imports are function-local: those engines import this
+# module at load, so they are fetched only when a pointer is asked.
+def pointers(q, data):
+    del P[:]
+    import io as _io, contextlib as _ctx
+    with _ctx.redirect_stdout(_io.StringIO()):
+        import cold_run_minchah as MIN, cold_run_chatat as CH, cold_run_tzav as TZ
+    if q == 'bird_olah_as_prescribed':
+        ink(10, '"and the second he shall make a BURNT OFFERING, AS PRESCRIBED '
+                '(כמשפט)" — the ink\'s own pointer to the bird rite of Lev 1:14-17')
+        b = MIN.bird
+        move('cold_run_minchah.bird [IMPORT, live call]', 'place -> %r; how many -> %r; '
+             'burn -> %r (Lev 1:15-17 compiled at audit sitting B; Mishnah Zevachim '
+             '6:5-7, 7:2)' % (b('place')['v'], b('how_many')['v'], b('burn')['v']))
+        return 'olah per Lev 1:14-17: %s, %s, %s (CALLED minchah.bird)' % (
+            b('place')['v'], b('how_many')['v'], b('burn')['v']), P
+    if q == 'remainder_as_minchah':
+        ink(13, '"and it shall be the priest\'s AS THE MEAL OFFERING (כמנחה)" — '
+                'the pointer to Lev 2:3, 2:10')
+        r = MIN.remainder('sinner')['v']
+        move('cold_run_minchah.remainder(sinner) [IMPORT, live call]', '-> %r '
+             '(Mishnah Menachot 6:1 lists the sinner\'s among the scooped)' % r)
+        return 'to the priest as every meal offering: %s (CALLED minchah.remainder)' % r, P
+    if q == 'lamb_tier_procedure':
+        ink(6, '"a FEMALE from the flock, a lamb or a goat-kid, for a sin '
+               'offering" — the commoner\'s animal of Lev 4:28 and 4:32')
+        r = CH.rank('commoner')['v']
+        move('cold_run_chatat.rank(commoner) [IMPORT, live call]', '-> %r: the '
+             'graded offering\'s first tier RUNS Lev 4:27-35\'s procedure (the '
+             'horns, the base, the fat as the lamb\'s or the goat\'s)' % r)
+        return '%s per Lev 4:27-35 (CALLED chatat.rank)' % r, P
+    if q == 'asham_procedure':
+        ink(15, '"a ram without blemish from the flock, by your valuation in '
+                'silver shekels, for a GUILT OFFERING" — the case; the '
+                'procedure is Lev 7:1-7\'s')
+        pl = TZ.asham_law({'ask': 'place'}, TZ.PARAMS)[0]
+        ea = TZ.asham_law({'ask': 'eater'}, TZ.PARAMS)[0]
+        move('cold_run_tzav.asham_law [IMPORT, live call]', 'place -> %r; eater '
+             '-> %r (compiled 2026-09-06; Mishnah Zevachim 5:5)' % (pl, ea))
+        return 'north, male_priests within the hangings (CALLED tzav.asham_law)', P
+    return 'no pointer', P
+
+
 # THE TEST DATA — the Mishnah's rows, fed at run time (motion 2).
 # =====================================================================
 DATA = {
@@ -428,6 +477,19 @@ CASES = [
   lambda: deposit_restitution({'claim_kind':'robbery','swore_falsely':True,
     'object_exists':True,'value':4.0,'ask':'valuation_date'}, DATA),
   'DISPUTE: the day-of-guilt valuation (two houses)'),
+ # ---- the pointers, live (2026-09-06) ----
+ ('Lev 5:10 "as prescribed" — the bird burnt offering by call into the meal-offering engine',
+  lambda: pointers('bird_olah_as_prescribed', DATA),
+  'olah per Lev 1:14-17: above_the_red_line_south_east_corner, even_one, wholly_burned_on_the_wood (CALLED minchah.bird)'),
+ ('Lev 5:13 "as the meal offering" — the remainder by call',
+  lambda: pointers('remainder_as_minchah', DATA),
+  'to the priest as every meal offering: aaron_and_sons_most_holy (CALLED minchah.remainder)'),
+ ('Lev 5:6 — the lamb tier runs Lev 4:27-35 by call into the sin-offering engine',
+  lambda: pointers('lamb_tier_procedure', DATA),
+  'she_goat_or_ewe_lamb per Lev 4:27-35 (CALLED chatat.rank)'),
+ ('Lev 5:15-19 — the guilt offering\'s procedure by call into the Tzav engine',
+  lambda: pointers('asham_procedure', DATA),
+  'north, male_priests within the hangings (CALLED tzav.asham_law)'),
 ]
 
 # ---- motion 3+5: run and grade --------------------------------------

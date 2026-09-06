@@ -112,6 +112,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(hide_distribution, follows_flesh) — one law of hand-laying; the hide follows the flesh</span><br><span class="gloss">= WITNESS-READ(hide-distribution, follows-flesh) — one law fowl hand-laying; the hide follows the flesh</span><br>AS THE ONE, SO THE OTHER [claim LV07A-05]. As the sin-offering, the guilt-offering comes from mundane money, by day, with the right hand; &#x27;one law&#x27; adds HAND-LAYING to both. The atoning priest&#x27;s trio of exclusions (day-immersed, atonement-lacking, mourner) bars flesh AND hide alike. Rebbi&#x27;s principle: THE HIDE FOLLOWS THE FLESH — burnt offerings&#x27; hides burn with them, eaten offerings&#x27; hides go with the meat, and only the burnt-offering needed its own verse: flesh to the altar, hide to the priests — even from an olah slaughtered not-for-its-sake; higher-order hides only.
 </td><td>—</td><td class='cite'>Sifra, Tzav, Chapter 9 1, Sifra, Tzav, Chapter 9 2, Sifra, Tzav, Chapter 9 4, Sifra, Tzav, Chapter 9 5</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_guilt_offerings_law_compiled_one_law_the_rams_list_is_the_lambs, procedure_by_live_call)</span><br><span class="gloss">= WITNESS-READ(the-guilt-offerings-law-compiled-one-law-the-rams-list-is-the-lambs, procedure-by-live-call)</span><br>ONE LAW, AND THE RAM&#x27;S LIST IS THE LAMB&#x27;S [claim LV07A-07]. The guilt offering&#x27;s law (7:1-7) and the meal offering&#x27;s (6:7-11) had been cited by no cell in any runner while the sliding-scale engine of Lev 5 and the leper&#x27;s cleansing of Lev 14 both run on them. Compiled now into the Tzav engine (53 of 53): &#x27;most holy&#x27; (7:1); the place through the doubled slaughter verb of 7:2 and the blood &#x27;around&#x27;, both fetched by live call from the offerings dispatcher&#x27;s own asham row (north; two applications that are four; Mishnah Zevachim 5:5); the fat list of 7:3-4 — the TAIL, the covering fat, the two kidneys, the lobe — graded against Lev 3:9-10&#x27;s lamb by call into the fat inventory and matching part for part, the ram being of the flock; the eater &#x27;every male among the priests, in a holy place&#x27; (7:6); and &#x27;as the sin offering, so the guilt offering — ONE LAW for them&#x27; (7:7), which the Sifra fills with hand-laying, day, the right hand, and the atoning priest&#x27;s share (Tzav Chapter 9 1), which R. Eliezer reads for the blood that entered the sanctuary (Zevachim 8:11, a three-way dispute carried), and which 7:5&#x27;s &#x27;it&#x27; set AFTER the smoking answers for wrong intent — the asham stays fit (Section 5 8; Zevachim 1:1). The sin offering precedes it except the leper&#x27;s (Zevachim 10:5), and 7:1&#x27;s &#x27;the law&#x27; puts even the leper&#x27;s blood below the red line (Section 5 1-2). The Lev 5 engine now calls this law for its guilt offerings, and the leper&#x27;s cleansing calls it at 14:13. Filed and auto-seated under the auto-seat rider (the dependency-debt sitting, 2026-09-06 — the owner: &#x27;fix all of the overlooked sections, then make sure we code properly going forward&#x27;; the four uncompiled sub-spans compiled, every ink pointer wired as a live call, the dependency census installed as a gate before every cold sweep, 23 of 23 runners green at 1444 cells).
+</td><td>—</td><td class='cite'>Sifra, Tzav, Section 5 1, Sifra, Tzav, Section 5 2, Sifra, Tzav, Section 5 8, Sifra, Tzav, Chapter 9 1, Sifra, Tzav, Section 2 4, Sifra, Tzav, Chapter 3 3, Sifra, Tzav, Chapter 3 6, Mishnah Zevachim 5:5, Mishnah Zevachim 8:11, Mishnah Zevachim 10:2, Mishnah Zevachim 10:5, Mishnah Menachot 6:1, Mishnah Tamid 4:3</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
 </div>
@@ -578,9 +580,10 @@ from machine import Machine
 m = Machine(&quot;lev_07_asham_procedure&quot;)
 
 # -------------------------- Lev.7.1 · ETNACHTA_SPLIT -----------------------
-# וזאת תורת האשם … קדש קדשים הוא
-# &quot;[EN-AID] From top split: LEFT «וזאת תורת האשם» / RIGHT «קדש קדשים הוא».
-# Derive claim from Hebrew arms. Lev 7:1.&quot;
+# ‹וזאת תורת האשם› (“and-this precept the-guilt”)
+# ‹… קדש קדשים הוא› (“holiness holiness he/it”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:1.&quot;
 m.step(&quot;Lev.7.1&quot;)
 # witness-tier presupposed read: blood_below on asham_law — read, not
 # installed
@@ -588,10 +591,13 @@ m.witness_read(&quot;asham_law&quot;, &quot;blood_below&quot;,
                 cites=[&quot;Sifra, Tzav, Section 5 1&quot;, &quot;Sifra, Tzav, Section 5 2&quot;])
 
 # -------------------------- Lev.7.2 · ETNACHTA_SPLIT -----------------------
-# במקום אשר ישחטו את העלה ישחטו את האשם … ואת דמו יזרק על המזבח סביב
-# &quot;[EN-AID] From top split: LEFT «במקום אשר ישחטו את העלה ישחטו את האשם» /
-# RIGHT «ואת דמו יזרק על המזבח סביב». Derive claim from Hebrew arms. Lev
-# 7:2.&quot;
+# ‹במקום אשר ישחטו› (“in-place which slaughter”)
+# ‹את העלה ישחטו› (“obj-marker the-burnt-offering slaughter”)
+# ‹את האשם … ואת› (“obj-marker the-guilt … and-obj-marker”)
+# ‹דמו יזרק על› (“blood-him/its sprinkle over”)
+# ‹המזבח סביב› (“the-altar circle”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:2.&quot;
 m.step(&quot;Lev.7.2&quot;)
 # witness-tier presupposed read: open_class on slaughterers — read, not
 # installed
@@ -599,23 +605,31 @@ m.witness_read(&quot;slaughterers&quot;, &quot;open_class&quot;,
                 cites=[&quot;Sifra, Tzav, Section 5 3&quot;])
 
 # -------------------------- Lev.7.3 · ETNACHTA_SPLIT -----------------------
-# ואת כל חלבו יקריב ממנו … את האליה ואת החלב המכסה את הקרב
-# &quot;[EN-AID] From top split: LEFT «ואת כל חלבו יקריב ממנו» / RIGHT «את האליה
-# ואת החלב המכסה את הקרב». Derive claim from Hebrew arms. Lev 7:3.&quot;
+# ‹ואת כל חלבו› (“and-obj-marker all fat-him/its”)
+# ‹יקריב ממנו … את› (“bring-near from-us/our … obj-marker”)
+# ‹האליה ואת החלב› (“the-stout-part and-obj-marker the-fat”)
+# ‹המכסה את הקרב› (“the-plump obj-marker the-nearest-part”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:3.&quot;
 m.step(&quot;Lev.7.3&quot;)
 
 # -------------------------- Lev.7.4 · ETNACHTA_SPLIT -----------------------
-# ואת שתי הכלית ואת החלב אשר עליהן אשר על הכסלים … ואת היתרת על הכבד על
-# הכלית יסירנה
-# &quot;[EN-AID] From top split: LEFT «ואת שתי הכלית ואת החלב אשר עליהן אשר על
-# הכסלים» / RIGHT «ואת היתרת על הכבד על הכלית יסירנה». Derive claim from
-# Hebrew arms. Lev 7:4.&quot;
+# ‹ואת שתי הכלית› (“and-obj-marker two the-kidney”)
+# ‹ואת החלב אשר› (“and-obj-marker the-fat which”)
+# ‹עליהן אשר על› (“over-them/their which over”)
+# ‹הכסלים … ואת היתרת› (“the-fatness … and-obj-marker the-lobe”)
+# ‹על הכבד על› (“over the-liver over”)
+# ‹הכלית יסירנה› (“the-kidney turn-aside-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:4.&quot;
 m.step(&quot;Lev.7.4&quot;)
 
 # -------------------------- Lev.7.5 · ETNACHTA_SPLIT -----------------------
-# והקטיר אתם הכהן המזבחה אשה ליהוה … אשם הוא
-# &quot;[EN-AID] From top split: LEFT «והקטיר אתם הכהן המזבחה אשה ליהוה» / RIGHT
-# «אשם הוא». Derive claim from Hebrew arms. Lev 7:5.&quot;
+# ‹והקטיר אתם הכהן› (“and-smoke obj-marker-them/their the-priest”)
+# ‹המזבחה אשה ליהוה› (“the-altar-ward fire-offering to-YHWH”)
+# ‹… אשם הוא› (“guilt he/it”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:5.&quot;
 m.step(&quot;Lev.7.5&quot;)
 # witness-tier presupposed read: word_position on asham_intent — read, not
 # installed
@@ -623,9 +637,12 @@ m.witness_read(&quot;asham_intent&quot;, &quot;word_position&quot;,
                 cites=[&quot;Sifra, Tzav, Section 5 5&quot;, &quot;Sifra, Tzav, Section 5 6&quot;, &quot;Sifra, Tzav, Section 5 7&quot;, &quot;Sifra, Tzav, Section 5 8&quot;])
 
 # -------------------------- Lev.7.6 · ETNACHTA_SPLIT -----------------------
-# כל זכר בכהנים יאכלנו … במקום קדוש יאכל קדש קדשים הוא
-# &quot;[EN-AID] From top split: LEFT «כל זכר בכהנים יאכלנו» / RIGHT «במקום קדוש
-# יאכל קדש קדשים הוא». Derive claim from Hebrew arms. Lev 7:6.&quot;
+# ‹כל זכר בכהנים› (“all male in-priest”)
+# ‹יאכלנו … במקום קדוש› (“eat-him/its … in-place sacred”)
+# ‹יאכל קדש קדשים› (“eat holiness holiness”)
+# ‹הוא› (“he/it”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:6.&quot;
 m.step(&quot;Lev.7.6&quot;)
 # witness-tier presupposed read: born_blemished on blemish_ladder — read,
 # not installed
@@ -633,25 +650,39 @@ m.witness_read(&quot;blemish_ladder&quot;, &quot;born_blemished&quot;,
                 cites=[&quot;Sifra, Tzav, Section 5 9&quot;, &quot;Sifra, Tzav, Section 5 10&quot;])
 
 # -------------------------- Lev.7.7 · ETNACHTA_SPLIT -----------------------
-# כחטאת כאשם תורה אחת להם … הכהן אשר יכפר בו לו יהיה
-# &quot;[EN-AID] From top split: LEFT «כחטאת כאשם תורה אחת להם» / RIGHT «הכהן אשר
-# יכפר בו לו יהיה». Derive claim from Hebrew arms. Lev 7:7.&quot;
+# ‹כחטאת כאשם תורה› (“like-sin-offering like-guilt precept”)
+# ‹אחת להם … הכהן› (“one to-them/their … the-priest”)
+# ‹אשר יכפר בו› (“which atone in-him/its”)
+# ‹לו יהיה› (“to-him/its be”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:7.&quot;
 m.step(&quot;Lev.7.7&quot;)
 # witness-tier presupposed read: follows_flesh on hide_distribution — read,
 # not installed
 m.witness_read(&quot;hide_distribution&quot;, &quot;follows_flesh&quot;,
                 cites=[&quot;Sifra, Tzav, Chapter 9 1&quot;, &quot;Sifra, Tzav, Chapter 9 2&quot;, &quot;Sifra, Tzav, Chapter 9 4&quot;, &quot;Sifra, Tzav, Chapter 9 5&quot;])
+# witness-tier presupposed read: procedure_by_live_call on
+# the_guilt_offerings_law_compiled_one_law_the_rams_list_is_the_lambs —
+# read, not installed
+m.witness_read(&quot;the_guilt_offerings_law_compiled_one_law_the_rams_list_is_the_lambs&quot;, &quot;procedure_by_live_call&quot;,
+                cites=[&quot;Sifra, Tzav, Section 5 1&quot;, &quot;Sifra, Tzav, Section 5 2&quot;, &quot;Sifra, Tzav, Section 5 8&quot;, &quot;Sifra, Tzav, Chapter 9 1&quot;, &quot;Sifra, Tzav, Section 2 4&quot;, &quot;Sifra, Tzav, Chapter 3 3&quot;, &quot;Sifra, Tzav, Chapter 3 6&quot;, &quot;Mishnah Zevachim 5:5&quot;, &quot;Mishnah Zevachim 8:11&quot;, &quot;Mishnah Zevachim 10:2&quot;, &quot;Mishnah Zevachim 10:5&quot;, &quot;Mishnah Menachot 6:1&quot;, &quot;Mishnah Tamid 4:3&quot;])
 
 # -------------------------- Lev.7.8 · ETNACHTA_SPLIT -----------------------
-# והכהן המקריב את עלת איש … עור העלה אשר הקריב לכהן לו יהיה
-# &quot;[EN-AID] From top split: LEFT «והכהן המקריב את עלת איש» / RIGHT «עור העלה
-# אשר הקריב לכהן לו יהיה». Derive claim from Hebrew arms. Lev 7:8.&quot;
+# ‹והכהן המקריב את› (“and-the-priest the-bring-near obj-marker”)
+# ‹עלת איש … עור› (“burnt-offering man … skin”)
+# ‹העלה אשר הקריב› (“the-burnt-offering which bring-near”)
+# ‹לכהן לו יהיה› (“to-priest to-him/its be”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:8.&quot;
 m.step(&quot;Lev.7.8&quot;)
 
 # -------------------------- Lev.7.9 · ETNACHTA_SPLIT -----------------------
-# וכל מנחה אשר תאפה בתנור וכל נעשה במרחשת ועל מחבת … לכהן המקריב אתה לו תהיה
-# &quot;[EN-AID] From top split: LEFT «וכל מנחה אשר תאפה בתנור וכל נעשה במרחשת
-# ועל מחבת» / RIGHT «לכהן המקריב אתה לו תהיה». Derive claim from Hebrew
+# ‹וכל מנחה אשר› (“and-all grain-offering which”)
+# ‹תאפה בתנור וכל› (“cook in-fire-pot and-all”)
+# ‹נעשה במרחשת ועל› (“make in-stewpan and-over”)
+# ‹מחבת … לכהן המקריב› (“pan-for-baking-in … to-priest the-bring-near”)
+# ‹אתה לו תהיה› (“obj-marker-her/its to-him/its be”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 7:9.&quot;
 m.step(&quot;Lev.7.9&quot;)
 # witness-tier presupposed read: no_trades on dues_apportionment — read, not
@@ -660,9 +691,12 @@ m.witness_read(&quot;dues_apportionment&quot;, &quot;no_trades&quot;,
                 cites=[&quot;Sifra, Tzav, Chapter 10 1&quot;, &quot;Sifra, Tzav, Chapter 10 2&quot;, &quot;Sifra, Tzav, Chapter 10 3&quot;, &quot;Sifra, Tzav, Chapter 10 8&quot;, &quot;Sifra, Tzav, Chapter 10 9&quot;, &quot;Onkelos Lev 7:10&quot;])
 
 # -------------------------- Lev.7.10 · ETNACHTA_SPLIT ----------------------
-# וכל מנחה בלולה בשמן וחרבה … לכל בני אהרן תהיה איש כאחיו
-# &quot;[EN-AID] From top split: LEFT «וכל מנחה בלולה בשמן וחרבה» / RIGHT «לכל
-# בני אהרן תהיה איש כאחיו». Derive claim from Hebrew arms. Lev 7:10.&quot;
+# ‹וכל מנחה בלולה› (“and-all grain-offering overflow”)
+# ‹בשמן וחרבה … לכל› (“in-oil and-parched … to-all”)
+# ‹בני אהרן תהיה› (“son Aaron be”)
+# ‹איש כאחיו› (“man like-brother-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 7:10.&quot;
 m.step(&quot;Lev.7.10&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
@@ -681,7 +715,7 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;asham_law&#x27;, &#x27;blood_below&#x27;), (&#x27;slaughterers&#x27;, &#x27;open_class&#x27;), (&#x27;asham_intent&#x27;, &#x27;word_position&#x27;), (&#x27;blemish_ladder&#x27;, &#x27;born_blemished&#x27;), (&#x27;hide_distribution&#x27;, &#x27;follows_flesh&#x27;), (&#x27;dues_apportionment&#x27;, &#x27;no_trades&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;asham_law&#x27;, &#x27;blood_below&#x27;), (&#x27;slaughterers&#x27;, &#x27;open_class&#x27;), (&#x27;asham_intent&#x27;, &#x27;word_position&#x27;), (&#x27;blemish_ladder&#x27;, &#x27;born_blemished&#x27;), (&#x27;hide_distribution&#x27;, &#x27;follows_flesh&#x27;), (&#x27;the_guilt_offerings_law_compiled_one_law_the_rams_list_is_the_lambs&#x27;, &#x27;procedure_by_live_call&#x27;), (&#x27;dues_apportionment&#x27;, &#x27;no_trades&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Sifra, Tzav, Section 5 1&#x27;, &#x27;Sifra, Tzav, Section 5 2&#x27;]
     assert all(&#x27;blood_below&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;asham_law&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -697,9 +731,12 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Sifra, Tzav, Chapter 9 1&#x27;, &#x27;Sifra, Tzav, Chapter 9 2&#x27;, &#x27;Sifra, Tzav, Chapter 9 4&#x27;, &#x27;Sifra, Tzav, Chapter 9 5&#x27;]
     assert all(&#x27;follows_flesh&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;hide_distribution&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Sifra, Tzav, Chapter 10 1&#x27;, &#x27;Sifra, Tzav, Chapter 10 2&#x27;, &#x27;Sifra, Tzav, Chapter 10 3&#x27;, &#x27;Sifra, Tzav, Chapter 10 8&#x27;, &#x27;Sifra, Tzav, Chapter 10 9&#x27;, &#x27;Onkelos Lev 7:10&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Sifra, Tzav, Section 5 1&#x27;, &#x27;Sifra, Tzav, Section 5 2&#x27;, &#x27;Sifra, Tzav, Section 5 8&#x27;, &#x27;Sifra, Tzav, Chapter 9 1&#x27;, &#x27;Sifra, Tzav, Section 2 4&#x27;, &#x27;Sifra, Tzav, Chapter 3 3&#x27;, &#x27;Sifra, Tzav, Chapter 3 6&#x27;, &#x27;Mishnah Zevachim 5:5&#x27;, &#x27;Mishnah Zevachim 8:11&#x27;, &#x27;Mishnah Zevachim 10:2&#x27;, &#x27;Mishnah Zevachim 10:5&#x27;, &#x27;Mishnah Menachot 6:1&#x27;, &#x27;Mishnah Tamid 4:3&#x27;]
+    assert all(&#x27;procedure_by_live_call&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_guilt_offerings_law_compiled_one_law_the_rams_list_is_the_lambs&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Sifra, Tzav, Chapter 10 1&#x27;, &#x27;Sifra, Tzav, Chapter 10 2&#x27;, &#x27;Sifra, Tzav, Chapter 10 3&#x27;, &#x27;Sifra, Tzav, Chapter 10 8&#x27;, &#x27;Sifra, Tzav, Chapter 10 9&#x27;, &#x27;Onkelos Lev 7:10&#x27;]
     assert all(&#x27;no_trades&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;dues_apportionment&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">Tree-derived v1 (phase A). One STEP per verse from top-split arms. Not binding religious law.</div><p class='meta'>Rendered 2026-09-03 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">Tree-derived v1 (phase A). One STEP per verse from top-split arms. Not binding religious law.</div><p class='meta'>Rendered 2026-09-06 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

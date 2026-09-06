@@ -187,6 +187,12 @@ print('censuses: five KINDS by token %s · memorial at %s · most-holy at %s · 
 
 # the sinner's meal offering CALLED from the Lev 5 engine (the first-call standard)
 import cold_run_vayikra5 as V5
+# the bird burnt offering's frame — Lev 1's burnt offering — CALLED from the
+# offerings dispatcher (2026-09-06, the dependency-debt sitting)
+import io as _io, contextlib as _ctx
+with _ctx.redirect_stdout(_io.StringIO()):
+    import cold_run_offerings as OFF
+OLAH_FRAME = OFF.dispatch('olah:flock')['disposition']['v']
 _sin = V5.graded_offering({'trigger': 'utterance_oath', 'act_is_his_option': True, 'tense': 'past',
                            'oath_forgotten': True, 'means': 'reaches_flour'}, V5.DATA)
 SINNER_VERDICT = _sin[0] if isinstance(_sin, tuple) else _sin
@@ -555,7 +561,9 @@ def bird(case, **k):
         return cell('valid', M, 'Zevachim 7:2 — the procedure and the name both its own', ['accepted'])
     if case == 'burn':
         return cell('wholly_burned_on_the_wood', I, 'והקטיר אתו הכהן המזבחה על העצים אשר על האש (1:17) — a burnt '
-                    'offering, a fire-offering of pleasing odor', ['accepted'])
+                    'offering, a fire-offering of pleasing odor; the bird is an OLAH under Lev 1\'s frame: CALLED '
+                    'cold_run_offerings.dispatch(olah:flock) disposition -> %r [IMPORT, live call]' % OLAH_FRAME,
+                    ['accepted'])
     return cell('no_case', I, '', [FX.NONE])
 
 # ---- (2) TEST DATA — the Mishnah rows, read whole from the shelf ----

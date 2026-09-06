@@ -1,0 +1,186 @@
+# THE DEPENDENCY DISPOSITIONS — read by dependency_census.py, the gate that runs
+# before every cold sweep (2026-09-06, the dependency-debt sitting).
+#
+# spans:    every cold_run_<name>.py declares the verses it compiles, as
+#           [book, chapter, first, last] rows. An undeclared runner fails the gate.
+# edges:    every runner -> home edge the TYPE CENSUS requires (a verse in the
+#           runner's span naming an offering type or institution whose home is
+#           another runner) carries a disposition:
+#             CALL       a live import edge exists (verified against the source)
+#             OWED       the callee is not compiled yet — why names a COMPILE_DEBT.md line (text before "|")
+#             REVERSE    the home already calls THIS runner (verified); a call back would cycle
+#             VIA        the type's procedure is reached through a runner this one calls (`via`, verified)
+#             PARAMETER  the ink points to a quantity or datum, not a procedure
+#             FALSE      a homograph (the token is not the type) — why says which
+#           and may carry an UNGATED `carries:` (value / count / procedure / status /
+#           window / place / inventory / verdict) naming what crosses the edge — the
+#           two-thread consensus of 2026-09-06; the cell's provenance tag stays where
+#           the honest fractions count an import.
+# pointers: every explicit cross-reference form (as prescribed / as-when before
+#           a procedure verb / the comparative kaf on an offering noun / one law)
+#           at its verse carries: CALL (+ target runner, verified live) / OWED /
+#           INTERNAL / RUN_CITATION / PARAMETER / FALSE, with a why.
+# The file may never understate the code: a live import edge dispositioned as
+# anything but CALL fails the gate.
+spans:
+  pesach:      [[Exod, 12, 1, 51], [Exod, 13, 1, 16]]
+  decalogue:   [[Exod, 20, 1, 17]]
+  mishpatim:   [[Exod, 21, 1, 37], [Exod, 22, 1, 16]]
+  mishpatim_2: [[Exod, 21, 22, 22], [Exod, 21, 26, 27], [Exod, 22, 15, 16], [Exod, 22, 29, 29]]
+  guardians:   [[Exod, 22, 6, 14]]
+  calendar:    [[Exod, 23, 10, 19]]
+  offerings:   [[Lev, 1, 1, 13], [Lev, 3, 1, 17]]
+  minchah:     [[Lev, 1, 14, 17], [Lev, 2, 1, 16]]
+  chatat:      [[Lev, 4, 1, 35], [Lev, 10, 8, 20]]
+  vayikra5:    [[Lev, 5, 1, 26]]
+  tzav:        [[Lev, 6, 1, 23], [Lev, 7, 1, 38], [Lev, 8, 1, 36]]
+  shemini:     [[Lev, 11, 1, 47]]
+  clocks:      [[Lev, 12, 1, 8], [Lev, 15, 1, 33]]
+  negaim:      [[Lev, 13, 1, 59], [Lev, 14, 33, 57]]
+  metzora:     [[Lev, 14, 1, 32]]
+  yoma:        [[Lev, 16, 1, 34]]
+  sanctions:   [[Lev, 17, 1, 16], [Lev, 18, 1, 30], [Lev, 20, 1, 27]]
+  holiness:    [[Lev, 19, 1, 18]]
+  moadim:      [[Lev, 23, 1, 44]]
+  lev24:       [[Lev, 24, 10, 23]]
+  yovel:       [[Lev, 25, 1, 55], [Lev, 27, 1, 8], [Lev, 27, 16, 25]]
+  tochacha:    [[Lev, 26, 1, 46]]
+  temurah:     [[Lev, 27, 9, 15], [Lev, 27, 26, 34]]
+
+edges:
+  # ---- the calendar (Exod 23:10-19) ----
+  - {from: calendar, to: pesach, disposition: CALL, carries: window,
+     why: "Exod 23:15's unleavened bread 'as I commanded you' — matzah() calls pesach.leaven_machine (window, purge)"}
+  - {from: calendar, to: yovel, disposition: CALL, carries: count,
+     why: "Exod 23:11's seventh-year release is Lev 25:1-7's — sabbatical('home_engine') calls yovel.sabbatical(): one function at two seats"}
+  - {from: calendar, to: moadim, disposition: REVERSE,
+     why: "Exod 23:16 and 23:19's first fruits are the two-loaves day of Lev 23:17-20; moadim calls calendar.first_fruits and calendar.pilgrimage"}
+  # ---- the sin offering (Lev 4; 10:8-20) ----
+  - {from: chatat, to: minchah, disposition: CALL, carries: verdict, why: "10:12's meal-offering remainder — MIN.remainder"}
+  - {from: chatat, to: offerings, disposition: CALL, carries: inventory,
+     why: "the outer/inner chatat rows and the FAT INVENTORY: 4:10, 4:26, 4:31, 4:35's 'as the fat of the peace offering' resolve through dispatch(fat:ox/goat/lamb)"}
+  - {from: chatat, to: tzav, disposition: CALL, carries: verdict,
+     why: "10:15's 'as the LORD commanded' — the breast and thigh by dues_machine(breast_thigh); the 4:13 token itself is the verb 'and they are guilty', a homograph"}
+  - {from: chatat, to: vayikra5, disposition: CALL, carries: verdict,
+     why: "the suspended ram, the sacrilege, the sliding scale by graded_offering/sacrilege; the 4:13 token is the verb 'and they are guilty'"}
+  # ---- the impurity clocks (Lev 12; 15) ----
+  - {from: clocks, to: chatat, disposition: CALL, carries: verdict, why: "the partner's sin offering (domain), the heirs' ownership lock"}
+  - {from: clocks, to: minchah, disposition: CALL, carries: place, why: "the bird pair's burnt offering above the red line — MIN.bird(place)"}
+  - {from: clocks, to: offerings, disposition: CALL, carries: procedure, why: "12:6's LAMB burnt offering — dispatch(olah:flock) disposition"}
+  # ---- the holiness ledger (Lev 19:1-18) ----
+  - {from: holiness, to: offerings, disposition: VIA, via: tzav,
+     why: "19:5-8's peace offering is asked for its WINDOW and rejection — tzav.rejection_machine holds them (7:16-18); the slaughter row is not this span's question"}
+  # ---- the blasphemer and the talion (Lev 24:10-23) ----
+  - {from: lev24, to: offerings, disposition: FALSE, why: "24:11 שְׁלֹמִית (Shelomith) is the mother's NAME, not the peace offering"}
+  # ---- the leper's cleansing (Lev 14:1-32) ----
+  - {from: metzora, to: chatat, disposition: CALL, carries: value, why: "14:10's ewe is the commoner's animal — CH.rank(commoner)"}
+  - {from: metzora, to: minchah, disposition: CALL, carries: place, why: "14:22's bird burnt offering — MIN.bird(place)"}
+  - {from: metzora, to: offerings, disposition: CALL, carries: place,
+     why: "14:13's north (the asham/communal row), 14:19's sin offering (outer_chatat), 14:20's burnt offering (olah:flock)"}
+  - {from: metzora, to: negaim, disposition: PARAMETER,
+     why: "14:3 'the mark of leprosy is HEALED' and 14:32's closing name the disease: the DECIDED-leper status is the affliction engine's output and this rite's input datum (Megillah 1:7's deltas row is graded there); negaim exposes no function"}
+  # ---- the meal offering and the bird burnt offering (Lev 1:14-17; 2) ----
+  - {from: minchah, to: offerings, disposition: CALL, carries: procedure, why: "1:14 and 1:17's burnt offering — the bird under Lev 1's frame: dispatch(olah:flock) disposition"}
+  - {from: minchah, to: moadim, disposition: REVERSE,
+     why: "2:14's first-fruits meal offering IS the omer of Lev 23:9-14 (Sifra Emor Chapter 13 3); moadim calls minchah.omer — a call back would cycle"}
+  # ---- the ordinances (Exod 21-22) ----
+  - {from: mishpatim, to: lev24, disposition: CALL, carries: verdict, why: "the talion formula 21:23-25 resolves through lev24.talion() — THE FIRST CALL (M-07c)"}
+  - {from: mishpatim_2, to: lev24, disposition: FALSE,
+     why: "21:26-27 'he shall let him go free FOR (תחת) his eye' — the exchange preposition in the manumission clause; the tariff's seat 21:23-25 is cold_run_mishpatim's (CALL there)"}
+  # ---- the appointed times (Lev 23) ----
+  - {from: moadim, to: calendar, disposition: CALL, carries: verdict,
+     why: "the two loaves' first fruits and the harvest feast's appearing — CAL.first_fruits, CAL.pilgrimage; the 23:16 token itself is 'the seventh SABBATH' of the omer count, a homograph of the seventh year"}
+  - {from: moadim, to: chatat, disposition: VIA, via: offerings, why: "23:19's goat sin offering — its place through dispatch(outer_chatat); the tier logic of Lev 4 is not this span's question"}
+  - {from: moadim, to: minchah, disposition: CALL, carries: value, why: "the omer's grain source — MIN.omer(source)"}
+  - {from: moadim, to: offerings, disposition: CALL, carries: procedure, why: "23:12's lamb, 23:18's burnt offerings, 23:19's goat and the two lambs — dispatch(olah:flock / outer_chatat / communal_shelamim_and_asham)"}
+  - {from: moadim, to: pesach, disposition: CALL, carries: window, why: "23:5's Passover and 23:6's unleavened bread — PS.paschal_procedure(eating_time), PS.leaven_machine(window_bounds)"}
+  - {from: moadim, to: yovel, disposition: FALSE, why: "23:16 'the seventh SABBATH' of the omer count, not the seventh year"}
+  # ---- the afflictions (Lev 13; 14:33-57) ----
+  - {from: negaim, to: lev24, disposition: FALSE, why: "14:42 'other stones IN PLACE OF (תחת) the stones' — the preposition, not the talion formula"}
+  # ---- the Passover (Exod 12-13) ----
+  - {from: pesach, to: offerings, disposition: FALSE, why: "12:38 עָלָה 'went up' — the mixed multitude went up with them; the verb, not the burnt offering"}
+  # ---- blood, unions, sanctions (Lev 17; 18; 20) ----
+  - {from: sanctions, to: clocks, disposition: CALL, carries: status, why: "18:19 and 20:21's menstruant — CL.zav / the niddah status"}
+  - {from: sanctions, to: offerings, disposition: CALL, carries: window, why: "17:5's 'slaughter them as peace offerings' and 17:8's burnt offering — dispatch(shelamim), dispatch(olah:flock) in platform(classes)"}
+  # ---- substitution and devotion (Lev 27) ----
+  - {from: temurah, to: lev24, disposition: FALSE, why: "27:32 'passes UNDER (תחת) the rod' — the preposition, not the talion formula"}
+  - {from: temurah, to: pesach, disposition: CALL, carries: verdict, why: "27:26's firstling — PS.firstborn"}
+  - {from: temurah, to: yovel, disposition: CALL, carries: value, why: "the valuation table and the tithe's naming — YV.tithe_naming, the valuation cells"}
+  # ---- the covenant cascade (Lev 26) ----
+  - {from: tochacha, to: offerings, disposition: FALSE, why: "26:36 עָלֶה 'a driven LEAF' — the noun leaf, not the burnt offering"}
+  - {from: tochacha, to: pesach, disposition: FALSE, why: "26:14 הַמִּצְוֺת 'all these COMMANDMENTS' — the homograph of the unleavened bread"}
+  - {from: tzav, to: pesach, disposition: FALSE, why: "8:2 and 8:26 סַל הַמַּצּוֹת 'the basket of unleavened bread' of the installation rite — the installation's own loaves (Exod 29:2-3, 23), not the feast of Exod 23:15 / Lev 23:6"}
+  # ---- the offering-torah (Lev 6-8) ----
+  - {from: tzav, to: chatat, disposition: REVERSE,
+     why: "6:17-23's sin-offering law and 7:7's 'as the chatat' are this runner's own; Lev 4's tiers call INTO tzav (chatat calls dues_machine) — a call back would cycle"}
+  - {from: tzav, to: minchah, disposition: CALL, carries: verdict, why: "6:7-11's meal-offering law — MIN.fistful, MIN.remainder(soleth/sinner)"}
+  - {from: tzav, to: offerings, disposition: CALL, carries: inventory, why: "7:1-7's guilt-offering law — the asham row's place, blood, eater and the fat inventory (fat:lamb)"}
+  # ---- the sliding scale and the guilt offerings (Lev 5) ----
+  - {from: vayikra5, to: chatat, disposition: CALL, carries: value, why: "5:6's female of the flock runs Lev 4:27-35 — pointers('lamb_tier_procedure') calls CH.rank(commoner) (function-local import: chatat imports this module at load)"}
+  - {from: vayikra5, to: minchah, disposition: CALL, carries: place, why: "5:10 'as prescribed' — MIN.bird; 5:13 'as the meal offering' — MIN.remainder(sinner)"}
+  - {from: vayikra5, to: offerings, disposition: VIA, via: minchah, why: "5:7 and 5:10's burnt offering is the BIRD burnt offering — its rite is minchah.bird's (Lev 1:14-17)"}
+  - {from: vayikra5, to: tzav, disposition: CALL, carries: place, why: "5:15-26's guilt offerings run Lev 7:1-7's procedure — TZ.asham_law(place, eater)"}
+  - {from: vayikra5, to: yovel, disposition: PARAMETER,
+     why: "5:15, 5:18, 5:25 'by your valuation in silver shekels' — the ram's floor is a datum (two sela, Mishnah Keritot 5:2; DATA['ram_floor']), not Lev 27's person table"}
+  # ---- the Day of Atonement (Lev 16) ----
+  - {from: yoma, to: chatat, disposition: CALL, carries: status, why: "16:27's burnt pair outside the camp — CH.burn_site(as_commanded)"}
+  - {from: yoma, to: lev24, disposition: FALSE, why: "16:32 'the priest anointed IN HIS FATHER'S STEAD (תחת)' — the preposition, not the talion formula"}
+  - {from: yoma, to: offerings, disposition: CALL, carries: procedure, why: "the bull and goat as inner sin offerings (inner_chatat_yk), the rams as burnt offerings (olah:flock)"}
+  # ---- the jubilee (Lev 25; 27:1-8, 16-25) ----
+  - {from: yovel, to: calendar, disposition: REVERSE,
+     why: "25:4 and 25:20's seventh year is Exod 23:10-11's release; calendar calls yovel.sabbatical() — the fuller law is the home"}
+
+pointers:
+  # ---- Exod 12-13 (pesach) ----
+  - {verse: "Exod 12:25", form: AS_WHEN, runner: pesach, disposition: FALSE, why: "'the land which the LORD will give you AS HE SPOKE' — a promise clause, not a procedure pointer"}
+  - {verse: "Exod 12:28", form: AS_WHEN, runner: pesach, disposition: RUN_CITATION, why: "'as the LORD commanded Moses and Aaron, so they did' — the Passover's own run citing its spec (12:1-27)"}
+  - {verse: "Exod 12:32", form: AS_WHEN, runner: pesach, disposition: FALSE, why: "Pharaoh: 'take your flocks AS YOU SAID' — narrative speech"}
+  - {verse: "Exod 12:49", form: ONE_LAW, runner: pesach, disposition: INTERNAL, why: "'one law for the native and the convert' — the registration and access filter of 12:43-49, compiled in this runner"}
+  - {verse: "Exod 12:50", form: AS_WHEN, runner: pesach, disposition: RUN_CITATION, why: "'as the LORD commanded Moses and Aaron, so they did' — the run line closing 12:43-49"}
+  - {verse: "Exod 13:11", form: AS_WHEN, runner: pesach, disposition: FALSE, why: "'AS HE SWORE to you and your fathers' — the oath to the patriarchs, not a procedure"}
+  # ---- Exod 21-22 (mishpatim, mishpatim_2) ----
+  - {verse: "Exod 21:9", form: AS_PRESCRIBED, runner: mishpatim, disposition: INTERNAL, why: "'as the manner of daughters' — 21:10's food, clothing, and conjugal rights, inside this runner's span"}
+  - {verse: "Exod 21:22", form: AS_WHEN, runner: mishpatim, disposition: PARAMETER, why: "'as the woman's husband shall impose on him, and he shall pay by the judges' — the fine's amount is a parameter set at the case, not a pointer to a procedure"}
+  - {verse: "Exod 21:22", form: AS_WHEN, runner: mishpatim_2, disposition: PARAMETER, why: "the same clause, the same parameter (the fetus cell)"}
+  - {verse: "Exod 21:31", form: AS_PRESCRIBED, runner: mishpatim, disposition: INTERNAL, why: "'according to this judgment shall be done to him' — the goring ox's rule (21:28-30) applied to a son or daughter, inside this runner"}
+  # ---- Exod 23 (calendar) ----
+  - {verse: "Exod 23:15", form: AS_WHEN, runner: calendar, disposition: CALL, target: pesach, why: "'seven days you shall eat unleavened bread AS I COMMANDED YOU' — matzah('as_commanded') calls pesach.leaven_machine"}
+  # ---- Lev 4; 10 (chatat) ----
+  - {verse: "Lev 4:10", form: AS_WHEN, runner: chatat, disposition: CALL, target: offerings, why: "'as it is lifted from the OX of the peace offering' — fat('anointed') calls dispatch(fat:ox)"}
+  - {verse: "Lev 4:20", form: AS_WHEN, runner: chatat, disposition: INTERNAL, why: "'as he did to the bull of the sin offering' — the anointed priest's bull, 4:3-12, inside this runner"}
+  - {verse: "Lev 4:21", form: AS_WHEN, runner: chatat, disposition: INTERNAL, why: "'as he burned the first bull' — 4:12, inside this runner (carcass, burn_site)"}
+  - {verse: "Lev 4:26", form: LIKE_OFFERING, runner: chatat, disposition: CALL, target: offerings, why: "'as the fat of the peace offering' — fat('leader') calls dispatch(fat:goat)"}
+  - {verse: "Lev 4:31", form: AS_WHEN, runner: chatat, disposition: CALL, target: offerings, why: "'as the fat was removed from the peace offering' — fat('commoner', goat) calls dispatch(fat:goat)"}
+  - {verse: "Lev 4:35", form: AS_WHEN, runner: chatat, disposition: CALL, target: offerings, why: "'as the fat of the LAMB is removed from the peace offering' — fat('commoner', lamb) calls dispatch(fat:lamb): the tail included"}
+  - {verse: "Lev 10:15", form: AS_WHEN, runner: chatat, disposition: CALL, target: tzav, why: "'as the LORD commanded' — the breast and thigh of Lev 7:30-34: table('breast_thigh_due') calls tzav.dues_machine"}
+  - {verse: "Lev 10:18", form: AS_WHEN, runner: chatat, disposition: CALL, target: offerings, why: "'as I commanded' — Lev 6:23's burn-not-eat: inquiry('blood_inside') carries dispatch(inner_chatat_burned)"}
+  # ---- Lev 5 (vayikra5) ----
+  - {verse: "Lev 5:10", form: AS_PRESCRIBED, runner: vayikra5, disposition: CALL, target: minchah, why: "'the second a burnt offering AS PRESCRIBED' — pointers('bird_olah_as_prescribed') calls minchah.bird"}
+  - {verse: "Lev 5:13", form: LIKE_OFFERING, runner: vayikra5, disposition: CALL, target: minchah, why: "'it shall be the priest's AS THE MEAL OFFERING' — pointers('remainder_as_minchah') calls minchah.remainder(sinner)"}
+  # ---- Lev 6-8 (tzav) ----
+  - {verse: "Lev 6:10", form: LIKE_OFFERING, runner: tzav, disposition: INTERNAL, why: "'most holy, as the sin offering and as the guilt offering' — both laws (6:17-23, 7:1-7) are this runner's: minchah_law('most_holy_like')"}
+  - {verse: "Lev 7:7", form: LIKE_OFFERING, runner: tzav, disposition: INTERNAL, why: "'as the sin offering, so the guilt offering' — the chatat's law 6:17-23 is this runner's: asham_law('one_law')"}
+  - {verse: "Lev 7:7", form: ONE_LAW, runner: tzav, disposition: INTERNAL, why: "'one law for them' — asham_law('one_law'): hand-laying, day, right hand, the atoning priest"}
+  - {verse: "Lev 8:4", form: AS_WHEN, runner: tzav, disposition: RUN_CITATION, why: "Lev 8 is the RUN of Exod 29's installation spec; the spec/run grading is COMPILE_DEBT E4 (exo_29 calls tzav.installation)"}
+  - {verse: "Lev 8:9", form: AS_WHEN, runner: tzav, disposition: RUN_CITATION, why: "as 8:4"}
+  - {verse: "Lev 8:13", form: AS_WHEN, runner: tzav, disposition: RUN_CITATION, why: "as 8:4"}
+  - {verse: "Lev 8:17", form: AS_WHEN, runner: tzav, disposition: RUN_CITATION, why: "as 8:4"}
+  - {verse: "Lev 8:21", form: AS_WHEN, runner: tzav, disposition: RUN_CITATION, why: "as 8:4"}
+  - {verse: "Lev 8:29", form: AS_WHEN, runner: tzav, disposition: RUN_CITATION, why: "as 8:4"}
+  - {verse: "Lev 8:31", form: AS_WHEN, runner: tzav, disposition: RUN_CITATION, why: "'as I commanded, saying: Aaron and his sons shall eat it' — the run citing Exod 29:31-32"}
+  - {verse: "Lev 8:34", form: AS_WHEN, runner: tzav, disposition: INTERNAL, why: "'as he has done this day, the LORD commanded to do, to atone for you' — the seven days: installation('confinement')"}
+  # ---- Lev 14:1-32 (metzora) ----
+  - {verse: "Lev 14:13", form: LIKE_OFFERING, runner: metzora, disposition: CALL, target: tzav, why: "'for as the sin offering, so the guilt offering is the priest's; it is most holy' — eighth('asham_grade') and ('asham_blood_altar') call tzav.asham_law; the north through offerings"}
+  # ---- Lev 16 (yoma) ----
+  - {verse: "Lev 16:15", form: AS_WHEN, runner: yoma, disposition: INTERNAL, why: "'and do with its blood as he did with the bull's blood' — 16:14, the service order inside this runner"}
+  - {verse: "Lev 16:34", form: AS_WHEN, runner: yoma, disposition: RUN_CITATION, why: "'and he did as the LORD commanded Moses' — the chapter's closing run line"}
+  # ---- Lev 18 (sanctions) ----
+  - {verse: "Lev 18:28", form: AS_WHEN, runner: sanctions, disposition: FALSE, why: "'lest the land vomit you out AS IT VOMITED the nation before you' — a simile in the land clause, not a procedure pointer"}
+  # ---- Lev 24 (lev24) ----
+  - {verse: "Lev 24:19", form: AS_WHEN, runner: lev24, disposition: INTERNAL, why: "'as he has done, so shall it be done to him' — the talion formula's own clause, compiled here (the exporting callee)"}
+  - {verse: "Lev 24:20", form: AS_WHEN, runner: lev24, disposition: INTERNAL, why: "'as he gives a blemish in a man, so shall it be given in him' — the same formula"}
+  - {verse: "Lev 24:23", form: AS_WHEN, runner: lev24, disposition: RUN_CITATION, why: "'and the children of Israel did as the LORD commanded Moses' — the stoning executed, the run line"}
+  # ---- Lev 26 (tochacha) ----
+  - {verse: "Lev 26:21", form: LIKE_OFFERING, runner: tochacha, disposition: FALSE, why: "כְּחַטֹּאתֵיכֶם 'according to your SINS' (sevenfold) — the noun sin, not the sin offering"}
+  # ---- Lev 27 (temurah) ----
+  - {verse: "Lev 27:14", form: AS_WHEN, runner: temurah, disposition: INTERNAL, why: "'as the priest shall value it, so shall it stand' — the valuation act of the consecrated house, inside this runner's span"}

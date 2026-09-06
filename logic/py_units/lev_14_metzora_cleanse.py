@@ -106,6 +106,11 @@ m.step("Lev.14.8")
 # not installed
 m.witness_read("michutz_leohalo", "tent_is_his_wife",
                 cites=["Sifra, Metzora, Section 2 9", "Sifra, Metzora, Section 2 10", "Sifra, Metzora, Section 2 11"])
+# witness-tier presupposed read: negaim_14_whole_graded_first_run on
+# the_cleansing_compiled_on_the_purity_verbs_four_seats — read, not
+# installed
+m.witness_read("the_cleansing_compiled_on_the_purity_verbs_four_seats", "negaim_14_whole_graded_first_run",
+                cites=["Mishnah Negaim 14:1", "Mishnah Negaim 14:2", "Mishnah Negaim 14:3", "Mishnah Negaim 14:5", "Mishnah Negaim 14:9", "Mishnah Negaim 14:10", "Mishnah Negaim 14:11", "Mishnah Negaim 14:12", "Mishnah Keritot 2:1", "Mishnah Menachot 5:6", "Mishnah Menachot 5:7", "Mishnah Nazir 6:6", "Mishnah Zevachim 10:5", "Sifra, Metzora, Section 1 2", "Sifra, Metzora, Section 2 5", "Sifra, Metzora, Section 2 11", "Sifra, Metzora, Chapter 2 7", "Sifra, Metzora, Section 3 7", "Sifra, Metzora, Chapter 3 10", "Sifra, Metzora, Chapter 3 11", "Sifra, Metzora, Section 4 13", "Sifra, Tzav, Section 5 1"])
 
 # -------------------------- Lev.14.9 · ETNACHTA_SPLIT ----------------------
 # ‹והיה ביום השביעי› (“and-be in-day the-seventh”)
@@ -390,7 +395,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('beyom_tahorato', 'day_priest_and_the_regress'), ('shtei_tziporim', 'the_kit_specs'), ('mayim_chayim', 'coupled_fates_and_the_ratio'), ('michutz_leohalo', 'tent_is_his_wife'), ('kol_searo', 'the_three_shavers'), ('tenuch_ozen', 'the_thumbs_rite'), ('im_dal_hu', 'the_poverty_scale')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('beyom_tahorato', 'day_priest_and_the_regress'), ('shtei_tziporim', 'the_kit_specs'), ('mayim_chayim', 'coupled_fates_and_the_ratio'), ('michutz_leohalo', 'tent_is_his_wife'), ('the_cleansing_compiled_on_the_purity_verbs_four_seats', 'negaim_14_whole_graded_first_run'), ('kol_searo', 'the_three_shavers'), ('tenuch_ozen', 'the_thumbs_rite'), ('im_dal_hu', 'the_poverty_scale')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Metzora, Section 1 1', 'Sifra, Metzora, Section 1 2', 'Sifra, Metzora, Section 1 3', 'Sifra, Metzora, Section 1 4']
     assert all('day_priest_and_the_regress' not in f for f in m.WORLD["facts"])
     assert 'beyom_tahorato' not in m.WORLD["witnessed"]
@@ -403,13 +408,16 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[3]["cites"] == ['Sifra, Metzora, Section 2 9', 'Sifra, Metzora, Section 2 10', 'Sifra, Metzora, Section 2 11']
     assert all('tent_is_his_wife' not in f for f in m.WORLD["facts"])
     assert 'michutz_leohalo' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Metzora, Chapter 2 2', 'Sifra, Metzora, Chapter 2 4', 'Sifra, Metzora, Chapter 2 5', 'Sifra, Metzora, Chapter 2 6', 'Sifra, Metzora, Chapter 2 7']
+    assert m.WITNESS_READS[4]["cites"] == ['Mishnah Negaim 14:1', 'Mishnah Negaim 14:2', 'Mishnah Negaim 14:3', 'Mishnah Negaim 14:5', 'Mishnah Negaim 14:9', 'Mishnah Negaim 14:10', 'Mishnah Negaim 14:11', 'Mishnah Negaim 14:12', 'Mishnah Keritot 2:1', 'Mishnah Menachot 5:6', 'Mishnah Menachot 5:7', 'Mishnah Nazir 6:6', 'Mishnah Zevachim 10:5', 'Sifra, Metzora, Section 1 2', 'Sifra, Metzora, Section 2 5', 'Sifra, Metzora, Section 2 11', 'Sifra, Metzora, Chapter 2 7', 'Sifra, Metzora, Section 3 7', 'Sifra, Metzora, Chapter 3 10', 'Sifra, Metzora, Chapter 3 11', 'Sifra, Metzora, Section 4 13', 'Sifra, Tzav, Section 5 1']
+    assert all('negaim_14_whole_graded_first_run' not in f for f in m.WORLD["facts"])
+    assert 'the_cleansing_compiled_on_the_purity_verbs_four_seats' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Metzora, Chapter 2 2', 'Sifra, Metzora, Chapter 2 4', 'Sifra, Metzora, Chapter 2 5', 'Sifra, Metzora, Chapter 2 6', 'Sifra, Metzora, Chapter 2 7']
     assert all('the_three_shavers' not in f for f in m.WORLD["facts"])
     assert 'kol_searo' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Metzora, Chapter 3 4', 'Sifra, Metzora, Chapter 3 5', 'Sifra, Metzora, Chapter 3 8', 'Sifra, Metzora, Chapter 3 9', 'Sifra, Metzora, Chapter 3 10', 'Sifra, Metzora, Chapter 3 11', 'Sifra, Metzora, Chapter 3 12', 'Sifra, Metzora, Chapter 3 14', 'Sifra, Metzora, Section 3 6']
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Metzora, Chapter 3 4', 'Sifra, Metzora, Chapter 3 5', 'Sifra, Metzora, Chapter 3 8', 'Sifra, Metzora, Chapter 3 9', 'Sifra, Metzora, Chapter 3 10', 'Sifra, Metzora, Chapter 3 11', 'Sifra, Metzora, Chapter 3 12', 'Sifra, Metzora, Chapter 3 14', 'Sifra, Metzora, Section 3 6']
     assert all('the_thumbs_rite' not in f for f in m.WORLD["facts"])
     assert 'tenuch_ozen' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Metzora, Section 4 1', 'Sifra, Metzora, Section 4 2', 'Sifra, Metzora, Section 4 4', 'Sifra, Metzora, Section 4 12', 'Sifra, Metzora, Section 4 13', 'Sifra, Metzora, Section 4 16']
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Metzora, Section 4 1', 'Sifra, Metzora, Section 4 2', 'Sifra, Metzora, Section 4 4', 'Sifra, Metzora, Section 4 12', 'Sifra, Metzora, Section 4 13', 'Sifra, Metzora, Section 4 16']
     assert all('the_poverty_scale' not in f for f in m.WORLD["facts"])
     assert 'im_dal_hu' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

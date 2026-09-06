@@ -14,9 +14,10 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   baked into an epub.
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
-## SCOREBOARD (as of 2026-09-05, latest)
+## SCOREBOARD (as of 2026-09-06, latest)
 
 - Genesis: DONE — derived, read, examined, stamped (73 units).
+- **THE DEPENDENCY DEBT PAID AND THE GATE INSTALLED (2026-09-06, on your "fix all of the overlooked sections, then make sure we code properly going forward"):** the audit measured six ink pointers crossing compiled spans with none live, twenty of thirty-three type edges silent, four sub-spans uncompiled behind check marks, four institutions compiled twice; all repaired the same day by the rhythm — the fat inventory per species (57/57), the guilt and meal offerings' laws (53/53), THE LEPER'S CLEANSING as its own runner (77/77 first run against Negaim 14 whole), Shavuot's animals (41/41), every pointer wired live, the duplicates unified, five findings seated (F-217..F-221), eight effects (117) — and the dependency census now runs as a GATE before every cold sweep (23 of 23 runners, 1444 cells, 48 edges and 42 pointers dispositioned). Written into THE_STEPS motion (1). Next: L4b, then L5.
 - **THE AUDIT RUNS FIRST — sitting A done 2026-09-05 (your ruling "I want everything fixed first" put the Lev 1-8 review's fix pass BEFORE Numbers; the earlier after-Deuteronomy deferral is superseded):** ten of the review's eleven items closed in one sitting. The headline is a lesson about counting: the review had reported nine Sifra rows UNREAD; checked row by row against the shelf, every one had been read — the ledger had addressed that one chapter by the source's paragraph marks (ten) where the shelf counts nineteen rows, so the count came out ten short without a row being skipped and a reader checking "row 7" would find the wrong text. New rule in THE_STEPS Step 2, ADDRESS AT THE SHELF'S GRAIN: ledger addresses are the shelf's rows, coverage computed by script per section, mismatches fixed by APPENDING a re-addressing block and a correction row, never by editing a stamp (coverage now 658 of 658). The offering-engine dispatcher was recompiled at 41 of 41 with the eater cells on the span's own "every CLEAN person" clause, the southern base derived down the ramp, the firstborn's window naming its segment, and the Passover cell answered by CALLING the Passover engine (the second inter-span call). A missing stamp row, an overstated finding, and the six missing "compiled" chips recorded; one command now runs every cold runner (16 of 16, 392 graded cells). SITTING B (same day, "go sitting b") then compiled those two pieces — the meal offering and the bird — against Mishnah Menachot read whole BY TOPIC (the tractate that barely cites the verse and so had never met the engine: 93 rows, 84 of 84 cells) and Lev 27's remainder (substitution, the house's fifth, the firstborn, devotion, the tithe under the rod: 40 of 40 at 60% ink), with the Jubilee engine taking the support duty and the auction-stone and in-your-sight cells. Twelve compiled spans now; every item of both review files closed; two findings seated (standing 1715), eight effects discovered, move M-19 registered. Twice the code's own tripwires caught a bad census (a substring matching "his sons" for frankincense, and the valuation table's fives for the fifth) — the zero-report law working as written. SITTING C, the hygiene pass (same day, "go sitting c"), closed the list — and its headline is the shelf: the one truncated word we had deferred (Lev 11:42's large vav) turned out to be ELEVEN across the whole Bible, every large, small, and suspended letter the parser had cut, the Shema's own two great letters among them; all restored by census against the source. Also: the honest-pairing guard now stands on all 18 cold runners with a tripwire count each; every render regenerated with its Hebrew glossed at the renderer (Hebrew without English in the renders is now zero, 334 transliteration lines counted and left open); the vocabulary linted structurally and 139 placeholder glosses repaired (79 of them a false Hebrew copied from the docket topic); the four lev_04 drafts decided drafts-by-design. Nothing in the machine's truth moved. Next: Numbers.
 - **THE MISSES CORRECTED — the review's two items ran as one sitting 2026-09-05, after compaction #51 (owner: "now lets correct the misses we found before compact"):** (1) THE COVENANT CASCADE compiled — Leviticus 26 at 37/37 and 81% pure ink, the highest fraction of any law span: the five gates computed from the "and if" tokens, the sevenfold multiplier at the four seven-tokens, the land's sabbath-debt as a DEBIT and a TIMER — and the answer sheet, for the first time, NOT the Mishnah but the Writings' own log: 2 Chronicles 36:21 quotes the clause word for word at the timer's discharge, and the Talmud runs the seventy three times from three recorded epochs with two logged failures (Belshazzar, Ahasuerus) before Daniel's; the Jubilee cycle run against the chronology reproduces all four residues the Talmud states for the two destructions under both cycle models. Nine effects discovered (registry 71), one cell honestly OPEN (the seventy's decomposition waits for a source not on the shelf). (2) THE TOPIC ROUTE EXECUTED — the citation links had never put Mishnah Sheviit (the seventh-year tractate) before the engine; enumerated by topic, 165 unread rows across five tractates read whole and verdicted (twenty-six verbatim in the Sifra), 189 cells green on the first run (1595/1595 over 47 rounds) with the cases, the vocabulary, and the rules module generated from ONE table; three findings seated (the Talmud's LAYER LABEL on the labor census — "rabbinic, the verse a mere support"; the seventy's epoch; the seventeen Jubilees), standing 1713, hash unmoved; the Jubilee engine's sabbatical cell became a graded function of 36 cells with the animal tithe's naming machine written at last; and THE HONEST-PAIRING GUARD now refuses, by parser, any test whose expected value was not typed from the answer sheet. Vocabulary 1419; 367 compiled rules. NEXT: Numbers.
 - **LEVITICUS CLOSED ON THE WALK — BEHAR-BECHUKOTAI (Lev 25-27) ran the full rhythm 2026-09-05 as one sitting:** 397 sources read whole (both Sifra books complete + Onkelos), coverage computed 262/262 + 135/135; 102 claims into the five tree-era drafts that had waited since the phase-H generation — every Leviticus unit now frozen but the four Lev 4 sin-offering drafts held for the deferred audit; corpus 163, standing 1710, hash unmoved; exam round 46 = 89/89 first run (1406/1406 over 46 rounds), 61 Mishnah rows across 21 tractates with TWENTY-NINE verbatim seats — the whole of Mishnah Arakhin 9 sitting in the Sifra's rows; the cases table and the vocabulary generated from ONE list so the two gates could not fire; 359 compiled rules; vocabulary 1230; THE JUBILEE ENGINE compiled 33/33 at 51% pure ink — the cycle's forty-nine read off the verse that states it, the priest census split by grammatical form (ten definite subjects = the assessors, one dative = the destination), the one honest gap read per gap from Sanhedrin 15a — with four new effects including the ledger's second TRANSFER (the land returning to its holder). The Sifra's own closing line — "two torahs, one written and one oral" — seated at 26:46. NEXT: Numbers.
@@ -380,6 +381,67 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Next alongside it: Leviticus (new spine — Sifra).
 
 ## ENTRIES (newest first)
+
+### 2026-09-06 — THE DEPENDENCY GATE: the ink's cross-references become a checked graph
+
+You asked two questions in one breath: how many dependencies had we
+missed while compiling, and were we compiling correctly at all. The
+honest answer, measured by script rather than recalled, was that we
+had been missing them systematically. The Bible's law sections point
+at each other constantly — "the second bird as a burnt offering AS
+PRESCRIBED," "as the fat is lifted from the OX of the peace
+offering," "seven days you shall eat unleavened bread AS I COMMANDED
+YOU," "as the sin offering, so the guilt offering." Six such pointers
+crossed from one compiled span into another, and not one was a
+working call: one called into a dispatcher that held no fat list at
+all, two stood as notes in the reason text, three were silent. Of
+thirty-three places where a span names an offering type whose
+procedure lives in another span, nine were live calls and twenty
+were nothing. Four sub-spans had never been compiled at all behind
+chapters marked done — the peace offering's fat inventory, the guilt
+offering's and meal offering's own laws, the leper's whole cleansing
+rite, Shavuot's animals. And four institutions written twice in the
+Bible had been compiled twice with no call between the copies. The
+cause was a missing step, not carelessness on any one day: the
+compile read a span's ink but never censused what that ink pointed
+at, so a dependency became a call only when a Mishnah row happened
+to force it.
+
+You said fix everything and then make sure it cannot recur, and both
+happened the same day. The four missing pieces were compiled by the
+full rhythm — the ledger first, with Negaim 14, Tamid 4, and Chullin
+8 read whole and the coverage computed — and the compiles paid at
+once. The fat inventory is read per species from Leviticus 3's own
+verses, and the fat-tail word stands at exactly two seats in all of
+Leviticus 1-8: the lamb's verse and the guilt offering's ram. So
+when the sin-offering chapter says "as the fat of the LAMB is
+removed" the tail comes with it, and when it says "as it is lifted
+from the OX" it does not — the pointer's own species word decides,
+and Mishnah Tamid carries the lamb's tail, lobe, and kidneys in one
+hand. The leper's cleansing compiled at 77 of 77 on its first graded
+run, its gates sitting on the four places the chapter writes "and he
+shall be pure" — which is the Mishnah's three purities and the
+atonement gate read off one verb — and its own tripwires corrected
+me twice (the priest's right FINGER at two verses I had not counted;
+the prefixed "FROM the log" at another). Shavuot's two lambs
+resolved to the communal peace offering's row, which the verse
+states itself: "holy to the LORD, for the PRIEST." Every pointer is
+now a live call, the four duplicates are one function called from
+two seats, and the Tzav engine, which had imported nothing, now sits
+inside one call graph with the rest of Leviticus 1-8.
+
+Then the gate. A census tool now runs before every sweep: every
+runner declares its verses; every verse naming another span's type
+and every explicit cross-reference form is a required edge; each
+must carry a recorded disposition — a live call verified against the
+source, a debt line, a call the other way, a datum, an internal
+target, a run citing its spec, or a named homograph — and a missing
+one, a claimed call that is not live, or a live call the file
+understates fails the whole sweep before a single cell is graded.
+Twenty-three runners, 905 verses, 48 edges and 42 pointers, all
+dispositioned; 23 of 23 green at 1444 cells. The first-call
+standard from yesterday is a gate today. It is written into THE
+STEPS at the first motion: census the span's pointers first.
 
 ### 2026-09-05 — THE FIRST CALL: one compiled span now calls another
 

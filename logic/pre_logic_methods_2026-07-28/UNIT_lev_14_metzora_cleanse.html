@@ -118,6 +118,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(michutz_leohalo, tent_is_his_wife)</span><br><span class="gloss">= WITNESS-READ(michutz-leohalo, tent-is-his-wife)</span><br>OUTSIDE HIS TENT [claim LV14A-04]. Bathing gates the camp-entry; the birds do NOT gate it; bathe even in a MIKVEH (the leper needs no living water — against the discharge-bearer); and &#x27;outside his TENT&#x27; seven days — TENT IS HIS WIFE (&#x27;return to your tents&#x27;): marital relations barred in the counting week; R. Yehuda and R. Yosei b. R. Yehuda split on the decided days — and R. Chiya before Rabbi: JOTHAM WAS CONCEIVED ONLY IN UZZIAH&#x27;S DECIDED DAYS (&#x27;so I said too&#x27;) — a kings-history datum ruling the law.
 </td><td>—</td><td class='cite'>Sifra, Metzora, Section 2 9, Sifra, Metzora, Section 2 10, Sifra, Metzora, Section 2 11</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_cleansing_compiled_on_the_purity_verbs_four_seats, negaim_14_whole_graded_first_run)</span><br><span class="gloss">= WITNESS-READ(the-cleansing-compiled-on-the-purity-verbs-four-seats, negaim-14-whole-graded-first-run)</span><br>THE CLEANSING COMPILED ON THE PURITY VERB&#x27;S FOUR SEATS [claim LV14A-08]. The rite of 14:1-32 had been left uncompiled behind the chapter&#x27;s check mark (the affliction runner holds the six tracks and the ten houses and cites 14:37-45 alone). Compiled cold against Mishnah Negaim 14 read whole with the link rows (77 of 77 on the first graded run, no Talmud opened; the ledger written first), the rite&#x27;s gates turned out to sit on the ink&#x27;s own purity verb: &#x27;and he shall purify him&#x27; at 14:7 (the birds — pure from defiling by entry, defiling as a creeping thing), &#x27;and he shall be pure&#x27; at 14:8 (the first shave and bathing gate the camp; seven days outside his tent — the Sifra&#x27;s &#x27;his wife&#x27;, Section 2 11), at 14:9 (the seventh day&#x27;s second shave: head, beard, eyebrows, &#x27;all his hair&#x27; twice — a tevul yom eating tithe, terumah at sunset), and at 14:20 (the atonement — holies), which is Negaim 14:3&#x27;s three purities and Keritot 2:1&#x27;s atonement-lacking read off four seats of one verb. Two censuses corrected the compiler&#x27;s own first drafts: &#x27;the right&#x27; stands at six verses, three members at 14, 17, 25, 28 and the priest&#x27;s right FINGER at 16 and 27; the log at five seats counts 14:15&#x27;s &#x27;FROM the log&#x27;. The eighth day&#x27;s guilt offering is waved alive with its log (Menachot 5:6-7), slaughtered in the north by call into the offerings dispatcher, most holy &#x27;as the sin offering&#x27; by call into the Tzav engine&#x27;s guilt-offering law compiled the same sitting, its altar-blood below like every asham (Tzav Section 5 1-2); the oil goes &#x27;on the PLACE of the blood&#x27; (14:28 against 14:17 — the place causes, Chapter 3 10); no thumb, toe, or right ear means no purity ever (Negaim 14:9); the poor scale keeps the lamb asham and swaps the sin and burnt offerings for birds, and the status is SAMPLED AT THE ASHAM (Section 4 13; Negaim 14:11&#x27;s R. Yehuda arm). Filed and auto- seated under the auto-seat rider (the dependency-debt sitting, 2026-09-06 — the owner: &#x27;fix all of the overlooked sections, then make sure we code properly going forward&#x27;; the four uncompiled sub-spans compiled, every ink pointer wired as a live call, the dependency census installed as a gate before every cold sweep, 23 of 23 runners green at 1444 cells).
+</td><td>—</td><td class='cite'>Mishnah Negaim 14:1, Mishnah Negaim 14:2, Mishnah Negaim 14:3, Mishnah Negaim 14:5, Mishnah Negaim 14:9, Mishnah Negaim 14:10, Mishnah Negaim 14:11, Mishnah Negaim 14:12, Mishnah Keritot 2:1, Mishnah Menachot 5:6, Mishnah Menachot 5:7, Mishnah Nazir 6:6, Mishnah Zevachim 10:5, Sifra, Metzora, Section 1 2, Sifra, Metzora, Section 2 5, Sifra, Metzora, Section 2 11, Sifra, Metzora, Chapter 2 7, Sifra, Metzora, Section 3 7, Sifra, Metzora, Chapter 3 10, Sifra, Metzora, Chapter 3 11, Sifra, Metzora, Section 4 13, Sifra, Tzav, Section 5 1</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
 </div>
@@ -1887,15 +1889,18 @@ from machine import Machine
 m = Machine(&quot;lev_14_metzora_cleanse&quot;)
 
 # -------------------------- Lev.14.1 · TREE_CLAIM --------------------------
-# וידבר יהוה … אל משה לאמר
-# &quot;[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
-# claim from Hebrew arms. Lev 14:1.&quot;
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:1.&quot;
 m.step(&quot;Lev.14.1&quot;)
 
 # -------------------------- Lev.14.2 · ETNACHTA_SPLIT ----------------------
-# זאת תהיה תורת המצרע ביום טהרתו … והובא אל הכהן
-# &quot;[EN-AID] From top split: LEFT «זאת תהיה תורת המצרע ביום טהרתו» / RIGHT
-# «והובא אל הכהן». Derive claim from Hebrew arms. Lev 14:2.&quot;
+# ‹זאת תהיה תורת› (“this be precept”)
+# ‹המצרע ביום טהרתו› (“the-scourge in-day ceremonial-purification-him/its”)
+# ‹… והובא אל הכהן› (“and-come/bring to the-priest”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:2.&quot;
 m.step(&quot;Lev.14.2&quot;)
 # witness-tier presupposed read: day_priest_and_the_regress on
 # beyom_tahorato — read, not installed
@@ -1903,17 +1908,23 @@ m.witness_read(&quot;beyom_tahorato&quot;, &quot;day_priest_and_the_regress&quot
                 cites=[&quot;Sifra, Metzora, Section 1 1&quot;, &quot;Sifra, Metzora, Section 1 2&quot;, &quot;Sifra, Metzora, Section 1 3&quot;, &quot;Sifra, Metzora, Section 1 4&quot;])
 
 # -------------------------- Lev.14.3 · ETNACHTA_SPLIT ----------------------
-# ויצא הכהן אל מחוץ למחנה … וראה הכהן והנה נרפא נגע הצרעת מן הצרוע
-# &quot;[EN-AID] From top split: LEFT «ויצא הכהן אל מחוץ למחנה» / RIGHT «וראה
-# הכהן והנה נרפא נגע הצרעת מן הצרוע». Derive claim from Hebrew arms. Lev
-# 14:3.&quot;
+# ‹ויצא הכהן אל› (“and-bring-forth the-priest to”)
+# ‹מחוץ למחנה … וראה› (“from-outside to-camp … and-see”)
+# ‹הכהן והנה נרפא› (“the-priest and-behold mend”)
+# ‹נגע הצרעת מן› (“blow the-leprosy from”)
+# ‹הצרוע› (“the-scourge”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:3.&quot;
 m.step(&quot;Lev.14.3&quot;)
 
 # -------------------------- Lev.14.4 · ETNACHTA_SPLIT ----------------------
-# וצוה הכהן ולקח למטהר שתי צפרים חיות טהרות … ועץ ארז ושני תולעת ואזב
-# &quot;[EN-AID] From top split: LEFT «וצוה הכהן ולקח למטהר שתי צפרים חיות טהרות»
-# / RIGHT «ועץ ארז ושני תולעת ואזב». Derive claim from Hebrew arms. Lev
-# 14:4.&quot;
+# ‹וצוה הכהן ולקח› (“and-command the-priest and-take”)
+# ‹למטהר שתי צפרים› (“to-be-pure two little-bird”)
+# ‹חיות טהרות … ועץ› (“living pure … and-tree”)
+# ‹ארז ושני תולעת› (“cedar-tree and-crimson crimson-grub”)
+# ‹ואזב› (“and-hyssop”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:4.&quot;
 m.step(&quot;Lev.14.4&quot;)
 # witness-tier presupposed read: the_kit_specs on shtei_tziporim — read, not
 # installed
@@ -1921,9 +1932,12 @@ m.witness_read(&quot;shtei_tziporim&quot;, &quot;the_kit_specs&quot;,
                 cites=[&quot;Sifra, Metzora, Section 1 8&quot;, &quot;Sifra, Metzora, Section 1 9&quot;, &quot;Sifra, Metzora, Section 1 10&quot;, &quot;Sifra, Metzora, Section 1 11&quot;, &quot;Sifra, Metzora, Section 1 12&quot;, &quot;Sifra, Metzora, Section 1 13&quot;, &quot;Sifra, Metzora, Section 1 15&quot;])
 
 # -------------------------- Lev.14.5 · ETNACHTA_SPLIT ----------------------
-# וצוה הכהן ושחט את הצפור האחת … אל כלי חרש על מים חיים
-# &quot;[EN-AID] From top split: LEFT «וצוה הכהן ושחט את הצפור האחת» / RIGHT «אל
-# כלי חרש על מים חיים». Derive claim from Hebrew arms. Lev 14:5.&quot;
+# ‹וצוה הכהן ושחט› (“and-command the-priest and-slaughter”)
+# ‹את הצפור האחת› (“obj-marker the-little-bird the-one”)
+# ‹… אל כלי חרש› (“to vessel piece-of-pottery”)
+# ‹על מים חיים› (“over waters living”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:5.&quot;
 m.step(&quot;Lev.14.5&quot;)
 # witness-tier presupposed read: coupled_fates_and_the_ratio on mayim_chayim
 # — read, not installed
@@ -1931,38 +1945,59 @@ m.witness_read(&quot;mayim_chayim&quot;, &quot;coupled_fates_and_the_ratio&quot;
                 cites=[&quot;Sifra, Metzora, Chapter 1 2&quot;, &quot;Sifra, Metzora, Chapter 1 4&quot;, &quot;Sifra, Metzora, Chapter 1 5&quot;, &quot;Sifra, Metzora, Chapter 1 6&quot;, &quot;Sifra, Metzora, Chapter 1 7&quot;, &quot;Sifra, Metzora, Section 2 5&quot;, &quot;Sifra, Metzora, Chapter 5 14&quot;])
 
 # -------------------------- Lev.14.6 · ETNACHTA_SPLIT ----------------------
-# את הצפר החיה יקח אתה ואת עץ הארז ואת שני התולעת ואת האזב … וטבל אותם ואת
-# הצפר החיה בדם הצפר השחטה על המים החיים
-# &quot;[EN-AID] From top split: LEFT «את הצפר החיה יקח אתה ואת עץ הארז ואת שני
-# התולעת ואת האזב» / RIGHT «וטבל אותם ואת הצפר החיה בדם הצפר השחטה על המים
-# החיים». Derive claim from Hebrew arms. Lev 14:6.&quot;
+# ‹את הצפר החיה› (“obj-marker the-little-bird the-living”)
+# ‹יקח אתה ואת› (“take obj-marker-her/its and-obj-marker”)
+# ‹עץ הארז ואת› (“tree the-cedar-tree and-obj-marker”)
+# ‹שני התולעת ואת› (“crimson the-crimson-grub and-obj-marker”)
+# ‹האזב … וטבל אותם› (“the-hyssop … and-dip obj-marker-them/their”)
+# ‹ואת הצפר החיה› (“and-obj-marker the-little-bird the-living”)
+# ‹בדם הצפר השחטה› (“in-blood the-little-bird the-slaughter”)
+# ‹על המים החיים› (“over the-waters the-living”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:6.&quot;
 m.step(&quot;Lev.14.6&quot;)
 
 # -------------------------- Lev.14.7 · ETNACHTA_SPLIT ----------------------
-# והזה על המטהר מן הצרעת שבע פעמים … וטהרו ושלח את הצפר החיה על פני השדה
-# &quot;[EN-AID] From top split: LEFT «והזה על המטהר מן הצרעת שבע פעמים» / RIGHT
-# «וטהרו ושלח את הצפר החיה על פני השדה». Derive claim from Hebrew arms. Lev
-# 14:7.&quot;
+# ‹והזה על המטהר› (“and-spirt over the-be-pure”)
+# ‹מן הצרעת שבע› (“from the-leprosy seven”)
+# ‹פעמים … וטהרו ושלח› (“stroke … and-be-pure-him/its and-send”)
+# ‹את הצפר החיה› (“obj-marker the-little-bird the-living”)
+# ‹על פני השדה› (“over face the-field”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:7.&quot;
 m.step(&quot;Lev.14.7&quot;)
 
 # -------------------------- Lev.14.8 · ETNACHTA_SPLIT ----------------------
-# וכבס המטהר את בגדיו וגלח את כל שערו ורחץ במים וטהר ואחר יבוא … וישב מחוץ
-# לאהלו שבעת ימים
-# &quot;[EN-AID] From top split: LEFT «וכבס המטהר את בגדיו וגלח את כל שערו ורחץ
-# במים וטהר ואחר יבוא אל המחנה» / RIGHT «וישב מחוץ לאהלו שבעת ימים». Derive
-# claim from Hebrew arms. Lev 14:8.&quot;
+# ‹וכבס המטהר את› (“and-trample the-be-pure obj-marker”)
+# ‹בגדיו וגלח את› (“garment-him/its and-be-bald obj-marker”)
+# ‹כל שערו ורחץ› (“all hair-him/its and-lave”)
+# ‹במים וטהר ואחר› (“in-waters and-be-pure and-after”)
+# ‹יבוא … וישב מחוץ› (“come/bring … and-dwell/sit from-outside”)
+# ‹לאהלו שבעת ימים› (“to-tent-him/its seven day”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:8.&quot;
 m.step(&quot;Lev.14.8&quot;)
 # witness-tier presupposed read: tent_is_his_wife on michutz_leohalo — read,
 # not installed
 m.witness_read(&quot;michutz_leohalo&quot;, &quot;tent_is_his_wife&quot;,
                 cites=[&quot;Sifra, Metzora, Section 2 9&quot;, &quot;Sifra, Metzora, Section 2 10&quot;, &quot;Sifra, Metzora, Section 2 11&quot;])
+# witness-tier presupposed read: negaim_14_whole_graded_first_run on
+# the_cleansing_compiled_on_the_purity_verbs_four_seats — read, not
+# installed
+m.witness_read(&quot;the_cleansing_compiled_on_the_purity_verbs_four_seats&quot;, &quot;negaim_14_whole_graded_first_run&quot;,
+                cites=[&quot;Mishnah Negaim 14:1&quot;, &quot;Mishnah Negaim 14:2&quot;, &quot;Mishnah Negaim 14:3&quot;, &quot;Mishnah Negaim 14:5&quot;, &quot;Mishnah Negaim 14:9&quot;, &quot;Mishnah Negaim 14:10&quot;, &quot;Mishnah Negaim 14:11&quot;, &quot;Mishnah Negaim 14:12&quot;, &quot;Mishnah Keritot 2:1&quot;, &quot;Mishnah Menachot 5:6&quot;, &quot;Mishnah Menachot 5:7&quot;, &quot;Mishnah Nazir 6:6&quot;, &quot;Mishnah Zevachim 10:5&quot;, &quot;Sifra, Metzora, Section 1 2&quot;, &quot;Sifra, Metzora, Section 2 5&quot;, &quot;Sifra, Metzora, Section 2 11&quot;, &quot;Sifra, Metzora, Chapter 2 7&quot;, &quot;Sifra, Metzora, Section 3 7&quot;, &quot;Sifra, Metzora, Chapter 3 10&quot;, &quot;Sifra, Metzora, Chapter 3 11&quot;, &quot;Sifra, Metzora, Section 4 13&quot;, &quot;Sifra, Tzav, Section 5 1&quot;])
 
 # -------------------------- Lev.14.9 · ETNACHTA_SPLIT ----------------------
-# והיה ביום השביעי יגלח את כל שערו את ראשו ואת זקנו ואת גבת עי … וכבס את
-# בגדיו ורחץ את בשרו במים וטהר
-# &quot;[EN-AID] From top split: LEFT «והיה ביום השביעי יגלח את כל שערו את ראשו
-# ואת זקנו ואת גבת עיניו ואת כל שערו יגלח» / RIGHT «וכבס את בגדיו ורחץ את
-# בשרו במים וטהר». Derive claim from Hebrew arms. Lev 14:9.&quot;
+# ‹והיה ביום השביעי› (“and-be in-day the-seventh”)
+# ‹יגלח את כל› (“be-bald obj-marker all”)
+# ‹שערו את ראשו› (“hair-him/its obj-marker head-him/its”)
+# ‹ואת זקנו ואת› (“and-obj-marker beard-him/its and-obj-marker”)
+# ‹גבת עי … וכבס› (“back ? … and-trample”)
+# ‹את בגדיו ורחץ› (“obj-marker garment-him/its and-lave”)
+# ‹את בשרו במים› (“obj-marker flesh-him/its in-waters”)
+# ‹וטהר› (“and-be-pure”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:9.&quot;
 m.step(&quot;Lev.14.9&quot;)
 # witness-tier presupposed read: the_three_shavers on kol_searo — read, not
 # installed
@@ -1970,41 +2005,59 @@ m.witness_read(&quot;kol_searo&quot;, &quot;the_three_shavers&quot;,
                 cites=[&quot;Sifra, Metzora, Chapter 2 2&quot;, &quot;Sifra, Metzora, Chapter 2 4&quot;, &quot;Sifra, Metzora, Chapter 2 5&quot;, &quot;Sifra, Metzora, Chapter 2 6&quot;, &quot;Sifra, Metzora, Chapter 2 7&quot;])
 
 # -------------------------- Lev.14.10 · ETNACHTA_SPLIT ---------------------
-# וביום השמיני יקח שני כבשים תמימים וכבשה אחת בת שנתה תמימה … ושלשה עשרנים
-# סלת מנחה בלולה בשמן ולג אחד שמן
-# &quot;[EN-AID] From top split: LEFT «וביום השמיני יקח שני כבשים תמימים וכבשה
-# אחת בת שנתה תמימה» / RIGHT «ושלשה עשרנים סלת מנחה בלולה בשמן ולג אחד שמן».
-# Derive claim from Hebrew arms. Lev 14:10.&quot;
+# ‹וביום השמיני יקח› (“and-in-day the-eight take”)
+# ‹שני כבשים תמימים› (“two ram entire”)
+# ‹וכבשה אחת בת› (“and-ewe one daughter”)
+# ‹שנתה תמימה … ושלשה› (“years-her/its entire … and-three”)
+# ‹עשרנים סלת מנחה› (“tenth-part flour grain-offering”)
+# ‹בלולה בשמן ולג› (“overflow in-oil and-log”)
+# ‹אחד שמן› (“one oil”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:10.&quot;
 m.step(&quot;Lev.14.10&quot;)
 
 # -------------------------- Lev.14.11 · ETNACHTA_SPLIT ---------------------
-# והעמיד הכהן המטהר את האיש המטהר ואתם … לפני יהוה פתח אהל מועד
-# &quot;[EN-AID] From top split: LEFT «והעמיד הכהן המטהר את האיש המטהר ואתם» /
-# RIGHT «לפני יהוה פתח אהל מועד». Derive claim from Hebrew arms. Lev 14:11.&quot;
+# ‹והעמיד הכהן המטהר› (“and-stand the-priest the-be-pure”)
+# ‹את האיש המטהר› (“obj-marker the-man the-be-pure”)
+# ‹ואתם … לפני יהוה› (“and-obj-marker-them/their … to-face YHWH”)
+# ‹פתח אהל מועד› (“opening tent seasons”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:11.&quot;
 m.step(&quot;Lev.14.11&quot;)
 
 # -------------------------- Lev.14.12 · ETNACHTA_SPLIT ---------------------
-# ולקח הכהן את הכבש האחד והקריב אתו לאשם ואת לג השמן … והניף אתם תנופה לפני
-# יהוה
-# &quot;[EN-AID] From top split: LEFT «ולקח הכהן את הכבש האחד והקריב אתו לאשם ואת
-# לג השמן» / RIGHT «והניף אתם תנופה לפני יהוה». Derive claim from Hebrew
+# ‹ולקח הכהן את› (“and-take the-priest obj-marker”)
+# ‹הכבש האחד והקריב› (“the-ram the-one and-bring-near”)
+# ‹אתו לאשם ואת› (“obj-marker-him/its to-guilt and-obj-marker”)
+# ‹לג השמן … והניף› (“log the-oil … and-quiver”)
+# ‹אתם תנופה לפני› (“obj-marker-them/their brandishing to-face”)
+# ‹יהוה› (“YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 14:12.&quot;
 m.step(&quot;Lev.14.12&quot;)
 
 # -------------------------- Lev.14.13 · ETNACHTA_SPLIT ---------------------
-# ושחט את הכבש במקום אשר ישחט את החטאת ואת העלה במקום הקדש … כי כחטאת האשם
-# הוא לכהן קדש קדשים הוא
-# &quot;[EN-AID] From top split: LEFT «ושחט את הכבש במקום אשר ישחט את החטאת ואת
-# העלה במקום הקדש» / RIGHT «כי כחטאת האשם הוא לכהן קדש קדשים הוא». Derive
-# claim from Hebrew arms. Lev 14:13.&quot;
+# ‹ושחט את הכבש› (“and-slaughter obj-marker the-ram”)
+# ‹במקום אשר ישחט› (“in-place which slaughter”)
+# ‹את החטאת ואת› (“obj-marker the-sin-offering and-obj-marker”)
+# ‹העלה במקום הקדש› (“the-burnt-offering in-place the-holiness”)
+# ‹… כי כחטאת האשם› (“that like-sin-offering the-guilt”)
+# ‹הוא לכהן קדש› (“he/it to-priest holiness”)
+# ‹קדשים הוא› (“holiness he/it”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:13.&quot;
 m.step(&quot;Lev.14.13&quot;)
 
 # -------------------------- Lev.14.14 · ETNACHTA_SPLIT ---------------------
-# ולקח הכהן מדם האשם ונתן הכהן על תנוך אזן המטהר הימנית … ועל בהן ידו הימנית
-# ועל בהן רגלו הימנית
-# &quot;[EN-AID] From top split: LEFT «ולקח הכהן מדם האשם ונתן הכהן על תנוך אזן
-# המטהר הימנית» / RIGHT «ועל בהן ידו הימנית ועל בהן רגלו הימנית». Derive
-# claim from Hebrew arms. Lev 14:14.&quot;
+# ‹ולקח הכהן מדם› (“and-take the-priest from-blood”)
+# ‹האשם ונתן הכהן› (“the-guilt and-set the-priest”)
+# ‹על תנוך אזן› (“over pinnacle broadness.-i.e.-the-ear”)
+# ‹המטהר הימנית … ועל› (“the-be-pure the-right … and-over”)
+# ‹בהן ידו הימנית› (“thumb-of-the-hand hand-him/its the-right”)
+# ‹ועל בהן רגלו› (“and-over thumb-of-the-hand foot-him/its”)
+# ‹הימנית› (“the-right”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:14.&quot;
 m.step(&quot;Lev.14.14&quot;)
 # witness-tier presupposed read: the_thumbs_rite on tenuch_ozen — read, not
 # installed
@@ -2012,51 +2065,77 @@ m.witness_read(&quot;tenuch_ozen&quot;, &quot;the_thumbs_rite&quot;,
                 cites=[&quot;Sifra, Metzora, Chapter 3 4&quot;, &quot;Sifra, Metzora, Chapter 3 5&quot;, &quot;Sifra, Metzora, Chapter 3 8&quot;, &quot;Sifra, Metzora, Chapter 3 9&quot;, &quot;Sifra, Metzora, Chapter 3 10&quot;, &quot;Sifra, Metzora, Chapter 3 11&quot;, &quot;Sifra, Metzora, Chapter 3 12&quot;, &quot;Sifra, Metzora, Chapter 3 14&quot;, &quot;Sifra, Metzora, Section 3 6&quot;])
 
 # -------------------------- Lev.14.15 · ETNACHTA_SPLIT ---------------------
-# ולקח הכהן מלג השמן … ויצק על כף הכהן השמאלית
-# &quot;[EN-AID] From top split: LEFT «ולקח הכהן מלג השמן» / RIGHT «ויצק על כף
-# הכהן השמאלית». Derive claim from Hebrew arms. Lev 14:15.&quot;
+# ‹ולקח הכהן מלג› (“and-take the-priest from-log”)
+# ‹השמן … ויצק על› (“the-oil … and-pour-out over”)
+# ‹כף הכהן השמאלית› (“palm-of-hand the-priest the-situated-on-the-left-
+# side”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:15.&quot;
 m.step(&quot;Lev.14.15&quot;)
 
 # -------------------------- Lev.14.16 · ETNACHTA_SPLIT ---------------------
-# וטבל הכהן את אצבעו הימנית מן השמן אשר על כפו השמאלית … והזה מן השמן באצבעו
-# שבע פעמים לפני יהוה
-# &quot;[EN-AID] From top split: LEFT «וטבל הכהן את אצבעו הימנית מן השמן אשר על
-# כפו השמאלית» / RIGHT «והזה מן השמן באצבעו שבע פעמים לפני יהוה». Derive
-# claim from Hebrew arms. Lev 14:16.&quot;
+# ‹וטבל הכהן את› (“and-dip the-priest obj-marker”)
+# ‹אצבעו הימנית מן› (“something-to-sieze-with-him/its the-right from”)
+# ‹השמן אשר על› (“the-oil which over”)
+# ‹כפו השמאלית … והזה› (“palm-of-hand-him/its the-situated-on-the-left-side
+# … and-spirt”)
+# ‹מן השמן באצבעו› (“from the-oil in-something-to-sieze-with-him/its”)
+# ‹שבע פעמים לפני› (“seven stroke to-face”)
+# ‹יהוה› (“YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:16.&quot;
 m.step(&quot;Lev.14.16&quot;)
 
 # -------------------------- Lev.14.17 · ETNACHTA_SPLIT ---------------------
-# ומיתר השמן אשר על כפו יתן הכהן על תנוך אזן המטהר הימנית ועל  … על דם האשם
-# &quot;[EN-AID] From top split: LEFT «ומיתר השמן אשר על כפו יתן הכהן על תנוך אזן
-# המטהר הימנית ועל בהן ידו הימנית ועל ב» / RIGHT «על דם האשם». Derive claim
-# from Hebrew arms. Lev 14:17.&quot;
+# ‹ומיתר השמן אשר› (“and-from-overhanging the-oil which”)
+# ‹על כפו יתן› (“over palm-of-hand-him/its set”)
+# ‹הכהן על תנוך› (“the-priest over pinnacle”)
+# ‹אזן המטהר הימנית› (“broadness.-i.e.-the-ear the-be-pure the-right”)
+# ‹ועל … על דם› (“and-over … over blood”)
+# ‹האשם› (“the-guilt”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:17.&quot;
 m.step(&quot;Lev.14.17&quot;)
 
 # -------------------------- Lev.14.18 · ETNACHTA_SPLIT ---------------------
-# והנותר בשמן אשר על כף הכהן יתן על ראש המטהר … וכפר עליו הכהן לפני יהוה
-# &quot;[EN-AID] From top split: LEFT «והנותר בשמן אשר על כף הכהן יתן על ראש
-# המטהר» / RIGHT «וכפר עליו הכהן לפני יהוה». Derive claim from Hebrew arms.
-# Lev 14:18.&quot;
+# ‹והנותר בשמן אשר› (“and-the-jut-over in-oil which”)
+# ‹על כף הכהן› (“over palm-of-hand the-priest”)
+# ‹יתן על ראש› (“set over head”)
+# ‹המטהר … וכפר עליו› (“the-be-pure … and-atone over-him/its”)
+# ‹הכהן לפני יהוה› (“the-priest to-face YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:18.&quot;
 m.step(&quot;Lev.14.18&quot;)
 
 # -------------------------- Lev.14.19 · ETNACHTA_SPLIT ---------------------
-# ועשה הכהן את החטאת וכפר על המטהר מטמאתו … ואחר ישחט את העלה
-# &quot;[EN-AID] From top split: LEFT «ועשה הכהן את החטאת וכפר על המטהר מטמאתו» /
-# RIGHT «ואחר ישחט את העלה». Derive claim from Hebrew arms. Lev 14:19.&quot;
+# ‹ועשה הכהן את› (“and-make the-priest obj-marker”)
+# ‹החטאת וכפר על› (“the-sin-offering and-atone over”)
+# ‹המטהר מטמאתו … ואחר› (“the-be-pure from-religious-impurity-him/its … and-
+# after”)
+# ‹ישחט את העלה› (“slaughter obj-marker the-burnt-offering”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:19.&quot;
 m.step(&quot;Lev.14.19&quot;)
 
 # -------------------------- Lev.14.20 · ETNACHTA_SPLIT ---------------------
-# והעלה הכהן את העלה ואת המנחה המזבחה … וכפר עליו הכהן וטהר
-# &quot;[EN-AID] From top split: LEFT «והעלה הכהן את העלה ואת המנחה המזבחה» /
-# RIGHT «וכפר עליו הכהן וטהר». Derive claim from Hebrew arms. Lev 14:20.&quot;
+# ‹והעלה הכהן את› (“and-go-up the-priest obj-marker”)
+# ‹העלה ואת המנחה› (“the-burnt-offering and-obj-marker the-grain-offering”)
+# ‹המזבחה … וכפר עליו› (“the-altar-ward … and-atone over-him/its”)
+# ‹הכהן וטהר› (“the-priest and-be-pure”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:20.&quot;
 m.step(&quot;Lev.14.20&quot;)
 
-# -------------------------- Lev.14.21 · COND_ואם ---------------------------
-# ואם דל הוא ואין ידו משגת ולקח כבש אחד אשם לתנופה לכפר עליו … ועשרון סלת
-# אחד בלול בשמן למנחה ולג שמן
-# &quot;[EN-AID] From top split: LEFT «ואם דל הוא ואין ידו משגת ולקח כבש אחד אשם
-# לתנופה לכפר עליו» / RIGHT «ועשרון סלת אחד בלול בשמן למנחה ולג שמן». Derive
-# claim from Hebrew arms. Lev 14:21.&quot;
+# -------------------------- Lev.14.21 · COND_ואם (“and-if”) ----------------
+# ‹ואם דל הוא› (“and-if dangling he/it”)
+# ‹ואין ידו משגת› (“and-there-is-not hand-him/its reach”)
+# ‹ולקח כבש אחד› (“and-take ram one”)
+# ‹אשם לתנופה לכפר› (“guilt to-brandishing to-atone”)
+# ‹עליו … ועשרון סלת› (“over-him/its … and-tenth-part flour”)
+# ‹אחד בלול בשמן› (“one overflow in-oil”)
+# ‹למנחה ולג שמן› (“to-grain-offering and-log oil”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:21.&quot;
 m.step(&quot;Lev.14.21&quot;)
 # witness-tier presupposed read: the_poverty_scale on im_dal_hu — read, not
 # installed
@@ -2064,80 +2143,115 @@ m.witness_read(&quot;im_dal_hu&quot;, &quot;the_poverty_scale&quot;,
                 cites=[&quot;Sifra, Metzora, Section 4 1&quot;, &quot;Sifra, Metzora, Section 4 2&quot;, &quot;Sifra, Metzora, Section 4 4&quot;, &quot;Sifra, Metzora, Section 4 12&quot;, &quot;Sifra, Metzora, Section 4 13&quot;, &quot;Sifra, Metzora, Section 4 16&quot;])
 
 # -------------------------- Lev.14.22 · ETNACHTA_SPLIT ---------------------
-# ושתי תרים או שני בני יונה אשר תשיג ידו … והיה אחד חטאת והאחד עלה
-# &quot;[EN-AID] From top split: LEFT «ושתי תרים או שני בני יונה אשר תשיג ידו» /
-# RIGHT «והיה אחד חטאת והאחד עלה». Derive claim from Hebrew arms. Lev
-# 14:22.&quot;
+# ‹ושתי תרים או› (“and-two ring-dove or”)
+# ‹שני בני יונה› (“two son dove”)
+# ‹אשר תשיג ידו› (“which reach hand-him/its”)
+# ‹… והיה אחד חטאת› (“and-be one sin-offering”)
+# ‹והאחד עלה› (“and-the-one burnt-offering”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:22.&quot;
 m.step(&quot;Lev.14.22&quot;)
 
 # -------------------------- Lev.14.23 · ETNACHTA_SPLIT ---------------------
-# והביא אתם ביום השמיני לטהרתו אל הכהן … אל פתח אהל מועד לפני יהוה
-# &quot;[EN-AID] From top split: LEFT «והביא אתם ביום השמיני לטהרתו אל הכהן» /
-# RIGHT «אל פתח אהל מועד לפני יהוה». Derive claim from Hebrew arms. Lev
-# 14:23.&quot;
+# ‹והביא אתם ביום› (“and-come/bring obj-marker-them/their in-day”)
+# ‹השמיני לטהרתו אל› (“the-eight to-ceremonial-purification-him/its to”)
+# ‹הכהן … אל פתח› (“the-priest … to opening”)
+# ‹אהל מועד לפני› (“tent seasons to-face”)
+# ‹יהוה› (“YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:23.&quot;
 m.step(&quot;Lev.14.23&quot;)
 
 # -------------------------- Lev.14.24 · ETNACHTA_SPLIT ---------------------
-# ולקח הכהן את כבש האשם ואת לג השמן … והניף אתם הכהן תנופה לפני יהוה
-# &quot;[EN-AID] From top split: LEFT «ולקח הכהן את כבש האשם ואת לג השמן» / RIGHT
-# «והניף אתם הכהן תנופה לפני יהוה». Derive claim from Hebrew arms. Lev
-# 14:24.&quot;
+# ‹ולקח הכהן את› (“and-take the-priest obj-marker”)
+# ‹כבש האשם ואת› (“ram the-guilt and-obj-marker”)
+# ‹לג השמן … והניף› (“log the-oil … and-quiver”)
+# ‹אתם הכהן תנופה› (“obj-marker-them/their the-priest brandishing”)
+# ‹לפני יהוה› (“to-face YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:24.&quot;
 m.step(&quot;Lev.14.24&quot;)
 
 # -------------------------- Lev.14.25 · ETNACHTA_SPLIT ---------------------
-# ושחט את כבש האשם ולקח הכהן מדם האשם ונתן על תנוך אזן המטהר ה … ועל בהן ידו
-# הימנית ועל בהן רגלו הימנית
-# &quot;[EN-AID] From top split: LEFT «ושחט את כבש האשם ולקח הכהן מדם האשם ונתן
-# על תנוך אזן המטהר הימנית» / RIGHT «ועל בהן ידו הימנית ועל בהן רגלו
-# הימנית». Derive claim from Hebrew arms. Lev 14:25.&quot;
+# ‹ושחט את כבש› (“and-slaughter obj-marker ram”)
+# ‹האשם ולקח הכהן› (“the-guilt and-take the-priest”)
+# ‹מדם האשם ונתן› (“from-blood the-guilt and-set”)
+# ‹על תנוך אזן› (“over pinnacle broadness.-i.e.-the-ear”)
+# ‹המטהר ה … ועל› (“the-be-pure the … and-over”)
+# ‹בהן ידו הימנית› (“thumb-of-the-hand hand-him/its the-right”)
+# ‹ועל בהן רגלו› (“and-over thumb-of-the-hand foot-him/its”)
+# ‹הימנית› (“the-right”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:25.&quot;
 m.step(&quot;Lev.14.25&quot;)
 
 # -------------------------- Lev.14.26 · ETNACHTA_SPLIT ---------------------
-# ומן השמן יצק הכהן … על כף הכהן השמאלית
-# &quot;[EN-AID] From top split: LEFT «ומן השמן יצק הכהן» / RIGHT «על כף הכהן
-# השמאלית». Derive claim from Hebrew arms. Lev 14:26.&quot;
+# ‹ומן השמן יצק› (“and-from the-oil pour-out”)
+# ‹הכהן … על כף› (“the-priest … over palm-of-hand”)
+# ‹הכהן השמאלית› (“the-priest the-situated-on-the-left-side”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:26.&quot;
 m.step(&quot;Lev.14.26&quot;)
 
 # -------------------------- Lev.14.27 · ETNACHTA_SPLIT ---------------------
-# והזה הכהן באצבעו הימנית מן השמן אשר על כפו השמאלית … שבע פעמים לפני יהוה
-# &quot;[EN-AID] From top split: LEFT «והזה הכהן באצבעו הימנית מן השמן אשר על כפו
-# השמאלית» / RIGHT «שבע פעמים לפני יהוה». Derive claim from Hebrew arms. Lev
-# 14:27.&quot;
+# ‹והזה הכהן באצבעו› (“and-spirt the-priest in-something-to-sieze-with-
+# him/its”)
+# ‹הימנית מן השמן› (“the-right from the-oil”)
+# ‹אשר על כפו› (“which over palm-of-hand-him/its”)
+# ‹השמאלית … שבע פעמים› (“the-situated-on-the-left-side … seven stroke”)
+# ‹לפני יהוה› (“to-face YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:27.&quot;
 m.step(&quot;Lev.14.27&quot;)
 
 # -------------------------- Lev.14.28 · ETNACHTA_SPLIT ---------------------
-# ונתן הכהן מן השמן אשר על כפו על תנוך אזן המטהר הימנית ועל בה … על מקום דם
-# האשם
-# &quot;[EN-AID] From top split: LEFT «ונתן הכהן מן השמן אשר על כפו על תנוך אזן
-# המטהר הימנית ועל בהן ידו הימנית ועל בהן» / RIGHT «על מקום דם האשם». Derive
-# claim from Hebrew arms. Lev 14:28.&quot;
+# ‹ונתן הכהן מן› (“and-set the-priest from”)
+# ‹השמן אשר על› (“the-oil which over”)
+# ‹כפו על תנוך› (“palm-of-hand-him/its over pinnacle”)
+# ‹אזן המטהר הימנית› (“broadness.-i.e.-the-ear the-be-pure the-right”)
+# ‹ועל בה … על› (“and-over in-her/its … over”)
+# ‹מקום דם האשם› (“place blood the-guilt”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:28.&quot;
 m.step(&quot;Lev.14.28&quot;)
 
 # -------------------------- Lev.14.29 · ETNACHTA_SPLIT ---------------------
-# והנותר מן השמן אשר על כף הכהן יתן על ראש המטהר … לכפר עליו לפני יהוה
-# &quot;[EN-AID] From top split: LEFT «והנותר מן השמן אשר על כף הכהן יתן על ראש
-# המטהר» / RIGHT «לכפר עליו לפני יהוה». Derive claim from Hebrew arms. Lev
-# 14:29.&quot;
+# ‹והנותר מן השמן› (“and-the-jut-over from the-oil”)
+# ‹אשר על כף› (“which over palm-of-hand”)
+# ‹הכהן יתן על› (“the-priest set over”)
+# ‹ראש המטהר … לכפר› (“head the-be-pure … to-atone”)
+# ‹עליו לפני יהוה› (“over-him/its to-face YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:29.&quot;
 m.step(&quot;Lev.14.29&quot;)
 
 # -------------------------- Lev.14.30 · ETNACHTA_SPLIT ---------------------
-# ועשה את האחד מן התרים או מן בני היונה … מאשר תשיג ידו
-# &quot;[EN-AID] From top split: LEFT «ועשה את האחד מן התרים או מן בני היונה» /
-# RIGHT «מאשר תשיג ידו». Derive claim from Hebrew arms. Lev 14:30.&quot;
+# ‹ועשה את האחד› (“and-make obj-marker the-one”)
+# ‹מן התרים או› (“from the-ring-dove or”)
+# ‹מן בני היונה› (“from son the-dove”)
+# ‹… מאשר תשיג ידו› (“from-who reach hand-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:30.&quot;
 m.step(&quot;Lev.14.30&quot;)
 
 # -------------------------- Lev.14.31 · ETNACHTA_SPLIT ---------------------
-# את אשר תשיג ידו את האחד חטאת ואת האחד עלה על המנחה … וכפר הכהן על המטהר
-# לפני יהוה
-# &quot;[EN-AID] From top split: LEFT «את אשר תשיג ידו את האחד חטאת ואת האחד עלה
-# על המנחה» / RIGHT «וכפר הכהן על המטהר לפני יהוה». Derive claim from Hebrew
+# ‹את אשר תשיג› (“obj-marker which reach”)
+# ‹ידו את האחד› (“hand-him/its obj-marker the-one”)
+# ‹חטאת ואת האחד› (“sin-offering and-obj-marker the-one”)
+# ‹עלה על המנחה› (“burnt-offering over the-grain-offering”)
+# ‹… וכפר הכהן על› (“and-atone the-priest over”)
+# ‹המטהר לפני יהוה› (“the-be-pure to-face YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 14:31.&quot;
 m.step(&quot;Lev.14.31&quot;)
 
 # -------------------------- Lev.14.32 · ETNACHTA_SPLIT ---------------------
-# זאת תורת אשר בו נגע צרעת … אשר לא תשיג ידו בטהרתו
-# &quot;[EN-AID] From top split: LEFT «זאת תורת אשר בו נגע צרעת» / RIGHT «אשר לא
-# תשיג ידו בטהרתו». Derive claim from Hebrew arms. Lev 14:32.&quot;
+# ‹זאת תורת אשר› (“this precept which”)
+# ‹בו נגע צרעת› (“in-him/its blow leprosy”)
+# ‹… אשר לא תשיג› (“which not reach”)
+# ‹ידו בטהרתו› (“hand-him/its in-ceremonial-purification-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 14:32.&quot;
 m.step(&quot;Lev.14.32&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
@@ -2156,7 +2270,7 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;beyom_tahorato&#x27;, &#x27;day_priest_and_the_regress&#x27;), (&#x27;shtei_tziporim&#x27;, &#x27;the_kit_specs&#x27;), (&#x27;mayim_chayim&#x27;, &#x27;coupled_fates_and_the_ratio&#x27;), (&#x27;michutz_leohalo&#x27;, &#x27;tent_is_his_wife&#x27;), (&#x27;kol_searo&#x27;, &#x27;the_three_shavers&#x27;), (&#x27;tenuch_ozen&#x27;, &#x27;the_thumbs_rite&#x27;), (&#x27;im_dal_hu&#x27;, &#x27;the_poverty_scale&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;beyom_tahorato&#x27;, &#x27;day_priest_and_the_regress&#x27;), (&#x27;shtei_tziporim&#x27;, &#x27;the_kit_specs&#x27;), (&#x27;mayim_chayim&#x27;, &#x27;coupled_fates_and_the_ratio&#x27;), (&#x27;michutz_leohalo&#x27;, &#x27;tent_is_his_wife&#x27;), (&#x27;the_cleansing_compiled_on_the_purity_verbs_four_seats&#x27;, &#x27;negaim_14_whole_graded_first_run&#x27;), (&#x27;kol_searo&#x27;, &#x27;the_three_shavers&#x27;), (&#x27;tenuch_ozen&#x27;, &#x27;the_thumbs_rite&#x27;), (&#x27;im_dal_hu&#x27;, &#x27;the_poverty_scale&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Sifra, Metzora, Section 1 1&#x27;, &#x27;Sifra, Metzora, Section 1 2&#x27;, &#x27;Sifra, Metzora, Section 1 3&#x27;, &#x27;Sifra, Metzora, Section 1 4&#x27;]
     assert all(&#x27;day_priest_and_the_regress&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;beyom_tahorato&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -2169,15 +2283,18 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Sifra, Metzora, Section 2 9&#x27;, &#x27;Sifra, Metzora, Section 2 10&#x27;, &#x27;Sifra, Metzora, Section 2 11&#x27;]
     assert all(&#x27;tent_is_his_wife&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;michutz_leohalo&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Sifra, Metzora, Chapter 2 2&#x27;, &#x27;Sifra, Metzora, Chapter 2 4&#x27;, &#x27;Sifra, Metzora, Chapter 2 5&#x27;, &#x27;Sifra, Metzora, Chapter 2 6&#x27;, &#x27;Sifra, Metzora, Chapter 2 7&#x27;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Mishnah Negaim 14:1&#x27;, &#x27;Mishnah Negaim 14:2&#x27;, &#x27;Mishnah Negaim 14:3&#x27;, &#x27;Mishnah Negaim 14:5&#x27;, &#x27;Mishnah Negaim 14:9&#x27;, &#x27;Mishnah Negaim 14:10&#x27;, &#x27;Mishnah Negaim 14:11&#x27;, &#x27;Mishnah Negaim 14:12&#x27;, &#x27;Mishnah Keritot 2:1&#x27;, &#x27;Mishnah Menachot 5:6&#x27;, &#x27;Mishnah Menachot 5:7&#x27;, &#x27;Mishnah Nazir 6:6&#x27;, &#x27;Mishnah Zevachim 10:5&#x27;, &#x27;Sifra, Metzora, Section 1 2&#x27;, &#x27;Sifra, Metzora, Section 2 5&#x27;, &#x27;Sifra, Metzora, Section 2 11&#x27;, &#x27;Sifra, Metzora, Chapter 2 7&#x27;, &#x27;Sifra, Metzora, Section 3 7&#x27;, &#x27;Sifra, Metzora, Chapter 3 10&#x27;, &#x27;Sifra, Metzora, Chapter 3 11&#x27;, &#x27;Sifra, Metzora, Section 4 13&#x27;, &#x27;Sifra, Tzav, Section 5 1&#x27;]
+    assert all(&#x27;negaim_14_whole_graded_first_run&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_cleansing_compiled_on_the_purity_verbs_four_seats&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Sifra, Metzora, Chapter 2 2&#x27;, &#x27;Sifra, Metzora, Chapter 2 4&#x27;, &#x27;Sifra, Metzora, Chapter 2 5&#x27;, &#x27;Sifra, Metzora, Chapter 2 6&#x27;, &#x27;Sifra, Metzora, Chapter 2 7&#x27;]
     assert all(&#x27;the_three_shavers&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;kol_searo&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Sifra, Metzora, Chapter 3 4&#x27;, &#x27;Sifra, Metzora, Chapter 3 5&#x27;, &#x27;Sifra, Metzora, Chapter 3 8&#x27;, &#x27;Sifra, Metzora, Chapter 3 9&#x27;, &#x27;Sifra, Metzora, Chapter 3 10&#x27;, &#x27;Sifra, Metzora, Chapter 3 11&#x27;, &#x27;Sifra, Metzora, Chapter 3 12&#x27;, &#x27;Sifra, Metzora, Chapter 3 14&#x27;, &#x27;Sifra, Metzora, Section 3 6&#x27;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Sifra, Metzora, Chapter 3 4&#x27;, &#x27;Sifra, Metzora, Chapter 3 5&#x27;, &#x27;Sifra, Metzora, Chapter 3 8&#x27;, &#x27;Sifra, Metzora, Chapter 3 9&#x27;, &#x27;Sifra, Metzora, Chapter 3 10&#x27;, &#x27;Sifra, Metzora, Chapter 3 11&#x27;, &#x27;Sifra, Metzora, Chapter 3 12&#x27;, &#x27;Sifra, Metzora, Chapter 3 14&#x27;, &#x27;Sifra, Metzora, Section 3 6&#x27;]
     assert all(&#x27;the_thumbs_rite&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;tenuch_ozen&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Sifra, Metzora, Section 4 1&#x27;, &#x27;Sifra, Metzora, Section 4 2&#x27;, &#x27;Sifra, Metzora, Section 4 4&#x27;, &#x27;Sifra, Metzora, Section 4 12&#x27;, &#x27;Sifra, Metzora, Section 4 13&#x27;, &#x27;Sifra, Metzora, Section 4 16&#x27;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Sifra, Metzora, Section 4 1&#x27;, &#x27;Sifra, Metzora, Section 4 2&#x27;, &#x27;Sifra, Metzora, Section 4 4&#x27;, &#x27;Sifra, Metzora, Section 4 12&#x27;, &#x27;Sifra, Metzora, Section 4 13&#x27;, &#x27;Sifra, Metzora, Section 4 16&#x27;]
     assert all(&#x27;the_poverty_scale&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;im_dal_hu&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">Tree-derived v1 (phase C). One STEP per verse from top-split arms. Not binding religious law.</div><p class='meta'>Rendered 2026-09-05 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">Tree-derived v1 (phase C). One STEP per verse from top-split arms. Not binding religious law.</div><p class='meta'>Rendered 2026-09-06 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

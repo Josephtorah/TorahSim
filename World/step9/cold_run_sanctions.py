@@ -239,6 +239,10 @@ with contextlib.redirect_stdout(_buf):
     import cold_run_chatat as CH
     import cold_run_clocks as CL
     import cold_run_shemini as SH
+    import cold_run_offerings as OFF
+# 17:5's "slaughter them as PEACE OFFERINGS" and 17:8's "burnt offering or
+# sacrifice" name the offering types — resolved by live call (2026-09-06)
+SHEL_ROW = OFF.dispatch('shelamim'); OLAH_ROW = OFF.dispatch('olah:flock')
 UNWITTING_UNION = CH.domain({'intent': 'unwitting', 'karet_when_intentional': True})['v']
 DOUBT_UNION = CH.domain({'intent': 'unknown'})['v']
 DELIBERATE_UNION = CH.domain({'intent': 'intentional'})['v']
@@ -716,9 +720,9 @@ def ov(q):
         return cell({'ov': 'the_pitom_speaking_from_the_armpit', 'yidoni': 'speaking_from_the_mouth'}, A, 'Sanhedrin '
                     '7:7 — the two defined (data)', [FX.NONE])
     if q == 'three_verses':
-        return cell({'punishment': '20:27', 'warning': '19:31', 'karet': '20:6'}, M, SK + 'Chapter 10 1 — the '
+        return cell({'punishment': '20:27', 'warning': '19:31', 'karet': '20:6'}, M, (SK + 'Chapter 10 1 — the '
                     'three-verse completion: the karet of 20:6 ("the soul that turns to the ghost-pits") assigned '
-                    'to the bearer; two of the three in this span (%s)' % (c_ov,), ['karet_cut_off', 'stoned'])
+                    'to the bearer; two of the three in this span (%s)') % (c_ov,), ['karet_cut_off', 'stoned'])
     if q == 'persons':
         return cell(['man', 'woman', 'tumtum', 'androgynous'], M, SK + 'Chapter 9 13 — "OR a woman" includes the '
                     'hidden-sexed and double-sexed', [FX.NONE])
@@ -823,8 +827,8 @@ def unions_misc(q):
                     'sister of both parents needs her own clause (20:17 gives it); ' + SA + 'Chapter 13 14: the '
                     'general-and-particular closes the class', [FX.NONE])
     if q == 'gentile_and_woman_warned':
-        return cell(['gentiles_warned', 'the_woman_warned'], M, SA + 'Chapter 13 1 — "any man, any man" (%s); "you shall '
-                    'not approach" plural (%s)' % (c_ish_ish, c_tikrav), [FX.NONE])
+        return cell(['gentiles_warned', 'the_woman_warned'], M, (SA + 'Chapter 13 1 — "any man, any man" (%s); "you shall '
+                    'not approach" plural (%s)') % (c_ish_ish, c_tikrav), [FX.NONE])
     if q == 'father_clause':
         return cell('the_male_lying_with_the_father', M, '18:7 "your father\'s nakedness" — read as the father himself '
                     '(the male clause 18:22 / 20:13; Sanhedrin 54a not opened) — Sanhedrin 7:4 counts him under the male',
@@ -1008,9 +1012,11 @@ def platform(q, **k):
         return cell('positive_only', M, 'Zevachim 14:9 — offered under the permit: "they shall bring them" (17:5)',
                     [FX.NONE])
     if q == 'classes':
-        return cell(['sages_burnt_and_shelamim_only', 'R._Meir_whatever_comes_by_vow'], M, SA + 'Chapter 9 5-6 — 17:5 '
+        return cell(['sages_burnt_and_shelamim_only', 'R._Meir_whatever_comes_by_vow'], M, (SA + 'Chapter 9 5-6 — 17:5 '
                     '"and slaughter them as SHELAMIM"; the burnt offering amplified; R. Meir adds meal offerings and '
-                    'nazirite birds', ['accepted'])
+                    'nazirite birds — the two types CALLED cold_run_offerings.dispatch: shelamim window %r, olah '
+                    'disposition %r [IMPORT, live call]') % (SHEL_ROW['window']['v'], OLAH_ROW['disposition']['v']),
+                    ['accepted'])
     if q == 'no_priest':
         return cell('even_converts_women_slaves_serve', M, SA + 'Chapter 9 7 — priestly throwing AT THE ALTAR only '
                     '(17:6); Zevachim 14:10 lists priesthood among the differences', [FX.NONE])

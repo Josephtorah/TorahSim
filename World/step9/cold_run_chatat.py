@@ -58,7 +58,7 @@ sys.path.insert(0, HERE)
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
-assert GUARDED == 187, ('the guard counted %d expectations, the tripwire holds 187' % GUARDED)
+assert GUARDED == 194, ('the guard counted %d expectations, the tripwire holds 194' % GUARDED)
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -204,6 +204,7 @@ with contextlib.redirect_stdout(_buf):
     import cold_run_vayikra5 as V5
     import cold_run_offerings as OFF
     import cold_run_minchah as MIN
+    import cold_run_tzav as TZ
 def v5(person):
     r = V5.graded_offering(person, V5.DATA); return r[0] if isinstance(r, tuple) else r
 def v5s(case):
@@ -218,6 +219,15 @@ LADDER = {m: v5({'trigger': 'utterance_oath', 'act_is_his_option': True, 'oath_f
           for m in ('reaches_lamb', 'reaches_birds', 'reaches_flour')}
 OUTER = OFF.dispatch('outer_chatat'); INNER = OFF.dispatch('inner_chatat_burned'); SHEL = OFF.dispatch('shelamim')
 MIN_REM = MIN.remainder('griddle')['v']
+# the dependency-debt sitting (2026-09-06): the four "as the fat of the peace
+# offering" pointers (4:10, 4:26, 4:31, 4:35) and 10:15's "as the LORD
+# commanded" resolve by LIVE CALL — the fat inventory in the offerings
+# dispatcher, the breast and thigh in the Tzav engine's dues machine.
+FAT = {s: OFF.dispatch('fat:' + s) for s in ('ox', 'lamb', 'goat')}
+BREAST_THIGH = TZ.dues_machine({'ask': 'breast_thigh'}, TZ.PARAMS)[0]
+print('routing receipts (pointers): cold_run_offerings CALLED — fat:ox tail %r, fat:lamb tail %r, fat:goat tail %r; '
+      'cold_run_tzav CALLED — dues_machine(breast_thigh) -> %r [IMPORT, live calls]'
+      % (FAT['ox']['tail']['v'], FAT['lamb']['tail']['v'], FAT['goat']['tail']['v'], BREAST_THIGH))
 print('routing receipts: cold_run_vayikra5 CALLED — doubt -> %r; sacrilege doubt -> %r; sacrilege -> %r; '
       'tumah trigger -> %r; birds tier -> %r; cold_run_offerings CALLED — outer_chatat eater %r window %r, '
       'shelamim window %r; cold_run_minchah CALLED — remainder -> %r [IMPORT, live calls]'
@@ -306,7 +316,7 @@ def rank(tier, sin='general', species=None):
     off, sex, vs, why = TIER_INK[tier]
     if tier == 'commoner' and species:
         off = {'goat': 'she_goat', 'lamb': 'ewe_lamb'}[species]
-    return cell(off, I, why + ' — unblemished at 4:%s' % c_tamim, ['accepted'])
+    return cell(off, I, (why + ' — unblemished at 4:%s') % c_tamim, ['accepted'])
 def sex(tier):
     return cell(TIER_INK[tier][1], I, 'FEMALE at 4:%s (the commoner\'s two kinds), MALE at 4:%s (the leader\'s '
                 'goat); the bulls masculine' % (c_female, c_male), [FX.NONE])
@@ -352,11 +362,38 @@ def carcass(tier):
     return cell(OUTER['eater']['v'], P, 'CALLED cold_run_offerings.dispatch(outer_chatat) -> eater %r, place %r, '
                 'window %r [IMPORT, live call]' % (OUTER['eater']['v'], OUTER['eat_place']['v'], OUTER['window']['v']),
                 ['due_to_priest', 'eating_window'])
+def fat(tier, species=None):
+    """The fat parts of each tier's animal, resolved through the chapter's own
+    pointers into Lev 3 by LIVE CALL (2026-09-06): 4:10 names the OX of the
+    peace offering; 4:26 and 4:31 'as the fat of the peace offering' for the
+    goats; 4:35 names the LAMB — whose inventory alone carries the tail."""
+    if tier == 'pointer_census':
+        seats = [v for v in range(1, 36) if any(count('Lev', 4, v, t) for t in ('יורם', 'כחלב', 'הוסר', 'יוסר'))]
+        return cell(seats, I, 'the four pointer verbs — "as it is LIFTED" (4:10), "AS THE FAT" (4:26), "as it was '
+                    'REMOVED" (4:31), "as it IS REMOVED" (4:35) — censused across the chapter', [FX.NONE])
+    if tier in ('anointed', 'congregation'):
+        f = FAT['ox']
+        return cell('ox_inventory_no_tail', P, '4:10 "as it is lifted from the OX of the peace offering" (4:20 "as he '
+                    'did to the bull of the sin offering" for the congregation\'s) — CALLED cold_run_offerings.dispatch'
+                    '(fat:ox): parts %r, tail %r [IMPORT, live call; Sifra Chovah Chapter 4 2-3]'
+                    % (f['parts']['v'], f['tail']['v']), ['smoked_to_the_lord'])
+    if tier == 'leader' or (tier == 'commoner' and species == 'goat'):
+        f = FAT['goat']
+        return cell('goat_inventory_no_tail', P, '4:26 / 4:31 "as the fat of the peace offering" — the goat\'s own '
+                    'paragraph in Lev 3 (3:12-15) names no tail — CALLED cold_run_offerings.dispatch(fat:goat): parts '
+                    '%r, tail %r [IMPORT, live call]' % (f['parts']['v'], f['tail']['v']), ['smoked_to_the_lord'])
+    if tier == 'commoner' and species == 'lamb':
+        f = FAT['lamb']
+        return cell('lamb_inventory_tail_included', P, '4:35 "as the fat of the LAMB (הכשב) is removed from the peace '
+                    'offering" — the pointer names the species whose list carries the tail (3:9) — CALLED '
+                    'cold_run_offerings.dispatch(fat:lamb): parts %r, tail %r [IMPORT, live call; Tamid 4:3 carries the '
+                    'lamb\'s tail, lobe, and kidneys together]' % (f['parts']['v'], f['tail']['v']), ['smoked_to_the_lord'])
+    return cell('unknown', I, '', [FX.NONE])
 def burn_site(how):
     if how == 'as_commanded':
-        return cell('ash_house_defiles_garments', I, '4:12 "to a pure place, to the ash-pour" [INK]; Lev 16:28 '
+        return cell('ash_house_defiles_garments', I, ('4:12 "to a pure place, to the ash-pour" [INK]; Lev 16:28 '
                     '"he that BURNS them shall wash his clothes" [IMPORT] — the burner\'s garments; outside '
-                    'three camps at %s (' % c_outside + SC + 'Chapter 5 3-4)', ['burned_outside_camp', 'defiles_garments'])
+                    'three camps at %s (' + SC + 'Chapter 5 3-4)') % c_outside, ['burned_outside_camp', 'defiles_garments'])
     return cell('birah_no_defiling', A, 'Mishnah Zevachim 12:5 — not as commanded: burned in the fortress court, '
                 'no defiling (the disqualified bull is not "the bull" of 4:12)', ['burned_outside_camp'])
 def bearers(case):
@@ -432,8 +469,8 @@ def reliance(c):
                         'R. Akiva concedes', ['exempt'])
         if c.get('where') == 'at_home':
             return cell('liable', A, 'Mishnah Horayot 1:2 — sat at home: could have heard', ['atoned_forgiven'])
-        return cell('R._Shimon_exempt_R._Eliezer_doubt', M, SC + 'Section 7 3 — R. Shimon\'s retraction edge: '
-                    'he relied on the standing law; R. Eliezer: a doubt, the suspended ram (CALLED -> %r)' % TALUI,
+        return cell('R._Shimon_exempt_R._Eliezer_doubt', M, (SC + 'Section 7 3 — R. Shimon\'s retraction edge: '
+                    'he relied on the standing law; R. Eliezer: a doubt, the suspended ram (CALLED -> %r)') % TALUI,
                     ['exempt', 'suspends'])
     return cell('exempt_relied_on_court', M, SC + 'Section 7 2 — with them, after them, before them: every '
                 'combination exempt individually; the court\'s bull covers ("one who relies on the court")',
@@ -469,8 +506,8 @@ def sliding_scale_by_tier(tier, trigger):
                 ['atoned_forgiven'])
 def talui_by_tier(tier):
     if tier in ('individual', 'leader'):
-        return cell('liable', M, SC + 'Section 5 8 — "and he be guilty" (4:22): the leader DOES bring the '
-                    'suspended ram; the individual by Lev 5:17\'s "a soul" (CALLED -> %r)' % TALUI, ['suspends'])
+        return cell('liable', M, (SC + 'Section 5 8 — "and he be guilty" (4:22): the leader DOES bring the '
+                    'suspended ram; the individual by Lev 5:17\'s "a soul" (CALLED -> %r)') % TALUI, ['suspends'])
     return cell('exempt', M, SC + 'Chapter 2 1 — the anointed is likened to the court (4:3 "to the guilt of the '
                 'people"); the court brings no ram at all (no "soul")', ['exempt'])
 def vadai_by_tier(tier):
@@ -526,10 +563,10 @@ def emmaus(q):
         return cell(5, A, 'Mishnah Keritot 3:7 — "but we have heard": five menstruant wives in one lapse, liable '
                     'for each (one name, five bodies)', ['atoned_forgiven'])
     if q == 'five_slaughters_outside':
-        return cell(OPEN, M, SC + 'Chapter 1 10-12 — "we have not heard"; R. Yehoshua\'s five-dishes sacrilege '
+        return cell(OPEN, M, (SC + 'Chapter 1 10-12 — "we have not heard"; R. Yehoshua\'s five-dishes sacrilege '
                     'analogy (each liable — CALLED -> %r), R. Shimon\'s leftover version, R. Akiva\'s method note: '
                     '"if a ruling, we accept it; if an argument, there is a reply" — and the reply: sacrilege '
-                    'counts the feeder as the eater and joins over time' % MEILAH[:20], [FX.NONE])
+                    'counts the feeder as the eater and joins over time') % MEILAH[:20], [FX.NONE])
     if q == 'many_labors_many_sabbaths_one_kind':
         return cell('R._Eliezer_each_R._Akiva_refutes', M, SC + 'Chapter 1 13 — R. Eliezer: one per derivative '
                     '(the a-fortiori from the menstruant); Chapter 1 7: aware of the day, not the labor — one per '
@@ -545,8 +582,8 @@ def names_one_act(names, arm=None):
 def four_and_one(names):
     chatat = [n for n in names if n != 'consecrated']
     asham = 1 if 'consecrated' in names else 0
-    return cell('%d chatat + %d asham' % (len(chatat), asham), M, SC + 'Section 5 4 — per name; the consecrated '
-                'piece is sacrilege: CALLED cold_run_vayikra5.sacrilege -> %r' % MEILAH[:30],
+    return cell('%d chatat + %d asham' % (len(chatat), asham), M, (SC + 'Section 5 4 — per name; the consecrated '
+                'piece is sacrilege: CALLED cold_run_vayikra5.sacrilege -> %r') % MEILAH[:30],
                 ['atoned_forgiven', 'accepted'])
 def witnesses(c):
     """Keritot 3:1 — the epistemic trigger (4:23 'his sin be made KNOWN to him')."""
@@ -610,8 +647,8 @@ def pieces(a, b, ate='one_unknown', arm=None):
     if ate == 'both':
         out = ['chatat'] * (len(A_) + len(B_))
         if meilah[a] or meilah[b]: out.append('asham_vadai')
-        return cell(' + '.join(out), P, 'both eaten: every name certain — per name (' + SC + 'Section 5 4); '
-                    'the consecrated piece: CALLED cold_run_vayikra5.sacrilege -> %r' % MEILAH[:30],
+        return cell(' + '.join(out), P, ('both eaten: every name certain — per name (' + SC + 'Section 5 4); '
+                    'the consecrated piece: CALLED cold_run_vayikra5.sacrilege -> %r') % MEILAH[:30],
                     ['atoned_forgiven'] + (['accepted'] if meilah[a] or meilah[b] else []))
     if ate == 'two_persons':
         one = pieces(a, b, 'one_unknown')['v']
@@ -650,9 +687,9 @@ def resolution(c):
     return cell('unknown', I, '', [FX.NONE])
 def day_of_atonement(c):
     if c == 'chatat_owed':
-        return cell('bring_after', M, SC + 'Section 3 1 — "he shall bring" (4:4): even after the Day of Atonement; '
+        return cell('bring_after', M, (SC + 'Section 3 1 — "he shall bring" (4:4): even after the Day of Atonement; '
                     'Section 6 1 at the leader (4:23); Keritot 26a:19 (R. Zeira: "knowledge" written at the three '
-                    'tiers, 4:%s — the known sin outlives the Day)' % c_hoda, ['atoned_forgiven'])
+                    'tiers, 4:%s — the known sin outlives the Day)') % c_hoda, ['atoned_forgiven'])
     if c == 'talui_owed':
         return cell('exempt', M, 'Lev 16:30 "on this day he shall atone for you... from ALL your sins" [IMPORT] — '
                     'Keritot 26a:19: a sin that none but the Omnipresent knows, the Day atones; and R. Zeira\'s '
@@ -763,6 +800,11 @@ def table(q):
         return cell('daughters_eat_breast_thigh_not_minchah', I, '10:14 "you and your sons and your DAUGHTERS" '
                     '(ובנתיך) against 10:13 "your due and your SONS\' due"; ' + SS + 'Chapter 1 7, 1 10: sons in '
                     'the share, daughters in the gifts', ['due_to_priest'])
+    if q == 'breast_thigh_due':
+        return cell('to_the_priests_after_smoking', P, '10:15 "the thigh of the heave and the breast of the waving... '
+                    'shall be yours and your sons\' with you, a perpetual due, AS THE LORD COMMANDED (כאשר צוה)" — the '
+                    'pointer to Lev 7:30-34; CALLED cold_run_tzav.dues_machine(breast_thigh) -> %r [IMPORT, live call]'
+                    % BREAST_THIGH, ['due_to_priest'])
     if q == 'fats_position':
         return cell('fats_below', M, '10:15 "ON the fire-portions of the fats" [INK] — ' + SS + 'Chapter 1 11: '
                     'the fats BELOW at the carrying', [FX.NONE])
@@ -774,18 +816,19 @@ def inquiry(q):
         return cell('eaten_in_holy_place', I, '10:18 "behold its blood was NOT brought inside the sanctuary — you '
                     'should have eaten it in the holy place"; Lev 6:19, 6:23 [IMPORT]', ['eaten_to_atone', 'due_to_priest'])
     if q == 'blood_inside':
-        return cell('burned', I, '10:18 read in its negative: brought inside — not eaten; Lev 6:23 [IMPORT] "shall '
-                    'not be eaten; it shall be burned"', ['burned_outside_camp'])
+        return cell('burned', P, '10:18 read in its negative: brought inside — not eaten, "AS I COMMANDED (כאשר '
+                    'צויתי)" — the pointer to Lev 6:23 "shall not be eaten; it shall be burned"; CALLED '
+                    'cold_run_offerings.dispatch(inner_chatat_burned) burn_place -> %r [IMPORT, live call]'
+                    % INNER['burn_place']['v'], ['burned_outside_camp'])
     if q == 'eating_atones':
         return cell('priests_eat_owners_atoned', I, '10:17 "He gave it to you to BEAR the iniquity of the '
                     'congregation, to atone for them" — the eating IS the atonement (' + SS + 'Chapter 2 4)',
                     ['eaten_to_atone'])
     if q == 'which_goat_burned':
-        return cell('new_moon_goat', M, SS + 'Chapter 2 1-2 — three goats that day; the doubled "inquired" = two '
+        return cell('new_moon_goat', M, (SS + 'Chapter 2 1-2 — three goats that day; the doubled "inquired" = two '
                     'inquiries (דרש x%d at 10:16); the burned one: the New Moon\'s, "given to bear the assembly\'s '
                     'sin" — Zevachim 101b:6-7 holds the Sifra\'s row word for word ("goat" Nachshon\'s, "sin '
-                    'offering" the eighth day\'s, "inquired" the New Moon\'s; "behold it was burned" — ONE burned)'
-                    % c_darash, [FX.NONE])
+                    'offering" the eighth day\'s, "inquired" the New Moon\'s; "behold it was burned" — ONE burned)') % c_darash, [FX.NONE])
     if q == 'why_burned':
         return cell('R._Nechemia_mourning_R._Yehuda_R._Shimon_impurity', M, SS + 'Chapter 2 8 (for the '
                     'mourning — "such things have befallen me") / Chapter 2 10 (for impurity, three refutations)',
@@ -840,11 +883,11 @@ def wine(c):
                     '13b:20: Rav, who ruled wherever he sat, set no expositor on a festival\'s morrow', ['teaching_barred'])
     return cell('unknown', I, '', [FX.NONE])
 def wine_service_validity():
-    return cell('service_invalid', M, ('10:10 "to DISTINGUISH between the holy and the profane" [INK, %d pairs] — '
+    return cell('service_invalid', M, (('10:10 "to DISTINGUISH between the holy and the profane" [INK, %d pairs] — '
                 'Zevachim 17b:7: "from where that a drunk who served has PROFANED? wine and strong drink do not '
                 'drink... and to distinguish between the holy and the profane"; 18a:1-5: the missing-garmented '
                 'and the unwashed joined by the statute-statute analogy (10:9 / Exod 29:9); Sanhedrin 22b:14 (Rav '
-                'Ashi: wine-drinkers profane service) — ' % c_havdil_pairs) + SS + 'Section 1 8 holds it verbatim',
+                'Ashi: wine-drinkers profane service) — ') + SS + 'Section 1 8 holds it verbatim') % c_havdil_pairs,
                 ['service_profaned'])
 def wine_today():
     return cell('Rabbi_forbidden_forever_remedy_is_ruin', M, '10:9 "an everlasting statute for your generations" '
@@ -1091,6 +1134,14 @@ TESTS = [
  ('Sanhedrin 22b — the ban today: Rabbi forbids forever, its remedy is its ruin', wine_today(), 'Rabbi_forbidden_forever_remedy_is_ruin'),
  ('Sanhedrin 22b — a mil\'s walk and sleep dissipate a quarter-log, not more', wine_dissipation(), 'quarter_log_dissipates_more_does_not'),
  ('Sifra Shemini Section 1 9 — the curriculum verse', curriculum(), 'valuations_purity_rulings_expositions_halachot_scripture'),
+ # ---- THE POINTERS RESOLVED BY LIVE CALL (2026-09-06, the dependency-debt sitting) ----
+ ('the four "as the fat of the peace offering" pointer verses censused', fat('pointer_census'), [10, 26, 31, 35]),
+ ('Lev 4:10 — the anointed priest\'s bull: the OX\'s inventory, no tail (CALLED offerings fat:ox)', fat('anointed'), 'ox_inventory_no_tail'),
+ ('Lev 4:20 — the congregation\'s bull "as the bull of the sin offering": the ox\'s again', fat('congregation'), 'ox_inventory_no_tail'),
+ ('Lev 4:26 — the leader\'s he-goat "as the fat of the peace offering": the goat\'s, no tail', fat('leader'), 'goat_inventory_no_tail'),
+ ('Lev 4:31 — the commoner\'s she-goat: the goat\'s, no tail', fat('commoner', species='goat'), 'goat_inventory_no_tail'),
+ ('Lev 4:35 — the commoner\'s ewe "as the fat of the LAMB is removed": TAIL INCLUDED (Tamid 4:3)', fat('commoner', species='lamb'), 'lamb_inventory_tail_included'),
+ ('Lev 10:15 "as the LORD commanded" — the breast and thigh by call into the Tzav engine', table('breast_thigh_due'), 'to_the_priests_after_smoking'),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------

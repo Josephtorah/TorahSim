@@ -36,6 +36,30 @@ runs; the answer sheet is verified in its own ink.
 import sqlite3, sys, os, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effects_layer as FX
+from compile_guards import check_honest_pairing
+GUARDED = check_honest_pairing(os.path.abspath(__file__))
+assert GUARDED == 41, ('the guard counted %d expectations, the tripwire holds 41' % GUARDED)
+print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
+# the callees (cold) — the dependency-debt sitting (2026-09-06): this runner
+# imported nothing while 23:5 named the Passover, 23:12 and 23:18-19 the
+# burnt, sin, and peace offerings, 23:9-14 the omer of Lev 2:14, and
+# 23:16-20 the first fruits and the harvest feast of Exod 23:16-19.
+import io as _io, contextlib as _ctx
+with _ctx.redirect_stdout(_io.StringIO()):
+    import cold_run_pesach as PS
+    import cold_run_offerings as OFF
+    import cold_run_minchah as MIN
+    import cold_run_calendar as CAL
+PS_EAT = PS.paschal_procedure({'ask': 'eating_time'}, PS.DATA)[0]
+PS_WIN = PS.leaven_machine({'ask': 'window_bounds'}, PS.DATA)[0]
+OLAH = OFF.dispatch('olah:flock'); CHATAT = OFF.dispatch('outer_chatat'); CSA = OFF.dispatch('communal_shelamim_and_asham')
+OMER_MIN = MIN.omer('source')
+FF = CAL.first_fruits({}, CAL.DATA)[0]; PIL = CAL.pilgrimage({'kind': 'able_male'}, CAL.DATA)[0]
+print('routing receipts: cold_run_pesach CALLED — eating_time %r, window %r; cold_run_offerings CALLED — olah %r, '
+      'outer chatat place %r, communal shelamim place %r eater %r; cold_run_minchah CALLED — omer(source) %r; '
+      'cold_run_calendar CALLED — first_fruits %r, pilgrimage %r [IMPORT, live calls]'
+      % (PS_EAT, PS_WIN, OLAH['disposition']['v'], CHATAT['place']['v'], CSA['place']['v'], CSA['eater']['v'],
+         OMER_MIN['v'], FF, PIL))
 
 ROOT = '<repo-old>'
 db = sqlite3.connect(ROOT + '/elijah_docket/tanakh.sqlite')
@@ -113,7 +137,7 @@ assert len(CONVOC) == 11, CONVOC
 print('ink census: ALL-work verses %s · SERVILE-work verses %s · '
       'convocation tokens %d' % (ALL_WORK, SERVILE, len(CONVOC)))
 
-I, M, A, D = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA'
+I, M, A, D, P = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT'
 
 
 def cell(v, p, why, effects):
@@ -190,12 +214,79 @@ def omer():
                                            'when there is no bringing (R. '
                                            'Yehuda, Sifra Section 10 10)',
                                            ['barred_from_it']),
+     # the pointers, live (2026-09-06)
+     'lamb_olah': cell(OLAH['disposition']['v'], P,
+                       'כבש תמים בן שנתו לעלה (a lamb of its first year for a burnt offering) at 23:12 — Lev '
+                       '1:10\'s flock burnt offering: CALLED cold_run_offerings.dispatch(olah:flock) disposition '
+                       '[IMPORT, live call]', ['accepted']),
+     'grain_source': cell(OMER_MIN['v'], P,
+                          'the omer IS Lev 2:14\'s first-fruits meal offering — "what is missing there the verse '
+                          'stated here," one offering split across two chapters (Sifra Emor Chapter 13 3): CALLED '
+                          'cold_run_minchah.omer(source) [IMPORT, live call]', ['accepted']),
+    }
+
+
+def shavuot_animals():
+    """Lev 23:18-19 — the animals brought ON the bread, compiled from the two
+    verses' own tokens; the procedures by live call (added 2026-09-06: the
+    sub-span had been cited by no cell)."""
+    kinds = (count('שבעת', 18) and count('כבשים', 18) and count('ופר', 18) and count('ואילם', 18))
+    return {
+     'olah_kinds': cell('seven_lambs_one_bull_two_rams' if kinds else 'census_failed', I,
+                        'שבעת כבשים... ופר בן בקר אחד ואילם שנים יהיו עלה (seven lambs... and one bull and two '
+                        'rams, a burnt offering) at 23:18 — the three kinds counted by their own numerals',
+                        ['accepted']),
+     'olah_procedure': cell(OLAH['disposition']['v'], P,
+                            'עלה ליהוה at 23:18 — Lev 1\'s burnt offering: CALLED cold_run_offerings.dispatch(olah:flock) '
+                            'disposition [IMPORT, live call]', ['smoked_to_the_lord']),
+     'minchah_libations': cell('per_Numbers_28', D,
+                               'ומנחתם ונסכיהם (their meal offering and their libations) at 23:18 — the quantities are '
+                               'Numbers 28:26-31\'s, outside this span [IMPORT; the Sifra: "the verse spoke briefly," '
+                               'Emor Chapter 13 5]', ['accepted']),
+     'chatat_place': cell(CHATAT['place']['v'], P,
+                          'שעיר עזים אחד לחטאת (one he-goat for a sin offering) at 23:19 — Lev 4\'s outer sin offering: '
+                          'CALLED cold_run_offerings.dispatch(outer_chatat) place [IMPORT, live call]', ['accepted']),
+     'shelamim_grade': cell(CSA['eater']['v'], P,
+                            'קדש יהיו ליהוה לכהן (holy shall they be to the LORD, for the priest) at 23:20 — the '
+                            'communal peace offering is MOST HOLY, eaten by the priests: CALLED cold_run_offerings.dispatch'
+                            '(communal_shelamim_and_asham) eater [IMPORT, live call; Mishnah Zevachim 5:5\'s row read '
+                            'off the verse\'s own "for the priest"]', ['most_holy', 'due_to_priest']),
+     'shelamim_place': cell(CSA['place']['v'], P,
+                            'the communal peace offering\'s slaughter place — north (Zevachim 5:5; the Num 10:10 pairing, '
+                            'Zevachim 55a:3): CALLED cold_run_offerings [IMPORT, live call]', ['accepted']),
+     'waving': cell('loaves_on_two_lambs', M,
+                    'והניף הכהן אתם על לחם הבכורים תנופה... על שני כבשים (the priest shall wave them on the bread of '
+                    'the first fruits... on the two lambs) at 23:20 [INK] — the geometry: the bread ABOVE everywhere '
+                    '(Sifra Emor Chapter 13 8; Mishnah Menachot 5:6: the loaves on the two lambs, both hands beneath)',
+                    ['waved']),
+     'interdependence': cell('bread_blocks_lambs_R._Akiva_lambs_block_bread_ben_Nannas', A,
+                             'על הלחם (ON the bread) at 23:18 [INK] — the lambs an obligation to the bread (Sifra Emor '
+                             'Chapter 13 4); Mishnah Menachot 4:3: the bread blocks the lambs (R. Akiva) / the lambs '
+                             'block the bread (ben Nannas; R. Shimon rules as he, not for his reason)', ['accepted']),
+     'two_lambs_mutual': cell('block_each_other', A,
+                              'שני כבשים (two lambs) at 23:19 — Mishnah Menachot 3:6: the two lambs of Atzeret '
+                              'indispensable to one another', ['accepted']),
+     'kinds_independent': cell('do_not_block_each_other', A,
+                               'Mishnah Menachot 4:2 — the bulls, the rams, and the lambs do not invalidate one '
+                               'another (the three numerals of 23:18 stand apart)', ['accepted']),
+     'two_sets': cell('for_the_bread_not_for_the_day', M,
+                      'Sifra Emor Chapter 13 6 — the seven lambs and the goat of Numbers 28 are NOT these: those come '
+                      'for the DAY, these for the BREAD (the bulls and rams differ between the lists)', ['accepted']),
     }
 
 
 def two_loaves():
     return {
      'count': cell(2, I, 'שתים at 23:17', ['accepted']),
+     # the pointers, live (2026-09-06)
+     'first_fruits_link': cell(FF, P,
+                               'לחם הבכורים (the bread of the first fruits) at 23:20 with Exod 23:16 "the feast of the '
+                               'harvest, the first fruits of your labors" and 23:19 "the first of the first fruits" — one '
+                               'institution at two seats: CALLED cold_run_calendar.first_fruits [IMPORT, live call]',
+                               ['accepted']),
+     'pilgrimage': cell(PIL, P,
+                        'the day of the two loaves is Exod 23:16\'s feast of the harvest, one of the three appearings: '
+                        'CALLED cold_run_calendar.pilgrimage(able_male) [IMPORT, live call]', ['appearance_owed']),
      'flour': cell('two_tenths', I, 'שני עשרנים at 23:17', ['accepted']),
      'leaven': cell('leavened', I, 'חמץ תאפינה at 23:17', ['accepted']),
      'oil_frankincense': cell('neither', A,
@@ -272,6 +363,13 @@ def passover():
                               'the witness): before midday invalid',
                               ['accepted']),
      'matzot_days': cell(7, I, 'שבעת ימים מצות at 23:6', ['sanctify_day']),
+     # the pointers, live (2026-09-06)
+     'eating_time': cell(PS_EAT, P,
+                         'פסח ליהוה (the LORD\'s Passover) at 23:5 — the Passover engine holds the lamb\'s law: CALLED '
+                         'cold_run_pesach.paschal_procedure(eating_time) [IMPORT, live call]', ['eating_window']),
+     'matzot_window': cell(PS_WIN, P,
+                           'חג המצות (the feast of unleavened bread) at 23:6 — Exod 12:15-20\'s window: CALLED '
+                           'cold_run_pesach.leaven_machine(window_bounds) [IMPORT, live call]', ['purge_deadline']),
     }
 
 
@@ -307,8 +405,8 @@ for name, tr, ch, m, must in SHEET:
 print('answer sheet: %d Mishnah rows read whole from the shelf, each '
       'verified by a token in its own ink' % len(SHEET))
 
-YK, OM, TL, RH, SK, SV, PS = (yom_kippur(), omer(), two_loaves(), rosh_hashanah(),
-                              sukkot(), sabbath_vs_festival(), passover())
+YK, OM, TL, RH, SK, SV, PSV, SA = (yom_kippur(), omer(), two_loaves(), rosh_hashanah(),
+                                   sukkot(), sabbath_vs_festival(), passover(), shavuot_animals())
 
 # (Mishnah row, cell, expected)
 TESTS = [
@@ -347,13 +445,32 @@ TESTS = [
   SK['myrtle_count'], ['r_yishmael_three', 'r_akiva_one']),
  ('Sukkah 2:8 — women exempt from the sukkah', SK['women'], 'exempt'),
  ('Pesachim 5:3 — slaughtered before midday invalid: "between the evenings"',
-  PS['slaughter_window'], 'after_midday'),
+  PSV['slaughter_window'], 'after_midday'),
+ # ---- THE SHAVUOT ANIMALS (23:18-19) and the pointers, live (2026-09-06) ----
+ ('Lev 23:18 — seven lambs, one bull, two rams: the three kinds censused', SA['olah_kinds'], 'seven_lambs_one_bull_two_rams'),
+ ('Lev 23:18 — a burnt offering: wholly to the fires (CALLED offerings)', SA['olah_procedure'], 'wholly_to_fires'),
+ ('Lev 23:18 — their meal offering and libations: Numbers 28\'s quantities', SA['minchah_libations'], 'per_Numbers_28'),
+ ('Lev 23:19 — the goat sin offering slaughtered north (CALLED offerings)', SA['chatat_place'], 'north'),
+ ('Zevachim 5:5 — the communal peace offering eaten by male priests: 23:20\'s "for the priest" (CALLED)', SA['shelamim_grade'], 'male_priests'),
+ ('Zevachim 5:5 — the communal peace offering slaughtered north (CALLED)', SA['shelamim_place'], 'north'),
+ ('Menachot 5:6 — the loaves waved on the two lambs', SA['waving'], 'loaves_on_two_lambs'),
+ ('Menachot 4:3 — the bread and the lambs: R. Akiva / ben Nannas', SA['interdependence'], 'bread_blocks_lambs_R._Akiva_lambs_block_bread_ben_Nannas'),
+ ('Menachot 3:6 — the two lambs block each other', SA['two_lambs_mutual'], 'block_each_other'),
+ ('Menachot 4:2 — bulls, rams, lambs do not block each other', SA['kinds_independent'], 'do_not_block_each_other'),
+ ('Sifra Emor Chapter 13 6 — two sets: for the bread, not for the day', SA['two_sets'], 'for_the_bread_not_for_the_day'),
+ ('Lev 23:12 — the omer\'s lamb: a burnt offering (CALLED offerings)', OM['lamb_olah'], 'wholly_to_fires'),
+ ('Sifra Emor Chapter 13 3 — the omer is Lev 2:14\'s offering (CALLED minchah)', OM['grain_source'], 'new_and_from_the_land'),
+ ('Lev 23:5 — the LORD\'s Passover: eaten at night until midnight (CALLED pesach)', PSV['eating_time'], 'night only, until midnight'),
+ ('Lev 23:6 — the feast of unleavened bread: Exod 12\'s window (CALLED pesach)', PSV['matzot_window'], '14th evening to 21st evening'),
+ ('Exod 23:16, 23:19 — the first fruits, one institution at two seats (CALLED calendar)', TL['first_fruits_link'], 'bring to the house (seven kinds — fetched list)'),
+ ('Exod 23:14-17 — the harvest feast is an appearing (CALLED calendar)', TL['pilgrimage'], 'owes the three appearings'),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------
 print()
 ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0}
+frac = {I: 0, M: 0, A: 0, D: 0, P: 0}
+assert len(TESTS) == GUARDED, (len(TESTS), GUARDED)
 for name, c, want in TESTS:
     hit = c['v'] == want
     ok += hit
@@ -365,9 +482,9 @@ n = len(TESTS)
 print()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
 print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · '
-      'answer-sheet %d/%d · data %d/%d' % (
+      'answer-sheet %d/%d · data %d/%d · imports %d/%d' % (
       frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n,
-      frac[A], n, frac[D], n))
+      frac[A], n, frac[D], n, frac[P], n))
 print('computed, not graded: the count runs %d days and sanctifies the '
       '%dth (INK arithmetic); the fast begins on the ninth in the evening '
       '(INK); the eighth day is an assembly (INK)' % (OM['count_length']['v'], 50))

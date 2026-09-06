@@ -235,6 +235,11 @@ m.step("Lev.23.18")
 # vehikravtem_al_halechem — read, not installed
 m.witness_read("vehikravtem_al_halechem", "two_sets_and_the_waving_geometry",
                 cites=["Sifra, Emor, Chapter 13 4", "Sifra, Emor, Chapter 13 5", "Sifra, Emor, Chapter 13 6", "Sifra, Emor, Chapter 13 7", "Sifra, Emor, Chapter 13 8", "Sifra, Emor, Chapter 13 9", "Sifra, Emor, Chapter 13 10", "Onkelos Lev 23:18", "Onkelos Lev 23:20"])
+# witness-tier presupposed read: animals_compiled_by_live_call on
+# shavuots_two_lambs_are_the_communal_peace_offering_read_off_for_the_priest
+# — read, not installed
+m.witness_read("shavuots_two_lambs_are_the_communal_peace_offering_read_off_for_the_priest", "animals_compiled_by_live_call",
+                cites=["Sifra, Emor, Chapter 13 4", "Sifra, Emor, Chapter 13 6", "Sifra, Emor, Chapter 13 7", "Sifra, Emor, Chapter 13 8", "Sifra, Emor, Chapter 13 3", "Mishnah Zevachim 5:5", "Mishnah Menachot 4:2", "Mishnah Menachot 4:3", "Mishnah Menachot 5:6", "Mishnah Menachot 3:6"])
 
 # -------------------------- Lev.23.19 · ETNACHTA_SPLIT ---------------------
 # ‹ועשיתם שעיר עזים› (“and-make shaggy she-goat”)
@@ -301,7 +306,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('asher_tikreu_otam', 'the_calendar_is_the_courts_utterance'), ('sheshet_yamim_shabbat', 'sabbath_beside_the_festivals'), ('eleh_moadei_hashem', 'the_month_and_the_asymmetry'), ('bein_haarbayim_pesach', 'evenings_and_the_optional_seven'), ('vehikravtem_isheh_shivat_yamim', 'the_fallback_ladder'), ('uktzartem_et_ketzirah', 'the_omers_field'), ('mimachorat_hashabbat', 'the_morrow_by_four_routes_and_onkelos'), ('keves_tamim_uminchato', 'the_omers_lamb_and_its_doubled_flour'), ('velechem_vekali_vecharmel', 'the_new_grains_clock'), ('usfartem_lachem', 'the_counts_three_clocks'), ('lechem_tenufah_shtayim', 'the_two_loaves_spec'), ('vehikravtem_al_halechem', 'two_sets_and_the_waving_geometry'), ('uvekutzrechem_lo_techaleh', 'why_peah_among_the_festivals')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('asher_tikreu_otam', 'the_calendar_is_the_courts_utterance'), ('sheshet_yamim_shabbat', 'sabbath_beside_the_festivals'), ('eleh_moadei_hashem', 'the_month_and_the_asymmetry'), ('bein_haarbayim_pesach', 'evenings_and_the_optional_seven'), ('vehikravtem_isheh_shivat_yamim', 'the_fallback_ladder'), ('uktzartem_et_ketzirah', 'the_omers_field'), ('mimachorat_hashabbat', 'the_morrow_by_four_routes_and_onkelos'), ('keves_tamim_uminchato', 'the_omers_lamb_and_its_doubled_flour'), ('velechem_vekali_vecharmel', 'the_new_grains_clock'), ('usfartem_lachem', 'the_counts_three_clocks'), ('lechem_tenufah_shtayim', 'the_two_loaves_spec'), ('vehikravtem_al_halechem', 'two_sets_and_the_waving_geometry'), ('shavuots_two_lambs_are_the_communal_peace_offering_read_off_for_the_priest', 'animals_compiled_by_live_call'), ('uvekutzrechem_lo_techaleh', 'why_peah_among_the_festivals')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Emor, Section 9 1', 'Sifra, Emor, Section 9 2', 'Sifra, Emor, Section 9 3', 'Sifra, Emor, Section 9 4', 'Sifra, Emor, Section 9 5', 'Sifra, Emor, Section 9 6', 'Onkelos Lev 23:2']
     assert all('the_calendar_is_the_courts_utterance' not in f for f in m.WORLD["facts"])
     assert 'asher_tikreu_otam' not in m.WORLD["witnessed"]
@@ -338,7 +343,10 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[11]["cites"] == ['Sifra, Emor, Chapter 13 4', 'Sifra, Emor, Chapter 13 5', 'Sifra, Emor, Chapter 13 6', 'Sifra, Emor, Chapter 13 7', 'Sifra, Emor, Chapter 13 8', 'Sifra, Emor, Chapter 13 9', 'Sifra, Emor, Chapter 13 10', 'Onkelos Lev 23:18', 'Onkelos Lev 23:20']
     assert all('two_sets_and_the_waving_geometry' not in f for f in m.WORLD["facts"])
     assert 'vehikravtem_al_halechem' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[12]["cites"] == ['Sifra, Emor, Chapter 13 11', 'Onkelos Lev 23:22']
+    assert m.WITNESS_READS[12]["cites"] == ['Sifra, Emor, Chapter 13 4', 'Sifra, Emor, Chapter 13 6', 'Sifra, Emor, Chapter 13 7', 'Sifra, Emor, Chapter 13 8', 'Sifra, Emor, Chapter 13 3', 'Mishnah Zevachim 5:5', 'Mishnah Menachot 4:2', 'Mishnah Menachot 4:3', 'Mishnah Menachot 5:6', 'Mishnah Menachot 3:6']
+    assert all('animals_compiled_by_live_call' not in f for f in m.WORLD["facts"])
+    assert 'shavuots_two_lambs_are_the_communal_peace_offering_read_off_for_the_priest' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[13]["cites"] == ['Sifra, Emor, Chapter 13 11', 'Onkelos Lev 23:22']
     assert all('why_peah_among_the_festivals' not in f for f in m.WORLD["facts"])
     assert 'uvekutzrechem_lo_techaleh' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -116,6 +116,47 @@ Lev 24:10-23 (lev24) · Lev 25 + 27 valuations (yovel) · Lev 26
       gen_71/72 inheritance and the firstborn's double (48-49 — Bava
       Batra 8, round 34) — THE FAMILY CODE.
 
+## THE DEPENDENCY DEBT (2026-09-06 — the owner: "fix all of the overlooked
+## sections, then make sure we code properly going forward")
+The dependency audit (REPORT_DEPENDENCIES.md) found four sub-spans
+uncompiled behind check marks and the ink's cross-references left as
+notes or silence. Repaired the same day, every item by the rhythm
+(the ledger logic/oral_triage/dependency_debt_docket_2026-09-06.md first):
+- [x] D1  Lev 3:3-17 — THE FAT INVENTORY per species, into
+      cold_run_offerings.py (57/57; the tail token at 3:9 and 7:3 only)
+- [x] D2  Lev 7:1-7 + 6:7-11 — THE GUILT OFFERING'S LAW and THE MEAL
+      OFFERING'S LAW, into cold_run_tzav.py (53/53; the offerings and
+      meal-offering engines called — tzav imported nothing before)
+- [x] D3  Lev 14:1-32 — THE LEPER'S CLEANSING, cold_run_metzora.py
+      (77/77 first run; Negaim 14 whole; five engines called)
+- [x] D4  Lev 23:18-19 — SHAVUOT'S ANIMALS, into cold_run_moadim.py
+      (41/41; the Passover, offerings, meal-offering, calendar engines called)
+- [x] D5  THE SIX POINTERS wired live: Exod 23:15 -> pesach; Lev 4:10/26/31/35
+      -> the fat inventory; 5:10 -> the bird; 5:13 -> the remainder;
+      10:15 -> the breast and thigh; 14:13 -> the guilt offering's law
+- [x] D6  THE FOUR TWICE-COMPILED INSTITUTIONS unified as one function at
+      two seats: the seventh year (calendar -> yovel), the first fruits
+      (moadim -> calendar), the omer (moadim -> minchah), the fast (yoma -> moadim)
+- [x] D7  THE GATE: World/step9/dependency_census.py + dependency_dispositions.yaml,
+      run first by run_cold_all.py — every runner's span declared, every
+      required edge and pointer dispositioned, every CALL verified live
+- [ ] D8  lev_09_eighth_day as the RUN of Lev 1-4's spec (9:16 "as
+      prescribed" cites Lev 1) — the demonstrate-by-run form inside one
+      book (the E2/E3 shape); recommended 2026-09-06 as ONE SHORT SITTING
+      AFTER L5, before E1 (the owner: "this is your call")
+- [x] D9-a THE CONSENSUS PIECES (2026-09-06, the two-thread design
+      discussion; ruled "your call"): the ungated carries: field on edges,
+      the --debt worklist listing, the generated DEPENDENCY_INDEX.md —
+      built the same day; LATE binding reserved per proven cycle, unbuilt
+- [ ] D9  THE DAEMON-EDGE GATE — part of the daemon campaign's spec when
+      the owner orders it (outside the compile debt): each world_engine
+      wrap's TRIGGER EVENTS and EMITTED EFFECTS censused and dispositioned
+      as these edges are; the effects registry (117) is the emitted half,
+      the trigger-event vocabulary the unbuilt half (54 of 59 functions
+      unwrapped per the other thread's count — a campaign, not plumbing)
+The COMPILED list above gains: Lev 14:1-32 (metzora); and inside the
+Lev 1-8 engine, 3:3-17, 6:7-11, 7:1-7; inside Lev 23, 23:18-19.
+
 Estimate: twelve sittings (five, five, two), each the full rhythm —
 the docket by topic (links UNION topic rows, enumerated by script),
 the ledger written first, the cold function with the guard from birth,

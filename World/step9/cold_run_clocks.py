@@ -191,6 +191,8 @@ with contextlib.redirect_stdout(_buf):
     import cold_run_chatat as CH
     import cold_run_vayikra5 as V5
     import cold_run_minchah as MIN
+    import cold_run_offerings as OFF
+LAMB_OLAH = OFF.dispatch('olah:flock')['disposition']['v']   # 12:6's lamb — Lev 1:10's flock burnt offering (2026-09-06)
 PARTNER_OFFERING = CH.domain({'intent': 'unwitting', 'karet_when_intentional': True})['v']
 PARTNER_DOUBT = CH.domain({'intent': 'unknown'})['v']
 HEIR_CHATAT = CH.ownership('dead_father')['v']
@@ -259,7 +261,9 @@ def yoledet(q, sex='male', means='reaches_lamb', **k):
     if q == 'offering':
         if means == 'reaches_lamb':
             return cell('lamb_olah_and_bird_chatat', I, '12:6 "a lamb of its first year for a burnt offering and a '
-                        'pigeon or a turtledove for a sin offering"', ['accepted'])
+                        'pigeon or a turtledove for a sin offering" — the lamb is Lev 1:10\'s flock burnt offering: '
+                        'CALLED cold_run_offerings.dispatch(olah:flock) disposition -> %r [IMPORT, live call]'
+                        % LAMB_OLAH, ['accepted'])
         return cell('two_birds_one_olah_one_chatat', I, '12:8 "if her hand finds not enough for a lamb: two '
                     'turtledoves or two young pigeons, one for a burnt offering and one for a sin offering" — the '
                     'measure of "enough" is the data channel', ['accepted'])
@@ -279,9 +283,9 @@ def yoledet(q, sex='male', means='reaches_lamb', **k):
                     'withholds her, not two — the sin offering, "wherever atonement is written it is by the sin '
                     'offering"', ['atoned_forgiven'])
     if q == 'order':
-        return cell('olah_written_first_chatat_offered_first', P, '12:8 writes the burnt offering first [INK]; the '
-                    'sin offering is offered FIRST — CALLED cold_run_vayikra5 -> %r (Lev 5:8\'s "first"; ' % BIRD_ORDER
-                    + ST + 'Chapter 4 3 the order swap)', ['accepted'])
+        return cell('olah_written_first_chatat_offered_first', P, ('12:8 writes the burnt offering first [INK]; the '
+                    'sin offering is offered FIRST — CALLED cold_run_vayikra5 -> %r (Lev 5:8\'s "first"; '
+                    + ST + 'Chapter 4 3 the order swap)') % BIRD_ORDER, ['accepted'])
     if q == 'kind_matching':
         return cell('second_follows_first_kind_ben_Azzai_first_brought', M, ST + 'Chapter 4 3 — the second bird '
                     'follows the first\'s kind; ben Azzai: follow the first brought (Mishnah Kinnim 2:5: no '
@@ -376,9 +380,9 @@ def zav(q, sightings=1, **k):
                     + SZ + 'Chapter 5 4-5: self-examination jurisdiction; the checked-days dispute (R. Eliezer / R. '
                     'Yehoshua / R. Akiva) and the law follows R. Eliezer (Mishnah Niddah 10:3)', ['counts_seven_clean'])
     if q == 'water':
-        return cell('living_water', I, '15:13 "bathe his flesh in LIVING water" — written at 15:%s alone: the '
-                    'menstruant and the zavah have no such clause (' % c_living + SZ + 'Chapter 5 8-9: the leper '
-                    'does not either; each body its own water)', ['immersed'])
+        return cell('living_water', I, ('15:13 "bathe his flesh in LIVING water" — written at 15:%s alone: the '
+                    'menstruant and the zavah have no such clause (' + SZ + 'Chapter 5 8-9: the leper '
+                    'does not either; each body its own water)') % c_living, ['immersed'])
     if q == 'vessels_water':
         return cell('any_water', M, SZ + 'Chapter 5 10 — his vessels rise in any waters', ['immersed'])
     if q == 'interposition':
@@ -457,10 +461,10 @@ def touch(source, medium, act='touch', during_contact=True, **k):
                     'Chapter 3 8: spittle needs touch; phlegm, mucus, spume included)',
                     ['washes_and_bathes', 'impure_until_evening'])
     if source == 'zav' and medium == 'saddle' and act == 'touch':
-        return cell('until_evening_no_garment_washing', I, '15:10 "whoever touches anything UNDER him is impure until '
+        return cell('until_evening_no_garment_washing', I, ('15:10 "whoever touches anything UNDER him is impure until '
                     'evening" — the FIRST clause of 15:10 writes no garment-washing (%d until-evening, the washing '
-                    'only in the carry clause); ' % c_10[0] + SZ + 'Chapter 4 1-2: under the ZAV; the saddle\'s '
-                    'touch does not defile garments', ['impure_until_evening'])
+                    'only in the carry clause); ' + SZ + 'Chapter 4 1-2: under the ZAV; the saddle\'s '
+                    'touch does not defile garments') % c_10[0], ['impure_until_evening'])
     if source == 'zav' and medium == 'saddle' and act == 'carry':
         return cell('washes_garments_bathes_until_evening', I, '15:10 "and the one CARRYING them washes his garments, '
                     'bathes, and is impure until evening" — the second clause: THE INVERTED PAIR, touch weak, carry '
@@ -678,8 +682,8 @@ def zavah(q, **k):
         return cell('seven_after_the_flow_stops', I, '15:28 "if she is clean of her flow she shall COUNT seven days, '
                     'and after she shall be clean" — "count" at 15:%s (his and hers)' % (c_count,), ['counts_seven_clean'])
     if q == 'water':
-        return cell('no_living_water_written', I, 'no water clause at 15:28 — "living water" stands at 15:%s alone '
-                    '(' % c_living + SZ + 'Chapter 5 8-9)', ['immersed'])
+        return cell('no_living_water_written', I, ('no water clause at 15:28 — "living water" stands at 15:%s alone '
+                    '(' + SZ + 'Chapter 5 8-9)') % c_living, ['immersed'])
     if q == 'pair':
         return cell('two_birds_one_chatat_one_olah_eighth_day', I, '15:29-30 "on the eighth day she takes two '
                     'turtledoves or two young pigeons... one a sin offering and one a burnt offering" — the third '
@@ -698,13 +702,13 @@ def zavah(q, **k):
                     ['consecrated'])
     if q == 'twenty_five':
         v = DAYS_FEW + 7 + DAYS_FEW + 14
-        return cell(v, M, SZ + 'Section 5 3 — hard labor %d days without flux status: two (fit days) + seven '
+        return cell(v, M, (SZ + 'Section 5 3 — hard labor %d days without flux status: two (fit days) + seven '
                     '(separation, 15:19) + two + fourteen (the labor\'s two weeks, Section 5 2) — computed; '
-                    'twenty-six impossible' % v, [FX.NONE])
+                    'twenty-six impossible') % v, [FX.NONE])
     if q == 'hundred':
         v = DAYS_FEW + 7 + DAYS_FEW + TOTAL['female'] + 7 + DAYS_FEW
-        return cell(v, M, SZ + 'Section 5 4 — seeing %d days without flux status: two + seven + two + EIGHTY (the '
-                    'female\'s total, 12:5\'s sums) + seven + two — computed' % v, [FX.NONE])
+        return cell(v, M, (SZ + 'Section 5 4 — seeing %d days without flux status: two + seven + two + EIGHTY (the '
+                    'female\'s total, 12:5\'s sums) + seven + two — computed') % v, [FX.NONE])
     if q == 'adornment':
         return cell('R._Akiva_she_may_adorn', M, SZ + 'Chapter 9 12 — the first elders forbade until immersion; R. '
                     'Akiva came and taught: the matter leads to hatred — she may adorn (the law revised on '

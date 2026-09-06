@@ -16,10 +16,24 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chp(_P, 'CASES', 2)
-assert GUARDED == 14, ('the guard counted %d expectations, the tripwire holds 14' % GUARDED)
+assert GUARDED == 16, ('the guard counted %d expectations, the tripwire holds 16' % GUARDED)
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys
 import effects_layer as FX
+# the callees (cold) — the dependency-debt sitting (2026-09-06): 23:15's "as I
+# commanded you" points to Exod 12-13's matzah law, and 23:10-11's release is
+# Lev 25:1-7's — one institution compiled twice with no call between them
+# until now. The calendar runner imported nothing.
+import io as _io, contextlib as _ctx
+with _ctx.redirect_stdout(_io.StringIO()):
+    import cold_run_pesach as PS
+    import cold_run_yovel as YV
+MATZAH = PS.leaven_machine({'ask': 'window_bounds'}, PS.DATA)[0]
+PURGE = PS.leaven_machine({'ask': 'purge_deadline'}, PS.DATA)[0]
+YOVEL_SAB = YV.sabbatical()
+print('routing receipts: cold_run_pesach CALLED — leaven_machine(window_bounds) -> %r, (purge_deadline) -> %r; '
+      'cold_run_yovel CALLED — sabbatical()[torah_labors] -> %r [IMPORT, live calls]'
+      % (MATZAH, PURGE, YOVEL_SAB['torah_labors']['v']))
 
 db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
 
@@ -80,6 +94,30 @@ def sabbatical(case, data):
              'lie" split — rest from hoeing, rest from clearing '
              'stones: the worked-land verbs enter the ban')
         return out('hoeing barred in the seventh', ['barred_from_it'])
+    if case['ask'] == 'home_engine':
+        move('cold_run_yovel.sabbatical() [IMPORT, live call]', 'Lev 25:1-7 '
+             'is the same release written in full — %d labor verbs (sow, '
+             'prune, reap, gather), the aftergrowth, the eaters: one '
+             'institution at two seats, ONE function called from both'
+             % YOVEL_SAB['torah_labors']['v'])
+        return out('the same release: Lev 25 holds %d labor verbs (CALLED yovel)'
+                   % YOVEL_SAB['torah_labors']['v'], ['land_release'])
+    return out('no verdict in span', [FX.NONE])
+
+
+# ===== F1b: THE MATZAH POINTER (23:15) — added 2026-09-06 =============
+def matzah(case, data):
+    del P[:]
+    ink('Exod 23:15', '"the feast of unleavened bread you shall keep: SEVEN '
+        'DAYS you shall eat unleavened bread AS I COMMANDED YOU (כאשר '
+        'צויתך), at the appointed time of the month of Aviv" — the ink\'s '
+        'own pointer to the command already written')
+    if case['ask'] == 'as_commanded':
+        move('cold_run_pesach.leaven_machine [IMPORT, live call]', 'the '
+             'command pointed to — Exod 12:15-20, 13:6-7: window -> %r, '
+             'purge -> %r' % (MATZAH, PURGE))
+        return out('seven days of unleavened bread = %s (CALLED pesach)' % MATZAH,
+                   ['purge_deadline'])
     return out('no verdict in span', [FX.NONE])
 
 
@@ -227,6 +265,13 @@ CASES = [
      lambda: kid_in_milk({'ask': 'eat'}, DATA), 'barred'),
     ('Mishnah Chullin 8:4 — benefit barred',
      lambda: kid_in_milk({'ask': 'benefit'}, DATA), 'barred'),
+    # ---- the pointers, live (2026-09-06) ----
+    ('Exod 23:15 "as I commanded you" — the matzah window by call into the Passover engine',
+     lambda: matzah({'ask': 'as_commanded'}, DATA),
+     'seven days of unleavened bread = 14th evening to 21st evening (CALLED pesach)'),
+    ('Lev 25:1-7 is the same release — one function at two seats (by call into the jubilee engine)',
+     lambda: sabbatical({'ask': 'home_engine'}, DATA),
+     'the same release: Lev 25 holds 4 labor verbs (CALLED yovel)'),
 ]
 
 ok = 0

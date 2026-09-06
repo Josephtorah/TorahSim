@@ -95,6 +95,11 @@ m.step("Lev.7.7")
 # not installed
 m.witness_read("hide_distribution", "follows_flesh",
                 cites=["Sifra, Tzav, Chapter 9 1", "Sifra, Tzav, Chapter 9 2", "Sifra, Tzav, Chapter 9 4", "Sifra, Tzav, Chapter 9 5"])
+# witness-tier presupposed read: procedure_by_live_call on
+# the_guilt_offerings_law_compiled_one_law_the_rams_list_is_the_lambs —
+# read, not installed
+m.witness_read("the_guilt_offerings_law_compiled_one_law_the_rams_list_is_the_lambs", "procedure_by_live_call",
+                cites=["Sifra, Tzav, Section 5 1", "Sifra, Tzav, Section 5 2", "Sifra, Tzav, Section 5 8", "Sifra, Tzav, Chapter 9 1", "Sifra, Tzav, Section 2 4", "Sifra, Tzav, Chapter 3 3", "Sifra, Tzav, Chapter 3 6", "Mishnah Zevachim 5:5", "Mishnah Zevachim 8:11", "Mishnah Zevachim 10:2", "Mishnah Zevachim 10:5", "Mishnah Menachot 6:1", "Mishnah Tamid 4:3"])
 
 # -------------------------- Lev.7.8 · ETNACHTA_SPLIT -----------------------
 # ‹והכהן המקריב את› (“and-the-priest the-bring-near obj-marker”)
@@ -144,7 +149,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('asham_law', 'blood_below'), ('slaughterers', 'open_class'), ('asham_intent', 'word_position'), ('blemish_ladder', 'born_blemished'), ('hide_distribution', 'follows_flesh'), ('dues_apportionment', 'no_trades')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('asham_law', 'blood_below'), ('slaughterers', 'open_class'), ('asham_intent', 'word_position'), ('blemish_ladder', 'born_blemished'), ('hide_distribution', 'follows_flesh'), ('the_guilt_offerings_law_compiled_one_law_the_rams_list_is_the_lambs', 'procedure_by_live_call'), ('dues_apportionment', 'no_trades')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Tzav, Section 5 1', 'Sifra, Tzav, Section 5 2']
     assert all('blood_below' not in f for f in m.WORLD["facts"])
     assert 'asham_law' not in m.WORLD["witnessed"]
@@ -160,7 +165,10 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[4]["cites"] == ['Sifra, Tzav, Chapter 9 1', 'Sifra, Tzav, Chapter 9 2', 'Sifra, Tzav, Chapter 9 4', 'Sifra, Tzav, Chapter 9 5']
     assert all('follows_flesh' not in f for f in m.WORLD["facts"])
     assert 'hide_distribution' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Tzav, Chapter 10 1', 'Sifra, Tzav, Chapter 10 2', 'Sifra, Tzav, Chapter 10 3', 'Sifra, Tzav, Chapter 10 8', 'Sifra, Tzav, Chapter 10 9', 'Onkelos Lev 7:10']
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Tzav, Section 5 1', 'Sifra, Tzav, Section 5 2', 'Sifra, Tzav, Section 5 8', 'Sifra, Tzav, Chapter 9 1', 'Sifra, Tzav, Section 2 4', 'Sifra, Tzav, Chapter 3 3', 'Sifra, Tzav, Chapter 3 6', 'Mishnah Zevachim 5:5', 'Mishnah Zevachim 8:11', 'Mishnah Zevachim 10:2', 'Mishnah Zevachim 10:5', 'Mishnah Menachot 6:1', 'Mishnah Tamid 4:3']
+    assert all('procedure_by_live_call' not in f for f in m.WORLD["facts"])
+    assert 'the_guilt_offerings_law_compiled_one_law_the_rams_list_is_the_lambs' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Tzav, Chapter 10 1', 'Sifra, Tzav, Chapter 10 2', 'Sifra, Tzav, Chapter 10 3', 'Sifra, Tzav, Chapter 10 8', 'Sifra, Tzav, Chapter 10 9', 'Onkelos Lev 7:10']
     assert all('no_trades' not in f for f in m.WORLD["facts"])
     assert 'dues_apportionment' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

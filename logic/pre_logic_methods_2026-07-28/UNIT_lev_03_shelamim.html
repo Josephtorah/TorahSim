@@ -133,6 +133,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(fat_tail, pesach_converts_at_boundary) — fat-tail spec; pesach type-conversion at its time boundary</span><br><span class="gloss">= WITNESS-READ(fat-tail, pesach-converts-at-boundary) — fat-tail spec; pesach type-conversion at its time boundary</span><br>THE FAT-TAIL AND THE CONVERSION RULE [claim LV03-06]. The tail removed WHOLE, opposite the kidneys, not with the spine; sheep wall-fat stays. &#x27;If a LAMB&#x27; includes the pesach for the fat-tail — and A PESACH PAST ITS TIME IS OFFERED AS SHELAMIM: the object CHANGES CLASS at its window&#x27;s close, the chapter&#x27;s clearest state- machine rule.
 </td><td>—</td><td class='cite'>Sifra, Vayikra Dibbura DeNedavah, Chapter 19 3, Sifra, Vayikra Dibbura DeNedavah, Chapter 18 4, Sifra, Vayikra Dibbura DeNedavah, Chapter 19 4</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_fat_inventory_per_species_the_tail_at_two_seats, the_goats_own_paragraph_has_none)</span><br><span class="gloss">= WITNESS-READ(the-fat-inventory-per-species-the-tail-at-two-seats, the-goats-own-paragraph-has-none)</span><br>THE FAT INVENTORY PER SPECIES — THE TAIL AT TWO SEATS [claim LV03-11]. The peace offering&#x27;s fat verses (3:3-17) had been the target of four pointers from Lev 4 and one from the guilt offering&#x27;s law and were cited by no cell in any runner. Compiled now into the offerings dispatcher (57 of 57): the parts are read token by token from each species&#x27; own verses — the covering fat, all the fat on the entrails (the noun doubled), the two kidneys with their fat on the loins, the lobe on the liver — and the fat- tail token stands at exactly two seats of Leviticus 1-8, the lamb&#x27;s verse (3:9, &#x27;the whole fat tail close by the backbone&#x27;) and the guilt offering&#x27;s ram (7:3); the goat&#x27;s paragraph (3:12-15) has none, the break itself carrying the exemption (Nedavah Chapter 20 1), and the ox&#x27;s (3:3-4) has none. The three smoke verbs are three constraints (Section 14 10); &#x27;all fat is the LORD&#x27;s&#x27; (3:16) is why sacrilege, piggul, leftover, and impurity ride the fat and not the blood (Mishnah Chullin 8:6&#x27;s own reason: because the fat is offered); the ban of 3:17 runs &#x27;in all your dwellings&#x27; (Chapter 20 6) with the karet of 7:25 and the lashes of Makkot 3:2, its species the offerable three of 7:23, the blood&#x27;s scope wider by 7:26&#x27;s fowl and 17:13&#x27;s wild animal. Mishnah Tamid 4:3 carries the lamb&#x27;s tail, lobe, and two kidneys in one hand — the inventory the sheet lists is the inventory the ink names. Filed and auto-seated under the auto-seat rider (the dependency-debt sitting, 2026-09-06 — the owner: &#x27;fix all of the overlooked sections, then make sure we code properly going forward&#x27;; the four uncompiled sub-spans compiled, every ink pointer wired as a live call, the dependency census installed as a gate before every cold sweep, 23 of 23 runners green at 1444 cells).
+</td><td>—</td><td class='cite'>Sifra, Vayikra Dibbura DeNedavah, Section 14 3, Sifra, Vayikra Dibbura DeNedavah, Section 14 6, Sifra, Vayikra Dibbura DeNedavah, Section 14 7, Sifra, Vayikra Dibbura DeNedavah, Section 14 8, Sifra, Vayikra Dibbura DeNedavah, Section 14 10, Sifra, Vayikra Dibbura DeNedavah, Chapter 19 3, Sifra, Vayikra Dibbura DeNedavah, Chapter 20 1, Sifra, Vayikra Dibbura DeNedavah, Chapter 20 6, Mishnah Tamid 4:3, Mishnah Chullin 8:6, Mishnah Makkot 3:2, Mishnah Keritot 1:1</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
 </div>
@@ -1080,11 +1082,14 @@ from machine import Machine
 
 m = Machine(&quot;lev_03_shelamim&quot;)
 
-# -------------------------- Lev.3.1 · COND_ואם -----------------------------
-# ואם זבח שלמים קרבנו … אם מן הבקר הוא מקריב אם זכר אם נקבה תמים יקריבנו
-# לפני יהוה
-# &quot;[EN-AID] From top split: LEFT «ואם זבח שלמים קרבנו» / RIGHT «אם מן הבקר
-# הוא מקריב אם זכר אם נקבה תמים יקריבנו לפני יהוה». Derive claim from Hebrew
+# -------------------------- Lev.3.1 · COND_ואם (“and-if”) ------------------
+# ‹ואם זבח שלמים› (“and-if sacrifice requital”)
+# ‹קרבנו … אם מן› (“offering-him/its … if from”)
+# ‹הבקר הוא מקריב› (“the-herd he/it bring-near”)
+# ‹אם זכר אם› (“if male if”)
+# ‹נקבה תמים יקריבנו› (“female entire bring-near-him/its”)
+# ‹לפני יהוה› (“to-face YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 3:1.&quot;
 m.step(&quot;Lev.3.1&quot;)
 # witness-tier presupposed read: three_way_distribution on
@@ -1093,11 +1098,14 @@ m.witness_read(&quot;shelamim_signature&quot;, &quot;three_way_distribution&quot
                 cites=[&quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 16 2&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 16 3&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 16 4&quot;, &quot;Onkelos Lev 3:1&quot;])
 
 # -------------------------- Lev.3.2 · ETNACHTA_SPLIT -----------------------
-# וסמך ידו על ראש קרבנו ושחטו פתח אהל מועד … וזרקו בני אהרן הכהנים את הדם על
-# המזבח סביב
-# &quot;[EN-AID] From top split: LEFT «וסמך ידו על ראש קרבנו ושחטו פתח אהל מועד»
-# / RIGHT «וזרקו בני אהרן הכהנים את הדם על המזבח סביב». Derive claim from
-# Hebrew arms. Lev 3:2.&quot;
+# ‹וסמך ידו על› (“and-lay hand-him/its over”)
+# ‹ראש קרבנו ושחטו› (“head offering-him/its and-slaughter-him/its”)
+# ‹פתח אהל מועד› (“opening tent seasons”)
+# ‹… וזרקו בני אהרן› (“and-sprinkle son Aaron”)
+# ‹הכהנים את הדם› (“the-priest obj-marker the-blood”)
+# ‹על המזבח סביב› (“over the-altar circle”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 3:2.&quot;
 m.step(&quot;Lev.3.2&quot;)
 # witness-tier presupposed read: partners_in_turn_heir_out on
 # shared_semichah — read, not installed
@@ -1113,10 +1121,13 @@ m.witness_read(&quot;petach_lifnei_triple&quot;, &quot;anywhere_courtyard&quot;,
                 cites=[&quot;Zevachim 55b:1&quot;, &quot;Zevachim 55b:2&quot;, &quot;Zevachim 55b:3&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 17 11&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 17 12&quot;])
 
 # -------------------------- Lev.3.3 · ETNACHTA_SPLIT -----------------------
-# והקריב מזבח השלמים אשה ליהוה … את החלב המכסה את הקרב ואת כל החלב אשר על
-# הקרב
-# &quot;[EN-AID] From top split: LEFT «והקריב מזבח השלמים אשה ליהוה» / RIGHT «את
-# החלב המכסה את הקרב ואת כל החלב אשר על הקרב». Derive claim from Hebrew
+# ‹והקריב מזבח השלמים› (“and-bring-near from-sacrifice the-requital”)
+# ‹אשה ליהוה … את› (“fire-offering to-YHWH … obj-marker”)
+# ‹החלב המכסה את› (“the-fat the-plump obj-marker”)
+# ‹הקרב ואת כל› (“the-nearest-part and-obj-marker all”)
+# ‹החלב אשר על› (“the-fat which over”)
+# ‹הקרב› (“the-nearest-part”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 3:3.&quot;
 m.step(&quot;Lev.3.3&quot;)
 # witness-tier presupposed read: six_fields on intent_vector — read, not
@@ -1125,11 +1136,14 @@ m.witness_read(&quot;intent_vector&quot;, &quot;six_fields&quot;,
                 cites=[&quot;Sifra, Vayikra Dibbura DeNedavah, Section 14 2&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 14 1&quot;])
 
 # -------------------------- Lev.3.4 · ETNACHTA_SPLIT -----------------------
-# ואת שתי הכלית ואת החלב אשר עלהן אשר על הכסלים … ואת היתרת על הכבד על
-# הכליות יסירנה
-# &quot;[EN-AID] From top split: LEFT «ואת שתי הכלית ואת החלב אשר עלהן אשר על
-# הכסלים» / RIGHT «ואת היתרת על הכבד על הכליות יסירנה». Derive claim from
-# Hebrew arms. Lev 3:4.&quot;
+# ‹ואת שתי הכלית› (“and-obj-marker two the-kidney”)
+# ‹ואת החלב אשר› (“and-obj-marker the-fat which”)
+# ‹עלהן אשר על› (“over-them/their which over”)
+# ‹הכסלים … ואת היתרת› (“the-fatness … and-obj-marker the-lobe”)
+# ‹על הכבד על› (“over the-liver over”)
+# ‹הכליות יסירנה› (“the-kidney turn-aside-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 3:4.&quot;
 m.step(&quot;Lev.3.4&quot;)
 # witness-tier presupposed read: two_kidneys_lobe_settled on anatomy_table —
 # read, not installed
@@ -1137,67 +1151,94 @@ m.witness_read(&quot;anatomy_table&quot;, &quot;two_kidneys_lobe_settled&quot;,
                 cites=[&quot;Sifra, Vayikra Dibbura DeNedavah, Section 14 7&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 14 8&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 14 6&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 14 9&quot;])
 
 # -------------------------- Lev.3.5 · ETNACHTA_SPLIT -----------------------
-# והקטירו אתו בני אהרן המזבחה על העלה אשר על העצים אשר על האש … אשה ריח ניחח
-# ליהוה
-# &quot;[EN-AID] From top split: LEFT «והקטירו אתו בני אהרן המזבחה על העלה אשר על
-# העצים אשר על האש» / RIGHT «אשה ריח ניחח ליהוה». Derive claim from Hebrew
+# ‹והקטירו אתו בני› (“and-smoke obj-marker-him/its son”)
+# ‹אהרן המזבחה על› (“Aaron the-altar-ward over”)
+# ‹העלה אשר על› (“the-burnt-offering which over”)
+# ‹העצים אשר על› (“the-tree which over”)
+# ‹האש … אשה ריח› (“the-fire … fire-offering odor”)
+# ‹ניחח ליהוה› (“restful to-YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 3:5.&quot;
 m.step(&quot;Lev.3.5&quot;)
 
-# -------------------------- Lev.3.6 · COND_ואם -----------------------------
-# ואם מן הצאן קרבנו לזבח שלמים ליהוה … זכר או נקבה תמים יקריבנו
-# &quot;[EN-AID] From top split: LEFT «ואם מן הצאן קרבנו לזבח שלמים ליהוה» /
-# RIGHT «זכר או נקבה תמים יקריבנו». Derive claim from Hebrew arms. Lev 3:6.&quot;
+# -------------------------- Lev.3.6 · COND_ואם (“and-if”) ------------------
+# ‹ואם מן הצאן› (“and-if from the-flock”)
+# ‹קרבנו לזבח שלמים› (“offering-him/its to-sacrifice requital”)
+# ‹ליהוה … זכר או› (“to-YHWH … male or”)
+# ‹נקבה תמים יקריבנו› (“female entire bring-near-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 3:6.&quot;
 m.step(&quot;Lev.3.6&quot;)
 
-# -------------------------- Lev.3.7 · COND_אם ------------------------------
-# אם כשב הוא מקריב את קרבנו … והקריב אתו לפני יהוה
-# &quot;[EN-AID] From top split: LEFT «אם כשב הוא מקריב את קרבנו» / RIGHT «והקריב
-# אתו לפני יהוה». Derive claim from Hebrew arms. Lev 3:7.&quot;
+# -------------------------- Lev.3.7 · COND_אם (“if”) -----------------------
+# ‹אם כשב הוא› (“if young-sheep he/it”)
+# ‹מקריב את קרבנו› (“bring-near obj-marker offering-him/its”)
+# ‹… והקריב אתו לפני› (“and-bring-near obj-marker-him/its to-face”)
+# ‹יהוה› (“YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 3:7.&quot;
 m.step(&quot;Lev.3.7&quot;)
 
 # -------------------------- Lev.3.8 · ETNACHTA_SPLIT -----------------------
-# וסמך את ידו על ראש קרבנו ושחט אתו לפני אהל מועד … וזרקו בני אהרן את דמו על
-# המזבח סביב
-# &quot;[EN-AID] From top split: LEFT «וסמך את ידו על ראש קרבנו ושחט אתו לפני אהל
-# מועד» / RIGHT «וזרקו בני אהרן את דמו על המזבח סביב». Derive claim from
-# Hebrew arms. Lev 3:8.&quot;
+# ‹וסמך את ידו› (“and-lay obj-marker hand-him/its”)
+# ‹על ראש קרבנו› (“over head offering-him/its”)
+# ‹ושחט אתו לפני› (“and-slaughter obj-marker-him/its to-face”)
+# ‹אהל מועד … וזרקו› (“tent seasons … and-sprinkle”)
+# ‹בני אהרן את› (“son Aaron obj-marker”)
+# ‹דמו על המזבח› (“blood-him/its over the-altar”)
+# ‹סביב› (“circle”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 3:8.&quot;
 m.step(&quot;Lev.3.8&quot;)
 
 # -------------------------- Lev.3.9 · ETNACHTA_SPLIT -----------------------
-# והקריב מזבח השלמים אשה ליהוה חלבו האליה תמימה לעמת העצה יסיר … ואת החלב
-# המכסה את הקרב ואת כל החלב אשר על הקרב
-# &quot;[EN-AID] From top split: LEFT «והקריב מזבח השלמים אשה ליהוה חלבו האליה
-# תמימה לעמת העצה יסירנה» / RIGHT «ואת החלב המכסה את הקרב ואת כל החלב אשר על
-# הקרב». Derive claim from Hebrew arms. Lev 3:9.&quot;
+# ‹והקריב מזבח השלמים› (“and-bring-near from-sacrifice the-requital”)
+# ‹אשה ליהוה חלבו› (“fire-offering to-YHWH fat-him/its”)
+# ‹האליה תמימה לעמת› (“the-stout-part entire to-conjunction”)
+# ‹העצה יסיר … ואת› (“the-spine turn-aside … and-obj-marker”)
+# ‹החלב המכסה את› (“the-fat the-plump obj-marker”)
+# ‹הקרב ואת כל› (“the-nearest-part and-obj-marker all”)
+# ‹החלב אשר על› (“the-fat which over”)
+# ‹הקרב› (“the-nearest-part”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 3:9.&quot;
 m.step(&quot;Lev.3.9&quot;)
 # witness-tier presupposed read: pesach_converts_at_boundary on fat_tail —
 # read, not installed
 m.witness_read(&quot;fat_tail&quot;, &quot;pesach_converts_at_boundary&quot;,
                 cites=[&quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 19 3&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 18 4&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 19 4&quot;])
+# witness-tier presupposed read: the_goats_own_paragraph_has_none on
+# the_fat_inventory_per_species_the_tail_at_two_seats — read, not installed
+m.witness_read(&quot;the_fat_inventory_per_species_the_tail_at_two_seats&quot;, &quot;the_goats_own_paragraph_has_none&quot;,
+                cites=[&quot;Sifra, Vayikra Dibbura DeNedavah, Section 14 3&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 14 6&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 14 7&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 14 8&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Section 14 10&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 19 3&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 1&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 6&quot;, &quot;Mishnah Tamid 4:3&quot;, &quot;Mishnah Chullin 8:6&quot;, &quot;Mishnah Makkot 3:2&quot;, &quot;Mishnah Keritot 1:1&quot;])
 
 # -------------------------- Lev.3.10 · ETNACHTA_SPLIT ----------------------
-# ואת שתי הכלית ואת החלב אשר עלהן אשר על הכסלים … ואת היתרת על הכבד על הכלית
-# יסירנה
-# &quot;[EN-AID] From top split: LEFT «ואת שתי הכלית ואת החלב אשר עלהן אשר על
-# הכסלים» / RIGHT «ואת היתרת על הכבד על הכלית יסירנה». Derive claim from
-# Hebrew arms. Lev 3:10.&quot;
+# ‹ואת שתי הכלית› (“and-obj-marker two the-kidney”)
+# ‹ואת החלב אשר› (“and-obj-marker the-fat which”)
+# ‹עלהן אשר על› (“over-them/their which over”)
+# ‹הכסלים … ואת היתרת› (“the-fatness … and-obj-marker the-lobe”)
+# ‹על הכבד על› (“over the-liver over”)
+# ‹הכלית יסירנה› (“the-kidney turn-aside-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 3:10.&quot;
 m.step(&quot;Lev.3.10&quot;)
 
 # -------------------------- Lev.3.11 · ETNACHTA_SPLIT ----------------------
-# והקטירו הכהן המזבחה … לחם אשה ליהוה
-# &quot;[EN-AID] From top split: LEFT «והקטירו הכהן המזבחה» / RIGHT «לחם אשה
-# ליהוה». Derive claim from Hebrew arms. Lev 3:11.&quot;
+# ‹והקטירו הכהן המזבחה› (“and-smoke-him/its the-priest the-altar-ward”)
+# ‹… לחם אשה ליהוה› (“food fire-offering to-YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 3:11.&quot;
 m.step(&quot;Lev.3.11&quot;)
 # witness-tier presupposed read: three_variants_three_constraints on
 # smoke_verbs — read, not installed
 m.witness_read(&quot;smoke_verbs&quot;, &quot;three_variants_three_constraints&quot;,
                 cites=[&quot;Sifra, Vayikra Dibbura DeNedavah, Section 14 10&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 19 5&quot;, &quot;Onkelos Lev 3:11&quot;])
 
-# -------------------------- Lev.3.12 · COND_ואם ----------------------------
-# ואם עז קרבנו … והקריבו לפני יהוה
-# &quot;[EN-AID] From top split: LEFT «ואם עז קרבנו» / RIGHT «והקריבו לפני יהוה».
-# Derive claim from Hebrew arms. Lev 3:12.&quot;
+# -------------------------- Lev.3.12 · COND_ואם (“and-if”) -----------------
+# ‹ואם עז קרבנו› (“and-if she-goat offering-him/its”)
+# ‹… והקריבו לפני יהוה› (“and-bring-near-him/its to-face YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 3:12.&quot;
 m.step(&quot;Lev.3.12&quot;)
 # witness-tier presupposed read: paragraph_carries_exemption on goat_hiatus
 # — read, not installed
@@ -1205,39 +1246,54 @@ m.witness_read(&quot;goat_hiatus&quot;, &quot;paragraph_carries_exemption&quot;,
                 cites=[&quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 1&quot;, &quot;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 2&quot;])
 
 # -------------------------- Lev.3.13 · ETNACHTA_SPLIT ----------------------
-# וסמך את ידו על ראשו ושחט אתו לפני אהל מועד … וזרקו בני אהרן את דמו על
-# המזבח סביב
-# &quot;[EN-AID] From top split: LEFT «וסמך את ידו על ראשו ושחט אתו לפני אהל
-# מועד» / RIGHT «וזרקו בני אהרן את דמו על המזבח סביב». Derive claim from
-# Hebrew arms. Lev 3:13.&quot;
+# ‹וסמך את ידו› (“and-lay obj-marker hand-him/its”)
+# ‹על ראשו ושחט› (“over head-him/its and-slaughter”)
+# ‹אתו לפני אהל› (“obj-marker-him/its to-face tent”)
+# ‹מועד … וזרקו בני› (“seasons … and-sprinkle son”)
+# ‹אהרן את דמו› (“Aaron obj-marker blood-him/its”)
+# ‹על המזבח סביב› (“over the-altar circle”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 3:13.&quot;
 m.step(&quot;Lev.3.13&quot;)
 
 # -------------------------- Lev.3.14 · ETNACHTA_SPLIT ----------------------
-# והקריב ממנו קרבנו אשה ליהוה … את החלב המכסה את הקרב ואת כל החלב אשר על
-# הקרב
-# &quot;[EN-AID] From top split: LEFT «והקריב ממנו קרבנו אשה ליהוה» / RIGHT «את
-# החלב המכסה את הקרב ואת כל החלב אשר על הקרב». Derive claim from Hebrew
+# ‹והקריב ממנו קרבנו› (“and-bring-near from-us/our offering-him/its”)
+# ‹אשה ליהוה … את› (“fire-offering to-YHWH … obj-marker”)
+# ‹החלב המכסה את› (“the-fat the-plump obj-marker”)
+# ‹הקרב ואת כל› (“the-nearest-part and-obj-marker all”)
+# ‹החלב אשר על› (“the-fat which over”)
+# ‹הקרב› (“the-nearest-part”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 3:14.&quot;
 m.step(&quot;Lev.3.14&quot;)
 
 # -------------------------- Lev.3.15 · ETNACHTA_SPLIT ----------------------
-# ואת שתי הכלית ואת החלב אשר עלהן אשר על הכסלים … ואת היתרת על הכבד על הכלית
-# יסירנה
-# &quot;[EN-AID] From top split: LEFT «ואת שתי הכלית ואת החלב אשר עלהן אשר על
-# הכסלים» / RIGHT «ואת היתרת על הכבד על הכלית יסירנה». Derive claim from
-# Hebrew arms. Lev 3:15.&quot;
+# ‹ואת שתי הכלית› (“and-obj-marker two the-kidney”)
+# ‹ואת החלב אשר› (“and-obj-marker the-fat which”)
+# ‹עלהן אשר על› (“over-them/their which over”)
+# ‹הכסלים … ואת היתרת› (“the-fatness … and-obj-marker the-lobe”)
+# ‹על הכבד על› (“over the-liver over”)
+# ‹הכלית יסירנה› (“the-kidney turn-aside-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 3:15.&quot;
 m.step(&quot;Lev.3.15&quot;)
 
 # -------------------------- Lev.3.16 · ETNACHTA_SPLIT ----------------------
-# והקטירם הכהן המזבחה … לחם אשה לריח ניחח כל חלב ליהוה
-# &quot;[EN-AID] From top split: LEFT «והקטירם הכהן המזבחה» / RIGHT «לחם אשה לריח
-# ניחח כל חלב ליהוה». Derive claim from Hebrew arms. Lev 3:16.&quot;
+# ‹והקטירם הכהן המזבחה› (“and-smoke-them/their the-priest the-altar-ward”)
+# ‹… לחם אשה לריח› (“food fire-offering to-odor”)
+# ‹ניחח כל חלב› (“restful all fat”)
+# ‹ליהוה› (“to-YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 3:16.&quot;
 m.step(&quot;Lev.3.16&quot;)
 
 # -------------------------- Lev.3.17 · ETNACHTA_SPLIT ----------------------
-# חקת עולם לדרתיכם בכל מושבתיכם … כל חלב וכל דם לא תאכלו
-# &quot;[EN-AID] From top split: LEFT «חקת עולם לדרתיכם בכל מושבתיכם» / RIGHT «כל
-# חלב וכל דם לא תאכלו». Derive claim from Hebrew arms. Lev 3:17.&quot;
+# ‹חקת עולם לדרתיכם› (“statute forever to-generation-you/your(pl)”)
+# ‹בכל מושבתיכם … כל› (“in-all seat-you/your(pl) … all”)
+# ‹חלב וכל דם› (“fat and-all blood”)
+# ‹לא תאכלו› (“not eat”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 3:17.&quot;
 m.step(&quot;Lev.3.17&quot;)
 # witness-tier presupposed read: all_dwellings_place_free on
 # eating_ban_scope — read, not installed
@@ -1260,7 +1316,7 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;shelamim_signature&#x27;, &#x27;three_way_distribution&#x27;), (&#x27;shared_semichah&#x27;, &#x27;partners_in_turn_heir_out&#x27;), (&#x27;slaughter_license&#x27;, &#x27;deut_hook_all_sides&#x27;), (&#x27;petach_lifnei_triple&#x27;, &#x27;anywhere_courtyard&#x27;), (&#x27;intent_vector&#x27;, &#x27;six_fields&#x27;), (&#x27;anatomy_table&#x27;, &#x27;two_kidneys_lobe_settled&#x27;), (&#x27;fat_tail&#x27;, &#x27;pesach_converts_at_boundary&#x27;), (&#x27;smoke_verbs&#x27;, &#x27;three_variants_three_constraints&#x27;), (&#x27;goat_hiatus&#x27;, &#x27;paragraph_carries_exemption&#x27;), (&#x27;eating_ban_scope&#x27;, &#x27;all_dwellings_place_free&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;shelamim_signature&#x27;, &#x27;three_way_distribution&#x27;), (&#x27;shared_semichah&#x27;, &#x27;partners_in_turn_heir_out&#x27;), (&#x27;slaughter_license&#x27;, &#x27;deut_hook_all_sides&#x27;), (&#x27;petach_lifnei_triple&#x27;, &#x27;anywhere_courtyard&#x27;), (&#x27;intent_vector&#x27;, &#x27;six_fields&#x27;), (&#x27;anatomy_table&#x27;, &#x27;two_kidneys_lobe_settled&#x27;), (&#x27;fat_tail&#x27;, &#x27;pesach_converts_at_boundary&#x27;), (&#x27;the_fat_inventory_per_species_the_tail_at_two_seats&#x27;, &#x27;the_goats_own_paragraph_has_none&#x27;), (&#x27;smoke_verbs&#x27;, &#x27;three_variants_three_constraints&#x27;), (&#x27;goat_hiatus&#x27;, &#x27;paragraph_carries_exemption&#x27;), (&#x27;eating_ban_scope&#x27;, &#x27;all_dwellings_place_free&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 16 2&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 16 3&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 16 4&#x27;, &#x27;Onkelos Lev 3:1&#x27;]
     assert all(&#x27;three_way_distribution&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;shelamim_signature&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -1282,15 +1338,18 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 19 3&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 18 4&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 19 4&#x27;]
     assert all(&#x27;pesach_converts_at_boundary&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;fat_tail&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 10&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 19 5&#x27;, &#x27;Onkelos Lev 3:11&#x27;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 3&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 6&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 7&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 8&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 10&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 19 3&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 1&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 6&#x27;, &#x27;Mishnah Tamid 4:3&#x27;, &#x27;Mishnah Chullin 8:6&#x27;, &#x27;Mishnah Makkot 3:2&#x27;, &#x27;Mishnah Keritot 1:1&#x27;]
+    assert all(&#x27;the_goats_own_paragraph_has_none&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_fat_inventory_per_species_the_tail_at_two_seats&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[8][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Section 14 10&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 19 5&#x27;, &#x27;Onkelos Lev 3:11&#x27;]
     assert all(&#x27;three_variants_three_constraints&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;smoke_verbs&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[8][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 1&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 2&#x27;]
+    assert m.WITNESS_READS[9][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 1&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 2&#x27;]
     assert all(&#x27;paragraph_carries_exemption&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;goat_hiatus&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[9][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 6&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 7&#x27;, &#x27;Onkelos Lev 3:17&#x27;]
+    assert m.WITNESS_READS[10][&quot;cites&quot;] == [&#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 6&#x27;, &#x27;Sifra, Vayikra Dibbura DeNedavah, Chapter 20 7&#x27;, &#x27;Onkelos Lev 3:17&#x27;]
     assert all(&#x27;all_dwellings_place_free&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;eating_ban_scope&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">Tree-derived v1 (phase A). One STEP per verse from top-split arms. Not binding religious law.</div><p class='meta'>Rendered 2026-09-05 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">Tree-derived v1 (phase A). One STEP per verse from top-split arms. Not binding religious law.</div><p class='meta'>Rendered 2026-09-06 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

@@ -17,6 +17,17 @@ import glob, os, re, subprocess, sys, time
 HERE = os.path.dirname(os.path.abspath(__file__))
 runners = sorted(glob.glob(os.path.join(HERE, 'cold_run_*.py')))
 print('run_cold_all: %d runners discovered in %s' % (len(runners), HERE))
+
+# THE DEPENDENCY GATE runs first (2026-09-06): every runner's span declared,
+# every cross-reference the ink requires dispositioned, every CALL live. A
+# runner that names another span's type without a disposition, or a call
+# the dispositions file understates, fails the sweep before any cell runs.
+gate = subprocess.run([sys.executable, os.path.join(HERE, 'dependency_census.py')],
+                      cwd=HERE, capture_output=True, text=True)
+print('\n'.join(l for l in gate.stdout.splitlines() if l.startswith('DEPENDENCY GATE')))
+if gate.returncode != 0:
+    print(gate.stdout[-3000:]); print(gate.stderr[-1000:])
+    sys.exit('run_cold_all: THE DEPENDENCY GATE FAILED — no runner graded until every edge is dispositioned')
 if not runners:
     sys.exit('no cold_run_*.py found — refusing to report a clean sweep of nothing')
 

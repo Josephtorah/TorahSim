@@ -516,6 +516,35 @@ owner's confirmed process):
      the ink does not state (a distance, an amount, a threshold)
      is an input PARAMETER, never a constant. No Mishnah, no
      Talmud in the source (the code/data separation law).
+     ⚠ AND CENSUS THE SPAN'S POINTERS FIRST (owner-ordered
+     2026-09-06 after the dependency audit — "make sure we code
+     properly going forward"): before the first cell, run
+     World/step9/dependency_census.py. Every verse of the span that
+     names another span's offering type or institution, and every
+     explicit cross-reference form ("as prescribed", "as he did
+     with", "like the sin offering", "one law"), is a REQUIRED
+     EDGE or POINTER, and each must be DISPOSITIONED in
+     dependency_dispositions.yaml before the span is called
+     compiled: CALL (a live import into the home engine, verified
+     against the source), OWED (the callee is not compiled — a
+     COMPILE_DEBT line), REVERSE (the home already calls this
+     runner), VIA (reached through a runner this one calls),
+     PARAMETER (the ink points to a datum), INTERNAL, RUN_CITATION,
+     or FALSE (a homograph, named). The gate runs first in
+     run_cold_all.py and fails the whole sweep on a missing
+     disposition, a CALL without a live edge, or a live edge the
+     file understates. The first-call standard (Exodus 21 into
+     Leviticus 24) is thereby a gate, no longer a precedent. THE
+     CONSENSUS (the same day, the two-thread design discussion the
+     owner ordered and then ruled "your call"): raw imports stay the
+     mechanism — a callee fails its caller AT LOAD, and the required
+     edges come from the INK, not from the code; an edge may carry an
+     ungated `carries:` naming what crosses it; `--debt` prints the
+     owed edges as the worklist; the gate writes
+     World/step9/DEPENDENCY_INDEX.md each run (documentation, never
+     runtime); late binding is reserved per proven cycle; the daemon
+     campaign, with its own trigger-and-effect gate, is a separate
+     future order.
  (2) COLLECT the Mishnah's rows as TEST DATA — input cases with
      expected verdicts, plus the recorded parameter settings. Each
      row's VERSE-ADDRESS comes from the tradition's own index (the
@@ -905,6 +934,51 @@ rescue_owed. A tool lesson: the formatted-citation precedence trap
 fired a third time and is now closed by an AST rewriter, not by hand.
 Seats F-215..F-216 (LV19A-09, LV19L-03); standing 1726; L4a checked
 off, L4b (19:19-37) next.
+THE DEPENDENCY DEBT (2026-09-06, between L4a and L4b — the owner's
+question "how many of these have we missed during our compile? are
+we compiling correctly or overlooking all of these dependencies,"
+then the order "fix all of the overlooked sections, then make sure we
+code properly going forward"). The audit measured three layers by
+script (World/step9/REPORT_DEPENDENCIES.md): six explicit "as
+prescribed" pointers crossing a runner boundary inside compiled
+spans, NONE fully live — one a call into a dispatcher that held no
+fat list, two notes, three silent; thirty-three type-name edges, nine
+live, twenty silent; four sub-spans uncompiled behind check marks;
+four institutions compiled twice with no call either way. The cause:
+motion (1) had no census of a span's cross-references, so a
+dependency became a call only when a Mishnah row happened to name the
+other type. THE REPAIR, the same day, by the rhythm (the ledger
+logic/oral_triage/dependency_debt_docket_2026-09-06.md first — 59
+rows, Negaim 14, Tamid 4, and Chullin 8 read whole, coverage computed,
+34 credits verified): the fat inventory per species into the
+offerings dispatcher (Lev 3:3-17; the tail token at two seats of the
+span, 3:9 and 7:3 — so 4:35's "as the fat of the LAMB" takes the tail
+and 4:10's ox does not: the pointer names the species); the guilt
+offering's law and the meal offering's law into the Tzav engine (Lev
+7:1-7, 6:7-11 — the ram's list graded against the lamb's by call and
+matching part for part; "one law" filled by the Sifra); THE LEPER'S
+CLEANSING as its own runner (cold_run_metzora.py, Lev 14:1-32, 77 of
+77 on the first graded run against Negaim 14 whole, five engines
+called; the purity verb's four seats are the three purities and the
+atonement gate; the census corrected the compiler twice — the right
+FINGER at 14:16 and 14:27, the prefixed log at 14:15); Shavuot's
+animals into the appointed-times engine (23:18-19 — the two lambs
+resolve to the communal peace offering's row, which 23:20's own "holy
+to the LORD, for the priest" states). Every pointer wired live (Exod
+23:15 into the Passover engine; Lev 4's four fat clauses; 5:10 the
+bird; 5:13 the remainder; 10:15 the breast and thigh; 14:13 the guilt
+offering's law) and the four duplicates unified as one function at
+two seats. EIGHT effects discovered (the registry at 117):
+smoked_to_the_lord, sprinkled_seven, sent_over_the_field,
+shaved_whole, outside_his_tent, declared_pure, oil_on_the_blood,
+waved. Seats F-217..F-221 (L04-20, LV14A-08, LV07A-07, LV23A-14,
+LV03-11). Then THE GATE — dependency_census.py with
+dependency_dispositions.yaml, run first by run_cold_all.py: 23 runners
+declared, 905 verses scanned, 48 required edges and 42 pointers every
+one dispositioned, 40 live import edges — 23 of 23 runners green,
+1444 cells. The Lev 1-8 engine is now one call graph (the Tzav runner
+imports the offerings and meal-offering engines; the sin-offering,
+Lev 5, and cleansing engines import it).
 The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law

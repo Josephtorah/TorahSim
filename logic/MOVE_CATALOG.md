@@ -163,6 +163,34 @@ Jubilee" — Behar, Chapter 8 4). Mishnah Kiddushin 1:2's three exits
 (years, Jubilee, money) thus grade against two spans joined by one
 edge — the same wiring exemplar (a) recorded from the Exodus side,
 now closed from the Leviticus side.
+EXEMPLARS FROM THE DEPENDENCY-DEBT SITTING (2026-09-06 — the audit
+that found the ink's own cross-references standing as notes or
+silence, and the repair): (g) THE POINTER NAMES THE SPECIES — Lev
+4:35 "as the fat of the LAMB is removed from the peace offering"
+imports Lev 3:9-10's inventory, tail included, while 4:10's "as it is
+lifted from the OX" imports 3:3-4's, no tail: the fat-tail token
+stands at two seats of Leviticus 1-8 (3:9, 7:3), so the pointer's
+own species word decides the list (cold_run_chatat.fat, by call into
+cold_run_offerings.dispatch('fat:lamb')). (h) Lev 5:10's "as
+prescribed" imports the bird burnt offering's rite (Lev 1:14-17;
+cold_run_vayikra5.pointers into cold_run_minchah.bird) and 5:13's
+"as the meal offering" imports Lev 2's remainder rule. (i) Exod
+23:15's "as I commanded you" imports Exod 12-13's matzah window
+(cold_run_calendar.matzah into cold_run_pesach). (j) Lev 14:13's "as
+the sin offering, so the guilt offering" imports the guilt offering's
+law of 7:1-7 (cold_run_metzora into cold_run_tzav.asham_law —
+compiled the same sitting; the north through the offerings row).
+(k) Lev 10:15's "as the LORD commanded" imports 7:30-34's breast and
+thigh (cold_run_chatat.table into cold_run_tzav.dues_machine). (l)
+ONE FUNCTION AT TWO SEATS — the seventh year (Exod 23:10-11 calls Lev
+25:1-7's), the first fruits (Lev 23:17-20 calls Exod 23:16-19's), the
+omer (Lev 23:9-14 calls Lev 2:14's), the fast (Lev 16:29-31 calls Lev
+23:27-32's): an institution written twice is compiled once and called
+from both seats. And the move became a GATE: World/step9/
+dependency_census.py requires every cross-reference the ink makes to
+carry a disposition (CALL verified live, OWED, REVERSE, VIA,
+PARAMETER, INTERNAL, RUN_CITATION, FALSE) before a span is called
+compiled — recorded in THE_STEPS Step 5, motion (1).
 EXEMPLARS FROM THE SEVENTH-YEAR SUPPLEMENT (2026-09-05, round 47):
 (e) THE FOREIGNER'S INTEREST — Lev 25:36-37 bars the bite and the
 increase toward "your brother" and says nothing of anyone else; the
