@@ -202,6 +202,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(isha_el_achotah, the_levirate_window_import)</span><br><span class="gloss">= WITNESS-READ(isha-to-achotah, the-levirate-window-import)</span><br>THE RIVAL CLAUSE AND THE LEVIRATE TABLE [claim LV18-06]. לצרור (&#x27;to rival&#x27;) — Onkelos: &#x27;to DISTRESS her,&#x27; with &#x27;in her lifetime&#x27; kept; and the clause bounded to the LEVIRATE context by the upon-her verbal analogy: ALL karet-unions barred from the levirate; the RIVAL WIVES barred with them — &#x27;from here they said: FIFTEEN WOMEN EXEMPT THEIR RIVALS and their rivals&#x27; rivals TO THE END OF THE WORLD&#x27;; and the boundary — the SIX SEVERER unions, married of necessity to others, their rivals PERMITTED: a rival exists only from a brother. The table and its closing rule compiled in the source.
 </td><td>—</td><td class='cite'>Sifra, Kedoshim, Chapter 12 10, Sifra, Kedoshim, Chapter 12 11, Sifra, Kedoshim, Chapter 12 12, Onkelos Lev 18:18</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_fifteen_women_computed, kinship_composed_with_the_paternal_brother)</span><br><span class="gloss">= WITNESS-READ(the-fifteen-women-computed, kinship-composed-with-the-paternal-brother)</span><br>THE FIFTEEN WOMEN ARE A KINSHIP COMPUTATION [claim LV18-08]. Compiled cold against Mishnah Sanhedrin, Makkot, Yevamot, Chullin, Zevachim, and Keritot read whole (241 of 241 cells), Lev 18:6-18 was entered as a list of relations from ego, each located by its own token in its verse (his mother 18:7, his father&#x27;s wife 18:8, the paternal and the maternal sister 18:9, the two granddaughters 18:10, the two aunts 18:12-13, the uncle&#x27;s wife 18:14, the daughter-in-law 18:15, the brother&#x27;s wife 18:16, the wife&#x27;s three descendants and three ancestresses from 18:17&#x27;s pair-ban read in both directions, the wife&#x27;s sister 18:18) and each relation was then COMPOSED with &#x27;his paternal brother&#x27; and normalized by the ink&#x27;s own identities: my brother&#x27;s father is my father, my brother&#x27;s mother is a wife of my father (18:8), a daughter of my father&#x27;s wife by another man is not my sister (18:11 &#x27;born of your father&#x27;). One predicate partitions the list: a woman ALSO forbidden to the brother can never be his widow, so no levirate case arises — the SIX severer of Mishnah Yevamot 1:3 (his mother, his father&#x27;s wife, his father&#x27;s sister, his paternal sister, his father&#x27;s brother&#x27;s wife, his paternal brother&#x27;s wife) fall out exactly; every other relation can be a brother&#x27;s widow and an ervah at once — the FIFTEEN of Yevamot 1:1, fourteen by the composition and one, the wife of a brother not in his world, by Deut 25:5&#x27;s &#x27;dwell together&#x27; imported. The Sifra&#x27;s &#x27;a rival exists only from a brother&#x27; (Chapter 12 12) is the predicate&#x27;s own sentence, and its &#x27;from here they said: fifteen&#x27; (Chapter 12 11) is the count the machine reproduces. The same relation set enumerates Sanhedrin 9:1&#x27;s nine burned (18:17&#x27;s six plus the man&#x27;s own three, the daughter by the tradition&#x27;s analogy on the shared tokens), Keritot 3:6&#x27;s seven names on the mother-in-law, and Yevamot 3:10&#x27;s four names on the swapped brides. Filed and auto- seated under the auto-seat rider (sitting L3 of THE COMPILE DEBT, 2026-09-05 — the Lev 17 + 18 + 20 compile, cold_run_sanctions.py 241 of 241).
+</td><td>—</td><td class='cite'>Mishnah Yevamot 1:1, Mishnah Yevamot 1:3, Mishnah Yevamot 1:2, Mishnah Yevamot 2:3, Mishnah Yevamot 3:2, Mishnah Yevamot 3:10, Mishnah Keritot 3:6, Mishnah Sanhedrin 9:1, Sifra, Kedoshim, Chapter 12 10, Sifra, Kedoshim, Chapter 12 11, Sifra, Kedoshim, Chapter 12 12, Sifra, Kedoshim, Chapter 11 13, Sifra, Kedoshim, Chapter 10 13, Sifra, Kedoshim, Chapter 10 14, Onkelos Lev 18:9</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
 </div>
@@ -1433,23 +1435,30 @@ from machine import Machine
 m = Machine(&quot;lev_18_sexual_land&quot;)
 
 # -------------------------- Lev.18.1 · TREE_CLAIM --------------------------
-# וידבר יהוה … אל משה לאמר
-# &quot;[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
-# claim from Hebrew arms. Lev 18:1.&quot;
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:1.&quot;
 m.step(&quot;Lev.18.1&quot;)
 
 # -------------------------- Lev.18.2 · ETNACHTA_SPLIT ----------------------
-# דבר אל בני ישראל ואמרת אלהם … אני יהוה אלהיכם
-# &quot;[EN-AID] From top split: LEFT «דבר אל בני ישראל ואמרת אלהם» / RIGHT «אני
-# יהוה אלהיכם». Derive claim from Hebrew arms. Lev 18:2.&quot;
+# ‹דבר אל בני› (“speak to son”)
+# ‹ישראל ואמרת אלהם› (“Israel and-say to-them/their”)
+# ‹… אני יהוה אלהיכם› (“YHWH God-you/your(pl)”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:2.&quot;
 m.step(&quot;Lev.18.2&quot;)
 
 # -------------------------- Lev.18.3 · ETNACHTA_SPLIT ----------------------
-# כמעשה ארץ מצרים אשר ישבתם בה לא תעשו … וכמעשה ארץ כנען אשר אני מביא אתכם
-# שמה לא תעשו ובחקתיהם לא תל
-# &quot;[EN-AID] From top split: LEFT «כמעשה ארץ מצרים אשר ישבתם בה לא תעשו» /
-# RIGHT «וכמעשה ארץ כנען אשר אני מביא אתכם שמה לא תעשו ובחקתיהם לא תלכו».
-# Derive claim from Hebrew arms. Lev 18:3.&quot;
+# ‹כמעשה ארץ מצרים› (“like-deed/work earth Egypt”)
+# ‹אשר ישבתם בה› (“which dwell/sit in-her/its”)
+# ‹לא תעשו … וכמעשה› (“not make … and-like-deed/work”)
+# ‹ארץ כנען אשר› (“earth Canaan which”)
+# ‹אני מביא אתכם› (“come/bring obj-marker-you/your(pl)”)
+# ‹שמה לא תעשו› (“there-ward not make”)
+# ‹ובחקתיהם לא תל› (“and-in-statute-them/their not mound”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:3.&quot;
 m.step(&quot;Lev.18.3&quot;)
 # witness-tier presupposed read: the_nomos_register on uvechukoteihem —
 # read, not installed
@@ -1457,9 +1466,12 @@ m.witness_read(&quot;uvechukoteihem&quot;, &quot;the_nomos_register&quot;,
                 cites=[&quot;Sifra, Acharei Mot, Section 8 3&quot;, &quot;Sifra, Acharei Mot, Section 8 4&quot;, &quot;Sifra, Acharei Mot, Section 8 8&quot;, &quot;Sifra, Acharei Mot, Chapter 13 8&quot;, &quot;Onkelos Lev 18:3&quot;])
 
 # -------------------------- Lev.18.4 · ETNACHTA_SPLIT ----------------------
-# את משפטי תעשו ואת חקתי תשמרו ללכת בהם … אני יהוה אלהיכם
-# &quot;[EN-AID] From top split: LEFT «את משפטי תעשו ואת חקתי תשמרו ללכת בהם» /
-# RIGHT «אני יהוה אלהיכם». Derive claim from Hebrew arms. Lev 18:4.&quot;
+# ‹את משפטי תעשו› (“obj-marker judgment-me/my make”)
+# ‹ואת חקתי תשמרו› (“and-obj-marker statute-me/my keep/guard”)
+# ‹ללכת בהם … אני› (“to-go in-them/their … ”)
+# ‹יהוה אלהיכם› (“YHWH God-you/your(pl)”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:4.&quot;
 m.step(&quot;Lev.18.4&quot;)
 # witness-tier presupposed read: the_canon_channel on mishpatai_chukotai —
 # read, not installed
@@ -1467,9 +1479,13 @@ m.witness_read(&quot;mishpatai_chukotai&quot;, &quot;the_canon_channel&quot;,
                 cites=[&quot;Sifra, Acharei Mot, Section 8 9&quot;, &quot;Sifra, Acharei Mot, Chapter 13 9&quot;])
 
 # -------------------------- Lev.18.5 · ETNACHTA_SPLIT ----------------------
-# ושמרתם את חקתי ואת משפטי אשר יעשה אתם האדם וחי בהם … אני יהוה
-# &quot;[EN-AID] From top split: LEFT «ושמרתם את חקתי ואת משפטי אשר יעשה אתם האדם
-# וחי בהם» / RIGHT «אני יהוה». Derive claim from Hebrew arms. Lev 18:5.&quot;
+# ‹ושמרתם את חקתי› (“and-keep/guard obj-marker statute-me/my”)
+# ‹ואת משפטי אשר› (“and-obj-marker judgment-me/my which”)
+# ‹יעשה אתם האדם› (“make obj-marker-them/their the-human”)
+# ‹וחי בהם … אני› (“and-live in-them/their … ”)
+# ‹יהוה› (“YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:5.&quot;
 m.step(&quot;Lev.18.5&quot;)
 # witness-tier presupposed read: live_by_them on vachai_bahem — read, not
 # installed
@@ -1477,9 +1493,12 @@ m.witness_read(&quot;vachai_bahem&quot;, &quot;live_by_them&quot;,
                 cites=[&quot;Sifra, Acharei Mot, Section 8 10&quot;, &quot;Sifra, Acharei Mot, Chapter 13 12&quot;, &quot;Sifra, Acharei Mot, Chapter 13 13&quot;, &quot;Onkelos Lev 18:5&quot;])
 
 # -------------------------- Lev.18.6 · ETNACHTA_SPLIT ----------------------
-# איש איש אל כל שאר בשרו לא תקרבו לגלות ערוה … אני יהוה
-# &quot;[EN-AID] From top split: LEFT «איש איש אל כל שאר בשרו לא תקרבו לגלות
-# ערוה» / RIGHT «אני יהוה». Derive claim from Hebrew arms. Lev 18:6.&quot;
+# ‹איש איש אל› (“man man to”)
+# ‹כל שאר בשרו› (“all flesh flesh-him/its”)
+# ‹לא תקרבו לגלות› (“not bring-near to-denude”)
+# ‹ערוה … אני יהוה› (“nudity … YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:6.&quot;
 m.step(&quot;Lev.18.6&quot;)
 # witness-tier presupposed read: the_anti_inference_fence on lo_tikrevu —
 # read, not installed
@@ -1487,22 +1506,30 @@ m.witness_read(&quot;lo_tikrevu&quot;, &quot;the_anti_inference_fence&quot;,
                 cites=[&quot;Sifra, Acharei Mot, Chapter 13 1&quot;, &quot;Sifra, Acharei Mot, Chapter 13 14&quot;, &quot;Sifra, Acharei Mot, Chapter 13 15&quot;, &quot;Sifra, Acharei Mot, Chapter 13 22&quot;])
 
 # -------------------------- Lev.18.7 · ETNACHTA_SPLIT ----------------------
-# ערות אביך וערות אמך לא תגלה … אמך הוא לא תגלה ערותה
-# &quot;[EN-AID] From top split: LEFT «ערות אביך וערות אמך לא תגלה» / RIGHT «אמך
-# הוא לא תגלה ערותה». Derive claim from Hebrew arms. Lev 18:7.&quot;
+# ‹ערות אביך וערות› (“nudity father-you/your and-nudity”)
+# ‹אמך לא תגלה› (“mother-you/your not denude”)
+# ‹… אמך הוא לא› (“mother-you/your he/it not”)
+# ‹תגלה ערותה› (“denude nudity-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:7.&quot;
 m.step(&quot;Lev.18.7&quot;)
 
 # -------------------------- Lev.18.8 · ETNACHTA_SPLIT ----------------------
-# ערות אשת אביך לא תגלה … ערות אביך הוא
-# &quot;[EN-AID] From top split: LEFT «ערות אשת אביך לא תגלה» / RIGHT «ערות אביך
-# הוא». Derive claim from Hebrew arms. Lev 18:8.&quot;
+# ‹ערות אשת אביך› (“nudity woman father-you/your”)
+# ‹לא תגלה … ערות› (“not denude … nudity”)
+# ‹אביך הוא› (“father-you/your he/it”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:8.&quot;
 m.step(&quot;Lev.18.8&quot;)
 
 # -------------------------- Lev.18.9 · ETNACHTA_SPLIT ----------------------
-# ערות אחותך בת אביך או בת אמך מולדת בית או מולדת חוץ … לא תגלה ערותן
-# &quot;[EN-AID] From top split: LEFT «ערות אחותך בת אביך או בת אמך מולדת בית או
-# מולדת חוץ» / RIGHT «לא תגלה ערותן». Derive claim from Hebrew arms. Lev
-# 18:9.&quot;
+# ‹ערות אחותך בת› (“nudity sister-you/your daughter”)
+# ‹אביך או בת› (“father-you/your or daughter”)
+# ‹אמך מולדת בית› (“mother-you/your nativity house”)
+# ‹או מולדת חוץ› (“or nativity outside”)
+# ‹… לא תגלה ערותן› (“not denude nudity-them/their”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:9.&quot;
 m.step(&quot;Lev.18.9&quot;)
 # witness-tier presupposed read: the_translated_case_split on moledet_bayit
 # — read, not installed
@@ -1510,107 +1537,153 @@ m.witness_read(&quot;moledet_bayit&quot;, &quot;the_translated_case_split&quot;,
                 cites=[&quot;Onkelos Lev 18:9&quot;, &quot;Onkelos Lev 18:11&quot;, &quot;Sifra, Kedoshim, Chapter 11 13&quot;])
 
 # -------------------------- Lev.18.10 · ETNACHTA_SPLIT ---------------------
-# ערות בת בנך או בת בתך לא תגלה ערותן … כי ערותך הנה
-# &quot;[EN-AID] From top split: LEFT «ערות בת בנך או בת בתך לא תגלה ערותן» /
-# RIGHT «כי ערותך הנה». Derive claim from Hebrew arms. Lev 18:10.&quot;
+# ‹ערות בת בנך› (“nudity daughter son-you/your”)
+# ‹או בת בתך› (“or daughter daughter-you/your”)
+# ‹לא תגלה ערותן› (“not denude nudity-them/their”)
+# ‹… כי ערותך הנה› (“that nudity-you/your themselves”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:10.&quot;
 m.step(&quot;Lev.18.10&quot;)
 
 # -------------------------- Lev.18.11 · ETNACHTA_SPLIT ---------------------
-# ערות בת אשת אביך מולדת אביך אחותך הוא … לא תגלה ערותה
-# &quot;[EN-AID] From top split: LEFT «ערות בת אשת אביך מולדת אביך אחותך הוא» /
-# RIGHT «לא תגלה ערותה». Derive claim from Hebrew arms. Lev 18:11.&quot;
+# ‹ערות בת אשת› (“nudity daughter woman”)
+# ‹אביך מולדת אביך› (“father-you/your nativity father-you/your”)
+# ‹אחותך הוא … לא› (“sister-you/your he/it … not”)
+# ‹תגלה ערותה› (“denude nudity-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:11.&quot;
 m.step(&quot;Lev.18.11&quot;)
 
 # -------------------------- Lev.18.12 · ETNACHTA_SPLIT ---------------------
-# ערות אחות אביך לא תגלה … שאר אביך הוא
-# &quot;[EN-AID] From top split: LEFT «ערות אחות אביך לא תגלה» / RIGHT «שאר אביך
-# הוא». Derive claim from Hebrew arms. Lev 18:12.&quot;
+# ‹ערות אחות אביך› (“nudity sister father-you/your”)
+# ‹לא תגלה … שאר› (“not denude … flesh”)
+# ‹אביך הוא› (“father-you/your he/it”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:12.&quot;
 m.step(&quot;Lev.18.12&quot;)
 
 # -------------------------- Lev.18.13 · ETNACHTA_SPLIT ---------------------
-# ערות אחות אמך לא תגלה … כי שאר אמך הוא
-# &quot;[EN-AID] From top split: LEFT «ערות אחות אמך לא תגלה» / RIGHT «כי שאר אמך
-# הוא». Derive claim from Hebrew arms. Lev 18:13.&quot;
+# ‹ערות אחות אמך› (“nudity sister mother-you/your”)
+# ‹לא תגלה … כי› (“not denude … that”)
+# ‹שאר אמך הוא› (“flesh mother-you/your he/it”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:13.&quot;
 m.step(&quot;Lev.18.13&quot;)
 
 # -------------------------- Lev.18.14 · ETNACHTA_SPLIT ---------------------
-# ערות אחי אביך לא תגלה … אל אשתו לא תקרב דדתך הוא
-# &quot;[EN-AID] From top split: LEFT «ערות אחי אביך לא תגלה» / RIGHT «אל אשתו לא
-# תקרב דדתך הוא». Derive claim from Hebrew arms. Lev 18:14.&quot;
+# ‹ערות אחי אביך› (“nudity brother father-you/your”)
+# ‹לא תגלה … אל› (“not denude … to”)
+# ‹אשתו לא תקרב› (“woman-him/its not bring-near”)
+# ‹דדתך הוא› (“aunt-you/your he/it”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:14.&quot;
 m.step(&quot;Lev.18.14&quot;)
 
 # -------------------------- Lev.18.15 · ETNACHTA_SPLIT ---------------------
-# ערות כלתך לא תגלה … אשת בנך הוא לא תגלה ערותה
-# &quot;[EN-AID] From top split: LEFT «ערות כלתך לא תגלה» / RIGHT «אשת בנך הוא לא
-# תגלה ערותה». Derive claim from Hebrew arms. Lev 18:15.&quot;
+# ‹ערות כלתך לא› (“nudity bride-you/your not”)
+# ‹תגלה … אשת בנך› (“denude … woman son-you/your”)
+# ‹הוא לא תגלה› (“he/it not denude”)
+# ‹ערותה› (“nudity-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:15.&quot;
 m.step(&quot;Lev.18.15&quot;)
 
 # -------------------------- Lev.18.16 · ETNACHTA_SPLIT ---------------------
-# ערות אשת אחיך לא תגלה … ערות אחיך הוא
-# &quot;[EN-AID] From top split: LEFT «ערות אשת אחיך לא תגלה» / RIGHT «ערות אחיך
-# הוא». Derive claim from Hebrew arms. Lev 18:16.&quot;
+# ‹ערות אשת אחיך› (“nudity woman brother-you/your”)
+# ‹לא תגלה … ערות› (“not denude … nudity”)
+# ‹אחיך הוא› (“brother-you/your he/it”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:16.&quot;
 m.step(&quot;Lev.18.16&quot;)
 
 # -------------------------- Lev.18.17 · ETNACHTA_SPLIT ---------------------
-# ערות אשה ובתה לא תגלה … את בת בנה ואת בת בתה לא תקח לגלות ערותה שארה הנה
-# זמה הוא
-# &quot;[EN-AID] From top split: LEFT «ערות אשה ובתה לא תגלה» / RIGHT «את בת בנה
-# ואת בת בתה לא תקח לגלות ערותה שארה הנה זמה הוא». Derive claim from Hebrew
+# ‹ערות אשה ובתה› (“nudity woman and-daughter-her/its”)
+# ‹לא תגלה … את› (“not denude … obj-marker”)
+# ‹בת בנה ואת› (“daughter son-her/its and-obj-marker”)
+# ‹בת בתה לא› (“daughter daughter-her/its not”)
+# ‹תקח לגלות ערותה› (“take to-denude nudity-her/its”)
+# ‹שארה הנה זמה› (“female-kindred-by-blood themselves plan”)
+# ‹הוא› (“he/it”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 18:17.&quot;
 m.step(&quot;Lev.18.17&quot;)
 
 # -------------------------- Lev.18.18 · ETNACHTA_SPLIT ---------------------
-# ואשה אל אחתה לא תקח … לצרר לגלות ערותה עליה בחייה
-# &quot;[EN-AID] From top split: LEFT «ואשה אל אחתה לא תקח» / RIGHT «לצרר לגלות
-# ערותה עליה בחייה». Derive claim from Hebrew arms. Lev 18:18.&quot;
+# ‹ואשה אל אחתה› (“and-woman to sister-her/its”)
+# ‹לא תקח … לצרר› (“not take … to-cramp”)
+# ‹לגלות ערותה עליה› (“to-denude nudity-her/its over-her/its”)
+# ‹בחייה› (“in-alive-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:18.&quot;
 m.step(&quot;Lev.18.18&quot;)
 # witness-tier presupposed read: the_levirate_window_import on
 # isha_el_achotah — read, not installed
 m.witness_read(&quot;isha_el_achotah&quot;, &quot;the_levirate_window_import&quot;,
                 cites=[&quot;Sifra, Kedoshim, Chapter 12 10&quot;, &quot;Sifra, Kedoshim, Chapter 12 11&quot;, &quot;Sifra, Kedoshim, Chapter 12 12&quot;, &quot;Onkelos Lev 18:18&quot;])
+# witness-tier presupposed read: kinship_composed_with_the_paternal_brother
+# on the_fifteen_women_computed — read, not installed
+m.witness_read(&quot;the_fifteen_women_computed&quot;, &quot;kinship_composed_with_the_paternal_brother&quot;,
+                cites=[&quot;Mishnah Yevamot 1:1&quot;, &quot;Mishnah Yevamot 1:3&quot;, &quot;Mishnah Yevamot 1:2&quot;, &quot;Mishnah Yevamot 2:3&quot;, &quot;Mishnah Yevamot 3:2&quot;, &quot;Mishnah Yevamot 3:10&quot;, &quot;Mishnah Keritot 3:6&quot;, &quot;Mishnah Sanhedrin 9:1&quot;, &quot;Sifra, Kedoshim, Chapter 12 10&quot;, &quot;Sifra, Kedoshim, Chapter 12 11&quot;, &quot;Sifra, Kedoshim, Chapter 12 12&quot;, &quot;Sifra, Kedoshim, Chapter 11 13&quot;, &quot;Sifra, Kedoshim, Chapter 10 13&quot;, &quot;Sifra, Kedoshim, Chapter 10 14&quot;, &quot;Onkelos Lev 18:9&quot;])
 
 # -------------------------- Lev.18.19 · ETNACHTA_SPLIT ---------------------
-# ואל אשה בנדת טמאתה … לא תקרב לגלות ערותה
-# &quot;[EN-AID] From top split: LEFT «ואל אשה בנדת טמאתה» / RIGHT «לא תקרב לגלות
-# ערותה». Derive claim from Hebrew arms. Lev 18:19.&quot;
+# ‹ואל אשה בנדת› (“and-to woman in-rejection”)
+# ‹טמאתה … לא תקרב› (“religious-impurity-her/its … not bring-near”)
+# ‹לגלות ערותה› (“to-denude nudity-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:19.&quot;
 m.step(&quot;Lev.18.19&quot;)
 
 # -------------------------- Lev.18.20 · ETNACHTA_SPLIT ---------------------
-# ואל אשת עמיתך לא תתן שכבתך לזרע … לטמאה בה
-# &quot;[EN-AID] From top split: LEFT «ואל אשת עמיתך לא תתן שכבתך לזרע» / RIGHT
-# «לטמאה בה». Derive claim from Hebrew arms. Lev 18:20.&quot;
+# ‹ואל אשת עמיתך› (“and-to woman companionship-you/your”)
+# ‹לא תתן שכבתך› (“not set lying-with-you/your”)
+# ‹לזרע … לטמאה בה› (“to-seed … to-be-foul in-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:20.&quot;
 m.step(&quot;Lev.18.20&quot;)
 
 # -------------------------- Lev.18.21 · ETNACHTA_SPLIT ---------------------
-# ומזרעך לא תתן להעביר למלך … ולא תחלל את שם אלהיך אני יהוה
-# &quot;[EN-AID] From top split: LEFT «ומזרעך לא תתן להעביר למלך» / RIGHT «ולא
-# תחלל את שם אלהיך אני יהוה». Derive claim from Hebrew arms. Lev 18:21.&quot;
+# ‹ומזרעך לא תתן› (“and-from-seed-you/your not set”)
+# ‹להעביר למלך … ולא› (“to-pass-over to-Molech … and-not”)
+# ‹תחלל את שם› (“bore obj-marker name”)
+# ‹אלהיך אני יהוה› (“God-you/your YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:21.&quot;
 m.step(&quot;Lev.18.21&quot;)
 
 # -------------------------- Lev.18.22 · ETNACHTA_SPLIT ---------------------
-# ואת זכר לא תשכב משכבי אשה … תועבה הוא
-# &quot;[EN-AID] From top split: LEFT «ואת זכר לא תשכב משכבי אשה» / RIGHT «תועבה
-# הוא». Derive claim from Hebrew arms. Lev 18:22.&quot;
+# ‹ואת זכר לא› (“and-with male not”)
+# ‹תשכב משכבי אשה› (“lie-down bed woman”)
+# ‹… תועבה הוא› (“something-disgusting he/it”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:22.&quot;
 m.step(&quot;Lev.18.22&quot;)
 
 # -------------------------- Lev.18.23 · ETNACHTA_SPLIT ---------------------
-# ובכל בהמה לא תתן שכבתך לטמאה בה … ואשה לא תעמד לפני בהמה לרבעה תבל הוא
-# &quot;[EN-AID] From top split: LEFT «ובכל בהמה לא תתן שכבתך לטמאה בה» / RIGHT
-# «ואשה לא תעמד לפני בהמה לרבעה תבל הוא». Derive claim from Hebrew arms. Lev
-# 18:23.&quot;
+# ‹ובכל בהמה לא› (“and-in-all livestock not”)
+# ‹תתן שכבתך לטמאה› (“set lying-with-you/your to-be-foul”)
+# ‹בה … ואשה לא› (“in-her/its … and-woman not”)
+# ‹תעמד לפני בהמה› (“stand to-face livestock”)
+# ‹לרבעה תבל הוא› (“to-squat-her/its mixture he/it”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:23.&quot;
 m.step(&quot;Lev.18.23&quot;)
 
 # -------------------------- Lev.18.24 · ETNACHTA_SPLIT ---------------------
-# אל תטמאו בכל אלה … כי בכל אלה נטמאו הגוים אשר אני משלח מפניכם
-# &quot;[EN-AID] From top split: LEFT «אל תטמאו בכל אלה» / RIGHT «כי בכל אלה
-# נטמאו הגוים אשר אני משלח מפניכם». Derive claim from Hebrew arms. Lev
-# 18:24.&quot;
+# ‹אל תטמאו בכל› (“do-not be-foul in-all”)
+# ‹אלה … כי בכל› (“these … that in-all”)
+# ‹אלה נטמאו הגוים› (“these be-foul the-nation”)
+# ‹אשר אני משלח› (“which send”)
+# ‹מפניכם› (“from-face-you/your(pl)”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:24.&quot;
 m.step(&quot;Lev.18.24&quot;)
 
 # -------------------------- Lev.18.25 · ETNACHTA_SPLIT ---------------------
-# ותטמא הארץ ואפקד עונה עליה … ותקא הארץ את ישביה
-# &quot;[EN-AID] From top split: LEFT «ותטמא הארץ ואפקד עונה עליה» / RIGHT «ותקא
-# הארץ את ישביה». Derive claim from Hebrew arms. Lev 18:25.&quot;
+# ‹ותטמא הארץ ואפקד› (“and-be-foul the-earth and-count/visit”)
+# ‹עונה עליה … ותקא› (“perversity-her/its over-her/its … and-vomit”)
+# ‹הארץ את ישביה› (“the-earth obj-marker dwell/sit-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:25.&quot;
 m.step(&quot;Lev.18.25&quot;)
 # witness-tier presupposed read: the_land_ledger on vataki_haaretz — read,
 # not installed
@@ -1618,37 +1691,53 @@ m.witness_read(&quot;vataki_haaretz&quot;, &quot;the_land_ledger&quot;,
                 cites=[&quot;Sifra, Acharei Mot, Chapter 13 16&quot;, &quot;Sifra, Acharei Mot, Chapter 13 19&quot;, &quot;Sifra, Acharei Mot, Chapter 13 20&quot;, &quot;Sifra, Acharei Mot, Chapter 13 21&quot;, &quot;Onkelos Lev 18:25&quot;, &quot;Onkelos Lev 18:30&quot;])
 
 # -------------------------- Lev.18.26 · ETNACHTA_SPLIT ---------------------
-# ושמרתם אתם את חקתי ואת משפטי ולא תעשו מכל התועבת האלה … האזרח והגר הגר
-# בתוככם
-# &quot;[EN-AID] From top split: LEFT «ושמרתם אתם את חקתי ואת משפטי ולא תעשו מכל
-# התועבת האלה» / RIGHT «האזרח והגר הגר בתוככם». Derive claim from Hebrew
+# ‹ושמרתם אתם את› (“and-keep/guard you obj-marker”)
+# ‹חקתי ואת משפטי› (“statute-me/my and-obj-marker judgment-me/my”)
+# ‹ולא תעשו מכל› (“and-not make from-all”)
+# ‹התועבת האלה … האזרח› (“the-something-disgusting the-these … the-
+# spontaneous-growth”)
+# ‹והגר הגר בתוככם› (“and-the-sojourner the-turn-aside-from-the-road in-
+# midst-you/your(pl)”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 18:26.&quot;
 m.step(&quot;Lev.18.26&quot;)
 
-# -------------------------- Lev.18.27 · COND_כי ----------------------------
-# כי את כל התועבת האל עשו אנשי הארץ אשר לפניכם … ותטמא הארץ
-# &quot;[EN-AID] From top split: LEFT «כי את כל התועבת האל עשו אנשי הארץ אשר
-# לפניכם» / RIGHT «ותטמא הארץ». Derive claim from Hebrew arms. Lev 18:27.&quot;
+# -------------------------- Lev.18.27 · COND_כי (“that”) -------------------
+# ‹כי את כל› (“that obj-marker all”)
+# ‹התועבת האל עשו› (“the-something-disgusting the-these make”)
+# ‹אנשי הארץ אשר› (“man the-earth which”)
+# ‹לפניכם … ותטמא הארץ› (“to-face-you/your(pl) … and-be-foul the-earth”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:27.&quot;
 m.step(&quot;Lev.18.27&quot;)
 
 # -------------------------- Lev.18.28 · ETNACHTA_SPLIT ---------------------
-# ולא תקיא הארץ אתכם בטמאכם אתה … כאשר קאה את הגוי אשר לפניכם
-# &quot;[EN-AID] From top split: LEFT «ולא תקיא הארץ אתכם בטמאכם אתה» / RIGHT
-# «כאשר קאה את הגוי אשר לפניכם». Derive claim from Hebrew arms. Lev 18:28.&quot;
+# ‹ולא תקיא הארץ› (“and-not vomit the-earth”)
+# ‹אתכם בטמאכם אתה› (“obj-marker-you/your(pl) in-be-foul-you/your(pl) obj-
+# marker-her/its”)
+# ‹… כאשר קאה את› (“like-as/which vomit obj-marker”)
+# ‹הגוי אשר לפניכם› (“the-nation which to-face-you/your(pl)”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:28.&quot;
 m.step(&quot;Lev.18.28&quot;)
 
-# -------------------------- Lev.18.29 · COND_כי ----------------------------
-# כי כל אשר יעשה מכל התועבות האלה … ונכרתו הנפשות העשת מקרב עמם
-# &quot;[EN-AID] From top split: LEFT «כי כל אשר יעשה מכל התועבות האלה» / RIGHT
-# «ונכרתו הנפשות העשת מקרב עמם». Derive claim from Hebrew arms. Lev 18:29.&quot;
+# -------------------------- Lev.18.29 · COND_כי (“that”) -------------------
+# ‹כי כל אשר› (“that all which”)
+# ‹יעשה מכל התועבות› (“make from-all the-something-disgusting”)
+# ‹האלה … ונכרתו הנפשות› (“the-these … and-cut the-living-being”)
+# ‹העשת מקרב עמם› (“the-make from-nearest-part people-them/their”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:29.&quot;
 m.step(&quot;Lev.18.29&quot;)
 
 # -------------------------- Lev.18.30 · ETNACHTA_SPLIT ---------------------
-# ושמרתם את משמרתי לבלתי עשות מחקות התועבת אשר נעשו לפניכם ולא … אני יהוה
-# אלהיכם
-# &quot;[EN-AID] From top split: LEFT «ושמרתם את משמרתי לבלתי עשות מחקות התועבת
-# אשר נעשו לפניכם ולא תטמאו בהם» / RIGHT «אני יהוה אלהיכם». Derive claim
-# from Hebrew arms. Lev 18:30.&quot;
+# ‹ושמרתם את משמרתי› (“and-keep/guard obj-marker watch-me/my”)
+# ‹לבלתי עשות מחקות› (“to-failure-of make from-statute”)
+# ‹התועבת אשר נעשו› (“the-something-disgusting which make”)
+# ‹לפניכם ולא … אני› (“to-face-you/your(pl) and-not … ”)
+# ‹יהוה אלהיכם› (“YHWH God-you/your(pl)”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 18:30.&quot;
 m.step(&quot;Lev.18.30&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
@@ -1667,7 +1756,7 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;uvechukoteihem&#x27;, &#x27;the_nomos_register&#x27;), (&#x27;mishpatai_chukotai&#x27;, &#x27;the_canon_channel&#x27;), (&#x27;vachai_bahem&#x27;, &#x27;live_by_them&#x27;), (&#x27;lo_tikrevu&#x27;, &#x27;the_anti_inference_fence&#x27;), (&#x27;moledet_bayit&#x27;, &#x27;the_translated_case_split&#x27;), (&#x27;isha_el_achotah&#x27;, &#x27;the_levirate_window_import&#x27;), (&#x27;vataki_haaretz&#x27;, &#x27;the_land_ledger&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;uvechukoteihem&#x27;, &#x27;the_nomos_register&#x27;), (&#x27;mishpatai_chukotai&#x27;, &#x27;the_canon_channel&#x27;), (&#x27;vachai_bahem&#x27;, &#x27;live_by_them&#x27;), (&#x27;lo_tikrevu&#x27;, &#x27;the_anti_inference_fence&#x27;), (&#x27;moledet_bayit&#x27;, &#x27;the_translated_case_split&#x27;), (&#x27;isha_el_achotah&#x27;, &#x27;the_levirate_window_import&#x27;), (&#x27;the_fifteen_women_computed&#x27;, &#x27;kinship_composed_with_the_paternal_brother&#x27;), (&#x27;vataki_haaretz&#x27;, &#x27;the_land_ledger&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Sifra, Acharei Mot, Section 8 3&#x27;, &#x27;Sifra, Acharei Mot, Section 8 4&#x27;, &#x27;Sifra, Acharei Mot, Section 8 8&#x27;, &#x27;Sifra, Acharei Mot, Chapter 13 8&#x27;, &#x27;Onkelos Lev 18:3&#x27;]
     assert all(&#x27;the_nomos_register&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;uvechukoteihem&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -1686,7 +1775,10 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Sifra, Kedoshim, Chapter 12 10&#x27;, &#x27;Sifra, Kedoshim, Chapter 12 11&#x27;, &#x27;Sifra, Kedoshim, Chapter 12 12&#x27;, &#x27;Onkelos Lev 18:18&#x27;]
     assert all(&#x27;the_levirate_window_import&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;isha_el_achotah&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Sifra, Acharei Mot, Chapter 13 16&#x27;, &#x27;Sifra, Acharei Mot, Chapter 13 19&#x27;, &#x27;Sifra, Acharei Mot, Chapter 13 20&#x27;, &#x27;Sifra, Acharei Mot, Chapter 13 21&#x27;, &#x27;Onkelos Lev 18:25&#x27;, &#x27;Onkelos Lev 18:30&#x27;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Mishnah Yevamot 1:1&#x27;, &#x27;Mishnah Yevamot 1:3&#x27;, &#x27;Mishnah Yevamot 1:2&#x27;, &#x27;Mishnah Yevamot 2:3&#x27;, &#x27;Mishnah Yevamot 3:2&#x27;, &#x27;Mishnah Yevamot 3:10&#x27;, &#x27;Mishnah Keritot 3:6&#x27;, &#x27;Mishnah Sanhedrin 9:1&#x27;, &#x27;Sifra, Kedoshim, Chapter 12 10&#x27;, &#x27;Sifra, Kedoshim, Chapter 12 11&#x27;, &#x27;Sifra, Kedoshim, Chapter 12 12&#x27;, &#x27;Sifra, Kedoshim, Chapter 11 13&#x27;, &#x27;Sifra, Kedoshim, Chapter 10 13&#x27;, &#x27;Sifra, Kedoshim, Chapter 10 14&#x27;, &#x27;Onkelos Lev 18:9&#x27;]
+    assert all(&#x27;kinship_composed_with_the_paternal_brother&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_fifteen_women_computed&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Sifra, Acharei Mot, Chapter 13 16&#x27;, &#x27;Sifra, Acharei Mot, Chapter 13 19&#x27;, &#x27;Sifra, Acharei Mot, Chapter 13 20&#x27;, &#x27;Sifra, Acharei Mot, Chapter 13 21&#x27;, &#x27;Onkelos Lev 18:25&#x27;, &#x27;Onkelos Lev 18:30&#x27;]
     assert all(&#x27;the_land_ledger&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;vataki_haaretz&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)

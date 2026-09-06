@@ -183,6 +183,10 @@ m.step("Lev.17.13")
 # — read, not installed
 m.witness_read("veshafach_vechisahu", "the_covering_machine",
                 cites=["Sifra, Acharei Mot, Chapter 11 2", "Sifra, Acharei Mot, Chapter 11 4", "Sifra, Acharei Mot, Chapter 11 5", "Sifra, Acharei Mot, Chapter 11 6", "Sifra, Acharei Mot, Chapter 11 7", "Sifra, Acharei Mot, Chapter 11 8", "Sifra, Acharei Mot, Chapter 11 10", "Sifra, Acharei Mot, Chapter 11 11", "Onkelos Lev 17:13"])
+# witness-tier presupposed read: two_clauses_two_nouns_one_dust on
+# the_fitness_path_and_the_covering — read, not installed
+m.witness_read("the_fitness_path_and_the_covering", "two_clauses_two_nouns_one_dust",
+                cites=["Mishnah Zevachim 13:7", "Mishnah Zevachim 13:1", "Mishnah Zevachim 13:3", "Mishnah Zevachim 13:8", "Mishnah Zevachim 14:3", "Mishnah Chullin 6:1", "Mishnah Chullin 6:4", "Mishnah Chullin 6:7", "Sifra, Acharei Mot, Section 6 4", "Sifra, Acharei Mot, Chapter 10 5", "Sifra, Acharei Mot, Chapter 12 10", "Sifra, Acharei Mot, Chapter 9 1", "Sifra, Acharei Mot, Chapter 11 8", "Sifra, Acharei Mot, Chapter 11 10", "Sifra, Acharei Mot, Chapter 11 11", "Onkelos Lev 17:13"])
 
 # -------------------------- Lev.17.14 · COND_כי (“that”) -------------------
 # ‹כי נפש כל› (“that living-being all”)
@@ -237,7 +241,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('asher_yishchat', 'outside_slaughter_scope'), ('dam_yechashev', 'blood_reckoned'), ('al_pnei_hasadeh', 'the_platform_table'), ('laseirim', 'the_demons'), ('asher_yaaleh', 'the_completion_rule'), ('kol_dam', 'the_blood_ban'), ('veshafach_vechisahu', 'the_covering_machine'), ('nevelah_utrefah', 'the_swallow_house')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('asher_yishchat', 'outside_slaughter_scope'), ('dam_yechashev', 'blood_reckoned'), ('al_pnei_hasadeh', 'the_platform_table'), ('laseirim', 'the_demons'), ('asher_yaaleh', 'the_completion_rule'), ('kol_dam', 'the_blood_ban'), ('veshafach_vechisahu', 'the_covering_machine'), ('the_fitness_path_and_the_covering', 'two_clauses_two_nouns_one_dust'), ('nevelah_utrefah', 'the_swallow_house')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Acharei Mot, Section 6 1', 'Sifra, Acharei Mot, Section 6 3', 'Sifra, Acharei Mot, Section 6 4', 'Sifra, Acharei Mot, Section 6 5', 'Sifra, Acharei Mot, Section 6 6', 'Sifra, Acharei Mot, Section 6 7']
     assert all('outside_slaughter_scope' not in f for f in m.WORLD["facts"])
     assert 'asher_yishchat' not in m.WORLD["witnessed"]
@@ -259,7 +263,10 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[6]["cites"] == ['Sifra, Acharei Mot, Chapter 11 2', 'Sifra, Acharei Mot, Chapter 11 4', 'Sifra, Acharei Mot, Chapter 11 5', 'Sifra, Acharei Mot, Chapter 11 6', 'Sifra, Acharei Mot, Chapter 11 7', 'Sifra, Acharei Mot, Chapter 11 8', 'Sifra, Acharei Mot, Chapter 11 10', 'Sifra, Acharei Mot, Chapter 11 11', 'Onkelos Lev 17:13']
     assert all('the_covering_machine' not in f for f in m.WORLD["facts"])
     assert 'veshafach_vechisahu' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Acharei Mot, Chapter 12 2', 'Sifra, Acharei Mot, Chapter 12 3', 'Sifra, Acharei Mot, Chapter 12 4', 'Sifra, Acharei Mot, Chapter 12 5', 'Sifra, Acharei Mot, Chapter 12 7', 'Sifra, Acharei Mot, Chapter 12 9', 'Sifra, Acharei Mot, Chapter 12 13', 'Onkelos Lev 17:15', 'Onkelos Lev 17:16']
+    assert m.WITNESS_READS[7]["cites"] == ['Mishnah Zevachim 13:7', 'Mishnah Zevachim 13:1', 'Mishnah Zevachim 13:3', 'Mishnah Zevachim 13:8', 'Mishnah Zevachim 14:3', 'Mishnah Chullin 6:1', 'Mishnah Chullin 6:4', 'Mishnah Chullin 6:7', 'Sifra, Acharei Mot, Section 6 4', 'Sifra, Acharei Mot, Chapter 10 5', 'Sifra, Acharei Mot, Chapter 12 10', 'Sifra, Acharei Mot, Chapter 9 1', 'Sifra, Acharei Mot, Chapter 11 8', 'Sifra, Acharei Mot, Chapter 11 10', 'Sifra, Acharei Mot, Chapter 11 11', 'Onkelos Lev 17:13']
+    assert all('two_clauses_two_nouns_one_dust' not in f for f in m.WORLD["facts"])
+    assert 'the_fitness_path_and_the_covering' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Acharei Mot, Chapter 12 2', 'Sifra, Acharei Mot, Chapter 12 3', 'Sifra, Acharei Mot, Chapter 12 4', 'Sifra, Acharei Mot, Chapter 12 5', 'Sifra, Acharei Mot, Chapter 12 7', 'Sifra, Acharei Mot, Chapter 12 9', 'Sifra, Acharei Mot, Chapter 12 13', 'Onkelos Lev 17:15', 'Onkelos Lev 17:16']
     assert all('the_swallow_house' not in f for f in m.WORLD["facts"])
     assert 'nevelah_utrefah' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

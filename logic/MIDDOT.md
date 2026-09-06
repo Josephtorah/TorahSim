@@ -115,6 +115,30 @@ narrative strength. By cluster:
   4:14, 23, 28 — the tokens that keep the known sin from lapsing at
   the Day of Atonement).
 
+- **A building block checked against the census that grounds it** (Sifra,
+  Kedoshim, Chapter 9 14, graded at sitting L3 of the compile debt,
+  2026-09-05): the Sifra's FORMULA DECODER — "their blood is upon them"
+  means STONING wherever it stands — is a binyan av (a building block,
+  the third of the thirteen) stated from one exemplar. The cold compile
+  of Lev 20 censused the formula first: דמיהם בם ("their blood is upon
+  them") at 20:11, 12, 13, 16, 27 and דמיו בו ("his blood is upon him")
+  at 20:9 — six seats — and found that exactly ONE of them, 20:27,
+  stands beside a mode the verse itself names (באבן ירגמו "with stone
+  they shall stone them"), and that mode is stoning. The building block
+  is therefore not a leap but a generalization from the formula's single
+  self-labeled seat to its five unlabeled ones, and the machine's matrix
+  carries the decoded seats as [MOVE] with the co-occurrence as their
+  ground. Beside it, the second engine of the same sitting: Mishnah
+  Yevamot 1:1's fifteen women and 1:3's six were reproduced not by any
+  middah but by COMPOSITION — each Lev 18 relation seen from the
+  paternal brother and normalized by the ink's own identities (my
+  brother's mother is my father's wife, 18:8) — the Sifra's "a rival
+  exists only from a brother" (Chapter 12 12) being that computation's
+  own sentence. Two honest catches the census made before any cell was
+  graded: בבהמה ("with a beast") locates two clauses (20:15 and the
+  species clause 20:25), and למלך ("to Molech") three (20:2, 3, 4) — a
+  union is located by its full phrase, never by one shared token.
+
 ## Exodus block campaign — owner's word "Do 3")
 
 The campaign's exam rounds banked RULES-ABOUT-RULES on the corpus's

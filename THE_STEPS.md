@@ -838,6 +838,73 @@ counted as a second "holy" by substring). NINE effects discovered
 bed_and_seat_defile, washes_and_bathes, immersed, pair_owed,
 barred_from_holies, birds_die. Seats F-209..F-211 (LV12-07, LV15B-07,
 LV15A-09); standing 1721; L2 checked off.
+THE FIFTEENTH SPAN (2026-09-05, sitting L3 of the debt; the owner:
+"l3 go"): cold_run_sanctions.py — BLOOD, UNIONS, AND SANCTIONS, Lev
+17:1-16, 18:1-30, and 20:1-27 compiled ink-first against Mishnah
+Sanhedrin 7, 9, 11, Makkot 3, Yevamot 1-3, Chullin 6, Zevachim 13-14,
+and Keritot 1 read WHOLE under the union rule (105 rows, coverage
+computed; the 22 link rows; 461 Talmud addresses indexed and NONE
+opened: 233 of 241 on the first graded run, the eight misses closed
+from the ink, the sheet, and the code) — honest fractions 65 ink
+(26%) / 133 recorded / 23 answer-sheet / 5 data / 15 imports (the
+calls into the Lev 4, Lev 12/15, and Lev 11 engines). The headline:
+THE FIFTEEN WOMEN ARE A KINSHIP COMPUTATION — Lev 18's relations,
+each located by its own token, composed with "his paternal brother"
+and normalized by the ink's identities, partition by one predicate
+(is she forbidden to the brother too?) into Mishnah Yevamot 1:3's six
+and 1:1's fifteen, fourteen computed and one imported from Deut 25:5;
+the Sifra's "a rival exists only from a brother" is the predicate's
+own sentence. Beside it THE SANCTIONS MATRIX BY ITS OWN TOKENS: the
+chapter's sanction vocabulary censused first, each union located by
+its kin token, and the Sifra's formula decoder ("their blood is upon
+them" = stoning) grounded by the census — of six formula seats
+exactly one, 20:27, names its mode, and it is stoning; from the
+matrix Sanhedrin 7:4's nine, 9:1's nine burned (18:17's symmetric
+pairs), Makkot 3:1's seven (karet without a court death), and
+Keritot 1:1's twenty of thirty-six recomputed. Also compiled: the
+fitness path of Zevachim 13:7 from the two outside verbs and three
+Sifra rows; the covering on 17:13's two nouns and its dust; the
+platform eras; the carcass-eater's two-organ split. Two locator
+catches on the record ("with a beast" at 20:15 and 20:25; "to
+Molech" at 20:2, 3, 4) and one credit-guard firing (Yevamot 1:4 read
+here, its twin alone having been graded). SEVEN effects discovered
+(the registry at 101): burned_by_court, beast_killed, childless,
+face_set_against, cover_owed, land_vomits, blood_reckoned. Seats
+F-212..F-214 (LV18-08, LV20-09, LV17-09); standing 1724; L3 checked
+off.
+THE SIXTEENTH SPAN (2026-09-06, sitting L4a of the debt — the first
+half of the largest span; the owner: "go l4"): cold_run_holiness.py —
+THE HOLINESS LEDGER, FIRST HALF, Lev 19:1-18 compiled ink-first
+against Mishnah Peah whole, Bava Metzia 9, Bava Kamma 9-10, and
+Shevuot 5-8 read WHOLE under the union rule (144 rows, coverage
+computed; 18 link rows; 161 Talmud addresses indexed and NONE opened:
+186 of 186 ON THE FIRST GRADED RUN) — honest fractions 24 ink (12%) /
+90 recorded / 33 answer-sheet / 13 data / 26 imports (the calls into
+the Lev 5, Tzav, and jubilee engines). The ink fraction is the
+chapter's shape, not a shortfall: its law is bare imperatives and the
+Sifra's rows are SPECIFICATIONS (the five-predicate classifier, the
+four-position gleaning grid, the dividers), recorded not derived. The
+headline: THE CORNER TRACTATE RUNS ON THE INK'S OWN INVENTORY — four
+gift-nouns at 19:9-10, one leave-verb, one recipient pair, and the
+four reaping-tokens of 19:9 grade Mishnah Peah whole; the corner's
+quantity is a parameter the ink leaves open (Peah 1:1 'no measure'),
+the sixtieth the scribes' floor self-labeled 'though they said', the
+two hundred zuz the data channel; and Lev 23:22 repeats 19:9-10 with
+every vineyard clause absent. Beside it THE WARNING FILE (the five
+verbs of 19:11-12 in one written order, the Sifra assigning them the
+warnings for punishments written in Exodus 22 and Leviticus 5 — the
+punishments fetched by live call), THE WAGE CLOCK (two clocks in two
+books, 19:13 'until morning' and Deut 24:15 'the sun shall not set',
+grading Bava Metzia 9:11's four workers), and ONE CLAUSE AT TWO
+SEATS ('no wrong in judgment' at 19:15 over the court and 19:35 over
+the measures — the measurer is a judge; 'fear your God' at 19:14 and
+19:32 — given to the heart). EIGHT effects discovered (the registry
+at 109): left_for_the_poor, wage_due_by_morning, name_profaned,
+judgment_perverted, given_to_the_heart, rebuke_owed, love_owed,
+rescue_owed. A tool lesson: the formatted-citation precedence trap
+fired a third time and is now closed by an AST rewriter, not by hand.
+Seats F-215..F-216 (LV19A-09, LV19L-03); standing 1726; L4a checked
+off, L4b (19:19-37) next.
 The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law

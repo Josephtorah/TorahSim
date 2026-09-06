@@ -131,6 +131,10 @@ m.step("Lev.20.10")
 # mot_yumat_hanoef — read, not installed
 m.witness_read("mot_yumat_hanoef", "the_strangulation_default",
                 cites=["Sifra, Kedoshim, Chapter 10 8", "Onkelos Lev 20:10"])
+# witness-tier presupposed read: the_formula_decoded_on_20_27 on
+# the_sanctions_matrix_by_its_own_tokens — read, not installed
+m.witness_read("the_sanctions_matrix_by_its_own_tokens", "the_formula_decoded_on_20_27",
+                cites=["Mishnah Sanhedrin 7:4", "Mishnah Sanhedrin 9:1", "Mishnah Sanhedrin 11:1", "Mishnah Sanhedrin 7:1", "Mishnah Sanhedrin 9:3", "Mishnah Makkot 3:1", "Mishnah Keritot 1:1", "Mishnah Sanhedrin 7:7", "Mishnah Sanhedrin 1:4", "Sifra, Kedoshim, Chapter 9 14", "Sifra, Kedoshim, Chapter 10 8", "Sifra, Kedoshim, Chapter 11 1", "Sifra, Kedoshim, Chapter 10 1", "Sifra, Kedoshim, Chapter 10 9", "Onkelos Lev 20:9", "Onkelos Lev 20:27", "Onkelos Lev 20:14"])
 
 # -------------------------- Lev.20.11 · ETNACHTA_SPLIT ---------------------
 # ‹ואיש אשר ישכב› (“and-man which lie-down”)
@@ -345,7 +349,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('asher_yiten_mizaro', 'the_molech_predicate'), ('haalem_yalimu', 'the_concealment_ladder'), ('aviv_veimo_kilel', 'the_curse_file'), ('mot_yumat_hanoef', 'the_strangulation_default'), ('mishkevei_isha', 'revocalization_and_paths'), ('veet_habehema_taharogu', 'the_moral_hazard_row'), ('achoto_chesed_hu', 'the_fence_complete'), ('vehivdaltem', 'the_hairs_breadth')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('asher_yiten_mizaro', 'the_molech_predicate'), ('haalem_yalimu', 'the_concealment_ladder'), ('aviv_veimo_kilel', 'the_curse_file'), ('mot_yumat_hanoef', 'the_strangulation_default'), ('the_sanctions_matrix_by_its_own_tokens', 'the_formula_decoded_on_20_27'), ('mishkevei_isha', 'revocalization_and_paths'), ('veet_habehema_taharogu', 'the_moral_hazard_row'), ('achoto_chesed_hu', 'the_fence_complete'), ('vehivdaltem', 'the_hairs_breadth')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Kedoshim, Section 4 1', 'Sifra, Kedoshim, Section 4 3', 'Sifra, Kedoshim, Section 4 4', 'Sifra, Kedoshim, Section 4 6', 'Sifra, Kedoshim, Section 4 7']
     assert all('the_molech_predicate' not in f for f in m.WORLD["facts"])
     assert 'asher_yiten_mizaro' not in m.WORLD["witnessed"]
@@ -358,16 +362,19 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[3]["cites"] == ['Sifra, Kedoshim, Chapter 10 8', 'Onkelos Lev 20:10']
     assert all('the_strangulation_default' not in f for f in m.WORLD["facts"])
     assert 'mot_yumat_hanoef' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Kedoshim, Chapter 10 9', 'Sifra, Kedoshim, Chapter 10 11', 'Sifra, Kedoshim, Chapter 10 12', 'Sifra, Kedoshim, Chapter 10 15', 'Sifra, Kedoshim, Chapter 11 2', 'Onkelos Lev 20:14']
+    assert m.WITNESS_READS[4]["cites"] == ['Mishnah Sanhedrin 7:4', 'Mishnah Sanhedrin 9:1', 'Mishnah Sanhedrin 11:1', 'Mishnah Sanhedrin 7:1', 'Mishnah Sanhedrin 9:3', 'Mishnah Makkot 3:1', 'Mishnah Keritot 1:1', 'Mishnah Sanhedrin 7:7', 'Mishnah Sanhedrin 1:4', 'Sifra, Kedoshim, Chapter 9 14', 'Sifra, Kedoshim, Chapter 10 8', 'Sifra, Kedoshim, Chapter 11 1', 'Sifra, Kedoshim, Chapter 10 1', 'Sifra, Kedoshim, Chapter 10 9', 'Onkelos Lev 20:9', 'Onkelos Lev 20:27', 'Onkelos Lev 20:14']
+    assert all('the_formula_decoded_on_20_27' not in f for f in m.WORLD["facts"])
+    assert 'the_sanctions_matrix_by_its_own_tokens' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Kedoshim, Chapter 10 9', 'Sifra, Kedoshim, Chapter 10 11', 'Sifra, Kedoshim, Chapter 10 12', 'Sifra, Kedoshim, Chapter 10 15', 'Sifra, Kedoshim, Chapter 11 2', 'Onkelos Lev 20:14']
     assert all('revocalization_and_paths' not in f for f in m.WORLD["facts"])
     assert 'mishkevei_isha' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Kedoshim, Chapter 11 5', 'Sifra, Kedoshim, Chapter 11 8', 'Sifra, Kedoshim, Chapter 11 9']
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Kedoshim, Chapter 11 5', 'Sifra, Kedoshim, Chapter 11 8', 'Sifra, Kedoshim, Chapter 11 9']
     assert all('the_moral_hazard_row' not in f for f in m.WORLD["facts"])
     assert 'veet_habehema_taharogu' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Kedoshim, Chapter 11 10', 'Sifra, Kedoshim, Chapter 11 11', 'Sifra, Kedoshim, Chapter 11 12', 'Sifra, Kedoshim, Chapter 12 2', 'Sifra, Kedoshim, Chapter 12 4', 'Sifra, Kedoshim, Chapter 12 6', 'Sifra, Kedoshim, Chapter 12 8', 'Onkelos Lev 20:17', 'Onkelos Lev 20:20']
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Kedoshim, Chapter 11 10', 'Sifra, Kedoshim, Chapter 11 11', 'Sifra, Kedoshim, Chapter 11 12', 'Sifra, Kedoshim, Chapter 12 2', 'Sifra, Kedoshim, Chapter 12 4', 'Sifra, Kedoshim, Chapter 12 6', 'Sifra, Kedoshim, Chapter 12 8', 'Onkelos Lev 20:17', 'Onkelos Lev 20:20']
     assert all('the_fence_complete' not in f for f in m.WORLD["facts"])
     assert 'achoto_chesed_hu' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Kedoshim, Chapter 9 9', 'Sifra, Kedoshim, Chapter 9 12', 'Sifra, Kedoshim, Chapter 12 14', 'Onkelos Lev 20:25', 'Onkelos Lev 20:26', 'Onkelos Lev 20:27']
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Kedoshim, Chapter 9 9', 'Sifra, Kedoshim, Chapter 9 12', 'Sifra, Kedoshim, Chapter 12 14', 'Onkelos Lev 20:25', 'Onkelos Lev 20:26', 'Onkelos Lev 20:27']
     assert all('the_hairs_breadth' not in f for f in m.WORLD["facts"])
     assert 'vehivdaltem' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

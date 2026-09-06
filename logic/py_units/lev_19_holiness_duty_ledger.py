@@ -229,6 +229,11 @@ m.statute("FORBID", "tigzol")
 # ‹לֹא־תָלִין פְּעֻלַּת שָׂכִיר› (“not stop work man-at-wages-by-the-day”)
 # ‹אִתְּךָ עַד־בֹּקֶר› (“with-you/your until morning”)
 m.statute("FORBID", "talin_peulat_sakhir")
+# witness-tier presupposed read:
+# five_verbs_two_clocks_one_clause_at_two_seats on
+# the_warning_file_and_the_wage_clock — read, not installed
+m.witness_read("the_warning_file_and_the_wage_clock", "five_verbs_two_clocks_one_clause_at_two_seats",
+                cites=["Mishnah Bava Metzia 9:11", "Mishnah Bava Metzia 9:12", "Mishnah Bava Metzia 10:5", "Mishnah Shevuot 5:4", "Mishnah Shevuot 5:5", "Mishnah Shevuot 7:1", "Mishnah Shevuot 7:5", "Mishnah Bava Kamma 9:5", "Mishnah Bava Kamma 9:7", "Mishnah Sanhedrin 3:7", "Sifra, Kedoshim, Section 2 1", "Sifra, Kedoshim, Section 2 3", "Sifra, Kedoshim, Section 2 5", "Sifra, Kedoshim, Section 2 9", "Sifra, Kedoshim, Section 2 10", "Sifra, Kedoshim, Section 2 11", "Sifra, Kedoshim, Section 2 12", "Sifra, Kedoshim, Section 2 14", "Sifra, Kedoshim, Chapter 4 1", "Sifra, Kedoshim, Chapter 8 5", "Onkelos Lev 19:13"])
 
 # -------------------------- Lev.19.14 · THE_DEAF_AND_THE_BLIND -------------
 # ‹לֹא־תְקַלֵּל חֵרֵשׁ וְלִפְנֵי› (“not be-light deaf and-to-face”)
@@ -662,11 +667,14 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 70
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('kal_adat', 'the_onkelos_buffer_paid'), ('veahavta_lereacha', 'the_great_rule_seat')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('kal_adat', 'the_onkelos_buffer_paid'), ('the_warning_file_and_the_wage_clock', 'five_verbs_two_clocks_one_clause_at_two_seats'), ('veahavta_lereacha', 'the_great_rule_seat')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Kedoshim, Section 1 1', 'Onkelos Lev 19:2']
     assert all('the_onkelos_buffer_paid' not in f for f in m.WORLD["facts"])
     assert 'kal_adat' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Kedoshim, Chapter 4 12', 'Onkelos Lev 19:18']
+    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Bava Metzia 9:11', 'Mishnah Bava Metzia 9:12', 'Mishnah Bava Metzia 10:5', 'Mishnah Shevuot 5:4', 'Mishnah Shevuot 5:5', 'Mishnah Shevuot 7:1', 'Mishnah Shevuot 7:5', 'Mishnah Bava Kamma 9:5', 'Mishnah Bava Kamma 9:7', 'Mishnah Sanhedrin 3:7', 'Sifra, Kedoshim, Section 2 1', 'Sifra, Kedoshim, Section 2 3', 'Sifra, Kedoshim, Section 2 5', 'Sifra, Kedoshim, Section 2 9', 'Sifra, Kedoshim, Section 2 10', 'Sifra, Kedoshim, Section 2 11', 'Sifra, Kedoshim, Section 2 12', 'Sifra, Kedoshim, Section 2 14', 'Sifra, Kedoshim, Chapter 4 1', 'Sifra, Kedoshim, Chapter 8 5', 'Onkelos Lev 19:13']
+    assert all('five_verbs_two_clocks_one_clause_at_two_seats' not in f for f in m.WORLD["facts"])
+    assert 'the_warning_file_and_the_wage_clock' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Kedoshim, Chapter 4 12', 'Onkelos Lev 19:18']
     assert all('the_great_rule_seat' not in f for f in m.WORLD["facts"])
     assert 'veahavta_lereacha' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

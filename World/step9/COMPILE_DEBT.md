@@ -33,12 +33,15 @@ Lev 24:10-23 (lev24) · Lev 25 + 27 valuations (yovel) · Lev 26
       + lev_15_female_discharge (15:19-33) — THE IMPURITY CLOCKS (timers
       per person; the count-seven; the eighth-day offerings). Sheet:
       Niddah, Zavim, Keritot 1:3-7, Kinnim (the pairs).
-- [ ] L3  lev_17_blood_center (17:1-16) + lev_18_sexual_land (18:1-30)
+- [x] L3  (DONE 2026-09-05 — cold_run_sanctions.py 241/241, 26% ink; REPORT_SANCTIONS.md)
+      lev_17_blood_center (17:1-16) + lev_18_sexual_land (18:1-30)
       + lev_20_sanctions (20:1-27) — the blood ban and the covering; the
       forbidden unions with their sanctions matrix (karet / court death
       by mode). Sheet: Keritot 1:1, Sanhedrin 7, Makkot 3, Yevamot 1-3,
       Chullin 6 (covering the blood), Zevachim 13 (outside slaughter).
-- [ ] L4  lev_19_holiness_neighbor (19:1-18) + lev_19_holiness_duty_ledger
+- [ ] L4  (L4a DONE 2026-09-06 — cold_run_holiness.py 186/186 first run, 19:1-18, 12% ink;
+      REPORT_HOLINESS.md; L4b 19:19-37 OPEN — Kilayim, Orlah whole + Makkot 3's four rows)
+      lev_19_holiness_neighbor (19:1-18) + lev_19_holiness_duty_ledger
       (19:1-37) + lev_19_mixtures_weights (19:19-37) — THE HOLINESS
       LEDGER (the largest: gleanings, theft and oaths, wages, the
       stumbling block, mixtures, orlah, weights). Sheet: Peah, Kilayim,

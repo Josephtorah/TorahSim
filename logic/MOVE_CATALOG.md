@@ -495,3 +495,43 @@ verse" (the third of R. Yishmael's thirteen) — run as a class
 operation rather than an analogy: the clause is not argued across,
 it is declared the class's own. The Sifra's formula is the
 declaration.
+
+## M-20 — THE WARNING COMPLETION (a punishment written in one place is armed by a warning written in another)
+The teacher holds the tradition's own rule that no penalty runs
+without a written WARNING (אַזְהָרָה, the warning clause) beside its
+written punishment — עֹנֶשׁ (the penalty clause) — and when a clause carries the one and
+not the other, it goes looking across the books for its twin, and
+pairs them: the compile's cross-book edge stated as a requirement,
+not a convenience. The tradition's own formula is עֹנֶשׁ שָׁמַעְנוּ,
+אַזְהָרָה מִנַּיִן ("the punishment we have heard — the warning, from
+where?").
+**Exemplars (registered 2026-09-06 at sitting L4a of the compile
+debt, from seats already on the record):** (1) Leviticus 19:11 "you
+shall not steal" — supplied as the WARNING for Exodus 22:3's double
+payment, whose clause writes the penalty alone (Sifra, Kedoshim,
+Section 2 1: the row's whole job); (2) 19:11's "you shall not deny,
+you shall not lie" and 19:12's "you shall not swear by My name
+falsely" — the warnings for Leviticus 5:21-24's fifth and guilt ram
+(Section 2 3); the cold compile fetched those punishments by live
+call into the Lev 5 engine while this chapter supplied the arming
+clause (claim LV19L-03); (3) the ghost-pit's three-verse completion
+— punishment at 20:27, warning at 19:31, karet at 20:6 — assembled
+by Sifra, Kedoshim, Chapter 10 1 (sitting L3, claim LV20-09); (4) the
+warning for offering outside found at Deuteronomy 12:13 "guard
+yourself lest you offer" for Leviticus 17:8-9's penalty (Sifra,
+Acharei Mot, Chapter 9 3); (5) the sister-clause pair of Kedoshim
+Chapter 11 10 and 11 12 — "no punishing from inference" AND "no
+warning from inference": both halves must be WRITTEN, which is why
+the search is a search and not a derivation.
+**Distinct from** M-07 (the import edge — a clause fetched to fill a
+local gap of CONTENT) and M-18 (a surplus clause pushed to a
+neighboring gap): here the fetched clause fills a gap of FORM — the
+penalty exists and is complete, but may not run until its warning is
+located. **Machine form:** a compiled sanction cell carries two
+addresses, (warning verse, punishment verse); the matrix of sitting
+L3 (cold_run_sanctions.py) already stores them as a pair, and this
+sitting's warning() cells return the pair explicitly.
+**Middah correspondence:** not one of the thirteen — a governance
+rule over the whole set (the fence of Chapter 11 10/12 forbids
+deriving either half), sitting beside the parse-direction and
+adjacency meta-rules in logic/MIDDOT.md's case law.

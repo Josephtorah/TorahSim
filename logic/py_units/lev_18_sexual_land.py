@@ -199,6 +199,10 @@ m.step("Lev.18.18")
 # isha_el_achotah — read, not installed
 m.witness_read("isha_el_achotah", "the_levirate_window_import",
                 cites=["Sifra, Kedoshim, Chapter 12 10", "Sifra, Kedoshim, Chapter 12 11", "Sifra, Kedoshim, Chapter 12 12", "Onkelos Lev 18:18"])
+# witness-tier presupposed read: kinship_composed_with_the_paternal_brother
+# on the_fifteen_women_computed — read, not installed
+m.witness_read("the_fifteen_women_computed", "kinship_composed_with_the_paternal_brother",
+                cites=["Mishnah Yevamot 1:1", "Mishnah Yevamot 1:3", "Mishnah Yevamot 1:2", "Mishnah Yevamot 2:3", "Mishnah Yevamot 3:2", "Mishnah Yevamot 3:10", "Mishnah Keritot 3:6", "Mishnah Sanhedrin 9:1", "Sifra, Kedoshim, Chapter 12 10", "Sifra, Kedoshim, Chapter 12 11", "Sifra, Kedoshim, Chapter 12 12", "Sifra, Kedoshim, Chapter 11 13", "Sifra, Kedoshim, Chapter 10 13", "Sifra, Kedoshim, Chapter 10 14", "Onkelos Lev 18:9"])
 
 # -------------------------- Lev.18.19 · ETNACHTA_SPLIT ---------------------
 # ‹ואל אשה בנדת› (“and-to woman in-rejection”)
@@ -331,7 +335,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('uvechukoteihem', 'the_nomos_register'), ('mishpatai_chukotai', 'the_canon_channel'), ('vachai_bahem', 'live_by_them'), ('lo_tikrevu', 'the_anti_inference_fence'), ('moledet_bayit', 'the_translated_case_split'), ('isha_el_achotah', 'the_levirate_window_import'), ('vataki_haaretz', 'the_land_ledger')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('uvechukoteihem', 'the_nomos_register'), ('mishpatai_chukotai', 'the_canon_channel'), ('vachai_bahem', 'live_by_them'), ('lo_tikrevu', 'the_anti_inference_fence'), ('moledet_bayit', 'the_translated_case_split'), ('isha_el_achotah', 'the_levirate_window_import'), ('the_fifteen_women_computed', 'kinship_composed_with_the_paternal_brother'), ('vataki_haaretz', 'the_land_ledger')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Acharei Mot, Section 8 3', 'Sifra, Acharei Mot, Section 8 4', 'Sifra, Acharei Mot, Section 8 8', 'Sifra, Acharei Mot, Chapter 13 8', 'Onkelos Lev 18:3']
     assert all('the_nomos_register' not in f for f in m.WORLD["facts"])
     assert 'uvechukoteihem' not in m.WORLD["witnessed"]
@@ -350,7 +354,10 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[5]["cites"] == ['Sifra, Kedoshim, Chapter 12 10', 'Sifra, Kedoshim, Chapter 12 11', 'Sifra, Kedoshim, Chapter 12 12', 'Onkelos Lev 18:18']
     assert all('the_levirate_window_import' not in f for f in m.WORLD["facts"])
     assert 'isha_el_achotah' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Acharei Mot, Chapter 13 16', 'Sifra, Acharei Mot, Chapter 13 19', 'Sifra, Acharei Mot, Chapter 13 20', 'Sifra, Acharei Mot, Chapter 13 21', 'Onkelos Lev 18:25', 'Onkelos Lev 18:30']
+    assert m.WITNESS_READS[6]["cites"] == ['Mishnah Yevamot 1:1', 'Mishnah Yevamot 1:3', 'Mishnah Yevamot 1:2', 'Mishnah Yevamot 2:3', 'Mishnah Yevamot 3:2', 'Mishnah Yevamot 3:10', 'Mishnah Keritot 3:6', 'Mishnah Sanhedrin 9:1', 'Sifra, Kedoshim, Chapter 12 10', 'Sifra, Kedoshim, Chapter 12 11', 'Sifra, Kedoshim, Chapter 12 12', 'Sifra, Kedoshim, Chapter 11 13', 'Sifra, Kedoshim, Chapter 10 13', 'Sifra, Kedoshim, Chapter 10 14', 'Onkelos Lev 18:9']
+    assert all('kinship_composed_with_the_paternal_brother' not in f for f in m.WORLD["facts"])
+    assert 'the_fifteen_women_computed' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Acharei Mot, Chapter 13 16', 'Sifra, Acharei Mot, Chapter 13 19', 'Sifra, Acharei Mot, Chapter 13 20', 'Sifra, Acharei Mot, Chapter 13 21', 'Onkelos Lev 18:25', 'Onkelos Lev 18:30']
     assert all('the_land_ledger' not in f for f in m.WORLD["facts"])
     assert 'vataki_haaretz' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -11740,3 +11740,156 @@ memory). OPEN (counted): 334 translit-fallback render lines; the seventy's decom
 (Seder Olam). Watches: will-indexed dispatch (2), demotion (1 — LV15B-03's operator now
 graded by the compile: Zavim 5:11 = Sifra Chapter 7 3 verbatim), consonant-fragment read
 (1); world-engine cascade depth + cycle detection (design only).
+═══ 2026-09-05, owner: "read resume docs" → the mandatory rereads done; "commit push" → L1 + L2
+COMMITTED+PUSHED 485d083 (33 files); "l3 go" → SITTING L3 OF THE COMPILE DEBT RUN END TO END. THE
+DOCKET by script: links (l3_links.json) → 26 Mishnah citations / 22 unique rows on Lev 17, 18, 20;
+461 Babylonian Talmud addresses (869 with the commentary layers, not the shelf); topic route: Mishnah
+Sanhedrin 7/9/11 whole (23), Makkot 3 whole (16), Yevamot 1-3 whole (24), Chullin 6 whole (7),
+Zevachim 13-14 whole (18), Keritot 1 whole (7) = 95 + 10 link rows outside = 105 rows; ledger
+logic/oral_triage/sanctions_topic_docket_2026-09-05.md by scratchpad/gen_sanctions_ledger.py (LAW 41 /
+CREDIT 32 / ROUTED 21 / CONTEXT 11; every CREDIT verified by script against a prior graded row — THE
+CREDIT GUARD FIRED ONCE: Yevamot 1:4 had only its twin Eduyot 4:8 graded → read and graded HERE as
+LAW; Tosefta Sanhedrin/Makkot/Yevamot/Chullin/Keritot enumerated outside scope, Tosefta Zevachim not on
+the shelf). SEVEN EFFECTS registered first (94 → 101): burned_by_court, beast_killed, childless,
+face_set_against, cover_owed, land_vomits, blood_reckoned. THE COLD FUNCTION:
+World/step9/cold_run_sanctions.py — 67 probes; censuses asserted (the formula דמיהם בם "their blood is
+upon them" at 20:11, 12, 13, 16, 27 + דמיו בו ("his blood is upon him") at 20:9; stoning NAMED at 20:2, 27; burning at 20:14;
+the bare death ×9; karet ×10 across the three chapters; ערירים "childless" ×2; bear-iniquity ×4; the
+set face ×4; זמה at 18:17, 20:14; הנה at 18:10, 18:17; "you shall not uncover" 18:7-17 + 20:19; the
+tent door ×4; the two outside verbs ישחט 17:3 / יעלה 17:8; 17:13 wild-or-bird once + dust + cover, the
+beast ABSENT; the land vomits ×3); THE KINSHIP ENGINE (Lev 18's relations composed with the paternal
+brother → the fifteen and the six); THE MATRIX (each union LOCATED by its kin token in 20, the located
+verse read for its sanction tokens; the formula decoder GROUNDED: 20:27 the one formula seat with a
+named mode = stoning); CALLS: cold_run_chatat.domain (unwitting/unknown/intentional), cold_run_clocks
+.zav('pair') (Zevachim 14:3's owner lacking time), cold_run_shemini.classify (20:25). FIRST GRADED RUN
+233/241; the eight misses closed WITHOUT opening a segment — four code gaps (PB.FB → FB; Molech's
+karet on 20:3; the bearer's karet from 20:6 by Kedoshim Chapter 10 1; the census names mother AND
+father's wife), two sheet values retyped from the rows (the curser NOT in Keritot 1:1; Sanhedrin 7:1's
+order = stoning, burning, KILLING, strangling), one literal reordered; FINAL 241/241; fractions 65 ink
+26% / 133 move 55% / 23 sheet / 5 data / 15 import; guard tripwire 241; run_cold_all 21/21, 1111
+cells. HONEST CATCHES: two locators (בבהמה "with a beast" at 20:15 AND 20:25; למלך "to Molech" at
+20:2, 3, 4 — locate by the full phrase); the `+ SA + '...' % (...)` precedence trap fired again at
+eight sites (parenthesize every formatted citation string — L1's lesson, now twice). SEATS
+(scratchpad/seat_l3.py; 48 cites pre-checked; anchors checked for comment + ops BEFORE writing):
+LV18-08 (F-212, THE FIFTEEN WOMEN ARE A KINSHIP COMPUTATION) at STEP_Lv_18_18; LV20-09 (F-213, THE
+SANCTIONS MATRIX BY ITS OWN TOKENS) at STEP_Lv_20_10; LV17-09 (F-214, THE FITNESS PATH, AND THE
+COVERING ON TWO NOUNS) at STEP_Lv_17_13; all three units GAINED the meta.changelog key; rituals
+COMPLETE ×3 (regression 163/163; the pre-revision reading-debt gate PASS-with-debt as always for these
+units); verify_claims 8 + 9 + 9, 0 failed; corpus_world → standing 1721 → 1724, hash 8b8fff1fa28953af
+UNMOVED, CORPUS_TRUTH rebaked green. RECORDS: REPORT_SANCTIONS.md; THE_STEPS Step 5 THE FIFTEENTH
+SPAN; COMPILE_DEBT L3 [x]; MIDDOT case-law row (a building block checked against the census that
+grounds it; the composition engine; the two locator catches); STAMP_LEDGER row; the ledger's MOTION-4
+OPENINGS note appended; this doc; memory. No new move (M-16 and M-18 exemplars already on record from
+the reading). Exam counters unmoved. Watches unchanged.
+
+═══ COMPACTION POINT #60 (2026-09-05 — written unprompted at sitting L3's close)
+═══ CLEAN POINT — no work mid-flight. L1 + L2 COMMITTED (485d083); L3 DONE. UNCOMMITTED since
+485d083: World/step9/{cold_run_sanctions.py, REPORT_SANCTIONS.md, effect_vocabulary.yaml,
+COMPILE_DEBT.md}, logic/oral_triage/sanctions_topic_docket_2026-09-05.md, logic/units/{lev_17_blood
+_center, lev_18_sexual_land, lev_20_sanctions}.yaml + manifests + py_units + html + UNIT_INDEX +
+ALL_UNITS, CORPUS_TRUTH.py + corpus_world.sqlite, STAMP_LEDGER, MIDDOT, THE_STEPS, this doc, memory —
+rides the owner's "commit push" (staging by exclusion; NEVER-COMMIT set unchanged; ⚠ every git command
+begins with `cd <repo-old> &&`). POST-COMPACTION REREADS (mandatory, first sitting):
+THE_STEPS Step 2 + Step 5 (the deliverable rule, the five motions, the effects rule, THE COMPILE DEBT,
+THE THIRTEENTH-FIFTEENTH SPANS) + the compiler block + this tail + World/step9/COMPILE_DEBT.md. THEN,
+on the owner's "go": SITTING L4 — THE HOLINESS LEDGER: lev_19_holiness_neighbor (19:1-18) +
+lev_19_holiness_duty_ledger (19:1-37) + lev_19_mixtures_weights (19:19-37), the largest — LIKELY TWO
+SITTINGS (L4a: 19:1-18 the gleanings, theft and oaths, wages, the stumbling block, the neighbor; L4b:
+19:19-37 the mixtures, orlah, the corners and incisions, the tattoo, weights, the elder, the convert),
+by the rhythm: docket by script (links UNION topic rows: Mishnah Peah whole (8 ch — the gleanings
+family), Kilayim whole (9 ch), Orlah whole (3 ch), Bava Metzia 9-10 (wages, the hired man), Bava Kamma
+9-10 (theft and restitution), Shevuot 5-8 (the deposit and the oath — cold_run_guardians already holds
+8:1; cases_oaths credits), Makkot 3:5-6 (the corners, the tattoo — verdicted ROUTED here at L3),
+Sanhedrin (the elder? no — Kiddushin 1:7 honor), Bikkurim 2:11 (the koy — credited round 44); prior
+credits in acharei_exam_mishnah_2026-09-05 (round 44 — the holiness conduct file, 79 rows) +
+cases_acharei.yaml + the Peah rows of round 47's Sheviit docket? (check) + the lev_19 reading ledger
+(the Sifra Kedoshim Sections 1-3 / Chapters 1-8 rows); ledger FIRST with computed coverage,
+cold_run_holiness.py (guard from birth; THE GLEANINGS ENGINE — peah/leket/shikchah/peret/olelot as
+field-state effects; the wage clock 19:13 "shall not stay overnight" — a TIMER; theft/denial/false oath
+CALLING cold_run_vayikra5.deposit_restitution (the fifth + the guilt offering, Lev 5:20-26 — the
+Shevuot 8 rows credited); the stumbling block; the judge's partiality; the talebearer; hate/rebuke/
+revenge/grudge/love as conduct effects; the mixtures 19:19 (Kilayim's classifier — CALL shemini for
+species?); orlah's three years + the fourth's holiness (a TIMER on the tree); the corners and the
+incision (Makkot 3:5 rows); the tattoo; the daughter not prostituted; the Sabbath/sanctuary pair; the
+ghost-pit warning 19:31 (the consulter's — L3's ov('consulter') cites it); the elder's honor; the
+convert's love; weights and measures), effects from the verbs (registry 101; expect: peah_left,
+gleanings_left, wage_due_by_morning (timer), orlah_barred (timer), fourth_year_holy, love_owed?...),
+seats where the sheet is pre-answered, ritual ×3, corpus_world (standing 1724), records (REPORT,
+THE_STEPS Step 5 span paragraph, COMPILE_DEBT [x] L4, MOVE_CATALOG/MIDDOT if new, STAMP row, this doc,
+memory). OPEN (counted): 334 translit-fallback render lines; the seventy's decomposition (Seder Olam).
+Watches: will-indexed dispatch (2), demotion (1), consonant-fragment read (1); world-engine cascade
+depth + cycle detection (design only).
+═══ 2026-09-06, owner: "go l4" → SITTING L4a OF THE COMPILE DEBT RUN END TO END (Lev 19 split in two
+sittings as #60 foresaw; L4a = 19:1-18). THE DOCKET by script: links (l4_links.json) → 38 Mishnah
+citations on Lev 19 (36 unique), 18 on 19:1-18; 289 core Talmud addresses on the chapter, 161 on the
+half; topic route: Mishnah Peah whole (69), Bava Metzia 9 whole (13), Bava Kamma 9-10 whole (22), Shevuot
+5-8 whole (26) = 130 + 14 link rows outside = 144 rows; ledger logic/oral_triage/holiness_topic_docket_
+2026-09-06.md by scratchpad/gen_holiness_ledger.py (LAW 55 / CREDIT 34 / ROUTED 28 / CONTEXT 27; every
+CREDIT verified by script; Peah 6:1 read as LAW since only its twin Eduyot 4:3 had been graded; Tosefta
+Peah/BM/BK/Shevuot enumerated outside scope). EIGHT EFFECTS registered first (101 → 109): left_for_the_
+poor (transfer), wage_due_by_morning (timer), name_profaned, judgment_perverted, given_to_the_heart
+(heaven), rebuke_owed, love_owed, rescue_owed (debit). THE COLD FUNCTION: World/step9/cold_run_holiness.py
+— 41 probes; censuses asserted ("I am the LORD" at 2,3,4,10,12,14,16,18 of the half; "fear your God" at
+14, 32; the four reaping-tokens of 19:9; the four gift-nouns פאת "corner" at 9 AND 27 (the head's corner
+— one token, two laws), ולקט/תלקט "gleanings" at 9-10, תעולל "small clusters" 10, ופרט "fallen grapes" 10;
+תעזב "leave" 10; the five verbs of 19:11-12 in order; עמית "fellow" at 11, 15, 17, רעך "neighbor" 13, 16,
+18, אחיך "brother" 17, עמך "people" 16, 18; "no wrong in judgment" at 15 AND 35; "love as yourself" at
+18 AND 34; 19:3 opens אמו ואביו "his mother and his father"; Lev 23:22 vs 19:9-10 token diff = the
+vineyard clauses absent); CALLS: cold_run_vayikra5.deposit_restitution (nine cells: principal-fifth-ram,
+no-oath principal, the fine class refused, even to Media, the fifth on the fifth, the father), cold_run_
+tzav.rejection_machine (window, leftover, pigul, wrong-place), cold_run_yovel.interest()['both_nouns']
+(the lender under the stumbling block). 186/186 ON THE FIRST GRADED RUN — NO Talmud opened; fractions 24
+ink 12% / 90 move 48% / 33 sheet / 13 data / 26 import; guard tripwire 186; run_cold_all 22/22, 1297
+cells. THE TOOL LESSON: the `'...' + SK + '...' % (...)` precedence trap fired a THIRD time (14 sites) →
+closed by an AST rewriter, scratchpad/fix_percent.py (lifts every partial format inside a cell() reason
+to the whole concatenation; utf-8 byte offsets handled) — RUN IT ON EVERY NEW RUNNER BEFORE THE FIRST
+EXECUTION. SEATS (scratchpad/seat_l4a.py; 43 cites pre-checked; anchors checked): LV19A-09 (F-215, THE
+POOR GIFTS ON FOUR NOUNS AND ONE VERB) at STEP_Lv_19_9 of lev_19_holiness_neighbor; LV19L-03 (F-216, THE
+WARNING FILE AND THE WAGE CLOCK) at STEP_Lv_19_13 of lev_19_holiness_duty_ledger; both gained the
+meta.changelog key; rituals COMPLETE ×2 (regression 163/163); verify_claims 9 + 18, 0 failed; corpus_
+world → standing 1724 → 1726, hash 8b8fff1fa28953af UNMOVED, CORPUS_TRUTH rebaked green. RECORDS:
+REPORT_HOLINESS.md (L4a section; L4b appends); THE_STEPS Step 5 THE SIXTEENTH SPAN; COMPILE_DEBT L4 line
+(L4a DONE, L4b OPEN); STAMP_LEDGER row; the ledger's MOTION-4 OPENINGS note; this doc; memory. M-20 THE
+WARNING COMPLETION REGISTERED in MOVE_CATALOG.md (five exemplars already on the record: 19:11 for Exod
+22:3; 19:11-12 for Lev 5:21-24; the ghost-pit's three-verse completion; Acharei Chapter 9 3's Deut 12
+warning; the no-warning-from-inference fence) — the standing duty discharged the sitting it was found. Exam counters
+unmoved. Watches unchanged.
+
+═══ COMPACTION POINT #61 (2026-09-06 — written unprompted at sitting L4a's close)
+═══ CLEAN POINT — no work mid-flight. L3 + L4a DONE (uncommitted since 485d083). UNCOMMITTED: L3's
+files (#60's list) + L4a's: World/step9/{cold_run_holiness.py, REPORT_HOLINESS.md, effect_vocabulary.yaml,
+COMPILE_DEBT.md}, logic/oral_triage/holiness_topic_docket_2026-09-06.md, logic/units/{lev_19_holiness_
+neighbor, lev_19_holiness_duty_ledger}.yaml + manifests + py_units + html + UNIT_INDEX + ALL_UNITS,
+CORPUS_TRUTH.py + corpus_world.sqlite, STAMP_LEDGER, THE_STEPS, this doc, memory — rides the owner's
+"commit push" (staging by exclusion; NEVER-COMMIT set unchanged; ⚠ every git command begins with `cd
+<repo-old> &&`). POST-COMPACTION REREADS (mandatory, first sitting): THE_STEPS Step 2 +
+Step 5 (the deliverable rule, the five motions, the effects rule, THE COMPILE DEBT, THE THIRTEENTH-
+SIXTEENTH SPANS) + the compiler block + this tail + World/step9/COMPILE_DEBT.md. THEN, on the owner's
+"go": SITTING L4b — THE HOLINESS LEDGER, SECOND HALF, Lev 19:19-37 (lev_19_mixtures_weights whole +
+lev_19_holiness_duty_ledger's steps 19-37), by the rhythm: docket by script (links UNION topic rows: the
+18 L4b link rows from l4_links.json (BK 5:7, Bikkurim 2:11, Makkot 3:8, 3:9, 3:14, 3:5, 3:6, Keritot 2:5,
+2:2, Zevachim 5:5, Kiddushin 2:9, 1:7, Meilah 4:6, Terumot 11:3, 3:9, Peah 7:6, BM 4:8, Sanhedrin 7:7 —
+most credited in round 44); topic route: Mishnah KILAYIM whole (9 ch, 77 rows — 19:19's three mixtures),
+ORLAH whole (3 ch, 35 rows — 19:23-25), Makkot 3:5-6, 3:8-9 (verdicted ROUTED-here at L3), Keritot 2:2-5
+(the maidservant's asham — 19:20-22; Kiddushin 1? no), Kiddushin 1:7 (the razor's gender carve), Terumot
+3:9/11:3, Meilah 4:6; the Sifra Kedoshim Chapter 4 13-18 (mixtures), Chapter 5 (the maidservant),
+Section 3 (orlah), Chapter 6 (the five laws, the razor, the tattoo), Chapter 7 (the daughter, the
+sanctuary, the ghost-pit, the elder), Chapter 8 (the convert, the measures) rows in the lev_19 reading
+ledger — ALL READ; the 128 remaining Talmud addresses of the chapter = L4b's index), ledger FIRST with
+computed coverage (append a SECOND docket file or a new section? — a NEW file holiness_b_topic_docket_
+2026-09-06.md keeps coverage computation clean), extend cold_run_holiness.py? NO — a SECOND runner
+cold_run_holiness_b.py (its own guard tripwire; CALL cold_run_holiness for the judge-is-measurer cell and
+the convert's love; CALL cold_run_shemini for the species mixtures? CALL cold_run_vayikra5 for the
+maidservant's asham (Keritot 2:2's deliberate-as-erring); CALL cold_run_sanctions.ov('consulter') for
+19:31; CALL cold_run_yovel for the orlah timer's year rule (the thirty days = a year, Section 3 7)),
+RUN scratchpad/fix_percent.py BEFORE the first execution, effects from the verbs (registry 109; expect:
+mixture_barred (block), orlah_barred (timer — three years from planting), fourth_year_holy (status),
+lashed? exists, honor_owed (the elder — debit), measures_just? (status), daughter_not_profaned?),
+seats where the sheet is pre-answered (lev_19_mixtures_weights LV19B-10 at STEP_Lv_19_19 or 19_23;
+the duty ledger LV19L-04 at STEP_Lv_19_35), ritual ×2, corpus_world (standing 1726), records (REPORT_
+HOLINESS L4b section, THE_STEPS Step 5 SEVENTEENTH SPAN, COMPILE_DEBT [x] L4, MOVE_CATALOG (M-20 THE
+WARNING COMPLETION already registered at L4a — add exemplars only), MIDDOT if new, STAMP row, this doc,
+memory). UNCOMMITTED now 35 repo files (L3 + L4a) + logic/MOVE_CATALOG.md. OPEN
+(counted): 334 translit-fallback render lines; the seventy's decomposition (Seder Olam). Watches:
+will-indexed dispatch (2), demotion (1), consonant-fragment read (1); world-engine cascade depth + cycle
+detection (design only).
