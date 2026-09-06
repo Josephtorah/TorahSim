@@ -39,15 +39,19 @@ Lev 24:10-23 (lev24) · Lev 25 + 27 valuations (yovel) · Lev 26
       forbidden unions with their sanctions matrix (karet / court death
       by mode). Sheet: Keritot 1:1, Sanhedrin 7, Makkot 3, Yevamot 1-3,
       Chullin 6 (covering the blood), Zevachim 13 (outside slaughter).
-- [ ] L4  (L4a DONE 2026-09-06 — cold_run_holiness.py 186/186 first run, 19:1-18, 12% ink;
-      REPORT_HOLINESS.md; L4b 19:19-37 OPEN — Kilayim, Orlah whole + Makkot 3's four rows)
+- [x] L4  (L4a DONE 2026-09-06 — cold_run_holiness.py 186/186 first run, 19:1-18, 12% ink;
+      L4b DONE 2026-09-06 — cold_run_holiness_b.py 182/182 first run, 19:19-37, 12% ink, Kilayim and
+      Orlah whole, the first runner under THE DEPENDENCY GATE's census-first rule; REPORT_HOLINESS.md)
       lev_19_holiness_neighbor (19:1-18) + lev_19_holiness_duty_ledger
       (19:1-37) + lev_19_mixtures_weights (19:19-37) — THE HOLINESS
       LEDGER (the largest: gleanings, theft and oaths, wages, the
       stumbling block, mixtures, orlah, weights). Sheet: Peah, Kilayim,
       Orlah, Bava Metzia 9-10, Bava Kamma 9-10, Shevuot 5-8, Sanhedrin,
       Makkot 3. Likely two sittings.
-- [ ] L5  lev_21_priest_family (21:1-15) + lev_21_priest_blemish
+- [x] L5  (DONE 2026-09-06 — cold_run_priesthood.py 250/250 first run, 17% ink; the five units in ONE runner;
+      Bekhorot 6-7, Terumot 6-8, Yevamot 6-9, Zevachim 8-9, Temurah 6, Menachot 11, Tamid 3, Chullin 5 whole;
+      six edges dispositioned before a cell, one OWED to E1 (Exod 22:29's firstling eighth day); REPORT_PRIESTHOOD.md)
+      lev_21_priest_family (21:1-15) + lev_21_priest_blemish
       (21:16-24) + lev_22_holy_food (22:1-16) + lev_22_acceptable_offerings
       (22:17-33) + lev_24_lamp_bread (24:1-9) — THE PRIESTHOOD AND ITS
       DUES (defilement licenses, the marriage bans, the blemish census,
@@ -55,11 +59,17 @@ Lev 24:10-23 (lev24) · Lev 25 + 27 valuations (yovel) · Lev 26
       Sheet: Bekhorot 6-7, Terumot 6-8, Yevamot 6-9, Zevachim 8-9,
       Temurah 6, Menachot 11, Tamid 3.
   Narrative, no function owed: lev_09_eighth_day (the run of Lev 8's
-  installation is already the Tzav engine's scene 6),
+  installation is already the Tzav engine's scene 6 — and the run of
+  Lev 1-4 is now D8's runner, cold_run_shemini_day.py, 2026-09-06),
   lev_01_call_and_korban_opening (framing).
 
 ## EXODUS — five sittings
-- [ ] E1  exo_22_property_social 22:17-30 (verify: mishpatim_2 holds
+- [x] E1  (DONE 2026-09-06 — cold_run_ordinances.py 127/127 first run, 26% ink; four units in ONE runner; Sanhedrin 1, 3, 4, 7,
+      Bava Metzia 2 + 5, Bekhorot 8, Chullin 3, Terumot 3, Middot 3, Shevuot 4 whole; three edges + one homograph dispositioned
+      before a cell, five declared for live calls; THE FIRSTLING'S EIGHTH DAY COMPILED — the priesthood runner's OWED of L5
+      flipped to CALL (251/251 with the live call); the altar rules fetched from the decalogue runner (one function at two
+      seats); the mishpatim_2 span corrected (it had declared 22:29 with no cell); ten effects (145); F-233..F-236; REPORT_ORDINANCES.md)
+      exo_22_property_social 22:17-30 (verify: mishpatim_2 holds
       22:15-16 only) + exo_23_justice_calendar 23:1-9 (verify) +
       exo_20_the_ten_utterances 20:19-26 (the altar law — verify against
       the decalogue runner) + exo_23_escort_land 23:20-33 (the land
@@ -140,7 +150,11 @@ notes or silence. Repaired the same day, every item by the rhythm
 - [x] D7  THE GATE: World/step9/dependency_census.py + dependency_dispositions.yaml,
       run first by run_cold_all.py — every runner's span declared, every
       required edge and pointer dispositioned, every CALL verified live
-- [ ] D8  lev_09_eighth_day as the RUN of Lev 1-4's spec (9:16 "as
+- [x] D8  (DONE 2026-09-06 — cold_run_shemini_day.py 104/104 first run, 36% ink; the run graded as a SCENE
+      against the offering, meal-offering, sin-offering, and Tzav engines by live call; three edges and four
+      pointers dispositioned before a cell; Zevachim 10, 14, Tamid 4 whole; four effects (135); F-231..F-232;
+      the run-teaches-spec direction registered as move M-22; REPORT_SHEMINI_DAY.md)
+      lev_09_eighth_day as the RUN of Lev 1-4's spec (9:16 "as
       prescribed" cites Lev 1) — the demonstrate-by-run form inside one
       book (the E2/E3 shape); recommended 2026-09-06 as ONE SHORT SITTING
       AFTER L5, before E1 (the owner: "this is your call")
@@ -148,14 +162,37 @@ notes or silence. Repaired the same day, every item by the rhythm
       discussion; ruled "your call"): the ungated carries: field on edges,
       the --debt worklist listing, the generated DEPENDENCY_INDEX.md —
       built the same day; LATE binding reserved per proven cycle, unbuilt
-- [ ] D9  THE DAEMON-EDGE GATE — part of the daemon campaign's spec when
-      the owner orders it (outside the compile debt): each world_engine
-      wrap's TRIGGER EVENTS and EMITTED EFFECTS censused and dispositioned
-      as these edges are; the effects registry (117) is the emitted half,
-      the trigger-event vocabulary the unbuilt half (54 of 59 functions
-      unwrapped per the other thread's count — a campaign, not plumbing)
+- [ ] D9  THE DAEMON CAMPAIGN — RULED by the owner 2026-09-06 ("that
+      works") on the two-thread consensus. WHEN: after this list's LAST
+      check mark and BEFORE Numbers opens on the walk. SHAPE, in order:
+      (i) ONE SEEDING SITTING — the EVENT-TYPE REGISTRY harvested from the
+      existing tape (the corpus world's 557 narrative events and the
+      engine's scene records), each type with a witness, the effects
+      registry's own harvest shape; (ii) THE DAEMON-EDGE GATE as the first
+      deliverable — every wrapped function declares its trigger event
+      types and its effects, a census verifies both against the
+      registries, an unwrapped compiled function is OWED: the 54 (per the
+      other thread's count) become a generated worklist; (iii) the wraps
+      by engine family (est. 8-12 sittings), each a scene replay with
+      literal checkpoints under the honest-pairing guard; (iv) then THE
+      DELIVERABLE RULE AMENDED — a law span finishes Step 5 when its cold
+      function exists, its dependency edges are dispositioned, AND its
+      wrap is declared and verified; the wrap a SIXTH motion after the
+      five, conditions read from the ink's case tokens first. THE FENCE
+      (law 6): a daemon CONSUMES events and WRITES the ledger only, never
+      emits an event; cascades run through LEDGER STATE (one daemon's
+      write satisfies another's condition), never synthetic events; timer
+      firings are their own record class (scheduled ledger operations);
+      every daemon prints its watch coverage (the zero-report law and the
+      Chronicle's fired-count column share one instrument); the engine
+      carries a cascade depth bound with cycle detection — a cascade that
+      ran to the bound is reported, never silently truncated.
 The COMPILED list above gains: Lev 14:1-32 (metzora); and inside the
-Lev 1-8 engine, 3:3-17, 6:7-11, 7:1-7; inside Lev 23, 23:18-19.
+Lev 1-8 engine, 3:3-17, 6:7-11, 7:1-7; inside Lev 23, 23:18-19. And
+from the debt's own sittings: Lev 4 + 10:8-20 (chatat), Lev 12 + 15
+(clocks), Lev 17 + 18 + 20 (sanctions), Lev 19 (holiness, holiness_b), Lev 21 + 22 + 24:1-9
+(priesthood) — LEVITICUS'S FIVE SITTINGS ALL CHECKED (2026-09-06). OWED from L5: Exod 22:29's
+firstling eighth day (the priesthood runner's 22:27 join) — E1 compiles the callee.
 
 Estimate: twelve sittings (five, five, two), each the full rhythm —
 the docket by topic (links UNION topic rows, enumerated by script),

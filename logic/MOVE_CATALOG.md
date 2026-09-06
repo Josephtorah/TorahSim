@@ -401,6 +401,7 @@ that question. Distinct from M-15 (the voice read): there the
 grammatical FORM as written carries the law; here a SECOND pointing
 of the same skeleton is added to the first.
 SIXTH AND SEVENTH EXEMPLARS (2026-09-05, the Acharei Mot-Kedoshim sweep) — and the move's first seats in the SIFRA ITSELF: the male-lying warning for the passive read by R. Akiva from the ban verb re-pointed in the passive voice (Sifra, Kedoshim, Chapter 10 11), and the beast clause's passive warning the same way (שכבתך re-heard — Sifra, Kedoshim, Chapter 11 2): the move now attested in the tannaitic midrash layer, not only the Babylonian Talmud.
+EIGHTH EXEMPLAR (2026-09-06, sitting L5 of the compile debt, cold_run_priesthood.py — the Emor spine's own seat): the castration ban's reach to HUMANS read by ben Chakinai from וּבְאַרְצְכֶם ("and in your LAND," Lev 22:24) re-heard as וּבָכֶם ("and in YOU") — Sifra, Emor, Chapter 7 11; the same clause's "you shall not DO" already widening the ban past offering to the act itself, and the human's crushed testicle then defined by the beast's verse (Mishnah Yevamot 8:2, "even one of them"). The compiled cell carries the revocalization as one arm beside the plain reading.
 **Middah correspondence:** the al-tikrei family ("do not read X but
 Y") — the tradition's own name for the operation.
 
@@ -550,7 +551,14 @@ yourself lest you offer" for Leviticus 17:8-9's penalty (Sifra,
 Acharei Mot, Chapter 9 3); (5) the sister-clause pair of Kedoshim
 Chapter 11 10 and 11 12 — "no punishing from inference" AND "no
 warning from inference": both halves must be WRITTEN, which is why
-the search is a search and not a derivation.
+the search is a search and not a derivation; (6) (sitting L4b,
+2026-09-06) Leviticus 19:26 "you shall not eat OVER the blood" —
+the fifth of the Sifra's five laws on the one clause is the WARNING
+for the wayward son's gluttony, whose penalty stands at Deuteronomy
+21:21 (Sifra, Kedoshim, Chapter 6 1, R. Yosei son of R. Chanina);
+and the ghost-pit triple of exemplar (3) now runs as a live call —
+the second-half runner holds the warning and fetches the bearer's
+stoning from the sanctions engine (cold_run_holiness_b.py).
 **Distinct from** M-07 (the import edge — a clause fetched to fill a
 local gap of CONTENT) and M-18 (a surplus clause pushed to a
 neighboring gap): here the fetched clause fills a gap of FORM — the
@@ -563,3 +571,114 @@ sitting's warning() cells return the pair explicitly.
 rule over the whole set (the fence of Chapter 11 10/12 forbids
 deriving either half), sitting beside the parse-direction and
 adjacency meta-rules in logic/MIDDOT.md's case law.
+
+
+## M-21 — THE INTERSECTION SOLVE (two bans on one act, each too wide alone; the liable act is their intersection)
+Registered 2026-09-06 (sitting L4b of the compile debt,
+cold_run_holiness_b.py) from two exemplars in one chapter. The
+teacher holds two written prohibitions that fall on the same act
+from different sides, each of which read alone would reach too
+far, and defines the LIABLE act as the region both cover — the
+tradition's own pincer, run across two verses instead of inside
+one clause. Exemplar (1), THE RAZOR: Leviticus 19:27 "you shall not
+DESTROY the corner of your beard" (could be even with scissors?)
+and Leviticus 21:5 "they shall not SHAVE the corner of their
+beard" (could be even with tweezers or a plane?) — Sifra, Kedoshim,
+Chapter 6 4 intersects them: scissors-like-a-razor is shaving
+without destruction, tweezers and the plane are destruction without
+shaving, and the act that is BOTH shaving and destruction is the
+razor — Mishnah Makkot 3:5 "not liable unless he takes it with a
+razor" (R. Eliezer's dissent kept beside it, 6 6). The second
+constraint lives in the priests' law — COMPILED AT ITS HOME at
+sitting L5 (2026-09-06, cold_run_priesthood.py): the priests' cell
+for 21:5 "they shall not SHAVE" now fetches the solve by LIVE CALL
+from the holiness engine's razor cell, the corners and the gash
+multipliers with it, and the dependency gate carries the edge
+(priesthood -> holiness_b, CALL, verdict) — the intersection's two
+verses are two runners, joined by an import edge in the direction
+the ink reads (the priests' verse calls the people's). Exemplar (2), THE TATTOO:
+Leviticus 19:28 "an inscribed tattoo" — one noun-phrase, two verbs;
+"wrote and did not engrave, engraved and did not write — not liable
+until he writes AND engraves" (Chapter 6 10; Mishnah Makkot 3:6),
+which Onkelos renders as the two-word noun "engraved markings".
+**Distinct from** M-17 (the tension resolution): there two tokens in
+ONE clause pull opposite ways and the law is a construction that
+satisfies both (the corner hit that is both a throw and a circuit);
+here two BANS, each complete in itself, are laid over one act and
+the liable region is their overlap — set intersection, not
+geometry. Distinct from M-20 (the warning completion): there the
+second verse supplies the missing HALF of a penalty; here both
+verses are prohibitions and the pairing NARROWS rather than arms.
+**Machine form:** a predicate on the act is the conjunction of the
+two verses' predicates (shaving AND destroying; writing AND
+engraving); the cold runner's razor cell takes the tool and returns
+liable only where both hold, the dissent as a second arm.
+**Middah correspondence:** the form is the talmud-lomar pincer
+("could you say X? the verse says A; then Y? the verse says B") of
+the thirteen's own idiom, applied to two prohibitions; beside it the
+sitting's other letter-level move — the acronym rule (E30 of the
+thirty-two) reading the one noun "shaatnez" as three conjoined
+predicates, carded, spun, woven (Mishnah Kilayim 9:8 = Sifra,
+Kedoshim, Chapter 4 18) — which is a conjunction read OUT of one
+word rather than built across two verses, and is logged in
+logic/MIDDOT.md's case law rather than here.
+
+## M-22 — THE RUN READ BACK INTO THE SPEC (a narrated execution of a law legislates a column the law's own text leaves open)
+Registered 2026-09-06 (sitting D8 of the compile debt,
+cold_run_shemini_day.py) from five exemplars in one chapter. The
+teacher holds a SPEC (a law paragraph) and a RUN (the narrative of that
+law's first execution) and reads a term of the run — a pointer, a
+token, a preposition, a sequence — back into the spec as a rule the
+spec never wrote. The compile's own direction is the reverse (the run
+graded against the spec by live call, the divergences named); this
+move is the tradition's, and it is the demonstrate-by-run form of the
+24 books (THE_STEPS: Torah by SPEC, the Prophets and Writings by RUN)
+turned into a compile step. Exemplar (1), THE POINTER: Leviticus 9:16
+"and he brought the burnt offering and did it AS PRESCRIBED (כמשפט)" —
+"as the law of the FREEWILL burnt offering: teaches that the
+OBLIGATORY burnt offering requires hand-laying" (Menachot 93b:3 =
+Beitzah 20a:5, inside Beit Hillel's arm of Mishnah Beitzah 2:4): the
+run's pointer into Leviticus 1 gives Leviticus 1 a column (Lev 1:4's
+hand-laying extended to a class the chapter does not name). Exemplar
+(2), THE TOKEN: 9:17 "and he filled HIS PALM (כפו) from it" — R. Zeira:
+'palm', I do not know what it is; Leviticus 14:15 alone writes "the
+LEFT palm", hence wherever 'palm' stands unmarked it is the RIGHT
+(Menachot 9b:17; Rava's hand-hand analogy beside it, 10a:6) — Mishnah
+Menachot 1:2's left-hand fistful invalid by a token of the run; the
+meal-offering engine's cell now fetches the derivation from this verse
+by call. Exemplar (3), THE PREPOSITION: 9:10 "the lobe FROM (מן) the
+liver" resolves Lev 3:4's "the lobe ON (על) the liver" — from the liver
+onto the lobe (Sifra, Vayikra Dibbura DeNedavah, Section 14 8).
+Exemplar (4), THE SEQUENCE: 9:22 "and Aaron lifted his hands to the
+people and blessed them, and came down from doing the sin offering, the
+burnt offering, and the peace offerings" — the blessing's posture
+(lifted palms, by verbal analogy to Num 6:23, Sotah 38a:6), its timing
+(in the service, Sotah 38b:7), its place in the prayer (after the
+thanksgiving, Megillah 18a:3), and the high priest's hands (R. Yehuda,
+Mishnah Sotah 7:6) all read off one verse of the run. Exemplar (5), THE
+CLASS: 9:4 and 9:18 "an ox and a ram for peace offerings FOR THE
+PEOPLE" — "from here they learned peace offerings for the public"
+(Sifra, Shemini, Mechilta d'Miluim 2 13); and Menachot 59a:11 puts the
+eighth day's meal offering into the frankincense column by an inclusion
+on Lev 2:1. **The fork inside the move (recorded, Menachot 19b:2-4):**
+Rav — wherever Scripture REPEATED 'meal offering' it is indispensable,
+and 9:17's fistful is the fistful repeated; Shmuel — "GENERATIONS ARE
+NOT LEARNED FROM THE HOUR" — דורות משעה לא ילפינן ("generations from an hour we do not learn"): a one-time act does
+not legislate. The direction of inference between run and spec is
+itself a model parameter with two recorded settings, like THE METHOD
+FORK's rival engines; the compile carries both arms. **Distinct from**
+the RUN_CITATION pointer (the run citing its spec — "as the LORD
+commanded", 9:7 and 9:10 — which the dependency gate dispositions and
+the scene grades: that direction is verification, this one is
+legislation) and from M-16 (the revocalization read — a consonant
+string reheard; here the tokens are read as written, in a narrative
+seat). **Machine form:** a run cell whose value is fetched from the
+spec engine by call carries beside it a spec cell whose value is READ
+FROM THE RUN'S token — the runner's people('palm_is_right') cell holds
+the right hand derived from 9:17 and calls the meal-offering engine's
+left-hand verdict as its check; the fork is carried as a two-arm value.
+**Middah correspondence:** the verbal analogy (I2) on 'palm' with 'the
+left palm' and on 'so shall you bless' with 'and Aaron lifted'; the
+inclusion by the repeated term (Rav's arm) against the governance rule
+that bars learning from the hour (Shmuel's arm) — logged in
+logic/MIDDOT.md's case law as a rule about which seats may teach.

@@ -27,6 +27,10 @@ m.step("Lev.19.19")
 # read, not installed
 m.witness_read("kilayim_shaatnez", "the_mixture_bans",
                 cites=["Sifra, Kedoshim, Chapter 4 13", "Sifra, Kedoshim, Chapter 4 14", "Sifra, Kedoshim, Chapter 4 16", "Sifra, Kedoshim, Chapter 4 17", "Sifra, Kedoshim, Chapter 4 18"])
+# witness-tier presupposed read: kilayim_whole_graded_first_run on
+# the_three_mixtures_on_one_noun_thrice — read, not installed
+m.witness_read("the_three_mixtures_on_one_noun_thrice", "kilayim_whole_graded_first_run",
+                cites=["Sifra, Kedoshim, Chapter 4 13", "Sifra, Kedoshim, Chapter 4 14", "Sifra, Kedoshim, Chapter 4 15", "Sifra, Kedoshim, Chapter 4 16", "Sifra, Kedoshim, Chapter 4 17", "Sifra, Kedoshim, Chapter 4 18", "Mishnah Kilayim 8:1", "Mishnah Kilayim 9:8", "Mishnah Kilayim 9:1", "Mishnah Kilayim 9:2", "Mishnah Kilayim 9:9", "Mishnah Kilayim 1:4", "Mishnah Kilayim 1:6", "Mishnah Kilayim 1:9", "Mishnah Kilayim 2:3", "Mishnah Kilayim 3:5", "Mishnah Kilayim 8:4", "Mishnah Orlah 3:9", "Mishnah Makkot 3:8", "Mishnah Bava Kamma 5:7", "Mishnah Bikkurim 2:11", "Onkelos Lev 19:19"])
 
 # -------------------------- Lev.19.20 · COND_כי (“that”) -------------------
 # ‹ואיש כי ישכב› (“and-man that lie-down”)
@@ -43,6 +47,11 @@ m.step("Lev.19.20")
 # shifcha_necherefet — read, not installed
 m.witness_read("shifcha_necherefet", "the_designated_maidservant",
                 cites=["Sifra, Kedoshim, Chapter 5 2", "Sifra, Kedoshim, Chapter 5 3", "Sifra, Kedoshim, Chapter 5 4", "Sifra, Kedoshim, Chapter 5 5", "Sifra, Kedoshim, Chapter 5 7", "Sifra, Kedoshim, Chapter 5 10", "Onkelos Lev 19:20"])
+# witness-tier presupposed read:
+# the_deliberate_as_the_erring_read_off_which_he_sinned_twice on
+# the_maidservant_on_her_hapax_tokens — read, not installed
+m.witness_read("the_maidservant_on_her_hapax_tokens", "the_deliberate_as_the_erring_read_off_which_he_sinned_twice",
+                cites=["Sifra, Kedoshim, Chapter 5 1", "Sifra, Kedoshim, Chapter 5 2", "Sifra, Kedoshim, Chapter 5 3", "Sifra, Kedoshim, Chapter 5 4", "Sifra, Kedoshim, Chapter 5 5", "Sifra, Kedoshim, Chapter 5 6", "Sifra, Kedoshim, Chapter 5 7", "Sifra, Kedoshim, Chapter 5 8", "Sifra, Kedoshim, Chapter 5 9", "Sifra, Kedoshim, Chapter 5 10", "Mishnah Keritot 2:2", "Mishnah Keritot 2:3", "Mishnah Keritot 2:4", "Mishnah Keritot 2:5", "Mishnah Zevachim 5:5", "Mishnah Makkot 3:14", "Onkelos Lev 19:20", "Onkelos Lev 19:22"])
 
 # -------------------------- Lev.19.21 · ETNACHTA_SPLIT ---------------------
 # ‹והביא את אשמו› (“and-come/bring obj-marker guilt-him/its”)
@@ -79,6 +88,10 @@ m.step("Lev.19.23")
 # not installed
 m.witness_read("orlah", "the_intent_defined_tree",
                 cites=["Sifra, Kedoshim, Section 3 2", "Sifra, Kedoshim, Section 3 3", "Sifra, Kedoshim, Section 3 6", "Sifra, Kedoshim, Section 3 7", "Sifra, Kedoshim, Section 3 8", "Sifra, Kedoshim, Section 3 10"])
+# witness-tier presupposed read: orlah_whole_graded_first_run on
+# the_orlah_timer_on_the_tripled_token — read, not installed
+m.witness_read("the_orlah_timer_on_the_tripled_token", "orlah_whole_graded_first_run",
+                cites=["Sifra, Kedoshim, Section 3 1", "Sifra, Kedoshim, Section 3 2", "Sifra, Kedoshim, Section 3 3", "Sifra, Kedoshim, Section 3 4", "Sifra, Kedoshim, Section 3 6", "Sifra, Kedoshim, Section 3 7", "Sifra, Kedoshim, Section 3 8", "Sifra, Kedoshim, Section 3 9", "Sifra, Kedoshim, Section 3 10", "Mishnah Orlah 1:1", "Mishnah Orlah 1:2", "Mishnah Orlah 1:3", "Mishnah Orlah 1:5", "Mishnah Orlah 1:7", "Mishnah Orlah 1:8", "Mishnah Orlah 2:1", "Mishnah Orlah 3:1", "Mishnah Orlah 3:5", "Mishnah Orlah 3:7", "Mishnah Orlah 3:9", "Mishnah Rosh Hashanah 1:1", "Mishnah Peah 7:6", "Mishnah Bava Metzia 4:8", "Mishnah Terumot 11:3", "Mishnah Terumot 3:9", "Mishnah Kiddushin 2:9", "Mishnah Meilah 4:6", "Onkelos Lev 19:23", "Onkelos Lev 19:24"])
 
 # -------------------------- Lev.19.24 · ETNACHTA_SPLIT ---------------------
 # ‹ובשנה הרביעת יהיה› (“and-in-years the-fourth be”)
@@ -247,32 +260,41 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('kilayim_shaatnez', 'the_mixture_bans'), ('shifcha_necherefet', 'the_designated_maidservant'), ('orlah', 'the_intent_defined_tree'), ('kodesh_hilulim', 'the_blessing_peg'), ('lo_tochlu_al_hadam', 'one_verse_five_laws'), ('peat_zakan', 'the_razor_solve'), ('mikdashi_tirau', 'sanctuary_yields_to_sabbath'), ('mipnei_seivah_takum', 'the_scholar_elder'), ('moznei_tzedek', 'measures_are_judgment')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('kilayim_shaatnez', 'the_mixture_bans'), ('the_three_mixtures_on_one_noun_thrice', 'kilayim_whole_graded_first_run'), ('shifcha_necherefet', 'the_designated_maidservant'), ('the_maidservant_on_her_hapax_tokens', 'the_deliberate_as_the_erring_read_off_which_he_sinned_twice'), ('orlah', 'the_intent_defined_tree'), ('the_orlah_timer_on_the_tripled_token', 'orlah_whole_graded_first_run'), ('kodesh_hilulim', 'the_blessing_peg'), ('lo_tochlu_al_hadam', 'one_verse_five_laws'), ('peat_zakan', 'the_razor_solve'), ('mikdashi_tirau', 'sanctuary_yields_to_sabbath'), ('mipnei_seivah_takum', 'the_scholar_elder'), ('moznei_tzedek', 'measures_are_judgment')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Kedoshim, Chapter 4 13', 'Sifra, Kedoshim, Chapter 4 14', 'Sifra, Kedoshim, Chapter 4 16', 'Sifra, Kedoshim, Chapter 4 17', 'Sifra, Kedoshim, Chapter 4 18']
     assert all('the_mixture_bans' not in f for f in m.WORLD["facts"])
     assert 'kilayim_shaatnez' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Kedoshim, Chapter 5 2', 'Sifra, Kedoshim, Chapter 5 3', 'Sifra, Kedoshim, Chapter 5 4', 'Sifra, Kedoshim, Chapter 5 5', 'Sifra, Kedoshim, Chapter 5 7', 'Sifra, Kedoshim, Chapter 5 10', 'Onkelos Lev 19:20']
+    assert m.WITNESS_READS[1]["cites"] == ['Sifra, Kedoshim, Chapter 4 13', 'Sifra, Kedoshim, Chapter 4 14', 'Sifra, Kedoshim, Chapter 4 15', 'Sifra, Kedoshim, Chapter 4 16', 'Sifra, Kedoshim, Chapter 4 17', 'Sifra, Kedoshim, Chapter 4 18', 'Mishnah Kilayim 8:1', 'Mishnah Kilayim 9:8', 'Mishnah Kilayim 9:1', 'Mishnah Kilayim 9:2', 'Mishnah Kilayim 9:9', 'Mishnah Kilayim 1:4', 'Mishnah Kilayim 1:6', 'Mishnah Kilayim 1:9', 'Mishnah Kilayim 2:3', 'Mishnah Kilayim 3:5', 'Mishnah Kilayim 8:4', 'Mishnah Orlah 3:9', 'Mishnah Makkot 3:8', 'Mishnah Bava Kamma 5:7', 'Mishnah Bikkurim 2:11', 'Onkelos Lev 19:19']
+    assert all('kilayim_whole_graded_first_run' not in f for f in m.WORLD["facts"])
+    assert 'the_three_mixtures_on_one_noun_thrice' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Kedoshim, Chapter 5 2', 'Sifra, Kedoshim, Chapter 5 3', 'Sifra, Kedoshim, Chapter 5 4', 'Sifra, Kedoshim, Chapter 5 5', 'Sifra, Kedoshim, Chapter 5 7', 'Sifra, Kedoshim, Chapter 5 10', 'Onkelos Lev 19:20']
     assert all('the_designated_maidservant' not in f for f in m.WORLD["facts"])
     assert 'shifcha_necherefet' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Kedoshim, Section 3 2', 'Sifra, Kedoshim, Section 3 3', 'Sifra, Kedoshim, Section 3 6', 'Sifra, Kedoshim, Section 3 7', 'Sifra, Kedoshim, Section 3 8', 'Sifra, Kedoshim, Section 3 10']
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Kedoshim, Chapter 5 1', 'Sifra, Kedoshim, Chapter 5 2', 'Sifra, Kedoshim, Chapter 5 3', 'Sifra, Kedoshim, Chapter 5 4', 'Sifra, Kedoshim, Chapter 5 5', 'Sifra, Kedoshim, Chapter 5 6', 'Sifra, Kedoshim, Chapter 5 7', 'Sifra, Kedoshim, Chapter 5 8', 'Sifra, Kedoshim, Chapter 5 9', 'Sifra, Kedoshim, Chapter 5 10', 'Mishnah Keritot 2:2', 'Mishnah Keritot 2:3', 'Mishnah Keritot 2:4', 'Mishnah Keritot 2:5', 'Mishnah Zevachim 5:5', 'Mishnah Makkot 3:14', 'Onkelos Lev 19:20', 'Onkelos Lev 19:22']
+    assert all('the_deliberate_as_the_erring_read_off_which_he_sinned_twice' not in f for f in m.WORLD["facts"])
+    assert 'the_maidservant_on_her_hapax_tokens' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Kedoshim, Section 3 2', 'Sifra, Kedoshim, Section 3 3', 'Sifra, Kedoshim, Section 3 6', 'Sifra, Kedoshim, Section 3 7', 'Sifra, Kedoshim, Section 3 8', 'Sifra, Kedoshim, Section 3 10']
     assert all('the_intent_defined_tree' not in f for f in m.WORLD["facts"])
     assert 'orlah' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Kedoshim, Section 3 9', 'Onkelos Lev 19:24']
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Kedoshim, Section 3 1', 'Sifra, Kedoshim, Section 3 2', 'Sifra, Kedoshim, Section 3 3', 'Sifra, Kedoshim, Section 3 4', 'Sifra, Kedoshim, Section 3 6', 'Sifra, Kedoshim, Section 3 7', 'Sifra, Kedoshim, Section 3 8', 'Sifra, Kedoshim, Section 3 9', 'Sifra, Kedoshim, Section 3 10', 'Mishnah Orlah 1:1', 'Mishnah Orlah 1:2', 'Mishnah Orlah 1:3', 'Mishnah Orlah 1:5', 'Mishnah Orlah 1:7', 'Mishnah Orlah 1:8', 'Mishnah Orlah 2:1', 'Mishnah Orlah 3:1', 'Mishnah Orlah 3:5', 'Mishnah Orlah 3:7', 'Mishnah Orlah 3:9', 'Mishnah Rosh Hashanah 1:1', 'Mishnah Peah 7:6', 'Mishnah Bava Metzia 4:8', 'Mishnah Terumot 11:3', 'Mishnah Terumot 3:9', 'Mishnah Kiddushin 2:9', 'Mishnah Meilah 4:6', 'Onkelos Lev 19:23', 'Onkelos Lev 19:24']
+    assert all('orlah_whole_graded_first_run' not in f for f in m.WORLD["facts"])
+    assert 'the_orlah_timer_on_the_tripled_token' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Kedoshim, Section 3 9', 'Onkelos Lev 19:24']
     assert all('the_blessing_peg' not in f for f in m.WORLD["facts"])
     assert 'kodesh_hilulim' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Kedoshim, Chapter 6 1', 'Sifra, Kedoshim, Chapter 6 2', 'Onkelos Lev 19:26']
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Kedoshim, Chapter 6 1', 'Sifra, Kedoshim, Chapter 6 2', 'Onkelos Lev 19:26']
     assert all('one_verse_five_laws' not in f for f in m.WORLD["facts"])
     assert 'lo_tochlu_al_hadam' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Kedoshim, Chapter 6 3', 'Sifra, Kedoshim, Chapter 6 4', 'Sifra, Kedoshim, Chapter 6 5', 'Sifra, Kedoshim, Chapter 6 7', 'Sifra, Kedoshim, Chapter 6 8', 'Sifra, Kedoshim, Chapter 6 9', 'Sifra, Kedoshim, Chapter 6 10', 'Onkelos Lev 19:28']
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Kedoshim, Chapter 6 3', 'Sifra, Kedoshim, Chapter 6 4', 'Sifra, Kedoshim, Chapter 6 5', 'Sifra, Kedoshim, Chapter 6 7', 'Sifra, Kedoshim, Chapter 6 8', 'Sifra, Kedoshim, Chapter 6 9', 'Sifra, Kedoshim, Chapter 6 10', 'Onkelos Lev 19:28']
     assert all('the_razor_solve' not in f for f in m.WORLD["facts"])
     assert 'peat_zakan' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Kedoshim, Chapter 7 1', 'Sifra, Kedoshim, Chapter 7 3', 'Sifra, Kedoshim, Chapter 7 7', 'Sifra, Kedoshim, Chapter 7 8', 'Sifra, Kedoshim, Chapter 7 9', 'Onkelos Lev 19:29']
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Kedoshim, Chapter 7 1', 'Sifra, Kedoshim, Chapter 7 3', 'Sifra, Kedoshim, Chapter 7 7', 'Sifra, Kedoshim, Chapter 7 8', 'Sifra, Kedoshim, Chapter 7 9', 'Onkelos Lev 19:29']
     assert all('sanctuary_yields_to_sabbath' not in f for f in m.WORLD["facts"])
     assert 'mikdashi_tirau' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Kedoshim, Chapter 7 12', 'Sifra, Kedoshim, Chapter 7 13', 'Sifra, Kedoshim, Chapter 7 14', 'Sifra, Kedoshim, Chapter 7 15', 'Sifra, Kedoshim, Chapter 8 1', 'Sifra, Kedoshim, Chapter 8 2', 'Sifra, Kedoshim, Chapter 8 3', 'Sifra, Kedoshim, Chapter 8 4', 'Onkelos Lev 19:32']
+    assert m.WITNESS_READS[10]["cites"] == ['Sifra, Kedoshim, Chapter 7 12', 'Sifra, Kedoshim, Chapter 7 13', 'Sifra, Kedoshim, Chapter 7 14', 'Sifra, Kedoshim, Chapter 7 15', 'Sifra, Kedoshim, Chapter 8 1', 'Sifra, Kedoshim, Chapter 8 2', 'Sifra, Kedoshim, Chapter 8 3', 'Sifra, Kedoshim, Chapter 8 4', 'Onkelos Lev 19:32']
     assert all('the_scholar_elder' not in f for f in m.WORLD["facts"])
     assert 'mipnei_seivah_takum' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Kedoshim, Chapter 8 5', 'Sifra, Kedoshim, Chapter 8 7', 'Sifra, Kedoshim, Chapter 8 8', 'Sifra, Kedoshim, Chapter 8 9', 'Sifra, Kedoshim, Chapter 8 10', 'Onkelos Lev 19:35']
+    assert m.WITNESS_READS[11]["cites"] == ['Sifra, Kedoshim, Chapter 8 5', 'Sifra, Kedoshim, Chapter 8 7', 'Sifra, Kedoshim, Chapter 8 8', 'Sifra, Kedoshim, Chapter 8 9', 'Sifra, Kedoshim, Chapter 8 10', 'Onkelos Lev 19:35']
     assert all('measures_are_judgment' not in f for f in m.WORLD["facts"])
     assert 'moznei_tzedek' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

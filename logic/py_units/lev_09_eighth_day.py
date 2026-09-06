@@ -38,6 +38,11 @@ m.step("Lev.9.2")
 # not installed
 m.witness_read("egel_ben_bakar", "calf_answers_calf",
                 cites=["Sifra, Shemini, Mechilta d'Miluim 2 3", "Sifra, Shemini, Mechilta d'Miluim 2 4", "Sifra, Shemini, Mechilta d'Miluim 2 5"])
+# witness-tier presupposed read:
+# the_calf_for_the_bull_and_the_one_unstamped_act on
+# the_run_graded_against_its_spec — read, not installed
+m.witness_read("the_run_graded_against_its_spec", "the_calf_for_the_bull_and_the_one_unstamped_act",
+                cites=["Sifra, Shemini, Mechilta d'Miluim 2 1", "Sifra, Shemini, Mechilta d'Miluim 2 3", "Sifra, Shemini, Mechilta d'Miluim 2 4", "Sifra, Shemini, Mechilta d'Miluim 2 5", "Sifra, Shemini, Mechilta d'Miluim 2 9", "Sifra, Shemini, Mechilta d'Miluim 2 10", "Sifra, Shemini, Mechilta d'Miluim 2 13", "Sifra, Shemini, Mechilta d'Miluim 2 14", "Sifra, Shemini, Mechilta d'Miluim 2 16", "Sifra, Shemini, Mechilta d'Miluim 2 19", "Sifra, Shemini, Mechilta d'Miluim 2 20", "Sifra, Shemini, Mechilta d'Miluim 2 29", "Sifra, Shemini, Mechilta d'Miluim 2 30", "Sifra, Shemini, Mechilta d'Miluim 2 31", "Sifra, Tzav, Mekhilta DeMiluim I 12", "Sifra, Tzav, Mekhilta DeMiluim I 16", "Sifra, Tzav, Mekhilta DeMiluim I 36", "Sifra, Vayikra Dibbura DeNedavah, Chapter 2 5", "Sifra, Vayikra Dibbura DeChovah, Chapter 3 6", "Mishnah Zevachim 10:1", "Mishnah Zevachim 10:2", "Mishnah Zevachim 10:6", "Mishnah Zevachim 14:4", "Mishnah Zevachim 14:9", "Mishnah Zevachim 14:10", "Mishnah Zevachim 5:3", "Mishnah Zevachim 5:4", "Mishnah Zevachim 5:7", "Mishnah Horayot 3:6", "Mishnah Menachot 4:4", "Mishnah Parah 1:1", "Mishnah Tamid 4:2", "Zevachim 61b:5", "Zevachim 89b:2", "Zevachim 89b:3", "Zevachim 101b:6", "Yoma 3b:4", "Shabbat 87b:6", "Megillah 10b:8", "Gittin 60a:13", "Moed Katan 28b:13", "Menachot 45a:12", "Onkelos Lev 9:15", "Onkelos Lev 9:16"])
 
 # -------------------------- Lev.9.3 · ETNACHTA_SPLIT -----------------------
 # ‹ואל בני ישראל› (“and-to son Israel”)
@@ -200,6 +205,10 @@ m.step("Lev.9.17")
 # installed
 m.witness_read("vayimale_khapo", "fistful_sync",
                 cites=["Sifra, Shemini, Mechilta d'Miluim 2 11", "Sifra, Shemini, Mechilta d'Miluim 2 12"])
+# witness-tier presupposed read: the_fork_over_whether_an_hour_legislates on
+# the_run_teaches_the_spec — read, not installed
+m.witness_read("the_run_teaches_the_spec", "the_fork_over_whether_an_hour_legislates",
+                cites=["Sifra, Shemini, Mechilta d'Miluim 2 10", "Sifra, Shemini, Mechilta d'Miluim 2 11", "Sifra, Shemini, Mechilta d'Miluim 2 12", "Sifra, Shemini, Mechilta d'Miluim 2 17", "Sifra, Shemini, Mechilta d'Miluim 2 29", "Sifra, Shemini, Mechilta d'Miluim 2 30", "Sifra, Vayikra Dibbura DeNedavah, Section 14 8", "Menachot 9b:17", "Menachot 10a:6", "Menachot 19b:2", "Menachot 19b:3", "Menachot 19b:4", "Menachot 93b:3", "Beitzah 20a:5", "Menachot 59a:11", "Menachot 62a:1", "Menachot 62a:4", "Menachot 62a:5", "Sotah 38a:6", "Sotah 38b:7", "Megillah 18a:3", "Mishnah Menachot 1:2", "Mishnah Menachot 3:5", "Mishnah Menachot 5:3", "Mishnah Beitzah 2:4", "Mishnah Sotah 7:6", "Onkelos Lev 9:16", "Onkelos Lev 9:21"])
 
 # -------------------------- Lev.9.18 · ETNACHTA_SPLIT ----------------------
 # ‹וישחט את השור› (“and-slaughter obj-marker the-bullock”)
@@ -300,32 +309,38 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('yom_shemini', 'eighth_of_the_count'), ('egel_ben_bakar', 'calf_answers_calf'), ('krav_el_hamizbeach', 'own_before_people'), ('vayechatehu_karishon', 'like_the_first_import'), ('kamishpat', 'procedure_pointer'), ('vayimale_khapo', 'fistful_sync'), ('zevach_hashelamim_asher_laam', 'communal_shelamim'), ('vayisa_aharon_yadav', 'transposed_blessing'), ('vayavo_moshe_veaharon', 'entry_and_fire')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('yom_shemini', 'eighth_of_the_count'), ('egel_ben_bakar', 'calf_answers_calf'), ('the_run_graded_against_its_spec', 'the_calf_for_the_bull_and_the_one_unstamped_act'), ('krav_el_hamizbeach', 'own_before_people'), ('vayechatehu_karishon', 'like_the_first_import'), ('kamishpat', 'procedure_pointer'), ('vayimale_khapo', 'fistful_sync'), ('the_run_teaches_the_spec', 'the_fork_over_whether_an_hour_legislates'), ('zevach_hashelamim_asher_laam', 'communal_shelamim'), ('vayisa_aharon_yadav', 'transposed_blessing'), ('vayavo_moshe_veaharon', 'entry_and_fire')]
     assert m.WITNESS_READS[0]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 1", "Sifra, Shemini, Mechilta d'Miluim 2 14", "Sifra, Shemini, Mechilta d'Miluim 2 15"]
     assert all('eighth_of_the_count' not in f for f in m.WORLD["facts"])
     assert 'yom_shemini' not in m.WORLD["witnessed"]
     assert m.WITNESS_READS[1]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 3", "Sifra, Shemini, Mechilta d'Miluim 2 4", "Sifra, Shemini, Mechilta d'Miluim 2 5"]
     assert all('calf_answers_calf' not in f for f in m.WORLD["facts"])
     assert 'egel_ben_bakar' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 8", "Sifra, Shemini, Mechilta d'Miluim 2 9"]
+    assert m.WITNESS_READS[2]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 1", "Sifra, Shemini, Mechilta d'Miluim 2 3", "Sifra, Shemini, Mechilta d'Miluim 2 4", "Sifra, Shemini, Mechilta d'Miluim 2 5", "Sifra, Shemini, Mechilta d'Miluim 2 9", "Sifra, Shemini, Mechilta d'Miluim 2 10", "Sifra, Shemini, Mechilta d'Miluim 2 13", "Sifra, Shemini, Mechilta d'Miluim 2 14", "Sifra, Shemini, Mechilta d'Miluim 2 16", "Sifra, Shemini, Mechilta d'Miluim 2 19", "Sifra, Shemini, Mechilta d'Miluim 2 20", "Sifra, Shemini, Mechilta d'Miluim 2 29", "Sifra, Shemini, Mechilta d'Miluim 2 30", "Sifra, Shemini, Mechilta d'Miluim 2 31", 'Sifra, Tzav, Mekhilta DeMiluim I 12', 'Sifra, Tzav, Mekhilta DeMiluim I 16', 'Sifra, Tzav, Mekhilta DeMiluim I 36', 'Sifra, Vayikra Dibbura DeNedavah, Chapter 2 5', 'Sifra, Vayikra Dibbura DeChovah, Chapter 3 6', 'Mishnah Zevachim 10:1', 'Mishnah Zevachim 10:2', 'Mishnah Zevachim 10:6', 'Mishnah Zevachim 14:4', 'Mishnah Zevachim 14:9', 'Mishnah Zevachim 14:10', 'Mishnah Zevachim 5:3', 'Mishnah Zevachim 5:4', 'Mishnah Zevachim 5:7', 'Mishnah Horayot 3:6', 'Mishnah Menachot 4:4', 'Mishnah Parah 1:1', 'Mishnah Tamid 4:2', 'Zevachim 61b:5', 'Zevachim 89b:2', 'Zevachim 89b:3', 'Zevachim 101b:6', 'Yoma 3b:4', 'Shabbat 87b:6', 'Megillah 10b:8', 'Gittin 60a:13', 'Moed Katan 28b:13', 'Menachot 45a:12', 'Onkelos Lev 9:15', 'Onkelos Lev 9:16']
+    assert all('the_calf_for_the_bull_and_the_one_unstamped_act' not in f for f in m.WORLD["facts"])
+    assert 'the_run_graded_against_its_spec' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 8", "Sifra, Shemini, Mechilta d'Miluim 2 9"]
     assert all('own_before_people' not in f for f in m.WORLD["facts"])
     assert 'krav_el_hamizbeach' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 9", 'Onkelos Lev 9:15']
+    assert m.WITNESS_READS[4]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 9", 'Onkelos Lev 9:15']
     assert all('like_the_first_import' not in f for f in m.WORLD["facts"])
     assert 'vayechatehu_karishon' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 10", 'Onkelos Lev 9:16']
+    assert m.WITNESS_READS[5]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 10", 'Onkelos Lev 9:16']
     assert all('procedure_pointer' not in f for f in m.WORLD["facts"])
     assert 'kamishpat' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 11", "Sifra, Shemini, Mechilta d'Miluim 2 12"]
+    assert m.WITNESS_READS[6]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 11", "Sifra, Shemini, Mechilta d'Miluim 2 12"]
     assert all('fistful_sync' not in f for f in m.WORLD["facts"])
     assert 'vayimale_khapo' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 13"]
+    assert m.WITNESS_READS[7]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 10", "Sifra, Shemini, Mechilta d'Miluim 2 11", "Sifra, Shemini, Mechilta d'Miluim 2 12", "Sifra, Shemini, Mechilta d'Miluim 2 17", "Sifra, Shemini, Mechilta d'Miluim 2 29", "Sifra, Shemini, Mechilta d'Miluim 2 30", 'Sifra, Vayikra Dibbura DeNedavah, Section 14 8', 'Menachot 9b:17', 'Menachot 10a:6', 'Menachot 19b:2', 'Menachot 19b:3', 'Menachot 19b:4', 'Menachot 93b:3', 'Beitzah 20a:5', 'Menachot 59a:11', 'Menachot 62a:1', 'Menachot 62a:4', 'Menachot 62a:5', 'Sotah 38a:6', 'Sotah 38b:7', 'Megillah 18a:3', 'Mishnah Menachot 1:2', 'Mishnah Menachot 3:5', 'Mishnah Menachot 5:3', 'Mishnah Beitzah 2:4', 'Mishnah Sotah 7:6', 'Onkelos Lev 9:16', 'Onkelos Lev 9:21']
+    assert all('the_fork_over_whether_an_hour_legislates' not in f for f in m.WORLD["facts"])
+    assert 'the_run_teaches_the_spec' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 13"]
     assert all('communal_shelamim' not in f for f in m.WORLD["facts"])
     assert 'zevach_hashelamim_asher_laam' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 17", "Sifra, Shemini, Mechilta d'Miluim 2 29", "Sifra, Shemini, Mechilta d'Miluim 2 30"]
+    assert m.WITNESS_READS[9]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 17", "Sifra, Shemini, Mechilta d'Miluim 2 29", "Sifra, Shemini, Mechilta d'Miluim 2 30"]
     assert all('transposed_blessing' not in f for f in m.WORLD["facts"])
     assert 'vayisa_aharon_yadav' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 16", "Sifra, Shemini, Mechilta d'Miluim 2 19", "Sifra, Shemini, Mechilta d'Miluim 2 20", "Sifra, Shemini, Mechilta d'Miluim 2 30", "Sifra, Shemini, Mechilta d'Miluim 2 31", 'Onkelos Lev 9:4', 'Onkelos Lev 9:6', 'Onkelos Lev 9:23']
+    assert m.WITNESS_READS[10]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 16", "Sifra, Shemini, Mechilta d'Miluim 2 19", "Sifra, Shemini, Mechilta d'Miluim 2 20", "Sifra, Shemini, Mechilta d'Miluim 2 30", "Sifra, Shemini, Mechilta d'Miluim 2 31", 'Onkelos Lev 9:4', 'Onkelos Lev 9:6', 'Onkelos Lev 9:23']
     assert all('entry_and_fire' not in f for f in m.WORLD["facts"])
     assert 'vayavo_moshe_veaharon' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

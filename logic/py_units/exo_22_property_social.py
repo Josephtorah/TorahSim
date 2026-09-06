@@ -329,6 +329,11 @@ m.step("Exod.22.27")
 # curse_clauses — read, not installed
 m.witness_read("curse_clauses", "the_curse_files_derivation_layer",
                 cites=["Sanhedrin 56a:5", "Sanhedrin 56a:6", "Sanhedrin 56a:7", "Sanhedrin 66a:11", "Sanhedrin 66a:12", "Sanhedrin 66a:13", "Sanhedrin 66a:22", "Sanhedrin 66a:23", "Sanhedrin 66a:24", "Sanhedrin 85a:13", "Sanhedrin 85a:14", "Sanhedrin 85a:15", "Yevamot 22b:6", "Yevamot 22b:7", "Yevamot 22b:8"])
+# witness-tier presupposed read:
+# the_fork_at_elohim_and_the_firstlings_eighth_day_as_the_callee on
+# the_ordinances_tail_compiled — read, not installed
+m.witness_read("the_ordinances_tail_compiled", "the_fork_at_elohim_and_the_firstlings_eighth_day_as_the_callee",
+                cites=["Mekhilta on Exod 22:17", "Mekhilta on Exod 22:18", "Mekhilta on Exod 22:19", "Mekhilta on Exod 22:20", "Mekhilta on Exod 22:21-23", "Mekhilta on Exod 22:24", "Mekhilta on Exod 22:25-26", "Mekhilta on Exod 22:27", "Mekhilta on Exod 22:28", "Mekhilta on Exod 22:29", "Mekhilta on Exod 22:30", "Onkelos Exod 22:19", "Onkelos Exod 22:28", "Onkelos Exod 22:30", "Mishnah Sanhedrin 1:4", "Mishnah Sanhedrin 7:4", "Mishnah Sanhedrin 7:5", "Mishnah Sanhedrin 7:6", "Mishnah Sanhedrin 7:8", "Mishnah Sanhedrin 7:11", "Mishnah Bava Metzia 4:10", "Mishnah Bava Metzia 5:1", "Mishnah Bava Metzia 5:6", "Mishnah Bava Metzia 5:11", "Mishnah Bava Metzia 9:13", "Mishnah Bekhorot 8:1", "Mishnah Bekhorot 8:2", "Mishnah Bekhorot 8:6", "Mishnah Bekhorot 8:7", "Mishnah Bekhorot 8:8", "Mishnah Terumot 3:6", "Mishnah Terumot 3:7", "Mishnah Chullin 3:1", "Mishnah Chullin 3:2", "Mishnah Shevuot 4:13", "Mishnah Kiddushin 2:9", "Mishnah Makkot 3:2"])
 
 # -------------------------- Exod.22.28 · ETNACHTA_SPLIT --------------------
 # ‹מלאתך ודמעך לא› (“something-fulfilled-you/your and-tear-you/your not”)
@@ -382,7 +387,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('burglar_clause', 'sun_as_peace_and_the_life_override_seed'), ('burglar_clause', 'babylonian_layer'), ('grazing_clause', 'tooth_category_and_the_domain_matrix'), ('fire_clause', 'accident_as_intent_and_woman_as_man'), ('three_keeper_passages', 'the_hidden_parameter_diff'), ('keeper_oath_clause', 'judges_three_and_partial_admission'), ('keeper_oath_clause', 'exam_legs_f017'), ('oath_clause', 'all_torah_oaths_by_the_name'), ('oath_clause', 'administration_and_scope'), ('loss_by_a_fortiori', 'the_missing_column_generated'), ('borrower_clause', 'four_keepers_table_closes'), ('renter_routing', 'the_fourth_role_on_the_hire_clause'), ('seducer_clause', 'mohar_is_the_ketubah'), ('dowry_pointer', 'the_constant_in_another_book'), ('capital_clauses', 'the_three_capital_clauses_derivation_layer'), ('curse_clauses', 'the_curse_files_derivation_layer'), ('fullness_clause', 'gift_order_and_the_standing_act'), ('torn_flesh_clause', 'terefah_in_limb_vocabulary_and_the_dogs_wage')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('burglar_clause', 'sun_as_peace_and_the_life_override_seed'), ('burglar_clause', 'babylonian_layer'), ('grazing_clause', 'tooth_category_and_the_domain_matrix'), ('fire_clause', 'accident_as_intent_and_woman_as_man'), ('three_keeper_passages', 'the_hidden_parameter_diff'), ('keeper_oath_clause', 'judges_three_and_partial_admission'), ('keeper_oath_clause', 'exam_legs_f017'), ('oath_clause', 'all_torah_oaths_by_the_name'), ('oath_clause', 'administration_and_scope'), ('loss_by_a_fortiori', 'the_missing_column_generated'), ('borrower_clause', 'four_keepers_table_closes'), ('renter_routing', 'the_fourth_role_on_the_hire_clause'), ('seducer_clause', 'mohar_is_the_ketubah'), ('dowry_pointer', 'the_constant_in_another_book'), ('capital_clauses', 'the_three_capital_clauses_derivation_layer'), ('curse_clauses', 'the_curse_files_derivation_layer'), ('the_ordinances_tail_compiled', 'the_fork_at_elohim_and_the_firstlings_eighth_day_as_the_callee'), ('fullness_clause', 'gift_order_and_the_standing_act'), ('torn_flesh_clause', 'terefah_in_limb_vocabulary_and_the_dogs_wage')]
     assert m.WITNESS_READS[0]["cites"] == ['Mekhilta on Exod 22:1-2', 'Onkelos Exod 22:2']
     assert all('sun_as_peace_and_the_life_override_seed' not in f for f in m.WORLD["facts"])
     assert 'burglar_clause' not in m.WORLD["witnessed"]
@@ -431,10 +436,13 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[15]["cites"] == ['Sanhedrin 56a:5', 'Sanhedrin 56a:6', 'Sanhedrin 56a:7', 'Sanhedrin 66a:11', 'Sanhedrin 66a:12', 'Sanhedrin 66a:13', 'Sanhedrin 66a:22', 'Sanhedrin 66a:23', 'Sanhedrin 66a:24', 'Sanhedrin 85a:13', 'Sanhedrin 85a:14', 'Sanhedrin 85a:15', 'Yevamot 22b:6', 'Yevamot 22b:7', 'Yevamot 22b:8']
     assert all('the_curse_files_derivation_layer' not in f for f in m.WORLD["facts"])
     assert 'curse_clauses' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[16]["cites"] == ['Mekhilta on Exod 22:28', 'Mishnah Terumot 3:6', 'Mishnah Terumot 3:7', 'Onkelos Exod 22:28']
+    assert m.WITNESS_READS[16]["cites"] == ['Mekhilta on Exod 22:17', 'Mekhilta on Exod 22:18', 'Mekhilta on Exod 22:19', 'Mekhilta on Exod 22:20', 'Mekhilta on Exod 22:21-23', 'Mekhilta on Exod 22:24', 'Mekhilta on Exod 22:25-26', 'Mekhilta on Exod 22:27', 'Mekhilta on Exod 22:28', 'Mekhilta on Exod 22:29', 'Mekhilta on Exod 22:30', 'Onkelos Exod 22:19', 'Onkelos Exod 22:28', 'Onkelos Exod 22:30', 'Mishnah Sanhedrin 1:4', 'Mishnah Sanhedrin 7:4', 'Mishnah Sanhedrin 7:5', 'Mishnah Sanhedrin 7:6', 'Mishnah Sanhedrin 7:8', 'Mishnah Sanhedrin 7:11', 'Mishnah Bava Metzia 4:10', 'Mishnah Bava Metzia 5:1', 'Mishnah Bava Metzia 5:6', 'Mishnah Bava Metzia 5:11', 'Mishnah Bava Metzia 9:13', 'Mishnah Bekhorot 8:1', 'Mishnah Bekhorot 8:2', 'Mishnah Bekhorot 8:6', 'Mishnah Bekhorot 8:7', 'Mishnah Bekhorot 8:8', 'Mishnah Terumot 3:6', 'Mishnah Terumot 3:7', 'Mishnah Chullin 3:1', 'Mishnah Chullin 3:2', 'Mishnah Shevuot 4:13', 'Mishnah Kiddushin 2:9', 'Mishnah Makkot 3:2']
+    assert all('the_fork_at_elohim_and_the_firstlings_eighth_day_as_the_callee' not in f for f in m.WORLD["facts"])
+    assert 'the_ordinances_tail_compiled' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[17]["cites"] == ['Mekhilta on Exod 22:28', 'Mishnah Terumot 3:6', 'Mishnah Terumot 3:7', 'Onkelos Exod 22:28']
     assert all('gift_order_and_the_standing_act' not in f for f in m.WORLD["facts"])
     assert 'fullness_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[17]["cites"] == ['Mekhilta on Exod 22:30', 'Onkelos Exod 22:30']
+    assert m.WITNESS_READS[18]["cites"] == ['Mekhilta on Exod 22:30', 'Onkelos Exod 22:30']
     assert all('terefah_in_limb_vocabulary_and_the_dogs_wage' not in f for f in m.WORLD["facts"])
     assert 'torn_flesh_clause' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

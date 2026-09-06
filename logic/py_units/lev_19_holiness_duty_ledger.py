@@ -621,6 +621,11 @@ m.step("Lev.19.35")
 # ‹בַּמִּדָּה בַּמִּשְׁקָל וּבַמְּשׂוּרָה› (“in-extension in-weight and-in-
 # measure”)
 m.statute("FORBID", "avel_ba_mishpat_ba_mida_ba_mishqal_u_va_mesura")
+# witness-tier presupposed read: the_verse_that_returns_at_26_2 on
+# the_second_halfs_clauses_at_their_second_seats_by_live_call — read, not
+# installed
+m.witness_read("the_second_halfs_clauses_at_their_second_seats_by_live_call", "the_verse_that_returns_at_26_2",
+                cites=["Sifra, Kedoshim, Chapter 8 3", "Sifra, Kedoshim, Chapter 8 4", "Sifra, Kedoshim, Chapter 8 5", "Sifra, Kedoshim, Chapter 8 6", "Sifra, Kedoshim, Chapter 8 7", "Sifra, Kedoshim, Chapter 8 8", "Sifra, Kedoshim, Chapter 8 9", "Sifra, Kedoshim, Chapter 8 10", "Sifra, Kedoshim, Chapter 8 11", "Sifra, Kedoshim, Chapter 7 7", "Sifra, Kedoshim, Chapter 7 8", "Sifra, Kedoshim, Chapter 7 10", "Sifra, Kedoshim, Chapter 7 12", "Sifra, Kedoshim, Chapter 7 13", "Sifra, Kedoshim, Chapter 7 14", "Sifra, Kedoshim, Chapter 7 15", "Sifra, Kedoshim, Chapter 6 4", "Sifra, Kedoshim, Section 1 10", "Mishnah Bava Batra 5:10", "Mishnah Bava Batra 5:11", "Mishnah Sanhedrin 7:7", "Mishnah Makkot 3:5", "Mishnah Bava Metzia 4:10", "Onkelos Lev 19:32", "Onkelos Lev 19:35"])
 
 # -------------------------- Lev.19.36 · THE_JUST_KIT -----------------------
 # ‹מֹאזְנֵי צֶדֶק אַבְנֵי־צֶדֶק› (“pair-of-scales right stone right”)
@@ -667,7 +672,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 70
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('kal_adat', 'the_onkelos_buffer_paid'), ('the_warning_file_and_the_wage_clock', 'five_verbs_two_clocks_one_clause_at_two_seats'), ('veahavta_lereacha', 'the_great_rule_seat')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('kal_adat', 'the_onkelos_buffer_paid'), ('the_warning_file_and_the_wage_clock', 'five_verbs_two_clocks_one_clause_at_two_seats'), ('veahavta_lereacha', 'the_great_rule_seat'), ('the_second_halfs_clauses_at_their_second_seats_by_live_call', 'the_verse_that_returns_at_26_2')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Kedoshim, Section 1 1', 'Onkelos Lev 19:2']
     assert all('the_onkelos_buffer_paid' not in f for f in m.WORLD["facts"])
     assert 'kal_adat' not in m.WORLD["witnessed"]
@@ -677,4 +682,7 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[2]["cites"] == ['Sifra, Kedoshim, Chapter 4 12', 'Onkelos Lev 19:18']
     assert all('the_great_rule_seat' not in f for f in m.WORLD["facts"])
     assert 'veahavta_lereacha' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Kedoshim, Chapter 8 3', 'Sifra, Kedoshim, Chapter 8 4', 'Sifra, Kedoshim, Chapter 8 5', 'Sifra, Kedoshim, Chapter 8 6', 'Sifra, Kedoshim, Chapter 8 7', 'Sifra, Kedoshim, Chapter 8 8', 'Sifra, Kedoshim, Chapter 8 9', 'Sifra, Kedoshim, Chapter 8 10', 'Sifra, Kedoshim, Chapter 8 11', 'Sifra, Kedoshim, Chapter 7 7', 'Sifra, Kedoshim, Chapter 7 8', 'Sifra, Kedoshim, Chapter 7 10', 'Sifra, Kedoshim, Chapter 7 12', 'Sifra, Kedoshim, Chapter 7 13', 'Sifra, Kedoshim, Chapter 7 14', 'Sifra, Kedoshim, Chapter 7 15', 'Sifra, Kedoshim, Chapter 6 4', 'Sifra, Kedoshim, Section 1 10', 'Mishnah Bava Batra 5:10', 'Mishnah Bava Batra 5:11', 'Mishnah Sanhedrin 7:7', 'Mishnah Makkot 3:5', 'Mishnah Bava Metzia 4:10', 'Onkelos Lev 19:32', 'Onkelos Lev 19:35']
+    assert all('the_verse_that_returns_at_26_2' not in f for f in m.WORLD["facts"])
+    assert 'the_second_halfs_clauses_at_their_second_seats_by_live_call' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

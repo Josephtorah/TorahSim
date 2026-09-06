@@ -545,6 +545,26 @@ owner's confirmed process):
      runtime); late binding is reserved per proven cycle; the daemon
      campaign, with its own trigger-and-effect gate, is a separate
      future order.
+     ⚠ THE DAEMON CAMPAIGN (owner-ruled 2026-09-06, "that works", on
+     the second two-thread consensus): it runs after the three-book
+     compile debt's LAST check mark and BEFORE Numbers opens — first a
+     seeding sitting (the EVENT-TYPE REGISTRY harvested from the
+     existing tape, the effects registry's own harvest shape), then
+     the daemon-edge gate (every wrapped function declares its trigger
+     event types and effects, censused against the registries;
+     unwrapped = OWED, a generated worklist), then the wraps by engine
+     family (scene replays with literal checkpoints under the
+     honest-pairing guard). WHEN THE CAMPAIGN CLOSES, THE DELIVERABLE
+     RULE READS: a law span finishes this step when its cold function
+     exists, its dependency edges are dispositioned, AND its wrap is
+     declared and verified — the wrap a SIXTH motion after the five,
+     conditions read from the ink's case tokens first. The fence
+     (method law 6) stated for daemons: a daemon CONSUMES events and
+     WRITES the ledger only, never emits an event; cascades run
+     through ledger state (one daemon's write satisfies another's
+     condition), never synthetic events; timer firings are their own
+     record class; every daemon prints its watch coverage; the engine
+     carries a cascade depth bound with cycle detection.
  (2) COLLECT the Mishnah's rows as TEST DATA — input cases with
      expected verdicts, plus the recorded parameter settings. Each
      row's VERSE-ADDRESS comes from the tradition's own index (the
@@ -979,6 +999,215 @@ one dispositioned, 40 live import edges — 23 of 23 runners green,
 1444 cells. The Lev 1-8 engine is now one call graph (the Tzav runner
 imports the offerings and meal-offering engines; the sin-offering,
 Lev 5, and cleansing engines import it).
+THE SEVENTEENTH SPAN (2026-09-06, sitting L4b of the debt — the second
+half of the largest span, and the first runner compiled under THE
+DEPENDENCY GATE's rule; the owner: "continue"): cold_run_holiness_b.py
+— THE HOLINESS LEDGER, SECOND HALF, Lev 19:19-37 compiled ink-first
+against Mishnah Kilayim whole and Orlah whole (two tractates never
+before put before the engine) with Bava Batra 5, the 18 link rows,
+and four topic rows read under the union rule (145 rows, coverage
+computed; 128 Talmud addresses indexed and NONE opened: 182 of 182
+ON THE FIRST GRADED RUN) — honest fractions 22 ink (12%) / 72
+recorded / 49 answer-sheet / 20 data / 19 imports. THE CENSUS CAME
+FIRST: the span declared, a stub runner in place, four required
+edges surfaced and dispositioned before a cell existed (the
+sin-offering token at 19:22 a homograph, 'his sin'; the ghost-pit's
+warning calling the sanctions engine; the guilt ram calling both its
+homes); and the gate fired once, honestly — a value-use is not a
+call under the live-edge rule, so the Lev 5 edge became a real call
+into that engine's own guilt-offering pointer. The headline: THE
+ANSWER SHEET'S GRID IS THE VERSE'S THREE VERBS — the mixture noun
+written three times at 19:19 with breed, sow, and come-upon, and
+Kilayim 8:1's taxonomy bars exactly those (the beast from breeding,
+the field from sowing and maintaining, the garment from wearing);
+the vineyard's mixture routed to Deut 22:9, the plowing pair to
+22:10, shaatnez resolved by 22:11 to wool and linen and read out as
+three predicates by the acronym rule; the tractate naming its own
+fence class ('only for the appearance to the eye') and its own
+channel abroad ('from the words of the scribes'). Beside it THE
+MAIDSERVANT ON HER HAPAX TOKENS — a whole-Tanakh census: 'designated',
+'not redeemed', 'an inquest' once each in the Bible, 'freed' twice in
+the verse, the redemption verb at Exod 21:8 and here alone; 'which he
+sinned' twice at 19:22 = the deliberate as the erring, Keritot 2:4's
+table = the Sifra's word for word; the ram by three live calls. THE
+ORLAH TIMER ON THE TRIPLED TOKEN — the uncircumcised root three times
+= the total-benefit ban, a per-tree timer from the planting event on
+the Tishrei year, the channels self-labeled at the Land's border,
+'praises' at one other seat of the Tanakh (a vintage feast, Judg
+9:27). And THE CLAUSES AT THEIR SECOND SEATS BY LIVE CALL — the
+judge's clause (19:15 = 19:35), the heart clause (19:14 = 19:32), the
+second love (19:18 = 19:34), the elder's three abstentions = the
+parents' fear, all fetched from the first half's engine; 19:30
+returning at 26:2 token for token; the razor as two verses'
+intersection (move M-21). One honest census catch (the final-letter
+mem on 'his guilt offering'). FIVE effects discovered (the registry
+at 122): mixture_barred, orlah_years, fourth_year_holy, rise_owed,
+honor_owed. Seats F-222..F-225 (LV19B-10, LV19B-11, LV19B-12,
+LV19L-04); standing 1735; L4 checked off whole; the sweep 24 of 24
+at 1626 cells.
+THE EIGHTEENTH SPAN (2026-09-06, sitting L5 of the debt — the last of
+Leviticus's five, and the second runner compiled under THE DEPENDENCY
+GATE's rule; the owner: "lets do l5"): cold_run_priesthood.py — THE
+PRIESTHOOD AND ITS DUES, Lev 21:1-24, 22:1-33, and 24:1-9 compiled
+ink-first in one runner against Mishnah Bekhorot 6-7, Terumot 6-8,
+Yevamot 6-9, Zevachim 8-9, Temurah 6, Menachot 11, Tamid 3, and
+Chullin 5 read WHOLE under the union rule with the 37 link rows and
+four topic rows (156 rows, coverage computed; 558 Talmud addresses
+indexed and NONE opened: 250 of 250 ON THE FIRST GRADED RUN) — honest
+fractions 43 ink (17%) / 151 recorded (60%) / 38 answer-sheet / 5
+data / 13 imports. THE CENSUS CAME FIRST: six required edges
+dispositioned before a cell (the zav to the clocks engine, the burnt
+and peace offerings to the offering engine, the fifth to the Lev 5
+engine; 'lame', 'under', and 'the iniquity of guilt' named as
+homographs), four more declared for the live calls the compile then
+made (the razor into the holiness engine, the daughter's burning
+against the sanctions engine's strangling, the memorial into the
+meal-offering engine), and ONE OWED — 22:27's eighth day joins Exod
+22:29's firstling, whose span holds no firstborn function: the
+callee is E1's, named on the debt list. The headline: THE SPAN IS
+WRITTEN ON ITS OWN RARE TOKENS — 'and from the day' (22:27) a hapax
+in the Tanakh, 'on one day' (22:28) the Torah's only seat so that
+ben Zoma reaches Genesis 1:5 by the noun, 'and I shall be sanctified'
+(22:32) the Torah's only seat of the verb, 'and the sun sets' (22:7)
+shared with Ecclesiastes alone, the burn token of 21:9 at three
+Leviticus seats (the sin offering, the garment, the daughter); the
+two blemish lists SHARE EXACTLY THREE TOKENS (garav, yalefet, sarua)
+and the Sifra's cross-list transfer runs on the first two by name;
+Lev 24:2 restates Exod 27:20's thirteen-token tail word for word
+and 24:3 drops ONE token, 'and his sons' — the Sifra's one-priest
+staffing rule read off the drop. Beside it: the seven relatives on
+six tokens with the license a court-enforced command; the razor's
+second constraint compiled at its home by live call (M-21); the
+daughter's burning with strangling fetched as the overridden
+default, her name completing the sanctions engine's burned list; the
+FEEDER predicate ('his money', 'born in his house', 'to a man', 'she
+returns') grading Yevamot 7-9 whole with 22:13 quoted by the Mishnah
+as the table's last cell; the fifth's added quarter by call; Bekhorot
+6 and 7 whole on the Sifra's members with Onkelos ruling the
+testicle dispute inside 21:20; it-and-its-young on the female by
+Onkelos's grammar with the SECOND slaughter the one flogged; Menachot
+11 whole as Sifra Chapter 18 with the window of nine to eleven days
+computed from the weekly timer. Two honest catches (the guard's
+count against a hand-typed literal; a sheet token written without
+the article). NINE effects discovered (the registry at 131):
+defiled_for_kin, profaned_seed, terumah_fed, blemish_barred,
+stranger_barred, same_day_slaughter_barred, eighth_day_fit,
+lamp_arranged, bread_set_weekly. Seats F-226..F-230 (LV21A-14,
+LV21B-08, LV22A-12, LV22B-11, LV24A-07); standing 1740; L5 checked
+off — LEVITICUS'S DEBT IS PAID; the sweep 25 of 25 at 1876 cells.
+THE NINETEENTH SPAN (2026-09-06, sitting D8 of the debt — the run of
+Lev 1-4's spec, ONE SHORT SITTING as recommended; the owner: "Next"):
+cold_run_shemini_day.py — THE EIGHTH DAY, Lev 9:1-24 compiled as a
+SCENE against the offering, meal-offering, sin-offering, and Tzav
+engines by live call, against Mishnah Zevachim 10 (the order of
+precedence), Zevachim 14 (the eras of the high places), and Tamid 4
+(the cutting walk) read WHOLE with ten topic rows and the two link
+rows (33 rows, coverage computed; 20 Talmud addresses indexed and ALL
+opened at the ledger stage — recorded there as a deviation from
+per-gap opening, since the sitting's question is how the tradition
+reads this chapter: 104 of 104 ON THE FIRST GRADED RUN) — honest
+fractions 38 ink (36%) / 27 recorded / 11 answer-sheet / 3 data / 25
+imports, the highest ink share of any Leviticus runner because the
+chapter is narrative and its verbs are the cells. THE CENSUS CAME
+FIRST: three required edges and four pointers dispositioned before a
+cell (chatat, minchah, offerings CALL; 9:7 and 9:10 'as the LORD
+commanded' RUN_CITATION; 9:16 'as prescribed' CALL into the offering
+engine; 9:21 'as Moses commanded' CALL into the Tzav engine), a fourth
+edge declared for the live calls the compile made. The headline: THE
+RUN RUNS AGAINST ITS SPEC AND THE TRADITION READS IT THE OTHER WAY.
+Against the spec: the sin-offering engine's rank for the anointed
+priest is a bull and for the congregation a bull, and the run brings
+a CALF and a HE-GOAT (the calf answers the calf, the goat Joseph's
+goat — Sifra Shemini Mechilta d'Miluim 2 3-4); the calf's blood
+follows the OUTER protocol (9:9) and its carcass the INNER one (9:11),
+the burn phrase 'burned in fire outside the camp' standing at 8:17 and
+9:11 alone in the Tanakh, and 9:11 the ONE act of the day the ink does
+not stamp (the command token at 9:5, 9:6, 9:7, 9:10, 9:21); the calf
+completed whole before the ram against Zevachim 10:2's interleaving,
+filed as the hour's; 'like the first' and 'as prescribed' as live
+calls; the fat list of 9:19 the UNION of the ox's and the ram's
+inventories, the tail the ram's alone; 'and fire went out from before
+the LORD' at exactly two seats, 9:24 and 10:2 — the acceptance and the
+judgment on the same five tokens. The other way — THE RUN TEACHES THE
+SPEC (move M-22): 9:16's pointer gives the obligatory burnt offering
+its hand-laying (Menachot 93b:3 = Beitzah 20a:5); 9:17's 'his palm'
+makes every unmarked palm the right hand (Menachot 9b:17 — the
+meal-offering engine's left-hand cell now derived from this verse by
+call); 9:10's 'the lobe FROM the liver' resolves Lev 3:4 (Sifra
+Nedavah Section 14 8); 9:22 legislates the blessing's posture, timing,
+and place in the prayer (Sotah 38a:6, 38b:7; Megillah 18a:3); and the
+direction itself is a recorded fork — Rav's repeated fistful against
+Shmuel's 'generations are not learned from the hour' (Menachot
+19b:4). R. Yehuda's child's scroll ends 'in the priests' torah at and
+it was on the eighth day' (Gittin 60a:13): the tradition's own cut
+between spec and run. The day dated by call (the Tzav engine's
+confinement timer: 23 Adar plus seven = the first of Nisan) is the
+eras table's first boundary — the high places banned and the service
+by the priests (Zevachim 14:4; Shabbat 87b:6's ten crowns, five
+written by this chapter's verbs). THE SCENE on the world engine: the
+installation timer released into the eighth day's tape, checkpointed
+(1, 1, 1, 1, 6, 1, 1, 1, 1, 7). FOUR effects discovered (the registry
+at 135): fire_from_before_the_lord (STATUS, with its recorded close at
+Solomon), glory_appeared, blessed_the_people (HEAVEN),
+high_places_banned (BLOCK). Seats F-231..F-232 (LV09-10, LV09-11);
+standing 1742; D8 checked off; the sweep 26 of 26 at 1980 cells.
+THE TWENTIETH SPAN (2026-09-06, sitting E1 of the debt — the first of
+Exodus's five; the owner: "E1 go"): cold_run_ordinances.py — THE REST
+OF THE ORDINANCES, Exod 20:19-26, 22:17-30, 23:1-9, and 23:20-33 (four
+frozen units) compiled ink-first in one runner against Mishnah
+Sanhedrin 1, 3, 4, 7, Bava Metzia 2 and 5, Bekhorot 8, Chullin 3,
+Terumot 3, Middot 3, and Shevuot 4 read WHOLE under the union rule
+with the nine link rows and two topic rows (110 rows, coverage
+computed; 168 Talmud addresses indexed and NONE opened: 127 of 127 ON
+THE FIRST GRADED RUN) — honest fractions 34 ink (26%) / 37 recorded /
+33 answer-sheet / 4 data / 19 imports. THE CENSUS CAME FIRST: three
+required edges and one homograph dispositioned before a cell (the
+offering engine for 20:24's altar, the Passover engine for 22:28's
+firstborn, the jubilee engine for 22:24's bite noun; 23:5's 'under'
+named against the talion formula), five more declared for the live
+calls the compile made (the decalogue runner's altar rules — one
+function at two seats; the sanctions engine's beast; the holiness
+engine's deaf, equal treatment, and bribe; its second half's stranger)
+— and THE FIRST OWED EDGE CLOSED: the firstling's eighth day (Exod
+22:29) compiled here as the callee the priesthood runner had owed
+since sitting L5, that runner's Lev 22:27 cell now fetching it by
+live call (its guard 250 → 251), the mishpatim_2 span corrected (it
+had declared 22:29 with no cell), the debt worklist printing NO owed
+edge. The headline: THE ORDINANCES' TAIL IS WRITTEN ON HAPAXES AND THE
+ANSWER SHEET QUOTES THE VERSES BACK — 'a sorceress', 'you shall not
+wrong', 'nor oppress him', 'your fullness', 'your outflow', 'on the
+eighth day you shall give', 'with its mother' (against Leviticus
+22:27's 'under its mother', itself a hapax — one timer at two seats
+with two prepositions), 'a false report', 'after the many', 'for
+evil', 'to tilt', 'lying under its burden', 'your needy', 'from a
+false matter', 'the innocent and the righteous', 'the open-eyed', 'the
+soul of the stranger', 'an altar of earth', 'in every place', 'and
+profaned it', 'by steps', 'miscarrying' each once in the Bible; 'hewn'
+the Torah's only seat; 'a witness of violence' shared with Deut 19:16
+alone, 'until the sun sets' with Moses' hands (Exod 17:12) alone, 'you
+shall not glorify' with Lev 19:15 alone; and Mishnah Sanhedrin 1:6
+builds the court of twenty-three with 23:2's 'for evil' as the
+arithmetic's last term, Terumot 3:6 quotes 22:28 for the gifts' order,
+Bava Metzia 5:11 counts two of the lender's five prohibitions from
+22:24's two clauses, Bava Metzia 4:10 quotes 22:20, Peah 8:9 quotes
+23:8, Bava Metzia 2:10 quotes 23:5, Bava Kamma 5:7 names 23:4-5's 'ox
+or donkey' the common case — the Mekhilta's own method name at 22:30.
+Beside it: the fork at elohim (the judge, R. Yishmael and Onkelos; the
+blasphemy's warning, R. Akiva) with the Name gate; the sorceress's
+mode disputed at the Mekhilta and ruled stoning by the sheet; the
+service architecture of 22:19 matching Sanhedrin 7:6's four; the
+widow's scope fork; the loan's obligatory 'if' as one of three; the
+pledge's day and night garments; the enemy's four readings against a
+three-day clock; the doubled 'return' and 'unload' as the repeated
+duty; the acquitted never retried; the land's law layer on Onkelos
+alone (the Mekhilta ends at 23:19). TEN effects discovered (the
+registry at 145): pledge_returned_by_sunset, cry_heard,
+bread_and_water_blessed, gift_order_barred, bribe_barred,
+false_report_barred, covenant_barred, torn_flesh_to_dogs,
+majority_decides, unloading_owed. Seats F-233..F-236 (EX22-19,
+EX23-16, EX23B-03 — the manifest stratum held an EX23B-02, the ceiling
+checked in both strata — and EX20-24); standing 1746; E1 checked off;
+the sweep 27 of 27 at 2108 cells.
 The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law

@@ -139,6 +139,61 @@ narrative strength. By cluster:
   species clause 20:25), and למלך ("to Molech") three (20:2, 3, 4) — a
   union is located by its full phrase, never by one shared token.
 
+- **The acronym rule doing law work — a narrative middah on a legal
+  noun** (sitting L4b of the compile debt, 2026-09-06): E30 notarikon
+  (a word read as an acronym) is listed among the thirty-two of the
+  narrative set, yet Mishnah Kilayim 9:8 = Sifra, Kedoshim, Chapter 4
+  18 reads the single noun of Leviticus 19:19, shaatnez (the wool-
+  and-linen mixture), out as its three letters' predicates — carded,
+  spun, woven — and the LAW of the garment is the conjunction: only
+  what is all three is forbidden to wear, the felts coming in "by the
+  name" (they are carded). The cold runner carries the three as the
+  cell's value. Recorded beside the two-constraint solve of the same
+  chapter (the razor, move M-21 in logic/MOVE_CATALOG.md): one noun =
+  three conjoined predicates there, two verses = one intersected
+  predicate here — the tradition builds conjunctions from letters
+  and from verses alike.
+
+- THE VERBAL ANALOGY RUN IN BOTH DIRECTIONS AT ONCE (I2, gezerah shavah — "an equal decree", the shared-token
+  analogy; recorded 2026-09-06, sitting L5, the priesthood compile). The Sifra on Lev 21:5 lays the priests'
+  mourning marks beside Israel's (Lev 19:27-28) on two shared tokens — קרחה ("baldness") with קרחה, and שרטת ("a gash")
+  with שרט ("gash", the verb's root at Lev 19:28) — and moves law BOTH ways across each: per-spot and whole-head travel from the priests to Israel, and
+  for-the-dead-only travels from Israel to the priests (Sifra, Emor, Chapter 1 3 and 1 5). The same shape at
+  Section 7 13 on the two BLEMISH LISTS: גרב ("garav") with garav and ילפת ("yalefet") with yalefet carry the beast's
+  wart to the man and the man's dak and tevallul to the beast — and the compile measured that the two lists share
+  exactly those two tokens and one more (שרוע, "sarua"), so the middah runs on tokens the ink already shares. The
+  governance point: the analogy is not a one-way import of a stringency but a MERGE of two partial tables into one,
+  each side keeping what only it wrote; the machine form is a union of the two seats' predicates keyed on the shared
+  token. Beside it, the amplification by the repeated subject — "man... man" (Lev 21:17-18; 22:4; 22:18) — is the
+  Sifra's standard inclusion move (Chapter 3 2: the Kushite class UNFIT in man by "man... man" against the beast; Section
+  7 2: gentiles vow by "man, man"), a ribbui (an inclusion by a repeated or extra token) that the compile verified as a
+  doubled token at each seat before reading the inclusion off it.
+
+- WHICH SEATS MAY TEACH: THE HOUR AGAINST THE GENERATIONS (a governance rule on the verbal analogy and the
+  inclusion when the source seat is a NARRATED ONE-TIME ACT; recorded 2026-09-06, sitting D8, the eighth day's run).
+  The tradition derives standing law from Leviticus 9's narrative — the right hand from כפו ("his palm", 9:17) with
+  Leviticus 14:15's "the left palm" (Menachot 9b:17), hand-laying for the obligatory burnt offering from כמשפט ("as
+  prescribed", 9:16) read as "as the freewill's law" (Menachot 93b:3), the blessing's posture and timing from 9:22
+  (Sotah 38a:6, 38b:7) — and then argues about whether such a seat may teach at all: Rav takes 9:17's repeated fistful
+  as an indispensability marker; Shmuel refuses, דורות משעה לא ילפינן ("generations are not learned from the hour",
+  Menachot 19b:4), and the sugya presses Shmuel with his own ruling from Numbers 7:13's basins. The governance point:
+  the SEAT TYPE of a source verse (law paragraph or narrated execution) is a parameter on the middah, with two recorded
+  settings, beside the adjacency-validity parameter recorded at the Exodus campaign; the compile carries the fork as a
+  two-arm value and registers the direction as move M-22 in logic/MOVE_CATALOG.md. The same sitting measured the
+  reverse direction as a gate: the run's 'as the LORD commanded' stamps (9:7, 9:10) are RUN_CITATION pointers the
+  dependency census requires and the scene grades — verification runs run-to-spec, legislation spec-from-run.
+
+- THE VERSE SPEAKS OF THE COMMON CASE (דבר הכתוב בהווה, "Scripture spoke of what is usual" — a reading rule that
+  narrows nothing; recorded 2026-09-06, sitting E1, the ordinances compile). The Mekhilta names the rule on Exodus 22:30's
+  "flesh IN THE FIELD torn" — the field is the ordinary place a beast is torn, the house is included by the carcass analogy
+  — and cites it on three parallels; Mishnah Bava Kamma 5:7 applies the same rule to 23:4-5's "ox or donkey" ("why ox or
+  donkey? Scripture spoke of the usual"), extending the return and the unloading to every beast; the Mekhilta on 22:17
+  reads the feminine "sorceress" the same way (man and woman alike, the woman named because she is the usual case). The
+  governance point: a concrete noun in a case clause is a SPECIMEN, not a scope limit, unless a second token fixes the
+  scope (22:24's "My people... the poor with you" is read as a ladder, not a specimen, because the Mekhilta pairs it with
+  Deut 23:21's foreigner) — the machine form is a predicate over the class the specimen belongs to, with the specimen kept
+  as the exemplar on the cell; the compile carries the rule at the torn, the enemy's animals, and the sorceress.
+
 ## Exodus block campaign — owner's word "Do 3")
 
 The campaign's exam rounds banked RULES-ABOUT-RULES on the corpus's

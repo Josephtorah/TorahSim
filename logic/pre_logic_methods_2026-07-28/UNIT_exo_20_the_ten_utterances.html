@@ -312,6 +312,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 </td><td>—</td><td class='cite'>Sotah 38a:9, Sotah 38a:10, Sotah 38a:11, Sotah 38a:12, Sotah 38a:13, Berakhot 6a:13, Berakhot 6a:14, Berakhot 54a:9</td><td>witnessed</td></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(ve_zavachta_alav, altar_paragraph_babylonian_layer)</span><br><span class="gloss">= WITNESS-READ(and-zavachta-alav, altar-paragraph-babylonian-layer)</span><br>THE ALTAR PARAGRAPH&#x27;S BABYLONIAN LAYER [claim EX20-23]. The round-29 Decalogue block seats the paragraph&#x27;s implementing rows. THE BUILD: Levi&#x27;s baraita — a frame 32 by 32 one cubit high, polished round stones large and small, u-mevi sid ve-qonya va-zefet u-mamche ve-shofekh (&#x27;and he brings lime, quicklime and pitch, melts and pours&#x27;): the foundation; then 30 by 30 five high, then 28 by 28 three high — the arrangement place: whole stones bound by POUR, never cut by iron — the sword-profanes clause this unit has held at EX20-12 given its construction protocol (Zevachim 54a:8-9). THE TOP: ve-zavachta ALAV (&#x27;and you shall sacrifice UPON IT&#x27;) — R. Yochanan: both arms expound this one verse — R. Yosei, ALL the top fit for either offering; R. Yosei son of R. Yehuda, HALF for the burnt-offering, half for the peace-offering (Zevachim 58a:5-6). THE WHOLENESS GATE: Rav — a damaged altar invalidates what was slaughtered there, from this same clause, &#x27;upon it&#x27; when WHOLE and not when lacking — the verse Rav had lost and R. Shimon son of Rabbi restored; R. Yochanan extends to both, the dispute whether living animals are rejected (Zevachim 59a:10-12). THE MATERIAL CENSUS: avanim avanim avanim shalosh peamim (&#x27;&quot;stones,&quot; &quot;stones,&quot; &quot;stones&quot; — three times,&#x27; 20:25 with Deut 27&#x27;s pair) — one for Shiloh, one for Nov and Gibeon, one for the Eternal House: Shiloh&#x27;s altar was of stones (Rav Huna citing Rav, Zevachim 61b:4). Auto-seat law, F-112 (round 29, the Decalogue block).
 </td><td>—</td><td class='cite'>Zevachim 54a:7, Zevachim 54a:8, Zevachim 54a:9, Zevachim 58a:4, Zevachim 58a:5, Zevachim 58a:6, Zevachim 59a:10, Zevachim 59a:11, Zevachim 59a:12, Zevachim 61b:3, Zevachim 61b:4, Zevachim 61b:5</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_altar_laws_earth_predicate_at_its_mishnah_seat, the_rules_fetched_from_the_decalogue_runner)</span><br><span class="gloss">= WITNESS-READ(the-altar-laws-earth-predicate-at-its-mishnah-seat, the-rules-fetched-from-the-decalogue-runner)</span><br>THE ALTAR LAW&#x27;S EARTH PREDICATE AT ITS MISHNAH SEAT, THE RULES FETCHED FROM THE DECALOGUE RUNNER — ONE FUNCTION AT TWO SEATS [claim EX20-24]. Exodus 20:19-26 compiled cold inside cold_run_ordinances.py without recompiling the altar rules the decalogue runner already holds: the hewn stone, the build recipe, and the steps are fetched by live call (the D6 pattern — one function at two seats — and the dependency gate carries the edge). The ink&#x27;s own rare tokens: &#x27;from heaven I spoke&#x27;, &#x27;gods of silver&#x27;, &#x27;an altar of earth&#x27;, &#x27;in every place&#x27;, &#x27;I cause My name to be mentioned&#x27;, &#x27;and profaned it&#x27;, &#x27;by steps&#x27; each once in the Bible; &#x27;hewn&#x27; the Torah&#x27;s only seat; &#x27;your nakedness&#x27; at six seats with Leviticus 18:10&#x27;s union among them. The earth predicate meets its Mishnah seat at Chagigah 3:8 (linked at 20:21): the golden and the copper altars need no immersion &#x27;because they are like the ground&#x27; (R. Eliezer; the sages: plated); Middot 3:1&#x27;s dimensions and 3:3&#x27;s ramp (thirty-two by sixteen, south) are the data channel; 3:4&#x27;s whole stones from the valley of Beit Kerem on which iron was not lifted, &#x27;for iron disqualifies by touch&#x27;, is the sword clause read as a rule — &#x27;iron was created to shorten man&#x27;s days and the altar to lengthen them&#x27;. The burnt and peace offerings named on the earthen altar are the offering engine&#x27;s rows by call (wholly to the fires; two days and one night). &#x27;If an altar of stones&#x27; is one of the Torah&#x27;s three obligatory if-clauses by the Mekhilta on 22:24 (with the lending and the first fruits&#x27; meal offering) — the conditional heads of the four spans censused at nine seats.
+</td><td>—</td><td class='cite'>Mishnah Middot 3:1, Mishnah Middot 3:3, Mishnah Middot 3:4, Mishnah Chagigah 3:8, Mekhilta on Exod 22:24</td><td>witnessed</td></tr>
 </table>
 <div class="meta">The earthen altar; the minyan-cipher.</div>
 </div>
@@ -495,51 +497,66 @@ from machine import Machine
 m = Machine(&quot;exo_20_the_ten_utterances&quot;)
 
 # -------------------------- Exod.20.1 · GOD_SPOKE_ALL_THESE_WORDS ----------
-# וַיְדַבֵּר אֱלֹהִים אֵת כָּל־הַדְּבָרִים הָאֵלֶּה לֵאמֹר
+# ‹וַיְדַבֵּר אֱלֹהִים אֵת› (“and-speak God obj-marker”)
+# ‹כָּל־הַדְּבָרִים הָאֵלֶּה לֵאמֹר› (“all the-word/thing the-these to-say”)
 # &quot;[EN-AID] And God spoke all these words, saying:&quot;
 m.step(&quot;Exod.20.1&quot;)
-# ‹וַיְדַבֵּר אֱלֹהִים אֵת כָּל־הַדְּבָרִים הָאֵלֶּה לֵאמֹר› (“and-speak God
-# obj-marker all the-word/thing the-these to-say”) — fact holds: and-speak-
-# God
+# ‹וַיְדַבֵּר אֱלֹהִים אֵת› (“and-speak God obj-marker”)
+# ‹כָּל־הַדְּבָרִים הָאֵלֶּה לֵאמֹר› (“all the-word/thing the-these to-say”)
+# — fact holds: and-speak-God
 m.fact(&quot;va_yedaber_elohim&quot;)
 
 # -------------------------- Exod.20.2 · I_AM -------------------------------
-# אָנֹכִי יְהוָה אֱלֹהֶיךָ אֲשֶׁר הוֹצֵאתִיךָ מֵאֶרֶץ מִצְרַיִם מִבֵּית
-# עֲבָדִים
+# ‹אָנֹכִי יְהוָה אֱלֹהֶיךָ› (“YHWH God-you/your”)
+# ‹אֲשֶׁר הוֹצֵאתִיךָ מֵאֶרֶץ› (“which bring-forth-you/your from-earth”)
+# ‹מִצְרַיִם מִבֵּית עֲבָדִים› (“Egypt from-house servant”)
 # &quot;[EN-AID] I am the LORD your God, who brought you out of the land of
 # Egypt, out of the house of slaves.&quot;
 m.step(&quot;Exod.20.2&quot;)
-# ‹אָנֹכִי יְהוָה אֱלֹהֶיךָ› (“YHWH God-you/your”) —
+# ‹אָנֹכִי יְהוָה אֱלֹהֶיךָ› (“YHWH God-you/your”)
 m.statute(&quot;BIND&quot;, &quot;anokhi_YHWH_elohekha&quot;)
 
 # -------------------------- Exod.20.3 · NO_OTHER_GODS ----------------------
-# לֹא יִהְיֶה־לְךָ אֱלֹהִים אֲחֵרִים עַל־פָּנָיַ
+# ‹לֹא יִהְיֶה־לְךָ אֱלֹהִים› (“not be to-you/your God”)
+# ‹אֲחֵרִים עַל־פָּנָיַ› (“other over face-me/my”)
 # &quot;[EN-AID] There shall not be to you other gods before My face.&quot;
 m.step(&quot;Exod.20.3&quot;)
-# ‹לֹא יִהְיֶה־לְךָ אֱלֹהִים אֲחֵרִים› (“not be to-you/your God other”) —
+# ‹לֹא יִהְיֶה־לְךָ אֱלֹהִים› (“not be to-you/your God”)
+# ‹אֲחֵרִים› (“other”)
 m.statute(&quot;FORBID&quot;, &quot;elohim_acherim&quot;)
 
 # -------------------------- Exod.20.4 · NO_GRAVEN_IMAGE --------------------
-# לֹא תַעֲשֶׂה־לְךָ פֶסֶל וְכָל־תְּמוּנָה אֲשֶׁר בַּשָּׁמַיִם מִמַּעַל
-# וַאֲשֶׁר בָּאָרֶץ מִתָּחַת וַאֲשֶׁר בַּמַּיִם מִתַּחַת לָאָרֶץ
+# ‹לֹא תַעֲשֶׂה־לְךָ פֶסֶל› (“not make to-you/your idol”)
+# ‹וְכָל־תְּמוּנָה אֲשֶׁר בַּשָּׁמַיִם› (“and-all something-portioned-out
+# which in-heavens”)
+# ‹מִמַּעַל וַאֲשֶׁר בָּאָרֶץ› (“from-upper-part and-which in-earth”)
+# ‹מִתָּחַת וַאֲשֶׁר בַּמַּיִם› (“from-under and-which in-waters”)
+# ‹מִתַּחַת לָאָרֶץ› (“from-under to-earth”)
 # &quot;[EN-AID] You shall not make yourself a graven image, or any likeness of
 # what is in the heavens above, or what is in the earth beneath, or what is
 # in the waters beneath the earth.&quot;
 m.step(&quot;Exod.20.4&quot;)
-# ‹לֹא תַעֲשֶׂה־לְךָ פֶסֶל וְכָל־תְּמוּנָה› (“not make to-you/your idol and-
-# all something-portioned-out”) — fact holds: not-make-to-you-idol
+# ‹לֹא תַעֲשֶׂה־לְךָ פֶסֶל› (“not make to-you/your idol”)
+# ‹וְכָל־תְּמוּנָה› (“and-all something-portioned-out”)
+# — fact holds: not-make-to-you-idol
 m.fact(&quot;lo_taase_lekha_fesel&quot;)
 
 # -------------------------- Exod.20.5 · A_JEALOUS_GOD ----------------------
-# לֹא־תִשְׁתַּחֲוֶה לָהֶם וְלֹא תָעָבְדֵם כִּי אָנֹכִי יְהוָה אֱלֹהֶיךָ אֵל
-# קַנָּא פֹּקֵד עֲוֺן אָבֹת עַל־בָּנִים עַל־שִׁלֵּשִׁים וְעַל־רִבֵּעִים
-# לְשֹׂנְאָי
+# ‹לֹא־תִשְׁתַּחֲוֶה לָהֶם וְלֹא› (“not afflict to-them/their and-not”)
+# ‹תָעָבְדֵם כִּי אָנֹכִי› (“work/serve-them/their that”)
+# ‹יְהוָה אֱלֹהֶיךָ אֵל› (“YHWH God-you/your strength”)
+# ‹קַנָּא פֹּקֵד עֲוֺן› (“jealous count/visit perversity”)
+# ‹אָבֹת עַל־בָּנִים עַל־שִׁלֵּשִׁים› (“father over son over descendant-of-
+# the-third-degr”)
+# ‹וְעַל־רִבֵּעִים לְשֹׂנְאָי› (“and-over descendant-of-the-fourth-gen to-
+# hate-me/my”)
 # &quot;[EN-AID] You shall not bow down to them, and you shall not serve them;
 # for I the LORD your God am a jealous God, visiting the iniquity of fathers
 # on sons, on the third and on the fourth generation, to those who hate Me.&quot;
 m.step(&quot;Exod.20.5&quot;)
-# ‹כִּי אָנֹכִי יְהוָה אֱלֹהֶיךָ אֵל קַנָּא› (“that YHWH God-you/your
-# strength jealous”) — fact holds: strength-jealous
+# ‹כִּי אָנֹכִי יְהוָה› (“that YHWH”)
+# ‹אֱלֹהֶיךָ אֵל קַנָּא› (“God-you/your strength jealous”)
+# — fact holds: strength-jealous
 m.fact(&quot;el_qana&quot;)
 # witness-tier presupposed read: utterance_rider_file on poqed_avon_avot —
 # read, not installed
@@ -547,22 +564,28 @@ m.witness_read(&quot;poqed_avon_avot&quot;, &quot;utterance_rider_file&quot;,
                 cites=[&quot;Berakhot 7a:26&quot;, &quot;Berakhot 7a:27&quot;, &quot;Sanhedrin 99a:20&quot;, &quot;Sanhedrin 99a:21&quot;, &quot;Bava Metzia 5b:18&quot;, &quot;Bava Metzia 5b:19&quot;, &quot;Bava Metzia 5b:20&quot;, &quot;Beitzah 15b:4&quot;, &quot;Beitzah 15b:5&quot;, &quot;Bava Kamma 74b:7&quot;, &quot;Bava Kamma 74b:8&quot;, &quot;Bava Kamma 74b:9&quot;, &quot;Sanhedrin 86a:15&quot;, &quot;Sanhedrin 86a:16&quot;, &quot;Sanhedrin 86a:17&quot;])
 
 # -------------------------- Exod.20.6 · MERCY_TO_THOUSANDS -----------------
-# וְעֹשֶׂה חֶסֶד לַאֲלָפִים לְאֹהֲבַי וּלְשֹׁמְרֵי מִצְוֺתָי
+# ‹וְעֹשֶׂה חֶסֶד לַאֲלָפִים› (“and-make kindness to-thousand”)
+# ‹לְאֹהֲבַי וּלְשֹׁמְרֵי מִצְוֺתָי› (“to-have-affection-for-me/my and-to-
+# keep/guard commandment-me/my”)
 # &quot;[EN-AID] And doing kindness to thousands — to those who love Me, and to
 # those who keep My commandments.&quot;
 m.step(&quot;Exod.20.6&quot;)
-# ‹וְעֹשֶׂה חֶסֶד לַאֲלָפִים› (“and-make kindness to-thousand”) — fact
-# holds: and-make-kindness-to-thousand
+# ‹וְעֹשֶׂה חֶסֶד לַאֲלָפִים› (“and-make kindness to-thousand”)
+# — fact holds: and-make-kindness-to-thousand
 m.fact(&quot;ve_ose_chesed_la_alafim&quot;)
 
 # -------------------------- Exod.20.7 · THE_NAME_IN_VAIN -------------------
-# לֹא תִשָּׂא אֶת־שֵׁם־יְהוָה אֱלֹהֶיךָ לַשָּׁוְא כִּי לֹא יְנַקֶּה יְהוָה
-# אֵת אֲשֶׁר־יִשָּׂא אֶת־שְׁמוֹ לַשָּׁוְא
+# ‹לֹא תִשָּׂא אֶת־שֵׁם־יְהוָה› (“not lift/carry obj-marker name YHWH”)
+# ‹אֱלֹהֶיךָ לַשָּׁוְא כִּי› (“God-you/your to-evil that”)
+# ‹לֹא יְנַקֶּה יְהוָה› (“not be-clean YHWH”)
+# ‹אֵת אֲשֶׁר־יִשָּׂא אֶת־שְׁמוֹ› (“obj-marker which lift/carry obj-marker
+# name-him/its”)
+# ‹לַשָּׁוְא› (“to-evil”)
 # &quot;[EN-AID] You shall not take up the name of the LORD your God in vain; for
 # the LORD will not hold him guiltless who takes up His name in vain.&quot;
 m.step(&quot;Exod.20.7&quot;)
-# ‹לֹא תִשָּׂא אֶת־שֵׁם־יְהוָה אֱלֹהֶיךָ לַשָּׁוְא› (“not lift/carry obj-
-# marker name YHWH God-you/your to-evil”) —
+# ‹לֹא תִשָּׂא אֶת־שֵׁם־יְהוָה› (“not lift/carry obj-marker name YHWH”)
+# ‹אֱלֹהֶיךָ לַשָּׁוְא› (“God-you/your to-evil”)
 m.statute(&quot;FORBID&quot;, &quot;shem_la_shav&quot;)
 # witness-tier presupposed read: vain_clause_oath_file on lo_tisa_et_shem —
 # read, not installed
@@ -570,11 +593,12 @@ m.witness_read(&quot;lo_tisa_et_shem&quot;, &quot;vain_clause_oath_file&quot;,
                 cites=[&quot;Shevuot 20b:5&quot;, &quot;Shevuot 20b:6&quot;, &quot;Shevuot 20b:7&quot;, &quot;Shevuot 20b:8&quot;, &quot;Shevuot 20b:9&quot;, &quot;Shevuot 20b:10&quot;, &quot;Shevuot 21a:5&quot;, &quot;Shevuot 21a:6&quot;, &quot;Shevuot 21a:7&quot;, &quot;Shevuot 29a:12&quot;, &quot;Shevuot 29a:13&quot;, &quot;Shevuot 29a:14&quot;])
 
 # -------------------------- Exod.20.8 · REMEMBER_THE_SABBATH ---------------
-# זָכוֹר אֶת־יוֹם הַשַּׁבָּת לְקַדְּשׁוֹ
+# ‹זָכוֹר אֶת־יוֹם הַשַּׁבָּת› (“mark obj-marker day the-intermission”)
+# ‹לְקַדְּשׁוֹ› (“to-sanctify-him/its”)
 # &quot;[EN-AID] Remember the sabbath day, to keep it holy.&quot;
 m.step(&quot;Exod.20.8&quot;)
-# ‹זָכוֹר אֶת־יוֹם הַשַּׁבָּת לְקַדְּשׁוֹ› (“mark obj-marker day the-
-# intermission to-sanctify-him/its”) —
+# ‹זָכוֹר אֶת־יוֹם הַשַּׁבָּת› (“mark obj-marker day the-intermission”)
+# ‹לְקַדְּשׁוֹ› (“to-sanctify-him/its”)
 m.statute(&quot;BIND&quot;, &quot;zakhor_et_yom_ha_shabat&quot;)
 # witness-tier presupposed read: kiddush_file on zakhor_et_yom_ha_shabat —
 # read, not installed
@@ -582,25 +606,33 @@ m.witness_read(&quot;zakhor_et_yom_ha_shabat&quot;, &quot;kiddush_file&quot;,
                 cites=[&quot;Pesachim 106a:5&quot;, &quot;Pesachim 106a:6&quot;, &quot;Pesachim 106a:7&quot;, &quot;Pesachim 117b:8&quot;, &quot;Berakhot 20b:7&quot;, &quot;Berakhot 20b:8&quot;, &quot;Berakhot 20b:9&quot;, &quot;Berakhot 20b:10&quot;, &quot;Berakhot 20b:11&quot;, &quot;Berakhot 20b:12&quot;, &quot;Berakhot 20b:13&quot;, &quot;Berakhot 20b:14&quot;])
 
 # -------------------------- Exod.20.9 · SIX_DAYS_SHALL_YOU_LABOR -----------
-# שֵׁשֶׁת יָמִים תַּעֲבֹד וְעָשִׂיתָ כָּל־מְלַאכְתֶּךָ
+# ‹שֵׁשֶׁת יָמִים תַּעֲבֹד› (“six day work/serve”)
+# ‹וְעָשִׂיתָ כָּל־מְלַאכְתֶּךָ› (“and-make all work-you/your”)
 # &quot;[EN-AID] Six days shall you labor, and do all your work.&quot;
 m.step(&quot;Exod.20.9&quot;)
-# ‹שֵׁשֶׁת יָמִים תַּעֲבֹד וְעָשִׂיתָ› (“six day work/serve and-make”) —
-# fact holds: six-day-work/serve
+# ‹שֵׁשֶׁת יָמִים תַּעֲבֹד› (“six day work/serve”)
+# ‹וְעָשִׂיתָ› (“and-make”)
+# — fact holds: six-day-work/serve
 m.fact(&quot;sheshet_yamim_taavod&quot;)
 
 # -------------------------- Exod.20.10 · THE_SEVENTH_IS_REST ---------------
-# וְיוֹם הַשְּׁבִיעִי שַׁבָּת לַיהוָה אֱלֹהֶיךָ לֹא־תַעֲשֶׂה כָל־מְלָאכָה
-# אַתָּה וּבִנְךָ־וּבִתֶּךָ עַבְדְּךָ וַאֲמָתְךָ וּבְהֶמְתֶּךָ וְגֵרְךָ
-# אֲשֶׁר בִּשְׁעָרֶיךָ
+# ‹וְיוֹם הַשְּׁבִיעִי שַׁבָּת› (“and-day the-seventh intermission”)
+# ‹לַיהוָה אֱלֹהֶיךָ לֹא־תַעֲשֶׂה› (“to-YHWH God-you/your not make”)
+# ‹כָל־מְלָאכָה אַתָּה וּבִנְךָ־וּבִתֶּךָ› (“all work you and-son-you/your
+# and-daughter-you/your”)
+# ‹עַבְדְּךָ וַאֲמָתְךָ וּבְהֶמְתֶּךָ› (“servant-you/your and-maidservant-
+# you/your and-livestock-you/your”)
+# ‹וְגֵרְךָ אֲשֶׁר בִּשְׁעָרֶיךָ› (“and-sojourner-you/your which in-gate-
+# you/your”)
 # &quot;[EN-AID] And the seventh day is a sabbath to the LORD your God; you shall
 # not do any work — you, and your son and your daughter, your servant and
 # your maid, and your beast, and your stranger who is within your gates.&quot;
 m.step(&quot;Exod.20.10&quot;)
-# ‹אַתָּה וּבִנְךָ־וּבִתֶּךָ עַבְדְּךָ וַאֲמָתְךָ וּבְהֶמְתֶּךָ וְגֵרְךָ›
-# (“you and-son-you/your and-daughter-you/your servant-you/your and-
-# maidservant-you/your and-livestock-you/your and-sojourner-you/your”) —
-# fact holds: intermission-to-the-LORD-elohekha
+# ‹אַתָּה וּבִנְךָ־וּבִתֶּךָ עַבְדְּךָ› (“you and-son-you/your and-daughter-
+# you/your servant-you/your”)
+# ‹וַאֲמָתְךָ וּבְהֶמְתֶּךָ וְגֵרְךָ› (“and-maidservant-you/your and-
+# livestock-you/your and-sojourner-you/your”)
+# — fact holds: intermission-to-the-LORD-elohekha
 m.fact(&quot;shabat_la_YHWH_elohekha&quot;)
 # witness-tier presupposed read: recorded_runs on rest_roster — read, not
 # installed
@@ -608,26 +640,35 @@ m.witness_read(&quot;rest_roster&quot;, &quot;recorded_runs&quot;,
                 cites=[&quot;Bava Kamma 54b:13&quot;, &quot;Bava Kamma 54b:14&quot;, &quot;Shabbat 153b:7&quot;, &quot;Shabbat 153b:8&quot;, &quot;Shabbat 120b:11&quot;, &quot;Shabbat 120b:12&quot;, &quot;Shabbat 117b:8&quot;, &quot;Bava Metzia 32a:15&quot;, &quot;Bava Metzia 32a:16&quot;])
 
 # -------------------------- Exod.20.11 · THE_CREATION_WARRANT --------------
-# כִּי שֵׁשֶׁת־יָמִים עָשָׂה יְהוָה אֶת־הַשָּׁמַיִם וְאֶת־הָאָרֶץ אֶת־הַיָּם
-# וְאֶת־כָּל־אֲשֶׁר־בָּם וַיָּנַח בַּיּוֹם הַשְּׁבִיעִי עַל־כֵּן בֵּרַךְ
-# יְהוָה אֶת־יוֹם הַשַּׁבָּת וַיְקַדְּשֵׁהוּ
+# ‹כִּי שֵׁשֶׁת־יָמִים עָשָׂה› (“that six day make”)
+# ‹יְהוָה אֶת־הַשָּׁמַיִם וְאֶת־הָאָרֶץ› (“YHWH obj-marker the-heavens and-
+# obj-marker the-earth”)
+# ‹אֶת־הַיָּם וְאֶת־כָּל־אֲשֶׁר־בָּם וַיָּנַח› (“obj-marker the-seas and-
+# obj-marker all which in-them/their and-rest”)
+# ‹בַּיּוֹם הַשְּׁבִיעִי עַל־כֵּן› (“in-day the-seventh over so”)
+# ‹בֵּרַךְ יְהוָה אֶת־יוֹם› (“bless YHWH obj-marker day”)
+# ‹הַשַּׁבָּת וַיְקַדְּשֵׁהוּ› (“the-intermission and-sanctify-him/its”)
 # &quot;[EN-AID] For six days the LORD made the heavens and the earth, the sea
 # and all that is in them, and He rested on the seventh day; therefore the
 # LORD blessed the sabbath day, and sanctified it.&quot;
 m.step(&quot;Exod.20.11&quot;)
-# ‹עַל־כֵּן בֵּרַךְ יְהוָה אֶת־יוֹם הַשַּׁבָּת וַיְקַדְּשֵׁהוּ› (“over so
-# bless YHWH obj-marker day the-intermission and-sanctify-him/its”) — fact
-# holds: over-so-bless-the-LORD
+# ‹עַל־כֵּן בֵּרַךְ יְהוָה› (“over so bless YHWH”)
+# ‹אֶת־יוֹם הַשַּׁבָּת וַיְקַדְּשֵׁהוּ› (“obj-marker day the-intermission
+# and-sanctify-him/its”)
+# — fact holds: over-so-bless-the-LORD
 m.fact(&quot;al_ken_berakh_YHWH&quot;)
 
 # -------------------------- Exod.20.12 · HONOR_FATHER_AND_MOTHER -----------
-# כַּבֵּד אֶת־אָבִיךָ וְאֶת־אִמֶּךָ לְמַעַן יַאֲרִכוּן יָמֶיךָ עַל הָאֲדָמָה
-# אֲשֶׁר־יְהוָה אֱלֹהֶיךָ נֹתֵן לָךְ
+# ‹כַּבֵּד אֶת־אָבִיךָ וְאֶת־אִמֶּךָ› (“be-heavy obj-marker father-you/your
+# and-obj-marker mother-you/your”)
+# ‹לְמַעַן יַאֲרִכוּן יָמֶיךָ› (“so-that be-long-ward day-you/your”)
+# ‹עַל הָאֲדָמָה אֲשֶׁר־יְהוָה› (“over the-ground which YHWH”)
+# ‹אֱלֹהֶיךָ נֹתֵן לָךְ› (“God-you/your set to-you/your”)
 # &quot;[EN-AID] Honor your father and your mother — that your days may be long
 # on the land which the LORD your God gives you.&quot;
 m.step(&quot;Exod.20.12&quot;)
 # ‹כַּבֵּד אֶת־אָבִיךָ וְאֶת־אִמֶּךָ› (“be-heavy obj-marker father-you/your
-# and-obj-marker mother-you/your”) —
+# and-obj-marker mother-you/your”)
 m.statute(&quot;BIND&quot;, &quot;kabed_av_va_em&quot;)
 # witness-tier presupposed read: equal_weight on honor_utterance — read, not
 # installed
@@ -635,10 +676,10 @@ m.witness_read(&quot;honor_utterance&quot;, &quot;equal_weight&quot;,
                 cites=[&quot;Mishnah Keritot 6:9&quot;])
 
 # -------------------------- Exod.20.13 · NO_MURDER -------------------------
-# לֹא תִּרְצָח
+# ‹לֹא תִּרְצָח› (“not dash-in-pieces”)
 # &quot;[EN-AID] You shall not murder.&quot;
 m.step(&quot;Exod.20.13&quot;)
-# ‹לֹא תִּרְצָח› (“not dash-in-pieces”) —
+# ‹לֹא תִּרְצָח› (“not dash-in-pieces”)
 m.statute(&quot;FORBID&quot;, &quot;retzach&quot;)
 # witness-tier presupposed read: plotting_rows on false_witness_utterance —
 # read, not installed
@@ -646,54 +687,71 @@ m.witness_read(&quot;false_witness_utterance&quot;, &quot;plotting_rows&quot;,
                 cites=[&quot;Mishnah Makkot 1:2&quot;, &quot;Mishnah Makkot 1:3&quot;])
 
 # -------------------------- Exod.20.14 · NO_ADULTERY -----------------------
-# לֹא תִּנְאָף
+# ‹לֹא תִּנְאָף› (“not commit-adultery”)
 # &quot;[EN-AID] You shall not commit adultery.&quot;
 m.step(&quot;Exod.20.14&quot;)
-# ‹לֹא תִּנְאָף› (“not commit-adultery”) —
+# ‹לֹא תִּנְאָף› (“not commit-adultery”)
 m.statute(&quot;FORBID&quot;, &quot;niuf&quot;)
 
 # -------------------------- Exod.20.15 · NO_THEFT --------------------------
-# לֹא תִּגְנֹב
+# ‹לֹא תִּגְנֹב› (“not steal”)
 # &quot;[EN-AID] You shall not steal.&quot;
 m.step(&quot;Exod.20.15&quot;)
-# ‹לֹא תִּגְנֹב› (“not steal”) —
+# ‹לֹא תִּגְנֹב› (“not steal”)
 m.statute(&quot;FORBID&quot;, &quot;geneva&quot;)
 
 # -------------------------- Exod.20.16 · NO_FALSE_WITNESS ------------------
-# לֹא־תַעֲנֶה בְרֵעֲךָ עֵד שָׁקֶר
+# ‹לֹא־תַעֲנֶה בְרֵעֲךָ עֵד› (“not eye in-associate-you/your concretely”)
+# ‹שָׁקֶר› (“untruth”)
 # &quot;[EN-AID] You shall not answer against your fellow as a false witness.&quot;
 m.step(&quot;Exod.20.16&quot;)
-# ‹לֹא־תַעֲנֶה בְרֵעֲךָ עֵד שָׁקֶר› (“not eye in-associate-you/your
-# concretely untruth”) —
+# ‹לֹא־תַעֲנֶה בְרֵעֲךָ עֵד› (“not eye in-associate-you/your concretely”)
+# ‹שָׁקֶר› (“untruth”)
 m.statute(&quot;FORBID&quot;, &quot;ed_shaqer&quot;)
 
 # -------------------------- Exod.20.17 · NO_COVETING -----------------------
-# לֹא תַחְמֹד בֵּית רֵעֶךָ לֹא־תַחְמֹד אֵשֶׁת רֵעֶךָ וְעַבְדּוֹ וַאֲמָתוֹ
-# וְשׁוֹרוֹ וַחֲמֹרוֹ וְכֹל אֲשֶׁר לְרֵעֶךָ
+# ‹לֹא תַחְמֹד בֵּית› (“not delight-in house”)
+# ‹רֵעֶךָ לֹא־תַחְמֹד אֵשֶׁת› (“associate-you/your not delight-in woman”)
+# ‹רֵעֶךָ וְעַבְדּוֹ וַאֲמָתוֹ› (“associate-you/your and-servant-him/its
+# and-maidservant-him/its”)
+# ‹וְשׁוֹרוֹ וַחֲמֹרוֹ וְכֹל› (“and-bullock-him/its and-male-ass-him/its
+# and-all”)
+# ‹אֲשֶׁר לְרֵעֶךָ› (“which to-associate-you/your”)
 # &quot;[EN-AID] You shall not covet your fellow&#x27;s house; you shall not covet
 # your fellow&#x27;s wife, or his servant, or his maid, or his ox, or his donkey,
 # or anything that is your fellow&#x27;s.&quot;
 m.step(&quot;Exod.20.17&quot;)
-# ‹לֹא תַחְמֹד בֵּית רֵעֶךָ› (“not delight-in house associate-you/your”) —
+# ‹לֹא תַחְמֹד בֵּית› (“not delight-in house”)
+# ‹רֵעֶךָ› (“associate-you/your”)
 m.statute(&quot;FORBID&quot;, &quot;chimud&quot;)
 
 # -------------------------- Exod.20.18 · SEEING_THE_VOICES -----------------
-# וְכָל־הָעָם רֹאִים אֶת־הַקּוֹלֹת וְאֶת־הַלַּפִּידִם וְאֵת קוֹל הַשֹּׁפָר
-# וְאֶת־הָהָר עָשֵׁן וַיַּרְא הָעָם וַיָּנֻעוּ וַיַּעַמְדוּ מֵרָחֹק
+# ‹וְכָל־הָעָם רֹאִים אֶת־הַקּוֹלֹת› (“and-all the-people see obj-marker
+# the-voice/sound”)
+# ‹וְאֶת־הַלַּפִּידִם וְאֵת קוֹל› (“and-obj-marker the-flambeau and-obj-
+# marker voice/sound”)
+# ‹הַשֹּׁפָר וְאֶת־הָהָר עָשֵׁן› (“the-cornet and-obj-marker the-mountain
+# smoky”)
+# ‹וַיַּרְא הָעָם וַיָּנֻעוּ› (“and-see the-people and-waver”)
+# ‹וַיַּעַמְדוּ מֵרָחֹק› (“and-stand from-remote”)
 # &quot;[EN-AID] And all the people were seeing the voices and the torches, and
 # the voice of the shofar, and the mountain smoking; and the people saw, and
 # they swayed, and stood far off.&quot;
 m.step(&quot;Exod.20.18&quot;)
-# ‹וְכָל־הָעָם רֹאִים אֶת־הַקּוֹלֹת וְאֶת־הַלַּפִּידִם וְאֵת קוֹל הַשֹּׁפָר
-# וְאֶת־הָהָר עָשֵׁן› (“and-all the-people see obj-marker the-voice/sound
-# and-obj-marker the-flambeau and-obj-marker voice/sound the-cornet and-obj-
-# marker the-mountain smoky”) — event: see-obj-marker-the-voice/sound —
-# theme ha-qolot
+# ‹וְכָל־הָעָם רֹאִים אֶת־הַקּוֹלֹת› (“and-all the-people see obj-marker
+# the-voice/sound”)
+# ‹וְאֶת־הַלַּפִּידִם וְאֵת קוֹל› (“and-obj-marker the-flambeau and-obj-
+# marker voice/sound”)
+# ‹הַשֹּׁפָר וְאֶת־הָהָר עָשֵׁן› (“the-cornet and-obj-marker the-mountain
+# smoky”)
+# — event: see-obj-marker-the-voice/sound — theme ha-qolot
 m.event(&quot;roim_et_ha_qolot&quot;, themes=[&quot;ha-qolot&quot;])
 
 # -------------------------- Exod.20.19 · SPEAK_YOU_WITH_US -----------------
-# וַיֹּאמְרוּ אֶל־מֹשֶׁה דַּבֵּר־אַתָּה עִמָּנוּ וְנִשְׁמָעָה וְאַל־יְדַבֵּר
-# עִמָּנוּ אֱלֹהִים פֶּן־נָמוּת
+# ‹וַיֹּאמְרוּ אֶל־מֹשֶׁה דַּבֵּר־אַתָּה› (“and-say to Moses speak you”)
+# ‹עִמָּנוּ וְנִשְׁמָעָה וְאַל־יְדַבֵּר› (“with-us/our and-hear and-do-not
+# speak”)
+# ‹עִמָּנוּ אֱלֹהִים פֶּן־נָמוּת› (“with-us/our God lest die”)
 # &quot;[EN-AID] And they said to Moses: Speak you with us, and we will hear; and
 # let God not speak with us, lest we die.&quot;
 m.step(&quot;Exod.20.19&quot;)
@@ -703,27 +761,32 @@ m.declare(&quot;ha_am&quot;, &quot;LET&quot;,
           &quot;daber_ata_imanu&quot;)
 
 # -------------------------- Exod.20.20 · FEAR_NOT_THE_TEST -----------------
-# וַיֹּאמֶר מֹשֶׁה אֶל־הָעָם אַל־תִּירָאוּ כִּי לְבַעֲבוּר נַסּוֹת אֶתְכֶם
-# בָּא הָאֱלֹהִים וּבַעֲבוּר תִּהְיֶה יִרְאָתוֹ עַל־פְּנֵיכֶם לְבִלְתִּי
-# תֶחֱטָאוּ
+# ‹וַיֹּאמֶר מֹשֶׁה אֶל־הָעָם› (“and-say Moses to the-people”)
+# ‹אַל־תִּירָאוּ כִּי לְבַעֲבוּר› (“do-not fear that to-in-crossed”)
+# ‹נַסּוֹת אֶתְכֶם בָּא› (“test obj-marker-you/your(pl) come/bring”)
+# ‹הָאֱלֹהִים וּבַעֲבוּר תִּהְיֶה› (“the-God and-in-crossed be”)
+# ‹יִרְאָתוֹ עַל־פְּנֵיכֶם לְבִלְתִּי› (“fear-him/its over face-you/your(pl)
+# to-failure-of”)
+# ‹תֶחֱטָאוּ› (“sin”)
 # &quot;[EN-AID] And Moses said to the people: Fear not, for in order to test you
 # God has come — and in order that His fear be on your faces, that you sin
 # not.&quot;
 m.step(&quot;Exod.20.20&quot;)
-# ‹כִּי לְבַעֲבוּר נַסּוֹת אֶתְכֶם בָּא הָאֱלֹהִים› (“that to-in-crossed
-# test obj-marker-you/your(pl) come/bring the-God”) — fact holds: to-vaavur-
-# test-etkhem
+# ‹כִּי לְבַעֲבוּר נַסּוֹת› (“that to-in-crossed test”)
+# ‹אֶתְכֶם בָּא הָאֱלֹהִים› (“obj-marker-you/your(pl) come/bring the-God”)
+# — fact holds: to-vaavur-test-etkhem
 m.fact(&quot;le_vaavur_nasot_etkhem&quot;)
 
 # -------------------------- Exod.20.21 · INTO_THE_THICK_CLOUD --------------
-# וַיַּעֲמֹד הָעָם מֵרָחֹק וּמֹשֶׁה נִגַּשׁ אֶל־הָעֲרָפֶל אֲשֶׁר־שָׁם
-# הָאֱלֹהִים
+# ‹וַיַּעֲמֹד הָעָם מֵרָחֹק› (“and-stand the-people from-remote”)
+# ‹וּמֹשֶׁה נִגַּשׁ אֶל־הָעֲרָפֶל› (“and-Moses be to the-gloom”)
+# ‹אֲשֶׁר־שָׁם הָאֱלֹהִים› (“which there the-God”)
 # &quot;[EN-AID] And the people stood far off — and Moses drew near to the thick
 # cloud where God was.&quot;
 m.step(&quot;Exod.20.21&quot;)
-# ‹וּמֹשֶׁה נִגַּשׁ אֶל־הָעֲרָפֶל אֲשֶׁר־שָׁם הָאֱלֹהִים› (“and-Moses be to
-# the-gloom which there the-God”) — demand settled (popped from the queue):
-# speak-you-imanu
+# ‹וּמֹשֶׁה נִגַּשׁ אֶל־הָעֲרָפֶל› (“and-Moses be to the-gloom”)
+# ‹אֲשֶׁר־שָׁם הָאֱלֹהִים› (“which there the-God”)
+# — demand settled (popped from the queue): speak-you-imanu
 m.result(&quot;daber_ata_imanu&quot;, tmark=&quot;t1&quot;)
 # witness-tier presupposed read: standing_rows on altar_speech — read, not
 # installed
@@ -731,23 +794,31 @@ m.witness_read(&quot;altar_speech&quot;, &quot;standing_rows&quot;,
                 cites=[&quot;Mishnah Chagigah 3:8&quot;, &quot;Pirkei Avot 3:6&quot;, &quot;Mishnah Tamid 5:1&quot;, &quot;Mishnah Shabbat 24:1&quot;])
 
 # -------------------------- Exod.20.22 · FROM_THE_HEAVENS ------------------
-# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה כֹּה תֹאמַר אֶל־בְּנֵי יִשְׂרָאֵל אַתֶּם
-# רְאִיתֶם כִּי מִן־הַשָּׁמַיִם דִּבַּרְתִּי עִמָּכֶם
+# ‹וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה› (“and-say YHWH to Moses”)
+# ‹כֹּה תֹאמַר אֶל־בְּנֵי› (“like-this say to son”)
+# ‹יִשְׂרָאֵל אַתֶּם רְאִיתֶם› (“Israel you see”)
+# ‹כִּי מִן־הַשָּׁמַיִם דִּבַּרְתִּי› (“that from the-heavens speak”)
+# ‹עִמָּכֶם› (“with-you/your(pl)”)
 # &quot;[EN-AID] And the LORD said to Moses: So shall you say to the sons of
 # Israel: You have seen that from the heavens I spoke with you.&quot;
 m.step(&quot;Exod.20.22&quot;)
-# ‹אַתֶּם רְאִיתֶם כִּי מִן־הַשָּׁמַיִם דִּבַּרְתִּי עִמָּכֶם› (“you see
-# that from the-heavens speak with-you/your(pl)”) — fact holds: from-the-
-# heavens-speak
+# ‹אַתֶּם רְאִיתֶם כִּי› (“you see that”)
+# ‹מִן־הַשָּׁמַיִם דִּבַּרְתִּי עִמָּכֶם› (“from the-heavens speak with-
+# you/your(pl)”)
+# — fact holds: from-the-heavens-speak
 m.fact(&quot;min_ha_shamayim_dibarti&quot;)
 
 # -------------------------- Exod.20.23 · NO_GODS_OF_SILVER -----------------
-# לֹא תַעֲשׂוּן אִתִּי אֱלֹהֵי כֶסֶף וֵאלֹהֵי זָהָב לֹא תַעֲשׂוּ לָכֶם
+# ‹לֹא תַעֲשׂוּן אִתִּי› (“not make-ward with-me/my”)
+# ‹אֱלֹהֵי כֶסֶף וֵאלֹהֵי› (“God silver and-God”)
+# ‹זָהָב לֹא תַעֲשׂוּ› (“gold not make”)
+# ‹לָכֶם› (“to-you/your(pl)”)
 # &quot;[EN-AID] You shall not make with Me gods of silver, and gods of gold you
 # shall not make for yourselves.&quot;
 m.step(&quot;Exod.20.23&quot;)
-# ‹לֹא תַעֲשׂוּן אִתִּי אֱלֹהֵי כֶסֶף וֵאלֹהֵי זָהָב› (“not make-ward with-
-# me/my God silver and-God gold”) —
+# ‹לֹא תַעֲשׂוּן אִתִּי› (“not make-ward with-me/my”)
+# ‹אֱלֹהֵי כֶסֶף וֵאלֹהֵי› (“God silver and-God”)
+# ‹זָהָב› (“gold”)
 m.statute(&quot;FORBID&quot;, &quot;elohe_khesef_ve_zahav&quot;)
 # witness-tier presupposed read: image_making_scope_machine on lo_taasun_iti
 # — read, not installed
@@ -755,15 +826,21 @@ m.witness_read(&quot;lo_taasun_iti&quot;, &quot;image_making_scope_machine&quot;
                 cites=[&quot;Rosh Hashanah 24a:18&quot;, &quot;Rosh Hashanah 24a:19&quot;, &quot;Rosh Hashanah 24a:20&quot;, &quot;Rosh Hashanah 24b:1&quot;, &quot;Rosh Hashanah 24b:2&quot;, &quot;Rosh Hashanah 24b:3&quot;, &quot;Rosh Hashanah 24b:4&quot;, &quot;Rosh Hashanah 24b:5&quot;, &quot;Rosh Hashanah 24b:6&quot;, &quot;Rosh Hashanah 24b:7&quot;, &quot;Rosh Hashanah 24b:8&quot;, &quot;Rosh Hashanah 24b:9&quot;, &quot;Rosh Hashanah 24b:10&quot;, &quot;Rosh Hashanah 24b:11&quot;, &quot;Rosh Hashanah 24b:12&quot;, &quot;Rosh Hashanah 24b:13&quot;, &quot;Avodah Zarah 43b:4&quot;, &quot;Avodah Zarah 43b:5&quot;, &quot;Avodah Zarah 43b:6&quot;, &quot;Avodah Zarah 43b:7&quot;, &quot;Avodah Zarah 43b:8&quot;, &quot;Avodah Zarah 43b:9&quot;, &quot;Avodah Zarah 43b:10&quot;, &quot;Avodah Zarah 43b:11&quot;, &quot;Avodah Zarah 43b:12&quot;, &quot;Avodah Zarah 43b:13&quot;, &quot;Avodah Zarah 43b:14&quot;, &quot;Avodah Zarah 43b:15&quot;, &quot;Avodah Zarah 54a:3&quot;, &quot;Avodah Zarah 54a:4&quot;, &quot;Avodah Zarah 54a:5&quot;])
 
 # -------------------------- Exod.20.24 · AN_ALTAR_OF_EARTH -----------------
-# מִזְבַּח אֲדָמָה תַּעֲשֶׂה־לִּי וְזָבַחְתָּ עָלָיו אֶת־עֹלֹתֶיךָ
-# וְאֶת־שְׁלָמֶיךָ אֶת־צֹאנְךָ וְאֶת־בְּקָרֶךָ בְּכָל־הַמָּקוֹם אֲשֶׁר
-# אַזְכִּיר אֶת־שְׁמִי אָבוֹא אֵלֶיךָ וּבֵרַכְתִּיךָ
+# ‹מִזְבַּח אֲדָמָה תַּעֲשֶׂה־לִּי› (“altar ground make to-me/my”)
+# ‹וְזָבַחְתָּ עָלָיו אֶת־עֹלֹתֶיךָ› (“and-slaughter-an-animal over-him/its
+# obj-marker burnt-offering-you/your”)
+# ‹וְאֶת־שְׁלָמֶיךָ אֶת־צֹאנְךָ וְאֶת־בְּקָרֶךָ› (“and-obj-marker requital-
+# you/your obj-marker flock-you/your and-obj-marker herd-you/your”)
+# ‹בְּכָל־הַמָּקוֹם אֲשֶׁר אַזְכִּיר› (“in-all the-place which mark”)
+# ‹אֶת־שְׁמִי אָבוֹא אֵלֶיךָ› (“obj-marker name-me/my come/bring to-
+# you/your”)
+# ‹וּבֵרַכְתִּיךָ› (“and-bless-you/your”)
 # &quot;[EN-AID] An altar of earth shall you make for Me, and you shall sacrifice
 # on it your burnt-offerings and your peace-offerings, your flock and your
 # herd; in every place where I cause My name to be mentioned, I will come to
 # you and bless you.&quot;
 m.step(&quot;Exod.20.24&quot;)
-# ‹מִזְבַּח אֲדָמָה תַּעֲשֶׂה־לִּי› (“altar ground make to-me/my”) —
+# ‹מִזְבַּח אֲדָמָה תַּעֲשֶׂה־לִּי› (“altar ground make to-me/my”)
 m.statute(&quot;BIND&quot;, &quot;mizbach_adama&quot;)
 # witness-tier presupposed read: name_mention_dual_law on
 # be_khol_ha_maqom_asher_azkir — read, not installed
@@ -773,25 +850,36 @@ m.witness_read(&quot;be_khol_ha_maqom_asher_azkir&quot;, &quot;name_mention_dual
 # ve_zavachta_alav — read, not installed
 m.witness_read(&quot;ve_zavachta_alav&quot;, &quot;altar_paragraph_babylonian_layer&quot;,
                 cites=[&quot;Zevachim 54a:7&quot;, &quot;Zevachim 54a:8&quot;, &quot;Zevachim 54a:9&quot;, &quot;Zevachim 58a:4&quot;, &quot;Zevachim 58a:5&quot;, &quot;Zevachim 58a:6&quot;, &quot;Zevachim 59a:10&quot;, &quot;Zevachim 59a:11&quot;, &quot;Zevachim 59a:12&quot;, &quot;Zevachim 61b:3&quot;, &quot;Zevachim 61b:4&quot;, &quot;Zevachim 61b:5&quot;])
+# witness-tier presupposed read: the_rules_fetched_from_the_decalogue_runner
+# on the_altar_laws_earth_predicate_at_its_mishnah_seat — read, not
+# installed
+m.witness_read(&quot;the_altar_laws_earth_predicate_at_its_mishnah_seat&quot;, &quot;the_rules_fetched_from_the_decalogue_runner&quot;,
+                cites=[&quot;Mishnah Middot 3:1&quot;, &quot;Mishnah Middot 3:3&quot;, &quot;Mishnah Middot 3:4&quot;, &quot;Mishnah Chagigah 3:8&quot;, &quot;Mekhilta on Exod 22:24&quot;])
 
 # -------------------------- Exod.20.25 · NO_HEWN_STONES --------------------
-# וְאִם־מִזְבַּח אֲבָנִים תַּעֲשֶׂה־לִּי לֹא־תִבְנֶה אֶתְהֶן גָּזִית כִּי
-# חַרְבְּךָ הֵנַפְתָּ עָלֶיהָ וַתְּחַלְלֶהָ
+# ‹וְאִם־מִזְבַּח אֲבָנִים תַּעֲשֶׂה־לִּי› (“and-if altar stone make to-
+# me/my”)
+# ‹לֹא־תִבְנֶה אֶתְהֶן גָּזִית› (“not build obj-marker-them/their something-
+# cut”)
+# ‹כִּי חַרְבְּךָ הֵנַפְתָּ› (“that drought-you/your quiver”)
+# ‹עָלֶיהָ וַתְּחַלְלֶהָ› (“over-her/its and-bore-her/its”)
 # &quot;[EN-AID] And if an altar of stones you make for Me, you shall not build
 # them hewn; for you have lifted your sword upon it, and profaned it.&quot;
 m.step(&quot;Exod.20.25&quot;)
 # ‹לֹא־תִבְנֶה אֶתְהֶן גָּזִית› (“not build obj-marker-them/their something-
-# cut”) —
+# cut”)
 m.statute(&quot;FORBID&quot;, &quot;gazit&quot;)
 
 # -------------------------- Exod.20.26 · NO_STEPS --------------------------
-# וְלֹא־תַעֲלֶה בְמַעֲלֹת עַל־מִזְבְּחִי אֲשֶׁר לֹא־תִגָּלֶה עֶרְוָתְךָ
-# עָלָיו
+# ‹וְלֹא־תַעֲלֶה בְמַעֲלֹת עַל־מִזְבְּחִי› (“and-not go-up in-Most-High over
+# altar-me/my”)
+# ‹אֲשֶׁר לֹא־תִגָּלֶה עֶרְוָתְךָ› (“which not denude nudity-you/your”)
+# ‹עָלָיו› (“over-him/its”)
 # &quot;[EN-AID] And you shall not go up by steps onto My altar — that your
 # nakedness be not uncovered on it.&quot;
 m.step(&quot;Exod.20.26&quot;)
 # ‹וְלֹא־תַעֲלֶה בְמַעֲלֹת עַל־מִזְבְּחִי› (“and-not go-up in-Most-High over
-# altar-me/my”) —
+# altar-me/my”)
 m.statute(&quot;FORBID&quot;, &quot;maalot&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
@@ -810,7 +898,7 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 17
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;poqed_avon_avot&#x27;, &#x27;utterance_rider_file&#x27;), (&#x27;lo_tisa_et_shem&#x27;, &#x27;vain_clause_oath_file&#x27;), (&#x27;zakhor_et_yom_ha_shabat&#x27;, &#x27;kiddush_file&#x27;), (&#x27;rest_roster&#x27;, &#x27;recorded_runs&#x27;), (&#x27;honor_utterance&#x27;, &#x27;equal_weight&#x27;), (&#x27;false_witness_utterance&#x27;, &#x27;plotting_rows&#x27;), (&#x27;altar_speech&#x27;, &#x27;standing_rows&#x27;), (&#x27;lo_taasun_iti&#x27;, &#x27;image_making_scope_machine&#x27;), (&#x27;be_khol_ha_maqom_asher_azkir&#x27;, &#x27;name_mention_dual_law&#x27;), (&#x27;ve_zavachta_alav&#x27;, &#x27;altar_paragraph_babylonian_layer&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;poqed_avon_avot&#x27;, &#x27;utterance_rider_file&#x27;), (&#x27;lo_tisa_et_shem&#x27;, &#x27;vain_clause_oath_file&#x27;), (&#x27;zakhor_et_yom_ha_shabat&#x27;, &#x27;kiddush_file&#x27;), (&#x27;rest_roster&#x27;, &#x27;recorded_runs&#x27;), (&#x27;honor_utterance&#x27;, &#x27;equal_weight&#x27;), (&#x27;false_witness_utterance&#x27;, &#x27;plotting_rows&#x27;), (&#x27;altar_speech&#x27;, &#x27;standing_rows&#x27;), (&#x27;lo_taasun_iti&#x27;, &#x27;image_making_scope_machine&#x27;), (&#x27;be_khol_ha_maqom_asher_azkir&#x27;, &#x27;name_mention_dual_law&#x27;), (&#x27;ve_zavachta_alav&#x27;, &#x27;altar_paragraph_babylonian_layer&#x27;), (&#x27;the_altar_laws_earth_predicate_at_its_mishnah_seat&#x27;, &#x27;the_rules_fetched_from_the_decalogue_runner&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Berakhot 7a:26&#x27;, &#x27;Berakhot 7a:27&#x27;, &#x27;Sanhedrin 99a:20&#x27;, &#x27;Sanhedrin 99a:21&#x27;, &#x27;Bava Metzia 5b:18&#x27;, &#x27;Bava Metzia 5b:19&#x27;, &#x27;Bava Metzia 5b:20&#x27;, &#x27;Beitzah 15b:4&#x27;, &#x27;Beitzah 15b:5&#x27;, &#x27;Bava Kamma 74b:7&#x27;, &#x27;Bava Kamma 74b:8&#x27;, &#x27;Bava Kamma 74b:9&#x27;, &#x27;Sanhedrin 86a:15&#x27;, &#x27;Sanhedrin 86a:16&#x27;, &#x27;Sanhedrin 86a:17&#x27;]
     assert all(&#x27;utterance_rider_file&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;poqed_avon_avot&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -841,5 +929,8 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[9][&quot;cites&quot;] == [&#x27;Zevachim 54a:7&#x27;, &#x27;Zevachim 54a:8&#x27;, &#x27;Zevachim 54a:9&#x27;, &#x27;Zevachim 58a:4&#x27;, &#x27;Zevachim 58a:5&#x27;, &#x27;Zevachim 58a:6&#x27;, &#x27;Zevachim 59a:10&#x27;, &#x27;Zevachim 59a:11&#x27;, &#x27;Zevachim 59a:12&#x27;, &#x27;Zevachim 61b:3&#x27;, &#x27;Zevachim 61b:4&#x27;, &#x27;Zevachim 61b:5&#x27;]
     assert all(&#x27;altar_paragraph_babylonian_layer&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;ve_zavachta_alav&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[10][&quot;cites&quot;] == [&#x27;Mishnah Middot 3:1&#x27;, &#x27;Mishnah Middot 3:3&#x27;, &#x27;Mishnah Middot 3:4&#x27;, &#x27;Mishnah Chagigah 3:8&#x27;, &#x27;Mekhilta on Exod 22:24&#x27;]
+    assert all(&#x27;the_rules_fetched_from_the_decalogue_runner&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_altar_laws_earth_predicate_at_its_mishnah_seat&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-09-06 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

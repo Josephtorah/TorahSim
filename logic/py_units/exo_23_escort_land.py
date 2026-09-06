@@ -68,6 +68,11 @@ m.step("Exod.23.24")
 # read, not installed
 m.witness_read("no_bowing_clause", "errors_and_pillars",
                 cites=["Onkelos Exod 23:24", "Onkelos Exod 23:32-33"])
+# witness-tier presupposed read:
+# the_pillars_doubled_verbs_and_the_covenant_barred on
+# the_lands_law_layer_on_onkelos_alone — read, not installed
+m.witness_read("the_lands_law_layer_on_onkelos_alone", "the_pillars_doubled_verbs_and_the_covenant_barred",
+                cites=["Onkelos Exod 23:21", "Onkelos Exod 23:22", "Onkelos Exod 23:24", "Onkelos Exod 23:25", "Onkelos Exod 23:27", "Onkelos Exod 23:32-33", "Mishnah Avodah Zarah 3:1"])
 
 # -------------------------- Exod.23.25 · ETNACHTA_SPLIT --------------------
 # ‹ועבדתם את יהוה› (“and-work/serve obj-marker YHWH”)
@@ -175,11 +180,14 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('angel_clause', 'the_word_in_my_name'), ('no_bowing_clause', 'errors_and_pillars')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('angel_clause', 'the_word_in_my_name'), ('no_bowing_clause', 'errors_and_pillars'), ('the_lands_law_layer_on_onkelos_alone', 'the_pillars_doubled_verbs_and_the_covenant_barred')]
     assert m.WITNESS_READS[0]["cites"] == ['Onkelos Exod 23:21']
     assert all('the_word_in_my_name' not in f for f in m.WORLD["facts"])
     assert 'angel_clause' not in m.WORLD["witnessed"]
     assert m.WITNESS_READS[1]["cites"] == ['Onkelos Exod 23:24', 'Onkelos Exod 23:32-33']
     assert all('errors_and_pillars' not in f for f in m.WORLD["facts"])
     assert 'no_bowing_clause' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Exod 23:21', 'Onkelos Exod 23:22', 'Onkelos Exod 23:24', 'Onkelos Exod 23:25', 'Onkelos Exod 23:27', 'Onkelos Exod 23:32-33', 'Mishnah Avodah Zarah 3:1']
+    assert all('the_pillars_doubled_verbs_and_the_covenant_barred' not in f for f in m.WORLD["facts"])
+    assert 'the_lands_law_layer_on_onkelos_alone' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

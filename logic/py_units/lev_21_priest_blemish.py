@@ -49,6 +49,11 @@ m.step("Lev.21.18")
 # read, not installed
 m.witness_read("iver_o_piseach", "the_first_blemish_row",
                 cites=["Sifra, Emor, Section 3 6", "Sifra, Emor, Section 3 7", "Sifra, Emor, Section 3 8", "Sifra, Emor, Section 3 9", "Onkelos Lev 21:18"])
+# witness-tier presupposed read:
+# three_tokens_shared_exactly_with_the_animals_list on
+# the_blemish_census_on_twelve_class_heads — read, not installed
+m.witness_read("the_blemish_census_on_twelve_class_heads", "three_tokens_shared_exactly_with_the_animals_list",
+                cites=["Sifra, Emor, Section 3 1", "Sifra, Emor, Section 3 2", "Sifra, Emor, Section 3 3", "Sifra, Emor, Section 3 4", "Sifra, Emor, Section 3 5", "Sifra, Emor, Section 3 6", "Sifra, Emor, Section 3 7", "Sifra, Emor, Section 3 9", "Sifra, Emor, Section 3 11", "Sifra, Emor, Section 3 12", "Sifra, Emor, Section 3 13", "Sifra, Emor, Section 3 14", "Sifra, Emor, Section 3 15", "Sifra, Emor, Chapter 3 1", "Sifra, Emor, Chapter 3 2", "Sifra, Emor, Chapter 3 3", "Sifra, Emor, Chapter 3 4", "Sifra, Emor, Chapter 3 5", "Sifra, Emor, Chapter 3 6", "Sifra, Emor, Chapter 3 7", "Sifra, Emor, Chapter 3 8", "Sifra, Emor, Chapter 3 9", "Sifra, Emor, Chapter 3 11", "Sifra, Emor, Chapter 3 12", "Sifra, Emor, Section 7 13", "Mishnah Bekhorot 7:1", "Mishnah Bekhorot 7:2", "Mishnah Bekhorot 7:3", "Mishnah Bekhorot 7:4", "Mishnah Bekhorot 7:5", "Mishnah Bekhorot 7:6", "Mishnah Bekhorot 7:7", "Mishnah Eruvin 10:13", "Mishnah Terumot 8:1", "Onkelos Lev 21:20"])
 
 # -------------------------- Lev.21.19 · ETNACHTA_SPLIT ---------------------
 # ‹או איש אשר› (“or man which”)
@@ -147,26 +152,29 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('asher_yihyeh_bo_mum', 'age_ladder_and_service_census'), ('iver_o_piseach', 'the_first_blemish_row'), ('shever_regel_o_yad', 'the_fracture_row'), ('giben_dak_tevalul', 'eye_and_skin_row_onkelos_rulings'), ('kol_ish_asher_bo_mum', 'man_beast_difference_table'), ('lechem_elohav_yochel', 'the_blemished_eat_everything'), ('ach_el_haparochet', 'entry_hierarchy_and_transmission_chain')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('asher_yihyeh_bo_mum', 'age_ladder_and_service_census'), ('iver_o_piseach', 'the_first_blemish_row'), ('the_blemish_census_on_twelve_class_heads', 'three_tokens_shared_exactly_with_the_animals_list'), ('shever_regel_o_yad', 'the_fracture_row'), ('giben_dak_tevalul', 'eye_and_skin_row_onkelos_rulings'), ('kol_ish_asher_bo_mum', 'man_beast_difference_table'), ('lechem_elohav_yochel', 'the_blemished_eat_everything'), ('ach_el_haparochet', 'entry_hierarchy_and_transmission_chain')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Emor, Section 3 1', 'Sifra, Emor, Section 3 2', 'Sifra, Emor, Section 3 3', 'Sifra, Emor, Section 3 4', 'Sifra, Emor, Section 3 5', 'Onkelos Lev 21:17']
     assert all('age_ladder_and_service_census' not in f for f in m.WORLD["facts"])
     assert 'asher_yihyeh_bo_mum' not in m.WORLD["witnessed"]
     assert m.WITNESS_READS[1]["cites"] == ['Sifra, Emor, Section 3 6', 'Sifra, Emor, Section 3 7', 'Sifra, Emor, Section 3 8', 'Sifra, Emor, Section 3 9', 'Onkelos Lev 21:18']
     assert all('the_first_blemish_row' not in f for f in m.WORLD["facts"])
     assert 'iver_o_piseach' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Emor, Section 3 10', 'Sifra, Emor, Section 3 11']
+    assert m.WITNESS_READS[2]["cites"] == ['Sifra, Emor, Section 3 1', 'Sifra, Emor, Section 3 2', 'Sifra, Emor, Section 3 3', 'Sifra, Emor, Section 3 4', 'Sifra, Emor, Section 3 5', 'Sifra, Emor, Section 3 6', 'Sifra, Emor, Section 3 7', 'Sifra, Emor, Section 3 9', 'Sifra, Emor, Section 3 11', 'Sifra, Emor, Section 3 12', 'Sifra, Emor, Section 3 13', 'Sifra, Emor, Section 3 14', 'Sifra, Emor, Section 3 15', 'Sifra, Emor, Chapter 3 1', 'Sifra, Emor, Chapter 3 2', 'Sifra, Emor, Chapter 3 3', 'Sifra, Emor, Chapter 3 4', 'Sifra, Emor, Chapter 3 5', 'Sifra, Emor, Chapter 3 6', 'Sifra, Emor, Chapter 3 7', 'Sifra, Emor, Chapter 3 8', 'Sifra, Emor, Chapter 3 9', 'Sifra, Emor, Chapter 3 11', 'Sifra, Emor, Chapter 3 12', 'Sifra, Emor, Section 7 13', 'Mishnah Bekhorot 7:1', 'Mishnah Bekhorot 7:2', 'Mishnah Bekhorot 7:3', 'Mishnah Bekhorot 7:4', 'Mishnah Bekhorot 7:5', 'Mishnah Bekhorot 7:6', 'Mishnah Bekhorot 7:7', 'Mishnah Eruvin 10:13', 'Mishnah Terumot 8:1', 'Onkelos Lev 21:20']
+    assert all('three_tokens_shared_exactly_with_the_animals_list' not in f for f in m.WORLD["facts"])
+    assert 'the_blemish_census_on_twelve_class_heads' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Emor, Section 3 10', 'Sifra, Emor, Section 3 11']
     assert all('the_fracture_row' not in f for f in m.WORLD["facts"])
     assert 'shever_regel_o_yad' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Sifra, Emor, Section 3 12', 'Sifra, Emor, Section 3 13', 'Sifra, Emor, Section 3 14', 'Sifra, Emor, Section 3 15', 'Onkelos Lev 21:20']
+    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Emor, Section 3 12', 'Sifra, Emor, Section 3 13', 'Sifra, Emor, Section 3 14', 'Sifra, Emor, Section 3 15', 'Onkelos Lev 21:20']
     assert all('eye_and_skin_row_onkelos_rulings' not in f for f in m.WORLD["facts"])
     assert 'giben_dak_tevalul' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Emor, Chapter 3 1', 'Sifra, Emor, Chapter 3 2', 'Sifra, Emor, Chapter 3 3', 'Sifra, Emor, Chapter 3 4', 'Sifra, Emor, Chapter 3 5', 'Sifra, Emor, Chapter 3 6', 'Sifra, Emor, Chapter 3 7']
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Emor, Chapter 3 1', 'Sifra, Emor, Chapter 3 2', 'Sifra, Emor, Chapter 3 3', 'Sifra, Emor, Chapter 3 4', 'Sifra, Emor, Chapter 3 5', 'Sifra, Emor, Chapter 3 6', 'Sifra, Emor, Chapter 3 7']
     assert all('man_beast_difference_table' not in f for f in m.WORLD["facts"])
     assert 'kol_ish_asher_bo_mum' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Emor, Chapter 3 8', 'Sifra, Emor, Chapter 3 9', 'Onkelos Lev 21:22']
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Emor, Chapter 3 8', 'Sifra, Emor, Chapter 3 9', 'Onkelos Lev 21:22']
     assert all('the_blemished_eat_everything' not in f for f in m.WORLD["facts"])
     assert 'lechem_elohav_yochel' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Emor, Chapter 3 10', 'Sifra, Emor, Chapter 3 11', 'Sifra, Emor, Chapter 3 12', 'Onkelos Lev 21:23']
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Emor, Chapter 3 10', 'Sifra, Emor, Chapter 3 11', 'Sifra, Emor, Chapter 3 12', 'Onkelos Lev 21:23']
     assert all('entry_hierarchy_and_transmission_chain' not in f for f in m.WORLD["facts"])
     assert 'ach_el_haparochet' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

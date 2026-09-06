@@ -367,6 +367,11 @@ m.witness_read("be_khol_ha_maqom_asher_azkir", "name_mention_dual_law",
 # ve_zavachta_alav — read, not installed
 m.witness_read("ve_zavachta_alav", "altar_paragraph_babylonian_layer",
                 cites=["Zevachim 54a:7", "Zevachim 54a:8", "Zevachim 54a:9", "Zevachim 58a:4", "Zevachim 58a:5", "Zevachim 58a:6", "Zevachim 59a:10", "Zevachim 59a:11", "Zevachim 59a:12", "Zevachim 61b:3", "Zevachim 61b:4", "Zevachim 61b:5"])
+# witness-tier presupposed read: the_rules_fetched_from_the_decalogue_runner
+# on the_altar_laws_earth_predicate_at_its_mishnah_seat — read, not
+# installed
+m.witness_read("the_altar_laws_earth_predicate_at_its_mishnah_seat", "the_rules_fetched_from_the_decalogue_runner",
+                cites=["Mishnah Middot 3:1", "Mishnah Middot 3:3", "Mishnah Middot 3:4", "Mishnah Chagigah 3:8", "Mekhilta on Exod 22:24"])
 
 # -------------------------- Exod.20.25 · NO_HEWN_STONES --------------------
 # ‹וְאִם־מִזְבַּח אֲבָנִים תַּעֲשֶׂה־לִּי› (“and-if altar stone make to-
@@ -410,7 +415,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 17
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('poqed_avon_avot', 'utterance_rider_file'), ('lo_tisa_et_shem', 'vain_clause_oath_file'), ('zakhor_et_yom_ha_shabat', 'kiddush_file'), ('rest_roster', 'recorded_runs'), ('honor_utterance', 'equal_weight'), ('false_witness_utterance', 'plotting_rows'), ('altar_speech', 'standing_rows'), ('lo_taasun_iti', 'image_making_scope_machine'), ('be_khol_ha_maqom_asher_azkir', 'name_mention_dual_law'), ('ve_zavachta_alav', 'altar_paragraph_babylonian_layer')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('poqed_avon_avot', 'utterance_rider_file'), ('lo_tisa_et_shem', 'vain_clause_oath_file'), ('zakhor_et_yom_ha_shabat', 'kiddush_file'), ('rest_roster', 'recorded_runs'), ('honor_utterance', 'equal_weight'), ('false_witness_utterance', 'plotting_rows'), ('altar_speech', 'standing_rows'), ('lo_taasun_iti', 'image_making_scope_machine'), ('be_khol_ha_maqom_asher_azkir', 'name_mention_dual_law'), ('ve_zavachta_alav', 'altar_paragraph_babylonian_layer'), ('the_altar_laws_earth_predicate_at_its_mishnah_seat', 'the_rules_fetched_from_the_decalogue_runner')]
     assert m.WITNESS_READS[0]["cites"] == ['Berakhot 7a:26', 'Berakhot 7a:27', 'Sanhedrin 99a:20', 'Sanhedrin 99a:21', 'Bava Metzia 5b:18', 'Bava Metzia 5b:19', 'Bava Metzia 5b:20', 'Beitzah 15b:4', 'Beitzah 15b:5', 'Bava Kamma 74b:7', 'Bava Kamma 74b:8', 'Bava Kamma 74b:9', 'Sanhedrin 86a:15', 'Sanhedrin 86a:16', 'Sanhedrin 86a:17']
     assert all('utterance_rider_file' not in f for f in m.WORLD["facts"])
     assert 'poqed_avon_avot' not in m.WORLD["witnessed"]
@@ -441,4 +446,7 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[9]["cites"] == ['Zevachim 54a:7', 'Zevachim 54a:8', 'Zevachim 54a:9', 'Zevachim 58a:4', 'Zevachim 58a:5', 'Zevachim 58a:6', 'Zevachim 59a:10', 'Zevachim 59a:11', 'Zevachim 59a:12', 'Zevachim 61b:3', 'Zevachim 61b:4', 'Zevachim 61b:5']
     assert all('altar_paragraph_babylonian_layer' not in f for f in m.WORLD["facts"])
     assert 've_zavachta_alav' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Mishnah Middot 3:1', 'Mishnah Middot 3:3', 'Mishnah Middot 3:4', 'Mishnah Chagigah 3:8', 'Mekhilta on Exod 22:24']
+    assert all('the_rules_fetched_from_the_decalogue_runner' not in f for f in m.WORLD["facts"])
+    assert 'the_altar_laws_earth_predicate_at_its_mishnah_seat' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

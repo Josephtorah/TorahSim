@@ -238,6 +238,26 @@ runtime path — BUILT; (5) the daemon campaign is its own future order. THE RID
 campaign (recorded as COMPILE_DEBT D9): a daemon's trigger events and emitted effects deserve
 the same census-and-disposition treatment as these edges — the effects registry is the
 emitted half, the trigger-event vocabulary the unbuilt half.
+## THE DAEMON CAMPAIGN CONSENSUS (2026-09-06, the second two-thread discussion; RULED "that works")
+The question was whether "after the compile debt" meant after all 24 books. Agreed and ruled:
+the campaign runs after the three-book debt's LAST check mark and BEFORE Numbers opens — the
+daemons are the law, the Prophets and Writings are the tape the daemons fire against, and the
+target (every prophetic indictment checked against an open computed entry) needs the daemons
+standing before the tape runs; and the amended rule must be in force on Numbers' first
+compile or the backlog resumes on day one. The asymmetry that shaped the plan: EFFECTS were
+discoverable per sitting because each has an ink witness inside the span's own verbs;
+TRIGGERS split — the conditions are already read by motion (1) (the when/if case tokens;
+every cold function's case keys are its conditions today), but the EVENT vocabulary lives in
+the tape, not the span — so a SEEDING SITTING harvests an event-type registry from the
+existing tape before the first wrapped compile, and per-sitting discovery adds types by
+witness thereafter. The daemon-edge gate (COMPILE_DEBT D9) is the campaign's first
+deliverable, making the 54 unwrapped functions a generated worklist and "ship wrapped"
+checkable rather than promised. Two guards: the wrap is a sixth motion AFTER the five, never
+before (conditions from the ink's case tokens first); and the fence — a daemon consumes events
+and writes the ledger only, never emits an event; cascades run through ledger state, timer
+firings are their own record class, every daemon prints its watch coverage, and the engine
+carries a cascade depth bound with cycle detection (the standing watch, now part of the spec).
+The full ruling with its order of work: COMPILE_DEBT.md D9.
 **What stays open.** Lev 9 as the run of Lev 1-4 (COMPILE_DEBT D8 — one short sitting after
 L5, on my recommendation); the
 advisory list of verses no address cites is printed by the gate each sweep and not gated

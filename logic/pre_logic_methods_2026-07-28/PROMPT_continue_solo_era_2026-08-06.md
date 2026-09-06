@@ -12004,3 +12004,349 @@ separate future order with its own trigger-and-effect gate (COMPILE_DEBT D9, the
 as the run of Lev 1-4) recommended as one short sitting after L5. Records: REPORT_DEPENDENCIES THE CONSENSUS
 section; COMPILE_DEBT D8/D9-a/D9; the yaml header; THE_STEPS motion (1); this doc; memory. Gate green, index
 regenerated; the sweep is rerun below. #62 STANDS as the resume point (L4b next on "go"; declare its span first).
+═══ 2026-09-06, owner: "commit push" → THE DEPENDENCY DEBT + THE GATE + THE CONSENSUS COMMITTED+PUSHED 47b9edb (46
+files, 3967 insertions, f196642..47b9edb on origin/main); the never-commit set untouched; the tree clean against
+origin except this line and memory. COMPACTION POINT #62 above STANDS as the resume point (L4b next on "go"; declare
+its span in dependency_dispositions.yaml first); the only changes since it: the consensus pieces (carries:, --debt,
+DEPENDENCY_INDEX.md — all committed) and the commit itself.
+═══ 2026-09-06 (after 47b9edb), the owner directed a SECOND two-thread discussion — the daemon campaign's scope and
+timing — then RULED "that works. record it then i compact". RECORDED: COMPILE_DEBT.md D9 (the full spec), REPORT_
+DEPENDENCIES.md THE DAEMON CAMPAIGN CONSENSUS, THE_STEPS Step 5 motion (1) ⚠ THE DAEMON CAMPAIGN paragraph, THE_
+WORLD.md idea log, THE_BRIEFING entry, memory. THE RULING: the campaign runs after the three-book debt's LAST check
+mark and BEFORE Numbers opens; (i) one SEEDING SITTING — the EVENT-TYPE REGISTRY harvested from the existing tape
+(557 events + the engine's scene records; the asymmetry: effects have ink witnesses in the span's own verbs, event
+types live in the tape); (ii) THE DAEMON-EDGE GATE first (declared trigger types + effects censused; unwrapped =
+OWED; the 54 a generated worklist); (iii) the wraps by engine family, scene replays with literal checkpoints (est.
+8-12 sittings); (iv) THEN the deliverable rule amended — cold function + dependency edges dispositioned + wrap
+declared and verified; the wrap a SIXTH motion after the five, conditions from the ink's case tokens first. THE
+FENCE: daemons consume events and write the ledger only, never emit; cascades through LEDGER STATE, never synthetic
+events; timers their own record class; watch coverage printed; cascade depth bound + cycle detection (the standing
+watch now in the spec). Nothing else moved: gate green, 23/23, 1444 cells, standing 1731, hash unmoved. UNCOMMITTED
+since 47b9edb: these records + this doc + memory. COMPACTION POINT #62 above STANDS as the resume point — the
+post-compaction rereads unchanged (add: COMPILE_DEBT D9); THEN L4b on "go" (declare its span first); the campaign
+itself waits for the debt's last check mark.
+═══ 2026-09-06, post-#62 rereads DONE (the owner: "read compaction point 62"): Step 2, Step 5 (the deliverable rule,
+the five motions with the census sentence in motion (1), the effects rule, THE COMPILE DEBT, THE SIXTEENTH SPAN + THE
+DEPENDENCY DEBT + THE DAEMON CAMPAIGN paragraphs), the compiler block, this tail, COMPILE_DEBT.md incl. D9, the
+dispositions header. Tree unchanged since the ruling entry above: 7 modified (the daemon-campaign records + this doc) +
+memory, uncommitted since 47b9edb. Nothing else moved. #62 STANDS; L4b waits on "go" (declare its span first).
+═══ 2026-09-06, owner: "continue" → SITTING L4b OF THE COMPILE DEBT RUN END TO END — THE HOLINESS LEDGER, SECOND HALF,
+Lev 19:19-37, and THE FIRST RUNNER COMPILED UNDER THE DEPENDENCY GATE'S RULE. THE CENSUS FIRST: holiness_b's span declared
+in dependency_dispositions.yaml, a stub runner in place, dependency_census.py --emit → FOUR required edges before a cell
+existed: holiness_b → chatat FALSE (19:22 'his SIN which he sinned' — the noun, twice), → sanctions CALL (19:31's ghost-pit:
+SA.ov consulter / bearer / three_verses / definitions), → tzav CALL (19:21's guilt ram: TZ.asham_law place / eater / grade /
+age_and_price), → vayikra5 CALL (the ram's two-shekel floor, V5.DATA); + holiness_b → holiness declared CALL for the live
+calls (the judge's clause, the five effects, the heart, the great rule, the fear-of-parents abstentions). THE GATE FIRED
+ONCE, HONESTLY: the vayikra5 edge was CALL on a VALUE-USE (V5.DATA['ram_floor']) and the scanner's live-edge rule reads
+CALL FORMS (alias.name( ) — so the runner now calls the Lev 5 engine's own asham pointer, V5.pointers('asham_procedure'),
+which itself fetches Lev 7:1-7 from Tzav: a real edge, one more cell. THE LEDGER FIRST: logic/oral_triage/holiness_b_topic_
+docket_2026-09-06.md (scratchpad/gen_holiness_b_ledger.py) — 145 rows: Mishnah KILAYIM whole (77) + ORLAH whole (35) — two
+tractates NEVER before put before the engine (0 LAW rows with a prior graded row) — + Bava Batra 5 whole (11, the measures)
++ the 18 link rows on the half + 4 topic rows (Keritot 2:3-4, Bava Metzia 4:10, Rosh Hashanah 1:1); coverage computed
+(missing 0, extra 0; 19 rows self-checked by a token of their own text); LAW 71 / CREDIT 22 (all verified by script) /
+ROUTED 40 (the VINEYARD's kilayim = Deut 22:9, Kilayim 4-7 + Orlah 3:6; the plowing pair 22:10; the firstling/nazirite;
+Tzav's statuses) / CONTEXT 12; 128 Talmud addresses indexed, NONE opened; Tosefta Kilayim NOT on the local shelf (marked
+absent). FIVE EFFECTS registered first from the pointed ink (117 → 122): mixture_barred (BLOCK), orlah_years (TIMER, per
+tree), fourth_year_holy (STATUS), rise_owed, honor_owed (DEBIT) — a colon in a YAML value broke the registry once, repaired.
+THE RUNNER: World/step9/cold_run_holiness_b.py — 182/182 ON THE FIRST GRADED RUN (12% ink / 39% moves / 49 sheet / 20 data /
+19 imports; guard 182; fix_percent lifted 6 formats before the first run); 45 probes; the censuses as tripwires incl. a
+WHOLE-TANAKH token census (23,213 verses): the mixture noun x3 at 19:19 (Torah seats Lev 19:19 + Deut 22:9), shaatnez at
+Lev 19:19 + Deut 22:11 alone, 'My statutes' at [19, 37] framing the half, 'I am the LORD' at [25, 28, 30, 31, 32, 34, 36, 37]
+(with 'your God' at [25, 31, 34, 36]), THE MAIDSERVANT'S HAPAXES (designated / not-redeemed / inquest once each in the Bible;
+'freed' twice, both in 19:20; the redemption verb at exactly Exod 21:8 + Lev 19:20), 'which he sinned' x2 at 19:22, the
+uncircumcised root x3 at 19:23 (the verb a hapax), 'praises' at Judg 9:27 + Lev 19:24 (the other seat a VINTAGE FEAST),
+the corner x2 at 19:27 and at [9, 27] of the chapter, 19:30 == 26:2 TOKEN FOR TOKEN, the ghost-pit's definite form at
+19:31 + 20:6 alone, fear-your-God [14, 32], the convert [10, 33, 34], the wrong-verb at Lev 19:33 + 25:14 + 25:17, love [18,
+34], 'no wrong in judgment' [15, 35], 'just' x4 at 19:36, Egypt [34, 36]. ONE HONEST CENSUS CATCH: 'his guilt offering'
+carries the medial mem — the substring with the FINAL mem missed it (the tripwire fired; both letter forms now). THE
+HEADLINE: THE ANSWER SHEET'S GRID IS THE VERSE'S THREE VERBS — Kilayim 8:1's taxonomy bars exactly breed / sow-and-maintain
+(Sifra 4 16) / wear ('shall not come UPON you', 4 18); shaatnez = wool and linen (Deut 22:11) read out as three predicates
+by the ACRONYM RULE (9:8 = Sifra 4 18 — a narrative middah, E30, doing law work; logged in MIDDOT case law); the kind table
+= data ('though they resemble one another'); the tractate SELF-LABELS its fence class ('only for the appearance to the eye',
+3:5) and its channel abroad ('kilayim: from the words of the scribes', Orlah 3:9 — the new grain Torah everywhere, orlah a
+received law). THE MAIDSERVANT: the inquest = her lashes (Sifra 5 4), the death withheld by the verse's reason, the freed
+woman's mode by call (strangling), the ram by THREE live calls, 'which he sinned' twice = THE DELIBERATE AS THE ERRING
+(5 7; Keritot 2:2), Keritot 2:4's difference table = Sifra 5 8-10 verbatim (seven inversions), Onkelos inserting the
+document. ORLAH: a per-TREE timer from the planting event (the intent defines the tree, Sifra 3 2 = Orlah 1:1; the
+uprooted-but-living keeps counting, the severed layer restarts) on the Tishrei year (RH 1:1 'for planting') with thirty days
+= a year (3 7); the tripled token = total benefit (3 6; the burned garment/dish/oven-bread); the 201 vs 101 ratios = data;
+the counted-item exception; the fourth year = the second tithe's holy (the fifth, the removal; BM 4:8; Peah 7:6). THE BODY:
+THE RAZOR = the INTERSECTION of 19:27's 'destroy' with Lev 21:5's 'shave' (Sifra 6 4; Makkot 3:5) → MOVE M-21 THE
+INTERSECTION SOLVE registered (with the tattoo's write-AND-engrave as exemplar 2); M-20 gains exemplar (6): 'over the blood'
+as the warning for the wayward son (Sifra 6 1). THE SECOND SEATS BY LIVE CALL: the judge's clause (19:15 = 19:35, the
+measurer's five effects), the heart clause (19:14 = 19:32), the second love (19:18 = 19:34), the elder's honor protocol =
+the parents' fear's three abstentions (7 14 = Section 1 10 — HO.frame('fear_defined')); the elder = the sage, Onkelos
+writing it into the verse; the ghost-pit's WARNING beside its stoning by call; Bava Batra 5:10-11 = Sifra 8 8-9 verbatim
+(the cleaning table, the tilt, the tenth and twentieth). SEATS (scratchpad/seat_l4b.py; 94 cites pre-checked; anchors
+checked): LV19B-10 (F-222 THE THREE MIXTURES ON ONE NOUN THRICE) at STEP_Lv_19_19, LV19B-11 (F-223 THE MAIDSERVANT ON HER
+HAPAX TOKENS) at STEP_Lv_19_20, LV19B-12 (F-224 THE ORLAH TIMER ON THE TRIPLED TOKEN) at STEP_Lv_19_23 — lev_19_mixtures_
+weights; LV19L-04 (F-225 THE SECOND HALF'S CLAUSES AT THEIR SECOND SEATS, BY LIVE CALL) at STEP_Lv_19_35 — the duty ledger;
+rituals COMPLETE ×2 (regression 163/163), verify 0 failed ×2, ALL_UNITS rebuilt, corpus_world standing 1731 → 1735 (+1 per
+seat), hash 8b8fff1fa28953af UNMOVED, CORPUS_TRUTH GREEN; run_cold_all 24/24 at 1626 cells (the gate: 24 spans, 924 verses,
+52 edges + 42 pointers, 44 live edges); DEPENDENCY_INDEX.md regenerated. RECORDS: REPORT_HOLINESS.md L4b section; THE_STEPS
+Step 5 THE SEVENTEENTH SPAN; COMPILE_DEBT L4 [x] whole (+ the compiled-list note); MOVE_CATALOG M-21 + M-20 (6); MIDDOT
+case-law bullet (E30 on a legal noun); STAMP_LEDGER delegated row; THE_BRIEFING scoreboard bullet; this doc; memory. gloss_
+lint at baseline everywhere (new content 0). Watches unchanged. Exam counters unmoved. NOTE: an untracked THE_LINKS.md
+appeared at the repo root this sitting — not this thread's; left untouched.
+
+═══ COMPACTION POINT #63 (2026-09-06 — written unprompted at sitting L4b's close)
+═══ CLEAN POINT — no work mid-flight. UNCOMMITTED since 47b9edb: the daemon-campaign records (COMPILE_DEBT D9, REPORT_
+DEPENDENCIES, THE_STEPS motion (1), THE_WORLD, THE_BRIEFING) + L4b's: World/step9/{cold_run_holiness_b.py (NEW), dependency_
+dispositions.yaml, DEPENDENCY_INDEX.md, effect_vocabulary.yaml, REPORT_HOLINESS.md, COMPILE_DEBT.md}, logic/oral_triage/
+holiness_b_topic_docket_2026-09-06.md (NEW), logic/units/{lev_19_mixtures_weights, lev_19_holiness_duty_ledger}.yaml +
+manifests + py_units + html + UNIT_INDEX + ALL_UNITS, CORPUS_TRUTH.py + corpus_world.sqlite, STAMP_LEDGER, MOVE_CATALOG,
+MIDDOT, THE_STEPS, THE_BRIEFING, this doc, memory — rides the owner's "commit push" (staging by exclusion; NEVER-COMMIT set
+unchanged; THE_LINKS.md is NOT this thread's — ask before staging it; ⚠ every git command begins with `cd <home>/
+Torah_Grok &&`; ⚠ the shell cwd drifts into World/step9 — always absolute paths). POST-COMPACTION REREADS (mandatory, first
+sitting): THE_STEPS Step 2 + Step 5 (the deliverable rule, the five motions incl. the census sentence in motion (1) and THE
+DAEMON CAMPAIGN paragraph, the effects rule, THE COMPILE DEBT, THE SIXTEENTH + SEVENTEENTH SPANS + THE DEPENDENCY DEBT) + the
+compiler block + this tail + World/step9/COMPILE_DEBT.md (incl. D8, D9) + dependency_dispositions.yaml's header. THEN, on the
+owner's "go": SITTING L5 — THE PRIESTHOOD AND ITS DUES: lev_21_priest_family (21:1-15) + lev_21_priest_blemish (21:16-24) +
+lev_22_holy_food (22:1-16) + lev_22_acceptable_offerings (22:17-33) + lev_24_lamp_bread (24:1-9), by the rhythm WITH THE
+CENSUS FIRST: declare the new runner's span ([Lev,21,1,24],[Lev,22,1,33],[Lev,24,1,9]) in dependency_dispositions.yaml, a
+stub runner, dependency_census.py --emit, disposition every edge BEFORE the ledger (expect: 22:18-25's burnt/peace/vow
+offerings → offerings CALL; 22:14's terumah fifth → vayikra5 (sacrilege) CALL or PARAMETER; 21:5's 'they shall not shave' =
+the razor's second constraint → holiness_b REVERSE or CALL (M-21); 22:4's leper/zav → negaim PARAMETER / clocks CALL; 24:5-9's
+bread → minchah CALL; 21:1-4's dead-defilement → its own; 21:7-15's marriage bans → sanctions? (the unions' engine) CALL where
+a union row is fetched); then the docket by script (links UNION topic rows: Bekhorot 6-7 whole (the blemish census), Terumot
+6-8 (who eats terumah), Yevamot 6-9 (the priest's marriages), Zevachim 8-9 (the acceptable animal), Temurah 6, Menachot 11
+(the table), Tamid 3 (the lamp) — enumerate by script from logic/MISHNAH_TOPICS.md; the Sifra Emor rows in the lev_21/22/24
+reading ledgers ALL READ), the ledger FIRST with computed coverage (a NEW file priesthood_topic_docket_2026-09-06.md), a NEW
+runner cold_run_priesthood.py (its own guard tripwire), RUN scratchpad/fix_percent.py BEFORE the first execution, effects from
+the verbs (registry 122; expect: defiled_for_kin (the six relatives), blemish_barred (the census — status), terumah_eaten /
+barred_from_terumah, acceptable / blemished_offering, lamp_perpetual (timer), bread_set (weekly timer)), seats where the sheet
+is pre-answered, rituals, corpus_world (standing 1735 + seats), records (REPORT_PRIESTHOOD.md, THE_STEPS EIGHTEENTH SPAN,
+COMPILE_DEBT [x] L5, MOVE_CATALOG exemplars, STAMP row, this doc, memory). THEN D8 (Lev 9 as the run of Lev 1-4, one short
+sitting), E1-E5, G1-G2; THEN THE DAEMON CAMPAIGN (D9); THEN Numbers (a substitute spine needed — Sifrei starts at Num 5:2).
+OPEN (counted): 334 translit-fallback render lines; the seventy's decomposition (Seder Olam); Tosefta Kilayim absent from the
+shelf. Watches: will-indexed dispatch (2), demotion (1), consonant-fragment read (1); world-engine cascade depth + cycle
+detection (design only — in D9's spec).
+
+(2026-09-06, first sitting after #63 — the owner: "lets do l5") POST-#63 REREADS DONE before deriving: THE_STEPS Step 2 (declare/read-and-log, the two shelves, the topic route, the zero-report law) + Step 5 (the deliverable rule, the five motions incl. the census sentence in motion (1) and THE DAEMON CAMPAIGN paragraph, the effects rule, THE COMPILE DEBT, the SIXTEENTH + SEVENTEENTH SPANS + THE DEPENDENCY DEBT) + the compiler block + the #63 tail + World/step9/COMPILE_DEBT.md (D8, D9) + dependency_dispositions.yaml header. SITTING L5 opens by the rhythm: span declared first.
+
+(2026-09-06, SITTING L5 of THE COMPILE DEBT — the owner: "lets do l5"; the last of Leviticus's five sittings) THE PRIESTHOOD
+AND ITS DUES, Lev 21:1-24 + 22:1-33 + 24:1-9 (lev_21_priest_family, lev_21_priest_blemish, lev_22_holy_food, lev_22_
+acceptable_offerings, lev_24_lamp_bread) compiled cold in ONE runner — World/step9/cold_run_priesthood.py, 250 of 250 ON THE
+FIRST GRADED RUN (17% ink / 60% recorded / 38 sheet / 5 data / 13 imports; guard 250 — the parser's count against my
+hand-typed 199, the tripwire set to the measurement; fix_percent lifted 33 formats before the first run; one sheet-token
+catch: Sanhedrin 2:1 writes 'the high priest' WITHOUT the article). THE CENSUS FIRST, by the rhythm: span declared →
+stub runner → `dependency_census.py --emit` → SIX required edges dispositioned before a cell (clocks CALL the zav; lev24
+FALSE 'under'; offerings CALL the burnt and peace offerings, 24:2's lamp verb a homograph; pesach FALSE 'lame'; tzav FALSE
+'the iniquity of guilt'; vayikra5 CALL the fifth) + FOUR declared for the live calls the compile made (holiness_b the
+razor M-21; sanctions the burning vs strangling; minchah the memorial / showbread remainder / presentation / oil grade) +
+ONE OWED (mishpatim_2: 22:27's eighth day joins Exod 22:29's firstling, whose span holds no firstborn function — E1's; the
+why names the COMPILE_DEBT line). THE LEDGER FIRST: logic/oral_triage/priesthood_topic_docket_2026-09-06.md (scratchpad/
+gen_priesthood_ledger.py) — 156 rows: Bekhorot 6-7, Terumot 6-8, Yevamot 6-9, Zevachim 8-9, Temurah 6, Menachot 11, Tamid
+3, Chullin 5 WHOLE (115; the tractates found in MISHNAH_TOPICS.md by their HEBREW names — the English labels differ) + 37
+link rows outside + 4 topic rows; coverage computed (missing 0, extra 0; 32 rows self-checked by a token); LAW 46 / CREDIT
+67 (verified by script; rows inside the whole chapters with a prior graded row auto-credited) / ROUTED 18 / CONTEXT 25;
+558 Talmud addresses indexed, NONE opened; gloss_lint 0 after five jargon rewordings. NINE EFFECTS registered first
+(122 → 131; scratchpad/add_effects_l5.py, the `he` values QUOTED so their verse-ref colons are safe): defiled_for_kin,
+profaned_seed, terumah_fed (STATUS), blemish_barred, stranger_barred, same_day_slaughter_barred (BLOCK), eighth_day_fit,
+lamp_arranged, bread_set_weekly (TIMER). THE RUNNER: 58 probes; 40 censuses as tripwires incl. the whole-Tanakh index —
+the defile-verb at [1, 3, 4, 11]; the six kin tokens in order; the take-verb doubled at 21:7 AND 21:14; the profane root
+at seven seats; 'shall be burned' at Lev 6:23, 13:52, 21:9; 'blemish' 5 in 21 / 3 in 22; the block written four times;
+'bread' at five seats; the acceptance root at seven; 'I the LORD who sanctifies' x6; 'the name of My holiness' at 22:2 +
+22:32 (+ 20:3); 'and I shall be sanctified' the Torah's ONLY seat; THE TWO BLEMISH LISTS SHARE EXACTLY three tokens (garav,
+yalefet, sarua); 'its fifth' (this spelling) at 22:14 + 27:31; 'and the sun sets' at Lev 22:7 + Eccl 1:5; eating x14 in
+Lev 22; 'AND FROM THE DAY' (22:27) A TANAKH HAPAX; 'ON ONE DAY' (22:28) THE TORAH'S ONLY SEAT; 'leave over' shared with
+Exod 12:10; 'continually' x4 + 'the Sabbath' doubled; 'pure' x4 (oil, frankincense, menorah, table); LEV 24:2 = EXOD
+27:20's THIRTEEN-TOKEN TAIL; 'and his sons' at Exod 27:21, DROPPED at Lev 24:3; the memorial noun's six Leviticus seats.
+Callees: HB.body (razor, corners, multipliers), SA.adultery/burned_nine, CL.zav, V5.sacrilege (the added quarter),
+OFF.dispatch (olah, shelamim, todah), MIN.remainder/presentation/frankincense_quantity/oil_grade. Five functions:
+family (54 cells), blemish (30), holy_food (60), acceptable (68), lamp_table (38). SEATS (scratchpad/seat_l5.py; 198 cites
+pre-checked; anchors checked): LV21A-14 (F-226) at STEP_Lv_21_2, LV21B-08 (F-227) at STEP_Lv_21_18, LV22A-12 (F-228) at
+STEP_Lv_22_11, LV22B-11 (F-229) at STEP_Lv_22_27, LV24A-07 (F-230) at STEP_Lv_24_2; rituals COMPLETE ×5 (163 frozen
+units), verify 0 failed ×5, ALL_UNITS rebuilt, corpus_world standing 1735 → 1740, hash 8b8fff1fa28953af UNMOVED,
+CORPUS_TRUTH GREEN; run_cold_all 25/25 at 1876 cells (the gate: 25 runners, 990 verses, 58 edges + 42 pointers, 50 live
+edges, 63 dispositions); DEPENDENCY_INDEX.md regenerated. RECORDS: REPORT_PRIESTHOOD.md (NEW); THE_STEPS Step 5 THE
+EIGHTEENTH SPAN; COMPILE_DEBT L5 [x] + the compiled-list note (LEVITICUS'S FIVE ALL CHECKED; the OWED line); MOVE_CATALOG
+M-21 exemplar (1) closed at its home by live call + M-16 EIGHTH exemplar (ben Chakinai's 'and in you', Sifra Emor Chapter
+7 11); MIDDOT case-law bullet (the verbal analogy run in BOTH directions; 'man... man' as a verified doubled token);
+STAMP_LEDGER delegated row; THE_BRIEFING scoreboard bullet; this doc; memory. Watches unchanged. Exam counters unmoved.
+
+═══ COMPACTION POINT #64 (2026-09-06 — written unprompted at sitting L5's close)
+═══ CLEAN POINT — no work mid-flight. LEVITICUS'S COMPILE DEBT IS PAID (L1-L5 all [x]). UNCOMMITTED since 47b9edb: the
+daemon-campaign records + L4b's files (see #63) + L5's: World/step9/{cold_run_priesthood.py (NEW), dependency_dispositions.
+yaml, DEPENDENCY_INDEX.md, effect_vocabulary.yaml, REPORT_PRIESTHOOD.md (NEW), COMPILE_DEBT.md}, logic/oral_triage/
+priesthood_topic_docket_2026-09-06.md (NEW), logic/units/{lev_21_priest_family, lev_21_priest_blemish, lev_22_holy_food,
+lev_22_acceptable_offerings, lev_24_lamp_bread}.yaml + manifests + py_units + html + UNIT_INDEX + ALL_UNITS,
+CORPUS_TRUTH.py + corpus_world.sqlite, STAMP_LEDGER, MOVE_CATALOG, MIDDOT, THE_STEPS, THE_BRIEFING, this doc, memory —
+rides the owner's "commit push" (staging by exclusion; NEVER-COMMIT set unchanged; THE_LINKS.md is NOT this thread's —
+ask before staging it; ⚠ every git command begins with `cd <repo-old> &&`; ⚠ the shell cwd drifts —
+absolute paths always). POST-COMPACTION REREADS (mandatory, first sitting): THE_STEPS Step 2 + Step 5 (the deliverable
+rule, the five motions incl. the census sentence and THE DAEMON CAMPAIGN paragraph, the effects rule, THE COMPILE DEBT,
+THE SIXTEENTH-EIGHTEENTH SPANS + THE DEPENDENCY DEBT) + the compiler block + this tail + World/step9/COMPILE_DEBT.md
+(D8, D9, E1-E5, G1-G2) + dependency_dispositions.yaml's header. THEN, on the owner's word: D8 — ONE SHORT SITTING —
+lev_09_eighth_day as the RUN of Lev 1-4's spec (9:16 "as prescribed" cites Lev 1; the demonstrate-by-run form inside
+one book): declare a span [Lev,9,1,24] for a runner cold_run_shemini_day.py (name it to avoid the shemini collision —
+the module-name guard), stub → --emit → disposition (expect: offerings CALL for 9:2-4's calf/ram/goat/lamb rows and the
+fat inventory, chatat CALL for the priest's calf and the people's goat, minchah CALL for 9:4's meal offering, tzav CALL
+for the installation's day-8 release and the dues, RUN_CITATION pointers at 9:7, 9:10, 9:16, 9:21), the ledger by the
+rhythm (the Sifra Shemini rows in the lev_09 reading ledger ALL READ; the sheet: Zevachim's order rows, the Sifra's own
+walk), the run graded as a SCENE against the spec (the Tzav engine's scene-6 shape), effects from the verbs (registry
+131; expect: fire_from_before_the_lord, glory_appeared, blessed_the_people), seats, rituals, records. THEN E1-E5 (E1
+compiles the OWED firstling eighth day), G1-G2; THEN THE DAEMON CAMPAIGN (D9); THEN Numbers (a substitute spine needed
+— Sifrei starts at Num 5:2). OPEN (counted): 334 translit-fallback render lines; the seventy's decomposition (Seder
+Olam); Tosefta Kilayim, Zevachim, Menachot, Tamid absent from the shelf. Watches: will-indexed dispatch (2), demotion
+(1), consonant-fragment read (1); world-engine cascade depth + cycle detection (design only — in D9's spec).
+
+(2026-09-06, first sitting after #64 — the owner: "Next") POST-#64 REREADS DONE before deriving: THE_STEPS Step 2 + Step 5 (the deliverable rule, the five motions incl. the census sentence and THE DAEMON CAMPAIGN paragraph, the effects rule, THE COMPILE DEBT, THE SIXTEENTH-EIGHTEENTH SPANS + THE DEPENDENCY DEBT) + the compiler block + the #64 tail + World/step9/COMPILE_DEBT.md (D8, D9, E1-E5, G1-G2) + dependency_dispositions.yaml header. SITTING D8 opens by the rhythm: span declared first.
+
+(2026-09-06, SITTING D8 of THE COMPILE DEBT — the owner: "Next"; ONE SHORT SITTING as #64 prescribed) THE EIGHTH DAY: THE RUN OF
+LEV 1-4's SPEC, Lev 9:1-24 (lev_09_eighth_day) compiled cold as a SCENE against the offering, meal-offering, sin-offering, and Tzav
+engines — World/step9/cold_run_shemini_day.py (named to dodge the shemini module collision), 104 of 104 ON THE FIRST GRADED RUN
+(36% ink / 25% recorded / 11 sheet / 3 data / 25 imports; guard 104 — the parser's count against my hand-typed 96, the tripwire
+set to the measurement; fix_percent lifted 0; one sheet-token catch: Tamid 4:3 spells the lung הראה, "the lung", without the yod).
+THE CENSUS FIRST, by the rhythm: span declared (`shemini_day: [[Lev,9,1,24]]`) → stub → `dependency_census.py --emit` → THREE
+required edges + FOUR pointers dispositioned before a cell (chatat / minchah / offerings CALL carrying procedure; 9:7 + 9:10 'as
+the LORD commanded' RUN_CITATION; 9:16 'as prescribed' CALL → offerings; 9:21 'as Moses commanded' CALL → tzav) + a FOURTH edge
+declared for the live calls the compile made (tzav CALL carrying status: the confinement timer's release, the dues machine, the
+never-extinguish duty). THE LEDGER FIRST: logic/oral_triage/shemini_day_run_docket_2026-09-06.md (scratchpad/gen_shemini_day_
+ledger.py) — 33 rows: Zevachim 10 + 14, Tamid 4 WHOLE (21) + ten topic rows (Horayot 3:6, Menachot 4:4 / 1:2 / 3:5 / 5:3, Parah
+1:1, Beitzah 2:4, Zevachim 5:3 / 5:4 / 5:7) + the two link rows (Sotah 7:6, Tamid 7:2); coverage computed (missing 0, extra 0;
+26 rows self-checked); LAW 2 / CREDIT 23 (verified by script) / ROUTED 3 / CONTEXT 5; the 20 Talmud addresses ALL OPENED AT THE
+LEDGER STAGE — recorded in the docket's head as a deviation from per-gap opening (the sitting's question is how the tradition
+reads this chapter; 45 segments named and verdicted, the 20 and the 25 read around them); gloss_lint 0. FOUR EFFECTS registered
+(131 → 135; scratchpad/add_effects_d8.py, the `he` quoted): fire_from_before_the_lord (STATUS — its recorded close at Solomon
+and Manasseh, Zevachim 61b:5), glory_appeared, blessed_the_people (HEAVEN), high_places_banned (BLOCK — the land's era; ink Lev
+17:4 + Deut 12:8). THE RUNNER: 24 probes (one per verse); 46 censuses as tripwires incl. the whole-Tanakh index — THE FIRE FORMULA
+ותצא אש מלפני יהוה ("and fire went out from before the LORD") at [Lev 9:24, Lev 10:2] ONLY; the glory formula at 4 seats (this
+the only non-rebellion); 'appears to you', 'like the first', 'and he purified it', 'and filled his palm', 'and the covering',
+'for peace offerings to sacrifice', 'approach the altar', 'and all the assembly drew near' each a HAPAX; 'the eighth day' x9
+(Solomon's, Ezekiel's among them); 'as prescribed' 12 Torah seats (Lev: 5:10, 9:16); the entrails+legs pair with the article at
+8:21 + 9:14 alone; 'beside the morning olah' at 9:17 + Num 28:23 alone; 'his palm' 5 Torah seats (this + Lev 14's four); THE BURN
+PHRASE שרף באש מחוץ למחנה ("burned in fire outside the camp") at 8:17 + 9:11 ONLY; the command token at 9:5, 6, 7, 10, 21 — 9:11
+UNSTAMPED; 'and they blessed the people' at 9:23 + 2 Chr 30:27 alone; 'his hand' written SINGULAR at 9:22 (the Mishnah quotes the
+plural); the calf token at 9:2, 3, 8 and nowhere else in Leviticus; 318 tokens. Callees: CH.rank/blood/sprinklings/carcass/
+precedence_bulls/burn_site/inquiry; OFF.dispatch (olah:herd, olah:flock, shelamim, communal_shelamim_and_asham, outer_chatat,
+fat:ox, fat:lamb); MIN.fistful/oil_ops/frankincense_quantity/remainder/presentation; TZ.installation/altar_machine/dues_machine;
+world_engine (the SCENE). Eight functions: day (22), order (14), calf (17), ram (7), people (9), peace (8), fire (20), eras (6) +
+the scene cell (1) — the installation timer released into the eighth day's tape on the world engine, (1, 1, 1, 1, 6, 1, 1, 1, 1, 7).
+THE HEADLINE: THE RUN RUNS AGAINST ITS SPEC AND THE TRADITION READS IT THE OTHER WAY — the spec's bulls against the run's calf and
+goat (the deviation sourced, Sifra Shemini Mechilta d'Miluim 2 3-4); the calf's OUTER blood (9:9) with its INNER carcass (9:11),
+9:11 the one unstamped act, Lev 10:16-18 making eating the rule for the goat (CH.inquiry by call: the burned goat the new moon's,
+Zevachim 101b:6); the calf completed WHOLE before the ram against Zevachim 10:2's interleaving (sourced Num 8:8-12, Zevachim
+89b:2-3) — filed as the hour's; 'like the first' and 'as prescribed' as live calls; the fat list of 9:19 = the UNION of fat:ox and
+fat:lamb, the tail the ram's alone; the run TEACHING the spec (move M-22 registered): 9:16 → hand-laying for the obligatory olah
+(Menachot 93b:3 = Beitzah 20a:5); 9:17 'his palm' → every unmarked palm the right hand (Menachot 9b:17 — MIN.fistful(left_hand)
+now derived from THIS verse by call); 9:10 'FROM the liver' → Lev 3:4's preposition (Sifra Nedavah Section 14 8); 9:22 → the
+blessing's posture, timing, and place (Sotah 38a:6, 38b:7; Megillah 18a:3); THE FORK — Rav's repeated fistful vs Shmuel's
+דורות משעה לא ילפינן ("generations are not learned from the hour", Menachot 19b:4); Gittin 60a:13's scroll boundary at 9:1
+(the tradition's own spec/run cut); the day dated by call (23 Adar + 7 = 1 Nisan) as Zevachim 14:4's first boundary (the high
+places banned, the service by the priests; Shabbat 87b:6's ten crowns, five written by this chapter's verbs). SEATS (scratchpad/
+seat_d8.py; 72 cites pre-checked; anchors checked — 9:24 has no operators list, so F-231 sits at STEP_Lv_9_2): LV09-10 (F-231)
+THE RUN GRADED AGAINST ITS SPEC at STEP_Lv_9_2, LV09-11 (F-232) THE RUN TEACHES THE SPEC at STEP_Lv_9_17; ritual COMPLETE (163
+frozen units), verify 0 failed, ALL_UNITS rebuilt, corpus_world standing 1740 → 1742, hash 8b8fff1fa28953af UNMOVED, CORPUS_TRUTH
+GREEN + VERIFY GREEN; run_cold_all 26/26 at 1980 cells (the gate: 26 runners, 1014 verses, 61 edges + 46 pointers, 54 live
+edges, 67 edges + 44 pointers dispositioned); DEPENDENCY_INDEX.md regenerated. RECORDS: REPORT_SHEMINI_DAY.md (NEW); THE_STEPS
+Step 5 THE NINETEENTH SPAN; COMPILE_DEBT D8 [x] + the narrative note amended; MOVE_CATALOG M-22 THE RUN READ BACK INTO THE SPEC
+(five exemplars + the fork); MIDDOT case-law bullet (which seats may teach: the hour against the generations); STAMP_LEDGER
+delegated row; THE_BRIEFING scoreboard bullet; this doc; memory. Lints at baseline (state doc 147, THE_STEPS 1, MIDDOT 1,
+STAMP_LEDGER 1, MOVE_CATALOG 5, THE_BRIEFING 0, COMPILE_DEBT 0, the new ledger / report / runner / unit 0). Watches unchanged.
+Exam counters unmoved.
+
+═══ COMPACTION POINT #65 (2026-09-06 — written unprompted at sitting D8's close)
+═══ CLEAN POINT — no work mid-flight. D8 DONE; LEVITICUS'S DEBT PAID (L1-L5) + D1-D8 all [x]. UNCOMMITTED since 47b9edb: the
+daemon-campaign records + L4b's + L5's files (see #63, #64) + D8's: World/step9/{cold_run_shemini_day.py (NEW),
+dependency_dispositions.yaml, DEPENDENCY_INDEX.md, effect_vocabulary.yaml, REPORT_SHEMINI_DAY.md (NEW), COMPILE_DEBT.md},
+logic/oral_triage/shemini_day_run_docket_2026-09-06.md (NEW), logic/units/lev_09_eighth_day.yaml + manifest + py_unit + html +
+UNIT_INDEX + ALL_UNITS, CORPUS_TRUTH.py + corpus_world.sqlite, STAMP_LEDGER, MOVE_CATALOG, MIDDOT, THE_STEPS, THE_BRIEFING, this
+doc, memory — rides the owner's "commit push" (staging by exclusion; NEVER-COMMIT set unchanged; ARCHITECTURE/THE_LINKS.md + .epub
+are NOT this thread's — ask before staging; ⚠ every git command begins with `cd <repo-old> &&`; ⚠ the shell cwd
+drifts — absolute paths always; ⚠ macOS has no `timeout` — use the tool's timeout). POST-COMPACTION REREADS (mandatory, first
+sitting): THE_STEPS Step 2 + Step 5 (the deliverable rule, the five motions incl. the census sentence and THE DAEMON CAMPAIGN
+paragraph, the effects rule, THE COMPILE DEBT, THE SIXTEENTH-NINETEENTH SPANS + THE DEPENDENCY DEBT) + the compiler block + this
+tail + World/step9/COMPILE_DEBT.md (E1-E5, G1-G2, D9) + dependency_dispositions.yaml's header. THEN, on the owner's word: E1 — THE
+REST OF THE ORDINANCES (exo_22_property_social 22:17-30 — verify: mishpatim_2 holds 22:15-16 and 22:29 only; exo_23_justice_
+calendar 23:1-9 — verify against the calendar runner's 23:10-19; exo_20_the_ten_utterances 20:19-26 the altar law — verify
+against the decalogue runner; exo_23_escort_land 23:20-33 the land covenant's thin law layer): declare the span(s) for a runner
+named to dodge the mishpatim / calendar / decalogue collisions (e.g. cold_run_ordinances_rest.py), stub → --emit → disposition
+(expect: pesach / firstborn tokens at 22:28-29 — E1 COMPILES THE OWED FIRSTLING EIGHTH DAY, the callee the priesthood runner's
+22:27 cell has been waiting for since L5: flip that OWED edge to CALL; sanctions for 22:17's witch and 22:18's bestiality
+(compiled at round 25 / L3 — REVERSE or CALL as the code decides); holiness for 22:20-23's stranger, widow, orphan and 23:9's
+stranger (19:33-34 by call); yovel for 22:24's interest (REVERSE: yovel's 25:36-37 may already call — check); moadim / calendar
+for 23:14-19 if the span reaches them; the courts' 23:1-8 against the holiness engine's 19:15-16 judge clauses), the ledger by the
+rhythm (the Mekhilta rows in the exo_22 / exo_23 reading ledgers ALL READ; the sheet: Sanhedrin 1, 3-5 the courts, Bava Metzia
+4-5 the interest and the widow's pledge, Bekhorot 1 + 4 the firstling, Shevuot 4 the false witness, Bava Kamma 9-10 the stranger
+wronged, Chullin 8 the torn flesh of 22:30, Sanhedrin 7 the witch), effects from the verbs (registry 135; expect: pledge_returned_
+by_sunset, cry_heard, firstling_given_eighth_day, torn_flesh_to_dogs, false_report_barred, bribe_barred), seats, rituals, records.
+THEN E2-E5, G1-G2; THEN THE DAEMON CAMPAIGN (D9); THEN Numbers (a substitute spine needed — Sifrei starts at Num 5:2). OPEN
+(counted): 334 translit-fallback render lines; the seventy's decomposition (Seder Olam); Tosefta Kilayim, Zevachim, Menachot,
+Tamid absent from the shelf. Watches: will-indexed dispatch (2), demotion (1), consonant-fragment read (1); world-engine cascade
+depth + cycle detection (design only — in D9's spec); THE RUN-TEACHES-SPEC FORK (1 — Rav/Shmuel at Menachot 19b, carried as two
+arms; a second exemplar of Shmuel's refusal would make it a rule).
+
+(2026-09-06, SITTING E1 of THE COMPILE DEBT — the owner: "E1 go"; the first of Exodus's five) THE REST OF THE ORDINANCES: Exod 20:19-26
+(exo_20_the_ten_utterances' altar law) + 22:17-30 (exo_22_property_social) + 23:1-9 (exo_23_justice_calendar) + 23:20-33
+(exo_23_escort_land) compiled cold in ONE runner — World/step9/cold_run_ordinances.py, 127 of 127 ON THE FIRST GRADED RUN (26% ink /
+29% recorded / 33 sheet / 4 data / 19 imports; guard 127 — the parser's count against my hand-typed 140; one census catch — the
+doubled-verb predicate caught its own first draft and was tightened to the infinitive-absolute form). THE CENSUS FIRST, by the rhythm:
+span declared (`ordinances: [[Exod,20,19,26],[Exod,22,17,30],[Exod,23,1,9],[Exod,23,20,33]]`; the mishpatim_2 span CORRECTED — it
+declared 22:29 with no cell) → stub → `--emit` → THREE required edges + ONE homograph dispositioned before a cell (offerings CALL
+20:24's altar; pesach CALL 22:28's firstborn; yovel CALL 22:24's bite noun; lev24 FALSE 23:5's 'under its burden') + FIVE declared for
+the live calls the compile made (decalogue — the altar rules by call, one function at two seats; sanctions — the beast, its court, the
+woman, the tent door; holiness — the deaf, equal treatment, the bribe; holiness_b — the stranger; and THE FLIP: priesthood →
+ordinances CALL replacing L5's priesthood → mishpatim_2 OWED — cold_run_priesthood.py imports this runner, its Lev 22:27 cell fetches
+firstling(eighth_and_onward) by live call, guard 250 → 251, green; `--debt` prints ZERO owed edges). THE LEDGER FIRST: logic/oral_
+triage/ordinances_topic_docket_2026-09-06.md (scratchpad/gen_ordinances_ledger.py) — 110 rows: Sanhedrin 1, 3, 4, 7, Bava Metzia 2 + 5,
+Bekhorot 8, Chullin 3, Terumot 3, Middot 3, Shevuot 4 WHOLE (99) + 9 link rows outside + 2 topic rows; coverage computed (missing 0,
+extra 0; 43 rows self-checked); LAW 16 / CREDIT 34 (verified by script) / ROUTED 4 / CONTEXT 56; 168 Talmud addresses indexed, NONE
+opened (the D8 deviation not repeated); the Mekhilta ends at 23:19 — 23:20-33 on Onkelos alone, recorded; gloss_lint 0. TEN EFFECTS
+registered (135 → 145; scratchpad/add_effects_e1.py; two slices re-indexed): pledge_returned_by_sunset (TIMER), cry_heard, bread_and_
+water_blessed (HEAVEN), gift_order_barred, bribe_barred, false_report_barred, covenant_barred (BLOCK), torn_flesh_to_dogs (TRANSFER),
+majority_decides (STATUS), unloading_owed (DEBIT). THE RUNNER: 37 probes; 66 censuses as tripwires incl. the whole-Tanakh index — the
+HAPAXES: מכשפה ("a sorceress"), תונה ("you shall not wrong"), תלחצנו ("nor oppress him"), מלאתך ("your fullness"), ודמעך ("your
+outflow"), ביום השמיני תתנו ("on the eighth day you shall give"), עם אמו ("with its mother" — against Lev 22:27's תחת אמו, "under its
+mother", itself a hapax: ONE TIMER AT TWO SEATS WITH TWO PREPOSITIONS), שמע שוא ("a false report"), אחרי רבים ("after the many"),
+לרעת ("for evil"), להטת ("to tilt"), רבץ תחת משאו ("lying under its burden"), אבינך ("your needy"), מדבר שקר ("from a false
+matter"), ונקי וצדיק ("the innocent and the righteous"), פקחים ("the open-eyed"), נפש הגר ("the soul of the stranger"), מזבח אדמה
+("an altar of earth"), בכל המקום ("in every place"), אזכיר את שמי ("I cause My name to be mentioned"), ותחללה ("and profaned it"),
+במעלת ("by steps"), משכלה ("miscarrying"); גזית ("hewn") the Torah's only seat; עד חמס ("a witness of violence") with Deut 19:16
+alone; עד בא השמש ("until the sun sets") with Exod 17:12 (Moses' hands) alone; תהדר ("you shall not glorify") with Lev 19:15 alone;
+'shall not live' x3, 'devoted' x4, the bite noun's 4 Torah seats (Num 21:9's serpent), the curse verb's 4 (Lev 19:14), 'torn' x4
+(Gen 31:39 first), 'you were strangers' x4, the bribe's 4 Torah seats, the hornet x3, 'little by little' with Deut 7:22, the snare x8;
+the conditional heads at 9 seats; the infinitive-absolute doublings at 22:22, 22:25, 23:5, 23:22, 23:24, 23:30. Callees: DEC.altar_
+rules, OFF.dispatch, SA.beast/outside, HL.conduct, HB.convert_measures, YV.interest/interest_scope, PS.firstborn. Eight functions:
+altar (14), capital (12), stranger (9), loan (14), gifts (15), firstling (6 — THE CALLEE), torn (8), courts (36), land (13). THE
+HEADLINE: THE ORDINANCES' TAIL IS WRITTEN ON HAPAXES AND THE ANSWER SHEET QUOTES THE VERSES BACK — Sanhedrin 1:6 builds the
+twenty-three with 23:2's 'for evil' as the arithmetic's last term; Terumot 3:6 quotes 22:28; Bava Metzia 5:11 counts two of five
+from 22:24's two clauses; Bava Metzia 4:10 quotes 22:20; Peah 8:9 quotes 23:8; Bava Metzia 2:10 quotes 23:5; Bava Kamma 5:7 names
+'ox or donkey' the common case (the Mekhilta's own method name at 22:30 — a MIDDOT governance bullet: THE VERSE SPEAKS OF THE COMMON
+CASE). SEATS (scratchpad/seat_e1.py; 74 cites pre-checked; anchors checked): EX22-19 (F-233) at STEP_Ex_22_27, EX23-16 (F-234) at
+STEP_Ex_23_2, EX23B-03 (F-235) at STEP_Ex_23_24 — ⚠ the manifest stratum held a derivation-era EX23B-02 absent from the yaml: the
+ceiling checked in BOTH strata, the ID moved — EX20-24 (F-236) at STEP_Ex_20_24; rituals COMPLETE ×4 (163 frozen units), verify 0
+failed ×4, ALL_UNITS rebuilt, corpus_world standing 1742 → 1746, hash 8b8fff1fa28953af UNMOVED, CORPUS_TRUTH GREEN + VERIFY GREEN;
+run_cold_all 27/27 at 2108 cells (the gate: 27 runners, 1058 verses, 65 edges + 46 pointers, 62 live edges, 75 edges + 44 pointers
+dispositioned, 0 owed); DEPENDENCY_INDEX.md regenerated. RECORDS: REPORT_ORDINANCES.md (NEW); THE_STEPS Step 5 THE TWENTIETH SPAN;
+COMPILE_DEBT E1 [x] + the L5 note's OWED marked CLOSED; MIDDOT case-law bullet (the common case); STAMP_LEDGER delegated row;
+THE_BRIEFING scoreboard bullet; this doc; memory. Lints at baseline (state doc 147, THE_STEPS 1, MIDDOT 1, STAMP_LEDGER 1,
+MOVE_CATALOG 5, THE_BRIEFING 0, COMPILE_DEBT 0, the new ledger / report / runner / units 0). Watches unchanged. Exam counters unmoved.
+
+═══ COMPACTION POINT #66 (2026-09-06 — written unprompted at sitting E1's close)
+═══ CLEAN POINT — no work mid-flight. D8 + E1 DONE; the debt worklist EMPTY (0 owed). UNCOMMITTED since 47b9edb: the daemon-campaign
+records + L4b's + L5's + D8's files (see #63-#65) + E1's: World/step9/{cold_run_ordinances.py (NEW), cold_run_priesthood.py (the live
+call), dependency_dispositions.yaml, DEPENDENCY_INDEX.md, effect_vocabulary.yaml, REPORT_ORDINANCES.md (NEW), COMPILE_DEBT.md},
+logic/oral_triage/ordinances_topic_docket_2026-09-06.md (NEW), logic/units/{exo_22_property_social, exo_23_justice_calendar,
+exo_23_escort_land, exo_20_the_ten_utterances}.yaml + manifests + py_units + html + UNIT_INDEX + ALL_UNITS, CORPUS_TRUTH.py +
+corpus_world.sqlite, STAMP_LEDGER, MIDDOT, THE_STEPS, THE_BRIEFING, this doc, memory — rides the owner's "commit push" (staging by
+exclusion; NEVER-COMMIT set unchanged; ARCHITECTURE/THE_LINKS.md + .epub are NOT this thread's — ask before staging; ⚠ every git
+command begins with `cd <repo-old> &&`; ⚠ the shell cwd drifts — absolute paths always; ⚠ macOS has no `timeout`).
+POST-COMPACTION REREADS (mandatory, first sitting): THE_STEPS Step 2 + Step 5 (the deliverable rule, the five motions incl. the
+census sentence and THE DAEMON CAMPAIGN paragraph, the effects rule, THE COMPILE DEBT, THE SIXTEENTH-TWENTIETH SPANS + THE
+DEPENDENCY DEBT) + the compiler block + this tail + World/step9/COMPILE_DEBT.md (E2-E5, G1-G2, D9) + dependency_dispositions.yaml's
+header. THEN, on the owner's word: E2 — THE SANCTUARY SPEC GRADED AGAINST ITS OWN CONSTRUCTION RUN (exo_25 through exo_27's spec
+against exo_36 through exo_38's build — the demonstrate-by-run form the D8 sitting rehearsed inside Leviticus; read COMPILE_DEBT.md's
+E2 line for the units and the sheet): declare the span(s) for a runner named to dodge the sanctuary-family collisions (the exam-era
+units exo_25/26/38 took seats at round 26 — the runner name e.g. cold_run_sanctuary_build.py), stub → --emit → disposition (expect:
+few type tokens — the spec chapters name no offering types; the pointer forms 'as the LORD commanded Moses' at the build chapters'
+tail as RUN_CITATION), the ledger by the rhythm (the Tanchuma rows in the exo_25-27 / exo_36-38 reading ledgers — the SUBSTITUTE
+SPINE for Exod 25-40 — ALL READ; the sheet: Mishnah Middot and Tamid for the vessels' measures and the Talmud's Menachot 28-29 and
+Shabbat 98-99 by address), the run graded as a SCENE against the spec (the D8 shape: every build verb matched to its spec verse by
+token, the divergences named — the order of the vessels, the added and dropped tokens), effects from the verbs (registry 145),
+seats, rituals, records. THEN E3-E5, G1-G2; THEN THE DAEMON CAMPAIGN (D9); THEN Numbers (a substitute spine needed — Sifrei starts
+at Num 5:2). OPEN (counted): 334 translit-fallback render lines; the seventy's decomposition (Seder Olam); Tosefta Kilayim,
+Zevachim, Menachot, Tamid, Middot absent from the shelf. Watches: will-indexed dispatch (2), demotion (1), consonant-fragment read
+(1); world-engine cascade depth + cycle detection (design only — in D9's spec); THE RUN-TEACHES-SPEC FORK (1 — Rav/Shmuel at
+Menachot 19b); THE MANIFEST-ONLY CLAIM IDS (derivation-era rows present in a manifest but absent from the yaml's [claim] markers —
+exo_20 has thirteen, exo_22 seven — a census worth one sitting before the site lap).

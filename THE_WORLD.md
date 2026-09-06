@@ -1846,3 +1846,25 @@ needed before the whole Bible compiles, with an anomaly lane.
 On the owner's "ok do it," the design moved to its own file:
 ARCHITECTURE/CHRONICLE.md — these idea-log entries stay as the
 history pointing there.
+
+### 2026-09-06 — THE DAEMON CAMPAIGN RULED (the second two-thread consensus; owner: "that works")
+When: after the three-book compile debt's LAST check mark and BEFORE Numbers opens on the walk. Why not
+after 24 books: the daemons are the law; the Prophets and Writings are the TAPE the daemons fire against,
+and the target (every prophetic indictment checked against an open computed entry) needs the daemons
+standing before the tape runs. Order of work: (i) a seeding sitting — the EVENT-TYPE REGISTRY harvested
+from the existing tape (the corpus world's 557 events, the engine's scene records), each type with a
+witness, the effects registry's own harvest shape — because effects were discoverable per span (each has an
+ink witness in the span's verbs) while the event vocabulary lives in the tape, not the span; (ii) the
+daemon-edge gate as first deliverable (every wrapped function declares trigger event types + effects,
+censused against the registries; unwrapped = OWED — the 54 become a generated worklist); (iii) the wraps by
+engine family, scene replays with literal checkpoints under the honest-pairing guard (est. 8-12 sittings);
+(iv) the deliverable rule amended: a law span finishes Step 5 when its cold function exists, its dependency
+edges are dispositioned, AND its wrap is declared and verified — the wrap a SIXTH motion after the five,
+conditions read from the ink's case tokens first. THE FENCE for daemons (law 6): consume events, write the
+ledger only, never emit an event; CASCADES RUN THROUGH LEDGER STATE — daemon A writes, daemon B's condition
+reads that state, B fires unasked (the Chronicle's founding picture) — never through synthetic events;
+timer firings are their own record class (scheduled ledger operations); every daemon prints its watch
+coverage (the zero-report law and the Chronicle's fired-count column share one instrument); the engine
+carries a cascade depth bound with cycle detection — a cascade that ran to the bound is reported, never
+silently truncated. Records: COMPILE_DEBT D9 (the full spec), REPORT_DEPENDENCIES (the consensus),
+THE_STEPS Step 5 motion (1).

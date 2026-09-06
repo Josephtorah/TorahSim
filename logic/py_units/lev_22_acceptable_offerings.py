@@ -145,6 +145,10 @@ m.step("Lev.22.27")
 # shor_o_chesev_ki_yivaled — read, not installed
 m.witness_read("shor_o_chesev_ki_yivaled", "the_birth_quality_list",
                 cites=["Sifra, Emor, Section 8 1", "Sifra, Emor, Section 8 2", "Sifra, Emor, Section 8 3", "Sifra, Emor, Section 8 4", "Sifra, Emor, Section 8 5", "Sifra, Emor, Section 8 6", "Sifra, Emor, Section 8 7", "Onkelos Lev 22:27"])
+# witness-tier presupposed read: and_from_the_day_and_on_one_day on
+# the_acceptable_animal_on_its_hapax_and_its_only_seat — read, not installed
+m.witness_read("the_acceptable_animal_on_its_hapax_and_its_only_seat", "and_from_the_day_and_on_one_day",
+                cites=["Sifra, Emor, Section 7 1", "Sifra, Emor, Section 7 2", "Sifra, Emor, Section 7 3", "Sifra, Emor, Section 7 4", "Sifra, Emor, Section 7 5", "Sifra, Emor, Section 7 8", "Sifra, Emor, Section 7 9", "Sifra, Emor, Section 7 11", "Sifra, Emor, Section 7 12", "Sifra, Emor, Section 7 13", "Sifra, Emor, Chapter 7 1", "Sifra, Emor, Chapter 7 4", "Sifra, Emor, Chapter 7 6", "Sifra, Emor, Chapter 7 9", "Sifra, Emor, Chapter 7 10", "Sifra, Emor, Chapter 7 11", "Sifra, Emor, Chapter 7 12", "Sifra, Emor, Section 8 3", "Sifra, Emor, Section 8 4", "Sifra, Emor, Section 8 5", "Sifra, Emor, Chapter 8 1", "Sifra, Emor, Chapter 8 3", "Sifra, Emor, Chapter 8 4", "Sifra, Emor, Chapter 8 8", "Sifra, Emor, Chapter 8 9", "Sifra, Emor, Chapter 9 1", "Sifra, Emor, Chapter 9 2", "Sifra, Emor, Chapter 9 4", "Sifra, Emor, Chapter 9 6", "Mishnah Bekhorot 6:1", "Mishnah Bekhorot 6:3", "Mishnah Bekhorot 6:7", "Mishnah Bekhorot 6:12", "Mishnah Zevachim 8:1", "Mishnah Zevachim 8:5", "Mishnah Zevachim 8:8", "Mishnah Zevachim 9:3", "Mishnah Temurah 6:1", "Mishnah Chullin 5:1", "Mishnah Chullin 5:2", "Mishnah Chullin 5:3", "Mishnah Chullin 5:4", "Mishnah Chullin 5:5", "Mishnah Shekalim 1:5", "Onkelos Lev 22:22", "Onkelos Lev 22:23", "Onkelos Lev 22:28"])
 
 # -------------------------- Lev.22.28 · ETNACHTA_SPLIT ---------------------
 # ‹ושור או שה› (“and-bullock or member-of-a-flock”)
@@ -229,7 +233,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ish_ish_mibeit_yisrael', 'the_vow_class_census'), ('kol_asher_bo_mum_lo_takrivu', 'the_five_count_and_the_two_jobs'), ('averet_o_shavur', 'beast_blemish_row_and_cross_list_transfer'), ('sarua_vekalut', 'temple_upkeep_not_the_altar'), ('umauch_vekatut', 'the_castration_ban_and_the_foreigner'), ('shor_o_chesev_ki_yivaled', 'the_birth_quality_list'), ('oto_veet_beno', 'the_predicate_and_the_female_rule'), ('lo_tishchatu_beyom_echad', 'slaughter_carve_four_periods_day_boundary'), ('bayom_hahu_yeachel', 'the_reassignment_to_slaughter'), ('venikdashti_betoch', 'keep_is_mishnah_and_the_sanctified_name')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ish_ish_mibeit_yisrael', 'the_vow_class_census'), ('kol_asher_bo_mum_lo_takrivu', 'the_five_count_and_the_two_jobs'), ('averet_o_shavur', 'beast_blemish_row_and_cross_list_transfer'), ('sarua_vekalut', 'temple_upkeep_not_the_altar'), ('umauch_vekatut', 'the_castration_ban_and_the_foreigner'), ('shor_o_chesev_ki_yivaled', 'the_birth_quality_list'), ('the_acceptable_animal_on_its_hapax_and_its_only_seat', 'and_from_the_day_and_on_one_day'), ('oto_veet_beno', 'the_predicate_and_the_female_rule'), ('lo_tishchatu_beyom_echad', 'slaughter_carve_four_periods_day_boundary'), ('bayom_hahu_yeachel', 'the_reassignment_to_slaughter'), ('venikdashti_betoch', 'keep_is_mishnah_and_the_sanctified_name')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Emor, Section 7 1', 'Sifra, Emor, Section 7 2', 'Onkelos Lev 22:18', 'Onkelos Lev 22:19']
     assert all('the_vow_class_census' not in f for f in m.WORLD["facts"])
     assert 'ish_ish_mibeit_yisrael' not in m.WORLD["witnessed"]
@@ -248,16 +252,19 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[5]["cites"] == ['Sifra, Emor, Section 8 1', 'Sifra, Emor, Section 8 2', 'Sifra, Emor, Section 8 3', 'Sifra, Emor, Section 8 4', 'Sifra, Emor, Section 8 5', 'Sifra, Emor, Section 8 6', 'Sifra, Emor, Section 8 7', 'Onkelos Lev 22:27']
     assert all('the_birth_quality_list' not in f for f in m.WORLD["facts"])
     assert 'shor_o_chesev_ki_yivaled' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Emor, Section 8 8', 'Sifra, Emor, Section 8 9', 'Sifra, Emor, Section 8 10', 'Sifra, Emor, Section 8 11', 'Sifra, Emor, Section 8 12', 'Sifra, Emor, Chapter 8 1', 'Sifra, Emor, Chapter 8 2', 'Sifra, Emor, Chapter 8 3', 'Sifra, Emor, Chapter 8 4', 'Onkelos Lev 22:28']
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Emor, Section 7 1', 'Sifra, Emor, Section 7 2', 'Sifra, Emor, Section 7 3', 'Sifra, Emor, Section 7 4', 'Sifra, Emor, Section 7 5', 'Sifra, Emor, Section 7 8', 'Sifra, Emor, Section 7 9', 'Sifra, Emor, Section 7 11', 'Sifra, Emor, Section 7 12', 'Sifra, Emor, Section 7 13', 'Sifra, Emor, Chapter 7 1', 'Sifra, Emor, Chapter 7 4', 'Sifra, Emor, Chapter 7 6', 'Sifra, Emor, Chapter 7 9', 'Sifra, Emor, Chapter 7 10', 'Sifra, Emor, Chapter 7 11', 'Sifra, Emor, Chapter 7 12', 'Sifra, Emor, Section 8 3', 'Sifra, Emor, Section 8 4', 'Sifra, Emor, Section 8 5', 'Sifra, Emor, Chapter 8 1', 'Sifra, Emor, Chapter 8 3', 'Sifra, Emor, Chapter 8 4', 'Sifra, Emor, Chapter 8 8', 'Sifra, Emor, Chapter 8 9', 'Sifra, Emor, Chapter 9 1', 'Sifra, Emor, Chapter 9 2', 'Sifra, Emor, Chapter 9 4', 'Sifra, Emor, Chapter 9 6', 'Mishnah Bekhorot 6:1', 'Mishnah Bekhorot 6:3', 'Mishnah Bekhorot 6:7', 'Mishnah Bekhorot 6:12', 'Mishnah Zevachim 8:1', 'Mishnah Zevachim 8:5', 'Mishnah Zevachim 8:8', 'Mishnah Zevachim 9:3', 'Mishnah Temurah 6:1', 'Mishnah Chullin 5:1', 'Mishnah Chullin 5:2', 'Mishnah Chullin 5:3', 'Mishnah Chullin 5:4', 'Mishnah Chullin 5:5', 'Mishnah Shekalim 1:5', 'Onkelos Lev 22:22', 'Onkelos Lev 22:23', 'Onkelos Lev 22:28']
+    assert all('and_from_the_day_and_on_one_day' not in f for f in m.WORLD["facts"])
+    assert 'the_acceptable_animal_on_its_hapax_and_its_only_seat' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Emor, Section 8 8', 'Sifra, Emor, Section 8 9', 'Sifra, Emor, Section 8 10', 'Sifra, Emor, Section 8 11', 'Sifra, Emor, Section 8 12', 'Sifra, Emor, Chapter 8 1', 'Sifra, Emor, Chapter 8 2', 'Sifra, Emor, Chapter 8 3', 'Sifra, Emor, Chapter 8 4', 'Onkelos Lev 22:28']
     assert all('the_predicate_and_the_female_rule' not in f for f in m.WORLD["facts"])
     assert 'oto_veet_beno' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Emor, Chapter 8 5', 'Sifra, Emor, Chapter 8 6', 'Sifra, Emor, Chapter 8 7', 'Sifra, Emor, Chapter 8 8', 'Sifra, Emor, Chapter 8 9']
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Emor, Chapter 8 5', 'Sifra, Emor, Chapter 8 6', 'Sifra, Emor, Chapter 8 7', 'Sifra, Emor, Chapter 8 8', 'Sifra, Emor, Chapter 8 9']
     assert all('slaughter_carve_four_periods_day_boundary' not in f for f in m.WORLD["facts"])
     assert 'lo_tishchatu_beyom_echad' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Emor, Chapter 9 1', 'Sifra, Emor, Chapter 9 2', 'Onkelos Lev 22:29']
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Emor, Chapter 9 1', 'Sifra, Emor, Chapter 9 2', 'Onkelos Lev 22:29']
     assert all('the_reassignment_to_slaughter' not in f for f in m.WORLD["facts"])
     assert 'bayom_hahu_yeachel' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Emor, Chapter 9 3', 'Sifra, Emor, Chapter 9 4', 'Sifra, Emor, Chapter 9 5', 'Sifra, Emor, Chapter 9 6', 'Onkelos Lev 22:32']
+    assert m.WITNESS_READS[10]["cites"] == ['Sifra, Emor, Chapter 9 3', 'Sifra, Emor, Chapter 9 4', 'Sifra, Emor, Chapter 9 5', 'Sifra, Emor, Chapter 9 6', 'Onkelos Lev 22:32']
     assert all('keep_is_mishnah_and_the_sanctified_name' not in f for f in m.WORLD["facts"])
     assert 'venikdashti_betoch' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
