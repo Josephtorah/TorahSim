@@ -759,6 +759,85 @@ chapter; the per-rank splits earn no chip and take no seats), the
 decision written into each draft's own file with a changelog line, the
 owner free to overrule. And the shelf repair and the render fix are
 recorded under Step 1 and Step 6.
+THE COMPILE DEBT (owner's ruling 2026-09-05, after the audit closed:
+"we will compile all three books that are left unfinished before we
+move onto Numbers"). The three books are read, derived, stamped, and
+exam-graded; this step's DELIVERABLE is what remains — twelve spans
+have cold-compiled functions and the rest of the law spans do not. The
+working checklist, one line per span with its proposed sitting and its
+answer sheet, is World/step9/COMPILE_DEBT.md: Leviticus five sittings
+(the chatat rank tree with the eaten chatat; the impurity clocks of 12
+and 15; blood, unions, and sanctions of 17-18-20; the holiness ledger
+of 19; the priesthood and its dues of 21-22 with the lamp and table),
+Exodus five (the rest of the ordinances; the sanctuary spec graded
+against its own construction run; the vestments against theirs; the
+investiture spec calling the Tzav engine's run, the shekel and incense,
+the Sabbath's law layer; the covenant laws of 34 with the erection of
+40), Genesis two (the pre-Sinai code; the family code). Numbers follows
+the last check mark.
+THE THIRTEENTH SPAN (2026-09-05, sitting L1 of the debt — the first
+after compaction #57; the owner: "Start re read," then "Go"):
+cold_run_chatat.py — THE SIN OFFERING RANK TREE AND THE PRIEST'S
+TABLE, Lev 4:1-35 and Lev 10:8-20 compiled ink-first against Mishnah
+Horayot, Keritot, and Zevachim 10-12 read WHOLE under the union rule
+(85 rows, coverage computed; the 23 link-driven rows all prior
+credits; 340 Talmud addresses indexed, 62 opened per gap) — 187 of
+187 at honest fractions (50 ink / 68 recorded / 19 answer-sheet / 3
+data / 47 imports, the imports being the CALLS into the Lev 5, the
+offering, and the meal-offering engines). The headline: FOUR
+LETTER-GRAIN CENSUSES MET THEIR TALMUD SEATS — "his God" at 4:22
+alone is Horayot 11a:20-11b:1's "the king"; the domain phrase at five
+seats across two chapters is Rava's "commandments"-"commandments" at
+Keritot 25b:4; the known-tokens at 4:14, 23, 28 are R. Zeira's reason
+at Keritot 26a:19 why the Day clears the doubt but not the known sin;
+"the FIRST bull" with the three "outside the camp" verses is Yoma
+68a:6-8's three camps. Also compiled: the court's error in every
+combination, the tribal arithmetic's four arms, R. Akiva's Emmaus
+question returned OPEN ("we have not heard"), THE PIECES MATRIX (the
+doubt algebra of Keritot 5 — certain names to the sin offering,
+doubtful to the suspended ram by call, sacrilege to its own two
+rams), the wine ban's two jobs (the service profaned by "to
+distinguish," Zevachim 17b:7; the teaching barred by "to teach,"
+Keritot 13b:16-20), the priest's table's HOLY place against PURE
+place, and the inquiry with its Talmud answer to the compile's own
+question — the sons did not offer, "I offered" (Zevachim 101a:9, 14).
+Two honest census catches on the record (the domain phrase's varying
+head; 4:3's bare "if"). SIX effects discovered (the registry at 85):
+burned_outside_camp, defiles_garments, eaten_to_atone,
+death_by_heaven, service_profaned, teaching_barred. Seats F-206..F-208
+(L04-19, LV10-11, LV10-12); standing 1718; L1 checked off.
+THE FOURTEENTH SPAN (2026-09-05, sitting L2 of the debt; the owner:
+"yes go l2"): cold_run_clocks.py — THE IMPURITY CLOCKS AND THE PAIRS
+ENGINE, Lev 12:1-8 and Lev 15:1-33 compiled ink-first against Mishnah
+Niddah, Zavim, and Kinnim read WHOLE under the union rule (126 rows,
+coverage computed — 46 of them the scribal layer the tractate labels
+itself, verdicted CONTEXT and not encoded; the 23 link rows all prior
+credits; 277 Talmud addresses indexed and NONE opened: the first
+graded run stood at 161 of 161 from the ink and the two units' own
+Sifra spines) — honest fractions 64 ink (39%) / 72 recorded / 15
+answer-sheet / 5 data / 5 imports (the calls into the Lev 4, Lev 5,
+and meal-offering engines). The headline: THE CLOCKS SUMMED — Mishnah
+Niddah 6:14's forty and eighty are the chapter's four written numbers
+added (7 + 33, 14 + 66); the ten-day-old zavah of Niddah 5:3 is seven
+plus three (15:19's week and 15:25's "many" read as three); the
+Sifra's twenty-five and hundred are sums of the same clocks' parts.
+And MISHNAH KINNIM RUNS ON "ONE AND ONE": the tractate read whole is
+the combinatorics of the pair formula written at three seats (12:8,
+15:15, 15:30) with one import (the bird sin offering BELOW at Lev
+5:9's base, the burnt offering ABOVE at Lev 1:15's wall) — the
+mixtures, the flights, the unconsulted priest, the vowed pair derived,
+and the chain of seven computed from a stated model matching all
+three of the Mishnah's rows. Also compiled: the zav's three tiers by
+sightings, the propagation lattice with 15:10's touch/carry split read
+off the verse's own two clauses, the partner's demotion, the zavah's
+eleven-day window, the five persons of the closing torah. Two honest
+census catches on the record (the bed VERB at 15:20; "sanctuary"
+counted as a second "holy" by substring). NINE effects discovered
+(the registry at 94) — the ledger's first per-person impurity TIMERS
+(niddah_seven, blood_of_purity, counts_seven_clean) with
+bed_and_seat_defile, washes_and_bathes, immersed, pair_owed,
+barred_from_holies, birds_die. Seats F-209..F-211 (LV12-07, LV15B-07,
+LV15A-09); standing 1721; L2 checked off.
 The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law

@@ -96,6 +96,24 @@ narrative strength. By cluster:
   sugya's closer: with the guilt-offering the tokens are THREE,
   and three certainly do not teach. A recorded LIMIT on analogy
   propagation — the inference engine's own overfitting guard.
+- **A verbal analogy that lands on a machine census** (Keritot 25b:4
+  and Horayot 11a:20-11b:1, opened at sitting L1 of the compile debt,
+  2026-09-05): the cold compile of Lev 4 counted the domain phrase —
+  a "commandments" token with "which shall not be done" — at five
+  seats across two chapters (4:2, 13, 22, 27; 5:17), and "his God"
+  at 4:22 alone among the four tiers; then the Talmud was opened per
+  gap and Rava's derivation of the suspended ram's domain runs on
+  מצות מצות ("commandments"-"commandments," the second of the
+  thirteen, a verbal analogy) between 5:17 and the fat sin offering
+  of chapter 4, while the king's identity runs on ה' אלהיו ("the LORD
+  his God") between 4:22 and Deut 17:19. The middah's two pegs are the
+  census's own tokens: a gezerah shavah (verbal analogy) is, in the
+  machine's terms, a shared-token edge the lemma scan finds first and
+  the tradition names second — the demonstrate/compile/link finding
+  (the nose-predicate specimen) repeated on a law chapter, with R.
+  Zeira's third instance beside it (Keritot 26a:19: "knowledge" at
+  4:14, 23, 28 — the tokens that keep the known sin from lapsing at
+  the Day of Atonement).
 
 ## Exodus block campaign — owner's word "Do 3")
 

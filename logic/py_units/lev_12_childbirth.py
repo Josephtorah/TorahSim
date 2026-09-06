@@ -75,6 +75,10 @@ m.step("Lev.12.5")
 # not installed
 m.witness_read("shvuayim", "the_vocalization_seat",
                 cites=["Sifra, Tazria Parashat Yoledet, Chapter 2 2", "Onkelos Lev 12:5"])
+# witness-tier presupposed read: forty_and_eighty on the_clocks_summed —
+# read, not installed
+m.witness_read("the_clocks_summed", "forty_and_eighty",
+                cites=["Mishnah Niddah 6:14", "Mishnah Niddah 3:3", "Mishnah Niddah 3:6", "Mishnah Niddah 10:6", "Mishnah Niddah 10:7", "Sifra, Tazria Parashat Yoledet, Chapter 2 2", "Sifra, Tazria Parashat Yoledet, Chapter 1 7", "Sifra, Tazria Parashat Yoledet, Chapter 2 3", "Sifra, Tazria Parashat Yoledet, Chapter 1 8", "Sifra, Metzora Parashat Zavim, Section 5 4"])
 
 # -------------------------- Lev.12.6 · ETNACHTA_SPLIT ----------------------
 # ‹ובמלאת ימי טהרה› (“and-in-fill day ceremonial-purification-her/its”)
@@ -134,7 +138,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('shivat_yamim', 'last_child_consecutive'), ('uvayom_hashmini', 'milah_overrides_shabbat'), ('dayo', 'middah_case_law'), ('shvuayim', 'the_vocalization_seat'), ('mekor_dameha', 'five_bloods_and_the_market'), ('seder_korban', 'order_swap_and_dignity')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('shivat_yamim', 'last_child_consecutive'), ('uvayom_hashmini', 'milah_overrides_shabbat'), ('dayo', 'middah_case_law'), ('shvuayim', 'the_vocalization_seat'), ('the_clocks_summed', 'forty_and_eighty'), ('mekor_dameha', 'five_bloods_and_the_market'), ('seder_korban', 'order_swap_and_dignity')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Tazria Parashat Yoledet, Section 1 4', 'Sifra, Tazria Parashat Yoledet, Section 1 9', 'Sifra, Tazria Parashat Yoledet, Section 1 11', 'Sifra, Tazria Parashat Yoledet, Section 1 12', 'Sifra, Tazria Parashat Yoledet, Section 1 13', 'Sifra, Tazria Parashat Yoledet, Section 1 14']
     assert all('last_child_consecutive' not in f for f in m.WORLD["facts"])
     assert 'shivat_yamim' not in m.WORLD["witnessed"]
@@ -147,10 +151,13 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[3]["cites"] == ['Sifra, Tazria Parashat Yoledet, Chapter 2 2', 'Onkelos Lev 12:5']
     assert all('the_vocalization_seat' not in f for f in m.WORLD["facts"])
     assert 'shvuayim' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Tazria Parashat Yoledet, Chapter 3 6']
+    assert m.WITNESS_READS[4]["cites"] == ['Mishnah Niddah 6:14', 'Mishnah Niddah 3:3', 'Mishnah Niddah 3:6', 'Mishnah Niddah 10:6', 'Mishnah Niddah 10:7', 'Sifra, Tazria Parashat Yoledet, Chapter 2 2', 'Sifra, Tazria Parashat Yoledet, Chapter 1 7', 'Sifra, Tazria Parashat Yoledet, Chapter 2 3', 'Sifra, Tazria Parashat Yoledet, Chapter 1 8', 'Sifra, Metzora Parashat Zavim, Section 5 4']
+    assert all('forty_and_eighty' not in f for f in m.WORLD["facts"])
+    assert 'the_clocks_summed' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Tazria Parashat Yoledet, Chapter 3 6']
     assert all('five_bloods_and_the_market' not in f for f in m.WORLD["facts"])
     assert 'mekor_dameha' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Tazria Parashat Yoledet, Chapter 4 1', 'Sifra, Tazria Parashat Yoledet, Chapter 4 2', 'Sifra, Tazria Parashat Yoledet, Chapter 4 3', 'Sifra, Tazria Parashat Yoledet, Chapter 3 5']
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Tazria Parashat Yoledet, Chapter 4 1', 'Sifra, Tazria Parashat Yoledet, Chapter 4 2', 'Sifra, Tazria Parashat Yoledet, Chapter 4 3', 'Sifra, Tazria Parashat Yoledet, Chapter 3 5']
     assert all('order_swap_and_dignity' not in f for f in m.WORLD["facts"])
     assert 'seder_korban' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -11503,3 +11503,240 @@ LANDED — RESULT 23213/23213 unique + leaf_complete under rules v3, fails
 [] — Step 1's parse count unchanged by the eleven repaired words (the
 sweep's output now in this session's scratchpad, tanakh_parse_sweep_result
 .json). Sitting C fully closed; compaction point #56 stands as written.
+═══ 2026-09-05, owner: "commit and push, include other threads files" —
+COMMITTED+PUSHED 632790c (217 files: sittings A+B+C whole + THE_WORLD.md's
+third append + ARCHITECTURE/CHRONICLE.md on the owner's word; trailer
+Claude Fable 5.1; NEVER-COMMIT set excluded, verified 0 in the staged
+list). The nested elijah_docket repo: tanakh.sqlite committed there as
+166f814 (one file; RETURN_DOSSIER_2026-08-10.md left untracked as it
+was; the nested repo has NO remote — nothing to push). NEAR-MISS ON THE
+RECORD: the shell's cwd had PERSISTED inside elijah_docket from the
+previous call, so the first commit attempt landed IN THE NESTED REPO
+(b0e0f7c: the dossier + the sqlite under the audit message) and the
+push failed there; undone by `git reset --soft HEAD~1`, the dossier
+unstaged, the sqlite recommitted alone with its own message, then the
+main repo committed with an explicit `cd <repo-old>`.
+RULE: every git command starts with an explicit cd to the repo root —
+the cwd persists across calls and a nested repo will take the commit
+silently. Working tree clean but the never-commit set. Compaction point
+#56 stands. NEXT on the owner's word: NUMBERS (Bamidbar's substitute
+spine decided at the sitting).
+═══ 2026-09-05, owner (after "are we done with the audit list. can I now
+say gen exodus lev is done" / "What step is compile"): the honest answer
+given — the three books are through Steps 1-4 and the GRADING half of
+Step 5 (1595/1595); Step 5's DELIVERABLE (a cold function per law span)
+is partial (12 spans); Step 6 (publish) pending since the last deploy.
+OWNER'S RULING: "we will compile all three books that are left
+unfinished before we move onto Numbers." THE COMPILE DEBT drawn as the
+working checklist World/step9/COMPILE_DEBT.md (units per book from the
+frozen list, computed; "verify" flags where an existing runner may
+already cover a span — mishpatim_2's reach into 22:17-30, the decalogue
+runner and 20:19-26, calendar vs 34:10-26): LEVITICUS L1-L5 (Lev 4 +
+10:8-20; 12 + 15; 17 + 18 + 20; 19 (likely two sittings); 21 + 22 +
+24:1-9), EXODUS E1-E5 (22:17-23:9 + 20:19-26 + 23:20-33; 25-27 vs its
+run 37-38; 28 vs 39; 29 calling tzav.installation + 30 + 31:12-17 +
+35:1-3; 34:10-26 + 24 + 32/33 law bits + 40), GENESIS G1-G2 (the
+pre-Sinai code: 1:1-2:3, 9, 17; the family code: 23-24, 32:33, 38,
+48-49). Twelve sittings estimated, each the full rhythm (docket by
+topic enumerated by script → ledger first → cold function with the
+guard from birth → effects → seats → records). THE_STEPS Step 5 gained
+THE COMPILE DEBT paragraph; memory updated.
+
+═══ COMPACTION POINT #57 (2026-09-05 — owner at 634k: "first I need to
+═══ compact get ready to resume from compact")
+═══ CLEAN POINT — no work mid-flight. 632790c COMMITTED+PUSHED (the whole
+audit + the other thread's files); the nested elijah_docket at 166f814
+(no remote). UNCOMMITTED: only this doc's tail from the 632790c note
+onward, THE_STEPS's COMPILE DEBT paragraph, World/step9/COMPILE_DEBT.md
+(new), memory. NEVER-COMMIT set unchanged; ⚠ every git command begins
+with `cd <repo-old> &&` (the cwd persists across calls —
+the nested-repo near-miss above). POST-COMPACTION REREADS (mandatory,
+first sitting): THE_STEPS Step 2 + Step 5 (the deliverable rule, the
+five motions, the effects rule, THE COMPILE DEBT) + the compiler block +
+this tail + World/step9/COMPILE_DEBT.md. THEN, on the owner's "go":
+SITTING L1 — Lev 4's chatat rank tree + Lev 10:8-20, by the rhythm:
+enumerate the docket by script (links UNION topic rows: Horayot whole,
+Keritot's chatat rows, Zevachim 10-12, the Sanhedrin wine row; check
+cases_*.yaml and the docket ledgers for what is already graded), read
+whole into an append-only ledger with computed coverage, write
+cold_run_chatat.py (guard from birth; probes; censuses; CALL
+cold_run_offerings.dispatch for the type layer and cold_run_vayikra5
+for the sliding scale), effects from the verbs (registry 79), seats
+where the sheet is pre-answered, ritual, corpus_world (standing 1715,
+hash 8b8fff1fa28953af), records (report, THE_STEPS Step 5 span
+paragraph, COMPILE_DEBT check mark, MOVE_CATALOG/MIDDOT if new, STAMP
+row, this doc, memory). Tools that exist and their traps: compile_guards
+(check_honest_pairing / _dict / _calls); run_cold_all.py (the sweep);
+vocab_lint.py; gen_*_ledger.py pattern in the scratchpad (one verdict
+table → ledger with computed coverage → cite index); seat inserter
+pattern (pre-check cites as verdicted rows, allow the "(Lev x:y)"
+parenthetical; a seat into a frozen unit needs a meta.changelog line);
+Sifra keys "Vayikra Dibbura d'Nedavah"/"d'Chovah" with apostrophes; the
+shelf's verse ids 'Lev','Exod','Num','Deut','Gen'; Mishnah JSON
+text[ch-1][m-1]; Bavli amud index 2*daf-2 (+1 for b). OPEN (counted):
+334 translit-fallback render lines; the seventy's decomposition (Seder
+Olam). Watches unchanged.
+═══ 2026-09-05, first sitting after #57 — owner: "Start re read" → the mandatory
+rereads done in full (THE_STEPS Step 2 + Step 5 + the compiler block + this tail +
+COMPILE_DEBT.md) → owner: "Go" → SITTING L1 OF THE COMPILE DEBT RUN END TO END. THE
+DOCKET by script (the union rule): links shelf scanned (2,547,239 rows) → 23 Mishnah
+rows on Lev 4:1-35 / 10:8-20, ALL prior credits; 340 Talmud segments = the motion-4
+ADDRESS INDEX (scratchpad l1_links.json); topic route: Mishnah Horayot whole (20),
+Keritot whole (43), Zevachim 10-12 (22) = 85 rows READ WHOLE; ledger
+logic/oral_triage/chatat_topic_docket_2026-09-05.md written FIRST by
+scratchpad/gen_chatat_ledger.py (coverage computed, LAW 39 / CREDIT 27 / ROUTED 16 /
+CONTEXT 3; the link credits listed; the address index grouped by tractate; Tosefta
+Horayot 19 + Keritot 41 rows enumerated outside declared scope); the motion-4
+openings (62 segments) APPENDED after the first run. THE COLD FUNCTION:
+World/step9/cold_run_chatat.py — 57 probes, the censuses asserted (the anointed x3;
+"his God" at 4:22 ALONE; seven-times 4:6, 17; blood-into-tent 4:5, 16; horns and
+bases 4:7, 18, 25, 30, 34; atone/forgiven 4:20, 26, 31, 35; FEMALE 4:28, 32 vs MALE
+4:23; unblemished 4:3, 23, 28, 32; outside-the-camp 4:12, 4:21, 6:4; THE DOMAIN
+PHRASE at 4:2, 13, 22, 27 + 5:17; unwitting x4; known 4:14, 23, 28; branch heads
+4:3 "if" + 13/27/32 "and if"; Lev 10 HOLY place vs PURE place; "inquired" x2;
+three "distinguish" pairs); CALLS: cold_run_vayikra5 (graded_offering + sacrilege —
+the sliding scale's triggers, the suspended ram, sacrilege, the means ladder),
+cold_run_offerings.dispatch (outer_chatat, inner_chatat_burned, shelamim),
+cold_run_minchah.remainder; 187/187 after motion 4 (50 ink 26% / 68 move / 19
+answer-sheet / 3 data / 47 import); guard tripwire 187; run_cold_all 19/19, 709
+cells. TWO HONEST CENSUS CATCHES: the exact five-token domain phrase held at 3 seats
+only (4:22 inserts אלהיו "his God", 4:27 has ממצות "of the commandments" without
+"all") → rewritten to commandments-token + "which shall not be done" → five; 4:3
+opens bare אם "if" not ואם "and if". THE GAPS (9 cells silent after the ink run)
+filled PER GAP: Yoma 68a:6-8 + 68b:2 (the three camps; the bearers' threshold);
+Horayot 11a:20-11b:3 (the king by "his God" — Deut 17:19's verbal analogy; Rabbi vs
+the exilarch); Keritot 25b:3-4 (Rava: מצות-מצות gezerah shavah on the DOMAIN PHRASE
+= the census's five seats), 26a:19 (R. Zeira: "knowledge" at the three tiers = the
+known-tokens census — the Day clears the doubt, not the known sin); Keritot 13b:5-6,
+16-20 (the curriculum; the drunk may not teach except the plain text; Rav set no
+expositor on a festival's morrow); Zevachim 17b:7-18a:7 (a drunk who served has
+PROFANED — "to distinguish"; the statute-statute sync); Sanhedrin 22b:10-18 +
+83b:17 (Rabbi's forever / "its ruin is its remedy"; the quarter-log's dissipation;
+Rav Ashi: wine-drinkers profane service; death by Heaven); Zevachim 101a:2-15 +
+101b:1-7 (Sifra Shemini Chapter 2 VERBATIM at its Talmud seat; "did THEY offer? I
+offered" — Moses himself; the tithe's a-fortiori Deut 26:14; kodshei sha'ah vs
+dorot). SIX EFFECTS registered (registry 79 → 85): burned_outside_camp (destroy),
+defiles_garments (status), eaten_to_atone (heaven), death_by_heaven (heaven),
+service_profaned (block), teaching_barred (block). SEATS (scratchpad/seat_l1.py;
+53 cites pre-checked): L04-19 (F-206) at STEP_Lv_4_22; LV10-11 (F-207) at
+STEP_Lv_10_9; LV10-12 (F-208) at STEP_Lv_10_16 (the inquiry verse — STEP_Lv_10_19
+has NO operators list; the inserter halted there once and was re-anchored);
+changelog lines in both (lev_10 GAINED the meta.changelog key); rituals COMPLETE
+(regression 163/163, ALL_UNITS 163/163); corpus_world → standing 1715 → 1718,
+hash 8b8fff1fa28953af UNMOVED, CORPUS_TRUTH rebaked BY corpus_world.py itself and
+green; verify_claims on both manifests (19 + 12 claims). RECORDS: REPORT_CHATAT.md;
+THE_STEPS Step 5 THE THIRTEENTH SPAN; COMPILE_DEBT L1 [x]; STAMP_LEDGER row; MIDDOT
+case-law row (a verbal analogy landing on a machine census); this doc; memory. The
+exam counters do not move (LAW rows graded by the cold function, no scaffold —
+sitting B's precedent). Watches unchanged. TOOLS this sitting: scratchpad/
+talmud_seg.py (segments by "Tractate 17b:7" or a range), gen_chatat_ledger.py,
+seat_l1.py, l1_links.json (the links enumeration — reusable: scan Data/links*.csv
+for "Leviticus ch:vs" cells, split Mishnah vs Talmud by pattern).
+
+═══ COMPACTION POINT #58 (2026-09-05 — written unprompted at sitting L1's close)
+═══ CLEAN POINT — no work mid-flight. L1 DONE (cold_run_chatat.py 187/187; F-206..
+F-208 seated; standing 1718; hash unmoved). UNCOMMITTED since 632790c: this doc's
+tail from the 632790c note, THE_STEPS (COMPILE DEBT + THIRTEENTH SPAN), World/step9/
+{COMPILE_DEBT.md, cold_run_chatat.py, REPORT_CHATAT.md, effect_vocabulary.yaml},
+logic/oral_triage/chatat_topic_docket_2026-09-05.md, logic/units/{lev_04_inadvertence
+_case_tree, lev_10_nadav_avihu}.yaml + their manifests + py_units renders +
+ALL_UNITS.py + html renders + UNIT_INDEX, logic/corpus/CORPUS_TRUTH.py +
+corpus_world.sqlite, logic/findings/STAMP_LEDGER.md, logic/MIDDOT.md, memory — rides
+the owner's "commit push" (staging by exclusion; NEVER-COMMIT set unchanged; ⚠ every
+git command begins with `cd <repo-old> &&`). POST-COMPACTION REREADS
+(mandatory, first sitting): THE_STEPS Step 2 + Step 5 (the deliverable rule, the
+five motions, the effects rule, THE COMPILE DEBT, THE THIRTEENTH SPAN) + the
+compiler block + this tail + World/step9/COMPILE_DEBT.md. THEN, on the owner's
+"go": SITTING L2 — THE IMPURITY CLOCKS: lev_12_childbirth (12:1-8) +
+lev_15_male_discharge (15:1-18) + lev_15_female_discharge (15:19-33), by the rhythm:
+docket by script (links UNION topic rows: Mishnah Niddah whole (10 ch), Zavim whole
+(5 ch), Keritot 1:3-7 (the childbirth rows ROUTED from L1's ledger), Kinnim whole (3
+ch) — check cases_tazria.yaml + tazria_exam_mishnah ledger for prior credits; the
+Sifra Tazria/Metzora Zavim rows in the lev_12/lev_15 reading ledgers), ledger FIRST
+with computed coverage, cold_run_impurity_clocks.py (guard from birth; TIMERS per
+person — the seven days, the thirty-three and sixty-six, the eighth-day offerings
+CALLING cold_run_vayikra5's bird tier and cold_run_minchah? no — the yoledet's
+lamb + bird / two birds; the zav's count-seven and the zavah's; the pairs = Kinnim's
+answer sheet), effects from the verbs (registry 85; expect timer effects:
+counts_seven, blood_of_purity...), seats where the sheet is pre-answered, ritual,
+corpus_world (standing 1718), records (REPORT, THE_STEPS Step 5 span paragraph,
+COMPILE_DEBT [x] L2, MOVE_CATALOG/MIDDOT if new, STAMP row, this doc, memory). OPEN
+(counted): 334 translit-fallback render lines; the seventy's decomposition (Seder
+Olam). Watches: will-indexed dispatch (2), demotion (1), consonant-fragment read (1);
+world-engine cascade depth + cycle detection (design only).
+═══ 2026-09-05, owner: "yes go l2" → SITTING L2 OF THE COMPILE DEBT RUN END TO END. THE
+DOCKET by script: links (l2_links.json) → 23 Mishnah rows on Lev 12:1-8 / 15:1-33, ALL
+prior credits (round 43 mostly); 277 Talmud addresses indexed; topic route: Mishnah Niddah
+whole (79), Zavim whole (32), Kinnim whole (15) = 126 rows READ WHOLE; ledger
+logic/oral_triage/clocks_topic_docket_2026-09-05.md by scratchpad/gen_clocks_ledger.py
+(LAW 71 / CREDIT 8 / ROUTED 1 / CONTEXT 46 — the CONTEXT bulk is Niddah's SCRIBAL LAYER,
+self-labeled at 8:3 "the sages said it to be lenient — blood, not a stain": the stains, the
+retroactive fence, the fixed periods, the maturity chapters — verdicted, NOT encoded per
+the code/data law; Tosefta Niddah 71 + Zavim 30 rows enumerated outside scope; Tosefta
+Kinnim not on the shelf). THE COLD FUNCTION: World/step9/cold_run_clocks.py — 57 probes;
+censuses asserted (IMPURE 7/14 + PURITY 33/66 = 40/80 COMPUTED; "seven days" at 12:2,
+15:13, 19, 24, 28; "until evening" 15 tokens at 14 verses; "washes his garments" at ten;
+LIVING water at 15:13 ALONE; "count" at 15:13, 28; the eighth day ×2; the two-birds
+formula at 12:8, 15:14, 15:29; "one and one" at 12:8, 15:15, 15:30; the saddle at 15:9;
+the bed NOUN at 4, 5, 21, 23, 24, 26; seed ×4; 15:10's split clause (touch: until-evening
+only; carry: garments); 15:33's five persons; 12:4's two gates); CALLS: cold_run_chatat
+(domain karet-class → 'sin_offering' for the partner; domain unknown → the suspended
+ram; ownership(dead_father) for the heirs' pair), cold_run_vayikra5 (birds tier → chatat
+FIRST), cold_run_minchah (bird olah place → above); 161/161 ON THE FIRST GRADED RUN —
+NO TALMUD OPENED (the two units' Sifra spines held every gap); fractions 64 ink 39% / 72
+move / 15 sheet / 5 data / 5 import; guard tripwire 161; run_cold_all 20/20, 870 cells.
+TWO HONEST CENSUS CATCHES: the bed noun expected at 15:20 — the ink has the VERB תשכב
+("she lies on"), the noun משכב first at 15:21; "holy" counted by substring read המקדש
+("the sanctuary") as a second קדש ("holy") → exact tokens. THE PAIRS ENGINE: Kinnim's
+chain of seven COMPUTED from a stated model (each round trip: intermediates −2, the
+turning point −1, the origin her own bird on the first trip) → [0,0,1,2,3,4,6],
+[0,0,0,0,1,2,5], [0,0,0,0,0,0,4] = the Mishnah's three rows. NINE EFFECTS registered (85 →
+94): niddah_seven, blood_of_purity, counts_seven_clean (timers), bed_and_seat_defile,
+washes_and_bathes, immersed (status), pair_owed (debit), barred_from_holies (block),
+birds_die (destroy). SEATS (scratchpad/seat_l2.py; 38 cites pre-checked): LV12-07 (F-209)
+at STEP_Lv_12_5; LV15B-07 (F-210) at STEP_Lv_15_25; LV15A-09 (F-211) at STEP_Lv_15_13
+(STEP_Lv_15_14 has NO operators — checked BEFORE seating this time, by a python anchor
+check: comment + ops present); all three units GAINED the meta.changelog key; rituals
+COMPLETE ×3 (regression 163/163); corpus_world → standing 1718 → 1721, hash
+8b8fff1fa28953af UNMOVED, CORPUS_TRUTH rebaked and green; verify_claims 7 + 9 + 7, 0
+failed. RECORDS: REPORT_CLOCKS.md; THE_STEPS Step 5 THE FOURTEENTH SPAN; COMPILE_DEBT L2
+[x]; STAMP_LEDGER row; this doc; memory. No new move, no new middah row (the
+minimal-seizure rule already at LV15B-04). Exam counters unmoved. Watches unchanged.
+
+═══ COMPACTION POINT #59 (2026-09-05 — written unprompted at sitting L2's close)
+═══ CLEAN POINT — no work mid-flight. L1 + L2 DONE. UNCOMMITTED since 632790c: everything
+of L1 (#58's list) + L2's: World/step9/{cold_run_clocks.py, REPORT_CLOCKS.md,
+effect_vocabulary.yaml, COMPILE_DEBT.md}, logic/oral_triage/clocks_topic_docket_2026-09-05.md,
+logic/units/{lev_12_childbirth, lev_15_male_discharge, lev_15_female_discharge}.yaml +
+manifests + py_units + html + UNIT_INDEX + ALL_UNITS, CORPUS_TRUTH.py + corpus_world.sqlite,
+STAMP_LEDGER, THE_STEPS, this doc, memory — rides the owner's "commit push" (staging by
+exclusion; NEVER-COMMIT set unchanged; ⚠ every git command begins with `cd
+<repo-old> &&`). POST-COMPACTION REREADS (mandatory, first sitting):
+THE_STEPS Step 2 + Step 5 (the deliverable rule, the five motions, the effects rule, THE
+COMPILE DEBT, THE THIRTEENTH and FOURTEENTH SPANS) + the compiler block + this tail +
+World/step9/COMPILE_DEBT.md. THEN, on the owner's "go": SITTING L3 — BLOOD, UNIONS, AND
+SANCTIONS: lev_17_blood_center (17:1-16) + lev_18_sexual_land (18:1-30) + lev_20_sanctions
+(20:1-27), by the rhythm: docket by script (links UNION topic rows: Mishnah Keritot 1:1
+(credited — the 36 list, L1), Sanhedrin 7 whole (the four deaths' cases — check
+cases_capital/acharei/kedoshim for credits), Makkot 3 whole (the lash list), Yevamot 1-3
+(the fifteen women, the co-wives), Chullin 6 whole (covering the blood), Zevachim 13 whole
+(outside slaughter/offering — Lev 17:3-9); prior credits in acharei_exam_mishnah_2026-09-05
+(round 44 — the Lev 16-20 exam, 79 rows) + cases_acharei.yaml; the Sifra Acharei/Kedoshim
+rows in the lev_17/18/20 reading ledgers), ledger FIRST with computed coverage,
+cold_run_sanctions.py (guard from birth; THE SANCTIONS MATRIX: each union of Lev 18 →
+its Lev 20 sanction (karet / court death by mode: stoning, burning, strangling? — the
+modes are Sanhedrin 7:1's four with the verse-forms: "their blood is upon them" =
+stoning by the Ov/Yidoni link, "by fire" 20:14, "put to death" unspecified = strangling
+(the Talmud's default — a MOVE); the blood ban 17:10-14 with the covering (Chullin 6 on
+17:13's "he shall pour out its blood and cover it"); outside slaughter 17:3-9 (Zevachim
+13); CALL cold_run_chatat.domain for the unwitting union → sin offering (Keritot 1:1)
+and cold_run_lev24? no), effects from the verbs (registry 94; expect: stoned exists,
+put_to_death, karet_cut_off exist; new: burned_by_court? 'burned_in_fire' exists
+(garment); childless (20:20-21 ערירים — "they shall die childless" — a status/heaven
+effect!), blood_covered (body), cut_off_from_people...), seats where the sheet is
+pre-answered, ritual ×3, corpus_world (standing 1721), records (REPORT, THE_STEPS Step 5
+span paragraph, COMPILE_DEBT [x] L3, MOVE_CATALOG/MIDDOT if new, STAMP row, this doc,
+memory). OPEN (counted): 334 translit-fallback render lines; the seventy's decomposition
+(Seder Olam). Watches: will-indexed dispatch (2), demotion (1 — LV15B-03's operator now
+graded by the compile: Zavim 5:11 = Sifra Chapter 7 3 verbatim), consonant-fragment read
+(1); world-engine cascade depth + cycle detection (design only).

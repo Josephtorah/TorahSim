@@ -133,6 +133,10 @@ m.step("Lev.10.9")
 # not installed
 m.witness_read("yayin_veshekhar", "the_wine_machine",
                 cites=["Sifra, Shemini, Section 1 1", "Sifra, Shemini, Section 1 2", "Sifra, Shemini, Section 1 3", "Sifra, Shemini, Section 1 4", "Sifra, Shemini, Section 1 5", "Sifra, Shemini, Section 1 8", "Onkelos Lev 10:9"])
+# witness-tier presupposed read: two_jobs on
+# the_wine_machine_at_its_talmud_seats — read, not installed
+m.witness_read("the_wine_machine_at_its_talmud_seats", "two_jobs",
+                cites=["Mishnah Keritot 3:3", "Zevachim 17b:7", "Zevachim 18a:1", "Zevachim 18a:5", "Zevachim 18a:6", "Sanhedrin 22b:11", "Sanhedrin 22b:12", "Sanhedrin 22b:13", "Sanhedrin 22b:14", "Sanhedrin 83b:17", "Keritot 13b:6", "Keritot 13b:16", "Keritot 13b:17", "Keritot 13b:18", "Keritot 13b:19", "Keritot 13b:20", "Sifra, Shemini, Section 1 8", "Sifra, Shemini, Section 1 9"])
 
 # -------------------------- Lev.10.10 · ETNACHTA_SPLIT ---------------------
 # ‹ולהבדיל בין הקדש› (“and-to-divide between the-holiness”)
@@ -219,6 +223,10 @@ m.step("Lev.10.16")
 # installed
 m.witness_read("darosh_darash", "goat_inquiry",
                 cites=["Sifra, Shemini, Chapter 2 1", "Sifra, Shemini, Chapter 2 2", "Sifra, Shemini, Chapter 2 4", "Sifra, Shemini, Chapter 2 5", "Sifra, Shemini, Chapter 2 8", "Sifra, Shemini, Chapter 2 9", "Sifra, Shemini, Chapter 2 10", "Sifra, Shemini, Chapter 2 11", "Sifra, Shemini, Chapter 2 12", "Onkelos Lev 10:19", "Onkelos Lev 10:20"])
+# witness-tier presupposed read: moses_offered on
+# the_inquiry_at_its_talmud_seat — read, not installed
+m.witness_read("the_inquiry_at_its_talmud_seat", "moses_offered",
+                cites=["Mishnah Horayot 3:5", "Mishnah Zevachim 12:1", "Zevachim 101a:2", "Zevachim 101a:5", "Zevachim 101a:6", "Zevachim 101a:9", "Zevachim 101a:10", "Zevachim 101a:11", "Zevachim 101a:12", "Zevachim 101a:14", "Zevachim 101b:6", "Zevachim 101b:7", "Sifra, Shemini, Chapter 2 1", "Sifra, Shemini, Chapter 2 2", "Sifra, Shemini, Chapter 2 4", "Sifra, Shemini, Chapter 2 11", "Sifra, Shemini, Chapter 1 8"])
 
 # -------------------------- Lev.10.17 · ETNACHTA_SPLIT ---------------------
 # ‹מדוע לא אכלתם› (“what-known? not eat”)
@@ -278,7 +286,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('esh_zarah', 'the_fault_operands'), ('vatetze_esh', 'the_mode_and_where'), ('bikrovai_ekadesh', 'silence_rewarded'), ('dod_aharon', 'carriers_and_kinship'), ('rasheikhem_al_tifrau', 'mourning_bans'), ('shemen_mishchat', 'exit_ban_generations'), ('yayin_veshekhar', 'the_wine_machine'), ('ulehorot', 'curriculum_verse'), ('kechu_et_haminchah', 'portions_day'), ('darosh_darash', 'goat_inquiry')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('esh_zarah', 'the_fault_operands'), ('vatetze_esh', 'the_mode_and_where'), ('bikrovai_ekadesh', 'silence_rewarded'), ('dod_aharon', 'carriers_and_kinship'), ('rasheikhem_al_tifrau', 'mourning_bans'), ('shemen_mishchat', 'exit_ban_generations'), ('yayin_veshekhar', 'the_wine_machine'), ('the_wine_machine_at_its_talmud_seats', 'two_jobs'), ('ulehorot', 'curriculum_verse'), ('kechu_et_haminchah', 'portions_day'), ('darosh_darash', 'goat_inquiry'), ('the_inquiry_at_its_talmud_seat', 'moses_offered')]
     assert m.WITNESS_READS[0]["cites"] == ["Sifra, Shemini, Mechilta d'Miluim 2 21", "Sifra, Shemini, Mechilta d'Miluim 2 22", "Sifra, Shemini, Mechilta d'Miluim 2 32", 'Onkelos Lev 10:1']
     assert all('the_fault_operands' not in f for f in m.WORLD["facts"])
     assert 'esh_zarah' not in m.WORLD["witnessed"]
@@ -300,13 +308,19 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[6]["cites"] == ['Sifra, Shemini, Section 1 1', 'Sifra, Shemini, Section 1 2', 'Sifra, Shemini, Section 1 3', 'Sifra, Shemini, Section 1 4', 'Sifra, Shemini, Section 1 5', 'Sifra, Shemini, Section 1 8', 'Onkelos Lev 10:9']
     assert all('the_wine_machine' not in f for f in m.WORLD["facts"])
     assert 'yayin_veshekhar' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Shemini, Section 1 9', 'Sifra, Shemini, Section 1 6', 'Sifra, Shemini, Section 1 7']
+    assert m.WITNESS_READS[7]["cites"] == ['Mishnah Keritot 3:3', 'Zevachim 17b:7', 'Zevachim 18a:1', 'Zevachim 18a:5', 'Zevachim 18a:6', 'Sanhedrin 22b:11', 'Sanhedrin 22b:12', 'Sanhedrin 22b:13', 'Sanhedrin 22b:14', 'Sanhedrin 83b:17', 'Keritot 13b:6', 'Keritot 13b:16', 'Keritot 13b:17', 'Keritot 13b:18', 'Keritot 13b:19', 'Keritot 13b:20', 'Sifra, Shemini, Section 1 8', 'Sifra, Shemini, Section 1 9']
+    assert all('two_jobs' not in f for f in m.WORLD["facts"])
+    assert 'the_wine_machine_at_its_talmud_seats' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Shemini, Section 1 9', 'Sifra, Shemini, Section 1 6', 'Sifra, Shemini, Section 1 7']
     assert all('curriculum_verse' not in f for f in m.WORLD["facts"])
     assert 'ulehorot' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Shemini, Chapter 1 2', 'Sifra, Shemini, Chapter 1 3', 'Sifra, Shemini, Chapter 1 4', 'Sifra, Shemini, Chapter 1 6', 'Sifra, Shemini, Chapter 1 8', 'Sifra, Shemini, Chapter 1 9', 'Sifra, Shemini, Chapter 1 10']
+    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Shemini, Chapter 1 2', 'Sifra, Shemini, Chapter 1 3', 'Sifra, Shemini, Chapter 1 4', 'Sifra, Shemini, Chapter 1 6', 'Sifra, Shemini, Chapter 1 8', 'Sifra, Shemini, Chapter 1 9', 'Sifra, Shemini, Chapter 1 10']
     assert all('portions_day' not in f for f in m.WORLD["facts"])
     assert 'kechu_et_haminchah' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Sifra, Shemini, Chapter 2 1', 'Sifra, Shemini, Chapter 2 2', 'Sifra, Shemini, Chapter 2 4', 'Sifra, Shemini, Chapter 2 5', 'Sifra, Shemini, Chapter 2 8', 'Sifra, Shemini, Chapter 2 9', 'Sifra, Shemini, Chapter 2 10', 'Sifra, Shemini, Chapter 2 11', 'Sifra, Shemini, Chapter 2 12', 'Onkelos Lev 10:19', 'Onkelos Lev 10:20']
+    assert m.WITNESS_READS[10]["cites"] == ['Sifra, Shemini, Chapter 2 1', 'Sifra, Shemini, Chapter 2 2', 'Sifra, Shemini, Chapter 2 4', 'Sifra, Shemini, Chapter 2 5', 'Sifra, Shemini, Chapter 2 8', 'Sifra, Shemini, Chapter 2 9', 'Sifra, Shemini, Chapter 2 10', 'Sifra, Shemini, Chapter 2 11', 'Sifra, Shemini, Chapter 2 12', 'Onkelos Lev 10:19', 'Onkelos Lev 10:20']
     assert all('goat_inquiry' not in f for f in m.WORLD["facts"])
     assert 'darosh_darash' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Mishnah Horayot 3:5', 'Mishnah Zevachim 12:1', 'Zevachim 101a:2', 'Zevachim 101a:5', 'Zevachim 101a:6', 'Zevachim 101a:9', 'Zevachim 101a:10', 'Zevachim 101a:11', 'Zevachim 101a:12', 'Zevachim 101a:14', 'Zevachim 101b:6', 'Zevachim 101b:7', 'Sifra, Shemini, Chapter 2 1', 'Sifra, Shemini, Chapter 2 2', 'Sifra, Shemini, Chapter 2 4', 'Sifra, Shemini, Chapter 2 11', 'Sifra, Shemini, Chapter 1 8']
+    assert all('moses_offered' not in f for f in m.WORLD["facts"])
+    assert 'the_inquiry_at_its_talmud_seat' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

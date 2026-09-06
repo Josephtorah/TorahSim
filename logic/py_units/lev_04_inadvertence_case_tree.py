@@ -455,6 +455,10 @@ m.step("Lev.4.22")
 # ‹אֲשֶׁר נָשִׂיא יֶחֱטָא› (“which prince sin”)
 # — case prince, which-sin-bi-shegaga routes to and-be-guilty
 m.case("nasi, asher_yecheta_bi_shegaga", "ve_ashem")
+# witness-tier presupposed read: cold_compile on
+# chatat_censuses_at_their_talmud_seats — read, not installed
+m.witness_read("chatat_censuses_at_their_talmud_seats", "cold_compile",
+                cites=["Mishnah Horayot 3:3", "Mishnah Keritot 6:3", "Mishnah Keritot 6:4", "Mishnah Keritot 2:4", "Mishnah Keritot 6:9", "Mishnah Keritot 4:3", "Mishnah Horayot 3:6", "Horayot 11a:20", "Horayot 11b:1", "Horayot 11b:2", "Keritot 25b:4", "Keritot 26a:19", "Yoma 68a:6", "Yoma 68a:7", "Yoma 68a:8", "Sifra, Vayikra Dibbura DeChovah, Section 4 13", "Sifra, Vayikra Dibbura DeChovah, Section 7 1", "Sifra, Vayikra Dibbura DeChovah, Chapter 7 9"])
 
 # -------------------------- Lev.4.23 · THE_KNOWLEDGE_TRIGGER ---------------
 # ‹אוֹ־הוֹדַע אֵלָיו חַטָּאתוֹ› (“or know to-him/its sin-offering-him/its”)
@@ -767,7 +771,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 35
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('aggregation_keys', 'knowledge_indexed_counts'), ('blood_algorithms', 'dip_per_sprinkle_staves'), ('court_error_machine', 'unanimity_partial_located'), ('tribal_arithmetic', 'four_positions'), ('elders_quorum', 'five_or_three'), ('epistemic_triggers', 'self_knowledge_specificity'), ('tier_fences', 'dependent_actor_exempt'), ('order_equivalence', 'no_rank_lost_replaced')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('aggregation_keys', 'knowledge_indexed_counts'), ('blood_algorithms', 'dip_per_sprinkle_staves'), ('court_error_machine', 'unanimity_partial_located'), ('tribal_arithmetic', 'four_positions'), ('elders_quorum', 'five_or_three'), ('chatat_censuses_at_their_talmud_seats', 'cold_compile'), ('epistemic_triggers', 'self_knowledge_specificity'), ('tier_fences', 'dependent_actor_exempt'), ('order_equivalence', 'no_rank_lost_replaced')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 1 7', 'Sifra, Vayikra Dibbura DeChovah, Chapter 1 4', 'Sifra, Vayikra Dibbura DeChovah, Chapter 1 5', 'Sifra, Vayikra Dibbura DeChovah, Section 5 4', 'Sifra, Vayikra Dibbura DeChovah, Section 7 8', 'Sifra, Vayikra Dibbura DeChovah, Section 7 9', 'Sifra, Vayikra Dibbura DeChovah, Chapter 1 8', 'Sifra, Vayikra Dibbura DeChovah, Chapter 1 13']
     assert all('knowledge_indexed_counts' not in f for f in m.WORLD["facts"])
     assert 'aggregation_keys' not in m.WORLD["witnessed"]
@@ -783,13 +787,16 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[4]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 6 1', 'Sifra, Vayikra Dibbura DeChovah, Chapter 6 2', 'Sifra, Vayikra Dibbura DeChovah, Chapter 6 3']
     assert all('five_or_three' not in f for f in m.WORLD["facts"])
     assert 'elders_quorum' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 7 1', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 3', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 4', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 6', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 7', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 8', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 9']
+    assert m.WITNESS_READS[5]["cites"] == ['Mishnah Horayot 3:3', 'Mishnah Keritot 6:3', 'Mishnah Keritot 6:4', 'Mishnah Keritot 2:4', 'Mishnah Keritot 6:9', 'Mishnah Keritot 4:3', 'Mishnah Horayot 3:6', 'Horayot 11a:20', 'Horayot 11b:1', 'Horayot 11b:2', 'Keritot 25b:4', 'Keritot 26a:19', 'Yoma 68a:6', 'Yoma 68a:7', 'Yoma 68a:8', 'Sifra, Vayikra Dibbura DeChovah, Section 4 13', 'Sifra, Vayikra Dibbura DeChovah, Section 7 1', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 9']
+    assert all('cold_compile' not in f for f in m.WORLD["facts"])
+    assert 'chatat_censuses_at_their_talmud_seats' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 7 1', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 3', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 4', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 6', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 7', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 8', 'Sifra, Vayikra Dibbura DeChovah, Chapter 7 9']
     assert all('self_knowledge_specificity' not in f for f in m.WORLD["facts"])
     assert 'epistemic_triggers' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Section 7 1', 'Sifra, Vayikra Dibbura DeChovah, Section 7 2', 'Sifra, Vayikra Dibbura DeChovah, Section 7 3', 'Sifra, Vayikra Dibbura DeChovah, Section 7 4', 'Sifra, Vayikra Dibbura DeChovah, Section 7 6', 'Sifra, Vayikra Dibbura DeChovah, Section 7 7', 'Sifra, Vayikra Dibbura DeChovah, Section 6 1', 'Sifra, Vayikra Dibbura DeChovah, Section 6 9']
+    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Section 7 1', 'Sifra, Vayikra Dibbura DeChovah, Section 7 2', 'Sifra, Vayikra Dibbura DeChovah, Section 7 3', 'Sifra, Vayikra Dibbura DeChovah, Section 7 4', 'Sifra, Vayikra Dibbura DeChovah, Section 7 6', 'Sifra, Vayikra Dibbura DeChovah, Section 7 7', 'Sifra, Vayikra Dibbura DeChovah, Section 6 1', 'Sifra, Vayikra Dibbura DeChovah, Section 6 9']
     assert all('dependent_actor_exempt' not in f for f in m.WORLD["facts"])
     assert 'tier_fences' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 10 9', 'Sifra, Vayikra Dibbura DeChovah, Chapter 10 10', 'Sifra, Vayikra Dibbura DeChovah, Chapter 11 1', 'Sifra, Vayikra Dibbura DeChovah, Chapter 11 2']
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Vayikra Dibbura DeChovah, Chapter 10 9', 'Sifra, Vayikra Dibbura DeChovah, Chapter 10 10', 'Sifra, Vayikra Dibbura DeChovah, Chapter 11 1', 'Sifra, Vayikra Dibbura DeChovah, Chapter 11 2']
     assert all('no_rank_lost_replaced' not in f for f in m.WORLD["facts"])
     assert 'order_equivalence' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -164,6 +164,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(vesafar_lo, purification_jurisdiction)</span><br><span class="gloss">= WITNESS-READ(vesafar-not, purification-jurisdiction)</span><br>THE COUNT AND ITS JURISDICTION [claim LV15A-07]. The count starts WHEN THE FLOW STOPS (a concurrent mark does not hold it); two sightings need the seven too; &#x27;he counts FOR HIMSELF&#x27; — self-examination jurisdiction, the checked-days dispute recorded and RULED: the law follows R. Eliezer (day one and day seven hold the presumption); seven CONSECUTIVE; clothes-washing analogized to bathing — both INTERPOSITION-FREE; THE ZAV NEEDS LIVING WATER and the leper does not; his vessels rise in any waters; INSTANCE-BINDING: birds set aside for the first flow cannot serve the second; immersed by day before (the sunset argument); three sightings bring the offering, two do not.
 </td><td>—</td><td class='cite'>Sifra, Metzora Parashat Zavim, Chapter 5 1, Sifra, Metzora Parashat Zavim, Chapter 5 4, Sifra, Metzora Parashat Zavim, Chapter 5 5, Sifra, Metzora Parashat Zavim, Chapter 5 6, Sifra, Metzora Parashat Zavim, Chapter 5 7, Sifra, Metzora Parashat Zavim, Chapter 5 8, Sifra, Metzora Parashat Zavim, Chapter 5 10, Sifra, Metzora Parashat Zavim, Chapter 5 13, Sifra, Metzora Parashat Zavim, Chapter 5 14, Sifra, Metzora Parashat Zavim, Chapter 5 16</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_pairs_engine, kinnim_on_the_one_and_one)</span><br><span class="gloss">= WITNESS-READ(the-pairs-engine, kinnim-on-the-one-and-one)</span><br>THE PAIRS ENGINE — MISHNAH KINNIM RUNS ON &#x27;ONE AND ONE&#x27; [claim LV15A-09]. The pair formula stands at three seats — 12:8, 15:14-15, 15:29-30: &#x27;two turtledoves or two young pigeons, one a sin offering and one a burnt offering&#x27; — and Mishnah Kinnim, read whole under the union rule, turns out to be that constraint&#x27;s combinatorics with one import: the bird sin offering is done BELOW (Lev 5:9, the blood pressed out at the base) and the bird burnt offering ABOVE (Lev 1:15, on the wall — the meal-offering engine&#x27;s cell, called), so a bird placed on the wrong half is invalid (Kinnim 1:1). Everything else the tractate rules the machine derives from the constraint: a specified sin offering lost among burnt offerings cannot be placed at all — all die (1:2); mixed with an obligation, only the obligation&#x27;s sin-offering count is valid (1:2, 3:5); two women&#x27;s obligations mixed — half valid at equal counts, the smaller at unequal (1:3); a flown bird from an unspecified pair leaves &#x27;one&#x27; still — take a mate (2:1); the priest unconsulted — half, or the greater, or both invalid, or only the unspecified (3:1-4); the vowed pair three above and one below (3:6 — the vow&#x27;s two burnt offerings plus the obligation&#x27;s one and one). THE CHAIN OF SEVEN (2:3) was computed from a stated model — each round trip costs every intermediate woman two, the turning point one, the origin her own bird — and reproduced all three of the Mishnah&#x27;s rows: after one trip [0, 0, 1, 2, 3, 4, 6], after two [0, 0, 0, 0, 1, 2, 5], after three [0, 0, 0, 0, 0, 0, 4]. The heirs&#x27; rule (2:5: they bring her burnt offering, not her sin offering) resolves by call into the Lev 4 engine&#x27;s ownership lock; the instance-binding of the zav&#x27;s birds to this flow is Sifra Zavim Chapter 5 13, and his coming the day after his immersion Chapter 5 14. Filed and auto-seated under the auto-seat rider (sitting L2 of THE COMPILE DEBT, 2026-09-05 — the Lev 12 + Lev 15 compile, cold_run_clocks.py 161 of 161).
+</td><td>—</td><td class='cite'>Mishnah Kinnim 1:1, Mishnah Kinnim 1:2, Mishnah Kinnim 1:3, Mishnah Kinnim 2:1, Mishnah Kinnim 2:3, Mishnah Kinnim 2:5, Mishnah Kinnim 3:1, Mishnah Kinnim 3:2, Mishnah Kinnim 3:4, Mishnah Kinnim 3:5, Mishnah Kinnim 3:6, Sifra, Metzora Parashat Zavim, Chapter 5 13, Sifra, Metzora Parashat Zavim, Chapter 5 14, Sifra, Metzora Parashat Zavim, Chapter 5 16</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
 </div>
@@ -1005,16 +1007,21 @@ from machine import Machine
 m = Machine(&quot;lev_15_male_discharge&quot;)
 
 # -------------------------- Lev.15.1 · TREE_CLAIM --------------------------
-# וידבר יהוה … אל משה ואל אהרן לאמר
-# &quot;[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה ואל אהרן
-# לאמר». Derive claim from Hebrew arms. Lev 15:1.&quot;
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה ואל אהרן› (“Moses and-to Aaron”)
+# ‹לאמר› (“to-say”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:1.&quot;
 m.step(&quot;Lev.15.1&quot;)
 
 # -------------------------- Lev.15.2 · ETNACHTA_SPLIT ----------------------
-# דברו אל בני ישראל ואמרתם אלהם … איש איש כי יהיה זב מבשרו זובו טמא הוא
-# &quot;[EN-AID] From top split: LEFT «דברו אל בני ישראל ואמרתם אלהם» / RIGHT
-# «איש איש כי יהיה זב מבשרו זובו טמא הוא». Derive claim from Hebrew arms.
-# Lev 15:2.&quot;
+# ‹דברו אל בני› (“speak to son”)
+# ‹ישראל ואמרתם אלהם› (“Israel and-say to-them/their”)
+# ‹… איש איש כי› (“man man that”)
+# ‹יהיה זב מבשרו› (“be flow-freely from-flesh-him/its”)
+# ‹זובו טמא הוא› (“seminal-him/its foul-in-a-religious-sense he/it”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:2.&quot;
 m.step(&quot;Lev.15.2&quot;)
 # witness-tier presupposed read: the_seven_ways on mibsaro — read, not
 # installed
@@ -1022,10 +1029,13 @@ m.witness_read(&quot;mibsaro&quot;, &quot;the_seven_ways&quot;,
                 cites=[&quot;Sifra, Metzora Parashat Zavim, Section 1 1&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 1 4&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 1 6&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 1 7&quot;])
 
 # -------------------------- Lev.15.3 · ETNACHTA_SPLIT ----------------------
-# וזאת תהיה טמאתו בזובו … רר בשרו את זובו או החתים בשרו מזובו טמאתו הוא
-# &quot;[EN-AID] From top split: LEFT «וזאת תהיה טמאתו בזובו» / RIGHT «רר בשרו את
-# זובו או החתים בשרו מזובו טמאתו הוא». Derive claim from Hebrew arms. Lev
-# 15:3.&quot;
+# ‹וזאת תהיה טמאתו› (“and-this be religious-impurity-him/its”)
+# ‹בזובו … רר בשרו› (“in-seminal-him/its … slaver flesh-him/its”)
+# ‹את זובו או› (“obj-marker seminal-him/its or”)
+# ‹החתים בשרו מזובו› (“close-up flesh-him/its from-seminal-him/its”)
+# ‹טמאתו הוא› (“religious-impurity-him/its he/it”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:3.&quot;
 m.step(&quot;Lev.15.3&quot;)
 # witness-tier presupposed read: clocks_and_the_nine_liquids on rar_hechtim
 # — read, not installed
@@ -1033,9 +1043,13 @@ m.witness_read(&quot;rar_hechtim&quot;, &quot;clocks_and_the_nine_liquids&quot;,
                 cites=[&quot;Sifra, Metzora Parashat Zavim, Chapter 1 1&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 1 3&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 1 4&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 1 7&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 1 8&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 1 13&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 1 10&quot;])
 
 # -------------------------- Lev.15.4 · ETNACHTA_SPLIT ----------------------
-# כל המשכב אשר ישכב עליו הזב יטמא … וכל הכלי אשר ישב עליו יטמא
-# &quot;[EN-AID] From top split: LEFT «כל המשכב אשר ישכב עליו הזב יטמא» / RIGHT
-# «וכל הכלי אשר ישב עליו יטמא». Derive claim from Hebrew arms. Lev 15:4.&quot;
+# ‹כל המשכב אשר› (“all the-bed which”)
+# ‹ישכב עליו הזב› (“lie-down over-him/its the-flow-freely”)
+# ‹יטמא … וכל הכלי› (“be-foul … and-all the-vessel”)
+# ‹אשר ישב עליו› (“which dwell/sit over-him/its”)
+# ‹יטמא› (“be-foul”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:4.&quot;
 m.step(&quot;Lev.15.4&quot;)
 # witness-tier presupposed read: the_stand_up_test on mishkav_moshav — read,
 # not installed
@@ -1043,9 +1057,12 @@ m.witness_read(&quot;mishkav_moshav&quot;, &quot;the_stand_up_test&quot;,
                 cites=[&quot;Sifra, Metzora Parashat Zavim, Chapter 2 1&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 2 3&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 2 7&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 2 8&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 2 12&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 2 13&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 2 8&quot;])
 
 # -------------------------- Lev.15.5 · ETNACHTA_SPLIT ----------------------
-# ואיש אשר יגע במשכבו … יכבס בגדיו ורחץ במים וטמא עד הערב
-# &quot;[EN-AID] From top split: LEFT «ואיש אשר יגע במשכבו» / RIGHT «יכבס בגדיו
-# ורחץ במים וטמא עד הערב». Derive claim from Hebrew arms. Lev 15:5.&quot;
+# ‹ואיש אשר יגע› (“and-man which touch”)
+# ‹במשכבו … יכבס בגדיו› (“in-bed-him/its … trample garment-him/its”)
+# ‹ורחץ במים וטמא› (“and-lave in-waters and-be-foul”)
+# ‹עד הערב› (“until the-evening”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:5.&quot;
 m.step(&quot;Lev.15.5&quot;)
 # witness-tier presupposed read: propagation_degrees on hanogea_bemishkavo —
 # read, not installed
@@ -1053,28 +1070,38 @@ m.witness_read(&quot;hanogea_bemishkavo&quot;, &quot;propagation_degrees&quot;,
                 cites=[&quot;Sifra, Metzora Parashat Zavim, Section 2 1&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 2 2&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 2 3&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 2 4&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 2 9&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 2 11&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 3 1&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 3 2&quot;])
 
 # -------------------------- Lev.15.6 · ETNACHTA_SPLIT ----------------------
-# והישב על הכלי אשר ישב עליו הזב … יכבס בגדיו ורחץ במים וטמא עד הערב
-# &quot;[EN-AID] From top split: LEFT «והישב על הכלי אשר ישב עליו הזב» / RIGHT
-# «יכבס בגדיו ורחץ במים וטמא עד הערב». Derive claim from Hebrew arms. Lev
-# 15:6.&quot;
+# ‹והישב על הכלי› (“and-the-dwell/sit over the-vessel”)
+# ‹אשר ישב עליו› (“which dwell/sit over-him/its”)
+# ‹הזב … יכבס בגדיו› (“the-flow-freely … trample garment-him/its”)
+# ‹ורחץ במים וטמא› (“and-lave in-waters and-be-foul”)
+# ‹עד הערב› (“until the-evening”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:6.&quot;
 m.step(&quot;Lev.15.6&quot;)
 
 # -------------------------- Lev.15.7 · ETNACHTA_SPLIT ----------------------
-# והנגע בבשר הזב … יכבס בגדיו ורחץ במים וטמא עד הערב
-# &quot;[EN-AID] From top split: LEFT «והנגע בבשר הזב» / RIGHT «יכבס בגדיו ורחץ
-# במים וטמא עד הערב». Derive claim from Hebrew arms. Lev 15:7.&quot;
+# ‹והנגע בבשר הזב› (“and-the-touch in-flesh the-flow-freely”)
+# ‹… יכבס בגדיו ורחץ› (“trample garment-him/its and-lave”)
+# ‹במים וטמא עד› (“in-waters and-be-foul until”)
+# ‹הערב› (“the-evening”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:7.&quot;
 m.step(&quot;Lev.15.7&quot;)
 
-# -------------------------- Lev.15.8 · COND_וכי ----------------------------
-# וכי ירק הזב בטהור … וכבס בגדיו ורחץ במים וטמא עד הערב
-# &quot;[EN-AID] From top split: LEFT «וכי ירק הזב בטהור» / RIGHT «וכבס בגדיו
-# ורחץ במים וטמא עד הערב». Derive claim from Hebrew arms. Lev 15:8.&quot;
+# -------------------------- Lev.15.8 · COND_וכי (“and-that”) ---------------
+# ‹וכי ירק הזב› (“and-that spit the-flow-freely”)
+# ‹בטהור … וכבס בגדיו› (“in-pure … and-trample garment-him/its”)
+# ‹ורחץ במים וטמא› (“and-lave in-waters and-be-foul”)
+# ‹עד הערב› (“until the-evening”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:8.&quot;
 m.step(&quot;Lev.15.8&quot;)
 
 # -------------------------- Lev.15.9 · TREE_CLAIM --------------------------
-# וכל המרכב אשר ירכב עליו הזב
-# &quot;[EN-AID] From top split: LEFT «וכל המרכב אשר ירכב עליו הזב» / RIGHT «».
-# Derive claim from Hebrew arms. Lev 15:9.&quot;
+# ‹וכל המרכב אשר› (“and-all the-chariot which”)
+# ‹ירכב עליו הזב› (“ride over-him/its the-flow-freely”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Lev 15:9.&quot;
 m.step(&quot;Lev.15.9&quot;)
 # witness-tier presupposed read: the_inverted_saddle on merkav — read, not
 # installed
@@ -1082,18 +1109,25 @@ m.witness_read(&quot;merkav&quot;, &quot;the_inverted_saddle&quot;,
                 cites=[&quot;Sifra, Metzora Parashat Zavim, Chapter 3 9&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 3 10&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 3 11&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 4 1&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 4 2&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 4 3&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 4 4&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 3 5&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 3 6&quot;])
 
 # -------------------------- Lev.15.10 · ETNACHTA_SPLIT ---------------------
-# וכל הנגע בכל אשר יהיה תחתיו יטמא עד הערב … והנושא אותם יכבס בגדיו ורחץ
-# במים וטמא עד הערב
-# &quot;[EN-AID] From top split: LEFT «וכל הנגע בכל אשר יהיה תחתיו יטמא עד הערב»
-# / RIGHT «והנושא אותם יכבס בגדיו ורחץ במים וטמא עד הערב». Derive claim from
-# Hebrew arms. Lev 15:10.&quot;
+# ‹וכל הנגע בכל› (“and-all the-touch in-all”)
+# ‹אשר יהיה תחתיו› (“which be under-him/its”)
+# ‹יטמא עד הערב› (“be-foul until the-evening”)
+# ‹… והנושא אותם יכבס› (“and-the-lift/carry obj-marker-them/their trample”)
+# ‹בגדיו ורחץ במים› (“garment-him/its and-lave in-waters”)
+# ‹וטמא עד הערב› (“and-be-foul until the-evening”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:10.&quot;
 m.step(&quot;Lev.15.10&quot;)
 
 # -------------------------- Lev.15.11 · ETNACHTA_SPLIT ---------------------
-# וכל אשר יגע בו הזב וידיו לא שטף במים … וכבס בגדיו ורחץ במים וטמא עד הערב
-# &quot;[EN-AID] From top split: LEFT «וכל אשר יגע בו הזב וידיו לא שטף במים» /
-# RIGHT «וכבס בגדיו ורחץ במים וטמא עד הערב». Derive claim from Hebrew arms.
-# Lev 15:11.&quot;
+# ‹וכל אשר יגע› (“and-all which touch”)
+# ‹בו הזב וידיו› (“in-him/its the-flow-freely and-hand-him/its”)
+# ‹לא שטף במים› (“not gush in-waters”)
+# ‹… וכבס בגדיו ורחץ› (“and-trample garment-him/its and-lave”)
+# ‹במים וטמא עד› (“in-waters and-be-foul until”)
+# ‹הערב› (“the-evening”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:11.&quot;
 m.step(&quot;Lev.15.11&quot;)
 # witness-tier presupposed read: the_hand_washing_peg on veyadav_lo_shataf —
 # read, not installed
@@ -1101,42 +1135,63 @@ m.witness_read(&quot;veyadav_lo_shataf&quot;, &quot;the_hand_washing_peg&quot;,
                 cites=[&quot;Sifra, Metzora Parashat Zavim, Chapter 4 5&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 4 6&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 4 7&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 3 1&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 3 2&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 3 3&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 3 5&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 3 6&quot;])
 
 # -------------------------- Lev.15.12 · ETNACHTA_SPLIT ---------------------
-# וכלי חרש אשר יגע בו הזב ישבר … וכל כלי עץ ישטף במים
-# &quot;[EN-AID] From top split: LEFT «וכלי חרש אשר יגע בו הזב ישבר» / RIGHT «וכל
-# כלי עץ ישטף במים». Derive claim from Hebrew arms. Lev 15:12.&quot;
+# ‹וכלי חרש אשר› (“and-vessel piece-of-pottery which”)
+# ‹יגע בו הזב› (“touch in-him/its the-flow-freely”)
+# ‹ישבר … וכל כלי› (“burst … and-all vessel”)
+# ‹עץ ישטף במים› (“tree gush in-waters”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:12.&quot;
 m.step(&quot;Lev.15.12&quot;)
 
-# -------------------------- Lev.15.13 · COND_וכי ---------------------------
-# וכי יטהר הזב מזובו וספר לו שבעת ימים לטהרתו וכבס בגדיו … ורחץ בשרו במים
-# חיים וטהר
-# &quot;[EN-AID] From top split: LEFT «וכי יטהר הזב מזובו וספר לו שבעת ימים
-# לטהרתו וכבס בגדיו» / RIGHT «ורחץ בשרו במים חיים וטהר». Derive claim from
-# Hebrew arms. Lev 15:13.&quot;
+# -------------------------- Lev.15.13 · COND_וכי (“and-that”) --------------
+# ‹וכי יטהר הזב› (“and-that be-pure the-flow-freely”)
+# ‹מזובו וספר לו› (“from-seminal-him/its and-count to-him/its”)
+# ‹שבעת ימים לטהרתו› (“seven day to-ceremonial-purification-him/its”)
+# ‹וכבס בגדיו … ורחץ› (“and-trample garment-him/its … and-lave”)
+# ‹בשרו במים חיים› (“flesh-him/its in-waters living”)
+# ‹וטהר› (“and-be-pure”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:13.&quot;
 m.step(&quot;Lev.15.13&quot;)
 # witness-tier presupposed read: purification_jurisdiction on vesafar_lo —
 # read, not installed
 m.witness_read(&quot;vesafar_lo&quot;, &quot;purification_jurisdiction&quot;,
                 cites=[&quot;Sifra, Metzora Parashat Zavim, Chapter 5 1&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 5 4&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 5 5&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 5 6&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 5 7&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 5 8&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 5 10&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 5 13&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 5 14&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 5 16&quot;])
+# witness-tier presupposed read: kinnim_on_the_one_and_one on
+# the_pairs_engine — read, not installed
+m.witness_read(&quot;the_pairs_engine&quot;, &quot;kinnim_on_the_one_and_one&quot;,
+                cites=[&quot;Mishnah Kinnim 1:1&quot;, &quot;Mishnah Kinnim 1:2&quot;, &quot;Mishnah Kinnim 1:3&quot;, &quot;Mishnah Kinnim 2:1&quot;, &quot;Mishnah Kinnim 2:3&quot;, &quot;Mishnah Kinnim 2:5&quot;, &quot;Mishnah Kinnim 3:1&quot;, &quot;Mishnah Kinnim 3:2&quot;, &quot;Mishnah Kinnim 3:4&quot;, &quot;Mishnah Kinnim 3:5&quot;, &quot;Mishnah Kinnim 3:6&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 5 13&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 5 14&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 5 16&quot;])
 
 # -------------------------- Lev.15.14 · ETNACHTA_SPLIT ---------------------
-# וביום השמיני יקח לו שתי תרים או שני בני יונה … ובא לפני יהוה אל פתח אהל
-# מועד ונתנם אל הכהן
-# &quot;[EN-AID] From top split: LEFT «וביום השמיני יקח לו שתי תרים או שני בני
-# יונה» / RIGHT «ובא לפני יהוה אל פתח אהל מועד ונתנם אל הכהן». Derive claim
-# from Hebrew arms. Lev 15:14.&quot;
+# ‹וביום השמיני יקח› (“and-in-day the-eight take”)
+# ‹לו שתי תרים› (“to-him/its two ring-dove”)
+# ‹או שני בני› (“or two son”)
+# ‹יונה … ובא לפני› (“dove … and-come/bring to-face”)
+# ‹יהוה אל פתח› (“YHWH to opening”)
+# ‹אהל מועד ונתנם› (“tent seasons and-set-them/their”)
+# ‹אל הכהן› (“to the-priest”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:14.&quot;
 m.step(&quot;Lev.15.14&quot;)
 
 # -------------------------- Lev.15.15 · ETNACHTA_SPLIT ---------------------
-# ועשה אתם הכהן אחד חטאת והאחד עלה … וכפר עליו הכהן לפני יהוה מזובו
-# &quot;[EN-AID] From top split: LEFT «ועשה אתם הכהן אחד חטאת והאחד עלה» / RIGHT
-# «וכפר עליו הכהן לפני יהוה מזובו». Derive claim from Hebrew arms. Lev
-# 15:15.&quot;
+# ‹ועשה אתם הכהן› (“and-make obj-marker-them/their the-priest”)
+# ‹אחד חטאת והאחד› (“one sin-offering and-the-one”)
+# ‹עלה … וכפר עליו› (“burnt-offering … and-atone over-him/its”)
+# ‹הכהן לפני יהוה› (“the-priest to-face YHWH”)
+# ‹מזובו› (“from-seminal-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:15.&quot;
 m.step(&quot;Lev.15.15&quot;)
 
-# -------------------------- Lev.15.16 · COND_כי ----------------------------
-# ואיש כי תצא ממנו שכבת זרע … ורחץ במים את כל בשרו וטמא עד הערב
-# &quot;[EN-AID] From top split: LEFT «ואיש כי תצא ממנו שכבת זרע» / RIGHT «ורחץ
-# במים את כל בשרו וטמא עד הערב». Derive claim from Hebrew arms. Lev 15:16.&quot;
+# -------------------------- Lev.15.16 · COND_כי (“that”) -------------------
+# ‹ואיש כי תצא› (“and-man that bring-forth”)
+# ‹ממנו שכבת זרע› (“from-us/our lying-down seed”)
+# ‹… ורחץ במים את› (“and-lave in-waters obj-marker”)
+# ‹כל בשרו וטמא› (“all flesh-him/its and-be-foul”)
+# ‹עד הערב› (“until the-evening”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:16.&quot;
 m.step(&quot;Lev.15.16&quot;)
 # witness-tier presupposed read: the_forty_seah on kol_besaro — read, not
 # installed
@@ -1144,15 +1199,22 @@ m.witness_read(&quot;kol_besaro&quot;, &quot;the_forty_seah&quot;,
                 cites=[&quot;Sifra, Metzora Parashat Zavim, Chapter 6 2&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 6 3&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 6 5&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 6 10&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 9 10&quot;, &quot;Sifra, Metzora Parashat Zavim, Chapter 9 11&quot;])
 
 # -------------------------- Lev.15.17 · ETNACHTA_SPLIT ---------------------
-# וכל בגד וכל עור אשר יהיה עליו שכבת זרע … וכבס במים וטמא עד הערב
-# &quot;[EN-AID] From top split: LEFT «וכל בגד וכל עור אשר יהיה עליו שכבת זרע» /
-# RIGHT «וכבס במים וטמא עד הערב». Derive claim from Hebrew arms. Lev 15:17.&quot;
+# ‹וכל בגד וכל› (“and-all garment and-all”)
+# ‹עור אשר יהיה› (“skin which be”)
+# ‹עליו שכבת זרע› (“over-him/its lying-down seed”)
+# ‹… וכבס במים וטמא› (“and-trample in-waters and-be-foul”)
+# ‹עד הערב› (“until the-evening”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:17.&quot;
 m.step(&quot;Lev.15.17&quot;)
 
 # -------------------------- Lev.15.18 · ETNACHTA_SPLIT ---------------------
-# ואשה אשר ישכב איש אתה שכבת זרע … ורחצו במים וטמאו עד הערב
-# &quot;[EN-AID] From top split: LEFT «ואשה אשר ישכב איש אתה שכבת זרע» / RIGHT
-# «ורחצו במים וטמאו עד הערב». Derive claim from Hebrew arms. Lev 15:18.&quot;
+# ‹ואשה אשר ישכב› (“and-woman which lie-down”)
+# ‹איש אתה שכבת› (“man obj-marker-her/its lying-down”)
+# ‹זרע … ורחצו במים› (“seed … and-lave in-waters”)
+# ‹וטמאו עד הערב› (“and-be-foul until the-evening”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 15:18.&quot;
 m.step(&quot;Lev.15.18&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
@@ -1171,7 +1233,7 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;mibsaro&#x27;, &#x27;the_seven_ways&#x27;), (&#x27;rar_hechtim&#x27;, &#x27;clocks_and_the_nine_liquids&#x27;), (&#x27;mishkav_moshav&#x27;, &#x27;the_stand_up_test&#x27;), (&#x27;hanogea_bemishkavo&#x27;, &#x27;propagation_degrees&#x27;), (&#x27;merkav&#x27;, &#x27;the_inverted_saddle&#x27;), (&#x27;veyadav_lo_shataf&#x27;, &#x27;the_hand_washing_peg&#x27;), (&#x27;vesafar_lo&#x27;, &#x27;purification_jurisdiction&#x27;), (&#x27;kol_besaro&#x27;, &#x27;the_forty_seah&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;mibsaro&#x27;, &#x27;the_seven_ways&#x27;), (&#x27;rar_hechtim&#x27;, &#x27;clocks_and_the_nine_liquids&#x27;), (&#x27;mishkav_moshav&#x27;, &#x27;the_stand_up_test&#x27;), (&#x27;hanogea_bemishkavo&#x27;, &#x27;propagation_degrees&#x27;), (&#x27;merkav&#x27;, &#x27;the_inverted_saddle&#x27;), (&#x27;veyadav_lo_shataf&#x27;, &#x27;the_hand_washing_peg&#x27;), (&#x27;vesafar_lo&#x27;, &#x27;purification_jurisdiction&#x27;), (&#x27;the_pairs_engine&#x27;, &#x27;kinnim_on_the_one_and_one&#x27;), (&#x27;kol_besaro&#x27;, &#x27;the_forty_seah&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Sifra, Metzora Parashat Zavim, Section 1 1&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Section 1 4&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Section 1 6&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Section 1 7&#x27;]
     assert all(&#x27;the_seven_ways&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;mibsaro&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -1193,7 +1255,10 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Sifra, Metzora Parashat Zavim, Chapter 5 1&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 5 4&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 5 5&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 5 6&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 5 7&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 5 8&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 5 10&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 5 13&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 5 14&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 5 16&#x27;]
     assert all(&#x27;purification_jurisdiction&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;vesafar_lo&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Sifra, Metzora Parashat Zavim, Chapter 6 2&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 6 3&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 6 5&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 6 10&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 9 10&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 9 11&#x27;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Mishnah Kinnim 1:1&#x27;, &#x27;Mishnah Kinnim 1:2&#x27;, &#x27;Mishnah Kinnim 1:3&#x27;, &#x27;Mishnah Kinnim 2:1&#x27;, &#x27;Mishnah Kinnim 2:3&#x27;, &#x27;Mishnah Kinnim 2:5&#x27;, &#x27;Mishnah Kinnim 3:1&#x27;, &#x27;Mishnah Kinnim 3:2&#x27;, &#x27;Mishnah Kinnim 3:4&#x27;, &#x27;Mishnah Kinnim 3:5&#x27;, &#x27;Mishnah Kinnim 3:6&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 5 13&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 5 14&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 5 16&#x27;]
+    assert all(&#x27;kinnim_on_the_one_and_one&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_pairs_engine&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[8][&quot;cites&quot;] == [&#x27;Sifra, Metzora Parashat Zavim, Chapter 6 2&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 6 3&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 6 5&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 6 10&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 9 10&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Chapter 9 11&#x27;]
     assert all(&#x27;the_forty_seah&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;kol_besaro&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)

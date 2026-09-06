@@ -94,6 +94,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(shvuayim, the_vocalization_seat)</span><br><span class="gloss">= WITNESS-READ(shvuayim, the-vocalization-seat)</span><br>THE VOCALIZATION SEAT [claim LV12-01]. R. Yehuda b. Roetz&#x27;s students: could the word be read SEVENTY instead of TWO WEEKS? Answered twice — the internal derivation (her purity days doubled for the female, so her impurity days doubled) AND the meta-rule &#x27;the READING has a mother&#x27; (the transmitted vocalization rules); he ran after the departing students to give the second answer. And the oldest witness performs the reading: Onkelos renders &#x27;FOURTEEN days, as her separation.&#x27; The ink- layer question argued at this verse&#x27;s own word.
 </td><td>—</td><td class='cite'>Sifra, Tazria Parashat Yoledet, Chapter 2 2, Onkelos Lev 12:5</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_clocks_summed, forty_and_eighty)</span><br><span class="gloss">= WITNESS-READ(the-clocks-summed, forty-and-eighty)</span><br>THE CLOCKS SUMMED — FORTY AND EIGHTY ARE THE INK&#x27;S ARITHMETIC [claim LV12-07]. Compiled cold against Mishnah Niddah, Zavim, and Kinnim read whole (161 of 161 cells), the chapter&#x27;s four written numbers — seven (12:2), two weeks (12:5, the reading that has a mother), thirty and three (12:4), sixty and six (12:5) — add to the two totals the answer sheet names without deriving: Mishnah Niddah 6:14&#x27;s &#x27;the fortieth day for the male and the eightieth for the female&#x27;. The machine sums 7 + 33 = 40 and 14 + 66 = 80 from the tokens, and the doubling the Sifra argues at the two-weeks seat (Chapter 2 2: the purity days doubled for the female as the impurity days are) is the same two ratios read off the sums. From the same numbers the union of the clocks is computed: &#x27;sits for a male and a female&#x27; (Niddah 3:3-6, the unknown miscarriage) is impure through day fourteen, pure blood only through day forty, and doubtful blood judged as the menstruant&#x27;s from there to day eighty — the stringencies of both clocks together, no source needed beyond the ink. The two gates of 12:4 (&#x27;no HOLY thing shall she touch, and to the SANCTUARY she shall not come&#x27; — one token each, the census correcting a first draft that read &#x27;sanctuary&#x27; as a second &#x27;holy&#x27;) carry Niddah 10:6-7 whole: barred from holies though her blood is pure, eating the tithe and not terumah (Chapter 1 8&#x27;s &#x27;any holy thing&#x27;). And the eighty returns as a component of the Sifra&#x27;s own hundred-day computation at Zavim Section 5 4 (two + seven + two + eighty + seven + two), summed here from the clocks&#x27; parts. Filed and auto-seated under the auto- seat rider (sitting L2 of THE COMPILE DEBT, 2026-09-05 — the Lev 12 + Lev 15 compile, cold_run_clocks.py 161 of 161).
+</td><td>—</td><td class='cite'>Mishnah Niddah 6:14, Mishnah Niddah 3:3, Mishnah Niddah 3:6, Mishnah Niddah 10:6, Mishnah Niddah 10:7, Sifra, Tazria Parashat Yoledet, Chapter 2 2, Sifra, Tazria Parashat Yoledet, Chapter 1 7, Sifra, Tazria Parashat Yoledet, Chapter 2 3, Sifra, Tazria Parashat Yoledet, Chapter 1 8, Sifra, Metzora Parashat Zavim, Section 5 4</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
 </div>
@@ -558,17 +560,21 @@ from machine import Machine
 m = Machine(&quot;lev_12_childbirth&quot;)
 
 # -------------------------- Lev.12.1 · TREE_CLAIM --------------------------
-# וידבר יהוה … אל משה לאמר
-# &quot;[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive
-# claim from Hebrew arms. Lev 12:1.&quot;
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 12:1.&quot;
 m.step(&quot;Lev.12.1&quot;)
 
 # -------------------------- Lev.12.2 · ETNACHTA_SPLIT ----------------------
-# דבר אל בני ישראל לאמר אשה כי תזריע וילדה זכר … וטמאה שבעת ימים כימי נדת
-# דותה תטמא
-# &quot;[EN-AID] From top split: LEFT «דבר אל בני ישראל לאמר אשה כי תזריע וילדה
-# זכר» / RIGHT «וטמאה שבעת ימים כימי נדת דותה תטמא». Derive claim from
-# Hebrew arms. Lev 12:2.&quot;
+# ‹דבר אל בני› (“speak to son”)
+# ‹ישראל לאמר אשה› (“Israel to-say woman”)
+# ‹כי תזריע וילדה› (“that yield-seed and-bear-young”)
+# ‹זכר … וטמאה שבעת› (“male … and-be-foul seven”)
+# ‹ימים כימי נדת› (“day like-day rejection”)
+# ‹דותה תטמא› (“be-sick-her/its be-foul”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 12:2.&quot;
 m.step(&quot;Lev.12.2&quot;)
 # witness-tier presupposed read: last_child_consecutive on shivat_yamim —
 # read, not installed
@@ -576,9 +582,10 @@ m.witness_read(&quot;shivat_yamim&quot;, &quot;last_child_consecutive&quot;,
                 cites=[&quot;Sifra, Tazria Parashat Yoledet, Section 1 4&quot;, &quot;Sifra, Tazria Parashat Yoledet, Section 1 9&quot;, &quot;Sifra, Tazria Parashat Yoledet, Section 1 11&quot;, &quot;Sifra, Tazria Parashat Yoledet, Section 1 12&quot;, &quot;Sifra, Tazria Parashat Yoledet, Section 1 13&quot;, &quot;Sifra, Tazria Parashat Yoledet, Section 1 14&quot;])
 
 # -------------------------- Lev.12.3 · ETNACHTA_SPLIT ----------------------
-# וביום השמיני … ימול בשר ערלתו
-# &quot;[EN-AID] From top split: LEFT «וביום השמיני» / RIGHT «ימול בשר ערלתו».
-# Derive claim from Hebrew arms. Lev 12:3.&quot;
+# ‹וביום השמיני … ימול› (“and-in-day the-eight … circumcise”)
+# ‹בשר ערלתו› (“flesh foreskin-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 12:3.&quot;
 m.step(&quot;Lev.12.3&quot;)
 # witness-tier presupposed read: milah_overrides_shabbat on uvayom_hashmini
 # — read, not installed
@@ -586,40 +593,58 @@ m.witness_read(&quot;uvayom_hashmini&quot;, &quot;milah_overrides_shabbat&quot;,
                 cites=[&quot;Sifra, Tazria Parashat Yoledet, Chapter 1 1&quot;, &quot;Sifra, Tazria Parashat Yoledet, Chapter 1 3&quot;, &quot;Sifra, Tazria Parashat Yoledet, Chapter 1 5&quot;, &quot;Sifra, Tazria Parashat Yoledet, Chapter 1 6&quot;])
 
 # -------------------------- Lev.12.4 · ETNACHTA_SPLIT ----------------------
-# ושלשים יום ושלשת ימים תשב בדמי טהרה … בכל קדש לא תגע ואל המקדש לא תבא עד
-# מלאת ימי טהרה
-# &quot;[EN-AID] From top split: LEFT «ושלשים יום ושלשת ימים תשב בדמי טהרה» /
-# RIGHT «בכל קדש לא תגע ואל המקדש לא תבא עד מלאת ימי טהרה». Derive claim
-# from Hebrew arms. Lev 12:4.&quot;
+# ‹ושלשים יום ושלשת› (“and-thirty day and-three”)
+# ‹ימים תשב בדמי› (“day dwell/sit in-blood”)
+# ‹טהרה … בכל קדש› (“ceremonial-purification … in-all holiness”)
+# ‹לא תגע ואל› (“not touch and-to”)
+# ‹המקדש לא תבא› (“the-consecrated-thing not come/bring”)
+# ‹עד מלאת ימי› (“until fill day”)
+# ‹טהרה› (“ceremonial-purification”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 12:4.&quot;
 m.step(&quot;Lev.12.4&quot;)
 # witness-tier presupposed read: middah_case_law on dayo — read, not
 # installed
 m.witness_read(&quot;dayo&quot;, &quot;middah_case_law&quot;,
                 cites=[&quot;Sifra, Tazria Parashat Yoledet, Chapter 2 4&quot;, &quot;Sifra, Tazria Parashat Yoledet, Section 1 5&quot;])
 
-# -------------------------- Lev.12.5 · COND_ואם ----------------------------
-# ואם נקבה תלד וטמאה שבעים כנדתה … וששים יום וששת ימים תשב על דמי טהרה
-# &quot;[EN-AID] From top split: LEFT «ואם נקבה תלד וטמאה שבעים כנדתה» / RIGHT
-# «וששים יום וששת ימים תשב על דמי טהרה». Derive claim from Hebrew arms. Lev
-# 12:5.&quot;
+# -------------------------- Lev.12.5 · COND_ואם (“and-if”) -----------------
+# ‹ואם נקבה תלד› (“and-if female bear-young”)
+# ‹וטמאה שבעים כנדתה› (“and-be-foul sevened like-rejection-her/its”)
+# ‹… וששים יום וששת› (“and-sixty day and-six”)
+# ‹ימים תשב על› (“day dwell/sit over”)
+# ‹דמי טהרה› (“blood ceremonial-purification”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 12:5.&quot;
 m.step(&quot;Lev.12.5&quot;)
 # witness-tier presupposed read: the_vocalization_seat on shvuayim — read,
 # not installed
 m.witness_read(&quot;shvuayim&quot;, &quot;the_vocalization_seat&quot;,
                 cites=[&quot;Sifra, Tazria Parashat Yoledet, Chapter 2 2&quot;, &quot;Onkelos Lev 12:5&quot;])
+# witness-tier presupposed read: forty_and_eighty on the_clocks_summed —
+# read, not installed
+m.witness_read(&quot;the_clocks_summed&quot;, &quot;forty_and_eighty&quot;,
+                cites=[&quot;Mishnah Niddah 6:14&quot;, &quot;Mishnah Niddah 3:3&quot;, &quot;Mishnah Niddah 3:6&quot;, &quot;Mishnah Niddah 10:6&quot;, &quot;Mishnah Niddah 10:7&quot;, &quot;Sifra, Tazria Parashat Yoledet, Chapter 2 2&quot;, &quot;Sifra, Tazria Parashat Yoledet, Chapter 1 7&quot;, &quot;Sifra, Tazria Parashat Yoledet, Chapter 2 3&quot;, &quot;Sifra, Tazria Parashat Yoledet, Chapter 1 8&quot;, &quot;Sifra, Metzora Parashat Zavim, Section 5 4&quot;])
 
 # -------------------------- Lev.12.6 · ETNACHTA_SPLIT ----------------------
-# ובמלאת ימי טהרה לבן או לבת תביא כבש בן שנתו לעלה ובן יונה או … אל פתח אהל
-# מועד אל הכהן
-# &quot;[EN-AID] From top split: LEFT «ובמלאת ימי טהרה לבן או לבת תביא כבש בן
-# שנתו לעלה ובן יונה או תר לחטאת» / RIGHT «אל פתח אהל מועד אל הכהן». Derive
-# claim from Hebrew arms. Lev 12:6.&quot;
+# ‹ובמלאת ימי טהרה› (“and-in-fill day ceremonial-purification-her/its”)
+# ‹לבן או לבת› (“to-son or to-daughter”)
+# ‹תביא כבש בן› (“come/bring ram son”)
+# ‹שנתו לעלה ובן› (“years-him/its to-burnt-offering and-son”)
+# ‹יונה או … אל› (“dove or … to”)
+# ‹פתח אהל מועד› (“opening tent seasons”)
+# ‹אל הכהן› (“to the-priest”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 12:6.&quot;
 m.step(&quot;Lev.12.6&quot;)
 
 # -------------------------- Lev.12.7 · ETNACHTA_SPLIT ----------------------
-# והקריבו לפני יהוה וכפר עליה וטהרה ממקר דמיה … זאת תורת הילדת לזכר או לנקבה
-# &quot;[EN-AID] From top split: LEFT «והקריבו לפני יהוה וכפר עליה וטהרה ממקר
-# דמיה» / RIGHT «זאת תורת הילדת לזכר או לנקבה». Derive claim from Hebrew
+# ‹והקריבו לפני יהוה› (“and-bring-near-him/its to-face YHWH”)
+# ‹וכפר עליה וטהרה› (“and-atone over-her/its and-be-pure”)
+# ‹ממקר דמיה … זאת› (“from-something-dug blood-her/its … this”)
+# ‹תורת הילדת לזכר› (“precept the-bear-young to-male”)
+# ‹או לנקבה› (“or to-female”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms. Lev 12:7.&quot;
 m.step(&quot;Lev.12.7&quot;)
 # witness-tier presupposed read: five_bloods_and_the_market on mekor_dameha
@@ -627,12 +652,16 @@ m.step(&quot;Lev.12.7&quot;)
 m.witness_read(&quot;mekor_dameha&quot;, &quot;five_bloods_and_the_market&quot;,
                 cites=[&quot;Sifra, Tazria Parashat Yoledet, Chapter 3 6&quot;])
 
-# -------------------------- Lev.12.8 · COND_ואם ----------------------------
-# ואם לא תמצא ידה די שה ולקחה שתי תרים או שני בני יונה אחד לעל … וכפר עליה
-# הכהן וטהרה
-# &quot;[EN-AID] From top split: LEFT «ואם לא תמצא ידה די שה ולקחה שתי תרים או
-# שני בני יונה אחד לעלה ואחד לחטאת» / RIGHT «וכפר עליה הכהן וטהרה». Derive
-# claim from Hebrew arms. Lev 12:8.&quot;
+# -------------------------- Lev.12.8 · COND_ואם (“and-if”) -----------------
+# ‹ואם לא תמצא› (“and-if not find”)
+# ‹ידה די שה› (“hand-her/its enough member-of-a-flock”)
+# ‹ולקחה שתי תרים› (“and-take two ring-dove”)
+# ‹או שני בני› (“or two son”)
+# ‹יונה אחד לעל› (“dove one ?”)
+# ‹… וכפר עליה הכהן› (“and-atone over-her/its the-priest”)
+# ‹וטהרה› (“and-be-pure”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Lev 12:8.&quot;
 m.step(&quot;Lev.12.8&quot;)
 # witness-tier presupposed read: order_swap_and_dignity on seder_korban —
 # read, not installed
@@ -655,7 +684,7 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;shivat_yamim&#x27;, &#x27;last_child_consecutive&#x27;), (&#x27;uvayom_hashmini&#x27;, &#x27;milah_overrides_shabbat&#x27;), (&#x27;dayo&#x27;, &#x27;middah_case_law&#x27;), (&#x27;shvuayim&#x27;, &#x27;the_vocalization_seat&#x27;), (&#x27;mekor_dameha&#x27;, &#x27;five_bloods_and_the_market&#x27;), (&#x27;seder_korban&#x27;, &#x27;order_swap_and_dignity&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;shivat_yamim&#x27;, &#x27;last_child_consecutive&#x27;), (&#x27;uvayom_hashmini&#x27;, &#x27;milah_overrides_shabbat&#x27;), (&#x27;dayo&#x27;, &#x27;middah_case_law&#x27;), (&#x27;shvuayim&#x27;, &#x27;the_vocalization_seat&#x27;), (&#x27;the_clocks_summed&#x27;, &#x27;forty_and_eighty&#x27;), (&#x27;mekor_dameha&#x27;, &#x27;five_bloods_and_the_market&#x27;), (&#x27;seder_korban&#x27;, &#x27;order_swap_and_dignity&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Sifra, Tazria Parashat Yoledet, Section 1 4&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Section 1 9&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Section 1 11&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Section 1 12&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Section 1 13&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Section 1 14&#x27;]
     assert all(&#x27;last_child_consecutive&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;shivat_yamim&#x27; not in m.WORLD[&quot;witnessed&quot;]
@@ -668,10 +697,13 @@ if __name__ == &quot;__main__&quot;:
     assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Sifra, Tazria Parashat Yoledet, Chapter 2 2&#x27;, &#x27;Onkelos Lev 12:5&#x27;]
     assert all(&#x27;the_vocalization_seat&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;shvuayim&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Sifra, Tazria Parashat Yoledet, Chapter 3 6&#x27;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Mishnah Niddah 6:14&#x27;, &#x27;Mishnah Niddah 3:3&#x27;, &#x27;Mishnah Niddah 3:6&#x27;, &#x27;Mishnah Niddah 10:6&#x27;, &#x27;Mishnah Niddah 10:7&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Chapter 2 2&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Chapter 1 7&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Chapter 2 3&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Chapter 1 8&#x27;, &#x27;Sifra, Metzora Parashat Zavim, Section 5 4&#x27;]
+    assert all(&#x27;forty_and_eighty&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_clocks_summed&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Sifra, Tazria Parashat Yoledet, Chapter 3 6&#x27;]
     assert all(&#x27;five_bloods_and_the_market&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;mekor_dameha&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Sifra, Tazria Parashat Yoledet, Chapter 4 1&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Chapter 4 2&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Chapter 4 3&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Chapter 3 5&#x27;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Sifra, Tazria Parashat Yoledet, Chapter 4 1&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Chapter 4 2&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Chapter 4 3&#x27;, &#x27;Sifra, Tazria Parashat Yoledet, Chapter 3 5&#x27;]
     assert all(&#x27;order_swap_and_dignity&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;seder_korban&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)

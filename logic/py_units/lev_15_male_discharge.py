@@ -164,6 +164,10 @@ m.step("Lev.15.13")
 # read, not installed
 m.witness_read("vesafar_lo", "purification_jurisdiction",
                 cites=["Sifra, Metzora Parashat Zavim, Chapter 5 1", "Sifra, Metzora Parashat Zavim, Chapter 5 4", "Sifra, Metzora Parashat Zavim, Chapter 5 5", "Sifra, Metzora Parashat Zavim, Chapter 5 6", "Sifra, Metzora Parashat Zavim, Chapter 5 7", "Sifra, Metzora Parashat Zavim, Chapter 5 8", "Sifra, Metzora Parashat Zavim, Chapter 5 10", "Sifra, Metzora Parashat Zavim, Chapter 5 13", "Sifra, Metzora Parashat Zavim, Chapter 5 14", "Sifra, Metzora Parashat Zavim, Chapter 5 16"])
+# witness-tier presupposed read: kinnim_on_the_one_and_one on
+# the_pairs_engine — read, not installed
+m.witness_read("the_pairs_engine", "kinnim_on_the_one_and_one",
+                cites=["Mishnah Kinnim 1:1", "Mishnah Kinnim 1:2", "Mishnah Kinnim 1:3", "Mishnah Kinnim 2:1", "Mishnah Kinnim 2:3", "Mishnah Kinnim 2:5", "Mishnah Kinnim 3:1", "Mishnah Kinnim 3:2", "Mishnah Kinnim 3:4", "Mishnah Kinnim 3:5", "Mishnah Kinnim 3:6", "Sifra, Metzora Parashat Zavim, Chapter 5 13", "Sifra, Metzora Parashat Zavim, Chapter 5 14", "Sifra, Metzora Parashat Zavim, Chapter 5 16"])
 
 # -------------------------- Lev.15.14 · ETNACHTA_SPLIT ---------------------
 # ‹וביום השמיני יקח› (“and-in-day the-eight take”)
@@ -236,7 +240,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('mibsaro', 'the_seven_ways'), ('rar_hechtim', 'clocks_and_the_nine_liquids'), ('mishkav_moshav', 'the_stand_up_test'), ('hanogea_bemishkavo', 'propagation_degrees'), ('merkav', 'the_inverted_saddle'), ('veyadav_lo_shataf', 'the_hand_washing_peg'), ('vesafar_lo', 'purification_jurisdiction'), ('kol_besaro', 'the_forty_seah')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('mibsaro', 'the_seven_ways'), ('rar_hechtim', 'clocks_and_the_nine_liquids'), ('mishkav_moshav', 'the_stand_up_test'), ('hanogea_bemishkavo', 'propagation_degrees'), ('merkav', 'the_inverted_saddle'), ('veyadav_lo_shataf', 'the_hand_washing_peg'), ('vesafar_lo', 'purification_jurisdiction'), ('the_pairs_engine', 'kinnim_on_the_one_and_one'), ('kol_besaro', 'the_forty_seah')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Metzora Parashat Zavim, Section 1 1', 'Sifra, Metzora Parashat Zavim, Section 1 4', 'Sifra, Metzora Parashat Zavim, Section 1 6', 'Sifra, Metzora Parashat Zavim, Section 1 7']
     assert all('the_seven_ways' not in f for f in m.WORLD["facts"])
     assert 'mibsaro' not in m.WORLD["witnessed"]
@@ -258,7 +262,10 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[6]["cites"] == ['Sifra, Metzora Parashat Zavim, Chapter 5 1', 'Sifra, Metzora Parashat Zavim, Chapter 5 4', 'Sifra, Metzora Parashat Zavim, Chapter 5 5', 'Sifra, Metzora Parashat Zavim, Chapter 5 6', 'Sifra, Metzora Parashat Zavim, Chapter 5 7', 'Sifra, Metzora Parashat Zavim, Chapter 5 8', 'Sifra, Metzora Parashat Zavim, Chapter 5 10', 'Sifra, Metzora Parashat Zavim, Chapter 5 13', 'Sifra, Metzora Parashat Zavim, Chapter 5 14', 'Sifra, Metzora Parashat Zavim, Chapter 5 16']
     assert all('purification_jurisdiction' not in f for f in m.WORLD["facts"])
     assert 'vesafar_lo' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Sifra, Metzora Parashat Zavim, Chapter 6 2', 'Sifra, Metzora Parashat Zavim, Chapter 6 3', 'Sifra, Metzora Parashat Zavim, Chapter 6 5', 'Sifra, Metzora Parashat Zavim, Chapter 6 10', 'Sifra, Metzora Parashat Zavim, Chapter 9 10', 'Sifra, Metzora Parashat Zavim, Chapter 9 11']
+    assert m.WITNESS_READS[7]["cites"] == ['Mishnah Kinnim 1:1', 'Mishnah Kinnim 1:2', 'Mishnah Kinnim 1:3', 'Mishnah Kinnim 2:1', 'Mishnah Kinnim 2:3', 'Mishnah Kinnim 2:5', 'Mishnah Kinnim 3:1', 'Mishnah Kinnim 3:2', 'Mishnah Kinnim 3:4', 'Mishnah Kinnim 3:5', 'Mishnah Kinnim 3:6', 'Sifra, Metzora Parashat Zavim, Chapter 5 13', 'Sifra, Metzora Parashat Zavim, Chapter 5 14', 'Sifra, Metzora Parashat Zavim, Chapter 5 16']
+    assert all('kinnim_on_the_one_and_one' not in f for f in m.WORLD["facts"])
+    assert 'the_pairs_engine' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifra, Metzora Parashat Zavim, Chapter 6 2', 'Sifra, Metzora Parashat Zavim, Chapter 6 3', 'Sifra, Metzora Parashat Zavim, Chapter 6 5', 'Sifra, Metzora Parashat Zavim, Chapter 6 10', 'Sifra, Metzora Parashat Zavim, Chapter 9 10', 'Sifra, Metzora Parashat Zavim, Chapter 9 11']
     assert all('the_forty_seah' not in f for f in m.WORLD["facts"])
     assert 'kol_besaro' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

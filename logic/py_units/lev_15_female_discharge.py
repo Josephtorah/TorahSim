@@ -103,6 +103,10 @@ m.step("Lev.15.25")
 # read, not installed
 m.witness_read("yamim_rabim", "the_eleven_day_window",
                 cites=["Sifra, Metzora Parashat Zavim, Section 5 1", "Sifra, Metzora Parashat Zavim, Section 5 2", "Sifra, Metzora Parashat Zavim, Section 5 3", "Sifra, Metzora Parashat Zavim, Section 5 4", "Sifra, Metzora Parashat Zavim, Section 5 5", "Sifra, Metzora Parashat Zavim, Section 5 6", "Sifra, Metzora Parashat Zavim, Section 5 7", "Sifra, Metzora Parashat Zavim, Section 5 9", "Sifra, Metzora Parashat Zavim, Chapter 8 1", "Sifra, Metzora Parashat Zavim, Chapter 8 2", "Sifra, Metzora Parashat Zavim, Chapter 8 3"])
+# witness-tier presupposed read: seven_plus_three on
+# the_ten_day_old_zavah_computed — read, not installed
+m.witness_read("the_ten_day_old_zavah_computed", "seven_plus_three",
+                cites=["Mishnah Niddah 5:3", "Mishnah Niddah 4:7", "Mishnah Niddah 10:8", "Mishnah Niddah 2:2", "Mishnah Niddah 6:13", "Mishnah Niddah 8:3", "Sifra, Metzora Parashat Zavim, Section 4 1", "Sifra, Metzora Parashat Zavim, Section 5 3", "Sifra, Metzora Parashat Zavim, Section 5 4", "Sifra, Metzora Parashat Zavim, Section 5 9", "Sifra, Metzora Parashat Zavim, Chapter 8 1", "Sifra, Metzora Parashat Zavim, Chapter 8 3", "Sifra, Metzora Parashat Zavim, Chapter 5 8", "Sifra, Metzora Parashat Zavim, Chapter 5 9"])
 
 # -------------------------- Lev.15.26 · ETNACHTA_SPLIT ---------------------
 # ‹כל המשכב אשר› (“all the-bed which”)
@@ -209,7 +213,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('dam_yihye_zovah', 'the_source_and_the_table'), ('al_hamishkav_hu', 'the_majority_grid'), ('tehi_nidatah_alav', 'the_demotion_operator'), ('yamim_rabim', 'the_eleven_day_window'), ('shomeret_yom', 'the_watcher'), ('vehizartem', 'the_presence_clause')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('dam_yihye_zovah', 'the_source_and_the_table'), ('al_hamishkav_hu', 'the_majority_grid'), ('tehi_nidatah_alav', 'the_demotion_operator'), ('yamim_rabim', 'the_eleven_day_window'), ('the_ten_day_old_zavah_computed', 'seven_plus_three'), ('shomeret_yom', 'the_watcher'), ('vehizartem', 'the_presence_clause')]
     assert m.WITNESS_READS[0]["cites"] == ['Sifra, Metzora Parashat Zavim, Section 4 1', 'Sifra, Metzora Parashat Zavim, Section 4 2', 'Sifra, Metzora Parashat Zavim, Section 4 3', 'Sifra, Metzora Parashat Zavim, Section 4 4', 'Sifra, Metzora Parashat Zavim, Section 4 8', 'Onkelos Lev 15:19']
     assert all('the_source_and_the_table' not in f for f in m.WORLD["facts"])
     assert 'dam_yihye_zovah' not in m.WORLD["witnessed"]
@@ -222,10 +226,13 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[3]["cites"] == ['Sifra, Metzora Parashat Zavim, Section 5 1', 'Sifra, Metzora Parashat Zavim, Section 5 2', 'Sifra, Metzora Parashat Zavim, Section 5 3', 'Sifra, Metzora Parashat Zavim, Section 5 4', 'Sifra, Metzora Parashat Zavim, Section 5 5', 'Sifra, Metzora Parashat Zavim, Section 5 6', 'Sifra, Metzora Parashat Zavim, Section 5 7', 'Sifra, Metzora Parashat Zavim, Section 5 9', 'Sifra, Metzora Parashat Zavim, Chapter 8 1', 'Sifra, Metzora Parashat Zavim, Chapter 8 2', 'Sifra, Metzora Parashat Zavim, Chapter 8 3']
     assert all('the_eleven_day_window' not in f for f in m.WORLD["facts"])
     assert 'yamim_rabim' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Sifra, Metzora Parashat Zavim, Chapter 8 5', 'Sifra, Metzora Parashat Zavim, Chapter 8 6', 'Sifra, Metzora Parashat Zavim, Chapter 8 7', 'Sifra, Metzora Parashat Zavim, Chapter 8 8', 'Sifra, Metzora Parashat Zavim, Chapter 8 9', 'Sifra, Metzora Parashat Zavim, Chapter 8 10', 'Sifra, Metzora Parashat Zavim, Chapter 9 1', 'Sifra, Metzora Parashat Zavim, Chapter 9 3', 'Sifra, Metzora Parashat Zavim, Chapter 9 5']
+    assert m.WITNESS_READS[4]["cites"] == ['Mishnah Niddah 5:3', 'Mishnah Niddah 4:7', 'Mishnah Niddah 10:8', 'Mishnah Niddah 2:2', 'Mishnah Niddah 6:13', 'Mishnah Niddah 8:3', 'Sifra, Metzora Parashat Zavim, Section 4 1', 'Sifra, Metzora Parashat Zavim, Section 5 3', 'Sifra, Metzora Parashat Zavim, Section 5 4', 'Sifra, Metzora Parashat Zavim, Section 5 9', 'Sifra, Metzora Parashat Zavim, Chapter 8 1', 'Sifra, Metzora Parashat Zavim, Chapter 8 3', 'Sifra, Metzora Parashat Zavim, Chapter 5 8', 'Sifra, Metzora Parashat Zavim, Chapter 5 9']
+    assert all('seven_plus_three' not in f for f in m.WORLD["facts"])
+    assert 'the_ten_day_old_zavah_computed' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Metzora Parashat Zavim, Chapter 8 5', 'Sifra, Metzora Parashat Zavim, Chapter 8 6', 'Sifra, Metzora Parashat Zavim, Chapter 8 7', 'Sifra, Metzora Parashat Zavim, Chapter 8 8', 'Sifra, Metzora Parashat Zavim, Chapter 8 9', 'Sifra, Metzora Parashat Zavim, Chapter 8 10', 'Sifra, Metzora Parashat Zavim, Chapter 9 1', 'Sifra, Metzora Parashat Zavim, Chapter 9 3', 'Sifra, Metzora Parashat Zavim, Chapter 9 5']
     assert all('the_watcher' not in f for f in m.WORLD["facts"])
     assert 'shomeret_yom' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Sifra, Metzora Parashat Zavim, Chapter 9 2', 'Sifra, Metzora Parashat Zavim, Chapter 9 6', 'Sifra, Metzora Parashat Zavim, Chapter 9 7', 'Sifra, Metzora Parashat Zavim, Chapter 9 8', 'Sifra, Metzora Parashat Zavim, Chapter 9 9', 'Sifra, Metzora Parashat Zavim, Chapter 9 12', 'Onkelos Lev 15:31']
+    assert m.WITNESS_READS[6]["cites"] == ['Sifra, Metzora Parashat Zavim, Chapter 9 2', 'Sifra, Metzora Parashat Zavim, Chapter 9 6', 'Sifra, Metzora Parashat Zavim, Chapter 9 7', 'Sifra, Metzora Parashat Zavim, Chapter 9 8', 'Sifra, Metzora Parashat Zavim, Chapter 9 9', 'Sifra, Metzora Parashat Zavim, Chapter 9 12', 'Onkelos Lev 15:31']
     assert all('the_presence_clause' not in f for f in m.WORLD["facts"])
     assert 'vehizartem' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
