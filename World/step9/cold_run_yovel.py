@@ -668,6 +668,178 @@ SUPPORT = {s: support_duty(s) for s in ('faltering', 'supported_four_or_five_tim
 SALE = {m: sale_manner(m) for m in ('auction_stone', 'private')}
 RIGOR = {w: rigor_visibility(w) for w in ('in_your_sight', 'inside_his_house')}
 
+import os as _os5, sys as _sys5, io as _io5, contextlib as _ctx5
+_sys5.path.insert(0, _os5.path.dirname(_os5.path.abspath(__file__)))
+# ---- THE WRAP (W5 HOLINESS, SANCTIONS, THE LAND, 2026-09-07): the daemon over the compiled jubilee engine ----
+import world_engine as WE
+def law_yovel(event, world):
+    """Lev 25 + 27:2-8, 16-25 (cold_run_yovel.py — cycle, jubilee, field_sale, house_sale, overreaching, interest, hebrew_slave, valuation, field_valuation, sabbatical, interest_scope, support_duty, sale_manner, rigor_visibility):
+    the seventh and the fiftieth as TIMERS in years; the sold field, the walled house, the slave, the consecrated field each on a timer to its own year; the jubilee proclaimed on the tape at last."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    yr = event.get('year', world.clock.year)
+    if k == 'land_sown':
+        land = event.get('land', 'the-land'); o = event.get('owner'); c = cycle(yr)
+        if 'land_release' not in c['fx']:
+            return []                                                # a work year: "six years you shall sow" (25:3) — the silence
+        sb = sabbatical()
+        out = [E_('land_release', land, cp=o, value=c['v'], law='F1 [INK 25:4 "in the seventh year a sabbath of rest shall be to the land" — year %d of the cycle: %s; the eaters %d (25:6-7)]' % (yr, c['v'], sb['eaters']['v'])),
+               E_('labor_barred', o, value=sb['torah_labors']['v'], law='F1 [INK 25:4-5 the four labor verbs — sow, prune, reap, gather]')]
+        if event.get('plowed') and event.get('warned'):
+            pl = sb['plowing_lashes']
+            out.append(E_('lashes', o, value=pl['v'], law='F1 [Moed Katan 3a:12 — plowing in the seventh: %s]' % pl['v']))
+        if 'jubilee_release' in c['fx']:
+            out += [E_('jubilee_release', land, value=c['v'], law='F1 [INK 25:11 "a jubilee it is, the fiftieth year, you shall not sow" — the fiftieth rests too]'),
+                    E_('goes_free', 'the-slaves-of-the-land', value=c['v'], law='F1 [INK 25:10 "you shall proclaim liberty" — the year\'s class carries the release]'),
+                    E_('returns_to_holding', 'the-holdings-of-the-land', value=c['v'], law='F1 [INK 25:13 "in this jubilee year you shall return each to his holding"]')]
+        return out
+    if k == 'jubilee_proclaimed':
+        land = event.get('land', 'the-land'); jb = jubilee()
+        world.entity(land).status['jubilee_year'] = yr
+        return [E_('jubilee_release', land, cp=event.get('proclaimer'), value=jb['release_day']['v'], law='F1 [INK 25:9-10 "on the Day of Atonement you shall sound the horn... proclaim liberty in the land to all its inhabitants" — %s; sanctified from %s; the precondition %s; the pierced slave %s]' % (jb['release_day']['v'], jb['sanctified_from']['v'], jb['precondition']['v'], jb['pierced_slave']['v']))]
+    if k == 'field_sold':
+        s_ = event['seller']; b = event['buyer']; f = event['field']; ytj = event.get('years_to_jubilee', JUBILEE - yr); el = event.get('elapsed', 0)
+        fs = field_sale(event.get('price', 100), ytj, el); out = []
+        if event.get('overcharged'):
+            ov_ = overreaching()
+            out.append(E_('restores', b, cp=s_, value=ov_['measure']['v'], law='F1 [INK 25:14 "do not wrong one another" — the sixth restored (Mishnah Bava Metzia 4:3, the answer sheet\'s parameter); on land %s]' % ov_['on_land']['v']))
+        out.append(E_('redemption_right', f, cp=s_, value=fs['price_rule']['v'], law='F1 [INK 25:15-16 by the number of harvest years; 25:24 "a redemption you shall give to the land"; the floor %s, the blight year %s]' % (fs['floor']['v'], fs['blight_year']['v'])))
+        if event.get('redeemed'):
+            out.append(E_('pays', s_, cp=b, amount=fs['redemption_price']['v'], value=fs['improved_or_declined']['v'], law='F1 [INK 25:27 "return the SURPLUS" — price x remaining / total = %d]' % fs['redemption_price']['v']))
+            out.append(E_('returns_to_holding', f, cp=s_, value='redeemed', law='F1 [INK 25:27 "and return to his holding"]'))
+        else:
+            out.append(E_('returns_to_holding', f, cp=s_, due=yr + ytj, value=fs['unredeemed']['v'], law='F1 [INK 25:28 "it shall go out in the jubilee and he shall return to his holding" — the TIMER to the jubilee year %d]' % (yr + ytj)))
+        return out
+    if k == 'house_sold':
+        s_ = event['seller']; b = event['buyer']; h = event['house']; kind = event.get('house_kind', 'walled_city'); c = house_sale(kind); out = []
+        if kind == 'walled_city':
+            out.append(E_('redemption_right', h, cp=s_, amount=1, value=c['v'], law='F1 [INK 25:29 "its redemption shall be until the end of the year of its sale" — %s (Hillel\'s deposit: %s)]' % (c['v'], HILLEL['v'])))
+            if event.get('redeemed_within_year'):
+                return out
+            out.append(E_('sold_in_perpetuity', h, cp=b, due=yr + 1, value=c['v'], law='F1 [INK 25:30 "if it is not redeemed until a full year is complete... in perpetuity... it shall not go out in the jubilee" — the one-year TIMER]'))
+            return out
+        if kind == 'levite_pasture':
+            return []                                                # "it shall not be sold" (25:34) — the sale writes nothing: the silence
+        out.append(E_('redemption_right', h, cp=s_, value=c['v'], law='F1 [INK 25:31-32 — %s]' % c['why'][:80]))
+        out.append(E_('returns_to_holding', h, cp=s_, due=JUBILEE, value=c['v'], law='F1 [INK 25:31 / 25:33 "in the jubilee it shall go out" — the TIMER to the fiftieth]'))
+        return out
+    if k == 'brother_grew_poor':
+        c = support_duty(event.get('state', 'faltering'))
+        if 'supports_kinsman' in c['fx']:
+            return [E_('supports_kinsman', event['kinsman'], cp=event['brother'], value=c['v'], law='F2 [INK 25:35 "you shall strengthen him" — %s]' % c['v'])]
+        return []                                                    # your life first (Sifra Behar Section 5 1) — the silence
+    if k == 'silver_lent':
+        i = interest(); sc = interest_scope(event.get('borrower_class', 'brother'))
+        if 'interest_barred' in sc['fx']:
+            return [E_('interest_barred', event['lender'], cp=event['borrower'], value=i['both_nouns']['v'], law='F2 [INK 25:36-37 "bite or increase" — %s; %s]' % (i['definitions']['v'], sc['v']))]
+        return []                                                    # the foreigner (Deut 23:21 — the import edge) — the silence
+    if k == 'brother_sold_as_slave':
+        sl = event['slave']; m = event['master']; ytj = event.get('years_to_jubilee', JUBILEE - yr); el = event.get('elapsed', 0)
+        hs = hebrew_slave(event.get('sold_to', 'israelite'), event.get('price', 100), ytj, el); out = []
+        if event.get('manner'):
+            sm = sale_manner(event['manner'])
+            if 'barred_from_it' in sm['fx']:
+                out.append(E_('barred_from_it', m, cp=sl, value=sm['v'], law='F3 [INK 25:42 "they shall not be sold as a slave is sold" — %s]' % sm['v']))
+        if event.get('rigor_where'):
+            rv = rigor_visibility(event['rigor_where'])
+            if 'barred_from_it' in rv['fx']:
+                out.append(E_('barred_from_it', 'the-bystander', cp=m, value=rv['v'], law='F3 [INK 25:53 "he shall not rule over him with rigor IN YOUR SIGHT" — %s]' % rv['v']))
+            if 'exempt' in rv['fx']:
+                out.append(E_('exempt', 'the-bystander', value=rv['v'], law='F3 [Sifra Behar Chapter 8 8 — %s]' % rv['v']))
+        if el:
+            out.append(E_('pays', sl, cp=m, amount=hs['redemption_price']['v'], value=hs['lesser_figure']['v'], law='F3 [INK 25:50-52 "as a hireling\'s days" — price x remaining / total = %d]' % hs['redemption_price']['v']))
+            out.append(E_('goes_free', sl, cp=m, value='redeemed', law='F3 [INK 25:48-49 redeemed by his kin or his own hand]'))
+            out.append(E_('returns_to_holding', sl, value='to_his_family', law='F3 [INK 25:41 "and return to his family"]'))
+        else:
+            out.append(E_('jubilee_release', sl, cp=m, due=yr + ytj, value=hs['exit']['v'], law='F3 [INK 25:40-41 "until the jubilee year he shall serve with you, and he shall go out from you, he and his children with him" — the TIMER]'))
+            out.append(E_('goes_free', sl, cp=m, due=yr + ytj, value=hs['status']['v'], law='F3 [INK 25:54 "he shall go out in the jubilee year" — as a hireling, as a resident]'))
+            out.append(E_('returns_to_holding', sl, due=yr + ytj, value='to_his_family_and_his_fathers_holding', law='F3 [INK 25:41 "and return to his family and to the holding of his fathers"]'))
+        if 'redeemers' in hs:
+            out.append(E_('redemption_right', sl, cp='the-kin', value=hs['redeemers']['v'], law='F3 [INK 25:48-49 the kin ladder at once — %s]' % hs['redeemers']['v']))
+        if 'term_clock' in hs['six_year_exit']['fx']:
+            out.append(E_('term_clock', sl, cp=m, amount=6, value=hs['six_year_exit']['v'], law='F3 [IMPORT EDGE Exod 21:2 — the six-year term is the library daemon\'s (law_slave_term registered beside on this tape)]'))
+        return out
+    if k == 'person_valued':
+        c = valuation(event.get('sex', 'male'), event.get('age_years', 30), event.get('age_months', 0))
+        if 'gives_fixed_sum' in c['fx']:
+            return [E_('gives_fixed_sum', event['vower'], cp='the-treasury', amount=c['v'], value=event.get('valued', 'himself'), law='F4 [INK 27:3-7 the bracket table — %s]' % c['why'][:90])]
+        return []                                                    # under a month: no bracket (27:6) — the silence
+    if k == 'field_consecrated':
+        o = event['owner']; f = event['field']; ytj = event.get('years_to_jubilee', JUBILEE - yr); fv = field_valuation(ytj)
+        out = [E_('gives_fixed_sum', o, cp='the-treasury', amount=fv['owed']['v'], value=fv['per_year']['v'], law='F4 [INK 27:16-18 fifty per homer deducted by the years — %s x %d = %s]' % (fv['per_year']['v'], ytj, fv['owed']['v']))]
+        if event.get('redeemed'):
+            op = owner_price(event.get('bid', 20), 20)
+            out.append(E_('adds_fifth', o, cp='the-treasury', amount=(op if isinstance(op, int) else None), value=fv['redeem_fifth']['v'], law='F4 [INK 27:19 "he shall add a fifth of the money of the valuation" — the owner\'s precedence: bid %d -> %s (Mishnah Arakhin 8:2-3)]' % (event.get('bid', 20), op)))
+            return out
+        if event.get('field_kind') == 'purchased':
+            out.append(E_('returns_to_holding', f, cp='the-original-holder', due=yr + ytj, value='to_him_from_whom_he_bought_it', law='F4 [INK 27:24 "in the jubilee year the field shall return to him from whom he bought it" — the TIMER]'))
+        else:
+            out.append(E_('due_to_priest', f, cp='the-priests', due=yr + ytj, value=fv['unredeemed_sold']['v'], law='F4 [INK 27:21 "the field in its going out in the jubilee shall be holy to the LORD, as a devoted field; to the priest shall be its holding" — the TIMER]'))
+        return out
+    if k == 'consecrated_redeemed':
+        if event.get('thing') != 'field':
+            return []                                                # the consecration engine's seat (law_temurah) — the silence here
+        op = owner_price(event.get('bid', 20), event.get('own', 20))
+        return [E_('adds_fifth', event['redeemer'], cp='the-treasury', amount=(op if isinstance(op, int) else None), value=op, law='F4 [Mishnah Arakhin 8:2-3 — the owner\'s fifth arithmetic: bid %s -> %s]' % (event.get('bid', 20), op))]
+    return []
+
+def scene():
+    """THE SCENE — Rosh Hashanah 1:1, Sheviit, Kiddushin 1:2, Arakhin 4, 7-9, Bava Metzia 4-5 and the Sifra's rows replayed on the world engine (clock unit: YEARS, one jubilee period):
+    the library's law_slave_term registered beside; jubilee_proclaimed SUBMITTED in the fiftieth year — the seeding's unfired kind fired."""
+    with _ctx5.redirect_stdout(_io5.StringIO()):
+        w = WE.World(era='the jubilee engine: Lev 25 + 27 on the engine (clock unit: years, one period of fifty)')
+        w.laws = [law_yovel, WE.law_slave_term]
+        w.advance(3)
+        w.submit({'kind': 'land_sown', 'subject': 'the-land', 'land': 'the-land', 'owner': 'the-farmer', 'year': 3, 'case_source': 'Lev 25:3 — a work year: the silence'})
+        w.advance(7)
+        w.submit({'kind': 'land_sown', 'subject': 'the-land', 'land': 'the-land', 'owner': 'the-farmer', 'year': 7, 'case_source': 'Lev 25:4; Mishnah Rosh Hashanah 1:1 — the seventh: the land rests'})
+        w.submit({'kind': 'land_sown', 'subject': 'the-land', 'land': 'the-land', 'owner': 'the-plower', 'year': 7, 'plowed': True, 'warned': True, 'case_source': 'Moed Katan 3a:12 — plowing in the seventh: the recorded dispute on the lashes'})
+        w.advance(40)
+        w.submit({'kind': 'field_sold', 'subject': 'field-1', 'seller': 'the-seller', 'buyer': 'the-buyer', 'field': 'field-1', 'price': 100, 'years_to_jubilee': 10, 'year': 40, 'case_source': 'Lev 25:15-16, 25:28; Mishnah Arakhin 9:1 — sold ten years before the jubilee, unredeemed: returns at the fiftieth'})
+        w.submit({'kind': 'field_sold', 'subject': 'field-2', 'seller': 'the-overcharged', 'buyer': 'the-overcharger', 'field': 'field-2', 'price': 100, 'years_to_jubilee': 10, 'overcharged': True, 'year': 40, 'case_source': 'Lev 25:14; Mishnah Bava Metzia 4:3 — overreaching by a sixth: restored'})
+        w.submit({'kind': 'house_sold', 'subject': 'house-1', 'seller': 'the-house-seller', 'buyer': 'the-house-buyer', 'house': 'house-1', 'house_kind': 'walled_city', 'year': 40, 'case_source': 'Lev 25:29-30; Mishnah Arakhin 9:3-4 — the walled city: one year, then perpetuity'})
+        w.submit({'kind': 'house_sold', 'subject': 'house-2', 'seller': 'the-house-seller', 'buyer': 'the-house-buyer', 'house': 'house-2', 'house_kind': 'village', 'year': 40, 'case_source': 'Lev 25:31 — the village house as the field'})
+        w.submit({'kind': 'house_sold', 'subject': 'house-3', 'seller': 'the-levite', 'buyer': 'the-house-buyer', 'house': 'house-3', 'house_kind': 'levite_house', 'year': 40, 'case_source': 'Lev 25:32-33 — the Levite\'s perpetual redemption'})
+        w.submit({'kind': 'house_sold', 'subject': 'the-pasture', 'seller': 'the-levite', 'buyer': 'the-house-buyer', 'house': 'the-pasture', 'house_kind': 'levite_pasture', 'year': 40, 'case_source': 'Lev 25:34 — the pasture unsellable: the silence'})
+        w.submit({'kind': 'brother_grew_poor', 'subject': 'the-poor-brother', 'kinsman': 'the-kinsman', 'brother': 'the-poor-brother', 'state': 'faltering', 'year': 40, 'case_source': 'Lev 25:35; Sifra Behar Section 5 1 — uphold before he falls'})
+        w.submit({'kind': 'silver_lent', 'subject': 'the-lender', 'lender': 'the-lender', 'borrower': 'the-poor-brother', 'interest': True, 'borrower_class': 'brother', 'year': 40, 'case_source': 'Lev 25:36-37; Mishnah Bava Metzia 5:1 — the bite and the increase barred'})
+        w.submit({'kind': 'silver_lent', 'subject': 'the-lender-abroad', 'lender': 'the-lender-abroad', 'borrower': 'the-foreigner', 'interest': True, 'borrower_class': 'foreigner', 'year': 40, 'case_source': 'Deut 23:21 — to the foreigner: the silence at this seat'})
+        w.submit({'kind': 'brother_sold_as_slave', 'subject': 'the-brother-sold', 'slave': 'the-brother-sold', 'master': 'the-master', 'sold_to': 'israelite', 'price': 100, 'years_to_jubilee': 10, 'manner': 'auction_stone', 'rigor_where': 'in_your_sight', 'year': 40, 'case_source': 'Lev 25:39-43; Mishnah Kiddushin 1:2 — sold to an Israelite: the jubilee exit, the six-year term the library\'s'})
+        w.submit({'kind': 'brother_sold_as_slave', 'subject': 'the-sold-to-a-gentile', 'slave': 'the-sold-to-a-gentile', 'master': 'the-gentile-master', 'sold_to': 'gentile', 'price': 100, 'years_to_jubilee': 10, 'rigor_where': 'inside_his_house', 'year': 40, 'case_source': 'Lev 25:47-54; Sifra Behar Chapter 8 — the kin ladder, no six-year exit, the jubilee'})
+        w.advance(44)
+        w.submit({'kind': 'field_sold', 'subject': 'field-3', 'seller': 'the-redeeming-seller', 'buyer': 'the-buyer', 'field': 'field-3', 'price': 100, 'years_to_jubilee': 10, 'elapsed': 4, 'redeemed': True, 'year': 40, 'case_source': 'Lev 25:27; Mishnah Arakhin 9:1 — redeemed after four of ten: the surplus sixty'})
+        w.submit({'kind': 'brother_sold_as_slave', 'subject': 'the-redeemed-slave', 'slave': 'the-redeemed-slave', 'master': 'the-master', 'sold_to': 'israelite', 'price': 100, 'years_to_jubilee': 10, 'elapsed': 4, 'year': 40, 'case_source': 'Mishnah Kiddushin 1:2 — by deduction of money: 100 over 10, 4 served: 60'})
+        w.submit({'kind': 'person_valued', 'subject': 'the-vower-of-a-man', 'vower': 'the-vower-of-a-man', 'valued': 'himself', 'sex': 'male', 'age_years': 30, 'year': 44, 'case_source': 'Lev 27:3; Mishnah Arakhin 4:1 — a male of thirty: fifty'})
+        w.submit({'kind': 'person_valued', 'subject': 'the-vower-of-a-woman', 'vower': 'the-vower-of-a-woman', 'valued': 'his_wife', 'sex': 'female', 'age_years': 30, 'year': 44, 'case_source': 'Lev 27:4 — a female: thirty'})
+        w.submit({'kind': 'person_valued', 'subject': 'the-vower-of-a-boy', 'vower': 'the-vower-of-a-boy', 'valued': 'his_son', 'sex': 'male', 'age_years': 5, 'year': 44, 'case_source': 'Mishnah Arakhin 4:4; Sifra Bechukotai Section 3 9-11 — the boundary year counts below: five'})
+        w.submit({'kind': 'person_valued', 'subject': 'the-vower-of-an-infant', 'vower': 'the-vower-of-an-infant', 'valued': 'the_newborn', 'sex': 'male', 'age_years': 0, 'age_months': 0, 'year': 44, 'case_source': 'Lev 27:6 "from a month old" — under a month: the silence'})
+        w.submit({'kind': 'field_consecrated', 'subject': 'field-4', 'owner': 'the-sanctifier', 'field': 'field-4', 'years_to_jubilee': 6, 'field_kind': 'holding', 'year': 44, 'case_source': 'Lev 27:16-21; Mishnah Arakhin 7:1 — the holding consecrated six years before the jubilee, unredeemed: to the priest'})
+        w.submit({'kind': 'field_consecrated', 'subject': 'field-5', 'owner': 'the-redeeming-sanctifier', 'field': 'field-5', 'years_to_jubilee': 6, 'redeemed': True, 'bid': 21, 'year': 44, 'case_source': 'Mishnah Arakhin 8:2-3 — the owner redeems against a bid of twenty-one: twenty-six'})
+        w.submit({'kind': 'field_consecrated', 'subject': 'field-6', 'owner': 'the-buyer-sanctifier', 'field': 'field-6', 'years_to_jubilee': 6, 'field_kind': 'purchased', 'year': 44, 'case_source': 'Lev 27:22-24 — the purchased field returns to its holder at the jubilee'})
+        w.submit({'kind': 'consecrated_redeemed', 'subject': 'field-5', 'redeemer': 'the-redeeming-sanctifier', 'thing': 'field', 'bid': 26, 'own': 20, 'year': 44, 'case_source': 'Mishnah Arakhin 8:3 — a bid of twenty-six: thirty-one and a dinar'})
+        w.submit({'kind': 'consecrated_redeemed', 'subject': 'the-house', 'redeemer': 'the-house-redeemer', 'thing': 'house', 'year': 44, 'case_source': 'Lev 27:15 — the house: the consecration engine\'s seat (the silence here)'})
+        w.advance(46)
+        w.submit({'kind': 'acquire_hebrew_slave', 'subject': 'the-exodus-slave', 'slave': 'the-exodus-slave', 'master': 'the-master', 'case_source': 'Exod 21:2; Mishnah Kiddushin 1:2 — the library daemon: the six-year term clock (overtaken by the jubilee)'})
+        w.advance(50)
+        w.submit({'kind': 'jubilee_proclaimed', 'subject': 'the-land', 'proclaimer': 'the-court', 'land': 'the-land', 'year': 50, 'case_source': 'Lev 25:9-10; Mishnah Rosh Hashanah 1:1; Arakhin 7:1-4 — the fiftieth: liberty proclaimed in the land'})
+        w.submit({'kind': 'land_sown', 'subject': 'the-land', 'land': 'the-land', 'owner': 'the-farmer', 'year': 50, 'case_source': 'Lev 25:11 — the jubilee: you shall not sow'})
+        w.advance(51)
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    am = lambda eid, eff: [e['amount'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    return (yr('the-land', 'land_release'), n('the-farmer', 'labor_barred'), n('the-plower', 'lashes'), n('the-land', 'jubilee_release'), yr('the-slaves-of-the-land', 'goes_free'),
+            n('field-1', 'redemption_right'), yr('field-1', 'returns_to_holding'), n('the-overcharger', 'restores'), yr('field-3', 'returns_to_holding'), am('the-redeeming-seller', 'pays'),
+            n('house-1', 'redemption_right'), yr('house-1', 'sold_in_perpetuity'), yr('house-2', 'returns_to_holding'), yr('house-3', 'returns_to_holding'), n('the-pasture', 'redemption_right'),
+            n('the-kinsman', 'supports_kinsman'), n('the-lender', 'interest_barred'), n('the-lender-abroad', 'interest_barred'),
+            yr('the-brother-sold', 'jubilee_release'), yr('the-brother-sold', 'goes_free'), yr('the-brother-sold', 'returns_to_holding'), n('the-brother-sold', 'term_clock'), n('the-master', 'barred_from_it'), n('the-bystander', 'barred_from_it'), n('the-bystander', 'exempt'),
+            n('the-sold-to-a-gentile', 'redemption_right'), n('the-sold-to-a-gentile', 'term_clock'), yr('the-sold-to-a-gentile', 'goes_free'), am('the-redeemed-slave', 'pays'), yr('the-redeemed-slave', 'goes_free'),
+            am('the-vower-of-a-man', 'gives_fixed_sum'), am('the-vower-of-a-woman', 'gives_fixed_sum'), am('the-vower-of-a-boy', 'gives_fixed_sum'), n('the-vower-of-an-infant', 'gives_fixed_sum'),
+            am('the-sanctifier', 'gives_fixed_sum'), yr('field-4', 'due_to_priest'), am('the-redeeming-sanctifier', 'adds_fifth'), yr('field-6', 'returns_to_holding'), n('the-house-redeemer', 'adds_fifth'),
+            yr('the-exodus-slave', 'goes_free'), n('the-exodus-slave', 'term_clock'), n('the-land', 'jubilee_release'), tset, fired, w.clock.year), w
+SCENE, _W = scene()
+
+
 SHEET = [
     ('Rosh Hashanah 1:1', 'rosh_hashanah', 1, 1, 'וליובלות'),
     ('Kiddushin 1:2', 'kiddushin', 1, 2, 'וביובל'),
@@ -759,6 +931,7 @@ IS_F = interest_scope('foreigner')
 
 # (Mishnah row, cell, expected)
 TESTS = [
+ ('THE SCENE — Rosh Hashanah 1:1, Sheviit, Kiddushin 1:2, Arakhin 4 and 7-9, Bava Metzia 4-5 on the world engine (clock unit YEARS, one period of fifty; the library\'s law_slave_term beside; jubilee_proclaimed SUBMITTED; the daemon\'s watch coverage printed below)', cell(SCENE, I, 'the seventh and the fiftieth, the sold field and the walled house and the slave each on a timer to its year, the poor brother, the interest, the valuations, the consecrated field to the priest at the jubilee — every value a cell\'s', ['land_release', 'labor_barred', 'lashes', 'jubilee_release', 'goes_free', 'returns_to_holding', 'redemption_right', 'pays', 'restores', 'sold_in_perpetuity', 'supports_kinsman', 'interest_barred', 'term_clock', 'barred_from_it', 'exempt', 'gives_fixed_sum', 'due_to_priest', 'adds_fifth']), ([7, 7, 50], 2, 1, 2, [50], 1, [50], 1, [44], [60], 1, [41], [50], [50], 0, 1, 1, 0, [50], [50], [50], 1, 1, 1, 1, 1, 0, [50], [60], [44], [50], [30], [5], 0, [6.12], [50], [26, None], [50], 0, [50], 1, 2, 14, 13, 51)),
  ('Rosh Hashanah 1:1 — Tishrei is the new year for Jubilees: the fiftieth is a Jubilee',
   cycle(50), 'jubilee'),
  ('Rosh Hashanah 1:1 — and for sabbatical years: year seven rests', cycle(7),
@@ -912,6 +1085,7 @@ if __name__ == '__main__':
           'this span\'s own verbs: returns_to_holding (TRANSFER), '
           'sold_in_perpetuity, redemption_right, interest_barred [effects law '
           'satisfied]')
+    _W.print_coverage()
     if ok == n:
         print()
         print('THE JUBILEE ENGINE STANDS — the cycle\'s product read off the '

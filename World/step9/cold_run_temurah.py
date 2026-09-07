@@ -325,6 +325,112 @@ def firstborn_trick():
                 'not from the womb? the ban binds once it is born a firstborn; sanctified BEFORE birth, the '
                 'holiness of the vow lands first (Sifra Bechukotai Section 5 2; Temurah 5:1)', ['consecrated'])
 
+import os as _os5, sys as _sys5, io as _io5, contextlib as _ctx5
+_sys5.path.insert(0, _os5.path.dirname(_os5.path.abspath(__file__)))
+# ---- THE WRAP (W5 HOLINESS, SANCTIONS, THE LAND, 2026-09-07): the daemon over the compiled consecration machine ----
+import world_engine as WE
+def _fx_union(cells):
+    fx, why = set(), {}
+    for c in cells:
+        for f in c['fx']:
+            fx.add(f); why.setdefault(f, c)
+    return fx, why
+def law_temurah(event, world):
+    """Lev 27:9-15, 26-33 (cold_run_temurah.py — consecrate, substitute, redeem, fifth_census, devote, tithe, firstborn_trick): the holiness that takes, the fifth, the devoted, the tenth under the rod."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'thing_consecrated':
+        o = event['owner']; t = event['subject']
+        if event.get('before_birth'):
+            c = firstborn_trick()
+            return [E_('consecrated', t, cp=o, value=c['v'], law='F1 [INK 27:26 "which IS BORN firstborn" — %s (Sifra Bechukotai Section 5 2, Temurah 5:1)]' % c['v'])]
+        c = consecrate(event['thing'], event.get('owner_class', 'israelite'), event.get('to', 'unspecified'))
+        if 'consecrated' in c['fx']:
+            return [E_('consecrated', t, cp=o, value=c['v'], law='F1 [%s]' % c['why'][:110])]
+        return []                                                    # the firstborn cannot be sanctified to the altar; not his — the silence
+    if k == 'substitute_declared':
+        o = event['owner']; t = event['subject']; case = event.get('case', 'attempted')
+        if event.get('of') == 'tithe':
+            c = tithe('substituted')
+        elif case == 'formula':
+            c = substitute('formula', words=event.get('words'))
+        else:
+            c = substitute(case)
+        out = []
+        if 'substitution' in c['fx']:
+            out.append(E_('substitution', t, cp=o, value=c['v'], law='F2 [INK 27:10 "if he does substitute beast for beast, it and its substitute shall be holy" — %s]' % c['why'][:90]))
+        if 'consecrated' in c['fx']:
+            out.append(E_('consecrated', t, cp=o, value=c['v'], law='F2 [INK 27:10 / 27:33 "it and its substitute shall be holy" — %s]' % c['why'][:80]))
+        if 'lashes' in c['fx']:
+            out.append(E_('lashes', o, amount=40, value=c['v'], law='F2 [INK 27:10 "he shall not exchange it nor substitute it" — Temurah 1:1: it takes, and he receives forty]'))
+        if 'redemption_right' in c['fx']:
+            out.append(E_('redemption_right', t, cp=o, value=c['v'], law='F2 [%s]' % c['why'][:100]))
+        return out
+    if k == 'consecrated_redeemed':
+        r = event['redeemer']; t = event['subject']
+        c = redeem(event['thing'], event.get('by', 'owner'))
+        if c is None:
+            return []
+        cells = [c] + ([fifth_census()] if 'adds_fifth' in c['fx'] else [])
+        fx, why = _fx_union(cells); out = []
+        if 'adds_fifth' in fx:
+            out.append(E_('adds_fifth', r, cp='the-treasury', value=why['adds_fifth']['v'], law='F3 [%s — %s]' % (c['why'][:70], why['adds_fifth']['why'][:60] if why['adds_fifth'] is not c else '')))
+        if 'redemption_right' in fx:
+            out.append(E_('redemption_right', t, cp=r, value=c['v'], law='F3 [%s]' % c['why'][:100]))
+        if 'redeem_or_break' in fx:
+            out.append(E_('redeem_or_break', t, cp=r, value=c['v'], law='F3 [the firstling donkey — CALLED cold_run_pesach.firstborn(donkey) -> %s (Exod 13:13)]' % c['v']))
+        return out
+    if k == 'thing_devoted':
+        d = event['devoter']; t = event['subject']; c = devote(event.get('case', 'status')); out = []
+        if 'most_holy' in c['fx']:
+            out.append(E_('most_holy', t, cp=d, value=c['v'], law='F4 [INK 27:28 "every devoted thing is MOST HOLY to the LORD" — not sold, not redeemed]'))
+        if 'due_to_priest' in c['fx']:
+            out.append(E_('due_to_priest', t, cp='the-priests', value=c['v'], law='F4 [INK 27:21 "as the devoted field, to the PRIEST shall be his holding" — %s]' % c['why'][:80]))
+        if 'put_to_death' in c['fx']:
+            out.append(E_('put_to_death', t, value=c['v'], law='F4 [INK 27:29 "every devoted person shall not be ransomed, he shall surely be put to death"]'))
+        if 'consecrated' in c['fx']:
+            out.append(E_('consecrated', t, cp=d, value=c['v'], law='F4 [%s]' % c['why'][:100]))
+        return out
+    if k == 'herd_tithed':
+        o = event['owner']; t = event['subject']; c = tithe(event.get('case', 'procedure')); out = []
+        if 'consecrated' in c['fx']:
+            out.append(E_('consecrated', t, cp=o, value=c['v'], law='F5 [INK 27:32 "all that passes under the rod, the TENTH shall be holy" — %s]' % c['why'][:90]))
+        if 'substitution' in c['fx']:
+            out.append(E_('substitution', t, cp=o, value=c['v'], law='F5 [INK 27:33 "if he substitutes it, it and its substitute shall be holy, it shall not be redeemed" — %s]' % c['why'][:70]))
+        return out
+    return []
+
+def scene():
+    """THE SCENE — Temurah 1-7, Arakhin 8, Bekhorot 9 and the Sifra's rows replayed on the world engine (clock unit: days)."""
+    with _ctx5.redirect_stdout(_io5.StringIO()):
+        w = WE.World(era='the consecration machine: Temurah, Arakhin 8, Bekhorot 9 on the engine (clock unit: days)')
+        w.laws = [law_temurah]
+        w.advance(1)
+        for t, ev in (('the-fit-animal', {'thing': 'fit_animal'}), ('the-unfit-animal', {'thing': 'unfit_animal'}), ('the-house', {'thing': 'house'}), ('the-firstborn', {'thing': 'firstborn'}),
+                      ('the-firstborn-for-value', {'thing': 'firstborn_for_value'}), ('the-unborn', {'thing': 'fit_animal', 'before_birth': True}), ('the-sons-field', {'thing': 'not_his'})):
+            w.submit(dict({'kind': 'thing_consecrated', 'subject': t, 'owner': 'the-vower', 'to': 'unspecified', 'day': 1, 'case_source': 'Lev 27:9-14, 26; Mishnah Temurah 5:1, 7:1-2; Arakhin 8:7 — %s' % t}, **ev))
+        for t, ev in (('the-substituter', {'case': 'attempted'}), ('the-bird-vower', {'case': 'birds_or_meal_offerings'}), ('the-formula-sayer', {'case': 'formula', 'words': 'this_desanctified_on_that'}), ('the-heir', {'case': 'heir'}), ('the-tithe-substituter', {'of': 'tithe'})):
+            w.submit(dict({'kind': 'substitute_declared', 'subject': t, 'owner': t, 'day': 1, 'case_source': 'Lev 27:10, 27:33; Mishnah Temurah 1:1-6, 3:5, 5:5 — %s' % t}, **ev))
+        for t, ev in (('the-unfit-redeemer', {'thing': 'unfit_animal', 'by': 'owner'}), ('the-house-redeemer', {'thing': 'house', 'by': 'owner'}), ('the-other-redeemer', {'thing': 'house', 'by': 'other'}), ('the-donkey-owner', {'thing': 'firstling_donkey'}),
+                      ('the-tithe-redeemer', {'thing': 'land_tithe'}), ('the-devoted-redeemer', {'thing': 'devoted'}), ('the-field-redeemer', {'thing': 'field'})):
+            w.submit(dict({'kind': 'consecrated_redeemed', 'subject': t, 'redeemer': t, 'day': 1, 'case_source': 'Lev 27:13, 15, 27, 31; Mishnah Arakhin 8:1-3; Bekhorot 1:2-4 — %s' % t}, **ev))
+        for t, ev in (('the-devoted-thing', {'case': 'status'}), ('the-unspecified-devotion', {'case': 'unspecified_destination'}), ('the-whole-estate', {'case': 'all_his_property'}), ('the-devoted-person', {'case': 'person'}), ('the-devoted-firstborn', {'case': 'firstborn'})):
+            w.submit(dict({'kind': 'thing_devoted', 'subject': t, 'devoter': 'the-devoter', 'day': 1, 'case_source': 'Lev 27:28-29; Mishnah Arakhin 8:4-7 — %s' % t}, **ev))
+        for t, ev in (('the-tenth', {'case': 'procedure'}), ('the-ten-of-a-hundred', {'case': 'took_ten_of_a_hundred'}), ('the-ninth-called-tenth', {'case': 'ninth_called_tenth'}), ('the-substituted-tenth', {'case': 'substituted'}), ('the-land-tithe', {'case': 'land_tithe_status'})):
+            w.submit(dict({'kind': 'herd_tithed', 'subject': t, 'owner': 'the-herdsman', 'day': 1, 'case_source': 'Lev 27:30-33; Mishnah Bekhorot 9:7-8 — %s' % t}, **ev))
+        w.advance(2)
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    am = lambda eid, eff: [e['amount'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    return (n('the-fit-animal', 'consecrated'), n('the-unfit-animal', 'consecrated'), n('the-house', 'consecrated'), n('the-firstborn', 'consecrated'), n('the-firstborn-for-value', 'consecrated'), n('the-unborn', 'consecrated'), n('the-sons-field', 'consecrated'),
+            n('the-substituter', 'substitution'), n('the-substituter', 'consecrated'), am('the-substituter', 'lashes'), n('the-bird-vower', 'substitution'), n('the-formula-sayer', 'redemption_right'), n('the-heir', 'substitution'), n('the-tithe-substituter', 'substitution'), n('the-tithe-substituter', 'consecrated'),
+            n('the-unfit-redeemer', 'adds_fifth'), n('the-unfit-redeemer', 'redemption_right'), n('the-house-redeemer', 'adds_fifth'), n('the-other-redeemer', 'adds_fifth'), n('the-other-redeemer', 'redemption_right'), n('the-donkey-owner', 'redeem_or_break'), n('the-tithe-redeemer', 'adds_fifth'), n('the-devoted-redeemer', 'redemption_right'), n('the-field-redeemer', 'adds_fifth'),
+            n('the-devoted-thing', 'most_holy'), n('the-unspecified-devotion', 'due_to_priest'), n('the-whole-estate', 'most_holy'), n('the-devoted-person', 'put_to_death'), n('the-devoted-firstborn', 'consecrated'),
+            n('the-tenth', 'consecrated'), n('the-ten-of-a-hundred', 'consecrated'), n('the-ninth-called-tenth', 'consecrated'), n('the-substituted-tenth', 'substitution'), n('the-substituted-tenth', 'consecrated'), n('the-land-tithe', 'consecrated'),
+            tset, fired, w.clock.year), w
+SCENE, _W = scene()
+
+
 # ---- (2) TEST DATA — the Mishnah rows, read from the shelf ------------
 def load(t):
     d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
@@ -343,6 +449,7 @@ for b, ch, m, must in SHEET:
 print('answer sheet: %d Mishnah rows token-verified in their own ink' % len(SHEET))
 
 TESTS = [
+ ('THE SCENE — Temurah, Arakhin 8, Bekhorot 9 and the Sifra on the world engine (the daemon\'s watch coverage printed below)', cell(SCENE, I, 'the consecration\'s classes, the substitute that takes, the fifth at its five seats, the devoted, the tenth under the rod — every value a cell\'s', ['consecrated', 'substitution', 'lashes', 'redemption_right', 'adds_fifth', 'redeem_or_break', 'most_holy', 'due_to_priest', 'put_to_death']), (1, 1, 1, 0, 1, 1, 0, 1, 1, [40], 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 2)),
  ('Temurah 7:1 — an animal vowed to the altar: holy (the altar class)', consecrate('fit_animal'), 'holy_altar'),
  ('Temurah 7:1-2 — an unfit animal consecrated: the upkeep class, valued by the priest', consecrate('unfit_animal'), 'holy_upkeep_valued_by_priest'),
  ('Temurah 7:2 — unspecified consecrations go to the upkeep', consecrate('unspecified_consecration'), 'upkeep'),
@@ -414,6 +521,7 @@ print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sort
 print('effects: every cell carries REGISTERED effects — consecrated (STATUS) discovered from 27:9\'s own "shall '
       'be holy"; most_holy shared with the meal offering; substitution, adds_fifth, put_to_death, '
       'due_to_priest, redemption_right, lashes, redeem_or_break from the registry [effects law satisfied]')
+_W.print_coverage()
 if ok == n:
     print()
     print('THE CONSECRATION, SUBSTITUTION, AND DEVOTION MACHINE COMPILES — the two substitution verbs, "beast '

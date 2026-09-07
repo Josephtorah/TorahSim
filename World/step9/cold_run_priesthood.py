@@ -67,7 +67,7 @@ sys.path.insert(0, HERE)
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
-assert GUARDED == 251, ("the guard counted %d expectations, the tripwire holds 251" % GUARDED)
+assert GUARDED == 252, ("the guard counted %d expectations, the tripwire holds 252" % GUARDED)
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -891,6 +891,300 @@ def lamp_table(q, **k):
         return cell({'24:3': 'an_eternal_statute', '24:8': 'an_eternal_covenant', '24:9': 'an_eternal_statute'}, I, 'the three perpetual clauses closing the lamp, the setting, the eating (%s)' % (c_close[2],), [FX.NONE])
     raise ValueError(q)
 
+import os as _os5, sys as _sys5, io as _io5, contextlib as _ctx5
+_sys5.path.insert(0, _os5.path.dirname(_os5.path.abspath(__file__)))
+# ---- THE WRAP (W5 HOLINESS, SANCTIONS, THE LAND, 2026-09-07): the daemon over the compiled priesthood engine ----
+import world_engine as WE
+def _fx_union(cells):
+    fx, why = set(), {}
+    for c in cells:
+        for f in c['fx']:
+            fx.add(f); why.setdefault(f, c)
+    return fx, why
+def law_priesthood(event, world):
+    """Lev 21, 22, 24:1-9 (cold_run_priesthood.py — family, blemish, holy_food, acceptable, lamp_table): the priest's file, the blemish census, the eaters, the acceptable animal, the lamp's morning and the bread's week as TIMERS."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    day = event.get('day', world.clock.year)
+    if k == 'priest_defiled_for_dead':
+        p = event['priest']; dead = event.get('dead'); rank = event.get('rank', 'common')
+        if event.get('onen'):
+            c = family('onen')
+            return [E_('service_profaned', p, value=c['v'], law='F1 [Mishnah Zevachim 2:1 — the onen\'s service %s]' % c['v'])]
+        if rank == 'high':
+            c = family('high_priest_dead')
+            return [E_('lashes', p, amount=2, value=str(c['v'])[:70], law='F1 [INK 21:11 "to any dead soul he shall not come, for his father and for his mother he shall not be defiled" — two prohibitions]')]
+        if dead == 'wife':
+            c = family('husband', wife=event.get('wife', 'fit'))
+            if 'defiled_for_kin' in c['fx']:
+                return [E_('defiled_for_kin', p, cp=dead, value=c['v'], law='F1 [INK 21:4 "a HUSBAND shall not be defiled among his people to profane himself" — %s]' % c['v'])]
+            return []                                                # an unfit wife: he does not defile (Sifra Emor Section 1 15) — the silence
+        if dead == 'abandoned_corpse':
+            c = family('met_mitzvah')
+            return [E_('defiled_for_kin', p, cp=dead, value=c['v'], law='F1 [Sifra Emor Section 1 3 — %s]' % c['v'])]
+        rel = family('relatives')
+        if dead in rel['v']:
+            f = family('forced')
+            return [E_('defiled_for_kin', p, cp=dead, value=(f['v'] if event.get('forced') else dead), law='F1 [INK 21:2-3 "except for his near kin" — the seven relatives on six tokens: %s]' % rel['v'])]
+        c = family('addressees')
+        return [E_('lashes', p, value='defiled_for_a_stranger', law='F1 [INK 21:1 "for a soul he shall not be defiled among his people" — %s not a relative (the sons of Aaron %s)]' % (dead, c['v']['sons_of_aaron']))]
+    if k == 'priest_body_marked':
+        p = event['priest']; act = event.get('act', 'beard')
+        if act == 'gash':
+            g = family('gash_multiplier'); n = event.get('gashes', 1) * event.get('dead', 1)
+            return [E_('lashes', p, amount=n, value=g['v'], law='F1 [INK 21:5 "in their flesh they shall not gash a gash" — the multiplier %s (Mishnah Makkot 3:5)]' % g['v'])]
+        if act == 'baldness':
+            m = family('marks')
+            return [E_('lashes', p, value=m['v']['baldness'], law='F1 [INK 21:5 "they shall not make a baldness on their head" — %s]' % m['v']['baldness'])]
+        r = family('razor'); lc = family('lash_count'); corners = family('corners')
+        return [E_('lashes', p, amount=(corners['v']['beard'] if event.get('warned_each_time') else 1), value=r['v'], law='F1 [INK 21:5 "the corner of their beard they shall not shave" — the razor %s; %s]' % (r['v'], lc['v']))]
+    if k == 'priest_married':
+        p = event['priest']; her = event.get('her', 'fit'); rank = event.get('rank', 'common')
+        if event.get('brother_rank'):
+            c = family('yevamot_table', her=her, rank=rank, brother=event['brother_rank'])
+            if c['v']['husband'] == 'forbidden' or c['v']['levir'] == 'forbidden':
+                return [E_('profaned_seed', p, cp='the-wife', value=str(c['v']), law='F1 [INK 21:7 / 21:14 as a two-parameter predicate (her status, his rank) for the husband and the levir (Mishnah Yevamot 9:1-2): %s]' % c['v'])]
+            return []
+        fb = family('four_barred')
+        barred = (her in fb['v']) if rank == 'high' else (her in ('divorcee', 'profaned', 'harlot', 'chalutzah'))
+        if not barred:
+            return []                                                # a fit wife — the silence
+        seed = family('seed'); cb = family('conduct_bars'); nt = family('not_transferable')
+        return [E_('profaned_seed', p, cp='the-wife', value=seed['v']['status'], law='F1 [INK 21:15 "he shall not profane his seed among his people" — %s: the seed %s]' % (her, seed['v']['status'])),
+                E_('lashes', p, value=nt['v'], law='F1 [INK 21:7 "they shall not take" — the take doubled: %s]' % family('take_doubled')['v']),
+                E_('service_profaned', p, value=cb['v']['marries_in_transgression'], law='F1 [Mishnah Bekhorot 7:7 — %s]' % cb['v']['marries_in_transgression'])]
+    if k == 'priest_daughter_whored':
+        d = event['daughter']
+        if event.get('by') == 'unmarried':
+            return []                                                # not by a husband's bond: no burning (Sifra Emor Chapter 1 14) — the silence
+        pred = family('daughter_predicate'); mode = family('daughter_mode'); lst = family('daughter_in_burned_list')
+        return [E_('burned_by_court', d, cp=event.get('father'), value=mode['v'], law='F1 [INK 21:9 "in fire she shall be burned" — %s; in the burned list: %s (CALLED cold_run_sanctions.census)]' % (pred['v']['by'], lst['v']))]
+    if k == 'head_anointed':
+        p = event.get('priest', event.get('subject', 'aaron'))
+        oh = family('one_hour'); gr = family('greatness'); nz = family('nezer')
+        return [E_('invested_office', p, value=oh['v'], law='F1 [INK 21:10 "on whose head the anointing oil was poured and who was invested to wear the garments" — %s; the greatness %s; %s]' % (oh['v'], gr['v'], nz['v']))]
+    if k == 'blemished_priest_approached':
+        p = event['priest']
+        if event.get('passing') == 'healed':
+            cells = [blemish('passed_blemish')]
+        else:
+            if event.get('joined_to'):
+                c0 = blemish('fingers', joined_to=event['joined_to'])
+            elif event.get('head'):
+                c0 = blemish('members', head=event['head'])
+            else:
+                c0 = blemish('heads')
+            cells = [c0]
+            if 'blemish_barred' in c0['fx']:
+                cells.append(blemish('veil_altar'))
+                if event.get('served'):
+                    cells.append(blemish('served'))
+                if event.get('eats'):
+                    cells.append(blemish('eats'))
+        fx, why = _fx_union(cells); out = []
+        if 'blemish_barred' in fx:
+            out.append(E_('blemish_barred', p, value=str(why['blemish_barred']['v'])[:70], law='F2 [INK 21:17-23 "in whom is a blemish shall not approach" — %s]' % why['blemish_barred']['why'][:80]))
+        if 'accepted' in fx:
+            out.append(E_('accepted', p, value=why['accepted']['v'], law='F2 [%s]' % why['accepted']['why'][:100]))
+        if 'service_profaned' in fx:
+            out.append(E_('service_profaned', p, value=str(why['service_profaned']['v'])[:70], law='F2 [Mishnah Zevachim 2:1 — the blemished priest\'s service invalid]'))
+        if 'due_to_priest' in fx:
+            out.append(E_('due_to_priest', p, value=str(why['due_to_priest']['v'])[:70], law='F2 [INK 21:22 "the bread of his God, of the most holy and of the holy, he may eat"]'))
+        if 'most_holy' in fx:
+            out.append(E_('most_holy', 'the-bread-of-his-god', cp=p, value=str(why['most_holy']['v'])[:70], law='F2 [INK 21:22 — of the most holy he eats]'))
+        return out
+    if k == 'priest_impure_approached_holy':
+        p = event['priest']; imp = event.get('impurity', 'corpse'); act = event.get('act', 'eat')
+        cells = [holy_food('until_pure'), holy_food('two_gates'), holy_food('name_frame')]
+        if event.get('deliberate'):
+            cells += [holy_food('karet_extension') if act == 'approach' else holy_food('die_by_it'), holy_food('profaners')]
+        if imp == 'zav':
+            cells.append(holy_food('zav_tier'))
+        if event.get('bathed'):
+            cells.append(holy_food('whole_body'))
+        fx, why = _fx_union(cells); out = []
+        if 'karet_cut_off' in fx:
+            out.append(E_('karet_cut_off', p, cp='HEAVEN', value=str(why['karet_cut_off']['v'])[:70], law='F3 [INK 22:3 "with his impurity upon him, that soul shall be cut off from before Me" — %s]' % why['karet_cut_off']['why'][:70]))
+        if 'death_by_heaven' in fx:
+            out.append(E_('death_by_heaven', p, cp='HEAVEN', value=str(why['death_by_heaven']['v'])[:70], law='F3 [INK 22:9 "lest they bear sin for it and die by it" — %s]' % why['death_by_heaven']['why'][:70]))
+        if 'impure_until_evening' in fx:
+            out.append(E_('impure_until_evening', p, value=why['impure_until_evening']['v'], law='F3 [INK 22:6-7 "impure until evening... and the sun sets and he is pure"]'))
+        if 'immersed' in fx:
+            out.append(E_('immersed', p, value=why['immersed']['v'], law='F3 [INK 22:6 "unless he has bathed his flesh in water" — %s]' % why['immersed']['v']))
+        if 'stranger_barred' in fx:
+            out.append(E_('stranger_barred', p, value=str(why['stranger_barred']['v'])[:70], law='F3 [INK 22:4 "shall not eat of the holy things until he is pure" — %s]' % why['stranger_barred']['why'][:70]))
+        if 'name_profaned' in fx:
+            out.append(E_('name_profaned', p, cp='HEAVEN', value=str(why['name_profaned']['v'])[:70], law='F3 [INK 22:2 / 22:32 "and not profane My holy name" — the name frame at %s]' % why['name_profaned']['v']))
+        return out
+    if k == 'terumah_eaten':
+        e = event['eater']; cells = []
+        if event.get('who'):
+            cells.append(holy_food('household', who=event['who']))
+        if event.get('husband'):
+            cells.append(holy_food('eating_table', husband=event['husband'], son_alive=event.get('son_alive', True), after=event.get('after')))
+        if event.get('stage'):
+            cells.append(holy_food('stage', stage=event['stage']))
+        if event.get('type'):
+            cells.append(holy_food('slaves_of_forbidden_wife', type=event['type']))
+        if 'deliberate' in event:
+            cells.append(holy_food('error_gate', deliberate=event['deliberate']))
+            if not event['deliberate']:
+                cells.append(holy_food('fifth_gates'))               # the fifth rides the ERRING eater alone (22:14 "in error"; Mishnah Terumot 7:1) — the probe caught the deliberate eater's fifth
+        if event.get('case'):
+            cells.append(holy_food(event['case']))
+        fx, why = _fx_union(cells); out = []
+        if 'terumah_fed' in fx:
+            out.append(E_('terumah_fed', e, value=str(why['terumah_fed']['v'])[:70], law='F3 [INK 22:11 / 22:13 — %s]' % why['terumah_fed']['why'][:90]))
+        if 'stranger_barred' in fx:
+            out.append(E_('stranger_barred', e, value=str(why['stranger_barred']['v'])[:70], law='F3 [INK 22:10 / 22:12 "no stranger shall eat a holy thing" — %s]' % why['stranger_barred']['why'][:80]))
+        if 'adds_fifth' in fx:
+            out.append(E_('adds_fifth', e, cp='the-priest', value=str(why['adds_fifth']['v'])[:70], law='F3 [INK 22:14 "he shall add its fifth to it and give the holy thing to the priest" — %s]' % why['adds_fifth']['why'][:70]))
+        if 'pays' in fx:
+            out.append(E_('pays', e, cp='the-priest', value=str(why['pays']['v'])[:70], law='F3 [INK 22:14 the principal — %s]' % why['pays']['why'][:80]))
+        if 'pays_double' in fx:
+            out.append(E_('pays_double', e, cp='the-priest', value=str(why['pays_double']['v'])[:70], law='F3 [Mishnah Terumot 6:4 — the thief: %s]' % why['pays_double']['why'][:70]))
+        if 'burned_by_court' in fx:
+            out.append(E_('burned_by_court', e, value=str(why['burned_by_court']['v'])[:70], law='F3 [%s]' % why['burned_by_court']['why'][:100]))
+        if 'death_by_heaven' in fx:
+            out.append(E_('death_by_heaven', e, cp='HEAVEN', value=str(why['death_by_heaven']['v'])[:70], law='F3 [%s]' % why['death_by_heaven']['why'][:100]))
+        return out
+    if k == 'offering_vowed':
+        o = event['offerer']; cells = []
+        if event.get('offerer_class') == 'foreigner':
+            cells.append(acceptable('vow_class'))
+        if event.get('head'):
+            cells += [acceptable('beast_members', head=event['head']), acceptable('descends')]
+            if event.get('place') == 'outside':
+                cells.append(acceptable('under_age_outside'))
+        elif event.get('castrated'):
+            cells.append(acceptable('castration'))
+        elif event.get('vow_kind') == 'todah':
+            cells.append(acceptable('todah_window'))
+        elif event.get('vow_kind') == 'shelamim':
+            cells += [acceptable('shelamim_window'), acceptable('whole_male')]
+        elif event.get('vow_kind') == 'upkeep':
+            cells.append(acceptable('upkeep'))
+        elif not event.get('case'):
+            cells += [acceptable('whole_male'), acceptable('olah_rite')]
+        if event.get('case'):
+            cells.append(acceptable(event['case']))
+        fx, why = _fx_union(cells); out = []
+        if 'accepted' in fx:
+            out.append(E_('accepted', o, cp='HEAVEN', value=str(why['accepted']['v'])[:70], law='F4 [INK 22:19 "to your acceptance, whole, male" — %s]' % why['accepted']['why'][:80]))
+        if 'not_accepted' in fx:
+            out.append(E_('not_accepted', 'the-blemished-offering', cp=o, value=str(why['not_accepted']['v'])[:70], law='F4 [INK 22:20 "anything in which is a blemish you shall not bring, for it shall not be to acceptance for you" — %s]' % why['not_accepted']['why'][:70]))
+        if 'consecrated' in fx:
+            out.append(E_('consecrated', 'the-vowed-thing', cp=o, value=str(why['consecrated']['v'])[:70], law='F4 [%s]' % why['consecrated']['why'][:100]))
+        if 'lashes' in fx:
+            out.append(E_('lashes', o, value=str(why['lashes']['v'])[:70], law='F4 [INK 22:24 "and in your land you shall not do" — %s]' % why['lashes']['why'][:80]))
+        if 'name_profaned' in fx:
+            out.append(E_('name_profaned', o, cp='HEAVEN', value=str(why['name_profaned']['v'])[:70], law='F4 [INK 22:32 "and you shall not profane My holy name, and I will be sanctified" — %s]' % why['name_profaned']['why'][:70]))
+        if 'exempt' in fx:
+            out.append(E_('exempt', o, value=str(why['exempt']['v'])[:70], law='F4 [%s]' % why['exempt']['why'][:100]))
+        if 'forewarned' in fx:
+            out.append(E_('forewarned', o, value=str(why['forewarned']['v'])[:70], law='F4 [Mishnah Chullin 5:3 — the four periods: %s]' % why['forewarned']['why'][:70]))
+        if 'eating_window' in fx:
+            out.append(E_('eating_window', o, value=str(why['eating_window']['v'])[:70], law='F4 [INK 22:30 "on that day it shall be eaten, you shall not leave of it until morning" — %s]' % why['eating_window']['why'][:70]))
+        return out
+    if k == 'firstling_born':
+        a = event['animal']; o = event.get('owner'); d0 = event.get('day', day)
+        e8 = acceptable('eighth_day_by_call'); bl = acceptable('birth_list'); oh = acceptable('one_hour')
+        if event.get('birth') in ('hybrid', 'look_alike'):
+            return [E_('eighth_day_fit', a, cp=o, due=d0 + 7, value=bl['v'][event['birth']], law='F4 [Mishnah Chullin 4:5 / Sifra Emor Chapter 8 — %s]' % bl['v'][event['birth']])]
+        return [E_('eighth_day_fit', a, cp=o, due=d0 + 7, value=e8['v'], law='F4 [INK 22:27 "from the eighth day and onward it shall be accepted" — CALLED cold_run_ordinances (Exod 22:29, one timer at two seats): %s]' % e8['v']),
+                E_('accepted', a, cp='HEAVEN', due=d0 + 7, value=oh['v'], law='F4 [INK 22:27 "seven days under its mother" — %s]' % oh['v'])]
+    if k == 'mother_and_young_slaughtered':
+        s_ = event['slaughterer']; cells = []
+        if event.get('seq'):
+            cells.append(acceptable('order_cases', seq=event['seq']))
+        if event.get('animal_kind'):
+            cells.append(acceptable('cells', kind=event['animal_kind'], place=event.get('place', 'outside'), order=event.get('order', 'first')))
+        cells += [acceptable('it_and_its_mother'), acceptable('day_boundary')]
+        if event.get('sex') == 'male':
+            cells.append(acceptable('female_rule'))
+        fx, why = _fx_union(cells); out = []
+        if 'same_day_slaughter_barred' in fx:
+            out.append(E_('same_day_slaughter_barred', s_, value=why['same_day_slaughter_barred']['v'], law='F4 [INK 22:28 "it and its young you shall not slaughter on one day" — %s]' % why['same_day_slaughter_barred']['why'][:80]))
+        if 'lashes' in fx:
+            v = why['lashes']['v']
+            out.append(E_('lashes', s_, amount=(v if isinstance(v, int) else None), value=str(v)[:60], law='F4 [Mishnah Chullin 5:3 — %s]' % why['lashes']['why'][:80]))
+        return out
+    if k == 'lamps_raised':
+        p = event.get('priest', 'aaron')
+        c = lamp_table('tending', found=event['found']) if event.get('found') else lamp_table('evening_to_morning')
+        return [E_('lamp_arranged', 'the-lampstand', cp=p, due=day + 1, value=str(c['v'])[:70], law='F5 [INK 24:3 "Aaron shall arrange it from evening to morning before the LORD continually" — the morning TIMER; %s]' % str(c['v'])[:70])]
+    if k == 'bread_arranged':
+        p = event.get('priest', 'aaron'); lv = lamp_table('loaves'); se = lamp_table('sabbath_exchange'); me = lamp_table('memorial'); ea = lamp_table('eating'); nf = lamp_table('not_the_fires')
+        wd = lamp_table('window', case=event.get('case', 'plain'))
+        return [E_('bread_set_weekly', 'the-table', cp=p, amount=lv['v']['count'], due=day + 7, value=se['v']['new'], law='F5 [INK 24:8 "on the sabbath day, on the sabbath day he shall arrange it" — the weekly TIMER; the window %d days (Mishnah Menachot 11:9)]' % wd['v']),
+                E_('azkarah_to_fire', 'the-frankincense', cp=p, value=me['v'], law='F5 [INK 24:7 "pure frankincense... for the bread a memorial, a fire offering" — %s]' % me['v']),
+                E_('due_to_priest', 'the-loaves', cp='the-priests', due=day + 7, value=nf['v'], law='F5 [INK 24:9 "it shall be for Aaron and for his sons" — %s]' % nf['v']),
+                E_('most_holy', 'the-loaves', value=ea['v']['place'], law='F5 [INK 24:9 "they shall eat it in a holy place, for it is most holy"]')]
+    return []
+
+def scene():
+    """THE SCENE — Yevamot 6-9, Bekhorot 6-7, Terumot 6-8, Chullin 5, Menachot 11, Tamid 3 and the Sifra's rows replayed on the world engine (clock unit: days): the firstling's eighth day, the lamp's morning, the bread's week as TIMERS."""
+    with _ctx5.redirect_stdout(_io5.StringIO()):
+        w = WE.World(era='the priesthood and its dues: Yevamot, Bekhorot, Terumot, Chullin 5, Menachot 11 on the engine (clock unit: days)')
+        w.laws = [law_priesthood]
+        w.advance(1)
+        for who, ev in (('the-mourning-priest', {'dead': 'mother'}), ('the-husband', {'dead': 'wife', 'wife': 'fit'}), ('the-husband-of-the-unfit', {'dead': 'wife', 'wife': 'unfit'}), ('the-finder', {'dead': 'abandoned_corpse'}),
+                        ('the-onen', {'dead': 'father', 'onen': True}), ('the-high-priest', {'rank': 'high', 'dead': 'father'}), ('the-defiled-for-a-stranger', {'dead': 'neighbor'})):
+            w.submit(dict({'kind': 'priest_defiled_for_dead', 'subject': who, 'priest': who, 'day': 1, 'case_source': 'Lev 21:1-4, 21:11; Sifra Emor Section 1 — %s' % who}, **ev))
+        w.submit({'kind': 'priest_body_marked', 'subject': 'the-gashing-priest', 'priest': 'the-gashing-priest', 'act': 'gash', 'gashes': 5, 'dead': 1, 'day': 1, 'case_source': 'Lev 21:5; Mishnah Makkot 3:5 — five gashes'})
+        w.submit({'kind': 'priest_body_marked', 'subject': 'the-bald-priest', 'priest': 'the-bald-priest', 'act': 'baldness', 'day': 1, 'case_source': 'Lev 21:5 — a baldness on the head'})
+        w.submit({'kind': 'priest_body_marked', 'subject': 'the-razor-priest', 'priest': 'the-razor-priest', 'act': 'beard', 'warned_each_time': True, 'day': 1, 'case_source': 'Lev 21:5; Mishnah Makkot 3:5 — the five corners of the beard, each warned'})
+        w.submit({'kind': 'priest_married', 'subject': 'the-priest-of-the-divorcee', 'priest': 'the-priest-of-the-divorcee', 'her': 'divorcee', 'day': 1, 'case_source': 'Lev 21:7; Mishnah Yevamot 6:2 — the divorcee'})
+        w.submit({'kind': 'priest_married', 'subject': 'the-high-priest-of-the-widow', 'priest': 'the-high-priest-of-the-widow', 'rank': 'high', 'her': 'widow', 'day': 1, 'case_source': 'Lev 21:14 — the widow barred to the high priest alone'})
+        w.submit({'kind': 'priest_married', 'subject': 'the-priest-of-the-widow', 'priest': 'the-priest-of-the-widow', 'rank': 'common', 'her': 'widow', 'day': 1, 'case_source': 'Lev 21:7 — the widow permitted to the common priest: the silence'})
+        w.submit({'kind': 'priest_married', 'subject': 'the-levir-case', 'priest': 'the-levir-case', 'rank': 'common', 'her': 'widow', 'brother_rank': 'high', 'day': 1, 'case_source': 'Mishnah Yevamot 9:1 — permitted to the husband, forbidden to the levir'})
+        w.submit({'kind': 'priest_daughter_whored', 'subject': 'the-priests-daughter', 'daughter': 'the-priests-daughter', 'father': 'the-priest', 'by': 'betrothed', 'day': 1, 'case_source': 'Lev 21:9; Mishnah Sanhedrin 9:1 — burned'})
+        w.submit({'kind': 'priest_daughter_whored', 'subject': 'the-unmarried-daughter', 'daughter': 'the-unmarried-daughter', 'father': 'the-priest', 'by': 'unmarried', 'day': 1, 'case_source': 'Sifra Emor Chapter 1 14 — not by a husband\'s bond: the silence'})
+        w.submit({'kind': 'head_anointed', 'subject': 'aaron', 'priest': 'aaron', 'by': 'oil', 'day': 1, 'case_source': 'Lev 21:10; Sifra Emor Chapter 2 — the office attaches at the pouring'})
+        w.submit({'kind': 'blemished_priest_approached', 'subject': 'the-blind-priest', 'priest': 'the-blind-priest', 'head': 'blind', 'served': True, 'eats': True, 'day': 1, 'case_source': 'Lev 21:18-23; Mishnah Bekhorot 7:3; Zevachim 2:1 — the blind priest: barred, his service invalid, he eats'})
+        w.submit({'kind': 'blemished_priest_approached', 'subject': 'the-healed-priest', 'priest': 'the-healed-priest', 'passing': 'healed', 'day': 1, 'case_source': 'Sifra Emor Section 3 — the passing blemish healed: fit'})
+        w.submit({'kind': 'blemished_priest_approached', 'subject': 'the-joined-finger', 'priest': 'the-joined-finger', 'joined_to': 'joint', 'day': 1, 'case_source': 'Mishnah Bekhorot 7:6 — the extra finger joined to the joint: fit'})
+        w.submit({'kind': 'priest_impure_approached_holy', 'subject': 'the-impure-eater', 'priest': 'the-impure-eater', 'impurity': 'corpse', 'act': 'eat', 'deliberate': True, 'day': 1, 'case_source': 'Lev 22:4-9; Mishnah Sanhedrin 9:6 — the deliberate impure eater: death by Heaven'})
+        w.submit({'kind': 'priest_impure_approached_holy', 'subject': 'the-impure-approacher', 'priest': 'the-impure-approacher', 'impurity': 'corpse', 'act': 'approach', 'deliberate': True, 'day': 1, 'case_source': 'Lev 22:3; Mishnah Keritot 1:1 — the impure approach: karet'})
+        w.submit({'kind': 'priest_impure_approached_holy', 'subject': 'the-zav-priest', 'priest': 'the-zav-priest', 'impurity': 'zav', 'act': 'eat', 'bathed': True, 'day': 1, 'case_source': 'Lev 22:4, 22:6-7 — the zav until pure, the whole body immersed'})
+        w.submit({'kind': 'terumah_eaten', 'subject': 'the-priests-wife', 'eater': 'the-priests-wife', 'husband': 'priest', 'son_alive': True, 'day': 1, 'case_source': 'Lev 22:11; Mishnah Yevamot 9:5 — the priest\'s wife eats'})
+        w.submit({'kind': 'terumah_eaten', 'subject': 'the-returned-daughter', 'eater': 'the-returned-daughter', 'husband': 'israelite', 'son_alive': False, 'after': 'fathers_house', 'day': 1, 'case_source': 'Lev 22:13; Mishnah Yevamot 9:6 — widowed without seed, returned'})
+        w.submit({'kind': 'terumah_eaten', 'subject': 'the-strangers-wife', 'eater': 'the-strangers-wife', 'husband': 'israelite', 'son_alive': True, 'day': 1, 'case_source': 'Lev 22:12 — to a stranger man: she shall not eat'})
+        w.submit({'kind': 'terumah_eaten', 'subject': 'the-erring-eater', 'eater': 'the-erring-eater', 'deliberate': False, 'day': 1, 'case_source': 'Lev 22:14; Mishnah Terumot 6:1 — in error: the principal and the fifth'})
+        w.submit({'kind': 'terumah_eaten', 'subject': 'the-deliberate-eater', 'eater': 'the-deliberate-eater', 'deliberate': True, 'day': 1, 'case_source': 'Mishnah Terumot 7:1 — deliberate: the principal, no fifth'})
+        w.submit({'kind': 'terumah_eaten', 'subject': 'the-terumah-thief', 'eater': 'the-terumah-thief', 'case': 'thief', 'day': 1, 'case_source': 'Mishnah Terumot 6:4 — the thief: double'})
+        w.submit({'kind': 'terumah_eaten', 'subject': 'the-workers', 'eater': 'the-workers', 'case': 'workers', 'day': 1, 'case_source': 'Mishnah Terumot 6:3 — the workers: the fifth'})
+        w.submit({'kind': 'terumah_eaten', 'subject': 'the-daughter-who-ate', 'eater': 'the-daughter-who-ate', 'case': 'daughter_who_ate', 'day': 1, 'case_source': 'Mishnah Terumot 7:2 — the priest\'s daughter married to an Israelite who ate'})
+        w.submit({'kind': 'terumah_eaten', 'subject': 'the-betrothed', 'eater': 'the-betrothed', 'stage': 'betrothed', 'day': 1, 'case_source': 'Mishnah Yevamot 7:4 — betrothed: does not eat'})
+        w.submit({'kind': 'terumah_eaten', 'subject': 'the-iron-flock-slave', 'eater': 'the-iron-flock-slave', 'type': 'iron_flock', 'day': 1, 'case_source': 'Mishnah Yevamot 7:1 — the iron-flock slaves eat'})
+        for who, ev in (('the-vower', {}), ('the-blind-offering-bringer', {'head': 'blind'}), ('the-castrator', {'castrated': True}), ('the-todah-bringer', {'vow_kind': 'todah'}), ('the-shelamim-vower', {'vow_kind': 'shelamim'}), ('the-upkeep-vower', {'vow_kind': 'upkeep'}),
+                        ('the-foreigner', {'offerer_class': 'foreigner'}), ('the-outside-blemished', {'head': 'blind', 'place': 'outside'}), ('the-forewarned', {'case': 'four_periods'}), ('the-name-sanctifier', {'case': 'sanctify_name'})):
+            w.submit(dict({'kind': 'offering_vowed', 'subject': who, 'offerer': who, 'day': 1, 'case_source': 'Lev 22:17-33; Mishnah Bekhorot 6, Temurah 6, Zevachim 5 — %s' % who}, **ev))
+        w.submit({'kind': 'firstling_born', 'subject': 'the-firstling', 'animal': 'the-firstling', 'owner': 'the-herdsman', 'day': 1, 'case_source': 'Lev 22:27 — seven days under its mother, from the eighth accepted (the second seat)'})
+        w.submit({'kind': 'mother_and_young_slaughtered', 'subject': 'the-slaughterer', 'slaughterer': 'the-slaughterer', 'seq': 'cow_then_two_young', 'day': 1, 'case_source': 'Lev 22:28; Mishnah Chullin 5:3 — the mother then her young: each'})
+        w.submit({'kind': 'mother_and_young_slaughtered', 'subject': 'the-consecrated-slaughterer', 'slaughterer': 'the-consecrated-slaughterer', 'animal_kind': 'consecrated', 'place': 'outside', 'order': 'first', 'day': 1, 'case_source': 'Mishnah Chullin 5:1 — consecrated outside: karet for the first, the second flogged'})
+        w.submit({'kind': 'mother_and_young_slaughtered', 'subject': 'the-plain-slaughterer', 'slaughterer': 'the-plain-slaughterer', 'day': 1, 'case_source': 'Lev 22:28 — it and its young on one day'})
+        w.submit({'kind': 'lamps_raised', 'subject': 'the-lampstand', 'priest': 'aaron', 'found': 'two_eastern_burning', 'day': 1, 'case_source': 'Lev 24:2-4; Mishnah Tamid 3:9 — the lamps tended, evening to morning'})
+        w.submit({'kind': 'bread_arranged', 'subject': 'the-table', 'priest': 'aaron', 'case': 'plain', 'day': 1, 'case_source': 'Lev 24:5-9; Mishnah Menachot 11:1-9 — twelve loaves, the frankincense, the sabbath exchange'})
+        w.advance(9)                                                 # the eighth day passed, the week's exchange fired
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    am = lambda eid, eff: [e['amount'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    return (n('the-mourning-priest', 'defiled_for_kin'), n('the-husband', 'defiled_for_kin'), n('the-husband-of-the-unfit', 'defiled_for_kin'), n('the-finder', 'defiled_for_kin'), n('the-onen', 'service_profaned'), am('the-high-priest', 'lashes'), n('the-defiled-for-a-stranger', 'lashes'),
+            am('the-gashing-priest', 'lashes'), n('the-bald-priest', 'lashes'), am('the-razor-priest', 'lashes'),
+            n('the-priest-of-the-divorcee', 'profaned_seed'), n('the-priest-of-the-divorcee', 'lashes'), n('the-priest-of-the-divorcee', 'service_profaned'), n('the-high-priest-of-the-widow', 'profaned_seed'), n('the-priest-of-the-widow', 'profaned_seed'), n('the-levir-case', 'profaned_seed'),
+            n('the-priests-daughter', 'burned_by_court'), n('the-unmarried-daughter', 'burned_by_court'), n('aaron', 'invested_office'),
+            n('the-blind-priest', 'blemish_barred'), n('the-blind-priest', 'service_profaned'), n('the-blind-priest', 'due_to_priest'), n('the-blind-priest', 'accepted'), n('the-healed-priest', 'accepted'), n('the-joined-finger', 'accepted'), n('the-joined-finger', 'blemish_barred'),
+            n('the-impure-eater', 'death_by_heaven'), n('the-impure-eater', 'karet_cut_off'), n('the-impure-eater', 'stranger_barred'), n('the-impure-eater', 'impure_until_evening'), n('the-impure-eater', 'name_profaned'), n('the-impure-approacher', 'karet_cut_off'), n('the-zav-priest', 'immersed'), n('the-zav-priest', 'death_by_heaven'),
+            n('the-priests-wife', 'terumah_fed'), n('the-returned-daughter', 'terumah_fed'), n('the-strangers-wife', 'stranger_barred'), n('the-erring-eater', 'adds_fifth'), n('the-erring-eater', 'pays'), n('the-deliberate-eater', 'pays'), n('the-deliberate-eater', 'adds_fifth'), n('the-terumah-thief', 'pays_double'), n('the-workers', 'adds_fifth'), n('the-daughter-who-ate', 'burned_by_court'), n('the-betrothed', 'stranger_barred'), n('the-iron-flock-slave', 'terumah_fed'),
+            n('the-vower', 'accepted'), n('the-blemished-offering', 'not_accepted'), n('the-castrator', 'lashes'), n('the-todah-bringer', 'eating_window'), n('the-shelamim-vower', 'eating_window'), n('the-shelamim-vower', 'accepted'), n('the-vowed-thing', 'consecrated'), n('the-foreigner', 'accepted'), n('the-outside-blemished', 'exempt'), n('the-forewarned', 'forewarned'), n('the-name-sanctifier', 'name_profaned'),
+            yr('the-firstling', 'eighth_day_fit'), yr('the-firstling', 'accepted'), n('the-slaughterer', 'same_day_slaughter_barred'), am('the-slaughterer', 'lashes'), n('the-consecrated-slaughterer', 'lashes'), n('the-plain-slaughterer', 'same_day_slaughter_barred'),
+            yr('the-lampstand', 'lamp_arranged'), yr('the-table', 'bread_set_weekly'), n('the-frankincense', 'azkarah_to_fire'), yr('the-loaves', 'due_to_priest'), n('the-loaves', 'most_holy'),
+            tset, fired, w.clock.year), w
+SCENE, _W = scene()
+
+
 # ---- (2) the answer sheet — the Mishnah rows as TEST DATA (verified by their own tokens) ----
 def load(t):
     d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
@@ -926,6 +1220,7 @@ for b, ch, m, must in SHEET:
 print('answer sheet: %d Mishnah rows verified by their own tokens (Bekhorot 6-7, Terumot 6-8, Yevamot 6-9, Zevachim 8-9, Temurah 6, Menachot 11, Tamid 3, Chullin 5 read whole — the topic docket)' % len(SHEET))
 
 TESTS = [
+ ('THE SCENE — Yevamot 6-9, Bekhorot 6-7, Terumot 6-8, Chullin 5, Menachot 11, Tamid 3 on the world engine (the firstling\'s eighth day, the lamp\'s morning, the bread\'s week as TIMERS; the daemon\'s watch coverage printed below)', cell(SCENE, I, 'the priest\'s file, the blemish census by head, the impure priest\'s gates, the eaters of terumah, the acceptable animal, the mother and its young, the lamp and the table — every value a cell\'s', ['defiled_for_kin', 'service_profaned', 'lashes', 'profaned_seed', 'burned_by_court', 'invested_office', 'blemish_barred', 'due_to_priest', 'most_holy', 'accepted', 'karet_cut_off', 'death_by_heaven', 'impure_until_evening', 'immersed', 'stranger_barred', 'name_profaned', 'terumah_fed', 'adds_fifth', 'pays', 'pays_double', 'not_accepted', 'consecrated', 'exempt', 'forewarned', 'eating_window', 'eighth_day_fit', 'same_day_slaughter_barred', 'lamp_arranged', 'bread_set_weekly', 'azkarah_to_fire']), (1, 1, 0, 1, 1, [2], 1, [5], 1, [5], 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, [8], [8], 1, [80], 1, 1, [2], [8], 1, [8], 1, 5, 5, 9)),
  # ---- THE PRIEST'S FILE (21:1-15) ----
  ('Sifra Emor Section 1 1 / Kiddushin 1:7 — the addressee census', family('addressees'), {'sons_of_aaron': 'bound', 'daughters_of_aaron': 'free', 'chalalim': 'excluded', 'blemished_and_minors': 'included'}),
  ('Lev 21 — the defile-verb at four seats', family('defile_seats'), [1, 3, 4, 11]),
@@ -1209,6 +1504,7 @@ ops = FX.summarize(used)
 print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
 print('effects: every cell carries REGISTERED effects — NINE discovered in these verses\' own verbs: defiled_for_kin, profaned_seed, terumah_fed (STATUS), '
       'blemish_barred, stranger_barred, same_day_slaughter_barred (BLOCK), eighth_day_fit, lamp_arranged, bread_set_weekly (TIMER) [effects law satisfied]')
+_W.print_coverage()
 if ok == n:
     print('THE PRIESTHOOD AND ITS DUES COMPILE — the six relatives on six tokens, the razor and the daughter\'s burning by call, the blemish census on twelve '
           'class heads with three tokens shared exactly by the animal\'s list, the zav and the fifth by call, the eaters\' file on the feeder predicate, the '

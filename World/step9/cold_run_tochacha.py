@@ -494,6 +494,89 @@ NOT_BROKEN = cell('never_broken', I, 'לא מאסתים ולא געלתים לכ
                   'the covenant survives the transfer; the remember verb x%d, the covenant token x%d '
                   'in the chapter' % (REMEMBER, BRIT_TOKENS), ['covenant_remembered'])
 
+import os as _os5, sys as _sys5, io as _io5, contextlib as _ctx5
+_sys5.path.insert(0, _os5.path.dirname(_os5.path.abspath(__file__)))
+# ---- THE WRAP (W5 HOLINESS, SANCTIONS, THE LAND, 2026-09-07): the daemon over the compiled covenant cascade ----
+import world_engine as WE
+def law_tochacha(event, world):
+    """Lev 26 (cold_run_tochacha.py — covenant, cascade, measures, scaling, sabbath_debt, seventy_timer, jubilee_count, recovery): the five gates, the sabbath debt as a DEBIT and a TIMER in years, the seventy, the recovery."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    yr = event.get('year', world.clock.year)
+    if k == 'covenant_kept':
+        ppl = event.get('people', 'israel')
+        c = covenant(event.get('walk', True), event.get('keep', True), event.get('do', True))
+        if 'covenant_upheld' in c['fx']:
+            sc = scaling()
+            return [E_('covenant_upheld', ppl, cp='HEAVEN', value=c['v'], law='F1 [INK 26:3 the three predicates — the blessing; the scaling %s (26:8)]' % (sc['v'],))]
+        return []                                                    # a predicate fails: the curse entry writes nothing until a warning is refused — the silence
+    if k == 'warning_refused':
+        ppl = event.get('people', 'israel'); r = event.get('refusals', 0); c = cascade(r); out = []
+        st = c['stage']; mu = c['multiplier']; sp = c['span']
+        if 'chastised_sevenfold' in st['fx']:
+            out.append(E_('chastised_sevenfold', ppl, cp='HEAVEN', amount=mu['v'], value=st['v'], law='F1 [%s — stage %d, the multiplier %d, the span 26:%d-%d]' % (mu['why'][:60], st['v'], mu['v'], sp['v'][0], sp['v'][1])))
+        if 'land_desolate' in st['fx']:
+            m = measures()
+            out.append(E_('land_desolate', 'the-land', cp=ppl, value=m['land_desolate_26_32']['v'], law='F1 [INK 26:32 "and I will make the land desolate" — %s]' % m['land_desolate_26_32']['why'][:80]))
+            out.append(E_('scattered_among_nations', ppl, cp='HEAVEN', value=m['scatter_26_33']['v'], law='F1 [INK 26:33 "and you I will scatter among the nations" — %s]' % m['scatter_26_33']['why'][:80]))
+        return out                                                   # stage one carries no seven token — the silence at the first refusal
+    if k == 'people_exiled':
+        ppl = event.get('people', 'israel'); land = event.get('land', 'the-land'); model = event.get('model', 'plain'); kept = event.get('releases_kept', 0)
+        sd = sabbath_debt(event.get('years_dwelt', 430), kept, model); debt = sd['debt']['v']
+        out = [E_('sabbath_debt', land, cp='HEAVEN', amount=debt, value=sd['accrual']['v'], law='F2 [INK 26:35 "that which it did not rest in your sabbaths" — %d releases due by the %s cycle, %d kept: the DEBIT %d]' % (sd['due']['v'], model, kept, debt)),
+               E_('land_desolate', land, cp=ppl, value=sd['rule']['v'], law='F2 [INK 26:34 "all the days of desolation" — the rule: the desolation lasts the debt]'),
+               E_('scattered_among_nations', ppl, cp='HEAVEN', value=sd['while']['v'], law='F2 [INK 26:34 "and you in the land of your enemies"]'),
+               E_('land_repays_sabbaths', land, cp='HEAVEN', amount=debt, due=yr + debt, value=sd['desolation_years']['v'], law='F2 [INK 26:34 "then the land shall be paid its sabbaths" — the TIMER runs the debt: fires in year %d]' % (yr + debt))]
+        if event.get('epoch'):
+            st = seventy_timer(event['epoch']); n = st['count']['v']
+            out.append(E_('land_repays_sabbaths', land, cp=ppl, amount=n, due=yr + n, value=event['epoch'], law='F3 [the seventy from the %s epoch: %d years — %s]' % (event['epoch'], n, st['count']['why'][:60])))
+            if 'covenant_remembered' in st['outcome']['fx']:
+                out.append(E_('covenant_remembered', ppl, cp='HEAVEN', due=yr + n, value=st['outcome']['v'], law='F3 [%s]' % st['outcome']['why'][:90]))
+        if event.get('count_jubilees'):
+            jc = jubilee_count()
+            out.append(E_('jubilee_release', land, amount=jc['jubilees']['v'], value=jc['counted_at_fall']['v'], law='F4 [%s — %s]' % (jc['jubilees']['why'][:70], jc['method_fork']['v'])))
+        return out
+    if k == 'iniquity_confessed':
+        ppl = event.get('people', 'israel'); c = recovery(event.get('confess', False), event.get('humble_heart', False)); out = []
+        if 'confessed' in c['fx']:
+            out.append(E_('confessed', ppl, cp='HEAVEN', value=c['v'], law='F5 [INK 26:40 "and they shall confess their iniquity" — %s]' % c['why'][:80]))
+        if 'iniquity_paid' in c['fx']:
+            out.append(E_('iniquity_paid', ppl, cp='HEAVEN', value=c['v'], law='F5 [INK 26:41 "and then they pay their iniquity"]'))
+        if 'covenant_remembered' in c['fx']:
+            out.append(E_('covenant_remembered', ppl, cp='HEAVEN', value=c['v'], law='F5 [INK 26:42 "and I will remember My covenant with Jacob" — the fathers backward and the land]'))
+        if 'scattered_among_nations' in c['fx']:
+            out.append(E_('scattered_among_nations', ppl, cp='HEAVEN', value=c['v'], law='F5 [INK 26:39 "and those left of you shall pine in their iniquity in the lands of your enemies"]'))
+        return out
+    return []
+
+def scene():
+    """THE SCENE — the Sifra's gates and the Writings' log (2 Chronicles 36:21, Megillah 11b-12a, Arakhin 12b-13a) replayed on the world engine (clock unit: YEARS): the sabbath debt and the seventy as TIMERS."""
+    with _ctx5.redirect_stdout(_io5.StringIO()):
+        w = WE.World(era='the covenant cascade: Lev 26 on the engine (clock unit: years)')
+        w.laws = [law_tochacha]
+        w.advance(1)
+        w.submit({'kind': 'covenant_kept', 'subject': 'israel', 'people': 'israel', 'walk': True, 'keep': True, 'do': True, 'year': 1, 'case_source': 'Lev 26:3; Sifra Bechukotai Section 1 — the three predicates: the blessing'})
+        w.submit({'kind': 'covenant_kept', 'subject': 'the-refusers', 'people': 'the-refusers', 'walk': False, 'keep': True, 'do': True, 'year': 1, 'case_source': 'Lev 26:14; Sifra Section 2 1 — one predicate fails: the curse entry (the silence)'})
+        for r in (0, 1, 2, 3, 4):
+            w.submit({'kind': 'warning_refused', 'subject': 'israel', 'people': 'israel', 'refusals': r, 'year': 1 + r, 'case_source': 'Lev 26:14-33; Sifra Bechukotai Chapter 4-7 — refusals %d: the gate' % r})
+        w.advance(10)
+        w.submit({'kind': 'people_exiled', 'subject': 'israel', 'people': 'israel', 'land': 'the-land', 'years_dwelt': 430, 'releases_kept': 0, 'model': 'plain', 'epoch': 'ruins', 'count_jubilees': True, 'year': 10, 'case_source': '2 Chronicles 36:21; Ezekiel 4:5-6; Megillah 11b:13-14; Arakhin 12b-13a — the exile: the sabbath debt, the seventy from the ruins, the jubilees counted'})
+        w.advance(81)
+        w.submit({'kind': 'iniquity_confessed', 'subject': 'the-confessors', 'people': 'the-confessors', 'confess': True, 'humble_heart': True, 'year': 81, 'case_source': 'Lev 26:40-42; Sifra Bechukotai Chapter 8 — confessed and humbled: the covenant remembered'})
+        w.submit({'kind': 'iniquity_confessed', 'subject': 'the-half-confessors', 'people': 'the-half-confessors', 'confess': True, 'humble_heart': False, 'year': 81, 'case_source': 'Sifra Bechukotai Chapter 8 3 — confession alone: the mercy'})
+        w.submit({'kind': 'iniquity_confessed', 'subject': 'the-pining', 'people': 'the-pining', 'confess': False, 'humble_heart': False, 'year': 81, 'case_source': 'Lev 26:39 — neither: pining in the enemies\' land'})
+        w.advance(85)
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    am = lambda eid, eff: [e['amount'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    return (n('israel', 'covenant_upheld'), n('the-refusers', 'covenant_upheld'), am('israel', 'chastised_sevenfold'), n('the-land', 'land_desolate'), n('israel', 'scattered_among_nations'),
+            am('the-land', 'sabbath_debt'), yr('the-land', 'land_repays_sabbaths'), am('the-land', 'land_repays_sabbaths'), yr('israel', 'covenant_remembered'), am('the-land', 'jubilee_release'),
+            n('the-confessors', 'confessed'), n('the-confessors', 'iniquity_paid'), n('the-confessors', 'covenant_remembered'), n('the-half-confessors', 'confessed'), n('the-half-confessors', 'covenant_remembered'), n('the-pining', 'scattered_among_nations'),
+            tset, fired, w.clock.year), w
+SCENE, _W = scene()
+
+
 # ---- (2) THE ANSWER SHEET — the run log + the recorded computations --
 def bavli(tractate, daf, side, seg, must):
     d = json.load(open(ROOT + '/Data/bavli_%s_he.json' % tractate))
@@ -554,6 +637,7 @@ RC_C = recovery(True, False)
 
 # (recorded row, cell, expected — every expectation a LITERAL, guarded)
 TESTS = [
+ ('THE SCENE — the Sifra\'s five gates and the Writings\' log on the world engine (clock unit YEARS: the sabbath debt and the seventy as TIMERS; the daemon\'s watch coverage printed below)', cell(SCENE, I, 'the blessing, the four refusals, the exile with its debt computed by the cycle and the seventy from the ruins, the jubilees counted, the recovery gate — every value a cell\'s', ['covenant_upheld', 'chastised_sevenfold', 'land_desolate', 'scattered_among_nations', 'sabbath_debt', 'land_repays_sabbaths', 'covenant_remembered', 'jubilee_release', 'confessed', 'iniquity_paid']), (1, 0, [7, 7, 7, 7], 2, 2, [68], [78, 80], [68, 70], [80], [17], 1, 1, 1, 1, 0, 1, 3, 3, 85)),
  ('Sifra Section 1 1-2 — the three-part condition holds: the blessing branch', CV_B, 'blessing'),
  ('Sifra Section 2 1 — one predicate fails: the curse entry', CV_C, 'curse_entry'),
  ('Sifra Section 2 3 — the entry clause carries six verb tokens', EG['verbs'], 6),
@@ -634,6 +718,7 @@ print('effects: every cell carries REGISTERED effects — nine discovered in thi
       'scattered_among_nations (TRANSFER), sabbath_debt (DEBIT), '
       'land_repays_sabbaths (TIMER), confessed, iniquity_paid, covenant_remembered '
       '[effects law satisfied]')
+_W.print_coverage()
 if ok == n:
     print()
     print('THE COVENANT CASCADE STANDS — five gates computed from the "and if" tokens, '

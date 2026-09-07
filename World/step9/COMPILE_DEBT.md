@@ -248,8 +248,25 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
       registered beside); 18 functions OWED → WRAPPED (164 / 84 / 3 of 251); FIFTY-SEVEN timers set, fifty-five fired, TWO
       CANCELLED; sixteen silences; all four probes matched their predictions before typing (tripwires clocks 162, metzora 78,
       negaim 19, yoma 23); the sweep 33/33 (3614 cells — four scene rows, one per runner). Record: REPORT_WRAP_W4.md.
-- [ ] W5 HOLINESS, SANCTIONS, THE LAND — holiness, holiness_b, sanctions, priesthood, tochacha,
-      temurah, yovel (jubilee_proclaimed, watched and never fired, fires here from Lev 25:10)
+- [x] W5 HOLINESS, SANCTIONS, THE LAND (DONE 2026-09-07, the owner: "Go" — the first sitting after compaction #78, the rereads first;
+      the campaign's LARGEST wrap): 45 case-form types registered FIRST by script (the registry 239 types, 588 runs verified, case
+      form 118 → 163) and THIRTEEN existing types given their SECOND SEAT in Lev 17-27 in place (harvest_reaped, sworn_denial_admitted,
+      stranger_wronged, blood_eaten, lay_with_beast, lay_with_menstruant, levirate_commanded, head_anointed, firstling_born, lamps_raised,
+      bread_arranged, land_sown, silver_lent — the field contract extended, never a second contract); six fields named `kind` renamed
+      before the first daemon; seven daemons DECLARED before the code (the gate failed 78 ways, then passed on the code's first run —
+      ZERO fires after it): law_holiness (7 kinds), law_holiness_b (10), law_sanctions (13), law_priesthood (13), law_tochacha (4),
+      law_temurah (5), law_yovel (10 — the clock in YEARS, the library's law_slave_term beside); THE JUBILEE FIRED: jubilee_proclaimed,
+      the seeding's unfired kind, SUBMITTED by the yovel scene at year 50 and the Exodus slave freed by the library (his six-year term
+      left PENDING at 52 — declared, not fixed); the sold field, the houses, the slaves and the consecrated holding each on a TIMER to
+      the fiftieth set at the sale; the orlah tree's three years, the exile's sabbath debt (68 by the plain fifty from 430) and the
+      seventy from the ruins as timers in years; ONE TYPE UNDER TWO LAW LAYERS three more times (judgment_rendered, ghost_pit_consulted,
+      consecrated_redeemed); the fx-union shape for a row several cells decide; 70 functions OWED → WRAPPED (234 / 14 / 3 of 251);
+      THIRTY timers set, twenty-nine fired, one pending; thirty-three silences; five of seven probes matched their predictions written
+      first, two disagreed on the scene's own shape and were corrected before a literal (the deliberate terumah eater's fifth — the
+      daemon's fault; the unwashed carcass eater's cell carries lashes, not bears_sin — the prediction's); tripwires holiness 187,
+      holiness_b 183, sanctions 242, priesthood 252; the sweep 33/33 (3621 cells — seven scene rows, one per runner); unfired 0,
+      unconsumed 1, open aliases 4. Record: REPORT_WRAP_W5.md.
+      holiness, holiness_b, sanctions, priesthood, tochacha, temurah, yovel (jubilee_proclaimed fired from Lev 25:10)
 - [ ] W6 THE SANCTUARY'S REMAINDER — sanctuary_build.altar, incense_shekel (succession, shekel, oil,
       incense, incense_altar), erection (craftsmen, donation)
 - [ ] W7 THE SINAI NARRATIVE LAWS — erection (covenant, tablets, blood_covenant, ascent, calf, presence)

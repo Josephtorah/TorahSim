@@ -63,7 +63,7 @@ sys.path.insert(0, HERE)
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
-assert GUARDED == 182, ('the guard counted %d expectations, the tripwire holds 182' % GUARDED)
+assert GUARDED == 183, ('the guard counted %d expectations, the tripwire holds 183' % GUARDED)
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -847,6 +847,167 @@ def convert_measures(q, **k):
                     'reads as "faithful to pay" (Chapter 8 11)') % (c_ani, c_ani_god), [FX.NONE])
     raise ValueError(q)
 
+import os as _os5, sys as _sys5, io as _io5, contextlib as _ctx5
+_sys5.path.insert(0, _os5.path.dirname(_os5.path.abspath(__file__)))
+# ---- THE WRAP (W5 HOLINESS, SANCTIONS, THE LAND, 2026-09-07): the daemon over the compiled holiness ledger, second half ----
+import world_engine as WE
+def law_holiness_b(event, world):
+    """Lev 19:19-37 (cold_run_holiness_b.py — mixtures, maidservant, orlah, body, daughter_sanctuary, convert_measures): the per-tree orlah TIMER in years, the bars and the debits."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    yr = event.get('year', world.clock.year)
+    if k == 'kinds_mixed':
+        d = event['doer']; ban = event.get('ban', 'sow'); out = []
+        if event.get('pair'):
+            c = mixtures('pair', pair=tuple(event['pair']))
+            if 'mixture_barred' in c['fx']:
+                out.append(E_('mixture_barred', d, value=c['v'], law='F1 [Mishnah Kilayim 1:6 — THE BEAST TABLE (the data channel): %s]' % c['v']))
+            return out                                               # a pair not in the table: the silence
+        if ban == 'wear':
+            m = mixtures('materials'); lc = mixtures('lash_count'); wc = mixtures('wearing_vs_covering')
+            return [E_('mixture_barred', d, value=m['v'], law='F1 [INK 19:19 "a garment of mixed kinds, shaatnez, shall not come upon you" — %s; %s]' % (m['v'], wc['v']['wear'])),
+                    E_('lashes', d, amount=event.get('warned_each_time', 1), value=lc['v']['warned_each_time' if event.get('warned_each_time', 1) > 1 else 'all_day'], law='F1 [Mishnah Makkot 3:8 — %s]' % lc['v'])]
+        if ban == 'breed':
+            c = mixtures('every_beast')
+            return [E_('mixture_barred', d, value=c['v'], law='F1 [INK 19:19 "your cattle you shall not breed as mixed kinds" — %s]' % c['v'])]
+        c = mixtures('minimum_act')
+        return [E_('mixture_barred', d, value=c['v'], law='F1 [INK 19:19 "your field you shall not sow as mixed kinds" — %s (Mishnah Kilayim 1:9)]' % c['v'][0])]
+    if k == 'maidservant_lain_with':
+        m = event['man']; wm = event['woman']
+        if event.get('freed'):
+            c = maidservant('freed')
+            return [E_('put_to_death', m, value=c['v'], law='F2 [Sifra Kedoshim Chapter 5 5 — freed: a man\'s wife, the mode CALLED cold_run_sanctions.adultery -> %s]' % c['v'])]
+        if event.get('redeemed_by_halves'):
+            c = maidservant('by_halves')
+            return [E_('released', wm, value=c['v'], law='F2 [Sifra Kedoshim Chapter 5 3 — %s]' % c['v'])]
+        dw = maidservant('death_withheld'); inq = maidservant('inquest'); ram = maidservant('asham_ram'); at = maidservant('atonement'); ea = maidservant('asham_eater')
+        return [E_('exempt', m, value=dw['v'], law='F2 [INK 19:20 "they shall NOT be put to death, for she was not freed"]'),
+                E_('lashes', wm, value=inq['v'], law='F2 [INK 19:20 "there shall be an inquest" — %s (Sifra Kedoshim Chapter 5 2)]' % inq['v']),
+                E_('accepted', 'the-guilt-ram', cp=m, value=maidservant('asham_place')['v'], law='F2 [INK 19:21 "a ram of guilt" — %s; the place CALLED offerings]' % ram['v']),
+                E_('most_holy', 'the-guilt-ram', value=maidservant('asham_grade')['v'], law='F2 [the guilt offering\'s grade — CALLED tzav]'),
+                E_('due_to_priest', 'the-guilt-ram', cp='the-priests', value=ea['v'], law='F2 [the eaters — CALLED tzav: %s]' % ea['v']),
+                E_('eating_window', 'the-guilt-ram', value=ea['v'], law='F2 [a day and a night — CALLED tzav]'),
+                E_('atoned_forgiven', m, cp='HEAVEN', value=at['v'], law='F2 [INK 19:22 "and the priest shall atone for him... and it shall be forgiven him" — %s]' % (maidservant('deliberate_as_erring')['v'] if event.get('deliberate') else maidservant('one_for_many')['v']))]
+    if k == 'tree_planted':
+        p = event['planter']; t = event['tree']
+        if event.get('uprooted'):
+            c = orlah('uprooted', can_live=event.get('can_live', True))
+            if 'exempt' in c['fx']:
+                return [E_('exempt', t, value=c['v'], law='F3 [Mishnah Orlah 1:3 — uprooted with its rock, it can live: no new planting]')]
+            return [E_('orlah_years', t, cp=p, amount=3, due=yr + 3, value=c['v'], law='F3 [Mishnah Orlah 1:3 — it cannot live: the count restarts from this planting]')]
+        if event.get('fruit_used'):
+            c = orlah('dye') if event['fruit_used'] == 'dye' else orlah('cooking_oven')
+            out = [E_('burned_in_fire', 'the-%s' % event['fruit_used'], cp=p, value=str(c['v'])[:60], law='F3 [Mishnah Orlah 3:1-3 — the garment dyed and the dish cooked with orlah fruit: burned]')]
+            if event.get('warned'):
+                lj = orlah('lashes_juice')
+                out.append(E_('lashes', p, value=lj['v'], law='F3 [Mishnah Terumot 11:3 — %s]' % lj['v']))
+            return out
+        tm = orlah('timer'); cf = orlah('count_from'); fy = orlah('fourth_year'); ls = orlah('like_second_tithe')
+        return [E_('orlah_years', t, cp=p, amount=3, due=yr + 3, value=tm['v'], law='F3 [INK 19:23 "three years it shall be to you uncircumcised" — the per-TREE timer %s]' % cf['v']),
+                E_('fourth_year_holy', t, cp=p, due=yr + 3, value=fy['v'], law='F3 [INK 19:24 "in the fourth year all its fruit shall be HOLY, PRAISES to the LORD" — fires when the count closes]'),
+                E_('adds_fifth', p, cp='HEAVEN', due=yr + 3, value=ls['v'], law='F3 [like the second tithe: %s]' % ls['v'])]
+    if k == 'body_marked':
+        p = event['person']; act = event.get('act', 'beard')
+        if event.get('sex') == 'female':
+            c = body('women')
+            return [E_('exempt', p, value=c['v'], law='F4 [Mishnah Kiddushin 1:7 / Sifra Kedoshim Chapter 6 — the women exempt from the head and the beard: %s]' % c['v'])]
+        if act == 'beard':
+            c = body('razor', tool=event.get('tool', 'razor'))
+            if 'lashes' in c['fx']:
+                return [E_('lashes', p, value=c['v'], law='F4 [INK 19:27 "you shall not DESTROY the corner of your beard" — THE TWO-CONSTRAINT SOLVE with Lev 21:5: the razor]')]
+            return [E_('exempt', p, value=c['v'], law='F4 [Sifra Kedoshim Chapter 6 4 — %s]' % c['why'][:80])]
+        if act == 'gash':
+            g, dd = event.get('gashes', 1), event.get('dead', 1); c = body('multipliers', gashes=g, dead=dd)
+            return [E_('lashes', p, amount=c['v'], value=body('gash_for_dead')['v'], law='F4 [INK 19:28 "a gash for a soul" — %d x %d (Mishnah Makkot 3:5)]' % (g, dd))]
+        if act == 'tattoo':
+            c = body('tattoo')
+            return [E_('lashes', p, value=c['v'], law='F4 [INK 19:28 "a tattoo inscription" — %s (Mishnah Makkot 3:6)]' % c['v'])]
+        c = body('rounding_both')
+        return [E_('lashes', p, amount=body('corners_count')['v']['head'], value=c['v'], law='F4 [INK 19:27 "you shall not round the corner of your head" — %s]' % c['v'])]
+    if k == 'daughter_profaned':
+        c = daughter_sanctuary('land_strays')
+        return [E_('land_vomits', 'the-land', cp=event['father'], value=c['v'], law='F5 [INK 19:29 "lest the land go astray and fill with scheme" — %s]' % c['v'])]
+    if k == 'sanctuary_built_on_sabbath':
+        b = event['builder']; c = daughter_sanctuary('sabbath_over_temple'); t = daughter_sanctuary('twin_verse')
+        return [E_('labor_barred', b, value=c['v'], law='F5 [INK 19:30 "My Sabbaths KEEP and My sanctuary FEAR" — %s]' % c['v']),
+                E_('rest_required', b, value=t['v'], law='F5 [%s — the clause at two seats]' % t['v'])]
+    if k == 'ghost_pit_consulted':
+        p = event['person']
+        if event.get('role') == 'bearer':
+            c = daughter_sanctuary('ov_bearer'); tv = daughter_sanctuary('three_verses')
+            return [E_('stoned', p, value=c['v'], law='F5 [CALLED cold_run_sanctions.ov(bearer) -> %s (Lev 20:27)]' % c['v']),
+                    E_('karet_cut_off', p, cp='HEAVEN', value=str(tv['v'])[:60], law='F5 [the three verses — the warning 19:31, the karet 20:6, the stoning 20:27]')]
+        return []                                                    # the consulter: warning only (Mishnah Sanhedrin 7:7) — the silence
+    if k == 'elder_approached':
+        p = event['person']; e = event['elder']
+        if event.get('within_reach') is False:
+            return []                                                # from afar: nothing owed (Sifra Kedoshim Chapter 7 13) — the silence
+        r = daughter_sanctuary('rise_reach'); h = daughter_sanctuary('honor_protocol'); hs = daughter_sanctuary('heart_second')
+        es = daughter_sanctuary('elder_sage') if event.get('elder_kind', 'sage') == 'sage' else daughter_sanctuary('every_gray_head')
+        return [E_('rise_owed', p, cp=e, value=es['v'], law='F5 [INK 19:32 "before the hoary head you shall RISE" — %s; %s]' % (r['v'], es['v'])),
+                E_('honor_owed', p, cp=e, value=h['v'], law='F5 [INK 19:32 "honor the face of an elder" — the protocol %s (costs nothing)]' % h['v']),
+                E_('given_to_the_heart', p, cp='HEAVEN', value=hs['v'], law='F5 [INK 19:32 "and you shall fear your God" — the clause\'s second firing]')]
+    if k == 'stranger_wronged':
+        wr = event['wronger']; v = event.get('victim')
+        if event.get('by_words'):
+            return []                                                # wronging by words has no court remedy (Bava Metzia 4:10) — the silence at this seat
+        c = convert_measures('love_convert')
+        return [E_('love_owed', wr, cp=v, value=c['v'], law='F6 [INK 19:34 "you shall love him as yourself" — CALLED cold_run_holiness.conduct(great_rule) -> %s]' % c['v'][0])]
+    if k == 'judgment_rendered':
+        if not event.get('measure'):
+            return []                                                # the court's seat (19:15) is the first half's — the silence here
+        c = convert_measures('measures_are_judgment')
+        return [E_('judgment_perverted', event['judge'], cp='HEAVEN', value=c['v'], law='F6 [INK 19:35 "do no wrong IN JUDGMENT — in measure, weight, capacity" — CALLED cold_run_holiness.conduct(judge_is_measurer) -> %s: the measurer is a judge]' % c['v'])]
+    return []
+
+def scene():
+    """THE SCENE — Kilayim, Keritot, Orlah, Makkot and the Sifra's rows replayed on the world engine (clock unit: YEARS): the orlah tree's three years as a TIMER."""
+    with _ctx5.redirect_stdout(_io5.StringIO()):
+        w = WE.World(era='the holiness ledger, second half: Kilayim, Keritot 2, Orlah, Makkot 3 on the engine (clock unit: years)')
+        w.laws = [law_holiness_b]
+        w.advance(1)
+        w.submit({'kind': 'kinds_mixed', 'subject': 'the-sower', 'doer': 'the-sower', 'ban': 'sow', 'year': 1, 'case_source': 'Lev 19:19; Mishnah Kilayim 1:9 — wheat and barley sown together'})
+        w.submit({'kind': 'kinds_mixed', 'subject': 'the-wearer', 'doer': 'the-wearer', 'ban': 'wear', 'warned_each_time': 2, 'year': 1, 'case_source': 'Mishnah Makkot 3:8 — warned and he strips and dresses: each'})
+        w.submit({'kind': 'kinds_mixed', 'subject': 'the-breeder', 'doer': 'the-breeder', 'ban': 'breed', 'year': 1, 'case_source': 'Lev 19:19 — the cattle bred as mixed kinds'})
+        w.submit({'kind': 'kinds_mixed', 'subject': 'the-pair-tester', 'doer': 'the-pair-tester', 'pair': ['wolf', 'dog'], 'year': 1, 'case_source': 'Mishnah Kilayim 1:6 — the wolf and the dog: kilayim though similar'})
+        w.submit({'kind': 'maidservant_lain_with', 'subject': 'the-lier', 'man': 'the-lier', 'woman': 'the-maidservant', 'year': 1, 'case_source': 'Lev 19:20-22; Mishnah Keritot 2:4 — the designated maidservant: no death, her inquest, his ram'})
+        w.submit({'kind': 'maidservant_lain_with', 'subject': 'the-freed-lier', 'man': 'the-freed-lier', 'woman': 'the-freed-maid', 'freed': True, 'year': 1, 'case_source': 'Sifra Kedoshim Chapter 5 5 — freed: a man\'s wife'})
+        w.submit({'kind': 'maidservant_lain_with', 'subject': 'the-half-redeemed', 'man': 'the-half-lier', 'woman': 'the-half-redeemed', 'redeemed_by_halves': True, 'year': 1, 'case_source': 'Sifra Kedoshim Chapter 5 3 — money frees by halves as the document'})
+        w.submit({'kind': 'tree_planted', 'subject': 'tree-1', 'planter': 'the-planter', 'tree': 'tree-1', 'year': 1, 'case_source': 'Lev 19:23-25; Mishnah Orlah 1:1 — planted: three years, the fourth holy'})
+        w.submit({'kind': 'tree_planted', 'subject': 'tree-2', 'planter': 'the-uprooter', 'tree': 'tree-2', 'uprooted': True, 'can_live': True, 'year': 1, 'case_source': 'Mishnah Orlah 1:3 — uprooted with its rock, it can live'})
+        w.submit({'kind': 'tree_planted', 'subject': 'tree-3', 'planter': 'the-replanter', 'tree': 'tree-3', 'uprooted': True, 'can_live': False, 'year': 1, 'case_source': 'Mishnah Orlah 1:3 — it cannot live: the count restarts'})
+        w.submit({'kind': 'tree_planted', 'subject': 'the-dyer', 'planter': 'the-dyer', 'tree': 'tree-4', 'fruit_used': 'dye', 'warned': True, 'year': 1, 'case_source': 'Mishnah Orlah 3:1; Terumot 11:3 — dyed with orlah: burned; the lashes'})
+        w.submit({'kind': 'body_marked', 'subject': 'the-shaver', 'person': 'the-shaver', 'act': 'beard', 'tool': 'razor', 'year': 1, 'case_source': 'Mishnah Makkot 3:5 — with a razor'})
+        w.submit({'kind': 'body_marked', 'subject': 'the-scissors-user', 'person': 'the-scissors-user', 'act': 'beard', 'tool': 'scissors', 'year': 1, 'case_source': 'Sifra Kedoshim Chapter 6 4 — scissors: no destruction'})
+        w.submit({'kind': 'body_marked', 'subject': 'the-gasher', 'person': 'the-gasher', 'act': 'gash', 'gashes': 5, 'dead': 1, 'year': 1, 'case_source': 'Mishnah Makkot 3:5 — five gashes for one dead'})
+        w.submit({'kind': 'body_marked', 'subject': 'the-tattooed', 'person': 'the-tattooed', 'act': 'tattoo', 'year': 1, 'case_source': 'Mishnah Makkot 3:6 — wrote and engraved'})
+        w.submit({'kind': 'body_marked', 'subject': 'the-rounder', 'person': 'the-rounder', 'act': 'head', 'year': 1, 'case_source': 'Lev 19:27 — the head rounded'})
+        w.submit({'kind': 'body_marked', 'subject': 'the-woman', 'person': 'the-woman', 'act': 'head', 'sex': 'female', 'year': 1, 'case_source': 'Mishnah Kiddushin 1:7 — the women exempt'})
+        w.submit({'kind': 'daughter_profaned', 'subject': 'the-father', 'father': 'the-father', 'daughter': 'the-daughter', 'purpose': 'harlotry', 'year': 1, 'case_source': 'Lev 19:29 — the land strays'})
+        w.submit({'kind': 'sanctuary_built_on_sabbath', 'subject': 'the-builder', 'builder': 'the-builder', 'day': 'sabbath', 'year': 1, 'case_source': 'Sifra Kedoshim Chapter 7 7 — the Temple\'s building does not override the Sabbath'})
+        w.submit({'kind': 'ghost_pit_consulted', 'subject': 'the-ov-bearer', 'person': 'the-ov-bearer', 'role': 'bearer', 'year': 1, 'case_source': 'Lev 20:27; Mishnah Sanhedrin 7:7 — the bearer stoned'})
+        w.submit({'kind': 'ghost_pit_consulted', 'subject': 'the-consulter', 'person': 'the-consulter', 'role': 'consulter', 'year': 1, 'case_source': 'Lev 19:31; Mishnah Sanhedrin 7:7 — the consulter warned only'})
+        w.submit({'kind': 'elder_approached', 'subject': 'the-youth', 'person': 'the-youth', 'elder': 'the-sage', 'within_reach': True, 'year': 1, 'case_source': 'Lev 19:32; Sifra Kedoshim Chapter 7 12-14 — rise and honor'})
+        w.submit({'kind': 'elder_approached', 'subject': 'the-far-youth', 'person': 'the-far-youth', 'elder': 'the-sage', 'within_reach': False, 'year': 1, 'case_source': 'Sifra Kedoshim Chapter 7 13 — from afar: nothing'})
+        w.submit({'kind': 'stranger_wronged', 'subject': 'the-wronger-by-words', 'wronger': 'the-wronger-by-words', 'victim': 'the-convert', 'victim_class': 'convert', 'by_words': True, 'year': 1, 'case_source': 'Mishnah Bava Metzia 4:10 — by words: no court remedy'})
+        w.submit({'kind': 'stranger_wronged', 'subject': 'the-neighbor-of-the-convert', 'wronger': 'the-neighbor-of-the-convert', 'victim': 'the-convert', 'victim_class': 'convert', 'year': 1, 'case_source': 'Lev 19:34 — love him as yourself'})
+        w.submit({'kind': 'judgment_rendered', 'subject': 'the-measurer', 'judge': 'the-measurer', 'measure': True, 'year': 1, 'case_source': 'Lev 19:35 — the measurer is a judge'})
+        w.submit({'kind': 'judgment_rendered', 'subject': 'the-court-judge', 'judge': 'the-court-judge', 'year': 1, 'case_source': 'Lev 19:15 — the court\'s seat: the first half\'s'})
+        w.advance(5)                                                 # the fourth year has come and gone: the orlah timers fired
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    am = lambda eid, eff: [e['amount'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    return (n('the-sower', 'mixture_barred'), n('the-wearer', 'mixture_barred'), am('the-wearer', 'lashes'), n('the-breeder', 'mixture_barred'), n('the-pair-tester', 'mixture_barred'),
+            n('the-lier', 'exempt'), n('the-maidservant', 'lashes'), n('the-guilt-ram', 'accepted'), n('the-guilt-ram', 'most_holy'), n('the-guilt-ram', 'due_to_priest'), n('the-guilt-ram', 'eating_window'), n('the-lier', 'atoned_forgiven'), n('the-freed-lier', 'put_to_death'), n('the-half-redeemed', 'released'),
+            yr('tree-1', 'orlah_years'), yr('tree-1', 'fourth_year_holy'), yr('the-planter', 'adds_fifth'), n('tree-2', 'exempt'), yr('tree-3', 'orlah_years'), n('the-dye', 'burned_in_fire'), n('the-dyer', 'lashes'),
+            n('the-shaver', 'lashes'), n('the-scissors-user', 'exempt'), am('the-gasher', 'lashes'), n('the-tattooed', 'lashes'), n('the-rounder', 'lashes'), n('the-woman', 'exempt'),
+            n('the-land', 'land_vomits'), n('the-builder', 'labor_barred'), n('the-builder', 'rest_required'), n('the-ov-bearer', 'stoned'), n('the-ov-bearer', 'karet_cut_off'), n('the-consulter', 'stoned'),
+            n('the-youth', 'rise_owed'), n('the-youth', 'honor_owed'), n('the-youth', 'given_to_the_heart'), n('the-far-youth', 'rise_owed'), n('the-wronger-by-words', 'love_owed'), n('the-neighbor-of-the-convert', 'love_owed'), n('the-measurer', 'judgment_perverted'), n('the-court-judge', 'judgment_perverted'),
+            tset, fired, w.clock.year), w
+SCENE, _W = scene()
+
+
 # ---- (2) TEST DATA — the Mishnah rows, read whole from the shelf ------
 def load(t):
     d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
@@ -882,6 +1043,7 @@ for b, ch, m, must in SHEET:
 print('answer sheet: %d Mishnah rows verified by their own tokens (Kilayim, Orlah, Bava Batra 5 read whole — the topic docket)' % len(SHEET))
 
 TESTS = [
+ ('THE SCENE — Kilayim, Keritot 2, Orlah, Makkot 3 and the Sifra on the world engine (clock unit YEARS: the orlah tree\'s three as a TIMER; the daemon\'s watch coverage printed below)', cell(SCENE, I, 'the three mixtures, the maidservant\'s ram by call, the tree\'s count and its fourth year, the razor and the gashes, the daughter, the sanctuary on the Sabbath, the ghost-pit by call, the elder, the convert, the measurer — every value a cell\'s', ['mixture_barred', 'lashes', 'exempt', 'atoned_forgiven', 'accepted', 'most_holy', 'due_to_priest', 'eating_window', 'released', 'put_to_death', 'orlah_years', 'fourth_year_holy', 'adds_fifth', 'burned_in_fire', 'land_vomits', 'labor_barred', 'rest_required', 'stoned', 'karet_cut_off', 'rise_owed', 'honor_owed', 'given_to_the_heart', 'love_owed', 'judgment_perverted']), (1, 1, [2], 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, [4], [4], [4], 1, [4], 1, 1, 1, 1, [5], 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 4, 4, 5)),
  # ---- THE THREE MIXTURES ----
  ('Lev 19:19 — three verbs, one noun thrice', mixtures('three_bans'), ['breed', 'sow', 'wear']),
  ('Lev 19:19 — the noun three times', mixtures('noun_thrice'), 3),
@@ -1097,6 +1259,7 @@ ops = FX.summarize(used)
 print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
 print('effects: every cell carries REGISTERED effects — FIVE discovered in these verses\' own verbs: mixture_barred (BLOCK), '
       'orlah_years (TIMER, per tree), fourth_year_holy (STATUS), rise_owed and honor_owed (DEBIT) [effects law satisfied]')
+_W.print_coverage()
 if ok == n:
     print('THE HOLINESS LEDGER, SECOND HALF, COMPILES — the three mixtures on one noun thrice, the maidservant on her hapax tokens '
           'with the deliberate as the erring read off "which he sinned" twice, orlah on the tripled token with its per-tree timer, '

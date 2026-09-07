@@ -359,6 +359,102 @@ daemons:
       goat_dispatched: [dispatched_to_wilderness, atoned_forgiven, washes_and_bathes]
       inner_service_performed: [accepted, atoned_forgiven, sprinkled_seven, immersed, smoked_to_the_lord, burned_outside_camp, defiles_garments, washes_and_bathes]
       yom_kippur_kept: [atoned_forgiven]
+  # ---- W5 HOLINESS, SANCTIONS, THE LAND (D9-iii, 2026-09-07): declared BEFORE the code, from the ink's case heads of
+  # Lev 17-22, 24:1-9, 25, 26, 27; the sabbatical's seventh and the jubilee's fiftieth as TIMERS in YEARS, the orlah
+  # tree's three, the walled house's one, the exile's sabbath debt and the seventy; the unfired jubilee_proclaimed
+  # FIRED by the yovel tape with the library's law_slave_term registered beside; thirteen second seats (harvest_reaped,
+  # sworn_denial_admitted, stranger_wronged, blood_eaten, lay_with_beast, lay_with_menstruant, levirate_commanded,
+  # head_anointed, firstling_born, lamps_raised, bread_arranged, land_sown, silver_lent) — one type, two law layers
+  law_holiness:
+    file: cold_run_holiness.py
+    wraps: holiness (Lev 19:1-18 — the peace offering's window, the poor gifts, theft and the oath, robbery, the wage, the court, the neighbor)
+    watches:
+      shelamim_slaughtered_for_acceptance: [accepted, eating_window, burn_remainder, not_accepted, karet_cut_off, lashes]
+      harvest_reaped: [left_for_the_poor, exempt]
+      sworn_denial_admitted: [name_profaned, restores, adds_fifth, atoned_forgiven, oath_imposed, pays_double, pays_four_five, exempt]
+      neighbor_robbed: [restores, adds_fifth, exempt]
+      wage_withheld: [wage_due_by_morning, exempt, oath_imposed]
+      judgment_rendered: [judgment_perverted]
+      neighbor_endangered: [given_to_the_heart, interest_barred, rescue_owed, rebuke_owed, love_owed]
+  law_holiness_b:
+    file: cold_run_holiness_b.py
+    wraps: holiness_b (Lev 19:19-37 — the mixtures, the maidservant, orlah, the body, the daughter, the sanctuary, the ghost-pit, the elder, the convert, the measures)
+    watches:
+      kinds_mixed: [mixture_barred, lashes]
+      maidservant_lain_with: [exempt, lashes, atoned_forgiven, accepted, most_holy, due_to_priest, eating_window, released, put_to_death]
+      tree_planted: [orlah_years, fourth_year_holy, adds_fifth, exempt, burned_in_fire, lashes]
+      body_marked: [lashes, exempt]
+      daughter_profaned: [land_vomits]
+      sanctuary_built_on_sabbath: [labor_barred, rest_required]
+      ghost_pit_consulted: [stoned, karet_cut_off]
+      elder_approached: [rise_owed, honor_owed, given_to_the_heart]
+      stranger_wronged: [love_owed]
+      judgment_rendered: [judgment_perverted]
+  law_sanctions:
+    file: cold_run_sanctions.py
+    wraps: sanctions (Lev 17, 18, 20 — the outside slaughter, the platform, the blood, the covering, the carcass, the unions matrix, the levirate grades, Molech, the ghost-pit, the curser, the land)
+    watches:
+      offering_slaughtered_outside: [karet_cut_off, blood_reckoned, exempt, atoned_forgiven]
+      platform_offering_brought: [accepted, consecrated, disqualified, exempt, karet_cut_off]
+      blood_eaten: [face_set_against, karet_cut_off, lashes, atoned_forgiven]
+      game_blood_poured: [cover_owed, exempt, consecrated]
+      carcass_eaten: [impure_until_evening, washes_and_bathes, defiles_garments, bears_sin, lashes, karet_cut_off]
+      forbidden_union: [stoned, burned_by_court, put_to_death, karet_cut_off, childless, bears_sin, beast_killed, suspends, atoned_forgiven, exempt]
+      lay_with_beast: [stoned, karet_cut_off, beast_killed, put_to_death]
+      lay_with_menstruant: [karet_cut_off]
+      levirate_commanded: [exempt, released, barred_from_holies, karet_cut_off]
+      seed_given_to_molech: [stoned, karet_cut_off, face_set_against, exempt]
+      ghost_pit_consulted: [stoned, karet_cut_off]
+      parent_cursed: [stoned]
+      land_defiled: [land_vomits, karet_cut_off, lashes, disqualified]
+  law_priesthood:
+    file: cold_run_priesthood.py
+    wraps: priesthood (Lev 21, 22, 24:1-9 — the priest's file, the blemish census, the holy food, the acceptable animal, the lamp and the table)
+    watches:
+      priest_defiled_for_dead: [defiled_for_kin, service_profaned, lashes]
+      priest_body_marked: [lashes]
+      priest_married: [profaned_seed, lashes, service_profaned]
+      priest_daughter_whored: [burned_by_court]
+      head_anointed: [invested_office]
+      blemished_priest_approached: [blemish_barred, service_profaned, due_to_priest, most_holy, accepted]
+      priest_impure_approached_holy: [karet_cut_off, death_by_heaven, impure_until_evening, immersed, stranger_barred, name_profaned]
+      terumah_eaten: [terumah_fed, stranger_barred, adds_fifth, pays, pays_double, burned_by_court, death_by_heaven]
+      offering_vowed: [accepted, not_accepted, consecrated, lashes, name_profaned, exempt, forewarned, eating_window]
+      firstling_born: [eighth_day_fit, accepted]
+      mother_and_young_slaughtered: [same_day_slaughter_barred, lashes]
+      lamps_raised: [lamp_arranged]
+      bread_arranged: [bread_set_weekly, azkarah_to_fire, due_to_priest, most_holy]
+  law_tochacha:
+    file: cold_run_tochacha.py
+    wraps: tochacha (Lev 26 — the covenant's blessing, the five gates, the exile and the sabbath debt, the seventy, the recovery; clock unit YEARS)
+    watches:
+      covenant_kept: [covenant_upheld]
+      warning_refused: [chastised_sevenfold, land_desolate, scattered_among_nations]
+      people_exiled: [sabbath_debt, land_repays_sabbaths, land_desolate, scattered_among_nations, covenant_remembered, jubilee_release]
+      iniquity_confessed: [confessed, iniquity_paid, covenant_remembered, scattered_among_nations]
+  law_temurah:
+    file: cold_run_temurah.py
+    wraps: temurah (Lev 27:9-15, 26-33 — the consecration, the substitution, the redemption, the devotion, the tithe)
+    watches:
+      thing_consecrated: [consecrated]
+      substitute_declared: [substitution, consecrated, lashes, redemption_right]
+      consecrated_redeemed: [adds_fifth, redemption_right, redeem_or_break]
+      thing_devoted: [most_holy, due_to_priest, put_to_death, consecrated]
+      herd_tithed: [consecrated, substitution]
+  law_yovel:
+    file: cold_run_yovel.py
+    wraps: yovel (Lev 25 + 27:2-8, 16-25 — the cycle, the jubilee, the field and the house, the poor brother, the slave, the valuations; clock unit YEARS)
+    watches:
+      land_sown: [land_release, labor_barred, lashes, jubilee_release, goes_free, returns_to_holding]
+      jubilee_proclaimed: [jubilee_release]
+      field_sold: [redemption_right, pays, returns_to_holding, restores]
+      house_sold: [redemption_right, sold_in_perpetuity, returns_to_holding]
+      brother_grew_poor: [supports_kinsman]
+      silver_lent: [interest_barred]
+      brother_sold_as_slave: [jubilee_release, goes_free, returns_to_holding, pays, redemption_right, term_clock, barred_from_it, exempt]
+      person_valued: [gives_fixed_sum]
+      field_consecrated: [gives_fixed_sum, due_to_priest, adds_fifth, returns_to_holding]
+      consecrated_redeemed: [adds_fifth]
 functions:
   calendar:
     sabbatical: {status: WRAPPED, by: law_calendar}
@@ -442,21 +538,21 @@ functions:
   guardians:
     "<module>": {status: WRAPPED, by: law_guardians}
   holiness:
-    shelamim: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: accepted, burn_remainder, eating_window, karet_cut_off, lashes, not_accepted"}
-    classify: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: exempt, left_for_the_poor"}
-    gifts: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: exempt, left_for_the_poor"}
-    theft: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: name_profaned"}
-    deposit_case: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: adds_fifth, atoned_forgiven, exempt, name_profaned, oath_imposed, pays_double, pays_four_five, restores"}
-    robbery: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: adds_fifth, exempt, restores"}
-    wage: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: exempt, oath_imposed, wage_due_by_morning"}
-    conduct: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: given_to_the_heart, interest_barred, judgment_perverted, love_owed, rebuke_owed, rescue_owed"}
+    shelamim: {status: WRAPPED, by: law_holiness}
+    classify: {status: WRAPPED, by: law_holiness}
+    gifts: {status: WRAPPED, by: law_holiness}
+    theft: {status: WRAPPED, by: law_holiness}
+    deposit_case: {status: WRAPPED, by: law_holiness}
+    robbery: {status: WRAPPED, by: law_holiness}
+    wage: {status: WRAPPED, by: law_holiness}
+    conduct: {status: WRAPPED, by: law_holiness}
   holiness_b:
-    mixtures: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: lashes, mixture_barred"}
-    maidservant: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: accepted, atoned_forgiven, due_to_priest, eating_window, exempt, lashes, most_holy, put_to_death, released"}
-    orlah: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: adds_fifth, burned_in_fire, exempt, fourth_year_holy, lashes, orlah_years"}
-    body: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: exempt, lashes"}
-    daughter_sanctuary: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: given_to_the_heart, honor_owed, karet_cut_off, labor_barred, land_vomits, rest_required, rise_owed, stoned"}
-    convert_measures: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: judgment_perverted, love_owed"}
+    mixtures: {status: WRAPPED, by: law_holiness_b}
+    maidservant: {status: WRAPPED, by: law_holiness_b}
+    orlah: {status: WRAPPED, by: law_holiness_b}
+    body: {status: WRAPPED, by: law_holiness_b}
+    daughter_sanctuary: {status: WRAPPED, by: law_holiness_b}
+    convert_measures: {status: WRAPPED, by: law_holiness_b}
   incense_shekel:
     persons: {status: WRAPPED, by: law_investiture}
     bull: {status: WRAPPED, by: law_investiture}
@@ -533,34 +629,34 @@ functions:
     covenant: {status: WRAPPED, by: law_pre_sinai}
     circumcision: {status: WRAPPED, by: law_pre_sinai}
   priesthood:
-    family: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: accepted, burned_by_court, defiled_for_kin, disqualified, invested_office, lashes, profaned_seed, service_profaned"}
-    blemish: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: accepted, blemish_barred, due_to_priest, most_holy, service_profaned"}
-    holy_food: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: adds_fifth, burned_by_court, death_by_heaven, exempt, immersed, impure_until_evening, karet_cut_off, name_profaned, pays, pays_double, service_profaned, stranger_barred, terumah_fed"}
-    acceptable: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: accepted, consecrated, eating_window, eighth_day_fit, exempt, forewarned, lashes, name_profaned, not_accepted, same_day_slaughter_barred"}
-    lamp_table: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: azkarah_to_fire, bread_set_weekly, due_to_priest, lamp_arranged, most_holy"}
+    family: {status: WRAPPED, by: law_priesthood}
+    blemish: {status: WRAPPED, by: law_priesthood}
+    holy_food: {status: WRAPPED, by: law_priesthood}
+    acceptable: {status: WRAPPED, by: law_priesthood}
+    lamp_table: {status: WRAPPED, by: law_priesthood}
   sanctions:
-    levirate: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: exempt, released"}
-    grade: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: exempt, released"}
-    cowives: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: barred_from_holies, exempt, karet_cut_off, released"}
-    names: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: karet_cut_off"}
-    sanction: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: bears_sin, beast_killed, burned_by_court, childless, karet_cut_off, put_to_death, stoned"}
-    census: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: burned_by_court, karet_cut_off, lashes, put_to_death, stoned"}
-    burned_nine: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: burned_by_court"}
-    burning_scope: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: burned_by_court"}
-    double_count: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: stoned"}
-    beast: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: beast_killed, put_to_death, stoned"}
-    severity: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: exempt, put_to_death"}
-    molech: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: exempt, face_set_against, karet_cut_off, stoned"}
-    ov: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: karet_cut_off, stoned"}
-    curser: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: stoned"}
-    adultery: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: atoned_forgiven, exempt, karet_cut_off, put_to_death, suspends"}
-    unions_misc: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: childless, exempt, karet_cut_off, stoned"}
-    outside: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: atoned_forgiven, blood_reckoned, exempt, karet_cut_off, pinched"}
-    platform: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: accepted, consecrated, disqualified, exempt, karet_cut_off"}
-    blood: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: atoned_forgiven, face_set_against, karet_cut_off, lashes"}
-    covering: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: consecrated, cover_owed, exempt"}
-    carcass: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: bears_sin, defiles_garments, impure_until_evening, karet_cut_off, lashes, washes_and_bathes"}
-    frame: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: disqualified, karet_cut_off, land_vomits, lashes"}
+    levirate: {status: WRAPPED, by: law_sanctions}
+    grade: {status: WRAPPED, by: law_sanctions}
+    cowives: {status: WRAPPED, by: law_sanctions}
+    names: {status: WRAPPED, by: law_sanctions}
+    sanction: {status: WRAPPED, by: law_sanctions}
+    census: {status: WRAPPED, by: law_sanctions}
+    burned_nine: {status: WRAPPED, by: law_sanctions}
+    burning_scope: {status: WRAPPED, by: law_sanctions}
+    double_count: {status: WRAPPED, by: law_sanctions}
+    beast: {status: WRAPPED, by: law_sanctions}
+    severity: {status: WRAPPED, by: law_sanctions}
+    molech: {status: WRAPPED, by: law_sanctions}
+    ov: {status: WRAPPED, by: law_sanctions}
+    curser: {status: WRAPPED, by: law_sanctions}
+    adultery: {status: WRAPPED, by: law_sanctions}
+    unions_misc: {status: WRAPPED, by: law_sanctions}
+    outside: {status: WRAPPED, by: law_sanctions}
+    platform: {status: WRAPPED, by: law_sanctions}
+    blood: {status: WRAPPED, by: law_sanctions}
+    covering: {status: WRAPPED, by: law_sanctions}
+    carcass: {status: WRAPPED, by: law_sanctions}
+    frame: {status: WRAPPED, by: law_sanctions}
   sanctuary_build:
     offering: {status: WRAPPED, by: law_sanctuary_build}
     ark: {status: WRAPPED, by: law_sanctuary_build}
@@ -585,22 +681,22 @@ functions:
     fire: {status: WRAPPED, by: law_eighth_day}
     eras: {status: WRAPPED, by: law_eighth_day}
   temurah:
-    consecrate: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: consecrated"}
-    substitute: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: consecrated, lashes, redemption_right, substitution"}
-    redeem: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: adds_fifth, redeem_or_break, redemption_right"}
-    fifth_census: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: adds_fifth"}
-    devote: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: consecrated, due_to_priest, most_holy, put_to_death"}
-    tithe: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: consecrated, substitution"}
-    firstborn_trick: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: consecrated"}
+    consecrate: {status: WRAPPED, by: law_temurah}
+    substitute: {status: WRAPPED, by: law_temurah}
+    redeem: {status: WRAPPED, by: law_temurah}
+    fifth_census: {status: WRAPPED, by: law_temurah}
+    devote: {status: WRAPPED, by: law_temurah}
+    tithe: {status: WRAPPED, by: law_temurah}
+    firstborn_trick: {status: WRAPPED, by: law_temurah}
   tochacha:
-    covenant: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: covenant_upheld"}
-    cascade: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: chastised_sevenfold, land_desolate, scattered_among_nations"}
-    measures: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: land_desolate, scattered_among_nations"}
-    scaling: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: covenant_upheld"}
-    sabbath_debt: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: land_desolate, land_repays_sabbaths, sabbath_debt, scattered_among_nations"}
-    seventy_timer: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: covenant_remembered, land_repays_sabbaths"}
-    jubilee_count: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: jubilee_release"}
-    recovery: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: confessed, covenant_remembered, iniquity_paid, scattered_among_nations"}
+    covenant: {status: WRAPPED, by: law_tochacha}
+    cascade: {status: WRAPPED, by: law_tochacha}
+    measures: {status: WRAPPED, by: law_tochacha}
+    scaling: {status: WRAPPED, by: law_tochacha}
+    sabbath_debt: {status: WRAPPED, by: law_tochacha}
+    seventy_timer: {status: WRAPPED, by: law_tochacha}
+    jubilee_count: {status: WRAPPED, by: law_tochacha}
+    recovery: {status: WRAPPED, by: law_tochacha}
   tzav:
     altar_machine: {status: WRAPPED, by: law_tzav}
     vessel_purge: {status: WRAPPED, by: law_tzav}
@@ -630,21 +726,20 @@ functions:
     dispatch_goat: {status: WRAPPED, by: law_yoma}
     main: {status: WRAPPED, by: law_yoma}
   yovel:
-    cycle: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: goes_free, jubilee_release, labor_barred, land_release, returns_to_holding"}
-    jubilee: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: goes_free, jubilee_release, returns_to_holding"}
-    field_sale: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: pays, redemption_right, returns_to_holding"}
-    house_sale: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: redemption_right, returns_to_holding, sold_in_perpetuity"}
-    overreaching: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: restores"}
-    interest: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: interest_barred"}
-    hebrew_slave: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | the skeleton's law_slave_term wraps the Exod 21:2 seat (term_clock, goes_free, jubilee_release); the Lev 25 seat's redemption and the kinsman are not replayed; jubilee_proclaimed is watched and never fired"}
-    valuation: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: gives_fixed_sum"}
-    field_valuation: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: adds_fifth, due_to_priest, gives_fixed_sum"}
-    sabbatical: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: jubilee_release, labor_barred, land_release, lashes"}
-    interest_scope: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: interest_barred"}
-    support_duty: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: supports_kinsman"}
-    sale_manner: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: barred_from_it"}
-    rigor_visibility: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: barred_from_it, exempt"}
-unfired:
-  jubilee_proclaimed: "watched by law_slave_term (the era-wide release); the skeleton's scene 5 reaches the jubilee through slave_pierced's jubilee_year TIMER instead — the seeding's finding; W5's yovel wrap fires it from Lev 25:10"
+    cycle: {status: WRAPPED, by: law_yovel}
+    jubilee: {status: WRAPPED, by: law_yovel}
+    field_sale: {status: WRAPPED, by: law_yovel}
+    house_sale: {status: WRAPPED, by: law_yovel}
+    overreaching: {status: WRAPPED, by: law_yovel}
+    interest: {status: WRAPPED, by: law_yovel}
+    hebrew_slave: {status: WRAPPED, by: law_yovel}
+    valuation: {status: WRAPPED, by: law_yovel}
+    field_valuation: {status: WRAPPED, by: law_yovel}
+    sabbatical: {status: WRAPPED, by: law_yovel}
+    interest_scope: {status: WRAPPED, by: law_yovel}
+    support_duty: {status: WRAPPED, by: law_yovel}
+    sale_manner: {status: WRAPPED, by: law_yovel}
+    rigor_visibility: {status: WRAPPED, by: law_yovel}
+unfired: {}
 unconsumed:
   overflow_reported: "submitted by cold_run_sanctuary_build.py at Exod 36:5 (the craftsmen's report); law_sanctuary_build comments 'no law' — the halt (36:6) is the act that writes; kept on the tape as the recorded report"

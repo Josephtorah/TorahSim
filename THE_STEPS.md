@@ -1862,6 +1862,34 @@ and the Day's service order is the tape itself — eighteen submits keyed by the
 verse reference, seven writing the spec's effects by call, eleven the law's own
 silences. Record: World/step9/REPORT_WRAP_W4.md. Next: W5 HOLINESS, SANCTIONS,
 THE LAND.
+W5 HOLINESS, SANCTIONS, THE LAND (2026-09-07, the first sitting after compaction
+#78, the owner: "Go"): the campaign's largest wrap — seventy functions in seven
+runners, Leviticus 17 through 22, 24:1-9 and 25 through 27 — by the same rhythm:
+45 case-form types registered first by script (the registry 239 types, 588 runs
+verified, the case form 163) and THIRTEEN existing types seated a second time in
+these chapters in place (the harvest's poor gifts, the sworn denial's warnings,
+the stranger, the blood, the beast, the menstruant, the levirate's rival wives,
+the high priest's anointing, the firstling, the lamp and the table as the
+erection's acts under their statute, the land sown, the silver lent — one type,
+two law layers, the field contract extended); seven daemons declared before their
+code (the gate failed 78 ways, then passed on the code's first run with no fire
+after it), every value a call into the runner's own cells, every scene printed
+before typed — five of seven probes matching the predictions written first, two
+corrected on the scene's own shape before a literal; 234 wrapped and 14 owed, the
+sweep 33/33 (3621 cells). THE JUBILEE FIRED: the seeding's one unfired kind,
+jubilee_proclaimed, is submitted by the jubilee engine's own scene in the fiftieth
+year, the skeleton's slave-term daemon registered beside walks every Hebrew slave
+free — and the Exodus slave's six-year term stands pending on the timer list after
+he walked, the library's shape kept and named. The clock runs in YEARS on three
+tapes: the orlah tree's three fire in year four; the exile's sabbath debt is a
+debit of sixty-eight releases computed by the plain fifty from four hundred and
+thirty years dwelt and a timer of sixty-eight years on the land, beside the
+seventy from the ruins with the covenant remembered at the firing; the jubilee
+period runs one to fifty-one with the seventh's rest and the fiftieth's, the sold
+field and the houses and the slaves and the consecrated holding each on a timer
+to the fiftieth set at the sale. Thirty timers set, twenty-nine fired, one
+pending; thirty-three silences. Record: World/step9/REPORT_WRAP_W5.md. Next: W6
+THE SANCTUARY'S REMAINDER.
 The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law

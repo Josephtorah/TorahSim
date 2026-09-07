@@ -54,7 +54,7 @@ sys.path.insert(0, HERE)
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
-assert GUARDED == 186, ('the guard counted %d expectations, the tripwire holds 186' % GUARDED)
+assert GUARDED == 187, ('the guard counted %d expectations, the tripwire holds 187' % GUARDED)
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -792,6 +792,205 @@ def conduct(q, **k):
                     '8-9 VERBATIM: the reversed orders (19:3 mother first) cancel to equality', [FX.NONE])
     raise ValueError(q)
 
+import os as _os5, sys as _sys5, io as _io5, contextlib as _ctx5
+_sys5.path.insert(0, _os5.path.dirname(_os5.path.abspath(__file__)))
+# ---- THE WRAP (W5 HOLINESS, SANCTIONS, THE LAND, 2026-09-07): the daemon over the compiled holiness ledger, first half ----
+import world_engine as WE
+def law_holiness(event, world):
+    """Lev 19:1-18 (cold_run_holiness.py — shelamim, classify, gifts, theft, deposit_case, robbery, wage, conduct): the ledger's debits, the wage clock, the leftover's third day."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    day = event.get('day', world.clock.year)
+    if k == 'shelamim_slaughtered_for_acceptance':
+        o = event['offerer']; out = []
+        if event.get('wrong') == 'time' or event.get('eaten_on_day', 1) >= 3:
+            p = shelamim('pigul_time')
+            out.append(E_('not_accepted', o, value=p['v'], law='F1b [INK 19:7 "if it is eaten at all on the third day, it is rejected, it shall not be accepted" — CALLED cold_run_tzav.rejection_machine(piggul_time)]'))
+            out.append(E_('karet_cut_off', o, cp='HEAVEN', value=shelamim('karet_building_block')['v'], law='F1b [INK 19:8 "its eater shall bear his iniquity... that soul shall be cut off" — %s]' % p['v']))
+            if event.get('warned'):
+                out.append(E_('lashes', o, value=shelamim('eater_lashes')['v'], law='F1b [Mishnah Makkot 3:2 — the pigul eater lashed when warned]'))
+            return out
+        if event.get('wrong') == 'place':
+            p = shelamim('pigul_place')
+            return [E_('not_accepted', o, value=p['v'], law='F1b [Sifra Kedoshim Chapter 1 4 — THE REASSIGNMENT: wrong-place disqualified without karet]')]
+        a = shelamim('intent_at_slaughter'); w = shelamim('window'); lo = shelamim('leftover')
+        return [E_('accepted', o, cp='HEAVEN', value=a['v'], law='F1b [INK 19:5 "to your ACCEPTANCE you shall slaughter it" — the intent at the slaughter binds]'),
+                E_('eating_window', o, amount=2, value=w['v'], law='F1b [INK 19:6 "on the day of your slaughter it shall be eaten, and on the morrow" — CALLED tzav: %s]' % w['v']),
+                E_('burn_remainder', 'the-leftover', cp=o, due=day + 2, value=lo['v'], law='F1b [INK 19:6 "the leftover until the third day shall be burned in fire" — the TIMER to the third day: %s]' % lo['v'])]
+    if k == 'harvest_reaped':
+        o = event.get('owner', event.get('reaper'))
+        if event.get('item'):
+            c = classify(event['item'])
+            if 'left_for_the_poor' in c['fx']:
+                return [E_('left_for_the_poor', 'the-poor', cp=o, value=c['v'], law='F2 [INK 19:9-10 the four gift-nouns on one leave-verb — the classifier\'s five predicates (Mishnah Peah 1:4): %s]' % c['v'])]
+            return [E_('exempt', o, value=c['v'], law='F2 [Mishnah Peah 1:4 — a predicate fails: %s]' % c['why'][:80])]
+        if event.get('reaped_by'):
+            g = gifts('reaped_by', who=event['reaped_by'])
+        elif event.get('state_at_reaping'):
+            g = gifts('moment', state_at_reaping=event['state_at_reaping'])
+        elif event.get('case'):
+            g = gifts('owners', case=event['case'])
+        else:
+            g = gifts(event.get('gift', 'kinds'))
+        if 'left_for_the_poor' in g['fx']:
+            return [E_('left_for_the_poor', 'the-poor', cp=o, value=g['v'], law='F2 [%s]' % g['why'][:110])]
+        return [E_('exempt', o, value=g['v'], law='F2 [%s]' % g['why'][:110])]
+    if k == 'sworn_denial_admitted':
+        d = event.get('claimant_against', event.get('defendant')); owner = event.get('owner'); val = event.get('value')
+        if event.get('case') == 'oath_count':
+            c = deposit_case('oath_count', denials=event.get('denials', 1))
+            return [E_('name_profaned', d, cp='HEAVEN', amount=c['v'], value=c['v'], law='F3 [INK 19:12 "you shall not swear by My name falsely, and profane the name of your God" — Shevuot 5:2-3: liable on each of %d denials]' % c['v'])]
+        if event.get('change'):
+            c = deposit_case('false_oath_predicate', change=event['change'])
+            if 'name_profaned' in c['fx']:
+                return [E_('name_profaned', d, cp='HEAVEN', value=c['v'], law='F3 [Shevuot 8:6 — swore to lighten himself: %s]' % c['why'][:70])]
+            return [E_('exempt', d, value=c['v'], law='F3 [Shevuot 8:6 — swore to burden himself: "falsely" bites only where the oath would have moved money]')]
+        if event.get('claim_kind') == 'fine':
+            c = deposit_case('fine_class')
+            return [E_('exempt', d, value=c['v'], law='F3 [Shevuot 5:4-5 — the fine class outside the deposit oath — CALLED cold_run_vayikra5.deposit_restitution -> %s]' % c['v'])]
+        if event.get('claim_kind') == 'stolen_claim':
+            c = deposit_case('stolen_claim')
+            return [E_('pays_double', d, cp=owner, amount=(val * 2 if val else None), value=c['v'], law='F3 [Bava Kamma 9:8 / Shevuot 8:3 — the keeper who claims theft is a thief (Exod 22:8): %s]' % c['v'])]
+        if event.get('claim_kind') == 'market_thief':
+            c = deposit_case('market_thief')
+            return [E_('pays_double', d, cp=owner, value=c['v']['denied_witnesses'], law='F3 [Shevuot 8:4 — denied and witnesses came: double]'),
+                    E_('pays_four_five', d, cp=owner, value=c['v']['slaughtered_or_sold'], law='F3 [Shevuot 8:4 — slaughtered or sold: four and five (Exod 21:37)]')]
+        if not event.get('swore_falsely'):
+            c = deposit_case('no_oath')
+            return [E_('restores', d, cp=owner, amount=val, value=c['v'], law='F3 [INK 19:11 the denial without 19:12\'s oath — CALLED -> the principal alone: %s]' % c['v'])]
+        t = theft('escalation'); c = deposit_case('oath_track')
+        return [E_('name_profaned', d, cp='HEAVEN', value=theft('profanation')['v'], law='F3 [INK 19:11-12 the five verbs in their written order %s — the Name profaned]' % t['v']),
+                E_('restores', d, cp=owner, amount=val, value=c['v'], law='F3 [INK 19:11 "you shall not deny" — CALLED cold_run_vayikra5.deposit_restitution -> %s (Bava Kamma 9:7)]' % c['v']),
+                E_('adds_fifth', d, cp=owner, amount=(val // 5 if val else None), value=c['v'], law='F3 [Lev 5:24 the fifth — %s]' % deposit_case('fifth_on_fifth')['v']),
+                E_('atoned_forgiven', d, cp='HEAVEN', value='the_ram', law='F3 [Lev 5:25 the guilt offering — the ram on the oath track]'),
+                E_('oath_imposed', d, value=deposit_case('oath_form')['v'], law='F3 [Shevuot 5:2 — %s; the scope %s]' % (deposit_case('oath_form')['v'], deposit_case('scope')['v'][:40]))]
+    if k == 'neighbor_robbed':
+        r = event['robber']; v = event.get('victim')
+        if event.get('doubt_on'):
+            c = robbery('doubt', doubt_on=event['doubt_on'])
+        elif event.get('change'):
+            c = robbery('here_is_yours', change=event['change'])
+        elif event.get('cause'):
+            c = robbery('field_usurped', cause=event['cause'])
+        else:
+            c = robbery(event.get('case', 'value_at_time'))
+        out = []
+        if 'restores' in c['fx']:
+            out.append(E_('restores', r, cp=v, value=c['v'], law='F3 [INK 19:13 "you shall not rob" — %s]' % c['why'][:100]))
+        if 'adds_fifth' in c['fx']:
+            out.append(E_('adds_fifth', r, cp=v, value=c['v'], law='F3 [%s]' % c['why'][:110]))
+        if 'exempt' in c['fx']:
+            out.append(E_('exempt', r, value=c['v'], law='F3 [%s]' % c['why'][:110]))
+        return out
+    if k == 'wage_withheld':
+        e = event['employer']; wk = event['worker']
+        if event.get('assigned'):
+            c = wage('assigned')
+            return [E_('exempt', e, value=c['v'], law='F3 [Sifra Kedoshim Section 2 11 — %s (Bava Metzia 9:12)]' % c['v'])]
+        if 'claimed' in event and not event['claimed']:
+            c = wage('claimed', claimed=False)
+            return [E_('exempt', e, value=c['v'], law='F3 [INK 19:13 "WITH YOU" — only by your will: %s (Bava Metzia 9:12)]' % c['v'])]
+        c = wage('clock', worker=event.get('worker_kind', 'day'))
+        out = [E_('wage_due_by_morning', e, cp=wk, due=day + 1, value=c['v'], law='F3 [INK 19:13 "the work of a hired one shall not stay overnight with you until morning" — the TIMER to the first morning: %s]' % c['v'])]
+        if event.get('in_kind'):
+            ik = wage('in_kind')
+            out.append(E_('wage_due_by_morning', e, cp=wk, value=ik['v'], law='F3 [Bava Metzia 10:5 — payment in kind against his will: %s, the wage still due]' % ik['v']))
+        out.append(E_('oath_imposed', wk, value=wage('who_swears')['v'], law='F3 [Shevuot 7:1 / Bava Metzia 9:12 — %s]' % wage('who_swears')['v']))
+        return out
+    if k == 'judgment_rendered':
+        j = event['judge']
+        if event.get('measure'):
+            return []                                                # the measures clause (19:35) is the second half's seat — the silence here
+        if event.get('bribed'):
+            c = conduct('bribe')
+        elif event.get('favored'):
+            c = conduct('no_favor', who=event['favored'])
+        else:
+            return []                                                # a righteous judgment perverts nothing — the silence
+        return [E_('judgment_perverted', j, cp='HEAVEN', value=c['v'], law='F4 [INK 19:15 "you shall do no wrong in judgment" — %s; the five effects %s]' % (c['why'][:70], conduct('five_effects')['v']))]
+    if k == 'neighbor_endangered':
+        p = event['person']; nb = event.get('neighbor'); case = event.get('case'); out = []
+        if event.get('stumbling'):
+            c = conduct('stumbling', case=event['stumbling'])
+            if 'interest_barred' in c['fx']:
+                out.append(E_('interest_barred', p, cp=nb, value=c['v'], law='F4 [Mishnah Bava Metzia 5:11 — the lender under the stumbling block: CALLED cold_run_yovel.interest]'))
+            if 'given_to_the_heart' in c['fx']:
+                out.append(E_('given_to_the_heart', p, cp='HEAVEN', value=c['v'], law='F4 [INK 19:14 "before the BLIND put no stumbling block... and you shall FEAR your God" — %s]' % c['why'][:80]))
+            return out
+        if case in ('knows_testimony', 'drowning', 'bandits', 'wild_beast', 'pursuer_to_kill', 'pursuer_after_the_male', 'pursuer_after_the_betrothed'):
+            c = conduct('blood', case=case)
+            return [E_('rescue_owed', p, cp=nb, value=c['v'], law='F4 [INK 19:16 "stand not on the blood of your neighbor" — %s]' % c['why'][:90])]
+        if case == 'sinned':
+            c = conduct('rebuke')
+            return [E_('rebuke_owed', p, cp=nb, value=c['v'], law='F4 [INK 19:17 "REBUKE, you shall rebuke your fellow" — %s]' % c['v'])]
+        if case == 'hated':
+            c = conduct('vow_opening')
+            return [E_('love_owed', p, cp=nb, value=c['v'], law='F4 [INK 19:17-18 "hate not your brother in your heart... love your neighbor" — the vow opened on these clauses (Nedarim 9:4)]'),
+                    E_('rebuke_owed', p, cp=nb, value=conduct('hate')['v'], law='F4 [INK 19:17 "in your heart" — the hate banned in the heart, the rebuke its remedy]')]
+        c = conduct('great_rule')
+        return [E_('love_owed', p, cp=nb, value=c['v'], law='F4 [INK 19:18 "love your neighbor as yourself" — %s]' % c['v'][0])]
+    return []
+
+def scene():
+    """THE SCENE — Peah, Shevuot, Bava Kamma, Bava Metzia, Makkot and the Sifra's rows replayed on the world engine (clock unit: days): the leftover's third day and the wage's morning as TIMERS."""
+    with _ctx5.redirect_stdout(_io5.StringIO()):
+        w = WE.World(era='the holiness ledger, first half: Peah, Shevuot, Bava Kamma, Bava Metzia on the engine (clock unit: days)')
+        w.laws = [law_holiness]
+        w.advance(1)
+        w.submit({'kind': 'shelamim_slaughtered_for_acceptance', 'subject': 'the-offerer', 'offerer': 'the-offerer', 'intent': 'to_eat_in_the_window', 'day': 1, 'case_source': 'Lev 19:5-6; Sifra Kedoshim Chapter 1 1 — slaughtered to acceptance: the window, the leftover to the third day'})
+        w.submit({'kind': 'shelamim_slaughtered_for_acceptance', 'subject': 'the-third-day-eater', 'offerer': 'the-third-day-eater', 'eaten_on_day': 3, 'warned': True, 'day': 1, 'case_source': 'Lev 19:7-8; Mishnah Makkot 3:2 — eaten on the third day: rejected, karet on the eater, lashed when warned'})
+        w.submit({'kind': 'shelamim_slaughtered_for_acceptance', 'subject': 'the-wrong-place', 'offerer': 'the-wrong-place', 'wrong': 'place', 'day': 1, 'case_source': 'Sifra Kedoshim Chapter 1 4 — THE REASSIGNMENT: wrong-place, no karet'})
+        w.submit({'kind': 'harvest_reaped', 'subject': 'the-grain-owner', 'owner': 'the-grain-owner', 'reaper': 'the-grain-owner', 'land': 'field-1', 'item': {'food': True, 'guarded': True, 'land_grown': True, 'gathered_as_one': True, 'stored': True}, 'day': 1, 'case_source': 'Mishnah Peah 1:4 — grain: the five predicates hold, the corner owed'})
+        w.submit({'kind': 'harvest_reaped', 'subject': 'the-vegetable-owner', 'owner': 'the-vegetable-owner', 'reaper': 'the-vegetable-owner', 'land': 'field-2', 'item': {'food': True, 'guarded': True, 'land_grown': True, 'gathered_as_one': True, 'stored': False}, 'day': 1, 'case_source': 'Mishnah Peah 1:4 — vegetables: not stored, exempt'})
+        w.submit({'kind': 'harvest_reaped', 'subject': 'the-robbed-field', 'owner': 'the-robbed-field', 'reaper': 'robbers', 'land': 'field-3', 'reaped_by': 'robbers', 'day': 1, 'case_source': 'Mishnah Peah 2:7 — reaped by robbers: exempt (Sifra Kedoshim Chapter 1 6)'})
+        w.submit({'kind': 'harvest_reaped', 'subject': 'the-consecrated-reaper', 'owner': 'the-consecrated-reaper', 'reaper': 'the-consecrated-reaper', 'land': 'field-4', 'state_at_reaping': 'exempt', 'day': 1, 'case_source': 'Mishnah Peah 4:7 — consecrated standing, redeemed as sheaves: exempt at the duty\'s hour'})
+        w.submit({'kind': 'harvest_reaped', 'subject': 'the-divided-brothers', 'owner': 'the-divided-brothers', 'reaper': 'the-divided-brothers', 'land': 'field-5', 'case': 'brothers_divided', 'day': 1, 'case_source': 'Mishnah Peah 3:5 — brothers who divided: two corners'})
+        w.submit({'kind': 'harvest_reaped', 'subject': 'the-vineyard-owner', 'owner': 'the-vineyard-owner', 'reaper': 'the-vineyard-owner', 'land': 'vineyard-1', 'gift': 'olelet', 'day': 1, 'case_source': 'Lev 19:10; Mishnah Peah 7:4 — the small cluster to the poor'})
+        w.submit({'kind': 'sworn_denial_admitted', 'subject': 'the-denier', 'claimant_against': 'the-denier', 'owner': 'the-depositor', 'object_exists': False, 'value': 100, 'swore_falsely': True, 'day': 1, 'case_source': 'Lev 19:11-12; Bava Kamma 9:7; Shevuot 8:3 — denied and swore, then confessed: the principal, the fifth, the ram, the Name profaned'})
+        w.submit({'kind': 'sworn_denial_admitted', 'subject': 'the-plain-denier', 'claimant_against': 'the-plain-denier', 'owner': 'the-depositor', 'object_exists': False, 'value': 100, 'swore_falsely': False, 'day': 1, 'case_source': 'Lev 19:11 — the denial without the oath: the principal alone'})
+        w.submit({'kind': 'sworn_denial_admitted', 'subject': 'the-fine-denier', 'claimant_against': 'the-fine-denier', 'owner': 'the-claimant', 'object_exists': False, 'value': 100, 'swore_falsely': True, 'claim_kind': 'fine', 'day': 1, 'case_source': 'Mishnah Shevuot 5:4-5 — the fine class: outside the deposit oath'})
+        w.submit({'kind': 'sworn_denial_admitted', 'subject': 'the-five-denials', 'claimant_against': 'the-five-denials', 'owner': 'the-claimant', 'object_exists': False, 'value': 100, 'swore_falsely': True, 'case': 'oath_count', 'denials': 5, 'day': 1, 'case_source': 'Mishnah Shevuot 5:2-3 — adjured five times and denied: liable on each'})
+        w.submit({'kind': 'sworn_denial_admitted', 'subject': 'the-self-burdener', 'claimant_against': 'the-self-burdener', 'owner': 'the-claimant', 'object_exists': True, 'value': 100, 'swore_falsely': True, 'change': 'exemption_to_liability', 'day': 1, 'case_source': 'Mishnah Shevuot 8:6 — swore to burden himself: exempt'})
+        w.submit({'kind': 'sworn_denial_admitted', 'subject': 'the-keeper-thief', 'claimant_against': 'the-keeper-thief', 'owner': 'the-depositor', 'object_exists': True, 'value': 100, 'swore_falsely': True, 'claim_kind': 'stolen_claim', 'day': 1, 'case_source': 'Mishnah Bava Kamma 9:8 / Shevuot 8:3 — the keeper who claimed theft: double by witnesses'})
+        w.submit({'kind': 'sworn_denial_admitted', 'subject': 'the-market-thief', 'claimant_against': 'the-market-thief', 'owner': 'the-owner', 'object_exists': False, 'value': 100, 'swore_falsely': True, 'claim_kind': 'market_thief', 'day': 1, 'case_source': 'Mishnah Shevuot 8:4 — the thief: double, four and five'})
+        w.submit({'kind': 'neighbor_robbed', 'subject': 'the-robber', 'robber': 'the-robber', 'victim': 'the-victim', 'day': 1, 'case_source': 'Lev 19:13; Mishnah Bava Kamma 9:1 — pays as at the time of the robbery'})
+        w.submit({'kind': 'neighbor_robbed', 'subject': 'the-doubter', 'robber': 'the-doubter', 'victim': 'the-victim', 'doubt_on': 'return', 'day': 1, 'case_source': 'Mishnah Bava Kamma 10:7 — "I robbed you and do not know whether I returned it": liable'})
+        w.submit({'kind': 'neighbor_robbed', 'subject': 'the-forgetter', 'robber': 'the-forgetter', 'victim': 'the-victim', 'doubt_on': 'robbed', 'day': 1, 'case_source': 'Mishnah Bava Kamma 10:7 — "I do not know whether I robbed you": exempt'})
+        w.submit({'kind': 'neighbor_robbed', 'subject': 'the-ager', 'robber': 'the-ager', 'victim': 'the-victim', 'change': 'visible', 'day': 1, 'case_source': 'Mishnah Bava Kamma 9:2 — a visible change: pays as at the robbery'})
+        w.submit({'kind': 'neighbor_robbed', 'subject': 'the-sons', 'robber': 'the-sons', 'victim': 'the-victim', 'case': 'sons_fed', 'day': 1, 'case_source': 'Mishnah Bava Kamma 10:1 — the sons who ate the robbery: exempt unless with surety'})
+        w.submit({'kind': 'neighbor_robbed', 'subject': 'the-converts-robber', 'robber': 'the-converts-robber', 'victim': 'the-convert', 'case': 'convert', 'day': 1, 'case_source': 'Mishnah Bava Kamma 9:11 — the convert who died: principal and fifth to the priests'})
+        w.submit({'kind': 'wage_withheld', 'subject': 'the-employer', 'employer': 'the-employer', 'worker': 'the-day-worker', 'worker_kind': 'day', 'day': 1, 'case_source': 'Lev 19:13; Mishnah Bava Metzia 9:11 — the day-worker collects all night: the morning TIMER'})
+        w.submit({'kind': 'wage_withheld', 'subject': 'the-night-employer', 'employer': 'the-night-employer', 'worker': 'the-night-worker', 'worker_kind': 'night', 'day': 1, 'case_source': 'Deut 24:15 / Mishnah Bava Metzia 9:11 — the night-worker collects all day'})
+        w.submit({'kind': 'wage_withheld', 'subject': 'the-assigner', 'employer': 'the-assigner', 'worker': 'the-assigned-worker', 'assigned': True, 'day': 1, 'case_source': 'Mishnah Bava Metzia 9:12 — assigned to the shopkeeper: the employer clear'})
+        w.submit({'kind': 'wage_withheld', 'subject': 'the-unclaimed', 'employer': 'the-unclaimed', 'worker': 'the-absent-worker', 'claimed': False, 'day': 1, 'case_source': 'Sifra Kedoshim Section 2 10 — the worker never came to claim: no violation'})
+        w.submit({'kind': 'wage_withheld', 'subject': 'the-in-kind-payer', 'employer': 'the-in-kind-payer', 'worker': 'the-paid-in-kind', 'worker_kind': 'day', 'in_kind': True, 'day': 1, 'case_source': 'Mishnah Bava Metzia 10:5 — payment in kind not heeded'})
+        w.submit({'kind': 'judgment_rendered', 'subject': 'the-fair-judge', 'judge': 'the-fair-judge', 'day': 1, 'case_source': 'Lev 19:15 — a righteous judgment: the silence'})
+        w.submit({'kind': 'judgment_rendered', 'subject': 'the-favoring-judge', 'judge': 'the-favoring-judge', 'favored': 'poor', 'day': 1, 'case_source': 'Lev 19:15; Sifra Kedoshim Chapter 4 2 — the poor favored: banned'})
+        w.submit({'kind': 'judgment_rendered', 'subject': 'the-bribed-judge', 'judge': 'the-bribed-judge', 'bribed': True, 'day': 1, 'case_source': 'Mishnah Peah 8:9 — the bribed judge\'s eyes dim'})
+        w.submit({'kind': 'judgment_rendered', 'subject': 'the-measurer', 'judge': 'the-measurer', 'measure': True, 'day': 1, 'case_source': 'Lev 19:35 — the measures clause: the second half\'s seat'})
+        w.submit({'kind': 'neighbor_endangered', 'subject': 'the-adviser', 'person': 'the-adviser', 'neighbor': 'the-advised', 'stumbling': 'daughter_fitness', 'day': 1, 'case_source': 'Sifra Kedoshim Section 2 14 — the one blind in the matter: corrupt advice'})
+        w.submit({'kind': 'neighbor_endangered', 'subject': 'the-lender', 'person': 'the-lender', 'neighbor': 'the-borrower', 'stumbling': 'lender_at_interest', 'day': 1, 'case_source': 'Mishnah Bava Metzia 5:11 — the lender at interest under the stumbling block'})
+        w.submit({'kind': 'neighbor_endangered', 'subject': 'the-witness', 'person': 'the-witness', 'neighbor': 'the-litigant', 'case': 'knows_testimony', 'day': 1, 'case_source': 'Sifra Kedoshim Chapter 4 8 — knows testimony: may not stay silent'})
+        w.submit({'kind': 'neighbor_endangered', 'subject': 'the-rescuer', 'person': 'the-rescuer', 'neighbor': 'the-drowning', 'case': 'drowning', 'day': 1, 'case_source': 'Sifra Kedoshim Chapter 4 8 — the rescue duty'})
+        w.submit({'kind': 'neighbor_endangered', 'subject': 'the-rebuker', 'person': 'the-rebuker', 'neighbor': 'the-sinner', 'case': 'sinned', 'day': 1, 'case_source': 'Lev 19:17; Sifra Kedoshim Chapter 4 8 — rebuke, even four and five times'})
+        w.submit({'kind': 'neighbor_endangered', 'subject': 'the-hater', 'person': 'the-hater', 'neighbor': 'the-hated', 'case': 'hated', 'day': 1, 'case_source': 'Lev 19:17-18; Mishnah Nedarim 9:4 — hate in the heart: the vow opened on these clauses'})
+        w.submit({'kind': 'neighbor_endangered', 'subject': 'the-lover', 'person': 'the-lover', 'neighbor': 'the-neighbor', 'day': 1, 'case_source': 'Lev 19:18; Sifra Kedoshim Chapter 4 12 — the great rule'})
+        w.advance(3)                                                 # the third day: the leftover burns; the mornings have passed
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    am = lambda eid, eff: [e['amount'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    return (n('the-offerer', 'accepted'), n('the-offerer', 'eating_window'), yr('the-leftover', 'burn_remainder'), n('the-third-day-eater', 'not_accepted'), n('the-third-day-eater', 'karet_cut_off'), n('the-third-day-eater', 'lashes'), n('the-wrong-place', 'not_accepted'), n('the-wrong-place', 'karet_cut_off'),
+            n('the-poor', 'left_for_the_poor'), n('the-vegetable-owner', 'exempt'), n('the-robbed-field', 'exempt'), n('the-consecrated-reaper', 'exempt'),
+            n('the-denier', 'name_profaned'), n('the-denier', 'restores'), n('the-denier', 'adds_fifth'), n('the-denier', 'atoned_forgiven'), n('the-denier', 'oath_imposed'), n('the-plain-denier', 'restores'), n('the-plain-denier', 'name_profaned'), n('the-fine-denier', 'exempt'), am('the-five-denials', 'name_profaned'), n('the-self-burdener', 'exempt'), n('the-keeper-thief', 'pays_double'), n('the-market-thief', 'pays_double'), n('the-market-thief', 'pays_four_five'),
+            n('the-robber', 'restores'), n('the-doubter', 'restores'), n('the-forgetter', 'exempt'), n('the-ager', 'restores'), n('the-sons', 'exempt'), n('the-converts-robber', 'adds_fifth'),
+            yr('the-employer', 'wage_due_by_morning'), n('the-day-worker', 'oath_imposed'), yr('the-night-employer', 'wage_due_by_morning'), n('the-assigner', 'exempt'), n('the-unclaimed', 'exempt'), n('the-in-kind-payer', 'wage_due_by_morning'),
+            n('the-fair-judge', 'judgment_perverted'), n('the-favoring-judge', 'judgment_perverted'), n('the-bribed-judge', 'judgment_perverted'), n('the-measurer', 'judgment_perverted'),
+            n('the-adviser', 'given_to_the_heart'), n('the-lender', 'interest_barred'), n('the-lender', 'given_to_the_heart'), n('the-witness', 'rescue_owed'), n('the-rescuer', 'rescue_owed'), n('the-rebuker', 'rebuke_owed'), n('the-hater', 'love_owed'), n('the-hater', 'rebuke_owed'), n('the-lover', 'love_owed'),
+            tset, fired, w.clock.year), w
+SCENE, _W = scene()
+
+
 # ---- (2) TEST DATA — the Mishnah rows, read whole from the shelf ------
 def load(t):
     d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
@@ -829,6 +1028,7 @@ print('answer sheet: %d Mishnah rows verified by their own tokens (Peah whole, B
       'read whole — the topic docket)' % len(SHEET))
 
 TESTS = [
+ ('THE SCENE — Peah, Shevuot, Bava Kamma, Bava Metzia and Makkot on the world engine (the leftover\'s third day and the wage\'s morning as TIMERS; the daemon\'s watch coverage printed below)', cell(SCENE, I, 'the peace offering\'s window and rejection, the poor gifts by the classifier and the gifts engine, the deposit oath\'s tracks, the robbery\'s returns, the wage clock, the court, the neighbor — every value a cell\'s', ['accepted', 'eating_window', 'burn_remainder', 'not_accepted', 'karet_cut_off', 'lashes', 'left_for_the_poor', 'exempt', 'name_profaned', 'restores', 'adds_fifth', 'atoned_forgiven', 'oath_imposed', 'pays_double', 'pays_four_five', 'wage_due_by_morning', 'judgment_perverted', 'given_to_the_heart', 'interest_barred', 'rescue_owed', 'rebuke_owed', 'love_owed']), (1, 1, [3], 1, 1, 1, 1, 0, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, [5], 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, [2], 1, [2], 1, 1, 2, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 3)),
  # ---- THE CHARGE, THE PARENTS, THE IDOLS ----
  ('Lev 19:2 — said in full assembly', frame('assembly'), 'said_in_full_assembly'),
  ('Sifra Kedoshim 1 1 — holy = separate', frame('holy'), 'separate'),
@@ -1051,6 +1251,7 @@ print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sort
 print('effects: every cell carries REGISTERED effects — EIGHT discovered in these verses\' own verbs: left_for_the_poor '
       '(TRANSFER), wage_due_by_morning (TIMER), name_profaned, judgment_perverted, given_to_the_heart (HEAVEN), '
       'rebuke_owed, love_owed, rescue_owed (DEBIT) [effects law satisfied]')
+_W.print_coverage()
 if ok == n:
     print('THE HOLINESS LEDGER, FIRST HALF, COMPILES — the poor gifts on four nouns and one leave-verb, the five verbs '
           'of theft-to-profanation in their written order, the wage clock on "until morning", the judge and the '

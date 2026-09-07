@@ -51,7 +51,7 @@ sys.path.insert(0, HERE)
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
-assert GUARDED == 241, ("the guard counted %d expectations, the tripwire holds 241" % GUARDED)
+assert GUARDED == 242, ("the guard counted %d expectations, the tripwire holds 242" % GUARDED)
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -1265,6 +1265,311 @@ def frame(q, **k):
                     'name; the moadim engine\'s context)', [FX.NONE])
     raise ValueError(q)
 
+import os as _os5, sys as _sys5, io as _io5, contextlib as _ctx5
+_sys5.path.insert(0, _os5.path.dirname(_os5.path.abspath(__file__)))
+# ---- THE WRAP (W5 HOLINESS, SANCTIONS, THE LAND, 2026-09-07): the daemon over the compiled sanctions engine ----
+import world_engine as WE
+COWIVES_Q = ('cross', 'divorced_before', 'ervah_sister_free', 'maamar_houses', 'one_hour', 'pair_bans_bound', 'stranger_cases', 'swapped_aftermath', 'swapped_names', 'two_bonds', 'zikah_sisters')
+def _fx_union(cells):
+    fx, why = set(), {}
+    for c in cells:
+        for f in c['fx']:
+            fx.add(f); why.setdefault(f, c)
+    return fx, why
+def law_sanctions(event, world):
+    """Lev 17, 18, 20 (cold_run_sanctions.py — outside, platform, blood, covering, carcass, the unions matrix, levirate/grade/cowives/names, molech, ov, curser, frame): the sanctions written by the matrix, every value a cell's."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'offering_slaughtered_outside':
+        s_ = event['slaughterer']; out = []
+        if event.get('rite'):
+            c = outside('fitness_path', rite=event['rite'], place=event.get('place', 'outside'))
+        elif event.get('seq'):
+            c = outside('two_cups', seq=tuple(event['seq']), cups=event.get('cups', 2))
+        else:
+            c = outside(event.get('case', 'who'))
+        if 'blood_reckoned' in c['fx']:
+            out.append(E_('blood_reckoned', s_, value=c['v'], law='F3 [INK 17:4 "blood shall be reckoned to that man, he has shed blood" — %s]' % c['why'][:90]))
+        if 'karet_cut_off' in c['fx']:
+            out.append(E_('karet_cut_off', s_, cp='HEAVEN', value=c['v'], law='F3 [INK 17:4 / 17:9 "that man shall be cut off" — %s]' % c['why'][:90]))
+        if 'exempt' in c['fx']:
+            out.append(E_('exempt', s_, value=c['v'], law='F3 [%s]' % c['why'][:110]))
+        if 'atoned_forgiven' in c['fx']:
+            out.append(E_('atoned_forgiven', s_, cp='HEAVEN', value=c['v'], law='F3 [%s]' % c['why'][:110]))
+        return out
+    if k == 'platform_offering_brought':
+        o = event['offerer']; out = []
+        if event.get('consecrated_era'):
+            c = platform('consecrated_offered', consecrated=event['consecrated_era'], offered=event.get('offered_era', 'ban'))
+        elif event.get('era') == 'all':
+            c = platform('eras')
+        else:
+            c = platform('classes')
+        if 'karet_cut_off' in c['fx']:
+            out.append(E_('karet_cut_off', o, cp='HEAVEN', value=c['v'], law='F3 [Mishnah Zevachim 14:9 — %s]' % c['why'][:90]))
+        if 'exempt' in c['fx']:
+            out.append(E_('exempt', o, value=c['v'], law='F3 [Mishnah Zevachim 14:9 — %s]' % c['why'][:90]))
+        if 'disqualified' in c['fx']:
+            out.append(E_('disqualified', 'the-platform-offering', cp=o, value=str(c['v'])[:70], law='F3 [Mishnah Zevachim 14:4-8 — the eras: %s]' % str(c['v'])[:60]))
+        if 'accepted' in c['fx']:
+            out.append(E_('accepted', 'the-platform-offering', cp='HEAVEN', value=str(c['v'])[:70], law='F3 [INK 17:5 "and bring them to the LORD to the door of the tent of meeting" — the classes on a platform: %s]' % str(c['v'])[:60]))
+        if 'consecrated' in c['fx']:
+            out.append(E_('consecrated', 'the-platform-offering', cp=o, value=str(c['v'])[:70], law='F3 [%s]' % c['why'][:100]))
+        return out
+    if k == 'blood_eaten':
+        e = event['eater']; out = []
+        if event.get('which_blood') == 'altar_gift':
+            c = blood('atones')
+            return [E_('atoned_forgiven', e, cp='HEAVEN', value=c['v'], law='F4 [INK 17:11 "I have given it to you on the altar to atone for your souls" — %s]' % c['v'])]
+        if event.get('eater_class') == 'feeder':
+            return []                                                # the eater, not the feeder (Sifra Acharei Mot Chapter 10) — the silence
+        b = blood('ban'); wb = blood('which_blood')
+        out = [E_('face_set_against', e, cp='HEAVEN', value=b['v'], law='F4 [INK 17:10 "I will set My face against the soul that eats the blood" — %s]' % b['why'][:80]),
+               E_('karet_cut_off', e, cp='HEAVEN', value=(blood('convert')['v'] if event.get('eater_class') == 'convert' else wb['v'][0]), law='F4 [INK 17:10 "and cut it off from the midst of its people" — the convert bound as the citizen; which blood: %s]' % wb['v'])]
+        if event.get('warned'):
+            l = blood('lashes')
+            out.append(E_('lashes', e, value=l['v'], law='F4 [Mishnah Makkot 3:2 — %s]' % l['v']))
+        return out
+    if k == 'game_blood_poured':
+        h = event['hunter']; out = []
+        if event.get('material'):
+            c = covering('materials', material=event['material'])
+        elif event.get('state'):
+            c = covering('state', state=event['state'])
+        elif event.get('species'):
+            c = covering('species', species=event['species'])
+        elif event.get('slaughterer'):
+            c = covering('deaf_imbecile_minor') if event['slaughterer'] in ('deaf', 'imbecile', 'minor') else covering('another_saw')
+        else:
+            c = covering(event.get('case', 'where'))
+        if 'cover_owed' in c['fx']:
+            out.append(E_('cover_owed', h, cp='the-blood', value=c['v'], law='F4 [INK 17:13 "pour out its blood and cover it with dust" — %s]' % c['why'][:100]))
+        if 'exempt' in c['fx']:
+            out.append(E_('exempt', h, value=c['v'], law='F4 [%s]' % c['why'][:110]))
+        if 'consecrated' in c['fx']:
+            out.append(E_('consecrated', 'the-catch', cp=h, value=c['v'], law='F4 [%s]' % c['why'][:110]))
+        return out
+    if k == 'carcass_eaten':
+        e = event['eater']
+        if event.get('eater_class') == 'resident_alien':
+            return []                                                # citizen and convert, not the resident alien (17:15) — the silence
+        cells = [carcass('beast_carcass')] if event.get('species') == 'beast' else [carcass('effect'), carcass('garments_boundary'), carcass('where_defiles')]
+        if event.get('washed') is False:
+            cells.append(carcass('failure'))
+        if event.get('warned'):
+            cells.append(carcass('lashes_for_eating'))
+        if event.get('case'):
+            cells.append(carcass(event['case']))
+        fx, why = _fx_union(cells); out = []
+        if 'impure_until_evening' in fx:
+            out.append(E_('impure_until_evening', e, value=why['impure_until_evening']['v'], law='F5 [INK 17:15 "impure until evening, and be pure" — %s]' % why['impure_until_evening']['why'][:90]))
+        if 'washes_and_bathes' in fx:
+            out.append(E_('washes_and_bathes', e, value=why['washes_and_bathes']['v'], law='F5 [INK 17:15 "wash his garments and bathe in water"]'))
+        if 'defiles_garments' in fx:
+            out.append(E_('defiles_garments', 'the-garments', cp=e, value=why['defiles_garments']['v'], law='F5 [%s]' % why['defiles_garments']['why'][:100]))
+        if 'bears_sin' in fx:
+            out.append(E_('bears_sin', e, cp='HEAVEN', value=why['bears_sin']['v'], law='F5 [INK 17:16 "if he does not wash and does not bathe his flesh, he shall bear his iniquity" — %s]' % why['bears_sin']['v']))
+        if 'lashes' in fx:
+            out.append(E_('lashes', e, value=why['lashes']['v'], law='F5 [Mishnah Makkot 3:2 — the carcass eater %s]' % why['lashes']['v']))
+        if 'karet_cut_off' in fx:
+            out.append(E_('karet_cut_off', e, cp='HEAVEN', value=why['karet_cut_off']['v'], law='F5 [%s]' % why['karet_cut_off']['why'][:100]))
+        return out
+    if k == 'forbidden_union':
+        m = event['man']; wm = event.get('woman'); u = event.get('union')
+        if event.get('modes'):
+            c = severity('two_deaths' if event.get('case') == 'two_deaths' else 'mixed', modes=event['modes'], arm=event.get('arm', 'sages'))
+            return [E_('put_to_death', m, value=c['v'], law='F2 [Mishnah Sanhedrin 9:3-4 — %s]' % c['why'][:90])]
+        cells = []
+        if u == 'adultery' or event.get('wife_of'):
+            if event.get('wife_of'):
+                cells.append(adultery('whose_wife', wife_of=event['wife_of']))
+            intent = event.get('intent', 'deliberate')
+            if intent == 'unwitting':
+                cells.append(adultery('unwitting'))
+            elif intent == 'doubt':
+                cells.append(adultery('doubt'))
+            elif event.get('witnessed') is False:
+                cells.append(adultery('deliberate_unwitnessed'))
+            elif not event.get('wife_of'):
+                cells += [adultery('both'), sanction('adultery')]
+        elif u:
+            cells.append(sanction(u))
+            if u == 'woman_and_mother':
+                cells += [burned_nine(), burning_scope()]
+            if u in ('mother', 'father_wife', 'daughter_in_law'):
+                cells.append(double_count(u))
+            if u == 'sister':
+                cells.append(unions_misc('chesed'))
+            if u == 'brother_wife':
+                cells.append(unions_misc('brother_wife_window'))
+            if u == 'uncle_wife':
+                cells.append(unions_misc('uncle_wife_bound'))
+        else:
+            cells.append(unions_misc(event.get('case', 'void_betrothal')))
+        fx, why = _fx_union(cells); out = []
+        if 'stoned' in fx:
+            out.append(E_('stoned', m, cp=wm, value=why['stoned']['v'], law='F2 [the matrix — Lev 18\'s warning, Lev 20\'s sanction: %s]' % why['stoned']['why'][:90]))
+        if 'burned_by_court' in fx:
+            out.append(E_('burned_by_court', m, cp=wm, value=why['burned_by_court']['v'], law='F2 [INK 20:14 "in fire they shall burn him and them" — %s]' % why['burned_by_court']['why'][:80]))
+        if 'put_to_death' in fx:
+            out.append(E_('put_to_death', m, cp=wm, value=why['put_to_death']['v'], law='F2 [INK 20:10 "the adulterer and the adulteress shall surely be put to death" — %s]' % why['put_to_death']['why'][:80]))
+        if 'karet_cut_off' in fx:
+            out.append(E_('karet_cut_off', m, cp='HEAVEN', value=why['karet_cut_off']['v'], law='F2 [INK 18:29 "the souls that do them shall be cut off" — %s]' % why['karet_cut_off']['why'][:80]))
+        if 'childless' in fx:
+            out.append(E_('childless', m, cp='HEAVEN', value=why['childless']['v'], law='F2 [INK 20:20-21 "they shall die childless" — %s]' % why['childless']['why'][:80]))
+        if 'bears_sin' in fx:
+            out.append(E_('bears_sin', m, cp='HEAVEN', value=why['bears_sin']['v'], law='F2 [INK 20:17 / 20:19-20 "he shall bear his iniquity" — %s]' % why['bears_sin']['why'][:80]))
+        if 'beast_killed' in fx:
+            out.append(E_('beast_killed', 'the-beast', cp=m, value=why['beast_killed']['v'], law='F2 [INK 20:15-16 "and the beast you shall kill"]'))
+        if 'suspends' in fx:
+            out.append(E_('suspends', m, value=why['suspends']['v'], law='F2 [Mishnah Keritot 1:2 — the doubt: CALLED cold_run_chatat.domain -> the suspended ram]'))
+        if 'atoned_forgiven' in fx:
+            out.append(E_('atoned_forgiven', m, cp='HEAVEN', value=why['atoned_forgiven']['v'], law='F2 [Mishnah Keritot 1:2 — the unwitting: CALLED cold_run_chatat.domain -> the sin offering]'))
+        if 'exempt' in fx:
+            out.append(E_('exempt', m, value=why['exempt']['v'], law='F2 [%s]' % why['exempt']['why'][:100]))
+        return out
+    if k == 'lay_with_beast':
+        d = event['doer']; sex = event.get('sex', 'male')
+        s1 = sanction('woman_beast' if sex == 'female' else 'man_beast'); why = beast('why'); court = beast('court'); pw = beast('passive_warning'); ww = beast('woman_warning')
+        return [E_('stoned', d, value=s1['v'][2], law='F2 [INK 20:15-16 — the mode %s (the formula); the woman\'s own warning %s]' % (s1['v'][2], ww['v'])),
+                E_('karet_cut_off', d, cp='HEAVEN', value=s1['v'][3], law='F2 [INK 18:29 — the karet beside the stoning: %s]' % s1['v'][3]),
+                E_('beast_killed', event.get('beast', 'the-beast'), cp=d, amount=court['v'], value=why['v'], law='F2 [INK 20:15 "and the beast you shall kill" — %s; judged by %d (Mishnah Sanhedrin 1:4)]' % (why['v'], court['v'])),
+                E_('put_to_death', d, value=pw['v'], law='F2 [Exod 22:18 the first seat freed to the passive — %s]' % pw['v'])]
+    if k == 'lay_with_menstruant':
+        s1 = sanction('menstruant')
+        return [E_('karet_cut_off', event['man'], cp='HEAVEN', value=s1['v'], law='F2 [INK 20:18 "both of them shall be cut off from the midst of their people" — the matrix row (18:19 / 20:18, no court death, karet %s)]' % s1['v'][3])]
+    if k == 'levirate_commanded':
+        w_ = event.get('widow'); case = event.get('case')
+        if event.get('relation') and case == 'names':
+            c = names([tuple(x) if isinstance(x, list) else x for x in event['relation']])
+        elif event.get('relation'):
+            c = grade(tuple(event['relation']) if isinstance(event['relation'], list) else event['relation'])
+        elif event.get('grade'):
+            c = grade(event['grade'])
+        elif case:
+            c = cowives(case) if case in COWIVES_Q else levirate(case)
+        else:
+            return []                                                # Gen 38's own seat is the family daemon's (the levirate owed) — the silence here
+        out = []
+        if 'exempt' in c['fx']:
+            out.append(E_('exempt', w_, value=str(c['v'])[:70], law='F1 [Mishnah Yevamot 1:1-2:3 — %s]' % c['why'][:90]))
+        if 'released' in c['fx']:
+            out.append(E_('released', w_, value=str(c['v'])[:70], law='F1 [Mishnah Yevamot 2:4 / 3 — release, not levirate: %s]' % c['why'][:80]))
+        if 'barred_from_holies' in c['fx']:
+            out.append(E_('barred_from_holies', w_, value=str(c['v'])[:70], law='F1 [Mishnah Yevamot 3:10 — %s]' % c['why'][:90]))
+        if 'karet_cut_off' in fx_of(c):
+            out.append(E_('karet_cut_off', w_, cp='HEAVEN', amount=c['v'] if isinstance(c['v'], int) else None, value=str(c['v'])[:70], law='F1 [Mishnah Keritot 3:6 — the names: %s]' % c['why'][:80]))
+        return out
+    if k == 'seed_given_to_molech':
+        g = event['giver']
+        c = molech('predicate', handed=event.get('handed', True), passed=event.get('passed', True), fire=event.get('fire', True), to_molech=event.get('to_molech', True))
+        if 'exempt' in c['fx']:
+            return [E_('exempt', g, value=c['v'], law='F2b [Mishnah Sanhedrin 7:7 — the four-part predicate fails: %s]' % c['why'][:80])]
+        if event.get('concealed'):
+            cc = molech('concealed'); fam = molech('family')
+            return [E_('face_set_against', g, cp='HEAVEN', value=cc['v'], law='F2b [INK 20:4-5 "if the people of the land hide their eyes... I will set My face against that man and against his family" — %s]' % fam['v']),
+                    E_('karet_cut_off', g, cp='HEAVEN', value=cc['v'], law='F2b [INK 20:5 "and cut him off" — by Heaven when the court did not]')]
+        ws = molech('who_stones'); ss = molech('seed_scope')
+        return [E_('stoned', g, value=ws['v'], law='F2b [INK 20:2 "the people of the land shall stone him with stones" — %s; the seed: %s]' % (ws['v'], ss['v'])),
+                E_('karet_cut_off', g, cp='HEAVEN', value=sanction('molech')['v'][3], law='F2b [INK 20:3 "I will set My face against that man and cut him off" — the karet beside the stoning]'),
+                E_('face_set_against', g, cp='HEAVEN', value=molech('effects_chain')['v'], law='F2b [INK 20:3 — the effects chain %s]' % molech('effects_chain')['v'])]
+    if k == 'ghost_pit_consulted':
+        p = event['person']
+        if event.get('role') == 'bearer':
+            b = ov('bearer'); tv = ov('three_verses')
+            return [E_('stoned', p, value=b['v'], law='F2b [INK 20:27 "with stones they shall stone them" — %s]' % b['v']),
+                    E_('karet_cut_off', p, cp='HEAVEN', value=str(tv['v'])[:60], law='F2b [the three verses — %s]' % str(tv['v'])[:70])]
+        return []                                                    # the consulter: warning only (Mishnah Sanhedrin 7:7) — the silence
+    if k == 'parent_cursed':
+        c = event['curser']
+        if event.get('born_of') in ('maidservant', 'gentile'):
+            return []                                                # liable except from the maidservant or the gentile (Sifra Kedoshim Chapter 9) — the silence
+        if event.get('by_the_name') is False:
+            return []                                                # not by the Name: no liability (Mishnah Sanhedrin 7:8) — the silence
+        m = curser('mode'); op = curser('one_parent'); ad = curser('after_death')
+        return [E_('stoned', c, value=m['v'], law='F2b [INK 20:9 "his blood is on him" — %s; %s; after death %s]' % (m['v'], op['v'], ad['v']))]
+    if k == 'land_defiled':
+        land = event.get('land', 'the-land'); ppl = event.get('people', 'the-people')
+        cells = [frame('land'), frame('karet_persons'), frame('all_or_any')]
+        if event.get('warned'):
+            cells.append(frame('lashes_discharge_karet'))
+        if event.get('case'):
+            cells.append(frame(event['case']))
+        fx, why = _fx_union(cells); out = []
+        if 'land_vomits' in fx:
+            out.append(E_('land_vomits', land, cp=ppl, value=why['land_vomits']['v'], law='F6 [INK 18:25 / 18:28 "and the land vomited out its inhabitants" — %s]' % why['land_vomits']['v']))
+        if 'karet_cut_off' in fx:
+            out.append(E_('karet_cut_off', ppl, cp='HEAVEN', value=why['karet_cut_off']['v'], law='F6 [INK 18:29 "the souls that do them shall be cut off" — %s]' % why['karet_cut_off']['v']))
+        if 'lashes' in fx:
+            out.append(E_('lashes', ppl, value=why['lashes']['v'], law='F6 [Mishnah Makkot 3:15 — %s]' % why['lashes']['v']))
+        if 'disqualified' in fx:
+            out.append(E_('disqualified', ppl, value=why['disqualified']['v'], law='F6 [%s]' % why['disqualified']['why'][:100]))
+        return out
+    return []
+def fx_of(c):
+    return c['fx']
+
+def scene():
+    """THE SCENE — Zevachim 13-14, Chullin 6, Sanhedrin 7 and 9, Keritot 1-3, Yevamot 1-2, Makkot 3 and the Sifra's rows replayed on the world engine (clock unit: days)."""
+    with _ctx5.redirect_stdout(_io5.StringIO()):
+        w = WE.World(era='the sanctions engine: Zevachim 13-14, Chullin 6, Sanhedrin 7 + 9, Keritot 1-3, Yevamot 1-2 on the engine (clock unit: days)')
+        w.laws = [law_sanctions]
+        w.advance(1)
+        for who, ev in (('the-outside-slaughterer', {'case': 'who'}), ('the-bird-slaughterer', {'case': 'bird'}), ('the-fit-pincher', {'rite': 'pinched', 'place': 'inside'}), ('the-outside-pincher', {'rite': 'pinched', 'place': 'outside'}),
+                        ('the-two-cups', {'seq': ['outside', 'inside'], 'cups': 2}), ('the-raiser', {'act': 'raise', 'case': 'two_offenses'}), ('the-agent', {'case': 'agency'})):
+            w.submit(dict({'kind': 'offering_slaughtered_outside', 'subject': who, 'slaughterer': who, 'day': 1, 'case_source': 'Lev 17:3-9; Mishnah Zevachim 13:1-8 — %s' % who}, **ev))
+        w.submit({'kind': 'platform_offering_brought', 'subject': 'the-ban-era-offerer', 'offerer': 'the-ban-era-offerer', 'consecrated_era': 'ban', 'offered_era': 'ban', 'day': 1, 'case_source': 'Mishnah Zevachim 14:9 — consecrated and offered in the ban era: karet'})
+        w.submit({'kind': 'platform_offering_brought', 'subject': 'the-permit-era-offerer', 'offerer': 'the-permit-era-offerer', 'consecrated_era': 'permit', 'offered_era': 'ban', 'day': 1, 'case_source': 'Mishnah Zevachim 14:9 — consecrated under the permit: no karet'})
+        w.submit({'kind': 'platform_offering_brought', 'subject': 'the-platform-offerer', 'offerer': 'the-platform-offerer', 'day': 1, 'case_source': 'Mishnah Zevachim 14:10 — the classes on a platform'})
+        w.submit({'kind': 'platform_offering_brought', 'subject': 'the-eras', 'offerer': 'the-eras', 'era': 'all', 'day': 1, 'case_source': 'Mishnah Zevachim 14:4-8 — the eras'})
+        w.submit({'kind': 'blood_eaten', 'subject': 'the-blood-eater', 'eater': 'the-blood-eater', 'species': 'beast', 'warned': True, 'day': 1, 'case_source': 'Lev 17:10; Mishnah Keritot 5:1; Makkot 3:2 — the blood eaten: the face, the karet, the lashes'})
+        w.submit({'kind': 'blood_eaten', 'subject': 'the-convert-eater', 'eater': 'the-convert-eater', 'species': 'beast', 'eater_class': 'convert', 'day': 1, 'case_source': 'Lev 17:10 "and of the stranger who sojourns among them" — the convert bound'})
+        w.submit({'kind': 'blood_eaten', 'subject': 'the-feeder', 'eater': 'the-feeder', 'species': 'beast', 'eater_class': 'feeder', 'day': 1, 'case_source': 'Sifra Acharei Mot — the eater, not the feeder: the silence'})
+        w.submit({'kind': 'blood_eaten', 'subject': 'the-altar-blood', 'eater': 'the-altar-blood', 'species': 'beast', 'which_blood': 'altar_gift', 'day': 1, 'case_source': 'Lev 17:11 — given on the altar to atone'})
+        for who, ev in (('the-hunter', {'species': 'wild'}), ('the-beast-slaughterer', {'species': 'beast'}), ('the-koy-hunter', {'species': 'koy'}), ('the-lime-coverer', {'material': 'lime'}), ('the-metal-coverer', {'material': 'metal_filings'}),
+                        ('the-wind-covered', {'state': 'wind_covered'}), ('the-re-exposed', {'state': 'covered_then_exposed'}), ('the-deaf-slaughterer', {'slaughterer': 'deaf'}), ('the-hundred', {'case': 'hundred'})):
+            w.submit(dict({'kind': 'game_blood_poured', 'subject': who, 'hunter': who, 'day': 1, 'case_source': 'Lev 17:13; Mishnah Chullin 6 — %s' % who}, **ev))
+        w.submit({'kind': 'carcass_eaten', 'subject': 'the-carcass-eater', 'eater': 'the-carcass-eater', 'species': 'bird', 'washed': False, 'warned': True, 'day': 1, 'case_source': 'Lev 17:15-16; Mishnah Toharot 1:1; Makkot 3:2 — the bird carcass in the swallow-house, unwashed, warned'})
+        w.submit({'kind': 'carcass_eaten', 'subject': 'the-resident-alien-eater', 'eater': 'the-resident-alien-eater', 'eater_class': 'resident_alien', 'species': 'bird', 'day': 1, 'case_source': 'Lev 17:15 "citizen or convert" — not the resident alien: the silence'})
+        w.submit({'kind': 'carcass_eaten', 'subject': 'the-beast-carcass-eater', 'eater': 'the-beast-carcass-eater', 'species': 'beast', 'day': 1, 'case_source': 'Sifra Acharei Mot Chapter 12 — the beast carcass defiles before eating'})
+        for who, ev in (('the-adulterer', {'union': 'adultery', 'woman': 'the-mans-wife'}), ('the-unwitting-adulterer', {'union': 'adultery', 'intent': 'unwitting'}), ('the-doubtful-adulterer', {'union': 'adultery', 'intent': 'doubt'}), ('the-unwitnessed', {'union': 'adultery', 'witnessed': False}),
+                        ('the-minors-wife-lier', {'wife_of': 'minor'}), ('the-fathers-wife-lier', {'union': 'father_wife'}), ('the-mother-lier', {'union': 'mother'}), ('the-woman-and-mother-taker', {'union': 'woman_and_mother'}), ('the-sister-taker', {'union': 'sister'}),
+                        ('the-aunt-lier', {'union': 'uncle_wife'}), ('the-brothers-wife-taker', {'union': 'brother_wife'}), ('the-male-lier', {'union': 'male'}), ('the-mixed-deaths', {'modes': ['stoning', 'strangling']}), ('the-void-betrothal', {'case': 'void_betrothal'})):
+            w.submit(dict({'kind': 'forbidden_union', 'subject': who, 'man': who, 'day': 1, 'case_source': 'Lev 18 / 20; Mishnah Sanhedrin 7:4, 9:1-4; Keritot 1:1-2 — %s' % who}, **ev))
+        w.submit({'kind': 'lay_with_beast', 'subject': 'the-beast-lier', 'doer': 'the-beast-lier', 'sex': 'male', 'day': 1, 'case_source': 'Lev 20:15; Mishnah Sanhedrin 7:4, 1:4 — stoned, the beast killed'})
+        w.submit({'kind': 'lay_with_beast', 'subject': 'the-beast-woman', 'doer': 'the-beast-woman', 'sex': 'female', 'day': 1, 'case_source': 'Lev 18:23 / 20:16 — the woman: the formula'})
+        w.submit({'kind': 'lay_with_menstruant', 'subject': 'the-menstruant-lier', 'man': 'the-menstruant-lier', 'woman': 'the-menstruant', 'day': 1, 'case_source': 'Lev 20:18 — karet on both'})
+        for who, ev in (('the-widow-ervah', {'relation': ['W', 'SIS']}), ('the-widow-second', {'grade': 'second_degree'}), ('the-widow-stranger', {'grade': 'stranger'}), ('the-rival', {'case': 'rival_chain'}), ('the-two-bonds', {'case': 'two_bonds'}),
+                        ('the-swapped', {'case': 'swapped_aftermath'}), ('the-mother-in-law', {'case': 'names', 'relation': [['W', 'M'], ['S', 'W'], ['W', 'SIS'], ['PB', 'W'], ['FB', 'W'], 'married_woman', 'menstruant']}), ('tamar', {})):
+            w.submit(dict({'kind': 'levirate_commanded', 'subject': who, 'widow': who, 'day': 1, 'case_source': 'Lev 18:18; Mishnah Yevamot 1-3; Keritot 3:6 — %s' % who}, **ev))
+        w.submit({'kind': 'seed_given_to_molech', 'subject': 'the-molech-giver', 'giver': 'the-molech-giver', 'seed': 'son', 'day': 1, 'case_source': 'Lev 20:2-3; Mishnah Sanhedrin 7:7 — handed, passed, through the fire, to Molech'})
+        w.submit({'kind': 'seed_given_to_molech', 'subject': 'the-partial-giver', 'giver': 'the-partial-giver', 'seed': 'son', 'fire': False, 'day': 1, 'case_source': 'Mishnah Sanhedrin 7:7 — not through the fire: exempt'})
+        w.submit({'kind': 'seed_given_to_molech', 'subject': 'the-concealed-giver', 'giver': 'the-concealed-giver', 'seed': 'son', 'concealed': True, 'day': 1, 'case_source': 'Lev 20:4-5 — the people hid their eyes: by Heaven, with his family'})
+        w.submit({'kind': 'ghost_pit_consulted', 'subject': 'the-ov-bearer', 'person': 'the-ov-bearer', 'role': 'bearer', 'day': 1, 'case_source': 'Lev 20:27 — the bearer stoned'})
+        w.submit({'kind': 'ghost_pit_consulted', 'subject': 'the-ov-consulter', 'person': 'the-ov-consulter', 'role': 'consulter', 'day': 1, 'case_source': 'Lev 19:31 / 20:6 — the consulter warned only'})
+        w.submit({'kind': 'parent_cursed', 'subject': 'the-curser', 'curser': 'the-curser', 'parent': 'father', 'day': 1, 'case_source': 'Lev 20:9; Mishnah Sanhedrin 7:8 — by the Name: stoned'})
+        w.submit({'kind': 'parent_cursed', 'subject': 'the-maidservants-son', 'curser': 'the-maidservants-son', 'parent': 'father', 'born_of': 'maidservant', 'day': 1, 'case_source': 'Sifra Kedoshim Chapter 9 — the son of a maidservant: the silence'})
+        w.submit({'kind': 'parent_cursed', 'subject': 'the-not-by-name', 'curser': 'the-not-by-name', 'parent': 'mother', 'by_the_name': False, 'day': 1, 'case_source': 'Mishnah Sanhedrin 7:8 — not by the Name: the silence'})
+        w.submit({'kind': 'land_defiled', 'subject': 'the-land', 'land': 'the-land', 'people': 'the-people', 'warned': True, 'case': 'disqualified', 'day': 1, 'case_source': 'Lev 18:24-29 / 20:22; Sifra Acharei Mot Chapter 13 — the land vomits, the karet, the lashes'})
+        w.advance(2)
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    return (n('the-outside-slaughterer', 'karet_cut_off'), n('the-bird-slaughterer', 'exempt'), n('the-fit-pincher', 'karet_cut_off'), n('the-outside-pincher', 'exempt'), n('the-two-cups', 'karet_cut_off'), n('the-two-cups', 'atoned_forgiven'), n('the-raiser', 'blood_reckoned'), n('the-raiser', 'karet_cut_off'), n('the-agent', 'blood_reckoned'),
+            n('the-ban-era-offerer', 'karet_cut_off'), n('the-permit-era-offerer', 'exempt'), n('the-platform-offering', 'accepted'), n('the-platform-offering', 'disqualified'),
+            n('the-blood-eater', 'face_set_against'), n('the-blood-eater', 'karet_cut_off'), n('the-blood-eater', 'lashes'), n('the-convert-eater', 'karet_cut_off'), n('the-feeder', 'karet_cut_off'), n('the-altar-blood', 'atoned_forgiven'),
+            n('the-hunter', 'cover_owed'), n('the-beast-slaughterer', 'cover_owed'), n('the-koy-hunter', 'cover_owed'), n('the-lime-coverer', 'cover_owed'), n('the-metal-coverer', 'cover_owed'), n('the-wind-covered', 'cover_owed'), n('the-re-exposed', 'exempt'), n('the-deaf-slaughterer', 'exempt'), n('the-hundred', 'cover_owed'),
+            n('the-carcass-eater', 'impure_until_evening'), n('the-carcass-eater', 'washes_and_bathes'), n('the-garments', 'defiles_garments'), n('the-carcass-eater', 'bears_sin'), n('the-carcass-eater', 'lashes'), n('the-resident-alien-eater', 'impure_until_evening'), n('the-beast-carcass-eater', 'impure_until_evening'),
+            n('the-adulterer', 'put_to_death'), n('the-adulterer', 'karet_cut_off'), n('the-unwitting-adulterer', 'atoned_forgiven'), n('the-doubtful-adulterer', 'suspends'), n('the-unwitnessed', 'karet_cut_off'), n('the-minors-wife-lier', 'exempt'), n('the-fathers-wife-lier', 'stoned'), n('the-fathers-wife-lier', 'karet_cut_off'), n('the-mother-lier', 'stoned'),
+            n('the-woman-and-mother-taker', 'burned_by_court'), n('the-sister-taker', 'karet_cut_off'), n('the-sister-taker', 'bears_sin'), n('the-aunt-lier', 'childless'), n('the-brothers-wife-taker', 'childless'), n('the-male-lier', 'stoned'), n('the-mixed-deaths', 'put_to_death'), n('the-void-betrothal', 'exempt'),
+            n('the-beast-lier', 'stoned'), n('the-beast-lier', 'karet_cut_off'), n('the-beast-lier', 'put_to_death'), n('the-beast-woman', 'stoned'), n('the-beast', 'beast_killed'), n('the-menstruant-lier', 'karet_cut_off'),
+            n('the-widow-ervah', 'exempt'), n('the-widow-second', 'released'), n('the-widow-stranger', 'released'), n('the-rival', 'exempt'), n('the-two-bonds', 'released'), n('the-swapped', 'barred_from_holies'), n('the-mother-in-law', 'karet_cut_off'), n('tamar', 'exempt'),
+            n('the-molech-giver', 'stoned'), n('the-molech-giver', 'karet_cut_off'), n('the-molech-giver', 'face_set_against'), n('the-partial-giver', 'exempt'), n('the-concealed-giver', 'face_set_against'), n('the-concealed-giver', 'karet_cut_off'), n('the-concealed-giver', 'stoned'),
+            n('the-ov-bearer', 'stoned'), n('the-ov-bearer', 'karet_cut_off'), n('the-ov-consulter', 'stoned'), n('the-curser', 'stoned'), n('the-maidservants-son', 'stoned'), n('the-not-by-name', 'stoned'),
+            n('the-land', 'land_vomits'), n('the-people', 'karet_cut_off'), n('the-people', 'lashes'), n('the-people', 'disqualified'),
+            tset, fired, w.clock.year), w
+SCENE, _W = scene()
+
+
 # ---- (2) TEST DATA — the Mishnah rows, read whole from the shelf ------
 def load(t):
     d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
@@ -1302,6 +1607,7 @@ print('answer sheet: %d Mishnah rows verified by their own tokens (Sanhedrin 7/9
       'Zevachim 13-14, Keritot 1 read whole — the topic docket)' % len(SHEET))
 
 TESTS = [
+ ('THE SCENE — Zevachim 13-14, Chullin 6, Sanhedrin 7 and 9, Keritot 1-3, Yevamot 1-2, Makkot 3 on the world engine (the daemon\'s watch coverage printed below)', cell(SCENE, I, 'the outside offenses and the platform, the blood and the covering and the carcass, the unions matrix by union, the beast, the levirate grades, Molech, the ghost-pit, the curser, the land — every value a cell\'s', ['karet_cut_off', 'blood_reckoned', 'exempt', 'atoned_forgiven', 'accepted', 'consecrated', 'disqualified', 'face_set_against', 'lashes', 'cover_owed', 'impure_until_evening', 'washes_and_bathes', 'defiles_garments', 'bears_sin', 'stoned', 'burned_by_court', 'put_to_death', 'childless', 'beast_killed', 'suspends', 'released', 'barred_from_holies', 'land_vomits']), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 2)),
  # ---- THE SANCTIONS MATRIX (Lev 18 warning, Lev 20 sanction, mode, karet) ----
  ('Lev 18:8 / 20:11 — the father\'s wife: stoning (the formula), karet', sanction('father_wife'), (8, 11, 'stoning', True)),
  ('Lev 18:7 / 20:11 — the mother: stoning via the father\'s-wife clause', sanction('mother'), (7, 11, 'stoning', True)),
@@ -1605,6 +1911,7 @@ print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sort
 print('effects: every cell carries REGISTERED effects — SEVEN discovered in these spans\' own verbs: burned_by_court, '
       'beast_killed (BODY/DESTROY), childless, face_set_against (HEAVEN), cover_owed (DEBIT), land_vomits (TRANSFER), '
       'blood_reckoned (STATUS) [effects law satisfied]')
+_W.print_coverage()
 if ok == n:
     print('BLOOD, UNIONS, AND SANCTIONS COMPILE — the sanction tokens censused and each union located by its own kin '
           'token; the formula decoded on 20:27\'s co-occurrence; the fifteen women and the six computed by composing the '
