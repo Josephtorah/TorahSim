@@ -566,6 +566,102 @@ def bird(case, **k):
                     ['accepted'])
     return cell('no_case', I, '', [FX.NONE])
 
+# ---- THE WRAP (W3 THE OFFERING ENGINE, D9-iii, 2026-09-07) — the daemon and the scene --------------
+# Five case heads: the meal offering brought (2:1, 2:4, 2:8, 2:13; 6:7 the priests' seat under law_tzav) —
+# the vow parsed, the salt, the presentation, the memorial, the remainder; the fistful scooped (2:2; 6:8);
+# the leavening (2:11; 6:10); the omer as Lev 2:14's first-fruits meal offering — THE SECOND SEAT of the
+# calendar's omer_brought, one type under two daemons; the bird burnt offering (1:14-17). Never emits an event.
+import world_engine as WE
+def law_minchah(event, world):
+    """Lev 2 + 1:14-17 (cold_run_minchah.py — the vow, the fistful, the leaven, the salt, the presentation, the omer, the bird)."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'meal_offering_brought':
+        if event['offerers'] == 'partners':
+            return []                                            # Menachot 12:5 — two do not donate one tenth: the silence (who_brings)
+        vc = vow(event['vow_words'])
+        out = [E_('consecrated', event['offerer'], value=vc['v'], law='[INK Lev 2:1 "when a soul brings a meal offering" — the vow parsed: %s]' % vc['why'][:70])]
+        if 'not_accepted' in vc['fx']:
+            out.append(E_('not_accepted', event['offerer'], value=vc['v'], law='[Mishnah Menachot 12:2 — the other kind a valid offering, the vow not discharged]'))
+        if 'disqualified' in vc['fx']:
+            out.append(E_('disqualified', event['offerer'], value=vc['v'], law='[Mishnah Menachot 12:2 — "THIS in a griddle" bound to its vessel]'))
+            return out
+        mk = event['meal_kind']
+        out += [E_('salted', 'the-meal-offering', value=salt('meal_offering')['v'], law='[INK Lev 2:13 "with salt you shall salt"]'),
+                E_('presented', 'the-meal-offering', value=presentation(mk)['v'], law='[INK Lev 2:8 "present it to the altar"]'),
+                E_('azkarah_to_fire', 'the-meal-offering', cp='HEAVEN', value=fistful('fistful_and_frankincense')['v'], law='[INK Lev 2:2 "the priest shall burn its memorial"]')]
+        rem = remainder(mk)
+        if 'due_to_priest' in rem['fx']:
+            out += [E_('due_to_priest', 'the-priests', cp=event['offerer'], value=rem['v'], law='[INK Lev 2:3, 2:10 "the remainder to Aaron and his sons"]'),
+                    E_('most_holy', 'the-meal-offering', law='[INK Lev 2:3 "most holy of the fire-offerings of the LORD"]')]
+        return out
+    if k == 'fistful_scooped':
+        if event['by'] != 'priest' or event['hand'] == 'left' or event['contents'] != 'flour_and_oil' or event['quantity'] == 'short':
+            case = 'scooped_by_non_priest' if event['by'] != 'priest' else 'left_hand' if event['hand'] == 'left' else 'pebble_salt_grain_frankincense_crumb' if event['contents'] != 'flour_and_oil' else 'quantity_short'
+            return [E_('disqualified', 'the-meal-offering', value=fistful(case)['v'], law='[INK Lev 2:2 "the priests... his full fist of its flour and oil" — %s]' % case)]
+        if not event['for_its_name']:
+            if event['sinner']:
+                return [E_('disqualified', 'the-meal-offering', value=fistful('sinner_not_for_its_name')['v'], law='[Lev 5:11 "for it IS a sin offering"; Mishnah Menachot 1:1]')]
+            return [E_('accepted', 'the-meal-offering', cp='HEAVEN', value=fistful('not_for_its_name')['v'], law='[Mishnah Menachot 1:1 — valid]'),
+                    E_('not_accepted', event['offerer'], value='obligation_not_discharged', law='[Mishnah Menachot 1:1 — not credited to the owner]')]
+        return [E_('accepted', 'the-meal-offering', cp='HEAVEN', value='the_fistful', law='[INK Lev 2:2]'),
+                E_('azkarah_to_fire', 'the-meal-offering', cp='HEAVEN', value=fistful('fistful_and_frankincense')['v'], law='[INK Lev 2:2 "with all its frankincense"; Mishnah Menachot 3:5]')]
+    if k == 'meal_offering_leavened':
+        lv = leaven(event['meal_kind']) if event['meal_kind'] in ('todah_loaves', 'two_loaves') else leaven('any_meal_offering_leavened')
+        if 'accepted' in lv['fx']:
+            return [E_('accepted', 'the-loaves', cp='HEAVEN', value=lv['v'], law='[Lev 7:13 / 23:17 the leavened exceptions — CALLED leaven(%s) -> %s]' % (event['meal_kind'], lv['v']))]
+        return [E_('barred_from_it', event['baker'], value='leaven', law='[INK Lev 2:11 "shall not be made leavened"]'),
+                E_('lashes', event['baker'], amount=40, value=leaven('per_step')['v'], law='[Mishnah Menachot 5:2 — liable for its kneading, its shaping, its baking: the step %s]' % event['step'])]
+    if k == 'omer_brought':
+        om = omer('no_standing_grain') if not event['standing_grain'] else (omer('no_moist_grain') if not event['moist'] else omer('source'))
+        return [E_('accepted', event['bringer'], cp='HEAVEN', value=om['v'], law='[INK Lev 2:14 "and if you bring a meal offering of first fruits" — THE SECOND SEAT of the omer; the doubled "you shall offer": %s]' % om['why'][:70]),
+                E_('azkarah_to_fire', 'the-omer', cp='HEAVEN', value=omer('after_the_tenth')['v'], law='[INK Lev 2:16 "the priest shall burn its memorial"]'),
+                E_('presented', 'the-omer', value=presentation('omer')['v'], law='[INK Lev 2:8 through the deictic; the waving Lev 23:11]'),
+                E_('due_to_priest', 'the-priests', cp=event['bringer'], value=remainder('omer')['v'], law='[INK Lev 2:3 — the rest to the priests (Mishnah Menachot 10:4)]')]
+    if k == 'bird_offering_brought':
+        age = bird('age', species=event['species'], age=event['age'])
+        if 'disqualified' in age['fx'] or event['blemish'] or event['instrument'] != 'fingernail' or event['hand'] == 'left' or event['blood_pressed'] == 'head_only':
+            why = 'age' if 'disqualified' in age['fx'] else 'blemish' if event['blemish'] else 'instrument' if event['instrument'] != 'fingernail' else 'left_hand_or_night' if event['hand'] == 'left' else 'blood_head_only'
+            return [E_('disqualified', event['subject'], value=age['v'] if why == 'age' else bird(why)['v'], law='[Mishnah Zevachim 6:6, 7:5 — %s: CALLED bird(%s)]' % (why, why))]
+        out = [E_('pinched', event['subject'], value=bird('instrument')['v'], law='[INK Lev 1:15 "and pinch off its head"]'),
+               E_('crop_cast_to_ash_place', event['subject'], value=bird('crop')['v'], law='[INK Lev 1:16 "cast it beside the altar eastward, to the place of the ashes"]'),
+               E_('salted', event['subject'], value=salt('bird_olah')['v'], law='[INK Lev 2:13 "on all your offerings you shall offer salt"; Mishnah Zevachim 6:5]')]
+        if not event['for_its_name']:
+            return out + [E_('not_accepted', event['offerer'], value=bird('not_for_its_name')['v'], law='[Mishnah Zevachim 6:7 — valid, not credited]')]
+        return out + [E_('accepted', event['offerer'], cp='HEAVEN', value=bird('burn')['v'], law='[INK Lev 1:17 "a burnt offering, a fire-offering of pleasing odor" — the frame CALLED offerings(olah:flock)]')]
+    return []
+
+def scene():
+    """THE SCENE — the meal offering's and the bird's rows replayed on the world engine (clock unit: days)."""
+    with _ctx.redirect_stdout(_io.StringIO()):
+        w = WE.World(era='the meal offering and the bird: Menachot 1, 5, 10, 12-13, Zevachim 6-7 on the engine (clock unit: days)')
+        w.laws = [law_minchah]
+        w.advance(1)
+        w.submit({'kind': 'meal_offering_brought', 'subject': 'the-vower', 'offerer': 'the-vower', 'offerers': 'one', 'meal_kind': 'soleth', 'vow_words': 'a_meal_offering', 'case_source': 'Mishnah Menachot 13:1 — "a meal offering": whichever of the five'})
+        w.submit({'kind': 'meal_offering_brought', 'subject': 'the-griddle-vower', 'offerer': 'the-griddle-vower', 'offerers': 'one', 'meal_kind': 'pan', 'vow_words': 'griddle_brought_pan', 'case_source': 'Mishnah Menachot 12:2 — vowed a griddle, brought a pan: not discharged'})
+        w.submit({'kind': 'meal_offering_brought', 'subject': 'the-this-vower', 'offerer': 'the-this-vower', 'offerers': 'one', 'meal_kind': 'pan', 'vow_words': 'THIS_in_griddle_brought_pan', 'case_source': 'Mishnah Menachot 12:2 — "THIS in a griddle," brought in a pan: invalid'})
+        w.submit({'kind': 'meal_offering_brought', 'subject': 'the-partners', 'offerer': 'the-partners', 'offerers': 'partners', 'meal_kind': 'soleth', 'vow_words': 'a_meal_offering', 'case_source': 'Mishnah Menachot 12:5 — two do not donate one tenth: the silence'})
+        w.submit({'kind': 'meal_offering_brought', 'subject': 'the-priest', 'offerer': 'the-priest', 'offerers': 'one', 'meal_kind': 'priests_own', 'vow_words': 'a_meal_offering', 'case_source': 'Mishnah Menachot 6:2 — the priests\' own: wholly to the altar, none to the priests'})
+        w.submit({'kind': 'fistful_scooped', 'subject': 'the-meal-offering', 'offerer': 'the-vower', 'by': 'non_priest', 'hand': 'right', 'contents': 'flour_and_oil', 'for_its_name': True, 'sinner': False, 'quantity': 'full', 'case_source': 'Mishnah Menachot 1:2 — scooped by a non-priest: invalid'})
+        w.submit({'kind': 'fistful_scooped', 'subject': 'the-meal-offering', 'offerer': 'the-vower', 'by': 'priest', 'hand': 'right', 'contents': 'flour_and_oil', 'for_its_name': False, 'sinner': False, 'quantity': 'full', 'case_source': 'Mishnah Menachot 1:1 — not for its name: valid, not credited'})
+        w.submit({'kind': 'fistful_scooped', 'subject': 'the-meal-offering', 'offerer': 'the-sinner', 'by': 'priest', 'hand': 'right', 'contents': 'flour_and_oil', 'for_its_name': False, 'sinner': True, 'quantity': 'full', 'case_source': 'Mishnah Menachot 1:1 — the sinner\'s not for its name: invalid'})
+        w.submit({'kind': 'fistful_scooped', 'subject': 'the-meal-offering', 'offerer': 'the-vower', 'by': 'priest', 'hand': 'right', 'contents': 'flour_and_oil', 'for_its_name': True, 'sinner': False, 'quantity': 'full', 'case_source': 'Mishnah Menachot 3:5 — the fistful and the frankincense to the fire'})
+        w.submit({'kind': 'meal_offering_leavened', 'subject': 'the-baker', 'baker': 'the-baker', 'meal_kind': 'soleth', 'step': 'baking', 'case_source': 'Mishnah Menachot 5:2 — leavened: transgression, per step'})
+        w.submit({'kind': 'meal_offering_leavened', 'subject': 'the-todah-bringer', 'baker': 'the-todah-bringer', 'meal_kind': 'todah_loaves', 'step': 'baking', 'case_source': 'Mishnah Menachot 5:1 — the todah\'s loaves come leavened'})
+        w.advance(16)
+        w.submit({'kind': 'omer_brought', 'subject': 'israel', 'bringer': 'israel', 'day': 16, 'standing_grain': False, 'moist': True, 'case_source': 'Mishnah Menachot 10:9 — no standing grain: from the sheaves (Lev 2:14\'s doubled verb)'})
+        w.submit({'kind': 'bird_offering_brought', 'subject': 'the-bird', 'offerer': 'the-bird-bringer', 'species': 'turtledove', 'age': 'grown', 'blemish': False, 'instrument': 'fingernail', 'hand': 'right', 'for_its_name': True, 'blood_pressed': 'body_and_head', 'case_source': 'Mishnah Zevachim 6:5 — the bird olah\'s walk'})
+        w.submit({'kind': 'bird_offering_brought', 'subject': 'the-young-turtledove', 'offerer': 'the-bird-bringer', 'species': 'turtledove', 'age': 'young', 'blemish': False, 'instrument': 'fingernail', 'hand': 'right', 'for_its_name': True, 'blood_pressed': 'body_and_head', 'case_source': 'Mishnah Zevachim 7:5 — turtledoves before their time: disqualified'})
+        w.submit({'kind': 'bird_offering_brought', 'subject': 'the-knifed-bird', 'offerer': 'the-bird-bringer', 'species': 'pigeon', 'age': 'young', 'blemish': False, 'instrument': 'knife', 'hand': 'right', 'for_its_name': True, 'blood_pressed': 'body_and_head', 'case_source': 'Mishnah Zevachim 7:5 — pinched with a knife: disqualified'})
+        w.submit({'kind': 'bird_offering_brought', 'subject': 'the-misnamed-bird', 'offerer': 'the-bird-bringer', 'species': 'pigeon', 'age': 'young', 'blemish': False, 'instrument': 'fingernail', 'hand': 'right', 'for_its_name': False, 'blood_pressed': 'body_and_head', 'case_source': 'Mishnah Zevachim 6:7 — not for its name: valid, not credited'})
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    return (n('the-vower', 'consecrated'), n('the-griddle-vower', 'not_accepted'), n('the-this-vower', 'disqualified'), n('the-partners', 'consecrated'), n('the-priests', 'due_to_priest'),
+            n('the-meal-offering', 'most_holy'), n('the-meal-offering', 'salted'), n('the-meal-offering', 'presented'), n('the-meal-offering', 'azkarah_to_fire'), n('the-meal-offering', 'disqualified'),
+            n('the-meal-offering', 'accepted'), n('the-vower', 'not_accepted'), n('the-baker', 'lashes'), n('the-loaves', 'accepted'), n('israel', 'accepted'), n('the-omer', 'azkarah_to_fire'),
+            n('the-bird', 'pinched'), n('the-bird', 'crop_cast_to_ash_place'), n('the-bird', 'salted'), n('the-bird-bringer', 'accepted'), n('the-young-turtledove', 'disqualified'),
+            n('the-knifed-bird', 'disqualified'), n('the-bird-bringer', 'not_accepted'), w.clock.year), w
+SCENE, _W = scene()
+
 # ---- (2) TEST DATA — the Mishnah rows, read whole from the shelf ----
 def load(t):
     d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
@@ -684,6 +780,16 @@ TESTS = [
  ('Zevachim 6:7 — the bird olah not for its name: valid, not credited', bird('not_for_its_name'), 'valid_not_credited'),
  ('Zevachim 7:2 — done below as a sin offering\'s procedure: invalid', bird('done_below_as_sin_offering_procedure'), 'invalid'),
  ('Zevachim 7:2 — done above as an olah for an olah: valid', bird('done_above_as_olah_for_olah'), 'valid'),
+ # ---- THE WRAP (W3, 2026-09-07) — the meal offering and the bird on the world engine ----
+ ('THE SCENE — (the vower consecrated, the griddle-vower not credited, the THIS-vower invalid, the partners\' silence, dues to the priests, '
+  'most holy, salted, presented, memorials, fistfuls disqualified, fistfuls accepted, the vower not credited, the baker lashed, the loaves '
+  'accepted, the omer accepted, its memorial, the bird pinched, its crop cast, salted, its bringer accepted, the young turtledove, the knife, '
+  'the misnamed bird not credited, the clock)',
+  cell(SCENE, I, 'THE SCENE on the world engine: Menachot 13:1, 12:2, 12:5, 6:2, 1:1-2, 3:5, 5:1-2, 10:9 and Zevachim 6:5-7, 7:5 replayed on '
+       'law_minchah — the vow parser, the fistful, the leaven, the omer at its SECOND SEAT (Lev 2:14) and the bird, every value the '
+       'daemon\'s by call into this file\'s own cells', ['consecrated', 'not_accepted', 'disqualified', 'salted', 'presented', 'azkarah_to_fire',
+       'due_to_priest', 'most_holy', 'accepted', 'barred_from_it', 'lashes', 'pinched', 'crop_cast_to_ash_place']),
+  (1, 1, 1, 0, 3, 2, 3, 3, 4, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 16)),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------
@@ -712,6 +818,8 @@ print('computed, not graded: salt from any place even on the Sabbath (MOVE, Sifr
                                          leaven('honey_to_the_fire'), omer('grain'), bird('burn'))))
 ops = FX.summarize(used)
 print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
+print('SCENE: %r — the daemon\'s watch coverage:' % (SCENE,))
+_W.print_coverage()
 print('effects: every cell carries REGISTERED effects — six discovered in this span\'s own verbs: '
       'azkarah_to_fire (HEAVEN), most_holy (STATUS), salted, presented, pinched (BODY), '
       'crop_cast_to_ash_place (DESTROY) [effects law satisfied]')

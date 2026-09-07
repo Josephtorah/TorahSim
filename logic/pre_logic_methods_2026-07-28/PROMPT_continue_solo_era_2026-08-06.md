@@ -13133,3 +13133,127 @@ the oil) + THE SECOND-SEAT-ACROSS-FILES SHAPE (erection.repeats by law_calendar 
 (eleven set / eleven fired on W2's tapes; count them per report) + THE PARSER'S REGEXES (one false positive found and fixed — the
 `E_?\(` effect regex and the `.submit(` fence check have the same shape; a daemon body that names `E_(` in a comment or a string would
 be read as an effect — watch for it).
+═══ COMMITTED AND PUSHED — b95376d (2026-09-07, the owner: "Commit push"): the W2 set, 13 files, staged by exclusion (the NEVER-COMMIT
+set, the elijah_docket gitlink, and ARCHITECTURE/* untouched); pushed as Josephtorah, the gh account switched back to PeerloopLLC. Clean
+point #76 stands; nothing uncommitted of ours. NEXT on the owner's word, in a fresh window: W3 THE OFFERING ENGINE (the #76 tail).
+
+═══ W3 THE OFFERING ENGINE — DONE (2026-09-07, the first sitting after compaction #76; the owner: "Next go"; the mandatory rereads first).
+THE LARGEST WRAP: 61 functions in seven runners (offerings <module>, minchah 10, tzav 8, chatat 36, vayikra5 2, shemini 1, shemini_day's
+order/calf/people). THE RHYTHM HELD A THIRD TIME: (1) 28 case-form types registered FIRST by script (scratchpad w3_registry_gen.py — every
+witness contiguous in its verse, the pointed form extracted, no witness shared between two new types; scratchpad w3_registry_amend.py spliced
+them as text, gave omer_brought its SECOND SEAT Lev 2:14 with law_minchah as consumer, widened offering_done's tape line, and UNIFIED the two
+seeding aliases: garments_sprinkled → milluim_blood_sprinkled, meal → milluim_leftover — the registry 148 → 174 types, 260 → 341 runs, case
+form 70 → 98, lint 0; w3_fields_patch.py set the field contracts — NO FIELD NAMED kind); (2) THE DECLARATION (scratchpad
+w3_dispositions_amend.py): law_offerings (2 kinds), law_minchah (5), law_tzav (9), law_chatat (9), law_vayikra5 (5), law_shemini (2);
+law_investiture's two kinds renamed; law_eighth_day's offering_done widened to nine effects; 58 functions OWED → WRAPPED, THREE NONE — the gate
+failed 71 ways before the code; (3) THE CODE: thin daemons calling the runners' own cells; law_eighth_day's offering_done branch keyed by the
+act's spec (head.rstrip(':')) writes the spec's effects by call; cold_run_incense_shekel's daemon and tape on the library's names; (4) THE
+SCENES: offerings (the grid's nine rows + the fat ban, the scene a dispatch key 'scene'), minchah (the vow x3, the partners' silence, the priests'
+own, the fistful x4, the leaven x2, the omer, the bird x4), tzav (the installation on WE.law_installation beside law_tzav — RELEASE fires day 7;
+the altar x3, the vessels x4, the griddle x2, holy flesh x7, blood x2, dues x3, the guilt offering x3, the meal offering x2, the leaven),
+chatat (46 events across the nine kinds), vayikra5 (under main — the pesach shape; WE.law_deposit_oath beside), shemini (the sixteen kinds + the
+carcass x2, a graded SCENES block — the runner has no guard), shemini_day (scene() returns (main, wrap, w); a second TESTS row); EVERY SCENE
+PRINTED BEFORE TYPED — two probes disagreed with the predictions: the loaves' acceptance counted on the todah-bringer (the daemon writes it on
+'the-loaves' — the tuple's entity corrected) and the eighth day's 'olah: as prescribed' / 'minchah: the palm filled' heads carrying the colon
+(0 where 1 was predicted — rstrip); tripwires measured then set: tzav 54, chatat 195, vayikra5 32, shemini_day 105; (5) THE GATE 146 / 102 / 3
+of 251, unfired 1 (jubilee_proclaimed), unconsumed 1 (overflow_reported), open aliases 5; THE SWEEP 33/33 at 3610 cells (3603 + 7 scene rows).
+THE GATE FIRED SIX WAYS AFTER THE CODE, ALL THE TAPE'S SHAPE: submits built as dict(base, ...) / dict(kind, ...) are '?UNRESOLVED?' to the tape
+parser (rewritten as literals with 'kind' inside the braces — 14 submits); a new top-level counting def (scene_wrap) read as a compiled function
+(folded into scene(), the INFRA name). ONE RED AFTER THE MATRIX: vayikra5's effects section called .startswith on the scene row's tuple after
+"MATRIX: 32/32" printed (the score line is not the exit code; the first sweep hit it — killed, fixed with isinstance, rerun). FINDINGS declared,
+not fixed: THE PARSER'S VALUE/EFFECT HOMOGRAPH — parse_functions reads every registered-effect-named string as a write: chatat.identity and
+.sprinklings carry the TIER NAME 'anointed', minchah.oil_ops the cell VALUE 'anointed' (Lev 2:4's wafers) — three functions with NO honest
+effect were on the worklist for a spelling; declared NONE with the why, the parser OPEN in COMPILE_DEBT (its own sitting: read effects from
+the cells' fx lists, remeasure the 251). SHAPES SETTLED: ONE TYPE UNDER TWO LAW LAYERS (meal_offering_brought, meal_offering_leavened:
+law_minchah + law_tzav; doubtful_sin: law_vayikra5 + law_chatat — the same field contract; the registry's tape line names both consumers);
+THE RUN'S DAEMON WRITES THE SPEC'S EFFECTS BY CALL (shemini_day's order/calf/people WRAPPED by law_eighth_day — M-22 in the simulator); THE
+LIBRARY BESIDE twice more; THE TABLE-SHAPED RUNNER'S SCENE AS A DISPATCH KEY. THE TIMER CENSUS: 22 set / 22 fired (offerings 10, tzav 9, chatat
+2, shemini_day 1). THE SILENCES: 20 (offerings 1, minchah 1, tzav 6 incl. the library's 3 kinds, chatat 2, vayikra5 4 incl. the library's 1,
+shemini 5). Records: World/step9/REPORT_WRAP_W3.md (NEW, ls'd first), COMPILE_DEBT.md (W3 [x]; the second OPEN gate note), THE_STEPS.md (the
+W3 paragraph), THE_BRIEFING.md (the W3 bullet — the design moved), DAEMON_INDEX.md (regenerated), this doc, memory. Scratchpad: w3_ink.py,
+w3_census.py (the loose-vs-honest effects census), w3_registry_gen.py, w3_events.yaml, w3_registry_amend.py, w3_fields_patch.py,
+w3_dispositions_amend.py, sweep_w3.txt, event_vocabulary.pre_w3.yaml, daemon_dispositions.pre_w3.yaml.
+═══ COMPACTION POINT #77 (2026-09-07 — written unprompted at sitting W3's close)
+═══ CLEAN POINT — no work mid-flight. W1, W2, W3 DONE; the gate satisfied (146 / 102 / 3); the sweep 33 of 33 at 3610 cells; standing 1778;
+effects 242; event types 174 (case 98); hash 8b8fff1fa28953af UNMOVED. LAST COMMIT b95376d (W2 and everything before it); W3 UNCOMMITTED —
+commit only on the owner's "commit push". The set that will ride: World/step9/{event_vocabulary.yaml, daemon_dispositions.yaml,
+DAEMON_INDEX.md, cold_run_offerings.py, cold_run_minchah.py, cold_run_tzav.py, cold_run_chatat.py, cold_run_vayikra5.py, cold_run_shemini.py,
+cold_run_shemini_day.py, cold_run_incense_shekel.py, COMPILE_DEBT.md, REPORT_WRAP_W3.md (NEW)}, THE_STEPS, THE_BRIEFING, this doc, memory —
+staging by exclusion; the NEVER-COMMIT set and the ARCHITECTURE/* rule unchanged.
+POST-COMPACTION REREADS (mandatory, first sitting): THE_STEPS Step 5 (the deliverable rule, THE DAEMON CAMPAIGN, THE WRAPS OPEN — the W1, W2
+and W3 paragraphs, the effects rule) + the compiler block + this tail + World/step9/COMPILE_DEBT.md (THE WRAP WORKLIST W1-W3 [x] W4-W7, X1-X5,
+the TWO OPEN gate notes) + World/step9/daemon_dispositions.yaml (header; the `daemons:` section) + REPORT_WRAP_W3.md + cold_run_chatat.py's
+law_chatat and scene (the largest daemon's shape) + cold_run_shemini_day.py's law_eighth_day (the run's daemon writing the spec's effects) +
+DAEMON_INDEX.md's "### clocks / negaim / metzora / yoma" sections (W4's worklist). THEN, on the owner's word: W4 THE PURITY CLOCKS — clocks
+(yoledet, zav, touch, degrees, niddah, zavah, pairs), negaim (main), metzora (frame, birds, week, shave, eighth, poor), yoma (its OWED
+functions — `--debt` prints them) — by the SAME rhythm: (1) the case heads of Lev 12, 13-14, 15, 16 registered FIRST (print the ink; generate
+by script; expect the `case` form: 'a woman, when she conceives' 12:2, 'a man, when there is in the skin of his flesh' 13:2, 'when a man has
+a discharge' 15:2, 'a woman, when she has a discharge' 15:19; the Day's statute 16:29-34); (2) the daemons declared (law_clocks, law_negaim,
+law_metzora, law_yoma; the impurity clocks are TIMERS per person — the count-seven, the eighth-day offerings, the leper's week, the confinement
+weeks: the timer census will be the sitting's headline); (3) the code; (4) the scenes replaying Niddah, Zavim, Negaim 1-14, Kinnim, Yoma 1-8,
+Keritot 1:3-7 — the clock unit days; (5) gate, sweep, records (REPORT_WRAP_W4.md — ls first; COMPILE_DEBT W4 [x]; THE_STEPS; THE_BRIEFING only
+if the design moves; this doc). Then W5..W7, then D9-iv THE DELIVERABLE RULE AMENDED, then Numbers. OPEN (counted): as #76's + the 102 OWED
+functions (14 runners) + the TWO gate items (the last-binding resolution; THE VALUE/EFFECT HOMOGRAPH) + the five alias entries (W5, W6, and
+`renamed` a registry sitting) + the unfired jubilee_proclaimed (W5) + the unconsumed overflow_reported (W6). Watches: as #76's + ONE TYPE UNDER
+TWO LAW LAYERS (the same field contract is the condition — a second contract is the `renamed` alias, not this shape) + THE RUN'S DAEMON WRITES
+THE SPEC'S EFFECTS (the eighth day's offering_done; the erection's stamps and the vestments' inspection are the same shape for W6/W7) + THE
+TAPE PARSER'S LITERAL KIND (a submit must carry 'kind': '...' inside its braces — dict(base, ...) is invisible to the gate) + THE SCENE HELPER
+NAMES (only cell/out/scene/scene_cell/build/run are INFRA — any other top-level def that names an effect is a law to the gate) + THE SPEC
+STRING'S HEAD (a colon on the head word) + THE SCORE LINE IS NOT THE EXIT CODE (an older runner's effects section may assume string verdicts).
+
+═══ W4 THE PURITY CLOCKS — DONE (2026-09-07, the first sitting after compaction #77; the owner: "Go"; the mandatory rereads done first)
+THE TYPES FIRST: scratchpad w4_ink.py printed the case-head ink of Lev 12, 13, 14, 15, 16; w4_registry_gen.py generated 20 case-form types
+(every witness contiguous, no witness shared); w4_registry_amend.py spliced them before narrative_verbs and gave yom_kippur_kept its SECOND
+SEAT (Lev 16:29, 16:30, 16:31, 16:34 — the statute's first seat in the book, compiled second) with law_yoma as second consumer and the fields
+between/appeased added; the registry 194 types, 420 runs verified, case form 118, lint 0 (event_vocabulary.pre_w4.yaml in the scratchpad).
+THE DECLARATION SECOND: w4_dispositions_amend.py — law_clocks (10 kinds), law_negaim (4), law_metzora (3), law_yoma (4 incl. yom_kippur_kept);
+18 functions OWED → WRAPPED; the gate failed 22 ways (four daemons missing, eighteen functions wrapped by them). THE CODE THIRD: law_clocks
+in cold_run_clocks.py (the mothers' clocks from yoledet's own numbers — the union read back out of the computed string cell; the zav's tier;
+discharge_ceased setting counts_seven_clean due day+7 and pair_owed due day+8; man_had_discharge with during_count CANCELLING both timers via
+world.cancel_timers; bird_pair_brought closing the debit or running pairs() for the mixtures; discharge_source_touched over touch()/degrees();
+seed_emitted; woman_menstruated with the stain's silence; lay_with_menstruant with the partner's sin offering by call; woman_had_flux with the
+Presence clause), law_negaim in cold_run_negaim.py (TRACKS/days/standing_verdict/house_machine HOISTED to module level; the confinement weeks
+as timers six days apart; the ten houses; the enterer), law_metzora in cold_run_metzora.py (the purity verb's four gates written; the tent
+week due day+6; the rich and poor scales; the swap; the maimed), law_yoma in cold_run_yoma.py (route → suspends or atoned_forgiven due
+the_day; day_atones' fellow gate silence; dispatch_goat; inner_service_performed keyed by the service_order() ref, calling OFF and CH).
+THE SCENES FOURTH: all four printed before typed and ALL FOUR matched their written predictions — clocks (15 set, 13 fired, 2 cancelled,
+clock 82), negaim (36/36, clock 20), metzora (2/2, clock 9), yoma (4/4, clock 11; MO.law_moadim registered beside); tripwires clocks 162,
+metzora 78, negaim 19 (measured: 10 + 8 + 1 — the scene's list named scene_cells so the last-binding count stood), yoma 23. Two mechanical
+faults before the probes: a parenthesis in law_yoma (fix_percent's parse caught it) and negaim's guard measuring 19 against 18.
+THE GATE AND THE SWEEP: 31 daemons watching 192 kinds; 377 submits; 164 / 84 / 3 of 251; unfired 1, unconsumed 1, aliases 5; the gate
+satisfied on the code's first run (ZERO fires after it); the sweep 33/33 at 3614 cells, SWEEP-EXIT 0 (scratchpad sweep_w4.txt). Records:
+REPORT_WRAP_W4.md (new, ls'd first), COMPILE_DEBT W4 [x], THE_STEPS's W4 paragraph, THE_BRIEFING's W4 bullet, memory. Findings declared:
+THE NESTED MACHINE (hoist for the daemon), THE SCENE LIST'S NAME (the last-binding guard sidestepped, still OPEN), THE PARENTHESIS. No unit
+touched; hash unmoved.
+
+═══ COMPACTION POINT #78 (2026-09-07 — written unprompted at sitting W4's close)
+═══ CLEAN POINT — no work mid-flight. W1, W2, W3, W4 DONE; the gate satisfied (164 / 84 / 3); the sweep 33 of 33 at 3614 cells; standing 1778;
+effects 242; event types 194 (case 118); hash 8b8fff1fa28953af UNMOVED. LAST COMMIT b95376d; W3 AND W4 UNCOMMITTED — commit only on the
+owner's "commit push". The set that will ride: #77's W3 set + World/step9/{cold_run_clocks.py, cold_run_negaim.py, cold_run_metzora.py,
+cold_run_yoma.py, REPORT_WRAP_W4.md (NEW)} (event_vocabulary.yaml, daemon_dispositions.yaml, DAEMON_INDEX.md, COMPILE_DEBT.md already in
+the set), THE_STEPS, THE_BRIEFING, this doc, memory — staging by exclusion; the NEVER-COMMIT set and the ARCHITECTURE/* rule unchanged.
+POST-COMPACTION REREADS (mandatory, first sitting): THE_STEPS Step 5 (the deliverable rule, THE DAEMON CAMPAIGN, THE WRAPS OPEN — the W1
+through W4 paragraphs, the effects rule) + the compiler block + this tail + World/step9/COMPILE_DEBT.md (THE WRAP WORKLIST W1-W4 [x] W5-W7,
+X1-X5, the TWO OPEN gate notes) + World/step9/daemon_dispositions.yaml (header; the `daemons:` section) + REPORT_WRAP_W4.md +
+cold_run_clocks.py's law_clocks and scene (THE CANCELLED CLOCK — the largest daemon's shape) + cold_run_yoma.py's law_yoma and scene (the
+service order as the tape; the library beside) + cold_run_negaim.py's module-level machine and law_negaim (the hoist) + DAEMON_INDEX.md's
+"### holiness / holiness_b / sanctions / priesthood / tochacha / temurah / yovel" sections (W5's worklist). THEN, on the owner's word: W5
+HOLINESS, SANCTIONS, THE LAND — holiness (8), holiness_b (6), sanctions, priesthood (5), tochacha (8), temurah (7), yovel — `--debt` prints
+them — by the SAME rhythm: (1) the case heads of Lev 17-22 and 25-27 registered FIRST by script (print the ink; expect the `case` form:
+'a man, a man of the house of Israel who slaughters' 17:3, 'a man who lies with' 20:10-21, the priest's heads of 21-22, 'when you come into
+the land' 25:2, 'if your brother grows poor' 25:25/35/39, 'when a man makes a vow' 27:2; the blessings and the curses of 26); (2) the
+daemons declared (law_holiness, law_holiness_b, law_sanctions, law_priesthood, law_tochacha, law_temurah, law_yovel — the sabbatical's
+seventh and the jubilee's fiftieth as TIMERS, the tochacha's seventy-year timer and the sabbath debt, the slave's release at the jubilee
+CLOSING THE UNFIRED jubilee_proclaimed from Lev 25:10; the sanctions' karet and the death modes by call to the ordinances' engine); (3) the
+code (main()-style runners — expect the negaim hoist; measure every guard before its literal); (4) the scenes replaying Keritot 1, Sanhedrin
+7 and 9-11, Makkot 3, Kiddushin 1, Bekhorot 8-9, Temurah, Arakhin, Sheviit, Bava Metzia 5 — the clock unit YEARS for yovel and tochacha,
+days elsewhere; (5) gate, sweep, records (REPORT_WRAP_W5.md — ls first; COMPILE_DEBT W5 [x]; THE_STEPS; THE_BRIEFING only if the design
+moves; this doc). Then W6, W7, then D9-iv THE DELIVERABLE RULE AMENDED, then Numbers. OPEN (counted): as #77's + the 84 OWED functions (10
+runners) + the TWO gate items (the last-binding resolution — sidestepped again at W4 by naming; THE VALUE/EFFECT HOMOGRAPH) + the five alias
+entries (W5, W6, and `renamed` a registry sitting) + the unfired jubilee_proclaimed (W5) + the unconsumed overflow_reported (W6). Watches:
+as #77's + THE CANCELLED CLOCK (a text event that voids a pending timer is a world.cancel_timers call then a fresh set at the new stop —
+never a rewrite; the log keeps SET, CANCEL, SET, FIRE) + THE NESTED MACHINE (a main()-style runner's inner functions must be hoisted for the
+daemon; the verdicts unchanged, the guard remeasured, no new effect-naming def) + THE SCENE LIST'S NAME (a grade()-graded scene uses its OWN
+list name so the last-binding count is not disturbed) + THE VERSE-KEYED SPEC (a compiled service order is the tape, keyed by ref) + THE
+STATUTE'S SECOND SEAT FIRST IN THE BOOK (the type lives where it was compiled first, not at the earlier chapter — add the earlier witnesses
+and the second consumer) + THE PREDICTION WRITTEN FIRST (the expected tuple goes into the sitting's notes before the probe).

@@ -37,7 +37,7 @@ Lev 11:42 probe targets the CURRENT evidence line (the truncated
 belly-word) — the toolchain finding stands on the record, the
 repair deferred to the owner.
 """
-import sqlite3, sys, os, json
+import sqlite3, sys, os, json, io, contextlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effects_layer as FX
 
@@ -125,6 +125,27 @@ def touch_effect(event):
         return ('lashes', I, 'the ban layer; the answer sheet: Makkot 3:2 lists the eaters of carcasses, terefot, detestables and swarmers')
     raise ValueError(event)
 
+# ---- THE WRAP (W3 THE OFFERING ENGINE, D9-iii, 2026-09-07) — the daemon and the scene --------------
+# Two case heads: a kind eaten (11:4, 11:8, 11:42 — the classifier by call: the pure kind writes NOTHING,
+# the forbidden kind lashes) and a carcass touched or carried (11:24-25, 11:39 — impure until evening).
+# The daemon writes the ledger and never emits an event.
+import world_engine as WE
+SIGNS = ('clazz', 'hoof', 'cud', 'fin', 'scale', 'named_in_list', 'claws_and_eats', 'extra_toe', 'crop', 'peelable_gizzard',
+         'four_legs', 'four_wings', 'jumping_joints', 'wings_cover_most', 'one_of_eight', 'name_known_chagav')
+def law_shemini(event, world):
+    """Lev 11 (cold_run_shemini.py — the species classifier and the carcass status machine)."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'forbidden_kind_eaten':
+        verdict, prov, why = classify({f: event[f] for f in SIGNS if f in event})
+        if verdict.startswith('pure') or verdict == 'unresolved_check_tradition':
+            return []                                            # the pure kind (and the kind outside both paradigm sets): nothing written — the silence
+        return [E_('lashes', event['eater'], amount=40, value=verdict, law='[INK Lev 11:4, 11:8, 11:11, 11:42 "you shall not eat"; Mishnah Makkot 3:2 — %s]' % why[:70])]
+    if k == 'carcass_touched':
+        v, prov, why = touch_effect('carry_carcass' if event['contact'] == 'carry' else 'touch_carcass')
+        return [E_('impure_until_evening', event['person'], value=v, law='[INK Lev 11:24-25, 11:39-40 — %s]' % why)]
+    return []
+
 # ---- (2) the answer sheet ------------------------------------------
 mc = json.load(open('<repo-old>/Data/mishnah_chullin_he.json'))
 mct = mc['text'] if isinstance(mc, dict) and 'text' in mc else mc
@@ -169,6 +190,21 @@ EVENTS = [
  ('eat a forbidden kind', 'eat_forbidden', 'lashes', ['lashes']),
 ]
 
+def scene():
+    """THE SCENE — the sixteen classified kinds and the carcass rows replayed on the world engine (clock unit: days)."""
+    with contextlib.redirect_stdout(io.StringIO()):
+        w = WE.World(era='the kinds and the carcass: Chullin 3:6-7, Makkot 3:2, Kelim 1:1 on the engine (clock unit: days)')
+        w.laws = [law_shemini]
+        w.advance(1)
+        for label, kind, want, effs in TESTS:
+            w.submit({'kind': 'forbidden_kind_eaten', 'subject': 'the-eater', 'eater': 'the-eater', 'case_source': 'Mishnah Chullin 3:6-7 — ' + label, **kind})
+        w.submit({'kind': 'carcass_touched', 'subject': 'the-toucher', 'person': 'the-toucher', 'contact': 'touch', 'case_source': 'Lev 11:24; Mishnah Kelim 1:1 — touched: until evening'})
+        w.submit({'kind': 'carcass_touched', 'subject': 'the-carrier', 'person': 'the-carrier', 'contact': 'carry', 'case_source': 'Lev 11:25; Mishnah Zavim 5:2 — carried: the garments washed, until evening'})
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    seen, fired, _ = w.coverage()['law_shemini']
+    return (n('the-eater', 'lashes'), seen - fired, n('the-toucher', 'impure_until_evening'), n('the-carrier', 'impure_until_evening'), w.clock.year), w
+SCENE, _W = scene()
+
 # ---- (3)+(5) run + grade + effects ----------------------------------
 print()
 total = ok = 0
@@ -190,8 +226,19 @@ for label, ev, want, effs in EVENTS:
     frac[prov] += 1
     FX.validate(effs)
     print('%s %-42s -> %-24s [%s]' % ('OK ' if hit else 'MISS', label, got, prov))
+# ---- THE WRAP (W3, 2026-09-07) — the sixteen kinds and the carcass on the world engine ----
+SCENES = [('THE SCENE — (lashed, the pure kinds\' silence, the toucher, the carrier, the clock)', SCENE, (11, 5, 1, 1, 1), ['lashes', 'impure_until_evening'])]
+for label, got, want, effs in SCENES:
+    total += 1
+    hit = got == want
+    ok += hit
+    frac['INK'] += 1
+    FX.validate(effs)
+    print('%s %-42s -> %s [INK]%s' % ('OK ' if hit else 'MISS', label[:42], got, '' if hit else ' want=%r' % (want,)))
 print()
 print('MATRIX: %d/%d cells match the recorded classifications' % (ok, total))
+print('SCENE: %r — the daemon\'s watch coverage:' % (SCENE,))
+_W.print_coverage()
 print('FRACTIONS: pure ink %d/%d (%d%%) · the sages\' self-labeled layer '
       '%d/%d · data %d/%d' % (frac['INK'], total, 100*frac['INK']//total,
       frac['SAGES'], total, frac['DATA'], total))

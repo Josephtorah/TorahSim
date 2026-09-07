@@ -21,9 +21,10 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chp(_P, 'CASES', 2)
-assert GUARDED == 31, ('the guard counted %d expectations, the tripwire holds 31' % GUARDED)
+assert GUARDED == 32, ('the guard counted %d expectations, the tripwire holds 32' % GUARDED)
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys, os
+import io as _io, contextlib as _ctx
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -378,6 +379,87 @@ DATA = {
     'claim_forms': ['deposit', 'hand_pledge', 'robbery', 'oppression',
                     'lost_object'],
 }
+
+# ---- THE WRAP (W3 THE OFFERING ENGINE, D9-iii, 2026-09-07) — the daemon; the scene runs under main ----
+# Five case heads: the witness who heard the adjuration (5:1, with the confession 5:5 and the ladder's first
+# rung 5:6), the impurity hidden (5:2-3, the second rung 5:7), the oath uttered (5:4, the third rung 5:11) —
+# each through the graded offering by call; the sacrilege (5:15-16); the doubtful sin (5:17-18 — law_chatat's
+# seat too: the pieces and the resolution). The deposit oath (5:20-26) is the library's law_deposit_oath,
+# registered beside on the scene. This module imports cold (the meal-offering, sin-offering and Tzav engines
+# call it), so the daemon is module-level and the scene runs under main. Never emits an event.
+import world_engine as WE
+def law_vayikra5(event, world):
+    """Lev 5:1-19 (cold_run_vayikra5.py — the three triggers and the means ladder, the sacrilege, the doubt)."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'witness_oath_heard':
+        v, _ = graded_offering(dict(event, trigger='witness_oath'), DATA)
+        if v == 'exempt':
+            return [E_('exempt', event['person'], value=v, law='[INK 5:1 — the oath must FIND a witness; the blanket oath, the messenger, the promised gift, the denial outside court, the telling]')]
+        if v.startswith('no offering') or v.startswith('vain'):
+            return []
+        return [E_('confessed', event['person'], cp='HEAVEN', law='[INK 5:5 "he shall confess that wherein he sinned"]'),
+                E_('atoned_forgiven', event['person'], cp='HEAVEN', value=v, law='[INK 5:6, 5:10, 5:13 "and the priest shall atone for him" — the means ladder: %s]' % v)]
+    if k == 'impurity_hidden':
+        v, _ = graded_offering(dict(event, trigger='tumah'), DATA)
+        if v == 'exempt':
+            return [E_('exempt', event['person'], value=v, law='[INK 5:2-3 "and it be hidden from him... and he knew" — the brackets; Shevuot 14b]')]
+        if v.startswith('no offering') or v.startswith('vain'):
+            return []                                            # not yet aware at the end: no offering YET (the ink's own closing bracket) — the silence
+        return [E_('confessed', event['person'], cp='HEAVEN', law='[INK 5:5 "he shall confess"]'),
+                E_('atoned_forgiven', event['person'], cp='HEAVEN', value=v, law='[INK 5:6-7 — the ladder by his means: %s]' % v)]
+    if k == 'oath_uttered':
+        v, _ = graded_offering(dict(event, trigger='utterance_oath'), DATA)
+        if v == 'exempt':
+            return [E_('exempt', event['person'], value=v, law='[INK 5:4 "to do evil or to do good" — his to do; "and it be hidden" — forgotten]')]
+        if v.startswith('no offering') or v.startswith('vain'):
+            return []                                            # the known-false oath: the vain class sits outside this offering — the silence
+        return [E_('confessed', event['person'], cp='HEAVEN', law='[INK 5:5 "he shall confess"]'),
+                E_('atoned_forgiven', event['person'], cp='HEAVEN', value=v, law='[INK 5:11 — the flour without oil or frankincense: %s]' % v)]
+    if k == 'sacrilege_committed':
+        v, _ = sacrilege({'kind': 'meilah', 'unwitting': event['unwitting'], 'benefit': event['benefit'], 'damage': event['damage'], 'value': event['value']}, DATA)
+        if v == 'exempt':
+            return [E_('exempt', event['person'], value=v, law='[Sifra Chovah Section 11 3 — damage AND benefit together]')]
+        if v.startswith('no offering'):
+            return []                                            # the deliberate trespasser: outside this offering (INK 5:15 "unwittingly") — the silence
+        return [E_('pays', event['person'], cp='the-sanctuary', amount=event['value'], law='[INK 5:16 "what he sinned from the holy he shall pay"]'),
+                E_('adds_fifth', event['person'], cp='the-sanctuary', amount=event['value'] / 4.0, law='[INK 5:16 "and its fifth he shall add" — the added quarter (Sifra Chovah Chapter 20 8)]'),
+                E_('atoned_forgiven', event['person'], cp='HEAVEN', value=v, law='[INK 5:16 "the priest shall atone for him with the ram... and he shall be forgiven"]')]
+    if k == 'doubtful_sin':
+        v, _ = sacrilege({'kind': 'doubt', 'later_resolved': event.get('later_resolved'), 'doubt_object': event.get('doubt_object')}, DATA)
+        if v.startswith('chatat now'):
+            return [E_('atoned_forgiven', event['sinner'], cp='HEAVEN', value=v, law='[Sifra Chovah Section 12 5 — once he KNOWS, the ram lapses to the certain sin offering]')]
+        if v.startswith('DISPUTE'):
+            return [E_('suspends', event['sinner'], value=v, law='[Mishnah Keritot 5:2 — R. Akiva: the suspended ram covers a sacrilege doubt]'),
+                    E_('exempt', event['sinner'], value=v, law='[Mishnah Keritot 5:2 — the sages\' arm: the fork carried]')]
+        return [E_('suspends', event['sinner'], value=v, law='[INK 5:17-18 "and knew it not" — the suspended ram]')]
+    return []
+
+def scene():
+    """THE SCENE — Lev 5's recorded rows replayed with the deposit oath on the library daemon (clock unit: days)."""
+    with _ctx.redirect_stdout(_io.StringIO()):
+        w = WE.World(era='the graded offering, the sacrilege, the doubt, the deposit oath: Shevuot 1-4, Keritot 5, Bava Kamma 9 on the engine (clock unit: days)')
+        w.laws = [law_vayikra5, WE.law_deposit_oath]
+        w.advance(1)
+        w.submit({'kind': 'witness_oath_heard', 'subject': 'the-blanket-witness', 'person': 'the-blanket-witness', 'was_witness_at_oath': True, 'adjuration_scope': 'blanket_congregation', 'case_source': 'Mishnah Shevuot 4:10 — the synagogue blanket oath: exempt'})
+        w.submit({'kind': 'witness_oath_heard', 'subject': 'the-silent-witness', 'person': 'the-silent-witness', 'was_witness_at_oath': True, 'denial_forum': 'court', 'testified': False, 'means': 'reaches_lamb', 'case_source': 'Lev 5:1, 5:5-6 — heard, was a witness, denied in court: the confession and the female of the flock'})
+        w.submit({'kind': 'impurity_hidden', 'subject': 'the-defiler', 'person': 'the-defiler', 'aware_at_start': True, 'hidden_in_middle': True, 'aware_at_end': True, 'touched_sanctum': True, 'means': 'reaches_birds', 'case_source': 'Mishnah Shevuot 2:1; Lev 5:2-3, 5:7 — the brackets held: two birds'})
+        w.submit({'kind': 'impurity_hidden', 'subject': 'the-unaware', 'person': 'the-unaware', 'aware_at_start': True, 'hidden_in_middle': True, 'aware_at_end': False, 'touched_sanctum': True, 'case_source': 'Lev 5:3 "and he knew" — not yet: no offering yet (the silence)'})
+        w.submit({'kind': 'oath_uttered', 'subject': 'the-forgetter', 'person': 'the-forgetter', 'act_is_his_option': True, 'oath_forgotten': True, 'means': 'reaches_flour', 'case_source': 'Mishnah Shevuot 3:1; Lev 5:4, 5:11 — the forgotten oath: the tenth of an ephah'})
+        w.submit({'kind': 'oath_uttered', 'subject': 'the-liar', 'person': 'the-liar', 'act_is_his_option': True, 'oath_epistemics': 'known_false', 'case_source': 'Mishnah Shevuot 3:7 — the known-false oath: the vain class, outside (the silence)'})
+        w.submit({'kind': 'sacrilege_committed', 'subject': 'the-trespasser', 'person': 'the-trespasser', 'unwitting': True, 'benefit': True, 'damage': True, 'value': 4.0, 'case_source': 'Mishnah Meilah 5:1; Keritot 5:2 — benefit and damage: the principal, the fifth, the ram'})
+        w.submit({'kind': 'sacrilege_committed', 'subject': 'the-deliberate-trespasser', 'person': 'the-deliberate-trespasser', 'unwitting': False, 'benefit': True, 'damage': True, 'value': 4.0, 'case_source': 'Lev 5:15 "unwittingly" — the deliberate outside (the silence)'})
+        w.submit({'kind': 'doubtful_sin', 'subject': 'the-doubter', 'sinner': 'the-doubter', 'pieces': ['fat', 'hullin'], 'case_source': 'Mishnah Keritot 4:1 — the suspended ram'})
+        w.submit({'kind': 'doubtful_sin', 'subject': 'the-later-knower', 'sinner': 'the-later-knower', 'pieces': ['fat', 'hullin'], 'later_resolved': 'sinned', 'case_source': 'Sifra Chovah Section 12 5 — once he knows: the certain sin offering'})
+        w.submit({'kind': 'doubtful_sin', 'subject': 'the-meilah-doubter', 'sinner': 'the-meilah-doubter', 'pieces': ['kodesh', 'hullin'], 'doubt_object': 'meilah', 'case_source': 'Mishnah Keritot 5:2 — R. Akiva liable, the sages exempt: the fork'})
+        w.submit({'kind': 'sworn_denial_admitted', 'subject': 'the-denier', 'claimant_against': 'the-denier', 'owner': 'the-robbed', 'value': 4.0, 'object_exists': True, 'case_source': 'Mishnah Bava Kamma 9:5; Shevuot 8 — the deposit oath admitted: the object restored, the fifth, the ram (the library daemon)'})
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    amt = lambda eid, eff: sum(e['amount'] or 0 for e in w.entity(eid).ledger if e['effect'] == eff)
+    return (n('the-blanket-witness', 'exempt'), n('the-silent-witness', 'confessed'), n('the-silent-witness', 'atoned_forgiven'), n('the-defiler', 'atoned_forgiven'), n('the-unaware', 'atoned_forgiven'),
+            n('the-forgetter', 'atoned_forgiven'), n('the-liar', 'atoned_forgiven'), amt('the-trespasser', 'pays'), amt('the-trespasser', 'adds_fifth'), n('the-trespasser', 'atoned_forgiven'),
+            n('the-deliberate-trespasser', 'pays'), n('the-doubter', 'suspends'), n('the-later-knower', 'atoned_forgiven'), n('the-meilah-doubter', 'suspends'), n('the-meilah-doubter', 'exempt'),
+            amt('the-denier', 'restores'), amt('the-denier', 'adds_fifth'), n('the-denier', 'atoned_forgiven'), w.clock.year), w
+
 CASES = [
  ('Shevuot 4:10 — the synagogue blanket oath',
   lambda: graded_offering({'trigger':'witness_oath','was_witness_at_oath':True,
@@ -490,12 +572,19 @@ CASES = [
  ('Lev 5:15-19 — the guilt offering\'s procedure by call into the Tzav engine',
   lambda: pointers('asham_procedure', DATA),
   'north, male_priests within the hangings (CALLED tzav.asham_law)'),
+ # ---- THE WRAP (W3, 2026-09-07) — Lev 5 on the world engine, the deposit oath on the library daemon ----
+ ('THE SCENE — (the blanket witness exempt; the silent witness confessed, atoned; the defiler atoned, the unaware\'s silence; the forgetter '
+  'atoned, the liar\'s silence; the trespasser pays 4, adds 1, atoned; the deliberate\'s silence; the doubter\'s ram, the later-knower\'s '
+  'sin offering, the sacrilege doubt\'s two arms; the denier restores 4, adds 1, atoned; the clock)',
+  lambda: (SCENE, [('INK', 'the tape is the ink: Lev 5 and the recorded rows of Shevuot 1-4, Keritot 5, Meilah 5, Bava Kamma 9')]),
+  (1, 1, 1, 1, 0, 1, 0, 4.0, 1.0, 1, 0, 1, 1, 1, 1, 4.0, 1.0, 1, 1)),
 ]
 
 # ---- motion 3+5: run and grade --------------------------------------
 # Guarded so graded_offering() IMPORTS COLD — cold_run_minchah.py CALLS it for the
 # sinner's meal offering's adjuncts (sitting B, 2026-09-05; the first-call standard).
 if __name__ == '__main__':
+    SCENE, _W = scene()                  # W3: the scene under main (the module imports cold); the CASES row's lambda binds SCENE at run time
     ok = 0
     frac = {'INK': 0, 'MOVE': 0, 'DATA': 0}
     print()
@@ -535,6 +624,8 @@ if __name__ == '__main__':
 
     def effect_of(verdict):
         v = verdict
+        if isinstance(v, tuple):
+            return [FX.NONE]                        # the scene row (W3): its effects are on the engine's ledger, counted in the tuple
         if v.startswith('DISPUTE: liable (R. Akiva)'):
             return ['atoned_forgiven', 'exempt']   # the fork's two arms
         if v.startswith('DISPUTE: the day-of-guilt'):
@@ -566,7 +657,7 @@ if __name__ == '__main__':
         got, _ = fn()
         fx = effect_of(got)
         used += fx
-        tag = '  [DISPUTE FORK — both arms, labeled]' if got.startswith('DISPUTE') else ''
+        tag = '  [DISPUTE FORK — both arms, labeled]' if isinstance(got, str) and got.startswith('DISPUTE') else ''
         for line in FX.render(fx):
             print('  %-44s ->%s%s' % (label[:44], line, tag))
     ops = FX.summarize(used)
@@ -574,3 +665,5 @@ if __name__ == '__main__':
           ', '.join('%s x%d' % (op, cnt) for op, cnt in sorted(ops.items())))
     print('effects: all %d cases carry a REGISTERED effect or an honest '
           'no-change [effects law satisfied]' % len(CASES))
+    print('SCENE: %r — the daemons\' watch coverage (the library\'s law_deposit_oath beside law_vayikra5):' % (SCENE,))
+    _W.print_coverage()

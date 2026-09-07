@@ -21,12 +21,163 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chp(_P, 'TEN', 1) + _chc(_P, 'grade', 2, 2)
-assert GUARDED == 18, ('the guard counted %d expectations, the tripwire holds 18' % GUARDED)
+assert GUARDED == 19, ('the guard counted %d expectations, the tripwire holds 19' % GUARDED)   # W4: +1, the scene row (measured 19, then set)
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+
+
+# ---- THE COMPILED MACHINE (ink-first) ---------------------------
+# A track = (signs, weeks). Weeks counted from the ink's shut
+# tokens; the SHARED SEVENTH DAY is the recorded rule (Sifra,
+# Tazria Parashat Nega'im, Chapter 2* 4): day 7 closes week one
+# AND opens week two. (Module level since W4, 2026-09-07 — the
+# daemon below calls these; main() grades them as before.)
+TRACKS = {
+    'skin':    (['white_hair', 'raw_flesh', 'spread'], 2),
+    'boil':    (['white_hair', 'spread'], 1),
+    'burn':    (['white_hair', 'spread'], 1),
+    'scall':   (['thin_yellow', 'spread'], 2),
+    'bald':    (['raw_flesh', 'spread'], 2),
+    'garment': (['green_deep', 'red_deep', 'spread'], 2),
+    'house':   (['green_deep', 'red_deep', 'spread'], 3),
+}
+
+
+def days(weeks):
+    # RECORDED [Sifra Ch2* 4]: the seventh day counts in both
+    # weeks — every junction day is shared.
+    return weeks * 7 - (weeks - 1)
+
+
+def standing_verdict(track):
+    # What happens when the mark STANDS at the last exam:
+    # person released (INK 13:6 washed-and-pure); garment BURNED
+    # (INK 13:55); house goes to pull-scrape-plaster then the
+    # return-fork (INK 14:39-45).
+    return {'skin': 'RELEASED', 'boil': 'RELEASED',
+            'burn': 'RELEASED', 'scall': 'RELEASED',
+            'bald': 'RELEASED', 'garment': 'BURNED',
+            'house': 'PULL-SCRAPE-PLASTER'}[track]
+
+
+# THE TEN HOUSES — the compiled house machine's walk, graded
+# against the Sifra's own numbered table (Sifra, Metzora,
+# Section 7 12).
+def house_machine(week1, week2, after_treatment):
+    if week1 == 'dim':
+        return 'PEEL-PURE'
+    if week1 == 'gone':
+        return 'PEEL-PURE'
+    if week1 == 'stood' and week2 == 'dim':
+        return 'PEEL-BIRDS'
+    if week1 == 'stood' and week2 == 'gone':
+        return 'PEEL-BIRDS'
+    # spread in week 1, or stood-then-spread, or stood-stood:
+    # pull, scrape, plaster, one more week — then the fork:
+    if after_treatment == 'returned':
+        return 'DEMOLISH'
+    return 'BIRDS'
+
+
+# ---- THE WRAP (W4 THE PURITY CLOCKS, 2026-09-07): the daemon over the compiled machine ----
+_sys.path.insert(0, HERE)
+import world_engine as WE
+def law_negaim(event, world):
+    """Lev 13 + 14:33-57 (cold_run_negaim.py — TRACKS, days, standing_verdict, house_machine): the confinement weeks as TIMERS on the shared seventh day."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    day = event.get('day', world.clock.year)
+    week = days(2) - days(1)                                         # 6: the next exam is six days on — the seventh day shared (Sifra Chapter 2* 4)
+    if k == 'skin_mark_seen':
+        p = event['person']; track = event['track']; signs, weeks = TRACKS[track]
+        if event.get('sign_at_first') in signs:
+            return [E_('isolated_outside_camp', p, value=event['sign_at_first'], law='F1 [INK 13:3 the sign at the first sight decrees (%s of the %s track); 13:45-46 "alone shall he dwell, outside the camp"]' % (event['sign_at_first'], track))]
+        out = [E_('confined_seven_days', p, amount=days(1), value='week_1_of_%d' % weeks, law='F1 [INK 13:4 "the priest shall shut up the mark seven days" — the %s track: %d signs, %d week(s)]' % (track, len(signs), weeks))]
+        exams = [event.get('week1'), event.get('week2')][:weeks]; d = day
+        for i, ex in enumerate(exams):
+            d += week
+            if ex == 'spread' or ex in signs:
+                out.append(E_('isolated_outside_camp', p, due=d, value=ex, law='F1 [INK 13:7-8 / 13:22 / 13:27 / 13:35-36 "%s" at the exam of day %d: decreed — 13:46]' % (ex, d)))
+                return out
+            if i + 1 < len(exams) and ex == 'stood':
+                out.append(E_('confined_seven_days', p, amount=days(2) - days(1), due=d, value='week_2_shut_again', law='F1 [INK 13:5 "the mark stood... shut up seven days a SECOND time" — the shared seventh: %d days in all]' % days(2)))
+            else:
+                out.append(E_('released', p, due=d, value=standing_verdict(track), law='F1 [INK 13:6 / 13:23 / 13:28 / 13:37 "%s" at the exam of day %d: "the priest shall pronounce him pure... wash his garments and be pure"]' % (ex, d)))
+        return out
+    if k == 'garment_mark_seen':
+        g = event['garment']
+        out = [E_('confined_seven_days', g, amount=days(1), value='week_1_of_2', law='F1 [INK 13:50 "the priest shall see the mark and shut up the mark seven days"]')]
+        d = day + week; w1 = event.get('week1')
+        if w1 == 'spread':
+            out.append(E_('burned_in_fire', g, due=d, value='spread_at_week_1', law='F1 [INK 13:51-52 "the mark has spread... he shall BURN the garment"]'))
+            return out
+        if w1 == 'stood':
+            out.append(E_('confined_seven_days', g, amount=days(2) - days(1), due=d, value='washed_and_shut_again', law='F1 [INK 13:54 "wash that wherein the mark is, and shut it up seven days a SECOND time"]'))
+            d += week
+            if event.get('week2') in ('stood', 'spread'):
+                out.append(E_('burned_in_fire', g, due=d, value=standing_verdict('garment'), law='F1 [INK 13:55 "the mark has not changed its color and has not spread — in fire shall you BURN it": the garment/person asymmetry]'))
+            else:
+                out.append(E_('released', g, due=d, value='washed_a_second_time', law='F1 [INK 13:58 "the mark has departed from them — it shall be washed a SECOND time and be pure"]'))
+            return out
+        out.append(E_('released', g, due=d, value='dim_or_gone_at_week_1', law='F1 [INK 13:56-58 the dimmed mark torn out, the departed mark washed and pure]'))
+        return out
+    if k == 'house_mark_seen':
+        h = event['house']; v = house_machine(event['week1'], event.get('week2'), event.get('after_treatment'))
+        out = [E_('confined_seven_days', h, amount=days(1), value='week_1', law='F1 [INK 14:38 "the priest shall go out of the house to the door of the house and shut up the house seven days" — the owner told the priest first (14:35)]')]
+        d = day + week; wk = 1
+        if event.get('week2'):
+            wk += 1; out.append(E_('confined_seven_days', h, amount=days(2) - days(1), due=d, value='week_%d' % wk, law='F1 [INK 14:39 "the priest shall return on the seventh day" — the mark %s at week 1: shut again]' % event['week1'])); d += week
+        if event.get('after_treatment'):
+            wk += 1; out.append(E_('confined_seven_days', h, amount=days(2) - days(1), due=d, value='week_%d_after_pull_scrape_plaster' % wk, law='F1 [INK 14:40-42 pull out the stones, scrape, plaster; Sifra Metzora Section 7 7-10 — the third coming: %d days in all]' % days(wk))); d += week
+        if v == 'DEMOLISH':
+            out.append(E_('demolished', h, due=d, value=v, law='F1 [INK 14:43-45 "if the mark RETURNS and breaks out in the house... he shall demolish the house, its stones, its timber, all its mortar" — house %s of the ten]' % v))
+        else:
+            out.append(E_('released', h, due=d, value=v, law='F1 [INK 14:48 "the priest shall pronounce the house pure, for the mark is healed" — %s (Sifra Section 7 12)]' % v))
+        return out
+    if k == 'shut_house_entered':
+        e = event['enterer']
+        out = [E_('impure_until_evening', e, value=event.get('act', 'entered'), law='F1 [INK 14:46 "whoever comes into the house all the days it is shut up shall be impure until evening"]')]
+        if event.get('act') in ('lay', 'ate'):
+            out.append(E_('washes_and_bathes', e, value=event['act'], law='F1 [INK 14:47 "he who lies in the house shall wash his garments, and he who eats in the house shall wash his garments"]'))
+        return out
+    return []
+
+
+def scene():
+    """THE SCENE — Negaim 3:3-8's tracks and the Sifra's ten houses replayed on the world engine (clock unit: days): the confinement weeks as TIMERS."""
+    import io as _io, contextlib as _ctx
+    with _ctx.redirect_stdout(_io.StringIO()):
+        w = WE.World(era='the affliction machine: Negaim 3:3-8, Sifra Metzora Section 7 12 on the engine (clock unit: days)')
+        w.laws = [law_negaim]
+        w.advance(1)
+        for who, track, w1, w2, src in (('the-skin-leper', 'skin', 'stood', 'stood', 'Mishnah Negaim 3:3 — the skin: two weeks that are thirteen days, stood: released'),
+                                        ('the-boil-bearer', 'boil', 'stood', None, 'Mishnah Negaim 3:4 — the boil: one week'), ('the-burn-bearer', 'burn', 'stood', None, 'Mishnah Negaim 3:4 — the burn: one week'),
+                                        ('the-scall-bearer', 'scall', 'stood', 'dim', 'Mishnah Negaim 3:5 — the scall: two weeks, dimmed at the second'), ('the-bald-bearer', 'bald', 'stood', 'stood', 'Mishnah Negaim 3:6 — the bald head: two weeks'),
+                                        ('the-spreading-leper', 'skin', 'spread', None, 'Lev 13:7-8 — spread at the first exam: decreed')):
+            w.submit({'kind': 'skin_mark_seen', 'subject': who, 'person': who, 'track': track, 'week1': w1, 'week2': w2, 'day': 1, 'case_source': src})
+        w.submit({'kind': 'skin_mark_seen', 'subject': 'the-white-haired', 'person': 'the-white-haired', 'track': 'skin', 'sign_at_first': 'white_hair', 'day': 1, 'case_source': 'Lev 13:3 — white hair at the first sight: decreed at once; 13:46 outside the camp'})
+        w.submit({'kind': 'garment_mark_seen', 'subject': 'the-standing-garment', 'garment': 'the-standing-garment', 'owner': 'the-weaver', 'week1': 'stood', 'week2': 'stood', 'day': 1, 'case_source': 'Mishnah Negaim 3:7; Lev 13:54-55 — stood two weeks: burned'})
+        w.submit({'kind': 'garment_mark_seen', 'subject': 'the-spreading-garment', 'garment': 'the-spreading-garment', 'owner': 'the-weaver', 'week1': 'spread', 'day': 1, 'case_source': 'Lev 13:51-52 — spread: burned'})
+        w.submit({'kind': 'garment_mark_seen', 'subject': 'the-departed-garment', 'garment': 'the-departed-garment', 'owner': 'the-weaver', 'week1': 'stood', 'week2': 'gone', 'day': 1, 'case_source': 'Lev 13:58 — the mark departed: washed a second time, pure'})
+        TEN_HOUSES = ((('dim', None, None), 'house-1'), (('gone', None, None), 'house-2'), (('stood', 'dim', None), 'house-3'), (('stood', 'gone', None), 'house-4'), (('spread', None, 'returned'), 'house-5'),
+                      (('spread', None, 'quiet'), 'house-6'), (('stood', 'spread', 'returned'), 'house-7'), (('stood', 'spread', 'quiet'), 'house-8'), (('stood', 'stood', 'returned'), 'house-9'), (('stood', 'stood', 'quiet'), 'house-10'))
+        for (w1, w2, aft), h in TEN_HOUSES:
+            w.submit({'kind': 'house_mark_seen', 'subject': h, 'house': h, 'owner': 'the-owner-of-' + h, 'week1': w1, 'week2': w2, 'after_treatment': aft, 'day': 1, 'case_source': 'Sifra Metzora Section 7 12 — the ten houses (%s)' % h})
+        w.submit({'kind': 'shut_house_entered', 'subject': 'the-enterer', 'enterer': 'the-enterer', 'house': 'house-9', 'act': 'entered', 'day': 3, 'case_source': 'Lev 14:46 — entered the shut house: until evening'})
+        w.submit({'kind': 'shut_house_entered', 'subject': 'the-sleeper', 'enterer': 'the-sleeper', 'house': 'house-9', 'act': 'lay', 'day': 3, 'case_source': 'Lev 14:47 — lay in the house: washes'})
+        w.advance(20)                                                # nineteen days: the third week's exam has come (Mishnah Negaim 3:8)
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    return (yr('the-skin-leper', 'confined_seven_days'), yr('the-skin-leper', 'released'), yr('the-boil-bearer', 'released'), yr('the-burn-bearer', 'released'), yr('the-scall-bearer', 'released'), yr('the-bald-bearer', 'released'),
+            yr('the-spreading-leper', 'isolated_outside_camp'), yr('the-white-haired', 'isolated_outside_camp'), n('the-white-haired', 'confined_seven_days'),
+            yr('the-standing-garment', 'burned_in_fire'), yr('the-spreading-garment', 'burned_in_fire'), yr('the-departed-garment', 'released'),
+            tuple(n('house-%d' % i, 'demolished') for i in range(1, 11)), tuple(n('house-%d' % i, 'released') for i in range(1, 11)), tuple(len(yr('house-%d' % i, 'confined_seven_days')) for i in range(1, 11)),
+            yr('house-9', 'demolished'), yr('house-1', 'released'), n('the-enterer', 'impure_until_evening'), n('the-enterer', 'washes_and_bathes'), n('the-sleeper', 'washes_and_bathes'),
+            tset, fired, w.clock.year), w
 
 
 def main():
@@ -103,54 +254,9 @@ def main():
           '(garment) — and NOWHERE in the boil/burn span: the '
           'one-week track is the ink\'s own silence\n')
 
-    # ---- THE COMPILED MACHINE (ink-first) ---------------------------
-    # A track = (signs, weeks). Weeks counted from the ink's shut
-    # tokens; the SHARED SEVENTH DAY is the recorded rule (Sifra,
-    # Tazria Parashat Nega'im, Chapter 2* 4): day 7 closes week one
-    # AND opens week two.
-    TRACKS = {
-        'skin':    (['white_hair', 'raw_flesh', 'spread'], 2),
-        'boil':    (['white_hair', 'spread'], 1),
-        'burn':    (['white_hair', 'spread'], 1),
-        'scall':   (['thin_yellow', 'spread'], 2),
-        'bald':    (['raw_flesh', 'spread'], 2),
-        'garment': (['green_deep', 'red_deep', 'spread'], 2),
-        'house':   (['green_deep', 'red_deep', 'spread'], 3),
-    }
-
-    def days(weeks):
-        # RECORDED [Sifra Ch2* 4]: the seventh day counts in both
-        # weeks — every junction day is shared.
-        return weeks * 7 - (weeks - 1)
-
-    def standing_verdict(track):
-        # What happens when the mark STANDS at the last exam:
-        # person released (INK 13:6 washed-and-pure); garment BURNED
-        # (INK 13:55); house goes to pull-scrape-plaster then the
-        # return-fork (INK 14:39-45).
-        return {'skin': 'RELEASED', 'boil': 'RELEASED',
-                'burn': 'RELEASED', 'scall': 'RELEASED',
-                'bald': 'RELEASED', 'garment': 'BURNED',
-                'house': 'PULL-SCRAPE-PLASTER'}[track]
-
-    # THE TEN HOUSES — the compiled house machine's walk, graded
-    # against the Sifra's own numbered table (Sifra, Metzora,
-    # Section 7 12).
-    def house_machine(week1, week2, after_treatment):
-        if week1 == 'dim':
-            return 'PEEL-PURE'
-        if week1 == 'gone':
-            return 'PEEL-PURE'
-        if week1 == 'stood' and week2 == 'dim':
-            return 'PEEL-BIRDS'
-        if week1 == 'stood' and week2 == 'gone':
-            return 'PEEL-BIRDS'
-        # spread in week 1, or stood-then-spread, or stood-stood:
-        # pull, scrape, plaster, one more week — then the fork:
-        if after_treatment == 'returned':
-            return 'DEMOLISH'
-        return 'BIRDS'
-
+    # ---- THE COMPILED MACHINE (ink-first) — TRACKS, days(), standing_verdict(),
+    # house_machine() hoisted to MODULE LEVEL at W4 (2026-09-07) so the daemon
+    # law_negaim can call them; the verdicts are unchanged ----------------
     TEN = [
         (('dim', None, None),           'PEEL-PURE'),
         (('gone', None, None),          'PEEL-PURE'),
@@ -277,6 +383,17 @@ def main():
                          'Sifra Section 7 12 + Mishnah Megillah 1:7',
                          cells))
 
+    # ---- THE SCENE (W4, 2026-09-07): the tracks and the ten houses on the world engine ----
+    SCENE, _w = scene()
+    scene_cells = [
+        ('THE SCENE (the clocks as TIMERS)', SCENE,
+         ([1, 7], [13], [7], [7], [13], [13], [7], [1], 0, [13], [7], [13], (0, 0, 0, 0, 1, 0, 1, 0, 1, 0), (1, 1, 1, 1, 0, 1, 0, 1, 0, 1), (1, 1, 2, 2, 2, 2, 3, 3, 3, 3), [19], [7], 1, 0, 1, 36, 36, 20),
+         'RECORDED [Mishnah Negaim 3:3-8 + Sifra Metzora Section 7 12 replayed on the engine]: '
+         'the confinement weeks set on the shutting and fired on the shared seventh day', 'RECORDED'),
+    ]
+    results.append(grade('the scene on the world engine', 'Mishnah Negaim 3:3-8 + Sifra Section 7 12 + Lev 14:46-47', scene_cells))
+    _w.print_coverage()
+
     # ---- summary ----------------------------------------------------
     ok = sum(a for a, _ in results); n = sum(b for _, b in results)
     print('=' * 60)
@@ -306,6 +423,8 @@ def main():
         ('ten houses: DEMOLISH arm',  ['demolished',
                                        'impure_until_evening']),
         ('deltas: decreed leper',     ['isolated_outside_camp']),
+        ('scene: the clocks',         ['confined_seven_days', 'released', 'isolated_outside_camp',
+                                       'burned_in_fire', 'demolished', 'impure_until_evening']),
     ]
     print('\nEFFECTS — the state changes each cell writes:')
     used = []

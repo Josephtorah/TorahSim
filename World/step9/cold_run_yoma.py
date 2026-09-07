@@ -21,7 +21,7 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chc(_P, 'cell', 2)
-assert GUARDED == 22, ('the guard counted %d expectations, the tripwire holds 22' % GUARDED)
+assert GUARDED == 23, ('the guard counted %d expectations, the tripwire holds 23' % GUARDED)   # W4: +1, the scene cell
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, os
 
@@ -138,6 +138,96 @@ def dispatch_goat():
             'prov': 'INK',
             'why': 'venasa hasair alav et kol avonotam el eretz '
                    'gezerah (16:22); Onkelos: a land not inhabited'}
+
+
+# ---- THE WRAP (W4 THE PURITY CLOCKS, 2026-09-07): the daemon over the compiled Day ----
+import io as _io, contextlib as _ctx
+import world_engine as WE
+def law_yoma(event, world):
+    """Lev 16 (cold_run_yoma.py — route, day_atones, dispatch_goat, service_order): the Day as the TIMER the routing table fires on;
+    the service keyed by the ink's own verse order (the run's daemon writes the spec's effects by call — the W3 shape)."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'sanctuary_defiled':
+        p = event['person']
+        r = route(known_start=event.get('known_start'), known_end=event.get('known_end'), deliberate=event.get('deliberate', False), sin_class=event.get('sin_class', 'sanctuary'))
+        if r['agent'] in ('sliding_scale_offering', 'inner_goat_suspends'):
+            return [E_('suspends', p, value=r['agent'], law='F1 [%s — %s]' % (r['verdict'], r['why'][:90]))]
+        return [E_('atoned_forgiven', p, cp='HEAVEN', due=event.get('the_day'), value=r['agent'], law='F1 [%s — %s: the Day as the TIMER]' % (r['verdict'], r['why'][:90]))]
+    if k == 'yom_kippur_kept':
+        d = day_atones(event.get('between', 'man_and_god'), event.get('appeased', False))
+        if d['verdict'].startswith('NOT'):
+            return []                                                # the fellow gate: NOT atoned until he appeases his fellow (Mishnah Yoma 8:9) — the silence
+        return [E_('atoned_forgiven', event['soul'], cp='HEAVEN', value=d['verdict'], law='F2 [INK 16:30 "for on this day he shall atone for you, to cleanse you from all your sins before the LORD" — %s]' % d['why'][:90])]
+    if k == 'goat_dispatched':
+        g = dispatch_goat(); r = route(sin_class='other')
+        return [E_('dispatched_to_wilderness', event['goat'], value=g['verdict'], law='F3 [INK 16:21-22 — %s]' % g['why'][:90]),
+                E_('atoned_forgiven', 'the-people', cp='HEAVEN', value=r['agent'], law='F1 [INK 16:21 "all the iniquities of the children of Israel and all their transgressions for all their sins" — %s]' % r['why'][:70]),
+                E_('washes_and_bathes', event['dispatcher'], value='then_the_camp', law='F3 [INK 16:26 "he who sends the goat to Azazel shall wash his garments and bathe his flesh in water, and afterward come into the camp"]')]
+    if k == 'inner_service_performed':
+        step = event['step']; seq = dict(service_order()); p = event.get('priest', 'aaron')
+        if step not in seq:
+            return []
+        desc = seq[step]
+        with _ctx.redirect_stdout(_io.StringIO()):
+            import cold_run_offerings as OFF
+            import cold_run_chatat as CH
+        out = []
+        if step == '16:6':
+            out.append(E_('atoned_forgiven', p, cp='HEAVEN', value='for_himself_and_his_house', law='F4 [INK 16:6 "atone for himself and for his house" — %s]' % desc))
+        if step == '16:14':
+            out += [E_('sprinkled_seven', 'the-ark-cover', cp=p, amount=7, value='one_above_seven_below', law='F4 [INK 16:14 "before the ark-cover he shall sprinkle seven times" — %s]' % desc),
+                    E_('accepted', 'the-bull', cp='HEAVEN', value=OFF.dispatch('inner_chatat_yk')['stations']['v'], law='F4 [INK 16:14 the bull\'s blood inside — CALLED cold_run_offerings.dispatch(inner_chatat_yk) stations]')]
+        if step == '16:15':
+            out.append(E_('accepted', 'the-goat', cp='HEAVEN', value=OFF.dispatch('inner_chatat_yk')['stations']['v'], law='F4 [INK 16:15 "do with its blood as he did with the bull\'s blood" — %s]' % desc))
+        if step == '16:18-19':
+            out.append(E_('sprinkled_seven', 'the-inner-altar', cp=p, amount=7, value='the_corners_then_seven', law='F4 [INK 16:18-19 "sprinkle of the blood on it with his finger seven times" — %s]' % desc))
+        if step == '16:24':
+            out += [E_('immersed', p, value='in_a_holy_place_then_his_garments', law='F4 [INK 16:24 "bathe his flesh in water in a holy place and put on his garments"]'),
+                    E_('accepted', 'the-two-rams', cp='HEAVEN', value=OFF.dispatch('olah:flock')['disposition']['v'], law='F4 [INK 16:24 "his burnt offering and the burnt offering of the people" — CALLED offerings(olah:flock)]'),
+                    E_('atoned_forgiven', 'the-people', cp='HEAVEN', value='by_the_rams', law='F4 [INK 16:24 "and atone for himself and for the people"]')]
+        if step == '16:25':
+            out.append(E_('smoked_to_the_lord', 'the-sin-offerings-fat', value='on_the_altar', law='F4 [INK 16:25 "the fat of the sin offering he shall burn on the altar"]'))
+        if step == '16:27-28':
+            bs = CH.burn_site('as_commanded')
+            out += [E_('burned_outside_camp', 'the-burnt-pair', value=bs['v'], law='F4 [INK 16:27 "carried out outside the camp, and they shall burn in fire their hides, their flesh, their dung" — CALLED cold_run_chatat.burn_site: %s]' % bs['v']),
+                    E_('defiles_garments', 'the-burner', value=bs['v'], law='F4 [INK 16:28 "he who burns them shall wash his garments" — the sin-offering engine\'s own Lev 16:28 import, closed from this side]'),
+                    E_('washes_and_bathes', 'the-burner', value='then_the_camp', law='F4 [INK 16:28 "wash his garments and bathe his flesh in water, and afterward come into the camp"]')]
+        return out                                                   # the other steps (the designation, the linen, the lots, the confessions' naming, 16:23 relocated) write nothing: the silences
+    return []
+
+
+def scene():
+    """THE SCENE — Shevuot 1:3 and 1:6, Yoma 8:9, and the service order replayed on the world engine (clock unit: days of the seventh month);
+    the calendar's law_moadim registered beside (the library shape) — yom_kippur_kept's two law layers on one tape."""
+    with _ctx.redirect_stdout(_io.StringIO()):
+        import cold_run_moadim as MO
+        w = WE.World(era='the Day: Shevuot 1, Yoma 1-8 on the engine (clock unit: days of the seventh month)')
+        w.laws = [law_yoma, MO.law_moadim]
+        w.advance(1)
+        for who, ks, ke, dl, sc, src in (('the-both-known', True, True, False, 'sanctuary', 'Sifra AM Chapter 5 1 — knowledge at both ends: the sliding-scale offering'),
+                                         ('the-start-only', True, False, False, 'sanctuary', 'Sifra AM Chapter 5 1 — the start alone: the inner goat suspends'),
+                                         ('the-end-only', False, True, False, 'sanctuary', 'Mishnah Shevuot 1:3 — the end alone: the outer goat and the Day'),
+                                         ('the-neither', False, False, False, 'sanctuary', 'Sifra AM Chapter 5 3-4 — neither: the festival goats'),
+                                         ('the-deliberate', False, False, True, 'sanctuary', 'Mishnah Shevuot 1:6 — deliberate: the inner goat and the Day'),
+                                         ('the-other-sinner', False, False, False, 'other', 'Mishnah Shevuot 1:6 — all other sins: the dispatched goat')):
+            w.submit({'kind': 'sanctuary_defiled', 'subject': who, 'person': who, 'known_start': ks, 'known_end': ke, 'deliberate': dl, 'sin_class': sc, 'day': 1, 'the_day': 10, 'case_source': src})
+        w.advance(10)                                                # the tenth of the seventh month: the Day — the routing table's timers fire
+        w.submit({'kind': 'yom_kippur_kept', 'subject': 'the-penitent', 'soul': 'the-penitent', 'afflicted': True, 'between': 'man_and_god', 'case_source': 'Lev 16:29-30; Mishnah Yoma 8:9 — between man and God: the day atones'})
+        w.submit({'kind': 'yom_kippur_kept', 'subject': 'the-unappeased', 'soul': 'the-unappeased', 'afflicted': True, 'between': 'man_and_fellow', 'appeased': False, 'case_source': 'Mishnah Yoma 8:9 — his fellow unappeased: not atoned (the silence)'})
+        w.submit({'kind': 'yom_kippur_kept', 'subject': 'the-appeased', 'soul': 'the-appeased', 'afflicted': True, 'between': 'man_and_fellow', 'appeased': True, 'case_source': 'Mishnah Yoma 8:9 — appeased: the day atones'})
+        for ref, desc in service_order():
+            w.submit({'kind': 'inner_service_performed', 'subject': 'aaron', 'priest': 'aaron', 'step': ref, 'day': 10, 'case_source': 'Lev %s — %s' % (ref, desc)})
+        w.submit({'kind': 'goat_dispatched', 'subject': 'the-azazel-goat', 'goat': 'the-azazel-goat', 'dispatcher': 'the-designated-man', 'day': 10, 'case_source': 'Lev 16:20-22, 16:26; Mishnah Yoma 6:2-8'})
+        w.advance(11)
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    return (n('the-both-known', 'suspends'), n('the-start-only', 'suspends'), yr('the-end-only', 'atoned_forgiven'), yr('the-neither', 'atoned_forgiven'), yr('the-deliberate', 'atoned_forgiven'), yr('the-other-sinner', 'atoned_forgiven'),
+            n('the-penitent', 'atoned_forgiven'), n('the-unappeased', 'atoned_forgiven'), n('the-appeased', 'atoned_forgiven'), n('the-penitent', 'rest_required'), n('the-unappeased', 'labor_barred'),
+            n('aaron', 'atoned_forgiven'), n('the-ark-cover', 'sprinkled_seven'), n('the-inner-altar', 'sprinkled_seven'), n('the-bull', 'accepted'), n('the-goat', 'accepted'), n('the-two-rams', 'accepted'), n('the-people', 'atoned_forgiven'),
+            n('aaron', 'immersed'), n('the-sin-offerings-fat', 'smoked_to_the_lord'), n('the-burnt-pair', 'burned_outside_camp'), n('the-burner', 'defiles_garments'), n('the-burner', 'washes_and_bathes'),
+            n('the-azazel-goat', 'dispatched_to_wilderness'), n('the-designated-man', 'washes_and_bathes'), tset, fired, w.clock.year), w
 
 
 def main():
@@ -300,6 +390,15 @@ def main():
          _yk['affliction']['v'] + '/' + _yk['not_afflicting']['v'],
          'required/karet',
          '16:29-31 = Lev 23:27-32: afflict yourselves, the karet', 'IMPORT')
+
+    # ---- THE SCENE (W4, 2026-09-07): the Day on the world engine ----
+    print('\n== THE SCENE (Shevuot 1:3, 1:6; Yoma 8:9; the service in order; the calendar\'s daemon beside) ==')
+    SCENE, _w = scene()
+    cell('the scene tuple (the Day as the TIMER)', SCENE,
+         (1, 1, [10], [10], [10], [10], 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 4, 4, 11),
+         'the routing table\'s six persons (two suspended, four atoned ON the Day), the fellow gate\'s three (the unappeased silent; the calendar\'s daemon writing the affliction beside), the service in verse order writing the spec\'s effects by call, the goat dispatched',
+         'RECORDED')
+    _w.print_coverage()
 
     n_ok = sum(cells)
     ink = 9

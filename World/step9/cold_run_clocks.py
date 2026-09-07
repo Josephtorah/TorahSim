@@ -53,7 +53,7 @@ sys.path.insert(0, HERE)
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
-assert GUARDED == 161, ('the guard counted %d expectations, the tripwire holds 161' % GUARDED)
+assert GUARDED == 162, ('the guard counted %d expectations, the tripwire holds 162' % GUARDED)   # W4: +1, the scene row
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -825,6 +825,220 @@ def pairs(q, **k):
                     'offering (ben Azzai two)', ['pair_owed'])
     return cell('unknown', I, '', [FX.NONE])
 
+# ---- THE WRAP (W4 THE PURITY CLOCKS, 2026-09-07): the daemon over the compiled clocks ----
+import world_engine as WE
+def law_clocks(event, world):
+    """Lev 12 + 15 (cold_run_clocks.py — yoledet, zav, touch, degrees, niddah, zavah, pairs): the impurity clocks as TIMERS per person."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    day = event.get('day', world.clock.year)
+    if k == 'woman_gave_birth':
+        m = event['mother']
+        if event.get('birth_kind') == 'caesarean':
+            c = yoledet('caesarean')
+            return [E_('exempt', m, value=c['v'], law='F1 [INK 12:2 "she SEEDS and bears" — through the seeding place; Sifra Yoledet Section 1 4, R. Shimon dissents]')]
+        if event.get('birth_kind') == 'sac':
+            c = yoledet('sac_unformed')
+            return [E_('exempt', m, value=c['v'], law='F1 [Sifra Yoledet Section 1 8 — forms unfit for the breath of life; Mishnah Niddah 3:3]')]
+        sex = event.get('sex')
+        if sex in ('male', 'female'):
+            imp, tot, how = yoledet('impure_days', sex)['v'], yoledet('total', sex)['v'], sex
+        else:
+            u = yoledet('union_of_clocks')['v']                      # 'impure_14_pure_to_40_niddah_doubt_to_80' — the union computed from the written numbers
+            parts = u.split('_'); imp, tot, how = int(parts[1]), int(parts[4]), u
+        return [E_('niddah_seven', m, amount=imp, due=day + imp, value=how, law='F1 [INK 12:2 "seven days" / 12:5 "two weeks" — the impure days as the TIMER: %d]' % imp),
+                E_('blood_of_purity', m, amount=tot - imp, due=day + tot, value=how, law='F1 [INK 12:4 "thirty days AND three days" / 12:5 "sixty AND six" — the term\'s close computed: day %d (Mishnah Niddah 6:14)]' % tot),
+                E_('barred_from_holies', m, value=yoledet('holy_touch')['v'], law='F1 [INK 12:4 "no HOLY thing shall she touch, and to the SANCTUARY she shall not come" — two gates on pure blood; the tithe eaten: %s]' % yoledet('tithe')['v'])]
+    if k == 'purification_offering_brought':
+        m = event['mother']; sex = event.get('sex', 'male')
+        if event.get('died'):
+            h = yoledet('heirs')
+            return [E_('disqualified', m, value=h['v'], law='F1 [Mishnah Kinnim 2:5 — the sin offering dies with its owner: CALLED cold_run_chatat.ownership(dead_father) -> %s; the heirs bring the burnt offering]' % HEIR_CHATAT)]
+        term = yoledet('total', sex)['v']
+        if event['day'] < event['birth_day'] + term:
+            t = yoledet('offering_timing')
+            return [E_('disqualified', m, value=t['v'], law='F1 [INK 12:6 "when the days are FULL" — brought on day %d of a %d-day term: invalid (Sifra Yoledet Chapter 3 1)]' % (event['day'] - event['birth_day'], term))]
+        o = yoledet('offering', sex, event.get('means', 'reaches_lamb')); pc = yoledet('per_child')
+        return [E_('accepted', m, cp='HEAVEN', amount=1, value=o['v'], law='F1 [INK 12:6 the lamb and the bird / 12:8 the two birds — %s; %d birth(s) inside one term = ONE offering (%s); the sin offering FIRST: %s]' % (o['v'], event.get('births_in_term', 1), pc['v'], yoledet('order')['v'])),
+                E_('atoned_forgiven', m, cp='HEAVEN', value=yoledet('withholder')['v'], law='F1 [INK 12:7 "and he shall atone for her and she shall be pure from the source of her blood" — the sin offering the one withholder]')]
+    if k == 'man_had_discharge':
+        m = event['man']; n = event.get('sightings', 1)
+        if event.get('during_count'):
+            c = zav('count_consecutive')
+            cut = world.cancel_timers(m, 'counts_seven_clean', 'a discharge inside the count voids all before it [Mishnah Zavim 1:2; Sifra Zavim Chapter 5 6 "one purity"]')
+            cut += world.cancel_timers(m, 'pair_owed', 'the count voided — the eighth day moves with the new stop')
+            return [E_('bed_and_seat_defile', m, amount=cut, value=c['v'], law='F2 [Mishnah Zavim 1:2 tail — a discharge even on the seventh voids all before it: %d TIMER(S) CANCELLED, the tier stands until a new stop]' % cut)]
+        t = zav('tier', sightings=n); out = []
+        if 'impure_until_evening' in t['fx']:
+            out.append(E_('impure_until_evening', m, value=t['v'], law='F2 [INK 15:16 "impure until evening" — one sighting = the seed-emitter\'s grade (Beth Hillel; Mishnah Zavim 1:1)]'))
+        if 'bed_and_seat_defile' in t['fx']:
+            out.append(E_('bed_and_seat_defile', m, amount=n, value=t['v'], law='F2 [INK 15:4 "every BED he lies on... every VESSEL he sits on" — %d sightings (Sifra Zavim Chapter 1 5-6, Chapter 5 16)]' % n))
+        if event.get('day_doubtful'):
+            d = zav('twilight')
+            out.append(E_('suspends', m, value=d['v'], law='F2 [Mishnah Zavim 1:6 — twilight: certain for impurity, doubtful for the offering — CALLED cold_run_chatat.domain(unknown) -> %s]' % PARTNER_DOUBT))
+        world.entity(m).status['zav_tier'] = t['v']
+        return out
+    if k == 'discharge_ceased':
+        p = event['person']; sex = event.get('sex', 'male'); tier = event.get('tier', 'full')
+        c = zav('count_start') if sex == 'male' else zavah('count')
+        extra = 1 if (event.get('semen_on_day') and 'its_day' in zav('semen_in_count')['v']) else 0
+        w = zav('water') if sex == 'male' else zavah('water')
+        out = [E_('counts_seven_clean', p, amount=7 + extra, due=day + 7 + extra, value=c['v'], law='F2/F5 [INK 15:13 "when the zav is CLEAN of his flow he shall count seven days" / 15:28 "she shall COUNT seven days" — the count from the stop as the TIMER%s]' % (' (+1: semen voids its day — Beth Hillel, Mishnah Zavim 1:2)' if extra else '')),
+               E_('immersed', p, value=w['v'], law='F2/F5 [INK 15:13 "bathe his flesh in LIVING water" — at 15:13 alone; 15:28 writes no water clause: %s]' % w['v'])]
+        if tier == 'full':
+            pr = zav('pair') if sex == 'male' else zavah('pair')
+            out.append(E_('pair_owed', p, cp='HEAVEN', amount=1, due=day + 8 + extra, value=pr['v'], law='F2/F5 [INK 15:14 / 15:29 "on the EIGHTH day two turtledoves or two young pigeons" — the pair as a TIMER to the eighth day; the birds instance-bound: %s]' % zav('pair_binding')['v']))
+        return out
+    if k == 'bird_pair_brought':
+        b = event['bringer']; mix = event.get('mixture')
+        if not mix:
+            o = pairs('obligation')
+            world.close(b, 'pair_owed', 'the pair brought [INK 15:14-15 / 15:29-30]')
+            return [E_('accepted', b, cp='HEAVEN', value=o['v'], law='F6 [INK 15:15 "one a sin offering and the one a burnt offering" — the obligation pair; the sin offering FIRST: %s; below at the base, above on the wall: %s]' % (yoledet('order')['v'], pairs('places')['v']))]
+        kw = {f: event[f] for f in ('a', 'b', 'chovah_pairs', 'trips') if f in event}
+        r = pairs(mix, **kw); out = []
+        a, bb = event.get('a', 0), event.get('b', 0)
+        total = (a + bb) if (a or bb) else event.get('chovah_pairs', event.get('pairs', 1))
+        if 'birds_die' in r['fx']:
+            dead = (sum(range(1, 8)) - sum(r['v'])) if isinstance(r['v'], list) else total * 2
+            out.append(E_('birds_die', 'the-birds', cp=b, amount=dead, value=r['v'] if not isinstance(r['v'], list) else 'chain_valid_%s' % r['v'], law='F6 [Mishnah Kinnim — %s: %s]' % (mix, r['why'][:90])))
+        if 'pair_owed' in r['fx']:
+            valid = r['v'] if isinstance(r['v'], int) else (total // 2 if 'half' in str(r['v']) else 0)
+            owed = total - valid
+            if owed > 0:
+                out.append(E_('pair_owed', b, cp='HEAVEN', amount=owed, value=r['v'], law='F6 [Mishnah Kinnim — %s: %d of %d valid, %d still owed]' % (mix, valid, total, owed)))
+            else:
+                out.append(E_('accepted', b, cp='HEAVEN', amount=valid, value=r['v'], law='F6 [Mishnah Kinnim — %s: the %d valid]' % (mix, valid)))
+        return out
+    if k == 'discharge_source_touched':
+        t = event['toucher']; med = event.get('medium')
+        d = degrees(event['posture']) if event.get('posture') else touch(event['source'], med, event.get('act', 'touch'))
+        out = []
+        if 'washes_and_bathes' in d['fx']:
+            out.append(E_('washes_and_bathes', t, value=d['v'], law='F3 [%s]' % d['why'][:110]))
+        if 'impure_until_evening' in d['fx']:
+            out.append(E_('impure_until_evening', t, value=d['v'], law='F3 [%s]' % d['why'][:110]))
+        if 'break_earthen_vessel' in d['fx']:
+            out.append(E_('break_earthen_vessel', 'the-earthen-vessel', cp=event['source'], value=d['v'], law='F3 [INK 15:12 "the earthen vessel the zav touches shall be BROKEN"]'))
+        if 'immersed' in d['fx']:
+            out.append(E_('immersed', 'the-wooden-vessel' if med == 'wood' else t, value=d['v'], law='F3 [INK 15:12 "every wooden vessel shall be RINSED in water"]'))
+        if 'bed_and_seat_defile' in d['fx']:
+            out.append(E_('bed_and_seat_defile', t if event.get('posture') else 'the-%s-bed' % event['source'], value=d['v'], law='F3 [%s]' % d['why'][:110]))
+        return out
+    if k == 'seed_emitted':
+        m = event['man']; med = event.get('medium', 'flesh')
+        t = touch('seed_emitter', med); out = []
+        subjects = ['the-garment'] if med == 'garment' else ([m, event['partner']] if med == 'woman' else [m])
+        for s in subjects:
+            if 'immersed' in t['fx']:
+                out.append(E_('immersed', s, value=t['v'], law='F3 [INK 15:16 "bathes ALL his flesh in water" / 15:18 "they bathe in water"]'))
+            out.append(E_('impure_until_evening', s, value=t['v'], law='F3 [INK 15:16-18 "impure until evening" — the seed at 15:%s]' % c_seed))
+        return out
+    if k == 'woman_menstruated':
+        wmn = event['woman']
+        if event.get('stain'):
+            return []                                                # 15:19 "BLOOD shall be her flow" — blood, not a stain (Mishnah Niddah 8:3): the silence
+        n = niddah('days'); how = yoledet('hard_labor_blood') if event.get('hard_labor') else niddah('count_anchor')
+        return [E_('niddah_seven', wmn, amount=n['v'], due=day + n['v'], value=how['v'], law='F4 [INK 15:19 "seven days she shall be in her separation" — the TIMER from the sighting (Mishnah Niddah 1:2); all seven, the seventh ends at sunset: %s]' % niddah('no_early_immersion')['v'])]
+    if k == 'lay_with_menstruant':
+        m = event['man']
+        if event.get('found_when') == 'after_time':
+            a = niddah('partner_after_time')
+            return [E_('suspends', m, value=a['v'], law='F4 [Mishnah Niddah 2:2 — found on hers after a time: impure in doubt, exempt from the offering — CALLED cold_run_chatat.domain(unknown) -> %s]' % PARTNER_DOUBT)]
+        n = niddah('partner_days'); bed = niddah('partner_bed')
+        out = [E_('niddah_seven', m, amount=n['v'], due=day + n['v'], value=niddah('partner_count')['v'], law='F4 [INK 15:24 "her separation is UPON HIM, and he is impure seven days" — the TIMER from the last lying (Sifra Zavim Chapter 7 6-9)]'),
+               E_('bed_and_seat_defile', 'the-partners-bed', cp=m, value=bed['v'], law='F4 [INK 15:24 "every bed he lies on is impure" — THE DEMOTION OPERATOR: foods and liquids only (Mishnah Zavim 5:11)]')]
+        if event.get('intent', 'unwitting') == 'unwitting':
+            o = niddah('partner_offering')
+            out.append(E_('atoned_forgiven', m, cp='HEAVEN', value=o['v'], law='F4 [Lev 20:18 the karet class; Mishnah Niddah 2:2 found on his cloth — CALLED cold_run_chatat.domain -> %s]' % o['v']))
+        return out
+    if k == 'woman_had_flux':
+        wmn = event['woman']; ds = event.get('days_seen', 1); out = []
+        if event.get('entered_sanctuary'):
+            p = zavah('presence')
+            out.append(E_('death_by_heaven', wmn, cp='HEAVEN', value=p['v'], law='F5 [INK 15:31 "that they die not in their impurity by defiling My DWELLING which is in their midst"]'))
+        few, many = zavah('days_many')['v']
+        if ds >= few:
+            t = zavah('tiers') if event.get('in_window', True) else zavah('day_eleven')
+            out.append(E_('bed_and_seat_defile', wmn, amount=ds, value=t['v'], law='F5 [INK 15:26 her bed as the bed of her separation — %d sightings (days = %d, many = %d: Sifra Zavim Section 5 5-9, Chapter 8 4-7)]' % (ds, few, many)))
+        if event.get('birds_set_aside'):
+            b = zavah('her_pair_binding')
+            out.append(E_('consecrated', 'the-birds', cp=wmn, value=b['v'], law='F5 [Sifra Zavim Chapter 9 3 — her instance-binding, as his]'))
+        world.entity(wmn).status['zavah_tier'] = 'full' if ds >= many else ('two' if ds >= few else zavah('watcher')['v'])
+        return out                                                   # one sighting: the day-watcher writes nothing (Mishnah Niddah 4:7) — the silence
+    return []
+
+def scene():
+    """THE SCENE — Niddah, Zavim and Kinnim's recorded rows replayed on the world engine (clock unit: days): the clocks as TIMERS."""
+    with contextlib.redirect_stdout(io.StringIO()):
+        w = WE.World(era='the impurity clocks: Niddah, Zavim, Kinnim on the engine (clock unit: days)')
+        w.laws = [law_clocks]
+        w.advance(1)
+        w.submit({'kind': 'woman_gave_birth', 'subject': 'the-mother-of-a-son', 'mother': 'the-mother-of-a-son', 'sex': 'male', 'day': 1, 'case_source': 'Lev 12:2-4; Mishnah Niddah 6:14 — a male: seven, then thirty-three to the fortieth'})
+        w.submit({'kind': 'woman_gave_birth', 'subject': 'the-mother-of-a-daughter', 'mother': 'the-mother-of-a-daughter', 'sex': 'female', 'day': 1, 'case_source': 'Lev 12:5 — a female: two weeks, then sixty-six to the eightieth'})
+        w.submit({'kind': 'woman_gave_birth', 'subject': 'the-mother-unknown', 'mother': 'the-mother-unknown', 'sex': None, 'day': 1, 'case_source': 'Mishnah Niddah 3:3-6 — sits for a male and a female: the union of clocks'})
+        w.submit({'kind': 'woman_gave_birth', 'subject': 'the-caesarean', 'mother': 'the-caesarean', 'sex': 'male', 'day': 1, 'birth_kind': 'caesarean', 'case_source': 'Mishnah Niddah 5:1 — the caesarean: not a birth'})
+        w.submit({'kind': 'woman_gave_birth', 'subject': 'the-sac-bearer', 'mother': 'the-sac-bearer', 'sex': None, 'day': 1, 'birth_kind': 'sac', 'case_source': 'Mishnah Niddah 3:3 — a sac of water: no child'})
+        w.submit({'kind': 'man_had_discharge', 'subject': 'the-one-sighting', 'man': 'the-one-sighting', 'sightings': 1, 'day': 1, 'case_source': 'Mishnah Zavim 1:1 — one sighting: as a seed-emitter'})
+        w.submit({'kind': 'man_had_discharge', 'subject': 'the-two-sightings', 'man': 'the-two-sightings', 'sightings': 2, 'day': 1, 'case_source': 'Mishnah Zavim 1:1 / 1:5 — two: bed and seat, no offering'})
+        w.submit({'kind': 'man_had_discharge', 'subject': 'the-zav', 'man': 'the-zav', 'sightings': 3, 'day': 1, 'case_source': 'Mishnah Zavim 1:3 — three: a full zav with the offering'})
+        w.submit({'kind': 'man_had_discharge', 'subject': 'the-twilight-seer', 'man': 'the-twilight-seer', 'sightings': 3, 'day': 1, 'day_doubtful': True, 'case_source': 'Mishnah Zavim 1:6 — twilight: certain for impurity, doubtful for the offering'})
+        w.submit({'kind': 'discharge_ceased', 'subject': 'the-zav', 'person': 'the-zav', 'sex': 'male', 'tier': 'full', 'day': 1, 'case_source': 'Lev 15:13-14 — clean of his flow: the count of seven, the eighth day\'s pair'})
+        for who, source, medium, act, src in (('the-bed-toucher', 'zav', 'bed', 'touch', 'Lev 15:5'), ('the-seat-sitter', 'zav', 'seat', 'sit', 'Lev 15:6'), ('the-flesh-toucher', 'zav', 'flesh', 'touch', 'Lev 15:7'),
+                                              ('the-spat-on', 'zav', 'spittle', 'touch', 'Lev 15:8'), ('the-saddle-toucher', 'zav', 'saddle', 'touch', 'Mishnah Zavim 5:10; Lev 15:10 first clause'), ('the-saddle-carrier', 'zav', 'saddle', 'carry', 'Mishnah Zavim 5:8; Lev 15:10 second clause'),
+                                              ('the-hand-touched', 'zav', 'unwashed_hands', 'touch', 'Lev 15:11'), ('the-potter', 'zav', 'earthenware', 'touch', 'Lev 15:12'), ('the-carpenter', 'zav', 'wood', 'touch', 'Lev 15:12'),
+                                              ('the-niddah-toucher', 'niddah', 'flesh', 'touch', 'Lev 15:19'), ('the-niddah-bed-toucher', 'niddah', 'bed', 'touch', 'Lev 15:21'), ('the-zavah-bed-lier', 'zavah', 'bed', 'touch', 'Lev 15:26')):
+            w.submit({'kind': 'discharge_source_touched', 'subject': who, 'toucher': who, 'source': source, 'medium': medium, 'act': act, 'day': 1, 'case_source': src})
+        for who, posture, src in (('the-madaf-rider', 'madaf_above', 'Mishnah Zavim 4:6 / 5:2 — the madaf above'), ('the-ten-cloaks', 'pressure_column', 'Mishnah Zavim 4:5 — ten cloaks, all impure'), ('the-carried-on-zav', 'carried_on_zav', 'Mishnah Zavim 5:2 — carried on the zav')):
+            w.submit({'kind': 'discharge_source_touched', 'subject': who, 'toucher': who, 'posture': posture, 'day': 1, 'case_source': src})
+        w.submit({'kind': 'seed_emitted', 'subject': 'the-seed-emitter', 'man': 'the-seed-emitter', 'medium': 'flesh', 'day': 1, 'case_source': 'Lev 15:16 — bathes all his flesh'})
+        w.submit({'kind': 'seed_emitted', 'subject': 'the-seed-emitter', 'man': 'the-seed-emitter', 'medium': 'garment', 'day': 1, 'case_source': 'Lev 15:17 — the garment washed'})
+        w.submit({'kind': 'seed_emitted', 'subject': 'the-husband', 'man': 'the-husband', 'medium': 'woman', 'partner': 'the-wife', 'day': 1, 'case_source': 'Lev 15:18 — both bathe'})
+        w.submit({'kind': 'woman_menstruated', 'subject': 'the-menstruant', 'woman': 'the-menstruant', 'day': 1, 'case_source': 'Lev 15:19; Mishnah Niddah 1:2 — seven from the sighting'})
+        w.submit({'kind': 'woman_menstruated', 'subject': 'the-stain-seer', 'woman': 'the-stain-seer', 'day': 1, 'stain': True, 'case_source': 'Mishnah Niddah 8:3 — blood, not a stain: the silence'})
+        w.submit({'kind': 'woman_menstruated', 'subject': 'the-laboring', 'woman': 'the-laboring', 'day': 1, 'hard_labor': True, 'case_source': 'Mishnah Niddah 4:4 — the woman in hard labor is a menstruant'})
+        w.submit({'kind': 'lay_with_menstruant', 'subject': 'the-partner', 'man': 'the-partner', 'woman': 'the-menstruant', 'day': 1, 'intent': 'unwitting', 'case_source': 'Lev 15:24; Mishnah Niddah 2:2 — found on his cloth: seven days, the bed light, the sin offering'})
+        w.submit({'kind': 'lay_with_menstruant', 'subject': 'the-late-finder', 'man': 'the-late-finder', 'woman': 'the-menstruant', 'day': 1, 'found_when': 'after_time', 'case_source': 'Mishnah Niddah 2:2 — found after a time: the doubt'})
+        w.submit({'kind': 'woman_had_flux', 'subject': 'the-day-watcher', 'woman': 'the-day-watcher', 'days_seen': 1, 'day': 1, 'case_source': 'Mishnah Niddah 4:7 — one day: watches a day against a day (the silence)'})
+        w.submit({'kind': 'woman_had_flux', 'subject': 'the-two-day-zavah', 'woman': 'the-two-day-zavah', 'days_seen': 2, 'day': 1, 'case_source': 'Sifra Zavim Chapter 8 4-7 — two: bed and seat'})
+        w.submit({'kind': 'woman_had_flux', 'subject': 'the-zavah', 'woman': 'the-zavah', 'days_seen': 3, 'day': 1, 'birds_set_aside': True, 'case_source': 'Lev 15:25; Sifra Zavim Chapter 8 7 — three: the full zavah; her birds set aside'})
+        w.submit({'kind': 'woman_had_flux', 'subject': 'the-sanctuary-enterer', 'woman': 'the-sanctuary-enterer', 'days_seen': 3, 'day': 1, 'entered_sanctuary': True, 'case_source': 'Lev 15:31 — the Presence clause'})
+        w.submit({'kind': 'discharge_ceased', 'subject': 'the-zavah', 'person': 'the-zavah', 'sex': 'female', 'tier': 'full', 'day': 1, 'case_source': 'Lev 15:28-29 — she counts seven, the eighth day\'s pair'})
+        w.submit({'kind': 'bird_pair_brought', 'subject': 'the-mixed-women', 'bringer': 'the-mixed-women', 'mixture': 'chovah_in_chovah', 'a': 2, 'b': 2, 'day': 1, 'case_source': 'Mishnah Kinnim 1:3 — two and two: half valid'})
+        w.submit({'kind': 'bird_pair_brought', 'subject': 'the-unequal-women', 'bringer': 'the-unequal-women', 'mixture': 'chovah_in_chovah', 'a': 1, 'b': 3, 'day': 1, 'case_source': 'Mishnah Kinnim 1:3 — one and three: the smaller valid'})
+        w.submit({'kind': 'bird_pair_brought', 'subject': 'the-spec-in-olah', 'bringer': 'the-spec-in-olah', 'mixture': 'spec_chatat_in_spec_olah', 'pairs': 1, 'day': 1, 'case_source': 'Mishnah Kinnim 1:2 — a sin offering among burnt offerings: all die'})
+        w.submit({'kind': 'bird_pair_brought', 'subject': 'the-seven-women', 'bringer': 'the-seven-women', 'mixture': 'chain', 'trips': 1, 'day': 1, 'case_source': 'Mishnah Kinnim 2:3 — the chain of seven after one trip'})
+        w.submit({'kind': 'bird_pair_brought', 'subject': 'the-spec-in-chovah', 'bringer': 'the-spec-in-chovah', 'mixture': 'spec_in_chovah', 'chovah_pairs': 2, 'day': 1, 'case_source': 'Mishnah Kinnim 3:5 — a sin offering in two obligation pairs: two valid'})
+        w.advance(5)
+        w.submit({'kind': 'man_had_discharge', 'subject': 'the-zav', 'man': 'the-zav', 'sightings': 1, 'day': 5, 'during_count': True, 'case_source': 'Mishnah Zavim 1:2 — a discharge inside the count voids all before it: the TIMER cancelled'})
+        w.advance(6)
+        w.submit({'kind': 'discharge_ceased', 'subject': 'the-zav', 'person': 'the-zav', 'sex': 'male', 'tier': 'full', 'day': 6, 'case_source': 'Lev 15:13 — the new stop: the count restarts'})
+        w.advance(14)
+        w.submit({'kind': 'bird_pair_brought', 'subject': 'the-zav', 'bringer': 'the-zav', 'day': 14, 'case_source': 'Lev 15:14-15 — his eighth day: the pair, the sin offering first'})
+        w.advance(30)
+        w.submit({'kind': 'purification_offering_brought', 'subject': 'the-early-bringer', 'mother': 'the-early-bringer', 'sex': 'male', 'birth_day': 1, 'day': 30, 'case_source': 'Sifra Yoledet Chapter 3 1 — inside the term: invalid'})
+        w.advance(41)
+        w.submit({'kind': 'purification_offering_brought', 'subject': 'the-mother-of-a-son', 'mother': 'the-mother-of-a-son', 'sex': 'male', 'birth_day': 1, 'day': 41, 'means': 'reaches_lamb', 'births_in_term': 1, 'case_source': 'Lev 12:6-7 — the days full: the lamb and the bird, the sin offering withholds'})
+        w.submit({'kind': 'purification_offering_brought', 'subject': 'the-heirs', 'mother': 'the-heirs', 'sex': 'male', 'birth_day': 1, 'day': 41, 'died': True, 'case_source': 'Mishnah Kinnim 2:5 — she died: the heirs bring the burnt offering, not the sin offering'})
+        w.advance(82)                                                # every clock closes: the eightieth day passes
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE']); cut = len([l for l in w.log if l[0] == 'TIMER-CANCEL'])
+    yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    return (n('the-mother-of-a-son', 'niddah_seven'), yr('the-mother-of-a-son', 'niddah_seven'), yr('the-mother-of-a-son', 'blood_of_purity'), yr('the-mother-of-a-daughter', 'niddah_seven'), yr('the-mother-of-a-daughter', 'blood_of_purity'),
+            yr('the-mother-unknown', 'niddah_seven'), yr('the-mother-unknown', 'blood_of_purity'), n('the-mother-of-a-son', 'barred_from_holies'), n('the-caesarean', 'exempt'), n('the-sac-bearer', 'exempt'),
+            n('the-one-sighting', 'impure_until_evening'), n('the-two-sightings', 'bed_and_seat_defile'), n('the-zav', 'bed_and_seat_defile'), n('the-twilight-seer', 'suspends'),
+            yr('the-zav', 'counts_seven_clean'), yr('the-zav', 'pair_owed'), cut, n('the-zav', 'immersed'), n('the-zav', 'accepted'),
+            n('the-bed-toucher', 'washes_and_bathes'), n('the-bed-toucher', 'impure_until_evening'), n('the-saddle-toucher', 'washes_and_bathes'), n('the-saddle-toucher', 'impure_until_evening'), n('the-saddle-carrier', 'washes_and_bathes'),
+            n('the-earthen-vessel', 'break_earthen_vessel'), n('the-wooden-vessel', 'immersed'), n('the-niddah-toucher', 'washes_and_bathes'), n('the-niddah-toucher', 'impure_until_evening'), n('the-zavah-bed', 'bed_and_seat_defile'),
+            n('the-madaf-rider', 'bed_and_seat_defile'), n('the-ten-cloaks', 'bed_and_seat_defile'), n('the-carried-on-zav', 'impure_until_evening'),
+            n('the-seed-emitter', 'immersed'), n('the-seed-emitter', 'impure_until_evening'), n('the-garment', 'impure_until_evening'), n('the-wife', 'immersed'),
+            yr('the-menstruant', 'niddah_seven'), n('the-stain-seer', 'niddah_seven'), n('the-laboring', 'niddah_seven'), yr('the-partner', 'niddah_seven'), n('the-partners-bed', 'bed_and_seat_defile'), n('the-partner', 'atoned_forgiven'), n('the-late-finder', 'suspends'),
+            n('the-day-watcher', 'bed_and_seat_defile'), n('the-two-day-zavah', 'bed_and_seat_defile'), n('the-zavah', 'bed_and_seat_defile'), n('the-birds', 'consecrated'), n('the-sanctuary-enterer', 'death_by_heaven'), yr('the-zavah', 'counts_seven_clean'), yr('the-zavah', 'pair_owed'),
+            n('the-mixed-women', 'pair_owed'), n('the-unequal-women', 'pair_owed'), n('the-birds', 'birds_die'), n('the-spec-in-chovah', 'accepted'),
+            n('the-early-bringer', 'disqualified'), n('the-mother-of-a-son', 'accepted'), n('the-mother-of-a-son', 'atoned_forgiven'), n('the-heirs', 'disqualified'),
+            tset, fired, w.clock.year), w
+SCENE, _W = scene()
+
 # ---- (2) TEST DATA — the Mishnah rows, read whole from the shelf ------
 def load(t):
     d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
@@ -1027,6 +1241,11 @@ TESTS = [
  ('Kinnim 3:4 — four kinds: only the unspecified valid', pairs('unconsulted_mixed_four'), 'only_the_unspecified_valid_divided'),
  ('Kinnim 3:6 — the vowed pair: three above, one below (computed)', pairs('vowed_pair'), (3, 1)),
  ('Kinnim 3:6 — did two and two: one more above', pairs('vowed_pair_two_two'), 'one_more_above_one_kind_two_of_two_kinds'),
+ # ---- THE SCENE (W4, 2026-09-07): the clocks as TIMERS on the world engine ----
+ ('THE SCENE — Niddah, Zavim, Kinnim on the engine: the mothers\' two clocks (the son 8/41, the daughter 15/81, the unknown 15/41), the zav\'s count CANCELLED by a discharge on day 5 and restarted (13/14), the lattice, the seed, the menstruant and her partner (8), the zavah (8/9), the pairs engine, the term\'s end (set, fired, the clock)',
+  cell(SCENE, I, 'the five mothers, the four discharge tiers, the count of seven with its cancel and restart, the pair on the eighth day, fifteen touches and postures, the seed three ways, three menstruants, two partners, four fluxes, five pair mixtures, three offerings at the term — every value the engine\'s, every clock a TIMER fired on its day',
+       ['niddah_seven', 'blood_of_purity', 'barred_from_holies', 'exempt', 'accepted', 'atoned_forgiven', 'disqualified', 'impure_until_evening', 'bed_and_seat_defile', 'suspends', 'counts_seven_clean', 'immersed', 'pair_owed', 'birds_die', 'washes_and_bathes', 'break_earthen_vessel', 'consecrated', 'death_by_heaven']),
+  (1, [8], [41], [15], [81], [15], [41], 1, 1, 1, 1, 1, 2, 1, [13], [14], 2, 2, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, [8], 0, 1, [8], 1, 1, 1, 0, 1, 1, 1, 1, [8], [9], 1, 1, 2, 1, 1, 1, 1, 1, 15, 13, 82)),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------
@@ -1055,6 +1274,7 @@ print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sort
 print('effects: every cell carries REGISTERED effects — NINE discovered in these spans\' own verbs: niddah_seven, '
       'blood_of_purity, counts_seven_clean (TIMERS), bed_and_seat_defile, washes_and_bathes, immersed (STATUS), '
       'pair_owed (DEBIT), barred_from_holies (BLOCK), birds_die (DESTROY) [effects law satisfied]')
+_W.print_coverage()                                                  # W4: every daemon prints its watch coverage
 if ok == n:
     print('THE IMPURITY CLOCKS AND THE PAIRS ENGINE COMPILE — the written numbers summed to forty and eighty, the '
           'two gates of 12:4, the source of her blood, the pair formula at three seats, seven days at five clocks, '

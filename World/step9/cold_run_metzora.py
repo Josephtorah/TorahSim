@@ -41,7 +41,7 @@ sys.path.insert(0, HERE)
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
-assert GUARDED == 77, ('the guard counted %d expectations, the tripwire holds 77' % GUARDED)
+assert GUARDED == 78, ('the guard counted %d expectations, the tripwire holds 78' % GUARDED)   # W4: +1, the scene row
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -466,6 +466,97 @@ def poor(q):
                     'until the sin offering (R. Yehuda: the guilt offering)', ['accepted'])
     return cell('unknown', I, '', [FX.NONE])
 
+# ---- THE WRAP (W4 THE PURITY CLOCKS, 2026-09-07): the daemon over the compiled cleansing ----
+import world_engine as WE
+def law_metzora(event, world):
+    """Lev 14:1-32 (cold_run_metzora.py — frame, birds, week, shave, eighth, poor): the leper's week as a TIMER, the purity verb's four gates."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    day = event.get('day', world.clock.year)
+    if k == 'leper_cleansing_begun':
+        l = event['leper']
+        if event.get('which_leper') == 'quarantined':
+            return []                                                # frame('which_leper'): the rite runs for the DECIDED leper (Mishnah Megillah 1:7) — the quarantined one's silence
+        h = frame('healed'); sl = birds('slaughter'); sp = birds('sprinkle_count'); sd = birds('send'); td = week('tent_days')
+        return [E_('declared_pure', l, value=h['v'], law='F1 [INK 14:2-3 "the law of the leper on the DAY of his cleansing... behold, HEALED" — %s; %s]' % (frame('one_law')['v'], frame('day')['v'])),
+                E_('birds_die', 'the-slaughtered-bird', cp=l, amount=1, value=sl['v'], law='F2 [INK 14:5 "slaughter the ONE bird into an earthen vessel over living water" — the water\'s measure data: %s]' % birds('water_quantity')['v']),
+                E_('barred_from_it', 'the-slaughtered-bird', value=birds('slaughtered_bird')['v'], law='F2 [Mishnah Avodah Zarah 5:9 — forbidden in any amount; the sent bird %s]' % birds('sent_bird')['v']),
+                E_('sprinkled_seven', l, amount=sp['v'], value=birds('sprinkle_where')['v'], law='F2 [INK 14:7 "sprinkle on the one being cleansed SEVEN times"]'),
+                E_('sent_over_the_field', 'the-living-bird', cp=l, value=sd['v'], law='F2 [INK 14:7 "SEND the living bird over the face of the FIELD" — from %s]' % event.get('send_place', 'the open field')),
+                E_('declared_pure', l, value=birds('purify')['v'], law='F2 [INK 14:7 "and he shall PURIFY him" — the purity verb\'s first gate (14:%s)]' % c_pure),
+                E_('shaved_whole', l, value=week('first_shave')['v'], law='F3 [INK 14:8 "shave ALL his hair" — the first shave]'),
+                E_('washes_and_bathes', l, value=week('wash_bathe')['v'], law='F3 [INK 14:8 "wash his garments... bathe in water"]'),
+                E_('immersed', l, value=week('mikveh')['v'], law='F3 [INK 14:8 "bathe in WATER" — not living water: even a mikveh]'),
+                E_('declared_pure', l, value=week('status')['v'], law='F3 [INK 14:8 "and be pure, and AFTERWARD come into the camp" — the first purity, gated by %s]' % week('what_gates_entry')['v']),
+                E_('outside_his_tent', l, amount=td['v'], due=day + td['v'] - 1, value=week('tent_meaning')['v'], law='F3 [INK 14:8 "dwell OUTSIDE HIS TENT seven days" — the TIMER to the seventh day]')]
+    if k == 'leper_shaved_seventh':
+        l = event['leper']; ins = shave('instrument')
+        if event.get('instrument', 'razor') != 'razor' or event.get('hairs_left', 0) >= 2:
+            return []                                                # 'razor_only_two_hairs_left_is_nothing' (Mishnah Negaim 14:4) — did nothing: the silence
+        st = shave('status')
+        return [E_('shaved_whole', l, value=shave('sites')['v'], law='F4 [INK 14:9 "his HEAD and his BEARD and his EYEBROWS — all his hair" — %s; late valid: %s]' % (ins['v'], shave('late')['v'])),
+                E_('declared_pure', l, value=st['v'], law='F4 [INK 14:9 "and he shall be pure" — the second purity: %s]' % st['v']),
+                E_('barred_from_holies', l, value=shave('day_gap')['v'], law='F4 [Mishnah Keritot 2:1 — the leper lacks atonement until the eighth day; the sunset between the shave and the offering]')]
+    if k == 'leper_offering_brought':
+        l = event['leper']; scale = event.get('scale', 'rich'); brought = event.get('brought', scale)
+        if event.get('missing_member'):
+            mm = eighth('missing_member')
+            return [E_('barred_from_holies', l, value=mm['v'], law='F5 [Mishnah Negaim 14:9 — no thumb, toe, or right ear: no purity ever (the two dissents kept)]')]
+        sw = poor('swap')
+        if scale == 'rich' and brought == 'poor':
+            return [E_('disqualified', l, value=sw['v'], law='F6 [Mishnah Negaim 14:12 — rich brought poor: not valid; the status sampled %s]' % poor('sampling_point')['v'])]
+        out = []
+        if brought == 'rich':
+            an = eighth('animals')
+            out.append(E_('accepted', l, cp='HEAVEN', value=an['v'], law='F5 [INK 14:10 "two lambs and one ewe of its first year, three tenths, one log" — %s; %s; the asham slaughtered %s (CALLED offerings)]' % (eighth('minchah')['v'], eighth('log')['v'], eighth('asham_place')['v'])))
+        else:
+            an = poor('animals')
+            out.append(E_('accepted', l, cp='HEAVEN', value=an['v'], law='F6 [INK 14:21-22 "if he is POOR and his hand does not reach" — %s; the asham never scaled: %s%s]' % (poor('both_clauses')['v'], poor('asham_never_scaled')['v'], '; poor brought rich: valid (%s)' % sw['v'] if brought != scale else '')))
+            out.append(E_('pair_owed', l, cp='HEAVEN', amount=1, value=poor('birds')['v'], law='F6 [INK 14:22 "the one a sin offering and the one a burnt offering" — the pair formula; the order CALLED vayikra5: %s; the bird burnt offering\'s place CALLED minchah: %s]' % (poor('bird_order')['v'], poor('bird_olah_place')['v'])))
+        out += [E_('presented', l, value=eighth('station')['v'], law='F5 [INK 14:11 "set the man being cleansed and them BEFORE THE LORD at the door of the tent of meeting" — %s]' % eighth('all_stand')['v']),
+                E_('waved', 'the-guilt-offering', cp=l, value=eighth('asham_waved')['v'], law='F5 [INK 14:12 "wave them as a waving before the LORD" — the asham and the log together, alive]'),
+                E_('most_holy', 'the-guilt-offering', value=eighth('asham_grade')['v'], law='F5 [INK 14:13 "as the sin offering, so the guilt offering... it is MOST HOLY" — CALLED cold_run_tzav.asham_law(grade)]'),
+                E_('due_to_priest', 'the-priests', cp=l, value=eighth('asham_grade')['v'], law='F5 [INK 14:13 "so the guilt offering is the priest\'s"; the precedence CALLED tzav: %s]' % eighth('precedence')['v']),
+                E_('accepted', 'the-guilt-offering', cp='HEAVEN', value=eighth('asham_blood_altar')['v'], law='F5 [INK 14:14 "the priest shall take of the blood of the guilt offering" — its altar-blood below (CALLED tzav.asham_law(leper_blood)); the altar before the members: %s]' % eighth('altar_before_members')['v']),
+                E_('oil_on_the_blood', l, value=eighth('members')['v'], law='F5 [INK 14:14, 14:17 the RIGHT ear-ridge, thumb, toe; the oil %s (14:28 against 14:17)]' % eighth('oil_on_blood')['v']),
+                E_('sprinkled_seven', 'the-priest', amount=eighth('oil_sprinkle')['v'], value='the_oil_before_the_LORD', law='F5 [INK 14:16 "dip his RIGHT finger in the oil on his left palm and sprinkle SEVEN times before the LORD" — the pour: %s]' % eighth('oil_pour')['v']),
+                E_('atoned_forgiven', l, cp='HEAVEN', value=eighth('chatat_then_olah')['v'], law='F5 [INK 14:18-19 "the remainder of the oil on his head, and the priest shall atone for him... the SIN offering and atone" — the head-oil %s; the ewe CALLED chatat.rank(commoner): %s; its place CALLED offerings: %s]' % (eighth('head_oil')['v'], eighth('chatat_animal')['v'], eighth('chatat_place')['v'])),
+                E_('smoked_to_the_lord', 'the-burnt-offering', value=eighth('olah')['v'], law='F5 [INK 14:19-20 "and AFTERWARD slaughter the burnt offering... on the altar" — CALLED cold_run_offerings.dispatch(olah:flock)]'),
+                E_('declared_pure', l, value=eighth('atonement_gate')['v'], law='F5 [INK 14:20 "and he shall be PURE" — the purity verb\'s fourth gate; Mishnah Keritot 2:1 the holies after the atonement; many marks one offering: %s]' % frame('one_law')['v'])]
+        return out
+    return []
+
+def scene():
+    """THE SCENE — Negaim 14's recorded rows replayed on the world engine (clock unit: days): the week outside his tent as a TIMER."""
+    with contextlib.redirect_stdout(io.StringIO()):
+        w = WE.World(era='the leper\'s cleansing: Negaim 14, Keritot 2, Megillah 1:7 on the engine (clock unit: days)')
+        w.laws = [law_metzora]
+        w.advance(1)
+        w.submit({'kind': 'leper_cleansing_begun', 'subject': 'the-leper', 'leper': 'the-leper', 'day': 1, 'which_leper': 'decided', 'case_source': 'Lev 14:2-8; Mishnah Negaim 14:1-2 — the day, the birds, the first shave, the week outside his tent'})
+        w.submit({'kind': 'leper_cleansing_begun', 'subject': 'the-quarantined', 'leper': 'the-quarantined', 'day': 1, 'which_leper': 'quarantined', 'case_source': 'Mishnah Megillah 1:7 — the one pure from quarantine: no birds, no shaving (the silence)'})
+        w.submit({'kind': 'leper_cleansing_begun', 'subject': 'the-poor-leper', 'leper': 'the-poor-leper', 'day': 1, 'which_leper': 'decided', 'send_place': 'the open field', 'case_source': 'Lev 14:2-8 — the poor leper\'s week (the same rite)'})
+        w.advance(7)                                                 # the seventh day: the tent week's TIMER fires
+        w.submit({'kind': 'leper_shaved_seventh', 'subject': 'the-leper', 'leper': 'the-leper', 'day': 7, 'instrument': 'razor', 'hairs_left': 0, 'case_source': 'Lev 14:9; Mishnah Negaim 14:3-4 — the second shave, the three purities'})
+        w.submit({'kind': 'leper_shaved_seventh', 'subject': 'the-poor-leper', 'leper': 'the-poor-leper', 'day': 7, 'instrument': 'razor', 'hairs_left': 0, 'case_source': 'Lev 14:9'})
+        w.submit({'kind': 'leper_shaved_seventh', 'subject': 'the-scissors-user', 'leper': 'the-scissors-user', 'day': 7, 'instrument': 'scissors', 'hairs_left': 0, 'case_source': 'Mishnah Negaim 14:4 — not by a razor: did nothing (the silence)'})
+        w.advance(8)                                                 # the eighth day
+        w.submit({'kind': 'leper_offering_brought', 'subject': 'the-leper', 'leper': 'the-leper', 'day': 8, 'scale': 'rich', 'brought': 'rich', 'case_source': 'Lev 14:10-20; Mishnah Negaim 14:7-10 — the rich scale'})
+        w.submit({'kind': 'leper_offering_brought', 'subject': 'the-poor-leper', 'leper': 'the-poor-leper', 'day': 8, 'scale': 'poor', 'brought': 'poor', 'case_source': 'Lev 14:21-32; Mishnah Negaim 14:7 — the poor scale'})
+        w.submit({'kind': 'leper_offering_brought', 'subject': 'the-rich-who-brought-poor', 'leper': 'the-rich-who-brought-poor', 'day': 8, 'scale': 'rich', 'brought': 'poor', 'case_source': 'Mishnah Negaim 14:12 — rich brought poor: not valid'})
+        w.submit({'kind': 'leper_offering_brought', 'subject': 'the-poor-who-brought-rich', 'leper': 'the-poor-who-brought-rich', 'day': 8, 'scale': 'poor', 'brought': 'rich', 'case_source': 'Mishnah Negaim 14:12 — poor brought rich: valid'})
+        w.submit({'kind': 'leper_offering_brought', 'subject': 'the-maimed', 'leper': 'the-maimed', 'day': 8, 'scale': 'rich', 'brought': 'rich', 'missing_member': True, 'case_source': 'Mishnah Negaim 14:9 — no thumb: no purity ever'})
+        w.advance(9)
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    return (n('the-leper', 'declared_pure'), n('the-slaughtered-bird', 'birds_die'), n('the-slaughtered-bird', 'barred_from_it'), n('the-leper', 'sprinkled_seven'), n('the-living-bird', 'sent_over_the_field'),
+            n('the-leper', 'shaved_whole'), n('the-leper', 'washes_and_bathes'), n('the-leper', 'immersed'), yr('the-leper', 'outside_his_tent'), n('the-quarantined', 'declared_pure'),
+            n('the-leper', 'barred_from_holies'), n('the-scissors-user', 'shaved_whole'), n('the-leper', 'accepted'), n('the-leper', 'presented'), n('the-guilt-offering', 'waved'), n('the-guilt-offering', 'most_holy'),
+            n('the-priests', 'due_to_priest'), n('the-guilt-offering', 'accepted'), n('the-leper', 'oil_on_the_blood'), n('the-priest', 'sprinkled_seven'), n('the-leper', 'atoned_forgiven'), n('the-burnt-offering', 'smoked_to_the_lord'),
+            n('the-poor-leper', 'accepted'), n('the-poor-leper', 'pair_owed'), n('the-rich-who-brought-poor', 'disqualified'), n('the-poor-who-brought-rich', 'accepted'), n('the-maimed', 'barred_from_holies'), n('the-maimed', 'accepted'),
+            tset, fired, w.clock.year), w
+SCENE, _W = scene()
+
 # ---- (2) TEST DATA — the rows, each expected value a literal ----------
 TESTS = [
  # F1 the day and the priest
@@ -551,6 +642,11 @@ TESTS = [
  ('Sifra Section 4 11 — the reach-forms censused', poor('reach_forms'), [22, 30, 31, 32]),
  ('Lev 14:32 — the closing torah', poor('closing'), 'the_law_for_the_one_whose_hand_does_not_reach'),
  ('Keritot 2:3 — many marks, one offering; the birds do not count until the chatat', poor('many_marks'), 'one_offering_birds_do_not_count_until_the_chatat_R._Yehuda_asham'),
+ # ---- THE SCENE (W4, 2026-09-07): the leper\'s week as a TIMER on the world engine ----
+ ('THE SCENE — Negaim 14 on the engine: the decided leper\'s birds, first shave and week outside his tent (fired on day 7), the seventh day\'s shave, the eighth day rich and poor, the swap both ways, the maimed, the quarantined and the scissors-user silent (set, fired, the clock)',
+  cell(SCENE, I, 'the purity verb\'s four gates written at 14:7, 14:8, 14:9 and 14:20 by the daemon; the guilt offering waved, most holy, the priests\' due, its blood below and the oil on the place of the blood; the poor scale\'s pair; every value the engine\'s',
+       ['declared_pure', 'birds_die', 'barred_from_it', 'sprinkled_seven', 'sent_over_the_field', 'shaved_whole', 'washes_and_bathes', 'immersed', 'outside_his_tent', 'barred_from_holies', 'accepted', 'presented', 'waved', 'most_holy', 'due_to_priest', 'oil_on_the_blood', 'atoned_forgiven', 'smoked_to_the_lord', 'pair_owed', 'disqualified']),
+  (5, 2, 2, 1, 2, 2, 1, 1, [7], 0, 1, 0, 1, 1, 3, 3, 3, 3, 1, 3, 1, 3, 1, 1, 1, 1, 1, 0, 2, 2, 9)),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------
@@ -579,6 +675,7 @@ print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sort
 print('effects: every cell carries REGISTERED effects — seven discovered in this chapter\'s own verbs: sprinkled_seven, '
       'sent_over_the_field, shaved_whole (BODY), outside_his_tent (TIMER), declared_pure (STATUS), oil_on_the_blood (BODY), '
       'waved (STATUS) [effects law satisfied]')
+_W.print_coverage()                                                  # W4: every daemon prints its watch coverage
 if ok == n:
     print('THE LEPER\'S CLEANSING COMPILES — the kit of four, the slaughter over living water, the seven sprinklings, the '
           'sending over the field, the two shaves and the week outside his tent, the three purities, the eighth day\'s '

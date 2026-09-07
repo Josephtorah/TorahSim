@@ -65,7 +65,7 @@ sys.path.insert(0, HERE)
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
-assert GUARDED == 104, ("the guard counted %d expectations, the tripwire holds 104" % GUARDED)
+assert GUARDED == 105, ("the guard counted %d expectations, the tripwire holds 105" % GUARDED)
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -662,8 +662,28 @@ def law_eighth_day(event, world):
     subj = event['subject']
     src = event['case_source']
     if k == 'offering_done':
-        return [{'effect': 'accepted', 'subject': subj, 'counterparty': None, 'amount': None, 'due': None,
-                 'source_law': 'the spec by call (%s)' % event['spec'], 'case_source': src}]
+        spec = event['spec']
+        E = lambda eff, s, cp=None, law='': {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': None, 'due': None, 'source_law': law, 'case_source': src}
+        out = [E('accepted', subj, law='the spec by call (%s)' % spec)]
+        # W3 (2026-09-07): the run's acts write the SPEC'S effects by call — the calf's, the goat's, the rams', the palm's, the peace offerings'
+        head = spec.split()[0].rstrip(':')                       # 'olah: as prescribed' / 'minchah: the palm filled' carry the colon on the head
+        if head == 'chatat':
+            beast = 'the-calf' if 'calf' in spec else 'the-goat'
+            out += [E('atoned_forgiven', 'the-people' if 'goat' in spec else 'aaron', cp='HEAVEN', law='F3/F5 [INK 9:9, 9:15 the blood on the horns; Onkelos 9:15 "atoned with its blood"; the outer protocol by call: %s]' % CH_BLOOD_COM),
+                    E('smoked_to_the_lord', beast, law='F3 [INK 9:10 the fat, the kidneys, the lobe; the ox\'s inventory by call: %s]' % FAT_OX['parts']['v'])]
+            if 'calf' in spec:
+                out += [E('burned_outside_camp', 'the-calf', law='F3 [INK 9:11 "the flesh and the hide he burned outside the camp"; the anointed tier\'s carcass by call: %s]' % CH_CARC_A),
+                        E('defiles_garments', 'the-burner', law='F3 [the burn site by call: %s]' % CH_BURN)]
+        if head == 'olah':
+            out.append(E('smoked_to_the_lord', 'the-ram' if 'ram' in spec else 'the-peoples-olah', law='F4 [INK 9:13-14, 9:16 "as prescribed" — CALLED offerings(olah:flock) disposition: %s]' % OLAH_F['disposition']['v']))
+        if head == 'minchah':
+            out += [E('azkarah_to_fire', 'the-minchah', cp='HEAVEN', law='F5 [INK 9:17 "he filled his palm from it and smoked it on the altar"; the pair by call: %s]' % MIN_PAIR),
+                    E('presented', 'the-minchah', law='F5 [the presentation the run does not narrate — CALLED minchah.presentation: %s]' % MIN_PRES),
+                    E('due_to_priest', 'the-priests', cp='the-people', law='F5 [the remainder by call: %s; eaten at Lev 10:12]' % MIN_REM)]
+        if head == 'shelamim':
+            out += [E('due_to_priest', 'the-priests', cp='the-people', law='F6 [INK 9:21 the breast and the right thigh — CALLED tzav.dues_machine: %s]' % TZ_BT),
+                    E('waved', 'the-breast-and-thigh', law='F6 [INK 9:21 "Aaron waved them as a waving before the LORD"]')]
+        return out
     if k == 'blessing_lifted':
         return [{'effect': 'blessed_the_people', 'subject': subj, 'counterparty': 'aaron', 'amount': None, 'due': None,
                  'source_law': 'F7 [INK 9:22-23]', 'case_source': src}]
@@ -695,9 +715,15 @@ def scene():
     aas = w.entity('aaron-and-sons'); ppl = w.entity('the-people'); alt = w.entity('the-altar'); land = w.entity('the-land'); aar = w.entity('aaron')
     n = lambda ent, eff: len([e for e in ent.ledger if e['effect'] == eff])
     timers_fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
-    return (n(aas, 'confined_seven_days'), n(aas, 'invested_office'), n(aas, 'released'), timers_fired, n(aar, 'accepted'),
+    main = (n(aas, 'confined_seven_days'), n(aas, 'invested_office'), n(aas, 'released'), timers_fired, n(aar, 'accepted'),
             n(ppl, 'blessed_the_people'), n(ppl, 'glory_appeared'), n(alt, 'fire_from_before_the_lord'), n(land, 'high_places_banned'), w.clock.year)
-SCENE = scene()
+    # W3 (2026-09-07): the run's acts write the SPEC'S effects by call — counted on the same world
+    m = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    wrap = (m('aaron', 'atoned_forgiven'), m('the-people', 'atoned_forgiven'), m('the-calf', 'smoked_to_the_lord'), m('the-calf', 'burned_outside_camp'), m('the-burner', 'defiles_garments'),
+            m('the-goat', 'smoked_to_the_lord'), m('the-ram', 'smoked_to_the_lord'), m('the-peoples-olah', 'smoked_to_the_lord'), m('the-minchah', 'azkarah_to_fire'), m('the-minchah', 'presented'),
+            m('the-priests', 'due_to_priest'), m('the-breast-and-thigh', 'waved'))
+    return main, wrap, w
+SCENE, SCENE_WRAP, _W = scene()
 def scene_cell():
     return cell(SCENE, I, "the SCENE on the world engine (the Tzav round's scene-6 shape): the installation commanded (Lev 8:2) and committed at "
                 "the sprinkling (8:30); the clock advanced seven days and the confinement's RELEASE fired (the timer that makes the eighth day); "
@@ -840,6 +866,15 @@ TESTS = [
  ('the ban\'s own ink is Lev 17:4 and Deut 12:8; this day is its date', eras('ink_of_the_ban'), 'Lev 17:4 and Deut 12:8'),
  # ---- THE SCENE ----
  ('THE SCENE on the world engine: (confined, invested, released, timers, accepted, blessed, glory, fire, ban, clock)', scene_cell(), (1, 1, 1, 1, 6, 1, 1, 1, 1, 7)),
+ # ---- THE WRAP (W3, 2026-09-07) — the run's acts write the SPEC'S effects by call on the same world ----
+ ('THE WRAP — (Aaron atoned by the calf, the people by the goat, the calf\'s fat smoked, its flesh burned, the burner\'s garments, the goat\'s '
+  'fat, the ram wholly, the people\'s olah wholly, the palm\'s memorial, the presentation, two dues to the priests, the breast and thigh waved)',
+  cell(SCENE_WRAP, I, 'the eighth day\'s daemon consumes the run\'s six acts and writes what the SPEC says each act did — the sin-offering, '
+       'offering, meal-offering and Tzav engines by call: the calf\'s blood atones (Onkelos 9:15), its fat smokes, its flesh burns at the '
+       'ash-pour and the burner\'s garments are defiled; the goat like the first; the rams as prescribed; the palm\'s memorial and its '
+       'presentation; the breast and thigh to the priests after the waving (order, calf and people WRAPPED here, W3)',
+       ['atoned_forgiven', 'smoked_to_the_lord', 'burned_outside_camp', 'defiles_garments', 'azkarah_to_fire', 'presented', 'due_to_priest', 'waved']),
+  (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1)),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------

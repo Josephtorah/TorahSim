@@ -1160,8 +1160,8 @@ def law_investiture(event, world):
     if k == 'bull_offered': return [E('altar_purged', 'the-altar'), E('burned_outside_camp', 'the-bull')]
     if k == 'ram_olah': return [E('accepted', 'the-ram-1')]
     if k == 'ram_miluim': return [E('blood_on_extremities', 'aaron'), E('blood_on_extremities', 'the-sons'), E('waved', 'the-breast'), E('due_to_priest', 'moses', 'aaron')]
-    if k == 'garments_sprinkled': return [E('consecrated', 'the-garments'), E('invested_office', 'aaron'), E('invested_office', 'the-sons')]
-    if k == 'meal': return [E('burn_remainder', 'the-remainder')]
+    if k == 'milluim_blood_sprinkled': return [E('consecrated', 'the-garments'), E('invested_office', 'aaron'), E('invested_office', 'the-sons')]   # W3: unified with the library's name (was garments_sprinkled)
+    if k == 'milluim_leftover': return [E('burn_remainder', 'the-remainder')]                                                                    # W3: unified with the library's name (was meal)
     if k == 'confined': return [E('confined_seven_days', 'aaron'), E('confined_seven_days', 'the-sons')]
     if k == 'did_all': return [E('inspected_as_commanded', 'the-rite')]
     return []
@@ -1203,8 +1203,8 @@ def scene():
         w.laws = [law_investiture]
         tape = [('washed', 'aaron', 'Lev 8:6'), ('dressed', 'aaron', 'Lev 8:7-9'), ('vessels_anointed', 'moses', 'Lev 8:10-11'), ('head_anointed', 'aaron', 'Lev 8:12'),
                 ('sons_dressed', 'the-sons', 'Lev 8:13'), ('hands_laid', 'the-bull', 'Lev 8:14'), ('bull_offered', 'the-bull', 'Lev 8:14-17'), ('hands_laid', 'the-ram-1', 'Lev 8:18'),
-                ('ram_olah', 'the-ram-1', 'Lev 8:18-21'), ('hands_laid', 'the-ram-2', 'Lev 8:22'), ('ram_miluim', 'the-ram-2', 'Lev 8:22-29'), ('garments_sprinkled', 'aaron', 'Lev 8:30'),
-                ('meal', 'aaron', 'Lev 8:31-32'), ('confined', 'aaron', 'Lev 8:33-35'), ('did_all', 'aaron', 'Lev 8:36')]
+                ('ram_olah', 'the-ram-1', 'Lev 8:18-21'), ('hands_laid', 'the-ram-2', 'Lev 8:22'), ('ram_miluim', 'the-ram-2', 'Lev 8:22-29'), ('milluim_blood_sprinkled', 'aaron', 'Lev 8:30'),
+                ('milluim_leftover', 'aaron', 'Lev 8:31-32'), ('confined', 'aaron', 'Lev 8:33-35'), ('did_all', 'aaron', 'Lev 8:36')]
         for k, s, src in tape:
             w.submit({'kind': k, 'subject': s, 'case_source': src, 'law': '14'})
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])

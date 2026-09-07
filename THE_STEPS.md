@@ -1800,6 +1800,68 @@ sitting's one red was the gate's own: its kind regex read `pk ==` as `k ==` and
 fired three ways on a kind that did not exist; a word boundary fixed it and the
 five fire-probes still fire. Record: World/step9/REPORT_WRAP_W2.md. Next: W3
 THE OFFERING ENGINE.
+W3 THE OFFERING ENGINE (2026-09-07, the first sitting after compaction #76, the
+owner: "Next go"): the largest wrap on the worklist — 61 functions in seven
+runners — by the same rhythm: 28 case-form types registered first by script
+(the registry 174 types, 341 runs verified, the case form 98; the omer's second
+seat at Lev 2:14 on the calendar's type), six daemons declared before their code
+(the gate failed 71 ways, then passed), every value a call into the runner's own
+cells, every scene printed before typed (two of seven probes disagreed with the
+predictions and both were the scene's own shape — the loaves counted on the
+wrong entity, the eighth day's spec head carrying a colon — corrected before a
+literal), 146 wrapped and 102 owed, the sweep 33 of 33 at 3610 cells. Three
+shapes settled: ONE TYPE UNDER TWO LAW LAYERS (the meal offering brought is
+consumed by the meal-offering daemon for Lev 2 and by the Tzav daemon for
+6:7-11; the doubtful sin by the Lev 5 daemon and the sin-offering daemon — one
+act, one name, two daemons, the same field contract); THE RUN'S DAEMON WRITES
+THE SPEC'S EFFECTS BY CALL (the eighth day's daemon, keyed by each act's spec,
+now writes the calf's atonement, its fat smoked, its flesh burned with the
+burner's garments defiled, the rams as prescribed, the palm's memorial, the
+breast and thigh — the run's acts, the spec's effects: M-22 in the simulator);
+and THE LIBRARY REGISTERED BESIDE twice more (the installation daemon on the
+Tzav scene with its seven-day release firing, the deposit-oath daemon on the
+Lev 5 scene). The two seeding aliases unified on the library's names (open
+aliases 9 → 5). Twenty-two timers set and fired; twenty SILENCES counted — a
+daemon's empty return on a recorded row is the law's own exemption (the hunter's
+deer fat, the partners' meal offering, the sons of Eli's demand before the
+smoking, the five pure kinds...). Found and declared, not fixed: THE PARSER'S
+VALUE/EFFECT HOMOGRAPH — three functions that write nothing stood on the wrap
+worklist because a string in their source is spelled like an effect (the tier
+name 'anointed', the wafers 'anointed' with oil); declared NONE with the why,
+the parser's looseness an OPEN gate item (its own sitting). Record:
+World/step9/REPORT_WRAP_W3.md. Next: W4 THE PURITY CLOCKS.
+W4 THE PURITY CLOCKS (2026-09-07, the first sitting after compaction #77, the
+owner: "Go"): Leviticus 12 through 16 — the birthing mother, the afflictions,
+the leper's cleansing, the discharges, the Day — by the same rhythm: 20
+case-form types registered first by script (the registry 194 types, 420 runs
+verified, the case form 118; the Day's statute at 16:29-34 the SECOND SEAT of
+the calendar's Day-of-Atonement type, consumed now by two daemons across two
+runners), four daemons declared before their code (the gate failed 22 ways,
+then passed on the code's first run with no fire after it), every value a call
+into the runner's own cells, every scene printed before typed — and all four
+probes matched the values predicted from the Mishnah rows and written down
+first; 164 wrapped and 84 owed, the sweep 33/33 (3614 cells — four scene rows, one per runner). The headline was named
+before the sitting and the census confirmed it: the impurity clocks are TIMERS
+per person — fifty-seven set on four tapes, fifty-five fired on their days, and
+TWO CANCELLED, the first cancel a compiled daemon has issued: the man with a
+discharge counts seven from the day his flow stops (15:13), a discharge inside
+the count voids all before it (Mishnah Zavim 1:2), and on the tape the day-five
+discharge is a text event the daemon reads and answers by cutting the pending
+count and the eighth day's pair, the new stop setting both again to fire on
+days 13 and 14 — the fence kept: the daemon invented nothing, it recomputed.
+The affliction machine's "two weeks that are thirteen days" and "three that are
+nineteen" (Mishnah Negaim 3:3, 3:8) run as timers on the shared seventh day —
+thirty-six on one tape, the ninth of the Sifra's ten houses demolished on day
+19; the mother's clocks fire on days 8 and 41, 15 and 81, and for the unknown
+sex 15 and 41 with no number typed (the union read back out of the runner's own
+computed cell); the leper's week outside his tent fires on day 7; the routing
+table's four atonements land ON the Day when the clock reaches the tenth. Two
+shapes settled: a main()-style runner's nested machine is hoisted to module
+level so its daemon can reach it (the verdicts and the guard count unchanged),
+and the Day's service order is the tape itself — eighteen submits keyed by the
+verse reference, seven writing the spec's effects by call, eleven the law's own
+silences. Record: World/step9/REPORT_WRAP_W4.md. Next: W5 HOLINESS, SANCTIONS,
+THE LAND.
 The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law

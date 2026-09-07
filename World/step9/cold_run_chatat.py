@@ -58,7 +58,7 @@ sys.path.insert(0, HERE)
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
-assert GUARDED == 194, ('the guard counted %d expectations, the tripwire holds 194' % GUARDED)
+assert GUARDED == 195, ('the guard counted %d expectations, the tripwire holds 195' % GUARDED)
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -905,6 +905,217 @@ def curriculum():
                 '= the halachot; "by the hand of Moses" = Scripture — and "could even the TRANSLATION?" bounded '
                 'on the page', [FX.NONE])
 
+# ---- THE WRAP (W3 THE OFFERING ENGINE, D9-iii, 2026-09-07) — the daemon and the scene --------------
+# Nine case heads: the soul sinning unwittingly (4:2 with its tiers 4:3, 4:22, 4:27, 4:32 — the domain, the
+# rank, the two blood routes, the fat by the chapter's pointers, the carcass, the atonement), the court's error
+# and the anointed's ruling (4:13-14, 4:3), the individual who acted on the ruling (4:27 "in doing IT"), the sin
+# made known (4:23, 4:28), the doubtful sin (5:17-18 — the pieces and the resolution; law_vayikra5's seat too),
+# the sin offering designated (4:28, 4:23), the priest's table (10:12-17), the inquiry (10:16-19), the wine ban
+# (10:9-10). The daemon writes the ledger and never emits an event.
+import world_engine as WE
+def law_chatat(event, world):
+    """Lev 4 + 10:8-20 (cold_run_chatat.py — the domain, the rank tree, the two routes, the court, the doubt, the table, the inquiry, the wine)."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'sinned_unwittingly':
+        d = domain({'intent': event['intent'], 'person': event.get('person'), 'commandment_kind': event.get('commandment_kind'), 'act': event.get('act', True),
+                    'law_source': event.get('law_source'), 'age': event.get('age'), 'state': event.get('state')})
+        if 'exempt' in d['fx']:
+            return [E_('exempt', event['sinner'], value=d['v'], law='F1 [INK 4:2 — the domain: %s]' % d['why'][:80])]
+        if 'karet_cut_off' in d['fx']:
+            return [E_('karet_cut_off', event['sinner'], cp='HEAVEN', value=d['v'], law='F1 [Num 15:30 "with a high hand... cut off"; 4:2 "unwittingly" excludes him]')]
+        if 'suspends' in d['fx']:
+            return [E_('suspends', event['sinner'], value=d['v'], law='F1 [Lev 5:17 — the suspended ram, CALLED cold_run_vayikra5.sacrilege(doubt)]')]
+        tier, sp = event['tier'], event.get('species')
+        out = [E_('accepted', event['sinner'], cp='HEAVEN', value=rank(tier, event.get('sin', 'general'), sp)['v'], law='F2 [INK 4:3, 4:14, 4:23, 4:28, 4:32 — the rank by tier]'),
+               E_('smoked_to_the_lord', 'the-sin-offering', value=fat(tier, sp)['v'], law='F2 [INK 4:10, 4:26, 4:31, 4:35 — the fat by the chapter\'s own pointers into Lev 3, by call]')]
+        if tier in ('anointed', 'congregation'):
+            out += [E_('burned_outside_camp', 'the-sin-offering', value=carcass(tier)['v'], law='F2 [INK 4:12, 4:21 "outside the camp to the ash-pour"; Lev 6:23]'),
+                    E_('defiles_garments', 'the-burner', value=burn_site('as_commanded')['v'], law='F2 [Lev 16:28 "he that burns them shall wash his clothes"; Yoma 68a]')]
+        else:
+            out += [E_('due_to_priest', 'the-priests', cp=event['sinner'], value=carcass(tier)['v'], law='F2 [Lev 6:19, 6:22 — the male priests within the hangings, by call to the offering engine]'),
+                    E_('eating_window', 'the-sin-offering', due=event['day'] + 1, value=OUTER['window']['v'], law='F2 [Mishnah Zevachim 5:3 — a day and a night to midnight: the TIMER]')]
+        n_off = aggregate(event['lapses'])['v'] if event.get('lapses') else 1
+        out.append(E_('atoned_forgiven', event['sinner'], cp='HEAVEN', amount=n_off, value=atonement(tier)['v'], law='F2 [INK 4:20, 4:26, 4:31, 4:35 "and the priest shall atone for him and he shall be forgiven"; the count by 4:2 "of one of them": %d]' % n_off))
+        return out
+    if k == 'court_ruled_in_error':
+        if event['body'] == 'anointed':
+            a = anointed_ruling({'ruling_intent': event['ruling_intent'], 'act_intent': event['act_intent'], 'with_public': event.get('with_public')})
+            if 'exempt' in a['fx']:
+                return [E_('exempt', 'the-anointed-priest', value=a['v'], law='F3 [Sifra Chovah Chapter 2 1 — a slip without a ruling, or a ruling acted on deliberately]')]
+            return [E_('atoned_forgiven', 'the-anointed-priest', cp='HEAVEN', value=a['v'], law='F3 [INK 4:3 "to the guilt of the people" — likened to the congregation]')]
+        if event['body'] == 'tribes':
+            return [E_('accepted', 'the-tribes', cp='HEAVEN', value=tribes(event['arm'])['v'], law='F3 [Sifra Chovah Section 4 13-17 — the arithmetic by arm]')]
+        c = court({'ruling': event.get('ruling', 'partial'), 'composition': event.get('composition', 'all_fit'), 'court_intent': event.get('court_intent', 'unwitting'),
+                   'people_intent': event.get('people_intent', 'unwitting'), 'acted': event.get('acted', 'majority'), 'which': event.get('which', 'great'),
+                   'matter': event.get('matter', 'karet_class'), 'located': event.get('located', True), 'sin': event.get('sin', 'general')})
+        if 'exempt' in c['fx']:
+            return [E_('exempt', 'the-court', value=c['v'], law='F3 [INK 4:13 — %s]' % c['why'][:80])]
+        if 'accepted' in c['fx']:
+            return [E_('accepted', 'the-court', cp='HEAVEN', value=c['v'], law='F3 [Num 15:24 — the bull and the goat]')]
+        return [E_('atoned_forgiven', 'the-court' if c['v'] == 'bull' else 'the-individuals', cp='HEAVEN', value=c['v'], law='F3 [INK 4:14 "the assembly shall offer a bull" / 4:27 each his own]')]
+    if k == 'acted_on_ruling':
+        r = reliance({'knew_error': event.get('knew_error'), 'fit_to_rule': event.get('fit_to_rule'), 'court_retracted': event.get('court_retracted'), 'where': event.get('where')})
+        out = []
+        if 'exempt' in r['fx']:
+            out.append(E_('exempt', event['relier'], value=r['v'], law='F3 [Sifra Chovah Section 7 2 — he relied on the court: its bull covers him]'))
+        if 'atoned_forgiven' in r['fx']:
+            out.append(E_('atoned_forgiven', event['relier'], cp='HEAVEN', value=r['v'], law='F3 [INK 4:27 "in doing IT" — his own act]'))
+        if 'suspends' in r['fx']:
+            out.append(E_('suspends', event['relier'], value=r['v'], law='F3 [Sifra Chovah Section 7 3 — R. Eliezer: the doubt, the suspended ram]'))
+        return out
+    if k == 'sin_became_known':
+        if event.get('after_yom_kippur'):
+            return [E_('atoned_forgiven', event['sinner'], cp='HEAVEN', value=day_of_atonement('chatat_owed')['v'], law='F6 [INK 4:4 "he shall bring" — even after the Day; Keritot 26a:19]')]
+        if event.get('which'):
+            ws = which_sin(event['which'])
+            if 'exempt' in ws['fx'] and 'atoned_forgiven' not in ws['fx']:
+                return [E_('exempt', event['sinner'], value=ws['v'], law='F5 [INK 4:23 "wherein he sinned IN IT"]')]
+            return [E_('atoned_forgiven', event['sinner'], cp='HEAVEN', value=ws['v'], law='F5 [Sifra Chovah Chapter 7]')]
+        wt = witnesses({'witnesses': event['witnesses']})
+        out = []
+        if 'atoned_forgiven' in wt['fx']:
+            out.append(E_('atoned_forgiven', event['sinner'], cp='HEAVEN', value=wt['v'], law='F5 [INK 4:23 "made KNOWN to him"; Sifra Chovah Chapter 7 2]'))
+        if 'suspends' in wt['fx']:
+            out.append(E_('suspends', event['sinner'], value=wt['v'], law='F5 [the doubt — CALLED cold_run_vayikra5.sacrilege(doubt)]'))
+        if 'exempt' in wt['fx']:
+            out.append(E_('exempt', event['sinner'], value=wt['v'], law='F5 [Sifra Chovah Chapter 7 1, 7 3]'))
+        return out
+    if k == 'doubtful_sin':
+        if event.get('stage'):
+            r = resolution({'kind': event['doubt_object'], 'stage': event['stage']})
+            out = []
+            if 'burn_remainder' in r['fx']:
+                out.append(E_('burn_remainder', 'the-suspended-ram', value=r['v'], law='F6 [Sifra Chovah Chapter 21 3 at Lev 5:19 — resolved after the slaughter: the flesh burned]'))
+            if 'due_to_priest' in r['fx']:
+                out.append(E_('due_to_priest', 'the-priests', cp=event['sinner'], value=r['v'], law='F6 [Sifra Chovah Chapter 21 3 — resolved after the sprinkling: the flesh eaten]'))
+            return out
+        if event.get('on_the_day'):
+            return [E_('exempt', event['sinner'], value=day_of_atonement('talui_owed')['v'], law='F6 [Lev 16:30 "from ALL your sins" — the Day clears the doubt; Keritot 26a:19]')]
+        p = pieces(event['pieces'][0], event['pieces'][1], event.get('ate', 'one_unknown'), event.get('arm'))
+        out = []
+        if 'atoned_forgiven' in p['fx']:
+            out.append(E_('atoned_forgiven', event['sinner'], cp='HEAVEN', value=p['v'], law='F6 [INK 4:2 — the certain names: a sin offering each (Sifra Chovah Section 5 4)]'))
+        if 'suspends' in p['fx']:
+            out.append(E_('suspends', event['sinner'], value=p['v'], law='F6 [INK 5:17 "and knew it not" — the doubtful name: the suspended ram, CALLED vayikra5]'))
+        if 'accepted' in p['fx']:
+            out.append(E_('accepted', event['sinner'], cp='HEAVEN', value=p['v'], law='F6 [Lev 5:15 — the consecrated piece: the certain ram, CALLED vayikra5.sacrilege]'))
+        if 'exempt' in p['fx']:
+            out.append(E_('exempt', event['sinner'], value=p['v'], law='F6 [Mishnah Keritot 5:4 — two pieces of the profane: exempt]'))
+        return out
+    if k == 'sin_offering_designated':
+        if event.get('source') == 'dead_father' or event.get('for_sin') == 'other':
+            o = ownership('dead_father' if event.get('source') == 'dead_father' else 'sin_to_sin')
+            return [E_('disqualified', event['owner'], value=o['v'], law='F6 [INK 4:28 "HIS offering on HIS sin"]')]
+        if event.get('means_changed') or event.get('blemished'):
+            c = conversion(event.get('means_changed') or event.get('blemished'))
+            if 'disqualified' in c['fx']:
+                return [E_('disqualified', event['owner'], value=c['v'], law='F6 [Lev 27:11 — a bird has no redemption]')]
+            return [E_('consecrated', event['owner'], value=c['v'], law='F6 [the rung by his means — CALLED cold_run_vayikra5\'s ladder / Lev 27:11-13]')]
+        return [E_('consecrated', event['owner'], value='his_offering_for_his_sin', law='F6 [INK 4:28 "he shall bring his offering... for his sin which he sinned"]')]
+    if k == 'priest_ate_holy':
+        if event['who'] != 'priest':
+            s = share(event['who'])
+            if 'barred_from_it' in s['fx']:
+                return [E_('barred_from_it', event['eater'], value=s['v'], law='F8 [Lev 10:19 the mourner\'s day; Lev 22:6-7 the immersed]')]
+        if event['what'] == 'minchah':
+            if event.get('daughters'):
+                return []                                        # 10:13 "your due and your SONS' due" — the daughters outside the meal offering's share: the silence
+            return [E_('due_to_priest', event['eater'], value=table('minchah_remainder')['v'], law='F9 [INK 10:12 "eat it unleavened beside the altar"]'),
+                    E_('most_holy', 'the-meal-offering', law='F9 [INK 10:12 "for it is most holy"]')]
+        if event['what'] == 'breast_thigh':
+            return [E_('due_to_priest', event['eater'], value=table('daughters')['v'] if event.get('daughters') else table('breast_thigh_due')['v'], law='F9 [INK 10:14 "you and your sons and your daughters"; 10:15 "as the LORD commanded" — CALLED tzav.dues_machine]')]
+        return [E_('eaten_to_atone', event['eater'], cp='HEAVEN', value=inquiry('eating_atones')['v'], law='F10 [INK 10:17 "to bear the iniquity of the congregation, to atone for them" — the eating IS the atonement]')]
+    if k == 'sin_offering_inquired':
+        if event['eater_onen']:
+            return [E_('barred_from_it', 'aaron', value=inquiry('high_priest_onen')['v'], law='F10 [INK 10:19 "had I eaten the sin offering today" — offers, does not eat]')]
+        if event['blood_inside']:
+            return [E_('burned_outside_camp', event['goat'], value=inquiry('blood_inside')['v'], law='F10 [INK 10:18 in its negative; Lev 6:23 — CALLED offerings(inner_chatat_burned)]')]
+        return [E_('eaten_to_atone', 'the-priests', cp='HEAVEN', value=inquiry('blood_not_inside')['v'], law='F10 [INK 10:18 "its blood was not brought inside — you should have eaten it in the holy place"]'),
+                E_('due_to_priest', 'the-priests', value=inquiry('which_goat_burned')['v'], law='F10 [Sifra Shemini Chapter 2 1-2 — the New Moon\'s goat the burned one; the eighth day\'s eaten]')]
+    if k == 'wine_drunk_before_service':
+        wv = wine({'who': event['who'], 'drink': event['drink'], 'amount': event['amount'], 'diluted': event.get('diluted'), 'interrupted': event.get('interrupted'), 'act': event['act']})
+        if 'death_by_heaven' in wv['fx']:
+            return [E_('death_by_heaven', event['who_id'], value=wv['v'], law='F11 [INK 10:9 "that you die not" — the quarter-log the data channel]'),
+                    E_('service_profaned', event['who_id'], value=wine_service_validity()['v'], law='F11 [INK 10:10 "to distinguish"; Zevachim 17b:7]')]
+        if 'teaching_barred' in wv['fx']:
+            return [E_('teaching_barred', event['who_id'], value=wv['v'], law='F11 [INK 10:11 "and to teach"; Keritot 13b]')]
+        if 'exempt' in wv['fx']:
+            return [E_('exempt', event['who_id'], value=wv['v'], law='F11 [Sifra Shemini Section 1 2 — R. Eliezer: diluted or interrupted]')]
+        return []                                                # the Israelite, the profaned priest, less than the measure, no entry: outside the ban's write
+    return []
+
+def scene():
+    """THE SCENE — Lev 4's and Lev 10's recorded rows replayed on the world engine (clock unit: days)."""
+    with contextlib.redirect_stdout(io.StringIO()):
+        w = WE.World(era='the sin offering: Keritot 1-6, Horayot 1-3, Zevachim 10-12, Sifra Chovah and Shemini on the engine (clock unit: days)')
+        w.laws = [law_chatat]
+        w.advance(1)
+        base = {'intent': 'unwitting', 'day': 1}
+        w.submit({'kind': 'sinned_unwittingly', **base, 'subject': 'the-commoner', 'sinner': 'the-commoner', 'tier': 'commoner', 'species': 'goat', 'case_source': 'Mishnah Horayot 2:6; Zevachim 5:3 — the individual\'s she-goat: outer horns, eaten within the hangings'})
+        w.submit({'kind': 'sinned_unwittingly', **base, 'subject': 'the-anointed', 'sinner': 'the-anointed', 'tier': 'anointed', 'case_source': 'Mishnah Horayot 2:6; Zevachim 5:2 — the anointed\'s bull: inside, burned at the ash-pour'})
+        w.submit({'kind': 'sinned_unwittingly', **base, 'subject': 'the-deliberate', 'sinner': 'the-deliberate', 'tier': 'commoner', 'intent': 'intentional', 'case_source': 'Mishnah Keritot 1:2 — intentional: karet, no offering'})
+        w.submit({'kind': 'sinned_unwittingly', **base, 'subject': 'the-doubter', 'sinner': 'the-doubter', 'tier': 'commoner', 'intent': 'unknown', 'case_source': 'Mishnah Keritot 1:2 — unknown: the suspended ram'})
+        w.submit({'kind': 'sinned_unwittingly', **base, 'subject': 'the-gentile', 'sinner': 'the-gentile', 'tier': 'commoner', 'person': 'gentile', 'case_source': 'Sifra Chovah Section 1 1 — gentiles bring none'})
+        w.submit({'kind': 'sinned_unwittingly', **base, 'subject': 'the-sleeper', 'sinner': 'the-sleeper', 'tier': 'commoner', 'state': 'asleep', 'case_source': 'Mishnah Keritot 2:6 — the sleeper exempt'})
+        w.submit({'kind': 'sinned_unwittingly', **base, 'subject': 'the-twice-lapsed', 'sinner': 'the-twice-lapsed', 'tier': 'commoner', 'species': 'lamb', 'lapses': [['fat'], ['fat']], 'case_source': 'Sifra Chovah Section 5 4-5 — one kind in two lapses: two offerings'})
+        w.submit({'kind': 'court_ruled_in_error', 'subject': 'the-court', 'body': 'court', 'case_source': 'Mishnah Horayot 1:1; Lev 4:14 — the court erred in part, the majority acted: the bull'})
+        w.submit({'kind': 'court_ruled_in_error', 'subject': 'the-court', 'body': 'court', 'ruling': 'whole', 'case_source': 'Mishnah Horayot 1:3 — to uproot the whole body: exempt'})
+        w.submit({'kind': 'court_ruled_in_error', 'subject': 'the-court', 'body': 'court', 'sin': 'idolatry', 'case_source': 'Mishnah Horayot 1:5; Num 15:24 — idolatry: the bull and the goat'})
+        w.submit({'kind': 'court_ruled_in_error', 'subject': 'the-tribes', 'body': 'tribes', 'arm': 'R._Shimon', 'case_source': 'Mishnah Horayot 1:5 — R. Shimon: thirteen bulls'})
+        w.submit({'kind': 'court_ruled_in_error', 'subject': 'the-anointed-priest', 'body': 'anointed', 'ruling_intent': 'unwitting', 'act_intent': 'unwitting', 'case_source': 'Mishnah Horayot 2:1 — the anointed ruled and acted unwittingly: the bull'})
+        w.submit({'kind': 'court_ruled_in_error', 'subject': 'the-anointed-priest', 'body': 'anointed', 'ruling_intent': 'unwitting', 'act_intent': 'intentional', 'case_source': 'Mishnah Horayot 2:1 — acted deliberately on his ruling: exempt'})
+        w.submit({'kind': 'acted_on_ruling', 'subject': 'the-relier', 'relier': 'the-relier', 'case_source': 'Mishnah Horayot 1:1 — relied on the court: covered by its bull'})
+        w.submit({'kind': 'acted_on_ruling', 'subject': 'the-student', 'relier': 'the-student', 'fit_to_rule': True, 'case_source': 'Mishnah Horayot 1:1 — a student fit to rule: liable'})
+        w.submit({'kind': 'acted_on_ruling', 'subject': 'the-overseas', 'relier': 'the-overseas', 'court_retracted': True, 'where': 'overseas', 'case_source': 'Mishnah Horayot 1:2 — went overseas: exempt (ben Azzai)'})
+        w.submit({'kind': 'acted_on_ruling', 'subject': 'the-retraction-relier', 'relier': 'the-retraction-relier', 'court_retracted': True, 'case_source': 'Sifra Chovah Section 7 3 — R. Shimon exempt, R. Eliezer the doubt'})
+        w.submit({'kind': 'sin_became_known', 'subject': 'the-informed', 'sinner': 'the-informed', 'witnesses': 'two_say_ate_no_denial', 'case_source': 'Mishnah Keritot 3:1 — two say he ate, he does not deny: liable'})
+        w.submit({'kind': 'sin_became_known', 'subject': 'the-one-vs-one', 'sinner': 'the-one-vs-one', 'witnesses': 'one_vs_one', 'case_source': 'Mishnah Keritot 3:1 — one against one: the suspended ram'})
+        w.submit({'kind': 'sin_became_known', 'subject': 'the-self-denier', 'sinner': 'the-self-denier', 'witnesses': 'one_vs_his_denial', 'case_source': 'Mishnah Keritot 3:1 — one against his denial: exempt'})
+        w.submit({'kind': 'sin_became_known', 'subject': 'the-occupied', 'sinner': 'the-occupied', 'witnesses': None, 'which': 'mitasek', 'case_source': 'Mishnah Keritot 4:3 — the occupied one: exempt ("in it")'})
+        w.submit({'kind': 'sin_became_known', 'subject': 'the-after-the-day', 'sinner': 'the-after-the-day', 'witnesses': None, 'after_yom_kippur': True, 'case_source': 'Mishnah Keritot 6:4; Keritot 26a — the known sin outlives the Day'})
+        w.submit({'kind': 'doubtful_sin', 'subject': 'the-piece-eater', 'sinner': 'the-piece-eater', 'pieces': ['fat', 'hullin'], 'case_source': 'Mishnah Keritot 4:1 — fat and profane fat, one eaten: the suspended ram'})
+        w.submit({'kind': 'doubtful_sin', 'subject': 'the-both-fat', 'sinner': 'the-both-fat', 'pieces': ['fat', 'fat'], 'case_source': 'Mishnah Keritot 5:4 — two pieces of fat: the sin offering is certain'})
+        w.submit({'kind': 'doubtful_sin', 'subject': 'the-profane-eater', 'sinner': 'the-profane-eater', 'pieces': ['hullin', 'hullin'], 'case_source': 'Mishnah Keritot 5:4 — two profane pieces: exempt'})
+        w.submit({'kind': 'doubtful_sin', 'subject': 'the-consecrated-fat', 'sinner': 'the-consecrated-fat', 'pieces': ['kodesh_fat', 'notar_fat'], 'case_source': 'Mishnah Keritot 5:5-6 — consecrated fat and leftover fat: certain, doubtful, and the sacrilege doubt'})
+        w.submit({'kind': 'doubtful_sin', 'subject': 'the-resolved-after-slaughter', 'sinner': 'the-resolved-after-slaughter', 'pieces': ['fat', 'hullin'], 'doubt_object': 'talui', 'stage': 'after_slaughter', 'case_source': 'Sifra Chovah Chapter 21 3 — resolved after the slaughter: the flesh burned'})
+        w.submit({'kind': 'doubtful_sin', 'subject': 'the-resolved-after-sprinkling', 'sinner': 'the-resolved-after-sprinkling', 'pieces': ['fat', 'hullin'], 'doubt_object': 'talui', 'stage': 'after_zerikah', 'case_source': 'Sifra Chovah Chapter 21 3 — resolved after the sprinkling: the flesh eaten'})
+        w.submit({'kind': 'doubtful_sin', 'subject': 'the-day-doubter', 'sinner': 'the-day-doubter', 'pieces': ['fat', 'hullin'], 'on_the_day': True, 'case_source': 'Mishnah Keritot 6:4 — the Day of Atonement clears the doubt'})
+        w.submit({'kind': 'sin_offering_designated', 'subject': 'the-heir', 'owner': 'the-heir', 'source': 'dead_father', 'case_source': 'Mishnah Keritot 6:7 — his dead father\'s beast: no discharge'})
+        w.submit({'kind': 'sin_offering_designated', 'subject': 'the-poorer', 'owner': 'the-poorer', 'means_changed': 'became_poor', 'case_source': 'Mishnah Keritot 6:8 — became poor: the birds (CALLED vayikra5)'})
+        w.submit({'kind': 'sin_offering_designated', 'subject': 'the-blemished-bird-owner', 'owner': 'the-blemished-bird-owner', 'blemished': 'blemished_bird', 'case_source': 'Mishnah Keritot 6:8 — a bird has no redemption'})
+        w.submit({'kind': 'sin_offering_designated', 'subject': 'the-designator', 'owner': 'the-designator', 'case_source': 'Lev 4:28 — his offering for his sin'})
+        w.submit({'kind': 'priest_ate_holy', 'subject': 'the-priest-eater', 'eater': 'the-priest-eater', 'who': 'priest', 'what': 'minchah', 'case_source': 'Lev 10:12-13 — the meal offering\'s remainder, unleavened, beside the altar'})
+        w.submit({'kind': 'priest_ate_holy', 'subject': 'the-daughter', 'eater': 'the-daughter', 'who': 'priest', 'what': 'breast_thigh', 'daughters': True, 'case_source': 'Lev 10:14 — the daughters in the breast and thigh'})
+        w.submit({'kind': 'priest_ate_holy', 'subject': 'the-daughter', 'eater': 'the-daughter', 'who': 'priest', 'what': 'minchah', 'daughters': True, 'case_source': 'Lev 10:13 — the daughters outside the meal offering: the silence'})
+        w.submit({'kind': 'priest_ate_holy', 'subject': 'the-onen', 'eater': 'the-onen', 'who': 'onen', 'what': 'chatat', 'case_source': 'Mishnah Zevachim 12:1 — the acute mourner does not share'})
+        w.submit({'kind': 'priest_ate_holy', 'subject': 'the-tevul-yom', 'eater': 'the-tevul-yom', 'who': 'tevul_yom', 'what': 'chatat', 'case_source': 'Mishnah Zevachim 12:1 — the immersed-that-day: no share at evening'})
+        w.submit({'kind': 'priest_ate_holy', 'subject': 'the-eating-priest', 'eater': 'the-eating-priest', 'who': 'priest', 'what': 'chatat', 'case_source': 'Lev 10:17; Sifra Shemini Chapter 2 4 — the priests eat, the owners are atoned'})
+        w.submit({'kind': 'sin_offering_inquired', 'subject': 'the-eighth-days-goat', 'goat': 'the-eighth-days-goat', 'blood_inside': False, 'eater_onen': False, 'case_source': 'Lev 10:16-18; Sifra Shemini Chapter 2 1-2 — outer blood: to be eaten'})
+        w.submit({'kind': 'sin_offering_inquired', 'subject': 'the-inner-goat', 'goat': 'the-inner-goat', 'blood_inside': True, 'eater_onen': False, 'case_source': 'Lev 10:18 in its negative; Lev 6:23 — burned'})
+        w.submit({'kind': 'sin_offering_inquired', 'subject': 'aaron', 'goat': 'the-new-moon-goat', 'blood_inside': False, 'eater_onen': True, 'case_source': 'Lev 10:19; Mishnah Horayot 3:5 — the acute mourner offers, does not eat'})
+        w.submit({'kind': 'wine_drunk_before_service', 'subject': 'the-drunk-priest', 'who_id': 'the-drunk-priest', 'who': 'priest', 'drink': 'wine', 'amount': 'quarter_log', 'act': 'enter_tent', 'case_source': 'Mishnah Keritot 3:3 — a quarter-log and entered: liable'})
+        w.submit({'kind': 'wine_drunk_before_service', 'subject': 'the-diluted-drinker', 'who_id': 'the-diluted-drinker', 'who': 'priest', 'drink': 'wine', 'amount': 'quarter_log', 'diluted': True, 'act': 'enter_tent', 'case_source': 'Mishnah Keritot 3:3 — R. Eliezer: diluted, exempt'})
+        w.submit({'kind': 'wine_drunk_before_service', 'subject': 'the-drunk-teacher', 'who_id': 'the-drunk-teacher', 'who': 'priest', 'drink': 'wine', 'amount': 'quarter_log', 'act': 'teach', 'case_source': 'Keritot 13b — the drunk may not teach'})
+        w.submit({'kind': 'wine_drunk_before_service', 'subject': 'the-israelite', 'who_id': 'the-israelite', 'who': 'israelite', 'drink': 'wine', 'amount': 'quarter_log', 'act': 'rule', 'case_source': 'Sifra Shemini Section 1 6 — an Israelite ruling while drunk: no death (the silence)'})
+        w.advance(3)                                                     # the commoner's eating window closes: the timer FIRES
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    amt = lambda eid, eff: sum(e['amount'] or 0 for e in w.entity(eid).ledger if e['effect'] == eff)
+    return (n('the-commoner', 'accepted'), n('the-commoner', 'atoned_forgiven'), n('the-priests', 'due_to_priest'), n('the-sin-offering', 'eating_window'), n('the-sin-offering', 'smoked_to_the_lord'),
+            n('the-sin-offering', 'burned_outside_camp'), n('the-burner', 'defiles_garments'), n('the-deliberate', 'karet_cut_off'), n('the-doubter', 'suspends'), n('the-gentile', 'exempt'), n('the-sleeper', 'exempt'),
+            amt('the-twice-lapsed', 'atoned_forgiven'), n('the-court', 'atoned_forgiven'), n('the-court', 'exempt'), n('the-court', 'accepted'), n('the-tribes', 'accepted'),
+            n('the-anointed-priest', 'atoned_forgiven'), n('the-anointed-priest', 'exempt'), n('the-relier', 'exempt'), n('the-student', 'atoned_forgiven'), n('the-overseas', 'exempt'),
+            n('the-retraction-relier', 'exempt'), n('the-retraction-relier', 'suspends'), n('the-informed', 'atoned_forgiven'), n('the-one-vs-one', 'suspends'), n('the-self-denier', 'exempt'),
+            n('the-occupied', 'exempt'), n('the-after-the-day', 'atoned_forgiven'), n('the-piece-eater', 'suspends'), n('the-both-fat', 'atoned_forgiven'), n('the-profane-eater', 'exempt'),
+            n('the-consecrated-fat', 'atoned_forgiven'), n('the-consecrated-fat', 'suspends'), n('the-suspended-ram', 'burn_remainder'), n('the-day-doubter', 'exempt'),
+            n('the-heir', 'disqualified'), n('the-poorer', 'consecrated'), n('the-blemished-bird-owner', 'disqualified'), n('the-designator', 'consecrated'),
+            n('the-priest-eater', 'due_to_priest'), n('the-meal-offering', 'most_holy'), n('the-daughter', 'due_to_priest'), n('the-onen', 'barred_from_it'), n('the-tevul-yom', 'barred_from_it'), n('the-eating-priest', 'eaten_to_atone'),
+            n('the-priests', 'eaten_to_atone'), n('the-inner-goat', 'burned_outside_camp'), n('aaron', 'barred_from_it'),
+            n('the-drunk-priest', 'death_by_heaven'), n('the-drunk-priest', 'service_profaned'), n('the-diluted-drinker', 'exempt'), n('the-drunk-teacher', 'teaching_barred'), n('the-israelite', 'death_by_heaven'),
+            tset, fired, w.clock.year), w
+SCENE, _W = scene()
+
 # ---- (2) TEST DATA — the Mishnah rows, read whole from the shelf ------
 def load(t):
     d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
@@ -1142,6 +1353,21 @@ TESTS = [
  ('Lev 4:31 — the commoner\'s she-goat: the goat\'s, no tail', fat('commoner', species='goat'), 'goat_inventory_no_tail'),
  ('Lev 4:35 — the commoner\'s ewe "as the fat of the LAMB is removed": TAIL INCLUDED (Tamid 4:3)', fat('commoner', species='lamb'), 'lamb_inventory_tail_included'),
  ('Lev 10:15 "as the LORD commanded" — the breast and thigh by call into the Tzav engine', table('breast_thigh_due'), 'to_the_priests_after_smoking'),
+ # ---- THE WRAP (W3, 2026-09-07) — the sin offering on the world engine ----
+ ('THE SCENE — (the commoner accepted, atoned; four dues; two windows; three fats; the anointed\'s bull burned, the burner\'s garments; the '
+  'deliberate\'s karet, the doubter\'s ram, the gentile and the sleeper exempt; the twice-lapsed\'s TWO; the court\'s bull, its whole-body '
+  'exemption, its idolatry pair, R. Shimon\'s thirteen; the anointed\'s bull and his exemption; the relier, the student, the overseas, the '
+  'retraction\'s two arms; the informed, one against one, the self-denier, the occupied, after the Day; the pieces: the doubtful, the certain, '
+  'the profane, the consecrated pair\'s two; the ram burned after the slaughter, the Day\'s clearing; the heir, the poorer, the bird, the '
+  'designator; the priest\'s table, most holy, the daughter\'s breast and thigh, the mourner and the immersed barred, the eating that atones; '
+  'the eighth day\'s goat eaten, the inner goat burned, Aaron barred; the drunk priest\'s death and profaned service, the diluted exempt, the '
+  'teacher barred, the Israelite\'s silence; timers set, fired, the clock)',
+  cell(SCENE, I, 'THE SCENE on the world engine: Keritot 1-6, Horayot 1-3, Zevachim 10-12 and Sifra Chovah and Shemini replayed on law_chatat — '
+       'the domain, the rank, the two routes, the court, the reliance, the knowledge, the pieces and the resolution, the designation, the table, '
+       'the inquiry, the wine; every value the daemon\'s by call into this file\'s own cells', ['atoned_forgiven', 'exempt', 'karet_cut_off',
+       'suspends', 'accepted', 'smoked_to_the_lord', 'burned_outside_camp', 'defiles_garments', 'due_to_priest', 'eating_window', 'disqualified',
+       'consecrated', 'most_holy', 'barred_from_it', 'eaten_to_atone', 'burn_remainder', 'death_by_heaven', 'service_profaned', 'teaching_barred']),
+  (1, 1, 4, 2, 3, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 2, 2, 3)),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------
@@ -1167,6 +1393,8 @@ print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer
       % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n))
 ops = FX.summarize(used)
 print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
+print('SCENE: %r — the daemon\'s watch coverage:' % (SCENE,))
+_W.print_coverage()
 print('effects: every cell carries REGISTERED effects — six discovered in these spans\' own verbs: '
       'burned_outside_camp (DESTROY), defiles_garments (STATUS), eaten_to_atone, death_by_heaven (HEAVEN), '
       'service_profaned, teaching_barred (BLOCK) [effects law satisfied]')

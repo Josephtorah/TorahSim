@@ -74,8 +74,8 @@ daemons:
       bull_offered: [altar_purged, burned_outside_camp]
       ram_olah: [accepted]
       ram_miluim: [blood_on_extremities, waved, due_to_priest]
-      garments_sprinkled: [consecrated, invested_office]
-      meal: [burn_remainder]
+      milluim_blood_sprinkled: [consecrated, invested_office]   # W3: garments_sprinkled unified with the library's name (one act, one name)
+      milluim_leftover: [burn_remainder]                         # W3: meal unified with the library's name
       confined: [confined_seven_days]
       did_all: [inspected_as_commanded]
   law_pre_sinai:
@@ -108,7 +108,7 @@ daemons:
     file: cold_run_shemini_day.py
     wraps: shemini_day
     watches:
-      offering_done: [accepted]
+      offering_done: [accepted, atoned_forgiven, smoked_to_the_lord, burned_outside_camp, defiles_garments, azkarah_to_fire, presented, due_to_priest, waved]   # W3: the spec's effects by call, keyed by the act's spec
       blessing_lifted: [blessed_the_people]
       glory_seen: [glory_appeared]
       fire_descended: [fire_from_before_the_lord, high_places_banned]
@@ -255,6 +255,110 @@ daemons:
       two_loaves_brought: [accepted, appearance_owed, smoked_to_the_lord, most_holy, due_to_priest, waved]
       booths_dwelt: [dwells_in_booths, exempt]
       four_species_taken: [takes_four_species]
+  # ---- W3 THE OFFERING ENGINE (D9-iii, 2026-09-07): declared BEFORE the code, from the ink's case heads (Lev 1-7, 4, 5, 10, 11);
+  # the library's law_installation (the tzav scene) and law_deposit_oath (the vayikra5 scene) registered beside — the W1 shape;
+  # two types carry two law layers (meal_offering_brought, meal_offering_leavened: law_minchah's Lev 2 and law_tzav's Lev 6:7-11;
+  # doubtful_sin: law_vayikra5's 5:17 and law_chatat's pieces and resolution); omer_brought's SECOND SEAT (Lev 2:14) under law_minchah;
+  # shemini_day's order / calf / people wrapped by law_eighth_day, whose offering_done now writes the spec's effects by call
+  law_offerings:
+    file: cold_run_offerings.py
+    wraps: offerings (the dispatcher's grid, the fat inventory, the fat ban)
+    watches:
+      offering_slaughtered: [accepted, smoked_to_the_lord, due_to_priest, eating_window, burn_remainder]
+      fat_eaten: [barred_from_it, lashes, karet_cut_off]
+  law_minchah:
+    file: cold_run_minchah.py
+    wraps: minchah (Lev 2 and the bird of 1:14-17; oil_ops writes nothing — NONE below)
+    watches:
+      meal_offering_brought: [consecrated, not_accepted, disqualified, salted, presented, azkarah_to_fire, due_to_priest, most_holy]
+      fistful_scooped: [disqualified, accepted, not_accepted, azkarah_to_fire]
+      meal_offering_leavened: [accepted, barred_from_it, lashes]
+      omer_brought: [accepted, azkarah_to_fire, presented, due_to_priest]
+      bird_offering_brought: [disqualified, pinched, crop_cast_to_ash_place, salted, not_accepted, accepted]
+  law_tzav:
+    file: cold_run_tzav.py
+    wraps: tzav (the priests' law layer of Lev 6-7; installation stays the library's law_installation, registered beside on the scene)
+    watches:
+      altar_fire_tended: [perpetual_fire_duty, labor_barred]
+      holy_absorbed: [launder_blood_spot, break_earthen_vessel, scour_and_rinse, sanctified_by_contact]
+      perpetual_griddle_brought: [burn_remainder]
+      holy_flesh_eaten: [exempt, karet_cut_off, not_accepted, eating_window, burn_remainder, purge_deadline]
+      blood_eaten: [karet_cut_off]
+      priestly_due_claimed: [due_to_priest]
+      guilt_offering_brought: [disqualified, most_holy, accepted, smoked_to_the_lord, due_to_priest, eating_window, not_accepted]
+      meal_offering_brought: [presented, azkarah_to_fire, sanctified_by_contact, due_to_priest, most_holy]
+      meal_offering_leavened: [barred_from_it]
+  law_chatat:
+    file: cold_run_chatat.py
+    wraps: chatat (Lev 4 + 10:8-20; identity and sprinklings write nothing — NONE below)
+    watches:
+      sinned_unwittingly: [exempt, karet_cut_off, suspends, accepted, smoked_to_the_lord, burned_outside_camp, defiles_garments, due_to_priest, eating_window, atoned_forgiven]
+      court_ruled_in_error: [exempt, atoned_forgiven, accepted]
+      acted_on_ruling: [exempt, atoned_forgiven, suspends]
+      sin_became_known: [atoned_forgiven, exempt, suspends]
+      doubtful_sin: [burn_remainder, due_to_priest, exempt, atoned_forgiven, suspends, accepted]
+      sin_offering_designated: [disqualified, consecrated]
+      priest_ate_holy: [barred_from_it, due_to_priest, most_holy, eaten_to_atone]
+      sin_offering_inquired: [barred_from_it, burned_outside_camp, eaten_to_atone, due_to_priest]
+      wine_drunk_before_service: [death_by_heaven, service_profaned, teaching_barred, exempt]
+  law_vayikra5:
+    file: cold_run_vayikra5.py
+    wraps: vayikra5 (Lev 5:1-19; deposit_restitution stays the library's law_deposit_oath, registered beside on the scene)
+    watches:
+      witness_oath_heard: [exempt, confessed, atoned_forgiven]
+      impurity_hidden: [exempt, confessed, atoned_forgiven]
+      oath_uttered: [exempt, confessed, atoned_forgiven]
+      sacrilege_committed: [exempt, pays, adds_fifth, atoned_forgiven]
+      doubtful_sin: [atoned_forgiven, suspends, exempt]
+  law_shemini:
+    file: cold_run_shemini.py
+    wraps: shemini (Lev 11 — the classifier's forbidden kinds and the carcass status)
+    watches:
+      forbidden_kind_eaten: [lashes]
+      carcass_touched: [impure_until_evening]
+  # ---- W4 THE PURITY CLOCKS (D9-iii, 2026-09-07): declared BEFORE the code, from the ink's case heads (Lev 12, 13-14, 15, 16);
+  # the impurity clocks are TIMERS per person — the birthing mother's two clocks, the count of seven from the stop (a discharge inside
+  # it CANCELS the timer), the eighth day's pair, the confinement weeks on the shared seventh day, the leper's week outside his tent,
+  # the Day that atones; yom_kippur_kept's SECOND SEAT (Lev 16:29-34) under law_yoma beside law_moadim (one type, two law layers);
+  # the calendar's law_moadim registered beside on the yoma scene (the library shape); the Day's inner service keyed by the ink's
+  # own verse order (the run's daemon writes the spec's effects by call — the W3 shape)
+  law_clocks:
+    file: cold_run_clocks.py
+    wraps: clocks (Lev 12 + 15 — the birthing mother, the discharges, the propagation lattice, the menstruant, the zavah, the pairs)
+    watches:
+      woman_gave_birth: [niddah_seven, blood_of_purity, barred_from_holies, exempt]
+      purification_offering_brought: [accepted, atoned_forgiven, disqualified]
+      man_had_discharge: [impure_until_evening, bed_and_seat_defile, suspends]
+      discharge_ceased: [counts_seven_clean, immersed, pair_owed]
+      bird_pair_brought: [accepted, pair_owed, birds_die]
+      discharge_source_touched: [washes_and_bathes, impure_until_evening, break_earthen_vessel, immersed, bed_and_seat_defile]
+      seed_emitted: [immersed, impure_until_evening]
+      woman_menstruated: [niddah_seven]
+      lay_with_menstruant: [niddah_seven, bed_and_seat_defile, atoned_forgiven, suspends]
+      woman_had_flux: [bed_and_seat_defile, consecrated, death_by_heaven]
+  law_negaim:
+    file: cold_run_negaim.py
+    wraps: negaim (Lev 13 + 14:33-57 — the six tracks, the garment, the ten houses, the shut house's enterer)
+    watches:
+      skin_mark_seen: [confined_seven_days, released, isolated_outside_camp]
+      garment_mark_seen: [confined_seven_days, burned_in_fire, released]
+      house_mark_seen: [confined_seven_days, demolished, released]
+      shut_house_entered: [impure_until_evening, washes_and_bathes]
+  law_metzora:
+    file: cold_run_metzora.py
+    wraps: metzora (Lev 14:1-32 — the birds, the two shaves, the week, the eighth day rich and poor)
+    watches:
+      leper_cleansing_begun: [declared_pure, sprinkled_seven, sent_over_the_field, birds_die, barred_from_it, shaved_whole, washes_and_bathes, immersed, outside_his_tent]
+      leper_shaved_seventh: [shaved_whole, declared_pure, barred_from_holies]
+      leper_offering_brought: [accepted, waved, oil_on_the_blood, sprinkled_seven, atoned_forgiven, most_holy, due_to_priest, presented, smoked_to_the_lord, declared_pure, barred_from_holies, disqualified, pair_owed]
+  law_yoma:
+    file: cold_run_yoma.py
+    wraps: yoma (Lev 16 — the atonement routing table, the fellow gate, the dispatched goat, the service order)
+    watches:
+      sanctuary_defiled: [atoned_forgiven, suspends]
+      goat_dispatched: [dispatched_to_wilderness, atoned_forgiven, washes_and_bathes]
+      inner_service_performed: [accepted, atoned_forgiven, sprinkled_seven, immersed, smoked_to_the_lord, burned_outside_camp, defiles_garments, washes_and_bathes]
+      yom_kippur_kept: [atoned_forgiven]
 functions:
   calendar:
     sabbatical: {status: WRAPPED, by: law_calendar}
@@ -265,50 +369,50 @@ functions:
     first_fruits: {status: WRAPPED, by: law_calendar}
     kid_in_milk: {status: WRAPPED, by: law_calendar}
   chatat:
-    domain: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: atoned_forgiven, exempt, karet_cut_off, suspends"}
-    rank: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted"}
-    identity: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: anointed"}
-    blood: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted, anointed"}
-    sprinklings: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: anointed"}
-    carcass: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: anointed, burned_outside_camp, due_to_priest, eating_window"}
-    fat: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: anointed, smoked_to_the_lord"}
-    burn_site: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: burned_outside_camp, defiles_garments"}
-    bearers: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: defiles_garments"}
-    atonement: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: atoned_forgiven"}
-    court: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted, atoned_forgiven, exempt"}
-    tribes: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted"}
-    reliance: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: atoned_forgiven, exempt, suspends"}
-    anointed_ruling: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: atoned_forgiven, exempt"}
-    sliding_scale_by_tier: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: anointed, atoned_forgiven, exempt"}
-    talui_by_tier: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: exempt, suspends"}
-    vadai_by_tier: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted, exempt"}
-    timing: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: anointed, atoned_forgiven, exempt"}
-    aggregate: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: atoned_forgiven, exempt"}
-    half_olive: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: atoned_forgiven, exempt"}
-    emmaus: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: atoned_forgiven"}
-    names_one_act: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: atoned_forgiven"}
-    four_and_one: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted, atoned_forgiven, consecrated"}
-    witnesses: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: atoned_forgiven, exempt, suspends"}
-    which_sin: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: atoned_forgiven, exempt"}
-    pieces: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted, atoned_forgiven, exempt, suspends"}
-    resolution: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: buried, burn_remainder, due_to_priest"}
-    day_of_atonement: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: atoned_forgiven, exempt"}
-    ownership: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: disqualified"}
-    conversion: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: consecrated, disqualified"}
-    precedence: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: eating_window"}
-    share: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: barred_from_it, due_to_priest"}
-    table: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: due_to_priest, most_holy"}
-    inquiry: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: barred_from_it, burned_outside_camp, due_to_priest, eaten_to_atone"}
-    wine: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: death_by_heaven, exempt, teaching_barred"}
-    wine_service_validity: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: service_profaned"}
+    domain: {status: WRAPPED, by: law_chatat}
+    rank: {status: WRAPPED, by: law_chatat}
+    identity: {status: NONE, why: "W3: the function writes nothing — every cell carries FX.NONE; the parse read the TIER NAME 'anointed' (who == 'anointed') as the effect of that name: a homograph, not a write (OPEN in COMPILE_DEBT)"}
+    blood: {status: WRAPPED, by: law_chatat}
+    sprinklings: {status: NONE, why: "W3: the function writes nothing — its one cell carries FX.NONE; the parse read the TIER NAME 'anointed' (tier in ('anointed', 'congregation')) as the effect of that name: a homograph, not a write (OPEN in COMPILE_DEBT)"}
+    carcass: {status: WRAPPED, by: law_chatat}
+    fat: {status: WRAPPED, by: law_chatat}
+    burn_site: {status: WRAPPED, by: law_chatat}
+    bearers: {status: WRAPPED, by: law_chatat}
+    atonement: {status: WRAPPED, by: law_chatat}
+    court: {status: WRAPPED, by: law_chatat}
+    tribes: {status: WRAPPED, by: law_chatat}
+    reliance: {status: WRAPPED, by: law_chatat}
+    anointed_ruling: {status: WRAPPED, by: law_chatat}
+    sliding_scale_by_tier: {status: WRAPPED, by: law_chatat}
+    talui_by_tier: {status: WRAPPED, by: law_chatat}
+    vadai_by_tier: {status: WRAPPED, by: law_chatat}
+    timing: {status: WRAPPED, by: law_chatat}
+    aggregate: {status: WRAPPED, by: law_chatat}
+    half_olive: {status: WRAPPED, by: law_chatat}
+    emmaus: {status: WRAPPED, by: law_chatat}
+    names_one_act: {status: WRAPPED, by: law_chatat}
+    four_and_one: {status: WRAPPED, by: law_chatat}
+    witnesses: {status: WRAPPED, by: law_chatat}
+    which_sin: {status: WRAPPED, by: law_chatat}
+    pieces: {status: WRAPPED, by: law_chatat}
+    resolution: {status: WRAPPED, by: law_chatat}
+    day_of_atonement: {status: WRAPPED, by: law_chatat}
+    ownership: {status: WRAPPED, by: law_chatat}
+    conversion: {status: WRAPPED, by: law_chatat}
+    precedence: {status: WRAPPED, by: law_chatat}
+    share: {status: WRAPPED, by: law_chatat}
+    table: {status: WRAPPED, by: law_chatat}
+    inquiry: {status: WRAPPED, by: law_chatat}
+    wine: {status: WRAPPED, by: law_chatat}
+    wine_service_validity: {status: WRAPPED, by: law_chatat}
   clocks:
-    yoledet: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: accepted, atoned_forgiven, barred_from_holies, blood_of_purity, disqualified, exempt, niddah_seven"}
-    zav: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: bed_and_seat_defile, consecrated, counts_seven_clean, immersed, impure_until_evening, pair_owed, suspends"}
-    touch: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: bed_and_seat_defile, break_earthen_vessel, immersed, impure_until_evening, washes_and_bathes"}
-    degrees: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: bed_and_seat_defile, impure_until_evening, washes_and_bathes"}
-    niddah: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: atoned_forgiven, counts_seven_clean, niddah_seven, suspends"}
-    zavah: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: bed_and_seat_defile, consecrated, counts_seven_clean, death_by_heaven, immersed, pair_owed"}
-    pairs: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: birds_die, pair_owed"}
+    yoledet: {status: WRAPPED, by: law_clocks}
+    zav: {status: WRAPPED, by: law_clocks}
+    touch: {status: WRAPPED, by: law_clocks}
+    degrees: {status: WRAPPED, by: law_clocks}
+    niddah: {status: WRAPPED, by: law_clocks}
+    zavah: {status: WRAPPED, by: law_clocks}
+    pairs: {status: WRAPPED, by: law_clocks}
   decalogue:
     vain_name: {status: WRAPPED, by: law_decalogue}
     sabbath_clauses: {status: WRAPPED, by: law_decalogue}
@@ -371,23 +475,23 @@ functions:
     talion: {status: WRAPPED, by: law_lev24}
     main: {status: WRAPPED, by: law_lev24}
   metzora:
-    frame: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: declared_pure"}
-    birds: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: barred_from_it, birds_die, declared_pure, sent_over_the_field, sprinkled_seven"}
-    week: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: declared_pure, immersed, outside_his_tent, shaved_whole, washes_and_bathes"}
-    shave: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: barred_from_holies, declared_pure, shaved_whole"}
-    eighth: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: accepted, atoned_forgiven, barred_from_holies, declared_pure, due_to_priest, most_holy, oil_on_the_blood, presented, smoked_to_the_lord, sprinkled_seven, waved"}
-    poor: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: accepted, disqualified, pair_owed"}
+    frame: {status: WRAPPED, by: law_metzora}
+    birds: {status: WRAPPED, by: law_metzora}
+    week: {status: WRAPPED, by: law_metzora}
+    shave: {status: WRAPPED, by: law_metzora}
+    eighth: {status: WRAPPED, by: law_metzora}
+    poor: {status: WRAPPED, by: law_metzora}
   minchah:
-    vow: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: consecrated, disqualified, not_accepted"}
-    who_brings: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted, consecrated"}
-    oil_ops: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: anointed"}
-    fistful: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted, azkarah_to_fire, disqualified, not_accepted"}
-    remainder: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: azkarah_to_fire, due_to_priest, most_holy"}
-    leaven: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted, barred_from_it, lashes"}
-    salt: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted, salted"}
-    presentation: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: presented"}
-    omer: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted, azkarah_to_fire, due_to_priest, presented"}
-    bird: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted, crop_cast_to_ash_place, disqualified, not_accepted, pinched"}
+    vow: {status: WRAPPED, by: law_minchah}
+    who_brings: {status: WRAPPED, by: law_minchah}
+    oil_ops: {status: NONE, why: "W3: the function writes nothing — every cell carries FX.NONE; the gate's function parse read the cell VALUE 'anointed' (the wafers anointed with oil, Lev 2:4) as the effect of that name: a homograph, not a write (the parser's value/effect homograph, recorded OPEN in COMPILE_DEBT)"}
+    fistful: {status: WRAPPED, by: law_minchah}
+    remainder: {status: WRAPPED, by: law_minchah}
+    leaven: {status: WRAPPED, by: law_minchah}
+    salt: {status: WRAPPED, by: law_minchah}
+    presentation: {status: WRAPPED, by: law_minchah}
+    omer: {status: WRAPPED, by: law_minchah}
+    bird: {status: WRAPPED, by: law_minchah}
   mishpatim:
     "<module>": {status: WRAPPED, by: law_mishpatim}
   mishpatim_2:
@@ -402,9 +506,9 @@ functions:
     sukkot: {status: WRAPPED, by: law_moadim}
     passover: {status: WRAPPED, by: law_moadim}
   negaim:
-    main: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: burned_in_fire, confined_seven_days, demolished, impure_until_evening, isolated_outside_camp, released"}
+    main: {status: WRAPPED, by: law_negaim}
   offerings:
-    "<module>": {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted, barred_from_it, burn_remainder, due_to_priest, eating_window, karet_cut_off, lashes, smoked_to_the_lord"}
+    "<module>": {status: WRAPPED, by: law_offerings}
   ordinances:
     altar: {status: WRAPPED, by: law_ordinances}
     capital: {status: WRAPPED, by: law_ordinances}
@@ -470,13 +574,13 @@ functions:
     lamp: {status: WRAPPED, by: law_erection}
     books: {status: WRAPPED, by: law_sanctuary_build}
   shemini:
-    touch_effect: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: impure_until_evening, lashes"}
+    touch_effect: {status: WRAPPED, by: law_shemini}
   shemini_day:
     day: {status: WRAPPED, by: law_eighth_day}
-    order: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: atoned_forgiven, eating_window, smoked_to_the_lord"}
-    calf: {status: OWED, why: "W3 THE OFFERING ENGINE | law_eighth_day writes only 'accepted' on offering_done; the calf's own effects (the purge, the carcass) are the sin-offering engine's by call — owed with the offering engine's wrap"}
+    order: {status: WRAPPED, by: law_eighth_day}
+    calf: {status: WRAPPED, by: law_eighth_day}
     ram: {status: WRAPPED, by: law_eighth_day}
-    people: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: atoned_forgiven, azkarah_to_fire, disqualified, due_to_priest, presented"}
+    people: {status: WRAPPED, by: law_eighth_day}
     peace: {status: WRAPPED, by: law_eighth_day}
     fire: {status: WRAPPED, by: law_eighth_day}
     eras: {status: WRAPPED, by: law_eighth_day}
@@ -498,18 +602,18 @@ functions:
     jubilee_count: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: jubilee_release"}
     recovery: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: confessed, covenant_remembered, iniquity_paid, scattered_among_nations"}
   tzav:
-    altar_machine: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: labor_barred, perpetual_fire_duty"}
-    vessel_purge: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: break_earthen_vessel, launder_blood_spot, sanctified_by_contact, scour_and_rinse"}
-    chavitin_machine: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: burn_remainder"}
-    rejection_machine: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: burn_remainder, eating_window, karet_cut_off, not_accepted, purge_deadline"}
-    karet_machine: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: exempt, karet_cut_off"}
-    dues_machine: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: due_to_priest"}
+    altar_machine: {status: WRAPPED, by: law_tzav}
+    vessel_purge: {status: WRAPPED, by: law_tzav}
+    chavitin_machine: {status: WRAPPED, by: law_tzav}
+    rejection_machine: {status: WRAPPED, by: law_tzav}
+    karet_machine: {status: WRAPPED, by: law_tzav}
+    dues_machine: {status: WRAPPED, by: law_tzav}
     installation: {status: WRAPPED, by: law_installation}
-    asham_law: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted, disqualified, due_to_priest, eating_window, most_holy, not_accepted, smoked_to_the_lord"}
-    minchah_law: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: azkarah_to_fire, barred_from_it, due_to_priest, most_holy, presented, sanctified_by_contact"}
+    asham_law: {status: WRAPPED, by: law_tzav}
+    minchah_law: {status: WRAPPED, by: law_tzav}
   vayikra5:
-    graded_offering: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: exempt"}
-    sacrilege: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: exempt"}
+    graded_offering: {status: WRAPPED, by: law_vayikra5}
+    sacrilege: {status: WRAPPED, by: law_vayikra5}
     deposit_restitution: {status: WRAPPED, by: law_deposit_oath}
   vestments:
     office: {status: WRAPPED, by: law_investiture}
@@ -521,10 +625,10 @@ functions:
     investiture: {status: WRAPPED, by: law_investiture}
     completion: {status: WRAPPED, by: law_vestments}
   yoma:
-    route: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: atoned_forgiven, suspends"}
-    day_atones: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: atoned_forgiven"}
-    dispatch_goat: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: dispatched_to_wilderness"}
-    main: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: atoned_forgiven, dispatched_to_wilderness"}
+    route: {status: WRAPPED, by: law_yoma}
+    day_atones: {status: WRAPPED, by: law_yoma}
+    dispatch_goat: {status: WRAPPED, by: law_yoma}
+    main: {status: WRAPPED, by: law_yoma}
   yovel:
     cycle: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: goes_free, jubilee_release, labor_barred, land_release, returns_to_holding"}
     jubilee: {status: OWED, why: "W5 HOLINESS, SANCTIONS, THE LAND | effects: goes_free, jubilee_release, returns_to_holding"}

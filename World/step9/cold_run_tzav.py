@@ -19,7 +19,7 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chp(_P, 'CASES', 2)
-assert GUARDED == 53, ('the guard counted %d expectations, the tripwire holds 53' % GUARDED)
+assert GUARDED == 54, ('the guard counted %d expectations, the tripwire holds 54' % GUARDED)
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys
 import effects_layer as FX
@@ -545,6 +545,142 @@ def minchah_law(case, params):
 
 # ---- the test data; run, grade, effects -----------------------------
 PARAMS = {}
+
+# ---- THE WRAP (W3 THE OFFERING ENGINE, D9-iii, 2026-09-07) — the daemon and the scene --------------
+# Nine case heads of the priests' law layer: the altar's fire (6:2, 6:6), the sin offering's blood and
+# flesh absorbed (6:20-21), the high priest's perpetual griddle offering (6:13, 6:15), the holy flesh eaten
+# (7:15-20 — the windows as TIMERS, the thought that rejects, the impure eater), the blood eaten (7:26-27),
+# the priestly due claimed (7:8-9, 7:34 — the sons of Eli's open entry), the guilt offering's law (7:1-7),
+# and the SECOND LAYER on the meal offering brought and leavened (6:7-11 beside law_minchah's Lev 2). The
+# installation (Lev 8) stays the library's law_installation, registered beside on the scene. Never emits.
+import world_engine as WE
+def law_tzav(event, world):
+    """Lev 6-7 (cold_run_tzav.py — the altar, the vessel purge, the perpetual griddle, the rejection, the karet bans, the dues, the guilt offering's law, the meal offering's law)."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'altar_fire_tended':
+        if event['act'] == 'extinguished':
+            return [E_('perpetual_fire_duty', 'the-altar', value=altar_machine({'ask': 'extinguish'}, PARAMS)[0], law='F1 [INK 6:6 "a continual fire shall burn on the altar; it shall not go out"]'),
+                    E_('labor_barred', event['tender'], value='extinguishing', law='F1 [INK 6:6 "it shall not go out" — the negative; Sifra Tzav Chapter 2 7]')]
+        if event['act'] == 'limb_dislodged' and event['hour'] == 'before_midnight':
+            return [E_('perpetual_fire_duty', 'the-altar', value=altar_machine({'ask': 'dislodged_before_midnight'}, PARAMS)[0], law='F1 [INK 6:2 "all the night until the morning"; Mishnah Zevachim 9:6 — returned to the fire]')]
+        return [E_('perpetual_fire_duty', 'the-altar', value=altar_machine({'ask': 'retention'}, PARAMS)[0], law='F1 [INK 6:2 "it is the burnt offering on its pyre"; Mishnah Zevachim 9:1]')]
+    if k == 'holy_absorbed':
+        v = vessel_purge({'material': event['material']}, PARAMS)[0]
+        m = event['material']
+        if m == 'garment':
+            return [E_('launder_blood_spot', event['vessel'], value=v, law='F2 [INK 6:20 "you shall wash that whereon it was sprinkled in a holy place"]')]
+        if m == 'earthenware':
+            return [E_('break_earthen_vessel', event['vessel'], value=v, law='F2 [INK 6:21 "the earthen vessel wherein it is boiled shall be broken"]')]
+        if m == 'copper':
+            return [E_('scour_and_rinse', event['vessel'], value=v, law='F2 [INK 6:21 "scoured and rinsed in water"]')]
+        return [E_('sanctified_by_contact', event['vessel'], value=v, law='F2 [INK 6:20 "whatever touches its flesh shall become holy"]')]
+    if k == 'perpetual_griddle_brought':
+        if event['brought_by'] == 'successor':
+            return [E_('burn_remainder', 'the-two-lost-halves', value=chavitin_machine({'ask': 'successor'}, PARAMS)[0], law='F3 [INK 6:15 "the anointed priest in his stead shall offer it"; Sifra Tzav Section 3 8-9 — two halves offered, two lost]')]
+        return []                                                # the anointed's own whole tenth divided: nothing burned (Section 3 6) — the silence
+    if k == 'holy_flesh_eaten':
+        if event['eater_impure']:
+            if event['slaughtered_for_impure']:
+                return [E_('exempt', event['eater'], value=karet_machine({'ask': 'congregational'}, PARAMS)[0], law='F5 [Sifra Tzav Chapter 14 1 — slaughtered for the unclean: no karet for its unclean eaters]')]
+            return [E_('karet_cut_off', event['eater'], cp='HEAVEN', value=karet_machine({'ask': 'tamei_ate'}, PARAMS)[0], law='F5 [INK 7:20 "with his impurity upon him... cut off"]')]
+        if event['intent'] == 'time':
+            return [E_('not_accepted', event['eater'], value=rejection_machine({'ask': 'piggul_time'}, PARAMS)[0], law='F4 [INK 7:18 "it shall not be accepted... rejected shall it be"]'),
+                    E_('karet_cut_off', event['eater'], cp='HEAVEN', law='F4 [INK 7:18 "the soul that eats of it shall bear its sin"; Mishnah Keritot 1:1 — the rejected]')]
+        if event['intent'] == 'place':
+            return [E_('not_accepted', event['eater'], value=rejection_machine({'ask': 'piggul_place'}, PARAMS)[0], law='F4 [Sifra Tzav Chapter 13 2 — disqualified without karet]')]
+        wk = 'window_todah' if event['offering_kind'] == 'todah' else 'window_vow'
+        n = 1 if wk == 'window_todah' else 2
+        if event['day'] - event['day0'] >= n:
+            return [E_('not_accepted', event['eater'], value='eaten_past_the_window', law='F4 [INK 7:18 "on the third day it shall not be accepted"]'),
+                    E_('karet_cut_off', event['eater'], cp='HEAVEN', law='F4 [INK 7:18 "shall bear its sin" — the leftover; Mishnah Keritot 1:1]')]
+        return [E_('eating_window', event['offering'], due=event['day0'] + n, value=rejection_machine({'ask': wk}, PARAMS)[0], law='F4 [INK 7:15-16 — the TIMER to the window\'s close]'),
+                E_('burn_remainder', event['offering'], due=event['day0'] + n, value=rejection_machine({'ask': 'leftover'}, PARAMS)[0], law='F4 [INK 7:17 "on the third day in fire"]'),
+                E_('purge_deadline', event['offering'], due=event['day0'] + n, value='by_day_not_night', law='F4 [Sifra Tzav Chapter 12 14-15 — burned by day]')]
+    if k == 'blood_eaten':
+        if event['species'] in ('bird', 'beast'):
+            return [E_('karet_cut_off', event['eater'], cp='HEAVEN', value=karet_machine({'ask': 'blood'}, PARAMS)[0], law='F5 [INK 7:26-27 "of fowl or of beast... cut off"]')]
+        return []                                                # fish, locusts, eggs: outside the species criteria (Sifra Tzav Section 10 11) — the silence
+    if k == 'priestly_due_claimed':
+        if event['due'] == 'breast_thigh' and not event['after_smoking']:
+            return []                                            # the sons of Eli's demand BEFORE the smoking (1 Samuel 2:15-17): no due yet — the OPEN entry
+        if not event['by_consent']:
+            return []                                            # seized, never conveyed (Sifra Tzav Chapter 17 6)
+        ask = {'olah_hide': 'olah_hide', 'minchah': 'minchah_due', 'breast_thigh': 'breast_thigh'}[event['due']]
+        return [E_('due_to_priest', event['claimant'], cp=event['offerer'], value=dues_machine({'ask': ask}, PARAMS)[0], law='F6 [INK 7:8, 7:9, 7:34 — the dues machine]')]
+    if k == 'guilt_offering_brought':
+        if event['blood_entered']:
+            return [E_('disqualified', event['offering'], value=asham_law({'ask': 'blood_entered_sanctuary'}, PARAMS)[0], law='F8 [Mishnah Zevachim 8:11 — the three arms]')]
+        out = [E_('most_holy', event['offering'], law='F8 [INK 7:1 "it is most holy"]'),
+               E_('accepted', event['offerer'], cp='HEAVEN', value=asham_law({'ask': 'place'}, PARAMS)[0], law='F8 [INK 7:2 the place-link; the blood around — by call to the offering engine]'),
+               E_('smoked_to_the_lord', event['offering'], value=asham_law({'ask': 'fat'}, PARAMS)[0], law='F8 [INK 7:3-5 the ram\'s fat, the tail named]'),
+               E_('due_to_priest', 'the-priests', cp=event['offerer'], value=asham_law({'ask': 'eater'}, PARAMS)[0], law='F8 [INK 7:6 "every male among the priests"]'),
+               E_('eating_window', event['offering'], due=event['day'] + 1, value='day_night_to_midnight', law='F8 [INK 7:6 with 7:15\'s window; Mishnah Zevachim 5:5]')]
+        if event['intent'] == 'wrong':
+            out.append(E_('not_accepted', event['offerer'], value=asham_law({'ask': 'wrong_intent'}, PARAMS)[0], law='F8 [Sifra Tzav Section 5 5-8 — valid, not credited]'))
+        return out
+    if k == 'meal_offering_brought':
+        mk = event['meal_kind']
+        out = [E_('presented', 'the-meal-offering', value=minchah_law({'ask': 'presentation'}, PARAMS)[0], law='F9 [INK 6:7 "before the LORD, to the front of the altar" — the southwest corner]'),
+               E_('azkarah_to_fire', 'the-meal-offering', cp='HEAVEN', value=minchah_law({'ask': 'fistful'}, PARAMS)[0], law='F9 [INK 6:8]'),
+               E_('sanctified_by_contact', 'the-meal-offering', value=minchah_law({'ask': 'contact'}, PARAMS)[0], law='F9 [INK 6:11 "whatever touches them shall become holy"]')]
+        if mk != 'priests_own':
+            out += [E_('due_to_priest', 'the-priests', cp=event['offerer'], value=minchah_law({'ask': 'sinner_remainder' if mk == 'sinner' else 'remainder'}, PARAMS)[0], law='F9 [INK 6:9 "the remainder Aaron and his sons shall eat"]'),
+                    E_('most_holy', 'the-meal-offering', value=minchah_law({'ask': 'most_holy_like'}, PARAMS)[0], law='F9 [INK 6:10 "most holy, as the sin offering and as the guilt offering"]')]
+        return out
+    if k == 'meal_offering_leavened':
+        if event['meal_kind'] in ('todah_loaves', 'two_loaves'):
+            return []                                            # the leavened exceptions are Lev 7:13's and 23:17's own — nothing barred here
+        return [E_('barred_from_it', event['baker'], value=minchah_law({'ask': 'leaven'}, PARAMS)[0], law='F9 [INK 6:10 "it shall not be baked leavened" — per operation: %s]' % event['step'])]
+    return []
+
+def scene():
+    """THE SCENE — Lev 6-7's rows replayed with the installation's tape on the library daemon (clock unit: days)."""
+    with _ctx.redirect_stdout(_io.StringIO()):
+        w = WE.World(era='the priests\' law layer: Zevachim 2, 5, 8-9, 11-12, Menachot 4, 6, Keritot 1, 1 Samuel 2 on the engine (clock unit: days)')
+        w.laws = [WE.law_installation, law_tzav]
+        w.submit({'kind': 'installation_commanded', 'subject': 'aaron-and-sons', 'components': ['bullock', 'ram_olah', 'ram_milluim', 'basket'], 'case_source': 'Lev 8:2 — the take-list (the library daemon: Sifra Tzav Mekhilta DeMiluim I 19)'})
+        w.submit({'kind': 'milluim_blood_sprinkled', 'subject': 'aaron-and-sons', 'case_source': 'Lev 8:30 — the commit (DeMiluim I 34)'})
+        w.submit({'kind': 'milluim_leftover', 'subject': 'aaron-and-sons', 'case_source': 'Lev 8:32 — the leftover burned'})
+        w.advance(1)
+        w.submit({'kind': 'altar_fire_tended', 'subject': 'the-altar', 'tender': 'the-priest', 'act': 'kept', 'hour': 'night', 'case_source': 'Mishnah Zevachim 9:1 — once up does not come down'})
+        w.submit({'kind': 'altar_fire_tended', 'subject': 'the-altar', 'tender': 'the-priest', 'act': 'limb_dislodged', 'hour': 'before_midnight', 'case_source': 'Mishnah Zevachim 9:6 — dislodged before midnight: returned to the fire'})
+        w.submit({'kind': 'altar_fire_tended', 'subject': 'the-altar', 'tender': 'the-extinguisher', 'act': 'extinguished', 'hour': 'day', 'case_source': 'Sifra Tzav Chapter 2 7 — the extinguisher transgresses the negative'})
+        for mat, ves, src in (('garment', 'the-garment', 'Mishnah Zevachim 11:1'), ('earthenware', 'the-pot', 'Mishnah Zevachim 11:7'), ('copper', 'the-cauldron', 'Mishnah Zevachim 11:7'), ('touched_food', 'the-touched-flesh', 'Mishnah Zevachim 11:8')):
+            w.submit({'kind': 'holy_absorbed', 'subject': ves, 'vessel': ves, 'material': mat, 'case_source': src})
+        w.submit({'kind': 'perpetual_griddle_brought', 'subject': 'the-high-priest', 'brought_by': 'the_anointed', 'halves': 'whole_divided', 'case_source': 'Mishnah Menachot 4:5 — a whole tenth divided: the silence'})
+        w.submit({'kind': 'perpetual_griddle_brought', 'subject': 'the-successor', 'brought_by': 'successor', 'halves': 'new_whole', 'case_source': 'Mishnah Menachot 4:5 — the successor\'s new whole: two halves burned'})
+        base = {'subject': 'the-shelamim', 'offering': 'the-shelamim', 'offering_kind': 'vow', 'day0': 1, 'day': 1, 'intent': 'none', 'eater_impure': False, 'slaughtered_for_impure': False}
+        w.submit({'kind': 'holy_flesh_eaten', **base, 'subject': 'the-todah', 'offering': 'the-todah', 'offering_kind': 'todah', 'eater': 'the-todah-eater', 'case_source': 'Mishnah Zevachim 5:6 — a day and a night: the window TIMER'})
+        w.submit({'kind': 'holy_flesh_eaten', **base, 'eater': 'the-shelamim-eater', 'case_source': 'Mishnah Zevachim 5:7 — two days and one night: the window TIMER'})
+        w.submit({'kind': 'holy_flesh_eaten', **base, 'eater': 'the-late-eater', 'day': 3, 'case_source': 'Lev 7:18 — eaten on the third day: not accepted, karet'})
+        w.submit({'kind': 'holy_flesh_eaten', **base, 'eater': 'the-piggul-eater', 'intent': 'time', 'case_source': 'Mishnah Zevachim 2:3 — the thought of time: rejected, karet'})
+        w.submit({'kind': 'holy_flesh_eaten', **base, 'eater': 'the-place-thinker', 'intent': 'place', 'case_source': 'Mishnah Zevachim 2:3 — the thought of place: disqualified, no karet'})
+        w.submit({'kind': 'holy_flesh_eaten', **base, 'eater': 'the-impure-eater', 'eater_impure': True, 'case_source': 'Lev 7:20; Mishnah Keritot 1:1 — the impure eater cut off'})
+        w.submit({'kind': 'holy_flesh_eaten', **base, 'eater': 'the-congregational-eater', 'eater_impure': True, 'slaughtered_for_impure': True, 'case_source': 'Sifra Tzav Chapter 14 1 — slaughtered for the unclean: exempt'})
+        w.submit({'kind': 'blood_eaten', 'subject': 'the-blood-eater', 'eater': 'the-blood-eater', 'species': 'beast', 'case_source': 'Mishnah Keritot 1:1 — the blood'})
+        w.submit({'kind': 'blood_eaten', 'subject': 'the-fish-eater', 'eater': 'the-fish-eater', 'species': 'fish', 'case_source': 'Sifra Tzav Section 10 11 — fish blood outside: the silence'})
+        w.submit({'kind': 'priestly_due_claimed', 'subject': 'the-officiating-priest', 'claimant': 'the-officiating-priest', 'offerer': 'the-offerer', 'due': 'olah_hide', 'after_smoking': True, 'by_consent': True, 'case_source': 'Lev 7:8; Sifra Tzav Chapter 9 4 — the hide to the offering priest'})
+        w.submit({'kind': 'priestly_due_claimed', 'subject': 'the-officiating-priest', 'claimant': 'the-officiating-priest', 'offerer': 'the-offerer', 'due': 'breast_thigh', 'after_smoking': True, 'by_consent': True, 'case_source': 'Lev 7:34; Sifra Tzav Chapter 16 4 — after the smoking'})
+        w.submit({'kind': 'priestly_due_claimed', 'subject': 'the-sons-of-eli', 'claimant': 'the-sons-of-eli', 'offerer': 'the-offerer', 'due': 'breast_thigh', 'after_smoking': False, 'by_consent': False, 'case_source': '1 Samuel 2:15-17 — raw flesh demanded BEFORE the smoking: no due, the open entry (Sifra Tzav Chapter 16 5)'})
+        w.submit({'kind': 'guilt_offering_brought', 'subject': 'the-asham', 'offering': 'the-asham', 'offerer': 'the-guilty', 'intent': 'right', 'blood_entered': False, 'day': 1, 'case_source': 'Mishnah Zevachim 5:5 — the guilt offering\'s row'})
+        w.submit({'kind': 'guilt_offering_brought', 'subject': 'the-misnamed-asham', 'offering': 'the-misnamed-asham', 'offerer': 'the-guilty', 'intent': 'wrong', 'blood_entered': False, 'day': 1, 'case_source': 'Mishnah Zevachim 1:1; Sifra Tzav Section 5 5-8 — wrong intent: valid, not credited'})
+        w.submit({'kind': 'guilt_offering_brought', 'subject': 'the-entered-asham', 'offering': 'the-entered-asham', 'offerer': 'the-guilty', 'intent': 'right', 'blood_entered': True, 'day': 1, 'case_source': 'Mishnah Zevachim 8:11 — the blood that entered: the three arms'})
+        w.submit({'kind': 'meal_offering_brought', 'subject': 'the-meal-offering', 'offerer': 'the-offerer', 'offerers': 'one', 'meal_kind': 'soleth', 'vow_words': 'a_meal_offering', 'case_source': 'Sifra Tzav Section 2 4-5; Mishnah Menachot 6:1 — the priests\' layer on the meal offering'})
+        w.submit({'kind': 'meal_offering_brought', 'subject': 'the-meal-offering', 'offerer': 'the-offerer', 'offerers': 'one', 'meal_kind': 'sinner', 'vow_words': 'a_meal_offering', 'case_source': 'Lev 5:13 "as the meal offering" — the sinner\'s remainder (Mishnah Menachot 6:1)'})
+        w.submit({'kind': 'meal_offering_leavened', 'subject': 'the-baker', 'baker': 'the-baker', 'meal_kind': 'soleth', 'step': 'kneading', 'case_source': 'Sifra Tzav Chapter 3 1 — per operation'})
+        w.advance(8)                                                     # the windows close (days 2 and 3); the installation's seven days RELEASE on day 7
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    return (n('aaron-and-sons', 'confined_seven_days'), n('aaron-and-sons', 'invested_office'), n('aaron-and-sons', 'burn_remainder'), n('aaron-and-sons', 'released'),
+            n('the-altar', 'perpetual_fire_duty'), n('the-extinguisher', 'labor_barred'), n('the-garment', 'launder_blood_spot'), n('the-pot', 'break_earthen_vessel'), n('the-cauldron', 'scour_and_rinse'), n('the-touched-flesh', 'sanctified_by_contact'),
+            n('the-high-priest', 'burn_remainder'), n('the-two-lost-halves', 'burn_remainder'), n('the-todah', 'eating_window'), n('the-shelamim', 'eating_window'), n('the-shelamim', 'burn_remainder'), n('the-shelamim', 'purge_deadline'),
+            n('the-late-eater', 'not_accepted'), n('the-late-eater', 'karet_cut_off'), n('the-piggul-eater', 'karet_cut_off'), n('the-place-thinker', 'not_accepted'), n('the-place-thinker', 'karet_cut_off'), n('the-impure-eater', 'karet_cut_off'), n('the-congregational-eater', 'exempt'),
+            n('the-blood-eater', 'karet_cut_off'), n('the-fish-eater', 'karet_cut_off'), n('the-officiating-priest', 'due_to_priest'), n('the-sons-of-eli', 'due_to_priest'),
+            n('the-asham', 'most_holy'), n('the-guilty', 'accepted'), n('the-guilty', 'not_accepted'), n('the-entered-asham', 'disqualified'), n('the-priests', 'due_to_priest'),
+            n('the-meal-offering', 'presented'), n('the-meal-offering', 'sanctified_by_contact'), n('the-meal-offering', 'most_holy'), n('the-baker', 'barred_from_it'), tset, fired, w.clock.year), w
+SCENE, _W = scene()
+
 CASES = [
     ('Mishnah Zevachim 9:1 — the retention classes (both recorded)',
      lambda: altar_machine({'ask': 'retention'}, PARAMS),
@@ -699,6 +835,15 @@ CASES = [
     ('Sifra Tzav Chapter 3 6 — whatever touches them becomes holy',
      lambda: minchah_law({'ask': 'contact'}, PARAMS),
      'becomes like it — absorption required, the touched part alone'),
+    # ---- THE WRAP (W3, 2026-09-07) — the priests' law layer on the world engine, the installation's tape on the library daemon ----
+    ('THE SCENE — (confined, invested, the leftover burned, RELEASED by the timer; the fire\'s duty x3, the extinguisher barred; the garment, '
+     'the pot, the cauldron, the touched flesh; the anointed\'s silence, the successor\'s two halves; the thanksgiving\'s window, the peace '
+     'offering\'s window, leftover, purge; the late eater, his karet, the rejected eater\'s karet, the place-thinker, his no-karet, the impure '
+     'eater, the congregational exempt; the blood-eater, the fish-eater\'s silence; the priest\'s two dues, the sons of Eli\'s none; the guilt '
+     'offering most holy, the guilty accepted twice, once not credited, the entered blood invalid, four dues; presented, contact, most holy, '
+     'the baker barred; timers set, fired, the clock)',
+     lambda: (SCENE, [FX.NONE], [('INK', 'the tape is the ink: Lev 6-8 and the recorded rows of Zevachim 2, 5, 8-9, 11-12, Menachot 4, 6, Keritot 1, 1 Samuel 2')]),
+     (1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 2, 0, 1, 2, 1, 1, 4, 2, 2, 2, 1, 9, 9, 8)),
 ]
 
 ok = 0
@@ -737,6 +882,8 @@ print('FRACTIONS: pure ink %d/%d (%.0f%%) · named moves %d/%d (%.0f%%) '
 ops = FX.summarize(used)
 print('LEDGER OPS this span writes:',
       ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
+print('SCENE: %r — the daemons\' watch coverage (the library\'s law_installation beside law_tzav):' % (SCENE,))
+_W.print_coverage()
 if ok == tot:
     print('\nTHE OFFERING-TORAH SPAN COMPILES — the fourth span under '
           'the effects law; the priests\' own law layer runs.')

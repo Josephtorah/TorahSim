@@ -217,9 +217,37 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
       four probes matching their predictions; 22 functions OWED → WRAPPED (88 / 163 / 0); the sweep
       33/33 (3603 cells). One gate fault found and fixed: the daemon parser's kind regex read `pk ==`
       as `k ==` (a word boundary added; the five fire-probes 5/5 after). Record: REPORT_WRAP_W2.md.
-- [ ] W3 THE OFFERING ENGINE — offerings, minchah, tzav (installation already law_installation),
-      chatat, vayikra5 (deposit_restitution already law_deposit_oath), shemini, shemini_day's remainder
-- [ ] W4 THE PURITY CLOCKS — clocks, negaim, metzora, yoma
+- [x] W3 THE OFFERING ENGINE (DONE 2026-09-07, the owner: "Next go" — the first sitting after compaction #76, the
+      rereads first): 28 case-form types registered FIRST by script (the registry 174 types, 341 runs verified, case
+      form 70 → 98; the omer's SECOND SEAT Lev 2:14 on omer_brought; no witness shared between two new types); six
+      daemons DECLARED before the code (the gate failed 71 ways, then passed): law_offerings (two kinds — the grid's
+      row by kind with the windows as TIMERS, the fat ban), law_minchah (five), law_tzav (nine, the library's
+      law_installation registered beside on its scene), law_chatat (nine), law_vayikra5 (five, law_deposit_oath
+      beside), law_shemini (two); ONE TYPE UNDER TWO LAW LAYERS (meal_offering_brought and meal_offering_leavened
+      under law_minchah + law_tzav; doubtful_sin under law_vayikra5 + law_chatat — the same field contract);
+      law_eighth_day's offering_done now writes the SPEC'S effects by call keyed by the act's spec, so shemini_day's
+      order / calf / people are wrapped by their own runner's daemon; the two seeding aliases UNIFIED
+      (garments_sprinkled → milluim_blood_sprinkled, meal → milluim_leftover; open aliases 9 → 5); 58 functions
+      OWED → WRAPPED and THREE declared NONE (146 / 102 / 3 of 251 — the homograph note below); twenty-two timers
+      set and fired, twenty silences counted; every scene printed before typed, two of seven probes disagreeing on
+      the scene's own shape (the loaves' entity, the spec head's colon) and corrected before a literal; the sweep
+      33/33 (3610 cells). Record: REPORT_WRAP_W3.md.
+      offerings, minchah, tzav (installation already law_installation), chatat, vayikra5 (deposit_restitution
+      already law_deposit_oath), shemini, shemini_day's remainder
+- [x] W4 THE PURITY CLOCKS (DONE 2026-09-07, the owner: "Go" — the first sitting after compaction #77, the rereads first):
+      20 case-form types registered FIRST by script (the registry 194 types, 420 runs verified, case form 98 → 118; the Day's
+      statute's SECOND SEAT — yom_kippur_kept gained Lev 16:29-34 and law_yoma as its second consumer beside law_moadim: the
+      statute's first seat in the book, compiled second); four daemons DECLARED before the code (the gate failed 22 ways, then
+      passed on the code's first run — ZERO fires after it): law_clocks (ten kinds — the mothers' two clocks from the written
+      numbers, the zav's count as a TIMER CANCELLED by a discharge inside it and re-set at the new stop, the eighth day's pair,
+      the lattice and the degrees, the menstruant and her partner, the zavah, the pairs engine), law_negaim (four — the
+      confinement weeks as TIMERS on the shared seventh day: two weeks that are thirteen days, three that are nineteen; the ten
+      houses walked as ten events; the runner's nested machine HOISTED to module level, verdicts unchanged), law_metzora (three
+      — the week outside his tent, the purity verb's four gates written), law_yoma (four — the routing table's atonement with
+      the Day as its TIMER, the fellow gate's silence, the service order as the tape keyed by verse, the calendar's law_moadim
+      registered beside); 18 functions OWED → WRAPPED (164 / 84 / 3 of 251); FIFTY-SEVEN timers set, fifty-five fired, TWO
+      CANCELLED; sixteen silences; all four probes matched their predictions before typing (tripwires clocks 162, metzora 78,
+      negaim 19, yoma 23); the sweep 33/33 (3614 cells — four scene rows, one per runner). Record: REPORT_WRAP_W4.md.
 - [ ] W5 HOLINESS, SANCTIONS, THE LAND — holiness, holiness_b, sanctions, priesthood, tochacha,
       temurah, yovel (jubilee_proclaimed, watched and never fired, fires here from Lev 25:10)
 - [ ] W6 THE SANCTUARY'S REMAINDER — sanctuary_build.altar, incense_shekel (succession, shekel, oil,
@@ -244,6 +272,13 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
 ## in the file (mishpatim's tripwire "20" was F5's four rows counted five times; lev24's "18" the one-law's
 ## three rows counted six times) — the earlier lists go unchecked. Fix: resolve the binding in effect at
 ## the call's line, then remeasure every _chc tripwire. A gate edit is its own sitting.
+## OPEN (a gate, not a span — found at W3, 2026-09-07): daemon_census.parse_functions reads EVERY registered-
+## effect-named string in a function's source as an effect it writes — THE VALUE/EFFECT HOMOGRAPH: the tier
+## name 'anointed' (chatat.identity, chatat.sprinklings), the cell value 'anointed' (minchah.oil_ops — the
+## wafers anointed with oil), the dict value 'buried' (chatat.resolution). Three functions with NO honest
+## effect (every cell FX.NONE) stood on the worklist for a spelling; they are declared NONE with the why.
+## Fix: read a function's effects from its cells' fx lists (and out()'s effects), then remeasure the 251 and
+## every disposition — the count will drop and the drop is honest. A gate edit is its own sitting.
 
 ## OWED FORWARD — the family code's Sinai seats (declared at sitting G2, 2026-09-06;
 ## the census homes them at runners that do not exist yet, so the gate cannot require the

@@ -90,6 +90,7 @@ The honest-pairing guard (compile_guards.py) runs first on this file.
 import sqlite3, sys, os, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effects_layer as FX
+import io as _io, contextlib as _ctx
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 
@@ -229,6 +230,12 @@ HERD_NORTH = ('Sifra Nedavah Chapter 7 6-7 — valid without flaying, cutting, o
 
 def dispatch(offering):
     o, _, variant = offering.partition(':')
+    if o == 'scene':                     # W3 (2026-09-07): the grid replayed on the world engine — the scene as a dispatch key
+        return {'scene': cell(SCENE, I, 'THE SCENE — Mishnah Zevachim 5:1-8\'s nine rows slaughtered on day 1 and the fat ban\'s two rows '
+                              '(Chullin 8:6), the clock advanced to day 3 so every eating window closes and every leftover burns: '
+                              '(accepted, dues to the priests, the bull wholly to the fire, the inner bull burned, the peace offering\'s '
+                              'window, its leftover, the thanksgiving\'s leftover, the fat-eater barred, lashed, cut off, the hunter\'s '
+                              'silence, timers set, timers fired, the clock)')}
     if o == 'inner_chatat_yk':
         return {
          'place': cell('north', I, NORTH_LINK),
@@ -368,6 +375,68 @@ def fat_inventory(species):
                           'lamb\'s list, TAIL INCLUDED: the pointer names the species whose inventory carries the tail'),
     }
 
+# ---- THE WRAP (W3 THE OFFERING ENGINE, D9-iii, 2026-09-07) — the daemon and the scene --------------
+# Two case heads: the offering slaughtered (Lev 1:2 the span's head; 1:5, 1:11, 3:2, 7:2 the slaughter
+# clauses) — the dispatcher's row by kind writes the acceptance, the fire's part, the eater's due, and the
+# eating window as a TIMER with the leftover's burning at its close; and the fat eaten (3:17, 7:23-25) —
+# the ban's three species barred, lashed and cut off, the wild animal's fat the silence (Chullin 8:6).
+# The daemon writes the ledger and never emits an event.
+import world_engine as WE
+def law_offerings(event, world):
+    """Lev 1-7 (cold_run_offerings.py — the dispatcher's grid, the fat inventory, the fat ban)."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'offering_slaughtered':
+        row = dispatch(event['offering'])                        # the grid's key (olah:flock, shelamim...); the subject is the beast
+        beast = event['subject']
+        apps = row['applications']['v'] if 'applications' in row else row['stations']['v']
+        out = [E_('accepted', event['offerer'], cp='HEAVEN', value='%s:%s' % (row['place']['v'], apps), law='[INK Lev 1:4 "and it shall be accepted for him"; the place and the blood the dispatcher\'s row by call: %s, %s]' % (row['place']['v'], apps))]
+        if 'disposition' in row:
+            out.append(E_('smoked_to_the_lord', beast, value=row['disposition']['v'], law='[INK Lev 1:9 "and the priest shall turn the whole to smoke on the altar"]'))
+        else:
+            out.append(E_('smoked_to_the_lord', beast, value='the_fat', law='[INK Lev 3:16 "all fat is the LORD\'s"; 7:5 the guilt offering\'s; 4:10 the sin offering\'s by the pointer]'))
+        eater = row['eater']['v'] if 'eater' in row else (row['bekhor_eater']['v'] if 'bekhor_eater' in row else None)
+        if eater in ('male_priests', 'priests'):
+            out.append(E_('due_to_priest', 'the-priests', cp=event['offerer'], value=eater, law='[INK Lev 6:22, 7:6 "every male among the priests shall eat it"; Num 18:18 the firstling]'))
+        elif 'raised' in row:
+            out.append(E_('due_to_priest', 'the-priests', cp=event['offerer'], value='breast_and_thigh', law='[INK Lev 7:31-34 the wave breast and the raised thigh]'))
+        if 'window' in row:
+            n = 2 if row['window']['v'] == 'two_days_one_night' else 1
+            out += [E_('eating_window', beast, due=event['day'] + n, value=row['window']['v'], law='[INK Lev 7:15 "on the day of his offering... until morning"; 7:16 "and on the morrow" — the TIMER to the window\'s close]'),
+                    E_('burn_remainder', beast, due=event['day'] + n, value='the_leftover_burned', law='[INK Lev 7:17 "what remains of the flesh on the third day shall be burned in fire"; 6:23]')]
+        if 'burn_place' in row:
+            out.append(E_('burn_remainder', beast, value=row['burn_place']['v'], law='[INK Lev 4:12 "outside the camp to a pure place, to the ash-pour"; 6:23 "burned in fire"]'))
+        return out
+    if k == 'fat_eaten':
+        ban = dispatch('fat:ban')
+        if event['species'] in ban['scope']['v'].split('_'):
+            return [E_('barred_from_it', event['eater'], value='the_fat_of_%s' % event['species'], law='[INK Lev 3:17, 7:23 "all fat of ox or sheep or goat you shall not eat" — the scope the fat inventory\'s row: %s]' % ban['scope']['v']),
+                    E_('lashes', event['eater'], amount=40, law='[Mishnah Makkot 3:2 — the fat-eater among the lashed; the warning Lev 7:23]'),
+                    E_('karet_cut_off', event['eater'], cp='HEAVEN', law='[INK Lev 7:25 "the soul that eats shall be cut off from its people"; Mishnah Keritot 1:1]')]
+        return []                                                # the wild animal's fat is outside the ban (Mishnah Chullin 8:6) — the silence
+    return []
+
+def scene():
+    """THE SCENE — Mishnah Zevachim 5:1-8's grid replayed on the world engine (clock unit: days); the fat ban's two rows beside it."""
+    with _ctx.redirect_stdout(_io.StringIO()):
+        w = WE.World(era='the offerings\' grid: Zevachim 5:1-8 and Chullin 8:6 on the engine (clock unit: days)')
+        w.laws = [law_offerings]
+        w.advance(1)
+        for off, subj, src in (('inner_chatat_yk', 'the-day-of-atonement-goat', 'Mishnah Zevachim 5:1'), ('inner_chatat_burned', 'the-anointed-priests-bull', 'Mishnah Zevachim 5:2'),
+                               ('outer_chatat', 'the-she-goat', 'Mishnah Zevachim 5:3'), ('olah:herd', 'the-bull-olah', 'Mishnah Zevachim 5:4'), ('olah:flock', 'the-lamb-olah', 'Mishnah Zevachim 5:4'),
+                               ('communal_shelamim_and_asham', 'the-asham', 'Mishnah Zevachim 5:5'), ('todah_and_nazir_ram', 'the-todah', 'Mishnah Zevachim 5:6'),
+                               ('shelamim', 'the-shelamim', 'Mishnah Zevachim 5:7'), ('bekhor_maaser_pesach', 'the-firstling', 'Mishnah Zevachim 5:8')):
+            w.submit({'kind': 'offering_slaughtered', 'subject': subj, 'offering': off, 'offerer': 'the-offerer', 'day': 1, 'case_source': src + ' — the grid\'s row (%s)' % off})
+        w.submit({'kind': 'fat_eaten', 'subject': 'the-fat-eater', 'eater': 'the-fat-eater', 'species': 'ox', 'case_source': 'Mishnah Chullin 8:6 + Keritot 1:1 — the ox\'s fat'})
+        w.submit({'kind': 'fat_eaten', 'subject': 'the-hunter', 'eater': 'the-hunter', 'species': 'deer', 'case_source': 'Mishnah Chullin 8:6 — the wild animal\'s fat is permitted: the silence'})
+        w.advance(3)                                                     # the day-and-night windows close on day 2, the two-day windows on day 3: the timers FIRE
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    return (n('the-offerer', 'accepted'), n('the-priests', 'due_to_priest'), n('the-bull-olah', 'smoked_to_the_lord'), n('the-anointed-priests-bull', 'burn_remainder'),
+            n('the-shelamim', 'eating_window'), n('the-shelamim', 'burn_remainder'), n('the-todah', 'burn_remainder'),
+            n('the-fat-eater', 'barred_from_it'), n('the-fat-eater', 'lashes'), n('the-fat-eater', 'karet_cut_off'), n('the-hunter', 'barred_from_it'), tset, fired, w.clock.year), w
+SCENE, _W = scene()
+
 # ---- (2) TEST DATA — the Mishnah's own grid, read from the shelf ----
 mz = json.load(open('<repo-old>/Data/mishnah_zevachim_he.json'))
 mzt = mz['text'] if isinstance(mz, dict) and 'text' in mz else mz
@@ -446,6 +515,12 @@ TESTS = [
    'blood_scope': 'fowl_beast_and_wild', 'offered_hence_sacrilege': True,
    'dwellings': 'all_dwellings'},
    ['barred_from_it', 'karet_cut_off', 'lashes']),
+ # ---- THE WRAP (W3, 2026-09-07) — the grid replayed on the world engine: (accepted, dues, the bull wholly, the inner bull burned,
+ # the peace offering's window, its leftover, the thanksgiving's leftover, the fat-eater barred, lashed, cut off, the hunter's silence,
+ # timers set, timers fired, the clock)
+ ('THE SCENE', 'scene', {
+   'scene': (9, 5, 1, 1, 1, 1, 1, 1, 1, 1, 0, 10, 10, 3)},
+   ['accepted', 'smoked_to_the_lord', 'due_to_priest', 'eating_window', 'burn_remainder', 'barred_from_it', 'lashes', 'karet_cut_off']),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------
@@ -484,6 +559,8 @@ print('FRACTIONS: pure ink %d/%d (%d%%) · named moves %d/%d (%d%%) · '
       frac['FENCE'], n, frac['DATA'], n, frac['IMPORT'], n))
 print('effects: all %d verdict rows carry REGISTERED effects '
       '[effects law satisfied]' % len(TESTS))
+print('SCENE: %r — the grid on the engine; the daemon\'s watch coverage:' % (SCENE,))
+_W.print_coverage()
 if ok == total:
     print()
     print('THE LEV 1-8 OFFERING ENGINE CONSOLIDATES — one dispatcher, '
