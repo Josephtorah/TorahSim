@@ -270,6 +270,11 @@ m.handler("ben_shemonat_yamim ∧ kol_zakhar_le_doroteikhem",
 # eighth_day_clause — read, not installed
 m.witness_read("eighth_day_clause", "three_determinations_from_one_number",
                 cites=["Shabbat 132a:15", "Shabbat 132a:20", "Sifra, Tazria Parashat Yoledet, Chapter 1 2"])
+# witness-tier presupposed read:
+# the_spec_against_its_run_six_and_five_the_eighth_at_three_institutions on
+# the_thirteen_covenants_counted_off_the_ink — read, not installed
+m.witness_read("the_thirteen_covenants_counted_off_the_ink", "the_spec_against_its_run_six_and_five_the_eighth_at_three_institutions",
+                cites=["Mishnah Nedarim 3:11", "Mishnah Shabbat 19:1", "Mishnah Shabbat 19:2", "Mishnah Shabbat 19:3", "Mishnah Shabbat 19:4", "Mishnah Shabbat 19:5", "Mishnah Shabbat 19:6", "Mishnah Arakhin 2:2", "Mishnah Kiddushin 1:7", "Mishnah Pesachim 8:8", "Mishnah Keritot 1:1", "Mishnah Shabbat 18:3", "Mishnah Shabbat 9:3", "Nedarim 31b:8", "Nedarim 31b:11", "Nedarim 32a:5", "Nedarim 32a:6", "Nedarim 32a:8", "Nedarim 32a:11", "Nedarim 32b:1", "Shabbat 132a:6", "Shabbat 132a:8", "Shabbat 132a:10", "Shabbat 132a:15", "Shabbat 132a:16", "Shabbat 132a:17", "Shabbat 132a:19", "Shabbat 132a:20", "Shabbat 137a:3", "Shabbat 132b:10", "Shabbat 133b:13", "Shabbat 108a:10", "Shabbat 135b:3", "Shabbat 135b:5", "Shabbat 135b:7", "Yevamot 72a:7", "Yevamot 72a:8", "Kiddushin 29a:11", "Sanhedrin 59b:1", "Sanhedrin 59b:2", "Sanhedrin 59b:9", "Sanhedrin 59b:10", "Sanhedrin 59b:11", "Sanhedrin 59b:12", "Sanhedrin 38b:11", "Sanhedrin 44a:4", "Avodah Zarah 27a:2", "Avodah Zarah 27a:3", "Avodah Zarah 27a:5", "Avodah Zarah 27a:6", "Menachot 42a:18", "Menachot 42a:19", "Berakhot 13a:5", "Berakhot 13a:6", "Berakhot 13a:7", "Berakhot 13a:8", "Berakhot 13a:9", "Berakhot 13a:10", "Rosh Hashanah 16b:6", "Shabbat 105a:2", "Makkot 24a:4", "Chagigah 12a:15", "Rosh Hashanah 10b:10", "Sanhedrin 69b:13", "Yevamot 42a:6", "Yevamot 64a:2", "Yevamot 100b:9", "Mishnah Avot 5:21"])
 
 # -------------------------- Gen.17.13 · THE_DOUBLED_MUST_AND_THE_FLESH_COVENANT -
 # ‹הִמּוֹל יִמּוֹל יְלִיד› (“circumcise circumcise born”)
@@ -554,7 +559,7 @@ if __name__ == "__main__":
     assert all('the_two_grammar_schools' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['rename_operator']["cites"] == ['Berakhot 13a:8', 'Bereshit Rabbah 46:8', 'Tosefta Berakhot 1:15', 'Berakhot 13a:10']
     assert all('enforced_naming_law_and_counter_rule' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('tamim_condition', 'wholeness_pending_the_act'), ('thirteen_covenants', 'the_chapter_counts_its_own_word'), ('av_hamon', 'charter_of_the_acronym_rule'), ('covenant_clause', 'three_family_laws'), ('dorot_token', 'surviving_analogy_of_three_weighed'), ('land_grant', 'conditioned_on_the_next_verse'), ('circumcision_command', 'three_tier_enforcement_cascade'), ('circumcision_command', 'line_scope_you_and_your_seed'), ('abraham_own_analogy', 'objected_to_and_answered'), ('eighth_day_clause', 'three_determinations_from_one_number'), ('himol_yimol_ve_hefer', 'circumcision_machine_completion'), ('laughter_clause', 'alteration_census_and_name_remedy'), ('ascent_from_abraham', 'leave_taking_rule_and_chariot_claim')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('tamim_condition', 'wholeness_pending_the_act'), ('thirteen_covenants', 'the_chapter_counts_its_own_word'), ('av_hamon', 'charter_of_the_acronym_rule'), ('covenant_clause', 'three_family_laws'), ('dorot_token', 'surviving_analogy_of_three_weighed'), ('land_grant', 'conditioned_on_the_next_verse'), ('circumcision_command', 'three_tier_enforcement_cascade'), ('circumcision_command', 'line_scope_you_and_your_seed'), ('abraham_own_analogy', 'objected_to_and_answered'), ('eighth_day_clause', 'three_determinations_from_one_number'), ('the_thirteen_covenants_counted_off_the_ink', 'the_spec_against_its_run_six_and_five_the_eighth_at_three_institutions'), ('himol_yimol_ve_hefer', 'circumcision_machine_completion'), ('laughter_clause', 'alteration_census_and_name_remedy'), ('ascent_from_abraham', 'leave_taking_rule_and_chariot_claim')]
     assert m.WITNESS_READS[0]["cites"] == ['Mishnah Nedarim 3:11', 'Bereshit Rabbah 46:1']
     assert all('wholeness_pending_the_act' not in f for f in m.WORLD["facts"])
     assert 'tamim_condition' not in m.WORLD["witnessed"]
@@ -585,13 +590,16 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[9]["cites"] == ['Shabbat 132a:15', 'Shabbat 132a:20', 'Sifra, Tazria Parashat Yoledet, Chapter 1 2']
     assert all('three_determinations_from_one_number' not in f for f in m.WORLD["facts"])
     assert 'eighth_day_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[10]["cites"] == ['Shabbat 132a:9', 'Shabbat 132b:9', 'Shabbat 132b:10', 'Shabbat 132b:11', 'Shabbat 133b:12', 'Shabbat 133b:13', 'Shabbat 133b:14', 'Shabbat 137a:2', 'Shabbat 137a:3', 'Shabbat 108a:10', 'Kiddushin 29a:12', 'Kiddushin 29a:13', 'Yevamot 72a:6', 'Yevamot 72a:7', 'Yevamot 72a:8']
+    assert m.WITNESS_READS[10]["cites"] == ['Mishnah Nedarim 3:11', 'Mishnah Shabbat 19:1', 'Mishnah Shabbat 19:2', 'Mishnah Shabbat 19:3', 'Mishnah Shabbat 19:4', 'Mishnah Shabbat 19:5', 'Mishnah Shabbat 19:6', 'Mishnah Arakhin 2:2', 'Mishnah Kiddushin 1:7', 'Mishnah Pesachim 8:8', 'Mishnah Keritot 1:1', 'Mishnah Shabbat 18:3', 'Mishnah Shabbat 9:3', 'Nedarim 31b:8', 'Nedarim 31b:11', 'Nedarim 32a:5', 'Nedarim 32a:6', 'Nedarim 32a:8', 'Nedarim 32a:11', 'Nedarim 32b:1', 'Shabbat 132a:6', 'Shabbat 132a:8', 'Shabbat 132a:10', 'Shabbat 132a:15', 'Shabbat 132a:16', 'Shabbat 132a:17', 'Shabbat 132a:19', 'Shabbat 132a:20', 'Shabbat 137a:3', 'Shabbat 132b:10', 'Shabbat 133b:13', 'Shabbat 108a:10', 'Shabbat 135b:3', 'Shabbat 135b:5', 'Shabbat 135b:7', 'Yevamot 72a:7', 'Yevamot 72a:8', 'Kiddushin 29a:11', 'Sanhedrin 59b:1', 'Sanhedrin 59b:2', 'Sanhedrin 59b:9', 'Sanhedrin 59b:10', 'Sanhedrin 59b:11', 'Sanhedrin 59b:12', 'Sanhedrin 38b:11', 'Sanhedrin 44a:4', 'Avodah Zarah 27a:2', 'Avodah Zarah 27a:3', 'Avodah Zarah 27a:5', 'Avodah Zarah 27a:6', 'Menachot 42a:18', 'Menachot 42a:19', 'Berakhot 13a:5', 'Berakhot 13a:6', 'Berakhot 13a:7', 'Berakhot 13a:8', 'Berakhot 13a:9', 'Berakhot 13a:10', 'Rosh Hashanah 16b:6', 'Shabbat 105a:2', 'Makkot 24a:4', 'Chagigah 12a:15', 'Rosh Hashanah 10b:10', 'Sanhedrin 69b:13', 'Yevamot 42a:6', 'Yevamot 64a:2', 'Yevamot 100b:9', 'Mishnah Avot 5:21']
+    assert all('the_spec_against_its_run_six_and_five_the_eighth_at_three_institutions' not in f for f in m.WORLD["facts"])
+    assert 'the_thirteen_covenants_counted_off_the_ink' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Shabbat 132a:9', 'Shabbat 132b:9', 'Shabbat 132b:10', 'Shabbat 132b:11', 'Shabbat 133b:12', 'Shabbat 133b:13', 'Shabbat 133b:14', 'Shabbat 137a:2', 'Shabbat 137a:3', 'Shabbat 108a:10', 'Kiddushin 29a:12', 'Kiddushin 29a:13', 'Yevamot 72a:6', 'Yevamot 72a:7', 'Yevamot 72a:8']
     assert all('circumcision_machine_completion' not in f for f in m.WORLD["facts"])
     assert 'himol_yimol_ve_hefer' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 48:17', 'Rosh Hashanah 16b:6']
+    assert m.WITNESS_READS[12]["cites"] == ['Bereshit Rabbah 48:17', 'Rosh Hashanah 16b:6']
     assert all('alteration_census_and_name_remedy' not in f for f in m.WORLD["facts"])
     assert 'laughter_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[12]["cites"] == ['Bereshit Rabbah 47:6', 'Mekhilta DeRabbi Shimon Ben Yochai, Additions 6:2']
+    assert m.WITNESS_READS[13]["cites"] == ['Bereshit Rabbah 47:6', 'Mekhilta DeRabbi Shimon Ben Yochai, Additions 6:2']
     assert all('leave_taking_rule_and_chariot_claim' not in f for f in m.WORLD["facts"])
     assert 'ascent_from_abraham' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

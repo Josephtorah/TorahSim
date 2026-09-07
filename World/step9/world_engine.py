@@ -35,7 +35,17 @@
 #
 # Model layer; read-only over the corpus; touches no unit.
 
+import collections
 import effects_layer as FX
+import events_layer as EV      # THE EVENT-TYPE REGISTRY (D9-i): an unregistered kind refuses the tape
+
+# THE FENCE'S DEPTH BOUND (D9-ii, 2026-09-07): a daemon CONSUMES events and WRITES
+# the ledger; it never emits an event. Cascades run through LEDGER STATE (one
+# daemon's write satisfies another's condition on a later event), never through
+# a daemon submitting. So no event is ever submitted while another is being
+# consumed: the cascade depth bound is 1, and a re-entry is a daemon emitting
+# an event — reported loudly, naming the daemon, never truncated silently.
+DEPTH_BOUND = 1
 
 
 # ---- construct 1: the clock -----------------------------------------
@@ -62,6 +72,12 @@ class World:
         self.laws = []        # the daemon registry
         self.timers = []      # (fire_year, effect_dict)
         self.log = []
+        # D9-ii: every daemon's WATCH COVERAGE — events seen, events it fired on,
+        # the kinds it fired on — printed by coverage(); the zero-report law's
+        # instrument for the simulator (a daemon that never fires is visible)
+        self.watch = collections.OrderedDict()
+        self._depth = 0
+        self._consuming = None
 
     def entity(self, eid, kind='person'):
         if eid not in self.entities:
@@ -70,13 +86,39 @@ class World:
 
     # -- construct 3: dispatch — every law fires, unasked -------------
     def submit(self, event):
-        self.log.append(('EVENT', self.clock.year, event))
-        fired = 0
-        for law in self.laws:
-            for eff in law(event, self) or []:
-                fired += 1
-                self._write(eff)
-        return fired
+        EV.validate([event['kind']])                  # the tape carries registered types only
+        if self._depth >= DEPTH_BOUND:
+            raise SystemExit('THE FENCE: World.submit re-entered at depth %d (bound %d) while %s was consuming an event — '
+                             'a daemon emitted an event %r; daemons write the ledger, cascades run through ledger state'
+                             % (self._depth + 1, DEPTH_BOUND, self._consuming, event.get('kind')))
+        self._depth += 1
+        try:
+            self.log.append(('EVENT', self.clock.year, event))
+            fired = 0
+            for law in self.laws:
+                name = getattr(law, '__name__', repr(law))
+                w = self.watch.setdefault(name, {'seen': 0, 'fired': 0, 'kinds': set()})
+                w['seen'] += 1
+                self._consuming = name
+                effs = law(event, self) or []
+                self._consuming = None
+                if effs:
+                    w['fired'] += 1
+                    w['kinds'].add(event['kind'])
+                for eff in effs:
+                    fired += 1
+                    self._write(eff)
+            return fired
+        finally:
+            self._depth -= 1
+
+    def coverage(self):
+        """every daemon's watch coverage: {daemon: (events seen, events fired on, kinds fired on)}"""
+        return collections.OrderedDict((n, (w['seen'], w['fired'], sorted(w['kinds']))) for n, w in self.watch.items())
+
+    def print_coverage(self):
+        for n, (seen, fired, kinds) in self.coverage().items():
+            print('  WATCH %-22s seen %3d  fired %3d  on: %s' % (n, seen, fired, ', '.join(kinds) or '(never fired)'))
 
     def _write(self, eff):
         FX.validate([eff['effect']])
@@ -209,6 +251,20 @@ def law_goring_ox(event, world):
                         'due': None,
                         'source_law': 'F3 [INK 21:30 IM-branch]',
                         'case_source': event['case_source']})
+        return out
+    if event.get('victim_kind') == 'slave':
+        # W1 (2026-09-07): Exod 21:32 "if the ox gores a slave or a maidservant:
+        # thirty shekels of silver he shall give to his master, and the ox shall
+        # be stoned" — the fixed sum the Mishnah repeats (Bava Kamma 4:5); the
+        # victim party on the tape is the slave's master, who is paid
+        out.append({'effect': 'stoned', 'subject': event['ox'],
+                    'counterparty': None, 'amount': None, 'due': None,
+                    'source_law': 'F3 30-SHEKELS [INK 21:32 "and the ox shall be stoned"]',
+                    'case_source': event['case_source']})
+        out.append({'effect': 'gives_fixed_sum', 'subject': event['owner'],
+                    'counterparty': event['victim'], 'amount': 30, 'due': None,
+                    'source_law': 'F3 30-SHEKELS [INK 21:32 thirty shekels to his master]',
+                    'case_source': event['case_source']})
         return out
     if ox.status.get('forewarned'):
         out.append({'effect': 'pays', 'subject': event['owner'],
@@ -506,6 +562,9 @@ def run():
           ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
     timers_fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
     print('TIMERS fired: %d (the six-year term; the jubilee)' % timers_fired)
+    print('WATCH COVERAGE (D9-ii — every daemon prints what it saw and what it fired on):')
+    w.print_coverage()
+    wi.print_coverage()
     if n_ok == len(results):
         print('\nTHE SKELETON STANDS — the effect interface is fixed; '
               'span compiles now target this contract.')

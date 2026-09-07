@@ -208,6 +208,11 @@ m.pattern("azav(ish, av_ve_em) ∧ davak(ish, be_ishto) ∧ hayu(basar_echad)")
 # read, not installed
 m.witness_read("pattern_op", "noachide_family_law_crown",
                 cites=["Bereshit Rabbah 18:5", "Sanhedrin 58a:8", "Sanhedrin 58a:7", "Sanhedrin 57b:10", "Sanhedrin 58b:14", "Jerusalem Talmud Kiddushin 1:1:13", "Jerusalem Talmud Yevamot 11:2:6"])
+# witness-tier presupposed read: the_noahide_subset_inside_the_sinai_matrix
+# on the_unions_root_against_the_sanctions_engines_rows — read, not
+# installed
+m.witness_read("the_unions_root_against_the_sanctions_engines_rows", "the_noahide_subset_inside_the_sinai_matrix",
+                cites=["Sanhedrin 58a:7", "Sanhedrin 58a:8", "Sanhedrin 58b:14", "Mishnah Sanhedrin 7:4", "Mishnah Yevamot 6:6", "Yevamot 65b:3", "Yevamot 65b:4", "Kiddushin 34a:3", "Kiddushin 35a:1", "Kiddushin 35a:2", "Gittin 43b:5", "Shabbat 111a:2", "Mishnah Avodah Zarah 2:1"])
 
 # -------------------------- Gen.2.25 · CLOSING_STATE_BRIDGE ----------------
 # ‹וַיִּהְיוּ שְׁנֵיהֶם עֲרוּמִּים› (“and-they-were the-two-of-them naked”)
@@ -242,7 +247,7 @@ if __name__ == "__main__":
     assert all('three_slumbers_type_register' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['tzela']["cites"] == ['Eruvin 18a:15', 'Berakhot 61a:15', 'Berakhot 61a:16']
     assert all('face_or_tail_recorded_dispute' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ezer_kenegdo', 'merit_conditional_semantics'), ('lo_tov_verdict', 'standing_obligation_and_charity_measure'), ('eese_lo_ezer', 'orphan_groom_order'), ('birds_source_delta', 'brought_for_naming_only'), ('vayiven_build', 'capacity_law_labor_category_and_liturgy'), ('va_yevieha_el_ha_adam', 'escort_duty'), ('ish_isha_naming', 'sacred_tongue_proof'), ('pattern_op', 'noachide_family_law_crown')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ezer_kenegdo', 'merit_conditional_semantics'), ('lo_tov_verdict', 'standing_obligation_and_charity_measure'), ('eese_lo_ezer', 'orphan_groom_order'), ('birds_source_delta', 'brought_for_naming_only'), ('vayiven_build', 'capacity_law_labor_category_and_liturgy'), ('va_yevieha_el_ha_adam', 'escort_duty'), ('ish_isha_naming', 'sacred_tongue_proof'), ('pattern_op', 'noachide_family_law_crown'), ('the_unions_root_against_the_sanctions_engines_rows', 'the_noahide_subset_inside_the_sinai_matrix')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 17:3', 'Yevamot 63a:3']
     assert all('merit_conditional_semantics' not in f for f in m.WORLD["facts"])
     assert 'ezer_kenegdo' not in m.WORLD["witnessed"]
@@ -267,4 +272,7 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 18:5', 'Sanhedrin 58a:8', 'Sanhedrin 58a:7', 'Sanhedrin 57b:10', 'Sanhedrin 58b:14', 'Jerusalem Talmud Kiddushin 1:1:13', 'Jerusalem Talmud Yevamot 11:2:6']
     assert all('noachide_family_law_crown' not in f for f in m.WORLD["facts"])
     assert 'pattern_op' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sanhedrin 58a:7', 'Sanhedrin 58a:8', 'Sanhedrin 58b:14', 'Mishnah Sanhedrin 7:4', 'Mishnah Yevamot 6:6', 'Yevamot 65b:3', 'Yevamot 65b:4', 'Kiddushin 34a:3', 'Kiddushin 35a:1', 'Kiddushin 35a:2', 'Gittin 43b:5', 'Shabbat 111a:2', 'Mishnah Avodah Zarah 2:1']
+    assert all('the_noahide_subset_inside_the_sinai_matrix' not in f for f in m.WORLD["facts"])
+    assert 'the_unions_root_against_the_sanctions_engines_rows' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

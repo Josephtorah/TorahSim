@@ -98,6 +98,11 @@ m.step("Exod.33.7")
 # read, not installed
 m.witness_read("tent_renamed", "house_of_instruction",
                 cites=["Onkelos Exod 33"])
+# witness-tier presupposed read:
+# the_tents_distance_as_the_courts_the_heir_who_did_not_depart_the_knot on
+# the_presence_chapters_law_layer — read, not installed
+m.witness_read("the_presence_chapters_law_layer", "the_tents_distance_as_the_courts_the_heir_who_did_not_depart_the_knot",
+                cites=["Onkelos Exod 33:7", "Onkelos Exod 33:9-11", "Onkelos Exod 33:18-23", "Berakhot 63b:6", "Berakhot 63b:9", "Sanhedrin 5b:9", "Menachot 99b:19", "Temurah 16a:6", "Kiddushin 33b:15", "Menachot 35b:8", "Berakhot 7a:33", "Yevamot 49b:7", "Mishnah Avot 1:1"])
 
 # -------------------------- Exod.33.8 · ETNACHTA_SPLIT ---------------------
 # ‹והיה כצאת משה› (“and-be like-bring-forth Moses”)
@@ -288,20 +293,23 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ornaments_stripped', 'crowns_revoked'), ('tent_renamed', 'house_of_instruction'), ('speech_with_speech', 'anger_partition'), ('presence_goes', 'appeasement_timing'), ('vision_protocol', 'behind_not_before')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ornaments_stripped', 'crowns_revoked'), ('tent_renamed', 'house_of_instruction'), ('the_presence_chapters_law_layer', 'the_tents_distance_as_the_courts_the_heir_who_did_not_depart_the_knot'), ('speech_with_speech', 'anger_partition'), ('presence_goes', 'appeasement_timing'), ('vision_protocol', 'behind_not_before')]
     assert m.WITNESS_READS[0]["cites"] == ['Onkelos Exod 33']
     assert all('crowns_revoked' not in f for f in m.WORLD["facts"])
     assert 'ornaments_stripped' not in m.WORLD["witnessed"]
     assert m.WITNESS_READS[1]["cites"] == ['Onkelos Exod 33']
     assert all('house_of_instruction' not in f for f in m.WORLD["facts"])
     assert 'tent_renamed' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Midrash Tanchuma, Ki Tisa 27', 'Onkelos Exod 33']
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Exod 33:7', 'Onkelos Exod 33:9-11', 'Onkelos Exod 33:18-23', 'Berakhot 63b:6', 'Berakhot 63b:9', 'Sanhedrin 5b:9', 'Menachot 99b:19', 'Temurah 16a:6', 'Kiddushin 33b:15', 'Menachot 35b:8', 'Berakhot 7a:33', 'Yevamot 49b:7', 'Mishnah Avot 1:1']
+    assert all('the_tents_distance_as_the_courts_the_heir_who_did_not_depart_the_knot' not in f for f in m.WORLD["facts"])
+    assert 'the_presence_chapters_law_layer' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Midrash Tanchuma, Ki Tisa 27', 'Onkelos Exod 33']
     assert all('anger_partition' not in f for f in m.WORLD["facts"])
     assert 'speech_with_speech' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Exod 33', 'Pirkei Avot 4:18']
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Exod 33', 'Pirkei Avot 4:18']
     assert all('appeasement_timing' not in f for f in m.WORLD["facts"])
     assert 'presence_goes' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Midrash Tanchuma, Ki Tisa 27', 'Onkelos Exod 33']
+    assert m.WITNESS_READS[5]["cites"] == ['Midrash Tanchuma, Ki Tisa 27', 'Onkelos Exod 33']
     assert all('behind_not_before' not in f for f in m.WORLD["facts"])
     assert 'vision_protocol' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

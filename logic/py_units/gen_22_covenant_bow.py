@@ -114,6 +114,11 @@ m.fact("ani_noten_beini_u_veineikhem_le_dorot_olam")
 # on ledorot_clause — read, not installed
 m.witness_read("ledorot_clause", "exemptions_written_in_the_missing_letters",
                 cites=["Bereshit Rabbah 35:2"])
+# witness-tier presupposed read:
+# the_defective_generations_and_the_bow_the_remember_clause_at_two_seats on
+# the_doubled_no_more_as_an_oath — read, not installed
+m.witness_read("the_doubled_no_more_as_an_oath", "the_defective_generations_and_the_bow_the_remember_clause_at_two_seats",
+                cites=["Shevuot 36a:13", "Shevuot 36a:14", "Zevachim 116a:23", "Zevachim 116a:24", "Ketubot 77b:9", "Berakhot 59a:12", "Mishnah Avot 5:6", "Mishnah Berakhot 9:2", "Mishnah Eduyot 2:10", "Mishnah Sanhedrin 10:3", "Mishnah Nedarim 3:11", "Mishnah Avot 5:2"])
 
 # -------------------------- Gen.9.13 · MY_BOW_IN_THE_CLOUD -----------------
 # ‹אֶת־קַשְׁתִּי נָתַתִּי בֶּעָנָן› (“obj-marker My-bow I-have-set in-the-
@@ -229,17 +234,20 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['address_widened']
     assert m.WORLD["witnessed"]['address_widened']["cites"] == ['Bereshit Rabbah 35:1']
     assert all('demotion_or_elevation' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ledorot_clause', 'exemptions_written_in_the_missing_letters'), ('bow_sign', 'placed_not_made'), ('never_again_oath', 'standing_law_with_disputed_scope'), ('ve_lo_yihye_od', 'no_is_oath')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('ledorot_clause', 'exemptions_written_in_the_missing_letters'), ('the_doubled_no_more_as_an_oath', 'the_defective_generations_and_the_bow_the_remember_clause_at_two_seats'), ('bow_sign', 'placed_not_made'), ('never_again_oath', 'standing_law_with_disputed_scope'), ('ve_lo_yihye_od', 'no_is_oath')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 35:2']
     assert all('exemptions_written_in_the_missing_letters' not in f for f in m.WORLD["facts"])
     assert 'ledorot_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Pirkei Avot 5:6', 'Mekhilta DeRabbi Shimon Ben Yochai 31:6']
+    assert m.WITNESS_READS[1]["cites"] == ['Shevuot 36a:13', 'Shevuot 36a:14', 'Zevachim 116a:23', 'Zevachim 116a:24', 'Ketubot 77b:9', 'Berakhot 59a:12', 'Mishnah Avot 5:6', 'Mishnah Berakhot 9:2', 'Mishnah Eduyot 2:10', 'Mishnah Sanhedrin 10:3', 'Mishnah Nedarim 3:11', 'Mishnah Avot 5:2']
+    assert all('the_defective_generations_and_the_bow_the_remember_clause_at_two_seats' not in f for f in m.WORLD["facts"])
+    assert 'the_doubled_no_more_as_an_oath' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Pirkei Avot 5:6', 'Mekhilta DeRabbi Shimon Ben Yochai 31:6']
     assert all('placed_not_made' not in f for f in m.WORLD["facts"])
     assert 'bow_sign' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ["Tosefta Ta'anit 2:11", 'Sifrei Devarim 343:9']
+    assert m.WITNESS_READS[3]["cites"] == ["Tosefta Ta'anit 2:11", 'Sifrei Devarim 343:9']
     assert all('standing_law_with_disputed_scope' not in f for f in m.WORLD["facts"])
     assert 'never_again_oath' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Shevuot 36a:12', 'Shevuot 36a:13', 'Shevuot 36a:14']
+    assert m.WITNESS_READS[4]["cites"] == ['Shevuot 36a:12', 'Shevuot 36a:13', 'Shevuot 36a:14']
     assert all('no_is_oath' not in f for f in m.WORLD["facts"])
     assert 've_lo_yihye_od' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

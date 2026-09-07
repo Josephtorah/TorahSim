@@ -583,6 +583,12 @@ m.witness_read("what_is_yours_shall_be_yours", "ratification_by_the_losing_signa
 # read, not installed
 m.witness_read("lo_yokhlu_venei_yisrael", "sinew_scope",
                 cites=["Chullin 90b:3", "Chullin 90b:4", "Chullin 90b:5"])
+# witness-tier presupposed read:
+# the_first_sons_of_israel_and_the_article_as_the_distinguished_member on
+# the_sinew_has_no_sinai_seat_and_the_census_shows_the_absence — read, not
+# installed
+m.witness_read("the_sinew_has_no_sinai_seat_and_the_census_shows_the_absence", "the_first_sons_of_israel_and_the_article_as_the_distinguished_member",
+                cites=["Mishnah Chullin 7:1", "Mishnah Chullin 7:2", "Mishnah Chullin 7:3", "Mishnah Chullin 7:6", "Chullin 89b:3", "Chullin 90b:4", "Chullin 91a:12", "Chullin 91a:14", "Chullin 92b:2", "Chullin 96a:11", "Chullin 100b:3", "Chullin 100b:14", "Chullin 101a:3", "Chullin 134b:16", "Horayot 12a:16", "Kiddushin 21b:11", "Keritot 21a:12", "Makkot 21b:10", "Pesachim 22a:3", "Berakhot 13a:11", "Chullin 92a:4", "Chullin 91b:4", "Chullin 91b:5", "Chullin 91a:22", "Chullin 91a:23", "Chullin 91b:13", "Sanhedrin 95b:3"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -603,7 +609,7 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['sinew_law_provenance']
     assert m.WORLD["witnessed"]['sinew_law_provenance']["cites"] == ['Mishnah Chullin 7:6']
     assert all('sinai_or_the_sons_of_jacob' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('my_lord_eight_times', 'priced_in_dynasties_and_paid_at_gen_59'), ('the_embassy', 'criticized_by_the_chain_against_its_own_subject'), ('divided_the_camp', 'risk_distribution_maxim_minted_here'), ('God_of_my_fathers_and_not_of_esau', 'descent_does_not_secure_the_name'), ('i_am_small', 'merit_as_a_finite_balance_drawn_down'), ('katonti', 'miracle_reliance'), ('the_plea', 'argued_from_a_statute_not_yet_given'), ('who_prevailed', 'ignorance_stated_then_decided_by_a_verb'), ('release_me', 'precedence_table_and_a_penalty_in_the_angels_mouth'), ('the_new_name', 'etymology_refused_by_the_translation'), ('why_ask_my_name', 'a_class_with_no_fixed_names'), ('the_sun_rose_for_him', 'borrowed_hours_repaid_with_interest'), ('the_sinew', 'first_food_prohibition_with_an_admitted_self_stringency'), ('sinew_law_provenance', 'repeated_at_sinai_framework'), ('what_is_yours_shall_be_yours', 'ratification_by_the_losing_signatory'), ('lo_yokhlu_venei_yisrael', 'sinew_scope')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('my_lord_eight_times', 'priced_in_dynasties_and_paid_at_gen_59'), ('the_embassy', 'criticized_by_the_chain_against_its_own_subject'), ('divided_the_camp', 'risk_distribution_maxim_minted_here'), ('God_of_my_fathers_and_not_of_esau', 'descent_does_not_secure_the_name'), ('i_am_small', 'merit_as_a_finite_balance_drawn_down'), ('katonti', 'miracle_reliance'), ('the_plea', 'argued_from_a_statute_not_yet_given'), ('who_prevailed', 'ignorance_stated_then_decided_by_a_verb'), ('release_me', 'precedence_table_and_a_penalty_in_the_angels_mouth'), ('the_new_name', 'etymology_refused_by_the_translation'), ('why_ask_my_name', 'a_class_with_no_fixed_names'), ('the_sun_rose_for_him', 'borrowed_hours_repaid_with_interest'), ('the_sinew', 'first_food_prohibition_with_an_admitted_self_stringency'), ('sinew_law_provenance', 'repeated_at_sinai_framework'), ('what_is_yours_shall_be_yours', 'ratification_by_the_losing_signatory'), ('lo_yokhlu_venei_yisrael', 'sinew_scope'), ('the_sinew_has_no_sinai_seat_and_the_census_shows_the_absence', 'the_first_sons_of_israel_and_the_article_as_the_distinguished_member')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 75:11']
     assert all('priced_in_dynasties_and_paid_at_gen_59' not in f for f in m.WORLD["facts"])
     assert 'my_lord_eight_times' not in m.WORLD["witnessed"]
@@ -651,4 +657,7 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[15]["cites"] == ['Chullin 90b:3', 'Chullin 90b:4', 'Chullin 90b:5']
     assert all('sinew_scope' not in f for f in m.WORLD["facts"])
     assert 'lo_yokhlu_venei_yisrael' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[16]["cites"] == ['Mishnah Chullin 7:1', 'Mishnah Chullin 7:2', 'Mishnah Chullin 7:3', 'Mishnah Chullin 7:6', 'Chullin 89b:3', 'Chullin 90b:4', 'Chullin 91a:12', 'Chullin 91a:14', 'Chullin 92b:2', 'Chullin 96a:11', 'Chullin 100b:3', 'Chullin 100b:14', 'Chullin 101a:3', 'Chullin 134b:16', 'Horayot 12a:16', 'Kiddushin 21b:11', 'Keritot 21a:12', 'Makkot 21b:10', 'Pesachim 22a:3', 'Berakhot 13a:11', 'Chullin 92a:4', 'Chullin 91b:4', 'Chullin 91b:5', 'Chullin 91a:22', 'Chullin 91a:23', 'Chullin 91b:13', 'Sanhedrin 95b:3']
+    assert all('the_first_sons_of_israel_and_the_article_as_the_distinguished_member' not in f for f in m.WORLD["facts"])
+    assert 'the_sinew_has_no_sinai_seat_and_the_census_shows_the_absence' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

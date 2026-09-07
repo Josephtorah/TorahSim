@@ -12,7 +12,7 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chc(_P, 'grade', 2, 2)
-assert GUARDED == 9, ('the guard counted %d expectations, the tripwire holds 9' % GUARDED)
+assert GUARDED == 10, ("the guard counted %d expectations, the tripwire holds 10" % GUARDED)
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys
 
@@ -67,9 +67,68 @@ R.append(grade('the miscarriage valuation', 'Mishnah Bava Kamma 5:4', [
      'INK-PATTERN Exod 21:22 opens "when MEN strive" + ANSWER-KEY [same mishnah: the ox that struck her — exempt]', 'INK'),
 ]))
 
+# ---- THE WRAP (W1 THE EXODUS LAW, D9-iii, 2026-09-07) — the daemon and the scene --------------
+# The three case heads this pass compiled, as watched types of event_vocabulary.yaml: the seducer
+# (22:15-16), the maimed slave (21:26-27), the struck pregnant woman (21:22). The daemon writes the
+# ledger and never emits an event; every effect is registry-validated at write time.
+import io, contextlib, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import world_engine as WE
+def law_mishpatim_2(event, world):
+    """Exod 22:15-16, 21:26-27, 21:22 (cold_run_mishpatim_2.py — the seducer, the freed limbs, the miscarriage)."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'virgin_seduced':
+        out = [E_('gives_fixed_sum', event['seducer'], cp=event['father'], value='FETCH-50', law='the seducer: FINE [INK 22:15-16 "he shall weigh silver like the dowry of the virgins" — the amount a POINTER to Deut 22:29, Ketubot 29b:3]'),
+               E_('pays', event['seducer'], cp=event['father'], value='humiliation', law='the seducer: TABLE [ANSWER-KEY Mishnah Ketubot 3:4]'),
+               E_('pays', event['seducer'], cp=event['father'], value='degradation', law='the seducer: TABLE [ANSWER-KEY Mishnah Ketubot 3:4]')]
+        if event.get('raped'):
+            out.append(E_('pays', event['seducer'], cp=event['father'], value='pain', law='the rapist adds PAIN [ANSWER-KEY Mishnah Ketubot 3:4]'))
+        return out
+    if k == 'slave_maimed':
+        if event['limb'] in ('eye', 'tooth') or not event.get('regenerates', True):
+            return [E_('released', event['slave'], cp=event['master'], value=event['limb'], law='freed limbs [INK 21:26-27 "he shall send him free for his eye... for his tooth"]'),
+                    E_('goes_free', event['slave'], law='freed limbs: CLASS-24 [RECORDED Kiddushin 24a:6: the exemplars generalized to the limb-tips; Mishnah Negaim 6:7]')]
+        return []                                                # a limb that grows back: no exemplar reaches it
+    if k == 'pregnant_woman_struck':
+        if event.get('actor_kind', 'person') != 'person':
+            return [E_('exempt', event['striker'], law='miscarriage: PERSON-ONLY [INK-PATTERN 21:22 "when MEN strive"; ANSWER-KEY Mishnah Bava Kamma 5:4: the ox that struck her — exempt]')]
+        return [E_('fined_by_assessment', event['striker'], cp=event['husband'], amount=event['value_before'] - event['value_after'], law='miscarriage: JUDGES + DIFF-VALUE [INK 21:22 "he shall give by the judges"; ANSWER-KEY Mishnah Bava Kamma 5:4: her worth before and after]')]
+    return []
+
+def scene():
+    """THE SCENE — the recorded cases replayed on the world engine (clock unit: days)."""
+    with contextlib.redirect_stdout(io.StringIO()):
+        w = WE.World(era='Mishpatim pass 2: Ketubot 3:4, Kiddushin 24a, Bava Kamma 5:4 on the engine (clock unit: days)')
+        w.laws = [law_mishpatim_2]
+        w.advance(1)
+        w.submit({'kind': 'virgin_seduced', 'subject': 'the-seducer', 'seducer': 'the-seducer', 'father': 'her-father', 'raped': False, 'case_source': 'Mishnah Ketubot 3:4 — the seducer pays three'})
+        w.submit({'kind': 'virgin_seduced', 'subject': 'the-rapist', 'seducer': 'the-rapist', 'father': 'her-father', 'raped': True, 'case_source': 'Mishnah Ketubot 3:4 — the rapist pays four'})
+        w.advance(2)
+        w.submit({'kind': 'slave_maimed', 'subject': 'the-master', 'master': 'the-master', 'slave': 'the-slave', 'limb': 'eye', 'case_source': 'Exod 21:26 — the eye; Kiddushin 24a'})
+        w.submit({'kind': 'slave_maimed', 'subject': 'the-master', 'master': 'the-master', 'slave': 'the-maidservant', 'limb': 'tooth', 'case_source': 'Exod 21:27 — the tooth; Kiddushin 24a'})
+        w.submit({'kind': 'slave_maimed', 'subject': 'the-master', 'master': 'the-master', 'slave': 'the-second-slave', 'limb': 'hair', 'regenerates': True, 'case_source': 'Kiddushin 24a — a limb that grows back: no exemplar'})
+        w.advance(3)
+        w.submit({'kind': 'pregnant_woman_struck', 'subject': 'the-striker', 'striker': 'the-striker', 'actor_kind': 'person', 'husband': 'her-husband', 'value_before': 200, 'value_after': 150, 'case_source': 'Mishnah Bava Kamma 5:4 — her worth before and after'})
+        w.submit({'kind': 'pregnant_woman_struck', 'subject': 'the-ox-owner', 'striker': 'the-ox-owner', 'actor_kind': 'ox', 'husband': 'her-husband', 'value_before': 200, 'value_after': 150, 'case_source': 'Mishnah Bava Kamma 5:4 — the ox that struck her: exempt'})
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    amt = lambda eid, eff: sum(e['amount'] or 0 for e in w.entity(eid).ledger if e['effect'] == eff)
+    return (n('the-seducer', 'gives_fixed_sum'), n('the-seducer', 'pays'), n('the-rapist', 'gives_fixed_sum'), n('the-rapist', 'pays'),
+            n('the-slave', 'released'), n('the-slave', 'goes_free'), n('the-maidservant', 'released'), n('the-maidservant', 'goes_free'), n('the-second-slave', 'released'),
+            n('the-striker', 'fined_by_assessment'), amt('the-striker', 'fined_by_assessment'), n('the-ox-owner', 'exempt'), n('the-ox-owner', 'fined_by_assessment'), w.clock.year), w
+SCENE, _W = scene()
+wrap_cells = [
+    ('THE SCENE on the world engine (the wrap)', SCENE, (1, 2, 1, 3, 1, 1, 1, 1, 0, 1, 50, 1, 0, 3),
+     'RECORDED — the answer sheet\'s rows as the tape: Ketubot 3:4 (the seducer three, the rapist four), Kiddushin 24a (eye, tooth; the regenerating limb no exemplar), Bava Kamma 5:4 (the difference; the ox exempt)', 'RECORDED'),
+]
+R.append(grade('THE WRAP — the daemon on the recorded cases', 'Ketubot 3:4 + Kiddushin 24a + Bava Kamma 5:4', wrap_cells))
+print('WATCH COVERAGE (the wrap):')
+_W.print_coverage()
+print()
+
 ok = sum(a for a, _ in R); n = sum(b for _, b in R)
 print('=' * 60)
-print('PASS 2: %d/%d  |  RUNNING TOTAL with passes 1+guardians: %d/44' % (ok, n, 35 + ok))
+print('PASS 2: %d/%d cells  |  RUNNING TOTAL with passes 1+guardians: %d/44' % (ok, n, 35 + ok))
 print('PASS-2 FRACTIONS: INK %d | RECORDED %d | ROUTED/IMPORT %d'
       % (TOTAL['INK'], TOTAL['RECORDED'], TOTAL['ROUTED/IMPORT']))
 
@@ -85,6 +144,7 @@ EFFECTS = [
     ('miscarriage: JUDGES assess',       ['fined_by_assessment']),
     ('miscarriage: DIFF-VALUE algorithm', [FX.NONE]),
     ('miscarriage: PERSON-ONLY (ox actor exempt)', ['exempt']),
+    ('THE SCENE (the wrap)',             ['gives_fixed_sum', 'pays', 'released', 'goes_free', 'fined_by_assessment', 'exempt']),
 ]
 print('\nEFFECTS — the state changes each cell writes:')
 used = []

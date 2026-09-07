@@ -682,3 +682,322 @@ left palm' and on 'so shall you bless' with 'and Aaron lifted'; the
 inclusion by the repeated term (Rav's arm) against the governance rule
 that bars learning from the hour (Shmuel's arm) — logged in
 logic/MIDDOT.md's case law as a rule about which seats may teach.
+
+Exemplar (6), THE ORDER — the second form (2026-09-06, sitting E2,
+cold_run_sanctuary_build.py): the SPEC writes the vessels first (the
+ark, Exod 25:10) and the house after (the curtains, 26:1); the RUN
+builds the house first (36:8) and reaches the ark at 37:1, and no
+verse of either stratum says why. Berakhot 55a:12 — God told Moses
+'make Me a TABERNACLE, an ARK, and VESSELS'; Moses reversed it;
+Bezalel: 'the custom of the world is that a man builds a house and
+then brings vessels into it... perhaps the Holy One said tabernacle,
+ark, vessels?' — 'perhaps you were in God's shadow (בְּצֵל אֵל, "in
+the shadow of God") and knew.' The run's order is the ORIGINAL
+command and the spec's written order the messenger's inversion: the
+run gives the spec not a column but its SEQUENCE. The spine's
+recension (Midrash Tanchuma, Vayakhel 6:5; Buber 8:3) carries the
+roles reversed — Bezalel ark-first against Moses house-first — a
+two-recension dispute over which scheduling argument the exchange
+carried; both tracks carried, the ink of 36-37 beside them. The
+alignment engine that surfaced the gap (every run verse matched to
+its spec verse by token; the order of first mention computed in each
+stratum) is the compile's own instrument for this move: the run's
+divergences from the spec are the seats where the tradition's
+reading is sought per gap.
+
+(7) THE PARAMETER (2026-09-06, sitting E3 — the vestments' spec Exod 28
+graded against its run Exod 39): the spec's tunic verse (28:39) writes
+'fine linen' (שש, "fine linen") twice — the tunic, the turban — and
+gives the sash no material; the run's 39:27-29 writes it FIVE times.
+Babylonian Talmud Yoma 71b:6 derives the SIXFOLD THREAD from the run's
+five tokens ('one for flax, one for sixfold, one for twined, one for
+the other garments, one to make it indispensable'), and the number is
+the word's own homograph: שש "fine linen" IS שש "six" in the unpointed
+text — the material-word read as its numeral. The run's 39:24 ADDS
+'twined' (משזר, "twined") to the pomegranates the spec's 28:33 lacks,
+and Yoma 71b:10 derives the twined EIGHT from that added token. The
+run's 39:3 — 'they beat the gold plates and cut threads to work into
+the blue, into the purple...' — has no spec counterpart and four of its
+tokens stand nowhere else in the Bible; Yoma 72a:6-7 derives the gold
+thread's count (four) and its placement (one into each color) from it,
+closing the breastplate and ephod at twenty-eight. The tradition's
+thread counts run on Exod 39, not Exod 28: THE RUN SUPPLIES THE SPEC'S
+PARAMETER — the third form of the move (a column at D8, an order at
+E2, a parameter here). Zevachim 88b:2 does it in citation form: 'the
+robe was wholly of blue, AS IT IS SAID (Exod 39:22) and he made the
+robe...' — the run verse cited for the spec's fact. The compile's
+instrument is the same alignment engine: the run's ADDED tokens (found
+by the per-block token diff) are the seats where the recorded
+derivation is sought.
+
+(8) THE DELTA (2026-09-06, sitting E4 — the investiture spec Exod 29
+graded against its run Lev 8 across books): the spec girds Aaron AND
+his sons in ONE verb — 29:9 'and you shall gird THEM with the sash,
+Aaron and his sons' (וחגרת אתם, "and you shall gird them") — and the
+run girds HIM twice at 8:7 (the sash, then the ephod's band: ויחגר
+אתו, "and he girded him") and THEM once at 8:13 (ויחגר אתם, "and he
+girded them"). Babylonian Talmud Yoma 5b:9 argues the dressing order
+on exactly that split: Abaye — for the tunic and the turban all agree
+Aaron then his sons, 'for both in the COMMAND and in the DOING Aaron
+precedes'; the SASH is disputed — one says Aaron then his sons from
+the run's two verbs, one says together from the spec's one verb. The
+alignment engine's dropped token (29:9, no run verse matched) is the
+sugya's ground: THE SPEC/RUN DELTA IS WHERE THE TRADITION ARGUES — the
+fourth form of the move (a column at D8, an order at E2, a parameter
+at E3, the delta here). The run's other deltas of the same sitting
+carry the same shape: it INSERTS another spec's run (Lev 8:10-11, the
+anointing list of Exod 30:26-29, with a sevenfold sprinkling the spec
+never states), ADDS its own limiters (8:35 'keep the LORD's charge...
+for so I was commanded' — Yoma 5b:2's two indispensability tokens),
+and DROPS the laws for the generations (the dues 29:27-28, the
+succession 29:29-30, the tamid and the Presence 29:38-46). The
+compile's instrument: the per-block alignment with a BOOK field, and
+the per-verse token diff at the blocks that match least.
+
+(9) THE PARAMETER AGAIN, AND THE ADDED CLAUSE (2026-09-06, sitting E5 —
+the erection Exod 40 as the whole spec's run; the craftsmen's call
+Exod 31:1-11 against its run 35:30-35): the laver's spec (30:18-21)
+writes NO measure, and its run adds one token to the spec's washing
+verse — 40:31 'and MOSES and Aaron and his sons washed from it'
+(ורחצו ממנו משה ואהרן ובניו, "and Moses and Aaron and his sons washed
+from it") matches 30:19 at 0.89 with the one name added — and the
+tradition computes the vessel's MINIMUM from the added subject:
+'a laver without enough water to sanctify FOUR priests from it — one
+does not sanctify from it' (Babylonian Talmud Zevachim 21b:12; Moses,
+Aaron, and the plural's minimum two), with the high priest's rule
+beside it, 'what is indispensable in his sons is indispensable in
+him' (19b:9). And the run of the craftsmen's call ADDS a clause the
+spec lacks — 35:34 'and TO TEACH He put in his heart' (ולהורת נתן
+בלבו, "and to teach He put in his heart"), absent from 31:6 — the
+sanctuary engine's teaching cell reads it from the run. The compile's
+instrument: the alignment's per-verse token diff at the pair that
+matches BEST (the one-token delta is the parameter's seat).
+
+Exemplar (10), registered 2026-09-06 (sitting G1, cold_run_pre_sinai.py)
+— THE FIRST CHAPTER IS THE FIRST SPEC/RUN PAIR: Genesis 1's nine
+commands ('and God said') each against its execution clause, aligned
+by token, and every deviation a sugya's ground — 'fruit tree making
+fruit' (1:11, the spec) against 'tree making fruit' (1:12, the run) is
+R. Eliezer's Tishrei and R. Yehoshua's Nisan, each dating creation
+from ONE of the two seats and answering the other's token (Rosh
+Hashanah 11a:3-6), and the run's second 'after its kind' the grasses'
+own a-fortiori (Chullin 60a:10-12); 'the TWO GREAT lights' against
+'the great... the SMALL' inside 1:16 the moon's diminishing (Chullin
+60b:2-4); 'in OUR image, after our likeness' (1:26) against 'in HIS
+image' with the likeness dropped and 'male and female' added (1:27)
+the heretics' refutation by the singular beside the plural (Sanhedrin
+38b:14) and the one-or-two creations (Ketubot 8a:9, Eruvin 18a:23,
+Berakhot 61a:14); the beasts' order swapped (1:24/1:25); the waters'
+command executed by 'and it was so' alone (1:9); 'let the WATERS
+swarm... fowl' (1:20) against 'formed from the GROUND every fowl'
+(2:19) resolved 'from the mud' (Chullin 27b:11). The machine's form:
+the alignment engine's per-pair token delta as the cell's value, the
+sugya on each delta on a [MOVE] line. The move's oldest exemplar sits
+in the Torah's first chapter.
+
+Exemplar (11), registered 2026-09-06 (sitting G2, cold_run_family.py)
+— THE RETOLD RUN AS A THIRD SEAT: the servant's commission (Gen 24:2-9,
+the spec), its run at the well (24:10-27), and the servant's own
+RETELLING of both (24:34-49) aligned by token, and the retelling's
+deltas are the sugyot's ground — 'perhaps' written PLENE at the
+commission (24:5, אולי, "perhaps") and DEFECTIVE at the retelling
+(24:39, אלי, "perhaps" spelled as "to me"), read by the spine (Bereshit
+Rabbah 59:9) as the agent's own daughter and legislated by Mishnah
+Kiddushin 3:1's agent who takes the bride for himself; 'the girl' (24:14,
+הנער) retold as 'the maiden' (24:43, העלמה — Isaiah 7:14's token); the
+ring given and THEN the lineage asked (24:22-23) retold as asked and
+THEN given (24:47); the God clause retold with 17:1's walk; the double
+condition's two seats (24:8 and 24:41 — Kiddushin 61b:10-12). The
+machine's form: the alignment engine on three seats of one chapter —
+cold_run_family.commission('retold_prayer', 'retold_commission',
+'perhaps_two_spellings', 'gifts_two_moments', 'retold_god_clause') —
+the retold run diffed against both the spec and the run.
+
+## M-23 — THE SECOND SEAT'S DELTA (a law written twice is diffed seat against seat, and the second writing's additions, drops, moves, and doublings legislate)
+Registered 2026-09-06 (sitting E5 of the compile debt,
+cold_run_erection.py) from EIGHT exemplars in one span. The teacher
+holds a law at TWO SEATS — the same institution written twice by the
+same book (Exodus 34:18-26 repeating 23:12-19 and 13:12-13) — and
+reads the SECOND writing against the FIRST: what the second seat
+ADDS is a new clause, what it DROPS narrows, what it MOVES is read
+where it now stands, and what it DOUBLES (a token once at each seat)
+is counted as a repetition. Move M-22 found that the spec/run delta
+is where the tradition argues; this move is the same finding at the
+register of law written twice — spec against spec. The compile's own
+direction: the calendar and Passover engines' functions are CALLED
+TWICE (the same cold functions at the second seat), the clause-pairs
+aligned by token overlap (Jaccard: the kid clause 1.0, the matzah and
+the appearing 0.7, the rest and the feasts about 0.25), and the
+per-verse token diff typed as the cell's value. Exemplar (1), THE
+ADDED TOKENS: 34:21 'in PLOWING and in HARVEST you shall rest'
+(בחריש ובקציר תשבת, "in plowing and in harvest you shall rest"),
+absent from 23:12 — read three ways: R. Akiva's added sabbatical (the
+plowing of the eve that enters the seventh, Makkot 8b:3, Moed Katan
+3b:13), R. Yishmael's omer harvest excluded (Menachot 72a:12), the
+labors divided (Shabbat 70a:4) — Mishnah Sheviit 1:4 carrying both
+readings. Exemplar (2), THE DOUBLING ACROSS SEATS: 'the firstling of a
+donkey' (פטר חמר, "peter chamor") at 13:13 and (ופטר חמור) at 34:20 —
+'peter chamor, peter chamor, TWICE: until the bearer is a donkey and
+the born a donkey' (Bekhorot 5b:7, Mishnah Bekhorot 1:2; 6a:1: not
+horses and camels); and 'you shall redeem' (תפדה, "tifdeh") three
+times at each seat — 'tifdeh tifdeh: at once, with any amount' (10b:27),
+'includes' (12a:3). Exemplar (3), THE MOVED CLAUSE: 'and they shall
+not appear before Me empty' (ולא יראו פני ריקם, "and they shall not
+appear before Me empty") at exactly two seats — closing the matzah
+feast at 23:15, closing the firstborn's redemption at 34:20 — read at
+its NEW seat: the son's redemption a standing liability like the
+appearance offering, the heirs liable (Bekhorot 51b:8, 51b:11); the
+clause ORDER 'redeem, then appear' (Kiddushin 29b:5); and exported to
+the Hebrew slave's severance gift, five selas (Kiddushin 17a:7).
+Exemplar (4), THE REVOCALIZED VERB of the moved verse: 'tifdeh' read
+'tipadeh' — he redeems himself, sons not daughters (Kiddushin 29a:17;
+move M-16 riding this one). Exemplar (5), THE ADDED NOUN: 34:22 'the
+first fruits of the WHEAT harvest' (בכורי קציר חטים) fixes the two
+loaves' grain, the first seat's 'the first fruits of your labors'
+covering the barley (Menachot 84b:4). Exemplar (6), THE ADDED
+NOUN-CHAIN: 34:25 'the SACRIFICE of the FEAST of the Passover shall not
+remain to the morning' (זבח חג הפסח) for 23:18's 'the fat of My feast'
+— ben Teima's chagigah of the fourteenth (Pesachim 70a:5); and 'My
+sacrifice' (זבחי) at the two seats read as ONE DOUBLED TOKEN —
+'zevach zevachai' (Pesachim 64a:6; R. Yehuda's tamid from the same
+token, 64a:5; Mishnah Pesachim 5:4's two arms). Exemplar (7), THE
+INSERTED NEIGHBOR: 34:17 'molten gods you shall not make' stands
+before 34:18's feast where 23:14-15 has no idol clause — 'whoever
+despises the festivals is as an idolater, for it is written... and
+NEXT TO IT' (Makkot 23a:4, Pesachim 118a:12): the second seat's added
+adjacency legislates. Exemplar (8), THE GENERAL AND ITS PARTICULARS on
+the second seat's own tokens: 34:19-20 'ALL your cattle... ox and
+sheep... and a donkey' — only those three (Bekhorot 6a:6). **Distinct
+from** M-14 (the doubling arithmetic within one passage — here the
+doubling is the repetition of a whole seat), from M-18 (the freed
+token given to a neighbor — here the clause is MOVED by the ink
+itself, not reassigned by the reader), and from M-22 (spec against
+run — here spec against spec). **Machine form:** the runner's
+repeats() cells hold the per-pair token diff as their value (the
+alignment engine's delta), the calendar engine's cells fetched by call
+beside them, and the sugya on each delta on a [MOVE] line; the
+census also records what the second seat's spelling changes (the
+ingathering plene, 'as I commanded you' without the comparative kaf).
+**Middah correspondence:** the inclusion by repetition (the doubled
+token as ribbui), the general-and-particular (I4), the juxtaposition
+(semukhin) at the inserted neighbor, and the word-order read (M-11)
+at the moved clause — four middot riding one diff.
+
+Exemplar (9), registered 2026-09-06 (sitting G1) — THE THIRD SEAT:
+the creation-rest clause written THREE times — Genesis 2:2-3 'He
+CEASED' (וישבת, "and He ceased"), Exodus 20:11 'He RESTED' (וינח, "and
+He rested"), Exodus 31:17 'He ceased and WAS REFRESHED' (שבת וינפש,
+"He ceased and was refreshed") — diffed pairwise by the alignment
+engine (the Decalogue's seat a retelling: added 18, dropped 22; the
+sign's seat: added 8, dropped 14), and the ONE token the third seat
+adds is Beitzah 16a:12's extra soul ('since He ceased — woe, the soul
+is lost'). The watch the E5 tail set for Deuteronomy's third seats
+answered a book early: a clause's third writing is diffed against
+BOTH earlier seats, and what only the third seat carries legislates.
+Machine form: cold_run_pre_sinai.sabbath('delta_20_11', 'delta_31_17',
+'extra_soul_by_call') — the third seat's cell fetched from the sign
+chapter's engine by live call.
+
+Exemplar (10), registered 2026-09-06 (sitting G2, cold_run_family.py)
+— THE DELTA ON AN INSTITUTION'S PARAMETER: the levirate at its first
+seat (Gen 38:8, 'raise up SEED for your brother' — זרע, "seed", once at
+38:8 and twice at 38:9) against its Sinai seat (Deut 25:5-6, 'shall rise
+on the NAME of his brother' — שם, "name", at 25:6 and 25:7, no 'seed'):
+the OBJECT changes (seed to name, resolved to inheritance by the family
+runner's own 48:6 — Yevamot 24a:6), the KIN-SCOPE narrows (the kinsman —
+Judah the father-in-law, Ruth 4's redeemer — to the brother: 'brothers
+dwell together', the daughter-in-law an ervah among Yevamot 1:1's
+fifteen), and a RELEASE FORM is added (the shoe — Ruth 4:7's 'formerly
+in Israel' the run citing a custom the first seat never wrote). Two more
+of the same shape in the sitting: the deed (23:17-20) restated at
+49:29-32 and 50:13 (the record's tokens kept, the buried named), and
+the firstborn's phrase 'the beginning of my vigor' (49:3) at Deut 21:17
+with the DOUBLE added. Machine form:
+cold_run_family.levirate('seed_vs_name', 'levirate_alignment',
+'kin_scope_narrowed', 'no_release_form'); purchase('deed_restated',
+'deed_alignment'); testament('firstborn_alignment').
+
+## M-24 — THE REPETITION TEST (a law's scope across eras is decided by whether the code writes it twice; the second writing is the edge)
+Registered 2026-09-06 (sitting G1 of the compile debt,
+cold_run_pre_sinai.py) from the tradition's own stated rule and five
+exemplars. R. Yosei son of R. Chanina (Sanhedrin 59a:11-12): 'every
+command said to the sons of Noah and REPEATED at Sinai was said to
+both; said to the sons of Noah and NOT repeated at Sinai — to Israel
+and not to the sons of Noah; and we have only the sinew, per R.
+Yehuda.' The rule decides SCOPE by COUNTING SEATS: a pre-Sinai law
+binds the nations only if the code writes it a second time at Sinai;
+a law written once before Sinai and never again passes to Israel
+alone. The machine's form is the dependency gate itself — an edge from
+the pre-Sinai runner into a Sinai engine exists exactly where the law
+was repeated, and the repetition's seat is what the cell fetches by
+live call: the seven laws each to their Sinai home (the courts to the
+ordinances engine's Exod 23:2, blasphemy to Lev 24:15-16, idolatry to
+the ordinances engine's Exod 22:19, the unions to the sanctions
+engine's Lev 18/20 rows, bloodshed to Exod 21:12 and Lev 24:17,
+robbery to the holiness engine's Lev 19:11-13, the limb to the
+sanctions engine's Lev 17:14 — 'its blood in its life' at Gen 9:4 and
+Lev 17:14 alone in the Tanakh, the two tokens swapped, the census's
+edge in both directions). Exemplar (1), THE REPETITION WITH A JOB:
+circumcision, said to Abraham (17:9 'and YOU shall keep My covenant')
+and repeated at Sinai (Lev 12:3 'on the eighth day') — yet Israel's
+alone, because 'that repetition came to PERMIT THE SABBATH: on the
+DAY, even the Sabbath' (59b:1-2): a second seat whose added job
+exhausts it does not widen the scope. Exemplar (2), the same shape at
+procreation: said to Noah (9:7) and repeated at Sinai (Deut 5:27
+'return to your tents') — the repetition came for the counted-body
+principle (59b:3-4); Israel's by the framework. Exemplar (3), THE
+NEVER-REPEATED: the sinew (Gen 32:33), never written again — Israel's
+alone (59a:12; Mishnah Chullin 7:6 'said at Sinai, written in its
+place' the sages' reverse account: sitting G2's). Exemplar (4), THE
+SCOPE READ OFF THE ADDRESSEE: 'you and your seed after you' (17:9) —
+no one else (59b:9); the seed narrowed by 'in Isaac' (21:12) and 'in
+Isaac, not all of Isaac' (59b:10-11), widened by 'he has broken'
+(17:14) to the sons of Keturah (59b:12). Exemplar (5), THE NEGATIVE
+BOUNDARY STATED BY THE CODE'S OWN LAW: the fat (Lev 7:23-25) — 'Israel
+exhorted, NOT the sons of Noah; the a-fortiori from the limb refuted
+by the children of Israel' (Sifra Tzav Section 10 1, the Tzav
+engine's cold cell fetched by call): a Sinai law with no pre-Sinai
+seat stays Israel's, and the tradition says so at the law's own seat.
+**What separates it:** from M-23 (the second seat's DELTA legislates
+content; here the second seat's EXISTENCE legislates scope), from
+M-07 (an import across spans; here the rule about which spans may
+import at all), and from M-22 (the run teaches the spec; here the
+repetition teaches the addressee). **Middah correspondence:** the
+'general and particular' family read across ERAS rather than clauses;
+the counted-body principle (59b:4) as its own recorded exception.
+
+Exemplar (3) CONFIRMED, 2026-09-06 (sitting G2, cold_run_family.py):
+the sinew's token homed at the family runner alone — the dependency
+census required NO edge for it, and the absence is the exception's
+machine form; the ink writes the anachronism the sages read ('said at
+Sinai, written in its place'): 'the SONS OF ISRAEL shall not eat' (Gen
+32:33, בני ישראל, "the sons of Israel") is the phrase's FIRST seat in
+the Bible, four verses after the name is given (32:29). The forward
+half of the same test: the levirate and the birthright ARE repeated at
+Sinai (Deut 25:5-10, 21:15-17) and the runner declares those edges
+OWED to runners that do not exist yet — `--debt` prints them.
+
+## M-25 — THE ARTICLE READ AS THE DISTINGUISHED MEMBER (a definite article on a noun for a body part or an instrument is read as 'the distinguished one of its kind')
+Registered 2026-09-06 (sitting G2 of the compile debt,
+cold_run_family.py) from Rava's rule and its four recorded seats. 'And
+what is the reason? Rava said: the verse says THE thigh — the
+DISTINGUISHED thigh' (Chullin 91a:12, on Gen 32:33, הירך, "the thigh"):
+the article on the sinew's thigh is read as 'the best of its kind' —
+the right — and the tradition exports the reading to three other
+institutions in its own words ('as Rava said of THE thigh, so here'):
+'THE arm' of the priestly gifts — the distinguished arm, the right
+foreleg (Deut 18:3, Chullin 134b:16); 'THE anointed' — the
+distinguished among the anointed, the high priest (Horayot 12a:16);
+'THE awl' of the pierced slave — the large awl (Exod 21:6, Kiddushin
+21b:11 — the Mishpatim engine's seat). Measured: 'the thigh' with the
+article is a HAPAX form in the Tanakh — Rava's rule runs on the
+article's only seat. The rival reading carried: the Mishnah's own 'the
+right thigh and the left' (Chullin 7:1) against R. Yehuda's right only,
+and R. Yehoshua b. Levi's embrace geometry for the right (91a:14).
+**What separates it:** from the pre-Sinai runner's 'THE sixth' (Shabbat
+88a:6 — the article as the KNOWN one, a specific day), from M-11 (the
+word order), and from the general-and-particular family (I4) — here the
+article itself restricts to the superlative member. **Machine form:**
+cold_run_family.sinew('the_thigh_articled', 'article_as_distinguished',
+'right_thigh'). **Middah correspondence:** a restriction (miut) read
+off the definite article; the four seats the rule's own census.

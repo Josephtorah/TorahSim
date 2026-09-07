@@ -63,6 +63,12 @@ m.step("Gen.49.3")
 # ‹רְאוּבֵן בְּכֹרִי אַתָּה› (“Reuben firstborn-me/my you”)
 # — fact holds: Reuben-bekhori-you
 m.fact("reuven_bekhori_ata")
+# witness-tier presupposed read: the_firstborns_phrase_at_two_seats_the_two_
+# offices_cursed_undecided_the_animal_census_and_the_altars_base on
+# the_testament_is_bava_batra_8_5s_case_in_the_gift_form — read, not
+# installed
+m.witness_read("the_testament_is_bava_batra_8_5s_case_in_the_gift_form", "the_firstborns_phrase_at_two_seats_the_two_offices_cursed_undecided_the_animal_census_and_the_altars_base",
+                cites=["Mishnah Bava Batra 8:5", "Mishnah Bekhorot 8:2", "Mishnah Megillah 4:10", "Yevamot 76a:4", "Shabbat 55b:8", "Sotah 7b:8", "Yoma 52b:4", "Megillah 9a:15", "Sanhedrin 109b:14", "Sanhedrin 5a:6", "Horayot 11b:3", "Sanhedrin 98b:14", "Avodah Zarah 25a:12", "Sanhedrin 95a:2", "Sotah 11b:20", "Niddah 31a:22", "Sotah 10a:8", "Sotah 9b:21", "Bava Batra 118b:1", "Zevachim 118b:2", "Shabbat 139a:12", "Zevachim 53b:8", "Zevachim 54a:4", "Zevachim 54b:9", "Pesachim 56a:7", "Taanit 31a:4", "Bava Kamma 17a:10", "Sotah 13a:9", "Chullin 92a:4", "Megillah 16a:14", "Ketubot 111b:16"])
 
 # -------------------------- Gen.49.4 · UNSTABLE_AS_WATER -------------------
 # ‹פַּחַז כַּמַּיִם אַל־תּוֹתַר› (“ebullition like-waters do-not jut-over”)
@@ -537,38 +543,41 @@ if __name__ == "__main__":
     assert all('ceasing_to_translate_for_one_chapter' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['they_hamstrung_an_ox']["cites"] == ['Bereshit Rabbah 98:5', 'Onkelos Genesis 49:5']
     assert all('three_layers_standing_on_one_verse' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('va_yiqra_yaaqov_el_banav', 'silent_line_birth'), ('hear_israel_your_father', 'the_daily_liturgy_sourced_to_this_verse'), ('your_brothers_shall_praise_you', 'the_name_read_to_the_confession'), ('until_shiloh_comes', 'a_place_name_resolved_into_a_person'), ('lo_yasur_shevet', 'scepter_license'), ('zebulun_at_the_shore', 'a_prophets_parentage_and_a_patronage_rule'), ('they_embittered_him_and_shot_at_him', 'the_slander_model_stated_in_full'), ('his_bow_abode_in_strength', 'one_noun_read_three_ways'), ('benjamin_a_ravening_wolf', 'the_sanctuary_awarded_by_absence_from_a_crime'), ('binyamin_zeev', 'altar_strip'), ('he_finished_commanding_his_sons', 'a_funeral_order_that_becomes_a_camp')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('va_yiqra_yaaqov_el_banav', 'silent_line_birth'), ('hear_israel_your_father', 'the_daily_liturgy_sourced_to_this_verse'), ('the_testament_is_bava_batra_8_5s_case_in_the_gift_form', 'the_firstborns_phrase_at_two_seats_the_two_offices_cursed_undecided_the_animal_census_and_the_altars_base'), ('your_brothers_shall_praise_you', 'the_name_read_to_the_confession'), ('until_shiloh_comes', 'a_place_name_resolved_into_a_person'), ('lo_yasur_shevet', 'scepter_license'), ('zebulun_at_the_shore', 'a_prophets_parentage_and_a_patronage_rule'), ('they_embittered_him_and_shot_at_him', 'the_slander_model_stated_in_full'), ('his_bow_abode_in_strength', 'one_noun_read_three_ways'), ('benjamin_a_ravening_wolf', 'the_sanctuary_awarded_by_absence_from_a_crime'), ('binyamin_zeev', 'altar_strip'), ('he_finished_commanding_his_sons', 'a_funeral_order_that_becomes_a_camp')]
     assert m.WITNESS_READS[0]["cites"] == ['Pesachim 56a:6', 'Pesachim 56a:7', 'Pesachim 56a:8']
     assert all('silent_line_birth' not in f for f in m.WORLD["facts"])
     assert 'va_yiqra_yaaqov_el_banav' not in m.WORLD["witnessed"]
     assert m.WITNESS_READS[1]["cites"] == ['Bereshit Rabbah 98:3', 'Onkelos Genesis 49:2']
     assert all('the_daily_liturgy_sourced_to_this_verse' not in f for f in m.WORLD["facts"])
     assert 'hear_israel_your_father' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Genesis 49:8', 'Bereshit Rabbah 98:7']
+    assert m.WITNESS_READS[2]["cites"] == ['Mishnah Bava Batra 8:5', 'Mishnah Bekhorot 8:2', 'Mishnah Megillah 4:10', 'Yevamot 76a:4', 'Shabbat 55b:8', 'Sotah 7b:8', 'Yoma 52b:4', 'Megillah 9a:15', 'Sanhedrin 109b:14', 'Sanhedrin 5a:6', 'Horayot 11b:3', 'Sanhedrin 98b:14', 'Avodah Zarah 25a:12', 'Sanhedrin 95a:2', 'Sotah 11b:20', 'Niddah 31a:22', 'Sotah 10a:8', 'Sotah 9b:21', 'Bava Batra 118b:1', 'Zevachim 118b:2', 'Shabbat 139a:12', 'Zevachim 53b:8', 'Zevachim 54a:4', 'Zevachim 54b:9', 'Pesachim 56a:7', 'Taanit 31a:4', 'Bava Kamma 17a:10', 'Sotah 13a:9', 'Chullin 92a:4', 'Megillah 16a:14', 'Ketubot 111b:16']
+    assert all('the_firstborns_phrase_at_two_seats_the_two_offices_cursed_undecided_the_animal_census_and_the_altars_base' not in f for f in m.WORLD["facts"])
+    assert 'the_testament_is_bava_batra_8_5s_case_in_the_gift_form' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Genesis 49:8', 'Bereshit Rabbah 98:7']
     assert all('the_name_read_to_the_confession' not in f for f in m.WORLD["facts"])
     assert 'your_brothers_shall_praise_you' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Genesis 49:10', 'Bereshit Rabbah 98:8']
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Genesis 49:10', 'Bereshit Rabbah 98:8']
     assert all('a_place_name_resolved_into_a_person' not in f for f in m.WORLD["facts"])
     assert 'until_shiloh_comes' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Sanhedrin 5a:5', 'Sanhedrin 5a:6', 'Sanhedrin 5a:7']
+    assert m.WITNESS_READS[5]["cites"] == ['Sanhedrin 5a:5', 'Sanhedrin 5a:6', 'Sanhedrin 5a:7']
     assert all('scepter_license' not in f for f in m.WORLD["facts"])
     assert 'lo_yasur_shevet' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 98:11', 'Bereshit Rabbah 99:9']
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 98:11', 'Bereshit Rabbah 99:9']
     assert all('a_prophets_parentage_and_a_patronage_rule' not in f for f in m.WORLD["facts"])
     assert 'zebulun_at_the_shore' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 98:19']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 98:19']
     assert all('the_slander_model_stated_in_full' not in f for f in m.WORLD["facts"])
     assert 'they_embittered_him_and_shot_at_him' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Genesis 49:24', 'Bereshit Rabbah 98:20']
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Genesis 49:24', 'Bereshit Rabbah 98:20']
     assert all('one_noun_read_three_ways' not in f for f in m.WORLD["facts"])
     assert 'his_bow_abode_in_strength' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 99:1', 'Onkelos Genesis 49:27', 'Bereshit Rabbah 99:3']
+    assert m.WITNESS_READS[9]["cites"] == ['Bereshit Rabbah 99:1', 'Onkelos Genesis 49:27', 'Bereshit Rabbah 99:3']
     assert all('the_sanctuary_awarded_by_absence_from_a_crime' not in f for f in m.WORLD["facts"])
     assert 'benjamin_a_ravening_wolf' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Zevachim 53b:7', 'Zevachim 53b:8', 'Zevachim 53b:9']
+    assert m.WITNESS_READS[10]["cites"] == ['Zevachim 53b:7', 'Zevachim 53b:8', 'Zevachim 53b:9']
     assert all('altar_strip' not in f for f in m.WORLD["facts"])
     assert 'binyamin_zeev' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[10]["cites"] == ['Bereshit Rabbah 100:2', 'Bereshit Rabbah 100:1']
+    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 100:2', 'Bereshit Rabbah 100:1']
     assert all('a_funeral_order_that_becomes_a_camp' not in f for f in m.WORLD["facts"])
     assert 'he_finished_commanding_his_sons' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

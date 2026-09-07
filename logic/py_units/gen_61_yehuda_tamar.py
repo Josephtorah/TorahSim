@@ -128,6 +128,12 @@ m.declare("yehuda", "LET",
 # installed
 m.witness_read("yibum", "first_performance",
                 cites=["Bereshit Rabbah 85:5"])
+# witness-tier presupposed read: seed_against_name_the_waiting_widows_timer_
+# the_two_modes_and_the_head_against_the_hand on
+# the_levirates_first_seat_carries_the_answer_sheets_refused_plea — read,
+# not installed
+m.witness_read("the_levirates_first_seat_carries_the_answer_sheets_refused_plea", "seed_against_name_the_waiting_widows_timer_the_two_modes_and_the_head_against_the_hand",
+                cites=["Mishnah Yevamot 1:1", "Mishnah Yevamot 2:5", "Mishnah Yevamot 2:8", "Mishnah Yevamot 4:3", "Mishnah Yevamot 4:5", "Mishnah Yevamot 4:6", "Mishnah Yevamot 4:7", "Mishnah Yevamot 4:10", "Mishnah Yevamot 4:13", "Mishnah Yevamot 6:1", "Mishnah Kiddushin 3:12", "Mishnah Sanhedrin 7:2", "Mishnah Sanhedrin 7:4", "Mishnah Sanhedrin 9:1", "Mishnah Megillah 4:10", "Mishnah Bekhorot 8:1", "Mishnah Chullin 8:4", "Yevamot 24a:6", "Yevamot 34b:3", "Yevamot 34b:4", "Yevamot 59a:8", "Yevamot 64b:18", "Yevamot 64b:19", "Pesachim 50a:15", "Niddah 13a:17", "Niddah 8b:17", "Niddah 28a:9", "Bekhorot 46b:3", "Avodah Zarah 36b:7", "Makkot 23b:12", "Sotah 7b:8", "Sotah 10b:4", "Sotah 10b:7", "Sotah 10b:9", "Sotah 10b:12", "Sotah 13b:7", "Sotah 13b:8", "Sotah 10a:16", "Sotah 10a:19", "Megillah 10b:14", "Bava Metzia 59a:3", "Chullin 113a:20"])
 
 # -------------------------- Gen.38.9 · THE_SUBVERSION ----------------------
 # ‹וַיֵּדַע אוֹנָן כִּי› (“and-know Onan that”)
@@ -532,29 +538,32 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['eravon']
     assert m.WORLD["witnessed"]['eravon']["cites"] == ['Bereshit Rabbah 85:9']
     assert all('three_crowns' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('yibum', 'first_performance'), ('ve_shichet_artzah', 'er_onan_acts'), ('gedi_izzim', 'repayment_pair'), ('gedi_ha_izim', 'kid_definition'), ('ke_mishlosh_chodashim', 'pregnancy_file'), ('hi_mutzet', 'shaming_furnace'), ('tzadka_mimeni', 'voice_testimony'), ('yad_count', 'four_forward')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('yibum', 'first_performance'), ('the_levirates_first_seat_carries_the_answer_sheets_refused_plea', 'seed_against_name_the_waiting_widows_timer_the_two_modes_and_the_head_against_the_hand'), ('ve_shichet_artzah', 'er_onan_acts'), ('gedi_izzim', 'repayment_pair'), ('gedi_ha_izim', 'kid_definition'), ('ke_mishlosh_chodashim', 'pregnancy_file'), ('hi_mutzet', 'shaming_furnace'), ('tzadka_mimeni', 'voice_testimony'), ('yad_count', 'four_forward')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 85:5']
     assert all('first_performance' not in f for f in m.WORLD["facts"])
     assert 'yibum' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Yevamot 34b:2', 'Yevamot 34b:3', 'Yevamot 34b:4', 'Yevamot 34b:5']
+    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Yevamot 1:1', 'Mishnah Yevamot 2:5', 'Mishnah Yevamot 2:8', 'Mishnah Yevamot 4:3', 'Mishnah Yevamot 4:5', 'Mishnah Yevamot 4:6', 'Mishnah Yevamot 4:7', 'Mishnah Yevamot 4:10', 'Mishnah Yevamot 4:13', 'Mishnah Yevamot 6:1', 'Mishnah Kiddushin 3:12', 'Mishnah Sanhedrin 7:2', 'Mishnah Sanhedrin 7:4', 'Mishnah Sanhedrin 9:1', 'Mishnah Megillah 4:10', 'Mishnah Bekhorot 8:1', 'Mishnah Chullin 8:4', 'Yevamot 24a:6', 'Yevamot 34b:3', 'Yevamot 34b:4', 'Yevamot 59a:8', 'Yevamot 64b:18', 'Yevamot 64b:19', 'Pesachim 50a:15', 'Niddah 13a:17', 'Niddah 8b:17', 'Niddah 28a:9', 'Bekhorot 46b:3', 'Avodah Zarah 36b:7', 'Makkot 23b:12', 'Sotah 7b:8', 'Sotah 10b:4', 'Sotah 10b:7', 'Sotah 10b:9', 'Sotah 10b:12', 'Sotah 13b:7', 'Sotah 13b:8', 'Sotah 10a:16', 'Sotah 10a:19', 'Megillah 10b:14', 'Bava Metzia 59a:3', 'Chullin 113a:20']
+    assert all('seed_against_name_the_waiting_widows_timer_the_two_modes_and_the_head_against_the_hand' not in f for f in m.WORLD["facts"])
+    assert 'the_levirates_first_seat_carries_the_answer_sheets_refused_plea' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Yevamot 34b:2', 'Yevamot 34b:3', 'Yevamot 34b:4', 'Yevamot 34b:5']
     assert all('er_onan_acts' not in f for f in m.WORLD["facts"])
     assert 've_shichet_artzah' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Bereshit Rabbah 85:9']
+    assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 85:9']
     assert all('repayment_pair' not in f for f in m.WORLD["facts"])
     assert 'gedi_izzim' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Chullin 113a:19', 'Chullin 113a:20', 'Chullin 113b:1', 'Chullin 113b:2', 'Chullin 113b:3']
+    assert m.WITNESS_READS[4]["cites"] == ['Chullin 113a:19', 'Chullin 113a:20', 'Chullin 113b:1', 'Chullin 113b:2', 'Chullin 113b:3']
     assert all('kid_definition' not in f for f in m.WORLD["facts"])
     assert 'gedi_ha_izim' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Niddah 8b:16', 'Niddah 8b:17', 'Niddah 8b:18', 'Niddah 28a:8', 'Niddah 28a:9', 'Niddah 28a:10']
+    assert m.WITNESS_READS[5]["cites"] == ['Niddah 8b:16', 'Niddah 8b:17', 'Niddah 8b:18', 'Niddah 28a:8', 'Niddah 28a:9', 'Niddah 28a:10']
     assert all('pregnancy_file' not in f for f in m.WORLD["facts"])
     assert 'ke_mishlosh_chodashim' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Sotah 10b:5', 'Sotah 10b:6', 'Sotah 10b:7']
+    assert m.WITNESS_READS[6]["cites"] == ['Sotah 10b:5', 'Sotah 10b:6', 'Sotah 10b:7']
     assert all('shaming_furnace' not in f for f in m.WORLD["facts"])
     assert 'hi_mutzet' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 85:12', 'Onkelos Genesis 38:26']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 85:12', 'Onkelos Genesis 38:26']
     assert all('voice_testimony' not in f for f in m.WORLD["facts"])
     assert 'tzadka_mimeni' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 85:14']
+    assert m.WITNESS_READS[8]["cites"] == ['Bereshit Rabbah 85:14']
     assert all('four_forward' not in f for f in m.WORLD["facts"])
     assert 'yad_count' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

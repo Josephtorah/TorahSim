@@ -285,6 +285,11 @@ m.step("Exod.38.26")
 # installed
 m.witness_read("beka_rate", "census_roll_closed",
                 cites=["Mishnah Shekalim 1:4", "Onkelos Exod 38"])
+# witness-tier presupposed read:
+# the_accounts_two_signatories_and_the_silver_heads on
+# the_talent_computed_from_the_census — read, not installed
+m.witness_read("the_talent_computed_from_the_census", "the_accounts_two_signatories_and_the_silver_heads",
+                cites=["Onkelos Exod 38:8", "Onkelos Exod 38:21", "Onkelos Exod 38:24-26", "Onkelos Exod 38:27-28", "Onkelos Exod 38:29-31", "Midrash Tanchuma, Pekudei 3:2", "Midrash Tanchuma, Pekudei 5:2", "Midrash Tanchuma, Pekudei 5:3", "Midrash Tanchuma, Pekudei 7:1", "Midrash Tanchuma, Pekudei 7:3", "Midrash Tanchuma, Pekudei 7:4", "Midrash Tanchuma, Pekudei 9:4", "Midrash Tanchuma, Vayakhel 4:5", "Bekhorot 5a:18", "Mishnah Shekalim 5:2", "Mishnah Shekalim 3:2", "Mishnah Shekalim 1:4", "Mishnah Shekalim 1:3", "Mishnah Middot 3:6"])
 
 # -------------------------- Exod.38.27 · ETNACHTA_SPLIT --------------------
 # ‹ויהי מאת ככר› (“and-be hundred circle”)
@@ -365,7 +370,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('laver_mirrors', 'two_tracks_of_the_women'), ('audit_constitution', 'two_signatories'), ('lineage_mention', 'praise_scorn_table'), ('books_published', 'currency_converted'), ('beka_rate', 'census_roll_closed'), ('missing_1775', 'reconciled_by_inventory'), ('brass_surplus', 'the_double_maneh_computed'), ('surplus_declared', 'testimony_to_nations')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('laver_mirrors', 'two_tracks_of_the_women'), ('audit_constitution', 'two_signatories'), ('lineage_mention', 'praise_scorn_table'), ('books_published', 'currency_converted'), ('beka_rate', 'census_roll_closed'), ('the_talent_computed_from_the_census', 'the_accounts_two_signatories_and_the_silver_heads'), ('missing_1775', 'reconciled_by_inventory'), ('brass_surplus', 'the_double_maneh_computed'), ('surplus_declared', 'testimony_to_nations')]
     assert m.WITNESS_READS[0]["cites"] == ['Midrash Tanchuma, Pekudei 9:2', 'Midrash Tanchuma, Pekudei 9:4', 'Onkelos Exod 38']
     assert all('two_tracks_of_the_women' not in f for f in m.WORLD["facts"])
     assert 'laver_mirrors' not in m.WORLD["witnessed"]
@@ -381,13 +386,16 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[4]["cites"] == ['Mishnah Shekalim 1:4', 'Onkelos Exod 38']
     assert all('census_roll_closed' not in f for f in m.WORLD["facts"])
     assert 'beka_rate' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Midrash Tanchuma Buber, Pekudei 4:1', 'Midrash Tanchuma, Pekudei 7:3', 'Onkelos Exod 38']
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Exod 38:8', 'Onkelos Exod 38:21', 'Onkelos Exod 38:24-26', 'Onkelos Exod 38:27-28', 'Onkelos Exod 38:29-31', 'Midrash Tanchuma, Pekudei 3:2', 'Midrash Tanchuma, Pekudei 5:2', 'Midrash Tanchuma, Pekudei 5:3', 'Midrash Tanchuma, Pekudei 7:1', 'Midrash Tanchuma, Pekudei 7:3', 'Midrash Tanchuma, Pekudei 7:4', 'Midrash Tanchuma, Pekudei 9:4', 'Midrash Tanchuma, Vayakhel 4:5', 'Bekhorot 5a:18', 'Mishnah Shekalim 5:2', 'Mishnah Shekalim 3:2', 'Mishnah Shekalim 1:4', 'Mishnah Shekalim 1:3', 'Mishnah Middot 3:6']
+    assert all('the_accounts_two_signatories_and_the_silver_heads' not in f for f in m.WORLD["facts"])
+    assert 'the_talent_computed_from_the_census' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Midrash Tanchuma Buber, Pekudei 4:1', 'Midrash Tanchuma, Pekudei 7:3', 'Onkelos Exod 38']
     assert all('reconciled_by_inventory' not in f for f in m.WORLD["facts"])
     assert 'missing_1775' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Bekhorot 5a:17', 'Bekhorot 5a:18', 'Bekhorot 5a:19']
+    assert m.WITNESS_READS[7]["cites"] == ['Bekhorot 5a:17', 'Bekhorot 5a:18', 'Bekhorot 5a:19']
     assert all('the_double_maneh_computed' not in f for f in m.WORLD["facts"])
     assert 'brass_surplus' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Midrash Tanchuma, Pekudei 2:4', 'Midrash Tanchuma, Pekudei 2:5', 'Midrash Tanchuma, Pekudei 5:5', 'Midrash Tanchuma, Pekudei 6:1', 'Onkelos Exod 38']
+    assert m.WITNESS_READS[8]["cites"] == ['Midrash Tanchuma, Pekudei 2:4', 'Midrash Tanchuma, Pekudei 2:5', 'Midrash Tanchuma, Pekudei 5:5', 'Midrash Tanchuma, Pekudei 6:1', 'Onkelos Exod 38']
     assert all('testimony_to_nations' not in f for f in m.WORLD["facts"])
     assert 'surplus_declared' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

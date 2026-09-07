@@ -20,7 +20,7 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chp(_P, 'CASES', 2)
-assert GUARDED == 12, ('the guard counted %d expectations, the tripwire holds 12' % GUARDED)
+assert GUARDED == 13, ('the guard counted %d expectations, the tripwire holds 13' % GUARDED)
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys
 import effects_layer as FX
@@ -165,6 +165,54 @@ def altar_rules(case, data):
     return out('no verdict in span', [FX.NONE])
 
 
+# ---- THE WRAP (W1 THE EXODUS LAW, D9-iii, 2026-09-07) — the daemon and the scene --------------
+# The four case heads of the law layer (20:7, 20:8, 20:10, 20:15 with 21:16), each a case-form type
+# of event_vocabulary.yaml; the altar rule (20:24-26) is wrapped by the ordinances daemon at its
+# call site. The daemon writes the ledger and never emits an event.
+import io, contextlib, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import world_engine as WE
+def law_decalogue(event, world):
+    """Exod 20:7, 20:8-10, 20:15 (cold_run_decalogue.py F1-F3)."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'name_sworn_in_vain':
+        return [E_('lashes', event['swearer'], value=event['oath'], law="F1 [INK 20:7 'the LORD will not hold guiltless'; Shevuot 21a:6: the court lashes him and he is cleared; Mishnah Shevuot 3:10-11]")]
+    if k == 'sabbath_remembered':
+        return [E_('sanctify_day', event['household'], cp='HEAVEN', law="F2 [INK 20:8 'remember the Sabbath day to sanctify it'; Pesachim 106a:5: over wine]")]
+    if k == 'sabbath_labor':
+        if event['act'] == 'cause':
+            return []                                            # Shabbat 120b:11 — performance is barred, causation is not
+        return [E_('labor_barred', event['household'], value=event['actor'], law="F2 [INK 20:10 'you shall not do any labor — you, your son and your daughter, your slave and your maidservant and your beast and your stranger'; the laden beast, Shabbat 153b:7]"),
+                E_('rest_required', event['household'], law="F2 [INK 20:10 the household enumerated]")]
+    if k == 'person_stolen':
+        if event['sold']:
+            return [E_('put_to_death', event['thief'], value='strangled', law="F3 [INK 20:15 in its context, Sanhedrin 86a:15-16; 21:16 'steals a man and sells him... shall surely be put to death'; Mishnah Sanhedrin 11:1]")]
+        return []                                                # not sold: the ordinances' own condition unmet (21:16)
+    return []
+
+def scene():
+    """THE SCENE — the recorded cases replayed on the world engine (clock unit: days)."""
+    with contextlib.redirect_stdout(io.StringIO()):
+        w = WE.World(era='the Decalogue\'s law layer: Shevuot 3, Shabbat 120b, 153b, Sanhedrin 11:1 on the engine (clock unit: days)')
+        w.laws = [law_decalogue]
+        w.advance(1)
+        w.submit({'kind': 'name_sworn_in_vain', 'subject': 'the-swearer', 'swearer': 'the-swearer', 'oath': 'vain', 'case_source': 'Mishnah Shevuot 3:10-11 — the vain oath'})
+        w.submit({'kind': 'name_sworn_in_vain', 'subject': 'the-oath-breaker', 'swearer': 'the-oath-breaker', 'oath': 'false_future', 'case_source': 'Shevuot 20b:6 — the broken I-will-eat oath'})
+        w.advance(2)
+        w.submit({'kind': 'sabbath_remembered', 'subject': 'the-household', 'household': 'the-household', 'case_source': 'Pesachim 106a:5 — remember it over wine'})
+        w.submit({'kind': 'sabbath_labor', 'subject': 'the-household', 'household': 'the-household', 'actor': 'self', 'act': 'do', 'case_source': "Exod 20:10 — the ink's own list"})
+        w.submit({'kind': 'sabbath_labor', 'subject': 'the-household', 'household': 'the-household', 'actor': 'self', 'act': 'cause', 'case_source': 'Shabbat 120b:11 — causing permitted'})
+        w.submit({'kind': 'sabbath_labor', 'subject': 'the-household', 'household': 'the-household', 'actor': 'beast', 'act': 'drive_laden', 'case_source': 'Shabbat 153b:7 — the laden beast'})
+        w.advance(3)
+        w.submit({'kind': 'person_stolen', 'subject': 'the-kidnapper', 'thief': 'the-kidnapper', 'victim': 'the-victim', 'sold': True, 'case_source': 'Mishnah Sanhedrin 11:1 — the kidnapper who sold'})
+        w.submit({'kind': 'person_stolen', 'subject': 'the-second-kidnapper', 'thief': 'the-second-kidnapper', 'victim': 'the-victim', 'sold': False, 'case_source': 'Mishnah Sanhedrin 11:1 — not sold: not liable'})
+        w.advance(4)
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    return (n('the-swearer', 'lashes'), n('the-oath-breaker', 'lashes'), n('the-household', 'sanctify_day'), n('the-household', 'labor_barred'), n('the-household', 'rest_required'),
+            n('the-kidnapper', 'put_to_death'), n('the-second-kidnapper', 'put_to_death'), w.clock.year), w
+SCENE, _W = scene()
+
 # ---- the test data; run, grade, effects -----------------------------
 DATA = {}
 CASES = [
@@ -202,6 +250,10 @@ CASES = [
     ('the ramp and the juxtaposition (Sanhedrin 7b)',
      lambda: altar_rules({'ask': 'steps'}, DATA),
      'a ramp; and temperance beside it'),
+    # ---- THE WRAP (W1): the scene on the world engine — the recorded cases on the daemon ----
+    ('THE SCENE on the world engine — the wrap (W1): the vain and the broken oath lashed, the day sanctified, the household barred twice (the deed, the laden beast) and causing free, the kidnapper who sold strangled and the one who did not sell unwritten',
+     lambda: (SCENE, [FX.NONE], [('INK', 'Exod 20:7-15 — the recorded cases replayed: Shevuot 3:10-11, Pesachim 106a, Shabbat 120b, 153b, Sanhedrin 11:1')]),
+     (1, 1, 1, 2, 2, 1, 0, 4)),
 ]
 
 ok = 0
@@ -224,6 +276,8 @@ for label, fn, want in CASES:
     for line in FX.render(effects):
         print('        ->%s' % line)
 print()
+print('WATCH COVERAGE (the wrap):')
+_W.print_coverage()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, len(CASES)))
 tot = len(CASES)
 print('FRACTIONS: pure ink %d/%d (%.0f%%) · named moves %d/%d (%.0f%%)'

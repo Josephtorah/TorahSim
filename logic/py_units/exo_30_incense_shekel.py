@@ -163,6 +163,12 @@ m.step("Exod.30.13")
 # installed
 m.witness_read("half_shekel", "census_by_ransom",
                 cites=["Mishnah Shekalim 1:1", "Onkelos Exod 30"])
+# witness-tier presupposed read:
+# the_unit_defined_in_the_verse_and_the_plague_clauses_run on
+# the_four_institutions_compiled_and_the_owed_edges_closed — read, not
+# installed
+m.witness_read("the_four_institutions_compiled_and_the_owed_edges_closed", "the_unit_defined_in_the_verse_and_the_plague_clauses_run",
+                cites=["Onkelos Exod 30:6 + 30:7-8 + 30:36", "Onkelos Exod 30:9", "Onkelos Exod 30:10", "Onkelos Exod 30:12-16", "Onkelos Exod 30:18-21", "Onkelos Exod 30:23-33", "Onkelos Exod 30:34-38", "Midrash Tanchuma, Tetzaveh 14 + 15", "Midrash Tanchuma, Ki Tisa 9 + 10 + 11", "Midrash Tanchuma, Ki Tisa 1-3", "Menachot 50a:19", "Menachot 50b:1", "Yoma 33b:8", "Yoma 33b:10", "Yoma 45a:3", "Shevuot 10a:15", "Shevuot 10a:20", "Shevuot 10b:6", "Yoma 61a:10", "Berakhot 62b:11", "Berakhot 62b:16", "Megillah 29b:7", "Megillah 30a:7", "Megillah 30a:8", "Zevachim 19b:8", "Zevachim 19b:19", "Zevachim 21a:3", "Zevachim 22a:5", "Arakhin 19b:5", "Keritot 5a:19", "Keritot 5a:20", "Keritot 5a:22", "Keritot 5a:24", "Keritot 5b:2", "Keritot 5b:10", "Chullin 139b:12", "Makkot 14b:2", "Meilah 19a:5", "Keritot 6b:19", "Keritot 6b:25", "Keritot 6a:17", "Zevachim 18b:15", "Yoma 3b:4", "Keritot 6a:6", "Pesachim 26a:8", "Keritot 6b:1", "Keritot 6b:3", "Keritot 6b:5", "Horayot 12a:3", "Mishnah Shekalim 1:1", "Mishnah Shekalim 1:3", "Mishnah Shekalim 1:6", "Mishnah Shekalim 2:1", "Mishnah Shekalim 2:2", "Mishnah Shekalim 2:4", "Mishnah Shekalim 3:1", "Mishnah Shekalim 4:1", "Mishnah Shekalim 4:5", "Mishnah Shekalim 6:5", "Mishnah Shekalim 6:6", "Mishnah Shekalim 8:8", "Mishnah Keritot 1:1", "Mishnah Keritot 5:2", "Mishnah Yoma 3:10", "Mishnah Yoma 4:3", "Mishnah Yoma 4:4", "Mishnah Yoma 4:5", "Mishnah Zevachim 5:1", "Mishnah Zevachim 5:2", "Mishnah Zevachim 9:5", "Mishnah Zevachim 9:7", "Mishnah Zevachim 10:5", "Mishnah Tamid 1:4", "Mishnah Tamid 2:1", "Mishnah Tamid 5:2", "Mishnah Tamid 5:4", "Mishnah Tamid 5:5", "Mishnah Tamid 6:1", "Mishnah Tamid 6:3", "Mishnah Menachot 4:4", "Mishnah Makkot 3:2", "Mishnah Horayot 3:4", "Mishnah Megillah 3:4", "Mishnah Middot 3:6"])
 
 # -------------------------- Exod.30.14 · ETNACHTA_SPLIT --------------------
 # ‹כל העבר על› (“all the-pass-over over”)
@@ -432,7 +438,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('incense_clauses', 'joined_to_address'), ('chapter_thirty', 'the_service_chapters_babylonian_layer'), ('strange_incense', 'input_spec'), ('annual_atonement', 'yearly_protocol'), ('ransom_reasoning', 'tort_table_pricing'), ('half_shekel', 'census_by_ransom'), ('flat_rate', 'equality_invariant'), ('half_coin', 'kalbon_fees'), ('census_laws', 'ten_censuses'), ('laver_clauses', 'washing_as_sanctification'), ('formula_clauses', 'protected_formulas')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('incense_clauses', 'joined_to_address'), ('chapter_thirty', 'the_service_chapters_babylonian_layer'), ('strange_incense', 'input_spec'), ('annual_atonement', 'yearly_protocol'), ('ransom_reasoning', 'tort_table_pricing'), ('half_shekel', 'census_by_ransom'), ('the_four_institutions_compiled_and_the_owed_edges_closed', 'the_unit_defined_in_the_verse_and_the_plague_clauses_run'), ('flat_rate', 'equality_invariant'), ('half_coin', 'kalbon_fees'), ('census_laws', 'ten_censuses'), ('laver_clauses', 'washing_as_sanctification'), ('formula_clauses', 'protected_formulas')]
     assert m.WITNESS_READS[0]["cites"] == ['Onkelos Exod 30']
     assert all('joined_to_address' not in f for f in m.WORLD["facts"])
     assert 'incense_clauses' not in m.WORLD["witnessed"]
@@ -451,19 +457,22 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[5]["cites"] == ['Mishnah Shekalim 1:1', 'Onkelos Exod 30']
     assert all('census_by_ransom' not in f for f in m.WORLD["facts"])
     assert 'half_shekel' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Mishnah Shekalim 2:4']
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Exod 30:6 + 30:7-8 + 30:36', 'Onkelos Exod 30:9', 'Onkelos Exod 30:10', 'Onkelos Exod 30:12-16', 'Onkelos Exod 30:18-21', 'Onkelos Exod 30:23-33', 'Onkelos Exod 30:34-38', 'Midrash Tanchuma, Tetzaveh 14 + 15', 'Midrash Tanchuma, Ki Tisa 9 + 10 + 11', 'Midrash Tanchuma, Ki Tisa 1-3', 'Menachot 50a:19', 'Menachot 50b:1', 'Yoma 33b:8', 'Yoma 33b:10', 'Yoma 45a:3', 'Shevuot 10a:15', 'Shevuot 10a:20', 'Shevuot 10b:6', 'Yoma 61a:10', 'Berakhot 62b:11', 'Berakhot 62b:16', 'Megillah 29b:7', 'Megillah 30a:7', 'Megillah 30a:8', 'Zevachim 19b:8', 'Zevachim 19b:19', 'Zevachim 21a:3', 'Zevachim 22a:5', 'Arakhin 19b:5', 'Keritot 5a:19', 'Keritot 5a:20', 'Keritot 5a:22', 'Keritot 5a:24', 'Keritot 5b:2', 'Keritot 5b:10', 'Chullin 139b:12', 'Makkot 14b:2', 'Meilah 19a:5', 'Keritot 6b:19', 'Keritot 6b:25', 'Keritot 6a:17', 'Zevachim 18b:15', 'Yoma 3b:4', 'Keritot 6a:6', 'Pesachim 26a:8', 'Keritot 6b:1', 'Keritot 6b:3', 'Keritot 6b:5', 'Horayot 12a:3', 'Mishnah Shekalim 1:1', 'Mishnah Shekalim 1:3', 'Mishnah Shekalim 1:6', 'Mishnah Shekalim 2:1', 'Mishnah Shekalim 2:2', 'Mishnah Shekalim 2:4', 'Mishnah Shekalim 3:1', 'Mishnah Shekalim 4:1', 'Mishnah Shekalim 4:5', 'Mishnah Shekalim 6:5', 'Mishnah Shekalim 6:6', 'Mishnah Shekalim 8:8', 'Mishnah Keritot 1:1', 'Mishnah Keritot 5:2', 'Mishnah Yoma 3:10', 'Mishnah Yoma 4:3', 'Mishnah Yoma 4:4', 'Mishnah Yoma 4:5', 'Mishnah Zevachim 5:1', 'Mishnah Zevachim 5:2', 'Mishnah Zevachim 9:5', 'Mishnah Zevachim 9:7', 'Mishnah Zevachim 10:5', 'Mishnah Tamid 1:4', 'Mishnah Tamid 2:1', 'Mishnah Tamid 5:2', 'Mishnah Tamid 5:4', 'Mishnah Tamid 5:5', 'Mishnah Tamid 6:1', 'Mishnah Tamid 6:3', 'Mishnah Menachot 4:4', 'Mishnah Makkot 3:2', 'Mishnah Horayot 3:4', 'Mishnah Megillah 3:4', 'Mishnah Middot 3:6']
+    assert all('the_unit_defined_in_the_verse_and_the_plague_clauses_run' not in f for f in m.WORLD["facts"])
+    assert 'the_four_institutions_compiled_and_the_owed_edges_closed' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Mishnah Shekalim 2:4']
     assert all('equality_invariant' not in f for f in m.WORLD["facts"])
     assert 'flat_rate' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Mishnah Shekalim 1:6']
+    assert m.WITNESS_READS[8]["cites"] == ['Mishnah Shekalim 1:6']
     assert all('kalbon_fees' not in f for f in m.WORLD["facts"])
     assert 'half_coin' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Midrash Tanchuma, Ki Tisa 9']
+    assert m.WITNESS_READS[9]["cites"] == ['Midrash Tanchuma, Ki Tisa 9']
     assert all('ten_censuses' not in f for f in m.WORLD["facts"])
     assert 'census_laws' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Exod 30']
+    assert m.WITNESS_READS[10]["cites"] == ['Onkelos Exod 30']
     assert all('washing_as_sanctification' not in f for f in m.WORLD["facts"])
     assert 'laver_clauses' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[10]["cites"] == ['Mishnah Keritot 1:1', 'Onkelos Exod 30']
+    assert m.WITNESS_READS[11]["cites"] == ['Mishnah Keritot 1:1', 'Onkelos Exod 30']
     assert all('protected_formulas' not in f for f in m.WORLD["facts"])
     assert 'formula_clauses' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -55,6 +55,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(bezalel_byline, shade_and_attribution)</span><br><span class="gloss">= WITNESS-READ(bezalel-byline, shade-and-attribution)</span><br>THE BYLINE ONLY ON THE ARK [claim EX37-01]. AND BEZALEL MADE THE ARK — the one vessel in the whole account carrying the craftsman&#x27;s name; everything else was made at his word and counsel (Onkelos Exod 37; Midrash Tanchuma, Vayakhel 7:1) — because the ark is where the Holy One COMPRESSES His Presence, and the name says it: Bezalel made the SHADE of God between the cherubim. And the attribution law rides: he GAVE HIS SOUL to the work, so his name is published on every stage — the byline goes to the soul-giver (Midrash Tanchuma, Vayakhel 10:3). Seated under the amended spine, auto-seat law.
 </td><td>—</td><td class='cite'>Midrash Tanchuma, Vayakhel 10:3, Midrash Tanchuma, Vayakhel 7:1, Onkelos Exod 37</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(bezalels_one_verb, the_vessels_run_matched_to_the_spec_token_for_token)</span><br><span class="gloss">= WITNESS-READ(bezalels-one-verb, the-vessels-run-matched-to-the-spec-token-for-token)</span><br>BEZALEL&#x27;S ONE VERB — THE VESSELS&#x27; RUN MATCHED TO THE SPEC TOKEN FOR TOKEN, THE USE-CLAUSES LEFT OUT [claim EX37-07]. Exodus 37 graded inside World/step9/cold_run_sanctuary_build.py as the run of Exodus 25: &#x27;and he made&#x27; stands thirty-seven times in 36-38 without a subject and ONCE with one — &#x27;and Bezalel made the ark&#x27; — the vessel the spine says his hands alone touched, the rest at his word; the ark&#x27;s ten dimension-tokens, the table&#x27;s eight, and the cover&#x27;s seven equal the spec&#x27;s token for token; the crown&#x27;s consonants at three seats of the chapter; the cherubim from the cover, beaten work at eight Torah seats. The run&#x27;s order — the house first (36:8-38), then the ark, the table, the lampstand, then the incense altar, the oil and incense, the altar, the laver, the court — against the spec&#x27;s ark-first: Berakhot 55a:12 makes the run&#x27;s order God&#x27;s and the spec&#x27;s Moses&#x27; inversion, the spine&#x27;s recension the reverse; the run restores the spec&#x27;s order — move M-22 in a new form. What the run leaves out of this chapter&#x27;s vessels is every use-clause: the staves&#x27; ban, the testimony, the meeting, the bread, the lighting, the pattern (25:15-16, 21-22, 30, 37, 40 — the alignment&#x27;s dropped list); what it adds is the count of the lamps in the making verse (37:23) and the naming of the incense altar, the oil, and the incense, whose spec is Exodus 30 — owed to E4 on the gate&#x27;s worklist. The lampstand&#x27;s twenty-two cups, eleven knobs (the minimum plural), eight flowers with the ninth from Numbers; &#x27;almond-shaped&#x27; at four seats, all in this span.
+</td><td>—</td><td class='cite'>Onkelos Exod 37:1-5, Onkelos Exod 37:6-9, Onkelos Exod 37:17-24, Midrash Tanchuma, Vayakhel 6:5, Midrash Tanchuma, Vayakhel 7:1, Midrash Tanchuma, Vayakhel 7:3, Midrash Tanchuma, Vayakhel 8:3, Midrash Tanchuma, Vayakhel 10:3, Berakhot 55a:12, Menachot 28b:17, Menachot 29a:1, Menachot 29a:2, Yoma 72b:7, Mishnah Menachot 3:7, Mishnah Yoma 5:1</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.</div>
 </div>
@@ -1505,22 +1507,31 @@ from machine import Machine
 m = Machine(&quot;exo_37_furniture_made&quot;)
 
 # -------------------------- Exod.37.1 · ETNACHTA_SPLIT ---------------------
-# ויעש בצלאל את הארן עצי שטים … אמתים וחצי ארכו ואמה וחצי רחבו ואמה וחצי
-# קמתו
-# &quot;[EN-AID] From top split: LEFT «ויעש בצלאל את הארן עצי שטים» / RIGHT
-# «אמתים וחצי ארכו ואמה וחצי רחבו ואמה וחצי קמתו». Derive claim from Hebrew
+# ‹ויעש בצלאל את› (“and-make Bezaleel obj-marker”)
+# ‹הארן עצי שטים› (“the-ark tree acacia”)
+# ‹… אמתים וחצי ארכו› (“mother and-half length-him/its”)
+# ‹ואמה וחצי רחבו› (“and-mother and-half width-him/its”)
+# ‹ואמה וחצי קמתו› (“and-mother and-half height-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 37:1.&quot;
 m.step(&quot;Exod.37.1&quot;)
 # witness-tier presupposed read: shade_and_attribution on bezalel_byline —
 # read, not installed
 m.witness_read(&quot;bezalel_byline&quot;, &quot;shade_and_attribution&quot;,
                 cites=[&quot;Midrash Tanchuma, Vayakhel 10:3&quot;, &quot;Midrash Tanchuma, Vayakhel 7:1&quot;, &quot;Onkelos Exod 37&quot;])
+# witness-tier presupposed read:
+# the_vessels_run_matched_to_the_spec_token_for_token on bezalels_one_verb —
+# read, not installed
+m.witness_read(&quot;bezalels_one_verb&quot;, &quot;the_vessels_run_matched_to_the_spec_token_for_token&quot;,
+                cites=[&quot;Onkelos Exod 37:1-5&quot;, &quot;Onkelos Exod 37:6-9&quot;, &quot;Onkelos Exod 37:17-24&quot;, &quot;Midrash Tanchuma, Vayakhel 6:5&quot;, &quot;Midrash Tanchuma, Vayakhel 7:1&quot;, &quot;Midrash Tanchuma, Vayakhel 7:3&quot;, &quot;Midrash Tanchuma, Vayakhel 8:3&quot;, &quot;Midrash Tanchuma, Vayakhel 10:3&quot;, &quot;Berakhot 55a:12&quot;, &quot;Menachot 28b:17&quot;, &quot;Menachot 29a:1&quot;, &quot;Menachot 29a:2&quot;, &quot;Yoma 72b:7&quot;, &quot;Mishnah Menachot 3:7&quot;, &quot;Mishnah Yoma 5:1&quot;])
 
 # -------------------------- Exod.37.2 · ETNACHTA_SPLIT ---------------------
-# ויצפהו זהב טהור מבית ומחוץ … ויעש לו זר זהב סביב
-# &quot;[EN-AID] From top split: LEFT «ויצפהו זהב טהור מבית ומחוץ» / RIGHT «ויעש
-# לו זר זהב סביב». Derive claim from Hebrew arms, not English alone. Exod
-# 37:2.&quot;
+# ‹ויצפהו זהב טהור› (“and-sheet-over-him/its gold pure”)
+# ‹מבית ומחוץ … ויעש› (“from-house and-from-outside … and-make”)
+# ‹לו זר זהב› (“to-him/its chaplet gold”)
+# ‹סביב› (“circle”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:2.&quot;
 m.step(&quot;Exod.37.2&quot;)
 # witness-tier presupposed read: inside_like_outside on gold_within_without
 # — read, not installed
@@ -1528,17 +1539,22 @@ m.witness_read(&quot;gold_within_without&quot;, &quot;inside_like_outside&quot;,
                 cites=[&quot;Midrash Tanchuma, Vayakhel 7:3&quot;, &quot;Midrash Tanchuma, Vayakhel 7:4&quot;, &quot;Midrash Tanchuma, Vayakhel 8:3&quot;])
 
 # -------------------------- Exod.37.3 · ETNACHTA_SPLIT ---------------------
-# ויצק לו ארבע טבעת זהב על ארבע פעמתיו … ושתי טבעת על צלעו האחת ושתי טבעות
-# על צלעו השנית
-# &quot;[EN-AID] From top split: LEFT «ויצק לו ארבע טבעת זהב על ארבע פעמתיו» /
-# RIGHT «ושתי טבעת על צלעו האחת ושתי טבעות על צלעו השנית». Derive claim from
-# Hebrew arms, not English alone. Exod 37:3.&quot;
+# ‹ויצק לו ארבע› (“and-pour-out to-him/its four”)
+# ‹טבעת זהב על› (“seal gold over”)
+# ‹ארבע פעמתיו … ושתי› (“four stroke-him/its … and-two”)
+# ‹טבעת על צלעו› (“seal over rib-him/its”)
+# ‹האחת ושתי טבעות› (“the-one and-two seal”)
+# ‹על צלעו השנית› (“over rib-him/its the-second”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:3.&quot;
 m.step(&quot;Exod.37.3&quot;)
 
 # -------------------------- Exod.37.4 · ETNACHTA_SPLIT ---------------------
-# ויעש בדי עצי שטים … ויצף אתם זהב
-# &quot;[EN-AID] From top split: LEFT «ויעש בדי עצי שטים» / RIGHT «ויצף אתם זהב».
-# Derive claim from Hebrew arms, not English alone. Exod 37:4.&quot;
+# ‹ויעש בדי עצי› (“and-make separation tree”)
+# ‹שטים … ויצף אתם› (“acacia … and-sheet-over obj-marker-them/their”)
+# ‹זהב› (“gold”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:4.&quot;
 m.step(&quot;Exod.37.4&quot;)
 # witness-tier presupposed read: atonement_stocked_first on shittim_wood —
 # read, not installed
@@ -1546,10 +1562,12 @@ m.witness_read(&quot;shittim_wood&quot;, &quot;atonement_stocked_first&quot;,
                 cites=[&quot;Midrash Tanchuma Buber, Vayakhel 9:1&quot;, &quot;Midrash Tanchuma, Vayakhel 8:1&quot;, &quot;Midrash Tanchuma, Vayakhel 8:2&quot;])
 
 # -------------------------- Exod.37.5 · ETNACHTA_SPLIT ---------------------
-# ויבא את הבדים בטבעת על צלעת הארן … לשאת את הארן
-# &quot;[EN-AID] From top split: LEFT «ויבא את הבדים בטבעת על צלעת הארן» / RIGHT
-# «לשאת את הארן». Derive claim from Hebrew arms, not English alone. Exod
-# 37:5.&quot;
+# ‹ויבא את הבדים› (“and-come/bring obj-marker the-separation”)
+# ‹בטבעת על צלעת› (“in-seal over rib”)
+# ‹הארן … לשאת את› (“the-ark … to-lift/carry obj-marker”)
+# ‹הארן› (“the-ark”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:5.&quot;
 m.step(&quot;Exod.37.5&quot;)
 # witness-tier presupposed read: carrying_protocol on carry_poles — read,
 # not installed
@@ -1557,10 +1575,12 @@ m.witness_read(&quot;carry_poles&quot;, &quot;carrying_protocol&quot;,
                 cites=[&quot;Midrash Tanchuma, Vayakhel 7:13&quot;, &quot;Onkelos Exod 37&quot;])
 
 # -------------------------- Exod.37.6 · ETNACHTA_SPLIT ---------------------
-# ויעש כפרת זהב טהור … אמתים וחצי ארכה ואמה וחצי רחבה
-# &quot;[EN-AID] From top split: LEFT «ויעש כפרת זהב טהור» / RIGHT «אמתים וחצי
-# ארכה ואמה וחצי רחבה». Derive claim from Hebrew arms, not English alone.
-# Exod 37:6.&quot;
+# ‹ויעש כפרת זהב› (“and-make lid gold”)
+# ‹טהור … אמתים וחצי› (“pure … mother and-half”)
+# ‹ארכה ואמה וחצי› (“length-her/its and-mother and-half”)
+# ‹רחבה› (“width-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:6.&quot;
 m.step(&quot;Exod.37.6&quot;)
 # witness-tier presupposed read: ark_first_dispute on build_order — read,
 # not installed
@@ -1568,26 +1588,33 @@ m.witness_read(&quot;build_order&quot;, &quot;ark_first_dispute&quot;,
                 cites=[&quot;Babylonian Talmud Berakhot 55a&quot;, &quot;Midrash Tanchuma Buber, Vayakhel 8:3&quot;, &quot;Midrash Tanchuma, Vayakhel 10:1&quot;, &quot;Midrash Tanchuma, Vayakhel 10:2&quot;, &quot;Midrash Tanchuma, Vayakhel 6:5&quot;])
 
 # -------------------------- Exod.37.7 · ETNACHTA_SPLIT ---------------------
-# ויעש שני כרבים זהב … מקשה עשה אתם משני קצות הכפרת
-# &quot;[EN-AID] From top split: LEFT «ויעש שני כרבים זהב» / RIGHT «מקשה עשה אתם
-# משני קצות הכפרת». Derive claim from Hebrew arms, not English alone. Exod
-# 37:7.&quot;
+# ‹ויעש שני כרבים› (“and-make two cherub”)
+# ‹זהב … מקשה עשה› (“gold … rounded-work make”)
+# ‹אתם משני קצות› (“obj-marker-them/their from-two termination”)
+# ‹הכפרת› (“the-lid”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:7.&quot;
 m.step(&quot;Exod.37.7&quot;)
 
 # -------------------------- Exod.37.8 · ETNACHTA_SPLIT ---------------------
-# כרוב אחד מקצה מזה וכרוב אחד מקצה מזה … מן הכפרת עשה את הכרבים משני קצוותו
-# קצותיו
-# &quot;[EN-AID] From top split: LEFT «כרוב אחד מקצה מזה וכרוב אחד מקצה מזה» /
-# RIGHT «מן הכפרת עשה את הכרבים משני קצוותו קצותיו». Derive claim from
-# Hebrew arms, not English alone. Exod 37:8.&quot;
+# ‹כרוב אחד מקצה› (“cherub one from-termination”)
+# ‹מזה וכרוב אחד› (“from-this and-cherub one”)
+# ‹מקצה מזה … מן› (“from-termination from-this … from”)
+# ‹הכפרת עשה את› (“the-lid make obj-marker”)
+# ‹הכרבים משני קצוותו› (“the-cherub from-two termination-him/its”)
+# ‹קצותיו› (“termination-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:8.&quot;
 m.step(&quot;Exod.37.8&quot;)
 
 # -------------------------- Exod.37.9 · ETNACHTA_SPLIT ---------------------
-# ויהיו הכרבים פרשי כנפים למעלה סככים בכנפיהם על הכפרת ופניהם  … אל הכפרת
-# היו פני הכרבים
-# &quot;[EN-AID] From top split: LEFT «ויהיו הכרבים פרשי כנפים למעלה סככים
-# בכנפיהם על הכפרת ופניהם איש אל אחיו» / RIGHT «אל הכפרת היו פני הכרבים».
-# Derive claim from Hebrew arms, not English alone. Exod 37:9.&quot;
+# ‹ויהיו הכרבים פרשי› (“and-be the-cherub break-apart”)
+# ‹כנפים למעלה סככים› (“wing to-upper-part-ward entwine-as-ascreen”)
+# ‹בכנפיהם על הכפרת› (“in-wing-them/their over the-lid”)
+# ‹ופניהם … אל הכפרת› (“and-face-them/their … to the-lid”)
+# ‹היו פני הכרבים› (“be face the-cherub”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:9.&quot;
 m.step(&quot;Exod.37.9&quot;)
 # witness-tier presupposed read: compression_without_loss on cherubim_made —
 # read, not installed
@@ -1595,144 +1622,194 @@ m.witness_read(&quot;cherubim_made&quot;, &quot;compression_without_loss&quot;,
                 cites=[&quot;Midrash Tanchuma, Vayakhel 7:2&quot;, &quot;Onkelos Exod 37&quot;])
 
 # -------------------------- Exod.37.10 · ETNACHTA_SPLIT --------------------
-# ויעש את השלחן עצי שטים … אמתים ארכו ואמה רחבו ואמה וחצי קמתו
-# &quot;[EN-AID] From top split: LEFT «ויעש את השלחן עצי שטים» / RIGHT «אמתים
-# ארכו ואמה רחבו ואמה וחצי קמתו». Derive claim from Hebrew arms, not English
-# alone. Exod 37:10.&quot;
+# ‹ויעש את השלחן› (“and-make obj-marker the-table”)
+# ‹עצי שטים … אמתים› (“tree acacia … mother”)
+# ‹ארכו ואמה רחבו› (“length-him/its and-mother width-him/its”)
+# ‹ואמה וחצי קמתו› (“and-mother and-half height-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:10.&quot;
 m.step(&quot;Exod.37.10&quot;)
 
 # -------------------------- Exod.37.11 · ETNACHTA_SPLIT --------------------
-# ויצף אתו זהב טהור … ויעש לו זר זהב סביב
-# &quot;[EN-AID] From top split: LEFT «ויצף אתו זהב טהור» / RIGHT «ויעש לו זר זהב
-# סביב». Derive claim from Hebrew arms, not English alone. Exod 37:11.&quot;
+# ‹ויצף אתו זהב› (“and-sheet-over obj-marker-him/its gold”)
+# ‹טהור … ויעש לו› (“pure … and-make to-him/its”)
+# ‹זר זהב סביב› (“chaplet gold circle”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:11.&quot;
 m.step(&quot;Exod.37.11&quot;)
 
 # -------------------------- Exod.37.12 · ETNACHTA_SPLIT --------------------
-# ויעש לו מסגרת טפח סביב … ויעש זר זהב למסגרתו סביב
-# &quot;[EN-AID] From top split: LEFT «ויעש לו מסגרת טפח סביב» / RIGHT «ויעש זר
-# זהב למסגרתו סביב». Derive claim from Hebrew arms, not English alone. Exod
-# 37:12.&quot;
+# ‹ויעש לו מסגרת› (“and-make to-him/its something-enclosing”)
+# ‹טפח סביב … ויעש› (“spread-of-the-hand circle … and-make”)
+# ‹זר זהב למסגרתו› (“chaplet gold to-something-enclosing-him/its”)
+# ‹סביב› (“circle”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:12.&quot;
 m.step(&quot;Exod.37.12&quot;)
 
 # -------------------------- Exod.37.13 · ETNACHTA_SPLIT --------------------
-# ויצק לו ארבע טבעת זהב … ויתן את הטבעת על ארבע הפאת אשר לארבע רגליו
-# &quot;[EN-AID] From top split: LEFT «ויצק לו ארבע טבעת זהב» / RIGHT «ויתן את
-# הטבעת על ארבע הפאת אשר לארבע רגליו». Derive claim from Hebrew arms, not
-# English alone. Exod 37:13.&quot;
+# ‹ויצק לו ארבע› (“and-pour-out to-him/its four”)
+# ‹טבעת זהב … ויתן› (“seal gold … and-set”)
+# ‹את הטבעת על› (“obj-marker the-seal over”)
+# ‹ארבע הפאת אשר› (“four the-mouth-in-a-figurative-sense which”)
+# ‹לארבע רגליו› (“to-four foot-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:13.&quot;
 m.step(&quot;Exod.37.13&quot;)
 
 # -------------------------- Exod.37.14 · ETNACHTA_SPLIT --------------------
-# לעמת המסגרת היו הטבעת … בתים לבדים לשאת את השלחן
-# &quot;[EN-AID] From top split: LEFT «לעמת המסגרת היו הטבעת» / RIGHT «בתים לבדים
-# לשאת את השלחן». Derive claim from Hebrew arms, not English alone. Exod
-# 37:14.&quot;
+# ‹לעמת המסגרת היו› (“to-conjunction the-something-enclosing be”)
+# ‹הטבעת … בתים לבדים› (“the-seal … house to-separation”)
+# ‹לשאת את השלחן› (“to-lift/carry obj-marker the-table”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:14.&quot;
 m.step(&quot;Exod.37.14&quot;)
 
 # -------------------------- Exod.37.15 · ETNACHTA_SPLIT --------------------
-# ויעש את הבדים עצי שטים ויצף אתם זהב … לשאת את השלחן
-# &quot;[EN-AID] From top split: LEFT «ויעש את הבדים עצי שטים ויצף אתם זהב» /
-# RIGHT «לשאת את השלחן». Derive claim from Hebrew arms, not English alone.
-# Exod 37:15.&quot;
+# ‹ויעש את הבדים› (“and-make obj-marker the-separation”)
+# ‹עצי שטים ויצף› (“tree acacia and-sheet-over”)
+# ‹אתם זהב … לשאת› (“obj-marker-them/their gold … to-lift/carry”)
+# ‹את השלחן› (“obj-marker the-table”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:15.&quot;
 m.step(&quot;Exod.37.15&quot;)
 
 # -------------------------- Exod.37.16 · ETNACHTA_SPLIT --------------------
-# ויעש את הכלים אשר על השלחן את קערתיו ואת כפתיו ואת מנקיתיו ו … זהב טהור
-# &quot;[EN-AID] From top split: LEFT «ויעש את הכלים אשר על השלחן את קערתיו ואת
-# כפתיו ואת מנקיתיו ואת הקשות אשר יסך בהן» / RIGHT «זהב טהור». Derive claim
-# from Hebrew arms, not English alone. Exod 37:16.&quot;
+# ‹ויעש את הכלים› (“and-make obj-marker the-vessel”)
+# ‹אשר על השלחן› (“which over the-table”)
+# ‹את קערתיו ואת› (“obj-marker bowl-him/its and-obj-marker”)
+# ‹כפתיו ואת מנקיתיו› (“palm-of-hand-him/its and-obj-marker sacrificial-
+# basin-him/its”)
+# ‹ו … זהב טהור› (“? … gold pure”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:16.&quot;
 m.step(&quot;Exod.37.16&quot;)
 
 # -------------------------- Exod.37.17 · ETNACHTA_SPLIT --------------------
-# ויעש את המנרה זהב טהור … מקשה עשה את המנרה ירכה וקנה גביעיה כפתריה ופרחיה
-# ממנה היו
-# &quot;[EN-AID] From top split: LEFT «ויעש את המנרה זהב טהור» / RIGHT «מקשה עשה
-# את המנרה ירכה וקנה גביעיה כפתריה ופרחיה ממנה היו». Derive claim from
-# Hebrew arms, not English alone. Exod 37:17.&quot;
+# ‹ויעש את המנרה› (“and-make obj-marker the-chandelier”)
+# ‹זהב טהור … מקשה› (“gold pure … rounded-work”)
+# ‹עשה את המנרה› (“make obj-marker the-chandelier”)
+# ‹ירכה וקנה גביעיה› (“thigh-her/its and-reed-her/its goblet-her/its”)
+# ‹כפתריה ופרחיה ממנה› (“chaplet-her/its and-calyx-her/its from-her/its”)
+# ‹היו› (“be”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:17.&quot;
 m.step(&quot;Exod.37.17&quot;)
 
 # -------------------------- Exod.37.18 · ETNACHTA_SPLIT --------------------
-# וששה קנים יצאים מצדיה … שלשה קני מנרה מצדה האחד ושלשה קני מנרה מצדה השני
-# &quot;[EN-AID] From top split: LEFT «וששה קנים יצאים מצדיה» / RIGHT «שלשה קני
-# מנרה מצדה האחד ושלשה קני מנרה מצדה השני». Derive claim from Hebrew arms,
-# not English alone. Exod 37:18.&quot;
+# ‹וששה קנים יצאים› (“and-six reed bring-forth”)
+# ‹מצדיה … שלשה קני› (“from-side-her/its … three reed”)
+# ‹מנרה מצדה האחד› (“chandelier from-side-her/its the-one”)
+# ‹ושלשה קני מנרה› (“and-three reed chandelier”)
+# ‹מצדה השני› (“from-side-her/its the-second”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:18.&quot;
 m.step(&quot;Exod.37.18&quot;)
 
 # -------------------------- Exod.37.19 · ETNACHTA_SPLIT --------------------
-# שלשה גבעים משקדים בקנה האחד כפתר ופרח ושלשה גבעים משקדים בקנ … כן לששת
-# הקנים היצאים מן המנרה
-# &quot;[EN-AID] From top split: LEFT «שלשה גבעים משקדים בקנה האחד כפתר ופרח
-# ושלשה גבעים משקדים בקנה אחד כפתר ופרח» / RIGHT «כן לששת הקנים היצאים מן
-# המנרה». Derive claim from Hebrew arms, not English alone. Exod 37:19.&quot;
+# ‹שלשה גבעים משקדים› (“three goblet be-almond-shaped”)
+# ‹בקנה האחד כפתר› (“in-reed the-one chaplet”)
+# ‹ופרח ושלשה גבעים› (“and-calyx and-three goblet”)
+# ‹משקדים בקנ … כן› (“be-almond-shaped ? … so”)
+# ‹לששת הקנים היצאים› (“to-six the-reed the-bring-forth”)
+# ‹מן המנרה› (“from the-chandelier”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:19.&quot;
 m.step(&quot;Exod.37.19&quot;)
 
 # -------------------------- Exod.37.20 · ETNACHTA_SPLIT --------------------
-# ובמנרה ארבעה גבעים … משקדים כפתריה ופרחיה
-# &quot;[EN-AID] From top split: LEFT «ובמנרה ארבעה גבעים» / RIGHT «משקדים כפתריה
-# ופרחיה». Derive claim from Hebrew arms, not English alone. Exod 37:20.&quot;
+# ‹ובמנרה ארבעה גבעים› (“and-in-chandelier four goblet”)
+# ‹… משקדים כפתריה ופרחיה› (“be-almond-shaped chaplet-her/its and-calyx-
+# her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:20.&quot;
 m.step(&quot;Exod.37.20&quot;)
 
 # -------------------------- Exod.37.21 · ETNACHTA_SPLIT --------------------
-# וכפתר תחת שני הקנים ממנה וכפתר תחת שני הקנים ממנה וכפתר תחת  … לששת הקנים
-# היצאים ממנה
-# &quot;[EN-AID] From top split: LEFT «וכפתר תחת שני הקנים ממנה וכפתר תחת שני
-# הקנים ממנה וכפתר תחת שני הקנים ממנה» / RIGHT «לששת הקנים היצאים ממנה».
-# Derive claim from Hebrew arms, not English alone. Exod 37:21.&quot;
+# ‹וכפתר תחת שני› (“and-chaplet under two”)
+# ‹הקנים ממנה וכפתר› (“the-reed from-her/its and-chaplet”)
+# ‹תחת שני הקנים› (“under two the-reed”)
+# ‹ממנה וכפתר תחת› (“from-her/its and-chaplet under”)
+# ‹… לששת הקנים היצאים› (“to-six the-reed the-bring-forth”)
+# ‹ממנה› (“from-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:21.&quot;
 m.step(&quot;Exod.37.21&quot;)
 
 # -------------------------- Exod.37.22 · ETNACHTA_SPLIT --------------------
-# כפתריהם וקנתם ממנה היו … כלה מקשה אחת זהב טהור
-# &quot;[EN-AID] From top split: LEFT «כפתריהם וקנתם ממנה היו» / RIGHT «כלה מקשה
-# אחת זהב טהור». Derive claim from Hebrew arms, not English alone. Exod
-# 37:22.&quot;
+# ‹כפתריהם וקנתם ממנה› (“chaplet-them/their and-reed-them/their from-
+# her/its”)
+# ‹היו … כלה מקשה› (“be … all-her/its rounded-work”)
+# ‹אחת זהב טהור› (“one gold pure”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:22.&quot;
 m.step(&quot;Exod.37.22&quot;)
 
 # -------------------------- Exod.37.23 · ETNACHTA_SPLIT --------------------
-# ויעש את נרתיה שבעה … ומלקחיה ומחתתיה זהב טהור
-# &quot;[EN-AID] From top split: LEFT «ויעש את נרתיה שבעה» / RIGHT «ומלקחיה
-# ומחתתיה זהב טהור». Derive claim from Hebrew arms, not English alone. Exod
-# 37:23.&quot;
+# ‹ויעש את נרתיה› (“and-make obj-marker lamp-her/its”)
+# ‹שבעה … ומלקחיה ומחתתיה› (“seven … and-tweezers-her/its and-pan-for-live-
+# coals-her/its”)
+# ‹זהב טהור› (“gold pure”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:23.&quot;
 m.step(&quot;Exod.37.23&quot;)
 
 # -------------------------- Exod.37.24 · ETNACHTA_SPLIT --------------------
-# ככר זהב טהור עשה אתה … ואת כל כליה
-# &quot;[EN-AID] From top split: LEFT «ככר זהב טהור עשה אתה» / RIGHT «ואת כל
-# כליה». Derive claim from Hebrew arms, not English alone. Exod 37:24.&quot;
+# ‹ככר זהב טהור› (“circle gold pure”)
+# ‹עשה אתה … ואת› (“make obj-marker-her/its … and-obj-marker”)
+# ‹כל כליה› (“all vessel-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:24.&quot;
 m.step(&quot;Exod.37.24&quot;)
 
 # -------------------------- Exod.37.25 · ETNACHTA_SPLIT --------------------
-# ויעש את מזבח הקטרת עצי שטים … אמה ארכו ואמה רחבו רבוע ואמתים קמתו ממנו היו
-# קרנתיו
-# &quot;[EN-AID] From top split: LEFT «ויעש את מזבח הקטרת עצי שטים» / RIGHT «אמה
-# ארכו ואמה רחבו רבוע ואמתים קמתו ממנו היו קרנתיו». Derive claim from Hebrew
+# ‹ויעש את מזבח› (“and-make obj-marker altar”)
+# ‹הקטרת עצי שטים› (“the-fumigation tree acacia”)
+# ‹… אמה ארכו ואמה› (“mother length-him/its and-mother”)
+# ‹רחבו רבוע ואמתים› (“width-him/its be-quadrate and-mother”)
+# ‹קמתו ממנו היו› (“height-him/its from-us/our be”)
+# ‹קרנתיו› (“horn-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 37:25.&quot;
 m.step(&quot;Exod.37.25&quot;)
 
 # -------------------------- Exod.37.26 · ETNACHTA_SPLIT --------------------
-# ויצף אתו זהב טהור את גגו ואת קירתיו סביב ואת קרנתיו … ויעש לו זר זהב סביב
-# &quot;[EN-AID] From top split: LEFT «ויצף אתו זהב טהור את גגו ואת קירתיו סביב
-# ואת קרנתיו» / RIGHT «ויעש לו זר זהב סביב». Derive claim from Hebrew arms,
-# not English alone. Exod 37:26.&quot;
+# ‹ויצף אתו זהב› (“and-sheet-over obj-marker-him/its gold”)
+# ‹טהור את גגו› (“pure obj-marker roof-him/its”)
+# ‹ואת קירתיו סביב› (“and-obj-marker wall-him/its circle”)
+# ‹ואת קרנתיו … ויעש› (“and-obj-marker horn-him/its … and-make”)
+# ‹לו זר זהב› (“to-him/its chaplet gold”)
+# ‹סביב› (“circle”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:26.&quot;
 m.step(&quot;Exod.37.26&quot;)
 
 # -------------------------- Exod.37.27 · ETNACHTA_SPLIT --------------------
-# ושתי טבעת זהב עשה לו מתחת לזרו על שתי צלעתיו על שני צדיו … לבתים לבדים
-# לשאת אתו בהם
-# &quot;[EN-AID] From top split: LEFT «ושתי טבעת זהב עשה לו מתחת לזרו על שתי
-# צלעתיו על שני צדיו» / RIGHT «לבתים לבדים לשאת אתו בהם». Derive claim from
-# Hebrew arms, not English alone. Exod 37:27.&quot;
+# ‹ושתי טבעת זהב› (“and-two seal gold”)
+# ‹עשה לו מתחת› (“make to-him/its from-under”)
+# ‹לזרו על שתי› (“to-chaplet-him/its over two”)
+# ‹צלעתיו על שני› (“rib-him/its over two”)
+# ‹צדיו … לבתים לבדים› (“side-him/its … to-house to-separation”)
+# ‹לשאת אתו בהם› (“to-lift/carry obj-marker-him/its in-them/their”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:27.&quot;
 m.step(&quot;Exod.37.27&quot;)
 
 # -------------------------- Exod.37.28 · ETNACHTA_SPLIT --------------------
-# ויעש את הבדים עצי שטים … ויצף אתם זהב
-# &quot;[EN-AID] From top split: LEFT «ויעש את הבדים עצי שטים» / RIGHT «ויצף אתם
-# זהב». Derive claim from Hebrew arms, not English alone. Exod 37:28.&quot;
+# ‹ויעש את הבדים› (“and-make obj-marker the-separation”)
+# ‹עצי שטים … ויצף› (“tree acacia … and-sheet-over”)
+# ‹אתם זהב› (“obj-marker-them/their gold”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:28.&quot;
 m.step(&quot;Exod.37.28&quot;)
 
 # -------------------------- Exod.37.29 · ETNACHTA_SPLIT --------------------
-# ויעש את שמן המשחה קדש ואת קטרת הסמים טהור … מעשה רקח
-# &quot;[EN-AID] From top split: LEFT «ויעש את שמן המשחה קדש ואת קטרת הסמים טהור»
-# / RIGHT «מעשה רקח». Derive claim from Hebrew arms, not English alone. Exod
-# 37:29.&quot;
+# ‹ויעש את שמן› (“and-make obj-marker oil”)
+# ‹המשחה קדש ואת› (“the-unction holiness and-obj-marker”)
+# ‹קטרת הסמים טהור› (“fumigation the-aroma pure”)
+# ‹… מעשה רקח› (“deed/work perfume”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 37:29.&quot;
 m.step(&quot;Exod.37.29&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
@@ -1751,25 +1828,28 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;bezalel_byline&#x27;, &#x27;shade_and_attribution&#x27;), (&#x27;gold_within_without&#x27;, &#x27;inside_like_outside&#x27;), (&#x27;shittim_wood&#x27;, &#x27;atonement_stocked_first&#x27;), (&#x27;carry_poles&#x27;, &#x27;carrying_protocol&#x27;), (&#x27;build_order&#x27;, &#x27;ark_first_dispute&#x27;), (&#x27;cherubim_made&#x27;, &#x27;compression_without_loss&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;bezalel_byline&#x27;, &#x27;shade_and_attribution&#x27;), (&#x27;bezalels_one_verb&#x27;, &#x27;the_vessels_run_matched_to_the_spec_token_for_token&#x27;), (&#x27;gold_within_without&#x27;, &#x27;inside_like_outside&#x27;), (&#x27;shittim_wood&#x27;, &#x27;atonement_stocked_first&#x27;), (&#x27;carry_poles&#x27;, &#x27;carrying_protocol&#x27;), (&#x27;build_order&#x27;, &#x27;ark_first_dispute&#x27;), (&#x27;cherubim_made&#x27;, &#x27;compression_without_loss&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Vayakhel 10:3&#x27;, &#x27;Midrash Tanchuma, Vayakhel 7:1&#x27;, &#x27;Onkelos Exod 37&#x27;]
     assert all(&#x27;shade_and_attribution&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;bezalel_byline&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Vayakhel 7:3&#x27;, &#x27;Midrash Tanchuma, Vayakhel 7:4&#x27;, &#x27;Midrash Tanchuma, Vayakhel 8:3&#x27;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Onkelos Exod 37:1-5&#x27;, &#x27;Onkelos Exod 37:6-9&#x27;, &#x27;Onkelos Exod 37:17-24&#x27;, &#x27;Midrash Tanchuma, Vayakhel 6:5&#x27;, &#x27;Midrash Tanchuma, Vayakhel 7:1&#x27;, &#x27;Midrash Tanchuma, Vayakhel 7:3&#x27;, &#x27;Midrash Tanchuma, Vayakhel 8:3&#x27;, &#x27;Midrash Tanchuma, Vayakhel 10:3&#x27;, &#x27;Berakhot 55a:12&#x27;, &#x27;Menachot 28b:17&#x27;, &#x27;Menachot 29a:1&#x27;, &#x27;Menachot 29a:2&#x27;, &#x27;Yoma 72b:7&#x27;, &#x27;Mishnah Menachot 3:7&#x27;, &#x27;Mishnah Yoma 5:1&#x27;]
+    assert all(&#x27;the_vessels_run_matched_to_the_spec_token_for_token&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;bezalels_one_verb&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Vayakhel 7:3&#x27;, &#x27;Midrash Tanchuma, Vayakhel 7:4&#x27;, &#x27;Midrash Tanchuma, Vayakhel 8:3&#x27;]
     assert all(&#x27;inside_like_outside&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;gold_within_without&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Midrash Tanchuma Buber, Vayakhel 9:1&#x27;, &#x27;Midrash Tanchuma, Vayakhel 8:1&#x27;, &#x27;Midrash Tanchuma, Vayakhel 8:2&#x27;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Midrash Tanchuma Buber, Vayakhel 9:1&#x27;, &#x27;Midrash Tanchuma, Vayakhel 8:1&#x27;, &#x27;Midrash Tanchuma, Vayakhel 8:2&#x27;]
     assert all(&#x27;atonement_stocked_first&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;shittim_wood&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Vayakhel 7:13&#x27;, &#x27;Onkelos Exod 37&#x27;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Vayakhel 7:13&#x27;, &#x27;Onkelos Exod 37&#x27;]
     assert all(&#x27;carrying_protocol&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;carry_poles&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Babylonian Talmud Berakhot 55a&#x27;, &#x27;Midrash Tanchuma Buber, Vayakhel 8:3&#x27;, &#x27;Midrash Tanchuma, Vayakhel 10:1&#x27;, &#x27;Midrash Tanchuma, Vayakhel 10:2&#x27;, &#x27;Midrash Tanchuma, Vayakhel 6:5&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Babylonian Talmud Berakhot 55a&#x27;, &#x27;Midrash Tanchuma Buber, Vayakhel 8:3&#x27;, &#x27;Midrash Tanchuma, Vayakhel 10:1&#x27;, &#x27;Midrash Tanchuma, Vayakhel 10:2&#x27;, &#x27;Midrash Tanchuma, Vayakhel 6:5&#x27;]
     assert all(&#x27;ark_first_dispute&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;build_order&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Vayakhel 7:2&#x27;, &#x27;Onkelos Exod 37&#x27;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Vayakhel 7:2&#x27;, &#x27;Onkelos Exod 37&#x27;]
     assert all(&#x27;compression_without_loss&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;cherubim_made&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">Tree-derived v1 (phase 2f). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-02 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">Tree-derived v1 (phase 2f). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-06 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

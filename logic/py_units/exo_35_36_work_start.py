@@ -157,6 +157,10 @@ m.witness_read("overflow_halt", "input_halt_on_full_buffer",
 # read, not installed
 m.witness_read("camp_proclamation", "carrying_out_ink",
                 cites=["Shabbat 96b:1", "Shabbat 96b:2", "Shabbat 96b:3", "Rosh Hashanah 34a:17", "Shabbat 92a:5", "Shabbat 92a:6", "Shabbat 92a:7"])
+# witness-tier presupposed read: the_carrying_labor_at_the_herald on
+# the_halt_and_the_surplus — read, not installed
+m.witness_read("the_halt_and_the_surplus", "the_carrying_labor_at_the_herald",
+                cites=["Onkelos Exod 35:30-33", "Onkelos Exod 36:5-7", "Midrash Tanchuma, Vayakhel 3:2", "Midrash Tanchuma, Vayakhel 5:1", "Midrash Tanchuma, Pekudei 5:4", "Shabbat 96b:1", "Shabbat 96b:2", "Berakhot 55a:11", "Berakhot 55a:12", "Berakhot 55a:13", "Mishnah Shevuot 1:1", "Mishnah Shekalim 4:4", "Mishnah Shekalim 5:6", "Mishnah Shekalim 4:6"])
 
 # -------------------------- Exod.36.7 · ETNACHTA_SPLIT ---------------------
 # ‹והמלאכה היתה דים› (“and-the-work be enough-them/their”)
@@ -483,7 +487,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('public_appointment', 'nepotism_answered'), ('wisdom_grant', 'prefilled_vessels'), ('teaching_grant', 'master_as_teacher'), ('three_attributes', 'worlds_own_toolchain'), ('overflow_halt', 'input_halt_on_full_buffer'), ('camp_proclamation', 'carrying_out_ink'), ('standing_boards', 'pledge_and_fruit_tree'), ('veil_made', 'case_shelf_spec_recited')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('public_appointment', 'nepotism_answered'), ('wisdom_grant', 'prefilled_vessels'), ('teaching_grant', 'master_as_teacher'), ('three_attributes', 'worlds_own_toolchain'), ('overflow_halt', 'input_halt_on_full_buffer'), ('camp_proclamation', 'carrying_out_ink'), ('the_halt_and_the_surplus', 'the_carrying_labor_at_the_herald'), ('standing_boards', 'pledge_and_fruit_tree'), ('veil_made', 'case_shelf_spec_recited')]
     assert m.WITNESS_READS[0]["cites"] == ['Midrash Tanchuma, Vayakhel 3:1', 'Midrash Tanchuma, Vayakhel 3:2', 'Onkelos Exod 35']
     assert all('nepotism_answered' not in f for f in m.WORLD["facts"])
     assert 'public_appointment' not in m.WORLD["witnessed"]
@@ -502,10 +506,13 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[5]["cites"] == ['Shabbat 96b:1', 'Shabbat 96b:2', 'Shabbat 96b:3', 'Rosh Hashanah 34a:17', 'Shabbat 92a:5', 'Shabbat 92a:6', 'Shabbat 92a:7']
     assert all('carrying_out_ink' not in f for f in m.WORLD["facts"])
     assert 'camp_proclamation' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Midrash Tanchuma, Vayakhel 9:1', 'Midrash Tanchuma, Vayakhel 9:2', 'Onkelos Exod 36']
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Exod 35:30-33', 'Onkelos Exod 36:5-7', 'Midrash Tanchuma, Vayakhel 3:2', 'Midrash Tanchuma, Vayakhel 5:1', 'Midrash Tanchuma, Pekudei 5:4', 'Shabbat 96b:1', 'Shabbat 96b:2', 'Berakhot 55a:11', 'Berakhot 55a:12', 'Berakhot 55a:13', 'Mishnah Shevuot 1:1', 'Mishnah Shekalim 4:4', 'Mishnah Shekalim 5:6', 'Mishnah Shekalim 4:6']
+    assert all('the_carrying_labor_at_the_herald' not in f for f in m.WORLD["facts"])
+    assert 'the_halt_and_the_surplus' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Midrash Tanchuma, Vayakhel 9:1', 'Midrash Tanchuma, Vayakhel 9:2', 'Onkelos Exod 36']
     assert all('pledge_and_fruit_tree' not in f for f in m.WORLD["facts"])
     assert 'standing_boards' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Midrash Tanchuma Buber, Vayakhel 10:1', 'Mishnah Shekalim 8:4', 'Onkelos Exod 36']
+    assert m.WITNESS_READS[8]["cites"] == ['Midrash Tanchuma Buber, Vayakhel 10:1', 'Mishnah Shekalim 8:4', 'Onkelos Exod 36']
     assert all('case_shelf_spec_recited' not in f for f in m.WORLD["facts"])
     assert 'veil_made' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

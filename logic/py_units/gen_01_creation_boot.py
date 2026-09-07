@@ -109,6 +109,11 @@ m.commit(1, label_form="cardinal", label_translit="yom echad")
 # va_yehi_erev_va_yehi_voqer — read, not installed
 m.witness_read("va_yehi_erev_va_yehi_voqer", "day_boundary_liturgy_jobs",
                 cites=["Berakhot 2a:8", "Berakhot 2a:9", "Berakhot 2a:10", "Berakhot 26a:16", "Berakhot 26a:17", "Berakhot 26a:18"])
+# witness-tier presupposed read:
+# the_day_boundary_and_the_sabbaths_three_seats_compiled_cold on
+# the_creation_chapter_as_the_first_spec_run_pair — read, not installed
+m.witness_read("the_creation_chapter_as_the_first_spec_run_pair", "the_day_boundary_and_the_sabbaths_three_seats_compiled_cold",
+                cites=["Mishnah Berakhot 1:1", "Mishnah Chullin 5:5", "Mishnah Taanit 4:2", "Mishnah Taanit 4:3", "Mishnah Tamid 7:4", "Mishnah Chagigah 2:1", "Mishnah Avot 5:1", "Mishnah Mikvaot 5:4", "Mishnah Nedarim 10:8", "Mishnah Shabbat 19:5", "Mishnah Nedarim 3:10", "Mishnah Megillah 3:6", "Megillah 21b:10", "Rosh Hashanah 32a:18", "Chagigah 12a:5", "Chagigah 12a:6", "Chagigah 12a:10", "Chagigah 12a:16", "Chagigah 12a:20", "Tamid 32a:3", "Megillah 9a:12", "Megillah 9a:13", "Shabbat 88a:6", "Avodah Zarah 5a:12", "Avodah Zarah 3a:6", "Chullin 60b:2", "Chullin 60b:3", "Chullin 60b:4", "Chullin 60a:9", "Chullin 60a:10", "Chullin 60a:11", "Chullin 60a:12", "Chullin 27b:11", "Rosh Hashanah 11a:3", "Rosh Hashanah 11a:4", "Rosh Hashanah 11a:5", "Rosh Hashanah 11a:6", "Pesachim 54a:13", "Sanhedrin 38b:14", "Ketubot 8a:9", "Eruvin 18a:23", "Berakhot 61a:14", "Megillah 22a:2", "Taanit 27b:10", "Taanit 26a:7", "Taanit 27b:3", "Megillah 20b:2", "Megillah 20b:3", "Megillah 10b:8", "Pesachim 2a:3", "Shabbat 119b:2", "Shabbat 10a:5", "Nazir 7a:10", "Pesachim 88a:5", "Yevamot 65b:4", "Kiddushin 35a:2", "Bava Kamma 55a:12", "Beitzah 16a:12", "Rosh Hashanah 31a:2", "Rosh Hashanah 31a:5", "Sukkah 49a:2", "Berakhot 2a:9", "Chullin 83a:15", "Shabbat 109a:9"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
@@ -131,8 +136,11 @@ if __name__ == "__main__":
     assert sorted(m.WORLD["witnessed"]) == ['or']
     assert m.WORLD["witnessed"]['or']["cites"] == ['Bereshit Rabbah 3:6', 'Chagigah 12a:10']
     assert all('or_ha_ganuz' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('va_yehi_erev_va_yehi_voqer', 'day_boundary_liturgy_jobs')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('va_yehi_erev_va_yehi_voqer', 'day_boundary_liturgy_jobs'), ('the_creation_chapter_as_the_first_spec_run_pair', 'the_day_boundary_and_the_sabbaths_three_seats_compiled_cold')]
     assert m.WITNESS_READS[0]["cites"] == ['Berakhot 2a:8', 'Berakhot 2a:9', 'Berakhot 2a:10', 'Berakhot 26a:16', 'Berakhot 26a:17', 'Berakhot 26a:18']
     assert all('day_boundary_liturgy_jobs' not in f for f in m.WORLD["facts"])
     assert 'va_yehi_erev_va_yehi_voqer' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Mishnah Berakhot 1:1', 'Mishnah Chullin 5:5', 'Mishnah Taanit 4:2', 'Mishnah Taanit 4:3', 'Mishnah Tamid 7:4', 'Mishnah Chagigah 2:1', 'Mishnah Avot 5:1', 'Mishnah Mikvaot 5:4', 'Mishnah Nedarim 10:8', 'Mishnah Shabbat 19:5', 'Mishnah Nedarim 3:10', 'Mishnah Megillah 3:6', 'Megillah 21b:10', 'Rosh Hashanah 32a:18', 'Chagigah 12a:5', 'Chagigah 12a:6', 'Chagigah 12a:10', 'Chagigah 12a:16', 'Chagigah 12a:20', 'Tamid 32a:3', 'Megillah 9a:12', 'Megillah 9a:13', 'Shabbat 88a:6', 'Avodah Zarah 5a:12', 'Avodah Zarah 3a:6', 'Chullin 60b:2', 'Chullin 60b:3', 'Chullin 60b:4', 'Chullin 60a:9', 'Chullin 60a:10', 'Chullin 60a:11', 'Chullin 60a:12', 'Chullin 27b:11', 'Rosh Hashanah 11a:3', 'Rosh Hashanah 11a:4', 'Rosh Hashanah 11a:5', 'Rosh Hashanah 11a:6', 'Pesachim 54a:13', 'Sanhedrin 38b:14', 'Ketubot 8a:9', 'Eruvin 18a:23', 'Berakhot 61a:14', 'Megillah 22a:2', 'Taanit 27b:10', 'Taanit 26a:7', 'Taanit 27b:3', 'Megillah 20b:2', 'Megillah 20b:3', 'Megillah 10b:8', 'Pesachim 2a:3', 'Shabbat 119b:2', 'Shabbat 10a:5', 'Nazir 7a:10', 'Pesachim 88a:5', 'Yevamot 65b:4', 'Kiddushin 35a:2', 'Bava Kamma 55a:12', 'Beitzah 16a:12', 'Rosh Hashanah 31a:2', 'Rosh Hashanah 31a:5', 'Sukkah 49a:2', 'Berakhot 2a:9', 'Chullin 83a:15', 'Shabbat 109a:9']
+    assert all('the_day_boundary_and_the_sabbaths_three_seats_compiled_cold' not in f for f in m.WORLD["facts"])
+    assert 'the_creation_chapter_as_the_first_spec_run_pair' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

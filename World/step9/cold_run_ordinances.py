@@ -76,7 +76,7 @@ sys.path.insert(0, HERE)
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
-assert GUARDED == 127, ("the guard counted %d expectations, the tripwire holds 127" % GUARDED)
+assert GUARDED == 128, ("the guard counted %d expectations, the tripwire holds 128" % GUARDED)
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -729,6 +729,145 @@ for b, ch, m, must in SHEET:
     mrow(b, ch, m, must)
 print('answer sheet: %d Mishnah rows verified by their own tokens (Sanhedrin 1, 3, 4, 7, Bava Metzia 2, 5, Bekhorot 8, Chullin 3, Terumot 3, Middot 3, Shevuot 4 read whole — the topic docket)' % len(SHEET))
 
+# ---- THE WRAP (W1 THE EXODUS LAW, D9-iii, 2026-09-07) — the daemon and the scene --------------
+# Twenty-one case heads of the four spans (20:22-26, 22:17-30, 23:1-9, 23:20-33), each a case-form
+# type of event_vocabulary.yaml with its witness in the ink; the daemon takes the decalogue runner's
+# altar rule at its call site (altar_rules is WRAPPED here — one function, two seats). It writes the
+# ledger and never emits an event; the sunset pledge, the firstborn's thirty days, and the firstling's
+# eighth day are TIMERS; the gradual conquest holds the land's desolation flag OFF.
+import world_engine as WE
+def law_ordinances(event, world):
+    """Exod 20:22-26, 22:17-30, 23:1-9, 23:20-33 (cold_run_ordinances.py F1-F9)."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'altar_built':
+        if event['stones'] == 'hewn':
+            return [E_('disqualified', event['builder'], value='iron_touched_stone', law="F1 [INK 20:25 'you shall not build them hewn... and profaned it'; CALLED cold_run_decalogue.altar_rules(hewn_stones) -> %s; Mishnah Middot 3:4]" % DEC_HEWN)]
+        return [E_('accepted', event['builder'], cp='HEAVEN', value=event['stones'], law="F1 [INK 20:24 'in every place where I cause My name to be mentioned I will come to you and bless you']")]
+    if k == 'offered_on_altar':
+        if event['offering'] == 'olah':
+            return [E_('smoked_to_the_lord', event['offerer'], cp='HEAVEN', value=OLAH_F['disposition']['v'], law="F1 [INK 20:24 'your burnt offerings'; CALLED cold_run_offerings.dispatch(olah:flock)]")]
+        return [E_('eating_window', event['offerer'], value=SHEL['window']['v'], law="F1 [INK 20:24 'your peace offerings'; CALLED cold_run_offerings.dispatch(shelamim) -> the window]")]
+    if k == 'sorcery_done':
+        if event['deed']:
+            return [E_('stoned', event['doer'], law="F2 [INK 22:17 'you shall not let live'; Mishnah Sanhedrin 7:4: the sorcerer stoned]")]
+        return [E_('exempt', event['doer'], value='deceiver_of_the_eyes', law='F2 [Mishnah Sanhedrin 7:11: the doer of a deed liable, the deceiver of the eyes exempt]')]
+    if k == 'lay_with_beast':
+        return [E_('put_to_death', event['doer'], value='stoning', law="F2 [INK 22:18 'shall surely be put to death'; Mishnah Sanhedrin 7:4; the beast by twenty-three, 1:4 — CALLED cold_run_sanctions.beast]")]
+    if k == 'sacrificed_to_gods':
+        return [E_('put_to_death', event['doer'], value=event['service'], law="F2 [INK 22:19 'shall be devoted... save to the LORD alone'; Mishnah Sanhedrin 7:6: the idolater's row]")]
+    if k == 'stranger_wronged':
+        if event['cried']:
+            return [E_('cry_heard', event['victim'], cp='HEAVEN', value=event['victim_class'], law="F3 [INK 22:22 'if he cries at all to Me, I will surely hear his cry']"),
+                    E_('put_to_death', event['wronger'], cp='HEAVEN', value='by_the_sword', law="F3 [INK 22:23 'My anger will burn and I will kill you with the sword' — measure for measure, Mekhilta]")]
+        return [E_('exempt', event['wronger'], value='wronging_by_words', law='F3 [Mishnah Bava Metzia 4:10: wronging by words — no court remedy; the Heaven clause stands]')]
+    if k == 'silver_lent':
+        return [E_('interest_barred', event['lender'], cp=event['borrower'], value=bool(event.get('interest')), law="F4 [INK 22:24 'you shall not lay upon him interest'; Mishnah Bava Metzia 5:1, 5:11; CALLED cold_run_yovel.interest]")]
+    if k == 'garment_pledged':
+        return [E_('pledge_returned_by_sunset', event['creditor'], cp=event['debtor'], due=event['day'] + 1, value=event['garment'], law="F4 [INK 22:25 'until the sun sets you shall return it to him' — the TIMER; Mishnah Bava Metzia 9:13]"),
+                E_('cry_heard', event['debtor'], cp='HEAVEN', law="F4 [INK 22:26 'when he cries to Me, I will hear, for I am gracious']")]
+    if k == 'god_or_ruler_cursed':
+        if event['by_name']:
+            return [E_('lashes', event['curser'], value=event['target'], law="F5 [INK 22:27 'a judge you shall not curse, and a ruler among your people you shall not execrate'; Mishnah Shevuot 4:13: by the Name; the four liabilities, Mekhilta]")]
+        return [E_('exempt', event['curser'], value='euphemism', law='F5 [Mishnah Shevuot 4:13: by a euphemism — R. Meir liable, the sages exempt; Mishnah Sanhedrin 7:8]')]
+    if k == 'fullness_delayed':
+        return [E_('gift_order_barred', event['farmer'], value=event['separated_first'], law="F5 [INK 22:28 'your fullness and your outflow you shall not delay'; Mishnah Terumot 3:6-7: the order]")]
+    if k == 'firstborn_son':
+        return [E_('consecrated_firstborn', event['son'], cp=event['father'], law="F5 [INK 22:28 'the firstborn of your sons you shall give to Me'; Mishnah Bekhorot 8:1; CALLED cold_run_pesach.firstborn(human)]"),
+                E_('due_to_priest', event['father'], cp='any-priest', amount=5, due=event['day'] + 30, law='F5 [Mishnah Bekhorot 8:7-8: five sela to any priest; Num 18:16 after thirty days — the TIMER]')]
+    if k == 'firstling_born':
+        if event['animal'] == 'donkey':
+            return [E_('redeem_or_break', event['owner'], value=PS_DONKEY, law="F6 [CALLED cold_run_pesach.firstborn(donkey) -> %r; INK 13:13]" % PS_DONKEY)]
+        return [E_('eighth_day_fit', event['owner'], due=event['day'] + 7, value=event['animal'], law="F6 [INK 22:29 'seven days it shall be with its mother; on the eighth day you shall give it to Me'; Lev 22:27 the second seat — one TIMER]"),
+                E_('accepted', event['owner'], cp='HEAVEN', due=event['day'] + 7, law="F6 [Lev 22:27 'from the eighth day and onward it is accepted']")]
+    if k == 'flesh_torn':
+        out = [E_('torn_flesh_to_dogs', event['owner'], cp='the-dog', law="F7 [INK 22:30 'to the dog you shall throw it' — the dog's wage, Mekhilta; Mishnah Chullin 3:1]")]
+        if event.get('eaten'):
+            out.append(E_('lashes', event['owner'], value='ate_the_torn', law='F7 [Mishnah Makkot 3:2: the eater of the torn lashed]'))
+        return out
+    if k == 'false_report_carried':
+        return [E_('false_report_barred', event['judge'], cp=event['party'], law="F8 [INK 23:1 'you shall not carry a false report'; Sanhedrin 7b: the judge hears no party alone; Mishnah Sanhedrin 3:7]")]
+    if k == 'court_split':
+        a, c = event['for_acquittal'], event['for_conviction']
+        verdict = 'convicted' if (c - a >= 2 if event['capital'] else c > a) else 'acquitted'
+        return [E_('majority_decides', event['court'], value=verdict, law="F8 [INK 23:2 'after the many to incline' against 'not after the many for evil'; Mishnah Sanhedrin 4:1: acquittal by one, conviction by two]")]
+    if k == 'enemys_animal_met':
+        return [E_('restores', event['finder'], cp=event['owner'], value=event['animal'], law="F8 [INK 23:4 'you shall surely return it to him'; Mishnah Bava Metzia 2:9: even a hundred times]")]
+    if k == 'donkey_under_burden':
+        if event['owner_helps']:
+            return [E_('unloading_owed', event['passerby'], cp=event['owner'], law="F8 [INK 23:5 'you shall surely unload WITH HIM'; Mishnah Bava Metzia 2:10]")]
+        return [E_('exempt', event['passerby'], value='the_owner_sat_by', law="F8 [Mishnah Bava Metzia 2:10: the owner went and sat and said 'you do it' — exempt: 'with him']")]
+    if k == 'acquitted_retried':
+        return [E_('exempt', event['accused'], cp=event['court'], value='never_retried', law="F8 [INK 23:7 'the innocent and the righteous you shall not slay'; Sanhedrin 33b; Mishnah Sanhedrin 4:1: reversed to acquittal, never to conviction]")]
+    if k == 'bribe_offered':
+        return [E_('bribe_barred', event['judge'], cp=event['giver'], law="F8 [INK 23:8 'a bribe you shall not take'; Ketubot 105a: even to judge truly; CALLED cold_run_holiness.conduct(bribe)]"),
+                E_('judgment_perverted', event['judge'], cp='HEAVEN', law="F8 [INK 23:6 'you shall not pervert the judgment of your needy'; Mishnah Peah 8:9]")]
+    if k == 'entered_the_land':
+        return [E_('demolished', 'their-pillars', cp=event['people'], law="F9 [INK 23:24 'you shall surely demolish them and surely break their pillars'; Mishnah Avodah Zarah 3:1]"),
+                E_('covenant_barred', event['people'], law="F9 [INK 23:32 'you shall not cut a covenant with them or with their gods']"),
+                E_('land_desolate', 'the-land', value=False, law="F9 [INK 23:29-30 'not in one year, lest the land become desolate... little by little' — the flag held OFF by the gradual driving-out]")]
+    if k == 'served_the_lord':
+        return [E_('bread_and_water_blessed', event['people'], cp='HEAVEN', law="F9 [INK 23:25 'and He will bless your bread and your water, and I will remove sickness from your midst']")]
+    return []
+
+def scene():
+    """THE SCENE — the recorded cases replayed on the world engine (clock unit: days; the answer sheet's rows as the tape)."""
+    with contextlib.redirect_stdout(io.StringIO()):
+        w = WE.World(era='the ordinances: Sanhedrin, Bava Metzia, Bekhorot, Chullin, Terumot, Middot, Shevuot on the engine (clock unit: days)')
+        w.laws = [law_ordinances]
+        w.advance(1)
+        w.submit({'kind': 'altar_built', 'subject': 'the-builder', 'builder': 'the-builder', 'stones': 'hewn', 'case_source': 'Mishnah Middot 3:4 — iron touched the stone'})
+        w.submit({'kind': 'altar_built', 'subject': 'the-builder', 'builder': 'the-builder', 'stones': 'whole', 'case_source': 'Mishnah Middot 3:4 — whole stones from Beit Kerem'})
+        w.submit({'kind': 'offered_on_altar', 'subject': 'the-offerer', 'offerer': 'the-offerer', 'offering': 'olah', 'case_source': 'Exod 20:24 — the burnt offering on it'})
+        w.submit({'kind': 'offered_on_altar', 'subject': 'the-offerer', 'offerer': 'the-offerer', 'offering': 'shelamim', 'case_source': 'Exod 20:24 — the peace offering on it'})
+        w.advance(2)
+        w.submit({'kind': 'sorcery_done', 'subject': 'the-sorcerer', 'doer': 'the-sorcerer', 'deed': True, 'case_source': 'Mishnah Sanhedrin 7:4, 7:11 — the doer of a deed'})
+        w.submit({'kind': 'sorcery_done', 'subject': 'the-illusionist', 'doer': 'the-illusionist', 'deed': False, 'case_source': 'Mishnah Sanhedrin 7:11 — the deceiver of the eyes'})
+        w.submit({'kind': 'lay_with_beast', 'subject': 'the-bestialist', 'doer': 'the-bestialist', 'case_source': 'Mishnah Sanhedrin 7:4'})
+        w.submit({'kind': 'sacrificed_to_gods', 'subject': 'the-idolater', 'doer': 'the-idolater', 'service': 'sacrifices', 'case_source': "Mishnah Sanhedrin 7:6 — the idolater's row"})
+        w.advance(3)
+        w.submit({'kind': 'stranger_wronged', 'subject': 'the-oppressor', 'wronger': 'the-oppressor', 'victim': 'the-widow', 'victim_class': 'widow', 'cried': True, 'case_source': 'Mekhilta 22:22-23 — the cry heard, measure for measure'})
+        w.submit({'kind': 'stranger_wronged', 'subject': 'the-word-wronger', 'wronger': 'the-word-wronger', 'victim': 'the-stranger', 'victim_class': 'stranger', 'cried': False, 'case_source': 'Mishnah Bava Metzia 4:10 — wronging by words'})
+        w.submit({'kind': 'silver_lent', 'subject': 'the-lender', 'lender': 'the-lender', 'borrower': 'the-poor-man', 'interest': True, 'case_source': 'Mishnah Bava Metzia 5:1 — the bite'})
+        w.submit({'kind': 'garment_pledged', 'subject': 'the-creditor', 'creditor': 'the-creditor', 'debtor': 'the-debtor', 'garment': 'day-garment', 'day': 3, 'case_source': 'Mishnah Bava Metzia 9:13 — returned by sunset'})
+        w.advance(4)                                              # the sun sets: the pledge timer FIRES
+        w.advance(5)
+        w.submit({'kind': 'god_or_ruler_cursed', 'subject': 'the-curser', 'curser': 'the-curser', 'target': 'ruler', 'by_name': True, 'case_source': 'Mishnah Shevuot 4:13 — by the Name'})
+        w.submit({'kind': 'god_or_ruler_cursed', 'subject': 'the-euphemist', 'curser': 'the-euphemist', 'target': 'judge', 'by_name': False, 'case_source': 'Mishnah Shevuot 4:13 — by a euphemism, the sages exempt'})
+        w.submit({'kind': 'fullness_delayed', 'subject': 'the-farmer', 'farmer': 'the-farmer', 'separated_first': 'terumah-before-first-fruits', 'case_source': 'Mishnah Terumot 3:6 — the order'})
+        w.submit({'kind': 'firstborn_son', 'subject': 'the-father', 'father': 'the-father', 'son': 'the-son', 'day': 5, 'case_source': 'Mishnah Bekhorot 8:7-8 — five sela after thirty days'})
+        w.submit({'kind': 'firstling_born', 'subject': 'the-herdsman', 'owner': 'the-herdsman', 'animal': 'sheep', 'day': 5, 'case_source': 'Exod 22:29 + Lev 22:27 — the eighth day'})
+        w.submit({'kind': 'firstling_born', 'subject': 'the-herdsman', 'owner': 'the-herdsman', 'animal': 'donkey', 'day': 5, 'case_source': 'Exod 13:13 — the donkey redeemed or its neck broken'})
+        w.submit({'kind': 'flesh_torn', 'subject': 'the-eater', 'owner': 'the-eater', 'eaten': True, 'case_source': 'Mishnah Chullin 3:1 + Makkot 3:2 — the torn, eaten'})
+        w.advance(6)
+        w.submit({'kind': 'false_report_carried', 'subject': 'the-judge', 'judge': 'the-judge', 'party': 'the-litigant', 'case_source': 'Sanhedrin 7b — one party heard alone'})
+        w.submit({'kind': 'court_split', 'subject': 'the-court', 'court': 'the-court', 'for_acquittal': 11, 'for_conviction': 12, 'capital': True, 'case_source': 'Mishnah Sanhedrin 4:1 — conviction needs a majority of two'})
+        w.submit({'kind': 'court_split', 'subject': 'the-court', 'court': 'the-court', 'for_acquittal': 10, 'for_conviction': 13, 'capital': True, 'case_source': 'Mishnah Sanhedrin 4:1 — thirteen against ten'})
+        w.submit({'kind': 'court_split', 'subject': 'the-court', 'court': 'the-court', 'for_acquittal': 11, 'for_conviction': 12, 'capital': False, 'case_source': 'Mishnah Sanhedrin 4:1 — a money case by a majority of one'})
+        w.submit({'kind': 'enemys_animal_met', 'subject': 'the-finder', 'finder': 'the-finder', 'owner': 'his-enemy', 'animal': 'ox', 'case_source': 'Mishnah Bava Metzia 2:9 — returning'})
+        w.submit({'kind': 'donkey_under_burden', 'subject': 'the-passerby', 'passerby': 'the-passerby', 'owner': 'the-hater', 'owner_helps': True, 'case_source': 'Mishnah Bava Metzia 2:10 — with him'})
+        w.submit({'kind': 'donkey_under_burden', 'subject': 'the-second-passerby', 'passerby': 'the-second-passerby', 'owner': 'the-hater', 'owner_helps': False, 'case_source': 'Mishnah Bava Metzia 2:10 — the owner sat by'})
+        w.submit({'kind': 'acquitted_retried', 'subject': 'the-court', 'court': 'the-court', 'accused': 'the-accused', 'case_source': 'Mishnah Sanhedrin 4:1 + Sanhedrin 33b — never retried'})
+        w.submit({'kind': 'bribe_offered', 'subject': 'the-judge', 'judge': 'the-judge', 'giver': 'the-litigant', 'case_source': 'Mishnah Peah 8:9 + Ketubot 105a — the bribe'})
+        w.advance(7)
+        w.submit({'kind': 'entered_the_land', 'subject': 'israel', 'people': 'israel', 'year': 7, 'case_source': 'Exod 23:23-33 + Mishnah Avodah Zarah 3:1 — the entry'})
+        w.submit({'kind': 'served_the_lord', 'subject': 'israel', 'people': 'israel', 'case_source': 'Exod 23:25 — served before the LORD (Onkelos)'})
+        w.advance(40)                                             # the eighth day (12) and the thirty days (35) pass: the timers FIRE
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    vals = lambda eid, eff: tuple(e['value'] for e in w.entity(eid).ledger if e['effect'] == eff)
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    return (n('the-builder', 'disqualified'), n('the-builder', 'accepted'), n('the-offerer', 'smoked_to_the_lord'), n('the-offerer', 'eating_window'),
+            n('the-sorcerer', 'stoned'), n('the-illusionist', 'exempt'), n('the-bestialist', 'put_to_death'), n('the-idolater', 'put_to_death'),
+            n('the-widow', 'cry_heard'), n('the-oppressor', 'put_to_death'), n('the-word-wronger', 'exempt'), n('the-lender', 'interest_barred'),
+            n('the-creditor', 'pledge_returned_by_sunset'), n('the-debtor', 'cry_heard'),
+            n('the-curser', 'lashes'), n('the-euphemist', 'exempt'), n('the-farmer', 'gift_order_barred'), n('the-son', 'consecrated_firstborn'), n('the-father', 'due_to_priest'),
+            n('the-herdsman', 'eighth_day_fit'), n('the-herdsman', 'accepted'), n('the-herdsman', 'redeem_or_break'), n('the-eater', 'torn_flesh_to_dogs'), n('the-eater', 'lashes'),
+            n('the-judge', 'false_report_barred'), vals('the-court', 'majority_decides'), n('the-finder', 'restores'), n('the-passerby', 'unloading_owed'), n('the-second-passerby', 'exempt'),
+            n('the-accused', 'exempt'), n('the-judge', 'bribe_barred'), n('the-judge', 'judgment_perverted'),
+            n('their-pillars', 'demolished'), n('israel', 'covenant_barred'), n('the-land', 'land_desolate'), w.entity('the-land').status.get('land_desolate'), n('israel', 'bread_and_water_blessed'),
+            tset, fired, w.clock.year), w
+SCENE, _W = scene()
+
 TESTS = [
  # ---- THE ALTAR LAW (20:19-26) ----
  ('Exod 20:22 — "from heaven I spoke" a hapax', altar('from_heaven'), 'hapax'),
@@ -866,6 +1005,9 @@ TESTS = [
  ('Exod 23:32 — no covenant', land('no_covenant'), 'no_covenant_with_them_or_their_gods'),
  ('Exod 23:33 — they shall not dwell; the snare', land('not_dwell'), 'lest_they_make_you_sin'),
  ('the spine silent over 23:20-33 — Onkelos alone', land('spine_silent'), 'onkelos_alone'),
+ # ---- THE WRAP (W1) ----
+ ('THE SCENE on the world engine — the wrap (W1): twenty-one case heads on the recorded rows', cell(SCENE, A, "THE SCENE: the hewn stone disqualified and the whole accepted; the two offerings by their engines; the sorcerer stoned, the illusionist exempt; the beast and the idolater's row; the widow's cry heard and the oppressor on Heaven's docket, the word-wronger exempt; the bite barred; the pledge's sunset TIMER set on day 3 and FIRED at 4 with the debtor's cry; the ruler cursed by the Name lashed, the euphemist exempt; the gifts' order; the firstborn consecrated and the five sela's thirty-day TIMER (fired at 35); the firstling's eighth-day TIMER (fired at 12) and the donkey's fork; the torn to the dog and its eater lashed; the judge blocked; the court split three ways (12-11 capital ACQUITTED, 13-10 CONVICTED, 12-11 money CONVICTED); the return, the unloading with him and the sitting owner's exemption, the acquitted never retried, the bribe and Heaven's entry; the pillars demolished, the covenant barred, the land's desolation flag held OFF; bread and water blessed; four timers set, four fired; the clock ABSOLUTE: %r" % (SCENE,), ['pledge_returned_by_sunset', 'due_to_priest', 'eighth_day_fit', 'accepted', 'land_desolate']),
+  (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ('acquitted', 'convicted', 'convicted'), 1, 1, 1, 1, 1, 1, 1, 1, 1, False, 1, 4, 4, 40)),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------
@@ -886,6 +1028,8 @@ for name, c, want in TESTS:
     print('%s %-96s [%s] %s' % ('OK ' if hit else 'MISS', name[:96], c['p'], '' if hit else 'got=%r' % (c['v'],)))
     print('     effects: %s' % ', '.join(c['fx']))
 print()
+print('WATCH COVERAGE (the wrap):')
+_W.print_coverage()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
 print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d'
       % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n))

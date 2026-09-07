@@ -28,6 +28,16 @@ print('\n'.join(l for l in gate.stdout.splitlines() if l.startswith('DEPENDENCY 
 if gate.returncode != 0:
     print(gate.stdout[-3000:]); print(gate.stderr[-1000:])
     sys.exit('run_cold_all: THE DEPENDENCY GATE FAILED — no runner graded until every edge is dispositioned')
+# THE DAEMON-EDGE GATE runs second (2026-09-07, D9-ii): every daemon declared
+# with its watches equal to its parse, every watched and submitted event kind
+# registered, every effect registered, every compiled function dispositioned
+# (WRAPPED verified, OWED on the worklist), no daemon emitting an event.
+dgate = subprocess.run([sys.executable, os.path.join(HERE, 'daemon_census.py')],
+                       cwd=HERE, capture_output=True, text=True)
+print('\n'.join(l for l in dgate.stdout.splitlines() if l.startswith('DAEMON GATE')))
+if dgate.returncode != 0:
+    print(dgate.stdout[-3000:]); print(dgate.stderr[-1000:])
+    sys.exit('run_cold_all: THE DAEMON GATE FAILED — no runner graded until every daemon is declared and every function dispositioned')
 if not runners:
     sys.exit('no cold_run_*.py found — refusing to report a clean sweep of nothing')
 

@@ -1,0 +1,2235 @@
+# THE EVENT-TYPE REGISTRY — read by events_layer.py (2026-09-07, D9-i: THE DAEMON CAMPAIGN's seeding sitting).
+# The daemon campaign's first registry, in the effects registry's own harvest shape: every EVENT TYPE the
+# simulator's tape may carry, harvested from what was already written — the twelve daemons' consumed kinds
+# and the seven scene tapes' submitted kinds (World/step9/*.py, censused by script), joined by verse address
+# to the corpus world's 557 narrative events (corpus_world.sqlite, the frozen units' own EVENT operators).
+# Each type carries: en (the English), he (the ink's own words at the witness, pointed, with English beside),
+# form (act / speech / statute / case — see below), witness (verse + consonantal run, MACHINE-VERIFIED by
+# events_layer.py against the Tanakh DB), ink (every address the tape cites), corpus (the frozen unit and the
+# narrative tape's own label at that address where it logged one), tape (who submits it, who consumes it and
+# writes what), fields (the event's parameters beyond kind/subject/case_source), and aliases_in_code where the
+# seeding found one act under two names or one name over two acts.
+#
+# THE FENCE (method law 6, stated for events): an event is an ACT THE TEXT RECORDS — a deed, an utterance, the
+# narrator's own law sentence — or a recorded case replayed as a labeled test scene; nothing here is produced by
+# a daemon. A daemon CONSUMES events and WRITES the ledger; it never emits an event. Cascades run through ledger
+# state. The log's OTHER record classes (WRITE, TIMER-SET, TIMER-FIRE, TIMER-CANCEL, ATOMIC-BLOCK) are not
+# events and take no type from this file: a timer's firing is its own record class.
+# THE FORMS: act = a deed the run records (the narrative verb, usually the wayyiqtol — the "and he did" form);
+#   speech = a command, blessing, oath, sentence or plea the text records as UTTERED (the utterance is the event;
+#   the obligation it creates is the daemon's write); statute = the narrator's own law sentence inside the story;
+#   case = the law's own case token (the "when"/"if" clause) — a recorded Mishnah case replayed as a test scene
+#   names the clause it instantiates, so the witness is the clause, not a narrative.
+# THE RULE FOR NEW TYPES (the gate D9-ii enforces): a daemon may watch only a type registered here; a type enters
+#   with its witnesses (ink verified; corpus; tape) — never designed, always harvested. The corpus tape's own labels
+#   (the narrative_verbs section) are enumerated for the join and become event types only when promoted here.
+# Model layer; read-only over the corpus; touches no unit. Append as TEXT (a mapping; never a list).
+events:
+  installation_commanded:
+    en: "the installation commanded — the intake of the whole set (Aaron, his sons, the garments, the oil, the sin-offering bull, the two rams, the basket): the atomic take-list the daemon gates before any sanctification (Sifra, Tzav, Mekhilta DeMiluim I 19)"
+    he: "קַח אֶת אַהֲרֹן וְאֶת בָּנָיו אִתּוֹ וְאֵת הַבְּגָדִים (take Aaron and his sons with him, and the garments — Lev 8:2)"
+    form: speech
+    witness: ["Lev 8:2 | קח את אהרן ואת בניו אתו ואת הבגדים"]
+    ink: "Lev 8:2; Sifra, Tzav, Mekhilta DeMiluim I 19 (no basket — not sanctified); Lev 8:2 (the take-list, audited against Exod 29)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_erection.py, cold_run_shemini_day.py, world_engine.py [subjects: aaron-and-sons]; consumed by law_installation (world_engine.py) -> confined_seven_days, released"
+    fields: ["components"]
+  milluim_blood_sprinkled:
+    en: "the installation blood sprinkled — Moses sprinkles the anointing oil and the altar's blood on Aaron, his garments, his sons and their garments: the commit of the office ('consummated only at the sprinkling', Mekhilta DeMiluim I 34)"
+    he: "וַיַּז עַל אַהֲרֹן עַל בְּגָדָיו וְעַל בָּנָיו (and he sprinkled on Aaron, on his garments, and on his sons — Lev 8:30)"
+    form: act
+    witness: ["Lev 8:30 | ויז על אהרן על בגדיו ועל בניו"]
+    ink: "Lev 8:30; Lev 8:30 (the sprinkling; DeMiluim I 34 the commit)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_erection.py, cold_run_shemini_day.py, world_engine.py [subjects: aaron-and-sons]; consumed by law_installation (world_engine.py) -> invested_office"
+    fields: []
+    aliases_in_code: "garments_sprinkled (cold_run_incense_shekel.py law_investiture) is the SAME act at the same verse under a second name — one verse, two daemons, two kinds; to be unified at the wrap"
+  milluim_leftover:
+    en: "the installation's leftover — what remains of the flesh and the bread at the door is to be burned in fire (the run's own command inside the tape)"
+    he: "וְהַנּוֹתָר בַּבָּשָׂר וּבַלָּחֶם בָּאֵשׁ תִּשְׂרֹפוּ (and what remains of the flesh and of the bread you shall burn in fire — Lev 8:32)"
+    form: speech
+    witness: ["Lev 8:32 | והנותר בבשר ובלחם באש תשרפו"]
+    ink: "Lev 8:32"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by world_engine.py [subjects: aaron-and-sons]; consumed by law_installation (world_engine.py) -> burn_remainder"
+    fields: []
+    aliases_in_code: "meal (cold_run_incense_shekel.py law_investiture: Lev 8:31-32 -> burn_remainder) covers the same command under a second name; to be unified at the wrap"
+  erected:
+    en: "the tabernacle erected — on the first of the first month of the second year Moses raises the tabernacle: sockets, boards, bars, pillars"
+    he: "הוּקַם הַמִּשְׁכָּן (the tabernacle was erected — Exod 40:17); וַיָּקֶם מֹשֶׁה אֶת הַמִּשְׁכָּן (and Moses erected the tabernacle — Exod 40:18)"
+    form: act
+    witness: ["Exod 40:17 | הוקם המשכן", "Exod 40:18 | ויקם משה את המשכן"]
+    ink: "Exod 40:17-18"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_erection.py [subjects: the-tabernacle]; consumed by law_erection (cold_run_erection.py) -> tabernacle_erected, high_places_banned"
+    fields: []
+  testimony_placed:
+    en: "the testimony placed — the tablets put into the ark, the staves set, the cover laid on above"
+    he: "וַיִּתֵּן אֶת הָעֵדֻת אֶל הָאָרֹן (and he put the testimony into the ark — Exod 40:20)"
+    form: act
+    witness: ["Exod 40:20 | ויתן את העדת אל הארן"]
+    ink: "Exod 40:20"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_erection.py [subjects: the-ark]; consumed by law_erection (cold_run_erection.py) -> tablets_delivered, staves_fixed"
+    fields: []
+  veil_hung:
+    en: "the veil hung — the ark brought in and the veil of the screen set to divide"
+    he: "וַיָּשֶׂם אֵת פָּרֹכֶת הַמָּסָךְ וַיָּסֶךְ עַל אֲרוֹן הָעֵדוּת (and he set the veil of the screen and screened the ark of the testimony — Exod 40:21)"
+    form: act
+    witness: ["Exod 40:21 | וישם את פרכת המסך ויסך על ארון העדות"]
+    ink: "Exod 40:21"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_erection.py [subjects: the-veil]; consumed by law_erection (cold_run_erection.py) -> veil_divides"
+    fields: []
+  bread_arranged:
+    en: "the bread arranged — the row of bread set on the table before the LORD (the table initiated by the first Sabbath, Menachot 4:4 — the timer the daemon sets)"
+    he: "וַיַּעֲרֹךְ עָלָיו עֵרֶךְ לֶחֶם לִפְנֵי יְהוָה (and he arranged on it the row of bread before the LORD — Exod 40:23)"
+    form: act
+    witness: ["Exod 40:23 | ויערך עליו ערך לחם לפני יהוה"]
+    ink: "Exod 40:23"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_erection.py [subjects: the-table]; consumed by law_erection (cold_run_erection.py) -> bread_set_weekly"
+    fields: []
+  lamps_raised:
+    en: "the lamps raised — the lamps set up before the LORD"
+    he: "וַיַּעַל הַנֵּרֹת לִפְנֵי יְהוָה (and he raised the lamps before the LORD — Exod 40:25)"
+    form: act
+    witness: ["Exod 40:25 | ויעל הנרת לפני יהוה"]
+    ink: "Exod 40:25"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_erection.py [subjects: the-lampstand]; consumed by law_erection (cold_run_erection.py) -> lamp_arranged"
+    fields: []
+  incense_burned:
+    en: "the incense burned — incense of spices burned on the golden altar"
+    he: "וַיַּקְטֵר עָלָיו קְטֹרֶת סַמִּים (and he burned on it incense of spices — Exod 40:27)"
+    form: act
+    witness: ["Exod 40:27 | ויקטר עליו קטרת סמים"]
+    ink: "Exod 40:27"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_erection.py [subjects: the-golden-altar]; consumed by law_erection (cold_run_erection.py) -> incense_continual"
+    fields: []
+  tamid_offered:
+    en: "the daily offering offered — the burnt offering and the meal offering offered on the altar at the door (the next morning's tamid owed by the daemon's timer)"
+    he: "וַיַּעַל עָלָיו אֶת הָעֹלָה וְאֶת הַמִּנְחָה (and he offered on it the burnt offering and the meal offering — Exod 40:29)"
+    form: act
+    witness: ["Exod 40:29 | ויעל עליו את העלה ואת המנחה"]
+    ink: "Exod 40:29"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_erection.py [subjects: moses]; consumed by law_erection (cold_run_erection.py) -> accepted, tamid_owed"
+    fields: []
+  hands_feet_washed:
+    en: "the hands and feet washed — Moses, Aaron and his sons wash their hands and their feet from the laver when entering the tent and approaching the altar (the laver's law, Exod 30:19-21; NOT the body's immersion of Lev 8:6)"
+    he: "וְרָחֲצוּ מִמֶּנּוּ מֹשֶׁה וְאַהֲרֹן וּבָנָיו אֶת יְדֵיהֶם וְאֶת רַגְלֵיהֶם (and Moses and Aaron and his sons washed from it their hands and their feet — Exod 40:31); וְרָחֲצוּ אַהֲרֹן וּבָנָיו מִמֶּנּוּ אֶת יְדֵיהֶם וְאֶת רַגְלֵיהֶם (and Aaron and his sons shall wash from it their hands and their feet — Exod 30:19)"
+    form: act
+    witness: ["Exod 40:31 | ורחצו ממנו משה ואהרן ובניו את ידיהם ואת רגליהם", "Exod 30:19 | ורחצו אהרן ובניו ממנו את ידיהם ואת רגליהם"]
+    ink: "no tape submits this type yet (see aliases_in_code)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by NO TAPE; consumed by NO DAEMON"
+    fields: []
+    aliases_in_code: "DECLARED AT THE SEEDING, NOT YET SUBMITTED: cold_run_erection.py submits this act under the kind name 'washed' — the same name cold_run_incense_shekel.py uses for the BODY washing of Lev 8:6 — and its daemon writes hands_feet_sanctified on it; the two acts are two types (immersion against the laver's sanctification), so the erection's kind is to be renamed to this id at the wrap"
+  work_finished:
+    en: "the work finished — Moses finishes the erection's work: the court raised, the screen of the gate set (the erection's completion, distinct from the making's completion at 39:32)"
+    he: "וַיְכַל מֹשֶׁה אֶת הַמְּלָאכָה (and Moses finished the work — Exod 40:33)"
+    form: act
+    witness: ["Exod 40:33 | ויכל משה את המלאכה"]
+    ink: "Exod 40:33"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_erection.py [subjects: moses]; consumed by law_erection (cold_run_erection.py) -> work_completed, inspected_as_commanded"
+    fields: []
+  glory_filled:
+    en: "the glory filled — the cloud covers the tent of meeting and the glory of the LORD fills the tabernacle (Heaven's act on the tape)"
+    he: "וּכְבוֹד יְהוָה מָלֵא אֶת הַמִּשְׁכָּן (and the glory of the LORD filled the tabernacle — Exod 40:34)"
+    form: act
+    witness: ["Exod 40:34 | וכבוד יהוה מלא את המשכן"]
+    ink: "Exod 40:34"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_erection.py [subjects: the-tabernacle]; consumed by law_erection (cold_run_erection.py) -> presence_dwells, glory_appeared"
+    fields: []
+  could_not_enter:
+    en: "Moses could not enter — the cloud dwelling on the tent bars him"
+    he: "וְלֹא יָכֹל מֹשֶׁה לָבוֹא אֶל אֹהֶל מוֹעֵד (and Moses could not enter the tent of meeting — Exod 40:35)"
+    form: act
+    witness: ["Exod 40:35 | ולא יכל משה לבוא אל אהל מועד"]
+    ink: "Exod 40:35"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_erection.py [subjects: moses]; consumed by law_erection (cold_run_erection.py) -> barred_from_it"
+    fields: []
+  called_from_the_tent:
+    en: "called from the tent — the LORD calls to Moses and speaks to him from the tent of meeting: the meeting the spec promised (25:22), appointed at the book seam"
+    he: "וַיִּקְרָא אֶל מֹשֶׁה וַיְדַבֵּר יְהוָה אֵלָיו מֵאֹהֶל מוֹעֵד (and He called to Moses, and the LORD spoke to him from the tent of meeting — Lev 1:1)"
+    form: speech
+    witness: ["Lev 1:1 | ויקרא אל משה וידבר יהוה אליו מאהל מועד"]
+    ink: "Lev 1:1"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_erection.py [subjects: moses]; consumed by law_erection (cold_run_erection.py) -> meeting_appointed"
+    fields: []
+  cloud_lifted:
+    en: "the cloud lifted — when the cloud is taken up from over the tabernacle the sons of Israel journey (the standing rule at 40:36; its first run at Num 10:11)"
+    he: "וּבְהֵעָלוֹת הֶעָנָן מֵעַל הַמִּשְׁכָּן יִסְעוּ בְּנֵי יִשְׂרָאֵל (and when the cloud was taken up from over the tabernacle the sons of Israel journeyed — Exod 40:36); נַעֲלָה הֶעָנָן מֵעַל מִשְׁכַּן הָעֵדֻת (the cloud was taken up from over the tabernacle of the testimony — Num 10:11)"
+    form: act
+    witness: ["Exod 40:36 | ובהעלות הענן מעל המשכן יסעו בני ישראל", "Num 10:11 | נעלה הענן מעל משכן העדת"]
+    ink: "Exod 40:36 / Num 10:11"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_erection.py [subjects: the-camp]; consumed by law_erection (cold_run_erection.py) -> camp_moves_by_the_cloud"
+    fields: []
+  died:
+    en: "died — a death the text records; the survivor's status opens ('my dead before me', the onen's exemption)"
+    he: "וַתָּמָת שָׂרָה (and Sarah died — Gen 23:2)"
+    form: act
+    witness: ["Gen 23:2 | ותמת שרה"]
+    ink: "Gen 23:2-4"
+    corpus: "gen_39_machpelah_purchase: die at Gen 23:2; gen_39_machpelah_purchase: mourn_weep at Gen 23:2 (agent avraham); gen_39_machpelah_purchase: rise_speak at Gen 23:3 (agent avraham)"
+    tape: "submitted by cold_run_family.py [subjects: abraham]; consumed by law_family (cold_run_family.py) -> dead_before_him"
+    fields: ["dead"]
+  purchased:
+    en: "purchased — the silver weighed to the seller before the witnesses at the gate: the money mode of Mishnah Kiddushin 1:5, with the field's deed and the burial's possession following"
+    he: "וַיִּשְׁקֹל אַבְרָהָם לְעֶפְרֹן אֶת הַכֶּסֶף (and Abraham weighed to Ephron the silver — Gen 23:16)"
+    form: act
+    witness: ["Gen 23:16 | וישקל אברהם לעפרן את הכסף"]
+    ink: "Gen 23:16-20"
+    corpus: "gen_39_machpelah_purchase: weigh_silver at Gen 23:16 (agent avraham)"
+    tape: "submitted by cold_run_family.py [subjects: abraham]; consumed by law_family (cold_run_family.py) -> field_acquired, grave_holding"
+    fields: ["price"]
+  buried:
+    en: "buried — the burial act the text records (Sarah's the first act on the purchased field; Jacob's the run that closes the burial debit)"
+    he: "קָבַר אַבְרָהָם אֶת שָׂרָה אִשְׁתּוֹ (Abraham buried Sarah his wife — Gen 23:19); וַיִּקְבְּרוּ אֹתוֹ בִּמְעָרַת שְׂדֵה הַמַּכְפֵּלָה (and they buried him in the cave of the field of Machpelah — Gen 50:13)"
+    form: act
+    witness: ["Gen 23:19 | קבר אברהם את שרה אשתו", "Gen 50:13 | ויקברו אתו במערת שדה המכפלה"]
+    ink: "Gen 23:19; Gen 50:12-13"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_family.py [subjects: jacob, sarah]; consumed by law_family (cold_run_family.py) -> buried"
+    fields: []
+  commissioned:
+    en: "commissioned — the principal's charge to his agent with the hand under the thigh and the oath by the Name (the court oath's formula, Shevuot 38b)"
+    he: "שִׂים נָא יָדְךָ תַּחַת יְרֵכִי (put, please, your hand under my thigh — Gen 24:2); וְאַשְׁבִּיעֲךָ בַּיהוָה אֱלֹהֵי הַשָּׁמַיִם (and I will make you swear by the LORD, the God of heaven — Gen 24:3); וַיִּשָּׁבַע לוֹ עַל הַדָּבָר הַזֶּה (and he swore to him concerning this matter — Gen 24:9)"
+    form: speech
+    witness: ["Gen 24:2 | שים נא ידך תחת ירכי", "Gen 24:3 | ואשביעך ביהוה אלהי השמים", "Gen 24:9 | וישבע לו על הדבר הזה"]
+    ink: "Gen 24:2-9"
+    corpus: "gen_40_servant_oath_well: say at Gen 24:2 (agent avraham); gen_40_servant_oath_well: say at Gen 24:5 (agent ha_eved); gen_40_servant_oath_well: say at Gen 24:6 (agent avraham); gen_40_servant_oath_well: swear at Gen 24:9 (agent ha_eved)"
+    tape: "submitted by cold_run_family.py [subjects: the-servant]; consumed by law_family (cold_run_family.py) -> agent_commissioned, sworn_by_the_name"
+    fields: ["principal"]
+  gifts_given:
+    en: "gifts given — the ring and bracelets at the well, the vessels and garments at the house: the two gift moments (Kiddushin 2:6's sivlonot, the betrothal presents)"
+    he: "וַיִּקַּח הָאִישׁ נֶזֶם זָהָב (and the man took a gold ring — Gen 24:22); וַיִּתֵּן לְרִבְקָה (and he gave to Rebekah — Gen 24:53)"
+    form: act
+    witness: ["Gen 24:22 | ויקח האיש נזם זהב", "Gen 24:53 | ויתן לרבקה"]
+    ink: "Gen 24:22, 24:53"
+    corpus: "gen_40_servant_oath_well: take_gifts at Gen 24:22 (agent ha_eved); gen_41_retelling_release_meeting: give_gifts at Gen 24:53 (agent ha_eved)"
+    tape: "submitted by cold_run_family.py [subjects: rebekah]; consumed by law_family (cold_run_family.py) -> gifts_given"
+    fields: ["by"]
+  consented:
+    en: "consented — the family's 'take and go' and the girl's own 'I will go' (her mouth asked, 24:57)"
+    he: "קַח וָלֵךְ (take and go — Gen 24:51); וַתֹּאמֶר אֵלֵךְ (and she said: I will go — Gen 24:58)"
+    form: speech
+    witness: ["Gen 24:51 | קח ולך", "Gen 24:58 | ותאמר אלך"]
+    ink: "Gen 24:50-51, 24:57-58"
+    corpus: "gen_41_retelling_release_meeting: answer at Gen 24:50; gen_41_retelling_release_meeting: ask_and_consent at Gen 24:58"
+    tape: "submitted by cold_run_family.py [subjects: rebekah]; consumed by law_family (cold_run_family.py) -> consent_given"
+    fields: []
+  handed:
+    en: "handed — the bride sent with her nurse and taken by the agent on the road (Ketubot 4:5's domain of the husband's agent)"
+    he: "וַיְשַׁלְּחוּ אֶת רִבְקָה (and they sent Rebekah — Gen 24:59); וַיִּקַּח הָעֶבֶד אֶת רִבְקָה וַיֵּלַךְ (and the servant took Rebekah and went — Gen 24:61)"
+    form: act
+    witness: ["Gen 24:59 | וישלחו את רבקה", "Gen 24:61 | ויקח העבד את רבקה וילך"]
+    ink: "Gen 24:59-61"
+    corpus: "gen_41_retelling_release_meeting: ? at Gen 24:61"
+    tape: "submitted by cold_run_family.py [subjects: rebekah]; consumed by law_family (cold_run_family.py) -> handed_to_the_agent"
+    fields: ["agent"]
+  married:
+    en: "married — the taking and 'she became his wife' (the formula's verbs; the comfort that closes the mourning)"
+    he: "וַיִּקַּח אֶת רִבְקָה וַתְּהִי לוֹ לְאִשָּׁה (and he took Rebekah and she became his wife — Gen 24:67)"
+    form: act
+    witness: ["Gen 24:67 | ויקח את רבקה ותהי לו לאשה"]
+    ink: "Gen 24:67"
+    corpus: "gen_41_retelling_release_meeting: ? at Gen 24:67"
+    tape: "submitted by cold_run_family.py [subjects: rebekah]; consumed by law_family (cold_run_family.py) -> wife_taken, comforted"
+    fields: ["husband"]
+  sinew_barred:
+    en: "the sinew barred — the narrator's own law sentence: the sons of Israel do not eat the sinew of the thigh-vein (the one family law with no Sinai seat, Chullin 7:6)"
+    he: "לֹא יֹאכְלוּ בְנֵי יִשְׂרָאֵל אֶת גִּיד הַנָּשֶׁה (the sons of Israel shall not eat the sinew of the thigh-vein — Gen 32:33)"
+    form: statute
+    witness: ["Gen 32:33 | לא יאכלו בני ישראל את גיד הנשה"]
+    ink: "Gen 32:33"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_family.py [subjects: the-sons-of-israel]; consumed by law_family (cold_run_family.py) -> sinew_barred"
+    fields: []
+  renamed:
+    en: "renamed — a name changed by the speaker's word (Abram to Abraham, Sarai to Sarah, Jacob to Israel); the name-change rule's parameter is the ink's own later usage (Berakhot 13a)"
+    he: "וְהָיָה שִׁמְךָ אַבְרָהָם (and your name shall be Abraham — Gen 17:5); כִּי שָׂרָה שְׁמָהּ (for Sarah is her name — Gen 17:15); לֹא יַעֲקֹב יֵאָמֵר עוֹד שִׁמְךָ כִּי אִם יִשְׂרָאֵל (not Jacob shall your name be said any more, but Israel — Gen 32:29)"
+    form: speech
+    witness: ["Gen 17:5 | והיה שמך אברהם", "Gen 17:15 | כי שרה שמה", "Gen 32:29 | לא יעקב יאמר עוד שמך כי אם ישראל"]
+    ink: "Gen 32:29; Gen 17:5; Gen 17:15"
+    corpus: "gen_33_shaddai_covenant_flesh: say at Gen 17:15 (agent elohim)"
+    tape: "submitted by cold_run_family.py, cold_run_pre_sinai.py [subjects: abraham, jacob, sarah]; consumed by law_family (cold_run_family.py) -> name_changed; law_pre_sinai (cold_run_pre_sinai.py) -> name_changed"
+    fields: ["name"]
+    aliases_in_code: "consumed by TWO daemons (law_family with a `name` field, law_pre_sinai without one) writing the same effect — one type, one field contract to be fixed at the wrap"
+  slain:
+    en: "slain — a death by Heaven the text records ('and the LORD put him to death')"
+    he: "וַיְמִתֵהוּ יְהוָה (and the LORD put him to death — Gen 38:7); וַיָּמֶת גַּם אֹתוֹ (and He put him to death also — Gen 38:10)"
+    form: act
+    witness: ["Gen 38:7 | וימתהו יהוה", "Gen 38:10 | וימת גם אתו"]
+    ink: "Gen 38:7; Gen 38:10"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_family.py [subjects: er, onan]; consumed by law_family (cold_run_family.py) -> slain_by_heaven"
+    fields: []
+  levirate_commanded:
+    en: "the levirate commanded — the father's charge to the brother: go in to your brother's wife, perform the levir's duty, raise seed (the institution's first seat)"
+    he: "בֹּא אֶל אֵשֶׁת אָחִיךָ וְיַבֵּם אֹתָהּ וְהָקֵם זֶרַע לְאָחִיךָ (go in to your brother's wife and perform the levir's duty to her and raise seed for your brother — Gen 38:8)"
+    form: speech
+    witness: ["Gen 38:8 | בא אל אשת אחיך ויבם אתה והקם זרע לאחיך"]
+    ink: "Gen 38:8"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_family.py [subjects: onan]; consumed by law_family (cold_run_family.py) -> levirate_owed"
+    fields: ["widow"]
+  widow_sent:
+    en: "the widow sent to wait — 'sit as a widow in your father's house until Shelah grows': the deferral to a minor (the timer the daemon sets; Yevamot 4:6's refused plea)"
+    he: "שְׁבִי אַלְמָנָה בֵית אָבִיךְ עַד יִגְדַּל שֵׁלָה בְנִי (sit as a widow in your father's house until Shelah my son grows — Gen 38:11)"
+    form: speech
+    witness: ["Gen 38:11 | שבי אלמנה בית אביך עד יגדל שלה בני"]
+    ink: "Gen 38:11"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_family.py [subjects: tamar]; consumed by law_family (cold_run_family.py) -> waits_for_the_levir"
+    fields: ["levir", "until"]
+  pledge_given:
+    en: "a pledge given — the seal, the cord and the staff handed as surety (the ordinances engine's institution under another word)"
+    he: "אִם תִּתֵּן עֵרָבוֹן (if you give a pledge — Gen 38:17); וַיִּתֶּן לָּהּ (and he gave to her — Gen 38:18)"
+    form: act
+    witness: ["Gen 38:17 | אם תתן ערבון", "Gen 38:18 | ויתן לה"]
+    ink: "Gen 38:17-18"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_family.py [subjects: tamar]; consumed by law_family (cold_run_family.py) -> pledge_held"
+    fields: ["by"]
+  sentenced:
+    en: "sentenced — the court's word on the accused ('bring her out and let her be burned')"
+    he: "הוֹצִיאוּהָ וְתִשָּׂרֵף (bring her out and let her be burned — Gen 38:24)"
+    form: speech
+    witness: ["Gen 38:24 | הוציאוה ותשרף"]
+    ink: "Gen 38:24"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_family.py [subjects: tamar]; consumed by law_family (cold_run_family.py) -> sentence_pronounced"
+    fields: ["mode"]
+  recognized:
+    en: "recognized — the pledge's tokens identified and the accused acquitted by the accuser's own word"
+    he: "וַיַּכֵּר יְהוּדָה (and Judah recognized — Gen 38:26)"
+    form: act
+    witness: ["Gen 38:26 | ויכר יהודה"]
+    ink: "Gen 38:25-26"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_family.py [subjects: tamar]; consumed by law_family (cold_run_family.py) -> acquitted"
+    fields: []
+  born_twins:
+    en: "twins born — the hand put out first and the brother out first: the firstborn by the head against the mother's clock by the hand (Bekhorot 8:1; Niddah 28a)"
+    he: "וְהִנֵּה תְאוֹמִים בְּבִטְנָהּ (and behold, twins in her womb — Gen 38:27); וַיִּתֶּן יָד (and one put out a hand — Gen 38:28)"
+    form: act
+    witness: ["Gen 38:27 | והנה תאומים בבטנה", "Gen 38:28 | ויתן יד"]
+    ink: "Gen 38:27-30"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_family.py [subjects: tamar]; consumed by law_family (cold_run_family.py) -> firstborn_by_the_head"
+    fields: ["firstborn"]
+  adopted:
+    en: "adopted — the grandsons made sons ('like Reuben and Simeon they shall be mine'), later sons folded under their brothers' names in their inheritance"
+    he: "אֶפְרַיִם וּמְנַשֶּׁה כִּרְאוּבֵן וְשִׁמְעוֹן יִהְיוּ לִי (Ephraim and Manasseh shall be mine like Reuben and Simeon — Gen 48:5)"
+    form: speech
+    witness: ["Gen 48:5 | אפרים ומנשה כראובן ושמעון יהיו לי"]
+    ink: "Gen 48:5-6"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_family.py [subjects: jacob]; consumed by law_family (cold_run_family.py) -> adopted_as_sons"
+    fields: ["sons"]
+  crossed:
+    en: "the hands crossed — the right hand on the younger's head, the younger set before the elder"
+    he: "שִׂכֵּל אֶת יָדָיו (he crossed his hands — Gen 48:14); וַיָּשֶׂם אֶת אֶפְרַיִם לִפְנֵי מְנַשֶּׁה (and he set Ephraim before Manasseh — Gen 48:20)"
+    form: act
+    witness: ["Gen 48:14 | שכל את ידיו", "Gen 48:20 | וישם את אפרים לפני מנשה"]
+    ink: "Gen 48:14, 48:20"
+    corpus: "gen_71_crossed_hands: sikel_yadav at Gen 48:14 (agent yisrael)"
+    tape: "submitted by cold_run_family.py [subjects: ephraim]; consumed by law_family (cold_run_family.py) -> younger_set_first"
+    fields: []
+  portion_given:
+    en: "a portion given — 'one portion above your brothers': the gift form of the extra share (Bava Batra 8:5's 'as a gift, his words stand')"
+    he: "וַאֲנִי נָתַתִּי לְךָ שְׁכֶם אַחַד עַל אַחֶיךָ (and I have given you one portion above your brothers — Gen 48:22)"
+    form: speech
+    witness: ["Gen 48:22 | ואני נתתי לך שכם אחד על אחיך"]
+    ink: "Gen 48:22"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_family.py [subjects: joseph]; consumed by law_family (cold_run_family.py) -> portion_added"
+    fields: ["by"]
+  testament:
+    en: "the testament — the dying father's words over the twelve: the firstborn demoted, two scattered, the scepter held (Bava Batra 8:5's case in the gift form)"
+    he: "רְאוּבֵן בְּכֹרִי אַתָּה (Reuben, you are my firstborn — Gen 49:3); אַל תּוֹתַר (you shall not excel — Gen 49:4); לֹא יָסוּר שֵׁבֶט מִיהוּדָה (the scepter shall not depart from Judah — Gen 49:10)"
+    form: speech
+    witness: ["Gen 49:3 | ראובן בכרי אתה", "Gen 49:4 | אל תותר", "Gen 49:10 | לא יסור שבט מיהודה"]
+    ink: "Gen 49:3-10"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_family.py [subjects: jacob]; consumed by law_family (cold_run_family.py) -> demoted, birthright_transferred, scattered_in_israel, scepter_held"
+    fields: []
+  burial_commanded:
+    en: "the burial commanded — 'bury me with my fathers': the debit on the sons, closed by the run at 50:12-13"
+    he: "קִבְרוּ אֹתִי אֶל אֲבֹתָי (bury me with my fathers — Gen 49:29)"
+    form: speech
+    witness: ["Gen 49:29 | קברו אתי אל אבתי"]
+    ink: "Gen 49:29-32"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_family.py [subjects: jacob]; consumed by law_family (cold_run_family.py) -> burial_owed"
+    fields: []
+  gathered:
+    en: "gathered to his people — the death formula of the patriarchs ('he expired and was gathered')"
+    he: "וַיִּגְוַע וַיֵּאָסֶף אֶל עַמָּיו (and he expired and was gathered to his people — Gen 49:33)"
+    form: act
+    witness: ["Gen 49:33 | ויגוע ויאסף אל עמיו"]
+    ink: "Gen 49:33"
+    corpus: "gen_72_testament_twelve: gava at Gen 49:33 (agent yaaqov)"
+    tape: "submitted by cold_run_family.py [subjects: jacob]; consumed by law_family (cold_run_family.py) -> gathered_to_his_people"
+    fields: []
+  washed:
+    en: "washed — Moses washes Aaron and his sons with water: the BODY's washing before the dressing (Onkelos: immersed; the immersion, not the laver's hands-and-feet)"
+    he: "וַיִּרְחַץ אֹתָם בַּמָּיִם (and he washed them with water — Lev 8:6)"
+    form: act
+    witness: ["Lev 8:6 | וירחץ אתם במים"]
+    ink: "Exod 40:31-32; Lev 8:6"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_erection.py, cold_run_incense_shekel.py [subjects: aaron, moses]; consumed by law_erection (cold_run_erection.py) -> hands_feet_sanctified; law_investiture (cold_run_incense_shekel.py) -> immersed"
+    fields: []
+    aliases_in_code: "cold_run_erection.py submits the laver's hands-and-feet washing (Exod 40:31) under this same kind name — see hands_feet_washed"
+  dressed:
+    en: "dressed — Aaron clothed in the tunic, the sash, the robe, the ephod, the breastplate with the Urim and Thummim, the turban with the plate"
+    he: "וַיִּתֵּן עָלָיו אֶת הַכֻּתֹּנֶת וַיַּחְגֹּר אֹתוֹ בָּאַבְנֵט וַיַּלְבֵּשׁ אֹתוֹ אֶת הַמְּעִיל (and he put on him the tunic and girded him with the sash and clothed him with the robe — Lev 8:7)"
+    form: act
+    witness: ["Lev 8:7 | ויתן עליו את הכתנת ויחגר אתו באבנט וילבש אתו את המעיל"]
+    ink: "Lev 8:7-9"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_incense_shekel.py [subjects: aaron]; consumed by law_investiture (cold_run_incense_shekel.py) -> names_borne, judgment_borne, entry_announced, plate_propitiates"
+    fields: []
+  vessels_anointed:
+    en: "the vessels anointed — the tabernacle and all in it anointed and sanctified; the altar sprinkled seven times and anointed with its vessels, the laver and its base (the run of another spec, Exod 30:26-29)"
+    he: "וַיִּמְשַׁח אֶת הַמִּשְׁכָּן וְאֶת כָּל אֲשֶׁר בּוֹ וַיְקַדֵּשׁ אֹתָם (and he anointed the tabernacle and all that was in it and sanctified them — Lev 8:10)"
+    form: act
+    witness: ["Lev 8:10 | וימשח את המשכן ואת כל אשר בו ויקדש אתם"]
+    ink: "Lev 8:10-11"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_incense_shekel.py [subjects: moses]; consumed by law_investiture (cold_run_incense_shekel.py) -> anointed, most_holy, sanctified_by_contact"
+    fields: []
+  head_anointed:
+    en: "the head anointed — the anointing oil poured on Aaron's head to sanctify him"
+    he: "וַיִּצֹק מִשֶּׁמֶן הַמִּשְׁחָה עַל רֹאשׁ אַהֲרֹן (and he poured of the anointing oil on Aaron's head — Lev 8:12)"
+    form: act
+    witness: ["Lev 8:12 | ויצק משמן המשחה על ראש אהרן"]
+    ink: "Lev 8:12"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_incense_shekel.py [subjects: aaron]; consumed by law_investiture (cold_run_incense_shekel.py) -> anointed"
+    fields: []
+  sons_dressed:
+    en: "the sons dressed — tunics, sashes, caps: the sons' four (no office written until the sprinkling commits it)"
+    he: "וַיַּלְבִּשֵׁם כֻּתֳּנֹת וַיַּחְגֹּר אֹתָם אַבְנֵט וַיַּחֲבֹשׁ לָהֶם מִגְבָּעוֹת (and he clothed them with tunics and girded them with sashes and bound caps on them — Lev 8:13)"
+    form: act
+    witness: ["Lev 8:13 | וילבשם כתנת ויחגר אתם אבנט ויחבש להם מגבעות"]
+    ink: "Lev 8:13"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_incense_shekel.py [subjects: the-sons]; consumed by law_investiture (cold_run_incense_shekel.py) -> no ledger write"
+    fields: []
+  hands_laid:
+    en: "hands laid — Aaron and his sons lay their hands on the head of the bull and of each ram"
+    he: "וַיִּסְמֹךְ אַהֲרֹן וּבָנָיו אֶת יְדֵיהֶם עַל רֹאשׁ פַּר הַחַטָּאת (and Aaron and his sons laid their hands on the head of the sin-offering bull — Lev 8:14); וַיִּסְמְכוּ אַהֲרֹן וּבָנָיו אֶת יְדֵיהֶם (and Aaron and his sons laid their hands — Lev 8:18)"
+    form: act
+    witness: ["Lev 8:14 | ויסמך אהרן ובניו את ידיהם על ראש פר החטאת", "Lev 8:18 | ויסמכו אהרן ובניו את ידיהם"]
+    ink: "Lev 8:14; Lev 8:18; Lev 8:22"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_incense_shekel.py [subjects: the-bull, the-ram-1, the-ram-2]; consumed by law_investiture (cold_run_incense_shekel.py) -> hand_laid"
+    fields: []
+  bull_offered:
+    en: "the bull offered — the sin-offering bull slaughtered, its blood on the altar's horns with the finger, the altar purified, the fat smoked, the carcass burned outside the camp"
+    he: "וַיִּשְׁחָט וַיִּקַּח מֹשֶׁה אֶת הַדָּם (and he slaughtered, and Moses took the blood — Lev 8:15); וַיְחַטֵּא אֶת הַמִּזְבֵּחַ (and he purified the altar — Lev 8:15); שָׂרַף בָּאֵשׁ מִחוּץ לַמַּחֲנֶה (he burned in fire outside the camp — Lev 8:17)"
+    form: act
+    witness: ["Lev 8:15 | וישחט ויקח משה את הדם", "Lev 8:15 | ויחטא את המזבח", "Lev 8:17 | שרף באש מחוץ למחנה"]
+    ink: "Lev 8:14-17"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_incense_shekel.py [subjects: the-bull]; consumed by law_investiture (cold_run_incense_shekel.py) -> altar_purged, burned_outside_camp"
+    fields: []
+  ram_olah:
+    en: "the burnt-offering ram — brought near, slaughtered, its blood dashed around the altar, cut in pieces and smoked whole"
+    he: "וַיַּקְרֵב אֵת אֵיל הָעֹלָה (and he brought near the ram of the burnt offering — Lev 8:18); וַיִּשְׁחָט וַיִּזְרֹק מֹשֶׁה אֶת הַדָּם (and he slaughtered, and Moses dashed the blood — Lev 8:19)"
+    form: act
+    witness: ["Lev 8:18 | ויקרב את איל העלה", "Lev 8:19 | וישחט ויזרק משה את הדם"]
+    ink: "Lev 8:18-21"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_incense_shekel.py [subjects: the-ram-1]; consumed by law_investiture (cold_run_incense_shekel.py) -> accepted"
+    fields: []
+  ram_miluim:
+    en: "the installation ram — the second ram brought near, its blood on the right ear, thumb and toe of Aaron and of his sons, the parts waved and smoked, the breast Moses' portion"
+    he: "וַיַּקְרֵב אֶת הָאַיִל הַשֵּׁנִי אֵיל הַמִּלֻּאִים (and he brought near the second ram, the ram of installation — Lev 8:22); וַיִּתֵּן עַל תְּנוּךְ אֹזֶן אַהֲרֹן הַיְמָנִית (and he put it on the tip of Aaron's right ear — Lev 8:23); וַיָּנֶף אֹתָם תְּנוּפָה לִפְנֵי יְהוָה (and he waved them as a wave offering before the LORD — Lev 8:27)"
+    form: act
+    witness: ["Lev 8:22 | ויקרב את האיל השני איל המלאים", "Lev 8:23 | ויתן על תנוך אזן אהרן הימנית", "Lev 8:27 | וינף אתם תנופה לפני יהוה"]
+    ink: "Lev 8:22-29"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_incense_shekel.py [subjects: the-ram-2]; consumed by law_investiture (cold_run_incense_shekel.py) -> blood_on_extremities, waved, due_to_priest"
+    fields: []
+  garments_sprinkled:
+    en: "the garments sprinkled — the oil and the blood on Aaron, his garments, his sons and their garments: the garments consecrated and the office invested"
+    he: "וַיַּז עַל אַהֲרֹן עַל בְּגָדָיו וְעַל בָּנָיו וְעַל בִּגְדֵי בָנָיו (and he sprinkled on Aaron, on his garments, and on his sons and on his sons' garments — Lev 8:30)"
+    form: act
+    witness: ["Lev 8:30 | ויז על אהרן על בגדיו ועל בניו ועל בגדי בניו"]
+    ink: "Lev 8:30"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_incense_shekel.py [subjects: aaron]; consumed by law_investiture (cold_run_incense_shekel.py) -> consecrated, invested_office"
+    fields: []
+    aliases_in_code: "the same act as milluim_blood_sprinkled (world_engine.py law_installation) at the same verse — one verse, two daemons, two kinds; to be unified at the wrap"
+  meal:
+    en: "the meal — 'boil the flesh at the door and eat it there with the bread in the basket'; the remainder burned"
+    he: "בַּשְּׁלוּ אֶת הַבָּשָׂר פֶּתַח אֹהֶל מוֹעֵד וְשָׁם תֹּאכְלוּ אֹתוֹ (boil the flesh at the door of the tent of meeting and eat it there — Lev 8:31)"
+    form: speech
+    witness: ["Lev 8:31 | בשלו את הבשר פתח אהל מועד ושם תאכלו אתו"]
+    ink: "Lev 8:31-32"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_incense_shekel.py [subjects: aaron]; consumed by law_investiture (cold_run_incense_shekel.py) -> burn_remainder"
+    fields: []
+    aliases_in_code: "the leftover clause it carries (8:32) is milluim_leftover's under law_installation — to be unified at the wrap"
+  confined:
+    en: "confined — 'from the door of the tent of meeting you shall not go out seven days': the seven-day confinement the daemon times"
+    he: "וּמִפֶּתַח אֹהֶל מוֹעֵד לֹא תֵצְאוּ שִׁבְעַת יָמִים (and from the door of the tent of meeting you shall not go out seven days — Lev 8:33)"
+    form: speech
+    witness: ["Lev 8:33 | ומפתח אהל מועד לא תצאו שבעת ימים"]
+    ink: "Lev 8:33-35"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_incense_shekel.py [subjects: aaron]; consumed by law_investiture (cold_run_incense_shekel.py) -> confined_seven_days"
+    fields: []
+  did_all:
+    en: "did all — Aaron and his sons did all the things the LORD commanded by the hand of Moses: the run's inspection stamp"
+    he: "וַיַּעַשׂ אַהֲרֹן וּבָנָיו אֵת כָּל הַדְּבָרִים אֲשֶׁר צִוָּה יְהוָה (and Aaron and his sons did all the things that the LORD commanded — Lev 8:36)"
+    form: act
+    witness: ["Lev 8:36 | ויעש אהרן ובניו את כל הדברים אשר צוה יהוה"]
+    ink: "Lev 8:36"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_incense_shekel.py [subjects: aaron]; consumed by law_investiture (cold_run_incense_shekel.py) -> inspected_as_commanded"
+    fields: []
+  evening_and_morning:
+    en: "evening and morning — the day boundary the creation tape counts six times (none on the seventh)"
+    he: "וַיְהִי עֶרֶב וַיְהִי בֹקֶר יוֹם אֶחָד (and there was evening and there was morning, one day — Gen 1:5); וַיְהִי עֶרֶב וַיְהִי בֹקֶר יוֹם הַשִּׁשִּׁי (and there was evening and there was morning, the sixth day — Gen 1:31)"
+    form: act
+    witness: ["Gen 1:5 | ויהי ערב ויהי בקר יום אחד", "Gen 1:31 | ויהי ערב ויהי בקר יום הששי"]
+    ink: "Gen 1:5; Gen 1:8; Gen 1:13; Gen 1:19; Gen 1:23; Gen 1:31"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_pre_sinai.py [subjects: the-world]; consumed by law_pre_sinai (cold_run_pre_sinai.py) -> day_counted"
+    fields: ["day"]
+  ceased_and_blessed:
+    en: "ceased and blessed — God ceases on the seventh day and blesses and sanctifies it"
+    he: "וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי (and He ceased on the seventh day — Gen 2:2); וַיְבָרֶךְ אֱלֹהִים אֶת יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ (and God blessed the seventh day and sanctified it — Gen 2:3)"
+    form: act
+    witness: ["Gen 2:2 | וישבת ביום השביעי", "Gen 2:3 | ויברך אלהים את יום השביעי ויקדש אתו"]
+    ink: "Gen 2:2-3"
+    corpus: "gen_07_completion_sanctity: finish at Gen 2:2 (agent Elohim); gen_07_completion_sanctity: cease at Gen 2:2 (agent Elohim)"
+    tape: "submitted by cold_run_pre_sinai.py [subjects: the-seventh-day]; consumed by law_pre_sinai (cold_run_pre_sinai.py) -> seventh_day_blessed"
+    fields: []
+  blessed_be_fruitful:
+    en: "blessed to be fruitful — the blessing's command 'be fruitful and multiply' (to the man with dominion; to Noah twice)"
+    he: "וַיְבָרֶךְ אֹתָם אֱלֹהִים וַיֹּאמֶר לָהֶם אֱלֹהִים פְּרוּ וּרְבוּ (and God blessed them and God said to them: be fruitful and multiply — Gen 1:28); וַיְבָרֶךְ אֱלֹהִים אֶת נֹחַ וְאֶת בָּנָיו וַיֹּאמֶר לָהֶם פְּרוּ וּרְבוּ (and God blessed Noah and his sons and said to them: be fruitful and multiply — Gen 9:1); וְאַתֶּם פְּרוּ וּרְבוּ (and you, be fruitful and multiply — Gen 9:7)"
+    form: speech
+    witness: ["Gen 1:28 | ויברך אתם אלהים ויאמר להם אלהים פרו ורבו", "Gen 9:1 | ויברך אלהים את נח ואת בניו ויאמר להם פרו ורבו", "Gen 9:7 | ואתם פרו ורבו"]
+    ink: "Gen 1:28; Gen 9:1; Gen 9:7"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_pre_sinai.py [subjects: adam, noah]; consumed by law_pre_sinai (cold_run_pre_sinai.py) -> fruitfulness_blessed, dominion_granted"
+    fields: ["rule"]
+  fear_set:
+    en: "the fear set — 'the fear of you and the dread of you shall be on every beast': the grant of the beasts into the hand"
+    he: "וּמוֹרַאֲכֶם וְחִתְּכֶם יִהְיֶה עַל כָּל חַיַּת הָאָרֶץ (and the fear of you and the dread of you shall be on every beast of the earth — Gen 9:2)"
+    form: speech
+    witness: ["Gen 9:2 | ומוראכם וחתכם יהיה על כל חית הארץ"]
+    ink: "Gen 9:2"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_pre_sinai.py [subjects: the-beasts]; consumed by law_pre_sinai (cold_run_pre_sinai.py) -> fear_on_beasts"
+    fields: []
+  meat_granted:
+    en: "meat granted — 'every moving thing that lives shall be food for you, as the green herb'"
+    he: "כָּל רֶמֶשׂ אֲשֶׁר הוּא חַי לָכֶם יִהְיֶה לְאָכְלָה (every moving thing that lives shall be food for you — Gen 9:3)"
+    form: speech
+    witness: ["Gen 9:3 | כל רמש אשר הוא חי לכם יהיה לאכלה"]
+    ink: "Gen 9:3"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_pre_sinai.py [subjects: noah]; consumed by law_pre_sinai (cold_run_pre_sinai.py) -> meat_permitted, dominion_granted"
+    fields: []
+  limb_barred:
+    en: "the limb barred — 'flesh with its life, its blood, you shall not eat' (the limb from the living; the blood)"
+    he: "אַךְ בָּשָׂר בְּנַפְשׁוֹ דָמוֹ לֹא תֹאכֵלוּ (but flesh with its life, its blood, you shall not eat — Gen 9:4)"
+    form: speech
+    witness: ["Gen 9:4 | אך בשר בנפשו דמו לא תאכלו"]
+    ink: "Gen 9:4"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_pre_sinai.py [subjects: noah]; consumed by law_pre_sinai (cold_run_pre_sinai.py) -> limb_from_living_barred"
+    fields: []
+  blood_required:
+    en: "blood required — 'your blood of your lives I will require': the Noahide court and Heaven's docket (9:5's three require-verbs)"
+    he: "וְאַךְ אֶת דִּמְכֶם לְנַפְשֹׁתֵיכֶם אֶדְרֹשׁ (and surely your blood of your lives I will require — Gen 9:5)"
+    form: speech
+    witness: ["Gen 9:5 | ואך את דמכם לנפשתיכם אדרש"]
+    ink: "Gen 9:5"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_pre_sinai.py [subjects: noah]; consumed by law_pre_sinai (cold_run_pre_sinai.py) -> blood_required"
+    fields: []
+  flood_sworn_off:
+    en: "the flood sworn off — the covenant established: no flood again to destroy the earth ('no more' doubled, the oath's form, Shevuot 36a)"
+    he: "וְלֹא יִהְיֶה עוֹד מַבּוּל לְשַׁחֵת הָאָרֶץ (and there shall not be a flood again to destroy the earth — Gen 9:11)"
+    form: speech
+    witness: ["Gen 9:11 | ולא יהיה עוד מבול לשחת הארץ"]
+    ink: "Gen 9:11"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_pre_sinai.py [subjects: the-earth]; consumed by law_pre_sinai (cold_run_pre_sinai.py) -> flood_barred, covenant_cut"
+    fields: []
+  bow_set:
+    en: "the bow set — 'My bow I have set in the cloud': the sign of the covenant"
+    he: "אֶת קַשְׁתִּי נָתַתִּי בֶּעָנָן (My bow I have set in the cloud — Gen 9:13)"
+    form: speech
+    witness: ["Gen 9:13 | את קשתי נתתי בענן"]
+    ink: "Gen 9:13"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_pre_sinai.py [subjects: the-cloud]; consumed by law_pre_sinai (cold_run_pre_sinai.py) -> bow_set"
+    fields: []
+  walk_commanded:
+    en: "walking commanded — 'walk before Me and be whole': the wholeness owed, closed at the circumcision (Nedarim 31b)"
+    he: "הִתְהַלֵּךְ לְפָנַי וֶהְיֵה תָמִים (walk before Me and be whole — Gen 17:1)"
+    form: speech
+    witness: ["Gen 17:1 | התהלך לפני והיה תמים"]
+    ink: "Gen 17:1"
+    corpus: "gen_33_shaddai_covenant_flesh: appear at Gen 17:1 (agent YHWH)"
+    tape: "submitted by cold_run_pre_sinai.py [subjects: abraham]; consumed by law_pre_sinai (cold_run_pre_sinai.py) -> wholeness_owed"
+    fields: []
+  circumcision_commanded:
+    en: "circumcision commanded — 'every male among you shall be circumcised... at eight days old': the covenant's sign and its floor"
+    he: "הִמּוֹל לָכֶם כָּל זָכָר (every male among you shall be circumcised — Gen 17:10); וּבֶן שְׁמֹנַת יָמִים יִמּוֹל לָכֶם כָּל זָכָר (and at eight days old every male among you shall be circumcised — Gen 17:12)"
+    form: speech
+    witness: ["Gen 17:10 | המול לכם כל זכר", "Gen 17:12 | ובן שמנת ימים ימול לכם כל זכר"]
+    ink: "Gen 17:10-13"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_pre_sinai.py [subjects: abraham]; consumed by law_pre_sinai (cold_run_pre_sinai.py) -> circumcision_due"
+    fields: ["males"]
+  circumcised:
+    en: "circumcised — the act the run records (Abraham, Ishmael and the household on that very day; Isaac at eight days)"
+    he: "וַיָּמָל אֶת בְּשַׂר עָרְלָתָם (and he circumcised the flesh of their foreskin — Gen 17:23); וַיָּמָל אַבְרָהָם אֶת יִצְחָק בְּנוֹ בֶּן שְׁמֹנַת יָמִים (and Abraham circumcised Isaac his son at eight days old — Gen 21:4)"
+    form: act
+    witness: ["Gen 17:23 | וימל את בשר ערלתם", "Gen 21:4 | וימל אברהם את יצחק בנו בן שמנת ימים"]
+    ink: "Gen 17:24; Gen 17:25; Gen 17:23, 17:27; Gen 21:4"
+    corpus: "gen_33_shaddai_covenant_flesh: take at Gen 17:23 (agent avraham); gen_33_shaddai_covenant_flesh: circumcise at Gen 17:23 (agent avraham); gen_37_laughter_wilderness_oath: circumcise at Gen 21:4 (agent avraham)"
+    tape: "submitted by cold_run_pre_sinai.py [subjects: isaac]; consumed by law_pre_sinai (cold_run_pre_sinai.py) -> sign_in_the_flesh"
+    fields: []
+  born:
+    en: "born — a birth the text records; the eighth-day timer starts (per person) at the birth"
+    he: "וַתַּהַר וַתֵּלֶד שָׂרָה לְאַבְרָהָם בֵּן (and Sarah conceived and bore Abraham a son — Gen 21:2)"
+    form: act
+    witness: ["Gen 21:2 | ותהר ותלד שרה לאברהם בן"]
+    ink: "Gen 21:2"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_pre_sinai.py [subjects: isaac]; consumed by law_pre_sinai (cold_run_pre_sinai.py) -> circumcision_due"
+    fields: []
+  offering_brought:
+    en: "the offering brought — the freewill offering still brought morning by morning (two mornings, Tanchuma Pekudei 5:4)"
+    he: "הֵבִיאוּ אֵלָיו עוֹד נְדָבָה בַּבֹּקֶר בַּבֹּקֶר (they brought to him still more freewill offering morning by morning — Exod 36:3)"
+    form: act
+    witness: ["Exod 36:3 | הביאו אליו עוד נדבה בבקר בבקר"]
+    ink: "Exod 36:3 (the first morning); Exod 36:3 (the second morning)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_sanctuary_build.py [subjects: the-people]; consumed by law_sanctuary_build (cold_run_sanctuary_build.py) -> set_apart_before_me"
+    fields: []
+  overflow_reported:
+    en: "the overflow reported — the craftsmen's report 'the people bring much more than enough' (no law fires on it: the halt is a separate act)"
+    he: "מַרְבִּים הָעָם לְהָבִיא (the people bring much more than enough — Exod 36:5)"
+    form: speech
+    witness: ["Exod 36:5 | מרבים העם להביא"]
+    ink: "Exod 36:5"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_sanctuary_build.py [subjects: the-craftsmen]; consumed by NO DAEMON"
+    fields: []
+    aliases_in_code: "submitted on the construction tape and consumed by NO daemon (the harvest's one orphan — the daemon comments 'no law')"
+  halt_proclaimed:
+    en: "the halt proclaimed — a voice passed through the camp: no more work for the offering; the people restrained from bringing"
+    he: "וַיְצַו מֹשֶׁה וַיַּעֲבִירוּ קוֹל בַּמַּחֲנֶה (and Moses commanded and they made a voice pass through the camp — Exod 36:6); וַיִּכָּלֵא הָעָם מֵהָבִיא (and the people were restrained from bringing — Exod 36:6)"
+    form: speech
+    witness: ["Exod 36:6 | ויצו משה ויעבירו קול במחנה", "Exod 36:6 | ויכלא העם מהביא"]
+    ink: "Exod 36:6"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_sanctuary_build.py [subjects: the-camp]; consumed by law_sanctuary_build (cold_run_sanctuary_build.py) -> bringing_halted"
+    fields: []
+  vessel_made:
+    en: "a vessel made — the making's own verb over each vessel of the house (curtains, boards, veil, screen, ark, table, lampstand, incense altar, oil, altar, laver, court)"
+    he: "וַיַּעֲשׂוּ כָל חֲכַם לֵב (and every wise-hearted one made — Exod 36:8); וַיַּעַשׂ בְּצַלְאֵל אֶת הָאָרֹן (and Bezalel made the ark — Exod 37:1); וַיַּעַשׂ אֶת הַפָּרֹכֶת (and he made the veil — Exod 36:35)"
+    form: act
+    witness: ["Exod 36:8 | ויעשו כל חכם לב", "Exod 37:1 | ויעש בצלאל את הארן", "Exod 36:35 | ויעש את הפרכת"]
+    ink: "Exod 36:8-19; Exod 36:20-34; Exod 36:35-36; Exod 36:37-38; Exod 37:1-9; Exod 37:10-16; Exod 37:17-24; Exod 37:25-28; Exod 37:29; Exod 38:1-7; Exod 38:8; Exod 38:9-20"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_sanctuary_build.py [subjects: the-craftsmen]; consumed by law_sanctuary_build (cold_run_sanctuary_build.py) -> made_one, staves_fixed, veil_divides"
+    fields: ["vessel"]
+  accounts_rendered:
+    en: "the accounts rendered — 'these are the accounts of the tabernacle' by Ithamar's hand: the metals reckoned, the surplus to the house"
+    he: "אֵלֶּה פְקוּדֵי הַמִּשְׁכָּן (these are the accounts of the tabernacle — Exod 38:21)"
+    form: act
+    witness: ["Exod 38:21 | אלה פקודי המשכן"]
+    ink: "Exod 38:21-31"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_sanctuary_build.py [subjects: the-treasury]; consumed by law_sanctuary_build (cold_run_sanctuary_build.py) -> accounts_rendered, surplus_to_the_house"
+    fields: []
+  offering_done:
+    en: "an offering done — the eighth day's offerings run 'as prescribed' against the spec engines (the calf, the ram, the goat, the burnt offering, the meal offering, the peace offerings)"
+    he: "וַיִּשְׁחַט אֶת עֵגֶל הַחַטָּאת (and he slaughtered the calf of the sin offering — Lev 9:8); וַיַּעֲשֶׂהָ כַּמִּשְׁפָּט (and he did it according to the ordinance — Lev 9:16); וַיְמַלֵּא כַפּוֹ מִמֶּנָּה (and he filled his palm from it — Lev 9:17)"
+    form: act
+    witness: ["Lev 9:8 | וישחט את עגל החטאת", "Lev 9:16 | ויעשה כמשפט", "Lev 9:17 | וימלא כפו ממנה"]
+    ink: "Lev 9:8-11; Lev 9:12-14; Lev 9:15; Lev 9:16; Lev 9:17; Lev 9:18-21"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_shemini_day.py [subjects: aaron]; consumed by law_eighth_day (cold_run_shemini_day.py) -> accepted"
+    fields: ["spec"]
+  blessing_lifted:
+    en: "the blessing lifted — Aaron lifts his hands toward the people and blesses them; Moses and Aaron bless from the tent"
+    he: "וַיִּשָּׂא אַהֲרֹן אֶת ידו אֶל הָעָם וַיְבָרְכֵם (and Aaron lifted his hands toward the people and blessed them — Lev 9:22)"
+    form: act
+    witness: ["Lev 9:22 | וישא אהרן את ידו אל העם ויברכם"]
+    ink: "Lev 9:22-23"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_shemini_day.py [subjects: the-people]; consumed by law_eighth_day (cold_run_shemini_day.py) -> blessed_the_people"
+    fields: []
+  glory_seen:
+    en: "the glory seen — the glory of the LORD appears to all the people (the promise of 9:4 and 9:6 kept)"
+    he: "וַיֵּרָא כְבוֹד יְהוָה אֶל כָּל הָעָם (and the glory of the LORD appeared to all the people — Lev 9:23)"
+    form: act
+    witness: ["Lev 9:23 | וירא כבוד יהוה אל כל העם"]
+    ink: "Lev 9:23"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_shemini_day.py [subjects: the-people]; consumed by law_eighth_day (cold_run_shemini_day.py) -> glory_appeared"
+    fields: []
+  fire_descended:
+    en: "fire descended — fire comes out from before the LORD and consumes the burnt offering and the fats on the altar (the altar's tenure, Zevachim 61b)"
+    he: "וַתֵּצֵא אֵשׁ מִלִּפְנֵי יְהוָה וַתֹּאכַל עַל הַמִּזְבֵּחַ (and fire came out from before the LORD and consumed on the altar — Lev 9:24)"
+    form: act
+    witness: ["Lev 9:24 | ותצא אש מלפני יהוה ותאכל על המזבח"]
+    ink: "Lev 9:24"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_shemini_day.py [subjects: the-altar]; consumed by law_eighth_day (cold_run_shemini_day.py) -> fire_from_before_the_lord, high_places_banned"
+    fields: []
+  garment_made:
+    en: "a garment made — the making's verb over each vestment (the ephod, the breastplate, the robe, the tunics, the turban and caps, the breeches, the sash, the plate)"
+    he: "וַיַּעַשׂ אֶת הָאֵפֹד (and he made the ephod — Exod 39:2); וַיַּעַשׂ אֶת הַחֹשֶׁן (and he made the breastplate — Exod 39:8); וַיַּעַשׂ אֶת מְעִיל הָאֵפֹד (and he made the robe of the ephod — Exod 39:22); וְאֶת מִכְנְסֵי הַבָּד (and the linen breeches — Exod 39:28)"
+    form: act
+    witness: ["Exod 39:2 | ויעש את האפד", "Exod 39:8 | ויעש את החשן", "Exod 39:22 | ויעש את מעיל האפד", "Exod 39:28 | ואת מכנסי הבד"]
+    ink: "Exod 39:2-7; Exod 39:8-21; Exod 39:22-26; Exod 39:27; Exod 39:28; Exod 39:29; Exod 39:30-31"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_vestments.py [subjects: the-craftsmen]; consumed by law_vestments (cold_run_vestments.py) -> breastplate_fixed, robe_uncut, nakedness_covered"
+    fields: ["garment"]
+  work_completed:
+    en: "the work completed — 'all the work of the tabernacle of the tent of meeting was completed': the making's completion (the erection's is work_finished at 40:33)"
+    he: "וַתֵּכֶל כָּל עֲבֹדַת מִשְׁכַּן אֹהֶל מוֹעֵד (and all the work of the tabernacle of the tent of meeting was completed — Exod 39:32)"
+    form: act
+    witness: ["Exod 39:32 | ותכל כל עבדת משכן אהל מועד"]
+    ink: "Exod 39:32"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_vestments.py [subjects: the-tabernacle]; consumed by law_vestments (cold_run_vestments.py) -> work_completed"
+    fields: []
+  delivered:
+    en: "delivered — the tabernacle and its every vessel brought to Moses (the inventory of 39:33-41; no ledger entry: the acceptance is the inspection)"
+    he: "וַיָּבִיאוּ אֶת הַמִּשְׁכָּן אֶל מֹשֶׁה (and they brought the tabernacle to Moses — Exod 39:33)"
+    form: act
+    witness: ["Exod 39:33 | ויביאו את המשכן אל משה"]
+    ink: "Exod 39:33-41"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_vestments.py [subjects: the-people]; consumed by law_vestments (cold_run_vestments.py) -> no ledger write"
+    fields: []
+  inspected:
+    en: "inspected — Moses sees all the work, done as the LORD commanded, and blesses them"
+    he: "וַיַּרְא מֹשֶׁה אֶת כָּל הַמְּלָאכָה (and Moses saw all the work — Exod 39:43); וַיְבָרֶךְ אֹתָם מֹשֶׁה (and Moses blessed them — Exod 39:43)"
+    form: act
+    witness: ["Exod 39:43 | וירא משה את כל המלאכה", "Exod 39:43 | ויברך אתם משה"]
+    ink: "Exod 39:42-43"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by cold_run_vestments.py [subjects: moses]; consumed by law_vestments (cold_run_vestments.py) -> inspected_as_commanded, blessed_the_people"
+    fields: []
+  acquire_hebrew_slave:
+    en: "a Hebrew slave acquired — the case clause 'when you buy a Hebrew slave': the six-year term clock starts (the test scene replays Mishnah Kiddushin 1:2)"
+    he: "כִּי תִקְנֶה עֶבֶד עִבְרִי (when you buy a Hebrew slave — Exod 21:2)"
+    form: case
+    witness: ["Exod 21:2 | כי תקנה עבד עברי"]
+    ink: "Mishnah Kiddushin 1:2"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by world_engine.py; consumed by law_slave_term (world_engine.py) -> term_clock, goes_free"
+    fields: ["master", "slave"]
+  slave_pierced:
+    en: "the slave pierced — the case clause 'and if the slave says... his master shall pierce his ear': 'forever' voids the six-year exit, the jubilee still frees (Kiddushin 15a)"
+    he: "וְאִם אָמֹר יֹאמַר הָעֶבֶד (and if the slave says — Exod 21:5); וְרָצַע אֲדֹנָיו אֶת אָזְנוֹ בַּמַּרְצֵעַ (and his master shall pierce his ear with an awl — Exod 21:6)"
+    form: case
+    witness: ["Exod 21:5 | ואם אמר יאמר העבד", "Exod 21:6 | ורצע אדניו את אזנו במרצע"]
+    ink: "Kiddushin 15a:19 on Exod 21:6 + Lev 25:10"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by world_engine.py; consumed by law_slave_term (world_engine.py) -> jubilee_release"
+    fields: ["jubilee_year", "slave"]
+  jubilee_proclaimed:
+    en: "the jubilee proclaimed — 'you shall proclaim liberty in the land... it is a jubilee': the era-wide release of every Hebrew slave"
+    he: "וּקְרָאתֶם דְּרוֹר בָּאָרֶץ (and you shall proclaim liberty in the land — Lev 25:10); יוֹבֵל הִוא (it is a jubilee — Lev 25:10)"
+    form: case
+    witness: ["Lev 25:10 | וקראתם דרור בארץ", "Lev 25:10 | יובל הוא"]
+    ink: "no tape submits this type yet (see aliases_in_code)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by NO TAPE; consumed by law_slave_term (world_engine.py) -> goes_free"
+    fields: []
+    aliases_in_code: "CONSUMED BY law_slave_term BUT NEVER SUBMITTED ON ANY TAPE: the skeleton's scene 5 reaches the jubilee through slave_pierced's jubilee_year TIMER instead — a watched branch no tape has fired (the daemon-edge gate's coverage column will show it)"
+  ox_gores:
+    en: "an ox gores — the case clause 'and when an ox gores a man or a woman': the goring count, the forewarned flip, half against full"
+    he: "וְכִי יִגַּח שׁוֹר אֶת אִישׁ אוֹ אֶת אִשָּׁה (and when an ox gores a man or a woman — Exod 21:28); אִם עֶבֶד יִגַּח הַשּׁוֹר (if the ox gores a slave — Exod 21:32)"
+    form: case
+    witness: ["Exod 21:28 | וכי יגח שור את איש או את אשה", "Exod 21:32 | אם עבד יגח השור"]
+    ink: "Mishnah Bava Kamma 2:4 (goring #%d); Mishnah Bava Kamma 1:4 (forewarned, full); Mishnah Bava Kamma 4:5 (the slave gored: thirty sela — W1, from Exod 21:32)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by world_engine.py, cold_run_mishpatim.py; consumed by law_goring_ox (world_engine.py) -> stoned, ransom_imposed, pays, forewarned, gives_fixed_sum"
+    fields: ["damage", "owner", "ox", "victim", "victim_kind"]
+  bailment_claim:
+    en: "a bailment claim — the case clauses 'when a man gives to his neighbor silver or vessels to keep' and 'a donkey or an ox or a sheep': the four keepers' matrix (Mishnah Shevuot 8:1)"
+    he: "כִּי יִתֵּן אִישׁ אֶל רֵעֵהוּ כֶּסֶף אוֹ כֵלִים לִשְׁמֹר (when a man gives to his neighbor silver or vessels to keep — Exod 22:6); כִּי יִתֵּן אִישׁ אֶל רֵעֵהוּ חֲמוֹר אוֹ שׁוֹר אוֹ שֶׂה (when a man gives to his neighbor a donkey or an ox or a sheep — Exod 22:9); וְכִי יִשְׁאַל אִישׁ מֵעִם רֵעֵהוּ (and when a man borrows from his neighbor — Exod 22:13)"
+    form: case
+    witness: ["Exod 22:6 | כי יתן איש אל רעהו כסף או כלים לשמר", "Exod 22:9 | כי יתן איש אל רעהו חמור או שור או שה", "Exod 22:13 | וכי ישאל איש מעם רעהו"]
+    ink: "Mishnah Shevuot 8:1"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by world_engine.py; consumed by law_guardians (world_engine.py) -> oath_imposed, pays"
+    fields: ["happening", "keeper", "keeper_role", "owner", "value"]
+  sworn_denial_admitted:
+    en: "a sworn denial admitted — the case clause 'and denies to his fellow a deposit... and swears falsely': restitution first, the fifth, the ram (Lev 5:20-26)"
+    he: "וְכִחֵשׁ בַּעֲמִיתוֹ בְּפִקָּדוֹן (and he denies to his fellow a deposit — Lev 5:21); וְנִשְׁבַּע עַל שָׁקֶר (and swears falsely — Lev 5:22); וְהֵשִׁיב אֶת הַגְּזֵלָה (and he shall restore the robbed thing — Lev 5:23)"
+    form: case
+    witness: ["Lev 5:21 | וכחש בעמיתו בפקדון", "Lev 5:22 | ונשבע על שקר", "Lev 5:23 | והשיב את הגזלה"]
+    ink: "Mishnah Bava Kamma 9:5 (the four-value case of Bava Metzia 54a)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law/run chapter, or a recorded case)"
+    tape: "submitted by world_engine.py; consumed by law_deposit_oath (world_engine.py) -> adds_fifth, atoned_forgiven, restores, pays"
+    fields: ["claimant_against", "object_exists", "owner", "value"]
+
+# THE CORPUS TAPE'S OWN LABELS — the 557 narrative events' verb labels (the frozen units' EVENT operators,
+# corpus_world.sqlite events.verb), enumerated by count with each label's first witness; the transliterated
+# labels carry their Hebrew and English (verified by events_layer.py); the English labels stand as written.
+# Not event types: a daemon may watch one only after it is promoted into events: above with witnesses.
+  # ---- W1 THE EXODUS LAW (D9-iii, 2026-09-07): the case-form types of the wrapped Exod 20:22-23:33 + Lev 24:10-23 spans, one per
+  # case head the compiled functions implement; witnesses generated from the Tanakh DB (scratchpad w1_registry_gen.py), never typed ----
+  men_quarrel:
+    en: "men quarrel and one strikes his fellow — the case clause 'and when men quarrel and a man strikes his fellow with a stone or a fist and he does not die': the five indemnities (medical, idleness, the damage as money through the Lev 24 tariff, pain, humiliation) — the test scene replays Mishnah Bava Kamma 8:1"
+    he: "וְכִי יְרִיבֻן אֲנָשִׁים וְהִכָּה אִישׁ אֶת רֵעֵהוּ (and when men quarrel and a man strikes his fellow — Exod 21:18); רַק שִׁבְתּוֹ יִתֵּן וְרַפֹּא יְרַפֵּא (only his idleness he shall give, and healing he shall heal — Exod 21:19)"
+    form: case
+    witness: ["Exod 21:18 | וכי יריבן אנשים והכה איש את רעהו", "Exod 21:19 | רק שבתו יתן ורפא ירפא"]
+    ink: "Mishnah Bava Kamma 8:1 (the five); Bava Kamma 85a (pain from 'wound for wound'); Deut 25:11-12 (humiliation, the recorded import); Lev 24:19-20 through cold_run_lev24.talion() (the damage as money — the first inter-span call)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_mishpatim.py [subjects: the recorded case's parties]; consumed by law_mishpatim (cold_run_mishpatim.py) -> pays, gives_fixed_sum, substitution"
+    fields: ["striker", "victim", "medical", "idleness", "blemish"]
+  pit_opened:
+    en: "a pit opened — the case clause 'and when a man opens a pit, or when a man digs a pit and does not cover it, and an ox or a donkey falls there': the pit's owner pays, the carcass is his — the second of the four damage classes (Mishnah Bava Kamma 1:1)"
+    he: "וְכִי יִפְתַּח אִישׁ בּוֹר (and when a man opens a pit — Exod 21:33); בַּעַל הַבּוֹר יְשַׁלֵּם (the owner of the pit shall pay — Exod 21:34)"
+    form: case
+    witness: ["Exod 21:33 | וכי יפתח איש בור", "Exod 21:34 | בעל הבור ישלם"]
+    ink: "Mishnah Bava Kamma 1:1 (the pit among the four); 5:5-6 (the pit's measures, the data channel)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_mishpatim.py [subjects: the recorded case's parties]; consumed by law_mishpatim (cold_run_mishpatim.py) -> pays"
+    fields: ["owner", "victim", "damage"]
+  field_grazed:
+    en: "a field grazed — the case clause 'when a man causes a field or a vineyard to be grazed and sends his beast and it grazes in another's field': he pays from the best of his field and the best of his vineyard — the third class, the tooth (Mishnah Bava Kamma 1:1)"
+    he: "כִּי יַבְעֶר אִישׁ שָׂדֶה אוֹ כֶרֶם (when a man causes a field or a vineyard to be grazed — Exod 22:4); מֵיטַב שָׂדֵהוּ וּמֵיטַב כַּרְמוֹ יְשַׁלֵּם (from the best of his field and the best of his vineyard he shall pay — Exod 22:4)"
+    form: case
+    witness: ["Exod 22:4 | כי יבער איש שדה או כרם", "Exod 22:4 | מיטב שדהו ומיטב כרמו ישלם"]
+    ink: "Mishnah Bava Kamma 1:1 (the tooth; payment from the best of the land — generalized at Bava Kamma 6b); 6:1-2"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_mishpatim.py [subjects: the recorded case's parties]; consumed by law_mishpatim (cold_run_mishpatim.py) -> pays"
+    fields: ["grazer", "owner", "damage"]
+  fire_spread:
+    en: "a fire spread — the case clause 'when fire goes out and finds thorns and a stack or the standing grain or the field is consumed': the kindler of the fire surely pays — the fourth class (Mishnah Bava Kamma 1:1)"
+    he: "כִּי תֵצֵא אֵשׁ וּמָצְאָה קֹצִים (when fire goes out and finds thorns — Exod 22:5); שַׁלֵּם יְשַׁלֵּם הַמַּבְעִר אֶת הַבְּעֵרָה (the kindler of the fire shall surely pay — Exod 22:5)"
+    form: case
+    witness: ["Exod 22:5 | כי תצא אש ומצאה קצים", "Exod 22:5 | שלם ישלם המבער את הבערה"]
+    ink: "Mishnah Bava Kamma 1:1 (the fire); 6:4 (the fire that crossed)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_mishpatim.py [subjects: the recorded case's parties]; consumed by law_mishpatim (cold_run_mishpatim.py) -> pays"
+    fields: ["kindler", "owner", "damage"]
+  animal_stolen:
+    en: "an ox or a sheep stolen — the case clause 'when a man steals an ox or a sheep and slaughters it or sells it': five cattle for the ox, four sheep for the sheep; 'if the theft is surely found in his hand, alive': he pays double — the multiples (Mishnah Bava Kamma 7:1)"
+    he: "כִּי יִגְנֹב אִישׁ שׁוֹר אוֹ שֶׂה וּטְבָחוֹ אוֹ מְכָרוֹ (when a man steals an ox or a sheep and slaughters it or sells it — Exod 21:37); אִם הִמָּצֵא תִמָּצֵא בְיָדוֹ הַגְּנֵבָה (if the theft is surely found in his hand — Exod 22:3)"
+    form: case
+    witness: ["Exod 21:37 | כי יגנב איש שור או שה וטבחו או מכרו", "Exod 22:3 | אם המצא תמצא בידו הגנבה"]
+    ink: "Mishnah Bava Kamma 7:1 (double; four and five for the ox and the sheep alone, 'as it is stated')"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_mishpatim.py [subjects: the recorded case's parties]; consumed by law_mishpatim (cold_run_mishpatim.py) -> pays_four_five, pays_double"
+    fields: ["thief", "owner", "animal", "disposed", "value"]
+  redeemed_by_deduction:
+    en: "the slave redeemed by deduction — the maidservant's clause 'and he shall let her be redeemed' applied to the Hebrew slave by comparison (Kiddushin 16a): the remaining years bought out for money, the six-year exit voided by the buy-out itself (Mishnah Kiddushin 1:2: 'by years, by the jubilee, by deduction of money')"
+    he: "וְהֶפְדָּהּ (and he shall let her be redeemed — Exod 21:8)"
+    form: case
+    witness: ["Exod 21:8 | והפדה"]
+    ink: "Mishnah Kiddushin 1:2 (acquires himself by years, by the jubilee, by deduction of money); Kiddushin 16a:11 (from 21:8, applied by comparison)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_mishpatim.py [subjects: the recorded case's parties]; consumed by law_mishpatim (cold_run_mishpatim.py) -> pays, goes_free"
+    fields: ["slave", "master", "amount"]
+  virgin_seduced:
+    en: "a virgin seduced — the case clause 'and when a man seduces a virgin who is not betrothed and lies with her, he shall surely pay the bride-price for her to be his wife': the fine to the father (the amount a pointer to Deut 22:29's fifty), and the payments table — the seducer three, the rapist four (Mishnah Ketubot 3:4)"
+    he: "וְכִי יְפַתֶּה אִישׁ בְּתוּלָה אֲשֶׁר לֹא אֹרָשָׂה (and when a man seduces a virgin who is not betrothed — Exod 22:15); מָהֹר יִמְהָרֶנָּה לּוֹ לְאִשָּׁה (he shall surely pay the bride-price for her to be his wife — Exod 22:15)"
+    form: case
+    witness: ["Exod 22:15 | וכי יפתה איש בתולה אשר לא ארשה", "Exod 22:15 | מהר ימהרנה לו לאשה"]
+    ink: "Mishnah Ketubot 3:4 (the seducer pays humiliation, degradation, the fine; the rapist adds pain); Deut 22:29 (the fifty, the recorded pointer, Ketubot 29b:3)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_mishpatim_2.py [subjects: the recorded case's parties]; consumed by law_mishpatim_2 (cold_run_mishpatim_2.py) -> gives_fixed_sum, pays"
+    fields: ["seducer", "father", "raped"]
+  slave_maimed:
+    en: "a slave maimed — the case clause 'and when a man strikes the eye of his slave or the eye of his maidservant and destroys it, he shall send him free for his eye; and if the tooth of his slave...': the two exemplars generalized to the tips of limbs that do not regenerate (Kiddushin 24a; the twenty-four of Mishnah Negaim 6:7)"
+    he: "וְכִי יַכֶּה אִישׁ אֶת עֵין עַבְדּוֹ (and when a man strikes the eye of his slave — Exod 21:26); וְאִם שֵׁן עַבְדּוֹ (and if the tooth of his slave — Exod 21:27)"
+    form: case
+    witness: ["Exod 21:26 | וכי יכה איש את עין עבדו", "Exod 21:27 | ואם שן עבדו"]
+    ink: "Kiddushin 24a:6 ('a tooth and an eye are written' — the exemplars generalized); Mishnah Negaim 6:7 (the twenty-four limb-tips)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_mishpatim_2.py [subjects: the recorded case's parties]; consumed by law_mishpatim_2 (cold_run_mishpatim_2.py) -> released, goes_free"
+    fields: ["master", "slave", "limb", "regenerates"]
+  pregnant_woman_struck:
+    en: "a pregnant woman struck — the case clause 'and when men fight and strike a pregnant woman and her children come out, and there is no fatality, he shall surely be fined as the woman's husband lays on him, and he shall give by the judges': the valuation before and after through the court; a person pays, an ox is exempt (Mishnah Bava Kamma 5:4)"
+    he: "וְכִי יִנָּצוּ אֲנָשִׁים וְנָגְפוּ אִשָּׁה הָרָה (and when men fight and strike a pregnant woman — Exod 21:22); וְנָתַן בִּפְלִלִים (and he shall give by the judges — Exod 21:22)"
+    form: case
+    witness: ["Exod 21:22 | וכי ינצו אנשים ונגפו אשה הרה", "Exod 21:22 | ונתן בפללים"]
+    ink: "Mishnah Bava Kamma 5:4 (her worth before the birth and after, the difference paid; the ox that struck her exempt)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_mishpatim_2.py [subjects: the recorded case's parties]; consumed by law_mishpatim_2 (cold_run_mishpatim_2.py) -> fined_by_assessment, exempt"
+    fields: ["striker", "actor_kind", "husband", "value_before", "value_after"]
+  altar_built:
+    en: "an altar built — the clauses 'an altar of earth you shall make for Me' and 'and if an altar of stones you make for Me, you shall not build them hewn, for you have lifted your sword upon it and profaned it': whole stones the iron never touched are fit, a stone the iron scratched is disqualified (Mishnah Middot 3:4); one of the Torah's three obligatory if-clauses (Mekhilta 22:24)"
+    he: "מִזְבַּח אֲדָמָה תַּעֲשֶׂה לִּי (an altar of earth you shall make for Me — Exod 20:24); וְאִם מִזְבַּח אֲבָנִים תַּעֲשֶׂה לִּי לֹא תִבְנֶה אֶתְהֶן גָּזִית (and if an altar of stones you make for Me, you shall not build them hewn — Exod 20:25)"
+    form: case
+    witness: ["Exod 20:24 | מזבח אדמה תעשה לי", "Exod 20:25 | ואם מזבח אבנים תעשה לי לא תבנה אתהן גזית"]
+    ink: "Mishnah Middot 3:4 (iron disqualifies by touch; whole stones from the valley of Beit Kerem); Mishnah Chagigah 3:8 (the earth altar like the ground); Zevachim 54a:8 (the build recipe) — cold_run_decalogue.altar_rules called by the ordinances runner"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> disqualified, accepted"
+    fields: ["builder", "stones"]
+  offered_on_altar:
+    en: "an offering brought up on the altar — the clause 'and you shall sacrifice on it your burnt offerings and your peace offerings, your flock and your herd; in every place where I cause My name to be mentioned I will come to you and bless you': the two classes by their engines (the burnt offering wholly to the fires, the peace offering's two-days-one-night window)"
+    he: "וְזָבַחְתָּ עָלָיו אֶת עֹלֹתֶיךָ וְאֶת שְׁלָמֶיךָ (and you shall sacrifice on it your burnt offerings and your peace offerings — Exod 20:24)"
+    form: case
+    witness: ["Exod 20:24 | וזבחת עליו את עלתיך ואת שלמיך"]
+    ink: "Lev 1 and Lev 3 through cold_run_offerings.dispatch (olah, shelamim — live calls); Lev 7:16 (the peace offering's window)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> smoked_to_the_lord, eating_window"
+    fields: ["offerer", "offering"]
+  sorcery_done:
+    en: "sorcery done — the clause 'a sorceress you shall not let live' (man and woman alike, the verse speaking of the common case — Mekhilta): the sorcerer is stoned; the doer of a deed is liable, the deceiver of the eyes exempt (Mishnah Sanhedrin 7:4, 7:11)"
+    he: "מְכַשֵּׁפָה לֹא תְחַיֶּה (a sorceress you shall not let live — Exod 22:17)"
+    form: case
+    witness: ["Exod 22:17 | מכשפה לא תחיה"]
+    ink: "Mishnah Sanhedrin 7:4 (the sorcerer among the stoned); 7:11 (the doer liable, the deceiver of the eyes exempt); Mekhilta 22:17 (man and woman alike; the warning at Deut 18:10)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> stoned, exempt"
+    fields: ["doer", "deed"]
+  lay_with_beast:
+    en: "lying with a beast — the clause 'whoever lies with a beast shall surely be put to death': stoning (Mishnah Sanhedrin 7:4), the beast judged by twenty-three (Mishnah Sanhedrin 1:4) — the sanctions engine holds this verse as the passive's warning"
+    he: "כָּל שֹׁכֵב עִם בְּהֵמָה מוֹת יוּמָת (whoever lies with a beast shall surely be put to death — Exod 22:18)"
+    form: case
+    witness: ["Exod 22:18 | כל שכב עם בהמה מות יומת"]
+    ink: "Mishnah Sanhedrin 7:4 (the stoned); 1:4 (the beast's court of twenty-three); Lev 18:23 and 20:15-16 through cold_run_sanctions.beast (live call)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> put_to_death"
+    fields: ["doer"]
+  sacrificed_to_gods:
+    en: "sacrificed to gods — the clause 'he who sacrifices to gods shall be devoted to destruction, save to the LORD alone': the idolater's row — one who serves, sacrifices, burns incense, pours a libation, bows, or accepts it as a god (Mishnah Sanhedrin 7:6); the Temple's services for any idol (Mekhilta)"
+    he: "זֹבֵחַ לָאֱלֹהִים יָחֳרָם (he who sacrifices to gods shall be devoted to destruction — Exod 22:19)"
+    form: case
+    witness: ["Exod 22:19 | זבח לאלהים יחרם"]
+    ink: "Mishnah Sanhedrin 7:6 (the idolater's row); Mekhilta 22:19 (the service architecture; 'save to the LORD alone' empties the Temple's services to the Name)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> put_to_death"
+    fields: ["doer", "service"]
+  stranger_wronged:
+    en: "a stranger, widow, or orphan wronged — the clauses 'and a stranger you shall not wrong nor oppress', 'any widow or orphan you shall not afflict', 'if you afflict him at all, for if he cries at all to Me I will surely hear his cry, and My anger will burn and I will kill you with the sword': the cry heard on Heaven's docket, measure for measure; wronging by words has no court remedy (Mishnah Bava Metzia 4:10)"
+    he: "וְגֵר לֹא תוֹנֶה וְלֹא תִלְחָצֶנּוּ (and a stranger you shall not wrong nor oppress — Exod 22:20); כָּל אַלְמָנָה וְיָתוֹם לֹא תְעַנּוּן (any widow or orphan you shall not afflict — Exod 22:21); שָׁמֹעַ אֶשְׁמַע צַעֲקָתוֹ (I will surely hear his cry — Exod 22:22)"
+    form: case
+    witness: ["Exod 22:20 | וגר לא תונה ולא תלחצנו", "Exod 22:21 | כל אלמנה ויתום לא תענון", "Exod 22:22 | שמע אשמע צעקתו"]
+    ink: "Mishnah Bava Metzia 4:10 (wronging by words); Mekhilta 22:20-23 (the two verbs; one affliction; the doubled cry; measure for measure); Lev 19:33-34 through cold_run_holiness_b.convert_measures (live call)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> cry_heard, put_to_death, exempt"
+    fields: ["wronger", "victim", "victim_class", "cried"]
+  silver_lent:
+    en: "silver lent — the clause 'if silver you lend to My people, to the poor with you, you shall not be to him as a creditor; you shall not lay upon him interest' — the obligatory if (Mekhilta); the bite barred, the five who transgress (Mishnah Bava Metzia 5:1, 5:11)"
+    he: "אִם כֶּסֶף תַּלְוֶה אֶת עַמִּי (if silver you lend to My people — Exod 22:24); לֹא תְשִׂימוּן עָלָיו נֶשֶׁךְ (you shall not lay upon him interest — Exod 22:24)"
+    form: case
+    witness: ["Exod 22:24 | אם כסף תלוה את עמי", "Exod 22:24 | לא תשימון עליו נשך"]
+    ink: "Mishnah Bava Metzia 5:1 (the bite and the increase); 5:11 (the lender, the borrower, the guarantor, the witnesses, the scribe); Lev 25:36-37 through cold_run_yovel.interest (live call)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> interest_barred"
+    fields: ["lender", "borrower", "interest"]
+  garment_pledged:
+    en: "a garment taken in pledge — the clause 'if you take in pledge the garment of your fellow, until the sun sets you shall return it to him, for it is his only covering... and it shall be, when he cries to Me, I will hear, for I am gracious': the sunset TIMER on the taken garment (the day-garment by day, the night-garment by night — Mishnah Bava Metzia 9:13), and the cry heard"
+    he: "אִם חָבֹל תַּחְבֹּל שַׂלְמַת רֵעֶךָ עַד בֹּא הַשֶּׁמֶשׁ תְּשִׁיבֶנּוּ לוֹ (if you take in pledge the garment of your fellow, until the sun sets you shall return it to him — Exod 22:25); וְהָיָה כִּי יִצְעַק אֵלַי וְשָׁמַעְתִּי (and it shall be, when he cries to Me, I will hear — Exod 22:26)"
+    form: case
+    witness: ["Exod 22:25 | אם חבל תחבל שלמת רעך עד בא השמש תשיבנו לו", "Exod 22:26 | והיה כי יצעק אלי ושמעתי"]
+    ink: "Mishnah Bava Metzia 9:13 (the pledge returned by day and by night; the widow not pledged; through the court only); Deut 24:12-13 (the second seat)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> pledge_returned_by_sunset, cry_heard"
+    fields: ["creditor", "debtor", "garment", "day"]
+  god_or_ruler_cursed:
+    en: "a judge or a ruler cursed — the clause 'a judge you shall not curse, and a ruler among your people you shall not execrate': the fork on the word for God/judge, the Name gate, the four liabilities (Mekhilta); the curser by the Name (Mishnah Shevuot 4:13), the euphemism (Mishnah Sanhedrin 7:8)"
+    he: "אֱלֹהִים לֹא תְקַלֵּל וְנָשִׂיא בְעַמְּךָ לֹא תָאֹר (a judge you shall not curse, and a ruler among your people you shall not execrate — Exod 22:27)"
+    form: case
+    witness: ["Exod 22:27 | אלהים לא תקלל ונשיא בעמך לא תאר"]
+    ink: "Mishnah Shevuot 4:13 (the one who curses by the Name); Mishnah Sanhedrin 7:8 (by a euphemism); Mekhilta 22:27 (the four liabilities; 'among your people' — one who does the deeds of your people)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> lashes"
+    fields: ["curser", "target", "by_name"]
+  fullness_delayed:
+    en: "the fullness delayed — the clause 'your fullness and your outflow you shall not delay': the gifts' order (first fruits, then the heave offering, then the first tithe, then the second) — separating a later gift before an earlier one is barred (Mishnah Terumot 3:6-7)"
+    he: "מְלֵאָתְךָ וְדִמְעֲךָ לֹא תְאַחֵר (your fullness and your outflow you shall not delay — Exod 22:28)"
+    form: case
+    witness: ["Exod 22:28 | מלאתך ודמעך לא תאחר"]
+    ink: "Mishnah Terumot 3:6-7 (the order; 'you shall not delay' read as the reorder ban — Mekhilta)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> gift_order_barred"
+    fields: ["farmer", "separated_first"]
+  firstborn_son:
+    en: "a firstborn son given — the clause 'the firstborn of your sons you shall give to Me': consecrated from the womb; redeemed at five sela to any priest after thirty days (Mishnah Bekhorot 8:1, 8:7-8; Num 18:16) — the Passover engine's firstborn machine called"
+    he: "בְּכוֹר בָּנֶיךָ תִּתֶּן לִּי (the firstborn of your sons you shall give to Me — Exod 22:28)"
+    form: case
+    witness: ["Exod 22:28 | בכור בניך תתן לי"]
+    ink: "Mishnah Bekhorot 8:1 (the firstborn for the priest and for inheritance); 8:7 (five sela); 8:8 (to any priest); Num 18:16 (after thirty days); Exod 13:2, 13:13 through cold_run_pesach.firstborn (live call)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> consecrated_firstborn, due_to_priest"
+    fields: ["father", "son", "day"]
+  firstling_born:
+    en: "a firstling born — the clause 'so you shall do with your ox and your sheep: seven days it shall be with its mother; on the eighth day you shall give it to Me': the eighth-day TIMER (Lev 22:27 its second seat, one timer at two seats); the donkey's fork by the Passover engine (redeem with a lamb or break its neck)"
+    he: "שִׁבְעַת יָמִים יִהְיֶה עִם אִמּוֹ בַּיּוֹם הַשְּׁמִינִי תִּתְּנוֹ לִי (seven days it shall be with its mother, on the eighth day you shall give it to Me — Exod 22:29)"
+    form: case
+    witness: ["Exod 22:29 | שבעת ימים יהיה עם אמו ביום השמיני תתנו לי"]
+    ink: "Lev 22:27 (the second seat: 'from the eighth day and onward it is accepted'); Exod 13:13 through cold_run_pesach.firstborn (the donkey — live call); Mishnah Bekhorot 1:2-4 (the donkey)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> eighth_day_fit, accepted, redeem_or_break"
+    fields: ["owner", "animal", "day"]
+  flesh_torn:
+    en: "flesh torn in the field — the clause 'and men of holiness you shall be to Me; and flesh in the field, torn, you shall not eat; to the dog you shall throw it': the TRANSFER to the dog (the dog's wage — Mekhilta); the eater lashed (Mishnah Makkot 3:2); the torn that cannot live (Mishnah Chullin 3:1)"
+    he: "וּבָשָׂר בַּשָּׂדֶה טְרֵפָה לֹא תֹאכֵלוּ לַכֶּלֶב תַּשְׁלִכוּן אֹתוֹ (and flesh in the field, torn, you shall not eat, to the dog you shall throw it — Exod 22:30)"
+    form: case
+    witness: ["Exod 22:30 | ובשר בשדה טרפה לא תאכלו לכלב תשלכון אתו"]
+    ink: "Mishnah Chullin 3:1 (the torn: the injuries after which the animal cannot live); Mishnah Makkot 3:2 (the eater of a torn animal lashed); Mekhilta 22:30 (the field the common case; the dog's wage)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> torn_flesh_to_dogs, lashes"
+    fields: ["owner", "eaten"]
+  false_report_carried:
+    en: "a false report carried — the clause 'you shall not carry a false report; do not set your hand with the wicked to be a witness of violence': the BLOCK on the judge who hears one party alone and on the litigant who brings him one (the three warnings — Sanhedrin 7b, Makkot 23a); the tale-bearer (Mishnah Sanhedrin 3:7)"
+    he: "לֹא תִשָּׂא שֵׁמַע שָׁוְא (you shall not carry a false report — Exod 23:1)"
+    form: case
+    witness: ["Exod 23:1 | לא תשא שמע שוא"]
+    ink: "Mishnah Sanhedrin 3:7 (the judge who reveals the vote is a tale-bearer); Sanhedrin 7b (the judge hears no party in the other's absence); Makkot 23a (the three warnings at one clause)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> false_report_barred"
+    fields: ["judge", "party"]
+  court_split:
+    en: "a court split — the clause 'you shall not follow the many for evil, and you shall not answer in a cause to incline after the many to pervert': the asymmetry read off the verse — acquittal by a majority of one, conviction only by a majority of two; the twenty-three built from 'for evil' (Mishnah Sanhedrin 1:6, 4:1)"
+    he: "אַחֲרֵי רַבִּים לְהַטֹּת (after the many to incline — Exod 23:2)"
+    form: case
+    witness: ["Exod 23:2 | אחרי רבים להטת"]
+    ink: "Mishnah Sanhedrin 4:1 (acquittal by one, conviction by two); 1:6 (the twenty-three from 'for evil' and 'after the many'); Sanhedrin 2a, 32a"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> majority_decides"
+    fields: ["court", "for_acquittal", "for_conviction", "capital"]
+  enemys_animal_met:
+    en: "an enemy's animal met straying — the case clause 'when you meet the ox of your enemy or his donkey straying, you shall surely return it to him': the return duty, doubled in the verb — even a hundred times (Mishnah Bava Metzia 2:9); the sign and the claimant; the deceiver (2:7)"
+    he: "כִּי תִפְגַּע שׁוֹר אֹיִבְךָ אוֹ חֲמֹרוֹ תֹּעֶה הָשֵׁב תְּשִׁיבֶנּוּ לוֹ (when you meet the ox of your enemy or his donkey straying, you shall surely return it to him — Exod 23:4)"
+    form: case
+    witness: ["Exod 23:4 | כי תפגע שור איבך או חמרו תעה השב תשיבנו לו"]
+    ink: "Mishnah Bava Metzia 2:9 (returning even a hundred times; the sign); 2:7 (the deceiver); 2:1, 2:5-6 (what is his; the garment; the neighbors); Deut 22:1-3 (the second seat)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> restores"
+    fields: ["finder", "owner", "animal"]
+  donkey_under_burden:
+    en: "a hated man's donkey under its burden — the case clause 'when you see the donkey of one who hates you lying under its burden, and you would refrain from helping him, you shall surely unload with him': the unloading owed on the passer-by — WITH HIM; if the owner sits by and says 'you do it', exempt (Mishnah Bava Metzia 2:10)"
+    he: "כִּי תִרְאֶה חֲמוֹר שֹׂנַאֲךָ רֹבֵץ תַּחַת מַשָּׂאוֹ (when you see the donkey of one who hates you lying under its burden — Exod 23:5); עָזֹב תַּעֲזֹב עִמּוֹ (you shall surely unload with him — Exod 23:5)"
+    form: case
+    witness: ["Exod 23:5 | כי תראה חמור שנאך רבץ תחת משאו", "Exod 23:5 | עזב תעזב עמו"]
+    ink: "Mishnah Bava Metzia 2:10 (unload, and load — Deut 22:4; 'with him': if the owner went and sat, exempt; the measure the data channel); Mekhilta 23:5"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> unloading_owed, exempt"
+    fields: ["passerby", "owner", "owner_helps"]
+  acquitted_retried:
+    en: "the acquitted brought back — the clause 'keep far from a false matter, and the innocent and the righteous you shall not slay, for I will not justify the wicked': a capital case reversed to acquittal, never to conviction — the acquitted is never retried (Mishnah Sanhedrin 4:1; Sanhedrin 33b); circumstantial evidence no ground to kill (Sanhedrin 37b)"
+    he: "וְנָקִי וְצַדִּיק אַל תַּהֲרֹג (and the innocent and the righteous you shall not slay — Exod 23:7)"
+    form: case
+    witness: ["Exod 23:7 | ונקי וצדיק אל תהרג"]
+    ink: "Mishnah Sanhedrin 4:1 (reversed to acquittal, not to conviction); Sanhedrin 33b (the acquitted never retried, from 'the innocent'); Sanhedrin 37b (the circumstantial case)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> exempt"
+    fields: ["court", "accused"]
+  bribe_offered:
+    en: "a bribe offered to the judge — the clauses 'you shall not pervert the judgment of your needy in his cause' and 'a bribe you shall not take, for the bribe blinds the open-eyed and perverts the words of the righteous': the BLOCK on the judge even to judge truly (Ketubot 105a-b), and Heaven's entry for judgment perverted (Mishnah Peah 8:9)"
+    he: "וְשֹׁחַד לֹא תִקָּח (and a bribe you shall not take — Exod 23:8); לֹא תַטֶּה מִשְׁפַּט אֶבְיֹנְךָ בְּרִיבוֹ (you shall not pervert the judgment of your needy in his cause — Exod 23:6)"
+    form: case
+    witness: ["Exod 23:8 | ושחד לא תקח", "Exod 23:6 | לא תטה משפט אבינך בריבו"]
+    ink: "Mishnah Peah 8:9 (the judge who takes a bribe and perverts judgment); Ketubot 105a-b (even to acquit the innocent); Lev 19:15 through cold_run_holiness.conduct (live call)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> bribe_barred, judgment_perverted"
+    fields: ["judge", "giver"]
+  entered_the_land:
+    en: "the people brought into the land — the case clause 'when My angel goes before you and brings you to the Amorite...': their pillars demolished and broken (doubled verbs; Mishnah Avodah Zarah 3:1), no covenant with them or their gods, and the driving-out little by little 'lest the land become desolate' — the LAND entity's flag"
+    he: "כִּי יֵלֵךְ מַלְאָכִי לְפָנֶיךָ וֶהֱבִיאֲךָ (when My angel goes before you and brings you — Exod 23:23); הָרֵס תְּהָרְסֵם וְשַׁבֵּר תְּשַׁבֵּר מַצֵּבֹתֵיהֶם (you shall surely demolish them and surely break their pillars — Exod 23:24); פֶּן תִּהְיֶה הָאָרֶץ שְׁמָמָה (lest the land become desolate — Exod 23:29); לֹא תִכְרֹת לָהֶם וְלֵאלֹהֵיהֶם בְּרִית (you shall not cut a covenant with them or with their gods — Exod 23:32)"
+    form: case
+    witness: ["Exod 23:23 | כי ילך מלאכי לפניך והביאך", "Exod 23:24 | הרס תהרסם ושבר תשבר מצבתיהם", "Exod 23:29 | פן תהיה הארץ שממה", "Exod 23:32 | לא תכרת להם ולאלהיהם ברית"]
+    ink: "Mishnah Avodah Zarah 3:1 (the images); Exod 23:29-30 (little by little); Exod 34:12-16 (the second seat); the spine silent over 23:20-33 — Onkelos alone"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> demolished, covenant_barred, land_desolate"
+    fields: ["people", "year"]
+  served_the_lord:
+    en: "the people serve the LORD in the land — the clause 'and you shall serve the LORD your God, and He will bless your bread and your water, and I will remove sickness from your midst': the HEAVEN entry on the people; no miscarrying or barren (a hapax, 23:26)"
+    he: "וַעֲבַדְתֶּם אֵת יְהוָה אֱלֹהֵיכֶם וּבֵרַךְ אֶת לַחְמְךָ וְאֶת מֵימֶיךָ (and you shall serve the LORD your God, and He will bless your bread and your water — Exod 23:25)"
+    form: case
+    witness: ["Exod 23:25 | ועבדתם את יהוה אלהיכם וברך את לחמך ואת מימיך"]
+    ink: "Onkelos Exod 23:25 (serve before the LORD); Exod 23:26 (no miscarrying, no barren; the days filled)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_ordinances.py [subjects: the recorded case's parties]; consumed by law_ordinances (cold_run_ordinances.py) -> bread_and_water_blessed"
+    fields: ["people"]
+  name_sworn_in_vain:
+    en: "the Name sworn in vain — the clause 'you shall not take the name of the LORD your God in vain, for the LORD will not hold guiltless him who takes His name in vain': He does not hold guiltless, but the COURT lashes him and he is cleared (Shevuot 21a); the broken I-will-eat oath located here (Shevuot 20b)"
+    he: "לֹא תִשָּׂא אֶת שֵׁם יְהוָה אֱלֹהֶיךָ לַשָּׁוְא (you shall not take the name of the LORD your God in vain — Exod 20:7)"
+    form: case
+    witness: ["Exod 20:7 | לא תשא את שם יהוה אלהיך לשוא"]
+    ink: "Mishnah Shevuot 3:10-11 (the vain oath: lashes); Shevuot 21a:6 (R. Yochanan: the court lashes and he is cleared); Shevuot 20b:6, 20b:9 (vain and false spoken as one)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_decalogue.py [subjects: the recorded case's parties]; consumed by law_decalogue (cold_run_decalogue.py) -> lashes"
+    fields: ["swearer", "oath"]
+  sabbath_remembered:
+    en: "the Sabbath remembered — the clause 'remember the Sabbath day to sanctify it': the duty is a declaration, discharged over wine by night and again by day — the kiddush (Pesachim 106a)"
+    he: "זָכוֹר אֶת יוֹם הַשַּׁבָּת לְקַדְּשׁוֹ (remember the Sabbath day to sanctify it — Exod 20:8)"
+    form: case
+    witness: ["Exod 20:8 | זכור את יום השבת לקדשו"]
+    ink: "Pesachim 106a:5 (remember it over wine); Deut 5:12 ('keep' — remember and keep in one saying, Shevuot 20b, Rava's kiddush derivation)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_decalogue.py [subjects: the recorded case's parties]; consumed by law_decalogue (cold_run_decalogue.py) -> sanctify_day"
+    fields: ["household"]
+  sabbath_labor:
+    en: "labor on the seventh day — the clause 'and the seventh day is a Sabbath to the LORD your God; you shall not do any labor — you, your son and your daughter, your slave and your maidservant and your beast and your stranger within your gates': the household enumerated; doing barred, causing not (Shabbat 120b); the laden beast (Shabbat 153b); the thirty-nine the data channel"
+    he: "לֹא תַעֲשֶׂה כָל מְלָאכָה (you shall not do any labor — Exod 20:10); אַתָּה וּבִנְךָ וּבִתֶּךָ עַבְדְּךָ וַאֲמָתְךָ וּבְהֶמְתֶּךָ וְגֵרְךָ (you, your son and your daughter, your slave and your maidservant and your beast and your stranger — Exod 20:10)"
+    form: case
+    witness: ["Exod 20:10 | לא תעשה כל מלאכה", "Exod 20:10 | אתה ובנך ובתך עבדך ואמתך ובהמתך וגרך"]
+    ink: "Shabbat 120b:11 (performance barred, causation not); Shabbat 153b:7 (the driver of the laden beast); Mishnah Shabbat 7:2 (the thirty-nine labors, defined by reference to the tabernacle build — Shabbat 49b)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_decalogue.py [subjects: the recorded case's parties]; consumed by law_decalogue (cold_run_decalogue.py) -> labor_barred, rest_required"
+    fields: ["household", "actor", "act"]
+  person_stolen:
+    en: "a person stolen — the utterance 'you shall not steal' amid 'you shall not murder' and 'you shall not commit adultery' (a matter learned from its context, Sanhedrin 86a: the Decalogue's theft is the theft of PERSONS), with the ordinances' own clause 'and he who steals a man and sells him, and he is found in his hand, shall surely be put to death'"
+    he: "לֹא תִּגְנֹב (you shall not steal — Exod 20:15); וְגֹנֵב אִישׁ וּמְכָרוֹ וְנִמְצָא בְיָדוֹ מוֹת יוּמָת (and he who steals a man and sells him, and he is found in his hand, shall surely be put to death — Exod 21:16)"
+    form: case
+    witness: ["Exod 20:15 | לא תגנב", "Exod 21:16 | וגנב איש ומכרו ונמצא בידו מות יומת"]
+    ink: "Mishnah Sanhedrin 11:1 (the kidnapper among the strangled — with the sold-and-exploited conditions); Sanhedrin 86a:15-16 (learned from its context); Deut 24:7 (the second seat)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_decalogue.py [subjects: the recorded case's parties]; consumed by law_decalogue (cold_run_decalogue.py) -> put_to_death"
+    fields: ["thief", "victim", "sold"]
+  cursed_the_name:
+    en: "the Name cursed — the chapter's own case ('and the son of the Israelite woman pronounced the Name and cursed', 24:11; held in custody, the sentence at 24:14, executed at 24:23) and the statute it drew: 'any man, when he curses his God, shall bear his sin; and he who pronounces the name of the LORD shall surely be put to death — all the congregation shall stone him, the sojourner as the native': the Name gate (Mishnah Sanhedrin 7:5)"
+    he: "אִישׁ אִישׁ כִּי יְקַלֵּל אֱלֹהָיו וְנָשָׂא חֶטְאוֹ (any man, when he curses his God, shall bear his sin — Lev 24:15); וְנֹקֵב שֵׁם יְהוָה מוֹת יוּמָת (and he who pronounces the name of the LORD shall surely be put to death — Lev 24:16); וַיִּקֹּב בֶּן הָאִשָּׁה הַיִּשְׂרְאֵלִית אֶת הַשֵּׁם וַיְקַלֵּל (and the son of the Israelite woman pronounced the Name and cursed — Lev 24:11)"
+    form: case
+    witness: ["Lev 24:15 | איש איש כי יקלל אלהיו ונשא חטאו", "Lev 24:16 | ונקב שם יהוה מות יומת", "Lev 24:11 | ויקב בן האשה הישראלית את השם ויקלל"]
+    ink: "Mishnah Sanhedrin 7:5 (the blasphemer is not liable until he pronounces the Name; the hearers rend); Lev 24:10-23 (the chapter's own run: custody 24:12, the sentence 24:14, the execution 24:23); Sanhedrin 56a"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_lev24.py [subjects: the recorded case's parties]; consumed by law_lev24 (cold_run_lev24.py) -> stoned, bears_sin"
+    fields: ["curser", "name_pronounced", "status"]
+  man_struck_dead:
+    en: "a man struck dead — the case clause 'and a man, when he strikes any human life, shall surely be put to death' (with the ordinances' 'he who strikes a man so that he dies shall surely be put to death'): any human life — a day-old victim counts; one law for the sojourner and the native"
+    he: "וְאִישׁ כִּי יַכֶּה כָּל נֶפֶשׁ אָדָם מוֹת יוּמָת (and a man, when he strikes any human life, shall surely be put to death — Lev 24:17); מַכֵּה אִישׁ וָמֵת מוֹת יוּמָת (he who strikes a man so that he dies shall surely be put to death — Exod 21:12)"
+    form: case
+    witness: ["Lev 24:17 | ואיש כי יכה כל נפש אדם מות יומת", "Exod 21:12 | מכה איש ומת מות יומת"]
+    ink: "Mishnah Sanhedrin 9:1 (the murderer beheaded); Niddah 44b (a day-old counts, from 'any human life'); Bava Kamma 83b:10 (the pair at 24:21: 'that one is written about killing')"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_lev24.py [subjects: the recorded case's parties]; consumed by law_lev24 (cold_run_lev24.py) -> put_to_death"
+    fields: ["striker", "victim", "victim_age"]
+  beast_struck_dead:
+    en: "a beast struck dead — the clause 'and he who strikes a beast's life shall pay for it, life for life': the pay verb on the exchange formula, juxtaposed with the killing of a man in one verse (24:21) — the pair that fixes the tariff as money"
+    he: "וּמַכֵּה נֶפֶשׁ בְּהֵמָה יְשַׁלְּמֶנָּה (and he who strikes a beast's life shall pay for it — Lev 24:18)"
+    form: case
+    witness: ["Lev 24:18 | ומכה נפש בהמה ישלמנה"]
+    ink: "Bava Kamma 83b:10 (the juxtaposed pair: pays beside dies); Lev 24:21 (the pair in one verse); 'life for life' at 24:18 and Exod 21:23 alone"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_lev24.py [subjects: the recorded case's parties]; consumed by law_lev24 (cold_run_lev24.py) -> pays"
+    fields: ["striker", "owner", "value"]
+  blemish_given:
+    en: "a blemish given in a fellow — the case clause 'and a man, when he gives a blemish in his fellow, as he did so shall it be done to him: fracture for fracture, eye for eye, tooth for tooth': the tariff carried as MONEY (one law equal for all, 24:22 — money is what equalizes, Bava Kamma 84a) — the exported talion() the Mishpatim runner calls"
+    he: "וְאִישׁ כִּי יִתֵּן מוּם בַּעֲמִיתוֹ (and a man, when he gives a blemish in his fellow — Lev 24:19); עַיִן תַּחַת עַיִן שֵׁן תַּחַת שֵׁן (eye for eye, tooth for tooth — Lev 24:20)"
+    form: case
+    witness: ["Lev 24:19 | ואיש כי יתן מום בעמיתו", "Lev 24:20 | עין תחת עין שן תחת שן"]
+    ink: "Mishnah Bava Kamma 8:1 (the damage assessed as money); Bava Kamma 83b-84a (money is what equalizes); Mishnah Sanhedrin 4:1 (one procedure floor); the export talion() called by cold_run_mishpatim (the first inter-span call)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_lev24.py [subjects: the recorded case's parties]; consumed by law_lev24 (cold_run_lev24.py) -> substitution"
+    fields: ["striker", "victim", "blemish"]
+narrative_verbs:
+  say:
+    count: 58
+    units: 19
+    first: "gen_09_helper_woman_first_speech at Gen 12:11"
+  UNLABELED:
+    count: 40
+    units: 9
+    first: "gen_03_double_build at Gen 1:12"
+    note: "40 EVENT operators whose expression carried no parseable verb label (the fold reads verb(eN)): gen_03_double_build 1, gen_41_retelling_release_meeting 3, gen_42_abraham_end_ishmael_line 2, gen_43_isaac_twins_birthright 2, gen_44_isaac_gerar_sister_expel 4, gen_45_wells_covenant_esau_wives 8, gen_46_isaac_blessing_demandee_mismatch 17, gen_47_grudge_flight_paddan_send 1, gen_48_bethel_ladder_vow 2"
+  beget:
+    count: 30
+    units: 5
+    first: "gen_13_cain_line_seth at Gen 10:13-14"
+  take:
+    count: 20
+    units: 18
+    first: "gen_08_toledot_garden_first_rule at Gen 11:29"
+  speak:
+    count: 13
+    units: 8
+    first: "gen_20_exit_altar at Gen 11:3"
+  die:
+    count: 12
+    units: 4
+    first: "gen_14_adam_line_ledger at Gen 11:28"
+  come:
+    count: 10
+    units: 8
+    first: "gen_17_boarding at Gen 11:31"
+  see:
+    count: 9
+    units: 7
+    first: "gen_15_flood_prologue at Gen 12:14"
+  bear:
+    count: 7
+    units: 3
+    first: "gen_12_cain_abel at Gen 16:15"
+  ask:
+    count: 6
+    units: 2
+    first: "gen_10_serpent_violation_trace at Gen 3:11"
+  build:
+    count: 6
+    units: 5
+    first: "gen_09_helper_woman_first_speech at Gen 10:10-12"
+  make:
+    count: 6
+    units: 6
+    first: "gen_02_raqia_day at Gen 1:16"
+  appear:
+    count: 5
+    units: 5
+    first: "gen_27_the_call at Gen 12:7"
+  bakha:
+    count: 5
+    units: 4
+    first: "gen_65_first_descent at Gen 42:24"
+    he: "וַיֵּבְךְּ (and he wept — Gen 42:24)"
+    witness: ["Gen 42:24 | ויבך"]
+  chalam:
+    count: 5
+    units: 3
+    first: "gen_60_dreamer_sold at Gen 37:5"
+    he: "וַיַּחֲלֹם (and he dreamed — Gen 37:5)"
+    witness: ["Gen 37:5 | ויחלם"]
+  go_out:
+    count: 5
+    units: 5
+    first: "gen_12_cain_abel at Gen 11:31"
+  send:
+    count: 5
+    units: 1
+    first: "gen_19_the_remembering at Gen 8:10"
+  bow:
+    count: 4
+    units: 3
+    first: "gen_34_mamre_laugh_plea at Gen 18:2"
+  bring:
+    count: 4
+    units: 3
+    first: "gen_09_helper_woman_first_speech at Gen 2:19"
+  call:
+    count: 4
+    units: 4
+    first: "gen_09_helper_woman_first_speech at Gen 12:8"
+  dwell:
+    count: 4
+    units: 2
+    first: "gen_29_separation_promise at Gen 13:12"
+  give:
+    count: 4
+    units: 4
+    first: "gen_10_serpent_violation_trace at Gen 14:20"
+  hear:
+    count: 4
+    units: 4
+    first: "gen_10_serpent_violation_trace at Gen 14:14"
+  know:
+    count: 4
+    units: 4
+    first: "gen_10_serpent_violation_trace at Gen 3:7"
+  answer:
+    count: 3
+    units: 3
+    first: "gen_34_mamre_laugh_plea at Gen 18:27"
+  be_born:
+    count: 3
+    units: 1
+    first: "gen_24_nations_table at Gen 10:1"
+  born:
+    count: 3
+    units: 2
+    first: "gen_13_cain_line_seth at Gen 4:18"
+  command:
+    count: 3
+    units: 3
+    first: "gen_08_toledot_garden_first_rule at Gen 12:20"
+  cover:
+    count: 3
+    units: 2
+    first: "gen_18_the_rise at Gen 7:19"
+  create:
+    count: 3
+    units: 3
+    first: "gen_01_creation_boot at Gen 1:1"
+  cut_covenant:
+    count: 3
+    units: 2
+    first: "gen_31_covenant_pieces at Gen 15:18"
+  fall:
+    count: 3
+    units: 2
+    first: "gen_31_covenant_pieces at Gen 15:12"
+  go:
+    count: 3
+    units: 3
+    first: "gen_27_the_call at Gen 12:4"
+  pass:
+    count: 3
+    units: 3
+    first: "gen_19_the_remembering at Gen 12:6"
+  return:
+    count: 3
+    units: 2
+    first: "gen_19_the_remembering at Gen 18:33"
+  settle:
+    count: 3
+    units: 3
+    first: "gen_08_toledot_garden_first_rule at Gen 11:2"
+  bring_out:
+    count: 2
+    units: 2
+    first: "gen_30_war_of_kings at Gen 14:18"
+  circumcise:
+    count: 2
+    units: 2
+    first: "gen_33_shaddai_covenant_flesh at Gen 17:23"
+  descend:
+    count: 2
+    units: 2
+    first: "gen_25_babel at Gen 11:5"
+  eat:
+    count: 2
+    units: 1
+    first: "gen_10_serpent_violation_trace at Gen 3:6"
+  expire_die_gather:
+    count: 2
+    units: 1
+    first: "gen_42_abraham_end_ishmael_line at Gen 25:17"
+    he: "וַיִּגְוַע (and he expired — Gen 25:17)"
+    witness: ["Gen 25:17 | ויגוע"]
+  feast:
+    count: 2
+    units: 2
+    first: "gen_35_sodom_overthrow_cave at Gen 19:3"
+  find:
+    count: 2
+    units: 2
+    first: "gen_25_babel at Gen 11:2"
+  flee:
+    count: 2
+    units: 2
+    first: "gen_30_war_of_kings at Gen 14:8"
+  form:
+    count: 2
+    units: 2
+    first: "gen_08_toledot_garden_first_rule at Gen 2:19"
+  go_up:
+    count: 2
+    units: 2
+    first: "gen_29_separation_promise at Gen 13:1"
+  hishtachavu:
+    count: 2
+    units: 2
+    first: "gen_65_first_descent at Gen 42:6"
+    he: "וַיִּשְׁתַּחֲווּ (and they bowed down — Gen 42:6)"
+    witness: ["Gen 42:6 | וישתחוו"]
+  journey:
+    count: 2
+    units: 2
+    first: "gen_27_the_call at Gen 12:9"
+  met:
+    count: 2
+    units: 2
+    first: "exo_02_drawn_from_the_water at Exod 2:23"
+    he: "וַיָּמָת (and he died — Exod 2:23)"
+    witness: ["Exod 2:23 | וימת"]
+  open:
+    count: 2
+    units: 2
+    first: "gen_17_boarding at Gen 7:11"
+  open_eyes:
+    count: 2
+    units: 2
+    first: "gen_10_serpent_violation_trace at Gen 21:19"
+  patach:
+    count: 2
+    units: 1
+    first: "gen_51_opened_womb_twelve_names at Gen 29:31"
+    he: "וַיִּפְתַּח (and He opened — Gen 29:31)"
+    witness: ["Gen 29:31 | ויפתח"]
+  place:
+    count: 2
+    units: 2
+    first: "gen_04_lights_calendar at Gen 1:17"
+  plant:
+    count: 2
+    units: 2
+    first: "gen_08_toledot_garden_first_rule at Gen 2:8"
+  prevail:
+    count: 2
+    units: 1
+    first: "gen_18_the_rise at Gen 7:18"
+  pursue:
+    count: 2
+    units: 1
+    first: "gen_30_war_of_kings at Gen 14:14"
+  qara:
+    count: 2
+    units: 2
+    first: "gen_67_cup_and_surety at Gen 44:13"
+    he: "וַיִּקְרְעוּ (and they tore — Gen 44:13)"
+    witness: ["Gen 44:13 | ויקרעו"]
+  remember:
+    count: 2
+    units: 2
+    first: "gen_19_the_remembering at Gen 19:29"
+  send_away:
+    count: 2
+    units: 2
+    first: "gen_28_egypt_descent at Gen 12:20"
+  sentence:
+    count: 2
+    units: 1
+    first: "gen_11_sentences_exile at Gen 3:14"
+  split:
+    count: 2
+    units: 2
+    first: "gen_17_boarding at Gen 14:15"
+  station:
+    count: 2
+    units: 2
+    first: "gen_11_sentences_exile at Gen 21:28-31"
+  strike:
+    count: 2
+    units: 1
+    first: "gen_30_war_of_kings at Gen 14:15"
+  take_wife:
+    count: 2
+    units: 2
+    first: "gen_37_laughter_wilderness_oath at Gen 21:21"
+  tell:
+    count: 2
+    units: 2
+    first: "gen_23_vineyard_curse at Gen 14:13"
+  tent:
+    count: 2
+    units: 1
+    first: "gen_29_separation_promise at Gen 13:12"
+  wait:
+    count: 2
+    units: 1
+    first: "gen_19_the_remembering at Gen 8:10"
+  water:
+    count: 2
+    units: 2
+    first: "gen_37_laughter_wilderness_oath at Gen 21:19"
+  zakhar:
+    count: 2
+    units: 2
+    first: "gen_51_opened_womb_twelve_names at Gen 30:22"
+    he: "וַיִּזְכֹּר (and He remembered — Gen 30:22)"
+    witness: ["Gen 30:22 | ויזכר"]
+  afflict:
+    count: 1
+    units: 1
+    first: "gen_32_hagar_angel at Gen 16:6"
+  appear_night:
+    count: 1
+    units: 1
+    first: "gen_45_wells_covenant_esau_wives at Gen 26:24"
+  approach:
+    count: 1
+    units: 1
+    first: "gen_34_mamre_laugh_plea at Gen 18:23"
+  array_battle:
+    count: 1
+    units: 1
+    first: "gen_30_war_of_kings at Gen 14:8"
+  asa:
+    count: 1
+    units: 1
+    first: "gen_60_dreamer_sold at Gen 37:3"
+    he: "וְעָשָׂה (and he made — Gen 37:3)"
+    witness: ["Gen 37:3 | ועשה"]
+  ascend:
+    count: 1
+    units: 1
+    first: "gen_33_shaddai_covenant_flesh at Gen 17:22"
+  ascend_dwell:
+    count: 1
+    units: 1
+    first: "gen_35_sodom_overthrow_cave at Gen 19:30"
+  ask_and_consent:
+    count: 1
+    units: 1
+    first: "gen_41_retelling_release_meeting at Gen 24:58"
+  awake:
+    count: 1
+    units: 1
+    first: "gen_23_vineyard_curse at Gen 9:24"
+  azav:
+    count: 1
+    units: 1
+    first: "gen_62_potifar_house at Gen 39:12"
+    he: "וַיַּעֲזֹב (and he left — Gen 39:12)"
+    witness: ["Gen 39:12 | ויעזב"]
+  bala:
+    count: 1
+    units: 1
+    first: "exo_07_staff_and_blood at Exod 7:12"
+    he: "וַיִּבְלַע (and it swallowed — Exod 7:12)"
+    witness: ["Exod 7:12 | ויבלע"]
+  bear_sons:
+    count: 1
+    units: 1
+    first: "gen_42_abraham_end_ishmael_line at Gen 25:2"
+  become:
+    count: 1
+    units: 1
+    first: "gen_08_toledot_garden_first_rule at Gen 2:7"
+  become_drunk:
+    count: 1
+    units: 1
+    first: "gen_23_vineyard_curse at Gen 9:21"
+  begin:
+    count: 1
+    units: 1
+    first: "gen_23_vineyard_curse at Gen 9:20"
+  berakh:
+    count: 1
+    units: 1
+    first: "gen_70_goshen_and_the_fifth at Gen 47:10"
+    he: "וַיְבָרֶךְ (and he blessed — Gen 47:10)"
+    witness: ["Gen 47:10 | ויברך"]
+  bind:
+    count: 1
+    units: 1
+    first: "gen_38_moriah_binding_oath at Gen 22:9"
+  birth_due:
+    count: 1
+    units: 1
+    first: "gen_43_isaac_twins_birthright at Gen 25:24"
+  birth_first:
+    count: 1
+    units: 1
+    first: "gen_43_isaac_twins_birthright at Gen 25:25"
+  birth_second_heel:
+    count: 1
+    units: 1
+    first: "gen_43_isaac_twins_birthright at Gen 25:26"
+  bless:
+    count: 1
+    units: 1
+    first: "gen_14_adam_line_ledger at Gen 5:2"
+  bow_prostrate:
+    count: 1
+    units: 1
+    first: "gen_40_servant_oath_well at Gen 24:26"
+  breathe:
+    count: 1
+    units: 1
+    first: "gen_08_toledot_garden_first_rule at Gen 2:7"
+  bring_back:
+    count: 1
+    units: 1
+    first: "gen_30_war_of_kings at Gen 14:16"
+  burn:
+    count: 1
+    units: 1
+    first: "gen_12_cain_abel at Gen 4:5"
+  bury:
+    count: 1
+    units: 1
+    first: "gen_42_abraham_end_ishmael_line at Gen 25:9"
+  cast:
+    count: 1
+    units: 1
+    first: "gen_37_laughter_wilderness_oath at Gen 21:15"
+  cast_sleep:
+    count: 1
+    units: 1
+    first: "gen_09_helper_woman_first_speech at Gen 2:21"
+  cease:
+    count: 1
+    units: 1
+    first: "gen_07_completion_sanctity at Gen 2:2"
+  choose:
+    count: 1
+    units: 1
+    first: "gen_29_separation_promise at Gen 13:11"
+  claim:
+    count: 1
+    units: 1
+    first: "gen_10_serpent_violation_trace at Gen 3:5"
+  close:
+    count: 1
+    units: 1
+    first: "gen_09_helper_woman_first_speech at Gen 2:21"
+  clothe:
+    count: 1
+    units: 1
+    first: "gen_11_sentences_exile at Gen 3:21"
+  complete:
+    count: 1
+    units: 1
+    first: "gen_07_completion_sanctity at Gen 2:1"
+  conceive:
+    count: 1
+    units: 1
+    first: "gen_32_hagar_angel at Gen 16:4"
+  correct:
+    count: 1
+    units: 1
+    first: "gen_34_mamre_laugh_plea at Gen 18:15"
+  corrupt:
+    count: 1
+    units: 1
+    first: "gen_16_ark_spec at Gen 6:11"
+  cut:
+    count: 1
+    units: 1
+    first: "gen_31_covenant_pieces at Gen 15:10"
+  dawn_journey:
+    count: 1
+    units: 1
+    first: "gen_38_moriah_binding_oath at Gen 22:3"
+  dawn_return:
+    count: 1
+    units: 1
+    first: "gen_35_sodom_overthrow_cave at Gen 19:27"
+  deliberate:
+    count: 1
+    units: 1
+    first: "gen_11_sentences_exile at Gen 3:22"
+  deny:
+    count: 1
+    units: 1
+    first: "gen_34_mamre_laugh_plea at Gen 18:15"
+  depart:
+    count: 1
+    units: 1
+    first: "gen_34_mamre_laugh_plea at Gen 18:33"
+  descend_fill_ascend:
+    count: 1
+    units: 1
+    first: "gen_40_servant_oath_well at Gen 24:16"
+  dig_and_find:
+    count: 1
+    units: 1
+    first: "gen_45_wells_covenant_esau_wives at Gen 26:19"
+  dig_and_quarrel:
+    count: 1
+    units: 1
+    first: "gen_45_wells_covenant_esau_wives at Gen 26:21"
+  diminish:
+    count: 1
+    units: 1
+    first: "gen_19_the_remembering at Gen 8:3"
+  do_good:
+    count: 1
+    units: 1
+    first: "gen_28_egypt_descent at Gen 12:16"
+  dream_say:
+    count: 1
+    units: 1
+    first: "gen_36_gerar_dream_prophet at Gen 20:3"
+  drink:
+    count: 1
+    units: 1
+    first: "gen_23_vineyard_curse at Gen 9:21"
+  drive_off:
+    count: 1
+    units: 1
+    first: "gen_31_covenant_pieces at Gen 15:11"
+  drive_out:
+    count: 1
+    units: 1
+    first: "gen_11_sentences_exile at Gen 3:24"
+  eat_drink_lodge:
+    count: 1
+    units: 1
+    first: "gen_41_retelling_release_meeting at Gen 24:54"
+  empty_run_draw:
+    count: 1
+    units: 1
+    first: "gen_40_servant_oath_well at Gen 24:20"
+  entreat_and_be_entreated:
+    count: 1
+    units: 1
+    first: "gen_43_isaac_twins_birthright at Gen 25:21"
+  envy:
+    count: 1
+    units: 1
+    first: "gen_44_isaac_gerar_sister_expel at Gen 26:14"
+  escort:
+    count: 1
+    units: 1
+    first: "gen_34_mamre_laugh_plea at Gen 18:16"
+  exit_shut:
+    count: 1
+    units: 1
+    first: "gen_35_sodom_overthrow_cave at Gen 19:6"
+  expire:
+    count: 1
+    units: 1
+    first: "gen_18_the_rise at Gen 7:21"
+  famine:
+    count: 1
+    units: 1
+    first: "gen_44_isaac_gerar_sister_expel at Gen 26:1"
+  feast_eat_drink:
+    count: 1
+    units: 1
+    first: "gen_45_wells_covenant_esau_wives at Gen 26:30"
+  finish:
+    count: 1
+    units: 1
+    first: "gen_07_completion_sanctity at Gen 2:2"
+  finish_speaking:
+    count: 1
+    units: 1
+    first: "gen_33_shaddai_covenant_flesh at Gen 17:22"
+  finish_watering:
+    count: 1
+    units: 1
+    first: "gen_40_servant_oath_well at Gen 24:19"
+  food_set:
+    count: 1
+    units: 1
+    first: "gen_40_servant_oath_well at Gen 24:33"
+  gava:
+    count: 1
+    units: 1
+    first: "gen_72_testament_twelve at Gen 49:33"
+    he: "וַיִּגְוַע (and he expired — Gen 49:33)"
+    witness: ["Gen 49:33 | ויגוע"]
+  gerush:
+    count: 1
+    units: 1
+    first: "exo_10_locusts_and_darkness at Exod 10:11"
+    he: "וַיְגָרֶשׁ (and he drove out — Exod 10:11)"
+    witness: ["Exod 10:11 | ויגרש"]
+  gift_and_send_east:
+    count: 1
+    units: 1
+    first: "gen_42_abraham_end_ishmael_line at Gen 25:6"
+  give_all:
+    count: 1
+    units: 1
+    first: "gen_42_abraham_end_ishmael_line at Gen 25:5"
+  give_gifts:
+    count: 1
+    units: 1
+    first: "gen_41_retelling_release_meeting at Gen 24:53"
+  go_down:
+    count: 1
+    units: 1
+    first: "gen_28_egypt_descent at Gen 12:10"
+  grant:
+    count: 1
+    units: 1
+    first: "gen_06_land_adam_dominion at Gen 1:29"
+  grieve:
+    count: 1
+    units: 1
+    first: "gen_15_flood_prologue at Gen 6:6"
+  grow_great:
+    count: 1
+    units: 1
+    first: "gen_44_isaac_gerar_sister_expel at Gen 26:13"
+  hamtaqat_ha_mayim:
+    count: 1
+    units: 1
+    first: "exo_15_the_song_and_marah at Exod 15:25"
+    he: "וַיִּמְתְּקוּ (and they became sweet (the water) — Exod 15:25)"
+    witness: ["Exod 15:25 | וימתקו"]
+  heal:
+    count: 1
+    units: 1
+    first: "gen_36_gerar_dream_prophet at Gen 20:17"
+  hear_and_bow:
+    count: 1
+    units: 1
+    first: "gen_41_retelling_release_meeting at Gen 24:52"
+  hide:
+    count: 1
+    units: 1
+    first: "gen_10_serpent_violation_trace at Gen 3:8"
+  hifshitu:
+    count: 1
+    units: 1
+    first: "gen_60_dreamer_sold at Gen 37:23"
+    he: "וַיַּפְשִׁיטוּ (and they stripped — Gen 37:23)"
+    witness: ["Gen 37:23 | ויפשיטו"]
+  hika:
+    count: 1
+    units: 1
+    first: "exo_02_drawn_from_the_water at Exod 2:12"
+    he: "וַיַּךְ (and he struck — Exod 2:12)"
+    witness: ["Exod 2:12 | ויך"]
+  huku:
+    count: 1
+    units: 1
+    first: "exo_05_bricks_without_straw at Exod 5:14"
+    he: "וַיֻּכּוּ (and they were beaten — Exod 5:14)"
+    witness: ["Exod 5:14 | ויכו"]
+  hurry:
+    count: 1
+    units: 1
+    first: "gen_34_mamre_laugh_plea at Gen 18:6"
+  hurry_prepare:
+    count: 1
+    units: 1
+    first: "gen_34_mamre_laugh_plea at Gen 18:7"
+  identify_and_veil:
+    count: 1
+    units: 1
+    first: "gen_41_retelling_release_meeting at Gen 24:65"
+  journey_sojourn:
+    count: 1
+    units: 1
+    first: "gen_36_gerar_dream_prophet at Gen 20:1"
+  karta:
+    count: 1
+    units: 1
+    first: "exo_04_signs_and_firstborn at Exod 4:25"
+    he: "וַתִּכְרֹת (and she cut — Exod 4:25)"
+    witness: ["Exod 4:25 | ותכרת"]
+  kill:
+    count: 1
+    units: 1
+    first: "gen_12_cain_abel at Gen 4:8"
+  kneel_camels:
+    count: 1
+    units: 1
+    first: "gen_40_servant_oath_well at Gen 24:11"
+  laugh:
+    count: 1
+    units: 1
+    first: "gen_33_shaddai_covenant_flesh at Gen 17:17"
+  lift:
+    count: 1
+    units: 1
+    first: "gen_18_the_rise at Gen 7:17"
+  lift_eyes:
+    count: 1
+    units: 1
+    first: "gen_29_separation_promise at Gen 13:10"
+  load_and_walk:
+    count: 1
+    units: 1
+    first: "gen_38_moriah_binding_oath at Gen 22:6"
+  look_back:
+    count: 1
+    units: 1
+    first: "gen_35_sodom_overthrow_cave at Gen 19:26"
+  look_down:
+    count: 1
+    units: 1
+    first: "gen_35_sodom_overthrow_cave at Gen 19:28"
+  love_split:
+    count: 1
+    units: 1
+    first: "gen_43_isaac_twins_birthright at Gen 25:28"
+  makat_bekhorot:
+    count: 1
+    units: 1
+    first: "exo_12_passover_and_exodus at Exod 12:29"
+    he: "הִכָּה (struck (the plague of the firstborn) — Exod 12:29)"
+    witness: ["Exod 12:29 | הכה"]
+  make_war:
+    count: 1
+    units: 1
+    first: "gen_30_war_of_kings at Gen 14:1"
+  matan_basar_va_lechem:
+    count: 1
+    units: 1
+    first: "exo_16_manna_and_sabbath at Exod 16:13"
+    he: "וַתַּעַל (and it came up (the quail: meat and bread given) — Exod 16:13)"
+    witness: ["Exod 16:13 | ותעל"]
+  meditate_and_see_camels:
+    count: 1
+    units: 1
+    first: "gen_41_retelling_release_meeting at Gen 24:63"
+  milchemet_amaleq:
+    count: 1
+    units: 1
+    first: "exo_17_massah_and_amalek at Exod 17:8"
+    he: "וַיִּלָּחֶם (and he fought (the war with Amalek) — Exod 17:8)"
+    witness: ["Exod 17:8 | וילחם"]
+  mourn_weep:
+    count: 1
+    units: 1
+    first: "gen_39_machpelah_purchase at Gen 23:2"
+  move_dig_no_quarrel:
+    count: 1
+    units: 1
+    first: "gen_45_wells_covenant_esau_wives at Gen 26:22"
+  move_on:
+    count: 1
+    units: 1
+    first: "gen_27_the_call at Gen 12:8"
+  multiply:
+    count: 1
+    units: 1
+    first: "gen_15_flood_prologue at Gen 6:1"
+  muster:
+    count: 1
+    units: 1
+    first: "gen_30_war_of_kings at Gen 14:14"
+  naflu:
+    count: 1
+    units: 1
+    first: "gen_67_cup_and_surety at Gen 44:14"
+    he: "וַיִּפְּלוּ (and they fell — Gen 44:14)"
+    witness: ["Gen 44:14 | ויפלו"]
+  nigash:
+    count: 1
+    units: 1
+    first: "gen_67_cup_and_surety at Gen 44:18"
+    he: "וַיִּגַּשׁ (and he approached — Gen 44:18)"
+    witness: ["Gen 44:18 | ויגש"]
+  nira:
+    count: 1
+    units: 1
+    first: "exo_03_bush_and_name at Exod 3:2"
+    he: "וַיֵּרָא (and he appeared — Exod 3:2)"
+    witness: ["Exod 3:2 | וירא"]
+  nirat_kevod_YHWH:
+    count: 1
+    units: 1
+    first: "exo_16_manna_and_sabbath at Exod 16:10"
+    he: "נִרְאָה (appeared (the LORD's glory) — Exod 16:10)"
+    witness: ["Exod 16:10 | נראה"]
+  offer_substitute:
+    count: 1
+    units: 1
+    first: "gen_38_moriah_binding_oath at Gen 22:13"
+  offer_up:
+    count: 1
+    units: 1
+    first: "gen_20_exit_altar at Gen 8:20"
+  overturn:
+    count: 1
+    units: 1
+    first: "gen_35_sodom_overthrow_cave at Gen 19:25"
+  pitch:
+    count: 1
+    units: 1
+    first: "gen_27_the_call at Gen 12:8"
+  plague:
+    count: 1
+    units: 1
+    first: "gen_28_egypt_descent at Gen 12:17"
+  plant_and_call:
+    count: 1
+    units: 1
+    first: "gen_37_laughter_wilderness_oath at Gen 21:33"
+  plead:
+    count: 1
+    units: 1
+    first: "gen_12_cain_abel at Gen 4:13"
+  praise:
+    count: 1
+    units: 1
+    first: "gen_28_egypt_descent at Gen 12:15"
+  pray:
+    count: 1
+    units: 1
+    first: "gen_36_gerar_dream_prophet at Gen 20:17"
+  pull_in:
+    count: 1
+    units: 1
+    first: "gen_35_sodom_overthrow_cave at Gen 19:10"
+  qam:
+    count: 1
+    units: 1
+    first: "exo_01_names_and_midwives at Exod 1:8"
+    he: "וַיָּקָם (and there arose — Exod 1:8)"
+    witness: ["Exod 1:8 | ויקם"]
+  qolot_u_veraqim:
+    count: 1
+    units: 1
+    first: "exo_19_sinai_and_the_covenant at Exod 19:16"
+    he: "קֹלֹת (thunders (and lightnings) — Exod 19:16)"
+    witness: ["Exod 19:16 | קלת"]
+  qriat_yam_suf:
+    count: 1
+    units: 1
+    first: "exo_14_the_sea_splits at Exod 14:21"
+    he: "וַיִּבָּקְעוּ (and they were split (the Sea of Reeds) — Exod 14:21)"
+    witness: ["Exod 14:21 | ויבקעו"]
+  quarrel:
+    count: 1
+    units: 1
+    first: "gen_45_wells_covenant_esau_wives at Gen 26:20"
+  rain_fire:
+    count: 1
+    units: 1
+    first: "gen_35_sodom_overthrow_cave at Gen 19:24"
+  reach_knife:
+    count: 1
+    units: 1
+    first: "gen_38_moriah_binding_oath at Gen 22:10"
+  recount:
+    count: 1
+    units: 1
+    first: "gen_41_retelling_release_meeting at Gen 24:66"
+  redig_wells:
+    count: 1
+    units: 1
+    first: "gen_45_wells_covenant_esau_wives at Gen 26:18"
+  regret:
+    count: 1
+    units: 1
+    first: "gen_15_flood_prologue at Gen 6:6"
+  remain:
+    count: 1
+    units: 1
+    first: "gen_18_the_rise at Gen 7:23"
+  remove:
+    count: 1
+    units: 1
+    first: "gen_19_the_remembering at Gen 8:13"
+  report_fear:
+    count: 1
+    units: 1
+    first: "gen_36_gerar_dream_prophet at Gen 20:8"
+  report_well_found:
+    count: 1
+    units: 1
+    first: "gen_45_wells_covenant_esau_wives at Gen 26:32"
+  reprove:
+    count: 1
+    units: 1
+    first: "gen_37_laughter_wilderness_oath at Gen 21:25"
+  rest:
+    count: 1
+    units: 1
+    first: "gen_19_the_remembering at Gen 8:4"
+  restrain:
+    count: 1
+    units: 1
+    first: "gen_19_the_remembering at Gen 8:2"
+  return_dwell:
+    count: 1
+    units: 1
+    first: "gen_38_moriah_binding_oath at Gen 22:19"
+  rise:
+    count: 1
+    units: 1
+    first: "gen_18_the_rise at Gen 7:17"
+  rise_look:
+    count: 1
+    units: 1
+    first: "gen_34_mamre_laugh_plea at Gen 18:16"
+  rise_speak:
+    count: 1
+    units: 1
+    first: "gen_39_machpelah_purchase at Gen 23:3"
+  roim_et_ha_qolot:
+    count: 1
+    units: 1
+    first: "exo_20_the_ten_utterances at Exod 20:18"
+    he: "רֹאִים (seeing (the thunders) — Exod 20:18)"
+    witness: ["Exod 20:18 | ראים"]
+  run:
+    count: 1
+    units: 1
+    first: "gen_34_mamre_laugh_plea at Gen 18:2"
+  run_say:
+    count: 1
+    units: 1
+    first: "gen_40_servant_oath_well at Gen 24:17"
+  run_tell:
+    count: 1
+    units: 1
+    first: "gen_40_servant_oath_well at Gen 24:28"
+  scatter:
+    count: 1
+    units: 1
+    first: "gen_25_babel at Gen 11:8"
+  see_and_dismount:
+    count: 1
+    units: 1
+    first: "gen_41_retelling_release_meeting at Gen 24:64"
+  see_hear_come:
+    count: 1
+    units: 1
+    first: "gen_40_servant_oath_well at Gen 24:30"
+  see_ram:
+    count: 1
+    units: 1
+    first: "gen_38_moriah_binding_oath at Gen 22:13"
+  seize_carry:
+    count: 1
+    units: 1
+    first: "gen_35_sodom_overthrow_cave at Gen 19:16"
+  send_out:
+    count: 1
+    units: 1
+    first: "gen_11_sentences_exile at Gen 3:23"
+  serve:
+    count: 1
+    units: 1
+    first: "gen_34_mamre_laugh_plea at Gen 18:8"
+  serve_camels_and_feet:
+    count: 1
+    units: 1
+    first: "gen_40_servant_oath_well at Gen 24:32"
+  set:
+    count: 1
+    units: 1
+    first: "gen_23_vineyard_curse at Gen 9:23"
+  shirat_ha_yam:
+    count: 1
+    units: 1
+    first: "exo_15_the_song_and_marah at Exod 15:1"
+    he: "יָשִׁיר (he sang (the Song of the Sea) — Exod 15:1)"
+    witness: ["Exod 15:1 | ישיר"]
+  shut:
+    count: 1
+    units: 1
+    first: "gen_17_boarding at Gen 7:16"
+  sikel_yadav:
+    count: 1
+    units: 1
+    first: "gen_71_crossed_hands at Gen 48:14"
+    he: "שִׂכֵּל (he crossed (his hands) — Gen 48:14)"
+    witness: ["Gen 48:14 | שכל"]
+  sky_call:
+    count: 1
+    units: 1
+    first: "gen_38_moriah_binding_oath at Gen 22:15"
+  smell:
+    count: 1
+    units: 1
+    first: "gen_20_exit_altar at Gen 8:21"
+  smite_blind:
+    count: 1
+    units: 1
+    first: "gen_35_sodom_overthrow_cave at Gen 19:11"
+  sow_and_find:
+    count: 1
+    units: 1
+    first: "gen_44_isaac_gerar_sister_expel at Gen 26:12"
+  sprout:
+    count: 1
+    units: 1
+    first: "gen_08_toledot_garden_first_rule at Gen 2:9"
+  stew_and_arrive:
+    count: 1
+    units: 1
+    first: "gen_43_isaac_twins_birthright at Gen 25:29"
+  stop_up:
+    count: 1
+    units: 1
+    first: "gen_19_the_remembering at Gen 8:2"
+  stop_up_and_fill:
+    count: 1
+    units: 1
+    first: "gen_44_isaac_gerar_sister_expel at Gen 26:15"
+  struggle_and_inquire:
+    count: 1
+    units: 1
+    first: "gen_43_isaac_twins_birthright at Gen 25:22"
+  subside:
+    count: 1
+    units: 1
+    first: "gen_19_the_remembering at Gen 8:1"
+  swear:
+    count: 1
+    units: 1
+    first: "gen_40_servant_oath_well at Gen 24:9"
+  take_gifts:
+    count: 1
+    units: 1
+    first: "gen_40_servant_oath_well at Gen 24:22"
+  take_go_rise_go:
+    count: 1
+    units: 1
+    first: "gen_40_servant_oath_well at Gen 24:10"
+  take_wives:
+    count: 1
+    units: 1
+    first: "gen_45_wells_covenant_esau_wives at Gen 26:34"
+  taval:
+    count: 1
+    units: 1
+    first: "gen_60_dreamer_sold at Gen 37:31"
+    he: "וַיִּטְבְּלוּ (and they dipped — Gen 37:31)"
+    witness: ["Gen 37:31 | ויטבלו"]
+  turn_go:
+    count: 1
+    units: 1
+    first: "gen_34_mamre_laugh_plea at Gen 18:22"
+  uncover_self:
+    count: 1
+    units: 1
+    first: "gen_23_vineyard_curse at Gen 9:21"
+  urge:
+    count: 1
+    units: 1
+    first: "gen_35_sodom_overthrow_cave at Gen 19:3"
+  va_yachalosh_yehoshua:
+    count: 1
+    units: 1
+    first: "exo_17_massah_and_amalek at Exod 17:13"
+    he: "וַיַּחֲלֹשׁ (and he weakened (Joshua weakened Amalek) — Exod 17:13)"
+    witness: ["Exod 17:13 | ויחלש"]
+  visit:
+    count: 1
+    units: 1
+    first: "gen_45_wells_covenant_esau_wives at Gen 26:26"
+  walk:
+    count: 1
+    units: 1
+    first: "gen_18_the_rise at Gen 7:18"
+  walk_backward:
+    count: 1
+    units: 1
+    first: "gen_23_vineyard_curse at Gen 9:23"
+  weep:
+    count: 1
+    units: 1
+    first: "gen_37_laughter_wilderness_oath at Gen 21:16"
+  weigh_silver:
+    count: 1
+    units: 1
+    first: "gen_39_machpelah_purchase at Gen 23:16"
+  wipe:
+    count: 1
+    units: 1
+    first: "gen_18_the_rise at Gen 7:23"
+  wiped:
+    count: 1
+    units: 1
+    first: "gen_18_the_rise at Gen 7:23"
+  yeridat_YHWH:
+    count: 1
+    units: 1
+    first: "exo_19_sinai_and_the_covenant at Exod 19:20"
+    he: "וַיֵּרֶד (and He came down (the LORD's descent) — Exod 19:20)"
+    witness: ["Exod 19:20 | וירד"]
+  yeshuat_YHWH:
+    count: 1
+    units: 1
+    first: "exo_14_the_sea_splits at Exod 14:30"
+    he: "וַיּוֹשַׁע (and He saved (the LORD's salvation) — Exod 14:30)"
+    witness: ["Exod 14:30 | ויושע"]
+  yetziat_mitzrayim:
+    count: 1
+    units: 1
+    first: "exo_12_passover_and_exodus at Exod 12:51"
+    he: "הוֹצִיא (He brought out (the exodus from Egypt) — Exod 12:51)"
+    witness: ["Exod 12:51 | הוציא"]
+  zevach_yitro:
+    count: 1
+    units: 1
+    first: "exo_18_jethro_and_the_judges at Exod 18:12"
+    he: "וּזְבָחִים (and sacrifices (Jethro's) — Exod 18:12)"
+    witness: ["Exod 18:12 | וזבחים"]

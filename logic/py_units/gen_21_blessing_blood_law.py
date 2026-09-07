@@ -103,6 +103,11 @@ m.declare("elohim", "LET-NOT",
 # read, not installed
 m.witness_read("limb_restriction", "grant_creates_the_law",
                 cites=["Bereshit Rabbah 34:13", "Sanhedrin 57a:5", "Sanhedrin 59a:6", "Sifra, Shemini, Section 2 4"])
+# witness-tier presupposed read:
+# the_life_blood_pair_at_two_seats_swapped_the_court_from_9_5s_tokens on
+# the_noahide_laws_sinai_seats_by_call — read, not installed
+m.witness_read("the_noahide_laws_sinai_seats_by_call", "the_life_blood_pair_at_two_seats_swapped_the_court_from_9_5s_tokens",
+                cites=["Sanhedrin 57a:3", "Sanhedrin 57a:4", "Sanhedrin 57a:5", "Sanhedrin 57a:6", "Sanhedrin 57b:1", "Sanhedrin 57b:2", "Sanhedrin 57b:3", "Sanhedrin 57b:4", "Sanhedrin 57b:5", "Sanhedrin 59a:6", "Sanhedrin 59b:3", "Sanhedrin 59b:4", "Sanhedrin 59b:13", "Sanhedrin 59b:14", "Sanhedrin 59b:16", "Sanhedrin 59b:18", "Sanhedrin 59b:20", "Sanhedrin 72b:15", "Sanhedrin 72b:17", "Bava Kamma 91b:8", "Yevamot 63b:16", "Yevamot 63b:17", "Shabbat 151b:9", "Avodah Zarah 5a:7", "Mishnah Avot 3:14", "Mishnah Sanhedrin 4:5", "Mishnah Keritot 1:1", "Mishnah Yevamot 6:6"])
 
 # -------------------------- Gen.9.5 · THE_RECKONING_LADDER -----------------
 # ‹וְאַךְ אֶת־דִּמְכֶם לְנַפְשֹׁתֵיכֶם› (“and-only obj-marker your-blood
@@ -218,7 +223,7 @@ if __name__ == "__main__":
     assert all('refuses_conviction_yet_licenses_killing' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['swarm_and_multiply']["cites"] == ['Sanhedrin 57a:6', 'Bereshit Rabbah 34:15']
     assert all('blessing_or_prohibition' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('flood_span', 'retained_though_legally_inoperative'), ('fear_grant', 'co_residence_law_and_lapsing_right'), ('meat_grant', 'theft_prohibition_inside_the_simile'), ('limb_restriction', 'grant_creates_the_law'), ('self_blood_clause', 'two_courts_split'), ('bloodshed_verse', 'complete_criminal_procedure'), ('bloodshed_verse', 'procedure_witness_and_gender_legs'), ('bloodshed_verse', 'quoted_inside_the_forewarning_liturgy'), ('image_clause', 'affirmative_body_care_duty'), ('shofekh_dam_u_fru_urvu', 'procreation_neglect_grades')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('flood_span', 'retained_though_legally_inoperative'), ('fear_grant', 'co_residence_law_and_lapsing_right'), ('meat_grant', 'theft_prohibition_inside_the_simile'), ('limb_restriction', 'grant_creates_the_law'), ('the_noahide_laws_sinai_seats_by_call', 'the_life_blood_pair_at_two_seats_swapped_the_court_from_9_5s_tokens'), ('self_blood_clause', 'two_courts_split'), ('bloodshed_verse', 'complete_criminal_procedure'), ('bloodshed_verse', 'procedure_witness_and_gender_legs'), ('bloodshed_verse', 'quoted_inside_the_forewarning_liturgy'), ('image_clause', 'affirmative_body_care_duty'), ('shofekh_dam_u_fru_urvu', 'procreation_neglect_grades')]
     assert m.WITNESS_READS[0]["cites"] == ['Jerusalem Talmud Sheviit 1:1:4']
     assert all('retained_though_legally_inoperative' not in f for f in m.WORLD["facts"])
     assert 'flood_span' not in m.WORLD["witnessed"]
@@ -231,19 +236,22 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[3]["cites"] == ['Bereshit Rabbah 34:13', 'Sanhedrin 57a:5', 'Sanhedrin 59a:6', 'Sifra, Shemini, Section 2 4']
     assert all('grant_creates_the_law' not in f for f in m.WORLD["facts"])
     assert 'limb_restriction' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Bava Kamma 91b:8', 'Jerusalem Talmud Bava Kamma 8:6:1', 'Tosefta Bava Kamma (Lieberman) 9:31']
+    assert m.WITNESS_READS[4]["cites"] == ['Sanhedrin 57a:3', 'Sanhedrin 57a:4', 'Sanhedrin 57a:5', 'Sanhedrin 57a:6', 'Sanhedrin 57b:1', 'Sanhedrin 57b:2', 'Sanhedrin 57b:3', 'Sanhedrin 57b:4', 'Sanhedrin 57b:5', 'Sanhedrin 59a:6', 'Sanhedrin 59b:3', 'Sanhedrin 59b:4', 'Sanhedrin 59b:13', 'Sanhedrin 59b:14', 'Sanhedrin 59b:16', 'Sanhedrin 59b:18', 'Sanhedrin 59b:20', 'Sanhedrin 72b:15', 'Sanhedrin 72b:17', 'Bava Kamma 91b:8', 'Yevamot 63b:16', 'Yevamot 63b:17', 'Shabbat 151b:9', 'Avodah Zarah 5a:7', 'Mishnah Avot 3:14', 'Mishnah Sanhedrin 4:5', 'Mishnah Keritot 1:1', 'Mishnah Yevamot 6:6']
+    assert all('the_life_blood_pair_at_two_seats_swapped_the_court_from_9_5s_tokens' not in f for f in m.WORLD["facts"])
+    assert 'the_noahide_laws_sinai_seats_by_call' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Bava Kamma 91b:8', 'Jerusalem Talmud Bava Kamma 8:6:1', 'Tosefta Bava Kamma (Lieberman) 9:31']
     assert all('two_courts_split' not in f for f in m.WORLD["facts"])
     assert 'self_blood_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Bereshit Rabbah 34:14', 'Mekhilta DeRabbi Yishmael, Tractate Nezikin 4:9', 'Sanhedrin 57a:3', 'Sanhedrin 57a:13']
+    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 34:14', 'Mekhilta DeRabbi Yishmael, Tractate Nezikin 4:9', 'Sanhedrin 57a:3', 'Sanhedrin 57a:13']
     assert all('complete_criminal_procedure' not in f for f in m.WORLD["facts"])
-    assert m.WITNESS_READS[6]["cites"] == ['Sanhedrin 57b:2', 'Sanhedrin 57b:4', 'Sanhedrin 57b:9']
+    assert m.WITNESS_READS[7]["cites"] == ['Sanhedrin 57b:2', 'Sanhedrin 57b:4', 'Sanhedrin 57b:9']
     assert all('procedure_witness_and_gender_legs' not in f for f in m.WORLD["facts"])
-    assert m.WITNESS_READS[7]["cites"] == ['Jerusalem Talmud Sanhedrin 5:1:8', 'Tosefta Sanhedrin 11:1', 'Mekhilta DeRabbi Yishmael, Tractate Bachodesh 8:10']
+    assert m.WITNESS_READS[8]["cites"] == ['Jerusalem Talmud Sanhedrin 5:1:8', 'Tosefta Sanhedrin 11:1', 'Mekhilta DeRabbi Yishmael, Tractate Bachodesh 8:10']
     assert all('quoted_inside_the_forewarning_liturgy' not in f for f in m.WORLD["facts"])
-    assert m.WITNESS_READS[8]["cites"] == ['Vayikra Rabbah 34:3']
+    assert m.WITNESS_READS[9]["cites"] == ['Vayikra Rabbah 34:3']
     assert all('affirmative_body_care_duty' not in f for f in m.WORLD["facts"])
     assert 'image_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Yevamot 63b:15', 'Yevamot 63b:16', 'Yevamot 63b:17', 'Yevamot 63b:18']
+    assert m.WITNESS_READS[10]["cites"] == ['Yevamot 63b:15', 'Yevamot 63b:16', 'Yevamot 63b:17', 'Yevamot 63b:18']
     assert all('procreation_neglect_grades' not in f for f in m.WORLD["facts"])
     assert 'shofekh_dam_u_fru_urvu' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

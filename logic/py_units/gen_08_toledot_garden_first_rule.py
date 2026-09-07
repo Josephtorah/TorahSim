@@ -341,6 +341,11 @@ m.witness_read("declare_payload", "six_noachide_commandments",
 # — read, not installed
 m.witness_read("declare_payload", "token_assignment_dispute",
                 cites=["Sanhedrin 56b:5", "Sanhedrin 56b:6", "Sanhedrin 56b:8"])
+# witness-tier presupposed read:
+# the_repetition_at_sinai_is_the_dependency_edge on
+# the_seven_laws_root_compiled_as_calls — read, not installed
+m.witness_read("the_seven_laws_root_compiled_as_calls", "the_repetition_at_sinai_is_the_dependency_edge",
+                cites=["Sanhedrin 56a:24", "Sanhedrin 56b:4", "Sanhedrin 56b:5", "Sanhedrin 56b:6", "Sanhedrin 56b:7", "Sanhedrin 56b:8", "Sanhedrin 57a:3", "Sanhedrin 57a:4", "Sanhedrin 57a:5", "Sanhedrin 57a:6", "Sanhedrin 57a:7", "Sanhedrin 57a:8", "Sanhedrin 57a:9", "Sanhedrin 59a:10", "Sanhedrin 59a:11", "Sanhedrin 59a:12", "Mishnah Avodah Zarah 2:1", "Mishnah Chullin 7:6", "Mishnah Sanhedrin 7:4", "Mishnah Keritot 1:1"])
 
 # -------------------------- Gen.2.17 · PROHIBITION_PENALTY -----------------
 # ‹וּמֵעֵץ הַדַּעַת טוֹב› (“and-from-tree-of the-knowledge good”)
@@ -392,7 +397,7 @@ if __name__ == "__main__":
     assert all('recorded_dispute_time_and_containment' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['vayyitzer_double_yod']["cites"] == ['Berakhot 61a:3', 'Bereshit Rabbah 14:2', 'Bereshit Rabbah 14:3', 'Eruvin 18a:20']
     assert all('four_recorded_readings' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('yhwh_elohim_debut', 'complete_name_over_completed_world'), ('toledot_header', 'mortality_class_marker'), ('ed_mist', 'superseded_irrigation_regime'), ('ed_mist', 'sukkah_roof_and_niddah_law_source'), ('nishmat_chayim', 'flood_breath_verbal_analogy'), ('nefesh_chayah', 'self_preservation_command'), ('vayyitzer_man_and_beast', 'shaped_fetus_purity_law'), ('ha_nahar_ha_revii_perat', 'vow_geography'), ('known_geography_flags', 'proleptic_name_rule'), ('declare_payload', 'six_noachide_commandments'), ('declare_payload', 'token_assignment_dispute'), ('death_handler', 'divine_day_scope_and_exact_payload')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('yhwh_elohim_debut', 'complete_name_over_completed_world'), ('toledot_header', 'mortality_class_marker'), ('ed_mist', 'superseded_irrigation_regime'), ('ed_mist', 'sukkah_roof_and_niddah_law_source'), ('nishmat_chayim', 'flood_breath_verbal_analogy'), ('nefesh_chayah', 'self_preservation_command'), ('vayyitzer_man_and_beast', 'shaped_fetus_purity_law'), ('ha_nahar_ha_revii_perat', 'vow_geography'), ('known_geography_flags', 'proleptic_name_rule'), ('declare_payload', 'six_noachide_commandments'), ('declare_payload', 'token_assignment_dispute'), ('the_seven_laws_root_compiled_as_calls', 'the_repetition_at_sinai_is_the_dependency_edge'), ('death_handler', 'divine_day_scope_and_exact_payload')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 13:3', 'Bereshit Rabbah 12:15']
     assert all('complete_name_over_completed_world' not in f for f in m.WORLD["facts"])
     assert 'yhwh_elohim_debut' not in m.WORLD["witnessed"]
@@ -426,7 +431,10 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[10]["cites"] == ['Sanhedrin 56b:5', 'Sanhedrin 56b:6', 'Sanhedrin 56b:8']
     assert all('token_assignment_dispute' not in f for f in m.WORLD["facts"])
     assert 'declare_payload' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[11]["cites"] == ['Bereshit Rabbah 19:8', 'Bereshit Rabbah 19:3', 'Sanhedrin 29a:34', 'Jerusalem Talmud Kiddushin 4:1:9']
+    assert m.WITNESS_READS[11]["cites"] == ['Sanhedrin 56a:24', 'Sanhedrin 56b:4', 'Sanhedrin 56b:5', 'Sanhedrin 56b:6', 'Sanhedrin 56b:7', 'Sanhedrin 56b:8', 'Sanhedrin 57a:3', 'Sanhedrin 57a:4', 'Sanhedrin 57a:5', 'Sanhedrin 57a:6', 'Sanhedrin 57a:7', 'Sanhedrin 57a:8', 'Sanhedrin 57a:9', 'Sanhedrin 59a:10', 'Sanhedrin 59a:11', 'Sanhedrin 59a:12', 'Mishnah Avodah Zarah 2:1', 'Mishnah Chullin 7:6', 'Mishnah Sanhedrin 7:4', 'Mishnah Keritot 1:1']
+    assert all('the_repetition_at_sinai_is_the_dependency_edge' not in f for f in m.WORLD["facts"])
+    assert 'the_seven_laws_root_compiled_as_calls' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[12]["cites"] == ['Bereshit Rabbah 19:8', 'Bereshit Rabbah 19:3', 'Sanhedrin 29a:34', 'Jerusalem Talmud Kiddushin 4:1:9']
     assert all('divine_day_scope_and_exact_payload' not in f for f in m.WORLD["facts"])
     assert 'death_handler' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

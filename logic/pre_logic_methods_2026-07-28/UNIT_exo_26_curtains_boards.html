@@ -56,6 +56,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(fabric_clauses, craft_grades)</span><br><span class="gloss">= WITNESS-READ(fabric-clauses, craft-grades)</span><br>THE CRAFT HAS RANKS [claim EX26-01]. The received translation distinguishes the master-craftsman&#x27;s woven cherubim (the inner fabrics) from the embroiderer&#x27;s screen (the outer door) — a graded taxonomy of sacred workmanship (Onkelos Exod 26:1, and the veil and screen at 26:31 and 26:36).
 </td><td>—</td><td class='cite'>Onkelos Exod 26</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_curtains_arithmetic_closes, the_hundred_sockets_and_the_cube)</span><br><span class="gloss">= WITNESS-READ(the-curtains-arithmetic-closes, the-hundred-sockets-and-the-cube)</span><br>THE CURTAINS&#x27; ARITHMETIC CLOSES, THE HUNDRED SOCKETS, THE CUBE — AND &#x27;ONE TO ONE&#x27; FOR &#x27;A WOMAN TO HER SISTER&#x27; [claim EX26-08]. Exodus 26 compiled cold inside World/step9/cold_run_sanctuary_build.py: ten curtains of four cubits = forty = the tabernacle&#x27;s thirty (twenty boards of a cubit and a half) plus its ten of height; the goat-hair eleven of four = forty-four, the extra four exactly the doubled front (26:9) and the back&#x27;s hanging half (26:12), and thirty against twenty-eight exactly the cubit on each side (26:13) — the spec&#x27;s own overhang clauses verified by its numbers, and the run drops precisely those two clauses. The boards&#x27; sockets ninety-six (forty, forty, sixteen — the ink&#x27;s own sum) plus the veil&#x27;s four = the hundred of the accounts, &#x27;a talent a socket&#x27; a hapax; the veil under the clasps stands at twenty (five curtains of four), so the Holy of Holies is a cube of ten and Solomon&#x27;s inmost room a cube of twenty — the tabernacle doubled. The board&#x27;s thickness is not in the ink: the taper fork (Shabbat 98b) leaves one cubit of wall exposed or two, passed as the parameter. &#x27;A woman to her sister&#x27; at five seats of the spec and none of the run; &#x27;one to one&#x27; at five seats of the run and none of the spec — the construction chapters replace the kinship idiom with the numeral at every seat. &#x27;And the tabernacle shall be one&#x27; at four seats (the effect made_one); &#x27;and the veil shall divide&#x27; a hapax with &#x27;between the Holy and the Holy of Holies&#x27; at that verse alone (veil_divides) — Yoma 5:1&#x27;s two curtains against R. Yosei&#x27;s one quoting this verse, the second Temple&#x27;s doubt over the first&#x27;s cubit partition (Middot 4:7); &#x27;standing&#x27; at two Torah seats; the middle bar&#x27;s miracle and its Genesis provenance; the run&#x27;s 36:38 adds the pillars&#x27; heads and bands.
+</td><td>—</td><td class='cite'>Onkelos Exod 26:1 + 26:31 + 26:36, Onkelos Exod 26:15, Onkelos Exod 26:30, Onkelos Exod 26:33, Midrash Tanchuma, Terumah 9 + Buber 7 + Buber 8, Midrash Tanchuma, Terumah 9 (end) + Buber 9, Shabbat 98b:2, Shabbat 98b:5, Shabbat 98b:6, Yoma 51b:5, Yoma 51b:6, Yoma 72b:18, Yoma 72b:19, Mishnah Yoma 5:1, Mishnah Middot 4:7, Mishnah Kelim 1:8, Mishnah Kelim 1:9, Mishnah Sukkah 3:14, Mishnah Shekalim 8:4</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.</div>
 </div>
@@ -1941,119 +1943,162 @@ from machine import Machine
 m = Machine(&quot;exo_26_curtains_boards&quot;)
 
 # -------------------------- Exod.26.1 · ETNACHTA_SPLIT ---------------------
-# ואת המשכן תעשה עשר יריעת … שש משזר ותכלת וארגמן ותלעת שני כרבים מעשה חשב
-# תעשה אתם
-# &quot;[EN-AID] From top split: LEFT «ואת המשכן תעשה עשר יריעת» / RIGHT «שש משזר
-# ותכלת וארגמן ותלעת שני כרבים מעשה חשב תעשה אתם». Derive claim from Hebrew
+# ‹ואת המשכן תעשה› (“and-obj-marker the-tabernacle make”)
+# ‹עשר יריעת … שש› (“ten hanging … bleached-stuff”)
+# ‹משזר ותכלת וארגמן› (“twist and-cerulean-mussel and-purple”)
+# ‹ותלעת שני כרבים› (“and-crimson-grub crimson cherub”)
+# ‹מעשה חשב תעשה› (“deed/work plait make”)
+# ‹אתם› (“obj-marker-them/their”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 26:1.&quot;
 m.step(&quot;Exod.26.1&quot;)
 # witness-tier presupposed read: craft_grades on fabric_clauses — read, not
 # installed
 m.witness_read(&quot;fabric_clauses&quot;, &quot;craft_grades&quot;,
                 cites=[&quot;Onkelos Exod 26&quot;])
+# witness-tier presupposed read: the_hundred_sockets_and_the_cube on
+# the_curtains_arithmetic_closes — read, not installed
+m.witness_read(&quot;the_curtains_arithmetic_closes&quot;, &quot;the_hundred_sockets_and_the_cube&quot;,
+                cites=[&quot;Onkelos Exod 26:1 + 26:31 + 26:36&quot;, &quot;Onkelos Exod 26:15&quot;, &quot;Onkelos Exod 26:30&quot;, &quot;Onkelos Exod 26:33&quot;, &quot;Midrash Tanchuma, Terumah 9 + Buber 7 + Buber 8&quot;, &quot;Midrash Tanchuma, Terumah 9 (end) + Buber 9&quot;, &quot;Shabbat 98b:2&quot;, &quot;Shabbat 98b:5&quot;, &quot;Shabbat 98b:6&quot;, &quot;Yoma 51b:5&quot;, &quot;Yoma 51b:6&quot;, &quot;Yoma 72b:18&quot;, &quot;Yoma 72b:19&quot;, &quot;Mishnah Yoma 5:1&quot;, &quot;Mishnah Middot 4:7&quot;, &quot;Mishnah Kelim 1:8&quot;, &quot;Mishnah Kelim 1:9&quot;, &quot;Mishnah Sukkah 3:14&quot;, &quot;Mishnah Shekalim 8:4&quot;])
 
 # -------------------------- Exod.26.2 · ETNACHTA_SPLIT ---------------------
-# ארך היריעה האחת שמנה ועשרים באמה ורחב ארבע באמה היריעה האחת … מדה אחת לכל
-# היריעת
-# &quot;[EN-AID] From top split: LEFT «ארך היריעה האחת שמנה ועשרים באמה ורחב ארבע
-# באמה היריעה האחת» / RIGHT «מדה אחת לכל היריעת». Derive claim from Hebrew
+# ‹ארך היריעה האחת› (“length the-hanging the-one”)
+# ‹שמנה ועשרים באמה› (“number and-twenty in-mother”)
+# ‹ורחב ארבע באמה› (“and-width four in-mother”)
+# ‹היריעה האחת … מדה› (“the-hanging the-one … extension”)
+# ‹אחת לכל היריעת› (“one to-all the-hanging”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 26:2.&quot;
 m.step(&quot;Exod.26.2&quot;)
 
 # -------------------------- Exod.26.3 · ETNACHTA_SPLIT ---------------------
-# חמש היריעת תהיין חברת אשה אל אחתה … וחמש יריעת חברת אשה אל אחתה
-# &quot;[EN-AID] From top split: LEFT «חמש היריעת תהיין חברת אשה אל אחתה» / RIGHT
-# «וחמש יריעת חברת אשה אל אחתה». Derive claim from Hebrew arms, not English
-# alone. Exod 26:3.&quot;
+# ‹חמש היריעת תהיין› (“five the-hanging be”)
+# ‹חברת אשה אל› (“join woman to”)
+# ‹אחתה … וחמש יריעת› (“sister-her/its … and-five hanging”)
+# ‹חברת אשה אל› (“join woman to”)
+# ‹אחתה› (“sister-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:3.&quot;
 m.step(&quot;Exod.26.3&quot;)
 
 # -------------------------- Exod.26.4 · ETNACHTA_SPLIT ---------------------
-# ועשית ללאת תכלת על שפת היריעה האחת מקצה בחברת … וכן תעשה בשפת היריעה
-# הקיצונה במחברת השנית
-# &quot;[EN-AID] From top split: LEFT «ועשית ללאת תכלת על שפת היריעה האחת מקצה
-# בחברת» / RIGHT «וכן תעשה בשפת היריעה הקיצונה במחברת השנית». Derive claim
-# from Hebrew arms, not English alone. Exod 26:4.&quot;
+# ‹ועשית ללאת תכלת› (“and-make loop cerulean-mussel”)
+# ‹על שפת היריעה› (“over lip the-hanging”)
+# ‹האחת מקצה בחברת› (“the-one from-termination in-joint”)
+# ‹… וכן תעשה בשפת› (“and-so make in-lip”)
+# ‹היריעה הקיצונה במחברת› (“the-hanging the-terminal in-junction”)
+# ‹השנית› (“the-second”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:4.&quot;
 m.step(&quot;Exod.26.4&quot;)
 
 # -------------------------- Exod.26.5 · ETNACHTA_SPLIT ---------------------
-# חמשים ללאת תעשה ביריעה האחת וחמשים ללאת תעשה בקצה היריעה אשר … מקבילת
-# הללאת אשה אל אחתה
-# &quot;[EN-AID] From top split: LEFT «חמשים ללאת תעשה ביריעה האחת וחמשים ללאת
-# תעשה בקצה היריעה אשר במחברת השנית» / RIGHT «מקבילת הללאת אשה אל אחתה».
-# Derive claim from Hebrew arms, not English alone. Exod 26:5.&quot;
+# ‹חמשים ללאת תעשה› (“fifty loop make”)
+# ‹ביריעה האחת וחמשים› (“in-hanging the-one and-fifty”)
+# ‹ללאת תעשה בקצה› (“loop make in-end”)
+# ‹היריעה אשר … מקבילת› (“the-hanging which … admit”)
+# ‹הללאת אשה אל› (“the-loop woman to”)
+# ‹אחתה› (“sister-her/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:5.&quot;
 m.step(&quot;Exod.26.5&quot;)
 
 # -------------------------- Exod.26.6 · ETNACHTA_SPLIT ---------------------
-# ועשית חמשים קרסי זהב … וחברת את היריעת אשה אל אחתה בקרסים והיה המשכן אחד
-# &quot;[EN-AID] From top split: LEFT «ועשית חמשים קרסי זהב» / RIGHT «וחברת את
-# היריעת אשה אל אחתה בקרסים והיה המשכן אחד». Derive claim from Hebrew arms,
-# not English alone. Exod 26:6.&quot;
+# ‹ועשית חמשים קרסי› (“and-make fifty knob”)
+# ‹זהב … וחברת את› (“gold … and-join obj-marker”)
+# ‹היריעת אשה אל› (“the-hanging woman to”)
+# ‹אחתה בקרסים והיה› (“sister-her/its in-knob and-be”)
+# ‹המשכן אחד› (“the-tabernacle one”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:6.&quot;
 m.step(&quot;Exod.26.6&quot;)
 
 # -------------------------- Exod.26.7 · ETNACHTA_SPLIT ---------------------
-# ועשית יריעת עזים לאהל על המשכן … עשתי עשרה יריעת תעשה אתם
-# &quot;[EN-AID] From top split: LEFT «ועשית יריעת עזים לאהל על המשכן» / RIGHT
-# «עשתי עשרה יריעת תעשה אתם». Derive claim from Hebrew arms, not English
-# alone. Exod 26:7.&quot;
+# ‹ועשית יריעת עזים› (“and-make hanging she-goat”)
+# ‹לאהל על המשכן› (“to-tent over the-tabernacle”)
+# ‹… עשתי עשרה יריעת› (“eleven -teen hanging”)
+# ‹תעשה אתם› (“make obj-marker-them/their”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:7.&quot;
 m.step(&quot;Exod.26.7&quot;)
 
 # -------------------------- Exod.26.8 · ETNACHTA_SPLIT ---------------------
-# ארך היריעה האחת שלשים באמה ורחב ארבע באמה היריעה האחת … מדה אחת לעשתי עשרה
-# יריעת
-# &quot;[EN-AID] From top split: LEFT «ארך היריעה האחת שלשים באמה ורחב ארבע באמה
-# היריעה האחת» / RIGHT «מדה אחת לעשתי עשרה יריעת». Derive claim from Hebrew
+# ‹ארך היריעה האחת› (“length the-hanging the-one”)
+# ‹שלשים באמה ורחב› (“thirty in-mother and-width”)
+# ‹ארבע באמה היריעה› (“four in-mother the-hanging”)
+# ‹האחת … מדה אחת› (“the-one … extension one”)
+# ‹לעשתי עשרה יריעת› (“to-eleven -teen hanging”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 26:8.&quot;
 m.step(&quot;Exod.26.8&quot;)
 
 # -------------------------- Exod.26.9 · ETNACHTA_SPLIT ---------------------
-# וחברת את חמש היריעת לבד ואת שש היריעת לבד … וכפלת את היריעה הששית אל מול
-# פני האהל
-# &quot;[EN-AID] From top split: LEFT «וחברת את חמש היריעת לבד ואת שש היריעת לבד»
-# / RIGHT «וכפלת את היריעה הששית אל מול פני האהל». Derive claim from Hebrew
+# ‹וחברת את חמש› (“and-join obj-marker five”)
+# ‹היריעת לבד ואת› (“the-hanging to-separation and-obj-marker”)
+# ‹שש היריעת לבד› (“six the-hanging to-separation”)
+# ‹… וכפלת את היריעה› (“and-fold-together obj-marker the-hanging”)
+# ‹הששית אל מול› (“the-sixth to abrupt”)
+# ‹פני האהל› (“face the-tent”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 26:9.&quot;
 m.step(&quot;Exod.26.9&quot;)
 
 # -------------------------- Exod.26.10 · ETNACHTA_SPLIT --------------------
-# ועשית חמשים ללאת על שפת היריעה האחת הקיצנה בחברת … וחמשים ללאת על שפת
-# היריעה החברת השנית
-# &quot;[EN-AID] From top split: LEFT «ועשית חמשים ללאת על שפת היריעה האחת הקיצנה
-# בחברת» / RIGHT «וחמשים ללאת על שפת היריעה החברת השנית». Derive claim from
-# Hebrew arms, not English alone. Exod 26:10.&quot;
+# ‹ועשית חמשים ללאת› (“and-make fifty loop”)
+# ‹על שפת היריעה› (“over lip the-hanging”)
+# ‹האחת הקיצנה בחברת› (“the-one the-terminal in-joint”)
+# ‹… וחמשים ללאת על› (“and-fifty loop over”)
+# ‹שפת היריעה החברת› (“lip the-hanging the-joint”)
+# ‹השנית› (“the-second”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:10.&quot;
 m.step(&quot;Exod.26.10&quot;)
 
 # -------------------------- Exod.26.11 · ETNACHTA_SPLIT --------------------
-# ועשית קרסי נחשת חמשים … והבאת את הקרסים בללאת וחברת את האהל והיה אחד
-# &quot;[EN-AID] From top split: LEFT «ועשית קרסי נחשת חמשים» / RIGHT «והבאת את
-# הקרסים בללאת וחברת את האהל והיה אחד». Derive claim from Hebrew arms, not
-# English alone. Exod 26:11.&quot;
+# ‹ועשית קרסי נחשת› (“and-make knob copper”)
+# ‹חמשים … והבאת את› (“fifty … and-come/bring obj-marker”)
+# ‹הקרסים בללאת וחברת› (“the-knob in-loop and-join”)
+# ‹את האהל והיה› (“obj-marker the-tent and-be”)
+# ‹אחד› (“one”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:11.&quot;
 m.step(&quot;Exod.26.11&quot;)
 
 # -------------------------- Exod.26.12 · ETNACHTA_SPLIT --------------------
-# וסרח העדף ביריעת האהל … חצי היריעה העדפת תסרח על אחרי המשכן
-# &quot;[EN-AID] From top split: LEFT «וסרח העדף ביריעת האהל» / RIGHT «חצי היריעה
-# העדפת תסרח על אחרי המשכן». Derive claim from Hebrew arms, not English
-# alone. Exod 26:12.&quot;
+# ‹וסרח העדף ביריעת› (“and-redundancy the-be-redundant in-hanging”)
+# ‹האהל … חצי היריעה› (“the-tent … half the-hanging”)
+# ‹העדפת תסרח על› (“the-be-redundant extend over”)
+# ‹אחרי המשכן› (“hinder-part the-tabernacle”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:12.&quot;
 m.step(&quot;Exod.26.12&quot;)
 
 # -------------------------- Exod.26.13 · ETNACHTA_SPLIT --------------------
-# והאמה מזה והאמה מזה בעדף בארך יריעת האהל … יהיה סרוח על צדי המשכן מזה ומזה
-# לכסתו
-# &quot;[EN-AID] From top split: LEFT «והאמה מזה והאמה מזה בעדף בארך יריעת האהל»
-# / RIGHT «יהיה סרוח על צדי המשכן מזה ומזה לכסתו». Derive claim from Hebrew
+# ‹והאמה מזה והאמה› (“and-the-mother from-this and-the-mother”)
+# ‹מזה בעדף בארך› (“from-this in-be-redundant in-length”)
+# ‹יריעת האהל … יהיה› (“hanging the-tent … be”)
+# ‹סרוח על צדי› (“extend over side”)
+# ‹המשכן מזה ומזה› (“the-tabernacle from-this and-from-this”)
+# ‹לכסתו› (“to-plump-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 26:13.&quot;
 m.step(&quot;Exod.26.13&quot;)
 
 # -------------------------- Exod.26.14 · ETNACHTA_SPLIT --------------------
-# ועשית מכסה לאהל ערת אילם מאדמים … ומכסה ערת תחשים מלמעלה
-# &quot;[EN-AID] From top split: LEFT «ועשית מכסה לאהל ערת אילם מאדמים» / RIGHT
-# «ומכסה ערת תחשים מלמעלה». Derive claim from Hebrew arms, not English
-# alone. Exod 26:14.&quot;
+# ‹ועשית מכסה לאהל› (“and-make covering to-tent”)
+# ‹ערת אילם מאדמים› (“skin ram flush”)
+# ‹… ומכסה ערת תחשים› (“and-covering skin animal-with-fur”)
+# ‹מלמעלה› (“from-to-upper-part-ward”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:14.&quot;
 m.step(&quot;Exod.26.14&quot;)
 
 # -------------------------- Exod.26.15 · ETNACHTA_SPLIT --------------------
-# ועשית את הקרשים למשכן … עצי שטים עמדים
-# &quot;[EN-AID] From top split: LEFT «ועשית את הקרשים למשכן» / RIGHT «עצי שטים
-# עמדים». Derive claim from Hebrew arms, not English alone. Exod 26:15.&quot;
+# ‹ועשית את הקרשים› (“and-make obj-marker the-slab”)
+# ‹למשכן … עצי שטים› (“to-tabernacle … tree acacia”)
+# ‹עמדים› (“stand”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:15.&quot;
 m.step(&quot;Exod.26.15&quot;)
 # witness-tier presupposed read: standing_enduring on boards_clause — read,
 # not installed
@@ -2065,96 +2110,122 @@ m.witness_read(&quot;standing_wood&quot;, &quot;way_of_growth&quot;,
                 cites=[&quot;Babylonian Talmud Sukkah 45b&quot;, &quot;Mishnah Sukkah 3:14&quot;])
 
 # -------------------------- Exod.26.16 · ETNACHTA_SPLIT --------------------
-# עשר אמות ארך הקרש … ואמה וחצי האמה רחב הקרש האחד
-# &quot;[EN-AID] From top split: LEFT «עשר אמות ארך הקרש» / RIGHT «ואמה וחצי האמה
-# רחב הקרש האחד». Derive claim from Hebrew arms, not English alone. Exod
-# 26:16.&quot;
+# ‹עשר אמות ארך› (“ten mother length”)
+# ‹הקרש … ואמה וחצי› (“the-slab … and-mother and-half”)
+# ‹האמה רחב הקרש› (“the-mother width the-slab”)
+# ‹האחד› (“the-one”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:16.&quot;
 m.step(&quot;Exod.26.16&quot;)
 
 # -------------------------- Exod.26.17 · ETNACHTA_SPLIT --------------------
-# שתי ידות לקרש האחד משלבת אשה אל אחתה … כן תעשה לכל קרשי המשכן
-# &quot;[EN-AID] From top split: LEFT «שתי ידות לקרש האחד משלבת אשה אל אחתה» /
-# RIGHT «כן תעשה לכל קרשי המשכן». Derive claim from Hebrew arms, not English
-# alone. Exod 26:17.&quot;
+# ‹שתי ידות לקרש› (“two hand to-slab”)
+# ‹האחד משלבת אשה› (“the-one space-off woman”)
+# ‹אל אחתה … כן› (“to sister-her/its … so”)
+# ‹תעשה לכל קרשי› (“make to-all slab”)
+# ‹המשכן› (“the-tabernacle”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:17.&quot;
 m.step(&quot;Exod.26.17&quot;)
 
 # -------------------------- Exod.26.18 · ETNACHTA_SPLIT --------------------
-# ועשית את הקרשים למשכן … עשרים קרש לפאת נגבה תימנה
-# &quot;[EN-AID] From top split: LEFT «ועשית את הקרשים למשכן» / RIGHT «עשרים קרש
-# לפאת נגבה תימנה». Derive claim from Hebrew arms, not English alone. Exod
-# 26:18.&quot;
+# ‹ועשית את הקרשים› (“and-make obj-marker the-slab”)
+# ‹למשכן … עשרים קרש› (“to-tabernacle … twenty slab”)
+# ‹לפאת נגבה תימנה› (“to-mouth-in-a-figurative-sense south-ward south-ward”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:18.&quot;
 m.step(&quot;Exod.26.18&quot;)
 
 # -------------------------- Exod.26.19 · ETNACHTA_SPLIT --------------------
-# וארבעים אדני כסף תעשה תחת עשרים הקרש … שני אדנים תחת הקרש האחד לשתי ידתיו
-# ושני אדנים תחת הקרש האחד
-# &quot;[EN-AID] From top split: LEFT «וארבעים אדני כסף תעשה תחת עשרים הקרש» /
-# RIGHT «שני אדנים תחת הקרש האחד לשתי ידתיו ושני אדנים תחת הקרש האחד לשתי
-# ידתיו». Derive claim from Hebrew arms, not English alone. Exod 26:19.&quot;
+# ‹וארבעים אדני כסף› (“and-forty basis silver”)
+# ‹תעשה תחת עשרים› (“make under twenty”)
+# ‹הקרש … שני אדנים› (“the-slab … two basis”)
+# ‹תחת הקרש האחד› (“under the-slab the-one”)
+# ‹לשתי ידתיו ושני› (“to-two hand-him/its and-two”)
+# ‹אדנים תחת הקרש› (“basis under the-slab”)
+# ‹האחד› (“the-one”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:19.&quot;
 m.step(&quot;Exod.26.19&quot;)
 
 # -------------------------- Exod.26.20 · ETNACHTA_SPLIT --------------------
-# ולצלע המשכן השנית לפאת צפון … עשרים קרש
-# &quot;[EN-AID] From top split: LEFT «ולצלע המשכן השנית לפאת צפון» / RIGHT
-# «עשרים קרש». Derive claim from Hebrew arms, not English alone. Exod
-# 26:20.&quot;
+# ‹ולצלע המשכן השנית› (“and-to-rib the-tabernacle the-second”)
+# ‹לפאת צפון … עשרים› (“to-mouth-in-a-figurative-sense hidden … twenty”)
+# ‹קרש› (“slab”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:20.&quot;
 m.step(&quot;Exod.26.20&quot;)
 
 # -------------------------- Exod.26.21 · ETNACHTA_SPLIT --------------------
-# וארבעים אדניהם כסף … שני אדנים תחת הקרש האחד ושני אדנים תחת הקרש האחד
-# &quot;[EN-AID] From top split: LEFT «וארבעים אדניהם כסף» / RIGHT «שני אדנים תחת
-# הקרש האחד ושני אדנים תחת הקרש האחד». Derive claim from Hebrew arms, not
-# English alone. Exod 26:21.&quot;
+# ‹וארבעים אדניהם כסף› (“and-forty basis-them/their silver”)
+# ‹… שני אדנים תחת› (“two basis under”)
+# ‹הקרש האחד ושני› (“the-slab the-one and-two”)
+# ‹אדנים תחת הקרש› (“basis under the-slab”)
+# ‹האחד› (“the-one”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:21.&quot;
 m.step(&quot;Exod.26.21&quot;)
 
 # -------------------------- Exod.26.22 · ETNACHTA_SPLIT --------------------
-# ולירכתי המשכן ימה … תעשה ששה קרשים
-# &quot;[EN-AID] From top split: LEFT «ולירכתי המשכן ימה» / RIGHT «תעשה ששה
-# קרשים». Derive claim from Hebrew arms, not English alone. Exod 26:22.&quot;
+# ‹ולירכתי המשכן ימה› (“and-to-flank the-tabernacle seas-ward”)
+# ‹… תעשה ששה קרשים› (“make six slab”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:22.&quot;
 m.step(&quot;Exod.26.22&quot;)
 
 # -------------------------- Exod.26.23 · ETNACHTA_SPLIT --------------------
-# ושני קרשים תעשה למקצעת המשכן
-# &quot;[EN-AID] From top split: LEFT «ושני קרשים תעשה למקצעת המשכן» / RIGHT «».
-# Derive claim from Hebrew arms, not English alone. Exod 26:23.&quot;
+# ‹ושני קרשים תעשה› (“and-two slab make”)
+# ‹למקצעת המשכן› (“to-angle the-tabernacle”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms, not English alone. Exod 26:23.&quot;
 m.step(&quot;Exod.26.23&quot;)
 
 # -------------------------- Exod.26.24 · ETNACHTA_SPLIT --------------------
-# ויהיו תאמים מלמטה ויחדו יהיו תמים על ראשו אל הטבעת האחת … כן יהיה לשניהם
-# לשני המקצעת יהיו
-# &quot;[EN-AID] From top split: LEFT «ויהיו תאמים מלמטה ויחדו יהיו תמים על ראשו
-# אל הטבעת האחת» / RIGHT «כן יהיה לשניהם לשני המקצעת יהיו». Derive claim
-# from Hebrew arms, not English alone. Exod 26:24.&quot;
+# ‹ויהיו תאמים מלמטה› (“and-be be-twinned from-to-downward”)
+# ‹ויחדו יהיו תמים› (“and-unit be complete”)
+# ‹על ראשו אל› (“over head-him/its to”)
+# ‹הטבעת האחת … כן› (“the-seal the-one … so”)
+# ‹יהיה לשניהם לשני› (“be to-two-them/their to-two”)
+# ‹המקצעת יהיו› (“the-angle be”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:24.&quot;
 m.step(&quot;Exod.26.24&quot;)
 
 # -------------------------- Exod.26.25 · ETNACHTA_SPLIT --------------------
-# והיו שמנה קרשים ואדניהם כסף ששה עשר אדנים … שני אדנים תחת הקרש האחד ושני
-# אדנים תחת הקרש האחד
-# &quot;[EN-AID] From top split: LEFT «והיו שמנה קרשים ואדניהם כסף ששה עשר אדנים»
-# / RIGHT «שני אדנים תחת הקרש האחד ושני אדנים תחת הקרש האחד». Derive claim
-# from Hebrew arms, not English alone. Exod 26:25.&quot;
+# ‹והיו שמנה קרשים› (“and-be number slab”)
+# ‹ואדניהם כסף ששה› (“and-basis-them/their silver six”)
+# ‹עשר אדנים … שני› (“-teen basis … two”)
+# ‹אדנים תחת הקרש› (“basis under the-slab”)
+# ‹האחד ושני אדנים› (“the-one and-two basis”)
+# ‹תחת הקרש האחד› (“under the-slab the-one”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:25.&quot;
 m.step(&quot;Exod.26.25&quot;)
 
 # -------------------------- Exod.26.26 · ETNACHTA_SPLIT --------------------
-# ועשית בריחם עצי שטים … חמשה לקרשי צלע המשכן האחד
-# &quot;[EN-AID] From top split: LEFT «ועשית בריחם עצי שטים» / RIGHT «חמשה לקרשי
-# צלע המשכן האחד». Derive claim from Hebrew arms, not English alone. Exod
-# 26:26.&quot;
+# ‹ועשית בריחם עצי› (“and-make bolt tree”)
+# ‹שטים … חמשה לקרשי› (“acacia … five to-slab”)
+# ‹צלע המשכן האחד› (“rib the-tabernacle the-one”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:26.&quot;
 m.step(&quot;Exod.26.26&quot;)
 
 # -------------------------- Exod.26.27 · ETNACHTA_SPLIT --------------------
-# וחמשה בריחם לקרשי צלע המשכן השנית … וחמשה בריחם לקרשי צלע המשכן לירכתים
-# ימה
-# &quot;[EN-AID] From top split: LEFT «וחמשה בריחם לקרשי צלע המשכן השנית» / RIGHT
-# «וחמשה בריחם לקרשי צלע המשכן לירכתים ימה». Derive claim from Hebrew arms,
-# not English alone. Exod 26:27.&quot;
+# ‹וחמשה בריחם לקרשי› (“and-five bolt to-slab”)
+# ‹צלע המשכן השנית› (“rib the-tabernacle the-second”)
+# ‹… וחמשה בריחם לקרשי› (“and-five bolt to-slab”)
+# ‹צלע המשכן לירכתים› (“rib the-tabernacle to-flank”)
+# ‹ימה› (“seas-ward”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:27.&quot;
 m.step(&quot;Exod.26.27&quot;)
 
 # -------------------------- Exod.26.28 · ETNACHTA_SPLIT --------------------
-# והבריח התיכן בתוך הקרשים … מברח מן הקצה אל הקצה
-# &quot;[EN-AID] From top split: LEFT «והבריח התיכן בתוך הקרשים» / RIGHT «מברח מן
-# הקצה אל הקצה». Derive claim from Hebrew arms, not English alone. Exod
-# 26:28.&quot;
+# ‹והבריח התיכן בתוך› (“and-the-bolt the-central in-midst”)
+# ‹הקרשים … מברח מן› (“the-slab … bolt from”)
+# ‹הקצה אל הקצה› (“the-end to the-end”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:28.&quot;
 m.step(&quot;Exod.26.28&quot;)
 # witness-tier presupposed read: jacob_planted on middle_bar — read, not
 # installed
@@ -2166,16 +2237,21 @@ m.witness_read(&quot;structure_verses&quot;, &quot;the_structures_babylonian_lay
                 cites=[&quot;Shabbat 98b:1&quot;, &quot;Shabbat 98b:2&quot;, &quot;Shabbat 98b:3&quot;, &quot;Shabbat 98b:4&quot;, &quot;Shabbat 98b:5&quot;, &quot;Shabbat 98b:6&quot;, &quot;Yoma 51b:5&quot;, &quot;Yoma 51b:6&quot;, &quot;Yoma 72b:18&quot;, &quot;Yoma 72b:19&quot;, &quot;Bava Batra 99a:6&quot;, &quot;Bava Batra 99a:7&quot;, &quot;Avodah Zarah 24a:2&quot;])
 
 # -------------------------- Exod.26.29 · ETNACHTA_SPLIT --------------------
-# ואת הקרשים תצפה זהב ואת טבעתיהם תעשה זהב בתים לבריחם … וצפית את הבריחם זהב
-# &quot;[EN-AID] From top split: LEFT «ואת הקרשים תצפה זהב ואת טבעתיהם תעשה זהב
-# בתים לבריחם» / RIGHT «וצפית את הבריחם זהב». Derive claim from Hebrew arms,
-# not English alone. Exod 26:29.&quot;
+# ‹ואת הקרשים תצפה› (“and-obj-marker the-slab sheet-over”)
+# ‹זהב ואת טבעתיהם› (“gold and-obj-marker seal-them/their”)
+# ‹תעשה זהב בתים› (“make gold house”)
+# ‹לבריחם … וצפית את› (“to-bolt … and-sheet-over obj-marker”)
+# ‹הבריחם זהב› (“the-bolt gold”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:29.&quot;
 m.step(&quot;Exod.26.29&quot;)
 
 # -------------------------- Exod.26.30 · ETNACHTA_SPLIT --------------------
-# והקמת את המשכן … כמשפטו אשר הראית בהר
-# &quot;[EN-AID] From top split: LEFT «והקמת את המשכן» / RIGHT «כמשפטו אשר הראית
-# בהר». Derive claim from Hebrew arms, not English alone. Exod 26:30.&quot;
+# ‹והקמת את המשכן› (“and-arise obj-marker the-tabernacle”)
+# ‹… כמשפטו אשר הראית› (“like-judgment-him/its which see”)
+# ‹בהר› (“in-mountain”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:30.&quot;
 m.step(&quot;Exod.26.30&quot;)
 # witness-tier presupposed read: building_halakhah on raising_clause — read,
 # not installed
@@ -2183,25 +2259,35 @@ m.witness_read(&quot;raising_clause&quot;, &quot;building_halakhah&quot;,
                 cites=[&quot;Onkelos Exod 26&quot;])
 
 # -------------------------- Exod.26.31 · ETNACHTA_SPLIT --------------------
-# ועשית פרכת תכלת וארגמן ותולעת שני ושש משזר … מעשה חשב יעשה אתה כרבים
-# &quot;[EN-AID] From top split: LEFT «ועשית פרכת תכלת וארגמן ותולעת שני ושש
-# משזר» / RIGHT «מעשה חשב יעשה אתה כרבים». Derive claim from Hebrew arms,
-# not English alone. Exod 26:31.&quot;
+# ‹ועשית פרכת תכלת› (“and-make separatrix cerulean-mussel”)
+# ‹וארגמן ותולעת שני› (“and-purple and-crimson-grub crimson”)
+# ‹ושש משזר … מעשה› (“and-bleached-stuff twist … deed/work”)
+# ‹חשב יעשה אתה› (“plait make obj-marker-her/its”)
+# ‹כרבים› (“cherub”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:31.&quot;
 m.step(&quot;Exod.26.31&quot;)
 
 # -------------------------- Exod.26.32 · ETNACHTA_SPLIT --------------------
-# ונתתה אתה על ארבעה עמודי שטים מצפים זהב וויהם זהב … על ארבעה אדני כסף
-# &quot;[EN-AID] From top split: LEFT «ונתתה אתה על ארבעה עמודי שטים מצפים זהב
-# וויהם זהב» / RIGHT «על ארבעה אדני כסף». Derive claim from Hebrew arms, not
-# English alone. Exod 26:32.&quot;
+# ‹ונתתה אתה על› (“and-set obj-marker-her/its over”)
+# ‹ארבעה עמודי שטים› (“four column acacia”)
+# ‹מצפים זהב וויהם› (“sheet-over gold hook-them/their”)
+# ‹זהב … על ארבעה› (“gold … over four”)
+# ‹אדני כסף› (“basis silver”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:32.&quot;
 m.step(&quot;Exod.26.32&quot;)
 
 # -------------------------- Exod.26.33 · ETNACHTA_SPLIT --------------------
-# ונתתה את הפרכת תחת הקרסים והבאת שמה מבית לפרכת את ארון העדות … והבדילה
-# הפרכת לכם בין הקדש ובין קדש הקדשים
-# &quot;[EN-AID] From top split: LEFT «ונתתה את הפרכת תחת הקרסים והבאת שמה מבית
-# לפרכת את ארון העדות» / RIGHT «והבדילה הפרכת לכם בין הקדש ובין קדש הקדשים».
-# Derive claim from Hebrew arms, not English alone. Exod 26:33.&quot;
+# ‹ונתתה את הפרכת› (“and-set obj-marker the-separatrix”)
+# ‹תחת הקרסים והבאת› (“under the-knob and-come/bring”)
+# ‹שמה מבית לפרכת› (“there-ward from-house to-separatrix”)
+# ‹את ארון העדות› (“obj-marker ark the-testimony”)
+# ‹… והבדילה הפרכת לכם› (“and-divide the-separatrix to-you/your(pl)”)
+# ‹בין הקדש ובין› (“between the-holiness and-between”)
+# ‹קדש הקדשים› (“holiness the-holiness”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:33.&quot;
 m.step(&quot;Exod.26.33&quot;)
 # witness-tier presupposed read: partition_and_stations on veil_clause —
 # read, not installed
@@ -2209,31 +2295,40 @@ m.witness_read(&quot;veil_clause&quot;, &quot;partition_and_stations&quot;,
                 cites=[&quot;Mishnah Yoma 5:1&quot;, &quot;Onkelos Exod 26&quot;])
 
 # -------------------------- Exod.26.34 · ETNACHTA_SPLIT --------------------
-# ונתת את הכפרת על ארון העדת … בקדש הקדשים
-# &quot;[EN-AID] From top split: LEFT «ונתת את הכפרת על ארון העדת» / RIGHT «בקדש
-# הקדשים». Derive claim from Hebrew arms, not English alone. Exod 26:34.&quot;
+# ‹ונתת את הכפרת› (“and-set obj-marker the-lid”)
+# ‹על ארון העדת› (“over ark the-testimony”)
+# ‹… בקדש הקדשים› (“in-holiness the-holiness”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:34.&quot;
 m.step(&quot;Exod.26.34&quot;)
 
 # -------------------------- Exod.26.35 · ETNACHTA_SPLIT --------------------
-# ושמת את השלחן מחוץ לפרכת ואת המנרה נכח השלחן על צלע המשכן תי … והשלחן תתן
-# על צלע צפון
-# &quot;[EN-AID] From top split: LEFT «ושמת את השלחן מחוץ לפרכת ואת המנרה נכח
-# השלחן על צלע המשכן תימנה» / RIGHT «והשלחן תתן על צלע צפון». Derive claim
-# from Hebrew arms, not English alone. Exod 26:35.&quot;
+# ‹ושמת את השלחן› (“and-put/set obj-marker the-table”)
+# ‹מחוץ לפרכת ואת› (“from-outside to-separatrix and-obj-marker”)
+# ‹המנרה נכח השלחן› (“the-chandelier front-part the-table”)
+# ‹על צלע המשכן› (“over rib the-tabernacle”)
+# ‹תי … והשלחן תתן› (“? … and-the-table set”)
+# ‹על צלע צפון› (“over rib hidden”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:35.&quot;
 m.step(&quot;Exod.26.35&quot;)
 
 # -------------------------- Exod.26.36 · ETNACHTA_SPLIT --------------------
-# ועשית מסך לפתח האהל תכלת וארגמן ותולעת שני ושש משזר … מעשה רקם
-# &quot;[EN-AID] From top split: LEFT «ועשית מסך לפתח האהל תכלת וארגמן ותולעת שני
-# ושש משזר» / RIGHT «מעשה רקם». Derive claim from Hebrew arms, not English
-# alone. Exod 26:36.&quot;
+# ‹ועשית מסך לפתח› (“and-make cover to-opening”)
+# ‹האהל תכלת וארגמן› (“the-tent cerulean-mussel and-purple”)
+# ‹ותולעת שני ושש› (“and-crimson-grub crimson and-bleached-stuff”)
+# ‹משזר … מעשה רקם› (“twist … deed/work variegate-color”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 26:36.&quot;
 m.step(&quot;Exod.26.36&quot;)
 
 # -------------------------- Exod.26.37 · ETNACHTA_SPLIT --------------------
-# ועשית למסך חמשה עמודי שטים וצפית אתם זהב וויהם זהב … ויצקת להם חמשה אדני
-# נחשת
-# &quot;[EN-AID] From top split: LEFT «ועשית למסך חמשה עמודי שטים וצפית אתם זהב
-# וויהם זהב» / RIGHT «ויצקת להם חמשה אדני נחשת». Derive claim from Hebrew
+# ‹ועשית למסך חמשה› (“and-make to-cover five”)
+# ‹עמודי שטים וצפית› (“column acacia and-sheet-over”)
+# ‹אתם זהב וויהם› (“obj-marker-them/their gold hook-them/their”)
+# ‹זהב … ויצקת להם› (“gold … and-pour-out to-them/their”)
+# ‹חמשה אדני נחשת› (“five basis copper”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 26:37.&quot;
 m.step(&quot;Exod.26.37&quot;)
 
@@ -2253,28 +2348,31 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;fabric_clauses&#x27;, &#x27;craft_grades&#x27;), (&#x27;boards_clause&#x27;, &#x27;standing_enduring&#x27;), (&#x27;standing_wood&#x27;, &#x27;way_of_growth&#x27;), (&#x27;middle_bar&#x27;, &#x27;jacob_planted&#x27;), (&#x27;structure_verses&#x27;, &#x27;the_structures_babylonian_layer&#x27;), (&#x27;raising_clause&#x27;, &#x27;building_halakhah&#x27;), (&#x27;veil_clause&#x27;, &#x27;partition_and_stations&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;fabric_clauses&#x27;, &#x27;craft_grades&#x27;), (&#x27;the_curtains_arithmetic_closes&#x27;, &#x27;the_hundred_sockets_and_the_cube&#x27;), (&#x27;boards_clause&#x27;, &#x27;standing_enduring&#x27;), (&#x27;standing_wood&#x27;, &#x27;way_of_growth&#x27;), (&#x27;middle_bar&#x27;, &#x27;jacob_planted&#x27;), (&#x27;structure_verses&#x27;, &#x27;the_structures_babylonian_layer&#x27;), (&#x27;raising_clause&#x27;, &#x27;building_halakhah&#x27;), (&#x27;veil_clause&#x27;, &#x27;partition_and_stations&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Onkelos Exod 26&#x27;]
     assert all(&#x27;craft_grades&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;fabric_clauses&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Onkelos Exod 26&#x27;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Onkelos Exod 26:1 + 26:31 + 26:36&#x27;, &#x27;Onkelos Exod 26:15&#x27;, &#x27;Onkelos Exod 26:30&#x27;, &#x27;Onkelos Exod 26:33&#x27;, &#x27;Midrash Tanchuma, Terumah 9 + Buber 7 + Buber 8&#x27;, &#x27;Midrash Tanchuma, Terumah 9 (end) + Buber 9&#x27;, &#x27;Shabbat 98b:2&#x27;, &#x27;Shabbat 98b:5&#x27;, &#x27;Shabbat 98b:6&#x27;, &#x27;Yoma 51b:5&#x27;, &#x27;Yoma 51b:6&#x27;, &#x27;Yoma 72b:18&#x27;, &#x27;Yoma 72b:19&#x27;, &#x27;Mishnah Yoma 5:1&#x27;, &#x27;Mishnah Middot 4:7&#x27;, &#x27;Mishnah Kelim 1:8&#x27;, &#x27;Mishnah Kelim 1:9&#x27;, &#x27;Mishnah Sukkah 3:14&#x27;, &#x27;Mishnah Shekalim 8:4&#x27;]
+    assert all(&#x27;the_hundred_sockets_and_the_cube&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_curtains_arithmetic_closes&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Onkelos Exod 26&#x27;]
     assert all(&#x27;standing_enduring&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;boards_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Babylonian Talmud Sukkah 45b&#x27;, &#x27;Mishnah Sukkah 3:14&#x27;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Babylonian Talmud Sukkah 45b&#x27;, &#x27;Mishnah Sukkah 3:14&#x27;]
     assert all(&#x27;way_of_growth&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;standing_wood&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Terumah 9&#x27;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Terumah 9&#x27;]
     assert all(&#x27;jacob_planted&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;middle_bar&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Shabbat 98b:1&#x27;, &#x27;Shabbat 98b:2&#x27;, &#x27;Shabbat 98b:3&#x27;, &#x27;Shabbat 98b:4&#x27;, &#x27;Shabbat 98b:5&#x27;, &#x27;Shabbat 98b:6&#x27;, &#x27;Yoma 51b:5&#x27;, &#x27;Yoma 51b:6&#x27;, &#x27;Yoma 72b:18&#x27;, &#x27;Yoma 72b:19&#x27;, &#x27;Bava Batra 99a:6&#x27;, &#x27;Bava Batra 99a:7&#x27;, &#x27;Avodah Zarah 24a:2&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Shabbat 98b:1&#x27;, &#x27;Shabbat 98b:2&#x27;, &#x27;Shabbat 98b:3&#x27;, &#x27;Shabbat 98b:4&#x27;, &#x27;Shabbat 98b:5&#x27;, &#x27;Shabbat 98b:6&#x27;, &#x27;Yoma 51b:5&#x27;, &#x27;Yoma 51b:6&#x27;, &#x27;Yoma 72b:18&#x27;, &#x27;Yoma 72b:19&#x27;, &#x27;Bava Batra 99a:6&#x27;, &#x27;Bava Batra 99a:7&#x27;, &#x27;Avodah Zarah 24a:2&#x27;]
     assert all(&#x27;the_structures_babylonian_layer&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;structure_verses&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Onkelos Exod 26&#x27;]
+    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Onkelos Exod 26&#x27;]
     assert all(&#x27;building_halakhah&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;raising_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[6][&quot;cites&quot;] == [&#x27;Mishnah Yoma 5:1&#x27;, &#x27;Onkelos Exod 26&#x27;]
+    assert m.WITNESS_READS[7][&quot;cites&quot;] == [&#x27;Mishnah Yoma 5:1&#x27;, &#x27;Onkelos Exod 26&#x27;]
     assert all(&#x27;partition_and_stations&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;veil_clause&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">Tree-derived v1 (phase 2d). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-04 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">Tree-derived v1 (phase 2d). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-06 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

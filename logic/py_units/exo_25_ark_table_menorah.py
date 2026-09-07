@@ -123,6 +123,11 @@ m.step("Exod.25.10")
 # — read, not installed
 m.witness_read("ark_verse", "the_ark_files_derivation_layer",
                 cites=["Yoma 3b:2", "Yoma 3b:3", "Yoma 3b:4", "Yoma 72b:6", "Yoma 72b:7", "Yoma 72b:8", "Yoma 72a:8", "Yoma 72a:9", "Yoma 72a:10", "Yoma 52b:13", "Yoma 52b:14", "Yoma 52b:15"])
+# witness-tier presupposed read:
+# the_order_restored_and_the_use_clauses_dropped on
+# the_spec_graded_against_its_run — read, not installed
+m.witness_read("the_spec_graded_against_its_run", "the_order_restored_and_the_use_clauses_dropped",
+                cites=["Onkelos Exod 25:2", "Onkelos Exod 25:8", "Onkelos Exod 25:15", "Onkelos Exod 25:22", "Onkelos Exod 25:30", "Midrash Tanchuma, Terumah 1", "Midrash Tanchuma, Terumah 3 (end) + Buber 2", "Midrash Tanchuma, Terumah 5 + Buber 4", "Midrash Tanchuma, Terumah 8", "Berakhot 55a:12", "Berakhot 55a:11", "Menachot 28b:17", "Menachot 29a:1", "Menachot 29a:2", "Menachot 96a:6", "Menachot 97a:5", "Yoma 72b:7", "Yoma 72a:9", "Yoma 72a:10", "Yoma 3b:3", "Bava Batra 99a:7", "Sukkah 50b:6", "Sukkah 50b:7", "Mishnah Terumot 1:1", "Mishnah Shekalim 4:4", "Mishnah Shekalim 4:6", "Mishnah Shekalim 6:1", "Mishnah Shekalim 6:4", "Mishnah Yoma 5:1", "Mishnah Yoma 5:2", "Mishnah Kelim 17:9", "Mishnah Kelim 17:10", "Mishnah Menachot 11:4", "Mishnah Menachot 11:5", "Mishnah Menachot 11:6", "Mishnah Menachot 11:7", "Mishnah Menachot 3:7", "Mishnah Tamid 3:9", "Mishnah Shevuot 2:2", "Mishnah Sanhedrin 1:5"])
 
 # -------------------------- Exod.25.11 · ETNACHTA_SPLIT --------------------
 # ‹וצפית אתו זהב› (“and-sheet-over obj-marker-him/its gold”)
@@ -448,7 +453,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('take_offering', 'separation_before'), ('separation_clause', 'five_disqualified'), ('materials_list', 'thirteen_and_tachash'), ('sanctuary_command', 'presence_among_them'), ('sanctuary_command', 'yom_kippur_timestamp'), ('pattern_clause', 'constitutional_so_shall_you_make'), ('ark_verse', 'the_ark_files_derivation_layer'), ('poles_clause', 'never_removed'), ('meeting_clause', 'word_appointed'), ('table_dimensions', 'conversion_dispute'), ('showbread_clause', 'continual_duty'), ('tamid_token', 'exchange_dispute'), ('menorah_verse', 'the_method_fork_and_the_table_riders'), ('menorah_clauses', 'one_piece_seven')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('take_offering', 'separation_before'), ('separation_clause', 'five_disqualified'), ('materials_list', 'thirteen_and_tachash'), ('sanctuary_command', 'presence_among_them'), ('sanctuary_command', 'yom_kippur_timestamp'), ('pattern_clause', 'constitutional_so_shall_you_make'), ('ark_verse', 'the_ark_files_derivation_layer'), ('the_spec_graded_against_its_run', 'the_order_restored_and_the_use_clauses_dropped'), ('poles_clause', 'never_removed'), ('meeting_clause', 'word_appointed'), ('table_dimensions', 'conversion_dispute'), ('showbread_clause', 'continual_duty'), ('tamid_token', 'exchange_dispute'), ('menorah_verse', 'the_method_fork_and_the_table_riders'), ('menorah_clauses', 'one_piece_seven')]
     assert m.WITNESS_READS[0]["cites"] == ['Onkelos Exod 25']
     assert all('separation_before' not in f for f in m.WORLD["facts"])
     assert 'take_offering' not in m.WORLD["witnessed"]
@@ -470,25 +475,28 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[6]["cites"] == ['Yoma 3b:2', 'Yoma 3b:3', 'Yoma 3b:4', 'Yoma 72b:6', 'Yoma 72b:7', 'Yoma 72b:8', 'Yoma 72a:8', 'Yoma 72a:9', 'Yoma 72a:10', 'Yoma 52b:13', 'Yoma 52b:14', 'Yoma 52b:15']
     assert all('the_ark_files_derivation_layer' not in f for f in m.WORLD["facts"])
     assert 'ark_verse' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Exod 25']
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Exod 25:2', 'Onkelos Exod 25:8', 'Onkelos Exod 25:15', 'Onkelos Exod 25:22', 'Onkelos Exod 25:30', 'Midrash Tanchuma, Terumah 1', 'Midrash Tanchuma, Terumah 3 (end) + Buber 2', 'Midrash Tanchuma, Terumah 5 + Buber 4', 'Midrash Tanchuma, Terumah 8', 'Berakhot 55a:12', 'Berakhot 55a:11', 'Menachot 28b:17', 'Menachot 29a:1', 'Menachot 29a:2', 'Menachot 96a:6', 'Menachot 97a:5', 'Yoma 72b:7', 'Yoma 72a:9', 'Yoma 72a:10', 'Yoma 3b:3', 'Bava Batra 99a:7', 'Sukkah 50b:6', 'Sukkah 50b:7', 'Mishnah Terumot 1:1', 'Mishnah Shekalim 4:4', 'Mishnah Shekalim 4:6', 'Mishnah Shekalim 6:1', 'Mishnah Shekalim 6:4', 'Mishnah Yoma 5:1', 'Mishnah Yoma 5:2', 'Mishnah Kelim 17:9', 'Mishnah Kelim 17:10', 'Mishnah Menachot 11:4', 'Mishnah Menachot 11:5', 'Mishnah Menachot 11:6', 'Mishnah Menachot 11:7', 'Mishnah Menachot 3:7', 'Mishnah Tamid 3:9', 'Mishnah Shevuot 2:2', 'Mishnah Sanhedrin 1:5']
+    assert all('the_order_restored_and_the_use_clauses_dropped' not in f for f in m.WORLD["facts"])
+    assert 'the_spec_graded_against_its_run' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Exod 25']
     assert all('never_removed' not in f for f in m.WORLD["facts"])
     assert 'poles_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Exod 25']
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Exod 25']
     assert all('word_appointed' not in f for f in m.WORLD["facts"])
     assert 'meeting_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[9]["cites"] == ['Mishnah Menachot 11:5', 'Mishnah Menachot 11:4']
+    assert m.WITNESS_READS[10]["cites"] == ['Mishnah Menachot 11:5', 'Mishnah Menachot 11:4']
     assert all('conversion_dispute' not in f for f in m.WORLD["facts"])
     assert 'table_dimensions' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[10]["cites"] == ['Mishnah Menachot 11:4', 'Mishnah Menachot 11:5', 'Mishnah Menachot 11:7', 'Onkelos Exod 25']
+    assert m.WITNESS_READS[11]["cites"] == ['Mishnah Menachot 11:4', 'Mishnah Menachot 11:5', 'Mishnah Menachot 11:7', 'Onkelos Exod 25']
     assert all('continual_duty' not in f for f in m.WORLD["facts"])
     assert 'showbread_clause' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[11]["cites"] == ['Mishnah Menachot 11:7', 'Mishnah Menachot 11:6']
+    assert m.WITNESS_READS[12]["cites"] == ['Mishnah Menachot 11:7', 'Mishnah Menachot 11:6']
     assert all('exchange_dispute' not in f for f in m.WORLD["facts"])
     assert 'tamid_token' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[12]["cites"] == ['Sukkah 50b:5', 'Sukkah 50b:6', 'Sukkah 50b:7', 'Tamid 31b:9', 'Tamid 31b:10', 'Tamid 31b:11', 'Temurah 31b:7']
+    assert m.WITNESS_READS[13]["cites"] == ['Sukkah 50b:5', 'Sukkah 50b:6', 'Sukkah 50b:7', 'Tamid 31b:9', 'Tamid 31b:10', 'Tamid 31b:11', 'Temurah 31b:7']
     assert all('the_method_fork_and_the_table_riders' not in f for f in m.WORLD["facts"])
     assert 'menorah_verse' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[13]["cites"] == ['Mishnah Menachot 3:7', 'Onkelos Exod 25']
+    assert m.WITNESS_READS[14]["cites"] == ['Mishnah Menachot 3:7', 'Onkelos Exod 25']
     assert all('one_piece_seven' not in f for f in m.WORLD["facts"])
     assert 'menorah_clauses' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

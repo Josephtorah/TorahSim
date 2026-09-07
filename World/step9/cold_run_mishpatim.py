@@ -16,7 +16,7 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chc(_P, 'grade', 2, 2)
-assert GUARDED == 20, ('the guard counted %d expectations, the tripwire holds 20' % GUARDED)
+assert GUARDED == 21, ("the guard counted %d expectations, the tripwire holds 21" % GUARDED)
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys, os
 
@@ -150,6 +150,85 @@ cells = [
 ]
 results.append(grade('theft multiples', 'Mishnah Bava Kamma 7:1', cells))
 
+# ---- THE WRAP (W1 THE EXODUS LAW, D9-iii, 2026-09-07) — the daemon and the scene --------------
+# The skeleton's law_slave_term (F1) and law_goring_ox (F3) stay in world_engine.py as the LIBRARY,
+# registered on this scene beside the runner's own daemon, which takes the case heads the library
+# does not: the quarrel (21:18-19 with the tariff CALLED from Lev 24), the pit (21:33-34), the
+# grazing (22:4), the fire (22:5), the theft multiples (21:37, 22:3), and the buy-out (21:8 by
+# comparison). Every watched kind is a case-form type of event_vocabulary.yaml; every effect is
+# registry-validated at write time; the daemon writes the ledger and never emits an event.
+import io, contextlib
+import world_engine as WE
+def law_mishpatim(event, world):
+    """Exod 21:18-19, 21:33-34, 21:37-22:5, 21:8 (cold_run_mishpatim.py F1 DEDUCT, F2, F4, F5)."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'men_quarrel':
+        tal = lev24_talion(event.get('blemish', 'eye'))          # the first inter-span call, run live on the tape
+        return [E_('pays', event['striker'], cp=event['victim'], amount=event['medical'], law='F4 MEDICAL [INK 21:19 "and healing he shall heal"]'),
+                E_('gives_fixed_sum', event['striker'], cp=event['victim'], amount=event['idleness'], law='F4 LIVELIHOOD [INK 21:19 "his idleness he shall give"]'),
+                E_('substitution', event['striker'], cp=event['victim'], value=tal['verdict'], law='F4 DAMAGE [CALLED cold_run_lev24.talion(%s) -> %s; Bava Kamma 83b:10, 84a:1]' % (tal['blemish'], tal['verdict'])),
+                E_('pays', event['striker'], cp=event['victim'], value='pain', law='F4 PAIN [RECORDED Bava Kamma 85a: "wound for wound", 21:25]'),
+                E_('pays', event['striker'], cp=event['victim'], value='humiliation', law='F4 HUMILIATION [IMPORT Deut 25:11-12]')]
+    if k == 'pit_opened':
+        return [E_('pays', event['owner'], cp=event['victim'], amount=event['damage'], law='F2 PIT [INK 21:34 "the owner of the pit shall pay"]')]
+    if k == 'field_grazed':
+        return [E_('pays', event['grazer'], cp=event['owner'], amount=event['damage'], value='best_of_the_land', law='F2 GRAZING [INK 22:4 "the best of his field and the best of his vineyard he shall pay"]')]
+    if k == 'fire_spread':
+        return [E_('pays', event['kindler'], cp=event['owner'], amount=event['damage'], law='F2 FIRE [INK 22:5 "the kindler of the fire shall surely pay"]')]
+    if k == 'animal_stolen':
+        if event['disposed']:                                    # slaughtered or sold (21:37)
+            mult = 5 if event['animal'] == 'ox' else 4
+            return [E_('pays_four_five', event['thief'], cp=event['owner'], amount=mult * event['value'], law='F5 [INK 21:37 five cattle for the ox, four sheep for the sheep]')]
+        return [E_('pays_double', event['thief'], cp=event['owner'], amount=2 * event['value'], law='F5 [INK 22:3 "if the theft is found in his hand... he shall pay double"]')]
+    if k == 'redeemed_by_deduction':
+        world.cancel_timers(event['slave'], 'goes_free', 'the buy-out [RECORDED Kiddushin 16a:11 from 21:8 "let her be redeemed", by comparison]')
+        return [E_('pays', event['slave'], cp=event['master'], amount=event['amount'], law='F1 DEDUCT [RECORDED Kiddushin 16a:11]'),
+                E_('goes_free', event['slave'], law='F1 DEDUCT [Mishnah Kiddushin 1:2: acquires himself by deduction of money]')]
+    return []
+
+def scene():
+    """THE SCENE — the recorded cases replayed on the world engine (clock unit: years; the answer sheet's rows as the tape)."""
+    with contextlib.redirect_stdout(io.StringIO()):
+        w = WE.World(era='Mishpatim: Kiddushin 1:2 and Bava Kamma 1-8 on the engine (clock unit: years)')
+        w.laws = [WE.law_slave_term, WE.law_goring_ox, law_mishpatim]
+        w.advance(1)
+        w.submit({'kind': 'acquire_hebrew_slave', 'subject': 'the-master', 'master': 'the-master', 'slave': 'the-slave', 'case_source': 'Mishnah Kiddushin 1:2 — acquires himself by years'})
+        w.advance(3)
+        w.submit({'kind': 'redeemed_by_deduction', 'subject': 'the-slave', 'slave': 'the-slave', 'master': 'the-master', 'amount': 30, 'case_source': 'Mishnah Kiddushin 1:2 — by deduction of money; Kiddushin 16a:11'})
+        w.advance(4)
+        for i in (1, 2, 3):
+            w.submit({'kind': 'ox_gores', 'subject': 'the-ox', 'ox': 'the-ox', 'owner': 'reuben', 'victim': 'simeon', 'victim_kind': 'animal', 'damage': 100, 'case_source': 'Mishnah Bava Kamma 2:4 — goring #%d' % i})
+        w.submit({'kind': 'ox_gores', 'subject': 'the-ox', 'ox': 'the-ox', 'owner': 'reuben', 'victim': 'simeon', 'victim_kind': 'animal', 'damage': 100, 'case_source': 'Mishnah Bava Kamma 1:4 — the forewarned pays full'})
+        w.submit({'kind': 'ox_gores', 'subject': 'the-ox', 'ox': 'the-ox', 'owner': 'reuben', 'victim': 'the-slaves-master', 'victim_kind': 'slave', 'case_source': 'Mishnah Bava Kamma 4:5 — the slave gored: thirty sela, the ox stoned'})
+        w.advance(5)
+        w.submit({'kind': 'men_quarrel', 'subject': 'levi', 'striker': 'levi', 'victim': 'judah', 'medical': 10, 'idleness': 5, 'blemish': 'eye', 'case_source': 'Mishnah Bava Kamma 8:1 — the five indemnities'})
+        w.submit({'kind': 'pit_opened', 'subject': 'dan', 'owner': 'dan', 'victim': 'naphtali', 'damage': 40, 'case_source': 'Mishnah Bava Kamma 1:1 — the pit'})
+        w.submit({'kind': 'field_grazed', 'subject': 'gad', 'grazer': 'gad', 'owner': 'asher', 'damage': 20, 'case_source': 'Mishnah Bava Kamma 1:1 — the tooth; from the best of the land'})
+        w.submit({'kind': 'fire_spread', 'subject': 'issachar', 'kindler': 'issachar', 'owner': 'zebulun', 'damage': 60, 'case_source': 'Mishnah Bava Kamma 1:1 — the fire; 6:4'})
+        w.advance(6)
+        w.submit({'kind': 'animal_stolen', 'subject': 'the-thief', 'thief': 'the-thief', 'owner': 'joseph', 'animal': 'ox', 'disposed': True, 'value': 10, 'case_source': 'Mishnah Bava Kamma 7:1 — five for the ox'})
+        w.submit({'kind': 'animal_stolen', 'subject': 'the-thief', 'thief': 'the-thief', 'owner': 'joseph', 'animal': 'sheep', 'disposed': True, 'value': 10, 'case_source': 'Mishnah Bava Kamma 7:1 — four for the sheep'})
+        w.submit({'kind': 'animal_stolen', 'subject': 'the-thief', 'thief': 'the-thief', 'owner': 'joseph', 'animal': 'ox', 'disposed': False, 'value': 10, 'case_source': 'Mishnah Bava Kamma 7:1 — found in his hand: double'})
+        w.advance(8)                                              # year 7 passes: the CANCELLED six-year timer must not fire
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    amt = lambda eid, eff: sum(e['amount'] or 0 for e in w.entity(eid).ledger if e['effect'] == eff)
+    cut = len([l for l in w.log if l[0] == 'TIMER-CANCEL']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    return (n('the-slave', 'term_clock'), n('the-slave', 'pays'), n('the-slave', 'goes_free'), cut, fired,
+            n('reuben', 'pays'), amt('reuben', 'pays'), n('the-ox', 'forewarned'), n('the-ox', 'stoned'), n('reuben', 'gives_fixed_sum'), amt('reuben', 'gives_fixed_sum'),
+            n('levi', 'pays'), n('levi', 'gives_fixed_sum'), n('levi', 'substitution'), n('dan', 'pays'), n('gad', 'pays'), n('issachar', 'pays'),
+            n('the-thief', 'pays_four_five'), amt('the-thief', 'pays_four_five'), n('the-thief', 'pays_double'), amt('the-thief', 'pays_double'), w.clock.year), w
+SCENE, _W = scene()
+wrap_cells = [
+    ('THE SCENE on the world engine (the wrap)', SCENE, (1, 1, 1, 1, 0, 4, 250.0, 1, 1, 1, 30, 3, 1, 1, 1, 1, 1, 2, 90, 1, 20, 8),
+     'RECORDED — the answer sheet\'s rows as the tape: Kiddushin 1:2 (years, then the buy-out CANCELS the year-7 timer — no fire), Bava Kamma 2:4 (three gorings: half, half, half + FOREWARNED), 1:4 (full), '
+     '4:5 (the slave: stoned + thirty), 8:1 (the five: three pays, the idleness sum, the tariff CALLED from Lev 24), 1:1 (pit, tooth, fire), 7:1 (five, four, double); the clock ABSOLUTE', 'RECORDED'),
+]
+results.append(grade('THE WRAP — the daemon on the recorded cases', 'Kiddushin 1:2 + Bava Kamma 1:1, 1:4, 2:4, 4:5, 7:1, 8:1', wrap_cells))
+print('WATCH COVERAGE (the wrap): the library daemons and the runner\'s own, on this scene\'s tape')
+_W.print_coverage()
+print()
+
 # ---- summary --------------------------------------------------------
 ok = sum(a for a, _ in results); n = sum(b for _, b in results)
 print('=' * 60)
@@ -192,6 +271,8 @@ EFFECTS = [
     ('multiples: FIVEFOLD ox',       ['pays_four_five']),
     ('multiples: FOURFOLD sheep',    ['pays_four_five']),
     ('multiples: RESTRICTED scope',  [FX.NONE]),
+    # THE WRAP (W1): the scene's tape — every effect written on the ledger by the library daemons and law_mishpatim
+    ('THE SCENE (the wrap)',         ['term_clock', 'goes_free', 'pays', 'forewarned', 'stoned', 'gives_fixed_sum', 'ransom_imposed', 'substitution', 'pays_four_five', 'pays_double']),
 ]
 print('\nEFFECTS — the state changes each cell writes:')
 used = []

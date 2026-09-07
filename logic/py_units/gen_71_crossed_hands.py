@@ -103,6 +103,12 @@ m.step("Gen.48.5")
 # ‹וְשִׁמְעוֹן יִהְיוּ־לִי› (“and-Simeon be to-me/my”)
 # — fact holds: Ephraim-and-Manasseh-that-reuven-and-Simeon-be-to-me
 m.fact("efrayim_u_menashe_ki_reuven_ve_shimon_yihyu_li")
+# witness-tier presupposed read: the_order_at_six_seats_the_firstborns_two_d
+# efinitions_and_the_right_called_hand on
+# the_adoption_is_the_inheritance_rule_and_the_portion_is_given_as_a_gift —
+# read, not installed
+m.witness_read("the_adoption_is_the_inheritance_rule_and_the_portion_is_given_as_a_gift", "the_order_at_six_seats_the_firstborns_two_definitions_and_the_right_called_hand",
+                cites=["Mishnah Bava Batra 8:1", "Mishnah Bava Batra 8:3", "Mishnah Bava Batra 8:4", "Mishnah Bava Batra 8:5", "Mishnah Bava Batra 8:6", "Mishnah Bekhorot 8:1", "Mishnah Bekhorot 8:2", "Mishnah Bekhorot 8:9", "Mishnah Bekhorot 8:10", "Bava Batra 123a:10", "Bava Batra 123a:6", "Bava Batra 123a:11", "Bava Batra 130a:3", "Bava Batra 134a:13", "Horayot 5b:15", "Horayot 6b:2", "Nedarim 30b:11", "Menachot 93b:16", "Menachot 37a:1", "Pesachim 118a:7", "Bava Batra 118b:2", "Bava Metzia 87a:15", "Sanhedrin 22b:4", "Avodah Zarah 25a:2", "Ketubot 72b:5"])
 
 # -------------------------- Gen.48.6 · AFTER_THEM_YOURS --------------------
 # ‹וּמוֹלַדְתְּךָ אֲשֶׁר־הוֹלַדְתָּ אַחֲרֵיהֶם› (“and-nativity-you/your
@@ -440,7 +446,7 @@ if __name__ == "__main__":
     assert all('which_way_the_dependence_runs' not in f for f in m.WORLD["facts"])
     assert m.WORLD["witnessed"]['my_sword_and_my_bow']["cites"] == ['Onkelos Genesis 48:22', 'Bereshit Rabbah 99:7', 'Bereshit Rabbah 97:6']
     assert all('disarmed_by_both_members_independently' not in f for f in m.WORLD["facts"])
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('your_father_is_ill', 'the_suspicion_of_favouritism_at_the_deathbed'), ('an_assembly_of_nations', 'a_promise_quoted_back_and_cashed'), ('li_qehal_amim', 'kahal_file'), ('al_shem_acheihem_be_nachalatam', 'levirate_name_analogy'), ('he_guided_his_hands', 'the_crossing_declared_deliberate_in_the_text'), ('the_angel_who_redeemed_me', 'an_angel_the_buffer_keeps'), ('i_know_my_son_i_know', 'the_refusal_carrying_what_the_father_knows'), ('god_will_be_with_you', 'the_word_as_support_at_its_second_seat')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('your_father_is_ill', 'the_suspicion_of_favouritism_at_the_deathbed'), ('an_assembly_of_nations', 'a_promise_quoted_back_and_cashed'), ('li_qehal_amim', 'kahal_file'), ('the_adoption_is_the_inheritance_rule_and_the_portion_is_given_as_a_gift', 'the_order_at_six_seats_the_firstborns_two_definitions_and_the_right_called_hand'), ('al_shem_acheihem_be_nachalatam', 'levirate_name_analogy'), ('he_guided_his_hands', 'the_crossing_declared_deliberate_in_the_text'), ('the_angel_who_redeemed_me', 'an_angel_the_buffer_keeps'), ('i_know_my_son_i_know', 'the_refusal_carrying_what_the_father_knows'), ('god_will_be_with_you', 'the_word_as_support_at_its_second_seat')]
     assert m.WITNESS_READS[0]["cites"] == ['Bereshit Rabbah 97:1', 'Bereshit Rabbah 65:9']
     assert all('the_suspicion_of_favouritism_at_the_deathbed' not in f for f in m.WORLD["facts"])
     assert 'your_father_is_ill' not in m.WORLD["witnessed"]
@@ -450,19 +456,22 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[2]["cites"] == ['Horayot 5b:14', 'Horayot 5b:15', 'Horayot 5b:16', 'Horayot 6b:1', 'Horayot 6b:2', 'Horayot 6b:3', 'Bava Batra 123a:9', 'Bava Batra 123a:10', 'Bava Batra 123a:11']
     assert all('kahal_file' not in f for f in m.WORLD["facts"])
     assert 'li_qehal_amim' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Yevamot 24a:5', 'Yevamot 24a:6', 'Yevamot 24a:7']
+    assert m.WITNESS_READS[3]["cites"] == ['Mishnah Bava Batra 8:1', 'Mishnah Bava Batra 8:3', 'Mishnah Bava Batra 8:4', 'Mishnah Bava Batra 8:5', 'Mishnah Bava Batra 8:6', 'Mishnah Bekhorot 8:1', 'Mishnah Bekhorot 8:2', 'Mishnah Bekhorot 8:9', 'Mishnah Bekhorot 8:10', 'Bava Batra 123a:10', 'Bava Batra 123a:6', 'Bava Batra 123a:11', 'Bava Batra 130a:3', 'Bava Batra 134a:13', 'Horayot 5b:15', 'Horayot 6b:2', 'Nedarim 30b:11', 'Menachot 93b:16', 'Menachot 37a:1', 'Pesachim 118a:7', 'Bava Batra 118b:2', 'Bava Metzia 87a:15', 'Sanhedrin 22b:4', 'Avodah Zarah 25a:2', 'Ketubot 72b:5']
+    assert all('the_order_at_six_seats_the_firstborns_two_definitions_and_the_right_called_hand' not in f for f in m.WORLD["facts"])
+    assert 'the_adoption_is_the_inheritance_rule_and_the_portion_is_given_as_a_gift' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Yevamot 24a:5', 'Yevamot 24a:6', 'Yevamot 24a:7']
     assert all('levirate_name_analogy' not in f for f in m.WORLD["facts"])
     assert 'al_shem_acheihem_be_nachalatam' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Genesis 48:14']
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Genesis 48:14']
     assert all('the_crossing_declared_deliberate_in_the_text' not in f for f in m.WORLD["facts"])
     assert 'he_guided_his_hands' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Genesis 48:16']
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Genesis 48:16']
     assert all('an_angel_the_buffer_keeps' not in f for f in m.WORLD["facts"])
     assert 'the_angel_who_redeemed_me' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[6]["cites"] == ['Bereshit Rabbah 97:4']
+    assert m.WITNESS_READS[7]["cites"] == ['Bereshit Rabbah 97:4']
     assert all('the_refusal_carrying_what_the_father_knows' not in f for f in m.WORLD["facts"])
     assert 'i_know_my_son_i_know' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Genesis 48:21']
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Genesis 48:21']
     assert all('the_word_as_support_at_its_second_seat' not in f for f in m.WORLD["facts"])
     assert 'god_will_be_with_you' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

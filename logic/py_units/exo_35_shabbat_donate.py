@@ -50,6 +50,11 @@ m.step("Exod.35.3")
 # not installed
 m.witness_read("kindling_fork", "four_courtrooms",
                 cites=["Shabbat 70a:5", "Shabbat 70a:3", "Shabbat 70a:4", "Shabbat 97b:2", "Sanhedrin 62a:7", "Sanhedrin 62a:8", "Sanhedrin 35b:6", "Sanhedrin 35b:7", "Sanhedrin 35b:8", "Yevamot 6b:4", "Yevamot 6b:5", "Shabbat 20a:5"])
+# witness-tier presupposed read:
+# kindlings_fork_the_courts_fire_and_the_index_by_juxtaposition on
+# the_one_named_labor — read, not installed
+m.witness_read("the_one_named_labor", "kindlings_fork_the_courts_fire_and_the_index_by_juxtaposition",
+                cites=["Onkelos Exod 35:1-3", "Yevamot 6b:10", "Yevamot 7a:3", "Keritot 20b:1", "Mishnah Sanhedrin 4:1", "Mishnah Shabbat 2:7", "Mishnah Shabbat 7:2", "Mishnah Shabbat 12:1"])
 
 # -------------------------- Exod.35.4 · ETNACHTA_SPLIT ---------------------
 # ‹ויאמר משה אל› (“and-say Moses to”)
@@ -74,6 +79,10 @@ m.step("Exod.35.5")
 # read, not installed
 m.witness_read("willing_heart", "voluntariness_condition",
                 cites=["Onkelos Exod 35"])
+# witness-tier presupposed read: the_hearts_gift_binds_without_speech on
+# the_donations_run_against_its_spec — read, not installed
+m.witness_read("the_donations_run_against_its_spec", "the_hearts_gift_binds_without_speech",
+                cites=["Onkelos Exod 35:4-19", "Onkelos Exod 35:25-26", "Onkelos Exod 35:27-29", "Shevuot 26b:15", "Chagigah 10a:8", "Shabbat 74b:6", "Shabbat 99a:2", "Yoma 75a:19", "Mishnah Chagigah 1:8"])
 
 # -------------------------- Exod.35.6 · TREE_CLAIM -------------------------
 # ‹ותכלת וארגמן ותולעת› (“and-cerulean-mussel and-purple and-crimson-grub”)
@@ -331,23 +340,29 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('sabbath_first', 'rest_outranks_building'), ('kindling_fork', 'four_courtrooms'), ('willing_heart', 'voluntariness_condition'), ('men_and_women', 'additive_preposition'), ('wise_women', 'womens_craft'), ('leaders_late', 'defective_spelling')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('sabbath_first', 'rest_outranks_building'), ('kindling_fork', 'four_courtrooms'), ('the_one_named_labor', 'kindlings_fork_the_courts_fire_and_the_index_by_juxtaposition'), ('willing_heart', 'voluntariness_condition'), ('the_donations_run_against_its_spec', 'the_hearts_gift_binds_without_speech'), ('men_and_women', 'additive_preposition'), ('wise_women', 'womens_craft'), ('leaders_late', 'defective_spelling')]
     assert m.WITNESS_READS[0]["cites"] == ['Mishnah Sanhedrin 4:1', 'Onkelos Exod 35']
     assert all('rest_outranks_building' not in f for f in m.WORLD["facts"])
     assert 'sabbath_first' not in m.WORLD["witnessed"]
     assert m.WITNESS_READS[1]["cites"] == ['Shabbat 70a:5', 'Shabbat 70a:3', 'Shabbat 70a:4', 'Shabbat 97b:2', 'Sanhedrin 62a:7', 'Sanhedrin 62a:8', 'Sanhedrin 35b:6', 'Sanhedrin 35b:7', 'Sanhedrin 35b:8', 'Yevamot 6b:4', 'Yevamot 6b:5', 'Shabbat 20a:5']
     assert all('four_courtrooms' not in f for f in m.WORLD["facts"])
     assert 'kindling_fork' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Exod 35']
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Exod 35:1-3', 'Yevamot 6b:10', 'Yevamot 7a:3', 'Keritot 20b:1', 'Mishnah Sanhedrin 4:1', 'Mishnah Shabbat 2:7', 'Mishnah Shabbat 7:2', 'Mishnah Shabbat 12:1']
+    assert all('kindlings_fork_the_courts_fire_and_the_index_by_juxtaposition' not in f for f in m.WORLD["facts"])
+    assert 'the_one_named_labor' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Exod 35']
     assert all('voluntariness_condition' not in f for f in m.WORLD["facts"])
     assert 'willing_heart' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Midrash Tanchuma, Pekudei 11:2', 'Onkelos Exod 35']
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Exod 35:4-19', 'Onkelos Exod 35:25-26', 'Onkelos Exod 35:27-29', 'Shevuot 26b:15', 'Chagigah 10a:8', 'Shabbat 74b:6', 'Shabbat 99a:2', 'Yoma 75a:19', 'Mishnah Chagigah 1:8']
+    assert all('the_hearts_gift_binds_without_speech' not in f for f in m.WORLD["facts"])
+    assert 'the_donations_run_against_its_spec' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Midrash Tanchuma, Pekudei 11:2', 'Onkelos Exod 35']
     assert all('additive_preposition' not in f for f in m.WORLD["facts"])
     assert 'men_and_women' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Exod 35']
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Exod 35']
     assert all('womens_craft' not in f for f in m.WORLD["facts"])
     assert 'wise_women' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Midrash Tanchuma, Pekudei 11:3', 'Midrash Tanchuma, Pekudei 11:4']
+    assert m.WITNESS_READS[7]["cites"] == ['Midrash Tanchuma, Pekudei 11:3', 'Midrash Tanchuma, Pekudei 11:4']
     assert all('defective_spelling' not in f for f in m.WORLD["facts"])
     assert 'leaders_late' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

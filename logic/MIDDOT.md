@@ -194,6 +194,194 @@ narrative strength. By cluster:
   Deut 23:21's foreigner) — the machine form is a predicate over the class the specimen belongs to, with the specimen kept
   as the exemplar on the cell; the compile carries the rule at the torn, the enemy's animals, and the sorceress.
 
+- **The minimum plural is two** (2026-09-06, sitting E2 — Menachot
+  29a:1 on the lampstand's knobs): where the ink writes a bare plural
+  with no number — כַּפְתֹּרֶיהָ ("its knobs", Exod 25:34) — the count is
+  read as TWO, the least a plural can carry; so the lampstand's knobs
+  are eleven (six on the branches, three under the pairs, two on the
+  shaft) and its flowers eight from Exodus alone, the ninth fetched
+  from Numbers 8:4's "to its flower". A counting rule of the law
+  channel, applied whenever a Mishnah row gives a total the verse's
+  numerals do not reach; recorded as a MOVE, never as ink.
+- **The run may correct the spec's order** (2026-09-06, sitting E2 —
+  Berakhot 55a:12 against Midrash (midrash: "expounding") Tanchuma, Vayakhel 6:5): when a
+  narrated execution builds in a sequence the command did not write
+  (the house before the ark, Exod 36:8 before 37:1, against 25:10
+  before 26:1), the tradition may rule the RUN's order the original
+  and the SPEC's written order the messenger's inversion — the second
+  form of M-22 (at D8 the run gave the spec a column; here its order).
+  The two recensions assign the argument to opposite speakers; both
+  tracks are carried, the direction itself a recorded parameter.
+
+- **Adjacency across a chapter boundary** (2026-09-06, sitting E3 —
+  Babylonian Talmud Zevachim 88b:5, Arakhin 16a:13): R. Inini bar
+  Sasson — 'why is the offerings section (Exod 29) juxtaposed to the
+  priestly garments section (Exod 28)? to tell you: as offerings atone,
+  so the priestly garments atone.' The adjacency middah licensed by the
+  SECTION order across the chapter break, giving the garments the
+  offerings' predicate; the eight functions then keyed each to a token
+  or a position (the tunic by Joseph's tunic in blood, the breeches by
+  28:42's own clause, the robe by 28:35's sound, the plate by the
+  forehead-word's two seats). The ink's five function clauses and the
+  tradition's three fill one column.
+- **The homograph is the derivation's engine** (2026-09-06, sitting E3
+  — Yoma 71b:6): the sixfold thread of the priestly garments is derived
+  from five tokens of שש ("fine linen") at Exod 39:27-28 — and the count
+  SIX is the word itself, שש ("six"), in the unpointed text. A written
+  form carrying two words (as זר, "stranger" / "crown" at the ark's
+  rim, E2) is read as BOTH: the material-word supplies the numeral. And
+  the tokens are the RUN's, not the spec's (the spec writes 'fine
+  linen' twice at 28:39) — move M-22's parameter form.
+- **The particle test: 'not' is not 'so that not'** (2026-09-06,
+  sitting E3 — Yoma 72a:8-9): Rav Acha bar Yaakov's objection at the
+  robe's 'it shall not be torn' and the breastplate's 'it shall not be
+  detached' — 'perhaps a design spec: make a border SO THAT it not
+  tear?' — answered 'is it written שלא ("so that not")? it is written
+  לא ("not")': a bare negative is a standing prohibition (lashes), a
+  purpose clause would be a manufacturing instruction. The same test
+  the ark's staves passed at E2 (25:15); the three bans one family.
+- **Which neighbor scopes a clause is itself a recorded fork**
+  (2026-09-06, sitting E4 — Zevachim 83b:12): Exod 29:37 'whatever
+  touches the altar becomes holy' (כל הנגע במזבח יקדש, "whatever touches
+  the altar becomes holy") — fit or unfit? R. Yosei HaGelili takes the
+  scope from the NEXT verse ('lambs', 29:38), R. Akiva from an EARLIER
+  one ('a burnt offering', 29:18): both reach Mishnah Zevachim 9:1's
+  'what is fit for it', by two different neighbors. The parse-direction
+  meta-rule (a verse expounded on what precedes it — Zevachim 24b, the
+  vestments block) has a sibling: the DIRECTION of a scope-import is a
+  parameter of the reading, recorded per authority. And the clause's
+  two seats (29:37 the altar, 30:29 the vessels — כל הנגע בהם יקדש,
+  "whatever touches THEM becomes holy") are two Mishnah rows (9:1,
+  9:7; Zevachim 87a:11): a clause repeated with a new subject is a new
+  row, not a restatement.
+- **The spec/run delta is where the tradition argues** (2026-09-06,
+  sitting E4 — Yoma 5b:9): the command girds Aaron AND his sons in ONE
+  verb (Exod 29:9 וחגרת אתם, "and you shall gird them"); the doing
+  girds him and then them in TWO (Lev 8:7 ויחגר אתו, "and he girded
+  him"; 8:13 ויחגר אתם, "and he girded them") — and the dispute over
+  the dressing order runs on exactly that split (Abaye: 'in the
+  command and in the doing Aaron precedes' for the garments where both
+  agree; the sash disputed where they differ). A reading rule for the
+  spec/run pairs: the alignment's unmatched token is the first place to
+  look for a sugya. Move M-22's fourth form.
+- **One written form defines a unit across spans** (2026-09-06,
+  sitting E4 — Zevachim 18b:15; Exod 30:13): the incense recipe's 'PART
+  FOR PART' (בד בבד, "part for part", once in the Bible) is the phrase
+  the Talmud uses to define the vestments' LINEN (בד, "linen" — 'each
+  alone', as flax grows) — one token serving two engines; and 'twenty
+  gerah the shekel' (עשרים גרה השקל, "twenty gerah the shekel") at Exod
+  30:13 is the unit every later 'shekel of the sanctuary' (twenty-five
+  seats) and Lev 27:25's restatement runs on, while the gerah-word's
+  other eight seats are the ruminant's CUD (גרה, "cud"). A definition
+  written once binds the whole code; a homograph of the unit-word is
+  not the unit.
+
+- THE SECOND SEAT'S DELTA (2026-09-06, sitting E5 — Exod 34:18-26
+  against 23:12-19): a law the same book writes twice is read by the
+  tradition seat against seat, and the second writing's every
+  addition, drop, move, and doubling is a sugya's ground — 'in plowing
+  and in harvest' (בחריש ובקציר, "in plowing and in harvest") read
+  three ways (Makkot 8b:3, Menachot 72a:12, Shabbat 70a:4); 'the
+  firstling of a donkey' at the two seats counted as TWICE (Bekhorot
+  5b:7); the clause 'they shall not appear before Me empty' moved
+  between the seats and read where it now stands (Bekhorot 51b:8);
+  the inserted 34:17 legislating by adjacency (Makkot 23a:4). A
+  repeated seat is a repeated token (ribbui across chapters); a moved
+  clause is read at its new neighbor; an inserted verse is a
+  juxtaposition the first seat never had. Move M-23.
+- WHICH RECENSION OF A VERSE THE PARSE FOLLOWS IS THE CANTILLATION'S
+  (Chagigah 6b:12-14, opened at E5): Rav Chisda asks whether 'bulls'
+  at Exod 24:5 governs both offerings or the peace offerings alone,
+  'what difference does it make? — for the PAUSING OF THE CANTILLATION'
+  (לפיסוק טעמים, "for the pausing of the accents"), and the sugya
+  leaves it TEIKU. The front end's accent on 'burnt offerings' (the
+  etnachta) answers the named difference one way; the tradition's own
+  verdict-state is carried beside it, not overwritten — the machine's
+  parse and the recorded open question are two rows, both kept.
+- A CLAUSE OF THE TORAH RECORDED AS ANNULLED BY A LATER BOOK (Makkot
+  24a:30, opened at E5): 'Moses said (Exod 34:7) visits the iniquity
+  of fathers on children; Ezekiel came and annulled it — the soul that
+  sins, it shall die' — one of four decrees a prophet overrode. The
+  twenty-four books demonstrate by RUN; here the run rewrites the spec
+  at the register of the canon itself, and the tradition records the
+  override as an override: the compile carries both seats and the
+  tradition's own reconciliation beside them (Berakhot 7a:26: 'when
+  they hold their fathers' deeds').
+
+- THE FIRST CHAPTER'S OWN DELTAS ARE THE SUGYOT'S GROUND (sitting G1,
+  2026-09-06): Genesis 1's nine commands against their executions —
+  the tradition dates creation to Tishrei from the SPEC's 'fruit tree'
+  and to Nisan from the RUN's 'tree making fruit' (Rosh Hashanah
+  11a:3-6), reads the grasses' a-fortiori off the run's added 'after
+  its kind' (Chullin 60a:10-12), the moon's diminishing off 1:16's
+  'two great' against 'the great and the small' (Chullin 60b:2-4), the
+  heretics' refutation off 'let US make' against 'and God CREATED'
+  (Sanhedrin 38b:14), and the one-or-two creations off 'created HIM'
+  against 'created THEM' (Ketubot 8a:9, Eruvin 18a:23, Berakhot
+  61a:14): the middah at work is the same as at the tabernacle's
+  spec/run pairs (M-22) — the deviation between a command and its
+  execution is read as legislating, and the machine measures the
+  deviation first. Beside it the counts the answer sheet rides: ten
+  'and God said' against nine plus 'in the beginning' (Megillah 21b:10
+  — a recorded count that does not take one of the ink's ten), 'good'
+  absent on day two (Pesachim 54a:13), the article on the sixth day
+  alone (Shabbat 88a:6 — a condition read off one letter).
+- THE REPETITION TEST AS A SCOPE MIDDAH (Sanhedrin 59a:11-12, sitting
+  G1): 'every command said to the sons of Noah and REPEATED at Sinai
+  was said to both; not repeated — to Israel alone' — a law's
+  addressees are decided by counting its seats across the eras, with
+  a rider the sugya itself supplies: a second seat whose added job
+  exhausts it (Lev 12:3 'on the day' came to permit the Sabbath,
+  59b:1-2; Deut 5:27 came for the counted-body principle, 59b:3-4)
+  does not widen the scope. Registered as move M-24; the machine's
+  form is the dependency gate — the edge exists where the repetition
+  does — and the Tzav engine's own cell states the negative boundary
+  ('Israel exhorted, not the sons of Noah', Sifra Tzav Section 10 1).
+- THE THIRD SEAT'S ADDED TOKEN LEGISLATES (Beitzah 16a:12, sitting G1):
+  the creation-rest clause at Gen 2:2-3 ('ceased'), Exod 20:11
+  ('rested'), Exod 31:17 ('ceased and was REFRESHED') — the one token
+  only the third seat carries is the extra soul: M-23's delta at a
+  third writing, diffed against both earlier seats; the watch set at
+  E5 for Deuteronomy's third seats has its first exemplar in Exodus.
+
+- THE ARTICLE AS THE DISTINGUISHED MEMBER (Chullin 91a:12, sitting
+  G2): Rava — 'the verse says THE thigh: the distinguished of the
+  thigh' — the definite article on Gen 32:33's 'the thigh' (a hapax
+  articled form, measured) read as 'the best of its kind' (the right),
+  a rule the tradition exports in its own words to three other
+  institutions (the priestly gift's arm, Chullin 134b:16; the anointed,
+  Horayot 12a:16; the pierced slave's awl, Kiddushin 21b:11).
+  Registered as move M-25; the rival reading carried (Mishnah Chullin
+  7:1's 'right and left'; R. Yehoshua b. Levi's embrace geometry).
+- A VERBAL ANALOGY CONSIDERED AND REFUSED (Yevamot 59a:8, sitting G2):
+  'a widow he shall not take' (Lev 21:14) — 'lest you say: learn
+  WIDOW-WIDOW FROM TAMAR (Gen 38:11), as there from marriage so here —
+  it teaches us no': the tradition names a gezerah shavah on the widow
+  token between the family code and the priesthood's ban and REFUSES
+  it — governance on the second middah: a verbal analogy is not free
+  to make; the dependency census's family-to-priesthood edge on the
+  same token is the tradition's own attempted analogy, recorded with
+  its refusal.
+- THE EXCEPTION AS AN ABSENCE (Mishnah Chullin 7:6, Chullin 100b:3 and
+  101a:3, sitting G2): the repetition test's one stated exception (the
+  sinew — 'said at Sinai, written in its place') appears in the machine
+  as a MISSING EDGE — the census homes the sinew's token at the family
+  runner alone and requires nothing; R. Yehuda's 'forbidden to the sons
+  of Jacob' and the sages' 'the nation's clause' are two readings of one
+  subject, and the subject is the ink's own anachronism ('the sons of
+  Israel' — the phrase's first seat in the Bible at 32:33, four verses
+  after the name is given); Rava derives the pure-only scope from the
+  verse's own restriction ('one whose sinew is forbidden and flesh
+  permitted').
+- NO DECISION BESIDE THE MACHINE'S PARSE (Yoma 52b:4, sitting G2):
+  'cursed' (Gen 49:7) is one of Issi b. Yehuda's five verses 'with no
+  decision' — whether the word closes 49:6 ('they houghed an ox —
+  cursed') or opens 49:7 ('cursed be their anger') — where the verse
+  division (the front end's parse) has already placed it at 49:7's
+  head: the second exemplar of the TEIKU-beside-a-parse watch (E5's
+  Exod 24:5); the tradition's recorded indecision and the Masoretic
+  division's decision both kept, neither converted into the other.
+
 ## Exodus block campaign — owner's word "Do 3")
 
 The campaign's exam rounds banked RULES-ABOUT-RULES on the corpus's

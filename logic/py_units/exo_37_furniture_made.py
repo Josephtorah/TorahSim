@@ -26,6 +26,11 @@ m.step("Exod.37.1")
 # read, not installed
 m.witness_read("bezalel_byline", "shade_and_attribution",
                 cites=["Midrash Tanchuma, Vayakhel 10:3", "Midrash Tanchuma, Vayakhel 7:1", "Onkelos Exod 37"])
+# witness-tier presupposed read:
+# the_vessels_run_matched_to_the_spec_token_for_token on bezalels_one_verb —
+# read, not installed
+m.witness_read("bezalels_one_verb", "the_vessels_run_matched_to_the_spec_token_for_token",
+                cites=["Onkelos Exod 37:1-5", "Onkelos Exod 37:6-9", "Onkelos Exod 37:17-24", "Midrash Tanchuma, Vayakhel 6:5", "Midrash Tanchuma, Vayakhel 7:1", "Midrash Tanchuma, Vayakhel 7:3", "Midrash Tanchuma, Vayakhel 8:3", "Midrash Tanchuma, Vayakhel 10:3", "Berakhot 55a:12", "Menachot 28b:17", "Menachot 29a:1", "Menachot 29a:2", "Yoma 72b:7", "Mishnah Menachot 3:7", "Mishnah Yoma 5:1"])
 
 # -------------------------- Exod.37.2 · ETNACHTA_SPLIT ---------------------
 # ‹ויצפהו זהב טהור› (“and-sheet-over-him/its gold pure”)
@@ -330,23 +335,26 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
-    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('bezalel_byline', 'shade_and_attribution'), ('gold_within_without', 'inside_like_outside'), ('shittim_wood', 'atonement_stocked_first'), ('carry_poles', 'carrying_protocol'), ('build_order', 'ark_first_dispute'), ('cherubim_made', 'compression_without_loss')]
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('bezalel_byline', 'shade_and_attribution'), ('bezalels_one_verb', 'the_vessels_run_matched_to_the_spec_token_for_token'), ('gold_within_without', 'inside_like_outside'), ('shittim_wood', 'atonement_stocked_first'), ('carry_poles', 'carrying_protocol'), ('build_order', 'ark_first_dispute'), ('cherubim_made', 'compression_without_loss')]
     assert m.WITNESS_READS[0]["cites"] == ['Midrash Tanchuma, Vayakhel 10:3', 'Midrash Tanchuma, Vayakhel 7:1', 'Onkelos Exod 37']
     assert all('shade_and_attribution' not in f for f in m.WORLD["facts"])
     assert 'bezalel_byline' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[1]["cites"] == ['Midrash Tanchuma, Vayakhel 7:3', 'Midrash Tanchuma, Vayakhel 7:4', 'Midrash Tanchuma, Vayakhel 8:3']
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Exod 37:1-5', 'Onkelos Exod 37:6-9', 'Onkelos Exod 37:17-24', 'Midrash Tanchuma, Vayakhel 6:5', 'Midrash Tanchuma, Vayakhel 7:1', 'Midrash Tanchuma, Vayakhel 7:3', 'Midrash Tanchuma, Vayakhel 8:3', 'Midrash Tanchuma, Vayakhel 10:3', 'Berakhot 55a:12', 'Menachot 28b:17', 'Menachot 29a:1', 'Menachot 29a:2', 'Yoma 72b:7', 'Mishnah Menachot 3:7', 'Mishnah Yoma 5:1']
+    assert all('the_vessels_run_matched_to_the_spec_token_for_token' not in f for f in m.WORLD["facts"])
+    assert 'bezalels_one_verb' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Midrash Tanchuma, Vayakhel 7:3', 'Midrash Tanchuma, Vayakhel 7:4', 'Midrash Tanchuma, Vayakhel 8:3']
     assert all('inside_like_outside' not in f for f in m.WORLD["facts"])
     assert 'gold_within_without' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[2]["cites"] == ['Midrash Tanchuma Buber, Vayakhel 9:1', 'Midrash Tanchuma, Vayakhel 8:1', 'Midrash Tanchuma, Vayakhel 8:2']
+    assert m.WITNESS_READS[3]["cites"] == ['Midrash Tanchuma Buber, Vayakhel 9:1', 'Midrash Tanchuma, Vayakhel 8:1', 'Midrash Tanchuma, Vayakhel 8:2']
     assert all('atonement_stocked_first' not in f for f in m.WORLD["facts"])
     assert 'shittim_wood' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[3]["cites"] == ['Midrash Tanchuma, Vayakhel 7:13', 'Onkelos Exod 37']
+    assert m.WITNESS_READS[4]["cites"] == ['Midrash Tanchuma, Vayakhel 7:13', 'Onkelos Exod 37']
     assert all('carrying_protocol' not in f for f in m.WORLD["facts"])
     assert 'carry_poles' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[4]["cites"] == ['Babylonian Talmud Berakhot 55a', 'Midrash Tanchuma Buber, Vayakhel 8:3', 'Midrash Tanchuma, Vayakhel 10:1', 'Midrash Tanchuma, Vayakhel 10:2', 'Midrash Tanchuma, Vayakhel 6:5']
+    assert m.WITNESS_READS[5]["cites"] == ['Babylonian Talmud Berakhot 55a', 'Midrash Tanchuma Buber, Vayakhel 8:3', 'Midrash Tanchuma, Vayakhel 10:1', 'Midrash Tanchuma, Vayakhel 10:2', 'Midrash Tanchuma, Vayakhel 6:5']
     assert all('ark_first_dispute' not in f for f in m.WORLD["facts"])
     assert 'build_order' not in m.WORLD["witnessed"]
-    assert m.WITNESS_READS[5]["cites"] == ['Midrash Tanchuma, Vayakhel 7:2', 'Onkelos Exod 37']
+    assert m.WITNESS_READS[6]["cites"] == ['Midrash Tanchuma, Vayakhel 7:2', 'Onkelos Exod 37']
     assert all('compression_without_loss' not in f for f in m.WORLD["facts"])
     assert 'cherubim_made' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

@@ -21,7 +21,7 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chc(_P, 'grade', 2, 2)
-assert GUARDED == 18, ('the guard counted %d expectations, the tripwire holds 18' % GUARDED)
+assert GUARDED == 19, ("the guard counted %d expectations, the tripwire holds 19" % GUARDED)
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys, os
 
@@ -48,6 +48,48 @@ def talion(blemish='eye'):
                 '(24:22, Bava Kamma 84a:1) — money is what equalizes'),
     }
 
+
+# ---- THE WRAP (W1 THE EXODUS LAW, D9-iii, 2026-09-07) — the daemon and the scene --------------
+# The chapter's four case heads (24:15-16 with the chapter's own case at 24:11, 24:17 with Exod
+# 21:12, 24:18, 24:19-20), each a case-form type of event_vocabulary.yaml; the tariff branch CALLS
+# the exported talion() the Mishpatim runner imports. The daemon writes the ledger and never emits.
+import io, contextlib
+sys.path.insert(0, HERE)
+import world_engine as WE
+def law_lev24(event, world):
+    """Lev 24:10-23 (cold_run_lev24.py — the curse gate, the killing pair, the tariff)."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'cursed_the_name':
+        if event['name_pronounced']:
+            return [E_('stoned', event['curser'], value=event.get('status', 'native'), law="curse gate: NAME-REQUIRED [INK 24:16 'he who pronounces the name of the LORD shall surely be put to death... all the congregation shall stone him, the sojourner as the native'; Mishnah Sanhedrin 7:5]")]
+        return [E_('bears_sin', event['curser'], cp='HEAVEN', law="curse gate: BEARS-SIN [INK 24:15 'when he curses his God, he shall bear his sin' — no earthly executor named]")]
+    if k == 'man_struck_dead':
+        return [E_('put_to_death', event['striker'], value=event.get('victim_age', 'adult'), law="killing pair: DEATH [INK 24:17 'any human life' — a day-old counts, Niddah 44b; Exod 21:12]")]
+    if k == 'beast_struck_dead':
+        return [E_('pays', event['striker'], cp=event['owner'], amount=event['value'], law="killing pair: PAYS [INK 24:18 'shall pay for it, life for life'; Bava Kamma 83b:10]")]
+    if k == 'blemish_given':
+        tal = talion(event['blemish'])                            # the export, run live on the tape
+        return [E_('substitution', event['striker'], cp=event['victim'], value=tal['verdict'], law='THE TARIFF [CALLED talion(%s) -> %s: %s]' % (tal['blemish'], tal['verdict'], tal['why'][:60]))]
+    return []
+
+def scene():
+    """THE SCENE — the chapter's own case and the recorded rows replayed on the world engine (clock unit: days)."""
+    with contextlib.redirect_stdout(io.StringIO()):
+        w = WE.World(era='Lev 24: the blasphemer\'s case and Sanhedrin 7:5, Bava Kamma 8:1 on the engine (clock unit: days)')
+        w.laws = [law_lev24]
+        w.advance(1)
+        w.submit({'kind': 'cursed_the_name', 'subject': 'the-son-of-shelomith', 'curser': 'the-son-of-shelomith', 'name_pronounced': True, 'status': 'native', 'case_source': "Lev 24:11-23 — the chapter's own case: custody, the sentence, the stoning; Mishnah Sanhedrin 7:5"})
+        w.submit({'kind': 'cursed_the_name', 'subject': 'the-curser', 'curser': 'the-curser', 'name_pronounced': False, 'case_source': 'Lev 24:15 — without the Name: bears his sin'})
+        w.advance(2)
+        w.submit({'kind': 'man_struck_dead', 'subject': 'the-killer', 'striker': 'the-killer', 'victim': 'the-infant', 'victim_age': 'day_old', 'case_source': 'Niddah 44b — a day-old victim counts'})
+        w.submit({'kind': 'beast_struck_dead', 'subject': 'the-striker', 'striker': 'the-striker', 'owner': 'the-owner', 'value': 50, 'case_source': 'Lev 24:18 + Bava Kamma 83b:10 — pays beside dies'})
+        w.advance(3)
+        w.submit({'kind': 'blemish_given', 'subject': 'the-maimer', 'striker': 'the-maimer', 'victim': 'his-fellow', 'blemish': 'eye', 'case_source': 'Mishnah Bava Kamma 8:1 — the damage as money'})
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    amt = lambda eid, eff: sum(e['amount'] or 0 for e in w.entity(eid).ledger if e['effect'] == eff)
+    return (n('the-son-of-shelomith', 'stoned'), n('the-curser', 'bears_sin'), n('the-killer', 'put_to_death'), n('the-striker', 'pays'), amt('the-striker', 'pays'), n('the-maimer', 'substitution'), w.clock.year), w
+SCENE, _W = scene()
 
 def main():
     db = sqlite3.connect(DB)
@@ -252,6 +294,16 @@ def main():
     ]
     results.append(grade('one law', 'Mishnah Sanhedrin 4:1', cells))
 
+    # ---- THE WRAP (W1): the scene on the world engine ----------------
+    wrap_cells = [
+        ('THE SCENE on the world engine (the wrap)', SCENE, (1, 1, 1, 1, 50, 1, 3),
+         'RECORDED — the chapter\'s own case (24:11-23: the Name pronounced, stoned) and the rows: 24:15 without the Name bears sin; Niddah 44b the day-old; 24:18 pays fifty; Bava Kamma 8:1 the tariff as money through talion(); the clock ABSOLUTE', 'RECORDED'),
+    ]
+    results.append(grade('THE WRAP — the daemon on the recorded cases', 'Mishnah Sanhedrin 7:5 + Bava Kamma 8:1', wrap_cells))
+    print('WATCH COVERAGE (the wrap):')
+    _W.print_coverage()
+    print()
+
     # ---- summary ----------------------------------------------------
     ok = sum(a for a, _ in results); n = sum(b for _, b in results)
     print('=' * 60)
@@ -289,6 +341,7 @@ def main():
         ('one-law: ONE-PATH',            [FX.NONE]),
         ('one-law: INQUIRY-BOTH',        [FX.NONE]),
         ('one-law: EQUALIZE',            [FX.NONE]),
+        ('THE SCENE (the wrap)',         ['stoned', 'bears_sin', 'put_to_death', 'pays', 'substitution']),
     ]
     print('\nEFFECTS — the state changes each cell writes:')
     used = []

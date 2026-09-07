@@ -71,6 +71,8 @@ pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
 <table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
 <tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(gold_threads, execution_only_process)</span><br><span class="gloss">= WITNESS-READ(gold-threads, execution-only-process)</span><br>THE PROCESS VERSE THE COMMAND NEVER GAVE [claim EX39-01]. They BEAT the gold into plates and CUT it into threads to work into each color (Onkelos Exod 39) — the manufacturing step recorded only on the execution side: the making-account adds process where the spec gave outcome; and the shoham stones engraved with SCRIPT MADE CLEAR — the clear-script token on the memorial names.
 </td><td>—</td><td class='cite'>Onkelos Exod 39</td><td>witnessed</td></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_process_verse_is_the_parameters_seat, the_plate_last_and_the_function_clauses_dropped)</span><br><span class="gloss">= WITNESS-READ(the-process-verse-is-the-parameters-seat, the-plate-last-and-the-function-clauses-dropped)</span><br>THE PROCESS VERSE IS THE PARAMETER&#x27;S SEAT — THE PLATE MADE LAST, THE FUNCTION CLAUSES DROPPED, THE INSPECTION&#x27;S STAMP WITHOUT MOSES [claim EX39-06]. Exodus 39 graded inside World/step9/cold_run_vestments.py as the run of Exodus 28 (196 of 196): this verse — &#x27;they beat the gold plates and cut threads to work into the blue, into the purple, into the crimson, into the fine linen&#x27; — has no spec counterpart and four of its tokens stand nowhere else in the Bible; the tradition derives the gold thread&#x27;s count (four) and its placement (one thread into each color, &#x27;all makings equal&#x27;) from it (Yoma 72a:6-7), and the sixfold thread from this chapter&#x27;s five &#x27;fine linen&#x27; at verses 27-28, the twined eight from the &#x27;twined&#x27; this chapter adds at verse 24: the run&#x27;s added tokens are the spec&#x27;s parameters — move M-22&#x27;s third form. The run&#x27;s order keeps the spec&#x27;s first three (ephod, breastplate, robe) and moves the PLATE from fourth to last, after the tunics, caps, breeches, and sash; &#x27;and he made&#x27; stands singular at exactly the three woven garments (verses 2, 8, 22) and plural at eleven seats; the run adds &#x27;twined&#x27; at three garments, a second &#x27;doubled&#x27; at the breastplate, the sash&#x27;s four materials, the writing verb on the plate (&#x27;they wrote a writing&#x27; for the spec&#x27;s &#x27;engrave&#x27; — Gittin 20b&#x27;s embossed letters), &#x27;of it IT IS&#x27; for &#x27;of it shall be&#x27;, &#x27;above&#x27; for &#x27;the front&#x27;. What the run drops is of one kind: every clause that says what a garment DOES — the names and the judgment borne, the sound heard and the death, the plate&#x27;s propitiation — every &#x27;before the LORD&#x27; (five in the spec, none here), the investiture verse, and the office&#x27;s call; the run is the making alone, the wearing Leviticus 8&#x27;s. The stamp &#x27;as the LORD commanded Moses&#x27; at seven verses and an eighth without &#x27;Moses&#x27; at the inspection, where Moses is the inspector; &#x27;according to all&#x27; twice more; &#x27;and it was completed&#x27; with Genesis 2&#x27;s verb, &#x27;and he blessed them&#x27; with Genesis 1&#x27;s three; the manifest&#x27;s thirty-five marked items fetched at their spec by call into the sanctuary engine (the staves with the ark, the bread with the table, the lamps of the arrangement), the anointing oil, incense, and laver owed to E4. Effects work_completed, inspected_as_commanded, blessed_the_people.
+</td><td>—</td><td class='cite'>Onkelos Exod 39:1-7, Onkelos Exod 39:8-21, Onkelos Exod 39:22-26, Onkelos Exod 39:27-31, Onkelos Exod 39:32, Onkelos Exod 39:33-41, Onkelos Exod 39:42-43, Midrash Tanchuma, Pekudei 11:5, Midrash Tanchuma, Pekudei 11:6, Midrash Tanchuma, Pekudei 11:7, Midrash Tanchuma, Pekudei 11:9, Midrash Tanchuma, Pekudei 11:10, Midrash Tanchuma Buber, Pekudei 6:1, Yoma 71b:6, Yoma 71b:10, Yoma 72a:6, Yoma 72a:7, Zevachim 88b:2, Gittin 20b:1, Mishnah Yoma 7:5, Mishnah Yoma 3:7, Mishnah Tamid 5:3, Mishnah Chagigah 3:8</td><td>witnessed</td></tr>
 </table>
 <div class="meta">Top split head mark L=etnachta (major mid-verse rest); R head mark noted in tree. maps_to this verse only.</div>
 </div>
@@ -2229,217 +2231,297 @@ from machine import Machine
 m = Machine(&quot;exo_39_garments_done&quot;)
 
 # -------------------------- Exod.39.1 · ETNACHTA_SPLIT ---------------------
-# ומן התכלת והארגמן ותולעת השני עשו בגדי שרד לשרת בקדש … ויעשו את בגדי הקדש
-# אשר לאהרן כאשר צוה יהוה את משה
-# &quot;[EN-AID] From top split: LEFT «ומן התכלת והארגמן ותולעת השני עשו בגדי שרד
-# לשרת בקדש» / RIGHT «ויעשו את בגדי הקדש אשר לאהרן כאשר צוה יהוה את משה».
-# Derive claim from Hebrew arms, not English alone. Exod 39:1.&quot;
+# ‹ומן התכלת והארגמן› (“and-from the-cerulean-mussel and-the-purple”)
+# ‹ותולעת השני עשו› (“and-crimson-grub the-crimson make”)
+# ‹בגדי שרד לשרת› (“garment stitching to-attend-as-a-menial”)
+# ‹בקדש … ויעשו את› (“in-holiness … and-make obj-marker”)
+# ‹בגדי הקדש אשר› (“garment the-holiness which”)
+# ‹לאהרן כאשר צוה› (“to-Aaron like-as/which command”)
+# ‹יהוה את משה› (“YHWH obj-marker Moses”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:1.&quot;
 m.step(&quot;Exod.39.1&quot;)
 
 # -------------------------- Exod.39.2 · ETNACHTA_SPLIT ---------------------
-# ויעש את האפד … זהב תכלת וארגמן ותולעת שני ושש משזר
-# &quot;[EN-AID] From top split: LEFT «ויעש את האפד» / RIGHT «זהב תכלת וארגמן
-# ותולעת שני ושש משזר». Derive claim from Hebrew arms, not English alone.
-# Exod 39:2.&quot;
+# ‹ויעש את האפד› (“and-make obj-marker the-girdle”)
+# ‹… זהב תכלת וארגמן› (“gold cerulean-mussel and-purple”)
+# ‹ותולעת שני ושש› (“and-crimson-grub crimson and-bleached-stuff”)
+# ‹משזר› (“twist”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:2.&quot;
 m.step(&quot;Exod.39.2&quot;)
 
 # -------------------------- Exod.39.3 · ETNACHTA_SPLIT ---------------------
-# וירקעו את פחי הזהב וקצץ פתילם לעשות בתוך התכלת ובתוך הארגמן  … מעשה חשב
-# &quot;[EN-AID] From top split: LEFT «וירקעו את פחי הזהב וקצץ פתילם לעשות בתוך
-# התכלת ובתוך הארגמן ובתוך תולעת השני ובת» / RIGHT «מעשה חשב». Derive claim
-# from Hebrew arms, not English alone. Exod 39:3.&quot;
+# ‹וירקעו את פחי› (“and-pound-the-earth obj-marker sheet”)
+# ‹הזהב וקצץ פתילם› (“the-gold and-chop-off twine”)
+# ‹לעשות בתוך התכלת› (“to-make in-midst the-cerulean-mussel”)
+# ‹ובתוך הארגמן … מעשה› (“and-in-midst the-purple … deed/work”)
+# ‹חשב› (“plait”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:3.&quot;
 m.step(&quot;Exod.39.3&quot;)
 # witness-tier presupposed read: execution_only_process on gold_threads —
 # read, not installed
 m.witness_read(&quot;gold_threads&quot;, &quot;execution_only_process&quot;,
                 cites=[&quot;Onkelos Exod 39&quot;])
+# witness-tier presupposed read:
+# the_plate_last_and_the_function_clauses_dropped on
+# the_process_verse_is_the_parameters_seat — read, not installed
+m.witness_read(&quot;the_process_verse_is_the_parameters_seat&quot;, &quot;the_plate_last_and_the_function_clauses_dropped&quot;,
+                cites=[&quot;Onkelos Exod 39:1-7&quot;, &quot;Onkelos Exod 39:8-21&quot;, &quot;Onkelos Exod 39:22-26&quot;, &quot;Onkelos Exod 39:27-31&quot;, &quot;Onkelos Exod 39:32&quot;, &quot;Onkelos Exod 39:33-41&quot;, &quot;Onkelos Exod 39:42-43&quot;, &quot;Midrash Tanchuma, Pekudei 11:5&quot;, &quot;Midrash Tanchuma, Pekudei 11:6&quot;, &quot;Midrash Tanchuma, Pekudei 11:7&quot;, &quot;Midrash Tanchuma, Pekudei 11:9&quot;, &quot;Midrash Tanchuma, Pekudei 11:10&quot;, &quot;Midrash Tanchuma Buber, Pekudei 6:1&quot;, &quot;Yoma 71b:6&quot;, &quot;Yoma 71b:10&quot;, &quot;Yoma 72a:6&quot;, &quot;Yoma 72a:7&quot;, &quot;Zevachim 88b:2&quot;, &quot;Gittin 20b:1&quot;, &quot;Mishnah Yoma 7:5&quot;, &quot;Mishnah Yoma 3:7&quot;, &quot;Mishnah Tamid 5:3&quot;, &quot;Mishnah Chagigah 3:8&quot;])
 
 # -------------------------- Exod.39.4 · ETNACHTA_SPLIT ---------------------
-# כתפת עשו לו חברת … על שני קצוותו קצותיו חבר
-# &quot;[EN-AID] From top split: LEFT «כתפת עשו לו חברת» / RIGHT «על שני קצוותו
-# קצותיו חבר». Derive claim from Hebrew arms, not English alone. Exod 39:4.&quot;
+# ‹כתפת עשו לו› (“shoulder make to-him/its”)
+# ‹חברת … על שני› (“join … over two”)
+# ‹קצוותו קצותיו חבר› (“termination-him/its termination-him/its join”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:4.&quot;
 m.step(&quot;Exod.39.4&quot;)
 
 # -------------------------- Exod.39.5 · ETNACHTA_SPLIT ---------------------
-# וחשב אפדתו אשר עליו ממנו הוא כמעשהו זהב תכלת וארגמן ותולעת ש … כאשר צוה
-# יהוה את משה
-# &quot;[EN-AID] From top split: LEFT «וחשב אפדתו אשר עליו ממנו הוא כמעשהו זהב
-# תכלת וארגמן ותולעת שני ושש משזר» / RIGHT «כאשר צוה יהוה את משה». Derive
-# claim from Hebrew arms, not English alone. Exod 39:5.&quot;
+# ‹וחשב אפדתו אשר› (“and-belt girding-on-him/its which”)
+# ‹עליו ממנו הוא› (“over-him/its from-us/our he/it”)
+# ‹כמעשהו זהב תכלת› (“like-deed/work-him/its gold cerulean-mussel”)
+# ‹וארגמן ותולעת ש› (“and-purple and-crimson-grub ?”)
+# ‹… כאשר צוה יהוה› (“like-as/which command YHWH”)
+# ‹את משה› (“obj-marker Moses”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:5.&quot;
 m.step(&quot;Exod.39.5&quot;)
 
 # -------------------------- Exod.39.6 · ETNACHTA_SPLIT ---------------------
-# ויעשו את אבני השהם מסבת משבצת זהב … מפתחת פתוחי חותם על שמות בני ישראל
-# &quot;[EN-AID] From top split: LEFT «ויעשו את אבני השהם מסבת משבצת זהב» / RIGHT
-# «מפתחת פתוחי חותם על שמות בני ישראל». Derive claim from Hebrew arms, not
-# English alone. Exod 39:6.&quot;
+# ‹ויעשו את אבני› (“and-make obj-marker stone”)
+# ‹השהם מסבת משבצת› (“the-gem reversal brocade”)
+# ‹זהב … מפתחת פתוחי› (“gold … open-wide sculpture”)
+# ‹חותם על שמות› (“signature-ring over name”)
+# ‹בני ישראל› (“son Israel”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:6.&quot;
 m.step(&quot;Exod.39.6&quot;)
 
 # -------------------------- Exod.39.7 · ETNACHTA_SPLIT ---------------------
-# וישם אתם על כתפת האפד אבני זכרון לבני ישראל … כאשר צוה יהוה את משה
-# &quot;[EN-AID] From top split: LEFT «וישם אתם על כתפת האפד אבני זכרון לבני
-# ישראל» / RIGHT «כאשר צוה יהוה את משה». Derive claim from Hebrew arms, not
-# English alone. Exod 39:7.&quot;
+# ‹וישם אתם על› (“and-put/set obj-marker-them/their over”)
+# ‹כתפת האפד אבני› (“shoulder the-girdle stone”)
+# ‹זכרון לבני ישראל› (“memento to-son Israel”)
+# ‹… כאשר צוה יהוה› (“like-as/which command YHWH”)
+# ‹את משה› (“obj-marker Moses”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:7.&quot;
 m.step(&quot;Exod.39.7&quot;)
 
 # -------------------------- Exod.39.8 · ETNACHTA_SPLIT ---------------------
-# ויעש את החשן מעשה חשב כמעשה אפד … זהב תכלת וארגמן ותולעת שני ושש משזר
-# &quot;[EN-AID] From top split: LEFT «ויעש את החשן מעשה חשב כמעשה אפד» / RIGHT
-# «זהב תכלת וארגמן ותולעת שני ושש משזר». Derive claim from Hebrew arms, not
-# English alone. Exod 39:8.&quot;
+# ‹ויעש את החשן› (“and-make obj-marker the-perhaps-a-pocket”)
+# ‹מעשה חשב כמעשה› (“deed/work plait like-deed/work”)
+# ‹אפד … זהב תכלת› (“girdle … gold cerulean-mussel”)
+# ‹וארגמן ותולעת שני› (“and-purple and-crimson-grub crimson”)
+# ‹ושש משזר› (“and-bleached-stuff twist”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:8.&quot;
 m.step(&quot;Exod.39.8&quot;)
 
 # -------------------------- Exod.39.9 · ETNACHTA_SPLIT ---------------------
-# רבוע היה כפול עשו את החשן … זרת ארכו וזרת רחבו כפול
-# &quot;[EN-AID] From top split: LEFT «רבוע היה כפול עשו את החשן» / RIGHT «זרת
-# ארכו וזרת רחבו כפול». Derive claim from Hebrew arms, not English alone.
-# Exod 39:9.&quot;
+# ‹רבוע היה כפול› (“be-quadrate be fold-together”)
+# ‹עשו את החשן› (“make obj-marker the-perhaps-a-pocket”)
+# ‹… זרת ארכו וזרת› (“spread-of-the-fingers length-him/its and-spread-of-
+# the-fingers”)
+# ‹רחבו כפול› (“width-him/its fold-together”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:9.&quot;
 m.step(&quot;Exod.39.9&quot;)
 
 # -------------------------- Exod.39.10 · ETNACHTA_SPLIT --------------------
-# וימלאו בו ארבעה טורי אבן … טור אדם פטדה וברקת הטור האחד
-# &quot;[EN-AID] From top split: LEFT «וימלאו בו ארבעה טורי אבן» / RIGHT «טור אדם
-# פטדה וברקת הטור האחד». Derive claim from Hebrew arms, not English alone.
-# Exod 39:10.&quot;
+# ‹וימלאו בו ארבעה› (“and-fill in-him/its four”)
+# ‹טורי אבן … טור› (“row stone … row”)
+# ‹אדם פטדה וברקת› (“redness gem and-gem”)
+# ‹הטור האחד› (“the-row the-one”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:10.&quot;
 m.step(&quot;Exod.39.10&quot;)
 
 # -------------------------- Exod.39.11 · ETNACHTA_SPLIT --------------------
-# והטור השני … נפך ספיר ויהלם
-# &quot;[EN-AID] From top split: LEFT «והטור השני» / RIGHT «נפך ספיר ויהלם».
-# Derive claim from Hebrew arms, not English alone. Exod 39:11.&quot;
+# ‹והטור השני … נפך› (“and-the-row the-second … shining”)
+# ‹ספיר ויהלם› (“gem and-precious-stone”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:11.&quot;
 m.step(&quot;Exod.39.11&quot;)
 
 # -------------------------- Exod.39.12 · ETNACHTA_SPLIT --------------------
-# והטור השלישי … לשם שבו ואחלמה
-# &quot;[EN-AID] From top split: LEFT «והטור השלישי» / RIGHT «לשם שבו ואחלמה».
-# Derive claim from Hebrew arms, not English alone. Exod 39:12.&quot;
+# ‹והטור השלישי … לשם› (“and-the-row the-third … gem”)
+# ‹שבו ואחלמה› (“gem and-gem”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:12.&quot;
 m.step(&quot;Exod.39.12&quot;)
 
 # -------------------------- Exod.39.13 · ETNACHTA_SPLIT --------------------
-# והטור הרביעי תרשיש שהם וישפה … מוסבת משבצות זהב במלאתם
-# &quot;[EN-AID] From top split: LEFT «והטור הרביעי תרשיש שהם וישפה» / RIGHT
-# «מוסבת משבצות זהב במלאתם». Derive claim from Hebrew arms, not English
-# alone. Exod 39:13.&quot;
+# ‹והטור הרביעי תרשיש› (“and-the-row the-fourth gem”)
+# ‹שהם וישפה … מוסבת› (“gem and-gem-supposed-to-be-jasper … reversal”)
+# ‹משבצות זהב במלאתם› (“brocade gold in-filling-them/their”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:13.&quot;
 m.step(&quot;Exod.39.13&quot;)
 
 # -------------------------- Exod.39.14 · ETNACHTA_SPLIT --------------------
-# והאבנים על שמת בני ישראל הנה שתים עשרה על שמתם … פתוחי חתם איש על שמו
-# לשנים עשר שבט
-# &quot;[EN-AID] From top split: LEFT «והאבנים על שמת בני ישראל הנה שתים עשרה על
-# שמתם» / RIGHT «פתוחי חתם איש על שמו לשנים עשר שבט». Derive claim from
-# Hebrew arms, not English alone. Exod 39:14.&quot;
+# ‹והאבנים על שמת› (“and-the-stone over name”)
+# ‹בני ישראל הנה› (“son Israel themselves”)
+# ‹שתים עשרה על› (“two -teen over”)
+# ‹שמתם … פתוחי חתם› (“name-them/their … sculpture signature-ring”)
+# ‹איש על שמו› (“man over name-him/its”)
+# ‹לשנים עשר שבט› (“to-two -teen scion”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:14.&quot;
 m.step(&quot;Exod.39.14&quot;)
 
 # -------------------------- Exod.39.15 · ETNACHTA_SPLIT --------------------
-# ויעשו על החשן שרשרת גבלת מעשה עבת … זהב טהור
-# &quot;[EN-AID] From top split: LEFT «ויעשו על החשן שרשרת גבלת מעשה עבת» / RIGHT
-# «זהב טהור». Derive claim from Hebrew arms, not English alone. Exod 39:15.&quot;
+# ‹ויעשו על החשן› (“and-make over the-perhaps-a-pocket”)
+# ‹שרשרת גבלת מעשה› (“chain twisted-chain deed/work”)
+# ‹עבת … זהב טהור› (“something-intwined … gold pure”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:15.&quot;
 m.step(&quot;Exod.39.15&quot;)
 
 # -------------------------- Exod.39.16 · ETNACHTA_SPLIT --------------------
-# ויעשו שתי משבצת זהב ושתי טבעת זהב … ויתנו את שתי הטבעת על שני קצות החשן
-# &quot;[EN-AID] From top split: LEFT «ויעשו שתי משבצת זהב ושתי טבעת זהב» / RIGHT
-# «ויתנו את שתי הטבעת על שני קצות החשן». Derive claim from Hebrew arms, not
-# English alone. Exod 39:16.&quot;
+# ‹ויעשו שתי משבצת› (“and-make two brocade”)
+# ‹זהב ושתי טבעת› (“gold and-two seal”)
+# ‹זהב … ויתנו את› (“gold … and-set obj-marker”)
+# ‹שתי הטבעת על› (“two the-seal over”)
+# ‹שני קצות החשן› (“two termination the-perhaps-a-pocket”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:16.&quot;
 m.step(&quot;Exod.39.16&quot;)
 
 # -------------------------- Exod.39.17 · ETNACHTA_SPLIT --------------------
-# ויתנו שתי העבתת הזהב על שתי הטבעת … על קצות החשן
-# &quot;[EN-AID] From top split: LEFT «ויתנו שתי העבתת הזהב על שתי הטבעת» / RIGHT
-# «על קצות החשן». Derive claim from Hebrew arms, not English alone. Exod
-# 39:17.&quot;
+# ‹ויתנו שתי העבתת› (“and-set two the-something-intwined”)
+# ‹הזהב על שתי› (“the-gold over two”)
+# ‹הטבעת … על קצות› (“the-seal … over termination”)
+# ‹החשן› (“the-perhaps-a-pocket”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:17.&quot;
 m.step(&quot;Exod.39.17&quot;)
 
 # -------------------------- Exod.39.18 · ETNACHTA_SPLIT --------------------
-# ואת שתי קצות שתי העבתת נתנו על שתי המשבצת … ויתנם על כתפת האפד אל מול פניו
-# &quot;[EN-AID] From top split: LEFT «ואת שתי קצות שתי העבתת נתנו על שתי המשבצת»
-# / RIGHT «ויתנם על כתפת האפד אל מול פניו». Derive claim from Hebrew arms,
-# not English alone. Exod 39:18.&quot;
+# ‹ואת שתי קצות› (“and-obj-marker two termination”)
+# ‹שתי העבתת נתנו› (“two the-something-intwined set”)
+# ‹על שתי המשבצת› (“over two the-brocade”)
+# ‹… ויתנם על כתפת› (“and-set-them/their over shoulder”)
+# ‹האפד אל מול› (“the-girdle to abrupt”)
+# ‹פניו› (“face-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:18.&quot;
 m.step(&quot;Exod.39.18&quot;)
 
 # -------------------------- Exod.39.19 · ETNACHTA_SPLIT --------------------
-# ויעשו שתי טבעת זהב וישימו על שני קצות החשן … על שפתו אשר אל עבר האפד ביתה
-# &quot;[EN-AID] From top split: LEFT «ויעשו שתי טבעת זהב וישימו על שני קצות
-# החשן» / RIGHT «על שפתו אשר אל עבר האפד ביתה». Derive claim from Hebrew
+# ‹ויעשו שתי טבעת› (“and-make two seal”)
+# ‹זהב וישימו על› (“gold and-put/set over”)
+# ‹שני קצות החשן› (“two termination the-perhaps-a-pocket”)
+# ‹… על שפתו אשר› (“over lip-him/its which”)
+# ‹אל עבר האפד› (“to region-across the-girdle”)
+# ‹ביתה› (“house-ward”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 39:19.&quot;
 m.step(&quot;Exod.39.19&quot;)
 
 # -------------------------- Exod.39.20 · ETNACHTA_SPLIT --------------------
-# ויעשו שתי טבעת זהב ויתנם על שתי כתפת האפד מלמטה ממול פניו לע … ממעל לחשב
-# האפד
-# &quot;[EN-AID] From top split: LEFT «ויעשו שתי טבעת זהב ויתנם על שתי כתפת האפד
-# מלמטה ממול פניו לעמת מחברתו» / RIGHT «ממעל לחשב האפד». Derive claim from
-# Hebrew arms, not English alone. Exod 39:20.&quot;
+# ‹ויעשו שתי טבעת› (“and-make two seal”)
+# ‹זהב ויתנם על› (“gold and-set-them/their over”)
+# ‹שתי כתפת האפד› (“two shoulder the-girdle”)
+# ‹מלמטה ממול פניו› (“from-to-downward from-abrupt face-him/its”)
+# ‹לע … ממעל לחשב› (“? … from-upper-part to-belt”)
+# ‹האפד› (“the-girdle”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:20.&quot;
 m.step(&quot;Exod.39.20&quot;)
 
 # -------------------------- Exod.39.21 · ETNACHTA_SPLIT --------------------
-# וירכסו את החשן מטבעתיו אל טבעת האפד בפתיל תכלת להית על חשב ה … כאשר צוה
-# יהוה את משה
-# &quot;[EN-AID] From top split: LEFT «וירכסו את החשן מטבעתיו אל טבעת האפד בפתיל
-# תכלת להית על חשב האפד ולא יזח החשן מעל» / RIGHT «כאשר צוה יהוה את משה».
-# Derive claim from Hebrew arms, not English alone. Exod 39:21.&quot;
+# ‹וירכסו את החשן› (“and-tie obj-marker the-perhaps-a-pocket”)
+# ‹מטבעתיו אל טבעת› (“from-seal-him/its to seal”)
+# ‹האפד בפתיל תכלת› (“the-girdle in-twine cerulean-mussel”)
+# ‹להית על חשב› (“to-be over belt”)
+# ‹ה … כאשר צוה› (“the … like-as/which command”)
+# ‹יהוה את משה› (“YHWH obj-marker Moses”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:21.&quot;
 m.step(&quot;Exod.39.21&quot;)
 
 # -------------------------- Exod.39.22 · ETNACHTA_SPLIT --------------------
-# ויעש את מעיל האפד מעשה ארג … כליל תכלת
-# &quot;[EN-AID] From top split: LEFT «ויעש את מעיל האפד מעשה ארג» / RIGHT «כליל
-# תכלת». Derive claim from Hebrew arms, not English alone. Exod 39:22.&quot;
+# ‹ויעש את מעיל› (“and-make obj-marker robe”)
+# ‹האפד מעשה ארג› (“the-girdle deed/work plait”)
+# ‹… כליל תכלת› (“complete cerulean-mussel”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:22.&quot;
 m.step(&quot;Exod.39.22&quot;)
 
 # -------------------------- Exod.39.23 · ETNACHTA_SPLIT --------------------
-# ופי המעיל בתוכו כפי תחרא … שפה לפיו סביב לא יקרע
-# &quot;[EN-AID] From top split: LEFT «ופי המעיל בתוכו כפי תחרא» / RIGHT «שפה
-# לפיו סביב לא יקרע». Derive claim from Hebrew arms, not English alone. Exod
-# 39:23.&quot;
+# ‹ופי המעיל בתוכו› (“and-mouth the-robe in-midst-him/its”)
+# ‹כפי תחרא … שפה› (“like-mouth linen-corslet … lip”)
+# ‹לפיו סביב לא› (“to-mouth-him/its circle not”)
+# ‹יקרע› (“rend”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:23.&quot;
 m.step(&quot;Exod.39.23&quot;)
 
 # -------------------------- Exod.39.24 · ETNACHTA_SPLIT --------------------
-# ויעשו על שולי המעיל רמוני תכלת וארגמן ותולעת שני
-# &quot;[EN-AID] From top split: LEFT «ויעשו על שולי המעיל רמוני תכלת וארגמן
-# ותולעת שני» / RIGHT «». Derive claim from Hebrew arms, not English alone.
-# Exod 39:24.&quot;
+# ‹ויעשו על שולי› (“and-make over skirt”)
+# ‹המעיל רמוני תכלת› (“the-robe pomegranate cerulean-mussel”)
+# ‹וארגמן ותולעת שני› (“and-purple and-crimson-grub crimson”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms, not English alone. Exod 39:24.&quot;
 m.step(&quot;Exod.39.24&quot;)
 
 # -------------------------- Exod.39.25 · ETNACHTA_SPLIT --------------------
-# ויעשו פעמני זהב טהור … ויתנו את הפעמנים בתוך הרמנים על שולי המעיל סביב
-# בתוך הרמנים
-# &quot;[EN-AID] From top split: LEFT «ויעשו פעמני זהב טהור» / RIGHT «ויתנו את
-# הפעמנים בתוך הרמנים על שולי המעיל סביב בתוך הרמנים». Derive claim from
-# Hebrew arms, not English alone. Exod 39:25.&quot;
+# ‹ויעשו פעמני זהב› (“and-make bell gold”)
+# ‹טהור … ויתנו את› (“pure … and-set obj-marker”)
+# ‹הפעמנים בתוך הרמנים› (“the-bell in-midst the-pomegranate”)
+# ‹על שולי המעיל› (“over skirt the-robe”)
+# ‹סביב בתוך הרמנים› (“circle in-midst the-pomegranate”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:25.&quot;
 m.step(&quot;Exod.39.25&quot;)
 
 # -------------------------- Exod.39.26 · ETNACHTA_SPLIT --------------------
-# פעמן ורמן פעמן ורמן על שולי המעיל סביב … לשרת כאשר צוה יהוה את משה
-# &quot;[EN-AID] From top split: LEFT «פעמן ורמן פעמן ורמן על שולי המעיל סביב» /
-# RIGHT «לשרת כאשר צוה יהוה את משה». Derive claim from Hebrew arms, not
-# English alone. Exod 39:26.&quot;
+# ‹פעמן ורמן פעמן› (“bell and-pomegranate bell”)
+# ‹ורמן על שולי› (“and-pomegranate over skirt”)
+# ‹המעיל סביב … לשרת› (“the-robe circle … to-attend-as-a-menial”)
+# ‹כאשר צוה יהוה› (“like-as/which command YHWH”)
+# ‹את משה› (“obj-marker Moses”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:26.&quot;
 m.step(&quot;Exod.39.26&quot;)
 
 # -------------------------- Exod.39.27 · ETNACHTA_SPLIT --------------------
-# ויעשו את הכתנת שש מעשה ארג … לאהרן ולבניו
-# &quot;[EN-AID] From top split: LEFT «ויעשו את הכתנת שש מעשה ארג» / RIGHT «לאהרן
-# ולבניו». Derive claim from Hebrew arms, not English alone. Exod 39:27.&quot;
+# ‹ויעשו את הכתנת› (“and-make obj-marker the-shirt”)
+# ‹שש מעשה ארג› (“bleached-stuff deed/work plait”)
+# ‹… לאהרן ולבניו› (“to-Aaron and-to-son-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:27.&quot;
 m.step(&quot;Exod.39.27&quot;)
 
 # -------------------------- Exod.39.28 · ETNACHTA_SPLIT --------------------
-# ואת המצנפת שש ואת פארי המגבעת שש … ואת מכנסי הבד שש משזר
-# &quot;[EN-AID] From top split: LEFT «ואת המצנפת שש ואת פארי המגבעת שש» / RIGHT
-# «ואת מכנסי הבד שש משזר». Derive claim from Hebrew arms, not English alone.
-# Exod 39:28.&quot;
+# ‹ואת המצנפת שש› (“and-obj-marker the-tiara bleached-stuff”)
+# ‹ואת פארי המגבעת› (“and-obj-marker embellishment the-cap”)
+# ‹שש … ואת מכנסי› (“bleached-stuff … and-obj-marker drawers”)
+# ‹הבד שש משזר› (“the-flaxen-thread bleached-stuff twist”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:28.&quot;
 m.step(&quot;Exod.39.28&quot;)
 
 # -------------------------- Exod.39.29 · ETNACHTA_SPLIT --------------------
-# ואת האבנט שש משזר ותכלת וארגמן ותולעת שני מעשה רקם … כאשר צוה יהוה את משה
-# &quot;[EN-AID] From top split: LEFT «ואת האבנט שש משזר ותכלת וארגמן ותולעת שני
-# מעשה רקם» / RIGHT «כאשר צוה יהוה את משה». Derive claim from Hebrew arms,
-# not English alone. Exod 39:29.&quot;
+# ‹ואת האבנט שש› (“and-obj-marker the-belt bleached-stuff”)
+# ‹משזר ותכלת וארגמן› (“twist and-cerulean-mussel and-purple”)
+# ‹ותולעת שני מעשה› (“and-crimson-grub crimson deed/work”)
+# ‹רקם … כאשר צוה› (“variegate-color … like-as/which command”)
+# ‹יהוה את משה› (“YHWH obj-marker Moses”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:29.&quot;
 m.step(&quot;Exod.39.29&quot;)
 
 # -------------------------- Exod.39.30 · ETNACHTA_SPLIT --------------------
-# ויעשו את ציץ נזר הקדש זהב טהור … ויכתבו עליו מכתב פתוחי חותם קדש ליהוה
-# &quot;[EN-AID] From top split: LEFT «ויעשו את ציץ נזר הקדש זהב טהור» / RIGHT
-# «ויכתבו עליו מכתב פתוחי חותם קדש ליהוה». Derive claim from Hebrew arms,
-# not English alone. Exod 39:30.&quot;
+# ‹ויעשו את ציץ› (“and-make obj-marker glistening”)
+# ‹נזר הקדש זהב› (“something-set-apart the-holiness gold”)
+# ‹טהור … ויכתבו עליו› (“pure … and-grave over-him/its”)
+# ‹מכתב פתוחי חותם› (“thing-written sculpture signature-ring”)
+# ‹קדש ליהוה› (“holiness to-YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:30.&quot;
 m.step(&quot;Exod.39.30&quot;)
 # witness-tier presupposed read: negatives_executed on plate_engraved —
 # read, not installed
@@ -2447,18 +2529,25 @@ m.witness_read(&quot;plate_engraved&quot;, &quot;negatives_executed&quot;,
                 cites=[&quot;Onkelos Exod 39&quot;])
 
 # -------------------------- Exod.39.31 · ETNACHTA_SPLIT --------------------
-# ויתנו עליו פתיל תכלת לתת על המצנפת מלמעלה … כאשר צוה יהוה את משה
-# &quot;[EN-AID] From top split: LEFT «ויתנו עליו פתיל תכלת לתת על המצנפת מלמעלה»
-# / RIGHT «כאשר צוה יהוה את משה». Derive claim from Hebrew arms, not English
-# alone. Exod 39:31.&quot;
+# ‹ויתנו עליו פתיל› (“and-set over-him/its twine”)
+# ‹תכלת לתת על› (“cerulean-mussel to-set over”)
+# ‹המצנפת מלמעלה … כאשר› (“the-tiara from-to-upper-part-ward … like-
+# as/which”)
+# ‹צוה יהוה את› (“command YHWH obj-marker”)
+# ‹משה› (“Moses”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:31.&quot;
 m.step(&quot;Exod.39.31&quot;)
 
 # -------------------------- Exod.39.32 · ETNACHTA_SPLIT --------------------
-# ותכל כל עבדת משכן אהל מועד … ויעשו בני ישראל ככל אשר צוה יהוה את משה כן
-# עשו
-# &quot;[EN-AID] From top split: LEFT «ותכל כל עבדת משכן אהל מועד» / RIGHT «ויעשו
-# בני ישראל ככל אשר צוה יהוה את משה כן עשו». Derive claim from Hebrew arms,
-# not English alone. Exod 39:32.&quot;
+# ‹ותכל כל עבדת› (“and-be-complete all service/work”)
+# ‹משכן אהל מועד› (“tabernacle tent seasons”)
+# ‹… ויעשו בני ישראל› (“and-make son Israel”)
+# ‹ככל אשר צוה› (“like-all which command”)
+# ‹יהוה את משה› (“YHWH obj-marker Moses”)
+# ‹כן עשו› (“so make”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:32.&quot;
 m.step(&quot;Exod.39.32&quot;)
 # witness-tier presupposed read: tabernacle_equals_creation on
 # work_completed — read, not installed
@@ -2466,11 +2555,14 @@ m.witness_read(&quot;work_completed&quot;, &quot;tabernacle_equals_creation&quot
                 cites=[&quot;Midrash Tanchuma, Pekudei 2:3&quot;, &quot;Onkelos Exod 39&quot;])
 
 # -------------------------- Exod.39.33 · ETNACHTA_SPLIT --------------------
-# ויביאו את המשכן אל משה את האהל ואת כל כליו … קרסיו קרשיו בריחו בריחיו
-# ועמדיו ואדניו
-# &quot;[EN-AID] From top split: LEFT «ויביאו את המשכן אל משה את האהל ואת כל
-# כליו» / RIGHT «קרסיו קרשיו בריחו בריחיו ועמדיו ואדניו». Derive claim from
-# Hebrew arms, not English alone. Exod 39:33.&quot;
+# ‹ויביאו את המשכן› (“and-come/bring obj-marker the-tabernacle”)
+# ‹אל משה את› (“to Moses obj-marker”)
+# ‹האהל ואת כל› (“the-tent and-obj-marker all”)
+# ‹כליו … קרסיו קרשיו› (“vessel-him/its … knob-him/its slab-him/its”)
+# ‹בריחו בריחיו ועמדיו› (“bolt-him/its bolt-him/its and-column-him/its”)
+# ‹ואדניו› (“and-basis-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:33.&quot;
 m.step(&quot;Exod.39.33&quot;)
 # witness-tier presupposed read: erection_deadlock on delivery_manifest —
 # read, not installed
@@ -2478,72 +2570,102 @@ m.witness_read(&quot;delivery_manifest&quot;, &quot;erection_deadlock&quot;,
                 cites=[&quot;Midrash Tanchuma Buber, Pekudei 6:1&quot;, &quot;Midrash Tanchuma, Pekudei 11:5&quot;, &quot;Onkelos Exod 39&quot;])
 
 # -------------------------- Exod.39.34 · ETNACHTA_SPLIT --------------------
-# ואת מכסה עורת האילם המאדמים ואת מכסה ערת התחשים … ואת פרכת המסך
-# &quot;[EN-AID] From top split: LEFT «ואת מכסה עורת האילם המאדמים ואת מכסה ערת
-# התחשים» / RIGHT «ואת פרכת המסך». Derive claim from Hebrew arms, not
-# English alone. Exod 39:34.&quot;
+# ‹ואת מכסה עורת› (“and-obj-marker covering skin”)
+# ‹האילם המאדמים ואת› (“the-ram the-flush and-obj-marker”)
+# ‹מכסה ערת התחשים› (“covering skin the-animal-with-fur”)
+# ‹… ואת פרכת המסך› (“and-obj-marker separatrix the-cover”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:34.&quot;
 m.step(&quot;Exod.39.34&quot;)
 
 # -------------------------- Exod.39.35 · ETNACHTA_SPLIT --------------------
-# את ארן העדת ואת בדיו … ואת הכפרת
-# &quot;[EN-AID] From top split: LEFT «את ארן העדת ואת בדיו» / RIGHT «ואת הכפרת».
-# Derive claim from Hebrew arms, not English alone. Exod 39:35.&quot;
+# ‹את ארן העדת› (“obj-marker ark the-testimony”)
+# ‹ואת בדיו … ואת› (“and-obj-marker separation-him/its … and-obj-marker”)
+# ‹הכפרת› (“the-lid”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:35.&quot;
 m.step(&quot;Exod.39.35&quot;)
 
 # -------------------------- Exod.39.36 · TREE_CLAIM ------------------------
-# את השלחן את כל כליו … ואת לחם הפנים
-# &quot;[EN-AID] From top split: LEFT «את השלחן את כל כליו» / RIGHT «ואת לחם
-# הפנים». Derive claim from Hebrew arms, not English alone. Exod 39:36.&quot;
+# ‹את השלחן את› (“obj-marker the-table obj-marker”)
+# ‹כל כליו … ואת› (“all vessel-him/its … and-obj-marker”)
+# ‹לחם הפנים› (“food the-face”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:36.&quot;
 m.step(&quot;Exod.39.36&quot;)
 
 # -------------------------- Exod.39.37 · ETNACHTA_SPLIT --------------------
-# את המנרה הטהרה את נרתיה נרת המערכה ואת כל כליה … ואת שמן המאור
-# &quot;[EN-AID] From top split: LEFT «את המנרה הטהרה את נרתיה נרת המערכה ואת כל
-# כליה» / RIGHT «ואת שמן המאור». Derive claim from Hebrew arms, not English
-# alone. Exod 39:37.&quot;
+# ‹את המנרה הטהרה› (“obj-marker the-chandelier the-pure”)
+# ‹את נרתיה נרת› (“obj-marker lamp-her/its lamp”)
+# ‹המערכה ואת כל› (“the-arrangement and-obj-marker all”)
+# ‹כליה … ואת שמן› (“vessel-her/its … and-obj-marker oil”)
+# ‹המאור› (“the-lights”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:37.&quot;
 m.step(&quot;Exod.39.37&quot;)
 
 # -------------------------- Exod.39.38 · ETNACHTA_SPLIT --------------------
-# ואת מזבח הזהב ואת שמן המשחה ואת קטרת הסמים … ואת מסך פתח האהל
-# &quot;[EN-AID] From top split: LEFT «ואת מזבח הזהב ואת שמן המשחה ואת קטרת
-# הסמים» / RIGHT «ואת מסך פתח האהל». Derive claim from Hebrew arms, not
-# English alone. Exod 39:38.&quot;
+# ‹ואת מזבח הזהב› (“and-obj-marker altar the-gold”)
+# ‹ואת שמן המשחה› (“and-obj-marker oil the-unction”)
+# ‹ואת קטרת הסמים› (“and-obj-marker fumigation the-aroma”)
+# ‹… ואת מסך פתח› (“and-obj-marker cover opening”)
+# ‹האהל› (“the-tent”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:38.&quot;
 m.step(&quot;Exod.39.38&quot;)
 
 # -------------------------- Exod.39.39 · ETNACHTA_SPLIT --------------------
-# את מזבח הנחשת ואת מכבר הנחשת אשר לו את בדיו ואת כל כליו … את הכיר ואת כנו
-# &quot;[EN-AID] From top split: LEFT «את מזבח הנחשת ואת מכבר הנחשת אשר לו את
-# בדיו ואת כל כליו» / RIGHT «את הכיר ואת כנו». Derive claim from Hebrew
+# ‹את מזבח הנחשת› (“obj-marker altar the-copper”)
+# ‹ואת מכבר הנחשת› (“and-obj-marker grate the-copper”)
+# ‹אשר לו את› (“which to-him/its obj-marker”)
+# ‹בדיו ואת כל› (“separation-him/its and-obj-marker all”)
+# ‹כליו … את הכיר› (“vessel-him/its … obj-marker the-something-round”)
+# ‹ואת כנו› (“and-obj-marker stand-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
 # arms, not English alone. Exod 39:39.&quot;
 m.step(&quot;Exod.39.39&quot;)
 
 # -------------------------- Exod.39.40 · ETNACHTA_SPLIT --------------------
-# את קלעי החצר את עמדיה ואת אדניה ואת המסך לשער החצר את מיתריו … ואת כל כלי
-# עבדת המשכן לאהל מועד
-# &quot;[EN-AID] From top split: LEFT «את קלעי החצר את עמדיה ואת אדניה ואת המסך
-# לשער החצר את מיתריו ויתדתיה» / RIGHT «ואת כל כלי עבדת המשכן לאהל מועד».
-# Derive claim from Hebrew arms, not English alone. Exod 39:40.&quot;
+# ‹את קלעי החצר› (“obj-marker sling the-yard”)
+# ‹את עמדיה ואת› (“obj-marker column-her/its and-obj-marker”)
+# ‹אדניה ואת המסך› (“basis-her/its and-obj-marker the-cover”)
+# ‹לשער החצר את› (“to-gate the-yard obj-marker”)
+# ‹מיתריו … ואת כל› (“cord-him/its … and-obj-marker all”)
+# ‹כלי עבדת המשכן› (“vessel service/work the-tabernacle”)
+# ‹לאהל מועד› (“to-tent seasons”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:40.&quot;
 m.step(&quot;Exod.39.40&quot;)
 
 # -------------------------- Exod.39.41 · ETNACHTA_SPLIT --------------------
-# את בגדי השרד לשרת בקדש … את בגדי הקדש לאהרן הכהן ואת בגדי בניו לכהן
-# &quot;[EN-AID] From top split: LEFT «את בגדי השרד לשרת בקדש» / RIGHT «את בגדי
-# הקדש לאהרן הכהן ואת בגדי בניו לכהן». Derive claim from Hebrew arms, not
-# English alone. Exod 39:41.&quot;
+# ‹את בגדי השרד› (“obj-marker garment the-stitching”)
+# ‹לשרת בקדש … את› (“to-attend-as-a-menial in-holiness … obj-marker”)
+# ‹בגדי הקדש לאהרן› (“garment the-holiness to-Aaron”)
+# ‹הכהן ואת בגדי› (“the-priest and-obj-marker garment”)
+# ‹בניו לכהן› (“son-him/its to-officiate-as-a-priest”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:41.&quot;
 m.step(&quot;Exod.39.41&quot;)
 
 # -------------------------- Exod.39.42 · ETNACHTA_SPLIT --------------------
-# ככל אשר צוה יהוה את משה … כן עשו בני ישראל את כל העבדה
-# &quot;[EN-AID] From top split: LEFT «ככל אשר צוה יהוה את משה» / RIGHT «כן עשו
-# בני ישראל את כל העבדה». Derive claim from Hebrew arms, not English alone.
-# Exod 39:42.&quot;
+# ‹ככל אשר צוה› (“like-all which command”)
+# ‹יהוה את משה› (“YHWH obj-marker Moses”)
+# ‹… כן עשו בני› (“so make son”)
+# ‹ישראל את כל› (“Israel obj-marker all”)
+# ‹העבדה› (“the-service/work”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:42.&quot;
 m.step(&quot;Exod.39.42&quot;)
 
 # -------------------------- Exod.39.43 · ETNACHTA_SPLIT --------------------
-# וירא משה את כל המלאכה והנה עשו אתה כאשר צוה יהוה כן עשו … ויברך אתם משה
-# &quot;[EN-AID] From top split: LEFT «וירא משה את כל המלאכה והנה עשו אתה כאשר
-# צוה יהוה כן עשו» / RIGHT «ויברך אתם משה». Derive claim from Hebrew arms,
-# not English alone. Exod 39:43.&quot;
+# ‹וירא משה את› (“and-see Moses obj-marker”)
+# ‹כל המלאכה והנה› (“all the-work and-behold”)
+# ‹עשו אתה כאשר› (“make obj-marker-her/its like-as/which”)
+# ‹צוה יהוה כן› (“command YHWH so”)
+# ‹עשו … ויברך אתם› (“make … and-bless obj-marker-them/their”)
+# ‹משה› (“Moses”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms, not English alone. Exod 39:43.&quot;
 m.step(&quot;Exod.39.43&quot;)
 # witness-tier presupposed read: countersignature_refrain on
 # inspection_blessing — read, not installed
@@ -2566,22 +2688,25 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;invariants&quot;] == []
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 0
-    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;gold_threads&#x27;, &#x27;execution_only_process&#x27;), (&#x27;plate_engraved&#x27;, &#x27;negatives_executed&#x27;), (&#x27;work_completed&#x27;, &#x27;tabernacle_equals_creation&#x27;), (&#x27;delivery_manifest&#x27;, &#x27;erection_deadlock&#x27;), (&#x27;inspection_blessing&#x27;, &#x27;countersignature_refrain&#x27;)]
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;gold_threads&#x27;, &#x27;execution_only_process&#x27;), (&#x27;the_process_verse_is_the_parameters_seat&#x27;, &#x27;the_plate_last_and_the_function_clauses_dropped&#x27;), (&#x27;plate_engraved&#x27;, &#x27;negatives_executed&#x27;), (&#x27;work_completed&#x27;, &#x27;tabernacle_equals_creation&#x27;), (&#x27;delivery_manifest&#x27;, &#x27;erection_deadlock&#x27;), (&#x27;inspection_blessing&#x27;, &#x27;countersignature_refrain&#x27;)]
     assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Onkelos Exod 39&#x27;]
     assert all(&#x27;execution_only_process&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;gold_threads&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Onkelos Exod 39&#x27;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Onkelos Exod 39:1-7&#x27;, &#x27;Onkelos Exod 39:8-21&#x27;, &#x27;Onkelos Exod 39:22-26&#x27;, &#x27;Onkelos Exod 39:27-31&#x27;, &#x27;Onkelos Exod 39:32&#x27;, &#x27;Onkelos Exod 39:33-41&#x27;, &#x27;Onkelos Exod 39:42-43&#x27;, &#x27;Midrash Tanchuma, Pekudei 11:5&#x27;, &#x27;Midrash Tanchuma, Pekudei 11:6&#x27;, &#x27;Midrash Tanchuma, Pekudei 11:7&#x27;, &#x27;Midrash Tanchuma, Pekudei 11:9&#x27;, &#x27;Midrash Tanchuma, Pekudei 11:10&#x27;, &#x27;Midrash Tanchuma Buber, Pekudei 6:1&#x27;, &#x27;Yoma 71b:6&#x27;, &#x27;Yoma 71b:10&#x27;, &#x27;Yoma 72a:6&#x27;, &#x27;Yoma 72a:7&#x27;, &#x27;Zevachim 88b:2&#x27;, &#x27;Gittin 20b:1&#x27;, &#x27;Mishnah Yoma 7:5&#x27;, &#x27;Mishnah Yoma 3:7&#x27;, &#x27;Mishnah Tamid 5:3&#x27;, &#x27;Mishnah Chagigah 3:8&#x27;]
+    assert all(&#x27;the_plate_last_and_the_function_clauses_dropped&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_process_verse_is_the_parameters_seat&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Onkelos Exod 39&#x27;]
     assert all(&#x27;negatives_executed&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;plate_engraved&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Pekudei 2:3&#x27;, &#x27;Onkelos Exod 39&#x27;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Pekudei 2:3&#x27;, &#x27;Onkelos Exod 39&#x27;]
     assert all(&#x27;tabernacle_equals_creation&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;work_completed&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Midrash Tanchuma Buber, Pekudei 6:1&#x27;, &#x27;Midrash Tanchuma, Pekudei 11:5&#x27;, &#x27;Onkelos Exod 39&#x27;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Midrash Tanchuma Buber, Pekudei 6:1&#x27;, &#x27;Midrash Tanchuma, Pekudei 11:5&#x27;, &#x27;Onkelos Exod 39&#x27;]
     assert all(&#x27;erection_deadlock&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;delivery_manifest&#x27; not in m.WORLD[&quot;witnessed&quot;]
-    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Pekudei 10:1&#x27;, &#x27;Midrash Tanchuma, Pekudei 11:9&#x27;, &#x27;Mishnah Gittin 5:8&#x27;, &#x27;Onkelos Exod 39&#x27;, &#x27;Tosefta Menahot 7:2&#x27;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Midrash Tanchuma, Pekudei 10:1&#x27;, &#x27;Midrash Tanchuma, Pekudei 11:9&#x27;, &#x27;Mishnah Gittin 5:8&#x27;, &#x27;Onkelos Exod 39&#x27;, &#x27;Tosefta Menahot 7:2&#x27;]
     assert all(&#x27;countersignature_refrain&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
     assert &#x27;inspection_blessing&#x27; not in m.WORLD[&quot;witnessed&quot;]
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">Tree-derived v1 (phase 2f). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-02 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">Tree-derived v1 (phase 2f). One STEP per verse from top-split arms. Not binding religious law. Finer TIR/Oral deepen still open.</div><p class='meta'>Rendered 2026-09-06 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

@@ -1208,6 +1208,578 @@ majority_decides, unloading_owed. Seats F-233..F-236 (EX22-19,
 EX23-16, EX23B-03 — the manifest stratum held an EX23B-02, the ceiling
 checked in both strata — and EX20-24); standing 1746; E1 checked off;
 the sweep 27 of 27 at 2108 cells.
+THE TWENTY-FIRST SPAN (2026-09-06, sitting E2 of the debt — the second
+of Exodus's five; the owner: "go e2"): cold_run_sanctuary_build.py —
+THE SANCTUARY SPEC GRADED AGAINST ITS OWN CONSTRUCTION RUN, Exod
+25:1-27:21 (three units, the spec) and 35:30-38:31 (three units, the
+run) compiled in one runner against Mishnah Middot read WHOLE (the
+descendant floor plan as data), Shekalim 4-6, Yoma 5, Kelim 1, and
+Menachot 11 and Tamid 3 (credited from L5) with ten topic rows and the
+fifteen link rows (109 rows, coverage computed; 133 Talmud addresses
+indexed, 20 opened PER GAP: 257 of 257 ON THE FIRST GRADED RUN) —
+honest fractions 142 ink (55%) / 65 recorded / 26 answer-sheet / 6
+data / 18 imports, the highest ink share of any runner because the
+spec's cells are measures and the run's are verbs. THE CENSUS CAME
+FIRST: three required edges and two pointers dispositioned before a
+cell (the eleven 'under' tokens a homograph; the offering engine at the
+run's 'altar of the burnt offering'; the Tzav engine's perpetual fire
+on the wooden altar; 26:30 and 27:8's shown-pattern pointers INTERNAL),
+four more declared for the live calls (the sin-offering engine's horns
+above the red line, the priesthood engine's lamp and table at their law
+seat, the ordinances engine's ramp and earth fill) — AND THE GATE'S
+VOCABULARY EXTENDED: the run builds the incense altar, the laver, the
+anointing oil, and counts the half-shekel silver, whose spec is Exod 30
+(E4); the census could not see them, so four type tokens were added
+and the edge dispositioned OWED — `--debt` prints one edge, honestly,
+until E4 compiles the callee. The headline: THE RUN BUILDS THE HOUSE
+BEFORE THE ARK, AND THE TRADITION SAYS THE RUN IS RIGHT — the spec
+writes the vessels first (25:10) and the house after (26:1), the run
+the curtains first (36:8) and the ark at 37:1; no verse explains it, so
+the gap went to Berakhot 55a:12: God said tabernacle, ark, vessels;
+Moses reversed it; Bezalel restored it ('a man builds a house and then
+brings in vessels... perhaps you were in God's shadow') — the run's
+order is the original, the spec's written order the messenger's
+inversion; the spine's recension (Tanchuma Vayakhel 6:5) carries the
+roles reversed, both tracks kept: move M-22 in its second form (at D8
+the run gave the spec a column; here its ORDER). Beside it THE RUN IS
+THE MAKING ALONE: the alignment engine matched every run verse to its
+spec verse by token — 89 spec verses, 74 run verses, 24 dropped, and
+every dropped verse a USE clause (the staves never removed, the
+testimony, the meeting, the bread, the lighting, the veil dividing, the
+placements, the oil) or a SHOWN-PATTERN clause (four seats, each a
+hapax); what the run adds is the pillars' silver heads (38:17, 38:19 —
+no 'their heads' in Exod 27; 38:28's books confirm it), the lamps
+counted in the making verse, 'one to one' at five seats for the spec's
+'a woman to her sister' at five, and ONE named maker among
+thirty-seven 'and he made'. AND THE ARITHMETIC CLOSES FROM THE INK:
+ten curtains of four = forty = thirty plus ten of height; the goat-hair
+forty-four's extra four exactly the doubled front and the hanging half,
+thirty against twenty-eight exactly the cubit each side (26:12-13
+verified, then dropped by the run); 96 + 4 sockets = the accounts'
+hundred, 'a talent a socket' a hapax; the court's 280 + 20 = 300 = the
+perimeter, five thousand square cubits whose root is Eruvin 2:5's
+'seventy and a remainder'; THE TALENT COMPUTED at 3,000 shekels from
+603,550 half-shekels against a hundred talents and 1,775 (Bekhorot 5a's
+double maneh reproduced from the bronze's 2,400); the veil at twenty
+making the Holy of Holies a cube of ten, Solomon's a cube of twenty;
+the table's two cubits by one under Kelim 17:10's two cubits
+reproducing Menachot 11:5's two arms. The altar: the red line by two
+calls (the horns above, 'two that are four' below); the BASE at no
+seat of the spec or the run, named by its use in the offering code
+(Exod 29:12, Lev 4:7); named 'of the burnt offering' only in the run,
+first at 30:28; the width-and-height fork of Zevachim 59b-60a. NINE
+effects discovered (the registry at 154): set_apart_before_me,
+surplus_to_the_house, presence_dwells and meeting_appointed (promised
+at the spec, UNFIRED — the run ends at 38:31; E5 fires them),
+staves_fixed, bringing_halted, made_one, veil_divides,
+accounts_rendered; THE SCENE on the world engine checkpointed (2, 1,
+1, 1, 1, 1, 1, 0, 0, 17). Seats F-237..F-242 (EX25-15, EX26-08,
+EX27-11, EX36-09, EX37-07, EX38-09); standing 1752; E2 checked off;
+the sweep 28 of 28 at 2365 cells; ⚠ E4's runner must be named
+cold_run_incense_shekel.py (COMPILE_DEBT.md's E4 line).
+THE TWENTY-SECOND SPAN (2026-09-06, sitting E3 of the debt — the third
+of Exodus's five; the owner: "E3 go"): cold_run_vestments.py — THE
+VESTMENTS' SPEC GRADED AGAINST ITS OWN RUN, Exod 28:1-43 (the spec)
+and 39:1-43 (the run) compiled in one runner against Mishnah Yoma 7
+and Zevachim 2 read WHOLE with thirteen topic rows and the five link
+rows (28 rows, coverage computed; 61 Talmud addresses indexed, 46
+opened PER GAP: 196 of 196 on the second graded run — the first run's
+one miss a test literal in the wrong shape, not a cell) — honest
+fractions 111 ink (56%) / 61 recorded / 11 answer-sheet / 4 data / 9
+imports. THE CENSUS CAME FIRST and required no type edge: the span
+names no offering type; eight pointers — the run's stamp 'as the LORD
+commanded Moses' at seven verses and an eighth without 'Moses' at the
+inspection — dispositioned RUN_CITATION before a cell, four edges
+declared for the live calls (the sanctuary engine's vessels at the
+manifest, the priesthood engine's many-garmented high priest and
+rending, the ordinances engine's nakedness clause, the Day engine's
+linen program counter), the manifest's Exod 30 inventory OWED to E4.
+The headline: THE RUN'S ADDED TOKENS ARE THE SPEC'S PARAMETERS — the
+spec's tunic verse writes 'fine linen' twice, the run's writes it five
+times, and Yoma 71b derives the SIXFOLD THREAD from the run's five
+tokens (the number being the word's own homograph: 'fine linen' is
+'six' in the unpointed text); the run adds 'twined' at the
+pomegranates and the tradition derives the twined eight from the added
+token; the run's process verse 39:3 ('they beat the gold plates and cut
+threads' — four hapaxes, no spec counterpart) seats the gold thread's
+count and placement — the thread counts run on Exod 39, not Exod 28:
+move M-22 in a third form (at D8 a column, at E2 an order, here a
+PARAMETER). Beside it EIGHT FROM SIX PLUS TWO: 28:4's list names six,
+the plate and the breeches make Yoma 7:5's eight, and the four the
+high priest adds are exactly the four blocks whose ink carries a
+gold-token — the sheet's gold and white garments one census of the
+spec's metal tokens. The run keeps the spec's first three garments and
+makes the PLATE LAST; 'and he made' stands singular at exactly the
+three woven garments; every FUNCTION clause and every 'before the
+LORD' (five in the spec, none in the run) is dropped — the run is the
+making alone, the wearing Lev 8's. The twelve stone-names, four of
+them homographs of common words (Megillah 12b reads the minister
+Tarshish as the stone), nine in Ezekiel's Eden with the third row
+missing; the two bans (not detached, not torn) under one particle test
+(Yoma 72a: 'is it written SO THAT not?'); the atonement table
+completing the function column by the sections' adjacency (Zevachim
+88b); Bava Batra 8b deriving Shekalim 5:2's two collectors from 28:5's
+plural take-verb; the plate-word the flower's word, 'holy to the LORD'
+on the horses' bells. NINE effects discovered (the registry at 163):
+names_borne, judgment_borne, entry_announced, plate_propitiates (the
+garments' USE — promised at the spec, UNFIRED in the run), breastplate_fixed,
+robe_uncut, nakedness_covered, work_completed, inspected_as_commanded;
+THE SCENE checkpointed (1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 11). Seats
+F-243..F-244 (EX28-15, EX39-06); standing 1754; E3 checked off; the
+sweep 29 of 29 at 2561 cells.
+THE TWENTY-THIRD SPAN (2026-09-06, sitting E4 of the debt — the fourth
+of Exodus's five; the owner: "Next"): cold_run_incense_shekel.py — THE
+INVESTITURE SPEC RUN AGAINST LEVITICUS 8 ACROSS BOOKS, THE INCENSE
+ALTAR, THE HALF SHEKEL, THE LAVER, THE OIL AND THE INCENSE, AND THE
+SABBATH'S LAW LAYER, Exod 29:1-46, 30:1-38, 31:12-17, and 35:1-3 (four
+frozen units) compiled in one runner against Mishnah Shekalim read
+WHOLE, Keritot 1, Yoma 4, Zevachim 5 and 9, Shabbat 7, Tamid 5-6, and
+Menachot 4 with twenty-one topic rows and the four link rows (123 rows,
+coverage computed; 177 Talmud addresses indexed, 100 opened PER GAP:
+299 of 299 on the second graded run — the first run's one miss a test
+literal in the wrong shape, not a cell) — honest fractions 154 ink
+(51%) / 69 recorded / 33 answer-sheet / 3 data / 40 imports, the
+imports the calls into SIXTEEN engines. THE CENSUS CAME FIRST AND
+SURFACED THE PREDICTED BATCH: the span declared with a stub, twelve
+edges and one pointer dispositioned before a cell — five outbound and
+SEVEN INBOUND from every runner whose ink names this span's four
+institutions (the sin-offering, Mishpatim, priesthood, Tzav, Lev 5,
+Day, and jubilee engines), every inbound edge REVERSE because the
+runner is a LEAF CALLER of the engines it names; the two edges OWED
+since E2 and E3 closed the day the runner existed, the worklist
+printing zero. The headline: THE SPEC/RUN DELTA IS WHERE THE TRADITION
+ARGUES — the alignment engine reused across books pairs Exod 29's
+paragraphs with Lev 8's (the run rewriting every second-person verb in
+the third, inserting another spec's run at 8:10-11 — the anointing of
+30:26-29 — adding its own limiters at 8:35, dropping the dues, the
+succession, the tamid, and the Presence), and where the spec girds
+Aaron and his sons in ONE verb (29:9) the run girds him twice and them
+once (8:7, 8:13): Yoma 5b:9's dispute over the dressing order runs on
+exactly that split — move M-22's fourth form (a column, an order, a
+parameter, the delta). Beside it: 'thus' as the rite's
+indispensability (Yoma 5a:13) and the run's own two limiters (5b:2);
+the substitute's seven from the pairing of anointing with filling
+(5a:12); the contagion clause scoped from a NEIGHBOR verse by two
+authorities from two directions (Zevachim 83b:12 — a middot fork) and
+its two seats the two Mishnah rows (9:1, 9:7); Mishnah Menachot 5:6
+quoting 29:27's two verbs for the waving's two axes; THE UNIT DEFINED
+IN THE VERSE — 'twenty gerah the shekel' at five seats, Lev 27:25 read
+back from the jubilee engine by call, the gerah's other eight seats
+the cud; the ransom priced from 21:32's tariff by call into the
+Mishpatim engine; THE NEGATIVE BRANCH EXECUTED at David's census (2
+Sam 24:15 — Berakhot 62b's 'a thing schoolchildren know'), the positive
+run at the sockets and in Joash's chest ('the levy of Moses', 2 Chr
+24:6-9), Nehemiah's third; the trigger a parameter (the ink's census,
+the court's yearly); the townsmen's oath on stolen shekels fetched
+from the guardians engine, the first cold function; 'once a year'
+twice = one atonement (Shevuot 10a-b); the hin twelve from 'this' by
+letters; Mordechai through Onkelos on 'mor dror' (Chullin 139b — the
+Bekhorot 50a family at a name); 'PART FOR PART' (30:34, once) used by
+Zevachim 18b:15 to DEFINE the vestments' linen — one token, two
+engines; the Sabbath's death clause with FOUR recorded carve-outs by
+four tokens and the products fork on 'holy to you'; kindling the one
+named labor. THE SCENE replays Lev 8 through this spec's daemon and
+FIRES the four use entries the vestments spec promised, at the
+dressing. THE CREDIT RULE SHARPENED: a reading ledger's testing-shelf
+pointer is not a graded row (credit guard 2) — the generator excludes
+the per-unit reading ledgers from the prior scan. FIFTEEN effects
+discovered (the registry at 178): hand_laid, blood_on_extremities,
+garments_inherited, altar_purged, tamid_owed, incense_continual,
+strange_offering_barred, horns_atoned_yearly, half_shekel_owed,
+no_plague_at_counting, hands_feet_sanctified, anointed,
+compounding_barred, sign_between, kindling_barred. Seats
+F-245..F-248 (EX29-16, EX30-12, EX31-08, EX35-07); standing 1758; E4
+checked off; the sweep 30 of 30 at 2860 cells; `--debt` 0.
+THE TWENTY-FOURTH SPAN (2026-09-06, sitting E5 of the debt — the last
+of Exodus's five; the owner: "Go"): cold_run_erection.py — THE
+COVENANT LAWS WRITTEN A SECOND TIME, THE BLOOD COVENANT, THE CALF'S
+AND THE PRESENCE'S LAW LAYERS, THE CRAFTSMEN'S CALL AND THE DONATION'S
+RUN AGAINST THEIR SPECS, AND THE ERECTION AS THE WHOLE SPEC'S RUN —
+Exod 24:1-18, 31:1-11 with 31:18, 32, 33, 34:1-35, 35:4-29, and
+40:1-38 (SEVEN frozen units; the span widened past the debt line to
+take the two spec/run pairs E2 left undeclared, 31:1-11 against
+35:30-35 and 25:1-9 against 35:4-29) compiled in one runner against
+Mishnah Avodah Zarah 3-4, Rosh Hashanah 1, Bekhorot 1, and Chagigah 1
+read WHOLE with the eleven link rows and twenty-two topic rows (79
+rows, coverage computed; 219 Talmud addresses indexed, every one
+triaged before, 70 credited from the blocks and dockets, the rest
+OPENED per gap — 234 named, 104 material: 285 of 285 on the second
+graded run — the first run's one miss a test literal's clock, not a
+cell) — honest fractions 131 ink (45%) / 93 recorded (32%) / 21
+answer-sheet / 4 data / 36 imports, the imports the calls into ELEVEN
+engines. THE CENSUS CAME FIRST: ten edges and eleven pointers
+dispositioned before a cell, FIVE of the ten edges homographs named
+(the sin, not the sin offering; 'under the mountain'; 'My passing';
+the iniquity of FATHERS; the stones of SETTING), the erection's seven
+stamps 'as the LORD commanded Moses' dispositioned CALL with targets in
+THREE other runners and fetched by live call, seven more edges declared
+for the compile's calls. THE HEADLINE — THE SECOND SEAT'S DELTA IS
+WHERE THE TRADITION ARGUES: the calendar and Passover engines'
+functions CALLED TWICE at 34:18-26 and the eight clause-pairs DIFFED
+against 23:12-19 and 13:12-13 (the kid clause equal token for token;
+the rest about a quarter shared), and every token the second seat
+adds, drops, moves, or doubles is a sugya's ground — 'in plowing and
+in harvest' read three ways (R. Akiva's added sabbatical, Makkot 8b;
+R. Yishmael's omer excluded, Menachot 72a; the labors divided,
+Shabbat 70a), 'the firstling of a donkey' defective at the first seat
+and plene with the vav at the second read as TWICE (Bekhorot 5b, 6a;
+Mishnah Bekhorot 1:2), 'you shall redeem' tripled at each seat read as
+operators (Bekhorot 10b, 12a) and revocalized (Kiddushin 29a), the
+'not empty' clause MOVED from the matzah feast to the firstborn and
+read where it now stands (Bekhorot 51b; Kiddushin 29b, 17a), 'wheat'
+fixing the two loaves (Menachot 84b), 'the sacrifice of the feast of
+the Passover' yielding the chagigah's overnight rule (Pesachim 70a),
+'My sacrifice' at the two seats read as one doubled token (Pesachim
+64a), the inserted 34:17 legislating by adjacency (Makkot 23a,
+Pesachim 118a) — E4's spec/run finding at the register of law written
+twice, registered as move M-23. THE SECOND HEADLINE — THE RUN DROPS
+ITS OWN LAST SEVEN COMMANDS: the erection order 40:1-15 against the
+execution 40:16-33 (five of fourteen matched) leaves 40:9-15 — the
+anointing and the dressing — with no execution verse in Exodus at any
+threshold; Leviticus 8:6-13 runs them, fetched by call: the book seam
+inside one command. AND THE MAKING'S DROPPED USE CLAUSES RUN HERE:
+thirteen of E2's twenty-four dropped spec verses find their run at
+40:16-33 by a shared token (the staves, the testimony, the cover, the
+bread, the lamps, the veil, the table north and the lampstand south,
+the screen, the erecting), the eleven left the measure clauses the
+making built — the two runs divide the spec. Beside it: the four
+initiations of Mishnah Menachot 4:4 at 40:23/25/27/29 by call, the
+burner MOSES where the spec names Aaron (Zevachim 101b: Moses a high
+priest), Lev 9:17's 'besides the morning burnt offering' naming
+40:29's tamid from the other book; 40:31 matching 30:19 with ONE token
+added (Moses) and the laver's minimum of FOUR computed from it
+(Zevachim 21b — move M-22's parameter form, exemplar 9); 'on means
+beside' from 40:3 (Menachot 62a); 24:5's PARSE recorded as Rav
+Chisda's question, named by the sugya as the cantillation's difference
+and left TEIKU (Chagigah 6b) — the front end's etnachta on 'burnt
+offerings' measured and carried beside the open verdict; the convert's
+rite (circumcision, immersion, blood) derived from 24:5-8 (Keritot
+9a); the burden of proof from 24:14's standing court (Bava Kamma 46b);
+the calf's three death-verbs as the court's evidentiary tiers (Yoma
+66b), 32:20's fourth verb deciding the nullification dispute (Avodah
+Zarah 44a; Mishnah Avodah Zarah 3:3), the three books from 32:32's
+three tokens (Rosh Hashanah 16b), the intercession on the vows' own
+annulment law (Berakhot 32a); the tent's distance as the
+ruling-distance (Sanhedrin 5b), the knot of the tefillin from 'My
+back' (Menachot 35b); 34:7's tension resolved by repentance (Yoma 86a)
+and its fathers-clause ANNULLED by Ezekiel (Makkot 24a); the two
+channels' medium law (Gittin 60b); the heart's gift binding without
+speech (Shevuot 26b). Honest catches: the credit guard on Avodah
+Zarah 2:3; the census tripwires twenty-two times on the first
+stepwise pass ('ornaments' spelled 'witnesses', 'let loose' spelled
+like Pharaoh at two hundred and seven seats, the defective 'peter
+chamor', the spec's defective 'for light'); the scene literal's
+absolute clock. THE SCENE: the installation released into the first
+of Nisan, the four initiations firing the standing timers (the
+table's at the first Sabbath), THE PRESENCE DWELLS at 40:34 and THE
+MEETING APPOINTED at Lev 1:1 — promised at E2 and E4, fired.
+TWENTY-TWO effects discovered (the registry at 200):
+entered_the_covenant, covenant_cut, appointed_by_name, spirit_filled,
+face_radiant, tabernacle_erected, camp_moves_by_the_cloud,
+tablets_delivered, given_by_the_heart, nations_driven_out,
+decree_relented, blotted_from_the_book, plague_struck,
+attributes_proclaimed, pilgrim_land_guarded, made_to_drink,
+slain_by_sword, ground_and_scattered, intermarriage_barred,
+molten_image_barred, oral_law_unwritten, appearance_gift_owed. Seats
+F-249..F-255 (EX34-12, EX24-09, EX32-09, EX33-06, EX31-09, EX35-08,
+EX40-08); standing 1765; E5 checked off — EXODUS'S FIVE SITTINGS ALL
+CHECKED; the sweep 31 of 31 at 3145 cells; `--debt` 0.
+THE TWENTY-FIFTH SPAN (2026-09-06, sitting G1 of the debt — the first
+of Genesis's two, and the first Genesis runner; the owner: "Ok go"):
+cold_run_pre_sinai.py — THE PRE-SINAI CODE: THE DAY BOUNDARY AND THE
+SABBATH, THE NOAHIDE LAWS AND THE BLOOD, CIRCUMCISION — Gen 1:1-2:3,
+2:16-17, 2:24, 9:1-17, 17:1-27 (SIX frozen units; the debt line's three
+spans widened by the two verses of chapter 2 the Noahide derivation
+hangs on) compiled in one runner against Mishnah Berakhot 1, Shabbat
+19, Nedarim 3, Chullin 5, Yevamot 6, Taanit 4, Tamid 7, Arakhin 2,
+Chagigah 2, and Avot 5 read WHOLE with the three link rows outside and
+seventeen topic rows (101 rows, coverage computed; 140 Talmud addresses
+indexed, every one read at the Genesis triage, 199 segments named
+per gap, 111 material; the Noahide sheet a TALMUD-ONLY law, Sanhedrin
+56-59's baraitot): 212 of 212 on the second graded run — the first
+run's one miss a receipt helper's reshaped value, not a cell — honest
+fractions 90 ink (42%) / 56 recorded / 21 answer-sheet / 0 data / 45
+imports, the imports the calls into EIGHTEEN engines. THE CENSUS CAME
+FIRST AND ITS VOCABULARY GREW: six Genesis type tokens added (sabbath,
+circumcision, life_blood, shed, fruitful, appointed_time), seventeen
+edges and one pointer dispositioned before a cell — FOURTEEN INBOUND
+from every Sinai engine that names a Genesis institution, OWED against
+this sitting's own debt line and flipped to REVERSE as the cells
+called (the runner a LEAF CALLER), three homographs FALSE by name, the
+run's stamp RUN_CITATION. THE HEADLINE: THE CREATION CHAPTER IS THE
+FIRST SPEC/RUN PAIR — nine commands aligned by token against their
+executions, and every deviation a sugya's ground: 'fruit tree making
+fruit' against 'tree making fruit' (1:11/1:12) is the Tishrei/Nisan
+dispute (Rosh Hashanah 11a:3-6, each side dating creation from ONE of
+the two seats) and the grasses' a-fortiori (Chullin 60a:10-12); 'two
+great lights' against 'the great... the small' inside 1:16 the moon's
+diminishing (Chullin 60b:2-4); 'in OUR image, after our likeness'
+against 'in HIS image' with the likeness dropped and 'male and female'
+added the heretics' refutation (Sanhedrin 38b:14) and the one-or-two
+creations (Ketubot 8a:9, Eruvin 18a:23, Berakhot 61a:14); the beasts'
+order swapped; the waters' command run by 'and it was so' alone; the
+swarm from the water against the fowl from the ground (Chullin 27b:11)
+— move M-22's tenth exemplar, at the Torah's first chapter. THE SECOND
+HEADLINE: THE COUNTS THE ANSWER SHEET RIDES ARE THE INK'S — 'and God
+said' TEN times against the tradition's nine-plus-'in the beginning'
+(Megillah 21b:10; Avot 5:1's number, the count's shape recorded not
+resolved), 'good' seven and NONE on the second day (Pesachim 54a:13),
+'evening and morning' six and none on the seventh, the ordinals bare
+and THE sixth articled alone (Shabbat 88a:6 — Resh Lakish's condition
+off one letter), 'after its kind' ten, the maamad's seven section-
+openers verified at their verses and the paragraph sizes 5-3-5-6-4-8-3
+as the readers' arithmetic (Taanit 4:3, Megillah 22a:2), 'covenant'
+THIRTEEN times in Genesis 17 — Nedarim 3:11's number measured off the
+chapter. THE THIRD: THE SABBATH'S THIRD SEAT — the creation-rest
+clause at Gen 2:2-3 'ceased', Exod 20:11 'rested', Exod 31:17 'ceased
+and was REFRESHED', diffed pairwise, and the one token the third seat
+adds is Beitzah 16a:12's extra soul (M-23's ninth exemplar; the watch
+E5 set for Deuteronomy answered a book early); the seventh day's seats
+across the code fetched by live call from twelve engines. THE FOURTH:
+THE NOAHIDE CODE IS A LEAF CALLER OF THE SINAI CODE AND THE TRADITION'S
+RULE IS THE EDGE — Sanhedrin 59a:11-12's 'said to the sons of Noah and
+REPEATED at Sinai' is the dependency gate's own edge: each of the seven
+laws' Sinai seat fetched by live call (the courts from the ordinances
+engine, blasphemy at Lev 24:15-16, idolatry's service paradigm, the
+unions from the sanctions engine's Lev 18/20 rows with modes and karet,
+bloodshed at Exod 21:12 and Lev 24:17, robbery from the holiness
+engine's five verbs, the limb from the blood ban), the Tzav engine's
+own cell the set's negative boundary ('Israel exhorted, not the sons of
+Noah') — registered as move M-24 THE REPETITION TEST with the sugya's
+rider (a second seat whose added job exhausts it does not widen the
+scope) and its exception (the sinew, G2's). Beside it: 'its blood in
+its life' at Gen 9:4 and Lev 17:14 ALONE, the two tokens swapped — the
+census's edge in both directions; 9:5's three require-verbs and three
+hands as the Noahide court (57b:2-4); 9:6's chiasm, 'by man' three
+ways, 'shall be shed' one string with the sin offering's 'he shall
+pour'; 9:6 with 9:7 by adjacency (Yevamot 63b:16-17); 'no more'
+DOUBLED at 9:11 the oath's form (Shevuot 36a:14); 'for generations'
+DEFECTIVE at its only seat (Ketubot 77b:9); 'I will remember My
+covenant' at Gen 9:15 and Lev 26:42 alone; circumcision's spec against
+its run (six verbs and five, the two stamps), 'eight days old' the
+floor with Shabbat 19:5's ladder from the day boundary's twilight, the
+EIGHTH at three institutions by call, the Passover's gate by call,
+17:14 the Torah's first karet formula (Gen 26:28 the same string),
+'he has BROKEN' spelled as THE BULL, Abram's last seat and Sarah's
+first, 243 to 248 (Nedarim 32b:1). THE SCENE: six evenings counted and
+the seventh blessed, Noah's grants and bars, Abraham's wholeness owed
+at 17:1 and closed at 17:24, Isaac's eighth day a per-person TIMER
+that fired at 21:4. Honest catches: four census tripwires on the first
+stepwise pass (the image token's final-mem form; 'sheds' at nineteen
+seats not a sliced twelve; the articled 'covenant'; the run's verbs
+FIVE), the first run's miss a receipt helper's reshaped value; the
+seventh day's own unit a DRAFT, named. FOURTEEN effects discovered
+(the registry at 214): day_counted, seventh_day_blessed, fear_on_beasts,
+meat_permitted, bow_set, name_changed, sign_in_the_flesh (STATUS);
+dominion_granted (TRANSFER); fruitfulness_blessed, blood_required
+(HEAVEN); limb_from_living_barred, flood_barred (BLOCK); circumcision_
+due, wholeness_owed (DEBIT). Seats F-256..F-261 (G01-08, G08-32,
+G09-22, G21-19, G22-13, G33-33); standing 1771; G1 checked off; the
+sweep 32 of 32 at 3357 cells; `--debt` 0.
+THE TWENTY-SIXTH SPAN (2026-09-06, sitting G2 of the debt — the last of
+Genesis's two, closing the three books' compile debt; the owner: "Go g
+2"): cold_run_family.py — THE FAMILY CODE: THE PURCHASE, THE COMMISSION,
+THE SINEW, THE LEVIRATE, THE INHERITANCE AND THE TESTAMENT — Gen 23, 24,
+32:25-33, 38, 48, 49 (SEVEN frozen units, chapter 24's two among them)
+compiled in one runner against Mishnah Kiddushin 1-2, Ketubot 5, Chullin
+7, Yevamot 1, 2, 4, Bava Batra 8, and Bekhorot 8 read WHOLE with the two
+link rows outside and nineteen topic rows (101 rows, coverage computed;
+157 Talmud addresses indexed, every one read at the Genesis triage, 43 in
+a grading record, 146 segments named with verdicts, 104 material): 228 of
+228 ON THE FIRST GRADED RUN — honest fractions 125 ink (54%) / 69
+recorded / 11 answer-sheet / 2 data / 21 imports, the imports the calls
+into THIRTEEN engines. THE CENSUS CAME FIRST: ten family type tokens
+added (sinew, levir, wife_taken, holding, inheritance, birthright,
+harlot, beka, pledge, widow), twenty edges and four pointers
+dispositioned before a cell — seven outbound OWED then flipped to CALL
+as the cells fetched, three inbound flipped to REVERSE, eight homographs
+FALSE by name — and the sinew's token homed at this runner ALONE with no
+edge required: Mishnah Chullin 7:6's 'said at Sinai, written in its
+place' (the repetition test's stated exception, M-24) is a MISSING EDGE
+in the machine, and the ink writes the anachronism itself — 'the SONS OF
+ISRAEL shall not eat' (32:33) is the first 'sons of Israel' in the Bible,
+four verses after the name is given. Two edges declared OWED FORWARD to
+runners that do not exist (Numbers 27's inheritance order, Deuteronomy
+25's levirate) — `--debt` prints 2, honestly. THE HEADLINES: THE
+PURCHASE RUNS MISHNAH KIDDUSHIN 1:5'S THREE MODES — money, deed, and
+possession are the chapter's three acts in order (the silver weighed at
+23:16, the record 'before all who entered the gate' at 23:17-18, the
+burial as the first act at 23:19), the tractate opening on the same
+field; 'current with the merchant' the phrase's only seat and the
+currency's grade in the added clause; 'a holding of a grave' the jubilee
+engine's tenure word at five seats with the tenure and the Sinai field
+sale fetched by call (the pre-Sinai holding never returned); the deed
+RESTATED at 49:30 and 50:13 and cited as a document at the burial in the
+tradition's own story (Sotah 13a). THE COMMISSION IS A SPEC/RUN/RETOLD
+TRIPLE and the court oath's formula is Abraham's — Shevuot 38b: 'we
+administer the oath stated in the Torah: I will make you swear by the
+LORD, the God of heaven' (24:3), the guardians' oath route fetched by
+call; the retelling's deltas are the sugyot's ground ('perhaps' plene
+at 24:5 and DEFECTIVE at 24:39 — the servant's own daughter; 'the girl'
+retold as 'the maiden'; the ring and the question in reversed order;
+the double condition's two seats, Kiddushin 61b); the servant Mishnah
+Kiddushin 2:1's agent, the handover to the husband's agent on the road
+Ketubot 4:5's domain, the two gift moments Kiddushin 2:6's sivlonot, the
+bride's year by call to the jubilee engine's walled-city clause, 'as a
+wife' at its Sinai seat by call to the Mishpatim engines. 'THE thigh' is
+the article's only seat in the Tanakh and Rava's rule runs on it — the
+distinguished member — exported to the arm, the anointed, and the awl
+(move M-25); Jacob still called Jacob fifty-six times after 32:29 while
+Abram never returns after 17:5 — the name-change rule's parameter is the
+ink's own usage (Berakhot 13a). THE LEVIRATE'S FIRST SEAT CARRIES THE
+ANSWER SHEET'S REFUSED PLEA — 'until Shelah grows' (38:11) is exactly
+the deferral to a minor Mishnah Yevamot 4:6 refuses, the timer set and
+checked at 38:14; SEED at 38:8 against NAME at Deut 25:6 resolved to
+inheritance from this runner's own 48:6 (Yevamot 24a); 'and he has no
+son' at Deut 25:5 and Num 27:8 alone, one clause opening two
+institutions; the widow analogy 'widow-widow from Tamar' considered and
+REFUSED (Yevamot 59a) on the census's own token; the three months 'no
+proof, a hint' (Niddah 8b); two modes on one chapter (the sentence in
+the priest's daughter's burning by call, the act itself the
+daughter-in-law's stoning by call); Perez the firstborn by the HEAD while
+the same hand starts the mother's clock (Niddah 28a — the clocks engine
+by call). JACOB'S TESTAMENT IS MISHNAH BAVA BATRA 8:5'S CASE IN THE GIFT
+FORM — Reuben demoted on the root of 'excess', Joseph's portion GIVEN
+(the gift verb the sheet says stands; Bekhorot 8:10's dispute on the
+same verb), 'the beginning of my vigor' at 49:3 and Deut 21:17 alone
+(the father's firstborn against the mother's womb-opener by call),
+illness first at 48:1 for the deathbed word; 'cursed' among the five
+verses with no decision (Yoma 52b) where the verse division decides —
+the TEIKU beside a machine parse, the second exemplar; the scepter and
+the lawgiver as two offices (Sanhedrin 5a); the altar's base from
+Benjamin's wolf (Zevachim 53b-54b); the burial owed and closed by the
+run's stamp, Rachel absent from the roster. THE SCENE: Tamar's timer
+FIRED when Shelah had grown and stayed open until the recognition; the
+burial debit closed at 50:12. Honest catches: `--emit` caught 'he told'
+in the sinew's pattern; four per-gap addresses typed wrong and located
+by grep; the bracelets' plene test on the wrong yod; two precedence
+traps; a lettered manifest id; the rituals' relative path. TWENTY-EIGHT
+effects discovered (the registry at 242). Seats F-262..F-268 (G39-38,
+G40-37, G41-37, G55-39, G61-22, G71-30, G72-37); standing 1778; G2
+checked off — GENESIS'S TWO SITTINGS AND THE THREE BOOKS' COMPILE DEBT
+ALL CHECKED; the sweep 33 of 33 at 3585 cells.
+THE DAEMON CAMPAIGN OPENS — THE SEEDING SITTING (2026-09-07, D9-i; the first
+sitting after compaction #72, the owner: "Go"): THE EVENT-TYPE REGISTRY,
+World/step9/event_vocabulary.yaml with events_layer.py as its loader and lint —
+the effects registry's twin for the OTHER side of a daemon: the effects
+registry says what a verdict may WRITE, this one says what the tape may CARRY.
+Harvested BY SCRIPT from what was already written, never designed: the twelve
+daemons' consumed kinds and the seven scene tapes' submitted kinds (34 files,
+74 submit calls, 100 submit records — and the count "ten daemons" the
+compaction tail carried was typed from memory; the grep found twelve), joined
+by verse address to the corpus world's 557 narrative events. Eighty-four
+types, each with three witnesses: the INK (a consonantal run at a verse,
+MACHINE-VERIFIED — 127 runs found in their verses; a witness typed from memory
+is a guess until the lint passes), the CORPUS (the frozen unit, and the
+narrative tape's own EVENT label where the unit logged one at that address —
+thirteen of the kinds meet one; the law and run chapters logged none), and the
+TAPE (the scene that submits it, the daemon that consumes it, the effects it
+writes). THE FORMS the harvest found: an event is an ACT the run records (51 —
+the wayyiqtol, the "and he did" form), an UTTERANCE the text records (26 — a
+command, blessing, oath, sentence or plea: the speech is the event, the
+obligation it creates is the daemon's write), the narrator's own STATUTE
+inside the story (1 — the sinew), or a CASE token (6 — the law's own "when/if"
+clause, which a recorded Mishnah case replayed as a test scene instantiates:
+the witness is the clause, not a narrative). THE FENCE stated for events:
+nothing in the registry is produced by a daemon; the log's other record
+classes (WRITE, TIMER-SET, TIMER-FIRE, TIMER-CANCEL, ATOMIC-BLOCK) take no
+type from it — a timer's firing is its own record class. THE SEEDING'S
+FINDINGS, each recorded in the registry under aliases_in_code for the gate to
+flag rather than fixed by hand: one NAME over two ACTS ('washed' — Lev 8:6's
+body washing under the investiture daemon against Exod 40:31's hands-and-feet
+under the erection daemon, writing different effects; the split declared as
+hands_feet_washed, the first type registered before any tape submits it); one
+ACT under two NAMES at one verse, twice (Lev 8:30's sprinkling as
+milluim_blood_sprinkled in the skeleton's installation daemon and
+garments_sprinkled in the investiture's; Lev 8:31-32's leftover as
+milluim_leftover and meal); one type under two daemons with two field
+contracts (renamed); a branch WATCHED AND NEVER FIRED (jubilee_proclaimed —
+the skeleton reaches the jubilee through a timer); an event SUBMITTED AND
+CONSUMED BY NOTHING (overflow_reported — the daemon comments "no law"). The
+corpus tape's own 254 labels are enumerated beneath the types (38
+transliterations glossed with their Hebrew and verified; 40 events in nine
+units carry no parseable verb label — a debt of the narrative side, named);
+they become event types only when promoted with witnesses. The rule going
+forward, which D9-ii's gate will enforce: a daemon may watch only a registered
+type, and the engine's submit will refuse an unregistered kind the way
+effects_layer refuses an unregistered effect. Record:
+World/step9/REPORT_EVENT_REGISTRY.md.
+THE DAEMON-EDGE GATE (2026-09-07, D9-ii — the campaign's first deliverable;
+the owner: "Go d9 2"): what THE DEPENDENCY GATE is for the ink's
+cross-references between compiled spans, World/step9/daemon_census.py is for
+the simulator's other graph — what a compiled function FIRES ON and what it
+WRITES. Run by run_cold_all.py after the dependency gate, it parses every
+runner and the engine by script: every daemon (a `def law_*(event, world)`)
+with the kinds it watches and the effects each branch writes, every submit on
+a scene tape, every compiled function that writes the world (251 at the
+function grain — a top-level def naming a registered effect, or the module
+for a table-shaped runner). daemon_dispositions.yaml DECLARES what the gate
+VERIFIES: each daemon's watches, which must equal the parse (a daemon edited
+without its declaration fails the sweep — the same discipline as CALL against
+the live import); each function's disposition — WRAPPED by a daemon sharing
+an effect (the wrap's live check: at the function level where the function
+carries its own cells, the module level for the older shape whose effects a
+module-level mapping attaches), OWED naming a wrap worklist line of
+COMPILE_DEBT.md (W1-W7 by engine family — the generated worklist, `--debt`),
+NONE reserved; the watched-never-fired and fired-never-watched kinds with
+their whys. Every kind must be in the event registry, every effect in the
+effects registry, and a daemon that calls submit breaks THE FENCE and fails.
+The engine took the gate's runtime half: World.submit refuses an
+unregistered event kind (as effects_layer refuses an unregistered effect),
+keeps and prints every daemon's WATCH COVERAGE (events seen, fired on, the
+kinds — "every daemon prints its watch coverage"), and carries THE FENCE'S
+DEPTH BOUND — a daemon consumes events and writes the ledger and never emits
+one, so no event is submitted while another is consumed: the bound is 1 and
+a re-entry is reported with the daemon's name, never truncated silently.
+First full run: 12 daemons verified, 49 WRAPPED, 202 OWED, one unfired
+(jubilee_proclaimed), one unconsumed (overflow_reported), nine open alias
+entries; the gate's five fire-probes 5/5 after one was SILENT on the first
+pass (the module-level fallback meant for the older shape let a modern
+function pass as wrapped by a foreign daemon — the rule sharpened, then it
+fired: a gate that never fails proves nothing); the skeleton's six scenes
+6/6 printing their coverage; the sweep green through both gates. Record:
+World/step9/REPORT_DAEMON_GATE.md. Next: the wraps (D9-iii), W1 first.
+THE WRAPS OPEN — W1 THE EXODUS LAW (2026-09-07, D9-iii; the first sitting after
+compaction #74, the owner: "Reread first then go"): the first wrap sitting, and
+the rhythm it fixes for the six to follow. THE TYPES FIRST: every case head the
+runners compiled — the law's own כִּי / אִם ("when" / "if") clause, or the
+participial head ("he who strikes", "a sorceress") — registered as a case-form
+event type BEFORE any daemon was written, 38 of them, each witness found
+contiguous in its verse of the Tanakh DB and its pointed form extracted from
+the verse's own words by script, never typed (the registry 122 types, 191 runs
+verified, the case form 6 → 44). THE DECLARATION SECOND: the five daemons and
+their watches written into daemon_dispositions.yaml, and seventeen functions
+flipped OWED → WRAPPED, before a line of daemon code — the gate then failed
+twenty-three ways, which is the contract working: the declaration is the spec
+the code must meet, and it caught the skeleton's library missing a branch (the
+slave gored, Exod 21:32 — a compiled cell since the re-compilation pass, watched
+by nothing). THE CODE THIRD: a thin daemon per runner over the compiled logic
+(the Mishpatim daemon CALLS the Lev 24 tariff live on the tape; the ordinances
+daemon carries the decalogue's altar rule at its call site and the offering,
+sanctions, jubilee and Passover engines' values). THE DECISION at the sitting:
+the skeleton's law_slave_term / law_goring_ox / law_guardians STAY in
+world_engine.py as the LIBRARY, registered on the runner's scene beside its own
+daemon — no duplicated verdict logic, no circular import; the gate verifies
+either shape. THE SCENE FOURTH: each runner replays the RECORDED rows (Kiddushin
+1:2 with the buy-out CANCELLING the six-year timer; Bava Kamma 1-8's four
+classes, the forewarned flip, the five indemnities, the multiples; Ketubot 3:4;
+Kiddushin 24a; Sanhedrin 7:4-7:6, 7:5's Name gate on the chapter's own case,
+4:1's court split three ways — twelve to eleven acquits, thirteen to ten
+convicts, twelve to eleven in money convicts; Bava Metzia 2:9-10, 5:1, 9:13's
+sunset timer; Bekhorot 8:7's thirty-day timer; the firstling's eighth-day
+timer; Shevuot 3-4; Pesachim 106a; Shabbat 120b and 153b; Sanhedrin 11:1) and
+returns a tuple of ledger counts, timers set and fired, and the absolute clock —
+PRINTED by the engine before its literal was TYPED into the runner's test table
+under the honest-pairing guard (three probes matched the values predicted from
+the Mishnah rows beforehand). THE GATE AND THE SWEEP FIFTH: 66 wrapped, 185
+owed, the sweep 33 of 33. Every daemon prints its watch coverage; the silences
+are the law's own (the regenerating limb, the causing of labor, the kidnapper
+who did not sell). Found on the way and declared, not fixed: the Exodus law's
+UNCOMPILED case heads (21:7-11, 21:13-17, 21:20-21, 22:1-2, 22:16 — exam-era
+rules, no cold function: compile debt X1-X5), and the honest-calls guard's
+resolution of a cells name to its LAST binding (the earlier lists unchecked —
+an OPEN gate item, its own sitting). Record: World/step9/REPORT_WRAP_W1.md.
+Next: W2 THE CALENDAR.
 The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law

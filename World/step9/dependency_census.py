@@ -100,6 +100,43 @@ TOK = [
  ('hebrew_slave', r'^עברי$', {'mishpatim'}),
  ('molech_ov',   r'^ו?[הלכב]?ה?(אבות|ידעני|ידענים|מלך)$', {'sanctions'}),
  ('talion_formula', r'^תחת$', {'lev24'}),
+ # ---- the sanctuary's cross-references into Exod 30 (added at sitting E2, 2026-09-06: the construction run of
+ # Exod 36-38 builds the incense altar, the laver, and counts the half-shekel census — institutions whose SPEC is
+ # Exod 30:1-38, the E4 span; their home runner is cold_run_incense_shekel.py, OWED until E4 compiles it) ----
+ ('incense',      r'^ו?[הלכב]?ה?קטרת$', {'incense_shekel'}),
+ ('laver',        r'^ו?[הלכב]?ה?כי(ו)?ר$', {'incense_shekel'}),
+ ('shekel',       r'^ו?[הלכב]?ה?שקל(ים)?$', {'incense_shekel'}),
+ ('anointing_oil', r'^ו?[הלכב]?ה?משח(ה|ת)$', {'incense_shekel'}),
+ # ---- THE PRE-SINAI CODE (added at sitting G1, 2026-09-06 — the Genesis type tokens: institutions whose FIRST seat is Genesis
+ # and whose runner, cold_run_pre_sinai.py, is a LEAF CALLER of every Sinai engine that names them — Sanhedrin 59a's own rule,
+ # 'a command given to the sons of Noah and REPEATED at Sinai', is the edge). The bare 'מול' ('opposite', Exod 26:9, 28:25,
+ # 34:3, Lev 8:9) is NOT in the circumcision pattern — a homograph of the imperative; the ל-prefixed 'לשבת' ('to dwell',
+ # Lev 20:22) and the suffixed 'שבתו' ('his idleness', Exod 21:19) are NOT in the sabbath pattern; the poured blood's 'ישפך'
+ # (the sin offering's base, Lev 4) shares its consonants with 'shall be shed' (Gen 9:6) and is dispositioned FALSE by name.
+ ('sabbath',      r'^ו?[הבכמ]?ה?שבת(ון|ות|תי|תיכם|כם|ה)?$', {'pre_sinai'}),
+ ('circumcision', r'^ו?(המול|ימול|נמול|נמלו|וימל|ימל|מלתם|ומלתם|ומלתה|למול|מלה|נמלים|המלות|ערל|ערלה|ערלת|ערלתו|ערלתם|ערלים|ערלכם|הערל|וערל|וערלתם|לערל|ערלי)$', {'pre_sinai'}),
+ ('life_blood',   r'^בנפשו$', {'sanctions', 'pre_sinai'}),   # 'its blood in its life' — Gen 9:4 and Lev 17:14 alone in the Tanakh: each the other's home
+ ('shed',         r'^ו?(שפך|ישפך|שפכו|תשפך|שפכתי|ישפכו)$', {'pre_sinai'}),
+ ('fruitful',     r'^ו?(פרו|רבו|הפריתי)$', {'pre_sinai'}),
+ ('appointed_time', r'^ו?[לב]מועד(ים|ו|ה|ם|יו)?$', {'moadim'}),   # 'for seasons' (Gen 1:14), 'at this set time' (17:21), 'in its season' (Exod 13:10), 'at the appointed time' (23:15, 34:18)
+ # ---- THE FAMILY CODE (added at sitting G2, 2026-09-06 — the Genesis institutions of the house: the field bought for a grave,
+ # the wife taken, the sinew, the widow waiting for the levir, the pledge, the harlot, the birthright, the inheritance. The
+ # runner cold_run_family.py is their HOME where Genesis is the first seat (the sinew has NO Sinai seat — Mishnah Chullin 7:6:
+ # 'said at Sinai, written in its place' — the repetition test's one exception); the tenure of the field is the jubilee
+ # engine's, the widow's two law seats are the ordinances' and the priesthood's (Yevamot 59a tries 'widow-widow from Tamar'
+ # and refuses it), the harlot's definition the priesthood's, the half-shekel's name 'beka' the construction run's. Homographs
+ # kept OUT of the patterns: 'הגיד' ('he told', Gen 3:11 etc.) is not the sinew; 'נחל' bare (the stream, 32:24) is not the
+ # inheritance; the verb forms 'you shall inherit the land' (Exod 23:30, 32:13) match the noun pattern and are FALSE by name.
+ ('sinew',        r'^ו?ב?גיד$|^הנשה$', {'family'}),   # no ה-prefix: 'והגיד' (Lev 14:35 'and he shall TELL the priest') is the verb, not the sinew
+ ('levir',        r'^ו?(יבם|יבמה|ויבמה|יבמי|יבמתו|יבמתך|יבמך|יבמת|ליבם|יבמו|יבמים)$', {'family'}),
+ ('wife_taken',   r'^לאשה$', {'family'}),   # 'to him as a WIFE' — the marriage formula's closing token (Gen 24:67, 38:14; Exod 22:15 the seduced virgin's)
+ ('holding',      r'^ו?[הלכבמ]?ה?אחז(ה|ת|תו|תם|תכם|תך|תיכם)$', {'yovel'}),   # 'a HOLDING of a grave' (Gen 23:4, 9, 20; 49:30), 'an everlasting holding' (17:8, 48:4); Lev 25's tenure
+ ('inheritance',  r'^ו?[הלכבמ]?ה?נחל(ה|ת|תו|תם|תך|תכם|תי|ות|תיכם)$|^ו?(נחלו|התנחלתם|ינחל|תנחל|ינחלו|תנחלו|הנחיל|להנחיל|ינחילנו|הנחילו|בהנחל|הנחלתי|ונחלתם|תתנחלו)$', {'family'}),
+ ('birthright',   r'^ו?[הלכב]?ה?בכר(ה|תו|תי|תך|תם)$', {'family'}),   # the birthright NOUN (Gen 25:31-34, 27:36, 43:33; Deut 21:17 'the right of the firstborn') — distinct from the firstborn person
+ ('harlot',       r'^ו?[הלכב]?ה?(זונה|זנה|קדשה)$', {'priesthood'}),   # 'he thought her a HARLOT' (38:15), 'the cult harlot' (38:21-22); Lev 21:7, 21:14 the priest's ban
+ ('beka',         r'^ו?[הלכב]?ה?בקע$', {'sanctuary_build'}),   # 'a BEKA its weight' (Gen 24:22) = 'a beka a head' (Exod 38:26) — the half-shekel's name at two seats
+ ('pledge',       r'^ו?[הלכב]?ה?(ערבון|חבל|תחבל|יחבל|חבלת|עבט|העבוט|עבטו|עבוט)$', {'ordinances'}),   # Tamar's 'PLEDGE' (38:17-20) and the ordinances' 'if you take in pledge' (Exod 22:25) — one institution, two words
+ ('widow',        r'^ו?[הלכב]?ה?אלמנ(ה|ות|תו|תה|ותה|ותיך|תך)$', {'ordinances', 'priesthood'}),   # 'sit as a WIDOW' (38:11), 'her widow's garments' (38:14, 19); Exod 22:21-23 the affliction ban, Lev 21:14 and 22:13 the priest's
 ]
 # ---- the explicit pointer forms --------------------------------------
 PTR = [
