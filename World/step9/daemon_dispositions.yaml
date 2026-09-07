@@ -210,15 +210,60 @@ daemons:
       man_struck_dead: [put_to_death]
       beast_struck_dead: [pays]
       blemish_given: [substitution]
+  # ---- W2 THE CALENDAR (D9-iii, 2026-09-07): declared BEFORE the code; law_sabbath sits beside law_investiture in the
+  # incense_shekel runner (the Sabbath clause's own span); erection.repeats (the calendar laws' second seat, 34:18-26) is
+  # wrapped by law_calendar ACROSS FILES — the same law at its second seat, the registry's witnesses carrying both seats
+  law_pesach:
+    file: cold_run_pesach.py
+    wraps: pesach
+    watches:
+      first_month_begun: [purge_deadline, eating_window]
+      lamb_taken: [registered_to_lamb]
+      withdrew_from_lamb: [registered_to_lamb, barred_from_it]
+      sought_to_eat: [barred_from_it, registered_to_lamb]
+      lamb_slaughtered: [disqualified, eating_window, burn_remainder]
+      lamb_eaten: [barred_from_it, lashes, exempt]
+      leaven_eaten: [karet_cut_off]
+      leaven_found: [exempt, barred_from_it]
+      firstborn_born: [consecrated_firstborn, redeem_or_break, pays, exempt]
+  law_calendar:
+    file: cold_run_calendar.py
+    wraps: calendar (and erection.repeats, the second seat 34:18-26, across files)
+    watches:
+      land_sown: [land_release, barred_from_it]
+      feast_of_matzot_kept: [purge_deadline]
+      seventh_day_rest: [rest_required]
+      appeared_at_the_feast: [appearance_owed, appearance_gift_owed, pilgrim_land_guarded, exempt]
+      offering_slaughtered_over_leaven: [barred_from_it, disqualified]
+      first_fruits_brought: [restores]
+      kid_boiled_in_milk: [barred_from_it]
+  law_sabbath:
+    file: cold_run_incense_shekel.py
+    wraps: incense_shekel.sabbath (the tabernacle's Sabbath clause, Exod 31:12-17 + 35:1-3; beside law_investiture in the same file)
+    watches:
+      sabbath_profaned: [labor_barred, kindling_barred, put_to_death, stoned, karet_cut_off]
+      sabbath_kept_as_sign: [sign_between, rest_required]
+  law_moadim:
+    file: cold_run_moadim.py
+    wraps: moadim
+    watches:
+      holy_convocation_proclaimed: [labor_barred, sanctify_day, rest_required]
+      paschal_offered: [accepted, disqualified]
+      yom_kippur_kept: [labor_barred, rest_required, karet_cut_off, destroyed]
+      harvest_reaped: [barred_from_it]
+      omer_brought: [counts_omer, accepted]
+      two_loaves_brought: [accepted, appearance_owed, smoked_to_the_lord, most_holy, due_to_priest, waved]
+      booths_dwelt: [dwells_in_booths, exempt]
+      four_species_taken: [takes_four_species]
 functions:
   calendar:
-    sabbatical: {status: OWED, why: "W2 THE CALENDAR | effects: barred_from_it, land_release"}
-    matzah: {status: OWED, why: "W2 THE CALENDAR | effects: purge_deadline"}
-    weekly_rest: {status: OWED, why: "W2 THE CALENDAR | effects: rest_required"}
-    pilgrimage: {status: OWED, why: "W2 THE CALENDAR | effects: appearance_owed, exempt"}
-    offering_windows: {status: OWED, why: "W2 THE CALENDAR | effects: barred_from_it, disqualified"}
-    first_fruits: {status: OWED, why: "W2 THE CALENDAR | effects: restores"}
-    kid_in_milk: {status: OWED, why: "W2 THE CALENDAR | effects: barred_from_it"}
+    sabbatical: {status: WRAPPED, by: law_calendar}
+    matzah: {status: WRAPPED, by: law_calendar}
+    weekly_rest: {status: WRAPPED, by: law_calendar}
+    pilgrimage: {status: WRAPPED, by: law_calendar}
+    offering_windows: {status: WRAPPED, by: law_calendar}
+    first_fruits: {status: WRAPPED, by: law_calendar}
+    kid_in_milk: {status: WRAPPED, by: law_calendar}
   chatat:
     domain: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: atoned_forgiven, exempt, karet_cut_off, suspends"}
     rank: {status: OWED, why: "W3 THE OFFERING ENGINE | effects: accepted"}
@@ -271,7 +316,7 @@ functions:
     altar_rules: {status: WRAPPED, by: law_ordinances}
   erection:
     covenant: {status: OWED, why: "W7 THE SINAI NARRATIVE LAWS | effects: barred_from_it, bears_sin, covenant_barred, covenant_cut, demolished, intermarriage_barred, molten_image_barred, nations_driven_out, pilgrim_land_guarded, stoned"}
-    repeats: {status: OWED, why: "W2 THE CALENDAR | the covenant laws' second seat (34:18-26) — the calendar family's cells by call; wrapped with the calendar"}
+    repeats: {status: WRAPPED, by: law_calendar}
     tablets: {status: OWED, why: "W7 THE SINAI NARRATIVE LAWS | effects: atoned_forgiven, attributes_proclaimed, barred_from_it, confessed, face_radiant, oral_law_unwritten, tablets_delivered"}
     blood_covenant: {status: OWED, why: "W7 THE SINAI NARRATIVE LAWS | effects: accepted, atoned_forgiven, entered_the_covenant, immersed, invested_office, majority_decides, oral_law_unwritten, takes_four_species"}
     ascent: {status: OWED, why: "W7 THE SINAI NARRATIVE LAWS | effects: majority_decides, oral_law_unwritten, tablets_delivered"}
@@ -321,7 +366,7 @@ functions:
     laver: {status: WRAPPED, by: law_erection}
     oil: {status: OWED, why: "W6 THE SANCTUARY'S REMAINDER | the anointing ACT is replayed (vessels_anointed, head_anointed); the compounding ban and its karet have no event on any tape"}
     incense: {status: OWED, why: "W6 THE SANCTUARY'S REMAINDER | the burning ACT is replayed by law_erection (incense_burned); the compounding ban and the stranger have no event"}
-    sabbath: {status: OWED, why: "W2 THE CALENDAR | effects: karet_cut_off, kindling_barred, labor_barred, put_to_death, rest_required, sign_between, stoned"}
+    sabbath: {status: WRAPPED, by: law_sabbath}
   lev24:
     talion: {status: WRAPPED, by: law_lev24}
     main: {status: WRAPPED, by: law_lev24}
@@ -348,14 +393,14 @@ functions:
   mishpatim_2:
     "<module>": {status: WRAPPED, by: law_mishpatim_2}
   moadim:
-    work_class: {status: OWED, why: "W2 THE CALENDAR | effects: labor_barred, sanctify_day"}
-    yom_kippur: {status: OWED, why: "W2 THE CALENDAR | effects: destroyed, karet_cut_off, labor_barred, rest_required"}
-    omer: {status: OWED, why: "W2 THE CALENDAR | effects: accepted, barred_from_it, counts_omer"}
-    shavuot_animals: {status: OWED, why: "W2 THE CALENDAR | effects: accepted, due_to_priest, most_holy, smoked_to_the_lord, waved"}
-    two_loaves: {status: OWED, why: "W2 THE CALENDAR | effects: accepted, appearance_owed"}
-    rosh_hashanah: {status: OWED, why: "W2 THE CALENDAR | effects: rest_required, sanctify_day"}
-    sukkot: {status: OWED, why: "W2 THE CALENDAR | effects: dwells_in_booths, exempt, sanctify_day, takes_four_species"}
-    passover: {status: OWED, why: "W2 THE CALENDAR | effects: accepted, eating_window, purge_deadline, sanctify_day"}
+    work_class: {status: WRAPPED, by: law_moadim}
+    yom_kippur: {status: WRAPPED, by: law_moadim}
+    omer: {status: WRAPPED, by: law_moadim}
+    shavuot_animals: {status: WRAPPED, by: law_moadim}
+    two_loaves: {status: WRAPPED, by: law_moadim}
+    rosh_hashanah: {status: WRAPPED, by: law_moadim}
+    sukkot: {status: WRAPPED, by: law_moadim}
+    passover: {status: WRAPPED, by: law_moadim}
   negaim:
     main: {status: OWED, why: "W4 THE PURITY CLOCKS | effects: burned_in_fire, confined_seven_days, demolished, impure_until_evening, isolated_outside_camp, released"}
   offerings:
@@ -371,11 +416,11 @@ functions:
     courts: {status: WRAPPED, by: law_ordinances}
     land: {status: WRAPPED, by: law_ordinances}
   pesach:
-    leaven_machine: {status: OWED, why: "W2 THE CALENDAR | effects: barred_from_it, eating_window, exempt, karet_cut_off, purge_deadline"}
-    paschal_procedure: {status: OWED, why: "W2 THE CALENDAR | effects: barred_from_it, burn_remainder, disqualified, eating_window, exempt, lashes"}
-    access_filter: {status: OWED, why: "W2 THE CALENDAR | effects: barred_from_it, registered_to_lamb"}
-    registration: {status: OWED, why: "W2 THE CALENDAR | effects: barred_from_it, disqualified, registered_to_lamb"}
-    firstborn: {status: OWED, why: "W2 THE CALENDAR | effects: consecrated_firstborn, exempt, pays, redeem_or_break"}
+    leaven_machine: {status: WRAPPED, by: law_pesach}
+    paschal_procedure: {status: WRAPPED, by: law_pesach}
+    access_filter: {status: WRAPPED, by: law_pesach}
+    registration: {status: WRAPPED, by: law_pesach}
+    firstborn: {status: WRAPPED, by: law_pesach}
   pre_sinai:
     creation: {status: WRAPPED, by: law_pre_sinai}
     day_boundary: {status: WRAPPED, by: law_pre_sinai}

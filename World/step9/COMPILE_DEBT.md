@@ -204,8 +204,19 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
       33/33 (3599 cells — five scene cells, and mishpatim_2's score line made visible to the sweep).
       Record: REPORT_WRAP_W1.md. Found and declared below: the Exodus law's UNCOMPILED case heads
       (compile debt, not wrap debt) and the honest-calls guard's last-binding resolution (OPEN).
-- [ ] W2 THE CALENDAR — pesach, calendar, moadim, the Sabbath's law layer (incense_shekel.sabbath),
-      the covenant laws' second seat (erection.repeats)
+- [x] W2 THE CALENDAR (DONE 2026-09-07, the owner: "Go w2"): 26 case-form types registered FIRST by
+      script (the registry 148 types, 260 runs verified, case form 44 → 70 — the statute form did not
+      grow: the case definition covers a plain command instantiated by a recorded row); four daemons
+      DECLARED before the code (the gate failed 26 ways, then passed): law_pesach (nine kinds, the
+      scene under main — the module imports cold for the offerings dispatcher), law_calendar (seven,
+      its registry witnesses carrying the SECOND SEAT 34:18-26 so erection.repeats is WRAPPED across
+      files), law_sabbath (two, a SECOND daemon in the incense_shekel runner beside law_investiture —
+      scene() runs both worlds), law_moadim (eight, the work class the engine's own work_class by
+      call); eleven TIMERS set and fired on the tapes (the purge and the window, the leftover's burn,
+      the seventh year, the omer's fiftieth, the booths' seven); every scene printed before typed,
+      four probes matching their predictions; 22 functions OWED → WRAPPED (88 / 163 / 0); the sweep
+      33/33 (3603 cells). One gate fault found and fixed: the daemon parser's kind regex read `pk ==`
+      as `k ==` (a word boundary added; the five fire-probes 5/5 after). Record: REPORT_WRAP_W2.md.
 - [ ] W3 THE OFFERING ENGINE — offerings, minchah, tzav (installation already law_installation),
       chatat, vayikra5 (deposit_restitution already law_deposit_oath), shemini, shemini_day's remainder
 - [ ] W4 THE PURITY CLOCKS — clocks, negaim, metzora, yoma

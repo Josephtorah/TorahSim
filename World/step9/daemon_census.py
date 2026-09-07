@@ -127,7 +127,7 @@ def parse_daemons(src, base):
     for dm in re.finditer(r"^def (law_[a-z_0-9]+)\(event, world\):\n(.*?)(?=^def |^class |^[A-Z_]+ = |\Z)", src, re.S | re.M):
         name, body = dm.group(1), dm.group(2)
         kinds = OrderedDict()
-        cond = re.compile(r"(?:k|event\['kind'\])\s*(==|!=)\s*'([a-z_]+)'")
+        cond = re.compile(r"(?<![A-Za-z0-9_])(?:k|event\['kind'\])\s*(==|!=)\s*'([a-z_]+)'")   # W2 (2026-09-07): a word boundary before k — `pk == 'x'` is not a kind branch
         pieces = list(cond.finditer(body))
         for i, p in enumerate(pieces):
             seg_end = pieces[i + 1].start() if i + 1 < len(pieces) else len(body)

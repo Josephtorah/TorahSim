@@ -1780,6 +1780,26 @@ rules, no cold function: compile debt X1-X5), and the honest-calls guard's
 resolution of a cells name to its LAST binding (the earlier lists unchecked —
 an OPEN gate item, its own sitting). Record: World/step9/REPORT_WRAP_W1.md.
 Next: W2 THE CALENDAR.
+W2 THE CALENDAR (2026-09-07, the same sitting, the owner: "Go w2"): the rhythm
+held the second time — 26 case-form types registered first by script (the
+registry 148 types, 260 runs verified; the statute form did not grow: the case
+definition already covers a plain command instantiated by a recorded row), four
+daemons declared before their code (the gate failed 26 ways, then passed), the
+scenes printed before typed with all four probes matching their predictions,
+88 wrapped and 163 owed, the sweep 33 of 33. Two shapes settled: a SECOND
+DAEMON IN A FILE (the Sabbath clause's law_sabbath beside the investiture's in
+the incense_shekel runner, one scene() running both worlds), and THE SECOND
+SEAT WRAPPED ACROSS FILES (the covenant laws' repetition at 34:18-26 is wrapped
+by the calendar daemon, whose registry witnesses carry both seats — one law, one
+daemon, two seats). The calendar is where the TIMER op earns its keep: the
+purge and the unleavened window set on the first of the month and fired on the
+fourteenth, the leftover's burn on the sixteenth, the seventh year on the land,
+the omer's fiftieth day with the two loaves brought on it, the booths' seven —
+eleven timers set, eleven fired, each count a literal in the scene's tuple. The
+sitting's one red was the gate's own: its kind regex read `pk ==` as `k ==` and
+fired three ways on a kind that did not exist; a word boundary fixed it and the
+five fire-probes still fire. Record: World/step9/REPORT_WRAP_W2.md. Next: W3
+THE OFFERING ENGINE.
 The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law

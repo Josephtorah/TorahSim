@@ -38,7 +38,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
-assert GUARDED == 41, ('the guard counted %d expectations, the tripwire holds 41' % GUARDED)
+assert GUARDED == 42, ('the guard counted %d expectations, the tripwire holds 42' % GUARDED)
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 # the callees (cold) — the dependency-debt sitting (2026-09-06): this runner
 # imported nothing while 23:5 named the Passover, 23:12 and 23:18-19 the
@@ -373,6 +373,103 @@ def passover():
     }
 
 
+# ---- THE WRAP (W2 THE CALENDAR, D9-iii, 2026-09-07) — the daemon and the scene --------------
+# The eight case heads of Lev 23, each a case-form type of event_vocabulary.yaml: the convocation
+# proclaimed (its work class read off the verse that names the day, by the engine's own work_class),
+# the Passover between the evenings, the Day of Atonement's affliction and its two sanctions, the
+# harvest's new-grain gate, the omer's forty-nine-day TIMER, the two loaves with their animals, the
+# booths' seven-day TIMER, the four species. The daemon writes the ledger and never emits an event.
+import world_engine as WE
+def law_moadim(event, world):
+    """Lev 23 (cold_run_moadim.py — work_class, passover, yom_kippur, omer, shavuot_animals, two_loaves, rosh_hashanah, sukkot)."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'holy_convocation_proclaimed':
+        cls = work_class(event['day'])['v']                          # all_work / servile_only — from the verse that names the day
+        out = [E_('labor_barred', event['people'], value=cls, law='[INK Lev 23:3, 23:28 all work; 23:7, 8, 21, 25, 35, 36 servile work — the class by the engine\'s own work_class(%s) -> %s; Mishnah Megillah 1:5]' % (event['day'], cls)),
+               E_('sanctify_day', event['people'], cp='HEAVEN', value=event['day'], law='[INK 23:2, 23:4 "which you shall proclaim as holy convocations"; Mishnah Rosh Hashanah 2-3 the court proclaims]')]
+        if event['day'] in ('sabbath', 'rosh_hashanah', 'yom_kippur', 'sukkot_1', 'shemini'):
+            out.append(E_('rest_required', event['people'], value=event['day'], law='[INK 23:3, 23:24, 23:32, 23:39 shabbaton — the rest-word on the weekly Sabbath, the first of the seventh, the tenth, the fifteenth and the eighth day]'))
+        return out
+    if k == 'paschal_offered':
+        if event['hour'] == 'after_midday':
+            return [E_('accepted', event['offerer'], cp='HEAVEN', value='between_the_evenings', law='[INK 23:5 "between the evenings"; Sifra Emor Chapter 11 1: from six hours onward; the lamb\'s law CALLED cold_run_pesach.paschal_procedure -> %s]' % PS_EAT)]
+        return [E_('disqualified', event['offerer'], value='before_midday', law='[Sifra Emor Chapter 11 1 — before the day turns, invalid; Mishnah Pesachim 5:3]')]
+    if k == 'yom_kippur_kept':
+        out = [E_('labor_barred', event['soul'], value='all_work', law='[INK 23:28 "any work you shall not do on this very day"]')]
+        if event['afflicted']:
+            out.append(E_('rest_required', event['soul'], value='the_five_afflictions_from_the_ninth_evening', law='[INK 23:27, 23:32 "you shall afflict your souls... on the ninth in the evening"; Sifra Emor Chapter 14 4-5; Mishnah Yoma 8:1]'))
+        else:
+            out.append(E_('karet_cut_off', event['soul'], cp='HEAVEN', law='[INK 23:29 "any soul that is not afflicted on this very day shall be cut off"]'))
+        if event.get('worked'):
+            out.append(E_('destroyed', event['soul'], cp='HEAVEN', law='[INK 23:30 "any soul that does any work on this very day, I will destroy"]'))
+        return out
+    if k == 'harvest_reaped':
+        return [E_('barred_from_it', event['reaper'], value='new_grain_until_the_omer', law='[INK 23:14 "bread and parched grain and fresh ears you shall not eat... until you have brought"; Mishnah Menachot 10:5-6; R. Yehuda: the day itself]')]
+    if k == 'omer_brought':
+        return [E_('counts_omer', event['bringer'], due=event['day'] + 49, value='the_fiftieth', law='[INK 23:15-16 "seven complete weeks... you shall count fifty days" — count 49, sanctify the fiftieth: the TIMER; the morrow of the FESTIVAL, Sifra Emor Chapter 12]'),
+                E_('accepted', event['bringer'], cp='HEAVEN', value=OM['grain_source']['v'], law='[INK 23:11 "for your acceptance"; the lamb CALLED cold_run_offerings -> %s; the omer IS Lev 2:14\'s meal offering CALLED cold_run_minchah.omer -> %s]' % (OM['lamb_olah']['v'], OM['grain_source']['v']))]
+    if k == 'two_loaves_brought':
+        return [E_('accepted', event['bringer'], cp='HEAVEN', value='two_loaves_two_tenths_leavened', law='[INK 23:17 "two loaves of waving, two tenths of fine flour, baked leavened"]'),
+                E_('appearance_owed', event['bringer'], cp='HEAVEN', value='the_feast_of_the_harvest', law='[Exod 23:16 the feast of the harvest — CALLED cold_run_calendar.pilgrimage(able_male) -> %s]' % PIL),
+                E_('smoked_to_the_lord', 'the-seven-lambs-bull-and-rams', law='[INK 23:18 "seven lambs... one bull... two rams, a burnt offering" — Lev 1 CALLED cold_run_offerings.dispatch(olah)]'),
+                E_('most_holy', 'the-two-lambs', law='[INK 23:20 "holy shall they be to the LORD, for the priest"; Mishnah Zevachim 5:5]'),
+                E_('due_to_priest', 'the-priest', cp=event['bringer'], value='the_two_lambs_of_peace', law='[INK 23:20 "for the priest"]'),
+                E_('waved', 'the-two-loaves', law='[INK 23:20 "the priest shall wave them on the bread of the first fruits... on the two lambs"; Mishnah Menachot 5:6]')]
+    if k == 'booths_dwelt':
+        if event['native_male']:
+            return [E_('dwells_in_booths', event['dweller'], due=event['day'] + 7, value=7, law='[INK 23:42 "in booths you shall dwell seven days" — the TIMER; nights as days, Mishnah Sukkah 2:9]')]
+        return [E_('exempt', event['dweller'], value='THE_native_excludes_women', law='[Sifra Emor Chapter 17 9 — the article; Mishnah Sukkah 2:8]')]
+    if k == 'four_species_taken':
+        if event['place'] == 'temple' or event['day_of_feast'] == 1:
+            return [E_('takes_four_species', event['taker'], value=event['place'], law='[INK 23:40 "on the first day"... "before the LORD seven days" — the Temple seven, the province one; Mishnah Sukkah 3:12; the first day even on the Sabbath, Sifra Chapter 16 3]')]
+        return []                                                    # the province past the first day: no taking in the ink
+    return []
+
+def scene():
+    """THE SCENE — the appointed times replayed on the world engine (clock unit: days of the year from 1 Nisan; the month lengths 30/29 the data channel)."""
+    with _ctx.redirect_stdout(_io.StringIO()):
+        w = WE.World(era='the year of Lev 23: Pesachim 5, Megillah 1, Menachot 10, 4-5, Yoma 8, Keritot 1, Sukkah 2-3 on the engine (clock unit: days of the year)')
+        w.laws = [law_moadim]
+        w.advance(7)
+        w.submit({'kind': 'holy_convocation_proclaimed', 'subject': 'israel', 'people': 'israel', 'day': 'sabbath', 'case_source': 'Lev 23:3 — the weekly Sabbath, all work; Mishnah Megillah 1:5'})
+        w.advance(14)
+        w.submit({'kind': 'paschal_offered', 'subject': 'the-offerer', 'offerer': 'the-offerer', 'hour': 'after_midday', 'case_source': 'Sifra Emor Chapter 11 1 — from six hours onward'})
+        w.submit({'kind': 'paschal_offered', 'subject': 'the-early-offerer', 'offerer': 'the-early-offerer', 'hour': 'before_midday', 'case_source': 'Mishnah Pesachim 5:3 — before midday invalid'})
+        w.advance(15)
+        w.submit({'kind': 'holy_convocation_proclaimed', 'subject': 'israel', 'people': 'israel', 'day': 'passover_1', 'case_source': 'Lev 23:7 — servile work; Mishnah Megillah 1:5'})
+        w.submit({'kind': 'harvest_reaped', 'subject': 'the-reaper', 'reaper': 'the-reaper', 'land': 'the-field', 'case_source': 'Mishnah Menachot 10:5 — the new grain until the omer'})
+        w.advance(16)
+        w.submit({'kind': 'omer_brought', 'subject': 'israel', 'bringer': 'israel', 'day': 16, 'case_source': 'Mishnah Menachot 10:1-4 — the sixteenth of Nisan, the morrow of the festival'})
+        w.advance(21)
+        w.submit({'kind': 'holy_convocation_proclaimed', 'subject': 'israel', 'people': 'israel', 'day': 'passover_7', 'case_source': 'Lev 23:8'})
+        w.advance(65)                                                    # the fiftieth day: the omer's count timer FIRES
+        w.submit({'kind': 'holy_convocation_proclaimed', 'subject': 'israel', 'people': 'israel', 'day': 'atzeret', 'case_source': 'Lev 23:21'})
+        w.submit({'kind': 'two_loaves_brought', 'subject': 'israel', 'bringer': 'israel', 'day': 65, 'case_source': 'Mishnah Menachot 4:3, 5:6; Zevachim 5:5 — the two loaves and their lambs'})
+        w.advance(178)
+        w.submit({'kind': 'holy_convocation_proclaimed', 'subject': 'israel', 'people': 'israel', 'day': 'rosh_hashanah', 'case_source': 'Lev 23:24 — shabbaton, a memorial of teruah'})
+        w.advance(187)
+        w.submit({'kind': 'holy_convocation_proclaimed', 'subject': 'israel', 'people': 'israel', 'day': 'yom_kippur', 'case_source': 'Lev 23:28, 23:32 — all work; shabbaton'})
+        w.submit({'kind': 'yom_kippur_kept', 'subject': 'the-faster', 'soul': 'the-faster', 'afflicted': True, 'worked': False, 'case_source': 'Mishnah Yoma 8:1 — the five afflictions'})
+        w.submit({'kind': 'yom_kippur_kept', 'subject': 'the-eater', 'soul': 'the-eater', 'afflicted': False, 'worked': False, 'case_source': 'Lev 23:29; Mishnah Keritot 1:1 — not afflicted: karet'})
+        w.submit({'kind': 'yom_kippur_kept', 'subject': 'the-worker', 'soul': 'the-worker', 'afflicted': True, 'worked': True, 'case_source': 'Lev 23:30 — worked: destroyed'})
+        w.advance(192)
+        w.submit({'kind': 'holy_convocation_proclaimed', 'subject': 'israel', 'people': 'israel', 'day': 'sukkot_1', 'case_source': 'Lev 23:35, 23:39'})
+        w.submit({'kind': 'booths_dwelt', 'subject': 'the-native', 'dweller': 'the-native', 'native_male': True, 'day': 192, 'case_source': 'Lev 23:42; Mishnah Sukkah 2:9 — seven days'})
+        w.submit({'kind': 'booths_dwelt', 'subject': 'the-woman', 'dweller': 'the-woman', 'native_male': False, 'day': 192, 'case_source': 'Mishnah Sukkah 2:8; Sifra Chapter 17 9 — women exempt'})
+        w.submit({'kind': 'four_species_taken', 'subject': 'the-temple-goer', 'taker': 'the-temple-goer', 'place': 'temple', 'day_of_feast': 3, 'case_source': 'Mishnah Sukkah 3:12 — in the Temple seven days'})
+        w.submit({'kind': 'four_species_taken', 'subject': 'the-villager', 'taker': 'the-villager', 'place': 'province', 'day_of_feast': 1, 'case_source': 'Mishnah Sukkah 3:12 — in the province the first day'})
+        w.submit({'kind': 'four_species_taken', 'subject': 'the-villager', 'taker': 'the-villager', 'place': 'province', 'day_of_feast': 2, 'case_source': 'Mishnah Sukkah 3:12 — the province past the first day: nothing'})
+        w.advance(199)                                                   # the booths' seven days pass: the timer FIRES
+        w.submit({'kind': 'holy_convocation_proclaimed', 'subject': 'israel', 'people': 'israel', 'day': 'shemini', 'case_source': 'Lev 23:36, 23:39 — the eighth day, an assembly'})
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    vals = lambda eid, eff: tuple(e['value'] for e in w.entity(eid).ledger if e['effect'] == eff)
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    return (n('the-offerer', 'accepted'), n('the-early-offerer', 'disqualified'), n('israel', 'labor_barred'), n('israel', 'sanctify_day'), n('israel', 'rest_required'), vals('israel', 'labor_barred'),
+            n('the-reaper', 'barred_from_it'), n('israel', 'counts_omer'), n('israel', 'accepted'), n('israel', 'appearance_owed'), n('the-seven-lambs-bull-and-rams', 'smoked_to_the_lord'),
+            n('the-two-lambs', 'most_holy'), n('the-priest', 'due_to_priest'), n('the-two-loaves', 'waved'),
+            n('the-faster', 'rest_required'), n('the-eater', 'karet_cut_off'), n('the-worker', 'destroyed'), n('the-native', 'dwells_in_booths'), n('the-woman', 'exempt'),
+            n('the-temple-goer', 'takes_four_species'), n('the-villager', 'takes_four_species'), tset, fired, w.clock.year), w
 # ---- (2) TEST DATA — Mishnah rows read from the shelf --------------
 def mishnah(tractate, ch, m, must):
     fn = ROOT + '/Data/mishnah_%s_he.json' % tractate
@@ -409,6 +506,8 @@ YK, OM, TL, RH, SK, SV, PSV, SA = (yom_kippur(), omer(), two_loaves(), rosh_hash
                                    sukkot(), sabbath_vs_festival(), passover(), shavuot_animals())
 
 # (Mishnah row, cell, expected)
+SCENE, _W = scene()                      # after OM / PIL / SV are bound (the scene calls the engine's own cells)
+
 TESTS = [
  ('Megillah 1:5 — festival vs Sabbath differ only in food work',
   SV['festival_class'], 'servile_only'),
@@ -464,6 +563,9 @@ TESTS = [
  ('Lev 23:6 — the feast of unleavened bread: Exod 12\'s window (CALLED pesach)', PSV['matzot_window'], '14th evening to 21st evening'),
  ('Exod 23:16, 23:19 — the first fruits, one institution at two seats (CALLED calendar)', TL['first_fruits_link'], 'bring to the house (seven kinds — fetched list)'),
  ('Exod 23:14-17 — the harvest feast is an appearing (CALLED calendar)', TL['pilgrimage'], 'owes the three appearings'),
+ # ---- THE WRAP (W2): the year on the world engine ----
+ ('THE SCENE on the world engine — the wrap (W2): the year of Lev 23 from 1 Nisan', cell(SCENE, A, "THE SCENE: the Passover after midday accepted and before it disqualified; eight convocations proclaimed with their classes read off the verses (all work at the Sabbath and the Day, servile at the six) and the five shabbaton rests; the new grain barred at the reaping; the omer's forty-nine-day TIMER set on the sixteenth and FIRED on the fiftieth with the two loaves and their animals (the appearing by call, the burnt offerings smoked, the two lambs most holy for the priest, the loaves waved); the faster's affliction, the eater's karet, the worker destroyed; the native's seven-day TIMER in the booth fired on the twenty-second of the seventh, the woman exempt; the four species in the Temple on day three, in the province on day one and not on day two; two timers set, two fired; the clock at 199: %r" % (SCENE,), ['counts_omer', 'dwells_in_booths', 'takes_four_species', 'karet_cut_off', 'destroyed']),
+  (1, 1, 8, 8, 5, ('all_work', 'servile_only', 'servile_only', 'servile_only', 'servile_only', 'all_work', 'servile_only', 'servile_only'), 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 199)),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------
@@ -480,6 +582,8 @@ for name, c, want in TESTS:
     print('     effects: %s' % ', '.join(c['fx']))
 n = len(TESTS)
 print()
+print('WATCH COVERAGE (the wrap):')
+_W.print_coverage()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
 print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · '
       'answer-sheet %d/%d · data %d/%d · imports %d/%d' % (

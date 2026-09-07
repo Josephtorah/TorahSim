@@ -86,7 +86,7 @@ sys.path.insert(0, HERE)
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
-assert GUARDED == 299, ("the guard counted %d expectations, the tripwire holds 299" % GUARDED)
+assert GUARDED == 300, ("the guard counted %d expectations, the tripwire holds 300" % GUARDED)
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -1166,8 +1166,39 @@ def law_investiture(event, world):
     if k == 'did_all': return [E('inspected_as_commanded', 'the-rite')]
     return []
 
+# ---- THE WRAP OF THE SABBATH CLAUSE (W2 THE CALENDAR, D9-iii, 2026-09-07) — a second daemon in this file ----
+# The Sabbath's law layer (31:12-17, 35:1-3) is this runner's own span, so its daemon lives here beside the
+# investiture's: two case heads — the profanation (death with witnesses and the mode supplied at the
+# gatherer's run, karet without; kindling the one named labor) and the keeping as the sign.
+def law_sabbath(event, world):
+    """Exod 31:12-17 + 35:1-3 (cold_run_incense_shekel.py F13 sabbath)."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'sabbath_profaned':
+        out = [E_('labor_barred', event['profaner'], value=event['labor'], law='F13 [INK 31:14-15 "whoever does work on it"; the class CALLED cold_run_moadim.work_class(sabbath) -> %s; the thirty-nine the data channel, Mishnah Shabbat 7:2]' % MO_CLASS)]
+        if event['labor'] == 'kindling':
+            out.append(E_('kindling_barred', event['profaner'], law='F13 [INK 35:3 "you shall not kindle fire in all your dwellings on the Sabbath day" — the one labor the ink names; R. Natan: to divide, R. Yosei: a plain prohibition — Shabbat 70a, Keritot 20b]'))
+        if event['witnessed']:
+            out += [E_('put_to_death', event['profaner'], value='with_witnesses', law='F13 [INK 31:14 "its profaners shall surely be put to death", 31:15; Onkelos: the court]'),
+                    E_('stoned', event['profaner'], law='F13 [Num 15:32-36 the wood-gatherer — the mode supplied at the clause\'s run; Bava Batra 119a:8]')]
+        else:
+            out.append(E_('karet_cut_off', event['profaner'], cp='HEAVEN', law='F13 [INK 31:14 "that soul shall be cut off from among its people"; Onkelos: the deliberate without witnesses — Heaven]'))
+        return out
+    if k == 'sabbath_kept_as_sign':
+        return [E_('sign_between', event['keeper'], cp='HEAVEN', value='between_My_Word_and_you', law='F13 [INK 31:13 "a sign between Me and you", 31:17 "a sign forever"; Onkelos 31:13 the Memra]'),
+                E_('rest_required', event['keeper'], value='shabbat_shabbaton', law='F13 [INK 31:15 "a Sabbath of complete rest"; 31:17 "He ceased and was refreshed"]')]
+    return []
+
 def scene():
     with contextlib.redirect_stdout(io.StringIO()):
+        # W2 (2026-09-07): the Sabbath clause's own world — the recorded rows on law_sabbath (clock unit: days)
+        ws = WE.World(era='the tabernacle\'s Sabbath clause: Shabbat 7, Num 15:32-36, Onkelos 31:14 on the engine (clock unit: days)')
+        ws.laws = [law_sabbath]
+        ws.advance(1)
+        ws.submit({'kind': 'sabbath_kept_as_sign', 'subject': 'israel', 'keeper': 'israel', 'case_source': 'Exod 31:13-17 — the sign; Onkelos 31:13'})
+        ws.submit({'kind': 'sabbath_profaned', 'subject': 'the-gatherer', 'profaner': 'the-gatherer', 'witnessed': True, 'labor': 'gathering', 'case_source': 'Num 15:32-36 — the wood-gatherer, stoned; Bava Batra 119a'})
+        ws.submit({'kind': 'sabbath_profaned', 'subject': 'the-unwitnessed', 'profaner': 'the-unwitnessed', 'witnessed': False, 'labor': 'plowing', 'case_source': 'Onkelos Exod 31:14 — deliberate without witnesses: karet'})
+        ws.submit({'kind': 'sabbath_profaned', 'subject': 'the-kindler', 'profaner': 'the-kindler', 'witnessed': False, 'labor': 'kindling', 'case_source': 'Exod 35:3 + Shabbat 70a — kindling singled out'})
         w = WE.World(era='the investiture (clock unit: days)')
         w.laws = [law_investiture]
         tape = [('washed', 'aaron', 'Lev 8:6'), ('dressed', 'aaron', 'Lev 8:7-9'), ('vessels_anointed', 'moses', 'Lev 8:10-11'), ('head_anointed', 'aaron', 'Lev 8:12'),
@@ -1178,11 +1209,14 @@ def scene():
             w.submit({'kind': k, 'subject': s, 'case_source': src, 'law': '14'})
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
     events = len([l for l in w.log if l[0] == 'EVENT'])
+    ns = lambda eid, eff: len([e for e in ws.entity(eid).ledger if e['effect'] == eff])
+    sab = (ns('israel', 'sign_between'), ns('israel', 'rest_required'), ns('the-gatherer', 'labor_barred'), ns('the-gatherer', 'put_to_death'), ns('the-gatherer', 'stoned'),
+           ns('the-unwitnessed', 'karet_cut_off'), ns('the-unwitnessed', 'put_to_death'), ns('the-kindler', 'kindling_barred'), ns('the-kindler', 'karet_cut_off'), ws.clock.year)
     return (n('aaron', 'names_borne'), n('aaron', 'judgment_borne'), n('aaron', 'entry_announced'), n('aaron', 'plate_propitiates'),
             n('the-bull', 'hand_laid') + n('the-ram-1', 'hand_laid') + n('the-ram-2', 'hand_laid'), n('aaron', 'blood_on_extremities') + n('the-sons', 'blood_on_extremities'),
             n('the-altar', 'altar_purged'), n('the-breast', 'waved'), n('moses', 'due_to_priest'), n('the-garments', 'consecrated'), n('aaron', 'invested_office'),
-            n('the-remainder', 'burn_remainder'), n('aaron', 'confined_seven_days'), n('aaron', 'anointed') + n('the-tabernacle', 'anointed'), events)
-SCENE = scene()
+            n('the-remainder', 'burn_remainder'), n('aaron', 'confined_seven_days'), n('aaron', 'anointed') + n('the-tabernacle', 'anointed'), events), sab, w, ws
+SCENE, SCENE_SAB, _W, _WS = scene()
 def build(q):
     if q == 'alignment':
         return cell(A_TOTAL, I, "the alignment engine ACROSS BOOKS: (spec verses, run verses, spec matched, run matched, dropped) = %s — every Lev 8 verse of a block aligned to its Exod 29 verse by normalized token overlap at threshold 0.3: the run rewrites the second person as the third ('you shall take' %d times in the spec, 'and he took' %d in the run), so the block-level correspondence holds while the token-level match is low — the grammar artifact E3 recorded, at its widest" % (A_TOTAL, sum(toks('Exod', 29, v).count('ולקחת') for v in range(1, 47)), sum(toks('Lev', 8, v).count('ויקח') for v in range(1, 37))), [FX.NONE])
@@ -1541,6 +1575,9 @@ TESTS = [
  ('the spec\'s one citation token', build('spec_cites_itself'), 1),
  ('THE HEADLINE — the delta is where the tradition argues', build('headline'), 'the_spec_run_delta_is_where_the_tradition_argues'),
  ('THE SCENE on the world engine — the four use-entries fired', build('world'), (1, 1, 1, 1, 3, 2, 1, 1, 1, 1, 1, 1, 1, 2, 15)),
+ # ---- THE WRAP OF THE SABBATH CLAUSE (W2) ----
+ ('THE SABBATH SCENE on the world engine — the wrap (W2)', cell(SCENE_SAB, A, "THE SABBATH SCENE: the sign written on the covenant and the rest; the gatherer's labor barred, put to death with witnesses and STONED (the mode from Num 15:35); the unwitnessed profaner cut off by Heaven and not by the court; the kindler's kindling barred beside his karet — the one labor the ink names; the clock at 1: %r" % (SCENE_SAB,), ['sign_between', 'put_to_death', 'stoned', 'karet_cut_off', 'kindling_barred']),
+  (1, 1, 1, 1, 1, 1, 0, 1, 1, 1)),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------
@@ -1561,6 +1598,9 @@ for name, c, want in TESTS:
     print('%s %-96s [%s] %s' % ('OK ' if hit else 'MISS', name[:96], c['p'], '' if hit else 'got=%r' % (c['v'],)))
     print('     effects: %s' % ', '.join(c['fx']))
 print()
+print('WATCH COVERAGE (the investiture and the Sabbath clause):')
+_W.print_coverage()
+_WS.print_coverage()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
 print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d'
       % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n))

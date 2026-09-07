@@ -16,7 +16,7 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chp(_P, 'CASES', 2)
-assert GUARDED == 16, ('the guard counted %d expectations, the tripwire holds 16' % GUARDED)
+assert GUARDED == 17, ('the guard counted %d expectations, the tripwire holds 17' % GUARDED)
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys
 import effects_layer as FX
@@ -223,6 +223,72 @@ def kid_in_milk(case, data):
     return out('no verdict in span', [FX.NONE])
 
 
+# ---- THE WRAP (W2 THE CALENDAR, D9-iii, 2026-09-07) — the daemon and the scene --------------
+# The seven case heads of Exod 23:10-19, each a case-form type of event_vocabulary.yaml whose
+# witnesses carry the SECOND SEAT too (34:18-26 — the erection runner's repeats function is
+# wrapped here, across files: one law, two seats). The seventh year is a TIMER on the LAND; the
+# appearing owed sits on Heaven's docket with the moved 'not empty' clause's debit beside it.
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import world_engine as WE
+def law_calendar(event, world):
+    """Exod 23:10-19 + 34:18-26 (cold_run_calendar.py F1-F6; cold_run_erection.repeats)."""
+    k, src = event['kind'], event['case_source']
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'land_sown':
+        return [E_('land_release', event['land'], cp=event['owner'], due=event['year'] + 6, value='the_seventh_year', law='F1 [INK 23:10-11 "six years you shall sow... but the seventh you shall release it" — the TIMER on the LAND; Lev 25:1-7 CALLED cold_run_yovel.sabbatical]'),
+                E_('barred_from_it', event['owner'], due=event['year'] + 6, value='hoeing_and_clearing_stones', law='F1 [RECORDED Sukkah 44b:7: "release" and "let lie" split; INK 34:21 "in plowing and in harvest you shall cease"]')]
+    if k == 'feast_of_matzot_kept':
+        return [E_('purge_deadline', event['keeper'], value=PURGE, law='F1b [INK 23:15 "as I commanded you" (34:18 without the kaf) — CALLED cold_run_pesach.leaven_machine(purge_deadline) -> %s]' % PURGE)]
+    if k == 'seventh_day_rest':
+        return [E_('rest_required', event['household'], value=event['who'], law='F2 [INK 23:12 "that your ox and your donkey may rest, and the son of your maidservant and the stranger be refreshed"; RECORDED Yevamot 48b:6 the resident stranger; 34:21]')]
+    if k == 'appeared_at_the_feast':
+        if event['person_kind'] == 'able_male':
+            return [E_('appearance_owed', event['person'], cp='HEAVEN', value=event['feast'], law='F3 [INK 23:14, 23:17, 34:23 "three times in the year all your males shall appear"]'),
+                    E_('appearance_gift_owed', event['person'], law='F3 [INK 34:20 "they shall not appear before Me empty" — the MOVED clause; RECORDED Bekhorot 51b:8 a standing liability; Mishnah Chagigah 1:2 the amounts the data]'),
+                    E_('pilgrim_land_guarded', 'the-land', cp='HEAVEN', law='F3 [INK 34:24 "no man shall covet your land when you go up to appear" — the inserted warranty]')]
+        return [E_('exempt', event['person'], value=event['person_kind'], law='F3 [INK 23:17 "all your MALES"; RECORDED Yevamot 103a:11 regalim at the feet; Sanhedrin 4b:15 both eyes; Mishnah Chagigah 1:1]')]
+    if k == 'offering_slaughtered_over_leaven':
+        out = []
+        if event['leaven_in_possession']:
+            out.append(E_('barred_from_it', event['slaughterer'], value='leaven_in_possession', law='F4 [INK 23:18, 34:25 "you shall not slaughter the blood of My offering over leaven"; Mishnah Pesachim 5:4]'))
+        if event['fat_left_overnight'] and not event.get('on_altar'):
+            out.append(E_('disqualified', 'the-fat', cp=event['slaughterer'], law='F4 [INK 23:18 "nor shall the fat of My feast remain overnight"; RECORDED Pesachim 59b:6: off the altar, disqualified by morning]'))
+        return out
+    if k == 'first_fruits_brought':
+        return [E_('restores', event['bringer'], cp='the-house-of-the-LORD', value=event['species'], law='F5 [INK 23:19, 34:26 "the first of the first fruits of your land you shall bring to the house"; the seven kinds the fetched list, Mishnah Bikkurim 1:3]')]
+    if k == 'kid_boiled_in_milk':
+        return [E_('barred_from_it', event['actor'], value=event['act'], law='F6 [INK 23:19, 34:26, Deut 14:21 — three seats: cooking, eating, benefit; RECORDED Chullin 115b, Pesachim 24b:11]')]
+    return []
+
+def scene():
+    """THE SCENE — the recorded rows replayed on the world engine (clock unit: years; the land's timer runs to the seventh)."""
+    with _ctx.redirect_stdout(_io.StringIO()):
+        w = WE.World(era='the calendar of Exod 23:10-19 and its second seat: Sheviit, Chagigah 1, Pesachim 5, Bikkurim 1, Chullin 8 on the engine (clock unit: years)')
+        w.laws = [law_calendar]
+        w.advance(1)
+        w.submit({'kind': 'land_sown', 'subject': 'the-farmer', 'land': 'the-field', 'owner': 'the-farmer', 'year': 1, 'case_source': 'Mishnah Sheviit 1-2; Sukkah 44b — the seventh year'})
+        w.advance(2)
+        w.submit({'kind': 'feast_of_matzot_kept', 'subject': 'the-keeper', 'keeper': 'the-keeper', 'day': 15, 'case_source': 'Exod 23:15 / 34:18 — as I commanded you (Pesachim 5a by call)'})
+        w.submit({'kind': 'seventh_day_rest', 'subject': 'the-household', 'household': 'the-household', 'who': 'ox', 'case_source': 'Exod 23:12 — the ox and the donkey'})
+        w.submit({'kind': 'seventh_day_rest', 'subject': 'the-household', 'household': 'the-household', 'who': 'resident_stranger', 'case_source': 'Yevamot 48b:6 — the resident stranger'})
+        for p, pk in (('the-pilgrim', 'able_male'), ('the-woman', 'woman'), ('the-lame', 'lame'), ('the-one-eyed', 'blind_one_eye')):
+            w.submit({'kind': 'appeared_at_the_feast', 'subject': p, 'person': p, 'person_kind': pk, 'feast': 'matzot', 'case_source': 'Mishnah Chagigah 1:1; Yevamot 103a; Sanhedrin 4b; Bekhorot 51b (34:20)'})
+        w.submit({'kind': 'offering_slaughtered_over_leaven', 'subject': 'the-slaughterer', 'slaughterer': 'the-slaughterer', 'leaven_in_possession': True, 'fat_left_overnight': False, 'case_source': 'Mishnah Pesachim 5:4 — leaven in possession'})
+        w.submit({'kind': 'offering_slaughtered_over_leaven', 'subject': 'the-second-slaughterer', 'slaughterer': 'the-second-slaughterer', 'leaven_in_possession': False, 'fat_left_overnight': True, 'on_altar': False, 'case_source': 'Pesachim 59b:6 — the fat off the altar overnight'})
+        w.submit({'kind': 'offering_slaughtered_over_leaven', 'subject': 'the-third-slaughterer', 'slaughterer': 'the-third-slaughterer', 'leaven_in_possession': False, 'fat_left_overnight': True, 'on_altar': True, 'case_source': 'Pesachim 59b:6 — on the altar the night burns it'})
+        w.submit({'kind': 'first_fruits_brought', 'subject': 'the-farmer', 'bringer': 'the-farmer', 'species': 'figs', 'case_source': 'Mishnah Bikkurim 1:3 — from the seven kinds'})
+        for act in ('cook', 'eat', 'benefit'):
+            w.submit({'kind': 'kid_boiled_in_milk', 'subject': 'the-cook', 'actor': 'the-cook', 'act': act, 'case_source': 'Chullin 115b — three seats, three bans'})
+        w.advance(7)                                                       # the seventh year: the land's release and the labor bar FIRE
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
+    return (n('the-field', 'land_release'), n('the-farmer', 'barred_from_it'), n('the-keeper', 'purge_deadline'), n('the-household', 'rest_required'),
+            n('the-pilgrim', 'appearance_owed'), n('the-pilgrim', 'appearance_gift_owed'), n('the-land', 'pilgrim_land_guarded'), n('the-woman', 'exempt') + n('the-lame', 'exempt') + n('the-one-eyed', 'exempt'),
+            n('the-slaughterer', 'barred_from_it'), n('the-fat', 'disqualified'), n('the-third-slaughterer', 'disqualified'), n('the-farmer', 'restores'), n('the-cook', 'barred_from_it'),
+            tset, fired, w.clock.year), w
+SCENE, _W = scene()
+
 # ---- Motion 2: the test data; Motion 3+5: run, grade, effects -------
 DATA = {}
 CASES = [
@@ -272,6 +338,10 @@ CASES = [
     ('Lev 25:1-7 is the same release — one function at two seats (by call into the jubilee engine)',
      lambda: sabbatical({'ask': 'home_engine'}, DATA),
      'the same release: Lev 25 holds 4 labor verbs (CALLED yovel)'),
+    # ---- THE WRAP (W2): the scene on the world engine — the recorded rows on the daemon, both seats ----
+    ('THE SCENE on the world engine — the wrap (W2): the land sown and its seventh-year timer fired with the labor bar; the matzot feast\'s purge by call; the ox and the resident stranger rested; the able male owes the appearing, the gift (34:20) and the land\'s warranty (34:24), the woman, the lame and the one-eyed exempt; leaven in possession barred, the fat off the altar disqualified and on the altar nothing; the first fruits to the house; the kid three ways',
+     lambda: (SCENE, [FX.NONE], [('INK', 'Exod 23:10-19 + 34:18-26 — the recorded rows replayed: Sheviit, Sukkah 44b, Pesachim 5a, Yevamot 48b, Chagigah 1:1-2, Bekhorot 51b, Pesachim 5:4, 59b, Bikkurim 1:3, Chullin 115b')]),
+     (1, 1, 1, 2, 1, 1, 1, 3, 1, 1, 0, 1, 3, 2, 2, 7)),
 ]
 
 ok = 0
@@ -294,6 +364,8 @@ for label, fn, want in CASES:
     for line in FX.render(effects):
         print('        ->%s' % line)
 print()
+print('WATCH COVERAGE (the wrap):')
+_W.print_coverage()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, len(CASES)))
 tot = len(CASES)
 print('FRACTIONS: pure ink %d/%d (%.0f%%) · named moves %d/%d (%.0f%%) '

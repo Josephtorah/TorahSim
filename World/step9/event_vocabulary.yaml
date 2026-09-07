@@ -1139,6 +1139,242 @@ events:
     corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
     tape: "submitted by cold_run_lev24.py [subjects: the recorded case's parties]; consumed by law_lev24 (cold_run_lev24.py) -> substitution"
     fields: ["striker", "victim", "blemish"]
+  # ---- W2 THE CALENDAR (D9-iii, 2026-09-07): the case-form types of the wrapped Exod 12-13, 23:10-19 (+ 34:18-26 the second
+  # seat), 31:12-17 + 35:1-3, and Lev 23 spans; witnesses generated from the Tanakh DB (scratchpad w2_registry_gen.py), never typed ----
+  first_month_begun:
+    en: "the first month begun — the utterance 'this month shall be for you the beginning of months; it is the first for you of the months of the year' (the court's new month, Mishnah Rosh Hashanah 1:1): the Passover's two TIMERS set from it — the leaven purge by midday of the fourteenth, the unleavened window from the fourteenth at evening"
+    he: "הַחֹדֶשׁ הַזֶּה לָכֶם רֹאשׁ חֳדָשִׁים (this month shall be for you the beginning of months — Exod 12:2)"
+    form: case
+    witness: ["Exod 12:2 | החדש הזה לכם ראש חדשים"]
+    ink: "Mishnah Rosh Hashanah 1:1 (the first of Nisan the new year for months); Exod 12:15 + Pesachim 5a:6, 5a:16 (the purge by midday of the fourteenth); Exod 12:18 (the window's two endpoints)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_pesach.py [subjects: the recorded case's parties]; consumed by law_pesach (cold_run_pesach.py) -> purge_deadline, eating_window"
+    fields: ["month", "day"]
+  lamb_taken:
+    en: "the lamb taken — the statute 'on the tenth of this month they shall take for themselves each man a lamb for a father's house' with its case clause 'and if the household be too little for a lamb, he and his neighbor next to his house shall take, by the count of souls': the registration — each eater joins the lamb's count (Mishnah Pesachim 8; Pesachim 61a)"
+    he: "בֶּעָשֹׂר לַחֹדֶשׁ הַזֶּה וְיִקְחוּ לָהֶם אִישׁ שֶׂה לְבֵית אָבֹת (on the tenth of this month they shall take for themselves each man a lamb for a father's house — Exod 12:3); וְאִם יִמְעַט הַבַּיִת מִהְיֹת מִשֶּׂה וְלָקַח הוּא וּשְׁכֵנוֹ (and if the household be too little for a lamb, he and his neighbor shall take — Exod 12:4)"
+    form: case
+    witness: ["Exod 12:3 | בעשר לחדש הזה ויקחו להם איש שה לבית אבת", "Exod 12:4 | ואם ימעט הבית מהית משה ולקח הוא ושכנו"]
+    ink: "Mishnah Pesachim 8:1-3 (registration to the lamb); Pesachim 61a:8, 61a:11 (by the count — the registered only; according to his eating — the one who can eat an olive-bulk)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_pesach.py [subjects: the recorded case's parties]; consumed by law_pesach (cold_run_pesach.py) -> registered_to_lamb"
+    fields: ["household", "members", "neighbor_joins"]
+  withdrew_from_lamb:
+    en: "a registrant withdraws — 'each according to his eating you shall count for the lamb' read with 'from being of a lamb' (while the lamb LIVES, Pesachim 89a): one may withdraw and register to another lamb until the slaughter, not after (R. Shimon's until-the-sprinkling arm recorded beside it)"
+    he: "לְפִי אָכְלוֹ תָּכֹסּוּ עַל הַשֶּׂה (according to his eating you shall count for the lamb — Exod 12:4)"
+    form: case
+    witness: ["Exod 12:4 | לפי אכלו תכסו על השה"]
+    ink: "Pesachim 89a:23 ('from being of a lamb' — while it lives); Mishnah Pesachim 8:3 (registering and withdrawing until the slaughter)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_pesach.py [subjects: the recorded case's parties]; consumed by law_pesach (cold_run_pesach.py) -> registered_to_lamb, barred_from_it"
+    fields: ["person", "when"]
+  sought_to_eat:
+    en: "one seeks to eat of the lamb — the ordinance's access clauses: 'no stranger shall eat of it', 'every man's slave bought for money, when you have circumcised him, then he shall eat of it', 'a sojourner and a hired servant shall not eat of it', 'no uncircumcised one shall eat of it' — the filter on the eater (Mekhilta; Yevamot 70b: the sons' circumcision bars the father)"
+    he: "כָּל בֶּן נֵכָר לֹא יֹאכַל בּוֹ (no stranger shall eat of it — Exod 12:43); וְכָל עֶבֶד אִישׁ מִקְנַת כָּסֶף וּמַלְתָּה אֹתוֹ אָז יֹאכַל בּוֹ (and every man's slave bought for money, when you have circumcised him, then he shall eat of it — Exod 12:44); תּוֹשָׁב וְשָׂכִיר לֹא יֹאכַל בּוֹ (a sojourner and a hired servant shall not eat of it — Exod 12:45); וְכָל עָרֵל לֹא יֹאכַל בּוֹ (and no uncircumcised one shall eat of it — Exod 12:48)"
+    form: case
+    witness: ["Exod 12:43 | כל בן נכר לא יאכל בו", "Exod 12:44 | וכל עבד איש מקנת כסף ומלתה אתו אז יאכל בו", "Exod 12:45 | תושב ושכיר לא יאכל בו", "Exod 12:48 | וכל ערל לא יאכל בו"]
+    ink: "Mekhilta Pischa 15 (the stranger read at the estranged in deed); Yevamot 70b:10 ('from it' — the sons' and slaves' circumcision bars the father); Exod 12:48-49 (the convert as the home-born, one law)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_pesach.py [subjects: the recorded case's parties]; consumed by law_pesach (cold_run_pesach.py) -> barred_from_it, registered_to_lamb"
+    fields: ["person", "person_kind", "circumcised"]
+  lamb_slaughtered:
+    en: "the lamb slaughtered — 'and all the assembly of the congregation of Israel shall slaughter it between the evenings', with the declaration 'it is a Passover sacrifice to the LORD': valid only for its registered, for its eaters, and for its own name; the night's eating window opens and the leftover's burning is dated to the sixteenth"
+    he: "וְשָׁחֲטוּ אֹתוֹ כֹּל קְהַל עֲדַת יִשְׂרָאֵל בֵּין הָעַרְבָּיִם (and all the assembly of the congregation of Israel shall slaughter it between the evenings — Exod 12:6); זֶבַח פֶּסַח הוּא לַיהוָה (it is a Passover sacrifice to the LORD — Exod 12:27)"
+    form: case
+    witness: ["Exod 12:6 | ושחטו אתו כל קהל עדת ישראל בין הערבים", "Exod 12:27 | זבח פסח הוא ליהוה"]
+    ink: "Pesachim 61a:8, 61a:11 (for the registered, for the eaters); Pesachim 62b:6 + Zevachim 7b (for its own name — indispensable); Pesachim 120b:5 (eaten until midnight); Pesachim 83b:14 + Shabbat 24b (the burn waits for the sixteenth)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_pesach.py [subjects: the recorded case's parties]; consumed by law_pesach (cold_run_pesach.py) -> disqualified, eating_window, burn_remainder"
+    fields: ["lamb", "for_registered", "for_eaters", "for_its_name", "day"]
+  lamb_eaten:
+    en: "the lamb eaten — 'and they shall eat the flesh on this night, roasted with fire', 'eat not of it raw, nor boiled in water', 'in one house shall it be eaten; you shall not carry out of the flesh outside the house; and a bone you shall not break in it': roasted only, within the group, no bone broken — the breaker of a valid lamb's bone lashed (Mishnah Pesachim 7:11), the disqualified lamb's bones outside (Pesachim 84a)"
+    he: "וְאָכְלוּ אֶת הַבָּשָׂר בַּלַּיְלָה הַזֶּה צְלִי אֵשׁ (and they shall eat the flesh on this night, roasted with fire — Exod 12:8); אַל תֹּאכְלוּ מִמֶּנּוּ נָא וּבָשֵׁל מְבֻשָּׁל בַּמָּיִם (eat not of it raw, nor boiled in water — Exod 12:9); לֹא תוֹצִיא מִן הַבַּיִת מִן הַבָּשָׂר חוּצָה וְעֶצֶם לֹא תִשְׁבְּרוּ בוֹ (you shall not carry out of the flesh outside the house, and a bone you shall not break in it — Exod 12:46)"
+    form: case
+    witness: ["Exod 12:8 | ואכלו את הבשר בלילה הזה צלי אש", "Exod 12:9 | אל תאכלו ממנו נא ובשל מבשל במים", "Exod 12:46 | לא תוציא מן הבית מן הבשר חוצה ועצם לא תשברו בו"]
+    ink: "Mishnah Pesachim 7:11 (the breaker of a bone of a pure Paschal lamb: forty lashes); Pesachim 84a:15 ('in IT' — a valid lamb only); Pesachim 85b:1 (from group to group is carrying out)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_pesach.py [subjects: the recorded case's parties]; consumed by law_pesach (cold_run_pesach.py) -> barred_from_it, lashes, exempt"
+    fields: ["eater", "preparation", "carried_out", "bone_broken", "lamb_valid"]
+  leaven_eaten:
+    en: "leaven eaten in the window — the case clause 'for whoever eats leaven, that soul shall be cut off from Israel, from the first day to the seventh day' (and 'whoever eats what is leavened... the sojourner and the native'): karet on Heaven's docket"
+    he: "כִּי כָּל אֹכֵל חָמֵץ וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא מִיִּשְׂרָאֵל (for whoever eats leaven, that soul shall be cut off from Israel — Exod 12:15); כִּי כָּל אֹכֵל מַחְמֶצֶת וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא (for whoever eats what is leavened, that soul shall be cut off — Exod 12:19)"
+    form: case
+    witness: ["Exod 12:15 | כי כל אכל חמץ ונכרתה הנפש ההוא מישראל", "Exod 12:19 | כי כל אכל מחמצת ונכרתה הנפש ההוא"]
+    ink: "Mishnah Keritot 1:1 (leaven on Passover among the thirty-six); Exod 12:18 (the window's endpoints)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_pesach.py [subjects: the recorded case's parties]; consumed by law_pesach (cold_run_pesach.py) -> karet_cut_off"
+    fields: ["eater", "day"]
+  leaven_found:
+    en: "leaven found or seen — 'seven days leaven shall not be found in your houses' and 'no leaven shall be seen with YOU, nor leaven seen with you in all your borders': the possessive bounds the ban — the Jew's own leaven kept through Passover stands penalized after it, the gentile's and the deposited do not (Pesachim 5b-6a, 29a)"
+    he: "שִׁבְעַת יָמִים שְׂאֹר לֹא יִמָּצֵא בְּבָתֵּיכֶם (seven days leaven shall not be found in your houses — Exod 12:19); וְלֹא יֵרָאֶה לְךָ חָמֵץ וְלֹא יֵרָאֶה לְךָ שְׂאֹר (and no leaven shall be seen with you, nor leaven seen with you — Exod 13:7)"
+    form: case
+    witness: ["Exod 12:19 | שבעת ימים שאר לא ימצא בבתיכם", "Exod 13:7 | ולא יראה לך חמץ ולא יראה לך שאר"]
+    ink: "Pesachim 5b:2-6a:6 (yours you may not see; the gentile's and the deposited you may — ownership the parameter); Pesachim 29a:5 (the Jew's leaven kept through Passover penalized); Mishnah Pesachim 2:2"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_pesach.py [subjects: the recorded case's parties]; consumed by law_pesach (cold_run_pesach.py) -> exempt, barred_from_it"
+    fields: ["holder", "owner", "after_pesach"]
+  firstborn_born:
+    en: "a firstborn born — 'sanctify to Me every firstborn, opener of every womb, among the children of Israel, of man and of beast' with the redemption clauses 'every firstling of a donkey you shall redeem with a lamb, and if you do not redeem it you shall break its neck; and every firstborn of man among your sons you shall redeem': the status at birth, the donkey's fork, the son's five sela (a fetched constant), the caesarean birth that never opened the womb (Niddah 40a)"
+    he: "קַדֶּשׁ לִי כָל בְּכוֹר פֶּטֶר כָּל רֶחֶם (sanctify to Me every firstborn, opener of every womb — Exod 13:2); וְכָל פֶּטֶר חֲמֹר תִּפְדֶּה בְשֶׂה וְאִם לֹא תִפְדֶּה וַעֲרַפְתּוֹ (and every firstling of a donkey you shall redeem with a lamb, and if you do not redeem it you shall break its neck — Exod 13:13); וְכֹל בְּכוֹר אָדָם בְּבָנֶיךָ תִּפְדֶּה (and every firstborn of man among your sons you shall redeem — Exod 13:13)"
+    form: case
+    witness: ["Exod 13:2 | קדש לי כל בכור פטר כל רחם", "Exod 13:13 | וכל פטר חמר תפדה בשה ואם לא תפדה וערפתו", "Exod 13:13 | וכל בכור אדם בבניך תפדה"]
+    ink: "Mishnah Bekhorot 1:7 (the redemption command precedes the breaking); Num 18:16 (five sela — the data channel); Niddah 40a:14 (the caesarean birth: not consecrated); Exod 34:19-20 (the second seat, the erection runner's repeats)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_pesach.py [subjects: the recorded case's parties]; consumed by law_pesach (cold_run_pesach.py) -> consecrated_firstborn, redeem_or_break, pays, exempt"
+    fields: ["born", "owner"]
+  land_sown:
+    en: "the land sown — 'six years you shall sow your land and gather its produce, but the seventh you shall release it and let it lie, that the poor of your people may eat' (and at the second seat 'in plowing and in harvest you shall cease'): the seventh-year TIMER on the LAND, and the worked-land verbs barred in the seventh (Sukkah 44b: rest from hoeing, rest from clearing stones — Lev 25's labors by call to the jubilee engine)"
+    he: "וְשֵׁשׁ שָׁנִים תִּזְרַע אֶת אַרְצֶךָ (and six years you shall sow your land — Exod 23:10); וְהַשְּׁבִיעִת תִּשְׁמְטֶנָּה וּנְטַשְׁתָּהּ (but the seventh you shall release it and let it lie — Exod 23:11); בֶּחָרִישׁ וּבַקָּצִיר תִּשְׁבֹּת (in plowing and in harvest you shall cease — Exod 34:21)"
+    form: case
+    witness: ["Exod 23:10 | ושש שנים תזרע את ארצך", "Exod 23:11 | והשביעת תשמטנה ונטשתה", "Exod 34:21 | בחריש ובקציר תשבת"]
+    ink: "Mishnah Sheviit 1-2 (the labors before the seventh); Sukkah 44b:7 ('release' and 'let lie' split — hoeing and clearing stones); Lev 25:1-7 through cold_run_yovel.sabbatical (one institution at two seats, live call)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_calendar.py [subjects: the recorded case's parties]; consumed by law_calendar (cold_run_calendar.py) -> land_release, barred_from_it"
+    fields: ["land", "owner", "year"]
+  feast_of_matzot_kept:
+    en: "the feast of unleavened bread kept — 'the feast of unleavened bread you shall keep: seven days you shall eat unleavened bread AS I COMMANDED YOU, at the appointed time of the month of Aviv' (the pointer with the comparative kaf at the first seat, without it at the second): the command pointed to is Exod 12:15-20 — the purge deadline by call to the Passover engine"
+    he: "אֶת חַג הַמַּצּוֹת תִּשְׁמֹר שִׁבְעַת יָמִים תֹּאכַל מַצּוֹת כַּאֲשֶׁר צִוִּיתִךָ (the feast of unleavened bread you shall keep: seven days you shall eat unleavened bread as I commanded you — Exod 23:15); אֶת חַג הַמַּצּוֹת תִּשְׁמֹר שִׁבְעַת יָמִים תֹּאכַל מַצּוֹת אֲשֶׁר צִוִּיתִךָ (the feast of unleavened bread you shall keep: seven days you shall eat unleavened bread, which I commanded you — Exod 34:18)"
+    form: case
+    witness: ["Exod 23:15 | את חג המצות תשמר שבעת ימים תאכל מצות כאשר צויתך", "Exod 34:18 | את חג המצות תשמר שבעת ימים תאכל מצות אשר צויתך"]
+    ink: "Exod 12:15-20 through cold_run_pesach.leaven_machine (window_bounds, purge_deadline — live calls); Pesachim 5a (midday of the fourteenth); the dependency census's AS_WHEN form at 23:15"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_calendar.py [subjects: the recorded case's parties]; consumed by law_calendar (cold_run_calendar.py) -> purge_deadline"
+    fields: ["keeper", "day"]
+  seventh_day_rest:
+    en: "the seventh day's cessation — 'six days you shall do your deeds and on the seventh day you shall cease, that your ox and your donkey may rest, and the son of your maidservant and the stranger be refreshed' (and at the second seat 'six days you shall work and on the seventh day you shall cease'): the rest names the beasts and the RESIDENT stranger (Yevamot 48b)"
+    he: "שֵׁשֶׁת יָמִים תַּעֲשֶׂה מַעֲשֶׂיךָ וּבַיּוֹם הַשְּׁבִיעִי תִּשְׁבֹּת (six days you shall do your deeds and on the seventh day you shall cease — Exod 23:12); לְמַעַן יָנוּחַ שׁוֹרְךָ וַחֲמֹרֶךָ וְיִנָּפֵשׁ בֶּן אֲמָתְךָ וְהַגֵּר (that your ox and your donkey may rest, and the son of your maidservant and the stranger be refreshed — Exod 23:12); שֵׁשֶׁת יָמִים תַּעֲבֹד וּבַיּוֹם הַשְּׁבִיעִי תִּשְׁבֹּת (six days you shall work and on the seventh day you shall cease — Exod 34:21)"
+    form: case
+    witness: ["Exod 23:12 | ששת ימים תעשה מעשיך וביום השביעי תשבת", "Exod 23:12 | למען ינוח שורך וחמרך וינפש בן אמתך והגר", "Exod 34:21 | ששת ימים תעבד וביום השביעי תשבת"]
+    ink: "Yevamot 48b:6 (the stranger here the resident stranger — the uncircumcised sojourner rests too); Exod 20:10 (the Decalogue's seat, the decalogue runner's sabbath_labor); Exod 31:15 (the tabernacle's seat, law_sabbath)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_calendar.py [subjects: the recorded case's parties]; consumed by law_calendar (cold_run_calendar.py) -> rest_required"
+    fields: ["household", "who"]
+  appeared_at_the_feast:
+    en: "one appears at the feast — 'three pilgrim-feasts you shall keep to Me in the year' and 'three times in the year all your males shall appear before the Lord GOD' (the second seat adding 'and they shall not appear before Me empty' after the firstborn, and 'no man shall covet your land when you go up'): the able male owes the three appearings, the woman, the lame and the one-eyed are outside (Mishnah Chagigah 1:1; Yevamot 103a; Sanhedrin 4b), the appearance gift a standing debit (Bekhorot 51b)"
+    he: "שָׁלֹשׁ רְגָלִים תָּחֹג לִי בַּשָּׁנָה (three pilgrim-feasts you shall keep to Me in the year — Exod 23:14); שָׁלֹשׁ פְּעָמִים בַּשָּׁנָה יֵרָאֶה כָּל זְכוּרְךָ (three times in the year all your males shall appear — Exod 23:17); שָׁלֹשׁ פְּעָמִים בַּשָּׁנָה יֵרָאֶה כָּל זְכוּרְךָ (three times in the year all your males shall appear — Exod 34:23); וְלֹא יֵרָאוּ פָנַי רֵיקָם (and they shall not appear before Me empty — Exod 34:20); וְלֹא יַחְמֹד אִישׁ אֶת אַרְצְךָ בַּעֲלֹתְךָ לֵרָאוֹת אֶת פְּנֵי יְהוָה אֱלֹהֶיךָ (and no man shall covet your land when you go up to appear before the LORD your God — Exod 34:24)"
+    form: case
+    witness: ["Exod 23:14 | שלש רגלים תחג לי בשנה", "Exod 23:17 | שלש פעמים בשנה יראה כל זכורך", "Exod 34:23 | שלש פעמים בשנה יראה כל זכורך", "Exod 34:20 | ולא יראו פני ריקם", "Exod 34:24 | ולא יחמד איש את ארצך בעלתך לראות את פני יהוה אלהיך"]
+    ink: "Mishnah Chagigah 1:1 (who is obligated in the appearance; the lame, the blind, the woman); Yevamot 103a:11 (regalim at the feet); Sanhedrin 4b:15 (shall see / shall be seen — both eyes); Mishnah Chagigah 1:2 + Bekhorot 51b:8 ('not empty' — the appearance gift, a standing liability); Exod 34:24 (the pilgrim's land guarded — the inserted warranty)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_calendar.py [subjects: the recorded case's parties]; consumed by law_calendar (cold_run_calendar.py) -> appearance_owed, exempt, appearance_gift_owed, pilgrim_land_guarded"
+    fields: ["person", "person_kind", "feast"]
+  offering_slaughtered_over_leaven:
+    en: "My offering slaughtered over leaven — 'you shall not slaughter the blood of My offering over leaven, nor shall the fat of My feast remain overnight until morning' (the second seat: 'nor shall the sacrifice of the feast of Passover remain until morning'): the slaughterer with leaven still in possession transgresses (Mishnah Pesachim 5:4), the fat left overnight OFF the altar is disqualified by morning (Pesachim 59b)"
+    he: "לֹא תִזְבַּח עַל חָמֵץ דַּם זִבְחִי (you shall not slaughter the blood of My offering over leaven — Exod 23:18); וְלֹא יָלִין חֵלֶב חַגִּי עַד בֹּקֶר (nor shall the fat of My feast remain overnight until morning — Exod 23:18); לֹא תִשְׁחַט עַל חָמֵץ דַּם זִבְחִי (you shall not slaughter the blood of My offering over leaven — Exod 34:25)"
+    form: case
+    witness: ["Exod 23:18 | לא תזבח על חמץ דם זבחי", "Exod 23:18 | ולא ילין חלב חגי עד בקר", "Exod 34:25 | לא תשחט על חמץ דם זבחי"]
+    ink: "Mishnah Pesachim 5:4 (the slaughterer with leaven transgresses); Pesachim 63a-64a (whose possession counts); Pesachim 59b:6 (off the altar disqualified by morning, on the altar the night burns it)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_calendar.py [subjects: the recorded case's parties]; consumed by law_calendar (cold_run_calendar.py) -> barred_from_it, disqualified"
+    fields: ["slaughterer", "leaven_in_possession", "fat_left_overnight", "on_altar"]
+  first_fruits_brought:
+    en: "the first fruits brought — 'the first of the first fruits of your land you shall bring to the house of the LORD your God' (token for token at the second seat): the TRANSFER of the land's first yield to the house; the species the transmitted list (Mishnah Bikkurim 1:3: only from the seven)"
+    he: "רֵאשִׁית בִּכּוּרֵי אַדְמָתְךָ תָּבִיא בֵּית יְהוָה אֱלֹהֶיךָ (the first of the first fruits of your land you shall bring to the house of the LORD your God — Exod 23:19); רֵאשִׁית בִּכּוּרֵי אַדְמָתְךָ תָּבִיא בֵּית יְהוָה אֱלֹהֶיךָ (the first of the first fruits of your land you shall bring to the house of the LORD your God — Exod 34:26)"
+    form: case
+    witness: ["Exod 23:19 | ראשית בכורי אדמתך תביא בית יהוה אלהיך", "Exod 34:26 | ראשית בכורי אדמתך תביא בית יהוה אלהיך"]
+    ink: "Mishnah Bikkurim 1:3 (from the seven kinds only — the data channel); Lev 23:17-20 (the two loaves 'the bread of the first fruits' — one institution at two seats, cold_run_moadim.two_loaves by call); Deut 26:1-11"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_calendar.py [subjects: the recorded case's parties]; consumed by law_calendar (cold_run_calendar.py) -> restores"
+    fields: ["bringer", "species"]
+  kid_boiled_in_milk:
+    en: "a kid in its mother's milk — 'you shall not boil a kid in its mother's milk', written three times (23:19, 34:26, Deut 14:21 — the census machine-verified): one for cooking, one for eating, one for benefit (Chullin 115b; Pesachim 24b)"
+    he: "לֹא תְבַשֵּׁל גְּדִי בַּחֲלֵב אִמּוֹ (you shall not boil a kid in its mother's milk — Exod 23:19); לֹא תְבַשֵּׁל גְּדִי בַּחֲלֵב אִמּוֹ (you shall not boil a kid in its mother's milk — Exod 34:26)"
+    form: case
+    witness: ["Exod 23:19 | לא תבשל גדי בחלב אמו", "Exod 34:26 | לא תבשל גדי בחלב אמו"]
+    ink: "Chullin 115b:1 + Pesachim 24b:11 (three seats, three bans); Kiddushin 57b:9; Mishnah Chullin 8:1-4 (the meat-and-milk rows)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_calendar.py [subjects: the recorded case's parties]; consumed by law_calendar (cold_run_calendar.py) -> barred_from_it"
+    fields: ["actor", "act"]
+  sabbath_profaned:
+    en: "the Sabbath profaned — 'its profaners shall surely be put to death, for whoever does work on it, that soul shall be cut off from among its people', 'whoever does work on the Sabbath day shall surely be put to death', and the one labor the ink names, 'you shall not kindle fire in all your dwellings on the Sabbath day': death with witnesses (the court — the mode supplied at the gatherer, Num 15:35), karet without (Heaven), the kindling barred (Onkelos 31:14-15; Shabbat 70a; Keritot 20b)"
+    he: "מְחַלְלֶיהָ מוֹת יוּמָת (its profaners shall surely be put to death — Exod 31:14); כִּי כָּל הָעֹשֶׂה בָהּ מְלָאכָה וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא (for whoever does work on it, that soul shall be cut off — Exod 31:14); כָּל הָעֹשֶׂה מְלָאכָה בְּיוֹם הַשַּׁבָּת מוֹת יוּמָת (whoever does work on the Sabbath day shall surely be put to death — Exod 31:15); לֹא תְבַעֲרוּ אֵשׁ בְּכֹל מֹשְׁבֹתֵיכֶם בְּיוֹם הַשַּׁבָּת (you shall not kindle fire in all your dwellings on the Sabbath day — Exod 35:3)"
+    form: case
+    witness: ["Exod 31:14 | מחלליה מות יומת", "Exod 31:14 | כי כל העשה בה מלאכה ונכרתה הנפש ההוא", "Exod 31:15 | כל העשה מלאכה ביום השבת מות יומת", "Exod 35:3 | לא תבערו אש בכל משבתיכם ביום השבת"]
+    ink: "Mishnah Shabbat 7:1-2 (the great rule; the thirty-nine); Onkelos Exod 31:14-15 (death with witnesses, karet without); Num 15:32-36 (the gatherer — stoned); Shabbat 70a:2-4 + Keritot 20b:1 (the doubled and the single death verb; why kindling is singled out); Mishnah Sanhedrin 4:1 (no capital verdict on the eve)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_incense_shekel.py [subjects: the recorded case's parties]; consumed by law_sabbath (cold_run_incense_shekel.py) -> labor_barred, put_to_death, stoned, karet_cut_off, kindling_barred"
+    fields: ["profaner", "witnessed", "labor"]
+  sabbath_kept_as_sign:
+    en: "the Sabbath kept as the sign — 'but My Sabbaths you shall keep, for it is a sign between Me and you', 'the children of Israel shall keep the Sabbath, to make the Sabbath for their generations an everlasting covenant', 'and on the seventh day He ceased and was refreshed': the STATUS the Sabbath writes on the covenant (Onkelos: a sign between My Word and you), the recurring rest"
+    he: "אַךְ אֶת שַׁבְּתֹתַי תִּשְׁמֹרוּ כִּי אוֹת הִוא בֵּינִי וּבֵינֵיכֶם (but My Sabbaths you shall keep, for it is a sign between Me and you — Exod 31:13); וְשָׁמְרוּ בְנֵי יִשְׂרָאֵל אֶת הַשַּׁבָּת לַעֲשׂוֹת אֶת הַשַּׁבָּת לְדֹרֹתָם בְּרִית עוֹלָם (and the children of Israel shall keep the Sabbath, to make the Sabbath for their generations an everlasting covenant — Exod 31:16); וּבַיּוֹם הַשְּׁבִיעִי שָׁבַת וַיִּנָּפַשׁ (and on the seventh day He ceased and was refreshed — Exod 31:17)"
+    form: case
+    witness: ["Exod 31:13 | אך את שבתתי תשמרו כי אות הוא ביני וביניכם", "Exod 31:16 | ושמרו בני ישראל את השבת לעשות את השבת לדרתם ברית עולם", "Exod 31:17 | וביום השביעי שבת וינפש"]
+    ink: "Onkelos Exod 31:13 ('a sign between My Word and you'); Shabbat 10b:4 + Beitzah 16a:7 (a gift must be told); Yoma 85b:3 (desecrate one Sabbath that he may keep many); Beitzah 16a:10-12 (the extra soul read out of 'was refreshed')"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_incense_shekel.py [subjects: the recorded case's parties]; consumed by law_sabbath (cold_run_incense_shekel.py) -> sign_between, rest_required"
+    fields: ["keeper"]
+  holy_convocation_proclaimed:
+    en: "a holy convocation proclaimed — 'the appointed times of the LORD, which you shall proclaim as holy convocations, these are My appointed times', 'these are the appointed times of the LORD, holy convocations, which you shall proclaim in their appointed times', 'on the first day a holy convocation shall be to you; no servile work shall you do', 'in the seventh month, on the first of the month, a rest, a memorial of teruah, a holy convocation': the day's work class read off the verse that names it (all work at Lev 23:3, 28; servile work at 7, 8, 21, 25, 35, 36), the day sanctified, the shabbaton days' rest"
+    he: "מוֹעֲדֵי יְהוָה אֲשֶׁר תִּקְרְאוּ אֹתָם מִקְרָאֵי קֹדֶשׁ (the appointed times of the LORD, which you shall proclaim as holy convocations — Lev 23:2); אֵלֶּה מוֹעֲדֵי יְהוָה מִקְרָאֵי קֹדֶשׁ אֲשֶׁר תִּקְרְאוּ אֹתָם בְּמוֹעֲדָם (these are the appointed times of the LORD, holy convocations, which you shall proclaim in their appointed times — Lev 23:4); בַּיּוֹם הָרִאשׁוֹן מִקְרָא קֹדֶשׁ יִהְיֶה לָכֶם כָּל מְלֶאכֶת עֲבֹדָה לֹא תַעֲשׂוּ (on the first day a holy convocation shall be to you, no servile work shall you do — Lev 23:7); בַּחֹדֶשׁ הַשְּׁבִיעִי בְּאֶחָד לַחֹדֶשׁ יִהְיֶה לָכֶם שַׁבָּתוֹן זִכְרוֹן תְּרוּעָה מִקְרָא קֹדֶשׁ (in the seventh month, on the first of the month, you shall have a rest, a memorial of teruah, a holy convocation — Lev 23:24)"
+    form: case
+    witness: ["Lev 23:2 | מועדי יהוה אשר תקראו אתם מקראי קדש", "Lev 23:4 | אלה מועדי יהוה מקראי קדש אשר תקראו אתם במועדם", "Lev 23:7 | ביום הראשון מקרא קדש יהיה לכם כל מלאכת עבדה לא תעשו", "Lev 23:24 | בחדש השביעי באחד לחדש יהיה לכם שבתון זכרון תרועה מקרא קדש"]
+    ink: "Mishnah Megillah 1:5 (a festival and the Sabbath differ only in food work); Mishnah Beitzah 5:2; Mishnah Rosh Hashanah 2-3 (the court proclaims the month); Sifra Emor (the work classes); Lev 25:9 (the shofar imported from the Jubilee, Sifra Section 11 6)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_moadim.py [subjects: the recorded case's parties]; consumed by law_moadim (cold_run_moadim.py) -> labor_barred, sanctify_day, rest_required"
+    fields: ["court", "day"]
+  paschal_offered:
+    en: "the Passover offered between the evenings — 'in the first month, on the fourteenth of the month, between the evenings, is the LORD's Passover': 'between the evenings' read as from when the day turns, six hours onward (Sifra Emor Chapter 11 1, Jeremiah 6:4 the witness) — before midday invalid; the lamb's law the Passover engine's by call"
+    he: "בַּחֹדֶשׁ הָרִאשׁוֹן בְּאַרְבָּעָה עָשָׂר לַחֹדֶשׁ בֵּין הָעַרְבָּיִם פֶּסַח לַיהוָה (in the first month, on the fourteenth of the month, between the evenings, is the LORD's Passover — Lev 23:5)"
+    form: case
+    witness: ["Lev 23:5 | בחדש הראשון בארבעה עשר לחדש בין הערבים פסח ליהוה"]
+    ink: "Sifra Emor Chapter 11 1 (from six hours onward); Mishnah Pesachim 5:1-3 (the daily offering, then the Passover; slaughtered before midday invalid); Exod 12:6-8 through cold_run_pesach.paschal_procedure (live call)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_moadim.py [subjects: the recorded case's parties]; consumed by law_moadim (cold_run_moadim.py) -> accepted, disqualified"
+    fields: ["offerer", "hour"]
+  yom_kippur_kept:
+    en: "the Day of Atonement kept — 'you shall afflict your souls', 'for any soul that is not afflicted on this very day shall be cut off from its people', 'and any soul that does any work on this very day, I will destroy that soul from among its people', 'on the ninth of the month in the evening, from evening to evening you shall keep your rest': the affliction (five, from the rest token — Sifra), its karet, the work's destruction, the addition from the ninth's evening"
+    he: "וְעִנִּיתֶם אֶת נַפְשֹׁתֵיכֶם (and you shall afflict your souls — Lev 23:27); כִּי כָל הַנֶּפֶשׁ אֲשֶׁר לֹא תְעֻנֶּה בְּעֶצֶם הַיּוֹם הַזֶּה וְנִכְרְתָה מֵעַמֶּיהָ (for any soul that is not afflicted on this very day shall be cut off from its people — Lev 23:29); וְכָל הַנֶּפֶשׁ אֲשֶׁר תַּעֲשֶׂה כָּל מְלָאכָה בְּעֶצֶם הַיּוֹם הַזֶּה וְהַאֲבַדְתִּי (and any soul that does any work on this very day, I will destroy — Lev 23:30); בְּתִשְׁעָה לַחֹדֶשׁ בָּעֶרֶב מֵעֶרֶב עַד עֶרֶב תִּשְׁבְּתוּ שַׁבַּתְּכֶם (on the ninth of the month in the evening, from evening to evening you shall keep your rest — Lev 23:32)"
+    form: case
+    witness: ["Lev 23:27 | ועניתם את נפשתיכם", "Lev 23:29 | כי כל הנפש אשר לא תענה בעצם היום הזה ונכרתה מעמיה", "Lev 23:30 | וכל הנפש אשר תעשה כל מלאכה בעצם היום הזה והאבדתי", "Lev 23:32 | בתשעה לחדש בערב מערב עד ערב תשבתו שבתכם"]
+    ink: "Mishnah Yoma 8:1 (the five afflictions); Sifra Emor Chapter 14 4-5 (shabbaton = shevut; the addition); Mishnah Keritot 1:1 (the eater and the worker on the Day among the thirty-six)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_moadim.py [subjects: the recorded case's parties]; consumed by law_moadim (cold_run_moadim.py) -> rest_required, labor_barred, karet_cut_off, destroyed"
+    fields: ["soul", "afflicted", "worked"]
+  harvest_reaped:
+    en: "the harvest reaped in the land — the case clause 'when you come into the land which I give you and reap its harvest' with its gate 'and bread and parched grain and fresh ears you shall not eat until this very day, until you have brought the offering of your God': the new grain barred until the omer (the day itself when there is no bringing — R. Yehuda, Sifra Section 10 10)"
+    he: "כִּי תָבֹאוּ אֶל הָאָרֶץ אֲשֶׁר אֲנִי נֹתֵן לָכֶם וּקְצַרְתֶּם אֶת קְצִירָהּ (when you come into the land which I give you and reap its harvest — Lev 23:10); וְלֶחֶם וְקָלִי וְכַרְמֶל לֹא תֹאכְלוּ עַד עֶצֶם הַיּוֹם הַזֶּה עַד הֲבִיאֲכֶם (and bread and parched grain and fresh ears you shall not eat until this very day, until you have brought — Lev 23:14)"
+    form: case
+    witness: ["Lev 23:10 | כי תבאו אל הארץ אשר אני נתן לכם וקצרתם את קצירה", "Lev 23:14 | ולחם וקלי וכרמל לא תאכלו עד עצם היום הזה עד הביאכם"]
+    ink: "Mishnah Menachot 10:5-6 (the omer permits the new grain; after the destruction the day itself); Sifra Emor Section 10 10; Mishnah Challah 1:1"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_moadim.py [subjects: the recorded case's parties]; consumed by law_moadim (cold_run_moadim.py) -> barred_from_it"
+    fields: ["reaper", "land"]
+  omer_brought:
+    en: "the omer brought and the count begun — 'and you shall bring the sheaf, the first of your harvest, to the priest; and he shall wave the sheaf before the LORD for your acceptance, on the morrow of the Sabbath', 'and you shall count for yourselves from the morrow of the Sabbath, from the day you brought the sheaf of waving, seven complete weeks... you shall count fifty days': the forty-nine-day TIMER to the fiftieth, the sheaf's lamb and meal offering by call (the morrow of the Sabbath = the morrow of the festival, Sifra's four routes and Onkelos)"
+    he: "וַהֲבֵאתֶם אֶת עֹמֶר רֵאשִׁית קְצִירְכֶם אֶל הַכֹּהֵן (and you shall bring the sheaf, the first of your harvest, to the priest — Lev 23:10); וְהֵנִיף אֶת הָעֹמֶר לִפְנֵי יְהוָה לִרְצֹנְכֶם מִמָּחֳרַת הַשַּׁבָּת (and he shall wave the sheaf before the LORD for your acceptance, on the morrow of the Sabbath — Lev 23:11); וּסְפַרְתֶּם לָכֶם מִמָּחֳרַת הַשַּׁבָּת מִיּוֹם הֲבִיאֲכֶם אֶת עֹמֶר הַתְּנוּפָה שֶׁבַע שַׁבָּתוֹת תְּמִימֹת תִּהְיֶינָה (and you shall count for yourselves from the morrow of the Sabbath, from the day you brought the sheaf of waving: seven complete weeks shall there be — Lev 23:15); תִּסְפְּרוּ חֲמִשִּׁים יוֹם (you shall count fifty days — Lev 23:16)"
+    form: case
+    witness: ["Lev 23:10 | והבאתם את עמר ראשית קצירכם אל הכהן", "Lev 23:11 | והניף את העמר לפני יהוה לרצנכם ממחרת השבת", "Lev 23:15 | וספרתם לכם ממחרת השבת מיום הביאכם את עמר התנופה שבע שבתות תמימת תהיינה", "Lev 23:16 | תספרו חמשים יום"]
+    ink: "Mishnah Menachot 10:1-4 (the reaping and the bringing); Sifra Emor Chapter 12 1-5 (the morrow of the festival); Mishnah Menachot 5:3 (the frankincense); Lev 2:14 through cold_run_minchah.omer (the omer IS the first-fruits meal offering, live call); Lev 1:10 through cold_run_offerings.dispatch (the lamb)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_moadim.py [subjects: the recorded case's parties]; consumed by law_moadim (cold_run_moadim.py) -> counts_omer, accepted"
+    fields: ["bringer", "day"]
+  two_loaves_brought:
+    en: "the two loaves brought with their animals — 'from your dwellings you shall bring two loaves of waving', 'and you shall offer with the bread seven unblemished lambs of the first year, and one bull of the herd, and two rams', 'and the priest shall wave them on the bread of the first fruits, a waving before the LORD, on the two lambs; holy shall they be to the LORD, for the priest': the bread's day is the feast of the harvest (one of the three appearings, by call), the burnt offerings smoked, the communal peace offering most holy for the priest, the waving's geometry (Menachot 5:6)"
+    he: "מִמּוֹשְׁבֹתֵיכֶם תָּבִיאּוּ לֶחֶם תְּנוּפָה שְׁתַּיִם (from your dwellings you shall bring two loaves of waving — Lev 23:17); וְהִקְרַבְתֶּם עַל הַלֶּחֶם שִׁבְעַת כְּבָשִׂים תְּמִימִם בְּנֵי שָׁנָה וּפַר בֶּן בָּקָר אֶחָד וְאֵילִם שְׁנָיִם (and you shall offer with the bread seven unblemished lambs of the first year, and one bull of the herd, and two rams — Lev 23:18); וְהֵנִיף הַכֹּהֵן אֹתָם עַל לֶחֶם הַבִּכּוּרִים תְּנוּפָה לִפְנֵי יְהוָה עַל שְׁנֵי כְּבָשִׂים קֹדֶשׁ יִהְיוּ לַיהוָה לַכֹּהֵן (and the priest shall wave them on the bread of the first fruits, a waving before the LORD, on the two lambs, holy shall they be to the LORD, for the priest — Lev 23:20)"
+    form: case
+    witness: ["Lev 23:17 | ממושבתיכם תביאו לחם תנופה שתים", "Lev 23:18 | והקרבתם על הלחם שבעת כבשים תמימם בני שנה ופר בן בקר אחד ואילם שנים", "Lev 23:20 | והניף הכהן אתם על לחם הבכורים תנופה לפני יהוה על שני כבשים קדש יהיו ליהוה לכהן"]
+    ink: "Mishnah Menachot 4:2-3, 5:3, 5:6 (the loaves and the lambs block each other; the waving); Mishnah Zevachim 5:5 (the communal peace offering most holy, eaten by the priests); Sifra Emor Chapter 13 (the lambs an obligation to the bread; the two sets); Exod 23:16 through cold_run_calendar.pilgrimage (the feast of the harvest, live call)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_moadim.py [subjects: the recorded case's parties]; consumed by law_moadim (cold_run_moadim.py) -> accepted, appearance_owed, smoked_to_the_lord, most_holy, due_to_priest, waved"
+    fields: ["bringer", "day"]
+  booths_dwelt:
+    en: "dwelling in booths — 'on the fifteenth day of this seventh month is the feast of booths, seven days to the LORD' and 'in booths you shall dwell seven days; every native in Israel shall dwell in booths': the seven-day TIMER on every native; 'THE native' — the article excludes women, 'every' includes minors (Sifra Emor Chapter 17 9; Mishnah Sukkah 2:8)"
+    he: "בַּחֲמִשָּׁה עָשָׂר יוֹם לַחֹדֶשׁ הַשְּׁבִיעִי הַזֶּה חַג הַסֻּכּוֹת שִׁבְעַת יָמִים לַיהֹוָה (on the fifteenth day of this seventh month is the feast of booths, seven days to the LORD — Lev 23:34); בַּסֻּכֹּת תֵּשְׁבוּ שִׁבְעַת יָמִים כָּל הָאֶזְרָח בְּיִשְׂרָאֵל יֵשְׁבוּ בַּסֻּכֹּת (in booths you shall dwell seven days, every native in Israel shall dwell in booths — Lev 23:42)"
+    form: case
+    witness: ["Lev 23:34 | בחמשה עשר יום לחדש השביעי הזה חג הסכות שבעת ימים ליהוה", "Lev 23:42 | בסכת תשבו שבעת ימים כל האזרח בישראל ישבו בסכת"]
+    ink: "Mishnah Sukkah 2:8 (women, slaves and minors exempt; a minor who no longer needs his mother obligated); Sifra Emor Chapter 17 9 ('the native' excludes women); Mishnah Sukkah 2:9 (the seven days, nights as days)"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_moadim.py [subjects: the recorded case's parties]; consumed by law_moadim (cold_run_moadim.py) -> dwells_in_booths, exempt"
+    fields: ["dweller", "native_male", "day"]
+  four_species_taken:
+    en: "the four species taken — 'and you shall take for yourselves on the first day the fruit of a beautiful tree, branches of palm trees, boughs of leafy trees, and willows of the brook, and you shall rejoice before the LORD your God seven days': in the Temple all seven days ('before the LORD'), in the province the first day alone (Mishnah Sukkah 3:12), the first day even on the Sabbath (Sifra); the counts by grammatical number (one, one, the willows two, the myrtle disputed)"
+    he: "וּלְקַחְתֶּם לָכֶם בַּיּוֹם הָרִאשׁוֹן פְּרִי עֵץ הָדָר כַּפֹּת תְּמָרִים וַעֲנַף עֵץ עָבֹת וְעַרְבֵי נָחַל (and you shall take for yourselves on the first day the fruit of a beautiful tree, branches of palm trees, boughs of leafy trees, and willows of the brook — Lev 23:40); וּשְׂמַחְתֶּם לִפְנֵי יְהוָה אֱלֹהֵיכֶם שִׁבְעַת יָמִים (and you shall rejoice before the LORD your God seven days — Lev 23:40)"
+    form: case
+    witness: ["Lev 23:40 | ולקחתם לכם ביום הראשון פרי עץ הדר כפת תמרים וענף עץ עבת וערבי נחל", "Lev 23:40 | ושמחתם לפני יהוה אלהיכם שבעת ימים"]
+    ink: "Mishnah Sukkah 3:12 (the lulav in the Temple seven days, in the province one; after the destruction R. Yochanan ben Zakkai's ordinance); Sifra Emor Chapter 16 3, 7 (the first day on the Sabbath; the myrtle's count disputed); Mishnah Sukkah 3:4"
+    corpus: "the narrative tape logs no EVENT operator at this address (a law chapter — the case token is the witness)"
+    tape: "submitted by cold_run_moadim.py [subjects: the recorded case's parties]; consumed by law_moadim (cold_run_moadim.py) -> takes_four_species"
+    fields: ["taker", "place", "day_of_feast"]
 narrative_verbs:
   say:
     count: 58
