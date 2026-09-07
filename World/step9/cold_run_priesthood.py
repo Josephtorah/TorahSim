@@ -291,7 +291,7 @@ print('routing receipts: cold_run_holiness_b.body CALLED — razor -> %r, scisso
       'shelamim window -> %r, todah window -> %r; cold_run_minchah CALLED — showbread remainder -> %r, presentation -> %r, frankincense -> %r, oil grade -> %r [IMPORT, live calls]'
       % (RAZOR, SCISSORS, CORNERS, ADULTERY_MODE, len(BURNED_NINE), ZAV_TIER3, ZAV_START, FIFTH_CALL, OLAH_DISP, SHEL_WINDOW, TODAH_WINDOW, SHOW_REM, SHOW_PRES, FRANK_Q, OIL_GRADE))
 
-I, M, A, D, P = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT'
+I, M, A, D, P, H = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 def cell(v, p, why, fx):
     FX.validate(fx)
     return {'v': v, 'p': p, 'why': why, 'fx': fx}
@@ -535,7 +535,7 @@ def holy_food(q, **k):
     if q == 'name_frame':
         return cell([2, 32], I, '"the name of My holiness" at 22:2 and 22:32 (%s) — the chapter FRAMED by the Name; its third Leviticus seat is Molech\'s 20:3' % (sorted(set(c_shem)),), ['name_profaned'])
     if q == 'chillul_import':
-        return cell(['time', 'death', 'acceptance_dependence', 'R._Yehuda_karet_by_I_the_LORD'], M, '"profanation"-"profanation" (Lev 19:8) — ' + SE + 'Section 4 2: one verbal analogy, three parameters', [FX.NONE])
+        return cell(['time', 'death', 'acceptance_dependence', 'R._Yehuda_karet_by_I_the_LORD'], M, '"profanation"-"profanation" (Lev 19:8; Zevachim 44a:8, 45a:9 — the notar-from-impurity analogy) —  ' + SE + 'Section 4 2: one verbal analogy, three parameters', [FX.NONE])
     if q == 'karet_extension':
         return cell({'from': 'shelamim_only_at_7_20', 'to': 'all_holy_things', 'piggul_a_fortiori': 'refused_by_the_four_way_difference'}, M,
                     '22:3 "who approaches... to the holy things... with his impurity on him — cut off" (ונכרתה) — ' + SE + 'Section 4 5', ['karet_cut_off'])
@@ -1485,7 +1485,7 @@ assert n == GUARDED, (n, GUARDED)
 print('guard: %d test rows, every expected value a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 print()
 ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0, P: 0}
+frac = {I: 0, M: 0, A: 0, D: 0, P: 0, H: 0}
 used = []
 misses = []
 for name, c, want in TESTS:
@@ -1498,8 +1498,8 @@ for name, c, want in TESTS:
     print('     effects: %s' % ', '.join(c['fx']))
 print()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
-print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d'
-      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n))
+print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d · hypotheses %d/%d'
+      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n, frac[H], n))
 ops = FX.summarize(used)
 print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
 print('effects: every cell carries REGISTERED effects — NINE discovered in these verses\' own verbs: defiled_for_kin, profaned_seed, terumah_fed (STATUS), '

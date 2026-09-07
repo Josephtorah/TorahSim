@@ -230,7 +230,7 @@ print('the log quotes the code: shared tokens %s; the phrase "all the days of '
       'desolation" runs verbatim in both: %s; the plene/defective delta on '
       '"its sabbaths": %s' % (SHARED, has_run(LOG, PHRASE) and has_run(CODE, PHRASE), PLENE_DELTA))
 
-I, M, A, D = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA'
+I, M, A, D, H = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 
 
 def cell(v, p, why, effects):
@@ -446,7 +446,7 @@ def jubilee_count():
                             'Zered (Deuteronomy 2:14), eighty-five at the division (Joshua 14:10) → '
                             '%d (Arakhin 13a:6-7)' % conquest, [FX.NONE]),
      'division_years': cell(division, M, 'seven of division — from the seven of conquest by analogy, '
-                            'or because Ezekiel\'s fourteen is not otherwise found (Arakhin 13a:8)',
+                            'or because Ezekiel\'s fourteen is not otherwise found (Arakhin 13a:8) [taught: Zevachim 118b:13-15 — seven they conquered and seven they divided]',
                             [FX.NONE]),
      'counted_at_fall': cell(counted, I, '%d − %d − %d = %d counted years at the first house\'s fall'
                              % (in_land, conquest, division, counted), ['jubilee_release']),
@@ -680,7 +680,7 @@ TESTS = [
 # ---- (3)+(5) run, grade, effects ------------------------------------
 print()
 ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0}
+frac = {I: 0, M: 0, A: 0, D: 0, H: 0}
 used = []
 for name, c, want in TESTS:
     hit = c['v'] == want
@@ -695,9 +695,9 @@ assert n == GUARDED, (n, GUARDED)
 print()
 print('MATRIX: %d/%d cells match the recorded rows' % (ok, n))
 print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · '
-      'answer-sheet %d/%d · data %d/%d' % (
+      'answer-sheet %d/%d · data %d/%d · hypotheses %d/%d' % (
       frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n,
-      frac[A], n, frac[D], n))
+      frac[A], n, frac[D], n, frac[H], n))
 print('ledger operations written by this run: %s' % FX.summarize(used))
 print()
 print('OPEN — computed, NOT graded: the seventy decomposed into unkept releases. '

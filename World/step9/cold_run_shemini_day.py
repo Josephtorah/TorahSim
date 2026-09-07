@@ -225,7 +225,7 @@ print('routing receipts: cold_run_chatat CALLED — rank anointed %r / congregat
          {k: v['v'] for k, v in OLAH_H.items()}, SHEL['applications']['v'], COMM['eater']['v'], FAT_OX['tail']['v'], FAT_LAMB['tail']['v'],
          MIN_LEFT, MIN_CRUMB, MIN_PAIR, MIN_FRANK, MIN_OIL, MIN_REM, MIN_PRES, TZ_CONF, TZ_COMMIT, TZ_EXT, TZ_RET, TZ_BT, TZ_HIDE))
 
-I, M, A, D, P = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT'
+I, M, A, D, P, H = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 def cell(v, p, why, fx):
     FX.validate(fx)
     return {'v': v, 'p': p, 'why': why, 'fx': fx}
@@ -398,7 +398,7 @@ def calf(q):
     if q == 'blood_deviation':
         return cell('outer_protocol_for_the_anointed', M, "the run's blood went to the outer altar's horns (9:9) though the offerer is the anointed "
                     "priest, whose spec-tier blood goes inside (Lev 4:5-7) — the calf is the day's one-time sin offering, not Lev 4:3's bull "
-                    "(" + SM + "3-4); Lev 10:18 later grades a same-day outer-blood sin offering as one to be EATEN — CALLED "
+                    "( [taught: Sifra Shemini, Mekhilta d'Miluim 2 3-4 — the SM citation in this why, made visible to the census]" + SM + "3-4); Lev 10:18 later grades a same-day outer-blood sin offering as one to be EATEN — CALLED "
                     f"cold_run_chatat.inquiry(blood_not_inside) -> {CH_INQ!r} [IMPORT, live call]", [FX.NONE])
     if q == 'sprinklings_run':
         return cell(0, I, "no sevenfold sprinkling in the run — 9:9 has the finger, the horns, the base and no 'seven times' (the spec's anointed "
@@ -883,7 +883,7 @@ assert n == GUARDED, (n, GUARDED)
 print('guard: %d test rows, every expected value a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 print()
 ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0, P: 0}
+frac = {I: 0, M: 0, A: 0, D: 0, P: 0, H: 0}
 used = []
 misses = []
 for name, c, want in TESTS:
@@ -896,8 +896,8 @@ for name, c, want in TESTS:
     print('     effects: %s' % ', '.join(c['fx']))
 print()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
-print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d'
-      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n))
+print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d · hypotheses %d/%d'
+      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n, frac[H], n))
 ops = FX.summarize(used)
 print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
 print('effects: every cell carries REGISTERED effects — FOUR discovered in these verses\' own verbs and the day\'s recorded crowns: '

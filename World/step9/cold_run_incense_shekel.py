@@ -86,7 +86,7 @@ sys.path.insert(0, HERE)
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
-assert GUARDED == 300, ("the guard counted %d expectations, the tripwire holds 300" % GUARDED)
+assert GUARDED == 301, ("the guard counted %d expectations, the tripwire holds 301" % GUARDED)   # W6: +1 (the law layer's scene)
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -502,7 +502,7 @@ print('routing receipts: chatat CALLED — inner %r, outer %r, carcass %r, karet
          TZ_ATOM, TZ_COMMIT, TZ_CONF, TZ_LEFT, TZ_DUES, TZ_EXT, PR_NEZER, YOMA_STEP['16:12-13'], YOMA_STEP['16:18-19'], YOMA_STEP['16:16-17'], YV_SHEKEL, V5_ASHAM, MP_THIRTY,
          SB_BASE, SB_HORNS, SB_VEIL, SB_TALENT, SB_CENSUS, VS_E29, VS_LEV8, VS_FLAX, DEC_SCOPE, MO_CLASS, CAL_REST, CAL_WHO, MZ_MEMBERS, GU_UNPAID_THEFT))
 
-I, M, A, D, P = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT'
+I, M, A, D, P, H = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 def cell(v, p, why, fx):
     FX.validate(fx)
     return {'v': v, 'p': p, 'why': why, 'fx': fx}
@@ -1148,7 +1148,8 @@ def sabbath(q):
 
 # ---- F14: THE SCENE — Lev 8's tape replayed through THIS spec's daemon; the alignment ----
 def law_investiture(event, world):
-    """The investiture's daemon: consumes the run's recorded acts (Lev 8) and writes the ledger — never emits an event."""
+    """The investiture's daemon: consumes the run's recorded acts (Lev 8) and writes the ledger — never emits an event.
+    W6 (2026-09-07): EXTENDED to the runner's law layer — the succession, the incense altar, the shekel, the oil, the incense (the branches below the run's)."""
     k, subj, src = event['kind'], event['subject'], event['case_source']
     E = lambda eff, s, cp=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': None, 'due': None, 'source_law': 'F%s' % event.get('law', '14'), 'case_source': src}
     if k == 'washed': return [E('immersed', 'aaron'), E('immersed', 'the-sons')]
@@ -1164,6 +1165,93 @@ def law_investiture(event, world):
     if k == 'milluim_leftover': return [E('burn_remainder', 'the-remainder')]                                                                    # W3: unified with the library's name (was meal)
     if k == 'confined': return [E('confined_seven_days', 'aaron'), E('confined_seven_days', 'the-sons')]
     if k == 'did_all': return [E('inspected_as_commanded', 'the-rite')]
+    # ---- W6 THE SANCTUARY'S REMAINDER (D9-iii, 2026-09-07): the runner's LAW LAYER beside Lev 8's run — the succession (29:29-30), the incense altar
+    # (30:1-10), the shekel (30:11-16), the oil (30:22-33), the incense (30:34-38); no new daemon (the #83 ruling). Every value a CALL into this runner's
+    # own cells (succession, incense_altar, shekel, oil, incense); a daemon's empty return on a recorded row is the law's own exemption.
+    day = event.get('day', world.clock.year)
+    E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
+    if k == 'priest_succeeded':
+        if not event.get('fit_to_enter', True): return []     # 29:30 'who comes to the tent of meeting' = one FIT to come (Yoma 73a:1) — the unfit takes nothing: the clause's own silence
+        s_ = event['successor']
+        ground = succession('greatness')['v'] if event.get('in_greatness') else succession('after_him')['v']
+        return [E_('garments_inherited', s_, cp=event.get('predecessor'), value=ground, law='F4 [INK 29:29 "the holy garments of Aaron shall be his sons\' AFTER HIM, to be anointed in them and to fill their hand in them" — Yoma 72b:20: whoever comes in greatness after him; Yoma 73a:1: %s; the run Num 20:26-28]' % succession('fit_to_come')['v']),
+                E_('garments_inherited', s_, cp=event.get('predecessor'), due=day + 7, value=succession('anointing_likened')['v'], law='F4 [INK 29:30 "SEVEN DAYS shall the priest in his stead of his sons wear them" — the TIMER: Yoma 5a:12 the anointing likened to the filling, seven; Mishnah Yoma 1:1 %s]' % succession('substitute_sheet')['v'])]
+    if k == 'incense_burned':
+        b = event.get('burner', 'aaron')
+        if event.get('burner_class') == 'stranger':
+            run = incense('uzziah_run') if 'Chr' in src else incense('korach_run')
+            return [E_('strange_offering_barred', b, value=run['v'], law='F8 [INK 30:7-8 name AARON as the burner twice — Num 17:5 by name: no STRANGER not of Aaron\'s seed approaches to burn incense; the burner %s; the runs: Korach\'s two hundred fifty, Uzziah at the altar]' % incense_altar('burner')['v'])]
+        out = [E_('incense_continual', 'the-golden-altar', cp=b, value=incense_altar('continual')['v'], law='F8 [INK 30:8 "a CONTINUAL incense before the LORD for your generations"; Mishnah Yoma 4:4 the daily halves — %s; Onkelos 30:7-8: %s]' % (incense_altar('daily_halves')['v'], incense_altar('incense_onkelos')['v']))]
+        if event.get('time', 'morning') == 'morning':
+            out.append(E_('lamp_arranged', 'the-lampstand', cp=b, value=incense_altar('divide_the_morning')['v'], law='F8 [INK 30:7 "morning by morning, when he TENDS the lamps he shall burn it" — Yoma 33b:8, 33b:10: the morning DIVIDED, five lamps then two; the western lamp CALLED cold_run_priesthood.lamp_table -> %s]' % (incense_altar('tending')['v'],)))
+        return out
+    if k == 'strange_input_offered':
+        if event.get('voluntary_by'):
+            v = incense_altar('no_donation')['v']; why = 'Menachot 50a:19 + 50b:1 — neither an individual nor the public brings a VOLUNTARY incense: strange = anything not the commanded incense'
+        else:
+            v = incense_altar('input_ban')['v']; why = 'the FOUR barred inputs of one verse (strange incense, burnt offering, meal offering, libation) — Onkelos 30:9: %s' % incense_altar('input_onkelos')['v']
+        return [E_('strange_offering_barred', event['offerer'], value=v, law='F8 [INK 30:9 "you shall not offer on it STRANGE incense, nor a burnt offering, nor a meal offering, and a libation you shall not pour on it" — %s]' % why)]
+    if k == 'horns_atoned':
+        p = event.get('priest', 'aaron')
+        if event.get('occasion') == 'the_day':
+            return [E_('horns_atoned_yearly', 'the-golden-altar', cp=p, value=incense_altar('one_atonement')['v'], law='F8 [INK 30:10 "ONCE A YEAR... once a year he shall atone on it" — Shevuot 10a:15, 10b:4: one atonement and not two; 10b:6 %s; the Day\'s inner rite CALLED cold_run_yoma.service_order 16:18-19 -> %s]' % (incense_altar('inner_vs_outer')['v'], incense_altar('yoma_step')['v'])),
+                    E_('accepted', p, cp='HEAVEN', value=incense_altar('sheet_5_1')['v'], law='F8 [Mishnah Zevachim 5:1 — the Day\'s bull and goat: the blood on the golden altar, one gift indispensable]'),
+                    E_('most_holy', 'the-golden-altar', value=incense_altar('most_holy_to_the_lord')['v'], law='F8 [INK 30:10 "it is MOST HOLY to the LORD"]')]
+        return [E_('accepted', p, cp='HEAVEN', value=incense_altar('lev4_horns')['v'], law='F8 [Lev 4:7, 4:18 by call — CALLED cold_run_chatat.blood(anointed) -> %s: 30:10\'s once-a-year is the Day\'s atonement, not the altar\'s every use; Mishnah Zevachim 5:2 the burned bulls and goats]' % (incense_altar('lev4_horns')['v'],))]
+    if k == 'head_counted':
+        c = event['counted']; who = event.get('who'); sheet = shekel('sheet_1_3')['v']
+        if who in sheet['not'] or who == 'priests': return []     # Mishnah Shekalim 1:3-4 — not pledged: the ink's payer class is the counted men (30:14 'from twenty years and up'); the priests for the ways of peace
+        rate = event.get('rate', 'half'); trig = event.get('trigger', 'census')
+        if rate == 'third':
+            out = [E_('half_shekel_owed', c, cp='the-treasury', value=shekel('run_nehemiah')['v'], law='F9 [Neh 10:33 by name — the return resets the rate (a THIRD, not a half) and the trigger (yearly): the data channel\'s recorded resetting; Mishnah Shekalim 2:4 R. Yehuda\'s coin history]')]
+        else:
+            out = [E_('half_shekel_owed', c, cp='the-treasury', amount=0.5, value=shekel('twenty_gerah')['v'], law='F9 [INK 30:13 "THIS they shall give... HALF the shekel by the shekel of the sanctuary, TWENTY GERAH the shekel"; 30:15 the rich not more, the poor not less — Mishnah Shekalim 2:4 all hands equal; the trigger %s: %s]' % (trig, shekel('trigger_parameter')['v'][('ink' if trig == 'census' else 'descendant')]))]
+        if trig == 'census' and event.get('ransom_given', True):
+            out.append(E_('no_plague_at_counting', c, cp='HEAVEN', value=shekel('plague_clause')['v'], law='F9 [INK 30:12 "that there be NO PLAGUE among them when you count them" — the ransom\'s protection; its absence the run of 2 Sam 24:15 (Berakhot 62b:11)]'))
+        return out
+    if k == 'atonement_silver_given':
+        t = event.get('treasury', 'the-treasury')
+        if not event.get('house_standing', True): return []     # Mishnah Shekalim 8:8 — the shekels apply only BEFORE THE HOUSE: 30:16's 'for the service of the tent of meeting' is the clause's own condition
+        if event.get('silver') == 'guilt_and_sin':
+            return [E_('due_to_priest', 'the-priests', cp=t, value=shekel('sheet_6_6_run')['v'], law='F9 [Mishnah Shekalim 6:6 — Jehoiada\'s exposition closing with 2 Kgs 12:17 "the money of guilt and sin offerings was not brought to the house of the LORD; it was the priests\'"]')]
+        if event.get('use') == 'construction':
+            return [E_('accounts_rendered', t, value=shekel('run_sockets')['v'], law='F9 [INK 30:16 "give it to the SERVICE of the tent of meeting" — read as CONSTRUCTION in the run: 38:25-28 the sockets from the census silver, CALLED cold_run_sanctuary_build.books(census, talent)]')]
+        return [E_('tamid_owed', 'the-altar', cp=t, due=day + 1, value=shekel('sheet_4_1')['v'], law='F9 [Mishnah Shekalim 4:1 — the terumah buys the TAMIDS and all the public offerings: the ink\'s two paragraphs joined (30:16 -> 29:38-42) — the next morning\'s lamb as the TIMER]')]
+    if k == 'bailment_claim':
+        # Mishnah Shekalim 2:1 — the townsmen's messengers whose shekels were STOLEN swear to the treasurers: the unpaid keeper's oath of Exod 22:7 — ONE TYPE UNDER TWO LAW
+        # LAYERS (law_guardians on its own tape; here by CALL) — a TRANSFER taught by the sheet's own row (the edge incense_shekel -> guardians filed with its teacher)
+        if event.get('keeper_role') != 'unpaid' or event.get('happening') != 'theft': return []
+        g = shekel('guardians_by_call')['v']
+        return [E_('oath_imposed', event['keeper'], cp=event.get('owner'), value=g[0], law='F9 [Mishnah Shekalim 2:1 — CALLED cold_run_guardians.para_outcome(unpaid, theft) -> %s at %s: the messengers swear to the treasurers]' % (g[0], g[1]))]
+    if k == 'anointing_oil_misused':
+        p = event['person']; purpose = event.get('purpose', 'to_anoint'); tgt = event.get('target', 'stranger')
+        ex = oil('compounder_exemptions')['v']; scope = oil('adam_scope')['v']
+        if event.get('act') == 'compounded':
+            if purpose in ('to_learn', 'for_the_public'): return [E_('exempt', p, value=ex[purpose], law='F11 [Keritot 5a:19-20 — to LEARN or for THE PUBLIC exempt: "for yourselves" (30:37) lent to the oil through the shared formula-word]')]
+            if event.get('amount') == 'half': return [E_('exempt', p, value=oil('half_ok')['v']['oil'], law='F11 [Keritot 5a:22 — Rava: "you shall not make LIKE IT": like it barred, a half fine]')]
+            out = [E_('compounding_barred', p, value=oil('formula_word')['v'], law='F11 [INK 30:32 "in its FORMULA you shall not make like it" — the quota-word reused for the recipe]'),
+                   E_('karet_cut_off', p, cp='HEAVEN', value=oil('divided')['v'], law='F11 [INK 30:33 "a man who COMPOUNDS like it... shall be cut off from his people" — Makkot 14b:2 two karets, to divide; Mishnah Keritot 1:1 the compounder of the oil]')]
+        else:
+            if tgt in scope and scope[tgt] == 'exempt': return [E_('exempt', p, value=scope[tgt], law='F11 [Keritot 6b:19 — "on the flesh of ADAM": the %s is not adam]' % tgt)]
+            if tgt == 'anointed_priest': return [E_('exempt', p, value=oil('on_a_stranger')['v'], law='F11 [Meilah 19a:5 — "who puts of it on a STRANGER — and this one is no stranger, for he was anointed with it"]')]
+            if event.get('oil', 'moses') != 'moses': return [E_('exempt', p, value=ex['anointed_from_it'], law='F11 [Keritot 5a:20 — liable only for the oil MOSES made]')]
+            out = [E_('compounding_barred', p, value=oil('flesh_of_adam')['v'], law='F11 [INK 30:32 "ON THE FLESH OF A MAN it shall not be poured"]'),
+                   E_('karet_cut_off', p, cp='HEAVEN', value=oil('two_karets')['v'], law='F11 [INK 30:33 "who puts of it on a STRANGER shall be cut off" — Mishnah Keritot 1:1 the anointer with the oil; Keritot 6b:25 any amount]')]
+        if event.get('warned'): out.append(E_('lashes', p, value=oil('sheet_makkot_3_2')['v'], law='F11 [Mishnah Makkot 3:2 — lashed when warned: the lashes ride the verse\'s negatives]'))
+        return out
+    if k == 'incense_compounded':
+        m = event['maker']; purpose = event.get('purpose', 'to_smell'); mv = incense('maker_vs_smeller')['v']
+        if purpose == 'smelled': return [E_('exempt', m, value=mv['smeller'], law='F12 [Keritot 6a:6 — THE SMELLER exempt (his fault sacrilege, another ledger): the verse\'s karet is the MAKER\'s]')]
+        if purpose == 'to_learn': return [E_('exempt', m, value=mv['to_learn_or_public'], law='F12 [Keritot 6a:6 — to learn exempt]')]
+        if purpose == 'for_the_public':
+            return [E_('exempt', m, value=mv['to_learn_or_public'], law='F12 [Keritot 6a:6 — for the public exempt: the house of Avtinas the public\'s compounders (Mishnah Shekalim 5:1); funded by the shekel (Shekalim 4:5)]'),
+                    E_('salted', 'the-incense', cp=m, value=incense('salted')['v'], law='F12 [INK 30:35 "a perfumer\'s compound, SALTED, pure, holy" — CALLED cold_run_minchah.salt(meal_offering) -> %s]' % (incense('salted')['v'],)),
+                    E_('meeting_appointed', 'the-incense', value=incense('before_testimony')['v'], law='F12 [INK 30:36 "beat some of it fine and put some of it BEFORE THE TESTIMONY in the tent of meeting, where I will meet with you"]'),
+                    E_('incense_continual', 'the-golden-altar', cp=m, value=incense('surplus_halves')['v'], law='F12 [Keritot 6b:1 — the public\'s batch burned in the daily halves; its surplus compounded in halves once in sixty or seventy years]')]
+        out = [E_('compounding_barred', m, value=incense('formula_for_yourselves')['v'], law='F12 [INK 30:37 "in its formula you shall not make FOR YOURSELVES"]'),
+               E_('karet_cut_off', m, cp='HEAVEN', value=(incense('surplus_halves')['v'] if event.get('amount') == 'half' else incense('to_smell')['v']), law='F12 [INK 30:38 "whoever makes like it TO SMELL it shall be cut off from his people" — Mishnah Keritot 1:1 the compounder of the incense; Keritot 6b:1 + 6b:3 a HALF liable ("which you shall make" — any making, since the day burns halves)]')]
+        if event.get('warned'): out.append(E_('lashes', m, value=oil('sheet_makkot_3_2')['v'], law='F12 [Mishnah Makkot 3:2 — the same three flogged when warned: 30:37 "you shall not make for yourselves"]'))
+        return out
     return []
 
 # ---- THE WRAP OF THE SABBATH CLAUSE (W2 THE CALENDAR, D9-iii, 2026-09-07) — a second daemon in this file ----
@@ -1207,6 +1295,60 @@ def scene():
                 ('milluim_leftover', 'aaron', 'Lev 8:31-32'), ('confined', 'aaron', 'Lev 8:33-35'), ('did_all', 'aaron', 'Lev 8:36')]
         for k, s, src in tape:
             w.submit({'kind': k, 'subject': s, 'case_source': src, 'law': '14'})
+        # W6 (2026-09-07): THE LAW LAYER'S OWN WORLD — the recorded rows on law_investiture's W6 branches (clock unit: days)
+        wl = WE.World(era="the sanctuary's remainder: the succession, the incense altar, the shekel, the oil and the incense — Shekalim, Keritot 1:1, Menachot 4:4, Middot 3 on the engine (clock unit: days)")
+        wl.laws = [law_investiture]
+        wl.advance(1)
+        # the succession (29:29-30)
+        wl.submit({'kind': 'priest_succeeded', 'subject': 'eleazar', 'successor': 'eleazar', 'predecessor': 'aaron', 'fit_to_enter': True, 'in_greatness': False, 'case_source': 'Num 20:26-28 — Aaron stripped, Eleazar dressed: the run', 'law': 'W6'})
+        wl.submit({'kind': 'priest_succeeded', 'subject': 'the-substitute', 'successor': 'the-substitute', 'predecessor': 'the-high-priest', 'fit_to_enter': True, 'in_greatness': False, 'case_source': 'Mishnah Yoma 1:1 — another priest prepared seven days before the Day', 'law': 'W6'})
+        wl.submit({'kind': 'priest_succeeded', 'subject': 'the-war-anointed', 'successor': 'the-war-anointed', 'predecessor': 'the-high-priest', 'fit_to_enter': True, 'in_greatness': True, 'case_source': 'Yoma 72b:20 — Rav Dimi: whoever comes in greatness after him', 'law': 'W6'})
+        wl.submit({'kind': 'priest_succeeded', 'subject': 'the-unfit-son', 'successor': 'the-unfit-son', 'predecessor': 'aaron', 'fit_to_enter': False, 'in_greatness': False, 'case_source': 'Yoma 73a:1 — who comes to the tent: one FIT to come', 'law': 'W6'})
+        # the incense altar (30:1-10)
+        wl.submit({'kind': 'incense_burned', 'subject': 'the-golden-altar', 'burner': 'aaron', 'burner_class': 'aaronide', 'time': 'morning', 'case_source': 'Exod 30:7 — morning by morning with the tending; Yoma 33b', 'law': 'W6'})
+        wl.submit({'kind': 'incense_burned', 'subject': 'the-golden-altar', 'burner': 'aaron', 'burner_class': 'aaronide', 'time': 'evening', 'case_source': 'Exod 30:8 — between the evenings with the raising', 'law': 'W6'})
+        wl.submit({'kind': 'incense_burned', 'subject': 'the-golden-altar', 'burner': 'uzziah', 'burner_class': 'stranger', 'time': 'morning', 'case_source': '2 Chr 26:16-19 — the king at the incense altar', 'law': 'W6'})
+        wl.submit({'kind': 'incense_burned', 'subject': 'the-golden-altar', 'burner': 'the-two-hundred-fifty', 'burner_class': 'stranger', 'time': 'morning', 'case_source': 'Num 16:17-35, 17:5 — the fire-pans; no stranger not of Aaron\'s seed', 'law': 'W6'})
+        wl.submit({'kind': 'strange_input_offered', 'subject': 'the-individual', 'offerer': 'the-individual', 'input': 'incense', 'on_altar': 'inner', 'voluntary_by': 'individual', 'case_source': 'Menachot 50a:19 — could an individual donate incense?', 'law': 'W6'})
+        wl.submit({'kind': 'strange_input_offered', 'subject': 'the-public', 'offerer': 'the-public', 'input': 'incense', 'on_altar': 'inner', 'voluntary_by': 'public', 'case_source': 'Menachot 50b:1 — could the public bring a voluntary one?', 'law': 'W6'})
+        wl.submit({'kind': 'strange_input_offered', 'subject': 'the-olah-bringer', 'offerer': 'the-olah-bringer', 'input': 'burnt_offering', 'on_altar': 'inner', 'voluntary_by': None, 'case_source': 'Exod 30:9 — nor a burnt offering', 'law': 'W6'})
+        wl.submit({'kind': 'strange_input_offered', 'subject': 'the-libation-pourer', 'offerer': 'the-libation-pourer', 'input': 'libation', 'on_altar': 'inner', 'voluntary_by': None, 'case_source': 'Exod 30:9 — a libation you shall not pour on it', 'law': 'W6'})
+        wl.submit({'kind': 'horns_atoned', 'subject': 'the-golden-altar', 'priest': 'aaron', 'blood': 'the_days_bull_and_goat', 'occasion': 'the_day', 'case_source': 'Mishnah Zevachim 5:1 + Lev 16:18-19 — the Day\'s inner rite', 'law': 'W6'})
+        wl.submit({'kind': 'horns_atoned', 'subject': 'the-golden-altar', 'priest': 'the-anointed-priest', 'blood': 'anointed_priests_bull', 'occasion': 'lev_4', 'case_source': 'Lev 4:7 + Mishnah Zevachim 5:2 — the anointed priest\'s bull on these horns, outside the Day', 'law': 'W6'})
+        # the shekel (30:11-16)
+        wl.submit({'kind': 'head_counted', 'subject': 'the-israelite', 'counted': 'the-israelite', 'who': 'israelites', 'ransom_given': True, 'trigger': 'census', 'rate': 'half', 'case_source': 'Mishnah Shekalim 1:3 — whom they pledge', 'law': 'W6'})
+        wl.submit({'kind': 'head_counted', 'subject': 'the-levite', 'counted': 'the-levite', 'who': 'levites', 'ransom_given': True, 'trigger': 'census', 'rate': 'half', 'case_source': 'Mishnah Shekalim 1:3', 'law': 'W6'})
+        wl.submit({'kind': 'head_counted', 'subject': 'the-convert', 'counted': 'the-convert', 'who': 'converts', 'ransom_given': True, 'trigger': 'census', 'rate': 'half', 'case_source': 'Mishnah Shekalim 1:3', 'law': 'W6'})
+        wl.submit({'kind': 'head_counted', 'subject': 'the-freed-slave', 'counted': 'the-freed-slave', 'who': 'freed_slaves', 'ransom_given': True, 'trigger': 'census', 'rate': 'half', 'case_source': 'Mishnah Shekalim 1:3', 'law': 'W6'})
+        wl.submit({'kind': 'head_counted', 'subject': 'the-woman', 'counted': 'the-woman', 'who': 'women', 'ransom_given': True, 'trigger': 'census', 'rate': 'half', 'case_source': 'Mishnah Shekalim 1:3 — not women', 'law': 'W6'})
+        wl.submit({'kind': 'head_counted', 'subject': 'the-slave', 'counted': 'the-slave', 'who': 'slaves', 'ransom_given': True, 'trigger': 'census', 'rate': 'half', 'case_source': 'Mishnah Shekalim 1:3 — not slaves', 'law': 'W6'})
+        wl.submit({'kind': 'head_counted', 'subject': 'the-minor', 'counted': 'the-minor', 'who': 'minors', 'ransom_given': True, 'trigger': 'census', 'rate': 'half', 'case_source': 'Mishnah Shekalim 1:3 — not minors', 'law': 'W6'})
+        wl.submit({'kind': 'head_counted', 'subject': 'the-priest', 'counted': 'the-priest', 'who': 'priests', 'ransom_given': True, 'trigger': 'census', 'rate': 'half', 'case_source': 'Mishnah Shekalim 1:3-4 — the priests not pledged, for the ways of peace', 'law': 'W6'})
+        wl.submit({'kind': 'head_counted', 'subject': 'davids-counted', 'counted': 'davids-counted', 'who': 'israelites', 'ransom_given': False, 'trigger': 'census', 'rate': 'half', 'case_source': '2 Sam 24:15 — David\'s census without the ransom: the negative branch; Berakhot 62b:11', 'law': 'W6'})
+        wl.submit({'kind': 'head_counted', 'subject': 'the-returned', 'counted': 'the-returned', 'who': 'israelites', 'ransom_given': True, 'trigger': 'yearly', 'rate': 'third', 'case_source': 'Neh 10:33 — a third of a shekel yearly', 'law': 'W6'})
+        wl.submit({'kind': 'head_counted', 'subject': 'the-yearly-payer', 'counted': 'the-yearly-payer', 'who': 'israelites', 'ransom_given': True, 'trigger': 'yearly', 'rate': 'half', 'case_source': 'Mishnah Shekalim 1:1 + 6:5 — new shekels every year, announced on the first of Adar', 'law': 'W6'})
+        wl.submit({'kind': 'atonement_silver_given', 'subject': 'the-treasury', 'treasury': 'the-treasury', 'silver': 'atonements', 'use': 'construction', 'house_standing': True, 'case_source': 'Exod 38:25-28 — the sockets from the census silver: the run', 'law': 'W6'})
+        wl.submit({'kind': 'atonement_silver_given', 'subject': 'the-treasury', 'treasury': 'the-treasury', 'silver': 'atonements', 'use': 'offerings', 'house_standing': True, 'case_source': 'Mishnah Shekalim 4:1 — the terumah buys the tamids', 'law': 'W6'})
+        wl.submit({'kind': 'atonement_silver_given', 'subject': 'the-treasury', 'treasury': 'the-treasury', 'silver': 'guilt_and_sin', 'use': 'offerings', 'house_standing': True, 'case_source': 'Mishnah Shekalim 6:6 — Jehoiada; 2 Kgs 12:17', 'law': 'W6'})
+        wl.submit({'kind': 'atonement_silver_given', 'subject': 'the-treasury', 'treasury': 'the-treasury', 'silver': 'atonements', 'use': 'offerings', 'house_standing': False, 'case_source': 'Mishnah Shekalim 8:8 — only before the House', 'law': 'W6'})
+        wl.submit({'kind': 'bailment_claim', 'subject': 'the-messengers', 'happening': 'theft', 'keeper': 'the-messengers', 'keeper_role': 'unpaid', 'owner': 'the-townsmen', 'value': None, 'case_source': 'Mishnah Shekalim 2:1 — the townsmen\'s messengers whose shekels were stolen swear to the treasurers', 'law': 'W6'})
+        # the oil (30:22-33)
+        wl.submit({'kind': 'anointing_oil_misused', 'subject': 'the-compounder', 'person': 'the-compounder', 'act': 'compounded', 'purpose': 'to_anoint', 'amount': 'whole', 'oil': 'other', 'warned': True, 'case_source': 'Mishnah Keritot 1:1 + Makkot 3:2 — the compounder of the oil, warned', 'law': 'W6'})
+        wl.submit({'kind': 'anointing_oil_misused', 'subject': 'the-learner', 'person': 'the-learner', 'act': 'compounded', 'purpose': 'to_learn', 'amount': 'whole', 'oil': 'other', 'warned': False, 'case_source': 'Keritot 5a:19 — to learn', 'law': 'W6'})
+        wl.submit({'kind': 'anointing_oil_misused', 'subject': 'the-public-compounder', 'person': 'the-public-compounder', 'act': 'compounded', 'purpose': 'for_the_public', 'amount': 'whole', 'oil': 'other', 'warned': False, 'case_source': 'Keritot 5a:20 — to hand to the public', 'law': 'W6'})
+        wl.submit({'kind': 'anointing_oil_misused', 'subject': 'the-half-compounder', 'person': 'the-half-compounder', 'act': 'compounded', 'purpose': 'to_anoint', 'amount': 'half', 'oil': 'other', 'warned': False, 'case_source': 'Keritot 5a:22 — Rava: a half fine', 'law': 'W6'})
+        wl.submit({'kind': 'anointing_oil_misused', 'subject': 'the-anointer', 'person': 'the-anointer', 'act': 'applied', 'target': 'stranger', 'purpose': 'to_anoint', 'amount': 'any', 'oil': 'moses', 'warned': False, 'case_source': 'Mishnah Keritot 1:1 — the anointer with the oil; Keritot 6b:25 any amount', 'law': 'W6'})
+        wl.submit({'kind': 'anointing_oil_misused', 'subject': 'the-beast-anointer', 'person': 'the-beast-anointer', 'act': 'applied', 'target': 'animal', 'purpose': 'to_anoint', 'amount': 'any', 'oil': 'moses', 'warned': False, 'case_source': 'Keritot 6b:19 — an animal is not adam', 'law': 'W6'})
+        wl.submit({'kind': 'anointing_oil_misused', 'subject': 'the-corpse-anointer', 'person': 'the-corpse-anointer', 'act': 'applied', 'target': 'corpse', 'purpose': 'to_anoint', 'amount': 'any', 'oil': 'moses', 'warned': False, 'case_source': 'Keritot 6b:19 — once dead, called dead', 'law': 'W6'})
+        wl.submit({'kind': 'anointing_oil_misused', 'subject': 'the-priests-anointer', 'person': 'the-priests-anointer', 'act': 'applied', 'target': 'anointed_priest', 'purpose': 'to_anoint', 'amount': 'any', 'oil': 'moses', 'warned': False, 'case_source': 'Meilah 19a:5 — the anointed priest is no stranger', 'law': 'W6'})
+        wl.submit({'kind': 'anointing_oil_misused', 'subject': 'the-other-oil-anointer', 'person': 'the-other-oil-anointer', 'act': 'applied', 'target': 'stranger', 'purpose': 'to_anoint', 'amount': 'any', 'oil': 'other', 'warned': False, 'case_source': 'Keritot 5a:20 — liable only for the oil Moses made', 'law': 'W6'})
+        # the incense (30:34-38)
+        wl.submit({'kind': 'incense_compounded', 'subject': 'the-incense-maker', 'maker': 'the-incense-maker', 'purpose': 'to_smell', 'amount': 'whole', 'warned': True, 'case_source': 'Mishnah Keritot 1:1 + Makkot 3:2 — the compounder of the incense, warned', 'law': 'W6'})
+        wl.submit({'kind': 'incense_compounded', 'subject': 'the-half-maker', 'maker': 'the-half-maker', 'purpose': 'to_smell', 'amount': 'half', 'warned': False, 'case_source': 'Keritot 6b:1 — an individual who compounded in halves is liable', 'law': 'W6'})
+        wl.submit({'kind': 'incense_compounded', 'subject': 'the-incense-learner', 'maker': 'the-incense-learner', 'purpose': 'to_learn', 'amount': 'whole', 'warned': False, 'case_source': 'Keritot 6a:6 — to learn', 'law': 'W6'})
+        wl.submit({'kind': 'incense_compounded', 'subject': 'the-house-of-avtinas', 'maker': 'the-house-of-avtinas', 'purpose': 'for_the_public', 'amount': 'whole', 'warned': False, 'case_source': 'Mishnah Shekalim 5:1 + Keritot 6a — the public\'s compounders; the 368 manehs', 'law': 'W6'})
+        wl.submit({'kind': 'incense_compounded', 'subject': 'the-smeller', 'maker': 'the-smeller', 'purpose': 'smelled', 'amount': 'any', 'warned': False, 'case_source': 'Keritot 6a:6 — the smeller exempt, but sacrilege', 'law': 'W6'})
+        wl.advance(9)                    # to day 9 (absolute): the tamid's morning fires at day 2, the three successions' seven days at day 8
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
     events = len([l for l in w.log if l[0] == 'EVENT'])
     ns = lambda eid, eff: len([e for e in ws.entity(eid).ledger if e['effect'] == eff])
@@ -1215,8 +1357,17 @@ def scene():
     return (n('aaron', 'names_borne'), n('aaron', 'judgment_borne'), n('aaron', 'entry_announced'), n('aaron', 'plate_propitiates'),
             n('the-bull', 'hand_laid') + n('the-ram-1', 'hand_laid') + n('the-ram-2', 'hand_laid'), n('aaron', 'blood_on_extremities') + n('the-sons', 'blood_on_extremities'),
             n('the-altar', 'altar_purged'), n('the-breast', 'waved'), n('moses', 'due_to_priest'), n('the-garments', 'consecrated'), n('aaron', 'invested_office'),
-            n('the-remainder', 'burn_remainder'), n('aaron', 'confined_seven_days'), n('aaron', 'anointed') + n('the-tabernacle', 'anointed'), events), sab, w, ws
-SCENE, SCENE_SAB, _W, _WS = scene()
+            n('the-remainder', 'burn_remainder'), n('aaron', 'confined_seven_days'), n('aaron', 'anointed') + n('the-tabernacle', 'anointed'), events), sab, scene_counts_w6(wl), w, ws, wl
+def scene_counts_w6(wl):
+    """W6 — the law layer's scene tuple: the effect counts over the whole world (every subject), the silences proven by absence, the timers, the events, the clock."""
+    ne = lambda eff: sum(1 for ent in wl.entities.values() for e in ent.ledger if e['effect'] == eff)
+    nn = lambda eid, eff: len([e for e in wl.entity(eid).ledger if e['effect'] == eff])
+    return (ne('garments_inherited'), nn('the-unfit-son', 'garments_inherited'), ne('incense_continual'), ne('lamp_arranged'), ne('strange_offering_barred'),
+            ne('horns_atoned_yearly'), ne('accepted'), ne('most_holy'), ne('half_shekel_owed'), nn('the-woman', 'half_shekel_owed') + nn('the-slave', 'half_shekel_owed') + nn('the-minor', 'half_shekel_owed') + nn('the-priest', 'half_shekel_owed'),
+            ne('no_plague_at_counting'), nn('davids-counted', 'no_plague_at_counting'), ne('accounts_rendered'), ne('tamid_owed'), ne('due_to_priest'), ne('oath_imposed'),
+            ne('compounding_barred'), ne('karet_cut_off'), ne('lashes'), ne('exempt'), ne('salted'), ne('meeting_appointed'),
+            len([l for l in wl.log if l[0] == 'TIMER-SET']), len([l for l in wl.log if l[0] == 'TIMER-FIRE']), len([l for l in wl.log if l[0] == 'EVENT']), wl.clock.year)
+SCENE, SCENE_SAB, SCENE_LAW, _W, _WS, _WL = scene()
 def build(q):
     if q == 'alignment':
         return cell(A_TOTAL, I, "the alignment engine ACROSS BOOKS: (spec verses, run verses, spec matched, run matched, dropped) = %s — every Lev 8 verse of a block aligned to its Exod 29 verse by normalized token overlap at threshold 0.3: the run rewrites the second person as the third ('you shall take' %d times in the spec, 'and he took' %d in the run), so the block-level correspondence holds while the token-level match is low — the grammar artifact E3 recorded, at its widest" % (A_TOTAL, sum(toks('Exod', 29, v).count('ולקחת') for v in range(1, 47)), sum(toks('Lev', 8, v).count('ויקח') for v in range(1, 37))), [FX.NONE])
@@ -1578,6 +1729,9 @@ TESTS = [
  # ---- THE WRAP OF THE SABBATH CLAUSE (W2) ----
  ('THE SABBATH SCENE on the world engine — the wrap (W2)', cell(SCENE_SAB, A, "THE SABBATH SCENE: the sign written on the covenant and the rest; the gatherer's labor barred, put to death with witnesses and STONED (the mode from Num 15:35); the unwitnessed profaner cut off by Heaven and not by the court; the kindler's kindling barred beside his karet — the one labor the ink names; the clock at 1: %r" % (SCENE_SAB,), ['sign_between', 'put_to_death', 'stoned', 'karet_cut_off', 'kindling_barred']),
   (1, 1, 1, 1, 1, 1, 0, 1, 1, 1)),
+ # ---- W6 THE SANCTUARY'S REMAINDER — the law layer's own world (2026-09-07) ----
+ ('THE LAW LAYER\'S SCENE on the world engine — the wrap (W6)', cell(SCENE_LAW, A, "THE LAW LAYER'S SCENE (W6): the succession's garments inherited by Eleazar, the substitute and the war-anointed — each now and again when the SEVEN DAYS fire (the unfit son nothing); the incense continual morning and evening with the morning's lamps divided (five then two), Uzziah and the two hundred fifty barred as strangers beside the four strange inputs; the Day's horns atoned once a year with its blood accepted and the altar most holy, the anointed priest's bull accepted outside the Day; the half shekel owed by the Israelite, the Levite, the convert and the freed slave with the plague's protection — the woman, the slave, the minor and the priest owing nothing, David's counted owing the levy WITHOUT the protection, the return's third and the yearly levy owed without a count; the census silver to the sockets, the terumah's tamid as a TIMER, the guilt money to the priests, nothing after the House; the messengers' oath by the guardians engine; the oil's compounder and anointer cut off (the warned compounder lashed), the learner, the public's, the half, the beast, the corpse, the anointed priest and the other oil exempt; the incense's maker and half-maker cut off (the warned maker lashed), the learner and the smeller exempt, the house of Avtinas exempt with its batch SALTED, stored before the testimony and burned in the daily halves: %r" % (SCENE_LAW,), ['garments_inherited', 'incense_continual', 'lamp_arranged', 'strange_offering_barred', 'horns_atoned_yearly', 'accepted', 'most_holy', 'half_shekel_owed', 'no_plague_at_counting', 'accounts_rendered', 'tamid_owed', 'due_to_priest', 'oath_imposed', 'compounding_barred', 'karet_cut_off', 'lashes', 'exempt', 'salted', 'meeting_appointed']),
+  (6, 0, 3, 1, 6, 1, 2, 1, 7, 0, 4, 0, 1, 1, 1, 1, 4, 4, 2, 10, 1, 1, 4, 4, 44, 9)),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------
@@ -1586,7 +1740,7 @@ assert n == GUARDED, (n, GUARDED)
 print('guard: %d test rows, every expected value a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 print()
 ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0, P: 0}
+frac = {I: 0, M: 0, A: 0, D: 0, P: 0, H: 0}
 used = []
 misses = []
 for name, c, want in TESTS:
@@ -1598,18 +1752,20 @@ for name, c, want in TESTS:
     print('%s %-96s [%s] %s' % ('OK ' if hit else 'MISS', name[:96], c['p'], '' if hit else 'got=%r' % (c['v'],)))
     print('     effects: %s' % ', '.join(c['fx']))
 print()
-print('WATCH COVERAGE (the investiture and the Sabbath clause):')
+print('WATCH COVERAGE (the investiture, the Sabbath clause, and the law layer — W6):')
 _W.print_coverage()
 _WS.print_coverage()
+_WL.print_coverage()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
-print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d'
-      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n))
+print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d · hypotheses %d/%d'
+      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n, frac[H], n))
 ops = FX.summarize(used)
 print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
 print('effects: every cell carries REGISTERED effects — FIFTEEN discovered in these verses\' own verbs: hand_laid, blood_on_extremities (BODY), garments_inherited, altar_purged, '
       'no_plague_at_counting, hands_feet_sanctified, anointed, sign_between (STATUS), tamid_owed, incense_continual, horns_atoned_yearly (TIMER), strange_offering_barred, '
       'compounding_barred, kindling_barred (BLOCK), half_shekel_owed (DEBIT) [effects law satisfied]')
 print('SCENE: %r — Lev 8 through this spec\'s daemon: the four use-entries the vestments spec promised, fired at the dressing' % (SCENE,))
+print('SCENE (W6, the law layer): %r' % (SCENE_LAW,))
 if ok == n:
     print('THE INVESTITURE SPEC RUN AGAINST LEVITICUS 8, THE INCENSE ALTAR, THE SHEKEL, THE LAVER, THE OIL AND THE INCENSE, AND THE SABBATH COMPILED — the spec/run delta is where '
           'the tradition argues (the split verb of the girding); the two owed edges closed; the plague clause\'s run in Samuel; bad bevad defining linen; the unit defined in the verse; '

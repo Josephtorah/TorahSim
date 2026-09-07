@@ -234,7 +234,7 @@ print('routing receipts: cold_run_vayikra5 CALLED — doubt -> %r; sacrilege dou
       % (TALUI, MEILAH_DOUBT, MEILAH[:40], TUMAH[:60], BIRDS, OUTER['eater']['v'], OUTER['window']['v'],
          SHEL['window']['v'], MIN_REM))
 
-I, M, A, D, P = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT'
+I, M, A, D, P, H = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 def cell(v, p, why, fx):
     FX.validate(fx)
     return {'v': v, 'p': p, 'why': why, 'fx': fx}
@@ -271,11 +271,11 @@ def domain(c):
     if not c.get('karet_when_intentional', True):
         return cell('not_karet_class_outside', P, 'Num 15:29-31 [IMPORT] — "one law for the one who does '
                     'unwittingly... the soul with a high hand shall be CUT OFF": the sin offering\'s unwitting '
-                    'is the karet\'s intentional (' + SC + 'Chapter 1 1, the idolatry template)', ['exempt'])
+                    'is the karet\'s intentional ( [taught: Horayot 8a:14, Keritot 3a:20 — \'one law for the unwitting... with a high hand\': the whole Torah likened to idolatry, the karet class]' + SC + 'Chapter 1 1, the idolatry template)', ['exempt'])
     intent = c.get('intent')
     if intent == 'intentional':
         return cell('karet_no_offering', P, 'Num 15:30 "with a high hand... cut off" [IMPORT]; 4:2 '
-                    '"unwittingly" excludes him (' + SC + 'Section 1 2)', ['karet_cut_off'])
+                    '"unwittingly" excludes him ( [taught: Horayot 8a:14, Keritot 3a:20]' + SC + 'Section 1 2)', ['karet_cut_off'])
     if intent == 'unknown':
         return cell('suspended_ram', P, 'Lev 5:17 — the same domain phrase, "and he knew not": CALLED '
                     'cold_run_vayikra5.sacrilege(doubt) -> %r' % TALUI, ['suspends'])
@@ -642,7 +642,7 @@ def pieces(a, b, ate='one_unknown', arm=None):
         v = ' + '.join(out) if out else 'exempt'
         fx = (['atoned_forgiven'] if certain else []) + (['suspends'] if doubtful else []) + ([] if out else ['exempt'])
         return cell(v, P, 'certain names %s -> Lev 4\'s own sin offering; doubtful names %s -> Lev 5:17 CALLED '
-                    '(-> %r); sacrilege doubt -> CALLED (-> %r)' % (sorted(certain), sorted(doubtful), TALUI,
+                    '(-> %r); sacrilege doubt -> CALLED (-> %r) [taught: Keritot 22b:4-13 — commandments-commandments from the sin offering]' % (sorted(certain), sorted(doubtful), TALUI,
                     MEILAH_DOUBT[:40]), fx or [FX.NONE])
     if ate == 'both':
         out = ['chatat'] * (len(A_) + len(B_))
@@ -682,8 +682,8 @@ def resolution(c):
     if kind == 'stoned_ox':
         if stage == 'before_stoning':
             return cell('pasture', A, 'Mishnah Keritot 6:2', [FX.NONE])
-        return cell('benefit_permitted', P, 'Exod 21:28 [IMPORT] "and its flesh shall not be EATEN" — the ban is '
-                    'on eating; the Mishnah reads benefit permitted after the stoning', [FX.NONE])
+        return cell('benefit_permitted', H, 'Exod 21:28 [IMPORT] "and its flesh shall not be EATEN" — the ban is '
+                    'on eating; the Mishnah reads benefit permitted after the stoning | H (LR3, 2026-09-07): Exod 21:28\'s eating clause read here as an eating-only ban — Pesachim 22b:6-7 and Bava Kamma 41a:20-23 read that clause with \'the owner is clean\' as a BENEFIT ban; the pasture verdict stands on Mishnah Keritot 6:2\'s own row, the Exodus import is an untaught transfer; kept as H', [FX.NONE])
     return cell('unknown', I, '', [FX.NONE])
 def day_of_atonement(c):
     if c == 'chatat_owed':
@@ -1376,7 +1376,7 @@ assert n == GUARDED, (n, GUARDED)
 print('guard: %d test rows, every expected value a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 print()
 ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0, P: 0}
+frac = {I: 0, M: 0, A: 0, D: 0, P: 0, H: 0}
 used = []
 misses = []
 for name, c, want in TESTS:
@@ -1389,8 +1389,8 @@ for name, c, want in TESTS:
     print('     effects: %s' % ', '.join(c['fx']))
 print()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
-print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d'
-      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n))
+print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d · hypotheses %d/%d'
+      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n, frac[H], n))
 ops = FX.summarize(used)
 print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
 print('SCENE: %r — the daemon\'s watch coverage:' % (SCENE,))

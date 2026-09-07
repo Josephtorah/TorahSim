@@ -74,7 +74,7 @@ sys.path.insert(0, HERE)
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
-assert GUARDED == 257, ("the guard counted %d expectations, the tripwire holds 257" % GUARDED)
+assert GUARDED == 258, ("the guard counted %d expectations, the tripwire holds 258" % GUARDED)   # W6: +1 (the altar's fire duty scene)
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -338,7 +338,7 @@ print('routing receipts: cold_run_offerings CALLED — olah:herd applications %r
       % (OLAH_H['applications']['v'], OLAH_H['place']['v'], SHEL['applications']['v'], CH_HORNS, TZ_EXT, TZ_RET, PR_OIL, PR_GRADES, PR_WEST, PR_EXCH, PR_LOAVES, PR_DIMS, PR_TWO,
          PR_EVE, PR_ONE, PR_REST, PR_POS, ORD_EARTH, ORD_HEWN, ORD_STEPS, ORD_RAMP, ORD_STONES, ORD_RECIPE))
 
-I, M, A, D, P = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT'
+I, M, A, D, P, H = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 def cell(v, p, why, fx):
     FX.validate(fx)
     return {'v': v, 'p': p, 'why': why, 'fx': fx}
@@ -885,15 +885,17 @@ def books(q):
 def law_sanctuary_build(event, world):
     """The build's daemon: consumes the run's recorded acts (the ink's own verbs) and writes the ledger — never emits an event."""
     k, subj, src = event['kind'], event['subject'], event['case_source']
-    E = lambda eff, s, cp=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': None, 'due': None, 'source_law': 'F%s' % event.get('law', '1'), 'case_source': src}
+    E = lambda eff, s, cp=None, value=None, law=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': None, 'due': None, 'value': value if value is not None else True, 'source_law': law or 'F%s' % event.get('law', '1'), 'case_source': src}
     if k == 'offering_brought': return [E('set_apart_before_me', subj, 'the-sanctuary')]
+    if k == 'overflow_reported': return []      # W6 (2026-09-07): CONSUMED with no ledger write — 36:5's report is the halt's cause; the halt (36:6) is the act that writes
     if k == 'halt_proclaimed': return [E('bringing_halted', subj)]
     if k == 'vessel_made':
         v = event['vessel']
         if v == 'curtains': return [E('made_one', 'the-tabernacle')]
         if v == 'ark': return [E('staves_fixed', 'the-ark')]
         if v == 'veil': return [E('veil_divides', 'the-house')]
-        return []      # the table, lampstand, boards, screen, altar, court: made, no ledger entry until their use; E4's three: no law here
+        if v == 'altar': return [E('perpetual_fire_duty', 'the-altar', value=altar('perpetual_fire')['v'], law='F8 [W6: the altar MADE (38:1-7) carries Lev 6:6\'s fire duty from its making — CALLED cold_run_tzav.altar_machine(extinguish) -> %s; Midrash Tanchuma Terumah 11: Moses\' objection raised AT THE SPEC (a wooden altar under a perpetual fire) — %s]' % (altar('perpetual_fire')['v'], altar('fire_objection')['v']))]
+        return []      # the table, lampstand, boards, screen, court: made, no ledger entry until their use; E4's three: no law here
     if k == 'accounts_rendered': return [E('accounts_rendered', subj), E('surplus_to_the_house', subj, 'the-house')]
     return []
 
@@ -914,9 +916,11 @@ def scene():
     events = len([l for l in w.log if l[0] == 'EVENT'])
     return (n('the-people', 'set_apart_before_me'), n('the-camp', 'bringing_halted'), n('the-tabernacle', 'made_one'), n('the-ark', 'staves_fixed'),
             n('the-house', 'veil_divides'), n('the-treasury', 'accounts_rendered'), n('the-treasury', 'surplus_to_the_house'),
-            n('the-people', 'presence_dwells'), n('the-ark', 'meeting_appointed'), events)
-SCENE = scene()
+            n('the-people', 'presence_dwells'), n('the-ark', 'meeting_appointed'), events), (n('the-altar', 'perpetual_fire_duty'), len([l for l in w.log if l[0] == 'EVENT' and l[2]['kind'] == 'overflow_reported']), events), w
+SCENE, SCENE_W6, _W = scene()
 def build(q):
+    if q == 'world_w6':
+        return cell(SCENE_W6, I, "THE W6 SCENE on the same world — the altar made (38:1-7) now carries the PERPETUAL FIRE DUTY from its making (Lev 6:6 by call; Tanchuma Terumah 11's objection raised at the spec), and the overflow report (36:5) is CONSUMED by the daemon with no ledger write — the halt writes: (fire duty on the altar, the overflow reports on the tape, events)", ['perpetual_fire_duty'])
     if q == 'spec_order':
         return cell(SPEC_ORDER, I, "the spec's order of first mention from 25:10: %s — the VESSELS first (ark, table, lampstand), then the HOUSE (curtains, boards, veil, screen), then the altar and the court" % (SPEC_ORDER,), [FX.NONE])
     if q == 'run_order':
@@ -1237,6 +1241,7 @@ TESTS = [
  ('the metal-tokens spec vs run', build('metals'), {'gold': (25, 30), 'silver': (9, 15), 'bronze': (13, 18)}),
  ('the token counts', build('tokens'), (1182, 1362)),
  ('THE SCENE on the world engine', build('world'), (2, 1, 1, 1, 1, 1, 1, 0, 0, 17)),
+ ('THE W6 SCENE — the altar\'s fire duty, the overflow consumed', build('world_w6'), (1, 1, 17)),
 ]
 
 # ---- (3)+(5) run, grade, effects ------------------------------------
@@ -1245,7 +1250,7 @@ assert n == GUARDED, (n, GUARDED)
 print('guard: %d test rows, every expected value a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 print()
 ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0, P: 0}
+frac = {I: 0, M: 0, A: 0, D: 0, P: 0, H: 0}
 used = []
 misses = []
 for name, c, want in TESTS:
@@ -1258,13 +1263,16 @@ for name, c, want in TESTS:
     print('     effects: %s' % ', '.join(c['fx']))
 print()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
-print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d'
-      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n))
+print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d · hypotheses %d/%d'
+      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n, frac[H], n))
 ops = FX.summarize(used)
 print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
 print('effects: every cell carries REGISTERED effects — NINE discovered in these verses\' own verbs: set_apart_before_me, surplus_to_the_house (TRANSFER), '
       'presence_dwells, meeting_appointed (HEAVEN — promised, unfired), staves_fixed, bringing_halted (BLOCK), made_one, veil_divides, accounts_rendered (STATUS) [effects law satisfied]')
 print('SCENE: %r — the offering, the halt, the vessels, the accounts; the two promises unfired' % (SCENE,))
+print('SCENE (W6): %r — the altar\'s fire duty, the overflow consumed' % (SCENE_W6,))
+print('WATCH COVERAGE (the construction):')
+_W.print_coverage()
 if ok == n:
     print('THE SANCTUARY RUNS AGAINST ITS SPEC — the house built before the ark against the ark-first command, the fork recorded at Berakhot 55a; every use-clause and '
           'pattern-clause dropped by the run; the spec\'s counts summing to the accounts\' hundred sockets; the talent computed at three thousand shekels; the '

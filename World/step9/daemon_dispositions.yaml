@@ -28,12 +28,36 @@ daemons:
       lamps_raised: [lamp_arranged]
       incense_burned: [incense_continual]
       tamid_offered: [accepted, tamid_owed]
-      washed: [hands_feet_sanctified]
+      hands_feet_washed: [hands_feet_sanctified]   # W6: UNIFIED — the erection's laver washing renamed from 'washed' (Lev 8:6's immersion keeps that name)
       work_finished: [work_completed, inspected_as_commanded]
       glory_filled: [presence_dwells, glory_appeared]
       could_not_enter: [barred_from_it]
       called_from_the_tent: [meeting_appointed]
       cloud_lifted: [camp_moves_by_the_cloud]
+      # ---- W6 THE SANCTUARY'S REMAINDER (D9-iii, 2026-09-07): declared BEFORE the code — law_erection EXTENDED to the craftsmen's call (31:1-11) and the donation's run (35:4-29)
+      craftsman_called: [appointed_by_name, spirit_filled]
+      offering_brought: [given_by_the_heart]
+      # ---- W7 THE SINAI NARRATIVE LAWS (D9-iii, 2026-09-07): declared BEFORE the code — law_erection EXTENDED to Exod 24, 32-34's laws inside the story
+      # (the covenant, the tablets, the blood covenant, the ascent, the calf, the presence); no new daemon; 34:18-26 is law_calendar's (W2) — not reseated
+      elders_ascended: [majority_decides]
+      people_answered: [entered_the_covenant, oral_law_unwritten]
+      youths_offered: [accepted, invested_office]
+      covenant_blood_thrown: [entered_the_covenant, atoned_forgiven, immersed]
+      case_brought_to_deputies: [majority_decides]
+      moses_ascended: [tablets_delivered, face_radiant]   # the forty days as a TIMER — the first tablets given and broken on the seventeenth of Tammuz, the second with the radiant face
+      ascent_barred: [barred_from_it]
+      attributes_proclaimed_at_sinai: [attributes_proclaimed, atoned_forgiven]
+      covenant_cut_at_sinai: [covenant_cut, oral_law_unwritten]
+      entered_the_land: [nations_driven_out, covenant_barred, demolished]   # the SECOND SEAT 34:11-13 — the ordinances' daemon keeps 23:23-32
+      sacrifice_of_inhabitant_eaten: [barred_from_it]
+      daughters_taken: [intermarriage_barred]
+      calf_made: [molten_image_barred, barred_from_it]
+      bowed_to_another_god: [stoned, bears_sin, slain_by_sword, plague_struck, made_to_drink]   # the idolater's row by call; the chapter's three death-verbs as the evidentiary tiers (Yoma 66b)
+      moses_interceded: [decree_relented, confessed, blotted_from_the_book]
+      tablets_broken: []   # consumed with NO ledger write — the breaking is the history's act, its ratification a verdict on Moses
+      calf_destroyed: [ground_and_scattered, made_to_drink]
+      levites_gathered: [slain_by_sword, invested_office]
+      tent_pitched_outside: [oral_law_unwritten, majority_decides]
   law_family:
     file: cold_run_family.py
     wraps: family
@@ -78,6 +102,17 @@ daemons:
       milluim_leftover: [burn_remainder]                         # W3: meal unified with the library's name
       confined: [confined_seven_days]
       did_all: [inspected_as_commanded]
+      # ---- W6 THE SANCTUARY'S REMAINDER (D9-iii, 2026-09-07): declared BEFORE the code — law_investiture EXTENDED to the runner's law layer: the succession (29:29-30),
+      # the incense altar (30:1-10), the shekel (30:11-16), the oil (30:22-33), the incense (30:34-38); no new daemon (the #83 ruling)
+      priest_succeeded: [garments_inherited]
+      incense_burned: [incense_continual, lamp_arranged, strange_offering_barred]   # the SECOND SEAT 30:7-8 (the statute of 40:27's act) — the erection's daemon keeps the act
+      strange_input_offered: [strange_offering_barred]
+      horns_atoned: [horns_atoned_yearly, accepted, most_holy]
+      head_counted: [half_shekel_owed, no_plague_at_counting]
+      atonement_silver_given: [tamid_owed, accounts_rendered, due_to_priest]
+      bailment_claim: [oath_imposed]   # Mishnah Shekalim 2:1 — the messengers' stolen shekels: one type under two law layers (the guardians' daemon, and this one by call)
+      anointing_oil_misused: [karet_cut_off, lashes, exempt, compounding_barred]
+      incense_compounded: [karet_cut_off, lashes, exempt, compounding_barred, salted, incense_continual, meeting_appointed]
   law_pre_sinai:
     file: cold_run_pre_sinai.py
     wraps: pre_sinai
@@ -102,7 +137,8 @@ daemons:
     watches:
       offering_brought: [set_apart_before_me]
       halt_proclaimed: [bringing_halted]
-      vessel_made: [made_one, staves_fixed, veil_divides]
+      vessel_made: [made_one, staves_fixed, veil_divides, perpetual_fire_duty]   # W6: the altar made carries Lev 6:6's fire duty by call (Tanchuma Terumah 11 — the objection raised at the spec)
+      overflow_reported: []   # W6: consumed with NO ledger write — the report is the halt's cause; the halt (36:6) writes
       accounts_rendered: [accounts_rendered, surplus_to_the_house]
   law_eighth_day:
     file: cold_run_shemini_day.py
@@ -402,7 +438,7 @@ daemons:
       forbidden_union: [stoned, burned_by_court, put_to_death, karet_cut_off, childless, bears_sin, beast_killed, suspends, atoned_forgiven, exempt]
       lay_with_beast: [stoned, karet_cut_off, beast_killed, put_to_death]
       lay_with_menstruant: [karet_cut_off]
-      levirate_commanded: [exempt, released, barred_from_holies, karet_cut_off]
+      rival_wife_taken: [exempt, released, barred_from_holies, karet_cut_off]   # LR2 (2026-09-07): split from levirate_commanded — Lev 18:18's own case type (the link review law)
       seed_given_to_molech: [stoned, karet_cut_off, face_set_against, exempt]
       ghost_pit_consulted: [stoned, karet_cut_off]
       parent_cursed: [stoned]
@@ -515,15 +551,17 @@ functions:
     theft_commandment: {status: WRAPPED, by: law_decalogue}
     altar_rules: {status: WRAPPED, by: law_ordinances}
   erection:
-    covenant: {status: OWED, why: "W7 THE SINAI NARRATIVE LAWS | effects: barred_from_it, bears_sin, covenant_barred, covenant_cut, demolished, intermarriage_barred, molten_image_barred, nations_driven_out, pilgrim_land_guarded, stoned"}
+    covenant: {status: WRAPPED, by: law_erection}
     repeats: {status: WRAPPED, by: law_calendar}
-    tablets: {status: OWED, why: "W7 THE SINAI NARRATIVE LAWS | effects: atoned_forgiven, attributes_proclaimed, barred_from_it, confessed, face_radiant, oral_law_unwritten, tablets_delivered"}
-    blood_covenant: {status: OWED, why: "W7 THE SINAI NARRATIVE LAWS | effects: accepted, atoned_forgiven, entered_the_covenant, immersed, invested_office, majority_decides, oral_law_unwritten, takes_four_species"}
-    ascent: {status: OWED, why: "W7 THE SINAI NARRATIVE LAWS | effects: majority_decides, oral_law_unwritten, tablets_delivered"}
-    calf: {status: OWED, why: "W7 THE SINAI NARRATIVE LAWS | effects: accepted, blotted_from_the_book, confessed, decree_relented, ground_and_scattered, invested_office, made_to_drink, molten_image_barred, plague_struck, slain_by_sword, stoned, tablets_delivered"}
-    presence: {status: OWED, why: "W7 THE SINAI NARRATIVE LAWS | effects: majority_decides, oral_law_unwritten"}
-    craftsmen: {status: OWED, why: "W6 THE SANCTUARY'S REMAINDER | effects: appointed_by_name, spirit_filled, strange_offering_barred, tablets_delivered"}
-    donation: {status: OWED, why: "W6 THE SANCTUARY'S REMAINDER | effects: given_by_the_heart, presence_dwells"}
+    tablets: {status: WRAPPED, by: law_erection}
+    blood_covenant: {status: WRAPPED, by: law_erection}
+    ascent: {status: WRAPPED, by: law_erection}
+    calf: {status: WRAPPED, by: law_erection}
+    presence: {status: WRAPPED, by: law_erection}
+    craftsmen: {status: WRAPPED, by: law_erection}
+    donation: {status: WRAPPED, by: law_erection}
+    scene_counts_w6: {status: NONE, why: "W6: the scene's count helper — reads the ledger's effect names to build the tuple, writes nothing; the value/effect homograph (the OPEN gate item)"}
+    scene_counts_w7: {status: NONE, why: "W7: the Sinai scene's count helper — reads the ledger's effect names to build the tuple, writes nothing; the value/effect homograph (the OPEN gate item)"}
     command: {status: WRAPPED, by: law_erection}
     execution: {status: WRAPPED, by: law_erection}
     initiations: {status: WRAPPED, by: law_erection}
@@ -557,15 +595,16 @@ functions:
     persons: {status: WRAPPED, by: law_investiture}
     bull: {status: WRAPPED, by: law_investiture}
     rams: {status: WRAPPED, by: law_investiture}
-    succession: {status: OWED, why: "W6 THE SANCTUARY'S REMAINDER | effects: garments_inherited"}
+    succession: {status: WRAPPED, by: law_investiture}
     meal: {status: WRAPPED, by: law_investiture}
     seven_days: {status: WRAPPED, by: law_investiture}
     tamid: {status: WRAPPED, by: law_erection}
-    incense_altar: {status: OWED, why: "W6 THE SANCTUARY'S REMAINDER | effects: accepted, horns_atoned_yearly, incense_continual, lamp_arranged, meeting_appointed, most_holy, perpetual_fire_duty, strange_offering_barred"}
-    shekel: {status: OWED, why: "W6 THE SANCTUARY'S REMAINDER | the census and the half-shekel have no event; the accounts (38:21-31) are law_sanctuary_build's"}
+    incense_altar: {status: WRAPPED, by: law_investiture}
+    shekel: {status: WRAPPED, by: law_investiture}
     laver: {status: WRAPPED, by: law_erection}
-    oil: {status: OWED, why: "W6 THE SANCTUARY'S REMAINDER | the anointing ACT is replayed (vessels_anointed, head_anointed); the compounding ban and its karet have no event on any tape"}
-    incense: {status: OWED, why: "W6 THE SANCTUARY'S REMAINDER | the burning ACT is replayed by law_erection (incense_burned); the compounding ban and the stranger have no event"}
+    oil: {status: WRAPPED, by: law_investiture}
+    incense: {status: WRAPPED, by: law_investiture}
+    scene_counts_w6: {status: NONE, why: "W6: the scene's count helper — reads the ledger's effect names to build the tuple, writes nothing; the value/effect homograph (the OPEN gate item)"}
     sabbath: {status: WRAPPED, by: law_sabbath}
   lev24:
     talion: {status: WRAPPED, by: law_lev24}
@@ -665,7 +704,7 @@ functions:
     curtains: {status: WRAPPED, by: law_sanctuary_build}
     boards: {status: WRAPPED, by: law_sanctuary_build}
     veil: {status: WRAPPED, by: law_sanctuary_build}
-    altar: {status: OWED, why: "W6 THE SANCTUARY'S REMAINDER | the altar made (38:1-7) writes nothing until its fire — Lev 6:2-6 (tzav.altar_machine) and the tamid; the use is owed with W3/W6"}
+    altar: {status: WRAPPED, by: law_sanctuary_build}
     court: {status: WRAPPED, by: law_sanctuary_build}
     lamp: {status: WRAPPED, by: law_erection}
     books: {status: WRAPPED, by: law_sanctuary_build}
@@ -741,5 +780,4 @@ functions:
     sale_manner: {status: WRAPPED, by: law_yovel}
     rigor_visibility: {status: WRAPPED, by: law_yovel}
 unfired: {}
-unconsumed:
-  overflow_reported: "submitted by cold_run_sanctuary_build.py at Exod 36:5 (the craftsmen's report); law_sanctuary_build comments 'no law' — the halt (36:6) is the act that writes; kept on the tape as the recorded report"
+unconsumed: {}

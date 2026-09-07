@@ -137,7 +137,7 @@ assert len(CONVOC) == 11, CONVOC
 print('ink census: ALL-work verses %s · SERVILE-work verses %s · '
       'convocation tokens %d' % (ALL_WORK, SERVILE, len(CONVOC)))
 
-I, M, A, D, P = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT'
+I, M, A, D, P, H = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 
 
 def cell(v, p, why, effects):
@@ -222,7 +222,7 @@ def omer():
      'grain_source': cell(OMER_MIN['v'], P,
                           'the omer IS Lev 2:14\'s first-fruits meal offering — "what is missing there the verse '
                           'stated here," one offering split across two chapters (Sifra Emor Chapter 13 3): CALLED '
-                          'cold_run_minchah.omer(source) [IMPORT, live call]', ['accepted']),
+                          'cold_run_minchah.omer(source) [IMPORT, live call] [taught: Sifra Vayikra Dibbura d\'Nedavah Section 13 4; Menachot 84a:10]', ['accepted']),
     }
 
 
@@ -281,8 +281,7 @@ def two_loaves():
      # the pointers, live (2026-09-06)
      'first_fruits_link': cell(FF, P,
                                'לחם הבכורים (the bread of the first fruits) at 23:20 with Exod 23:16 "the feast of the '
-                               'harvest, the first fruits of your labors" and 23:19 "the first of the first fruits" — one '
-                               'institution at two seats: CALLED cold_run_calendar.first_fruits [IMPORT, live call]',
+                               'harvest, the first fruits of your labors" and 23:19 "the first of the first fruits" — LINKED by the time gate of Mishnah Bikkurim 1:3 (no first fruits before Atzeret; Menachot 84b:4 the two loaves precede) — not one institution, the basket of Deut 26 and the two loaves kept apart (LR2/LR3, 2026-09-07): CALLED cold_run_calendar.first_fruits [IMPORT, live call]',
                                ['accepted']),
      'pilgrimage': cell(PIL, P,
                         'the day of the two loaves is Exod 23:16\'s feast of the harvest, one of the three appearings: '
@@ -571,7 +570,7 @@ TESTS = [
 # ---- (3)+(5) run, grade, effects ------------------------------------
 print()
 ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0, P: 0}
+frac = {I: 0, M: 0, A: 0, D: 0, P: 0, H: 0}
 assert len(TESTS) == GUARDED, (len(TESTS), GUARDED)
 for name, c, want in TESTS:
     hit = c['v'] == want
@@ -586,9 +585,9 @@ print('WATCH COVERAGE (the wrap):')
 _W.print_coverage()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
 print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · '
-      'answer-sheet %d/%d · data %d/%d · imports %d/%d' % (
+      'answer-sheet %d/%d · data %d/%d · imports %d/%d · hypotheses %d/%d' % (
       frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n,
-      frac[A], n, frac[D], n, frac[P], n))
+      frac[A], n, frac[D], n, frac[P], n, frac[H], n))
 print('computed, not graded: the count runs %d days and sanctifies the '
       '%dth (INK arithmetic); the fast begins on the ninth in the evening '
       '(INK); the eighth day is an assembly (INK)' % (OM['count_length']['v'], 50))

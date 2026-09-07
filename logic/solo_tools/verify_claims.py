@@ -19,8 +19,19 @@ or non-DB claim); the row must carry check.note saying why.
 Exit code: 0 if no FAILED rows, 2 otherwise. Reviewers re-run this
 script; a FAILED row is a review BLOCKER unless the unit files it as a
 discrepancy observation.
+
+THE MIDDAH LABEL (THE LINK REVIEW LAW, owner-ruled 2026-09-07; sitting
+LR1): a claim seated AFTER the review took effect must carry a
+non-empty "middah" naming its inference rule (logic/MIDDOT.md — I1..I13,
+E1..E32, or "ink" for a claim that reads its own verse). The ceiling is
+logic/oral_audit/claim_ceilings_LR1_2026-09-07.json — every claim id on
+file that day, per manifest; an id not in its manifest's list without a
+middah is FAILED. The backfill of the 2,838 older claims is THE CLAIMS
+LABEL DEBT (World/step9/COMPILE_DEBT.md), never a silent pass.
 """
-import json, re, sqlite3, sys
+import json, os, re, sqlite3, sys
+
+CEIL = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'oral_audit', 'claim_ceilings_LR1_2026-09-07.json')
 
 DB = "torah_grok.SNAPSHOT-main-51801ca.sqlite"
 DM = "debut_map.SNAPSHOT-main-51801ca.sqlite"
@@ -179,9 +190,21 @@ class V:
 
 def main(path):
     claims = json.load(open(path, encoding="utf-8"))
+    if not os.path.exists(CEIL):
+        sys.exit("verify_claims: the claim ceilings file is missing (%s) — the middah-label gate cannot run" % CEIL)
+    known = set(json.load(open(CEIL, encoding="utf-8"))["manifests"].get(os.path.basename(path), []))
     v = V()
     counts = {"VERIFIED": 0, "FAILED": 0, "UNCHECKABLE": 0, "NO-CHECK": 0}
+    n_new = 0
     for cl in claims:
+        if cl.get("id") not in known:
+            n_new += 1
+            if not str(cl.get("middah") or "").strip():
+                counts["FAILED"] += 1
+                print("FAILED      %s [%s] NO MIDDAH LABEL — seated after the link review (LR1, 2026-09-07): "
+                      "a new claim names its inference rule (logic/MIDDOT.md; 'ink' for a claim reading its own verse)"
+                      % (cl.get("id"), cl.get("source")))
+                continue
         ck = cl.get("check")
         if ck is None:
             # RE-era manifest row (2026-08-30 onward): witness-tier claim
@@ -207,7 +230,8 @@ def main(path):
         print("%-11s %s [%s] %s%s\n            %s" %
               (st, cl["id"], cl["source"], cl["claim_en"], scope, det))
     print("\nSUMMARY: %(VERIFIED)d verified, %(FAILED)d failed, "
-          "%(UNCHECKABLE)d uncheckable, %(NO-CHECK)d no-check" % counts)
+          "%(UNCHECKABLE)d uncheckable, %(NO-CHECK)d no-check" % counts
+          + "; middah gate: %d claim(s) beyond the LR1 ceiling checked for a label" % n_new)
     sys.exit(2 if counts["FAILED"] else 0)
 
 

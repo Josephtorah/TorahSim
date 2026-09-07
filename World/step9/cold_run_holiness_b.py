@@ -248,7 +248,7 @@ print('routing receipts: cold_run_tzav.asham_law CALLED — place -> %r, eater -
       'cold_run_sanctions.ov CALLED -> consulter %r, bearer %r; cold_run_holiness CALLED -> judge %r, heart %r; cold_run_vayikra5.pointers(asham_procedure) -> %r [IMPORT, live calls]'
       % (ASHAM_PLACE, ASHAM_EATER, ASHAM_AGE, RAM_FLOOR, OV['consulter'], OV['bearer'], JUDGE, HEART, LEV5_SHAPE))
 
-I, M, A, D, P = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT'
+I, M, A, D, P, H = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 def cell(v, p, why, fx):
     FX.validate(fx)
     return {'v': v, 'p': p, 'why': why, 'fx': fx}
@@ -680,7 +680,7 @@ def body(q, **k):
         tool = k['tool']
         if tool == 'razor':
             return cell('liable', M, '19:27 "you shall not DESTROY the corner of your beard" and Lev 21:5 "they shall not SHAVE" '
-                        '[IMPORT — the priests\' law, compiled at L5] — ' + SK + 'Chapter 6 4: THE TWO-CONSTRAINT SOLVE — '
+                        '[IMPORT — the priests\' law, compiled at L5] —  [taught: Sifra Emor Chapter 1 1-3; Makkot 20a:12-14 — baldness-baldness both ways]' + SK + 'Chapter 6 4: THE TWO-CONSTRAINT SOLVE — '
                         'shaving WITH destruction = the razor (Mishnah Makkot 3:5: "not liable unless he takes it with a razor")',
                         ['lashes'])
         if tool == 'scissors':
@@ -1240,7 +1240,7 @@ assert n == GUARDED, (n, GUARDED)
 print('guard: %d test rows, every expected value a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 print()
 ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0, P: 0}
+frac = {I: 0, M: 0, A: 0, D: 0, P: 0, H: 0}
 used = []
 misses = []
 for name, c, want in TESTS:
@@ -1253,8 +1253,8 @@ for name, c, want in TESTS:
     print('     effects: %s' % ', '.join(c['fx']))
 print()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
-print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d'
-      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n))
+print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d · hypotheses %d/%d'
+      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n, frac[H], n))
 ops = FX.summarize(used)
 print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
 print('effects: every cell carries REGISTERED effects — FIVE discovered in these verses\' own verbs: mixture_barred (BLOCK), '

@@ -565,6 +565,44 @@ owner's confirmed process):
      condition), never synthetic events; timer firings are their own
      record class; every daemon prints its watch coverage; the engine
      carries a cascade depth bound with cycle detection.
+     ⚠ THE LINK REVIEW LAW (owner-ruled 2026-09-07 after W5: "The
+     teacher say not to create a link of our own unless it came from
+     a teacher... we need to keep up with these"). The tradition's
+     rule, read on the local shelf at sitting LR1: a person does not
+     derive a verbal analogy (gezerah shavah, the second middah) on
+     his own; a person may derive an a-fortiori on his own
+     (Babylonian Talmud Pesachim 66a:12, Niddah 19b:12; the Jerusalem
+     Talmud's reason at Pesachim 6:1 — the shared word is an unbounded
+     generator; logic/MIDDOT.md under I2 carries the whole reading).
+     THE TWO QUESTIONS, asked BEFORE any seat, dependency edge,
+     unification, or type grouping is written, the answer written
+     beside it: (1) REFERENCE or TRANSFER? — a reference is the ink
+     naming an institution and the edge calling its definition,
+     licensed by ink alone; a transfer is a rule moving between
+     contexts on a shared word or a topic. (2) If a transfer, TAUGHT
+     BY WHOM? — a sugya, a Sifra passage, or a catalogued move with
+     its exemplar named. No teacher = a labeled HYPOTHESIS (class H):
+     the value kept, the flag changed, never counted as compiled — in
+     the runners' cells H is the SIXTH provenance tag beside ink, move,
+     answer-sheet, data, and import, counted apart in every runner's
+     FRACTIONS line ("hypotheses N/n" — the chip), and a catalogued move
+     (M-22, M-23, M-24 are GENERALIZATIONS) is a teacher for a new verse
+     pair only with its recorded exemplar named beside the application.
+     The contract is a field: every edge and pointer in
+     dependency_dispositions.yaml and every multi-seat type in
+     event_vocabulary.yaml carries `link:` (reference / transfer /
+     hypothesis / none / UNCLASSIFIED) and, for a transfer,
+     `taught_by:`; the dependency gate and the registry lint refuse a
+     transfer without a teacher and a new entry without the field; a
+     reference between seats is verified by content-lemma overlap (a
+     reference the lemma test cannot see — one case paragraph whose
+     verb and noun carry different lemma numbers — states its ground
+     in `reference_by:` and is counted apart as declared); the
+     claim verifier refuses a claim seated after LR1 without a middah
+     label (the ceilings file logic/oral_audit/claim_ceilings_LR1_2026-09-07.json).
+     The review — LR1 the law and the gates; LR2 the audit of 154
+     edges, 72 pointers, 43 multi-seat types; LR3 the cells and the H
+     class — is logged in World/step9/COMPILE_DEBT.md.
  (2) COLLECT the Mishnah's rows as TEST DATA — input cases with
      expected verdicts, plus the recorded parameter settings. Each
      row's VERSE-ADDRESS comes from the tradition's own index (the
@@ -1890,6 +1928,94 @@ field and the houses and the slaves and the consecrated holding each on a timer
 to the fiftieth set at the sale. Thirty timers set, twenty-nine fired, one
 pending; thirty-three silences. Record: World/step9/REPORT_WRAP_W5.md. Next: W6
 THE SANCTUARY'S REMAINDER.
+W6 THE SANCTUARY'S REMAINDER (2026-09-07, the first sitting after compaction
+#83, the owner: "go" — the first wrap under THE LINK REVIEW LAW): eight
+functions in three runners — the altar's spec, the succession, the incense
+altar, the shekel, the oil and the incense, the craftsmen and the donation —
+by the same rhythm, with one ruling on top: NO NEW DAEMON, the three existing
+ones extended. Eight case types registered first by script (the registry 248
+types, 607 runs verified), and three older types given a second seat in these
+chapters with the two questions answered on each — a REFERENCE verified by a
+shared content word: the incense burned at the erection (40:27) gains its
+statute (30:7-8, morning by morning with the lamps' tending), the vessels
+anointed in Leviticus 8 gain their spec (30:26-29, the seven objects), the
+construction's mornings (36:3) gain the donation's run (35:5, 35:21 — everyone
+willing of heart). The laver's washing and the body's immersion, one name over
+two acts since the seeding, are two names now. The investiture's daemon takes
+the runner's law layer in a world of its own beside the run's: the succession's
+garments inherited now and again when the seven days fire (Yoma 5a — the
+anointing likened to the filling), the unfit son taking nothing; the incense
+continual morning and evening with the morning's lamps divided five then two;
+Uzziah and the two hundred fifty barred as strangers beside the four strange
+inputs; the Day's horns atoned once a year; the half shekel owed by the
+Israelite, the Levite, the convert and the freed slave with the plague's
+protection, the woman, the slave, the minor and the priest owing nothing, and
+DAVID'S CENSUS ON THE TAPE WITHOUT THE RANSOM — the levy written, the protection
+withheld, and no plague written either: the plague is the history's, the
+daemon writes only what the law computes (the fence, at its negative branch);
+the census silver to the sockets, the terumah's daily lamb as a timer, the
+guilt money to the priests, nothing after the House; the messengers whose
+shekels were stolen swearing by the guardians engine (Mishnah Shekalim 2:1 —
+a transfer with its teacher named); the oil's and the incense's compounders cut
+off, the learner, the public's compounder, the half, the beast, the corpse, the
+anointed priest and the other oil exempt, the house of Avtinas exempt with its
+batch salted and stored before the testimony. Forty-four rows, thirty-eight
+fired, six silences, four timers. The erection's daemon takes the craftsmen's
+call (Bezalel appointed by name and filled with the spirit, the wise-hearted
+filled with wisdom — Berakhot 55a) and the donation (five givings, one of them
+resolved in the heart without speech — Shevuot 26b); the build's daemon
+consumes the overflow report with an honest empty write and puts Lev 6:6's
+fire duty on the altar at its making (the Tanchuma's objection raised at the
+spec). The gate failed eight ways before a line of code; the three tuple
+predictions were written by script first and all three matched the machine on
+the first run. While there, the twelve live calls of the incense-and-shekel
+runner that the token census never required were filed with their link (nine
+references, three transfers with teachers: the Mishnah's messengers, the
+Tanchuma's thirty shekels from the goring ox, Zevachim's "part for part"
+defining the linen) — and the debt line was measured again: of LR3's sixty-six,
+twenty-two were already on file, thirty-two remain for one filing sitting.
+Scoreboard: 242 wrapped, 6 owed (W7's), 5 none; the sweep 33/33 (3624 cells).
+Record: World/step9/REPORT_WRAP_W6.md. Next: W7 THE SINAI NARRATIVE LAWS.
+W7 THE SINAI NARRATIVE LAWS (2026-09-07, the same window, the owner: "Go w7"
+— the seventh and LAST wrap; the campaign's worklist empty): six functions in
+the erection runner — the laws the tradition reads off the story of Exodus 24
+and 32 through 34 — by the same rhythm and the same ruling: no new daemon.
+Eighteen types registered first by script, and here the ACT form grew where
+the case form barely did: the story's own deeds are the tape — the elders'
+ascent, the people's answer, the youths' offerings, the blood thrown, the
+forty days, the calf made and destroyed, the Levites gathered, the tent
+pitched outside, the attributes proclaimed. Three new types sit in two
+chapters and one older type took a second seat, every one a reference the
+lint verified by a shared word: the calf's making and its ban in the covenant
+(the molten noun), the calf's bow and the covenant's warning against it (the
+bowing verb), the two ascents (the forty days and forty nights), and the land
+covenant of Exodus 23 written again at 34:11-13. The erection's daemon writes
+the law off each act: the unnamed elders make every court of three the court
+of Moses; the youths are the firstborn and their office ends at the erection;
+the blood thrown on the people is the convert's rite — no sprinkling without
+immersion; the claimant before Aaron and Hur bears the proof; the calf's three
+death-verbs are the court's evidentiary tiers — the sword with witnesses and
+warning, the plague with witnesses alone, the water's dropsy with neither —
+beside the idolater's row called from the ordinances engine; the court that
+exempted the bower bears sin; the decree is relented by the vow-annulment law;
+the calf is ground as a test and not a nullification; "him I will blot" falls
+on the sinners and never on the intercessor; Joshua who did not depart is the
+chain's first link and the tent's distance is the student's three parasangs;
+the attributes clear the repentant and not the unrepentant nor the vain
+swearer; the mountain is closed while the Presence rests and open when it
+departs. THE HEADLINE: the first ascent on the seventh day sets the tablets on
+a forty-day timer, and the timer fires on day forty-seven — the seventeenth of
+Tammuz, the day the tradition computes from those two numbers and lists the
+breaking under; the breaking is submitted that day as an honest silence, the
+history's act and not a ledger entry. The second tablets and the radiant face
+fire on day eighty-eight. The gate failed two ways before a line of code; the
+thirty-one-slot prediction was written by script first and matched the
+machine on the first run; thirty-two rows, thirty fired, two silences. One
+catch on the record: the sweep launched before the scene helper's disposition
+refused to grade anything — the gate-first order is enforced by the sweep
+itself. Scoreboard: 248 wrapped, 0 owed, 6 none; 266 event types; the sweep
+33/33 (3625 cells). Record: World/step9/REPORT_WRAP_W7.md. THE WRAPS ARE
+COMPLETE. Next: D9-iv THE DELIVERABLE RULE AMENDED, then Numbers.
 The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law

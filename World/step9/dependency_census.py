@@ -54,14 +54,46 @@ GATE that runs before every cold sweep (run_cold_all.py calls it first):
      span, the calls out, the callers in, every required edge with its
      disposition, every pointer. Documentation and the site's dependency
      view; never a runtime path.
+  8. THE LINK REVIEW LAW (owner-ruled 2026-09-07; sitting LR1). The type
+     census ENUMERATES shared-token candidates — which is what a person may
+     do — and the tradition's rule is that a person does not derive a
+     verbal analogy on his own (Pesachim 66a:12, Niddah 19b:12;
+     logic/MIDDOT.md under I2). So every edge and pointer answers THE TWO
+     QUESTIONS in a field, `link:`:
+       reference    — the ink names an institution, the edge calls its
+                      definition (licensed by ink alone);
+       transfer     — a rule moves on a shared word or a topic: `taught_by:`
+                      must name a teacher (a sugya "Tractate 12a:3", a
+                      Mishnah/Tosefta/Sifra/Sifrei/Mekhilta/Rabbah/Tanchuma
+                      passage, or a catalogued move M-nn WITH its exemplar);
+       hypothesis   — an untaught transfer, kept and labeled, never counted
+                      toward compiled (class H); needs a why;
+       none         — only with FALSE (a homograph has no link);
+       UNCLASSIFIED — asked, not yet answered: counted, printed by --links
+                      (the LR2 worklist), never silent.
+     A transfer without a teacher FAILS; an entry without `link:` FAILS
+     ("we need to keep up with these"); `none` off a FALSE FAILS.
 
-Run: python3 World/step9/dependency_census.py [--emit] [--debt] [--no-index]
+Run: python3 World/step9/dependency_census.py [--emit] [--debt] [--links] [--no-index]
   --emit prints yaml stubs for every undispositioned edge/pointer.
   --debt prints the OWED edges and pointers — the compile-debt worklist,
          generated, not hand-noted.
+  --links prints the UNCLASSIFIED and hypothesis entries — the link
+         review's worklist, generated.
 Exit 1 on any failure.
 """
 CARRIES = {'value', 'count', 'procedure', 'status', 'window', 'place', 'inventory', 'verdict'}
+import re
+LINKS = ('reference', 'transfer', 'hypothesis', 'none', 'UNCLASSIFIED')
+_TAUGHT = re.compile(r'\b(Mishnah|Tosefta|Sifra|Sifrei|Mekhilta|Rabbah|Tanchuma|Onkelos|Talmud|Yerushalmi)\b|\b[A-Z][a-z]+ \d{1,3}[ab]:\d{1,3}\b')
+_MOVE = re.compile(r'\bM-\d\d\b')
+
+def taught_ok(s):
+    """A teacher is a cited passage, or a catalogued move with its exemplar named — never a bare move number."""
+    if not s or not str(s).strip(): return False
+    s = str(s)
+    if _TAUGHT.search(s): return True
+    return bool(_MOVE.search(s) and re.search(r'exemplar', s, re.I) and re.search(r'\d+:\d+', s))
 import sqlite3, re, unicodedata, glob, os, sys, json
 from collections import defaultdict
 import yaml
@@ -199,6 +231,25 @@ def cited_verses(runner):
             for v in range(1, z + 1): cited.add((c2, v))
     return cited
 
+def link_checks(head, x, disp):
+    """Rule 8 on one edge or pointer: the two questions answered in the field, a transfer with its teacher."""
+    out = []
+    lk = x.get('link')
+    if lk is None:
+        out.append('%s: NO link — THE TWO QUESTIONS (reference / transfer / hypothesis / none; the link review law)' % head); return out
+    if lk not in LINKS:
+        out.append('%s: unknown link %r (not one of %s)' % (head, lk, LINKS)); return out
+    if lk == 'transfer' and not taught_ok(x.get('taught_by')):
+        out.append('%s: link transfer WITHOUT A TEACHER — taught_by must name a sugya, a Mishnah/Tosefta/Sifra/Sifrei/Mekhilta passage, '
+                   'or a catalogued move M-nn with its exemplar (a person does not derive a verbal analogy on his own)' % head)
+    if lk == 'hypothesis' and not x.get('why'):
+        out.append('%s: link hypothesis without a why (what transfer, and why no teacher)' % head)
+    if lk == 'none' and disp != 'FALSE':
+        out.append('%s: link none on a %s entry — none belongs to FALSE alone' % (head, disp))
+    if lk == 'reference' and not x.get('why'):
+        out.append('%s: link reference without a why (which institution the ink names)' % head)
+    return out
+
 def main():
     emit = '--emit' in sys.argv
     spans, edges_y, ptrs_y = load_yaml()
@@ -228,7 +279,10 @@ def main():
                     ptrs.append((r, '%s %d:%d' % (book, ch, vs), name, ' '.join(words[i:i + 3])))
     # ---- the dispositions ----
     ed = {(e['from'], e['to']): e for e in edges_y}
-    pd = {(p['verse'], p['form']): p for p in ptrs_y}
+    # LR2 (2026-09-07): a pointer is keyed by verse, form AND runner — one clause compiled in two spans (Exod 21:22 in
+    # mishpatim and mishpatim_2) files two dispositions, and the old (verse, form) key silently dropped one of the 72.
+    pd = {(p['verse'], p['form'], p.get('runner')): p for p in ptrs_y}
+    if len(pd) != len(ptrs_y): fails.append('POINTERS: %d on file but %d distinct (verse, form, runner) keys — a duplicate entry' % (len(ptrs_y), len(pd)))
     n_edges = sum(len(v) for v in need.values())
     print('DEPENDENCY GATE coverage: %d runners declared, %d verses scanned, %d type tokens, %d pointer forms; '
           'required edges %d, required pointers %d; live import edges %d; dispositions on file: %d edges, %d pointers'
@@ -257,10 +311,17 @@ def main():
             if d not in ('CALL', 'OWED', 'PARAMETER', 'FALSE', 'REVERSE', 'VIA'): fails.append('EDGE %s -> %s: unknown disposition %r' % (r, h, d))
             if e.get('carries') is not None and e['carries'] not in CARRIES:
                 fails.append('EDGE %s -> %s: carries %r is not one of %s' % (r, h, e['carries'], sorted(CARRIES)))
+            fails.extend(link_checks('EDGE %s -> %s' % (r, h), e, d))
+    # ---- the link contract on EVERY entry on file (an edge the census no longer requires still answers) ----
+    checked = set()
+    for e in edges_y:
+        key = (e.get('from'), e.get('to'))
+        if key in ed and (key[0] in need and key[1] in need[key[0]]): continue
+        fails.extend(link_checks('EDGE %s -> %s' % key, e, e.get('disposition')))
     # live edges never required by a token but present: fine (a call beyond the census) — listed
     extra_live = [(r, h) for r, hs in E.items() for h in hs if r in spans and h not in need.get(r, {})]
     for (r, verse, form, ctx) in ptrs:
-        p = pd.get((verse, form))
+        p = pd.get((verse, form, r))
         if p is None:
             fails.append('POINTER %s %s in %s ("%s"): NO DISPOSITION' % (verse, form, r, ctx))
             stubs.append({'verse': verse, 'form': form, 'runner': r, 'text': ctx, 'disposition': '', 'target': '', 'why': ''})
@@ -275,6 +336,16 @@ def main():
         elif d not in ('INTERNAL', 'RUN_CITATION', 'PARAMETER', 'FALSE'):
             fails.append('POINTER %s %s: unknown disposition %r' % (verse, form, d))
         elif not p.get('why'): fails.append('POINTER %s %s: %s without a why' % (verse, form, d))
+        fails.extend(link_checks('POINTER %s %s' % (verse, form), p, d))
+    for p in ptrs_y:
+        if (p.get('verse'), p.get('form'), p.get('runner')) not in set((v, f, r) for r, v, f, _ in ptrs):
+            fails.extend(link_checks('POINTER %s %s' % (p.get('verse'), p.get('form')), p, p.get('disposition')))
+    # ---- the link census (rule 8): printed every run, never silent ----
+    from collections import Counter
+    lc = Counter();
+    for x in edges_y + ptrs_y: lc[x.get('link', 'MISSING')] += 1
+    print('LINK CENSUS (the link review law): ' + ', '.join('%s %d' % (k, lc[k]) for k in LINKS + ('MISSING',) if lc[k])
+          + ' — of %d edges + %d pointers' % (len(edges_y), len(ptrs_y)))
     # ---- advisory: verses no cell cites, by address ----
     print('ADVISORY (not gated) — verses of each declared span no address in the runner cites:')
     for r in sorted(spans):
@@ -300,6 +371,14 @@ def main():
         for e in owed_e: print('  EDGE %s -> %s — %s' % (e['from'], e['to'], e.get('why', '')))
         for p in owed_p: print('  POINTER %s %s in %s — %s' % (p['verse'], p['form'], p.get('runner', ''), p.get('why', '')))
         if not owed_e and not owed_p: print('  (none — every required edge and pointer is live, reversed, routed, or a datum)')
+    # ---- the link worklist (--links): the UNCLASSIFIED and the hypotheses, generated ----
+    if '--links' in sys.argv:
+        for label in ('UNCLASSIFIED', 'hypothesis'):
+            xs = [x for x in edges_y + ptrs_y if x.get('link') == label]
+            print('\nLINK WORKLIST — %s: %d entries' % (label, len(xs)))
+            for x in xs:
+                head = ('EDGE %s -> %s' % (x['from'], x['to'])) if 'from' in x else ('POINTER %s %s in %s' % (x['verse'], x['form'], x.get('runner', '')))
+                print('  %s [%s] — %s' % (head, x.get('disposition'), (x.get('why') or '')[:140]))
     # ---- the generated index (documentation; never a runtime path) ----
     if '--no-index' not in sys.argv:
         L = ['# THE DEPENDENCY INDEX — GENERATED by dependency_census.py from dependency_dispositions.yaml and the',
@@ -321,17 +400,20 @@ def main():
                 L.append('- required edges from the ink:')
                 for h, lst in req:
                     e = ed.get((r, h), {}); vv = sorted(set(v for v, _, _ in lst)); toks = sorted(set(n for _, n, _ in lst))
-                    L.append('  - -> %s [%s] at %s: %s%s%s — %s' % (
+                    L.append('  - -> %s [%s] at %s: %s%s%s%s — %s' % (
                         h, ','.join(toks), ', '.join(vv[:8]) + (' ...' if len(vv) > 8 else ''), e.get('disposition', '?'),
                         (' via ' + e['via']) if e.get('via') else '', (' carries ' + e['carries']) if e.get('carries') else '',
+                        ' link ' + str(e.get('link', '?')) + ((' taught by ' + str(e['taught_by'])) if e.get('taught_by') else ''),
                         e.get('why', '')))
             pp = [p for p in ptrs if p[0] == r]
             if pp:
                 L.append('- pointers in the ink:')
                 for (_, verse, form, ctx) in pp:
-                    p = pd.get((verse, form), {})
-                    L.append('  - %s %s "%s": %s%s — %s' % (verse, form, ctx, p.get('disposition', '?'),
-                             (' -> ' + p['target']) if p.get('target') else '', p.get('why', '')))
+                    p = pd.get((verse, form, r), {})
+                    L.append('  - %s %s "%s": %s%s%s — %s' % (verse, form, ctx, p.get('disposition', '?'),
+                             (' -> ' + p['target']) if p.get('target') else '',
+                             ' link ' + str(p.get('link', '?')) + ((' taught by ' + str(p['taught_by'])) if p.get('taught_by') else ''),
+                             p.get('why', '')))
             L.append('')
         with open(os.path.join(HERE, 'DEPENDENCY_INDEX.md'), 'w', encoding='utf-8') as fh:
             fh.write('\n'.join(L) + '\n')

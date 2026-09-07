@@ -31,7 +31,56 @@ layer — freely revisable, dated notes per change.
   → future operator QAL_WACHOMER with dayo assertion.
 - **I2 — gezerah shavah** ("equal decree"): analogy licensed by the
   SAME WORDING in two passages — "the indefinite is explained by the
-  definite." → mechanically a join over our word-level data.
+  definite." → mechanically a join over our word-level data — BUT THE
+  JOIN IS NOT OURS TO RUN. ⚠ THE RECEPTION RULE (read on the local
+  shelf at sitting LR1, 2026-09-07; the link review the owner ruled
+  the same day): אֵין אָדָם דָּן גְּזֵרָה שָׁוָה מֵעַצְמוֹ ("a person does not
+  derive a verbal analogy on his own") — Babylonian Talmud Pesachim
+  66a:12, the gemara on Hillel's Passover analogy ("granted the
+  analogy you had not received... but the a-fortiori, which a person
+  derives on his own, you should have derived yourselves"), and Niddah
+  19b:12 ("a person derives an a-fortiori on his own and does not
+  derive a verbal analogy on his own"); Jerusalem Talmud Pesachim 6:1,
+  where the elders of Beteira refuse Hillel's analogy BY this rule,
+  accept him only on "thus I heard from Shemaiah and Avtalyon," and
+  R. Abba bar Mamal states the REASON: deriving on one's own from
+  "garment of skin" / "garment of skin" (Lev 11, Num 31) would make a
+  creeping thing defile in a tent — the shared word is an UNBOUNDED
+  GENERATOR; Rashi on both Bavli seats, narrower: "perhaps the verse
+  came for another matter." Two riders from the same Jerusalem
+  passage: an analogy may UPHOLD a received learning, never overturn
+  it; one refutes an a-fortiori, never a received analogy. Tosefta
+  Pesachim 4:11: Hillel's "and further, I have received from my
+  teachers" as a fourth, separate argument beside the three
+  inferences. THE COUNTERPART: I1, the a-fortiori a person MAY derive
+  alone — but never a warning or a penalty from it (Rashi on Pesachim
+  24a, Makkot 5b: "one does not warn from an inference"). THE
+  MACHINE'S FORM: a verbal analogy is a DATA channel (received), not a
+  compile rule; the lemma scan may ENUMERATE shared-token candidates,
+  it may not LICENSE one. Every link the machine's shape makes — a
+  seat, a dependency edge, a unification, a type grouping — answers
+  THE TWO QUESTIONS before it is written, the answer beside it: (1)
+  REFERENCE or TRANSFER? A reference is the ink naming an institution
+  and the edge calling its definition ("the sin offering" at Lev 5
+  calls Lev 4's engine) — licensed by ink alone. A transfer is a rule
+  moving between contexts on a shared word or a topic — this middah.
+  (2) If a transfer, TAUGHT BY WHOM? A sugya, a Sifra passage, or a
+  catalogued move WITH its exemplar named. An untaught transfer stands
+  only as a labeled HYPOTHESIS (class H): the value kept, the flag
+  changed, never counted as compiled. The contract is a field: `link:`
+  (reference / transfer / hypothesis / none / UNCLASSIFIED) and
+  `taught_by:` on every edge and pointer of
+  World/step9/dependency_dispositions.yaml and on every multi-seat type
+  of World/step9/event_vocabulary.yaml; the dependency gate and the
+  registry lint refuse a transfer without a teacher and a new entry
+  without the field; the claim verifier refuses a claim seated after
+  LR1 without a middah label. RECORDED AS A CHOICE: the tradition has
+  two licensing regimes — reception, and FREENESS (מֻפְנֶה, mufneh: the
+  token has no other job in its verse; Ramban on Niddah 22b, "an
+  analogy not free at all is not derived from") — and Haggahot
+  Ya'avetz on Niddah 22b reads the Tannaim as divided on whether
+  reception is required at all. Freeness is the one machine-checkable
+  property and only RANKS an analogy; this project gates on reception.
 - **I3 — binyan av** ("build a father"): generalize a rule from one
   verse (or two) to all cases sharing its essential feature.
 - **I4 — kelal u-frat** (general then particular): the particular
@@ -108,8 +157,11 @@ narrative strength. By cluster:
   of chapter 4, while the king's identity runs on ה' אלהיו ("the LORD
   his God") between 4:22 and Deut 17:19. The middah's two pegs are the
   census's own tokens: a gezerah shavah (verbal analogy) is, in the
-  machine's terms, a shared-token edge the lemma scan finds first and
-  the tradition names second — the demonstrate/compile/link finding
+  machine's terms, a shared-token edge — one the lemma scan can
+  ENUMERATE but only the tradition's reception LICENSES (the reception
+  rule under I2, corrected at sitting LR1, 2026-09-07: the scan finds
+  candidates, the teacher names the link; the order is reception first
+  and token pair second, never the reverse) — the demonstrate/compile/link finding
   (the nose-predicate specimen) repeated on a law chapter, with R.
   Zeira's third instance beside it (Keritot 26a:19: "knowledge" at
   4:14, 23, 28 — the tokens that keep the known sin from lapsing at
@@ -381,6 +433,26 @@ narrative strength. By cluster:
   head: the second exemplar of the TEIKU-beside-a-parse watch (E5's
   Exod 24:5); the tradition's recorded indecision and the Masoretic
   division's decision both kept, neither converted into the other.
+- THE RECEPTION RULE AT HILLEL'S OWN ANALOGY (Pesachim 66a:11-12, Niddah
+  19b:12, Jerusalem Talmud Pesachim 6:1, Tosefta Pesachim 4:11 — read on
+  the local shelf at sitting LR1, 2026-09-07, the link review the owner
+  ruled after W5): the tradition's governance on the second middah
+  stated as LAW, not only as a refusal (compare the widow-widow entry
+  above) — the verbal analogy must be RECEIVED; the a-fortiori may be
+  derived alone and is the refutable one (Hillel's a-fortiori refuted
+  first as constant-and-wholly-burnt, his analogy accepted on
+  reception). The machine's own record of the breach: the dependency
+  gate's "shared type token = required edge" ENUMERATES analogies at
+  scale (154 edges, 72 pointers), and the registry's levirate type was
+  given a second seat at Lev 18:18 with no teacher joining it to Gen
+  38:8 — a transfer by topic, ours (W5). The correction is the `link:` /
+  `taught_by:` contract on every edge, pointer, and multi-seat type and
+  the HYPOTHESIS class for what no teacher taught; the review LR1-LR3
+  records the classification. The reason on the page (R. Abba bar
+  Mamal's garment-of-skin absurdity) is the overfitting guard the
+  two-verses-as-one limit above states from the other side: analogy
+  propagation is bounded by reception at its birth and by the two-verse
+  limit at its extension.
 
 ## Exodus block campaign — owner's word "Do 3")
 

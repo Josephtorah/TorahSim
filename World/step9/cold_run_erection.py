@@ -84,7 +84,7 @@ sys.path.insert(0, HERE)
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
-assert GUARDED == 285, ("the guard counted %d expectations, the tripwire holds 285" % GUARDED)
+assert GUARDED == 287, ("the guard counted %d expectations, the tripwire holds 287" % GUARDED)   # W6: +1 (the craftsmen and the donation scene); W7: +1 (the Sinai narrative's scene)
 
 DB = '<repo-old>/elijah_docket/tanakh.sqlite'
 db = sqlite3.connect(DB)
@@ -573,7 +573,7 @@ print('routing receipts: calendar CALLED — matzah %r, rest %r / %r, pilgrimage
 assert SB_DROPPED == ['25:15', '25:16', '25:21', '25:22', '25:30', '25:37', '25:40', '26:12', '26:13', '26:30', '26:33', '26:34', '26:35', '26:37', '27:3', '27:4', '27:5', '27:8', '27:15', '27:17', '27:18', '27:19', '27:20', '27:21'], SB_DROPPED
 NOT_PICKED = [d for d in SB_DROPPED if d not in PICKED];                    assert NOT_PICKED == ['25:40', '26:12', '26:13', '27:3', '27:4', '27:5', '27:8', '27:15', '27:17', '27:18', '27:19'], NOT_PICKED
 
-I, M, A, D, P = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT'
+I, M, A, D, P, H = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 def cell(v, p, why, fx):
     FX.validate(fx)
     return {'v': v, 'p': p, 'why': why, 'fx': fx}
@@ -1200,8 +1200,8 @@ def cloud(q):
 def law_erection(event, world):
     """The erection's daemon: consumes the chapter's recorded acts and writes the ledger — never emits an event."""
     k, subj, src = event['kind'], event['subject'], event['case_source']
-    day = world.clock.year
-    E_ = lambda eff, s, due=None, cp=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': None, 'due': due, 'source_law': 'F%s' % event.get('law', '14'), 'case_source': src}
+    day = event.get('day', world.clock.year)
+    E_ = lambda eff, s, due=None, cp=None, value=None, law=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': None, 'due': due, 'value': value if value is not None else True, 'source_law': law or 'F%s' % event.get('law', '14'), 'case_source': src}
     if k == 'erected': return [E_('tabernacle_erected', 'the-tabernacle'), E_('high_places_banned', 'the-land')]
     if k == 'testimony_placed': return [E_('tablets_delivered', 'the-ark'), E_('staves_fixed', 'the-ark')]
     if k == 'veil_hung': return [E_('veil_divides', 'the-tabernacle')]
@@ -1209,12 +1209,108 @@ def law_erection(event, world):
     if k == 'lamps_raised': return [E_('lamp_arranged', 'the-lampstand'), E_('lamp_arranged', 'the-lampstand', due=day + 1)]
     if k == 'incense_burned': return [E_('incense_continual', 'the-golden-altar'), E_('incense_continual', 'the-golden-altar', due=day + 1)]
     if k == 'tamid_offered': return [E_('accepted', subj), E_('tamid_owed', 'the-altar', due=day + 1)]
-    if k == 'washed': return [E_('hands_feet_sanctified', s) for s in ('moses', 'aaron', 'the-sons')]
+    if k == 'hands_feet_washed': return [E_('hands_feet_sanctified', s) for s in ('moses', 'aaron', 'the-sons')]   # W6: UNIFIED — the laver's act under its own id (Lev 8:6's immersion keeps 'washed')
     if k == 'work_finished': return [E_('work_completed', 'the-work'), E_('inspected_as_commanded', 'the-erection')]
     if k == 'glory_filled': return [E_('presence_dwells', 'the-people'), E_('glory_appeared', 'the-tabernacle')]
     if k == 'could_not_enter': return [E_('barred_from_it', 'moses')]
     if k == 'called_from_the_tent': return [E_('meeting_appointed', 'moses')]
     if k == 'cloud_lifted': return [E_('camp_moves_by_the_cloud', 'the-camp')]
+    # ---- W6 THE SANCTUARY'S REMAINDER (D9-iii, 2026-09-07): the craftsmen's call (31:1-11) and the donation's run (35:4-29) — every value a call into this runner's own cells
+    if k == 'craftsman_called':
+        c = event['craftsman']; out = []
+        if not event.get('wise_hearted'):
+            out.append(E_('appointed_by_name', c, value=craftsmen('announced_leader')['v'], law='F8 [INK 31:2 "SEE, I HAVE CALLED BY NAME Bezalel"; 31:6 "I have given with him Oholiab" — %s; Berakhot 55a:10 a good leader announced by Heaven; 55a:11 the public consulted (consented by %s); the run 35:30 "the LORD has called by name" — CALLED SB.offering(named_by_name, consent) -> %s]' % (craftsmen('called')['v'], event.get('consented_by'), craftsmen('named_by_call')['v'])))
+        if event.get('filled'):
+            out.append(E_('spirit_filled', c, cp='HEAVEN', value=craftsmen('wisdom_to_wise')['v'], law='F8 [INK 31:3 "I have filled him with the SPIRIT OF GOD in wisdom, understanding and knowledge"; 31:6 "in the heart of every wise-hearted I have put wisdom" — Berakhot 55a:14 wisdom to one who has wisdom; the triple %s]' % (craftsmen('spirit_triple')['v'],)))
+        return out
+    if k == 'offering_brought':
+        g = event.get('giver', subj)
+        ground = donation('heart_binds')['v'] if event.get('resolved_in_heart_only') else donation('trigger_by_call')['v']
+        return [E_('given_by_the_heart', g, cp='the-sanctuary', value=ground, law='F9 [INK 35:5 "everyone WILLING OF HEART shall bring it"; 35:21 "every man whose HEART LIFTED HIM... whose spirit made him willing"; 35:29 "every man and woman whose heart made them willing" — the heart-tokens twelve times (%s); Shevuot 26b:15 resolved in the heart binds; Chagigah 10a:8 the release of vows rests here; the spec\'s trigger CALLED SB.offering(trigger)]' % (donation('heart_twelve')['v'],))]
+    # ---- W7 THE SINAI NARRATIVE LAWS (D9-iii, 2026-09-07): Exod 24, 32-34's laws inside the story — the covenant, the tablets, the blood covenant, the ascent,
+    # the calf, the presence. Every value a CALL into this runner's own cells; a daemon's empty return on a recorded row is the law's own exemption.
+    if k == 'elders_ascended':
+        return [E_('majority_decides', event.get('court', 'the-court'), value=blood_covenant('unnamed_elders')['v'], law='F4 [INK 24:1, 24:9 "seventy of the elders of Israel" unnamed — Mishnah Rosh Hashanah 2:9: every three who stand as a court over Israel are as the court of Moses; the seventy at %s]' % (blood_covenant('seventy')['v'],))]
+    if k == 'people_answered':
+        out = [E_('entered_the_covenant', event.get('people', subj), cp='HEAVEN', value=blood_covenant('one_voice')['v'], law='F4 [INK 24:3 "all the people answered with ONE VOICE... we will do"; 24:7 "we will do and we will hear" — the acceptance formula]')]
+        if event.get('book_read'):
+            out.append(E_('oral_law_unwritten', event.get('people', subj), value=blood_covenant('book_of_covenant')['v'], law='F4 [INK 24:7 "the BOOK of the covenant" read in the ears of the people — the written channel\'s run (Josiah\'s reading, 2 Kgs 23:2)]'))
+        return out
+    if k == 'youths_offered':
+        return [E_('accepted', event.get('officiants', subj), cp='HEAVEN', value=blood_covenant('olah_by_call')['v'], law='F4 [INK 24:5 "they offered burnt offerings and slaughtered peace offerings, bulls" — CALLED cold_run_offerings.dispatch(olah:herd, shelamim); Zevachim 116a:12 %s; the parse %s (Chagigah 6b)]' % (blood_covenant('pre_sinai_table')['v'], blood_covenant('teiku')['v'])),
+                E_('invested_office', event.get('officiants', subj), value=blood_covenant('youths_firstborn')['v'], law='F4 [Onkelos 24:5 the youths = THE FIRSTBORN; Mishnah Zevachim 14:4 the service by the firstborn until the tabernacle — CALLED cold_run_shemini_day.eras(switch) -> %s]' % (blood_covenant('eras_by_call')['v'],))]
+    if k == 'covenant_blood_thrown':
+        en = event.get('entrant', subj)
+        if event.get('entrant_class') == 'convert':
+            return [E_('immersed', en, value=blood_covenant('convert_rite')['v'], law='F4 [Keritot 9a:9 — "there is no sprinkling without IMMERSION" (24:6): the convert\'s rite runs on this paragraph; Yevamot 46b:4]'),
+                    E_('entered_the_covenant', en, cp='HEAVEN', value=blood_covenant('sheet_keritot_2_1')['v'], law='F4 [Mishnah Keritot 2:1 — the convert lacks atonement until the blood is sprinkled for him; Keritot 9a:9 "as your fathers entered the covenant only by circumcision, immersion, and the acceptance of blood"]')]
+        return [E_('entered_the_covenant', en, cp='HEAVEN', value=blood_covenant('blood_of_covenant')['v'], law='F4 [INK 24:8 "behold THE BLOOD OF THE COVENANT which the LORD has cut with you" — a Torah hapax; 24:6 the two halves in basins (Zevachim 97b:8 a vessel)]'),
+                E_('atoned_forgiven', en, cp='HEAVEN', value=blood_covenant('onkelos_atone')['v'], law='F4 [Onkelos Exod 24:8 — the blood thrown on the altar TO ATONE FOR THE PEOPLE]')]
+    if k == 'case_brought_to_deputies':
+        return [E_('majority_decides', event.get('court', 'aaron-and-hur'), cp=event.get('claimant'), value=ascent('burden_of_proof')['v'], law='F5 [INK 24:14 "whoever has a case shall APPROACH them" — Aaron and Hur the standing court of the forty days; Bava Kamma 46b:5: let him bring his proof to them]')]
+    if k == 'moses_ascended':
+        due = day + 40
+        if event.get('ascent') == 'second':
+            return [E_('tablets_delivered', 'the-tablets', cp=event.get('ascender', subj), due=due, value=tablets('ten_words')['v'], law='F3 [INK 34:28 "forty days and forty nights... he wrote on the tablets the words of the covenant, THE TEN WORDS" — the second tablets at the descent: the TIMER; 34:1 "hew for yourself... like the first" (%s)]' % (tablets('pesal_two')['v'],)),
+                    E_('face_radiant', event.get('ascender', subj), due=due, value=tablets('radiance')['v'], law='F3 [INK 34:29 "the skin of his face SHONE" — at the descent; Beitzah 16a:6 %s]' % (tablets('gift_unannounced')['v'],))]
+        return [E_('tablets_delivered', 'the-tablets', cp=event.get('ascender', subj), due=due, value=ascent('seventeenth_tammuz')['v'], law='F5 [INK 24:18 "Moses was on the mountain FORTY DAYS AND FORTY NIGHTS" — the tablets given when He finished speaking (31:18): the TIMER; 24:16\'s seventh day plus the forty = the seventeenth of Tammuz (Taanit 28b:9-10), the day of the breaking (32:19) — Mishnah Taanit 4:6 %s]' % (ascent('sheet_taanit_4_6')['v'],))]
+    if k == 'ascent_barred':
+        if not event.get('presence_resting', True): return []     # Taanit 21b:4 — when the Presence departed, "they may go up" (19:13): the place does not honor the man — the boundary's own silence
+        return [E_('barred_from_it', event.get('person', subj), value=tablets('graze_ban_presence')['v'], law='F3 [INK 34:3 "no man shall go up with you, nor let any man be seen in all the mountain, nor let the flock and herd graze" — while the Presence rests (Taanit 21b:4, R. Yosei; Beitzah 5b:5)]')]
+    if k == 'attributes_proclaimed_at_sinai':
+        h = event.get('hearer', subj)
+        out = [E_('attributes_proclaimed', h, cp='HEAVEN', value=tablets('prayer_leader')['v'], law='F3 [INK 34:6-7 "the LORD, the LORD, God merciful and gracious..." — Rosh Hashanah 17b:5 the order of prayer; 17b:6 before the sin and after the repentance; %s]' % (tablets('dual_anger')['v'],))]
+        if event.get('repented') and event.get('sin_kind') != 'vain_oath':
+            out.append(E_('atoned_forgiven', h, cp='HEAVEN', value=tablets('tension_resolved')['v'], law='F3 [INK 34:7 "and clearing He will not clear" — Yoma 86a:5: He clears those who repent and does not clear those who do not (move M-17); Yoma 86a:3: His NAME He does not clear — the vain oath excepted]'))
+        return out
+    if k == 'covenant_cut_at_sinai':
+        return [E_('covenant_cut', event.get('party', 'israel'), cp='HEAVEN', value=covenant('cut_four')['v'], law='F1 [INK 34:10 "behold I CUT a covenant"; 34:27 "I have cut a covenant with you and with Israel" — the cutting verb at four seats of the chapter; Rosh Hashanah 17b:7 %s]' % (covenant('covenant_thirteen')['v'],)),
+                E_('oral_law_unwritten', event.get('party', 'israel'), value=tablets('medium_law')['v'], law='F3 [INK 34:27 "WRITE for yourself these words, for BY THE MOUTH of these words I have cut a covenant" — Gittin 60b:5: written things not by heart, oral things not in writing; 60b:2 %s]' % (tablets('majority_fork')['v'],))]
+    if k == 'entered_the_land':
+        p = event.get('people', subj)
+        return [E_('nations_driven_out', 'the-nations', cp=p, value=covenant('nations_seven_orders')['v'], law='F1 [INK 34:11 "behold I drive out before you the Amorite and the Canaanite..." — the list at seven seats in seven orders]'),
+                E_('covenant_barred', p, value=covenant('no_covenant_by_call')['v'], law='F1 [INK 34:12, 34:15 "lest you cut a covenant with the inhabitant of the land" — the first seat 23:32 CALLED cold_run_ordinances.land(no_covenant)]'),
+                E_('demolished', 'their-altars', cp=p, value=covenant('demolition_grows')['v'], law='F1 [INK 34:13 "their altars you shall BREAK DOWN, their pillars SHATTER, their asherim CUT DOWN" — three verbs, four at Deut 7:5, five at Deut 12:3; the first seat 23:24 CALLED cold_run_ordinances.land(break_pillars) -> %s; Mishnah Avodah Zarah 3:5 %s]' % (covenant('demolition_first_seat')['v'], covenant('sheet_az_3_5')['v']))]
+    if k == 'sacrifice_of_inhabitant_eaten':
+        return [E_('barred_from_it', event.get('eater', subj), value=covenant('invitation_is_eating')['v'], law='F1 [INK 34:15 "and he will CALL you and you will EAT of his sacrifice" — Avodah Zarah 8a:17, R. Yishmael: the invitation is the eating (though they eat their own); Mishnah Avodah Zarah 2:3 %s; 4:2 %s]' % (covenant('sheet_az_2_3')['v'], covenant('sheet_az_4_2')['v']))]
+    if k == 'daughters_taken':
+        ch = covenant('intermarriage_channels')['v']
+        return [E_('intermarriage_barred', event.get('taker', subj), value=('by_torah' if event.get('nation') == 'seven' else 'by_decree'), law='F1 [INK 34:16 "and you take of their daughters for your sons" (Deut 7:3 the second seat) — Avodah Zarah 36b:9: %s; Mishnah Kiddushin 3:12 %s]' % (ch, covenant('child_follows_mother')['v']))]
+    if k == 'calf_made':
+        m = event.get('maker', subj)
+        out = [E_('molten_image_barred', m, value=covenant('molten_two_seats')['v'], law='F1 [INK 34:17 "MOLTEN GODS you shall not make for yourself" — the calf\'s own ban restated in the covenant (32:4 the making; Lev 19:4 the third seat); the plural "brought you up" — %s]' % (calf('vav_plural')['v'],))]
+        if event.get('worshipped'):
+            out.append(E_('barred_from_it', 'the-calf', cp=m, value=covenant('sheet_az_4_4')['v'], law='F1 [Mishnah Avodah Zarah 4:4 — an Israelite\'s idol is not forbidden until it is WORSHIPPED: made at 32:4, worshipped at 32:6 and 32:8; Avodah Zarah 53b:10]'))
+        return out
+    if k == 'bowed_to_another_god':
+        w = event.get('worshipper', subj); ev = event.get('evidence'); tiers = calf('three_deaths')['v']
+        if event.get('court_ruled_exempt'):
+            return [E_('bears_sin', event.get('court', 'the-court'), cp='HEAVEN', value=covenant('court_error_bow')['v'], law='F1 [Mishnah Horayot 1:3 — a court that ruled "the bower is exempt" is LIABLE: part uprooted, not the body; Horayot 4a:20: bowing is WRITTEN — you shall not bow to another god (34:14)]')]
+        if ev == 'witnesses_and_warning':
+            return [E_('slain_by_sword', w, value=tiers['sword'], law='F6 [Yoma 66b:14 — witnesses and warning: by the SWORD (32:27); Yoma 66b:13 the other arm — sacrificed and burned incense]')]
+        if ev == 'witnesses_no_warning':
+            return [E_('plague_struck', w, cp='HEAVEN', value=tiers['plague'], law='F6 [Yoma 66b:14 — witnesses without warning: by DEATH (32:35 "the LORD plagued the people"); %s]' % (calf('plague')['v'],))]
+        if ev == 'neither':
+            return [E_('made_to_drink', w, value=tiers['dropsy'], law='F6 [Yoma 66b:14 — neither witnesses nor warning: by DROPSY (32:20\'s water) — the sotah\'s rite at national scale]')]
+        return [E_('stoned', w, value=calf('services_by_call')['v'], law='F6 [INK 32:8 "they BOWED to it and SACRIFICED to it" — two of the capital services: CALLED cold_run_ordinances.capital(idolater_row) (Mishnah Sanhedrin 7:6); Sanhedrin 63a:14 the bowing likened to the sacrificing; the warning 34:14 (Sanhedrin 60b:12) — %s]' % (covenant('bow_warning')['v'],))]
+    if k == 'moses_interceded':
+        i_ = event.get('intercessor', subj)
+        if event.get('plea') == 'blot_me':
+            out = [E_('blotted_from_the_book', event.get('sinners', 'the-sinners'), cp='HEAVEN', value=calf('individual_rule')['v'], law='F6 [INK 32:33 "WHOEVER has sinned against Me, HIM I will blot from My book" — substitution refused, each entry answering for itself; Rosh Hashanah 16b:14 the three books %s; Sanhedrin 102a:15 %s]' % (calf('three_books')['v'], calf('surcharge')['v']))]
+            if event.get('sin_specified'):
+                out.append(E_('confessed', i_, cp='HEAVEN', value=calf('confess_specify')['v'], law='F6 [INK 32:31 "this people has sinned a GREAT SIN, and they made themselves gods of gold" — Yoma 86b:14: one must SPECIFY the sin (R. Yehuda b. Bava; R. Akiva differs)]'))
+            return out
+        return [E_('decree_relented', 'the-people', cp='HEAVEN', value=calf('vow_annulled')['v'], law='F6 [INK 32:11 "and Moses BESEECHED"; 32:14 "and the LORD relented of the evil" — Berakhot 32a:16 "let Me alone": prayer restrains the decree; 32a:19 Rava: the vow-annulment law; 32a:24 the oath by His name endures; %s]' % (calf('seized')['v'],))]
+    if k == 'tablets_broken': return []     # the breaking is the history's act; its ratification (Yevamot 62a:4 "may your strength be firm") a verdict on Moses, not a ledger entry; the fragments to the ark at 40:20 by the sanctuary engine
+    if k == 'calf_destroyed':
+        return [E_('ground_and_scattered', event.get('idol', 'the-calf'), cp=event.get('destroyer', subj), value=calf('nullification_dispute')['v'], law='F6 [INK 32:20 "burned it in fire and GROUND it until it was fine and SCATTERED it on the water" — Mishnah Avodah Zarah 3:3 the two arms; Avodah Zarah 44a:2: %s]' % (calf('fourth_verb_decides')['v'],)),
+                E_('made_to_drink', 'the-people', cp=event.get('destroyer', subj), value=calf('sotah_verb')['v'], law='F6 [INK 32:20 "and MADE the children of Israel DRINK" — the sotah\'s verb (Num 5:24) at national scale; the four verbs %s]' % (calf('four_verbs')['v'],))]
+    if k == 'levites_gathered':
+        return [E_('slain_by_sword', event.get('slain', 'the-three-thousand'), cp=event.get('tribe', subj), value=calf('mi_layhwh')['v'], law='F6 [INK 32:26-28 "whoever is for the LORD, to me... every man his sword on his thigh... about three thousand fell" — Yoma 66b:15 the tribe did not worship: %s]' % (calf('levi_all')['v'],)),
+                E_('invested_office', event.get('tribe', subj), value=calf('fill_your_hand')['v'], law='F6 [INK 32:29 "FILL YOUR HAND today to the LORD" — the installation idiom (28:41, 29:9 by call to the incense-shekel engine): the Levites ordained; Onkelos: your hands have offered an offering]')]
+    if k == 'tent_pitched_outside':
+        return [E_('oral_law_unwritten', event.get('servant', 'joshua'), cp=event.get('pitcher', subj), value=presence('sheet_avot_1_1')['v'], law='F7 [INK 33:11 "his servant Joshua... did not depart from the tent" — Mishnah Avot 1:1: Moses received Torah from Sinai and handed it to JOSHUA; Temurah 16a:6 %s; Menachot 99b:19 %s]' % (presence('three_hundred')['v'], presence('blessing_not_duty')['v'])),
+                E_('majority_decides', 'the-court', value=presence('ruling_distance')['v'], law='F7 [INK 33:7 "outside the camp, FAR from the camp... every seeker of the LORD went out" — Sanhedrin 5b:9: a student may not rule within three parasangs of his teacher, "corresponding to the camp of Israel" (twelve mil, Berakhot 63b:6): the court\'s distance parameter read off the narrative\'s geometry]')]
     return []
 
 def scene():
@@ -1226,21 +1322,89 @@ def scene():
         w.advance(7)                     # the seven days pass; the release fires — the first of Nisan opens (D8's dating by call)
         for k, s, src in (('erected', 'the-tabernacle', 'Exod 40:17-18'), ('testimony_placed', 'the-ark', 'Exod 40:20'), ('veil_hung', 'the-veil', 'Exod 40:21'),
                           ('bread_arranged', 'the-table', 'Exod 40:23'), ('lamps_raised', 'the-lampstand', 'Exod 40:25'), ('incense_burned', 'the-golden-altar', 'Exod 40:27'),
-                          ('tamid_offered', 'moses', 'Exod 40:29'), ('washed', 'moses', 'Exod 40:31-32'), ('work_finished', 'moses', 'Exod 40:33'),
+                          ('tamid_offered', 'moses', 'Exod 40:29'), ('hands_feet_washed', 'moses', 'Exod 40:31-32'), ('work_finished', 'moses', 'Exod 40:33'),
                           ('glory_filled', 'the-tabernacle', 'Exod 40:34'), ('could_not_enter', 'moses', 'Exod 40:35'), ('called_from_the_tent', 'moses', 'Lev 1:1'),
                           ('cloud_lifted', 'the-camp', 'Exod 40:36 / Num 10:11')):
             w.submit({'kind': k, 'subject': s, 'case_source': src, 'law': '14'})
         w.advance(13)                    # to day 13 (absolute): the next morning's timers fire at day 8, the first Sabbath's bread at day 13
+        # W7 (2026-09-07): THE SINAI NARRATIVE LAWS — their own world on law_erection (clock unit: days; day 7 = the seventh day of 24:16, the ascent)
+        ws = WE.World(era="the Sinai narrative's laws — Exod 24, 32-34 on the engine: the blood covenant, the ascent's forty days, the calf, the presence, the second tablets (clock unit: days)")
+        ws.laws = [law_erection]
+        ws.advance(1)
+        ws.submit({'kind': 'elders_ascended', 'subject': 'the-court', 'court': 'the-court', 'members': 'moses-aaron-nadab-abihu-and-the-seventy', 'case_source': 'Exod 24:1, 24:9 + Mishnah Rosh Hashanah 2:9 — the unnamed elders', 'law': 'W7'})
+        ws.submit({'kind': 'people_answered', 'subject': 'the-people', 'people': 'the-people', 'book_read': False, 'case_source': 'Exod 24:3 — with one voice: we will do', 'law': 'W7'})
+        ws.submit({'kind': 'people_answered', 'subject': 'the-people', 'people': 'the-people', 'book_read': True, 'case_source': 'Exod 24:7 — the book of the covenant read: we will do and we will hear', 'law': 'W7'})
+        ws.submit({'kind': 'youths_offered', 'subject': 'the-firstborn', 'officiants': 'the-firstborn', 'officiant_class': 'firstborn', 'era': 'before_the_tabernacle', 'case_source': 'Exod 24:5 + Onkelos + Mishnah Zevachim 14:4 — the youths are the firstborn', 'law': 'W7'})
+        ws.submit({'kind': 'covenant_blood_thrown', 'subject': 'the-people', 'entrant': 'the-people', 'entrant_class': 'israel', 'circumcised': True, 'immersed_first': True, 'blood_sprinkled': True, 'case_source': 'Exod 24:6-8 — the blood of the covenant; Onkelos 24:8', 'law': 'W7'})
+        ws.submit({'kind': 'covenant_blood_thrown', 'subject': 'the-convert', 'entrant': 'the-convert', 'entrant_class': 'convert', 'circumcised': True, 'immersed_first': True, 'blood_sprinkled': True, 'case_source': 'Keritot 9a:9 + Mishnah Keritot 2:1 — the convert\'s rite on this paragraph', 'law': 'W7'})
+        ws.submit({'kind': 'case_brought_to_deputies', 'subject': 'the-claimant', 'claimant': 'the-claimant', 'defendant': 'the-defendant', 'court': 'aaron-and-hur', 'case_source': 'Exod 24:14 + Bava Kamma 46b:5 — whoever has a case', 'law': 'W7'})
+        ws.advance(7)                    # 24:16: the cloud six days, the call on the seventh
+        ws.submit({'kind': 'moses_ascended', 'subject': 'moses', 'ascender': 'moses', 'ascent': 'first', 'day': 7, 'case_source': 'Exod 24:18 — forty days and forty nights; the tablets at 31:18', 'law': 'W7'})
+        ws.advance(47)                   # the forty days: the first tablets fire on day 47 = the seventeenth of Tammuz (Taanit 28b: Sivan 7 + 40)
+        ws.submit({'kind': 'calf_made', 'subject': 'aaron', 'maker': 'aaron', 'worshipped': False, 'case_source': 'Exod 32:4 — the molten calf made (not yet worshipped)', 'law': 'W7'})
+        ws.submit({'kind': 'calf_made', 'subject': 'the-people', 'maker': 'the-people', 'worshipped': True, 'case_source': 'Mishnah Avodah Zarah 4:4 — an Israelite\'s idol forbidden once worshipped (32:6, 32:8)', 'law': 'W7'})
+        ws.submit({'kind': 'bowed_to_another_god', 'subject': 'the-idolater', 'worshipper': 'the-idolater', 'service': 'both', 'evidence': None, 'court_ruled_exempt': False, 'case_source': 'Exod 32:8 + Mishnah Sanhedrin 7:6 — bowed and sacrificed: the idolater\'s row', 'law': 'W7'})
+        ws.submit({'kind': 'bowed_to_another_god', 'subject': 'the-warned', 'worshipper': 'the-warned', 'service': 'both', 'evidence': 'witnesses_and_warning', 'court_ruled_exempt': False, 'case_source': 'Yoma 66b:14 — witnesses and warning: the sword (32:27)', 'law': 'W7'})
+        ws.submit({'kind': 'bowed_to_another_god', 'subject': 'the-unwarned', 'worshipper': 'the-unwarned', 'service': 'both', 'evidence': 'witnesses_no_warning', 'court_ruled_exempt': False, 'case_source': 'Yoma 66b:14 — witnesses without warning: the plague (32:35)', 'law': 'W7'})
+        ws.submit({'kind': 'bowed_to_another_god', 'subject': 'the-unwitnessed', 'worshipper': 'the-unwitnessed', 'service': 'both', 'evidence': 'neither', 'court_ruled_exempt': False, 'case_source': 'Yoma 66b:14 — neither: the dropsy (32:20)', 'law': 'W7'})
+        ws.submit({'kind': 'bowed_to_another_god', 'subject': 'the-erring-court', 'worshipper': 'the-bower', 'service': 'bow', 'evidence': None, 'court_ruled_exempt': True, 'court': 'the-erring-court', 'case_source': 'Mishnah Horayot 1:3 — the court that exempted the bower', 'law': 'W7'})
+        ws.submit({'kind': 'moses_interceded', 'subject': 'moses', 'intercessor': 'moses', 'plea': 'relent', 'sin_specified': False, 'case_source': 'Exod 32:11-14 — vayechal; the LORD relented; Berakhot 32a', 'law': 'W7'})
+        ws.submit({'kind': 'tablets_broken', 'subject': 'moses', 'breaker': 'moses', 'day': 47, 'case_source': 'Exod 32:19 — under the mountain, the seventeenth of Tammuz (Mishnah Taanit 4:6)', 'law': 'W7'})
+        ws.submit({'kind': 'calf_destroyed', 'subject': 'moses', 'destroyer': 'moses', 'idol': 'the-calf', 'purpose': 'to_test', 'case_source': 'Exod 32:20 + Avodah Zarah 44a:2 — the four verbs; a test, not a nullification', 'law': 'W7'})
+        ws.submit({'kind': 'levites_gathered', 'subject': 'the-levites', 'tribe': 'the-levites', 'slain': 'the-three-thousand', 'gathered_by': 'moses', 'case_source': 'Exod 32:26-29 + Yoma 66b:15 — whoever is for the LORD; fill your hand', 'law': 'W7'})
+        ws.submit({'kind': 'moses_interceded', 'subject': 'moses', 'intercessor': 'moses', 'plea': 'blot_me', 'sin_specified': True, 'sinners': 'the-sinners', 'case_source': 'Exod 32:31-33 + Yoma 86b:14 + Rosh Hashanah 16b:14 — blot me; him I will blot', 'law': 'W7'})
+        ws.submit({'kind': 'tent_pitched_outside', 'subject': 'moses', 'pitcher': 'moses', 'servant': 'joshua', 'distance_from_camp': 'twelve_mil', 'case_source': 'Exod 33:7-11 + Mishnah Avot 1:1 + Sanhedrin 5b:9 — the tent, the seeker, Joshua', 'law': 'W7'})
+        ws.submit({'kind': 'ascent_barred', 'subject': 'the-man', 'person': 'the-man', 'presence_resting': True, 'case_source': 'Exod 34:3 + Taanit 21b:4 — while the Presence rests', 'law': 'W7'})
+        ws.submit({'kind': 'ascent_barred', 'subject': 'the-later-climber', 'person': 'the-later-climber', 'presence_resting': False, 'case_source': 'Taanit 21b:4 — when it departed, they may go up (19:13)', 'law': 'W7'})
+        ws.advance(48)
+        ws.submit({'kind': 'moses_ascended', 'subject': 'moses', 'ascender': 'moses', 'ascent': 'second', 'day': 48, 'case_source': 'Exod 34:2-4, 34:28 — the second forty days; the radiant face at 34:29', 'law': 'W7'})
+        ws.submit({'kind': 'attributes_proclaimed_at_sinai', 'subject': 'the-repentant', 'hearer': 'the-repentant', 'repented': True, 'sin_kind': 'other', 'case_source': 'Exod 34:6-7 + Yoma 86a:5 — He clears those who repent', 'law': 'W7'})
+        ws.submit({'kind': 'attributes_proclaimed_at_sinai', 'subject': 'the-unrepentant', 'hearer': 'the-unrepentant', 'repented': False, 'sin_kind': 'other', 'case_source': 'Yoma 86a:5 — and does not clear those who do not', 'law': 'W7'})
+        ws.submit({'kind': 'attributes_proclaimed_at_sinai', 'subject': 'the-vain-swearer', 'hearer': 'the-vain-swearer', 'repented': True, 'sin_kind': 'vain_oath', 'case_source': 'Yoma 86a:3 — His name He does not clear (20:7)', 'law': 'W7'})
+        ws.submit({'kind': 'covenant_cut_at_sinai', 'subject': 'israel', 'party': 'israel', 'channel': 'oral_and_written', 'case_source': 'Exod 34:10, 34:27 + Gittin 60b — by the mouth of these words', 'law': 'W7'})
+        ws.submit({'kind': 'entered_the_land', 'subject': 'israel', 'people': 'israel', 'year': 1, 'case_source': 'Exod 34:11-13, 34:15 — the covenant\'s clauses repeated (23:23-32 the first seat)', 'law': 'W7'})
+        ws.submit({'kind': 'sacrifice_of_inhabitant_eaten', 'subject': 'the-invited', 'eater': 'the-invited', 'invited_by': 'the-inhabitant', 'ate_own_food': True, 'case_source': 'Exod 34:15 + Avodah Zarah 8a:17 — the invitation is the eating', 'law': 'W7'})
+        ws.submit({'kind': 'daughters_taken', 'subject': 'the-taker', 'taker': 'the-taker', 'nation': 'seven', 'case_source': 'Exod 34:16 + Avodah Zarah 36b:9 — the seven nations by Torah', 'law': 'W7'})
+        ws.submit({'kind': 'daughters_taken', 'subject': 'the-other-taker', 'taker': 'the-other-taker', 'nation': 'other', 'case_source': 'Avodah Zarah 36b:9 — the rest by the decree of the court of Shammai and Hillel', 'law': 'W7'})
+        ws.advance(88)                   # the second forty days: the second tablets and the radiant face fire on day 88
+        # W6 (2026-09-07): THE CRAFTSMEN AND THE DONATION — their own world on law_erection (clock unit: days)
+        wd = WE.World(era="the craftsmen called and the donation brought — Exod 31:1-11, 35:4-29 on the engine (clock unit: days)")
+        wd.laws = [law_erection]
+        wd.advance(1)
+        wd.submit({'kind': 'craftsman_called', 'subject': 'bezalel', 'craftsman': 'bezalel', 'tribe': 'judah', 'consented_by': 'god_moses_israel', 'wise_hearted': False, 'filled': True, 'case_source': 'Exod 31:2-5 — see, I have called by name Bezalel; Berakhot 55a:10-11', 'law': 'W6'})
+        wd.submit({'kind': 'craftsman_called', 'subject': 'oholiab', 'craftsman': 'oholiab', 'tribe': 'dan', 'consented_by': None, 'wise_hearted': False, 'filled': False, 'case_source': 'Exod 31:6 — I have given with him Oholiab son of Ahisamach of the tribe of Dan', 'law': 'W6'})
+        wd.submit({'kind': 'craftsman_called', 'subject': 'the-wise-hearted', 'craftsman': 'the-wise-hearted', 'tribe': None, 'consented_by': None, 'wise_hearted': True, 'filled': True, 'case_source': 'Exod 31:6 + 35:10 — in the heart of every wise-hearted I have put wisdom; Berakhot 55a:14', 'law': 'W6'})
+        wd.submit({'kind': 'offering_brought', 'subject': 'the-men-and-women', 'giver': 'the-men-and-women', 'moved_by': 'heart', 'material': 'gold', 'resolved_in_heart_only': False, 'case_source': 'Exod 35:22 — the men with the women, everyone willing of heart: brooch, ring, seal — a wave-offering of gold', 'law': 'W6'})
+        wd.submit({'kind': 'offering_brought', 'subject': 'the-finders', 'giver': 'the-finders', 'moved_by': 'heart', 'material': 'wools_skins_silver_bronze_wood', 'resolved_in_heart_only': False, 'case_source': 'Exod 35:23-24 — everyone with whom was found blue, purple, crimson, linen, goats\' hair, skins, silver, bronze, acacia', 'law': 'W6'})
+        wd.submit({'kind': 'offering_brought', 'subject': 'the-spinning-women', 'giver': 'the-spinning-women', 'moved_by': 'heart', 'material': 'spun_yarn_and_goats_hair', 'resolved_in_heart_only': False, 'case_source': 'Exod 35:25-26 — every wise-hearted woman spun with her hands; the women whose hearts lifted them spun the goats (Shabbat 74b:6)', 'law': 'W6'})
+        wd.submit({'kind': 'offering_brought', 'subject': 'the-princes', 'giver': 'the-princes', 'moved_by': 'heart', 'material': 'onyx_and_setting_stones_spice_oil', 'resolved_in_heart_only': False, 'case_source': 'Exod 35:27-28 — the princes brought the onyx stones, the spice and the oil (Yoma 75a:19)', 'law': 'W6'})
+        wd.submit({'kind': 'offering_brought', 'subject': 'the-silent-resolver', 'giver': 'the-silent-resolver', 'moved_by': 'heart', 'material': 'a_consecration', 'resolved_in_heart_only': True, 'case_source': 'Shevuot 26b:15 — resolved in his heart, without speech: everyone willing of heart (35:5)', 'law': 'W6'})
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
     fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
     return (n('aaron-and-sons', 'released'), n('the-tabernacle', 'tabernacle_erected'), n('the-land', 'high_places_banned'), n('the-ark', 'tablets_delivered'), n('the-ark', 'staves_fixed'),
             n('the-tabernacle', 'veil_divides'), n('the-table', 'bread_set_weekly'), n('the-lampstand', 'lamp_arranged'), n('the-golden-altar', 'incense_continual'), n('the-altar', 'tamid_owed'),
             n('moses', 'hands_feet_sanctified') + n('aaron', 'hands_feet_sanctified') + n('the-sons', 'hands_feet_sanctified'), n('the-work', 'work_completed'), n('the-people', 'presence_dwells'),
-            n('moses', 'barred_from_it'), n('moses', 'meeting_appointed'), n('the-camp', 'camp_moves_by_the_cloud'), fired, w.clock.year)
-SCENE = scene()
+            n('moses', 'barred_from_it'), n('moses', 'meeting_appointed'), n('the-camp', 'camp_moves_by_the_cloud'), fired, w.clock.year), scene_counts_w6(wd), scene_counts_w7(ws), w, wd, ws
+def scene_counts_w6(wd):
+    """W6 — the craftsmen and the donation: (appointed by name, spirit filled, given by the heart, events, the clock)"""
+    ne = lambda eff: sum(1 for ent in wd.entities.values() for e in ent.ledger if e['effect'] == eff)
+    return (ne('appointed_by_name'), ne('spirit_filled'), ne('given_by_the_heart'), len([l for l in wd.log if l[0] == 'EVENT']), wd.clock.year)
+def scene_counts_w7(ws):
+    """W7 — the Sinai narrative's laws: the effect counts over the whole world, the timers, the day the first tablets fired (the seventeenth of Tammuz), the events, the clock"""
+    ne = lambda eff: sum(1 for ent in ws.entities.values() for e in ent.ledger if e['effect'] == eff)
+    fires = [l[1] for l in ws.log if l[0] == 'TIMER-FIRE']
+    return (ne('majority_decides'), ne('entered_the_covenant'), ne('oral_law_unwritten'), ne('accepted'), ne('invested_office'), ne('atoned_forgiven'), ne('immersed'),
+            ne('tablets_delivered'), ne('face_radiant'), ne('molten_image_barred'), ne('barred_from_it'), ne('stoned'), ne('slain_by_sword'), ne('plague_struck'), ne('made_to_drink'), ne('bears_sin'),
+            ne('decree_relented'), ne('confessed'), ne('blotted_from_the_book'), ne('ground_and_scattered'), ne('attributes_proclaimed'), ne('covenant_cut'), ne('nations_driven_out'), ne('covenant_barred'), ne('demolished'), ne('intermarriage_barred'),
+            len([l for l in ws.log if l[0] == 'TIMER-SET']), len(fires), (fires[0] if fires else None), len([l for l in ws.log if l[0] == 'EVENT']), ws.clock.year)
+SCENE, SCENE_W6, SCENE_W7, _W, _WD, _WS = scene()
 def build(q):
     if q == 'world':
         return cell(SCENE, I, "THE SCENE on the world engine — the installation commanded and committed (Lev 8:2, 8:30), the clock advanced seven days and the confinement's RELEASE fired (the first of Nisan), then the erection's tape through this chapter's daemon: (released, erected, the high places banned, the tablets into the ark, the staves fixed, the veil dividing, the bread's Sabbath initiation fired, the lamps arranged x2, the incense x2, the tamid owed (the next morning), hands and feet sanctified x3, the work completed, THE PRESENCE DWELLS (promised at E2 and E4, fired here), Moses barred, THE MEETING APPOINTED at Lev 1:1, the camp bound to the cloud, timers fired, the clock)", ['released', 'tabernacle_erected', 'high_places_banned', 'tablets_delivered', 'staves_fixed', 'veil_divides', 'bread_set_weekly', 'lamp_arranged', 'incense_continual', 'tamid_owed', 'hands_feet_sanctified', 'work_completed', 'presence_dwells', 'barred_from_it', 'meeting_appointed', 'camp_moves_by_the_cloud'])
+    if q == 'world_w6':
+        return cell(SCENE_W6, A, "THE W6 SCENE on the world engine — the craftsmen called (Bezalel APPOINTED BY NAME and FILLED with the spirit, Oholiab appointed with him, the wise-hearted filled with wisdom — Berakhot 55a) and the donation brought by the men and the women, the finders, the spinning women, the princes, and the one who resolved in his heart without speech (Shevuot 26b) — every giving GIVEN BY THE HEART; the Presence's promise (25:8) NOT fired here, it fires at 40:34 in the erection's own world: (appointed, filled, given, events, clock)", ['appointed_by_name', 'spirit_filled', 'given_by_the_heart'])
+    if q == 'world_w7':
+        return cell(SCENE_W7, A, "THE W7 SCENE on the world engine — THE SINAI NARRATIVE'S LAWS: the unnamed elders as every court of three; the people's one voice and the book read; the firstborn's offerings accepted and their office before the tabernacle; the blood of the covenant entering the people (atoned, Onkelos) and THE CONVERT by immersion and blood (Keritot 9a); the claimant's burden before Aaron and Hur; the first ascent's tablets on a forty-day TIMER firing on day 47 — THE SEVENTEENTH OF TAMMUZ computed on the tape (Taanit 28b) and the breaking submitted that day as an honest silence; the calf made (its ban) and worshipped (forbidden — Avodah Zarah 4:4); the idolater's row stoned, and the chapter's three death-verbs as the court's tiers — the sword, the plague, the dropsy (Yoma 66b); the erring court that exempted the bower bearing sin; the decree relented by the vow-annulment law; the calf ground and the people made to drink (a test — Avodah Zarah 44a); the Levites' sword and their filled hands; the confession specifying the sin and 'him I will blot'; Joshua who did not depart (the chain's first link) and the court's three parasangs from the camp; the mountain closed while the Presence rests and open when it departs; the second ascent's tablets and THE RADIANT FACE firing on day 88; the attributes clearing the repentant and not the unrepentant nor the vain swearer; the covenant cut by the mouth (the two channels); the land's nations driven out, its covenant barred, its altars demolished (the second seat); the inhabitant's invitation forbidden; the seven nations' daughters barred by Torah, the rest by decree", ['majority_decides', 'entered_the_covenant', 'oral_law_unwritten', 'accepted', 'invested_office', 'atoned_forgiven', 'immersed', 'tablets_delivered', 'face_radiant', 'molten_image_barred', 'barred_from_it', 'stoned', 'slain_by_sword', 'plague_struck', 'made_to_drink', 'bears_sin', 'decree_relented', 'confessed', 'blotted_from_the_book', 'ground_and_scattered', 'attributes_proclaimed', 'covenant_cut', 'nations_driven_out', 'covenant_barred', 'demolished', 'intermarriage_barred'])
     if q == 'eighth_day_scene_by_call':
         return cell(SD_SCENE, P, "the eighth-day engine's own scene by call — SD.SCENE -> %r [IMPORT]: its timer is this scene's; Lev 9's offerings follow 40:29's tamid on the same day (Lev 9:17 'besides the morning burnt offering')" % (SD_SCENE,), ['released'])
     if q == 'headline_second_seat':
@@ -1575,6 +1739,8 @@ TESTS = [
  # ---- THE SCENE AND THE HEADLINES ----
  ('THE SCENE — the erection on the world engine', build('world'), (1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 3, 1, 1, 1, 1, 1, 5, 13)),   # the clock is ABSOLUTE days: advance(13) ends at day 13 (7 Nisan, the first Sabbath) — the first run's literal counted 7+13
  ('CALLED shemini_day.SCENE', build('eighth_day_scene_by_call'), (1, 1, 1, 1, 6, 1, 1, 1, 1, 7)),
+ ('THE W6 SCENE — the craftsmen and the donation on the world engine', build('world_w6'), (2, 2, 5, 8, 1)),
+ ('THE W7 SCENE — the Sinai narrative\'s laws on the world engine', build('world_w7'), (3, 4, 3, 1, 2, 2, 1, 2, 1, 2, 3, 1, 2, 1, 2, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 2, 3, 3, 47, 32, 88)),
  ('THE HEADLINE (1) — the second seat', build('headline_second_seat'), 'the_second_seats_delta_is_where_the_tradition_argues'),
  ('THE HEADLINE (2) — the unrun commands', build('headline_unrun'), 'the_run_drops_its_own_last_seven_commands'),
  ('THE HEADLINE (3) — the pickup', build('headline_pickup'), 13),
@@ -1588,7 +1754,7 @@ assert n == GUARDED, (n, GUARDED)
 print('guard: %d test rows, every expected value a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 print()
 ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0, P: 0}
+frac = {I: 0, M: 0, A: 0, D: 0, P: 0, H: 0}
 used = []
 misses = []
 for name, c, want in TESTS:
@@ -1601,8 +1767,8 @@ for name, c, want in TESTS:
     print('     effects: %s' % ', '.join(c['fx']))
 print()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
-print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d'
-      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n))
+print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d · hypotheses %d/%d'
+      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n, frac[H], n))
 ops = FX.summarize(used)
 print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
 print('effects: every cell carries REGISTERED effects — TWENTY-TWO discovered in these verses\' own verbs: entered_the_covenant, covenant_cut, appointed_by_name, spirit_filled, '
@@ -1610,6 +1776,12 @@ print('effects: every cell carries REGISTERED effects — TWENTY-TWO discovered 
       'plague_struck, attributes_proclaimed, pilgrim_land_guarded (HEAVEN), made_to_drink, slain_by_sword (BODY), ground_and_scattered (DESTROY), intermarriage_barred, molten_image_barred, '
       'oral_law_unwritten (BLOCK), appearance_gift_owed (DEBIT) [effects law satisfied]')
 print('SCENE: %r — the installation released into the first of Nisan; the four initiations; the Presence dwells and the meeting appointed (promised at E2 and E4, fired here)' % (SCENE,))
+print('SCENE (W6, the craftsmen and the donation): %r' % (SCENE_W6,))
+print('SCENE (W7, the Sinai narrative\'s laws): %r' % (SCENE_W7,))
+print('WATCH COVERAGE (the erection; the craftsmen and the donation — W6; the Sinai narrative — W7):')
+_W.print_coverage()
+_WD.print_coverage()
+_WS.print_coverage()
 if ok == n:
     print('THE COVENANT WRITTEN A SECOND TIME, THE BLOOD COVENANT, THE CALF AND THE PRESENCE, THE CRAFTSMEN AND THE DONATION, AND THE ERECTION COMPILED — the second seat\'s delta is where '
           'the tradition argues; the run drops its own last seven commands and Leviticus picks them up; the making\'s dropped use clauses run here; the laver\'s four from the run\'s added Moses; '

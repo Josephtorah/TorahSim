@@ -499,7 +499,7 @@ A_KAF = delta(T('Gen', 32, 26), T('Gen', 32, 33))
 A_RENAME_17_32 = delta(T('Gen', 17, 5), T('Gen', 32, 29)); A_RENAME_32_35 = delta(T('Gen', 32, 29), T('Gen', 35, 10))
 print('alignment: the commission against its retelling j=%.2f; the prayer j=%.2f; the deed at four seats j=%.2f/%.2f/%.2f; the levirate, the firstborn, the adoption, the burial, the hollow, the renamings diffed' % (J_COMMISSION, J_PRAYER, J_DEED_49, J_DEED_50, J_DEED_25))
 
-I, M, A, D, P = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT'
+I, M, A, D, P, H = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 def cell(v, p, why, fx):
     FX.validate(fx)
     return {'v': v, 'p': p, 'why': why, 'fx': fx}
@@ -528,7 +528,7 @@ def purchase(q):
     if q == 'currency_grade':
         return cell(('centenaria', IS_SHEKEL), M, ("Bava Metzia 87a:3 (opened) and Bekhorot 50a:8 (" + INH + "R. Chanina's three-corpus table — Torah silver is Tyrian): Ephron's shekels are centenaria, the heavier unit; the SANCTUARY shekel's seats fetched from the shekel engine — %d in the Bible, Exod 30:13 the first [IMPORT]: Mishnah Bekhorot 8:7's 'in the sanctuary shekel, Tyrian' the sheet's name for the grade") % IS_SHEKEL, ['pays'])
     if q == 'no_overreaching_on_land':
-        return cell(YV_OVERREACH['on_land'], P, "CALLED cold_run_yovel.overreaching() -> on_land=%r [IMPORT, live]: Lev 25:14's 'do not wrong one another' (the sale's fraud rule) has NO application to land — Mishnah Bava Metzia 4:9's 'lands have no overreaching': Ephron's four hundred for a field with a cave stands unchallenged (23:16 'Abraham heeded Ephron')" % YV_OVERREACH['on_land'], ['pays'])
+        return cell(YV_OVERREACH['on_land'], H, "CALLED cold_run_yovel.overreaching() -> on_land=%r [IMPORT, live]: Lev 25:14's 'do not wrong one another' (the sale's fraud rule) has NO application to land — Mishnah Bava Metzia 4:9's 'lands have no overreaching': Ephron's four hundred for a field with a cave stands unchallenged (23:16 'Abraham heeded Ephron') | H (LR3, 2026-09-07): Lev 25:14 read onto Ephron's sale on the noun HOLDING alone — no teacher joins Gen 23 to Lev 25 (the edge family -> yovel is a hypothesis); Mishnah Bava Metzia 4:9's rule is taught, its application to Machpelah is ours; the value stands, the provenance is H" % YV_OVERREACH['on_land'], ['pays'])
     if q == 'record_before_the_gate':
         return cell((c_baei_shaar, [v for v, n in c_vayakam_23 if v >= 17]), I, "the RECORD: 'all who entered the gate of his city' at %s and the field 'ESTABLISHED' at %s — the public witnessing at two seats and the establishing verb at two: the deed's form is the assembly at the gate (Ruth 4:1-11's ten elders at the gate the run of the same form, by name)" % (c_baei_shaar, [v for v, n in c_vayakam_23 if v >= 17]), ['field_acquired'])
     if q == 'deed_clauses':
@@ -538,9 +538,9 @@ def purchase(q):
     if q == 'holding_of_a_grave':
         return cell(len(c_achuzat_kever), I, "'a HOLDING of a grave' at %s — five seats, all this cave: the tenure word of the jubilee chapter ('return each to his holding', Lev 25:10) at its first purchase seat; the census's holding token homed at the jubilee engine — the edge this cell makes live" % (c_achuzat_kever,), ['grave_holding'])
     if q == 'tenure_by_call':
-        return cell((YV_SLAVE['acquisition'], YV_SLAVE['term']), P, "CALLED cold_run_yovel.gentile_slave() -> acquisition=%r, term=%r [IMPORT, live]: Lev 25:46 'a HOLDING for you... forever' — the Sifra reads the holding word as land's three modes (money, deed, possession) applied to the slave (Mishnah Kiddushin 1:3): the same three the purchase ran; the pre-Sinai holding's term is the Sinai holding's — forever" % (YV_SLAVE['acquisition'], YV_SLAVE['term']), ['grave_holding'])
+        return cell((YV_SLAVE['acquisition'], YV_SLAVE['term']), H, "CALLED cold_run_yovel.gentile_slave() -> acquisition=%r, term=%r [IMPORT, live]: Lev 25:46 'a HOLDING for you... forever' — the Sifra reads the holding word as land's three modes (money, deed, possession) applied to the slave (Mishnah Kiddushin 1:3): the same three the purchase ran; the pre-Sinai holding's term is the Sinai holding's — forever | H (LR3, 2026-09-07): Lev 25:46's holding read onto the purchase's three modes — no teacher joins the seats; kept as H" % (YV_SLAVE['acquisition'], YV_SLAVE['term']), ['grave_holding'])
     if q == 'field_price_rule_by_call':
-        return cell((YV_FIELD['price_rule'], YV_FIELD['redemption_price'], YV_FIELD['unredeemed']), P, "CALLED cold_run_yovel.field_sale(400, 49, 0) -> price_rule=%r, redemption_price=%r, unredeemed=%r [IMPORT, live]: the Sinai FIELD sale is priced by harvest years and RETURNS at the jubilee (Lev 25:15-16, 25:28) — Machpelah's four hundred fed as the price returns the full four hundred at the cycle's head and would revert; the pre-Sinai purchase is an outright holding that never returned (the deed restated at three burials across a century)" % (YV_FIELD['price_rule'], YV_FIELD['redemption_price'], YV_FIELD['unredeemed']), ['returns_to_holding'])
+        return cell((YV_FIELD['price_rule'], YV_FIELD['redemption_price'], YV_FIELD['unredeemed']), H, "CALLED cold_run_yovel.field_sale(400, 49, 0) -> price_rule=%r, redemption_price=%r, unredeemed=%r [IMPORT, live]: the Sinai FIELD sale is priced by harvest years and RETURNS at the jubilee (Lev 25:15-16, 25:28) — Machpelah's four hundred fed as the price returns the full four hundred at the cycle's head and would revert; the pre-Sinai purchase is an outright holding that never returned (the deed restated at three burials across a century) | H (LR3, 2026-09-07): Machpelah priced and returned under Lev 25:15-16, 25:28 on the shared noun — no teacher joins Gen 23 to Lev 25; kept as H" % (YV_FIELD['price_rule'], YV_FIELD['redemption_price'], YV_FIELD['unredeemed']), ['returns_to_holding'])
     if q == 'holding_persists':
         return cell(len(c_kanah_avraham), I, "'which Abraham BOUGHT' at %s — the purchase restated at Abraham's burial (25:10), Jacob's command (49:30), and Jacob's burial (50:13): the holding persisting across three generations with no return — the Sinai jubilee's exceptions (Mishnah Bekhorot 8:10: the firstborn's portion, the levir's, the gift) by name; the pre-Sinai tenure has no jubilee at all" % (c_kanah_avraham,), ['grave_holding'])
     if q == 'ger_vetoshav':
@@ -643,9 +643,9 @@ def commission(q):
     if q == 'virgin_two_predicates':
         return cell((c_ish_lo_yedaah[0], c_betulah_24 == [16]), I, "'a VIRGIN, and no man had known her' (24:16 — the second predicate's only seat): the two predicates the tradition reads as two classes (" + BET + "Yevamot 61b:13 — virgin means na'arah); Mishnah Ketubot 5:1's virgin price-class rides the first token", ['wife_taken'])
     if q == 'bride_price_by_call':
-        return cell(MP2_MOHAR, P, "CALLED cold_run_mishpatim_2.has('Exod', 22, 15, 4117) -> %r (the bride-price VERB 'he shall pay a dowry'), has('Exod', 22, 16, 4119) -> %r (the NOUN 'as the bride-price of the virgins') [IMPORT, live]: the virgin's price class at its Sinai seat — the amount a pointer to Deut 22:29's fifty (the Mishpatim_2 engine's FETCH-50); Mishnah Ketubot 5:1's two hundred the sages' (DATA)" % MP2_MOHAR, ['wife_taken'])
+        return cell(MP2_MOHAR, P, "CALLED cold_run_mishpatim_2.has('Exod', 22, 15, 4117) -> %r (the bride-price VERB 'he shall pay a dowry'), has('Exod', 22, 16, 4119) -> %r (the NOUN 'as the bride-price of the virgins') [IMPORT, live]: the virgin's price class at its Sinai seat — the amount a pointer to Deut 22:29's fifty (the Mishpatim_2 engine's FETCH-50); Mishnah Ketubot 5:1's two hundred the sages' (DATA) [taught: Ketubot 10a:4 — 'money he shall weigh as the mohar of the virgins' (Exod 22:16): the mohar, Gen 34:12's own noun, joined to the ketubah by the sages; a TAUGHT transfer, not ours (LR3)]" % MP2_MOHAR, ['wife_taken'])
     if q == 'wife_taken_sinai_seat':
-        return cell((MP_22_15[-1] == 'לאשה', len(c_leisha_span), c_leisha_torah_n), P, "CALLED cold_run_mishpatim.words('Exod', 22, 15) -> the verse's last token is 'as a WIFE' [IMPORT, live]: the marriage formula's closing token at 22:15 (the seduced virgin's Sinai seat — the census's inbound edge from both Mishpatim engines), at %d seats of this span (24:67, 38:14) and %d in the Torah" % (len(c_leisha_span), c_leisha_torah_n), ['wife_taken'])
+        return cell((MP_22_15[-1] == 'לאשה', len(c_leisha_span), c_leisha_torah_n), H, "CALLED cold_run_mishpatim.words('Exod', 22, 15) -> the verse's last token is 'as a WIFE' [IMPORT, live]: the marriage formula's closing token at 22:15 (the seduced virgin's Sinai seat — the census's inbound edge from both Mishpatim engines), at %d seats of this span (24:67, 38:14) and %d in the Torah | H (LR3, 2026-09-07): the marriage formula's closing token read across Exod 22:15, Gen 24:67 and 38:14 — no teacher joins the seats on this token (Kiddushin 2a's taking-taking analogy runs on Deut 24:1 and Gen 23:13, a different pair); kept as H" % (len(c_leisha_span), c_leisha_torah_n), ['wife_taken'])
     if q == 'marriage_formula':
         return cell(len(c_24_67_verbs), I, "'and Isaac BROUGHT her into the tent of Sarah his mother, and he TOOK Rebekah, and she BECAME his wife, and he LOVED her, and Isaac was COMFORTED after his mother' (24:67) — five verbs: the bringing, the taking, the becoming, the loving, the comfort — the marriage formula's whole in one verse", ['wife_taken', 'comforted'])
     if q == 'comfort_two_seats':
@@ -798,11 +798,11 @@ def levirate(q):
     if q == 'pledge_three_tokens':
         return cell((len(c_pledge_spec), len(c_pledge_run), len(A_PLEDGE[0]), len(A_PLEDGE[1])), I, "THE PLEDGE'S THREE TOKENS at the giving — 'your SEAL and your CORD and your STAFF' (38:18, with the second-person suffixes) — and at the recognition — 'the seal and the CORDS and the staff' (38:25, articled; the cord PLURALIZED): the alignment engine on the two verses (%d added, %d dropped) — the evidence's list is the pledge's list" % (len(A_PLEDGE[0]), len(A_PLEDGE[1])), ['pledge_held'])
     if q == 'pledge_by_call':
-        return cell((ORD_PLEDGE, ORD_WIDOW), P, "CALLED cold_run_ordinances.loan('pledge_sunset') -> %r; loan('widow_not_pledged') -> %r [IMPORT, live]: Tamar's PLEDGE (the noun at 38:17, 18, 20 alone in the Bible) is the ordinances' institution under another word (Exod 22:25's garment taken in pledge, returned by sunset) — and the Sinai rule 'a widow's garment is never pledged' (Deut 24:17, Mishnah Bava Metzia 9:13) meets a WIDOW who takes a pledge herself" % (ORD_PLEDGE, ORD_WIDOW), ['pledge_held', 'pledge_returned_by_sunset'])
+        return cell((ORD_PLEDGE, ORD_WIDOW), H, "CALLED cold_run_ordinances.loan('pledge_sunset') -> %r; loan('widow_not_pledged') -> %r [IMPORT, live]: Tamar's PLEDGE (the noun at 38:17, 18, 20 alone in the Bible) is the ordinances' institution under another word (Exod 22:25's garment taken in pledge, returned by sunset) — and the Sinai rule 'a widow's garment is never pledged' (Deut 24:17, Mishnah Bava Metzia 9:13) meets a WIDOW who takes a pledge herself | H (LR3, 2026-09-07): Tamar's pledge (eravon) read as Exod 22:25's pledge (chavol) and her widowhood under 22:21's ban — a transfer by topic under two words; no teacher found; kept as H" % (ORD_PLEDGE, ORD_WIDOW), ['pledge_held', 'pledge_returned_by_sunset'])
     if q == 'eravon_seats':
         return cell(c_eravon, I, "'a pledge' at %s — the noun's only seats in the Bible, all Tamar's: 'if you give a pledge until you send it' (38:17), 'what pledge shall I give you?' (38:18), 'to take the pledge from the woman's hand' (38:20)" % (c_eravon,), ['pledge_held'])
     if q == 'widow_by_call':
-        return cell((ORD_WSCOPE, PR_FOUR), P, "CALLED cold_run_ordinances.stranger('widow_orphan_scope') -> %r; cold_run_priesthood.family('four_barred') -> %r [IMPORT, live]: the WIDOW's two Sinai law seats — Exod 22:21-23 (the affliction ban: R. Yishmael all persons, R. Akiva the named) and Lev 21:14 (the high priest's four barred, the widow first): the census's widow token homed at both engines" % (ORD_WSCOPE, PR_FOUR), ['waits_for_the_levir'])
+        return cell((ORD_WSCOPE, PR_FOUR), H, "CALLED cold_run_ordinances.stranger('widow_orphan_scope') -> %r; cold_run_priesthood.family('four_barred') -> %r [IMPORT, live]: the WIDOW's two Sinai law seats — Exod 22:21-23 (the affliction ban: R. Yishmael all persons, R. Akiva the named) and Lev 21:14 (the high priest's four barred, the widow first): the census's widow token homed at both engines | H (LR3, 2026-09-07): the widow of Exod 22:21 and of Lev 21:14 joined on the word alone — no teacher (Yevamot 59a refuses widow-widow on the neighboring pair); kept as H" % (ORD_WSCOPE, PR_FOUR), ['waits_for_the_levir'])
     if q == 'widow_analogy_refused':
         return cell('widow_widow_from_tamar_refused', M, "Yevamot 59a:8 (opened): 'a WIDOW he shall not take' (Lev 21:14) — from betrothal or from marriage — 'lest you say: learn WIDOW-WIDOW FROM TAMAR (38:11) — as there from marriage, so here — it teaches us no': the verbal analogy on the widow token between this chapter and the priesthood's ban CONSIDERED AND REFUSED — the census's family-to-priesthood edge is the tradition's own attempted analogy", ['waits_for_the_levir'])
     if q == 'harlot_by_call':
@@ -1367,7 +1367,7 @@ assert n == GUARDED, (n, GUARDED)
 print('guard: %d test rows, every expected value a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 print()
 ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0, P: 0}
+frac = {I: 0, M: 0, A: 0, D: 0, P: 0, H: 0}
 used = []
 misses = []
 for name, c, want in TESTS:
@@ -1380,8 +1380,8 @@ for name, c, want in TESTS:
     print('     effects: %s' % ', '.join(c['fx']))
 print()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
-print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d'
-      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n))
+print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d · hypotheses %d/%d'
+      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n, frac[H], n))
 ops = FX.summarize(used)
 print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
 print('effects: every cell carries REGISTERED effects — TWENTY-EIGHT discovered in these verses\' own verbs: field_acquired, gifts_given, handed_to_the_agent, portion_added, birthright_transferred (TRANSFER); '

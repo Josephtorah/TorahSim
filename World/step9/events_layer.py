@@ -16,7 +16,16 @@
 #   4. every effect a consumer is recorded to write is in effect_vocabulary.yaml;
 #   5. every transliterated narrative label's Hebrew is verified the same way;
 #   6. no two event types share a witness run at one verse unless one names the
-#      other in aliases_in_code (the one-act-two-names finding, kept explicit).
+#      other in aliases_in_code (the one-act-two-names finding, kept explicit);
+#   7. THE LINK REVIEW LAW (owner-ruled 2026-09-07; sitting LR1): a type whose
+#      witnesses sit in MORE THAN ONE CHAPTER is a link the machine's shape made
+#      and carries `link:` — reference (verified: the seats share a CONTENT
+#      lemma — noun, verb, or adjective — in the Tanakh DB), transfer (refused
+#      without `taught_by:` naming a teacher), hypothesis (an untaught transfer,
+#      kept and labeled), UNCLASSIFIED (asked, unanswered — counted, printed);
+#      a multi-seat type without the field is a flag. The rule behind it: a
+#      person does not derive a verbal analogy on his own (Pesachim 66a:12,
+#      Niddah 19b:12; logic/MIDDOT.md under I2).
 # A report of zero is worth only the coverage line above it. Exit 1 on any flag.
 # Model layer; read-only over the corpus and the registries; touches no unit.
 
@@ -78,6 +87,71 @@ def _run_in_verse(db, witness):
     return any(cons[i:i + len(want)] == want for i in range(len(cons) - len(want) + 1)), ref, run
 
 
+# ---- rule 7: the link field on a multi-seat type ----
+LINKS = ('reference', 'transfer', 'hypothesis', 'UNCLASSIFIED')
+_TAUGHT = re.compile(r'\b(Mishnah|Tosefta|Sifra|Sifrei|Mekhilta|Rabbah|Tanchuma|Onkelos|Talmud|Yerushalmi)\b|\b[A-Z][a-z]+ \d{1,3}[ab]:\d{1,3}\b')
+_MOVE = re.compile(r'\bM-\d\d\b')
+_NAMES = {'3068', '3069'}   # the divine name is not a content link
+
+
+def taught_ok(s):
+    if not s or not str(s).strip(): return False
+    s = str(s)
+    return bool(_TAUGHT.search(s) or (_MOVE.search(s) and re.search(r'exemplar', s, re.I) and re.search(r'\d+:\d+', s)))
+
+
+def _content_lemmas(db, witness):
+    """The content lemmas (noun / verb / adjective) of a witness run — the tokens a REFERENCE may share."""
+    ref, run = [x.strip() for x in witness.split('|', 1)]
+    b, cv = ref.split(' '); ch, v = cv.split(':')
+    rows = db.execute("SELECT w.he, w.lemma, w.morph FROM words w JOIN verses v ON w.verse_id=v.id "
+                      "WHERE v.book=? AND v.chapter=? AND v.verse=? ORDER BY w.idx", (b, int(ch), int(v))).fetchall()
+    cons = [_strip(r[0]) for r in rows]; want = run.split()
+    out = set()
+    for i in range(len(cons) - len(want) + 1):
+        if cons[i:i + len(want)] != want: continue
+        for he, lemma, morph in rows[i:i + len(want)]:
+            if not lemma or not morph: continue
+            # the morph's segments: the first carries the language letter ('HNcmsc' -> N), the rest a prefix or a
+            # SUFFIX ('Sp2ms'); the content word is the first segment whose part of speech is noun / verb / adjective
+            # (LR2 fix: the last segment is the pronominal suffix on 'your name', 'its harvest', 'his fistful')
+            segs = morph.split('/')
+            poss = [(segs[0][1] if len(segs[0]) > 1 else '')] + [s[0] if s else '' for s in segs[1:]]
+            pos = next((p for p in poss if p in 'NVA'), '')
+            lem = next((x.strip() for x in lemma.split('/') if re.search(r'\d', x)), '')
+            if pos and lem and lem.split()[0] not in _NAMES: out.add(lem)
+        break
+    return out
+
+
+def link_flags(k, e, db):
+    """Rule 7 on one registry entry; returns (flags, seats) — seats = chapters the witnesses sit in."""
+    flags = []
+    by_ch = {}
+    for w in e.get('witness', []):
+        ch = w.split('|')[0].strip().rsplit(':', 1)[0]
+        by_ch.setdefault(ch, []).append(w)
+    if len(by_ch) < 2: return flags, by_ch
+    lk = e.get('link')
+    if lk is None:
+        flags.append('%s: MULTI-SEAT (%s) with no link field — THE TWO QUESTIONS (reference / transfer / hypothesis / UNCLASSIFIED; the link review law)' % (k, ', '.join(sorted(by_ch))))
+    elif lk not in LINKS:
+        flags.append('%s: unknown link %r' % (k, lk))
+    elif lk == 'transfer' and not taught_ok(e.get('taught_by')):
+        flags.append('%s: link transfer WITHOUT A TEACHER (taught_by must name a sugya, a Mishnah/Tosefta/Sifra/Sifrei/Mekhilta passage, or a move M-nn with its exemplar)' % k)
+    elif lk == 'reference':
+        lem = {ch: set().union(*(_content_lemmas(db, w) for w in ws)) for ch, ws in by_ch.items()}
+        for ch in lem:
+            others = set().union(*(lem[o] for o in lem if o != ch))
+            if not lem[ch] & others:
+                if e.get('reference_by'):
+                    # a DECLARED ground where the lemma test cannot see the reference (one case paragraph whose verb and
+                    # noun carry different lemma numbers) — accepted, counted apart, printed by the census as 'declared'
+                    continue
+                flags.append('%s: link reference but the seat %s shares NO content lemma with the other seats (%s) — a reference names one institution in one word; else transfer or hypothesis, or state the ground in reference_by' % (k, ch, ', '.join(sorted(o for o in lem if o != ch))))
+    return flags, by_ch
+
+
 def lint(verbose=True):
     flags = []
     db = sqlite3.connect('file:%s?mode=ro' % DB, uri=True)
@@ -85,6 +159,7 @@ def lint(verbose=True):
         fx = yaml.safe_load(f)['effects']
     n_wit = 0
     seen_runs = {}
+    n_multi, link_census = 0, {}
     for k, e in REGISTRY.items():
         for fld in FIELDS:
             if fld not in e:
@@ -113,6 +188,13 @@ def lint(verbose=True):
             for one in [x.strip() for x in eff.split(',')]:
                 if one and one != 'no ledger write' and one not in fx:
                     flags.append('%s: consumer writes unregistered effect %r' % (k, one))
+        lf, seats = link_flags(k, e, db)
+        flags.extend(lf)
+        if len(seats) > 1:
+            n_multi += 1
+            lab = e.get('link', 'MISSING')
+            if lab == 'reference' and e.get('reference_by'): lab = 'reference (declared ground)'
+            link_census[lab] = link_census.get(lab, 0) + 1
     n_narr, n_trans = 0, 0
     for k, e in NARRATIVE.items():
         n_narr += 1
@@ -129,6 +211,8 @@ def lint(verbose=True):
               % (len(REGISTRY), n_wit, os.path.basename(DB), n_narr, n_trans,
                  ', '.join('%s %d' % (f, sum(1 for e in REGISTRY.values() if e.get('form') == f)) for f in FORMS)))
         assert REGISTRY and n_wit, 'ZERO-REPORT: nothing scanned'
+        print('events_layer LINK CENSUS (rule 7): %d multi-seat types — %s' % (
+            n_multi, ', '.join('%s %d' % (kk, link_census[kk]) for kk in LINKS + ('reference (declared ground)', 'MISSING') if link_census.get(kk)) or 'none'))
         for fl in flags:
             print('  FLAG  ' + fl)
         print('events_layer lint: %d flag(s)' % len(flags))

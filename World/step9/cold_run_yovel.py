@@ -178,7 +178,7 @@ print('ink census: seven x%d at 25:8 · RETURN verbs at %s · in-the-Jubilee '
       'dative (the destination)' % (SEVENS_25_8, RETURN_VERSES, JUBILEE_EXIT,
       JUBILEE_YEAR_TOK, len(REDEMPTION), len(HAKOHEN_27), len(LAKOHEN_27)))
 
-I, M, A, D = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA'
+I, M, A, D, H = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 
 
 def cell(v, p, why, effects):
@@ -1056,7 +1056,7 @@ TESTS = [
 if __name__ == '__main__':
     print()
     ok = 0
-    frac = {I: 0, M: 0, A: 0, D: 0}
+    frac = {I: 0, M: 0, A: 0, D: 0, H: 0}
     for name, c, want in TESTS:
         hit = c['v'] == want
         ok += hit
@@ -1069,9 +1069,9 @@ if __name__ == '__main__':
     print()
     print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
     print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · '
-          'answer-sheet %d/%d · data %d/%d' % (
+          'answer-sheet %d/%d · data %d/%d · hypotheses %d/%d' % (
           frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n,
-          frac[A], n, frac[D], n))
+          frac[A], n, frac[D], n, frac[H], n))
     print('computed, not graded: the release day is Yom Kippur of the fiftieth '
           '(INK); the precondition is all inhabitants on the land (INK) and the '
           'cessation is the tribes\' exile (MOVE); the gentile slave forever '

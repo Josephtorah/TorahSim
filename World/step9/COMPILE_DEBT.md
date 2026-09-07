@@ -267,10 +267,136 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
       holiness_b 183, sanctions 242, priesthood 252; the sweep 33/33 (3621 cells — seven scene rows, one per runner); unfired 0,
       unconsumed 1, open aliases 4. Record: REPORT_WRAP_W5.md.
       holiness, holiness_b, sanctions, priesthood, tochacha, temurah, yovel (jubilee_proclaimed fired from Lev 25:10)
-- [ ] W6 THE SANCTUARY'S REMAINDER — sanctuary_build.altar, incense_shekel (succession, shekel, oil,
-      incense, incense_altar), erection (craftsmen, donation)
-- [ ] W7 THE SINAI NARRATIVE LAWS — erection (covenant, tablets, blood_covenant, ascent, calf, presence)
-      — Exod 24, 32-34's laws inside the story
+- [x] W6 THE SANCTUARY'S REMAINDER (DONE 2026-09-07, the owner: "go" — the first sitting after compaction #83, the rereads first; the
+      first wrap under THE LINK REVIEW LAW): 8 case-form types registered FIRST by script (the registry 240 → 248 types, 588 → 607 runs
+      verified; the case form 164 → 171, the speech form 25 → 26 — the craftsmen's call an utterance) and THREE existing types given their
+      SECOND SEAT with `link: reference` verified by shared content lemma (incense_burned's statute 30:7-8, vessels_anointed's spec
+      30:26-29, offering_brought's donation run 35:5/35:21); THE ALIAS UNIFIED (the erection's laver washing submits hands_feet_washed;
+      washed is Lev 8:6's immersion alone — open aliases 4 → 1); NO NEW DAEMON: law_investiture EXTENDED to the runner's law layer (nine
+      kinds — the succession's seven days as a TIMER, the incense altar's continual burning with the morning's lamps divided, the stranger
+      barred, the four strange inputs, the horns atoned once a year, the head counted with the ransom's protection and David's census as
+      the negative branch's SILENCE, the atonement silver to the sockets / the tamids / the priests, the messengers' oath by call to the
+      guardians engine, the oil's and the incense's compounders cut off with the exemptions read off the words), law_erection to the
+      craftsmen's call and the donation's run, law_sanctuary_build to the overflow (consumed, an EMPTY WATCH) and the altar's fire duty at
+      its making; the gate failed 8 ways before a line of code; the three TUPLE predictions written by script FIRST (26 + 5 + 3 slots) and
+      ALL THREE matched the machine on the first run; 8 functions OWED → WRAPPED (242 / 6 / 5 of 253 — the two scene-count helpers
+      declared NONE, the homograph); unfired 0, unconsumed 0; TWELVE unfiled live edges of the incense_shekel runner FILED with their link
+      (reference 9, transfer 3 — Mishnah Shekalim 2:1, Tanchuma Ki Tisa 11 3, Zevachim 18b:15); citations 96/96 resolved by script;
+      tripwires incense_shekel 301, erection 286, sanctuary_build 258; the sweep 33/33 (3624 cells). Record: REPORT_WRAP_W6.md.
+      ⚠ the daemon gate's submit parser reads literal submits and (kind, subject, source) loops only — a row list through dict(r, …) is
+      unresolved (the scenes rewritten, not the parser); ⚠ a helper named law_* rides the function census's daemon skip (renamed).
+      sanctuary_build.altar, incense_shekel (succession, shekel, oil, incense, incense_altar), erection (craftsmen, donation)
+- [x] W7 THE SINAI NARRATIVE LAWS (DONE 2026-09-07, the owner: "Go w7" — the same window as W6; THE LAST WRAP: the campaign's
+      worklist EMPTY, 0 OWED): 18 types registered FIRST by script (the registry 248 → 266, runs 607 → 640; the ACT form 50 → 59 —
+      the story's own deeds are the tape; speech 26 → 30; case 171 → 176), three new multi-seat types and one second seat all
+      REFERENCE by shared lemma (calf_made 32:4/34:17 the molten noun; bowed_to_another_god 32:8/34:14 the bowing verb;
+      moses_ascended 24:18/34:28 the forty days; entered_the_land's second seat 34:11-13 — the ordinances' land covenant written
+      twice); 34:18-26 NOT reseated (law_calendar's since W2); NO NEW DAEMON: law_erection's watches 15 → 34 (the empty watch
+      `tablets_broken: []`); the gate failed 2 ways before the code; the Sinai world's 32 rows in literal submits, 30 fired, two
+      silences (the breaking — the history's act; the climber after the Presence departed), THREE timers set and fired: THE
+      SEVENTEENTH OF TAMMUZ COMPUTED ON THE TAPE — the first ascent on day 7 (24:16) sets the tablets on a forty-day timer that fires
+      on day 47, the day Taanit 28b names and Mishnah Taanit 4:6 lists, the breaking submitted that day; the second ascent's tablets
+      and the radiant face fire on day 88; the death tiers of Yoma 66b as a verdict table on the evidence field (the sword, the
+      plague, the dropsy) beside the idolater's row by call; the convert's rite on the blood paragraph (Keritot 9a); the attributes'
+      condition (the repentant, the unrepentant, the vain swearer); 'him I will blot' on the sinners never the intercessor; the
+      31-slot TUPLE prediction written by script FIRST and matched on the first run; 6 functions OWED → WRAPPED (248 / 0 / 6 of
+      254 — the Sinai scene's count helper NONE); citations 119/119 after 'Mishnah Avot' → the shelf's 'Mishnah Pirkei Avot';
+      tripwire erection 287; the sweep 33/33 (3625 cells). Record: REPORT_WRAP_W7.md. ⚠ the sweep launched before the helper's
+      disposition REFUSED to grade (the gate-first order enforced by the sweep itself) — declare, then sweep.
+      erection (covenant, tablets, blood_covenant, ascent, calf, presence) — Exod 24, 32-34's laws inside the story
+
+## BEFORE NUMBERS — THE SEQUENCE (listed for the owner 2026-09-07 after compaction #80; "lets go with lr1")
+## In order, ruled: LR1 → LR2 → LR3 (the link review, below) → W6 → W7 (the wrap worklist, above — ALL DONE 2026-09-07) → D9-iv THE
+## DELIVERABLE RULE AMENDED (inside D9's entry, below — NEXT). Open and UNSEQUENCED, the owner's call whether any goes
+## before Numbers: X1-X5 (the Exodus case heads, below); the TWO gate fixes (the last-binding resolution and the
+## value/effect homograph — the OPEN notes below, each its own sitting); THE PENDING TERM (the library's slave-term
+## daemon does not cancel the six-year term at the jubilee — REPORT_WRAP_W5.md finding 1; a library edit with the
+## five fire-probes rerun); THE CLAIMS LABEL DEBT (below — unbounded, named, not a sitting); the design thread's
+## ARCHITECTURE/THE_LINKS.md rewrite (awaiting the owner's ruling on the two-thread consensus of 2026-09-07 —
+## not this thread's); THE CLOCK (ARCHITECTURE/THE_CLOCK.md, a specification for the engine's clock and calendars, with its
+## evidence file ARCHITECTURE/TIME.md — the design thread's, sent 2026-09-07 after compaction #83, "no action asked now";
+## implementation ours, UNSEQUENCED, at the owner's direction: the scenes smuggle the calendar in today — jubilee_year passed
+## inside slave_pierced, jubilee_proclaimed submitted by a script — and the spec has calendar boundaries as TIMER firings writing
+## status on institution entities [the court, the land], the time source the tape's second producer, not a daemon; the
+## parameters sourced [Rosh Hashanah 25a's month, RH 2b, Mishnah RH 1:1's four new years, Sanhedrin 11b-13a's intercalation];
+## the Sifra's dispute whether the jubilee fires without the shofar — Behar chapter 2 — to be forked both arms).
+## OWED FORWARD, not before Numbers: Num 27 + 36 arrives with Numbers; Deut 25 with Deuteronomy.
+## `python3 World/step9/daemon_census.py --debt` prints the wrap worklist; this file is the checklist.
+
+## THE LINK REVIEW (ruled by the owner 2026-09-07 after W5: "The teacher say not to create a link of our own unless it
+## came from a teacher... we need to compact then link review as you recommend. we need to keep up with these" — runs
+## BEFORE W6; the rule: a person may not derive a gezerah shavah (the verbal analogy by shared wording) on his own —
+## Pesachim 66a, Niddah 19b (read from the local shelf at LR1); a REFERENCE (the ink names an institution, the edge calls
+## its definition) is licensed by ink alone, a TRANSFER (a rule moves on a shared word or a topic) needs a teacher, and an
+## untaught transfer stands only as a labeled HYPOTHESIS (class H) — the value kept, the flag changed, never counted as
+## compiled; the populations measured 2026-09-07: 154 edges + 72 pointers, 43 multi-seat types, D6's 4 unifications,
+## 371 import cells in 19 runners, a move-class subset of 1132 (46 name an analogy outright); the frozen-claim layer
+## (2,838 claims, 36 with a middah label) is OUT of this review — see the debt line below)
+- [x] LR1  THE LAW AND THE GATES — DONE 2026-09-07 (the owner: "lets go with lr1"). The shelf read (Pesachim 66a:12 both
+      halves, Niddah 19b:12, Jerusalem Talmud Pesachim 6:1 the refusal + the reason by name, Tosefta Pesachim 4:11, Rashi on
+      both seats, the freeness regime) recorded in MIDDOT.md under I2 with the a-fortiori counterpart, a case-law entry, and
+      line 110's order corrected (reception first, token pair second); THE_STEPS Step 5 (1) gained THE LINK REVIEW LAW with
+      THE TWO QUESTIONS; dependency_dispositions.yaml: all 226 entries carry `link:` (none 40 on the FALSE homographs,
+      UNCLASSIFIED 186 — the LR2 worklist, `--links` prints it); dependency_census.py rule 8 (a transfer without a teacher
+      FAILS, a new entry without the field FAILS, none off FALSE FAILS, the LINK CENSUS printed every run); event_vocabulary.yaml:
+      the 43 multi-seat types carry `link: UNCLASSIFIED`; events_layer.py rule 7 (reference verified by a shared CONTENT
+      lemma — noun/verb/adjective from the Tanakh DB's lemma+morph columns, the divine name excluded; transfer refused
+      without `taught_by:`; a multi-seat type without the field flagged); verify_claims.py: a claim beyond
+      logic/oral_audit/claim_ceilings_LR1_2026-09-07.json (166 manifests, 2,838 ids) without a middah FAILS. Probes:
+      lr1_gate_fires.py 12/12 (three controls pass); the daemon gate's 5/5 (probe 3 rewritten — unfired is {} since W5).
+      Gates satisfied; events lint 0; sweep 33/33 at 3621. OBSERVED for LR2: the pointer key (verse, form) is duplicated
+      at Exod 21:22 AS_WHEN (mishpatim + mishpatim_2 — the gate reads 71 of 72); taught_ok is a citation SHAPE check, the
+      shelf check is LR2's script; lemma overlap is a NECESSARY condition only (the levirate's two seats share 'woman').
+- [x] LR2  THE AUDIT AND THE BACKFILL — DONE 2026-09-07 (the owner: "next"). THE CLASSIFICATION BY READING: the 186
+      UNCLASSIFIED → reference 153 (91 edges + all 62 non-homograph pointers: the ink's own pointer forms and the
+      institution-naming tokens), transfer 26 edges (every teacher SEARCHED AND READ on the local shelf before typed —
+      the Mekhilta's breeches at the ramp, Tanchuma Terumah 11's wooden altar, Zevachim 53a:9's red line from Exod 27:5,
+      Sanhedrin 16b:4, Tanchuma Ki Tisa 11 3 'from the goring ox', Menachot 84b:4, Shabbat 87b:6's ten crowns, Mishnah
+      Bikkurim 1:3, Keritot 22b, Sifra Kedoshim 5 6, Bava Metzia 54a, Sifra Emor 1 + Makkot 20a, Sifra Emor 18 7's
+      azkarah-azkarah (a SUSPECTED hypothesis turned taught), Sifra Emor 8 3-4, Sifra Nedavah 13 4, Mekhilta 22:27 +
+      Sanhedrin 66a:17, Sanhedrin 59a:11-13, Bereshit Rabbah 6:1, Mishnah Chullin 5:5 + Chullin 83a:15-16 (ben Zoma's
+      one-day analogy — the day boundary TAUGHT), Shabbat 108a:7, Yevamot 59a:8 + Bereshit Rabbah 85:10, Bereshit Rabbah
+      60:6 + 84:18, Yevamot 3b + Bereshit Rabbah 85:5), HYPOTHESIS 7 edges (class H, the why carries the H note: the
+      holding at Machpelah and at Gen 17:8, Tamar's pledge and widowhood, the marriage formula's token twice, the
+      bequeathing root, the census-homed widow — searched, none found), none 40 (the homographs). Registry: 42 multi-seat
+      after the split — reference 38 verified by shared content lemma + 1 by DECLARED GROUND (animal_stolen: one case
+      paragraph, verb 1589 / noun 1591 — the new `reference_by:` field, counted apart) + transfer 3 (sworn_denial_admitted
+      Sifra Kedoshim 2 3; person_stolen Sanhedrin 86a:16-17; omer_brought Sifra Nedavah 13 4 + Menachot 84a:10). D6's
+      four: seventh year, omer, fast references or taught; the first fruits a taught TIME GATE (Bikkurim 1:3), the 'one
+      institution at two seats' wording corrected (the cell's first_fruits_link is LR3's). THE LEVIRATE SPLIT:
+      rival_wife_taken (Lev 18:18, form case, 240 types) under law_sanctions; levirate_commanded restored to Gen 38:8
+      verbatim from the pre-W5 registry; Tamar's row left to the family runner — the scene literal 86 → 85 by
+      PRINT-THEN-TYPE (the prediction's values matched, its slot index was off by one: count by script). CITATIONS BY
+      SCRIPT (lr2_cite_verify.py): 218 parsed, 218 resolved after two fixes ('Toharot' → the shelf's 'Tahorot';
+      'Arakhin 9:?' → Sifra Behar Chapter 8 2, the kin ladder). THE DUPLICATE POINTER KEY fixed (verse, form, runner —
+      a duplicate now FAILS). ⚠ THE LEMMA PARSER: the lint's first live run flagged five references — four were the
+      parser dropping SUFFIXED words (the pronominal suffix is the last morph segment), fixed; the fifth true. Gates
+      satisfied; lint 0; probes 12/12 + 5/5; sanctions 242/242; sweep 33/33 at 3621.
+- [x] LR3  THE CELLS — DONE 2026-09-07 (the owner: "go lr3"). THE CENSUS (scratchpad lr3_census.py, static over the 33 runners
+      in their own shapes — standard cell(), the list helpers, the tuple rows, the eighth-day and Day forms): 3,016 cell call
+      sites — ink 1,481, move 755, answer-sheet 373, data 80, import 314, HYPOTHESIS 7, routed 6. The import cells INHERIT
+      THEIR EDGE'S LINK (reference 194 / transfer 69 / hypothesis 7 → marked H; one cell under a hypothesis edge a declared
+      reference); the verse imports — 56 with a teacher, 22 read as references (the institution's own other seat), 36 calling
+      a runner with NO EDGE on file (read: references or taught); the move cells naming a cross-span verse — 120 taught,
+      0 untaught after NINE whys gained the teacher they lacked (Horayot 8a:14 + Keritot 3a:20, Keritot 22b, Sifra Emor 1 +
+      Makkot 20a, Sanhedrin 74a:13, Sifra Nedavah 13 4 + Menachot 84a:10, Sanhedrin 56a:14, Zevachim 118b:13-15, Zevachim
+      44a:8, the Sifra Shemini citation made visible); the 22 cells naming an analogy outright all cite their teacher or are
+      ink censuses. THE H CLASS installed in the 21 runners carrying the tag line (17 by script, four by hand), frac and the
+      FRACTIONS line extended ("hypotheses N/n" — the chip): family 6/228, chatat 1/195, every other 0/n. The mohar cell
+      first counted H is TAUGHT (Ketubot 10a:4) — the edge mishpatim_2 -> family reclassified transfer. MOVE_CATALOG M-22/
+      M-23/M-24 marked GENERALIZATIONS; the moadim first-fruits wording corrected; THE_STEPS's H sentence; REPORT_LINK_REVIEW.md
+      (NEW). Probes 12/12 + 5/5; lint 0; gates satisfied; sweep 33/33 at 3621 — not one graded value moved in LR1-LR3.
+- [ ] THE UNFILED LIVE EDGES — MEASURED AGAIN AT W6 (2026-09-07): of the 66 call pairs beyond the token census (the dependency gate's
+      "live edges beyond the token census" list), 22 ALREADY HAD an entry (declared CALL for the live calls at their compile sittings);
+      44 carried none — LR3's "66 unfiled" overstated by a third. W6 FILED the incense_shekel runner's 12 with their link (reference 9,
+      transfer 3 with teachers). REMAINING 32 with no entry and no `link:`: pre_sinai 15 (calendar, clocks, decalogue, erection,
+      holiness, holiness_b, incense_shekel, mishpatim, offerings, ordinances, pesach, priesthood, tochacha, tzav, yoma), family 6
+      (clocks, guardians, holiness, holiness_b, mishpatim, mishpatim_2), holiness 3 (tzav, vayikra5, yovel), metzora 2 (tzav, vayikra5),
+      sanctions 2 (chatat, shemini), clocks 1 (vayikra5), minchah 1 (vayikra5), offerings 1 (pesach), yoma 1 (moadim); their cells were
+      read at LR3 (references by ink or taught) — the erection runner has none, so W7 files nothing: ONE FILING SITTING (scratchpad
+      lr3_census.py's no-edge print switch lists the calls); the gate lists the 66 every run
+- [ ] THE CLAIMS LABEL DEBT — 2,838 frozen claims carry the middah field on 36; the untaught links among them cannot be found
+      by script; the label mandatory on every claim seated from LR1 on; the backfill an unbounded debt, named here
 
 ## THE EXODUS LAW'S UNCOMPILED CASE HEADS (found at W1, 2026-09-07 — the wrap census put the ink's
 ## case tokens of Exod 21-22 beside the six runners' functions; these heads have exam-era rules

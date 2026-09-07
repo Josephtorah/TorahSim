@@ -624,6 +624,12 @@ word rather than built across two verses, and is logged in
 logic/MIDDOT.md's case law rather than here.
 
 ## M-22 — THE RUN READ BACK INTO THE SPEC (a narrated execution of a law legislates a column the law's own text leaves open)
+⚠ A GENERALIZATION (the link review law, LR3, 2026-09-07): this move is
+our name for a shape the teachers used at the exemplars below; it is a
+TEACHER for a new verse pair ONLY when a recorded exemplar is named
+beside the application (`taught_by: M-22, exemplar Menachot 93b:3 ...`).
+Applied to a pair no teacher used, it is a HYPOTHESIS (class H), never
+a license — a person does not derive a verbal analogy on his own.
 Registered 2026-09-06 (sitting D8 of the compile debt,
 cold_run_shemini_day.py) from five exemplars in one chapter. The
 teacher holds a SPEC (a law paragraph) and a RUN (the narrative of that
@@ -814,6 +820,10 @@ cold_run_family.commission('retold_prayer', 'retold_commission',
 the retold run diffed against both the spec and the run.
 
 ## M-23 — THE SECOND SEAT'S DELTA (a law written twice is diffed seat against seat, and the second writing's additions, drops, moves, and doublings legislate)
+⚠ A GENERALIZATION (the link review law, LR3, 2026-09-07): the diff of
+two seats is the machine's ENUMERATION; what a delta LEGISLATES is the
+teacher's — this move is a teacher for a new pair only with a recorded
+exemplar named beside it; otherwise the reading is a HYPOTHESIS (class H).
 Registered 2026-09-06 (sitting E5 of the compile debt,
 cold_run_erection.py) from EIGHT exemplars in one span. The teacher
 holds a law at TWO SEATS — the same institution written twice by the
@@ -918,6 +928,13 @@ cold_run_family.levirate('seed_vs_name', 'levirate_alignment',
 'deed_alignment'); testament('firstborn_alignment').
 
 ## M-24 — THE REPETITION TEST (a law's scope across eras is decided by whether the code writes it twice; the second writing is the edge)
+⚠ A GENERALIZATION (the link review law, LR3, 2026-09-07): the rule is
+the tradition's own (Sanhedrin 59a:11-13) and its seven exemplars are
+taught; but "the machine's form is the dependency gate itself" below
+describes an ENUMERATION of shared tokens, which a person may do, not a
+license to transfer law on one — a repetition edge is a teacher for a
+new pair only with Sanhedrin 59a's list or another recorded exemplar
+named beside it; otherwise the pairing is a HYPOTHESIS (class H).
 Registered 2026-09-06 (sitting G1 of the compile debt,
 cold_run_pre_sinai.py) from the tradition's own stated rule and five
 exemplars. R. Yosei son of R. Chanina (Sanhedrin 59a:11-12): 'every

@@ -126,7 +126,7 @@ DONKEY = _donkey[0] if isinstance(_donkey, tuple) else _donkey
 print('routing receipt: cold_run_yovel.tithe_naming() CALLED (%d namings); cold_run_pesach.firstborn(donkey) '
       'CALLED -> %r' % (len(TN), DONKEY))
 
-I, M, A, D, P = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT'
+I, M, A, D, P, H = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 
 def cell(v, p, why, fx):
     FX.validate(fx)
@@ -498,7 +498,7 @@ assert n == GUARDED, (n, GUARDED)
 print('guard: %d test rows, every expected value a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 print()
 ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0, P: 0}
+frac = {I: 0, M: 0, A: 0, D: 0, P: 0, H: 0}
 used = []
 for name, c, want in TESTS:
     hit = c['v'] == want
@@ -509,8 +509,8 @@ for name, c, want in TESTS:
     print('     effects: %s' % ', '.join(c['fx']))
 print()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
-print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d'
-      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n))
+print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d · hypotheses %d/%d'
+      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n, frac[H], n))
 print('computed, not graded: the impure beast of 27:27 redeemed at valuation plus a fifth or sold (INK); the '
       'devoted person put to death, not ransomed (INK 27:29); the land tithe holy (INK 27:30) and redeemed '
       'with a fifth (INK 27:31); not examined good or bad (INK 27:33) — %s'

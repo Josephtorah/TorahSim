@@ -206,7 +206,7 @@ def pesach_regime_from_calls():
 # opened this run), FENCE (the tradition's self-labeled safeguard),
 # DATA (transmitted calibration, the second channel), IMPORT
 # (cross-book receipt).
-I, M, F, D, P = 'INK', 'MOVE', 'FENCE', 'DATA', 'IMPORT'
+I, M, F, D, P, H = 'INK', 'MOVE', 'FENCE', 'DATA', 'IMPORT', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 
 def cell(value, prov, why):
     return {'v': value, 'p': prov, 'why': why}
@@ -529,7 +529,7 @@ print('guard: %d test rows, every expected value a literal from the answer sheet
       '[honest-pairing guard satisfied]' % GUARDED)
 print()
 total = ok = 0
-frac = {'INK': 0, 'MOVE': 0, 'FENCE': 0, 'DATA': 0, 'IMPORT': 0}
+frac = {'INK': 0, 'MOVE': 0, 'FENCE': 0, 'DATA': 0, 'IMPORT': 0, 'HYPOTHESIS': 0}
 effects_used = []
 for src, off, expected, effs in TESTS:
     got = dispatch(off)
@@ -553,10 +553,10 @@ print()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, total))
 n = total
 print('FRACTIONS: pure ink %d/%d (%d%%) · named moves %d/%d (%d%%) · '
-      'fence %d/%d · data %d/%d · imports %d/%d' % (
+      'fence %d/%d · data %d/%d · imports %d/%d · hypotheses %d/%d' % (
       frac['INK'], n, 100 * frac['INK'] // n,
       frac['MOVE'], n, 100 * frac['MOVE'] // n,
-      frac['FENCE'], n, frac['DATA'], n, frac['IMPORT'], n))
+      frac['FENCE'], n, frac['DATA'], n, frac['IMPORT'], n, frac['HYPOTHESIS'], n))
 print('effects: all %d verdict rows carry REGISTERED effects '
       '[effects law satisfied]' % len(TESTS))
 print('SCENE: %r — the grid on the engine; the daemon\'s watch coverage:' % (SCENE,))

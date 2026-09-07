@@ -431,7 +431,7 @@ A_RETOLD = delta(T('Gen', 2, 16) + T('Gen', 2, 17), T('Gen', 3, 2) + T('Gen', 3,
 A_17_RUN = max(((jact(T('Gen', 17, s), T('Gen', 17, 27)), s) for s in range(9, 15)))
 print('alignment: light j=%.2f; plants %s; man %s; the rest clause at three seats diffed; the blessing and the grant at two; the first command against its retelling' % (A_LIGHT, A_PLANTS[0], A_MAN[1][:3]))
 
-I, M, A, D, P = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT'
+I, M, A, D, P, H = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 def cell(v, p, why, fx):
     FX.validate(fx)
     return {'v': v, 'p': p, 'why': why, 'fx': fx}
@@ -675,7 +675,7 @@ def sabbath(q):
         return cell(PR_EXCH['new'], P, "Lev 24:8 'on the sabbath day, on the sabbath day he shall arrange it' — the bread's weekly timer: CALLED cold_run_priesthood.lamp_table(sabbath_exchange) -> %r [IMPORT, live call]" % (PR_EXCH,), ['bread_set_weekly'])
     if q == 'land_by_call':
         return cell((YV_LAB, YV_CYC), P, "Lev 25:2-6 'the land shall keep a SABBATH to the LORD... a sabbath of solemn rest' — the seventh YEAR in the seventh day's vocabulary: CALLED cold_run_yovel.sabbatical()['torah_labors'] -> %r "
-                    "(sow, prune, reap, gather), jubilee()['cycle_length'] -> %r [IMPORT, live call]" % (YV_LAB, YV_CYC), ['land_release'])
+                    "(sow, prune, reap, gather), jubilee()['cycle_length'] -> %r [IMPORT, live call] [LR3: a REFERENCE on the ink's own word — Lev 25:2 and 25:4 name the land's rest a sabbath; the edge pre_sinai -> yovel is a hypothesis for Gen 17:8's holding token, which no cell reads]" % (YV_LAB, YV_CYC), ['land_release'])
     if q == 'covenant_sabbaths_by_call':
         return cell((TO_REC, TO_NB, TO_COV), P, "Lev 26:2 'My Sabbaths you shall keep', 26:34-35 'the land shall rest its sabbaths', 26:42 'I will REMEMBER My covenant' (= Gen 9:15 token for token) — CALLED "
                     "cold_run_tochacha.recovery(confess, humble) -> %r, NOT_BROKEN -> %r, covenant(walk, keep, do) -> %r [IMPORT, live call]" % (TO_REC, TO_NB, TO_COV), ['covenant_remembered'])
@@ -726,7 +726,7 @@ def noahide(q):
                     "(one_vs_two) -> %r [IMPORT, live call]; the Noahide court itself ONE judge (9:5, below)" % (ORD_23, ORD_HAPAX, ORD_ONE_TWO), ['majority_decides'])
     if q == 'blasphemy_seat':
         return cell((c_ish_ish_24_15, ORD_NAME, ORD_ELOHIM), P, "the BLASPHEMY leg (2:16 'the LORD' — Lev 24:16 'who blasphemes the Name'; 24:15 'ANY MAN' the Noahide's inclusion, measured %r); the warning's fork at "
-                    "Exod 22:27: CALLED cold_run_ordinances.gifts(name_gate) -> %r, gifts(elohim_fork) -> %r [IMPORT, live call] — the lev24 engine's curse gate by name" % (c_ish_ish_24_15, ORD_NAME, ORD_ELOHIM), ['put_to_death'])
+                    "Exod 22:27: CALLED cold_run_ordinances.gifts(name_gate) -> %r, gifts(elohim_fork) -> %r [IMPORT, live call] — the lev24 engine's curse gate by name [taught: Sanhedrin 56a:14 — 'any man' includes the nations in the blasphemy warning]" % (c_ish_ish_24_15, ORD_NAME, ORD_ELOHIM), ['put_to_death'])
     if q == 'idolatry_by_call':
         return cell((ORD_SERV, ORD_ONLY, ORD_ROW), P, "the IDOLATRY leg (2:16 'God' — Exod 20:3 'no other gods' by name): the service paradigm — CALLED cold_run_ordinances.capital(service_architecture) -> %r, "
                     "(only_to_the_LORD) -> %r, (idolater_row) -> %r [IMPORT, live call]" % (ORD_SERV, ORD_ONLY, ORD_ROW), ['stoned'])
@@ -1316,7 +1316,7 @@ assert n == GUARDED, (n, GUARDED)
 print('guard: %d test rows, every expected value a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 print()
 ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0, P: 0}
+frac = {I: 0, M: 0, A: 0, D: 0, P: 0, H: 0}
 used = []
 misses = []
 for name, c, want in TESTS:
@@ -1329,8 +1329,8 @@ for name, c, want in TESTS:
     print('     effects: %s' % ', '.join(c['fx']))
 print()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
-print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d'
-      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n))
+print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d · hypotheses %d/%d'
+      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n, frac[H], n))
 ops = FX.summarize(used)
 print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
 print('effects: every cell carries REGISTERED effects — FOURTEEN discovered in these verses\' own verbs: day_counted, seventh_day_blessed, fear_on_beasts, meat_permitted, bow_set, name_changed, '

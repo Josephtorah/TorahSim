@@ -198,7 +198,7 @@ _sin = V5.graded_offering({'trigger': 'utterance_oath', 'act_is_his_option': Tru
 SINNER_VERDICT = _sin[0] if isinstance(_sin, tuple) else _sin
 print('routing receipt: cold_run_vayikra5.graded_offering(reaches_flour) CALLED -> %r' % (SINNER_VERDICT,))
 
-I, M, A, D, P = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT'
+I, M, A, D, P, H = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 
 def cell(v, p, why, fx):
     FX.validate(fx)
@@ -798,7 +798,7 @@ assert n == GUARDED, (n, GUARDED)
 print('guard: %d test rows, every expected value a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 print()
 ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0, P: 0}
+frac = {I: 0, M: 0, A: 0, D: 0, P: 0, H: 0}
 used = []
 for name, c, want in TESTS:
     hit = c['v'] == want
@@ -809,8 +809,8 @@ for name, c, want in TESTS:
     print('     effects: %s' % ', '.join(c['fx']))
 print()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
-print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d'
-      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n))
+print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d · hypotheses %d/%d'
+      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n, frac[H], n))
 print('computed, not graded: salt from any place even on the Sabbath (MOVE, Sifra Chapter 14 7); the '
       'first-fruits of leaven or honey brought but not ascending (INK 2:12); honey barred from the fire '
       '(INK 2:11); the omer from barley (MOVE, Section 13 4); the burn of the whole bird (INK 1:17) — %s'

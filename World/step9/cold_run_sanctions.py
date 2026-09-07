@@ -253,7 +253,7 @@ print('routing receipts: cold_run_chatat CALLED — domain(unwitting) -> %r; dom
       '-> %r; cold_run_clocks CALLED — zav pair -> %r; cold_run_shemini CALLED — classify(hoof+cud) -> %r, (hoof only) '
       '-> %r [IMPORT, live calls]' % (UNWITTING_UNION, DOUBT_UNION, DELIBERATE_UNION, ZAV_PAIR, PURE_BEAST, IMPURE_BEAST))
 
-I, M, A, D, P = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT'
+I, M, A, D, P, H = 'INK', 'MOVE', 'ANSWER-SHEET', 'DATA', 'IMPORT', 'HYPOTHESIS'   # H: THE LINK REVIEW LAW (LR3, 2026-09-07) — an untaught transfer, kept and labeled, never counted as compiled
 def cell(v, p, why, fx):
     FX.validate(fx)
     return {'v': v, 'p': p, 'why': why, 'fx': fx}
@@ -1219,7 +1219,7 @@ def frame(q, **k):
         pub = k.get('public')
         if pub:
             return cell('sanctify_the_Name', M, '18:5 "and LIVE by them — not die by them" + 22:32 "you shall not '
-                        'profane My holy Name" [IMPORT]: ' + SA + 'Chapter 13 13 — in public he sanctifies it', [FX.NONE])
+                        'profane My holy Name" [IMPORT]:  [taught: Sanhedrin 74a:13 — \'and live by them, not die by them\']' + SA + 'Chapter 13 13 — in public he sanctifies it', [FX.NONE])
         return cell('transgress_and_live', M, '18:5 — told privately "worship or be killed": he transgresses and '
                     'lives (' + SA + 'Chapter 13 13); Onkelos 18:5 "to eternal life" beside it', [FX.NONE])
     if q == 'sit_and_abstain':
@@ -1438,7 +1438,7 @@ def law_sanctions(event, world):
     if k == 'lay_with_menstruant':
         s1 = sanction('menstruant')
         return [E_('karet_cut_off', event['man'], cp='HEAVEN', value=s1['v'], law='F2 [INK 20:18 "both of them shall be cut off from the midst of their people" — the matrix row (18:19 / 20:18, no court death, karet %s)]' % s1['v'][3])]
-    if k == 'levirate_commanded':
+    if k == 'rival_wife_taken':   # LR2 (2026-09-07): SPLIT from levirate_commanded — Lev 18:18 is its own case type; Gen 38:8 stays the family daemon's (no teacher joins the two seats: the link review law)
         w_ = event.get('widow'); case = event.get('case')
         if event.get('relation') and case == 'names':
             c = names([tuple(x) if isinstance(x, list) else x for x in event['relation']])
@@ -1449,7 +1449,7 @@ def law_sanctions(event, world):
         elif case:
             c = cowives(case) if case in COWIVES_Q else levirate(case)
         else:
-            return []                                                # Gen 38's own seat is the family daemon's (the levirate owed) — the silence here
+            return []                                                # no case fields — the silence
         out = []
         if 'exempt' in c['fx']:
             out.append(E_('exempt', w_, value=str(c['v'])[:70], law='F1 [Mishnah Yevamot 1:1-2:3 — %s]' % c['why'][:90]))
@@ -1540,8 +1540,8 @@ def scene():
         w.submit({'kind': 'lay_with_beast', 'subject': 'the-beast-woman', 'doer': 'the-beast-woman', 'sex': 'female', 'day': 1, 'case_source': 'Lev 18:23 / 20:16 — the woman: the formula'})
         w.submit({'kind': 'lay_with_menstruant', 'subject': 'the-menstruant-lier', 'man': 'the-menstruant-lier', 'woman': 'the-menstruant', 'day': 1, 'case_source': 'Lev 20:18 — karet on both'})
         for who, ev in (('the-widow-ervah', {'relation': ['W', 'SIS']}), ('the-widow-second', {'grade': 'second_degree'}), ('the-widow-stranger', {'grade': 'stranger'}), ('the-rival', {'case': 'rival_chain'}), ('the-two-bonds', {'case': 'two_bonds'}),
-                        ('the-swapped', {'case': 'swapped_aftermath'}), ('the-mother-in-law', {'case': 'names', 'relation': [['W', 'M'], ['S', 'W'], ['W', 'SIS'], ['PB', 'W'], ['FB', 'W'], 'married_woman', 'menstruant']}), ('tamar', {})):
-            w.submit(dict({'kind': 'levirate_commanded', 'subject': who, 'widow': who, 'day': 1, 'case_source': 'Lev 18:18; Mishnah Yevamot 1-3; Keritot 3:6 — %s' % who}, **ev))
+                        ('the-swapped', {'case': 'swapped_aftermath'}), ('the-mother-in-law', {'case': 'names', 'relation': [['W', 'M'], ['S', 'W'], ['W', 'SIS'], ['PB', 'W'], ['FB', 'W'], 'married_woman', 'menstruant']})):
+            w.submit(dict({'kind': 'rival_wife_taken', 'subject': who, 'widow': who, 'day': 1, 'case_source': 'Lev 18:18; Mishnah Yevamot 1-3; Keritot 3:6 — %s' % who}, **ev))   # LR2: the Lev 18:18 case type (Tamar's Genesis row left to the family runner)
         w.submit({'kind': 'seed_given_to_molech', 'subject': 'the-molech-giver', 'giver': 'the-molech-giver', 'seed': 'son', 'day': 1, 'case_source': 'Lev 20:2-3; Mishnah Sanhedrin 7:7 — handed, passed, through the fire, to Molech'})
         w.submit({'kind': 'seed_given_to_molech', 'subject': 'the-partial-giver', 'giver': 'the-partial-giver', 'seed': 'son', 'fire': False, 'day': 1, 'case_source': 'Mishnah Sanhedrin 7:7 — not through the fire: exempt'})
         w.submit({'kind': 'seed_given_to_molech', 'subject': 'the-concealed-giver', 'giver': 'the-concealed-giver', 'seed': 'son', 'concealed': True, 'day': 1, 'case_source': 'Lev 20:4-5 — the people hid their eyes: by Heaven, with his family'})
@@ -1562,7 +1562,7 @@ def scene():
             n('the-adulterer', 'put_to_death'), n('the-adulterer', 'karet_cut_off'), n('the-unwitting-adulterer', 'atoned_forgiven'), n('the-doubtful-adulterer', 'suspends'), n('the-unwitnessed', 'karet_cut_off'), n('the-minors-wife-lier', 'exempt'), n('the-fathers-wife-lier', 'stoned'), n('the-fathers-wife-lier', 'karet_cut_off'), n('the-mother-lier', 'stoned'),
             n('the-woman-and-mother-taker', 'burned_by_court'), n('the-sister-taker', 'karet_cut_off'), n('the-sister-taker', 'bears_sin'), n('the-aunt-lier', 'childless'), n('the-brothers-wife-taker', 'childless'), n('the-male-lier', 'stoned'), n('the-mixed-deaths', 'put_to_death'), n('the-void-betrothal', 'exempt'),
             n('the-beast-lier', 'stoned'), n('the-beast-lier', 'karet_cut_off'), n('the-beast-lier', 'put_to_death'), n('the-beast-woman', 'stoned'), n('the-beast', 'beast_killed'), n('the-menstruant-lier', 'karet_cut_off'),
-            n('the-widow-ervah', 'exempt'), n('the-widow-second', 'released'), n('the-widow-stranger', 'released'), n('the-rival', 'exempt'), n('the-two-bonds', 'released'), n('the-swapped', 'barred_from_holies'), n('the-mother-in-law', 'karet_cut_off'), n('tamar', 'exempt'),
+            n('the-widow-ervah', 'exempt'), n('the-widow-second', 'released'), n('the-widow-stranger', 'released'), n('the-rival', 'exempt'), n('the-two-bonds', 'released'), n('the-swapped', 'barred_from_holies'), n('the-mother-in-law', 'karet_cut_off'),
             n('the-molech-giver', 'stoned'), n('the-molech-giver', 'karet_cut_off'), n('the-molech-giver', 'face_set_against'), n('the-partial-giver', 'exempt'), n('the-concealed-giver', 'face_set_against'), n('the-concealed-giver', 'karet_cut_off'), n('the-concealed-giver', 'stoned'),
             n('the-ov-bearer', 'stoned'), n('the-ov-bearer', 'karet_cut_off'), n('the-ov-consulter', 'stoned'), n('the-curser', 'stoned'), n('the-maidservants-son', 'stoned'), n('the-not-by-name', 'stoned'),
             n('the-land', 'land_vomits'), n('the-people', 'karet_cut_off'), n('the-people', 'lashes'), n('the-people', 'disqualified'),
@@ -1607,7 +1607,7 @@ print('answer sheet: %d Mishnah rows verified by their own tokens (Sanhedrin 7/9
       'Zevachim 13-14, Keritot 1 read whole — the topic docket)' % len(SHEET))
 
 TESTS = [
- ('THE SCENE — Zevachim 13-14, Chullin 6, Sanhedrin 7 and 9, Keritot 1-3, Yevamot 1-2, Makkot 3 on the world engine (the daemon\'s watch coverage printed below)', cell(SCENE, I, 'the outside offenses and the platform, the blood and the covering and the carcass, the unions matrix by union, the beast, the levirate grades, Molech, the ghost-pit, the curser, the land — every value a cell\'s', ['karet_cut_off', 'blood_reckoned', 'exempt', 'atoned_forgiven', 'accepted', 'consecrated', 'disqualified', 'face_set_against', 'lashes', 'cover_owed', 'impure_until_evening', 'washes_and_bathes', 'defiles_garments', 'bears_sin', 'stoned', 'burned_by_court', 'put_to_death', 'childless', 'beast_killed', 'suspends', 'released', 'barred_from_holies', 'land_vomits']), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 2)),
+ ('THE SCENE — Zevachim 13-14, Chullin 6, Sanhedrin 7 and 9, Keritot 1-3, Yevamot 1-2, Makkot 3 on the world engine (the daemon\'s watch coverage printed below)', cell(SCENE, I, 'the outside offenses and the platform, the blood and the covering and the carcass, the unions matrix by union, the beast, the levirate grades, Molech, the ghost-pit, the curser, the land — every value a cell\'s', ['karet_cut_off', 'blood_reckoned', 'exempt', 'atoned_forgiven', 'accepted', 'consecrated', 'disqualified', 'face_set_against', 'lashes', 'cover_owed', 'impure_until_evening', 'washes_and_bathes', 'defiles_garments', 'bears_sin', 'stoned', 'burned_by_court', 'put_to_death', 'childless', 'beast_killed', 'suspends', 'released', 'barred_from_holies', 'land_vomits']), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 2)),   # LR2 (2026-09-07): Tamar's Genesis row left to the family runner — 85 values (was 86)
  # ---- THE SANCTIONS MATRIX (Lev 18 warning, Lev 20 sanction, mode, karet) ----
  ('Lev 18:8 / 20:11 — the father\'s wife: stoning (the formula), karet', sanction('father_wife'), (8, 11, 'stoning', True)),
  ('Lev 18:7 / 20:11 — the mother: stoning via the father\'s-wife clause', sanction('mother'), (7, 11, 'stoning', True)),
@@ -1891,7 +1891,7 @@ assert n == GUARDED, (n, GUARDED)
 print('guard: %d test rows, every expected value a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 print()
 ok = 0
-frac = {I: 0, M: 0, A: 0, D: 0, P: 0}
+frac = {I: 0, M: 0, A: 0, D: 0, P: 0, H: 0}
 used = []
 misses = []
 for name, c, want in TESTS:
@@ -1904,8 +1904,8 @@ for name, c, want in TESTS:
     print('     effects: %s' % ', '.join(c['fx']))
 print()
 print('MATRIX: %d/%d cells match the answer sheet' % (ok, n))
-print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d'
-      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n))
+print('FRACTIONS: pure ink %d/%d (%d%%) · recorded moves %d/%d (%d%%) · answer-sheet %d/%d · data %d/%d · imports %d/%d · hypotheses %d/%d'
+      % (frac[I], n, 100 * frac[I] // n, frac[M], n, 100 * frac[M] // n, frac[A], n, frac[D], n, frac[P], n, frac[H], n))
 ops = FX.summarize(used)
 print('LEDGER OPS this span writes: %s' % ', '.join('%s x%d' % kv for kv in sorted(ops.items())))
 print('effects: every cell carries REGISTERED effects — SEVEN discovered in these spans\' own verbs: burned_by_court, '
