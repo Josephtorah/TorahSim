@@ -35,9 +35,25 @@
 #
 # Model layer; read-only over the corpus; touches no unit.
 
+import bisect
 import collections
+import os
+import yaml
 import effects_layer as FX
 import events_layer as EV      # THE EVENT-TYPE REGISTRY (D9-i): an unregistered kind refuses the tape
+
+# THE CLOCK SITTING (2026-09-07; CLOCK.md; the specification ARCHITECTURE/THE_CLOCK.md; the two-thread consensus
+# A-H with round two's eight amendments): the DAY is the base unit and the YEAR is DERIVED by a Calendar over the
+# THIRD REGISTRY, calendar_parameters.yaml — this module its only reader (the code/data law: the mechanism is
+# ink, the quantities are the registry's rows with their channels and sources). No tick stream: calendar
+# boundaries are TIMERS set by the daemons whose verses command the count; a PERIOD field (opt-in) re-arms a
+# timer at its fire through the Calendar; a MARKER log class carries the text's own dates; an event between
+# markers carries its BOUND; a RETROGRADE marker (Pesachim 6b:7 — no earlier and later in the Torah) leaves the
+# counter unmoved and dates the event; a past due writes at submission (RETRO-WRITE).
+_CAL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'calendar_parameters.yaml')
+with open(_CAL_PATH, encoding='utf-8') as _f:
+    _CAL = yaml.safe_load(_f)
+CAL_PARAMS, CAL_ERAS = _CAL['parameters'], _CAL['eras']
 
 # THE FENCE'S DEPTH BOUND (D9-ii, 2026-09-07): a daemon CONSUMES events and WRITES
 # the ledger; it never emits an event. Cascades run through LEDGER STATE (one
@@ -48,10 +64,171 @@ import events_layer as EV      # THE EVENT-TYPE REGISTRY (D9-i): an unregistered
 DEPTH_BOUND = 1
 
 
-# ---- construct 1: the clock -----------------------------------------
+# ---- construct 1: the clock, the calendar over the third registry ----
+class Calendar:
+    """THE CALENDAR FUNCTION (CLOCK.md section 2) — an engine construct, because the period re-arm fires inside
+    advance() and the engine cannot import a runner. Lays the months out from the world's EPOCH ROW: the
+    received month rounded to thirty and twenty-nine alternating (Rosh Hashanah 25a:10, the day grain's
+    rounding), the year turning at the era's new-year month (Mishnah Rosh Hashanah 1:1 — a data row), the
+    thirteenth month by the season ground alone (Sanhedrin 13a:4's recorded threshold over a MODELED solar
+    year and equinox — OPEN-2, labeled). Keys: day, week, month, year, sabbatical, jubilee (Lev 25:4, 25:8,
+    25:10 — the ink's counts; the count-start offset and the fiftieth's place in the cycle are data rows)."""
+    KEYS = ('day', 'week', 'month', 'year', 'sabbatical', 'jubilee')
+
+    def __init__(self, epoch=None):
+        P = CAL_PARAMS
+        self.epoch = epoch
+        self.era = CAL_ERAS[epoch] if epoch else None
+        if epoch and epoch not in CAL_ERAS:
+            raise SystemExit('CALENDAR: epoch %r is not a row of calendar_parameters.yaml eras' % epoch)
+        self.nym = self.era['new_year_month'] if self.era else None
+        self.leap_len = P['intercalated_month']['value']['length']
+        self.threshold = P['intercalation_threshold_days']['value']
+        self.solar = P['solar_year_days']['value']
+        self.eq0 = P['equinox_offset_days']['value']
+        self.sab, self.cyc, self.jub = P['sabbatical_years']['value'], P['cycle_years']['value'], P['jubilee_year']['value']
+        self.offset = P['count_start_offset_years']['value']
+        self.fiftieth = P['fiftieth_in_cycle']['value']
+        self._months = []          # (start_day, year, month_no, length), laid out lazily from the epoch
+        self._starts = []
+        if self.era and self.nym:
+            self._months.append((0, 1, self.nym, self._plain_len(self.nym)))
+            self._starts.append(0)
+
+    @staticmethod
+    def _plain_len(m):
+        return 30 if m % 2 == 1 else 29                      # the first month thirty, the second twenty-nine ...
+
+    def _need(self):
+        if not self._months:
+            raise SystemExit('CALENDAR: the world declares no epoch — a derived year or a calendar key needs one '
+                             '(World(era=..., epoch=<a row of calendar_parameters.yaml eras>))')
+
+    def _lay_next(self):
+        start, year, m, length = self._months[-1]
+        nxt_start = start + length
+        if m == 12:
+            # the season ground (Sanhedrin 13a:4): project the next seventh month's first day without a leap
+            # month — the months 1..6 = 177 days — and ask where the autumn equinox falls in it
+            T = nxt_start + sum(self._plain_len(k) for k in range(1, 7))
+            k = round((T - self.eq0) / self.solar)
+            E = self.eq0 + k * self.solar
+            dom = int(E - T) + 1
+            if dom >= self.threshold:
+                self._months.append((nxt_start, year, 13, self.leap_len)); self._starts.append(nxt_start)
+                return
+        nm = 1 if m in (12, 13) else m + 1
+        ny = year + 1 if nm == self.nym else year
+        self._months.append((nxt_start, ny, nm, self._plain_len(nm))); self._starts.append(nxt_start)
+
+    def _extend_to_day(self, day):
+        self._need()
+        while self._months[-1][0] + self._months[-1][3] <= day:
+            self._lay_next()
+
+    def _extend_to_year(self, y):
+        self._need()
+        while self._months[-1][1] <= y:
+            self._lay_next()
+
+    def _month_at(self, day):
+        self._extend_to_day(day)
+        return self._months[bisect.bisect_right(self._starts, day) - 1]
+
+    def year(self, day):
+        return self._month_at(day)[1]
+
+    def date(self, day):
+        start, y, m, _ = self._month_at(day)
+        return (y, m, day - start + 1)
+
+    def day_of(self, y, m=None, dom=1):
+        """the day of (year, month, day-of-month) in the epoch; month defaults to the era's new-year month"""
+        self._extend_to_year(y)
+        m = self.nym if m is None else m
+        for start, yy, mm, length in self._months:
+            if yy == y and mm == m:
+                return start + min(dom, length) - 1
+        if m == 13:                                          # no thirteenth month that year: the twelfth
+            return self.day_of(y, 12, dom)
+        raise SystemExit('CALENDAR: no month %r in year %r of the %s epoch' % (m, y, self.epoch))
+
+    def position(self, y):
+        """the count-year's place in the sabbatical/jubilee period, or None before the count began"""
+        n = y - 1 - self.offset
+        if n < 0:
+            return None
+        if self.fiftieth == 'not_counted':                   # the Sages (Rosh Hashanah 9a:1): fifty years to the period
+            return n % self.jub + 1
+        return n % self.cyc + 1                              # Rabbi Yehuda: the fiftieth counts for both (Arakhin 12b:4)
+
+    def _is(self, key, y):
+        p = self.position(y)
+        if p is None:
+            return False
+        if key == 'sabbatical':
+            return p % self.sab == 0 and p <= self.cyc
+        n = y - 1 - self.offset
+        return p == self.jub if self.fiftieth == 'not_counted' else (n > 0 and n % self.cyc == 0)
+
+    def next(self, day, key):
+        """the first boundary of `key` strictly after `day`"""
+        if key == 'day':
+            return day + 1
+        if key == 'week':
+            return day + 7
+        if key not in self.KEYS:
+            raise SystemExit('CALENDAR: unknown key %r (keys: %s)' % (key, ', '.join(self.KEYS)))
+        self._extend_to_day(day)
+        i = bisect.bisect_right(self._starts, day)
+        while True:
+            while i >= len(self._months):
+                self._lay_next()
+            start, y, m, _ = self._months[i]
+            if key == 'month' or (m == self.nym and (key == 'year' or self._is(key, y))):
+                return start
+            i += 1
+
+    def add(self, day, n, key):
+        """n units of `key` later — the same date (a calendar key moves under intercalation)"""
+        if key == 'day':
+            return day + n
+        if key == 'week':
+            return day + 7 * n
+        y, m, dom = self.date(day)
+        if key == 'year':
+            return self.day_of(y + n, m, dom)
+        if key == 'month':
+            d = day
+            for _ in range(n):
+                d = self.next(d, 'month')
+            start, yy, mm, length = self._month_at(d)
+            return start + min(dom, length) - 1
+        raise SystemExit('CALENDAR: add() takes day, week, month, or year, not %r' % key)
+
+
 class Clock:
-    def __init__(self, era, year=0):
-        self.era, self.year = era, year
+    """the counter is the DAY; the year is DERIVED through the world's epoch (None where none is declared)"""
+    def __init__(self, era, day=0, epoch=None):
+        self.era, self.day, self.epoch = era, day, epoch
+        self.calendar = Calendar(epoch)
+
+    @property
+    def year(self):
+        return self.calendar.year(self.day) if self.epoch else None
+
+    @property
+    def date(self):
+        return self.calendar.date(self.day) if self.epoch else None
+
+    def at_year(self, y):
+        return self.calendar.day_of(y)
+
+    def after(self, n, key='day'):
+        return self.calendar.add(self.day, n, key)
+
+    def next(self, key):
+        return self.calendar.next(self.day, key)
 
 
 # ---- construct 2: entities with mutable ledgers ---------------------
@@ -66,12 +243,16 @@ class Entity:
 
 
 class World:
-    def __init__(self, era):
-        self.clock = Clock(era)
+    def __init__(self, era, epoch=None):
+        self.clock = Clock(era, epoch=epoch)
         self.entities = {}
         self.laws = []        # the daemon registry
-        self.timers = []      # (fire_year, effect_dict)
+        self.timers = []      # (fire_day, effect_dict) — a timer with a `period` re-arms at its fire
         self.log = []
+        # THE CLOCK SITTING (2026-09-07): the bound and the marker (CLOCK.md section 4)
+        self._last_marker = 0        # the last forward marker's day — every later event's bound opens here
+        self._open_bounds = []       # the bound lists still open, SHARED by the event, its effects, timers, fires
+        self._dated = None           # a retrograde stretch's stated day (Pesachim 6b:7), until the clock moves
         # D9-ii: every daemon's WATCH COVERAGE — events seen, events it fired on,
         # the kinds it fired on — printed by coverage(); the zero-report law's
         # instrument for the simulator (a daemon that never fires is visible)
@@ -93,7 +274,13 @@ class World:
                              % (self._depth + 1, DEPTH_BOUND, self._consuming, event.get('kind')))
         self._depth += 1
         try:
-            self.log.append(('EVENT', self.clock.year, event))
+            if self._dated is not None:                      # inside a retrograde stretch: the text's own date, no bound
+                event['dated'] = self._dated
+            else:                                            # between markers: the bound [the last marker, open]
+                b = [self._last_marker, None]
+                event['bound'] = b
+                self._open_bounds.append(b)
+            self.log.append(('EVENT', self.clock.day, event))
             fired = 0
             for law in self.laws:
                 name = getattr(law, '__name__', repr(law))
@@ -107,6 +294,9 @@ class World:
                     w['kinds'].add(event['kind'])
                 for eff in effs:
                     fired += 1
+                    for key in ('bound', 'dated'):           # the engine copies the event's bound/date onto its effects
+                        if key in event:
+                            eff.setdefault(key, event[key])
                     self._write(eff)
             return fired
         finally:
@@ -122,18 +312,22 @@ class World:
 
     def _write(self, eff):
         FX.validate([eff['effect']])
-        if eff.get('due') is not None and eff['due'] > self.clock.year:
+        now = self.clock.day
+        if eff.get('due') is not None and eff['due'] > now:
             self.timers.append((eff['due'], eff))     # construct 4
-            self.log.append(('TIMER-SET', self.clock.year, eff))
+            self.log.append(('TIMER-SET', now, eff))
             return
         ent = self.entity(eff['subject'])
         op = FX.REGISTRY[eff['effect']]['ledger_op']
-        entry = dict(eff, op=op, year=self.clock.year,
+        entry = dict(eff, op=op, day=now, year=self.clock.year,
                      open=(op in ('debit', 'heaven', 'body')))
         ent.ledger.append(entry)
         if op == 'status':
             ent.status[eff['effect']] = eff.get('value', True)
-        self.log.append(('WRITE', self.clock.year, entry))
+        if eff.get('due') is not None and eff['due'] < now:   # a due already past (a retrograde stretch): written now, named
+            self.log.append(('RETRO-WRITE', now, entry))
+        else:
+            self.log.append(('WRITE', now, entry))
 
     def close(self, eid, effect, note):
         """an entry closes when the text records the closing act"""
@@ -149,29 +343,66 @@ class World:
         'forever' voids his six-year exit — Exod 21:5-6): the interface
         gap the skeleton's first spin exposed"""
         kept, cut = [], 0
-        for yr, eff in self.timers:
+        for day, eff in self.timers:
             if eff['subject'] == subject and eff['effect'] == effect:
                 cut += 1
-                self.log.append(('TIMER-CANCEL', self.clock.year,
+                self.log.append(('TIMER-CANCEL', self.clock.day,
                                  dict(eff, cancelled_by=note)))
             else:
-                kept.append((yr, eff))
+                kept.append((day, eff))
         self.timers = kept
         return cut
 
-    # -- construct 4: time advances; due timers fire -------------------
-    def advance(self, to_year):
-        while self.clock.year < to_year:
-            self.clock.year += 1
-            due = [t for t in self.timers if t[0] == self.clock.year]
-            self.timers = [t for t in self.timers if t[0] != self.clock.year]
+    def marker(self, verse, day, value=None):
+        """THE MARKER (CLOCK.md section 4): the text's own date stamp sets the clock. A marker at or after the
+        counter walks advance(day) and CLOSES every open bound at it; a marker EARLIER than the counter is
+        RETROGRADE (Pesachim 6b:7 — 'there is no earlier and later in the Torah'; Num 9:1 after 1:1): logged,
+        the counter unmoved, the following events dated by the text until the clock next moves."""
+        if day < self.clock.day:
+            self.log.append(('MARKER', self.clock.day, {'verse': verse, 'value': value, 'retrograde': True, 'stated': day}))
+            self._dated = day
+            return day
+        self._dated = None
+        self.advance(day)
+        for b in self._open_bounds:
+            b[1] = day
+        self._open_bounds = []
+        self._last_marker = day
+        self.log.append(('MARKER', day, {'verse': verse, 'value': value, 'retrograde': False}))
+        return day
+
+    # -- construct 4: time advances; due timers fire; a period re-arms --
+    def advance(self, to_day):
+        if to_day > self.clock.day:
+            self._dated = None                               # the clock moves: the retrograde stretch is over
+        while self.clock.day < to_day:
+            self.clock.day += 1
+            now = self.clock.day
+            due = [t for t in self.timers if t[0] == now]
+            self.timers = [t for t in self.timers if t[0] != now]
             for _, eff in due:
-                eff = dict(eff, due=None)
-                self.log.append(('TIMER-FIRE', self.clock.year, eff))
-                self._write(eff)
+                fired = dict(eff, due=None)
+                self.log.append(('TIMER-FIRE', now, fired))
+                self._write(fired)
+                p = eff.get('period')
+                if p is not None:                            # THE PERIOD FIELD (consensus G): re-armed through the Calendar
+                    nxt = now + p if isinstance(p, int) else self.clock.calendar.next(now, p)
+                    re = dict(eff, due=nxt, rearmed_from=now)
+                    self.timers.append((nxt, re))
+                    self.log.append(('TIMER-SET', now, re))
 
     # -- construct 5: the diff engine ----------------------------------
-    def checkpoint(self, name, declared, computed):
+    def checkpoint(self, name, declared, computed, bound=None):
+        """declared against computed; with a BOUND, the computed day is tested against the interval the text
+        dates the originating event within (an open bound is tested to now, and says so)"""
+        if bound is not None:
+            lo, hi = bound[0], (bound[1] if bound[1] is not None else self.clock.day)
+            ok = lo <= computed <= hi
+            print('  CHECKPOINT %-34s %s  within [%s, %s]%s' % (name, 'MATCH' if ok else 'DIVERGE', lo, hi,
+                                                                '' if bound[1] is not None else ' (open bound: tested to now)'))
+            if not ok:
+                print('    computed: %s' % (computed,))
+            return ok
         ok = declared == computed
         print('  CHECKPOINT %-34s %s' % (name, 'MATCH' if ok else 'DIVERGE'))
         if not ok:
@@ -187,7 +418,11 @@ class World:
 # =====================================================================
 
 def law_slave_term(event, world):
-    """Exod 21:2-6 (cold_run_mishpatim.py F1). The term clock."""
+    """Exod 21:2-6 (cold_run_mishpatim.py F1). The term clock. THE CLOCK SITTING (2026-09-07): the six years
+    are a calendar due (the same date six years on), the pierced servant's jubilee a due the Calendar computes
+    (the year no longer passed inside the event), and the proclamation CANCELS each freed servant's pending
+    term (THE PENDING TERM, REPORT_WRAP_W5.md finding 1) — deferring the release itself to the land's
+    `jubilee_holds` verdict where a jubilee daemon registered before it has written one."""
     if event['kind'] == 'acquire_hebrew_slave':
         s = event['slave']
         world.entity(s).status['hebrew_slave'] = True
@@ -197,8 +432,8 @@ def law_slave_term(event, world):
              'due': None, 'source_law': 'F1 slave-release [INK 21:2]',
              'case_source': event['case_source']},
             {'effect': 'goes_free', 'subject': s, 'counterparty': None,
-             'amount': None, 'due': world.clock.year + 6,
-             'source_law': 'F1 FREE-YEAR-7 [INK 21:2: six + seventh + free]',
+             'amount': None, 'due': world.clock.after(6, 'year'),
+             'source_law': 'F1 FREE-YEAR-7 [INK 21:2: six + seventh + free — the same date six years on]',
              'case_source': event['case_source']},
         ]
     if event['kind'] == 'slave_pierced':
@@ -212,19 +447,26 @@ def law_slave_term(event, world):
                             'master... he shall serve him forever"]')
         return [
             {'effect': 'jubilee_release', 'subject': s, 'counterparty': None,
-             'amount': None, 'due': event['jubilee_year'],
+             'amount': None, 'due': world.clock.next('jubilee'),
              'source_law': 'F1 FREE-AT-JUBILEE [IMPORT Lev 25; Kiddushin '
-                           '15a:19: written even for the pierced "forever"]',
+                           '15a:19: written even for the pierced "forever" — the due the Calendar computes]',
              'case_source': event['case_source']},
         ]
     if event['kind'] == 'jubilee_proclaimed':
-        # the institutional flag flips on a text event, era-wide
+        # the institutional flag flips on a text event, era-wide; where a jubilee daemon (law_yovel) has
+        # written the land's verdict first, that verdict rules: no arm holding = no release, the term kept
+        holds = world.entity(event.get('land', 'the-land')).status.get('jubilee_holds')
+        if isinstance(holds, str) and holds.startswith('no jubilee'):
+            return []                                        # no arm holds (the verdict named on the land): the servants serve on
         out = []
         for ent in world.entities.values():
             if ent.status.get('hebrew_slave'):
+                world.cancel_timers(ent.eid, 'goes_free',
+                                    'the jubilee [Lev 25:10 liberty proclaimed; Kiddushin 15a:19] — THE PENDING TERM cut')
                 out.append(
                     {'effect': 'goes_free', 'subject': ent.eid,
                      'counterparty': None, 'amount': None, 'due': None,
+                     'value': holds if holds is not None else True,
                      'source_law': 'F1 FREE-AT-JUBILEE',
                      'case_source': event['case_source']})
         return out
@@ -361,7 +603,7 @@ def law_installation(event, world):
                            'go out seven days]',
              'case_source': event['case_source']},
             {'effect': 'released', 'subject': subj, 'counterparty': None,
-             'amount': None, 'due': world.clock.year + 7,
+             'amount': None, 'due': world.clock.day + 7,         # THE CLOCK SITTING: the counter is the day
              'source_law': 'F7 completion [INK 8:33: until the day of '
                            'the filling of your installation days]',
              'case_source': event['case_source']},
@@ -394,7 +636,7 @@ def law_installation(event, world):
 def run():
     print('THE SIMULATOR SKELETON — first spin (2026-09-03)')
     print('era: TEST SCENES over the tradition\'s recorded cases\n')
-    w = World(era='test-scenes (recorded cases)')
+    w = World(era='test-scenes (recorded cases; the count epoch — the day the base unit, the year derived)', epoch='count')
     w.laws = [law_slave_term, law_goring_ox, law_guardians,
               law_deposit_oath]
     assert w.laws, 'ZERO-REPORT: empty law library'
@@ -406,15 +648,15 @@ def run():
     w.submit({'kind': 'acquire_hebrew_slave', 'slave': 'the-slave',
               'master': 'the-master',
               'case_source': 'Mishnah Kiddushin 1:2'})
-    w.advance(5)
+    w.advance(w.clock.at_year(6))                # acquired in year 1: six years of service run to the same date in year 7
     mid = w.entity('the-slave').status.get('hebrew_slave') and \
         not any(e['effect'] == 'goes_free'
                 for e in w.entity('the-slave').ledger)
-    w.advance(6)
+    w.advance(w.clock.at_year(7))
     freed = any(e['effect'] == 'goes_free'
                 for e in w.entity('the-slave').ledger)
     results.append(w.checkpoint(
-        'year 5: still serving; year 6+: free',
+        'year 6: still serving; year 7: free',
         (True, True), (bool(mid), bool(freed))))
 
     # SCENE 2 — the goring ox turns forewarned (Mishnah Bava Kamma 1:4
@@ -484,16 +726,15 @@ def run():
               'master': 'the-master',
               'case_source': 'Mishnah Kiddushin 1:2'})
     w.submit({'kind': 'slave_pierced', 'slave': 'the-pierced',
-              'jubilee_year': 12,
               'case_source': 'Kiddushin 15a:19 on Exod 21:6 + Lev 25:10'})
-    w.advance(12)
+    w.advance(w.clock.next('jubilee'))            # the Calendar's next jubilee: the fiftieth count-year's first day
     freed2 = [e for e in w.entity('the-pierced').ledger
               if e['effect'] == 'jubilee_release']
     six_yr_freed = [e for e in w.entity('the-pierced').ledger
                     if e['effect'] == 'goes_free']
     cancels = len([l for l in w.log if l[0] == 'TIMER-CANCEL'])
     results.append(w.checkpoint(
-        'six-year exit VOIDED; jubilee fires at 12',
+        'six-year exit VOIDED; jubilee fires at the fiftieth',
         (0, 1, 1), (len(six_yr_freed), len(freed2), cancels)))
 
     # SCENE 6 — the installation tape (Lev 8's OWN recorded narrative —

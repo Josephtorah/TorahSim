@@ -13781,3 +13781,248 @@ world.close() (exists, uncalled by any daemon); (B) the base unit is the DAY, th
 jubilee fork as two timer effects with the silence-arm named as a value; (G) five OPEN items with their settlers (the flood's thirty-day months and the
 two day boundaries added by this thread). Implementation is an engine sitting of its own (the library law_slave_term's jubilee_year field and THE PENDING
 TERM fold into it) — UNSEQUENCED, the owner's call; nothing changed in the repo.
+
+═══ COMMITTED d6d82b9 (2026-09-07, the owner: "commit push") — THE LINK REVIEW LR1-LR3 + W6 + W7 in one commit (36 tracked files + 4 new: REPORT_LINK_REVIEW.md,
+REPORT_WRAP_W6.md, REPORT_WRAP_W7.md, claim_ceilings_LR1_2026-09-07.json), staged by exclusion (the NEVER-COMMIT set, elijah_docket, and ARCHITECTURE/* left
+unstaged), pushed as Josephtorah (aee86b0..d6d82b9), the account switched back. #85 remains the clean point; this entry is the only thing after it.
+
+═══ D9-iv THE DELIVERABLE RULE AMENDED — DONE (2026-09-07; the owner: "ok after d9 lets compact first" — a records sitting, no code; the sequence before
+Numbers CLOSED: LR1-LR3, W6, W7, D9-iv all done; the owner's ruling on the clock discussion: "not a review — one engine sitting", and it runs AFTER a
+compaction, BEFORE Numbers)
+THE RULE AS AMENDED (THE_STEPS Step 5 (1), the head and a new motion (6) WRAP IT): a law span does not FINISH Step 5 until its cold-compiled function
+exists, its dependency edges are DISPOSITIONED, AND its WRAP is DECLARED and VERIFIED — the daemon in daemon_dispositions.yaml before its code, the
+daemon gate green. Motion (6) written in the wrap rhythm's five parts as the seven sittings fixed them: the case heads (or the story's own acts)
+registered as event types FIRST by script, each witness contiguous, THE TWO QUESTIONS on any multi-seat type; the daemon DECLARED and the gate run to
+fail before a line of code; the code as CALLS into the runner's own cells, no verdict typed into a daemon, the empty return declared as an empty watch;
+the scene as LITERAL submits with the TUPLE predicted by script before the runner runs (a miss is evidence, never a retype); the gate and the sweep with
+the span's live edges filed with their link. THE FENCE stated inside it. The campaign's closing sentence in THE DAEMON CAMPAIGN paragraph marked IN
+FORCE. COMPILE_DEBT's head paragraph amended, D9-iv [x] and D9 [x] COMPLETE (D9-a, D9-i, D9-ii, D9-iii W1-W7, D9-iv), the sequence line updated with
+the ruling; THE_BRIEFING's D9-iv entry (a process upgrade); memory compiler-law.md's rule line. Gloss lints: THE_STEPS 1 (baseline), THE_BRIEFING 0,
+COMPILE_DEBT 0. Nothing in code moved: 248 / 0 / 6 of 254; sweep 33/33 at 3625 (unchanged since W7); hash unmoved. Last commit d6d82b9; UNCOMMITTED:
+this sitting's four records (THE_STEPS, COMPILE_DEBT, THE_BRIEFING, this doc) + memory.
+
+═══ COMPACTION POINT #86 (2026-09-07 — written at the owner's word "after d9 lets compact first"; the owner compacts NEXT)
+═══ CLEAN POINT — no work mid-flight. THE SEQUENCE BEFORE NUMBERS CLOSED (LR1-LR3, W6, W7, D9-iv); the daemon campaign COMPLETE; both gates satisfied;
+the sweep 33 of 33 at 3625; hash 8b8fff1fa28953af UNMOVED. LAST COMMIT d6d82b9 (LR1-LR3 + W6 + W7, pushed); UNCOMMITTED OF OURS: THE_STEPS.md,
+World/step9/COMPILE_DEBT.md, THE_BRIEFING.md, this doc (D9-iv + the clock consensus entries + this point), memory — commit only on the owner's "commit
+push", staging by exclusion as before; the NEVER-COMMIT set and the ARCHITECTURE/* rule unchanged; the elijah_docket gitlink never staged (it shows
+modified — leave it). POST-COMPACTION REREADS (mandatory, first sitting): THE CLOCK CONSENSUS entries above (DISCUSSION ONLY + THE CONSENSUS REACHED —
+the seven terms A-G and the period field's four amendments + the close pairing) + ARCHITECTURE/THE_CLOCK.md and ARCHITECTURE/TIME.md WHOLE (the design
+thread's — READ, never edit; the owner's ruling on them may have landed there) + World/step9/world_engine.py whole (Clock at line 52, Entity, World —
+submit 88, _write 123, close 138, cancel_timers 147, advance 163, checkpoint; the library daemons law_slave_term / law_goring_ox / law_guardians /
+law_installation; the test scenes under __main__) + REPORT_WRAP_W5.md finding 1 (THE PENDING TERM) + the five year-grain worlds' scenes and their tuple
+literals (cold_run_calendar.py scene() at 264 — "clock unit: years"; cold_run_holiness_b.py the orlah tree; cold_run_tochacha.py the debt and the
+seventy; cold_run_yovel.py the period of fifty with the library beside; cold_run_mishpatim.py the slave term) + the day-grain worlds' timers that touch a
+boundary (the erection's tamid_owed due day+1 and the bread's Sabbath; W7's day-47 tablets; moadim's "days of the year"; pesach's "days of Nisan") +
+World/step9/daemon_census.py parse_submits + events_layer.py FORMS + the effects registry's ledger_op column + THE_STEPS Step 5 (1) motion (6) and the
+compiler block + COMPILE_DEBT's BEFORE NUMBERS block + the memory files the-effects-law.md and step9-exam-era.md's STANDING LESSONS. THEN, on the owner's
+word: THE CLOCK SITTING — an ENGINE sitting (the first since the engine's first spin), by the consensus's terms, in this order: (1) the design written
+into World/step9/CLOCK.md FIRST (ls first) — the base unit the DAY, the year DERIVED by a calendar function; the timer record's period field (opt-in;
+int or calendar key; re-arm logged; the end a text event via cancel_timers) and the close pairing; the undated bound on events inherited by timers and
+fires; the MARKER log class; the era table and the rounding rule (RH 2b); calendar_parameters.yaml as the third registry (channel + source + teacher
+per row: RH 25a's month, RH 2b, Mishnah RH 1:1's four new years, Sanhedrin 11b-13a's intercalation, Arakhin 12b-13a's count-start OPEN, the flood's
+thirty-day months OPEN, the two day boundaries OPEN) — read by the calendar law alone (the code/data law); the jubilee fork as two timer effects; (2)
+FIRE-PROBES for the new constructs written BEFORE the engine code (the W1/LR1 lesson: a gate that never fails proves nothing) — the period re-arm, the
+cancel by text event, the undated bound's propagation, the derived year at an intercalated boundary, the jubilee fork's two arms; (3) the engine code
+(Clock.day; year derived; _write's re-arm; the marker; close called by the discharging act's daemon); (4) the library edit: law_slave_term's
+jubilee_year field retired for a due computed from the calendar function, THE PENDING TERM fixed in the same edit (the jubilee cancels the six-year
+term — cancel_timers), the daemon gate's five probes rerun; jubilee_proclaimed retired from the yovel scene or kept as the text's own proclamation
+(Lev 25:9-10 — the shofar) with its status write — decide at the sitting by the ink, record the reason; (5) the five year-grain scenes RE-TYPED under
+print-then-type (the prediction by script from the calendar function, day numbers for the year boundaries), the day-grain scenes untouched unless a
+literal moves — every move explained; (6) the gates, the probes, the sweep, REPORT_CLOCK.md (ls first), COMPILE_DEBT's clock line [x], THE_STEPS
+(the effects rule's timer sentence + a clock paragraph — a process upgrade), THE_BRIEFING, this doc, memory. The design thread's THE_CLOCK.md is the
+SPECIFICATION and stays theirs; our CLOCK.md is the implementation record and cites it. Then NUMBERS opens (its first sitting reads the standing map:
+THE_STEPS whole, the spine default Sifrei Bamidbar + Onkelos, the oral-first pipeline memory, the deliverable rule as amended). OPEN (counted): as
+#85's minus D9-iv: THE UNFILED LIVE EDGES 32 (one filing sitting), the last open alias (`renamed`), the three scene-count helpers as NONE (the
+homograph), X1-X5, the two gate items, THE PENDING TERM (folds into the clock sitting), THE CLAIMS LABEL DEBT, OWED FORWARD Num 27/36 + Deut 25.
+Watches: as #85's + THE ENGINE SITTING'S OWN LAW (design first, probes second, code third — the same order as a wrap) + THE LITERAL THAT MOVES (a
+year-scene's re-typed tuple is a graded value moving: every slot's change explained by the derived year, or it is a bug) + THE SPEC IS THEIRS (cite
+THE_CLOCK.md, never edit it).
+
+═══ THE CLOCK CONSENSUS — ROUND TWO (2026-09-07, the first sitting after the compaction at #86; the owner: "read 86 tel me whats next", then "lets have
+another discussion with the other thread to reach consensus. stand your ground if you feel strongly about something" — DISCUSSION ONLY, nothing in the
+repo changed; #86 remains the clean point; this entry AMENDS #86's clock-sitting plan and is read with it)
+THE SPEC AS FOUND: ARCHITECTURE/THE_CLOCK.md rewritten (15:04) into sections 0-11 plus a consensus block A-H, "nothing here is ruled until the owner rules
+it"; its section 11 step 5 proposed compiling Lev 23, 25 and Num 28-29 as calendar laws INSIDE the sitting. OUR EIGHT POSITIONS (sent with the evidence
+after the #86 rereads — the spec, TIME.md, world_engine.py whole, the five year-grain scenes; the design thread CONCURRED ON ALL EIGHT, withdrawing its
+step 5 and its "two timer effects with different dues"):
+(1) SCOPE (held firm) — the sitting is the ENGINE sitting only: Lev 23 and 25 are already compiled (moadim, yovel; Exod 23/34 as law_calendar), Num 28-29
+has no frozen unit (derivation before the cold function — the compiler law); the festival boundary timers wait for Numbers; the moadim runner keeps its
+own month arithmetic until its own sitting; ONLY TAPE-BORNE CHECKPOINTS run (the seventy years on the tochacha tape; the flood's 150 days on pre_sinai if
+Gen 7:11-8:4 is on it; day 47) — the 480, the 430, the 38 and the 44 synchronisms belong to tapes that do not exist.
+(2) THE CALENDAR IS AN ENGINE CONSTRUCT (held firm) — a Calendar held by the Clock (next(day, key), year(day), date(day)) reading calendar_parameters.yaml
+as DATA, because the period re-arm fires inside advance() (line 163) and the engine cannot import a runner (every runner imports the engine). NO new daemon
+named "the calendar law" (law_calendar exists — Exod 23); the boundary timers are set by the daemons whose verses command the count, at the start event
+the ink names: law_yovel consumes entered_the_land (already registered; Lev 25:2 "when you come into the land" is its own verse) and sets the land's
+sabbatical and jubilee timers with calendar-key periods — one new watch on an existing daemon, the wrap rhythm. The design thread's flag ACCEPTED under the
+code/data law: the four new years (Mishnah Rosh Hashanah 1:1) are a received DATA row, not mechanism; the mechanism from ink is Exod 12:2's month one,
+Gen 1's evening-to-evening, Lev 25:8's forty-nine, Lev 23's dates — the fractions report it so.
+(3) jubilee_proclaimed IS KEPT (held firm against the spec's "this retires the jubilee_proclaimed event") — the text's own act with its witness (Lev
+25:9-10: the horn sounded, liberty proclaimed), a registered case type with two consumers, and Rabbi Yose's arm of the Sifra's dispute (Sifra Behar
+Chapter 2 row 4) makes the horn the jubilee's CONDITION — the fork cannot run without the act on the tape. What retires: the year inside slave_pierced
+(world_engine.py line 216, the jubilee_year field) and the script's 'year': 50 on the proclamation — its DAY is the calendar's computed tenth of the
+seventh month (the Day of Atonement) of the fiftieth year, predicted by script and submitted at that day. A FEATURE, NOT A GAP (the design thread's,
+accepted): on the historical tape the proclamation is never narrated, so the engine writes the fiftieth-year status and the entitlements and NO release —
+which is what the tradition records. Arakhin 32b:16, READ ON THE SHELF this sitting: "from when the tribe of Reuben, the tribe of Gad and half the tribe of
+Manasseh were exiled, the jubilees ceased, as it is said 'and you shall proclaim liberty in the land to ALL its inhabitants' — at the time when all its
+inhabitants are upon it, and not at the time when some of them were exiled" (32b:15 beside it: Ezra counted).
+(4) THE FORK CANNOT RIDE ON DUES ALONE (our own F AMENDED, the reason found in the reread) — both arms condition the jubilee's validity on an ACT performed in
+the fiftieth year (Rabbi Yehuda: not without the servants sent free; Rabbi Yose: not without the horn), unknown at the sale when the return timer is set
+(cold_run_yovel.py line 711, due = the jubilee year), and a fire wakes no daemon. THE THREE-LAYER SHAPE, agreed: the count's timer writes the UNDISPUTED
+fact — the fiftieth year arrived — as a status on the land (both arms agree the year is the fiftieth); the sale's timer fires the ENTITLEMENT (Lev 25:28
+"it shall go out in the jubilee") as a status on the field; the RELEASE is written by the daemon that consumes the year's act, the proclamation, forking on
+the tradition's THREE recorded conditions — the horn sounded and the servants sent free as the act's OWN FIELDS (the Sifra's "even though they did not"
+rows, run as scene rows), and ALL THE INHABITANTS (Arakhin 32b) as a STATE read off the land's LEDGER (an exile status written by the daemon that consumes
+the exile event; the tochacha's tape carries the exile), never an event field — a scene field asserting a state is the script smuggling state in, the same
+argument that retired the year from the piercing; the scene testing that arm submits the exile event first. The "no jubilee" arm is a named value written
+by a daemon on an event — never a silence, never a fire. law_slave_term's jubilee_proclaimed branch (line 220, era-wide goes_free) generalizes to it.
+(5) SUB-DAY OUT of the sitting — hours, the named slots, the twilight doubt flag are OPEN-5's; "until the evening" stays day + 1 at the boundary.
+(6) THE ERA TABLE AS DATA, code paths only where a tape exercises them (D amended) — each world declares its EPOCH ROW (the exodus era, Exod 40:17, for the
+erection's and moadim's tapes; the life-years era, Gen 7:11, for pre_sinai's flood; the entry for yovel's count); the derived year for a world with no epoch
+declared is None — an honest "no era declared", never a guess; the regnal rows, the exile era (Avodah Zarah 10a) and the rounding rule (Rosh Hashanah 2b)
+enter calendar_parameters.yaml with channel and source and stand UNEXERCISED and visible under the zero-report law, the way an unfired daemon is; "enter
+code for the first time" = the registry and the Calendar's reader.
+(7) MARKER + BOUND mechanics (checked, not disputed) — world.marker(verse, day) walks advance(day) and logs ('MARKER', day, verse, value); advance() stays
+public for the harness (day 47 is a timer's due, the scene's advance walks to it); submit() stamps every event's bound [the last marker's day, open]; the
+next marker CLOSES the open bound on every event and timer between; the engine copies the bound onto each effect during consumption (it knows the event
+through _consuming), onto each fire and each re-arm — no daemon touches it; a checkpoint against a still-open bound tests [lo, now] and says so. ADDED BY THE
+DESIGN THREAD, ACCEPTED: THE RETROGRADE MARKER — the text dates out of order (Num 9:1, the first month, stands after Num 1:1, the second month), and the
+rule is named: Pesachim 6b:7, READ ON THE SHELF: "and let it write of the first month first and then of the second month — Rav Menashya bar Tachlifa in the
+name of Rav: this tells us there is no earlier and later in the Torah." A marker earlier than the counter is logged MARKER with a retrograde flag; the
+counter does not move; the event keeps its stated day as a DATED point (no bound; the entry carries `dated` = the text's day beside `day` = the counter at
+the write); its timers compute their due from the stated day; a due already past writes at submission through _write's existing immediate branch (line
+125: due not greater than now writes at once) with the log naming it retrograde — no second write path; checkpoints read `dated`. The tape in verse order,
+the clock monotone, the date the text's.
+(8) THE FIELD RENAME — Clock.day the counter, Clock.year DERIVED through the world's epoch, log tuples and ledger entries carrying both; a day-grain slot that
+read entry['year'] as the counter moves and is re-typed with that one explanation; the year-grain scenes' advance(7) becomes the marker or advance to the
+computed first day of year 7 of that world's epoch, predicted by script from the Calendar; every new status the boundary timers write (the land's sabbatical
+year, the land's jubilee year, the field's entitlement) enters effect_vocabulary.yaml FIRST under the effects law, in the tradition's vocabulary.
+THE CONSENSUS AS THE DESIGN THREAD REPORTS IT TO THE OWNER: A-H stand with F amended to the three-layer act-forked shape (three conditions: the horn, the
+servants, all the inhabitants), scope narrowed to the engine sitting, the calendar an engine construct over a data file (the four new years filed as
+data), jubilee_proclaimed kept with its day computed, the era table as data with unexercised rows visible, sub-day deferred, the retrograde-marker rule
+added to C. #86's PLAN (1)-(6) IS READ WITH THESE AMENDMENTS: (1) CLOCK.md's design carries the three-layer fork, the Calendar on the Clock, the epoch row
+per world, the retrograde marker, the `dated` field; (2) the fire-probes add the retrograde marker's three cases (the flag logged, the counter unmoved, the
+past due written at submission) and the fork's three conditions (two off the act, one off the ledger); (3) the engine code adds Calendar, marker(), the
+bound stamp, `dated`; (4) the library edit retires jubilee_year from slave_pierced (the due computed) and generalizes the jubilee_proclaimed branch to the
+three conditions — jubilee_proclaimed KEPT, decided here by the ink (25:9-10) and Rabbi Yose's arm; (5) the yovel scene opens on entered_the_land (its
+first row — the count's start) and submits the proclamation at the computed day; (6) unchanged. THE OWNER RULES; the sitting opens on the word. Nothing
+committed; the uncommitted set as #86's plus this entry.
+
+═══ THE CLOCK SITTING — DONE (2026-09-07, the same sitting; the owner: "ok do the clock sitting" — the first ENGINE sitting since the skeleton's first
+spin, by the consensus as amended at round two; the wrap's order held: design, probes, code, library, scenes, gates)
+(1) THE DESIGN FIRST — World/step9/CLOCK.md (NEW, ls'd first; gloss 0): scope, the base unit and the derived year, the Calendar as an engine construct
+over the third registry, the period field and the close pairing, the marker/bound/retrograde marker, the jubilee's three layers, the twelve probes, the
+re-type rule, what stays OPEN; section 9 "as built" at the close. calendar_parameters.yaml (NEW, ls'd first; gloss 0): 18 rows (ink 6 / received 9 /
+rounding 1 / modeled 2) + 5 eras, every source resolved on the shelf BY SCRIPT at the sitting (Rosh Hashanah 25a:10 the received month; 2b:1 the
+rounding; 8b:8, 8b:12 the sanctification and the horn; 9a:1 the fiftieth's place; Mishnah Rosh Hashanah 1:1 the four new years — a DATA row, the design
+thread's flag accepted; Sanhedrin 11b:5 the three grounds, 13a:1 the season ground on Exod 34:22, 13a:4 the THRESHOLD sixteen/twenty, 12b:8 only Adar
+intercalated; Arakhin 12b:4-5, 13a:7-8 the count-start; the Sifra's arms); TWO MODELED ROWS labeled — solar_year_days (the season's length named by
+TIME.md at Eruvin 56a was NOT FOUND on the whole Babylonian shelf by script under the searched forms) and equinox_offset_days (OPEN-2); 6 UNEXERCISED
+rows visible (regnal_rounding, fiftieth_in_cycle, the eras exodus / life_years / regnal / exile_greek).
+(2) THE PROBES SECOND — World/step9/clock_probes.py (NEW): twelve probes, 0/12 against the unchanged engine (the run recorded), 12/12 after; plus the
+parameters census. ⚠ FX.validate raises SystemExit — a probe harness must catch BaseException or the suite dies at the first unregistered effect.
+(3) THE ENGINE THIRD — world_engine.py: class Calendar (lays the months from the epoch: 30/29 alternating; the thirteenth month by the season ground —
+the equinox projected against the next seventh month's first day, the recorded threshold; keys day/week/month/year/sabbatical/jubilee; position() with
+the count-start offset and the fiftieth's setting), Clock(era, day, epoch) with the DERIVED year/date and at_year/after/next; World(era, epoch) with
+marker() (forward: walks and closes every open bound; retrograde: logged, the counter unmoved, `dated` set), the bound stamped in submit() and copied
+onto the effects during consumption (shared lists — one close closes all), entries carrying day + year (+ dated), RETRO-WRITE for a past due, the
+PERIOD re-arm in advance() (int or calendar key; TIMER-SET with rearmed_from), checkpoint(bound=) testing an interval (open bound: tested to now, said
+so). THE MODELED INTERCALATION produced nineteen thirteen-month count-years in the first fifty — seven in nineteen, the later fixed cycle's frequency,
+from the threshold and the solar year alone, never counted as ink.
+(4) THE LIBRARY FOURTH — law_slave_term: the six years = clock.after(6, 'year'); the pierced servant's jubilee = clock.next('jubilee') (the jubilee_year
+field RETIRED from slave_pierced and the skeleton's scene 5); the proclamation CANCELS each freed servant's pending term (THE PENDING TERM FIXED) and
+DEFERS to the land's jubilee_holds when a jubilee daemon registered before it wrote one; law_installation's seven days read clock.day (⚠ the skeleton's
+scene 6 crashed on the old name after the rename — the skeleton's own run is a probe of the library). The skeleton 6/6 (scene 1 re-typed to years 6 and
+7; scene 5 "the jubilee at the fiftieth").
+(5) THE SCENES FIFTH — the RENAME by script in 25 day-grain runners (clock.year → clock.day at 50 sites; entry['year'] → entry['day'] in six scenes; no
+literal moved; backups scratchpad/pre_clock/); the five year-grain runners re-typed (epoch='count'; advance(N) → advance(w.clock.at_year(N)); 35 'year'
+fields removed from the submits — the smuggled parameter retired; the daemons read world.clock.year and compute dues through the Clock: calendar
+at_year(year + 6), holiness_b after(3,'year'), tochacha after(debt/n,'year'), yovel next('jubilee') and after(1,'year')); THE YOVEL DAEMON re-typed
+(scratchpad yovel_clock_code.py spliced): entered_the_land sets the count's two recurring status timers (sabbath_of_the_land period 'sabbatical',
+jubilee_year period 'jubilee'); land_sown reads the land's ledger for this year's status; field/house/brother sales set the ENTITLEMENT
+goes_out_in_the_jubilee at next('jubilee'); jubilee_proclaimed forks on horn_sounded / servants_sent_free (the act's fields) and the people's
+scattered_among_nations (the ledger — Arakhin 32b:16), writes jubilee_holds + jubilee_release per arm and the RELEASE (returns_to_holding; goes_free for
+persons) for every entitled entity on a holding arm; the fork's three worlds as a graded row (SCENE_FORK, law_tochacha registered beside — the edge
+yovel → tochacha FILED as a transfer taught by Arakhin 32b:16, 167 edges; ⚠ a function-level import is invisible to the dependency census's live-edge
+list though its CALL check accepts it). THE PREDICTIONS BY SCRIPT FIRST (scratchpad clock_predictions.txt): yovel's 51-slot tuple (tset 14 → 20, fired
+13 → 17, cut 1, rearm 8, the sabbaticals [7..49]) MATCHED ON THE FIRST RUN; calendar 17/17, holiness_b 183/183, tochacha 38/38, mishpatim 24/24 all
+UNCHANGED literals matched — the derived year equalled every old year literal. ⚠ THE ONE MISS (evidence): the fork world with the servants not sent free
+predicted the land's verdict "jubilee" (Rabbi Yose's arm holds); the machine joined the arms in the Sifra's order, "no jubilee (Rabbi Yehuda...);
+jubilee (Rabbi Yose...)", and the library's deferral reads the string's head — the daemon corrected to name the holding arm first, the literal stood
+(77/77); probe 9 had passed because it read the per-arm entries, not the joined verdict. The registries: four effects registered FIRST with their
+Hebrew machine-verified in the Tanakh DB (⚠ the words carry morpheme bars '/' — strip them; ⚠ a query on one cursor inside another's iteration returns
+nothing — two false "not found" read before believed): sabbath_of_the_land, jubilee_year, goes_out_in_the_jubilee, jubilee_holds (246); tamid_owed's
+ledger_op timer → debit WITH THE REASON (the close pairing needs an open entry; the erection's tamid_offered now calls world.close before setting
+tomorrow's — probe 12); the events registry's twelve 'year' fields retired, the proclamation's fields [proclaimer, land, horn_sounded,
+servants_sent_free, people], entered_the_land +land and its third consumer, the tape lines current (lint 0). daemon_dispositions: law_yovel's watches
+(+entered_the_land, the proclamation's four effects, the entitlement on three kinds), scene_counts_fork NONE (⚠ under the yovel functions block, not the
+erection's — the gate caught the misplacement). ⚠ an apostrophe inside a single-quoted law string (SyntaxError) — caught by fix_percent's parse before
+any run.
+(6) THE GATES AND THE SWEEP — DEPENDENCY GATE 167 edges / 72 pointers satisfied; DAEMON GATE 248 / 0 / 7 of 255, unfired 0, unconsumed 0, open aliases
+1; events lint 0; probes 12/12 + 5/5 + 12/12; THE SWEEP 33/33 at 3626 (+1: the fork's row; scratchpad sweep_clock.txt, SWEEP-EXIT 0). No unit touched.
+Records: REPORT_CLOCK.md (NEW, ls'd first, gloss 0), CLOCK.md section 9, COMPILE_DEBT's sequence line (THE CLOCK SITTING DONE; NEXT Numbers),
+THE_STEPS (motion (6)'s timer sentence + THE CLOCK SITTING paragraph after W7's; lint 1 baseline), THE_BRIEFING (a process upgrade; lint 0), this doc,
+memory. OPEN filed: the fork's reach to Lev 27:21/27:24 (direct timers at the fiftieth meanwhile); OPEN-1..6 as CLOCK.md section 8.
+
+═══ COMPACTION POINT #87 (2026-09-07 — written unprompted at THE CLOCK SITTING's close)
+═══ CLEAN POINT — no work mid-flight. THE CLOCK SITTING DONE; the daemon campaign COMPLETE; both gates satisfied; the sweep 33 of 33 at 3626; the
+clock probes 12/12; hash unmoved (no unit touched). LAST COMMIT d6d82b9 (LR1-LR3 + W6 + W7, pushed); UNCOMMITTED OF OURS: THE_STEPS.md, THE_BRIEFING.md,
+World/step9/{world_engine.py, calendar_parameters.yaml (NEW), CLOCK.md (NEW), clock_probes.py (NEW), REPORT_CLOCK.md (NEW), COMPILE_DEBT.md,
+effect_vocabulary.yaml, event_vocabulary.yaml, daemon_dispositions.yaml, dependency_dispositions.yaml, cold_run_yovel.py, cold_run_calendar.py,
+cold_run_holiness_b.py, cold_run_tochacha.py, cold_run_mishpatim.py, cold_run_erection.py + the 24 other renamed day-grain runners, DAEMON_INDEX.md +
+DEPENDENCY_INDEX.md regenerated by the sweep}, this doc (D9-iv, the two consensus entries, #86, this sitting, this point), memory — commit only on the
+owner's "commit push", staging by exclusion as before; the NEVER-COMMIT set and the ARCHITECTURE/* rule unchanged; the elijah_docket gitlink never
+staged. POST-COMPACTION REREADS (mandatory, first sitting): this entry + CLOCK.md whole + REPORT_CLOCK.md whole + calendar_parameters.yaml + the
+Calendar/Clock/World classes in world_engine.py (lines 51-330) + THE_STEPS Step 2 + Step 5 (1) motion (6) + the compiler block + COMPILE_DEBT's BEFORE
+NUMBERS block + the memory files step9-exam-era.md's STANDING LESSONS and the-effects-law.md. THEN, on the owner's word: NUMBERS — its first sitting
+reads the standing map (THE_STEPS whole, the spine default Sifrei Bamidbar + Onkelos, the oral-first pipeline memory, the deliverable rule as amended:
+six motions; every new law span's timers set through the Clock — a due in years by after()/at_year()/next(), never a year literal; a world that needs a
+year declares its epoch) BEFORE the first unit; Num 27 + 36 (the inheritance order, OWED FORWARD from the family runner) wait there; Num 28-29's
+festival boundary timers (the calendar's recurring schedule with calendar-key periods on the erection's or moadim's tape — its own sitting after the
+derivation). OPEN (counted): THE UNFILED LIVE EDGES 32 (one filing sitting), the last open alias (`renamed`), the four scene-count helpers as NONE (the
+homograph), X1-X5, the two gate items, THE CLAIMS LABEL DEBT, OWED FORWARD Num 27/36 + Deut 25, THE FORK'S REACH TO LEV 27 (new), OPEN-1..6 of the
+clock (the parameters file names each settler), the moadim runner's own month arithmetic (re-typed onto the Calendar at its own sitting), the
+erection's and moadim's epoch rows (declared, unexercised). Watches: as #86's + THE VERDICT'S HEAD (a forked status string names the holding arm first —
+a reader reads the head) + THE MORPHEME BAR (strip '/' in the Tanakh DB's words) + THE SECOND CURSOR + THE PROBE HARNESS CATCHES SystemExit + THE
+FUNCTION-LEVEL IMPORT (file the edge by hand; the census does not list it) + THE MODELED ROW (labeled, never counted as ink; read the shelf row when found).
+
+═══ THE OWNER'S RULING AFTER THE CLOCK SITTING (2026-09-07): THE SEQUENTIAL RUN BEFORE NUMBERS ("are the first three books done to the point that we can
+run them in sequence" → not as one run on the law engine: the narrative world (corpus_world.py, the hash) folds all frozen units in canonical order, but
+the 38 daemons run on 33 separate test worlds, the narrative stretches each in its own world; the recommendation — run the three books in sequence
+BEFORE Numbers: the test of the whole, its lessons shape Numbers' wraps, it closes the owner's own question that began the clock work, bounded to one or
+two sittings — the owner: "ok lets do that but first I need to compact. get ready"). NOT COMMITTED (the owner did not say "commit push"); the
+uncommitted set as #87's.
+
+═══ COMPACTION POINT #88 (2026-09-07 — written at the owner's word "get ready"; the owner compacts NEXT)
+═══ CLEAN POINT — no work mid-flight (#87's state; nothing changed in code since). LAST COMMIT d6d82b9; UNCOMMITTED OF OURS: as #87's (THE_STEPS,
+THE_BRIEFING, World/step9's clock-sitting set — 40 modified + 4 new, COMPILE_DEBT, the four registries, the 30 runners, the engine — this doc, memory);
+commit only on the owner's "commit push", staging by exclusion as before; the NEVER-COMMIT set and the ARCHITECTURE/* rule unchanged; the
+elijah_docket gitlink never staged. POST-COMPACTION REREADS (mandatory, first sitting): #87's list (this doc's THE CLOCK SITTING entry + CLOCK.md whole +
+REPORT_CLOCK.md whole + calendar_parameters.yaml + the Calendar/Clock/World classes in world_engine.py + THE_STEPS Step 2 + Step 5 (1) motion (6) + the
+compiler block + COMPILE_DEBT's BEFORE NUMBERS block + memory's STANDING LESSONS and the-effects-law.md) + the memory corpus-world-simulation.md (the
+narrative world: entity_registry.yaml is the who-is-who to REUSE) + the narrative scenes on the law engine (cold_run_pre_sinai.py scene ~1003 "the
+creation week into the covenants"; cold_run_family.py scene ~1032 "the house of Abraham to the death of Jacob"; cold_run_pesach.py scene ~339;
+cold_run_erection.py's three worlds ~1318-1400; cold_run_sanctuary_build.py ~904; cold_run_vestments.py ~820; cold_run_incense_shekel.py's investiture
+world ~1290; cold_run_shemini_day.py ~702; cold_run_tzav.py ~638) + TIME.md sections 3, 7, 8 (the markers' census: 97 day-of-month stamps, 12 year-month
+stamps, the elapsed-time statements; the checkpoints) + THE_CLOCK.md section 2 (the era table) and 8 (the checkpoints). THEN, on the owner's word: THE
+SEQUENTIAL RUN — an engine-and-tape sitting in the wrap's order: (1) THE DESIGN FIRST in World/step9/SEQUENTIAL_RUN.md (ls first): ONE world for the
+three books, its base day = creation's first day; the ERAS AS COUNTERS ON ONE CLOCK — the engine extension: an era row gains an EPOCH DAY set by a MARKER
+event (Exod 12:2 "this month is for you the head of months" sets the exodus era's epoch; a person's birth sets a life-years counter; the count's epoch
+is the entry, NOT on this tape — the jubilee timers honestly never set), `clock.year_in(era)` counting the new-year boundaries since the epoch day, the
+world's derived year the creation era's (a NEW era row 'creation' with the recorded dispute as two settings: the world created in the seventh month —
+Rosh Hashanah 8a:15, Rabbi Eliezer; or the first — Rabbi Yehoshua; verify on the shelf); THE TAPE stitched BY SCRIPT from the existing narrative scenes'
+literal submits (the case scenes — the Mishnah's rows — are the EXAM and stay off the tape) in canonical verse order, each submit keeping its verse
+address; THE MARKERS from the text's own stamps and elapsed-time statements (the begettings of Gen 5 and 11 — "Adam lived 130 years and begot Seth" — as
+markers advancing by after(n, 'year'); Gen 7:11, 8:4, 8:13-14 the flood's dates; 12:4, 17:1, 21:5, 25:26, 47:9, 47:28 the life-years; Exod 12:2, 12:40-41,
+16:1, 19:1, 40:17; Lev 8-9's eight days) — every marker a literal with its verse; ENTITY NAMES unified across runners by logic/corpus/entity_registry.yaml
+(the narrative world's who-is-who — reuse, never a second registry); ALL 38 DAEMONS registered (their watch coverage printed — most law daemons see no
+event on a narrative tape: the zero-report law's instrument, said so); THE CHECKPOINTS the text supplies, against the interval where the event is undated
+(Exod 12:40-41's 430 years by the text's own chain — the begettings, the descent at Jacob's 130 — DIVERGE where the counts disagree, OPEN-3, never
+adjusted; Exod 40:17's date; the seventeenth of Tammuz; the installation's seven days; the flood's 150 days on a tape at last); (2) FIRE-PROBES for the
+new constructs BEFORE the engine code (the era counter set by a marker; year_in(era) across an intercalated boundary; a life-years counter; a checkpoint
+against an open bound on the stitched tape); (3) the engine extension; (4) the stitching script (scratchpad) and the tape file World/step9/
+cold_run_sequence.py (ls first) — a runner in the sweep's shape: the daemon gate parses its submits (LITERAL dicts or the (k, s, src) tuple loop; never a
+dict(r, ...) loop), its helper declared NONE, the TUPLE prediction by script FIRST; (5) the gates, the probes, the sweep (34 runners), REPORT_SEQUENTIAL_RUN.md
+(ls first), COMPILE_DEBT, THE_STEPS (a process upgrade — the tape's conventions Numbers must follow), THE_BRIEFING, this doc, memory. Then NUMBERS (its
+first sitting reads the standing map + SEQUENTIAL_RUN.md's conventions). OPEN (counted): as #87's. Watches: as #87's + THE EXAM STAYS OFF THE TAPE (a
+Mishnah row is a test, not history) + ONE WHO-IS-WHO (entity_registry.yaml) + THE ERA COUNTER IS SET BY A MARKER, NEVER BY A LITERAL DAY.

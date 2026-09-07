@@ -221,13 +221,13 @@ def scene():
         w.submit({'kind': 'goat_dispatched', 'subject': 'the-azazel-goat', 'goat': 'the-azazel-goat', 'dispatcher': 'the-designated-man', 'day': 10, 'case_source': 'Lev 16:20-22, 16:26; Mishnah Yoma 6:2-8'})
         w.advance(11)
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
-    yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    yr = lambda eid, eff: [e['day'] for e in w.entity(eid).ledger if e['effect'] == eff]
     tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
     return (n('the-both-known', 'suspends'), n('the-start-only', 'suspends'), yr('the-end-only', 'atoned_forgiven'), yr('the-neither', 'atoned_forgiven'), yr('the-deliberate', 'atoned_forgiven'), yr('the-other-sinner', 'atoned_forgiven'),
             n('the-penitent', 'atoned_forgiven'), n('the-unappeased', 'atoned_forgiven'), n('the-appeased', 'atoned_forgiven'), n('the-penitent', 'rest_required'), n('the-unappeased', 'labor_barred'),
             n('aaron', 'atoned_forgiven'), n('the-ark-cover', 'sprinkled_seven'), n('the-inner-altar', 'sprinkled_seven'), n('the-bull', 'accepted'), n('the-goat', 'accepted'), n('the-two-rams', 'accepted'), n('the-people', 'atoned_forgiven'),
             n('aaron', 'immersed'), n('the-sin-offerings-fat', 'smoked_to_the_lord'), n('the-burnt-pair', 'burned_outside_camp'), n('the-burner', 'defiles_garments'), n('the-burner', 'washes_and_bathes'),
-            n('the-azazel-goat', 'dispatched_to_wilderness'), n('the-designated-man', 'washes_and_bathes'), tset, fired, w.clock.year), w
+            n('the-azazel-goat', 'dispatched_to_wilderness'), n('the-designated-man', 'washes_and_bathes'), tset, fired, w.clock.day), w
 
 
 def main():

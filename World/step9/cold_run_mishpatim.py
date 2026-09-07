@@ -188,29 +188,29 @@ def law_mishpatim(event, world):
     return []
 
 def scene():
-    """THE SCENE — the recorded cases replayed on the world engine (clock unit: years; the answer sheet's rows as the tape)."""
+    """THE SCENE — the recorded cases replayed on the world engine (THE COUNT EPOCH — the day the base unit, the year derived; the answer sheet's rows as the tape)."""
     with contextlib.redirect_stdout(io.StringIO()):
-        w = WE.World(era='Mishpatim: Kiddushin 1:2 and Bava Kamma 1-8 on the engine (clock unit: years)')
+        w = WE.World(era='Mishpatim: Kiddushin 1:2 and Bava Kamma 1-8 on the engine (the count epoch: the day the base unit, the year derived)', epoch='count')
         w.laws = [WE.law_slave_term, WE.law_goring_ox, law_mishpatim]
-        w.advance(1)
+        w.advance(w.clock.at_year(1))
         w.submit({'kind': 'acquire_hebrew_slave', 'subject': 'the-master', 'master': 'the-master', 'slave': 'the-slave', 'case_source': 'Mishnah Kiddushin 1:2 — acquires himself by years'})
-        w.advance(3)
+        w.advance(w.clock.at_year(3))
         w.submit({'kind': 'redeemed_by_deduction', 'subject': 'the-slave', 'slave': 'the-slave', 'master': 'the-master', 'amount': 30, 'case_source': 'Mishnah Kiddushin 1:2 — by deduction of money; Kiddushin 16a:11'})
-        w.advance(4)
+        w.advance(w.clock.at_year(4))
         for i in (1, 2, 3):
             w.submit({'kind': 'ox_gores', 'subject': 'the-ox', 'ox': 'the-ox', 'owner': 'reuben', 'victim': 'simeon', 'victim_kind': 'animal', 'damage': 100, 'case_source': 'Mishnah Bava Kamma 2:4 — goring #%d' % i})
         w.submit({'kind': 'ox_gores', 'subject': 'the-ox', 'ox': 'the-ox', 'owner': 'reuben', 'victim': 'simeon', 'victim_kind': 'animal', 'damage': 100, 'case_source': 'Mishnah Bava Kamma 1:4 — the forewarned pays full'})
         w.submit({'kind': 'ox_gores', 'subject': 'the-ox', 'ox': 'the-ox', 'owner': 'reuben', 'victim': 'the-slaves-master', 'victim_kind': 'slave', 'case_source': 'Mishnah Bava Kamma 4:5 — the slave gored: thirty sela, the ox stoned'})
-        w.advance(5)
+        w.advance(w.clock.at_year(5))
         w.submit({'kind': 'men_quarrel', 'subject': 'levi', 'striker': 'levi', 'victim': 'judah', 'medical': 10, 'idleness': 5, 'blemish': 'eye', 'case_source': 'Mishnah Bava Kamma 8:1 — the five indemnities'})
         w.submit({'kind': 'pit_opened', 'subject': 'dan', 'owner': 'dan', 'victim': 'naphtali', 'damage': 40, 'case_source': 'Mishnah Bava Kamma 1:1 — the pit'})
         w.submit({'kind': 'field_grazed', 'subject': 'gad', 'grazer': 'gad', 'owner': 'asher', 'damage': 20, 'case_source': 'Mishnah Bava Kamma 1:1 — the tooth; from the best of the land'})
         w.submit({'kind': 'fire_spread', 'subject': 'issachar', 'kindler': 'issachar', 'owner': 'zebulun', 'damage': 60, 'case_source': 'Mishnah Bava Kamma 1:1 — the fire; 6:4'})
-        w.advance(6)
+        w.advance(w.clock.at_year(6))
         w.submit({'kind': 'animal_stolen', 'subject': 'the-thief', 'thief': 'the-thief', 'owner': 'joseph', 'animal': 'ox', 'disposed': True, 'value': 10, 'case_source': 'Mishnah Bava Kamma 7:1 — five for the ox'})
         w.submit({'kind': 'animal_stolen', 'subject': 'the-thief', 'thief': 'the-thief', 'owner': 'joseph', 'animal': 'sheep', 'disposed': True, 'value': 10, 'case_source': 'Mishnah Bava Kamma 7:1 — four for the sheep'})
         w.submit({'kind': 'animal_stolen', 'subject': 'the-thief', 'thief': 'the-thief', 'owner': 'joseph', 'animal': 'ox', 'disposed': False, 'value': 10, 'case_source': 'Mishnah Bava Kamma 7:1 — found in his hand: double'})
-        w.advance(8)                                              # year 7 passes: the CANCELLED six-year timer must not fire
+        w.advance(w.clock.at_year(8))                                              # year 7 passes: the CANCELLED six-year timer must not fire
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
     amt = lambda eid, eff: sum(e['amount'] or 0 for e in w.entity(eid).ledger if e['effect'] == eff)
     cut = len([l for l in w.log if l[0] == 'TIMER-CANCEL']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])

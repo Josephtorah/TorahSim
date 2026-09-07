@@ -479,15 +479,16 @@ daemons:
       herd_tithed: [consecrated, substitution]
   law_yovel:
     file: cold_run_yovel.py
-    wraps: yovel (Lev 25 + 27:2-8, 16-25 — the cycle, the jubilee, the field and the house, the poor brother, the slave, the valuations; clock unit YEARS)
+    wraps: yovel (Lev 25 + 27:2-8, 16-25 — the cycle, the jubilee, the field and the house, the poor brother, the slave, the valuations; THE COUNT EPOCH since THE CLOCK SITTING 2026-09-07 — the count's two recurring timers set at entry, the sowing read off the land's status, the sale's timer the ENTITLEMENT, the RELEASE on the proclamation act forked on its three recorded conditions)
     watches:
+      entered_the_land: [sabbath_of_the_land, jubilee_year]   # THE CLOCK SITTING: Lev 25:2 — the count begins; the periods 'sabbatical' and 'jubilee' re-armed through the Calendar
       land_sown: [land_release, labor_barred, lashes, jubilee_release, goes_free, returns_to_holding]
-      jubilee_proclaimed: [jubilee_release]
-      field_sold: [redemption_right, pays, returns_to_holding, restores]
-      house_sold: [redemption_right, sold_in_perpetuity, returns_to_holding]
+      jubilee_proclaimed: [jubilee_holds, jubilee_release, returns_to_holding, goes_free]   # THE CLOCK SITTING: the fork on the act — Sifra Behar Chapter 2 4, Arakhin 32b:16
+      field_sold: [restores, redemption_right, pays, returns_to_holding, goes_out_in_the_jubilee]
+      house_sold: [redemption_right, sold_in_perpetuity, goes_out_in_the_jubilee]
       brother_grew_poor: [supports_kinsman]
       silver_lent: [interest_barred]
-      brother_sold_as_slave: [jubilee_release, goes_free, returns_to_holding, pays, redemption_right, term_clock, barred_from_it, exempt]
+      brother_sold_as_slave: [barred_from_it, exempt, pays, goes_free, returns_to_holding, goes_out_in_the_jubilee, redemption_right, term_clock]
       person_valued: [gives_fixed_sum]
       field_consecrated: [gives_fixed_sum, due_to_priest, adds_fifth, returns_to_holding]
       consecrated_redeemed: [adds_fifth]
@@ -765,6 +766,7 @@ functions:
     dispatch_goat: {status: WRAPPED, by: law_yoma}
     main: {status: WRAPPED, by: law_yoma}
   yovel:
+    scene_counts_fork: {status: NONE, why: "THE CLOCK SITTING (2026-09-07): the yovel scene's fork-rows count helper — reads the land's jubilee_release values and the field's returns to build the tuple, writes nothing; the value/effect homograph (the OPEN gate item)"}
     cycle: {status: WRAPPED, by: law_yovel}
     jubilee: {status: WRAPPED, by: law_yovel}
     field_sale: {status: WRAPPED, by: law_yovel}

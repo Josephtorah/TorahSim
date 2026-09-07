@@ -434,7 +434,7 @@ def scene():
     tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
     return (n('the-offerer', 'accepted'), n('the-priests', 'due_to_priest'), n('the-bull-olah', 'smoked_to_the_lord'), n('the-anointed-priests-bull', 'burn_remainder'),
             n('the-shelamim', 'eating_window'), n('the-shelamim', 'burn_remainder'), n('the-todah', 'burn_remainder'),
-            n('the-fat-eater', 'barred_from_it'), n('the-fat-eater', 'lashes'), n('the-fat-eater', 'karet_cut_off'), n('the-hunter', 'barred_from_it'), tset, fired, w.clock.year), w
+            n('the-fat-eater', 'barred_from_it'), n('the-fat-eater', 'lashes'), n('the-fat-eater', 'karet_cut_off'), n('the-hunter', 'barred_from_it'), tset, fired, w.clock.day), w
 SCENE, _W = scene()
 
 # ---- (2) TEST DATA — the Mishnah's own grid, read from the shelf ----

@@ -905,7 +905,7 @@ def law_priesthood(event, world):
     """Lev 21, 22, 24:1-9 (cold_run_priesthood.py — family, blemish, holy_food, acceptable, lamp_table): the priest's file, the blemish census, the eaters, the acceptable animal, the lamp's morning and the bread's week as TIMERS."""
     k, src = event['kind'], event['case_source']
     E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
-    day = event.get('day', world.clock.year)
+    day = event.get('day', world.clock.day)
     if k == 'priest_defiled_for_dead':
         p = event['priest']; dead = event.get('dead'); rank = event.get('rank', 'common')
         if event.get('onen'):
@@ -1168,7 +1168,7 @@ def scene():
         w.submit({'kind': 'bread_arranged', 'subject': 'the-table', 'priest': 'aaron', 'case': 'plain', 'day': 1, 'case_source': 'Lev 24:5-9; Mishnah Menachot 11:1-9 — twelve loaves, the frankincense, the sabbath exchange'})
         w.advance(9)                                                 # the eighth day passed, the week's exchange fired
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
-    yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    yr = lambda eid, eff: [e['day'] for e in w.entity(eid).ledger if e['effect'] == eff]
     am = lambda eid, eff: [e['amount'] for e in w.entity(eid).ledger if e['effect'] == eff]
     tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
     return (n('the-mourning-priest', 'defiled_for_kin'), n('the-husband', 'defiled_for_kin'), n('the-husband-of-the-unfit', 'defiled_for_kin'), n('the-finder', 'defiled_for_kin'), n('the-onen', 'service_profaned'), am('the-high-priest', 'lashes'), n('the-defiled-for-a-stranger', 'lashes'),
@@ -1181,7 +1181,7 @@ def scene():
             n('the-vower', 'accepted'), n('the-blemished-offering', 'not_accepted'), n('the-castrator', 'lashes'), n('the-todah-bringer', 'eating_window'), n('the-shelamim-vower', 'eating_window'), n('the-shelamim-vower', 'accepted'), n('the-vowed-thing', 'consecrated'), n('the-foreigner', 'accepted'), n('the-outside-blemished', 'exempt'), n('the-forewarned', 'forewarned'), n('the-name-sanctifier', 'name_profaned'),
             yr('the-firstling', 'eighth_day_fit'), yr('the-firstling', 'accepted'), n('the-slaughterer', 'same_day_slaughter_barred'), am('the-slaughterer', 'lashes'), n('the-consecrated-slaughterer', 'lashes'), n('the-plain-slaughterer', 'same_day_slaughter_barred'),
             yr('the-lampstand', 'lamp_arranged'), yr('the-table', 'bread_set_weekly'), n('the-frankincense', 'azkarah_to_fire'), yr('the-loaves', 'due_to_priest'), n('the-loaves', 'most_holy'),
-            tset, fired, w.clock.year), w
+            tset, fired, w.clock.day), w
 SCENE, _W = scene()
 
 

@@ -88,7 +88,7 @@ def scene():
         w.submit({'kind': 'blemish_given', 'subject': 'the-maimer', 'striker': 'the-maimer', 'victim': 'his-fellow', 'blemish': 'eye', 'case_source': 'Mishnah Bava Kamma 8:1 — the damage as money'})
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
     amt = lambda eid, eff: sum(e['amount'] or 0 for e in w.entity(eid).ledger if e['effect'] == eff)
-    return (n('the-son-of-shelomith', 'stoned'), n('the-curser', 'bears_sin'), n('the-killer', 'put_to_death'), n('the-striker', 'pays'), amt('the-striker', 'pays'), n('the-maimer', 'substitution'), w.clock.year), w
+    return (n('the-son-of-shelomith', 'stoned'), n('the-curser', 'bears_sin'), n('the-killer', 'put_to_death'), n('the-striker', 'pays'), amt('the-striker', 'pays'), n('the-maimer', 'substitution'), w.clock.day), w
 SCENE, _W = scene()
 
 def main():

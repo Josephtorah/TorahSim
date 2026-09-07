@@ -508,9 +508,14 @@ THE TWO SHELVES in Step 2.
    → shows as: chip "proven"; drops automatically if a test goes red.
 
 ⚠ THE DELIVERABLE RULE (owner-ruled 2026-09-03: "it has to be done"
-— "amend it"). A law span does not FINISH this step until its
-COLD-COMPILED FUNCTION exists. The five motions, in order (the
-owner's confirmed process):
+— "amend it"; AMENDED 2026-09-07 at D9-iv when the daemon campaign
+closed with its worklist empty). A law span does not FINISH this
+step until its COLD-COMPILED FUNCTION exists, its dependency edges
+are DISPOSITIONED (the census-first rule below), AND its WRAP is
+DECLARED and VERIFIED — the daemon that consumes the span's case
+events declared in daemon_dispositions.yaml before its code and
+verified by the daemon gate. The six motions, in order (the owner's
+confirmed process, the sixth added at D9-iv):
  (1) COMPILE THE CODE FROM THE VERSES FIRST — the bare ink alone:
      the when/if case structure, the roles, the actions; anything
      the ink does not state (a distance, an amount, a threshold)
@@ -558,7 +563,8 @@ owner's confirmed process):
      RULE READS: a law span finishes this step when its cold function
      exists, its dependency edges are dispositioned, AND its wrap is
      declared and verified — the wrap a SIXTH motion after the five,
-     conditions read from the ink's case tokens first. The fence
+     conditions read from the ink's case tokens first — IN FORCE
+     since D9-iv (2026-09-07), motion (6) above. The fence
      (method law 6) stated for daemons: a daemon CONSUMES events and
      WRITES the ledger only, never emits an event; cascades run
      through ledger state (one daemon's write satisfies another's
@@ -621,6 +627,40 @@ owner's confirmed process):
  (5) When the run reproduces the answer sheet, ADD IT — the
      function joins the corpus and the unit earns its "compiled"
      chip.
+ (6) WRAP IT (D9-iv, 2026-09-07). The span's case heads — the
+     ink's own when/if clauses, or the story's own recorded acts —
+     are registered as EVENT TYPES first, by script, each with a
+     witness found contiguous in its verse; a type seated in more
+     than one chapter answers THE TWO QUESTIONS at registration. The
+     DAEMON is declared second — its watches (event kind → effects
+     written) in daemon_dispositions.yaml, the function flipped OWED
+     → WRAPPED — and the gate is run to fail before a line of code.
+     The code third: a thin daemon over the compiled cells, every
+     value a call into the runner's own cells, conditions read from
+     the ink's case tokens, no verdict typed into a daemon; a
+     daemon's empty return on a recorded row is the law's own
+     exemption, declared as an empty watch. The scene fourth: the
+     Mishnah's recorded rows replayed on the world engine as
+     LITERAL submits, the TUPLE prediction written by script before
+     the runner runs and typed as the literal — a miss is evidence,
+     never a retype; timers set from the ink's numbers and fired by
+     the clock (since THE CLOCK SITTING of 2026-09-07 the clock's
+     base unit is the DAY and the year is DERIVED through the world's
+     epoch row: a due in years is computed through the Calendar, a
+     recurring timer carries a period and re-arms at its fire, and
+     the calendar's quantities are rows of the third registry,
+     World/step9/calendar_parameters.yaml — never constants in code).
+     The gate and the sweep fifth: the daemon gate
+     satisfied (declaration equals parse, every kind registered and
+     submitted, every function dispositioned), the live edges the
+     span calls filed with their link, the sweep green. THE FENCE
+     (method law 6) stated for daemons: a daemon consumes events
+     and writes the ledger only, never emits an event; cascades run
+     through ledger state, never synthetic events; timer firings
+     are their own record class. A span without its wrap is OWED on
+     the wrap worklist (`python3 World/step9/daemon_census.py
+     --debt`), and the sweep grades nothing while any daemon is
+     undeclared or any function undispositioned.
 ⚠ THE EFFECTS RULE (owner-ruled 2026-09-03: "this will now build a
 SIMULATION instead of a ledger. This is as critical to the steps as
 any other step. It should be coded EVERY TIME for effects").
@@ -2016,6 +2056,66 @@ refused to grade anything — the gate-first order is enforced by the sweep
 itself. Scoreboard: 248 wrapped, 0 owed, 6 none; 266 event types; the sweep
 33/33 (3625 cells). Record: World/step9/REPORT_WRAP_W7.md. THE WRAPS ARE
 COMPLETE. Next: D9-iv THE DELIVERABLE RULE AMENDED, then Numbers.
+THE CLOCK SITTING (2026-09-07, after compaction #86; the owner: "ok do
+the clock sitting", after the two-thread consensus on the design
+thread's ARCHITECTURE/THE_CLOCK.md — round one A-G, round two's eight
+amendments on the owner's "stand your ground if you feel strongly").
+The first ENGINE sitting since the skeleton, run in the wrap's order:
+the design first (World/step9/CLOCK.md), the fire-probes second
+(World/step9/clock_probes.py — twelve, 0/12 on the old engine, 12/12
+after), the code third, the library fourth, the five year-grain scenes
+re-typed fifth under print-then-type, the gates and the sweep sixth.
+What the engine is now: the DAY is the base unit and the YEAR is
+DERIVED through the world's epoch row by a Calendar inside the engine
+(the period re-arm fires inside advance(), and the engine cannot
+import a runner) — the Calendar the only reader of the THIRD REGISTRY,
+World/step9/calendar_parameters.yaml, eighteen rows each with its
+channel (ink / received / rounding / modeled) and its source resolved
+on the shelf (the received month of Rosh Hashanah 25a:10 rounded to
+thirty and twenty-nine; the four new years of Mishnah Rosh Hashanah
+1:1 as data; the intercalation by the season ground alone with the
+recorded threshold of Sanhedrin 13a:4 over a MODELED solar year — the
+season's length searched on the whole shelf and not found, so labeled
+modeled; the count-start of Arakhin 12b:5 and 13a:7-8 as two
+settings; the rounding of Rosh Hashanah 2b:1 unexercised); a world
+with no epoch has no derived year, an honest None. A timer may carry a
+PERIOD (opt-in; days or a calendar key re-armed through the Calendar,
+each re-arm logged as a chain, ended only by a text event through
+cancel_timers); a recurring DEBIT is CLOSED by its discharging act
+(the tamid offered closes the altar's open tamid_owed — the registry's
+op corrected timer → debit with the reason). The text's date stamps
+enter as MARKERS; an event between markers carries its BOUND, closed
+by the next marker and inherited by its effects, timers and fires;
+a checkpoint tests an interval; a RETROGRADE marker (Pesachim 6b:7 —
+"there is no earlier and later in the Torah"; Numbers 9:1 after 1:1)
+leaves the counter unmoved and dates the following events by the
+text, a past due written at submission. THE JUBILEE IN THREE LAYERS:
+law_yovel consumes entered_the_land (Leviticus 25:2) and sets the
+count's two recurring status timers on the land (the seventh, the
+fiftieth); a sale's timer writes the ENTITLEMENT (25:28 "it shall go
+out in the jubilee"); the RELEASE is written when the proclamation
+(25:9-10 — the act KEPT, its year field retired, its day the
+Calendar's tenth of the seventh month) is consumed, forked on the
+tradition's three recorded conditions — the horn sounded and the
+servants sent free off the act's own fields (Sifra Behar Chapter 2 4,
+Rabbi Yehuda against Rabbi Yose), all the inhabitants upon the land
+off the people's ledger (Arakhin 32b:16) — the arms as values, the
+losing arm named, never a silence. The library: the six years a
+calendar due; the pierced servant's jubilee the Calendar's; THE
+PENDING TERM fixed (the proclamation cancels each freed servant's
+term). The smuggled parameter retired: thirty-five 'year' fields
+removed from the year-grain scenes and twelve registry entries; the
+derived year equalled every old year literal on the first run; the
+day-grain runners renamed clock.year → clock.day with no literal moved.
+Findings: the fork's verdict string joined the arms in the Sifra's
+order and the library's deferral read its head — the scene's row
+caught it where the probe had not; the library's installation timer
+read the counter by the old name — the skeleton's own run caught it;
+the flood's 150 days DIVERGE from the received month on the engine
+(OPEN-4, said so); a function-level import is invisible to the
+dependency census (the edge yovel → tochacha filed, a transfer taught
+by Arakhin 32b:16). Records: CLOCK.md, REPORT_CLOCK.md,
+calendar_parameters.yaml, clock_probes.py. Next: Numbers.
 The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law

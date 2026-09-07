@@ -202,7 +202,7 @@ def scene():
         w.submit({'kind': 'carcass_touched', 'subject': 'the-carrier', 'person': 'the-carrier', 'contact': 'carry', 'case_source': 'Lev 11:25; Mishnah Zavim 5:2 — carried: the garments washed, until evening'})
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
     seen, fired, _ = w.coverage()['law_shemini']
-    return (n('the-eater', 'lashes'), seen - fired, n('the-toucher', 'impure_until_evening'), n('the-carrier', 'impure_until_evening'), w.clock.year), w
+    return (n('the-eater', 'lashes'), seen - fired, n('the-toucher', 'impure_until_evening'), n('the-carrier', 'impure_until_evening'), w.clock.day), w
 SCENE, _W = scene()
 
 # ---- (3)+(5) run + grade + effects ----------------------------------

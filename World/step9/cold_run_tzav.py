@@ -678,7 +678,7 @@ def scene():
             n('the-late-eater', 'not_accepted'), n('the-late-eater', 'karet_cut_off'), n('the-piggul-eater', 'karet_cut_off'), n('the-place-thinker', 'not_accepted'), n('the-place-thinker', 'karet_cut_off'), n('the-impure-eater', 'karet_cut_off'), n('the-congregational-eater', 'exempt'),
             n('the-blood-eater', 'karet_cut_off'), n('the-fish-eater', 'karet_cut_off'), n('the-officiating-priest', 'due_to_priest'), n('the-sons-of-eli', 'due_to_priest'),
             n('the-asham', 'most_holy'), n('the-guilty', 'accepted'), n('the-guilty', 'not_accepted'), n('the-entered-asham', 'disqualified'), n('the-priests', 'due_to_priest'),
-            n('the-meal-offering', 'presented'), n('the-meal-offering', 'sanctified_by_contact'), n('the-meal-offering', 'most_holy'), n('the-baker', 'barred_from_it'), tset, fired, w.clock.year), w
+            n('the-meal-offering', 'presented'), n('the-meal-offering', 'sanctified_by_contact'), n('the-meal-offering', 'most_holy'), n('the-baker', 'barred_from_it'), tset, fired, w.clock.day), w
 SCENE, _W = scene()
 
 CASES = [

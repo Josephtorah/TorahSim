@@ -1200,7 +1200,7 @@ def cloud(q):
 def law_erection(event, world):
     """The erection's daemon: consumes the chapter's recorded acts and writes the ledger — never emits an event."""
     k, subj, src = event['kind'], event['subject'], event['case_source']
-    day = event.get('day', world.clock.year)
+    day = event.get('day', world.clock.day)
     E_ = lambda eff, s, due=None, cp=None, value=None, law=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': None, 'due': due, 'value': value if value is not None else True, 'source_law': law or 'F%s' % event.get('law', '14'), 'case_source': src}
     if k == 'erected': return [E_('tabernacle_erected', 'the-tabernacle'), E_('high_places_banned', 'the-land')]
     if k == 'testimony_placed': return [E_('tablets_delivered', 'the-ark'), E_('staves_fixed', 'the-ark')]
@@ -1208,7 +1208,11 @@ def law_erection(event, world):
     if k == 'bread_arranged': return [E_('bread_set_weekly', 'the-table', due=day + 6)]           # the first SABBATH initiates the table (Menachot 4:4; a Sunday erection)
     if k == 'lamps_raised': return [E_('lamp_arranged', 'the-lampstand'), E_('lamp_arranged', 'the-lampstand', due=day + 1)]
     if k == 'incense_burned': return [E_('incense_continual', 'the-golden-altar'), E_('incense_continual', 'the-golden-altar', due=day + 1)]
-    if k == 'tamid_offered': return [E_('accepted', subj), E_('tamid_owed', 'the-altar', due=day + 1)]
+    if k == 'tamid_offered':
+        # THE CLOSE PAIRING (THE CLOCK SITTING, 2026-09-07; CLOCK.md section 3): the offering brought CLOSES the day's
+        # open debit before tomorrow's is set — Exod 29:38 "two yearling lambs each day, continually"
+        world.close('the-altar', 'tamid_owed', 'the tamid offered [INK Exod 29:38-39 "day by day continually... the one lamb in the morning"]')
+        return [E_('accepted', subj), E_('tamid_owed', 'the-altar', due=day + 1)]
     if k == 'hands_feet_washed': return [E_('hands_feet_sanctified', s) for s in ('moses', 'aaron', 'the-sons')]   # W6: UNIFIED — the laver's act under its own id (Lev 8:6's immersion keeps 'washed')
     if k == 'work_finished': return [E_('work_completed', 'the-work'), E_('inspected_as_commanded', 'the-erection')]
     if k == 'glory_filled': return [E_('presence_dwells', 'the-people'), E_('glory_appeared', 'the-tabernacle')]
@@ -1384,11 +1388,11 @@ def scene():
     return (n('aaron-and-sons', 'released'), n('the-tabernacle', 'tabernacle_erected'), n('the-land', 'high_places_banned'), n('the-ark', 'tablets_delivered'), n('the-ark', 'staves_fixed'),
             n('the-tabernacle', 'veil_divides'), n('the-table', 'bread_set_weekly'), n('the-lampstand', 'lamp_arranged'), n('the-golden-altar', 'incense_continual'), n('the-altar', 'tamid_owed'),
             n('moses', 'hands_feet_sanctified') + n('aaron', 'hands_feet_sanctified') + n('the-sons', 'hands_feet_sanctified'), n('the-work', 'work_completed'), n('the-people', 'presence_dwells'),
-            n('moses', 'barred_from_it'), n('moses', 'meeting_appointed'), n('the-camp', 'camp_moves_by_the_cloud'), fired, w.clock.year), scene_counts_w6(wd), scene_counts_w7(ws), w, wd, ws
+            n('moses', 'barred_from_it'), n('moses', 'meeting_appointed'), n('the-camp', 'camp_moves_by_the_cloud'), fired, w.clock.day), scene_counts_w6(wd), scene_counts_w7(ws), w, wd, ws
 def scene_counts_w6(wd):
     """W6 — the craftsmen and the donation: (appointed by name, spirit filled, given by the heart, events, the clock)"""
     ne = lambda eff: sum(1 for ent in wd.entities.values() for e in ent.ledger if e['effect'] == eff)
-    return (ne('appointed_by_name'), ne('spirit_filled'), ne('given_by_the_heart'), len([l for l in wd.log if l[0] == 'EVENT']), wd.clock.year)
+    return (ne('appointed_by_name'), ne('spirit_filled'), ne('given_by_the_heart'), len([l for l in wd.log if l[0] == 'EVENT']), wd.clock.day)
 def scene_counts_w7(ws):
     """W7 — the Sinai narrative's laws: the effect counts over the whole world, the timers, the day the first tablets fired (the seventeenth of Tammuz), the events, the clock"""
     ne = lambda eff: sum(1 for ent in ws.entities.values() for e in ent.ledger if e['effect'] == eff)
@@ -1396,7 +1400,7 @@ def scene_counts_w7(ws):
     return (ne('majority_decides'), ne('entered_the_covenant'), ne('oral_law_unwritten'), ne('accepted'), ne('invested_office'), ne('atoned_forgiven'), ne('immersed'),
             ne('tablets_delivered'), ne('face_radiant'), ne('molten_image_barred'), ne('barred_from_it'), ne('stoned'), ne('slain_by_sword'), ne('plague_struck'), ne('made_to_drink'), ne('bears_sin'),
             ne('decree_relented'), ne('confessed'), ne('blotted_from_the_book'), ne('ground_and_scattered'), ne('attributes_proclaimed'), ne('covenant_cut'), ne('nations_driven_out'), ne('covenant_barred'), ne('demolished'), ne('intermarriage_barred'),
-            len([l for l in ws.log if l[0] == 'TIMER-SET']), len(fires), (fires[0] if fires else None), len([l for l in ws.log if l[0] == 'EVENT']), ws.clock.year)
+            len([l for l in ws.log if l[0] == 'TIMER-SET']), len(fires), (fires[0] if fires else None), len([l for l in ws.log if l[0] == 'EVENT']), ws.clock.day)
 SCENE, SCENE_W6, SCENE_W7, _W, _WD, _WS = scene()
 def build(q):
     if q == 'world':

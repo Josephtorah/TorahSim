@@ -1168,7 +1168,7 @@ def law_investiture(event, world):
     # ---- W6 THE SANCTUARY'S REMAINDER (D9-iii, 2026-09-07): the runner's LAW LAYER beside Lev 8's run — the succession (29:29-30), the incense altar
     # (30:1-10), the shekel (30:11-16), the oil (30:22-33), the incense (30:34-38); no new daemon (the #83 ruling). Every value a CALL into this runner's
     # own cells (succession, incense_altar, shekel, oil, incense); a daemon's empty return on a recorded row is the law's own exemption.
-    day = event.get('day', world.clock.year)
+    day = event.get('day', world.clock.day)
     E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
     if k == 'priest_succeeded':
         if not event.get('fit_to_enter', True): return []     # 29:30 'who comes to the tent of meeting' = one FIT to come (Yoma 73a:1) — the unfit takes nothing: the clause's own silence
@@ -1353,7 +1353,7 @@ def scene():
     events = len([l for l in w.log if l[0] == 'EVENT'])
     ns = lambda eid, eff: len([e for e in ws.entity(eid).ledger if e['effect'] == eff])
     sab = (ns('israel', 'sign_between'), ns('israel', 'rest_required'), ns('the-gatherer', 'labor_barred'), ns('the-gatherer', 'put_to_death'), ns('the-gatherer', 'stoned'),
-           ns('the-unwitnessed', 'karet_cut_off'), ns('the-unwitnessed', 'put_to_death'), ns('the-kindler', 'kindling_barred'), ns('the-kindler', 'karet_cut_off'), ws.clock.year)
+           ns('the-unwitnessed', 'karet_cut_off'), ns('the-unwitnessed', 'put_to_death'), ns('the-kindler', 'kindling_barred'), ns('the-kindler', 'karet_cut_off'), ws.clock.day)
     return (n('aaron', 'names_borne'), n('aaron', 'judgment_borne'), n('aaron', 'entry_announced'), n('aaron', 'plate_propitiates'),
             n('the-bull', 'hand_laid') + n('the-ram-1', 'hand_laid') + n('the-ram-2', 'hand_laid'), n('aaron', 'blood_on_extremities') + n('the-sons', 'blood_on_extremities'),
             n('the-altar', 'altar_purged'), n('the-breast', 'waved'), n('moses', 'due_to_priest'), n('the-garments', 'consecrated'), n('aaron', 'invested_office'),
@@ -1366,7 +1366,7 @@ def scene_counts_w6(wl):
             ne('horns_atoned_yearly'), ne('accepted'), ne('most_holy'), ne('half_shekel_owed'), nn('the-woman', 'half_shekel_owed') + nn('the-slave', 'half_shekel_owed') + nn('the-minor', 'half_shekel_owed') + nn('the-priest', 'half_shekel_owed'),
             ne('no_plague_at_counting'), nn('davids-counted', 'no_plague_at_counting'), ne('accounts_rendered'), ne('tamid_owed'), ne('due_to_priest'), ne('oath_imposed'),
             ne('compounding_barred'), ne('karet_cut_off'), ne('lashes'), ne('exempt'), ne('salted'), ne('meeting_appointed'),
-            len([l for l in wl.log if l[0] == 'TIMER-SET']), len([l for l in wl.log if l[0] == 'TIMER-FIRE']), len([l for l in wl.log if l[0] == 'EVENT']), wl.clock.year)
+            len([l for l in wl.log if l[0] == 'TIMER-SET']), len([l for l in wl.log if l[0] == 'TIMER-FIRE']), len([l for l in wl.log if l[0] == 'EVENT']), wl.clock.day)
 SCENE, SCENE_SAB, SCENE_LAW, _W, _WS, _WL = scene()
 def build(q):
     if q == 'alignment':

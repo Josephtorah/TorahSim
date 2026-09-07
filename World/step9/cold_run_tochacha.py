@@ -502,7 +502,7 @@ def law_tochacha(event, world):
     """Lev 26 (cold_run_tochacha.py — covenant, cascade, measures, scaling, sabbath_debt, seventy_timer, jubilee_count, recovery): the five gates, the sabbath debt as a DEBIT and a TIMER in years, the seventy, the recovery."""
     k, src = event['kind'], event['case_source']
     E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
-    yr = event.get('year', world.clock.year)
+    yr = world.clock.year
     if k == 'covenant_kept':
         ppl = event.get('people', 'israel')
         c = covenant(event.get('walk', True), event.get('keep', True), event.get('do', True))
@@ -526,12 +526,12 @@ def law_tochacha(event, world):
         out = [E_('sabbath_debt', land, cp='HEAVEN', amount=debt, value=sd['accrual']['v'], law='F2 [INK 26:35 "that which it did not rest in your sabbaths" — %d releases due by the %s cycle, %d kept: the DEBIT %d]' % (sd['due']['v'], model, kept, debt)),
                E_('land_desolate', land, cp=ppl, value=sd['rule']['v'], law='F2 [INK 26:34 "all the days of desolation" — the rule: the desolation lasts the debt]'),
                E_('scattered_among_nations', ppl, cp='HEAVEN', value=sd['while']['v'], law='F2 [INK 26:34 "and you in the land of your enemies"]'),
-               E_('land_repays_sabbaths', land, cp='HEAVEN', amount=debt, due=yr + debt, value=sd['desolation_years']['v'], law='F2 [INK 26:34 "then the land shall be paid its sabbaths" — the TIMER runs the debt: fires in year %d]' % (yr + debt))]
+               E_('land_repays_sabbaths', land, cp='HEAVEN', amount=debt, due=world.clock.after(debt, 'year'), value=sd['desolation_years']['v'], law='F2 [INK 26:34 "then the land shall be paid its sabbaths" — the TIMER runs the debt: fires in year %d (the Calendar)]' % (yr + debt))]
         if event.get('epoch'):
             st = seventy_timer(event['epoch']); n = st['count']['v']
-            out.append(E_('land_repays_sabbaths', land, cp=ppl, amount=n, due=yr + n, value=event['epoch'], law='F3 [the seventy from the %s epoch: %d years — %s]' % (event['epoch'], n, st['count']['why'][:60])))
+            out.append(E_('land_repays_sabbaths', land, cp=ppl, amount=n, due=world.clock.after(n, 'year'), value=event['epoch'], law='F3 [the seventy from the %s epoch: %d years — %s]' % (event['epoch'], n, st['count']['why'][:60])))
             if 'covenant_remembered' in st['outcome']['fx']:
-                out.append(E_('covenant_remembered', ppl, cp='HEAVEN', due=yr + n, value=st['outcome']['v'], law='F3 [%s]' % st['outcome']['why'][:90]))
+                out.append(E_('covenant_remembered', ppl, cp='HEAVEN', due=world.clock.after(n, 'year'), value=st['outcome']['v'], law='F3 [%s]' % st['outcome']['why'][:90]))
         if event.get('count_jubilees'):
             jc = jubilee_count()
             out.append(E_('jubilee_release', land, amount=jc['jubilees']['v'], value=jc['counted_at_fall']['v'], law='F4 [%s — %s]' % (jc['jubilees']['why'][:70], jc['method_fork']['v'])))
@@ -550,22 +550,22 @@ def law_tochacha(event, world):
     return []
 
 def scene():
-    """THE SCENE — the Sifra's gates and the Writings' log (2 Chronicles 36:21, Megillah 11b-12a, Arakhin 12b-13a) replayed on the world engine (clock unit: YEARS): the sabbath debt and the seventy as TIMERS."""
+    """THE SCENE — the Sifra's gates and the Writings' log (2 Chronicles 36:21, Megillah 11b-12a, Arakhin 12b-13a) replayed on the world engine (THE COUNT EPOCH — the day the base unit, the year derived): the sabbath debt and the seventy as TIMERS through the Calendar."""
     with _ctx5.redirect_stdout(_io5.StringIO()):
-        w = WE.World(era='the covenant cascade: Lev 26 on the engine (clock unit: years)')
+        w = WE.World(era='the covenant cascade: Lev 26 on the engine (the count epoch: the day the base unit, the year derived)', epoch='count')
         w.laws = [law_tochacha]
-        w.advance(1)
-        w.submit({'kind': 'covenant_kept', 'subject': 'israel', 'people': 'israel', 'walk': True, 'keep': True, 'do': True, 'year': 1, 'case_source': 'Lev 26:3; Sifra Bechukotai Section 1 — the three predicates: the blessing'})
-        w.submit({'kind': 'covenant_kept', 'subject': 'the-refusers', 'people': 'the-refusers', 'walk': False, 'keep': True, 'do': True, 'year': 1, 'case_source': 'Lev 26:14; Sifra Section 2 1 — one predicate fails: the curse entry (the silence)'})
+        w.advance(w.clock.at_year(1))
+        w.submit({'kind': 'covenant_kept', 'subject': 'israel', 'people': 'israel', 'walk': True, 'keep': True, 'do': True, 'case_source': 'Lev 26:3; Sifra Bechukotai Section 1 — the three predicates: the blessing'})
+        w.submit({'kind': 'covenant_kept', 'subject': 'the-refusers', 'people': 'the-refusers', 'walk': False, 'keep': True, 'do': True, 'case_source': 'Lev 26:14; Sifra Section 2 1 — one predicate fails: the curse entry (the silence)'})
         for r in (0, 1, 2, 3, 4):
-            w.submit({'kind': 'warning_refused', 'subject': 'israel', 'people': 'israel', 'refusals': r, 'year': 1 + r, 'case_source': 'Lev 26:14-33; Sifra Bechukotai Chapter 4-7 — refusals %d: the gate' % r})
-        w.advance(10)
-        w.submit({'kind': 'people_exiled', 'subject': 'israel', 'people': 'israel', 'land': 'the-land', 'years_dwelt': 430, 'releases_kept': 0, 'model': 'plain', 'epoch': 'ruins', 'count_jubilees': True, 'year': 10, 'case_source': '2 Chronicles 36:21; Ezekiel 4:5-6; Megillah 11b:13-14; Arakhin 12b-13a — the exile: the sabbath debt, the seventy from the ruins, the jubilees counted'})
-        w.advance(81)
-        w.submit({'kind': 'iniquity_confessed', 'subject': 'the-confessors', 'people': 'the-confessors', 'confess': True, 'humble_heart': True, 'year': 81, 'case_source': 'Lev 26:40-42; Sifra Bechukotai Chapter 8 — confessed and humbled: the covenant remembered'})
-        w.submit({'kind': 'iniquity_confessed', 'subject': 'the-half-confessors', 'people': 'the-half-confessors', 'confess': True, 'humble_heart': False, 'year': 81, 'case_source': 'Sifra Bechukotai Chapter 8 3 — confession alone: the mercy'})
-        w.submit({'kind': 'iniquity_confessed', 'subject': 'the-pining', 'people': 'the-pining', 'confess': False, 'humble_heart': False, 'year': 81, 'case_source': 'Lev 26:39 — neither: pining in the enemies\' land'})
-        w.advance(85)
+            w.submit({'kind': 'warning_refused', 'subject': 'israel', 'people': 'israel', 'refusals': r, 'case_source': 'Lev 26:14-33; Sifra Bechukotai Chapter 4-7 — refusals %d: the gate' % r})
+        w.advance(w.clock.at_year(10))
+        w.submit({'kind': 'people_exiled', 'subject': 'israel', 'people': 'israel', 'land': 'the-land', 'years_dwelt': 430, 'releases_kept': 0, 'model': 'plain', 'epoch': 'ruins', 'count_jubilees': True, 'case_source': '2 Chronicles 36:21; Ezekiel 4:5-6; Megillah 11b:13-14; Arakhin 12b-13a — the exile: the sabbath debt, the seventy from the ruins, the jubilees counted'})
+        w.advance(w.clock.at_year(81))
+        w.submit({'kind': 'iniquity_confessed', 'subject': 'the-confessors', 'people': 'the-confessors', 'confess': True, 'humble_heart': True, 'case_source': 'Lev 26:40-42; Sifra Bechukotai Chapter 8 — confessed and humbled: the covenant remembered'})
+        w.submit({'kind': 'iniquity_confessed', 'subject': 'the-half-confessors', 'people': 'the-half-confessors', 'confess': True, 'humble_heart': False, 'case_source': 'Sifra Bechukotai Chapter 8 3 — confession alone: the mercy'})
+        w.submit({'kind': 'iniquity_confessed', 'subject': 'the-pining', 'people': 'the-pining', 'confess': False, 'humble_heart': False, 'case_source': 'Lev 26:39 — neither: pining in the enemies\' land'})
+        w.advance(w.clock.at_year(85))
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
     yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
     am = lambda eid, eff: [e['amount'] for e in w.entity(eid).ledger if e['effect'] == eff]

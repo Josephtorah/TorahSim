@@ -980,7 +980,7 @@ import world_engine as WE
 def law_pre_sinai(event, world):
     """The pre-Sinai daemon: consumes the span's recorded acts and writes the ledger — never emits an event."""
     k, subj, src = event['kind'], event['subject'], event['case_source']
-    day = world.clock.year
+    day = world.clock.day
     E_ = lambda eff, s, due=None, cp=None, value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': None, 'due': due, 'value': value if value is not None else True, 'source_law': 'F%s' % event.get('law', '7'), 'case_source': src}
     if k == 'evening_and_morning': return [E_('day_counted', 'the-world', value=event['day'])]
     if k == 'ceased_and_blessed': return [E_('seventh_day_blessed', 'the-seventh-day')]
@@ -1040,7 +1040,7 @@ def scene():
             n('abraham', 'wholeness_owed'), op('abraham', 'wholeness_owed'), n('abraham', 'name_changed') + n('sarah', 'name_changed'),
             n('abraham', 'circumcision_due') + n('ishmael', 'circumcision_due') + n('the-household', 'circumcision_due') + n('isaac', 'circumcision_due'),
             op('abraham', 'circumcision_due') + op('ishmael', 'circumcision_due') + op('the-household', 'circumcision_due') + op('isaac', 'circumcision_due'),
-            n('abraham', 'sign_in_the_flesh') + n('ishmael', 'sign_in_the_flesh') + n('the-household', 'sign_in_the_flesh') + n('isaac', 'sign_in_the_flesh'), fired, w.clock.year)
+            n('abraham', 'sign_in_the_flesh') + n('ishmael', 'sign_in_the_flesh') + n('the-household', 'sign_in_the_flesh') + n('isaac', 'sign_in_the_flesh'), fired, w.clock.day)
 SCENE = scene()
 
 # ---- F8: THE HEADLINES ----------------------------------------------------------------------------------------------

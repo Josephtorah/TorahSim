@@ -210,7 +210,7 @@ def scene():
         w.advance(4)
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
     return (n('the-swearer', 'lashes'), n('the-oath-breaker', 'lashes'), n('the-household', 'sanctify_day'), n('the-household', 'labor_barred'), n('the-household', 'rest_required'),
-            n('the-kidnapper', 'put_to_death'), n('the-second-kidnapper', 'put_to_death'), w.clock.year), w
+            n('the-kidnapper', 'put_to_death'), n('the-second-kidnapper', 'put_to_death'), w.clock.day), w
 SCENE, _W = scene()
 
 # ---- the test data; run, grade, effects -----------------------------

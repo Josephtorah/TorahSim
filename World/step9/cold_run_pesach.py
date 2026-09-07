@@ -374,7 +374,7 @@ def scene():
             n('reuben', 'barred_from_it'), n('simeon', 'barred_from_it'), n('levi', 'barred_from_it'), n('judah', 'lashes'), n('dan', 'exempt'), n('his-wife', 'barred_from_it'),
             n('the-eater', 'karet_cut_off'), n('the-jew', 'barred_from_it'), n('the-jew', 'exempt'),
             n('the-herdsman', 'consecrated_firstborn'), n('the-herdsman', 'redeem_or_break'), n('the-herdsman', 'exempt'), n('the-father', 'consecrated_firstborn'), n('the-father', 'pays'), amt('the-father', 'pays'),
-            tset, fired, w.clock.year), w
+            tset, fired, w.clock.day), w
 
 # =====================================================================
 # Motion 2 — THE TEST DATA: the Mishnah's rows (and, where the span's

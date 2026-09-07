@@ -472,7 +472,7 @@ def law_metzora(event, world):
     """Lev 14:1-32 (cold_run_metzora.py — frame, birds, week, shave, eighth, poor): the leper's week as a TIMER, the purity verb's four gates."""
     k, src = event['kind'], event['case_source']
     E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
-    day = event.get('day', world.clock.year)
+    day = event.get('day', world.clock.day)
     if k == 'leper_cleansing_begun':
         l = event['leper']
         if event.get('which_leper') == 'quarantined':
@@ -548,13 +548,13 @@ def scene():
         w.advance(9)
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
     tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
-    yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    yr = lambda eid, eff: [e['day'] for e in w.entity(eid).ledger if e['effect'] == eff]
     return (n('the-leper', 'declared_pure'), n('the-slaughtered-bird', 'birds_die'), n('the-slaughtered-bird', 'barred_from_it'), n('the-leper', 'sprinkled_seven'), n('the-living-bird', 'sent_over_the_field'),
             n('the-leper', 'shaved_whole'), n('the-leper', 'washes_and_bathes'), n('the-leper', 'immersed'), yr('the-leper', 'outside_his_tent'), n('the-quarantined', 'declared_pure'),
             n('the-leper', 'barred_from_holies'), n('the-scissors-user', 'shaved_whole'), n('the-leper', 'accepted'), n('the-leper', 'presented'), n('the-guilt-offering', 'waved'), n('the-guilt-offering', 'most_holy'),
             n('the-priests', 'due_to_priest'), n('the-guilt-offering', 'accepted'), n('the-leper', 'oil_on_the_blood'), n('the-priest', 'sprinkled_seven'), n('the-leper', 'atoned_forgiven'), n('the-burnt-offering', 'smoked_to_the_lord'),
             n('the-poor-leper', 'accepted'), n('the-poor-leper', 'pair_owed'), n('the-rich-who-brought-poor', 'disqualified'), n('the-poor-who-brought-rich', 'accepted'), n('the-maimed', 'barred_from_holies'), n('the-maimed', 'accepted'),
-            tset, fired, w.clock.year), w
+            tset, fired, w.clock.day), w
 SCENE, _W = scene()
 
 # ---- (2) TEST DATA — the rows, each expected value a literal ----------

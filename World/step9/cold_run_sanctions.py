@@ -1566,7 +1566,7 @@ def scene():
             n('the-molech-giver', 'stoned'), n('the-molech-giver', 'karet_cut_off'), n('the-molech-giver', 'face_set_against'), n('the-partial-giver', 'exempt'), n('the-concealed-giver', 'face_set_against'), n('the-concealed-giver', 'karet_cut_off'), n('the-concealed-giver', 'stoned'),
             n('the-ov-bearer', 'stoned'), n('the-ov-bearer', 'karet_cut_off'), n('the-ov-consulter', 'stoned'), n('the-curser', 'stoned'), n('the-maidservants-son', 'stoned'), n('the-not-by-name', 'stoned'),
             n('the-land', 'land_vomits'), n('the-people', 'karet_cut_off'), n('the-people', 'lashes'), n('the-people', 'disqualified'),
-            tset, fired, w.clock.year), w
+            tset, fired, w.clock.day), w
 SCENE, _W = scene()
 
 

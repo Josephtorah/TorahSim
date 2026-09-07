@@ -1000,7 +1000,7 @@ import world_engine as WE
 def law_family(event, world):
     """The family daemon: consumes the span's recorded acts and writes the ledger — never emits an event."""
     k, subj, src = event['kind'], event['subject'], event['case_source']
-    day = world.clock.year
+    day = world.clock.day
     E_ = lambda eff, s, due=None, cp=None, value=None, amount=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': 'F%s' % event.get('law', '7'), 'case_source': src}
     if k == 'died': return [E_('dead_before_him', subj, value=event['dead'])]
     if k == 'purchased': return [E_('field_acquired', 'the-field', cp=subj, amount=event['price']), E_('grave_holding', 'the-field', value=subj)]
@@ -1082,7 +1082,7 @@ def scene():
             n('tamar', 'pledge_held'), n('tamar', 'sentence_pronounced'), n('tamar', 'acquitted'), n('perez', 'firstborn_by_the_head'),
             n('ephraim', 'adopted_as_sons') + n('manasseh', 'adopted_as_sons'), n('ephraim', 'younger_set_first'), n('joseph', 'portion_added'),
             n('reuben', 'demoted'), n('joseph', 'birthright_transferred'), n('simeon', 'scattered_in_israel') + n('levi', 'scattered_in_israel'), n('judah', 'scepter_held'),
-            n('the-sons', 'burial_owed'), op('the-sons', 'burial_owed'), n('jacob', 'gathered_to_his_people'), fired, w.clock.year)
+            n('the-sons', 'burial_owed'), op('the-sons', 'burial_owed'), n('jacob', 'gathered_to_his_people'), fired, w.clock.day)
 SCENE = scene()
 
 # ---- F8: THE HEADLINES ----------------------------------------------------------------------------------------------

@@ -89,7 +89,7 @@ def law_negaim(event, world):
     """Lev 13 + 14:33-57 (cold_run_negaim.py — TRACKS, days, standing_verdict, house_machine): the confinement weeks as TIMERS on the shared seventh day."""
     k, src = event['kind'], event['case_source']
     E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
-    day = event.get('day', world.clock.year)
+    day = event.get('day', world.clock.day)
     week = days(2) - days(1)                                         # 6: the next exam is six days on — the seventh day shared (Sifra Chapter 2* 4)
     if k == 'skin_mark_seen':
         p = event['person']; track = event['track']; signs, weeks = TRACKS[track]
@@ -170,14 +170,14 @@ def scene():
         w.submit({'kind': 'shut_house_entered', 'subject': 'the-sleeper', 'enterer': 'the-sleeper', 'house': 'house-9', 'act': 'lay', 'day': 3, 'case_source': 'Lev 14:47 — lay in the house: washes'})
         w.advance(20)                                                # nineteen days: the third week's exam has come (Mishnah Negaim 3:8)
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
-    yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    yr = lambda eid, eff: [e['day'] for e in w.entity(eid).ledger if e['effect'] == eff]
     tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
     return (yr('the-skin-leper', 'confined_seven_days'), yr('the-skin-leper', 'released'), yr('the-boil-bearer', 'released'), yr('the-burn-bearer', 'released'), yr('the-scall-bearer', 'released'), yr('the-bald-bearer', 'released'),
             yr('the-spreading-leper', 'isolated_outside_camp'), yr('the-white-haired', 'isolated_outside_camp'), n('the-white-haired', 'confined_seven_days'),
             yr('the-standing-garment', 'burned_in_fire'), yr('the-spreading-garment', 'burned_in_fire'), yr('the-departed-garment', 'released'),
             tuple(n('house-%d' % i, 'demolished') for i in range(1, 11)), tuple(n('house-%d' % i, 'released') for i in range(1, 11)), tuple(len(yr('house-%d' % i, 'confined_seven_days')) for i in range(1, 11)),
             yr('house-9', 'demolished'), yr('house-1', 'released'), n('the-enterer', 'impure_until_evening'), n('the-enterer', 'washes_and_bathes'), n('the-sleeper', 'washes_and_bathes'),
-            tset, fired, w.clock.year), w
+            tset, fired, w.clock.day), w
 
 
 def main():

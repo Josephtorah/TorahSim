@@ -115,7 +115,7 @@ def scene():
     amt = lambda eid, eff: sum(e['amount'] or 0 for e in w.entity(eid).ledger if e['effect'] == eff)
     return (n('the-seducer', 'gives_fixed_sum'), n('the-seducer', 'pays'), n('the-rapist', 'gives_fixed_sum'), n('the-rapist', 'pays'),
             n('the-slave', 'released'), n('the-slave', 'goes_free'), n('the-maidservant', 'released'), n('the-maidservant', 'goes_free'), n('the-second-slave', 'released'),
-            n('the-striker', 'fined_by_assessment'), amt('the-striker', 'fined_by_assessment'), n('the-ox-owner', 'exempt'), n('the-ox-owner', 'fined_by_assessment'), w.clock.year), w
+            n('the-striker', 'fined_by_assessment'), amt('the-striker', 'fined_by_assessment'), n('the-ox-owner', 'exempt'), n('the-ox-owner', 'fined_by_assessment'), w.clock.day), w
 SCENE, _W = scene()
 wrap_cells = [
     ('THE SCENE on the world engine (the wrap)', SCENE, (1, 2, 1, 3, 1, 1, 1, 1, 0, 1, 50, 1, 0, 3),

@@ -831,7 +831,7 @@ def law_clocks(event, world):
     """Lev 12 + 15 (cold_run_clocks.py — yoledet, zav, touch, degrees, niddah, zavah, pairs): the impurity clocks as TIMERS per person."""
     k, src = event['kind'], event['case_source']
     E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
-    day = event.get('day', world.clock.year)
+    day = event.get('day', world.clock.day)
     if k == 'woman_gave_birth':
         m = event['mother']
         if event.get('birth_kind') == 'caesarean':
@@ -1023,7 +1023,7 @@ def scene():
         w.advance(82)                                                # every clock closes: the eightieth day passes
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
     tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE']); cut = len([l for l in w.log if l[0] == 'TIMER-CANCEL'])
-    yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    yr = lambda eid, eff: [e['day'] for e in w.entity(eid).ledger if e['effect'] == eff]
     return (n('the-mother-of-a-son', 'niddah_seven'), yr('the-mother-of-a-son', 'niddah_seven'), yr('the-mother-of-a-son', 'blood_of_purity'), yr('the-mother-of-a-daughter', 'niddah_seven'), yr('the-mother-of-a-daughter', 'blood_of_purity'),
             yr('the-mother-unknown', 'niddah_seven'), yr('the-mother-unknown', 'blood_of_purity'), n('the-mother-of-a-son', 'barred_from_holies'), n('the-caesarean', 'exempt'), n('the-sac-bearer', 'exempt'),
             n('the-one-sighting', 'impure_until_evening'), n('the-two-sightings', 'bed_and_seat_defile'), n('the-zav', 'bed_and_seat_defile'), n('the-twilight-seer', 'suspends'),
@@ -1036,7 +1036,7 @@ def scene():
             n('the-day-watcher', 'bed_and_seat_defile'), n('the-two-day-zavah', 'bed_and_seat_defile'), n('the-zavah', 'bed_and_seat_defile'), n('the-birds', 'consecrated'), n('the-sanctuary-enterer', 'death_by_heaven'), yr('the-zavah', 'counts_seven_clean'), yr('the-zavah', 'pair_owed'),
             n('the-mixed-women', 'pair_owed'), n('the-unequal-women', 'pair_owed'), n('the-birds', 'birds_die'), n('the-spec-in-chovah', 'accepted'),
             n('the-early-bringer', 'disqualified'), n('the-mother-of-a-son', 'accepted'), n('the-mother-of-a-son', 'atoned_forgiven'), n('the-heirs', 'disqualified'),
-            tset, fired, w.clock.year), w
+            tset, fired, w.clock.day), w
 SCENE, _W = scene()
 
 # ---- (2) TEST DATA — the Mishnah rows, read whole from the shelf ------

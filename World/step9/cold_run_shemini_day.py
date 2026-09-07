@@ -716,7 +716,7 @@ def scene():
     n = lambda ent, eff: len([e for e in ent.ledger if e['effect'] == eff])
     timers_fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
     main = (n(aas, 'confined_seven_days'), n(aas, 'invested_office'), n(aas, 'released'), timers_fired, n(aar, 'accepted'),
-            n(ppl, 'blessed_the_people'), n(ppl, 'glory_appeared'), n(alt, 'fire_from_before_the_lord'), n(land, 'high_places_banned'), w.clock.year)
+            n(ppl, 'blessed_the_people'), n(ppl, 'glory_appeared'), n(alt, 'fire_from_before_the_lord'), n(land, 'high_places_banned'), w.clock.day)
     # W3 (2026-09-07): the run's acts write the SPEC'S effects by call — counted on the same world
     m = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
     wrap = (m('aaron', 'atoned_forgiven'), m('the-people', 'atoned_forgiven'), m('the-calf', 'smoked_to_the_lord'), m('the-calf', 'burned_outside_camp'), m('the-burner', 'defiles_garments'),

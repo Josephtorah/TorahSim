@@ -458,7 +458,7 @@ def scene():
     return (n('the-blanket-witness', 'exempt'), n('the-silent-witness', 'confessed'), n('the-silent-witness', 'atoned_forgiven'), n('the-defiler', 'atoned_forgiven'), n('the-unaware', 'atoned_forgiven'),
             n('the-forgetter', 'atoned_forgiven'), n('the-liar', 'atoned_forgiven'), amt('the-trespasser', 'pays'), amt('the-trespasser', 'adds_fifth'), n('the-trespasser', 'atoned_forgiven'),
             n('the-deliberate-trespasser', 'pays'), n('the-doubter', 'suspends'), n('the-later-knower', 'atoned_forgiven'), n('the-meilah-doubter', 'suspends'), n('the-meilah-doubter', 'exempt'),
-            amt('the-denier', 'restores'), amt('the-denier', 'adds_fifth'), n('the-denier', 'atoned_forgiven'), w.clock.year), w
+            amt('the-denier', 'restores'), amt('the-denier', 'adds_fifth'), n('the-denier', 'atoned_forgiven'), w.clock.day), w
 
 CASES = [
  ('Shevuot 4:10 — the synagogue blanket oath',

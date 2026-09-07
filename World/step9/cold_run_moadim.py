@@ -468,7 +468,7 @@ def scene():
             n('the-reaper', 'barred_from_it'), n('israel', 'counts_omer'), n('israel', 'accepted'), n('israel', 'appearance_owed'), n('the-seven-lambs-bull-and-rams', 'smoked_to_the_lord'),
             n('the-two-lambs', 'most_holy'), n('the-priest', 'due_to_priest'), n('the-two-loaves', 'waved'),
             n('the-faster', 'rest_required'), n('the-eater', 'karet_cut_off'), n('the-worker', 'destroyed'), n('the-native', 'dwells_in_booths'), n('the-woman', 'exempt'),
-            n('the-temple-goer', 'takes_four_species'), n('the-villager', 'takes_four_species'), tset, fired, w.clock.year), w
+            n('the-temple-goer', 'takes_four_species'), n('the-villager', 'takes_four_species'), tset, fired, w.clock.day), w
 # ---- (2) TEST DATA — Mishnah rows read from the shelf --------------
 def mishnah(tractate, ch, m, must):
     fn = ROOT + '/Data/mishnah_%s_he.json' % tractate

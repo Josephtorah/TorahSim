@@ -1211,7 +1211,7 @@ effects:
   tamid_owed:
     en: "the daily offering owed — the standing TIMER of the altar: 'two yearling lambs each day, continually: the one lamb in the morning and the second lamb between the evenings', each with a tenth of flour in a quarter-hin of beaten oil and a quarter-hin of wine — the system's heartbeat, installed at the ordination's close and restated at Num 28:3-8 word for word; bought from the half shekel (Mishnah Shekalim 4:1)"
     he: "כְּבָשִׂים בְּנֵֽי שָׁנָה שְׁנַיִם לַיּוֹם תָּמִֽיד (two yearling lambs each day, continually — Exod 29:38) · עֹלַת תָּמִיד לְדֹרֹתֵיכֶם (a continual burnt offering for your generations — Exod 29:42)"
-    ledger_op: timer
+    ledger_op: debit   # THE CLOCK SITTING (2026-09-07): 'owed' — the timer's fire OPENS the day's debt and the offering brought CLOSES it (THE CLOSE PAIRING, CLOCK.md section 3; was `timer`, which opened no entry to close)
     ink: "Exod 29:38 ('lambs of the first year, two each day, continually' — the phrase once; Num 28:3 adds 'without blemish'), 29:39 ('the ONE lamb in the morning', 'the SECOND lamb between the evenings' — the ordinals the tradition reads: Menachot 50a, Zevachim 11b), 29:40-41 (the tenth, the quarter-hin of beaten oil, the quarter-hin of wine; 'like the meal offering of the morning' — Num 28:8 the same pointer), 29:42 ('a continual burnt offering' at Exod 29:42, Num 28:6, Ezra 3:5; 'for your generations'); Num 28:10 (the Sabbath's on the continual); Dan 8:11-13, 11:31, 12:11 (the tamid's removal — the run's failure branch); Onkelos Exod 29:38-42 ('each day, CONTINUALLY... a CONTINUAL burnt offering for your generations')"
     corpus: "exo_29_investiture (STEP_Ex_29_38, 29_39, 29_40, 29_41, 29_42)"
     exam: "cold_run_incense_shekel.py; Mishnah Menachot 4:4 (the tamids and the additionals do not hold each other up; the morning missed), Shekalim 4:1 (bought from the terumah), Tamid 3-4 (one Temple morning), Yoma 3:5"
@@ -1733,3 +1733,31 @@ effects:
     ink: "Gen 49:33, 49:29 ('I am being gathered to my people'), 25:8, 25:17, 35:29 ('and was gathered to his people' — the Genesis seats, measured), 7:21, 25:8, 25:17, 35:29, 49:33 ('and he expired' — five Genesis seats), 50:1-3 (the weeping and the embalming — by name); Num 20:24, 27:13, Deut 32:50 (Aaron and Moses — by name); Babylonian Talmud Taanit 31a:4, Bava Batra 16b:18-17a:1 (the three who tasted the world to come); Mishnah Avot 4:22 by name"
     corpus: "gen_72_testament_twelve (STEP_Gn_49_29, 49_33)"
     exam: "cold_run_family.py (testament — the scene's last event)"
+  sabbath_of_the_land:
+    en: "the sabbath of the land — the STATUS the count's timer writes on the LAND at the seventh count-year's first day (THE CLOCK SITTING: set at entry with the period 'sabbatical', re-armed through the Calendar); the sowing daemon reads it off the land, not off the event's year"
+    he: "וְהָיְתָה שַׁבַּת הָאָרֶץ לָכֶם לְאָכְלָה (and the sabbath of the land shall be for you for food — Lev 25:6); שַׁבַּת שַׁבָּתוֹן יִהְיֶה לָאָרֶץ (a sabbath of rest shall be to the land — 25:4)"
+    ledger_op: status
+    ink: "Lev 25:6 ('the sabbath of the land' — the phrase machine-verified at 25:6 alone in the chapter), 25:4 ('a sabbath of rest' at 25:4); Lev 25:2 'when you come into the land... the land shall keep a sabbath' (the start event); Mishnah Rosh Hashanah 1:1 (the first of the seventh month for sabbaticals — the new-year data row)"
+    corpus: "lev_25_sabbatical (the seventh year's rest as the land's own state)"
+    exam: "cold_run_yovel.py (the count's timer on entered_the_land; land_sown reads the status); calendar_parameters.yaml sabbatical_years"
+  jubilee_year:
+    en: "the year of the jubilee — the STATUS the count's timer writes on the LAND at the fiftieth count-year's first day: the year sanctified from the new year (Rosh Hashanah 8b:12), the horn and the release on the tenth; the UNDISPUTED fact of the count, before any act (THE CLOCK SITTING, the fork's first layer)"
+    he: "בִּשְׁנַת הַיּוֹבֵל הַזֹּאת (in this year of the jubilee — Lev 25:13); עַד שְׁנַת הַיּוֹבֵל (until the year of the jubilee — 25:28); וְקִדַּשְׁתֶּם אֵת שְׁנַת הַחֲמִשִּׁים שָׁנָה (and you shall sanctify the fiftieth year — 25:10)"
+    ledger_op: status
+    ink: "Lev 25:13, 25:28 ('the year of the jubilee' machine-verified at 13, 28; 'the jubilee' with the year at 40, 50, 52, 54), 25:10-11 ('the fiftieth year' at 10, 11); Rosh Hashanah 8b:12 (the fiftieth sanctified, not the fifty-first); Mishnah Rosh Hashanah 1:1 (the first of the seventh month for jubilees)"
+    corpus: "lev_25_sabbatical / lev_25_redeem_poor (the fiftieth year's sanctification)"
+    exam: "cold_run_yovel.py (the count's timer with the period 'jubilee'); calendar_parameters.yaml jubilee_year, jubilee_sanctified_from"
+  goes_out_in_the_jubilee:
+    en: "goes out in the jubilee — the ENTITLEMENT the sale's timer writes on the sold field or the sold man at the fiftieth year's arrival: the return is due; the RELEASE itself is written when the proclamation act is consumed (THE CLOCK SITTING, the fork's second layer)"
+    he: "וְיָצָא בַּיֹּבֵל וְשָׁב לַאֲחֻזָּתוֹ (and it shall go out in the jubilee and he shall return to his holding — Lev 25:28); וְיָצָא בִּשְׁנַת הַיֹּבֵל הוּא וּבָנָיו עִמּוֹ (and he shall go out in the year of the jubilee, he and his sons with him — 25:54)"
+    ledger_op: status
+    ink: "Lev 25:28 ('and it shall go out in the jubilee'), 25:30 (the walled house 'shall NOT go out in the jubilee' — the negative), 25:31, 25:33 ('in the jubilee' machine-verified at 28, 30, 31, 33), 25:54 ('in the year of the jubilee' at 54); Mishnah Arakhin 9:1-4 (what goes out and what does not)"
+    corpus: "lev_25_redeem_poor (LV25B — the field's and the house's going out)"
+    exam: "cold_run_yovel.py (field_sold, house_sold, brother_sold_as_slave set it as a timer to the fiftieth year computed by the Clock)"
+  jubilee_holds:
+    en: "the jubilee holds — the VERDICT the proclamation's daemon writes on the LAND after reading the three recorded conditions: the horn sounded and the servants sent free off the act's own fields (Sifra Behar Chapter 2 4 — Rabbi Yehuda against Rabbi Yose), all the inhabitants upon the land off the ledger (Arakhin 32b:16); the arms fork as VALUES, the 'no jubilee' arm named, never a silence"
+    he: "יוֹבֵל הִוא (it is a jubilee — Lev 25:10, 25:11, 25:12: the word the Sifra's two arms both read); וּקְרָאתֶם דְּרוֹר בָּאָרֶץ לְכָל יֹשְׁבֶיהָ (and you shall proclaim liberty in the land to all its inhabitants — 25:10)"
+    ledger_op: status
+    ink: "Lev 25:10, 25:11, 25:12 ('it is a jubilee' machine-verified at 10, 11, 12), 25:10 ('to all its inhabitants' at 10); Sifra Behar Chapter 2 4 (the two arms on 'it is'); Arakhin 32b:16 ('when all its inhabitants are upon it, and not when some of them were exiled')"
+    corpus: "lev_25_sabbatical (the proclamation's precondition of all inhabitants — the runner's jubilee() cell)"
+    exam: "cold_run_yovel.py (jubilee_proclaimed's branch; the fork's scene rows); world_engine.law_slave_term defers to it"

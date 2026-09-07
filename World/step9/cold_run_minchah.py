@@ -659,7 +659,7 @@ def scene():
             n('the-meal-offering', 'most_holy'), n('the-meal-offering', 'salted'), n('the-meal-offering', 'presented'), n('the-meal-offering', 'azkarah_to_fire'), n('the-meal-offering', 'disqualified'),
             n('the-meal-offering', 'accepted'), n('the-vower', 'not_accepted'), n('the-baker', 'lashes'), n('the-loaves', 'accepted'), n('israel', 'accepted'), n('the-omer', 'azkarah_to_fire'),
             n('the-bird', 'pinched'), n('the-bird', 'crop_cast_to_ash_place'), n('the-bird', 'salted'), n('the-bird-bringer', 'accepted'), n('the-young-turtledove', 'disqualified'),
-            n('the-knifed-bird', 'disqualified'), n('the-bird-bringer', 'not_accepted'), w.clock.year), w
+            n('the-knifed-bird', 'disqualified'), n('the-bird-bringer', 'not_accepted'), w.clock.day), w
 SCENE, _W = scene()
 
 # ---- (2) TEST DATA — the Mishnah rows, read whole from the shelf ----

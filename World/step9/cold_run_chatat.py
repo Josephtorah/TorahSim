@@ -1113,7 +1113,7 @@ def scene():
             n('the-priest-eater', 'due_to_priest'), n('the-meal-offering', 'most_holy'), n('the-daughter', 'due_to_priest'), n('the-onen', 'barred_from_it'), n('the-tevul-yom', 'barred_from_it'), n('the-eating-priest', 'eaten_to_atone'),
             n('the-priests', 'eaten_to_atone'), n('the-inner-goat', 'burned_outside_camp'), n('aaron', 'barred_from_it'),
             n('the-drunk-priest', 'death_by_heaven'), n('the-drunk-priest', 'service_profaned'), n('the-diluted-drinker', 'exempt'), n('the-drunk-teacher', 'teaching_barred'), n('the-israelite', 'death_by_heaven'),
-            tset, fired, w.clock.year), w
+            tset, fired, w.clock.day), w
 SCENE, _W = scene()
 
 # ---- (2) TEST DATA — the Mishnah rows, read whole from the shelf ------

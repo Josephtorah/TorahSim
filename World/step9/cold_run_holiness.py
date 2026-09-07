@@ -800,7 +800,7 @@ def law_holiness(event, world):
     """Lev 19:1-18 (cold_run_holiness.py — shelamim, classify, gifts, theft, deposit_case, robbery, wage, conduct): the ledger's debits, the wage clock, the leftover's third day."""
     k, src = event['kind'], event['case_source']
     E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
-    day = event.get('day', world.clock.year)
+    day = event.get('day', world.clock.day)
     if k == 'shelamim_slaughtered_for_acceptance':
         o = event['offerer']; out = []
         if event.get('wrong') == 'time' or event.get('eaten_on_day', 1) >= 3:
@@ -977,7 +977,7 @@ def scene():
         w.submit({'kind': 'neighbor_endangered', 'subject': 'the-lover', 'person': 'the-lover', 'neighbor': 'the-neighbor', 'day': 1, 'case_source': 'Lev 19:18; Sifra Kedoshim Chapter 4 12 — the great rule'})
         w.advance(3)                                                 # the third day: the leftover burns; the mornings have passed
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
-    yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
+    yr = lambda eid, eff: [e['day'] for e in w.entity(eid).ledger if e['effect'] == eff]
     am = lambda eid, eff: [e['amount'] for e in w.entity(eid).ledger if e['effect'] == eff]
     tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
     return (n('the-offerer', 'accepted'), n('the-offerer', 'eating_window'), yr('the-leftover', 'burn_remainder'), n('the-third-day-eater', 'not_accepted'), n('the-third-day-eater', 'karet_cut_off'), n('the-third-day-eater', 'lashes'), n('the-wrong-place', 'not_accepted'), n('the-wrong-place', 'karet_cut_off'),
@@ -987,7 +987,7 @@ def scene():
             yr('the-employer', 'wage_due_by_morning'), n('the-day-worker', 'oath_imposed'), yr('the-night-employer', 'wage_due_by_morning'), n('the-assigner', 'exempt'), n('the-unclaimed', 'exempt'), n('the-in-kind-payer', 'wage_due_by_morning'),
             n('the-fair-judge', 'judgment_perverted'), n('the-favoring-judge', 'judgment_perverted'), n('the-bribed-judge', 'judgment_perverted'), n('the-measurer', 'judgment_perverted'),
             n('the-adviser', 'given_to_the_heart'), n('the-lender', 'interest_barred'), n('the-lender', 'given_to_the_heart'), n('the-witness', 'rescue_owed'), n('the-rescuer', 'rescue_owed'), n('the-rebuker', 'rebuke_owed'), n('the-hater', 'love_owed'), n('the-hater', 'rebuke_owed'), n('the-lover', 'love_owed'),
-            tset, fired, w.clock.year), w
+            tset, fired, w.clock.day), w
 SCENE, _W = scene()
 
 

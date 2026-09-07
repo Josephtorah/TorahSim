@@ -1,0 +1,153 @@
+# calendar_parameters.yaml — THE THIRD REGISTRY (THE CLOCK SITTING, 2026-09-07; consensus point E, round two's
+# point 2). One row per calendar PARAMETER, each with its channel (ink / received / rounding / modeled / OPEN),
+# its source on the local shelf (resolved by script at the sitting), and — under the link review law — its
+# teacher. Read by world_engine.Calendar ALONE (the code/data law: the mechanism is ink, the quantities are
+# data). `settings:` lists the tradition's recorded alternatives where two stand; `value:` is the setting a
+# tape runs, named. `exercised_by:` names the worlds whose tapes run the row; an empty list is UNEXERCISED
+# and printed as such by clock_probes.py (the zero-report law — a row no tape runs is visible).
+# The specification: ARCHITECTURE/THE_CLOCK.md (the design thread's); the implementation record: CLOCK.md.
+
+parameters:
+  day_boundary:
+    value: evening
+    channel: ink
+    source: "Gen 1:5, 8, 13, 19, 23, 31 — 'and there was evening and there was morning': the day begins at evening"
+    teacher: null
+    open: "OPEN-5 — the Temple's day runs day-then-night for the offerings (Chullin 83a); 'until the evening' timers run to the next day boundary (day + 1) meanwhile"
+    exercised_by: [the day-grain worlds' 'until the evening' timers]
+  month_one:
+    value: 1
+    channel: ink
+    source: "Exod 12:2 — 'this month is for you the head of months; it is the first for you of the months of the year'"
+    teacher: null
+    exercised_by: [count]
+  month_length:
+    value: {days: 29, hours: 12, parts: 793}
+    channel: received
+    source: "Rosh Hashanah 25a:10 — Rabban Gamliel: 'thus I have received from my father's father's house: the renewal of the moon is not less than twenty-nine days and a half and two-thirds of an hour and seventy-three parts' (the hour in 1,080 parts)"
+    teacher: "Rosh Hashanah 25a:10"
+    exercised_by: [count]
+  month_rounding:
+    value: alternate_30_29
+    channel: rounding
+    source: "the half day of Rosh Hashanah 25a:10 rounded to whole days at the day grain: thirty and twenty-nine alternating, the first month thirty"
+    teacher: "Rosh Hashanah 25a:10 (the constant); the rounding is the day grain's, labeled"
+    open: "OPEN-6 — the two-thirds of an hour and seventy-three parts accumulate about one day in thirty-three months; settled on the tape by the court's declaration (Mishnah Rosh Hashanah 3:1, 'sanctified') where the text records one; between records the alternation runs"
+    exercised_by: [count]
+  intercalated_month:
+    value: {position: after_month_12, length: 30}
+    channel: received
+    source: "Sanhedrin 12b:8 — 'the year is intercalated only in Adar' (the twelfth month); its length thirty at the day grain (the rounding channel)"
+    teacher: "Sanhedrin 12b:8"
+    exercised_by: [count]
+  new_years:
+    value: {kings_and_festivals: 1, animal_tithe: 6, years_sabbaticals_jubilees_planting: 7, trees: 11}
+    channel: received
+    source: "Mishnah Rosh Hashanah 1:1 — four new years: the first of the first month for kings and festivals; the first of the sixth for the animal tithe; the first of the seventh for years, sabbaticals, jubilees, planting and vegetables; the first of the eleventh for trees"
+    teacher: "Mishnah Rosh Hashanah 1:1"
+    settings: {animal_tithe_r_eleazar_r_shimon: 7, trees_school_of_hillel: "the fifteenth of the eleventh month"}
+    exercised_by: [count]
+  intercalation_grounds:
+    value: [spring_grain, tree_fruit, season]
+    channel: received
+    source: "Sanhedrin 11b:5 — 'the year is intercalated on three grounds: the spring grain, the fruit of the trees, and the season; on two of them they intercalate, on one of them alone they do not'"
+    teacher: "Sanhedrin 11b:5"
+    open: "OPEN-2 — the court's grain and fruit observations are not on the tape; the SEASON ground alone is modeled (Sanhedrin 13a:1 on Exod 34:22 'the festival of ingathering at the turn of the year'), labeled modeled in every fraction, never counted as ink"
+    exercised_by: [count]
+  intercalation_threshold_days:
+    value: 16
+    channel: received
+    source: "Sanhedrin 13a:4 — 'the year is intercalated only if the season falls short by most of the month; and how much is most of the month? sixteen days. Rabbi Yehuda says: two parts of the month; and how much is two parts of the month? twenty days'"
+    teacher: "Sanhedrin 13a:4"
+    settings: {sages: 16, r_yehuda: 20}
+    exercised_by: [count]
+  solar_year_days:
+    value: 365.25
+    channel: modeled
+    source: "the season of ninety-one days and seven and a half hours (four seasons = 365 days and six hours) — named by the design thread's TIME.md at Eruvin 56a; NOT FOUND on the local shelf under the searched forms at this sitting (the whole Babylonian shelf searched by script for the season-to-season phrase and the ninety-one days) — held MODELED until read"
+    teacher: null
+    open: "OPEN-2"
+    exercised_by: [count]
+  equinox_offset_days:
+    value: 0
+    channel: modeled
+    source: "the autumn equinox's position at the epoch is not on the tape; zero aligns it with the first day of the seventh month of count-year 1 — a modeled alignment, labeled"
+    teacher: null
+    open: "OPEN-2"
+    exercised_by: [count]
+  regnal_rounding:
+    value: one_day_in_a_year_counts_as_a_year
+    channel: received
+    source: "Rosh Hashanah 2b:1 — 'the first of the first month is the new year for kings, and one day in a year counts as a year'"
+    teacher: "Rosh Hashanah 2b:1"
+    exercised_by: []
+  count_start_offset_years:
+    value: 0
+    channel: received
+    source: "Arakhin 12b:5 — 'seventeen jubilees Israel counted from when they entered the land until they went out, and you cannot say that they counted from the moment they entered'; 13a:7-8 — seven years of conquest and seven of division, from Caleb's ages (Joshua 14:7, 14:10)"
+    teacher: "Arakhin 12b:5, 13a:7-8"
+    settings: {rows_frame: 0, historical: 14}
+    open: "OPEN-1 — the recorded rows the year-grain scenes replay are stated by count-year ('the seventh year', 'the fiftieth'), so the scenes run the rows' own frame (0); a historical tape runs 14"
+    exercised_by: [count]
+  fiftieth_in_cycle:
+    value: not_counted
+    channel: received
+    source: "Rosh Hashanah 9a:1 — the Sages: 'you count the fiftieth year and you do not count the fifty-first year, to exclude Rabbi Yehuda who said the fiftieth year counts for both'; Arakhin 12b:4"
+    teacher: "Rosh Hashanah 9a:1; Arakhin 12b:4"
+    settings: {sages: not_counted, r_yehuda: counts_for_both}
+    exercised_by: []
+  jubilee_sanctified_from:
+    value: {month: 7, day: 1}
+    channel: received
+    source: "Rosh Hashanah 8b:12 — 'the fiftieth year you sanctify, and you do not sanctify the fifty-first year'; the year's status from the new year of the seventh month"
+    teacher: "Rosh Hashanah 8b:12"
+    exercised_by: [count]
+  jubilee_horn_day:
+    value: {month: 7, day: 10}
+    channel: ink
+    source: "Lev 25:9 — 'in the seventh month, on the tenth of the month, on the Day of Atonement you shall pass the horn'; Rosh Hashanah 8b:8"
+    teacher: null
+    exercised_by: [count]
+  sabbatical_years:
+    value: 7
+    channel: ink
+    source: "Lev 25:4 — 'in the seventh year a sabbath of rest shall be to the land'"
+    teacher: null
+    exercised_by: [count]
+  cycle_years:
+    value: 49
+    channel: ink
+    source: "Lev 25:8 — 'seven sabbaths of years, seven times seven years... forty-nine years'"
+    teacher: null
+    exercised_by: [count]
+  jubilee_year:
+    value: 50
+    channel: ink
+    source: "Lev 25:10-11 — 'you shall sanctify the fiftieth year... a jubilee it is, the fiftieth year'"
+    teacher: null
+    exercised_by: [count]
+
+# THE ERA TABLE (consensus point D as amended at round two: data now; a code path only where a tape exercises
+# the row). A world declares its epoch by the row's key; a world with no epoch has no derived year (None).
+eras:
+  count:
+    new_year_month: 7
+    epoch: "day 0 = the first day of the seventh month of count-year 1 — Lev 25:8 'you shall count for yourself'; Mishnah Rosh Hashanah 1:1 the first of the seventh month for years, sabbaticals and jubilees; the count's start after entry per count_start_offset_years"
+    exercised_by: [calendar, holiness_b, tochacha, yovel, mishpatim, the skeleton's own scenes]
+  exodus:
+    new_year_month: 1
+    epoch: "day 0 = the first day of the first month of year 1 — Exod 12:2; Exod 40:17 'in the first month of the second year'; Num 1:1"
+    exercised_by: []
+  life_years:
+    new_year_month: null
+    epoch: "a person's birth; the year turns on the birthday — Gen 7:11 'in the six hundredth year of Noah's life'"
+    exercised_by: []
+  regnal:
+    new_year_month: 1
+    rounding: regnal_rounding
+    epoch: "the king's accession, counted from the first month with the rounding rule — Rosh Hashanah 2a-2b; the 44 synchronisms of Kings and Chronicles are its constraints (DIVERGE reports, never an adjustment)"
+    exercised_by: []
+  exile_greek:
+    new_year_month: 7
+    epoch: "the kings of Greece — Avodah Zarah 10a 'in the exile we count only by the kings of Greece'"
+    exercised_by: []

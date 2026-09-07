@@ -855,7 +855,7 @@ def law_holiness_b(event, world):
     """Lev 19:19-37 (cold_run_holiness_b.py — mixtures, maidservant, orlah, body, daughter_sanctuary, convert_measures): the per-tree orlah TIMER in years, the bars and the debits."""
     k, src = event['kind'], event['case_source']
     E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
-    yr = event.get('year', world.clock.year)
+    yr = world.clock.year
     if k == 'kinds_mixed':
         d = event['doer']; ban = event.get('ban', 'sow'); out = []
         if event.get('pair'):
@@ -894,7 +894,7 @@ def law_holiness_b(event, world):
             c = orlah('uprooted', can_live=event.get('can_live', True))
             if 'exempt' in c['fx']:
                 return [E_('exempt', t, value=c['v'], law='F3 [Mishnah Orlah 1:3 — uprooted with its rock, it can live: no new planting]')]
-            return [E_('orlah_years', t, cp=p, amount=3, due=yr + 3, value=c['v'], law='F3 [Mishnah Orlah 1:3 — it cannot live: the count restarts from this planting]')]
+            return [E_('orlah_years', t, cp=p, amount=3, due=world.clock.after(3, 'year'), value=c['v'], law='F3 [Mishnah Orlah 1:3 — it cannot live: the count restarts from this planting]')]
         if event.get('fruit_used'):
             c = orlah('dye') if event['fruit_used'] == 'dye' else orlah('cooking_oven')
             out = [E_('burned_in_fire', 'the-%s' % event['fruit_used'], cp=p, value=str(c['v'])[:60], law='F3 [Mishnah Orlah 3:1-3 — the garment dyed and the dish cooked with orlah fruit: burned]')]
@@ -903,9 +903,9 @@ def law_holiness_b(event, world):
                 out.append(E_('lashes', p, value=lj['v'], law='F3 [Mishnah Terumot 11:3 — %s]' % lj['v']))
             return out
         tm = orlah('timer'); cf = orlah('count_from'); fy = orlah('fourth_year'); ls = orlah('like_second_tithe')
-        return [E_('orlah_years', t, cp=p, amount=3, due=yr + 3, value=tm['v'], law='F3 [INK 19:23 "three years it shall be to you uncircumcised" — the per-TREE timer %s]' % cf['v']),
-                E_('fourth_year_holy', t, cp=p, due=yr + 3, value=fy['v'], law='F3 [INK 19:24 "in the fourth year all its fruit shall be HOLY, PRAISES to the LORD" — fires when the count closes]'),
-                E_('adds_fifth', p, cp='HEAVEN', due=yr + 3, value=ls['v'], law='F3 [like the second tithe: %s]' % ls['v'])]
+        return [E_('orlah_years', t, cp=p, amount=3, due=world.clock.after(3, 'year'), value=tm['v'], law='F3 [INK 19:23 "three years it shall be to you uncircumcised" — the per-TREE timer %s]' % cf['v']),
+                E_('fourth_year_holy', t, cp=p, due=world.clock.after(3, 'year'), value=fy['v'], law='F3 [INK 19:24 "in the fourth year all its fruit shall be HOLY, PRAISES to the LORD" — fires when the count closes]'),
+                E_('adds_fifth', p, cp='HEAVEN', due=world.clock.after(3, 'year'), value=ls['v'], law='F3 [like the second tithe: %s]' % ls['v'])]
     if k == 'body_marked':
         p = event['person']; act = event.get('act', 'beard')
         if event.get('sex') == 'female':
@@ -961,39 +961,39 @@ def law_holiness_b(event, world):
     return []
 
 def scene():
-    """THE SCENE — Kilayim, Keritot, Orlah, Makkot and the Sifra's rows replayed on the world engine (clock unit: YEARS): the orlah tree's three years as a TIMER."""
+    """THE SCENE — Kilayim, Keritot, Orlah, Makkot and the Sifra's rows replayed on the world engine (THE COUNT EPOCH — the day the base unit, the year derived): the orlah tree's three years as a TIMER to the same date three years on."""
     with _ctx5.redirect_stdout(_io5.StringIO()):
-        w = WE.World(era='the holiness ledger, second half: Kilayim, Keritot 2, Orlah, Makkot 3 on the engine (clock unit: years)')
+        w = WE.World(era='the holiness ledger, second half: Kilayim, Keritot 2, Orlah, Makkot 3 on the engine (the count epoch: the day the base unit, the year derived)', epoch='count')
         w.laws = [law_holiness_b]
-        w.advance(1)
-        w.submit({'kind': 'kinds_mixed', 'subject': 'the-sower', 'doer': 'the-sower', 'ban': 'sow', 'year': 1, 'case_source': 'Lev 19:19; Mishnah Kilayim 1:9 — wheat and barley sown together'})
-        w.submit({'kind': 'kinds_mixed', 'subject': 'the-wearer', 'doer': 'the-wearer', 'ban': 'wear', 'warned_each_time': 2, 'year': 1, 'case_source': 'Mishnah Makkot 3:8 — warned and he strips and dresses: each'})
-        w.submit({'kind': 'kinds_mixed', 'subject': 'the-breeder', 'doer': 'the-breeder', 'ban': 'breed', 'year': 1, 'case_source': 'Lev 19:19 — the cattle bred as mixed kinds'})
-        w.submit({'kind': 'kinds_mixed', 'subject': 'the-pair-tester', 'doer': 'the-pair-tester', 'pair': ['wolf', 'dog'], 'year': 1, 'case_source': 'Mishnah Kilayim 1:6 — the wolf and the dog: kilayim though similar'})
-        w.submit({'kind': 'maidservant_lain_with', 'subject': 'the-lier', 'man': 'the-lier', 'woman': 'the-maidservant', 'year': 1, 'case_source': 'Lev 19:20-22; Mishnah Keritot 2:4 — the designated maidservant: no death, her inquest, his ram'})
-        w.submit({'kind': 'maidservant_lain_with', 'subject': 'the-freed-lier', 'man': 'the-freed-lier', 'woman': 'the-freed-maid', 'freed': True, 'year': 1, 'case_source': 'Sifra Kedoshim Chapter 5 5 — freed: a man\'s wife'})
-        w.submit({'kind': 'maidservant_lain_with', 'subject': 'the-half-redeemed', 'man': 'the-half-lier', 'woman': 'the-half-redeemed', 'redeemed_by_halves': True, 'year': 1, 'case_source': 'Sifra Kedoshim Chapter 5 3 — money frees by halves as the document'})
-        w.submit({'kind': 'tree_planted', 'subject': 'tree-1', 'planter': 'the-planter', 'tree': 'tree-1', 'year': 1, 'case_source': 'Lev 19:23-25; Mishnah Orlah 1:1 — planted: three years, the fourth holy'})
-        w.submit({'kind': 'tree_planted', 'subject': 'tree-2', 'planter': 'the-uprooter', 'tree': 'tree-2', 'uprooted': True, 'can_live': True, 'year': 1, 'case_source': 'Mishnah Orlah 1:3 — uprooted with its rock, it can live'})
-        w.submit({'kind': 'tree_planted', 'subject': 'tree-3', 'planter': 'the-replanter', 'tree': 'tree-3', 'uprooted': True, 'can_live': False, 'year': 1, 'case_source': 'Mishnah Orlah 1:3 — it cannot live: the count restarts'})
-        w.submit({'kind': 'tree_planted', 'subject': 'the-dyer', 'planter': 'the-dyer', 'tree': 'tree-4', 'fruit_used': 'dye', 'warned': True, 'year': 1, 'case_source': 'Mishnah Orlah 3:1; Terumot 11:3 — dyed with orlah: burned; the lashes'})
-        w.submit({'kind': 'body_marked', 'subject': 'the-shaver', 'person': 'the-shaver', 'act': 'beard', 'tool': 'razor', 'year': 1, 'case_source': 'Mishnah Makkot 3:5 — with a razor'})
-        w.submit({'kind': 'body_marked', 'subject': 'the-scissors-user', 'person': 'the-scissors-user', 'act': 'beard', 'tool': 'scissors', 'year': 1, 'case_source': 'Sifra Kedoshim Chapter 6 4 — scissors: no destruction'})
-        w.submit({'kind': 'body_marked', 'subject': 'the-gasher', 'person': 'the-gasher', 'act': 'gash', 'gashes': 5, 'dead': 1, 'year': 1, 'case_source': 'Mishnah Makkot 3:5 — five gashes for one dead'})
-        w.submit({'kind': 'body_marked', 'subject': 'the-tattooed', 'person': 'the-tattooed', 'act': 'tattoo', 'year': 1, 'case_source': 'Mishnah Makkot 3:6 — wrote and engraved'})
-        w.submit({'kind': 'body_marked', 'subject': 'the-rounder', 'person': 'the-rounder', 'act': 'head', 'year': 1, 'case_source': 'Lev 19:27 — the head rounded'})
-        w.submit({'kind': 'body_marked', 'subject': 'the-woman', 'person': 'the-woman', 'act': 'head', 'sex': 'female', 'year': 1, 'case_source': 'Mishnah Kiddushin 1:7 — the women exempt'})
-        w.submit({'kind': 'daughter_profaned', 'subject': 'the-father', 'father': 'the-father', 'daughter': 'the-daughter', 'purpose': 'harlotry', 'year': 1, 'case_source': 'Lev 19:29 — the land strays'})
-        w.submit({'kind': 'sanctuary_built_on_sabbath', 'subject': 'the-builder', 'builder': 'the-builder', 'day': 'sabbath', 'year': 1, 'case_source': 'Sifra Kedoshim Chapter 7 7 — the Temple\'s building does not override the Sabbath'})
-        w.submit({'kind': 'ghost_pit_consulted', 'subject': 'the-ov-bearer', 'person': 'the-ov-bearer', 'role': 'bearer', 'year': 1, 'case_source': 'Lev 20:27; Mishnah Sanhedrin 7:7 — the bearer stoned'})
-        w.submit({'kind': 'ghost_pit_consulted', 'subject': 'the-consulter', 'person': 'the-consulter', 'role': 'consulter', 'year': 1, 'case_source': 'Lev 19:31; Mishnah Sanhedrin 7:7 — the consulter warned only'})
-        w.submit({'kind': 'elder_approached', 'subject': 'the-youth', 'person': 'the-youth', 'elder': 'the-sage', 'within_reach': True, 'year': 1, 'case_source': 'Lev 19:32; Sifra Kedoshim Chapter 7 12-14 — rise and honor'})
-        w.submit({'kind': 'elder_approached', 'subject': 'the-far-youth', 'person': 'the-far-youth', 'elder': 'the-sage', 'within_reach': False, 'year': 1, 'case_source': 'Sifra Kedoshim Chapter 7 13 — from afar: nothing'})
-        w.submit({'kind': 'stranger_wronged', 'subject': 'the-wronger-by-words', 'wronger': 'the-wronger-by-words', 'victim': 'the-convert', 'victim_class': 'convert', 'by_words': True, 'year': 1, 'case_source': 'Mishnah Bava Metzia 4:10 — by words: no court remedy'})
-        w.submit({'kind': 'stranger_wronged', 'subject': 'the-neighbor-of-the-convert', 'wronger': 'the-neighbor-of-the-convert', 'victim': 'the-convert', 'victim_class': 'convert', 'year': 1, 'case_source': 'Lev 19:34 — love him as yourself'})
-        w.submit({'kind': 'judgment_rendered', 'subject': 'the-measurer', 'judge': 'the-measurer', 'measure': True, 'year': 1, 'case_source': 'Lev 19:35 — the measurer is a judge'})
-        w.submit({'kind': 'judgment_rendered', 'subject': 'the-court-judge', 'judge': 'the-court-judge', 'year': 1, 'case_source': 'Lev 19:15 — the court\'s seat: the first half\'s'})
-        w.advance(5)                                                 # the fourth year has come and gone: the orlah timers fired
+        w.advance(w.clock.at_year(1))
+        w.submit({'kind': 'kinds_mixed', 'subject': 'the-sower', 'doer': 'the-sower', 'ban': 'sow', 'case_source': 'Lev 19:19; Mishnah Kilayim 1:9 — wheat and barley sown together'})
+        w.submit({'kind': 'kinds_mixed', 'subject': 'the-wearer', 'doer': 'the-wearer', 'ban': 'wear', 'warned_each_time': 2, 'case_source': 'Mishnah Makkot 3:8 — warned and he strips and dresses: each'})
+        w.submit({'kind': 'kinds_mixed', 'subject': 'the-breeder', 'doer': 'the-breeder', 'ban': 'breed', 'case_source': 'Lev 19:19 — the cattle bred as mixed kinds'})
+        w.submit({'kind': 'kinds_mixed', 'subject': 'the-pair-tester', 'doer': 'the-pair-tester', 'pair': ['wolf', 'dog'], 'case_source': 'Mishnah Kilayim 1:6 — the wolf and the dog: kilayim though similar'})
+        w.submit({'kind': 'maidservant_lain_with', 'subject': 'the-lier', 'man': 'the-lier', 'woman': 'the-maidservant', 'case_source': 'Lev 19:20-22; Mishnah Keritot 2:4 — the designated maidservant: no death, her inquest, his ram'})
+        w.submit({'kind': 'maidservant_lain_with', 'subject': 'the-freed-lier', 'man': 'the-freed-lier', 'woman': 'the-freed-maid', 'freed': True, 'case_source': 'Sifra Kedoshim Chapter 5 5 — freed: a man\'s wife'})
+        w.submit({'kind': 'maidservant_lain_with', 'subject': 'the-half-redeemed', 'man': 'the-half-lier', 'woman': 'the-half-redeemed', 'redeemed_by_halves': True, 'case_source': 'Sifra Kedoshim Chapter 5 3 — money frees by halves as the document'})
+        w.submit({'kind': 'tree_planted', 'subject': 'tree-1', 'planter': 'the-planter', 'tree': 'tree-1', 'case_source': 'Lev 19:23-25; Mishnah Orlah 1:1 — planted: three years, the fourth holy'})
+        w.submit({'kind': 'tree_planted', 'subject': 'tree-2', 'planter': 'the-uprooter', 'tree': 'tree-2', 'uprooted': True, 'can_live': True, 'case_source': 'Mishnah Orlah 1:3 — uprooted with its rock, it can live'})
+        w.submit({'kind': 'tree_planted', 'subject': 'tree-3', 'planter': 'the-replanter', 'tree': 'tree-3', 'uprooted': True, 'can_live': False, 'case_source': 'Mishnah Orlah 1:3 — it cannot live: the count restarts'})
+        w.submit({'kind': 'tree_planted', 'subject': 'the-dyer', 'planter': 'the-dyer', 'tree': 'tree-4', 'fruit_used': 'dye', 'warned': True, 'case_source': 'Mishnah Orlah 3:1; Terumot 11:3 — dyed with orlah: burned; the lashes'})
+        w.submit({'kind': 'body_marked', 'subject': 'the-shaver', 'person': 'the-shaver', 'act': 'beard', 'tool': 'razor', 'case_source': 'Mishnah Makkot 3:5 — with a razor'})
+        w.submit({'kind': 'body_marked', 'subject': 'the-scissors-user', 'person': 'the-scissors-user', 'act': 'beard', 'tool': 'scissors', 'case_source': 'Sifra Kedoshim Chapter 6 4 — scissors: no destruction'})
+        w.submit({'kind': 'body_marked', 'subject': 'the-gasher', 'person': 'the-gasher', 'act': 'gash', 'gashes': 5, 'dead': 1, 'case_source': 'Mishnah Makkot 3:5 — five gashes for one dead'})
+        w.submit({'kind': 'body_marked', 'subject': 'the-tattooed', 'person': 'the-tattooed', 'act': 'tattoo', 'case_source': 'Mishnah Makkot 3:6 — wrote and engraved'})
+        w.submit({'kind': 'body_marked', 'subject': 'the-rounder', 'person': 'the-rounder', 'act': 'head', 'case_source': 'Lev 19:27 — the head rounded'})
+        w.submit({'kind': 'body_marked', 'subject': 'the-woman', 'person': 'the-woman', 'act': 'head', 'sex': 'female', 'case_source': 'Mishnah Kiddushin 1:7 — the women exempt'})
+        w.submit({'kind': 'daughter_profaned', 'subject': 'the-father', 'father': 'the-father', 'daughter': 'the-daughter', 'purpose': 'harlotry', 'case_source': 'Lev 19:29 — the land strays'})
+        w.submit({'kind': 'sanctuary_built_on_sabbath', 'subject': 'the-builder', 'builder': 'the-builder', 'day': 'sabbath', 'case_source': 'Sifra Kedoshim Chapter 7 7 — the Temple\'s building does not override the Sabbath'})
+        w.submit({'kind': 'ghost_pit_consulted', 'subject': 'the-ov-bearer', 'person': 'the-ov-bearer', 'role': 'bearer', 'case_source': 'Lev 20:27; Mishnah Sanhedrin 7:7 — the bearer stoned'})
+        w.submit({'kind': 'ghost_pit_consulted', 'subject': 'the-consulter', 'person': 'the-consulter', 'role': 'consulter', 'case_source': 'Lev 19:31; Mishnah Sanhedrin 7:7 — the consulter warned only'})
+        w.submit({'kind': 'elder_approached', 'subject': 'the-youth', 'person': 'the-youth', 'elder': 'the-sage', 'within_reach': True, 'case_source': 'Lev 19:32; Sifra Kedoshim Chapter 7 12-14 — rise and honor'})
+        w.submit({'kind': 'elder_approached', 'subject': 'the-far-youth', 'person': 'the-far-youth', 'elder': 'the-sage', 'within_reach': False, 'case_source': 'Sifra Kedoshim Chapter 7 13 — from afar: nothing'})
+        w.submit({'kind': 'stranger_wronged', 'subject': 'the-wronger-by-words', 'wronger': 'the-wronger-by-words', 'victim': 'the-convert', 'victim_class': 'convert', 'by_words': True, 'case_source': 'Mishnah Bava Metzia 4:10 — by words: no court remedy'})
+        w.submit({'kind': 'stranger_wronged', 'subject': 'the-neighbor-of-the-convert', 'wronger': 'the-neighbor-of-the-convert', 'victim': 'the-convert', 'victim_class': 'convert', 'case_source': 'Lev 19:34 — love him as yourself'})
+        w.submit({'kind': 'judgment_rendered', 'subject': 'the-measurer', 'judge': 'the-measurer', 'measure': True, 'case_source': 'Lev 19:35 — the measurer is a judge'})
+        w.submit({'kind': 'judgment_rendered', 'subject': 'the-court-judge', 'judge': 'the-court-judge', 'case_source': 'Lev 19:15 — the court\'s seat: the first half\'s'})
+        w.advance(w.clock.at_year(5))                                                 # the fourth year has come and gone: the orlah timers fired
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
     yr = lambda eid, eff: [e['year'] for e in w.entity(eid).ledger if e['effect'] == eff]
     am = lambda eid, eff: [e['amount'] for e in w.entity(eid).ledger if e['effect'] == eff]

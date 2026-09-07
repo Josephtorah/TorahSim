@@ -865,7 +865,7 @@ def scene():
             n('the-judge', 'false_report_barred'), vals('the-court', 'majority_decides'), n('the-finder', 'restores'), n('the-passerby', 'unloading_owed'), n('the-second-passerby', 'exempt'),
             n('the-accused', 'exempt'), n('the-judge', 'bribe_barred'), n('the-judge', 'judgment_perverted'),
             n('their-pillars', 'demolished'), n('israel', 'covenant_barred'), n('the-land', 'land_desolate'), w.entity('the-land').status.get('land_desolate'), n('israel', 'bread_and_water_blessed'),
-            tset, fired, w.clock.year), w
+            tset, fired, w.clock.day), w
 SCENE, _W = scene()
 
 TESTS = [

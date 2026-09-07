@@ -6,10 +6,13 @@
 # "verify" marks a span whose overlap with an existing runner must be
 # measured at the sitting before it is compiled again.
 
-Step 5's deliverable rule (owner, 2026-09-03): a law span does not
-finish Step 5 until its cold-compiled function exists — the five
-motions, ink first, effects on every verdict, the honest-pairing guard
-from birth. Twelve spans are compiled (the runners in World/step9/
+Step 5's deliverable rule (owner, 2026-09-03; AMENDED at D9-iv,
+2026-09-07): a law span does not finish Step 5 until its cold-compiled
+function exists, its dependency edges are dispositioned, AND its wrap
+is declared and verified — the SIX motions, ink first, effects on every
+verdict, the honest-pairing guard from birth, the daemon declared
+before its code and verified by the daemon gate (THE_STEPS Step 5 (1),
+motion (6)). Twelve spans are compiled (the runners in World/step9/
 cold_run_*.py). Everything below was graded in exam rounds; scaffold
 is not compiled.
 
@@ -307,7 +310,15 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
 
 ## BEFORE NUMBERS — THE SEQUENCE (listed for the owner 2026-09-07 after compaction #80; "lets go with lr1")
 ## In order, ruled: LR1 → LR2 → LR3 (the link review, below) → W6 → W7 (the wrap worklist, above — ALL DONE 2026-09-07) → D9-iv THE
-## DELIVERABLE RULE AMENDED (inside D9's entry, below — NEXT). Open and UNSEQUENCED, the owner's call whether any goes
+## DELIVERABLE RULE AMENDED (DONE 2026-09-07) → THE CLOCK SITTING (DONE 2026-09-07 after compaction #86, the owner: "ok do the clock
+## sitting" — the engine change from the two-thread consensus as amended at round two: the day the base unit, the year derived; the
+## Calendar in the engine over calendar_parameters.yaml; the period field and the close pairing; the marker, the bound, the retrograde
+## marker; the jubilee three-layer and act-forked; the library's jubilee_year retired with THE PENDING TERM fixed; REPORT_CLOCK.md +
+## CLOCK.md + clock_probes.py 12/12). NEXT (the owner's ruling 2026-09-07 after the clock sitting, "ok lets do that"): THE SEQUENTIAL RUN — the
+## three books on ONE world of the law engine in verse order (the narrative tapes stitched by script, the exam's rows off the tape; the eras as counters
+## set by markers — Exod 12:2 the exodus epoch; entity names by logic/corpus/entity_registry.yaml; all 38 daemons; the text's own checkpoints — the 430
+## years, 40:17, the seventeenth of Tammuz, the flood's 150 days; the plan in the state doc's compaction point #88) — BEFORE Numbers; then Numbers.
+## Open and UNSEQUENCED, the owner's call whether any goes
 ## before Numbers: X1-X5 (the Exodus case heads, below); the TWO gate fixes (the last-binding resolution and the
 ## value/effect homograph — the OPEN notes below, each its own sitting); THE PENDING TERM (the library's slave-term
 ## daemon does not cancel the six-year term at the jubilee — REPORT_WRAP_W5.md finding 1; a library edit with the
@@ -320,6 +331,15 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
 ## status on institution entities [the court, the land], the time source the tape's second producer, not a daemon; the
 ## parameters sourced [Rosh Hashanah 25a's month, RH 2b, Mishnah RH 1:1's four new years, Sanhedrin 11b-13a's intercalation];
 ## the Sifra's dispute whether the jubilee fires without the shofar — Behar chapter 2 — to be forked both arms).
+## ROUND TWO of the consensus (2026-09-07, after #86's compaction; the owner: "stand your ground"; the design thread concurred on all
+## eight; the state doc's entry "THE CLOCK CONSENSUS — ROUND TWO" is the record): the sitting is the ENGINE sitting only (Lev 23/25
+## already compiled; Num 28-29 waits for Numbers; tape-borne checkpoints only); the Calendar is an ENGINE construct on the Clock over
+## calendar_parameters.yaml as data — no daemon named "the calendar law", law_yovel consuming entered_the_land sets the count; the
+## four new years a DATA row; jubilee_proclaimed KEPT (Lev 25:9-10 the act; Rabbi Yose's arm) — the year inside slave_pierced and the
+## script's 50 retire; THE FORK IS THREE-LAYER AND ACT-FORKED (the count's timer = the fiftieth arrived; the sale's timer = the
+## entitlement; the RELEASE by the daemon consuming the proclamation on three conditions — the horn, the servants, ALL THE INHABITANTS
+## of Arakhin 32b:16 read off the land's ledger); sub-day OUT; the era table as DATA with an epoch row per world, unexercised rows
+## visible; THE RETROGRADE MARKER (Pesachim 6b:7, Num 9:1 after 1:1): counter unmoved, `dated` beside `day`, past dues at submission.
 ## OWED FORWARD, not before Numbers: Num 27 + 36 arrives with Numbers; Deut 25 with Deuteronomy.
 ## `python3 World/step9/daemon_census.py --debt` prints the wrap worklist; this file is the checklist.
 
@@ -512,7 +532,13 @@ notes or silence. Repaired the same day, every item by the rhythm
       the gate's five fire-probes 5/5 after one silent probe sharpened the
       module-level rule; the skeleton 6/6 with coverage printed; the sweep
       green through both gates. Record: REPORT_DAEMON_GATE.md.
-- [ ] D9  THE DAEMON CAMPAIGN — RULED by the owner 2026-09-06 ("that
+- [x] D9-iv THE DELIVERABLE RULE AMENDED (DONE 2026-09-07, the owner: "ok after d9 lets compact first" — a records sitting, no code):
+      THE_STEPS Step 5 (1)'s rule now reads cold function + dispositioned edges + WRAP declared and verified, with motion (6) WRAP IT
+      written out in the wrap rhythm's five parts (types first by script with the two questions; the daemon declared and the gate
+      run to fail; the code as calls into the cells; the scene as literal submits with the tuple predicted by script; the gate and
+      the sweep) and the fence stated; this file's head paragraph amended; THE_BRIEFING's entry; memory compiler-law.md's rule line.
+      The campaign's own closing sentence (THE DAEMON CAMPAIGN paragraph) marked IN FORCE. 248 wrapped / 0 owed / 6 none of 254.
+- [x] D9  THE DAEMON CAMPAIGN — COMPLETE 2026-09-07 (D9-i the seeding, D9-ii the gate, D9-iii the wraps W1-W7, D9-iv the rule) — RULED by the owner 2026-09-06 ("that
       works") on the two-thread consensus. WHEN: after this list's LAST
       check mark and BEFORE Numbers opens on the walk. SHAPE, in order:
       (i) ONE SEEDING SITTING — the EVENT-TYPE REGISTRY harvested from the

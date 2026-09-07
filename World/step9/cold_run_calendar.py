@@ -236,8 +236,8 @@ def law_calendar(event, world):
     k, src = event['kind'], event['case_source']
     E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}
     if k == 'land_sown':
-        return [E_('land_release', event['land'], cp=event['owner'], due=event['year'] + 6, value='the_seventh_year', law='F1 [INK 23:10-11 "six years you shall sow... but the seventh you shall release it" — the TIMER on the LAND; Lev 25:1-7 CALLED cold_run_yovel.sabbatical]'),
-                E_('barred_from_it', event['owner'], due=event['year'] + 6, value='hoeing_and_clearing_stones', law='F1 [RECORDED Sukkah 44b:7: "release" and "let lie" split; INK 34:21 "in plowing and in harvest you shall cease"]')]
+        return [E_('land_release', event['land'], cp=event['owner'], due=world.clock.at_year(world.clock.year + 6), value='the_seventh_year', law='F1 [INK 23:10-11 "six years you shall sow... but the seventh you shall release it" — the TIMER on the LAND to the first day of the seventh count-year (the Calendar); Lev 25:1-7 CALLED cold_run_yovel.sabbatical]'),
+                E_('barred_from_it', event['owner'], due=world.clock.at_year(world.clock.year + 6), value='hoeing_and_clearing_stones', law='F1 [RECORDED Sukkah 44b:7: "release" and "let lie" split; INK 34:21 "in plowing and in harvest you shall cease"]')]
     if k == 'feast_of_matzot_kept':
         return [E_('purge_deadline', event['keeper'], value=PURGE, law='F1b [INK 23:15 "as I commanded you" (34:18 without the kaf) — CALLED cold_run_pesach.leaven_machine(purge_deadline) -> %s]' % PURGE)]
     if k == 'seventh_day_rest':
@@ -262,13 +262,13 @@ def law_calendar(event, world):
     return []
 
 def scene():
-    """THE SCENE — the recorded rows replayed on the world engine (clock unit: years; the land's timer runs to the seventh)."""
+    """THE SCENE — the recorded rows replayed on the world engine (THE COUNT EPOCH — the day the base unit, the year derived; the land's timer runs to the seventh count-year)."""
     with _ctx.redirect_stdout(_io.StringIO()):
-        w = WE.World(era='the calendar of Exod 23:10-19 and its second seat: Sheviit, Chagigah 1, Pesachim 5, Bikkurim 1, Chullin 8 on the engine (clock unit: years)')
+        w = WE.World(era='the calendar of Exod 23:10-19 and its second seat: Sheviit, Chagigah 1, Pesachim 5, Bikkurim 1, Chullin 8 on the engine (the count epoch: the day the base unit, the year derived)', epoch='count')
         w.laws = [law_calendar]
-        w.advance(1)
-        w.submit({'kind': 'land_sown', 'subject': 'the-farmer', 'land': 'the-field', 'owner': 'the-farmer', 'year': 1, 'case_source': 'Mishnah Sheviit 1-2; Sukkah 44b — the seventh year'})
-        w.advance(2)
+        w.advance(w.clock.at_year(1))
+        w.submit({'kind': 'land_sown', 'subject': 'the-farmer', 'land': 'the-field', 'owner': 'the-farmer', 'case_source': 'Mishnah Sheviit 1-2; Sukkah 44b — the seventh year'})
+        w.advance(w.clock.at_year(2))
         w.submit({'kind': 'feast_of_matzot_kept', 'subject': 'the-keeper', 'keeper': 'the-keeper', 'day': 15, 'case_source': 'Exod 23:15 / 34:18 — as I commanded you (Pesachim 5a by call)'})
         w.submit({'kind': 'seventh_day_rest', 'subject': 'the-household', 'household': 'the-household', 'who': 'ox', 'case_source': 'Exod 23:12 — the ox and the donkey'})
         w.submit({'kind': 'seventh_day_rest', 'subject': 'the-household', 'household': 'the-household', 'who': 'resident_stranger', 'case_source': 'Yevamot 48b:6 — the resident stranger'})
@@ -280,7 +280,7 @@ def scene():
         w.submit({'kind': 'first_fruits_brought', 'subject': 'the-farmer', 'bringer': 'the-farmer', 'species': 'figs', 'case_source': 'Mishnah Bikkurim 1:3 — from the seven kinds'})
         for act in ('cook', 'eat', 'benefit'):
             w.submit({'kind': 'kid_boiled_in_milk', 'subject': 'the-cook', 'actor': 'the-cook', 'act': act, 'case_source': 'Chullin 115b — three seats, three bans'})
-        w.advance(7)                                                       # the seventh year: the land's release and the labor bar FIRE
+        w.advance(w.clock.at_year(7))                                                       # the seventh year: the land's release and the labor bar FIRE
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
     tset = len([l for l in w.log if l[0] == 'TIMER-SET']); fired = len([l for l in w.log if l[0] == 'TIMER-FIRE'])
     return (n('the-field', 'land_release'), n('the-farmer', 'barred_from_it'), n('the-keeper', 'purge_deadline'), n('the-household', 'rest_required'),

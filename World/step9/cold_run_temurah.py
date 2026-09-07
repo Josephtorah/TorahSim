@@ -427,7 +427,7 @@ def scene():
             n('the-unfit-redeemer', 'adds_fifth'), n('the-unfit-redeemer', 'redemption_right'), n('the-house-redeemer', 'adds_fifth'), n('the-other-redeemer', 'adds_fifth'), n('the-other-redeemer', 'redemption_right'), n('the-donkey-owner', 'redeem_or_break'), n('the-tithe-redeemer', 'adds_fifth'), n('the-devoted-redeemer', 'redemption_right'), n('the-field-redeemer', 'adds_fifth'),
             n('the-devoted-thing', 'most_holy'), n('the-unspecified-devotion', 'due_to_priest'), n('the-whole-estate', 'most_holy'), n('the-devoted-person', 'put_to_death'), n('the-devoted-firstborn', 'consecrated'),
             n('the-tenth', 'consecrated'), n('the-ten-of-a-hundred', 'consecrated'), n('the-ninth-called-tenth', 'consecrated'), n('the-substituted-tenth', 'substitution'), n('the-substituted-tenth', 'consecrated'), n('the-land-tithe', 'consecrated'),
-            tset, fired, w.clock.year), w
+            tset, fired, w.clock.day), w
 SCENE, _W = scene()
 
 
