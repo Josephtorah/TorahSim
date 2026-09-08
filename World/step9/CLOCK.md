@@ -226,3 +226,222 @@ paragraph's closing total: logged, the counter unmoved, no dated stretch); THE D
 retrograde stretch (`event.setdefault('day', dated)`); `World(registry=)` resolves scene tokens to the one registry's
 entity ids at `entity()`; `law_installation` reads the event's day. A new era row `creation` and the data row
 `life_year_reading`; the rows exodus and life_years now exercised.
+
+## 10. O5 — THE MOADIM RE-TYPE (2026-09-07; the open-items campaign's fifth sitting; the plan: the state doc's compaction point #90)
+
+Declared BEFORE the code. THE DEFECT: the appointed-times runner (cold_run_moadim.py) dates its own scene by hand —
+`advance(178)` for the first of the seventh month, `advance(187)` for the tenth, `advance(192)`, `advance(199)` — month
+arithmetic the runner did itself with the 30/29 lengths typed as comments ("the month lengths 30/29 the data channel"),
+a world with NO epoch, and `day` fields on its case events (`'day': 16`, `'day': 65`, `'day': 192`) that the daemon read
+as timer bases. The erection runner's three worlds are day-grain too: the Sinai world counts "day 7 + forty = day 47,
+the seventeenth of Tammuz" by a relative count with `'day': 7`, `'day': 47`, `'day': 48` on its acts; the installation
+world counts 23 Adar + 7 = 1 Nisan by hand. The era row `exodus` is exercised by the sequence alone.
+
+THE RULE (THE_STEPS convention (12)): a FESTIVAL IS A CALENDAR KEY read from Leviticus 23's own dates, held in the third
+registry as ink rows, and a scene walks to a festival by `clock.next(key)` — never by month arithmetic of its own; a
+festival's recurrence ("an everlasting statute throughout your generations", 23:14, 23:21, 23:31, 23:41; the week of
+23:3) is a PERIOD timer keyed by the festival, re-armed through the Calendar; an act's `day` is never a scene literal —
+the daemon reads the clock (or the engine's `dated` day inside a retrograde stretch).
+
+(a) THE DATA ROWS (calendar_parameters.yaml, exercised_by [moadim]): `festival_dates` — channel INK, the dates in the
+calendar's own numbering (Exod 12:2 — Nisan the first), keyed by the convocation names the scene already uses so the
+event's `day` value IS the key: passover {1, 14} (23:5 "in the first month, on the fourteenth of the month, between the
+evenings"); passover_1 {1, 15} (23:6 "on the fifteenth day of this month", 23:7 "on the first day a holy convocation");
+passover_7 = passover_1 + 6 (23:8 "on the seventh day" of 23:6's seven); atzeret = omer + 49 (23:15-16 "seven complete
+weeks... until the morrow of the seventh Sabbath you shall count FIFTY days" — the omer day counted first, the fiftieth
+sanctified: the runner's own count_length); rosh_hashanah {7, 1} (23:24); yom_kippur {7, 10} (23:27); sukkot_1 {7, 15}
+(23:34); shemini = sukkot_1 + 7 (23:36 "on the eighth day"); sabbath → the Calendar's own `week` key (23:3 "six days...
+on the seventh day"). And `omer_day` — channel RECEIVED: 23:11 "on the morrow of the SABBATH" read as the morrow of the
+FESTIVAL, the sixteenth of the first month (Sifra Emor Chapter 12; Menachot 65a-66a; the runner's OM['morrow_reading']
+= 'festival' graded on Mishnah Chagigah 2:4), with the refused setting beside it (the Boethusians' Sunday, Menachot 65a).
+
+(b) THE ENGINE (world_engine.Calendar): the festival keys read from the rows beside the six standing keys; a row of the
+form {month, day} resolves by `day_of(y, m, dom)`, a row {from, plus} by the named key's day plus the ink's count, a row
+{key: week} by the week; `next(day, key)` for a festival key is the first occurrence strictly after `day` — this year's
+if still ahead, else next year's; an unknown key still refuses, naming the keys. `advance()`'s re-arm already takes a
+string period through `calendar.next` — nothing changes there.
+
+(c) THE DAEMON (law_moadim): a holy convocation proclaimed writes what it wrote (the class, the sanctity, the rest) AND
+sets the festival's PERIOD timer — `sanctify_day` on the people, value the day's name, due the next occurrence, period
+the key (the week for the Sabbath) — the recurrence the ink commands "throughout your generations"; the omer's count and
+the booths' seven days stay DAY timers from the clock (23:16's fifty, 23:42's seven — the ink's own numbers), their
+`day` fields retired; the two loaves' `day` retired. The registry's fields lines follow (omer_brought, two_loaves_brought,
+booths_dwelt) by script.
+
+(d) THE SCENE (moadim): `World(..., epoch='exodus')`; the Sabbath on the seventh day of the year (`day_of(1, 1, 7)` —
+the scene's own anchor, as before); then `advance(clock.next('passover'))`, `next('passover_1')`, `next('omer')`,
+`next('passover_7')`, `next('atzeret')` (the omer's timer fires that day), `next('rosh_hashanah')`, `next('yom_kippur')`,
+`next('sukkot_1')`, `next('shemini')` (the booths' timer fires that day). Not one month length in the runner.
+
+(e) THE ERECTION on the epoch: the installation world declares `epoch='exodus'` and dates itself from the ink — the
+erection at `day_of(2, 1, 1)` (Exod 40:17 "in the first month of the second year, on the first of the month"), the
+take-list SEVEN DAYS BEFORE it (Lev 8:33's seven, 9:1's eighth — the same shape as the second ascent = Yom Kippur − 40),
+the first Sabbath's bread at `day_of(2, 1, 7)`; the Sinai world declares the epoch too — the covenant day 1 Sivan
+(`day_of(1, 3, 1)`, Shabbat 86b:5 as the sequential run dates it), the ascent 7 Sivan (24:16), the breaking at the
+timer's own fire (7 Sivan + 40), THE SECOND ASCENT BY THE ROW `second_tablets_given` − 40 (the O1 dating, now on the
+erection's own world too — the row exercised by [sequence, erection]), the second tablets firing on Yom Kippur; the
+`day` fields on moses_ascended and tablets_broken retired (the daemon already reads `event.get('day', clock.day)` — the
+engine sets `day` inside a retrograde stretch, the scenes stop typing it). The W7 tuple gains TWO DATE SLOTS: the
+calendar date of the first fire and of the last — the seventeenth of Tammuz and the tenth of Tishrei COMPUTED, not
+counted. The craftsmen's world stays undated (day-grain).
+
+(f) THE PROBES (clock_probes.py 13-16, written first; 12/12 stand): 13 the festival keys resolve from the row on the
+exodus epoch (yom_kippur = day_of(1,7,10); passover_7 = day_of(1,1,21); shemini = day_of(1,7,22); atzeret = the omer +
+49; after Yom Kippur the next is year 2's); 14 a period timer keyed sukkot_1 re-arms to year 2's fifteenth of the
+seventh month with the TIMER-SET chain; 15 the ink's count meets the date — the omer + 49 = the Calendar's atzeret =
+the sixth of the third month under the modeled lengths; 16 an unknown festival key refuses, naming the keys (a guard —
+it passes on the old engine too). Expected against the unchanged engine 13/16; after the code 16/16.
+
+THE PREDICTIONS, computed by script from the Calendar BEFORE the runners run (scratchpad o5_predict.py), typed here
+from the arithmetic the script must reproduce: year 1 of the exodus epoch has twelve months (the modeled season ground
+lays no thirteenth), so 1 Nisan = day 0, 14 Nisan = 13, the omer 15, the fiftieth 64, 1 Tishrei 177, Yom Kippur 186,
+Sukkot 191, the eighth day 198; 1 Nisan of year 2 = 354, 7 Nisan 360; 1 Sivan 59, 7 Sivan 65, 17 Tammuz 105, 29 Av 146.
+THE MOADIM TUPLE: the Sabbath's week period set on day 6 fires 27 times within the year (13, 20, ... 195), each fire
+re-arming; the seven festival periods set once, none firing (their next occurrence lies in year 2): sanctify_day on
+israel 8 → 35, timers set 2 → 37, fired 2 → 29, the clock 199 → 198, every other slot unchanged — (1, 1, 8, 35, 5, the
+eight classes, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 37, 29, 198). THE ERECTION TUPLES: the installation world's
+clock 13 → 360, its five fires unchanged; the Sinai world's first fire 47 → 105, its clock 88 → 186, its three sets and
+three fires and thirty-two events unchanged, the two new date slots (1, 4, 17) and (1, 7, 10); the craftsmen's world
+unchanged. The sequence tape UNCHANGED (the stitcher drops the erection's `day` fields already; no moadim row is
+history) — the recorder and the stitcher rerun to prove it. The registry: 20 → 22 rows (festival_dates INK, omer_day
+RECEIVED); the era row exodus exercised_by [sequence, moadim, erection]; the row second_tablets_given by [sequence,
+erection]. The gates unchanged (the daemon gate's parser reads the same literal submits; five `day` fields leave the
+registry's fields lines); the sweep 34/34 at 3,633; the hash unmoved.
+
+AS RUN (O5's close). The probes 13/16 against the unchanged engine (13, 14, 15 FAIL — the keys unknown; 16 the guard passes
+either way), 16/16 after the Calendar's festival keys. THE PREDICTIONS BY SCRIPT (scratchpad o5_predict.py) reproduced the
+arithmetic typed above to the day — year 1 twelve months, the fiftieth on the sixth of the third month (day 64), the eighth
+day 198; the erection 354, the take-list 347, the bread 360; the breaking 105 = (1, 4, 17), the second ascent 146 = (1, 5,
+29), Yom Kippur 186 — and the ink's counts met the keys inside the script (the omer + 49 = atzeret, sukkot + 7 = shemini,
+the morrow to the second ascent forty days). THE RUNS: moadim 42/42 FIRST RUN with the predicted tuple (1, 1, 8, 35, 5,
+the eight classes, ..., 37, 29, 198) — the Sabbath's period fired 27 times (13, 20, ... 195), the seven festivals armed for
+year 2 at (2, 1, 15), (2, 1, 21), (2, 3, 6), (2, 7, 1), (2, 7, 10), (2, 7, 15), (2, 7, 22); erection 287/287 FIRST RUN with
+(..., 5, 360) and (..., 3, 3, 105, 32, 186, (1, 4, 17), (1, 7, 10)) — the seventeenth of Tammuz and the tenth of Tishrei
+read off the Calendar. TWO CORRECTIONS beside the declaration: the registry is 22 → 24 rows, not 20 → 22 (the
+prediction miscounted the standing rows — the census prints 24: ink 8, received 13, modeled 2, rounding 1); and the
+sequence tape's EVENTS are unchanged as declared, but its CENSUS moved — re-based 3 → 0, because the three `day` fields
+the stitcher used to drop (the erection's ascents and the breaking) no longer exist to drop; the stitcher's count typed,
+the sequence runner 7/7 with every verdict as before. The events lint 0 (the five fields retired); the daemon gate 244 /
+0 / 0; the dependency gate satisfied; the sweep 34/34 at 3,633 (scratchpad sweep_o5.txt, SWEEP-EXIT 0); CORPUS TRUTH
+GREEN, hash 8b8fff1fa28953af unmoved. The parameters census: 24 rows, eras 6; unexercised regnal_rounding,
+fiftieth_in_cycle, era:regnal, era:exile_greek (as before — the exodus era now exercised by sequence, moadim, erection).
+
+## 11. O6 — THE FORK'S REACH TO LEVITICUS 27:21 AND 27:24 (2026-09-07; the open-items campaign's sixth sitting; the plan: the state doc's compaction point #90)
+
+Declared BEFORE the code, after the shelf was read by script. THE OPEN ITEM (section 5's own note in the runner):
+the consecrated field's going out — 27:21 וְהָיָה הַשָּׂדֶה בְּצֵאתוֹ בַיֹּבֵל ("and the field, in its going out in the
+jubilee, shall be holy to the LORD, as the devoted field; to the priest shall be its holding") and 27:24 בִּשְׁנַת
+הַיּוֹבֵל יָשׁוּב הַשָּׂדֶה ("in the year of the jubilee the field shall return to him from whom he bought it") — ran as
+TIMERS to the fiftieth (`due_to_priest`, `returns_to_holding` due `clock.next('jubilee')`), fired by the date alone,
+while the sold field and the sold man of Leviticus 25 wait on the PROCLAMATION's fork. The question: do the three
+recorded conditions govern the consecrated field too?
+
+THE READING (every row resolved on the local shelf by script — the Mishnah, Sifra and Babylonian files):
+(a) THE THIRD CONDITION REACHES 27:21 — TAUGHT. Arakhin 29a:15-17, a baraita: אֵין עֶבֶד עִבְרִי נוֹהֵג אֶלָּא בִּזְמַן
+    שֶׁהַיּוֹבֵל נוֹהֵג ("the Hebrew slave applies only when the jubilee is in effect" — 25:40), the field of the holding
+    likewise from 25:28 "it shall go out in the jubilee", the walled-city houses from 25:30; and RABBI SHIMON BEN
+    YOCHAI on our clause itself:
+    אֵין שְׂדֵה חֲרָמִין נוֹהֲגִין אֶלָּא בִּזְמַן שֶׁהַיּוֹבֵל נוֹהֵג ("devoted fields apply only when the jubilee is in effect")
+    שֶׁנֶּאֱמַר וְהָיָה הַשָּׂדֶה בְּצֵאתוֹ בַיֹּבֵל ("as it is said: and the field in its going out in the jubilee" — 27:21). What "in effect" means is the standing condition: Sifra Behar Chapter 2 3 and
+    Arakhin 32b:16 — לְכָל יֹשְׁבֶיהָ ("to ALL its inhabitants", 25:10): when all are upon it, and not when some were
+    exiled; the jubilees ceased with Reuben, Gad and half of Manasseh. So with the exile on the people's ledger, the
+    consecrated field's going out does not run: no priest's due, no return — the entitlement stands unreleased.
+(b) THE FIRST AND SECOND CONDITIONS REACH IT BY REFERENCE. 27:21 בַיֹּבֵל ("in the jubilee") and 27:24 בִּשְׁנַת
+    הַיּוֹבֵל ("in the year of the jubilee") NAME the institution whose validity the proclamation's fork decides — יוֹבֵל
+    הִוא ("it is a jubilee", 25:10-12, the word both of the Sifra's arms read); the clause calls the definition, no
+    rule crosses: a REFERENCE under the link review law, licensed by the ink alone (the shared content lemma יובל
+    "jubilee" at 25:10-13 and 27:21, 27:24). Its timing is the Sifra's: Behar Chapter 2 1, Rabbi Yochanan ben Beroka —
+    the fields did not return to their owners until the Day of Atonement arrived; הִגִּיעַ יוֹם הַכִּפּוּרִים תָּקְעוּ
+    שׁוֹפָר חָזְרוּ שָׂדוֹת לְבַעֲלֵיהֶם ("the Day arrived — they sounded the horn, the fields RETURNED to their owners") —
+    the release ON THE ACT. And Rosh Hashanah 9b:2-3 = Sifra Behar Chapter 2 4: both arms hold a jubilee אַף עַל פִּי
+    שֶׁלֹּא שָׁמְטוּ ("even though they did not release" the fields) — the fields' release is an ACT the year commands,
+    never a condition of the year.
+(c) THE GOING-OUT'S OWN FORK, read at 27:20-21 (new rows). Mishnah Arakhin 7:4 = Sifra Bechukotai Chapter 11 2:
+    הִגִּיעַ הַיּוֹבֵל וְלֹא נִגְאֲלָה ("the jubilee arrived and it was not redeemed") — Rabbi Yehuda: the priests enter it
+    and PAY its value (the Sifra's ground, Chapter 11 1: "holy" here as "holy" at 27:14 — it goes out only by
+    redemption); Rabbi Shimon: they enter and do not pay; Rabbi Eliezer: they neither enter nor pay — נִקְרֵאת שְׂדֵה
+    רְטוּשִׁים עַד הַיּוֹבֵל הַשֵּׁנִי ("it is called an ABANDONED FIELD until the second jubilee"), and again until the
+    third; the priests never enter until ANOTHER redeems it. Rabbi Eliezer's ground by Rava, Arakhin 26a:16: בְּצֵאתוֹ
+    מִיַּד אַחֵר ("in its going out — from the hand of ANOTHER"): 27:20 וְאִם מָכַר אֶת הַשָּׂדֶה לְאִישׁ אַחֵר ("and if he sold
+    the field to another man") precedes 27:21's going out — where the treasurer sold it to another, every arm agrees
+    it goes out to the priests. The receiving priests: Arakhin 28b:4 — נוֹתְנָהּ לַמִּשְׁמָר שֶׁפָּגַע בּוֹ יוֹבֵל ("he gives it
+    to the WATCH the jubilee met"). Mishnah Arakhin 7:3 (Arakhin 25a:16-17; Sifra Bechukotai Chapter 11 3): redeemed by
+    the OWNER — it does not go out from his hand; by his SON — it goes out to his father in the jubilee (the heir
+    adds the fifth with the sanctifier, Sifra Bechukotai Chapter 10 11 "to include the heir"); by ANOTHER and the
+    owner redeemed it from his hand — it does not go out (the Mishnah file's text; the Talmud's Mishnah at 25a:16
+    reads "it goes out to the priests" — the variant recorded beside, not graded); by a PRIEST —
+    לֹא יֹאמַר הוֹאִיל וְהִיא יוֹצְאָה לַכֹּהֲנִים בַּיּוֹבֵל ("let him not say: since it goes out to the priests in the jubilee")
+    וַהֲרֵי הִיא תַּחַת יָדִי הֲרֵי הִיא שֶׁלִּי ("and it is under my hand, it is mine") — it goes out to all his brother priests (27:21's
+    אֲחֻזָּתוֹ "HIS holding" — a holding of his own, and this is not his: Arakhin 25b:14-16). Mishnah Arakhin 7:5
+    (Arakhin 26b:14-16; Sifra Bechukotai Chapter 11 4): the field bought from his father — the father died, then he
+    consecrated it: a field of the holding; he consecrated it, then the father died: a purchased field (Rabbi Meir) /
+    a field of the holding (Rabbi Yehuda and Rabbi Shimon — 27:22's "which is not of the field of his holding" excludes
+    a field not FIT to be a holding, and this one is fit); and the closing rule,
+    שְׂדֵה מִקְנָה אֵינָהּ יוֹצְאָה לַכֹּהֲנִים בַּיּוֹבֵל ("a purchased field does not go out to the priests in the jubilee")
+    שֶׁאֵין אָדָם מַקְדִּישׁ דָּבָר שֶׁאֵינוֹ שֶׁלּוֹ ("for a man does not consecrate what is not his") — 27:24's return, the ink's own clause.
+
+THE RULE (THE_STEPS Step 5, motion (6)'s clock sentence): a clause that names an institution's year — "in the
+jubilee", "in the year of the jubilee" — is a REFERENCE to that institution's verdict: the timer to the year writes
+the ENTITLEMENT, the act's daemon writes the RELEASE on the fork's arms, and the shelf's "applies only when the
+jubilee is in effect" (Arakhin 29a) is the exile's reach, taught. No consecrated field goes out by the date alone.
+
+THE CODE (cold_run_yovel.py, law_yovel — no engine edit, no new import edge):
+(i) `field_consecrated` writes the ENTITLEMENT: `goes_out_in_the_jubilee` on the field, due `clock.next('jubilee')`,
+    its VALUE the route the ink and the rows give — to_the_priests (27:21, the holding unredeemed);
+    to_the_priests_from_the_hand_of_another (27:20-21, the field `sold_to_another`); to_him_from_whom_he_bought_it
+    (27:24, the purchased field); to_his_father (7:3, `redeemed_by: son`); to_all_his_brother_priests (7:3,
+    `redeemed_by: priest`); and NO entitlement for the owner's redemption or the owner's re-redemption from another
+    (7:3 — the field does not go out). The fifth on the owner and on the heir (7:2; Sifra Bechukotai Chapter 10 11),
+    on no one else. The `due_to_priest` and `returns_to_holding` timers RETIRE from this branch.
+(ii) `jubilee_proclaimed`'s release loop, on every arm that HOLDS, routes each entitled field by its value: the
+    purchased field and the son's field → `returns_to_holding` (27:24 to him from whom he bought it — Sifra
+    Bechukotai Chapter 11 7, never to the treasurer; 7:3 to his father); the priest-redeemed field → `due_to_priest`
+    to all his brother priests; the field from the hand of another → `due_to_priest` to the watch the jubilee met,
+    one entry, the arms agreed; the holding UNREDEEMED → THE 7:4 FORK as values on `due_to_priest` (Rabbi Yehuda —
+    the priests enter and pay: `pays` by the priests to the treasury, its value; Rabbi Shimon — enter, no payment;
+    Rabbi Eliezer — no entry: `abandoned_field` written on the field and the ENTITLEMENT RE-ARMED to the next jubilee,
+    "until the second jubilee"), each value carrying the holding arm's name beside its own. On no arm holding (the
+    exile — (a)): nothing on the field; the land's verdict names the arm, the entitlement stands.
+(iii) NEW EFFECT, registered first: `abandoned_field` (שְׂדֵה רְטוּשִׁים "an abandoned field", Mishnah Arakhin 7:4; ledger
+    op status; its ink 27:20 לֹא יִגָּאֵל עוֹד "it shall not be redeemed again" — Rabbi Eliezer's ground by Abaye at
+    Arakhin 26a:5 and by Rava at 26a:16). NEW FIELDS on `field_consecrated`: `redeemed_by` (owner / son / another /
+    priest / another_then_owner) and `sold_to_another` (27:20's clause).
+(iv) THE DAEMON DECLARED FIRST (daemon_dispositions.yaml): field_consecrated → [gives_fixed_sum, adds_fifth,
+    goes_out_in_the_jubilee]; jubilee_proclaimed → [jubilee_holds, jubilee_release, returns_to_holding, goes_free,
+    due_to_priest, pays, abandoned_field, goes_out_in_the_jubilee]; the gate run to FAIL on the unchanged code.
+(v) THE CELLS graded (thirteen new rows): the five routes (27:21, 27:24, 27:20-21 with Arakhin 26a:16), the four
+    7:3 rows, the 7:4 arms, the two 7:5 rows, the in-effect reach (Arakhin 29a:17), the watch (28b:4), the release
+    on the act (Sifra Behar Chapter 2 1). The answer sheet gains Mishnah Arakhin 7:3, 7:4, 7:5 and the Sifra/Talmud
+    rows above, each verified by a token in its own ink. The scene gains four fields at count-year 44: sold to
+    another (field-7), redeemed by the son (field-8), redeemed by a priest (field-9), redeemed by another and then
+    the owner (field-10); the fork's three worlds each consecrate one field (field-c).
+
+THE PREDICTIONS (scratchpad o6_predict.py — the standing literals parsed from the runner, the declared deltas applied,
+the new literals printed BEFORE the runner is typed): the main scene's slot 35 (field-4's `due_to_priest` years)
+[50] → [50, 50, 50] (the three arms at the proclamation); timers set 20 → 24 (three new entitlements + Rabbi
+Eliezer's re-arm), fired 17 → 20 (the three new entitlements at the fiftieth's first day; the re-arm waits for the
+hundredth); ten slots APPENDED: field-4's entitlement entries 1, the priests' `pays` 1, field-4's `abandoned_field`
+1, field-7's `due_to_priest` [50], field-8's `returns_to_holding` [50], the father-sanctifier's fifth [25] (the
+heir's, bid 20 → 25), field-9's `due_to_priest` [50], the priest-redeemed sanctifier's fifth 0, field-10's
+entitlement 0 and `due_to_priest` 0; every other slot unchanged. The fork tuple gains four slots: field-c's
+`due_to_priest` count 3 (wa: the holding arm × the 7:4 arms), 3 (wb), 0 (wc — the exile), and field-c's entitlement
+standing on wc 1. Tests 77 → 90; the guard's count follows. The sweep 34/34; the registry 247 effects; the daemon
+gate 244 / 0 / 0; the hash unmoved.
+
+AS RUN (O6's close). The shelf read by script first (the Mishnah, Sifra and Babylonian files; the whole Babylonian shelf
+searched for the "in effect" phrase — Arakhin 29a alone carries it for the fields). The daemon declared first: the gate
+failed the two declared ways on the unchanged code (jubilee_proclaimed's and field_consecrated's watches ≠ the parse),
+then — after the code — flagged THREE MORE, honestly: `going_out`, `arrival_unredeemed` and `field_kind_by_father` are
+top-level functions writing effects and were laws to the gate (the W3 lesson); dispositioned WRAPPED by law_yovel, the
+census 244 → 247 of 247. The registries before the code: `abandoned_field` the 247th effect (its ink לֹא יִגָּאֵל עוֹד
+"it shall not be redeemed again" machine-verified at 27:20 alone in the chapter), the two fields on field_consecrated,
+the tape lines rewritten; the events lint 0. THE PREDICTIONS BY SCRIPT (scratchpad o6_predict.py) exactly as typed
+above; THE RUN: 90/90 FIRST RUN, both tuples as printed — field-4's three arms at the proclamation's year, the priests'
+payment once, the abandoned field once, the re-armed entitlement pending at day 36,156 (the hundredth count-year, the
+Calendar's), field-7 one entry, field-8 to his father with the heir's twenty-five, field-9 to all his brother priests,
+field-10 nothing; the fork's consecrated field 3 / 3 / 0 with its entitlement standing on the exile's world. The answer
+sheet 42 Mishnah rows + 29 Sifra/Talmud rows, each verified by a token in its own ink. THE GATES AND THE SWEEP: DEPENDENCY
+GATE satisfied (162 live; 231 + 72 — no new edge); DAEMON GATE 247 / 0 / 0 of 247, unfired 0, unconsumed 0, open aliases
+0; the probes 5/5 + 11/11 + 12/12 + 8/8 + clock 16/16 + sequence 4/4; THE SWEEP 34/34 at 3,646 (scratchpad sweep_o6.txt,
+SWEEP-EXIT 0); CORPUS TRUTH GREEN, hash 8b8fff1fa28953af UNMOVED. One correction beside the declaration: none — the
+counts held; one addition: the three function dispositions the declaration had not foreseen.

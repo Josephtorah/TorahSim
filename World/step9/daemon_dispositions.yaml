@@ -203,9 +203,18 @@ daemons:
     file: cold_run_mishpatim_2.py
     wraps: mishpatim_2
     watches:
-      virgin_seduced: [gives_fixed_sum, pays]
+      virgin_seduced: [gives_fixed_sum, pays, wife_taken]   # O7 (2026-09-07) X5: 22:16 the refusal — the fine stands, no wife; 22:15's 'to him as a wife' written when no one refuses
       slave_maimed: [released, goes_free]
       pregnant_woman_struck: [exempt, fined_by_assessment]
+  law_mishpatim_3:
+    file: cold_run_mishpatim_3.py
+    wraps: "mishpatim_3 (O7, 2026-09-07 — THE EXODUS LAW'S FIVE CASE HEADS: Exod 21:7-11 the maidservant, 21:13-15 + 21:17 the capital clauses, 21:20-21 the slave struck, 22:1-2 the burglar; REPORT_EXODUS_HEADS.md)"
+    watches:
+      daughter_sold: [term_clock, goes_free, redemption_right, barred_from_it, wife_taken, not_diminished]   # 21:7-11: the years, the signs and maturity, the redemption, the foreign sale barred, the designation, the three
+      man_struck_dead: [flees_to_refuge, taken_from_altar, beheaded, exempt]   # 21:13-14: the refuge by descent, the altar, the sword, the guile's exclusions — ONE TYPE UNDER TWO LAW LAYERS (law_lev24 writes the death)
+      parent_struck: [put_to_death, exempt]   # 21:15: the wound, strangling; no wound or after death exempt
+      slave_struck_by_master: [avenged, exempt, beheaded]   # 21:20-21: the Canaanite under the rod avenged by the sword; a day or two exempt; not wholly his — the general clause
+      burglar_found: [has_blood, exempt, put_to_death, pays, sold_for_theft, term_clock, goes_free]   # 22:1-2 (goes_free = the sold thief's term timer, the library's form — added after the first parse, recorded in the report): no blood / blood, the barrel, the killer, the sale for six years (the man, not the woman)
   law_ordinances:
     file: cold_run_ordinances.py
     wraps: ordinances (and cold_run_decalogue.altar_rules, the callee the altar function runs live)
@@ -484,15 +493,92 @@ daemons:
     watches:
       entered_the_land: [sabbath_of_the_land, jubilee_year]   # THE CLOCK SITTING: Lev 25:2 — the count begins; the periods 'sabbatical' and 'jubilee' re-armed through the Calendar
       land_sown: [land_release, labor_barred, lashes, jubilee_release, goes_free, returns_to_holding]
-      jubilee_proclaimed: [jubilee_holds, jubilee_release, returns_to_holding, goes_free]   # THE CLOCK SITTING: the fork on the act — Sifra Behar Chapter 2 4, Arakhin 32b:16
+      jubilee_proclaimed: [jubilee_holds, jubilee_release, returns_to_holding, goes_free, due_to_priest, pays, abandoned_field, goes_out_in_the_jubilee]   # THE CLOCK SITTING: the fork on the act — Sifra Behar Chapter 2 4, Arakhin 32b:16; O6 (2026-09-07): the consecrated field RELEASED here on the arms — Lev 27:21/27:24 by reference, Arakhin 29a:17 the exile's reach; the 7:4 fork (Rabbi Yehuda pays, Rabbi Shimon enters, Rabbi Eliezer's abandoned field re-armed to the next jubilee)
       field_sold: [restores, redemption_right, pays, returns_to_holding, goes_out_in_the_jubilee]
       house_sold: [redemption_right, sold_in_perpetuity, goes_out_in_the_jubilee]
       brother_grew_poor: [supports_kinsman]
       silver_lent: [interest_barred]
       brother_sold_as_slave: [barred_from_it, exempt, pays, goes_free, returns_to_holding, goes_out_in_the_jubilee, redemption_right, term_clock]
       person_valued: [gives_fixed_sum]
-      field_consecrated: [gives_fixed_sum, due_to_priest, adds_fifth, returns_to_holding]
+      field_consecrated: [gives_fixed_sum, adds_fifth, goes_out_in_the_jubilee]   # O6 (2026-09-07): the ENTITLEMENT only — its value the route (27:21 to the priests, 27:24 to him from whom he bought it, 7:3 to his father / to all his brother priests, 27:20 from the hand of another); the release on jubilee_proclaimed
       consecrated_redeemed: [adds_fifth]
+  # ---- O8 S1 THE EXODUS STORY (2026-09-08; NARRATIVE_GAPS.md section 4d): declared BEFORE the code — the gate run to fail ----
+  law_exodus_story:
+    file: cold_run_exodus_story.py
+    wraps: exodus_story
+    watches:
+      king_arose: []
+      taskmasters_set: [enslaved]
+      made_to_serve: [enslaved]
+      lives_embittered: [embittered]
+      decree_issued: [decree_issued]
+      decree_refused: [feared_god]
+      houses_made: [houses_made]
+      married: [wife_taken]                  # ONE TYPE UNDER TWO LAW LAYERS: law_family at Gen 24 (seat-checked), this daemon at Exod 2
+      hidden: [hidden_three_months]
+      placed_in_the_ark: []
+      drawn_from_the_water: [drawn_out]
+      named: [name_given]
+      egyptian_struck: []
+      fled: [sought_to_kill]
+      king_died: []
+      cry_went_up: [cry_heard, covenant_remembered]
+      appeared_in_the_bush: []
+      holy_ground_declared: [holy_ground]
+      sent_to_pharaoh: [sent_to_pharaoh]
+      name_declared: [name_declared]
+      wealth_promised: []
+      signs_shown: [signs_in_hand]
+      mouth_appointed: [mouth_appointed, mark_of_anger]
+      returned_to_egypt: [staff_of_god]
+      firstborn_death_decreed: [firstborn_death_decreed]
+      believed: [believed]
+      release_refused: [release_demanded]
+      straw_withheld: [straw_withheld]
+      officers_beaten: [beaten]
+      now_you_will_see: [now_you_will_see]
+      redemption_promised: [to_be_brought_out, to_be_delivered, to_be_redeemed, to_be_taken_as_a_people, to_be_brought_to_the_land]
+      not_heard: [not_heard]
+      staff_swallowed: []
+      plague_struck: [plague_struck]
+      heart_hardened: [heart_hardened]
+      plague_removed: [plague_removed]
+      driven_from_court: []
+      face_barred: [barred_from_the_face]
+      sent_out: [sent_out]
+      vessels_asked: [egypt_emptied]
+      journeyed: [encamped_at]
+      brought_out: [brought_out]
+      bones_taken: [bones_carried]
+      pillar_set: [pillar_leads]
+      pursued: [pursued_by_egypt]
+      sea_split: [sea_split]
+      sea_returned: [egypt_drowned]
+      saved_at_the_sea: [saved]
+      sang: [song_sung]
+      waters_sweetened: [waters_sweetened]
+      statute_set: [statute_set_at_marah]
+      healer_promised: [healer_promised]
+      murmured: [tested_the_lord]
+      manna_fell: [manna_provided]
+      double_gathered: []
+      rested_on_the_seventh: []
+      omer_kept: [omer_kept]
+      rock_struck: [water_from_the_rock]
+      amalek_came: []
+      hands_raised: [prevailed]
+      amalek_weakened: [amalek_weakened]
+      blotting_sworn: [amalek_to_be_blotted]
+      jethro_came: []
+      jethro_sacrificed: [offered_burnt_and_sacrifices]
+      judges_appointed: [courts_established, hard_cases_to_moses]
+      moses_went_up: []
+      covenant_offered: [treasured_people]
+      people_answered: [undertook_to_do]     # ONE TYPE UNDER TWO LAW LAYERS: law_erection at Exod 24 (seat-checked), this daemon at Exod 19
+      people_sanctified: [sanctified_for_the_third_day]
+      bounds_set: [mountain_barred]
+      thunder_and_horn: []
+      lord_descended: [descended_on_the_mountain]
 functions:
   calendar:
     sabbatical: {status: WRAPPED, by: law_calendar}
@@ -756,6 +842,28 @@ functions:
     route: {status: WRAPPED, by: law_yoma}
     day_atones: {status: WRAPPED, by: law_yoma}
     dispatch_goat: {status: WRAPPED, by: law_yoma}
+  mishpatim_3:
+    maidservant: {status: WRAPPED, by: law_mishpatim_3}      # O7 (2026-09-07): X1 the cells the daemon calls on daughter_sold
+    killer: {status: WRAPPED, by: law_mishpatim_3}           # X2 21:13-14
+    parent_striker: {status: WRAPPED, by: law_mishpatim_3}   # X2 21:15
+    parent_curser: {status: WRAPPED, by: law_sanctions}      # X2 21:17 — the second seat's daemon (Lev 20:9) shares the effect; the mode fetched by call
+    slave_struck: {status: WRAPPED, by: law_mishpatim_3}     # X3
+    burglar: {status: WRAPPED, by: law_mishpatim_3}          # X4
+  exodus_story:   # O8 S1 (2026-09-08): the story's cells, each consumed by law_exodus_story
+    oppression: {status: WRAPPED, by: law_exodus_story}
+    birth: {status: WRAPPED, by: law_exodus_story}
+    bush: {status: WRAPPED, by: law_exodus_story}
+    signs: {status: WRAPPED, by: law_exodus_story}
+    bricks: {status: WRAPPED, by: law_exodus_story}
+    plagues: {status: WRAPPED, by: law_exodus_story}
+    night: {status: WRAPPED, by: law_exodus_story}
+    sea: {status: WRAPPED, by: law_exodus_story}
+    marah: {status: WRAPPED, by: law_exodus_story}
+    manna: {status: WRAPPED, by: law_exodus_story}
+    trials: {status: WRAPPED, by: law_exodus_story}
+    amalek: {status: WRAPPED, by: law_exodus_story}
+    jethro: {status: WRAPPED, by: law_exodus_story}
+    sinai: {status: WRAPPED, by: law_exodus_story}
   yovel:
     cycle: {status: WRAPPED, by: law_yovel}
     jubilee: {status: WRAPPED, by: law_yovel}
@@ -771,5 +879,8 @@ functions:
     support_duty: {status: WRAPPED, by: law_yovel}
     sale_manner: {status: WRAPPED, by: law_yovel}
     rigor_visibility: {status: WRAPPED, by: law_yovel}
+    going_out: {status: WRAPPED, by: law_yovel}            # O6 (2026-09-07): the consecrated field's route — the entitlement's value; law_yovel calls it on field_consecrated
+    arrival_unredeemed: {status: WRAPPED, by: law_yovel}   # O6: Mishnah Arakhin 7:4's three arms — law_yovel writes them on jubilee_proclaimed
+    field_kind_by_father: {status: WRAPPED, by: law_yovel} # O6: Mishnah Arakhin 7:5 — the holding/purchased classification the entitlement's route reads
 unfired: {}
 unconsumed: {}

@@ -150,6 +150,13 @@ PROBES = [
     ('DEDUCTED by the remaining years',         27, 18, 'ונגרע'),
     ('add its FIFTH',                           27, 19, 'חמשית'),
     ('TWENTY GERAH the shekel',                 27, 25, 'גרה'),
+    # O6 (2026-09-07): the going out's own ink
+    ('sold to ANOTHER man (27:20)',             27, 20, 'אחר'),
+    ('not redeemed AGAIN (27:20)',              27, 20, 'עוד'),
+    ('in its GOING OUT in the jubilee',         27, 21, 'בצאתו'),
+    ('HIS holding — to the priest (27:21)',     27, 21, 'אחזתו'),
+    ('in the YEAR of the jubilee it RETURNS',   27, 24, 'ישוב'),
+    ('to him from whom he BOUGHT it (27:24)',   27, 24, 'קנהו'),
 ]
 for label, ch, vs, tok in PROBES:
     T = T25 if ch == 25 else T27
@@ -432,6 +439,94 @@ def field_valuation(years_to_jubilee):
     }
 
 
+# ---- O6 (2026-09-07) THE GOING OUT — Lev 27:20-21, 27:24 with Mishnah Arakhin 7:2-5 (CLOCK.md section 11) ----
+CONSECRATED_ROUTES = ('to_the_priests', 'to_the_priests_from_the_hand_of_another', 'to_him_from_whom_he_bought_it',
+                      'to_his_father', 'to_all_his_brother_priests')
+
+
+def going_out(redeemed_by=None, sold_to_another=False, field_kind='holding'):
+    """The consecrated field's route at the jubilee — the VALUE its entitlement carries (the timer to the fiftieth
+    writes the entitlement; the proclamation's arms write the release: 27:21 'in the jubilee' and 27:24 'in the year
+    of the jubilee' NAME the institution whose verdict the fork decides — a REFERENCE, the ink alone)."""
+    if redeemed_by in ('owner', 'another_then_owner'):
+        return cell('does_not_go_out', A, 'Mishnah Arakhin 7:3 — הקדישה וגאלה אינה יוצאה מידו ביובל (he consecrated it and '
+                    'redeemed it: it does not go out from his hand in the jubilee); another redeemed it and the owner '
+                    'from his hand: the same (the Mishnah file\'s text; the Talmud\'s Mishnah at Arakhin 25a:16 reads '
+                    '"it goes out to the priests" — the variant beside, not graded)', ['adds_fifth'] if redeemed_by == 'owner' else [FX.NONE])
+    if redeemed_by == 'son':
+        return cell('to_his_father', A, 'Mishnah Arakhin 7:3 — גאלה בנו יוצאה לאביו ביובל (his son redeemed it: it goes '
+                    'out to his father in the jubilee); the heir adds the fifth with the sanctifier — "and if the '
+                    'sanctifier redeems: to include the heir" (Sifra Bechukotai Chapter 10 11)', ['adds_fifth', 'goes_out_in_the_jubilee', 'returns_to_holding'])
+    if redeemed_by == 'priest':
+        return cell('to_all_his_brother_priests', A, 'Mishnah Arakhin 7:3; Arakhin 25b:14-16 — a priest redeemed it: '
+                    'לכהן תהיה אחזתו (to the priest shall be HIS holding, 27:21) — a holding of his own, and this is '
+                    'not his: it goes out from under his hand to all his brother priests (Sifra Bechukotai Chapter 11 3)',
+                    ['goes_out_in_the_jubilee', 'due_to_priest'])
+    if sold_to_another or redeemed_by == 'another':
+        return cell('to_the_priests_from_the_hand_of_another', M, 'ואם מכר את השדה לאיש אחר (and if he sold the field to '
+                    'another man, 27:20) before והיה השדה בצאתו ביבל (and the field in its going out in the jubilee, '
+                    '27:21) — Rava, Arakhin 26a:16: בצאתו מיד אחר (in its going out FROM THE HAND OF ANOTHER); every arm '
+                    'agrees it goes out to the priests', ['goes_out_in_the_jubilee', 'due_to_priest'])
+    if field_kind == 'purchased':
+        return cell('to_him_from_whom_he_bought_it', I, 'בשנת היובל ישוב השדה לאשר קנהו מאתו (in the year of the '
+                    'jubilee the field shall return to him from whom he bought it) at 27:24 — not to the treasurer '
+                    '(Sifra Bechukotai Chapter 11 7; Arakhin 26a:10); a purchased field does not go out to the priests, '
+                    'for a man does not consecrate what is not his (Mishnah Arakhin 7:5)', ['goes_out_in_the_jubilee', 'returns_to_holding'])
+    return cell('to_the_priests', I, 'והיה השדה בצאתו ביבל קדש ליהוה כשדה החרם לכהן תהיה אחזתו (and the field in its '
+                'going out in the jubilee shall be holy to the LORD as the devoted field; to the priest shall be its '
+                'holding) at 27:21 — the holding unredeemed', ['goes_out_in_the_jubilee', 'due_to_priest'])
+
+
+def arrival_unredeemed():
+    """Mishnah Arakhin 7:4 = Sifra Bechukotai Chapter 11 2: the jubilee arrived and it was not redeemed — three arms."""
+    return {
+     'yehuda': cell('enter_and_pay_its_value — Rabbi Yehuda', A, 'הכהנים נכנסים לתוכה ונותנים את דמיה (the priests enter '
+                    'it and give its value) — the Sifra\'s ground, Chapter 11 1: "holy" here as "holy" at 27:14, it goes '
+                    'out only by redemption', ['due_to_priest', 'pays']),
+     'shimon': cell('enter_and_do_not_pay — Rabbi Shimon', A, 'נכנסין אבל לא נותנין (they enter but do not give)',
+                    ['due_to_priest']),
+     'eliezer': cell('abandoned_field_until_the_second_jubilee — Rabbi Eliezer', A, 'לא נכנסין ולא נותנין אלא נקראת שדה '
+                     'רטושים עד היובל השני (they neither enter nor give; it is called an abandoned field until the second '
+                     'jubilee), and again until the third; the priests never enter until another redeems it — Rava\'s '
+                     'ground 26a:16 "in its going out from the hand of another"; the entitlement RE-ARMED to the next '
+                     'jubilee', ['abandoned_field', 'goes_out_in_the_jubilee']),
+    }
+
+
+AR = arrival_unredeemed()
+AR_ARMS = cell([AR['yehuda']['v'], AR['shimon']['v'], AR['eliezer']['v']], A, 'Mishnah Arakhin 7:4 — the three arms at the '
+               'going out, each a VALUE on the field\'s due_to_priest, never a silence (CLOCK.md section 5\'s rule)',
+               ['due_to_priest', 'pays', 'abandoned_field', 'goes_out_in_the_jubilee'])
+
+
+def field_kind_by_father(order):
+    """Mishnah Arakhin 7:5 (Arakhin 26b:14-16; Sifra Bechukotai Chapter 11 4): the field bought from his father."""
+    if order == 'father_died_first':
+        return cell('holding', A, 'הלוקח שדה מאביו מת אביו ואחר כך הקדישה הרי היא כשדה אחזה (he bought a field from his '
+                    'father, the father died, then he consecrated it: it is as a field of the holding) — every arm',
+                    ['goes_out_in_the_jubilee'])
+    return cell(['purchased — Rabbi Meir', 'holding — Rabbi Yehuda, Rabbi Shimon'], A, 'הקדישה ואחר כך מת אביו (he '
+                'consecrated it, then his father died): Rabbi Meir a purchased field; Rabbi Yehuda and Rabbi Shimon a '
+                'holding — ואם את שדה מקנתו אשר לא משדה אחזתו (and if the field of his purchase which is not of the '
+                'field of his holding, 27:22) excludes a field NOT FIT to be a holding, and this one is fit',
+                ['goes_out_in_the_jubilee'])
+
+
+IN_EFFECT = cell('no_going_out', M, 'Arakhin 29a:15-17 — אין שדה חרמין נוהגין אלא בזמן שהיובל נוהג שנאמר והיה השדה '
+                 'בצאתו ביבל (devoted fields apply only when the jubilee is in effect, as it is said: and the field in '
+                 'its going out in the jubilee — Rabbi Shimon ben Yochai on 27:21); "in effect" = לכל ישביה (to ALL its '
+                 'inhabitants, 25:10 — Sifra Behar Chapter 2 3, Arakhin 32b:16): the exile REACHES the consecrated '
+                 'field — no priest\'s due, no return, the entitlement stands', [FX.NONE])
+RECEIVING_WATCH = cell('the-watch-the-jubilee-met', M, 'Arakhin 28b:4 — שדה היוצאה לכהנים ביובל נותנה למשמר שפגע בו '
+                       'יובל (a field going out to the priests in the jubilee: he gives it to the WATCH the jubilee met); '
+                       'on the Sabbath, the outgoing watch (Rav Chiya bar Ami)', ['due_to_priest'])
+RELEASE_ON_ACT = cell('on_the_proclamation', M, 'Sifra Behar Chapter 2 1, Rabbi Yochanan ben Beroka — the fields did '
+                      'not return to their owners until the Day of Atonement arrived; הגיע יום הכפורים תקעו שופר חזרו '
+                      'שדות לבעליהם (the Day arrived: they sounded the horn, the fields RETURNED to their owners): the '
+                      'release ON THE ACT; and "even though they did not release" (Rosh Hashanah 9b:2-3) — the fields\' '
+                      'release an act the year commands, never a condition of the year', ['returns_to_holding', 'due_to_priest'])
+
+
 PRIESTS = cell(len(HAKOHEN_27), I,
                'הכהן (THE priest — the definite subject form) counted %d times in '
                'Lev 27 as the ASSESSOR (27:8 x3, 27:11, 27:12 x2, 27:14 x2, '
@@ -677,7 +772,10 @@ def law_yovel(event, world):
     THE CLOCK SITTING (2026-09-07; CLOCK.md section 5): the COUNT begins at entry (25:2) — two recurring status timers on the land through the Calendar (the seventh, the fiftieth);
     the sowing reads the land's status, never the event's year; a sale's timer writes the ENTITLEMENT (25:28 "it shall go out in the jubilee"); the RELEASE is written when the
     proclamation (25:9-10, the text's own act) is consumed, forked on the tradition's three recorded conditions — the horn and the servants (Sifra Behar Chapter 2 4) off the act,
-    all the inhabitants (Arakhin 32b:16) off the ledger."""
+    all the inhabitants (Arakhin 32b:16) off the ledger.
+    O6 (2026-09-07; CLOCK.md section 11): THE FORK'S REACH TO LEV 27 — the consecrated field's going out is an ENTITLEMENT (its value the route) RELEASED here on the arms:
+    27:21 'in the jubilee' and 27:24 'in the year of the jubilee' name the institution the fork decides (a REFERENCE, ink alone); Arakhin 29a:17 the exile's reach, taught;
+    the holding unredeemed forked on Mishnah Arakhin 7:4's three arms, Rabbi Eliezer's abandoned field re-armed to the next jubilee."""
     k, src = event['kind'], event['case_source']
     E_ = lambda eff, s, cp=None, amount=None, due=None, law='', value=None, period=None: dict({'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': law, 'case_source': src}, **({'period': period} if period else {}))
     yr = world.clock.year
@@ -710,7 +808,7 @@ def law_yovel(event, world):
         ppl = world.entity(event.get('people', 'israel'))
         exiled = any(e['effect'] == 'scattered_among_nations' for e in ppl.ledger)          # Arakhin 32b:16 — a STATE, read off the ledger
         if exiled:
-            arms = [('both arms', False, 'not all its inhabitants upon the land — Arakhin 32b:16 on 25:10 "to ALL its inhabitants": the jubilees ceased')]
+            arms = [('both arms', False, 'not all its inhabitants upon the land — Arakhin 32b:16 on 25:10 "to ALL its inhabitants": the jubilees ceased; the consecrated field\'s going out not in effect either — %s (O6)' % IN_EFFECT['v'])]
         elif horn and servants:
             arms = [('both arms', True, 'the horn sounded and the servants sent free — Sifra Behar Chapter 2 4, both conditions met')]
         elif not horn and not servants:
@@ -728,10 +826,30 @@ def law_yovel(event, world):
             out.append(E_('jubilee_release', land, cp=event.get('proclaimer'), value=v, law='F1 [INK 25:9-10 "on the Day of Atonement you shall sound the horn... proclaim liberty in the land" — %s; the pierced slave %s]' % (jb['release_day']['v'], jb['pierced_slave']['v'])))
             if ok:                                                       # the RELEASE for every entitled holding and man (the entitlement fired at the year's arrival)
                 for ent in world.entities.values():
-                    if ent.status.get('goes_out_in_the_jubilee'):
-                        out.append(E_('returns_to_holding', ent.eid, value=v, law='F1 [INK 25:28 "it shall go out in the jubilee and he shall return to his holding"; 25:41 "and return to his family" — the release on the act]'))
-                        if ent.kind == 'person':
-                            out.append(E_('goes_free', ent.eid, value=v, law='F1 [INK 25:54 "he shall go out in the year of the jubilee, he and his sons with him"]'))
+                    route = str(ent.status.get('goes_out_in_the_jubilee') or '').split(' — ')[0]
+                    if not route:
+                        continue
+                    if route in CONSECRATED_ROUTES:                          # O6: the consecrated field released by its route (Lev 27:21/27:24 name the jubilee — a REFERENCE to this verdict; %s)
+                        wt = RECEIVING_WATCH['v']
+                        if route == 'to_the_priests':                        # the holding UNREDEEMED — Mishnah Arakhin 7:4's fork at the going out
+                            out.append(E_('due_to_priest', ent.eid, cp=wt, value='%s — %s' % (AR['yehuda']['v'], v), law='F4 [INK 27:21 "in its going out in the jubilee... to the priest shall be its holding"; Mishnah Arakhin 7:4 Rabbi Yehuda — the priests enter and pay its value (Sifra Bechukotai Chapter 11 1); the watch the jubilee met, Arakhin 28b:4; the release %s (Sifra Behar Chapter 2 1)]' % RELEASE_ON_ACT['v']))
+                            out.append(E_('pays', 'the-priests', cp='the-treasury', value='its_value — Rabbi Yehuda', law='F4 [Mishnah Arakhin 7:4 — נותנים את דמיה (they give its value); Sifra Bechukotai Chapter 11 1 — it goes out only by redemption]'))
+                            out.append(E_('due_to_priest', ent.eid, cp=wt, value='%s — %s' % (AR['shimon']['v'], v), law='F4 [Mishnah Arakhin 7:4 Rabbi Shimon — they enter but do not pay]'))
+                            out.append(E_('due_to_priest', ent.eid, cp=None, value='%s — %s' % (AR['eliezer']['v'], v), law='F4 [Mishnah Arakhin 7:4 Rabbi Eliezer — they neither enter nor pay: the "no entry" arm a named value on the same question, never a silence]'))
+                            out.append(E_('abandoned_field', ent.eid, value='%s — %s' % (AR['eliezer']['v'], v), law='F4 [Mishnah Arakhin 7:4; Sifra Bechukotai Chapter 11 2 — שדה רטושים (an abandoned field) until the second jubilee; INK 27:20 "it shall not be redeemed again" (Abaye, Arakhin 26a:5; Rava 26a:16 "in its going out from the hand of another")]'))
+                            out.append(E_('goes_out_in_the_jubilee', ent.eid, due=world.clock.next('jubilee'), value='to_the_priests — abandoned until the second jubilee (Rabbi Eliezer)', law='F4 [Mishnah Arakhin 7:4 Rabbi Eliezer — the entitlement RE-ARMED to the next jubilee the Calendar computes: רטושי רטושין (abandoned of the abandoned) until the third]'))
+                        elif route == 'to_the_priests_from_the_hand_of_another':
+                            out.append(E_('due_to_priest', ent.eid, cp=wt, value='to the priests from the hand of another — all arms — %s' % v, law='F4 [INK 27:20 "and if he sold the field to another man" then 27:21 "in its going out in the jubilee" — Rava, Arakhin 26a:16: in its going out from the hand of ANOTHER; the watch the jubilee met, 28b:4]'))
+                        elif route == 'to_all_his_brother_priests':
+                            out.append(E_('due_to_priest', ent.eid, cp='all-his-brother-priests', value='%s — %s' % (route, v), law='F4 [INK 27:21 "to the priest shall be HIS holding" — a holding of his own, and this is not his (Arakhin 25b:14-16); Mishnah Arakhin 7:3; Sifra Bechukotai Chapter 11 3]'))
+                        elif route == 'to_his_father':
+                            out.append(E_('returns_to_holding', ent.eid, cp='his-father', value='%s — %s' % (route, v), law='F4 [Mishnah Arakhin 7:3 — his son redeemed it: it goes out to his father in the jubilee; the release on the act, Sifra Behar Chapter 2 1]'))
+                        else:                                                # to_him_from_whom_he_bought_it
+                            out.append(E_('returns_to_holding', ent.eid, cp='the-original-holder', value='%s — %s' % (route, v), law='F4 [INK 27:24 "in the jubilee year the field shall return to him from whom he bought it, to him whose holding of the land it is" — not to the treasurer (Sifra Bechukotai Chapter 11 7; Arakhin 26a:10); the release on the act]'))
+                        continue
+                    out.append(E_('returns_to_holding', ent.eid, value=v, law='F1 [INK 25:28 "it shall go out in the jubilee and he shall return to his holding"; 25:41 "and return to his family" — the release on the act]'))
+                    if ent.kind == 'person':
+                        out.append(E_('goes_free', ent.eid, value=v, law='F1 [INK 25:54 "he shall go out in the year of the jubilee, he and his sons with him"]'))
         return out
     if k == 'field_sold':
         s_ = event['seller']; b = event['buyer']; f = event['field']; ytj = event.get('years_to_jubilee', JUBILEE - yr); el = event.get('elapsed', 0)
@@ -803,14 +921,15 @@ def law_yovel(event, world):
     if k == 'field_consecrated':
         o = event['owner']; f = event['field']; ytj = event.get('years_to_jubilee', JUBILEE - yr); fv = field_valuation(ytj)
         out = [E_('gives_fixed_sum', o, cp='the-treasury', amount=fv['owed']['v'], value=fv['per_year']['v'], law='F4 [INK 27:16-18 fifty per homer deducted by the years — %s x %d = %s]' % (fv['per_year']['v'], ytj, fv['owed']['v']))]
-        if event.get('redeemed'):
+        # O6 (2026-09-07): the going out is an ENTITLEMENT whose value is the ROUTE; the release is the proclamation's (CLOCK.md section 11)
+        rb = event.get('redeemed_by', 'owner' if event.get('redeemed') else None)
+        go = going_out(rb, event.get('sold_to_another', False), event.get('field_kind', 'holding'))
+        if rb in ('owner', 'son'):                                   # 7:2 the owner's fifth; the heir included (Sifra Bechukotai Chapter 10 11)
             op = owner_price(event.get('bid', 20), 20)
-            out.append(E_('adds_fifth', o, cp='the-treasury', amount=(op if isinstance(op, int) else None), value=fv['redeem_fifth']['v'], law='F4 [INK 27:19 "he shall add a fifth of the money of the valuation" — the owner\'s precedence: bid %d -> %s (Mishnah Arakhin 8:2-3)]' % (event.get('bid', 20), op)))
-            return out
-        if event.get('field_kind') == 'purchased':
-            out.append(E_('returns_to_holding', f, cp='the-original-holder', due=world.clock.next('jubilee'), value='to_him_from_whom_he_bought_it', law='F4 [INK 27:24 "in the jubilee year the field shall return to him from whom he bought it" — the TIMER to the fiftieth the Calendar computes; the fork\'s reach to Lev 27 filed OPEN]'))
-        else:
-            out.append(E_('due_to_priest', f, cp='the-priests', due=world.clock.next('jubilee'), value=fv['unredeemed_sold']['v'], law='F4 [INK 27:21 "the field in its going out in the jubilee shall be holy to the LORD, as a devoted field; to the priest shall be its holding" — the TIMER to the fiftieth; the fork\'s reach to Lev 27 filed OPEN]'))
+            out.append(E_('adds_fifth', o, cp='the-treasury', amount=(op if isinstance(op, int) else None), value=fv['redeem_fifth']['v'], law='F4 [INK 27:19 "he shall add a fifth of the money of the valuation" — the owner\'s precedence: bid %d -> %s (Mishnah Arakhin 8:2-3)%s]' % (event.get('bid', 20), op, '; the heir with the sanctifier (Sifra Bechukotai Chapter 10 11)' if rb == 'son' else '')))
+        if go['v'] != 'does_not_go_out':
+            world.entity(f, 'field')
+            out.append(E_('goes_out_in_the_jubilee', f, cp=o, due=world.clock.next('jubilee'), value=go['v'], law='F4 [INK 27:21 "in its going out in the jubilee" / 27:24 "in the year of the jubilee it shall return" — the ENTITLEMENT, a TIMER to the fiftieth the Calendar computes (count-year %d), its value the route %s; the RELEASE on the proclamation\'s arms (O6) — %s]' % (world.clock.calendar.year(world.clock.next('jubilee')), go['v'], go['why'][:60])))
         return out
     if k == 'consecrated_redeemed':
         if event.get('thing') != 'field':
@@ -854,6 +973,11 @@ def scene():
         w.submit({'kind': 'field_consecrated', 'subject': 'field-4', 'owner': 'the-sanctifier', 'field': 'field-4', 'years_to_jubilee': 6, 'field_kind': 'holding', 'case_source': 'Lev 27:16-21; Mishnah Arakhin 7:1 — the holding consecrated six years before the jubilee, unredeemed: to the priest'})
         w.submit({'kind': 'field_consecrated', 'subject': 'field-5', 'owner': 'the-redeeming-sanctifier', 'field': 'field-5', 'years_to_jubilee': 6, 'redeemed': True, 'bid': 21, 'case_source': 'Mishnah Arakhin 8:2-3 — the owner redeems against a bid of twenty-one: twenty-six'})
         w.submit({'kind': 'field_consecrated', 'subject': 'field-6', 'owner': 'the-buyer-sanctifier', 'field': 'field-6', 'years_to_jubilee': 6, 'field_kind': 'purchased', 'case_source': 'Lev 27:22-24 — the purchased field returns to its holder at the jubilee'})
+        # O6 (2026-09-07): the going out's rows — Lev 27:20 and Mishnah Arakhin 7:3
+        w.submit({'kind': 'field_consecrated', 'subject': 'field-7', 'owner': 'the-sanctifier-sold-out', 'field': 'field-7', 'years_to_jubilee': 6, 'field_kind': 'holding', 'sold_to_another': True, 'case_source': 'Lev 27:20-21; Arakhin 26a:16 — the treasurer sold it to another: in its going out from the hand of another, to the priests'})
+        w.submit({'kind': 'field_consecrated', 'subject': 'field-8', 'owner': 'the-father-sanctifier', 'field': 'field-8', 'years_to_jubilee': 6, 'redeemed': True, 'redeemed_by': 'son', 'case_source': 'Mishnah Arakhin 7:3 — his son redeemed it: it goes out to his father in the jubilee; the heir\'s fifth (Sifra Bechukotai Chapter 10 11)'})
+        w.submit({'kind': 'field_consecrated', 'subject': 'field-9', 'owner': 'the-sanctifier-priest-redeemed', 'field': 'field-9', 'years_to_jubilee': 6, 'redeemed': True, 'redeemed_by': 'priest', 'case_source': 'Mishnah Arakhin 7:3; Arakhin 25b:14-16 — a priest redeemed it: to all his brother priests, not his'})
+        w.submit({'kind': 'field_consecrated', 'subject': 'field-10', 'owner': 'the-sanctifier-redeeming-back', 'field': 'field-10', 'years_to_jubilee': 6, 'redeemed': True, 'redeemed_by': 'another_then_owner', 'case_source': 'Mishnah Arakhin 7:3 — another redeemed it and the owner from his hand: it does not go out (the Mishnah\'s text; Arakhin 25a:16\'s variant beside)'})
         w.submit({'kind': 'consecrated_redeemed', 'subject': 'field-5', 'redeemer': 'the-redeeming-sanctifier', 'thing': 'field', 'bid': 26, 'own': 20, 'case_source': 'Mishnah Arakhin 8:3 — a bid of twenty-six: thirty-one and a dinar'})
         w.submit({'kind': 'consecrated_redeemed', 'subject': 'the-house', 'redeemer': 'the-house-redeemer', 'thing': 'house', 'case_source': 'Lev 27:15 — the house: the consecration engine\'s seat (the silence here)'})
         w.advance(w.clock.at_year(46))
@@ -870,6 +994,7 @@ def scene():
             wf.submit({'kind': 'entered_the_land', 'subject': 'israel', 'people': 'israel', 'land': 'the-land', 'case_source': 'Lev 25:2 — the count begins (the fork\'s world)'})
             wf.advance(wf.clock.at_year(40))
             wf.submit({'kind': 'field_sold', 'subject': 'field-f', 'seller': 'the-seller', 'buyer': 'the-buyer', 'field': 'field-f', 'price': 100, 'years_to_jubilee': 10, 'case_source': 'Lev 25:28 — sold ten years before the jubilee (the fork\'s world)'})
+            wf.submit({'kind': 'field_consecrated', 'subject': 'field-c', 'owner': 'the-sanctifier-c', 'field': 'field-c', 'years_to_jubilee': 10, 'field_kind': 'holding', 'case_source': 'Lev 27:16-21 — the holding consecrated ten years before the jubilee, unredeemed (the fork\'s world, O6): its going out waits on the arms'})
             return wf
         wa = fork_world(); wa.advance(wa.clock.calendar.day_of(50, 7, 10))
         wa.submit({'kind': 'jubilee_proclaimed', 'subject': 'the-land', 'proclaimer': 'the-court', 'land': 'the-land', 'horn_sounded': False, 'servants_sent_free': True, 'case_source': 'Sifra Behar Chapter 2 4 — they did not sound the horn: Rabbi Yehuda a jubilee, Rabbi Yose not'})
@@ -893,7 +1018,10 @@ def scene():
              am('the-vower-of-a-man', 'gives_fixed_sum'), am('the-vower-of-a-woman', 'gives_fixed_sum'), am('the-vower-of-a-boy', 'gives_fixed_sum'), n('the-vower-of-an-infant', 'gives_fixed_sum'),
              am('the-sanctifier', 'gives_fixed_sum'), yr('field-4', 'due_to_priest'), am('the-redeeming-sanctifier', 'adds_fifth'), yr('field-6', 'returns_to_holding'), n('the-house-redeemer', 'adds_fifth'),
              yr('the-exodus-slave', 'goes_free'), n('the-exodus-slave', 'term_clock'), n('the-land', 'jubilee_release'),
-             yr('the-land', 'sabbath_of_the_land'), yr('the-land', 'jubilee_year'), yr('field-1', 'goes_out_in_the_jubilee'), n('the-land', 'jubilee_holds'), cut, rearm, tset, fired, w.clock.year),
+             yr('the-land', 'sabbath_of_the_land'), yr('the-land', 'jubilee_year'), yr('field-1', 'goes_out_in_the_jubilee'), n('the-land', 'jubilee_holds'), cut, rearm, tset, fired, w.clock.year,
+             # O6 (2026-09-07): the consecrated field's going out on the arms — the ten appended slots
+             n('field-4', 'goes_out_in_the_jubilee'), n('the-priests', 'pays'), n('field-4', 'abandoned_field'), yr('field-7', 'due_to_priest'), yr('field-8', 'returns_to_holding'),
+             am('the-father-sanctifier', 'adds_fifth'), yr('field-9', 'due_to_priest'), n('the-sanctifier-priest-redeemed', 'adds_fifth'), n('field-10', 'goes_out_in_the_jubilee'), n('field-10', 'due_to_priest')),
             scene_counts_fork(wa, wb, wc), w)
 
 def scene_counts_fork(wa, wb, wc):
@@ -901,7 +1029,9 @@ def scene_counts_fork(wa, wb, wc):
     vals = lambda wf: sorted(e['value'].split(' (')[0] + ' — ' + e['value'].split(' (')[1].split(':')[0] for e in wf.entity('the-land').ledger if e['effect'] == 'jubilee_release' and e['day'] == wf.clock.day)
     ret = lambda wf: len([e for e in wf.entity('field-f').ledger if e['effect'] == 'returns_to_holding'])
     holds = lambda wf: wf.entity('the-land').status.get('jubilee_holds', '').split(' (')[0]
-    return (vals(wa), ret(wa), holds(wa), vals(wb), ret(wb), holds(wb), vals(wc), ret(wc), holds(wc))
+    dp = lambda wf: len([e for e in wf.entity('field-c').ledger if e['effect'] == 'due_to_priest'])          # O6: the consecrated field on the arms
+    return (vals(wa), ret(wa), holds(wa), vals(wb), ret(wb), holds(wb), vals(wc), ret(wc), holds(wc),
+            dp(wa), dp(wb), dp(wc), 1 if wc.entity('field-c').status.get('goes_out_in_the_jubilee') else 0)
 SCENE, SCENE_FORK, _W = scene()
 
 
@@ -921,6 +1051,10 @@ SHEET = [
     ('Arakhin 3:1', 'arakhin', 3, 1, 'חמשים'),
     ('Arakhin 4:4', 'arakhin', 4, 4, 'כלמטה'),
     ('Arakhin 7:1', 'arakhin', 7, 1, 'ופנדיון'),
+    ('Arakhin 7:2', 'arakhin', 7, 2, 'חמש'),        # O6: the owner's fifth, no one else's
+    ('Arakhin 7:3', 'arakhin', 7, 3, 'לאביו'),      # O6: who redeemed it
+    ('Arakhin 7:4', 'arakhin', 7, 4, 'רטושים'),     # O6: the jubilee arrived unredeemed — the three arms
+    ('Arakhin 7:5', 'arakhin', 7, 5, 'ראויה'),      # O6: the field bought from his father
     ('Megillah 4:3', 'megillah', 4, 3, 'תשעה'),
     ('Sheviit 1:1', 'sheviit', 1, 1, 'העצרת'),
     ('Sheviit 2:2', 'sheviit', 2, 2, 'מזבלין'),
@@ -963,6 +1097,19 @@ SHEET2 = [   # the Sifra and Talmud rows the sabbatical cells cite, verified in 
     ('bavli', 'moed_katan', 3, 'b', 8, 'ובטלום'),
     ('bavli', 'moed_katan', 3, 'b', 12, 'שלשים'),
     ('bavli', 'moed_katan', 4, 'a', 9, 'קיים'),
+    # O6 (2026-09-07): the going out's rows
+    ('sifra', 'Bechukotai', 'Chapter 11', 1, 'בפדיון'),   # 'holy' goes out only by redemption
+    ('sifra', 'Bechukotai', 'Chapter 11', 2, 'רטושין'),   # the three arms; the abandoned field
+    ('sifra', 'Bechukotai', 'Chapter 11', 3, 'אחיו הכהנים'),   # the priest's field to all his brothers
+    ('sifra', 'Bechukotai', 'Chapter 11', 4, 'ראויה'),    # the father's field — fit to be a holding
+    ('sifra', 'Bechukotai', 'Chapter 11', 7, 'קנהו'),     # 27:24 — not to the treasurer
+    ('sifra', 'Bechukotai', 'Chapter 10', 11, 'היורש'),   # the heir adds the fifth
+    ('sifra', 'Behar', 'Chapter 2', 1, 'חזרו'),           # the fields returned at the Day's horn
+    ('bavli', 'arakhin', 25, 'b', 16, 'אחוזה שלו'),      # HIS holding — not the redeeming priest's
+    ('bavli', 'arakhin', 26, 'a', 16, 'מיד אחר'),        # Rava: in its going out from the hand of another
+    ('bavli', 'arakhin', 28, 'b', 4, 'למשמר'),           # the watch the jubilee met
+    ('bavli', 'arakhin', 29, 'a', 17, 'בצאתו ביובל'),    # Rabbi Shimon ben Yochai: only when the jubilee is in effect
+    ('bavli', 'rosh_hashanah', 9, 'b', 2, 'שמטו'),       # even though they did not release
 ]
 import re as _re
 def _sifra(book, section, n, must):
@@ -996,8 +1143,22 @@ IS_F = interest_scope('foreigner')
 
 # (Mishnah row, cell, expected)
 TESTS = [
- ('THE SCENE — Rosh Hashanah 1:1, Sheviit, Kiddushin 1:2, Arakhin 4 and 7-9, Bava Metzia 4-5 on the world engine (THE COUNT EPOCH — the day the base unit, the year derived; one period of fifty; the count\'s two timers set at entry; the library\'s law_slave_term beside; jubilee_proclaimed SUBMITTED on the computed tenth of the seventh month; the daemon\'s watch coverage printed below)', cell(SCENE, I, 'the seventh and the fiftieth, the sold field and the walled house and the slave each on a timer to its year, the poor brother, the interest, the valuations, the consecrated field to the priest at the jubilee — every value a cell\'s', ['land_release', 'labor_barred', 'lashes', 'jubilee_release', 'goes_free', 'returns_to_holding', 'redemption_right', 'pays', 'restores', 'sold_in_perpetuity', 'supports_kinsman', 'interest_barred', 'term_clock', 'barred_from_it', 'exempt', 'gives_fixed_sum', 'due_to_priest', 'adds_fifth']), ([7, 7, 50], 2, 1, 2, [50], 1, [50], 1, [44], [60], 1, [41], [50], [50], 0, 1, 1, 0, [50], [50], [50], 1, 1, 1, 1, 1, 0, [50], [60], [44], [50], [30], [5], 0, [6.12], [50], [26, None], [50], 0, [50], 1, 2, [7, 14, 21, 28, 35, 42, 49], [50], [50], 1, 1, 8, 20, 17, 51)),
- ('THE FORK\'S ROWS — Sifra Behar Chapter 2 4 (the horn, the servants) and Arakhin 32b:16 (the exile) on the world engine: the jubilee\'s validity forked on the PROCLAMATION ACT\'s three recorded conditions (THE CLOCK SITTING)', cell(SCENE_FORK, A, 'no horn: Rabbi Yehuda a jubilee, Rabbi Yose not; no servants sent free: Rabbi Yose a jubilee, Rabbi Yehuda not; the tribes exiled: no jubilee by both — the arms as VALUES on the land, the field returned only on an arm that holds', ['jubilee_release', 'jubilee_holds', 'returns_to_holding']), (['jubilee — Rabbi Yehuda', 'no jubilee — Rabbi Yose'], 1, 'jubilee', ['jubilee — Rabbi Yose', 'no jubilee — Rabbi Yehuda'], 1, 'jubilee', ['no jubilee — both arms'], 0, 'no jubilee')),
+ ('THE SCENE — Rosh Hashanah 1:1, Sheviit, Kiddushin 1:2, Arakhin 4 and 7-9, Bava Metzia 4-5 on the world engine (THE COUNT EPOCH — the day the base unit, the year derived; one period of fifty; the count\'s two timers set at entry; the library\'s law_slave_term beside; jubilee_proclaimed SUBMITTED on the computed tenth of the seventh month; the daemon\'s watch coverage printed below)', cell(SCENE, I, 'the seventh and the fiftieth, the sold field and the walled house and the slave each on a timer to its year, the poor brother, the interest, the valuations, the consecrated field to the priest at the jubilee — every value a cell\'s', ['land_release', 'labor_barred', 'lashes', 'jubilee_release', 'goes_free', 'returns_to_holding', 'redemption_right', 'pays', 'restores', 'sold_in_perpetuity', 'supports_kinsman', 'interest_barred', 'term_clock', 'barred_from_it', 'exempt', 'gives_fixed_sum', 'due_to_priest', 'adds_fifth']), ([7, 7, 50], 2, 1, 2, [50], 1, [50], 1, [44], [60], 1, [41], [50], [50], 0, 1, 1, 0, [50], [50], [50], 1, 1, 1, 1, 1, 0, [50], [60], [44], [50], [30], [5], 0, [6.12], [50, 50, 50], [26, None], [50], 0, [50], 1, 2, [7, 14, 21, 28, 35, 42, 49], [50], [50], 1, 1, 8, 24, 20, 51, 1, 1, 1, [50], [50], [25], [50], 0, 0, 0)),
+ ('THE FORK\'S ROWS — Sifra Behar Chapter 2 4 (the horn, the servants) and Arakhin 32b:16 (the exile) on the world engine: the jubilee\'s validity forked on the PROCLAMATION ACT\'s three recorded conditions (THE CLOCK SITTING)', cell(SCENE_FORK, A, 'no horn: Rabbi Yehuda a jubilee, Rabbi Yose not; no servants sent free: Rabbi Yose a jubilee, Rabbi Yehuda not; the tribes exiled: no jubilee by both — the arms as VALUES on the land, the field returned only on an arm that holds', ['jubilee_release', 'jubilee_holds', 'returns_to_holding']), (['jubilee — Rabbi Yehuda', 'no jubilee — Rabbi Yose'], 1, 'jubilee', ['jubilee — Rabbi Yose', 'no jubilee — Rabbi Yehuda'], 1, 'jubilee', ['no jubilee — both arms'], 0, 'no jubilee', 3, 3, 0, 1)),
+ # ---- O6 (2026-09-07) THE FORK'S REACH TO LEV 27:21 / 27:24 — CLOCK.md section 11
+ ('Lev 27:21 — the holding unredeemed goes out to the priests: the ENTITLEMENT\'s route (O6)', going_out(), 'to_the_priests'),
+ ('Lev 27:24 — the purchased field returns to him from whom he bought it, not the treasurer', going_out(field_kind='purchased'), 'to_him_from_whom_he_bought_it'),
+ ('Lev 27:20-21; Arakhin 26a:16 — sold by the treasurer to another: in its going out from the hand of another, to the priests', going_out(sold_to_another=True), 'to_the_priests_from_the_hand_of_another'),
+ ('Arakhin 7:3 — redeemed by the owner: it does not go out from his hand [ANSWER-SHEET]', going_out('owner'), 'does_not_go_out'),
+ ('Arakhin 7:3 — redeemed by his son: it goes out to his father [ANSWER-SHEET]', going_out('son'), 'to_his_father'),
+ ('Arakhin 7:3 — another redeemed it and the owner from his hand: it does not go out (the Mishnah\'s text) [ANSWER-SHEET]', going_out('another_then_owner'), 'does_not_go_out'),
+ ('Arakhin 7:3; Arakhin 25b:14-16 — redeemed by a priest: to all his brother priests [ANSWER-SHEET]', going_out('priest'), 'to_all_his_brother_priests'),
+ ('Arakhin 7:4 — the jubilee arrived unredeemed: the three arms [ANSWER-SHEET]', AR_ARMS, ['enter_and_pay_its_value — Rabbi Yehuda', 'enter_and_do_not_pay — Rabbi Shimon', 'abandoned_field_until_the_second_jubilee — Rabbi Eliezer']),
+ ('Arakhin 7:5 — bought from his father, the father died, then consecrated: a field of the holding [ANSWER-SHEET]', field_kind_by_father('father_died_first'), 'holding'),
+ ('Arakhin 7:5 — consecrated, then the father died: Rabbi Meir a purchased field; Rabbi Yehuda and Rabbi Shimon a holding [ANSWER-SHEET]', field_kind_by_father('consecrated_first'), ['purchased — Rabbi Meir', 'holding — Rabbi Yehuda, Rabbi Shimon']),
+ ('Arakhin 29a:15-17 — only when the jubilee is in effect: the exile reaches Lev 27:21 (Rabbi Shimon ben Yochai)', IN_EFFECT, 'no_going_out'),
+ ('Arakhin 28b:4 — the field goes out to the watch the jubilee met', RECEIVING_WATCH, 'the-watch-the-jubilee-met'),
+ ('Sifra Behar Chapter 2 1 — the fields returned at the Day\'s horn: the release on the act (Rabbi Yochanan ben Beroka)', RELEASE_ON_ACT, 'on_the_proclamation'),
  ('Rosh Hashanah 1:1 — Tishrei is the new year for Jubilees: the fiftieth is a Jubilee',
   cycle(50), 'jubilee'),
  ('Rosh Hashanah 1:1 — and for sabbatical years: year seven rests', cycle(7),
@@ -1142,11 +1303,11 @@ if __name__ == '__main__':
           '(INK); the precondition is all inhabitants on the land (INK) and the '
           'cessation is the tribes\' exile (MOVE); the gentile slave forever '
           '(INK); the sela is twenty gerah (INK); the field\'s fifth (INK); the '
-          'unredeemed field to the priest at the Jubilee (INK); the field owed '
+          'unredeemed field to the priest at the Jubilee — on the proclamation\'s arms since O6 (INK); the field owed '
           'over a full cycle = %s' % FV['owed']['v'])
     print('the sabbatical year extended 2026-09-05 (REVIEW_BEHAR item 2): %d cells graded against '
           'Mishnah Sheviit, Bekhorot 9, Arakhin 8, Bava Metzia 5 and the Sifra/Talmud rows the seats '
-          'cite; the tithe naming machine written' % (n - 33))
+          'cite; the tithe naming machine written' % 44)
     print('effects: every cell carries REGISTERED effects — four discovered in '
           'this span\'s own verbs: returns_to_holding (TRANSFER), '
           'sold_in_perpetuity, redemption_right, interest_barred [effects law '

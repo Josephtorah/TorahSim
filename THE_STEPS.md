@@ -609,6 +609,21 @@ confirmed process, the sixth added at D9-iv):
      The review — LR1 the law and the gates; LR2 the audit of 154
      edges, 72 pointers, 43 multi-seat types; LR3 the cells and the H
      class — is logged in World/step9/COMPILE_DEBT.md.
+     RULE 9 — EVERY LIVE EDGE HAS ITS OWN ENTRY (O4 THE EDGE FILING,
+     2026-09-07, the debt LR3 named): a live import edge the token
+     census never required is still the code's, and the file may not
+     understate the code — a live edge without its own entry fails the
+     gate, a REVERSE entry on the callee's side files nothing for the
+     caller's call, and every CALL entry must be live. The gate reads a
+     live edge from three forms: `alias.name(`, the registration tuple
+     `('cold_run_x', 'fn')` (the sequential run's daemons), and the daemon
+     reference `alias.law_x` in a laws list; a bare import never used is
+     not an edge. `none` is licensed in one more place: a CALL from a
+     runner whose declared span is empty (the sequential run registers
+     daemons and compiles no verse — no ink of its own, no rule
+     crossing). Every edge is read at the CELL that consumes the fetched
+     value, never at the import line; a teacher is resolved on the shelf
+     by script before the link is written.
  (2) COLLECT the Mishnah's rows as TEST DATA — input cases with
      expected verdicts, plus the recorded parameter settings. Each
      row's VERSE-ADDRESS comes from the tradition's own index (the
@@ -649,7 +664,15 @@ confirmed process, the sixth added at D9-iv):
      epoch row: a due in years is computed through the Calendar, a
      recurring timer carries a period and re-arms at its fire, and
      the calendar's quantities are rows of the third registry,
-     World/step9/calendar_parameters.yaml — never constants in code).
+     World/step9/calendar_parameters.yaml — never constants in code;
+     and since O6 of the same day, a clause that names an institution's
+     YEAR — "in the jubilee", "in the year of the jubilee" — is a
+     REFERENCE to that institution's verdict: the timer to the year
+     writes the ENTITLEMENT, the act's daemon writes the RELEASE on the
+     fork's arms, and the shelf's "applies only when the jubilee is in
+     effect" (Arakhin 29a:15-17) is the exile's reach, taught — no
+     consecrated field goes out by the date alone; Leviticus 27:21 and
+     27:24 were the case, CLOCK.md section 11).
      The gate and the sweep fifth: the daemon gate
      satisfied (declaration equals parse, every kind registered and
      submitted, every function dispositioned — a function's effects
@@ -2209,7 +2232,51 @@ verdict. Two daemons may consume one act only when each writes ITS OWN
 effect from its own verses (one type under two law layers), and that
 is declared in the registry's tape line, never discovered on the tape.
 An act's party is the ink's — "Aaron and his sons" is one subject in
-Leviticus 8, not a scene's shorthand for one of them. The engine: eras
+Leviticus 8, not a scene's shorthand for one of them. (12) (O5,
+2026-09-07) A FESTIVAL IS A CALENDAR KEY read from Leviticus 23's own
+dates, held in the third registry (calendar_parameters.yaml
+festival_dates, an ink row; the omer's morrow a received row), and a
+scene walks to a festival by clock.next(key) — never by month
+arithmetic of its own; a festival's recurrence ("an everlasting
+statute throughout your generations", 23:14, 21, 31, 41; the week of
+23:3) is a PERIOD timer keyed by the festival and re-armed through the
+Calendar; an act's day is never a scene literal — the daemon reads the
+clock, or the engine's dated day inside a retrograde stretch. A dated
+world declares its epoch (the year of Leviticus 23 and the erection's
+worlds on the exodus epoch), and a date the tradition supplies is a row
+the scene subtracts from (the second ascent = Yom Kippur − 40, the
+take-list = the erection − 7), so the seventeenth of Tammuz and the tenth
+of Tishrei are read off the Calendar, not counted. (13) (O8 S1, 2026-09-08)
+A narrative runner's OWN scene is a bare-world unit test with scene
+days; THE TAPE carries the ink's markers, kept in the stitcher's one
+table and verified against the ink parse there — no second copy of the
+parser, no marker typed twice. (14) ONE ACT, ONE WRITER PER EFFECT holds
+across the story and the law: an older daemon that consumed a kind
+without a seat check gains the check its own span implies when a story
+scene submits that kind elsewhere (the family engine's marriage at
+Genesis 24, the erection's answer at Exodus 24), and the story's daemon
+writes the story's status — the two layers declared in the registry's
+tape line; a statute's own recorded RUN (the eighth-day timer on every
+birth, Genesis 17:12) is not seat-scoped. (15) A PROMISE is a HEAVEN
+entry OPEN until the ink's own fulfillment statement closes it; a close
+that finds nothing because the opening verse is a later sitting's write
+is expected, printed, and counted when that sitting lands. (16) A PLAGUE
+or a DECREE is a HEAVEN or DEBIT entry on the struck or bound party,
+closed by the narrated removal or refusal only — where the ink narrates
+none the entry stays open (four of the ten plagues are removed, six are
+not). (17) THE TRADITION'S DAY-TABLES ARE DATA ROWS with their arms
+(Sivan's days by Rabbi Yose and by the rabbis; the seventh of Adar; the
+ark's day; the sea's twenty-first); the engine's WEEKDAY from the
+creation count (day 0 = day one, day 6 = the first Sabbath) is printed
+AGAINST the shelf's weekday rows as checkpoints — a DIVERGE on the
+anchor is the modeled calendar's, a MATCH on the spacing is the shelf's
+own month lengths reproduced. (18) THE MODELED PLACEMENT OF AN UNDATED
+STRETCH: an age-at-event marker inside an undated stretch walks the
+clock to that year's first day and says so (Exodus 7:7 opens the
+plagues at the first day of Moses' eightieth year); the ink's relative
+stamps then walk from there; the tradition's bound on the stretch
+(Eduyot 2:10's twelve months) is graded as a bound. The design and the
+census: World/step9/NARRATIVE_GAPS.md. The engine: eras
 as counters set by markers, the exodus era at Exodus 12:2, a life era at every birth; the
 creation era's day one five days before its first Tishrei (Vayikra
 Rabbah 29:1 — the stub month). The account:

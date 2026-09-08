@@ -38,6 +38,13 @@ GATE that runs before every cold sweep (run_cold_all.py calls it first):
      A missing disposition FAILS the gate. A CALL without a live import
      edge FAILS. A live import edge dispositioned as anything but CALL
      FAILS (the file must not understate what the code does).
+     A LIVE IMPORT EDGE is read from three forms (edges_of): `alias.name(`
+     on an imported cold_run module; THE REGISTRATION FORM — the module
+     imported and then named as a string in a `('cold_run_x', 'fn')` tuple
+     (the sequential run's DAEMON_ORDER, fetched through sys.modules); and
+     THE DAEMON REFERENCE — `alias.law_x` placed in a world's laws list (the
+     yovel fork's exile daemon; daemons alone are named law_*). O4, 2026-09-07.
+     A bare import never used is not an edge; a constant read alone is not a call form.
   5. Coverage is printed first (a report of zero is worth only the coverage
      line above it), and an ADVISORY list of verses no cell in the runner
      cites (by address) — not gated, since address styles vary, but printed
@@ -68,11 +75,23 @@ GATE that runs before every cold sweep (run_cold_all.py calls it first):
                       passage, or a catalogued move M-nn WITH its exemplar);
        hypothesis   — an untaught transfer, kept and labeled, never counted
                       toward compiled (class H); needs a why;
-       none         — only with FALSE (a homograph has no link);
+       none         — only with FALSE (a homograph has no link), or with a
+                      CALL from a runner whose declared span is EMPTY (the
+                      sequential run's registration edges: no verse compiled,
+                      no ink of its own, no rule crossing — O4, 2026-09-07);
        UNCLASSIFIED — asked, not yet answered: counted, printed by --links
                       (the LR2 worklist), never silent.
      A transfer without a teacher FAILS; an entry without `link:` FAILS
-     ("we need to keep up with these"); `none` off a FALSE FAILS.
+     ("we need to keep up with these"); `none` off a FALSE FAILS unless the
+     runner is span-less.
+  9. EVERY LIVE IMPORT EDGE HAS ITS OWN ENTRY (O4 THE EDGE FILING, 2026-09-07
+     — the debt LR3 named). An edge the token census never required is still
+     the code's: a live edge (r -> h) with no entry (r -> h) FAILS, whatever
+     the census says, and a REVERSE entry on the callee's side (h -> r) files
+     the callee's required edge, never the caller's call. Every CALL entry on
+     file, required or not, must be live. The "live edges beyond the token
+     census" line reports them all on file or fails naming each; `--emit`
+     prints their stubs.
 
 Run: python3 World/step9/dependency_census.py [--emit] [--debt] [--links] [--no-index]
   --emit prints yaml stubs for every undispositioned edge/pointer.
@@ -199,22 +218,27 @@ def verses(db, spans):
                     out.append((r, book, ch, vs, [strip(w) for w in text.split(' ')]))
     return out
 
+def edges_of(src):
+    """The live import edges of one runner's source: an imported cold_run module used as `alias.name(`, or named as a
+    string in a registration tuple `('cold_run_x', 'fn')` (the sequential run's form, O4); `from cold_run_x import`."""
+    edges = set(); imported = {}
+    for m in re.finditer(r'^\s*import (cold_run_\w+)(?: as (\w+))?', src, re.M):
+        imported[m.group(1)] = m.group(2) or m.group(1)
+    for m in re.finditer(r'^\s*import ((?:cold_run_\w+(?: as \w+)?, ?)+cold_run_\w+(?: as \w+)?)', src, re.M):
+        for part in m.group(1).split(','):
+            part = part.strip(); mm = re.match(r'(cold_run_\w+)(?: as (\w+))?', part)
+            if mm: imported[mm.group(1)] = mm.group(2) or mm.group(1)
+    for full, alias in imported.items():
+        if re.search(r'\b' + re.escape(alias) + r'\.\w+\(', src): edges.add(full[9:])
+        elif re.search(r"\(\s*'" + re.escape(full) + r"'\s*,\s*'\w+'\s*\)", src): edges.add(full[9:])   # the registration form
+        elif re.search(r'\b' + re.escape(alias) + r'\.law_\w+\b', src): edges.add(full[9:])   # the daemon reference (alias.law_x in a laws list; daemons alone are named law_*)
+    for m in re.finditer(r'^\s*from (cold_run_\w+) import', src, re.M): edges.add(m.group(1)[9:])
+    return edges
+
 def import_edges():
     E = {}
     for f in sorted(glob.glob(os.path.join(HERE, 'cold_run_*.py'))):
-        src = open(f, encoding='utf-8').read(); me = os.path.basename(f)[9:-3]
-        edges = set()
-        for m in re.finditer(r'^\s*import (cold_run_\w+)(?: as (\w+))?', src, re.M):
-            mod, alias = m.group(1)[9:], m.group(2) or m.group(1)
-            if re.search(r'\b' + re.escape(alias) + r'\.\w+\(', src): edges.add(mod)
-        for m in re.finditer(r'^\s*import ((?:cold_run_\w+(?: as \w+)?, ?)+cold_run_\w+(?: as \w+)?)', src, re.M):
-            for part in m.group(1).split(','):
-                part = part.strip(); mm = re.match(r'(cold_run_\w+)(?: as (\w+))?', part)
-                if mm:
-                    mod, alias = mm.group(1)[9:], mm.group(2) or mm.group(1)
-                    if re.search(r'\b' + re.escape(alias) + r'\.\w+\(', src): edges.add(mod)
-        for m in re.finditer(r'^\s*from (cold_run_\w+) import', src, re.M): edges.add(m.group(1)[9:])
-        E[me] = edges
+        E[os.path.basename(f)[9:-3]] = edges_of(open(f, encoding='utf-8').read())
     return E
 
 def cited_verses(runner):
@@ -231,8 +255,9 @@ def cited_verses(runner):
             for v in range(1, z + 1): cited.add((c2, v))
     return cited
 
-def link_checks(head, x, disp):
-    """Rule 8 on one edge or pointer: the two questions answered in the field, a transfer with its teacher."""
+def link_checks(head, x, disp, spanless=False):
+    """Rule 8 on one edge or pointer: the two questions answered in the field, a transfer with its teacher.
+    `spanless`: the entry's runner declares an empty span (the sequential run) — `none` is licensed on its CALLs (O4)."""
     out = []
     lk = x.get('link')
     if lk is None:
@@ -244,8 +269,8 @@ def link_checks(head, x, disp):
                    'or a catalogued move M-nn with its exemplar (a person does not derive a verbal analogy on his own)' % head)
     if lk == 'hypothesis' and not x.get('why'):
         out.append('%s: link hypothesis without a why (what transfer, and why no teacher)' % head)
-    if lk == 'none' and disp != 'FALSE':
-        out.append('%s: link none on a %s entry — none belongs to FALSE alone' % (head, disp))
+    if lk == 'none' and disp != 'FALSE' and not (disp == 'CALL' and spanless):
+        out.append('%s: link none on a %s entry — none belongs to FALSE alone (or a span-less runner\'s registration CALL)' % (head, disp))
     if lk == 'reference' and not x.get('why'):
         out.append('%s: link reference without a why (which institution the ink names)' % head)
     return out
@@ -312,14 +337,20 @@ def main():
             if e.get('carries') is not None and e['carries'] not in CARRIES:
                 fails.append('EDGE %s -> %s: carries %r is not one of %s' % (r, h, e['carries'], sorted(CARRIES)))
             fails.extend(link_checks('EDGE %s -> %s' % (r, h), e, d))
-    # ---- the link contract on EVERY entry on file (an edge the census no longer requires still answers) ----
-    checked = set()
+    # ---- the link contract on EVERY entry on file (an edge the census no longer requires still answers), and every
+    # CALL entry on file, required or not, must be LIVE (O4: the check had run on required edges only) ----
     for e in edges_y:
         key = (e.get('from'), e.get('to'))
         if key in ed and (key[0] in need and key[1] in need[key[0]]): continue
-        fails.extend(link_checks('EDGE %s -> %s' % key, e, e.get('disposition')))
-    # live edges never required by a token but present: fine (a call beyond the census) — listed
+        fails.extend(link_checks('EDGE %s -> %s' % key, e, e.get('disposition'), spanless=(spans.get(key[0]) == [])))
+        if e.get('disposition') == 'CALL' and key[1] not in E.get(key[0], set()):
+            fails.append('EDGE %s -> %s dispositioned CALL but no live import edge in cold_run_%s.py' % (key[0], key[1], key[0]))
+    # ---- rule 9 (O4, 2026-09-07): live edges never required by a token are still the code's — each has its own entry ----
     extra_live = [(r, h) for r, hs in E.items() for h in hs if r in spans and h not in need.get(r, {})]
+    unfiled_live = sorted((r, h) for r, h in extra_live if (r, h) not in ed)
+    for r, h in unfiled_live:
+        fails.append('LIVE EDGE %s -> %s has NO ENTRY on file — the file understates the code: file it with its link (rule 9)' % (r, h))
+        stubs.append({'from': r, 'to': h, 'disposition': 'CALL', 'link': 'UNCLASSIFIED', 'why': ''})
     for (r, verse, form, ctx) in ptrs:
         p = pd.get((verse, form, r))
         if p is None:
@@ -359,7 +390,9 @@ def main():
             if runs and runs[-1][0] == c and runs[-1][2] == v - 1: runs[-1][2] = v
             else: runs.append([c, v, v])
         print('  %-12s %3d uncited: %s' % (r, len(unc), ', '.join('%d:%d' % (c, a) if a == z else '%d:%d-%d' % (c, a, z) for c, a, z in runs)[:160]))
-    if extra_live: print('live edges beyond the token census (calls the census did not require): %s' % sorted(extra_live))
+    if extra_live:
+        print('live edges beyond the token census (calls the census did not require): %d — %s' % (
+            len(extra_live), ('ALL ON FILE (rule 9)' if not unfiled_live else 'UNFILED %d: %s' % (len(unfiled_live), unfiled_live))))
     if emit and stubs:
         print('\n# ---- yaml stubs for the undispositioned ----')
         print(yaml.safe_dump(stubs, allow_unicode=True, sort_keys=False))

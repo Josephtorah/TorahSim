@@ -12,7 +12,7 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chc(_P, 'grade', 2, 2)
-assert GUARDED == 10, ("the guard counted %d expectations, the tripwire holds 10" % GUARDED)
+assert GUARDED == 13, ("the guard counted %d expectations, the tripwire holds 13" % GUARDED)   # O7 (2026-09-07) X5: the refusal's three cells — measured by the guard, then typed
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys
 
@@ -58,6 +58,14 @@ R.append(grade('the freed slave\'s limbs', 'Kiddushin 24a + Mishnah Negaim 6:7',
     ('the CLASS: all limb-tips that do not regenerate', 'CLASS-24', 'CLASS-24',
      'RECORDED [Kiddushin 24a:6: "granted, a tooth and an eye are WRITTEN..." — the exemplars generalized]; the 24-member list enumerated at Mishnah Negaim 6:7', 'RECORDED'),
 ]))
+R.append(grade('the father\'s refusal (X5, O7 2026-09-07)', 'Mekhilta Nezikin continuation 16; Mishnah Ketubot 3:4-5', [
+    ('the fine stands though the father refuses', 'FINE-STANDS', 'FINE-STANDS',
+     'INK Exod 22:16: "if her father utterly refuses to give her to him, he shall weigh silver like the dowry of the virgins" — the fine is not the marriage\'s', 'INK'),
+    ('the fatherless girl refuses for herself', 'HERSELF-TOO', 'HERSELF-TOO',
+     'RECORDED [Mekhilta d\'Rabbi Yishmael Nezikin continuation 16 1, Rabbi Yose HaGelili: "I have only where she has a father; where she has none? — if he UTTERLY refuses: in any case"]', 'RECORDED'),
+    ('no refusal: to him as a wife — the rapist bound, the seducer free to send her away', 'WIFE-UNLESS-REFUSED', 'WIFE-UNLESS-REFUSED',
+     'INK Exod 22:15 "to be his wife" + ANSWER-KEY [Mishnah Ketubot 3:4-5: the rapist drinks from his vessel; the seducer, if he wishes to send her away, sends]', 'INK'),
+]))
 R.append(grade('the miscarriage valuation', 'Mishnah Bava Kamma 5:4', [
     ('assessment goes THROUGH THE COURT', 'JUDGES', 'JUDGES',
      'INK Exod 21:22: "he shall give by the judges [6414]"', 'INK'),
@@ -84,6 +92,11 @@ def law_mishpatim_2(event, world):
                E_('pays', event['seducer'], cp=event['father'], value='degradation', law='the seducer: TABLE [ANSWER-KEY Mishnah Ketubot 3:4]')]
         if event.get('raped'):
             out.append(E_('pays', event['seducer'], cp=event['father'], value='pain', law='the rapist adds PAIN [ANSWER-KEY Mishnah Ketubot 3:4]'))
+        rb = event.get('refused_by')                                # O7 (2026-09-07) X5: 22:16 the refusal — the fine stands, no wife; 22:15's wife when no one refuses
+        if rb:
+            out[0]['source_law'] += '; X5 [INK 22:16 "if her father utterly refuses to give her to him, he shall weigh silver like the dowry of the virgins" — refused by the %s%s]' % (rb, ' (Mekhilta Nezikin continuation 16 1 — in any case)' if rb == 'herself' else '')
+        else:
+            out.append(E_('wife_taken', event['seducer'], cp=event.get('girl', 'the-virgin'), value='to_him_as_a_wife', law='X5 [INK 22:15 "he shall surely pay the bride-price for her to be his wife" — the rapist drinks from his vessel, the seducer sends her away if he wishes (Mishnah Ketubot 3:4-5)]'))
         return out
     if k == 'slave_maimed':
         if event['limb'] in ('eye', 'tooth') or not event.get('regenerates', True):
@@ -111,15 +124,19 @@ def scene():
         w.advance(3)
         w.submit({'kind': 'pregnant_woman_struck', 'subject': 'the-striker', 'striker': 'the-striker', 'actor_kind': 'person', 'husband': 'her-husband', 'value_before': 200, 'value_after': 150, 'case_source': 'Mishnah Bava Kamma 5:4 — her worth before and after'})
         w.submit({'kind': 'pregnant_woman_struck', 'subject': 'the-ox-owner', 'striker': 'the-ox-owner', 'actor_kind': 'ox', 'husband': 'her-husband', 'value_before': 200, 'value_after': 150, 'case_source': 'Mishnah Bava Kamma 5:4 — the ox that struck her: exempt'})
+        w.advance(4)                                                       # O7 (2026-09-07) X5: the refusal's rows
+        w.submit({'kind': 'virgin_seduced', 'subject': 'the-refused-seducer', 'seducer': 'the-refused-seducer', 'father': 'her-father', 'raped': False, 'refused_by': 'father', 'case_source': 'Exod 22:16 — her father utterly refuses: the fine stands, no wife'})
+        w.submit({'kind': 'virgin_seduced', 'subject': 'the-refused-by-herself', 'seducer': 'the-refused-by-herself', 'father': 'the-orphan-herself', 'raped': False, 'refused_by': 'herself', 'case_source': 'Mekhilta Nezikin continuation 16 1 — the fatherless girl refuses for herself: the fine stands'})
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
     amt = lambda eid, eff: sum(e['amount'] or 0 for e in w.entity(eid).ledger if e['effect'] == eff)
     return (n('the-seducer', 'gives_fixed_sum'), n('the-seducer', 'pays'), n('the-rapist', 'gives_fixed_sum'), n('the-rapist', 'pays'),
             n('the-slave', 'released'), n('the-slave', 'goes_free'), n('the-maidservant', 'released'), n('the-maidservant', 'goes_free'), n('the-second-slave', 'released'),
-            n('the-striker', 'fined_by_assessment'), amt('the-striker', 'fined_by_assessment'), n('the-ox-owner', 'exempt'), n('the-ox-owner', 'fined_by_assessment'), w.clock.day), w
+            n('the-striker', 'fined_by_assessment'), amt('the-striker', 'fined_by_assessment'), n('the-ox-owner', 'exempt'), n('the-ox-owner', 'fined_by_assessment'), w.clock.day,
+            n('the-refused-seducer', 'gives_fixed_sum'), n('the-refused-seducer', 'wife_taken'), n('the-refused-by-herself', 'gives_fixed_sum'), n('the-refused-by-herself', 'wife_taken'), n('the-seducer', 'wife_taken'), n('the-rapist', 'wife_taken')), w   # O7 X5: the six appended slots
 SCENE, _W = scene()
 wrap_cells = [
-    ('THE SCENE on the world engine (the wrap)', SCENE, (1, 2, 1, 3, 1, 1, 1, 1, 0, 1, 50, 1, 0, 3),
-     'RECORDED — the answer sheet\'s rows as the tape: Ketubot 3:4 (the seducer three, the rapist four), Kiddushin 24a (eye, tooth; the regenerating limb no exemplar), Bava Kamma 5:4 (the difference; the ox exempt)', 'RECORDED'),
+    ('THE SCENE on the world engine (the wrap)', SCENE, (1, 2, 1, 3, 1, 1, 1, 1, 0, 1, 50, 1, 0, 4, 1, 0, 1, 0, 1, 1),   # O7 X5 (2026-09-07): predicted by scratchpad o7_predict.py before this literal was typed
+     'RECORDED — the answer sheet\'s rows as the tape: Ketubot 3:4 (the seducer three, the rapist four), Kiddushin 24a (eye, tooth; the regenerating limb no exemplar), Bava Kamma 5:4 (the difference; the ox exempt); X5 the refusal (the fine stands, no wife; the wife where no one refuses)', 'RECORDED'),
 ]
 R.append(grade('THE WRAP — the daemon on the recorded cases', 'Ketubot 3:4 + Kiddushin 24a + Bava Kamma 5:4', wrap_cells))
 print('WATCH COVERAGE (the wrap):')
@@ -128,7 +145,7 @@ print()
 
 ok = sum(a for a, _ in R); n = sum(b for _, b in R)
 print('=' * 60)
-print('PASS 2: %d/%d cells  |  RUNNING TOTAL with passes 1+guardians: %d/44' % (ok, n, 35 + ok))
+print('PASS 2: %d/%d cells (X5 the father\'s refusal added at O7, 2026-09-07)' % (ok, n))
 print('PASS-2 FRACTIONS: INK %d | RECORDED %d | ROUTED/IMPORT %d'
       % (TOTAL['INK'], TOTAL['RECORDED'], TOTAL['ROUTED/IMPORT']))
 
@@ -144,7 +161,10 @@ EFFECTS = [
     ('miscarriage: JUDGES assess',       ['fined_by_assessment']),
     ('miscarriage: DIFF-VALUE algorithm', [FX.NONE]),
     ('miscarriage: PERSON-ONLY (ox actor exempt)', ['exempt']),
-    ('THE SCENE (the wrap)',             ['gives_fixed_sum', 'pays', 'released', 'goes_free', 'fined_by_assessment', 'exempt']),
+    ('refusal: FINE-STANDS',             ['gives_fixed_sum']),
+    ('refusal: HERSELF-TOO',             ['gives_fixed_sum']),
+    ('refusal: WIFE-UNLESS-REFUSED',     ['wife_taken']),
+    ('THE SCENE (the wrap)',             ['gives_fixed_sum', 'pays', 'released', 'goes_free', 'fined_by_assessment', 'exempt', 'wife_taken']),
 ]
 print('\nEFFECTS — the state changes each cell writes:')
 used = []

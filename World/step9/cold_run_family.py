@@ -906,7 +906,7 @@ def inheritance(q):
     if q == 'fish_no_eye':
         return cell(c_vayidgu, I, "'let them multiply like FISH in the midst of the land' (48:16 — the verb's only seat): Bava Batra 118b:2 (opened, with Berakhot 20a, 55b, Sotah 36b, Bava Metzia 84a): as the fish are covered by water and the eye has no power over them, so Joseph's seed — the exemption read in the inheritance sugya of Joseph's tribes' land", ['adopted_as_sons'])
     if q == 'honor_the_aged_by_call':
-        return cell((HB_RISE, HB_HONOR), P, "CALLED cold_run_holiness_b.daughter_sanctuary('rise_reach') -> %r; ('honor_protocol') -> %r [IMPORT, live]: 'and Israel STRENGTHENED HIMSELF and sat up on the bed' (48:2), 'and Joseph BOWED with his face to the earth' (48:12) — the honoring of the aged father (Lev 19:32's rising and honor) in the ink's gestures; the parents' order cell by name (%r)" % (HB_RISE, HB_HONOR, HO_PARENTS), ['honor_owed', 'rise_owed'])
+        return cell((HB_RISE, HB_HONOR), H, "CALLED cold_run_holiness_b.daughter_sanctuary('rise_reach') -> %r; ('honor_protocol') -> %r [IMPORT, live]: 'and Israel STRENGTHENED HIMSELF and sat up on the bed' (48:2), 'and Joseph BOWED with his face to the earth' (48:12) — the honoring of the aged father (Lev 19:32's rising and honor) in the ink's gestures; the parents' order cell by name (%r) | H (O4, 2026-09-07): 48:2's sitting up and 48:12's bow read under Lev 19:32's rising and honor by topic — no teacher joins the gestures to 19:32 (Midrash Tanchuma Vayechi 6 5 reads 48:2 the other way: the father honoring the son's KINGSHIP); the edge family -> holiness_b is a hypothesis; the value stands, the provenance is H" % (HB_RISE, HB_HONOR, HO_PARENTS), ['honor_owed', 'rise_owed'])
     if q == 'inheritance_order_owed':
         return cell(c_ben_ein_lo, I, "Mishnah Bava Batra 8:2 quotes Num 27:8 ('if a man dies and HAS NO SON, you shall pass his inheritance to his daughter') for the order — the same clause as the levirate's (Deut 25:5): the estate's ladder is a Numbers seat OWED forward in the dependency file; the Genesis seat of the son's line is the adoption (48:5-6)", ['adopted_as_sons'])
     if q == 'zelophehad_three':
@@ -992,7 +992,7 @@ def testament(q):
     if q == 'interest_bite':
         return cell(c_neshekh_torah, I, "'the BITE' of interest at %s — Exod 22:24, Lev 25:36 (the jubilee engine's interest noun), Deut 23:20; Num 21:9 'the bitten' by the serpent: 49:17's 'that bites the horse's heels' is the serpent's verb the interest noun is named after — the metaphor the census dispositioned by name" % (c_neshekh_torah,), [FX.NONE])
     if q == 'parents_order_by_call':
-        return cell(HO_PARENTS, P, "CALLED cold_run_holiness.frame('parents_order') -> %r [IMPORT, live]: 'gather and listen, sons of Jacob, and listen to ISRAEL YOUR FATHER' (49:2) — the father's honor at the testament's summons; the holiness engine's equality of the two parents from the reversed orders (Lev 19:3 / Exod 20:12)" % HO_PARENTS, ['honor_owed'])
+        return cell(HO_PARENTS, H, "CALLED cold_run_holiness.frame('parents_order') -> %r [IMPORT, live]: 'gather and listen, sons of Jacob, and listen to ISRAEL YOUR FATHER' (49:2) — the father's honor at the testament's summons; the holiness engine's equality of the two parents from the reversed orders (Lev 19:3 / Exod 20:12) | H (O4, 2026-09-07): Gen 49:2's 'your FATHER' read under the parents' honor (Lev 19:3 / Exod 20:12) on the word alone — no teacher joins the summons to the honor law (Bereshit Rabbah 98:3 reads the clause as the God of Israel, as God the father of worlds, and as the Shema's origin); the edge family -> holiness is a hypothesis; the value stands, the provenance is H" % HO_PARENTS, ['honor_owed'])
     return cell('no_case', I, '', [FX.NONE])
 
 # ---- F7: THE SCENE — the house of Abraham's purchase, the match, the sinew, Judah's house, and Jacob's testament on the world engine
@@ -1009,7 +1009,7 @@ def law_family(event, world):
     if k == 'gifts_given': return [E_('gifts_given', subj, cp=event['by'])]
     if k == 'consented': return [E_('consent_given', subj)]
     if k == 'handed': return [E_('handed_to_the_agent', subj, cp=event['agent'])]
-    if k == 'married': return [E_('wife_taken', subj, cp=event['husband']), E_('comforted', event['husband'])]
+    if k == 'married': return [E_('wife_taken', subj, cp=event['husband']), E_('comforted', event['husband'])] if WE.seat(src) == ('Gen', 24) else []   # O8 S1 (2026-09-08): this daemon's seat Gen 24:67 (the comfort clause is 24:67's own); Exod 2:1 and 2:21 are the story engine's (rule 11 enforced: one act, one writer)
     if k == 'sinew_barred': return [E_('sinew_barred', subj)]
     if k == 'renamed': return [E_('name_changed', subj, value=event['name'])] if WE.seat(src) == ('Gen', 32) else []   # O2 (2026-09-07): this daemon's seat 32:29; Abraham's and Sarah's (Gen 17) are the pre-Sinai engine's
     if k == 'levirate_commanded': return [E_('levirate_owed', subj, cp=event['widow'])]

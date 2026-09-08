@@ -156,10 +156,86 @@ parameters:
     source: "Taanit 30b:8 — 'Yom Kippur, because it has pardon and forgiveness, the day on which the last tablets were given' (יום שניתנו בו לוחות האחרונות); Bava Batra 121a:6 the same row (לוחות אחרונות). The month and day are the exodus era's (Nisan the first): the tenth of the seventh month, Lev 23:27 (ink). THE ASCENT'S DAY = this day − 40: Exod 34:28 'forty days and forty nights' (ink) — the timer's own arithmetic, the same shape as Lev 8:2 = the erection − 7"
     teacher: "Taanit 30b:8; Bava Batra 121a:6"
     open: "the tradition's own date of the second ascent (the first of Elul — Seder Olam, Pirkei deRabbi Eliezer) is NOT on the local Babylonian shelf (searched: 'the new moon of Elul', no row); the machine's computed date of the ascent is printed as a remark, never a checkpoint. The intercession's forty days between the breaking's morrow (Exod 32:30, ink) and this ascent are Deuteronomy's (9:18) — owed to that book"
-    exercised_by: [sequence]
+    exercised_by: [sequence, erection]
+  # O5 THE MOADIM RE-TYPE (2026-09-07; CLOCK.md section 10): the appointed times as CALENDAR KEYS from Lev 23's own dates —
+  # keyed by the convocation names the moadim scene submits, so an event's `day` value is the key; the Calendar reads them
+  # beside its six standing keys, and a scene walks to a festival by clock.next(key), never by month arithmetic of its own
+  festival_dates:
+    value:
+      passover: {month: 1, day: 14}
+      passover_1: {month: 1, day: 15}
+      passover_7: {from: passover_1, plus: 6}
+      atzeret: {from: omer, plus: 49}
+      rosh_hashanah: {month: 7, day: 1}
+      yom_kippur: {month: 7, day: 10}
+      sukkot_1: {month: 7, day: 15}
+      shemini: {from: sukkot_1, plus: 7}
+      sabbath: {key: week}
+    channel: ink
+    source: "Lev 23:5 'in the first month, on the fourteenth of the month, between the evenings, a Passover to the LORD' (passover); 23:6 'on the fifteenth day of this month the feast of unleavened bread' with 23:7 'on the first day a holy convocation' (passover_1); 23:8 'on the seventh day a holy convocation' — the seventh of 23:6's seven days (passover_7 = passover_1 + 6); 23:15-16 'from the morrow of the Sabbath... seven complete weeks... until the morrow of the seventh Sabbath you shall count FIFTY days' — the omer day counted first, the fiftieth sanctified (atzeret = omer + 49; the omer's own day is the row omer_day); 23:24 'in the seventh month, on the first of the month' (rosh_hashanah); 23:27 'on the tenth of this seventh month' (yom_kippur); 23:34 'on the fifteenth day of this seventh month' (sukkot_1); 23:36 'on the eighth day a holy convocation... an assembly' (shemini = sukkot_1 + 7); 23:3 'six days shall work be done and on the seventh day a Sabbath of solemn rest' (sabbath = the Calendar's week). The months in the calendar's own numbering — Exod 12:2 'this month is for you the head of months' (Nisan the first)"
+    teacher: null
+    exercised_by: [moadim]
+  omer_day:
+    value: {month: 1, day: 16}
+    channel: received
+    source: "Lev 23:11 'on the morrow of the SABBATH the priest shall wave it' (ממחרת השבת) READ as the morrow of the FESTIVAL — the sixteenth of the first month: Sifra Emor Chapter 12 (the four routes); Menachot 65a-66a (the Sages against the Boethusians); the runner's morrow_reading cell graded on Mishnah Chagigah 2:4 (Atzeret can fall beside the Sabbath — so the morrow is the festival's)"
+    teacher: "Sifra Emor Chapter 12; Menachot 65a-66a"
+    settings: {sages: {month: 1, day: 16}, boethusians: "the Sunday after the Sabbath of the festival week — the refused reading (Menachot 65a), UNEXERCISED"}
+    exercised_by: [moadim]
 
 # THE ERA TABLE (consensus point D as amended at round two: data now; a code path only where a tape exercises
 # the row). A world declares its epoch by the row's key; a world with no epoch has no derived year (None).
+  # ---- O8 S1 THE EXODUS STORY (2026-09-08; NARRATIVE_GAPS.md section 4f): the shelf's day-tables as data rows with their arms ----
+  moses_birth_date:
+    value: {month: 12, day: 7}
+    channel: received
+    source: "Kiddushin 38a:5-7 — 'on the seventh of Adar Moses died and on the seventh of Adar he was born' (בשבעה באדר מת ובשבעה באדר נולד משה); 38a:7 the derivation from Deut 31:2 'a hundred and twenty years old I am TODAY' (the Holy One fills the years of the righteous from day to day). The month is the calendar's own twelfth (Adar — in a thirteen-month year the modeled first Adar, labeled); the YEAR from Exod 7:7 'Moses a son of eighty years at their speaking' (ink) — the exodus year less eighty; the birth's day within its year by the shelf's row (SEQUENTIAL_RUN.md section 9 convention 9)"
+    teacher: "Kiddushin 38a:7"
+    exercised_by: [sequence]
+  ark_day:
+    value: {month: 3, day: 6}
+    channel: received
+    source: "Sotah 12b:16 — Rabbi Acha bar Chanina: 'that day was the sixth of Sivan' (ששה בסיון), the day the ark was set in the reeds; 12b:17 the arithmetic: 'from the seventh of Adar to the sixth of Sivan is three months' — Exod 2:2's 'she hid him three months' (ink) run from the birth row. GRADED, never a marker: the engine computes the ark's day from the birth by the ink's three months (the sequence runner CS0) and prints the shelf's day beside it"
+    teacher: "Sotah 12b:17"
+    settings: {r_acha_bar_chanina: {month: 3, day: 6}, r_chanina_bar_papa: {month: 1, day: 21}}
+    open: "Rabbi Chanina bar Papa's arm — 'the twenty-first of Nisan' (12b:15: the day he would sing at the sea); 12b:17 asks how three months fit it (the count from the retaking, Sotah 12a:18) — the setting recorded, UNEXERCISED"
+    exercised_by: [sequence]
+  sinai_days:
+    value: {second_ascent: 2, boundary: 3, separation: 4, giving: 7}
+    channel: received
+    source: "Shabbat 86b:5-87a:1 — the days of Sivan by Rabbi Yose (the new moon on a Sunday: on the first nothing, for the weariness of the road; on the second 'you shall be to Me a kingdom of priests'; on the third the boundary; on the fourth the separation) and by the rabbis (the new moon on a Monday: on the second nothing; on the third 'you shall be to Me'; on the fourth the boundary; on the fifth the separation); 86b:5 'on the sixth of the month the ten utterances were given — Rabbi Yose says on the seventh'; 87a:2-3 Rabbi Yose: Moses added one day of his own accord ('today and tomorrow — today like tomorrow, with its night'); 87a:6 'the third — the third of the month and the third of the week'. The running setting is Rabbi Yose's — the tape's standing ascent marker (Exod 24:18 at the seventh, Taanit 28b) is his"
+    teacher: "Shabbat 86b:5; Shabbat 87a:1-3"
+    settings: {r_yose: {second_ascent: 2, boundary: 3, separation: 4, giving: 7}, rabbis: {second_ascent: 3, boundary: 4, separation: 5, giving: 6}}
+    open: "the rabbis' arm (the giving on the sixth) — recorded, UNEXERCISED; the ink's own count from 19:10's 'today and tomorrow ... the third day' is two days, the seventh needs the added day"
+    exercised_by: [sequence]
+  exodus_weekday:
+    value: 5
+    channel: received
+    source: "Shabbat 87b:2-3 — 'the Nisan in which Israel went out of Egypt: on the fourteenth they slaughtered their Passovers, on the fifteenth they went out, and that day was a Thursday' (ואותו היום חמישי בשבת היה); the arithmetic follows: the new moon of Iyar a Sabbath, the new moon of Sivan a Sunday (87b:2); 87b:5 (Rav Pappa): the fifteenth of Iyar a Sabbath — 'and in the morning you shall see' (Exod 16:7), 'six days you shall gather it' (16:26); the Mekhilta Vayassa ch.1 row 1 the same table. The weekday is counted 1 = Sunday (the first day of the week, Gen 1:5) ... 7 = the Sabbath. A DATA ROW FOR THE CHECKPOINTS ONLY: the engine's weekday is the creation count's (day 0 = day one; day % 7), the sequence runner CS1/CS2/CS4 grade the shelf's rows against it"
+    teacher: "Shabbat 87b:2"
+    exercised_by: [sequence]
+  iyar_length:
+    value: 29
+    channel: received
+    source: "Shabbat 87b:3-4 — the rabbis: 'Iyar of that year was made full' (thirty days: אייר דההיא שתא עבורי עברוה) so that the sixth of Sivan falls on the Sabbath; Rabbi Yose: Nisan full and Iyar deficient (twenty-nine: השלים ניסן ... חסר אייר), the seventh of Sivan the Sabbath. The modeled alternation (month_rounding alternate_30_29 from Nisan) gives Rabbi Yose's lengths — the running setting; the rabbis' arm the other setting"
+    teacher: "Shabbat 87b:3"
+    settings: {r_yose: 29, rabbis: 30}
+    open: "the rabbis' arm (Iyar full) — recorded, UNEXERCISED (it would move every date after the first of Sivan by a day)"
+    exercised_by: [sequence]
+  sea_split_date:
+    value: {month: 1, day: 21}
+    channel: received
+    source: "Sotah 12b:15 — Rabbi Chanina bar Papa on the ark's day: 'the twenty-first of Nisan — the ministering angels said: the one who will sing the song at the sea ON THIS DAY shall be struck on this day?' — the sea's splitting on the twenty-first of the first month (the seventh day of the feast, Exod 12:16's convocation); the day within the exodus year by the shelf's row (convention 9); the ink gives the sea no date between 12:41 and 15:22"
+    teacher: "Sotah 12b:15"
+    exercised_by: [sequence]
+  jethro_timing:
+    value: before
+    channel: received
+    source: "Zevachim 116a:20-21 — 'the sons of Rabbi Chiya and Rabbi Yehoshua ben Levi: one said Jethro came before the giving of the Torah, one said after'; 116a:21 as the tannaim: 'what report did he hear and come? the war of Amalek — Rabbi Yehoshua, for it is written beside it (Exod 17:13)'; Rabbi Elazar HaModai: the giving of the Torah; Rabbi Eliezer: the splitting of the sea (116a:26); the Mekhilta Yitro ch.1 row 1 the same three. The running setting is the ink's order (before — Exodus 18 stands before 19); the after-arm would move the sacrifice (18:12) and the judges (18:25) past the covenant (Exod 24) — OPEN-9 of NARRATIVE_GAPS.md: recorded as a setting, not run as a world (a placement with no day)"
+    teacher: "Zevachim 116a:20"
+    settings: {before: before, after: after}
+    open: "the after-arm — Rabbi Elazar HaModai (Zevachim 116a:21; the Mekhilta Yitro ch.1 row 1): UNEXERCISED"
+    exercised_by: [sequence]
 eras:
   count:
     new_year_month: 7
@@ -167,8 +243,8 @@ eras:
     exercised_by: [calendar, holiness_b, tochacha, yovel, mishpatim, the skeleton's own scenes]
   exodus:
     new_year_month: 1
-    epoch: "day 0 = the first day of the first month of year 1 — Exod 12:2; Exod 40:17 'in the first month of the second year'; Num 1:1; Rosh Hashanah 3a:5 (40:17's Nisan and Num 10:11's Iyar both 'the second year': the new year for the exodus count is Nisan). ON THE SEQUENTIAL TAPE (2026-09-07) the era is SET BY THE MARKER at Exod 12:2 on the one world's clock (an era view: epoch day + new-year month over the one month table)"
-    exercised_by: [sequence]
+    epoch: "day 0 = the first day of the first month of year 1 — Exod 12:2; Exod 40:17 'in the first month of the second year'; Num 1:1; Rosh Hashanah 3a:5 (40:17's Nisan and Num 10:11's Iyar both 'the second year': the new year for the exodus count is Nisan). ON THE SEQUENTIAL TAPE (2026-09-07) the era is SET BY THE MARKER at Exod 12:2 on the one world's clock (an era view: epoch day + new-year month over the one month table). O5 (2026-09-07): the moadim runner's world and the erection runner's two dated worlds declare this epoch — the year of Lev 23 from 1 Nisan; the erection at day_of(2, 1, 1), the take-list seven days before it; Sinai at 1 Sivan of year 1, the second ascent by the row second_tablets_given"
+    exercised_by: [sequence, moadim, erection]
   life_years:
     new_year_month: null
     epoch: "a person's birth; the year turns on the birthday — Gen 7:11 'in the six hundredth year of Noah's life'; the reading of 'the Nth year' is the row life_year_reading. ON THE SEQUENTIAL TAPE (2026-09-07) every begetting marker sets one (life:<entity>), the flood's date found inside Noah's 600th year"

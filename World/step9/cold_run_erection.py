@@ -1236,6 +1236,7 @@ def law_erection(event, world):
     if k == 'elders_ascended':
         return [E_('majority_decides', event.get('court', 'the-court'), value=blood_covenant('unnamed_elders')['v'], law='F4 [INK 24:1, 24:9 "seventy of the elders of Israel" unnamed — Mishnah Rosh Hashanah 2:9: every three who stand as a court over Israel are as the court of Moses; the seventy at %s]' % (blood_covenant('seventy')['v'],))]
     if k == 'people_answered':
+        if WE.seat(src) != ('Exod', 24): return []   # O8 S1 (2026-09-08): this daemon's seats 24:3, 24:7; the first answer at 19:8 is the story engine's (rule 11 enforced: one act, one writer per effect)
         out = [E_('entered_the_covenant', event.get('people', subj), cp='HEAVEN', value=blood_covenant('one_voice')['v'], law='F4 [INK 24:3 "all the people answered with ONE VOICE... we will do"; 24:7 "we will do and we will hear" — the acceptance formula]')]
         if event.get('book_read'):
             out.append(E_('oral_law_unwritten', event.get('people', subj), value=blood_covenant('book_of_covenant')['v'], law='F4 [INK 24:7 "the BOOK of the covenant" read in the ears of the people — the written channel\'s run (Josiah\'s reading, 2 Kgs 23:2)]'))
@@ -1319,22 +1320,23 @@ def law_erection(event, world):
 
 def scene():
     with contextlib.redirect_stdout(io.StringIO()):
-        w = WE.World(era='the installation week into the erection (clock unit: days)')
+        w = WE.World(era='the installation week into the erection (the exodus epoch: the take-list seven days before the first of Nisan of the second year, Exod 40:17)', epoch='exodus')
         w.laws = [WE.law_installation, law_erection]
+        w.advance(w.clock.calendar.day_of(2, 1, 1) - 7)   # O5 (2026-09-07): the take-list SEVEN DAYS before the erection (Lev 8:33's seven, 9:1's eighth) — the twenty-third of Adar of year 1 by the Calendar
         w.submit({'kind': 'installation_commanded', 'subject': 'aaron-and-sons', 'components': ['bullock', 'ram_olah', 'ram_milluim', 'basket'], 'case_source': 'Lev 8:2'})
         w.submit({'kind': 'milluim_blood_sprinkled', 'subject': 'aaron-and-sons', 'case_source': 'Lev 8:30'})
-        w.advance(7)                     # the seven days pass; the release fires — the first of Nisan opens (D8's dating by call)
+        w.advance(w.clock.calendar.day_of(2, 1, 1))       # the seven days pass; the release fires — the first of Nisan of the second year (Exod 40:17)
         for k, s, src in (('erected', 'the-tabernacle', 'Exod 40:17-18'), ('testimony_placed', 'the-ark', 'Exod 40:20'), ('veil_hung', 'the-veil', 'Exod 40:21'),
                           ('bread_arranged', 'the-table', 'Exod 40:23'), ('lamps_raised', 'the-lampstand', 'Exod 40:25'), ('incense_burned', 'the-golden-altar', 'Exod 40:27'),
                           ('tamid_offered', 'moses', 'Exod 40:29'), ('hands_feet_washed', 'moses', 'Exod 40:31-32'), ('work_finished', 'moses', 'Exod 40:33'),
                           ('glory_filled', 'the-tabernacle', 'Exod 40:34'), ('could_not_enter', 'moses', 'Exod 40:35'), ('called_from_the_tent', 'moses', 'Lev 1:1'),
                           ('cloud_lifted', 'the-camp', 'Exod 40:36 / Num 10:11')):
             w.submit({'kind': k, 'subject': s, 'case_source': src, 'law': '14'})
-        w.advance(13)                    # to day 13 (absolute): the next morning's timers fire at day 8, the first Sabbath's bread at day 13
+        w.advance(w.clock.calendar.day_of(2, 1, 7))       # to the seventh of Nisan: the next morning's timers fire the day after the erection, the first Sabbath's bread six days on
         # W7 (2026-09-07): THE SINAI NARRATIVE LAWS — their own world on law_erection (clock unit: days; day 7 = the seventh day of 24:16, the ascent)
-        ws = WE.World(era="the Sinai narrative's laws — Exod 24, 32-34 on the engine: the blood covenant, the ascent's forty days, the calf, the presence, the second tablets (clock unit: days)")
+        ws = WE.World(era="the Sinai narrative's laws — Exod 24, 32-34 on the engine: the blood covenant, the ascent's forty days, the calf, the presence, the second tablets (the exodus epoch: the first of Sivan of year 1, Shabbat 86b:5)", epoch='exodus')
         ws.laws = [law_erection]
-        ws.advance(1)
+        ws.advance(ws.clock.calendar.day_of(1, 3, 1))      # the first of the third month — Sinai (Shabbat 86b:5, as the sequential run dates it)
         ws.submit({'kind': 'elders_ascended', 'subject': 'the-court', 'court': 'the-court', 'members': 'moses-aaron-nadab-abihu-and-the-seventy', 'case_source': 'Exod 24:1, 24:9 + Mishnah Rosh Hashanah 2:9 — the unnamed elders', 'law': 'W7'})
         ws.submit({'kind': 'people_answered', 'subject': 'the-people', 'people': 'the-people', 'book_read': False, 'case_source': 'Exod 24:3 — with one voice: we will do', 'law': 'W7'})
         ws.submit({'kind': 'people_answered', 'subject': 'the-people', 'people': 'the-people', 'book_read': True, 'case_source': 'Exod 24:7 — the book of the covenant read: we will do and we will hear', 'law': 'W7'})
@@ -1342,9 +1344,9 @@ def scene():
         ws.submit({'kind': 'covenant_blood_thrown', 'subject': 'the-people', 'entrant': 'the-people', 'entrant_class': 'israel', 'circumcised': True, 'immersed_first': True, 'blood_sprinkled': True, 'case_source': 'Exod 24:6-8 — the blood of the covenant; Onkelos 24:8', 'law': 'W7'})
         ws.submit({'kind': 'covenant_blood_thrown', 'subject': 'the-convert', 'entrant': 'the-convert', 'entrant_class': 'convert', 'circumcised': True, 'immersed_first': True, 'blood_sprinkled': True, 'case_source': 'Keritot 9a:9 + Mishnah Keritot 2:1 — the convert\'s rite on this paragraph', 'law': 'W7'})
         ws.submit({'kind': 'case_brought_to_deputies', 'subject': 'the-claimant', 'claimant': 'the-claimant', 'defendant': 'the-defendant', 'court': 'aaron-and-hur', 'case_source': 'Exod 24:14 + Bava Kamma 46b:5 — whoever has a case', 'law': 'W7'})
-        ws.advance(7)                    # 24:16: the cloud six days, the call on the seventh
-        ws.submit({'kind': 'moses_ascended', 'subject': 'moses', 'ascender': 'moses', 'ascent': 'first', 'day': 7, 'case_source': 'Exod 24:18 — forty days and forty nights; the tablets at 31:18', 'law': 'W7'})
-        ws.advance(47)                   # the forty days: the first tablets fire on day 47 = the seventeenth of Tammuz (Taanit 28b: Sivan 7 + 40)
+        ws.advance(ws.clock.calendar.day_of(1, 3, 7))      # 24:16: the cloud six days, the call on the seventh — the seventh of Sivan
+        ws.submit({'kind': 'moses_ascended', 'subject': 'moses', 'ascender': 'moses', 'ascent': 'first', 'case_source': 'Exod 24:18 — forty days and forty nights; the tablets at 31:18', 'law': 'W7'})
+        ws.advance(ws.clock.calendar.day_of(1, 3, 7) + 40) # the forty days (24:18): the first tablets fire — the seventeenth of Tammuz BY THE CALENDAR (Taanit 28b: Sivan 7 + 40)
         ws.submit({'kind': 'calf_made', 'subject': 'aaron', 'maker': 'aaron', 'worshipped': False, 'case_source': 'Exod 32:4 — the molten calf made (not yet worshipped)', 'law': 'W7'})
         ws.submit({'kind': 'calf_made', 'subject': 'the-people', 'maker': 'the-people', 'worshipped': True, 'case_source': 'Mishnah Avodah Zarah 4:4 — an Israelite\'s idol forbidden once worshipped (32:6, 32:8)', 'law': 'W7'})
         ws.submit({'kind': 'bowed_to_another_god', 'subject': 'the-idolater', 'worshipper': 'the-idolater', 'service': 'both', 'evidence': None, 'court_ruled_exempt': False, 'case_source': 'Exod 32:8 + Mishnah Sanhedrin 7:6 — bowed and sacrificed: the idolater\'s row', 'law': 'W7'})
@@ -1353,15 +1355,15 @@ def scene():
         ws.submit({'kind': 'bowed_to_another_god', 'subject': 'the-unwitnessed', 'worshipper': 'the-unwitnessed', 'service': 'both', 'evidence': 'neither', 'court_ruled_exempt': False, 'case_source': 'Yoma 66b:14 — neither: the dropsy (32:20)', 'law': 'W7'})
         ws.submit({'kind': 'bowed_to_another_god', 'subject': 'the-erring-court', 'worshipper': 'the-bower', 'service': 'bow', 'evidence': None, 'court_ruled_exempt': True, 'court': 'the-erring-court', 'case_source': 'Mishnah Horayot 1:3 — the court that exempted the bower', 'law': 'W7'})
         ws.submit({'kind': 'moses_interceded', 'subject': 'moses', 'intercessor': 'moses', 'plea': 'relent', 'sin_specified': False, 'case_source': 'Exod 32:11-14 — vayechal; the LORD relented; Berakhot 32a', 'law': 'W7'})
-        ws.submit({'kind': 'tablets_broken', 'subject': 'moses', 'breaker': 'moses', 'day': 47, 'case_source': 'Exod 32:19 — under the mountain, the seventeenth of Tammuz (Mishnah Taanit 4:6)', 'law': 'W7'})
+        ws.submit({'kind': 'tablets_broken', 'subject': 'moses', 'breaker': 'moses', 'case_source': 'Exod 32:19 — under the mountain, the seventeenth of Tammuz (Mishnah Taanit 4:6)', 'law': 'W7'})
         ws.submit({'kind': 'calf_destroyed', 'subject': 'moses', 'destroyer': 'moses', 'idol': 'the-calf', 'purpose': 'to_test', 'case_source': 'Exod 32:20 + Avodah Zarah 44a:2 — the four verbs; a test, not a nullification', 'law': 'W7'})
         ws.submit({'kind': 'levites_gathered', 'subject': 'the-levites', 'tribe': 'the-levites', 'slain': 'the-three-thousand', 'gathered_by': 'moses', 'case_source': 'Exod 32:26-29 + Yoma 66b:15 — whoever is for the LORD; fill your hand', 'law': 'W7'})
         ws.submit({'kind': 'moses_interceded', 'subject': 'moses', 'intercessor': 'moses', 'plea': 'blot_me', 'sin_specified': True, 'sinners': 'the-sinners', 'case_source': 'Exod 32:31-33 + Yoma 86b:14 + Rosh Hashanah 16b:14 — blot me; him I will blot', 'law': 'W7'})
         ws.submit({'kind': 'tent_pitched_outside', 'subject': 'moses', 'pitcher': 'moses', 'servant': 'joshua', 'distance_from_camp': 'twelve_mil', 'case_source': 'Exod 33:7-11 + Mishnah Avot 1:1 + Sanhedrin 5b:9 — the tent, the seeker, Joshua', 'law': 'W7'})
         ws.submit({'kind': 'ascent_barred', 'subject': 'the-man', 'person': 'the-man', 'presence_resting': True, 'case_source': 'Exod 34:3 + Taanit 21b:4 — while the Presence rests', 'law': 'W7'})
         ws.submit({'kind': 'ascent_barred', 'subject': 'the-later-climber', 'person': 'the-later-climber', 'presence_resting': False, 'case_source': 'Taanit 21b:4 — when it departed, they may go up (19:13)', 'law': 'W7'})
-        ws.advance(48)                   # this test world counts relative days only; ON THE SEQUENTIAL TAPE the second ascent is dated by the shelf — the last tablets given on Yom Kippur (Taanit 30b:8, Bava Batra 121a:6), the ascent forty days before (O1, 2026-09-07; calendar_parameters.yaml second_tablets_given)
-        ws.submit({'kind': 'moses_ascended', 'subject': 'moses', 'ascender': 'moses', 'ascent': 'second', 'day': 48, 'case_source': 'Exod 34:2-4, 34:28 — the second forty days; the radiant face at 34:29', 'law': 'W7'})
+        ws.advance(ws.clock.calendar.day_of(1, 7, 10) - 40) # O5 (2026-09-07): THE SECOND ASCENT BY THE ROW — forty days (34:28) before the last tablets given on Yom Kippur (Taanit 30b:8, Bava Batra 121a:6; calendar_parameters.yaml second_tablets_given), as the sequential tape dates it
+        ws.submit({'kind': 'moses_ascended', 'subject': 'moses', 'ascender': 'moses', 'ascent': 'second', 'case_source': 'Exod 34:2-4, 34:28 — the second forty days; the radiant face at 34:29', 'law': 'W7'})
         ws.submit({'kind': 'attributes_proclaimed_at_sinai', 'subject': 'the-repentant', 'hearer': 'the-repentant', 'repented': True, 'sin_kind': 'other', 'case_source': 'Exod 34:6-7 + Yoma 86a:5 — He clears those who repent', 'law': 'W7'})
         ws.submit({'kind': 'attributes_proclaimed_at_sinai', 'subject': 'the-unrepentant', 'hearer': 'the-unrepentant', 'repented': False, 'sin_kind': 'other', 'case_source': 'Yoma 86a:5 — and does not clear those who do not', 'law': 'W7'})
         ws.submit({'kind': 'attributes_proclaimed_at_sinai', 'subject': 'the-vain-swearer', 'hearer': 'the-vain-swearer', 'repented': True, 'sin_kind': 'vain_oath', 'case_source': 'Yoma 86a:3 — His name He does not clear (20:7)', 'law': 'W7'})
@@ -1370,7 +1372,7 @@ def scene():
         ws.submit({'kind': 'sacrifice_of_inhabitant_eaten', 'subject': 'the-invited', 'eater': 'the-invited', 'invited_by': 'the-inhabitant', 'ate_own_food': True, 'case_source': 'Exod 34:15 + Avodah Zarah 8a:17 — the invitation is the eating', 'law': 'W7'})
         ws.submit({'kind': 'daughters_taken', 'subject': 'the-taker', 'taker': 'the-taker', 'nation': 'seven', 'case_source': 'Exod 34:16 + Avodah Zarah 36b:9 — the seven nations by Torah', 'law': 'W7'})
         ws.submit({'kind': 'daughters_taken', 'subject': 'the-other-taker', 'taker': 'the-other-taker', 'nation': 'other', 'case_source': 'Avodah Zarah 36b:9 — the rest by the decree of the court of Shammai and Hillel', 'law': 'W7'})
-        ws.advance(88)                   # the second forty days: the second tablets and the radiant face fire on day 88
+        ws.advance(ws.clock.calendar.day_of(1, 7, 10))     # Yom Kippur: the second tablets and the radiant face fire
         # W6 (2026-09-07): THE CRAFTSMEN AND THE DONATION — their own world on law_erection (clock unit: days)
         wd = WE.World(era="the craftsmen called and the donation brought — Exod 31:1-11, 35:4-29 on the engine (clock unit: days)")
         wd.laws = [law_erection]
@@ -1394,13 +1396,14 @@ def scene_counts_w6(wd):
     ne = lambda eff: sum(1 for ent in wd.entities.values() for e in ent.ledger if e['effect'] == eff)
     return (ne('appointed_by_name'), ne('spirit_filled'), ne('given_by_the_heart'), len([l for l in wd.log if l[0] == 'EVENT']), wd.clock.day)
 def scene_counts_w7(ws):
-    """W7 — the Sinai narrative's laws: the effect counts over the whole world, the timers, the day the first tablets fired (the seventeenth of Tammuz), the events, the clock"""
+    """W7 — the Sinai narrative's laws: the effect counts over the whole world, the timers, the day the first tablets fired, the events, the clock, and (O5) the CALENDAR DATES of the first fire and the last — the seventeenth of Tammuz and the tenth of Tishrei computed, not counted"""
     ne = lambda eff: sum(1 for ent in ws.entities.values() for e in ent.ledger if e['effect'] == eff)
     fires = [l[1] for l in ws.log if l[0] == 'TIMER-FIRE']
     return (ne('majority_decides'), ne('entered_the_covenant'), ne('oral_law_unwritten'), ne('accepted'), ne('invested_office'), ne('atoned_forgiven'), ne('immersed'),
             ne('tablets_delivered'), ne('face_radiant'), ne('molten_image_barred'), ne('barred_from_it'), ne('stoned'), ne('slain_by_sword'), ne('plague_struck'), ne('made_to_drink'), ne('bears_sin'),
             ne('decree_relented'), ne('confessed'), ne('blotted_from_the_book'), ne('ground_and_scattered'), ne('attributes_proclaimed'), ne('covenant_cut'), ne('nations_driven_out'), ne('covenant_barred'), ne('demolished'), ne('intermarriage_barred'),
-            len([l for l in ws.log if l[0] == 'TIMER-SET']), len(fires), (fires[0] if fires else None), len([l for l in ws.log if l[0] == 'EVENT']), ws.clock.day)
+            len([l for l in ws.log if l[0] == 'TIMER-SET']), len(fires), (fires[0] if fires else None), len([l for l in ws.log if l[0] == 'EVENT']), ws.clock.day,
+            ws.clock.calendar.date(fires[0]) if fires else None, ws.clock.calendar.date(fires[-1]) if fires else None)
 SCENE, SCENE_W6, SCENE_W7, _W, _WD, _WS = scene()
 def build(q):
     if q == 'world':
@@ -1408,7 +1411,7 @@ def build(q):
     if q == 'world_w6':
         return cell(SCENE_W6, A, "THE W6 SCENE on the world engine — the craftsmen called (Bezalel APPOINTED BY NAME and FILLED with the spirit, Oholiab appointed with him, the wise-hearted filled with wisdom — Berakhot 55a) and the donation brought by the men and the women, the finders, the spinning women, the princes, and the one who resolved in his heart without speech (Shevuot 26b) — every giving GIVEN BY THE HEART; the Presence's promise (25:8) NOT fired here, it fires at 40:34 in the erection's own world: (appointed, filled, given, events, clock)", ['appointed_by_name', 'spirit_filled', 'given_by_the_heart'])
     if q == 'world_w7':
-        return cell(SCENE_W7, A, "THE W7 SCENE on the world engine — THE SINAI NARRATIVE'S LAWS: the unnamed elders as every court of three; the people's one voice and the book read; the firstborn's offerings accepted and their office before the tabernacle; the blood of the covenant entering the people (atoned, Onkelos) and THE CONVERT by immersion and blood (Keritot 9a); the claimant's burden before Aaron and Hur; the first ascent's tablets on a forty-day TIMER firing on day 47 — THE SEVENTEENTH OF TAMMUZ computed on the tape (Taanit 28b) and the breaking submitted that day as an honest silence; the calf made (its ban) and worshipped (forbidden — Avodah Zarah 4:4); the idolater's row stoned, and the chapter's three death-verbs as the court's tiers — the sword, the plague, the dropsy (Yoma 66b); the erring court that exempted the bower bearing sin; the decree relented by the vow-annulment law; the calf ground and the people made to drink (a test — Avodah Zarah 44a); the Levites' sword and their filled hands; the confession specifying the sin and 'him I will blot'; Joshua who did not depart (the chain's first link) and the court's three parasangs from the camp; the mountain closed while the Presence rests and open when it departs; the second ascent's tablets and THE RADIANT FACE firing on day 88; the attributes clearing the repentant and not the unrepentant nor the vain swearer; the covenant cut by the mouth (the two channels); the land's nations driven out, its covenant barred, its altars demolished (the second seat); the inhabitant's invitation forbidden; the seven nations' daughters barred by Torah, the rest by decree", ['majority_decides', 'entered_the_covenant', 'oral_law_unwritten', 'accepted', 'invested_office', 'atoned_forgiven', 'immersed', 'tablets_delivered', 'face_radiant', 'molten_image_barred', 'barred_from_it', 'stoned', 'slain_by_sword', 'plague_struck', 'made_to_drink', 'bears_sin', 'decree_relented', 'confessed', 'blotted_from_the_book', 'ground_and_scattered', 'attributes_proclaimed', 'covenant_cut', 'nations_driven_out', 'covenant_barred', 'demolished', 'intermarriage_barred'])
+        return cell(SCENE_W7, A, "THE W7 SCENE on the world engine — THE SINAI NARRATIVE'S LAWS: the unnamed elders as every court of three; the people's one voice and the book read; the firstborn's offerings accepted and their office before the tabernacle; the blood of the covenant entering the people (atoned, Onkelos) and THE CONVERT by immersion and blood (Keritot 9a); the claimant's burden before Aaron and Hur; the first ascent's tablets on a forty-day TIMER firing on day 105 — THE SEVENTEENTH OF TAMMUZ computed BY THE CALENDAR, the date (1, 4, 17) read off the fire (Taanit 28b; O5) and the breaking submitted that day as an honest silence; the calf made (its ban) and worshipped (forbidden — Avodah Zarah 4:4); the idolater's row stoned, and the chapter's three death-verbs as the court's tiers — the sword, the plague, the dropsy (Yoma 66b); the erring court that exempted the bower bearing sin; the decree relented by the vow-annulment law; the calf ground and the people made to drink (a test — Avodah Zarah 44a); the Levites' sword and their filled hands; the confession specifying the sin and 'him I will blot'; Joshua who did not depart (the chain's first link) and the court's three parasangs from the camp; the mountain closed while the Presence rests and open when it departs; the second ascent's tablets and THE RADIANT FACE firing on day 186, Yom Kippur (the row second_tablets_given; O5); the attributes clearing the repentant and not the unrepentant nor the vain swearer; the covenant cut by the mouth (the two channels); the land's nations driven out, its covenant barred, its altars demolished (the second seat); the inhabitant's invitation forbidden; the seven nations' daughters barred by Torah, the rest by decree", ['majority_decides', 'entered_the_covenant', 'oral_law_unwritten', 'accepted', 'invested_office', 'atoned_forgiven', 'immersed', 'tablets_delivered', 'face_radiant', 'molten_image_barred', 'barred_from_it', 'stoned', 'slain_by_sword', 'plague_struck', 'made_to_drink', 'bears_sin', 'decree_relented', 'confessed', 'blotted_from_the_book', 'ground_and_scattered', 'attributes_proclaimed', 'covenant_cut', 'nations_driven_out', 'covenant_barred', 'demolished', 'intermarriage_barred'])
     if q == 'eighth_day_scene_by_call':
         return cell(SD_SCENE, P, "the eighth-day engine's own scene by call — SD.SCENE -> %r [IMPORT]: its timer is this scene's; Lev 9's offerings follow 40:29's tamid on the same day (Lev 9:17 'besides the morning burnt offering')" % (SD_SCENE,), ['released'])
     if q == 'headline_second_seat':
@@ -1741,10 +1744,10 @@ TESTS = [
  ('the protocol against Numbers 9', cloud('numbers_9'), (5, 9, 1)),
  ('Rosh Hashanah 3a:5 — the first lifting', cloud('first_lifting'), '20_iyar_year_2'),
  # ---- THE SCENE AND THE HEADLINES ----
- ('THE SCENE — the erection on the world engine', build('world'), (1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 3, 1, 1, 1, 1, 1, 5, 13)),   # the clock is ABSOLUTE days: advance(13) ends at day 13 (7 Nisan, the first Sabbath) — the first run's literal counted 7+13
+ ('THE SCENE — the erection on the world engine', build('world'), (1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 3, 1, 1, 1, 1, 1, 5, 360)),   # O5: the exodus epoch — the seventh of Nisan of the second year is day 360 by the Calendar (the erection 354, the take-list 347)
  ('CALLED shemini_day.SCENE', build('eighth_day_scene_by_call'), (1, 1, 1, 1, 6, 1, 1, 1, 1, 7)),
  ('THE W6 SCENE — the craftsmen and the donation on the world engine', build('world_w6'), (2, 2, 5, 8, 1)),
- ('THE W7 SCENE — the Sinai narrative\'s laws on the world engine', build('world_w7'), (3, 4, 3, 1, 2, 2, 1, 2, 1, 2, 3, 1, 2, 1, 2, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 2, 3, 3, 47, 32, 88)),
+ ('THE W7 SCENE — the Sinai narrative\'s laws on the world engine', build('world_w7'), (3, 4, 3, 1, 2, 2, 1, 2, 1, 2, 3, 1, 2, 1, 2, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 2, 3, 3, 105, 32, 186, (1, 4, 17), (1, 7, 10))),
  ('THE HEADLINE (1) — the second seat', build('headline_second_seat'), 'the_second_seats_delta_is_where_the_tradition_argues'),
  ('THE HEADLINE (2) — the unrun commands', build('headline_unrun'), 'the_run_drops_its_own_last_seven_commands'),
  ('THE HEADLINE (3) — the pickup', build('headline_pickup'), 13),

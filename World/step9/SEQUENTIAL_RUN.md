@@ -292,7 +292,8 @@ is the first of Tishrei; OPEN-8 the two idioms of the life-year; the second asce
 the eighth-day count (C8 — a one-line fix on the pre_sinai daemon and its scene literal, its own sitting); ONE ACT TWO
 SUBJECTS at Leviticus 8:30 and the six overlapping history kinds (aliases, each its own question); the frozen units'
 people-tokens' membership in `israel_people` (the fold's sitting); the tape's gaps (Exodus 1-11, 12-23, Leviticus 10-27
-carry no narrative events — the runners compile law there, or nothing yet); Numbers 33:3's fifteenth (the exodus day's
+carry no narrative events — the runners compile law there, or nothing yet) [O8 S1, 2026-09-08: Exodus 1-19's story is ON the
+tape — NARRATIVE_GAPS.md; the gaps line now reads the Genesis stretches (S2-S4) and the ink's own silences inside Exodus 2-7]; Numbers 33:3's fifteenth (the exodus day's
 own verse, off the three books — 12:6, 12:29, 12:37 carry it here).
 
 ## 11. As built (the sitting's close, 2026-09-07)

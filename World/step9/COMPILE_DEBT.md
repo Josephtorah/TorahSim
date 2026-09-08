@@ -331,10 +331,30 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
 ## section 13, the report's O2 section) → O3 THE GATE ITEMS (DONE 2026-09-07, the owner: "O3 go" — both gate items in one sitting: the
 ## value/effect homograph and the last-binding resolution; REPORT_GATE_ITEMS.md; the census 256 → 244 with no NONE; the tripwires
 ## remeasured; the four-damages rows typed) (the value/effect homograph; the
-## last-binding resolution) → O4 THE EDGE FILING (65 unfiled live edges — the 32 standing + the sequence runner's 33) → O5 THE MOADIM RE-TYPE
-## (the festival timers as calendar periods from Lev 23) → O6 THE FORK'S REACH TO LEV 27:21/27:24 (a reading sitting) → O7 X1-X5 (below) →
+## last-binding resolution) → O4 THE EDGE FILING (DONE 2026-09-07, the owner: "Ok go 04" — 64 entries filed: the 32 standing live edges read at their cells,
+## reference 15 / transfer 14 / hypothesis 3, and the sequential run's 32 registration edges as none; RULE 9 in the gate, a live edge
+## without its own entry fails; the three live forms read; live 162, the listing 99 ALL ON FILE; REPORT_LINK_REVIEW.md's O4 section) → O5 THE MOADIM RE-TYPE
+## (DONE 2026-09-07, the owner: "Go 05" — the festivals as CALENDAR KEYS from Lev 23's own dates (calendar_parameters.yaml festival_dates
+## ink + omer_day received), the Calendar's next(key) and the daemon's PERIOD timers on them; the moadim scene on the exodus epoch with no
+## month arithmetic, its tuple predicted by script and matched first run; the erection's two dated worlds on the epoch — the seventeenth of
+## Tammuz and Yom Kippur read off the Calendar; five day fields retired; probes 16/16; CLOCK.md section 10, REPORT_CLOCK.md's O5 section) → O6 THE FORK'S REACH TO LEV 27:21/27:24 (DONE 2026-09-07, the owner: "Next go" — a reading sitting on the shelf by script: the exile's reach
+## TAUGHT (Arakhin 29a:15-17 — Rabbi Shimon ben Yochai on 27:21 'in its going out in the jubilee': devoted fields only when the jubilee is in effect), the
+## horn and the servants by REFERENCE (27:21 'in the jubilee', 27:24 'in the year of the jubilee' name the institution the fork decides; Sifra Behar
+## Chapter 2 1 the fields return at the Day's horn — the release on the act); the consecrated field's going out re-typed as an ENTITLEMENT whose value is
+## the route, RELEASED on the proclamation's arms; the going out's own fork read at 27:20-21 — Mishnah Arakhin 7:4's three arms (Rabbi Eliezer's abandoned
+## field a new effect, the entitlement re-armed to the next jubilee), 7:3's who-redeemed table, 7:5's father's field, Rava's 'from the hand of another'
+## (26a:16), the watch the jubilee met (28b:4); thirteen new rows, 90/90 FIRST RUN with both tuples as predicted by script; CLOCK.md section 11,
+## REPORT_CLOCK.md's O6 section) → O7 X1-X5 (DONE 2026-09-07, the owner: "Go" — the five heads compiled under the six motions in cold_run_mishpatim_3.py (43/43, the
+## scene's tuple predicted by script: one slot missed on the library's term form, recorded) and X5 in cold_run_mishpatim_2.py (13/13); four
+## effects and four event types registered first; the daemon declared first and the gate run to fail; the 39th daemon on the sequence;
+## REPORT_EXODUS_HEADS.md) →
 ## O8 THE NARRATIVE GAPS ON THE ENGINE (the census by script first: 98 Genesis + 66 Exodus units against the nine scenes; then the scenes in
-## the sequential conventions, Exodus 1-19's story and Genesis's uncovered stretches) → O9 THE CLOCK'S OPEN ITEMS (OPEN-5 sub-day as an engine
+## the sequential conventions, Exodus 1-19's story and Genesis's uncovered stretches) — S1 DONE 2026-09-08 (the owner: "08 go": the census by
+## script (54 Genesis + 20 Exodus frozen units with no act on the tape; four sittings sized), THE EXODUS STORY on the engine — cold_run_exodus_story.py
+## 113/113 with the tuple predicted by script, 70 types and 60 effects registered first, the fortieth daemon, the tape 140 → 260 events and 69 → 88
+## markers, nine new checkpoints on the sequence runner (the shelf's day-tables as data rows graded against the creation count's weekday), the engine's
+## weekday and close-by-value, conventions 13-18; NARRATIVE_GAPS.md + REPORT_NARRATIVE_GAPS.md); S2 Genesis 2:4-16:16, S3 Genesis 18-31, S4
+## Genesis 33-47 + 50:15-26 next → O9 THE CLOCK'S OPEN ITEMS (OPEN-5 sub-day as an engine
 ## sitting; OPEN-2/4 searched again; OPEN-1/3/6 the tradition's disputes, finished as far as the shelf allows) → O10 THE PEOPLE-TOKENS IN THE
 ## ONE REGISTRY (the fold's sitting) → O11 THE CLAIMS LABEL DEBT (2,802 unlabeled of 2,838; measured, then batches by unit — last). Book-bound,
 ## the only exceptions: Num 27/36, Deut 25. THEN NUMBERS (its first sitting reads the standing map + SEQUENTIAL_RUN.md section 9). The plan that ran (the owner's ruling 2026-09-07 after the clock sitting, "ok lets do that"): THE SEQUENTIAL RUN — the
@@ -429,7 +449,15 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
       first counted H is TAUGHT (Ketubot 10a:4) — the edge mishpatim_2 -> family reclassified transfer. MOVE_CATALOG M-22/
       M-23/M-24 marked GENERALIZATIONS; the moadim first-fruits wording corrected; THE_STEPS's H sentence; REPORT_LINK_REVIEW.md
       (NEW). Probes 12/12 + 5/5; lint 0; gates satisfied; sweep 33/33 at 3621 — not one graded value moved in LR1-LR3.
-- [ ] THE UNFILED LIVE EDGES — MEASURED AGAIN AT W6 (2026-09-07): of the 66 call pairs beyond the token census (the dependency gate's
+- [x] THE UNFILED LIVE EDGES — PAID AT O4 THE EDGE FILING (2026-09-07, the owner: "Ok go 04"; REPORT_LINK_REVIEW.md's O4 section): the 32
+      standing filed with their link after each call site was read at the CELL that consumes the fetched value (reference 15 / transfer 14,
+      every teacher resolved on the shelf by script / hypothesis 3 — two NEW, the family runner's cells 909 and 995 marked H, hypotheses
+      6 → 8 of 228); the sequential run's 32 REGISTRATION edges as `none` (the plan's 33 was the import count — the guardians import is
+      bare, its daemon the library's); RULE 9 in the gate — a live edge without its own entry FAILS, a REVERSE on the callee's side files
+      nothing for the caller, every CALL entry must be live (the check had run on required edges only, and the clock sitting's yovel →
+      tochacha CALL registered its daemon by ATTRIBUTE, a form the gate never read — the daemon-reference form added beside the
+      registration tuple); the gate's listing 99 ALL ON FILE, live edges 162, LINK CENSUS 177 / 45 / 9 / 72 of 231 + 72; probes 8/8.
+      AS MEASURED AT W6 (2026-09-07): of the 66 call pairs beyond the token census (the dependency gate's
       "live edges beyond the token census" list), 22 ALREADY HAD an entry (declared CALL for the live calls at their compile sittings);
       44 carried none — LR3's "66 unfiled" overstated by a third. W6 FILED the incense_shekel runner's 12 with their link (reference 9,
       transfer 3 with teachers). REMAINING 32 with no entry and no `link:`: pre_sinai 15 (calendar, clocks, decalogue, erection,
@@ -444,16 +472,21 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
 ## THE EXODUS LAW'S UNCOMPILED CASE HEADS (found at W1, 2026-09-07 — the wrap census put the ink's
 ## case tokens of Exod 21-22 beside the six runners' functions; these heads have exam-era rules
 ## (rounds 13-14, the ordinances' persons and the burglar file) but NO cold function — compile debt)
-- [ ] X1  Exod 21:7, 21:9-11 — THE MAIDSERVANT (beyond 21:8's redemption, which F1 uses by comparison):
-      the designation, the three withheld things, the going out free
-- [ ] X2  Exod 21:13-15, 21:17 — THE CAPITAL CLAUSES: the refuge for the unintended (21:13, with Num 35
-      and Deut 19 its expansions), the deliberate killer taken from the altar (21:14), striking and
-      cursing father or mother (21:15, 21:17; Lev 20:9 the second seat)
-- [ ] X3  Exod 21:20-21 — THE SLAVE STRUCK DEAD: avenged if he dies under the hand; 'a day or two'
-      (Mishnah Makkot 2:? the recorded rows; Sanhedrin 52b)
-- [ ] X4  Exod 22:1-2 — THE BURGLAR: no bloodguilt in the tunnel, bloodguilt after sunrise; sold for his
-      theft (Mishnah Sanhedrin 8:6; Kiddushin 1:2's 'sold for his theft')
-- [ ] X5  Exod 22:16 — THE FATHER'S REFUSAL: the fine paid though he refuses to give her
+- [x] X1  Exod 21:7-11 — THE MAIDSERVANT — DONE at O7 (2026-09-07, cold_run_mishpatim_3.py maidservant(): the father alone sells a minor,
+      the exits with the signs, designation as betrothal with her consent, the three, the two exits of 21:11 — free at maturity, without money
+      at youth — the redemption against his will, the foreign sale barred; REPORT_EXODUS_HEADS.md)
+- [x] X2  Exod 21:13-15, 21:17 — THE CAPITAL CLAUSES — DONE at O7 (2026-09-07: killer() — the refuge by descent, the Levites' cities, the
+      guile's six exclusions, the forewarning off the word, from beside the altar not from upon it, the sword by the taught analogy from 21:20;
+      parent_striker() — the wound, strangling, after death exempt; parent_curser() — the woman included, the rest BY CALL into the Leviticus
+      seat's curser (the edge mishpatim_3 -> sanctions, a reference); Num 35 and Deut 19 stay owed forward with their books)
+- [x] X3  Exod 21:20-21 — THE SLAVE STRUCK DEAD — DONE at O7 (2026-09-07: slave_struck() — the Canaanite wholly his, the rod that can kill,
+      under his hand, avenged = death by the sword (Sanhedrin 52b:13), a day that is like two days from time to time, Bava Kamma 90a's four arms;
+      the Hebrew slave the general clause's silence, the half-free no lenience)
+- [x] X4  Exod 22:1-2 — THE BURGLAR — DONE at O7 (2026-09-07: burglar() — the doubt, judged by his end, the sun as clarity, the father presumed
+      merciful, struck by any person, the barrel on the blood, the Sabbath the same, sold six years for the principal, the woman not sold; the
+      new effect has_blood — Mishnah Sanhedrin 8:6's own phrase)
+- [x] X5  Exod 22:16 — THE FATHER'S REFUSAL — DONE at O7 (2026-09-07, in cold_run_mishpatim_2.py beside the seducer: the fine stands though the
+      father refuses, the fatherless girl refuses for herself (Mekhilta), the wife written when no one refuses — 13/13 with the tuple predicted)
 ## DONE at O3 (2026-09-07; REPORT_GATE_ITEMS.md): compile_guards.check_honest_calls resolved a cells NAME to its LAST binding
 ## in the file — the earlier lists went unchecked. FIXED: the binding in effect at the call's line (binding_at); the tripwires
 ## remeasured by the guard — mishpatim REFUSED (the four-damages rows were a comprehension, now literal) then 24, lev24 24, negaim

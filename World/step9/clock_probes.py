@@ -214,6 +214,80 @@ def p12():
     return before == 1 and open_after == 0 and after[0].get('closed_by'), 'open before the second offering %d; open after %d; closed_by %r' % (before, open_after, after[0].get('closed_by') if after else None)
 
 
+# ---- O5 THE MOADIM RE-TYPE (2026-09-07; CLOCK.md section 10) — four probes written BEFORE the engine code ----
+@probe('13 O5: the festival keys resolve from the row on the exodus epoch')
+def p13():
+    w = WE.World(era='probe', epoch='exodus'); cal = w.clock.calendar
+    a = (w.clock.next('yom_kippur') == cal.day_of(1, 7, 10), w.clock.next('passover_7') == cal.day_of(1, 1, 21),
+         w.clock.next('shemini') == cal.day_of(1, 7, 22), w.clock.next('atzeret') == cal.day_of(1, 1, 16) + 49)
+    w.advance(cal.day_of(1, 7, 10))
+    b = w.clock.next('yom_kippur') == cal.day_of(2, 7, 10)
+    return all(a) and b, 'keys %r; after Yom Kippur the next is year 2\'s: %r' % (a, b)
+
+
+def law_probe_festival(event, world):
+    if event['kind'] == 'holy_convocation_proclaimed':
+        return [{'effect': 'sanctify_day', 'subject': 'israel', 'counterparty': 'HEAVEN', 'amount': None, 'value': event['day'],
+                 'due': world.clock.next(event['day']), 'period': event['day'], 'source_law': 'probe', 'case_source': 'probe'}]
+    return []
+
+
+@probe('14 O5: a period timer keyed sukkot_1 re-arms to year 2\'s fifteenth of the seventh month')
+def p14():
+    w = WE.World(era='probe', epoch='exodus'); cal = w.clock.calendar; w.laws = [law_probe_festival]
+    w.advance(cal.day_of(1, 7, 15))
+    w.submit({'kind': 'holy_convocation_proclaimed', 'subject': 'israel', 'people': 'israel', 'day': 'sukkot_1', 'case_source': 'probe'})
+    w.advance(cal.day_of(2, 7, 16))
+    sets = [l for l in w.log if l[0] == 'TIMER-SET']; fires = [l for l in w.log if l[0] == 'TIMER-FIRE']
+    dues = [l[2]['due'] for l in sets]
+    ok = len(fires) == 1 and fires[0][1] == cal.day_of(2, 7, 15) and dues[-1] == cal.day_of(3, 7, 15) and sets[-1][2].get('rearmed_from') == cal.day_of(2, 7, 15)
+    return ok, 'fires %r; dues %r' % ([f[1] for f in fires], dues)
+
+
+@probe('15 O5: the ink\'s count meets the date — the omer + 49 = the Calendar\'s atzeret = the sixth of the third month')
+def p15():
+    w = WE.World(era='probe', epoch='exodus'); cal = w.clock.calendar
+    omer = w.clock.next('omer'); fiftieth = omer + 49
+    return fiftieth == cal.next(omer, 'atzeret') and cal.date(fiftieth) == (1, 3, 6), 'omer %d, fiftieth %d = %r' % (omer, fiftieth, cal.date(fiftieth))
+
+
+@probe('16 O5 (a guard): an unknown festival key refuses, naming the keys')
+def p16():
+    w = WE.World(era='probe', epoch='exodus')
+    try:
+        w.clock.next('purim'); return False, 'accepted an unknown key'
+    except SystemExit as e:
+        return 'unknown key' in str(e) and 'keys' in str(e), str(e)[:100]
+
+
+
+@probe('17 O8 S1: the WEEKDAY from the creation count — day 0 the first day, day 6 the first Sabbath; None under any other epoch')
+def p17():
+    w = WE.World(era='probe', epoch='creation')
+    a = (w.clock.weekday, )
+    w.advance(6)
+    b = w.clock.weekday
+    w.advance(13)
+    c = w.clock.weekday
+    w2 = WE.World(era='probe', epoch='exodus')
+    d = w2.clock.weekday
+    return a == (1,) and b == 7 and c == 7 and d is None, 'day 0 -> %r, day 6 -> %r, day 13 -> %r, exodus epoch -> %r (1 = the first day of the week, 7 = the Sabbath)' % (a[0], b, c, d)
+
+
+@probe('18 O8 S1: close BY VALUE — the frogs\' removal closes the frogs\' plague entry, not the first open plague (the blood)')
+def p18():
+    w = WE.World(era='probe', epoch='creation')
+    def law_probe_plague(event, world):
+        return [{'effect': 'plague_struck', 'subject': 'egypt_people', 'counterparty': None, 'amount': None, 'due': None, 'value': event['plague'], 'source_law': 'probe', 'case_source': event['case_source']}]
+    w.laws = [law_probe_plague]
+    w.submit({'kind': 'plague_struck', 'subject': 'egypt_people', 'plague': 'blood', 'by': 'aaron', 'case_source': 'Exod 7:20'})
+    w.submit({'kind': 'plague_struck', 'subject': 'egypt_people', 'plague': 'frogs', 'by': 'aaron', 'case_source': 'Exod 8:2'})
+    ok = w.close('egypt_people', 'plague_struck', 'Exod 8:9 the frogs died', value='frogs')
+    led = w.entity('egypt_people').ledger
+    blood_open = [e for e in led if e['value'] == 'blood'][0].get('open')
+    frogs_open = [e for e in led if e['value'] == 'frogs'][0].get('open')
+    return ok and blood_open and not frogs_open, 'closed %r; blood open %r, frogs open %r' % (ok, blood_open, frogs_open)
+
 print('CLOCK PROBES (CLOCK.md sections 1-6; each must FAIL on the old engine and PASS on the new):')
 for name, ok, note in results:
     print('  %s  %s\n        %s' % ('PASS' if ok else 'FAIL', name, note))

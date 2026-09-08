@@ -307,7 +307,7 @@ entities:
   - id: levi
     en: "Levi"
     kind: person
-    members: [{token: ben_3_leah}]
+    members: [{token: ben_3_leah}, {token: levi, units: [step9-scenes]}]
   - id: judah
     en: "Judah"
     kind: person
@@ -343,7 +343,7 @@ entities:
   - id: joseph
     en: "Joseph (Tzafnat-paneach)"
     kind: person
-    members: [{token: ben_1_rachel}, {token: yosef}]
+    members: [{token: ben_1_rachel}, {token: yosef}, {token: joseph, units: [step9-scenes]}]
     note: the Egyptian name arrives by NAME operator (gen_64) — same entity.
   - id: benjamin
     en: "Benjamin (Ben-oni)"
@@ -416,12 +416,12 @@ entities:
   - id: moses
     en: "Moses"
     kind: person
-    members: [{token: moshe}]
+    members: [{token: moshe}, {token: moses, units: [step9-scenes]}]
 
   - id: aaron
     en: "Aaron"
     kind: person
-    members: [{token: aharon}]
+    members: [{token: aharon}, {token: aaron, units: [step9-scenes]}]
 
   # ---- Exodus opening (run FWD-4, 2026-08-09) ---------------------------
   - id: paro_oppression_era
@@ -431,6 +431,7 @@ entities:
       - {token: melekh_chadash, units: [exo_01_names_and_midwives]}
       - {token: melekh_mitzrayim, units: [exo_01_names_and_midwives, exo_02_drawn_from_the_water]}
       - {token: paro, units: [exo_01_names_and_midwives, exo_02_drawn_from_the_water]}
+      - {token: the-oppression-king, units: [step9-scenes]}   # O8 S1 (2026-09-08): the story scene's token
     note: >
       The arisen king (1:8), the midwife-decree king (1:15), and the
       Nile-decree Pharaoh (1:22) identified as ONE person by narrative
@@ -444,6 +445,7 @@ entities:
     members:
       - {token: paro, units: [exo_05_bricks_without_straw]}
       - {token: melekh_mitzrayim, units: [exo_05_bricks_without_straw]}
+      - {token: pharaoh, units: [step9-scenes]}   # O8 S1 (2026-09-08): the story scene's token
     note: >
       UNCERTAIN — registered SEPARATE from the oppression king on the
       letter's own death-notice (2:23). The readings split: a literal
@@ -458,6 +460,7 @@ entities:
       - {token: reuel, units: [exo_02_drawn_from_the_water]}
       - {token: yitro, units: [exo_03_bush_and_name, exo_04_signs_and_firstborn]}
       - {token: yeter, units: [exo_04_signs_and_firstborn]}
+      - {token: jethro, units: [step9-scenes]}   # O8 S1 (2026-09-08): the story scene's token
     note: >
       One father-in-law under three tokens (Reuel 2:18; Jethro 3:1,
       4:18; Jether 4:18 — the shortened form in the same verse as the
@@ -497,7 +500,7 @@ entities:
   - id: yokheved
     en: "Yokheved, Amram's wife, mother of Aaron and Moses (Exod 6:20)"
     kind: person
-    members: [{token: yokheved, units: [exo_06_i_am_the_lord]}]
+    members: [{token: yokheved, units: [exo_06_i_am_the_lord]}, {token: jochebed, units: [step9-scenes]}]
     note: >
       The "daughter of Levi" of 2:1 signed by name at 6:20 (dodato —
       "his father's sister": the aunt-marriage recorded plainly; the
@@ -529,7 +532,7 @@ entities:
   - id: miryam
     en: "Miriam the prophetess, sister of Aaron (Exod 15:20)"
     kind: person
-    members: [{token: miryam, units: [exo_15_the_song_and_marah]}]
+    members: [{token: miryam, units: [exo_15_the_song_and_marah]}, {token: miriam, units: [step9-scenes]}]
     note: >
       The watching sister of 2:4 SIGNED at 15:20 — exo_02's
       withheld-name restraint pays its third installment (the parents
@@ -542,7 +545,7 @@ entities:
   - id: yehoshua
     en: "Joshua (Exod 17:9)"
     kind: person
-    members: [{token: yehoshua, units: [exo_17_massah_and_amalek]}]
+    members: [{token: yehoshua, units: [exo_17_massah_and_amalek]}, {token: joshua, units: [step9-scenes]}]
     note: >
       The successor's DEBUT — unintroduced, unpatronymed, no office:
       commissioned mid-battle-order (17:9) and first narrated doing
@@ -555,7 +558,7 @@ entities:
   - id: chur
     en: "Hur (Exod 17:10)"
     kind: person
-    members: [{token: chur, units: [exo_17_massah_and_amalek]}]
+    members: [{token: chur, units: [exo_17_massah_and_amalek]}, {token: hur, units: [step9-scenes]}]
     note: >
       The corpus's most economical officer: his whole Torah career is
       three tokens (asserted at exo_17's build) — the hands at 17:10,
@@ -579,7 +582,7 @@ entities:
   - id: amaleq
     en: "Amalek (Exod 17:8)"
     kind: people
-    members: [{token: amaleq, units: [exo_17_massah_and_amalek]}]
+    members: [{token: amaleq, units: [exo_17_massah_and_amalek]}, {token: amalek, units: [step9-scenes]}]
     note: >
       The corpus's first battlefield enemy (the first war Israel must
       fight itself — 14:14's the-LORD-will-fight suspended at 17:8).
@@ -603,3 +606,93 @@ entities:
       UNCERTAIN only at the frozen units' own people-tokens (bnei_yisrael and the like are NOT listed here) —
       whether they join this entity is the corpus fold's own sitting, not the sequential run's. The three
       scene tokens are the same referent by their verses.
+
+  # ---- O8 S1 THE EXODUS STORY (2026-09-08; NARRATIVE_GAPS.md section 4e): the story scene's tokens with no entity above — new
+  # entities scoped to the scenes; the frozen units' own tokens (bat_paro, tzipora, ha_meyaldot and the like) stay the fold's
+  # sitting (O10), as israel_people's note says ----------------------------------------------------------------------------
+  - id: zipporah
+    en: "Zipporah, Jethro's daughter, Moses' wife (Exod 2:21; 4:25; 18:2)"
+    kind: person
+    members: [{token: zipporah, units: [step9-scenes]}]
+  - id: gershom
+    en: "Gershom, Moses' first son (Exod 2:22; 18:3)"
+    kind: person
+    members: [{token: gershom, units: [step9-scenes]}]
+  - id: the_son_at_the_lodging
+    en: "the son circumcised at the lodging (Exod 4:25 'her son' — UNCERTAIN)"
+    kind: person
+    members: [{token: the-son-at-the-lodging, units: [step9-scenes]}]
+    note: >
+      The ink names one son by 2:22 (Gershom) and two by 4:20 ("his sons"); 4:25 says "her son". Nedarim 32a:2
+      (Rabban Shimon ben Gamliel) calls him "that infant" without a name; the tradition's Eliezer is not on the
+      local shelf under the searched forms. Its own singleton at this sitting: the circumcision act at 4:25 closes
+      no born-timer, and Gershom's eighth-day debit stays OPEN on the tape — the identity is the fold's sitting
+      (O10) to decide, and the tape's tuple moves by one close if it resolves to Gershom.
+  - id: the_midwives
+    en: "the Hebrew midwives Shiphrah and Puah (Exod 1:15-21)"
+    kind: collective
+    members: [{token: the-midwives, units: [step9-scenes]}]
+  - id: pharaohs_daughter
+    en: "the daughter of Pharaoh (Exod 2:5-10)"
+    kind: person
+    members: [{token: pharaohs-daughter, units: [step9-scenes]}]
+  - id: egypt_people
+    en: "the Egyptians, as a body (the struck party of the plagues; the drowned host)"
+    kind: collective
+    members: [{token: egypt_people, units: [step9-scenes]}]
+  - id: the_officers
+    en: "the officers of the sons of Israel (Exod 5:14-21)"
+    kind: collective
+    members: [{token: the-officers, units: [step9-scenes]}]
+  - id: kohath
+    en: "Kohath son of Levi, father of Amram (Exod 6:16-18; Gen 46:11)"
+    kind: person
+    members: [{token: kohath, units: [step9-scenes]}]
+  - id: the_angel_at_the_bush
+    en: "the angel of the LORD in the flame of the bush (Exod 3:2)"
+    kind: divine
+    members: [{token: the-angel, units: [step9-scenes]}]
+  - id: the_place_of_the_bush
+    en: "the place of the bush — holy ground (Exod 3:5)"
+    kind: place
+    members: [{token: the-place-of-the-bush, units: [step9-scenes]}]
+  - id: the_staff
+    en: "the staff of God (Exod 4:2-20; 7:12; 17:9)"
+    kind: object
+    members: [{token: the-staff, units: [step9-scenes]}]
+  - id: the_sea
+    en: "the Reed Sea (Exod 14)"
+    kind: place
+    members: [{token: the-sea, units: [step9-scenes]}]
+  - id: the_waters_of_marah
+    en: "the waters of Marah (Exod 15:23-25)"
+    kind: place
+    members: [{token: the-waters-of-marah, units: [step9-scenes]}]
+  - id: the_place_marah
+    en: "Marah, the place named for its waters (Exod 15:23)"
+    kind: place
+    members: [{token: the-place-marah, units: [step9-scenes]}]
+  - id: the_manna
+    en: "the manna (Exod 16:15, 16:31)"
+    kind: object
+    members: [{token: the-manna, units: [step9-scenes]}]
+  - id: the_jar
+    en: "the jar of manna laid before the Testimony (Exod 16:33-34)"
+    kind: object
+    members: [{token: the-jar, units: [step9-scenes]}]
+  - id: the_rock
+    en: "the rock at Horeb (Exod 17:6)"
+    kind: place
+    members: [{token: the-rock, units: [step9-scenes]}]
+  - id: the_place_rephidim
+    en: "Rephidim, named Massah and Meribah (Exod 17:1, 17:7)"
+    kind: place
+    members: [{token: the-place-rephidim, units: [step9-scenes]}]
+  - id: the_altar_of_moses
+    en: "the altar Moses built, 'the LORD is my banner' (Exod 17:15)"
+    kind: object
+    members: [{token: the-altar, units: [step9-scenes]}]
+  - id: the_mountain
+    en: "Mount Sinai (Exod 19)"
+    kind: place
+    members: [{token: the-mountain, units: [step9-scenes]}]

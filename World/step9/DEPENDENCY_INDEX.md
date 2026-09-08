@@ -2,11 +2,11 @@
 # live import scan of World/step9/cold_run_*.py. Do not edit: rerun the gate. Documentation and the
 # site's dependency view; never a runtime path (the two-thread consensus of 2026-09-06).
 #
-# coverage: 34 runners, 1888 verses, 42 type tokens, 5 pointer forms; required edges 130, pointers 73; live import edges 129
+# coverage: 36 runners, 2369 verses, 42 type tokens, 5 pointer forms; required edges 141, pointers 94; live import edges 169
 
 ## cold_run_calendar.py — Exod 23:10-19
 - calls out (live): pesach, yovel
-- called by (live): erection, incense_shekel, moadim, pre_sinai
+- called by (live): erection, incense_shekel, moadim, pre_sinai, sequence
 - required edges from the ink:
   - -> moadim [appointed_time,first_fruits] at Exod 23:15, Exod 23:16, Exod 23:19: REVERSE link transfer taught by Mishnah Bikkurim 1:3 ('one does not bring first fruits before Atzeret' — read on Exod 23:16's own clause) — Exod 23:16 and 23:19's first fruits are the two-loaves day of Lev 23:17-20; moadim calls calendar.first_fruits and calendar.pilgrimage
   - -> pesach [matzah] at Exod 23:15: CALL carries window link reference — Exod 23:15's unleavened bread 'as I commanded you' — matzah() calls pesach.leaven_machine (window, purge)
@@ -16,7 +16,7 @@
 
 ## cold_run_chatat.py — Lev 4:1-35; Lev 10:8-20
 - calls out (live): minchah, offerings, tzav, vayikra5
-- called by (live): clocks, incense_shekel, metzora, sanctions, sanctuary_build, shemini_day, vayikra5, yoma
+- called by (live): clocks, incense_shekel, metzora, sanctions, sanctuary_build, sequence, shemini_day, vayikra5, yoma
 - required edges from the ink:
   - -> incense_shekel [incense] at Lev 4:7: REVERSE carries place link reference — Lev 4:7 'the horns of the altar of the incense of spices before the LORD in the tent of meeting' — the inner altar's SPEC is 30:1-10 (its place before the veil, 30:6); the incense engine CALLS the chatat engine for the anointed priest's blood protocol (CH.blood anointed), so this edge is live the other way; 30:10's once-a-year atonement is the Day's, not Lev 4's
   - -> minchah [minchah] at Lev 10:12: CALL carries verdict link reference — 10:12's meal-offering remainder — MIN.remainder
@@ -36,7 +36,7 @@
 
 ## cold_run_clocks.py — Lev 12:1-8; Lev 15:1-33
 - calls out (live): chatat, minchah, offerings, vayikra5
-- called by (live): family, pre_sinai, priesthood, sanctions
+- called by (live): family, pre_sinai, priesthood, sanctions, sequence
 - required edges from the ink:
   - -> chatat [chatat] at Lev 12:6, Lev 12:8, Lev 15:15, Lev 15:30: CALL carries verdict link reference — the partner's sin offering (domain), the heirs' ownership lock
   - -> minchah [bird_olah] at Lev 12:6, Lev 12:8, Lev 15:14, Lev 15:29: CALL carries place link reference — the bird pair's burnt offering above the red line — MIN.bird(place)
@@ -45,13 +45,13 @@
 
 ## cold_run_decalogue.py — Exod 20:1-17
 - calls out (live): none
-- called by (live): incense_shekel, ordinances, pre_sinai
+- called by (live): incense_shekel, ordinances, pre_sinai, sequence
 - required edges from the ink:
   - -> pre_sinai [sabbath] at Exod 20:10, Exod 20:11, Exod 20:8: REVERSE link reference — G1 (REVERSE — the pre-Sinai runner calls this engine live; a call back would cycle) | Exod 20:8-11 'the SABBATH day' — 20:11 QUOTES Gen 2:2-3 ('rested on the seventh day... blessed... sanctified'); the pre-Sinai runner's sabbath() calls the decalogue engine's remember clause — REVERSE at the cell — DONE
 
 ## cold_run_erection.py — Exod 24:1-18; Exod 31:1-11; Exod 31:18-18; Exod 32:1-35; Exod 33:1-23; Exod 34:1-35; Exod 35:4-29; Exod 40:1-38
 - calls out (live): calendar, incense_shekel, moadim, offerings, ordinances, pesach, priesthood, sanctuary_build, shemini_day, tzav, vestments
-- called by (live): pre_sinai
+- called by (live): pre_sinai, sequence
 - required edges from the ink:
   - -> chatat [chatat] at Exod 32:30, Exod 32:32, Exod 32:34: FALSE link none — 32:30 'perhaps I shall atone for your SIN', 32:32 'if You will bear their SIN', 32:34 'I will visit their SIN upon them' (חטאתם / חטאתכם) — the noun 'sin', not the sin offering; no chatat is brought for the calf in the span (the calf's atonement is the ransom-less intercession, Berakhot 32a); the sin-offering engine is not imported
   - -> family [inheritance] at Exod 32:13: FALSE link none — Exod 32:13 'they shall INHERIT it forever' (ונחלו) — the land-possession verb in Moses' plea, not the estate
@@ -77,9 +77,45 @@
   - Exod 40:29 AS_WHEN "כאשר צוה יהוה": CALL -> incense_shekel link reference — 'he offered on it the burnt offering and the meal offering, AS THE LORD COMMANDED MOSES' — cites 29:38-42 (the daily lambs with their tenth and quarter-hin): IS.tamid(two_lambs/olat_tamid/initiations) by live call — the bronze altar's INITIATION by the morning tamid; Lev 9:17's 'besides the morning burnt offering' names this offering from the other book (SD.order by call)
   - Exod 40:32 AS_WHEN "כאשר צוה יהוה": CALL -> incense_shekel link reference — 'when they come into the tent of meeting and when they approach the altar they wash, AS THE LORD COMMANDED MOSES' — cites 30:20-21's two loci word for word: IS.laver(two_loci/wash_or_die/run) by live call — the run's added subject MOSES (40:31) the laver's minimum of four (Zevachim 21b)
 
+## cold_run_exodus_story.py — Exod 1:1-22; Exod 2:1-25; Exod 3:1-22; Exod 4:1-31; Exod 5:1-23; Exod 6:1-30; Exod 7:1-29; Exod 8:1-28; Exod 9:1-35; Exod 10:1-29; Exod 11:1-10; Exod 12:29-42; Exod 12:50-51; Exod 13:17-22; Exod 14:1-31; Exod 15:1-27; Exod 16:1-36; Exod 17:1-16; Exod 18:1-27; Exod 19:1-25
+- calls out (live): family, offerings, pesach, pre_sinai
+- called by (live): sequence
+- required edges from the ink:
+  - -> chatat [chatat] at Exod 5:16: FALSE link none — O8 S1 (2026-09-08) | 5:16 'and the SIN is on your people' (חטאת) — the noun sin, a homograph of the sin offering
+  - -> family [inheritance,wife_taken] at Exod 15:17, Exod 6:20, Exod 6:23, Exod 6:25: CALL carries verdict link reference — O8 S1 (2026-09-08) | 'and he took the daughter of Levi' (2:1), 'and he gave Zipporah his daughter to Moses' (2:21), and the roster's marriages 'took ... as a wife' (6:20, 6:23, 6:25) — the family engine's marriage formula (Gen 24:67) at the story's seats: birth('marriage') calls FA.commission('marriage_formula'); 15:17 'the mountain of Your INHERITANCE' (נחלתך) is the land, a homograph of the estate's institution — named
+  - -> mishpatim [hebrew_slave] at Exod 2:11: FALSE link none — O8 S1 (2026-09-08) | 2:11 'an Egyptian man striking a HEBREW man' (עברי) — the people's name, a homograph of the Hebrew slave's token (21:2)
+  - -> moadim [first_fruits] at Exod 4:22: FALSE link none — O8 S1 (2026-09-08) | 4:22 'My son, MY FIRSTBORN, Israel' (בכרי) — the consonants of the first fruits (bikkurei), a homograph: the firstborn son (the Passover engine's institution, the edge above)
+  - -> negaim [tzaraat] at Exod 4:6: PARAMETER link reference — O8 S1 (2026-09-08) | 'his hand was LEPROUS as snow' (4:6) — the sign's whiteness is the plague's brightest shade (Mishnah Negaim 1:1 'intense as snow' by name): the ink points to the datum, not the procedure — no priest inspects, no week runs; the negaim engine's shades are its own
+  - -> offerings [olah] at Exod 10:25, Exod 12:38, Exod 18:12, Exod 19:12, Exod 19:23, Exod 19:24, Exod 19:3, Exod 1:10 ...: CALL carries verdict link reference — O8 S1 (2026-09-08) | 'sacrifices and BURNT OFFERINGS' (10:25) and 'Jethro took a BURNT OFFERING and sacrifices' (18:12) — the offering institution by name: jethro('olah') calls OF.dispatch('olah'); 12:38 'a mixed multitude WENT UP with them' and 19:12, 19:23, 19:24 'GO UP the mountain' are the verb, not the burnt offering — homographs, named
+  - -> pesach [firstborn] at Exod 11:5, Exod 12:29, Exod 6:14: CALL carries status link reference — O8 S1 (2026-09-08) | 'and the LORD struck every FIRSTBORN in the land of Egypt' (12:29), 'every firstborn shall die' (11:5) — the firstborn person's home is the Passover engine (13:2 the womb-opener consecrated 'for on the day I struck every firstborn', 13:15: the ink's own link from the striking to the status): night('firstborn') calls PS.firstborn on the human case; 6:14 'Reuben the FIRSTBORN of Israel' is the roster's word (the same institution, no act) — named
+  - -> pre_sinai [circumcision,fruitful,sabbath] at Exod 16:23, Exod 16:25, Exod 16:26, Exod 16:29, Exod 1:7, Exod 4:25, Exod 6:12, Exod 6:30: CALL carries verdict link reference — O8 S1 (2026-09-08) | THREE REFERENCES to the pre-Sinai engine's institutions by the ink's own words: 'were fruitful and swarmed and multiplied' (Exod 1:7 — the blessing of Gen 1:28 / 9:1 / 9:7 at its run: oppression('fruitful') calls PS_.creation('three_blessings')); 'she cut off the foreskin of her son' (4:25 — the covenant's institution, Gen 17:12's eighth day: birth('lodging') calls PS_.circumcision('eight_days')); 'tomorrow is a rest, a holy Sabbath' (16:23-29 — the seventh day of Gen 2:2-3 at its first narrated keeping: manna('sabbath') calls PS_.creation('seventh_named')); read at the cells
+  - -> sanctions [molech_ov] at Exod 10:6, Exod 14:5, Exod 14:8, Exod 1:15, Exod 1:17, Exod 1:18, Exod 1:8, Exod 2:23 ...: FALSE link none — O8 S1 (2026-09-08) | 1:15, 1:17, 1:18 'the KING of Egypt', 10:6, 14:5, 14:8 'Pharaoh KING of Egypt' (מלך, melekh) — the consonants of Molech, a homograph by vowels (the standing lesson: name homographs, never count them)
+  - -> yovel [jubilee] at Exod 19:13: FALSE link none — O8 S1 (2026-09-08) | 19:13 'when the HORN sounds long' (היבל, ha-yovel — the ram's horn) — the jubilee's name-source, not the jubilee: the institution of Lev 25 is named for this horn (Rosh Hashanah 26a by name), the edge runs the other way and is the yovel engine's to file
+- pointers in the ink:
+  - Exod 1:17 AS_WHEN "כאשר דבר אליהן": INTERNAL link reference — 'they did not do AS the king of Egypt SPOKE to them' — cites 1:16's decree inside this runner (the refusal's target)
+  - Exod 2:14 AS_WHEN "כאשר הרגת את": INTERNAL link reference — 'AS you killed the Egyptian' — cites 2:12 inside this runner
+  - Exod 5:13 AS_WHEN "כאשר בהיות התבן": INTERNAL link reference — 'AS WHEN there was straw' — cites the labor's prior state (5:7's decree withholding it) inside this runner
+  - Exod 7:6 AS_WHEN "כאשר צוה יהוה": INTERNAL link reference — 'AS the LORD COMMANDED them, so they did' — the run citing 7:1-5's command inside this runner
+  - Exod 7:10 AS_WHEN "כאשר צוה יהוה": INTERNAL link reference — 'they did so AS the LORD COMMANDED' — cites 7:9 (the staff cast down) inside this runner
+  - Exod 7:13 AS_WHEN "כאשר דבר יהוה": INTERNAL link reference — 'AS the LORD had SPOKEN' — cites 7:3-4's announcement of the hardened heart inside this runner (the hardening formula's stamp)
+  - Exod 7:20 AS_WHEN "כאשר צוה יהוה": INTERNAL link reference — 'AS the LORD COMMANDED' — cites 7:19 (the water struck) inside this runner
+  - Exod 7:22 AS_WHEN "כאשר דבר יהוה": INTERNAL link reference — 'AS the LORD had SPOKEN' — the hardening formula's stamp, 7:3-4
+  - Exod 8:11 AS_WHEN "כאשר דבר יהוה": INTERNAL link reference — 'AS the LORD had SPOKEN' — the hardening formula's stamp, 7:3-4
+  - Exod 8:15 AS_WHEN "כאשר דבר יהוה": INTERNAL link reference — 'AS the LORD had SPOKEN' — the hardening formula's stamp, 7:3-4
+  - Exod 8:23 AS_WHEN "כאשר יאמר אלינו": INTERNAL link reference — 'AS He will SAY to us' — Moses' answer on the sacrifice in the wilderness: a citation of a command not yet given (3:18's three days' journey) inside this runner
+  - Exod 9:12 AS_WHEN "כאשר דבר יהוה": INTERNAL link reference — 'AS the LORD had SPOKEN to Moses' — the hardening formula's stamp, 7:3-4 (the first seat with the LORD as the agent)
+  - Exod 9:35 AS_WHEN "כאשר דבר יהוה": INTERNAL link reference — 'AS the LORD had SPOKEN by the hand of Moses' — the hardening formula's stamp, 7:3-4
+  - Exod 10:10 AS_WHEN "כאשר אשלח אתכם": INTERNAL link reference — 'AS I send you' — Pharaoh's own words, a citation of his conditional release inside this runner
+  - Exod 12:32 AS_WHEN "כאשר דברתם ולכו": INTERNAL link reference — 'AS you have SPOKEN' — Pharaoh citing 10:9 and 10:26 (the flocks and herds) inside this runner
+  - Exod 12:50 AS_WHEN "כאשר צוה יהוה": RUN_CITATION -> pesach link reference — 'AS the LORD COMMANDED Moses and Aaron, so they did' — the run citing the Passover ordinance (12:43-49, the Passover engine's span; 12:28 its first stamp) — graded at the Passover engine's own seat
+  - Exod 16:24 AS_WHEN "כאשר צוה משה": INTERNAL link reference — 'AS Moses COMMANDED' — cites 16:23 (lay up the leftover) inside this runner
+  - Exod 16:34 AS_WHEN "כאשר צוה יהוה": INTERNAL link reference — 'AS the LORD COMMANDED Moses' — cites 16:33 (the jar) inside this runner
+  - Exod 17:10 AS_WHEN "כאשר אמר לו": INTERNAL link reference — 'AS Moses SAID to him' — cites 17:9 (choose men, go out) inside this runner
+  - Exod 17:11 AS_WHEN "כאשר ירים משה": INTERNAL link reference — 'WHEN Moses raised his hand' — a temporal clause, no citation (the census's form matched the conjunction alone); Mishnah Rosh Hashanah 3:8 reads the clause
+
 ## cold_run_family.py — Gen 23:1-20; Gen 24:1-67; Gen 32:25-33; Gen 38:1-30; Gen 48:1-22; Gen 49:1-33
 - calls out (live): clocks, guardians, holiness, holiness_b, incense_shekel, mishpatim, mishpatim_2, ordinances, pesach, priesthood, sanctions, sanctuary_build, yovel
-- called by (live): none
+- called by (live): exodus_story, sequence
 - required edges from the ink:
   - -> incense_shekel [shekel] at Gen 23:15, Gen 23:16: CALL carries value link reference — G2 (CALL — the cell fetches it live) | 'four hundred SHEKEL of silver' (Gen 23:15-16) — the unit's spec is Exod 30:13 ('twenty gerah the shekel'); Bekhorot 50a: Ephron's shekels are centenaria (the currency's grade, Bava Metzia 87a); purchase('shekel') will call IS.shekel — flipped to CALL at the cell — DONE
   - -> lev24 [talion_formula] at Gen 24:2, Gen 24:9, Gen 49:25: FALSE link none — Gen 24:2, 24:9 'under my thigh' and 49:25 'that lies BENEATH' — the preposition 'under', not the exchange formula (the oath's object held in the hand, Shevuot 38b)
@@ -105,14 +141,14 @@
 
 ## cold_run_holiness.py — Lev 19:1-18
 - calls out (live): tzav, vayikra5, yovel
-- called by (live): family, holiness_b, ordinances, pre_sinai
+- called by (live): family, holiness_b, ordinances, pre_sinai, sequence
 - required edges from the ink:
   - -> offerings [shelamim] at Lev 19:5: VIA via tzav link reference — 19:5-8's peace offering is asked for its WINDOW and rejection — tzav.rejection_machine holds them (7:16-18); the slaughter row is not this span's question
   - -> pre_sinai [sabbath] at Lev 19:3: REVERSE link reference — G1 (REVERSE — the pre-Sinai runner calls this engine live; a call back would cycle) | Lev 19:3 'you shall keep My SABBATHS' beside the parents' fear; sabbath() calls HO — REVERSE at the cell — DONE
 
 ## cold_run_holiness_b.py — Lev 19:19-37
 - calls out (live): holiness, sanctions, tzav, vayikra5
-- called by (live): family, ordinances, pre_sinai, priesthood
+- called by (live): family, ordinances, pre_sinai, priesthood, sequence
 - required edges from the ink:
   - -> chatat [chatat] at Lev 19:22: FALSE link none — 19:22 חַטָּאתוֹ ('his SIN which he sinned', twice) — the noun sin inside the atonement clause, not the sin offering; the offering the verse names is the guilt ram
   - -> pre_sinai [circumcision,sabbath] at Lev 19:23, Lev 19:30: REVERSE link transfer taught by Shabbat 108a:7 ('its foreskin' here and 'its foreskin' there — the circumcision site from Lev 19:23's tree) — G1 (REVERSE — the pre-Sinai runner calls this engine live; a call back would cycle) | Lev 19:30 'My SABBATHS you shall keep' beside the sanctuary's fear (19:3's twin); 19:23 'you shall treat its foreskin as UNCIRCUMCISED' — the tree's foreskin, the rite's root as metaphor (Shabbat 108a's foreskin-foreskin analogy runs on exactly this token — the circumcision SITE); sabbath() and circumcision() call HB — REVERSE at the cell — DONE
@@ -122,7 +158,7 @@
 
 ## cold_run_incense_shekel.py — Exod 29:1-46; Exod 30:1-38; Exod 31:12-17; Exod 35:1-3
 - calls out (live): calendar, chatat, decalogue, guardians, metzora, minchah, mishpatim, moadim, offerings, priesthood, sanctuary_build, tzav, vayikra5, vestments, yoma, yovel
-- called by (live): erection, family, pre_sinai
+- called by (live): erection, family, pre_sinai, sequence
 - required edges from the ink:
   - -> chatat [chatat] at Exod 29:14, Exod 29:36, Exod 30:10: CALL carries procedure link reference — 29:14 'it is a SIN OFFERING' (the installation bull: horns by the finger, the base, the fats, burned outside the camp — the bull's OUTER-horn blood at 29:12 against Lev 4:7's INNER horns), 29:36 'a bull of sin offering each day... you shall purge the altar', 30:10 'from the blood of the sin offering of atonements once a year' — CH.blood / CH.carcass / CH.burn_site / CH.karet_census by live call
   - -> minchah [minchah] at Exod 29:41, Exod 30:9: CALL carries procedure link reference — 29:41 'like the MEAL OFFERING of the morning and its libation' (the tamid's tenth of flour in a quarter-hin of beaten oil) and 30:9 'no burnt offering, MEAL OFFERING, or libation on it' — MIN.oil_grade / MIN.leaven / MIN.salt / MIN.adjuncts by live call (the installation basket's unleavened forms 29:2 are Lev 2:4's cakes and wafers)
@@ -135,7 +171,7 @@
 
 ## cold_run_lev24.py — Lev 24:10-23
 - calls out (live): none
-- called by (live): mishpatim
+- called by (live): mishpatim, sequence
 - required edges from the ink:
   - -> offerings [shelamim] at Lev 24:11: FALSE link none — 24:11 שְׁלֹמִית (Shelomith) is the mother's NAME, not the peace offering
 - pointers in the ink:
@@ -145,7 +181,7 @@
 
 ## cold_run_metzora.py — Lev 14:1-32
 - calls out (live): chatat, minchah, offerings, tzav, vayikra5
-- called by (live): incense_shekel
+- called by (live): incense_shekel, sequence
 - required edges from the ink:
   - -> chatat [chatat] at Lev 14:13, Lev 14:19, Lev 14:22, Lev 14:31: CALL carries value link reference — 14:10's ewe is the commoner's animal — CH.rank(commoner)
   - -> minchah [bird_olah,minchah] at Lev 14:10, Lev 14:20, Lev 14:21, Lev 14:22, Lev 14:30, Lev 14:31: CALL carries place link reference — 14:22's bird burnt offering — MIN.bird(place)
@@ -156,14 +192,14 @@
 
 ## cold_run_minchah.py — Lev 1:14-17; Lev 2:1-16
 - calls out (live): offerings, vayikra5
-- called by (live): chatat, clocks, incense_shekel, metzora, moadim, priesthood, shemini_day, tzav, vayikra5
+- called by (live): chatat, clocks, incense_shekel, metzora, moadim, priesthood, sequence, shemini_day, tzav, vayikra5
 - required edges from the ink:
   - -> moadim [first_fruits] at Lev 2:14: REVERSE link transfer taught by Sifra Vayikra Dibbura d'Nedavah Section 13 4 ('and if you bring a meal offering of first fruits — this is the omer offering'); Menachot 84a:10 — 2:14's first-fruits meal offering IS the omer of Lev 23:9-14 (Sifra Emor Chapter 13 3); moadim calls minchah.omer — a call back would cycle
   - -> offerings [olah] at Lev 1:14, Lev 1:17: CALL carries procedure link reference — 1:14 and 1:17's burnt offering — the bird under Lev 1's frame: dispatch(olah:flock) disposition
 
 ## cold_run_mishpatim.py — Exod 21:1-37; Exod 22:1-16
 - calls out (live): lev24
-- called by (live): family, incense_shekel, pre_sinai
+- called by (live): family, incense_shekel, pre_sinai, sequence
 - required edges from the ink:
   - -> family [wife_taken] at Exod 22:15: REVERSE link hypothesis — G2 (REVERSE — the family runner reads this engine's tokens live; a call back would cycle) | Exod 22:15 'he shall pay a bride-price for her to be his WIFE' (לאשה) — the marriage formula's closing token, whose first seats are Gen 24:67 and 38:14; the family runner will read 22:15's tokens by MP.words — flipped to REVERSE at the cell — DONE | H (LR2, 2026-09-07): the marriage formula's closing token 'to be his wife' read across Exod 22:15, Gen 24:67 and 38:14 — no teacher joins the three seats on this token (Kiddushin 2a's taking-taking analogy runs on Deut 24:1 and Gen 23:13, a different pair)
   - -> incense_shekel [shekel] at Exod 21:32: REVERSE carries value link transfer taught by Midrash Tanchuma, Ki Tisa 11 3 (R. Yehuda bar Simon: 'from the goring ox it was learned — thirty shekels', Exod 21:32) — Exod 21:32 'THIRTY SHEKELS of silver' — the slave tariff in the unit 30:13 defines (twenty gerah the shekel of the sanctuary); the incense engine CALLS the mishpatim engine's lemma probe (MP.has_lemma / MP.words at 21:32) to reproduce Midrash Tanchuma Ki Tisa 10's pricing of the calf's ransom FROM the goring ox's slave tariff — the derivation runs from 21:32 into 30:12, so the edge is live the other way
@@ -175,16 +211,24 @@
 
 ## cold_run_mishpatim_2.py — Exod 21:22-22; Exod 21:26-27; Exod 22:15-16
 - calls out (live): none
-- called by (live): family
+- called by (live): family, sequence
 - required edges from the ink:
   - -> family [wife_taken] at Exod 22:15: REVERSE link transfer taught by Ketubot 10a:4 ('money he shall weigh as the mohar of the virgins', Exod 22:16 — the mohar and the ketubah joined by the sages; the live cell reads the mohar lemma of Gen 34:12 at its Sinai seat) — G2 (REVERSE — the family runner calls this engine's lemma check live; a call back would cycle) | Exod 22:15 the same token, the seduced virgin's span compiled twice (mishpatim and mishpatim_2 both declare it); the family runner will call MP2.has on 22:15-16's bride-price lemma — flipped to REVERSE at the cell — DONE | RECLASSIFIED at LR3 (2026-09-07): the live cell fetches the MOHAR lemma (4117 / 4119), not the marriage formula's token — Ketubot 10a:4 teaches that pairing; the formula token's hypothesis stays on mishpatim -> family
   - -> lev24 [talion_formula] at Exod 21:26, Exod 21:27: FALSE link none — 21:26-27 'he shall let him go free FOR (תחת) his eye' — the exchange preposition in the manumission clause; the tariff's seat 21:23-25 is cold_run_mishpatim's (CALL there)
 - pointers in the ink:
   - Exod 21:22 AS_WHEN "כאשר ישית עליו": PARAMETER link reference — the same clause, the same parameter (the fetus cell)
 
+## cold_run_mishpatim_3.py — Exod 21:7-11; Exod 21:13-15; Exod 21:17-17; Exod 21:20-21; Exod 22:1-2
+- calls out (live): sanctions
+- called by (live): sequence
+- required edges from the ink:
+  - -> lev24 [talion_formula] at Exod 21:20: FALSE link none — 21:20 וּמֵת תַּחַת יָדוֹ ('and he dies UNDER his hand') — the spatial preposition 'under', a homograph of the talion formula's 'in place of' (21:23-25, Lev 24:18-20) the census homes to the Lev 24 engine; the Lev 24 engine is not imported
+- pointers in the ink:
+  - Exod 21:9 AS_PRESCRIBED "כמשפט הבנות יעשה": INTERNAL link reference — O7 (2026-09-07) | כְּמִשְׁפַּט הַבָּנוֹת יַעֲשֶׂה לָּהּ ('according to the law of the daughters he shall do to her') — the target is 21:10's three (food, clothing, conjugal right) inside this runner's span; the Mekhilta reads the pointer BACKWARD: 'it comes to teach and is taught' — the three hold for every daughter of Israel (Nezikin 9 2, Rabbi Yoshiya); the cell maidservant('the_three')
+
 ## cold_run_moadim.py — Lev 23:1-44
 - calls out (live): calendar, minchah, offerings, pesach
-- called by (live): erection, incense_shekel, pre_sinai, yoma
+- called by (live): erection, incense_shekel, pre_sinai, sequence, yoma
 - required edges from the ink:
   - -> calendar [seventh_year] at Lev 23:16: CALL carries verdict link transfer taught by Mishnah Bikkurim 1:3 (no first fruits before Atzeret); Menachot 84b:4 (the two loaves precede the first fruits) — the two loaves' first fruits and the harvest feast's appearing — CAL.first_fruits, CAL.pilgrimage; the 23:16 token itself is 'the seventh SABBATH' of the omer count, a homograph of the seventh year
   - -> chatat [chatat] at Lev 23:19: VIA via offerings link reference — 23:19's goat sin offering — its place through dispatch(outer_chatat); the tier logic of Lev 4 is not this span's question
@@ -196,7 +240,7 @@
 
 ## cold_run_negaim.py — Lev 13:1-59; Lev 14:33-57
 - calls out (live): none
-- called by (live): none
+- called by (live): sequence
 - required edges from the ink:
   - -> lev24 [talion_formula] at Lev 14:42: FALSE link none — 14:42 'other stones IN PLACE OF (תחת) the stones' — the preposition, not the talion formula
   - -> pre_sinai [shed] at Lev 14:41: FALSE link none — Lev 14:41 'they shall POUR OUT the dust they scraped' — the house-plague's dust, the verb's pouring sense: a homograph of the shedding
@@ -204,11 +248,11 @@
 
 ## cold_run_offerings.py — Lev 1:1-13; Lev 3:1-17
 - calls out (live): pesach
-- called by (live): chatat, clocks, erection, incense_shekel, metzora, minchah, moadim, ordinances, pre_sinai, priesthood, sanctions, sanctuary_build, shemini_day, tzav, yoma
+- called by (live): chatat, clocks, erection, exodus_story, incense_shekel, metzora, minchah, moadim, ordinances, pre_sinai, priesthood, sanctions, sanctuary_build, sequence, shemini_day, tzav, yoma
 
 ## cold_run_ordinances.py — Exod 20:19-26; Exod 22:17-30; Exod 23:1-9; Exod 23:20-33
 - calls out (live): decalogue, holiness, holiness_b, offerings, pesach, sanctions, yovel
-- called by (live): erection, family, pre_sinai, priesthood, sanctuary_build, vestments
+- called by (live): erection, family, pre_sinai, priesthood, sanctuary_build, sequence, vestments
 - required edges from the ink:
   - -> family [inheritance] at Exod 23:30: FALSE link none — Exod 23:30 'until you INHERIT the land' (ונחלת) — the land-possession verb, not the estate: the same root, the other sense (Deut 21:16 'the day he causes his sons to inherit' is the estate's Sinai seat, uncompiled)
   - -> lev24 [talion_formula] at Exod 23:5: FALSE link none — 23:5's תחת ('under its burden') is the preposition, not the talion formula
@@ -219,7 +263,7 @@
 
 ## cold_run_pesach.py — Exod 12:1-51; Exod 13:1-16
 - calls out (live): none
-- called by (live): calendar, erection, family, moadim, offerings, ordinances, pre_sinai, temurah
+- called by (live): calendar, erection, exodus_story, family, moadim, offerings, ordinances, pre_sinai, sequence, temurah
 - required edges from the ink:
   - -> moadim [appointed_time] at Exod 13:10: REVERSE link reference — Exod 13:10 'this statute in its SEASON from year to year' — the Passover's date, an appointed time; the appointed-times engine already calls the Passover engine (D4, D6) — a call back would cycle
   - -> offerings [olah] at Exod 12:38: FALSE link none — 12:38 עָלָה 'went up' — the mixed multitude went up with them; the verb, not the burnt offering
@@ -234,7 +278,7 @@
 
 ## cold_run_pre_sinai.py — Gen 1:1-31; Gen 2:1-3; Gen 2:16-17; Gen 2:24-24; Gen 9:1-17; Gen 17:1-27
 - calls out (live): calendar, clocks, decalogue, erection, holiness, holiness_b, incense_shekel, mishpatim, moadim, offerings, ordinances, pesach, priesthood, sanctions, tochacha, tzav, yoma, yovel
-- called by (live): none
+- called by (live): exodus_story, sequence
 - required edges from the ink:
   - -> moadim [appointed_time] at Gen 17:21, Gen 1:14: CALL carries procedure link transfer taught by Bereshit Rabbah 6:1 ('and for seasons — these are the three pilgrim festivals') — G1 (CALL — the cell fetches it live) | 'for signs and for SEASONS' (Gen 1:14 — the luminaries for the festival calendar) and 'at this SET TIME next year' (17:21 — Isaac's date); day_boundary('seasons') will call MO — flipped to CALL at the cell — DONE
   - -> sanctions [life_blood] at Gen 9:4: CALL carries procedure link transfer taught by Sanhedrin 59a:11-13 (R. Yosei son of R. Chanina: a command said to the sons of Noah and repeated at Sinai — M-24's exemplar; the limb from the living at Gen 9:4, Lev 17:14) — G1 (CALL — the cell fetches it live) | 'flesh with its LIFE, its blood' (Gen 9:4) — 'its blood in its life' stands at Gen 9:4 and Lev 17:14 alone in the Tanakh: the blood ban's law seat is the sanctions engine (Lev 17:10-14), the Noahide limb-from-the-living its first seat here; noahide('limb') will call SAN.blood — flipped to CALL at the cell — DONE
@@ -244,7 +288,7 @@
 
 ## cold_run_priesthood.py — Lev 21:1-24; Lev 22:1-33; Lev 24:1-9
 - calls out (live): clocks, holiness_b, minchah, offerings, ordinances, sanctions, vayikra5
-- called by (live): erection, family, incense_shekel, pre_sinai, sanctuary_build, vestments
+- called by (live): erection, family, incense_shekel, pre_sinai, sanctuary_build, sequence, vestments
 - required edges from the ink:
   - -> clocks [zav] at Lev 22:4: CALL carries status link reference — 22:4 'a leper or a ZAV shall not eat of the holy things until he is pure' — the zav's tier and the sunset gate are the clocks engine's: CL.zav(tier / count_start); the leper is the affliction engine's output datum (negaim exposes no function)
   - -> incense_shekel [anointing_oil] at Lev 21:10, Lev 21:12: REVERSE carries verdict link reference — Lev 21:10, 21:12 'on whose head the ANOINTING OIL was poured', 'the crown of the anointing oil of his God is on him' — the oil's SPEC is 30:22-33 (poured on Aaron's head at 29:7); the incense engine CALLS PR.family(nezer) for the many-garmented high priest when the oil ceased, so the edge is live the other way
@@ -258,7 +302,7 @@
 
 ## cold_run_sanctions.py — Lev 17:1-16; Lev 18:1-30; Lev 20:1-27
 - calls out (live): chatat, clocks, offerings, shemini
-- called by (live): family, holiness_b, ordinances, pre_sinai, priesthood
+- called by (live): family, holiness_b, mishpatim_3, ordinances, pre_sinai, priesthood, sequence
 - required edges from the ink:
   - -> clocks [niddah] at Lev 18:19, Lev 20:21: CALL carries status link reference — 18:19 and 20:21's menstruant — CL.zav / the niddah status
   - -> offerings [olah,shelamim] at Lev 17:5, Lev 17:8: CALL carries window link reference — 17:5's 'slaughter them as peace offerings' and 17:8's burnt offering — dispatch(shelamim), dispatch(olah:flock) in platform(classes)
@@ -268,7 +312,7 @@
 
 ## cold_run_sanctuary_build.py — Exod 25:1-40; Exod 26:1-37; Exod 27:1-21; Exod 35:30-35; Exod 36:1-38; Exod 37:1-29; Exod 38:1-31
 - calls out (live): chatat, offerings, ordinances, priesthood, tzav
-- called by (live): erection, family, incense_shekel, vestments
+- called by (live): erection, family, incense_shekel, sequence, vestments
 - required edges from the ink:
   - -> incense_shekel [anointing_oil,incense,laver,shekel] at Exod 25:6, Exod 37:25, Exod 37:29, Exod 38:24, Exod 38:25, Exod 38:26, Exod 38:29, Exod 38:8: REVERSE carries procedure link reference — CLOSED at sitting E4 (2026-09-06): cold_run_incense_shekel.py now exists and CALLS this runner (SB.altar horns/base, SB.veil veil_at, SB.ark, SB.court) for the incense altar's placement and the bronze altar's members — a call back would cycle: REVERSE; the run builds what E4's spec commands — 37:25-28 the incense altar (30:1-10), 37:29 the anointing oil and incense (30:22-38), 38:8 the laver (30:17-21), 38:24-26 the half-shekel census silver (30:11-16); the spec's own 25:6 names the anointing oil and the incense among the materials; the home runner cold_run_incense_shekel.py does not exist yet — the vocabulary extended at E2 so the gate REQUIRES these edges the day it does
   - -> lev24 [talion_formula] at Exod 25:35, Exod 26:19, Exod 26:21, Exod 26:25, Exod 26:33, Exod 27:5, Exod 36:24, Exod 36:26 ...: FALSE link none — eleven 'under' tokens (25:35 the knob UNDER two branches; 26:19, 21, 25 two sockets UNDER a board; 26:33 the veil UNDER the clasps; 27:5 the net UNDER the altar's ledge; 36:24, 26, 30; 37:21; 38:4 the same at the run) — the spatial preposition, never the talion formula
@@ -279,16 +323,16 @@
   - Exod 27:8 AS_WHEN "כאשר הראה אתך": INTERNAL link reference — 'as He showed you in the mountain, so shall they make' — the fourth shown-pattern clause, the doers plural; the target is the vision, censused in the runner
 
 ## cold_run_sequence.py — 
-- calls out (live): none
+- calls out (live): calendar, chatat, clocks, decalogue, erection, exodus_story, family, holiness, holiness_b, incense_shekel, lev24, metzora, minchah, mishpatim, mishpatim_2, mishpatim_3, moadim, negaim, offerings, ordinances, pesach, pre_sinai, priesthood, sanctions, sanctuary_build, shemini, shemini_day, temurah, tochacha, tzav, vayikra5, vestments, yoma, yovel
 - called by (live): none
 
 ## cold_run_shemini.py — Lev 11:1-47
 - calls out (live): none
-- called by (live): sanctions
+- called by (live): sanctions, sequence
 
 ## cold_run_shemini_day.py — Lev 9:1-24
 - calls out (live): chatat, minchah, offerings, tzav
-- called by (live): erection
+- called by (live): erection, sequence
 - required edges from the ink:
   - -> chatat [chatat] at Lev 9:10, Lev 9:15, Lev 9:2, Lev 9:22, Lev 9:3, Lev 9:8: CALL carries procedure link reference — 9:2's calf and 9:3's goat 'for a sin offering'; 9:8-11 the calf's rite and 9:15's goat 'like the first' — the run graded against the sin-offering engine's tiers by live call: CH.rank (the spec's bull against the run's calf and goat), CH.blood / sprinklings / carcass (the outer protocol at 9:9 against the anointed tier's inner one; the burning at 9:11 against the outer tier's eating), CH.precedence_bulls, CH.burn_site, CH.inquiry (Lev 10:16-18's goat)
   - -> minchah [minchah] at Lev 9:17, Lev 9:4: CALL carries procedure link reference — 9:4's meal offering mixed with oil and 9:17's palm filled and smoked — MIN.fistful (the disqualifiers synced by the Sifra's fill-fill analogy; the left hand from Menachot 9b's reading of THIS verse's 'his palm'), MIN.oil_ops, MIN.frankincense_quantity, MIN.remainder
@@ -301,7 +345,7 @@
 
 ## cold_run_temurah.py — Lev 27:9-15; Lev 27:26-34
 - calls out (live): pesach, yovel
-- called by (live): none
+- called by (live): sequence
 - required edges from the ink:
   - -> lev24 [talion_formula] at Lev 27:32: FALSE link none — 27:32 'passes UNDER (תחת) the rod' — the preposition, not the talion formula
   - -> pesach [firstborn,matzah] at Lev 27:26, Lev 27:34: CALL carries verdict link reference — 27:26's firstling — PS.firstborn
@@ -311,7 +355,7 @@
 
 ## cold_run_tochacha.py — Lev 26:1-46
 - calls out (live): none
-- called by (live): pre_sinai
+- called by (live): pre_sinai, sequence, yovel
 - required edges from the ink:
   - -> offerings [olah] at Lev 26:36: FALSE link none — 26:36 עָלֶה 'a driven LEAF' — the noun leaf, not the burnt offering
   - -> pesach [matzah] at Lev 26:14: FALSE link none — 26:14 הַמִּצְוֺת 'all these COMMANDMENTS' — the homograph of the unleavened bread
@@ -321,7 +365,7 @@
 
 ## cold_run_tzav.py — Lev 6:1-23; Lev 7:1-38; Lev 8:1-36
 - calls out (live): minchah, offerings
-- called by (live): chatat, erection, holiness, holiness_b, incense_shekel, metzora, pre_sinai, sanctuary_build, shemini_day, vayikra5
+- called by (live): chatat, erection, holiness, holiness_b, incense_shekel, metzora, pre_sinai, sanctuary_build, sequence, shemini_day, vayikra5
 - required edges from the ink:
   - -> chatat [chatat] at Lev 6:10, Lev 6:18, Lev 6:23, Lev 7:37, Lev 7:7, Lev 8:14, Lev 8:2: REVERSE link reference — 6:17-23's sin-offering law and 7:7's 'as the chatat' are this runner's own; Lev 4's tiers call INTO tzav (chatat calls dues_machine) — a call back would cycle
   - -> incense_shekel [anointing_oil,laver] at Lev 7:35, Lev 8:10, Lev 8:11, Lev 8:12, Lev 8:2, Lev 8:30: REVERSE carries procedure link reference — Lev 7:35 'the anointing-portion of Aaron', Lev 8:2, 8:10-12, 8:30 the ANOINTING OIL poured and sprinkled, 8:11 the LAVER anointed — the run of THIS spec (29:7, 29:21 the oil; 30:18-21 the laver; 30:26-29 the anointing list); the incense engine CALLS TZ.installation for the run's atomicity, commit, confinement and leftover, so the edge is live the other way
@@ -344,7 +388,7 @@
 
 ## cold_run_vayikra5.py — Lev 5:1-26
 - calls out (live): chatat, minchah, tzav
-- called by (live): chatat, clocks, holiness, holiness_b, incense_shekel, metzora, minchah, priesthood
+- called by (live): chatat, clocks, holiness, holiness_b, incense_shekel, metzora, minchah, priesthood, sequence
 - required edges from the ink:
   - -> chatat [chatat] at Lev 5:11, Lev 5:12, Lev 5:13, Lev 5:6, Lev 5:7, Lev 5:8, Lev 5:9: CALL carries value link reference — 5:6's female of the flock runs Lev 4:27-35 — pointers('lamb_tier_procedure') calls CH.rank(commoner) (function-local import: chatat imports this module at load)
   - -> incense_shekel [shekel] at Lev 5:15: REVERSE carries value link reference — Lev 5:15 'by your valuation in silver SHEKELS by the shekel of the sanctuary' — the guilt ram priced in the unit 30:13 defines; the incense engine CALLS V5.pointers(asham_procedure) for the ram's own procedure and reads the plural's minimum (two shekels — Mishnah Zevachim 10:5, Keritot 5:2's two selas), so the edge is live the other way
@@ -358,7 +402,7 @@
 
 ## cold_run_vestments.py — Exod 28:1-43; Exod 39:1-43
 - calls out (live): ordinances, priesthood, sanctuary_build, yoma
-- called by (live): erection, incense_shekel
+- called by (live): erection, incense_shekel, sequence
 - required edges from the ink:
   - -> incense_shekel [anointing_oil,incense,laver] at Exod 28:41, Exod 39:38, Exod 39:39: REVERSE carries inventory link reference — CLOSED at sitting E4 (2026-09-06): cold_run_incense_shekel.py now exists and CALLS this runner (VS.order_by_name / VS.investiture for the dressing order of Exod 29:5-9 against Lev 8:7-13) — a call back would cycle, so the edge is live the other way; the delivery manifest 39:38-39 hands Moses 'the golden altar, the anointing oil, the incense of spices... the laver and its base' — E4's four institutions named as inventory; the home runner cold_run_incense_shekel.py does not exist yet)
 - pointers in the ink:
@@ -373,7 +417,7 @@
 
 ## cold_run_yoma.py — Lev 16:1-34
 - calls out (live): chatat, moadim, offerings
-- called by (live): incense_shekel, pre_sinai, vestments
+- called by (live): incense_shekel, pre_sinai, sequence, vestments
 - required edges from the ink:
   - -> chatat [chatat] at Lev 16:11, Lev 16:15, Lev 16:16, Lev 16:21, Lev 16:25, Lev 16:27, Lev 16:3, Lev 16:34 ...: CALL carries status link reference — 16:27's burnt pair outside the camp — CH.burn_site(as_commanded)
   - -> incense_shekel [incense] at Lev 16:12, Lev 16:13: REVERSE carries procedure link reference — Lev 16:12-13 'coals... his fistfuls of fine INCENSE of spices... the cloud of the incense' — the Day's incense is 30:34-38's recipe beaten 'fine' (30:36) and 'fine of the fine' (Yoma 45a); the incense engine CALLS YOMA.service_order for the 16:12-13 step and the 16:18-19 inner-altar atonement that 30:10's 'once a year' names, so the edge is live the other way
@@ -385,8 +429,8 @@
   - Lev 16:34 AS_WHEN "כאשר צוה יהוה": RUN_CITATION link reference — 'and he did as the LORD commanded Moses' — the chapter's closing run line
 
 ## cold_run_yovel.py — Lev 25:1-55; Lev 27:1-8; Lev 27:16-25
-- calls out (live): none
-- called by (live): calendar, family, holiness, incense_shekel, ordinances, pre_sinai, temurah
+- calls out (live): tochacha
+- called by (live): calendar, family, holiness, incense_shekel, ordinances, pre_sinai, sequence, temurah
 - required edges from the ink:
   - -> calendar [seventh_year] at Lev 25:20, Lev 25:4: REVERSE link reference — 25:4 and 25:20's seventh year is Exod 23:10-11's release; calendar calls yovel.sabbatical() — the fuller law is the home
   - -> family [inheritance] at Lev 25:46: REVERSE link hypothesis — G2 (REVERSE — the family runner calls the jubilee engine live; a call back would cycle) | Lev 25:46 'you may BEQUEATH them to your sons after you' (והתנחלתם) — the estate's inheritance verb at a Sinai seat, the noun's first seat Gen 48:6 'in their inheritance'; the family runner calls the jubilee engine — flipped to REVERSE at the cell — DONE | H (LR2, 2026-09-07): Lev 25:46's bequeathing verb read with Gen 48:6's inheritance noun on the shared root (nachal) — no teacher joins the two seats

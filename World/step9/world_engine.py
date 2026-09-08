@@ -74,7 +74,9 @@ class Calendar:
     rounding), the year turning at the era's new-year month (Mishnah Rosh Hashanah 1:1 — a data row), the
     thirteenth month by the season ground alone (Sanhedrin 13a:4's recorded threshold over a MODELED solar
     year and equinox — OPEN-2, labeled). Keys: day, week, month, year, sabbatical, jubilee (Lev 25:4, 25:8,
-    25:10 — the ink's counts; the count-start offset and the fiftieth's place in the cycle are data rows)."""
+    25:10 — the ink's counts; the count-start offset and the fiftieth's place in the cycle are data rows), and
+    from O5 (2026-09-07) the FESTIVAL KEYS of the row festival_dates — Leviticus 23's own dates, a scene walking
+    to a festival by next(key), a festival's recurrence a period timer keyed by it (CLOCK.md section 10)."""
     KEYS = ('day', 'week', 'month', 'year', 'sabbatical', 'jubilee')
 
     def __init__(self, epoch=None):
@@ -91,6 +93,12 @@ class Calendar:
         self.sab, self.cyc, self.jub = P['sabbatical_years']['value'], P['cycle_years']['value'], P['jubilee_year']['value']
         self.offset = P['count_start_offset_years']['value']
         self.fiftieth = P['fiftieth_in_cycle']['value']
+        # O5 THE MOADIM RE-TYPE (2026-09-07; CLOCK.md section 10): the FESTIVAL KEYS from Lev 23's own dates — the row
+        # festival_dates (ink: {month, day}, {from, plus} on the named key, or {key: week}) and omer_day (received)
+        self.festivals = dict((P.get('festival_dates') or {}).get('value') or {})
+        if 'omer_day' in P:
+            self.festivals['omer'] = P['omer_day']['value']
+        self.keys = self.KEYS + tuple(k for k in self.festivals if k not in self.KEYS)
         self._months = []          # (start_day, year, month_no, length), laid out lazily from the epoch
         self._starts = []
         # O1 (2026-09-07; SEQUENTIAL_RUN.md section 12 e): the era row's `day_one_offset` — the days BEFORE the first
@@ -184,14 +192,35 @@ class Calendar:
         n = y - 1 - self.offset
         return p == self.jub if self.fiftieth == 'not_counted' else (n > 0 and n % self.cyc == 0)
 
+    def festival_day(self, y, key):
+        """O5: the day of a festival key in year y — a {month, day} row by day_of, a {from, plus} row by the named key's
+        day plus the ink's own count (the fiftieth from the omer, the eighth from the first)"""
+        row = self.festivals[key]
+        if 'key' in row:
+            raise SystemExit('CALENDAR: %r is the %r key, not a date' % (key, row['key']))
+        if 'from' in row:
+            return self.festival_day(y, row['from']) + int(row['plus'])
+        return self.day_of(y, int(row['month']), int(row['day']))
+
     def next(self, day, key):
         """the first boundary of `key` strictly after `day`"""
         if key == 'day':
             return day + 1
         if key == 'week':
             return day + 7
+        if key in self.festivals:                             # O5: a festival key — this year's occurrence if still ahead, else the next year's
+            row = self.festivals[key]
+            if 'key' in row:
+                return self.next(day, row['key'])
+            self._extend_to_day(day)
+            y = max(self.year(day), 1)
+            d = self.festival_day(y, key)
+            while d <= day:
+                y += 1
+                d = self.festival_day(y, key)
+            return d
         if key not in self.KEYS:
-            raise SystemExit('CALENDAR: unknown key %r (keys: %s)' % (key, ', '.join(self.KEYS)))
+            raise SystemExit('CALENDAR: unknown key %r (keys: %s)' % (key, ', '.join(self.keys)))
         self._extend_to_day(day)
         i = bisect.bisect_right(self._starts, day)
         while True:
@@ -329,6 +358,14 @@ class Clock:
     @property
     def date(self):
         return self.calendar.date(self.day) if self.epoch else None
+
+    @property
+    def weekday(self):
+        """O8 S1 (2026-09-08; NARRATIVE_GAPS.md convention 17): the WEEKDAY from the creation count — day 0 is 'day one'
+        (Gen 1:5), day 6 the first Sabbath (2:2-3); 1 = the first day of the week ... 7 = the Sabbath. An engine
+        derivation under the creation epoch alone (no other epoch row anchors a week); the shelf's weekday rows
+        (Shabbat 87b:2-5) are graded AGAINST it by the sequence runner's checkpoints, never read into it."""
+        return (self.day % 7) + 1 if self.epoch == 'creation' else None
 
     def at_year(self, y):
         return self.calendar.day_of(y)
@@ -474,10 +511,11 @@ class World:
         else:
             self.log.append(('WRITE', now, entry))
 
-    def close(self, eid, effect, note):
-        """an entry closes when the text records the closing act"""
+    def close(self, eid, effect, note, value=None):
+        """an entry closes when the text records the closing act; with `value` the entry whose value matches closes
+        (O8 S1, 2026-09-08: the frogs' removal closes the FROGS' plague entry, not the first open plague — probe 18)"""
         for e in self.entity(eid).ledger:
-            if e['effect'] == effect and e.get('open'):
+            if e['effect'] == effect and e.get('open') and (value is None or e.get('value') == value):
                 e['open'] = False
                 e['closed_by'] = note
                 return True
