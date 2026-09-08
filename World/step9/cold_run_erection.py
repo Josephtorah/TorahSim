@@ -1360,7 +1360,7 @@ def scene():
         ws.submit({'kind': 'tent_pitched_outside', 'subject': 'moses', 'pitcher': 'moses', 'servant': 'joshua', 'distance_from_camp': 'twelve_mil', 'case_source': 'Exod 33:7-11 + Mishnah Avot 1:1 + Sanhedrin 5b:9 — the tent, the seeker, Joshua', 'law': 'W7'})
         ws.submit({'kind': 'ascent_barred', 'subject': 'the-man', 'person': 'the-man', 'presence_resting': True, 'case_source': 'Exod 34:3 + Taanit 21b:4 — while the Presence rests', 'law': 'W7'})
         ws.submit({'kind': 'ascent_barred', 'subject': 'the-later-climber', 'person': 'the-later-climber', 'presence_resting': False, 'case_source': 'Taanit 21b:4 — when it departed, they may go up (19:13)', 'law': 'W7'})
-        ws.advance(48)
+        ws.advance(48)                   # this test world counts relative days only; ON THE SEQUENTIAL TAPE the second ascent is dated by the shelf — the last tablets given on Yom Kippur (Taanit 30b:8, Bava Batra 121a:6), the ascent forty days before (O1, 2026-09-07; calendar_parameters.yaml second_tablets_given)
         ws.submit({'kind': 'moses_ascended', 'subject': 'moses', 'ascender': 'moses', 'ascent': 'second', 'day': 48, 'case_source': 'Exod 34:2-4, 34:28 — the second forty days; the radiant face at 34:29', 'law': 'W7'})
         ws.submit({'kind': 'attributes_proclaimed_at_sinai', 'subject': 'the-repentant', 'hearer': 'the-repentant', 'repented': True, 'sin_kind': 'other', 'case_source': 'Exod 34:6-7 + Yoma 86a:5 — He clears those who repent', 'law': 'W7'})
         ws.submit({'kind': 'attributes_proclaimed_at_sinai', 'subject': 'the-unrepentant', 'hearer': 'the-unrepentant', 'repented': False, 'sin_kind': 'other', 'case_source': 'Yoma 86a:5 — and does not clear those who do not', 'law': 'W7'})

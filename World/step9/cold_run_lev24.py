@@ -21,7 +21,7 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chc(_P, 'grade', 2, 2)
-assert GUARDED == 19, ("the guard counted %d expectations, the tripwire holds 19" % GUARDED)
+assert GUARDED == 24, ("the guard counted %d expectations, the tripwire holds 24" % GUARDED)   # O3 (2026-09-07): measured 24 — the old 19 counted the file's last list (the one-law's three rows) for every call; each call's own list makes 24
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys, os
 

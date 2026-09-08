@@ -75,6 +75,7 @@ daemons:
       levirate_commanded: [levirate_owed]
       slain: [slain_by_heaven]
       widow_sent: [waits_for_the_levir]
+      shelah_grown: [levirate_owed]
       pledge_given: [pledge_held]
       sentenced: [sentence_pronounced]
       recognized: [acquitted]
@@ -98,9 +99,9 @@ daemons:
       bull_offered: [altar_purged, burned_outside_camp]
       ram_olah: [accepted]
       ram_miluim: [blood_on_extremities, waved, due_to_priest]
-      milluim_blood_sprinkled: [consecrated, invested_office]   # W3: garments_sprinkled unified with the library's name (one act, one name)
-      milluim_leftover: [burn_remainder]                         # W3: meal unified with the library's name
-      confined: [confined_seven_days]
+      milluim_blood_sprinkled: [consecrated]   # W3: garments_sprinkled unified with the library's name (one act, one name)
+      milluim_leftover: []                         # W3: meal unified with the library's name
+      confined: []
       did_all: [inspected_as_commanded]
       # ---- W6 THE SANCTUARY'S REMAINDER (D9-iii, 2026-09-07): declared BEFORE the code — law_investiture EXTENDED to the runner's law layer: the succession (29:29-30),
       # the incense altar (30:1-10), the shekel (30:11-16), the oil (30:22-33), the incense (30:34-38); no new daemon (the #83 ruling)
@@ -504,9 +505,7 @@ functions:
   chatat:
     domain: {status: WRAPPED, by: law_chatat}
     rank: {status: WRAPPED, by: law_chatat}
-    identity: {status: NONE, why: "W3: the function writes nothing — every cell carries FX.NONE; the parse read the TIER NAME 'anointed' (who == 'anointed') as the effect of that name: a homograph, not a write (OPEN in COMPILE_DEBT)"}
     blood: {status: WRAPPED, by: law_chatat}
-    sprinklings: {status: NONE, why: "W3: the function writes nothing — its one cell carries FX.NONE; the parse read the TIER NAME 'anointed' (tier in ('anointed', 'congregation')) as the effect of that name: a homograph, not a write (OPEN in COMPILE_DEBT)"}
     carcass: {status: WRAPPED, by: law_chatat}
     fat: {status: WRAPPED, by: law_chatat}
     burn_site: {status: WRAPPED, by: law_chatat}
@@ -561,8 +560,6 @@ functions:
     presence: {status: WRAPPED, by: law_erection}
     craftsmen: {status: WRAPPED, by: law_erection}
     donation: {status: WRAPPED, by: law_erection}
-    scene_counts_w6: {status: NONE, why: "W6: the scene's count helper — reads the ledger's effect names to build the tuple, writes nothing; the value/effect homograph (the OPEN gate item)"}
-    scene_counts_w7: {status: NONE, why: "W7: the Sinai scene's count helper — reads the ledger's effect names to build the tuple, writes nothing; the value/effect homograph (the OPEN gate item)"}
     command: {status: WRAPPED, by: law_erection}
     execution: {status: WRAPPED, by: law_erection}
     initiations: {status: WRAPPED, by: law_erection}
@@ -605,11 +602,9 @@ functions:
     laver: {status: WRAPPED, by: law_erection}
     oil: {status: WRAPPED, by: law_investiture}
     incense: {status: WRAPPED, by: law_investiture}
-    scene_counts_w6: {status: NONE, why: "W6: the scene's count helper — reads the ledger's effect names to build the tuple, writes nothing; the value/effect homograph (the OPEN gate item)"}
     sabbath: {status: WRAPPED, by: law_sabbath}
   lev24:
     talion: {status: WRAPPED, by: law_lev24}
-    main: {status: WRAPPED, by: law_lev24}
   metzora:
     frame: {status: WRAPPED, by: law_metzora}
     birds: {status: WRAPPED, by: law_metzora}
@@ -620,7 +615,6 @@ functions:
   minchah:
     vow: {status: WRAPPED, by: law_minchah}
     who_brings: {status: WRAPPED, by: law_minchah}
-    oil_ops: {status: NONE, why: "W3: the function writes nothing — every cell carries FX.NONE; the gate's function parse read the cell VALUE 'anointed' (the wafers anointed with oil, Lev 2:4) as the effect of that name: a homograph, not a write (the parser's value/effect homograph, recorded OPEN in COMPILE_DEBT)"}
     fistful: {status: WRAPPED, by: law_minchah}
     remainder: {status: WRAPPED, by: law_minchah}
     leaven: {status: WRAPPED, by: law_minchah}
@@ -642,7 +636,7 @@ functions:
     sukkot: {status: WRAPPED, by: law_moadim}
     passover: {status: WRAPPED, by: law_moadim}
   negaim:
-    main: {status: WRAPPED, by: law_negaim}
+    '<module>': {status: WRAPPED, by: law_negaim}   # O3 (2026-09-07): main's scene reads the ledger's effect names; the runner's effects are the daemon's — the module shape
   offerings:
     "<module>": {status: WRAPPED, by: law_offerings}
   ordinances:
@@ -710,7 +704,7 @@ functions:
     lamp: {status: WRAPPED, by: law_erection}
     books: {status: WRAPPED, by: law_sanctuary_build}
   shemini:
-    touch_effect: {status: WRAPPED, by: law_shemini}
+    '<module>': {status: WRAPPED, by: law_shemini}   # O3 (2026-09-07): touch_effect RETURNS effect names the daemon writes — a module-level attachment, not a writer
   shemini_day:
     day: {status: WRAPPED, by: law_eighth_day}
     order: {status: WRAPPED, by: law_eighth_day}
@@ -748,11 +742,9 @@ functions:
     asham_law: {status: WRAPPED, by: law_tzav}
     minchah_law: {status: WRAPPED, by: law_tzav}
   vayikra5:
-    graded_offering: {status: WRAPPED, by: law_vayikra5}
-    sacrilege: {status: WRAPPED, by: law_vayikra5}
-    deposit_restitution: {status: WRAPPED, by: law_deposit_oath}
+    '<module>': {status: WRAPPED, by: law_vayikra5}   # O3 (2026-09-07): the effects are attached at the module level (effect_of inside main maps verdicts to effects); the three verdict functions' 'exempt' was a verdict VALUE the old parse read as a write; law_deposit_oath's wrap of deposit_restitution folds into the module (the library daemon shares adds_fifth / atoned_forgiven with law_vayikra5 by call)
   vestments:
-    office: {status: WRAPPED, by: law_investiture}
+    office: {status: WRAPPED, by: law_installation}   # O2 (2026-09-07): the office's run is the library's COMMIT at Lev 8:30 (invested_office on the party) — law_investiture no longer writes the office
     ephod: {status: WRAPPED, by: law_investiture}
     breastplate: {status: WRAPPED, by: law_vestments}
     robe: {status: WRAPPED, by: law_vestments}
@@ -764,9 +756,7 @@ functions:
     route: {status: WRAPPED, by: law_yoma}
     day_atones: {status: WRAPPED, by: law_yoma}
     dispatch_goat: {status: WRAPPED, by: law_yoma}
-    main: {status: WRAPPED, by: law_yoma}
   yovel:
-    scene_counts_fork: {status: NONE, why: "THE CLOCK SITTING (2026-09-07): the yovel scene's fork-rows count helper — reads the land's jubilee_release values and the field's returns to build the tuple, writes nothing; the value/effect homograph (the OPEN gate item)"}
     cycle: {status: WRAPPED, by: law_yovel}
     jubilee: {status: WRAPPED, by: law_yovel}
     field_sale: {status: WRAPPED, by: law_yovel}

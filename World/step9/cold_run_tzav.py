@@ -641,7 +641,7 @@ def scene():
         w.laws = [WE.law_installation, law_tzav]
         w.submit({'kind': 'installation_commanded', 'subject': 'aaron-and-sons', 'components': ['bullock', 'ram_olah', 'ram_milluim', 'basket'], 'case_source': 'Lev 8:2 — the take-list (the library daemon: Sifra Tzav Mekhilta DeMiluim I 19)'})
         w.submit({'kind': 'milluim_blood_sprinkled', 'subject': 'aaron-and-sons', 'case_source': 'Lev 8:30 — the commit (DeMiluim I 34)'})
-        w.submit({'kind': 'milluim_leftover', 'subject': 'aaron-and-sons', 'case_source': 'Lev 8:32 — the leftover burned'})
+        w.submit({'kind': 'milluim_leftover', 'subject': 'aaron-and-sons', 'case_source': 'Lev 8:31-32 — the leftover burned'})   # O2: the registry's ink line (one command, two clauses) — the sequential tape's dedup key
         w.advance(1)
         w.submit({'kind': 'altar_fire_tended', 'subject': 'the-altar', 'tender': 'the-priest', 'act': 'kept', 'hour': 'night', 'case_source': 'Mishnah Zevachim 9:1 — once up does not come down'})
         w.submit({'kind': 'altar_fire_tended', 'subject': 'the-altar', 'tender': 'the-priest', 'act': 'limb_dislodged', 'hour': 'before_midnight', 'case_source': 'Mishnah Zevachim 9:6 — dislodged before midnight: returned to the fire'})

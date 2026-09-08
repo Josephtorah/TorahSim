@@ -14026,3 +14026,385 @@ dict(r, ...) loop), its helper declared NONE, the TUPLE prediction by script FIR
 (ls first), COMPILE_DEBT, THE_STEPS (a process upgrade — the tape's conventions Numbers must follow), THE_BRIEFING, this doc, memory. Then NUMBERS (its
 first sitting reads the standing map + SEQUENTIAL_RUN.md's conventions). OPEN (counted): as #87's. Watches: as #87's + THE EXAM STAYS OFF THE TAPE (a
 Mishnah row is a test, not history) + ONE WHO-IS-WHO (entity_registry.yaml) + THE ERA COUNTER IS SET BY A MARKER, NEVER BY A LITERAL DAY.
+
+═══ COMMITTED 250b168 (2026-09-07, the owner: "commit push") — D9-iv + THE CLOCK CONSENSUS (both rounds) + THE CLOCK SITTING in one commit (40 tracked
+files + 4 new: CLOCK.md, REPORT_CLOCK.md, calendar_parameters.yaml, clock_probes.py), staged by exclusion (the NEVER-COMMIT set, elijah_docket, and
+ARCHITECTURE/* left unstaged), pushed as Josephtorah (d6d82b9..250b168), the account switched back. #88 remains the clean point; this note is the only
+thing after it — the owner compacts next; then THE SEQUENTIAL RUN on the word.
+
+═══ THE SEQUENTIAL RUN — DONE (2026-09-07, the first sitting after the compaction at #88; the owner: "reread 88 and go"; the rereads of #88's list
+done first — #87's list, corpus-world-simulation.md, the nine narrative scenes on the law engine, TIME.md 3/7/8, THE_CLOCK.md 2/8 — then the
+sitting in the wrap's order: design, probes, engine, tape, gates/sweep/records)
+(1) THE DESIGN FIRST — World/step9/SEQUENTIAL_RUN.md (NEW, ls'd first; gloss 0): ONE world on a NEW era row `creation` (day 0 = the first day of
+the world's first month, the seventh — Rosh Hashanah 10b:10, 11a:3, 8a:15, 27a:15 read on the shelf BY SCRIPT; Rabbi Yehoshua's Nisan 11a:1/11a:4
+the other setting, unexercised; OPEN-7 which creation day is the first of Tishrei — the later reading not on the local shelf); THE ENGINE
+EXTENSION as an ERA VIEW (epoch day + new-year month over the one month table, ordinal months from the era's first month — Rosh Hashanah
+11b:6-7's Marcheshvan/Iyar from one parameter; the exodus era's Nisan by 3a:5); THE TAPE stitched by script under a THREE-PART FILTER
+(the registry's form; a three-book verse first; THE WAYYIQTOL TEST off the Tanakh DB's morphology — a narrative verb within ten verses,
+speech verbs framing speech only); THE MARKERS' table with every number PARSED FROM THE INK (the numeral parser: units before מאת/מאות
+("hundred"/"hundreds") multiply, the rest add, שנים ("years") keeps a phrase open, שתים ("two") counts, the prefixed ordinals name months); the
+checkpoints C0-C10 with expected verdicts; the daemon overlaps computed (28 kinds under >1 daemon); the conventions for Numbers (section 9).
+⚠ THE SHELF FINDER (scratchpad shelf_find.py): some tractate files are VOCALIZED — strip nikud or a substring search reports a false "not
+found" (Shabbat 86b:5, 87b:6, Pesachim 6b:7 were "missing" until it did).
+(2) THE PROBES SECOND — World/step9/sequence_probes.py (NEW): P1 an era set by a marker (year_in counts Nisans: 40:17 year 2, Num 10:11 year 2);
+P2 year_in across an intercalated boundary; P3 the life era (the 600th year under both readings; Gen 8:13's 601st year = the NEXT New Year);
+P4 the proleptic marker, the dated day as the event's day, the registry map merging two tokens, the inherited bound. 0/4 on the unchanged
+engine (TypeError on the new kwargs), 4/4 after. ⚠ the probe harness's summary counted all rows, not the passing ones — fixed before it counted.
+(3) THE ENGINE THIRD — world_engine.py: class Era; Clock.eras/set_era/year_in/date_in/day_in(reading=); World(registry=) resolving at entity()
+and cancel_timers; marker(era=, new_year_month=, proleptic=) — the THIRD CLASS, PROLEPTIC: a paragraph's closing total logged at its computed
+day, the counter unmoved, no dated stretch (without it Genesis 5 would be a chain of retrograde stretches); THE DATED DAY IS THE EVENT'S DAY
+(submit sets event['day'] = dated inside a retrograde stretch, so `day = event.get('day', world.clock.day)` reads the text's date);
+law_installation reads the event's day (the library edit; the skeleton 6/6, the clock probes 12/12, the gate probes 5/5 + 12/12 rerun).
+⚠ THE LIFE-YEAR TURNS AT THE NEW YEAR: the first Era draft used birthday anniversaries; the marker table's own arithmetic refused it — Gen
+8:13's "601st year, first month, first day" follows 7:11's "600th year, second month, seventeenth" by ten and a half months, and 8:14 closes
+a year and ten days; the age is the calendar years' difference; "the Nth year of X's life" = the year of age N (7:6, 9:28-29 — the row
+life_year_reading, 'completed'; the ordinal reading printed beside, OPEN-8); a birth's day within its year MODELED at the year's first day
+(Rosh Hashanah 10b:10 "in Tishrei the patriarchs were born"). Under that one convention the whole chronology falls out of the ink: the flood
+1657, Abraham 1949, Isaac 2049, Jacob 2109, the descent 2239, the exodus 2449 — the tradition's anno-mundi count ONE LOWER throughout (Adam's
+creation year counted as year 0 there; Seder Olam not on the local shelf; a remark, never a checkpoint).
+(4) THE TAPE FOURTH — the RECORDER (scratchpad seq_record.py: every runner imported with World.submit/advance/close/cancel_timers instrumented,
+the five main()-style scenes called explicitly; 827 submits, 974 records) and the STITCHER (scratchpad seq_stitch.py → the runner's sentinel
+section as LITERAL marker/submit/close lines in verse order; the census printed; the markers' days PREDICTED on a bare world; the registry's
+90 tape lines appended): 670 case rows off, 7 tractate-sourced acts off, 5 register-off (the priesthood's Lev 21:10/24:2/24:5 and the incense
+runner's Exod 30:7-8 — law clauses dressed as acts), 145 history → 4 deduped (Lev 8:2, 8:30 from three scenes) → 141 on the tape; 4 fields
+re-based (three scene `day`s dropped; Tamar's `until` relative); 8 closes; 68 markers (51 F / 16 P / 1 R). ⚠ THE PARSER'S THREE LESSONS caught by
+the stitcher's ink check before any tape: a units multiplier does not carry across a year-word (Gen 5:6 "five years and a hundred years" = 105,
+not 500); "forty days and forty nights" are two numbers (a day-word closes the phrase); Gen 8:5 names the tenth month twice. ⚠ the scenes' own
+citation forms must be parsed whole ("Exod 24:1, 24:9" carries the book forward; ranges expanded) or the second verse is lost. ⚠ the marker
+table needs a POSITION apart from the verse checked: Isaac's birth sits at 21:2 with 21:5's number (21:4's eighth day precedes 21:5 in the
+text). The one runner edit: cold_run_pre_sinai.py's two renamings carry the ink's names (17:5 Abraham, 17:15 Sarah) — see finding 1.
+(5) THE RUN — cold_run_sequence.py (NEW, ls'd first; the 34th runner; imports all 33 in span order under redirect_stdout, registers all 38
+daemons — the order asserted against the dispositions, a tripwire; World(registry=) from entity_registry.yaml's members scoped
+[step9-scenes]; the numeral parser in an INK block the stitcher execs — ONE copy; PARAMS with the recorded settings — sojourn_start
+seed_isaac (Gen 15:13 by 21:12, a reference licensed by ink; Rosh Hashanah 10b:10 "on Passover Isaac was born" the shelf's own row) against
+descent_literal (Megillah 9a:16 the elders' "and in other lands") and covenant_pieces (not on the local shelf, labeled)). FIRST RUN: 5/6 —
+every predicted day and every expected verdict MATCHED on the first run (C0 9/9 MATCH; C1 147 DIVERGE; C2 600/600 MATCH; C3a 210 DIVERGE;
+C3b 400 MATCH; C3c 210 within [0, 350] MATCH; C3c-literal 430 DIVERGE; C4 102 DIVERGE; C5 (2, 2) MATCH; C6 (1, 4, 17) MATCH; C7 (7, True)
+MATCH; C8 8 DIVERGE; C9 within the purchase's bound MATCH; C10 46 DIVERGE, the same year); the run tuple READ THEN TYPED (141 events; 12
+timers set, 5 fired, 0 cancelled, 0 retro-writes — Lev 8's release fell due ON the erection's day and was written at once; 204 writes; 9 of 38
+daemons fired — every law daemon saw 141 events and fired on none, the zero-report instrument for the whole; 78 entities; the repeated writes;
+the tape's closes 6 of 8); SECOND RUN 6/6. The clock ends at creation-year 2450, Nisan 1 = the exodus era's (2, 1, 1); 29 eras set.
+FINDINGS (REPORT_SEQUENTIAL_RUN.md): (1) THE LAST OPEN ALIAS CLOSED BY COLLISION — the first full run crashed at Gen 17:5: law_family
+consumed the pre-Sinai `renamed` and read a `name` it never carried (D9-i's "two contracts", harmless on two worlds, a fault on one); the
+ink states the names; the scene carries them; the registry entry marked alias_resolved; the daemon gate prints open aliases 0. (2) THE
+UNDATED-STRETCH TIMER — Isaac's circumcision_due (21:4) and Tamar's wait (38:26) found NOTHING OPEN to close: a timer set inside an
+undated stretch fires only when the next marker walks the clock, after the stretch's own closing act (the scenes' advance() calls had
+hidden it); C8 the daemon counts born + 8 where the inclusive ordinal is born + 7 — a one-line fix on the pre_sinai daemon and its scene
+literal, its own sitting. (3) the life-year at the New Year (above). (4) THE INTERCALATION DATES LEVITICUS 8: creation-year 2450 is a
+thirteen-month year under the modeled season ground — the installation's dated first day is the twenty-fourth of Adar II, not the tradition's
+twenty-third of Adar (OPEN-2 at the day grain, visible). (5) ONE EVENT, TWO DAEMONS — the overlaps named at the design fired both: Aaron
+invested FOUR times on Lev 8:30 (two subjects, two daemons), every renaming written twice, the lamps and the incense under two daemons;
+reported, none fixed. (6)-(9) the parser's lessons, the register test at the verse (the corpus world's events table covers Genesis and
+Exodus 1-20 only), the shelf finder's nikud, the gaps printed (Gen 2→9 1657 years; Gen 50→Exod 24 193 years: no runner compiles Exodus
+1-11's narrative, the Passover runner's rows are cases).
+(6) THE GATES AND THE SWEEP — DEPENDENCY GATE 34 runners declared (spans: sequence: [] — the sequence's 33 live import edges are calls beyond
+the census, listed, no disposition required: no rule crosses), 129 live edges, satisfied; DAEMON GATE 248 / 0 / 8 of 256 (sequence.tape NONE —
+⚠ the tape function names effects in its close() notes and kind-homographs, so the gate reads it as a compiled function: declare NONE),
+unfired 0, unconsumed 0, OPEN ALIASES 0 (was 1); the events lint 0 (90 tape lines carry the sequential tape). The sweep: 34 runners —
+the line at the close, below. Records: SEQUENTIAL_RUN.md (+ section 11 as built), REPORT_SEQUENTIAL_RUN.md (NEW, ls'd first), CLOCK.md
+section 9's extension note, calendar_parameters.yaml (+creation, +life_year_reading; exodus/life_years exercised), entity_registry.yaml
+(+israel_people; noach/the_human/servant_of_abraham members), event_vocabulary.yaml (tape lines; renamed alias_resolved),
+daemon_dispositions.yaml, dependency_dispositions.yaml, COMPILE_DEBT (THE SEQUENTIAL RUN DONE → NEXT Numbers), THE_STEPS (the conventions
+paragraph after THE CLOCK SITTING's; lint 1 baseline), THE_BRIEFING (a process upgrade; lint 0), this doc, memory. OPEN filed: OPEN-3 the
+sojourn's settings (the tape runs the seed's 400); OPEN-7; OPEN-8; the eighth-day count (C8); the second ascent's morning (the scene's own
+dating); ONE ACT TWO SUBJECTS at Lev 8:30 and the overlap kinds (aliases, each its own question); the frozen units' people-tokens' membership
+in israel_people (the fold's sitting); the tape's gaps.
+THE SWEEP at the close: 34/34 runners green, 3632 graded cells (+6: the sequence runner), both gates satisfied (129 live edges; 248 / 0 / 8 of
+256; open aliases 0), SWEEP-EXIT 0 (scratchpad sweep_seq.txt); the sequence runner 6/6 in 37.5 s. No unit touched; the hash unmoved.
+
+═══ COMPACTION POINT #89 (2026-09-07 — written unprompted at THE SEQUENTIAL RUN's close)
+═══ CLEAN POINT — no work mid-flight. THE SEQUENTIAL RUN DONE (the entry above); the sweep 34 of 34 at 3632; the probes 4/4 + 12/12 + 6/6 +
+5/5 + 12/12; open aliases 0; hash unmoved. LAST COMMIT 250b168 (the clock sitting, pushed); UNCOMMITTED OF OURS: THE_STEPS.md, THE_BRIEFING.md,
+logic/corpus/entity_registry.yaml, World/step9/{world_engine.py, calendar_parameters.yaml, event_vocabulary.yaml, daemon_dispositions.yaml,
+dependency_dispositions.yaml, cold_run_pre_sinai.py, CLOCK.md, COMPILE_DEBT.md, SEQUENTIAL_RUN.md (NEW), REPORT_SEQUENTIAL_RUN.md (NEW),
+sequence_probes.py (NEW), cold_run_sequence.py (NEW), DAEMON_INDEX.md + DEPENDENCY_INDEX.md regenerated by the sweep}, this doc, memory —
+commit only on the owner's "commit push", staging by exclusion as before; the NEVER-COMMIT set and the ARCHITECTURE/* rule unchanged; the
+elijah_docket gitlink never staged. POST-COMPACTION REREADS (mandatory, first sitting): this doc's THE SEQUENTIAL RUN entry + SEQUENTIAL_RUN.md
+whole (section 9 the conventions, section 11 as built) + REPORT_SEQUENTIAL_RUN.md whole + the Era/Clock/World classes in world_engine.py +
+THE_STEPS Step 2 + Step 5 (1) motion (6) + the compiler block + THE SEQUENTIAL RUN paragraph + COMPILE_DEBT's BEFORE NUMBERS block + memory's
+STANDING LESSONS and the-effects-law.md + the spine default (Sifrei Bamidbar + Onkelos) + the oral-first pipeline memory. THEN, on the owner's
+word: NUMBERS — its first sitting reads the standing map (THE_STEPS whole; the deliverable rule as amended: six motions; every new law span's
+timers through the Clock; a narrative span's scene in the sequential conventions — literal events dated by markers, the numbers parsed from
+the ink, the tokens joining the one registry, the tape re-stitched) BEFORE the first unit; Num 27 + 36 (the inheritance order, OWED FORWARD
+from the family runner) wait there; Num 28-29's festival boundary timers (the calendar's recurring schedule) — its own sitting after the
+derivation; Num 9:1 after 1:1 (Pesachim 6b:7) will be the tape's second retrograde marker; Num 10:11 (the cloud lifted, the twentieth of the
+second month) the erection scene's cloud_lifted dated at last; Num 33:3's fifteenth the exodus day's own verse. OPEN (counted): THE UNFILED
+LIVE EDGES 32 (one filing sitting), the four scene-count helpers as NONE + sequence.tape (the homograph), X1-X5, the two gate items, THE
+CLAIMS LABEL DEBT, OWED FORWARD Num 27/36 + Deut 25, THE FORK'S REACH TO LEV 27, OPEN-1..8 of the clock and the sequence (OPEN-7 which
+creation day is the first of Tishrei; OPEN-8 the life-year's reading), the eighth-day count on the pre_sinai daemon (C8 — a one-line fix
+with its scene literal), the second ascent's morning (the scene's own dating), ONE ACT TWO SUBJECTS at Lev 8:30 and the overlap kinds
+(aliases, each its own question), the frozen units' people-tokens' membership in israel_people (the fold's sitting), the moadim runner's own
+month arithmetic, the tape's gaps (Exodus 1-11's narrative has no runner). Watches: as #88's + THE UNDATED-STRETCH TIMER (write the marker
+the ink gives, never an advance) + THE POSITION APART FROM THE VERSE (a marker sits where the text puts the event, its number from the
+verse that states it) + THE YEAR-WORD KEEPS A NUMBER OPEN (the parser) + THE VOCALIZED SHELF FILE (strip nikud before a substring search) +
+THE TAPE FUNCTION IS A FUNCTION TO THE GATE (declare NONE) + THE RECORDER'S FIVE (main()-style scenes are called explicitly for the census).
+═══ RELAY AT OWNER DIRECTION (2026-09-07, after #89; the owner: "I want you to update torahsim and tell it to update its markdowns and epubs. also tell
+it to be more of a tutor when rewriting them. I need to teach lots of people who don't know what we are doing. Make it understandable to the general
+public") — sent by SendMessage to BOTH peer sessions on this machine, since the explainer markdowns and epubs live in two places: "Torah Grok Main
+[d1a97a]" (the design thread — ARCHITECTURE/THE_TOUR, THE_CLOCK, THE_EFFECTS, THE_LINKS, TIME + epubs) and "torah-grok-ce [d6563f]" (TorahSim). The
+message: the owner's words verbatim; the tutor standard (one idea at a time, a concrete example before every abstraction, every term defined, Hebrew
+never without English); the records to read (THE_BRIEFING, THE_STEPS' two paragraphs, CLOCK.md, REPORT_CLOCK.md, SEQUENTIAL_RUN.md,
+REPORT_SEQUENTIAL_RUN.md, calendar_parameters.yaml); the sequential run's teachable results in tutor order (only the text moves the clock; the
+numbers parsed off the ink; the chronology from the ink alone; the year turns at the New Year; the two one-world findings; what stayed off; what is
+open); the scoreboard. Torah_Grok's own files untouched by them; replies come to this thread. Nothing else changed; #89 stands as the clean point.
+═══ THE RELAY'S RETURN (2026-09-07): the design thread ("Torah Grok Main [d1a97a]", socket 11625) reports all six ARCHITECTURE/ explainers rewritten
+as tutorials for the general public and updated through the sequential run, their epubs rebuilt (THE_TOUR, THE_CLOCK, THE_EFFECTS, THE_LINKS,
+TIME, CHRONICLE; gloss_lint 0; every quoted verse checked against the Tanakh DB), uncommitted in ARCHITECTURE/ — NOT ours to stage (the standing
+rule). Its stated facts checked against the sweep: all hold but one — the link census is reference 162 / transfer 31 / hypothesis 6 / none 40 of
+167 edges + 72 pointers (it had written hypothesis 8); the correction sent back by SendMessage. The message to the OTHER peer ("torah-grok-ce",
+socket 31937 — TorahSim) was HELD for the owner's approval in that window and EXPIRED undelivered; to be resent on the owner's word.
+
+═══ THE OWNER'S RULING (2026-09-07, after the sequential run; the owner asked "where are we now? are we done with gen, exo, lev" — yes to the
+process's standard: derived, examined, compiled, wrapped, run in sequence — then "are these unfinished listings new" — mostly standing, six new —
+then: "I want to finish all of them. but I need to compact first. get ready"): THE OPEN-ITEMS CAMPAIGN runs BEFORE NUMBERS — every open item of
+the three books finished, in the order below; the two book-bound debts (Num 27/36 to the family engine, Deut 25) wait for their books and are
+the only exceptions, said so. SIZED BY SCRIPT at this ruling: UNFILED live import edges 65 (163 live, 98 on file — the 32 standing + the
+sequence runner's 33); THE CLAIMS LABEL DEBT 2,802 (2,838 frozen claims, the middah field on 36 — COMPILE_DEBT line 422); the narrative census
+to size at O8: 98 frozen Genesis units and 66 Exodus units against the nine engine scenes' verses.
+
+═══ COMPACTION POINT #90 (2026-09-07 — written at the owner's word "get ready"; the owner compacts NEXT)
+═══ CLEAN POINT — no work mid-flight (#89's state; nothing in code changed since; the relay entries above). LAST COMMIT 250b168; UNCOMMITTED
+OF OURS: as #89's set (THE_STEPS, THE_BRIEFING, entity_registry.yaml, World/step9's sequential-run set — the engine, the four registries,
+cold_run_pre_sinai.py, the four NEW files, CLOCK.md, COMPILE_DEBT, the two regenerated indexes — this doc, memory) — commit only on the owner's
+"commit push", staging by exclusion as before; ARCHITECTURE/* (now the design thread's six rewritten tutorials + epubs, uncommitted) NOT ours to
+stage unless the owner says so; the NEVER-COMMIT set unchanged; the elijah_docket gitlink never staged. POST-COMPACTION REREADS (mandatory, first
+sitting): #89's list (this doc's THE SEQUENTIAL RUN entry + SEQUENTIAL_RUN.md whole + REPORT_SEQUENTIAL_RUN.md + the Era/Clock/World classes +
+THE_STEPS Step 2, Step 5 (1) motion (6), the compiler block, THE SEQUENTIAL RUN paragraph + COMPILE_DEBT's BEFORE NUMBERS block + memory's
+STANDING LESSONS and the-effects-law.md) + COMPILE_DEBT's OPEN notes (the last-binding resolution ~line 209, the homograph note ~234, THE CLAIMS
+LABEL DEBT line 422, X1-X5 lines 425-445) + CLOCK.md section 8 (OPEN-1..6 with their settlers) + the sequence runner's PARAMS block and the
+stitcher's marker table (scratchpad seq_stitch.py — if the scratchpad is gone, the table is reproduced from SEQUENTIAL_RUN.md section 4 and the
+runner's tape section). THEN, on the owner's word: THE OPEN-ITEMS CAMPAIGN, in this order (each sitting in the wrap's rhythm — the declaration
+before the code, the gate run to fail, the tuple predicted by script, the tape re-stitched where a scene changes, the sweep, the records):
+  O1 THE SMALL FIXES (one sitting): (a) C8 — law_pre_sinai's eighth day born + 7 (the inclusive ordinal), the pre_sinai scene's advance and its
+     tuple re-predicted, the sequence's C8 expected MATCH; (b) Tamar's wait by the TEXT's own event — Gen 38:14 "she saw that Shelah had grown"
+     registered as an act (its witness in the verse), the family daemon writing the wait open at 38:11 with no invented timer and marking it
+     due at 38:14, closed at 38:26; (c) the second ascent dated by the shelf — search Bava Batra 121a / Taanit 30b for "the second tablets on
+     Yom Kippur" (the third forty days ending the tenth of Tishrei; the second forty the intercession from the morrow of the breaking, 32:30) and
+     mark 34:4 / 34:28 accordingly, the scene's own +1 retired; (d) the births' days from the shelf's rows where it gives them — Rosh Hashanah
+     10b:10 (the patriarchs born in Tishrei; Isaac on Passover) as data rows replacing the modeled year's-first-day for those births, the
+     exodus "on that very day" then landing 400 years to the day; (e) OPEN-7 searched on the Genesis spine (Data/bereshit_rabbah_he.json — the
+     Babylonian shelf has no row for which creation day is the first of Tishrei) — a data row with its settings if found, labeled if not;
+     (f) THE SOJOURN FORK — the three settings of OPEN-3 run as three worlds (the yovel fork's shape), each world's checkpoints graded, the
+     descent-literal's DIVERGE from the ink's own lifespans printed in every run. Re-stitch, re-predict, sweep.
+  O2 THE ALIASES SITTING: Lev 8:30 ONE ACT TWO SUBJECTS (aaron / aaron-and-sons under law_installation + law_investiture) and the five
+     remaining overlap kinds (milluim_leftover, incense_burned, bread_arranged, lamps_raised, offering_brought) → ONE contract each: which
+     daemon owns the act at which verse (the library's law_installation retiring where law_investiture covers Lev 8, or the reverse; the
+     erection's acts at Exod 40 against the priesthood's law rows at Lev 24 — scoped by the ink's own verse, or the kind split with its
+     witnesses), the registry's aliases removed, the tuples re-predicted, the sequence's REPEATED WRITES list expected empty of double
+     writes (the ink's own repeats named apart).
+  O3 THE GATE ITEMS (two sittings): (a) THE VALUE/EFFECT HOMOGRAPH — the daemon gate's parse_functions distinguishes a string used as a
+     VALUE from an effect WRITTEN (an E_('x'...) / {'effect': 'x'} form), so the five NONE workarounds (the four scene-count helpers and
+     sequence.tape) retire; the gate probes (scratchpad d9ii_gate_fires.py 5, lr1_gate_fires.py 12) rerun; (b) THE LAST-BINDING RESOLUTION
+     of the honest-calls guard (compile_guards.py — a grade()-graded scene using its own list name; the guard measuring the LAST binding).
+  O4 THE EDGE FILING: the 65 unfiled live import edges, each with its link class and why (the sequence runner's 33 as `none` — the world
+     registers the daemon, no rule crosses; the 32 standing by reading each call site); the gate's live-edge listing then equals the file.
+  O5 THE MOADIM RE-TYPE: the festival timers as calendar-key PERIODS on the Calendar from Lev 23's own ink (the erection's and moadim's
+     epoch rows exercised — the exodus era from the sequential run), the runner's own month arithmetic retired, its tuples re-predicted.
+  O6 THE FORK'S REACH TO LEV 27:21 / 27:24: a reading sitting on the shelf (Arakhin on the consecrated field's going out in the jubilee;
+     the Sifra on Bechukotai) — whether the proclamation's three conditions govern the consecrated field too; implemented as read, the
+     yovel fork's rows extended, the tuple re-predicted.
+  O7 X1-X5 THE EXODUS CASE HEADS COMPILED (COMPILE_DEBT lines 425-445): the maidservant (21:7-11), the capital clauses (21:13-17), and the
+     three more listed — each by the six motions (ink first, the Mishnah's rows as test data, run, misses per gap, add, WRAP declared
+     before code), their edges dispositioned, joined to the tape where a case head is narrated (none expected).
+  O8 THE NARRATIVE GAPS ON THE ENGINE: FIRST the census by script — every frozen Genesis (98) and Exodus (66) unit whose verses no engine
+     scene submits, by register (the narrative ones) — THEN the scenes in the sequential conventions (SEQUENTIAL_RUN.md section 9: literal
+     events dated by markers, the numbers parsed from the ink, the tokens joining the one registry): Exodus 1-19's story (the birth, the
+     bush, the plagues, the firstborn struck, the going out, the sea, the manna at 16:1, Amalek, Jethro, Sinai's acts) and Genesis's
+     uncovered stretches (2-9, 9-17, 24-32, 38-48) — sized into sittings by the census (two to four expected), each with its daemon
+     declared first, the tape re-stitched after each, the gaps line of the sequence runner shrinking to the ink's own silences.
+  O9 THE CLOCK'S OPEN ITEMS (one engine sitting + one reading sitting): OPEN-5 SUB-DAY — the two day boundaries (evening, and the Temple's
+     day-then-night, Chullin 83a) as a data row with the timers' "until the evening" reading it; OPEN-4 the flood's thirty-day months and
+     OPEN-2 the season's length searched again on the whole shelf under more forms (found → data rows; not found → stays modeled, said so);
+     OPEN-1, OPEN-3, OPEN-6 are the tradition's own disputes, recorded as settings with both arms — FINISHED AS FAR AS THE SHELF ALLOWS,
+     exercised when a tape carries them (a Prophets tape), stated so in CLOCK.md section 8.
+  O10 THE PEOPLE-TOKENS IN THE ONE REGISTRY (the fold's sitting): the frozen units' own tokens for the people joined to israel_people
+     (identity decisions delegated to the operator, uncertain ones marked), corpus_world.py refolded and verified, the hash's movement
+     reported honestly (the narrative world's identity table changes — a MODEL change under the RE-era constitution: gates green + changelog).
+  O11 THE CLAIMS LABEL DEBT: 2,802 frozen claims without a middah label — measured by script first (by unit, by stratum), then labeled in
+     batches by unit from each claim's own recorded derivation where the ledger names the move, the rest by reading; the verifier's ceiling
+     file extended as batches land; sized at its first sitting into as many sittings as it takes — the long tail, last.
+  Book-bound, NOT before Numbers (the only exceptions): Num 27 + 36 to the family engine; Deut 25 to Deuteronomy.
+  THEN NUMBERS (its first sitting reads the standing map + SEQUENTIAL_RUN.md section 9). OPEN (counted) after the campaign: none of the
+  above; the tradition's own disputes as settings. Watches: as #89's.
+
+═══ O1 THE SMALL FIXES — DONE (2026-09-07, the first sitting after the compaction at #90; the owner: "go"; the rereads of #90's list done first —
+#89's list + COMPILE_DEBT's OPEN notes + CLOCK.md section 8 + the runner's PARAMS + the stitcher's marker table; the scratchpad had survived)
+THE DECLARATION FIRST — SEQUENTIAL_RUN.md section 12 (gloss 0), every citation resolved by script (shelf_find.py; the Rabbah files by a script
+of the same shape): (a) C8 — law_pre_sinai's timer born + 7 (the inclusive ordinal), the scene to day 17, its tuple 18 → 17; (b) TAMAR'S WAIT
+BY THE TEXT'S OWN ACT — `shelah_grown` registered at Gen 38:14 (witness כי ראתה כי גדל שלה "for she saw that Shelah had grown", contiguous,
+pointed by script; the registry 267 types, act 60), law_family's watch declared FIRST (the daemon gate failed on it, then passed), the wait
+written OPEN at 38:11 with no timer (the ink gives no number), levirate_owed written on Shelah at 38:14 and never closed (the ink's silence —
+46:12 his own line), Tamar's wait closed at 38:26; widow_sent loses `until`; (c) THE SECOND ASCENT BY THE SHELF — Exod 32:30 "on the morrow"
+(ויהי ממחרת) a FORWARD marker on the ink's own word (assert_ink gains `words=`), the intercession's ascent; Exod 34:4 (positioned at 34:2, the
+number's verse 34:28) = Yom Kippur − 40: "the day on which the last tablets were given" (Taanit 30b:8; Bava Batra 121a:6, both read by
+script) → the row second_tablets_given {7, 10} in the exodus era; the tradition's first of Elul NOT on the local shelf (searched) — a remark;
+C11 NEW (the second fire dated (1, 7, 10)) MATCH; (d) THE BIRTHS' DAYS — Rosh Hashanah 10b:10 AND 11a:2 (both arms) "on Passover Isaac was
+born", 11a:13 the derivation from Gen 18:14; the patriarchs' month disputed (10b:10/11a:7 Tishrei; 11a:2/11a:9 Nisan) → the rows isaac_birth_date
+{month 1, day 15 — THE CALENDAR'S OWN NUMBERING} and patriarch_birth_month 7 (settings r_eliezer 7 / r_yehoshua 1, the day modeled at the first);
+the INK block's birth_day; C3b-day NEW — the exodus "on that very day" = Isaac's birth + 400 years TO THE DAY: MATCH; (e) OPEN-7 SEARCHED AND
+FOUND — Bereshit Rabbah 22:4 carries the month dispute only; VAYIKRA RABBAH 29:1 in Rabbi Eliezer's name: "on the twenty-fifth of Elul the
+world was created", reading 27a:15's own liturgy line of ADAM'S day ("on the day of Rosh Hashanah... in the seventh hour He blew a soul into
+him") → the creation era's `day_one_offset` 5 (settings vayikra_rabbah_29_1 5 / rosh_hashanah_27a_plain 0 — the design's plain reading was a
+placeholder, the shelf's row RUNS); THE ENGINE: Calendar lays a STUB MONTH (Elul of year 0, its start negative so day 0 is its twenty-fifth;
+`first_year_start`), the world's own Era opens at the first new-year start and pre-epoch days read year 0 (`_before_epoch`; any other era
+refuses); every day on the tape after day 4 moved +5, every date and interval unchanged (the stitcher re-predicted all 30 days); the clock
+probes 12/12, the sequence probes 4/4, the skeleton standing; (f) THE SOJOURN FORK AS THREE WORLDS — run_world(setting) with all 38 daemons
+each (the tape costs 0.2 s; the imports are the runner's 35 s): seed_isaac (running), descent_literal (C3a MATCH / C3b DIVERGE 620 / C3c
+DIVERGE 430), covenant_pieces (C3a DIVERGE / C3b MATCH / C3c MATCH / C3d DIVERGE — the covenant implied by 430 before the exodus at Abraham's
+70, before 12:4's 75; Seder Olam's resolution not on the shelf; בין הבתרים "between the pieces" searched, no row); FORK_VERDICTS graded.
+THE RUN: the two scenes' tuples PRINTED BEFORE TYPED — pre_sinai (..., 1, 17) and family (..., 1, 0, 1, 1, ..., 0, 16) both EXACTLY as section
+12 predicted; the recorder rerun (828 submits, 975 records), the stitcher rerun (CENSUS (828, 146, 142, 670, 7, 5, 4, 3, 8, 69, 52, 16, 1,
+91, 51) — the prose prediction had said subjects 52: Shelah is the levir FIELD, not a subject; the script's 51 typed, the design corrected
+beside its prediction); FIRST RUN 5/7 — two misses read: (1) the ink re-checks counted 207 = THREE WORLDS × 69 (the module list accumulated
+across the fork) → counted per world, the running world's graded; (2) the RUN tuple, as designed, typed from the run after reading — (142, 11,
+4, 0, 0, 205, 9, 79, the same double writes, 8), EQUAL to section 12's prediction; SECOND RUN 7/7. ⚠ THEN THE FORK CAUGHT A LATENT FAULT: the
+descent-literal world's exodus printed (2669, 13, 15) — the fifteenth of ADAR II: that exodus year has thirteen months, and the tape had
+addressed Nisan as "the creation era's ORDINAL seventh from Tishrei" (Adar II when a thirteenth follows Adar); the running world's years
+(2049, 2449) are twelve-month years and never showed it → cal_day: a post-12:2 month by the CALENDAR'S OWN numbering (Nisan 1, Tishrei 7);
+the rows rewritten in that numbering; the predicted days unchanged on the running world; THIRD RUN 7/7, the fork's second world at (2669, 1,
+15) and 4 timers fired like the others. Also found: THE THREE FORTIES ARE CONTIGUOUS by the day arithmetic — the morrow (18 Tammuz) to the
+second ascent (29 Av) is EXACTLY forty days though Deuteronomy 9:18's number was never used; the closes 8 of 8 (THE UNDATED-STRETCH TIMER
+finding closed on both counts); Shelah's debit open at the end among 43 (printed).
+THE GATES AND THE SWEEP: events lint 0 (267 types); DAEMON GATE 248 / 0 / 8 of 256, unfired 0, unconsumed 0, open aliases 0 (law_family 23
+kinds); DEPENDENCY GATE satisfied (129 live edges); THE SWEEP 34/34 at 3633 (+1: the fork's test; scratchpad sweep_o1.txt, SWEEP-EXIT 0):
+pre_sinai 212/212, family 228/228, erection 287/287, the sequence 7/7 in 37.5 s. The corpus regression rerun after: CORPUS TRUTH GREEN — one world, 163 units, 1809 facts, hash 8b8fff1fa28953af UNMOVED.
+RECORDS: SEQUENTIAL_RUN.md section 12 (+ the correction and the fork's finding), REPORT_SEQUENTIAL_RUN.md's O1 section (six findings, the
+census, the sweep), CLOCK.md section 8 (OPEN-7 settled; cal_day), calendar_parameters.yaml (+3 rows; the creation era's offset and
+settings), event_vocabulary.yaml (+shelah_grown), daemon_dispositions.yaml, COMPILE_DEBT (O1 DONE in the BEFORE NUMBERS block), THE_STEPS
+(the sequential-run paragraph's conventions (9) and (10)), THE_BRIEFING (a process entry — the fork's lesson: a world runs into what a
+remark cannot), this doc, memory. Lints: SEQUENTIAL_RUN 0, REPORT 0, CLOCK 0, COMPILE_DEBT 0, calendar_parameters 0, THE_STEPS 1 (baseline),
+THE_BRIEFING 0. NOT TOUCHED: any frozen unit; ARCHITECTURE/CHRONICLE.md shows modified — the design thread's, never staged.
+⚠ LESSONS: a parameter's other settings run as WORLDS, not remarks (the fork found the ordinal-month fault); a month named after Exod 12:2 is
+addressed by the calendar's own numbering, an era's ordinal count only for the pre-12:2 ink; a module-level counter accumulates across
+worlds — count per world; search the Rabbah files too before calling a row "not on the shelf"; a prose prediction beside the script's
+count is corrected, never silently replaced; the scenes' tuples are printed before typed even for a one-line change.
+
+═══ COMPACTION POINT #91 (2026-09-07 — written unprompted at O1's close)
+═══ CLEAN POINT — no work mid-flight. O1 DONE (the entry above); the sweep 34 of 34 at 3633; the probes 12/12 + 4/4 + the skeleton; the
+gates satisfied; open aliases 0. LAST COMMIT 250b168; UNCOMMITTED OF OURS: #90's set + O1's (World/step9/{world_engine.py,
+calendar_parameters.yaml, event_vocabulary.yaml, daemon_dispositions.yaml, cold_run_pre_sinai.py, cold_run_family.py, cold_run_erection.py,
+cold_run_sequence.py, SEQUENTIAL_RUN.md, REPORT_SEQUENTIAL_RUN.md, CLOCK.md, COMPILE_DEBT.md, DAEMON_INDEX.md + DEPENDENCY_INDEX.md regenerated},
+THE_STEPS.md, THE_BRIEFING.md, this doc, memory) — commit only on the owner's "commit push", staging by exclusion as before; ARCHITECTURE/*
+NOT ours to stage; the NEVER-COMMIT set unchanged; the elijah_docket gitlink never staged. POST-COMPACTION REREADS (mandatory, first sitting):
+this doc's O1 entry + SEQUENTIAL_RUN.md section 12 + REPORT_SEQUENTIAL_RUN.md's O1 section + the Era/Calendar/Clock/World classes + THE_STEPS
+Step 5 (1) motion (6) + the compiler block + THE SEQUENTIAL RUN paragraph (conventions 1-10) + COMPILE_DEBT's BEFORE NUMBERS block + memory's
+STANDING LESSONS and the-effects-law.md + event_vocabulary.yaml's `link:` contract lines for the six overlap kinds (O2's material) +
+daemon_dispositions.yaml's law_installation / law_investiture / law_erection / law_priesthood / law_sanctuary_build watches. THEN, on the
+owner's word: O2 THE ALIASES SITTING (#90's plan: Lev 8:30 ONE ACT TWO SUBJECTS under law_installation + law_investiture, and the five
+overlap kinds milluim_leftover / incense_burned / bread_arranged / lamps_raised / offering_brought → ONE contract each — which daemon owns
+the act at which verse, scoped by the ink's own verse or the kind split with its witnesses; the registry's aliases removed; the tuples
+re-predicted; the sequence's REPEATED WRITES expected empty of double writes, the ink's own repeats named apart — the two mornings of Exod
+36:3), then O3-O11 in #90's order, then NUMBERS. Watches: as #89's + THE FORK IS A WORLD (run the other settings as worlds) + THE CALENDAR'S
+OWN NUMBERING for post-12:2 months + THE PER-WORLD COUNTER + THE RABBAH FILES ARE ON THE SHELF.
+
+═══ O2 THE ALIASES SITTING — DONE (2026-09-07, the owner: "Go"; #91's rereads for it done first — the six overlap kinds' registry contracts,
+the five daemons' declared watches, the tape's double writes with their provenance read by script)
+THE RULE (SEQUENTIAL_RUN.md section 13, declared BEFORE the code; THE_STEPS convention (11)): ONE ACT, ONE WRITER PER EFFECT — a daemon
+consumes an act narrated in ITS OWN SPAN or a recorded run of its own statute; an act in another engine's span is that engine's, the ledger
+written once; two daemons share an act only when each writes ITS OWN effect from its own verses (one type under two law layers), declared in
+the registry's tape line; the scope reads the event's first cited verse (world_engine.seat — (book, chapter), None on a case row), never a
+string typed into a verdict. THE CONTRACTS: (1) Lev 8:30 — THE PARTY IS THE INK'S COMPOUND: "Aaron and his sons" one party in NINE verses of
+Lev 8 (8:2, 6, 14, 18, 22, 27, 30, 31, 36 — counted by script; Aaron alone in four), so `aaron-and-sons` on every scene (the incense runner's
+`aaron` was its shorthand — the one-act-two-subjects alias of D9-i); the library's law_installation writes THE COMMIT (invested_office on the
+party, DeMiluim I 34), law_investiture its own entry (consecrated on the garments, Exod 29:21) and no longer the office; (2) milluim_leftover
+8:31-32 — the library's (burn_remainder a duty on the HOLDERS, the effect's own row), the investiture's watch EMPTY, the tzav scene's source
+8:31-32 (the dedup key); (3) confined 8:33-35 — the library's confinement and release timer, the investiture's watch EMPTY (hidden from the
+first list by the different entities); (4) head_anointed — law_priesthood within Lev 21 (its statute row), the run's 8:12 the investiture's
+anointing; (5) incense_burned / lamps_raised / bread_arranged — law_erection owns Exod 40:23/25/27 (the initiation, Mishnah Menachot 4:4, with
+their timers); law_investiture within Exod 30 and the recorded runs; law_priesthood within Lev 24; (6) offering_brought — NOT AN ALIAS: one
+type under two law layers, one field contract (the subject the giver; `giver` optional): law_sanctuary_build 25:2's set_apart_before_me,
+law_erection 35:5/21/29's given_by_the_heart; the two mornings of 36:3 the ink's own repeat, named apart; (7) renamed — law_pre_sinai on Gen 17,
+law_family on Gen 32, both writing the ink's name as the value. THE RHYTHM: the watches declared FIRST in daemon_dispositions.yaml
+(law_investiture: milluim_blood_sprinkled → [consecrated]; milluim_leftover, confined → []) — the gate FAILED three ways on the unchanged code —
+the registry's eight tape lines carry the contracts; the code (world_engine.seat + `import re`; four daemons' scopes; the incense scene with
+the party's subject and the library registered beside, its 8:2 command and advance(7); tzav's source) — then the gate fired TWICE MORE,
+honestly: ⚠ the incense scene's `tape = [...]` list had a comment after its closing bracket and the parser read the loop's submit as
+UNRESOLVED (the bracket must END ITS LINE — the comment moved above the list); ⚠ vestments.office was WRAPPED by law_investiture on the shared
+effect invested_office and lost its verifier when the office's writer became the library — re-pointed to law_installation (a wrap's verifier
+moves with the contract). The incense scene's tuple PRINTED BEFORE TYPED: (1, 1, 1, 1, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 16) — the party's office,
+remainder, confinement and RELEASE from the library beside, 16 events; every other scene unchanged (three runners went red at import while the
+incense literal was untyped — the imported runner's grade leaks to line 2; green once typed). The recorder 829 submits / 977 records; the
+stitcher CENSUS (829, 147, 140, 670, 7, 5, 7, 3, 8, 69, 52, 16, 1, 91, 51) — deduped 7 not the predicted 6 (the scene's added 8:2 command dedups
+too), subjects 51 (Aaron a subject still at 8:6-12, 8:36) — the script's numbers typed; the predicted days UNCHANGED. THE RUN read then
+typed: (140, 8, 4, 0, 0, 186, 8, 76, the two mornings, 8) — timers set 11 → 8 (the priesthood's three at Exod 40 gone), writes 205 → 186, daemons
+fired 9 → 8 (law_priesthood off the erection's acts), entities 79 → 76, REPEATED WRITES = (israel_people, given_by_the_heart) 2 and
+(israel_people, set_apart_before_me) 2 — THE INK'S TWO MORNINGS AND NOTHING OF OURS; the closes 8 of 8. 7/7.
+THE GATES AND THE SWEEP: DAEMON GATE 248 / 0 / 8 of 256, unfired 0, unconsumed 0, open aliases 0 (776 submit records); DEPENDENCY GATE
+satisfied; events lint 0; the fire-probes 5/5 + 12/12; clock 12/12; sequence 4/4; the skeleton 6/6; THE SWEEP 34/34 at 3633 (scratchpad
+sweep_o2.txt, SWEEP-EXIT 0; incense_shekel 301/301, priesthood 252/252, pre_sinai 212/212, family 228/228, tzav 54/54, erection 287/287,
+vestments 196/196, the sequence 7/7 in 37.4 s); CORPUS TRUTH GREEN, hash 8b8fff1fa28953af UNMOVED. RECORDS: SEQUENTIAL_RUN.md section 13 (+ AS
+RUN), REPORT_SEQUENTIAL_RUN.md's O2 section (five findings, the census, the sweep), daemon_dispositions.yaml, event_vocabulary.yaml (eight
+tape lines), COMPILE_DEBT (O2 DONE), THE_STEPS (convention (11)), THE_BRIEFING (a process entry), this doc, memory. Lints at baseline. NOT
+TOUCHED: any frozen unit; ARCHITECTURE/* never staged.
+⚠ LESSONS: an act's party is the ink's compound, never a scene's shorthand; a wrap's verifier moves with the contract (the gate refuses the
+stale wrap — re-point, never relax); a tape list's closing bracket ends its line (the parser); a daemon reads its own span by
+world_engine.seat, never by a source string in a verdict; a runner imported by others goes red at THEIR line 2 while its literal is untyped —
+type the printed tuple before running the callers.
+
+═══ COMPACTION POINT #92 (2026-09-07 — written unprompted at O2's close)
+═══ CLEAN POINT — no work mid-flight. O1 + O2 DONE (the entries above); the sweep 34 of 34 at 3633; the probes 12/12 + 4/4 + 5/5 + 12/12 + the
+skeleton; the gates satisfied; open aliases 0; the double writes = the ink's two mornings only; hash unmoved. LAST COMMIT 250b168; UNCOMMITTED OF
+OURS: #91's set + O2's (World/step9/{world_engine.py, daemon_dispositions.yaml, event_vocabulary.yaml, cold_run_incense_shekel.py,
+cold_run_priesthood.py, cold_run_pre_sinai.py, cold_run_family.py, cold_run_tzav.py, cold_run_sequence.py, SEQUENTIAL_RUN.md,
+REPORT_SEQUENTIAL_RUN.md, COMPILE_DEBT.md, DAEMON_INDEX.md + DEPENDENCY_INDEX.md regenerated}, THE_STEPS.md, THE_BRIEFING.md, this doc, memory) —
+commit only on the owner's "commit push", staging by exclusion as before; ARCHITECTURE/* NOT ours to stage; the NEVER-COMMIT set unchanged; the
+elijah_docket gitlink never staged. POST-COMPACTION REREADS (mandatory, first sitting): this doc's O1 and O2 entries + SEQUENTIAL_RUN.md sections
+12-13 + REPORT_SEQUENTIAL_RUN.md's O1 and O2 sections + THE_STEPS Step 5 (1) motion (6) + the compiler block + THE SEQUENTIAL RUN paragraph
+(conventions 1-11) + COMPILE_DEBT's BEFORE NUMBERS block and its two OPEN gate notes (~line 448 the last-binding resolution; ~452 the
+value/effect homograph) + memory's STANDING LESSONS and the-effects-law.md + compile_guards.check_honest_calls and daemon_census.parse_functions
+(O3's material) + the five NONE dispositions in daemon_dispositions.yaml. THEN, on the owner's word: O3 THE GATE ITEMS (#90's plan, two
+sittings: (a) THE VALUE/EFFECT HOMOGRAPH — daemon_census.parse_functions distinguishes a string used as a VALUE from an effect WRITTEN (an
+E_('x'...) / {'effect': 'x'} form) so the five NONE workarounds (the four scene-count helpers and sequence.tape) retire; the gate probes rerun;
+(b) THE LAST-BINDING RESOLUTION of the honest-calls guard — resolve the binding in effect at the call's line, then remeasure every _chc
+tripwire), then O4-O11 in #90's order, then NUMBERS. Watches: as #91's + THE PARTY IS THE INK'S + THE WRAP'S VERIFIER MOVES WITH THE CONTRACT +
+THE LIST'S BRACKET ENDS ITS LINE + THE IMPORTED RUNNER'S GRADE LEAKS TO THE CALLER'S LINE 2.
+
+═══ O3 THE GATE ITEMS — DONE (2026-09-07, the owner: "O3 go"; both items in one sitting; the rereads for it first — the two OPEN gate notes,
+compile_guards.check_honest_calls, daemon_census.parse_functions, the eight NONE dispositions; the homograph's reach MEASURED by script across
+every runner before a line was changed: 252 functions by the old parse, 234 by a cells/out/effect-form parse, 18 drops, 25 narrowed, 43
+conditional fx expressions the new parse had to read)
+THE RHYTHM OF A GATE EDIT: the declaration in REPORT_GATE_ITEMS.md (NEW, ls'd first) and ELEVEN FIRE-PROBES written FIRST (scratchpad
+o3_gate_fires.py) — against the unchanged gates 4/11 fired (the regression guards), the seven target behaviors SILENT; after the edits 11/11;
+the standing probes 5/5 + 12/12 rerun.
+(a) THE VALUE/EFFECT HOMOGRAPH — daemon_census.written_effects(fn): a function's written effects read from the WRITING FORMS only — a cell's fx
+expression (any expression; a local NAME resolved to its assignments inside the function), out()'s effects, E_()'s first argument, the
+effect dict; a bare string as a cell's fourth argument is a note (yoma's shape). The census 256 → 244 in 33 runners (the sequence runner
+leaves — its tape writes nothing); 244 WRAPPED / 0 OWED / 0 NONE. The gate's first run FAILED EIGHTEEN WAYS, every one read: fourteen
+dispositions overstated (the eight NONE workarounds — chatat identity/sprinklings, minchah oil_ops, the four scene-count helpers, sequence.tape
+— and six WRAPPED entries verified on a spelling: lev24.main, negaim.main (scenes reading the ledger), shemini.touch_effect (a helper RETURNING
+the names), vayikra5's three verdict functions ('exempt' a VALUE), yoma.main (its cell's fourth argument a note)); three runners re-shaped as
+`<module>` with module-level wraps (vayikra5 — effect_of; shemini; negaim); the sequence block removed. Twenty-five functions lost homograph
+strings and NOT ONE genuine wrap broke. law_deposit_oath's wrap of vayikra5.deposit_restitution folds into the module entry (said so in the
+yaml comment and the report).
+(b) THE LAST-BINDING RESOLUTION — compile_guards.binding_at(name, line): the nearest assignment BEFORE the call. The five tripwires remeasured
+by the guard: mishpatim_2 10 and yoma 23 unchanged; lev24 19 → 24; negaim 19 → 27 (TEN 10 + grade 17); ⚠ MISHPATIM REFUSED OUTRIGHT at line
+106 — the four-damages class map's cells were a COMPREHENSION over the computed openers plus an append, a list the old guard never read
+(the file's last binding was literal). THE REPAIR IS THE RUNNER'S: the four rows typed as literals with the openers' order asserted beside
+them; the guard then counts 24 (was 21). The five guarded runners green on their own lines.
+THE SWEEP: 34/34 at 3633 (scratchpad sweep_o3.txt, SWEEP-EXIT 0; the cell count unchanged — four typed rows replace four generated);
+DAEMON GATE 244 / 0 / 0 of 244, unfired 0, unconsumed 0, open aliases 0; DEPENDENCY GATE satisfied; CORPUS TRUTH GREEN, hash
+8b8fff1fa28953af UNMOVED. RECORDS: REPORT_GATE_ITEMS.md (NEW — the declaration, the account, four findings, the sweep), COMPILE_DEBT (the two
+OPEN notes → DONE; O3 DONE in the BEFORE NUMBERS block), daemon_dispositions.yaml (14 entries removed, 3 module entries, the sequence block
+gone), daemon_census.py, compile_guards.py, cold_run_mishpatim.py (+ the tripwire 24), cold_run_lev24.py (24), cold_run_negaim.py (27),
+THE_STEPS (motion (6)'s gate sentence), THE_BRIEFING (a process entry), DAEMON_INDEX.md regenerated, this doc, memory. Lints at baseline.
+⚠ LESSONS: a census that counts spellings overstates — read the forms that write; a guard that reads the last binding proves the last list
+— a tripwire that never moves across work that should move it is a defect report (mishpatim's 21 held through four wrap sittings); a gate's
+honest fire may name the RUNNER (the comprehension) — repair the runner, never relax the gate; measure a parser's reach by script before
+editing it (the 43 conditional fx expressions would have been silent drops).
+
+═══ COMPACTION POINT #93 (2026-09-07 — written unprompted at O3's close)
+═══ CLEAN POINT — no work mid-flight. O1 + O2 + O3 DONE (the entries above); the sweep 34 of 34 at 3633; the gates satisfied (244 / 0 / 0 of
+244); the probes 11/11 + 5/5 + 12/12 + 12/12 + 4/4 + the skeleton; open aliases 0; hash unmoved. LAST COMMIT 250b168; UNCOMMITTED OF OURS: #92's
+set + O3's (World/step9/{daemon_census.py, compile_guards.py, daemon_dispositions.yaml, cold_run_mishpatim.py, cold_run_lev24.py,
+cold_run_negaim.py, REPORT_GATE_ITEMS.md (NEW), COMPILE_DEBT.md, DAEMON_INDEX.md}, THE_STEPS.md, THE_BRIEFING.md, this doc, memory) — commit
+only on the owner's "commit push", staging by exclusion as before; ARCHITECTURE/* NOT ours to stage; the NEVER-COMMIT set unchanged; the
+elijah_docket gitlink never staged. POST-COMPACTION REREADS (mandatory, first sitting): this doc's O1-O3 entries + REPORT_GATE_ITEMS.md +
+SEQUENTIAL_RUN.md sections 12-13 + THE_STEPS Step 5 (1) motion (6) + the compiler block + THE SEQUENTIAL RUN paragraph (conventions 1-11) +
+COMPILE_DEBT's BEFORE NUMBERS block and THE UNFILED LIVE EDGES note (~line 423) + memory's STANDING LESSONS and the-effects-law.md +
+link-review-law.md (O4's material: REFERENCE / TRANSFER / HYPOTHESIS, THE TWO QUESTIONS) + dependency_dispositions.yaml's `link:` field
+forms + the dependency gate's "live edges beyond the token census" listing (run dependency_census.py and read the list). THEN, on the
+owner's word: O4 THE EDGE FILING (#90's plan: the 65 unfiled live import edges, each with its link class and why — the sequence runner's 33
+as `none` (the world registers the daemon, no rule crosses), the 32 standing by reading each call site: pre_sinai 15, family 6, holiness 3,
+metzora 2, sanctions 2, clocks 1, minchah 1, offerings 1, yoma 1 — scratchpad lr3_census.py's no-edge print switch lists the calls; the
+gate's live-edge listing then equals the file), then O5-O11 in #90's order, then NUMBERS. Watches: as #92's + THE CENSUS COUNTS WRITERS NOT
+SPELLINGS + THE BINDING AT THE CALL + THE GATE'S FIRE MAY NAME THE RUNNER.

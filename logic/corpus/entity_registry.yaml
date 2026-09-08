@@ -73,6 +73,7 @@ entities:
       - {token: ha_adam}       # installed Gen 1 account (gen_06)
       - {token: adam}          # installed Gen 2 account (gen_08)
       - {token: adam_species}  # the Gen 5:1-2 ledger head, named "Adam"
+      - {token: adam, units: [step9-scenes]}   # THE SEQUENTIAL RUN (2026-09-07): the step-9 scenes' token (cold_run_pre_sinai.py), resolved at the engine
     note: >
       The double install (1:27 and 2:7) is the text's own double account —
       identified as one entity per the ledger's own equation (Gen 5:1-2
@@ -98,7 +99,9 @@ entities:
   - id: noach
     en: "Noah"
     kind: person
-    members: [{token: noach}]
+    members:
+      - {token: noach}
+      - {token: noah, units: [step9-scenes]}   # THE SEQUENTIAL RUN (2026-09-07): the step-9 scenes' token (cold_run_pre_sinai.py), resolved at the engine
 
   - id: noah_and_sons
     en: "Noah and his sons"
@@ -151,6 +154,7 @@ entities:
     kind: person
     members:
       - {token: ha_eved}
+      - {token: the-servant, units: [step9-scenes]}   # THE SEQUENTIAL RUN (2026-09-07): the step-9 scenes' token (cold_run_family.py), resolved at the engine
     note: >
       The text never names him in Gen 24. Tradition reads him as Eliezer
       of Damascus (Gen 15:2) — that identification is NAMED here but NOT
@@ -583,3 +587,19 @@ entities:
       Subject of the corpus's first write-command and the standing
       erasure-oath (17:14-16, the card OPEN): Deut 25:17-19, 1 Sam 15,
       Esther (the Agagite) armed, named.
+
+  # ---- THE SEQUENTIAL RUN (2026-09-07; World/step9/SEQUENTIAL_RUN.md section 3f) ----------------------
+  # The step-9 scenes (World/step9/cold_run_*.py) name the people under three tokens; on the ONE world they are
+  # one ledger. The members are scoped to the scenes (units: [step9-scenes]) and resolved at the engine
+  # (world_engine.World(registry=...)). This is the one registry — never a second who-is-who.
+  - id: israel_people
+    en: "the children of Israel (the people, as a body)"
+    kind: collective
+    members:
+      - {token: israel, units: [step9-scenes]}              # cold_run_erection.py (the covenant cut, Exod 34:27), cold_run_incense_shekel.py
+      - {token: the-people, units: [step9-scenes]}          # cold_run_erection.py (Exod 24:3, 40:34), cold_run_sanctuary_build.py (36:3), cold_run_vestments.py, cold_run_shemini_day.py (Lev 9:22-23)
+      - {token: the-sons-of-israel, units: [step9-scenes]}  # cold_run_family.py (the sinew, Gen 32:33)
+    note: >
+      UNCERTAIN only at the frozen units' own people-tokens (bnei_yisrael and the like are NOT listed here) —
+      whether they join this entity is the corpus fold's own sitting, not the sequential run's. The three
+      scene tokens are the same referent by their verses.

@@ -1161,9 +1161,9 @@ def law_investiture(event, world):
     if k == 'bull_offered': return [E('altar_purged', 'the-altar'), E('burned_outside_camp', 'the-bull')]
     if k == 'ram_olah': return [E('accepted', 'the-ram-1')]
     if k == 'ram_miluim': return [E('blood_on_extremities', 'aaron'), E('blood_on_extremities', 'the-sons'), E('waved', 'the-breast'), E('due_to_priest', 'moses', 'aaron')]
-    if k == 'milluim_blood_sprinkled': return [E('consecrated', 'the-garments'), E('invested_office', 'aaron'), E('invested_office', 'the-sons')]   # W3: unified with the library's name (was garments_sprinkled)
-    if k == 'milluim_leftover': return [E('burn_remainder', 'the-remainder')]                                                                    # W3: unified with the library's name (was meal)
-    if k == 'confined': return [E('confined_seven_days', 'aaron'), E('confined_seven_days', 'the-sons')]
+    if k == 'milluim_blood_sprinkled': return [E('consecrated', 'the-garments')]   # O2 (2026-09-07): the spec's own entry at the run (29:21 'he and his garments, his sons and his sons' garments'); THE OFFICE is the library's law_installation's — the commit on the party aaron-and-sons (one act, one writer per effect)
+    if k == 'milluim_leftover': return []                                          # O2: an empty watch — the library writes the leftover's duty on the holders (8:32); this runner's cell CALLS the Tzav engine for it
+    if k == 'confined': return []                                                  # O2: an empty watch — the library writes the confinement and the release timer (8:33) on the party
     if k == 'did_all': return [E('inspected_as_commanded', 'the-rite')]
     # ---- W6 THE SANCTUARY'S REMAINDER (D9-iii, 2026-09-07): the runner's LAW LAYER beside Lev 8's run — the succession (29:29-30), the incense altar
     # (30:1-10), the shekel (30:11-16), the oil (30:22-33), the incense (30:34-38); no new daemon (the #83 ruling). Every value a CALL into this runner's
@@ -1177,6 +1177,7 @@ def law_investiture(event, world):
         return [E_('garments_inherited', s_, cp=event.get('predecessor'), value=ground, law='F4 [INK 29:29 "the holy garments of Aaron shall be his sons\' AFTER HIM, to be anointed in them and to fill their hand in them" — Yoma 72b:20: whoever comes in greatness after him; Yoma 73a:1: %s; the run Num 20:26-28]' % succession('fit_to_come')['v']),
                 E_('garments_inherited', s_, cp=event.get('predecessor'), due=day + 7, value=succession('anointing_likened')['v'], law='F4 [INK 29:30 "SEVEN DAYS shall the priest in his stead of his sons wear them" — the TIMER: Yoma 5a:12 the anointing likened to the filling, seven; Mishnah Yoma 1:1 %s]' % succession('substitute_sheet')['v'])]
     if k == 'incense_burned':
+        if WE.seat(src) == ('Exod', 40): return []                                # O2: the erection's act (40:27) is law_erection's — the initiation and the morning's timer; this daemon reads its own span (Exod 30) and the recorded runs
         b = event.get('burner', 'aaron')
         if event.get('burner_class') == 'stranger':
             run = incense('uzziah_run') if 'Chr' in src else incense('korach_run')
@@ -1288,13 +1289,16 @@ def scene():
         ws.submit({'kind': 'sabbath_profaned', 'subject': 'the-unwitnessed', 'profaner': 'the-unwitnessed', 'witnessed': False, 'labor': 'plowing', 'case_source': 'Onkelos Exod 31:14 — deliberate without witnesses: karet'})
         ws.submit({'kind': 'sabbath_profaned', 'subject': 'the-kindler', 'profaner': 'the-kindler', 'witnessed': False, 'labor': 'kindling', 'case_source': 'Exod 35:3 + Shabbat 70a — kindling singled out'})
         w = WE.World(era='the investiture (clock unit: days)')
-        w.laws = [law_investiture]
+        w.laws = [WE.law_installation, law_investiture]          # O2 (2026-09-07): the library's Lev 8 daemon registered beside — the office, the confinement, the release, the leftover are its
+        w.submit({'kind': 'installation_commanded', 'subject': 'aaron-and-sons', 'components': ['bullock', 'ram_olah', 'ram_milluim', 'basket'], 'case_source': 'Lev 8:2', 'law': '14'})
+        # O2 (2026-09-07): the PARTY aaron-and-sons on 8:30, 8:31-32, 8:33-35 — the ink's compound in nine verses of Lev 8 (the gate's parser reads this list: its closing bracket ends its line)
         tape = [('washed', 'aaron', 'Lev 8:6'), ('dressed', 'aaron', 'Lev 8:7-9'), ('vessels_anointed', 'moses', 'Lev 8:10-11'), ('head_anointed', 'aaron', 'Lev 8:12'),
                 ('sons_dressed', 'the-sons', 'Lev 8:13'), ('hands_laid', 'the-bull', 'Lev 8:14'), ('bull_offered', 'the-bull', 'Lev 8:14-17'), ('hands_laid', 'the-ram-1', 'Lev 8:18'),
-                ('ram_olah', 'the-ram-1', 'Lev 8:18-21'), ('hands_laid', 'the-ram-2', 'Lev 8:22'), ('ram_miluim', 'the-ram-2', 'Lev 8:22-29'), ('milluim_blood_sprinkled', 'aaron', 'Lev 8:30'),
-                ('milluim_leftover', 'aaron', 'Lev 8:31-32'), ('confined', 'aaron', 'Lev 8:33-35'), ('did_all', 'aaron', 'Lev 8:36')]
+                ('ram_olah', 'the-ram-1', 'Lev 8:18-21'), ('hands_laid', 'the-ram-2', 'Lev 8:22'), ('ram_miluim', 'the-ram-2', 'Lev 8:22-29'), ('milluim_blood_sprinkled', 'aaron-and-sons', 'Lev 8:30'),
+                ('milluim_leftover', 'aaron-and-sons', 'Lev 8:31-32'), ('confined', 'aaron-and-sons', 'Lev 8:33-35'), ('did_all', 'aaron', 'Lev 8:36')]
         for k, s, src in tape:
             w.submit({'kind': k, 'subject': s, 'case_source': src, 'law': '14'})
+        w.advance(7)                                                        # O2: the seven days pass on this world too — the library's release fires
         # W6 (2026-09-07): THE LAW LAYER'S OWN WORLD — the recorded rows on law_investiture's W6 branches (clock unit: days)
         wl = WE.World(era="the sanctuary's remainder: the succession, the incense altar, the shekel, the oil and the incense — Shekalim, Keritot 1:1, Menachot 4:4, Middot 3 on the engine (clock unit: days)")
         wl.laws = [law_investiture]
@@ -1356,8 +1360,8 @@ def scene():
            ns('the-unwitnessed', 'karet_cut_off'), ns('the-unwitnessed', 'put_to_death'), ns('the-kindler', 'kindling_barred'), ns('the-kindler', 'karet_cut_off'), ws.clock.day)
     return (n('aaron', 'names_borne'), n('aaron', 'judgment_borne'), n('aaron', 'entry_announced'), n('aaron', 'plate_propitiates'),
             n('the-bull', 'hand_laid') + n('the-ram-1', 'hand_laid') + n('the-ram-2', 'hand_laid'), n('aaron', 'blood_on_extremities') + n('the-sons', 'blood_on_extremities'),
-            n('the-altar', 'altar_purged'), n('the-breast', 'waved'), n('moses', 'due_to_priest'), n('the-garments', 'consecrated'), n('aaron', 'invested_office'),
-            n('the-remainder', 'burn_remainder'), n('aaron', 'confined_seven_days'), n('aaron', 'anointed') + n('the-tabernacle', 'anointed'), events), sab, scene_counts_w6(wl), w, ws, wl
+            n('the-altar', 'altar_purged'), n('the-breast', 'waved'), n('moses', 'due_to_priest'), n('the-garments', 'consecrated'), n('aaron-and-sons', 'invested_office'),
+            n('aaron-and-sons', 'burn_remainder'), n('aaron-and-sons', 'confined_seven_days'), n('aaron-and-sons', 'released'), n('aaron', 'anointed') + n('the-tabernacle', 'anointed'), events), sab, scene_counts_w6(wl), w, ws, wl   # O2: the party's entries from the library; released after the seven days
 def scene_counts_w6(wl):
     """W6 — the law layer's scene tuple: the effect counts over the whole world (every subject), the silences proven by absence, the timers, the events, the clock."""
     ne = lambda eff: sum(1 for ent in wl.entities.values() for e in ent.ledger if e['effect'] == eff)
@@ -1388,7 +1392,7 @@ def build(q):
     if q == 'headline':
         return cell('the_spec_run_delta_is_where_the_tradition_argues', M, "THE HEADLINE (Yoma 5b:9): the run SPLITS the spec's grouped verb (29:9 'gird THEM' -> 8:7 'girded HIM', 8:13 'girded THEM') and the dressing-order dispute runs on exactly that delta; the run INSERTS another spec's run (8:10-11) and ADDS its own limiters (8:35); the run DROPS the law clauses and the promises (the dues, the succession, the tamid, the Presence) — move M-22's family, a fourth form: the delta", [FX.NONE])
     if q == 'world':
-        return cell(SCENE, I, "THE SCENE on the world engine — Lev 8's tape through this spec's daemon: (names borne, judgment borne, entry announced, plate propitiates — THE FOUR USE ENTRIES THE VESTMENTS SPEC PROMISED, fired at the dressing; hands laid x3; blood on the extremities x2; the altar purged; the breast waved; the due to Moses; the garments consecrated; the office invested; the remainder burned; the confinement; the anointings; events)", ['names_borne', 'judgment_borne', 'entry_announced', 'plate_propitiates', 'hand_laid', 'blood_on_extremities', 'altar_purged', 'waved', 'due_to_priest', 'consecrated', 'invested_office', 'burn_remainder', 'confined_seven_days', 'anointed'])
+        return cell(SCENE, I, "THE SCENE on the world engine — Lev 8's tape through this spec's daemon: (names borne, judgment borne, entry announced, plate propitiates — THE FOUR USE ENTRIES THE VESTMENTS SPEC PROMISED, fired at the dressing; hands laid x3; blood on the extremities x2; the altar purged; the breast waved; the due to Moses; the garments consecrated; the office invested on the PARTY aaron-and-sons by the library's law_installation registered beside (O2, 2026-09-07 — the commit at 8:30 is the library's, this daemon's own entry the consecration); the remainder's duty on the party; the confinement and the RELEASE after the seven days (the library's timer from 8:2); the anointings; events)", ['names_borne', 'judgment_borne', 'entry_announced', 'plate_propitiates', 'hand_laid', 'blood_on_extremities', 'altar_purged', 'waved', 'due_to_priest', 'consecrated', 'invested_office', 'burn_remainder', 'confined_seven_days', 'anointed'])
     return cell('no_case', I, '', [FX.NONE])
 
 # ---- (2) the answer sheet — the Mishnah rows as TEST DATA (verified by their own tokens) ----
@@ -1725,7 +1729,7 @@ TESTS = [
  ('the person shift — eleven and eight', build('person_shift'), (11, 8)),
  ('the spec\'s one citation token', build('spec_cites_itself'), 1),
  ('THE HEADLINE — the delta is where the tradition argues', build('headline'), 'the_spec_run_delta_is_where_the_tradition_argues'),
- ('THE SCENE on the world engine — the four use-entries fired', build('world'), (1, 1, 1, 1, 3, 2, 1, 1, 1, 1, 1, 1, 1, 2, 15)),
+ ('THE SCENE on the world engine — the four use-entries fired', build('world'), (1, 1, 1, 1, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 16)),   # O2 (2026-09-07): printed before typed — the party's office, remainder, confinement, RELEASE from the library beside; 16 events (8:2's command)
  # ---- THE WRAP OF THE SABBATH CLAUSE (W2) ----
  ('THE SABBATH SCENE on the world engine — the wrap (W2)', cell(SCENE_SAB, A, "THE SABBATH SCENE: the sign written on the covenant and the rest; the gatherer's labor barred, put to death with witnesses and STONED (the mode from Num 15:35); the unwitnessed profaner cut off by Heaven and not by the court; the kindler's kindling barred beside his karet — the one labor the ink names; the clock at 1: %r" % (SCENE_SAB,), ['sign_between', 'put_to_death', 'stoned', 'karet_cut_off', 'kindling_barred']),
   (1, 1, 1, 1, 1, 1, 0, 1, 1, 1)),

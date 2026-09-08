@@ -40,7 +40,7 @@ measured) where Abram vanishes after 17:5 (zero) — the name-change rule's para
 13a); the two princes hinted at 32:29 and read at 49:10 (Chullin 92a; Sanhedrin 5a). (4) THE LEVIRATE (Gen 38) — the
 institution's first seat: the ORDER of the sons is the duty's order (Onan then Shelah — Mishnah Yevamot 2:8, 4:5), Tamar
 the WAITING WIDOW (4:3 — her acts stand: the pledge she contracts), the deferral to a MINOR the answer sheet REFUSES (4:6 —
-'until Shelah grows' is the ink's own plea; the timer set at 38:11 and checked at 38:14; the two-husbands presumption,
+'until Shelah grows' is the ink's own plea; the wait written open at 38:11 and the levir's duty written owed at 38:14's own act (O1, 2026-09-07); the two-husbands presumption,
 Yevamot 64b), NO release form pre-Sinai (no shoe — measured; Ruth 4:7's 'formerly in Israel'), SEED at 38:8 against NAME at
 Deut 25:6 (the second seat's delta — Yevamot 24a resolves the name to inheritance from THIS runner's 48:6), 'and he has no
 son' opening two institutions at two Sinai seats (Deut 25:5, Num 27:8 — measured), the daughter-in-law among the fifteen
@@ -1011,10 +1011,11 @@ def law_family(event, world):
     if k == 'handed': return [E_('handed_to_the_agent', subj, cp=event['agent'])]
     if k == 'married': return [E_('wife_taken', subj, cp=event['husband']), E_('comforted', event['husband'])]
     if k == 'sinew_barred': return [E_('sinew_barred', subj)]
-    if k == 'renamed': return [E_('name_changed', subj, value=event['name'])]
+    if k == 'renamed': return [E_('name_changed', subj, value=event['name'])] if WE.seat(src) == ('Gen', 32) else []   # O2 (2026-09-07): this daemon's seat 32:29; Abraham's and Sarah's (Gen 17) are the pre-Sinai engine's
     if k == 'levirate_commanded': return [E_('levirate_owed', subj, cp=event['widow'])]
     if k == 'slain': return [E_('slain_by_heaven', subj)]
-    if k == 'widow_sent': return [E_('waits_for_the_levir', subj, due=event['until'], cp=event['levir'])]     # the timer: 'until Shelah grows' (38:11), checked at 38:14
+    if k == 'widow_sent': return [E_('waits_for_the_levir', subj, cp=event['levir'])]                          # the wait written OPEN, no timer: 'until Shelah grows' (38:11) gives no number (O1, 2026-09-07 — the scene's four-day timer retired)
+    if k == 'shelah_grown': return [E_('levirate_owed', event['levir'], cp=subj)]                              # 38:14 'she saw that Shelah had grown, and she was not given to him as a wife': the levir's duty due and unpaid — the ink's own act
     if k == 'pledge_given': return [E_('pledge_held', subj, cp=event['by'])]
     if k == 'sentenced': return [E_('sentence_pronounced', subj, value=event['mode'])]
     if k == 'recognized': return [E_('acquitted', subj)]
@@ -1053,8 +1054,9 @@ def scene():
         w.submit({'kind': 'slain', 'subject': 'onan', 'case_source': 'Gen 38:10'})
         w.close('onan', 'levirate_owed', 'Gen 38:10 — the levir slain; the duty passes to Shelah (38:11)')
         w.advance(8)
-        w.submit({'kind': 'widow_sent', 'subject': 'tamar', 'levir': 'shelah', 'until': 12, 'case_source': 'Gen 38:11'})   # the timer set: due day 12
-        w.advance(12)                                                                                                        # 'she saw that Shelah had grown' (38:14): the timer FIRES — the debit opens, unpaid
+        w.submit({'kind': 'widow_sent', 'subject': 'tamar', 'levir': 'shelah', 'case_source': 'Gen 38:11'})   # the wait written open — no timer, the ink gives no number (O1, 2026-09-07)
+        w.advance(12)
+        w.submit({'kind': 'shelah_grown', 'subject': 'tamar', 'levir': 'shelah', 'case_source': 'Gen 38:14'})   # 'she saw that Shelah had grown': the levir's duty written OWED on Shelah — never closed by the ink (46:12 his own line; the seed raised through the father-in-law)
         w.advance(13)
         w.submit({'kind': 'pledge_given', 'subject': 'tamar', 'by': 'judah', 'case_source': 'Gen 38:17-18'})
         w.submit({'kind': 'sentenced', 'subject': 'tamar', 'mode': 'burning', 'case_source': 'Gen 38:24'})
@@ -1079,6 +1081,7 @@ def scene():
             n('the-servant', 'agent_commissioned'), n('the-servant', 'sworn_by_the_name'), n('rebekah', 'gifts_given'), n('rebekah', 'consent_given'), n('rebekah', 'handed_to_the_agent'),
             n('rebekah', 'wife_taken'), n('isaac', 'comforted'), n('the-sons-of-israel', 'sinew_barred'), n('jacob', 'name_changed'),
             n('onan', 'levirate_owed'), op('onan', 'levirate_owed'), n('er', 'slain_by_heaven') + n('onan', 'slain_by_heaven'), n('tamar', 'waits_for_the_levir'), op('tamar', 'waits_for_the_levir'),
+            n('shelah', 'levirate_owed'), op('shelah', 'levirate_owed'),
             n('tamar', 'pledge_held'), n('tamar', 'sentence_pronounced'), n('tamar', 'acquitted'), n('perez', 'firstborn_by_the_head'),
             n('ephraim', 'adopted_as_sons') + n('manasseh', 'adopted_as_sons'), n('ephraim', 'younger_set_first'), n('joseph', 'portion_added'),
             n('reuben', 'demoted'), n('joseph', 'birthright_transferred'), n('simeon', 'scattered_in_israel') + n('levi', 'scattered_in_israel'), n('judah', 'scepter_held'),
@@ -1088,7 +1091,7 @@ SCENE = scene()
 # ---- F8: THE HEADLINES ----------------------------------------------------------------------------------------------
 def build(q):
     if q == 'world':
-        return cell(SCENE, I, "THE SCENE on the world engine — Sarah's death opens the mourner's status and the purchase closes it with the burial; the field acquired and held; the servant commissioned and sworn; the gifts, the consent, the handover, the marriage and Isaac's comfort; the sinew barred on the sons of Israel and Jacob renamed; Er slain, Onan owed the levirate and slain (the debit closed by his death); Tamar sent to wait on a TIMER that FIRED when Shelah had grown (38:14) and stayed open until the recognition (38:26); the pledge held, the sentence pronounced, the acquittal, Perez the firstborn by the head; Ephraim and Manasseh adopted, the younger set first, the portion added; Reuben demoted and the birthright transferred, Simeon and Levi scattered, Judah's scepter; the burial owed at 49:29 and CLOSED by the run at 50:12; Jacob gathered; the clock ABSOLUTE: %r" % (SCENE,), ['burial_owed', 'waits_for_the_levir'])
+        return cell(SCENE, I, "THE SCENE on the world engine — Sarah's death opens the mourner's status and the purchase closes it with the burial; the field acquired and held; the servant commissioned and sworn; the gifts, the consent, the handover, the marriage and Isaac's comfort; the sinew barred on the sons of Israel and Jacob renamed; Er slain, Onan owed the levirate and slain (the debit closed by his death); Tamar sent to wait — the debit OPEN with no timer (the ink gives no number), the levir's duty written OWED on Shelah at 38:14's own act ('she saw that Shelah had grown') and never closed (the ink's silence), her wait closed at the recognition (38:26); the pledge held, the sentence pronounced, the acquittal, Perez the firstborn by the head; Ephraim and Manasseh adopted, the younger set first, the portion added; Reuben demoted and the birthright transferred, Simeon and Levi scattered, Judah's scepter; the burial owed at 49:29 and CLOSED by the run at 50:12; Jacob gathered; the clock ABSOLUTE: %r" % (SCENE,), ['burial_owed', 'waits_for_the_levir'])
     if q == 'headline_three_modes':
         return cell('the_purchase_runs_kiddushin_1_5s_three_modes', M, "THE HEADLINE (1): Mishnah Kiddushin 1:5's three modes of acquiring land — money, deed, possession — are the purchase chapter's three ACTS (the silver weighed 23:16, the record before the gate 23:17-18, the burial 23:19), and the tractate itself opens on the same field (1:1's 'take from me'): the answer sheet's grid is the chapter's sequence", ['field_acquired'])
     if q == 'headline_agent_retold':
@@ -1353,7 +1356,7 @@ TESTS = [
  ('the bite of interest at four seats', testament('interest_bite'), ['Deut 23:20', 'Exod 22:24', 'Lev 25:36', 'Num 21:9']),
  ('the parents\' order by call', testament('parents_order_by_call'), 'mother_first_here_father_first_at_Sinai_both_equal'),
  # ---- THE SCENE AND THE HEADLINES ----
- ('THE SCENE on the world engine', build('world'), (1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 2, 1, 0, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 0, 1, 1, 16)),
+ ('THE SCENE on the world engine', build('world'), (1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 2, 1, 0, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 0, 1, 0, 16)),   # O1 (2026-09-07): Shelah's debit (1 written, 1 open) after Tamar's wait; timers fired 0 — the four-day timer retired
  ('HEADLINE: the purchase runs Kiddushin 1:5\'s three modes', build('headline_three_modes'), 'the_purchase_runs_kiddushin_1_5s_three_modes'),
  ('HEADLINE: the commission is a spec/run/retold triple', build('headline_agent_retold'), 'the_commission_is_a_spec_run_retold_triple'),
  ('HEADLINE: the sinew has no Sinai seat and the census shows it', build('headline_sinew_exception'), 'the_sinew_has_no_sinai_seat_and_the_census_shows_the_absence'),

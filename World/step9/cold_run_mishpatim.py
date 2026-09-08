@@ -16,7 +16,7 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from compile_guards import check_honest_pairing as _chp, check_honest_dict as _chd, check_honest_calls as _chc
 _P = _os.path.abspath(__file__)
 GUARDED = _chc(_P, 'grade', 2, 2)
-assert GUARDED == 21, ("the guard counted %d expectations, the tripwire holds 21" % GUARDED)
+assert GUARDED == 24, ("the guard counted %d expectations, the tripwire holds 24" % GUARDED)   # O3 (2026-09-07): measured 24 after the guard reads each call's own list (the old 21 counted the last list for every call; the four-damages rows were a comprehension it never read — now literal)
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys, os
 
@@ -98,11 +98,15 @@ for ch, vs, lem, label in ((21, 28, 7794, 'OX'), (21, 33, 953, 'PIT'),
     first = strip(words('Exod', ch, vs)[0][1])
     assert first in ('כי', 'וכי') and has_lemma('Exod', ch, vs, lem)
     openers.append(label)
-cells = [('class %s (case opener found)' % l, 'MODULE', 'MODULE',
-          'INK: verse-initial KI + the class noun in its opener verse', 'INK')
-         for l in openers]
-cells.append(('common output: pay from the BEST', 'BEST-OF-LAND', 'BEST-OF-LAND',
-              'INK 22:4 "best of his field, best of his vineyard" [4315 x2] + GENERALIZED [Bava Kamma 6b]', 'RECORDED'))
+assert openers == ['OX', 'PIT', 'GRAZING', 'FIRE'], openers      # O3 (2026-09-07): the four rows below are LITERAL — the honest-calls guard, resolving the binding at the call's line, refused the comprehension the old guard never read
+cells = [
+    ('class OX (case opener found)', 'MODULE', 'MODULE', 'INK: verse-initial KI + the class noun in its opener verse (21:28)', 'INK'),
+    ('class PIT (case opener found)', 'MODULE', 'MODULE', 'INK: verse-initial KI + the class noun in its opener verse (21:33)', 'INK'),
+    ('class GRAZING (case opener found)', 'MODULE', 'MODULE', 'INK: verse-initial KI + the class noun in its opener verse (22:4)', 'INK'),
+    ('class FIRE (case opener found)', 'MODULE', 'MODULE', 'INK: verse-initial KI + the class noun in its opener verse (22:5)', 'INK'),
+    ('common output: pay from the BEST', 'BEST-OF-LAND', 'BEST-OF-LAND',
+     'INK 22:4 "best of his field, best of his vineyard" [4315 x2] + GENERALIZED [Bava Kamma 6b]', 'RECORDED'),
+]
 results.append(grade('four-damages class map', 'Mishnah Bava Kamma 1:1', cells))
 
 # ---- F3: the goring-ox state machine (code: 21:28-32, 35-36) --------

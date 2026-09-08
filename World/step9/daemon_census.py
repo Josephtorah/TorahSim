@@ -148,15 +148,63 @@ def parse_daemons(src, base):
     return daemons
 
 
+def _effect_strings(node):
+    """every registered-effect string constant inside an expression's AST (a list, a conditional, a sum, a call)"""
+    return {c.value for c in ast.walk(node) if isinstance(c, ast.Constant) and isinstance(c.value, str) and c.value in FX.REGISTRY}
+
+
+def _call_name(c):
+    f = c.func
+    return f.id if isinstance(f, ast.Name) else (f.attr if isinstance(f, ast.Attribute) else None)
+
+
+def written_effects(fn_node):
+    """O3 THE GATE ITEMS (2026-09-07; REPORT_GATE_ITEMS.md): the effects a function WRITES — read from the forms that write, never from
+    every string that spells an effect (THE VALUE/EFFECT HOMOGRAPH: a tier name, a cell value, a verdict value, a ledger read, a close
+    note). The forms: the fx argument (the fourth) of a cell(...) call — any expression, a local NAME resolved to its assignments inside
+    the function; the effects argument (the second) of out(...); the first argument of an E(...) / E_(...) call; an effect dict literal
+    {'effect': 'x'}. A bare string as a cell's fourth argument is a note (the yoma shape), not fx."""
+    effs, locals_ = set(), {}
+    for c in ast.walk(fn_node):
+        if isinstance(c, (ast.Assign, ast.AugAssign)):
+            tgt = c.targets[0] if isinstance(c, ast.Assign) else c.target
+            if isinstance(tgt, ast.Name):
+                locals_.setdefault(tgt.id, set()).update(_effect_strings(c.value))
+    def expr_effects(a):
+        if isinstance(a, ast.Constant):
+            return set()                                     # a bare string: a note, not fx
+        if isinstance(a, ast.Name):
+            return set(locals_.get(a.id, ()))
+        out = _effect_strings(a)
+        for n in ast.walk(a):
+            if isinstance(n, ast.Name) and n.id in locals_:
+                out |= locals_[n.id]
+        return out
+    for c in ast.walk(fn_node):
+        if isinstance(c, ast.Call):
+            name = _call_name(c)
+            if name == 'cell' and len(c.args) >= 4:
+                effs |= expr_effects(c.args[3])
+            elif name == 'out' and len(c.args) >= 2:
+                effs |= expr_effects(c.args[1])
+            elif name in ('E', 'E_') and c.args and isinstance(c.args[0], ast.Constant) and c.args[0].value in FX.REGISTRY:
+                effs.add(c.args[0].value)
+        elif isinstance(c, ast.Dict):
+            for k, v in zip(c.keys, c.values):
+                if isinstance(k, ast.Constant) and k.value == 'effect' and isinstance(v, ast.Constant) and v.value in FX.REGISTRY:
+                    effs.add(v.value)
+    return sorted(effs)
+
+
 def parse_functions(src, base):
-    """the compiled functions that write the world: name -> sorted effects; plus the module's own effect set"""
+    """the compiled functions that write the world: name -> sorted effects (the WRITING forms only — O3); plus the module's own effect set"""
     tree = ast.parse(src)
     cands, cells = OrderedDict(), {}
     for node in tree.body:
         if not isinstance(node, ast.FunctionDef) or node.name in INFRA or node.name.startswith('law_'):
             continue
         seg = ast.get_source_segment(src, node) or ''
-        effs = sorted(set(e for e in re.findall(r"'([a-z_]+)'", seg) if e in FX.REGISTRY))
+        effs = written_effects(node)
         if effs:
             cands[node.name] = effs
             cells[node.name] = seg.count('cell(')     # the modern shape carries its effects in its own cells; the older

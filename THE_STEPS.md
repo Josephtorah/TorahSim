@@ -652,8 +652,12 @@ confirmed process, the sixth added at D9-iv):
      World/step9/calendar_parameters.yaml — never constants in code).
      The gate and the sweep fifth: the daemon gate
      satisfied (declaration equals parse, every kind registered and
-     submitted, every function dispositioned), the live edges the
-     span calls filed with their link, the sweep green. THE FENCE
+     submitted, every function dispositioned — a function's effects
+     read from the forms that WRITE, a cell's fx, out(), the effect
+     dict, never from every string that spells one: O3, 2026-09-07),
+     the live edges the span calls filed with their link, the sweep
+     green; the honest-pairing guard reads a cells name as the binding
+     in effect at the call's line, never the file's last (O3). THE FENCE
      (method law 6) stated for daemons: a daemon consumes events
      and writes the ledger only, never emits an event; cascades run
      through ledger state, never synthetic events; timer firings
@@ -2157,6 +2161,59 @@ program, the sugyot supply the tests, and every miss draws one edge
 of the program's cross-book import graph. In one line: the Talmud
 defines the TESTS and their scope; the scroll defines the PROGRAM
 and its blocks; neither picks the other's unit.
+
+THE SEQUENTIAL RUN (2026-09-07, after compaction #88; the owner: "ok
+lets do that" and then "reread 88 and go"). The three books on ONE
+world of the law engine in verse order — a process upgrade, and the
+conventions every narrative span from Numbers on must follow
+(World/step9/SEQUENTIAL_RUN.md section 9): (1) a narrative span's scene
+submits LITERAL events in the text's order, dated by the text's own
+stamps as MARKERS — never by a scene number; an event's `day` field is
+a VALUE only when the ink counts it. (2) The registry's FORM decides
+what is history — acts, speech and statutes on a narrative verse (the
+wayyiqtol test off the Tanakh DB's morphology); the Mishnah's rows are
+the exam and stay off the tape. (3) A lifespan total is a PROLEPTIC
+stamp (the counter unmoved), a begetting or an age-at-event a FORWARD
+one, a stated date earlier than the counter a RETROGRADE one (Pesachim
+6b:7). (4) Every number on a marker is PARSED FROM THE INK by the
+numeral parser and re-verified at run time; the year grain is the
+ink's, the day within a year is modeled at the year's first day and
+said so. (5) A life-year turns at the New Year (Genesis 8:13), and
+"the Nth year of X's life" is the year of age N (7:6, 9:28-29) — the
+row life_year_reading. (6) Entity names resolve through the ONE
+registry at the engine (World(registry=)); a new scene's tokens join
+logic/corpus/entity_registry.yaml as members scoped to the scenes; a
+people-token joins israel_people. (7) The sequence tape is RE-STITCHED
+after every new narrative scene (scratchpad seq_stitch.py writes the
+runner's sentinel section) and the sweep grades it as its own runner.
+(8) A timer whose due the ink states as "the Nth day" counts the first
+day inclusively; a timer set inside an undated stretch fires only when
+the next marker walks the clock — write the marker the ink gives, not
+an advance. (9) (O1, 2026-09-07) A birth's day within its year is the
+SHELF'S ROW where it gives one (Isaac on Passover — Rosh Hashanah
+10b:10; the patriarchs in Tishrei), else the modeled first day, said so;
+and a timer the ink gives no number for ("until Shelah grows") is NO
+timer — the text's own later act (38:14) does its job. (10) (O1) A
+month named after Exodus 12:2 is addressed by the CALENDAR'S OWN
+numbering (Nisan the first, Tishrei the seventh), never by an era's
+ordinal count — in a thirteen-month year the ordinal seventh from
+Tishrei is Adar II; the other settings of a parameter run as their own
+WORLDS (the sojourn fork), because a world runs into what a remark
+beside the running world cannot. (11) (O2, 2026-09-07) ONE ACT, ONE
+WRITER PER EFFECT: a daemon consumes an act narrated in ITS OWN SPAN
+(the span its runner declares to the dependency census) or a recorded
+run of its own statute; an act in another engine's span is that
+engine's, and the ledger is written once — the scope reads the event's
+first cited verse (world_engine.seat), never a string typed into a
+verdict. Two daemons may consume one act only when each writes ITS OWN
+effect from its own verses (one type under two law layers), and that
+is declared in the registry's tape line, never discovered on the tape.
+An act's party is the ink's — "Aaron and his sons" is one subject in
+Leviticus 8, not a scene's shorthand for one of them. The engine: eras
+as counters set by markers, the exodus era at Exodus 12:2, a life era at every birth; the
+creation era's day one five days before its first Tishrei (Vayikra
+Rabbah 29:1 — the stub month). The account:
+World/step9/REPORT_SEQUENTIAL_RUN.md.
 
 The ink-first order is what keeps the fractions honest (pure-ink vs
 recorded-move vs routed, the Mishpatim measurement). Exam rules

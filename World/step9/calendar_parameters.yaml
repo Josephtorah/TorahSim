@@ -126,6 +126,37 @@ parameters:
     source: "Lev 25:10-11 — 'you shall sanctify the fiftieth year... a jubilee it is, the fiftieth year'"
     teacher: null
     exercised_by: [count]
+  # THE SEQUENTIAL RUN (2026-09-07; SEQUENTIAL_RUN.md section 2): the life era's reading of the ink's year idiom
+  life_year_reading:
+    value: completed
+    channel: ink
+    source: "'in the Nth year of X's life' (Gen 7:11) read as the calendar year in which X's completed age is N — the ink's own witnesses agree: Gen 7:6 'Noah was a son of six hundred years and the flood came', 9:28-29 'three hundred and fifty years after the flood... all his days nine hundred and fifty'; 'a son of N years' is N completed throughout (Gen 16:16 + 17:25 = 17:1: 86 + 13 = 99). THE LIFE-YEAR TURNS AT THE NEW YEAR, not at a birthday: Gen 7:11 -> 8:13 -> 8:14 — the 601st year's 'first month, first day' follows the 600th year's 'second month, seventeenth' by ten and a half months, and 8:14's 'second month, twenty-seventh' closes a year and ten days: the age is the calendar years' difference (ink). The day a birth falls within its year is MODELED at the year's first day (Rosh Hashanah 10b:10, Rabbi Eliezer: 'in Tishrei the patriarchs were born' — the received row the model follows; labeled)"
+    teacher: null
+    settings: {completed: "the Nth year = the year of age N (Gen 7:6, 8:13, 9:28-29)", ordinal: "the Nth year = the year of age N-1 (the strict ordinal wording of 7:11)"}
+    open: "OPEN-8 — the two readings differ by one year at Gen 7:11; the tape runs 'completed', the ordinal setting's dates printed beside (checkpoint C2). The tradition's anno-mundi count (Seder Olam, not on the local shelf) runs ONE YEAR LOWER than this machine's creation-year throughout — it counts Adam's creation year as year 0; printed as a remark, never a checkpoint"
+    exercised_by: [creation]
+  # O1 THE SMALL FIXES (2026-09-07; SEQUENTIAL_RUN.md section 12 d): the births' days where the shelf gives them
+  isaac_birth_date:
+    value: {month: 1, day: 15}
+    channel: received
+    source: "Rosh Hashanah 10b:10 (Rabbi Eliezer) AND 11a:2 (Rabbi Yehoshua) — both arms: 'on Passover Isaac was born' (בפסח נולד יצחק); 11a:13 the derivation from Gen 18:14 'at the appointed time I will return to you' (למועד אשוב אליך — the annunciation at the festival, the birth at Passover). The month is the CALENDAR'S OWN first (Nisan — Exod 12:2 'the first month', the ink's numbering, right in a leap year too: the creation era's ORDINAL seventh from Tishrei is Adar II in a thirteen-month year); the day is the feast's, Lev 23:6 / Exod 12:18 'on the fifteenth day' (ink)"
+    teacher: "Rosh Hashanah 11a:13"
+    exercised_by: [sequence]
+  patriarch_birth_month:
+    value: 7
+    channel: received
+    source: "Rosh Hashanah 10b:10 — Rabbi Eliezer: 'in Tishrei the patriarchs were born' (בתשרי נולדו אבות); 11a:7 his derivation from 1 Kings 8:2 'in the month of the mighty ones' (the month in which the mighty ones of the world were born). The month is the calendar's own SEVENTH (Tishrei — Lev 23:24's numbering); the DAY within the month is MODELED at the first (labeled); applied to Abraham, Jacob and Esau (Isaac has his own row); every other birth stays modeled at the year's first day"
+    teacher: "Rosh Hashanah 11a:7"
+    settings: {r_eliezer: 7, r_yehoshua: 1}
+    open: "Rabbi Yehoshua's arm — 'in Nisan the patriarchs were born' (11a:2; 11a:9 from 1 Kings 6:1's 'month of Ziv', the month in which the radiant ones of the world were born): the setting 1 (Nisan), UNEXERCISED"
+    exercised_by: [sequence]
+  second_tablets_given:
+    value: {month: 7, day: 10}
+    channel: received
+    source: "Taanit 30b:8 — 'Yom Kippur, because it has pardon and forgiveness, the day on which the last tablets were given' (יום שניתנו בו לוחות האחרונות); Bava Batra 121a:6 the same row (לוחות אחרונות). The month and day are the exodus era's (Nisan the first): the tenth of the seventh month, Lev 23:27 (ink). THE ASCENT'S DAY = this day − 40: Exod 34:28 'forty days and forty nights' (ink) — the timer's own arithmetic, the same shape as Lev 8:2 = the erection − 7"
+    teacher: "Taanit 30b:8; Bava Batra 121a:6"
+    open: "the tradition's own date of the second ascent (the first of Elul — Seder Olam, Pirkei deRabbi Eliezer) is NOT on the local Babylonian shelf (searched: 'the new moon of Elul', no row); the machine's computed date of the ascent is printed as a remark, never a checkpoint. The intercession's forty days between the breaking's morrow (Exod 32:30, ink) and this ascent are Deuteronomy's (9:18) — owed to that book"
+    exercised_by: [sequence]
 
 # THE ERA TABLE (consensus point D as amended at round two: data now; a code path only where a tape exercises
 # the row). A world declares its epoch by the row's key; a world with no epoch has no derived year (None).
@@ -136,12 +167,20 @@ eras:
     exercised_by: [calendar, holiness_b, tochacha, yovel, mishpatim, the skeleton's own scenes]
   exodus:
     new_year_month: 1
-    epoch: "day 0 = the first day of the first month of year 1 — Exod 12:2; Exod 40:17 'in the first month of the second year'; Num 1:1"
-    exercised_by: []
+    epoch: "day 0 = the first day of the first month of year 1 — Exod 12:2; Exod 40:17 'in the first month of the second year'; Num 1:1; Rosh Hashanah 3a:5 (40:17's Nisan and Num 10:11's Iyar both 'the second year': the new year for the exodus count is Nisan). ON THE SEQUENTIAL TAPE (2026-09-07) the era is SET BY THE MARKER at Exod 12:2 on the one world's clock (an era view: epoch day + new-year month over the one month table)"
+    exercised_by: [sequence]
   life_years:
     new_year_month: null
-    epoch: "a person's birth; the year turns on the birthday — Gen 7:11 'in the six hundredth year of Noah's life'"
-    exercised_by: []
+    epoch: "a person's birth; the year turns on the birthday — Gen 7:11 'in the six hundredth year of Noah's life'; the reading of 'the Nth year' is the row life_year_reading. ON THE SEQUENTIAL TAPE (2026-09-07) every begetting marker sets one (life:<entity>), the flood's date found inside Noah's 600th year"
+    exercised_by: [sequence]
+  # THE SEQUENTIAL RUN (2026-09-07; SEQUENTIAL_RUN.md section 1): the one world's own epoch
+  creation:
+    new_year_month: 7
+    settings: {r_eliezer: 7, r_yehoshua: 1}
+    day_one_offset: 5
+    day_one_settings: {vayikra_rabbah_29_1: 5, rosh_hashanah_27a_plain: 0}
+    epoch: "day 0 = 'day one' (Gen 1:5) = the twenty-fifth of Elul, five days before the first day of the world's first month — the seventh month by Rabbi Eliezer: 'in Tishrei the world was created' (Rosh Hashanah 10b:10 the baraita; 11a:3 from Gen 1:11; 8a:15; 27a:15 'this day is the beginning of Your works, a memorial of the first day' — as Rabbi Eliezer); the other setting Rabbi Yehoshua's, 'in Nisan the world was created' (11a:1; 11a:4 from Gen 1:12) — UNEXERCISED. OPEN-7 SETTLED ON THE SHELF (O1, 2026-09-07): WHICH creation day is the first of Tishrei — Vayikra Rabbah 29:1 (on Lev 23:24), in Rabbi Eliezer's own name: 'on the twenty-fifth of Elul the world was created' (בעשרים וחמשה באלול נברא העולם), and it reads the liturgy line 27a:15 cites of ADAM'S day — 'on the day of Rosh Hashanah, in the first hour it arose in thought... in the seventh He blew a soul into him': the SIXTH day is the first of Tishrei (day_one_offset 5, the running setting); the design's plain reading of 27a:15 (day one = the first of Tishrei, offset 0) is the other setting, UNEXERCISED. The Calendar lays a stub month before the first Tishrei (Elul of year 0, its last five days). Bereshit Rabbah 22:4 carries the month dispute only (Abel's lifetime from the festival to Hanukkah, or from Passover to Shavuot). Before Exod 12:2 the ink's ordinal months count from this era's first month (Rabbi Eliezer's seventeenth of Marcheshvan, Rosh Hashanah 11b:7; Rabbi Yehoshua's seventeenth of Iyar, 11b:6 — one parameter, both printable)"
+    exercised_by: [sequence]
   regnal:
     new_year_month: 1
     rounding: regnal_rounding

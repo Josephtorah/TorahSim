@@ -95,10 +95,16 @@ def check_honest_calls(source_path, func_name, expected_index, cells_arg=None):
     number of expectations checked; refuses on the first non-literal."""
     src = open(source_path, encoding='utf-8').read()
     tree = ast.parse(src, source_path)
+    # O3 THE GATE ITEMS (2026-09-07; REPORT_GATE_ITEMS.md): every assignment to a name, in source order — a call's list is
+    # THE BINDING IN EFFECT AT THE CALL'S LINE (the nearest assignment before it), never the file's last (the last-binding
+    # weakness: `cells = [...]; grade(..., cells); cells = [...]; grade(..., cells)` checked the last list twice)
     bindings = {}
     for node in ast.walk(tree):
         if isinstance(node, ast.Assign) and len(node.targets) == 1 and isinstance(node.targets[0], ast.Name):
-            bindings[node.targets[0].id] = node.value
+            bindings.setdefault(node.targets[0].id, []).append((node.lineno, node.value))
+    def binding_at(name, lineno):
+        prior = [(ln, v) for ln, v in bindings.get(name, []) if ln < lineno]
+        return max(prior, key=lambda t: t[0])[1] if prior else None
     n = 0
     calls = 0
     for node in ast.walk(tree):
@@ -126,7 +132,7 @@ def check_honest_calls(source_path, func_name, expected_index, cells_arg=None):
                              % (func_name, source_path, node.lineno, cells_arg))
         cells = node.args[cells_arg]
         if isinstance(cells, ast.Name):
-            cells = bindings.get(cells.id)
+            cells = binding_at(cells.id, node.lineno)
         if not isinstance(cells, (ast.List, ast.Tuple)):
             raise SystemExit('HONEST-PAIRING GUARD: %s() at %s:%d — the cells are not a literal list'
                              % (func_name, source_path, node.lineno))

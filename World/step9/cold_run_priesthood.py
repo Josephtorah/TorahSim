@@ -960,6 +960,7 @@ def law_priesthood(event, world):
         pred = family('daughter_predicate'); mode = family('daughter_mode'); lst = family('daughter_in_burned_list')
         return [E_('burned_by_court', d, cp=event.get('father'), value=mode['v'], law='F1 [INK 21:9 "in fire she shall be burned" — %s; in the burned list: %s (CALLED cold_run_sanctions.census)]' % (pred['v']['by'], lst['v']))]
     if k == 'head_anointed':
+        if WE.seat(src) != ('Lev', 21): return []                                # O2 (2026-09-07): this daemon reads its own span — the run's 8:12 is the investiture's act (anointed); 21:10's statute row is this runner's
         p = event.get('priest', event.get('subject', 'aaron'))
         oh = family('one_hour'); gr = family('greatness'); nz = family('nezer')
         return [E_('invested_office', p, value=oh['v'], law='F1 [INK 21:10 "on whose head the anointing oil was poured and who was invested to wear the garments" — %s; the greatness %s; %s]' % (oh['v'], gr['v'], nz['v']))]
@@ -1110,10 +1111,12 @@ def law_priesthood(event, world):
             out.append(E_('lashes', s_, amount=(v if isinstance(v, int) else None), value=str(v)[:60], law='F4 [Mishnah Chullin 5:3 — %s]' % why['lashes']['why'][:80]))
         return out
     if k == 'lamps_raised':
+        if WE.seat(src) != ('Lev', 24): return []                                # O2: the erection's act at Exod 40:25 is law_erection's; this daemon reads the statute's own rows (Lev 24:2-4)
         p = event.get('priest', 'aaron')
         c = lamp_table('tending', found=event['found']) if event.get('found') else lamp_table('evening_to_morning')
         return [E_('lamp_arranged', 'the-lampstand', cp=p, due=day + 1, value=str(c['v'])[:70], law='F5 [INK 24:3 "Aaron shall arrange it from evening to morning before the LORD continually" — the morning TIMER; %s]' % str(c['v'])[:70])]
     if k == 'bread_arranged':
+        if WE.seat(src) != ('Lev', 24): return []                                # O2: the erection's act at Exod 40:23 is law_erection's; this daemon reads the statute's own rows (Lev 24:5-9)
         p = event.get('priest', 'aaron'); lv = lamp_table('loaves'); se = lamp_table('sabbath_exchange'); me = lamp_table('memorial'); ea = lamp_table('eating'); nf = lamp_table('not_the_fires')
         wd = lamp_table('window', case=event.get('case', 'plain'))
         return [E_('bread_set_weekly', 'the-table', cp=p, amount=lv['v']['count'], due=day + 7, value=se['v']['new'], law='F5 [INK 24:8 "on the sabbath day, on the sabbath day he shall arrange it" — the weekly TIMER; the window %d days (Mishnah Menachot 11:9)]' % wd['v']),

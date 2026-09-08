@@ -314,7 +314,30 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
 ## sitting" — the engine change from the two-thread consensus as amended at round two: the day the base unit, the year derived; the
 ## Calendar in the engine over calendar_parameters.yaml; the period field and the close pairing; the marker, the bound, the retrograde
 ## marker; the jubilee three-layer and act-forked; the library's jubilee_year retired with THE PENDING TERM fixed; REPORT_CLOCK.md +
-## CLOCK.md + clock_probes.py 12/12). NEXT (the owner's ruling 2026-09-07 after the clock sitting, "ok lets do that"): THE SEQUENTIAL RUN — the
+## CLOCK.md + clock_probes.py 12/12) → THE SEQUENTIAL RUN (DONE 2026-09-07 after compaction #88, the owner: "reread 88 and go" — the three
+## books on ONE world in verse order: 141 history events stitched by script from the 33 runners' scenes, 68 markers parsed from the ink, 38
+## daemons, 14 checkpoints as the design expected, the chronology reproduced from the ink alone; the engine's ERA view; the last open alias
+## closed; SEQUENTIAL_RUN.md + REPORT_SEQUENTIAL_RUN.md + sequence_probes.py 4/4 + cold_run_sequence.py 6/6). NEXT — THE OWNER'S RULING
+## (2026-09-07, "I want to finish all of them"): THE OPEN-ITEMS CAMPAIGN BEFORE NUMBERS, in this order (the full plan = the state doc's
+## COMPACTION POINT #90): O1 THE SMALL FIXES (DONE 2026-09-07, the first sitting after #90, the owner: "go" — C8's eighth day born + 7;
+## Tamar's wait by Gen 38:14's own act, shelah_grown registered, no timer; the second ascent dated by the shelf, Yom Kippur − 40 (Taanit 30b:8,
+## Bava Batra 121a:6) with 32:30's morrow the ink's own marker; the births' days from Rosh Hashanah 10b:10-11a:13's rows — Isaac on Passover,
+## the exodus 400 years later TO THE DAY; OPEN-7 FOUND at Vayikra Rabbah 29:1 — day one the twenty-fifth of Elul, the stub month in the
+## Calendar; THE SOJOURN FORK as three worlds, and the fork caught the ordinal-month fault — cal_day; the runner 7/7, the report's O1
+## section, SEQUENTIAL_RUN.md section 12) → O2 THE ALIASES (DONE 2026-09-07, the owner: "Go" — ONE ACT, ONE WRITER PER EFFECT: the
+## party aaron-and-sons on every Lev 8 scene, the library's commit the office's one writer, the investiture's consecration its own; the
+## statute daemons read their own span by world_engine.seat (Lev 21/24, Exod 30; the renamings by Gen 17/32); offering_brought declared
+## one type under two law layers; the tape's REPEATED WRITES = the two mornings of Exod 36:3 only; the runner 7/7; SEQUENTIAL_RUN.md
+## section 13, the report's O2 section) → O3 THE GATE ITEMS (DONE 2026-09-07, the owner: "O3 go" — both gate items in one sitting: the
+## value/effect homograph and the last-binding resolution; REPORT_GATE_ITEMS.md; the census 256 → 244 with no NONE; the tripwires
+## remeasured; the four-damages rows typed) (the value/effect homograph; the
+## last-binding resolution) → O4 THE EDGE FILING (65 unfiled live edges — the 32 standing + the sequence runner's 33) → O5 THE MOADIM RE-TYPE
+## (the festival timers as calendar periods from Lev 23) → O6 THE FORK'S REACH TO LEV 27:21/27:24 (a reading sitting) → O7 X1-X5 (below) →
+## O8 THE NARRATIVE GAPS ON THE ENGINE (the census by script first: 98 Genesis + 66 Exodus units against the nine scenes; then the scenes in
+## the sequential conventions, Exodus 1-19's story and Genesis's uncovered stretches) → O9 THE CLOCK'S OPEN ITEMS (OPEN-5 sub-day as an engine
+## sitting; OPEN-2/4 searched again; OPEN-1/3/6 the tradition's disputes, finished as far as the shelf allows) → O10 THE PEOPLE-TOKENS IN THE
+## ONE REGISTRY (the fold's sitting) → O11 THE CLAIMS LABEL DEBT (2,802 unlabeled of 2,838; measured, then batches by unit — last). Book-bound,
+## the only exceptions: Num 27/36, Deut 25. THEN NUMBERS (its first sitting reads the standing map + SEQUENTIAL_RUN.md section 9). The plan that ran (the owner's ruling 2026-09-07 after the clock sitting, "ok lets do that"): THE SEQUENTIAL RUN — the
 ## three books on ONE world of the law engine in verse order (the narrative tapes stitched by script, the exam's rows off the tape; the eras as counters
 ## set by markers — Exod 12:2 the exodus epoch; entity names by logic/corpus/entity_registry.yaml; all 38 daemons; the text's own checkpoints — the 430
 ## years, 40:17, the seventeenth of Tammuz, the flood's 150 days; the plan in the state doc's compaction point #88) — BEFORE Numbers; then Numbers.
@@ -431,17 +454,14 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
 - [ ] X4  Exod 22:1-2 — THE BURGLAR: no bloodguilt in the tunnel, bloodguilt after sunrise; sold for his
       theft (Mishnah Sanhedrin 8:6; Kiddushin 1:2's 'sold for his theft')
 - [ ] X5  Exod 22:16 — THE FATHER'S REFUSAL: the fine paid though he refuses to give her
-## OPEN (a gate, not a span): compile_guards.check_honest_calls resolves a cells NAME to its LAST binding
-## in the file (mishpatim's tripwire "20" was F5's four rows counted five times; lev24's "18" the one-law's
-## three rows counted six times) — the earlier lists go unchecked. Fix: resolve the binding in effect at
-## the call's line, then remeasure every _chc tripwire. A gate edit is its own sitting.
-## OPEN (a gate, not a span — found at W3, 2026-09-07): daemon_census.parse_functions reads EVERY registered-
-## effect-named string in a function's source as an effect it writes — THE VALUE/EFFECT HOMOGRAPH: the tier
-## name 'anointed' (chatat.identity, chatat.sprinklings), the cell value 'anointed' (minchah.oil_ops — the
-## wafers anointed with oil), the dict value 'buried' (chatat.resolution). Three functions with NO honest
-## effect (every cell FX.NONE) stood on the worklist for a spelling; they are declared NONE with the why.
-## Fix: read a function's effects from its cells' fx lists (and out()'s effects), then remeasure the 251 and
-## every disposition — the count will drop and the drop is honest. A gate edit is its own sitting.
+## DONE at O3 (2026-09-07; REPORT_GATE_ITEMS.md): compile_guards.check_honest_calls resolved a cells NAME to its LAST binding
+## in the file — the earlier lists went unchecked. FIXED: the binding in effect at the call's line (binding_at); the tripwires
+## remeasured by the guard — mishpatim REFUSED (the four-damages rows were a comprehension, now literal) then 24, lev24 24, negaim
+## 27, mishpatim_2 10 and yoma 23 unchanged; the O3 probes P9-P10.
+## DONE at O3 (2026-09-07; REPORT_GATE_ITEMS.md): daemon_census.parse_functions read EVERY registered-effect-named string as
+## a write — THE VALUE/EFFECT HOMOGRAPH. FIXED: written_effects() reads the writing forms only (a cell's fx expression, out(),
+## E_(), the effect dict); the census 256 → 244, 244 WRAPPED / 0 OWED / 0 NONE — the eight NONE workarounds retired, six wraps
+## verified on a spelling removed (three runners re-shaped as <module>), not one genuine wrap broken; the O3 probes P1-P8.
 
 ## OWED FORWARD — the family code's Sinai seats (declared at sitting G2, 2026-09-06;
 ## the census homes them at runners that do not exist yet, so the gate cannot require the

@@ -2,7 +2,7 @@
 # live import scan of World/step9/cold_run_*.py. Do not edit: rerun the gate. Documentation and the
 # site's dependency view; never a runtime path (the two-thread consensus of 2026-09-06).
 #
-# coverage: 33 runners, 1888 verses, 42 type tokens, 5 pointer forms; required edges 130, pointers 73; live import edges 129
+# coverage: 34 runners, 1888 verses, 42 type tokens, 5 pointer forms; required edges 130, pointers 73; live import edges 129
 
 ## cold_run_calendar.py — Exod 23:10-19
 - calls out (live): pesach, yovel
@@ -277,6 +277,10 @@
 - pointers in the ink:
   - Exod 26:30 AS_PRESCRIBED "כמשפטו אשר הראית": INTERNAL link reference — 'you shall raise the tabernacle ACCORDING TO ITS FASHION which you were shown in the mountain' — the pointer's target is the SHOWN PATTERN (the four seats 25:9, 25:40, 26:30, 27:8, censused in the runner), not another runner's procedure; Onkelos renders the fashion 'its halakhah'; the raising itself is Exod 40:17-33's run (E5)
   - Exod 27:8 AS_WHEN "כאשר הראה אתך": INTERNAL link reference — 'as He showed you in the mountain, so shall they make' — the fourth shown-pattern clause, the doers plural; the target is the vision, censused in the runner
+
+## cold_run_sequence.py — 
+- calls out (live): none
+- called by (live): none
 
 ## cold_run_shemini.py — Lev 11:1-47
 - calls out (live): none

@@ -193,7 +193,14 @@ not on the tape); OPEN-3 conflicting markers (DIVERGE reports; no Prophets tape 
 thirty-day months (the probe's DIVERGE); OPEN-5 the two day boundaries (Chullin 83a); OPEN-6 the month's
 parts beyond the half day (Rosh Hashanah 25a — settled on the tape by the court's declarations where
 recorded); the fiftieth year in the sabbatical cycle (Rosh Hashanah 9a:1 against Arakhin 12b:4 — two
-settings, unexercised).
+settings, unexercised). OPEN-7 (the sequential run's: which creation day is the first of Tishrei) SETTLED ON THE
+SHELF at O1 (2026-09-07): Vayikra Rabbah 29:1 in Rabbi Eliezer's name — the world created on the twenty-fifth of
+Elul, Adam on Rosh Hashanah; the creation era's row carries `day_one_offset` 5 (the plain reading of Rosh Hashanah
+27a:15 the other setting, 0), and the Calendar lays a STUB MONTH before the first new-year month — Elul of year 0, its
+start negative so that day 0 is its twenty-fifth; the world's own era view opens at the first new-year start and the
+days before it read the calendar's year 0 (SEQUENTIAL_RUN.md section 12 e). Also O1's: a post-Exodus-12:2 month name
+is addressed by the CALENDAR'S OWN numbering (Nisan 1, Tishrei 7), never by the creation era's ordinal — the ordinal
+seventh from Tishrei is Adar II in a thirteen-month year; the sojourn fork's descent-literal world caught it.
 
 ## 9. As built (the sitting's close)
 
@@ -209,3 +216,13 @@ release with the fork's three worlds as graded rows; the erection's close pairin
 of 255; the dependency gate 167 edges (yovel → tochacha filed, transfer, Arakhin 32b:16); the events lint 0; the probes
 12/12 (0/12 before), the gate probes 5/5 and 12/12. Modeled and OPEN as section 8 lists; the fork's reach to Leviticus
 27:21 and 27:24 filed OPEN (a direct timer at the fiftieth's arrival meanwhile). The account: REPORT_CLOCK.md.
+
+THE SEQUENTIAL RUN's extension (2026-09-07, the next sitting; the design SEQUENTIAL_RUN.md section 2, the account
+REPORT_SEQUENTIAL_RUN.md): an ERA is a view on the one month table — `Era(epoch_day, new_year_month)` set by a marker
+(`world.marker(..., era=, new_year_month=)`), `clock.year_in / date_in / day_in` with ORDINAL months from the era's first
+month; a LIFE era (no new-year month) turns at the New Year — its year is the calendar years' difference (Gen 8:13) and
+"the Nth year of X's life" is the year of age N under the row `life_year_reading`; a third marker class, PROLEPTIC (a
+paragraph's closing total: logged, the counter unmoved, no dated stretch); THE DATED DAY IS THE EVENT'S DAY inside a
+retrograde stretch (`event.setdefault('day', dated)`); `World(registry=)` resolves scene tokens to the one registry's
+entity ids at `entity()`; `law_installation` reads the event's day. A new era row `creation` and the data row
+`life_year_reading`; the rows exodus and life_years now exercised.

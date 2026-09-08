@@ -38,6 +38,7 @@
 import bisect
 import collections
 import os
+import re
 import yaml
 import effects_layer as FX
 import events_layer as EV      # THE EVENT-TYPE REGISTRY (D9-i): an unregistered kind refuses the tape
@@ -54,6 +55,7 @@ _CAL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'calendar_p
 with open(_CAL_PATH, encoding='utf-8') as _f:
     _CAL = yaml.safe_load(_f)
 CAL_PARAMS, CAL_ERAS = _CAL['parameters'], _CAL['eras']
+LIFE_READING = CAL_PARAMS['life_year_reading']['value']    # THE SEQUENTIAL RUN: 'completed' or 'ordinal' (OPEN-8), a data row
 
 # THE FENCE'S DEPTH BOUND (D9-ii, 2026-09-07): a daemon CONSUMES events and WRITES
 # the ledger; it never emits an event. Cascades run through LEDGER STATE (one
@@ -91,9 +93,20 @@ class Calendar:
         self.fiftieth = P['fiftieth_in_cycle']['value']
         self._months = []          # (start_day, year, month_no, length), laid out lazily from the epoch
         self._starts = []
+        # O1 (2026-09-07; SEQUENTIAL_RUN.md section 12 e): the era row's `day_one_offset` — the days BEFORE the first
+        # new-year month's first day (the creation era: 'day one' = the twenty-fifth of Elul, the sixth day = the first
+        # of Tishrei — Vayikra Rabbah 29:1). A STUB MONTH is laid first: the preceding month of year 0, its start
+        # negative so that day 0 is its (length − offset + 1)th day; the world's first year begins at day `offset`.
+        self.day_one_offset = int((self.era or {}).get('day_one_offset') or 0)
+        self.first_year_start = self.day_one_offset if (self.era and self.nym) else 0
         if self.era and self.nym:
-            self._months.append((0, 1, self.nym, self._plain_len(self.nym)))
-            self._starts.append(0)
+            k = self.day_one_offset
+            if k:
+                pm = 12 if self.nym == 1 else self.nym - 1
+                pl = self._plain_len(pm)
+                self._months.append((k - pl, 0, pm, pl)); self._starts.append(k - pl)
+            self._months.append((k, 1, self.nym, self._plain_len(self.nym)))
+            self._starts.append(k)
 
     @staticmethod
     def _plain_len(m):
@@ -207,11 +220,107 @@ class Calendar:
         raise SystemExit('CALENDAR: add() takes day, week, month, or year, not %r' % key)
 
 
+class Era:
+    """THE SEQUENTIAL RUN (2026-09-07; SEQUENTIAL_RUN.md section 2): an era is a VIEW on the one month table — an
+    epoch day and a new-year month. Its year turns at the first day of its new-year month after the epoch; its months
+    are counted ORDINALLY from the year's first month (before Exod 12:2 names month one, Gen 7:11's 'second month'
+    counts from the creation era's first month — Rosh Hashanah 11b:6-7's two arms from one parameter; after it the
+    exodus era counts from Nisan — Rosh Hashanah 3a:5). A LIFE era (new_year_month None) TURNS AT THE NEW YEAR (Gen
+    8:13 — the sitting's correction): its year is the AGE as the calendar years' difference, and 'the Nth year of X's
+    life' names age N under the running reading (the row life_year_reading; the ordinal reading names age N-1). An era
+    is SET BY A MARKER, never by a literal day. The world's OWN era opens at the calendar's first new-year start (day 0,
+    or the era row's day_one_offset — O1, 2026-09-07); the days before it read the calendar's year 0."""
+    def __init__(self, cal, epoch_day, new_year_month, name=''):
+        self.cal, self.epoch, self.nym, self.name = cal, epoch_day, new_year_month, name
+
+    def _before_epoch(self, day):
+        """a day before the era's epoch: the world's own era reads the calendar's stub (year 0); any other era refuses"""
+        if self.name != self.cal.epoch and self.name != 'base':
+            raise SystemExit('ERA %s: day %d falls before the era\'s epoch (day %d)' % (self.name, day, self.epoch))
+        start, yy, mm, length = self.cal._month_at(day)
+        return (yy, (mm - self.nym) % 12 + 1, day - start + 1)
+
+    # -- a calendar-year era --
+    def _year_starts(self, upto):
+        self.cal._extend_to_day(upto)
+        return [self.epoch] + [s for s, y, m, l in self.cal._months if self.epoch < s <= upto and m == self.nym]
+
+    def _nth_year_start(self, y):
+        starts = [self.epoch]
+        i = bisect.bisect_right(self.cal._starts, self.epoch)
+        while len(starts) < y:
+            while i >= len(self.cal._months):
+                self.cal._lay_next()
+            s, yy, m, l = self.cal._months[i]
+            if m == self.nym:
+                starts.append(s)
+            i += 1
+        return starts[y - 1]
+
+    # -- a life era: the life-year TURNS AT THE NEW YEAR (Gen 7:11 -> 8:13 -> 8:14: the 601st year's first month
+    #    follows the 600th year's second month by ten and a half months — the ink's own interval), so the age is the
+    #    calendar year's difference: completed years at the year grain --
+    def _born_year(self):
+        return self.cal.year(self.epoch)
+
+    def _age(self, day):
+        return self.cal.year(day) - self._born_year()
+
+    def _base(self):
+        return Era(self.cal, self.cal.first_year_start, self.cal.nym, 'base')
+
+    def _ordinal_in_world_year(self, start):
+        """the ordinal of the month beginning at `start` within the WORLD era's year (the calendar's own new-year month)"""
+        yy = self.cal._month_at(start)[1]
+        return 1 + sum(1 for s, y, m, l in self.cal._months if y == yy and s < start)
+
+    def year(self, day):
+        if self.nym is None:
+            return self._age(day)
+        if day < self.epoch:
+            return self._before_epoch(day)[0]
+        return len(self._year_starts(day))
+
+    def date(self, day):
+        """(year, ordinal month, day of month) — for a life era: (age, the world's ordinal month, day of month)"""
+        start, yy, mm, length = self.cal._month_at(day)
+        if self.nym is None:
+            return (self._age(day), self._ordinal_in_world_year(start), day - start + 1)
+        if day < self.epoch:
+            return self._before_epoch(day)
+        ys = self._year_starts(day)
+        ystart = ys[-1]
+        ordinal = 1 + sum(1 for s, y, m, l in self.cal._months if ystart < s <= day)
+        return (len(ys), ordinal, day - start + 1)
+
+    def day_of(self, y, m=1, dom=1, reading=None):
+        """the day of (year y, ordinal month m, day dom) in this era; a life era finds the first such WORLD date inside the
+        life-year the ink names (Gen 7:11 'the six hundredth year... the second month, the seventeenth')"""
+        if self.nym is None:
+            age = y if (reading or LIFE_READING) == 'completed' else y - 1     # 'the Nth year of X's life' = the calendar year in which X's completed age is N (the running reading)
+            d = self._base().day_of(self._born_year() + age, m, dom)
+            if d < self.epoch:
+                raise SystemExit('ERA %s: (year %r, month %r, day %r) falls before the birth' % (self.name, y, m, dom))
+            return d
+        ystart = self._nth_year_start(y)
+        i = bisect.bisect_right(self.cal._starts, ystart) - 1
+        for _ in range(m - 1):
+            i += 1
+            while i >= len(self.cal._months):
+                self.cal._lay_next()
+        start, yy, mm, length = self.cal._months[i]
+        return start + min(dom, length) - 1
+
+
 class Clock:
-    """the counter is the DAY; the year is DERIVED through the world's epoch (None where none is declared)"""
+    """the counter is the DAY; the year is DERIVED through the world's epoch (None where none is declared); ERAS are
+    views set by markers (THE SEQUENTIAL RUN) — the world's own era is the epoch row's, at day 0"""
     def __init__(self, era, day=0, epoch=None):
         self.era, self.day, self.epoch = era, day, epoch
         self.calendar = Calendar(epoch)
+        self.eras = {}
+        if epoch:
+            self.eras[epoch] = Era(self.calendar, self.calendar.first_year_start, self.calendar.nym, epoch)   # O1: the world's own era opens at the first new-year start (day_one_offset)
 
     @property
     def year(self):
@@ -230,6 +339,36 @@ class Clock:
     def next(self, key):
         return self.calendar.next(self.day, key)
 
+    # -- THE SEQUENTIAL RUN: eras as counters set by markers --
+    def set_era(self, name, epoch_day, new_year_month=None):
+        self.eras[name] = Era(self.calendar, epoch_day, new_year_month, name)
+        return self.eras[name]
+
+    def _era(self, name):
+        if name not in self.eras:
+            raise SystemExit('CLOCK: no era %r set — an era is set by a marker (world.marker(..., era=%r, new_year_month=...)), never by a literal day' % (name, name))
+        return self.eras[name]
+
+    def year_in(self, name):
+        return self._era(name).year(self.day)
+
+    def date_in(self, name):
+        return self._era(name).date(self.day)
+
+    def day_in(self, name, y, m=1, dom=1, reading=None):
+        return self._era(name).day_of(y, m, dom, reading)
+
+
+_SEAT = re.compile(r'^\s*(Gen|Exod|Lev|Num|Deut|1 Sam|2 Sam|1 Kgs|2 Kgs|1 Chr|2 Chr|Neh|Josh|Judg|Ruth|Isa|Jer|Ezek|Ps|Prov|Job|Song|Eccl|Lam|Esth|Dan|Ezra|Mal)\s+(\d+):')
+
+
+def seat(src):
+    """O2 THE ALIASES (2026-09-07; SEQUENTIAL_RUN.md section 13): the (book, chapter) of an event's FIRST cited verse — the
+    scope a daemon reads to consume an act within its own span or a recorded run, never a string typed into a verdict;
+    None when the source opens with a tractate or a Mishnah (a case row)"""
+    m = _SEAT.match(src or '')
+    return (m.group(1), int(m.group(2))) if m else None
+
 
 # ---- construct 2: entities with mutable ledgers ---------------------
 class Entity:
@@ -243,9 +382,13 @@ class Entity:
 
 
 class World:
-    def __init__(self, era, epoch=None):
+    def __init__(self, era, epoch=None, registry=None):
         self.clock = Clock(era, epoch=epoch)
         self.entities = {}
+        # THE SEQUENTIAL RUN (2026-09-07): THE ONE WHO-IS-WHO AT THE ENGINE — a scene token resolves to the registry's
+        # entity id (logic/corpus/entity_registry.yaml's members with units [step9-scenes]); the daemons keep their
+        # names, the ledgers merge. A world with no map behaves as before.
+        self._registry = dict(registry or {})
         self.laws = []        # the daemon registry
         self.timers = []      # (fire_day, effect_dict) — a timer with a `period` re-arms at its fire
         self.log = []
@@ -261,6 +404,7 @@ class World:
         self._consuming = None
 
     def entity(self, eid, kind='person'):
+        eid = self._registry.get(eid, eid)
         if eid not in self.entities:
             self.entities[eid] = Entity(eid, kind)
         return self.entities[eid]
@@ -276,6 +420,7 @@ class World:
         try:
             if self._dated is not None:                      # inside a retrograde stretch: the text's own date, no bound
                 event['dated'] = self._dated
+                event.setdefault('day', self._dated)         # THE DATED DAY IS THE EVENT'S DAY (SEQUENTIAL_RUN.md section 2): a daemon that reads the event's day reads the text's date
             else:                                            # between markers: the bound [the last marker, open]
                 b = [self._last_marker, None]
                 event['bound'] = b
@@ -343,8 +488,9 @@ class World:
         'forever' voids his six-year exit — Exod 21:5-6): the interface
         gap the skeleton's first spin exposed"""
         kept, cut = [], 0
+        subject = self._registry.get(subject, subject)
         for day, eff in self.timers:
-            if eff['subject'] == subject and eff['effect'] == effect:
+            if self._registry.get(eff['subject'], eff['subject']) == subject and eff['effect'] == effect:
                 cut += 1
                 self.log.append(('TIMER-CANCEL', self.clock.day,
                                  dict(eff, cancelled_by=note)))
@@ -353,11 +499,20 @@ class World:
         self.timers = kept
         return cut
 
-    def marker(self, verse, day, value=None):
+    def marker(self, verse, day, value=None, era=None, new_year_month=None, proleptic=False):
         """THE MARKER (CLOCK.md section 4): the text's own date stamp sets the clock. A marker at or after the
         counter walks advance(day) and CLOSES every open bound at it; a marker EARLIER than the counter is
         RETROGRADE (Pesachim 6b:7 — 'there is no earlier and later in the Torah'; Num 9:1 after 1:1): logged,
-        the counter unmoved, the following events dated by the text until the clock next moves."""
+        the counter unmoved, the following events dated by the text until the clock next moves.
+        THE SEQUENTIAL RUN (SEQUENTIAL_RUN.md section 2): `era` names an era whose EPOCH this marker sets at `day`
+        (Exod 12:2 sets the exodus era; a begetting sets life:<entity>); `proleptic` is the third class — a paragraph's
+        CLOSING TOTAL ('all the days of X were N years, and he died'), logged at its computed day with the counter
+        unmoved and no dated stretch opened: the text's summary of a life, not a clock stamp for the next verse."""
+        if era is not None:
+            self.clock.set_era(era, day, new_year_month)
+        if proleptic:
+            self.log.append(('MARKER', self.clock.day, {'verse': verse, 'value': value, 'retrograde': False, 'proleptic': True, 'stated': day}))
+            return day
         if day < self.clock.day:
             self.log.append(('MARKER', self.clock.day, {'verse': verse, 'value': value, 'retrograde': True, 'stated': day}))
             self._dated = day
@@ -588,6 +743,7 @@ def law_installation(event, world):
     timer (8:33); the commit at the blood sprinkling (DeMiluim I 34);
     the leftover clause (8:32)."""
     k = event['kind']
+    day = event.get('day', world.clock.day)      # THE SEQUENTIAL RUN: the event's own day (the text's date inside a retrograde stretch — Lev 8 after Exod 40:17)
     if k == 'installation_commanded':
         required = {'bullock', 'ram_olah', 'ram_milluim', 'basket'}
         if not required.issubset(set(event['components'])):
@@ -603,7 +759,7 @@ def law_installation(event, world):
                            'go out seven days]',
              'case_source': event['case_source']},
             {'effect': 'released', 'subject': subj, 'counterparty': None,
-             'amount': None, 'due': world.clock.day + 7,         # THE CLOCK SITTING: the counter is the day
+             'amount': None, 'due': day + 7,                     # THE CLOCK SITTING: the counter is the day; THE SEQUENTIAL RUN: the event's day
              'source_law': 'F7 completion [INK 8:33: until the day of '
                            'the filling of your installation days]',
              'case_source': event['case_source']},

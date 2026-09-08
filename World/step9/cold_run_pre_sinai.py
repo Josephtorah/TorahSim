@@ -992,10 +992,10 @@ def law_pre_sinai(event, world):
     if k == 'flood_sworn_off': return [E_('flood_barred', 'the-earth'), E_('covenant_cut', 'the-earth')]
     if k == 'bow_set': return [E_('bow_set', 'the-cloud')]
     if k == 'walk_commanded': return [E_('wholeness_owed', subj)]
-    if k == 'renamed': return [E_('name_changed', subj)]
+    if k == 'renamed': return [E_('name_changed', subj, value=event['name'])] if WE.seat(src) == ('Gen', 17) else []   # O2 (2026-09-07): this daemon's seats 17:5, 17:15; Jacob's 32:29 is the family engine's — the ink's name the value (one field contract)
     if k == 'circumcision_commanded': return [E_('circumcision_due', s) for s in event['males']]
     if k == 'circumcised': return [E_('sign_in_the_flesh', subj)]
-    if k == 'born': return [E_('circumcision_due', subj, due=day + 8)]           # the eighth day: a per-person TIMER from the birth (17:12; 21:4 the first run)
+    if k == 'born': return [E_('circumcision_due', subj, due=day + 7)]           # the eighth day: a per-person TIMER from the birth (17:12; 21:4 the first run) — the INCLUSIVE ordinal, the birth day the first (O1, 2026-09-07: C8 of the sequential run had found born + 8)
     return []
 
 def scene():
@@ -1019,16 +1019,16 @@ def scene():
         w.submit({'kind': 'bow_set', 'subject': 'the-cloud', 'case_source': 'Gen 9:13'})
         w.advance(9)
         w.submit({'kind': 'walk_commanded', 'subject': 'abraham', 'case_source': 'Gen 17:1'})
-        w.submit({'kind': 'renamed', 'subject': 'abraham', 'case_source': 'Gen 17:5'})
+        w.submit({'kind': 'renamed', 'subject': 'abraham', 'name': 'abraham', 'case_source': 'Gen 17:5'})     # THE SEQUENTIAL RUN (2026-09-07): the ink's name carried (17:5 'your name shall be Abraham') — the last open alias's one contract
         w.submit({'kind': 'circumcision_commanded', 'subject': 'abraham', 'males': ['abraham', 'ishmael', 'the-household'], 'case_source': 'Gen 17:10-13'})
-        w.submit({'kind': 'renamed', 'subject': 'sarah', 'case_source': 'Gen 17:15'})
+        w.submit({'kind': 'renamed', 'subject': 'sarah', 'name': 'sarah', 'case_source': 'Gen 17:15'})        # THE SEQUENTIAL RUN (2026-09-07): 17:15 'Sarah is her name'
         for s, src in (('abraham', 'Gen 17:24'), ('ishmael', 'Gen 17:25'), ('the-household', 'Gen 17:23, 17:27')):
             w.submit({'kind': 'circumcised', 'subject': s, 'case_source': src})
             w.close(s, 'circumcision_due', src)
         w.close('abraham', 'wholeness_owed', 'Gen 17:24 (Nedarim 31b:11: whole when he circumcised)')
         w.advance(10)
-        w.submit({'kind': 'born', 'subject': 'isaac', 'case_source': 'Gen 21:2'})     # the timer set: due day 18
-        w.advance(18)                                                                    # the eighth day: the timer FIRES (21:4's run)
+        w.submit({'kind': 'born', 'subject': 'isaac', 'case_source': 'Gen 21:2'})     # the timer set: due day 17 (born + 7 — the eighth day counted inclusively; O1, 2026-09-07)
+        w.advance(17)                                                                    # the eighth day: the timer FIRES (21:4's run)
         w.submit({'kind': 'circumcised', 'subject': 'isaac', 'case_source': 'Gen 21:4'})
         w.close('isaac', 'circumcision_due', 'Gen 21:4')
     n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
@@ -1302,7 +1302,7 @@ TESTS = [
  ('Shabbat 132a-b — the adult, the minor, the in-between', circumcision('adult_flesh'), {'adult': '17:14_flesh', 'minor': 'Lev_12:3_flesh', 'in_between': 'from_both'}),
  ('Shabbat 133b — the dusk wound', circumcision('dusk_wound'), 'karet'),
  # ---- THE SCENE AND THE HEADLINES ----
- ('THE SCENE — the week, the covenant, the house of Abraham', build('world'), (6, 6, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 0, 2, 4, 0, 4, 1, 18)),
+ ('THE SCENE — the week, the covenant, the house of Abraham', build('world'), (6, 6, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 0, 2, 4, 0, 4, 1, 17)),   # the clock 17: born day 10 + 7, the eighth day inclusive (O1, 2026-09-07 — was 18, the C8 finding)
  ('HEADLINE — the first spec/run pair', build('headline_spec_run'), 'the_creation_chapter_is_the_first_spec_run_pair'),
  ('HEADLINE — repeated at Sinai is the call graph', build('headline_edges'), 'repeated_at_sinai_is_the_call_graph'),
  ('HEADLINE — the third seat\'s added token', build('headline_three_seats'), 'the_third_seats_added_token_is_the_extra_soul'),
