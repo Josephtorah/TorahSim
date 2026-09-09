@@ -2,7 +2,7 @@
 # live import scan of World/step9/cold_run_*.py. Do not edit: rerun the gate. Documentation and the
 # site's dependency view; never a runtime path (the two-thread consensus of 2026-09-06).
 #
-# coverage: 36 runners, 2369 verses, 42 type tokens, 5 pointer forms; required edges 141, pointers 94; live import edges 169
+# coverage: 39 runners, 3615 verses, 42 type tokens, 5 pointer forms; required edges 170, pointers 129; live import edges 191
 
 ## cold_run_calendar.py — Exod 23:10-19
 - calls out (live): pesach, yovel
@@ -115,7 +115,7 @@
 
 ## cold_run_family.py — Gen 23:1-20; Gen 24:1-67; Gen 32:25-33; Gen 38:1-30; Gen 48:1-22; Gen 49:1-33
 - calls out (live): clocks, guardians, holiness, holiness_b, incense_shekel, mishpatim, mishpatim_2, ordinances, pesach, priesthood, sanctions, sanctuary_build, yovel
-- called by (live): exodus_story, sequence
+- called by (live): exodus_story, joseph, mamre, primeval, sequence
 - required edges from the ink:
   - -> incense_shekel [shekel] at Gen 23:15, Gen 23:16: CALL carries value link reference — G2 (CALL — the cell fetches it live) | 'four hundred SHEKEL of silver' (Gen 23:15-16) — the unit's spec is Exod 30:13 ('twenty gerah the shekel'); Bekhorot 50a: Ephron's shekels are centenaria (the currency's grade, Bava Metzia 87a); purchase('shekel') will call IS.shekel — flipped to CALL at the cell — DONE
   - -> lev24 [talion_formula] at Gen 24:2, Gen 24:9, Gen 49:25: FALSE link none — Gen 24:2, 24:9 'under my thigh' and 49:25 'that lies BENEATH' — the preposition 'under', not the exchange formula (the oath's object held in the hand, Shevuot 38b)
@@ -137,7 +137,7 @@
 
 ## cold_run_guardians.py — Exod 22:6-14
 - calls out (live): none
-- called by (live): family, incense_shekel
+- called by (live): family, incense_shekel, mamre
 
 ## cold_run_holiness.py — Lev 19:1-18
 - calls out (live): tzav, vayikra5, yovel
@@ -169,6 +169,40 @@
 - pointers in the ink:
   - Exod 29:41 LIKE_OFFERING "כמנחת הבקר וכנסכה": INTERNAL link reference — 'like the MEAL OFFERING of the morning and like its libation you shall make for it' — the evening lamb's recipe points two verses back to 29:40 (a tenth of flour, a quarter-hin of beaten oil, a quarter-hin of wine) inside this span; Num 28:8 restates the pointer word for word; the meal offering's own law (the oil grade, the salt, the leaven ban) is the meal-offering engine's, CALLED
 
+## cold_run_joseph.py — Gen 32:1-33; Gen 33:1-20; Gen 34:1-31; Gen 35:1-29; Gen 36:1-43; Gen 37:1-36; Gen 39:1-23; Gen 40:1-23; Gen 41:1-57; Gen 42:1-38; Gen 43:1-34; Gen 44:1-34; Gen 45:1-28; Gen 46:1-34; Gen 47:1-31; Gen 50:1-26
+- calls out (live): family, mishpatim_2, mishpatim_3, offerings, pre_sinai, vestments
+- called by (live): sequence
+- required edges from the ink:
+  - -> chatat [chatat] at Gen 50:17: FALSE link none — O8 S4 (2026-09-08) | 50:17 'forgive the transgression of your brothers and their SIN' (חטאתם, chatatam) — the noun sin, a homograph of the sin offering (S1, S2, S3 the same)
+  - -> family [birthright,sinew,wife_taken] at Gen 32:33, Gen 34:12, Gen 34:4, Gen 34:8, Gen 41:45, Gen 43:33: CALL carries verdict link reference — O8 S4 (2026-09-08) | 'and he BOUGHT the portion of the field' (33:19 — the family's purchased kind at Jacob's seat, its branch seat-checked to Gen 23; field_acquired written here); 'bury me not in Egypt ... SWEAR to me' (47:29-31 — the family's burial_commanded kind, seat-checked to Gen 49; the debit written here on Joseph); 'Jacob's FIRSTBORN, Reuben' (46:8 — the census keeps Mishnah Bava Batra 8:2's order, read at FA); 'the FIRSTBORN according to his BIRTHRIGHT' (43:33 — Bekhorot 8:1's row read); 32:33 the sinew is the family's own seat (excluded from the span's acts); 34:4, 34:8, 34:12 'as a WIFE' and 41:45 Asenath 'as a wife' — the marriage vocabulary the family engine owns, wife_taken written here at the scene's seats
+  - -> lev24 [talion_formula] at Gen 35:4, Gen 35:8, Gen 41:35, Gen 44:33, Gen 44:4, Gen 47:29: FALSE link none — O8 S4 (2026-09-08) | 35:4 'UNDER the terebinth', 35:8 'UNDER the oak', 41:35 'UNDER the hand of Pharaoh', 44:4 'evil FOR good', 44:33 'INSTEAD OF the lad', 47:29 'UNDER my thigh' (תחת, tachat) — the preposition, a homograph of the talion formula's word
+  - -> minchah [minchah] at Gen 32:14, Gen 32:19, Gen 32:21, Gen 32:22, Gen 36:23, Gen 43:11, Gen 43:15, Gen 43:25 ...: FALSE link none — O8 S4 (2026-09-08) | 32:14, 32:19, 32:21, 32:22 'a GIFT for Esau' and 43:11 'carry down to the man a GIFT' (מנחה, minchah) — the gift to a man, a homograph of the meal offering (S3's 18:6 the same); 36:23 MANAHATH (מנחת) — a Horite's name
+  - -> mishpatim [hebrew_slave] at Gen 39:14, Gen 41:12: FALSE link none — O8 S4 (2026-09-08) | 39:14 'a HEBREW man', 41:12 'a HEBREW lad, a SLAVE' (עברי, עבד) — Joseph named by his people and his station in an Egyptian's house; the Hebrew slave law of Exodus 21:2 (six years, the seventh free) governs an Israelite master's purchase: a homograph of its tokens, no verdict
+  - -> offerings [olah,shelamim] at Gen 32:25, Gen 32:27, Gen 33:13, Gen 34:21, Gen 35:1, Gen 41:18, Gen 41:19, Gen 41:2 ...: CALL carries verdict link reference — O8 S4 (2026-09-08) | 'and he SACRIFICED SACRIFICES to the God of his father Isaac' (46:1 — OF.dispatch('shelamim'): the kin's sacrifice, the peace offering's shape before its law, Bereshit Rabbah 94:5); 'and he poured on it a LIBATION' (35:14 — the drink offering's own token, Exodus 29:40-41's law the erection's: read by name, no verdict); 32:25 and 32:27 'the RISING of the dawn', 33:13 'the flock and herd GIVING SUCK', 34:21 'these men are PEACEABLE', 35:1 'GO UP to Bethel', 41:18 'seven cows COMING UP' — homographs of the burnt and peace offerings' tokens
+  - -> pesach [firstborn] at Gen 35:23, Gen 36:15, Gen 41:51, Gen 43:33, Gen 46:21, Gen 46:8: FALSE link none — O8 S4 (2026-09-08) | 35:23 'Jacob's FIRSTBORN', 36:15 'Eliphaz, Esau's FIRSTBORN', 41:51 'the name of the FIRSTBORN Manasseh', 43:33 'the FIRSTBORN according to his birthright', 46:8, 46:21 (בכור, בכר) — the family's firstborn, a homograph of the paschal firstborn law's token (S3's 25:13 the same); the search for leaven's source at 44:12 (Pesachim 7b:14) is a cell reading the shelf, no engine call
+  - -> pre_sinai [circumcision,life_blood,sabbath] at Gen 34:14, Gen 34:22, Gen 36:7, Gen 44:30: CALL carries verdict link reference — O8 S4 (2026-09-08) | law_pre_sinai in the scene's laws — the covenant's eighth day on the stretch's three male births (Benjamin 35:18, Manasseh and Ephraim 41:50; 17:12), the daemon reference form; 34:14 'a man who has a FORESKIN' and 34:22 'as they are CIRCUMCISED' — Shechem's ruse, the scene's own kind males_circumcised (not the covenant's sign_in_the_flesh); 36:7 'too great for DWELLING together' (a homograph of the sabbath's token), 44:30 'his SOUL is bound to his soul' (the life token)
+  - -> sanctions [life_blood,molech_ov] at Gen 36:31, Gen 37:8, Gen 39:20, Gen 40:1, Gen 40:5, Gen 41:46, Gen 44:30: FALSE link none — O8 S4 (2026-09-08) | 36:31 'before a KING reigned', 37:8 'will you indeed REIGN over us', 39:20 'the KING's prisoners', 40:1 'the KING of Egypt', 40:5, 41:46 'Pharaoh KING of Egypt' (מלך, melekh) — the king word, a homograph of Molech's consonants (S2, S3 the same); 44:5 and 44:15 'he surely DIVINES' (נחש) — the token of Leviticus 19:26's ban, a ruse in Egypt before Sinai: no verdict (the effect divination_claimed, a status)
+  - -> yovel [holding] at Gen 36:43, Gen 47:11, Gen 50:13: FALSE link none — O8 S4 (2026-09-08) | 36:43 'the land of their HOLDING' (Edom's), 47:11 'a HOLDING in the land of Egypt' (Rameses), 50:13 'a HOLDING of a grave' (the family's Machpelah) (אחזה, achuzah) — the holding word outside the land of the jubilee's law: homographs of its token (S3's 25:26 the same)
+- pointers in the ink:
+  - Gen 32:3 AS_WHEN "כאשר ראם מחנה": INTERNAL link reference — 'WHEN he SAW them' — a temporal clause, no citation (the census's form matched the conjunction alone)
+  - Gen 32:32 AS_WHEN "כאשר עבר את": INTERNAL link reference — 'AS he PASSED Penuel' — a temporal clause, no citation
+  - Gen 34:12 AS_WHEN "כאשר תאמרו אלי": INTERNAL link reference — 'I will give AS you SAY to me' — Shechem's blank check citing the terms the sons will name (34:14-17) inside this runner
+  - Gen 34:22 AS_WHEN "כאשר הם נמלים": INTERNAL link reference — 'AS they are CIRCUMCISED' — the gate speech citing 34:15's condition inside this runner (the covenant's sign is the pre-Sinai engine's; the ruse is this scene's)
+  - Gen 37:23 AS_WHEN "כאשר בא יוסף": INTERNAL link reference — 'WHEN Joseph CAME to his brothers' — a temporal clause, no citation
+  - Gen 40:13 AS_PRESCRIBED "כמשפט הראשון אשר": INTERNAL link reference — 'according to the FORMER CUSTOM when you were his cupbearer' — the cupbearer's own office cited (40:1-2), a manner clause; no law's prescription (the census's form matched the word 'custom')
+  - Gen 40:14 AS_WHEN "כאשר ייטב לך": INTERNAL link reference — 'WHEN it is WELL with you' — a temporal clause inside Joseph's petition, no citation
+  - Gen 40:22 AS_WHEN "כאשר פתר להם": INTERNAL link reference — 'AS Joseph had INTERPRETED to them' — the receipt citing 40:12-19's interpretations inside this runner
+  - Gen 41:13 AS_WHEN "כאשר פתר לנו": INTERNAL link reference — 'AS he INTERPRETED for us, so it was' — the cupbearer citing 40:12-22 inside this runner
+  - Gen 41:21 AS_WHEN "כאשר בתחלה ואיקץ": INTERNAL link reference — 'their appearance was evil AS AT THE BEGINNING' — a manner clause inside the dream's retelling, no citation
+  - Gen 41:54 AS_WHEN "כאשר אמר יוסף": INTERNAL link reference — 'the seven years of famine began to come, AS Joseph had SAID' — the receipt citing 41:27-30's interpretation inside this runner
+  - Gen 43:2 AS_WHEN "כאשר כלו לאכל": INTERNAL link reference — 'WHEN they had FINISHED eating the grain' — a temporal clause, no citation (the marker's own trigger for the second descent)
+  - Gen 43:14 AS_WHEN "כאשר שכלתי שכלתי": INTERNAL link reference — 'and I, AS I am BEREAVED, I am bereaved' — Jacob's own resignation, a manner clause; no citation
+  - Gen 43:17 AS_WHEN "כאשר אמר יוסף": INTERNAL link reference — 'and the man did AS Joseph SAID' — the receipt citing 43:16's order inside this runner
+  - Gen 44:1 AS_WHEN "כאשר יוכלון שאת": INTERNAL link reference — 'AS much as they can CARRY' — a measure clause, no citation
+  - Gen 47:11 AS_WHEN "כאשר צוה פרעה": INTERNAL link reference — 'AS Pharaoh had COMMANDED' — the receipt citing 47:6's grant inside this runner (the close of goshen_promised and good_of_egypt_promised)
+  - Gen 50:6 AS_WHEN "כאשר השביעך": INTERNAL link reference — 'AS he made you SWEAR' — Pharaoh citing 47:31's oath inside this runner (the recorded oath as legal tender, the frozen unit gen_73's crown)
+  - Gen 50:12 AS_WHEN "כאשר צום": INTERNAL link reference — 'and his sons did to him AS he had COMMANDED them' — the family engine's own receipt (49:29-32's command, its buried at 50:12-13, its close) raised inside this runner's span; the verse is the family's, cited here for the record
+
 ## cold_run_lev24.py — Lev 24:10-23
 - calls out (live): none
 - called by (live): mishpatim, sequence
@@ -178,6 +212,34 @@
   - Lev 24:19 AS_WHEN "כאשר עשה כן": INTERNAL link reference — 'as he has done, so shall it be done to him' — the talion formula's own clause, compiled here (the exporting callee)
   - Lev 24:20 AS_WHEN "כאשר יתן מום": INTERNAL link reference — 'as he gives a blemish in a man, so shall it be given in him' — the same formula
   - Lev 24:23 AS_WHEN "כאשר צוה יהוה": RUN_CITATION link reference — 'and the children of Israel did as the LORD commanded Moses' — the stoning executed, the run line
+
+## cold_run_mamre.py — Gen 18:1-33; Gen 19:1-38; Gen 20:1-18; Gen 22:1-24; Gen 25:1-34; Gen 26:1-35; Gen 27:1-46; Gen 28:1-22; Gen 29:1-35; Gen 30:1-43; Gen 31:1-54
+- calls out (live): family, guardians, offerings, pre_sinai, temurah
+- called by (live): sequence
+- required edges from the ink:
+  - -> chatat [chatat] at Gen 18:20: FALSE link none — O8 S3 (2026-09-08) | 18:20 'their SIN is very heavy' (חטאתם, chatatam) — the noun sin, a homograph of the sin offering (S1's 5:16, S2's 4:7 the same)
+  - -> family [birthright,inheritance,wife_taken] at Gen 20:12, Gen 25:20, Gen 25:31, Gen 25:32, Gen 25:33, Gen 25:34, Gen 27:36, Gen 28:9 ...: CALL carries verdict link reference — O8 S3 (2026-09-08) | 'and Abraham gave ALL THAT HE HAD to Isaac' (25:5 — FA.inheritance('inheritance_order_owed'): the order the family engine owes forward, Sanhedrin 91a:16 reads the gifts as deeds in his lifetime); 'the field that Abraham BOUGHT' (25:10 — FA.purchase('three_modes'): the purchase entry read, not rewritten); 'the FIRSTBORN' and 'BIRTHRIGHT' of 25:25-34 and 'the daughter of my father' at 20:12 (the sister claim, the family engine's Gen 20:12 row in its own reading of 24) — the family engine's own words at the seats it names
+  - -> incense_shekel [anointing_oil] at Gen 31:13: FALSE link none — O8 S3 (2026-09-08) | 31:13 'where you ANOINTED a pillar' (משחת, mashachta) — the oil poured on Jacob's stone (28:18), not the holy anointing oil of Exodus 30: a homograph of the compounding law's verb
+  - -> lev24 [talion_formula] at Gen 18:4, Gen 18:8, Gen 22:13, Gen 30:15: FALSE link none — O8 S3 (2026-09-08) | 18:4 'UNDER the tree', 18:8 'under the tree', 22:13 'IN PLACE OF his son', 30:15 'FOR your son's mandrakes' (תחת, tachat) — the preposition under / in place of / for, a homograph of the talion formula's word
+  - -> moadim [appointed_time] at Gen 18:14: FALSE link none — O8 S3 (2026-09-08) | 18:14 'at the SET TIME I will return to you' (למועד, la-moed) — the appointed time of the promise, a homograph of the festival word; the timer it sets is return_at_the_season, the calendar row mamre_visit_date (Bereshit Rabbah 48:12's Passover is the ROW's reading, not the engine's festival key)
+  - -> offerings [olah] at Gen 19:15, Gen 19:28, Gen 20:3, Gen 22:13, Gen 22:2, Gen 22:3, Gen 22:6, Gen 22:7 ...: CALL carries verdict link reference — O8 S3 (2026-09-08) | 'and offered it up as a BURNT OFFERING in place of his son' (22:13 — OF.dispatch('olah'): the institution by name; 22:2-3 'for a burnt offering', 'the wood of the burnt offering'); 'and Jacob SACRIFICED A SACRIFICE' (31:54 — OF.dispatch('shelamim'): the kin eat of it, the peace offering's shape before its law); 19:15 'the dawn ROSE', 19:28 'the smoke WENT UP', 20:3 'a MARRIED woman' carry the burnt offering's consonants as homographs (named)
+  - -> pesach [firstborn] at Gen 25:13, Gen 25:32, Gen 25:34, Gen 31:34: FALSE link none — O8 S3 (2026-09-08) | 25:13 'the FIRSTBORN of Ishmael, Nebaioth', 25:32-34 'the BIRTHRIGHT' (בכרה), 31:34 'in the camel's SADDLE' (בכר הגמל, be-khar) — the family's firstborn and the saddle noun, homographs of the paschal firstborn law's token; the firstborn for inheritance is Mishnah Bekhorot 8:1's row, read in the runner
+  - -> pre_sinai [fruitful] at Gen 26:22: CALL carries verdict link reference — O8 S3 (2026-09-08) | 'and we shall be FRUITFUL in the land' (26:22 — Isaac's echo of 1:28 and 9:1's blessing verb, the pre-Sinai engine's own word: PS_.covenant('covenant_heads') read at 26:3's oath 'which I swore to Abraham'); and law_pre_sinai in the scene's laws — the covenant's eighth day on the stretch's male births (17:12), the daemon reference form
+  - -> sanctions [molech_ov] at Gen 20:2, Gen 26:1, Gen 26:8: FALSE link none — O8 S3 (2026-09-08) | 20:2 'Abimelech KING of Gerar', 26:1 'Abimelech king of the Philistines', 26:8 'Abimelech king of the Philistines' (מלך, melekh) — the king word, a homograph of Molech's consonants (S2's 14:1 the same)
+  - -> yovel [holding] at Gen 25:26, Gen 26:26: FALSE link none — O8 S3 (2026-09-08) | 25:26 'his hand HOLDING Esau's heel' (אחזת, ochezet), 26:26 'AHUZZATH his friend' (אחזת) — the participle and the name, homographs of the jubilee's holding token
+- pointers in the ink:
+  - Gen 18:5 AS_WHEN "כאשר דברת": INTERNAL link reference — 'so do, AS you have SPOKEN' — the guests' assent citing 18:4-5's offer inside this runner
+  - Gen 18:33 AS_WHEN "כאשר כלה לדבר": INTERNAL link reference — 'WHEN He had FINISHED speaking to Abraham' — a temporal clause, no citation (the census's form matched the conjunction alone)
+  - Gen 20:13 AS_WHEN "כאשר התעו אתי": INTERNAL link reference — 'WHEN God caused me to wander from my father's house' — cites 12:1's call (S2's runner) as Abraham's own history; a temporal clause in this runner
+  - Gen 26:29 AS_WHEN "כאשר לא נגענוך": INTERNAL link reference — 'AS we have not TOUCHED you' — Abimelech's party citing 26:11's decree inside this runner
+  - Gen 27:4 AS_WHEN "כאשר אהבתי והביאה": INTERNAL link reference — 'delicacies AS I LOVE' — a manner clause, no citation
+  - Gen 27:9 AS_WHEN "כאשר אהב": INTERNAL link reference — 'AS he LOVES' — Rebekah citing 27:4's own words inside this runner
+  - Gen 27:14 AS_WHEN "כאשר אהב אביו": INTERNAL link reference — 'AS his father LOVED' — the receipt citing 27:4 and 27:9 inside this runner
+  - Gen 27:19 AS_WHEN "כאשר דברת אלי": INTERNAL link reference — 'I have done AS you SPOKE to me' — Jacob's false receipt citing 27:4 inside this runner
+  - Gen 27:30 AS_WHEN "כאשר כלה יצחק": INTERNAL link reference — 'WHEN Isaac had FINISHED blessing Jacob' — a temporal clause, no citation
+  - Gen 27:40 AS_WHEN "כאשר תריד ופרקת": INTERNAL link reference — 'WHEN you break loose, you shall break his yoke' — a conditional clause, no citation (the frozen unit's read: the condition written in plain)
+  - Gen 29:10 AS_WHEN "כאשר ראה יעקב": INTERNAL link reference — 'WHEN Jacob SAW Rachel' — a temporal clause, no citation
+  - Gen 30:25 AS_WHEN "כאשר ילדה רחל": INTERNAL link reference — 'WHEN Rachel had BORNE Joseph' — cites 30:23-24's birth inside this runner: the second seven's end (the marker fourteen_end)
 
 ## cold_run_metzora.py — Lev 14:1-32
 - calls out (live): chatat, minchah, offerings, tzav, vayikra5
@@ -192,7 +254,7 @@
 
 ## cold_run_minchah.py — Lev 1:14-17; Lev 2:1-16
 - calls out (live): offerings, vayikra5
-- called by (live): chatat, clocks, incense_shekel, metzora, moadim, priesthood, sequence, shemini_day, tzav, vayikra5
+- called by (live): chatat, clocks, incense_shekel, metzora, moadim, priesthood, primeval, sequence, shemini_day, tzav, vayikra5
 - required edges from the ink:
   - -> moadim [first_fruits] at Lev 2:14: REVERSE link transfer taught by Sifra Vayikra Dibbura d'Nedavah Section 13 4 ('and if you bring a meal offering of first fruits — this is the omer offering'); Menachot 84a:10 — 2:14's first-fruits meal offering IS the omer of Lev 23:9-14 (Sifra Emor Chapter 13 3); moadim calls minchah.omer — a call back would cycle
   - -> offerings [olah] at Lev 1:14, Lev 1:17: CALL carries procedure link reference — 1:14 and 1:17's burnt offering — the bird under Lev 1's frame: dispatch(olah:flock) disposition
@@ -211,7 +273,7 @@
 
 ## cold_run_mishpatim_2.py — Exod 21:22-22; Exod 21:26-27; Exod 22:15-16
 - calls out (live): none
-- called by (live): family, sequence
+- called by (live): family, joseph, sequence
 - required edges from the ink:
   - -> family [wife_taken] at Exod 22:15: REVERSE link transfer taught by Ketubot 10a:4 ('money he shall weigh as the mohar of the virgins', Exod 22:16 — the mohar and the ketubah joined by the sages; the live cell reads the mohar lemma of Gen 34:12 at its Sinai seat) — G2 (REVERSE — the family runner calls this engine's lemma check live; a call back would cycle) | Exod 22:15 the same token, the seduced virgin's span compiled twice (mishpatim and mishpatim_2 both declare it); the family runner will call MP2.has on 22:15-16's bride-price lemma — flipped to REVERSE at the cell — DONE | RECLASSIFIED at LR3 (2026-09-07): the live cell fetches the MOHAR lemma (4117 / 4119), not the marriage formula's token — Ketubot 10a:4 teaches that pairing; the formula token's hypothesis stays on mishpatim -> family
   - -> lev24 [talion_formula] at Exod 21:26, Exod 21:27: FALSE link none — 21:26-27 'he shall let him go free FOR (תחת) his eye' — the exchange preposition in the manumission clause; the tariff's seat 21:23-25 is cold_run_mishpatim's (CALL there)
@@ -220,7 +282,7 @@
 
 ## cold_run_mishpatim_3.py — Exod 21:7-11; Exod 21:13-15; Exod 21:17-17; Exod 21:20-21; Exod 22:1-2
 - calls out (live): sanctions
-- called by (live): sequence
+- called by (live): joseph, sequence
 - required edges from the ink:
   - -> lev24 [talion_formula] at Exod 21:20: FALSE link none — 21:20 וּמֵת תַּחַת יָדוֹ ('and he dies UNDER his hand') — the spatial preposition 'under', a homograph of the talion formula's 'in place of' (21:23-25, Lev 24:18-20) the census homes to the Lev 24 engine; the Lev 24 engine is not imported
 - pointers in the ink:
@@ -248,7 +310,7 @@
 
 ## cold_run_offerings.py — Lev 1:1-13; Lev 3:1-17
 - calls out (live): pesach
-- called by (live): chatat, clocks, erection, exodus_story, incense_shekel, metzora, minchah, moadim, ordinances, pre_sinai, priesthood, sanctions, sanctuary_build, sequence, shemini_day, tzav, yoma
+- called by (live): chatat, clocks, erection, exodus_story, incense_shekel, joseph, mamre, metzora, minchah, moadim, ordinances, pre_sinai, priesthood, primeval, sanctions, sanctuary_build, sequence, shemini_day, tzav, yoma
 
 ## cold_run_ordinances.py — Exod 20:19-26; Exod 22:17-30; Exod 23:1-9; Exod 23:20-33
 - calls out (live): decalogue, holiness, holiness_b, offerings, pesach, sanctions, yovel
@@ -278,7 +340,7 @@
 
 ## cold_run_pre_sinai.py — Gen 1:1-31; Gen 2:1-3; Gen 2:16-17; Gen 2:24-24; Gen 9:1-17; Gen 17:1-27
 - calls out (live): calendar, clocks, decalogue, erection, holiness, holiness_b, incense_shekel, mishpatim, moadim, offerings, ordinances, pesach, priesthood, sanctions, tochacha, tzav, yoma, yovel
-- called by (live): exodus_story, sequence
+- called by (live): exodus_story, joseph, mamre, primeval, sequence
 - required edges from the ink:
   - -> moadim [appointed_time] at Gen 17:21, Gen 1:14: CALL carries procedure link transfer taught by Bereshit Rabbah 6:1 ('and for seasons — these are the three pilgrim festivals') — G1 (CALL — the cell fetches it live) | 'for signs and for SEASONS' (Gen 1:14 — the luminaries for the festival calendar) and 'at this SET TIME next year' (17:21 — Isaac's date); day_boundary('seasons') will call MO — flipped to CALL at the cell — DONE
   - -> sanctions [life_blood] at Gen 9:4: CALL carries procedure link transfer taught by Sanhedrin 59a:11-13 (R. Yosei son of R. Chanina: a command said to the sons of Noah and repeated at Sinai — M-24's exemplar; the limb from the living at Gen 9:4, Lev 17:14) — G1 (CALL — the cell fetches it live) | 'flesh with its LIFE, its blood' (Gen 9:4) — 'its blood in its life' stands at Gen 9:4 and Lev 17:14 alone in the Tanakh: the blood ban's law seat is the sanctions engine (Lev 17:10-14), the Noahide limb-from-the-living its first seat here; noahide('limb') will call SAN.blood — flipped to CALL at the cell — DONE
@@ -288,7 +350,7 @@
 
 ## cold_run_priesthood.py — Lev 21:1-24; Lev 22:1-33; Lev 24:1-9
 - calls out (live): clocks, holiness_b, minchah, offerings, ordinances, sanctions, vayikra5
-- called by (live): erection, family, incense_shekel, pre_sinai, sanctuary_build, sequence, vestments
+- called by (live): erection, family, incense_shekel, pre_sinai, primeval, sanctuary_build, sequence, vestments
 - required edges from the ink:
   - -> clocks [zav] at Lev 22:4: CALL carries status link reference — 22:4 'a leper or a ZAV shall not eat of the holy things until he is pure' — the zav's tier and the sunset gate are the clocks engine's: CL.zav(tier / count_start); the leper is the affliction engine's output datum (negaim exposes no function)
   - -> incense_shekel [anointing_oil] at Lev 21:10, Lev 21:12: REVERSE carries verdict link reference — Lev 21:10, 21:12 'on whose head the ANOINTING OIL was poured', 'the crown of the anointing oil of his God is on him' — the oil's SPEC is 30:22-33 (poured on Aaron's head at 29:7); the incense engine CALLS PR.family(nezer) for the many-garmented high priest when the oil ceased, so the edge is live the other way
@@ -300,9 +362,29 @@
   - -> tzav [asham] at Lev 22:16: FALSE link none — 22:16 עֲוֹן אַשְׁמָה ('the iniquity of GUILT') — the noun guilt in the eaters' clause, not the guilt offering (Sifra Emor Chapter 6 10 reads it as the death for the untithed); the 22:16 token is the only asham token in the span
   - -> vayikra5 [asham] at Lev 22:16: CALL carries value link transfer taught by Bava Metzia 54a:16-19 (the terumah eater's fifth beside the sacrilege's — 'and he shall give to the priest the holy thing', Lev 22:14) — 22:16's token is the noun guilt (a homograph), but 22:14's FIFTH on terumah eaten in error is the Lev 5 engine's sacrilege algebra — V5.sacrilege(meilah) computes the added quarter; declared CALL for that live edge
 
+## cold_run_primeval.py — Gen 2:4-15; Gen 2:18-23; Gen 2:25-25; Gen 3:1-24; Gen 4:1-26; Gen 5:1-32; Gen 6:1-22; Gen 7:1-24; Gen 8:1-22; Gen 9:18-29; Gen 10:1-32; Gen 11:1-32; Gen 12:1-20; Gen 13:1-18; Gen 14:1-24; Gen 15:1-21; Gen 16:1-16
+- calls out (live): family, minchah, offerings, pre_sinai, priesthood, sanctions, shemini, temurah
+- called by (live): sequence
+- required edges from the ink:
+  - -> chatat [chatat] at Gen 4:7: FALSE link none — O8 S2 (2026-09-08) | 4:7 'SIN couches at the door' (חטאת, chatat) — the noun sin, a homograph of the sin offering (S1's 5:16 the same)
+  - -> family [wife_taken] at Gen 12:19, Gen 16:3, Gen 2:22, Gen 3:13: CALL carries verdict link reference — O8 S2 (2026-09-08) | 'and gave her to Abram her husband to him AS A WIFE' (16:3 — the formula's own token: FA.commission('marriage_formula')); 'and I took her to me as a wife' (12:19 — the token in Pharaoh's mouth, the same formula); 'built the side into a WOMAN' (2:22) and 'to the WOMAN' (3:13) are the noun woman — homographs of the formula's token, named; 'one born in my house is my HEIR ... he who comes out of your loins shall be your HEIR' (15:3-4 — the inheritance institution by name: FA.inheritance('inheritance_order_owed')); 'arise, WALK the land in its length and breadth' (13:17 — the three modes of acquisition, Mishnah Kiddushin 1:5: FA.purchase('three_modes'); the walking as a mode is R. Eliezer's, a transfer the CELL carries with its teacher Bava Batra 100a:7)
+  - -> lev24 [talion_formula] at Gen 16:9, Gen 4:25, Gen 7:19: FALSE link none — O8 S2 (2026-09-08) | 16:9 'UNDER her hands', 4:25 'INSTEAD of Abel', 7:19 'UNDER all the heavens' (תחת, tachat) — the preposition, the talion formula's 'eye FOR eye' token: homographs
+  - -> minchah [bird_olah,minchah] at Gen 15:10, Gen 15:9, Gen 4:3, Gen 4:4, Gen 4:5, Gen 8:10, Gen 8:11, Gen 8:12 ...: CALL carries verdict link reference — O8 S2 (2026-09-08) | 'Cain brought of the fruit of the ground a MINCHAH to the LORD' (4:3-5 — the offering word's first seat, the meal-offering engine's institution by name: MI.odor_classes()); 'a TURTLEDOVE and a young PIGEON' (15:9-10 — the bird offering's two species, Lev 1:14: MI.bird('species')); the DOVE of 8:8-12 (יונה, yonah) is the story's bird, the species noun outside the offering — named
+  - -> offerings [olah] at Gen 3:7, Gen 8:11, Gen 8:20: CALL carries verdict link reference — O8 S2 (2026-09-08) | 'and offered BURNT OFFERINGS on the altar' (8:20 — the offering institution by name: OF.dispatch('olah')); 'of the firstlings of his flock and of their FAT' (4:4 — OF.fat_inventory('lamb'): the pointer names the species); 3:7 'fig LEAF' and 8:11 'olive LEAF' (עלה, aleh) carry the burnt offering's consonants — the noun leaf, homographs named
+  - -> pre_sinai [fruitful] at Gen 8:17: CALL carries verdict link reference — O8 S2 (2026-09-08) | FOUR REFERENCES to the pre-Sinai engine's institutions by the ink's own words: 'be fruitful and multiply on the earth' (8:17 — the exit command carries the blessing of 1:28 / 9:1 in its own formula: PS_.creation('three_blessings')); 'the tree of which I COMMANDED you' (3:11, 3:17 — the first rule of 2:16-17, that engine's span, cited back by the interrogation and the sentence: the breach fetches it, PS_.noahide('root_tokens')); 'I will establish My COVENANT with you' (6:18) and 'the LORD cut a COVENANT with Abram' (15:18 — PS_.covenant('covenant_heads')); 'the voice of your brother's BLOODS' (4:10-11) against 9:6's bloodshed cells (PS_.noahide('bloodshed_seats')) — the killing before the law, graded by Sanhedrin 37b
+  - -> sanctions [molech_ov] at Gen 14:1, Gen 14:10, Gen 14:17, Gen 14:18, Gen 14:2, Gen 14:21, Gen 14:22, Gen 14:8 ...: CALL carries verdict link reference — O8 S2 (2026-09-08) | 'I go CHILDLESS' (15:2 ערירי, ariri — Lev 20:20-21's own word at its narrative seat: SAN.sanction('uncle_wife') returns the childless clause); 'Amraphel KING of Shinar' and the kings of Gen 14 (מלך, melekh) — the consonants of Molech, homographs by vowels, named
+  - -> temurah [tithe] at Gen 14:20: CALL carries verdict link reference — O8 S2 (2026-09-08) | 'and he gave him a TENTH of all' (14:20 — the tithe's law seat Lev 27:30: TM.tithe('land_tithe_status')); 'of the FIRSTLINGS of his flock' (4:4 — the firstling's seat Lev 27:26: TM.consecrate('firstborn'))
+  - -> yovel [jubilee,tithe] at Gen 14:20, Gen 4:20: VIA via temurah link reference — O8 S2 (2026-09-08) | the tithe of 14:20 reaches the jubilee engine's tithe-naming cells through the temurah engine's own call (TM calls YOVEL.tithe_naming); 4:20 'JABAL' (יבל, yaval — the father of tent-dwellers) carries the horn's consonants (yovel): a name, a homograph named
+- pointers in the ink:
+  - Gen 7:9 AS_WHEN "כאשר צוה אלהים": INTERNAL link reference — 'AS God COMMANDED Noah' — cites the ark's command (6:14-21) inside this runner
+  - Gen 7:16 AS_WHEN "כאשר צוה אתו": INTERNAL link reference — 'AS God COMMANDED him' — the boarding's receipt citing 6:18-20 and 7:1-3 inside this runner
+  - Gen 8:21 AS_WHEN "כאשר עשיתי": INTERNAL link reference — 'nor will I again smite every living thing AS I HAVE DONE' — cites the wiping of 7:23 inside this runner
+  - Gen 12:4 AS_WHEN "כאשר דבר אליו": INTERNAL link reference — 'and Abram went AS the LORD had SPOKEN to him' — the call's receipt citing 12:1 inside this runner
+  - Gen 12:11 AS_WHEN "כאשר הקריב לבוא": INTERNAL link reference — 'WHEN he came near to enter Egypt' — a temporal clause, no citation (the census's form matched the conjunction alone; S1's 17:11 the same shape)
+
 ## cold_run_sanctions.py — Lev 17:1-16; Lev 18:1-30; Lev 20:1-27
 - calls out (live): chatat, clocks, offerings, shemini
-- called by (live): family, holiness_b, mishpatim_3, ordinances, pre_sinai, priesthood, sequence
+- called by (live): family, holiness_b, mishpatim_3, ordinances, pre_sinai, priesthood, primeval, sequence
 - required edges from the ink:
   - -> clocks [niddah] at Lev 18:19, Lev 20:21: CALL carries status link reference — 18:19 and 20:21's menstruant — CL.zav / the niddah status
   - -> offerings [olah,shelamim] at Lev 17:5, Lev 17:8: CALL carries window link reference — 17:5's 'slaughter them as peace offerings' and 17:8's burnt offering — dispatch(shelamim), dispatch(olah:flock) in platform(classes)
@@ -323,12 +405,12 @@
   - Exod 27:8 AS_WHEN "כאשר הראה אתך": INTERNAL link reference — 'as He showed you in the mountain, so shall they make' — the fourth shown-pattern clause, the doers plural; the target is the vision, censused in the runner
 
 ## cold_run_sequence.py — 
-- calls out (live): calendar, chatat, clocks, decalogue, erection, exodus_story, family, holiness, holiness_b, incense_shekel, lev24, metzora, minchah, mishpatim, mishpatim_2, mishpatim_3, moadim, negaim, offerings, ordinances, pesach, pre_sinai, priesthood, sanctions, sanctuary_build, shemini, shemini_day, temurah, tochacha, tzav, vayikra5, vestments, yoma, yovel
+- calls out (live): calendar, chatat, clocks, decalogue, erection, exodus_story, family, holiness, holiness_b, incense_shekel, joseph, lev24, mamre, metzora, minchah, mishpatim, mishpatim_2, mishpatim_3, moadim, negaim, offerings, ordinances, pesach, pre_sinai, priesthood, primeval, sanctions, sanctuary_build, shemini, shemini_day, temurah, tochacha, tzav, vayikra5, vestments, yoma, yovel
 - called by (live): none
 
 ## cold_run_shemini.py — Lev 11:1-47
 - calls out (live): none
-- called by (live): sanctions, sequence
+- called by (live): primeval, sanctions, sequence
 
 ## cold_run_shemini_day.py — Lev 9:1-24
 - calls out (live): chatat, minchah, offerings, tzav
@@ -345,7 +427,7 @@
 
 ## cold_run_temurah.py — Lev 27:9-15; Lev 27:26-34
 - calls out (live): pesach, yovel
-- called by (live): sequence
+- called by (live): mamre, primeval, sequence
 - required edges from the ink:
   - -> lev24 [talion_formula] at Lev 27:32: FALSE link none — 27:32 'passes UNDER (תחת) the rod' — the preposition, not the talion formula
   - -> pesach [firstborn,matzah] at Lev 27:26, Lev 27:34: CALL carries verdict link reference — 27:26's firstling — PS.firstborn
@@ -402,7 +484,7 @@
 
 ## cold_run_vestments.py — Exod 28:1-43; Exod 39:1-43
 - calls out (live): ordinances, priesthood, sanctuary_build, yoma
-- called by (live): erection, incense_shekel, sequence
+- called by (live): erection, incense_shekel, joseph, sequence
 - required edges from the ink:
   - -> incense_shekel [anointing_oil,incense,laver] at Exod 28:41, Exod 39:38, Exod 39:39: REVERSE carries inventory link reference — CLOSED at sitting E4 (2026-09-06): cold_run_incense_shekel.py now exists and CALLS this runner (VS.order_by_name / VS.investiture for the dressing order of Exod 29:5-9 against Lev 8:7-13) — a call back would cycle, so the edge is live the other way; the delivery manifest 39:38-39 hands Moses 'the golden altar, the anointing oil, the incense of spices... the laver and its base' — E4's four institutions named as inventory; the home runner cold_run_incense_shekel.py does not exist yet)
 - pointers in the ink:

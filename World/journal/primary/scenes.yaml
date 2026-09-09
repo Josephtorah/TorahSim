@@ -1,0 +1,87 @@
+# SCENES — PRIMARY RECORDS (the truth split, peer delta 1, 2026-08-24).
+# These are declared inputs: NOT derivable from canon, NOT disposable.
+# This file is the pen; the L2 segment is derived from it deterministically
+# by run_cases.py. Append-only: add scenes, never rewrite one — a wrong
+# scene gets a superseding scene, not an edit.
+#
+# Act vocabulary (maps to the Exodus 21 v2 chapter machine's World class):
+#   register_ox {ox}          goring {ox, species?, context?, testimony?}
+#   petting_day {ox}          advance {days}
+#   enslave {slave, theft, worth_six_years_labor}
+#   condemn {ox}              execute {ox}
+# Query vocabulary:
+#   ox_status {ox, victim_is_man?}     ox_benefit {ox}
+#   slave_status {slave}
+#   ox_vs_ox {ox, gorer_live_value, gored_value, carcass_value}
+version: 0
+scenes:
+  - id: scene_001_first_goring
+    title: The first goring — an innocuous ox gores another ox
+    en: An ox with no history gores a neighbor's ox dead. The chapter's
+      three-case table answers from the carcass split (Exodus 21:35).
+    script:
+      - {act: register_ox, ox: shor_reuven}
+      - {act: goring, ox: shor_reuven}
+      - {q: ox_status, ox: shor_reuven}
+      - {q: ox_vs_ox, ox: shor_reuven, gorer_live_value: 200,
+         gored_value: 200, carcass_value: 50}
+
+  - id: scene_002_forewarned
+    title: The forewarned ox — three gorings with testimony
+    en: The same pattern three times, owner warned before witnesses. The
+      status machine flips from innocuous (tam) to forewarned (muad) and
+      the payment rule changes with it (Exodus 21:36).
+    script:
+      - {act: register_ox, ox: shor_shimon}
+      - {act: goring, ox: shor_shimon, testimony: true}
+      - {act: advance, days: 1}
+      - {act: goring, ox: shor_shimon, testimony: true}
+      - {act: advance, days: 1}
+      - {act: goring, ox: shor_shimon, testimony: true}
+      - {q: ox_status, ox: shor_shimon}
+      - {q: ox_vs_ox, ox: shor_shimon, gorer_live_value: 200,
+         gored_value: 200, carcass_value: 50}
+
+  - id: scene_003_ox_kills_man
+    title: The ox that kills a man — stoning, and the benefit ban
+    en: A goring kills a free man. The ox is condemned — and the benefit
+      ban rides the STANDING VERDICT, not the stones (Exodus 21:28;
+      Mishnah Keritot 6:2 as read in the chapter machine). Execution
+      spends the verdict.
+    script:
+      - {act: register_ox, ox: shor_levi}
+      - {act: goring, ox: shor_levi}
+      - {q: ox_status, ox: shor_levi, victim_is_man: true}
+      - {act: condemn, ox: shor_levi}
+      - {q: ox_benefit, ox: shor_levi}
+      - {act: execute, ox: shor_levi}
+      - {q: ox_benefit, ox: shor_levi}
+
+  - id: scene_004_slave_term
+    title: The six-year term — sold by the court, out in the seventh
+    en: A thief who cannot pay is sold by the court. Six years he serves;
+      in the seventh he goes out free, for nothing (Exodus 21:2) — the
+      term clock runs on world days.
+    script:
+      - {act: enslave, slave: eved_1, theft: 100,
+         worth_six_years_labor: true}
+      - {act: advance, days: 2190}
+      - {q: slave_status, slave: eved_1}
+
+  - id: scene_005_reform
+    title: The reformed ox — clean days walk the status back
+    en: A forewarned ox with clean petting days — children pet it and it
+      does not gore — returns to innocuous status. The state machine has
+      a road back (the chapter machine's reform path).
+    script:
+      - {act: register_ox, ox: shor_yehuda}
+      - {act: goring, ox: shor_yehuda, testimony: true}
+      - {act: advance, days: 1}
+      - {act: goring, ox: shor_yehuda, testimony: true}
+      - {act: advance, days: 1}
+      - {act: goring, ox: shor_yehuda, testimony: true}
+      - {q: ox_status, ox: shor_yehuda}
+      - {act: petting_day, ox: shor_yehuda}
+      - {act: petting_day, ox: shor_yehuda}
+      - {act: petting_day, ox: shor_yehuda}
+      - {q: ox_status, ox: shor_yehuda}

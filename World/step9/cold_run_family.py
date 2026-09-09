@@ -1002,12 +1002,12 @@ def law_family(event, world):
     k, subj, src = event['kind'], event['subject'], event['case_source']
     day = world.clock.day
     E_ = lambda eff, s, due=None, cp=None, value=None, amount=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': amount, 'due': due, 'value': value if value is not None else True, 'source_law': 'F%s' % event.get('law', '7'), 'case_source': src}
-    if k == 'died': return [E_('dead_before_him', subj, value=event['dead'])]
-    if k == 'purchased': return [E_('field_acquired', 'the-field', cp=subj, amount=event['price']), E_('grave_holding', 'the-field', value=subj)]
-    if k == 'buried': return [E_('buried', subj)]
+    if k == 'died': return [E_('dead_before_him', subj, value=event['dead'])] if WE.seat(src) == ('Gen', 23) else []   # O8 S2 (2026-09-08): ONE TYPE UNDER TWO LAW LAYERS — Haran's death (Gen 11:28) is law_primeval's
+    if k == 'purchased': return [E_('field_acquired', 'the-field', cp=subj, amount=event['price']), E_('grave_holding', 'the-field', value=subj)] if WE.seat(src) == ('Gen', 23) else []   # O8 S4 (2026-09-08; 8k): Jacob's field at Shechem (33:19) is law_joseph's
+    if k == 'buried': return [E_('buried', subj)] if WE.seat(src) is not None and WE.seat(src)[1] in (23, 48, 49, 50) else []   # O8 S3 (2026-09-08; 7k): Abraham's burial (25:9) is law_mamre's
     if k == 'commissioned': return [E_('agent_commissioned', subj, cp=event['principal']), E_('sworn_by_the_name', subj)]
-    if k == 'gifts_given': return [E_('gifts_given', subj, cp=event['by'])]
-    if k == 'consented': return [E_('consent_given', subj)]
+    if k == 'gifts_given': return [E_('gifts_given', subj, cp=event['by'])] if WE.seat(src) == ('Gen', 24) else []   # O8 S3 (2026-09-08; 7k): the concubines' sons' gifts (25:6) are law_mamre's
+    if k == 'consented': return [E_('consent_given', subj)] if WE.seat(src) == ('Gen', 24) else []   # O8 S4 (2026-09-08; 8k): this daemon's seat Rebekah's (24:58)
     if k == 'handed': return [E_('handed_to_the_agent', subj, cp=event['agent'])]
     if k == 'married': return [E_('wife_taken', subj, cp=event['husband']), E_('comforted', event['husband'])] if WE.seat(src) == ('Gen', 24) else []   # O8 S1 (2026-09-08): this daemon's seat Gen 24:67 (the comfort clause is 24:67's own); Exod 2:1 and 2:21 are the story engine's (rule 11 enforced: one act, one writer)
     if k == 'sinew_barred': return [E_('sinew_barred', subj)]
@@ -1017,15 +1017,15 @@ def law_family(event, world):
     if k == 'widow_sent': return [E_('waits_for_the_levir', subj, cp=event['levir'])]                          # the wait written OPEN, no timer: 'until Shelah grows' (38:11) gives no number (O1, 2026-09-07 — the scene's four-day timer retired)
     if k == 'shelah_grown': return [E_('levirate_owed', event['levir'], cp=subj)]                              # 38:14 'she saw that Shelah had grown, and she was not given to him as a wife': the levir's duty due and unpaid — the ink's own act
     if k == 'pledge_given': return [E_('pledge_held', subj, cp=event['by'])]
-    if k == 'sentenced': return [E_('sentence_pronounced', subj, value=event['mode'])]
-    if k == 'recognized': return [E_('acquitted', subj)]
+    if k == 'sentenced': return [E_('sentence_pronounced', subj, value=event['mode'])] if WE.seat(src) == ('Gen', 38) else []   # O8 S2 (2026-09-08): ONE TYPE UNDER TWO LAW LAYERS — the sentences of Gen 3-4 are law_primeval's; this daemon's seat Tamar's (38:24)
+    if k == 'recognized': return [E_('acquitted', subj)] if WE.seat(src) == ('Gen', 38) else []   # O8 S4 (2026-09-08; 8k): this daemon's seat Judah's (38:26); the coat's recognition (37:33) is law_joseph's
     if k == 'born_twins': return [E_('firstborn_by_the_head', event['firstborn'])]
     if k == 'adopted': return [E_('adopted_as_sons', s) for s in event['sons']]
     if k == 'crossed': return [E_('younger_set_first', subj)]
     if k == 'portion_given': return [E_('portion_added', subj, cp=event['by'])]
     if k == 'testament': return [E_('demoted', 'reuben'), E_('birthright_transferred', 'joseph'), E_('scattered_in_israel', 'simeon'), E_('scattered_in_israel', 'levi'), E_('scepter_held', 'judah')]
-    if k == 'burial_commanded': return [E_('burial_owed', 'the-sons', cp=subj)]
-    if k == 'gathered': return [E_('gathered_to_his_people', subj)]
+    if k == 'burial_commanded': return [E_('burial_owed', 'the-sons', cp=subj)] if WE.seat(src) == ('Gen', 49) else []   # O8 S4 (2026-09-08; 8k): the testament's command (49:29); Joseph's oath (47:29-31) is law_joseph's
+    if k == 'gathered': return [E_('gathered_to_his_people', subj)] if WE.seat(src) == ('Gen', 49) else []   # O8 S4 (2026-09-08; 8k): Jacob's gathering (49:33); Isaac's (35:29) is law_joseph's
     return []
 
 def scene():

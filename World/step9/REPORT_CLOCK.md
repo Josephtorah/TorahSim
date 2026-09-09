@@ -247,3 +247,73 @@ submit records, 247 WRAPPED / 0 OWED / 0 NONE of 247, unfired 0, unconsumed 0, o
 effects registry 247; the probes 5/5, 11/11, 12/12, 8/8, clock 16/16, sequence 4/4. The yovel runner 90/90 on its first
 run, the answer sheet 42 Mishnah + 29 Sifra/Talmud rows. No frozen unit touched; the corpus regression green, hash
 8b8fff1fa28953af unmoved.
+
+
+## O9 — THE CLOCK'S OPEN ITEMS (2026-09-08; the open-items campaign's ninth sitting; the owner: "Let continue")
+
+The design: CLOCK.md section 12, written before a probe or a line of engine — the time consensus's three (T3, T2, T4), the
+open items read again, and OPEN-5 as an engine sitting. The tape's side is SEQUENTIAL_RUN.md section 14 with its account in
+REPORT_SEQUENTIAL_RUN.md's O9 section; this is the engine's and the registry's.
+
+THE SHELF FIRST, BY SCRIPT — and the sitting's first lesson came from the reading itself: Bereshit Rabbah's file is POINTED
+and the clock sitting's OPEN-2 search had run an unpointed phrase against it. With the points stripped the shelf gave up
+what the design had called missing: Eruvin 56a:10 — "between one season and the next only ninety-one days and seven and a
+half hours" (Samuel's table, 56a:8-9), the row solar_year_days re-channeled RECEIVED with its teacher and the value unmoved
+(OPEN-2 closed as far as the length goes; the equinox's date at the epoch stays modeled — the shelf gives the hours of the
+day, not the epoch); Bereshit Rabbah 33:7 — the forty days of rain Marcheshvan and Kislev, the hundred and fifty days FIVE
+THIRTY-DAY MONTHS from Tevet to Iyar, the ark's "seventh month" Sivan counted from the rains' end (OPEN-4: the tradition's
+reading found and filed as the row flood_months; the machine runs its alternation, so C1's DIVERGE stands as the modeled
+calendar's beside the shelf's reading); the covenant between the pieces with TWO local teachers (Bereshit Rabbah 46:2
+eighty-five; the Mekhilta on Exodus 12:40 row 1 seventy) where the sojourn row had said "not on the local shelf"; Avodah
+Zarah 9a:7-8 as the elapsed column's shelf numbers; Chullin 83a:15-16 the two day-orders; Berakhot 2a:1-4, Pesachim 58a:1-5
+and Shabbat 34b:2-6 the slots' bounds; Mishnah Parah 1:3 with Rosh Hashanah 10a:4-6, 2b:1-7, 3a:14-15, 3b:2-4 and 9b:13 the
+counter idioms. OPEN-1, OPEN-3 and OPEN-6 were read again and stand as recorded.
+
+THE ENGINE (world_engine.py), after four probes written to fail (18/22 on the old engine, each for its own missing
+construct): Calendar.elapsed and Era.elapsed with the Clock's elapsed and elapsed_in — the label less one at the year grain,
+a life era's age as it stands; first_verse() beside seat(); World.marker(placement=) carrying the class on the MARKER log and
+World.submit stamping event['placement'] — the marker's class on the event at the marker's own verse, the retrograde stretch
+as one, page_order for every other event; advance() ordering one day's fires by the timer's opt-in boundary (the calendar's
+evening first, consecrated things' morning after, the due unmoved); Calendar.slot_rank and crosses_day over the registry's
+new day_slots block. 22/22 after; the sequence probes 4/4; four runners green on the spot.
+
+THE THIRD REGISTRY: seven rows (covenant_pieces_year with both settings; flood_months; temple_day_boundary — Chullin 83a:16;
+night_start — Berakhot 2a:1; between_the_evenings_from — Pesachim 58a:3 and Rava's 58a:5; twilight_doubt — Shabbat 34b:2,
+its three definitions and Shmuel's measure, UNEXERCISED: no narrated act of the three books stands at twilight;
+solar_year_days re-channeled; day_boundary's teacher Chullin 83a:15 named at last), the placement keys `places` / `refines`
+on fourteen rows the markers read (gen6_3_reading deliberately without one: the decree's date is the ink's own two numbers),
+the DAY SLOTS block (eight names in the calendar day's order from Genesis 1:5, the ink's own word forms censused by script —
+morning 32 seats and 29 bare, evening 14 and 17, night 12 and 16, between the evenings 6, dawn 3, noon 2, midnight 1), and the
+COUNTER IDIOMS block (people, kings, animals, trees, inclusive day counts, the jubilee's boundary year — six rows, three
+unexercised and visible). The parameters census prints both blocks: 54 rows, ten unexercised, named.
+
+THE TAPE: the covenant's marker at 15:1 (reading-placed, the spine's eighty-five on the running world; the Mekhilta's seventy
+retrograde on the fork's world, the stretch closed at 16:1), the two position calls (21:2, 45:5), the placement classes
+COMPUTED per row and injected, the slots stamped and verified again against the verse, C3d the join under both settings, C12 and C13 under the
+elapsed column — every literal typed from the stitcher's print by script; the first run 9/10 (a variable name reused in the
+runner's own fork loop — the world had no retro-write and the header said so), the second 10/10. The account and the
+findings: REPORT_SEQUENTIAL_RUN.md's O9 section.
+
+### Findings
+
+1. **THE POINTS HID THE SHELF.** Two "not found" rows of the clock sitting were on the local shelf all along; the search had
+   not stripped the vowel points. A search strips them now, and the memory carries it.
+2. **THE TWO DAY-ORDERS ARE ONE MISHNAH AND ITS GEMARA.** Chullin 83a:15-16 gives the calendar's day (the day follows the
+   night, ben Zoma from Genesis 1:5) and consecrated things' day (the night follows the day) on one page — the engine's
+   `boundary` field is that page, and the eating windows' "until morning" have their construct waiting.
+3. **THE SLOT IS A WORD, NOT AN HOUR.** Eight slot names cover every day-word in the three books; the hours the shelf gives
+   (the sixth and a half; three quarters of a mil) stay on the rows. The day stays the unit, as the consensus fixed.
+4. **THE IDIOMS DIFFER BY SUBJECT CLASS, AND THE SHELF SAYS SO ROW BY ROW.** People complete years at the New Year; kings
+   count a day as a year (and the nations' kings from Tishrei — the Nehemiah collision the template); animals count from day
+   to day (Parah 1:3) with the bull's two settings; a planting counts thirty days before the New Year. Data now; the
+   generator waits for a join no hand can write.
+5. **A NAME REUSED IS A MISS** (the tape's one miss; REPORT_SEQUENTIAL_RUN.md O9, finding 6).
+
+### The sweep at the sitting's close
+
+39 of 39 runners green, 4,518 graded cells (two new: the placement and the slot censuses on the sequence runner), both gates
+satisfied first (scratchpad o9_sweep.txt, SWEEP-EXIT 0): DEPENDENCY GATE 191 live import edges, 285 edges + 128 pointers on
+file, 112 beyond the census all on file (rule 9); DAEMON GATE 43 daemons watching 791 kinds, 327 WRAPPED / 0 OWED / 0 NONE of
+327, unfired 0, unconsumed 0, open aliases 0; the events lint 0 on 791; the clock probes 22/22, the sequence probes 4/4; the
+sequence runner 10/10 (51.7s in the sweep). No frozen unit touched; the corpus regression green, hash 8b8fff1fa28953af
+unmoved. Next: O10 THE PEOPLE-TOKENS IN THE ONE REGISTRY, O11 THE CLAIMS LABEL DEBT, then NUMBERS (T1 installation first).

@@ -293,8 +293,10 @@ the eighth-day count (C8 — a one-line fix on the pre_sinai daemon and its scen
 SUBJECTS at Leviticus 8:30 and the six overlapping history kinds (aliases, each its own question); the frozen units'
 people-tokens' membership in `israel_people` (the fold's sitting); the tape's gaps (Exodus 1-11, 12-23, Leviticus 10-27
 carry no narrative events — the runners compile law there, or nothing yet) [O8 S1, 2026-09-08: Exodus 1-19's story is ON the
-tape — NARRATIVE_GAPS.md; the gaps line now reads the Genesis stretches (S2-S4) and the ink's own silences inside Exodus 2-7]; Numbers 33:3's fifteenth (the exodus day's
-own verse, off the three books — 12:6, 12:29, 12:37 carry it here).
+tape — NARRATIVE_GAPS.md; the gaps line now reads the Genesis stretches (S2-S4) and the ink's own silences inside Exodus 2-7] [O8 S2, 2026-09-08:
+Genesis 2:4-16:16 is ON the tape (183 events, 7 markers, the reprieve decree the tape's second retrograde-dated marker); the gaps line now reads Genesis
+18-20, 22, 25-31, 33-37, 39-47 (S3-S4) and Exodus's own silences]; Numbers 33:3's fifteenth (the exodus day's
+own verse, off the three books — 12:6, 12:29, 12:37 carry it here). THE REST (O8 S3, 2026-09-08): the sequence runner's eighth checkpoint — the tape minus the newest runner's lines, run as its own world, reproduces the previous sitting's RUN exactly (NEWEST_RUNNER / PREVIOUS_RUN move forward each sitting); Avot 5:3's ten trials against the ink's one (CH1 DIVERGE, the list's shelf absent). THE FOURTH SITTING (O8 S4, 2026-09-08): NEWEST_RUNNER = 'joseph', PREVIOUS_RUN = S3's tuple — THE REST reproduced it on the first tape run; the seventy's missing one (46:15's thirty-three against thirty-two living named — CJ3b DIVERGE, the shelf's answers none the ink's, OPEN); the register test set four of Joseph's events aside (the roster's perfect "took" at 36:2-3, the nominal famine clause of 43:1) — the tape carries what a narrative verb carries; the third day INCLUSIVE with its own marker (convention 23), one marker per row (convention 22).
 
 ## 11. As built (the sitting's close, 2026-09-07)
 
@@ -459,3 +461,63 @@ not the predicted 6 (the incense scene's new 8:2 command dedups too), subjects 5
 the predicted days unchanged. The run, read then typed: (140, 8, 4, 0, 0, 186, 8, 76, the two mornings, 8) — timers set 8
 (the priesthood's three at Exod 40 gone), writes 186, 8 of 38 daemons, 76 entities, REPEATED WRITES = the two mornings of
 36:3 under the donation's two law layers and nothing else. 7/7.
+
+
+## 14. O9 — THE CLOCK'S OPEN ITEMS ON THE TAPE (2026-09-08; the open-items campaign's ninth sitting; the design: CLOCK.md section 12)
+
+What the sequence runner takes from O9 (the engine's part is CLOCK.md 12a-12e; this section is the tape's), declared before
+the stitcher ran and the literals were typed:
+
+- THE COVENANT BETWEEN THE PIECES joins the marker table (12b): Genesis 15 carries no date — the bound [12:4 Abram seventy-five,
+  16:3 the ten years]; the row covenant_pieces_year holds the two readings on the local shelf (Bereshit Rabbah 46:2 eighty-five;
+  the Mekhilta on Exodus 12:40 row 1 seventy); the RUNNING world places it at eighty-five — a forward marker at 15:1 on the
+  same day as the ten years (75 + 10, both modeled at the year's first day: the counter does not move), class reading_placed;
+  the sojourn fork's `covenant_pieces` world places it at seventy — the same row EARLIER than the counter, so the engine's own
+  rule makes it RETROGRADE: the Gen 15 events dated at Abraham's seventy, the stretch closed by the ten-years marker MOVED from
+  16:3 to 16:1 (the first verse outside Genesis 15; the numbers still checked at 16:3) — 7:4's lesson generalized. That world's
+  exodus is computed FROM its placed covenant (Exodus 7:7's row gains the branch: the covenant + 430), the Mekhilta's own
+  arithmetic; the runner's PARAMS gains `covenant_placement` (the running setting the spine's, overridden in that world).
+- THE MARKER'S VERSE IS ITS POSITION (12b): the engine stamps the placement class on the event whose first verse is the
+  marker's verse, so a marker's call names where it sits — 21:5's number is called at 21:2 (the birth), 45:6's at 45:5 (the
+  speech's first verse); assert_ink keeps the numbers' verse.
+- THE PLACEMENT CLASS is COMPUTED by the stitcher per row (12b: a `places` row read, a typed shelf number, or propagation
+  through the M keys in tape order) and injected into the marker's call; the events' stamps are PREDICTED by replaying the
+  engine's rule on the tape's order (the class at the marker's verse, the retrograde stretch as one, page_order else) — a new
+  graded literal PLACEMENT (markers by class, events by stamp) read from the logs.
+- THE SLOT (12e): the stitcher stamps `slot` on an event from the ink's own day-word at its first verse (the runner's
+  slot_of, one copy, over the registry's day_slots table — exactly one slot's word present, else nothing); the runner
+  RE-VERIFIES every slotted event against its verse after the run; a new graded literal SLOTS; the stitcher's SLOT-REGRESSION
+  REPORT names the ink's own day-crossings the tape has not marked — evidence, never a fix (the counter moves by markers
+  only; no marker row is added for them this sitting: OPEN-12, a year-grain marker met inside its own year).
+- C3d AS THE JOIN (12b) on the running world under both settings — C3d-70 MATCH (the ink's own five hundred), C3d-85 DIVERGE
+  (515 — the evidence); the fork world's old C3d (the implied covenant within the bound) retired — it would match by
+  construction; FORK_VERDICTS['covenant_pieces'] = C3a DIVERGE (the tradition's two hundred and ten in Egypt), C3b MATCH (the
+  Mekhilta's thirty IS the join), C3c MATCH.
+- C12 and C13 under the ELAPSED column (12a): Avodah Zarah 9a:7 — Abraham fifty-two at the year two thousand; 9a:8 — 448 from
+  there to the giving of the Torah; the runner's remark prints both columns (the Seder Olam numbers not on the local shelf).
+- PREDICTED: the marker table 130 (F 113 / P 15 / R 2 on the running world); CENSUS otherwise unmoved; DAYS gains
+  `covenant_pieces` = hagar_given's day; the RUN tuple and THE REST UNMOVED (the placement and slot stamps write nothing; the
+  covenant marker walks the clock to the same day the ten years did, ten verses earlier — the fires' days unchanged).
+
+
+### As run (2026-09-08)
+
+The stitcher's print first (scratchpad o9_stitch1.txt): 130 markers, F 113 / P 15 / R 2, every number verified against the ink;
+the placement classes computed with a reason per row — 31 reading-placed markers (ten typed shelf numbers, seven rows read
+from the registry's `places` rows, fourteen propagated: the binding's third day, the whole road from the departure to Hebron
+riding Megillah 17a's fourteen and its eighteen and six months, Shur riding the sea, the morrow riding the breaking) and 84
+text-constrained; the events' stamps predicted 86 / 941 / 31; the slots 37 events on six slot names; TWO slot regressions
+reported (Gen 19:27 morning -> Gen 19:33 night; Gen 28:11 sunset -> Gen 28:18 morning) — the ink's own day-crossings the tape has not marked, filed OPEN-12 beside the year-grain marker met
+inside its own year; the DAYS literal gaining covenant_pieces = hagar_given's day, every other key unmoved. The literals were
+typed FROM the print by script (the CENSUS tuple, DAYS, PLACEMENT, SLOTS), the four verdicts as the design declared.
+
+THE FIRST RUN 9/10: every prediction held — the markers, the placement classes, the slots (re-verified against the verse,
+zero mismatches), the events, the days, the verdicts (C3d-70 MATCH, C3d-85 DIVERGE at 2464 against the exodus's 2449, C12 and
+C13 MATCH under the elapsed column), the fork (the covenant_pieces world's exodus computed FROM its placed covenant at creation
+year 2019, its Gen 15 events dated at day 737087 with three retrograde markers on that world — 6:3, 15:1, Lev 8:2 — and its
+exodus − descent = 210, the tradition's own two hundred and ten), THE REST — and ONE miss on the RUN tuple: retro-writes 3
+against 0, while the same run's header and log classes showed no RETRO-WRITE at all. The reading: the runner's own hand — the
+fork loop's new print had reused the name `retro` for the covenant world's retrograde MARKERS, clobbering the running world's
+retro-write list before the tuple was built. Renamed; nothing typed anew. THE SECOND RUN 10/10 (1.8s on the tape). The two date
+columns as printed: the flood 1657 / 1656, Abraham born 1949 / 1948, the exodus 2449 / 2448 — the label and the elapsed rendering, the
+tradition's anno mundi the second.

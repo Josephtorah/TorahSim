@@ -37,6 +37,9 @@ ask.py             ask it questions
 world.sqlite       the world (rebuildable, never edited by hand)
 research/          measurements taken before committing to work
 placement/         the location layer — not started
+step9/             the law engine, the runners, the registries — the simulation's body (read step9/THE_LOOP.md)
+journal/           the world journal — the append-only, hash-chained event record and its sqlite index
+                   (moved here from the mockups 2026-09-09; data/ is derived and ignored; read step9/THE_LOOP.md)
 ```
 
 ## Current state

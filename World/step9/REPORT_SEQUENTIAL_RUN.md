@@ -273,3 +273,67 @@ unfired 0, unconsumed 0, open aliases 0; the events lint 0; the gate fire-probes
 sequence probes 4/4, the skeleton standing; the touched runners green on their own lines (incense_shekel 301/301, priesthood
 252/252, pre_sinai 212/212, family 228/228, tzav 54/54, erection 287/287, vestments 196/196); the sequence runner 7/7. No
 frozen unit touched; the corpus regression green, hash 8b8fff1fa28953af unmoved. Next: O3 THE GATE ITEMS.
+
+
+## O9 — THE CLOCK'S OPEN ITEMS ON THE TAPE (2026-09-08; the open-items campaign's ninth sitting; the design: CLOCK.md section 12 and SEQUENTIAL_RUN.md section 14)
+
+THE QUESTION THE TAPE ANSWERED: what the consensus's two tape-borne items look like on the one world — the placement class
+beside the bound (T2), with Genesis 15 as its test, and the elapsed rendering (T3) where a local shelf number can be compared.
+
+THE COVENANT BETWEEN THE PIECES joined the marker table with two readings from the local shelf, both read by script before a
+line was typed: Bereshit Rabbah 46:2 (the Genesis spine — eighty-five, "at the hour He spoke with him between the pieces")
+and the Mekhilta on Exodus 12:40 row 1 (seventy — "thirty years before Isaac was born the decree was decreed between the
+pieces"). The running world places it at eighty-five: a forward marker at 15:1 on the day the ten years of 16:3 already
+stood at, so the counter did not move and no count on the tape did either — the RUN tuple and THE REST reproduced exactly.
+The sojourn fork's covenant_pieces world places it at seventy, EARLIER than the counter at 12:4's seventy-five: the engine's
+own rule made the marker retrograde without a line written for it, the Gen 15 events carried the text's date (creation year
+2019), and the stretch closed at the ten-years marker moved to 16:1 — the first verse outside Genesis 15. That world's exodus,
+computed from its placed covenant plus the ink's four hundred and thirty, fell on the SAME day as the running world's
+(Isaac's hundred plus the seed's four hundred): the Mekhilta's thirty IS the join, and its C3b matched for that reason, not by
+construction; its C3a printed the tradition's own two hundred and ten years in Egypt as the DIVERGE from the four hundred and
+thirty.
+
+C3d AS THE JOIN ran on the running world under both settings: seventy plus four hundred and thirty MATCHES the exodus marker
+at creation year 2449; eighty-five plus four hundred and thirty lands at 2464 — a DIVERGE of fifteen years, printed as the
+evidence it is. The old C3d (the implied covenant inside Gen 15's bound) was retired from the fork world, where it would now
+match by construction.
+
+THE ELAPSED COLUMN met two local shelf numbers: Avodah Zarah 9a:7 ("the souls they made in Haran — Abraham at that hour was
+fifty-two", the two thousand years of Torah opening there) and 9a:8 (four hundred and forty-eight from there to the giving of
+the Torah). C12: Abraham's elapsed birth year plus fifty-two = 2000 (the label column says 2001); C13: the giving's elapsed
+year less 2000 = 448. Both MATCH — "the tradition's count one lower" was the elapsed column all along; the Seder Olam numbers
+(1656, 2448) stay a remark, not on the local shelf.
+
+THE PLACEMENT STAMPS: 31 reading-placed markers and 84 text-constrained (the fifteen proleptic carry none); on the events 86
+text-constrained, 31 reading-placed, 941 page_order — the unlabeled prior of every undated verse now labeled, predicted by
+the stitcher from the engine's rule replayed on the tape's order and read back from the logs. THE SLOTS: 37 events carry the
+ink's own day-word at their first verse (morning 14, night 12, sunset 3, evening 3, noon 3, dawn 2), each re-verified
+against the verse after the run; the stitcher reported two day-crossings the tape has not marked (Gen 19:27 morning -> Gen 19:33 night; Gen 28:11 sunset -> Gen 28:18 morning) — evidence for a
+later sitting, never a fix by the engine.
+
+### Print-then-type
+
+Every literal was typed FROM the stitcher's print by script (the CENSUS tuple, DAYS, PLACEMENT, SLOTS), the four new verdicts
+as CLOCK.md 12g declared them. The first run 9/10: one miss, the RUN tuple's retro-writes 3 against 0 — and the same run's
+header said "retro-writes 0" with no RETRO-WRITE in its log classes. The reading found the hand, not the world: the fork
+loop's new print had reused the name `retro` for the covenant world's retrograde markers (three: 6:3, 15:1, Lev 8:2),
+clobbering the running world's list before the tuple was built. Renamed, the second run 10/10. A miss is evidence — here of a
+variable name.
+
+### Findings
+
+1. **THE MEKHILTA'S THIRTY IS THE JOIN.** Placing the covenant at seventy and adding the ink's four hundred and thirty lands
+   on the very day Isaac's hundred and the seed's four hundred land on: the fork world's exodus did not move by a day. The
+   reading the tradition wrote for Exodus 12:40 is arithmetic on the ink's own numbers, and the machine reproduces it.
+2. **THE SPINE'S READING DIVERGES, AND THAT IS THE RECORD.** Bereshit Rabbah 46:2's eighty-five is inside the page-order bound
+   and needs no retrograde, but its join with the four hundred and thirty misses the exodus by fifteen years. The running
+   world keeps the spine's reading; the checkpoint prints the disagreement. Neither reading is smoothed into the other.
+3. **THE ENGINE'S RETROGRADE RULE NEEDED NO NEW LINE.** The same marker row, under the other setting, fell earlier than the
+   counter and the engine dated the stretch by itself; the design's one addition was the closing marker's position (16:1),
+   7:4's lesson generalized.
+4. **THE ELAPSED COLUMN IS WHERE THE SHELF COUNTS.** Two joins written by hand on two Avodah Zarah rows matched under the
+   elapsed rendering and would have missed by one under the label — the generator over checkpoint() has its shape.
+5. **THE INK'S DAY-WORDS CROSS THE BOUNDARY TWICE WITHOUT A MARKER** on the Genesis tape (Gen 19:27 morning -> Gen 19:33 night; Gen 28:11 sunset -> Gen 28:18 morning): the slot census found what
+   the marker table had not, and the engine's counter stays where the markers put it — OPEN-12.
+6. **A NAME REUSED IS A MISS.** The one miss of the sitting was a variable shadowed in the runner's own fork loop; the
+   header line printed the true count beside the false tuple, and the reading took the header.

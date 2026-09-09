@@ -11,9 +11,9 @@ parameters:
   day_boundary:
     value: evening
     channel: ink
-    source: "Gen 1:5, 8, 13, 19, 23, 31 — 'and there was evening and there was morning': the day begins at evening"
-    teacher: null
-    open: "OPEN-5 — the Temple's day runs day-then-night for the offerings (Chullin 83a); 'until the evening' timers run to the next day boundary (day + 1) meanwhile"
+    source: "Gen 1:5, 8, 13, 19, 23, 31 — 'and there was evening and there was morning': the day begins at evening. Chullin 83a:15 (the Mishnah): 'one day' said of it-and-its-young (Lev 22:28) — the day follows the night (היום הולך אחר הלילה); ben Zoma derived it from 'one day' at creation (Gen 1:5)"
+    teacher: "Chullin 83a:15"
+    open: "OPEN-5 (O9, 2026-09-08; CLOCK.md 12e): the Temple's day is the row temple_day_boundary; 'until the evening' timers run to the next day boundary (day + 1); a timer's opt-in `boundary: morning` orders its fire after the evening-boundary fires of the same day"
     exercised_by: [the day-grain worlds' 'until the evening' timers]
   month_one:
     value: 1
@@ -63,10 +63,10 @@ parameters:
     exercised_by: [count]
   solar_year_days:
     value: 365.25
-    channel: modeled
-    source: "the season of ninety-one days and seven and a half hours (four seasons = 365 days and six hours) — named by the design thread's TIME.md at Eruvin 56a; NOT FOUND on the local shelf under the searched forms at this sitting (the whole Babylonian shelf searched by script for the season-to-season phrase and the ninety-one days) — held MODELED until read"
-    teacher: null
-    open: "OPEN-2"
+    channel: received
+    source: "Eruvin 56a:10 (Samuel's table, 56a:8-9) — 'there is not between one season and the next but ninety-one days and seven and a half hours; and a season draws from its fellow no more than half an hour' (אין בין תקופה לתקופה אלא תשעים ואחד יום ושבע שעות ומחצה): four seasons = 365 days and six hours. O9 (2026-09-08; CLOCK.md 12d): FOUND — the clock sitting's search had run the unpointed phrase against the pointed text (the Babylonian file is unpointed, but the search must strip points to be safe); the value unmoved, the channel received"
+    teacher: "Eruvin 56a:10"
+    open: "OPEN-2 — the season's LENGTH is received; the season's DATE at the epoch (equinox_offset_days) stays modeled: 56a:8-9 give the hours of the day each season falls at, not the epoch's date"
     exercised_by: [count]
   equinox_offset_days:
     value: 0
@@ -137,12 +137,14 @@ parameters:
     exercised_by: [creation]
   # O1 THE SMALL FIXES (2026-09-07; SEQUENTIAL_RUN.md section 12 d): the births' days where the shelf gives them
   isaac_birth_date:
+    placement: refines
     value: {month: 1, day: 15}
     channel: received
     source: "Rosh Hashanah 10b:10 (Rabbi Eliezer) AND 11a:2 (Rabbi Yehoshua) — both arms: 'on Passover Isaac was born' (בפסח נולד יצחק); 11a:13 the derivation from Gen 18:14 'at the appointed time I will return to you' (למועד אשוב אליך — the annunciation at the festival, the birth at Passover). The month is the CALENDAR'S OWN first (Nisan — Exod 12:2 'the first month', the ink's numbering, right in a leap year too: the creation era's ORDINAL seventh from Tishrei is Adar II in a thirteen-month year); the day is the feast's, Lev 23:6 / Exod 12:18 'on the fifteenth day' (ink)"
     teacher: "Rosh Hashanah 11a:13"
     exercised_by: [sequence]
   patriarch_birth_month:
+    placement: refines
     value: 7
     channel: received
     source: "Rosh Hashanah 10b:10 — Rabbi Eliezer: 'in Tishrei the patriarchs were born' (בתשרי נולדו אבות); 11a:7 his derivation from 1 Kings 8:2 'in the month of the mighty ones' (the month in which the mighty ones of the world were born). The month is the calendar's own SEVENTH (Tishrei — Lev 23:24's numbering); the DAY within the month is MODELED at the first (labeled); applied to Abraham, Jacob and Esau (Isaac has his own row); every other birth stays modeled at the year's first day"
@@ -151,6 +153,7 @@ parameters:
     open: "Rabbi Yehoshua's arm — 'in Nisan the patriarchs were born' (11a:2; 11a:9 from 1 Kings 6:1's 'month of Ziv', the month in which the radiant ones of the world were born): the setting 1 (Nisan), UNEXERCISED"
     exercised_by: [sequence]
   second_tablets_given:
+    placement: places
     value: {month: 7, day: 10}
     channel: received
     source: "Taanit 30b:8 — 'Yom Kippur, because it has pardon and forgiveness, the day on which the last tablets were given' (יום שניתנו בו לוחות האחרונות); Bava Batra 121a:6 the same row (לוחות אחרונות). The month and day are the exodus era's (Nisan the first): the tenth of the seventh month, Lev 23:27 (ink). THE ASCENT'S DAY = this day − 40: Exod 34:28 'forty days and forty nights' (ink) — the timer's own arithmetic, the same shape as Lev 8:2 = the erection − 7"
@@ -187,6 +190,7 @@ parameters:
 # the row). A world declares its epoch by the row's key; a world with no epoch has no derived year (None).
   # ---- O8 S1 THE EXODUS STORY (2026-09-08; NARRATIVE_GAPS.md section 4f): the shelf's day-tables as data rows with their arms ----
   moses_birth_date:
+    placement: refines
     value: {month: 12, day: 7}
     channel: received
     source: "Kiddushin 38a:5-7 — 'on the seventh of Adar Moses died and on the seventh of Adar he was born' (בשבעה באדר מת ובשבעה באדר נולד משה); 38a:7 the derivation from Deut 31:2 'a hundred and twenty years old I am TODAY' (the Holy One fills the years of the righteous from day to day). The month is the calendar's own twelfth (Adar — in a thirteen-month year the modeled first Adar, labeled); the YEAR from Exod 7:7 'Moses a son of eighty years at their speaking' (ink) — the exodus year less eighty; the birth's day within its year by the shelf's row (SEQUENTIAL_RUN.md section 9 convention 9)"
@@ -201,6 +205,7 @@ parameters:
     open: "Rabbi Chanina bar Papa's arm — 'the twenty-first of Nisan' (12b:15: the day he would sing at the sea); 12b:17 asks how three months fit it (the count from the retaking, Sotah 12a:18) — the setting recorded, UNEXERCISED"
     exercised_by: [sequence]
   sinai_days:
+    placement: places
     value: {second_ascent: 2, boundary: 3, separation: 4, giving: 7}
     channel: received
     source: "Shabbat 86b:5-87a:1 — the days of Sivan by Rabbi Yose (the new moon on a Sunday: on the first nothing, for the weariness of the road; on the second 'you shall be to Me a kingdom of priests'; on the third the boundary; on the fourth the separation) and by the rabbis (the new moon on a Monday: on the second nothing; on the third 'you shall be to Me'; on the fourth the boundary; on the fifth the separation); 86b:5 'on the sixth of the month the ten utterances were given — Rabbi Yose says on the seventh'; 87a:2-3 Rabbi Yose: Moses added one day of his own accord ('today and tomorrow — today like tomorrow, with its night'); 87a:6 'the third — the third of the month and the third of the week'. The running setting is Rabbi Yose's — the tape's standing ascent marker (Exod 24:18 at the seventh, Taanit 28b) is his"
@@ -223,6 +228,7 @@ parameters:
     open: "the rabbis' arm (Iyar full) — recorded, UNEXERCISED (it would move every date after the first of Sivan by a day)"
     exercised_by: [sequence]
   sea_split_date:
+    placement: places
     value: {month: 1, day: 21}
     channel: received
     source: "Sotah 12b:15 — Rabbi Chanina bar Papa on the ark's day: 'the twenty-first of Nisan — the ministering angels said: the one who will sing the song at the sea ON THIS DAY shall be struck on this day?' — the sea's splitting on the twenty-first of the first month (the seventh day of the feast, Exod 12:16's convocation); the day within the exodus year by the shelf's row (convention 9); the ink gives the sea no date between 12:41 and 15:22"
@@ -236,6 +242,182 @@ parameters:
     settings: {before: before, after: after}
     open: "the after-arm — Rabbi Elazar HaModai (Zevachim 116a:21; the Mekhilta Yitro ch.1 row 1): UNEXERCISED"
     exercised_by: [sequence]
+  # ---- O8 S2 FROM EDEN TO HAGAR (2026-09-08; NARRATIVE_GAPS.md section 6f): the stretch's readings as data rows with their arms ----
+  gen6_3_reading:
+    value: reprieve
+    channel: received
+    source: "Gen 6:3 'and his days shall be a hundred and twenty years' read as the REPRIEVE before the flood (the running setting): Bereshit Rabbah 30:7 (all hundred and twenty years Noah planted cedars and cut them — 'the Master of the world brings a flood on the world'); Onkelos 6:3 (the frozen unit gen_15's read: an extension is given them, a hundred and twenty years, if they repent). The other arm: the human LIFESPAN capped at a hundred and twenty (the plain reading of 'his days'). On the tape the decree is RETROGRADE-dated at the flood minus a hundred and twenty years (Pesachim 6b:7 — there is no earlier and later in the Torah): 600 − 120 = 480, before 5:32's five hundred — the ink's own arithmetic; the reprieve's timer fires on the flood's day (the sequence runner CG2)"
+    teacher: "Bereshit Rabbah 30:7"
+    settings: {reprieve: reprieve, lifespan: lifespan}
+    open: "the lifespan arm — recorded, UNEXERCISED (it sets no timer; the ledger would carry a status on humankind)"
+    exercised_by: [sequence, primeval]
+  abel_days_bound:
+    value: 50
+    channel: received
+    source: "Bereshit Rabbah 22:4 — 'at the end of days' (Gen 4:3): R. Eliezer (the world created in Tishrei — Abel lived from the festival to Chanukah) and R. Yehoshua (in Nisan — from Passover to Shavuot); 'by both, all agree that Abel was not in the world more than fifty days'. The stretch carries no stamp between 2:3 and 5:3: graded as a remark in the runner, not a checkpoint on the tape"
+    teacher: "Bereshit Rabbah 22:4"
+    open: "UNEXERCISED — no marker (Gen 4 is undated between the seventh day and Seth's birth)"
+    exercised_by: [primeval]
+  window_count_from:
+    value: mountaintops
+    channel: ink
+    source: "Gen 8:6 'and it was at the end of forty days' — the antecedent is the nearest date the ink states, 8:5's first of the tenth month (the mountaintops seen): the window opened forty days after it; the dove's two waits of seven days (8:10, 8:12) follow from the window's day (the first sending modeled at the window's own day, said so). Bereshit Rabbah 33:5-6 on the raven and the dove give no other base"
+    teacher: "the ink's own sequence (8:5 -> 8:6)"
+    exercised_by: [sequence]
+  # ---- O8 S3 FROM MAMRE TO THE HEAP (2026-09-08; NARRATIVE_GAPS.md section 7f): the readings that place the stretch's undated scenes, each with its arms visible ----
+  mamre_visit_date:
+    placement: refines
+    value: passover_of_the_year_before
+    settings: {passover_of_the_year_before: "the fifteenth of the first month, the year before born:isaac", unmarked: "no date — the visit bounded by page order"}
+    channel: received
+    source: "Bereshit Rabbah 48:12 — 'knead and make cakes' (Gen 18:6): 'this tells it was Passover'; joined by the ink's own 'at this living season' (18:10, 18:14) and 'at the set time' (21:2) to born:isaac, itself placed on Passover by Rosh Hashanah 10b:10 — the one-year timer of 18:10 then fires on the birth's day (the sequence runner CH0)"
+    teacher: "Bereshit Rabbah 48:12"
+    exercised_by: [mamre, sequence]
+  binding_placement:
+    placement: places
+    value: before_sarahs_death
+    settings: {before_sarahs_death: "Isaac 37 — Sarah 90 at his birth (17:17), 127 at her death (23:1)", page_order: "unexercised — the bound [21:34, 23:1]"}
+    channel: received
+    source: "Bereshit Rabbah 58:5 — 'from where did he come? from Mount Moriah; and Sarah died of that grief; therefore the binding is set beside the life of Sarah' — the RUNNING reading; the ink gives the bound only"
+    teacher: "Bereshit Rabbah 58:5"
+    exercised_by: [sequence]
+  stew_day:
+    placement: places
+    value: abrahams_death_day
+    settings: {abrahams_death_day: "died:abraham (25:7's proleptic marker)", page_order: "unexercised"}
+    channel: received
+    source: "Bava Batra 16b:11 — 'a baraita: that day Abraham our father died, and Jacob our father made a dish of lentils to comfort Isaac his father' (Gen 25:29-34) — the RUNNING reading; 16b:12 the lentil's two readings"
+    teacher: "Babylonian Talmud Bava Batra 16b:11"
+    exercised_by: [sequence]
+  blessing_placement:
+    placement: places
+    value: jacob_sixty_three
+    settings: {jacob_sixty_three: "year_day(born:jacob + 63) — Ishmael's death year by 25:17", page_order: "unexercised — the bound [26:34, 28:10]"}
+    channel: received
+    source: "Bereshit Rabbah 68:5 — 'Hezekiah said: sixty-three years old was our father Jacob when he took the blessings'; Megillah 17a:5 — the inference from 28:9's Mahalath, sister of Nebaioth: Ishmael had died — the RUNNING reading"
+    teacher: "Bereshit Rabbah 68:5; Babylonian Talmud Megillah 17a:5"
+    exercised_by: [sequence]
+  hidden_years:
+    placement: places
+    value: 14
+    settings: {fourteen: 14, none: 0}
+    channel: received
+    source: "Megillah 17a:5-6 — 'a baraita: Jacob was hidden in the house of Eber fourteen years ... we find that when he stood at the well he was seventy-seven years old'; Bereshit Rabbah 68:5, 68:11 (R. Yehuda: all fourteen years hidden in the house of Eber he did not lie down) — the RUNNING reading: the departure (28:10) = died:ishmael + 14 years; 'none' unexercised"
+    teacher: "Babylonian Talmud Megillah 17a:5-6"
+    exercised_by: [sequence]
+  rachel_remembered_date:
+    placement: places
+    value: rosh_hashanah
+    settings: {rosh_hashanah: "the first of the seventh month", unmarked: "no date"}
+    channel: received
+    source: "Rosh Hashanah 11a:16 — R. Elazar: on Rosh Hashanah Sarah, Rachel and Hannah were remembered — remembrance from remembrance (Gen 30:22, Lev 23:24); Bereshit Rabbah 73:1"
+    teacher: "Babylonian Talmud Rosh Hashanah 11a:16"
+    open: "UNEXERCISED — born:joseph is the tape's by Gen 41:46, 45:6 and 47:9; the remembering's day is not marked"
+    exercised_by: []
+  wage_changes_count:
+    value: 10
+    settings: {ten: 10, a_hundred: 100}
+    channel: ink
+    source: "Gen 31:7 and 31:41 'ten times' (parsed at both seats); Bereshit Rabbah 74:3 and 74:11 — the rabbis: a hundred times ('no counting is fewer than ten') — the second arm unexercised"
+    teacher: "the ink; Bereshit Rabbah 74:3, 74:11 the other arm"
+    exercised_by: [mamre]
+  labans_pursuit:
+    value: seven_days_distance
+    settings: {seven_days_distance: "the ink's 'a seven days' journey' (31:23) is a distance; the overtaking day unstated", one_day: "Bereshit Rabbah 74:6 — Laban went in one day what Jacob went in seven"}
+    channel: ink
+    source: "Gen 31:22-23; Bereshit Rabbah 74:6"
+    teacher: "the ink; Bereshit Rabbah 74:6 the other arm"
+    open: "UNEXERCISED — the tape marks the telling (31:22, the third day) and bounds the rest"
+    exercised_by: [sequence]
+  # ---- O8 S4 FROM THE FORD TO THE COFFIN (2026-09-08; NARRATIVE_GAPS.md section 8f): the stretch's placements as data rows, the running arm named ----
+  road_years:
+    placement: places
+    value: sukkot_eighteen_months_bethel_six
+    settings: {sukkot_eighteen_months_bethel_six: "eighteen months at Sukkot (33:17), six months at Bethel (35:6-16) — two years on the road", none: "unexercised — the road unbounded"}
+    channel: received
+    source: "Megillah 17a:7 — 'after all, the house of Laban was twenty years; but he delayed on the road two years, as a baraita teaches: he went out from Aram-naharaim and came to Sukkot and made there eighteen months, as it says (Gen 33:17) and Jacob journeyed to Sukkot and built himself a house and for his cattle he made booths; and at Bethel he made six months and offered sacrifices' — the RUNNING reading, the two years that close the arithmetic of 17a:6 (Jacob's thirty-six from the blessing to his father: 63 + 14 + 20 + 2 = 99)"
+    teacher: "Babylonian Talmud Megillah 17a:7"
+    exercised_by: [sequence]
+  joseph_seventeen_at_the_sale:
+    value: jacob_one_hundred_and_eight
+    settings: {jacob_one_hundred_and_eight: "Joseph 17 (37:2) when Jacob is 108 — born:joseph at Jacob's 91 by 47:9, 45:6 and 41:46"}
+    channel: derived
+    source: "Gen 37:2 (seventeen), 41:46 (thirty at the standing), 45:6 (two famine years after seven of plenty), 47:9 (Jacob a hundred and thirty at the descent) — the ink's own chain: the descent at Joseph's 39, so Joseph born at Jacob's 91 and sold at Jacob's 108; the row exists because born:joseph is the tape's only at 41:46 (S1's row) and the sale's marker at 37:2 must be computed off born:jacob"
+    teacher: "the ink's arithmetic (Berakhot 55b:2, Megillah 17a:3 compute the same)"
+    exercised_by: [sequence]
+  prison_two_years:
+    value: before_the_standing
+    settings: {before_the_standing: "the cupbearer's release two years before Joseph's standing at thirty (41:1, 41:46)"}
+    channel: derived
+    source: "Gen 41:1 ('at the end of two years of days' — Nazir 5a:5 on 'days' as a full year) counted back from 41:46's thirty: the birthday of 40:20 at Jacob's 119, the dreams two days before it (40:12, 40:18: 'three days')"
+    teacher: "the ink's arithmetic; Babylonian Talmud Nazir 5a:5"
+    exercised_by: [sequence]
+  the_seventy:
+    value: seventy_stated
+    settings: {seventy_stated: "46:27's seventy = 33 + 16 + 14 + 7, the ink's own sub-totals", sixty_nine_counted: "the names counted by script per register — Leah's register names sixty-six living... the count is the runner's, the tradition's answers Bava Batra 123b:1 (Jochebed born between the walls), Bereshit Rabbah 94:9"}
+    channel: received
+    source: "Gen 46:8-27; Bava Batra 123b:1 — 'this is Jochebed, whose conception was on the way and whose birth was between the walls' (Num 26:59 the proof); Bereshit Rabbah 94:9 — the frozen unit gen_69's headline: THE SEVENTY THAT COUNT SIXTY-NINE, the missing member disputed five ways; the runner counts the names by script (CJ3) and records the divergence, the tradition's answers named, none the ink's"
+    teacher: "Babylonian Talmud Bava Batra 123b:1; Bereshit Rabbah 94:9"
+    exercised_by: [joseph, sequence]
+  isaacs_death_after_the_sale:
+    value: twelve_years
+    settings: {twelve_years: "died:isaac (35:28: a hundred and eighty) twelve years after Joseph's sale at seventeen — 180 − 60 (25:26) − 91 − 17"}
+    channel: derived
+    source: "Gen 35:28, 25:26, 41:46, 45:6, 47:9, 37:2 — the ink's own arithmetic: the page order (35:29 before 37:2) against the chronology (the sale before the death), the proleptic marker of 35:28 carrying it (CJ2)"
+    teacher: "the ink's arithmetic"
+    exercised_by: [sequence]
+  embalming_and_weeping:
+    value: forty_and_seventy
+    settings: {forty_and_seventy: "forty days of embalming, seventy days of Egypt's weeping (50:3)", seven_at_atad: "seven days' mourning at the threshing floor (50:10)"}
+    channel: received
+    source: "Gen 50:2-3 ('and forty days were fulfilled for him, for so are fulfilled the days of the embalmed; and Egypt wept for him seventy days'), 50:10 ('and he made a mourning for his father seven days') — three timers on the scene, the first two overlapping"
+    teacher: "the ink's numbers"
+    exercised_by: [joseph, sequence]
+  # ---- O9 THE CLOCK'S OPEN ITEMS (2026-09-08; CLOCK.md section 12) ----
+  covenant_pieces_year:
+    placement: places
+    value: 85
+    settings: {bereshit_rabbah_46_2: 85, mekhilta_bo_12_40: 70}
+    channel: received
+    source: "Genesis 15 carries no date: the bound [12:4 Abram seventy-five, 16:3 the ten years]. TWO readings on the local shelf, read by script: Bereshit Rabbah 46:2 (the Genesis spine) — 'and if you say, he should have circumcised at eighty-five years, at the hour He spoke with him between the pieces' (בן שמונים וחמשה שנה, בשעה שנדבר עמו בין הבתרים) — the RUNNING setting, inside the page-order bound, a forward marker at 15:1; the Mekhilta on Exodus 12:40 row 1 — 'thirty years before Isaac was born the decree was decreed between the pieces' (שלשים שנה עד שלא נולד יצחק נגזרה גזרה בין הבתרים): Isaac at Abraham's hundred (21:5), the covenant at seventy — EARLIER than the counter, the retrograde path, run as the sojourn fork's covenant_pieces world (the 430 of 12:40 from the covenant, the Mekhilta's own arithmetic). The Babylonian shelf names no year for the covenant (searched by script in all thirty-seven tractates)"
+    teacher: "Bereshit Rabbah 46:2; Mekhilta Bo on Exod 12:40 row 1"
+    open: "the placed year joins Exod 12:40's four hundred and thirty against the exodus marker (C3d, both settings printed): seventy MATCHES the ink's own five hundred (Isaac's hundred + the seed's four hundred), eighty-five DIVERGES by fifteen — the disagreement is the evidence"
+    exercised_by: [sequence]
+  flood_months:
+    value: alternate_30_29
+    settings: {alternate_30_29: "the machine's month rounding (the row month_rounding) — the running setting", bereshit_rabbah_33_7: "five thirty-day months — Tevet, Shevat, Adar, Nisan, Iyar — for the hundred and fifty days"}
+    channel: received
+    source: "Bereshit Rabbah 33:7 (on Gen 8:13): the forty days of rain are Marcheshvan and Kislev; 'the waters prevailed a hundred and fifty days' (7:24) are Tevet and Shevat, Adar and Nisan and Iyar (טבת ושבט, אדר וניסן ואייר — FIVE THIRTY-DAY MONTHS); the ark's 'seventh month' (8:4) is Sivan, the seventh from the rains' cessation; 'in sixteen days they diminished a cubit — four days to a handbreadth and a half'. Rosh Hashanah 12a:5 beside: the sages of Israel count the flood by Rabbi Eliezer (Marcheshvan) and the seasons by Rabbi Yehoshua"
+    teacher: "Bereshit Rabbah 33:7"
+    open: "OPEN-4 (O9, 2026-09-08; CLOCK.md 12d): the tradition's reading FOUND; the machine runs its alternation, so C1's DIVERGE (147-148 against the ink's 150) stands as the modeled calendar's with the shelf's reading beside it — the other setting UNEXERCISED as a calendar"
+    exercised_by: []
+  temple_day_boundary:
+    value: morning
+    channel: received
+    source: "Chullin 83a:16 — 'the whole passage speaks only of consecrated things, and in consecrated things THE NIGHT FOLLOWS THE DAY' (ובקדשים לילה הולך אחר היום): the Temple's day runs from the morning through the following night — the eating windows' 'until morning' (Lev 7:15, Exod 12:10, Lev 22:30) end at this boundary. THE ENGINE (O9; CLOCK.md 12e): a timer's opt-in `boundary: morning` — the fires within one day's walk ordered evening-boundary first, morning-boundary after; the due never moves"
+    teacher: "Chullin 83a:16"
+    exercised_by: []
+  night_start:
+    value: the_stars
+    channel: received
+    source: "Berakhot 2a:1 (the Mishnah) — the evening Shema 'from the hour the priests enter to eat their terumah' (משעה שהכהנים נכנסים לאכול בתרומתן — the stars' appearance, the impure priest pure at sunset by Lev 22:7); the night's END the dawn's column, 2a:3-4 (עמוד השחר — Rabban Gamliel: 'until the dawn's column rises'; 'all that the sages said until midnight, their command is until the dawn's column rises'). DATA for the slot table's bounds; nothing in the engine counts hours"
+    teacher: "Berakhot 2a:1"
+    exercised_by: []
+  between_the_evenings_from:
+    value: {hour: 6.5}
+    settings: {r_yehoshua_ben_levi: {hour: 6.5}, rava: "from when the sun begins to decline westward"}
+    channel: received
+    source: "Pesachim 58a:3 — Rabbi Yehoshua ben Levi on Exod 29:39 'the one lamb in the morning and the second lamb between the evenings': 'divide it between two evenings — two hours and a half here, two and a half there, and one hour for its doing' (the tamid slaughtered at eight and a half, offered at nine and a half — the Mishnah 58a:1); Rava 58a:5: 'the tamid's command from when the shadows of evening decline — from when the sun begins to go west' (מעידנא דמתחיל שמשא למערב). The ink's six seats of בין הערבים ('between the evenings'): Exod 12:6, 16:12, 29:39, 29:41, 30:8, Lev 23:5"
+    teacher: "Pesachim 58a:3; Pesachim 58a:5"
+    exercised_by: []
+  twilight_doubt:
+    value: doubt_of_both_days
+    settings: {r_yehuda: "from sunset while the east's face reddens (34b:3)", r_nechemya: "half a mil's walk from sunset", r_yose: "the blink of an eye — one enters as the other leaves", shmuel_measure: "three quarters of a mil (34b:6)"}
+    channel: received
+    source: "Shabbat 34b:2 — 'twilight is a doubt: of the day and of the night, doubtful wholly day, doubtful wholly night — cast it to the stringency of both days' (בין השמשות ספק מן היום ומן הלילה... מטילין אותו לחומר שני ימים); its definition 34b:3, its measure 34b:6; 34b:4 the use: a discharge seen at twilight is doubtful for impurity and for the offering. In the engine's terms the doubt is a BOUND of two days on an event at twilight"
+    teacher: "Shabbat 34b:2"
+    open: "UNEXERCISED — no narrated act of the three books stands at twilight (the sun 'about to set' at Gen 15:12 is the day's last slot; 'had set, and it was dark' at 15:17 is the night); the bound of two days awaits a tape that carries one"
+    exercised_by: []
 eras:
   count:
     new_year_month: 7
@@ -266,3 +448,96 @@ eras:
     new_year_month: 7
     epoch: "the kings of Greece — Avodah Zarah 10a 'in the exile we count only by the kings of Greece'"
     exercised_by: []
+
+# O9 OPEN-5 (2026-09-08; CLOCK.md 12e): THE DAY SLOTS — the ink's own day-words in the three books (censused by script over the
+# Tanakh DB) in the ORDER the calendar day runs them from Gen 1:5 (evening then morning: the day begins at evening). The Calendar
+# reads them for slot_rank and crosses_day; the stitcher stamps an event's `slot` from the word at its first verse (re-verified
+# by the sequence runner); nothing in the engine counts hours — the hours are the rows above. The `words` are the verse's own
+# forms (points and cantillation stripped); `phrases` are two-word patterns, all words present.
+day_slots:
+  - name: evening
+    words: [בערב]
+    en: "in the evening (בערב) — the calendar day's first slot; 14 seats"
+    bound: "the row day_boundary (Gen 1:5; Chullin 83a:15)"
+  - name: night
+    words: [בלילה, הלילה]
+    en: "in the night / the night (בלילה, הלילה) — 12 + 16 seats"
+    bound: "the row night_start (Berakhot 2a:1: the stars) to the dawn's column (2a:3-4)"
+  - name: midnight
+    phrases: [[בחצי, הלילה]]
+    en: "at midnight (בחצי הלילה) — one seat, Exod 12:29"
+  - name: dawn
+    words: [השחר]
+    en: "the dawn (השחר) — 3 seats: Gen 19:15, 32:25, 32:27"
+    bound: "the dawn's column (Berakhot 2a:3-4)"
+  - name: morning
+    words: [בבקר, ובבקר]
+    phrases: [[ויזרח, השמש], [יצא, השמש]]
+    en: "in the morning (בבקר, ובבקר) — 32 + 2 seats; the sun's rising (Gen 19:23, 32:32)"
+  - name: noon
+    words: [בצהרים]
+    en: "at noon (בצהרים) — 2 seats: Gen 43:16, 43:25"
+  - name: between_the_evenings
+    phrases: [[בין, הערבים]]
+    en: "between the evenings (בין הערבים) — 6 seats"
+    bound: "the row between_the_evenings_from (Pesachim 58a:3, 58a:5)"
+  - name: sunset
+    phrases: [[לבוא, השמש], [כבוא, השמש], [בא, השמש], [באה, השמש]]
+    en: "the sun setting / set (Gen 15:12, 15:17, 28:11; Exod 17:12) — the day's last slot"
+    bound: "the row twilight_doubt (Shabbat 34b:2-6) — the doubt after it, unexercised"
+
+# O9 T4 (2026-09-08; CLOCK.md 12c): THE COUNTER IDIOMS — (subject class, era, idiom, boundary rule) as DATA rows, each read on the
+# shelf by script before it was typed; read by NO code yet (the checkpoint generator over checkpoint() waits for the first sitting
+# that needs a join it cannot write by hand); a collision of counts is evidence of a convention read off the shelf, never smoothed.
+counter_idioms:
+  people:
+    era: life_years
+    idiom: completed_years
+    boundary: "the year turns at the New Year, not the birthday (Gen 7:11 -> 8:13 -> 8:14)"
+    channel: ink
+    source: "the row life_year_reading — 'a son of N years' is N completed (Gen 16:16 + 17:25 = 17:1); the flood's dates the ink's own interval"
+    teacher: null
+    exercised_by: [sequence]
+  kings:
+    era: regnal
+    idiom: one_day_in_a_year_counts_as_a_year
+    boundary: "Nisan for the kings of Israel; Tishrei for the kings of the nations"
+    channel: received
+    source: "Rosh Hashanah 2b:1 — 'Nisan is the new year for kings, and one day in a year counts as a year' (ויום אחד בשנה חשוב שנה); 2b:3-6 the death-and-succession table — died in Adar and the successor stood in Adar: a year to each; in Nisan likewise; died in Adar, stood in Nisan: the first year to the first, the second to the second (2b:5: the one day counts at a year's end AND at its beginning); 2b:7 Rabbi Yochanan from 1 Kings 6:1 — Solomon's reign compared to the exodus, both from Nisan. THE KINGS OF THE NATIONS from Tishrei: 3a:14-15 (Rav Chisda) on Nehemiah 1:1 / 2:1 — Kislev 'the twentieth year' and Nisan 'the twentieth year', so the new year is not Nisan; 3b:2-4 the order of the two events (Chanani's words in Kislev, told to the king in Nisan). THE COLLISION TEMPLATE: two counts that disagree are read as a convention the shelf records"
+    teacher: "Rosh Hashanah 2b:1; Rosh Hashanah 3a:14"
+    exercised_by: []
+  animals:
+    era: life_years
+    idiom: from_day_to_day
+    boundary: "the birthday, to the day"
+    settings: {mishnah_parah_1_3: "lambs sons of a year, rams sons of two — all from day to day; thirteen months and a day a ram", r_meir_bull: "a bull twenty-four months and ONE day (one day in a year counts as a year at a year's end — RH 10a:4, 10a:6)", r_elazar_bull: "twenty-four months and THIRTY days (RH 10a:5)"}
+    channel: received
+    source: "Mishnah Parah 1:3 — 'lambs, sons of a year; rams, sons of two; and ALL OF THEM FROM DAY TO DAY (וכלם מיום ליום); a thirteen-month-old is fit neither as a ram nor as a lamb (Rabbi Tarfon calls it palgas); thirteen months and one day — a ram'; Rosh Hashanah 10a:4-6 the bull's age: Rabbi Meir twenty-four months and one day, Rabbi Elazar twenty-four months and thirty days; 10a:5 Rabbi Meir's table — a calf unqualified a son of a year, a son of the herd two, a bull three. The seats on the Leviticus tape: 9:3, 12:6, 23:12 ('a lamb, a son of its year')"
+    teacher: "Mishnah Parah 1:3; Rosh Hashanah 10a:4"
+    open: "UNEXERCISED — no offering event on any tape carries an age field; the day-to-day idiom would run on the animal's own life era at the DAY grain"
+    exercised_by: []
+  trees:
+    era: count
+    idiom: thirty_days_before_the_new_year_count_as_a_year
+    boundary: "the first of the seventh month for planting (the row new_years); the trees' own new year the eleventh month"
+    channel: received
+    source: "Rosh Hashanah 9b:13 — 'one who plants, one who sinks, one who grafts on the eve of the seventh year thirty days before the New Year — a year has counted for him (עלתה לו שנה) and he may keep them in the seventh; less than thirty days before the New Year — a year has not counted for him'; 14a:8 the onions and the Egyptian bean withheld water thirty days before the New Year — tithed for the past year"
+    teacher: "Rosh Hashanah 9b:13"
+    open: "the orlah tree of cold_run_holiness_b.py runs the year grain (after(3, 'year')) — the thirty-day rule UNEXERCISED"
+    exercised_by: []
+  inclusive_day_counts:
+    era: any
+    idiom: the_first_day_counts
+    boundary: "'the third day' = the day + 2; 'the eighth day' = the day + 7"
+    channel: ink
+    source: "Gen 22:4, 31:22, 40:20, 42:18 (the third day — 40:13 'in yet three days', 40:20 'on the third day'); Gen 17:12, 21:4, Lev 12:3 (the eighth day); Exod 19:10-11 'today and tomorrow... the third day'. THE_STEPS conventions (8) and (23)"
+    teacher: null
+    exercised_by: [sequence, pre_sinai, joseph, mamre, exodus_story]
+  jubilee_boundary_year:
+    era: count
+    idiom: the_fiftieth_sanctified_from_the_new_year
+    boundary: "the first of the seventh month (the status); the tenth (the horn); the fiftieth counted or not in the next cycle"
+    channel: received
+    source: "Rosh Hashanah 8b:12 — 'the fiftieth year you sanctify, and you do not sanctify the fifty-first'; the rows jubilee_sanctified_from, jubilee_horn_day (Lev 25:9, ink), fiftieth_in_cycle (Rosh Hashanah 9a:1 against Arakhin 12b:4)"
+    teacher: "Rosh Hashanah 8b:12"
+    exercised_by: [yovel]

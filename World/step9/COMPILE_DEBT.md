@@ -353,11 +353,63 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
 ## script (54 Genesis + 20 Exodus frozen units with no act on the tape; four sittings sized), THE EXODUS STORY on the engine — cold_run_exodus_story.py
 ## 113/113 with the tuple predicted by script, 70 types and 60 effects registered first, the fortieth daemon, the tape 140 → 260 events and 69 → 88
 ## markers, nine new checkpoints on the sequence runner (the shelf's day-tables as data rows graded against the creation count's weekday), the engine's
-## weekday and close-by-value, conventions 13-18; NARRATIVE_GAPS.md + REPORT_NARRATIVE_GAPS.md); S2 Genesis 2:4-16:16, S3 Genesis 18-31, S4
-## Genesis 33-47 + 50:15-26 next → O9 THE CLOCK'S OPEN ITEMS (OPEN-5 sub-day as an engine
-## sitting; OPEN-2/4 searched again; OPEN-1/3/6 the tradition's disputes, finished as far as the shelf allows) → O10 THE PEOPLE-TOKENS IN THE
-## ONE REGISTRY (the fold's sitting) → O11 THE CLAIMS LABEL DEBT (2,802 unlabeled of 2,838; measured, then batches by unit — last). Book-bound,
-## the only exceptions: Num 27/36, Deut 25. THEN NUMBERS (its first sitting reads the standing map + SEQUENTIAL_RUN.md section 9). The plan that ran (the owner's ruling 2026-09-07 after the clock sitting, "ok lets do that"): THE SEQUENTIAL RUN — the
+## weekday and close-by-value, conventions 13-18; NARRATIVE_GAPS.md + REPORT_NARRATIVE_GAPS.md); S2 DONE 2026-09-08 (the owner: "Continue":
+## THE PRIMEVAL STORY on the engine, Genesis 2:4-16:16 — cold_run_primeval.py 206/206 with the scene matched by the hand-model first run, 143 effects
+## and 104 types registered first, the forty-first daemon, the registry 93 → 168 entities, the tape 260 → 443 events and 88 → 95 markers (the reprieve
+## of 6:3 retrograde-dated a hundred and twenty years before the flood, its timer PROVED at CG2), ten new checkpoints CG0-CG9 all MATCH, convention
+## 19; NARRATIVE_GAPS.md section 6 + the report's second sitting); S3 DONE 2026-09-08 (the owner: "now continue": FROM MAMRE TO THE HEAP on the
+## engine, Genesis 18-20, 22, 25-31 — cold_run_mamre.py 222/222 first graded run with the scene matched by the hand-model, 227 effects and 179 types
+## registered first, the forty-second daemon, the registry 168 → 214, the tape 443 → 749 events and 95 → 109 markers, CH0-CH10 as declared (CH1 the ten
+## trials DIVERGE, open), the RUN tuple's reading forcing the span SET and the token fix, THE REST test on the sequence runner (8/8), conventions
+## 20-21; NARRATIVE_GAPS.md section 7 + the report's third sitting); S4 DONE 2026-09-08 (the owner: "Next" / "Ok finish": FROM THE FORD TO THE
+## COFFIN on the engine, Genesis 32-37, 39-47, 50 — cold_run_joseph.py 282/282 second run (the two first-run misses read: the compiled sale's verdict
+## is the TERM; the pre-Sinai fruitfulness leak), 224 effects and 167 types registered first, the forty-third daemon with its watches GENERATED FROM
+## THE MODEL (zero drift at the gate), the registry 214 → 268, the tape 749 → 1058 events and 109 → 129 markers, CJ0-CJ11 as declared (CJ3b the
+## seventy's missing one DIVERGE, open), THE REST reproducing S3's tuple, three tape readings (the primeval's land_promised leak, the custody's
+## third-day marker, the famine marker's position), conventions 22-23; NARRATIVE_GAPS.md section 8 + the report's fourth sitting) — O8 COMPLETE:
+## GENESIS WHOLE ON THE ENGINE → O9 THE CLOCK'S OPEN ITEMS (DONE 2026-09-08, the first sitting after compaction #101, the owner: "Let continue" —
+## CLOCK.md section 12 the design first; four probes to fail then 22/22; the engine: elapsed as a rendering (Calendar/Era/Clock), the placement class
+## beside the bound (marker(placement=), submit's stamp), the day's fires ordered by a timer's opt-in boundary, slot_rank/crosses_day over the
+## registry's day_slots; the third registry: covenant_pieces_year (Bereshit Rabbah 46:2 eighty-five / the Mekhilta on Exod 12:40 seventy),
+## flood_months (Bereshit Rabbah 33:7 FOUND — OPEN-4), solar_year_days re-channeled received (Eruvin 56a:10 FOUND — OPEN-2; a search strips the
+## vowel points), temple_day_boundary (Chullin 83a:16), night_start, between_the_evenings_from, twilight_doubt (unexercised), the placement keys,
+## the blocks day_slots (8) and counter_idioms (6 — T4's rows); the tape: the covenant marker at 15:1 (the fork runs it retrograde, closed at 16:1),
+## the classes computed and stamped (31 reading-placed markers; events 86 / 941 / 31), the slots (37, re-verified), C3d the join under both
+## settings (seventy MATCH, eighty-five DIVERGE by fifteen), C12/C13 under the elapsed column (Avodah Zarah 9a:7-8) — the sequence runner 10/10
+## after one miss read as a reused name; OPEN-1/3/6 stand; NEW OPEN-12 the year-grain marker met inside its own year; the sweep 39/39 at 4,518;
+## REPORT_CLOCK.md O9, SEQUENTIAL_RUN.md 14, REPORT_SEQUENTIAL_RUN.md O9; the plan as it stood: OPEN-5 sub-day as an engine
+## sitting; OPEN-2/4 searched again; OPEN-1/3/6 the tradition's disputes, finished as far as the shelf allows; + THE TIME CONSENSUS's three, the
+## owner 2026-09-08 "ok lets do as you recommend" — the four gaps in the account of time named by the third session, refined here, concurred by
+## the design thread, recorded in the state doc as THE TIME CONSENSUS: (T3) TWO DATE COLUMNS — elapsed years as a derived rendering at the YEAR
+## grain beside the ordinal label, never a second counter, printed only where a shelf number is compared, "the tradition's count one lower"
+## becoming a MATCH; (T2) UNDATED SCENES — `event['placement']` BESIDE the bound (page_order the default / text_constrained / reading_placed; never
+## a third element of the shared bound list), Genesis 15's year a two-setting row {seder_olam 70 by the retrograde path, bereshit_rabbah_46_2 85
+## inside the page-order bound}, the stretch closed by an ink-derived forward marker at 16:1 from 16:3's ten years, C3d rewritten as the JOIN
+## (placed date + the ink's 430 against the exodus marker, both settings printed); (T4) COUNTER TAGS as DATA rows per subject class (people
+## completed; kings one day = a year; animals day-to-day by Mishnah Parah 1:3 read before typed; inclusive day counts; the jubilee's boundary
+## year) — rows only, the checkpoint GENERATOR over checkpoint() at the first sitting that needs a join; each an engine sitting with fire-probes
+## first) → O10 THE PEOPLE-TOKENS IN THE
+## ONE REGISTRY (DONE 2026-09-08, the owner: "Ok go" — measured first by script over corpus_world.sqlite: nine frozen-unit tokens in seventeen
+## mentions; each verse read in the ink; the decisions in THE_WORLD.md's idea log of the date and as scoped members in entity_registry.yaml with a
+## CHANGELOG line — ha_am (Exod 15:24, 17:2, 20:19) and shivte_yisrael_shenem_asar (49:28, UNCERTAIN) to israel_people; shotre_bene_yisrael to
+## the_officers; bene_yaaqov and ha_achim to josephs_brothers; ha_mitzrim and gen_70's mitzrayim to egypt_people; the presupposed mitzrayim of
+## three units to the_land_of_egypt (one token SPLIT by unit); pelishtim to the_philistines; yisrael stays jacob; otam, anashim, bnei_chet,
+## bene_yisrael not folded, said so; the dry run BEFORE the edit predicted seventeen re-homed mentions, entities 276 → 273, every count unchanged
+## and THE HASH UNMOVED (its basis is facts, open demands and names) — the fold reproduced it: journal revision 127, CORPUS TRUTH GREEN, the World
+## folder rebuilt and checked ALL GREEN; the tape's map untouched (step9-scenes members only), the sweep 39/39 at 4,518) → O11 THE CLAIMS LABEL DEBT (2,802 unlabeled of 2,838; measured, then batches by unit — last; IN FLIGHT 2026-09-08: measured 2,813,
+## B1 + B2 landed, 1,413 remain; B3 and B4 landed the sitting after, 484 remain; B5 landed 2026-09-09 — O11 CLOSED, 2,838 of 2,838, the debt line below). Book-bound,
+## the only exceptions: Num 27/36, Deut 25. THEN NUMBERS (its first sitting reads the standing map + SEQUENTIAL_RUN.md section 9, and takes
+## (T1) INSTALLATION FIRST — the time consensus's largest item, the owner 2026-09-08: a per-daemon `installed_by:` in daemon_dispositions.yaml
+## (`boot` for the story daemons and the Noahide code; the daemon gate demands it), the installing act's daemon writing `in_force` as a status on
+## an institution entity (the covenant an entity; the priesthood's office already one), World.submit consulting it before the call and logging
+## SKIPPED-NOT-IN-FORCE — dispatch gating, NEVER at registration; the two settings (in force from boot, "Abraham kept the whole Torah", Yoma 28b /
+## Kiddushin 82a read before typed — against in-force-from-its-event) a parameter row printed as a fork; it retires the bore/begot/born split, not
+## convention 14; Judah's surety and Ephron's field stay the exam's; the sixth motion's text amended before Numbers' first wrap; fire-probes first)
+## — AND WITH T1, THE LOOP (owner-ruled PERMANENT 2026-09-09, the map file World/step9/THE_LOOP.md): the engine's log written to the world
+## journal (the 2026-08-24 envelope, hash-chained, one segment per run, byte-identical across two runs as the gate), the sqlite INDEX rebuilt
+## from it, INSTALLATION (T1) as its third step, the CURSOR (resume by replay to a verse), SCENARIOS at the cursor — five steps, three to four
+## sittings, the order sink → index → installation → cursor → scenarios; Numbers' opening block or the sitting before it. It slipped once
+## (the August journal in grok-mockups, the September engine in memory, no line here tying them) — this line is the tie. The plan that ran (the owner's ruling 2026-09-07 after the clock sitting, "ok lets do that"): THE SEQUENTIAL RUN — the
 ## three books on ONE world of the law engine in verse order (the narrative tapes stitched by script, the exam's rows off the tape; the eras as counters
 ## set by markers — Exod 12:2 the exodus epoch; entity names by logic/corpus/entity_registry.yaml; all 38 daemons; the text's own checkpoints — the 430
 ## years, 40:17, the seventeenth of Tammuz, the flood's 150 days; the plan in the state doc's compaction point #88) — BEFORE Numbers; then Numbers.
@@ -466,8 +518,48 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
       sanctions 2 (chatat, shemini), clocks 1 (vayikra5), minchah 1 (vayikra5), offerings 1 (pesach), yoma 1 (moadim); their cells were
       read at LR3 (references by ink or taught) — the erection runner has none, so W7 files nothing: ONE FILING SITTING (scratchpad
       lr3_census.py's no-edge print switch lists the calls); the gate lists the 66 every run
-- [ ] THE CLAIMS LABEL DEBT — 2,838 frozen claims carry the middah field on 36; the untaught links among them cannot be found
+- [ ] THE LOOP — THE RUNNING WORLD WITH MEMORY (owner-ruled PERMANENT 2026-09-09; the map file World/step9/THE_LOOP.md): the
+      step-9 engine kept nothing between runs and wrote nothing to the world journal ruled on 2026-08-24; five steps —
+      1 THE SINK DONE 2026-09-09 (the log as a hash-chained L3 segment per world per run, World/step9/world_journal.py importing
+      World/journal/worldledger.py; journal_probes.py 0/6 then 6/6; the engine's one line — every effect stamped with its
+      writing daemon; the gate `--gate` GREEN: four segments byte-identical across two processes, chains verified, the index's
+      counts = the RUN tuple; THE_LOOP.md "As built"), 2 THE INDEX MINIMAL the same sitting (worldledger's events table rebuilt
+      from every segment on disk, 15,927 rows; the counts check inside the gate; the richer tables and the ask-tool OWED),
+      3 installation (T1) NEXT, 4 the cursor (resume by replay to a verse), 5 scenarios at the cursor, 6 THE READBACK (named
+      2026-09-09 by decision D12 — the text re-read against the ledger the run left: Deuteronomy's repetition first, the
+      prophets against the open entries after; no design until Deuteronomy); each step's design and fire-probes first; the
+      segments and index derived and uncommitted, scenario inputs primary in git. THE THIRTEEN DECISIONS of 2026-09-09
+      (D1-D13, THE_LOOP.md "Decisions not yet made") bind steps 2-6: only the sequence world tracks installation; the
+      mechanism built now with installed_by = boot / a verse / pending and the setting deferred to the second pass after
+      Deuteronomy; given_at and installed_by as two fields; institution entities with a tent daemon; custody on the court's
+      docket; the output as two effects with the code-or-edict row; one database built from the journal, merged inside
+      step 2; the four run views; base plus appended segments, exam worlds unjournaled; the August tree retired at the merge;
+      3, then 2's views, then Numbers opens, 4 and 5 when the cases call.
+      Takes Numbers' opening block with T1 or the sitting before it. ⚠ It slipped from 2026-08-24 to 2026-09-09 for want of this line.
+      THE AUGUST JOURNAL MOVED INTO THE REPO 2026-09-09 (the owner: "add it to github"): World/journal/ — worldledger.py, build_world.py,
+      run_cases.py, registers/, primary/ tracked; data/ gitignored; rebuilt in place, determinism GREEN, one August tree checklist line
+      (forming/filling symmetry) FAILS against today's 163 units — filed for the loop's first sitting; the sink imports worldledger from there.
+- [x] THE CLAIMS LABEL DEBT (CLOSED 2026-09-09 at B5 — 2,838 of 2,838 labeled, the gate --strict green) — 2,838 frozen claims carried the middah field on 36; the untaught links among them cannot be found
       by script; the label mandatory on every claim seated from LR1 on; the backfill an unbounded debt, named here
+      O11 OPENED 2026-09-08 (the record World/step9/CLAIM_LABELS.md; the gate logic/solo_tools/claim_labels_census.py):
+      measured by script — 2,813 without a usable label (eleven of the 36 hold an empty string); the vocabulary (ink,
+      I1-I13, E1-E32, plain, M-NN, H) and the gate written BEFORE the first label, the gate run to FAIL first (12 lines);
+      B1 THE INK LAYER 987 labels (Minchat Shai + Onkelos; 15 Leviticus rows deferred to B5) and B2 THE KITZUR LAYER 414
+      labels landed the same sitting — labeled 1,425, DEBT 1,413: Genesis's teachers 653 (B3), Exodus's teachers 159 +
+      the law-era manifests 117 (B4), the Sifra 484 (B5); the gate fails on nine Genesis rows until B3.
+      B3 GENESIS'S TEACHERS DONE 2026-09-08 (the sitting after #104): 653 labels in 69 manifests — plain 432, ink 88,
+      the rest by form (the record's B3 entry); the selector's one missed row (G11-18, the Sifra row of Genesis) caught
+      by summing the five batches again to 2,838; Genesis 1,663 of 1,663; the gate PASSED 0 lines — labeled 2,078, DEBT 760
+      (Exodus's teachers 159 + the law-era manifests 117 = B4; the Sifra 484 = B5).
+      B4 EXODUS'S TEACHERS + THE LAW-ERA MANIFESTS DONE 2026-09-08 (the same sitting): 276 labels in 36 manifests — plain 148,
+      E10 17, ink 15, E2 11, M-09 11, M-23 8, the rest by form (the record's B4 entry); the id collision L0-01/L0-02 across
+      law02 and law03 caught at the dry check and dispatched by unit; Exodus 545 of 545, the law-era manifests 117 of 117;
+      the gate PASSED — labeled 2,354, DEBT 484 (the Sifra and Leviticus's teachers with the fifteen deferred Onkelos rows = B5)
+      B5 THE SIFRA DONE 2026-09-09 (the first sitting after #107; the owner: "yes go closs 011 then the loop"): the fifteen Onkelos
+      rows of Leviticus moved from B1's selector into B5's and the five batches summed again first (987 + 414 + 677 + 276 + 484 =
+      2,838, no row in two, none in none); 484 labels in 49 manifests — plain 330, ink 25, I3 13, M-09 13, E2 12, E10 12, E1 9,
+      I2 9, the rest by form (the record's B5 entry); the dry check keyed by (unit, id) found no id repeating; Leviticus 513 of
+      513; THE GATE PASSED plain and --strict — labeled 2,838 of 2,838, DEBT 0. O11 CLOSED; the gate stays in force on every seat.
 
 ## THE EXODUS LAW'S UNCOMPILED CASE HEADS (found at W1, 2026-09-07 — the wrap census put the ink's
 ## case tokens of Exod 21-22 beside the six runners' functions; these heads have exam-era rules
@@ -500,7 +592,12 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
 ## the census homes them at runners that do not exist yet, so the gate cannot require the
 ## edges — they are declared OWED anyway, the repetition test's forward half)
 - [ ] Num 27:1-11 + 36:1-12 — THE INHERITANCE ORDER (the daughters of Zelophehad;
-      Bava Batra 8:2 quotes 27:8) — owed by G2's 48:6 'in their inheritance'
+      Bava Batra 8:2 quotes 27:8) — owed by G2's 48:6 'in their inheritance'; THE TENT'S OUTPUT (2026-09-09, THE_LOOP.md "The tent as the
+      run's interrupt"): a case the code did not cover, halted in custody, brought before the LORD (27:5), answered as a general
+      rule in the case's name (Sanhedrin 8a:5; Bava Batra 110b:4) — with the blasphemer (Lev 24:12), the wood-gatherer (Num 15:34)
+      and the second Passover (Num 9:8) the run's four uncovered cases, NUMBERS' OPENING MARQUEE: the custody entry for an event no
+      daemon consumes, the output verse as the installation of a new law, the Sifrei's generations-rule / instance-verdict split
+      (Sifrei Bamidbar 114:1) as two effects, the daughters' own levirate argument (Bava Batra 119b:10) run before the answer is read
 - [ ] Deut 25:5-10 — THE LEVIRATE AND THE SHOE (with 21:15-17 the firstborn's double,
       24:1-4 the bill of divorce, 22:13-29 the virgin's cases) — owed by G2's 38:8
       'perform the levir's duty', 49:3-4 with 1 Chr 5:1, 24:67 'as a wife'

@@ -1868,3 +1868,112 @@ coverage (the zero-report law and the Chronicle's fired-count column share one i
 carries a cascade depth bound with cycle detection — a cascade that ran to the bound is reported, never
 silently truncated. Records: COMPILE_DEBT D9 (the full spec), REPORT_DEPENDENCIES (the consensus),
 THE_STEPS Step 5 motion (1).
+
+
+### 2026-09-08 — O10 THE PEOPLE-TOKENS IN THE ONE REGISTRY (the fold's sitting; the owner: "Ok go")
+
+THE QUESTION: which of the frozen units' own tokens for the people (and the other bodies) point at entities the one
+registry already holds — the identity decisions the registry's israel_people note had deferred to "the corpus fold's own
+sitting". THE MEASURE FIRST, by script over corpus_world.sqlite (163 frozen units, 1,167 mentions, 307 distinct token/entity
+pairs, 154 tokens standing as their own singletons): the people-like tokens the fold's mentions carry are few — the units'
+operator layer names the people rarely, and Exodus and Leviticus units contribute 106 and 12 mentions against Genesis's
+1,049. THE DECISIONS (each verse read in the ink before it was typed; a member is scoped to its units, never global, so
+the sequential tape's map — which reads step9-scenes members only — is untouched):
+- הָעָם ("the people", ha_am) at Exod 15:24 (murmured against Moses at Marah), 17:2 (quarreled at Rephidim), 20:19 (said
+  to Moses "you speak with us") → israel_people. CERTAIN: the body of Israel each time.
+- שֹׁטְרֵי בְּנֵי יִשְׂרָאֵל ("the officers of the sons of Israel", shotre_bene_yisrael) at Exod 5:21 → the_officers (the
+  registry's own entity, Exod 5:14-21). CERTAIN.
+- שִׁבְטֵי יִשְׂרָאֵל שְׁנֵים עָשָׂר ("the tribes of Israel, twelve", shivte_yisrael_shenem_asar) at Gen 49:28, the blessee of the
+  testament → israel_people. UNCERTAIN, marked: the verse names the twelve tribes as the body; the blessed at 49:28 are also
+  the twelve sons as persons ("each according to his blessing he blessed them").
+- בְּנֵי יַעֲקֹב ("the sons of Jacob", bene_yaaqov) at Gen 47:4, the speakers before Pharaoh → josephs_brothers. CERTAIN
+  (47:2's five, presented by Joseph).
+- הָאַחִים ("the brothers", ha_achim) at Gen 43:26 and 44:13 → josephs_brothers. CERTAIN (the registry's achim without
+  the article was already a member; the articled form stood alone).
+- הַמִּצְרִים ("the Egyptians", ha_mitzrim) at Gen 12:14 → egypt_people. CERTAIN (the same body across its generations, as
+  israel_people is).
+- מִצְרַיִם ("Egypt", mitzrayim) SPLIT by unit: the speakers of Gen 47:15 and 47:19 ("all Egypt came to Joseph and said")
+  → egypt_people; the presupposed land of Gen 12:10, 13:1, 21:21 → the_land_of_egypt. CERTAIN both ways — one token, two
+  referents, the registry's own scoped-split form.
+- פְּלִשְׁתִּים ("Philistines", pelishtim) at Gen 26:1, 26:14, 26:15 → the_philistines (the registry's own entity from the
+  same verses). CERTAIN.
+- יִשְׂרָאֵל ("Israel", yisrael) → jacob STANDS: its thirteen mentions (37:3 "Israel loved Joseph", 37:13-14, 43:11 "Israel
+  their father said") are the person, not the body.
+- NOT FOLDED, said so: אֹתָם ("them", otam) at Gen 1:22 and 1:28 is a PRONOUN token with two referents (the swarms; the
+  human pair) — the units' own revision, not an identity; אֲנָשִׁים ("men", anashim) at Gen 12:20 is Pharaoh's unnamed men,
+  its own; בְּנֵי חֵת ("the sons of Heth", bnei_chet) already stands as its own entity; bene_yisrael's one use is a Patient
+  role the fold does not read as a mention.
+THE PREDICTION, printed before the registry was edited (a dry run of the fold with the table applied in memory):
+seventeen mentions re-homed (exactly the rows above), the distinct mention entities 276 → 273 (eight singletons retired,
+five registry entities gaining their first mentions), every count unchanged (facts 1,809, events 557, demands 341 with 191
+open, mentions 1,167, names 81, standing 1,778), and THE STATE HASH UNMOVED at 8b8fff1fa28953af — because the hash's basis
+is facts, open demands and names, never the mentions' resolution; the identity table is a model layer the hash does not
+see. The honest report therefore is: the hash does not move, and the reason is recorded. The fold's journal gains a
+revision either way. Records: the registry's members with their notes, the fold's journal, COMPILE_DEBT (O10 DONE), the
+state doc, memory.
+AS RUN (the same sitting): the registry edited as the table above says (485 members, nine new, every one scoped; a CHANGELOG
+line at the registry's head); the fold rewritten — journal revision 127, the seventeen mentions re-homed exactly as the dry run
+listed, the distinct mention entities 273, every count unchanged, CORPUS TRUTH GREEN and the state hash 8b8fff1fa28953af UNMOVED
+as predicted (the identity table lies outside the hash's basis; the journal row is the model change's record); the World folder
+rebuilt from the fold and checked ALL GREEN (ten counts and the hash). The sequential tape's map reads step9-scenes members only,
+so no scene token moved; the sweep at the sitting's close is the proof.
+
+- 2026-09-09 — THE LOOP RULING (owner, PERMANENT): "This is a permanent decision to build the architecture. I meant
+  for this to be built when it was added last month. We slipped somehow. Lets not forget it again." The step-9
+  engine becomes a RUNNING SIMULATION WITH MEMORY: its log written to the world journal (the 2026-08-24 envelope and
+  hash chain), indexed in sqlite (rebuilt, never written directly), gated by installation, resumed at a cursor in the
+  text by replay, taking scenarios at any verse. THE SLIP, measured: the August journal (grok-mockups/world_journal,
+  files unchanged since 08-24) and the September engine (world_engine.py, in-memory, zero file writes) were never
+  tied by a line in the standing map; the World folder's sqlite indexes the reading era's 557 events, not the
+  engine's tape of 1,058. The plan (five steps, three to four sittings, the order sink → index → installation →
+  cursor → scenarios, the gates, the homes) is World/step9/THE_LOOP.md — the map file; COMPILE_DEBT.md carries it as
+  a box. Lesson: an architecture decision lives in the MAP as a checkbox with a home file, never only in this log.
+  ADDENDUM the same sitting (the owner: "also we need to add it to github so move it if it makes sense"): the
+  August journal MOVED into the repo — World/journal/ (the code, the registers and primary/scenes.yaml tracked;
+  data/ gitignored); its two view writes redirected off the mockups' player folder; rebuilt in place from the 163
+  units — 6,601 rows indexed, determinism byte-identical GREEN, one August tree checklist line (the forming/filling
+  symmetry of days 4-6) now FAILING against today's units, filed for the loop's first sitting. The mockups folder
+  stays never-commit. The commit waits for "commit push".
+- 2026-09-09 — THE LOOP, STEP 1 BUILT (the owner: "yes go closs 011 then the loop"; the same day as the ruling): THE SINK.
+  Every run of the sequence tape now writes each of its worlds as one hash-chained journal segment in the 2026-08-24
+  envelope — s the line's ordinal, op the clock day, layer L3, kind run.<class> for the engine's seven log classes
+  (registered first in World/journal/registers/event_kinds.yaml), subj the registry entity id, data the payload as it
+  stands at the run's end, prov the writing daemon and the verse, chain the sha256 link — into World/journal/data/
+  (derived, gitignored). The module World/step9/world_journal.py imports the envelope from World/journal/worldledger.py;
+  the engine gained one line (every effect stamped with the daemon that wrote it — the baseline had found only 594 of
+  1,306 effect lines naming a source); the probes journal_probes.py were written first and failed first (0/6, then 6/6).
+  THE GATE: the tape run twice in two processes and two directories — four segments byte-identical, chains verified,
+  the running world's index counts equal to the RUN tuple. GREEN. The index (step 2, minimal) is rebuilt from every
+  segment on disk at each run: 15,927 rows, and it answers "who wrote this" (0 of 4,579 ledger writes unattributed)
+  and "what is written on this subject" (252 subjects). What the design learned: the segment is the AUDIT OF THE RUN AS
+  IT STANDS WHEN THE RUN ENDS — a ledger entry's later close is visible in its own line — and the cursor of step 4 will
+  replay the tape through the engine rather than read a payload back into state. Next: step 3, installation (T1).
+- 2026-09-09 — THE TEACHERS ON PASSES (the owner: "does the oral torah, the teachers, recommend a two pass run? look for
+  hints, it won't say directly"; read on the local shelf by script, recorded in World/step9/THE_LOOP.md): never "run it
+  twice," but the Torah given in THREE passes — the general at Sinai, the details in the Tent, the repetition in the plains of
+  Moab (Sotah 37b:3, Chagigah 6b:1) with the rule that a law's details cannot change between passes (Chagigah 6b:2); the
+  understanding pass after the forty-year run (Avodah Zarah 5b:2; Shabbat 63a:15 "first learn, then the rationale"); the
+  Oral Law taught four times (Eruvin 54b:11-13); worlds created and destroyed until one was kept (Bereshit Rabbah 3:7, 9:2);
+  the Torah before the world (Bereshit Rabbah 8:2; Pesachim 54a); creation in full stature (Rosh Hashanah 11a:6); scroll by
+  scroll against sealed whole (Gittin 60a:14-15); no earlier and later (Pesachim 6b:7) against the service portion in its
+  performed order (Yoma 32a:2); written then sealed (Rosh Hashanah 16b:12); Abraham's whole Torah before the giving (Yoma
+  28b:9-10, Kiddushin 82a:10). Two passes is an undercount: build whole, run in time order with installation, re-read against
+  the ledger.
+- 2026-09-09 — THE TENT AS THE RUN'S INTERRUPT (the owner: "is the tent the place we learn new information based on the code
+  running? does it output something we don't know of yet?"; read on the shelf and in the ink, recorded in
+  World/step9/THE_LOOP.md): YES. Four times the run halts on a case the standing law does not decide — the blasphemer "in guard,
+  to be declared by the mouth of the LORD" (Lev 24:12), the wood-gatherer "because it had not been declared what should be done
+  to him" (Num 15:34), the unclean men at Passover "stand, and I will hear what the LORD commands" (Num 9:8), the daughters of
+  Zelophehad at the tent's entrance, "Moses brought their judgment before the LORD" (Num 27:2, 5) — and the output is part
+  verdict on the instance, part new rule that joins the code forward, written in the case's name (Sanhedrin 8a:4-5, 78b:4-7;
+  Bava Batra 110b:4, 119b:10; Sifrei Bamidbar 114:1's split "for all the generations" against "in this instance"; Sanhedrin
+  80b:5's fork, code or a provisional edict). The code is not fixed before the run; the run's uncovered inputs extend it at the
+  verse where they arose. Consequence for the loop: "unconsumed" gets its ink name (custody), installation by a case event
+  (step 3), the four cases as Numbers' opening marquee, the daughters' own argument run before the answer is read (step 5).
+- 2026-09-09 — THE THIRTEEN DECISIONS (the owner, one at a time; World/step9/THE_LOOP.md "Decisions not yet made", each marked):
+  only the sequence world tracks installation; the mechanism built now, the setting deferred to the second pass after
+  Deuteronomy with `pending` counted as debt; given_at and installed_by as two fields; institution entities with a tent
+  daemon; custody on the court's docket; the tent's output as two effects with the code-or-edict dispute a data row; one
+  database built from the journal, merged inside step 2; the four run views; base plus appended segments, exam worlds
+  unjournaled; the August tree retired at the merge; the order 3, 2's views, Numbers, then 4 and 5 as the cases call; STEP 6
+  THE READBACK named with a box on the map; the commit ordered.

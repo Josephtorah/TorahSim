@@ -25,9 +25,13 @@ confirm before doing anything else — it reconciles the database against
 `corpus_world.fold()` on ten counts plus the state hash. Everything matched at
 last run.
 
-**Genesis, whole:** 97 units · 2,074 verses · 278 entities · 1,809 facts ·
-557 events · 740 relations · 341 demands (191 open) · 905 standing ·
-hash `8b8fff1fa28953af`.
+**The three books (as rebuilt 2026-09-08 at O10 THE PEOPLE-TOKENS, the fold's
+journal revision 127):** 163 units · 2,639 verse refs · 439 entities · 1,809
+facts · 557 events · 740 relations · 341 demands (191 open) · 1,778 standing ·
+hash `8b8fff1fa28953af` (unmoved by the fold's identity table — the hash's basis
+is facts, open demands and names; the seventeen re-homed mentions live in the
+mentions and entities tables). The Genesis-only build of 2026-08-30 read: 97
+units · 2,074 verses · 278 entities · 905 standing, the same hash.
 
 Source corpus: `<repo-old>`, HEAD `b3a11fc`, read-only. Genesis is
 derived end to end, stamped full rule by the owner, and published.
@@ -68,6 +72,22 @@ person can watch it grow and learn what each row kind means.
   they never enter the live open-count, which closes the book at exactly
   the fold's 191.
 - Owner picks 2026-08-31: pause at parashah grain; narration persisted.
+
+## journal/ — THE WORLD JOURNAL, MOVED IN 2026-09-09 (read step9/THE_LOOP.md first)
+
+The owner's PERMANENT ruling of 2026-09-09: the step-9 engine becomes a running simulation with memory — its log
+written to this journal (the 2026-08-24 envelope, hash-chained, one segment per run), indexed in sqlite, gated by
+installation, resumed at a cursor, taking scenarios. `journal/` holds the August build moved out of the mockups:
+`worldledger.py` (the envelope, the chain, `index_sqlite`), `build_world.py` (the L0/L1 fold over the frozen units,
+`--selftest` the byte-identical determinism gate), `run_cases.py` (the L2 scenes), `registers/`, `primary/scenes.yaml`;
+`data/` is derived and gitignored — rebuild with the two scripts. As rebuilt 2026-09-09: 6,601 rows indexed, determinism
+GREEN, one August tree checklist line (the forming/filling symmetry of days 4-6) FAILING against today's units —
+filed for the loop's first sitting. The five steps, their order and gates: step9/THE_LOOP.md. STEP 1 THE SINK BUILT 2026-09-09:
+`python3 step9/cold_run_sequence.py` now writes four L3 segments here (`data/L3_run_cold_run_sequence_<world>.jsonl` — the running
+setting, the fork's two, THE REST; 2,494 / 2,494 / 2,494 / 1,844 lines) and rebuilds `data/world.sqlite` from every segment on
+disk (15,927 rows: L0 4,517, L1 2,041, L2 43, L3 9,326); `python3 step9/world_journal.py --gate` runs the tape twice in two
+processes and demands byte-identical segments (GREEN); `--reindex` rebuilds the index alone; `--verify <segment>` checks a chain.
+The seven run kinds are in `registers/event_kinds.yaml`. Step 3, installation, is next.
 
 ## step9/ — THE FIRST EXAM RAN (2026-08-31, read step9/REPORT.md)
 

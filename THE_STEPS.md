@@ -605,7 +605,12 @@ confirmed process, the sixth added at D9-iv):
      verb and noun carry different lemma numbers — states its ground
      in `reference_by:` and is counted apart as declared); the
      claim verifier refuses a claim seated after LR1 without a middah
-     label (the ceilings file logic/oral_audit/claim_ceilings_LR1_2026-09-07.json).
+     label (the ceilings file logic/oral_audit/claim_ceilings_LR1_2026-09-07.json);
+     the label's vocabulary (ink / the I and E codes / plain / M-NN / H)
+     and the backfill of the older claims — THE CLAIMS LABEL DEBT, O11,
+     opened 2026-09-08 and closed 2026-09-09 with every one of the
+     2,838 labeled — live in World/step9/CLAIM_LABELS.md, censused
+     and linted by logic/solo_tools/claim_labels_census.py.
      The review — LR1 the law and the gates; LR2 the audit of 154
      edges, 72 pointers, 43 multi-seat types; LR3 the cells and the H
      class — is logged in World/step9/COMPILE_DEBT.md.
@@ -2142,7 +2147,19 @@ the flood's 150 days DIVERGE from the received month on the engine
 (OPEN-4, said so); a function-level import is invisible to the
 dependency census (the edge yovel → tochacha filed, a transfer taught
 by Arakhin 32b:16). Records: CLOCK.md, REPORT_CLOCK.md,
-calendar_parameters.yaml, clock_probes.py. Next: Numbers.
+calendar_parameters.yaml, clock_probes.py. O9 THE CLOCK'S OPEN ITEMS
+(2026-09-08; CLOCK.md section 12) closed the clock's open list as far
+as the shelf allows: the time consensus's three built (elapsed as a
+rendering; the placement class beside the bound with the Genesis 15
+fork and C3d the join; the counter idioms as data rows per subject
+class — people, kings, animals, trees, inclusive day counts, the
+jubilee's boundary year), OPEN-2 and OPEN-4 FOUND on the local shelf
+(Eruvin 56a:10 the season's ninety-one days and seven and a half
+hours; Bereshit Rabbah 33:7 the flood's five thirty-day months — a
+search must strip the vowel points: Bereshit Rabbah's file is pointed),
+OPEN-1/3/6 standing, and OPEN-5 built as far as the day stays the unit
+(the slots, the two day-orders, the timer's boundary; twilight's doubt
+a row, unexercised). Next: O10, O11, then Numbers.
 The target this serves (THE_WORLD.md idea log,
 2026-09-03): run the ledger across the whole Hebrew Bible and ask
 whether every prophetic indictment matches an open entry the law
@@ -2275,8 +2292,79 @@ STRETCH: an age-at-event marker inside an undated stretch walks the
 clock to that year's first day and says so (Exodus 7:7 opens the
 plagues at the first day of Moses' eightieth year); the ink's relative
 stamps then walk from there; the tradition's bound on the stretch
-(Eduyot 2:10's twelve months) is graded as a bound. The design and the
-census: World/step9/NARRATIVE_GAPS.md. The engine: eras
+(Eduyot 2:10's twelve months) is graded as a bound. (19) (O8 S2,
+2026-09-08) A DECREE THE TEXT DATES INSIDE A RETROGRADE STRETCH (the
+hundred and twenty years of Genesis 6:3, read as the flood minus a
+hundred and twenty) is written at the text's own date with the counter
+unmoved, and its TIMER takes its due from that dated day through the
+Calendar — the due lies forward of the counter, so the timer fires on
+the counter's walk (the flood's day) with no past-due write; the
+sequence runner grades the fire as a checkpoint. And convention 14
+runs BOTH WAYS: a new story daemon's own branches on a kind another
+engine also submits (the sentence of Genesis 3 beside Judah's of
+Genesis 38; the marriages of Genesis 4-16 beside Rebekah's and Moses')
+carry the seat check from their first run on the tape. (20) (O8 S3,
+2026-09-08) A STORY DAEMON'S SPAN IS A SET OF CHAPTERS, NEVER A RANGE:
+where another engine owns a chapter inside the stretch (Genesis 21, 23,
+24 inside 18-31), a range check answers that engine's events too — the
+first tape run wrote two entries that were the pre-Sinai birth of 21:2
+and the burial of 23:19 — so the check names the chapters one by one.
+(21) THE REST REPRODUCES THE PREVIOUS TUPLE: the registry map is GLOBAL
+at submit, so a scene token claimed for the step-9 scenes re-homes
+every runner's use of it (Mamre's 'the-land' and 'the-ram' moved the
+erection's and Leviticus 9's entries onto Genesis entities with every
+count but one unchanged); the sequence runner's eighth checkpoint runs
+the tape MINUS the newest runner's lines as its own world and requires
+the previous sitting's RUN exactly — NEWEST_RUNNER and PREVIOUS_RUN
+move forward each sitting, and a scene's tokens are its own (a generic
+noun another runner submits or writes on is not a scene token). (22) (O8 S4,
+2026-09-08) ONE MARKER PER ROW: the marker census counts the tape's
+marker calls, not the table's rows — a row that sets two markers (the
+embalming's forty and the weeping's seventy from one verse, 50:3) is
+two rows, each at the verse its marker names (50:3, 50:4). (23) THE
+THIRD DAY IS INCLUSIVE AND HAS ITS OWN MARKER: "in yet three days"
+(40:13) and "on the third day" (40:20, 42:18) are the day plus two, as
+22:4 and 31:22 read; a daemon's third-day timer is due at the day plus
+two, and the tape carries a marker at the third day's own verse — the
+clock does not walk between verses without one, so the custody's
+timer (42:17) could not fire before its act (42:18) until that row was
+added; and a marker dating a speech sits at the speech's FIRST verse
+(45:5 for the two years of 45:6), or the event's line sorts before it
+and the timer is set on the wrong day. (24) (O9, 2026-09-08) THE
+PLACEMENT CLASS BESIDE THE BOUND: every event on the tape carries
+`placement` — text_constrained (the ink's own stamp or arithmetic
+dates it), reading_placed (a shelf reading fixes a date where the ink
+is silent at that grain — the binding's year, the road's months, the
+sea's day, Sinai's days, the covenant between the pieces), or
+page_order (no stamp: the counter's, an unlabeled prior no longer
+unlabeled); a marker carries its class and names the position it sits
+at, the engine stamps the class on the event at that verse and on
+every event of a retrograde stretch, and the stitcher COMPUTES the
+class per marker row (a `places` registry row read, a typed shelf
+number, or propagation through the keys it reads) — never recited. A
+date the shelf gives with two readings runs as two settings (the
+covenant at eighty-five by Bereshit Rabbah 46:2 on the running world,
+at seventy by the Mekhilta on Exodus 12:40 as the sojourn fork's own
+world), and the JOIN of a placed date with the ink's own count against
+the ink's own marker is a checkpoint printed under BOTH settings — the
+disagreement is the evidence; a checkpoint that matches by construction
+is not. (25) TWO DATE COLUMNS: the year on the ledger is the LABEL (the
+count of year starts through the day); the tradition's anno mundi is
+COMPLETED years, rendered as ELAPSED (the label less one at the year
+grain) — a rendering, never a second counter — printed only where a
+shelf number is compared (Avodah Zarah 9a:7-8: Abraham fifty-two at
+the year two thousand, four hundred and forty-eight to the giving).
+(26) THE DAY STAYS THE UNIT, THE SLOT IS THE INK'S WORD: an event
+carries `slot` from the day-word at its first verse (evening, night,
+midnight, dawn, morning, noon, between the evenings, sunset — the
+calendar day's order from Genesis 1:5, the registry's day_slots), the
+stitcher reports the ink's own day-crossings the tape has not marked
+and the engine never moves the counter for one (markers only); the two
+day-orders are DATA (Chullin 83a:15 the calendar's — the day follows
+the night; 83a:16 consecrated things — the night follows the day), and
+a timer's opt-in `boundary: morning` orders its fire after the
+evening-boundary fires of the same day without moving its due. The
+design and the census: World/step9/NARRATIVE_GAPS.md. The engine: eras
 as counters set by markers, the exodus era at Exodus 12:2, a life era at every birth; the
 creation era's day one five days before its first Tishrei (Vayikra
 Rabbah 29:1 — the stub month). The account:
@@ -2963,6 +3051,47 @@ Torah's middle-letter landmark; the derived word-database
 truncates at that exact letter, and its repair waits for the
 owner's word because it would move standing letter-census
 tripwires.
+
+## THE LOOP — THE RUNNING WORLD WITH MEMORY (owner-ruled PERMANENT 2026-09-09)
+
+The owner's words: "This is a permanent decision to build the
+architecture. I meant for this to be built when it was added last
+month. We slipped somehow. Lets not forget it again." A simulation
+is a loop with memory: the state kept between inputs, the next verse
+fed at a cursor, every rule fired against the state as it stands,
+every change written to the world journal (the 2026-08-24 ruling in
+THE_WORLD.md: the append-only, hash-chained journal is the truth and
+sqlite is its rebuilt index), the clock moved only at markers, the
+laws gated by installation, scenarios taken at any verse. The
+step-9 engine of Step 5 is the loop's body; it forgets everything at
+the end of a run and never writes the journal — that is the gap. The
+plan, the order (sink → index → installation → cursor → scenarios),
+the gates (a byte-identical segment across two runs; the index's
+counts equal the run's tuple) and the homes (derived caches
+uncommitted; scenario inputs primary in git) are World/step9/THE_LOOP.md,
+the map file; the August journal itself (the envelope, the hash
+chain, the index) was moved into the repo the same day at
+World/journal/ and the sink imports it; COMPILE_DEBT.md carries it as a box beside T1
+INSTALLATION for Numbers' opening block. Design and fire-probes
+before code at every step, as the clock sitting was done. STEP 1 THE
+SINK WAS BUILT on 2026-09-09, the sitting after the ruling: every run
+of the sequence tape now writes each of its worlds as one hash-chained
+segment in the journal (World/step9/world_journal.py, the probes
+journal_probes.py written first and failed first), the engine stamps
+every effect with the daemon that wrote it, and the gate runs the tape
+twice in two processes and demands byte-identical segments — green the
+day it was built. Step 2's first gate (the index's counts equal the
+run's tuple) rides inside it; step 3, installation, is next. THE
+THIRTEEN DECISIONS of 2026-09-09 (World/step9/THE_LOOP.md, "Decisions
+not yet made", each marked DECIDED) bind the steps after it: only the
+sequence world tracks installation; every law carries the verse that
+speaks it and the act that switches it on, with the from-creation or
+from-its-giving SETTING deferred to the second pass after Deuteronomy
+and the unknown labeled pending and counted; the tent of meeting an
+entity with its own daemon, the halt on an undecided case written as
+custody, the output as the verdict and the rule; one database built
+from the journal; and a SIXTH STEP, the readback — the text re-read
+against the ledger the run left — named with a box on the map.
 
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed

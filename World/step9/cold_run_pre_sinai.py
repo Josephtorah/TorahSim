@@ -984,7 +984,7 @@ def law_pre_sinai(event, world):
     E_ = lambda eff, s, due=None, cp=None, value=None: {'effect': eff, 'subject': s, 'counterparty': cp, 'amount': None, 'due': due, 'value': value if value is not None else True, 'source_law': 'F%s' % event.get('law', '7'), 'case_source': src}
     if k == 'evening_and_morning': return [E_('day_counted', 'the-world', value=event['day'])]
     if k == 'ceased_and_blessed': return [E_('seventh_day_blessed', 'the-seventh-day')]
-    if k == 'blessed_be_fruitful': return [E_('fruitfulness_blessed', subj)] + ([E_('dominion_granted', subj)] if event.get('rule') else [])
+    if k == 'blessed_be_fruitful': return ([E_('fruitfulness_blessed', subj)] + ([E_('dominion_granted', subj)] if event.get('rule') else [])) if WE.seat(src) is not None and WE.seat(src)[0] == 'Gen' and WE.seat(src)[1] in (1, 9) else []   # O8 S4 (2026-09-08): this daemon's seats 1:28, 9:1, 9:7; Jacob's at 35:11 is law_joseph's (the hand-model caught the leak: one open entry on 'god')
     if k == 'fear_set': return [E_('fear_on_beasts', 'the-beasts')]
     if k == 'meat_granted': return [E_('meat_permitted', subj), E_('dominion_granted', subj)]
     if k == 'limb_barred': return [E_('limb_from_living_barred', subj)]
@@ -995,7 +995,7 @@ def law_pre_sinai(event, world):
     if k == 'renamed': return [E_('name_changed', subj, value=event['name'])] if WE.seat(src) == ('Gen', 17) else []   # O2 (2026-09-07): this daemon's seats 17:5, 17:15; Jacob's 32:29 is the family engine's — the ink's name the value (one field contract)
     if k == 'circumcision_commanded': return [E_('circumcision_due', s) for s in event['males']]
     if k == 'circumcised': return [E_('sign_in_the_flesh', subj)]
-    if k == 'born': return [E_('circumcision_due', subj, due=day + 7)]           # the eighth day: a per-person TIMER from the birth (17:12; 21:4 the first run) — the INCLUSIVE ordinal, the birth day the first (O1, 2026-09-07: C8 of the sequential run had found born + 8)
+    if k == 'born': return [E_('circumcision_due', subj, due=day + 7)] if event.get('sex', 'm') == 'm' else []   # O8 S3 (2026-09-08; 7k): 17:12 'every MALE' — the daemon reads the field the statute names (Dinah, 30:21, sets no timer)           # the eighth day: a per-person TIMER from the birth (17:12; 21:4 the first run) — the INCLUSIVE ordinal, the birth day the first (O1, 2026-09-07: C8 of the sequential run had found born + 8)
     return []
 
 def scene():

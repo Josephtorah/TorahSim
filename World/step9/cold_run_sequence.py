@@ -30,6 +30,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import yaml
 import world_engine as WE
+import world_journal as WJ                                   # THE LOOP step 1 (2026-09-09): the sink — every world's log to the journal
 
 # THE 33 RUNNERS, imported in the canonical order of their spans (dependency_dispositions.yaml spans, first row); each
 # runs its own scenes at import (graded on its own in the sweep) — silenced here. Their DAEMONS are what this runner
@@ -37,6 +38,9 @@ import world_engine as WE
 # (O4, 2026-09-07, rule 9: the gate reads the ('cold_run_x', 'fn') tuples as live edges; the guardians import is bare — no edge).
 with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
     import cold_run_pre_sinai
+    import cold_run_primeval                                       # O8 S2 (2026-09-08): FROM EDEN TO HAGAR's daemon registered — the 41st
+    import cold_run_mamre                                          # O8 S3 (2026-09-08): FROM MAMRE TO THE HEAP's daemon registered — the 42nd
+    import cold_run_joseph                                         # O8 S4 (2026-09-08): FROM THE FORD TO THE COFFIN's daemon registered — the 43rd
     import cold_run_family
     import cold_run_exodus_story                                   # O8 S1 (2026-09-08): THE EXODUS STORY's daemon registered — the 40th
     import cold_run_pesach
@@ -72,13 +76,13 @@ with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.St
     import cold_run_tochacha
     import cold_run_temurah
 
-# ALL 40 DAEMONS in registration order (38 + law_mishpatim_3 at O7, 2026-09-07; + law_exodus_story at O8 S1, 2026-09-08): the library's five first (the runners register them first on their own
+# ALL 43 DAEMONS in registration order (38 + law_mishpatim_3 at O7, 2026-09-07; + law_exodus_story at O8 S1, law_primeval at O8 S2, law_mamre at O8 S3 and law_joseph at O8 S4, 2026-09-08): the library's five first (the runners register them first on their own
 # scenes), then the runners' in the canonical order of their spans; a file with two daemons keeps its own order. The
 # set is asserted against daemon_dispositions.yaml at run time — a tripwire, never a recital.
 DAEMON_ORDER = [
     ('world_engine', 'law_slave_term'), ('world_engine', 'law_goring_ox'), ('world_engine', 'law_guardians'),
     ('world_engine', 'law_deposit_oath'), ('world_engine', 'law_installation'),
-    ('cold_run_pre_sinai', 'law_pre_sinai'), ('cold_run_family', 'law_family'), ('cold_run_exodus_story', 'law_exodus_story'), ('cold_run_pesach', 'law_pesach'),
+    ('cold_run_pre_sinai', 'law_pre_sinai'), ('cold_run_primeval', 'law_primeval'), ('cold_run_mamre', 'law_mamre'), ('cold_run_joseph', 'law_joseph'), ('cold_run_family', 'law_family'), ('cold_run_exodus_story', 'law_exodus_story'), ('cold_run_pesach', 'law_pesach'),
     ('cold_run_decalogue', 'law_decalogue'), ('cold_run_ordinances', 'law_ordinances'), ('cold_run_mishpatim', 'law_mishpatim'),
     ('cold_run_mishpatim_2', 'law_mishpatim_2'), ('cold_run_mishpatim_3', 'law_mishpatim_3'), ('cold_run_calendar', 'law_calendar'), ('cold_run_erection', 'law_erection'),
     ('cold_run_sanctuary_build', 'law_sanctuary_build'), ('cold_run_vestments', 'law_vestments'),
@@ -182,6 +186,18 @@ def ink_ordinals(words):
 
 
 _VREF = re.compile(r'^(Gen|Exod|Lev)\s+(\d+):(\d+)')
+def slot_of(book, ch, vs):
+    """O9 OPEN-5 (2026-09-08; CLOCK.md 12e): the verse's own day-word, by the registry's day_slots table (the words and
+    two-word phrases as the verse carries them, points stripped) — exactly ONE slot's word present, else None (a verse that
+    names two slots — Gen 1:5's evening and morning, Exod 16:12's — is stamped nothing, said so in the stitcher's census)"""
+    ws = verse_words(book, ch, vs)
+    hits = []
+    for row in WE.CAL_SLOTS:
+        if any(x in ws for x in row.get('words', [])) or any(all(x in ws for x in ph) for ph in row.get('phrases', [])):
+            hits.append(row['name'])
+    return hits[0] if len(hits) == 1 else None
+
+
 _INK_CHECKS = []
 
 
@@ -247,8 +263,16 @@ PARAMS = {
     'sojourn_start': {'value': 'seed_isaac',
                       'settings': {'seed_isaac': "Gen 15:13's 400 years run from the SEED, defined by the ink at 21:12 'in Isaac shall seed be called to you' (a REFERENCE licensed by ink); Exod 12:41 'on that very day' the day the 400 complete; Rosh Hashanah 10b:10 'on Passover Isaac was born' the shelf's own row",
                                    'descent_literal': "Exod 12:40's 430 years read from the descent (Gen 47:9) — the elders wrote for Ptolemy 'in Egypt AND IN OTHER LANDS' (Megillah 9a:16): the tradition records the gap itself",
-                                   'covenant_pieces': 'the 430 from the covenant between the pieces — the tradition; not on the local shelf under the searched forms (labeled)'},
+                                   'covenant_pieces': "the 430 from the covenant between the pieces — the Mekhilta on Exod 12:40 row 1, FOUND on the local shelf at O9 (2026-09-08): 'thirty years before Isaac was born the decree was decreed between the pieces' (the covenant at Abraham's seventy; the row covenant_pieces_year's mekhilta_bo_12_40 setting); this world's exodus is computed FROM the placed covenant + 430"},
                       'open': 'OPEN-3 — the tape runs seed_isaac; the others are reported (checkpoint C3)'},
+    # O9 T2 (2026-09-08; CLOCK.md 12b): WHICH reading places the covenant between the pieces (Genesis 15 carries no date) — the row
+    # covenant_pieces_year's settings; the running world the Genesis spine's (Bereshit Rabbah 46:2, eighty-five — inside the page-order
+    # bound, a forward marker at 15:1); the sojourn fork's covenant_pieces world the Mekhilta's (seventy — earlier than the counter: the
+    # retrograde path, the stretch closed by the ink-derived marker at 16:1)
+    'covenant_placement': {'value': 'bereshit_rabbah_46_2',
+                           'settings': {'bereshit_rabbah_46_2': 'Bereshit Rabbah 46:2 — eighty-five at the hour He spoke with him between the pieces',
+                                        'mekhilta_bo_12_40': 'the Mekhilta on Exod 12:40 row 1 — thirty years before Isaac: seventy'},
+                           'open': 'C3d prints the join under both settings on the running world'},
     # O1 (2026-09-07; SEQUENTIAL_RUN.md section 12): three rows RETIRED — second_ascent_after_breaking_days (the second ascent
     # is dated by the shelf: calendar_parameters.yaml second_tablets_given, Yom Kippur − 40), tamar_wait_days (the wait runs on
     # the ink's own act at Gen 38:14, no timer), eighth_day_count (the pre_sinai daemon counts born + 7 — the convention of
@@ -257,7 +281,7 @@ PARAMS = {
 
 # ==== TAPE BEGIN (generated by scratchpad/seq_stitch.py — do not edit by hand; rerun the stitcher) ====
 def tape(w, M, P):
-    """THE STITCHED TAPE — generated by scratchpad/seq_stitch.py: 88 markers, 260 history events, 23 closes in canonical verse order"""
+    """THE STITCHED TAPE — generated by scratchpad/seq_stitch.py: 130 markers, 1058 history events, 70 closes in canonical verse order"""
     assert w.clock.epoch == 'creation', 'the tape runs on the creation epoch'
     # ---- Gen 1 ----
     assert_ink('Gen 1:5', [1], ordinals=[]); M['day1'] = 0; w.marker('Gen 1:5', 0, value='the first day')   # the creation days (the ordinal - 1)
@@ -276,33 +300,133 @@ def tape(w, M, P):
     # ---- Gen 2 ----
     assert_ink('Gen 2:2', [], ordinals=[7, 7]); M['day7'] = 6; w.marker('Gen 2:2', 6, value='the seventh day')   # the creation days (the ordinal - 1)
     w.submit({'kind': 'ceased_and_blessed', 'subject': 'the-seventh-day', 'case_source': 'Gen 2:2-3'})   # pre_sinai [act: wayyiqtol at Gen 2:2]
+    w.submit({'kind': 'formed_from_dust', 'subject': 'adam', 'case_source': 'Gen 2:7'})   # primeval [act: wayyiqtol at Gen 2:7]
+    w.submit({'kind': 'placed_in_the_garden', 'subject': 'adam', 'case_source': 'Gen 2:8; Gen 2:15'})   # primeval [act: wayyiqtol at Gen 2:8]
+    w.submit({'kind': 'named', 'subject': 'the-beasts', 'name': 'the names of all cattle, the fowl of the heavens and every beast of the field (2:20)', 'by': 'adam', 'case_source': 'Gen 2:20'})   # primeval [act: wayyiqtol at Gen 2:20]
+    w.submit({'kind': 'deep_sleep_fell', 'subject': 'adam', 'kind_of_sleep': 'the deep sleep of sleep (Bereshit Rabbah 17:5)', 'case_source': 'Gen 2:21'})   # primeval [act: wayyiqtol at Gen 2:21]
+    w.submit({'kind': 'woman_built', 'subject': 'adam', 'case_source': 'Gen 2:21-22; Gen 2:18'})   # primeval [act: wayyiqtol at Gen 2:21]
+    w.submit({'kind': 'named', 'subject': 'eve', 'name': 'Woman (אשה — for from man she was taken, 2:23)', 'by': 'adam', 'case_source': 'Gen 2:23'})   # primeval [act: wayyiqtol at Gen 2:22]
+    # ---- Gen 3 ----
+    w.submit({'kind': 'serpent_spoke', 'subject': 'the-serpent', 'to': 'eve', 'case_source': 'Gen 3:1; Gen 3:4-5'})   # primeval [speech: wayyiqtol at Gen 3:1]
+    w.submit({'kind': 'ate_of_the_tree', 'subject': 'eve', 'gave_to': 'adam', 'case_source': 'Gen 3:6; Gen 2:16-17'})   # primeval [act: wayyiqtol at Gen 3:6]
+    w.submit({'kind': 'eyes_opened', 'subject': 'adam-and-eve', 'case_source': 'Gen 3:7'})   # primeval [act: wayyiqtol at Gen 3:7]
+    w.submit({'kind': 'hid_from_the_voice', 'subject': 'adam-and-eve', 'case_source': 'Gen 3:8'})   # primeval [act: wayyiqtol at Gen 3:8]
+    w.submit({'kind': 'interrogated', 'subject': 'adam-and-eve', 'case_source': 'Gen 3:9-13'})   # primeval [speech: wayyiqtol at Gen 3:9]
+    w.submit({'kind': 'sentenced', 'subject': 'the-serpent', 'sentence': 'serpent', 'case_source': 'Gen 3:14-15'})   # primeval [speech: wayyiqtol at Gen 3:14]
+    w.submit({'kind': 'sentenced', 'subject': 'eve', 'sentence': 'woman', 'case_source': 'Gen 3:16'})   # primeval [speech: wayyiqtol at Gen 3:14]
+    w.submit({'kind': 'sentenced', 'subject': 'adam', 'sentence': 'man', 'case_source': 'Gen 3:17-19'})   # primeval [speech: wayyiqtol at Gen 3:17]
+    w.submit({'kind': 'named', 'subject': 'eve', 'name': 'Eve (חוה — the mother of all living, 3:20)', 'by': 'adam', 'case_source': 'Gen 3:20'})   # primeval [act: wayyiqtol at Gen 3:20]
+    w.submit({'kind': 'clothed_in_skins', 'subject': 'adam-and-eve', 'case_source': 'Gen 3:21'})   # primeval [act: wayyiqtol at Gen 3:21]
+    w.submit({'kind': 'expelled', 'subject': 'adam-and-eve', 'case_source': 'Gen 3:23-24'})   # primeval [act: wayyiqtol at Gen 3:23]
+    # ---- Gen 4 ----
+    w.submit({'kind': 'bore', 'subject': 'eve', 'child': 'cain', 'case_source': 'Gen 4:1'})   # primeval [act: wayyiqtol at Gen 4:1]
+    w.submit({'kind': 'bore', 'subject': 'eve', 'child': 'abel', 'case_source': 'Gen 4:2'})   # primeval [act: wayyiqtol at Gen 4:2]
+    w.submit({'kind': 'first_offerings_brought', 'subject': 'cain', 'what': 'of the fruit of the ground (4:3)', 'case_source': 'Gen 4:3'})   # primeval [act: wayyiqtol at Gen 4:3]
+    w.submit({'kind': 'first_offerings_brought', 'subject': 'abel', 'what': 'of the firstlings of his flock and of their fat (4:4)', 'case_source': 'Gen 4:4'})   # primeval [act: wayyiqtol at Gen 4:4]
+    w.submit({'kind': 'anger_burned', 'subject': 'cain', 'case_source': 'Gen 4:5'})   # primeval [act: wayyiqtol at Gen 4:5]
+    w.submit({'kind': 'counsel_given', 'subject': 'cain', 'case_source': 'Gen 4:6-7'})   # primeval [speech: wayyiqtol at Gen 4:6]
+    w.submit({'kind': 'killed', 'subject': 'cain', 'victim': 'abel', 'case_source': 'Gen 4:8'})   # primeval [act: wayyiqtol at Gen 4:8]
+    w.submit({'kind': 'sentenced', 'subject': 'cain', 'sentence': 'cain', 'case_source': 'Gen 4:11-12'})   # primeval [speech: wayyiqtol at Gen 4:10]
+    w.submit({'kind': 'mark_promised', 'subject': 'cain', 'case_source': 'Gen 4:15'})   # primeval [speech: wayyiqtol at Gen 4:15]
+    w.submit({'kind': 'went_out_from_the_presence', 'subject': 'cain', 'case_source': 'Gen 4:16'})   # primeval [act: wayyiqtol at Gen 4:16]
+    w.submit({'kind': 'bore', 'subject': 'cains-wife', 'child': 'enoch-son-of-cain', 'case_source': 'Gen 4:17'})   # primeval [act: wayyiqtol at Gen 4:17]
+    w.submit({'kind': 'city_built', 'subject': 'cain', 'city': 'the-city-of-enoch', 'case_source': 'Gen 4:17'})   # primeval [act: wayyiqtol at Gen 4:17]
+    w.submit({'kind': 'named', 'subject': 'the-city-of-enoch', 'name': 'Enoch (after his son, 4:17)', 'by': 'cain', 'case_source': 'Gen 4:17'})   # primeval [act: wayyiqtol at Gen 4:17]
+    w.submit({'kind': 'begot', 'subject': 'enoch-son-of-cain', 'children': ['irad'], 'case_source': 'Gen 4:18'})   # primeval [act: wayyiqtol at Gen 4:18]
+    w.submit({'kind': 'begot', 'subject': 'irad', 'children': ['mehujael'], 'case_source': 'Gen 4:18'})   # primeval [act: wayyiqtol at Gen 4:18]
+    w.submit({'kind': 'begot', 'subject': 'mehujael', 'children': ['methushael'], 'case_source': 'Gen 4:18'})   # primeval [act: wayyiqtol at Gen 4:18]
+    w.submit({'kind': 'begot', 'subject': 'methushael', 'children': ['lamech-son-of-methushael'], 'case_source': 'Gen 4:18'})   # primeval [act: wayyiqtol at Gen 4:18]
+    w.submit({'kind': 'married', 'subject': 'adah', 'husband': 'lamech-son-of-methushael', 'case_source': 'Gen 4:19'})   # primeval [act: wayyiqtol at Gen 4:19]
+    w.submit({'kind': 'married', 'subject': 'zillah', 'husband': 'lamech-son-of-methushael', 'case_source': 'Gen 4:19'})   # primeval [act: wayyiqtol at Gen 4:19]
+    w.submit({'kind': 'bore', 'subject': 'adah', 'child': 'jabal', 'case_source': 'Gen 4:20'})   # primeval [act: wayyiqtol at Gen 4:20]
+    w.submit({'kind': 'bore', 'subject': 'zillah', 'child': 'tubal-cain', 'case_source': 'Gen 4:22'})   # primeval [act: wayyiqtol at Gen 4:20]
+    w.submit({'kind': 'lamech_sang', 'subject': 'lamech-son-of-methushael', 'case_source': 'Gen 4:23-24'})   # primeval [speech: wayyiqtol at Gen 4:23]
+    w.submit({'kind': 'bore', 'subject': 'eve', 'child': 'seth', 'case_source': 'Gen 4:25'})   # primeval [act: wayyiqtol at Gen 4:25]
+    w.submit({'kind': 'named', 'subject': 'seth', 'name': 'Seth (שת — God has set me another seed, 4:25)', 'by': 'eve', 'case_source': 'Gen 4:25'})   # primeval [act: wayyiqtol at Gen 4:25]
+    w.submit({'kind': 'named', 'subject': 'enosh', 'name': 'Enosh (4:26)', 'by': 'seth', 'case_source': 'Gen 4:26'})   # primeval [act: wayyiqtol at Gen 4:26]
+    w.submit({'kind': 'profanation_begun', 'subject': 'the-generation-of-enosh', 'case_source': 'Gen 4:26'})   # primeval [act: wayyiqtol at Gen 4:26]
     # ---- Gen 5 ----
+    w.submit({'kind': 'named', 'subject': 'adam-and-eve', 'name': 'Adam (5:2 — their name, male and female)', 'by': 'god', 'case_source': 'Gen 5:2'})   # primeval [act: wayyiqtol at Gen 5:2]
     assert_ink('Gen 5:3', [130]); M['born:seth'] = birth_day(w, yr(w, M['born:the_human']) + 130, 'seth'); w.marker('Gen 5:3', M['born:seth'], value='the_human lived 130 years and begot seth', era='life:seth')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'adam', 'children': ['seth'], 'case_source': 'Gen 5:3'})   # primeval [act: wayyiqtol at Gen 5:3]
+    w.submit({'kind': 'named', 'subject': 'seth', 'name': 'Seth (5:3 — by his father)', 'by': 'adam', 'case_source': 'Gen 5:3'})   # primeval [act: wayyiqtol at Gen 5:3]
     assert_ink('Gen 5:5', [930]); M['died:the_human'] = year_day(w, yr(w, M['born:the_human']) + 930); w.marker('Gen 5:5', M['died:the_human'], value='all the days of the_human: 930 years — the closing total', proleptic=True)   # a lifespan total: proleptic
     assert_ink('Gen 5:6', [105]); M['born:enosh'] = birth_day(w, yr(w, M['born:seth']) + 105, 'enosh'); w.marker('Gen 5:6', M['born:enosh'], value='seth lived 105 years and begot enosh', era='life:enosh')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'seth', 'children': ['enosh'], 'case_source': 'Gen 5:6'})   # primeval [act: wayyiqtol at Gen 5:6]
     assert_ink('Gen 5:8', [912]); M['died:seth'] = year_day(w, yr(w, M['born:seth']) + 912); w.marker('Gen 5:8', M['died:seth'], value='all the days of seth: 912 years — the closing total', proleptic=True)   # a lifespan total: proleptic
     assert_ink('Gen 5:9', [90]); M['born:kenan'] = birth_day(w, yr(w, M['born:enosh']) + 90, 'kenan'); w.marker('Gen 5:9', M['born:kenan'], value='enosh lived 90 years and begot kenan', era='life:kenan')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'enosh', 'children': ['kenan'], 'case_source': 'Gen 5:9'})   # primeval [act: wayyiqtol at Gen 5:9]
     assert_ink('Gen 5:11', [905]); M['died:enosh'] = year_day(w, yr(w, M['born:enosh']) + 905); w.marker('Gen 5:11', M['died:enosh'], value='all the days of enosh: 905 years — the closing total', proleptic=True)   # a lifespan total: proleptic
     assert_ink('Gen 5:12', [70]); M['born:mahalalel'] = birth_day(w, yr(w, M['born:kenan']) + 70, 'mahalalel'); w.marker('Gen 5:12', M['born:mahalalel'], value='kenan lived 70 years and begot mahalalel', era='life:mahalalel')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'kenan', 'children': ['mahalalel'], 'case_source': 'Gen 5:12'})   # primeval [act: wayyiqtol at Gen 5:12]
     assert_ink('Gen 5:14', [910]); M['died:kenan'] = year_day(w, yr(w, M['born:kenan']) + 910); w.marker('Gen 5:14', M['died:kenan'], value='all the days of kenan: 910 years — the closing total', proleptic=True)   # a lifespan total: proleptic
     assert_ink('Gen 5:15', [65]); M['born:jared'] = birth_day(w, yr(w, M['born:mahalalel']) + 65, 'jared'); w.marker('Gen 5:15', M['born:jared'], value='mahalalel lived 65 years and begot jared', era='life:jared')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'mahalalel', 'children': ['jared'], 'case_source': 'Gen 5:15'})   # primeval [act: wayyiqtol at Gen 5:15]
     assert_ink('Gen 5:17', [895]); M['died:mahalalel'] = year_day(w, yr(w, M['born:mahalalel']) + 895); w.marker('Gen 5:17', M['died:mahalalel'], value='all the days of mahalalel: 895 years — the closing total', proleptic=True)   # a lifespan total: proleptic
     assert_ink('Gen 5:18', [162]); M['born:enoch'] = birth_day(w, yr(w, M['born:jared']) + 162, 'enoch'); w.marker('Gen 5:18', M['born:enoch'], value='jared lived 162 years and begot enoch', era='life:enoch')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'jared', 'children': ['enoch'], 'case_source': 'Gen 5:18'})   # primeval [act: wayyiqtol at Gen 5:18]
     assert_ink('Gen 5:20', [962]); M['died:jared'] = year_day(w, yr(w, M['born:jared']) + 962); w.marker('Gen 5:20', M['died:jared'], value='all the days of jared: 962 years — the closing total', proleptic=True)   # a lifespan total: proleptic
     assert_ink('Gen 5:21', [65]); M['born:methuselah'] = birth_day(w, yr(w, M['born:enoch']) + 65, 'methuselah'); w.marker('Gen 5:21', M['born:methuselah'], value='enoch lived 65 years and begot methuselah', era='life:methuselah')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'enoch', 'children': ['methuselah'], 'case_source': 'Gen 5:21'})   # primeval [act: wayyiqtol at Gen 5:21]
     assert_ink('Gen 5:23', [365]); M['died:enoch'] = year_day(w, yr(w, M['born:enoch']) + 365); w.marker('Gen 5:23', M['died:enoch'], value='all the days of enoch: 365 years — the closing total', proleptic=True)   # a lifespan total: proleptic
+    w.submit({'kind': 'enoch_taken', 'subject': 'enoch', 'case_source': 'Gen 5:24'})   # primeval [act: wayyiqtol at Gen 5:24]
     assert_ink('Gen 5:25', [187]); M['born:lamech'] = birth_day(w, yr(w, M['born:methuselah']) + 187, 'lamech'); w.marker('Gen 5:25', M['born:lamech'], value='methuselah lived 187 years and begot lamech', era='life:lamech')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'methuselah', 'children': ['lamech'], 'case_source': 'Gen 5:25'})   # primeval [act: wayyiqtol at Gen 5:25]
     assert_ink('Gen 5:27', [969]); M['died:methuselah'] = year_day(w, yr(w, M['born:methuselah']) + 969); w.marker('Gen 5:27', M['died:methuselah'], value='all the days of methuselah: 969 years — the closing total', proleptic=True)   # a lifespan total: proleptic
     assert_ink('Gen 5:28', [182]); M['born:noach'] = birth_day(w, yr(w, M['born:lamech']) + 182, 'noach'); w.marker('Gen 5:28', M['born:noach'], value='lamech lived 182 years and begot noach', era='life:noach')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'lamech', 'children': ['noah'], 'case_source': 'Gen 5:28'})   # primeval [act: wayyiqtol at Gen 5:28]
+    w.submit({'kind': 'named', 'subject': 'noah', 'name': 'Noah (נח — this one shall comfort us, 5:29)', 'by': 'lamech', 'case_source': 'Gen 5:29'})   # primeval [act: wayyiqtol at Gen 5:29]
     assert_ink('Gen 5:31', [777]); M['died:lamech'] = year_day(w, yr(w, M['born:lamech']) + 777); w.marker('Gen 5:31', M['died:lamech'], value='all the days of lamech: 777 years — the closing total', proleptic=True)   # a lifespan total: proleptic
     assert_ink('Gen 5:32', [500]); M['born:shem'] = birth_day(w, yr(w, M['born:noach']) + 500, 'shem'); w.marker('Gen 5:32', M['born:shem'], value='noach lived 500 years and begot shem', era='life:shem')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'noah', 'children': ['shem', 'ham', 'japheth'], 'case_source': 'Gen 5:32; Gen 6:10'})   # primeval [act: wayyiqtol at Gen 5:32]
+    # ---- Gen 6 ----
+    w.submit({'kind': 'multiplied', 'subject': 'humankind', 'case_source': 'Gen 6:1'})   # primeval [act: wayyiqtol at Gen 6:1]
+    w.submit({'kind': 'married', 'subject': 'the-daughters-of-men', 'husband': 'the-sons-of-god', 'case_source': 'Gen 6:2'})   # primeval [act: wayyiqtol at Gen 6:2]
+    assert_ink('Gen 6:3', [120]); M['flood'] = w.clock.day_in('life:noach', 600, 2, 17); M['reprieve_decree'] = w.clock.calendar.add(M['flood'], -120, 'year'); w.marker('Gen 6:3', M['reprieve_decree'], value='and his days shall be a hundred and twenty years — the decree dated at the flood minus a hundred and twenty (Noah 480, before 5:32\'s five hundred): RETROGRADE, Pesachim 6b:7; the reprieve\'s timer fires on the flood (CG2)')   # the reprieve: retrograde (the 120 parsed at 6:3)
+    w.submit({'kind': 'decree_of_the_reprieve', 'subject': 'the-generation-of-the-flood', 'years': 120, 'case_source': 'Gen 6:3'})   # primeval [speech: wayyiqtol at Gen 6:3]
+    w.submit({'kind': 'wickedness_seen', 'subject': 'humankind', 'case_source': 'Gen 6:5'})   # primeval [act: wayyiqtol at Gen 6:5]
+    w.submit({'kind': 'regretted', 'subject': 'god', 'case_source': 'Gen 6:6'})   # primeval [act: wayyiqtol at Gen 6:6]
+    w.submit({'kind': 'wipe_resolved', 'subject': 'the-generation-of-the-flood', 'case_source': 'Gen 6:7'})   # primeval [speech: wayyiqtol at Gen 6:7]
+    w.submit({'kind': 'favor_found', 'subject': 'noah', 'case_source': 'Gen 6:8'})   # primeval [act: wayyiqtol at Gen 6:6]
+    w.submit({'kind': 'wickedness_seen', 'subject': 'the-earth', 'case_source': 'Gen 6:11-12'})   # primeval [act: wayyiqtol at Gen 6:11]
+    w.submit({'kind': 'end_decreed', 'subject': 'the-generation-of-the-flood', 'case_source': 'Gen 6:13'})   # primeval [speech: wayyiqtol at Gen 6:13]
+    w.submit({'kind': 'ark_commanded', 'subject': 'noah', 'dimensions': [300, 50, 30], 'case_source': 'Gen 6:14-21'})   # primeval [speech: wayyiqtol at Gen 6:13]
+    w.submit({'kind': 'ark_made', 'subject': 'noah', 'case_source': 'Gen 6:22'})   # primeval [act: wayyiqtol at Gen 6:22]
+    w.close('noah', 'ark_owed', 'Gen 6:22 — and Noah did according to all that God commanded him, so he did')   # primeval
     # ---- Gen 7 ----
+    assert_ink('Gen 7:4', [7, 40, 40]); M['boarding_call'] = M['flood'] - 7; w.marker('Gen 7:1', M['boarding_call'], value='for in yet seven days I will rain (7:4) — the boarding call seven days before the flood, positioned at 7:1 so the call\'s own act falls on it (7:10 after the seven days)')   # the boarding call: the flood minus the seven (the numbers at 7:4, the position 7:1)
+    w.submit({'kind': 'boarding_commanded', 'subject': 'noah', 'days': 7, 'case_source': 'Gen 7:1-4'})   # primeval [speech: wayyiqtol at Gen 7:1]
+    w.submit({'kind': 'entered_the_ark', 'subject': 'noah-and-sons', 'case_source': 'Gen 7:7; Gen 7:13; Gen 7:15-16'})   # primeval [act: wayyiqtol at Gen 7:7]
+    w.close('noah', 'boarding_owed', 'Gen 7:7 — and Noah came into the ark')   # primeval
     assert_ink('Gen 7:11', [600, 17], ordinals=[2]); M['flood'] = w.clock.day_in('life:noach', 600, 2, 17); M['flood_ordinal'] = w.clock.day_in('life:noach', 600, 2, 17, reading='ordinal'); w.marker('Gen 7:11', M['flood'], value='the 600th year of Noah, the second month, the seventeenth: the flood')   # the flood
+    w.submit({'kind': 'flood_came', 'subject': 'the-earth', 'case_source': 'Gen 7:11; Gen 7:17-18'})   # primeval [act: wayyiqtol at Gen 7:10]
+    assert_ink('Gen 7:12', [40, 40]); M['rain_end'] = M['flood'] + 40; w.marker('Gen 7:17', M['rain_end'], value='the rain forty days and forty nights (7:12); the flood was forty days on the earth and the ark was lifted (7:17)')   # the forty days of rain (the numbers at 7:12, the position 7:17 — 7:13-16 stay at the flood's day)
+    w.submit({'kind': 'all_flesh_expired', 'subject': 'the-generation-of-the-flood', 'case_source': 'Gen 7:21-23'})   # primeval [act: wayyiqtol at Gen 7:21]
+    w.close('the-generation-of-the-flood', 'to_be_wiped', 'Gen 7:23 — and He wiped out every living thing (Sanhedrin 108a:5)')   # primeval
+    w.submit({'kind': 'waters_prevailed', 'subject': 'the-earth', 'days': 150, 'case_source': 'Gen 7:24; Gen 7:18-20'})   # primeval [act: wayyiqtol at Gen 7:24]
     # ---- Gen 8 ----
+    w.submit({'kind': 'remembered', 'subject': 'noah', 'case_source': 'Gen 8:1'})   # primeval [act: wayyiqtol at Gen 8:1]
+    w.submit({'kind': 'waters_receded', 'subject': 'the-earth', 'case_source': 'Gen 8:1-3'})   # primeval [act: wayyiqtol at Gen 8:1]
     assert_ink('Gen 8:4', [17], ordinals=[7]); M['ark_rested'] = next_date(w, 7, 17); w.marker('Gen 8:4', M['ark_rested'], value='the seventh month, the seventeenth: the ark rested')   # the ark rested
+    w.submit({'kind': 'ark_rested', 'subject': 'the-ark', 'case_source': 'Gen 8:4'})   # primeval [act: wayyiqtol at Gen 8:4]
     assert_ink('Gen 8:5', [1], ordinals=[10, 10]); M['mountains'] = next_date(w, 10, 1); w.marker('Gen 8:5', M['mountains'], value='the tenth month, the first: the mountaintops seen')   # the mountaintops (the ink names the tenth twice)
+    assert_ink('Gen 8:6', [40]); M['window'] = M['mountains'] + 40; w.marker('Gen 8:6', M['window'], value='at the end of forty days Noah opened the window — counted from the tenth month\'s first (8:5), the row window_count_from')   # the window: forty days after the mountaintops
+    w.submit({'kind': 'bird_sent', 'subject': 'noah', 'bird': 'raven', 'sending': 1, 'result': 'went to and fro (8:7)', 'case_source': 'Gen 8:7'})   # primeval [act: wayyiqtol at Gen 8:7]
+    w.submit({'kind': 'bird_sent', 'subject': 'noah', 'bird': 'dove', 'sending': 1, 'result': 'returned — found no rest (8:9)', 'case_source': 'Gen 8:8-9'})   # primeval [act: wayyiqtol at Gen 8:8]
+    assert_ink('Gen 8:10', [7]); M['dove_second'] = M['window'] + 7; w.marker('Gen 8:10', M['dove_second'], value='he waited yet another seven days — the dove\'s second sending (the first at the window\'s day, said so)')   # the dove's second sending
+    w.submit({'kind': 'bird_sent', 'subject': 'noah', 'bird': 'dove', 'sending': 2, 'result': 'the olive leaf (8:11)', 'case_source': 'Gen 8:10-11'})   # primeval [act: wayyiqtol at Gen 8:10]
+    assert_ink('Gen 8:12', [7]); M['dove_third'] = M['dove_second'] + 7; w.marker('Gen 8:12', M['dove_third'], value='yet another seven days — the dove\'s third sending, before the drying (CG4)')   # the dove's third sending
+    w.submit({'kind': 'bird_sent', 'subject': 'noah', 'bird': 'dove', 'sending': 3, 'result': 'did not return (8:12)', 'case_source': 'Gen 8:12'})   # primeval [act: wayyiqtol at Gen 8:12]
     assert_ink('Gen 8:13', [601, 1], ordinals=[1]); M['dried'] = w.clock.day_in('life:noach', 601, 1, 1); w.marker('Gen 8:13', M['dried'], value='the 601st year, the first month, the first: the waters dried')   # the waters dried
+    w.submit({'kind': 'cover_removed', 'subject': 'noah', 'case_source': 'Gen 8:13'})   # primeval [act: wayyiqtol at Gen 8:13]
     assert_ink('Gen 8:14', [27], ordinals=[2]); M['dry'] = next_date(w, 2, 27); w.marker('Gen 8:14', M['dry'], value='the second month, the twenty-seventh: the earth dry')   # the earth dry
+    w.submit({'kind': 'exit_commanded', 'subject': 'noah', 'case_source': 'Gen 8:15-17'})   # primeval [speech: wayyiqtol at Gen 8:15]
+    w.submit({'kind': 'exited_the_ark', 'subject': 'noah-and-sons', 'case_source': 'Gen 8:18-19'})   # primeval [act: wayyiqtol at Gen 8:18]
+    w.close('noah', 'exit_owed', 'Gen 8:18 — and Noah went out')   # primeval
+    w.submit({'kind': 'altar_erected', 'subject': 'noah', 'at': 'the-altar-of-noah', 'case_source': 'Gen 8:20'})   # primeval [act: wayyiqtol at Gen 8:20]
+    w.submit({'kind': 'olah_offered', 'subject': 'noah', 'case_source': 'Gen 8:20; Gen 7:2'})   # primeval [act: wayyiqtol at Gen 8:20]
+    w.submit({'kind': 'savor_smelled', 'subject': 'god', 'case_source': 'Gen 8:21'})   # primeval [act: wayyiqtol at Gen 8:21]
+    w.submit({'kind': 'never_again_resolved', 'subject': 'god', 'case_source': 'Gen 8:21-22'})   # primeval [speech: wayyiqtol at Gen 8:21]
     # ---- Gen 9 ----
     w.submit({'kind': 'blessed_be_fruitful', 'subject': 'noah', 'case_source': 'Gen 9:1'})   # pre_sinai [speech: wayyiqtol at Gen 9:1]
     w.submit({'kind': 'fear_set', 'subject': 'the-beasts', 'case_source': 'Gen 9:2'})   # pre_sinai [speech: wayyiqtol at Gen 9:1]
@@ -311,22 +435,134 @@ def tape(w, M, P):
     w.submit({'kind': 'blood_required', 'subject': 'noah', 'case_source': 'Gen 9:5'})   # pre_sinai [speech: wayyiqtol at Gen 9:1]
     w.submit({'kind': 'blessed_be_fruitful', 'subject': 'noah', 'case_source': 'Gen 9:7'})   # pre_sinai [speech: wayyiqtol at Gen 9:1]
     w.submit({'kind': 'flood_sworn_off', 'subject': 'the-earth', 'case_source': 'Gen 9:11'})   # pre_sinai [speech: wayyiqtol at Gen 9:8]
+    w.close('noah', 'covenant_promised', "Gen 9:11 — and I will establish My covenant with you (the pre-Sinai engine's act; the promise of 6:18 kept)")   # primeval
     w.submit({'kind': 'bow_set', 'subject': 'the-cloud', 'case_source': 'Gen 9:13'})   # pre_sinai [speech: wayyiqtol at Gen 9:12]
+    w.submit({'kind': 'vineyard_planted', 'subject': 'noah', 'case_source': 'Gen 9:20'})   # primeval [act: wayyiqtol at Gen 9:20]
+    w.submit({'kind': 'drunk_and_uncovered', 'subject': 'noah', 'case_source': 'Gen 9:21'})   # primeval [act: wayyiqtol at Gen 9:21]
+    w.submit({'kind': 'nakedness_seen_and_told', 'subject': 'ham', 'case_source': 'Gen 9:22'})   # primeval [act: wayyiqtol at Gen 9:22]
+    w.submit({'kind': 'covered_backward', 'subject': 'shem-and-japheth', 'case_source': 'Gen 9:23'})   # primeval [act: wayyiqtol at Gen 9:23]
+    w.submit({'kind': 'awoke_and_knew', 'subject': 'noah', 'case_source': 'Gen 9:24'})   # primeval [act: wayyiqtol at Gen 9:24]
+    w.submit({'kind': 'cursed_canaan', 'subject': 'canaan', 'by': 'noah', 'case_source': 'Gen 9:25'})   # primeval [speech: wayyiqtol at Gen 9:25]
+    w.submit({'kind': 'blessed_shem_and_japheth', 'subject': 'shem', 'by': 'noah', 'case_source': 'Gen 9:26-27'})   # primeval [speech: wayyiqtol at Gen 9:26]
     assert_ink('Gen 9:29', [950]); M['died:noach'] = year_day(w, yr(w, M['born:noach']) + 950); w.marker('Gen 9:29', M['died:noach'], value='all the days of noach: 950 years — the closing total', proleptic=True)   # a lifespan total: proleptic
+    # ---- Gen 10 ----
+    w.submit({'kind': 'begot', 'subject': 'cush', 'children': ['nimrod'], 'case_source': 'Gen 10:8; Gen 10:10'})   # primeval [act: wayyiqtol at Gen 10:1]
+    w.submit({'kind': 'kingdom_begun', 'subject': 'nimrod', 'case_source': 'Gen 10:10; Gen 10:8-9'})   # primeval [act: wayyiqtol at Gen 10:10]
+    w.submit({'kind': 'cities_built', 'subject': 'asshur', 'case_source': 'Gen 10:11-12'})   # primeval [act: wayyiqtol at Gen 10:11]
+    w.submit({'kind': 'begot', 'subject': 'eber', 'children': ['peleg', 'joktan'], 'case_source': 'Gen 10:25; Gen 11:16'})   # primeval [act: wayyiqtol at Gen 10:19]
     # ---- Gen 11 ----
+    w.submit({'kind': 'journeyed', 'subject': 'the-builders', 'to': 'the plain in the land of Shinar', 'case_source': 'Gen 11:2'})   # primeval [act: wayyiqtol at Gen 11:2]
+    w.submit({'kind': 'tower_proposed', 'subject': 'the-builders', 'case_source': 'Gen 11:3-4'})   # primeval [speech: wayyiqtol at Gen 11:3]
+    w.submit({'kind': 'lord_descended', 'subject': 'god', 'case_source': 'Gen 11:5'})   # primeval [act: wayyiqtol at Gen 11:5]
+    w.submit({'kind': 'confounded_and_scattered', 'subject': 'the-builders', 'case_source': 'Gen 11:7-9'})   # primeval [act: wayyiqtol at Gen 11:5]
+    w.submit({'kind': 'named', 'subject': 'the-city-and-tower', 'name': 'Babel (בבל — for there the LORD confounded, 11:9)', 'by': 'the-builders', 'case_source': 'Gen 11:9'})   # primeval [act: wayyiqtol at Gen 11:8]
     assert_ink('Gen 11:10', [100, 2]); M['born:arpachshad'] = w.clock.calendar.add(M['flood'], 2, 'year'); M['born:shem_by_11_10'] = w.clock.calendar.add(M['born:arpachshad'], -100, 'year'); w.marker('Gen 11:10', M['born:arpachshad'], value='Shem a son of 100 begot Arpachshad two years after the flood', era='life:arpachshad')   # Arpachshad
+    w.submit({'kind': 'begot', 'subject': 'shem', 'children': ['arpachshad'], 'case_source': 'Gen 11:10'})   # primeval [act: wayyiqtol at Gen 11:10]
     assert_ink('Gen 11:12', [35]); M['born:shelah'] = birth_day(w, yr(w, M['born:arpachshad']) + 35, 'shelah'); w.marker('Gen 11:12', M['born:shelah'], value='arpachshad lived 35 years and begot shelah', era='life:shelah')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'arpachshad', 'children': ['shelah'], 'case_source': 'Gen 11:12; Gen 10:24'})   # primeval [act: wayyiqtol at Gen 11:12]
     assert_ink('Gen 11:14', [30]); M['born:eber'] = birth_day(w, yr(w, M['born:shelah']) + 30, 'eber'); w.marker('Gen 11:14', M['born:eber'], value='shelah lived 30 years and begot eber', era='life:eber')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'shelah', 'children': ['eber'], 'case_source': 'Gen 11:14; Gen 10:24'})   # primeval [act: wayyiqtol at Gen 11:14]
     assert_ink('Gen 11:16', [34]); M['born:peleg'] = birth_day(w, yr(w, M['born:eber']) + 34, 'peleg'); w.marker('Gen 11:16', M['born:peleg'], value='eber lived 34 years and begot peleg', era='life:peleg')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
     assert_ink('Gen 11:18', [30]); M['born:reu'] = birth_day(w, yr(w, M['born:peleg']) + 30, 'reu'); w.marker('Gen 11:18', M['born:reu'], value='peleg lived 30 years and begot reu', era='life:reu')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'peleg', 'children': ['reu'], 'case_source': 'Gen 11:18'})   # primeval [act: wayyiqtol at Gen 11:18]
     assert_ink('Gen 11:20', [32]); M['born:serug'] = birth_day(w, yr(w, M['born:reu']) + 32, 'serug'); w.marker('Gen 11:20', M['born:serug'], value='reu lived 32 years and begot serug', era='life:serug')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'reu', 'children': ['serug'], 'case_source': 'Gen 11:20'})   # primeval [act: wayyiqtol at Gen 11:20]
     assert_ink('Gen 11:22', [30]); M['born:nahor'] = birth_day(w, yr(w, M['born:serug']) + 30, 'nahor'); w.marker('Gen 11:22', M['born:nahor'], value='serug lived 30 years and begot nahor', era='life:nahor')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'serug', 'children': ['nahor'], 'case_source': 'Gen 11:22'})   # primeval [act: wayyiqtol at Gen 11:22]
     assert_ink('Gen 11:24', [29]); M['born:terah'] = birth_day(w, yr(w, M['born:nahor']) + 29, 'terah'); w.marker('Gen 11:24', M['born:terah'], value='nahor lived 29 years and begot terah', era='life:terah')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'nahor', 'children': ['terah'], 'case_source': 'Gen 11:24'})   # primeval [act: wayyiqtol at Gen 11:24]
     assert_ink('Gen 11:26', [70]); M['born:abraham'] = birth_day(w, yr(w, M['born:terah']) + 70, 'abraham'); w.marker('Gen 11:26', M['born:abraham'], value='terah lived 70 years and begot abraham', era='life:abraham')   # a begetting: the child born in the father's year + N (the day by birth_day: the shelf's row where it gives one)
+    w.submit({'kind': 'begot', 'subject': 'terah', 'children': ['abram', 'nahor-son-of-terah', 'haran'], 'case_source': 'Gen 11:26; Gen 11:27'})   # primeval [act: wayyiqtol at Gen 11:26]
+    w.submit({'kind': 'begot', 'subject': 'haran', 'children': ['lot'], 'case_source': 'Gen 11:27'})   # primeval [act: wayyiqtol at Gen 11:26]
+    w.submit({'kind': 'died', 'subject': 'haran', 'dead': 'haran', 'case_source': 'Gen 11:28'})   # primeval [act: wayyiqtol at Gen 11:28]
+    w.submit({'kind': 'married', 'subject': 'sarai', 'husband': 'abram', 'case_source': 'Gen 11:29'})   # primeval [act: wayyiqtol at Gen 11:29]
+    w.submit({'kind': 'married', 'subject': 'milcah', 'husband': 'nahor-son-of-terah', 'case_source': 'Gen 11:29'})   # primeval [act: wayyiqtol at Gen 11:29]
+    w.submit({'kind': 'barren', 'subject': 'sarai', 'case_source': 'Gen 11:30'})   # primeval [act: wayyiqtol at Gen 11:30]
+    w.submit({'kind': 'journeyed', 'subject': 'terah', 'to': 'Haran', 'case_source': 'Gen 11:31'})   # primeval [act: wayyiqtol at Gen 11:31]
     assert_ink('Gen 11:32', [205]); M['died:terah'] = year_day(w, yr(w, M['born:terah']) + 205); w.marker('Gen 11:32', M['died:terah'], value='all the days of terah: 205 years — the closing total', proleptic=True)   # a lifespan total: proleptic
     # ---- Gen 12 ----
+    w.submit({'kind': 'call_given', 'subject': 'abram', 'case_source': 'Gen 12:1-3'})   # primeval [speech: wayyiqtol at Gen 12:1]
     assert_ink('Gen 12:4', [75]); M['age:abraham:75'] = year_day(w, yr(w, M['born:abraham']) + 75); w.marker('Gen 12:4', M['age:abraham:75'], value='Abram a son of seventy-five years at his going out from Haran')   # an age at an event
+    w.submit({'kind': 'went', 'subject': 'abram', 'case_source': 'Gen 12:4-5'})   # primeval [act: wayyiqtol at Gen 12:4]
+    w.close('abram', 'go_owed', 'Gen 12:4 — and Abram went as the LORD had spoken to him')   # primeval
+    w.submit({'kind': 'journeyed', 'subject': 'abram', 'to': 'the land of Canaan', 'case_source': 'Gen 12:5'})   # primeval [act: wayyiqtol at Gen 12:5]
+    w.submit({'kind': 'journeyed', 'subject': 'abram', 'to': 'the place of Shechem', 'case_source': 'Gen 12:6'})   # primeval [act: wayyiqtol at Gen 12:6]
+    w.submit({'kind': 'appeared', 'subject': 'god', 'to': 'abram', 'case_source': 'Gen 12:7'})   # primeval [act: wayyiqtol at Gen 12:7]
+    w.submit({'kind': 'land_promised', 'subject': 'abram', 'seat': '12:7', 'case_source': 'Gen 12:7'})   # primeval [speech: wayyiqtol at Gen 12:7]
+    w.submit({'kind': 'altar_erected', 'subject': 'abram', 'at': 'the-altar-at-shechem', 'case_source': 'Gen 12:7'})   # primeval [act: wayyiqtol at Gen 12:7]
+    w.submit({'kind': 'journeyed', 'subject': 'abram', 'to': 'the mountain east of Bethel', 'case_source': 'Gen 12:8'})   # primeval [act: wayyiqtol at Gen 12:8]
+    w.submit({'kind': 'altar_erected', 'subject': 'abram', 'at': 'the-altar-at-bethel', 'case_source': 'Gen 12:8'})   # primeval [act: wayyiqtol at Gen 12:8]
+    w.submit({'kind': 'called_on_the_name', 'subject': 'abram', 'case_source': 'Gen 12:8'})   # primeval [act: wayyiqtol at Gen 12:8]
+    w.submit({'kind': 'journeyed', 'subject': 'abram', 'to': 'the Negev', 'case_source': 'Gen 12:9'})   # primeval [act: wayyiqtol at Gen 12:9]
+    w.submit({'kind': 'famine_came', 'subject': 'the-land-of-canaan', 'case_source': 'Gen 12:10'})   # primeval [act: wayyiqtol at Gen 12:10]
+    w.submit({'kind': 'journeyed', 'subject': 'abram', 'to': 'Egypt', 'case_source': 'Gen 12:10'})   # primeval [act: wayyiqtol at Gen 12:10]
+    w.submit({'kind': 'sister_asked', 'subject': 'sarai', 'by': 'abram', 'case_source': 'Gen 12:11-13'})   # primeval [speech: wayyiqtol at Gen 12:11]
+    w.submit({'kind': 'woman_taken', 'subject': 'sarai', 'by': 'pharaoh-of-abram', 'case_source': 'Gen 12:15; Gen 12:14'})   # primeval [act: wayyiqtol at Gen 12:15]
+    w.submit({'kind': 'dealt_well', 'subject': 'pharaoh-of-abram', 'to': 'abram', 'case_source': 'Gen 12:16'})   # primeval [act: wayyiqtol at Gen 12:16]
+    w.submit({'kind': 'plagued', 'subject': 'pharaoh-of-abram', 'plague': "great plagues (12:17 — ra'atan, Bereshit Rabbah 41:2)", 'case_source': 'Gen 12:17'})   # primeval [act: wayyiqtol at Gen 12:17]
+    w.submit({'kind': 'pharaoh_protested', 'subject': 'pharaoh-of-abram', 'case_source': 'Gen 12:18-19'})   # primeval [speech: wayyiqtol at Gen 12:18]
+    w.submit({'kind': 'sent_away', 'subject': 'pharaoh-of-abram', 'case_source': 'Gen 12:20'})   # primeval [act: wayyiqtol at Gen 12:20]
+    w.close('sarai', 'taken_to_pharaohs_house', 'Gen 12:20 — and they sent him away, and his wife')   # primeval
+    # ---- Gen 13 ----
+    w.submit({'kind': 'journeyed', 'subject': 'abram', 'to': 'Bethel again, the place of the altar', 'case_source': 'Gen 13:1-3'})   # primeval [act: wayyiqtol at Gen 13:1]
+    w.submit({'kind': 'called_on_the_name', 'subject': 'abram', 'case_source': 'Gen 13:4'})   # primeval [act: wayyiqtol at Gen 13:4]
+    w.submit({'kind': 'strife_arose', 'subject': 'the-herdsmen', 'case_source': 'Gen 13:7; Gen 13:5-6'})   # primeval [act: wayyiqtol at Gen 13:7]
+    w.submit({'kind': 'separation_proposed', 'subject': 'abram', 'case_source': 'Gen 13:8-9'})   # primeval [speech: wayyiqtol at Gen 13:8]
+    w.submit({'kind': 'lot_chose', 'subject': 'lot', 'case_source': 'Gen 13:10-11'})   # primeval [act: wayyiqtol at Gen 13:10]
+    w.submit({'kind': 'separated', 'subject': 'abram', 'with': 'lot', 'case_source': 'Gen 13:11-12'})   # primeval [act: wayyiqtol at Gen 13:11]
+    w.submit({'kind': 'journeyed', 'subject': 'lot', 'to': 'the cities of the plain, his tent to Sodom', 'case_source': 'Gen 13:12'})   # primeval [act: wayyiqtol at Gen 13:12]
+    w.submit({'kind': 'sodom_wicked', 'subject': 'the-men-of-sodom', 'case_source': 'Gen 13:13'})   # primeval [act: wayyiqtol at Gen 13:12]
+    w.submit({'kind': 'land_promised', 'subject': 'abram', 'seat': '13:15', 'case_source': 'Gen 13:14-17'})   # primeval [speech: wayyiqtol at Gen 13:12]
+    w.submit({'kind': 'journeyed', 'subject': 'abram', 'to': 'the terebinths of Mamre at Hebron', 'case_source': 'Gen 13:18'})   # primeval [act: wayyiqtol at Gen 13:18]
+    w.submit({'kind': 'altar_erected', 'subject': 'abram', 'at': 'the-altar-at-hebron', 'case_source': 'Gen 13:18'})   # primeval [act: wayyiqtol at Gen 13:18]
+    # ---- Gen 14 ----
+    w.submit({'kind': 'war_waged', 'subject': 'the-four-kings', 'against': 'the-five-kings', 'years': [12, 13, 14], 'case_source': 'Gen 14:1-2; Gen 14:4-11'})   # primeval [act: wayyiqtol at Gen 14:1]
+    w.submit({'kind': 'lot_taken', 'subject': 'the-four-kings', 'captive': 'lot', 'case_source': 'Gen 14:12'})   # primeval [act: wayyiqtol at Gen 14:12]
+    w.submit({'kind': 'escapee_told', 'subject': 'the-escapee', 'case_source': 'Gen 14:13'})   # primeval [act: wayyiqtol at Gen 14:13]
+    w.submit({'kind': 'mustered_and_pursued', 'subject': 'abram', 'count': 318, 'case_source': 'Gen 14:14-15'})   # primeval [act: wayyiqtol at Gen 14:14]
+    w.submit({'kind': 'brought_back', 'subject': 'abram', 'case_source': 'Gen 14:16'})   # primeval [act: wayyiqtol at Gen 14:16]
+    w.close('lot', 'taken_captive', 'Gen 14:16 — and also Lot his brother and his goods he brought back')   # primeval
+    w.submit({'kind': 'bread_and_wine_brought', 'subject': 'melchizedek', 'to': 'abram', 'case_source': 'Gen 14:18-20'})   # primeval [act: wayyiqtol at Gen 14:17]
+    w.submit({'kind': 'tithe_given', 'subject': 'abram', 'to': 'melchizedek', 'case_source': 'Gen 14:20'})   # primeval [act: wayyiqtol at Gen 14:20]
+    w.submit({'kind': 'kings_demand_refused', 'subject': 'abram', 'case_source': 'Gen 14:21-24'})   # primeval [speech: wayyiqtol at Gen 14:21]
+    # ---- Gen 15 ----
+    assert_ink('Gen 15:1', []); CPY = WE.CAL_PARAMS['covenant_pieces_year']['settings']; M['covenant_pieces'] = year_day(w, yr(w, M['born:abraham']) + int(CPY[P['covenant_placement']['value']])); w.marker('Gen 15:1', M['covenant_pieces'], value='the covenant between the pieces — READING-PLACED (the row covenant_pieces_year): Bereshit Rabbah 46:2 eighty-five, the running setting, inside the page-order bound [12:4, 16:3]; the Mekhilta on Exod 12:40 seventy, the fork\'s covenant_pieces world — earlier than the counter, RETROGRADE there, the stretch closed at 16:1; C3d the join under both', placement='reading_placed')   # the covenant: reading-placed, the year by the row (the fork runs it retrograde)
+    w.submit({'kind': 'word_came', 'subject': 'abram', 'case_source': 'Gen 15:1; Gen 15:2'})   # primeval [speech: wayyiqtol at Gen 15:2]
+    w.submit({'kind': 'heir_questioned', 'subject': 'abram', 'case_source': 'Gen 15:2-3'})   # primeval [speech: wayyiqtol at Gen 15:2]
+    w.submit({'kind': 'heir_declared', 'subject': 'abram', 'case_source': 'Gen 15:4'})   # primeval [speech: wayyiqtol at Gen 15:3]
+    w.submit({'kind': 'stars_shown', 'subject': 'abram', 'case_source': 'Gen 15:5'})   # primeval [act: wayyiqtol at Gen 15:5]
+    w.submit({'kind': 'believed', 'subject': 'abram', 'in': 'the LORD (15:6)', 'case_source': 'Gen 15:6'})   # primeval [act: wayyiqtol at Gen 15:6]
+    w.submit({'kind': 'land_promised', 'subject': 'abram', 'seat': '15:7', 'case_source': 'Gen 15:7'})   # primeval [speech: wayyiqtol at Gen 15:7]
+    w.submit({'kind': 'sign_asked', 'subject': 'abram', 'case_source': 'Gen 15:8'})   # primeval [speech: wayyiqtol at Gen 15:8]
+    w.submit({'kind': 'pieces_commanded', 'subject': 'abram', 'case_source': 'Gen 15:9'})   # primeval [speech: wayyiqtol at Gen 15:9]
+    w.submit({'kind': 'pieces_cut', 'subject': 'abram', 'case_source': 'Gen 15:10-11'})   # primeval [act: wayyiqtol at Gen 15:10]
+    w.close('abram', 'pieces_owed', 'Gen 15:10 — and he took him all these')   # primeval
+    w.submit({'kind': 'deep_sleep_fell', 'subject': 'abram', 'kind_of_sleep': 'the deep sleep of prophecy (Bereshit Rabbah 44:17)', 'case_source': 'Gen 15:12', 'slot': 'sunset'})   # primeval [act: wayyiqtol at Gen 15:12]
+    w.submit({'kind': 'decree_of_the_sojourn', 'subject': 'the-seed-of-abraham', 'years': 400, 'case_source': 'Gen 15:13-16'})   # primeval [speech: wayyiqtol at Gen 15:13]
+    w.submit({'kind': 'passed_between_the_pieces', 'subject': 'the-pieces', 'case_source': 'Gen 15:17', 'slot': 'sunset'})   # primeval [act: wayyiqtol at Gen 15:17]
+    w.submit({'kind': 'covenant_cut_with_abram', 'subject': 'abram', 'case_source': 'Gen 15:18-21'})   # primeval [act: wayyiqtol at Gen 15:17]
+    w.close('abram', 'land_promised', 'Gen 15:18 — to your seed I HAVE GIVEN this land (the perfect: the three promises kept)')   # primeval
+    w.close('abram', 'land_promised', 'Gen 15:18 — to your seed I HAVE GIVEN this land (the perfect: the three promises kept)')   # primeval
+    w.close('abram', 'land_promised', 'Gen 15:18 — to your seed I HAVE GIVEN this land (the perfect: the three promises kept)')   # primeval
     # ---- Gen 16 ----
+    assert_ink('Gen 16:3', [10]); M['hagar_given'] = year_day(w, yr(w, M['age:abraham:75']) + 10); w.marker('Gen 16:1', M['hagar_given'], value='at the end of ten years of Abram\'s dwelling in the land of Canaan (16:3) — Hagar given at eighty-five (12:4\'s seventy-five + the ten; the day modeled at the year\'s first): CG6; POSITIONED AT 16:1, the first verse outside Genesis 15 — the ink-derived forward marker that closes the covenant\'s stretch where the fork runs it retrograde (O9 T2)')   # Hagar given: the ten years from the arrival — the numbers at 16:3, the position 16:1 (O9 T2: the stretch's close)
+    w.submit({'kind': 'hagar_offered', 'subject': 'sarai', 'case_source': 'Gen 16:2'})   # primeval [speech: wayyiqtol at Gen 16:2]
+    w.submit({'kind': 'married', 'subject': 'hagar', 'husband': 'abram', 'case_source': 'Gen 16:3'})   # primeval [act: wayyiqtol at Gen 16:3]
+    w.submit({'kind': 'conceived_and_despised', 'subject': 'hagar', 'case_source': 'Gen 16:4'})   # primeval [act: wayyiqtol at Gen 16:4]
+    w.submit({'kind': 'wrong_claimed', 'subject': 'sarai', 'case_source': 'Gen 16:5'})   # primeval [speech: wayyiqtol at Gen 16:5]
+    w.submit({'kind': 'maid_released', 'subject': 'sarai', 'case_source': 'Gen 16:6'})   # primeval [speech: wayyiqtol at Gen 16:6]
+    w.submit({'kind': 'afflicted', 'subject': 'sarai', 'whom': 'hagar', 'case_source': 'Gen 16:6'})   # primeval [act: wayyiqtol at Gen 16:6]
+    w.submit({'kind': 'fled', 'subject': 'hagar', 'from': 'sarai', 'case_source': 'Gen 16:6; Gen 16:8'})   # primeval [act: wayyiqtol at Gen 16:6]
+    w.submit({'kind': 'angel_found', 'subject': 'the-angel-of-the-lord', 'whom': 'hagar', 'case_source': 'Gen 16:7-8'})   # primeval [act: wayyiqtol at Gen 16:7]
+    w.submit({'kind': 'return_commanded', 'subject': 'hagar', 'case_source': 'Gen 16:9'})   # primeval [speech: wayyiqtol at Gen 16:9]
+    w.submit({'kind': 'seed_promised_to_hagar', 'subject': 'hagar', 'case_source': 'Gen 16:10'})   # primeval [speech: wayyiqtol at Gen 16:10]
+    w.submit({'kind': 'ishmael_announced', 'subject': 'hagar', 'case_source': 'Gen 16:11-12'})   # primeval [speech: wayyiqtol at Gen 16:11]
+    w.submit({'kind': 'named', 'subject': 'god', 'name': 'You are a God of seeing (אל ראי, 16:13)', 'by': 'hagar', 'case_source': 'Gen 16:13'})   # primeval [act: wayyiqtol at Gen 16:13]
+    w.submit({'kind': 'named', 'subject': 'the-well-lachai-roi', 'name': 'Beer-lahai-roi (16:14)', 'by': 'hagar', 'case_source': 'Gen 16:14'})   # primeval [act: wayyiqtol at Gen 16:13]
+    w.submit({'kind': 'bore', 'subject': 'hagar', 'child': 'ishmael', 'case_source': 'Gen 16:15'})   # primeval [act: wayyiqtol at Gen 16:15]
+    w.submit({'kind': 'named', 'subject': 'ishmael', 'name': 'Ishmael (ישמעאל — for the LORD has heard, 16:11, 16:15)', 'by': 'abram', 'case_source': 'Gen 16:15'})   # primeval [act: wayyiqtol at Gen 16:15]
+    w.close('hagar', 'ishmael_announced', 'Gen 16:15 — and Hagar bore Abram a son')   # primeval
+    w.close('abram', 'childless', 'Gen 16:15 — a son born to Abram')   # primeval
     assert_ink('Gen 16:16', [86]); M['age:abraham:86'] = year_day(w, yr(w, M['born:abraham']) + 86); M['born:ishmael'] = birth_day(w, yr(w, M['age:abraham:86']), 'ishmael'); w.marker('Gen 16:16', M['born:ishmael'], value='Abram a son of eighty-six years when Hagar bore Ishmael', era='life:ishmael')   # an age at an event
     # ---- Gen 17 ----
     assert_ink('Gen 17:1', [99]); M['age:abraham:99'] = year_day(w, yr(w, M['born:abraham']) + 99); w.marker('Gen 17:1', M['age:abraham:99'], value='Abram a son of ninety-nine years')   # an age at an event
@@ -341,12 +577,109 @@ def tape(w, M, P):
     w.close('abraham', 'wholeness_owed', 'Gen 17:24 (Nedarim 31b:11: whole when he circumcised)')   # pre_sinai
     w.submit({'kind': 'circumcised', 'subject': 'ishmael', 'case_source': 'Gen 17:25'})   # pre_sinai [act: wayyiqtol at Gen 17:23]
     w.close('ishmael', 'circumcision_due', 'Gen 17:25')   # pre_sinai
+    # ---- Gen 18 ----
+    assert_ink('Gen 18:10', []); M['mamre'] = cal_day(w, yr(w, M['age:abraham:99']), 1, 15); w.marker('Gen 18:1', M['mamre'], value='the visit at Mamre — placed on Passover of Abraham\'s ninety-ninth year (17:1, the year before 21:5\'s hundred) (Bereshit Rabbah 48:12 on 18:6\'s cakes: the row mamre_visit_date), joined by the ink\'s own at this season (18:10, 18:14) and at the set time (21:2): CH0')   # the visit: no numeral — the season phrase; the year off 17:1's ninety-nine (set before 18:1 on the tape), the reading-placed date at 18:1
+    w.submit({'kind': 'appeared', 'subject': 'abraham', 'at': 'the terebinths of Mamre', 'case_source': 'Gen 18:1'})   # mamre [act: wayyiqtol at Gen 18:1]
+    w.submit({'kind': 'ran_and_bowed', 'subject': 'abraham', 'case_source': 'Gen 18:2'})   # mamre [act: wayyiqtol at Gen 18:2]
+    w.submit({'kind': 'hospitality_offered', 'subject': 'abraham', 'case_source': 'Gen 18:3-5'})   # mamre [speech: wayyiqtol at Gen 18:3]
+    w.submit({'kind': 'cakes_ordered', 'subject': 'abraham', 'measures': 3, 'case_source': 'Gen 18:6'})   # mamre [speech: wayyiqtol at Gen 18:6]
+    w.submit({'kind': 'calf_prepared', 'subject': 'abraham', 'case_source': 'Gen 18:7'})   # mamre [act: wayyiqtol at Gen 18:7]
+    w.submit({'kind': 'meal_served', 'subject': 'abraham', 'case_source': 'Gen 18:8'})   # mamre [act: wayyiqtol at Gen 18:8]
+    w.submit({'kind': 'son_promised', 'subject': 'sarah', 'years': 1, 'case_source': 'Gen 18:10; Gen 18:14'})   # mamre [speech: wayyiqtol at Gen 18:10]
+    w.submit({'kind': 'laughed_within', 'subject': 'sarah', 'case_source': 'Gen 18:12'})   # mamre [act: wayyiqtol at Gen 18:12]
+    w.submit({'kind': 'laugh_denied', 'subject': 'sarah', 'case_source': 'Gen 18:15'})   # mamre [speech: wayyiqtol at Gen 18:15]
+    w.submit({'kind': 'escorted', 'subject': 'abraham', 'case_source': 'Gen 18:16'})   # mamre [act: wayyiqtol at Gen 18:16]
+    w.submit({'kind': 'house_charged', 'subject': 'abraham', 'case_source': 'Gen 18:17-19'})   # mamre [speech: wayyiqtol at Gen 18:16]
+    w.submit({'kind': 'outcry_declared', 'subject': 'sodom', 'case_source': 'Gen 18:20-21'})   # mamre [speech: wayyiqtol at Gen 18:20]
+    w.submit({'kind': 'stood_before_the_lord', 'subject': 'abraham', 'case_source': 'Gen 18:22'})   # mamre [act: wayyiqtol at Gen 18:22]
+    w.submit({'kind': 'pleaded_for_the_righteous', 'subject': 'abraham', 'counts': [50, 45, 40, 30, 20, 10], 'case_source': 'Gen 18:23-32'})   # mamre [speech: wayyiqtol at Gen 18:23]
+    w.submit({'kind': 'lord_departed', 'subject': 'god', 'case_source': 'Gen 18:33'})   # mamre [act: wayyiqtol at Gen 18:33]
+    # ---- Gen 19 ----
+    w.submit({'kind': 'ran_and_bowed', 'subject': 'lot', 'case_source': 'Gen 19:1', 'slot': 'evening'})   # mamre [act: wayyiqtol at Gen 19:1]
+    w.submit({'kind': 'hospitality_offered', 'subject': 'lot', 'case_source': 'Gen 19:2'})   # mamre [speech: wayyiqtol at Gen 19:2]
+    w.submit({'kind': 'lodging_urged', 'subject': 'lot', 'case_source': 'Gen 19:3'})   # mamre [act: wayyiqtol at Gen 19:3]
+    w.submit({'kind': 'matzot_baked', 'subject': 'lot', 'case_source': 'Gen 19:3'})   # mamre [act: wayyiqtol at Gen 19:3]
+    w.submit({'kind': 'house_surrounded', 'subject': 'lot', 'case_source': 'Gen 19:4'})   # mamre [act: wayyiqtol at Gen 19:3]
+    w.submit({'kind': 'men_demanded', 'subject': 'the-men-of-sodom', 'case_source': 'Gen 19:5', 'slot': 'night'})   # mamre [speech: wayyiqtol at Gen 19:5]
+    w.submit({'kind': 'daughters_offered', 'subject': 'lot', 'case_source': 'Gen 19:8'})   # mamre [speech: wayyiqtol at Gen 19:7]
+    w.submit({'kind': 'pressed_at_the_door', 'subject': 'the-men-of-sodom', 'case_source': 'Gen 19:9'})   # mamre [act: wayyiqtol at Gen 19:9]
+    w.submit({'kind': 'pulled_in', 'subject': 'lot', 'case_source': 'Gen 19:10'})   # mamre [act: wayyiqtol at Gen 19:10]
+    w.submit({'kind': 'struck_blind', 'subject': 'the-men-of-sodom', 'case_source': 'Gen 19:11'})   # mamre [act: wayyiqtol at Gen 19:11]
+    w.submit({'kind': 'evacuation_commanded', 'subject': 'lot', 'case_source': 'Gen 19:12-13; Gen 19:15'})   # mamre [speech: wayyiqtol at Gen 19:12]
+    w.submit({'kind': 'mocked_by_sons_in_law', 'subject': 'lot', 'case_source': 'Gen 19:14'})   # mamre [act: wayyiqtol at Gen 19:14]
+    assert_ink('Gen 19:15', []); M['sodom_dawn'] = M['mamre'] + 1; w.marker('Gen 19:15', M['sodom_dawn'], value='when the dawn rose (19:15; 19:1 at evening, 19:23 the sun had risen): the day after the visit')   # the dawn: the visit plus one
+    w.submit({'kind': 'lingered', 'subject': 'lot', 'case_source': 'Gen 19:16'})   # mamre [act: wayyiqtol at Gen 19:16]
+    w.submit({'kind': 'led_out', 'subject': 'lot_and_his_house', 'case_source': 'Gen 19:16'})   # mamre [act: wayyiqtol at Gen 19:16]
+    w.close('lot', 'evacuation_owed', 'Gen 19:16 — led out')   # mamre
+    w.submit({'kind': 'escape_commanded', 'subject': 'lot_and_his_house', 'case_source': 'Gen 19:17'})   # mamre [speech: wayyiqtol at Gen 19:17]
+    w.submit({'kind': 'little_city_pleaded', 'subject': 'lot', 'case_source': 'Gen 19:18-20'})   # mamre [speech: wayyiqtol at Gen 19:18]
+    w.submit({'kind': 'city_spared', 'subject': 'zoar', 'case_source': 'Gen 19:21-22'})   # mamre [speech: wayyiqtol at Gen 19:21]
+    w.submit({'kind': 'named', 'subject': 'zoar', 'name': 'Zoar (צוער — the little one, 19:22)', 'by': 'the report formula', 'case_source': 'Gen 19:22'})   # mamre [act: wayyiqtol at Gen 19:19]
+    w.submit({'kind': 'fire_rained', 'subject': 'the-cities-of-the-plain', 'case_source': 'Gen 19:23-24'})   # mamre [act: wayyiqtol at Gen 19:19]
+    w.close('sodom', 'spared_for_the_ten', 'Gen 19:24 — the ten not found')   # mamre
+    w.submit({'kind': 'overturned', 'subject': 'the-cities-of-the-plain', 'case_source': 'Gen 19:25'})   # mamre [act: wayyiqtol at Gen 19:25]
+    w.close('sodom', 'outcry_to_be_seen', 'Gen 19:25 — the overthrow')   # mamre
+    w.submit({'kind': 'looked_back', 'subject': 'lots-wife', 'case_source': 'Gen 19:26'})   # mamre [act: wayyiqtol at Gen 19:26]
+    w.submit({'kind': 'rose_to_the_place', 'subject': 'abraham', 'case_source': 'Gen 19:27-28', 'slot': 'morning'})   # mamre [act: wayyiqtol at Gen 19:27]
+    w.submit({'kind': 'remembered', 'subject': 'abraham', 'case_source': 'Gen 19:29'})   # mamre [act: wayyiqtol at Gen 19:29]
+    w.submit({'kind': 'sent_away', 'subject': 'lot', 'case_source': 'Gen 19:29'})   # mamre [act: wayyiqtol at Gen 19:29]
+    w.submit({'kind': 'dwelt_in_the_cave', 'subject': 'lot', 'case_source': 'Gen 19:30'})   # mamre [act: wayyiqtol at Gen 19:30]
+    w.submit({'kind': 'made_the_father_drink', 'subject': 'the-two-daughters', 'night': 'the first', 'case_source': 'Gen 19:33', 'slot': 'night'})   # mamre [act: wayyiqtol at Gen 19:33]
+    w.submit({'kind': 'made_the_father_drink', 'subject': 'the-two-daughters', 'night': 'the second', 'case_source': 'Gen 19:35-36', 'slot': 'night'})   # mamre [act: wayyiqtol at Gen 19:35]
+    w.submit({'kind': 'bore', 'subject': 'ha-bekhirah', 'child': 'moab', 'case_source': 'Gen 19:37'})   # mamre [act: wayyiqtol at Gen 19:37]
+    w.submit({'kind': 'named', 'subject': 'moab', 'name': 'Moab (מואב, 19:37)', 'by': 'ha-bekhirah', 'case_source': 'Gen 19:37'})   # mamre [act: wayyiqtol at Gen 19:37]
+    w.submit({'kind': 'bore', 'subject': 'the-younger-daughter', 'child': 'ben-ammi', 'case_source': 'Gen 19:38'})   # mamre [act: wayyiqtol at Gen 19:38]
+    w.submit({'kind': 'named', 'subject': 'ben-ammi', 'name': 'Ben-ammi (בן עמי, 19:38)', 'by': 'the-younger-daughter', 'case_source': 'Gen 19:38'})   # mamre [act: wayyiqtol at Gen 19:38]
+    # ---- Gen 20 ----
+    w.submit({'kind': 'journeyed', 'subject': 'abraham', 'to': 'Gerar — between Kadesh and Shur', 'case_source': 'Gen 20:1'})   # mamre [act: wayyiqtol at Gen 20:1]
+    w.submit({'kind': 'sister_asked', 'subject': 'sarah', 'by': 'abraham', 'case_source': 'Gen 20:2'})   # mamre [speech: wayyiqtol at Gen 20:2]
+    w.submit({'kind': 'woman_taken', 'subject': 'sarah', 'by': 'abimelech', 'case_source': 'Gen 20:2'})   # mamre [act: wayyiqtol at Gen 20:2]
+    w.submit({'kind': 'came_in_a_dream', 'subject': 'abimelech', 'warning': 'you are a dead man because of the woman', 'case_source': 'Gen 20:3', 'slot': 'night'})   # mamre [speech: wayyiqtol at Gen 20:3]
+    w.submit({'kind': 'king_pleaded', 'subject': 'abimelech', 'case_source': 'Gen 20:4-5'})   # mamre [speech: wayyiqtol at Gen 20:4]
+    w.submit({'kind': 'prophet_declared', 'subject': 'abimelech', 'case_source': 'Gen 20:6-7'})   # mamre [speech: wayyiqtol at Gen 20:6]
+    w.submit({'kind': 'servants_told', 'subject': 'the_house_of_abimelech', 'case_source': 'Gen 20:8', 'slot': 'morning'})   # mamre [act: wayyiqtol at Gen 20:8]
+    w.submit({'kind': 'rebuked', 'subject': 'abraham', 'by': 'abimelech', 'case_source': 'Gen 20:9-10'})   # mamre [speech: wayyiqtol at Gen 20:9]
+    w.submit({'kind': 'answered_the_king', 'subject': 'abraham', 'case_source': 'Gen 20:11-13'})   # mamre [speech: wayyiqtol at Gen 20:11]
+    w.submit({'kind': 'restored', 'subject': 'abraham', 'case_source': 'Gen 20:14'})   # mamre [act: wayyiqtol at Gen 20:14]
+    w.close('abimelech', 'return_owed', 'Gen 20:14 — Sarah returned')   # mamre
+    w.submit({'kind': 'dwelling_granted', 'subject': 'abraham', 'case_source': 'Gen 20:15'})   # mamre [speech: wayyiqtol at Gen 20:15]
+    w.submit({'kind': 'silver_given', 'subject': 'sarah', 'amount': 1000, 'case_source': 'Gen 20:16'})   # mamre [speech: wayyiqtol at Gen 20:15]
+    w.submit({'kind': 'prayed', 'subject': 'abraham', 'for': 'abimelech', 'case_source': 'Gen 20:17'})   # mamre [act: wayyiqtol at Gen 20:17]
+    w.submit({'kind': 'healed', 'subject': 'the_house_of_abimelech', 'case_source': 'Gen 20:17'})   # mamre [act: wayyiqtol at Gen 20:17]
+    w.close('abimelech', 'death_decreed_over_the_woman', 'Gen 20:17 — healed')   # mamre
+    w.submit({'kind': 'wombs_shut', 'subject': 'the_house_of_abimelech', 'case_source': 'Gen 20:18'})   # mamre [act: wayyiqtol at Gen 20:17]
     # ---- Gen 21 ----
-    assert_ink('Gen 21:5', [100]); M['age:abraham:100'] = year_day(w, yr(w, M['born:abraham']) + 100); M['born:isaac'] = birth_day(w, yr(w, M['age:abraham:100']), 'isaac'); w.marker('Gen 21:5', M['born:isaac'], value='Abraham a son of a hundred years when Isaac was born', era='life:isaac')   # an age at an event — placed at the birth verse 21:2, the number from 21:5
+    assert_ink('Gen 21:5', [100]); M['age:abraham:100'] = year_day(w, yr(w, M['born:abraham']) + 100); M['born:isaac'] = birth_day(w, yr(w, M['age:abraham:100']), 'isaac'); w.marker('Gen 21:2', M['born:isaac'], value='Abraham a son of a hundred years when Isaac was born', era='life:isaac')   # an age at an event — placed at the birth verse 21:2, the number from 21:5
     w.submit({'kind': 'born', 'subject': 'isaac', 'case_source': 'Gen 21:2'})   # pre_sinai [act: wayyiqtol at Gen 21:2]
     assert_ink('Gen 21:4', [8]); M['eighth_day'] = M['born:isaac'] + 7; w.marker('Gen 21:4', M['eighth_day'], value='on the eighth day (the birth day the first): Isaac circumcised')   # the eighth day, inclusive
     w.submit({'kind': 'circumcised', 'subject': 'isaac', 'case_source': 'Gen 21:4'})   # pre_sinai [act: wayyiqtol at Gen 21:4]
     w.close('isaac', 'circumcision_due', 'Gen 21:4')   # pre_sinai
+    # ---- Gen 22 ----
+    assert_ink('Gen 22:1', []); M['binding'] = year_day(w, yr(w, M['born:isaac']) + 37); w.marker('Gen 22:1', M['binding'], value='the binding — READING-PLACED at Isaac\'s thirty-seven, the year of Sarah\'s death (Bereshit Rabbah 58:5: she died of that grief; 17:17 and 23:1 give the thirty-seven; the row binding_placement), the day modeled at the year\'s first', placement='reading_placed')   # the binding: reading-placed, Isaac 37
+    w.submit({'kind': 'tested', 'subject': 'abraham', 'case_source': 'Gen 22:1'})   # mamre [act: wayyiqtol at Gen 22:1]
+    w.submit({'kind': 'offering_commanded', 'subject': 'abraham', 'case_source': 'Gen 22:2'})   # mamre [speech: wayyiqtol at Gen 22:2]
+    w.submit({'kind': 'rose_early_and_went', 'subject': 'abraham', 'case_source': 'Gen 22:3', 'slot': 'morning'})   # mamre [act: wayyiqtol at Gen 22:3]
+    assert_ink('Gen 22:4', [], ordinals=[3]); M['moriah_seen'] = M['binding'] + 2; w.marker('Gen 22:4', M['moriah_seen'], value='on the third day (22:4) — the binding\'s day plus two, inclusive', placement='reading_placed')   # the third day, inclusive
+    w.submit({'kind': 'place_seen_on_the_third_day', 'subject': 'abraham', 'ordinal': 3, 'case_source': 'Gen 22:4'})   # mamre [act: wayyiqtol at Gen 22:4]
+    w.submit({'kind': 'lads_left', 'subject': 'the-two-lads', 'case_source': 'Gen 22:5'})   # mamre [speech: wayyiqtol at Gen 22:5]
+    w.submit({'kind': 'wood_laid', 'subject': 'isaac', 'case_source': 'Gen 22:6'})   # mamre [act: wayyiqtol at Gen 22:6]
+    w.submit({'kind': 'lamb_asked', 'subject': 'isaac', 'case_source': 'Gen 22:7-8'})   # mamre [speech: wayyiqtol at Gen 22:7]
+    w.submit({'kind': 'altar_erected', 'subject': 'the-altar-at-moriah', 'by': 'abraham', 'case_source': 'Gen 22:9'})   # mamre [act: wayyiqtol at Gen 22:9]
+    w.submit({'kind': 'bound', 'subject': 'isaac', 'case_source': 'Gen 22:9'})   # mamre [act: wayyiqtol at Gen 22:9]
+    w.submit({'kind': 'knife_taken', 'subject': 'abraham', 'case_source': 'Gen 22:10'})   # mamre [act: wayyiqtol at Gen 22:10]
+    w.submit({'kind': 'called_from_heaven', 'subject': 'abraham', 'time': 'the first', 'case_source': 'Gen 22:11-12'})   # mamre [speech: wayyiqtol at Gen 22:11]
+    w.close('abraham', 'offering_of_the_son_owed', 'Gen 22:12 — the hand stayed')   # mamre
+    w.close('abraham', 'tried', 'Gen 22:12 — now I know')   # mamre
+    w.submit({'kind': 'ram_seen', 'subject': 'the-ram-at-moriah', 'case_source': 'Gen 22:13'})   # mamre [act: wayyiqtol at Gen 22:13]
+    w.submit({'kind': 'olah_offered', 'subject': 'abraham', 'what': 'the ram, in place of his son', 'case_source': 'Gen 22:13'})   # mamre [act: wayyiqtol at Gen 22:13]
+    w.submit({'kind': 'named', 'subject': 'the-altar-at-moriah', 'name': 'the LORD will see (יהוה יראה, 22:14)', 'by': 'abraham', 'case_source': 'Gen 22:14'})   # mamre [act: wayyiqtol at Gen 22:14]
+    w.submit({'kind': 'called_from_heaven', 'subject': 'abraham', 'time': 'the second', 'case_source': 'Gen 22:15'})   # mamre [speech: wayyiqtol at Gen 22:15]
+    w.submit({'kind': 'sworn_by_himself', 'subject': 'abraham', 'case_source': 'Gen 22:16-18'})   # mamre [speech: wayyiqtol at Gen 22:16]
+    w.submit({'kind': 'journeyed', 'subject': 'abraham', 'to': 'Beersheba', 'case_source': 'Gen 22:19'})   # mamre [act: wayyiqtol at Gen 22:19]
+    w.submit({'kind': 'births_told', 'subject': 'abraham', 'count': 8, 'case_source': 'Gen 22:20-24'})   # mamre [speech: wayyiqtol at Gen 22:20]
+    w.submit({'kind': 'begot', 'subject': 'nahor', 'children': ['uz', 'buz', 'kemuel', 'chesed', 'hazo', 'pildash', 'jidlaph', 'bethuel'], 'case_source': 'Gen 22:20-22'})   # mamre [act: wayyiqtol at Gen 22:20]
+    w.submit({'kind': 'begot', 'subject': 'bethuel', 'children': ['rebekah'], 'case_source': 'Gen 22:23'})   # mamre [act: wayyiqtol at Gen 22:20]
+    w.submit({'kind': 'begot', 'subject': 'nahor', 'children': ['tebah', 'gaham', 'tahash', 'maacah'], 'by': 'reumah', 'case_source': 'Gen 22:24'})   # mamre [act: wayyiqtol at Gen 22:24]
     # ---- Gen 23 ----
     w.submit({'kind': 'died', 'subject': 'abraham', 'dead': 'sarah', 'case_source': 'Gen 23:2-4'})   # family [act: wayyiqtol at Gen 23:2]
     w.submit({'kind': 'purchased', 'subject': 'abraham', 'price': 400, 'case_source': 'Gen 23:16-20'})   # family [act: wayyiqtol at Gen 23:16]
@@ -358,17 +691,412 @@ def tape(w, M, P):
     w.submit({'kind': 'handed', 'subject': 'rebekah', 'agent': 'the-servant', 'case_source': 'Gen 24:59-61'})   # family [act: wayyiqtol at Gen 24:59]
     w.submit({'kind': 'married', 'subject': 'rebekah', 'husband': 'isaac', 'case_source': 'Gen 24:67'})   # family [act: wayyiqtol at Gen 24:67]
     # ---- Gen 25 ----
+    w.submit({'kind': 'married', 'subject': 'keturah', 'husband': 'abraham', 'case_source': 'Gen 25:1'})   # mamre [act: wayyiqtol at Gen 25:1]
+    w.submit({'kind': 'bore', 'subject': 'keturah', 'child': ['zimran', 'jokshan', 'medan', 'midian', 'ishbak', 'shuah'], 'case_source': 'Gen 25:2'})   # mamre [act: wayyiqtol at Gen 25:2]
+    w.submit({'kind': 'begot', 'subject': 'jokshan', 'children': ['sheba', 'dedan'], 'case_source': 'Gen 25:3'})   # mamre [act: wayyiqtol at Gen 25:2]
+    w.submit({'kind': 'begot', 'subject': 'dedan', 'children': ['the-asshurim', 'the-letushim', 'the-leummim'], 'case_source': 'Gen 25:3'})   # mamre [act: wayyiqtol at Gen 25:2]
+    w.submit({'kind': 'begot', 'subject': 'midian', 'children': ['ephah', 'epher', 'hanoch', 'abida', 'eldaah'], 'case_source': 'Gen 25:4'})   # mamre [act: wayyiqtol at Gen 25:2]
+    w.submit({'kind': 'all_given', 'subject': 'isaac', 'case_source': 'Gen 25:5'})   # mamre [act: wayyiqtol at Gen 25:5]
+    w.submit({'kind': 'gifts_given', 'subject': 'the-sons-of-the-concubines', 'by': 'abraham', 'case_source': 'Gen 25:6'})   # mamre [act: wayyiqtol at Gen 25:6]
+    w.submit({'kind': 'sent_away', 'subject': 'the-sons-of-the-concubines', 'case_source': 'Gen 25:6'})   # mamre [act: wayyiqtol at Gen 25:6]
     assert_ink('Gen 25:7', [175]); M['died:abraham'] = year_day(w, yr(w, M['born:abraham']) + 175); w.marker('Gen 25:7', M['died:abraham'], value='all the days of abraham: 175 years — the closing total', proleptic=True)   # a lifespan total: proleptic
+    w.submit({'kind': 'died', 'subject': 'abraham', 'age': 175, 'case_source': 'Gen 25:7-8'})   # mamre [act: wayyiqtol at Gen 25:6]
+    w.close('abraham', 'buried_in_peace', "Gen 25:8 — S2's entry: nothing to close here")   # mamre
+    w.submit({'kind': 'buried', 'subject': 'abraham', 'by': ['isaac', 'ishmael'], 'at': 'the cave of Machpelah', 'case_source': 'Gen 25:9-10'})   # mamre [act: wayyiqtol at Gen 25:9]
+    w.submit({'kind': 'blessed_after_the_death', 'subject': 'isaac', 'case_source': 'Gen 25:11'})   # mamre [act: wayyiqtol at Gen 25:11]
+    w.submit({'kind': 'princes_counted', 'subject': 'ishmael', 'names': ['nebaioth', 'kedar', 'adbeel', 'mibsam', 'mishma', 'dumah', 'massa', 'hadad', 'tema', 'jetur', 'naphish', 'kedemah'], 'case_source': 'Gen 25:13-16'})   # mamre [act: wayyiqtol at Gen 25:11]
+    w.close('hagar', 'seed_multiplied', "Gen 25:16 — S2's entry: nothing to close here")   # mamre
     assert_ink('Gen 25:17', [137]); M['died:ishmael'] = year_day(w, yr(w, M['born:ishmael']) + 137); w.marker('Gen 25:17', M['died:ishmael'], value='all the days of ishmael: 137 years — the closing total', proleptic=True)   # a lifespan total: proleptic
+    w.submit({'kind': 'died', 'subject': 'ishmael', 'age': 137, 'case_source': 'Gen 25:17'})   # mamre [act: wayyiqtol at Gen 25:17]
+    w.submit({'kind': 'fell_before_his_brothers', 'subject': 'ishmael', 'case_source': 'Gen 25:18'})   # mamre [act: wayyiqtol at Gen 25:18]
     assert_ink('Gen 25:20', [40]); M['age:isaac:40'] = year_day(w, yr(w, M['born:isaac']) + 40); w.marker('Gen 25:20', M['age:isaac:40'], value='Isaac a son of forty years when he took Rebekah')   # an age at an event
+    w.submit({'kind': 'prayed', 'subject': 'isaac', 'for': 'rebekah', 'case_source': 'Gen 25:21'})   # mamre [act: wayyiqtol at Gen 25:21]
+    w.submit({'kind': 'struggled_in_the_womb', 'subject': 'rebekah', 'case_source': 'Gen 25:22'})   # mamre [act: wayyiqtol at Gen 25:22]
+    w.submit({'kind': 'inquired', 'subject': 'rebekah', 'case_source': 'Gen 25:22'})   # mamre [act: wayyiqtol at Gen 25:22]
+    w.submit({'kind': 'oracle_given', 'subject': 'rebekah', 'case_source': 'Gen 25:23'})   # mamre [speech: wayyiqtol at Gen 25:23]
+    w.submit({'kind': 'born', 'subject': 'esau', 'mother': 'rebekah', 'sex': 'm', 'order': 'the first, red', 'case_source': 'Gen 25:24-25'})   # mamre [act: wayyiqtol at Gen 25:24]
+    w.submit({'kind': 'named', 'subject': 'esau', 'name': 'Esau (עשו — all of him like a hairy mantle, 25:25)', 'by': 'they', 'case_source': 'Gen 25:25'})   # mamre [act: wayyiqtol at Gen 25:25]
     assert_ink('Gen 25:26', [60]); M['age:isaac:60'] = year_day(w, yr(w, M['born:isaac']) + 60); M['born:jacob'] = birth_day(w, yr(w, M['age:isaac:60']), 'jacob'); M['born:esau'] = M['born:jacob']; w.marker('Gen 25:26', M['born:jacob'], value='Isaac a son of sixty years when they were born', era='life:jacob'); w.clock.set_era('life:esau', M['born:esau'], None)   # an age at an event
+    w.submit({'kind': 'born', 'subject': 'jacob', 'mother': 'rebekah', 'sex': 'm', 'order': 'after that, his hand holding the heel', 'case_source': 'Gen 25:26'})   # mamre [act: wayyiqtol at Gen 25:26]
+    w.submit({'kind': 'named', 'subject': 'jacob', 'name': 'Jacob (יעקב — his hand holding the heel, 25:26)', 'by': 'he', 'case_source': 'Gen 25:26'})   # mamre [act: wayyiqtol at Gen 25:26]
+    w.submit({'kind': 'grew_up', 'subject': 'esau', 'case_source': 'Gen 25:27'})   # mamre [act: wayyiqtol at Gen 25:27]
+    w.submit({'kind': 'loved_apart', 'subject': 'isaac', 'case_source': 'Gen 25:28'})   # mamre [act: wayyiqtol at Gen 25:28]
+    assert_ink('Gen 25:29', []); M['stew_day'] = M['died:abraham']; w.marker('Gen 25:29', M['stew_day'], value='the stew day — READING-PLACED on Abraham\'s death day (Bava Batra 16b:11: that day Abraham died, the lentils the mourner\'s meal; the row stew_day): CH2', placement='reading_placed')   # the stew day: reading-placed on the proleptic 25:7
+    w.submit({'kind': 'stew_boiled', 'subject': 'jacob', 'case_source': 'Gen 25:29'})   # mamre [act: wayyiqtol at Gen 25:29]
+    w.submit({'kind': 'gulp_demanded', 'subject': 'esau', 'case_source': 'Gen 25:30'})   # mamre [speech: wayyiqtol at Gen 25:30]
+    w.submit({'kind': 'named', 'subject': 'esau', 'name': 'Edom (אדום — the red, 25:30)', 'by': 'the report formula', 'case_source': 'Gen 25:30'})   # mamre [act: wayyiqtol at Gen 25:29]
+    w.submit({'kind': 'sale_demanded', 'subject': 'jacob', 'case_source': 'Gen 25:31'})   # mamre [speech: wayyiqtol at Gen 25:31]
+    w.submit({'kind': 'birthright_dismissed', 'subject': 'esau', 'case_source': 'Gen 25:32'})   # mamre [speech: wayyiqtol at Gen 25:32]
+    w.submit({'kind': 'sworn', 'subject': 'esau', 'by': 'his word, to Jacob', 'case_source': 'Gen 25:33'})   # mamre [act: wayyiqtol at Gen 25:33]
+    w.submit({'kind': 'birthright_sold', 'subject': 'jacob', 'from': 'esau', 'case_source': 'Gen 25:33'})   # mamre [act: wayyiqtol at Gen 25:33]
+    w.submit({'kind': 'bread_and_lentils_given', 'subject': 'esau', 'case_source': 'Gen 25:34'})   # mamre [act: wayyiqtol at Gen 25:34]
+    w.submit({'kind': 'birthright_despised', 'subject': 'esau', 'case_source': 'Gen 25:34'})   # mamre [act: wayyiqtol at Gen 25:34]
     # ---- Gen 26 ----
+    w.submit({'kind': 'famine_came', 'subject': 'the-land-of-canaan', 'case_source': 'Gen 26:1'})   # mamre [act: wayyiqtol at Gen 26:1]
+    w.submit({'kind': 'journeyed', 'subject': 'isaac', 'to': 'Gerar, to Abimelech king of the Philistines', 'case_source': 'Gen 26:1'})   # mamre [act: wayyiqtol at Gen 26:1]
+    w.submit({'kind': 'appeared', 'subject': 'isaac', 'at': 'Gerar', 'case_source': 'Gen 26:2'})   # mamre [act: wayyiqtol at Gen 26:2]
+    w.submit({'kind': 'descent_barred', 'subject': 'isaac', 'case_source': 'Gen 26:2'})   # mamre [speech: wayyiqtol at Gen 26:2]
+    w.submit({'kind': 'oath_upheld', 'subject': 'isaac', 'case_source': 'Gen 26:3-5'})   # mamre [speech: wayyiqtol at Gen 26:2]
+    w.submit({'kind': 'dwelt', 'subject': 'isaac', 'at': 'Gerar', 'case_source': 'Gen 26:6'})   # mamre [act: wayyiqtol at Gen 26:6]
+    w.submit({'kind': 'sister_asked', 'subject': 'rebekah', 'by': 'isaac', 'case_source': 'Gen 26:7'})   # mamre [speech: wayyiqtol at Gen 26:7]
+    w.submit({'kind': 'seen_sporting', 'subject': 'isaac', 'case_source': 'Gen 26:8'})   # mamre [act: wayyiqtol at Gen 26:8]
+    w.submit({'kind': 'rebuked', 'subject': 'isaac', 'by': 'abimelech-of-isaac', 'case_source': 'Gen 26:9-10'})   # mamre [speech: wayyiqtol at Gen 26:9]
+    w.submit({'kind': 'decree_issued', 'subject': 'the-people-of-gerar', 'by': 'abimelech-of-isaac', 'decree': 'whoever touches this man or his wife shall surely be put to death', 'case_source': 'Gen 26:11'})   # mamre [speech: wayyiqtol at Gen 26:11]
+    w.submit({'kind': 'hundredfold_found', 'subject': 'isaac', 'measure': 100, 'case_source': 'Gen 26:12'})   # mamre [act: wayyiqtol at Gen 26:12]
+    w.submit({'kind': 'grew_great', 'subject': 'isaac', 'case_source': 'Gen 26:13-14'})   # mamre [act: wayyiqtol at Gen 26:13]
+    w.submit({'kind': 'envied', 'subject': 'the-philistines', 'whom': 'isaac', 'case_source': 'Gen 26:14'})   # mamre [act: wayyiqtol at Gen 26:14]
+    w.submit({'kind': 'wells_stopped', 'subject': 'the-wells-of-abraham', 'case_source': 'Gen 26:15'})   # mamre [act: wayyiqtol at Gen 26:15]
+    w.submit({'kind': 'sent_away', 'subject': 'isaac', 'by': 'abimelech-of-isaac', 'case_source': 'Gen 26:16'})   # mamre [act: wayyiqtol at Gen 26:15]
+    w.submit({'kind': 'journeyed', 'subject': 'isaac', 'to': 'the wadi of Gerar', 'case_source': 'Gen 26:17'})   # mamre [act: wayyiqtol at Gen 26:17]
+    w.submit({'kind': 'wells_redug', 'subject': 'the-wells-of-abraham', 'case_source': 'Gen 26:18'})   # mamre [act: wayyiqtol at Gen 26:18]
+    w.submit({'kind': 'well_found', 'subject': 'isaac', 'well': 'living water in the wadi', 'case_source': 'Gen 26:19'})   # mamre [act: wayyiqtol at Gen 26:19]
+    w.submit({'kind': 'quarreled', 'subject': 'the-herdsmen-of-gerar', 'well': 'esek', 'case_source': 'Gen 26:20'})   # mamre [act: wayyiqtol at Gen 26:20]
+    w.submit({'kind': 'named', 'subject': 'esek', 'name': 'Esek (עשק — for they contended with him, 26:20)', 'by': 'isaac', 'case_source': 'Gen 26:20'})   # mamre [act: wayyiqtol at Gen 26:20]
+    w.submit({'kind': 'quarreled', 'subject': 'the-herdsmen-of-gerar', 'well': 'sitnah', 'case_source': 'Gen 26:21'})   # mamre [act: wayyiqtol at Gen 26:21]
+    w.submit({'kind': 'named', 'subject': 'sitnah', 'name': 'Sitnah (שטנה, 26:21)', 'by': 'isaac', 'case_source': 'Gen 26:21'})   # mamre [act: wayyiqtol at Gen 26:21]
+    w.submit({'kind': 'room_made', 'subject': 'isaac', 'case_source': 'Gen 26:22'})   # mamre [act: wayyiqtol at Gen 26:22]
+    w.submit({'kind': 'named', 'subject': 'rehoboth', 'name': 'Rehoboth (רחבות — for now the LORD has made room for us, 26:22)', 'by': 'isaac', 'case_source': 'Gen 26:22'})   # mamre [act: wayyiqtol at Gen 26:22]
+    w.submit({'kind': 'journeyed', 'subject': 'isaac', 'to': 'Beersheba', 'case_source': 'Gen 26:23'})   # mamre [act: wayyiqtol at Gen 26:23]
+    w.submit({'kind': 'appeared', 'subject': 'isaac', 'at': 'Beersheba, that night', 'case_source': 'Gen 26:24', 'slot': 'night'})   # mamre [act: wayyiqtol at Gen 26:24]
+    w.submit({'kind': 'altar_erected', 'subject': 'the-altar-at-beersheba', 'by': 'isaac', 'case_source': 'Gen 26:25'})   # mamre [act: wayyiqtol at Gen 26:25]
+    w.submit({'kind': 'called_on_the_name', 'subject': 'isaac', 'case_source': 'Gen 26:25'})   # mamre [act: wayyiqtol at Gen 26:25]
+    w.submit({'kind': 'tent_pitched', 'subject': 'isaac', 'case_source': 'Gen 26:25'})   # mamre [act: wayyiqtol at Gen 26:25]
+    w.submit({'kind': 'well_dug', 'subject': 'isaac', 'case_source': 'Gen 26:25'})   # mamre [act: wayyiqtol at Gen 26:25]
+    w.submit({'kind': 'visited', 'subject': 'abimelech-of-isaac', 'case_source': 'Gen 26:26-27'})   # mamre [act: wayyiqtol at Gen 26:25]
+    w.submit({'kind': 'covenant_proposed', 'subject': 'abimelech-of-isaac', 'case_source': 'Gen 26:28-29'})   # mamre [speech: wayyiqtol at Gen 26:28]
+    w.submit({'kind': 'feast_made', 'subject': 'isaac', 'case_source': 'Gen 26:30'})   # mamre [act: wayyiqtol at Gen 26:30]
+    w.submit({'kind': 'sworn', 'subject': 'isaac_and_abimelech', 'by': 'each to his brother', 'case_source': 'Gen 26:31', 'slot': 'morning'})   # mamre [act: wayyiqtol at Gen 26:31]
+    w.submit({'kind': 'covenant_cut_between_men', 'subject': 'isaac', 'with': 'abimelech-of-isaac', 'case_source': 'Gen 26:31', 'slot': 'morning'})   # mamre [act: wayyiqtol at Gen 26:31]
+    w.submit({'kind': 'sent_away', 'subject': 'abimelech-of-isaac', 'by': 'isaac', 'in': 'peace', 'case_source': 'Gen 26:31', 'slot': 'morning'})   # mamre [act: wayyiqtol at Gen 26:31]
+    w.submit({'kind': 'well_found', 'subject': 'isaac', 'well': 'the well at Beersheba, that same day', 'case_source': 'Gen 26:32'})   # mamre [act: wayyiqtol at Gen 26:32]
+    w.submit({'kind': 'named', 'subject': 'beersheba', 'name': 'Shibah (שבעה — therefore the city is Beersheba to this day, 26:33)', 'by': 'isaac', 'case_source': 'Gen 26:33'})   # mamre [act: wayyiqtol at Gen 26:33]
     assert_ink('Gen 26:34', [40]); M['age:esau:40'] = year_day(w, yr(w, M['born:esau']) + 40); w.marker('Gen 26:34', M['age:esau:40'], value='Esau a son of forty years')   # an age at an event
+    w.submit({'kind': 'married', 'subject': 'judith', 'husband': 'esau', 'case_source': 'Gen 26:34'})   # mamre [act: wayyiqtol at Gen 26:34]
+    w.submit({'kind': 'married', 'subject': 'basemath', 'husband': 'esau', 'case_source': 'Gen 26:34'})   # mamre [act: wayyiqtol at Gen 26:34]
+    w.submit({'kind': 'bitterness_of_spirit', 'subject': 'isaac_and_rebekah', 'case_source': 'Gen 26:35'})   # mamre [act: wayyiqtol at Gen 26:35]
+    # ---- Gen 27 ----
+    assert_ink('Gen 27:1', []); M['blessing'] = year_day(w, yr(w, M['born:jacob']) + 63); w.marker('Gen 27:1', M['blessing'], value='the blessing — READING-PLACED at Jacob\'s sixty-three (Bereshit Rabbah 68:5; the row blessing_placement), the year of Ishmael\'s death by the ink (16:16 + 25:17): CH3', placement='reading_placed')   # the blessing: reading-placed, Jacob 63
+    w.submit({'kind': 'eyes_dimmed', 'subject': 'isaac', 'case_source': 'Gen 27:1'})   # mamre [act: wayyiqtol at Gen 27:1]
+    w.submit({'kind': 'hunt_commanded', 'subject': 'esau', 'case_source': 'Gen 27:2-4'})   # mamre [speech: wayyiqtol at Gen 27:2]
+    w.submit({'kind': 'overheard', 'subject': 'rebekah', 'case_source': 'Gen 27:5'})   # mamre [act: wayyiqtol at Gen 27:5]
+    w.submit({'kind': 'mother_counselled', 'subject': 'jacob', 'counsel': 'the two kids', 'case_source': 'Gen 27:6-10'})   # mamre [speech: wayyiqtol at Gen 27:5]
+    w.submit({'kind': 'objected', 'subject': 'jacob', 'case_source': 'Gen 27:11-12'})   # mamre [speech: wayyiqtol at Gen 27:11]
+    w.submit({'kind': 'curse_taken_on', 'subject': 'rebekah', 'case_source': 'Gen 27:13'})   # mamre [speech: wayyiqtol at Gen 27:13]
+    w.submit({'kind': 'kids_fetched', 'subject': 'jacob', 'case_source': 'Gen 27:14'})   # mamre [act: wayyiqtol at Gen 27:14]
+    w.submit({'kind': 'disguised', 'subject': 'jacob', 'case_source': 'Gen 27:15-16'})   # mamre [act: wayyiqtol at Gen 27:15]
+    w.submit({'kind': 'delicacies_brought', 'subject': 'jacob', 'to': 'isaac', 'case_source': 'Gen 27:17-18'})   # mamre [act: wayyiqtol at Gen 27:17]
+    w.submit({'kind': 'identity_claimed', 'subject': 'jacob', 'as': 'Esau your firstborn', 'case_source': 'Gen 27:19'})   # mamre [speech: wayyiqtol at Gen 27:19]
+    w.submit({'kind': 'felt', 'subject': 'isaac', 'case_source': 'Gen 27:21-23'})   # mamre [act: wayyiqtol at Gen 27:18]
+    w.submit({'kind': 'identity_claimed', 'subject': 'jacob', 'as': 'I am (Esau)', 'case_source': 'Gen 27:24'})   # mamre [speech: wayyiqtol at Gen 27:24]
+    w.submit({'kind': 'ate_and_drank', 'subject': 'isaac', 'case_source': 'Gen 27:25'})   # mamre [act: wayyiqtol at Gen 27:25]
+    w.submit({'kind': 'kissed', 'subject': 'isaac', 'whom': 'jacob', 'case_source': 'Gen 27:26-27'})   # mamre [act: wayyiqtol at Gen 27:25]
+    w.submit({'kind': 'blessed', 'subject': 'jacob', 'blessing': 'the dew and the fat, the peoples to serve', 'case_source': 'Gen 27:27-29'})   # mamre [speech: wayyiqtol at Gen 27:27]
+    w.submit({'kind': 'delicacies_brought', 'subject': 'esau', 'to': 'isaac', 'case_source': 'Gen 27:30-31'})   # mamre [act: wayyiqtol at Gen 27:30]
+    w.close('esau', 'hunt_owed', 'Gen 27:31 — brought')   # mamre
+    w.submit({'kind': 'identity_claimed', 'subject': 'esau', 'as': 'your son, your firstborn, Esau', 'case_source': 'Gen 27:32'})   # mamre [speech: wayyiqtol at Gen 27:32]
+    w.submit({'kind': 'trembled', 'subject': 'isaac', 'case_source': 'Gen 27:33'})   # mamre [act: wayyiqtol at Gen 27:33]
+    w.submit({'kind': 'cried_out', 'subject': 'esau', 'case_source': 'Gen 27:34'})   # mamre [act: wayyiqtol at Gen 27:34]
+    w.submit({'kind': 'supplanted_charged', 'subject': 'esau', 'times': 2, 'case_source': 'Gen 27:35-37'})   # mamre [speech: wayyiqtol at Gen 27:35]
+    w.submit({'kind': 'wept', 'subject': 'esau', 'case_source': 'Gen 27:38'})   # mamre [act: wayyiqtol at Gen 27:38]
+    w.submit({'kind': 'blessed', 'subject': 'esau', 'blessing': 'the fat of the earth, the sword, the yoke', 'case_source': 'Gen 27:39-40'})   # mamre [speech: wayyiqtol at Gen 27:39]
+    w.submit({'kind': 'grudge_held', 'subject': 'esau', 'case_source': 'Gen 27:41'})   # mamre [act: wayyiqtol at Gen 27:41]
+    w.submit({'kind': 'words_told', 'subject': 'rebekah', 'case_source': 'Gen 27:42'})   # mamre [act: wayyiqtol at Gen 27:42]
+    w.submit({'kind': 'mother_counselled', 'subject': 'jacob', 'counsel': 'flee to Laban', 'case_source': 'Gen 27:42-45'})   # mamre [speech: wayyiqtol at Gen 27:42]
+    w.submit({'kind': 'loathing_stated', 'subject': 'rebekah', 'case_source': 'Gen 27:46'})   # mamre [speech: wayyiqtol at Gen 27:46]
+    # ---- Gen 28 ----
+    w.submit({'kind': 'blessed', 'subject': 'jacob', 'blessing': 'the blessing of Abraham, the send-off; no Canaanite wife', 'case_source': 'Gen 28:1-4'})   # mamre [speech: wayyiqtol at Gen 28:1]
+    w.submit({'kind': 'sent_to_paddan_aram', 'subject': 'jacob', 'case_source': 'Gen 28:1-2; Gen 28:5'})   # mamre [act: wayyiqtol at Gen 28:1]
+    w.submit({'kind': 'esau_saw', 'subject': 'esau', 'case_source': 'Gen 28:6-8'})   # mamre [act: wayyiqtol at Gen 28:6]
+    assert_ink('Gen 28:9', []); M['mahalath'] = M['died:ishmael']; w.marker('Gen 28:9', M['mahalath'], value='Mahalath daughter of Ishmael taken — at Ishmael\'s death (the proleptic 25:17; Megillah 17a:5: Ishmael had died and Nebaioth gave her)', placement='reading_placed')   # Mahalath: at the proleptic death (Megillah 17a:5 places it)
+    w.submit({'kind': 'married', 'subject': 'mahalath', 'husband': 'esau', 'case_source': 'Gen 28:9'})   # mamre [act: wayyiqtol at Gen 28:9]
+    assert_ink('Gen 28:10', [7]); M['departure'] = w.clock.calendar.add(M['died:ishmael'], 14, 'year'); w.marker('Gen 28:10', M['departure'], value='Jacob went out from Beersheba — READING-PLACED at Ishmael\'s death plus fourteen years (Megillah 17a:5-6: hidden fourteen years in the house of Eber; the row hidden_years): seventy-seven at the well (17a:5)', placement='reading_placed')   # the departure: reading-placed, the fourteen hidden years — the [7] is BEERSHEBA's (באר שבע, the well of the seven, 21:28-31): the place-name's numeral the parser counts, no count of this row
+    w.submit({'kind': 'journeyed', 'subject': 'jacob', 'to': 'toward Haran, from Beersheba', 'case_source': 'Gen 28:10'})   # mamre [act: wayyiqtol at Gen 28:10]
+    w.close('jacob', 'flight_owed', 'Gen 28:10 — went out')   # mamre
+    w.submit({'kind': 'lodged_at_the_place', 'subject': 'jacob', 'case_source': 'Gen 28:11', 'slot': 'sunset'})   # mamre [act: wayyiqtol at Gen 28:11]
+    w.submit({'kind': 'dreamed', 'subject': 'jacob', 'of': 'the ladder', 'case_source': 'Gen 28:12'})   # mamre [act: wayyiqtol at Gen 28:12]
+    w.submit({'kind': 'promised_at_bethel', 'subject': 'jacob', 'case_source': 'Gen 28:13-15'})   # mamre [speech: wayyiqtol at Gen 28:13]
+    w.submit({'kind': 'awoke_and_feared', 'subject': 'jacob', 'case_source': 'Gen 28:16-17'})   # mamre [act: wayyiqtol at Gen 28:16]
+    w.submit({'kind': 'pillar_set_and_anointed', 'subject': 'the_pillar_of_bethel', 'by': 'jacob', 'case_source': 'Gen 28:18', 'slot': 'morning'})   # mamre [act: wayyiqtol at Gen 28:18]
+    w.submit({'kind': 'named', 'subject': 'the-place', 'name': 'Bethel (בית אל — but Luz was the name of the city at first, 28:19)', 'by': 'jacob', 'case_source': 'Gen 28:19'})   # mamre [act: wayyiqtol at Gen 28:19]
+    w.submit({'kind': 'vowed', 'subject': 'jacob', 'conditions': ['God with me', 'kept on this way', 'bread and a garment', 'return in peace'], 'commitments': ['the LORD my God', 'the stone the house of God', 'the tithe of all'], 'case_source': 'Gen 28:20-22'})   # mamre [speech: wayyiqtol at Gen 28:20]
+    # ---- Gen 29 ----
+    w.submit({'kind': 'journeyed', 'subject': 'jacob', 'to': 'the land of the children of the east', 'case_source': 'Gen 29:1'})   # mamre [act: wayyiqtol at Gen 29:1]
+    w.submit({'kind': 'well_seen', 'subject': 'the-well-of-haran', 'case_source': 'Gen 29:2-3'})   # mamre [act: wayyiqtol at Gen 29:2]
+    w.submit({'kind': 'shepherds_questioned', 'subject': 'jacob', 'case_source': 'Gen 29:4-6'})   # mamre [speech: wayyiqtol at Gen 29:4]
+    w.submit({'kind': 'shepherds_rebuked', 'subject': 'jacob', 'case_source': 'Gen 29:7-8'})   # mamre [speech: wayyiqtol at Gen 29:7]
+    w.submit({'kind': 'stone_rolled', 'subject': 'jacob', 'case_source': 'Gen 29:9-10'})   # mamre [act: wayyiqtol at Gen 29:2]
+    w.submit({'kind': 'flock_watered', 'subject': 'jacob', 'case_source': 'Gen 29:10'})   # mamre [act: wayyiqtol at Gen 29:10]
+    w.submit({'kind': 'kissed', 'subject': 'jacob', 'whom': 'rachel', 'case_source': 'Gen 29:11'})   # mamre [act: wayyiqtol at Gen 29:11]
+    w.submit({'kind': 'kin_told', 'subject': 'rachel', 'case_source': 'Gen 29:12'})   # mamre [act: wayyiqtol at Gen 29:12]
+    w.submit({'kind': 'kissed', 'subject': 'laban', 'whom': 'jacob', 'case_source': 'Gen 29:13'})   # mamre [act: wayyiqtol at Gen 29:13]
+    w.submit({'kind': 'embraced', 'subject': 'laban', 'case_source': 'Gen 29:13-14'})   # mamre [act: wayyiqtol at Gen 29:13]
+    assert_ink('Gen 29:14', []); M['laban_month'] = w.clock.calendar.add(M['departure'], 1, 'month'); w.marker('Gen 29:14', M['laban_month'], value='a month of days (29:14) — the departure plus one month (the journey\'s days absorbed into the bound)', placement='reading_placed')   # the month: no numeral — the month word
+    w.submit({'kind': 'month_dwelt', 'subject': 'jacob', 'months': 1, 'case_source': 'Gen 29:14'})   # mamre [act: wayyiqtol at Gen 29:14]
+    w.submit({'kind': 'wage_asked', 'subject': 'laban', 'case_source': 'Gen 29:15-17'})   # mamre [speech: wayyiqtol at Gen 29:15]
+    w.submit({'kind': 'wage_named', 'subject': 'jacob', 'years': 7, 'terms': 'seven years for Rachel your younger daughter', 'case_source': 'Gen 29:18'})   # mamre [speech: wayyiqtol at Gen 29:18]
+    w.submit({'kind': 'contract_accepted', 'subject': 'laban', 'case_source': 'Gen 29:19'})   # mamre [speech: wayyiqtol at Gen 29:19]
+    assert_ink('Gen 29:20', [7]); M['wedding'] = w.clock.calendar.add(M['laban_month'], 7, 'year'); w.marker('Gen 29:20', M['wedding'], value='Jacob served seven years for Rachel (29:20) — the first seven\'s end, my days are fulfilled (29:21): the wedding, Jacob eighty-four (Bereshit Rabbah 68:5): CH5', placement='reading_placed')   # the seven years
+    w.submit({'kind': 'served', 'subject': 'jacob', 'years': 7, 'case_source': 'Gen 29:20'})   # mamre [act: wayyiqtol at Gen 29:20]
+    w.submit({'kind': 'wife_demanded', 'subject': 'jacob', 'case_source': 'Gen 29:21'})   # mamre [speech: wayyiqtol at Gen 29:21]
+    w.close('jacob', 'seven_years_owed', 'Gen 29:21 — my days are fulfilled')   # mamre
+    w.submit({'kind': 'feast_made', 'subject': 'laban', 'case_source': 'Gen 29:22'})   # mamre [act: wayyiqtol at Gen 29:22]
+    w.submit({'kind': 'bride_switched', 'subject': 'jacob', 'case_source': 'Gen 29:23', 'slot': 'evening'})   # mamre [act: wayyiqtol at Gen 29:23]
+    w.submit({'kind': 'married', 'subject': 'leah', 'husband': 'jacob', 'case_source': 'Gen 29:23', 'slot': 'evening'})   # mamre [act: wayyiqtol at Gen 29:23]
+    w.submit({'kind': 'maid_given', 'subject': 'leah', 'maid': 'zilpah', 'case_source': 'Gen 29:24'})   # mamre [act: wayyiqtol at Gen 29:24]
+    w.submit({'kind': 'bride_switched', 'subject': 'laban', 'case_source': 'Gen 29:25', 'slot': 'morning'})   # mamre [act: wayyiqtol at Gen 29:25]
+    w.submit({'kind': 'custom_stated', 'subject': 'laban', 'case_source': 'Gen 29:26'})   # mamre [speech: wayyiqtol at Gen 29:26]
+    w.submit({'kind': 'week_demanded', 'subject': 'jacob', 'days': 7, 'case_source': 'Gen 29:27'})   # mamre [speech: wayyiqtol at Gen 29:26]
+    assert_ink('Gen 29:28', [7]); M['rachel_given'] = M['wedding'] + 7; w.marker('Gen 29:28', M['rachel_given'], value='and he fulfilled her week (29:28) — the wedding plus seven days: Rachel given; CH7', placement='reading_placed')   # the week
+    w.submit({'kind': 'week_fulfilled', 'subject': 'jacob', 'case_source': 'Gen 29:28'})   # mamre [act: wayyiqtol at Gen 29:28]
+    w.submit({'kind': 'married', 'subject': 'rachel', 'husband': 'jacob', 'case_source': 'Gen 29:28'})   # mamre [act: wayyiqtol at Gen 29:28]
+    w.close('jacob', 'wife_from_paddan_owed', 'Gen 29:28 — Rachel given')   # mamre
+    w.submit({'kind': 'maid_given', 'subject': 'rachel', 'maid': 'bilhah', 'case_source': 'Gen 29:29'})   # mamre [act: wayyiqtol at Gen 29:29]
+    w.submit({'kind': 'served', 'subject': 'jacob', 'years': 7, 'which': 'the second', 'case_source': 'Gen 29:30'})   # mamre [act: wayyiqtol at Gen 29:30]
+    w.submit({'kind': 'womb_opened', 'subject': 'leah', 'case_source': 'Gen 29:31'})   # mamre [act: wayyiqtol at Gen 29:31]
+    w.submit({'kind': 'born', 'subject': 'reuben', 'mother': 'leah', 'sex': 'm', 'case_source': 'Gen 29:32'})   # mamre [act: wayyiqtol at Gen 29:32]
+    w.submit({'kind': 'named', 'subject': 'reuben', 'name': 'Reuben (ראובן — the LORD has seen my affliction, 29:32)', 'by': 'leah', 'case_source': 'Gen 29:32'})   # mamre [act: wayyiqtol at Gen 29:32]
+    w.submit({'kind': 'born', 'subject': 'simeon', 'mother': 'leah', 'sex': 'm', 'case_source': 'Gen 29:33'})   # mamre [act: wayyiqtol at Gen 29:33]
+    w.submit({'kind': 'named', 'subject': 'simeon', 'name': 'Simeon (שמעון — the LORD has heard that I am hated, 29:33)', 'by': 'leah', 'case_source': 'Gen 29:33'})   # mamre [act: wayyiqtol at Gen 29:33]
+    w.submit({'kind': 'born', 'subject': 'levi', 'mother': 'leah', 'sex': 'm', 'case_source': 'Gen 29:34'})   # mamre [act: wayyiqtol at Gen 29:34]
+    w.submit({'kind': 'named', 'subject': 'levi', 'name': 'Levi (לוי — this time my husband will be joined to me, 29:34)', 'by': 'she', 'case_source': 'Gen 29:34'})   # mamre [act: wayyiqtol at Gen 29:34]
+    w.submit({'kind': 'born', 'subject': 'judah', 'mother': 'leah', 'sex': 'm', 'case_source': 'Gen 29:35'})   # mamre [act: wayyiqtol at Gen 29:35]
+    w.submit({'kind': 'named', 'subject': 'judah', 'name': 'Judah (יהודה — this time I will praise the LORD, 29:35)', 'by': 'leah', 'case_source': 'Gen 29:35'})   # mamre [act: wayyiqtol at Gen 29:35]
+    w.submit({'kind': 'ceased_bearing', 'subject': 'leah', 'at': '29:35', 'case_source': 'Gen 29:35'})   # mamre [act: wayyiqtol at Gen 29:35]
+    # ---- Gen 30 ----
+    w.submit({'kind': 'envied', 'subject': 'rachel', 'whom': 'leah', 'case_source': 'Gen 30:1'})   # mamre [act: wayyiqtol at Gen 30:1]
+    w.submit({'kind': 'children_demanded', 'subject': 'rachel', 'case_source': 'Gen 30:1'})   # mamre [speech: wayyiqtol at Gen 30:1]
+    w.submit({'kind': 'anger_burned', 'subject': 'jacob', 'at': 'rachel', 'case_source': 'Gen 30:2'})   # mamre [act: wayyiqtol at Gen 30:2]
+    w.submit({'kind': 'maid_offered', 'subject': 'rachel', 'case_source': 'Gen 30:3'})   # mamre [speech: wayyiqtol at Gen 30:3]
+    w.submit({'kind': 'married', 'subject': 'bilhah', 'husband': 'jacob', 'case_source': 'Gen 30:4'})   # mamre [act: wayyiqtol at Gen 30:4]
+    w.submit({'kind': 'born', 'subject': 'dan', 'mother': 'bilhah', 'sex': 'm', 'case_source': 'Gen 30:5'})   # mamre [act: wayyiqtol at Gen 30:5]
+    w.submit({'kind': 'named', 'subject': 'dan', 'name': 'Dan (דן — God has judged me, 30:6)', 'by': 'rachel', 'case_source': 'Gen 30:6'})   # mamre [act: wayyiqtol at Gen 30:6]
+    w.submit({'kind': 'born', 'subject': 'naphtali', 'mother': 'bilhah', 'sex': 'm', 'case_source': 'Gen 30:7'})   # mamre [act: wayyiqtol at Gen 30:7]
+    w.submit({'kind': 'named', 'subject': 'naphtali', 'name': 'Naphtali (נפתלי — wrestlings of God I have wrestled, 30:8)', 'by': 'rachel', 'case_source': 'Gen 30:8'})   # mamre [act: wayyiqtol at Gen 30:8]
+    w.submit({'kind': 'ceased_bearing', 'subject': 'leah', 'at': '30:9', 'case_source': 'Gen 30:9'})   # mamre [act: wayyiqtol at Gen 30:9]
+    w.submit({'kind': 'married', 'subject': 'zilpah', 'husband': 'jacob', 'case_source': 'Gen 30:9'})   # mamre [act: wayyiqtol at Gen 30:9]
+    w.submit({'kind': 'born', 'subject': 'gad', 'mother': 'zilpah', 'sex': 'm', 'case_source': 'Gen 30:10'})   # mamre [act: wayyiqtol at Gen 30:10]
+    w.submit({'kind': 'named', 'subject': 'gad', 'name': 'Gad (גד — fortune has come, 30:11)', 'by': 'leah', 'case_source': 'Gen 30:11'})   # mamre [act: wayyiqtol at Gen 30:11]
+    w.submit({'kind': 'born', 'subject': 'asher', 'mother': 'zilpah', 'sex': 'm', 'case_source': 'Gen 30:12'})   # mamre [act: wayyiqtol at Gen 30:12]
+    w.submit({'kind': 'named', 'subject': 'asher', 'name': 'Asher (אשר — in my happiness, 30:13)', 'by': 'leah', 'case_source': 'Gen 30:13'})   # mamre [act: wayyiqtol at Gen 30:13]
+    w.submit({'kind': 'mandrakes_found', 'subject': 'reuben', 'case_source': 'Gen 30:14'})   # mamre [act: wayyiqtol at Gen 30:14]
+    w.submit({'kind': 'mandrakes_traded', 'subject': 'leah', 'case_source': 'Gen 30:14-16'})   # mamre [speech: wayyiqtol at Gen 30:14]
+    w.submit({'kind': 'god_heard', 'subject': 'leah', 'case_source': 'Gen 30:17'})   # mamre [act: wayyiqtol at Gen 30:17]
+    w.submit({'kind': 'born', 'subject': 'issachar', 'mother': 'leah', 'sex': 'm', 'case_source': 'Gen 30:17'})   # mamre [act: wayyiqtol at Gen 30:17]
+    w.submit({'kind': 'named', 'subject': 'issachar', 'name': 'Issachar (יששכר — God has given my hire, 30:18)', 'by': 'leah', 'case_source': 'Gen 30:18'})   # mamre [act: wayyiqtol at Gen 30:18]
+    w.submit({'kind': 'born', 'subject': 'zebulun', 'mother': 'leah', 'sex': 'm', 'case_source': 'Gen 30:19'})   # mamre [act: wayyiqtol at Gen 30:19]
+    w.submit({'kind': 'named', 'subject': 'zebulun', 'name': 'Zebulun (זבלון — God has endowed me with a good endowment, 30:20)', 'by': 'leah', 'case_source': 'Gen 30:20'})   # mamre [act: wayyiqtol at Gen 30:20]
+    w.submit({'kind': 'born', 'subject': 'dinah', 'mother': 'leah', 'sex': 'f', 'case_source': 'Gen 30:21'})   # mamre [act: wayyiqtol at Gen 30:21]
+    w.submit({'kind': 'named', 'subject': 'dinah', 'name': 'Dinah (דינה, 30:21)', 'by': 'leah', 'case_source': 'Gen 30:21'})   # mamre [act: wayyiqtol at Gen 30:21]
+    w.submit({'kind': 'remembered', 'subject': 'rachel', 'case_source': 'Gen 30:22'})   # mamre [act: wayyiqtol at Gen 30:22]
+    w.submit({'kind': 'womb_opened', 'subject': 'rachel', 'case_source': 'Gen 30:22'})   # mamre [act: wayyiqtol at Gen 30:22]
+    w.submit({'kind': 'born', 'subject': 'joseph', 'mother': 'rachel', 'sex': 'm', 'case_source': 'Gen 30:23'})   # mamre [act: wayyiqtol at Gen 30:23]
+    w.submit({'kind': 'named', 'subject': 'joseph', 'name': 'Joseph (יוסף — may the LORD add to me another son, 30:24)', 'by': 'rachel', 'case_source': 'Gen 30:24'})   # mamre [act: wayyiqtol at Gen 30:24]
+    assert_ink('Gen 29:30', [7]); M['fourteen_end'] = w.clock.calendar.add(M['rachel_given'], 7, 'year'); w.marker('Gen 30:25', M['fourteen_end'], value='seven other years (29:30) — the second seven\'s end, positioned at 30:25 where the ink says when Rachel had borne Joseph: CH4 (born:joseph from Pharaoh\'s side, 41:46 + 45:6 + 47:9)', placement='reading_placed')   # the second seven, positioned at 30:25
+    w.submit({'kind': 'release_demanded', 'subject': 'jacob', 'case_source': 'Gen 30:25-26'})   # mamre [speech: wayyiqtol at Gen 30:25]
+    w.close('jacob', 'second_seven_owed', 'Gen 30:26 — served')   # mamre
+    w.submit({'kind': 'divination_confessed', 'subject': 'laban', 'case_source': 'Gen 30:27'})   # mamre [speech: wayyiqtol at Gen 30:27]
+    w.submit({'kind': 'wage_asked', 'subject': 'laban', 'case_source': 'Gen 30:28'})   # mamre [speech: wayyiqtol at Gen 30:28]
+    w.submit({'kind': 'service_audited', 'subject': 'jacob', 'case_source': 'Gen 30:29-30'})   # mamre [speech: wayyiqtol at Gen 30:29]
+    w.submit({'kind': 'wage_named', 'subject': 'jacob', 'terms': 'every speckled and spotted sheep and every dark one among the lambs, the spotted and speckled among the goats', 'case_source': 'Gen 30:31-33'})   # mamre [speech: wayyiqtol at Gen 30:31]
+    w.submit({'kind': 'contract_accepted', 'subject': 'laban', 'case_source': 'Gen 30:34'})   # mamre [speech: wayyiqtol at Gen 30:34]
+    w.submit({'kind': 'flock_removed', 'subject': 'laban', 'days': 3, 'case_source': 'Gen 30:35-36'})   # mamre [act: wayyiqtol at Gen 30:35]
+    w.submit({'kind': 'rods_peeled', 'subject': 'jacob', 'case_source': 'Gen 30:37-38'})   # mamre [act: wayyiqtol at Gen 30:37]
+    w.submit({'kind': 'flock_bore_striped', 'subject': 'the-flock', 'case_source': 'Gen 30:39'})   # mamre [act: wayyiqtol at Gen 30:39]
+    w.submit({'kind': 'flocks_separated', 'subject': 'jacob', 'case_source': 'Gen 30:40-42'})   # mamre [act: wayyiqtol at Gen 30:40]
+    w.submit({'kind': 'broke_out', 'subject': 'jacob', 'case_source': 'Gen 30:43'})   # mamre [act: wayyiqtol at Gen 30:43]
+    # ---- Gen 31 ----
+    w.submit({'kind': 'sons_words_heard', 'subject': 'jacob', 'case_source': 'Gen 31:1-2'})   # mamre [act: wayyiqtol at Gen 31:1]
+    w.submit({'kind': 'return_commanded', 'subject': 'jacob', 'case_source': 'Gen 31:3'})   # mamre [speech: wayyiqtol at Gen 31:3]
+    w.submit({'kind': 'wives_summoned', 'subject': 'jacob', 'case_source': 'Gen 31:4'})   # mamre [act: wayyiqtol at Gen 31:4]
+    w.submit({'kind': 'account_given', 'subject': 'jacob', 'account': 'to the wives', 'case_source': 'Gen 31:5-13'})   # mamre [speech: wayyiqtol at Gen 31:5]
+    w.close('jacob', 'with_you_promised', 'Gen 31:5 — the God of my father has been with me')   # mamre
+    w.submit({'kind': 'dreamed', 'subject': 'jacob', 'of': 'the he-goats', 'case_source': 'Gen 31:10-12'})   # mamre [act: wayyiqtol at Gen 31:10]
+    w.submit({'kind': 'wives_answered', 'subject': 'rachel_and_leah', 'case_source': 'Gen 31:14-16'})   # mamre [speech: wayyiqtol at Gen 31:14]
+    assert_ink('Gen 31:41', [20, 14, 6, 10]); M['flight'] = w.clock.calendar.add(M['fourteen_end'], 6, 'year'); w.marker('Gen 31:17', M['flight'], value='six years for your flock (31:41) — the fourteen\'s end plus six: the flight, positioned at 31:17', placement='reading_placed')   # the six years, positioned at 31:17
+    w.submit({'kind': 'rose_and_loaded', 'subject': 'jacob', 'case_source': 'Gen 31:17-18'})   # mamre [act: wayyiqtol at Gen 31:17]
+    w.submit({'kind': 'teraphim_stolen', 'subject': 'rachel', 'case_source': 'Gen 31:19'})   # mamre [act: wayyiqtol at Gen 31:19]
+    w.submit({'kind': 'heart_stolen', 'subject': 'laban', 'case_source': 'Gen 31:20'})   # mamre [act: wayyiqtol at Gen 31:20]
+    w.submit({'kind': 'fled', 'subject': 'jacob', 'from': 'laban', 'case_source': 'Gen 31:21'})   # mamre [act: wayyiqtol at Gen 31:21]
+    w.submit({'kind': 'river_crossed', 'subject': 'jacob', 'case_source': 'Gen 31:21'})   # mamre [act: wayyiqtol at Gen 31:21]
+    assert_ink('Gen 31:22', [], ordinals=[3]); M['told'] = M['flight'] + 2; w.marker('Gen 31:22', M['told'], value='it was told to Laban on the third day (31:22) — the flight plus two, inclusive', placement='reading_placed')   # the third day, inclusive
+    w.submit({'kind': 'told_on_the_third_day', 'subject': 'laban', 'ordinal': 3, 'case_source': 'Gen 31:22'})   # mamre [act: wayyiqtol at Gen 31:22]
+    w.submit({'kind': 'pursued', 'subject': 'laban', 'whom': 'jacob', 'days': 7, 'case_source': 'Gen 31:23'})   # mamre [act: wayyiqtol at Gen 31:23]
+    w.submit({'kind': 'came_in_a_dream', 'subject': 'laban', 'warning': 'neither good nor bad', 'case_source': 'Gen 31:24', 'slot': 'night'})   # mamre [speech: wayyiqtol at Gen 31:24]
+    w.submit({'kind': 'overtaken', 'subject': 'jacob', 'case_source': 'Gen 31:25'})   # mamre [act: wayyiqtol at Gen 31:25]
+    w.submit({'kind': 'charges_laid', 'subject': 'laban', 'case_source': 'Gen 31:26-30'})   # mamre [speech: wayyiqtol at Gen 31:26]
+    w.close('laban', 'speech_restrained', 'Gen 31:29 — he kept it')   # mamre
+    w.submit({'kind': 'fear_answered', 'subject': 'jacob', 'case_source': 'Gen 31:31'})   # mamre [speech: wayyiqtol at Gen 31:31]
+    w.submit({'kind': 'death_oath_sworn', 'subject': 'rachel', 'the_thief': "rachel — the narrator's knowledge (31:19)", 'case_source': 'Gen 31:32'})   # mamre [speech: wayyiqtol at Gen 31:31]
+    w.submit({'kind': 'tents_searched', 'subject': 'laban', 'case_source': 'Gen 31:33-35'})   # mamre [act: wayyiqtol at Gen 31:33]
+    w.submit({'kind': 'anger_burned', 'subject': 'jacob', 'at': 'laban', 'case_source': 'Gen 31:36'})   # mamre [act: wayyiqtol at Gen 31:36]
+    w.submit({'kind': 'quarreled_with_laban', 'subject': 'jacob', 'case_source': 'Gen 31:36-37'})   # mamre [act: wayyiqtol at Gen 31:36]
+    w.submit({'kind': 'account_given', 'subject': 'jacob', 'account': 'the twenty years, to Laban', 'case_source': 'Gen 31:38-42'})   # mamre [speech: wayyiqtol at Gen 31:36]
+    w.submit({'kind': 'all_is_mine_claimed', 'subject': 'laban', 'case_source': 'Gen 31:43'})   # mamre [speech: wayyiqtol at Gen 31:43]
+    w.submit({'kind': 'covenant_proposed', 'subject': 'laban', 'case_source': 'Gen 31:44'})   # mamre [speech: wayyiqtol at Gen 31:43]
+    w.submit({'kind': 'pillar_set_and_anointed', 'subject': 'the_pillar_of_gilead', 'by': 'jacob', 'case_source': 'Gen 31:45'})   # mamre [act: wayyiqtol at Gen 31:45]
+    w.submit({'kind': 'heap_made', 'subject': 'the-heap', 'case_source': 'Gen 31:46'})   # mamre [act: wayyiqtol at Gen 31:46]
+    w.submit({'kind': 'named', 'subject': 'the-heap', 'name': 'Jegar-sahadutha (יגר שהדותא — the Aramaic, 31:47)', 'by': 'laban', 'case_source': 'Gen 31:47'})   # mamre [act: wayyiqtol at Gen 31:47]
+    w.submit({'kind': 'named', 'subject': 'the-heap', 'name': 'Galeed (גלעד — the Hebrew, 31:47)', 'by': 'jacob', 'case_source': 'Gen 31:47'})   # mamre [act: wayyiqtol at Gen 31:47]
+    w.submit({'kind': 'witness_declared', 'subject': 'the-heap', 'case_source': 'Gen 31:48-50'})   # mamre [speech: wayyiqtol at Gen 31:48]
+    w.submit({'kind': 'named', 'subject': 'the-heap', 'name': 'Galeed (גלעד — therefore its name was called, 31:48)', 'by': 'the report formula', 'case_source': 'Gen 31:48'})   # mamre [act: wayyiqtol at Gen 31:47]
+    w.submit({'kind': 'named', 'subject': 'the-heap', 'name': 'Mizpah (המצפה — may the LORD watch, 31:49)', 'by': 'laban', 'case_source': 'Gen 31:49'})   # mamre [act: wayyiqtol at Gen 31:47]
+    w.submit({'kind': 'boundary_sworn', 'subject': 'the_heap_and_pillar', 'case_source': 'Gen 31:51-53'})   # mamre [speech: wayyiqtol at Gen 31:51]
+    w.submit({'kind': 'sworn', 'subject': 'jacob', 'by': 'the Fear of his father Isaac', 'case_source': 'Gen 31:53'})   # mamre [act: wayyiqtol at Gen 31:53]
+    w.submit({'kind': 'covenant_cut_between_men', 'subject': 'jacob', 'with': 'laban', 'case_source': 'Gen 31:53'})   # mamre [act: wayyiqtol at Gen 31:53]
+    w.submit({'kind': 'sacrificed', 'subject': 'jacob', 'case_source': 'Gen 31:54'})   # mamre [act: wayyiqtol at Gen 31:54]
+    w.submit({'kind': 'ate_and_lodged', 'subject': 'jacob_and_his_kin', 'case_source': 'Gen 31:54'})   # mamre [act: wayyiqtol at Gen 31:54]
     # ---- Gen 32 ----
+    assert_ink('Gen 31:23', [7]); M['heap_morning'] = M['told'] + 5; w.marker('Gen 32:1', M['heap_morning'], value='the heap\'s morning (32:1) — Laban overtook on the seventh day from the flight (31:23), the heap\'s night, the morning after: told (the flight + 2) + 5', placement='reading_placed')   # the heap's morning: the seven days (31:23), positioned at 32:1
+    w.submit({'kind': 'angels_met', 'subject': 'jacob', 'at': 'Mahanaim', 'case_source': 'Gen 32:2-3'})   # joseph [act: wayyiqtol at Gen 32:2]
+    w.submit({'kind': 'named', 'subject': 'the-camp-of-god', 'name': 'Mahanaim (מחנים — two camps, 32:3)', 'by': 'jacob', 'case_source': 'Gen 32:3'})   # joseph [act: wayyiqtol at Gen 32:3]
+    w.submit({'kind': 'messengers_sent', 'subject': 'jacob', 'to': 'esau', 'report': 'four hundred men with him', 'case_source': 'Gen 32:4-7'})   # joseph [act: wayyiqtol at Gen 32:4]
+    w.submit({'kind': 'feared_greatly', 'subject': 'jacob', 'case_source': 'Gen 32:8-9'})   # joseph [act: wayyiqtol at Gen 32:8]
+    w.submit({'kind': 'prayed', 'subject': 'jacob', 'for': 'deliverance from the hand of Esau', 'case_source': 'Gen 32:10-13'})   # joseph [act: wayyiqtol at Gen 32:8]
+    assert_ink('Gen 32:14', [], words=['בלילה']); M['jabbok_night'] = M['heap_morning'] + 1; w.marker('Gen 32:14', M['jabbok_night'], value='that night (32:14, 32:22-23) — the gift and the crossing: the heap\'s morning plus one', placement='reading_placed')   # the night: no numeral — the night word
+    w.submit({'kind': 'gift_prepared', 'subject': 'jacob', 'head_count': 550, 'case_source': 'Gen 32:14-22', 'slot': 'night'})   # joseph [act: wayyiqtol at Gen 32:14]
+    w.submit({'kind': 'river_crossed', 'subject': 'jacob', 'river': 'the Jabbok', 'case_source': 'Gen 32:23-24', 'slot': 'night'})   # joseph [act: wayyiqtol at Gen 32:23]
+    w.submit({'kind': 'wrestled', 'subject': 'jacob', 'case_source': 'Gen 32:25-26', 'slot': 'dawn'})   # joseph [act: wayyiqtol at Gen 32:25]
+    w.submit({'kind': 'blessing_demanded', 'subject': 'jacob', 'case_source': 'Gen 32:27', 'slot': 'dawn'})   # joseph [speech: wayyiqtol at Gen 32:27]
     w.submit({'kind': 'renamed', 'subject': 'jacob', 'name': 'israel', 'case_source': 'Gen 32:29'})   # family [speech: wayyiqtol at Gen 32:29]
+    w.submit({'kind': 'name_asked', 'subject': 'jacob', 'case_source': 'Gen 32:30'})   # joseph [speech: wayyiqtol at Gen 32:30]
+    w.submit({'kind': 'named', 'subject': 'the-ford-of-jabbok', 'name': 'Peniel (פניאל — the face of God, 32:31)', 'by': 'jacob', 'case_source': 'Gen 32:31'})   # joseph [act: wayyiqtol at Gen 32:31]
+    assert_ink('Gen 32:32', []); M['peniel_sunrise'] = M['jabbok_night'] + 1; w.marker('Gen 32:32', M['peniel_sunrise'], value='and the sun rose upon him (32:32) — the morning after the night; the meeting (33:1-16) on this day', placement='reading_placed')   # the sunrise
+    w.submit({'kind': 'sun_rose', 'subject': 'jacob', 'case_source': 'Gen 32:32', 'slot': 'morning'})   # joseph [act: wayyiqtol at Gen 32:32]
     w.submit({'kind': 'sinew_barred', 'subject': 'the-sons-of-israel', 'case_source': 'Gen 32:33'})   # family [statute by form]
+    # ---- Gen 33 ----
+    w.submit({'kind': 'esau_seen', 'subject': 'jacob', 'case_source': 'Gen 33:1'})   # joseph [act: wayyiqtol at Gen 33:1]
+    w.submit({'kind': 'children_divided', 'subject': 'jacob', 'case_source': 'Gen 33:1-2'})   # joseph [act: wayyiqtol at Gen 33:1]
+    w.submit({'kind': 'bowed', 'subject': 'jacob', 'form': 'prostration to the ground', 'times': 7, 'case_source': 'Gen 33:3'})   # joseph [act: wayyiqtol at Gen 33:3]
+    w.submit({'kind': 'embraced', 'subject': 'esau', 'whom': 'jacob', 'case_source': 'Gen 33:4'})   # joseph [act: wayyiqtol at Gen 33:4]
+    w.submit({'kind': 'fell_on_the_neck', 'subject': 'esau', 'on': 'jacob', 'case_source': 'Gen 33:4'})   # joseph [act: wayyiqtol at Gen 33:4]
+    w.submit({'kind': 'kissed', 'subject': 'esau', 'whom': 'jacob', 'dotted': True, 'case_source': 'Gen 33:4'})   # joseph [act: wayyiqtol at Gen 33:4]
+    w.submit({'kind': 'children_declared', 'subject': 'jacob', 'case_source': 'Gen 33:5'})   # joseph [speech: wayyiqtol at Gen 33:5]
+    w.submit({'kind': 'bowed', 'subject': 'the-maids-and-their-children', 'form': 'prostration', 'case_source': 'Gen 33:6'})   # joseph [act: wayyiqtol at Gen 33:6]
+    w.submit({'kind': 'bowed', 'subject': 'leah', 'form': 'prostration', 'case_source': 'Gen 33:7'})   # joseph [act: wayyiqtol at Gen 33:7]
+    w.submit({'kind': 'bowed', 'subject': 'rachel', 'form': 'prostration', 'with': 'joseph', 'case_source': 'Gen 33:7'})   # joseph [act: wayyiqtol at Gen 33:7]
+    w.submit({'kind': 'camp_explained', 'subject': 'esau', 'case_source': 'Gen 33:8-9'})   # joseph [speech: wayyiqtol at Gen 33:8]
+    w.submit({'kind': 'gift_urged', 'subject': 'jacob', 'case_source': 'Gen 33:10-11'})   # joseph [speech: wayyiqtol at Gen 33:10]
+    w.submit({'kind': 'convoy_declined', 'subject': 'jacob', 'case_source': 'Gen 33:12-15'})   # joseph [speech: wayyiqtol at Gen 33:12]
+    w.submit({'kind': 'journeyed', 'subject': 'esau', 'to': 'Seir', 'case_source': 'Gen 33:16'})   # joseph [act: wayyiqtol at Gen 33:16]
+    assert_ink('Gen 33:17', []); M['sukkot'] = M['peniel_sunrise'] + 1; w.marker('Gen 33:17', M['sukkot'], value='and Jacob journeyed to Sukkot (33:17) — the day after the meeting, MODELED (said so)', placement='reading_placed')   # Sukkot: the next day, modeled
+    w.submit({'kind': 'journeyed', 'subject': 'jacob', 'to': 'Sukkot', 'case_source': 'Gen 33:17'})   # joseph [act: wayyiqtol at Gen 33:17]
+    w.submit({'kind': 'booths_made', 'subject': 'jacob', 'case_source': 'Gen 33:17'})   # joseph [act: wayyiqtol at Gen 33:17]
+    w.submit({'kind': 'named', 'subject': 'jacob', 'name': 'Sukkot (סכות — booths, 33:17)', 'by': 'jacob', 'case_source': 'Gen 33:17'})   # joseph [act: wayyiqtol at Gen 33:17]
+    assert_ink('Gen 33:18', []); M['shechem'] = w.clock.calendar.add(M['sukkot'], 18, 'month'); w.marker('Gen 33:18', M['shechem'], value='and Jacob came whole to Shechem (33:18) — READING-PLACED eighteen months after Sukkot (Megillah 17a:7: eighteen months at Sukkot; the row road_years)', placement='reading_placed')   # Shechem: reading-placed, the eighteen months
+    w.submit({'kind': 'journeyed', 'subject': 'jacob', 'to': 'the city of Shechem', 'case_source': 'Gen 33:18'})   # joseph [act: wayyiqtol at Gen 33:18]
+    w.submit({'kind': 'purchased', 'subject': 'jacob', 'what': 'the-field-at-shechem', 'from': 'the sons of Hamor', 'price': 100, 'unit': 'kesitah', 'case_source': 'Gen 33:19'})   # joseph [act: wayyiqtol at Gen 33:19]
+    w.submit({'kind': 'altar_erected', 'subject': 'the-altar-of-el-elohe-israel', 'by': 'jacob', 'case_source': 'Gen 33:20'})   # joseph [act: wayyiqtol at Gen 33:20]
+    w.submit({'kind': 'named', 'subject': 'the-altar-of-el-elohe-israel', 'name': 'El-Elohe-Israel (אל אלהי ישראל — God, the God of Israel, 33:20)', 'by': 'jacob', 'case_source': 'Gen 33:20'})   # joseph [act: wayyiqtol at Gen 33:20]
+    # ---- Gen 34 ----
+    w.submit({'kind': 'went_out_to_see', 'subject': 'dinah', 'case_source': 'Gen 34:1'})   # joseph [act: wayyiqtol at Gen 34:1]
+    w.submit({'kind': 'seized_and_violated', 'subject': 'shechem', 'whom': 'dinah', 'case_source': 'Gen 34:2'})   # joseph [act: wayyiqtol at Gen 34:2]
+    w.submit({'kind': 'soul_cleaved', 'subject': 'shechem', 'case_source': 'Gen 34:3'})   # joseph [act: wayyiqtol at Gen 34:3]
+    w.submit({'kind': 'wife_asked', 'subject': 'shechem', 'of': 'hamor', 'case_source': 'Gen 34:4'})   # joseph [speech: wayyiqtol at Gen 34:4]
+    w.submit({'kind': 'silence_kept', 'subject': 'jacob', 'case_source': 'Gen 34:5'})   # joseph [act: wayyiqtol at Gen 34:3]
+    w.submit({'kind': 'came_to_speak', 'subject': 'hamor', 'case_source': 'Gen 34:6'})   # joseph [act: wayyiqtol at Gen 34:6]
+    w.submit({'kind': 'outraged', 'subject': 'the-sons', 'case_source': 'Gen 34:7'})   # joseph [act: wayyiqtol at Gen 34:7]
+    w.submit({'kind': 'marriage_proposed', 'subject': 'hamor', 'case_source': 'Gen 34:8-10'})   # joseph [speech: wayyiqtol at Gen 34:8]
+    w.submit({'kind': 'marriage_proposed', 'subject': 'shechem', 'mohar': 'unbounded', 'case_source': 'Gen 34:11-12'})   # joseph [speech: wayyiqtol at Gen 34:11]
+    w.submit({'kind': 'deceit_answered', 'subject': 'the-sons', 'case_source': 'Gen 34:13-17'})   # joseph [speech: wayyiqtol at Gen 34:13]
+    w.submit({'kind': 'terms_accepted', 'subject': 'hamor', 'case_source': 'Gen 34:18-19'})   # joseph [act: wayyiqtol at Gen 34:18]
+    w.submit({'kind': 'gate_addressed', 'subject': 'hamor', 'case_source': 'Gen 34:20-23'})   # joseph [speech: wayyiqtol at Gen 34:20]
+    w.submit({'kind': 'males_circumcised', 'subject': 'the-men-of-shechem', 'case_source': 'Gen 34:24'})   # joseph [act: wayyiqtol at Gen 34:24]
+    w.submit({'kind': 'city_struck', 'subject': 'simeon-and-levi', 'ordinal': 3, 'case_source': 'Gen 34:25-26'})   # joseph [act: wayyiqtol at Gen 34:25]
+    w.submit({'kind': 'city_plundered', 'subject': 'the-sons', 'case_source': 'Gen 34:27-29'})   # joseph [act: wayyiqtol at Gen 34:27]
+    w.submit({'kind': 'rebuked', 'subject': 'jacob', 'whom': 'Simeon and Levi', 'case_source': 'Gen 34:30'})   # joseph [speech: wayyiqtol at Gen 34:30]
+    w.submit({'kind': 'answered_back', 'subject': 'the-sons', 'case_source': 'Gen 34:31'})   # joseph [speech: wayyiqtol at Gen 34:31]
     # ---- Gen 35 ----
+    w.submit({'kind': 'altar_commanded', 'subject': 'god', 'to': 'jacob', 'case_source': 'Gen 35:1'})   # joseph [speech: wayyiqtol at Gen 35:1]
+    w.submit({'kind': 'purge_commanded', 'subject': 'jacob', 'case_source': 'Gen 35:2-3'})   # joseph [speech: wayyiqtol at Gen 35:2]
+    w.submit({'kind': 'gods_hidden', 'subject': 'jacob', 'case_source': 'Gen 35:4'})   # joseph [act: wayyiqtol at Gen 35:4]
+    w.close('the-house-of-jacob', 'foreign_gods_removal_owed', 'Gen 35:4 — the gods given and hidden')   # joseph
+    w.submit({'kind': 'journeyed', 'subject': 'the-house-of-jacob', 'to': 'toward Bethel', 'case_source': 'Gen 35:5'})   # joseph [act: wayyiqtol at Gen 35:5]
+    assert_ink('Gen 35:6', []); M['bethel_again'] = M['shechem'] + 1; w.marker('Gen 35:6', M['bethel_again'], value='and Jacob came to Luz, that is Bethel (35:6) — the Shechem stay inside the eighteen months by the shelf\'s own count (Megillah 17a:7: Sukkot and Bethel), 35:5\'s journey one day, MODELED (said so); 28:15\'s return closed here', placement='reading_placed')   # Bethel again: the shelf's count, the day modeled
+    w.submit({'kind': 'journeyed', 'subject': 'jacob', 'to': 'Luz, that is Bethel', 'case_source': 'Gen 35:6'})   # joseph [act: wayyiqtol at Gen 35:6]
+    w.close('jacob', 'ascent_to_bethel_owed', 'Gen 35:6 — and Jacob came to Luz, that is Bethel')   # joseph
+    w.close('jacob', 'return_promised', "Gen 35:6 — S3's entry (28:15): and Jacob came to Luz which is in the land of Canaan, that is Bethel")   # joseph
+    w.submit({'kind': 'altar_erected', 'subject': 'the-altar-at-bethel-again', 'by': 'jacob', 'case_source': 'Gen 35:7'})   # joseph [act: wayyiqtol at Gen 35:7]
+    w.submit({'kind': 'named', 'subject': 'the-place', 'name': 'El-Bethel (אל בית אל — the God of Bethel, 35:7)', 'by': 'jacob', 'case_source': 'Gen 35:7'})   # joseph [act: wayyiqtol at Gen 35:7]
+    w.close('jacob', 'altar_owed', 'Gen 35:7 — and he built there an altar')   # joseph
+    w.close('jacob', 'vow_of_bethel', "Gen 35:7 — S3's entry (28:20-22): the altar built where the vow was made; Bereshit Rabbah 81:1-2 read the delay as punished")   # joseph
+    w.submit({'kind': 'died', 'subject': 'deborah', 'case_source': 'Gen 35:8'})   # joseph [act: wayyiqtol at Gen 35:8]
+    w.submit({'kind': 'buried', 'subject': 'deborah', 'where': 'below Bethel, under the oak', 'case_source': 'Gen 35:8'})   # joseph [act: wayyiqtol at Gen 35:8]
+    w.submit({'kind': 'named', 'subject': 'the-oak-below-bethel', 'name': 'Allon-bachuth (אלון בכות — the oak of weeping, 35:8)', 'by': 'jacob', 'case_source': 'Gen 35:8'})   # joseph [act: wayyiqtol at Gen 35:8]
+    w.submit({'kind': 'appeared', 'subject': 'god', 'to': 'jacob', 'again': True, 'case_source': 'Gen 35:9'})   # joseph [act: wayyiqtol at Gen 35:9]
+    w.submit({'kind': 'named', 'subject': 'jacob', 'name': 'Israel (ישראל — by the formula, 35:10)', 'by': 'god', 'case_source': 'Gen 35:10'})   # joseph [act: wayyiqtol at Gen 35:10]
+    w.submit({'kind': 'blessed_be_fruitful', 'subject': 'god', 'to': 'jacob', 'number': 'singular', 'case_source': 'Gen 35:11'})   # joseph [speech: wayyiqtol at Gen 35:11]
+    w.submit({'kind': 'land_promised', 'subject': 'god', 'to': 'jacob', 'case_source': 'Gen 35:12'})   # joseph [speech: wayyiqtol at Gen 35:11]
+    w.submit({'kind': 'god_went_up', 'subject': 'god', 'case_source': 'Gen 35:13'})   # joseph [act: wayyiqtol at Gen 35:13]
+    w.submit({'kind': 'pillar_set_and_anointed', 'subject': 'the_pillar_of_bethel', 'by': 'jacob', 'libation': True, 'oil': True, 'case_source': 'Gen 35:14'})   # joseph [act: wayyiqtol at Gen 35:14]
+    w.submit({'kind': 'named', 'subject': 'the-place', 'name': 'Bethel (בית אל — the house of God, 35:15)', 'by': 'jacob', 'case_source': 'Gen 35:15'})   # joseph [act: wayyiqtol at Gen 35:15]
+    assert_ink('Gen 35:16', []); M['ephrath_road'] = w.clock.calendar.add(M['bethel_again'], 6, 'month'); w.marker('Gen 35:16', M['ephrath_road'], value='and they journeyed from Bethel (35:16) — READING-PLACED six months after the arrival (Megillah 17a:7: six months at Bethel; the row road_years): Rachel\'s death on the road', placement='reading_placed')   # the road to Ephrath: reading-placed, the six months
+    w.submit({'kind': 'journeyed', 'subject': 'jacob', 'to': 'toward Ephrath', 'case_source': 'Gen 35:16'})   # joseph [act: wayyiqtol at Gen 35:16]
+    w.submit({'kind': 'hard_birth', 'subject': 'rachel', 'case_source': 'Gen 35:16-17'})   # joseph [act: wayyiqtol at Gen 35:16]
+    w.submit({'kind': 'born', 'subject': 'benjamin', 'mother': 'rachel', 'sex': 'm', 'case_source': 'Gen 35:18'})   # joseph [act: wayyiqtol at Gen 35:18]
+    w.submit({'kind': 'named', 'subject': 'benjamin', 'name': 'Ben-oni (בן אוני — son of my sorrow, 35:18)', 'by': 'rachel', 'case_source': 'Gen 35:18'})   # joseph [act: wayyiqtol at Gen 35:18]
+    w.submit({'kind': 'named', 'subject': 'benjamin', 'name': 'Benjamin (בנימין — son of the right hand, 35:18)', 'by': 'jacob', 'case_source': 'Gen 35:18'})   # joseph [act: wayyiqtol at Gen 35:18]
+    w.submit({'kind': 'died', 'subject': 'rachel', 'case_source': 'Gen 35:19'})   # joseph [act: wayyiqtol at Gen 35:19]
+    w.submit({'kind': 'buried', 'subject': 'rachel', 'where': 'on the way to Ephrath, that is Bethlehem', 'case_source': 'Gen 35:19'})   # joseph [act: wayyiqtol at Gen 35:19]
+    w.submit({'kind': 'grave_pillar_set', 'subject': 'jacob', 'on': 'the-grave-of-rachel', 'case_source': 'Gen 35:20'})   # joseph [act: wayyiqtol at Gen 35:20]
+    w.submit({'kind': 'journeyed', 'subject': 'jacob', 'to': 'beyond Migdal-eder', 'case_source': 'Gen 35:21'})   # joseph [act: wayyiqtol at Gen 35:21]
+    w.submit({'kind': 'lay_with_the_concubine', 'subject': 'reuben', 'with': 'bilhah', 'reading': 'read_not_translated', 'case_source': 'Gen 35:22'})   # joseph [act: wayyiqtol at Gen 35:22]
+    w.submit({'kind': 'sons_counted', 'subject': 'jacob', 'count': 12, 'case_source': 'Gen 35:22-26'})   # joseph [act: wayyiqtol at Gen 35:22]
+    assert_ink('Gen 35:27', []); M['hebron'] = M['ephrath_road'] + 1; w.marker('Gen 35:27', M['hebron'], value='and Jacob came to Isaac his father at Mamre, Kiriath-arba, that is Hebron (35:27) — the road\'s day plus one, MODELED: Jacob ninety-nine (CJ1), the two absences (CJ0)', placement='reading_placed')   # Hebron (modeled) — KIRIATH-ARBA (קרית הארבע, the city of four) carries the article and the parser does NOT count it (the bare שבע of Beersheba it does): no numeral on this row
+    w.submit({'kind': 'journeyed', 'subject': 'jacob', 'to': 'Mamre, Kiriath-arba, that is Hebron', 'case_source': 'Gen 35:27'})   # joseph [act: wayyiqtol at Gen 35:27]
     assert_ink('Gen 35:28', [180]); M['died:isaac'] = year_day(w, yr(w, M['born:isaac']) + 180); w.marker('Gen 35:28', M['died:isaac'], value='all the days of isaac: 180 years — the closing total', proleptic=True)   # a lifespan total: proleptic
+    w.submit({'kind': 'died', 'subject': 'isaac', 'years': 180, 'case_source': 'Gen 35:28-29'})   # joseph [act: wayyiqtol at Gen 35:28]
+    w.submit({'kind': 'buried', 'subject': 'isaac', 'by': 'Esau and Jacob', 'case_source': 'Gen 35:29'})   # joseph [act: wayyiqtol at Gen 35:29]
+    # ---- Gen 36 ----
+    w.submit({'kind': 'bore', 'subject': 'adah-wife-of-esau', 'child': 'eliphaz', 'case_source': 'Gen 36:4'})   # joseph [act: wayyiqtol at Gen 36:4]
+    w.submit({'kind': 'bore', 'subject': 'basemath-bat-ishmael', 'child': 'reuel', 'case_source': 'Gen 36:4'})   # joseph [act: wayyiqtol at Gen 36:4]
+    w.submit({'kind': 'bore', 'subject': 'oholibamah', 'children': ['Jeush', 'Jalam', 'Korah'], 'case_source': 'Gen 36:5'})   # joseph [act: wayyiqtol at Gen 36:4]
+    w.submit({'kind': 'withdrew', 'subject': 'esau', 'to': 'the hill country of Seir', 'case_source': 'Gen 36:6-8'})   # joseph [act: wayyiqtol at Gen 36:6]
+    w.submit({'kind': 'roster_listed', 'subject': 'the-chiefs-of-esau', 'names': 'the sons of Esau and their chiefs', 'count': 14, 'case_source': 'Gen 36:9-19'})   # joseph [act: wayyiqtol at Gen 36:8]
+    w.submit({'kind': 'bore', 'subject': 'timna', 'child': 'amalek-son-of-eliphaz', 'by': 'eliphaz', 'case_source': 'Gen 36:12'})   # joseph [act: wayyiqtol at Gen 36:12]
+    w.submit({'kind': 'roster_listed', 'subject': 'the-sons-of-seir', 'names': 'the sons of Seir the Horite and their chiefs', 'count': 7, 'case_source': 'Gen 36:20-30'})   # joseph [act: wayyiqtol at Gen 36:14]
+    w.submit({'kind': 'reigned', 'subject': 'the-kings-of-edom', 'king': 'bela', 'city': 'Dinhabah', 'case_source': 'Gen 36:31-32'})   # joseph [act: wayyiqtol at Gen 36:22]
+    w.submit({'kind': 'reign_passed', 'subject': 'the-kings-of-edom', 'died': 'bela', 'successor': 'jobab', 'city': 'Bozrah', 'case_source': 'Gen 36:33'})   # joseph [act: wayyiqtol at Gen 36:33]
+    w.submit({'kind': 'reign_passed', 'subject': 'the-kings-of-edom', 'died': 'jobab', 'successor': 'husham', 'city': None, 'case_source': 'Gen 36:34'})   # joseph [act: wayyiqtol at Gen 36:34]
+    w.submit({'kind': 'reign_passed', 'subject': 'the-kings-of-edom', 'died': 'husham', 'successor': 'hadad-ben-bedad', 'city': 'Avith', 'case_source': 'Gen 36:35'})   # joseph [act: wayyiqtol at Gen 36:35]
+    w.submit({'kind': 'reign_passed', 'subject': 'the-kings-of-edom', 'died': 'hadad-ben-bedad', 'successor': 'samlah', 'city': 'Masrekah', 'case_source': 'Gen 36:36'})   # joseph [act: wayyiqtol at Gen 36:36]
+    w.submit({'kind': 'reign_passed', 'subject': 'the-kings-of-edom', 'died': 'samlah', 'successor': 'shaul-of-rehoboth', 'city': None, 'case_source': 'Gen 36:37'})   # joseph [act: wayyiqtol at Gen 36:37]
+    w.submit({'kind': 'reign_passed', 'subject': 'the-kings-of-edom', 'died': 'shaul-of-rehoboth', 'successor': 'baal-hanan', 'city': None, 'case_source': 'Gen 36:38'})   # joseph [act: wayyiqtol at Gen 36:38]
+    w.submit({'kind': 'reign_passed', 'subject': 'the-kings-of-edom', 'died': 'baal-hanan', 'successor': 'hadar', 'city': 'Pau', 'case_source': 'Gen 36:39'})   # joseph [act: wayyiqtol at Gen 36:39]
+    w.submit({'kind': 'roster_listed', 'subject': 'the-chiefs-of-esau', 'names': 'the chiefs of Esau by their places', 'count': 11, 'case_source': 'Gen 36:40-43'})   # joseph [act: wayyiqtol at Gen 36:39]
+    # ---- Gen 37 ----
+    assert_ink('Gen 37:2', [17]); M['age:joseph:17'] = year_day(w, yr(w, M['born:jacob']) + 108); w.marker('Gen 37:2', M['age:joseph:17'], value='Joseph seventeen (37:2) — the year off born:jacob by the chain 47:9 − 45:6\'s nine − 41:46\'s thirty + seventeen (born:joseph is set only at 41:46\'s row): the row joseph_seventeen_at_the_sale; the page order (35:29 before 37:2) against the chronology (CJ2)')   # the sale's year: Joseph seventeen, off born:jacob
+    w.submit({'kind': 'evil_report_brought', 'subject': 'joseph', 'case_source': 'Gen 37:2'})   # joseph [act: wayyiqtol at Gen 37:2]
+    w.submit({'kind': 'loved_apart', 'subject': 'jacob', 'whom': 'joseph', 'case_source': 'Gen 37:3'})   # joseph [act: wayyiqtol at Gen 37:2]
+    w.submit({'kind': 'coat_made', 'subject': 'jacob', 'for': 'joseph', 'case_source': 'Gen 37:3'})   # joseph [act: wayyiqtol at Gen 37:2]
+    w.submit({'kind': 'hated', 'subject': 'the-sons', 'whom': 'joseph', 'case_source': 'Gen 37:4'})   # joseph [act: wayyiqtol at Gen 37:4]
+    w.submit({'kind': 'dreamed', 'subject': 'joseph', 'dream': 'the sheaves', 'case_source': 'Gen 37:5'})   # joseph [act: wayyiqtol at Gen 37:5]
+    w.submit({'kind': 'hated', 'subject': 'the-sons', 'whom': 'joseph', 'more': True, 'case_source': 'Gen 37:5'})   # joseph [act: wayyiqtol at Gen 37:5]
+    w.submit({'kind': 'dream_told', 'subject': 'joseph', 'dream': 'the sheaves', 'to': 'the-sons', 'case_source': 'Gen 37:6-7'})   # joseph [speech: wayyiqtol at Gen 37:6]
+    w.submit({'kind': 'hated', 'subject': 'the-sons', 'whom': 'joseph', 'more': True, 'case_source': 'Gen 37:8'})   # joseph [act: wayyiqtol at Gen 37:8]
+    w.submit({'kind': 'dreamed', 'subject': 'joseph', 'dream': 'the sun, the moon and eleven stars', 'case_source': 'Gen 37:9'})   # joseph [act: wayyiqtol at Gen 37:9]
+    w.submit({'kind': 'dream_told', 'subject': 'joseph', 'dream': 'the sun, the moon and eleven stars', 'to': 'his father and his brothers', 'case_source': 'Gen 37:9-10'})   # joseph [speech: wayyiqtol at Gen 37:9]
+    w.submit({'kind': 'rebuked', 'subject': 'jacob', 'whom': 'joseph', 'case_source': 'Gen 37:10'})   # joseph [speech: wayyiqtol at Gen 37:10]
+    w.submit({'kind': 'envied', 'subject': 'the-sons', 'whom': 'joseph', 'case_source': 'Gen 37:11'})   # joseph [act: wayyiqtol at Gen 37:11]
+    w.submit({'kind': 'journeyed', 'subject': 'the-sons', 'to': 'Shechem, to pasture', 'case_source': 'Gen 37:12'})   # joseph [act: wayyiqtol at Gen 37:12]
+    w.submit({'kind': 'errand_given', 'subject': 'jacob', 'to': 'joseph', 'case_source': 'Gen 37:13-14'})   # joseph [speech: wayyiqtol at Gen 37:13]
+    w.submit({'kind': 'found_wandering', 'subject': 'joseph', 'by': 'the-man-at-shechem', 'to': 'Dothan', 'case_source': 'Gen 37:15-17'})   # joseph [act: wayyiqtol at Gen 37:15]
+    w.submit({'kind': 'conspired', 'subject': 'the-sons', 'against': 'joseph', 'case_source': 'Gen 37:18'})   # joseph [act: wayyiqtol at Gen 37:18]
+    w.submit({'kind': 'plot_spoken', 'subject': 'the-sons', 'case_source': 'Gen 37:19-20'})   # joseph [speech: wayyiqtol at Gen 37:19]
+    w.submit({'kind': 'rescue_urged', 'subject': 'reuben', 'case_source': 'Gen 37:21-22'})   # joseph [speech: wayyiqtol at Gen 37:21]
+    w.submit({'kind': 'stripped', 'subject': 'the-sons', 'whom': 'joseph', 'case_source': 'Gen 37:23'})   # joseph [act: wayyiqtol at Gen 37:23]
+    w.submit({'kind': 'cast_into_the_pit', 'subject': 'the-sons', 'whom': 'joseph', 'case_source': 'Gen 37:24'})   # joseph [act: wayyiqtol at Gen 37:24]
+    w.submit({'kind': 'caravan_seen', 'subject': 'the-sons', 'case_source': 'Gen 37:25'})   # joseph [act: wayyiqtol at Gen 37:25]
+    w.submit({'kind': 'sale_proposed', 'subject': 'judah', 'case_source': 'Gen 37:26-27'})   # joseph [speech: wayyiqtol at Gen 37:26]
+    w.submit({'kind': 'sold', 'subject': 'the-sellers-of-joseph', 'whom': 'joseph', 'to': 'the-ishmaelites', 'price': 20, 'case_source': 'Gen 37:28'})   # joseph [act: wayyiqtol at Gen 37:28]
+    w.close('joseph', 'in_the_pit', 'Gen 37:28 — drawn and lifted out of the pit')   # joseph
+    w.submit({'kind': 'pit_found_empty', 'subject': 'reuben', 'case_source': 'Gen 37:29-30'})   # joseph [act: wayyiqtol at Gen 37:29]
+    w.submit({'kind': 'tore_garments', 'subject': 'reuben', 'case_source': 'Gen 37:29'})   # joseph [act: wayyiqtol at Gen 37:29]
+    w.submit({'kind': 'coat_dipped', 'subject': 'the-sons', 'case_source': 'Gen 37:31-32'})   # joseph [act: wayyiqtol at Gen 37:31]
+    w.submit({'kind': 'coat_recognized', 'subject': 'jacob', 'case_source': 'Gen 37:33'})   # joseph [act: wayyiqtol at Gen 37:33]
+    w.submit({'kind': 'tore_garments', 'subject': 'jacob', 'case_source': 'Gen 37:34'})   # joseph [act: wayyiqtol at Gen 37:34]
+    w.submit({'kind': 'mourned', 'subject': 'jacob', 'days': 'many', 'case_source': 'Gen 37:34-35'})   # joseph [act: wayyiqtol at Gen 37:34]
+    w.submit({'kind': 'wept', 'subject': 'jacob', 'for': 'joseph', 'case_source': 'Gen 37:35'})   # joseph [act: wayyiqtol at Gen 37:35]
+    w.submit({'kind': 'sold', 'subject': 'the-medanites', 'whom': 'joseph', 'to': 'potiphar', 'case_source': 'Gen 37:36'})   # joseph [act: wayyiqtol at Gen 37:35]
     # ---- Gen 38 ----
     w.submit({'kind': 'slain', 'subject': 'er', 'case_source': 'Gen 38:7'})   # family [act: wayyiqtol at Gen 38:7]
     w.submit({'kind': 'levirate_commanded', 'subject': 'onan', 'widow': 'tamar', 'case_source': 'Gen 38:8'})   # family [speech: wayyiqtol at Gen 38:8]
@@ -381,11 +1109,192 @@ def tape(w, M, P):
     w.submit({'kind': 'recognized', 'subject': 'tamar', 'case_source': 'Gen 38:25-26'})   # family [act: wayyiqtol at Gen 38:24]
     w.close('tamar', 'waits_for_the_levir', 'Gen 38:26 — the seed raised through the father-in-law; the wait ended')   # family
     w.submit({'kind': 'born_twins', 'subject': 'tamar', 'firstborn': 'perez', 'case_source': 'Gen 38:27-30'})   # family [act: wayyiqtol at Gen 38:27]
+    # ---- Gen 39 ----
+    w.submit({'kind': 'slave_bought', 'subject': 'potiphar', 'whom': 'joseph', 'case_source': 'Gen 39:1'})   # joseph [act: wayyiqtol at Gen 39:1]
+    w.submit({'kind': 'prospered', 'subject': 'joseph', 'case_source': 'Gen 39:2-3'})   # joseph [act: wayyiqtol at Gen 39:2]
+    w.submit({'kind': 'appointed_over_the_house', 'subject': 'joseph', 'by': 'potiphar', 'case_source': 'Gen 39:4-6'})   # joseph [act: wayyiqtol at Gen 39:4]
+    w.submit({'kind': 'lie_with_me_demanded', 'subject': 'potiphars-wife', 'case_source': 'Gen 39:7'})   # joseph [speech: wayyiqtol at Gen 39:7]
+    w.submit({'kind': 'refused', 'subject': 'joseph', 'case_source': 'Gen 39:8-10'})   # joseph [speech: wayyiqtol at Gen 39:8]
+    w.submit({'kind': 'lie_with_me_demanded', 'subject': 'potiphars-wife', 'seized': True, 'case_source': 'Gen 39:12'})   # joseph [speech: wayyiqtol at Gen 39:12]
+    w.submit({'kind': 'garment_seized', 'subject': 'potiphars-wife', 'case_source': 'Gen 39:12-13, 39:16'})   # joseph [act: wayyiqtol at Gen 39:12]
+    w.submit({'kind': 'fled', 'subject': 'joseph', 'from': 'potiphars-wife', 'case_source': 'Gen 39:12-15'})   # joseph [act: wayyiqtol at Gen 39:12]
+    w.submit({'kind': 'accused', 'subject': 'potiphars-wife', 'whom': 'joseph', 'case_source': 'Gen 39:14-18'})   # joseph [speech: wayyiqtol at Gen 39:14]
+    w.submit({'kind': 'anger_burned', 'subject': 'potiphar', 'case_source': 'Gen 39:19'})   # joseph [act: wayyiqtol at Gen 39:19]
+    w.submit({'kind': 'imprisoned', 'subject': 'joseph', 'by': 'potiphar', 'case_source': 'Gen 39:20'})   # joseph [act: wayyiqtol at Gen 39:20]
+    w.submit({'kind': 'kindness_extended', 'subject': 'joseph', 'case_source': 'Gen 39:21'})   # joseph [act: wayyiqtol at Gen 39:21]
+    w.submit({'kind': 'appointed_over_the_house', 'subject': 'joseph', 'by': 'the-prison-keeper', 'over': 'the prisoners', 'case_source': 'Gen 39:22'})   # joseph [act: wayyiqtol at Gen 39:22]
+    w.submit({'kind': 'prospered', 'subject': 'joseph', 'in': 'the prison-house', 'case_source': 'Gen 39:23'})   # joseph [act: wayyiqtol at Gen 39:22]
+    # ---- Gen 40 ----
+    w.submit({'kind': 'offended', 'subject': 'the-two-officers', 'case_source': 'Gen 40:1-2'})   # joseph [act: wayyiqtol at Gen 40:1]
+    w.submit({'kind': 'imprisoned', 'subject': 'the-two-officers', 'by': 'pharaoh-of-joseph', 'case_source': 'Gen 40:3'})   # joseph [act: wayyiqtol at Gen 40:3]
+    w.submit({'kind': 'appointed_to_serve', 'subject': 'joseph', 'case_source': 'Gen 40:4'})   # joseph [act: wayyiqtol at Gen 40:4]
+    assert_ink('Gen 40:12', [3, 3]); M['prison_dreams'] = year_day(w, yr(w, M['born:jacob']) + 119) - 2; w.marker('Gen 40:5', M['prison_dreams'], value='the two dreams in one night (40:5) — READING-PLACED: Joseph thirty at Jacob\'s 121 (47:9 − 45:6\'s nine), the birthday two years before that by 41:1, so Jacob 119; the dreams two days before the birthday (40:13, 40:19 \'in yet three days\', the third day inclusive)')   # the prison dreams: the three days (40:12, 40:18), positioned at 40:5
+    w.submit({'kind': 'dreamed', 'subject': 'the-two-officers', 'night': 'one', 'case_source': 'Gen 40:5', 'slot': 'night'})   # joseph [act: wayyiqtol at Gen 40:5]
+    w.submit({'kind': 'faces_downcast', 'subject': 'the-two-officers', 'case_source': 'Gen 40:6-8', 'slot': 'morning'})   # joseph [act: wayyiqtol at Gen 40:6]
+    w.submit({'kind': 'dream_told', 'subject': 'the-chief-cupbearer', 'dream': 'the vine', 'to': 'joseph', 'case_source': 'Gen 40:9-11'})   # joseph [speech: wayyiqtol at Gen 40:9]
+    w.submit({'kind': 'interpreted', 'subject': 'joseph', 'to': 'the-chief-cupbearer', 'days': 3, 'case_source': 'Gen 40:12-13'})   # joseph [speech: wayyiqtol at Gen 40:12]
+    w.submit({'kind': 'remembrance_asked', 'subject': 'joseph', 'case_source': 'Gen 40:14-15'})   # joseph [speech: wayyiqtol at Gen 40:12]
+    w.submit({'kind': 'dream_told', 'subject': 'the-chief-baker', 'dream': 'the baskets', 'to': 'joseph', 'case_source': 'Gen 40:16-17'})   # joseph [speech: wayyiqtol at Gen 40:16]
+    w.submit({'kind': 'interpreted', 'subject': 'joseph', 'to': 'the-chief-baker', 'days': 3, 'case_source': 'Gen 40:18-19'})   # joseph [speech: wayyiqtol at Gen 40:18]
+    assert_ink('Gen 40:20', [], ordinals=[3]); M['birthday'] = M['prison_dreams'] + 2; w.marker('Gen 40:20', M['birthday'], value='on the third day, Pharaoh\'s birthday (40:20) — the dreams\' day plus two, inclusive: the cupbearer restored, the baker hanged (CJ6)')   # the third day, inclusive
+    w.submit({'kind': 'feast_made', 'subject': 'pharaoh-of-joseph', 'occasion': 'his birthday', 'ordinal': 3, 'case_source': 'Gen 40:20'})   # joseph [act: wayyiqtol at Gen 40:20]
+    w.submit({'kind': 'restored', 'subject': 'the-chief-cupbearer', 'case_source': 'Gen 40:21'})   # joseph [act: wayyiqtol at Gen 40:21]
+    w.close('the-chief-cupbearer', 'in_custody', 'Gen 40:21 — restored to his cupbearing')   # joseph
+    w.submit({'kind': 'hanged', 'subject': 'the-chief-baker', 'case_source': 'Gen 40:22'})   # joseph [act: wayyiqtol at Gen 40:21]
+    w.close('the-chief-baker', 'in_custody', 'Gen 40:22 — hanged, as Joseph had interpreted')   # joseph
+    w.submit({'kind': 'forgot', 'subject': 'the-chief-cupbearer', 'whom': 'joseph', 'case_source': 'Gen 40:23'})   # joseph [act: wayyiqtol at Gen 40:23]
     # ---- Gen 41 ----
+    assert_ink('Gen 41:1', [2]); M['pharaoh_dreams'] = w.clock.calendar.add(M['birthday'], 2, 'year'); w.marker('Gen 41:1', M['pharaoh_dreams'], value='at the end of two years of days (41:1) — the birthday plus two years = Joseph thirty\'s day (41:46, S1\'s row): the ink\'s own arithmetic joined')   # the two years (שנתים, the dual — Nazir 5a:5 the phrase)
+    w.submit({'kind': 'dreamed', 'subject': 'pharaoh-of-joseph', 'dream': 'the seven cows', 'case_source': 'Gen 41:1-4'})   # joseph [act: wayyiqtol at Gen 41:1]
+    w.submit({'kind': 'dreamed', 'subject': 'pharaoh-of-joseph', 'dream': 'the seven ears', 'case_source': 'Gen 41:5-7'})   # joseph [act: wayyiqtol at Gen 41:5]
+    w.submit({'kind': 'spirit_troubled', 'subject': 'pharaoh-of-joseph', 'case_source': 'Gen 41:8', 'slot': 'morning'})   # joseph [act: wayyiqtol at Gen 41:8]
+    w.submit({'kind': 'offenses_recalled', 'subject': 'the-chief-cupbearer', 'case_source': 'Gen 41:9-13'})   # joseph [speech: wayyiqtol at Gen 41:9]
+    w.submit({'kind': 'rushed_from_the_pit', 'subject': 'joseph', 'case_source': 'Gen 41:14-16'})   # joseph [act: wayyiqtol at Gen 41:14]
+    w.submit({'kind': 'dream_told', 'subject': 'pharaoh-of-joseph', 'dream': 'the cows and the ears', 'to': 'joseph', 'case_source': 'Gen 41:17-24'})   # joseph [speech: wayyiqtol at Gen 41:17]
+    w.submit({'kind': 'interpreted', 'subject': 'joseph', 'to': 'pharaoh-of-joseph', 'years': [7, 7], 'case_source': 'Gen 41:25-32'})   # joseph [speech: wayyiqtol at Gen 41:25]
+    w.submit({'kind': 'counsel_given', 'subject': 'joseph', 'to': 'pharaoh-of-joseph', 'case_source': 'Gen 41:33-36'})   # joseph [speech: wayyiqtol at Gen 41:25]
+    w.submit({'kind': 'counsel_accepted', 'subject': 'pharaoh-of-joseph', 'case_source': 'Gen 41:37-39'})   # joseph [act: wayyiqtol at Gen 41:37]
+    w.submit({'kind': 'set_over_egypt', 'subject': 'joseph', 'by': 'pharaoh-of-joseph', 'case_source': 'Gen 41:40-44'})   # joseph [act: wayyiqtol at Gen 41:37]
+    w.submit({'kind': 'named', 'subject': 'joseph', 'name': 'Zaphenath-paneah (צפנת פענח, 41:45)', 'by': 'pharaoh-of-joseph', 'case_source': 'Gen 41:45'})   # joseph [act: wayyiqtol at Gen 41:45]
+    w.submit({'kind': 'married', 'subject': 'asenath', 'husband': 'joseph', 'by': 'pharaoh-of-joseph', 'case_source': 'Gen 41:45'})   # joseph [act: wayyiqtol at Gen 41:45]
+    w.submit({'kind': 'went_out_over_egypt', 'subject': 'joseph', 'age': 30, 'case_source': 'Gen 41:45-46'})   # joseph [act: wayyiqtol at Gen 41:45]
     assert_ink('Gen 41:46', [30]); M['joseph30'] = w.clock.calendar.add(year_day(w, yr(w, M['born:jacob']) + 130), -9, 'year'); M['born:joseph'] = w.clock.calendar.add(M['joseph30'], -30, 'year'); w.marker('Gen 41:46', M['joseph30'], value='Joseph a son of thirty before Pharaoh — placed by 45:6 (two years of famine) and 41:53 (seven of plenty) before 47:9', era='life:joseph'); w.clock.eras['life:joseph'].epoch = M['born:joseph']   # Joseph placed backward from the descent
+    w.submit({'kind': 'food_gathered', 'subject': 'joseph', 'case_source': 'Gen 41:47-49'})   # joseph [act: wayyiqtol at Gen 41:47]
+    w.submit({'kind': 'born', 'subject': 'manasseh', 'mother': 'asenath', 'sex': 'm', 'case_source': 'Gen 41:50'})   # joseph [act: wayyiqtol at Gen 41:49]
+    w.submit({'kind': 'born', 'subject': 'ephraim', 'mother': 'asenath', 'sex': 'm', 'case_source': 'Gen 41:50'})   # joseph [act: wayyiqtol at Gen 41:49]
+    w.submit({'kind': 'named', 'subject': 'manasseh', 'name': 'Manasseh (מנשה — God has made me forget, 41:51)', 'by': 'joseph', 'case_source': 'Gen 41:51'})   # joseph [act: wayyiqtol at Gen 41:51]
+    w.submit({'kind': 'named', 'subject': 'ephraim', 'name': 'Ephraim (אפרים — God has made me fruitful, 41:52)', 'by': 'joseph', 'case_source': 'Gen 41:52'})   # joseph [act: wayyiqtol at Gen 41:51]
+    assert_ink('Gen 41:53', [7]); M['plenty_end'] = w.clock.calendar.add(M['joseph30'], 7, 'year'); w.marker('Gen 41:53', M['plenty_end'], value='and the seven years of plenty ended (41:53) — joseph30 plus seven: the famine begins (41:54), the seven-year timer set')   # the plenty's end
+    w.submit({'kind': 'plenty_ended', 'subject': 'the-land-of-egypt', 'case_source': 'Gen 41:53'})   # joseph [act: wayyiqtol at Gen 41:53]
+    w.submit({'kind': 'famine_came', 'subject': 'the-lands', 'years': 7, 'case_source': 'Gen 41:54'})   # joseph [act: wayyiqtol at Gen 41:54]
+    w.submit({'kind': 'cried_for_bread', 'subject': 'egypt_people', 'case_source': 'Gen 41:55'})   # joseph [act: wayyiqtol at Gen 41:55]
+    w.submit({'kind': 'storehouses_opened', 'subject': 'joseph', 'case_source': 'Gen 41:56-57'})   # joseph [act: wayyiqtol at Gen 41:56]
+    # ---- Gen 42 ----
+    w.submit({'kind': 'descent_commanded', 'subject': 'jacob', 'to': 'the-sons', 'case_source': 'Gen 42:1-2'})   # joseph [speech: wayyiqtol at Gen 42:1]
+    w.submit({'kind': 'went_down', 'subject': 'the-sons', 'count': 10, 'case_source': 'Gen 42:3-5'})   # joseph [act: wayyiqtol at Gen 42:3]
+    w.submit({'kind': 'benjamin_withheld', 'subject': 'jacob', 'case_source': 'Gen 42:4'})   # joseph [act: wayyiqtol at Gen 42:3]
+    w.submit({'kind': 'bowed', 'subject': 'the-sons', 'form': 'faces to the earth', 'case_source': 'Gen 42:6'})   # joseph [act: wayyiqtol at Gen 42:6]
+    w.submit({'kind': 'brothers_recognized', 'subject': 'joseph', 'case_source': 'Gen 42:7-8'})   # joseph [act: wayyiqtol at Gen 42:7]
+    w.submit({'kind': 'dreams_remembered', 'subject': 'joseph', 'case_source': 'Gen 42:9'})   # joseph [act: wayyiqtol at Gen 42:9]
+    w.submit({'kind': 'spies_charged', 'subject': 'joseph', 'whom': 'the-sons', 'case_source': 'Gen 42:9-14'})   # joseph [speech: wayyiqtol at Gen 42:9]
+    w.submit({'kind': 'honesty_pleaded', 'subject': 'the-sons', 'brothers': 12, 'case_source': 'Gen 42:10-13'})   # joseph [speech: wayyiqtol at Gen 42:10]
+    w.submit({'kind': 'test_set', 'subject': 'joseph', 'on': 'the-sons', 'case_source': 'Gen 42:15-16'})   # joseph [speech: wayyiqtol at Gen 42:14]
+    w.submit({'kind': 'custody_three_days', 'subject': 'joseph', 'whom': 'the-sons', 'days': 3, 'case_source': 'Gen 42:17'})   # joseph [act: wayyiqtol at Gen 42:17]
+    assert_ink('Gen 42:18', [], ordinals=[3]); M['custody_third'] = w.clock.day + 2; w.marker('Gen 42:18', M['custody_third'], value='and Joseph said to them on the third day (42:18) — the custody\'s day (42:17) plus two, inclusive: the custody timer fires on this walk, before the release (CJ6)')   # the third day of the custody, inclusive — a row 8g omitted, found at the first tape run (CJ6)
+    w.submit({'kind': 'plan_revised', 'subject': 'joseph', 'ordinal': 3, 'case_source': 'Gen 42:18-20'})   # joseph [speech: wayyiqtol at Gen 42:18]
+    w.submit({'kind': 'guilt_confessed', 'subject': 'the-sons', 'case_source': 'Gen 42:21'})   # joseph [speech: wayyiqtol at Gen 42:21]
+    w.submit({'kind': 'guilt_confessed', 'subject': 'reuben', 'citing': 'Gen 37:22', 'case_source': 'Gen 42:22'})   # joseph [speech: wayyiqtol at Gen 42:22]
+    w.submit({'kind': 'interpreter_between', 'subject': 'joseph', 'case_source': 'Gen 42:23'})   # joseph [act: wayyiqtol at Gen 42:22]
+    w.submit({'kind': 'wept', 'subject': 'joseph', 'case_source': 'Gen 42:24'})   # joseph [act: wayyiqtol at Gen 42:24]
+    w.submit({'kind': 'bound', 'subject': 'simeon', 'by': 'joseph', 'case_source': 'Gen 42:24'})   # joseph [act: wayyiqtol at Gen 42:24]
+    w.submit({'kind': 'silver_returned', 'subject': 'joseph', 'case_source': 'Gen 42:25'})   # joseph [act: wayyiqtol at Gen 42:25]
+    w.submit({'kind': 'journeyed', 'subject': 'the-sons', 'to': 'the land of Canaan', 'case_source': 'Gen 42:26'})   # joseph [act: wayyiqtol at Gen 42:26]
+    w.submit({'kind': 'silver_found', 'subject': 'the-sons', 'at': 'the lodging place', 'case_source': 'Gen 42:27-28'})   # joseph [act: wayyiqtol at Gen 42:27]
+    w.submit({'kind': 'report_given', 'subject': 'the-sons', 'to': 'jacob', 'case_source': 'Gen 42:29-34'})   # joseph [speech: wayyiqtol at Gen 42:29]
+    w.submit({'kind': 'silver_found', 'subject': 'the-sons', 'at': 'the emptying of the sacks', 'case_source': 'Gen 42:35'})   # joseph [act: wayyiqtol at Gen 42:35]
+    w.submit({'kind': 'bereaved_cried', 'subject': 'jacob', 'case_source': 'Gen 42:36'})   # joseph [speech: wayyiqtol at Gen 42:36]
+    w.submit({'kind': 'pledge_of_sons_offered', 'subject': 'reuben', 'case_source': 'Gen 42:37'})   # joseph [speech: wayyiqtol at Gen 42:37]
+    w.submit({'kind': 'descent_refused', 'subject': 'jacob', 'case_source': 'Gen 42:38'})   # joseph [speech: wayyiqtol at Gen 42:38]
+    # ---- Gen 43 ----
+    w.submit({'kind': 'descent_commanded', 'subject': 'jacob', 'to': 'the-sons', 'again': True, 'case_source': 'Gen 43:2'})   # joseph [speech: wayyiqtol at Gen 43:2]
+    w.submit({'kind': 'warning_cited', 'subject': 'judah', 'case_source': 'Gen 43:3-7'})   # joseph [speech: wayyiqtol at Gen 43:3]
+    w.submit({'kind': 'surety_offered', 'subject': 'judah', 'for': 'benjamin', 'to': 'jacob', 'case_source': 'Gen 43:8-10'})   # joseph [speech: wayyiqtol at Gen 43:8]
+    w.submit({'kind': 'caravan_planned', 'subject': 'jacob', 'case_source': 'Gen 43:11-14'})   # joseph [speech: wayyiqtol at Gen 43:11]
+    w.submit({'kind': 'went_down', 'subject': 'the-sons', 'with': 'benjamin', 'silver': 'double', 'case_source': 'Gen 43:15'})   # joseph [act: wayyiqtol at Gen 43:15]
+    w.submit({'kind': 'house_ordered', 'subject': 'joseph', 'to': 'the-steward', 'case_source': 'Gen 43:16-17', 'slot': 'noon'})   # joseph [speech: wayyiqtol at Gen 43:16]
+    w.submit({'kind': 'feast_made', 'subject': 'joseph', 'for': 'the-sons', 'case_source': 'Gen 43:16-34', 'slot': 'noon'})   # joseph [act: wayyiqtol at Gen 43:16]
+    w.submit({'kind': 'feared_at_the_door', 'subject': 'the-sons', 'case_source': 'Gen 43:18-22'})   # joseph [speech: wayyiqtol at Gen 43:18]
+    w.submit({'kind': 'peace_given', 'subject': 'the-steward', 'to': 'the-sons', 'simeon': 'brought out', 'case_source': 'Gen 43:23'})   # joseph [speech: wayyiqtol at Gen 43:23]
+    w.close('simeon', 'held_in_custody', 'Gen 43:23 — and he brought Simeon out to them')   # joseph
+    w.submit({'kind': 'feet_washed', 'subject': 'the-sons', 'case_source': 'Gen 43:24'})   # joseph [act: wayyiqtol at Gen 43:24]
+    w.submit({'kind': 'gift_presented', 'subject': 'the-sons', 'to': 'joseph', 'case_source': 'Gen 43:25-26', 'slot': 'noon'})   # joseph [act: wayyiqtol at Gen 43:25]
+    w.submit({'kind': 'bowed', 'subject': 'the-sons', 'form': 'prostration to the earth', 'case_source': 'Gen 43:26'})   # joseph [act: wayyiqtol at Gen 43:26]
+    w.submit({'kind': 'welfare_asked', 'subject': 'joseph', 'case_source': 'Gen 43:27-28'})   # joseph [speech: wayyiqtol at Gen 43:27]
+    w.submit({'kind': 'bowed', 'subject': 'the-sons', 'form': 'kidah and prostration', 'case_source': 'Gen 43:28'})   # joseph [act: wayyiqtol at Gen 43:28]
+    w.submit({'kind': 'benjamin_seen', 'subject': 'joseph', 'case_source': 'Gen 43:29-30'})   # joseph [act: wayyiqtol at Gen 43:29]
+    w.submit({'kind': 'wept', 'subject': 'joseph', 'where': 'the chamber', 'case_source': 'Gen 43:30'})   # joseph [act: wayyiqtol at Gen 43:30]
+    w.submit({'kind': 'bread_set', 'subject': 'joseph', 'case_source': 'Gen 43:31-32'})   # joseph [act: wayyiqtol at Gen 43:31]
+    w.submit({'kind': 'seated_by_birth_order', 'subject': 'the-sons', 'case_source': 'Gen 43:33'})   # joseph [act: wayyiqtol at Gen 43:33]
+    w.submit({'kind': 'portions_lifted', 'subject': 'joseph', 'hands': 5, 'case_source': 'Gen 43:34'})   # joseph [act: wayyiqtol at Gen 43:34]
+    w.submit({'kind': 'ate_and_drank', 'subject': 'the-sons', 'case_source': 'Gen 43:34'})   # joseph [act: wayyiqtol at Gen 43:34]
+    # ---- Gen 44 ----
+    w.submit({'kind': 'cup_planted', 'subject': 'the-steward', 'case_source': 'Gen 44:1-2'})   # joseph [act: wayyiqtol at Gen 44:1]
+    w.submit({'kind': 'sent_away', 'subject': 'the-sons', 'by': 'joseph', 'case_source': 'Gen 44:3'})   # joseph [act: wayyiqtol at Gen 44:2]
+    w.submit({'kind': 'pursued', 'subject': 'the-steward', 'whom': 'the-sons', 'case_source': 'Gen 44:4-6'})   # joseph [act: wayyiqtol at Gen 44:2]
+    w.submit({'kind': 'divination_claimed', 'subject': 'joseph', 'by': 'the-steward', 'case_source': 'Gen 44:5'})   # joseph [speech: wayyiqtol at Gen 44:2]
+    w.submit({'kind': 'theft_denied', 'subject': 'the-sons', 'case_source': 'Gen 44:7-8'})   # joseph [speech: wayyiqtol at Gen 44:7]
+    w.submit({'kind': 'rash_sentence_offered', 'subject': 'the-sons', 'case_source': 'Gen 44:9'})   # joseph [speech: wayyiqtol at Gen 44:7]
+    w.submit({'kind': 'ruling_softened', 'subject': 'the-steward', 'case_source': 'Gen 44:10'})   # joseph [speech: wayyiqtol at Gen 44:10]
+    w.submit({'kind': 'bags_searched', 'subject': 'the-steward', 'found_with': 'benjamin', 'case_source': 'Gen 44:11-12'})   # joseph [act: wayyiqtol at Gen 44:11]
+    w.submit({'kind': 'tore_garments', 'subject': 'the-sons', 'case_source': 'Gen 44:13'})   # joseph [act: wayyiqtol at Gen 44:13]
+    w.submit({'kind': 'bowed', 'subject': 'the-sons', 'form': 'fell to the earth', 'case_source': 'Gen 44:14'})   # joseph [act: wayyiqtol at Gen 44:14]
+    w.submit({'kind': 'divination_claimed', 'subject': 'joseph', 'case_source': 'Gen 44:15'})   # joseph [speech: wayyiqtol at Gen 44:15]
+    w.submit({'kind': 'guilt_confessed', 'subject': 'judah', 'case_source': 'Gen 44:16'})   # joseph [speech: wayyiqtol at Gen 44:16]
+    w.submit({'kind': 'ruling_given', 'subject': 'joseph', 'case_source': 'Gen 44:17'})   # joseph [speech: wayyiqtol at Gen 44:17]
+    w.submit({'kind': 'judah_pleaded', 'subject': 'judah', 'case_source': 'Gen 44:18-34'})   # joseph [speech: wayyiqtol at Gen 44:18]
+    # ---- Gen 45 ----
+    w.submit({'kind': 'restraint_failed', 'subject': 'joseph', 'case_source': 'Gen 45:1'})   # joseph [act: wayyiqtol at Gen 45:1]
+    w.submit({'kind': 'wept', 'subject': 'joseph', 'heard_by': 'the house of Pharaoh', 'case_source': 'Gen 45:2'})   # joseph [act: wayyiqtol at Gen 45:2]
+    w.submit({'kind': 'identity_revealed', 'subject': 'joseph', 'case_source': 'Gen 45:3-4'})   # joseph [speech: wayyiqtol at Gen 45:3]
+    assert_ink('Gen 45:6', [2, 5]); M['famine_two'] = w.clock.calendar.add(M['plenty_end'], 2, 'year'); w.marker('Gen 45:5', M['famine_two'], value='these two years the famine (45:6) — the plenty\'s end plus two: the recognition; = the descent\'s year by S1\'s construction (47:9)')   # the famine's second year: the two (שנתים) and the five remaining — the numbers at 45:6, the position at Gen 45:5 where the speech's event begins (the tape's first run set the five-years timer two years early: the event's line sorted before the marker's — CJ9's reading)
+    w.submit({'kind': 'providence_declared', 'subject': 'joseph', 'years_passed': 2, 'years_left': 5, 'case_source': 'Gen 45:5-8'})   # joseph [speech: wayyiqtol at Gen 45:4]
+    w.submit({'kind': 'descent_urged', 'subject': 'joseph', 'to': 'jacob', 'case_source': 'Gen 45:9-13'})   # joseph [speech: wayyiqtol at Gen 45:8]
+    w.submit({'kind': 'fell_on_the_neck', 'subject': 'joseph', 'on': 'benjamin', 'case_source': 'Gen 45:14'})   # joseph [act: wayyiqtol at Gen 45:14]
+    w.submit({'kind': 'kissed', 'subject': 'joseph', 'whom': 'all his brothers', 'case_source': 'Gen 45:15'})   # joseph [act: wayyiqtol at Gen 45:15]
+    w.submit({'kind': 'voice_heard', 'subject': 'pharaoh-of-joseph', 'case_source': 'Gen 45:16'})   # joseph [act: wayyiqtol at Gen 45:16]
+    w.submit({'kind': 'come_to_me_commanded', 'subject': 'pharaoh-of-joseph', 'to': 'the-sons', 'case_source': 'Gen 45:17-20'})   # joseph [speech: wayyiqtol at Gen 45:17]
+    w.submit({'kind': 'wagons_given', 'subject': 'joseph', 'to': 'the-sons', 'case_source': 'Gen 45:21'})   # joseph [act: wayyiqtol at Gen 45:21]
+    w.submit({'kind': 'gifts_given', 'subject': 'the-sons', 'by': 'joseph', 'what': 'changes of garments', 'case_source': 'Gen 45:22'})   # joseph [act: wayyiqtol at Gen 45:21]
+    w.submit({'kind': 'silver_given', 'subject': 'benjamin', 'amount': 300, 'by': 'joseph', 'case_source': 'Gen 45:22'})   # joseph [speech: wayyiqtol at Gen 45:21]
+    w.submit({'kind': 'gifts_given', 'subject': 'jacob', 'by': 'joseph', 'what': 'ten donkeys, ten she-asses', 'case_source': 'Gen 45:23'})   # joseph [act: wayyiqtol at Gen 45:21]
+    w.submit({'kind': 'sent_away', 'subject': 'the-sons', 'by': 'joseph', 'charge': 'do not quarrel on the way', 'case_source': 'Gen 45:24'})   # joseph [act: wayyiqtol at Gen 45:24]
+    w.submit({'kind': 'journeyed', 'subject': 'the-sons', 'to': 'the land of Canaan, to Jacob', 'case_source': 'Gen 45:25'})   # joseph [act: wayyiqtol at Gen 45:25]
+    w.close('judah', 'surety_undertaken', 'Gen 45:25 — they came to Jacob their father, Benjamin among them')   # joseph
+    w.submit({'kind': 'told_joseph_lives', 'subject': 'the-sons', 'to': 'jacob', 'case_source': 'Gen 45:26'})   # joseph [speech: wayyiqtol at Gen 45:26]
+    w.submit({'kind': 'wagons_seen', 'subject': 'jacob', 'case_source': 'Gen 45:27'})   # joseph [act: wayyiqtol at Gen 45:27]
+    w.submit({'kind': 'resolved_to_go', 'subject': 'jacob', 'case_source': 'Gen 45:28'})   # joseph [speech: wayyiqtol at Gen 45:28]
+    # ---- Gen 46 ----
+    assert_ink('Gen 46:1', [7]); M['beersheba_descent'] = M['famine_two']; w.marker('Gen 46:1', M['beersheba_descent'], value='and Israel journeyed with all that he had and came to Beersheba (46:1) — the departure in the famine\'s second year (45:6, 45:9 \'hurry\')')   # the descent's departure — the [7] is BEERSHEBA's (באר שבע): the place-name's numeral the parser counts, no count of this row
+    w.submit({'kind': 'journeyed', 'subject': 'jacob', 'to': 'Beersheba', 'case_source': 'Gen 46:1'})   # joseph [act: wayyiqtol at Gen 46:1]
+    w.submit({'kind': 'sacrificed', 'subject': 'jacob', 'to': 'the God of his father Isaac', 'case_source': 'Gen 46:1'})   # joseph [act: wayyiqtol at Gen 46:1]
+    w.submit({'kind': 'night_vision', 'subject': 'god', 'to': 'jacob', 'case_source': 'Gen 46:2-4', 'slot': 'night'})   # joseph [speech: wayyiqtol at Gen 46:2]
+    w.submit({'kind': 'journeyed', 'subject': 'israel_people', 'to': 'Egypt', 'case_source': 'Gen 46:5-7'})   # joseph [act: wayyiqtol at Gen 46:5]
+    w.submit({'kind': 'census_listed', 'subject': 'israel_people', 'registers': {'leah': 33, 'zilpah': 16, 'rachel': 14, 'bilhah': 7}, 'from_the_loins': 66, 'all': 70, 'case_source': 'Gen 46:8-27'})   # joseph [act: wayyiqtol at Gen 46:6]
+    w.submit({'kind': 'judah_sent_ahead', 'subject': 'jacob', 'whom': 'judah', 'case_source': 'Gen 46:28'})   # joseph [act: wayyiqtol at Gen 46:28]
+    w.submit({'kind': 'journeyed', 'subject': 'israel_people', 'to': 'Goshen', 'case_source': 'Gen 46:28'})   # joseph [act: wayyiqtol at Gen 46:28]
+    w.submit({'kind': 'fell_on_the_neck', 'subject': 'joseph', 'on': 'jacob', 'case_source': 'Gen 46:29'})   # joseph [act: wayyiqtol at Gen 46:29]
+    w.submit({'kind': 'let_me_die_said', 'subject': 'jacob', 'case_source': 'Gen 46:30'})   # joseph [speech: wayyiqtol at Gen 46:30]
+    w.submit({'kind': 'audience_prepared', 'subject': 'joseph', 'for': 'the-sons', 'case_source': 'Gen 46:31-34'})   # joseph [speech: wayyiqtol at Gen 46:31]
     # ---- Gen 47 ----
+    w.submit({'kind': 'told_pharaoh', 'subject': 'joseph', 'case_source': 'Gen 47:1'})   # joseph [speech: wayyiqtol at Gen 47:1]
+    w.submit({'kind': 'five_presented', 'subject': 'joseph', 'count': 5, 'case_source': 'Gen 47:2'})   # joseph [act: wayyiqtol at Gen 47:2]
+    w.submit({'kind': 'work_asked', 'subject': 'the-sons', 'case_source': 'Gen 47:3-4'})   # joseph [speech: wayyiqtol at Gen 47:3]
+    w.submit({'kind': 'goshen_granted', 'subject': 'pharaoh-of-joseph', 'to': 'the-sons', 'case_source': 'Gen 47:5-6'})   # joseph [speech: wayyiqtol at Gen 47:5]
+    w.submit({'kind': 'stood_before_pharaoh', 'subject': 'jacob', 'case_source': 'Gen 47:7'})   # joseph [act: wayyiqtol at Gen 47:7]
+    w.submit({'kind': 'blessed', 'subject': 'jacob', 'whom': 'pharaoh-of-joseph', 'case_source': 'Gen 47:7'})   # joseph [speech: wayyiqtol at Gen 47:7]
+    w.submit({'kind': 'days_asked', 'subject': 'jacob', 'years': 130, 'case_source': 'Gen 47:8-9'})   # joseph [speech: wayyiqtol at Gen 47:8]
     assert_ink('Gen 47:9', [130]); M['descent'] = year_day(w, yr(w, M['born:jacob']) + 130); w.marker('Gen 47:9', M['descent'], value='the days of the years of my sojourning: a hundred and thirty years — THE DESCENT')   # an age at an event
+    w.submit({'kind': 'blessed', 'subject': 'jacob', 'whom': 'pharaoh-of-joseph', 'going_out': True, 'case_source': 'Gen 47:10'})   # joseph [speech: wayyiqtol at Gen 47:10]
+    w.submit({'kind': 'settled', 'subject': 'joseph', 'whom': 'the-sons', 'in': 'the land of Rameses', 'case_source': 'Gen 47:11'})   # joseph [act: wayyiqtol at Gen 47:11]
+    w.close('the-house-of-jacob', 'goshen_promised', 'Gen 47:11 — settled in the best of the land')   # joseph
+    w.close('the-sons', 'good_of_egypt_promised', 'Gen 47:11 — in the land of Rameses, as Pharaoh had commanded')   # joseph
+    w.submit({'kind': 'sustained', 'subject': 'joseph', 'whom': 'the-house-of-jacob', 'case_source': 'Gen 47:12'})   # joseph [act: wayyiqtol at Gen 47:12]
+    w.close('jacob', 'sustenance_promised', 'Gen 47:12 — and Joseph sustained his father')   # joseph
+    w.submit({'kind': 'silver_gathered', 'subject': 'joseph', 'case_source': 'Gen 47:13-14'})   # joseph [act: wayyiqtol at Gen 47:13]
+    w.submit({'kind': 'cried_for_bread', 'subject': 'egypt_people', 'silver': 'gone', 'case_source': 'Gen 47:15'})   # joseph [act: wayyiqtol at Gen 47:15]
+    w.submit({'kind': 'livestock_taken_for_bread', 'subject': 'joseph', 'case_source': 'Gen 47:16-17'})   # joseph [act: wayyiqtol at Gen 47:15]
+    w.submit({'kind': 'second_year_came', 'subject': 'egypt_people', 'case_source': 'Gen 47:18-19'})   # joseph [act: wayyiqtol at Gen 47:18]
+    w.submit({'kind': 'purchased', 'subject': 'joseph', 'what': 'the-ground-of-egypt', 'for': 'pharaoh-of-joseph', 'price': 'bread', 'case_source': 'Gen 47:20'})   # joseph [act: wayyiqtol at Gen 47:20]
+    w.submit({'kind': 'people_moved', 'subject': 'joseph', 'case_source': 'Gen 47:21'})   # joseph [act: wayyiqtol at Gen 47:20]
+    w.submit({'kind': 'priests_exempted', 'subject': 'joseph', 'case_source': 'Gen 47:22'})   # joseph [act: wayyiqtol at Gen 47:20]
+    w.submit({'kind': 'seed_given', 'subject': 'joseph', 'to': 'egypt_people', 'case_source': 'Gen 47:23-24'})   # joseph [speech: wayyiqtol at Gen 47:23]
+    w.submit({'kind': 'servitude_accepted', 'subject': 'egypt_people', 'case_source': 'Gen 47:25'})   # joseph [speech: wayyiqtol at Gen 47:25]
+    w.submit({'kind': 'statute_set', 'subject': 'egypt_people', 'statute': 'a fifth to Pharaoh', 'case_source': 'Gen 47:26'})   # joseph [statute by form]
+    w.submit({'kind': 'fruitful_in_goshen', 'subject': 'israel_people', 'case_source': 'Gen 47:27'})   # joseph [act: wayyiqtol at Gen 47:27]
     assert_ink('Gen 47:28', [17, 147]); M['jacob_147'] = year_day(w, yr(w, M['born:jacob']) + 147); w.marker('Gen 47:28', M['jacob_147'], value='the days of Jacob: a hundred and forty-seven years — the deathbed (49:33)')   # an age at an event
+    w.submit({'kind': 'burial_commanded', 'subject': 'jacob', 'to': 'joseph', 'not_in': 'Egypt', 'case_source': 'Gen 47:29-30'})   # joseph [speech: wayyiqtol at Gen 47:29]
+    w.submit({'kind': 'sworn', 'subject': 'joseph', 'to': 'jacob', 'case_source': 'Gen 47:31'})   # joseph [act: wayyiqtol at Gen 47:31]
+    w.submit({'kind': 'bowed', 'subject': 'jacob', 'form': 'on the head of the bed', 'case_source': 'Gen 47:31'})   # joseph [act: wayyiqtol at Gen 47:31]
     # ---- Gen 48 ----
     w.submit({'kind': 'adopted', 'subject': 'jacob', 'sons': ['ephraim', 'manasseh'], 'case_source': 'Gen 48:5-6'})   # family [speech: wayyiqtol at Gen 48:4]
     w.submit({'kind': 'crossed', 'subject': 'ephraim', 'case_source': 'Gen 48:14, 48:20'})   # family [act: wayyiqtol at Gen 48:14]
@@ -395,9 +1304,35 @@ def tape(w, M, P):
     w.submit({'kind': 'burial_commanded', 'subject': 'jacob', 'case_source': 'Gen 49:29-32'})   # family [speech: wayyiqtol at Gen 49:29]
     w.submit({'kind': 'gathered', 'subject': 'jacob', 'case_source': 'Gen 49:33'})   # family [act: wayyiqtol at Gen 49:33]
     # ---- Gen 50 ----
+    w.submit({'kind': 'fell_on_the_neck', 'subject': 'joseph', 'on': 'the face of his father', 'case_source': 'Gen 50:1'})   # joseph [act: wayyiqtol at Gen 50:1]
+    w.submit({'kind': 'kissed', 'subject': 'joseph', 'whom': 'his dead father', 'case_source': 'Gen 50:1'})   # joseph [act: wayyiqtol at Gen 50:1]
+    w.close('jacob', 'josephs_hand_on_the_eyes', "Gen 50:1 — and Joseph fell on his father's face")   # joseph
+    w.submit({'kind': 'embalmed', 'subject': 'the-physicians', 'whom': 'jacob', 'days': 40, 'weeping_days': 70, 'case_source': 'Gen 50:2-3'})   # joseph [act: wayyiqtol at Gen 50:2]
+    assert_ink('Gen 50:3', [40, 70]); M['embalmed'] = M['jacob_147'] + 40; w.marker('Gen 50:3', M['embalmed'], value='forty days were fulfilled for him (50:3) — the death day (47:28\'s row, the deathbed) plus forty: the embalming\'s end')   # the forty (and the seventy, whose marker is 50:4's row)
+    assert_ink('Gen 50:4', []); M['weeping_end'] = M['jacob_147'] + 70; w.marker('Gen 50:4', M['weeping_end'], value='and the Egyptians wept for him seventy days (50:3); when the days of weeping were past (50:4) — the death day plus seventy')   # the seventy: the number at 50:3, the marker at 50:4 (one marker per row)
+    w.submit({'kind': 'leave_asked', 'subject': 'joseph', 'case_source': 'Gen 50:4-5'})   # joseph [speech: wayyiqtol at Gen 50:4]
+    w.submit({'kind': 'leave_granted', 'subject': 'pharaoh-of-joseph', 'to': 'joseph', 'case_source': 'Gen 50:6'})   # joseph [speech: wayyiqtol at Gen 50:6]
+    w.submit({'kind': 'journeyed', 'subject': 'the-sons', 'to': 'the threshing floor of Atad', 'case_source': 'Gen 50:7-9'})   # joseph [act: wayyiqtol at Gen 50:7]
+    assert_ink('Gen 50:10', [7]); M['atad'] = M['weeping_end'] + 1; w.marker('Gen 50:10', M['atad'], value='the threshing floor of Atad (50:10) — the weeping\'s end plus one, MODELED: the seven days\' mourning begins')   # Atad: the seven days
+    w.submit({'kind': 'mourned', 'subject': 'the-sons', 'days': 7, 'case_source': 'Gen 50:10'})   # joseph [act: wayyiqtol at Gen 50:10]
+    w.submit({'kind': 'named', 'subject': 'the-threshing-floor-of-atad', 'name': 'Abel-mizraim (אבל מצרים — the mourning of Egypt, 50:11)', 'by': 'the report formula', 'case_source': 'Gen 50:11'})   # joseph [act: wayyiqtol at Gen 50:11]
     w.submit({'kind': 'buried', 'subject': 'jacob', 'case_source': 'Gen 50:12-13'})   # family [act: wayyiqtol at Gen 50:12]
     w.close('the-sons', 'burial_owed', 'Gen 50:12 — as he had commanded them')   # family
+    assert_ink('Gen 50:14', []); M['atad_end'] = M['atad'] + 7; w.marker('Gen 50:14', M['atad_end'], value='and Joseph returned to Egypt (50:14) — Atad plus seven: the mourning\'s end')   # the return: Atad plus seven (one marker per row)
+    w.submit({'kind': 'journeyed', 'subject': 'the-sons', 'to': 'Egypt', 'case_source': 'Gen 50:14'})   # joseph [act: wayyiqtol at Gen 50:14]
+    w.submit({'kind': 'feared_joseph', 'subject': 'the-sons', 'case_source': 'Gen 50:15'})   # joseph [speech: wayyiqtol at Gen 50:15]
+    w.submit({'kind': 'forgiveness_asked', 'subject': 'the-sons', 'case_source': 'Gen 50:16-18'})   # joseph [speech: wayyiqtol at Gen 50:16]
+    w.submit({'kind': 'wept', 'subject': 'joseph', 'case_source': 'Gen 50:17'})   # joseph [act: wayyiqtol at Gen 50:17]
+    w.submit({'kind': 'bowed', 'subject': 'the-sons', 'form': 'fell before him', 'case_source': 'Gen 50:18'})   # joseph [act: wayyiqtol at Gen 50:18]
+    w.submit({'kind': 'forgave', 'subject': 'joseph', 'case_source': 'Gen 50:19-21'})   # joseph [speech: wayyiqtol at Gen 50:19]
+    w.submit({'kind': 'sustained', 'subject': 'joseph', 'whom': 'the-sons', 'case_source': 'Gen 50:21'})   # joseph [act: wayyiqtol at Gen 50:21]
+    w.submit({'kind': 'dwelt', 'subject': 'joseph', 'in': 'Egypt', 'years': 110, 'case_source': 'Gen 50:22'})   # joseph [act: wayyiqtol at Gen 50:22]
+    w.submit({'kind': 'grandsons_seen', 'subject': 'joseph', 'case_source': 'Gen 50:23'})   # joseph [act: wayyiqtol at Gen 50:23]
+    w.submit({'kind': 'visitation_promised', 'subject': 'joseph', 'to': 'the-sons', 'case_source': 'Gen 50:24'})   # joseph [speech: wayyiqtol at Gen 50:24]
+    w.submit({'kind': 'sworn', 'subject': 'israel_people', 'to': 'joseph', 'what': 'to carry up his bones', 'case_source': 'Gen 50:25'})   # joseph [act: wayyiqtol at Gen 50:25]
     assert_ink('Gen 50:26', [110]); M['died:joseph'] = year_day(w, yr(w, M['born:joseph']) + 110); w.marker('Gen 50:26', M['died:joseph'], value='all the days of joseph: 110 years — the closing total', proleptic=True)   # a lifespan total: proleptic
+    w.submit({'kind': 'died', 'subject': 'joseph', 'years': 110, 'case_source': 'Gen 50:26'})   # joseph [act: wayyiqtol at Gen 50:26]
+    w.submit({'kind': 'embalmed', 'subject': 'joseph', 'whom': 'joseph', 'coffin': True, 'case_source': 'Gen 50:26'})   # joseph [act: wayyiqtol at Gen 50:26]
     # ---- Exod 1 ----
     w.submit({'kind': 'king_arose', 'subject': 'the-oppression-king', 'case_source': 'Exod 1:8'})   # exodus_story [act: wayyiqtol at Exod 1:8]
     w.submit({'kind': 'taskmasters_set', 'subject': 'egypt_people', 'over': 'israel', 'case_source': 'Exod 1:11'})   # exodus_story [act: wayyiqtol at Exod 1:11]
@@ -410,7 +1345,7 @@ def tape(w, M, P):
     w.submit({'kind': 'decree_issued', 'subject': 'the-oppression-king', 'addressee': 'egypt_people', 'decree': 'every son born cast into the river (1:22)', 'case_source': 'Exod 1:22'})   # exodus_story [speech: wayyiqtol at Exod 1:22]
     # ---- Exod 2 ----
     w.submit({'kind': 'married', 'subject': 'jochebed', 'husband': 'amram', 'case_source': 'Exod 2:1'})   # exodus_story [act: wayyiqtol at Exod 2:1]
-    assert_ink('Exod 7:7', [80, 83]); M['exodus_year'] = yr(w, w.clock.calendar.add(M['descent'], 430, 'year')) if P['sojourn_start']['value'] == 'descent_literal' else yr(w, w.clock.calendar.add(M['born:isaac'], 400, 'year')); M['exodus'] = cal_day(w, M['exodus_year'], 1, 15); MB = WE.CAL_PARAMS['moses_birth_date']['value']; M['born:moses'] = cal_day(w, M['exodus_year'] - 80, MB['month'], MB['day']); M['born:aaron'] = w.clock.calendar.add(M['exodus'], -83, 'year'); w.marker('Exod 2:2', M['born:moses'], value='Moses born — eighty years before the exodus (7:7), on the seventh of Adar (Kiddushin 38a:5-7; the row moses_birth_date)', era='life:moses'); w.clock.set_era('life:aaron', M['born:aaron'], None)   # the birth of Moses (the number 80 at 7:7; the day by the shelf's row) — positioned at 2:2
+    assert_ink('Exod 7:7', [80, 83]); M['exodus_year'] = yr(w, w.clock.calendar.add(M['descent'], 430, 'year')) if P['sojourn_start']['value'] == 'descent_literal' else (yr(w, w.clock.calendar.add(M['covenant_pieces'], 430, 'year')) if P['sojourn_start']['value'] == 'covenant_pieces' else yr(w, w.clock.calendar.add(M['born:isaac'], 400, 'year'))); M['exodus'] = cal_day(w, M['exodus_year'], 1, 15); MB = WE.CAL_PARAMS['moses_birth_date']['value']; M['born:moses'] = cal_day(w, M['exodus_year'] - 80, MB['month'], MB['day']); M['born:aaron'] = w.clock.calendar.add(M['exodus'], -83, 'year'); w.marker('Exod 2:2', M['born:moses'], value='Moses born — eighty years before the exodus (7:7), on the seventh of Adar (Kiddushin 38a:5-7; the row moses_birth_date)', era='life:moses'); w.clock.set_era('life:aaron', M['born:aaron'], None)   # the birth of Moses (the number 80 at 7:7; the day by the shelf's row) — positioned at 2:2; O9 T2: the running setting's branch reads born:isaac (text); the fork's covenant branch is reading-placed in its own world
     w.submit({'kind': 'born', 'subject': 'moses', 'case_source': 'Exod 2:2'})   # exodus_story [act: wayyiqtol at Exod 2:2]
     w.submit({'kind': 'hidden', 'subject': 'moses', 'by': 'jochebed', 'months': 3, 'case_source': 'Exod 2:2'})   # exodus_story [act: wayyiqtol at Exod 2:2]
     assert_ink('Exod 2:2', [3]); M['ark'] = w.clock.calendar.add(M['born:moses'], 3, 'month'); w.marker('Exod 2:3', M['ark'], value='the ark in the reeds — three months after the birth (2:2); the shelf\'s sixth of Sivan (Sotah 12b:16-17) graded beside it (CS0)')   # the ark: the ink's three months from the birth
@@ -442,7 +1377,7 @@ def tape(w, M, P):
     # ---- Exod 5 ----
     w.submit({'kind': 'release_refused', 'subject': 'pharaoh', 'demand': 'let My people go (5:1)', 'case_source': 'Exod 5:1-2'})   # exodus_story [speech: wayyiqtol at Exod 5:1]
     w.submit({'kind': 'straw_withheld', 'subject': 'pharaoh', 'case_source': 'Exod 5:7-10'})   # exodus_story [speech: wayyiqtol at Exod 5:6]
-    w.submit({'kind': 'officers_beaten', 'subject': 'the-officers', 'by': 'egypt_people', 'case_source': 'Exod 5:14'})   # exodus_story [act: wayyiqtol at Exod 5:12]
+    w.submit({'kind': 'officers_beaten', 'subject': 'the-officers', 'by': 'egypt_people', 'case_source': 'Exod 5:14'})   # exodus_story [act: wayyiqtol at Exod 5:14]
     # ---- Exod 6 ----
     w.submit({'kind': 'now_you_will_see', 'subject': 'moses', 'case_source': 'Exod 6:1'})   # exodus_story [speech: wayyiqtol at Exod 6:1]
     w.submit({'kind': 'redemption_promised', 'subject': 'israel', 'expressions': 5, 'case_source': 'Exod 6:6-8'})   # exodus_story [speech: wayyiqtol at Exod 6:5]
@@ -482,7 +1417,7 @@ def tape(w, M, P):
     # ---- Exod 10 ----
     assert_ink('Exod 10:4', [], words=['מחר']); M['locusts_morrow'] = w.clock.day + 1; w.marker('Exod 10:4', M['locusts_morrow'], value='tomorrow I bring locusts (10:4)')   # the locusts' morrow
     w.submit({'kind': 'driven_from_court', 'subject': 'moses', 'case_source': 'Exod 10:11'})   # exodus_story [act: wayyiqtol at Exod 10:11]
-    w.submit({'kind': 'plague_struck', 'subject': 'egypt_people', 'plague': 'locusts', 'by': 'moses', 'case_source': 'Exod 10:13'})   # exodus_story [act: wayyiqtol at Exod 10:13]
+    w.submit({'kind': 'plague_struck', 'subject': 'egypt_people', 'plague': 'locusts', 'by': 'moses', 'case_source': 'Exod 10:13', 'slot': 'night'})   # exodus_story [act: wayyiqtol at Exod 10:13]
     w.submit({'kind': 'plague_removed', 'subject': 'egypt_people', 'plague': 'locusts', 'case_source': 'Exod 10:19'})   # exodus_story [act: wayyiqtol at Exod 10:19]
     w.close('egypt_people', 'plague_struck', 'Exod 10:19 — the locusts removed', value='locusts')   # exodus_story
     w.submit({'kind': 'heart_hardened', 'subject': 'pharaoh', 'agent': 'the_lord', 'verb': 'strong', 'case_source': 'Exod 10:20'})   # exodus_story [act: wayyiqtol at Exod 10:20]
@@ -499,11 +1434,14 @@ def tape(w, M, P):
     assert_ink('Exod 12:29', []); w.marker('Exod 12:29', M['exodus'], value='at half of the night the LORD struck every firstborn — the night belongs to the fifteenth (the day boundary is the evening): the exodus day (12:41, 12:51)')   # the night of the fifteenth
     w.submit({'kind': 'plague_struck', 'subject': 'egypt_people', 'plague': 'the_firstborn', 'by': 'the_lord', 'case_source': 'Exod 12:29'})   # exodus_story [act: wayyiqtol at Exod 12:29]
     w.close('pharaoh', 'firstborn_death_decreed', 'Exod 12:29 — the LORD struck every firstborn in the land of Egypt')   # exodus_story
+    w.close('israel', 'nation_to_be_judged', 'Exod 12:29 — the firstborn struck: 12:12\'s judgments executed on Egypt (Gen 15:14 "that nation I will judge" — S2\'s entry; finds nothing on this bare scene)')   # exodus_story
     w.submit({'kind': 'sent_out', 'subject': 'pharaoh', 'case_source': 'Exod 12:31-33'})   # exodus_story [act: wayyiqtol at Exod 12:31]
     w.close('pharaoh', 'release_demanded', 'Exod 12:31 — rise, go out from among my people')   # exodus_story
     w.submit({'kind': 'vessels_asked', 'subject': 'israel', 'case_source': 'Exod 12:35-36'})   # exodus_story [act: wayyiqtol at Exod 12:35]
+    w.close('israel', 'to_go_out_with_substance', 'Exod 12:36 — and they emptied Egypt (Gen 15:14 "afterward they shall go out with great substance" — S2\'s entry; Berakhot 9a:29-9b:1)')   # exodus_story
     w.submit({'kind': 'journeyed', 'subject': 'israel', 'to': 'Succoth', 'case_source': 'Exod 12:37'})   # exodus_story [act: wayyiqtol at Exod 12:37]
     assert_ink('Exod 12:41', [430]); w.marker('Exod 12:41', M['exodus'], value='at the end of four hundred and thirty years, on that very day: the fifteenth of the month (12:6, 12:29, 12:37)')   # the exodus day
+    w.close('israel', 'seed_to_serve_four_hundred', "Exod 12:41 — at the end of four hundred and thirty years, on that very day (Gen 15:13's four hundred — S2's entry; the seed from Isaac, 21:12)")   # exodus_story
     w.submit({'kind': 'brought_out', 'subject': 'israel', 'case_source': 'Exod 12:51; Exod 12:41'})   # exodus_story [act: wayyiqtol at Exod 12:51]
     w.close('moses', 'sent_to_pharaoh', 'Exod 12:51 — the LORD brought out the sons of Israel')   # exodus_story
     w.close('israel', 'to_be_brought_out', 'Exod 12:51 — brought out from the land of Egypt by their hosts')   # exodus_story
@@ -515,8 +1453,8 @@ def tape(w, M, P):
     w.submit({'kind': 'heart_hardened', 'subject': 'pharaoh', 'agent': 'the_lord', 'verb': 'strong', 'case_source': 'Exod 14:8'})   # exodus_story [act: wayyiqtol at Exod 14:8]
     w.submit({'kind': 'pursued', 'subject': 'egypt_people', 'case_source': 'Exod 14:8-9'})   # exodus_story [act: wayyiqtol at Exod 14:8]
     w.submit({'kind': 'murmured', 'subject': 'israel', 'trial': 'the sea (14:11 — were there no graves in Egypt)', 'case_source': 'Exod 14:11'})   # exodus_story [act: wayyiqtol at Exod 14:10]
-    assert_ink('Exod 14:21', []); SD_ = WE.CAL_PARAMS['sea_split_date']['value']; M['sea'] = cal_day(w, M['exodus_year'], SD_['month'], SD_['day']); w.marker('Exod 14:21', M['sea'], value='the sea split — the twenty-first of Nisan by the shelf\'s row (Sotah 12b:15; the ink gives the sea no date between 12:41 and 15:22)')   # the sea by the shelf
-    w.submit({'kind': 'sea_split', 'subject': 'the-sea', 'case_source': 'Exod 14:21'})   # exodus_story [act: wayyiqtol at Exod 14:21]
+    assert_ink('Exod 14:21', []); SD_ = WE.CAL_PARAMS['sea_split_date']['value']; M['sea'] = cal_day(w, M['exodus_year'], SD_['month'], SD_['day']); w.marker('Exod 14:21', M['sea'], value='the sea split — the twenty-first of Nisan by the shelf\'s row (Sotah 12b:15; the ink gives the sea no date between 12:41 and 15:22)', placement='reading_placed')   # the sea by the shelf
+    w.submit({'kind': 'sea_split', 'subject': 'the-sea', 'case_source': 'Exod 14:21', 'slot': 'night'})   # exodus_story [act: wayyiqtol at Exod 14:21]
     w.submit({'kind': 'sea_returned', 'subject': 'the-sea', 'case_source': 'Exod 14:27-28'})   # exodus_story [act: wayyiqtol at Exod 14:27]
     w.submit({'kind': 'saved_at_the_sea', 'subject': 'israel', 'case_source': 'Exod 14:30'})   # exodus_story [act: wayyiqtol at Exod 14:30]
     w.close('israel', 'pursued_by_egypt', 'Exod 14:30 — the LORD saved Israel that day from the hand of Egypt')   # exodus_story
@@ -525,11 +1463,11 @@ def tape(w, M, P):
     # ---- Exod 15 ----
     w.close('israel', 'to_be_redeemed', 'Exod 15:13 — "the people You redeemed" (the third expression, in the song)')   # exodus_story
     w.submit({'kind': 'sang', 'subject': 'israel', 'led_by': 'moses', 'case_source': 'Exod 15:21; Exod 15:1'})   # exodus_story [act: wayyiqtol at Exod 15:21]
-    assert_ink('Exod 15:22', [3]); M['shur'] = M['sea'] + 3; w.marker('Exod 15:22', M['shur'], value='three days in the wilderness of Shur without water (15:22)')   # Shur
+    assert_ink('Exod 15:22', [3]); M['shur'] = M['sea'] + 3; w.marker('Exod 15:22', M['shur'], value='three days in the wilderness of Shur without water (15:22)', placement='reading_placed')   # Shur
     w.submit({'kind': 'journeyed', 'subject': 'israel', 'to': 'the wilderness of Shur', 'case_source': 'Exod 15:22'})   # exodus_story [act: wayyiqtol at Exod 15:22]
     w.submit({'kind': 'journeyed', 'subject': 'israel', 'to': 'Marah', 'case_source': 'Exod 15:23'})   # exodus_story [act: wayyiqtol at Exod 15:23]
     w.submit({'kind': 'named', 'subject': 'the-place-marah', 'name': 'Marah (מרה — bitter, 15:23)', 'by': 'israel', 'case_source': 'Exod 15:23'})   # exodus_story [act: wayyiqtol at Exod 15:23]
-    w.submit({'kind': 'murmured', 'subject': 'israel', 'trial': 'Marah (15:24 — what shall we drink)', 'case_source': 'Exod 15:24'})   # exodus_story [act: wayyiqtol at Exod 15:23]
+    w.submit({'kind': 'murmured', 'subject': 'israel', 'trial': 'Marah (15:24 — what shall we drink)', 'case_source': 'Exod 15:24'})   # exodus_story [act: wayyiqtol at Exod 15:24]
     w.submit({'kind': 'waters_sweetened', 'subject': 'the-waters-of-marah', 'case_source': 'Exod 15:25'})   # exodus_story [act: wayyiqtol at Exod 15:25]
     w.submit({'kind': 'statute_set', 'subject': 'israel', 'case_source': 'Exod 15:25'})   # exodus_story [statute by form]
     w.submit({'kind': 'healer_promised', 'subject': 'israel', 'case_source': 'Exod 15:26'})   # exodus_story [speech: wayyiqtol at Exod 15:26]
@@ -563,16 +1501,16 @@ def tape(w, M, P):
     # ---- Exod 19 ----
     assert_ink('Exod 19:1', [], ordinals=[3]); M['sinai'] = w.clock.day_in('exodus', 1, 3, 1); w.marker('Exod 19:1', M['sinai'], value='the third month, on this day — the new moon by Rava (Shabbat 86b:5): a transfer, taught')   # Sinai
     w.submit({'kind': 'journeyed', 'subject': 'israel', 'to': 'the wilderness of Sinai', 'case_source': 'Exod 19:2; Exod 19:1'})   # exodus_story [act: wayyiqtol at Exod 19:2]
-    assert_ink('Exod 19:3', []); SN = WE.CAL_PARAMS['sinai_days']['value']; M['sinai_2'] = w.clock.day_in('exodus', 1, 3, SN['second_ascent']); w.marker('Exod 19:3', M['sinai_2'], value='Moses went up — the second of Sivan by Rabbi Yose (Shabbat 86b:5; the row sinai_days)')   # the first ascent
+    assert_ink('Exod 19:3', []); SN = WE.CAL_PARAMS['sinai_days']['value']; M['sinai_2'] = w.clock.day_in('exodus', 1, 3, SN['second_ascent']); w.marker('Exod 19:3', M['sinai_2'], value='Moses went up — the second of Sivan by Rabbi Yose (Shabbat 86b:5; the row sinai_days)', placement='reading_placed')   # the first ascent
     w.submit({'kind': 'moses_went_up', 'subject': 'moses', 'ascent': 1, 'case_source': 'Exod 19:3'})   # exodus_story [act: wayyiqtol at Exod 19:3]
     w.submit({'kind': 'covenant_offered', 'subject': 'israel', 'case_source': 'Exod 19:5-6'})   # exodus_story [speech: wayyiqtol at Exod 19:4]
     w.submit({'kind': 'people_answered', 'subject': 'israel', 'people': 'israel', 'book_read': False, 'case_source': 'Exod 19:8'})   # exodus_story [speech: wayyiqtol at Exod 19:8]
     w.close('israel', 'to_be_taken_as_a_people', 'Exod 19:8 — all that the LORD has spoken we will do (the fourth expression: taken as a people)')   # exodus_story
     w.submit({'kind': 'people_sanctified', 'subject': 'israel', 'days': 2, 'case_source': 'Exod 19:10-11; Exod 19:14-15'})   # exodus_story [act: wayyiqtol at Exod 19:9]
-    assert_ink('Exod 19:12', []); M['sinai_bound'] = w.clock.day_in('exodus', 1, 3, WE.CAL_PARAMS['sinai_days']['value']['boundary']); w.marker('Exod 19:12', M['sinai_bound'], value='the boundary — the third of Sivan by Rabbi Yose (Shabbat 87a:1)')   # the boundary
+    assert_ink('Exod 19:12', []); M['sinai_bound'] = w.clock.day_in('exodus', 1, 3, WE.CAL_PARAMS['sinai_days']['value']['boundary']); w.marker('Exod 19:12', M['sinai_bound'], value='the boundary — the third of Sivan by Rabbi Yose (Shabbat 87a:1)', placement='reading_placed')   # the boundary
     w.submit({'kind': 'bounds_set', 'subject': 'the-mountain', 'case_source': 'Exod 19:12-13; Exod 19:21-24'})   # exodus_story [act: wayyiqtol at Exod 19:9]
-    assert_ink('Exod 19:10', [], words=['היום', 'ומחר']); M['sinai_sep'] = w.clock.day_in('exodus', 1, 3, WE.CAL_PARAMS['sinai_days']['value']['separation']); w.marker('Exod 19:14', M['sinai_sep'], value='sanctify them today and tomorrow — the separation on the fourth of Sivan by Rabbi Yose (Shabbat 87a:1-3: Moses added a day)')   # the separation (19:10's command, 19:14's act)
-    assert_ink('Exod 19:16', [], ordinals=[3]); M['giving'] = w.clock.day_in('exodus', 1, 3, WE.CAL_PARAMS['sinai_days']['value']['giving']); w.marker('Exod 19:16', M['giving'], value='on the third day, when it was morning — the giving on the seventh of Sivan by Rabbi Yose (Shabbat 86b:5; = the tape\'s ascent marker, Taanit 28b): CS3')   # the third day
+    assert_ink('Exod 19:10', [], words=['היום', 'ומחר']); M['sinai_sep'] = w.clock.day_in('exodus', 1, 3, WE.CAL_PARAMS['sinai_days']['value']['separation']); w.marker('Exod 19:14', M['sinai_sep'], value='sanctify them today and tomorrow — the separation on the fourth of Sivan by Rabbi Yose (Shabbat 87a:1-3: Moses added a day)', placement='reading_placed')   # the separation (19:10's command, 19:14's act)
+    assert_ink('Exod 19:16', [], ordinals=[3]); M['giving'] = w.clock.day_in('exodus', 1, 3, WE.CAL_PARAMS['sinai_days']['value']['giving']); w.marker('Exod 19:16', M['giving'], value='on the third day, when it was morning — the giving on the seventh of Sivan by Rabbi Yose (Shabbat 86b:5; = the tape\'s ascent marker, Taanit 28b): CS3', placement='reading_placed')   # the third day
     w.submit({'kind': 'thunder_and_horn', 'subject': 'the-mountain', 'case_source': 'Exod 19:16'})   # exodus_story [act: wayyiqtol at Exod 19:16]
     w.submit({'kind': 'lord_descended', 'subject': 'the-mountain', 'case_source': 'Exod 19:18; Exod 19:20'})   # exodus_story [act: wayyiqtol at Exod 19:18]
     w.submit({'kind': 'moses_went_up', 'subject': 'moses', 'ascent': 3, 'case_source': 'Exod 19:20'})   # exodus_story [act: wayyiqtol at Exod 19:20]
@@ -582,7 +1520,7 @@ def tape(w, M, P):
     w.submit({'kind': 'youths_offered', 'subject': 'the-firstborn', 'officiants': 'the-firstborn', 'officiant_class': 'firstborn', 'era': 'before_the_tabernacle', 'case_source': 'Exod 24:5 + Onkelos + Mishnah Zevachim 14:4 — the youths are the firstborn', 'law': 'W7'})   # erection [act: wayyiqtol at Exod 24:5]
     w.submit({'kind': 'covenant_blood_thrown', 'subject': 'the-people', 'entrant': 'the-people', 'entrant_class': 'israel', 'circumcised': True, 'immersed_first': True, 'blood_sprinkled': True, 'case_source': 'Exod 24:6-8 — the blood of the covenant; Onkelos 24:8', 'law': 'W7'})   # erection [act: wayyiqtol at Exod 24:6]
     w.submit({'kind': 'people_answered', 'subject': 'the-people', 'people': 'the-people', 'book_read': True, 'case_source': 'Exod 24:7 — the book of the covenant read: we will do and we will hear', 'law': 'W7'})   # erection [speech: wayyiqtol at Exod 24:7]
-    assert_ink('Exod 24:18', [40, 40]); M['ascent'] = w.clock.day_in('exodus', 1, 3, 7); w.marker('Exod 24:18', M['ascent'], value='forty days and forty nights — Moses ascended on the seventh of Sivan (Taanit 28b:8-9): a transfer, taught')   # the ascent
+    assert_ink('Exod 24:18', [40, 40]); M['ascent'] = w.clock.day_in('exodus', 1, 3, 7); w.marker('Exod 24:18', M['ascent'], value='forty days and forty nights — Moses ascended on the seventh of Sivan (Taanit 28b:8-9): a transfer, taught', placement='reading_placed')   # the ascent (Taanit 28b places it)
     w.submit({'kind': 'moses_ascended', 'subject': 'moses', 'ascender': 'moses', 'ascent': 'first', 'case_source': 'Exod 24:18 — forty days and forty nights; the tablets at 31:18', 'law': 'W7'})   # erection [act: wayyiqtol at Exod 24:18]
     # ---- Exod 31 ----
     w.submit({'kind': 'craftsman_called', 'subject': 'bezalel', 'craftsman': 'bezalel', 'tribe': 'judah', 'consented_by': 'god_moses_israel', 'wise_hearted': False, 'filled': True, 'case_source': 'Exod 31:2-5 — see, I have called by name Bezalel; Berakhot 55a:10-11', 'law': 'W6'})   # erection [speech: wayyiqtol at Exod 31:1]
@@ -591,17 +1529,17 @@ def tape(w, M, P):
     # ---- Exod 32 ----
     w.submit({'kind': 'calf_made', 'subject': 'aaron', 'maker': 'aaron', 'worshipped': False, 'case_source': 'Exod 32:4 — the molten calf made (not yet worshipped)', 'law': 'W7'})   # erection [act: wayyiqtol at Exod 32:4]
     w.submit({'kind': 'moses_interceded', 'subject': 'moses', 'intercessor': 'moses', 'plea': 'relent', 'sin_specified': False, 'case_source': 'Exod 32:11-14 — vayechal; the LORD relented; Berakhot 32a', 'law': 'W7'})   # erection [speech: wayyiqtol at Exod 32:11]
-    assert_ink('Exod 32:19', []); M['breaking'] = w.clock.day_in('exodus', 1, 4, 17); w.marker('Exod 32:19', M['breaking'], value='the tablets broken — the seventeenth of Tammuz (Mishnah Taanit 4:6; Taanit 28b:9): a transfer, taught')   # the breaking
+    assert_ink('Exod 32:19', []); M['breaking'] = w.clock.day_in('exodus', 1, 4, 17); w.marker('Exod 32:19', M['breaking'], value='the tablets broken — the seventeenth of Tammuz (Mishnah Taanit 4:6; Taanit 28b:9): a transfer, taught', placement='reading_placed')   # the breaking (Mishnah Taanit 4:6 places it)
     w.submit({'kind': 'tablets_broken', 'subject': 'moses', 'breaker': 'moses', 'case_source': 'Exod 32:19 — under the mountain, the seventeenth of Tammuz (Mishnah Taanit 4:6)', 'law': 'W7'})   # erection [act: wayyiqtol at Exod 32:19]
     w.submit({'kind': 'calf_destroyed', 'subject': 'moses', 'destroyer': 'moses', 'idol': 'the-calf', 'purpose': 'to_test', 'case_source': 'Exod 32:20 + Avodah Zarah 44a:2 — the four verbs; a test, not a nullification', 'law': 'W7'})   # erection [act: wayyiqtol at Exod 32:20]
     w.submit({'kind': 'levites_gathered', 'subject': 'the-levites', 'tribe': 'the-levites', 'slain': 'the-three-thousand', 'gathered_by': 'moses', 'case_source': 'Exod 32:26-29 + Yoma 66b:15 — whoever is for the LORD; fill your hand', 'law': 'W7'})   # erection [act: wayyiqtol at Exod 32:26]
-    assert_ink('Exod 32:30', [], words=['ממחרת']); M['morrow'] = M['breaking'] + 1; w.marker('Exod 32:30', M['morrow'], value='and it was on the morrow — the intercession\'s ascent (32:31): the ink\'s own day-word')   # the morrow of the breaking (O1)
+    assert_ink('Exod 32:30', [], words=['ממחרת']); M['morrow'] = M['breaking'] + 1; w.marker('Exod 32:30', M['morrow'], value='and it was on the morrow — the intercession\'s ascent (32:31): the ink\'s own day-word', placement='reading_placed')   # the morrow of the breaking (O1)
     w.submit({'kind': 'moses_interceded', 'subject': 'moses', 'intercessor': 'moses', 'plea': 'blot_me', 'sin_specified': True, 'sinners': 'the-sinners', 'case_source': 'Exod 32:31-33 + Yoma 86b:14 + Rosh Hashanah 16b:14 — blot me; him I will blot', 'law': 'W7'})   # erection [speech: wayyiqtol at Exod 32:31]
     # ---- Exod 33 ----
     w.submit({'kind': 'tent_pitched_outside', 'subject': 'moses', 'pitcher': 'moses', 'servant': 'joshua', 'distance_from_camp': 'twelve_mil', 'case_source': 'Exod 33:7-11 + Mishnah Avot 1:1 + Sanhedrin 5b:9 — the tent, the seeker, Joshua', 'law': 'W7'})   # erection [act: wayyiqtol at Exod 33:6]
     # ---- Exod 34 ----
-    assert_ink('Exod 34:28', [40, 40, 10]); M['second_tablets'] = w.clock.day_in('exodus', 1, WE.CAL_PARAMS['second_tablets_given']['value']['month'], WE.CAL_PARAMS['second_tablets_given']['value']['day']); M['second_ascent'] = M['second_tablets'] - 40; w.marker('Exod 34:4', M['second_ascent'], value='he rose early in the morning — the second ascent, forty days (34:28) before the last tablets given on Yom Kippur (Taanit 30b:8; Bava Batra 121a:6): a transfer, taught; the tradition\'s first of Elul not on the local shelf')   # the second ascent dated by the shelf (O1); the number's verse 34:28, the position 34:2 before the ascent's event
-    w.submit({'kind': 'moses_ascended', 'subject': 'moses', 'ascender': 'moses', 'ascent': 'second', 'case_source': 'Exod 34:2-4, 34:28 — the second forty days; the radiant face at 34:29', 'law': 'W7'})   # erection [act: wayyiqtol at Exod 34:4]
+    assert_ink('Exod 34:28', [40, 40, 10]); M['second_tablets'] = w.clock.day_in('exodus', 1, WE.CAL_PARAMS['second_tablets_given']['value']['month'], WE.CAL_PARAMS['second_tablets_given']['value']['day']); M['second_ascent'] = M['second_tablets'] - 40; w.marker('Exod 34:4', M['second_ascent'], value='he rose early in the morning — the second ascent, forty days (34:28) before the last tablets given on Yom Kippur (Taanit 30b:8; Bava Batra 121a:6): a transfer, taught; the tradition\'s first of Elul not on the local shelf', placement='reading_placed')   # the second ascent dated by the shelf (O1); the number's verse 34:28, the position 34:2 before the ascent's event
+    w.submit({'kind': 'moses_ascended', 'subject': 'moses', 'ascender': 'moses', 'ascent': 'second', 'case_source': 'Exod 34:2-4, 34:28 — the second forty days; the radiant face at 34:29', 'law': 'W7', 'slot': 'morning'})   # erection [act: wayyiqtol at Exod 34:4]
     w.submit({'kind': 'attributes_proclaimed_at_sinai', 'subject': 'the-repentant', 'hearer': 'the-repentant', 'repented': True, 'sin_kind': 'other', 'case_source': 'Exod 34:6-7 + Yoma 86a:5 — He clears those who repent', 'law': 'W7'})   # erection [speech: wayyiqtol at Exod 34:6]
     w.submit({'kind': 'covenant_cut_at_sinai', 'subject': 'israel', 'party': 'israel', 'channel': 'oral_and_written', 'case_source': 'Exod 34:10, 34:27 + Gittin 60b — by the mouth of these words', 'law': 'W7'})   # erection [speech: wayyiqtol at Exod 34:10]
     # ---- Exod 35 ----
@@ -610,8 +1548,8 @@ def tape(w, M, P):
     w.submit({'kind': 'offering_brought', 'subject': 'the-spinning-women', 'giver': 'the-spinning-women', 'moved_by': 'heart', 'material': 'spun_yarn_and_goats_hair', 'resolved_in_heart_only': False, 'case_source': 'Exod 35:25-26 — every wise-hearted woman spun with her hands; the women whose hearts lifted them spun the goats (Shabbat 74b:6)', 'law': 'W6'})   # erection [act: wayyiqtol at Exod 35:25]
     w.submit({'kind': 'offering_brought', 'subject': 'the-princes', 'giver': 'the-princes', 'moved_by': 'heart', 'material': 'onyx_and_setting_stones_spice_oil', 'resolved_in_heart_only': False, 'case_source': 'Exod 35:27-28 — the princes brought the onyx stones, the spice and the oil (Yoma 75a:19)', 'law': 'W6'})   # erection [act: wayyiqtol at Exod 35:25]
     # ---- Exod 36 ----
-    w.submit({'kind': 'offering_brought', 'subject': 'the-people', 'case_source': 'Exod 36:3 (the first morning)', 'law': '1'})   # sanctuary_build [act: wayyiqtol at Exod 36:3]
-    w.submit({'kind': 'offering_brought', 'subject': 'the-people', 'case_source': 'Exod 36:3 (the second morning)', 'law': '1'})   # sanctuary_build [act: wayyiqtol at Exod 36:3]
+    w.submit({'kind': 'offering_brought', 'subject': 'the-people', 'case_source': 'Exod 36:3 (the first morning)', 'law': '1', 'slot': 'morning'})   # sanctuary_build [act: wayyiqtol at Exod 36:3]
+    w.submit({'kind': 'offering_brought', 'subject': 'the-people', 'case_source': 'Exod 36:3 (the second morning)', 'law': '1', 'slot': 'morning'})   # sanctuary_build [act: wayyiqtol at Exod 36:3]
     w.submit({'kind': 'overflow_reported', 'subject': 'the-craftsmen', 'case_source': 'Exod 36:5', 'law': '1'})   # sanctuary_build [speech: wayyiqtol at Exod 36:5]
     w.submit({'kind': 'halt_proclaimed', 'subject': 'the-camp', 'case_source': 'Exod 36:6', 'law': '1'})   # sanctuary_build [speech: wayyiqtol at Exod 36:6]
     w.submit({'kind': 'vessel_made', 'subject': 'the-craftsmen', 'vessel': 'curtains', 'case_source': 'Exod 36:8-19', 'law': '12'})   # sanctuary_build [act: wayyiqtol at Exod 36:8]
@@ -692,21 +1630,73 @@ def tape(w, M, P):
 
 # ---- THE GRADED LITERALS ----
 # PREDICTED BY THE STITCHER (scratchpad seq_stitch.py) BEFORE the first run — the tape census and the markers' days:
-CENSUS = (959, 267, 260, 679, 7, 6, 7, 0, 23, 88, 72, 15, 1, 161, 75)   # O8 S1 (2026-09-08): predicted by the stitcher after THE EXODUS STORY joined the tape — 120 history events of the story (one register-off: a speech with no narrated frame inside its chapter window), 260 on the tape, 88 markers (the twenty of NARRATIVE_GAPS.md 4g; the 7:7 row now forward), 23 closes. O5 (2026-09-07): re-based 3 -> 0 — the erection's three `day` fields (the ascents, the breaking) RETIRED at the scene, so the stitcher drops nothing; the tape's events unchanged. O2 (2026-09-07): predicted by the stitcher — the incense runner's Lev 8 party rows dedup against the erection's and tzav's (7 deduped), 140 on the tape   # (scanned, history, on tape, case rows off, source-off, register-off, deduped, re-based fields, closes, markers, F, P, R, kinds, subjects)
-DAYS = {'born:seth': 47495, 'born:noach': 385709, 'born:shem': 568319, 'flood': 604905, 'flood_ordinal': 604521, 'ark_rested': 605052, 'mountains': 605125, 'dried': 605213, 'dry': 605269, 'born:arpachshad': 605643, 'born:abraham': 711497, 'born:isaac': 748228, 'eighth_day': 748235, 'born:jacob': 769937, 'born:joseph': 803171, 'descent': 817427, 'jacob_147': 823625, 'died:methuselah': 604859, 'died:terah': 760817, 'born:moses': 865071, 'ark': 865159, 'speaking': 894137, 'river7': 894144, 'darkness_end': 894152, 'lamb_taken': 894323, 'lamb_slaughtered': 894327, 'exodus_epoch': 894314, 'exodus': 894328, 'sea': 894334, 'shur': 894337, 'sin_wilderness': 894358, 'manna_first': 894359, 'sinai': 894373, 'sinai_2': 894374, 'sinai_bound': 894375, 'sinai_sep': 894376, 'giving': 894379, 'ascent': 894379, 'breaking': 894419, 'morrow': 894420, 'second_ascent': 894460, 'second_tablets': 894500, 'erected': 894698, 'lev8': 894691}   # O8 S1 (2026-09-08): predicted by the stitcher — the story's sixteen new days (Moses born on the seventh of Adar of 2369, the ark, the speaking at the first day of 2449, the plagues' stamps, the lamb, the sea by the shelf, Shur, the manna, Sivan's days). O1 (2026-09-07): predicted by the stitcher after the small fixes — every day after day 4 moved +5 (the stub month), Isaac on Passover, the morrow and the second tablets new
+CENSUS = (1761, 1065, 1058, 679, 7, 10, 7, 0, 70, 130, 113, 15, 2, 611, 234)   # O9 (2026-09-08): predicted by the stitcher after the covenant marker joined the table (130 markers, F 113 — the only moved counts; S4's: (1761, 1065, 1058, 679, 7, 10, 7, 0, 70, 129, 112, 15, 2, 611, 234))   # O8 S4 (2026-09-08): predicted by the stitcher after FROM THE FORD TO THE COFFIN joined the tape (Gen 32-37, 39-47, 50) — 309 history events from the runner's scene (313 less the four the register test set aside: the three marriages of 36:2-3 and 43:1's famine, no narrative verb within ten verses); twenty rows of 8g + 42:18's third day found at the first tape run (CJ6) + the two split rows (one marker per row: 50:4, 50:14); S3's: (1448, 756, 749, 679, 7, 6, 7, 0, 56, 109, 92, 15, 2, 444, 198)
+DAYS = {'born:seth': 47495, 'born:noach': 385709, 'born:shem': 568319, 'reprieve_decree': 561075, 'covenant_pieces': 742547, 'boarding_call': 604898, 'flood': 604905, 'flood_ordinal': 604521, 'rain_end': 604945, 'window': 605165, 'dove_second': 605172, 'dove_third': 605179, 'hagar_given': 742547, 'mamre': 747874, 'sodom_dawn': 747875, 'binding': 761555, 'moriah_seen': 761557, 'stew_day': 775427, 'blessing': 792959, 'mahalath': 792959, 'departure': 798065, 'laban_month': 798095, 'wedding': 800663, 'rachel_given': 800670, 'fourteen_end': 803208, 'flight': 805422, 'told': 805424, 'heap_morning': 805429, 'jabbok_night': 805430, 'peniel_sunrise': 805431, 'sukkot': 805432, 'shechem': 805963, 'bethel_again': 805964, 'ephrath_road': 806141, 'hebron': 806142, 'age:joseph:17': 809399, 'prison_dreams': 813411, 'birthday': 813413, 'pharaoh_dreams': 814151, 'custody_third': 816691, 'joseph30': 814151, 'plenty_end': 816689, 'famine_two': 817427, 'beersheba_descent': 817427, 'embalmed': 823665, 'weeping_end': 823695, 'atad': 823696, 'atad_end': 823703, 'ark_rested': 605052, 'mountains': 605125, 'dried': 605213, 'dry': 605269, 'born:arpachshad': 605643, 'born:abraham': 711497, 'born:isaac': 748228, 'eighth_day': 748235, 'born:jacob': 769937, 'born:joseph': 803171, 'descent': 817427, 'jacob_147': 823625, 'died:methuselah': 604859, 'died:terah': 760817, 'born:moses': 865071, 'ark': 865159, 'speaking': 894137, 'river7': 894144, 'darkness_end': 894152, 'lamb_taken': 894323, 'lamb_slaughtered': 894327, 'exodus_epoch': 894314, 'exodus': 894328, 'sea': 894334, 'shur': 894337, 'sin_wilderness': 894358, 'manna_first': 894359, 'sinai': 894373, 'sinai_2': 894374, 'sinai_bound': 894375, 'sinai_sep': 894376, 'giving': 894379, 'ascent': 894379, 'breaking': 894419, 'morrow': 894420, 'second_ascent': 894460, 'second_tablets': 894500, 'erected': 894698, 'lev8': 894691}   # O9 (2026-09-08): the stitcher's prediction with covenant_pieces (the running setting's eighty-five = hagar_given's day; every other key unmoved)   # O8 S4 (2026-09-08): the stitcher's prediction with the twenty-one new keys (the heap's morning to Atad's end, the custody's third day)
 # EXPECTED VERDICTS of the checkpoints (SEQUENTIAL_RUN.md section 6 — a DIVERGE expected is the text's own gap, filed OPEN):
-VERDICTS = ['C0 MATCH', 'C1 DIVERGE', 'C2 MATCH', 'C3a DIVERGE', 'C3b MATCH', 'C3b-day MATCH', 'C3c MATCH', 'C3c-literal DIVERGE', 'C4 DIVERGE', 'C5 MATCH', 'C6 MATCH', 'C7 MATCH', 'C8 MATCH', 'C9 MATCH', 'C10 DIVERGE', 'C11 MATCH',
-            'CS0 DIVERGE', 'CS1 DIVERGE', 'CS2 MATCH', 'CS3 MATCH', 'CS4 DIVERGE', 'CS6 MATCH', 'CS7 MATCH', 'CS8 MATCH', 'CS9 MATCH']   # O8 S1 (2026-09-08; NARRATIVE_GAPS.md 4h): the story's checkpoints as the design expects — the ark a day past the shelf's sixth of Sivan (the Calendar's month key keeps the day of month), the weekday ANCHOR diverging (the modeled calendar over 2,449 years: the exodus on the second day of the week by the creation count against the shelf's Thursday; the manna's morning likewise), the SPACING matching (Nisan full, Iyar deficient — the shelf's own lengths), the giving on the tape's ascent day, the judges, the trials, the plagues, the twelve-month bound; CS5 is C3c parsed
+VERDICTS = ['C0 MATCH', 'C1 DIVERGE', 'C2 MATCH', 'C3a DIVERGE', 'C3b MATCH', 'C3b-day MATCH', 'C3c MATCH', 'C3d-70 MATCH', 'C3d-85 DIVERGE', 'C3c-literal DIVERGE', 'C4 DIVERGE', 'C5 MATCH', 'C6 MATCH', 'C7 MATCH', 'C8 MATCH', 'C9 MATCH', 'C10 DIVERGE', 'C11 MATCH',
+            'CS0 DIVERGE', 'CS1 DIVERGE', 'CS2 MATCH', 'CS3 MATCH', 'CS4 DIVERGE', 'CS6 MATCH', 'CS7 MATCH', 'CS8 MATCH', 'CS9 MATCH',
+            'CG0 MATCH', 'CG1 MATCH', 'CG2 MATCH', 'CG3 MATCH', 'CG4 MATCH', 'CG5 MATCH', 'CG6 MATCH', 'CG7 MATCH', 'CG8 MATCH', 'CG9 MATCH',
+            'CH0 MATCH', 'CH1 DIVERGE', 'CH2 MATCH', 'CH3 MATCH', 'CH4 MATCH', 'CH5 MATCH', 'CH6 MATCH', 'CH7 MATCH', 'CH8 MATCH', 'CH9 MATCH', 'CH10 MATCH',
+            'CJ0 MATCH', 'CJ1 MATCH', 'CJ2 MATCH', 'CJ3 MATCH', 'CJ3b DIVERGE', 'CJ4 MATCH', 'CJ5 MATCH', 'CJ6 MATCH', 'CJ7 MATCH', 'CJ8 MATCH', 'CJ9 MATCH', 'CJ10 MATCH', 'CJ10-tokens MATCH', 'CJ11 MATCH', 'C12 MATCH', 'C13 MATCH']   # O9 (2026-09-08; CLOCK.md 12g): C3d THE JOIN under both settings — seventy MATCHES the ink's five hundred, eighty-five DIVERGES by fifteen (the evidence); C12/C13 Avodah Zarah 9a:7-8 under the ELAPSED column   # O8 S4 (2026-09-08; NARRATIVE_GAPS.md 8h): CJ3b DIVERGE is the declared verdict — the seventy's missing one, the tradition's five answers on the shelf, none the ink's (OPEN)   # O8 S3 (2026-09-08; NARRATIVE_GAPS.md 7h): CH1 DIVERGE is the declared verdict (the ten trials against the ink's one)   # O8 S2 (2026-09-08; NARRATIVE_GAPS.md 6h): the stretch's checkpoints as the design expects — all MATCH: the ten generations twice, the flood's twelve months plus the ink's days, the two countdowns to the flood's day (the reprieve retrograde-dated, the seven days), the dove before the drying, the war's years, Hagar's year, the three heaven entries, Terah's sixty, Adam's thousand-year day   # O8 S1 (2026-09-08; NARRATIVE_GAPS.md 4h): the story's checkpoints as the design expects — the ark a day past the shelf's sixth of Sivan (the Calendar's month key keeps the day of month), the weekday ANCHOR diverging (the modeled calendar over 2,449 years: the exodus on the second day of the week by the creation count against the shelf's Thursday; the manna's morning likewise), the SPACING matching (Nisan full, Iyar deficient — the shelf's own lengths), the giving on the tape's ascent day, the judges, the trials, the plagues, the twelve-month bound; CS5 is C3c parsed
 # O1 (2026-09-07): C8 MATCH (the daemon counts born + 7); C3b-day (the exodus = Isaac's birth + 400 TO THE DAY — Isaac born on Passover, the shelf's row);
 # C11 (the second tablets given on Yom Kippur — Taanit 30b:8, Bava Batra 121a:6 — the timer's fire dated (1, 7, 10) in the exodus era).
 # THE SOJOURN FORK (section 12 f): the other two settings run as their own worlds, each graded on the 430's checkpoints —
 FORK_VERDICTS = {'descent_literal': ['C3a MATCH', 'C3b DIVERGE', 'C3c DIVERGE'],
-                 'covenant_pieces': ['C3a DIVERGE', 'C3b MATCH', 'C3c MATCH', 'C3d DIVERGE']}
+                 'covenant_pieces': ['C3a DIVERGE', 'C3b MATCH', 'C3c MATCH']}   # O9 T2 (2026-09-08): this world's exodus from its placed covenant (the Mekhilta's seventy + 430): C3b MATCHES because the Mekhilta's thirty IS the join, not by construction; the old C3d (the implied covenant within Gen 15's bound) retired here — it would match by construction
 # TYPED FROM THE FIRST RUN (labeled so; read as evidence before typing): the run-derived counts —
 # (events, timers set, fired, cancelled, retro-writes, writes, daemons that fired, entities on the ledger, the double writes of the overlap kinds, the tape's closes performed)
-RUN = (260, 12, 8, 0, 0, 298, 9, 96,
+RUN = (1058, 43, 39, 0, 0, 1224, 12, 252,
        ((('israel_people', 'given_by_the_heart'), 2), (('israel_people', 'set_apart_before_me'), 2)),
-       22)
+       74)
+# O9 (2026-09-08) — THE RUN TUPLE UNMOVED, as CLOCK.md 12g predicted (the placement and slot stamps write nothing; the covenant marker walks the
+# clock to the ten years' own day). The first O9 run (scratchpad o9_seq1.txt) MISSED this tuple by ONE slot — retro-writes 3 against 0 — and the
+# reading found the runner's own hand, not the world: the fork loop's new print had reused the name `retro` for the covenant world's retrograde
+# MARKERS (three: 6:3, 15:1, Lev 8:2), clobbering the running world's retro-write list before the tuple was built; the log classes and the
+# header line of the same run showed no RETRO-WRITE at all. Renamed; nothing typed anew.
+# O8 S4 FROM THE FORD TO THE COFFIN (2026-09-08) — READ THEN TYPED from the tape's runs (scratchpad o8_s4_seq1-3.txt), the reading by script BEFORE
+# the typing (scratchpad o8_s4_reading, this file's own tape comments): events 1058 = S3's 749 + the 309 joseph lines (313 scene events less the four
+# the register test set aside); timers set 43 = 31 + 9 story timers + 3 eighth days, fired 39 = 27 + 12; writes 1224 = 907 + 317 (the bare scene's
+# slot sum 321 less the four register-off writes); 12 of 43 daemons fired (law_joseph the twelfth); entities 252 = 219 + 33 new; THE DOUBLE WRITES
+# UNCHANGED; closes 74 = 56 + 14 tape lines (12 on its own entries, 35:6 and 35:7 on S3's) + the daemon's four by seat (CJ7). THE REST (the tape
+# minus the joseph lines, 43 daemons on) REPRODUCED S3'S TUPLE EXACTLY on the first tape run. Three readings forced fixes before this typing:
+# (i) the tape raised KeyError 'seat' at 35:12 — law_primeval's land_promised branch answered Joseph's event (its shared set extended: convention 14
+# both ways, the third daemon caught leaking since S2); (ii) CJ9 DIVERGED: the five-years timer set two years early because the recognition speech's
+# event (45:5-8) sorted before the famine_two marker at 45:6 — the marker positioned at 45:5; (iii) CJ6 DIVERGED on the custody: no marker between
+# 42:17 and 42:18, so the clock never walked to the third day — the row 42:18 added (8g had omitted it); and the marker count read 111 against the
+# stitcher's 109 rows — two rows carried two w.marker calls each (50:3, 50:10), split into one marker per row (50:4, 50:14).
+# O8 S3 FROM MAMRE TO THE HEAP (2026-09-08) — READ THEN TYPED from the tape's runs (scratchpad o8_s3_seq1-3.txt), the reading by script BEFORE
+# the typing: the tape's events attributed to their runners by the tape's own comments (443 the rest + 306 Mamre's), and THE REST RUN AS ITS
+# OWN WORLD (the tape minus the Mamre lines, the 42 daemons on) REPRODUCING S2'S TUPLE EXACTLY — (443, 14, 10, 0, 0, 522, 166, 39) — only after
+# TWO FIXES the reading forced: (i) the first tape run wrote 909, two more than the bare scene's 385 — law_mamre's span check was a RANGE
+# (18 <= chapter <= 31) and let 21:2's birth and 23:19's burial through, the pre-Sinai and family engines' events; the span is a SET with holes
+# now (18, 19, 20, 22, 25-31); (ii) the rest counted 165 entities against S2's 166 with every other count equal — a write had MOVED: the registry
+# map is GLOBAL and Mamre's generic scene tokens 'the-land' (26:1's famine) and 'the-ram' (22:13) re-homed the erection's 'the-land'
+# (high_places_banned, Exod 40:17 / Lev 9:24) and Leviticus 9's ram onto the Genesis entities; the tokens are the-land-of-canaan (S2's) and
+# the-ram-at-moriah now, and THE REST test below keeps it caught. Mamre's own share: 306 events, 385 writes (the slot vector's sum), 17 timers
+# set and 17 fired (the four story timers — the season's year at 18:10 firing on Isaac's birth day CH0, the two seven-years of 29:18 and 29:30,
+# the week of 29:27 — and the thirteen eighth days from the covenant's daemon on the stretch's male births, none on Dinah CH8), 53 entities new
+# to the ledger, no retro-writes (every reading-placed date forward of the counter); 11 of 42 daemons fired (law_mamre the eleventh); THE DOUBLE
+# WRITES UNCHANGED; the closes performed 56 = 39 + Mamre's 16 tape lines (14 on its own entries, 25:8 and 25:16 on S2's) + the daemon's own
+# close at 21:2 (son_promised_at_the_season on the pre-Sinai engine's birth).
+# O9 (2026-09-08; CLOCK.md 12b, 12e) — PREDICTED BY THE STITCHER before the run: the markers by placement class and the tape's events
+# by stamp (page_order / text_constrained / reading_placed), and the events by the ink's own day-slot at their first verse (re-verified
+# after the run against the verse — a mismatch fails)
+PLACEMENT = {'markers': {'text_constrained': 84, 'reading_placed': 31}, 'events': {'text_constrained': 86, 'page_order': 941, 'reading_placed': 31}}   # O9 (2026-09-08): read from the stitcher's print (scratchpad o9_stitch1.txt) — 31 reading-placed markers, 31 reading-placed events at their verses; 84 + 31 = the 115 non-proleptic markers; 86 + 941 + 31 = the 1058 events
+SLOTS = {'sunset': 3, 'evening': 3, 'night': 12, 'morning': 14, 'dawn': 2, 'noon': 3}   # O9 (2026-09-08): read from the stitcher's print — the ink's day-words at the events' first verses (Gen 1:5-style double words stamp nothing)
+NEWEST_RUNNER = 'joseph'   # the runner whose lines THE REST test removes from the tape (the newest joined); the next sitting moves it
+PREVIOUS_RUN = (749, 31, 27, 0, 0, 907, 11, 219,
+                ((('israel_people', 'given_by_the_heart'), 2), (('israel_people', 'set_apart_before_me'), 2)),
+                56)   # O8 S3's RUN — THE REST must reproduce it exactly (O8 S2's, the previous: (443, 14, 10, 0, 0, 522, 10, 166, the same overlap, 39))
+# O8 S2 THE PRIMEVAL STORY (2026-09-08) — READ THEN TYPED from the first run after the tape was re-stitched (scratchpad o8_s2_seq1.txt), the
+# reading by script BEFORE the typing: the tape's events attributed to their runners by the tape's own comments — THE REST REPRODUCES S1'S
+# TUPLE EXACTLY (260 events, 298 writes, 12 set, 8 fired), so the primeval joined without touching another span's count; its own share 183
+# events, 224 writes, 2 timers set and 2 fired (the seven days of 7:4 at the flood's day; the reprieve of 6:3, retrograde-dated a hundred and
+# twenty years before it, firing on the same day — CG2 and CG3), 70 entities new to the ledger, no retro-writes (the retrograde marker dates the
+# decree; its due is forward of the counter); 10 of 41 daemons fired (law_primeval the tenth); THE DOUBLE WRITES UNCHANGED — the two mornings
+# of Exod 36:3 only (the seat checks held both ways: law_family's married and sentenced, law_exodus_story's six shared kinds, and law_primeval's
+# own, found wanting on this first run — its sentenced branch read Judah's Gen 38 event and its married branch would have answered Rebekah's
+# and Moses' — seat-checked to Gen 3-4 and Gen 2-16 before the run that typed this); the tape's closes performed 39 = 22 + the primeval's 14
+# + S1's three lines (12:29, 12:36, 12:41) that found nothing on the bare exodus scene and now close the pieces' entries of Gen 15:13-14.
 # O8 S1 THE EXODUS STORY (2026-09-08) — READ THEN TYPED from the first run after the tape was re-stitched (scratchpad o8_sequence_run.txt):
 # 260 events (140 + the story's 120); 12 timers set (8 + Moses' and Gershom's eighth days from the covenant's own daemon, the three months, the
 # third day); 8 fired (4 + all four of the story's: Moses' eighth day at the ark's walk, Gershom's at THE SPEAKING'S walk — eighty years on, the
@@ -748,6 +1738,8 @@ OVERLAP_EFFECTS = ('invested_office', 'burn_remainder', 'confined_seven_days', '
 def run_world(setting, reg, label):
     """one world of the tape under a sojourn setting (O1 f: THE SOJOURN FORK — three worlds, all 38 daemons on each)"""
     P = dict(PARAMS); P['sojourn_start'] = dict(PARAMS['sojourn_start'], value=setting)
+    if setting == 'covenant_pieces':                     # O9 T2: the Mekhilta's world places the covenant at seventy (its own arithmetic)
+        P['covenant_placement'] = dict(PARAMS['covenant_placement'], value='mekhilta_bo_12_40')
     w = WE.World(era='THE SEQUENTIAL RUN — the three books on one world (clock unit: days; the creation epoch; sojourn_start = %s)' % setting, epoch='creation', registry=reg)
     w.laws = daemons()
     assert w.laws, 'ZERO-REPORT: empty law library'
@@ -755,11 +1747,14 @@ def run_world(setting, reg, label):
     del _INK_CHECKS[:]                                   # the re-checks counted per world (the first O1 run read 207 = three worlds x 69)
     tape(w, M, P)
     w.ink_checks = len(_INK_CHECKS)
+    path, n, coerced = WJ.sink(w, source='cold_run_sequence/%s' % setting)     # THE LOOP step 1: this world's run as one L3 segment
+    print('JOURNAL %s: %s (%d lines, coerced %d)' % (label, path, n, coerced))
     return w, M
 
 
-def c3(w, M, R):
-    """the 430's checkpoints, graded on every world of the fork (declared by the text; computed by the engine; a mismatch reported, never repaired)"""
+def c3(w, M, R, join=False):
+    """the 430's checkpoints, graded on every world of the fork (declared by the text; computed by the engine; a mismatch reported, never repaired);
+    with join=True (the running world) C3d THE JOIN under BOTH settings of the covenant's placement (O9 T2, CLOCK.md 12b)"""
     C = w.clock.calendar
     def cp(name, declared, computed, bound=None):
         R.append((name, w.checkpoint(name, declared, computed, bound)))
@@ -769,7 +1764,42 @@ def c3(w, M, R):
     cp('C3b-day the exodus on that very day (12:41) = Isaac born on Passover + 400 years TO THE DAY', M['exodus'], C.add(M['born:isaac'], 400, 'year'))
     kohath, amram, moses80 = ink_numbers(verse_words('Exod', 6, 18))[0], ink_numbers(verse_words('Exod', 6, 20))[0], ink_numbers(verse_words('Exod', 7, 7))[0]   # O8 S1 (CS5): the bound parsed from the ink, no literal
     cp('C3c the lifespans bound %d+%d+%d (Exod 6:18, 6:20, 7:7) — parsed' % (kohath, amram, moses80), None, yE - yD, bound=[0, kohath + amram + moses80])
+    if join:
+        # O9 T2: C3d AS THE JOIN — the placed covenant (the row covenant_pieces_year, each setting) + Exod 12:40's four hundred and thirty
+        # against the exodus marker, on the RUNNING world (the exodus from Isaac's four hundred): seventy meets the ink's own five hundred,
+        # eighty-five diverges by fifteen — the disagreement is the evidence; a checkpoint that matches by construction is not
+        CPY = WE.CAL_PARAMS['covenant_pieces_year']['settings']
+        for name, age in sorted(CPY.items(), key=lambda kv: kv[1]):
+            cov = year_day(w, yr(w, M['born:abraham']) + int(age))
+            cp('C3d-%d THE JOIN: the covenant placed at Abraham\'s %d (%s) + Exod 12:40\'s 430 against the exodus marker, creation year %d' % (age, age, name, yE), yE, C.year(C.add(cov, 430, 'year')))
     return yE
+
+
+def tuple_of(w):
+    """the RUN tuple's shape on any world: events, set, fired, cancelled, retro-writes, writes, daemons fired, entities, double writes, closes"""
+    L = lambda k: len([l for l in w.log if l[0] == k])
+    dbl = collections.Counter((ent.eid, e['effect']) for ent in w.entities.values() for e in ent.ledger)
+    overlap = sorted((k, v) for k, v in dbl.items() if v > 1 and k[1] in OVERLAP_EFFECTS)
+    closes_done = sum(1 for ent in w.entities.values() for e in ent.ledger if str(e.get('closed_by', '')).startswith(('Gen ', 'Exod ', 'Lev ')))
+    return (L('EVENT'), L('TIMER-SET'), L('TIMER-FIRE'), L('TIMER-CANCEL'), L('RETRO-WRITE'), L('WRITE'), len([n for n, (s, f, k) in w.coverage().items() if f]), len(w.entities), tuple(overlap), closes_done)
+
+
+def rest_world(reg):
+    """THE REST: the tape with the newest runner's lines removed (by the tape's own comments), run on the same daemons and registry — its
+    tuple must reproduce the previous sitting's RUN exactly. O8 S3's lesson (2026-09-08): the registry map is GLOBAL, so a scene's generic
+    token re-homes another runner's write subject; the reading by attribution caught a moved write (165 entities against 166) that no
+    other count showed, and this test keeps it caught for every runner that joins after."""
+    src = open(__file__, encoding='utf-8').read().split('# ==== TAPE BEGIN', 1)[1].split('# ==== TAPE END ====', 1)[0].split('\n', 1)[1]
+    kept = [l for l in src.split('\n') if not re.search(r"# %s( \[|$)" % NEWEST_RUNNER, l)]
+    assert len(kept) < src.count('\n') + 1, 'THE REST removed nothing: NEWEST_RUNNER names no tape line'
+    ns = dict(globals()); exec('\n'.join(kept).replace('def tape(', 'def tape_rest('), ns)
+    w = WE.World(era='THE REST — the tape minus the newest runner (%s)' % NEWEST_RUNNER, epoch='creation', registry=reg)
+    w.laws = daemons()
+    del _INK_CHECKS[:]
+    ns['tape_rest'](w, {}, dict(PARAMS))
+    path, n, coerced = WJ.sink(w, source='cold_run_sequence/rest')             # THE LOOP step 1: THE REST's run as its own segment
+    print('JOURNAL the rest: %s (%d lines, coerced %d)' % (path, n, coerced))
+    return w
 
 
 def run():
@@ -797,8 +1827,8 @@ def run():
     print('Isaac born %r (on Passover — the shelf\'s row); the eighth day %r; the exodus at day %d = %r; Sinai %r; the breaking %r; the morrow %r; the second ascent %r (Yom Kippur − 40; the tradition\'s first of Elul not on the local shelf); the second tablets %r; the erection %r; Lev 8:2 dated %r (the modeled intercalation puts a thirteenth month in creation-year %d)'
           % (D(M['born:isaac']), D(M['eighth_day']), M['exodus'], D(M['exodus']), D(M['sinai']), D(M['breaking']), D(M['morrow']), D(M['second_ascent']), D(M['second_tablets']), D(M['erected']), D(M['lev8']), C.year(M['lev8'])))
     print('the intercession\'s stretch by the machine: the morrow (32:30) to the second ascent = %d days — its forty is Deuteronomy\'s (9:18), owed to that book' % (M['second_ascent'] - M['morrow']))
-    print('the tradition\'s anno-mundi count runs one year lower than the creation-year throughout (Adam\'s creation year counted as year 0 there; not on the local shelf): the flood %d, Abraham %d, the exodus %d here'
-          % (C.year(M['flood']), C.year(M['born:abraham']), C.year(M['exodus'])))
+    print('TWO DATE COLUMNS (O9 T3): the LABEL (the count of year starts through the day) and the ELAPSED rendering (the label less one at the year grain) — the flood %d / %d, Abraham born %d / %d, the exodus %d / %d; the tradition\'s anno mundi is the elapsed column (Seder Olam\'s 1656 and 2448 are not on the local shelf — a remark; Avodah Zarah 9a:7-8\'s two thousand at Abraham\'s fifty-two and the 448 to the giving ARE: C12, C13)'
+          % (C.year(M['flood']), C.elapsed(M['flood']), C.year(M['born:abraham']), C.elapsed(M['born:abraham']), C.year(M['exodus']), C.elapsed(M['exodus'])))
     print('\nWATCH COVERAGE (every daemon on one world — the zero-report instrument):')
     w.print_coverage()
     fired_daemons = [n for n, (s, f, k) in w.coverage().items() if f]
@@ -833,7 +1863,7 @@ def run():
     age_flood = w.clock.eras['life:noach'].year(M['flood']); y_ord = C.year(M['flood_ordinal'])
     cp('C2 Noah 600 at the flood (7:6); 950-350 (9:28-29) [OPEN-8]', (600, 600), (age_flood, 950 - 350))
     print('    the ordinal reading would put the flood in creation year %d — printed, not run' % y_ord)
-    yE = c3(w, M, R)
+    yE = c3(w, M, R, join=True)
     yD = C.year(M['descent'])
     cp('C3c-literal the descent-literal setting against the bound', None, 430, bound=[0, 350])
     cp('C4 Shem 100 at Arpachshad, 2 years after the flood (11:10) vs 5:32', 100, C.year(M['born:arpachshad']) - C.year(M['born:shem']))
@@ -847,7 +1877,8 @@ def run():
     cp('C8 Isaac the eighth day (21:4): born+7 vs the daemon\'s timer', 7, (cd[0][1] - M['born:isaac']) if cd else None)
     pur = [l for l in events if l[2]['kind'] == 'purchased']
     sarah_death = year_day(w, C.year(M['born:abraham']) + 10 + 127)
-    cp('C9 Sarah 127 (23:1, 17:17) within the purchase bound (23:16)', None, sarah_death, bound=pur[0][2].get('bound') if pur else None)
+    pb = pur[0][2].get('bound') if pur else None
+    cp('C9 Sarah 127 (23:1, 17:17) within the purchase bound (23:16) — at the YEAR grain since O8 S3 placed the binding (22:1, Bereshit Rabbah 58:5: the grief) in her death year, the bound opening at 22:4 two days into it', None, C.year(sarah_death), bound=[C.year(pb[0]), C.year(pb[1])] if pb and pb[1] is not None else None)
     cp('C10 Methuselah 7 days before the flood (Sanhedrin 108b:5)', 7, M['flood'] - M['died:methuselah'])
     print('    Methuselah died in the flood\'s own creation year: %s (%d)' % (C.year(M['died:methuselah']) == C.year(M['flood']), C.year(M['flood'])))
     cp('C11 the second tablets on Yom Kippur (Taanit 30b:8; BB 121a:6): the second fire', (1, 7, 10), ex.date(tab[1][1]) if len(tab) > 1 else None)
@@ -869,6 +1900,75 @@ def run():
     cp('CS9 Eduyot 2:10\'s twelve months as a bound on the plague stretch (the speaking to the exodus)', None, (M['exodus'] - M['speaking']) / 30.0, bound=[0, 12])
     print('    the story\'s dates: Moses born %r, the ark %r, the speaking %r, the plagues\' end %r, the lamb taken %r, the sea %r, Shur %r, the manna %r, Sivan: the ascent %r, the boundary %r, the separation %r, the giving %r (weekday %d; the Sabbath by the shelf)' % (
         D(M['born:moses']), D(M['ark']), D(M['speaking']), D(M['darkness_end']), D(M['lamb_taken']), D(M['sea']), D(M['shur']), D(M['manna_first']), D(M['sinai_2']), D(M['sinai_bound']), D(M['sinai_sep']), D(M['giving']), WD(M['giving'])))
+    # ---- O8 S2 FROM EDEN TO HAGAR (2026-09-08; NARRATIVE_GAPS.md section 6h): the stretch's checkpoints ----
+    eras = w.clock.eras
+    chain1 = ['life:%s' % x for x in ('the_human', 'seth', 'enosh', 'kenan', 'mahalalel', 'jared', 'enoch', 'methuselah', 'lamech', 'noach')]
+    chain2 = ['life:%s' % x for x in ('shem', 'arpachshad', 'shelah', 'eber', 'peleg', 'reu', 'serug', 'nahor', 'terah', 'abraham')]
+    cp('CG0 Mishnah Avot 5:2: ten generations Adam to Noah and Noah to Abraham — the tape\'s life eras', (10, 10), (sum(e in eras for e in chain1), sum(e in eras for e in chain2)))
+    cp('CG1 Eduyot 2:10\'s twelve months on the flood: 7:11 -> 8:14 minus twelve months, within the ink\'s ten to eleven days (Bereshit Rabbah 33:7)', None, M['dry'] - C.add(M['flood'], 12, 'month'), bound=[10, 11])
+    rep = [l for l in fires if l[2]['effect'] == 'reprieve_of_a_hundred_and_twenty']
+    cp('CG2 the reprieve\'s timer (6:3 retrograde-dated at the flood minus 120 years) fires on the flood\'s day', M['flood'], rep[0][1] if rep else None)
+    sev = [l for l in fires if l[2]['effect'] == 'seven_days_reprieve']
+    cp('CG3 the seven days\' timer (7:4) fires on the flood\'s day', M['flood'], sev[0][1] if sev else None)
+    cp('CG4 the dove\'s third sending (8:12) before the drying (8:13)', True, M['dove_third'] < M['dried'])
+    n14 = ink_numbers(verse_words('Gen', 14, 4)) + ink_numbers(verse_words('Gen', 14, 5))
+    cp('CG5 the war\'s years by the ink (14:4-5): twelve served, the thirteenth rebelled, the fourteenth came', (12, 13, 14), tuple(n14[:3]))
+    cp('CG6 Hagar given at Abram\'s 85 (16:3) and Ishmael born at 86 (16:16): one year', 1, C.year(M['born:ishmael']) - C.year(M['hagar_given']))
+    ns = [(eid, e) for eid, ent in w.entities.items() for e in ent.ledger if e['effect'] == 'no_share_in_the_world_to_come' and e.get('open')]
+    cp('CG7 Mishnah Sanhedrin 10:3\'s three rows = three open entries on the ledger (the flood, the dispersion, Sodom)', 3, len(ns))
+    cp('CG8 Terah\'s death 60 years after Abram\'s going out (11:26 + 12:4 against 11:32)', 60, C.year(M['died:terah']) - C.year(M['age:abraham:75']))
+    print('    Bereshit Rabbah 39:7\'s own number, sixty-five — the shelf\'s remark beside the ink\'s sixty; the reprieve decree %r, the boarding call %r, the flood %r (retrograde: the decree before 5:32\'s counter)' % (D(M['reprieve_decree']), D(M['boarding_call']), D(M['flood'])))
+    cp('CG9 Adam\'s 930 (5:5) within the thousand-year day of 2:17 (Bereshit Rabbah 19:8)', True, C.year(M['died:the_human']) - C.year(M['born:the_human']) < 1000)
+    # ---- O8 S3 FROM MAMRE TO THE HEAP (2026-09-08; NARRATIVE_GAPS.md section 7h): the stretch's checkpoints ----
+    rs = [l for l in fires if l[2]['effect'] == 'return_at_the_season']
+    cp('CH0 the season\'s join: the one-year timer set at the visit (18:10, 18:14 at this season) fires on Isaac\'s birth day (21:2 at the set time) — the visit on Passover of 17:1\'s year, the birth on Passover (Rosh Hashanah 10b:10)', M['born:isaac'], rs[0][1] if rs else None)
+    tried = [e for e in w.entity('abraham').ledger if e['effect'] == 'tried']
+    cp('CH1 Mishnah Avot 5:3: ten trials of Abraham against the ink\'s one trial verb (22:1) — DIVERGE expected; the ten\'s list is Avot de-Rabbi Natan\'s, absent from the shelf: OPEN', 10, len(tried))
+    cp('CH2 Abraham\'s death (25:7) in Jacob\'s fifteenth year (25:26 + 21:5 + 25:7): the stew day (Bava Batra 16b:11)', 15, C.year(M['died:abraham']) - C.year(M['born:jacob']))
+    cp('CH3 Ishmael\'s death (25:17 + 16:16) in Jacob\'s sixty-third year: the blessing\'s year (Bereshit Rabbah 68:5) = Mahalath\'s (28:9)', 63, C.year(M['died:ishmael']) - C.year(M['born:jacob']))
+    cp('CH4 the fourteen years\' end (29:30, positioned at 30:25) falls in Joseph\'s birth year (41:46 + 45:6 + 47:9)', C.year(M['born:joseph']), C.year(M['fourteen_end']))
+    cp('CH5 the wedding at Jacob\'s eighty-four (Bereshit Rabbah 68:5): sixty-three at the blessing + fourteen hidden + seven served', 84, C.year(M['wedding']) - C.year(M['born:jacob']))
+    cp('CH6 Esau\'s forty (26:34) in Isaac\'s hundredth year (25:26)', 100, C.year(M['age:esau:40']) - C.year(M['born:isaac']))
+    wk = [l for l in fires if l[2]['effect'] == 'week_of_the_feast']; rt = [e for e in w.entity('rachel').ledger if e['effect'] == 'wife_taken']
+    cp('CH7 the week\'s timer (29:27, seven days from the demand) fires on or before Rachel\'s taking (29:28)', True, bool(wk and rt) and wk[0][1] <= rt[0]['day'])
+    males = ('esau', 'jacob', 'reuben', 'simeon', 'levi', 'judah', 'dan', 'naphtali', 'gad', 'asher', 'issachar', 'zebulun', 'joseph')
+    cdue = [l[2]['subject'] for l in tset if l[2]['effect'] == 'circumcision_due']
+    cp('CH8 the covenant\'s daemon on the stretch\'s births under Genesis 17: thirteen males get the eighth-day timer, Dinah (30:21) none', (13, False), (sum(1 for n in males if n in cdue), 'dinah' in cdue))
+    four = (('abraham', 'buried_in_peace'), ('hagar', 'seed_multiplied'), ('sarah', 'son_promised_at_the_season'), ('jacob', 'with_you_promised'))
+    cp('CH9 four closes performed on the stretch: 25:8 and 25:16 on S2\'s entries, 21:2 by the daemon on the pre-Sinai engine\'s birth, 31:5 on Bethel\'s own', 4, sum(1 for eid, eff in four if any(e['effect'] == eff and not e.get('open') for e in w.entity(eid).ledger)))
+    cp('CH10 the two transfers on Jacob from Esau — the birthright (25:33) and the blessing (27:27-29): these two times (27:36)', 2, sum(1 for e in w.entity('jacob').ledger if e['effect'] in ('birthright_transferred', 'blessed_with_dew_and_fat')))
+    print('    the stretch\'s dates: the visit %r, the dawn %r, the binding %r (Isaac 37), the stew day %r, the blessing %r = Mahalath %r, the departure %r, the month %r, the wedding %r, Rachel %r, the fourteen\'s end %r, the flight %r, the telling %r' % (
+        D(M['mamre']), D(M['sodom_dawn']), D(M['binding']), D(M['stew_day']), D(M['blessing']), D(M['mahalath']), D(M['departure']), D(M['laban_month']), D(M['wedding']), D(M['rachel_given']), D(M['fourteen_end']), D(M['flight']), D(M['told'])))
+    # ---- O8 S4 FROM THE FORD TO THE COFFIN (2026-09-08; NARRATIVE_GAPS.md section 8h): the stretch's checkpoints ----
+    led = lambda eff: [(ent.eid, e) for ent in w.entities.values() for e in ent.ledger if e['effect'] == eff]
+    cp('CJ0 THE TWO ABSENCES (Megillah 17a:6): Jacob\'s, hebron − departure (the road markers off Ishmael\'s death and the fourteen), and Joseph\'s, famine_two − age:joseph:17 (Pharaoh\'s side) — twenty-two on two chains, a JOIN', (22, 22), (C.year(M['hebron']) - C.year(M['departure']), C.year(M['famine_two']) - C.year(M['age:joseph:17'])))
+    cp('CJ1 Jacob ninety-nine at the return to Isaac (35:27): sixty-three at the blessing + Megillah 17a:6\'s thirty-six', 99, C.year(M['hebron']) - C.year(M['born:jacob']))
+    cp('CJ2 Isaac\'s death (35:28) twelve years after the sale (37:2) by the ink\'s arithmetic — the page order against the chronology, the proleptic marker carrying it', 12, C.year(M['died:isaac']) - C.year(M['age:joseph:17']))
+    sub = [ink_numbers(verse_words('Gen', 46, v))[-1] for v in (15, 18, 22, 25)]
+    cp('CJ3 THE SEVENTY: the ink\'s sub-totals (46:15, 18, 22, 25) parsed sum to 46:27\'s seventy', ink_numbers(verse_words('Gen', 46, 27))[-1], sum(sub))
+    RO = sys.modules['cold_run_joseph'].ROSTERS
+    cp('CJ3b the names counted by script per register (Er and Onan dead by 46:12) against the sub-totals — Leah\'s thirty-three against thirty-two living named: the missing one, DIVERGE expected, OPEN (Bava Batra 123b:1, Bereshit Rabbah 94:9 on the shelf)', tuple(sub), (len(RO['leah']) - 2, len(RO['zilpah']), len(RO['rachel']), len(RO['bilhah'])))
+    cp('CJ4 THE SIXTY-SIX (46:26) = seventy − Joseph − his two sons − Jacob: the ink\'s own arithmetic', ink_numbers(verse_words('Gen', 46, 26))[-1], ink_numbers(verse_words('Gen', 46, 27))[-1] - 4)
+    n28 = ink_numbers(verse_words('Gen', 47, 28))
+    cp('CJ5 THE HUNDRED AND FORTY-SEVEN (47:28) = 47:9\'s hundred and thirty + 47:28\'s seventeen, parsed', n28[-1], ink_numbers(verse_words('Gen', 47, 9))[-1] + n28[0])
+    tf = {l[2]['effect']: l[1] for l in fires if l[2]['effect'] in ('head_lifted_up_due', 'head_lifted_off_due', 'custody_three_days')}
+    acts = {'head_lifted_up_due': 'restored_to_the_cup', 'head_lifted_off_due': 'hanged', 'custody_three_days': 'plan_revised'}
+    cp('CJ6 THE THIRD DAYS: the cupbearer\'s and the baker\'s timers (40:12, 40:18) and the custody\'s (42:17) fire on the tape\'s walks on or before their acts (40:20-22, 42:18-19), the third day inclusive', (True, True, True), tuple(bool(e in tf and led(a)) and tf[e] <= max(x['day'] for _, x in led(a)) for e, a in acts.items()))
+    five = (('return_promised', 'Gen 35:6'), ('brought_up_promised', 'Gen 50:13'), ('burial_in_canaan_sworn', 'Gen 50:13'), ('bones_oath', 'Exod 13:19'), ('visitation_promised', 'Exod 4:31'))
+    cp('CJ7 THE CLOSES ON OTHER ENGINES\' EVENTS: return_promised (28:15) at 35:6 by the tape\'s own line; brought_up_promised (46:4) and burial_in_canaan_sworn (47:31) on the family\'s burial at 50:13; bones_oath (50:25) on the exodus story\'s bones_taken at Exod 13:19; visitation_promised (50:24) on its believed at Exod 4:31 — five', 5, sum(1 for eff, at in five if any(not e.get('open') and str(e.get('closed_by', '')).startswith(at) for _, e in led(eff))))
+    cdue = [l[2]['subject'] for l in tset if l[2]['effect'] == 'circumcision_due']
+    cp('CJ8 THE EIGHTH DAYS: the covenant\'s daemon on the stretch\'s births — Benjamin (35:18), Manasseh and Ephraim (41:50): three timers', 3, sum(1 for n in ('benjamin', 'manasseh', 'ephraim') if n in cdue))
+    f7 = [l[1] for l in fires if l[2]['effect'] == 'famine_seven_years']; f5 = [l[1] for l in fires if l[2]['effect'] == 'five_years_of_famine_left']
+    cp('CJ9 THE FAMINE\'S TWO TIMERS: the seven years of 41:54 and the five remaining of 45:6 fire on ONE day — the ink\'s own arithmetic (the creation year printed)', (f7[0], C.year(f7[0])) if f7 else None, (f5[0], C.year(f5[0])) if f5 else None)
+    w36 = verse_words('Gen', 42, 36)
+    cp('CJ10 THE PRESUMPTION AT THREE (Chullin 95b:14): the three NAMES of 42:36 — Joseph, Simeon, Benjamin — in the verse', 3, sum(1 for n in ('יוסף', 'ושמעון', 'בנימן') if n in w36))
+    cp('CJ10-tokens the token "is not" (איננו) in 42:36 — TWO (the declaration\'s three was a miscount, corrected at the code: Benjamin\'s clause carries the name without the token)', 2, sum(1 for x in w36 if x == 'איננו'))
+    cp('CJ11 EXODUS 1:5\'s seventy against 46:27\'s: the two ink numbers parsed', ink_numbers(verse_words('Gen', 46, 27))[-1], ink_numbers(verse_words('Exod', 1, 5))[-1])
+    # ---- O9 T3 (2026-09-08; CLOCK.md 12a): THE ELAPSED COLUMN where the shelf gives a number — Avodah Zarah 9a:7-8 ----
+    cp('C12 Avodah Zarah 9a:7 — "the souls they made in Haran" (12:5): Abraham FIFTY-TWO at the year two thousand, under the ELAPSED column (the label column says %d)' % (C.year(M['born:abraham']) + 52), 2000, C.elapsed(M['born:abraham']) + 52)
+    cp('C13 Avodah Zarah 9a:8 — from Abraham\'s fifty-two to the giving of the Torah four hundred and forty-eight years: the giving\'s elapsed year %d' % C.elapsed(M['giving']), 448, C.elapsed(M['giving']) - 2000)
+    print('    the stretch\'s dates: the heap\'s morning %r, the Jabbok night %r, the sunrise %r, Sukkot %r, Shechem %r, Bethel again %r, the road %r, Hebron %r, Joseph seventeen %r, the prison dreams %r, the birthday %r, Pharaoh\'s dreams %r, the plenty\'s end %r, the famine\'s second %r, Beersheba %r, embalmed %r, the weeping\'s end %r, Atad %r / %r' % (
+        D(M['heap_morning']), D(M['jabbok_night']), D(M['peniel_sunrise']), D(M['sukkot']), D(M['shechem']), D(M['bethel_again']), D(M['ephrath_road']), D(M['hebron']), D(M['age:joseph:17']), D(M['prison_dreams']), D(M['birthday']), D(M['pharaoh_dreams']), D(M['plenty_end']), D(M['famine_two']), D(M['beersheba_descent']), D(M['embalmed']), D(M['weeping_end']), D(M['atad']), D(M['atad_end'])))
     verdicts = ['%s %s' % (n.split(' ')[0], 'MATCH' if ok else 'DIVERGE') for n, ok in R]
 
     # ---- THE SOJOURN FORK (O1 f): the other two settings as their own worlds ----
@@ -882,22 +1982,41 @@ def run():
             len([l for l in wf.log if l[0] == 'EVENT']), len([l for l in wf.log if l[0] == 'MARKER']), wf.ink_checks, len([l for l in wf.log if l[0] == 'TIMER-FIRE'])))
         c3(wf, Mf, Rf)
         if setting == 'covenant_pieces':
-            cov = wf.clock.calendar.add(Mf['exodus'], -430, 'year')
-            print('    the covenant between the pieces IMPLIED by 430 before the exodus: creation year %d = Abraham\'s %d (the tradition\'s arithmetic — Seder Olam, not on the local shelf); Gen 15\'s bound on the tape: [12:4 Abram 75, 16:16 Abram 86]'
-                  % (wf.clock.calendar.year(cov), wf.clock.calendar.year(cov) - wf.clock.calendar.year(Mf['born:abraham'])))
-            Rf.append(('C3d the implied covenant within Gen 15\'s bound (12:4 .. 16:16)', wf.checkpoint('C3d the implied covenant within Gen 15\'s bound (12:4 .. 16:16)', None, cov, bound=[Mf['age:abraham:75'], Mf['age:abraham:86']])))
+            # O9 T2: this world's exodus is computed FROM its placed covenant (the Mekhilta's seventy + 430) — C3d there would match by
+            # construction and is retired; what this world SHOWS is the covenant's stretch run RETROGRADE (the Gen 15 events dated at
+            # Abraham's seventy, the counter at twelve-four's seventy-five) and the tradition's own two hundred and ten in Egypt at C3a
+            retro_marks = [l for l in wf.log if l[0] == 'MARKER' and l[2].get('retrograde')]   # NOT `retro` — the running world's retro-writes list lives in this scope (the first O9 run's one miss: the name reused, the fork's three markers read as retro-writes)
+            dated = [l[2].get('dated') for l in wf.log if l[0] == 'EVENT' and str(l[2].get('case_source', '')).startswith('Gen 15:')]
+            print('    the covenant placed at Abraham\'s %d (the Mekhilta on Exod 12:40): creation year %d — RETROGRADE to the counter at 12:4\'s seventy-five (retrograde markers on this world %d: %s); the Gen 15 events dated %s; exodus − descent = %d (the tradition\'s two hundred and ten)'
+                  % (wf.clock.calendar.year(Mf['covenant_pieces']) - wf.clock.calendar.year(Mf['born:abraham']), wf.clock.calendar.year(Mf['covenant_pieces']), len(retro_marks), ', '.join(l[2]['verse'] for l in retro_marks),
+                     sorted(set(dated)), wf.clock.calendar.year(Mf['exodus']) - wf.clock.calendar.year(Mf['descent'])))
         fork[setting] = ['%s %s' % (n.split(' ')[0], 'MATCH' if ok else 'DIVERGE') for n, ok in Rf if not n.startswith('C3b-day')]
 
     # ---- THE GRADE ----
     run_tuple = (len(events), len(tset), len(fires), len(cancels), len(retro), len(writes), len(fired_daemons), len(w.entities), tuple(overlap), closes_done)
+    # ---- O9: the placement and slot censuses read from the logs; every slotted event re-parsed against its verse ----
+    pl_m = dict(collections.Counter(l[2].get('placement') for l in markers if l[2].get('placement')))
+    pl_e = dict(collections.Counter(l[2].get('placement') for l in events))
+    sl_e = dict(collections.Counter(l[2]['slot'] for l in events if l[2].get('slot')))
+    slot_bad = []
+    for l in events:
+        if l[2].get('slot'):
+            fv = WE.first_verse(l[2].get('case_source'))
+            if slot_of(*fv) != l[2]['slot']:
+                slot_bad.append((fv, l[2]['slot'], slot_of(*fv)))
+    print('PLACEMENT (O9 T2): markers %r; events %r' % (pl_m, pl_e))
+    print('SLOTS (O9 OPEN-5): events by the ink\'s day-word %r; re-verified against the verse, mismatches %d %s' % (sl_e, len(slot_bad), slot_bad[:5]))
     TESTS = [
         ('the markers on the tape (forward, proleptic, retrograde) — predicted', (mF, mP, mR), (CENSUS[10], CENSUS[11], CENSUS[12])),
+        ('the placement classes — markers and events, predicted by the stitcher (O9 T2)', {'markers': pl_m, 'events': pl_e}, PLACEMENT),
+        ('the day slots on the events, predicted by the stitcher and re-verified against the ink (O9 OPEN-5)', (sl_e, len(slot_bad)), (SLOTS, 0)),
         ('the events on the tape — predicted', len(events), CENSUS[2]),
         ('the ink re-checks, one per marker (the running world; each fork world re-checks its own) — predicted', w.ink_checks, CENSUS[9]),
         ('the predicted days of the markers (the calendar arithmetic before the run)', {k: M[k] for k in DAYS}, DAYS),
         ('the verdicts of the checkpoints, as the design expects', verdicts, VERDICTS),
         ('the sojourn fork: the two other worlds\' verdicts on the 430, as section 12 expects', fork, FORK_VERDICTS),
         ('the run (typed from the first run): events, set, fired, cancelled, retro-writes, writes, daemons fired, entities, double writes, closes', run_tuple, RUN),
+        ('THE REST — the tape minus the newest runner\'s lines (%s) run as its own world reproduces the previous sitting\'s tuple exactly' % NEWEST_RUNNER, tuple_of(rest_world(reg)), PREVIOUS_RUN),
     ]
     ok = 0
     print('\nTHE GRADE')
@@ -911,6 +2030,8 @@ def run():
     print('elapsed %.1fs' % (time.time() - t0))
     if ok != len(TESTS):
         sys.exit('MISSES REMAIN — a miss is evidence, never a retype: read it')
+    db, rows, segs = WJ.reindex()                            # THE LOOP step 2 (minimal): the index rebuilt from every segment on disk
+    print('JOURNAL INDEX: %s — %d rows from %d segments (drop-and-rebuild; never written directly)' % (db, rows, segs))
     print('THE THREE BOOKS RAN IN SEQUENCE ON ONE WORLD — the clock walked by the text\'s own stamps, the eras set by markers, every daemon watching, the text\'s own checkpoints reported as they fall; the sojourn\'s three settings each on its own world.')
     return w, M
 

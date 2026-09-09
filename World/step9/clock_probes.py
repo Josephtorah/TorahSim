@@ -288,7 +288,63 @@ def p18():
     frogs_open = [e for e in led if e['value'] == 'frogs'][0].get('open')
     return ok and blood_open and not frogs_open, 'closed %r; blood open %r, frogs open %r' % (ok, blood_open, frogs_open)
 
-print('CLOCK PROBES (CLOCK.md sections 1-6; each must FAIL on the old engine and PASS on the new):')
+
+# ---- O9 THE CLOCK'S OPEN ITEMS (2026-09-08; CLOCK.md section 12f) — four probes written BEFORE the engine code ----
+@probe('19 O9 T3: ELAPSED — the label less one at the year grain; a life era\'s elapsed is its age; elapsed_in')
+def p19():
+    w = WE.World(era='probe', epoch='creation'); cal = w.clock.calendar
+    a = (cal.year(5), cal.elapsed(5), cal.year(0), cal.elapsed(0))                    # day 5 = the first of Tishrei of year 1; day 0 the stub
+    d = cal.day_of(1657, 1, 1)
+    b = (cal.year(d), cal.elapsed(d))
+    w.marker('Gen 5:3', d, value='probe', era='life:probe')
+    w.advance(cal.day_of(1700, 1, 1))
+    c = (w.clock.year_in('life:probe'), w.clock.elapsed_in('life:probe'), w.clock.elapsed, w.clock.year)
+    return a == (1, 0, 0, -1) and b == (1657, 1656) and c == (43, 43, 1699, 1700), 'day 5 %r; year 1657 %r; the life era at 1700 %r' % (a, b, c)
+
+
+@probe('20 O9 T2: PLACEMENT — a reading-placed marker stamps its verse\'s event, page_order the next; a retrograde marker its whole stretch; a proleptic none')
+def p20():
+    w = WE.World(era='probe')
+    w.marker('Gen 22:1', 10, value='probe', placement='reading_placed')
+    e1 = {'kind': 'tamid_offered', 'subject': 'the-lamb', 'case_source': 'Gen 22:1-2 — probe'}; w.submit(e1)
+    e2 = {'kind': 'tamid_offered', 'subject': 'the-lamb', 'case_source': 'Gen 22:3 — probe'}; w.submit(e2)
+    w.marker('Gen 25:7', 20, value='probe', proleptic=True)
+    e3 = {'kind': 'tamid_offered', 'subject': 'the-lamb', 'case_source': 'Gen 25:7 — probe'}; w.submit(e3)
+    w.marker('Gen 25:20', 40, value='probe')
+    e4 = {'kind': 'tamid_offered', 'subject': 'the-lamb', 'case_source': 'Gen 25:20 — probe'}; w.submit(e4)
+    w.advance(50)
+    w.marker('Num 9:1', 30, value='probe')
+    e5 = {'kind': 'tamid_offered', 'subject': 'the-lamb', 'case_source': 'Num 9:2 — probe'}; w.submit(e5)
+    mk = [l[2].get('placement') for l in w.log if l[0] == 'MARKER']
+    got = (e1.get('placement'), e2.get('placement'), e3.get('placement'), e4.get('placement'), e5.get('placement'), e5.get('dated'))
+    return (got == ('reading_placed', 'page_order', 'page_order', 'text_constrained', 'text_constrained', 30) and mk == ['reading_placed', None, 'text_constrained', 'text_constrained'],
+            'events %r; markers %r' % (got, mk))
+
+
+@probe('21 O9 OPEN-5: THE BOUNDARY ORDER — two timers due one day, the morning-boundary one set first: the fires come evening first, the log carrying the boundary')
+def p21():
+    w = WE.World(era='probe')
+    w._write({'effect': 'eating_window', 'subject': 'the-beast', 'counterparty': None, 'amount': None, 'due': 3, 'boundary': 'morning', 'source_law': 'probe', 'case_source': 'Lev 7:15 — probe'})
+    w._write({'effect': 'tamid_owed', 'subject': 'the-altar', 'counterparty': None, 'amount': None, 'due': 3, 'source_law': 'probe', 'case_source': 'Exod 29:39 — probe'})
+    w.advance(3)
+    fires = [l[2] for l in w.log if l[0] == 'TIMER-FIRE']
+    order = [f['effect'] for f in fires]
+    return (order == ['tamid_owed', 'eating_window'] and fires[1].get('boundary') == 'morning' and 'boundary' not in fires[0],
+            'fire order %r; boundaries %r' % (order, [f.get('boundary') for f in fires]))
+
+
+@probe('22 O9 OPEN-5: THE SLOTS — the table in the ink\'s order (evening below morning); crosses_day; an unknown slot refuses')
+def p22():
+    w = WE.World(era='probe'); cal = w.clock.calendar
+    names = ('evening', 'night', 'midnight', 'dawn', 'morning', 'noon', 'between_the_evenings', 'sunset')
+    ranks = [cal.slot_rank(n) for n in names]
+    ok = ranks == sorted(ranks) and len(set(ranks)) == 8 and cal.crosses_day('morning', 'night') and not cal.crosses_day('night', 'morning') and not cal.crosses_day('morning', 'noon')
+    try:
+        cal.slot_rank('afternoon'); return False, 'accepted an unknown slot'
+    except SystemExit as e:
+        return ok and 'slots' in str(e), 'ranks %r; refusal %r' % (ranks, str(e)[:80])
+
+print('CLOCK PROBES (CLOCK.md sections 1-6, 10, 12; each must FAIL on the old engine and PASS on the new):')
 for name, ok, note in results:
     print('  %s  %s\n        %s' % ('PASS' if ok else 'FAIL', name, note))
 n = sum(ok for _, ok, _ in results)
@@ -304,4 +360,9 @@ unex = [k for k, r in P['parameters'].items() if not r.get('exercised_by')] + ['
 opens = [(k, r['open'].split(' — ')[0]) for k, r in P['parameters'].items() if r.get('open')]
 print('  UNEXERCISED (visible, never counted as run): %s' % ', '.join(unex))
 print('  OPEN: %s' % '; '.join('%s [%s]' % (k, o) for k, o in opens))
+# O9 (2026-09-08; CLOCK.md 12c, 12e): the third registry's two further blocks, exercised or not — visible, never counted as run
+slots = P.get('day_slots') or []
+print('DAY SLOTS: %d in the calendar day\'s order — %s' % (len(slots), ', '.join(r['name'] for r in slots)))
+idioms = P.get('counter_idioms') or {}
+print('COUNTER IDIOMS: %d rows — %s' % (len(idioms), '; '.join('%s: %s%s' % (k, r['idiom'], '' if r.get('exercised_by') else ' [UNEXERCISED]') for k, r in idioms.items())))
 sys.exit(0 if n == len(results) else 1)

@@ -201,6 +201,28 @@ start negative so that day 0 is its twenty-fifth; the world's own era view opens
 days before it read the calendar's year 0 (SEQUENTIAL_RUN.md section 12 e). Also O1's: a post-Exodus-12:2 month name
 is addressed by the CALENDAR'S OWN numbering (Nisan 1, Tishrei 7), never by the creation era's ordinal — the ordinal
 seventh from Tishrei is Adar II in a thirteen-month year; the sojourn fork's descent-literal world caught it.
+THE TIME CONSENSUS (2026-09-08; the third session's four gaps in the account of time, refined by this thread, concurred by the
+design thread, the owner's "ok lets do as you recommend"; the full text in the state doc under that name) adds three items
+for O9 THE CLOCK'S OPEN ITEMS and one for Numbers: OPEN-9 TWO DATE COLUMNS — the year as built is the ordinal label
+(Calendar.year = the count of year starts through the day); the tradition's anno mundi is completed years; the settler is
+ELAPSED as a derived rendering at the YEAR grain (the stub month makes day-grain elapsed disagree inside the first five
+days), never a second counter, printed only where a shelf number is compared, so "the tradition's count one lower" (1657 /
+1656, 2449 / 2448) becomes a MATCH; OPEN-8 stays its own setting. OPEN-10 UNDATED SCENES — an undated event's bound is
+[the last marker, the next marker], whose lower end is an unlabeled page-order prior; the settler is a placement class
+BESIDE the bound (`event['placement']`: page_order the default, text_constrained, reading_placed — never a third element
+of the bound list, which is shared and closed in place across the event, its effects, timers and fires), Genesis 15's year
+as a two-setting row {seder_olam 70 — a reading-placed date earlier than the counter, so the retrograde vehicle as at 6:3;
+bereshit_rabbah_46_2 85 — inside the page-order bound, no retrograde}, the stretch closed by an ink-derived forward marker
+at 16:1 from 16:3's ten years, and C3d rewritten as the JOIN (the placed date + the ink's 430 against the exodus marker,
+both settings printed; 70 + 430 = the exodus at Abraham's 500, the ink's own; 85 + 430 = 515). OPEN-11 COUNTER TAGS —
+(subject, era, idiom, boundary rule) as DATA rows per subject class in the era table's pattern (today the idiom is ONE global
+row, life_year_reading): people completed; kings one day = a year (Rosh Hashanah 2b, the unexercised row); animals
+day-to-day (Mishnah Parah 1:3, read before typed — seats on the Leviticus tape at 9:3, 12:6, 23:12, unexercised for want of an
+age field on the offering event); inclusive day counts; the jubilee's boundary year; a collision is evidence of a convention
+read off the shelf (Rosh Hashanah 3a on Nehemiah 1:1 / 2:1 the template), never smoothed; the checkpoint-by-construction a
+GENERATOR over checkpoint(), at the first sitting that needs a join. And for NUMBERS' FIRST SITTING, not the clock's: (T1)
+INSTALLATION — a per-daemon `installed_by:` with `in_force` as a status on an institution entity and dispatch gating in
+World.submit (SKIPPED-NOT-IN-FORCE logged), never at registration (COMPILE_DEBT.md's THEN NUMBERS line).
 
 ## 9. As built (the sitting's close)
 
@@ -445,3 +467,203 @@ GATE satisfied (162 live; 231 + 72 — no new edge); DAEMON GATE 247 / 0 / 0 of 
 0; the probes 5/5 + 11/11 + 12/12 + 8/8 + clock 16/16 + sequence 4/4; THE SWEEP 34/34 at 3,646 (scratchpad sweep_o6.txt,
 SWEEP-EXIT 0); CORPUS TRUTH GREEN, hash 8b8fff1fa28953af UNMOVED. One correction beside the declaration: none — the
 counts held; one addition: the three function dispositions the declaration had not foreseen.
+
+
+## 12. O9 — THE CLOCK'S OPEN ITEMS (2026-09-08; the open-items campaign's ninth sitting; the plan: the state doc's compaction point #101 read with THE TIME CONSENSUS; the owner: "Let continue")
+
+The scope, from COMPILE_DEBT.md's O9 line: the time consensus's three (T3 the two date columns = OPEN-9, T2 the undated
+scenes = OPEN-10, T4 the counter tags = OPEN-11), OPEN-2 and OPEN-4 searched again, OPEN-1/3/6 finished as far as the
+shelf allows, and OPEN-5 (sub-day) as an engine sitting. The order of work, the wrap's: this design FIRST; the fire-probes
+SECOND (clock_probes.py p19-p22, each written to FAIL on the unchanged engine); the engine THIRD; the third registry's rows
+FOURTH; the stitcher and the sequence runner FIFTH (every new literal predicted by the stitcher before the run); the gates,
+the probes, the sweep and the records SIXTH — with a state-doc checkpoint after the engine edit and after the data rows
+(the S4 lesson: no three milestones without one). The shelf was READ BY SCRIPT before this section was written; every row
+below names its segment as the file carries it. ⚠ A lesson from the reading itself: Bereshit Rabbah's file is POINTED
+(vowel points inside the words) and the Babylonian shelf's is not — a search that does not strip the points misses the
+pointed shelf (the clock sitting's OPEN-2 search failed on exactly that; found this sitting, 12d).
+
+### 12a. T3 — TWO DATE COLUMNS (OPEN-9): ELAPSED as a rendering, never a second counter
+
+- `Calendar.elapsed(day)` = `year(day) − 1` at the YEAR grain — the completed years since the epoch's first New Year; the
+  stub month's five days (label 0) read −1 by the same arithmetic, the consensus's "day-grain elapsed disagrees inside the
+  first five days" made visible rather than smoothed. `Era.elapsed(day)`: a calendar-year era (a new-year month) →
+  `year(day) − 1`; a LIFE era → the age as it stands (already completed years — the correction of Gen 8:13). The Clock
+  wraps them: `clock.elapsed`, `clock.elapsed_in(name)`. No DAYS literal moves; no `year` field on any ledger entry changes.
+- Printed ONLY where a shelf number is compared. The local shelf carries the join (read by script this sitting): Avodah
+  Zarah 9a:7 — "from 'the souls that they had made in Haran' (Gen 12:5) — and we hold that Abraham at that hour was
+  fifty-two" (the two thousand years of Torah, 9a:5-6, open at Abraham's fifty-two = the year 2000) — and 9a:8 — "from
+  'the souls that they had made in Haran' to the giving of the Torah, four hundred and forty-eight years". Two new
+  checkpoints on the sequence runner: C12 `elapsed(born:abraham) + 52 = 2000` (the LABEL column says 2001 — the "one
+  lower" was this column all along) and C13 `elapsed(giving) − 2000 = 448`. The Seder Olam numbers (the flood 1656, the
+  exodus 2448) are NOT on the local shelf: the runner's remark prints both columns and stays a remark, as before.
+
+### 12b. T2 — UNDATED SCENES (OPEN-10): the placement class beside the bound; the Genesis 15 fork; C3d the join
+
+- THE CLASS: `event['placement']` ∈ {`page_order`, `text_constrained`, `reading_placed`} — a field BESIDE the bound,
+  never a third element of the shared bound list. The ENGINE: `World.marker(..., placement='text_constrained')` — a
+  marker carries its class; the world keeps the class and the VERSE of the last non-proleptic marker; `submit()` stamps
+  the class on an event whose FIRST cited verse is the marker's verse (the marker names the position it sits at — so the
+  two rows whose call named the numbers' verse move their call to the position: 21:5's number → the call at 21:2, 45:6's
+  → 45:5; `assert_ink` keeps the numbers' verse); inside a RETROGRADE stretch every dated event takes the retrograde
+  marker's class (the stretch is placed as one); every other event is `page_order` — the counter's, an unlabeled prior no
+  longer unlabeled. A proleptic marker sets no class (the counter unmoved, no stretch).
+- THE STITCHER COMPUTES THE CLASS per marker row (never recited): a row is `reading_placed` when (i) its code reads a
+  third-registry row whose new `placement:` key says `places` — a shelf reading that fixes a date where the ink is silent
+  at that grain (sea_split_date, sinai_days, second_tablets_given, the new covenant_pieces_year — NOT gen6_3_reading:
+  the decree's date is the ink's own two numbers, Noah's six hundred and the hundred and twenty, the reading choosing only
+  the direction of the count, so its retrograde stretch is text_constrained); or (ii) a shelf number is typed into its code (declared row by row with `place='reading_placed'`: 22:1
+  the binding's thirty-seven, 25:29 the stew day, 27:1 the sixty-three, 28:9 Mahalath at the death, 28:10 the fourteen
+  hidden years, 33:18's eighteen months, 35:16's six, 24:18's seventh of Sivan, 32:19's seventeenth of Tammuz); or (iii)
+  it reads an M key that a reading-placed row assigned — PROPAGATION, computed from the code strings (a relative ink
+  count off a reading-placed base is reading-placed in the absolute: the third day of 22:4 rides the binding; the whole
+  road from the departure to Hebron rides Megillah 17a's fourteen; the morrow of 32:30 rides the breaking). A registry
+  row whose key says `refines` — the day within a year the ink fixes (isaac_birth_date, patriarch_birth_month,
+  moses_birth_date, mamre_visit_date) — leaves the class `text_constrained` at the year grain, the value string saying
+  the day is the shelf's, as it already does. `w.clock.day` as a base is the counter (page order): the ink's count off it
+  is `text_constrained` relative (42:18's third day). The stitcher prints the table with each row's reason and PREDICTS
+  the census — markers by class, and the tape's events by stamp (page_order / text_constrained / reading_placed, by the
+  positions and the retrograde stretches) — as a new graded literal PLACEMENT read from the EVENT and MARKER logs.
+- THE GENESIS 15 FORK — the row `covenant_pieces_year`, two settings, BOTH ON THE LOCAL SHELF (read by script):
+  `bereshit_rabbah_46_2: 85` — Bereshit Rabbah 46:2 (the Genesis spine): לִמּוֹל בֶּן שְׁמֹנִים וַחֲמִשָּׁה ("to circumcise
+  at eighty-five") בְּשָׁעָה שֶׁנִּדְבַּר עִמּוֹ בֵּין הַבְּתָרִים ("at the hour He spoke with him between the pieces" — "and if you
+  say, he should have circumcised at eighty-five years, at the hour He spoke with him between the pieces"); `mekhilta_bo_12_40: 70` — the Mekhilta on Exodus 12:40, row 1:
+  שְׁלֹשִׁים שָׁנָה עַד שֶׁלֹּא נוֹלַד יִצְחָק נִגְזְרָה גְּזֵרָה בֵּין הַבְּתָרִים ("thirty years before Isaac was born the decree was decreed
+  between the pieces" — Isaac at Abraham's hundred by 21:5, so the covenant at seventy; the same row carries the Ptolemy
+  gloss Megillah 9a:16 carries). The Babylonian shelf has NO row naming the covenant's year (הַבְּתָרִים "the pieces"
+  searched in all thirty-seven tractates: none). The RUNNING setting is the spine's, 85: a FORWARD marker at 15:1 =
+  `year_day(born:abraham + 85)` — the same day as 16:3's ten years (75 + 10), so the counter does not move — placement
+  `reading_placed`, stamped on 15:1's events. The fork's `covenant_pieces` world runs 70 — the SAME row at a day EARLIER
+  than the counter (12:4's seventy-five): RETROGRADE by the engine's own rule, the Gen 15 events dated at Abraham's
+  seventy, the stretch CLOSED by the ink-derived forward marker MOVED from 16:3 to 16:1 (the first verse outside the
+  stretch; the numbers still checked at 16:3) — 7:4's lesson generalized: a retrograde stretch needs its closing forward
+  marker at the first verse outside it.
+- C3d AS THE JOIN, on the RUNNING world under BOTH settings: the placed covenant + Exodus 12:40's four hundred and thirty
+  against the exodus marker — `C3d-70` MATCH (70 + 430 = Abraham's 500 = Isaac's hundred + the seed's four hundred, the
+  ink's own) and `C3d-85` DIVERGE (515 — the disagreement IS the evidence; a checkpoint that matches by construction is
+  not). The fork world's exodus is computed FROM its placed covenant (the Mekhilta's arithmetic — Exod 7:7's row gains the
+  branch): its C3b (the four hundred from Isaac) MATCHES — not by construction, because the Mekhilta's thirty is that
+  very join — and its C3a prints the tradition's own two hundred and ten years in Egypt as a DIVERGE from the four
+  hundred and thirty; the old C3d (the implied covenant within Gen 15's bound) is retired there — in that world it would
+  match by construction. The sojourn row's `covenant_pieces` setting gains its local teacher (it had said "not on the
+  local shelf under the searched forms" — corrected).
+
+### 12c. T4 — COUNTER TAGS (OPEN-11): data rows per subject class, the generator deferred
+
+A fourth block of the third registry, `counter_idioms:` — (subject class, era, idiom, boundary rule) with channel, source
+and teacher, read by NO code yet (visible in the parameters census as exercised or not, the zero-report law), each row
+read on the shelf by script before it was typed: **people** — completed years, the year turning at the New Year (Gen
+8:13; the row life_year_reading; exercised: the sequence); **kings** — "one day in a year counts as a year" (Rosh Hashanah
+2b:1), the death-and-succession table (2b:3-6: died in Adar and the successor stood in Adar — a year to each; in Nisan
+likewise; Adar then Nisan — the first year to the first, the second to the second), Nisan the kings' new year (2b:7 from
+1 Kings 6:1), the kings of the nations from Tishrei (3a:14-15 on Nehemiah 1:1 / 2:1 — Kislev and Nisan both "the twentieth
+year", so the new year is not Nisan; 3b:2-4 the order of the two events): THE COLLISION TEMPLATE — a collision of counts
+is evidence of a convention read off the shelf, never smoothed; unexercised (no reign on any tape); **animals** — "from
+day to day": Mishnah Parah 1:3 כְּבָשִׂים בְּנֵי שָׁנָה, וְאֵילִים בְּנֵי שְׁתַּיִם, וְכֻלָּם מִיּוֹם לְיוֹם ("lambs, sons of a year; rams, sons of
+two; and all of them from day to day"; a thirteen-month-old fit as neither, a thirteen-month-and-a-day a ram), and the
+bull's two settings, Rosh Hashanah 10a:4-6 (R. Meir: twenty-four months and one day — one day in a year counts as a year
+at a year's END; R. Elazar: twenty-four months and thirty days); its seats on the Leviticus tape 9:3, 12:6, 23:12;
+unexercised — no offering event carries an age field; **trees** — a planting thirty days before the New Year counts as a
+year (Rosh Hashanah 9b:13); the trees' new year the row new_years; the orlah tree of holiness_b runs the year grain
+only; **inclusive day counts** — the third day = the day + 2 (Gen 22:4, 31:22, 40:20, 42:18), the eighth = + 7 (17:12,
+21:4): ink; exercised by the sequence and the pre-Sinai daemon; **the jubilee's boundary year** — sanctified from the
+first of the seventh month (Rosh Hashanah 8b:12), the horn on the tenth, the fiftieth counted or not (the rows
+jubilee_sanctified_from, jubilee_horn_day, fiftieth_in_cycle); exercised by yovel. THE GENERATOR over checkpoint() — a
+caller that, given a completed count joined to a label from two named sources, emits the row named from both — waits for
+the first sitting that needs a join it cannot write by hand; C12 and C13 are such joins written by hand, its shape.
+
+### 12d. OPEN-1/2/3/4/6 read again — as far as the shelf allows
+
+- OPEN-2 FOUND. Eruvin 56a:10 (Samuel's table, 56a:8-9): אֵין בֵּין תְּקוּפָה לִתְקוּפָה ("there is not between one season
+  and the next") אֶלָּא תִּשְׁעִים וְאֶחָד יוֹם וְשֶׁבַע שָׁעוֹת וּמֶחֱצָה ("but ninety-one days and seven and a half hours"), and a
+  season draws from its fellow no more than half an hour — four seasons = 365 days and six
+  hours: the row solar_year_days re-channeled RECEIVED with its teacher, the value 365.25 unmoved (the clock sitting had
+  searched the unpointed phrase against the pointed text). The equinox_offset row stays MODELED: 56a:8-9 give the hours of
+  the day at which each season falls, not the epoch's date.
+- OPEN-4 FOUND — the tradition's own reading of the flood's months: Bereshit Rabbah 33:7 — the forty days of rain are
+  Marcheshvan and Kislev; the hundred and fifty days of 7:24 are טֵבֵת וּשְׁבָט, אֲדָר וְנִיסָן וְאִיָּר ("Tevet and Shevat, Adar
+  and Nisan and Iyar" — FIVE THIRTY-DAY MONTHS); the ark's "seventh month" of 8:4 is Sivan, the seventh from the rains'
+  cessation; "in sixteen days they diminished a cubit — four days to a handbreadth and a half". A row `flood_months`
+  (received, Bereshit Rabbah 33:7; the machine's alternation the running setting; UNEXERCISED as a calendar): C1's DIVERGE
+  stands as the modeled calendar's, the shelf's reading beside it; Rosh Hashanah 12a:5 beside — the sages of Israel count
+  the flood by Rabbi Eliezer and the seasons by Rabbi Yehoshua.
+- OPEN-1: Arakhin 12b:3-5 and 13a:5 read again — the seventeen jubilees, the second Temple's four hundred and twenty as
+  eight jubilees, two weeks and six (12b:3), Rabbi Yehuda's fiftieth counting for both (12b:4): nothing beyond the two
+  settings recorded; STANDS. OPEN-3: no shelf text names a rule for conflicting markers — the sojourn fork is its instance
+  (DIVERGE reports); STANDS. OPEN-6: Rosh Hashanah 25a:10's parts; the court's declarations on the Torah tape: none;
+  STANDS.
+
+### 12e. OPEN-5 — SUB-DAY as an engine sitting: the slots, the two day-orders, the timer's boundary; the day stays the unit
+
+- THE BASE UNIT STAYS THE DAY (consensus B). What enters is the ink's own sub-day vocabulary as an ORDER, the shelf's two
+  day-orders as data, and a timer's boundary as a fire ORDER within one day — no sub-day counter, no due that moves.
+- THE SLOT TABLE (`day_slots:`, data) — the ink's day-words in the three books censused by script over the Tanakh DB:
+  בַּבֹּקֶר ("in the morning") 32 seats and the bare בֹּקֶר 29; עֶרֶב ("evening") 17 and בָּעֶרֶב 14; הַלַּיְלָה / בַּלַּיְלָה
+  ("the night" / "in the night") 16 and 12; בֵּין הָעַרְבַּיִם ("between the evenings") 6; הַשַּׁחַר ("the dawn") 3;
+  בַּצָּהֳרַיִם ("at noon") 2; בַּחֲצִי הַלַּיְלָה ("at midnight") 1 (Exod 12:29); the sun's rising and setting 11 — in the ORDER the
+  calendar day runs them from Gen 1:5 (evening then morning: the day begins at evening): evening, night, midnight, dawn,
+  morning, noon, between_the_evenings, sunset. The shelf's bounds as rows: the night's start at the stars — Berakhot 2a:1
+  מִשָּׁעָה שֶׁהַכֹּהֲנִים נִכְנָסִים לֶאֱכֹל בִּתְרוּמָתָן ("from the hour the priests enter to eat their terumah"); the night's end at the
+  dawn's column — 2a:3-4 עַמּוּד הַשַּׁחַר; between the evenings from the sixth hour and a half — Pesachim 58a:3 (Rabbi Yehoshua
+  ben Levi: "divide it between two evenings — two hours and a half here, two and a half there, and one hour for its
+  doing") with Rava's 58a:5 ("from the time the sun begins to decline westward"); TWILIGHT a DOUBT — Shabbat 34b:2 בֵּין
+  הַשְּׁמָשׁוֹת סָפֵק מִן הַיּוֹם וּמִן הַלַּיְלָה ("twilight — doubtful of the day and of the night, doubtful wholly day, doubtful wholly
+  night: cast to the stringency of both days"), its definition 34b:3 (Rabbi Yehuda: from sunset while the east's face
+  reddens; Rabbi Nechemya: half a mil's walk; Rabbi Yose: the blink of an eye), its measure 34b:6 (three quarters of a
+  mil, Shmuel) — a row `twilight_doubt`, UNEXERCISED: no narrated act of the three books stands at twilight (the sun
+  "about to set" at 15:12 is the day's last slot; "had set, and it was dark" at 15:17 is the night).
+- THE TWO DAY-ORDERS (data): the calendar's — the day follows the night: Chullin 83a:15 (the Mishnah: "'one day' said of
+  it-and-its-young — the day follows the night; ben Zoma derived it: 'one day' at creation, Gen 1:5") — the row
+  day_boundary's TEACHER named at last; and CONSECRATED THINGS — Chullin 83a:16 וּבְקָדָשִׁים לַיְלָה הוֹלֵךְ אַחַר הַיּוֹם ("and
+  in consecrated things the night follows the day"): a new row `temple_day_boundary: morning` (received, the Temple's day
+  from the morning through the following night — the eating windows' "until morning", Lev 7:15, Exod 12:10, Lev 22:30).
+- THE ENGINE: (i) an event's `slot` — STAMPED BY THE STITCHER from the ink's word at the event's first verse (its one table,
+  the numeral parser's sibling), RE-VERIFIED by the runner after the run (every slotted EVENT log re-parsed against the
+  verse; a mismatch fails the run); the engine reads it nowhere but the helper. (ii) `Calendar.slot_rank(name)` from the
+  table, and `Calendar.crosses_day(a, b)`: slot b after slot a lies on the NEXT calendar day when b's rank is below a's
+  (the night after the morning) — used by the stitcher's SLOT-REGRESSION REPORT: consecutive tape events at one counter
+  day whose slots run backward with no marker between (the ink's own day-crossings the tape has not marked: the sun set
+  at 15:17 after 15:12's about-to-set; Bethel's night 28:11; the angels' evening 19:1) — REPORTED as evidence, never fixed
+  by the engine: the counter moves by MARKERS only, and no marker row is added this sitting (a +1 at 15:17 would put
+  16:1's year-grain marker, modeled at the year's first day, one day behind the counter — a year-grain marker met inside
+  its own year is the next question, filed OPEN-12). (iii) a timer's `boundary` field, OPT-IN: absent = the calendar's
+  (the fire at the walk into the due day, the evening); `'morning'` = consecrated things' (the eating windows) — within
+  ONE day's walk the fires are ORDERED, evening-boundary timers first and morning-boundary after, the TIMER-FIRE log
+  carrying the boundary; the due itself never moves (the same day), so no day-grain literal is re-typed; the runners that
+  set "until morning" windows (offerings 7:15-17, pesach 12:10, priesthood 22:30) may declare the boundary at a later
+  sitting of their own — this sitting installs the construct and proves it by probe. The hours (the sixth and a half, the
+  twilight's measure) stay DATA on the rows: nothing in the engine counts hours.
+
+### 12f. The fire-probes (clock_probes.py; each must FAIL on the unchanged engine)
+
+19. ELAPSED: on the creation epoch `elapsed(day)` is the label less one at day 5 (year 1 → 0) and at a later year; a life
+    era's elapsed is its age; `clock.elapsed_in`.
+20. PLACEMENT: a forward marker with `placement='reading_placed'` stamps the class on the event at its verse and
+    `page_order` on the next; a retrograde marker stamps its class on every dated event; a proleptic marker stamps none.
+21. THE BOUNDARY ORDER: two timers due the same day, one `boundary='morning'` set FIRST — the fires within that day's
+    walk come evening-boundary first, the log carrying `boundary`.
+22. THE SLOTS: `slot_rank` reads the table in the ink's order (evening below morning); `crosses_day('morning', 'night')`
+    is True and `crosses_day('night', 'morning')` False; an unknown slot refuses, naming the slots.
+Then the parameters census prints the counter idioms and the day slots beside the rows, exercised or not.
+
+### 12g. Predicted before typed (the stitcher's print, the runner's literals)
+
+The stitcher predicts: the marker table 130 rows (129 + the covenant's; F 113 / P 15 / R 2 on the running world), the
+placement census (markers by class; the events' stamps), the slot census (events by slot), the DAYS literal gaining
+`covenant_pieces`; the CENSUS tuple's other counts unmoved (no event added or removed); the RUN tuple UNMOVED (no write
+changes on the running world — the covenant marker at the counter's own day; the placement and slot stamps write nothing)
+and THE REST unmoved; VERDICTS gain C3d-70 MATCH, C3d-85 DIVERGE, C12 MATCH, C13 MATCH; FORK_VERDICTS['covenant_pieces']
+becomes ['C3a DIVERGE', 'C3b MATCH', 'C3c MATCH']. A miss is evidence, never a retype.
+
+### 12h. As built (the sitting's close, 2026-09-08)
+
+Every prediction of 12g held: 130 markers (F 113 / P 15 / R 2), PLACEMENT markers {text_constrained 84, reading_placed 31} and
+events {text_constrained 86, page_order 941, reading_placed 31}, SLOTS 37 events on six names with zero re-verification
+mismatches, DAYS gaining covenant_pieces only, the RUN tuple and THE REST unmoved, C3d-70 MATCH / C3d-85 DIVERGE (2464 against
+2449) / C12 MATCH / C13 MATCH, the fork's covenant_pieces world on the same exodus day as the running world (the Mekhilta's
+thirty is the join) with exodus − descent = 210. One miss on the first run — a variable name reused in the runner's fork loop,
+not the world (REPORT_SEQUENTIAL_RUN.md O9, finding 6). The probes 22/22 and 4/4; the sweep 39/39 at 4,518; both gates
+satisfied; the corpus hash unmoved. NEW OPEN: OPEN-12 — a year-grain marker met inside its own year (the ink's own
+day-crossings the slot census reported at 19:27 → 19:33 and 28:11 → 28:18; a +1 at the sun's setting would put the next
+year-grain marker, modeled at the year's first day, a day behind the counter): the next sitting on the tape decides whether a
+year-grain marker takes the counter's day when the counter already stands inside its year. The account: REPORT_CLOCK.md's O9
+section; the tape's: REPORT_SEQUENTIAL_RUN.md's.

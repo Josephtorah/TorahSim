@@ -1,0 +1,71 @@
+# NODE CLASSES + STORY CLASSES — record classes as DATA (disposability
+# principle: Exodus adds/merges classes by editing this table, not code).
+# node_classes label nodes in the tree; story_classes is the collector's
+# list from HOW_THE_WORLD_GETS_BUILT.md (18 evidenced classes) kept here
+# as the fold's checklist.
+version: 0
+node_classes:
+  - {id: root,      en: root container (the heavens; the earth)}
+  - {id: domain,    en: created domain (firmament, seas, land)}
+  - {id: container, en: sub-container (garden, city, ark)}
+  - {id: river,     en: river (the Eden hydrology)}
+  - {id: well,      en: well (water access point)}
+  - {id: place,     en: known geography — the map layer (presupposed)}
+  - {id: person,    en: person record}
+  - {id: people,    en: nation / family record (the nations table)}
+  - {id: guard,     en: boundary guard (cherubim, the turning sword)}
+  - {id: object,    en: made object (coats of skins, the awl...)}
+  - {id: divine,    en: divine (from the entity registry's own kind field)}
+  - {id: creature,  en: created creature (the by-its-kind inhabitants)}
+  - {id: plant,     en: plant (grass, trees — including Eden's two)}
+  - {id: entity,    en: UNCLASSIFIED — the honest bucket; shrinks as we learn}
+# targeted class assignments for known entities (v0 seed; entity-registry
+# ids where the registry has one, unit-local tokens otherwise)
+assignments:
+  shamayim: root
+  aretz: root
+  raqia: domain
+  yamim: domain
+  yabasha: domain
+  gan: container
+  ir: container
+  tevah: container
+  nahar: river
+  nahar_1: river
+  nahar_2: river
+  nahar_3: river
+  nahar_4: river
+  keruvim: guard
+  lahat_ha_cherev: guard
+  kotnot_or: object
+  adam: person
+  chavah: person
+  etz_ha_chayim: plant
+  etz_ha_daat_tov_va_ra: plant
+  behemah: creature
+  chayat_ha_aretz: creature
+  chayat_ha_sadeh: creature
+  remes_ha_adamah: creature
+  deshe: plant
+  chagorot: object
+  beerot_avraham: well
+  mizbeach: object
+story_classes:
+  - root_containers
+  - domains_with_product_slots
+  - inhabitants_with_location_slots
+  - known_geography_map_layer
+  - geographic_links_resources
+  - field_updates_by_decree
+  - boundary_guards
+  - human_made_containers
+  - specified_containers_backup
+  - schema_breach_restore
+  - domain_triggers
+  - population_partitions
+  - fill_instruction_enforcement
+  - channels_between_roots
+  - ownership_borders_deeds_grants
+  - registry_delegation_rename_semantics
+  - registry_restore
+  - person_records_with_fields

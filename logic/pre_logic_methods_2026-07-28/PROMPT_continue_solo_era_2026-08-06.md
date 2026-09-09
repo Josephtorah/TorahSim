@@ -14725,3 +14725,824 @@ stub and the census, the hand-model, the code, the re-stitch, the sequence runne
 then O9-O11 in #90's order, then NUMBERS. Watches: as #97's + EVERY MEASURED CLAIM THROUGH THE CLAIMS LIST + THE MODEL KNOWS THE OP CLASS + THE
 DAEMON GATE READS BRANCHES ONLY + AN ENGINE SIGNATURE REACHES THE RECORDER + NAME A COUNT FIELD `days` + THE REGISTER TEST'S "THEN HE SANG" +
 THE CONSTRUCT NUMERALS ARE THE INK'S + ESCAPE THE TABLE'S CODE STRINGS TWICE.
+═══ COMMITTED b4b40ce (2026-09-08, the owner: "Commit push" — O4, O5, O6, O7 and O8 S1 in one commit, 30 files, five of them new; pushed to
+Josephtorah/Torah_Grok main f27cd26..b4b40ce as Josephtorah, the account switched back to PeerloopLLC). NOTHING OF OURS UNCOMMITTED; left
+unstaged by rule: ARCHITECTURE/* (the design thread's CHRONICLE.md modified and its ten new files), the elijah_docket gitlink, the NEVER-COMMIT
+set. LAST COMMIT now b4b40ce; #98 stands as the clean point.
+
+## O8 S2 THE NARRATIVE GAPS ON THE ENGINE — THE PRIMEVAL STORY, FROM EDEN TO HAGAR — DONE 2026-09-08 (the first sitting after compaction #98; the
+## owner: "Continue"; compaction point #99; UNCOMMITTED)
+THE PLAN: NARRATIVE_GAPS.md section 2's rhythm on Genesis 2:4-16:16 — the declaration as section 6 BEFORE the code (6a-6m), the registries by script
+with every claim verified, the daemon declared first and the gate run to fail, the stub and the census --emit, the hand-model printed before the
+runner, the code (fix_percent first), the run, the recorder and the stitcher, the sequence runner's literals re-predicted and RUN typed from the
+first run, the gates, the probes, the sweep, the corpus regression, the records (6n AS RUN + the report's second sitting), this point.
+THE DESIGN (section 6): the span `primeval` = seventeen stretches of Genesis 2:4-16:16 with the pre-Sinai engine's spans cut out (2:16-17, 2:24,
+9:1-17 — the scene submits the acts around them, never their law); the runner cold_run_primeval.py, twenty cells (garden, breach, sentences, cain,
+lines, prologue, ark, flood, remembering, exit, vineyard, nations, babel, shem_line, call, egypt, separation, war, pieces, hagar), eight callee
+imports; the daemon law_primeval, the FORTY-FIRST; the scene on a bare world with law_primeval alone (the pre-covenant births are `bore` and
+`begot`, never `born` — no eighth-day timer before Genesis 17). The registries: effects 311 → 454 (143 new + eight reused with their ink lines
+extended — name_given, wife_taken, encamped_at, plague_struck, sent_out with its transfer taught by Bereshit Rabbah 40:6, believed, covenant_cut,
+childless); types 341 → 445 (103 new + altar_erected; eight standing kinds extended — named +13 witnesses, married +4, journeyed +11, lord_descended
++1, died +1, believed +1, fled +1, sentenced +4 with a reference link); the registry 93 → 168 entities (+15 members; 128 scene tokens; iscah,
+cains_wife, the_escapee, asshur UNCERTAIN); three calendar rows (gen6_3_reading {reprieve running, lifespan unexercised}, abel_days_bound 50
+unexercised, window_count_from 'mountaintops'); the dependency dispositions — twelve edges (CALL pre_sinai, offerings, minchah, temurah, family,
+sanctions, shemini and priesthood voluntary; VIA temurah: yovel; PARAMETER negaim taught by Bereshit Rabbah 41:2; FALSE chatat, lev24), five
+AS_WHEN pointers INTERNAL, the registration edge sequence → primeval; seven marker rows in the stitcher's ONE table ('Gen 6:3' RETROGRADE
+[120] — the reprieve decree = the flood minus 120 years; 'Gen 7:4' [7, 40, 40] placed at 7:1 so the boarding command sits outside the decree's
+stretch; 'Gen 7:12' at 7:17 the rain's end; 'Gen 8:6' the window = the mountaintops + 40; 'Gen 8:10' and 'Gen 8:12' the doves at sevens; 'Gen 16:3'
+Hagar given = Abram's 75 + 10); ten checkpoints CG0-CG9 (Avot 5:2's ten generations twice by the life eras; Eduyot 2:10's twelve months on the
+flood within the ink's ten to eleven days; the reprieve's timer and the seven days' timer both firing on the flood's day; the third dove before
+the drying; the war's twelve-thirteen-fourteen parsed; Hagar to Ishmael one year; Sanhedrin 10:3's three rows = three open entries; Terah's sixty;
+Adam's 930 inside the thousand-year day); the scene's 214 slots.
+THE RUN: the effects FIRST (fifty count claims through the CLAIMS list, verified by script; the appender refused two glosses carrying semicolons;
+two shelf claims not on the local shelf — Onkelos on 2:7 and 4:26 are not in the units' notes — replaced by Bereshit Rabbah 14:9 and the unit's
+export; the Rosh Hashanah flood rows located by script at 11b:6-7, the design's 10b corrected); the types (the events lint: called_on_the_name
+multi-seat needed its link — reference); the registry and the rows; the daemon DECLARED and the gate run to FAIL — then the parser's `[a-z_]`
+refused SIX names carrying digits (renamed everywhere: decree_of_the_reprieve, decree_of_the_sojourn; reprieve_of_a_hundred_and_twenty,
+waters_prevailed_a_hundred_and_fifty, muster_of_three_hundred_and_eighteen, seed_to_serve_four_hundred) and the build() cell listed as a function
+(removed, as at S1); the stub and the census --emit (12 + 5 + 1 dispositioned); the hand-model printed (o8_s2_predict.py, 214 slots) and MATCHED
+first run; the runner 202/206 FIRST RUN — four INK-census literals typed from memory or book-wide counts (the namings 14 → 12, the begettings 39 →
+37, the bearings 7 → 5, the covenant seats) corrected BESIDE the recorded misses with their reasons; 206/206 second run (pure ink 60 / moves 117 /
+answer-sheet 10 / data 4 / imports 15 / hypotheses 0); two kind names CLASHED SILENTLY with standing kinds (the appender skips a name it holds):
+altar_built the ordinances' case kind → the new kind altar_erected; sentenced the family's speech kind → witnesses/ink/tape/link extended and
+law_family seat-checked to Gen 38 (with died → Gen 23; law_exodus_story's named/fled/believed/journeyed/lord_descended seat-checked to Exodus;
+S1's scene gained its three close lines at 12:29, 12:36, 12:41 that find nothing on the bare scene, its tuple unchanged 113/113). THE RECORDER:
+183 history events. THE STITCHER (patched: CLOCK_DAY_RUNNERS + primeval, SPAN_ORDER pre_sinai → primeval → family, the seven rows, DAYS keys):
+95 markers (78 F / 15 P / 2 R), 443 on the tape, 40 closes, 265 kinds, 136 subjects, the tape 645 lines; two register-offs of the primeval's —
+10:8's perfect "begot" cited with 10:10 second, 15:1's "the word came" with 15:2 second (the test's backward window stays inside the chapter;
+the position stays at the first ref). THE SEQUENCE RUNNER: CENSUS and DAYS (+7 keys, every earlier key unchanged) typed from the stitcher's print;
+the first attempt STOPPED inside the tape — law_primeval's own `sentenced` branch read Judah's Gen 38 event for a field it lacks (KeyError), and its
+`married` would have answered Rebekah's (Gen 24) and Moses' (Exod 2): both seat-checked (Gen 3-4; Gen 2-16) — convention 14 BOTH WAYS; then 6/7:
+CG0-CG9 ALL MATCH as 6h expected, the CS verdicts unchanged, the RUN tuple the expected miss; THE TUPLE READ BY SCRIPT BEFORE TYPING — the tape's
+events attributed to their runners by the tape's own comments: THE REST REPRODUCES S1'S TUPLE EXACTLY (260 / 298 / 12 set / 8 fired); the
+primeval's share 183 events, 224 writes (= the bare scene's 223 + the reprieve's ONE fire, which only the tape reaches), 2 set, 2 fired, 70
+entities new, 17 closes (its 14 + S1's three lines on the pieces' entries — convention 15's second showing); typed (443, 14, 10, 0, 0, 522, 10,
+166, the two mornings of 36:3, 39); 7/7 second run. THE RETROGRADE-DATED TIMER PROVED at CG2 (6m's question): the decree's entry dated at Noah's
+480, the counter unmoved, the due through the Calendar, no past-due write, the fire on the flood's day. The census after (o8_census_s2.txt):
+Genesis 31 units / 843 verses uncovered in FIVE stretches — 18:1-20:18 (3 units, 89 verses), 22 (1, 24), 25:1-31:54 (13, 269), 33:1-37:36 (5, 159),
+39:1-47:31 (9, 302); S3 = 17 units / 382 verses, S4 = 14 units / 461 verses, as sized.
+THE GATES AND THE SWEEP: DEPENDENCY GATE 37 runners, 2,713 verses scanned, 150 edges + 99 pointers required, 178 live import edges, 258 + 98 on
+file, 105 live beyond the census all on file; DAEMON GATE 41 daemons / 445 kinds / 1,377 submit records, 287 / 0 / 0 of 287, open aliases 0; the
+events lint 0 on 445 types (1,012 witness runs); the probes 5/5 + 12/12 + 11/11 + 8/8 + clock 18/18 + sequence 4/4; THE SWEEP 37/37 at 4,011
+(scratchpad sweep_o8s2.txt, exit 0; family 228/228, exodus story 113/113, pre-Sinai 212/212 unmoved under the seat checks; the sequence runner 7/7
+in 40.6 s); the corpus regression rerun after the sweep (python3 corpus_world.py, scratchpad corpus_truth_o8s2.txt, CT-EXIT 0): one world, 163
+units, 1,809 facts, standing 1,778, hash 8b8fff1fa28953af UNMOVED (CORPUS_TRUTH.py rewritten identical). RECORDS: NARRATIVE_GAPS.md (section 6
+whole + 6n AS RUN), REPORT_NARRATIVE_GAPS.md (the second sitting: design, predictions, as run, eight findings, the sweep), cold_run_primeval.py
+(NEW), cold_run_sequence.py (the import, DAEMON_ORDER 41, CG0-CG9, VERDICTS, the tape regenerated, CENSUS / DAYS / RUN with the reading recorded),
+cold_run_exodus_story.py and cold_run_family.py (the seat checks; the three close lines), the four registries + calendar_parameters (+3 rows) +
+entity_registry (+75), COMPILE_DEBT (O8 S2 DONE), THE_STEPS (convention 19 + convention 14 both ways), THE_BRIEFING (the scoreboard bullet),
+SEQUENTIAL_RUN.md (the OPEN line), DAEMON_INDEX / DEPENDENCY_INDEX regenerated, the scratchpad's seq_stitch.py (the rows; SPAN_ORDER), this doc,
+memory. Lints: NARRATIVE_GAPS 0, the report 0, COMPILE_DEBT 0, SEQUENTIAL_RUN 0, THE_BRIEFING 0 (one flag — "Midrash" bare — fixed to the
+book's name), THE_STEPS 1 (baseline), the yamls 0, both runners 0.
+⚠ LESSONS: THE GATE READS NAMES, THE TAPE READS FIELDS — a new story daemon's own branches on a kind another engine also submits carry the seat
+check from the first sequence run (both ways; no gate can see a missing field); NO DIGITS in a kind or effect name (the parser's `[a-z_]`) — spell
+the ink's numbers; CHECK THE NEW LIST AGAINST THE REGISTRY before the append (a clashing name is skipped in silence); READ THE RUN TUPLE BY SCRIPT
+before typing it (attribute the tape's events to their runners by its comments; the rest must reproduce the last tuple exactly); the register
+test's backward window — a perfect in a chapter's first verses (10:8, 15:1) is cited with the answering verse SECOND; a command inside a
+retrograde stretch's span gets its forward marker at the verse before (7:4's row placed at 7:1); an INK-census literal is typed from the
+runner's own census print, never from memory or a book-wide count; a scene function returns a tuple — take the World by type, not by index.
+═══ COMPACTION POINT #99 (2026-09-08 — written unprompted at O8 S2's close)
+═══ CLEAN POINT — no work mid-flight. O8 S2 DONE (the entry above); the sweep 37 of 37 at 4,011; both gates satisfied (178 live, 258 + 98; 287 / 0
+/ 0 of 287); the probes 18/18 (clock) + 4/4 (sequence) + 5/5 + 12/12 + 11/11 + 8/8; the events lint 0; open aliases 0; hash unmoved. LAST COMMIT
+b4b40ce; UNCOMMITTED OF OURS: O8 S2's set only (World/step9/{cold_run_primeval.py NEW, NARRATIVE_GAPS.md, REPORT_NARRATIVE_GAPS.md,
+cold_run_sequence.py, cold_run_exodus_story.py, cold_run_family.py, event_vocabulary.yaml, effect_vocabulary.yaml, daemon_dispositions.yaml,
+dependency_dispositions.yaml, calendar_parameters.yaml, COMPILE_DEBT.md, SEQUENTIAL_RUN.md, DAEMON_INDEX.md, DEPENDENCY_INDEX.md},
+logic/corpus/entity_registry.yaml, THE_STEPS.md, THE_BRIEFING.md, this doc, memory) — commit only on the owner's "commit push", staging by
+exclusion as before (the NEW runner is ours); ARCHITECTURE/* NOT ours to stage (CHRONICLE.md modified, the design thread's); the NEVER-COMMIT set
+unchanged; the elijah_docket gitlink never staged. POST-COMPACTION REREADS (mandatory, first sitting): this doc's O8 S2 entry + NARRATIVE_GAPS.md
+sections 1-3, 5 (the S3 sketch), 6 (the declaration's shape, 6n) + REPORT_NARRATIVE_GAPS.md's second sitting + THE_STEPS Step 5 (1) motion (6) +
+the compiler block + THE SEQUENTIAL RUN paragraph (conventions 1-19) + COMPILE_DEBT's BEFORE NUMBERS block + memory's STANDING LESSONS and
+the-effects-law.md + S3's material: the seventeen frozen units of Genesis 18-20, 22, 25-31 (gen_34..gen_55 as the census lists them; 21, 23, 24 are
+the pre-Sinai and family engines' — cut out as S2 cut 2:16-17, 2:24, 9:1-17), their step operators, the family engine's tokens on the stretch, the
+shelf's rows (Avot 5:3's ten trials counted over both stretches; Bereshit Rabbah on the stretch by script; Sanhedrin 109a-b on Sodom; Bava Metzia
+86b-87a on the hospitality; Rosh Hashanah 10b-11a on Sarah remembered), the stitcher's marker rows already inside the stretch (21:5, 25:7, 25:17,
+25:26, 26:34, 31:38-41). THEN, on the owner's word: S3 MAMRE TO THE HEAP under section 2's rhythm (its declaration as section 7 before its code,
+the types and effects by script, the daemon declared first — the forty-second — the stub and the census, the hand-model, the code, the re-stitch,
+the sequence runner's literals with the RUN tuple READ BY SCRIPT before it is typed, the gates, the sweep, the records), then S4, then O9-O11 in
+#90's order, then NUMBERS. Watches: as #98's + THE GATE READS NAMES / THE TAPE READS FIELDS + NO DIGITS IN A NAME + CHECK THE NEW LIST AGAINST THE
+REGISTRY + READ THE RUN TUPLE BY SCRIPT + THE BACKWARD WINDOW'S PERFECTS + THE FORWARD MARKER BEFORE A RETROGRADE STRETCH CLOSES + THE INK-CENSUS
+LITERAL FROM THE RUNNER'S OWN PRINT.
+
+## THE TIME CONSENSUS (2026-09-08, after compaction point #99; the owner routed the discussion to this session — DISCUSSION ONLY, NOTHING BUILT;
+## he reads both sides; it stands as the recorded plan for four future sittings, each on his word)
+The third session read cold_run_sequence.py, world_engine.py and SEQUENTIAL_RUN.md 2-6 with the owner and named four gaps in the account of
+time; the design thread (Torah Grok Main) read each; this session answered from the engine as built; the design thread CONCURRED on all four
+as refined and on the order 3, 2, 1, 4. THE FOUR, AS AGREED: (1) INSTALLATION — every daemon registers at boot and watches the whole tape;
+nothing turns a law on at its own installing event (Gen 9:4, 17:10, Exod 24:8, Lev 8:30). Already paid for by naming: the eighth-day daemon
+watches `born` from boot, so the primeval scene used `bore`/`begot`; convention 14's seat checks are the other stand-in. The design: a per-daemon
+`installed_by:` in daemon_dispositions.yaml (sixth-motion data; `boot` for the story daemons and the Noahide code; the daemon gate demands it),
+the installing act's daemon writing `in_force` as a status on an institution entity (the covenant acceptable as an entity — already a ledger
+party; the priesthood's office already a status), World.submit consulting it before the call and logging SKIPPED-NOT-IN-FORCE — dispatch gating,
+NEVER at registration (DAEMON_ORDER is a tripwire; a boot gate would make the tape order-dependent twice); the two settings (in force from boot —
+"Abraham kept the whole Torah", Yoma 28b / Kiddushin 82a read before typed — against in-force-from-its-event) one parameter row in the
+calendar_parameters pattern, printed as a fork; installation retires the bore/begot/born split, NOT convention 14 (same-era engines sharing a kind);
+Judah's surety and Ephron's field are the EXAM direction, separate. Timing: Numbers' first sitting, the sixth motion's text amended before
+Numbers' first wrap, fire-probes first. (2) UNDATED SCENES — the bound's lower end (`[self._last_marker, None]`) is an unlabeled page-order
+PRIOR; the upper end honest. A placement class BESIDE the bound — `event['placement']` = page_order (submit's default) / text_constrained /
+reading_placed (the stitcher's one table sets the other two) — never a third element: the bound list is SHARED and closed in place across the
+event, its effects, timers and fires, and checkpoint()/the recorder destructure it as a pair. Genesis 15's year a parameter row with two shelf
+settings {seder_olam: 70, bereshit_rabbah_46_2: 85} (46:2 verified on the shelf by the design thread: "he should have circumcised at eighty-five
+years, at the time He spoke with him between the pieces"); 85 falls INSIDE the page-order bound [75, 86] and needs no retrograde; only 70 rides
+the retrograde path (6:3's shape, proved at CG2), with the stretch closed by an INK-DERIVED forward marker at 16:1 from 16:3's "ten years in the
+land" (7:4's lesson generalized: a retrograde stretch needs its closing forward marker at the first verse outside it). The honest C3d is the
+JOIN — the placed date + the ink's 430 against the exodus marker, printed under both settings (70 + 430 = the exodus at Abraham's 500, the ink's
+own; 85 + 430 = 515, C3a diverging by fifteen — the disagreement is the evidence; a checkpoint that matches by construction is not). (3) TWO
+DATE COLUMNS — Calendar.year(day) is `len(self._year_starts(day))`, the ordinal label; the life era's `_age` is completed years at the year grain.
+ELAPSED is one derived rendering (label minus one at the YEAR grain — the stub month makes day-grain elapsed disagree inside the first five
+days), never a second counter; every DAYS literal untouched; printed only where a shelf number is compared; "the tradition's count one lower"
+(1657/1656, 2449/2448) becomes a MATCH under the elapsed column; OPEN-8 stays its own setting. (4) COUNTER TAGS — (subject, era, idiom, boundary
+rule) as DATA rows in the era table's pattern (the idiom today ONE global row, life_year_reading — made per subject class: people completed,
+kings one day = a year (RH 2b, the unexercised row), animals day-to-day by Mishnah Parah 1:3 read before typed, inclusive day counts, the
+jubilee's boundary year); the checkpoint-by-construction a GENERATOR over the existing checkpoint() (a caller that, given a join of a completed
+count to a label, emits the row named from its two sources), not a new mechanism; a collision is evidence of a convention read off the shelf
+(RH 3a on Nehemiah 1:1/2:1 the template), never smoothed — the sojourn fork's rule already; the animal idiom has seats on the Leviticus tape
+NOW (9:3, 12:6, 23:12 "a lamb a son of its year"), unexercised only because no offering event carries an age field. ORDER: 3 (an afternoon)
+→ 2 (a sitting; the Genesis 15 fork its test) → 1 (Numbers' first sitting) → 4 (rows now; the generator at the first sitting that needs a join).
+Each is an ENGINE sitting with fire-probes first, on the owner's word only; none is sequenced before S3, S4, O9-O11, and the peer's tutorials
+say "as of the first sequential run" for their 38 daemons / 141 events until refreshed on his word. #99 stands as the clean point.
+THE OWNER'S RULING ON THE TIME CONSENSUS (2026-09-08, "ok lets do as you recommend"; asked "did you put this discussion in the task list" —
+it had gone to this doc and memory only; ENTERED NOW): S3 and S4 next as ruled; (T3) two date columns, (T2) undated scenes and (T4)'s data rows
+INSIDE O9 THE CLOCK'S OPEN ITEMS; (T1) installation at NUMBERS' FIRST SITTING. The task list = COMPILE_DEBT.md's BEFORE NUMBERS block (the O9
+line and the THEN NUMBERS line now carry the four in full); CLOCK.md section 8 carries T2-T4 as OPEN-9/10/11 with their settlers; MEMORY.md's
+NEXT clause names them. Nothing built; #99 stands as the clean point.
+
+## O8 S3 THE NARRATIVE GAPS ON THE ENGINE — FROM MAMRE TO THE HEAP — DONE 2026-09-08 (the sitting after THE TIME CONSENSUS; the owner: "now
+## continue"; compaction point #100; UNCOMMITTED with O8 S2)
+THE PLAN: NARRATIVE_GAPS.md section 2's rhythm on Genesis 18-20, 22, 25-31 — the declaration as section 7 BEFORE the code (7a-7m), the registries
+by script with every claim verified, the daemon declared first and the gate run to fail, the stub and the census --emit, the hand-model printed
+before the runner, the code (fix_percent first), the run, the recorder and the stitcher, the sequence runner's literals with the RUN tuple READ BY
+SCRIPT before it is typed, the gates, the probes, the sweep, the corpus regression, the records (7n AS RUN + the report's third sitting), this point.
+THE DESIGN (section 7): the span `mamre` = Genesis 18:1-33, 19, 20, 22, 25-31 with the pre-Sinai and family engines' chapters cut out (21, 23, 24);
+the runner cold_run_mamre.py, seventeen cells (mamre, sodom, gerar, moriah, abraham_end, twins, isaac_gerar, wells, blessing, grudge, bethel,
+well_stone, wage, twelve_names, speckled, flight, heap); the daemon law_mamre, the FORTY-SECOND; the scene's laws [law_mamre, the pre-Sinai code]
+— the births under Genesis 17 are `born` (thirteen males get the eighth-day timer; Dinah `sex: f` none), Lot's daughters' and Nahor's `bore`/`begot`;
+callees the covenant code, the offerings (olah, shelamim), the tithe, the family code (inheritance, purchase), the guardians' matrix for 31:39.
+The registries: effects 454 → 681 (215 new + eleven the types named + the season's return timer; twenty-eight reused with their ink lines extended);
+types 445 → 624 (179 new; twenty-four standing kinds extended); the registry 168 → 214; eight calendar rows (mamre_visit_date, binding_placement,
+stew_day, blessing_placement, hidden_years, the births' day arms); fourteen edges + twelve pointers + the registration edge; fourteen marker rows
+in the stitcher's ONE table, every one FORWARD of the counter ('Gen 18:10' at 18:1 = Passover of 17:1's ninety-nine, joined by CH0; 'Gen 19:15' the
+dawn +1; 'Gen 22:1' Isaac 37; 'Gen 22:4' the third day; 'Gen 25:29' the stew day = died:abraham; 'Gen 27:1' Jacob 63; 'Gen 28:9' Mahalath =
+died:ishmael; 'Gen 28:10' +14 years — nums [7] = BEERSHEBA's numeral, recorded with its note; 'Gen 29:14' +1 month; 'Gen 29:20' [7] +7 years;
+'Gen 29:28' [7] +7 days; 'Gen 29:30' [7] at 30:25 +7 years; 'Gen 31:41' [20, 14, 6, 10] at 31:17 +6 years; 'Gen 31:22' the third day); eleven
+checkpoints CH0-CH10 (the season's join; Avot 5:3's ten trials vs the ink's one — DIVERGE declared, OPEN; the stew day's fifteen; the blessing's
+sixty-three; the fourteen's end in Joseph's year; the wedding at eighty-four; Esau's forty in Isaac's hundredth; the week before Rachel; thirteen
+eighth days and none on Dinah; four closes; the two transfers); the scene's 362 slots.
+THE RUN: the effects FIRST (two claims REFUTED on the dry run and corrected beside their record; two runs misspelled; twelve semicolon glosses
+refused), the types (the events lint's fourteen flags: five shared witnesses, nine omitted effects appended), the rows and the registry (JOIN
+targets mapped), the daemon DECLARED and the gate run to FAIL (the block first landed under `functions:` — moved above it), the stub and the census,
+the hand-model (362 slots) MATCHED first run; the runner 222/222 FIRST GRADED RUN (pure ink 127 / recorded moves 74 / answer-sheet 7 / data 6 /
+imports 8 / hypotheses 0). Before the run: a roster name's probe takes the verse's own form (the ו "and" prefix of 25:13); a scene field named
+`day` is the engine's word — the two ordinals are `ordinal`. The recorder 306; the stitcher THREE HONEST STOPS — INK MISMATCH at 28:10
+(Beersheba's seven, a place-name's numeral, recorded in the row), the visit's row reading born:isaac before 21:2 set it (the year off 17:1's
+marker, on the tape before 18:1), and 18:1's "and the LORD appeared" (וירא, the passive stem) a REGISTER-OFF because the test's verb regex read
+lowercase stem codes only (the passive N, the intensive-passive P, the causative-passive H are uppercase) — fixed for every runner, one event
+re-admitted, none moved; then 109 markers (92 F / 15 P / 2 R), 749 events, 56 closes, 444 kinds. The sequence runner: CH0-CH10 EXACTLY AS 7h
+DECLARED on the first run (CH1 DIVERGE); C9 DIVERGED at the day grain (the binding in Sarah's death year, the purchase's bound opening at 22:4 two
+days into it; her death modeled at the year's first day) → compared at the YEAR grain (T3's rendering rule, early). THE RUN TUPLE READ BY SCRIPT
+— TWO FAULTS NO COUNT SHOWED: (i) 909 writes against the bare scene's 385 + S2's 522 = 907 — law_mamre's span check was a RANGE (18..31) and
+answered 21:2's birth and 23:19's burial, the pre-Sinai and family engines' events → the span a SET with holes (convention 20); (ii) THE REST (the
+tape minus the Mamre lines run as its own world) 165 entities against S2's 166 with every other count equal — a write had MOVED: the registry
+map is GLOBAL at submit and the scene's generic tokens 'the-land' (26:1) and 'the-ram' (22:13) re-homed the erection's high_places_banned and
+Leviticus 9's ram onto Genesis entities → the tokens the-land-of-canaan (S2's) and the-ram-at-moriah, the registry members un-claimed, and THE
+REST installed as the sequence runner's EIGHTH CHECKPOINT (NEWEST_RUNNER = 'mamre', PREVIOUS_RUN = S2's tuple; both move forward each sitting)
+(convention 21). Typed (749, 31, 27, 0, 0, 907, 11, 219, the two mornings, 56); 8/8. CENSUS subjects 199 → 198 after the token fix (the two
+generic tokens were Mamre's alone as event subjects). The daemon gate at the close: TWENTY-ONE KINDS DRIFTED between the first declaration (the
+types script's per-kind defaults) and the code (the hand-model's per-event tables) — the watches re-declared FROM THE MODEL, the drift listed in
+the report; 42 daemons, 304 functions, 0 owed, 0 none. The census after: Genesis 14 units / 461 verses in two stretches (33-37, 39-47) — S4 as
+sized; Exodus 23:20-33 the one narrative unit outside every scene.
+⚠ LESSONS (the memory file's STANDING LESSONS carry them): THE SPAN IS A SET (a range inside a stretch with holes answers other engines' chapters);
+THE REGISTRY MAP IS GLOBAL (a scene token re-homes every runner's use of it — a generic noun another runner submits or writes on is never a scene
+token; THE REST test keeps it caught); THE PASSIVE STEM (stem codes are case-sensitive in the morphology — regexes over them read both cases);
+BEERSHEBA'S SEVEN (the parser's read is recorded in the row with its note, never patched silently); A YEAR-GRAIN DATE BESIDE A DAY-GRAIN BOUND is
+compared at the year grain; THE WATCHES ARE GENERATED FROM THE MODEL at declaration time next sitting (the gate's first fail = the missing def
+alone); a scene field is never named `day`; a roster name's probe takes the verse's own form; the marker table reads only markers already on the
+tape at its position (the visit's year off 17:1, not off 21:2).
+═══ COMPACTION POINT #100 (2026-09-08 — written unprompted at O8 S3's close)
+═══ CLEAN POINT — no work mid-flight. O8 S3 DONE (the entry above); the sweep 38 of 38 at 4,234 (the sequence runner 8/8 with THE REST); both
+gates satisfied (184 live, 271 + 110; 304 / 0 / 0 of 304); the probes clock 18/18 + sequence 4/4; the events lint 0 on 624; open aliases 0; the
+corpus regression GREEN, hash 8b8fff1fa28953af unmoved. LAST COMMIT b4b40ce; UNCOMMITTED OF OURS: O8 S2's set + O8 S3's (World/step9/
+{cold_run_mamre.py NEW, cold_run_primeval.py NEW, NARRATIVE_GAPS.md, REPORT_NARRATIVE_GAPS.md, cold_run_sequence.py, cold_run_exodus_story.py,
+cold_run_family.py, cold_run_pre_sinai.py, event_vocabulary.yaml, effect_vocabulary.yaml, daemon_dispositions.yaml, dependency_dispositions.yaml,
+calendar_parameters.yaml, COMPILE_DEBT.md, SEQUENTIAL_RUN.md, CLOCK.md, DAEMON_INDEX.md, DEPENDENCY_INDEX.md}, logic/corpus/entity_registry.yaml,
+THE_STEPS.md, THE_BRIEFING.md, this doc, memory) — commit only on the owner's "commit push", staging by exclusion as before (the NEW runners are
+ours); ARCHITECTURE/* NOT ours to stage; the NEVER-COMMIT set unchanged; the elijah_docket gitlink never staged. POST-COMPACTION REREADS
+(mandatory, first sitting): this doc's O8 S3 entry + THE TIME CONSENSUS entry + NARRATIVE_GAPS.md sections 1-3, 5 (the S4 sketch), 7 (the
+declaration's shape, 7n) + REPORT_NARRATIVE_GAPS.md's third sitting (the drift list, findings 6-7, 11) + THE_STEPS Step 5 (1) motion (6) + the
+compiler block + THE SEQUENTIAL RUN paragraph (conventions 1-21) + COMPILE_DEBT's BEFORE NUMBERS block + memory's STANDING LESSONS and
+the-effects-law.md + S4's material: the fourteen frozen units of Genesis 33-37, 39-47 (gen_56..gen_71 as the census lists them; 38 is the
+family engine's, cut out as S3 cut 21, 23, 24), their step operators, the family engine's tokens on the stretch (the levirate, the inheritance,
+Joseph's purchase of Egypt), the shelf's rows (Bereshit Rabbah on the stretch by script; Sotah on Joseph; Megillah 16b-17a on Jacob's years),
+the stitcher's marker rows already inside the stretch (41:46 Joseph 30, 45:6 the two years, 47:9 the descent, 47:28 the deathbed). THEN, on the
+owner's word: S4 THE LAST GENESIS STRETCHES under section 2's rhythm (its declaration as section 8 before its code, the types and effects by
+script, the daemon declared first — the forty-third — with its WATCHES GENERATED FROM THE HAND-MODEL at the declaration, the stub and the
+census, the hand-model, the code, the re-stitch, the sequence runner's literals with the RUN tuple READ BY SCRIPT before it is typed and
+NEWEST_RUNNER / PREVIOUS_RUN moved forward to Mamre's, the gates, the sweep, the records), then O9-O11 in #90's order (O9 carrying T3, T2,
+T4's rows), then NUMBERS (T1 first). Watches: as #99's + THE SPAN IS A SET + THE REGISTRY MAP IS GLOBAL (a scene's tokens are its own) + THE
+PASSIVE STEM + BEERSHEBA'S SEVEN + A YEAR-GRAIN DATE BESIDE A DAY-GRAIN BOUND + THE WATCHES FROM THE MODEL + NO SCENE FIELD NAMED `day` + THE
+MARKER TABLE READS ONLY WHAT IS ALREADY ON THE TAPE.
+
+## O8 S4 THE NARRATIVE GAPS ON THE ENGINE — FROM THE FORD TO THE COFFIN — DONE 2026-09-08 (the sitting after O8 S3; the owner: "Next", then
+## "Did you take on too much" / "Ok finish"; compaction point #101; UNCOMMITTED with O8 S2 and S3) — O8 COMPLETE: GENESIS WHOLE ON THE ENGINE
+THE PLAN: NARRATIVE_GAPS.md section 2's rhythm on Genesis 32-37, 39-47, 50 — the declaration as section 8 BEFORE the code (8a-8m), the registries by
+script with every claim verified, the daemon declared first with its WATCHES GENERATED FROM THE HAND-MODEL and the gate run to fail, the stub and
+the census --emit, the hand-model printed before the runner, the code (fix_percent first), the run, the recorder and the stitcher, the sequence
+runner's literals with the RUN tuple READ BY SCRIPT before it is typed, the gates, the probes, the sweep, the corpus regression, the records (8n +
+the report's fourth sitting), this point.
+THE DESIGN (section 8): the span `joseph` = Genesis 32-37, 39-47, 50 (gen_55 and gen_73 added — the census's coverage test had hidden them behind
+the family's seats; 520 verses) with the family engine's chapters (38, 48, 49) and its seats inside the span (32:29, 32:33, 50:12-13) cut out;
+cold_run_joseph.py, twenty-three cells (jabbok, esau_met, shechem_arrival, dinah, bethel_again, three_deaths, edom, dreamer, potiphar,
+prison_dreams, pharaoh_dreams, the_rise, first_descent, second_descent, cup, i_am_joseph, the_seventy, seventy, goshen, the_fifth, the_oath,
+mourning, coffin); law_joseph the FORTY-THIRD; the scene's laws [law_joseph, the pre-Sinai code] (Benjamin, Manasseh, Ephraim `born` under 17:12);
+six callees — the covenant code, the offerings (46:1 shelamim; 35:14's libation by token), the family code (33:19's purchase, the inheritance order),
+mishpatim_2 (THE MOHAR 34:12 on Exod 22:15-16), mishpatim_3 (THE THIEF SOLD 44:9-17 on Exod 22:2), the vestments (37:31's tunic — THE FLOW REVERSED).
+The registries: effects 681 → 905 (224 new; five_years_of_famine_left appended directly); types 624 → 791 (167 new; forty extended); the registry
+214 → 268 (two convention-21 clashes renamed); six calendar rows; 14 edges (3 live beyond the census, rule 9) + 18 pointers (all INTERNAL) + the
+registration edge; 8g's seventeen rows (nineteen markers) + 42:18 found at the run, split to one marker per row = twenty rows, every one FORWARD ('Gen 31:23' [7] at 32:1 the heap's morning; 32:14 the
+night; 32:32 the sunrise; 33:17 Sukkot; 33:18 +18 months; 35:6 +1; 35:16 +6 months; 35:27 +1 — Kiriath-arba's four NOT counted, the article; 37:2
+[17] off born:jacob + 108; 40:12 [3, 3] at 40:5; 40:20 the third day; 41:1 [2] +2 years = joseph30; 41:53 [7]; 45:6 [2, 5] at 45:5; 46:1 [7]
+Beersheba; 50:3 [40, 70] / 50:4; 50:10 [7] / 50:14); twelve checkpoints CJ0-CJ11 (+ CJ3b, CJ10-tokens); the scene's 288 slots.
+THE RUN: the effects FIRST (thirty-six claims REFUTED on the dry runs and corrected beside their record; the "none located" placeholders struck
+after the rows were located by script), the types (the events lint's one flag resolved), the rows and the registry, THE HAND-MODEL printed (313
+events, 207 kinds, 288 slots, nine story timers — the design's "ten" a miscount — three eighth days, twelve closes, day 11407), the daemon
+DECLARED with 209 watches FROM THE MODEL and the gate run — ⚠ its first FAIL was a YAML PARSE ERROR of our own (the functions block appended after
+`unfired:/unconsumed:`), read as the expected fail on the exit code alone; repaired, the honest missing-def FAIL recorded. The stub and the census.
+The 8k edits (family purchased→23, consented→24, recognized→38, burial_commanded→49, gathered→49; exodus story statute_set→Exod; both unmoved).
+THE INK MEASURED BEFORE TYPING: ⚠ 42:36 carries "is not" TWICE (the design's CJ10 refuted — the presumption's third is Benjamin's clause without
+the token); Benjamin full at 7 seats / short at 9 (Sotah 36b:9 measured, recorded either way); the Name by chapter 37-50 = {38: 3, 39: 8, 49: 1};
+the seven/plenty skeleton 31 tokens in Gen 41; bows 10 seats; the gift 550; וימלך ("and he reigned") 8; the rosters 91 names probed. The generator
+442 probes / 207 branches / 379 scene lines. The runner 280/282 FIRST RUN — two misses read: THE THIEF SOLD's compiled verdict is the TERM
+(six_years_for_the_principal; the hand had typed the effect's name), and ONE open entry more than the model — law_pre_sinai's
+blessed_be_fruitful had no seat check and wrote on 'god' at 35:11 (seat-checked to 1:28, 9:1, 9:7); SECOND RUN 282/282 (pure ink 178 / recorded
+moves 81 / answer-sheet 10 / data 5 / imports 8 / hypotheses 0). The third-day timers re-read INCLUSIVE (+2, the tape's convention) before the
+tape — the tuple unmoved, the cell measuring from the log. The recorder 313 (312 history + 1 statute); the stitcher ONE HONEST STOP (35:27) and
+four events set aside by the register test (36:2-3's perfect "took" x3, 43:1's nominal clause): 309 on the tape, 129 markers (112 F / 15 P / 2 R),
+1058 events, 70 closes, 611 kinds. THE SEQUENCE: the first tape run raised KeyError 'seat' at 35:12 — law_primeval's land_promised branch answered
+Joseph's event (its shared set extended: THE THIRD LEAK since S2); the second run 5/8 — CJ6 DIVERGED (no marker between 42:17 and 42:18 → the row
+42:18 added), CJ9 DIVERGED (the five-years timer set two years early: the speech's event 45:5-8 sorted before the marker at 45:6 → positioned at
+45:5), the marker census 111 vs 109 rows (two rows with two calls → ONE MARKER PER ROW); the third run 7/8 with THE REST reproducing S3's tuple
+exactly and every checkpoint as declared (CJ3b DIVERGE — the seventy's missing one, OPEN); THE RUN TUPLE READ BY SCRIPT (events 749 + 309; writes
+907 + 321 − 4; set 31 + 12; fired 27 + 12; daemons 11 + 1; entities 219 + 33; closes 56 + 14 + 4) and typed (1058, 43, 39, 0, 0, 1224, 12, 252,
+the two mornings, 74); 8/8. The daemon gate at the close ZERO DRIFT (S3's lesson closed); 43 daemons, 327 functions, 0 owed. The sweep 39/39 at
+4,516; the dependency gate 191 live, 285 + 128; the events lint 0 on 791; the probes 18/18 + 4/4; the corpus regression GREEN, hash unmoved. The
+records: 8n, the report's fourth sitting (fourteen findings), COMPILE_DEBT (S4 DONE, O8 COMPLETE), SEQUENTIAL_RUN, THE_STEPS conventions (22)
+ONE MARKER PER ROW and (23) THE THIRD DAY IS INCLUSIVE AND HAS ITS OWN MARKER, THE_BRIEFING (the O8 S4 bullet + the scoreboard), memory.
+⚠ LESSONS (the memory file's STANDING LESSONS carry them): A GATE'S FAIL IS READ, NEVER ASSUMED FROM ITS EXIT CODE; A DAEMON'S SHARED-KIND GUARD
+MUST INCLUDE EVERY NEWCOMER'S KINDS (the tape's KeyError the honest catch; the hand-model's open count the other); THE THIRD DAY IS INCLUSIVE (+2)
+AND HAS ITS OWN MARKER (the clock does not walk between verses without one); A MARKER SITS AT ITS EVENT'S FIRST VERSE (45:5 for 45:6's numbers);
+ONE MARKER PER ROW (the census counts calls); THE INK REFUTES THE DESIGN BEFORE THE CODE (42:36's two tokens); THE COMPILED VERDICT IS THE TERM,
+NOT THE EFFECT'S NAME; a place-name's numeral with the article is NOT counted by the parser (Kiriath-arba) while the bare one is (Beersheba); the
+dual "two years" (שנתים) IS counted; the register test's four set-asides are the tape's honest edge (a roster's perfect verb is not a narrated act).
+═══ COMPACTION POINT #101 (2026-09-08 — written unprompted at O8 S4's close)
+═══ CLEAN POINT — no work mid-flight. O8 S4 DONE (the entry above) — O8 COMPLETE, GENESIS WHOLE ON THE ENGINE; the sweep 39 of 39 at 4,516 (the
+sequence runner 8/8 with THE REST); both gates satisfied (191 live, 285 + 128; 327 / 0 / 0 of 327, zero drift); the probes clock 18/18 + sequence
+4/4; the events lint 0 on 791; open aliases 0; the corpus regression GREEN, hash 8b8fff1fa28953af unmoved. LAST COMMIT b4b40ce; UNCOMMITTED OF
+OURS: O8 S2's + S3's + S4's sets (World/step9/{cold_run_joseph.py NEW, cold_run_mamre.py NEW, cold_run_primeval.py NEW, NARRATIVE_GAPS.md,
+REPORT_NARRATIVE_GAPS.md, cold_run_sequence.py, cold_run_exodus_story.py, cold_run_family.py, cold_run_pre_sinai.py, event_vocabulary.yaml,
+effect_vocabulary.yaml, daemon_dispositions.yaml, dependency_dispositions.yaml, calendar_parameters.yaml, COMPILE_DEBT.md, SEQUENTIAL_RUN.md,
+CLOCK.md, DAEMON_INDEX.md, DEPENDENCY_INDEX.md}, logic/corpus/entity_registry.yaml, THE_STEPS.md, THE_BRIEFING.md, this doc, memory) — commit only
+on the owner's "commit push", staging by exclusion as before (the NEW runners are ours); ARCHITECTURE/* NOT ours to stage; the NEVER-COMMIT set
+unchanged; the elijah_docket gitlink never staged. POST-COMPACTION REREADS (mandatory, first sitting): this doc's O8 S4 entry + THE TIME CONSENSUS
+entries (#86, ROUND TWO) + COMPILE_DEBT's BEFORE NUMBERS block (O9's list: OPEN-5 sub-day, OPEN-2/4, OPEN-1/3/6 + T3 elapsed rendering, T2
+event['placement'] + the Genesis 15 fork + C3d, T4's data rows) + CLOCK.md OPEN-9/10/11 + THE_STEPS Step 5 (1) motion (6) + the compiler block +
+THE SEQUENTIAL RUN paragraph (conventions 1-23) + memory's STANDING LESSONS and the-effects-law.md. THEN, on the owner's word: O9 THE CLOCK'S
+OPEN ITEMS (design first in CLOCK.md, probes second, the engine third — fire-probes before any engine edit; the era table's T2 placement class for
+the Genesis eras; the elapsed rendering at the year grain; C3d as the join), then O10 the people-tokens in the one registry, O11 the claims label
+debt, then NUMBERS (T1 INSTALLATION first: installed_by per daemon, in_force status, dispatch gating in submit; Sifrei Bamidbar + Onkelos the
+spine; SEQUENTIAL_RUN.md section 9's conventions; Num 27 + 36 owed forward; Num 9:1 the tape's second retrograde). Watches: as #100's + A GATE'S
+FAIL IS READ + THE SHARED-KIND GUARD + THE THIRD DAY INCLUSIVE WITH ITS OWN MARKER + A MARKER AT ITS EVENT'S FIRST VERSE + ONE MARKER PER ROW +
+THE INK REFUTES THE DESIGN + THE COMPILED VERDICT IS THE TERM.
+POST-#101 REVIEW (2026-09-08, the owner: "review what you did that took so long for errors" / "Yes go"; the clean point stands after the fixes):
+six errors, none in a grade — the vestments edge REFERENCE → CALL (a live import edge beyond the token census: the gate checks its entry, not its
+value — the disposition is the file's honesty alone); the Exodus 1:5 cell parses (it had returned a literal behind a presence check); five shelf
+rows verified and read by no cell — cited (Megillah 17a:2, Bereshit Rabbah 78:14, 80:9, 84:16, 84:17); Shabbat 85a:2 declared in 8j and never
+placed on the shelf — left absent, recorded (the review's own first count said six on the shelf); "six FALSE" → seven (8n); "twenty rows of 8g"
+→ seventeen rows, nineteen markers, twenty after the split (the entry above); "twenty-one marker rows" → twenty (memory). ⚠ LESSONS: a row on the
+shelf is a row a cell reads — cite it or drop it, and a row the declaration names is a row the shelf carries; a cell's value is computed, never a
+literal behind a presence check; a live edge beyond the census carries its disposition on the file's honesty alone (the gate cannot see it) —
+file CALL for every live import. The time's cost: the exit code read as the message; two tape divergences already covered by S2's
+marker-position lesson and the unstated one-marker-per-row; the timer semantics changed after green. The runner 282/282, the sequence runner
+8/8, both gates satisfied and the sweep rerun after the fixes.
+═══ READY TO COMPACT (2026-09-08, the owner: "I need to compact get ready") — COMPACTION POINT #101 STANDS WITH THE POST-#101 REVIEW'S FIXES IN:
+the sweep rerun after the fixes 39 of 39 at 4,516 (scratchpad o8_s4_sweep2.txt); the Joseph runner 282/282; the sequence runner 8/8; both gates
+satisfied; every record linted to baseline; nothing mid-flight; nothing committed (LAST COMMIT b4b40ce; the uncommitted set as #101 lists it).
+FIRST SITTING AFTER: the mandatory rereads of #101 (this doc's O8 S4 entry + the review note above it, THE TIME CONSENSUS entries, COMPILE_DEBT's
+BEFORE NUMBERS block, CLOCK.md OPEN-9/10/11, THE_STEPS Step 5 (1) motion (6) + the compiler block + THE SEQUENTIAL RUN paragraph (conventions
+1-23), memory's STANDING LESSONS and the-effects-law.md), then O9 THE CLOCK'S OPEN ITEMS on the owner's word — design first in CLOCK.md, probes
+second, fire-probes before any engine edit.
+
+## O9 THE CLOCK'S OPEN ITEMS — IN FLIGHT (2026-09-08, the first sitting after compaction #101; the owner: "Let continue"; the
+## mandatory rereads done first: the O8 S4 entry + its review, THE TIME CONSENSUS entries, COMPILE_DEBT's BEFORE NUMBERS block,
+## CLOCK.md 8-11, THE_STEPS Step 5 + the compiler block + THE SEQUENTIAL RUN paragraph, memory's STANDING LESSONS, the-effects-law)
+THE DESIGN WRITTEN FIRST: CLOCK.md section 12 (12a T3 elapsed as a rendering; 12b T2 the placement class beside the bound, the
+Genesis 15 fork, C3d the join; 12c T4 the counter idioms as data; 12d OPEN-1/2/3/4/6 read again; 12e OPEN-5 sub-day as an engine
+sitting; 12f the four probes; 12g the predictions) — gloss lint 0. THE SHELF READ BY SCRIPT before the design: ⚠ Bereshit Rabbah's
+file is POINTED — a search must strip the vowel points (the clock sitting's OPEN-2 search failed on that): Eruvin 56a:10 FOUND (the
+season's ninety-one days and seven and a half hours — solar_year_days re-channeled received); Bereshit Rabbah 33:7 FOUND (the flood's
+150 days as five thirty-day months, Tevet to Iyar — the row flood_months); the covenant between the pieces has TWO local teachers
+(Bereshit Rabbah 46:2 eighty-five; the Mekhilta on Exod 12:40 row 1 seventy — the sojourn row's covenant_pieces setting had said "not
+on the local shelf": corrected); Avodah Zarah 9a:7-8 (Abraham fifty-two at the year two thousand; 448 to the giving) the LOCAL
+shelf numbers for the elapsed column; Chullin 83a:15-16 the two day-orders; Berakhot 2a:1-4, Pesachim 58a:1-5, Shabbat 34b:2-6 the
+slots' bounds; Mishnah Parah 1:3 + Rosh Hashanah 10a:4-6, 2b:1-7, 3a:14-15, 3b:2-4, 9b:13 the idioms. THE PROBES p19-p22 written and
+run to FAIL on the old engine (18/22, each for its missing construct). THE ENGINE EDITED (world_engine.py): Calendar.elapsed /
+Era.elapsed / Clock.elapsed + elapsed_in; first_verse(); World.marker(placement=) with the class on the MARKER log; submit() stamping
+event['placement'] (the marker's class at its verse, the retrograde stretch as one, page_order else); advance() ordering one day's
+fires by the opt-in timer boundary (evening first, morning after); Calendar.slot_rank / crosses_day over the registry's day_slots.
+THE THIRD REGISTRY: seven rows (covenant_pieces_year, flood_months, temple_day_boundary, night_start, between_the_evenings_from,
+twilight_doubt; solar_year_days re-channeled; day_boundary's teacher Chullin 83a:15), the placement keys (places / refines) on
+fifteen rows, the blocks day_slots (8) and counter_idioms (6) — 54 parameters, the census printing both blocks. AFTER THE EDIT:
+clock probes 22/22, sequence probes 4/4, erection / yovel / exodus_story / offerings green. NEXT IN THIS SITTING: the stitcher
+(the covenant row at 15:1, 16:3's marker moved to 16:1, the two position calls, the class computed and propagated, the slot parse,
+the predictions printed) and the sequence runner (C3d-70/85 the join on the running world, the fork's exodus from its covenant,
+C12/C13 under the elapsed column, the PLACEMENT and SLOTS literals graded, the slot re-verification), then the gates, the sweep,
+the records (REPORT_CLOCK.md O9, SEQUENTIAL_RUN.md 14, REPORT_SEQUENTIAL_RUN.md, COMPILE_DEBT, THE_STEPS conventions, THE_BRIEFING,
+memory). Nothing committed; if compaction lands here: rerun the four probes files, then continue at the stitcher.
+
+## O9 THE CLOCK'S OPEN ITEMS — DONE (2026-09-08, the same sitting; the IN FLIGHT entry above is its first half; compaction point #102; UNCOMMITTED
+## with O8 S2-S4)
+THE TAPE AFTER THE ENGINE: the stitcher's rows — the covenant between the pieces at 15:1 (place='reading_placed'; the row covenant_pieces_year:
+Bereshit Rabbah 46:2 eighty-five running, the Mekhilta on Exod 12:40 seventy in the fork's covenant_pieces world where the engine's own rule
+made it RETROGRADE and the ten-years marker MOVED to 16:1 closed the stretch), the two position calls (21:2 for 21:5's number, 45:5 for
+45:6's), Exod 7:7's covenant branch (that world's exodus from its placed covenant), nine typed shelf-number rows, THE CLASS COMPUTED per row
+(a `places` row read / typed / propagated through the M keys in tape order — the binding's third day rides the binding, the whole road rides
+Megillah 17a's fourteen, Shur rides the sea, the morrow rides the breaking; the exodus row typed text: its running branch reads born:isaac) and
+injected into the marker call; the slots stamped from slot_of (the runner's INK block, one copy) and the SLOT-REGRESSION REPORT (two: 19:27
+morning → 19:33 night; 28:11 sunset → 28:18 morning — reported, never fixed; OPEN-12 filed: a year-grain marker met inside its own year, the
+reason no +1 row was added). THE PREDICTIONS PRINTED, THE LITERALS TYPED FROM THE PRINT BY SCRIPT (CENSUS 130 markers F 113; DAYS + covenant_pieces
+= hagar_given's day; PLACEMENT markers {text 84, reading 31} events {text 86, page_order 941, reading 31}; SLOTS {sunset 3, evening 3, night 12,
+morning 14, dawn 2, noon 3}; VERDICTS + C3d-70 MATCH, C3d-85 DIVERGE, C12 MATCH, C13 MATCH; FORK_VERDICTS covenant_pieces = C3a DIVERGE / C3b
+MATCH / C3c MATCH, the old by-construction C3d retired). THE FIRST RUN 9/10 — every prediction held but the RUN tuple's retro-writes (3 against
+0) while the same run's header said "retro-writes 0": the fork loop's new print had REUSED THE NAME `retro` for the covenant world's retrograde
+markers (6:3, 15:1, Lev 8:2) — the runner's hand, not the world; renamed, nothing typed anew; THE SECOND RUN 10/10 (C3d-85 at 2464 against 2449;
+the covenant world's exodus on the SAME day as the running world's — the Mekhilta's thirty IS the join — with exodus − descent = 210, the
+tradition's own; the slots re-verified with zero mismatches; THE REST unmoved). THE GATES both satisfied (191 live; 285 + 128; 112 beyond the
+census all on file; 43 daemons, 327 / 0 / 0, zero drift); the events lint 0 on 791; the probes 22/22 + 4/4; THE SWEEP 39/39 at 4,518 (scratchpad
+o9_sweep.txt; the sequence runner 10/10 in 51.7s); the corpus regression GREEN, hash 8b8fff1fa28953af unmoved. THE RECORDS: CLOCK.md 12 + 12h
+(OPEN-12), REPORT_CLOCK.md O9, SEQUENTIAL_RUN.md 14 + as run, REPORT_SEQUENTIAL_RUN.md O9 (six findings), COMPILE_DEBT (O9 DONE), THE_STEPS
+conventions (24) THE PLACEMENT CLASS BESIDE THE BOUND, (25) TWO DATE COLUMNS, (26) THE DAY STAYS THE UNIT, THE SLOT IS THE INK'S WORD + the
+clock paragraph's O9 sentence, THE_BRIEFING (the O9 bullet), memory. Every record gloss-linted to baseline.
+⚠ LESSONS: A SEARCH STRIPS THE VOWEL POINTS (Bereshit Rabbah's file is pointed — two "not on the local shelf" rows were there); A NAME REUSED
+IS A MISS (the header line printed the true count beside the false tuple — read the header); THE CLASS IS COMPUTED, NEVER RECITED (a typed
+place= only where a shelf number sits in the code; propagation through the keys); THE MARKER'S VERSE IS ITS POSITION (the engine's stamp
+compares first verses); A CHECKPOINT THAT MATCHES BY CONSTRUCTION IS NOT EVIDENCE (the fork world's C3d retired; the join printed on the
+running world under both settings); THE ELAPSED COLUMN IS A RENDERING (printed only where a shelf number is compared).
+═══ COMPACTION POINT #102 (2026-09-08 — written unprompted at O9's close)
+═══ CLEAN POINT — no work mid-flight. O9 DONE (the two entries above); the sweep 39 of 39 at 4,518; both gates satisfied; the probes 22/22 + 4/4;
+the events lint 0; the corpus regression GREEN, hash 8b8fff1fa28953af unmoved. LAST COMMIT b4b40ce; UNCOMMITTED OF OURS: O8 S2-S4's set (#101's
+list) + O9's (World/step9/{world_engine.py, clock_probes.py, calendar_parameters.yaml, cold_run_sequence.py, CLOCK.md, REPORT_CLOCK.md,
+SEQUENTIAL_RUN.md, REPORT_SEQUENTIAL_RUN.md, COMPILE_DEBT.md, DEPENDENCY_INDEX.md, DAEMON_INDEX.md}, THE_STEPS.md, THE_BRIEFING.md, this doc,
+memory) — commit only on the owner's "commit push", staging by exclusion as before; ARCHITECTURE/* NOT ours to stage; the NEVER-COMMIT set
+unchanged; the elijah_docket gitlink never staged. POST-COMPACTION REREADS (mandatory, first sitting): this doc's O9 entries (IN FLIGHT + DONE) +
+CLOCK.md section 12 whole + SEQUENTIAL_RUN.md section 14 + COMPILE_DEBT's BEFORE NUMBERS block (O10, O11, THEN NUMBERS with T1) + THE_STEPS
+Step 5 (1) motion (6) + the compiler block + THE SEQUENTIAL RUN paragraph (conventions 1-26) + memory's STANDING LESSONS and the-effects-law.md.
+THEN, on the owner's word: O10 THE PEOPLE-TOKENS IN THE ONE REGISTRY (the fold's sitting — design first, the registry map is GLOBAL at submit:
+THE REST test keeps every re-homed token caught), then O11 THE CLAIMS LABEL DEBT (measured, then batches by unit), then NUMBERS (T1 INSTALLATION
+first: installed_by per daemon, in_force status, dispatch gating in submit — never at registration; Sifrei Bamidbar + Onkelos the spine;
+SEQUENTIAL_RUN.md section 9's conventions; Num 27 + 36 owed forward; Num 9:1 the tape's second retrograde). OPEN (counted): OPEN-1/3/5(twilight,
+the eating windows' boundary declarations)/6 as CLOCK.md 8 and 12d-e record; OPEN-12 the year-grain marker met inside its own year; the two slot
+regressions unmarked; the counter idioms' generator; CJ3b, CH1, C3b's descent fork as before. Watches: as #101's + A SEARCH STRIPS THE POINTS +
+A NAME REUSED IS A MISS + THE CLASS IS COMPUTED + THE MARKER'S VERSE IS ITS POSITION + BY CONSTRUCTION IS NOT EVIDENCE + THE ELAPSED COLUMN IS
+A RENDERING.
+
+## O10 THE PEOPLE-TOKENS IN THE ONE REGISTRY — DONE (2026-09-08, the sitting after O9; the owner: "Is o10 small or large" → measured small; "Ok go";
+## compaction point #103; UNCOMMITTED with O8 S2-S4 and O9)
+THE MEASURE FIRST (by script over corpus_world.sqlite, 163 frozen units, 1,167 mentions): the units' operator layer names the people rarely —
+nine people-like tokens in seventeen mentions (Genesis carries 1,049 of the mentions, Exodus 106, Leviticus 12); bene_yisrael's one use is a
+Patient role the fold never reads. THE DESIGN FIRST: THE_WORLD.md's idea log of the date — the decisions table with each verse read in the ink,
+the grounds, one UNCERTAIN (the twelve tribes of 49:28 as the body against the twelve sons as persons), one SPLIT by unit (mitzrayim: the
+people at gen_70's 47:15/47:19, the land at 12:10, 13:1, 21:21), the non-folds said so (yisrael stays jacob — thirteen mentions, the person;
+otam a pronoun with two referents — the units' own revision; anashim Pharaoh's men; bnei_chet its own entity). THE DRY RUN BEFORE THE EDIT
+(the proposed table applied in memory, the fold read-only): seventeen mentions re-homed, entities 276 → 273, every count unchanged, THE HASH
+UNMOVED — because _state_hash's basis is facts, open demands and names, never the mentions' resolution: the honest report is that it does not
+move and why. THE EDIT: entity_registry.yaml — nine members scoped to their units (never global: the tape's registry_map reads step9-scenes
+members only), notes per member, israel_people's note rewritten, a CHANGELOG line at the head (the RE-era constitution's line); 268 entities,
+485 members. THE FOLD: journal revision 127 (19:46:23), the seventeen re-homed exactly as listed, distinct mention entities 273, CORPUS TRUTH
+GREEN — one world, 163 units, 1809 facts, 341 demands (191 open), hash 8b8fff1fa28953af; the World folder rebuilt (run_genesis.py) and checked
+(build_world.py --check ALL GREEN — ten counts and the hash; entities 439); World/RESUME.md's status line brought current (it had read the
+Genesis-only build). THE SWEEP after the registry edit 39/39 at 4,518 (scratchpad o10_sweep.txt; the sequence runner 10/10 — no scene token
+moved), both gates satisfied. THE RECORDS: THE_WORLD.md (the design + as run), the registry's changelog, COMPILE_DEBT (O10 DONE), THE_BRIEFING
+(the O10 bullet — the design fact: identity is a model layer the hash never sees), World/RESUME.md, memory.
+⚠ LESSONS: MEASURE THE FOLD BEFORE SIZING IT (the owner's "small or large" answered from the DB, not the plan's words); A DRY RUN OF THE FOLD IS
+THE PREDICTION (patch load_config in memory, fold(write=False), diff — the counts and the hash before the edit); A HASH THAT CANNOT MOVE IS
+REPORTED WITH ITS BASIS (never "unmoved" as if it were a test); A MEMBER IS SCOPED, NEVER GLOBAL (the tape's map and the fold share one file).
+═══ COMPACTION POINT #103 (2026-09-08 — written unprompted at O10's close)
+═══ CLEAN POINT — no work mid-flight. O10 DONE (the entry above); O9 DONE (#102); the sweep 39 of 39 at 4,518; both gates satisfied; the probes
+22/22 + 4/4; the corpus regression GREEN at journal revision 127, hash 8b8fff1fa28953af unmoved; the World folder ALL GREEN. LAST COMMIT b4b40ce;
+UNCOMMITTED OF OURS: #102's list + O10's (logic/corpus/entity_registry.yaml, logic/corpus/CORPUS_TRUTH.py (regenerated by the fold — the same
+hash), THE_WORLD.md, World/RESUME.md, World/step9/COMPILE_DEBT.md, THE_BRIEFING.md, this doc, memory; corpus_world.sqlite and World/world.sqlite
+are gitignored) — commit only on the owner's "commit push", staging by exclusion as before; ARCHITECTURE/* NOT ours to stage; the NEVER-COMMIT set
+unchanged; the elijah_docket gitlink never staged. POST-COMPACTION REREADS (mandatory, first sitting): this doc's O9 and O10 entries + COMPILE_DEBT's
+BEFORE NUMBERS block (O11 next, THEN NUMBERS with T1) + THE_STEPS Step 5 (1) motion (6) + the compiler block + THE SEQUENTIAL RUN paragraph
+(conventions 1-26) + memory's STANDING LESSONS and the-effects-law.md. THEN, on the owner's word: O11 THE CLAIMS LABEL DEBT — measured by script
+FIRST (2,802 unlabeled of 2,838 at the last count: by unit, by stratum), then batches by unit from each claim's own recorded derivation where the
+ledger names the move, the rest by reading; the verifier's ceiling file extended as batches land; sized at its first sitting into as many
+sittings as it takes; then NUMBERS (T1 INSTALLATION first — installed_by per daemon, in_force status, dispatch gating in submit, never at
+registration; Sifrei Bamidbar + Onkelos the spine; SEQUENTIAL_RUN.md section 9's conventions; Num 27 + 36 owed forward; Num 9:1 the tape's second
+retrograde). OPEN (counted): as #102's + otam's two referents (the units' own revision, not the fold's). Watches: as #102's + MEASURE BEFORE SIZING
++ THE DRY RUN IS THE PREDICTION + A HASH THAT CANNOT MOVE IS REPORTED WITH ITS BASIS + A MEMBER IS SCOPED.
+═══ READY TO COMPACT (2026-09-08, the owner: "I need to compact get ready") — COMPACTION POINT #103 STANDS AS WRITTEN: O9 (#102) and O10 (#103)
+both DONE in this window; the sweep after O10's registry edit 39 of 39 at 4,518 (scratchpad o10_sweep.txt; the sequence runner 10/10); both gates
+satisfied; the probes 22/22 + 4/4; the corpus regression GREEN at journal revision 127, hash 8b8fff1fa28953af unmoved; the World folder ALL GREEN;
+every record gloss-linted to baseline (the state doc 147, THE_STEPS 1, THE_WORLD 5 pre-existing, the rest 0); nothing mid-flight; nothing
+committed (LAST COMMIT b4b40ce; the uncommitted set as #103 lists it — 28 tracked files modified plus the three NEW runners of O8). FIRST SITTING
+AFTER: the mandatory rereads of #103 (this doc's O9 and O10 entries, COMPILE_DEBT's BEFORE NUMBERS block, THE_STEPS Step 5 (1) motion (6) + the
+compiler block + THE SEQUENTIAL RUN paragraph (conventions 1-26), memory's STANDING LESSONS and the-effects-law.md), then O11 THE CLAIMS LABEL
+DEBT on the owner's word — MEASURED BY SCRIPT FIRST (the unlabeled claims by unit and by stratum), sized into sittings, then the first batch.
+
+## O11 THE CLAIMS LABEL DEBT — IN FLIGHT (2026-09-08, the first sitting after compaction #103; the owner: "What's left" answered from the
+## records, then "Go", then "Reread first then go" — the mandatory rereads of #103 done first: this doc's O9 and O10 entries, COMPILE_DEBT's
+## BEFORE NUMBERS block, THE_STEPS' compiler block + Step 5's six motions + THE SEQUENTIAL RUN paragraph (conventions 1-26), memory's
+## STANDING LESSONS and the-effects-law.md)
+THE MEASURE FIRST (by script over the 166 manifests — the record World/step9/CLAIM_LABELS.md section 1): 2,838 claims; 36 rows carry the
+middah key but ELEVEN of them hold an empty string (gen_60-63), so the honest debt is 2,813, not 2,802; by book gen 1,663 / exo 545 / lev 513
+/ the law-era manifests 117; by the SOURCE family (the family decides how a claim was derived): Minchat Shai 809, Sifra 451, Bereshit Rabbah
+446, Kitzur Baal HaTurim 414, the Talmud and Mishnah 339, Onkelos 193, the later commentators 76, the Mekhilta 32, other 78; the check types
+censused; a keyword census hits 1,695 rows; THE LEDGERS DO NOT CARRY THE LABEL (zero lines tie a claim id to a middah code) — the plan's
+"where the ledger names the move, by script" collapses to one path: every label READ off its own manifest row, the script's proposal printed
+beside it as the aid. THE TWO STRATA: the manifest row is the label's home (the verifier reads it there); the unit YAMLs seat 1,191 of the ids
+as markers and carry no label field. THE DESIGN WRITTEN FIRST (CLAIM_LABELS.md sections 2-7): the vocabulary — `ink` (reads its own verse:
+the written form or the rendering; Minchat Shai and Onkelos ink BY NATURE), I1-I13 / E1-E32 (the span's twin by the claim's conclusion),
+`plain` (a teacher's statement with no form), `M-NN` (a catalogued move with no twin), `H` (an untaught transfer of our own); the method
+(print with proposal → read → decide → apply byte-faithfully → verify → record); THE GATE logic/solo_tools/claim_labels_census.py written
+before the first label and RUN TO FAIL FIRST — 12 lines: the eleven empties as predicted and a twelfth the design had not seen, G61-17's
+label "E29 (letter-values) / numeric count" carrying text after its parenthesis; the batches sized B1-B5. THE MANIFESTS' FOUR SHAPES: the
+apply script's faithfulness guard refused 162 of 166 files on the first run — the one file checked (gen_38) had been read with its
+newline assumed; measured over all 166: indent 1 unescaped no newline 122, indent 2 24, indent 1 escaped 16, the three law-era files one
+compact row per line; the script now detects each file's shape and writes it back in it; exo_16's added newline restored. ⚠ A FORMAT
+VERIFIED ON ONE FILE IS A GUESS ABOUT THE OTHERS — the guard kept the manifests whole. B1 THE INK LAYER DONE: 1,002 rows printed compactly
+(Hebrew runs stripped to a marker; 194 flagged rows whole) and read whole; 987 labels in 114 manifests (ink 975, M-22 7, M-23 2, E7 1, E1 1,
+E2 1; the twenty compiled-run rows of Exod 23-40 took their move or "the compiled run" with the runner's name read by script); 15 Leviticus
+Onkelos rows (Sifra bundles) DEFERRED to B5; 31 exceptions typed and all used; the verifier on all 115 touched manifests 0 FAILED. B2 THE
+KITZUR LAYER DONE: 414 rows read whole; 414 labels in 84 manifests (E7 283, E30 51, ink 39, E10 21, E29 12, I2 6, E28 1, M-22 1); the
+reading's rules in the record's B2 entry (E7 the Kitzur's signature, I2 only where a rule of conduct rides the pair, E10 for in-passage
+counts, E29 only where the letter-sum is the conclusion, ink for the verse's own count or form with a homily on it). THE CENSUS after B2:
+labeled 1,425, DEBT 1,413 (gen 653 / exo 159 / law 117 / lev 484); the gate's nine Genesis failures (eight empties + G61-17) stand until B3.
+RECORDS: CLAIM_LABELS.md (the design + the ledger's three entries), COMPILE_DEBT.md (the debt line's O11 paragraph + the BEFORE NUMBERS
+line's flight note), this doc. UNCOMMITTED: #103's list + the 115 modified manifests + CLAIM_LABELS.md + claim_labels_census.py (NEW) +
+COMPILE_DEBT.md. NEXT IN O11 (the sittings after, on the owner's word): B3 GENESIS'S TEACHERS (677 rows, 25 labeled inside; the eleven empties
+and G61-17 normalized to "E29 (letter-values; a numeric count)"), B4 EXODUS'S TEACHERS + THE LAW-ERA MANIFESTS (276), B5 THE SIFRA (469 + the
+15 deferred) — each by the same path: `python3 scratchpad/o11_print.py B3 out.txt`, the compact split, the reading, a decisions file, `python3
+scratchpad/o11_apply.py <decisions>` (the shape guard inside), the census, the verifier loop, the ledger entry; at B5's close the gate's
+`--strict` fails on any remaining debt and O11 closes (THE_BRIEFING bullet, MIDDOT.md's process line, memory). If compaction lands here:
+nothing mid-write — B1 and B2 are applied and verified, the records current; continue at B3.
+═══ COMPACTION POINT #104 (2026-09-08 — written unprompted at B2's close, the sitting's planned stop)
+═══ CLEAN POINT — no work mid-flight. O11 OPENED and its first two batches DONE (the IN FLIGHT entry above): the measure, the design, the gate
+(run to fail first), B1 THE INK LAYER (987) and B2 THE KITZUR LAYER (414) applied byte-faithfully in the manifests' own four shapes; the verifier
+loop after B2 over all 115 modified manifests 0 FAILED (1,272 verified / 600 uncheckable / 348 no-check — unchanged by the labels); the census
+labeled 1,425 / DEBT 1,413; the gate FAILS by design on the nine Genesis rows B3 owns (eight empties + G61-17). Every record linted: CLAIM_LABELS
+0, COMPILE_DEBT 0, THE_STEPS 1 (baseline), MIDDOT 1 (pre-existing — "aggadah" at its head, in HEAD too), this doc 147 (baseline). The sweep NOT
+rerun (no runner, no registry, no engine touched — the manifests are read only by the verifier and holdings.py); the corpus hash cannot move
+(its basis excludes the manifests) and is not claimed. LAST COMMIT b4b40ce; UNCOMMITTED OF OURS: #103's list + the 115 modified manifests +
+World/step9/CLAIM_LABELS.md (NEW) + logic/solo_tools/claim_labels_census.py (NEW) + World/step9/COMPILE_DEBT.md + logic/MIDDOT.md + THE_STEPS.md
++ this doc + memory — commit only on the owner's "commit push", staging by exclusion as before; ARCHITECTURE/* NOT ours to stage; the NEVER-COMMIT
+set unchanged; the elijah_docket gitlink never staged. POST-COMPACTION REREADS (mandatory, first sitting): this doc's O11 IN FLIGHT entry +
+CLAIM_LABELS.md whole (sections 3-4 the vocabulary and the method; the ledger's three entries) + COMPILE_DEBT's debt line + THE_STEPS Step 5 (1)
+motion (6) + the compiler block + memory's STANDING LESSONS (the O11 line) and the-effects-law.md. THEN, on the owner's word: B3 GENESIS'S TEACHERS
+(677 rows — Bereshit Rabbah 446, the Talmud and Mishnah 194, the Mekhilta 10, the rest; 25 already labeled inside; the eleven empties become
+their form or `plain`; G61-17 normalized) by the path the IN FLIGHT entry names — the print (scratchpad o11_print.py B3), the compact split
+under the Read tool's 25k-token cap, the reading whole, the decisions file, the apply with the shape guard, the census, the verifier loop, the
+ledger entry; then B4 (276), then B5 (484 with the fifteen deferred Onkelos rows); at B5's close the gate's --strict, THE_BRIEFING's O11 bullet,
+MIDDOT.md's line already current, memory; THEN NUMBERS (T1 INSTALLATION first). OPEN (counted): as #103's. Watches: as #103's + A FORMAT
+VERIFIED ON ONE FILE IS A GUESS ABOUT THE OTHERS + THE GATE RUN TO FAIL FIRST CATCHES WHAT THE DESIGN DID NOT + THE ROW'S ASSERTION LEADS.
+═══ READY TO COMPACT (2026-09-08, the owner: "Let's compact first. Get ready") — COMPACTION POINT #104 STANDS AS WRITTEN: O11 opened, B1 (987)
+and B2 (414) applied and verified (the verifier 0 FAILED on all 115 modified manifests; the census labeled 1,425 / DEBT 1,413; the gate's nine
+Genesis failures are B3's by design); every record linted to baseline; MEMORY.md compacted to 9.2 KB (the long index line moved verbatim into
+step9-exam-era.md); nothing mid-flight; nothing committed (LAST COMMIT b4b40ce; the uncommitted set as #104 lists it). FIRST SITTING AFTER: the
+mandatory rereads of #104 (this doc's O11 IN FLIGHT entry, CLAIM_LABELS.md whole, COMPILE_DEBT's debt line, THE_STEPS Step 5 (1) motion (6) + the
+compiler block, memory's STANDING LESSONS and the-effects-law.md), then B3 GENESIS'S TEACHERS on the owner's word by the path the entry names.
+## O11 B3 GENESIS'S TEACHERS — DONE (2026-09-08, the first sitting after compaction #104; the owner: "Ok go" — the mandatory
+## rereads of #104 done first: this doc's O11 IN FLIGHT entry, CLAIM_LABELS.md whole, COMPILE_DEBT's debt line, THE_STEPS Step 5
+## (1) + the compiler block, memory's STANDING LESSONS (the O11 line) and the-effects-law.md; the gate re-run and READ at its
+## designed nine failures before any work)
+THE SELECTOR'S MISS FIRST: the batch print returned 676 rows against the design's 677; measured by script over all 2,838, ONE row
+was selected by no batch — G11-18 (gen_11), a Genesis row whose source opens "Sifra, Shemini" and whose family the printer read as
+the Sifra (B5's, Leviticus only). B3's selector now takes every Genesis row that is not Minchat Shai, Onkelos, or the Kitzur; the
+five batches re-summed to 2,838 by script before the re-print. ⚠ A BATCH SELECTOR IS RE-SUMMED TO THE WHOLE BEFORE ITS PRINT IS
+TRUSTED. THE READING: seven compact parts (scratchpad o11_split.py — the Hebrew runs to a marker, the source to seventy characters,
+every row WHOLE) read in fourteen pages under the Read tool's cap; 640 rows decided by hand into scratchpad o11_b3_decisions.py
+(the id-to-code table with a note per row where the generic text would not do), the twelve compiled-run rows by B1's convention
+with the runner's name read by script, G61-17 RELABELED (o11_apply.py gained a RELABEL table) to "E29 (letter-values; a numeric
+count)", the eight empties of gen_60-63 to `plain` as the design predicted. THE DRY CHECK before the apply (by script): every
+unlabeled row of the batch in the decisions or a run row, no id outside the batch, no label failing the gate's shape, no Hebrew in
+a label. APPLIED: 653 labels in 69 manifests — plain 432, ink 88, E7 19, I2 17, E10 15, M-11 11, E26 9, M-09 9, E2 7, E27 6,
+M-23 5, E5 5, E30 4, E1 3, E28 3, E29 3, M-03 3, M-16 3, E15 2, E32 2, I1 2, I3 1, M-05 1, M-12 1, M-22 1, M-24 1; the diff
+1,297 added / 653 deleted (644 rows gained a line, nine changed one in place). THE READING'S RULES are the record's B3 entry
+(CLAIM_LABELS.md): the headline assertion leads and the catalogued form wins a tie over `plain`; `plain` is two-thirds of a
+teacher's batch — the "from here" derivations (the verse's own wording or act as the rule) carry no middah and the label says so;
+`ink` where the count or form is the assertion (the chain's own counts that FAIL against the corpus recorded as its premise); I2
+only where a rule of conduct or ritual rides the shared word; E7 leads over E27 on a pair (B2's rule); the moves M-11 (11), M-09
+(9), M-23 (5), M-16 (3) where the recorded derivation is a catalogued move with no twin; NO H — the stream's-own-census rows
+assert counts and name the readings, transferring nothing. THE CENSUS: labeled 2,078 / DEBT 760 (exo 159 + law 117 = B4; lev 484
+= B5); Genesis 1,663 of 1,663; THE GATE PASSED, 0 failure lines — its first green since it was written to fail. THE VERIFIER LOOP
+over all 115 modified manifests: 0 FAILED, 1,272 verified / 600 uncheckable / 348 no-check, the LR1 gate 0 — unchanged from
+before any label. RECORDS: CLAIM_LABELS.md (the B3 entry), COMPILE_DEBT.md (the debt line's B3 paragraph + the BEFORE NUMBERS
+line), this doc, memory. The sweep NOT rerun (no runner, registry, or engine touched); the corpus hash cannot move and is not
+claimed.
+═══ COMPACTION POINT #105 (2026-09-08 — written unprompted at B3's close)
+═══ CLEAN POINT — no work mid-flight. O11 at three of five batches: B1 (987), B2 (414), B3 (653) applied and verified; the census
+labeled 2,078 / DEBT 760; the gate GREEN; the verifier 0 FAILED on all 115 modified manifests. Every record linted: CLAIM_LABELS
+0, COMPILE_DEBT 0, this doc 147 (baseline). LAST COMMIT b4b40ce; UNCOMMITTED OF OURS: #104's list (the 115 manifests now carrying
+B3 too, CLAIM_LABELS.md NEW, claim_labels_census.py NEW, COMPILE_DEBT.md, MIDDOT.md, THE_STEPS.md, this doc, memory) — commit only
+on the owner's "commit push", staging by exclusion as before; ARCHITECTURE/* NOT ours to stage; the NEVER-COMMIT set unchanged;
+the elijah_docket gitlink never staged. POST-COMPACTION REREADS (mandatory, first sitting): this doc's O11 IN FLIGHT entry and
+this B3 entry + CLAIM_LABELS.md sections 3-4 and the B3 ledger entry (the reading's rules) + COMPILE_DEBT's debt line + THE_STEPS
+Step 5 (1) motion (6) + the compiler block + memory's STANDING LESSONS (the O11 lines) and the-effects-law.md. THEN, on the
+owner's word: B4 EXODUS'S TEACHERS + THE LAW-ERA MANIFESTS (276 rows — Exodus teacher rows 159: the Mekhilta, the Talmud, the
+Tanchuma, the later commentators; the three law-era manifests law01-03 117 rows, one compact row per line, the shape guard
+handles them) by the same path — `python3 scratchpad/o11_print.py B4 out.txt` (re-sum the five batches to 2,838 FIRST), the
+split, the reading whole, a decisions file in B3's form, the apply, the census, the verifier loop, the ledger entry; then B5 THE
+SIFRA (484 with the fifteen deferred Onkelos rows — the I forms); at B5's close the gate's --strict, THE_BRIEFING's O11 bullet,
+memory; THEN NUMBERS (T1 INSTALLATION first). OPEN (counted): as #104's. Watches: as #104's + A BATCH SELECTOR IS RE-SUMMED TO
+THE WHOLE BEFORE ITS PRINT IS TRUSTED + THE HEADLINE ASSERTION LEADS, THE CATALOGUED FORM WINS A TIE OVER PLAIN.
+## O11 B4 EXODUS'S TEACHERS + THE LAW-ERA MANIFESTS — DONE (2026-09-08, the same sitting as B3; the owner: "Go" after "Is it long"
+## was answered from the context meter — 398k of 1m, B4's 276 rows fitting with room)
+THE RE-SUM FIRST by script (2,838 = 1,002 + 414 + 677 + 276 + 469, no row in two batches, none in none), then the print (276:
+Exodus's teachers 159, the law-era manifests 117), four compact parts read in seven pages, every row decided by hand into
+scratchpad o11_b4_decisions.py (B3's form). THE ID COLLISION at the dry check: L0-01 and L0-02 stand in BOTH law02 and law03 —
+the apply script keys exceptions by id alone and would have labeled law03's two chapter rows with law02's text; the four rows
+dispatched by UNIT in the decisions module's DEFAULT, the dry check keyed by (unit, id). ⚠ A CLAIM ID IS UNIQUE ONLY WITHIN ITS
+MANIFEST. APPLIED: 276 labels in 36 manifests — plain 148, E10 17, ink 15 (twelve read, three compiled-run rows on
+cold_run_ordinances.py), E2 11, M-09 11, M-23 8, I2 7, M-05 6, E27 5, M-11 4, I6 4, I1 3, I3 3, M-03 3, M-08 3, twos of E1, E28,
+I13, M-07, M-12, M-16, M-20, M-24, ones of E12, E30, E32, I8, I11, I12, M-01, M-04, M-06, M-10, M-13, M-15; the diff 435 added /
+276 deleted (the 117 law rows one compact line each changed in place, the shape guard's fourth shape holding). THE READING'S
+RULES (CLAIM_LABELS.md's B4 entry): B3's plus THE BUNDLE RULE — a filed finding or a law-era row bundles five to ten legs under
+one headline; the FIRST leg's form leads, the later legs' catalogued forms sit in the note; the compiler-seat rows NAME their
+moves and the label takes them (M-01, M-04, M-05, M-06, M-07, M-08, M-09, M-10, M-15, M-16; M-02 as its twin I1); the tradition
+names its own middot in eight rows (I12 twice, I6 twice — EX25-14 THE METHOD FORK under I6 with the rival engine named — I8,
+I11 with its return clause, E12, E32) and the label takes those too; M-23 the law-era's signature (8), M-09 (11), E2 the law
+spans' word-by-word exclusion tables (11), E10 the doubled verbs at law strength (17); NO H (L11-05's ten narrative links each
+carry their commentator). THE CENSUS: labeled 2,354 / DEBT 484 — Exodus 545 of 545, the law-era manifests 117 of 117, Genesis
+1,663 of 1,663; only B5 remains (the Sifra and Leviticus's teachers 469 + the fifteen deferred Onkelos rows); THE GATE PASSED
+0 lines. THE VERIFIER LOOP over all 120 modified manifests: 0 FAILED, 1,272 verified (unchanged since before any label), 619
+uncheckable / 481 no-check — the growth from B3's tallies exactly the 152 rows of the five manifests newly in the loop (exo_22,
+exo_23, law01-03), measured by script; the LR1 gate 0. RECORDS: CLAIM_LABELS.md (the B4 entry), COMPILE_DEBT.md (the debt
+line's B4 paragraph + the BEFORE NUMBERS line), this doc, memory. The sweep NOT rerun (no runner, registry, or engine touched);
+the corpus hash cannot move and is not claimed.
+═══ COMPACTION POINT #106 (2026-09-08 — written unprompted at B4's close)
+═══ CLEAN POINT — no work mid-flight. O11 at four of five batches: B1 (987), B2 (414), B3 (653), B4 (276) applied and verified —
+2,354 labeled, DEBT 484, all of it B5's; the gate GREEN; the verifier 0 FAILED on all 120 modified manifests. Every record
+linted: CLAIM_LABELS 0, COMPILE_DEBT 0, this doc 147 (baseline). LAST COMMIT b4b40ce; UNCOMMITTED OF OURS: #105's list with the
+120 manifests now carrying B4 too — commit only on the owner's "commit push", staging by exclusion as before; ARCHITECTURE/* NOT
+ours to stage; the NEVER-COMMIT set unchanged; the elijah_docket gitlink never staged. POST-COMPACTION REREADS (mandatory, first
+sitting): this doc's O11 IN FLIGHT entry, the B3 and B4 entries + CLAIM_LABELS.md sections 3-4 and the B3 and B4 ledger entries
+(the reading's rules, the bundle rule) + COMPILE_DEBT's debt line + THE_STEPS Step 5 (1) motion (6) + the compiler block +
+memory's STANDING LESSONS (the O11 lines) and the-effects-law.md. THEN, on the owner's word: B5 THE SIFRA (484 rows — the Sifra
+451, Leviticus's Talmud and Mishnah teachers, the fifteen Onkelos rows deferred at B1 from lev_06, lev_07, lev_08, lev_18 whose
+claims are Sifra bundles; the I forms expected — I1-I13 where the Sifra names the structure, E1/E2 for its to-include and
+to-exclude readings per the vocabulary's note; the same path: re-sum the five batches to 2,838, `python3 scratchpad/o11_print.py
+B5 out.txt` with DEFER emptied for the fifteen (the B1 deferral means they are simply unlabeled now — B5's selector takes lev
+rows of the Sifra and teacher families, so the printer must be told to include the Onkelos family for lev too: amend
+o11_print.py's B5 line to `uid.startswith('lev') and f != 'minchat_shai' and f != 'kitzur_bht'` and re-sum), the split, the
+reading whole, a decisions file keyed by (unit, id) where ids repeat, the dry check, the apply, the census, the verifier loop, the
+ledger entry; AT B5's CLOSE: `python3 logic/solo_tools/claim_labels_census.py --strict` must pass, THE_BRIEFING's O11 bullet,
+MIDDOT.md's line already current, memory, this doc's O11 DONE entry; THEN NUMBERS (T1 INSTALLATION first). OPEN (counted): as
+#105's. Watches: as #105's + A CLAIM ID IS UNIQUE ONLY WITHIN ITS MANIFEST + THE BUNDLE RULE (the first leg leads, the rest in
+the note).
+## THE ARCHITECTURE DOCS REVIEW AND THE LOOP RULING (2026-09-09; the owner: "examine clocks timer links and events docs in
+## architecture folder for accuracy? recommend updates based on what we learned up to now ... don't make changes discuss")
+THE REVIEW (discussion only, no ARCHITECTURE file touched): THE_CLOCK.md, THE_TOUR.md, THE_LINKS.md, THE_EFFECTS.md read whole
+against the engine and the gates. Current by script: 39 runners, 43 daemons, 327 wrapped functions, 791 event types, 905 effects,
+edges 285 (reference 140 / transfer 47 / hypothesis 9 / none 89) + pointers 128 (reference 118 / none 10), 130 markers (113
+forward / 15 proleptic / 2 retrograde), placement 31 reading-placed / 84 text-constrained. STALE in the docs: THE_TOUR section 10's
+"thirty-four" programs; the 162/31/6/40 link counts of 09-07; the "four gaps pending the owner's word" (three landed at O9, only T1
+remains); the "Adam's first year is year zero" explanation (superseded by O9's elapsed column — C12/C13 MATCH); THE_CLOCK's open
+list (the first day of the year settled at Vayikra Rabbah 29:1; the two day-definitions implemented as the timer's opt-in
+boundary; the solar year received at Eruvin 56a; the flood's months found at Bereshit Rabbah 33:7; OPEN-12 and OPEN-8 missing);
+the five line kinds omitting MARKER; proleptic markers unmentioned. THE_EFFECTS current but Story 7's single boundary. RECOMMENDED
+(to the design thread): refresh counts from the gates' prints; rewrite the four gaps as three landed one scheduled; the
+label-versus-completed-years finding; proleptic markers and the placement class; a claims-layer paragraph in THE_LINKS (2,354
+labeled, ZERO H — the untaught transfers live only in nine runner edges); an events drawer for the tape, the registry, the
+stitcher, the slots, the verdicts.
+THE QUESTION THAT FOLLOWED: "when you say ledger, are we updating a database?" — NO, measured: the engine's world is in memory,
+zero file writes; the three sqlites are the text DB, the corpus world, and the World folder's index of the corpus world's 557
+narrative events — none holds the tape (1,058) or the ledger. "I thought we agreed to store events in a database" — the record
+agrees: THE_WORLD.md 2026-08-24, DATABASE NOW AS INDEX, built that day in grok-mockups/world_journal (envelope, hash chain,
+sqlite index; files unchanged since 08-24); the September engine bypasses it. THE OWNER'S FRAME: "we don't know what this program
+does yet"; "If we assume this is a simulation then we have to assume it loops right?"; "this is what we need. how do we add it
+on? how long will it take". THE PLAN GIVEN: five steps — the sink, the index, installation (T1), the cursor (replay to a verse),
+scenarios — three to four sittings, sink → index → installation → cursor → scenarios, the byte-identical segment the gate.
+THE RULING (verbatim): "ok record this so we don't forget it after compact. This is a permanent decision to build the
+architecture. I meant for this to be built when it was added last month. We slipped somehow. Lets not forget it again. I need
+to compact but this is more than a compact memory." RECORDED in the durable files: World/step9/THE_LOOP.md (NEW — the map file:
+the ruling verbatim, the slip measured, the definition, the five steps with touches, costs, order, gates and homes, the standing
+duty), COMPILE_DEBT.md (a box at the head of the debt list + the THEN NUMBERS tie), THE_STEPS.md (the section THE LOOP before THE
+FINDINGS LOOP), THE_WORLD.md (the 2026-09-09 idea-log entry), THE_BRIEFING.md (the 2026-09-09 entry, newest first), memory
+(the-loop-ruling.md NEW at the head of MEMORY.md; step9-exam-era's NEXT). ⚠ LESSON: AN ARCHITECTURE DECISION LIVES IN THE MAP AS A
+CHECKBOX WITH A HOME FILE, NEVER ONLY IN AN IDEA LOG — the 08-24 ruling slipped for want of a line in COMPILE_DEBT.
+═══ COMPACTION POINT #107 (2026-09-09 — written at the owner's "I need to compact")
+═══ CLEAN POINT — no work mid-flight; nothing built this sitting, only recorded. THE LOOP is a NAMED ITEM here and at every
+compaction point until its step 4 lands: five steps, the map file World/step9/THE_LOOP.md, Numbers' opening block with T1 or the
+sitting before it (the owner's call). O11 at four of five batches (labeled 2,354 / DEBT 484 — B5 owed, independent). Every
+record linted (THE_LOOP, THE_WORLD, COMPILE_DEBT, THE_STEPS, THE_BRIEFING, this doc — the counts in the sitting's last lint).
+LAST COMMIT b4b40ce; UNCOMMITTED OF OURS: #106's list + THE_LOOP.md (NEW) + THE_WORLD.md + THE_BRIEFING.md + COMPILE_DEBT.md +
+THE_STEPS.md + this doc + memory — commit only on the owner's "commit push", staging by exclusion as before; ARCHITECTURE/* NOT
+ours to stage (CHRONICLE.md shows modified — the design thread's); the NEVER-COMMIT set unchanged (grok-mockups holds the August
+journal — never staged, never imported); the elijah_docket gitlink never staged. POST-COMPACTION REREADS (mandatory, first
+sitting): World/step9/THE_LOOP.md WHOLE + this entry + the-loop-ruling.md + COMPILE_DEBT's THEN NUMBERS line and the LOOP box +
+THE_STEPS Step 5 (1) motion (6), the compiler block, and the new THE LOOP section + memory's STANDING LESSONS + the-effects-law.md;
+for B5: CLAIM_LABELS.md sections 3-4 and the B3/B4 entries. THEN, on the owner's word, ONE OF: (a) B5 THE SIFRA (484; the B5
+selector amended to take Leviticus's Onkelos family, the five batches re-summed to 2,838 first, the rest by #106's path; at its
+close --strict, THE_BRIEFING's O11 bullet, the O11 DONE entry); (b) THE LOOP's first sitting — the design section for step 1 THE
+SINK added to THE_LOOP.md, the fire-probe written to FAIL on the unchanged engine (a run writes no segment), the module
+World/step9/world_journal.py (the August envelope COPIED, never imported), the sequence runner's hook, the byte-identical gate
+across two runs, step 2 THE INDEX in the same sitting if it fits, the records; then T1 INSTALLATION as step 3. OPEN (counted): as
+#106's. Watches: as #106's + AN ARCHITECTURE DECISION LIVES IN THE MAP AS A CHECKBOX WITH A HOME FILE.
+═══ READY TO COMPACT (2026-09-09, the owner: "I need to compact but this is more than a compact memory") — COMPACTION POINT #107
+STANDS AS WRITTEN: THE LOOP recorded in six durable files and memory, nothing built, nothing mid-flight, nothing committed. FIRST
+SITTING AFTER: the mandatory rereads of #107 (THE_LOOP.md whole first), then the owner's word on B5 or THE LOOP's first sitting.
+═══ ADDENDUM TO #107 (2026-09-09, the owner: "also we need to add it to github so move it if it makes sense") — THE AUGUST JOURNAL
+MOVED INTO THE REPO: grok-mockups/world_journal → World/journal (`mv`; nothing outside the folder imported it — measured by grep;
+the sandbox and the sketches explicitly never did). TRACKED: worldledger.py, build_world.py, run_cases.py, registers/{event_kinds,
+kinds,classes}.yaml, primary/scenes.yaml (PRIMARY records under the truth split). GITIGNORED: World/journal/data/ (the L0/L1/L2
+segments, world.sqlite, world_tree.json, world_cases.json — derived; the .gitignore line added with its comment). TWO LINES CHANGED:
+each script's view write redirected from the mockups' player folder (HERE.parents[0]/world_player) into DATA — no logic line
+touched; both scripts still find the repo root two levels up. REBUILT IN PLACE: `python3 World/journal/build_world.py --selftest`
+— the fold over the 163 frozen units, DETERMINISM byte-identical across two processes GREEN, the checklist ONE FAIL: "forming/filling
+symmetry — day 4 fills day 2's vault, day 5 fills day 2's waters + vault, day 6 fills day 3's land" (the August world-tree assertion,
+green over 97 units on 08-24; a drift of that tree model against today's units, NOT the move's — filed for THE LOOP's first sitting,
+which uses the envelope and the index, not the tree); `python3 World/journal/run_cases.py` — 43 L2 case events across 5 scenes,
+6,601 rows indexed, the chain verified. THE_LOOP.md gained the section "The journal moved into the repo" and step 1 now IMPORTS
+worldledger from World/journal (the "copied, never imported" clause retired); COMPILE_DEBT's box, THE_STEPS's section, THE_WORLD's
+entry, memory amended. UNCOMMITTED adds: World/journal/ (NEW, tracked files), .gitignore. grok-mockups stays never-commit. #107
+STANDS OTHERWISE AS WRITTEN.
+═══ READY TO COMPACT (2026-09-09, after the addendum) — nothing mid-flight; the journal moved, rebuilt and green but for the one
+filed drift; nothing committed (the owner's "add it to github" is honored at the next "commit push", staging by exclusion — World/journal
+is inside the staged tree, its data/ ignored). FIRST SITTING AFTER: the rereads of #107 (THE_LOOP.md whole first, its new section
+included), then the owner's word.
+═══ ADDENDUM 2 TO #107 (2026-09-09, the owner: "do you need to update the resume docs after compact") — done BEFORE the compaction,
+not after: World/RESUME.md gained the section "journal/ — THE WORLD JOURNAL, MOVED IN 2026-09-09 (read step9/THE_LOOP.md first)" and
+World/README.md's listing gained step9/ and journal/; memory's the-world-folder.md names journal/. Both linted 0. UNCOMMITTED adds:
+World/RESUME.md, World/README.md. This doc, THE_LOOP.md and memory were already current; nothing waits for after the compaction.
+READY TO COMPACT stands.
+## O11 B5 THE SIFRA — DONE; O11 THE CLAIMS LABEL DEBT CLOSED (2026-09-09, the first sitting after compaction #107; the owner: "reread
+## compact resume 107 and the loop" → the rereads done; "what is on our task list" answered from the map by script; "before the loop we
+## were working on 011 b5 right" → yes; "yes go closs 011 then the loop")
+THE REREADS OF #107 FIRST: THE_LOOP.md whole, this doc's review entry and #107 with both addenda, the-loop-ruling.md, COMPILE_DEBT's
+LOOP box and THEN NUMBERS tie, THE_STEPS' compiler block, motion (6) and THE LOOP section, memory's STANDING LESSONS, the-effects-law.md,
+the World resume docs; the working tree measured against #107's record (b4b40ce, the 120 manifests, the record files, World/journal in
+place with data/ ignored, ARCHITECTURE and the elijah_docket gitlink untouched) — one note: #107's body still said "copied, never
+imported" and "grok-mockups holds the journal", both superseded by its first addendum (the sink IMPORTS worldledger from World/journal);
+nothing edited. B5's rereads: CLAIM_LABELS.md sections 3-4, the B3 and B4 entries, the three scratchpad tools, the B4 decisions file.
+MEASURED FIRST by script: the 484 unlabeled = Leviticus alone — the Sifra 450, the teachers 19, Onkelos 15; no id repeating across units
+among them; NONE of the fifteen Onkelos rows labeled at B1 — so B1's selector gave up Leviticus's Onkelos family and B5's took it (both
+lines of scratchpad o11_print.py amended), and THE RE-SUM 987 + 414 + 677 + 276 + 484 = 2,838, no row in two batches, none in none. The
+print (484 rows, 150,696 chars; 64 flagged; the proposal blank on 427), three compact parts read whole in five pages; every row decided
+by hand into scratchpad o11_b5_decisions.py (484 entries; the compiled-run DEFAULT never reached). THE DRY CHECK by (unit, id): 484
+decided, none missing, none stray, no id repeating, no bad code, none already labeled, no Hebrew in a note; the gloss lint on the
+decisions file 1 flag (a hyphenated note word, reworded) then 0. APPLIED: 484 labels in 49 manifests — plain 330, ink 25, I3 13,
+M-09 13, E2 12, E10 12, E1 9, I2 9, M-11 7, M-12 7, M-03 6, M-22 5, M-23 4, threes of E26, E27, E28, I1, I8, M-05, M-10, two of I13,
+ones of E30, E32, I4, I11, I12, M-13, M-16, M-18, M-20; B5's own diff measured by rebuilding each manifest's pre-apply dump in its
+detected shape — 968 added / 484 deleted, every row gained a line, none changed in place, no unfaithful shape. THE READING'S RULES
+(CLAIM_LABELS.md's B5 entry): B4's bundle rule governs the Sifra's rows — the first leg's form leads, later legs' catalogued forms in
+the note, which is why plain is two-thirds (the Sifra reading the verse's own wording as the rule); the tradition naming its own
+middah takes the label (I11 at LV07B-01 — Hermeneutical Principle 11 named by the school of R. Yishmael; I3 named as Principle 3 at
+LV07B-07; I8 went-out-to-teach thrice; I4 at LV18-04; I13 twice; I12 once); I2 only where a rule of conduct or ritual rides the shared
+word; E1/E2 at law strength for the Sifra's include and exclude readings; the fifteen Onkelos bundles take the Sifra leg's form with
+the received translation named as the ink leg (ink once, LV18-05, where the translation's parse IS the claim); LV09-10 M-22 (the run
+graded against its spec, as G01-08 at B3); seventeen filed-finding rows ink where a token census is the assertion; NO H. THE CENSUS:
+labeled 2,838 of 2,838, DEBT 0 — Genesis 1,663, Exodus 545, the law-era manifests 117, Leviticus 513; THE GATE PASSED plain AND
+--strict (0 lines). THE VERIFIER LOOP over all 166 modified manifests (every manifest now carries labels): 0 FAILED, 1,272 verified and
+619 uncheckable unchanged since before any label, 947 no-check — the growth of 466 from B4's 481 exactly the rows of the 46 manifests
+newly in the loop (all Leviticus, none with a check block), the four tallies summing to 2,838; the LR1 gate 0. THE WHOLE RECORD BY
+CODE (CLAIM_LABELS.md's close): ink 1,142, plain 910, E7 308, E10 67, E30 57, I2 43, M-09 33, E2 31 … H 0 — no untaught transfer among
+the frozen claims; the nine hypotheses of ours live in the runners' cells. RECORDS: CLAIM_LABELS.md (the B5 entry + O11 CLOSED),
+COMPILE_DEBT.md (the box [x] + the B5 paragraph + the BEFORE NUMBERS line), MIDDOT.md's process line, THE_STEPS' link-law sentence,
+THE_BRIEFING's O11 DONE scoreboard bullet (the scoreboard dated 2026-09-09), this doc, memory. The sweep NOT rerun (no runner,
+registry, or engine touched); the corpus hash cannot move and is not claimed. THE OPEN-ITEMS CAMPAIGN O1-O11 IS COMPLETE.
+═══ COMPACTION POINT #108 (2026-09-09 — written at O11's close, before THE LOOP's first sitting)
+═══ CLEAN POINT — no work mid-flight. O11 CLOSED: 2,838 of 2,838 labeled, the gate --strict green, the verifier 0 FAILED on all 166
+manifests. THE LOOP a NAMED ITEM (five steps, World/step9/THE_LOOP.md): the owner's word for it is GIVEN — "then the loop" — so the
+next sitting is its first, no further word needed. Every record linted (COMPILE_DEBT 0, CLAIM_LABELS 0, THE_BRIEFING 0, MIDDOT 1 and
+THE_STEPS 1 at their baselines, this doc at its baseline). LAST COMMIT b4b40ce; UNCOMMITTED OF OURS: #107's list + all 166 manifests +
+CLAIM_LABELS.md + COMPILE_DEBT.md + MIDDOT.md + THE_STEPS.md + THE_BRIEFING.md + this doc + memory — commit only on the owner's "commit
+push", staging by exclusion as before; ARCHITECTURE/* NOT ours to stage; the NEVER-COMMIT set unchanged; the elijah_docket gitlink
+never staged. POST-COMPACTION REREADS (mandatory, first sitting): World/step9/THE_LOOP.md WHOLE + this entry + the-loop-ruling.md +
+THE_STEPS Step 5 (1) motion (6), the compiler block, and THE LOOP section + memory's STANDING LESSONS + the-effects-law.md +
+World/journal/worldledger.py whole (the envelope and the chain the sink imports) + World/step9/SEQUENTIAL_RUN.md section 9 + the
+sequence runner's head (cold_run_sequence.py — where the hook goes). THEN THE LOOP's first sitting, step 1 THE SINK: the design
+section added to THE_LOOP.md FIRST (what a line is — the six log kinds in the envelope, subject = the registry entity id, provenance =
+the verse and the daemon, no timestamps, one segment per run; where it is written — World/journal/data/, gitignored; how it is
+gated — a second run byte-identical, the chain verified by worldledger.verify); the fire-probe SECOND, written to FAIL on the unchanged
+engine (a run writes no segment; a segment with a broken chain fails verify); the module THIRD — World/step9/world_journal.py importing
+Segment and index_sqlite from World/journal/worldledger.py; the sequence runner's hook FOURTH; the byte-identical gate across two runs;
+step 2 THE INDEX in the same sitting if it fits (the sqlite rebuilt from the segments, a check comparing its counts to the run's
+tuple); the records (THE_LOOP.md's step sections ticked, COMPILE_DEBT's box, this doc, memory); then T1 INSTALLATION as step 3. The
+filed drift (the August tree checklist's forming/filling line) is NOT step 1's — the sink uses the envelope and the index, not
+build_world's tree; note it, do not chase it. OPEN (counted): as #107's. Watches: as #107's + A DEFERRED FAMILY MOVES BY AMENDING BOTH
+SELECTORS AND SUMMING AGAIN + THE VERIFIER'S FOUR TALLIES SUM TO THE CLAIM TOTAL.
+## THE LOOP — STEP 1 THE SINK DONE, STEP 2'S FIRST GATE WITH IT (2026-09-09, the same sitting as O11's close; the owner's word
+## "yes go closs 011 then the loop" — the loop's first sitting, no further word asked)
+THE REREADS FOR THE SINK: World/journal/worldledger.py whole (the envelope, the chain, the index); the engine's log points and World's
+constructs; the sequence runner's worlds (run_world per sojourn setting, rest_world, run()'s prints); SEQUENTIAL_RUN.md section 9; the
+August selftest's WORLD_OUT_DIR pattern; the sweep's subprocess invocation (cwd World/step9). THE ORDER HELD — design, probes, code,
+hook, gate, records. (1) THE DESIGN SECTION in THE_LOOP.md ("Step 1 THE SINK — the design"): the engine logs SEVEN classes, not the six
+the ruling's memory listed — RETRO-WRITE was missing; each line one journal event in the August envelope — s the ordinal, op THE CLOCK
+DAY, layer L3, kind run.<class>, subj the REGISTRY entity id (clock for a marker, world if none), data the payload AS IT STANDS AT THE
+RUN'S END in canonical JSON with any non-JSON leaf coerced and counted, prov {unit: the writing daemon / tape / marker, ref: the
+verse}, chain worldledger's; no timestamps; one segment per WORLD per run at a fixed path in World/journal/data/ (or WORLD_JOURNAL_DIR);
+the module IMPORTING worldledger; six probes; the two-process gate; step 2 minimal. (2) THE BASELINE on the unchanged engine
+(scratchpad loop_baseline.py): the tape's log 2,494 lines (EVENT 1,058, WRITE 1,224, MARKER 130, TIMER-SET 43, TIMER-FIRE 39; no
+cancel, no retro-write on the tape), no non-JSON leaf, no payload shared by two lines, every EVENT with subject and case_source, BUT
+only 594 of 1,306 effect lines naming a source_law — the writer must be stamped by the engine; the running world 0.5 s. (3) THE REGISTER
+FIRST: the seven run kinds added to World/journal/registers/event_kinds.yaml (34 kinds) before first use. (4) THE PROBES:
+World/step9/journal_probes.py J1-J6 on a small world exercising all seven classes; 0/6 on the unchanged engine — the first run failed
+three for a probe-only event kind (the registry refuses it; the registered tablets_broken stands in for a refusal), the rerun 0/6 all
+for the module's absence. (5) THE CODE: World/step9/world_journal.py (KINDS, sink, verify, index, counts, segments, reindex; --gate,
+--reindex, --verify); the engine's ONE LINE — World.submit stamps written_by on every effect before _write (no runner compares a whole
+effect dict, measured by grep); the runner's hooks — run_world() and rest_world() sink each world and print a JOURNAL line, run()
+rebuilds the index at its close. (6) PROBES 6/6. (7) THE RUN: four segments — seed_isaac, descent_literal, covenant_pieces (2,494
+lines each), rest (1,844) — coerced 0; 10/10 checkpoints; 1.9 s; the index 15,927 rows from seven segments (L0 4,517, L1 2,041, L2 43,
+L3 9,326). (8) THE GATE `python3 World/step9/world_journal.py --gate`: the runner twice in two processes and two directories — four
+segments byte-IDENTICAL, chains VERIFIED, the running world's index counts = the RUN tuple: GREEN. (9) THE TWO QUESTIONS on the real
+index: who wrote this — 0 of 4,579 run.write rows unattributed, the writers by daemon (law_mamre 1,488, law_joseph 942, law_primeval
+896, law_exodus_story 436, law_erection 212, law_pre_sinai 193, law_family 136 …); what is on this subject — 252 distinct subjects, a
+verse's lines by ref. (10) AFTER THE ENGINE'S LINE: clock probes 22/22, sequence probes 4/4, the daemon gate and the dependency gate
+satisfied, THE SWEEP 39/39 at 4,518 cells (unchanged) — no graded value moved; the corpus hash cannot move and is not claimed. FACTS
+RECORDED: the segment is the audit of the run as it stands when the run ends (74 WRITE lines carry closed_by) — the cursor of step 4
+replays the tape through the engine, never a payload back into state; a fixed path per world until step 4 appends; STEP 2 MINIMAL
+(the events table over every segment on disk; the counts check inside the gate) with its richer tables and the ask-tool OWED.
+⚠ LESSONS: A cd IN A COMMAND BREAKS THE NEXT COMMAND'S RELATIVE PATH (the gate and the probes ran once from World/step9 — "no such
+file" — then by absolute path); A PROBE-ONLY EVENT TYPE IS REFUSED BY THE REGISTRY — reuse a registered kind on the probe world; THE
+ENGINE MUST NAME THE WRITER OR THE JOURNAL CANNOT (594 of 1,306 before the line, 0 unattributed after). RECORDS: THE_LOOP.md (the
+design section + "As built"), COMPILE_DEBT's LOOP box (step 1 DONE, step 2 minimal, step 3 next), THE_STEPS' LOOP section, THE_WORLD.md's
+2026-09-09 entry, THE_BRIEFING's 2026-09-09 entry (newest first), World/RESUME.md's journal section, the register, this doc, memory;
+every record linted (THE_LOOP 0, COMPILE_DEBT 0, RESUME 0, THE_BRIEFING 0 after one reword, THE_STEPS 1 and THE_WORLD 5 at baseline;
+the two new py files and the register 0).
+═══ COMPACTION POINT #109 (2026-09-09 — written at step 1's close)
+═══ CLEAN POINT — no work mid-flight. THE LOOP: step 1 DONE, step 2 minimal, steps 3-5 owed — a NAMED ITEM here and at every
+compaction point until step 4 lands. O11 CLOSED (#108). LAST COMMIT b4b40ce; UNCOMMITTED OF OURS: #108's list + World/step9/
+{world_journal.py NEW, journal_probes.py NEW, world_engine.py, cold_run_sequence.py, THE_LOOP.md, COMPILE_DEBT.md, DAEMON_INDEX.md,
+DEPENDENCY_INDEX.md} + World/journal/registers/event_kinds.yaml + THE_STEPS.md + THE_WORLD.md + THE_BRIEFING.md + World/RESUME.md +
+this doc + memory; World/journal/data/ (the segments, the index) DERIVED and ignored — commit only on the owner's "commit push",
+staging by exclusion as before; ARCHITECTURE/* NOT ours to stage; the NEVER-COMMIT set unchanged; the elijah_docket gitlink never
+staged. POST-COMPACTION REREADS (mandatory, first sitting): THE_LOOP.md WHOLE (the design section and "As built" included) + this
+entry + the-loop-ruling.md + COMPILE_DEBT's LOOP box and THEN NUMBERS line + THE_STEPS Step 5 (1) motion (6), the compiler block, THE
+LOOP section + memory's STANDING LESSONS + the-effects-law.md + CLOCK.md section 8 (installation's design) + the head of
+daemon_dispositions.yaml (where installed_by goes) + world_engine.World.submit (where the dispatch gate goes). THEN, on the owner's
+word, STEP 3 INSTALLATION (T1): the design section in THE_LOOP.md FIRST (installed_by per daemon — boot for the story daemons and the
+Noahide code; the installing act's daemon writes in_force on an institution entity; World.submit consults it before the call and
+logs SKIPPED-NOT-IN-FORCE — dispatch gating, never at registration; the two settings as a printed fork, Yoma 28b / Kiddushin 82a read
+on the shelf before typed; the daemon gate demanding installed_by); the probes written to FAIL; the 43 daemon rows; the code; the
+moved sweep tuples PREDICTED by the stitcher before the run; the sweep; the records. OPEN (counted): as #108's + step 2's richer
+tables and the ask-tool. Watches: as #108's + A cd BREAKS THE NEXT RELATIVE PATH + A PROBE-ONLY EVENT TYPE IS REFUSED + THE ENGINE
+MUST NAME THE WRITER.
+═══ ADDENDUM TO #109 (2026-09-09, after step 1's close; three reading questions from the owner, nothing built) — (1) "does the oral
+torah recommend a two pass run? look for hints": read on the local shelf by script across twelve works (the export's Talmud index 0 is
+folio 1a — a page is index // 2 + 1, measured on Yoma before any address was typed; the scratch tools shelf_grep.py and shelf_seg.py):
+the giving in THREE passes (Sotah 37b:3, Chagigah 6b:1 — general, detail, repetition) with the rule that details cannot change between
+passes (Chagigah 6b:2); understanding after the forty-year run (Avodah Zarah 5b:2; Shabbat 63a:15); the Oral Law taught four times
+(Eruvin 54b:11-13); worlds made and unmade until one kept (Bereshit Rabbah 3:7, 9:2); the Torah before the world (8:2; Pesachim
+54a); full stature (Rosh Hashanah 11a:6); scroll by scroll or sealed (Gittin 60a:14-15); no earlier and later (Pesachim 6b:7) against
+the service portion in performed order (Yoma 32a:2); written then sealed (Rosh Hashanah 16b:12); Abraham's whole Torah before the
+giving (Yoma 28b:9-10, Kiddushin 82a:10) — two passes is an undercount; THE_LOOP.md's section "What the teachers say about passes".
+(2) "where does the tent of meeting occur": measured in torah_grok.sqlite — 135 tokens; Genesis 0, Exodus 34 (first 27:21 in the
+spec; twice at 33:7 outside the camp; twelve in chapter 40), Leviticus 43 (1:1 opens the book), Numbers 56, Deuteronomy 2 (31:14) —
+the general pass at Sinai has no tent token, the detail pass is Leviticus and Numbers; the tent an institution with a spec, a stand-in,
+an erection, a service life, a handover. (3) "is the tent the place we learn new information based on the code running?": YES — the
+four uncovered cases, halted in custody "until it be declared" (Lev 24:12, Num 15:34, Num 9:8, Num 27:2/5), the tent's output part
+instance-verdict, part new rule in the case's name (Sanhedrin 8a:4-5, 78b:4-7, 80b:5; Bava Batra 110b:4, 119b:10; Sifrei Bamidbar
+114:1 the generations/instance split, 47:1, 80:1, 68:1/113:1/133:3 the house of study) — THE CODE IS NOT FIXED BEFORE THE RUN; the
+consequences (custody as the ink's name for an unconsumed event; installation by a case event in step 3; the four cases as Numbers'
+opening marquee; the daughters' own argument run before the answer is read) in THE_LOOP.md's section "The tent as the run's
+interrupt", THE_WORLD.md's two 2026-09-09 entries, COMPILE_DEBT's Num 27 box, memory. #109 STANDS OTHERWISE AS WRITTEN; its rereads
+gain THE_LOOP.md's three new sections (already "whole").
+## THE THIRTEEN DECISIONS (2026-09-09, after step 1's close; the owner: "now what are we considering our next tasks? what are the
+## decisions we didn't make yet" → the list; "lets go through one at a time. ask me for a decision each time" → each put as a
+## question with a recommendation, each answered; the record World/step9/THE_LOOP.md "Decisions not yet made", every line marked
+## DECIDED with the owner's words)
+D1 ONLY THE SEQUENCE WORLD tracks installation; the 38 exam worlds keep every law in force from boot (a test bench is not
+history). D2 — the owner's own fourth option ("we are still guessing until we finish the last two books"; M-24's second writing
+is in Deuteronomy): BUILD THE MECHANISM, DEFER THE SETTING — installed_by = boot / a verse / PENDING (counted as debt, behaving
+as boot); the main run stays everything-from-boot until the five books are compiled; the installed run is the second pass after
+Deuteronomy, the from-boot / from-its-event fork decided then. D3 TWO FIELDS on every daemon: given_at (the verse spoken) and
+installed_by (the act that switches it on — a registered act kind, boot, or pending); in force needs both (Chagigah 6b:2). D4
+INSTITUTION ENTITIES, THE TENT INCLUDED, WITH A TENT DAEMON — in_force a ledger status written by the installing act's daemon
+and read by World.submit; the tent's daemon consumes a case brought before the LORD and installs the case-born law. D5 CUSTODY
+on the court's docket (the new effect in_custody) when a case's event fired no law, closed by the output verse; open custody
+at the run's end a printed finding; the unconsumed count stays the tripwire. D6 the output as TWO EFFECTS (the instance's
+verdict; rule_installed on the institution) and Sanhedrin 80b's code-or-edict dispute as a PARAMETER ROW (the first tanna's
+running, Rabbi Yehuda's printed as a fork). D7 ONE DATABASE BUILT FROM THE JOURNAL, the merge inside step 2 as its own sitting
+(the owner's "does this replace the database" answered: the journal replaces the FOLD as the source; the database stays the
+one place to ask; the reconciliation gate moves upstream); until then the boundary stated. D8 THE FOUR RUN VIEWS (ledger,
+timers, clock, docket) AND FOUR QUESTIONS (an entity's ledger at a day; what stands open at a verse; who wrote this; what waits
+in custody), built at step 2's remainder before the merge. D9 BASE SEGMENT PLUS AN APPENDED SEGMENT PER RESUMED RUN, the
+chain continuing from the base's head, named by the cursor verse; the exam worlds unjournaled. D10 THE AUGUST TREE RETIRED AT
+THE MERGE, a printed known-FAIL until then. D11 the order: STEP 3, THEN STEP 2'S VIEWS, THEN NUMBERS OPENS (the tent daemon,
+custody, the case-born installation on real verses); STEPS 4 AND 5 WHEN THE CASES CALL FOR THEM (the daughters' argument run
+before the answer is step 5's shape); the standing duty holds. D12 STEP 6 THE READBACK NAMED NOW — a row in the table and a
+box on the map, no design until Deuteronomy (the shelf's third pass; the effects law's target). D13 "COMMIT PUSH NOW".
+RECORDS: THE_LOOP.md (the decisions marked, the table's sixth row), COMPILE_DEBT.md (the LOOP box with step 6 and the thirteen
+in one paragraph), THE_BRIEFING's entry, THE_WORLD.md's entry, THE_STEPS' LOOP section, this doc, memory.
+═══ COMPACTION POINT #110 (2026-09-09 — written at the decisions' close, BEFORE the commit the owner ordered at D13)
+═══ CLEAN POINT — nothing mid-flight; nothing built since #109, only read and decided. THE LOOP: step 1 DONE, step 2 minimal, steps
+3-6 owed under D1-D12 — a NAMED ITEM until step 4 lands. THE COMMIT: on the owner's "Commit push now" (D13), staging by exclusion
+(never grok-mockups, logic/gork, open_ledger, DISPOSABLE_scan, Data/discord_backup_codes.txt, cases_pilot.yaml, the elijah_docket
+gitlink, ARCHITECTURE/*; World/journal/data/ ignored), pushed as Josephtorah, the auth switched back; the hash in the addendum
+below. POST-COMPACTION REREADS (mandatory, first sitting): THE_LOOP.md WHOLE — the design and as-built of step 1, the three
+shelf sections, and "Decisions not yet made" with every DECIDED line — + this entry and #109 + the-loop-ruling.md + COMPILE_DEBT's
+LOOP box + THE_STEPS Step 5 (1) motion (6), the compiler block, THE LOOP section + memory's STANDING LESSONS + the-effects-law.md
++ CLOCK.md section 8 + the head of daemon_dispositions.yaml + World.submit. THEN, on the owner's word, STEP 3 INSTALLATION under
+D1-D6: the design section in THE_LOOP.md FIRST (the two fields; the three values with pending counted; the institution entities
+and the tent daemon; custody; the two output effects and the code-or-edict row; the gate scoped to the sequence world; the daemon
+gate demanding both fields); the probes to FAIL; the 43 daemon rows; the code; the moved sequence tuple predicted (under D2 the
+main run is unchanged — the prediction is ZERO moved cells plus the pending count printed); the sweep; the records. OPEN (counted):
+as #109's less the thirteen. Watches: as #109's.

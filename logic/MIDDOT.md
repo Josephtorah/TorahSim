@@ -766,6 +766,21 @@ ONE exemplar, watching for a second.
 - **Step 5 (extract claims):** every claim carries a `middah:` field
   when the source's inference form is identifiable — I-rules in law
   spans, E-rules in narrative spans; absent = plain-statement claim.
+  SINCE O11 (opened 2026-09-08 and CLOSED 2026-09-09 — the backfill of
+  the 2,813 unlabeled claims complete, 2,838 of 2,838 labeled;
+  the record World/step9/CLAIM_LABELS.md, the gate
+  logic/solo_tools/claim_labels_census.py) the field is MANDATORY on
+  the manifest row and its leading code is one of: `ink` (the claim
+  reads its own verse — the written form, a count, the received
+  translation's rendering; the Masorah's notes and Onkelos are ink by
+  nature), I1..I13 / E1..E32 (the twins by the claim's conclusion — a
+  rule of conduct takes the I code), `plain` (a teacher's statement
+  with no form the catalog names), `M-NN` (a catalogued compile move
+  with no middah twin — logic/MOVE_CATALOG.md), `H` (an untaught
+  transfer of our own, the link review's class); a parenthesized
+  English note may follow the code and name a second form that rides
+  beside the leading one. The gate refuses an empty label, an unknown
+  code, and Hebrew letters in the note.
 - **Step 6 (write the logic):** claims licensed by a middah keep the
   middah's own constraints as assertions (dayo cap, genus match,
   third-verse resolution). Where TIR and a middah overlap, the TIR

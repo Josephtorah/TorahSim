@@ -55,6 +55,12 @@ _CAL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'calendar_p
 with open(_CAL_PATH, encoding='utf-8') as _f:
     _CAL = yaml.safe_load(_f)
 CAL_PARAMS, CAL_ERAS = _CAL['parameters'], _CAL['eras']
+# O9 THE CLOCK'S OPEN ITEMS (2026-09-08; CLOCK.md section 12): the third registry's two further blocks — the DAY SLOTS (12e: the
+# ink's own day-words in the calendar day's order from Gen 1:5, evening then morning; the Calendar reads them for slot_rank and
+# crosses_day; nothing in the engine counts hours) and the COUNTER IDIOMS (12c: per subject class — people, kings, animals,
+# trees, inclusive day counts, the jubilee's boundary year — DATA rows read by no code yet, visible in the parameters census)
+CAL_SLOTS = list(_CAL.get('day_slots') or [])
+CAL_IDIOMS = dict(_CAL.get('counter_idioms') or {})
 LIFE_READING = CAL_PARAMS['life_year_reading']['value']    # THE SEQUENTIAL RUN: 'completed' or 'ordinal' (OPEN-8), a data row
 
 # THE FENCE'S DEPTH BOUND (D9-ii, 2026-09-07): a daemon CONSUMES events and WRITES
@@ -159,9 +165,29 @@ class Calendar:
     def year(self, day):
         return self._month_at(day)[1]
 
+    def elapsed(self, day):
+        """O9 T3 (2026-09-08; CLOCK.md 12a): ELAPSED — the completed years since the epoch's first New Year, the LABEL LESS
+        ONE at the year grain (the tradition's anno mundi is completed years: Avodah Zarah 9a:7-8's two thousand at Abraham's
+        fifty-two); a derived RENDERING, never a second counter; the stub month's days read −1 by the same arithmetic"""
+        return self.year(day) - 1
+
     def date(self, day):
         start, y, m, _ = self._month_at(day)
         return (y, m, day - start + 1)
+
+    # -- O9 OPEN-5 (CLOCK.md 12e): the day's slots in the ink's order; the day stays the unit --
+    def slot_rank(self, name):
+        """the slot's rank in the calendar day (Gen 1:5: evening then morning — the day begins at evening), from the
+        registry's day_slots block; an unknown slot refuses, naming the slots"""
+        names = [r['name'] for r in CAL_SLOTS]
+        if name not in names:
+            raise SystemExit('CALENDAR: unknown slot %r (slots: %s)' % (name, ', '.join(names)))
+        return names.index(name)
+
+    def crosses_day(self, a, b):
+        """slot b narrated after slot a lies on the NEXT calendar day when its rank is below a's (the night after the
+        morning) — the stitcher's slot-regression report reads it; the counter moves by markers only"""
+        return self.slot_rank(b) < self.slot_rank(a)
 
     def day_of(self, y, m=None, dom=1):
         """the day of (year, month, day-of-month) in the epoch; month defaults to the era's new-year month"""
@@ -310,6 +336,11 @@ class Era:
             return self._before_epoch(day)[0]
         return len(self._year_starts(day))
 
+    def elapsed(self, day):
+        """O9 T3: a calendar-year era's elapsed is its label less one; a LIFE era's is its age as it stands (completed years
+        already — the correction of Gen 8:13)"""
+        return self._age(day) if self.nym is None else self.year(day) - 1
+
     def date(self, day):
         """(year, ordinal month, day of month) — for a life era: (age, the world's ordinal month, day of month)"""
         start, yy, mm, length = self.cal._month_at(day)
@@ -360,6 +391,10 @@ class Clock:
         return self.calendar.date(self.day) if self.epoch else None
 
     @property
+    def elapsed(self):
+        return self.calendar.elapsed(self.day) if self.epoch else None
+
+    @property
     def weekday(self):
         """O8 S1 (2026-09-08; NARRATIVE_GAPS.md convention 17): the WEEKDAY from the creation count — day 0 is 'day one'
         (Gen 1:5), day 6 the first Sabbath (2:2-3); 1 = the first day of the week ... 7 = the Sabbath. An engine
@@ -389,6 +424,9 @@ class Clock:
     def year_in(self, name):
         return self._era(name).year(self.day)
 
+    def elapsed_in(self, name):
+        return self._era(name).elapsed(self.day)
+
     def date_in(self, name):
         return self._era(name).date(self.day)
 
@@ -397,6 +435,16 @@ class Clock:
 
 
 _SEAT = re.compile(r'^\s*(Gen|Exod|Lev|Num|Deut|1 Sam|2 Sam|1 Kgs|2 Kgs|1 Chr|2 Chr|Neh|Josh|Judg|Ruth|Isa|Jer|Ezek|Ps|Prov|Job|Song|Eccl|Lam|Esth|Dan|Ezra|Mal)\s+(\d+):')
+
+
+_VERSE = re.compile(r'^\s*(Gen|Exod|Lev|Num|Deut|1 Sam|2 Sam|1 Kgs|2 Kgs|1 Chr|2 Chr|Neh|Josh|Judg|Ruth|Isa|Jer|Ezek|Ps|Prov|Job|Song|Eccl|Lam|Esth|Dan|Ezra|Mal)\s+(\d+):(\d+)')
+
+
+def first_verse(src):
+    """O9 T2 (2026-09-08; CLOCK.md 12b): the (book, chapter, verse) an event's source opens with — the placement stamp compares
+    it to the last marker's verse (the marker names the position it sits at)"""
+    m = _VERSE.match(src or '')
+    return (m.group(1), int(m.group(2)), int(m.group(3))) if m else None
 
 
 def seat(src):
@@ -433,6 +481,7 @@ class World:
         self._last_marker = 0        # the last forward marker's day — every later event's bound opens here
         self._open_bounds = []       # the bound lists still open, SHARED by the event, its effects, timers, fires
         self._dated = None           # a retrograde stretch's stated day (Pesachim 6b:7), until the clock moves
+        self._placement = (None, None)   # O9 T2: the last non-proleptic marker's (class, first verse) — the placement stamp's source
         # D9-ii: every daemon's WATCH COVERAGE — events seen, events it fired on,
         # the kinds it fired on — printed by coverage(); the zero-report law's
         # instrument for the simulator (a daemon that never fires is visible)
@@ -458,10 +507,15 @@ class World:
             if self._dated is not None:                      # inside a retrograde stretch: the text's own date, no bound
                 event['dated'] = self._dated
                 event.setdefault('day', self._dated)         # THE DATED DAY IS THE EVENT'S DAY (SEQUENTIAL_RUN.md section 2): a daemon that reads the event's day reads the text's date
+                event['placement'] = self._placement[0] or 'text_constrained'    # O9 T2: the stretch is placed as one, by its marker's class
             else:                                            # between markers: the bound [the last marker, open]
                 b = [self._last_marker, None]
                 event['bound'] = b
                 self._open_bounds.append(b)
+                # O9 T2 (CLOCK.md 12b): THE PLACEMENT CLASS beside the bound — the marker's class on the event at the marker's own
+                # verse; every other event between markers is page_order (the counter's: an unlabeled prior no longer unlabeled)
+                cls, at = self._placement
+                event['placement'] = cls if (cls and at is not None and first_verse(event.get('case_source')) == at) else 'page_order'
             self.log.append(('EVENT', self.clock.day, event))
             fired = 0
             for law in self.laws:
@@ -479,6 +533,7 @@ class World:
                     for key in ('bound', 'dated'):           # the engine copies the event's bound/date onto its effects
                         if key in event:
                             eff.setdefault(key, event[key])
+                    eff.setdefault('written_by', name)       # THE LOOP step 1 (2026-09-09): the writing daemon stamped — the journal's "who wrote this" (prov.unit)
                     self._write(eff)
             return fired
         finally:
@@ -537,7 +592,7 @@ class World:
         self.timers = kept
         return cut
 
-    def marker(self, verse, day, value=None, era=None, new_year_month=None, proleptic=False):
+    def marker(self, verse, day, value=None, era=None, new_year_month=None, proleptic=False, placement='text_constrained'):
         """THE MARKER (CLOCK.md section 4): the text's own date stamp sets the clock. A marker at or after the
         counter walks advance(day) and CLOSES every open bound at it; a marker EARLIER than the counter is
         RETROGRADE (Pesachim 6b:7 — 'there is no earlier and later in the Torah'; Num 9:1 after 1:1): logged,
@@ -545,14 +600,21 @@ class World:
         THE SEQUENTIAL RUN (SEQUENTIAL_RUN.md section 2): `era` names an era whose EPOCH this marker sets at `day`
         (Exod 12:2 sets the exodus era; a begetting sets life:<entity>); `proleptic` is the third class — a paragraph's
         CLOSING TOTAL ('all the days of X were N years, and he died'), logged at its computed day with the counter
-        unmoved and no dated stretch opened: the text's summary of a life, not a clock stamp for the next verse."""
+        unmoved and no dated stretch opened: the text's summary of a life, not a clock stamp for the next verse.
+        O9 T2 (2026-09-08; CLOCK.md 12b): `placement` is the marker's CLASS — text_constrained (the ink's own stamp or
+        arithmetic, the default) or reading_placed (a shelf reading fixing a date where the ink is silent at that grain);
+        submit() stamps it on the event at the marker's verse (the marker names the position it sits at) and on every event
+        of a retrograde stretch; a proleptic marker carries none."""
         if era is not None:
             self.clock.set_era(era, day, new_year_month)
+        if placement not in ('text_constrained', 'reading_placed'):
+            raise SystemExit('MARKER %s: placement %r is not text_constrained or reading_placed' % (verse, placement))
         if proleptic:
             self.log.append(('MARKER', self.clock.day, {'verse': verse, 'value': value, 'retrograde': False, 'proleptic': True, 'stated': day}))
             return day
+        self._placement = (placement, first_verse(verse))
         if day < self.clock.day:
-            self.log.append(('MARKER', self.clock.day, {'verse': verse, 'value': value, 'retrograde': True, 'stated': day}))
+            self.log.append(('MARKER', self.clock.day, {'verse': verse, 'value': value, 'retrograde': True, 'stated': day, 'placement': placement}))
             self._dated = day
             return day
         self._dated = None
@@ -561,7 +623,7 @@ class World:
             b[1] = day
         self._open_bounds = []
         self._last_marker = day
-        self.log.append(('MARKER', day, {'verse': verse, 'value': value, 'retrograde': False}))
+        self.log.append(('MARKER', day, {'verse': verse, 'value': value, 'retrograde': False, 'placement': placement}))
         return day
 
     # -- construct 4: time advances; due timers fire; a period re-arms --
@@ -573,6 +635,10 @@ class World:
             now = self.clock.day
             due = [t for t in self.timers if t[0] == now]
             self.timers = [t for t in self.timers if t[0] != now]
+            # O9 OPEN-5 (CLOCK.md 12e): the fires within ONE day's walk are ORDERED by the timer's opt-in `boundary` — the calendar's
+            # (absent: the evening, Gen 1:5 — Chullin 83a:15) first, consecrated things' ('morning' — Chullin 83a:16, the night follows
+            # the day: the eating windows' "until morning") after; a stable sort keeps the set order within a class; the due never moves
+            due.sort(key=lambda t: 0 if t[1].get('boundary', 'evening') == 'evening' else 1)
             for _, eff in due:
                 fired = dict(eff, due=None)
                 self.log.append(('TIMER-FIRE', now, fired))

@@ -317,14 +317,14 @@ def law_exodus_story(event, world):
     if k == 'taskmasters_set': return [E_('enslaved', 'israel', cp=subj)]
     if k == 'made_to_serve': return [E_('enslaved', 'israel', cp=subj)]
     if k == 'lives_embittered': return [E_('embittered', 'israel', cp=subj)]
-    if k == 'decree_issued': return [E_('decree_issued', event['addressee'], cp=subj, value=event['decree'])]
+    if k == 'decree_issued': return [E_('decree_issued', event['addressee'], cp=subj, value=event['decree'])] if WE.seat(src)[0] == 'Exod' else []   # O8 S3 (2026-09-08; 7k): Laban's pursuit (31:23), Abimelech's decree (26:11) are law_mamre's
     if k == 'decree_refused': return [E_('feared_god', subj)]
     if k == 'houses_made': return [E_('houses_made', subj, value=oppression('houses')['v'])]
     if k == 'married': return [E_('wife_taken', subj, cp=event['husband'])] if WE.seat(src) == ('Exod', 2) else []   # ONE TYPE UNDER TWO LAW LAYERS: Gen 24 is the family engine's
     if k == 'hidden': return [E_('hidden_three_months', subj, due=(world.clock.calendar.add(day, event['months'], 'month') if world.clock.epoch else day + 30 * event['months']), value=event['months'])]
     if k == 'drawn_from_the_water': return [E_('drawn_out', subj, cp=event['by'])]
-    if k == 'named': return [E_('name_given', subj, value=event['name'])]
-    if k == 'fled': return [E_('sought_to_kill', subj, cp=event['from'])]
+    if k == 'named': return [E_('name_given', subj, value=event['name'])] if WE.seat(src)[0] == 'Exod' else []   # O8 S2 (2026-09-08): ONE TYPE UNDER TWO LAW LAYERS — the Genesis namings are law_primeval's
+    if k == 'fled': return [E_('sought_to_kill', subj, cp=event['from'])] if WE.seat(src)[0] == 'Exod' else []   # O8 S2: Hagar's flight (Gen 16:6) is law_primeval's — no body threat there
     if k == 'cry_went_up': return [E_('cry_heard', subj, cp='HEAVEN'), E_('covenant_remembered', subj, value='with Abraham, with Isaac and with Jacob (2:24)')]
     if k == 'holy_ground_declared': return [E_('holy_ground', subj)]
     if k == 'sent_to_pharaoh': return [E_('sent_to_pharaoh', subj, cp='HEAVEN', value=event['errand'])]
@@ -333,7 +333,7 @@ def law_exodus_story(event, world):
     if k == 'mouth_appointed': return [E_('mouth_appointed', subj, cp=event['for']), E_('mark_of_anger', event['for'], value=signs('mark_of_anger')['v'])]
     if k == 'returned_to_egypt': return [E_('staff_of_god', 'the-staff', cp=subj)]
     if k == 'firstborn_death_decreed': return [E_('firstborn_death_decreed', subj, cp='HEAVEN')]
-    if k == 'believed': return [E_('believed', subj, value=event['in'])]
+    if k == 'believed': return [E_('believed', subj, value=event['in'])] if WE.seat(src)[0] == 'Exod' else []   # O8 S2: Gen 15:6 is law_primeval's
     if k == 'release_refused': return [E_('release_demanded', subj, cp='israel', value=event['demand'])]
     if k == 'straw_withheld': return [E_('straw_withheld', 'israel', cp=subj)]
     if k == 'officers_beaten': return [E_('beaten', subj, cp=event['by'])]
@@ -344,19 +344,19 @@ def law_exodus_story(event, world):
     if k == 'heart_hardened': return [E_('heart_hardened', subj, value=(event['agent'], event['verb']))]
     if k == 'plague_removed': return [E_('plague_removed', subj, value=event['plague'])]
     if k == 'face_barred': return [E_('barred_from_the_face', 'moses', cp=subj)]
-    if k == 'sent_out': return [E_('sent_out', 'israel', cp=subj)]
+    if k == 'sent_out': return [E_('sent_out', 'israel', cp=subj)] if WE.seat(src)[0] == 'Exod' else []   # O8 S3 (2026-09-08; 7k): Laban's pursuit (31:23), Abimelech's decree (26:11) are law_mamre's
     if k == 'vessels_asked': return [E_('egypt_emptied', subj, cp='egypt_people', value=night('wage')['v'])]
-    if k == 'journeyed': return [E_('encamped_at', subj, value=event['to'])]
+    if k == 'journeyed': return [E_('encamped_at', subj, value=event['to'])] if WE.seat(src)[0] == 'Exod' else []   # O8 S2: the Genesis stations are law_primeval's
     if k == 'brought_out': return [E_('brought_out', subj, cp='HEAVEN', value=night('transitions')['v'])]
     if k == 'bones_taken': return [E_('bones_carried', subj, value=sea('bones')['v'])]
     if k == 'pillar_set': return [E_('pillar_leads', subj)]
-    if k == 'pursued': return [E_('pursued_by_egypt', 'israel', cp=subj)]
+    if k == 'pursued': return [E_('pursued_by_egypt', 'israel', cp=subj)] if WE.seat(src)[0] == 'Exod' else []   # O8 S3 (2026-09-08; 7k): Laban's pursuit (31:23), Abimelech's decree (26:11) are law_mamre's
     if k == 'sea_split': return [E_('sea_split', subj)]
     if k == 'sea_returned': return [E_('egypt_drowned', 'egypt_people', value=sea('not_one')['v'])]
     if k == 'saved_at_the_sea': return [E_('saved', subj, cp='HEAVEN')]
     if k == 'sang': return [E_('song_sung', subj, value=sea('song_mode')['v'])]
     if k == 'waters_sweetened': return [E_('waters_sweetened', subj)]
-    if k == 'statute_set': return [E_('statute_set_at_marah', subj, value=marah('statute_list')['v'])]
+    if k == 'statute_set': return [E_('statute_set_at_marah', subj, value=marah('statute_list')['v'])] if WE.seat(src)[0] == 'Exod' else []   # O8 S4 (2026-09-08; 8k): Joseph's statute of the fifth (Gen 47:26) is law_joseph's
     if k == 'healer_promised': return [E_('healer_promised', subj, cp='HEAVEN', value='conditional (15:26)')]
     if k == 'murmured': return [E_('tested_the_lord', subj, value=event['trial'])]
     if k == 'manna_fell': return [E_('manna_provided', subj, cp='HEAVEN', value=manna('day_by_day')['v'])]
@@ -371,7 +371,7 @@ def law_exodus_story(event, world):
     if k == 'people_answered': return [E_('undertook_to_do', subj, value=sinai('one_heart')['v'])] if WE.seat(src) == ('Exod', 19) else []   # ONE TYPE UNDER TWO LAW LAYERS: Exod 24 is the erection engine's
     if k == 'people_sanctified': return [E_('sanctified_for_the_third_day', subj, due=day + event['days'])]
     if k == 'bounds_set': return [E_('mountain_barred', 'israel', cp=subj, value=sinai('bound_release')['v'])]
-    if k == 'lord_descended': return [E_('descended_on_the_mountain', subj)]
+    if k == 'lord_descended': return [E_('descended_on_the_mountain', subj)] if WE.seat(src)[0] == 'Exod' else []   # O8 S2: Babel's descent (Gen 11:5) is law_primeval's
     if k == 'king_arose': return []   # the act kept on the tape for the record; no state the shelf names at this sitting (NARRATIVE_GAPS.md 4d)
     if k == 'placed_in_the_ark': return []   # the act kept on the tape for the record; no state the shelf names at this sitting (NARRATIVE_GAPS.md 4d)
     if k == 'egyptian_struck': return []   # the act kept on the tape for the record; no state the shelf names at this sitting (NARRATIVE_GAPS.md 4d)
@@ -492,13 +492,16 @@ def scene():
         w.advance(33)  # ---- Exod 12-13: the night and the going out ----
         w.submit({'kind': 'plague_struck', 'subject': 'egypt_people', 'plague': 'the_firstborn', 'by': 'the_lord', 'case_source': 'Exod 12:29'})
         close('pharaoh', 'firstborn_death_decreed', 'Exod 12:29 — the LORD struck every firstborn in the land of Egypt')
+        close('israel', 'nation_to_be_judged', 'Exod 12:29 — the firstborn struck: 12:12\'s judgments executed on Egypt (Gen 15:14 "that nation I will judge" — S2\'s entry; finds nothing on this bare scene)')   # O8 S2 (2026-09-08)
         w.submit({'kind': 'sent_out', 'subject': 'pharaoh', 'case_source': 'Exod 12:31-33'})
         close('pharaoh', 'release_demanded', 'Exod 12:31 — rise, go out from among my people')
         w.submit({'kind': 'vessels_asked', 'subject': 'israel', 'case_source': 'Exod 12:35-36'})
+        close('israel', 'to_go_out_with_substance', 'Exod 12:36 — and they emptied Egypt (Gen 15:14 "afterward they shall go out with great substance" — S2\'s entry; Berakhot 9a:29-9b:1)')   # O8 S2 (2026-09-08)
         w.submit({'kind': 'journeyed', 'subject': 'israel', 'to': 'Succoth', 'case_source': 'Exod 12:37'})
         w.submit({'kind': 'brought_out', 'subject': 'israel', 'case_source': 'Exod 12:51; Exod 12:41'})
         close('moses', 'sent_to_pharaoh', 'Exod 12:51 — the LORD brought out the sons of Israel')
         close('israel', 'to_be_brought_out', 'Exod 12:51 — brought out from the land of Egypt by their hosts')
+        close('israel', 'seed_to_serve_four_hundred', 'Exod 12:41 — at the end of four hundred and thirty years, on that very day (Gen 15:13\'s four hundred — S2\'s entry; the seed from Isaac, 21:12)')   # O8 S2 (2026-09-08)
         w.submit({'kind': 'bones_taken', 'subject': 'moses', 'case_source': 'Exod 13:19'})
         w.submit({'kind': 'journeyed', 'subject': 'israel', 'to': 'Etham', 'case_source': 'Exod 13:20'})
         w.submit({'kind': 'pillar_set', 'subject': 'israel', 'case_source': 'Exod 13:21-22'})

@@ -1,0 +1,159 @@
+# EVENT-KINDS REGISTER — the open vocabulary of world-journal event kinds.
+# Peer-review delta (3), 2026-08-24: open vocabulary needs a register with
+# dated status notes or it rots. TIR-catalog style: model layer, freely
+# revisable, ONE home. Add a kind here BEFORE first use in a fold.
+version: 0
+kinds:
+  - id: scripture.op
+    layer: L0
+    note: one event per canonical operator in the frozen units (the tape)
+    added: 2026-08-24
+  - id: node.born
+    layer: L1
+    note: an entity is created/installed into the world (REGISTRY_INSTALL,
+      fiat-result installs); data carries node class + optional parent
+    added: 2026-08-24
+  - id: node.presupposed
+    layer: L1
+    note: an entity is READ without prior install — uninitialized entities
+      (Gen 1:2 class) or known geography (the map layer, Eden class)
+    added: 2026-08-24
+  - id: edge.insert
+    layer: L1
+    note: a record enters a container (loc= receipts, planted-in, stationed)
+    added: 2026-08-24
+  - id: edge.link
+    layer: L1
+    note: geographic/relational link (river circles land; land holds resource)
+    added: 2026-08-24
+  - id: slot.set
+    layer: L1
+    note: a field first gets a value (produce=, dimensions, occupation)
+    added: 2026-08-24
+  - id: slot.update
+    layer: L1
+    note: a field's value changed by decree (the curse's produce rewrite);
+      NEVER edits the prior event — appends
+    added: 2026-08-24
+  - id: partition.split
+    layer: L1
+    note: one container divided in two (light/dark, waters, Peleg's earth)
+    added: 2026-08-24
+  - id: partition.breach
+    layer: L1
+    note: a standing partition opened (fountains of the deep; windows of
+      the heavens)
+    added: 2026-08-24
+  - id: partition.restore
+    layer: L1
+    note: a breached partition closed again (stop_up, Gen 8:2)
+    added: 2026-08-24
+  - id: guard.station
+    layer: L1
+    note: boundary guard posted at a container entrance (cherubim + sword)
+    added: 2026-08-24
+  - id: trigger.install
+    layer: L1
+    note: standing if/then installed in a domain (the bow-in-cloud handler)
+    added: 2026-08-24
+  - id: channel.open
+    layer: L1
+    note: channel between root containers (the ladder; the gate of heaven)
+    added: 2026-08-24
+  - id: name.set
+    layer: L1
+    note: registry write, first label (name(or) := yom)
+    added: 2026-08-24
+  - id: name.replace
+    layer: L1
+    note: rename retiring the old key (Avram -> Avraham; Sarai -> Sarah;
+      Babylonian Talmud Berakhot 13a semantics)
+    added: 2026-08-24
+  - id: name.alias
+    layer: L1
+    note: rename keeping both keys live (Yaakov -> Yisrael, decree_fact)
+    added: 2026-08-24
+  - id: name.restore
+    layer: L1
+    note: registry restored from a prior generation (the wells,
+      restore_names_like_father)
+    added: 2026-08-24
+  - id: law.install
+    layer: L1
+    note: standing law enters the world (CASE/HANDLER/STATUTE/PATTERN);
+      the bow handler is promoted to trigger.install by targeted rule
+    added: 2026-08-24
+  - id: deed.transfer
+    layer: L1
+    note: receipted ownership transfer (Machpelah weigh_silver)
+    added: 2026-08-24
+  - id: grant.assign
+    layer: L1
+    note: residency/assignment granted via demand->receipt (Goshen)
+    added: 2026-08-24
+  - id: census.population
+    layer: L1
+    note: "population partition rows (nations table: family/tongue/land/nation)"
+    added: 2026-08-24
+  - id: mandate.enforce
+    layer: L1
+    note: a standing mandate executed on refusal (fill-the-earth -> the
+      Babel scatter)
+    added: 2026-08-24
+  - id: witness.note
+    layer: L1
+    note: witness-tier annotation — WALLED; the ONLY kind allowed to ground
+      in a WITNESS_* op; carries no structural weight
+    added: 2026-08-24
+  - id: scene.open
+    layer: L2
+    note: a scenario begins — data carries the DECLARED INPUTS verbatim
+      (reproducibility rule; L2 inputs are PRIMARY records per the truth
+      split, authored in primary/scenes.yaml)
+    added: 2026-08-24
+  - id: scene.act
+    layer: L2
+    note: one declared act performed on the living world (register an ox,
+      a goring, the clock advancing, a court sale)
+    added: 2026-08-24
+  - id: case.verdict
+    layer: L2
+    note: a computed outcome — the law machine's answer to a query, with
+      its basis; verdicts are world state later passes can see
+    added: 2026-08-24
+  - id: scene.close
+    layer: L2
+    note: scenario ends — data carries the machine's final snapshot
+    added: 2026-08-24
+  # THE LOOP, step 1 THE SINK (2026-09-09; World/step9/THE_LOOP.md): the law engine's run log in the envelope — layer L3.
+  # Seven kinds, one per World.log class; added BEFORE first use, as this register rules.
+  - id: run.event
+    layer: L3
+    note: a submitted event on the tape (World.submit) — subj the registry entity id, prov.unit `tape`, prov.ref the verse;
+      op the clock day; data the event dict as it stands at the run's end (its bound closed by the marker that closed it)
+    added: 2026-09-09
+  - id: run.write
+    layer: L3
+    note: a ledger entry written by a daemon's verdict (World._write, due now or absent) — prov.unit the writing daemon;
+      data the entry as it stands at the run's end (closed_by present if the text later closed it)
+    added: 2026-09-09
+  - id: run.retro_write
+    layer: L3
+    note: a ledger entry whose due was already past at submission (a retrograde stretch, Pesachim 6b:7) — written now, named
+    added: 2026-09-09
+  - id: run.timer_set
+    layer: L3
+    note: a timer armed (a due in the future), or re-armed by its period at a fire (data carries rearmed_from)
+    added: 2026-09-09
+  - id: run.timer_fire
+    layer: L3
+    note: a timer fired by the clock's walk (World.advance) — the fired effect, due cleared
+    added: 2026-09-09
+  - id: run.timer_cancel
+    layer: L3
+    note: a pending timer voided by a later text event (World.cancel_timers) — data carries cancelled_by
+    added: 2026-09-09
+  - id: run.marker
+    layer: L3
+    note: the text's own date stamp (World.marker) — forward, retrograde, or proleptic; subj `clock`, prov.ref the verse
+    added: 2026-09-09
