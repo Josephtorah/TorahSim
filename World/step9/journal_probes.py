@@ -105,8 +105,13 @@ def j3():
         path, n, _ = sink_to(w, d)
         kinds = collections.Counter(json.loads(l)['kind'] for l in open(path, encoding='utf-8').read().splitlines()[1:])
     missing = sorted(k for k in kinds if k not in ids)
-    seven = set(WJ.KINDS.values())
-    return not missing and len(kinds) == 7 and set(kinds) == seven, 'kinds written %s; unregistered %s' % (dict(kinds), missing or 'none')
+    # THE LOOP step 3 (2026-09-09): the sink's eighth class, run.skip, is exercised by installation_probes.py I1 (a from_event world sunk
+    # and indexed); this probe world has no installation, so the seven engine classes it exercises are KINDS less run.skip — and every
+    # class the sink can write, the eighth included, must be in the register
+    seven = set(WJ.KINDS.values()) - {'run.skip'}
+    unregistered_kinds = sorted(k for k in WJ.KINDS.values() if k not in ids)
+    return not missing and not unregistered_kinds and len(kinds) == 7 and set(kinds) == seven, 'kinds written %s; unregistered %s; sink classes %d (all registered: %s)' % (
+        dict(kinds), missing or 'none', len(WJ.KINDS), not unregistered_kinds)
 
 
 @probe('J4 the subject is the registry id, never the scene token')

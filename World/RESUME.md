@@ -87,7 +87,42 @@ filed for the loop's first sitting. The five steps, their order and gates: step9
 setting, the fork's two, THE REST; 2,494 / 2,494 / 2,494 / 1,844 lines) and rebuilds `data/world.sqlite` from every segment on
 disk (15,927 rows: L0 4,517, L1 2,041, L2 43, L3 9,326); `python3 step9/world_journal.py --gate` runs the tape twice in two
 processes and demands byte-identical segments (GREEN); `--reindex` rebuilds the index alone; `--verify <segment>` checks a chain.
-The seven run kinds are in `registers/event_kinds.yaml`. Step 3, installation, is next.
+The eight run kinds are in `registers/event_kinds.yaml` (run.skip the eighth, step 3's). STEP 3 INSTALLATION BUILT 2026-09-09: the
+sequence worlds opt in (`installation=True`), every daemon carries given_at + installed_by (step9/daemon_dispositions.yaml; the gate
+demands both), the institutions are registry entities whose in_force the tent daemon writes at the acts of step9/installation_parameters.yaml,
+and the engine asks before every call; the running setting is boot (nothing skipped, the would-skip count printed: 34,729 of 46,552);
+the segments are +5 lines each (the five in_force writes), the index 15,947 rows. `python3 step9/installation_probes.py` runs the six probes.
+STEP 2'S REMAINDER BUILT 2026-09-09: the events table carries `source`; the four run VIEWS (run_ledger, run_timers, run_clock,
+run_docket — `journal/run_views.sql`, created at every reindex); `python3 step9/world_journal.py --views` checks every view's count against
+the table's on every world; `--ask ledger <entity> [<day>] | open <verse> | who <entity> <effect> | custody [--world <source>]` answers the
+four questions; `python3 step9/view_probes.py` runs its six probes. NUMBERS' OPENING BLOCK OPENED 2026-09-09 (step9/THE_TENT.md):
+the blasphemer's four acts on the tape, the docket's first row (`--ask who the_court declaration_owed`), the tent daemon's halt, output and
+execution branches real; the three Numbers cases next, each after its reading and its unit. SITTING 2 DONE 2026-09-09 (the unclean men at
+Passover, Num 9:1-14): the first Numbers unit frozen (num_09_pesach_cloud), the first Numbers runner (step9/cold_run_pesach_sheni.py), the
+second case-born law (statute_declared) on the tape; the tape now spans FOUR books (its first Numbers marker at 9:5; the index 16,691 rows
+over seven segments); `--ask ledger the_unclean_men` shows the wait written and closed by the output's verse, and the men's second Passover
+a PENDING timer (`run_timers`, outcome pending) — the readback's first open item. SITTING 3 DONE 2026-09-09 (the wood-gatherer, Num
+15:32-36): the unit num_15_wood_tzitzit frozen, the runner step9/cold_run_mekoshesh.py (the procedure from the guard to the grave; the
+death mode was already a cell of the Exodus Sabbath engine, given its home), the third case-born law installing A RULE INSIDE A LAW
+(`--ask who the_tent_of_meeting rule_installed`: three rows — Lev 24:13-14, Num 9:9-14, Num 15:35); `--ask ledger the_wood_gatherer`
+shows five entries, the three body entries closed by the execution's verse (the death sentence among them — found open by this very
+question after the first run, then closed by the amended branch); the docket's covered_by names two daemons. SITTING 4 DONE 2026-09-09 (the daughters of Zelophehad, Num 27:1-11 + 36:1-12; THE_TENT.md section 4 + 4a): the halt's third form,
+the second output relayed, a reading-placed marker in the fortieth year whose walk FIRED the men's second Passover (open on the ledger —
+the readback's item, with the daughters' holding owed, given in Joshua); RUN (1077, 44, 44, 0, 0, 1257, 18, 260, four pairs, 84); THE
+LOOP's steps 4 and 5 built (World/step9/cold_run_sequence.py --cursor <verse>; World/step9/scenarios.yaml; cursor_probes.py 6/6) — the
+first scenario 3/3 at the left edge of Num 27:5. The block closes. THE NUMBERS WALK OPENED 2026-09-09 (the owner: in order from 1:1;
+the map step9/NUMBERS_WALK.md): SITTING 1 DONE — Bamidbar 1:1-4:20 read at the parashah grain (nine ledgers by one script, 160 sources,
+coverage computed; the Sifrei on Numbers has no row on the portion, its export's piska 62 a mislabel for 8:24), nine units frozen (176),
+32 claims seated and machine-checked, standing 1844 (predicted), hash unmoved; the census's arithmetic computed from the ink (603,550 on
+three seats; 22,300 against 22,000; 273 × 5 = 1,365); the engine's numeral parser measured UNABLE to read the census (1:21 → 1,546) — the
+compile sitting's item with Num 1:1's forward marker; next Naso 4:21-7:89. SITTING 1b DONE 2026-09-09 (THE COMPILE OF
+BAMIDBAR; step9/NUMBERS_WALK.md "Sitting 1b"): the exam docket 159 rows (num_01_04_bamidbar_exam_2026-09-09.md); the parser
+taught the census's grammar (step9/census_probes.py 17/17; every marker verified; the old-against-new diff over the four books
+read — 155 verses moved, none a marker; the two homographs by the points on the stem); step9/cold_run_bamidbar.py 66/66, the
+48th daemon law_census; the tape's thirteen lines and the 1:1 marker (9:5 RETROGRADE; CB1-CB8 MATCH; RUN (1090, 44, 44, 0, 0,
+1277, 19, 261, four pairs, 89); THE REST exact); the cursor's bound rule (a forward marker at the cursor closes the bounds
+behind it — cursor_probes 6/6; a cursor inside a bound refused, recorded in THE_LOOP.md); the journal gate GREEN; the sweep
+43/43 at 4,699. Next: Naso 4:21-7:89, the reading sitting.
 
 ## step9/ — THE FIRST EXAM RAN (2026-08-31, read step9/REPORT.md)
 

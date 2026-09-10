@@ -1523,3 +1523,50 @@ Records: World/step9/REPORT_LEV24.md; ledger with full cite index
 logic/oral_triage/lev_24_first_call_2026-09-05.md. Regression:
 43/43 runners + all cold runners green after the wire; no unit
 touched (the two Lev 24 drafts stay drafts until Emor's walk).
+
+## 2026-09-09 — THE STORE DROPS THE LARGE LETTERS (a defect report on the
+## evidence layer, found by a claim's own machine check at THE TENT sitting 4)
+
+The snapshot store torah_grok.SNAPSHOT-main-51801ca.sqlite drops every
+large-letter segment of the Torah XML (the Masorah's majuscules, carried
+in Data/*.xml as <seg type="x-large"> with the note "Large letter(s)").
+Measured: FOUR such segments in the five books, THREE words broken in
+the store — Lev 11:42 the vav (and its nun) of "belly" (the Torah's
+middle letter: the store reads two consonants of four), Num 27:5 the
+final nun of "their judgment" (the store's ONLY token ending in a bare
+slash, 1 of 80,052), Deut 6:4 the ayin of "hear" and the dalet of "one"
+(the Shema's two large letters: the store reads them absent). The
+Tanakh DB at elijah_docket/tanakh.sqlite and the XML carry all four
+whole. Found because claim NM27-04's token count of "their judgment"
+returned zero on the store and the ledger script's count on the Tanakh
+DB returned one; the ink itself explained the delta. Consequences:
+the text gate's contract is the store, so a unit's step at those verses
+mirrors the truncated token with the finding on the step (num_27's
+step 5); the manifest checks run on the stem; the counts are computed
+on the Tanakh DB. The snapshot is immutable evidence — its rebuild
+(the builder taught the large-letter segment) is the owner's word, and
+every frozen hash would move with it. The daughters' halt verse is the
+one case verse of the four that carries a majuscule in the ink.
+
+## 2026-09-09 — THE SHELF'S EXPORT MISLABELS A PISKA'S HEAD (a defect report
+## on the reading shelf, found by the ledger script at THE NUMBERS WALK sitting 1)
+
+The Sefaria export of the Sifrei on Numbers (Data/sefaria_export/
+Sifrei_Bamidbar/en.json) heads its piska 62 "(Bamidbar 3:24)". By
+POSITION the piska sits between piska 61, headed 8:4 (the menorah's
+making), and piska 63, headed 8:25 (the Levite's retirement at fifty);
+by its own quotations it opens on 8:24 ("this is what applies to the
+Levites: from the age of twenty-five") and cites 4:23 ("from thirty
+years and up") to reconcile the two ages. It is the Sifrei's row on
+Numbers 8:24 with a mistyped chapter digit (8 → 3). Measured at the
+sitting: piska 1 opens on 5:1 and NO other head in the export lies
+inside chapters 1-4 — the Sifrei on Numbers has no piska on Bamidbar
+1:1-4:20 by position. Consequences: the ledger script's assert on the
+heads catches the stray head (write_bamidbar_ledgers.py, sitting 1);
+the row is READ FRESH at num_04_kehat's ledger where 4:3's thirty is
+its subject and will be CREDITED when the walk reaches 8:24; the
+export is evidence and is not edited — the heads are found by position
+(THE TENT sitting 4's lesson), never trusted from their labels. Two
+other heads in the export carry no parsable verse at all (piska 59
+opens without a citation; piska 102 cites "Ibid. 4" — measured), and
+the same rule covers them: their place is their address.

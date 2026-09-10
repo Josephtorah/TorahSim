@@ -235,6 +235,33 @@ def load_yaml():
     return d.get('daemons') or {}, d.get('functions') or {}, d.get('unfired') or {}, d.get('unconsumed') or {}
 
 
+def check_installation(dy):
+    """THE LOOP step 3 INSTALLATION (2026-09-09; THE_LOOP.md "Step 3 INSTALLATION — the design"): every declared daemon carries
+    given_at (a Torah verse — where the law is spoken) and installed_by (boot | pending with a why | a key of
+    installation_parameters.yaml's installing_acts, each itself a registered event kind); returns the fails"""
+    inst = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'installation_parameters.yaml')
+    acts = (yaml.safe_load(open(inst, encoding='utf-8')) or {}).get('installing_acts') or {} if os.path.exists(inst) else {}
+    fails = []
+    if not acts:
+        fails.append('installation_parameters.yaml missing or empty — the fourth registry names the installing acts')
+    for a in acts:
+        if a not in EV.REGISTRY:
+            fails.append('installing act %r (installation_parameters.yaml) is not in event_vocabulary.yaml' % a)
+    for n, d in dy.items():
+        g, b = d.get('given_at'), d.get('installed_by')
+        if not g:
+            fails.append('daemon %s declares no given_at — the verse where the law is spoken (THE LOOP step 3)' % n)
+        elif not re.match(r'^(Gen|Exod|Lev|Num|Deut)\s+\d+:\d+$', str(g)):
+            fails.append('daemon %s given_at %r is not a Torah verse' % (n, g))
+        if not b:
+            fails.append('daemon %s declares no installed_by — boot, pending, or an installing act (THE LOOP step 3)' % n)
+        elif b == 'pending' and not d.get('why'):
+            fails.append('daemon %s installed_by pending without a why — the debt is named or refused' % n)
+        elif b not in ('boot', 'pending') and b not in acts:
+            fails.append('daemon %s installed_by %r is not an installing act of installation_parameters.yaml (nor boot / pending)' % (n, b))
+    return fails
+
+
 def main():
     emit = '--emit' in sys.argv
     R = parse_all()
@@ -284,6 +311,7 @@ def main():
     for n in dy:
         if n not in daemons:
             fails.append('daemon_dispositions.yaml declares %s but no def law_%s exists' % (n, n[4:]))
+    fails += check_installation(dy)      # THE LOOP step 3 (2026-09-09): both installation fields on every daemon
 
     # ---- 2. the tape: registered kinds; watched-never-fired; fired-never-watched ----
     for k, rows in submitted.items():
@@ -385,7 +413,8 @@ def main():
              % (len(R), len(daemons), len(watched), len(submits), len(submitted), n_funcs, len(funcs), wrapped_n, n_owed, none_n, len(unfired), len(unconsumed), len(aliases)), '']
         L.append('## THE DAEMONS')
         for n, d in daemons.items():
-            L.append('- %s (%s; wraps %s): %d kinds' % (n, d['file'], (dy.get(n) or {}).get('wraps', '?'), len(d['kinds'])))
+            L.append('- %s (%s; wraps %s): %d kinds; given_at %s, installed_by %s' % (n, d['file'], (dy.get(n) or {}).get('wraps', '?'), len(d['kinds']),
+                                                                                   (dy.get(n) or {}).get('given_at', '?'), (dy.get(n) or {}).get('installed_by', '?')))
             for k, v in d['kinds'].items():
                 fired_by = sorted({r for r, _, _ in submitted.get(k, [])})
                 L.append('  - %s%s -> %s%s' % (k, (' [%s]' % ', '.join(v['fields'])) if v['fields'] else '', ', '.join(v['effects']) or 'no ledger write',

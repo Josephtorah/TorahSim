@@ -819,6 +819,36 @@ cold_run_family.commission('retold_prayer', 'retold_commission',
 'perhaps_two_spellings', 'gifts_two_moments', 'retold_god_clause') —
 the retold run diffed against both the spec and the run.
 
+Exemplar (7), THE MODE — added 2026-09-09 (THE TENT sitting 3, the
+wood-gatherer): Exodus 31:14 "its profaners shall surely be put to
+death" names a death and no mode; Numbers 15:35 "die shall die the
+man; stone him with stones" is that law's first execution, and the
+run's mode is read back into the spec — Bava Batra 119a:8 (R. Chidka
+in Shimon HaShikmoni's name: Moses knew he was liable to death from
+'its profaners shall die' but not by which death), Sanhedrin 78b:7,
+Sifrei Bamidbar 114:1 ("die shall die" FOR THE GENERATIONS, "stone
+him" for the hour). The compile's own shape: the Sabbath engine's
+cell sabbath('death_run') in cold_run_incense_shekel.py imported this
+run BY NAME on 2026-09-07, before Numbers had a reading; the gatherer's
+runner (cold_run_mekoshesh.py) gives the import its home, and the tent's
+output installs it as THE RULE INSIDE A LAW (rule_installed naming the
+cell, not a daemon — World/step9/THE_TENT.md section 3).
+
+Exemplar (12), registered 2026-09-09 (THE NUMBERS WALK sitting 1b,
+cold_run_bamidbar.py — the exam docket of Numbers 1:1-4:20): THE
+PREPOSITION AGAIN, read from the CAMP into the TABLE. The camp's order
+writes "and BESIDE him (עָלָיו, 'upon him') the tribe of Manasseh" (Num
+2:20) — a tribe cannot pitch upon another, so the preposition means
+beside; Abba Shaul carries that reading into the showbread's law, "you
+shall place pure frankincense UPON (עַל) each arrangement" (Lev 24:7):
+the frankincense sits beside the arrangements, not on them (Menachot
+96a:11, against the Sages' literal 'upon'). A term of a narrated
+disposition of the camp legislates a column of the table's rite — the
+move's shape with its teacher named; and the same preposition stands
+as a TEIKU on "upon the wood" (Menachot 27a:2), the tradition's own
+open question carried unresolved. The compiled cell camp('al') returns
+both.
+
 ## M-23 — THE SECOND SEAT'S DELTA (a law written twice is diffed seat against seat, and the second writing's additions, drops, moves, and doublings legislate)
 ⚠ A GENERALIZATION (the link review law, LR3, 2026-09-07): the diff of
 two seats is the machine's ENUMERATION; what a delta LEGISLATES is the
@@ -926,6 +956,28 @@ with the DOUBLE added. Machine form:
 cold_run_family.levirate('seed_vs_name', 'levirate_alignment',
 'kin_scope_narrowed', 'no_release_form'); purchase('deed_restated',
 'deed_alignment'); testament('firstborn_alignment').
+
+Exemplar (11), registered 2026-09-09 (THE TENT sitting 4, cold_run_zelophehad.py)
+— THE SECOND OUTPUT ON THE SAME CASE: the daughters' statute at its first
+seat (Num 27:8-11 — the ladder for the generations, 'a statute of judgment')
+against its second (Num 36:5-9 — the tribes' plea answered RELAYED, 'and
+Moses commanded... by the mouth of the LORD'): the second seat ADDS a limit
+on the heiress ('only to the family of the tribe of their father', 36:6),
+a bar on the transfer ('shall not go around from tribe to tribe', 36:7, 36:9)
+and a REACH clause the first seat never carried — 'THIS is the thing that
+the LORD commanded' (36:6), read by Rava as this generation alone (Bava
+Batra 120a:10) with the silence test at 120b:2 (a formula that teaches
+nothing else limits the generation) and its LAPSE dated to the fifteenth
+of Av (121a:7: the tribes permitted to intermarry). The delta is the ink's
+own frame too: the first output 'and the LORD said to Moses, saying', the
+second Moses' own command by the Word (computed: 'by the mouth of the LORD'
+at eighteen Torah seats, Lev 24:12's halt clause among them). The engine's
+form: the second seat installs a CELL of the case-born law (rule_installed
+naming law_zelophehad:tribe_transfer — sitting 3's rule-inside-a-law on a
+case-born law), so the statute stands amended on the ledger with a reach.
+Machine form: cold_run_zelophehad.the_daughters('second_output', 'reach',
+'lapse'); the row tribe_transfer_reach (this_generation / all_generations —
+the second arm refused at 120b:2); the tent daemon's command_relayed branch.
 
 ## M-24 — THE REPETITION TEST (a law's scope across eras is decided by whether the code writes it twice; the second writing is the edge)
 ⚠ A GENERALIZATION (the link review law, LR3, 2026-09-07): the rule is

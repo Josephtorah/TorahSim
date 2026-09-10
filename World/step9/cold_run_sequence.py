@@ -75,11 +75,16 @@ with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.St
     import cold_run_yovel
     import cold_run_tochacha
     import cold_run_temurah
+    import cold_run_pesach_sheni   # THE TENT sitting 2 (2026-09-09): the first Numbers runner
+    import cold_run_mekoshesh      # THE TENT sitting 3 (2026-09-09): the wood-gatherer
+import cold_run_zelophehad   # THE TENT sitting 4 (2026-09-09): the daughters of Zelophehad — the fourth case-born law
+import cold_run_bamidbar     # THE NUMBERS WALK 1b (2026-09-09): Bamidbar — the census, the camp, the Levites, the firstborn, the Kohathites; the 48th daemon law_census
 
 # ALL 43 DAEMONS in registration order (38 + law_mishpatim_3 at O7, 2026-09-07; + law_exodus_story at O8 S1, law_primeval at O8 S2, law_mamre at O8 S3 and law_joseph at O8 S4, 2026-09-08): the library's five first (the runners register them first on their own
 # scenes), then the runners' in the canonical order of their spans; a file with two daemons keeps its own order. The
 # set is asserted against daemon_dispositions.yaml at run time — a tripwire, never a recital.
 DAEMON_ORDER = [
+    ('world_engine', 'law_tent'),      # THE LOOP step 3 (2026-09-09): THE TENT DAEMON FIRST — an installing act switches on its laws inside its own dispatch
     ('world_engine', 'law_slave_term'), ('world_engine', 'law_goring_ox'), ('world_engine', 'law_guardians'),
     ('world_engine', 'law_deposit_oath'), ('world_engine', 'law_installation'),
     ('cold_run_pre_sinai', 'law_pre_sinai'), ('cold_run_primeval', 'law_primeval'), ('cold_run_mamre', 'law_mamre'), ('cold_run_joseph', 'law_joseph'), ('cold_run_family', 'law_family'), ('cold_run_exodus_story', 'law_exodus_story'), ('cold_run_pesach', 'law_pesach'),
@@ -94,6 +99,10 @@ DAEMON_ORDER = [
     ('cold_run_holiness', 'law_holiness'), ('cold_run_holiness_b', 'law_holiness_b'), ('cold_run_priesthood', 'law_priesthood'),
     ('cold_run_moadim', 'law_moadim'), ('cold_run_lev24', 'law_lev24'), ('cold_run_yovel', 'law_yovel'),
     ('cold_run_tochacha', 'law_tochacha'), ('cold_run_temurah', 'law_temurah'),
+    ('cold_run_pesach_sheni', 'law_pesach_sheni'),   # THE TENT sitting 2 (2026-09-09): the second Passover — the first Numbers daemon, case-born
+    ('cold_run_mekoshesh', 'law_mekoshesh'),         # THE TENT sitting 3 (2026-09-09): the wood-gatherer — the third case-born daemon (the procedure; the mode is law_sabbath's cell)
+    ('cold_run_zelophehad', 'law_zelophehad'),   # THE TENT sitting 4 (2026-09-09): the daughters of Zelophehad (Num 27:1-11 + 36:1-12)
+    ('cold_run_bamidbar', 'law_census'),         # THE NUMBERS WALK 1b (2026-09-09; NUMBERS_WALK.md "Sitting 1b"): Bamidbar — the census, the camp, the Levites, the firstborn, the Kohathites (Num 1:1-4:20); the 48th daemon
 ]
 
 
@@ -123,7 +132,7 @@ UNITS = {'אחת': 1, 'אחד': 1, 'שתים': 2, 'שנים': 2, 'שנתים': 2
          'שש': 6, 'ששה': 6, 'שבע': 7, 'שבעה': 7, 'שמנה': 8, 'שמנת': 8, 'שמונים': 80, 'תשע': 9, 'תשעה': 9, 'עשר': 10, 'עשרה': 10,
          'שלשת': 3, 'ארבעת': 4, 'חמשת': 5, 'ששת': 6, 'שבעת': 7, 'תשעת': 9, 'עשרת': 10,   # O8 S1 (2026-09-08): the CONSTRUCT forms ('seven of days', Exod 7:25; 'three of days', 10:22, 15:22) — the stitcher's ink check found the table without them
          'עשרים': 20, 'שלשים': 30, 'ארבעים': 40, 'חמשים': 50, 'ששים': 60, 'שבעים': 70, 'שמנים': 80, 'תשעים': 90,
-         'מאה': 100, 'מאת': 100, 'מאתים': 200, 'מאות': 100, 'אלף': 1000}
+         'מאה': 100, 'מאת': 100, 'מאתים': 200, 'מאות': 100, 'אלף': 1000, 'אלפים': 1000}   # THE NUMBERS WALK 1b (2026-09-09): the plural 'thousands' (Num 1:46 'three thousands'; 35:5 the dual alone = 2,000)
 _ORD = {'ראשון': 1, 'שני': 2, 'שלישי': 3, 'רביעי': 4, 'חמישי': 5, 'ששי': 6, 'שביעי': 7, 'שמיני': 8, 'תשיעי': 9, 'עשירי': 10}
 
 
@@ -138,11 +147,35 @@ def verse_words(book, ch, vs):
     r = _con.cursor().execute("select id from verses where book=? and chapter=? and verse=?", (book, ch, vs)).fetchone()
     if r is None:
         raise SystemExit('INK: no verse %s %d:%d in the Tanakh DB' % (book, ch, vs))
-    return [re.sub(r'[֑-ׇ/]', '', w) for (w,) in _con.cursor().execute("select he from words where verse_id=? order by idx", (r[0],))]
+    out = []
+    for (w,) in _con.cursor().execute("select he from words where verse_id=? order by idx", (r[0],)):
+        bare = re.sub(r'[֑-ׇ/]', '', w)
+        # THE NUMBERS WALK 1b (2026-09-09; NUMBERS_WALK.md "Sitting 1b"): the consonantal homograph מאת — מְאַת ("a hundred of",
+        # Num 2:9, Exod 38:25) against מֵאֵת ("from", Num 3:49-50, Gen 23:20) — told apart by the tsere under the mem; the
+        # preposition is emitted as מ-את so the parser never reads it as a number (the pointed form is the DB's own)
+        pw = re.sub(r'[\u0591-\u05AF/]', '', w)          # the points kept, the accents off
+        # THE NUMBERS WALK 1b (2026-09-09; NUMBERS_WALK.md "Sitting 1b"): TWO HOMOGRAPHS TOLD APART BY THE POINTS ON THE STEM (measured on
+        # the DB's own code points: the shin-dot follows the shin, then the vowel; a dagesh may sit before the vowel) —
+        # (1) מאת: the tsere under the mem AND under the alef is 'from' (מֵאֵת, Num 3:49, Gen 23:20 — emitted מ-את, never a number);
+        #     מְאַת ('a hundred of', Num 2:9) and מֵאֹת ('hundreds', Gen 5:4 — the plural's holam) stay numerals;
+        # (2) שנים: a sheva under the shin and no hiriq under the nun is the numeral 'two' (שְׁנַיִם Num 3:39, שְׁנֵים 'twelve' Num 1:44,
+        #     the pausal שְׁנָיִם Num 13:23); a qamats under the shin is 'years' (שָׁנִים Gen 5:6; וְשָׁנִים Gen 1:14; בַּשָּׁנִים Lev 25:51)
+        #     and the hiriq under the nun 'second ones' (שְׁנִיִּם Gen 6:16) — the non-numeral is emitted with a star (שנים*) and the
+        #     parser keeps the phrase open on it as on שנה
+        if bare.endswith('מאת') and bare in ('מאת', 'ומאת'):
+            st = pw[pw.rfind('מ'):].replace('\u05BC', '')
+            if re.match(r'^מ\u05B5א\u05B5', st):
+                bare = bare[:-3] + 'מ-את'
+        if bare.endswith('שנים') and bare in ('שנים', 'ושנים', 'בשנים', 'לשנים', 'כשנים'):
+            st = pw[pw.rfind('ש'):].replace('\u05C1', '').replace('\u05C2', '').replace('\u05BC', '')
+            if not re.match(r'^ש\u05B0נ[^\u05B4]', st):
+                bare = bare + '*'
+        out.append(bare)
+    return out
 
 
 def _bare(w):
-    for p in ('וב', 'ול', 'ו', 'ב', 'ל', 'כ'):
+    for p in ('וה', 'וב', 'ול', 'ו', 'ב', 'ל', 'כ', 'ה'):   # THE NUMBERS WALK 1b (2026-09-09): the article on each part — Num 3:46 השלשה והשבעים והמאתים ('the three and the seventy and the two hundred')
         if w.startswith(p) and w[len(p):] in UNITS:
             return w[len(p):]
     return w if w in UNITS else None
@@ -151,32 +184,63 @@ def _bare(w):
 def ink_numbers(words):
     """the number phrases of a verse, computed from its numeral words: a unit (one to nine) IMMEDIATELY before
     מאת/מאות ('hundred'/'hundreds') MULTIPLIES, every other numeral word ADDS; שתים ('two', feminine) counts; שנים
-    counts as 'two' only before עשר ('ten'), else it is 'years'; a YEAR-word (שנה/שנים) keeps the phrase open — the
-    ink writes a number in parts joined by 'and' with the noun between (Gen 5:6 חמש שנים ומאת שנה, five years and a
-    hundred years = 105) — while any other word closes it (Exod 24:18 ארבעים יום וארבעים לילה, forty days and forty
-    nights = two numbers) (SEQUENTIAL_RUN.md section 4)"""
-    out, cur, seen, prev_unit = [], 0, False, 0
+    counts as 'two' only before עשר ('ten') or ועשרים ('and twenty' — the census's 'two and twenty thousand', Num 3:39),
+    else it is 'years'; a YEAR-word (שנה/שנים) keeps the phrase open — the ink writes a number in parts joined by 'and'
+    with the noun between (Gen 5:6 חמש שנים ומאת שנה, five years and a hundred years = 105) — while any other word
+    closes it (Exod 24:18 ארבעים יום וארבעים לילה, forty days and forty nights = two numbers) (SEQUENTIAL_RUN.md section 4).
+    THE CENSUS'S GRAMMAR (THE NUMBERS WALK 1b, 2026-09-09; NUMBERS_WALK.md "Sitting 1b" — measured on every number of
+    Num 1:1-4:20, probed by census_probes.py): אלף/אלפים ('thousand'/'thousands') WITHOUT the conjunction multiplies the
+    GROUP since the last thousands-word (Num 1:21 ששה וארבעים אלף, six and forty thousand = 46,000; 1:46 שש מאות אלף
+    ושלשת אלפים, 603,000; an empty group: אלף = 1,000, אלפים = 2,000 — the dual, Num 35:5); WITH the conjunction, ואלף
+    ('and a thousand') ADDS (Num 3:50 five and sixty and three hundred and a thousand = 1,365; Exod 38:25; Num 26:51);
+    a numeral word IDENTICAL to the numeral word before it is DISTRIBUTIVE — one number (Num 3:47 חמשת חמשת, 'five,
+    five' shekels per skull = 5; Gen 7:2 'seven, seven' = 7); מֵאֵת ('from') arrives as מ-את from verse_words and is no
+    numeral (Num 3:49-50, Gen 23:20)."""
+    out, add, k, seen, prev_unit, last = [], [], 0, False, 0, None   # k: where the group since the last thousands-word begins
     for i, w in enumerate(words):
         b = _bare(w)
+        if b is not None and w.startswith('ה') and not w.startswith('וה'):
+            # THE ARTICLE ON A NUMERAL counts only at the head of a chain joined by 'and the' (Num 3:46 השלשה והשבעים והמאתים);
+            # alone it is a name or a noun — קרית הארבע 'Kiriath-arba' (Gen 35:27), שני השבע 'the years of plenty' (Gen 41:53):
+            # the stitcher's marker verification caught both when the article was first admitted (2026-09-09)
+            if not (i + 1 < len(words) and words[i + 1].startswith('וה') and _bare(words[i + 1]) is not None):
+                b = None
+        if b is not None and w.startswith('וה'):
+            # 'and the N' counts only INSIDE a chain (after a numeral word): 'and the other' (Gen 42:13, Lev 14:22 והאחד) is no number
+            if not (i > 0 and (_bare(words[i - 1]) is not None or words[i - 1] in ('שנה', 'שנת', 'ושנה'))):
+                b = None
+        if b is not None and b == 'אלפים' and len(add) == k and not w.startswith('ו'):
+            # the DUAL 'two thousand' stands alone only before a numeral word (Num 4:36 אלפים שבע מאות, 7:85); before a noun it is
+            # the plural 'thousands' (Exod 18:21 שרי אלפים 'rulers of thousands'): no number — Num 35:5's 'two thousand cubits'
+            # (אלפים באמה) waits for its own walk
+            if not (i + 1 < len(words) and _bare(words[i + 1]) is not None):
+                b = None
         if b is not None:
-            if b == 'שנים' and not (i + 1 < len(words) and _bare(words[i + 1]) in ('עשר', 'עשרה')):
-                prev_unit = 0                                        # 'years': the noun; the phrase stays open
-                continue
+            if w == last:                                            # the distributive doubling — the SAME raw word (3:47 חמשת חמשת; Gen 7:2
+                continue                                             # שבעה שבעה); with the conjunction it is two numbers (Lev 26:8 מאה ומאה; Num 26:51 אלף ואלף)
+            last = w
             v = UNITS[b]
-            if b in ('מאת', 'מאות') and prev_unit:
-                cur = cur - prev_unit + prev_unit * 100
+            if b in ('אלף', 'אלפים'):
+                if w.startswith('ו') and b == 'אלף':                  # 'and a thousand' — an addend
+                    add.append(1000)
+                elif len(add) == k:                                  # a bare thousand / the dual 'thousands'
+                    add.append(2000 if b == 'אלפים' else 1000)
+                else:                                                # the group since the last thousands-word, multiplied
+                    add = add[:k] + [sum(add[k:]) * 1000]
+                k = len(add); prev_unit = 0
+            elif b in ('מאת', 'מאות') and prev_unit:
+                add[-1] = prev_unit * 100; prev_unit = 0
             else:
-                cur += v
-            prev_unit = v if 1 <= v <= 9 else 0
+                add.append(v); prev_unit = v if 1 <= v <= 9 else 0
             seen = True
-        elif w in ('שנה', 'שנת', 'ושנה'):
-            prev_unit = 0                                            # the year-word keeps the phrase open
+        elif w in ('שנה', 'שנת', 'ושנה') or w.endswith('שנים*'):
+            prev_unit = 0; last = None                               # the year-word keeps the phrase open (שנים* — 'years' by its points)
         else:
             if seen:
-                out.append(cur)
-            cur, seen, prev_unit = 0, False, 0
+                out.append(sum(add))
+            add, k, seen, prev_unit, last = [], 0, False, 0, None
     if seen:
-        out.append(cur)
+        out.append(sum(add))
     return out
 
 
@@ -185,7 +249,7 @@ def ink_ordinals(words):
     return [n for n in (_bare_ord(w) for w in words) if n is not None]
 
 
-_VREF = re.compile(r'^(Gen|Exod|Lev)\s+(\d+):(\d+)')
+_VREF = re.compile(r'^(Gen|Exod|Lev|Num)\s+(\d+):(\d+)')   # THE TENT sitting 2 (2026-09-09): the fourth book
 def slot_of(book, ch, vs):
     """O9 OPEN-5 (2026-09-08; CLOCK.md 12e): the verse's own day-word, by the registry's day_slots table (the words and
     two-word phrases as the verse carries them, points stripped) — exactly ONE slot's word present, else None (a verse that
@@ -281,7 +345,7 @@ PARAMS = {
 
 # ==== TAPE BEGIN (generated by scratchpad/seq_stitch.py — do not edit by hand; rerun the stitcher) ====
 def tape(w, M, P):
-    """THE STITCHED TAPE — generated by scratchpad/seq_stitch.py: 130 markers, 1058 history events, 70 closes in canonical verse order"""
+    """THE STITCHED TAPE — generated by scratchpad/seq_stitch.py: 133 markers, 1090 history events, 70 closes in canonical verse order"""
     assert w.clock.epoch == 'creation', 'the tape runs on the creation epoch'
     # ---- Gen 1 ----
     assert_ink('Gen 1:5', [1], ordinals=[]); M['day1'] = 0; w.marker('Gen 1:5', 0, value='the first day')   # the creation days (the ordinal - 1)
@@ -1624,17 +1688,62 @@ def tape(w, M, P):
     w.submit({'kind': 'blessing_lifted', 'subject': 'the-people', 'case_source': 'Lev 9:22-23'})   # shemini_day [act: wayyiqtol at Lev 9:22]
     w.submit({'kind': 'glory_seen', 'subject': 'the-people', 'case_source': 'Lev 9:23'})   # shemini_day [act: wayyiqtol at Lev 9:23]
     w.submit({'kind': 'fire_descended', 'subject': 'the-altar', 'case_source': 'Lev 9:24'})   # shemini_day [act: wayyiqtol at Lev 9:24]
+    # ---- Lev 24 ----
+    w.submit({'kind': 'blasphemed_the_name', 'subject': 'the-son-of-shelomith', 'curser': 'the-son-of-shelomith', 'name_pronounced': True, 'status': 'native', 'case_source': 'Lev 24:11 — and the son of the Israelite woman pronounced the Name and cursed, and they brought him to Moses'})   # lev24 [act: wayyiqtol at Lev 24:11]
+    w.submit({'kind': 'placed_in_custody', 'subject': 'the-son-of-shelomith', 'person': 'the-son-of-shelomith', 'case_of': 'Lev 24:11', 'uncertainty': 'liable_at_all', 'case_source': 'Lev 24:12 — and they placed him in the guard, to be declared to them by the mouth of the LORD (Sanhedrin 78b:7: whether liable at all)'})   # lev24 [act: wayyiqtol at Lev 24:12]
+    w.submit({'kind': 'sentence_declared', 'subject': 'the-son-of-shelomith', 'person': 'the-son-of-shelomith', 'sentence': 'stoning', 'outside_the_camp': True, 'hands_laid': True, 'installs': 'law_lev24', 'case_source': 'Lev 24:13-14 — and the LORD spoke to Moses: bring out the curser outside the camp, let all who heard lay their hands on his head, and let all the congregation stone him; the statute 24:15-22 in the same speech'})   # lev24 [speech: wayyiqtol at Lev 24:13]
+    w.submit({'kind': 'stoned_as_commanded', 'subject': 'the-son-of-shelomith', 'person': 'the-son-of-shelomith', 'case_source': 'Lev 24:23 — and they brought out the curser outside the camp and stoned him with stone; the children of Israel did as the LORD commanded Moses'})   # lev24 [act: wayyiqtol at Lev 24:23]
+    # ---- Num 1 ----
+    assert_ink('Num 1:1', [1], ordinals=[2]); M['bamidbar'] = w.clock.day_in('exodus', 2, 2, 1); w.marker('Num 1:1', M['bamidbar'], value='and the LORD spoke to Moses in the wilderness of Sinai, in the tent of meeting, on the first of the second month in the second year of their going out of Egypt (1:1) — the census commanded; the run on the same day (1:18); the tape\'s FORWARD marker whose successor in the text, 9:1-5, is earlier in time (Pesachim 6b:6-8)')   # the first of the second month, year two
+    w.submit({'kind': 'census_commanded', 'subject': 'israel', 'threshold': 20, 'by_names': True, 'aides': 12, 'per_tribe': 1, 'case_source': 'Num 1:1-3 — and the LORD spoke to Moses in the wilderness of Sinai, in the tent of meeting, on the first of the second month in the second year: lift the head of all the congregation of the children of Israel... from twenty years old and upward'})   # bamidbar [speech: wayyiqtol at Num 1:1]
+    w.submit({'kind': 'census_taken', 'subject': 'israel', 'counts': {'reuben': 46500, 'simeon': 59300, 'gad': 45650, 'judah': 74600, 'issachar': 54400, 'zebulun': 57400, 'ephraim': 40500, 'manasseh': 32200, 'benjamin': 35400, 'dan': 62700, 'asher': 41500, 'naphtali': 53400}, 'total': 603550, 'by_names': True, 'date_repeated': True, 'case_source': 'Num 1:17-19 — and Moses and Aaron took these men... and they declared their pedigrees... as the LORD commanded Moses, and he counted them in the wilderness of Sinai; 1:46 six hundred thousand and three thousand and five hundred and fifty'})   # bamidbar [act: wayyiqtol at Num 1:17]
+    w.submit({'kind': 'levites_exempted', 'subject': 'the-levites', 'duties': ['carry', 'serve', 'camp_around', 'take_down', 'set_up'], 'stranger_clause': True, 'purpose': 'that there be no wrath', 'case_source': 'Num 1:48-53 — and the LORD spoke to Moses saying: only the tribe of Levi you shall not count... and the stranger who approaches shall be put to death... that there be no wrath upon the congregation'})   # bamidbar [speech: wayyiqtol at Num 1:48]
+    # ---- Num 2 ----
+    w.submit({'kind': 'camp_commanded', 'subject': 'israel', 'banners': {'east': 'judah', 'south': 'reuben', 'west': 'ephraim', 'north': 'dan'}, 'march_order': ['judah', 'reuben', 'ephraim', 'dan'], 'tent_in_the_midst': True, 'distance': 'a datum', 'case_source': "Num 2:1-2 — and the LORD spoke to Moses and to Aaron saying: each man by his banner with the signs of their fathers' house shall the children of Israel camp; at a distance round about the tent of meeting"})   # bamidbar [speech: wayyiqtol at Num 2:1]
+    w.submit({'kind': 'camp_arrayed', 'subject': 'israel', 'camps_total': 603550, 'camped': True, 'journeyed': True, 'case_source': 'Num 2:34 — and the children of Israel did according to all that the LORD commanded Moses: so they camped by their banners and so they journeyed'})   # bamidbar [act: wayyiqtol at Num 2:34]
+    # ---- Num 3 ----
+    w.submit({'kind': 'levites_given', 'subject': 'the-levites', 'given_to': 'aaron-and-sons', 'instead_of': 'the-firstborn-of-israel', 'ground_dated': 'the night of the plague', 'charges': ['his charge', "the congregation's charge"], 'case_source': 'Num 3:5-13 — and the LORD spoke to Moses saying: bring near the tribe of Levi... given, given are they to him... I have taken the Levites instead of every firstborn, opener of the womb'})   # bamidbar [speech: wayyiqtol at Num 3:5]
+    w.submit({'kind': 'levite_count_commanded', 'subject': 'the-levites', 'threshold': 'a month', 'by_houses': True, 'case_source': 'Num 3:14-15 — and the LORD spoke to Moses in the wilderness of Sinai saying: count the sons of Levi... every male from a month old and upward'})   # bamidbar [speech: wayyiqtol at Num 3:14]
+    w.submit({'kind': 'levites_counted', 'subject': 'the-levites', 'houses': {'gershon': 7500, 'kohath': 8600, 'merari': 6200}, 'total_as_written': 22000, 'houses_sum': 22300, 'aaron_dotted': True, 'case_source': 'Num 3:16 — and Moses counted them by the mouth of the LORD, as he was commanded; 3:39 all the counted of the Levites... twenty-two thousand'})   # bamidbar [act: wayyiqtol at Num 3:16]
+    w.submit({'kind': 'firstborn_count_commanded', 'subject': 'the-firstborn-of-israel', 'threshold': 'a month', 'beasts_too': True, 'case_source': 'Num 3:40-41 — and the LORD said to Moses: count every firstborn male of the children of Israel from a month old and upward, and lift the number of their names'})   # bamidbar [speech: wayyiqtol at Num 3:40]
+    w.submit({'kind': 'firstborn_counted', 'subject': 'the-firstborn-of-israel', 'total': 22273, 'case_source': 'Num 3:42-43 — and Moses counted, as the LORD commanded him, every firstborn among the children of Israel; twenty-two thousand, three and seventy and two hundred'})   # bamidbar [act: wayyiqtol at Num 3:42]
+    w.submit({'kind': 'redemption_commanded', 'subject': 'the-firstborn-of-israel', 'excess': 273, 'rate': 5, 'unit': 'twenty gerah the shekel', 'recipients': 'aaron-and-sons', 'case_source': 'Num 3:44-48 — and the LORD spoke to Moses saying: take the Levites instead of every firstborn... and the redemption of the three and the seventy and the two hundred... five, five shekels per skull'})   # bamidbar [speech: wayyiqtol at Num 3:44]
+    w.submit({'kind': 'firstborn_redeemed', 'subject': 'the-firstborn-of-israel', 'excess': 273, 'rate': 5, 'money': 1365, 'recipients': 'aaron-and-sons', 'case_source': 'Num 3:49-51 — and Moses took the redemption money... five and sixty and three hundred and a thousand by the shekel of the sanctuary; and Moses gave the redemption money to Aaron and his sons by the mouth of the LORD'})   # bamidbar [act: wayyiqtol at Num 3:49]
+    # ---- Num 4 ----
+    w.submit({'kind': 'kohath_service_commanded', 'subject': 'the-levites', 'ages': [30, 50], 'packing_order': 'the priests cover, then the Kohathites carry', 'death_clauses': 3, 'eleazar_charge': ['the oil of the light', 'the incense of spices', 'the continual meal-offering', 'the anointing oil'], 'case_source': 'Num 4:1-20 — and the LORD spoke to Moses and to Aaron saying: lift the head of the sons of Kohath... from thirty years old and upward until fifty... they shall not touch the holy lest they die'})   # bamidbar [speech: wayyiqtol at Num 4:1]
+    # ---- Num 9 ----
+    assert_ink('Num 9:5', [14], ordinals=[1]); M['num9_pesach'] = w.clock.day_in('exodus', 2, 1, 14); w.marker('Num 9:5', M['num9_pesach'], value='and they kept the Passover in the first month, on the fourteenth day of the month (9:5) — the second year (9:1): the counter\'s first move past the erection\'s day; the erection\'s morrow timers fire on this walk')   # the second year's Passover: the fourteenth of the first month (the ordinal first at 9:5)
+    w.submit({'kind': 'passover_kept', 'subject': 'israel', 'date': 'the fourteenth of the first month of the second year', 'case_source': 'Num 9:5 — and they kept the Passover in the first month, on the fourteenth day of the month, between the evenings, in the wilderness of Sinai', 'slot': 'between_the_evenings'})   # pesach_sheni [act: wayyiqtol at Num 9:5]
+    w.submit({'kind': 'unclean_at_the_passover', 'subject': 'the-unclean-men', 'persons': ['the-unclean-men'], 'reason': 'unclean_by_corpse', 'day_of_month': 14, 'case_source': 'Num 9:6-7 — and there were men who were unclean by a human corpse and could not keep the Passover on that day; and they came near before Moses and before Aaron: why should we be held back?'})   # pesach_sheni [act: wayyiqtol at Num 9:6]
+    w.submit({'kind': 'stood_to_hear', 'subject': 'the-unclean-men', 'persons': ['the-unclean-men'], 'case_of': 'Num 9:6', 'uncertainty': 'the_mode', 'case_source': 'Num 9:8 — and Moses said to them: stand, and I will hear what the LORD will command concerning you (Sifrei Bamidbar 68:1: I have not heard; R. Chidka: whether the blood is sprinkled for them)'})   # pesach_sheni [speech: wayyiqtol at Num 9:8]
+    w.submit({'kind': 'statute_declared', 'subject': 'the-unclean-men', 'persons': ['the-unclean-men'], 'installs': 'law_pesach_sheni', 'case_source': 'Num 9:9-14 — and the LORD spoke to Moses saying: speak to the children of Israel saying: any man who is unclean by a corpse or on a distant way... shall keep a Passover to the LORD in the second month; one statute shall be for you'})   # pesach_sheni [speech: wayyiqtol at Num 9:9]
+    # ---- Num 15 ----
+    w.submit({'kind': 'gathered_wood_on_the_sabbath', 'subject': 'the-wood-gatherer', 'profaner': 'the-wood-gatherer', 'witnessed': True, 'labor': 'detaching', 'warned': True, 'labor_named': True, 'case_source': 'Num 15:32-33 — and they found a man gathering wood on the Sabbath day; and they brought him near, those who found him gathering wood, to Moses and to Aaron and to all the congregation'})   # mekoshesh [act: wayyiqtol at Num 15:32]
+    w.submit({'kind': 'placed_in_custody', 'subject': 'the-wood-gatherer', 'person': 'the-wood-gatherer', 'case_of': 'Num 15:32', 'uncertainty': 'the_mode', 'case_source': 'Num 15:34 — and they placed him in the guard, for it had not been declared what should be done to him (Sanhedrin 78b:7: the mode; Onkelos: bound him in the guardhouse)'})   # mekoshesh [act: wayyiqtol at Num 15:34]
+    w.submit({'kind': 'sentence_declared', 'subject': 'the-wood-gatherer', 'person': 'the-wood-gatherer', 'sentence': 'stoning', 'outside_the_camp': True, 'hands_laid': False, 'installs': 'law_sabbath:death_run', 'case_source': 'Num 15:35 — and the LORD said to Moses: die shall die the man; stone him with stones, all the congregation, outside the camp (Sifrei 114:1: for the generations / for the hour)'})   # mekoshesh [speech: wayyiqtol at Num 15:35]
+    w.submit({'kind': 'stoned_as_commanded', 'subject': 'the-wood-gatherer', 'person': 'the-wood-gatherer', 'transgression': 'sabbath', 'case_source': 'Num 15:36 — and all the congregation brought him outside the camp and stoned him with stones, and he died, as the LORD commanded Moses'})   # mekoshesh [act: wayyiqtol at Num 15:36]
+    # ---- Num 16 ----
+    w.submit({'kind': 'incense_burned', 'subject': 'the-golden-altar', 'burner': 'the-two-hundred-fifty', 'burner_class': 'stranger', 'time': 'morning', 'case_source': "Num 16:17-35, 17:5 — the fire-pans; no stranger not of Aaron's seed", 'law': 'W6'})   # incense_shekel [act: wayyiqtol at Num 16:15]
+    # ---- Num 27 ----
+    assert_ink('Num 27:1', []); M['daughters'] = w.clock.day_in('exodus', 40, 5, 1); w.marker('Num 27:1', M['daughters'], value='the daughters of Zelophehad drew near — READING-PLACED in the fortieth year, the year Aaron died (Sifrei Bamidbar 133:3: Eleazar in the court\'s roster dates the case; Num 33:38: the fortieth year, the fifth month, the first day — the ink\'s own stamp on another verse; Bava Batra 121a:9: after the wilderness generation stopped dying, the fifteenth of Av of that year); the day MODELED at the stamp (said so): the counter walks from the second year\'s Passover and the one pending timer — the men\'s second Passover — fires on the way', placement='reading_placed')   # the daughters: reading-placed, the fortieth year — the numbers on 33:38, none on 27:1
+    w.submit({'kind': 'daughters_approached', 'subject': 'the-daughters-of-zelophehad', 'persons': ['the-daughters-of-zelophehad'], 'decedent': 'zelophehad', 'no_son': True, 'no_sons_line': True, 'ground': 'name_withheld', 'case_source': "Num 27:1-4 — and the daughters of Zelophehad drew near... and they stood before Moses and before Eleazar the priest and before the princes and all the congregation at the door of the tent of meeting, saying: our father died in the wilderness... in his own sin he died, and he had no sons; why should the name of our father be withheld from his family because he has no son? give us a holding among our father's brothers"})   # zelophehad [act: wayyiqtol at Num 27:1]
+    w.submit({'kind': 'judgment_brought_near', 'subject': 'the-daughters-of-zelophehad', 'persons': ['the-daughters-of-zelophehad'], 'case_of': 'Num 27:1', 'uncertainty': 'the_scope', 'brought_by': 'moses', 'case_source': 'Num 27:5 — and Moses brought their judgment near before the LORD (Sifrei Bamidbar 133:4 / Bava Batra 119a:6: Moses knew daughters inherit — the fit against the held; Sanhedrin 8a:4: I will hear it)'})   # zelophehad [act: wayyiqtol at Num 27:5]
+    w.submit({'kind': 'statute_declared', 'subject': 'the-daughters-of-zelophehad', 'persons': ['the-daughters-of-zelophehad'], 'installs': 'law_zelophehad', 'verdict': 'holding_owed', 'case_source': "Num 27:6-11 — and the LORD said to Moses, saying: rightly do the daughters of Zelophehad speak; given shall be given to them a holding of inheritance among their father's brothers, and you shall pass over the inheritance of their father to them; and to the children of Israel speak, saying: if a man dies and has no son, you shall pass his inheritance to his daughter... and it shall be to the children of Israel a statute of judgment"})   # zelophehad [speech: wayyiqtol at Num 27:6]
+    # ---- Num 36 ----
+    w.submit({'kind': 'tribes_approached', 'subject': 'the-heads-of-gilead', 'persons': ['the-heads-of-gilead'], 'against': ['the-daughters-of-zelophehad'], 'ground': 'tribal_diminution', 'jubilee_raised': True, 'first_output_cited': True, 'case_source': 'Num 36:1-4 — and the heads of the fathers of the family of the sons of Gilead drew near and spoke before Moses and before the princes: the LORD commanded my lord to give the land by lot... and my lord was commanded by the LORD to give the inheritance of Zelophehad our brother to his daughters; if they become wives to one of the sons of the tribes their inheritance shall be diminished... and if the jubilee be, it shall be added'})   # zelophehad [act: wayyiqtol at Num 36:1]
+    w.submit({'kind': 'command_relayed', 'subject': 'the-daughters-of-zelophehad', 'persons': ['the-daughters-of-zelophehad'], 'installs': 'law_zelophehad:tribe_transfer', 'verdict': 'marries_within_tribe', 'permission': 'good_in_their_eyes', 'limit': 'fathers_tribe', 'reach': 'this_generation', 'case_source': 'Num 36:5-9 — and Moses commanded the children of Israel by the mouth of the LORD, saying: rightly the tribe of the sons of Joseph speak; this is the thing that the LORD commanded concerning the daughters of Zelophehad: to whom is good in their eyes they shall be wives, only to the family of the tribe of their father; and an inheritance shall not go around from tribe to tribe'})   # zelophehad [speech: wayyiqtol at Num 36:5]
+    w.submit({'kind': 'daughters_married', 'subject': 'the-daughters-of-zelophehad', 'persons': ['the-daughters-of-zelophehad'], 'husbands': 'sons_of_their_uncles', 'tribe': 'manasseh', 'case_source': 'Num 36:11-12 — and Mahlah, Tirzah, Hoglah, Milcah and Noah the daughters of Zelophehad were wives to the sons of their uncles; of the families of the sons of Manasseh son of Joseph they were wives, and their inheritance remained on the tribe of the family of their father (36:10: as the LORD commanded Moses, so did the daughters)'})   # zelophehad [act: wayyiqtol at Num 36:11]
     return M
 # ==== TAPE END ====
 
 
 # ---- THE GRADED LITERALS ----
 # PREDICTED BY THE STITCHER (scratchpad seq_stitch.py) BEFORE the first run — the tape census and the markers' days:
-CENSUS = (1761, 1065, 1058, 679, 7, 10, 7, 0, 70, 130, 113, 15, 2, 611, 234)   # O9 (2026-09-08): predicted by the stitcher after the covenant marker joined the table (130 markers, F 113 — the only moved counts; S4's: (1761, 1065, 1058, 679, 7, 10, 7, 0, 70, 129, 112, 15, 2, 611, 234))   # O8 S4 (2026-09-08): predicted by the stitcher after FROM THE FORD TO THE COFFIN joined the tape (Gen 32-37, 39-47, 50) — 309 history events from the runner's scene (313 less the four the register test set aside: the three marriages of 36:2-3 and 43:1's famine, no narrative verb within ten verses); twenty rows of 8g + 42:18's third day found at the first tape run (CJ6) + the two split rows (one marker per row: 50:4, 50:14); S3's: (1448, 756, 749, 679, 7, 6, 7, 0, 56, 109, 92, 15, 2, 444, 198)
+CENSUS = (1842, 1097, 1090, 729, 6, 10, 7, 0, 70, 133, 115, 15, 3, 638, 240)   # THE NUMBERS WALK 1b (2026-09-09): typed from the stitcher's print (scratchpad bamidbar_stitch1.out) after Bamidbar's thirteen lines and the book's opening marker joined — scanned +31 (13 history + 18 case), history 1084 -> 1097, on tape 1077 -> 1090, case 711 -> 729, kinds 625 -> 638 (the thirteen tape kinds), subjects 239 -> 240 (the-levites and the-firstborn-of-israel join; israel stood); markers 132 -> 133 (F 115 unmoved: Num 1:1 forward +1, Num 9:5 retyped RETROGRADE -1; R 2 -> 3); sitting 4's line follows:   # THE TENT sitting 4 (2026-09-09): typed from the stitcher's print (scratchpad tent4_stitch2.out) after the daughters' six lines and Numbers' second marker joined — scanned +15 (6 history + 9 case), history 1078 -> 1084, on tape 1071 -> 1077, case 702 -> 711, kinds 620 -> 625 (five act/speech kinds), subjects 237 -> 239 (the daughters, the heads of Gilead); markers 131 -> 132 (F 114 -> 115: Num 27:1 reading-placed); the per-runner diff: zelophehad's fifteen alone; sitting 2's line follows:   # THE TENT sitting 2 (2026-09-09): typed from the stitcher's print after the second Passover's four lines and Numbers' first marker joined — AND the incense runner's Korach line at Num 16 (source-off while the tape knew three books; history 1069 -> 1074, on tape 1062 -> 1067, source-off 7 -> 6, case +14 the exam scene's rows, kinds +4, subjects +1 the-unclean-men; markers 130 -> 131, F 113 -> 114); sitting 1's:   # THE TENT sitting 1 (2026-09-09): typed from the stitcher's print after the blasphemer's four acts joined (scanned +4, history +4, on tape +4, kinds +4, subjects +1 — the_blasphemer; closes 70 unchanged: the tent daemon's own close is not a tape line, the recorder skips closes made inside a daemon's call)   # O9 (2026-09-08): predicted by the stitcher after the covenant marker joined the table (130 markers, F 113 — the only moved counts; S4's: (1761, 1065, 1058, 679, 7, 10, 7, 0, 70, 129, 112, 15, 2, 611, 234))   # O8 S4 (2026-09-08): predicted by the stitcher after FROM THE FORD TO THE COFFIN joined the tape (Gen 32-37, 39-47, 50) — 309 history events from the runner's scene (313 less the four the register test set aside: the three marriages of 36:2-3 and 43:1's famine, no narrative verb within ten verses); twenty rows of 8g + 42:18's third day found at the first tape run (CJ6) + the two split rows (one marker per row: 50:4, 50:14); S3's: (1448, 756, 749, 679, 7, 6, 7, 0, 56, 109, 92, 15, 2, 444, 198)
 DAYS = {'born:seth': 47495, 'born:noach': 385709, 'born:shem': 568319, 'reprieve_decree': 561075, 'covenant_pieces': 742547, 'boarding_call': 604898, 'flood': 604905, 'flood_ordinal': 604521, 'rain_end': 604945, 'window': 605165, 'dove_second': 605172, 'dove_third': 605179, 'hagar_given': 742547, 'mamre': 747874, 'sodom_dawn': 747875, 'binding': 761555, 'moriah_seen': 761557, 'stew_day': 775427, 'blessing': 792959, 'mahalath': 792959, 'departure': 798065, 'laban_month': 798095, 'wedding': 800663, 'rachel_given': 800670, 'fourteen_end': 803208, 'flight': 805422, 'told': 805424, 'heap_morning': 805429, 'jabbok_night': 805430, 'peniel_sunrise': 805431, 'sukkot': 805432, 'shechem': 805963, 'bethel_again': 805964, 'ephrath_road': 806141, 'hebron': 806142, 'age:joseph:17': 809399, 'prison_dreams': 813411, 'birthday': 813413, 'pharaoh_dreams': 814151, 'custody_third': 816691, 'joseph30': 814151, 'plenty_end': 816689, 'famine_two': 817427, 'beersheba_descent': 817427, 'embalmed': 823665, 'weeping_end': 823695, 'atad': 823696, 'atad_end': 823703, 'ark_rested': 605052, 'mountains': 605125, 'dried': 605213, 'dry': 605269, 'born:arpachshad': 605643, 'born:abraham': 711497, 'born:isaac': 748228, 'eighth_day': 748235, 'born:jacob': 769937, 'born:joseph': 803171, 'descent': 817427, 'jacob_147': 823625, 'died:methuselah': 604859, 'died:terah': 760817, 'born:moses': 865071, 'ark': 865159, 'speaking': 894137, 'river7': 894144, 'darkness_end': 894152, 'lamb_taken': 894323, 'lamb_slaughtered': 894327, 'exodus_epoch': 894314, 'exodus': 894328, 'sea': 894334, 'shur': 894337, 'sin_wilderness': 894358, 'manna_first': 894359, 'sinai': 894373, 'sinai_2': 894374, 'sinai_bound': 894375, 'sinai_sep': 894376, 'giving': 894379, 'ascent': 894379, 'breaking': 894419, 'morrow': 894420, 'second_ascent': 894460, 'second_tablets': 894500, 'erected': 894698, 'lev8': 894691}   # O9 (2026-09-08): the stitcher's prediction with covenant_pieces (the running setting's eighty-five = hagar_given's day; every other key unmoved)   # O8 S4 (2026-09-08): the stitcher's prediction with the twenty-one new keys (the heap's morning to Atad's end, the custody's third day)
 # EXPECTED VERDICTS of the checkpoints (SEQUENTIAL_RUN.md section 6 — a DIVERGE expected is the text's own gap, filed OPEN):
 VERDICTS = ['C0 MATCH', 'C1 DIVERGE', 'C2 MATCH', 'C3a DIVERGE', 'C3b MATCH', 'C3b-day MATCH', 'C3c MATCH', 'C3d-70 MATCH', 'C3d-85 DIVERGE', 'C3c-literal DIVERGE', 'C4 DIVERGE', 'C5 MATCH', 'C6 MATCH', 'C7 MATCH', 'C8 MATCH', 'C9 MATCH', 'C10 DIVERGE', 'C11 MATCH',
-            'CS0 DIVERGE', 'CS1 DIVERGE', 'CS2 MATCH', 'CS3 MATCH', 'CS4 DIVERGE', 'CS6 MATCH', 'CS7 MATCH', 'CS8 MATCH', 'CS9 MATCH',
+            'CS0 DIVERGE', 'CS1 DIVERGE', 'CS2 MATCH', 'CS3 MATCH', 'CS4 DIVERGE', 'CS6 MATCH', 'CS7 MATCH', 'CS8 MATCH', 'CS9 MATCH', 'CN1 MATCH', 'CB1 MATCH', 'CB2 MATCH', 'CB3 MATCH', 'CB4 MATCH', 'CB5 MATCH', 'CB6 MATCH', 'CB7 MATCH', 'CB8 MATCH',
             'CG0 MATCH', 'CG1 MATCH', 'CG2 MATCH', 'CG3 MATCH', 'CG4 MATCH', 'CG5 MATCH', 'CG6 MATCH', 'CG7 MATCH', 'CG8 MATCH', 'CG9 MATCH',
             'CH0 MATCH', 'CH1 DIVERGE', 'CH2 MATCH', 'CH3 MATCH', 'CH4 MATCH', 'CH5 MATCH', 'CH6 MATCH', 'CH7 MATCH', 'CH8 MATCH', 'CH9 MATCH', 'CH10 MATCH',
             'CJ0 MATCH', 'CJ1 MATCH', 'CJ2 MATCH', 'CJ3 MATCH', 'CJ3b DIVERGE', 'CJ4 MATCH', 'CJ5 MATCH', 'CJ6 MATCH', 'CJ7 MATCH', 'CJ8 MATCH', 'CJ9 MATCH', 'CJ10 MATCH', 'CJ10-tokens MATCH', 'CJ11 MATCH', 'C12 MATCH', 'C13 MATCH']   # O9 (2026-09-08; CLOCK.md 12g): C3d THE JOIN under both settings — seventy MATCHES the ink's five hundred, eighty-five DIVERGES by fifteen (the evidence); C12/C13 Avodah Zarah 9a:7-8 under the ELAPSED column   # O8 S4 (2026-09-08; NARRATIVE_GAPS.md 8h): CJ3b DIVERGE is the declared verdict — the seventy's missing one, the tradition's five answers on the shelf, none the ink's (OPEN)   # O8 S3 (2026-09-08; NARRATIVE_GAPS.md 7h): CH1 DIVERGE is the declared verdict (the ten trials against the ink's one)   # O8 S2 (2026-09-08; NARRATIVE_GAPS.md 6h): the stretch's checkpoints as the design expects — all MATCH: the ten generations twice, the flood's twelve months plus the ink's days, the two countdowns to the flood's day (the reprieve retrograde-dated, the seven days), the dove before the drying, the war's years, Hagar's year, the three heaven entries, Terah's sixty, Adam's thousand-year day   # O8 S1 (2026-09-08; NARRATIVE_GAPS.md 4h): the story's checkpoints as the design expects — the ark a day past the shelf's sixth of Sivan (the Calendar's month key keeps the day of month), the weekday ANCHOR diverging (the modeled calendar over 2,449 years: the exodus on the second day of the week by the creation count against the shelf's Thursday; the manna's morning likewise), the SPACING matching (Nisan full, Iyar deficient — the shelf's own lengths), the giving on the tape's ascent day, the judges, the trials, the plagues, the twelve-month bound; CS5 is C3c parsed
@@ -1645,9 +1754,9 @@ FORK_VERDICTS = {'descent_literal': ['C3a MATCH', 'C3b DIVERGE', 'C3c DIVERGE'],
                  'covenant_pieces': ['C3a DIVERGE', 'C3b MATCH', 'C3c MATCH']}   # O9 T2 (2026-09-08): this world's exodus from its placed covenant (the Mekhilta's seventy + 430): C3b MATCHES because the Mekhilta's thirty IS the join, not by construction; the old C3d (the implied covenant within Gen 15's bound) retired here — it would match by construction
 # TYPED FROM THE FIRST RUN (labeled so; read as evidence before typing): the run-derived counts —
 # (events, timers set, fired, cancelled, retro-writes, writes, daemons that fired, entities on the ledger, the double writes of the overlap kinds, the tape's closes performed)
-RUN = (1058, 43, 39, 0, 0, 1224, 12, 252,
-       ((('israel_people', 'given_by_the_heart'), 2), (('israel_people', 'set_apart_before_me'), 2)),
-       74)
+RUN = (1090, 44, 44, 0, 0, 1277, 19, 261,   # THE NUMBERS WALK 1b (2026-09-09): THE FIRST RUN'S READING — entities 261 against the predicted 262: THE TRIBE OF LEVI WAS ALREADY ON THE LEDGER — the erection runner's levites_gathered at Exod 32:26 ('gather to me... the sons of Levi') writes on the raw token 'the-levites', a singleton entity since O8; this sitting's registry row the_levites re-homes that token, so the calf's day and the census write on ONE entity (O10's lesson: a scene token re-homes EVERY runner's use of it) — only the firstborn of Israel is new; the slot retyped from the reading, every other slot as PREDICTED in NUMBERS_WALK.md "Sitting 1b" and from the code's own arithmetic BEFORE the run — events +13 (the eight commands and the five runs); timers set unchanged (the debits carry no due); fired unchanged (the erection's morrow timers fire on the walk to 1:1's (2, 2, 1) instead of 9:5's fourteenth — the same fires, an earlier line); retro-writes 0 (the engine's retro-write is a due already past — the men's due (2, 2, 14) is ahead of the counter); writes +20 (census 1+1, the Levites exempted 4, the camp 1+1, the Levites given 3, the Levite count 1+1, the firstborn count 1+1, the redemption 1+2, the Kohathites 2); daemons fired +1 (law_census); entities +2 (the-levites, the-firstborn-of-israel — each written on; aaron-and-sons a counterparty, not a subject); the four pairs unchanged; closes +5 (the five spec/run pairs' debits closed by their runs); sitting 4's line follows:   # THE TENT sitting 4 (2026-09-09): THE FIRST RUN'S READING — entities 260 against the predicted 261: THE HEADS OF GILEAD never enter the ledger — their plea (36:1-4) is consumed by law_zelophehad, which writes marries_within_tribe on the DAUGHTERS (the persons named against), and the ink writes nothing on the tribe's heads either ('rightly... speak' is a verdict on their words, not an entry): AN EVENT'S SUBJECT IS NOT AN ENTITY UNTIL A DAEMON WRITES ON IT (sitting 2's timer lesson, the act's twin); the slot retyped from the reading, every other slot as PREDICTED in THE_TENT.md section 4 before the run — +6 events (the daughters' six lines), timers set unchanged (holding_owed carries no due: a write), fired +1 (the men's second Passover on the reading-placed marker's walk to the fortieth year), writes +8 (holding_owed at 27:1-4 by law_zelophehad; the docket at 27:5; rule_installed at 27:6-11; marries_within_tribe at 36:1-4; rule_installed at 36:5-9; wife_taken and inheritance_stayed_in_tribe at 36:11-12; the fire's second_passover_due on the men), daemons fired +1 (law_zelophehad), entities +2 (the daughters, the heads of Gilead), the four pairs unchanged, closes +1 (the docket by the statute; the holding stays OPEN — Josh 17:4). SITTING 3's line follows:   # THE TENT sitting 3 (2026-09-09): PREDICTED in THE_TENT.md section 3 before the run — +4 events (the wood-gatherer's four lines, no marker), no timer, writes +7 (labor_barred, put_to_death, stoned by law_sabbath and the warning by law_mekoshesh at 15:32-33; in_custody and the docket at 15:34; rule_installed at 15:35; nothing at 15:36), daemons fired +2 (law_sabbath's FIRST fire on the tape, law_mekoshesh), entities +1 (the_wood_gatherer), the four pairs unchanged, closes +3 (the docket by the sentence; stoned and in_custody by the execution). SITTING 2's line follows: the first run READ — entities 258 against the predicted 257: THE TABLE entered the ledger only when its first Sabbath bread fell due (bread_set_weekly's timer, set at Exod 40:23 with no immediate write, fired on this walk) — a timer's subject is not an entity until the fire writes it; the closes 77 against 79 was the tuple's own three-book prefix (widened); PREDICTED in THE_TENT.md section 2 and AMENDED THERE BEFORE THE RUN from the stitcher's census and the code's own arithmetic — events +5 (the Passover kept, the case, the halt, the output at Num 9; Korach's fire-pans at Num 16 admitted by the fourth book); timers set +1 (the men's due to the second month); fired +4 (the erection's morrow timers fire on the walk to the fourteenth); writes +9 (four by the daemons at Num 9, four by the fires, strange_offering_barred on the two hundred fifty at Num 16 — law_erection's incense branch now guarded to its own span); daemons fired +1 (law_pesach_sheni); entities +2 (the_unclean_men, the-two-hundred-fifty); the double writes +2 pairs (the lampstand and the golden altar, each at the act and at its morrow's fire); closes +2 (the docket and the wait, both by the output's verse)   # sitting 1's: (1062, 43, 39, 0, 0, 1233, 14, 255, …, 77)
+       ((('israel_people', 'given_by_the_heart'), 2), (('israel_people', 'set_apart_before_me'), 2), (('the-golden-altar', 'incense_continual'), 2), (('the-lampstand', 'lamp_arranged'), 2)),
+       89)   # THE NUMBERS WALK 1b (2026-09-09): predicted 89 — the five debits closed (1:19, 2:34, 3:16, 3:42, 3:51); sitting 4's line follows:   # THE TENT sitting 4 (2026-09-09): predicted 84 — the docket closed by 27:6-11; sitting 3's line follows:   # THE FIRST RUN'S READING (THE TENT sitting 3): closes 82 matched, then `--ask ledger the_wood_gatherer` showed put_to_death OPEN — the deed performs the death sentence too; the tent's execution branch amended, 83 predicted BEFORE the second run
 # O9 (2026-09-08) — THE RUN TUPLE UNMOVED, as CLOCK.md 12g predicted (the placement and slot stamps write nothing; the covenant marker walks the
 # clock to the ten years' own day). The first O9 run (scratchpad o9_seq1.txt) MISSED this tuple by ONE slot — retro-writes 3 against 0 — and the
 # reading found the runner's own hand, not the world: the fork loop's new print had reused the name `retro` for the covenant world's retrograde
@@ -1681,12 +1790,12 @@ RUN = (1058, 43, 39, 0, 0, 1224, 12, 252,
 # O9 (2026-09-08; CLOCK.md 12b, 12e) — PREDICTED BY THE STITCHER before the run: the markers by placement class and the tape's events
 # by stamp (page_order / text_constrained / reading_placed), and the events by the ink's own day-slot at their first verse (re-verified
 # after the run against the verse — a mismatch fails)
-PLACEMENT = {'markers': {'text_constrained': 84, 'reading_placed': 31}, 'events': {'text_constrained': 86, 'page_order': 941, 'reading_placed': 31}}   # O9 (2026-09-08): read from the stitcher's print (scratchpad o9_stitch1.txt) — 31 reading-placed markers, 31 reading-placed events at their verses; 84 + 31 = the 115 non-proleptic markers; 86 + 941 + 31 = the 1058 events
-SLOTS = {'sunset': 3, 'evening': 3, 'night': 12, 'morning': 14, 'dawn': 2, 'noon': 3}   # O9 (2026-09-08): read from the stitcher's print — the ink's day-words at the events' first verses (Gen 1:5-style double words stamp nothing)
-NEWEST_RUNNER = 'joseph'   # the runner whose lines THE REST test removes from the tape (the newest joined); the next sitting moves it
-PREVIOUS_RUN = (749, 31, 27, 0, 0, 907, 11, 219,
-                ((('israel_people', 'given_by_the_heart'), 2), (('israel_people', 'set_apart_before_me'), 2)),
-                56)   # O8 S3's RUN — THE REST must reproduce it exactly (O8 S2's, the previous: (443, 14, 10, 0, 0, 522, 10, 166, the same overlap, 39))
+PLACEMENT = {'markers': {'text_constrained': 86, 'reading_placed': 32}, 'events': {'text_constrained': 96, 'page_order': 962, 'reading_placed': 32}}   # THE NUMBERS WALK 1b (2026-09-09): typed from the stitcher's print — the Num 1:1 marker text_constrained (+1); nine events text_constrained (the commands and the runs at dated verses: 1:1, 1:18-19 and the frames inside the marker's bound) and four page_order; sitting 4's line follows:   # THE TENT sitting 4 (2026-09-09): typed from the stitcher's print — the Num 27:1 marker reading_placed (+1), the plea at the marker's verse reading_placed (+1), the halt, the statute, the tribes, the relayed command and the marriage page_order (+5); sitting 3's line follows:   # THE TENT sitting 3 (2026-09-09): typed from the stitcher's print — the gatherer's four lines page_order (no marker in the span); sitting 2's line follows: read from the stitcher's print — the Num 9:5 marker text_constrained (+1), the Passover kept at the marker's verse text_constrained (+1), the case, the halt, the output and the Korach line page_order (+4); sitting 1's:   # THE TENT sitting 1 (2026-09-09): page_order +4 — the blasphemer's acts sit in the bound after the erection's marker   # O9 (2026-09-08): read from the stitcher's print (scratchpad o9_stitch1.txt) — 31 reading-placed markers, 31 reading-placed events at their verses; 84 + 31 = the 115 non-proleptic markers; 86 + 941 + 31 = the 1058 events
+SLOTS = {'sunset': 3, 'evening': 3, 'night': 12, 'morning': 14, 'dawn': 2, 'noon': 3, 'between_the_evenings': 1}   # THE TENT sitting 2 (2026-09-09): typed from the stitcher's print — the Passover kept at Num 9:5 carries the ink's own day-word, 'between the evenings', the first event on the tape in that slot; the first run's slots checkpoint MISSED for want of this line (the stitcher had printed it)   # O9 (2026-09-08): read from the stitcher's print — the ink's day-words at the events' first verses (Gen 1:5-style double words stamp nothing)
+NEWEST_RUNNER = 'bamidbar'   # THE NUMBERS WALK 1b (2026-09-09): Bamidbar's thirteen lines and the book's opening marker are the newest joined (was 'zelophehad'); THE REST drops them (the marker inside the declared span [[Num,1,1,54],...,[Num,4,1,20]]); the Num 9:5 marker outside the span stays and walks FORWARD in that world as at sitting 4; sitting 4's line follows:   # THE TENT sitting 4 (2026-09-09): the daughters' six lines and their reading-placed marker are the newest joined (was 'mekoshesh'); sitting 3's line follows:   # THE TENT sitting 3 (2026-09-09): the wood-gatherer's four lines are the newest joined (was 'pesach_sheni'); sitting 2's line follows: the second Passover's lines are the newest joined (was 'lev24'); THE REST now also drops the marker rows inside the newest runner's declared span   # THE TENT sitting 1 (2026-09-09): the blasphemer's narrative lines are the newest joined (was 'joseph')   # the runner whose lines THE REST test removes from the tape (the newest joined); the next sitting moves it
+PREVIOUS_RUN = (1077, 44, 44, 0, 0, 1257, 18, 260,   # THE NUMBERS WALK 1b (2026-09-09): sitting 4's RUN exactly — the tape minus Bamidbar's thirteen lines and the 1:1 marker reproduces it (the 9:5 marker forward again in that world); sitting 4's line follows:   # THE TENT sitting 4 (2026-09-09): sitting 3's RUN exactly — the tape minus the daughters' six lines and their marker (inside the declared span [[Num,27,1,11],[Num,36,1,12]]; the men's second Passover fire goes with the marker) reproduces it; sitting 3's line follows:   # THE TENT sitting 3 (2026-09-09): sitting 2's RUN exactly — the tape minus the gatherer's four lines (no marker row inside Num 15:32-36) reproduces it; sitting 2's line follows: sitting 1's RUN (1062, 43, 39, 0, 0, 1233, 14, 255, …, 77) PLUS the one line the fourth book admitted outside the newest runner — the incense runner's Korach fire-pans at Num 16 (+1 event; +1 write, strange_offering_barred by law_investiture; +1 entity, the two hundred fifty) — THE REST (the tape minus the second Passover's four lines and its marker) must reproduce it exactly
+       ((('israel_people', 'given_by_the_heart'), 2), (('israel_people', 'set_apart_before_me'), 2), (('the-golden-altar', 'incense_continual'), 2), (('the-lampstand', 'lamp_arranged'), 2)),
+       84)
 # O8 S2 THE PRIMEVAL STORY (2026-09-08) — READ THEN TYPED from the first run after the tape was re-stitched (scratchpad o8_s2_seq1.txt), the
 # reading by script BEFORE the typing: the tape's events attributed to their runners by the tape's own comments — THE REST REPRODUCES S1'S
 # TUPLE EXACTLY (260 events, 298 writes, 12 set, 8 fired), so the primeval joined without touching another span's count; its own share 183
@@ -1740,7 +1849,8 @@ def run_world(setting, reg, label):
     P = dict(PARAMS); P['sojourn_start'] = dict(PARAMS['sojourn_start'], value=setting)
     if setting == 'covenant_pieces':                     # O9 T2: the Mekhilta's world places the covenant at seventy (its own arithmetic)
         P['covenant_placement'] = dict(PARAMS['covenant_placement'], value='mekhilta_bo_12_40')
-    w = WE.World(era='THE SEQUENTIAL RUN — the three books on one world (clock unit: days; the creation epoch; sojourn_start = %s)' % setting, epoch='creation', registry=reg)
+    w = WE.World(era='THE SEQUENTIAL RUN — the three books on one world (clock unit: days; the creation epoch; sojourn_start = %s)' % setting, epoch='creation', registry=reg,
+                 installation=True)      # THE LOOP step 3 (2026-09-09): the sequence world OPTS IN (D1) on the fourth registry's running setting — boot until the second pass (D2)
     w.laws = daemons()
     assert w.laws, 'ZERO-REPORT: empty law library'
     M = {}
@@ -1750,6 +1860,71 @@ def run_world(setting, reg, label):
     path, n, coerced = WJ.sink(w, source='cold_run_sequence/%s' % setting)     # THE LOOP step 1: this world's run as one L3 segment
     print('JOURNAL %s: %s (%d lines, coerced %d)' % (label, path, n, coerced))
     return w, M
+
+
+def run_to(verse):
+    """THE LOOP step 4 THE CURSOR (2026-09-09; THE_LOOP.md "Step 4 THE CURSOR — the design"; the probes cursor_probes.py written first):
+    the running world built exactly as run_world builds it, the tape executed under World.stop_before and stopped at the LEFT EDGE of
+    `verse` (a line at or after it raises CursorReached), the world handed back LIVE with its FORK — the count of log lines replayed.
+    Journals nothing: the audit and the append are world_journal.cursor_segment's. A verse beyond the tape's last line is the whole tape."""
+    reg = registry_map()
+    setting = PARAMS['sojourn_start']['value']
+    P = dict(PARAMS); P['sojourn_start'] = dict(PARAMS['sojourn_start'], value=setting)
+    w = WE.World(era='THE CURSOR — the tape replayed to the left edge of %s (clock unit: days; the creation epoch; sojourn_start = %s)' % (verse, setting),
+                 epoch='creation', registry=reg, installation=True)
+    w.laws = daemons()
+    w.stop_before = WE.verse_key(verse)
+    if w.stop_before is None:
+        raise SystemExit('CURSOR: %r is not a verse' % verse)
+    M = {}
+    del _INK_CHECKS[:]
+    try:
+        tape(w, M, P)
+    except WE.CursorReached:
+        pass
+    w.stop_before = None                                 # live again: new submissions at any verse
+    w.ink_checks = len(_INK_CHECKS)
+    return w, M, len(w.log)
+
+
+def cursor_main(verse):
+    """--cursor <verse>: the world at the cursor asked (its position, its open entries, its pending timers), the scenarios registered for
+    the verse in scenarios.yaml submitted as labeled hypotheticals (THE LOOP step 5), every grade printed against the Mishnah's rows, the
+    appended segment written (its chain continuing from the base's at the fork); with no scenario at the verse nothing is appended."""
+    import yaml as _yaml
+    w, M, fork = run_to(verse)
+    reg = w._registry
+    C = w.clock.calendar
+    opens = sum(len(ent.open_entries()) for ent in w.entities.values())
+    print('THE CURSOR at the left edge of %s: %d lines replayed (the fork); the position in the text %r; the clock at day %d = creation year %d, the exodus era %r; '
+          'entities %d, open entries %d, pending timers %d' % (verse, fork, w._verse_reached, w.clock.day, C.year(w.clock.day), w.clock.date_in('exodus'), len(w.entities), opens, len(w.timers)))
+    sc = _yaml.safe_load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'scenarios.yaml'), encoding='utf-8'))['scenarios']
+    mine = [x for x in sc if x['cursor'] == verse]
+    if not mine:
+        print('no scenario is registered at %s (World/step9/scenarios.yaml) — nothing submitted, nothing appended' % verse)
+        return w, M, fork, []
+    grades = []
+    for x in mine:
+        print('\nSCENARIO %s — %s' % (x['id'], x['title']))
+        for ev in x['events']:
+            ev = dict(ev); label = ev.pop('label')
+            fired = WJ.scenario(w, ev, label)
+            print('  submitted %s [%s] -> %d effect(s) written; fired_by %s' % (ev['kind'], label[:80], fired, w.log[-1 - fired][2].get('fired_by') if fired else w.log[-1][2].get('fired_by')))
+        for e in x['expect']:
+            ent = w.entities.get(reg.get(e['entity'], e['entity']))
+            rows = [r for r in (ent.ledger if ent is not None else []) if r['effect'] == e['effect']]
+            present = bool(rows)
+            ok = present == bool(e['present']) and (e.get('value') is None or any(r.get('value') == e['value'] for r in rows))
+            grades.append(ok)
+            print('  %s  %s %s on %s%s — %s' % ('OK  ' if ok else 'MISS', e['effect'], 'PRESENT' if e['present'] else 'ABSENT', e['entity'],
+                                                 (' = %r' % e['value']) if e.get('value') else '', e['note']))
+            if not ok:
+                print('        got %s' % ([(r.get('value'), r.get('written_by')) for r in rows] or 'absent'))
+        print('  oracle: %s' % ', '.join(x['oracle']))
+    path, n = WJ.cursor_segment(w, fork, verse)
+    print('\nJOURNAL the cursor: %s (%d lines appended; the chain continues from the base\'s at line %d)' % (path, n, fork))
+    print('%d/%d scenario expectations met — a miss is evidence, never a retype: read it' % (sum(grades), len(grades)))
+    return w, M, fork, grades
 
 
 def c3(w, M, R, join=False):
@@ -1780,7 +1955,7 @@ def tuple_of(w):
     L = lambda k: len([l for l in w.log if l[0] == k])
     dbl = collections.Counter((ent.eid, e['effect']) for ent in w.entities.values() for e in ent.ledger)
     overlap = sorted((k, v) for k, v in dbl.items() if v > 1 and k[1] in OVERLAP_EFFECTS)
-    closes_done = sum(1 for ent in w.entities.values() for e in ent.ledger if str(e.get('closed_by', '')).startswith(('Gen ', 'Exod ', 'Lev ')))
+    closes_done = sum(1 for ent in w.entities.values() for e in ent.ledger if str(e.get('closed_by', '')).startswith(('Gen ', 'Exod ', 'Lev ', 'Num ', 'Deut ')))   # THE TENT sitting 2 (2026-09-09): the fourth book's closes count too — the first run showed 77 against the predicted 79 with both closes performed (the docket print said so): the counter's three-book prefix, not the world
     return (L('EVENT'), L('TIMER-SET'), L('TIMER-FIRE'), L('TIMER-CANCEL'), L('RETRO-WRITE'), L('WRITE'), len([n for n, (s, f, k) in w.coverage().items() if f]), len(w.entities), tuple(overlap), closes_done)
 
 
@@ -1791,9 +1966,19 @@ def rest_world(reg):
     other count showed, and this test keeps it caught for every runner that joins after."""
     src = open(__file__, encoding='utf-8').read().split('# ==== TAPE BEGIN', 1)[1].split('# ==== TAPE END ====', 1)[0].split('\n', 1)[1]
     kept = [l for l in src.split('\n') if not re.search(r"# %s( \[|$)" % NEWEST_RUNNER, l)]
+    # THE TENT sitting 2 (2026-09-09; THE_TENT.md section 2): the newest runner's MARKER rows go too — a marker inside its declared span
+    # (dependency_dispositions.yaml spans) is this sitting's addition as much as its events, and the tape minus the newest runner must
+    # reproduce the previous tuple EXACTLY (the checkpoint's meaning); the marker's own line names no runner, so the span decides
+    import yaml as _yaml
+    _spans = _yaml.safe_load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'dependency_dispositions.yaml'), encoding='utf-8'))['spans'].get(NEWEST_RUNNER) or []
+    _in_span = lambda b, c, v: any(b == r[0] and c == r[1] and r[2] <= v <= r[3] for r in _spans)
+    def _marker_in_span(l):
+        m = re.search(r"w\.marker\('(Gen|Exod|Lev|Num) (\d+):(\d+)'", l)
+        return bool(m) and _in_span(m.group(1), int(m.group(2)), int(m.group(3)))
+    kept = [l for l in kept if not _marker_in_span(l)]
     assert len(kept) < src.count('\n') + 1, 'THE REST removed nothing: NEWEST_RUNNER names no tape line'
     ns = dict(globals()); exec('\n'.join(kept).replace('def tape(', 'def tape_rest('), ns)
-    w = WE.World(era='THE REST — the tape minus the newest runner (%s)' % NEWEST_RUNNER, epoch='creation', registry=reg)
+    w = WE.World(era='THE REST — the tape minus the newest runner (%s)' % NEWEST_RUNNER, epoch='creation', registry=reg, installation=True)   # step 3: opted in like the running world
     w.laws = daemons()
     del _INK_CHECKS[:]
     ns['tape_rest'](w, {}, dict(PARAMS))
@@ -1808,7 +1993,7 @@ def run():
     reg = registry_map()
     print('registry map (the one who-is-who, scoped to the scenes): %s' % reg)
     w, M = run_world(PARAMS['sojourn_start']['value'], reg, 'the running setting')
-    print('daemons registered: %d — the library\'s five first, then the runners\' in the canonical order of their spans' % len(w.laws))
+    print('daemons registered: %d — the tent daemon first (THE LOOP step 3), the library\'s five, then the runners\' in the canonical order of their spans' % len(w.laws))
     C = w.clock.calendar
     D = lambda d: (C.year(d),) + C.date(d)[1:]
     markers = [l for l in w.log if l[0] == 'MARKER']
@@ -1822,7 +2007,26 @@ def run():
     print('day 0 = %r (creation year 0, the stub month: the twenty-fifth of Elul — Vayikra Rabbah 29:1); Adam\'s day = day %d = %r; the first of Tishrei of year 1 = day %d'
           % (D(0), M['born:the_human'], D(M['born:the_human']), C.first_year_start))
     print('log classes: %s' % dict(collections.Counter(l[0] for l in w.log)))
-    print('timers: set %d, fired %d, cancelled %d; retro-writes %d; writes %d; entities on the ledger %d; pending timers %d' % (len(tset), len(fires), len(cancels), len(retro), len(writes), len(w.entities), len(w.timers)))
+    skipped = [l for l in w.log if l[0] == 'SKIP']
+    print('timers: set %d, fired %d, cancelled %d; retro-writes %d; writes %d; skipped %d; entities on the ledger %d; pending timers %d' % (len(tset), len(fires), len(cancels), len(retro), len(writes), len(skipped), len(w.entities), len(w.timers)))
+    # THE LOOP step 3 INSTALLATION (2026-09-09): the instrument — the setting the world runs, the daemons by value, the pending named
+    # (counted as debt, D2), and under boot the count of calls the deferred from_event setting WOULD have skipped (measured, never a
+    # graded cell); the institutions' in_force entries as the tent daemon wrote them
+    IR = w.installation_report()
+    print('INSTALLATION (setting %s): %d daemons — boot %d, by an act %d, pending %d (%s); skipped %d; would be skipped under from_event: %d calls'
+          % (IR['setting'], IR['registered'], IR['boot'], IR['by_act'], len(IR['pending']), ', '.join(IR['pending']) or 'none', IR['skipped'], IR['would_skip']))
+    inf = [(ent.eid, e.get('value'), e['case_source'].split(' — ')[0]) for ent in w.entities.values() for e in ent.ledger if e['effect'] == 'in_force']
+    print('the institutions in force (the tent daemon\'s writes): %d — %s' % (len(inf), '; '.join('%s by %s at %s' % t for t in inf) or 'none'))
+    # THE TENT (World/step9/THE_TENT.md; sitting 1 the blasphemer, 2026-09-09): the docket, the case-born rules, and the parameter row
+    # case_output printed as a FORK — the running setting's writes beside what the other setting would have written
+    CO = WE.INSTALL_PARAMS['case_output']
+    docket = [(e.get('counterparty'), e.get('value'), e.get('covered_by'), 'closed by %s' % str(e.get('closed_by', '')).split(' — ')[0] if not e.get('open') else 'OPEN')
+              for ent in w.entities.values() for e in ent.ledger if e['effect'] == 'declaration_owed']
+    rules = [(ent.eid, e.get('value'), e['case_source'].split(' — ')[0]) for ent in w.entities.values() for e in ent.ledger if e['effect'] == 'rule_installed']
+    print('THE DOCKET (declarations owed): %d — %s' % (len(docket), '; '.join('%s (%s; covered_by %s; %s)' % t for t in docket) or 'none'))
+    print('case_output = %s (the running setting): rules installed %d — %s; THE FORK %s: %s' % (
+        CO['value'], len(rules), '; '.join('%s on %s at %s' % (v, eid, at) for eid, v, at in rules) or 'none',
+        [s for s in CO['settings'] if s != CO['value']][0], 'no rule_installed would be written — the instance\'s verdict alone' if CO['value'] == 'rule_for_the_generations' else 'rule_installed would be written'))
     print('the eras set by markers: %d — %s' % (len(w.clock.eras), ', '.join(sorted(w.clock.eras))))
     print('Isaac born %r (on Passover — the shelf\'s row); the eighth day %r; the exodus at day %d = %r; Sinai %r; the breaking %r; the morrow %r; the second ascent %r (Yom Kippur − 40; the tradition\'s first of Elul not on the local shelf); the second tablets %r; the erection %r; Lev 8:2 dated %r (the modeled intercalation puts a thirteenth month in creation-year %d)'
           % (D(M['born:isaac']), D(M['eighth_day']), M['exodus'], D(M['exodus']), D(M['sinai']), D(M['breaking']), D(M['morrow']), D(M['second_ascent']), D(M['second_tablets']), D(M['erected']), D(M['lev8']), C.year(M['lev8'])))
@@ -1839,7 +2043,7 @@ def run():
             dbl[(ent.eid, e['effect'])] += 1
     overlap = sorted((k, v) for k, v in dbl.items() if v > 1 and k[1] in OVERLAP_EFFECTS)
     print('REPEATED WRITES on the overlap effects (since O2 the ink\'s own repeats only — the two mornings of Exod 36:3 under the donation\'s two law layers; one act, one writer per effect): %s' % overlap)
-    closes_done = sum(1 for ent in w.entities.values() for e in ent.ledger if str(e.get('closed_by', '')).startswith(('Gen ', 'Exod ', 'Lev ')))   # O8 S1 (2026-09-08): the story's closes carry Exodus notes — the counter had read Genesis prefixes alone (written when every close was Genesis's)
+    closes_done = sum(1 for ent in w.entities.values() for e in ent.ledger if str(e.get('closed_by', '')).startswith(('Gen ', 'Exod ', 'Lev ', 'Num ', 'Deut ')))   # THE TENT sitting 2 (2026-09-09): the second copy of the closes counter (the first at tuple_of) widened to the five books — the fourth book's closes were invisible to it   # O8 S1 (2026-09-08): the story's closes carry Exodus notes — the counter had read Genesis prefixes alone (written when every close was Genesis's)
     open_entries = sum(len(ent.open_entries()) for ent in w.entities.values())
     print('the tape\'s closes performed %d; open ledger entries at the end %d (Shelah\'s levirate_owed among them — the ink never closes it)' % (closes_done, open_entries))
     gaps = []
@@ -1898,6 +2102,21 @@ def run():
     plg = [e for e in w.entity('egypt_people').ledger if e['effect'] == 'plague_struck']
     cp('CS8 the plagues on Egypt\'s ledger = ten (Mishnah Avot 5:4), four closed by a narrated removal', (10, 4), (len(plg), sum(1 for e in plg if not e.get('open'))))
     cp('CS9 Eduyot 2:10\'s twelve months as a bound on the plague stretch (the speaking to the exodus)', None, (M['exodus'] - M['speaking']) / 30.0, bound=[0, 12])
+    # ---- THE TENT sitting 4 (2026-09-09; THE_TENT.md section 4): the reading-placed marker at Num 27:1 walks the counter to the fortieth year and the ONE pending timer fires ----
+    psd = [l for l in fires if l[2]['effect'] == 'second_passover_due']
+    cp('CN1 the men\'s second Passover due FIRED at the exodus era\'s (2, 2, 14) — Num 9:11 the second month, the Calendar\'s arithmetic on the walk (not by construction: the due set at 9:6-7 by the third registry\'s row, the fire by the marker at 27:1)', (2, 2, 14), ex.date(psd[0][1]) if psd else None)
+    # ---- THE NUMBERS WALK 1b (2026-09-09; NUMBERS_WALK.md "Sitting 1b"): BAMIDBAR'S CHECKPOINTS — the census's arithmetic on the ink by the engine's own parser, the marker's day, the retrograde, the five closes ----
+    N_ = lambda b, c, v: ink_numbers(verse_words(b, c, v))
+    twelve = [N_('Num', 1, v)[0] for v in range(21, 44, 2)]
+    cp('CB1 the twelve counts summed = 1:46 (603,550 — the parser on thirteen verses)', N_('Num', 1, 46)[0], sum(twelve))
+    cp('CB2 1:46 = Exod 38:26 — the same count on the erection\'s seat (Bekhorot 5a:10)', N_('Exod', 38, 26)[-1], N_('Num', 1, 46)[0])
+    cp('CB3 the Levite houses summed minus 3:39 as written = 300 (Bekhorot 5a:8 the question; 5a:9 the firstborn Levites)', 300, sum(N_('Num', 3, v)[0] for v in (22, 28, 34)) - N_('Num', 3, 39)[0])
+    cp('CB4 3:43 minus 3:39 = 3:46 (the excess 273)', N_('Num', 3, 46)[0], N_('Num', 3, 43)[0] - N_('Num', 3, 39)[0])
+    cp('CB5 273 x five per skull = 3:50 (1,365 — "and a thousand" an addend)', N_('Num', 3, 50)[0], N_('Num', 3, 46)[0] * N_('Num', 3, 47)[0])
+    cp('CB6 the 1:1 marker\'s day = the exodus era\'s (2, 2, 1) — the first of the second month of the second year', (2, 2, 1), ex.date(M['bamidbar']))
+    m95 = [l for l in w.log if l[0] == 'MARKER' and l[2].get('verse') == 'Num 9:5']
+    cp('CB7 the Num 9:5 marker logged RETROGRADE after 1:1 (Pesachim 6b:7 — the counter unmoved; CN1 unmoved)', True, m95[0][2].get('retrograde') if m95 else None)
+    cp('CB8 the five spec/run pairs: five commanded debits CLOSED by their runs (1:19, 2:34, 3:16, 3:42, 3:51)', 5, sum(1 for eid in ('israel', 'the-levites', 'the-firstborn-of-israel') for e in w.entity(eid).ledger if e['effect'] == 'commanded' and e.get('open') is False))
     print('    the story\'s dates: Moses born %r, the ark %r, the speaking %r, the plagues\' end %r, the lamb taken %r, the sea %r, Shur %r, the manna %r, Sivan: the ascent %r, the boundary %r, the separation %r, the giving %r (weekday %d; the Sabbath by the shelf)' % (
         D(M['born:moses']), D(M['ark']), D(M['speaking']), D(M['darkness_end']), D(M['lamb_taken']), D(M['sea']), D(M['shur']), D(M['manna_first']), D(M['sinai_2']), D(M['sinai_bound']), D(M['sinai_sep']), D(M['giving']), WD(M['giving'])))
     # ---- O8 S2 FROM EDEN TO HAGAR (2026-09-08; NARRATIVE_GAPS.md section 6h): the stretch's checkpoints ----
@@ -2037,4 +2256,7 @@ def run():
 
 
 if __name__ == '__main__':
-    run()
+    if '--cursor' in sys.argv:                            # THE LOOP step 4/5 (2026-09-09): the tape resumed at a verse, the scenarios there
+        cursor_main(sys.argv[sys.argv.index('--cursor') + 1])
+    else:
+        run()

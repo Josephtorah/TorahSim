@@ -63,6 +63,29 @@ CAL_SLOTS = list(_CAL.get('day_slots') or [])
 CAL_IDIOMS = dict(_CAL.get('counter_idioms') or {})
 LIFE_READING = CAL_PARAMS['life_year_reading']['value']    # THE SEQUENTIAL RUN: 'completed' or 'ordinal' (OPEN-8), a data row
 
+# THE LOOP step 3 INSTALLATION (2026-09-09; World/step9/THE_LOOP.md "Step 3 INSTALLATION — the design"; the decisions D1-D6):
+# THE FOURTH REGISTRY, installation_parameters.yaml — the two parameter rows (installation_setting: boot / from_event, the
+# running value `boot` until the second pass after Deuteronomy, D2; case_output: the generations' rule / the provisional edict,
+# Sanhedrin 80b:5) and the table of INSTALLING ACTS: the registered act kind that switches an institution on → the institution
+# and the scene token the tent daemon writes `in_force` on. This module its only reader. A law is IN FORCE when it has been
+# SPOKEN (the run's position in the text has reached its given_at) and its INSTITUTION STANDS (Chagigah 6b:2); every daemon's
+# two fields live in daemon_dispositions.yaml and the daemon gate demands them; the dispatch gate is in World.submit, never
+# at registration (CLOCK.md section 8).
+_INST_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'installation_parameters.yaml')
+with open(_INST_PATH, encoding='utf-8') as _f:
+    _INST = yaml.safe_load(_f)
+INSTALL_PARAMS, INSTALLING_ACTS = _INST['parameters'], _INST['installing_acts']
+INSTALL_FIELDS = ('given_at', 'installed_by')
+INSTALL_VALUES = ('boot', 'pending')       # the two non-act values: in force from creation; the installing act not yet on the tape (counted)
+BOOK_ORDER = {'Gen': 1, 'Exod': 2, 'Lev': 3, 'Num': 4, 'Deut': 5}
+
+
+def verse_key(src):
+    """THE VERSE REACHED's order key: the canonical position of a reference's first cited verse (Gen < Exod < Lev < Num < Deut;
+    any other book after them in the parser's order); None when the string opens with no verse"""
+    fv = first_verse(src)
+    return (BOOK_ORDER.get(fv[0], 99), fv[1], fv[2]) if fv else None
+
 # THE FENCE'S DEPTH BOUND (D9-ii, 2026-09-07): a daemon CONSUMES events and WRITES
 # the ledger; it never emits an event. Cascades run through LEDGER STATE (one
 # daemon's write satisfies another's condition on a later event), never through
@@ -466,10 +489,20 @@ class Entity:
         return [e for e in self.ledger if e.get('open')]
 
 
+class CursorReached(Exception):
+    """THE LOOP step 4 THE CURSOR (2026-09-09; THE_LOOP.md 'Step 4 THE CURSOR — the design'): raised by submit() and marker() when a
+    line names a verse AT OR AFTER World.stop_before — the tape replayed to a position in the text and stopped at its left edge"""
+
+
 class World:
-    def __init__(self, era, epoch=None, registry=None):
+    def __init__(self, era, epoch=None, registry=None, installation=None):
         self.clock = Clock(era, epoch=epoch)
         self.entities = {}
+        self.stop_before = None           # THE LOOP step 4: a verse key; a line at or after it raises CursorReached (the cursor's left edge)
+        # THE LOOP step 3 INSTALLATION (2026-09-09): a world OPTS IN with `installation` (D1 — the sequence runner's four worlds;
+        # the 38 exam worlds pass nothing: no field read, no line logged, no write); the fields per daemon, the setting, the counts
+        self.installation = None          # {'setting', 'fields': {daemon: {given_at, installed_by}}, 'skipped', 'would_skip'}
+        self._verse_reached = None        # THE VERSE REACHED: the canonical max over every marker's verse and every event's first cited verse
         # THE SEQUENTIAL RUN (2026-09-07): THE ONE WHO-IS-WHO AT THE ENGINE — a scene token resolves to the registry's
         # entity id (logic/corpus/entity_registry.yaml's members with units [step9-scenes]); the daemons keep their
         # names, the ledgers merge. A world with no map behaves as before.
@@ -488,6 +521,8 @@ class World:
         self.watch = collections.OrderedDict()
         self._depth = 0
         self._consuming = None
+        if installation is not None:
+            self.install(installation)
 
     def entity(self, eid, kind='person'):
         eid = self._registry.get(eid, eid)
@@ -495,9 +530,87 @@ class World:
             self.entities[eid] = Entity(eid, kind)
         return self.entities[eid]
 
+    # -- THE LOOP step 3: installation (2026-09-09; THE_LOOP.md "Step 3 INSTALLATION — the design", D1-D6) --
+    def install(self, installation):
+        """opt this world into installation. `installation` is a setting name ('boot' | 'from_event') or a dict {'setting': ...,
+        'fields': {daemon: {'given_at', 'installed_by'}}}; True takes the fourth registry's running setting. Without fields the two
+        fields are read for every daemon declared in daemon_dispositions.yaml; a daemon without both, or naming an act that is not
+        an installing act, is refused at once (the daemon gate refuses the same before any sweep)."""
+        if isinstance(installation, dict):
+            setting, fields = installation.get('setting'), installation.get('fields')
+        else:
+            setting, fields = (None if installation is True else installation), None
+        setting = setting or INSTALL_PARAMS['installation_setting']['value']
+        if setting not in INSTALL_PARAMS['installation_setting']['settings']:
+            raise SystemExit('INSTALLATION: setting %r is not a recorded setting of installation_setting (%s)'
+                             % (setting, ', '.join(INSTALL_PARAMS['installation_setting']['settings'])))
+        if fields is None:
+            with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'daemon_dispositions.yaml'), encoding='utf-8') as f:
+                decl = yaml.safe_load(f)['daemons']
+            fields = {n: {k: d.get(k) for k in INSTALL_FIELDS} for n, d in decl.items()}
+        for n, d in fields.items():
+            missing = [k for k in INSTALL_FIELDS if not d.get(k)]
+            if missing:
+                raise SystemExit('INSTALLATION: daemon %s declares no %s — every daemon carries both fields (THE_LOOP.md step 3)' % (n, ' / '.join(missing)))
+            if d['installed_by'] not in INSTALL_VALUES and d['installed_by'] not in INSTALLING_ACTS:
+                raise SystemExit('INSTALLATION: daemon %s installed_by %r is neither boot, pending, nor an installing act of installation_parameters.yaml' % (n, d['installed_by']))
+            if verse_key(d['given_at']) is None:
+                raise SystemExit('INSTALLATION: daemon %s given_at %r is not a verse' % (n, d['given_at']))
+        self.installation = {'setting': setting, 'fields': fields, 'skipped': 0, 'would_skip': 0}
+        return self.installation
+
+    def installation_report(self):
+        """the setting; the registered daemons by value (boot / by an act / pending, the pending named); skipped and would-skip"""
+        I = self.installation
+        if I is None:
+            return None
+        names = [getattr(l, '__name__', repr(l)) for l in self.laws]
+        by = collections.Counter(I['fields'][n]['installed_by'] for n in names if n in I['fields'])
+        return {'setting': I['setting'], 'registered': len(names), 'boot': by.get('boot', 0),
+                'by_act': sum(v for k, v in by.items() if k not in INSTALL_VALUES), 'by_value': dict(by),
+                'pending': sorted(n for n in names if I['fields'].get(n, {}).get('installed_by') == 'pending'),
+                'skipped': I['skipped'], 'would_skip': I['would_skip']}
+
+    def _reach(self, src):
+        k = verse_key(src)
+        if k is not None and (self._verse_reached is None or k > self._verse_reached):
+            self._verse_reached = k
+
+    def not_in_force(self, name, event):
+        """the question asked before a daemon is called: None when in force, else (why, needs) — not_given when the run's position
+        in the text has not reached the law's given_at; not_in_force when the act's institution carries no in_force entry for that
+        act AND no institution carries a rule_installed entry naming this daemon (installation BY A CASE EVENT, D5/D6). boot and
+        pending are always in force (pending behaves as boot and is counted as debt, D2)."""
+        f = self.installation['fields'].get(name)
+        if f is None:
+            raise SystemExit('INSTALLATION: daemon %s is registered on an installation world but declares no fields' % name)
+        by = f['installed_by']
+        if by in INSTALL_VALUES:
+            return None
+        g = verse_key(f['given_at'])
+        if self._verse_reached is None or g > self._verse_reached:
+            return ('not_given', f['given_at'])
+        row = INSTALLING_ACTS[by]
+        ent = self.entities.get(self._registry.get(row['entity'], row['entity']))
+        if ent is not None and any(e['effect'] == 'in_force' and e.get('value') == by for e in ent.ledger):
+            return None
+        for r in INSTALLING_ACTS.values():
+            ent = self.entities.get(self._registry.get(r['entity'], r['entity']))
+            if ent is not None and any(e['effect'] == 'rule_installed' and e.get('value') == name for e in ent.ledger):
+                return None
+        return ('not_in_force', by)
+
+    def skips(self):
+        """every daemon's skipped count under the from_event setting (zero everywhere under boot)"""
+        return collections.OrderedDict((n, w.get('skipped', 0)) for n, w in self.watch.items())
+
     # -- construct 3: dispatch — every law fires, unasked -------------
     def submit(self, event):
         EV.validate([event['kind']])                  # the tape carries registered types only
+        if self.stop_before is not None:              # THE LOOP step 4: the cursor — a line at or after the verse is the future
+            k = verse_key(event.get('case_source'))
+            if k is not None and k >= self.stop_before:
+                raise CursorReached(event.get('case_source'))
         if self._depth >= DEPTH_BOUND:
             raise SystemExit('THE FENCE: World.submit re-entered at depth %d (bound %d) while %s was consuming an event — '
                              'a daemon emitted an event %r; daemons write the ledger, cascades run through ledger state'
@@ -516,11 +629,23 @@ class World:
                 # verse; every other event between markers is page_order (the counter's: an unlabeled prior no longer unlabeled)
                 cls, at = self._placement
                 event['placement'] = cls if (cls and at is not None and first_verse(event.get('case_source')) == at) else 'page_order'
+            self._reach(event.get('case_source'))     # THE LOOP step 3: the verse reached — the given_at check's position in the text
+            event['fired_by'] = []                     # THE LOOP step 3: THE CONSUMERS STAMPED — the journal's EVENT line names the daemons that fired on it
             self.log.append(('EVENT', self.clock.day, event))
             fired = 0
             for law in self.laws:
                 name = getattr(law, '__name__', repr(law))
-                w = self.watch.setdefault(name, {'seen': 0, 'fired': 0, 'kinds': set()})
+                w = self.watch.setdefault(name, {'seen': 0, 'fired': 0, 'kinds': set(), 'skipped': 0})
+                if self.installation is not None:      # THE LOOP step 3 INSTALLATION (2026-09-09): THE DISPATCH GATE — at the call, never at registration
+                    why = self.not_in_force(name, event)
+                    if why is not None:
+                        if self.installation['setting'] == 'from_event':
+                            self.log.append(('SKIP', self.clock.day, {'daemon': name, 'kind': event['kind'], 'subject': event.get('subject'),
+                                                                      'case_source': event.get('case_source'), 'why': why[0], 'needs': why[1]}))
+                            w['skipped'] += 1
+                            self.installation['skipped'] += 1
+                            continue
+                        self.installation['would_skip'] += 1    # the boot setting (D2): nothing skipped, nothing logged — counted for the deferred decision
                 w['seen'] += 1
                 self._consuming = name
                 effs = law(event, self) or []
@@ -528,6 +653,7 @@ class World:
                 if effs:
                     w['fired'] += 1
                     w['kinds'].add(event['kind'])
+                    event['fired_by'].append(name)
                 for eff in effs:
                     fired += 1
                     for key in ('bound', 'dated'):           # the engine copies the event's bound/date onto its effects
@@ -545,7 +671,8 @@ class World:
 
     def print_coverage(self):
         for n, (seen, fired, kinds) in self.coverage().items():
-            print('  WATCH %-22s seen %3d  fired %3d  on: %s' % (n, seen, fired, ', '.join(kinds) or '(never fired)'))
+            sk = self.watch[n].get('skipped', 0)
+            print('  WATCH %-22s seen %3d  fired %3d  on: %s%s' % (n, seen, fired, ', '.join(kinds) or '(never fired)', ('  skipped %d' % sk) if sk else ''))
 
     def _write(self, eff):
         FX.validate([eff['effect']])
@@ -573,6 +700,7 @@ class World:
             if e['effect'] == effect and e.get('open') and (value is None or e.get('value') == value):
                 e['open'] = False
                 e['closed_by'] = note
+                e['closed_day'] = self.clock.day      # THE LOOP step 2's remainder (2026-09-09): the day it closed, beside the closer — the ledger view's day_closed
                 return True
         return False
 
@@ -605,8 +733,19 @@ class World:
         arithmetic, the default) or reading_placed (a shelf reading fixing a date where the ink is silent at that grain);
         submit() stamps it on the event at the marker's verse (the marker names the position it sits at) and on every event
         of a retrograde stretch; a proleptic marker carries none."""
+        if self.stop_before is not None and verse_key(verse) is not None and verse_key(verse) >= self.stop_before:
+            # THE NUMBERS WALK 1b (2026-09-09; NUMBERS_WALK.md "Sitting 1b" as built): a FORWARD marker at the cursor CLOSES the bounds behind
+            # it as the full run would — the right edge is its own day, known here — before the world stops; else the replayed prefix
+            # differs from the base by every event of the last open bound (found when 1:1's bound, closed by 27:1 in the run, stayed open
+            # at the 27:1 cursor: the bamidbar lines refused). A retrograde or proleptic marker closes nothing in the run either.
+            if not proleptic and day >= self.clock.day:
+                for b in self._open_bounds:
+                    b[1] = day
+                self._open_bounds = []
+            raise CursorReached(verse)                       # THE LOOP step 4: a marker AT the cursor verse belongs to its future
         if era is not None:
             self.clock.set_era(era, day, new_year_month)
+        self._reach(verse)                                   # THE LOOP step 3: a marker names the position in the text it sits at
         if placement not in ('text_constrained', 'reading_placed'):
             raise SystemExit('MARKER %s: placement %r is not text_constrained or reading_placed' % (verse, placement))
         if proleptic:
@@ -886,6 +1025,212 @@ def law_installation(event, world):
              'case_source': event['case_source']},
         ]
     return []
+
+
+# THE TENT sitting 4 (2026-09-09): THE INSTANCE'S VERDICTS from the ink's own word, per case — the entry's shape beyond effect/subject/value
+# (the counterparty, the due, the source), built at the write; keyed by the installed law where the tape's line names no verdict (the first seat)
+CASE_VERDICTS = {
+    'second_passover_due': lambda world: {'counterparty': 'HEAVEN', 'due': due_of_passover_sheni(world),
+                                          'source_law': 'THE TENT DAEMON — the instance\'s verdict from the ink\'s own word [INK Num 9:10-11: he shall keep a '
+                                          'Passover to the LORD in the second month] — written only where the code had not decided (the from_event setting)'},
+    'holding_owed': lambda world: {'counterparty': 'the-court', 'due': None,
+                                   'source_law': 'THE TENT DAEMON — the instance\'s verdict from the ink\'s own word [INK Num 27:7: given shall be given to them a '
+                                   'holding of inheritance among their father\'s brothers; the giving Josh 17:4] — written only where the code had not decided'},
+    'marries_within_tribe': lambda world: {'counterparty': None, 'due': None,
+                                           'source_law': 'THE TENT DAEMON — the second output\'s verdict from the ink\'s own word [INK Num 36:6: to whom is good in '
+                                           'their eyes they shall be wives, only to the family of the tribe of their father] — written only where the code had not decided'},
+}
+CASE_VERDICTS_BY_LAW = {'law_pesach_sheni': 'second_passover_due'}   # the first seat's tape line carries no verdict field: keyed by the installed law
+
+
+def law_tent(event, world):
+    """THE TENT DAEMON (THE LOOP step 3 INSTALLATION, 2026-09-09; decision D4; THE_LOOP.md "Step 3 INSTALLATION — the design") —
+    the library's sixth, registered FIRST by the sequence runner so that an installing act switches on its laws INSIDE ITS OWN
+    DISPATCH (Lev 25:2: the entry itself starts the count). It consumes the six INSTITUTION-ERECTING ACTS of the fourth registry,
+    installation_parameters.yaml, and writes `in_force` on the act's institution — the value the act itself, matched by
+    World.not_in_force against each daemon's installed_by. At Numbers' opening block it gains the custody branch (the ink's own
+    custody act, "and they placed him in the guard" → in_custody on the person, declaration_owed on the court's docket, with the
+    daemons that already wrote on the case's verse read off the ledger) and the output branch (the verse "by the mouth of the
+    LORD" → rule_installed on the institution, the docket's debit closed), on the kinds registered with their witnesses then.
+    A literal branch per kind — the daemon gate's parser reads branches; the entity comes from the registry's row."""
+    k = event['kind']
+    if k == 'judges_appointed':
+        return [{'effect': 'in_force', 'subject': INSTALLING_ACTS['judges_appointed']['entity'], 'counterparty': None, 'amount': None, 'due': None,
+                 'value': 'judges_appointed', 'source_law': 'THE TENT DAEMON — the_court installed by judges_appointed [INK Exod 18:25-26: '
+                 'and they judged the people at all times]', 'case_source': event['case_source']}]
+    if k == 'covenant_blood_thrown':
+        return [{'effect': 'in_force', 'subject': INSTALLING_ACTS['covenant_blood_thrown']['entity'], 'counterparty': None, 'amount': None, 'due': None,
+                 'value': 'covenant_blood_thrown', 'source_law': 'THE TENT DAEMON — the_covenant_at_sinai installed by covenant_blood_thrown '
+                 '[INK Exod 24:8: the blood of the covenant which the LORD has cut with you upon all these words]', 'case_source': event['case_source']}]
+    if k == 'erected':
+        return [{'effect': 'in_force', 'subject': INSTALLING_ACTS['erected']['entity'], 'counterparty': None, 'amount': None, 'due': None,
+                 'value': 'erected', 'source_law': 'THE TENT DAEMON — the_tent_of_meeting installed by erected [INK Exod 40:17: the tabernacle '
+                 'was erected]', 'case_source': event['case_source']}]
+    if k == 'called_from_the_tent':
+        return [{'effect': 'in_force', 'subject': INSTALLING_ACTS['called_from_the_tent']['entity'], 'counterparty': None, 'amount': None, 'due': None,
+                 'value': 'called_from_the_tent', 'source_law': 'THE TENT DAEMON — the_tent_of_meeting installed a second time by called_from_the_tent '
+                 '[INK Lev 1:1: the LORD spoke to him from the tent of meeting — the detail pass opens, Chagigah 6b:1]', 'case_source': event['case_source']}]
+    if k == 'milluim_blood_sprinkled':
+        return [{'effect': 'in_force', 'subject': INSTALLING_ACTS['milluim_blood_sprinkled']['entity'], 'counterparty': None, 'amount': None, 'due': None,
+                 'value': 'milluim_blood_sprinkled', 'source_law': 'THE TENT DAEMON — the_priesthood installed by milluim_blood_sprinkled [INK Lev 8:30; '
+                 'Sifra, Tzav, Mekhilta DeMiluim I 34: consummated only at the blood sprinkling]', 'case_source': event['case_source']}]
+    if k == 'entered_the_land':
+        return [{'effect': 'in_force', 'subject': INSTALLING_ACTS['entered_the_land']['entity'], 'counterparty': None, 'amount': None, 'due': None,
+                 'value': 'entered_the_land', 'source_law': 'THE TENT DAEMON — the_land_of_canaan installed by entered_the_land [INK Lev 25:2: when you '
+                 'come into the land which I give you; Exod 23:23]', 'case_source': event['case_source']}]
+    # ---- THE TENT's four cases (World/step9/THE_TENT.md; sitting 1 THE BLASPHEMER, 2026-09-09): the halt, the output, the execution ----
+    if k == 'placed_in_custody':
+        # THE HALT (Lev 24:12; Num 15:34): the person in the guard, the docket's declaration owed — OPEN until the output closes it — and,
+        # read off the person's LEDGER, the daemons that already wrote on the case's verse (under the boot setting the code decided before
+        # the halt; under from_event none had): the installation setting's own evidence, carried on the docket entry as covered_by
+        person = event.get('person', event['subject'])
+        ent = world.entities.get(world._registry.get(person, person))
+        fv = first_verse(event.get('case_of')) if event.get('case_of') else None
+        covered = sorted({e.get('written_by') for e in (ent.ledger if ent is not None else [])
+                          if fv is not None and first_verse(e.get('case_source')) == fv and e.get('written_by') and e.get('written_by') != 'law_tent'})
+        why = event.get('uncertainty', 'liable_at_all')
+        return [{'effect': 'in_custody', 'subject': person, 'counterparty': None, 'amount': None, 'due': None, 'value': why,
+                 'source_law': 'THE TENT DAEMON — the halt [INK Lev 24:12: and they placed him in the guard, to be declared to them by the mouth of '
+                 'the LORD; Num 15:34; Sanhedrin 78b:4-7 the incarceration derived, the two uncertainties told apart]', 'case_source': event['case_source']},
+                {'effect': 'declaration_owed', 'subject': 'the-court', 'counterparty': person, 'amount': None, 'due': None, 'value': why, 'covered_by': covered,
+                 'source_law': 'THE TENT DAEMON — the docket [INK Lev 24:12 "to be declared to them"; Num 15:34 "it had not been declared"; covered_by = '
+                 'the daemons that already wrote on the case verse — the installation setting\'s evidence]', 'case_source': event['case_source']}]
+    if k == 'sentence_declared':
+        # THE OUTPUT (Lev 24:13-14): the generations' rule installed on the tent in the case's name — under the parameter row case_output's
+        # running setting only (the first tanna, Sanhedrin 80b:5; Rabbi Yehuda's provisional edict writes no rule) — the docket's debit
+        # closed, and the instance's verdict from the ink's own word where the code has not already decided (the from_event setting)
+        person = event.get('person', event['subject'])
+        installs = event.get('installs')
+        out = []
+        if installs and INSTALL_PARAMS['case_output']['value'] == 'rule_for_the_generations':
+            out.append({'effect': 'rule_installed', 'subject': INSTALLING_ACTS['sentence_declared']['entity'], 'counterparty': None, 'amount': None,
+                        'due': None, 'value': installs, 'source_law': 'THE TENT DAEMON — the generations\' rule [INK Lev 24:15-22: the statute in the '
+                        'case\'s name (Sanhedrin 8a:5; Sifrei Bamidbar 80:1, 114:1); the row case_output = rule_for_the_generations, the first tanna '
+                        'at Sanhedrin 80b:5]', 'case_source': event['case_source']})
+        world.close('the-court', 'declaration_owed', event['case_source'])
+        ent = world.entities.get(world._registry.get(person, person))
+        if event.get('sentence') == 'stoning' and not any(e['effect'] == 'stoned' for e in (ent.ledger if ent is not None else [])):
+            out.append({'effect': 'stoned', 'subject': person, 'counterparty': None, 'amount': None, 'due': None, 'value': 'by the mouth of the LORD',
+                        'source_law': 'THE TENT DAEMON — the instance\'s verdict from the ink\'s own word [INK Lev 24:14: let all the congregation stone '
+                        'him] — written only where the code had not decided (Rabbi Yehuda\'s edict reading; the from_event setting)', 'case_source': event['case_source']})
+        return out
+    if k == 'stoned_as_commanded':
+        # THE EXECUTION (Lev 24:23): the history's own act performs the sentence and ends the guard — the two BODY entries on the person
+        # (stoned, in_custody) are CLOSED by the deed's verse (THE CLOSE PAIRING, CLOCK.md section 3); nothing new is written
+        person = event.get('person', event['subject'])
+        world.close(person, 'stoned', event['case_source'])
+        world.close(person, 'in_custody', event['case_source'])
+        world.close(person, 'put_to_death', event['case_source'])   # THE TENT sitting 3 (2026-09-09): the wood-gatherer's DEATH SENTENCE (law_sabbath's body entry at 15:32-33) performed by "and he died" (15:36) — found OPEN by the ask-tool after the first run; the blasphemer carries no such entry (close returns False)
+        return []
+    # ---- THE TENT sitting 2 (THE_TENT.md section 2; 2026-09-09): a STANDING case — the unclean men at the Passover (Num 9:6-14) ----
+    if k == 'stood_to_hear':
+        # THE HALT of a standing case (Num 9:8 "stand, and I will hear"; Onkelos: wait): no guard — the persons WAIT for the word (a body
+        # entry, open until the output closes it) and the docket's declaration is owed; covered_by reads the persons' LEDGER and the PENDING
+        # TIMERS (under boot the case law decided at 9:6-7 with a due to the second month — a timer, not a ledger line)
+        persons = event.get('persons') or [event.get('person', event['subject'])]
+        fv = first_verse(event.get('case_of')) if event.get('case_of') else None
+        covered = set()
+        for person in persons:
+            ent = world.entities.get(world._registry.get(person, person))
+            for e in (ent.ledger if ent is not None else []) + [t for _, t in world.timers if t.get('subject') == person]:
+                if fv is not None and first_verse(e.get('case_source')) == fv and e.get('written_by') and e.get('written_by') != 'law_tent':
+                    covered.add(e['written_by'])
+        why = event.get('uncertainty', 'the_mode')
+        out = [{'effect': 'waits_for_the_word', 'subject': p, 'counterparty': None, 'amount': None, 'due': None, 'value': why,
+                'source_law': 'THE TENT DAEMON — the halt of a standing case [INK Num 9:8: stand, and I will hear what the LORD will command '
+                'concerning you; Onkelos: wait; Sifrei Bamidbar 68:1: I have not heard — R. Chidka: the sprinkling was the question]',
+                'case_source': event['case_source']} for p in persons]
+        out.append({'effect': 'declaration_owed', 'subject': 'the-court', 'counterparty': persons[0] if len(persons) == 1 else persons, 'amount': None,
+                    'due': None, 'value': why, 'covered_by': sorted(covered),
+                    'source_law': 'THE TENT DAEMON — the docket [INK Num 9:8; covered_by = the daemons that already wrote on the case verse, the ledger '
+                    'and the pending timers — the installation setting\'s evidence]', 'case_source': event['case_source']})
+        return out
+    if k == 'statute_declared':
+        # THE OUTPUT, second form (Num 9:9-14): the statute itself — the generations' rule installed in the case's name (under case_output's
+        # running setting), the docket's debit and the persons' wait CLOSED by the output's verse (THE CLOSE PAIRING at the design), and the
+        # instance's verdict from the ink's own word — the second Passover's due — only where neither the ledger nor the pending timers carry it
+        persons = event.get('persons') or [event.get('person', event['subject'])]
+        installs = event.get('installs')
+        out = []
+        if installs and INSTALL_PARAMS['case_output']['value'] == 'rule_for_the_generations':
+            out.append({'effect': 'rule_installed', 'subject': INSTALLING_ACTS['statute_declared']['entity'], 'counterparty': None, 'amount': None,
+                        'due': None, 'value': installs, 'source_law': 'THE TENT DAEMON — the generations\' rule [INK Num 9:10-14: the statute in the '
+                        'case\'s name, "of you or of your generations", "one statute shall be for you" (Sifrei Bamidbar 69:1: the rule wider than the '
+                        'question; 114:1); the row case_output = rule_for_the_generations, the first tanna at Sanhedrin 80b:5]', 'case_source': event['case_source']})
+        world.close('the-court', 'declaration_owed', event['case_source'])
+        # THE TENT sitting 4 (2026-09-09): THE VERDICT TABLE — the instance's verdict from the ink's own word, keyed by the installed law (the
+        # first seat's line names no verdict field: its row is the old path, byte-identical); written only where neither the ledger nor the
+        # pending timers carry it (under boot the case law decided at the plea)
+        verdict = event.get('verdict') or CASE_VERDICTS_BY_LAW.get(installs)
+        for person in persons:
+            world.close(person, 'waits_for_the_word', event['case_source'])
+            ent = world.entities.get(world._registry.get(person, person))
+            decided = any(e['effect'] == verdict for e in (ent.ledger if ent is not None else [])) or \
+                any(t.get('effect') == verdict and t.get('subject') == person for _, t in world.timers)
+            if verdict == 'second_passover_due' and not decided:
+                sh = CASE_VERDICTS['second_passover_due'](world)
+                out.append({'effect': 'second_passover_due', 'subject': person, 'counterparty': sh['counterparty'], 'amount': None, 'due': sh['due'],
+                            'value': 'by the mouth of the LORD', 'source_law': sh['source_law'], 'case_source': event['case_source']})
+            elif verdict == 'holding_owed' and not decided:
+                sh = CASE_VERDICTS['holding_owed'](world)
+                out.append({'effect': 'holding_owed', 'subject': person, 'counterparty': sh['counterparty'], 'amount': None, 'due': sh['due'],
+                            'value': 'by the mouth of the LORD', 'source_law': sh['source_law'], 'case_source': event['case_source']})
+        return out
+    # ---- THE TENT sitting 4 (THE_TENT.md section 4; 2026-09-09): the daughters' halt — THE THIRD FORM — and the second output, RELAYED ----
+    if k == 'judgment_brought_near':
+        # THE HALT'S THIRD FORM (Num 27:5 "and Moses brought their judgment near before the LORD"): no guard, no wait — nothing in the ink
+        # holds the persons, so NO body entry is written; the docket's declaration alone, covered_by read off the persons' ledger and the
+        # pending timers (under boot the case law decided at the plea — holding_owed), the uncertainty THE SCOPE (Sifrei 133:4; Bava Batra 119a:6)
+        persons = event.get('persons') or [event.get('person', event['subject'])]
+        fv = first_verse(event.get('case_of')) if event.get('case_of') else None
+        covered = set()
+        for person in persons:
+            ent = world.entities.get(world._registry.get(person, person))
+            for e in (ent.ledger if ent is not None else []) + [t for _, t in world.timers if t.get('subject') == person]:
+                if fv is not None and first_verse(e.get('case_source')) == fv and e.get('written_by') and e.get('written_by') != 'law_tent':
+                    covered.add(e['written_by'])
+        why = event.get('uncertainty', 'the_scope')
+        return [{'effect': 'declaration_owed', 'subject': 'the-court', 'counterparty': persons[0] if len(persons) == 1 else persons, 'amount': None,
+                 'due': None, 'value': why, 'covered_by': sorted(covered),
+                 'source_law': 'THE TENT DAEMON — the halt\'s third form [INK Num 27:5: and Moses brought their judgment near before the LORD — the '
+                 'offerings\' verb, no guard and no wait; Sifrei Bamidbar 133:4 / Bava Batra 119a:6: Moses knew daughters inherit, the question the FIT '
+                 'against the HELD; Sanhedrin 8a:4: "I will hear it"; covered_by = the daemons that already wrote on the case verse — the installation '
+                 'setting\'s evidence]', 'case_source': event['case_source']}]
+    if k == 'command_relayed':
+        # THE SECOND OUTPUT ON THE SAME CASE (Num 36:5-9 "and Moses commanded the children of Israel by the mouth of the LORD, saying"): relayed in
+        # Moses' mouth — no divine frame; installs THE CELL law_zelophehad:tribe_transfer (a rule inside a case-born law: the statute amended with a
+        # reach — "this is the thing", Bava Batra 120a:10); no docket was owed (the tribes' plea did not halt); the verdict only where the code had not
+        persons = event.get('persons') or [event.get('person', event['subject'])]
+        installs = event.get('installs')
+        out = []
+        if installs and INSTALL_PARAMS['case_output']['value'] == 'rule_for_the_generations':
+            out.append({'effect': 'rule_installed', 'subject': INSTALLING_ACTS['command_relayed']['entity'], 'counterparty': None, 'amount': None,
+                        'due': None, 'value': installs, 'source_law': 'THE TENT DAEMON — the second output\'s rule [INK Num 36:6-9: this is the thing '
+                        'that the LORD commanded... an inheritance shall not go around from tribe to tribe; Bava Batra 120a:10 (Rava: this generation), '
+                        '121a:7 (the fifteenth of Av: lapsed); the row case_output = rule_for_the_generations]', 'case_source': event['case_source']})
+        verdict = event.get('verdict')
+        for person in persons:
+            ent = world.entities.get(world._registry.get(person, person))
+            decided = any(e['effect'] == verdict for e in (ent.ledger if ent is not None else []))
+            if verdict == 'marries_within_tribe' and not decided:
+                sh = CASE_VERDICTS['marries_within_tribe'](world)
+                out.append({'effect': 'marries_within_tribe', 'subject': person, 'counterparty': sh['counterparty'], 'amount': None, 'due': sh['due'],
+                            'value': 'by the mouth of the LORD', 'source_law': sh['source_law'], 'case_source': event['case_source']})
+        return out
+    return []
+
+
+def due_of_passover_sheni(world):
+    """THE TENT sitting 2 (2026-09-09): the fourteenth of the second month through the Calendar — the row passover_sheni (Num 9:11), never a
+    literal. The exodus ERA's date when the world carries it (the sequence world runs on the creation epoch and dates the exodus era from
+    Exod 12:2's marker; an exam world declares epoch='exodus'); else the base calendar's festival key (a probe world)."""
+    ex = world.clock.eras.get('exodus')
+    row = CAL_PARAMS['festival_dates']['value']['passover_sheni']
+    if ex is not None:
+        y = ex.year(world.clock.day)
+        d = ex.day_of(y, int(row['month']), int(row['day']))
+        return d if d > world.clock.day else ex.day_of(y + 1, int(row['month']), int(row['day']))
+    return world.clock.calendar.next(world.clock.day, 'passover_sheni')
 
 
 # =====================================================================

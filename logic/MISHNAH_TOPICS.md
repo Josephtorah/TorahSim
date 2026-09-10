@@ -59,14 +59,14 @@ hairline of what-is-part-of-what (Stems). Topic order, never verse order.
 
 ## Order 2 — Appointed Times — מועד ("appointed time") · 12 tractates
 
-**12. Mishnah, Sabbath** — שבת ("Sabbath") · 24 ch — the labor system. — ch 19 READ WHOLE 2026-09-06 (sitting G1: circumcision on the Sabbath — Gen 17:12's eighth day, the ladder to twelve).
+**12. Mishnah, Sabbath** — שבת ("Sabbath") · 24 ch — the labor system. — ch 19 READ WHOLE 2026-09-06 (sitting G1: circumcision on the Sabbath — Gen 17:12's eighth day, the ladder to twelve). — 7:1-2 credited 2026-09-09 (THE TENT sitting 3: the great rule and the thirty-nine at the wood-gatherer's docket; the gatherer's labor a parameter row — detaching, carrying, gathering).
 1 carrying transfers; eve rules · 2 lamp fuels · 3 stovetop warming · 4 insulating · 5 animal gear · 6 personal wear · 7 THE GREAT RULE: the 39 labors · 8 carrying minimums · 9 derivations; more minima · 10 storing; carrying styles · 11 throwing between domains · 12 building/writing minima · 13 weaving; trapping · 14 eight creatures; healing bans · 15 knots · 16 fire rescue of scrolls · 17 vessel handling (muktzeh) · 18 clearing space; birthing · 19 circumcision overrides · 20 straining; fodder · 21 carrying child-with-stone · 22 broken cask; washing · 23 borrowing; waiting for dark · 24 nightfall on the road
 
 **13. Mishnah, Merging Domains** — עירובין ("mergers") · 10 ch — extending Sabbath domains.
 1 alley fixes · 2 well enclosures · 3 the eruv food and placement · 4 forced beyond limits; four cubits · 5 city extension; measuring · 6 gentile or denier in the courtyard · 7 windows and walls between courtyards · 8 boundary partnerships; water · 9 roofs as one domain · 10 found tefillin; misc reliefs
 
 **14. Mishnah, Passover** — פסחים ("Passovers") · 10 ch — leaven and the lamb.
-1 the night-14 search · 2 benefit window; disposal · 3 leaven species · 4 eve-of-festival work customs · 5 slaughter shifts · 6 Sabbath overrides · 7 roasting; impurity cases · 8 who registers on a lamb · 9 Second Passover · 10 the seder night: four cups, the questions
+1 the night-14 search · 2 benefit window; disposal · 3 leaven species · 4 eve-of-festival work customs · 5 slaughter shifts · 6 Sabbath overrides · 7 roasting; impurity cases · 8 who registers on a lamb · 9 Second Passover · 10 the seder night: four cups, the questions — ch 9 READ WHOLE 2026-09-09 (THE TENT sitting 2, the second Passover's exam: 9:1-4 consumed, 9:5 credited, 9:6-11 routed to the Passover engine's registration module; Tosefta Pesachim 8 beside it).
 
 **15. Mishnah, Shekels** — שקלים ("shekels") · 8 ch — the Temple tax and treasury. READ WHOLE 2026-09-06 (sitting E4 — the incense-and-shekel docket, all 52 rows verdicted against Exod 30:11-16).
 1 Adar announcements · 2 exchange; surpluses · 3 chamber withdrawals · 4 what the fund buys · 5 officers and seals · 6 the thirteen chests · 7 found money and meat · 8 Jerusalem purity presumptions
@@ -130,10 +130,10 @@ hairline of what-is-part-of-what (Stems). Topic order, never verse order.
 **32. Mishnah, Middle Gate** — בבא מציעא ("middle gate") · 10 ch — property between people.
 1 two holding a garment · 2 found items: keep vs proclaim · 3 deposits disputed; misuse · 4 coin hierarchy; fraud; verbal wrong · 5 usury definitions · 6 artisans and haulers reneging · 7 laborers' meal rights; THE FOUR KEEPERS ladder enters · 8 borrower with owner; rentals · 9 sharecrop terms; wage deadlines; pledges · 10 the collapsed two-story house
 
-**33. Mishnah, Last Gate** — בבא בתרא ("last gate") · 10 ch — neighbors, sales, inheritance. — ch 8 READ WHOLE 2026-09-06 (sitting G2: who inherits and the order; Jacob's testament as 8:5's case in the gift form).
+**33. Mishnah, Last Gate** — בבא בתרא ("last gate") · 10 ch — neighbors, sales, inheritance. — ch 8 READ WHOLE 2026-09-06 (sitting G2: who inherits and the order; Jacob's testament as 8:5's case in the gift form). ch 8 CREDITED and re-opened 2026-09-09 (THE TENT sitting 4: the inheritance order compiled at its Numbers seat, Num 27:8-11 — 8:2 quotes 27:8, 8:3 the daughters' three portions; num_27_inheritance_exam_2026-09-09.md); 9:1 credited, 9:2 read (the tumtum); the Talmud's chapter 'there are those who inherit' (108b-121b) opened per gap.
 1 courtyard partitions · 2 distancing nuisances · 3 possession-years (chazakah) · 4 what a house sale includes · 5 the ship-sale inventory; acquiring movables · 6 seed and path defaults · 7 land-measure sales · 8 inheritance lines; the firstborn's double · 9 sons and daughters; deathbed gifts · 10 document formats (plain, tied)
 
-**34. Mishnah, Courts** — סנהדרין ("Sanhedrin") · 11 ch — court structure and capital law.
+**34. Mishnah, Courts** — סנהדרין ("Sanhedrin") · 11 ch — court structure and capital law. — ch 6 READ WHOLE 2026-09-09 (THE TENT sitting 3: the stoning protocol from the platform to the grave — the wood-gatherer, num_15_mekoshesh_exam_2026-09-09.md; 6:1 and 6:3 credited from the blasphemer's exam); 5:1 read (the examinations — "did you warn him"); 7:1, 7:4, 7:8 credited (the four deaths, the stoned census, the Sabbath profaner's criterion).
 1 courts of 3, 23, 71 · 2 the high priest and the king · 3 choosing judges; disqualifications · 4 capital vs monetary procedure · 5 the seven interrogations · 6 stoning procedure; confession · 7 the four executions; stoning class · 8 the rebellious son · 9 the burning class; murderers · 10 all Israel has a share — and who doesn't · 11 the strangling class; rebellious elder; false prophet
 
 **35. Mishnah, Lashes** — מכות ("lashes") · 3 ch — witnesses, exile, stripes.

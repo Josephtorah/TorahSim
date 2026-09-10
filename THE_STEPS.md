@@ -3081,7 +3081,33 @@ journal_probes.py written first and failed first), the engine stamps
 every effect with the daemon that wrote it, and the gate runs the tape
 twice in two processes and demands byte-identical segments — green the
 day it was built. Step 2's first gate (the index's counts equal the
-run's tuple) rides inside it; step 3, installation, is next. THE
+run's tuple) rides inside it. STEP 3 INSTALLATION WAS BUILT the same
+day, the loop's second sitting: every law's daemon now declares the
+verse where the law is spoken and the act that switches it on (boot,
+an institution-erecting act, or pending — counted as debt), the
+institutions (the tent, the priesthood, the covenant, the court, the
+land) are entities whose ledgers carry in-force entries written by the
+tent daemon at the erecting act, and the engine asks before every call
+whether the law is spoken and its institution standing (Chagigah 6b:2)
+— under the running from-creation setting nothing is skipped and the
+engine only counts what the other setting would skip; the probes
+written first, the moved tuples predicted first and matched. STEP 2'S
+REMAINDER WAS BUILT the same day: the index now knows which world
+each row came from, a closed entry records the day it closed, and
+four VIEWS stand over the journal's table — the ledger, the timers
+(each timer joined to its fire or its cancel), the clock (the markers
+with their class), and the court's docket — with four questions the
+machine answers from them: an entity's ledger at a day, what stands
+open at a verse, who wrote this, what waits in custody; every view's
+count is checked against the table's own on every world inside the
+journal gate. AND NUMBERS' OPENING BLOCK OPENED the same day
+(World/step9/THE_TENT.md): the four cases the code did not cover, run
+on the tape one sitting each — the blasphemer first, whose verses are
+Leviticus: the halt writes the person into the guard and a declaration
+owed onto the court's docket (recording which laws had already decided
+the case — under the running from-creation setting the code decides
+before the halt), the tent's output installs the case-born law and
+closes the docket, the execution closes the sentence and the guard. THE
 THIRTEEN DECISIONS of 2026-09-09 (World/step9/THE_LOOP.md, "Decisions
 not yet made", each marked DECIDED) bind the steps after it: only the
 sequence world tracks installation; every law carries the verse that
@@ -3092,6 +3118,149 @@ entity with its own daemon, the halt on an undecided case written as
 custody, the output as the verdict and the rule; one database built
 from the journal; and a SIXTH STEP, the readback — the text re-read
 against the ledger the run left — named with a box on the map.
+THE BLOCK'S SECOND CASE RAN THE SAME DAY (2026-09-09, on the owner's
+"go"): the unclean men at Passover, Numbers 9:1-14 — and it ran the
+WHOLE process in order, Steps 2 to 5 with the loop's tape at the end:
+the first Numbers reading (the Sifrei on Numbers as the spine, with
+Onkelos; the ledger's own script caught two rows the hand had
+skipped), the first Numbers unit frozen by the ritual (its scenarios
+first rewritten to the frozen form — the ritual's own red read, not
+assumed), the span compiled in its own runner (the map had said the
+Passover engine already held it; a grep said no — the runner CALLS
+the Passover engine instead), the wrap, and the tape: the halt of a
+STANDING case (no guard — the men wait, and the docket reads the
+code's decision off a pending timer, since a due filed to the second
+month is a decision too), the output as the STATUTE ITSELF (the tent
+output's second form; the rule wider than the question), the second
+case-born law installed. The tape learned its fourth book, and the
+book's first marker walked the clock past the erection's day for the
+first time: the morrow timers fired, the table entered the ledger at
+its first due, and a line from the incense runner that the three-book
+tape had set aside joined at Numbers 16 — exposing an unguarded
+branch in the erection daemon, fixed at the design. Lesson for this
+section: a stitcher's census is a prediction instrument — diff it per
+runner before typing a tuple; a timer's subject is not an entity
+until the fire writes it.
+THE BLOCK'S THIRD CASE RAN THE SAME DAY (2026-09-09, on the owner's
+"Go"): the wood-gatherer, Numbers 15:32-36 — the reading, the unit
+and the compile in one sitting again, and the compile began with a
+grep: the death mode the map named as this sitting's deliverable was
+ALREADY a cell of the Exodus Sabbath engine, imported by name from
+this span's run two days earlier, before Numbers had a reading (the
+mirror of the second case's correction — there the map said compiled
+and it was not; here it said compile and it was). Numbers is where
+Exodus's laws get their modes. What no runner held was compiled in
+the case's own runner: the forewarning that names the labor (read
+off the verse's own repeated word), the custody rule, the stoning
+protocol from the platform to the grave, the two verses reconciled,
+the hanging fork, the labor and the identity as data rows — the
+Sabbath engine CALLED for the liability and the mode, its forward
+import given its home. The tape: the tent's three kinds took their
+SECOND SEATS by reference (the guard with the uncertainty the MODE;
+the sentence in its leaner form — "said" without "saying", no
+statute in the speech; the execution with the ink's own "and he
+died"); the third case-born law installs A RULE INSIDE A LAW — the
+output names a cell of an existing law, not a daemon, and the cell's
+own in-force gate belongs to the second pass; the Exodus Sabbath law
+fired on the tape for the first time, having waited for a Numbers
+act. The run matched every predicted slot the first time; then the
+ask-tool showed the death sentence OPEN on the gatherer and the
+execution was amended to close it — the close pairing found twice
+now by the same question. Lesson for this section: a map's "the
+compile" is measured before it is believed, as its "already
+compiled" was; a rule can be installed INTO a law; ask the ledger
+after the first run, every time.
+
+THE BLOCK'S FOURTH CASE, AND THE LOOP'S CURSOR AND SCENARIOS (2026-09-09,
+on the owner's "Continue" after compaction): the daughters of Zelophehad,
+Numbers 27:1-11 and 36:1-12 — two readings and two units in one sitting
+(the Sifrei on Numbers found by POSITION, its Deuteronomy excursus read
+inside the stretch; the Sifrei's own end at 35:29 computed), and a
+claim's machine check that FAILED for the right reason: the snapshot
+store drops the Torah's large letters, and the halt verse's "their
+judgment" carries one (RESEARCH_LOG.md — a defect report on the evidence
+layer; the snapshot untouched). The compile paid Genesis's owed edge: the
+inheritance ladder for the generations in its own runner, the family
+engine CALLED for what Genesis holds (the no-son clause at Deut 25:5 and
+Num 27:8 alone; the held and the due; what the jubilee does not return).
+The tent's fourth case taught THREE new shapes: the halt's THIRD FORM
+("and Moses brought their judgment near" — no guard, no wait, the docket
+alone; the uncertainty the SCOPE, the fit against the held), THE SECOND
+PLEA THAT DOES NOT HALT (the tribes, answered at once), and THE SECOND
+OUTPUT RELAYED ("Moses commanded... by the mouth of the LORD" — no divine
+frame) installing a CELL of the case-born law with a REACH ("this is the
+thing" = this generation, lapsed on the fifteenth of Av). The tape's
+marker for the case is READING-PLACED in the fortieth year (the Sifrei
+dates it by Eleazar in the court's roster; 33:38's stamp), and its walk
+fired the unclean men's second Passover — the readback's first item now
+on the ledger, open; the daughters' holding stays open too (the giving is
+Joshua 17:4). And THE LOOP's steps 4 and 5 arrived where the map said they
+would: a CURSOR that resumes the tape at a verse by replay with the
+journal as the audit (the replayed prefix byte-identical to the base, or
+refused; new lines in an appended segment whose chain continues the
+base's), and a SCENARIO — the daughters' own levirate argument (Bava Batra
+119b:10) put to the live world at the left edge of 27:5, both horns
+answered from one clause BEFORE the text's answer was read, 3/3 against the
+Mishnah's rows. The standing duty that named the loop at every compaction
+point ends with step 4 on the record.
+
+## THE NUMBERS WALK (owner-ruled 2026-09-09 at THE TENT's close; the map World/step9/NUMBERS_WALK.md)
+
+Brian's words: "Let's go to the start of numbers and go through it in
+order," and the next morning, "OK, let's go starting with numbers the
+first first first verse." Numbers had been entered by its interrupts
+(the tent's four cases); every other book was walked from its first
+verse, and the walk resumes here in the derivation era's own form, at
+the parashah grain: a READING SITTING per weekly portion (one script
+writes the portion's ledgers, one block each, with the coverage and the
+ink facts computed; one manifest script with every check cut from the
+store's bytes; one seat script; the rituals in sequence; the corpus
+rebaked; the stamp), then a COMPILE SITTING that cold-compiles the
+portion's law and arithmetic and puts its acts on the tape. The four
+case chapters already frozen are skipped when reached.
+
+THE FIRST SITTING, BAMIDBAR (Numbers 1:1-4:20, 2026-09-09), taught the
+walk three things. THE SHELF'S HEADS ARE ASSERTED, NOT TRUSTED: the
+Sifrei on Numbers opens at 5:1, and the one piska the export labels
+inside chapters 1-4 ("3:24") sits between the rows on 8:4 and 8:25 and
+quotes 8:24 — a mistyped digit, found by the ledger script's assert on
+the heads, read where its subject is (4:3's thirty) and filed. THE
+CENSUS HAS ITS OWN NUMBER GRAMMAR, and the engine could not read it:
+the ink writes "six and forty thousand and five hundred" with the
+thousand multiplying the group before it, "and a thousand" as an
+addend (3:50's 1,365), "from" and "a hundred of" as one consonantal
+word told apart by vowels, "five, five" as a distributive — measured on
+every number of the portion, the ledger script's own parser proving
+the twelve counts sum to 603,550 on three seats in two books (1:46,
+2:32, Exodus 38:26), the Levite houses to 22,300 against the written
+22,000, the redemption to 273 × 5 = 1,365 — while the engine's numeral
+parser, built on Genesis and Exodus, returned 1,546 for Reuben's
+46,500. The compile sitting teaches it the thousands with probes first.
+And THE COUNT IS OF NAMES: the ink counts "the number of names" per
+head, the pedigrees declared by a verb the Tanakh uses once, the
+princes "designated by names" in the blasphemer's own lemma, the one
+written-and-read pair of the portion (1:16) carried by the store as
+two tokens side by side. Nine units frozen, thirty-two claims seated
+and machine-checked, every ledger's coverage computed.
+
+THE COMPILE OF BAMIDBAR followed the same day (sitting 1b, on Brian's
+"Go"): the exam docket read first — every shelf segment citing a verse
+of the portion plus the implementing tractates by address, 159 rows,
+the Talmud asking the very subtraction the ledger had computed (the
+Levite houses against the total: three hundred firstborn Levites); the
+parser taught the census's grammar with the probes written to fail
+first, then the stitcher verifying every marker again at each pass, then
+the old parser diffed against the new over every verse of the four
+books — and that diff, read verse by verse, taught four more rules
+(the homograph decided by the points on both letters, the distributive
+on the raw word, "and the other" no number, "thousands" the noun before
+a noun) and moved "two" against "years" onto the points as well; the
+runner's five cells answering the docket's rows, 66 of 66 on the first
+graded run; the tape's thirteen lines with the book's opening date as
+a forward marker that turns the Passover's marker retrograde, eight
+checkpoints on the arithmetic, the retrograde and the five closes; the
+cursor's bound rule found and fixed on the way; every gate and the
+sweep green. The portion is read, frozen, compiled and on the tape.
 
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed

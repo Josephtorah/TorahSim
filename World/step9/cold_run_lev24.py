@@ -64,6 +64,10 @@ def law_lev24(event, world):
         if event['name_pronounced']:
             return [E_('stoned', event['curser'], value=event.get('status', 'native'), law="curse gate: NAME-REQUIRED [INK 24:16 'he who pronounces the name of the LORD shall surely be put to death... all the congregation shall stone him, the sojourner as the native'; Mishnah Sanhedrin 7:5]")]
         return [E_('bears_sin', event['curser'], cp='HEAVEN', law="curse gate: BEARS-SIN [INK 24:15 'when he curses his God, he shall bear his sin' — no earthly executor named]")]
+    if k == 'blasphemed_the_name':                       # THE TENT sitting 1 (2026-09-09; THE_TENT.md section 1): the chapter's own case AS THE NARRATIVE ACT (Lev 24:11) — the same curse gate; under the boot setting the code decides before the halt
+        if event.get('name_pronounced', True):
+            return [E_('stoned', event.get('curser', event['subject']), value=event.get('status', 'native'), law="curse gate: NAME-REQUIRED [INK 24:11 'pronounced the Name and cursed' — the act; 24:16 the statute; Mishnah Sanhedrin 7:5] — decided at the act, before the halt of 24:12")]
+        return [E_('bears_sin', event.get('curser', event['subject']), cp='HEAVEN', law="curse gate: BEARS-SIN [INK 24:15 'when he curses his God, he shall bear his sin']")]
     if k == 'man_struck_dead':
         return [E_('put_to_death', event['striker'], value=event.get('victim_age', 'adult'), law="killing pair: DEATH [INK 24:17 'any human life' — a day-old counts, Niddah 44b; Exod 21:12]")]
     if k == 'beast_struck_dead':
@@ -90,6 +94,32 @@ def scene():
     amt = lambda eid, eff: sum(e['amount'] or 0 for e in w.entity(eid).ledger if e['effect'] == eff)
     return (n('the-son-of-shelomith', 'stoned'), n('the-curser', 'bears_sin'), n('the-killer', 'put_to_death'), n('the-striker', 'pays'), amt('the-striker', 'pays'), n('the-maimer', 'substitution'), w.clock.day), w
 SCENE, _W = scene()
+
+
+def narrative():
+    """THE TENT sitting 1 (2026-09-09; World/step9/THE_TENT.md section 1): the chapter's own case AS HISTORY — Lev 24:11-23's four acts in
+    the text's order on a world with the library's tent daemon registered first (the act, the halt, the output, the execution); recorded
+    by the sequential run's recorder and stitched onto the tape (SEQUENTIAL_RUN.md section 3). Not a graded cell: the tuple below is
+    a tripwire typed from THE_TENT.md's prediction; the sequence world's RUN tuple grades the tape."""
+    with contextlib.redirect_stdout(io.StringIO()):
+        w = WE.World(era='Lev 24:10-23: the blasphemer on the tape — the act, the halt, the output, the execution (clock unit: days)')
+        w.laws = [WE.law_tent, law_lev24]
+        w.advance(1)
+        w.submit({'kind': 'blasphemed_the_name', 'subject': 'the-son-of-shelomith', 'curser': 'the-son-of-shelomith', 'name_pronounced': True, 'status': 'native', 'case_source': 'Lev 24:11 — and the son of the Israelite woman pronounced the Name and cursed, and they brought him to Moses'})
+        w.submit({'kind': 'placed_in_custody', 'subject': 'the-son-of-shelomith', 'person': 'the-son-of-shelomith', 'case_of': 'Lev 24:11', 'uncertainty': 'liable_at_all', 'case_source': 'Lev 24:12 — and they placed him in the guard, to be declared to them by the mouth of the LORD (Sanhedrin 78b:7: whether liable at all)'})
+        w.submit({'kind': 'sentence_declared', 'subject': 'the-son-of-shelomith', 'person': 'the-son-of-shelomith', 'sentence': 'stoning', 'outside_the_camp': True, 'hands_laid': True, 'installs': 'law_lev24', 'case_source': 'Lev 24:13-14 — and the LORD spoke to Moses: bring out the curser outside the camp, let all who heard lay their hands on his head, and let all the congregation stone him; the statute 24:15-22 in the same speech'})
+        w.submit({'kind': 'stoned_as_commanded', 'subject': 'the-son-of-shelomith', 'person': 'the-son-of-shelomith', 'case_source': 'Lev 24:23 — and they brought out the curser outside the camp and stoned him with stone; the children of Israel did as the LORD commanded Moses'})
+    n = lambda eid, eff: len([e for e in w.entity(eid).ledger if e['effect'] == eff])
+    is_open = lambda eid, eff: [e.get('open') for e in w.entity(eid).ledger if e['effect'] == eff]
+    owed = [e for e in w.entity('the-court').ledger if e['effect'] == 'declaration_owed']
+    return (n('the-son-of-shelomith', 'stoned'), n('the-son-of-shelomith', 'in_custody'), len(owed), owed[0].get('open') if owed else None,
+            (owed[0].get('covered_by') or None) if owed else None, n('the-tabernacle', 'rule_installed'),
+            is_open('the-son-of-shelomith', 'stoned'), is_open('the-son-of-shelomith', 'in_custody')), w
+
+
+NARRATIVE, _WN = narrative()
+NARRATIVE_PREDICTED = (1, 1, 1, False, ['law_lev24'], 1, [False], [False])   # THE_TENT.md section 1: stoned at the act (the code decides before the halt), in custody, the docket owed then closed, covered by law_lev24, the rule installed; AMENDED at the first run's reading: the execution CLOSES the two body entries (stoned, in_custody)
+assert NARRATIVE == NARRATIVE_PREDICTED, ('THE TENT: the blasphemer narrative moved from its prediction', NARRATIVE, NARRATIVE_PREDICTED)
 
 def main():
     db = sqlite3.connect(DB)

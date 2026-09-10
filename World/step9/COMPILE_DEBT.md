@@ -436,6 +436,33 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
 ## of Arakhin 32b:16 read off the land's ledger); sub-day OUT; the era table as DATA with an epoch row per world, unexercised rows
 ## visible; THE RETROGRADE MARKER (Pesachim 6b:7, Num 9:1 after 1:1): counter unmoved, `dated` beside `day`, past dues at submission.
 ## OWED FORWARD, not before Numbers: Num 27 + 36 arrives with Numbers; Deut 25 with Deuteronomy.
+## THE OWNER'S RULING 2026-09-09 AT THE TENT'S CLOSE: NUMBERS IN ORDER FROM 1:1 — the chapter walk from the first verse (Bamidbar 1:1-4:20 first), the
+## four case chapters (9, 15:32-41, 27, 36) frozen and skipped when reached; Num 27 + 36 PAID at THE TENT sitting 4.
+## THE NUMBERS WALK sitting 1 — BAMIDBAR 1:1-4:20 READ AND FROZEN (2026-09-09, the owner: "OK, let's go starting with numbers the first first
+## first verse"; the map World/step9/NUMBERS_WALK.md): nine ledgers by one script (Onkelos whole, 159 verses; the Sifrei on Numbers has NO
+## piska on the portion by position — it opens at 5:1; its export's piska 62 headed "3:24" is the row on 8:24, read at 4:3 — RESEARCH_LOG.md),
+## 32 claims labeled and machine-checked, 32 operators seated, nine rituals. OWED TO THE COMPILE SITTING, MEASURED HERE: (a) THE ENGINE'S
+## NUMERAL PARSER CANNOT READ THE CENSUS — cold_run_sequence.ink_numbers on Num 1:21 gives 1,546 for 46,500, on 3:39 1,020 for 22,000, on
+## 1:46 two numbers for one: no thousands, and שנים ("two") read as "years"; THE CENSUS'S GRAMMAR measured on every number of 1:1-4:20 and
+## carried by the ledger script's own parser: a unit before hundreds multiplies; אלף / אלפים ("thousand"/"thousands") WITHOUT the
+## conjunction multiplies the group since the last thousands-word; וְאֶלֶף ("and a thousand") adds (Exod 38:25, Num 3:50, 26:51); מֵאֵת
+## ("from") vs מְאַת ("a hundred of") by the vowels; a doubled numeral is distributive (3:47) — the engine's parser is taught this with
+## probes first, then assert_ink re-verifies every census number at run time; (b) THE CENSUS'S ARITHMETIC as a compiled function: the twelve
+## summed = 1:46 = 2:32 = Exod 38:26 (603,550); the camps' four sums; the Levite houses 22,300 against 3:39's 22,000 (the delta 300 —
+## Bekhorot 5a the exam's row); 22,273 − 22,000 = 273; 273 × 5 = 1,365 — the firstborn engine's cell and the shekel (Exod 30:13's twenty
+## gerah = twenty ma'in, Bekhorot 50a) CALLED; the thresholds (twenty, a month, thirty-to-fifty; the Sifrei's twenty-five to learn) as data
+## rows; the two rings and the march order as data; (c) THE TAPE: Num 1:1's stamp (the first of the second month, year two) a FORWARD marker
+## before 9:5 in verse order — the Passover's marker becomes RETROGRADE (Pesachim 6b:7); the census, the camp, the Levite count, the
+## firstborn count and the redemption as five spec/run pairs on the tape; the twelve princes and the three Levite houses enter the registry
+## with the scene (linked across num_01/num_02/num_07/num_10 — Deuel and Reuel one man, the dalet/resh recorded). NEXT: Naso 4:21-7:89.
+## THE NUMBERS WALK 1b (2026-09-09) — THE COMPILE OF BAMIDBAR DONE (NUMBERS_WALK.md "Sitting 1b"): (a) PAID — the engine's parser taught the
+## census's grammar (census_probes.py 17/17; every marker verified; the tape byte-identical before the new lines; the corpus-wide diff read verse
+## by verse — four rules tightened on it: the homograph by BOTH vowels, the distributive on the raw word, 'and the N' only inside a chain, the dual
+## 'thousands' only before a numeral; 'two' against 'years' BY THE POINTS); (b) PAID — cold_run_bamidbar.py 66/66, the 48th daemon law_census,
+## the shekel and the firstborn engines CALLED, the five spec/run pairs as five debits opened and closed; (c) PAID — the 1:1 marker on the tape,
+## 9:5 retrograde, CB1-CB8. OWED FROM IT: bamidbar -> minchah — Num 4:16 'the continual meal-offering' among Eleazar's charge: the meal-offering
+## engine's CALL owed to the service's sitting (Naso's Levite work-count, Num 28's daily offering); Num 35:5's 'two thousand cubits' (the dual
+## before a measure noun) waits for Masei's walk; the princes' and the Levite houses' registry rows with the frozen units' tokens at the fold.
 ## `python3 World/step9/daemon_census.py --debt` prints the wrap worklist; this file is the checklist.
 
 ## THE LINK REVIEW (ruled by the owner 2026-09-07 after W5: "The teacher say not to create a link of our own unless it
@@ -523,9 +550,21 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
       1 THE SINK DONE 2026-09-09 (the log as a hash-chained L3 segment per world per run, World/step9/world_journal.py importing
       World/journal/worldledger.py; journal_probes.py 0/6 then 6/6; the engine's one line — every effect stamped with its
       writing daemon; the gate `--gate` GREEN: four segments byte-identical across two processes, chains verified, the index's
-      counts = the RUN tuple; THE_LOOP.md "As built"), 2 THE INDEX MINIMAL the same sitting (worldledger's events table rebuilt
-      from every segment on disk, 15,927 rows; the counts check inside the gate; the richer tables and the ask-tool OWED),
-      3 installation (T1) NEXT, 4 the cursor (resume by replay to a verse), 5 scenarios at the cursor, 6 THE READBACK (named
+      counts = the RUN tuple; THE_LOOP.md "As built"), 2 THE INDEX — MINIMAL the same sitting (worldledger's events table rebuilt
+      from every segment on disk; the counts check inside the gate) and ITS REMAINDER DONE 2026-09-09, the loop's third sitting
+      (D8: the four run VIEWS run_ledger / run_timers / run_clock / run_docket as SQL views in World/journal/run_views.sql, created
+      at every reindex; the events table's `source` column; World.close's closed_day; the four questions `--ask ledger | open |
+      who | custody`; view_probes.py 0/6 then 6/6; every view count derived from the table's own on every world — the views gate
+      inside `--gate`, GREEN; the August tree's checklist re-measured at FOUR failing lines, none this sitting's, retiring at the
+      merge — D7's merge still its own sitting),
+      3 INSTALLATION (T1) DONE 2026-09-09 (the loop's second sitting, under D1-D6; THE_LOOP.md "Step 3 INSTALLATION — the design" and
+      "As built": every daemon carries given_at + installed_by — boot 8 / by an act 34 / pending 2 (law_pesach, law_lev24, counted and
+      printed); the fourth registry installation_parameters.yaml (installation_setting boot / from_event, case_output, six installing
+      acts); four institution entities in the registry; the effects in_force, declaration_owed, rule_installed; the tent daemon law_tent
+      first in the order; the dispatch gate in World.submit with the eighth log class run.skip; installation_probes.py 0/6 then 6/6;
+      the RUN and REST tuples PREDICTED (+5 writes, +1 daemon, +2 entities) and matched first run; the journal gate GREEN; the
+      instrument's first reading — 34,729 of 46,552 calls would be skipped under from_event; the sweep 39/39 at 4,518),
+      4 the cursor (resume by replay to a verse), 5 scenarios at the cursor, 6 THE READBACK (named
       2026-09-09 by decision D12 — the text re-read against the ledger the run left: Deuteronomy's repetition first, the
       prophets against the open entries after; no design until Deuteronomy); each step's design and fire-probes first; the
       segments and index derived and uncommitted, scenario inputs primary in git. THE THIRTEEN DECISIONS of 2026-09-09
@@ -536,6 +575,9 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
       step 2; the four run views; base plus appended segments, exam worlds unjournaled; the August tree retired at the merge;
       3, then 2's views, then Numbers opens, 4 and 5 when the cases call.
       Takes Numbers' opening block with T1 or the sitting before it. ⚠ It slipped from 2026-08-24 to 2026-09-09 for want of this line.
+      NAMED at THE TENT sitting 2 (2026-09-09): steps 1-3 done, the block's second case on the tape; steps 4-6 and D7's merge still owed.
+      NAMED at THE TENT sitting 3 (2026-09-09): steps 1-3 done, the block's third case on the tape (the third case-born law; a rule installed INTO a law — the cell's gate a second-pass item); steps 4-6 and D7's merge still owed; sitting 4 brings steps 4 and 5.
+      STEPS 4 AND 5 BUILT at THE TENT sitting 4 (2026-09-09; THE_LOOP.md "Step 4 THE CURSOR — the design", "Step 5 SCENARIOS — the design" and their as-built): World.stop_before + CursorReached (the engine), cold_run_sequence.run_to(verse) and --cursor, world_journal.cursor_segment (the audit: the replayed prefix byte-identical to the base's; the append: a new segment whose chain continues from the base's at the fork — worldledger.Segment's start_chain) and scenario (prov.unit 'scenario'), World/step9/scenarios.yaml the primary record; cursor_probes.py 0/6 then 6/6; the first exemplar the daughters' levirate dilemma at Num 27:5. Step 6 THE READBACK and D7's merge still owed — the standing duty ends when step 4's line is on the record (this line).
       THE AUGUST JOURNAL MOVED INTO THE REPO 2026-09-09 (the owner: "add it to github"): World/journal/ — worldledger.py, build_world.py,
       run_cases.py, registers/, primary/ tracked; data/ gitignored; rebuilt in place, determinism GREEN, one August tree checklist line
       (forming/filling symmetry) FAILS against today's 163 units — filed for the loop's first sitting; the sink imports worldledger from there.
@@ -597,7 +639,48 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
       rule in the case's name (Sanhedrin 8a:5; Bava Batra 110b:4) — with the blasphemer (Lev 24:12), the wood-gatherer (Num 15:34)
       and the second Passover (Num 9:8) the run's four uncovered cases, NUMBERS' OPENING MARQUEE: the custody entry for an event no
       daemon consumes, the output verse as the installation of a new law, the Sifrei's generations-rule / instance-verdict split
-      (Sifrei Bamidbar 114:1) as two effects, the daughters' own levirate argument (Bava Batra 119b:10) run before the answer is read
+      (Sifrei Bamidbar 114:1) as two effects, the daughters' own levirate argument (Bava Batra 119b:10) run before the answer is read.
+      THE BLOCK OPENED 2026-09-09 — World/step9/THE_TENT.md; SITTING 1 THE BLASPHEMER DONE the same day (Lev 24:11-23's four acts on the
+      tape; the tent daemon's halt, output and execution branches on real verses; the docket's first row; law_lev24 installed by the
+      tent's output — pending 2 → 1; the RUN tuple predicted and matched, 10/10; the journal gate green); sittings 2-4 (Num 9:1-14,
+      15:32-36, 27:1-11 + 36:1-12) each need the reading and the unit first — this box's own inheritance order is sitting 4's
+      SITTING 2 THE UNCLEAN MEN AT PASSOVER DONE 2026-09-09 (THE_TENT.md section 2 + 2a): the first Numbers reading and unit
+      (num_09_pesach_cloud frozen; the Sifrei on Numbers 64-71 + Onkelos; eleven claims; 164 units, standing 1789, hash unmoved);
+      the first Numbers span compiled in its own runner cold_run_pesach_sheni.py (26/26 first run; the map's "already in the Passover
+      engine" measured false — a grep found no Num 9 cell; the Passover engine CALLED by reference; pesach_sheni → moadim PARAMETER);
+      the second case-born law (statute_declared — the output as the statute itself; law_pesach_sheni installed by it; pending stays 1);
+      the tape's fourth book (one marker, five lines — the incense runner's Korach line at Num 16 admitted; law_erection's incense branch
+      guarded); RUN (1067, 44, 43, 0, 0, 1242, 15, 258, four pairs, 79) on the third run, THE REST exact, the journal gate green, the
+      sweep 40/40 at 4,544. OWED FORWARD from it: the second Passover's KEEPING is not narrated (the men's due a pending timer at the
+      run's end — the readback's item); Num 9:15-23 (the cloud's march rule, read and seated as NM09-11, uncompiled — the trumpets'
+      sitting, Num 10); Mishnah Pesachim 9:6-11 routed to the Passover engine's registration module (its docket, not this one's)
+      SITTING 3 THE WOOD-GATHERER DONE 2026-09-09 (THE_TENT.md section 3 + 3a): the second Numbers reading and unit (num_15_wood_tzitzit
+      frozen; the Sifrei on Numbers 113-115 + Onkelos; eight claims; 165 units, standing 1797, hash unmoved); MEASURED FIRST: the death mode
+      the map named as the compile was already a cell of the Exodus Sabbath engine (a forward import from this span, 2026-09-07) — the
+      compile was the case's procedure in its own runner cold_run_mekoshesh.py (34/34 first run; the Sabbath engine CALLED for the
+      liability and the mode; the import edge REVERSE filed at last); the third case-born law, installing THE RULE INSIDE A LAW (the cell
+      law_sabbath:death_run); the tent's three kinds at their second seats by reference; law_sabbath's first fire on the tape; RUN (1071,
+      44, 43, 0, 0, 1249, 17, 259, four pairs, 83) on the second run (the death sentence closed by the deed — found open by the ask-tool),
+      THE REST exact, the journal gate green. OWED FORWARD from it: Num 15:37-41 THE FRINGES — a spec read and seated (NM15-06..08),
+      UNCOMPILED (the tzitzit machine: Mishnah Menachot 3:7, 4:1; Sifrei 115:1's cells — a fringes sitting); Deut 17:7 (the witnesses'
+      hand first), 21:22-23 (the hanging, the same-day burial), 21:19-20 (the rebellious son's warning) — the protocol's Deuteronomy ink,
+      cited as ink, owed to Deuteronomy's runners; the second pass's gate on a CELL installed by a case (D2)
+      SITTING 4 THE DAUGHTERS OF ZELOPHEHAD — THIS BOX'S OWN ORDER PAID (2026-09-09; THE_TENT.md section 4 + 4a): the third and fourth
+      Numbers readings and units (num_27_zelophehad_joshua, num_36_heiresses frozen; the Sifrei on Numbers 133-141 + Onkelos 27 and 36; 15
+      claims; 167 units, standing 1812, hash unmoved; the store's dropped LARGE NUN found by a claim's check — RESEARCH_LOG.md); the
+      inheritance order compiled in cold_run_zelophehad.py (55/55 first graded run: the ladder, the nearness key, the husband and the wife,
+      the mother's property, the Sadducees refused, the apportionment's three arms, the ten parts of Joshua 17:5 counted from the ink, the
+      fit and the held, the daughters' levirate dilemma, the reach and its lapse — the family engine CALLED for what Genesis holds; G2's
+      edge family -> num_inheritance OWED re-dispositioned family -> zelophehad REVERSE, PAID); the fourth case-born law; the halt's THIRD
+      FORM (the judgment brought near — no body entry); the second output RELAYED (a new installing act, command_relayed) installing a cell
+      of the case-born law with a reach; THE LOOP's steps 4 (the cursor) and 5 (scenarios) built here — cursor_probes.py 0/6 then 6/6.
+      OWED FORWARD from it: Num 27:12-23 MOSES' VIEWING AND JOSHUA'S COMMISSION — read and seated (NM27-08..11), not tape-borne: the
+      office's INSTALLATION by the hand-laying (Sifrei 140:1 'that he rule in your lifetime') is an installing act whose second seat is Deut
+      34:9 and whose run is the sixth book — with the Numbers narrative census; THE GIVING OF THE HOLDING lies off the Torah (Josh 17:4:
+      the daughters' holding_owed OPEN on the ledger — the readback's second item beside the men's second Passover, which the marker's
+      walk to the fortieth year FIRED as due and left open); Deut 21:17 (the firstborn's double), Deut 25:5-6 (the levirate's clause, the
+      name) cited as ink, owed to Deuteronomy's runners; the tribe-transfer cell's own in-force gate and its LAPSE on the fifteenth of Av
+      (a rule closed by a later court's reading — the readback)
 - [ ] Deut 25:5-10 — THE LEVIRATE AND THE SHOE (with 21:15-17 the firstborn's double,
       24:1-4 the bill of divorce, 22:13-29 the virgin's cases) — owed by G2's 38:8
       'perform the levir's duty', 49:3-4 with 1 Chr 5:1, 24:67 'as a wife'

@@ -334,7 +334,10 @@ THE TENT'S OUTPUT:
   closes it (the output verse). DECIDED (the owner, 2026-09-09): CUSTODY ON THE COURT'S DOCKET, CLOSED BY THE OUTPUT VERSE —
   the tent daemon writes the new effect in_custody on the court's docket entity when the case's event fired no law; it stays
   open until the output verse's rule or verdict closes it; open custody at the run's end is a printed finding; the engine's
-  unconsumed count stays the separate tripwire it is today.
+  unconsumed count stays the separate tripwire it is today. (The docket entry's REGISTERED name is declaration_owed — at step
+  3's registration in_custody was found already registered as Joseph's body status on the held person, Gen 40:3, and a name
+  reused is a miss; the person's state at the halt is that existing effect, the docket's debit is the ink's own second phrase,
+  "to be declared to them" — the design section below.)
 - D6 Whether the output is carried as two effects (the generations' rule and the instance's verdict, Sifrei Bamidbar 114:1)
   and Sanhedrin 80b's code-or-edict fork as two settings. DECIDED (the owner, 2026-09-09): TWO EFFECTS AND THE DISPUTE AS A
   PARAMETER ROW — the output verse writes the instance's verdict on the person (the existing vocabulary) and rule_installed
@@ -378,6 +381,454 @@ SEQUENCING:
 - D13 The commit ("commit push"): everything since b4b40ce is uncommitted. DECIDED (the owner, 2026-09-09): "Commit push now" —
   one commit carrying the closed campaign, the loop's first step, the journal's move, the shelf readings and these decisions,
   pushed as Josephtorah; a clean point to compact from.
+
+## Step 3 INSTALLATION — the design (2026-09-09, the loop's second sitting; the owner: "ok step 3 go"; written under D1-D6
+## BEFORE the registers, the probes and the code; the shelf seats re-opened first: Yoma 28b:9-10, Kiddushin 82a:10, Chagigah 6b:1-2,
+## Sanhedrin 80b:5)
+
+WHAT IS INSTALLED. A law is IN FORCE when two things hold (D3; Chagigah 6b:2 — "it is not plausible that the details of a mitzva
+would change over time," so the daily offering did not run before its details were given in the tent): it has been SPOKEN — the
+run's position in the text has reached the verse where the law is given — and the INSTITUTION its clause presupposes STANDS — the
+act that erects that institution has fired and written its status. So every daemon carries TWO FIELDS in daemon_dispositions.yaml:
+- `given_at:` — the verse where the law is spoken, always in the ink: the first verse of the daemon's wrapped span (by script from
+  dependency_dispositions.yaml's `spans`; the library's five from the function each wraps: Exod 21:2, 21:28, 22:6, Lev 5:20, 8:1).
+- `installed_by:` — the ACT that switches it on, one of three values: `boot` (in force from creation — the story daemons and the
+  Noahide code, whose "law" is the deed the text records); a REGISTERED ACT KIND that erects an institution (the table below); or
+  `pending` — the installing act is not yet on the tape or in the registry (a verse of a book not yet compiled, or a tent's output
+  verse that registers with Numbers' opening block), with a `why:`; pending BEHAVES AS BOOT and is COUNTED as debt (D2).
+THE 43 ROWS, decided by hand, each from the clause's own precondition (the count by value, summed to 43 before the file is touched):
+- boot 7: law_pre_sinai, law_primeval, law_mamre, law_joseph, law_family, law_exodus_story, law_erection — the history's daemons;
+  the laws written inside the story (the calf's bans, the covenant's own clauses) are written at their acts.
+- covenant_blood_thrown 13 (Exod 24:8 "the blood of the covenant which the LORD has cut with you UPON ALL THESE WORDS" — the ink
+  binding the words to the act; Rabbi Yishmael, Chagigah 6b:1: the general statements at Sinai): law_slave_term, law_goring_ox,
+  law_guardians, law_decalogue, law_ordinances, law_mishpatim, law_mishpatim_2, law_mishpatim_3, law_calendar, law_sabbath,
+  law_sanctuary_build, law_vestments (the spec's makings run before any erection — the covenant is their institution), law_tochacha
+  (the covenant's own sanctions, Lev 26:9, 15, 42, 44-45; the exile's land condition is read off the land's ledger inside the code).
+- erected 3 (Exod 40:17 הוּקַם הַמִּשְׁכָּן, "the tabernacle was erected"): law_installation (Lev 8:3-4 "at the entrance of the tent
+  of meeting" — the tent must stand; in TAPE order the erection precedes Lev 8's retrograde stretch), law_investiture (Exod 29:4 the
+  same entrance), law_eighth_day (Lev 9:1 — the service's first day is the erection's day).
+- called_from_the_tent 16 (Lev 1:1 וַיִּקְרָא אֶל מֹשֶׁה וַיְדַבֵּר יְהוָה אֵלָיו מֵאֹהֶל מוֹעֵד, "and He called to Moses and the LORD
+  spoke to him from the tent of meeting" — the DETAIL PASS opens, Chagigah 6b:1): law_deposit_oath, law_offerings, law_minchah,
+  law_chatat, law_vayikra5, law_tzav, law_shemini, law_clocks, law_negaim, law_metzora, law_yoma, law_sanctions, law_holiness,
+  law_holiness_b, law_moadim, law_temurah — every Leviticus law spoken from the tent.
+- milluim_blood_sprinkled 1 (Lev 8:30; the Sifra, Mekhilta DeMiluim I 34 — the office consummated at the blood): law_priesthood
+  (Lev 21-22, 24:1-9 — the priest's file presupposes a priest invested).
+- entered_the_land 1 (Lev 25:2 "when you come into the land which I give you, the land shall keep a sabbath" — the ink's own
+  condition; the count's timers are set at the entry): law_yovel. The kind is registered (a case form, submitted by exam scenes)
+  and NEVER FIRES on the sequence tape — so under the deferred setting the jubilee's daemon would stand not-in-force through the
+  whole run, which is the truth of the three books.
+- pending 2: law_pesach (the Passover's giving at Exod 12:1-2 is not an EVENT on the tape — the stitcher carries Exod 12:2 as the
+  epoch MARKER only; the tape's Exodus 12 events begin at 12:29; the installing act registers when the Passover's own acts, 12:3
+  the lamb taken and 12:28 "they did," join the tape); law_lev24 (the blasphemer's law is CASE-BORN — its installing act is the
+  tent's output at Lev 24:13, whose kind registers at Numbers' opening block with the four cases; THE_LOOP.md "The tent as the
+  run's interrupt"). Sum: 7 + 13 + 3 + 16 + 1 + 1 + 2 = 43.
+
+THE INSTITUTIONS (D4) — one registry entity each, `kind: institution` in logic/corpus/entity_registry.yaml with a step9-scenes
+member, so a scene token and the institution write one ledger: the_tent_of_meeting (the-tabernacle — its existing writes,
+tabernacle_erected among them, re-home to it), the_priesthood (the-priesthood — the OFFICE, not the persons aaron-and-sons who
+carry invested_office), the_covenant_at_sinai (the-covenant), the_court (the-court — the ordinances' majority_decides re-homes to
+it), and THE LAND = the standing entity the_land_of_canaan (the-land-of-canaan; the runners' generic 'the-land' is NOT re-homed — O8
+S3's lesson stands; the join of the two lands is filed for the merge sitting, D7). The table of INSTALLING ACTS lives in a FOURTH
+REGISTRY, World/step9/installation_parameters.yaml, keyed by the act kind (one institution may be switched on by two acts — the
+tent by its erection and again by its first speech): erected → the_tent_of_meeting; called_from_the_tent → the_tent_of_meeting;
+milluim_blood_sprinkled → the_priesthood; covenant_blood_thrown → the_covenant_at_sinai; judges_appointed → the_court (Exod 18:25-26
+"and they judged the people at all times"); entered_the_land → the_land_of_canaan. The same file carries the two PARAMETER ROWS in
+calendar_parameters.yaml's shape: `installation_setting` — value `boot` (Yoma 28b:9-10, Kiddushin 82a:10: Abraham kept the whole
+Torah before it was given; Rav Shimi bar Chiyya's counter, the seven alone, recorded), the other setting `from_event` (Chagigah
+6b:2), channel OPEN under D2, the running value decided at the second pass after Deuteronomy; and `case_output` — value
+`rule_for_the_generations` (the first tanna, Sanhedrin 80b:5, forewarning derived from the wood-gatherer; Sifrei Bamidbar 114:1 "this
+is the judgment for all the generations" / "in this particular instance"), the other setting `provisional_edict` (Rabbi Yehuda,
+Sanhedrin 80b:5 — "a provisional edict based on the word of God; the halakha throughout the generations cannot be derived from
+it"), UNEXERCISED until Numbers' opening block and printed so.
+
+THE EFFECTS (three, registered in effect_vocabulary.yaml BEFORE any daemon names them, each with the ink's own words machine-read
+from the Tanakh DB — the tradition's vocabulary, never designed):
+- `in_force` (status, on the institution; value = the installing act): the ink's own binding "upon all these words" (Exod 24:8) and
+  the Mishnah's own word for a law's being in force conditioned on an institution — נוֹהֵג בִּפְנֵי הַבַּיִת ("in force while the
+  House stands," Mishnah Chullin 5:1; מִצְוָה הַתְּלוּיָה בָּאָרֶץ, "a commandment dependent on the land," Mishnah Kiddushin 1:9).
+- `declaration_owed` (DEBIT, on the court's docket, the case's person the counterparty; OPEN until the output verse closes it —
+  a debit because the docket OWES a declaration, and World.close finds only open entries): the ink's own words for the halt —
+  לִפְרֹשׁ לָהֶם עַל פִּי יְהוָה "to be declared to them by the mouth of the LORD" (Lev 24:12), כִּי לֹא פֹרַשׁ מַה יֵּעָשֶׂה לוֹ
+  "because it had not been declared what should be done to him" (Num 15:34); Sanhedrin 78b:4-7 derives the incarceration from the
+  halt. THE NAME CAUGHT BY THE REGISTRY: the design first named this entry in_custody, and the appender found `in_custody` ALREADY
+  REGISTERED — Joseph's engine's BODY status on the held person (Gen 40:3, the same word מִשְׁמָר, the guard, at 43 Torah seats
+  machine-counted, Lev 24:12 and Num 15:34 among them). A name reused is a miss (O9's lesson): the person's state at the halt is
+  that existing effect, written beside the docket's debit; the docket's entry takes the ink's own second phrase.
+- `rule_installed` (status, on the institution; value = the daemon the output verse installs — THE GENERATIONS' RULE): וְהָיְתָה
+  לִבְנֵי יִשְׂרָאֵל לְחֻקַּת מִשְׁפָּט "and it shall be to the children of Israel a statute of judgment" (Num 27:11 — the daughters'
+  output; the phrase's only other Torah seat Num 35:29, the refuge cities, machine-verified), שָׁם שָׂם לוֹ חֹק וּמִשְׁפָּט "there He
+  set for him a statute and an ordinance" (Exod 15:25 — Marah, the ink's own installation verb, ALREADY ON THE TAPE as statute_set),
+  חֻקָּה אַחַת "one statute" (Num 9:14, the second Passover's output).
+The instance's verdict stays the existing vocabulary (stoned, karet_cut_off …), written by the case's own compiled daemon (D6).
+
+THE ENGINE (World.submit; the dispatch gate NEVER at registration — CLOCK.md section 8): a world OPTS IN with `installation=` (D1:
+the sequence runner's four worlds; the 38 exam worlds pass nothing and are untouched — no field read, no line logged, no write).
+On opt-in the engine loads the two fields for every registered daemon from daemon_dispositions.yaml (a daemon without both fields
+is refused at once) and the setting from the parameter row unless the caller names one. The engine tracks THE VERSE REACHED — the
+canonical maximum over every marker's verse and every event's first cited verse (Gen < Exod < Lev < Num < Deut; a retrograde
+stretch never lowers it). Before each daemon is called the engine asks NOT-IN-FORCE: boot or pending → in force; else NOT GIVEN if
+the verse reached is before given_at; else the act's institution entity must carry an `in_force` entry whose value is that act,
+OR any institution must carry a `rule_installed` entry naming this daemon (installation BY A CASE EVENT — the tent's output, D5/D6);
+else NOT IN FORCE. Under `from_event` a daemon not in force is SKIPPED: an eighth LOG CLASS, ('SKIP', day, {daemon, kind, subject,
+case_source, why: not_given | not_in_force, needs}) — registered in the journal as run.skip before first use, counted per daemon in
+the watch coverage, printed in the RUN line as "skipped n", and the journal gate's counts parse it. Under `boot` (the running
+setting, D2) NOTHING IS SKIPPED and NO LINE IS LOGGED; the engine counts what WOULD have been skipped and the runner prints it — an
+instrument for the deferred decision, not a graded cell. THE CONSUMERS STAMPED: submit records on the event itself which daemons
+fired on it (`fired_by`, beside the engine's own bound/dated/placement stamps), so the journal's EVENT line names its consumers and
+an unconsumed case is readable off the tape — the custody rule's own input at Numbers.
+
+THE TENT DAEMON (D4) — `law_tent`, the library's sixth, in world_engine.py, REGISTERED FIRST in the sequence runner's daemon order
+so that an installing act switches on its laws INSIDE ITS OWN DISPATCH (Lev 25:2: the entry itself starts the count — the
+consumers of the installing act run after the tent daemon in the same submit). Today it consumes the six installing acts and writes
+`in_force` on the act's institution (a literal branch per kind — the daemon gate's parser reads branches; the entity from the
+fourth registry). At Numbers' opening block it gains the custody branch — consuming the ink's own custody ACT ("and they placed
+him in the guard" is a narrated deed on the tape, in the story's own "and he did" form, not a computed consequence): in_custody on the person and declaration_owed on
+the court's docket, with `covered_by` read off the person's LEDGER (the daemons that already wrote on the case's verse — under
+the boot setting the blasphemer's compiled law fires before the halt, and the docket entry records that the code decided what
+the ink says was not yet declared: the installation setting's own evidence, printed) — and the output branch (the verse "by the
+mouth of the LORD" → rule_installed on the institution + the docket's debit closed by World.close), on the real kinds registered
+with their witnesses then. Today those two paths are exercised on the PROBE world by a probe daemon over registered kinds (the
+blasphemer's own case kind cursed_the_name, consumed by no law on the probe world; Joseph's custody_three_days standing in for
+the custody act; Marah's statute_set as the output act).
+
+THE DAEMON GATE (daemon_census.py) demands both fields on every declared daemon: given_at a verse the engine's parser reads;
+installed_by boot, pending (with a why), or a key of the fourth registry's installing acts, each of which must itself be a
+registered event kind. The sequence runner's own assertion keeps DAEMON_ORDER equal to the declared set (law_tent joins both).
+
+THE PROBES, written to FAIL on the unchanged engine — World/step9/installation_probes.py, six, in-process on a small world:
+I1 under from_event a law whose installing act has not fired is SKIPPED (a SKIP line, no write, the daemon's skipped count 1);
+I2 after the act fires the institution's ledger carries in_force (written by law_tent, prov the act's verse) and the same law FIRES;
+I3 in force needs BOTH — a law whose institution stands but whose given_at the tape has not reached is skipped as not_given;
+I4 under boot nothing is skipped, no SKIP line exists, the would-skip count is reported; a world that did not opt in has no
+installation, no SKIP line and no in_force write (the exam bench, D1);
+I5 the gate refuses a daemon missing either field or naming an unregistered act (the check as an importable function);
+I6 custody and the case-born installation: a case no daemon consumed carries fired_by [] (a SKIP line for the law not in force);
+the custody act writes in_custody on the person and declaration_owed OPEN on the court's docket; the output act writes
+rule_installed naming a law whose own act never fires, closes the docket's debit, and that law fires on the next case —
+installation by a case event.
+
+THE PREDICTION (print-then-type, written BEFORE the run). The main run stays on `boot` (D2), so the graded sequence cells move only
+by the tent daemon's own writes: the five installing acts on the tape (judges_appointed Exod 18:25, covenant_blood_thrown 24:6-8,
+erected 40:17, called_from_the_tent Lev 1:1, milluim_blood_sprinkled Lev 8:30; entered_the_land never fires) = FIVE in_force WRITES
+on every sequence world, TWO NEW ENTITIES (the-covenant, the-priesthood; the tent and the court re-home onto existing ledgers), ONE
+MORE DAEMON FIRED. RUN: (1058, 43, 39, 0, 0, 1224 → 1229, 12 → 13, 252 → 254, the overlap and the closes unchanged); PREVIOUS_RUN
+(THE REST, the tape minus joseph, which holds all five acts): (749, 31, 27, 0, 0, 907 → 912, 11 → 12, 219 → 221, unchanged,
+unchanged); skipped 0 on every world; the pending count printed 2; the would-skip count MEASURED (not predicted — the instrument's
+first reading); the 38 exam runners' cells unchanged, the sweep 39/39 at 4,518; the journal gate byte-identical with the counts
+parsing the new class; the ten checkpoints unmoved.
+
+## As built — step 3 INSTALLATION (2026-09-09, the loop's second sitting; the owner: "ok step 3 go")
+
+THE ORDER HELD: the four shelf seats re-opened at their addresses; the design section above; the registers before any code — run.skip
+into World/journal/registers/event_kinds.yaml (35 kinds), the three effects into effect_vocabulary.yaml by an appender in the E5 form
+with the `he` read from the pointed Tanakh DB (908 effects), the FOURTH REGISTRY World/step9/installation_parameters.yaml (two
+parameter rows, six installing acts), the four institution entities into logic/corpus/entity_registry.yaml with a changelog line
+(272 entities; a new `kind: institution`); the probes second — World/step9/installation_probes.py, six, 0/6 on the unchanged engine
+(every FAIL the construct's absence: no law_tent, no check_installation); the 43 rows third by scratchpad/step3_rows.py (given_at by
+script from the spans, installed_by from the design's table, the count re-summed to 43 before the write; two corrections caught by
+the script's own asserts — the tabernacle's Sabbath clause is given at Exod 31:12, not its file's first span, and a daemon key may
+carry a trailing comment); the code fourth — world_engine.py (the fourth registry loaded; verse_key; World.install /
+installation_report / _reach / not_in_force / skips; the dispatch gate and the consumers' stamp in submit; the marker reaching; the
+tent daemon law_tent with six literal branches), daemon_census.py (check_installation, wired into the gate, the index line carrying
+both fields), world_journal.py (the eighth class and its unit; the tuple parse), cold_run_sequence.py (law_tent first in
+DAEMON_ORDER; the four worlds opted in; the RUN line's "skipped"; the INSTALLATION print), daemon_dispositions.yaml (law_tent
+declared, six watches); then the gates.
+
+THE NAME CAUGHT BY THE REGISTRY: the design's docket effect was first named in_custody; the appender found in_custody ALREADY
+REGISTERED — Joseph's body status on the held person (O8 S4, Gen 40:3, the same word מִשְׁמָר, the guard). A name reused is a miss:
+the docket's entry became declaration_owed (a DEBIT — the docket owes a declaration, and World.close finds only open entries), the
+person's state stays the existing effect, D5's line carries the note.
+
+THE PROBES: 4/6 on the first run after the code — I3 and I6 were written TOO NARROW, not the engine wrong: a law given later is
+skipped as not_given on EVERY earlier event (the law does not exist yet), and a law consulted once its verse is reached is skipped
+not_in_force on every event until its act or its rule_installed lands — including the output act's own dispatch, since the probe's
+tent daemon writes rule_installed after the case law was consulted. The probes now read the skip AT THE VERSE and the silence
+after; 6/6. Journal probe J3 moved with the sink's eighth class (its "seven" is now KINDS less run.skip, every class registered, and
+run.skip's own exercise is I1's sunk and indexed from_event world); 6/6. Clock 22/22, sequence 4/4, the daemon gate satisfied with
+44 daemons and 908 effects.
+
+THE PREDICTION MET ON THE FIRST RUN: RUN (1058, 43, 39, 0, 0, 1229, 13, 254, …, 74) and THE REST (749, 31, 27, 0, 0, 912, 12, 221,
+…, 56) — writes +5, daemons fired +1, entities +2 on both, exactly as the design section typed them before the run; the two
+literals then retyped, 10/10 checkpoints; skipped 0 on every world; the running setting boot. THE INSTRUMENT'S FIRST READING:
+"would be skipped under from_event: 34,729 calls" of the 46,552 the tape makes (44 daemons × 1,058 events) — most of them
+Leviticus laws not yet given during Genesis and Exodus, the rest laws consulted before their institution stood; the reading the
+second pass after Deuteronomy will decide on (D2). THE INSTITUTIONS IN FORCE on the tape, as the tent daemon wrote them: the court
+by judges_appointed at Exod 18:25-26; the covenant by covenant_blood_thrown at Exod 24:6-8; the tent by erected at Exod 40:17-18
+and again by called_from_the_tent at Lev 1:1; the priesthood by milluim_blood_sprinkled at Lev 8:30; the land never (its act is
+not on the three books' tape). The 44 daemons by value on the sequence world: boot 8 (the seven story daemons and the tent daemon
+itself), by an act 34, pending 2 (law_pesach, law_lev24 — the debt, named in the file and printed every run).
+
+THE JOURNAL: every segment +5 lines (2,499 / 2,499 / 2,499 / 1,849), coerced 0; every EVENT line now carries `fired_by`; the index
+15,947 rows over the seven segments; the two-process gate GREEN — four segments byte-identical, four chains verified, the running
+world's counts equal to the RUN tuple with run.skip 0 parsed. THE SWEEP after the gates: 39/39 runners green, 4,518 graded cells —
+UNMOVED (the 38 exam worlds opted into nothing; the sequence runner 10/10 inside it), both gates satisfied at its head.
+
+⚠ LESSONS: A NAME IS CHECKED IN THE REGISTRY BEFORE THE DESIGN NAMES IT (in_custody). A LATER-GIVEN LAW IS SKIPPED ON EVERY
+EARLIER EVENT — a probe counts the skip at the verse, never all skips. THE OUTPUT ACT'S OWN DISPATCH DOES NOT SWITCH ON THE LAW
+IT INSTALLS unless the installer runs before the consumer — the tent daemon is first for the installing acts; the case-born
+rule takes effect from the next event. A KEY MAY CARRY A TRAILING COMMENT (the row inserter's regex). THE FILE'S FIRST SPAN IS NOT
+EVERY DAEMON'S VERSE (law_sabbath).
+
+NEXT (D11): step 2's remainder — the four run views (ledger, timers, clock, docket) and the four questions, before Numbers opens;
+then NUMBERS' OPENING BLOCK on the tent's four cases, where the tent daemon gains its custody and output branches on real kinds.
+
+## Step 2 THE INDEX — the remainder: the four views and the four questions (the design, 2026-09-09, the loop's third sitting;
+## the owner: "No need to compact. Continue"; under D7 (the boundary stated, the merge its own sitting) and D8; written before
+## the probes, the probes before the code)
+
+WHAT THE INDEX LACKS, measured: worldledger's events table (seq, op, layer, kind, subj, data, unit, ref, chain) carries no
+SEGMENT column — the four L3 worlds' rows are mixed and their seq restarts per segment; a WRITE row's data carries the day it was
+written (`day`) and, if closed, `closed_by`, but NOT THE DAY IT CLOSED — World.close records the note alone. Two additive
+changes, each with a probe that fails first: (1) the events table gains `source` (the segment header's own field, read where the
+builder discards the header line today) — D9's appended segments need it too; (2) World.close stamps `closed_day` (the clock's day
+at the closing act) beside `closed_by`.
+
+THE FOUR VIEWS (D8) are SQL VIEWS over the events table, declared in ONE file, World/journal/run_views.sql, created at every
+reindex after the table is rebuilt — "rebuilt from the events table" literally, never written directly, json_extract over `data`:
+- run_ledger — one row per run.write / run.retro_write: source, seq, entity (subj), effect, ledger_op, day_written (op), year,
+  value, counterparty, open, day_closed, closed_by, written_by (unit), verse (ref), kind.
+- run_timers — one row per run.timer_set, joined LEFT to its fire and to its cancel on (source, entity, effect, due = the fire's
+  or cancel's day): day_set, due, outcome fired | cancelled | pending, day_fired, day_cancelled, cancelled_by, rearmed_from,
+  written_by, verse. A period timer's re-arm is its own set row.
+- run_clock — one row per run.marker in seq order: day (op), verse (ref), value, class forward | retrograde | proleptic, stated,
+  placement.
+- run_docket — run_ledger where effect = declaration_owed: entity (the court), the person (counterparty), day_written, open,
+  day_closed, closed_by — today ZERO rows on the tape (the custody act joins it at Numbers), rows on the probe world.
+
+THE FOUR QUESTIONS (the ask-tool, `python3 World/step9/world_journal.py --ask … [--world <source>]`, the running setting's world
+the default), each one SQL over the views:
+1. an entity's LEDGER AT A DAY — `--ask ledger <entity> [<day>]`: the entries written at or before the day, each with its state AS
+   OF that day (open unless day_closed is at or before it);
+2. WHAT STANDS OPEN AT A VERSE — `--ask open <verse>`: the day is the verse's own (the first marker or event whose ref opens with
+   it); the open-capable entries (debit, heaven, body) written at or before that day and not closed by it, by entity;
+3. WHO WROTE THIS — `--ask who <entity> <effect>`: the writing daemon, the verse and the day of every such entry (step 1's
+   question, now a view);
+4. WHAT WAITS IN CUSTODY — `--ask custody`: the open docket rows.
+
+THE GATE, inside `--gate` after the counts check and standing alone as `--views`: for EVERY source in the index, run_ledger's rows
+= run.write + run.retro_write; run_timers' rows = run.timer_set; its fired rows = run.timer_fire and its cancelled rows =
+run.timer_cancel (the joins 1:1 — a duplicate join or an orphan fire moves a count); run_clock's rows = run.marker; run_docket's
+rows = run_ledger's declaration_owed rows. Every view count is DERIVED from the events table's own counts, never typed.
+
+THE PROBES, written to FAIL on the unchanged code — World/step9/view_probes.py, six, on a small world exercising all eight
+classes plus a close and a custody (the journal probes' tape extended by registered kinds): V1 the index carries each row's
+source, and a closed entry carries closed_day; V2 run_ledger's rows equal the write rows and the closed entry shows its day and
+its closer; V3 run_timers joins every fire and every cancel to exactly one set and shows the pending one; V4 run_clock lists
+the markers in order with all three classes; V5 run_docket shows the declaration owed open, then closed at the output; V6 the
+four questions answer on the probe world (the ledger at a day before and after the close; what stands open at a verse; who
+wrote this; what waits in custody — one row, then none).
+
+THE PREDICTION: no graded cell moves (the views read; the engine's one stamp is a field on a closed entry); the four segments'
+bytes change by the closed_day field alone and stay byte-identical across two processes; the index's row count is unchanged
+(15,947); the sweep 39/39 at 4,518.
+
+## As built — step 2's remainder: the four views and the four questions (2026-09-09, the loop's third sitting)
+
+THE ORDER HELD: the design section above; the probes second — World/step9/view_probes.py, six on a small world exercising all eight
+log classes, a close and a custody (the journal probes' tape extended by Joseph's custody_three_days as the custody act, Marah's
+statute_set as the output act, a law skipped under from_event until the output installs it, a third timer left pending, a
+proleptic marker), 0/6 on the unchanged code (every FAIL the module's absence); the code third — World/journal/worldledger.py
+(the events table gains `source` from the segment header it discarded, with its index), world_engine.py's one stamp
+(World.close writes closed_day beside closed_by), World/journal/run_views.sql NEW (the four views as SQL VIEWS with json_extract over
+`data`), World/step9/world_journal.py (views, view_counts, views_gate, ask, the CLI `--views` and `--ask … [--world …]`; reindex
+creates the views; the two-process gate runs the views gate after the counts check); then 6/6, journal 6/6, installation 6/6,
+clock 22/22, sequence 4/4.
+
+THE VIEWS ON THE REAL INDEX (every count derived from the events table's own, on every world — MATCH): the running world ledger
+1,229 = writes 1,229; timers 43 = sets 43 (fired 39 = fires 39, cancelled 0, pending 4 — the joins 1:1); clock 130 = markers 130;
+docket 0 (the custody act joins the tape at Numbers); skips 0; the fork's two worlds the same; THE REST 912 / 31 / 27 / 130. The
+index 15,947 rows, unchanged; the segments byte-identical across two processes with the closed_day field aboard (74 closed
+entries now carry the day they closed); GATE GREEN with the views inside it.
+
+THE FOUR QUESTIONS ANSWERED ON THE TAPE: "who wrote this" — the covenant's in_force: law_tent at Exod 24:6-8, day 894379, value
+covenant_blood_thrown; "an entity's ledger at a day" — the tent of meeting at the erection's day (894698): eight entries, made_one
+and work_completed from the spec's run (day 894460), in_force by erected and tabernacle_erected and veil_divides at 40:17-21, the
+glory's HEAVEN entry OPEN at 40:34, in_force again by called_from_the_tent at Lev 1:1; "what stands open at a verse" — at Exod
+40:17, 141 open entries across the world, Abel's regarded offering and Abraham's promised nation among them (the open promises
+the effects law aims the prophets at); "what waits in custody" — none, as the three books' tape has no halt.
+
+THE AUGUST TREE MEASURED AGAIN (D10 — a printed known-FAIL that gates nothing): build_world.py's checklist fails FOUR lines on
+today's units (roots born at Gen 1:1; garden inside Eden inside earth; ark has dimensions + manifest; forming/filling symmetry),
+not the one recorded at the move — and NOT this sitting's doing: the build was run with the committed index builder and, separately,
+with the committed registry, and fails the same four both times. The tree retires at the merge (D7/D10); no reading sitting on it.
+
+THE SWEEP after the gates: 39/39 runners green, 4,518 graded cells — UNMOVED, as the prediction said (the views read; the engine's
+one stamp is a field on a closed entry); the sequence runner 10/10 inside it; both gates satisfied at its head.
+
+⚠ LESSONS: THE INDEX MUST NAME THE SEGMENT (source) BEFORE A VIEW CAN SCOPE A WORLD. A CLOSE RECORDS ITS DAY OR THE LEDGER VIEW
+CANNOT SHOW IT. A JOIN'S 1:1 IS PROVED BY COUNTS DERIVED FROM THE TABLE, NEVER TYPED. A PROBE WORLD STOPPED MID-TAPE (`upto`) IS HOW
+AN OPEN ENTRY IS SEEN OPEN. A "KNOWN-FAIL" IS RE-MEASURED WHEN TOUCHED — the move's one line was four, and the two negative tests
+(stash each change, rerun) say which changes are not the cause.
+
+NEXT (D11): NUMBERS' OPENING BLOCK on the tent's four cases — the tent daemon's custody and output branches on real kinds, the
+docket view filling; steps 4 and 5 when the cases call.
+
+## Step 4 THE CURSOR — the design (2026-09-09, THE TENT sitting 4; the owner: "Continue"; under D9 and D11; written
+## before the probes, the probes before the code — the cases called for it: the daughters' argument runs BEFORE their answer)
+
+WHAT A CURSOR IS HERE: a position in the TEXT that hands back a LIVE world — the tape replayed to the verse and stopped
+there, every daemon registered, every ledger entry and pending timer as the run left them at that line, ready for new
+submissions. NO SAVED STATE FILE (the ruling's own words): the world is rebuilt by replay each time, and the journal is
+the AUDIT of the replay — the replayed prefix must be byte-identical to the base segment's prefix, or the cursor refuses.
+
+THE MECHANISM (three small pieces on three files, each named here before it is written):
+1. World.stop_before — an optional verse key on the engine (world_engine.py). World.submit and World.marker already
+   compute the position each line names (THE VERSE REACHED, step 3's `_reach`); with stop_before set, a line whose verse
+   is AT OR AFTER the cursor raises CursorReached before it is logged. The tape function is unchanged: the stitcher's
+   straight-line code runs until the engine refuses the next line. (The alternative — the stitcher emitting a guard per
+   line — was weighed and declined: the engine already knows every line's verse; a second parser of the same fact is a
+   second place to be wrong.) A marker AT the cursor verse belongs to the cursor's future (the position it sits at is the
+   verse), so `run_to('Num 27:1')` stops BEFORE the daughters' marker and their plea: the cursor is the line's left edge.
+2. cold_run_sequence.run_to(verse) — the runner's second entry (the first is run()): the running world built exactly as
+   run_world builds it (the registry map, the daemons, installation=True, the running setting), the tape executed under
+   stop_before, the exception caught, the world returned with its FORK — the count of log lines replayed. It journals
+   nothing itself. The audit lives in world_journal (piece 3). A cursor beyond the tape's last line is the whole tape
+   (the running world; fork = every line). A cursor at a verse no line reaches still stops correctly at the first line
+   past it (the verse key's order is total); a cursor before the first line is an empty world (fork 0).
+3. world_journal.cursor_segment(world, fork, verse) — THE AUDIT AND THE APPEND (D9's shape): (a) the base segment on disk
+   (the running world's, L3_run_cold_run_sequence_seed_isaac.jsonl) is read; its first `fork` events must equal, byte for
+   byte, the sink of the replayed world's first `fork` log lines — else the cursor is REFUSED (the base has moved, or the
+   engine has: rerun the tape, then resume); (b) the world's lines AFTER the fork are written as a NEW segment
+   L3_run_cursor_<verse>.jsonl (source 'cold_run_sequence/cursor@<verse>') whose CHAIN CONTINUES from the base's chain at
+   the fork line — worldledger.Segment gains an optional start_chain (default 'genesis': every existing segment
+   byte-identical) and the segment header records the base's name and the fork; (c) the base is never rewritten. The
+   index admits the appended segment as its own source (drop-and-rebuild, as ever) and the four views count it; the
+   ask-tool takes it as a --world.
+
+THE CLI: `python3 World/step9/cold_run_sequence.py --cursor "Num 27:5"` prints the cursor world's position, its open
+entries and pending timers at that line (the ask-tool's questions over the live world), and — with scenarios registered
+for that verse (step 5) — runs them and appends the segment; without scenarios it appends nothing (a cursor with no new
+submission writes no segment: nothing to audit but the replay, which it reports).
+
+THE GATES (this step's, beside the loop's standing four): the replayed prefix byte-identical to the base's prefix and
+the base's chain verified through the fork; the appended segment's chain verified from the base's chain at the fork;
+two cursors at the same verse with the same scenarios produce byte-identical appended segments; the reindex counts the
+appended segment's lines exactly; the base's bytes unchanged before and after. cursor_probes.py, written FIRST and run
+to FAIL on the unchanged engine (0 of 6), then the code, then 6 of 6.
+
+WHAT IT COSTS: a replay is a run of the tape's prefix — seconds. What it saves is the ruling's own reason: you can ASK
+the world at any verse, resume there, branch there, and continue into a new book without restarting from creation.
+
+## Step 5 SCENARIOS — the design (2026-09-09, THE TENT sitting 4; under D9 and D11; the first exemplar the daughters'
+## own argument, Bava Batra 119b:10, run before the output at Num 27:6-11 is read)
+
+WHAT A SCENARIO IS HERE: one of the exam's CASE events (a registered kind of form `case` — the shape the Mishnah's rows
+taught the input schema; never a probe-only kind: the registry refuses those) submitted on a LIVE world at a cursor,
+carrying a LABEL (`scenario`: the row's name and its oracle) — the world as the oracle's bench. The daemons answer it
+as they answer the tape's acts: by writing the ledger. The expected answer is the Mishnah's row, and the grade is read
+off what the world wrote (an effect present or absent, a value) — printed, never repaired.
+
+THE RECORD: scenario inputs are PRIMARY (D9's homes): World/step9/scenarios.yaml — one entry per scenario: id, the cursor
+verse, the events (kind + fields, the persons by scene token), the oracle rows named, the expected reading of the ledger
+(effect, entity, value or absence). The runner reads the file for the cursor's verse. The appended segment is derived
+(uncommitted, as the base).
+
+THE JOURNAL'S MARK: an EVENT line for a scenario carries prov.unit = 'scenario' (the tape's lines carry 'tape') and the
+label in its data — the journal's own way of telling a submitted hypothetical from the text's act. The tape's segments
+are untouched; the stitcher never sees a scenario (it records runners' scenes, and a scenario is submitted at a cursor,
+not in a scene).
+
+THE FIRST EXEMPLAR — THE DAUGHTERS' LEVIRATE DILEMMA (Bava Batra 119b:10; Sifrei 133:4's "wise, and expounding"): the cursor
+at Num 27:5 — after the plea (27:1-4, the code's holding_owed on the ledger under boot), before the halt is answered. Moses
+was expounding the levirate (Deut 25:5 "if brothers dwell together and one dies and HAS NO SON... her husband's brother
+shall come to her"); the daughters: "if we are as a son, give us an inheritance as a son; if not, let our mother enter
+levirate marriage". TWO CASE EVENTS ON ONE CLAUSE (the family engine's census: "and he has no son" at Deut 25:5 and Num
+27:8 alone): estate_claimed {decedent zelophehad, survivors: daughters only, claimant: the daughters} — the first horn,
+oracle Mishnah Bava Batra 8:2 (no son, no son's line: the daughter inherits — the ledger's holding_owed stands, the cell's
+verdict 'the daughters inherit'); levirate_claimed {widow: zelophehad's wife, children: daughters, brothers: true} — the
+second horn, oracle Mishnah Yevamot 2:5 / Yevamot 22b:6 (a CHILD of any kind exempts the father's wife — a daughter is a
+child: the ledger writes `exempt` on the widow, no levirate_owed). The two horns agree on the one clause's reading: the
+daughters are offspring in both institutions — and the output at 27:6-11, read AFTER, says the same ("rightly"). That is
+the ruling's picture at its first live seat: the argument run on the world before the text's answer, the answer then read
+as the oracle's confirmation. The grade printed by the runner under --cursor "Num 27:5"; the probes' P6 the mark.
+
+## As built — steps 4 THE CURSOR and 5 SCENARIOS (2026-09-09, THE TENT sitting 4; the probes first, 0/6 then 6/6)
+
+THE ORDER HELD: the two design sections above, then cursor_probes.py (six probes over the running world's base segment ON DISK —
+never rewritten; every append in a temporary directory) run to FAIL on the unchanged engine (0/6: no run_to), then the code in
+three files, exactly as designed — (1) the engine: World.stop_before and CursorReached, raised by submit() and marker() at a
+line whose verse is at or after the cursor (the left edge); (2) the runner: run_to(verse) building the running world as
+run_world does and catching the stop, cursor_main() for --cursor reading World/step9/scenarios.yaml (the PRIMARY record of the
+scenarios: id, cursor, events, oracle, expect) and grading the ledger after each labeled submission; (3) the journal: the sink's one
+conversion factored into _append_log, cursor_segment (THE AUDIT — the replayed prefix converted must equal the base's event lines
+byte for byte, else CURSOR REFUSED; THE APPEND — a new segment L3_run_cursor_<verse>.jsonl whose chain continues from the base's
+chain at the fork, its header naming the base, the fork and the cursor), scenario (the label on the event; prov.unit 'scenario' on
+its EVENT line), and worldledger.Segment's optional start_chain and header (the default 'genesis' keeps every base segment
+byte-identical; verify reads the header's start). Then 6/6: K1 the replay of sitting 3's 2,538 lines byte-identical to its base on
+disk (the tent daemon's refactor into a verdict table changed no byte); K2 the appended segment's first chain = sha256(the base's
+chain at the fork + the event) and its header the fork and the start; K3 a cursor beyond the tape's end = the whole tape; K4 two
+cursors byte-identical; K5 the reindex admits the appended source and the views gate counts it; K6 the scenario's EVENT line
+carries prov.unit 'scenario' and its label, the base unchanged before and after.
+
+THE FIRST EXEMPLAR RAN (`python3 World/step9/cold_run_sequence.py --cursor "Num 27:5"`): 2,543 lines replayed to the left edge of
+27:5 — the daughters' plea on the ledger (holding_owed, written by the case law under boot), the halt and the output not yet
+submitted; the daughters' own argument (Bava Batra 119b:10) as two case events on one clause: estate_claimed → holding_owed PRESENT
+(Mishnah Bava Batra 8:2), levirate_claimed → exempt PRESENT valued child_of_any_kind on the widow (Mishnah Yevamot 2:5; Yevamot
+22b:6), levirate_owed ABSENT — 3/3, the text's answer at 27:6-11 then read as the oracle's confirmation ('rightly'); the appended
+segment four lines (its start chain the base's at 2543, verified), the reindex 8 segments / 16,805 rows, the views gate MATCH on the
+cursor world, the ask-tool answering on it with --world. The shelf-named person (the widow — 'our mother', named by the Talmud
+alone, the ink naming no wife of Zelophehad) entered the registry LABELED as such.
+
+WHAT THE STEP PROVES: the world can be asked at any verse and resumed there without a saved state, and the journal is the audit of
+the resumption (the same bytes or a refusal); a hypothetical can be put to the world before the text answers it, and the text's
+answer read against the ledger's — the ruling's picture at its first live seat. THE STANDING DUTY ENDS HERE: step 4 is on the
+record; from this compaction point the loop is named as any other box (step 6 THE READBACK and D7's merge still owed).
+THE CURSOR'S BOUND RULE (found 2026-09-09 at THE NUMBERS WALK sitting 1b, NUMBERS_WALK.md "Sitting 1b" as built): an
+event's journal line carries its BOUND [the last forward marker's day, the next forward marker's day], and the right edge
+is written when the NEXT marker arrives (the engine's shared list, closed in marker()). The cursor check sat first in
+marker(), before that closing — so a replay stopped AT a marker left the previous bound open ([day, None]) where the base
+had it closed, and the audit refused the bamidbar lines (K1-K2, K4-K6 failed at the 27:1 cursor once 1:1's bound reached
+it). THE FIX: a FORWARD marker at the cursor closes the bounds behind it (its own day, known at the call) before the world
+stops — as the full run would; a retrograde or proleptic marker at the cursor closes nothing, as in the run. cursor_probes
+6/6 again. THE LIMIT THAT REMAINS, measured: a cursor INSIDE a bound whose closing marker lies beyond it (Num 15:32 —
+between 1:1's marker and 27:1's) is REFUSED, because the base's line for every event of that bound already carries the
+right edge the replay cannot know, and the chain hashes those bytes: the audit cannot be normalized without breaking the
+chain's continuity at the fork. So the cursor stands at a forward marker's verse, or anywhere after the last marker before
+it has had its bound closed (the scenario's Num 27:5 — after the tape's last marker — is such a place). A cursor elsewhere
+is refused with the base named; the refusal is the honest answer until a design that journals the bound's right edge as
+its own later line (a candidate for step 6's sitting).
+
+## Numbers' opening block — THE TENT (opened 2026-09-09; the block's own file World/step9/THE_TENT.md)
+
+The four cases the code did not cover run on the tape one sitting each, the blasphemer first (Leviticus, already derived and
+compiled). SITTING 1 DONE 2026-09-09: the tent daemon's custody and output branches are REAL — at Lev 24:12 the halt writes
+in_custody on the person and declaration_owed on the court's docket with `covered_by` read off the ledger (under the boot setting
+['law_lev24']: the code had decided at 24:11 before the halt — the installation setting's evidence, now a ledger field); at
+24:13-14 the output writes rule_installed on the tent naming law_lev24 under case_output's running setting (the fork printed) and
+closes the docket; at 24:23 the execution closes the person's two body entries. The recorder learned that a daemon's close is not
+a tape line; the ask-tool's first reading moved the design (a body entry is closed by the deed). The docket view holds its first
+row. Sittings 2-4 (Num 9, 15, 27/36) need their units derived first — THE_TENT.md's sections 2-4 as they come.
+
+SITTING 2 DONE 2026-09-09 — THE UNCLEAN MEN AT PASSOVER (Num 9:1-14; THE_TENT.md section 2 + 2a): the first Numbers reading (the
+Sifrei on Numbers 64-71 + Onkelos, 33 sources, coverage computed), the first Numbers unit frozen (num_09_pesach_cloud, eleven claims,
+the dotted heh machine-verified, 164 units, standing 1789, hash unmoved), the first Numbers span compiled in its own runner
+(cold_run_pesach_sheni.py 26/26 first run — the map's "already in the Passover engine" was measured false) and the SECOND CASE-BORN LAW:
+the halt of a STANDING case (no guard — the men WAIT, a body entry closed by the word; the docket's covered_by read off the ledger AND
+the pending timers, since under boot the code's decision was a due to the second month, filed as a timer), the output as the STATUTE
+ITSELF (statute_declared, the tent output's second form — the rule wider than the question, Sifrei 69:1), rule_installed naming
+law_pesach_sheni, the docket view's second row. THE TAPE LEARNED THE FOURTH BOOK (the recorder, the stitcher, the runner's regex; one
+marker row walked the counter past the erection's day for the first time and the erection's morrow timers fired — the table entering
+the ledger at its first due) and admitted the incense runner's Korach line at Num 16, which exposed and fixed an unguarded branch of
+the erection daemon. RUN (1067, 44, 43, 0, 0, 1242, 15, 258, four pairs, 79), THE REST reproduced exactly under its amended rule, the
+journal gate GREEN, the sweep 40/40 at 4,544; pending 1 (law_pesach); the men's second Passover a PENDING timer at the run's end — the
+readback's open item. Sittings 3-4 (Num 15:32-36; Num 27 + 36, where steps 4 and 5 arrive) next.
+
+SITTING 3 DONE 2026-09-09 — THE WOOD-GATHERER (Num 15:32-36; THE_TENT.md section 3 + 3a): the second Numbers reading (the Sifrei on
+Numbers 113-115 + Onkelos 15:32-41, 14 sources, coverage computed, the ink facts computed beside), the unit num_15_wood_tzitzit frozen
+(eight claims, four machine checks; 165 units, standing 1797, hash unmoved), and A MEASUREMENT BEFORE THE DESIGN: the death mode the map
+named as this sitting's compile was ALREADY COMPILED — the Exodus Sabbath engine's cell imported it from this span's run on 2026-09-07,
+before Numbers had a reading. So the compile was the case's own procedure (cold_run_mekoshesh.py 34/34 first run: the forewarning that
+names the labor, the custody rule, the stoning protocol from the platform to the grave, the two verses reconciled, the hanging fork, the
+labor and the identity as data rows) and the mode's import given its home. THE THIRD CASE-BORN LAW — and a new installation shape: the
+output installs THE RULE INSIDE A LAW (rule_installed names the cell law_sabbath:death_run, not a daemon; the cell's own gate is the
+second pass's, D2). The three tent kinds took their SECOND SEATS (placed_in_custody with the uncertainty the MODE, sentence_declared in
+its leaner form — "said" without "saying", no statute in the speech — stoned_as_commanded with the ink's "and he died"), each a
+REFERENCE by shared lemma. law_sabbath fired on the tape for the FIRST time (an Exodus law waiting for a Numbers act); the docket's
+covered_by names two daemons — the code held the mode the ink says was undeclared. RUN (1071, 44, 43, 0, 0, 1249, 17, 259, four pairs,
+83) on the second run — the first matched every predicted slot, then the ask-tool showed the death sentence OPEN and the execution's
+branch was amended to close it (the close pairing, sitting 1's lesson found again); THE REST exact; the journal gate GREEN; pending 1.
+OWED FORWARD: the fringes' law layer (15:37-41, a spec — Menachot 3:7, 4:1); Deut 17:7 and 21:22-23 (the witnesses' hand, the
+hanging, the same-day burial) to Deuteronomy. Sitting 4 (Num 27 + 36, where steps 4 and 5 arrive) next.
 
 ## Standing duty
 

@@ -1,0 +1,85 @@
+# installation_parameters.yaml — THE FOURTH REGISTRY (THE LOOP step 3 INSTALLATION, 2026-09-09; the decisions D1-D6 of
+# 2026-09-09 in World/step9/THE_LOOP.md; the design section "Step 3 INSTALLATION — the design"). Two parts, both DATA read by
+# world_engine.py alone (the code/data law: the mechanism is ink, the settings are the tradition's recorded alternatives):
+#   parameters:      the two parameter rows in calendar_parameters.yaml's shape — `settings:` the tradition's recorded
+#                    alternatives, `value:` the setting a run uses, `exercised_by:` the worlds that run the row (an empty list
+#                    is UNEXERCISED and printed so — the zero-report law).
+#   installing_acts: the table of INSTITUTION-ERECTING ACTS, keyed by the registered event kind (event_vocabulary.yaml) that
+#                    switches an institution on; each names the institution (a `kind: institution` entity in
+#                    logic/corpus/entity_registry.yaml), the scene token the tent daemon writes `in_force` on, and the ink.
+#                    A daemon's `installed_by:` in daemon_dispositions.yaml is `boot`, `pending`, or a key of this table
+#                    (the daemon gate refuses anything else). One institution may be switched on by two acts (the tent by its
+#                    erection and again by its first speech); the engine's in-force check matches the daemon's act to the
+#                    in_force entry's VALUE on the institution's ledger.
+
+parameters:
+  installation_setting:
+    value: boot
+    channel: OPEN
+    source: "THE TWO SETTINGS. boot — Yoma 28b:9-10 (Rav: 'Abraham our Patriarch fulfilled the entire Torah before it was given', Gen 26:5 'My charge, My mitzvot, My statutes and My Torahs'; Rav Shimi bar Chiyya's counter — 'say he fulfilled only the seven Noahide mitzvot' — recorded beside it; Rav Ashi: even the joining of cooked foods, 'My Torahs' in the plural), Kiddushin 82a:10 (the Mishnah's own statement of it). from_event — Chagigah 6b:1-2 (Rabbi Yishmael: the general statements at Sinai, the details in the tent of meeting; the sugya's rule 'it is not plausible that the details of a mitzva would change over time', hence the daily offering did not run before its details were given)"
+    teacher: "Yoma 28b:9-10 (boot); Chagigah 6b:2 (from_event)"
+    settings:
+      boot: "every law in force from creation — 'Abraham kept the whole Torah before it was given' (Yoma 28b:9-10, Kiddushin 82a:10); the daemons run on every event; the engine COUNTS what the other setting would have skipped and prints it"
+      from_event: "a law in force only when SPOKEN (the verse reached) and its INSTITUTION STANDING (the installing act's in_force entry) — Chagigah 6b:2; a daemon not in force is SKIPPED with a logged SKIP line (the journal's run.skip)"
+    open: "D2 (the owner, 2026-09-09): BUILD THE MECHANISM, DEFER THE SETTING — the main run stays everything-from-boot until the five books are compiled; the installed run is the second pass after Deuteronomy, and the from-boot / from-its-event fork is decided then, on the whole program"
+    exercised_by: [the sequence runner's four worlds (boot), installation_probes.py (from_event on the probe world)]
+  case_output:
+    value: rule_for_the_generations
+    channel: received
+    source: "Sanhedrin 80b:5 — 'the first tanna derived forewarning from the incident of the wood gatherer (Num 15:32-36), who was executed even though even Moses did not know with which death penalty he was to be executed... Rabbi Yehuda says: the execution of the wood gatherer was a provisional edict based on the word of God; the halakha throughout the generations cannot be derived from it'; Sifrei Bamidbar 114:1 on Num 15:35 — 'die, shall die the man: this is the judgment for all the generations; stone him with stones: in this particular instance'"
+    teacher: "Sanhedrin 80b:5; Sifrei Bamidbar 114:1"
+    settings:
+      rule_for_the_generations: "the tent's output installs a rule that runs forward (rule_installed on the institution) beside the instance's verdict — the first tanna, Sanhedrin 80b:5; Sifrei Bamidbar 114:1's 'for all the generations'"
+      provisional_edict: "the tent's output is the instance's verdict alone, 'a provisional edict based on the word of God' — Rabbi Yehuda, Sanhedrin 80b:5; no rule_installed is written, printed as the fork"
+    open: "EXERCISED from THE TENT sitting 1 (2026-09-09) on the blasphemer's output (Lev 24:13-14, sentence_declared): the running setting writes rule_installed naming law_lev24 on the tent; the runner prints the fork (provisional_edict — no rule written, the instance's verdict alone); the three Numbers cases (Num 9:8, 15:34, 27:5) join as their units are derived; D6 (the owner, 2026-09-09)"
+    exercised_by: [the sequence runner's four worlds (the blasphemer's output at Lev 24:13-14; the second Passover's output at Num 9:9-14), cold_run_lev24.py's narrative scene, cold_run_pesach_sheni.py's narrative scene]
+
+installing_acts:
+  judges_appointed:
+    institution: the_court
+    entity: the-court
+    ink: "Exod 18:25-26 — 'and Moses chose able men out of all Israel and made them heads over the people... and they judged the people at all times' (the tape: Exod 18:25-26; Exod 18:21)"
+    note: "the court in session — the ordinances' majority_decides and the deputies' docket already write on the-court"
+  covenant_blood_thrown:
+    institution: the_covenant_at_sinai
+    entity: the-covenant
+    ink: "Exod 24:8 — 'behold the blood of the covenant which the LORD has cut with you UPON ALL THESE WORDS' (the tape: Exod 24:6-8); Rabbi Yishmael, Chagigah 6b:1 — the general statements at Sinai"
+    note: "the Sinai-given laws (Exod 20-31: the Decalogue, the ordinances, the spec) are switched on here — thirteen daemons"
+  erected:
+    institution: the_tent_of_meeting
+    entity: the-tabernacle
+    ink: "Exod 40:17 — 'and it was in the first month of the second year, on the first of the month, the tabernacle was erected' (the hophal at Exod 40:17 and Jer 35:14 alone)"
+    note: "the tent stands — the installation of the priests (Lev 8:3-4 'at the entrance of the tent of meeting'), the investiture's law, the eighth day"
+  called_from_the_tent:
+    institution: the_tent_of_meeting
+    entity: the-tabernacle
+    ink: "Lev 1:1 — 'and He called to Moses, and the LORD spoke to him from the tent of meeting' (the tape: Lev 1:1); Chagigah 6b:1 — the details said in the tent of meeting; the detail pass opens"
+    note: "the tent's first speech — every Leviticus law spoken from the tent (sixteen daemons); the same institution switched on a second time, matched by the in_force entry's value"
+  milluim_blood_sprinkled:
+    institution: the_priesthood
+    entity: the-priesthood
+    ink: "Lev 8:30 — the blood and the oil sprinkled on Aaron and his garments and on his sons (the tape: Lev 8:30); the Sifra, Tzav, Mekhilta DeMiluim I 34 — consummated only at the blood sprinkling (the library's law_installation writes invested_office on the persons at the same act)"
+    note: "the OFFICE, not the persons — aaron-and-sons carry invested_office; the priesthood entity carries in_force"
+  sentence_declared:
+    institution: the_tent_of_meeting
+    entity: the-tabernacle
+    case_born: true
+    ink: "Lev 24:13-14 — 'and the LORD spoke to Moses saying: bring out the curser ...' followed by the statute for the generations (24:15-22) in the same speech; the tent's OUTPUT on the blasphemer's halt (THE TENT sitting 1, 2026-09-09)"
+    note: "A CASE-BORN INSTALLATION: the tent daemon writes rule_installed on the tent naming the law the output installs (law_lev24), not in_force — World.not_in_force's second path finds it; a daemon whose installed_by names this act is in force from the event after the output; the parameter row case_output decides whether the rule is written at all; THE SECOND SEAT (THE TENT sitting 3): Num 15:35 — the wood-gatherer's sentence installs THE MODE for a statute that predates the case (Exod 31:14): rule_installed names a CELL of an existing law, law_sabbath:death_run, not a daemon — the cell's own in-force gate is the second pass's (D2)"
+  statute_declared:
+    institution: the_tent_of_meeting
+    entity: the-tabernacle
+    case_born: true
+    ink: "Num 9:9-14 — 'and the LORD spoke to Moses saying: speak to the children of Israel saying: any man who is unclean by a corpse or on a distant way ... shall keep a Passover to the LORD in the second month' closing 'one statute shall be for you' (9:14); the tent's OUTPUT on the standing case of the unclean men (THE TENT sitting 2, 2026-09-09) — the SECOND FORM of the output: the statute itself, the instance's verdict inside it (Sifrei Bamidbar 69:1: the rule wider than the question)"
+    note: "A CASE-BORN INSTALLATION, the second: the tent daemon writes rule_installed on the tent naming law_pesach_sheni; its second seat is the daughters' output (Num 27:8-11, sitting 4); THE SECOND SEAT (THE TENT sitting 4): Num 27:6-11 — the daughters' output installs law_zelophehad, the FOURTH case-born law, with the instance's verdict holding_owed (the tent daemon's verdict table, keyed by the installed law)"
+  command_relayed:
+    institution: the_tent_of_meeting
+    entity: the-tabernacle
+    case_born: true
+    ink: "Num 36:5-9 — 'and Moses COMMANDED the children of Israel BY THE MOUTH OF THE LORD, saying: rightly the tribe of the sons of Joseph speak; this is the thing that the LORD commanded concerning the daughters of Zelophehad... only to the family of the tribe of their father shall they be wives; and an inheritance shall not go around from tribe to tribe' — the output's FOURTH FRAME FORM: relayed in Moses' mouth, no divine speech frame (computed: 'by the mouth of the LORD' at eighteen Torah seats)"
+    note: "A CASE-BORN INSTALLATION, the fourth act (THE TENT sitting 4, 2026-09-09): THE SECOND OUTPUT ON THE SAME CASE — the tent daemon writes rule_installed naming THE CELL law_zelophehad:tribe_transfer (sitting 3's shape, a rule inside a law — here inside a case-born law: the first statute AMENDED with a reach, 'this is the thing' = this generation, Bava Batra 120a:10; lapsed on the fifteenth of Av, 121a:7); the tribes' plea before it did not halt (no docket row); the cell's own in-force gate is the second pass's (D2)"
+  entered_the_land:
+    institution: the_land_of_canaan
+    entity: the-land-of-canaan
+    ink: "Lev 25:2 — 'when you come into the land which I give you, the land shall keep a sabbath to the LORD'; Exod 23:23 — 'when My angel goes before you and brings you' (the registered case form; submitted by the exam scenes of the ordinances, the erection's second seat and the count's start; NEVER on the sequence tape of the three books)"
+    note: "the land's laws (the jubilee's daemon) stand not-in-force through the whole three-book run under the from_event setting — the truth of the tape; the runners' generic 'the-land' is not re-homed (O8 S3's lesson); the join of the two lands is filed for the merge sitting (D7)"

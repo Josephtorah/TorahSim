@@ -1,0 +1,47 @@
+# scenarios.yaml — THE LOOP step 5 SCENARIOS (2026-09-09, THE TENT sitting 4; THE_LOOP.md "Step 5 SCENARIOS — the design"):
+# the PRIMARY record of the scenarios run at a cursor (D9's homes: the inputs in git, the appended segments derived).
+# One entry per scenario: its cursor verse (the world replayed to the LEFT EDGE of that verse), the events submitted on the live
+# world (registered CASE kinds only — the exam's own forms; the persons by scene token), the oracle rows named, and the EXPECTED
+# reading of the ledger after the daemons answer (effect on entity — present, with a value where the row gives one — or absent).
+# The runner (cold_run_sequence.py --cursor <verse>) reads the entries for that verse, submits them through world_journal.scenario
+# (the journal marks each EVENT line prov.unit 'scenario' with the label), grades the ledger against `expect`, prints every grade,
+# and appends the segment L3_run_cursor_<verse>.jsonl whose chain continues from the base's at the fork. A miss is printed, never
+# repaired: the world is the oracle's bench, the Mishnah's row the answer sheet.
+scenarios:
+  - id: daughters_levirate_dilemma
+    title: "THE DAUGHTERS' OWN ARGUMENT — Bava Batra 119b:10 (Sifrei Bamidbar 133:4: 'they were wise, and expounding'), run BEFORE the output at Num 27:6-11 is read"
+    cursor: "Num 27:5"
+    why: >
+      Moses was sitting and expounding the levirate section (Deut 25:5 — "if brothers dwell together and one of them dies and HAS
+      NO SON... her husband's brother shall come to her") when the daughters said: if we are considered as a son, give us an
+      inheritance as a son; and if not, let our mother enter levirate marriage — and at once "Moses brought their judgment before
+      the LORD" (27:5). TWO CASE EVENTS ON ONE CLAUSE: "and he has no son" stands at Deut 25:5 and Num 27:8 alone in the Torah
+      (the family engine's census, cold_run_family.py no_son_clause). The first horn: the estate claimed by the daughters with no
+      son and no son's line — Mishnah Bava Batra 8:2 (the daughter inherits). The second horn: the widow claimed for the levir
+      with daughters living — Mishnah Yevamot 2:5 (a CHILD of any kind exempts the father's wife; Yevamot 22b:6 reads "no son" as
+      "look into him": any child). The two horns agree on the clause's reading — the daughters are offspring in both institutions
+      — and the text's answer at 27:6-11, read after, says "rightly". The cursor sits at the LEFT EDGE of 27:5: the plea (27:1-4)
+      is on the ledger (under boot the code's holding_owed already stands), the halt and the output are not yet submitted.
+    events:
+      - kind: estate_claimed
+        subject: the-daughters-of-zelophehad
+        decedent: zelophehad
+        claimant: the-daughters-of-zelophehad
+        claimant_degree: daughter
+        survivors: {son: false, sons_line: false, daughter: true, daughters_line: false, father: false, brothers: true, fathers_brothers: true}
+        property: held
+        case_source: "Num 27:8 — if a man dies and has no son, you shall pass his inheritance to his daughter (the first horn: as a son)"
+        label: "Bava Batra 119b:10 — the first horn: if we are as a son, give us an inheritance as a son (oracle Mishnah Bava Batra 8:2)"
+      - kind: levirate_claimed
+        subject: the-widow-of-zelophehad
+        widow: the-widow-of-zelophehad
+        decedent: zelophehad
+        children: {daughters: 5, sons: 0}
+        brothers_in_world: true
+        case_source: "Deut 25:5 — if brothers dwell together and one of them dies and has no son, her husband's brother shall come to her (the second horn: if not, our mother to the levir)"
+        label: "Bava Batra 119b:10 — the second horn: if not, let our mother enter levirate marriage (oracle Mishnah Yevamot 2:5; Yevamot 22b:6)"
+    oracle: ["Mishnah Bava Batra 8:2", "Mishnah Yevamot 2:5", "Yevamot 22b:6", "Bava Batra 119b:10"]
+    expect:
+      - {entity: the-daughters-of-zelophehad, effect: holding_owed, present: true, note: "the first horn: the daughters inherit — the debit stands (written at the plea under boot; the case's cell answers 'the daughters inherit, no son and no son's line')"}
+      - {entity: the-widow-of-zelophehad, effect: exempt, present: true, value: child_of_any_kind, note: "the second horn: a child of any kind exempts the mother — Mishnah Yevamot 2:5"}
+      - {entity: the-widow-of-zelophehad, effect: levirate_owed, present: false, note: "no bond forms: the decedent did not die childless"}

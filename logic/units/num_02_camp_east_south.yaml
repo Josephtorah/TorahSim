@@ -17,7 +17,7 @@ meta:
   refs: "2:1-16"
   data_paths_he:
     - "Data/Num.xml"
-  status: draft
+  status: frozen
   tree_derive_version: tree_derived_v1
   tree_derive_phase: "A"
   confidence_overall: hypothesis
@@ -59,6 +59,24 @@ derivation_log:
     confidence: hypothesis
     tags: ["[ORAL]"]
 
+  - step: E
+    name_en: "Numbers 2:1-16 derivation 2026-09-09 — THE NUMBERS WALK sitting 1, Bamidbar"
+    comment: >
+      The walk's first reading, at the parashah grain (Bamidbar 1:1-4:20
+      in one pass, nine ledgers per block): Onkelos Numbers 2:1-16
+      whole and fresh; the Sifrei on Numbers has NO piska on the portion
+      by position (it opens at 5:1 — computed; its export's piska 62,
+      headed 3:24, is the row on 8:24 and is read at num_04_kehat where
+      4:3's thirty is its subject). Ledger num_02_camp_east_south_2026-09-09.md,
+      coverage computed by script, the ink facts computed from the Tanakh
+      DB and the numbers of the census computed from the ink's own
+      numerals. Seated as claims NM02A-01..03: the banner, the signs, the distance, east: judah, first, south: reuben, second; reuel.
+      The compile (the census's arithmetic, the engine's numeral parser
+      taught the thousands) and the tape (Num 1:1's forward marker) follow
+      in their own sitting (World/step9/NUMBERS_WALK.md).
+    confidence: tested
+    tags: ["[ORAL]","[HE-WRITTEN]"]
+
 boot_steps:
   - id: STEP_Nm_2_1
     order: 1
@@ -95,6 +113,21 @@ boot_steps:
       he: מנגד סביב לאהל מועד יחנו
       he_translit: "mngd sbyb l'hl mv'd ychnv"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(ish_al_diglo_veotot, the_banner_the_signs_the_distance)"
+        en: >
+          THE BANNER, THE SIGNS, THE DISTANCE [claim NM02A-01]. THE BANNER,
+          THE SIGNS, THE DISTANCE. 'To Moses AND to Aaron' — the first of
+          three double-addressed frames (computed: 2:1, 4:1, 4:17); 'each man
+          by his banner with the SIGNS of their fathers' house' → 'on his
+          taxis, with the signs'; 'AT A DISTANCE, round about the tent of
+          meeting they shall camp' → Onkelos 'OPPOSITE, round about' — the
+          distance-word carries no number in the ink: the two thousand cubits
+          are the Talmud's (Eruvin 51a, from Josh 3:4's 'far off' — a TRANSFER
+          with its teacher, at the exam), not this verse's.
+        cites: ["Onkelos Num 2:1", "Onkelos Num 2:2"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -115,6 +148,20 @@ boot_steps:
       he: ונשיא לבני יהודה נחשון בן עמינדב
       he_translit: "vnshy' lbny yhvdh nchshvn bn 'myndb"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(kedmah_mizrachah_yehudah, east_judah_first)"
+        en: >
+          EAST: JUDAH, FIRST [claim NM02A-02]. EAST: JUDAH, FIRST. 'Those
+          camping in front, eastward: the banner of the camp of Judah' → 'in
+          front, eastward; the taxis of the camp of Judah'; Nahshon; Issachar
+          and Zebulun 'beside him' → 'adjoining him'; the three numbers of
+          1:27, 29, 31 repeated verbatim (computed equal); 'all the counted of
+          the camp of Judah: 186,400 by their hosts; FIRST they journey' → 'in
+          the first place they journey' — THE THREE SUMMED EQUAL THE CAMP
+          (computed: 74,600 + 54,400 + 57,400).
+        cites: ["Onkelos Num 2:3", "Onkelos Num 2:4", "Onkelos Num 2:5", "Onkelos Num 2:6", "Onkelos Num 2:7", "Onkelos Num 2:8", "Onkelos Num 2:9"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -255,6 +302,20 @@ boot_steps:
       he: ונשיא לבני ראובן אליצור בן שדיאור
       he_translit: "vnshy' lbny r'vbn 'lytzvr bn shdy'vr"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(degel_machaneh_reuven_teimanah, south_reuben_second_reuel)"
+        en: >
+          SOUTH: REUBEN, SECOND; REUEL [claim NM02A-03]. SOUTH: REUBEN,
+          SECOND; REUEL. 'The banner of the camp of Reuben southward' →
+          'south'; Simeon and Gad beside him — 'Eliasaph son of REUEL' (resh)
+          against 1:14's DEUEL (dalet), computed on both seats; Onkelos keeps
+          this verse's own letter too: one prince, two spellings, neither
+          harmonized; 'all the counted of the camp of Reuben: 151,450; and
+          second they journey' → 'in the second place' — the three summed
+          equal the camp (computed: 46,500 + 59,300 + 45,650).
+        cites: ["Onkelos Num 2:10", "Onkelos Num 2:11", "Onkelos Num 2:12", "Onkelos Num 2:13", "Onkelos Num 2:14", "Onkelos Num 2:15", "Onkelos Num 2:16"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -456,26 +517,26 @@ oral_notes:
 
 scenarios:
   - id: S1
-    title_en: "After Num 2:1 (STEP_Nm_2_1)"
-    expect_en: "Advances via tree-derived STEP_Nm_2_1; arms in boot_steps."
+    title_en: "after STEP_Nm_2_1 — Num 2:1"
+    expect_en: "no test, no name."
   - id: S2
-    title_en: "After Num 2:2 (STEP_Nm_2_2)"
-    expect_en: "Advances via tree-derived STEP_Nm_2_2; arms in boot_steps."
+    title_en: "after STEP_Nm_2_2 — Num 2:2"
+    expect_en: "no test, no name."
   - id: S3
-    title_en: "After Num 2:3 (STEP_Nm_2_3)"
-    expect_en: "Advances via tree-derived STEP_Nm_2_3; arms in boot_steps."
+    title_en: "after STEP_Nm_2_3 — Num 2:3"
+    expect_en: "no test, no name."
   - id: S4
-    title_en: "After Num 2:4 (STEP_Nm_2_4)"
-    expect_en: "Advances via tree-derived STEP_Nm_2_4; arms in boot_steps."
+    title_en: "after STEP_Nm_2_4 — Num 2:4"
+    expect_en: "no test, no name."
   - id: S5
-    title_en: "After Num 2:5 (STEP_Nm_2_5)"
-    expect_en: "Advances via tree-derived STEP_Nm_2_5; arms in boot_steps."
+    title_en: "after STEP_Nm_2_5 — Num 2:5"
+    expect_en: "no test, no name."
   - id: S6
-    title_en: "After Num 2:6 (STEP_Nm_2_6)"
-    expect_en: "Advances via tree-derived STEP_Nm_2_6; arms in boot_steps."
+    title_en: "after STEP_Nm_2_6 — Num 2:6"
+    expect_en: "no test, no name."
   - id: S_last
-    title_en: "After final verse 2:16"
-    expect_en: "Block closed via STEP_Nm_2_16."
+    title_en: "after STEP_Nm_2_16 — Num 2:16"
+    expect_en: "no test, no name."
 
 binary_trees:
   display_policy_en: >

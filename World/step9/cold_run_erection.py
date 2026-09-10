@@ -1207,7 +1207,9 @@ def law_erection(event, world):
     if k == 'veil_hung': return [E_('veil_divides', 'the-tabernacle')]
     if k == 'bread_arranged': return [E_('bread_set_weekly', 'the-table', due=day + 6)]           # the first SABBATH initiates the table (Menachot 4:4; a Sunday erection)
     if k == 'lamps_raised': return [E_('lamp_arranged', 'the-lampstand'), E_('lamp_arranged', 'the-lampstand', due=day + 1)]
-    if k == 'incense_burned': return [E_('incense_continual', 'the-golden-altar'), E_('incense_continual', 'the-golden-altar', due=day + 1)]
+    if k == 'incense_burned':
+        if WE.seat(src) != ('Exod', 40): return []                                # THE TENT sitting 2 (2026-09-09): this daemon reads its own span — Korach's fire-pans (Num 16, the incense runner's recorded run) joined the tape with the fourth book and this unguarded branch would have initiated the continual incense a second time (O2: one act, one writer)
+        return [E_('incense_continual', 'the-golden-altar'), E_('incense_continual', 'the-golden-altar', due=day + 1)]
     if k == 'tamid_offered':
         # THE CLOSE PAIRING (THE CLOCK SITTING, 2026-09-07; CLOCK.md section 3): the offering brought CLOSES the day's
         # open debit before tomorrow's is set — Exod 29:38 "two yearling lambs each day, continually"

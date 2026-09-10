@@ -215,6 +215,23 @@ RUNS the first; the machine reports the others (checkpoint C3).
 The gaps the tape has no event for are printed, not hidden: Genesis 50:26 → Exodus 12:2 (no runner compiles Exodus
 1-11's narrative), Exodus 12 → 24 (the Passover runner's rows are cases), Leviticus 10 → 27.
 
+THE CENSUS'S GRAMMAR (THE NUMBERS WALK sitting 1b, 2026-09-09; NUMBERS_WALK.md "Sitting 1b"): the parser above was
+Genesis's and Exodus's — no thousands beyond a bare אלף ("thousand") that added 1,000, no plural אלפים ("thousands"),
+'two' told from 'years' by position, and מאת read as a hundred wherever its consonants stood. Bamidbar's reading measured
+it unable to read a census (Num 1:21 → 1,546 for 46,500) and the compile taught it, with census_probes.py written first
+(3/17 → 17/17), the stitcher's marker verification rerun at every pass, and the whole-corpus diff old-against-new read
+verse by verse (155 verses moved, none a marker). The rules now in ink_numbers and verse_words: אלף/אלפים without the
+conjunction multiply the group since the last thousands-word (an empty group: a bare thousand; the dual 'two thousand'
+only before a numeral — before a noun it is the plural "thousands", Exod 18:21); וְאֶלֶף ("and a thousand") adds; a
+numeral repeated as the SAME raw word is distributive (3:47 "five, five"; Gen 7:2 "seven, seven"), with the conjunction
+two numbers; the article on a numeral counts at the head of a chain of "and the N" (3:46) and "and the N" only inside a
+chain — "and the OTHER" (Gen 42:13) is no number; and TWO HOMOGRAPHS BY THE POINTS ON THE STEM, measured on the DB's own
+code points: מֵאֵת ("from", the tsere under both letters) is emitted מ-את and is no number, against מְאַת ("a hundred
+of") and מֵאֹת ("hundreds"); the numeral שנים ("two") has a sheva under the shin (שְׁנַיִם, שְׁנֵים, the pausal
+שְׁנָיִם), "years" a qamats (שָׁנִים) and "second ones" a hiriq under the nun (שְׁנִיִּם, Gen 6:16) — the non-numeral is
+emitted with a star and keeps the phrase open like שנה ("year"). Convention 4 stands: every marker's numbers verified again at
+stitch time and at run time; a changed parse on a marker verse is an INK MISMATCH that stops the stitch and is read.
+
 ## 5. THE DAEMONS — all 38 on one world
 
 Registered in this order: the library's five first (law_slave_term, law_goring_ox, law_guardians, law_deposit_oath,

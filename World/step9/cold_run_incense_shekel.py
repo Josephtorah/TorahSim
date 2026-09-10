@@ -1273,6 +1273,18 @@ def law_sabbath(event, world):
         else:
             out.append(E_('karet_cut_off', event['profaner'], cp='HEAVEN', law='F13 [INK 31:14 "that soul shall be cut off from among its people"; Onkelos: the deliberate without witnesses — Heaven]'))
         return out
+    if k == 'gathered_wood_on_the_sabbath':
+        # THE TENT sitting 3 (2026-09-09; THE_TENT.md section 3): the case's ACT at Num 15:32-33 — ONE ACT, TWO FORMS with sabbath_profaned
+        # (the pair named in the registry) — through the SAME cells: the labor barred, death with witnesses (the finders), karet without;
+        # and THE MODE, this daemon's cell death_run, which imported it from this very verse's run (W2, 2026-09-07) — under boot the
+        # code decides before the halt asks (the docket's covered_by records it)
+        out = [E_('labor_barred', event['profaner'], value=event['labor'], law='F13 [INK 31:14-15 "whoever does work on it"; the act Num 15:32 "gathering wood on the Sabbath day" — the labor the row gatherers_labor (Shabbat 96b:15); the class CALLED cold_run_moadim.work_class(sabbath) -> %s]' % MO_CLASS)]
+        if event['witnessed']:
+            out += [E_('put_to_death', event['profaner'], value='with_witnesses', law='F13 [INK 31:14 "its profaners shall surely be put to death"; Num 15:33 "those who found him" — the witnesses; Sanhedrin 78b:7: Moses knew he was liable to death]'),
+                    E_('stoned', event['profaner'], law='F13 [Num 15:32-36 the wood-gatherer — the mode supplied at the clause\'s run, the cell death_run; Bava Batra 119a:8; the tent installs it for the generations at 15:35]')]
+        else:
+            out.append(E_('karet_cut_off', event['profaner'], cp='HEAVEN', law='F13 [INK 31:14 "that soul shall be cut off from among its people"; Onkelos: the deliberate without witnesses — Heaven]'))
+        return out
     if k == 'sabbath_kept_as_sign':
         return [E_('sign_between', event['keeper'], cp='HEAVEN', value='between_My_Word_and_you', law='F13 [INK 31:13 "a sign between Me and you", 31:17 "a sign forever"; Onkelos 31:13 the Memra]'),
                 E_('rest_required', event['keeper'], value='shabbat_shabbaton', law='F13 [INK 31:15 "a Sabbath of complete rest"; 31:17 "He ceased and was refreshed"]')]

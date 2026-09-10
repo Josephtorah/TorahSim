@@ -17,9 +17,36 @@
 # The registry's aliases_in_code (one act under two names, one name over two acts) are not dispositioned here:
 # the gate prints them as OPEN ALIASES until the wrap that unifies them removes the entry from the registry.
 daemons:
+  # ---- THE LOOP step 3 INSTALLATION (2026-09-09; THE_LOOP.md "Step 3 INSTALLATION — the design", decisions D1-D6): every daemon carries
+  # ---- given_at (the verse where the law is spoken) and installed_by (boot | pending with a why | an installing act of
+  # ---- installation_parameters.yaml) — the gate refuses a daemon without both. THE TENT DAEMON (D4), the library's sixth, declared first:
+  law_tent:
+    file: world_engine.py
+    wraps: the library — THE TENT DAEMON (the institutions' installer; the custody and output branches join at Numbers' opening block)
+    given_at: Exod 18:25
+    installed_by: boot
+    watches:
+      judges_appointed: [in_force]          # the court in session (Exod 18:25-26)
+      covenant_blood_thrown: [in_force]     # the covenant upon all these words (Exod 24:8)
+      erected: [in_force]                   # the tent stands (Exod 40:17)
+      called_from_the_tent: [in_force]      # the tent's first speech — the detail pass (Lev 1:1)
+      milluim_blood_sprinkled: [in_force]   # the priesthood consummated (Lev 8:30)
+      entered_the_land: [in_force]          # the land entered (Lev 25:2; Exod 23:23) — the exam scenes' case form, never on the three books' tape
+      # ---- THE TENT sitting 1 (2026-09-09; THE_TENT.md section 1): the blasphemer's halt and output — declared BEFORE the code
+      placed_in_custody: [in_custody, declaration_owed]   # the halt (Lev 24:12): the person in the guard, the docket's declaration owed (covered_by read off the ledger)
+      sentence_declared: [rule_installed, stoned]       # the output (Lev 24:13-14): the generations' rule installed (case_output's running setting), the docket closed, the instance's verdict where the code has not decided
+      stoned_as_commanded: []                            # the execution (Lev 24:23): the history's act — the verdict already on the ledger, nothing written
+      # ---- THE TENT sitting 2 (2026-09-09; THE_TENT.md section 2): the unclean men's halt and output — a STANDING case; declared BEFORE the code
+      stood_to_hear: [waits_for_the_word, declaration_owed]   # the halt (Num 9:8): no guard — the persons wait for the word (a body entry), the docket's declaration owed (covered_by read off the ledger AND the pending timers)
+      statute_declared: [rule_installed, second_passover_due, holding_owed]   # the output (Num 9:9-14): the statute installed (case_output's running setting), the docket and the wait closed, the instance's verdict where the code had not decided   # THE TENT sitting 4: the SECOND SEAT (Num 27:6-11) — the verdict table keyed by the installed law: holding_owed on the daughters where the code had not decided
+      # ---- THE TENT sitting 4 (2026-09-09; THE_TENT.md section 4): the daughters' halt (THE THIRD FORM) and the second output (RELAYED) — declared BEFORE the code
+      judgment_brought_near: [declaration_owed]   # the halt's third form (Num 27:5): the judgment carried in by Moses — no guard, no wait: the docket's declaration alone, covered_by read off the persons' ledger, the uncertainty THE SCOPE
+      command_relayed: [rule_installed, marries_within_tribe]   # the second output on the same case (Num 36:5-9), relayed by Moses 'by the mouth of the LORD': rule_installed naming THE CELL law_zelophehad:tribe_transfer; no docket to close; the verdict where the code had not decided
   law_erection:
     file: cold_run_erection.py
     wraps: erection
+    given_at: Exod 24:1
+    installed_by: boot
     watches:
       erected: [tabernacle_erected, high_places_banned]
       testimony_placed: [tablets_delivered, staves_fixed]
@@ -61,6 +88,8 @@ daemons:
   law_family:
     file: cold_run_family.py
     wraps: family
+    given_at: Gen 23:1
+    installed_by: boot
     watches:
       died: [dead_before_him]
       purchased: [field_acquired, grave_holding]
@@ -89,6 +118,8 @@ daemons:
   law_investiture:
     file: cold_run_incense_shekel.py
     wraps: incense_shekel
+    given_at: Exod 29:1
+    installed_by: erected
     watches:
       washed: [immersed]
       dressed: [names_borne, judgment_borne, entry_announced, plate_propitiates]
@@ -117,6 +148,8 @@ daemons:
   law_pre_sinai:
     file: cold_run_pre_sinai.py
     wraps: pre_sinai
+    given_at: Gen 1:1
+    installed_by: boot
     watches:
       evening_and_morning: [day_counted]
       ceased_and_blessed: [seventh_day_blessed]
@@ -135,6 +168,8 @@ daemons:
   law_sanctuary_build:
     file: cold_run_sanctuary_build.py
     wraps: sanctuary_build
+    given_at: Exod 25:1
+    installed_by: covenant_blood_thrown
     watches:
       offering_brought: [set_apart_before_me]
       halt_proclaimed: [bringing_halted]
@@ -144,6 +179,8 @@ daemons:
   law_eighth_day:
     file: cold_run_shemini_day.py
     wraps: shemini_day
+    given_at: Lev 9:1
+    installed_by: erected
     watches:
       offering_done: [accepted, atoned_forgiven, smoked_to_the_lord, burned_outside_camp, defiles_garments, azkarah_to_fire, presented, due_to_priest, waved]   # W3: the spec's effects by call, keyed by the act's spec
       blessing_lifted: [blessed_the_people]
@@ -152,6 +189,8 @@ daemons:
   law_vestments:
     file: cold_run_vestments.py
     wraps: vestments
+    given_at: Exod 28:1
+    installed_by: covenant_blood_thrown
     watches:
       garment_made: [breastplate_fixed, robe_uncut, nakedness_covered]
       work_completed: [work_completed]
@@ -160,6 +199,8 @@ daemons:
   law_slave_term:
     file: world_engine.py
     wraps: the skeleton (world_engine.py test scenes; mishpatim F1)
+    given_at: Exod 21:2
+    installed_by: covenant_blood_thrown
     watches:
       acquire_hebrew_slave: [term_clock, goes_free]
       slave_pierced: [jubilee_release]
@@ -167,21 +208,29 @@ daemons:
   law_goring_ox:
     file: world_engine.py
     wraps: the skeleton (world_engine.py test scenes; mishpatim F3)
+    given_at: Exod 21:28
+    installed_by: covenant_blood_thrown
     watches:
       ox_gores: [stoned, ransom_imposed, gives_fixed_sum, pays, forewarned]
   law_guardians:
     file: world_engine.py
     wraps: the skeleton (world_engine.py test scenes; guardians)
+    given_at: Exod 22:6
+    installed_by: covenant_blood_thrown
     watches:
       bailment_claim: [oath_imposed, pays]
   law_deposit_oath:
     file: world_engine.py
     wraps: the skeleton (world_engine.py test scenes; vayikra5)
+    given_at: Lev 5:20
+    installed_by: called_from_the_tent
     watches:
       sworn_denial_admitted: [adds_fifth, atoned_forgiven, restores, pays]
   law_installation:
     file: world_engine.py
     wraps: the skeleton (world_engine.py test scenes; tzav F7)
+    given_at: Lev 8:1
+    installed_by: erected
     watches:
       installation_commanded: [confined_seven_days, released]
       milluim_blood_sprinkled: [invested_office]
@@ -192,6 +241,8 @@ daemons:
   law_mishpatim:
     file: cold_run_mishpatim.py
     wraps: mishpatim (beside the skeleton's law_slave_term and law_goring_ox, registered on the same scene)
+    given_at: Exod 21:1
+    installed_by: covenant_blood_thrown
     watches:
       men_quarrel: [pays, gives_fixed_sum, substitution]
       pit_opened: [pays]
@@ -202,6 +253,8 @@ daemons:
   law_mishpatim_2:
     file: cold_run_mishpatim_2.py
     wraps: mishpatim_2
+    given_at: Exod 21:22
+    installed_by: covenant_blood_thrown
     watches:
       virgin_seduced: [gives_fixed_sum, pays, wife_taken]   # O7 (2026-09-07) X5: 22:16 the refusal — the fine stands, no wife; 22:15's 'to him as a wife' written when no one refuses
       slave_maimed: [released, goes_free]
@@ -209,6 +262,8 @@ daemons:
   law_mishpatim_3:
     file: cold_run_mishpatim_3.py
     wraps: "mishpatim_3 (O7, 2026-09-07 — THE EXODUS LAW'S FIVE CASE HEADS: Exod 21:7-11 the maidservant, 21:13-15 + 21:17 the capital clauses, 21:20-21 the slave struck, 22:1-2 the burglar; REPORT_EXODUS_HEADS.md)"
+    given_at: Exod 21:7
+    installed_by: covenant_blood_thrown
     watches:
       daughter_sold: [term_clock, goes_free, redemption_right, barred_from_it, wife_taken, not_diminished]   # 21:7-11: the years, the signs and maturity, the redemption, the foreign sale barred, the designation, the three
       man_struck_dead: [flees_to_refuge, taken_from_altar, beheaded, exempt]   # 21:13-14: the refuge by descent, the altar, the sword, the guile's exclusions — ONE TYPE UNDER TWO LAW LAYERS (law_lev24 writes the death)
@@ -218,6 +273,8 @@ daemons:
   law_ordinances:
     file: cold_run_ordinances.py
     wraps: ordinances (and cold_run_decalogue.altar_rules, the callee the altar function runs live)
+    given_at: Exod 20:19
+    installed_by: covenant_blood_thrown
     watches:
       altar_built: [disqualified, accepted]
       offered_on_altar: [smoked_to_the_lord, eating_window]
@@ -243,6 +300,8 @@ daemons:
   law_decalogue:
     file: cold_run_decalogue.py
     wraps: decalogue (vain_name, sabbath_clauses, theft_commandment; altar_rules is wrapped by law_ordinances at its call site)
+    given_at: Exod 20:1
+    installed_by: covenant_blood_thrown
     watches:
       name_sworn_in_vain: [lashes]
       sabbath_remembered: [sanctify_day]
@@ -251,7 +310,10 @@ daemons:
   law_lev24:
     file: cold_run_lev24.py
     wraps: lev24
+    given_at: Lev 24:10
+    installed_by: sentence_declared   # THE TENT sitting 1 (2026-09-09): CASE-BORN — installed by the tent's output at Lev 24:13-14 (was pending)
     watches:
+      blasphemed_the_name: [stoned, bears_sin]   # THE TENT sitting 1 (2026-09-09): the narrative act of the chapter's own case (Lev 24:11) — the same curse-gate cell as the case form
       cursed_the_name: [stoned, bears_sin]
       man_struck_dead: [put_to_death]
       beast_struck_dead: [pays]
@@ -262,6 +324,9 @@ daemons:
   law_pesach:
     file: cold_run_pesach.py
     wraps: pesach
+    given_at: Exod 12:1
+    installed_by: pending
+    why: "the Passover's giving at Exod 12:1-2 is not an EVENT on the tape — the stitcher carries Exod 12:2 as the epoch MARKER only, and the tape's Exodus 12 events begin at 12:29; the installing act registers when the Passover's own acts (12:3 the lamb taken, 12:28 'they did') join the tape"
     watches:
       first_month_begun: [purge_deadline, eating_window]
       lamb_taken: [registered_to_lamb]
@@ -272,9 +337,68 @@ daemons:
       leaven_eaten: [karet_cut_off]
       leaven_found: [exempt, barred_from_it]
       firstborn_born: [consecrated_firstborn, redeem_or_break, pays, exempt]
+  # ---- THE TENT sitting 2 (2026-09-09; THE_TENT.md section 2): THE SECOND PASSOVER — the first Numbers daemon, CASE-BORN from birth
+  law_pesach_sheni:
+    file: cold_run_pesach_sheni.py
+    wraps: pesach_sheni
+    given_at: Num 9:1
+    installed_by: statute_declared   # CASE-BORN: installed by the tent's output at Num 9:9-14 (the second case-born law after law_lev24)
+    watches:
+      passover_kept: [passover_in_its_time]                          # the second year's Passover kept (Num 9:5) — the people's status
+      unclean_at_the_passover: [second_passover_due]                  # the case (Num 9:6-7): under boot the code decides before the halt — the debit due through the Calendar
+      missed_the_first_passover: [second_passover_due, karet_cut_off, exempt]   # the exam's rows (Mishnah Pesachim 9:1; the karet table)
+      converted_between_the_passovers: [second_passover_due, exempt]  # the exam's row (Tosefta Pesachim 8:2) — the parameter row's fork
+      second_passover_kept: [exempt, lashes, burn_remainder]          # the exam's scope rows (Mishnah Pesachim 9:3) — the body statutes by CALL into the Passover engine
+  law_mekoshesh:
+    file: cold_run_mekoshesh.py
+    wraps: mekoshesh
+    given_at: Num 15:32
+    installed_by: sentence_declared   # CASE-BORN, the third: the wood-gatherer's sentence at Num 15:35 (THE TENT sitting 3, 2026-09-09) — the procedure the case's run established (Sifrei 114:1 'for the generations')
+    watches:
+      gathered_wood_on_the_sabbath: [warned_specifying_the_labor]     # the finders' warning read off 15:33's repetition (Sifrei 113:1) — the status on the person; the liability and the mode are law_sabbath's writes on the same act
+      forewarned_before_the_act: [warned_specifying_the_labor, put_to_death, exempt]   # the exam's warning rows (Mishnah Sanhedrin 5:1; the row warning_names_the_death — Sanhedrin 80b:5)
+      stoning_carried_out: [confessed, stoned, hanged, buried]        # the exam's protocol rows (Mishnah Sanhedrin 6:2, 6:4, 6:5-6; the row hanging_after_stoning)
+      stoned_as_commanded: [hanged]                                    # the tape's execution, second seat (Num 15:36): hanged under the row's Rabbi Eliezer arm alone — the running setting (the sages) writes nothing; law_tent closes the body entries
+  law_census:
+    file: cold_run_bamidbar.py
+    wraps: bamidbar
+    given_at: Num 1:1
+    installed_by: boot   # THE NUMBERS WALK 1b (2026-09-09): a law spoken at its verse with no installing act on the tape — the standing setting (D2's second pass may move it to census_commanded)
+    watches:
+      census_commanded: [commanded]                                   # the spec (Num 1:2-3): the debit on the people — the count owed
+      census_taken: [counted]                                         # the run (1:17-46): the number written, the debit CLOSED (the first spec/run pair)
+      levites_exempted: [exempt, charge_kept, appointed_to_serve, commanded]   # 1:47-53: exempt from the count; the tabernacle's charge; appointed; the guard commanded
+      camp_commanded: [commanded]                                     # 2:2-31: the debit on the people — the array owed
+      camp_arrayed: [arrayed_by_banners]                              # 2:34: so they camped and so they journeyed — the debit CLOSED
+      levites_given: [given_to_aaron, substituted_for_the_firstborn, commanded]   # 3:6-13: given, given; instead of the firstborn; the priesthood's charge commanded
+      levite_count_commanded: [commanded]                             # 3:15: the count from a month owed
+      levites_counted: [counted]                                      # 3:16, 3:39: 22,000 as written (the houses 22,300 — the delta the cell answers) — the debit CLOSED
+      firstborn_count_commanded: [commanded]                          # 3:40-41: the count owed
+      firstborn_counted: [counted]                                    # 3:42-43: 22,273 — the debit CLOSED
+      redemption_commanded: [commanded]                               # 3:45-48: the excess's redemption owed
+      firstborn_redeemed: [redeemed, pays]                            # 3:49-51: 273 x 5 = 1,365 to Aaron and his sons — the debit CLOSED
+      kohath_service_commanded: [charge_kept, commanded]              # 4:2-20: the holy of holies as Kohath's charge; the packing's order commanded (the work-count of Naso closes it)
+      stranger_approached: [put_to_death, exempt]                     # the exam's rows: the non-Levite (1:51), the non-priest (3:10 — Mishnah Sanhedrin 9:6 under the row zar_who_served), the Levite in another's service (3:38 — Arakhin 11b)
+      levite_service_case: [appointed_to_serve, exempt]               # the exam's ages table (Mishnah Chullin 1:6; Chullin 24a:7-12; the Sifrei's piska 62)
+      firstborn_redemption_case: [pays, exempt, consecrated_firstborn]   # the exam's redemption rows on this span's seats (Mishnah Bekhorot 1:1, 2:1, 8:7-8; Menachot 37b; Bekhorot 4b, 49a) — the firstborn engine CALLED for the verdict
+  law_zelophehad:
+    file: cold_run_zelophehad.py
+    wraps: zelophehad
+    given_at: Num 27:1
+    installed_by: statute_declared   # CASE-BORN, the fourth: the daughters' output at Num 27:6-11 (THE TENT sitting 4, 2026-09-09) — the inheritance order for the generations (Sifrei 134:2 'to the children of Israel speak'); its tribe-transfer cell installed by the relayed command at 36:5-9 (a rule inside a case-born law)
+    watches:
+      daughters_approached: [holding_owed]                          # the plea (Num 27:1-4): under boot the ladder decides before the halt — the holding owed to the heirs (Mishnah Bava Batra 8:2), OPEN until Josh 17:4
+      estate_claimed: [holding_owed, exempt]                        # the exam's ladder rows (Mishnah Bava Batra 8:1-2, 9:2; the Talmud's nearness key, the husband, the mother's property, the Sadducees) and the scenario's first horn
+      estate_divided: [portion_added, exempt]                       # the exam's shares rows (Mishnah Bava Batra 8:3-4; Bekhorot 8:9 by CALL; the apportionment's arms; the ten parts)
+      tribes_approached: [marries_within_tribe]                     # the second plea (Num 36:1-4): no halt — the bar in force from boot decides before the relayed answer; the jubilee arm by CALL (Bekhorot 8:10)
+      inheritance_crossed_tribes: [marries_within_tribe, exempt]    # the exam's transfer rows (Num 36:3-9; the reach — this generation; the lapse on the fifteenth of Av; the daughters' own permission)
+      daughters_married: [wife_taken, inheritance_stayed_in_tribe]  # the execution (Num 36:10-12): the marriage within the tribe; the inheritance remained
+      levirate_claimed: [exempt, levirate_owed]                     # the scenario's second horn (Bava Batra 119b:10): a child of any kind exempts the mother (Mishnah Yevamot 2:5); the bond where none does
   law_calendar:
     file: cold_run_calendar.py
     wraps: calendar (and erection.repeats, the second seat 34:18-26, across files)
+    given_at: Exod 23:10
+    installed_by: covenant_blood_thrown
     watches:
       land_sown: [land_release, barred_from_it]
       feast_of_matzot_kept: [purge_deadline]
@@ -286,12 +410,17 @@ daemons:
   law_sabbath:
     file: cold_run_incense_shekel.py
     wraps: incense_shekel.sabbath (the tabernacle's Sabbath clause, Exod 31:12-17 + 35:1-3; beside law_investiture in the same file)
+    given_at: Exod 31:12
+    installed_by: covenant_blood_thrown
     watches:
       sabbath_profaned: [labor_barred, kindling_barred, put_to_death, stoned, karet_cut_off]
       sabbath_kept_as_sign: [sign_between, rest_required]
+      gathered_wood_on_the_sabbath: [labor_barred, put_to_death, stoned, karet_cut_off]   # THE TENT sitting 3 (2026-09-09): the case's ACT at Num 15:32-33 through the same cells (ONE ACT, TWO FORMS with sabbath_profaned) — under boot the code decides before the halt, the mode (death_run, imported from this span) included
   law_moadim:
     file: cold_run_moadim.py
     wraps: moadim
+    given_at: Lev 23:1
+    installed_by: called_from_the_tent
     watches:
       holy_convocation_proclaimed: [labor_barred, sanctify_day, rest_required]
       paschal_offered: [accepted, disqualified]
@@ -309,12 +438,16 @@ daemons:
   law_offerings:
     file: cold_run_offerings.py
     wraps: offerings (the dispatcher's grid, the fat inventory, the fat ban)
+    given_at: Lev 1:1
+    installed_by: called_from_the_tent
     watches:
       offering_slaughtered: [accepted, smoked_to_the_lord, due_to_priest, eating_window, burn_remainder]
       fat_eaten: [barred_from_it, lashes, karet_cut_off]
   law_minchah:
     file: cold_run_minchah.py
     wraps: minchah (Lev 2 and the bird of 1:14-17; oil_ops writes nothing — NONE below)
+    given_at: Lev 1:14
+    installed_by: called_from_the_tent
     watches:
       meal_offering_brought: [consecrated, not_accepted, disqualified, salted, presented, azkarah_to_fire, due_to_priest, most_holy]
       fistful_scooped: [disqualified, accepted, not_accepted, azkarah_to_fire]
@@ -324,6 +457,8 @@ daemons:
   law_tzav:
     file: cold_run_tzav.py
     wraps: tzav (the priests' law layer of Lev 6-7; installation stays the library's law_installation, registered beside on the scene)
+    given_at: Lev 6:1
+    installed_by: called_from_the_tent
     watches:
       altar_fire_tended: [perpetual_fire_duty, labor_barred]
       holy_absorbed: [launder_blood_spot, break_earthen_vessel, scour_and_rinse, sanctified_by_contact]
@@ -337,6 +472,8 @@ daemons:
   law_chatat:
     file: cold_run_chatat.py
     wraps: chatat (Lev 4 + 10:8-20; identity and sprinklings write nothing — NONE below)
+    given_at: Lev 4:1
+    installed_by: called_from_the_tent
     watches:
       sinned_unwittingly: [exempt, karet_cut_off, suspends, accepted, smoked_to_the_lord, burned_outside_camp, defiles_garments, due_to_priest, eating_window, atoned_forgiven]
       court_ruled_in_error: [exempt, atoned_forgiven, accepted]
@@ -350,6 +487,8 @@ daemons:
   law_vayikra5:
     file: cold_run_vayikra5.py
     wraps: vayikra5 (Lev 5:1-19; deposit_restitution stays the library's law_deposit_oath, registered beside on the scene)
+    given_at: Lev 5:1
+    installed_by: called_from_the_tent
     watches:
       witness_oath_heard: [exempt, confessed, atoned_forgiven]
       impurity_hidden: [exempt, confessed, atoned_forgiven]
@@ -359,6 +498,8 @@ daemons:
   law_shemini:
     file: cold_run_shemini.py
     wraps: shemini (Lev 11 — the classifier's forbidden kinds and the carcass status)
+    given_at: Lev 11:1
+    installed_by: called_from_the_tent
     watches:
       forbidden_kind_eaten: [lashes]
       carcass_touched: [impure_until_evening]
@@ -371,6 +512,8 @@ daemons:
   law_clocks:
     file: cold_run_clocks.py
     wraps: clocks (Lev 12 + 15 — the birthing mother, the discharges, the propagation lattice, the menstruant, the zavah, the pairs)
+    given_at: Lev 12:1
+    installed_by: called_from_the_tent
     watches:
       woman_gave_birth: [niddah_seven, blood_of_purity, barred_from_holies, exempt]
       purification_offering_brought: [accepted, atoned_forgiven, disqualified]
@@ -385,6 +528,8 @@ daemons:
   law_negaim:
     file: cold_run_negaim.py
     wraps: negaim (Lev 13 + 14:33-57 — the six tracks, the garment, the ten houses, the shut house's enterer)
+    given_at: Lev 13:1
+    installed_by: called_from_the_tent
     watches:
       skin_mark_seen: [confined_seven_days, released, isolated_outside_camp]
       garment_mark_seen: [confined_seven_days, burned_in_fire, released]
@@ -393,6 +538,8 @@ daemons:
   law_metzora:
     file: cold_run_metzora.py
     wraps: metzora (Lev 14:1-32 — the birds, the two shaves, the week, the eighth day rich and poor)
+    given_at: Lev 14:1
+    installed_by: called_from_the_tent
     watches:
       leper_cleansing_begun: [declared_pure, sprinkled_seven, sent_over_the_field, birds_die, barred_from_it, shaved_whole, washes_and_bathes, immersed, outside_his_tent]
       leper_shaved_seventh: [shaved_whole, declared_pure, barred_from_holies]
@@ -400,6 +547,8 @@ daemons:
   law_yoma:
     file: cold_run_yoma.py
     wraps: yoma (Lev 16 — the atonement routing table, the fellow gate, the dispatched goat, the service order)
+    given_at: Lev 16:1
+    installed_by: called_from_the_tent
     watches:
       sanctuary_defiled: [atoned_forgiven, suspends]
       goat_dispatched: [dispatched_to_wilderness, atoned_forgiven, washes_and_bathes]
@@ -414,6 +563,8 @@ daemons:
   law_holiness:
     file: cold_run_holiness.py
     wraps: holiness (Lev 19:1-18 — the peace offering's window, the poor gifts, theft and the oath, robbery, the wage, the court, the neighbor)
+    given_at: Lev 19:1
+    installed_by: called_from_the_tent
     watches:
       shelamim_slaughtered_for_acceptance: [accepted, eating_window, burn_remainder, not_accepted, karet_cut_off, lashes]
       harvest_reaped: [left_for_the_poor, exempt]
@@ -425,6 +576,8 @@ daemons:
   law_holiness_b:
     file: cold_run_holiness_b.py
     wraps: holiness_b (Lev 19:19-37 — the mixtures, the maidservant, orlah, the body, the daughter, the sanctuary, the ghost-pit, the elder, the convert, the measures)
+    given_at: Lev 19:19
+    installed_by: called_from_the_tent
     watches:
       kinds_mixed: [mixture_barred, lashes]
       maidservant_lain_with: [exempt, lashes, atoned_forgiven, accepted, most_holy, due_to_priest, eating_window, released, put_to_death]
@@ -439,6 +592,8 @@ daemons:
   law_sanctions:
     file: cold_run_sanctions.py
     wraps: sanctions (Lev 17, 18, 20 — the outside slaughter, the platform, the blood, the covering, the carcass, the unions matrix, the levirate grades, Molech, the ghost-pit, the curser, the land)
+    given_at: Lev 17:1
+    installed_by: called_from_the_tent
     watches:
       offering_slaughtered_outside: [karet_cut_off, blood_reckoned, exempt, atoned_forgiven]
       platform_offering_brought: [accepted, consecrated, disqualified, exempt, karet_cut_off]
@@ -456,6 +611,8 @@ daemons:
   law_priesthood:
     file: cold_run_priesthood.py
     wraps: priesthood (Lev 21, 22, 24:1-9 — the priest's file, the blemish census, the holy food, the acceptable animal, the lamp and the table)
+    given_at: Lev 21:1
+    installed_by: milluim_blood_sprinkled
     watches:
       priest_defiled_for_dead: [defiled_for_kin, service_profaned, lashes]
       priest_body_marked: [lashes]
@@ -473,6 +630,8 @@ daemons:
   law_tochacha:
     file: cold_run_tochacha.py
     wraps: tochacha (Lev 26 — the covenant's blessing, the five gates, the exile and the sabbath debt, the seventy, the recovery; clock unit YEARS)
+    given_at: Lev 26:1
+    installed_by: covenant_blood_thrown
     watches:
       covenant_kept: [covenant_upheld]
       warning_refused: [chastised_sevenfold, land_desolate, scattered_among_nations]
@@ -481,6 +640,8 @@ daemons:
   law_temurah:
     file: cold_run_temurah.py
     wraps: temurah (Lev 27:9-15, 26-33 — the consecration, the substitution, the redemption, the devotion, the tithe)
+    given_at: Lev 27:9
+    installed_by: called_from_the_tent
     watches:
       thing_consecrated: [consecrated]
       substitute_declared: [substitution, consecrated, lashes, redemption_right]
@@ -490,6 +651,8 @@ daemons:
   law_yovel:
     file: cold_run_yovel.py
     wraps: yovel (Lev 25 + 27:2-8, 16-25 — the cycle, the jubilee, the field and the house, the poor brother, the slave, the valuations; THE COUNT EPOCH since THE CLOCK SITTING 2026-09-07 — the count's two recurring timers set at entry, the sowing read off the land's status, the sale's timer the ENTITLEMENT, the RELEASE on the proclamation act forked on its three recorded conditions)
+    given_at: Lev 25:1
+    installed_by: entered_the_land
     watches:
       entered_the_land: [sabbath_of_the_land, jubilee_year]   # THE CLOCK SITTING: Lev 25:2 — the count begins; the periods 'sabbatical' and 'jubilee' re-armed through the Calendar
       land_sown: [land_release, labor_barred, lashes, jubilee_release, goes_free, returns_to_holding]
@@ -506,6 +669,8 @@ daemons:
   law_exodus_story:
     file: cold_run_exodus_story.py
     wraps: exodus_story
+    given_at: Exod 1:1
+    installed_by: boot
     watches:
       king_arose: []
       taskmasters_set: [enslaved]
@@ -582,6 +747,8 @@ daemons:
   law_primeval:   # O8 S2 (2026-09-08; NARRATIVE_GAPS.md section 6d): FROM EDEN TO HAGAR's daemon — declared BEFORE its code (the gate run to fail)
     file: cold_run_primeval.py
     wraps: primeval
+    given_at: Gen 2:4
+    installed_by: boot
     watches:
       formed_from_dust: [living_soul]
       placed_in_the_garden: [to_work_and_keep]
@@ -698,6 +865,8 @@ daemons:
   law_mamre:   # O8 S3 (2026-09-08; NARRATIVE_GAPS.md section 7d): FROM MAMRE TO THE HEAP's daemon — declared BEFORE its code (the gate run to fail); the FORTY-SECOND
     file: cold_run_mamre.py
     wraps: mamre
+    given_at: Gen 18:1
+    installed_by: boot
     watches:
     # O8 S3 (2026-09-08): the watches RE-DECLARED FROM THE HAND-MODEL after the code (scratchpad o8_s3_scene.json — the same table the runner's branches implement, 222/222): the daemon gate caught 21 kinds drifted from the first declaration (the types script's per-kind defaults, written before the model fixed each event's writes); the drift list is in NARRATIVE_GAPS.md 7n
       account_given: [adjudicated_last_night, god_of_bethel_recalled, god_with_me, keeper_account, livestock_rescued, strength_served, torn_borne_beyond_duty, twenty_years_served, wage_flip, wages_changed_ten_times]
@@ -906,6 +1075,8 @@ daemons:
   law_joseph:   # O8 S4 (2026-09-08; NARRATIVE_GAPS.md section 8d): FROM THE FORD TO THE COFFIN's daemon — declared BEFORE its code (the gate run to fail), the FORTY-THIRD; the watches GENERATED FROM THE HAND-MODEL (scratchpad o8_s4_scene.json — the same table the runner's branches will implement), S3's lesson
     file: cold_run_joseph.py
     wraps: joseph
+    given_at: Gen 32:1
+    installed_by: boot
     watches:
       accused: [accused_falsely]
       altar_commanded: [altar_owed, ascent_to_bethel_owed]
@@ -1278,6 +1449,21 @@ functions:
     access_filter: {status: WRAPPED, by: law_pesach}
     registration: {status: WRAPPED, by: law_pesach}
     firstborn: {status: WRAPPED, by: law_pesach}
+  pesach_sheni:   # THE TENT sitting 2 (2026-09-09)
+    second_passover: {status: WRAPPED, by: law_pesach_sheni}
+    proselyte: {status: WRAPPED, by: law_pesach_sheni}
+  mekoshesh:   # THE TENT sitting 3 (2026-09-09)
+    capital_procedure: {status: WRAPPED, by: law_mekoshesh}
+    the_gatherer: {status: WRAPPED, by: law_mekoshesh}
+  zelophehad:   # THE TENT sitting 4 (2026-09-09)
+    inheritance_order: {status: WRAPPED, by: law_zelophehad}
+    the_daughters: {status: WRAPPED, by: law_zelophehad}
+  bamidbar:   # THE NUMBERS WALK 1b (2026-09-09)
+    census: {status: WRAPPED, by: law_census}
+    levites: {status: WRAPPED, by: law_census}
+    camp: {status: WRAPPED, by: law_census}
+    charges: {status: WRAPPED, by: law_census}
+    kohath: {status: WRAPPED, by: law_census}
   pre_sinai:
     creation: {status: WRAPPED, by: law_pre_sinai}
     day_boundary: {status: WRAPPED, by: law_pre_sinai}

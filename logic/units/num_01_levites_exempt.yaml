@@ -17,7 +17,7 @@ meta:
   refs: "1:47-54"
   data_paths_he:
     - "Data/Num.xml"
-  status: draft
+  status: frozen
   tree_derive_version: tree_derived_v1
   tree_derive_phase: "A"
   confidence_overall: hypothesis
@@ -60,6 +60,24 @@ derivation_log:
     confidence: hypothesis
     tags: ["[ORAL]"]
 
+  - step: E
+    name_en: "Numbers 1:47-54 derivation 2026-09-09 — THE NUMBERS WALK sitting 1, Bamidbar"
+    comment: >
+      The walk's first reading, at the parashah grain (Bamidbar 1:1-4:20
+      in one pass, nine ledgers per block): Onkelos Numbers 1:47-54
+      whole and fresh; the Sifrei on Numbers has NO piska on the portion
+      by position (it opens at 5:1 — computed; its export's piska 62,
+      headed 3:24, is the row on 8:24 and is read at num_04_kehat where
+      4:3's thirty is its subject). Ledger num_01_levites_exempt_2026-09-09.md,
+      coverage computed by script, the ink facts computed from the Tanakh
+      DB and the numbers of the census computed from the ink's own
+      numerals. Seated as claims NM01C-01..03: the exclusion, the appointment and the stranger, the banner, the wrath-shield, the run.
+      The compile (the census's arithmetic, the engine's numeral parser
+      taught the thousands) and the tape (Num 1:1's forward marker) follow
+      in their own sitting (World/step9/NUMBERS_WALK.md).
+    confidence: tested
+    tags: ["[ORAL]","[HE-WRITTEN]"]
+
 boot_steps:
   - id: STEP_Nm_1_47
     order: 1
@@ -76,6 +94,20 @@ boot_steps:
       he: לא התפקדו בתוכם
       he_translit: "l' htpqdv btvkm"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(vehaleviyim_lo_hotpakdu, the_exclusion)"
+        en: >
+          THE EXCLUSION [claim NM01C-01]. THE EXCLUSION. 'And the Levites by
+          the tribe of their fathers were not counted among them' (1:47, the
+          narrator) BEFORE the command that excludes them (1:49 'only the
+          tribe of Levi you shall not count, and their head you shall not
+          lift') — the text's own order; Onkelos: 'however' for 'only', 'their
+          sum you shall not receive' — the census idiom of 1:2 negated for one
+          tribe. COUNT AND APPOINT ARE ONE ROOT (1:49 'you shall not count' /
+          1:50 'appoint'): Onkelos splits them.
+        cites: ["Onkelos Num 1:47", "Onkelos Num 1:48", "Onkelos Num 1:49"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -136,6 +168,23 @@ boot_steps:
       he: וסביב למשכן יחנו
       he_translit: vsbyb lmshkn ychnv
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(hafked_et_haleviyim, the_appointment_and_the_stranger)"
+        en: >
+          THE APPOINTMENT AND THE STRANGER [claim NM01C-02]. THE APPOINTMENT
+          AND THE STRANGER. 'Appoint the Levites over the tabernacle of the
+          testimony' (the name's three Torah seats computed: Exod 38:21, Num
+          1:50, 10:11) — carry, serve, camp around; 'when the tabernacle
+          journeys the Levites shall take it down, and when it rests set it
+          up'; 'AND THE STRANGER WHO APPROACHES SHALL BE PUT TO DEATH' →
+          Onkelos 'the LAY man who approaches shall be killed' — the stranger
+          is the OUTSIDER TO THE OFFICE, not the foreigner: the clause's four
+          Torah seats (computed: 1:51 the non-Levite at the tabernacle, 3:10
+          the non-priest at the priesthood, 3:38 before the tent, 18:7 the
+          priesthood again).
+        cites: ["Onkelos Num 1:50", "Onkelos Num 1:51"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -176,6 +225,25 @@ boot_steps:
       he: איש על מחנהו ואיש על דגלו לצבאתם
       he_translit: "'ysh 'l mchnhv v'ysh 'l dglv ltzb'tm"
       en: "Right arm of top binary split [EN-AID]"
+    operators:
+      - op: WITNESS_READ
+        expr_en: "WITNESS-READ(ish_al_diglo, the_banner_the_wrath_shield_the_run)"
+        en: >
+          THE BANNER, THE WRATH-SHIELD, THE RUN [claim NM01C-03]. THE BANNER,
+          THE WRATH-SHIELD, THE RUN. 'Each man by his camp and each man by his
+          banner' → Onkelos 'on his TAXIS' — the Greek loan for a
+          battle-order: the camp as an army in array; 'the Levites shall camp
+          round about the tabernacle of the testimony, THAT THERE BE NO WRATH
+          on the congregation' → 'that there be no anger' — the guard's
+          purpose written (the word's thirteen Torah seats computed; 18:5
+          'that there be no more wrath' the parallel command; 17:11 the
+          plague's wrath): the Levite ring absorbs the wrath; 'the Levites
+          shall keep the charge' — the portion's key-word (nine seats in
+          1:1-4:20, computed); 'the children of Israel did according to all
+          that the LORD commanded Moses, so they did' — the doubled report
+          (its second seat 2:34).
+        cites: ["Onkelos Num 1:52", "Onkelos Num 1:53", "Onkelos Num 1:54"]
+        confidence: witnessed
     comment: >
       Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
     confidence: hypothesis
@@ -308,26 +376,26 @@ oral_notes:
 
 scenarios:
   - id: S1
-    title_en: "After Num 1:47 (STEP_Nm_1_47)"
-    expect_en: "Advances via tree-derived STEP_Nm_1_47; arms in boot_steps."
+    title_en: "after STEP_Nm_1_47 — Num 1:47"
+    expect_en: "no test, no name."
   - id: S2
-    title_en: "After Num 1:48 (STEP_Nm_1_48)"
-    expect_en: "Advances via tree-derived STEP_Nm_1_48; arms in boot_steps."
+    title_en: "after STEP_Nm_1_48 — Num 1:48"
+    expect_en: "no test, no name."
   - id: S3
-    title_en: "After Num 1:49 (STEP_Nm_1_49)"
-    expect_en: "Advances via tree-derived STEP_Nm_1_49; arms in boot_steps."
+    title_en: "after STEP_Nm_1_49 — Num 1:49"
+    expect_en: "no test, no name."
   - id: S4
-    title_en: "After Num 1:50 (STEP_Nm_1_50)"
-    expect_en: "Advances via tree-derived STEP_Nm_1_50; arms in boot_steps."
+    title_en: "after STEP_Nm_1_50 — Num 1:50"
+    expect_en: "no test, no name."
   - id: S5
-    title_en: "After Num 1:51 (STEP_Nm_1_51)"
-    expect_en: "Advances via tree-derived STEP_Nm_1_51; arms in boot_steps."
+    title_en: "after STEP_Nm_1_51 — Num 1:51"
+    expect_en: "no test, no name."
   - id: S6
-    title_en: "After Num 1:52 (STEP_Nm_1_52)"
-    expect_en: "Advances via tree-derived STEP_Nm_1_52; arms in boot_steps."
+    title_en: "after STEP_Nm_1_52 — Num 1:52"
+    expect_en: "no test, no name."
   - id: S_last
-    title_en: "After final verse 1:54"
-    expect_en: "Block closed via STEP_Nm_1_54."
+    title_en: "after STEP_Nm_1_54 — Num 1:54"
+    expect_en: "no test, no name."
 
 binary_trees:
   display_policy_en: >
