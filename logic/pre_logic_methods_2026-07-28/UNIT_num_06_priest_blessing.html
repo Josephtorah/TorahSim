@@ -1,0 +1,420 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>num_06_priest_blessing — derived logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/num_06_priest_blessing?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Priestly blessing (birkat kohanim) (6:22–27) <span class='badge frozen'>MODEL · REV 1 · GATES GREEN</span></h1>
+<div class="meta">unit <b>num_06_priest_blessing</b> · Numbers 6:22-27 · derive tree_derived_v1 · phase B</div>
+<div class="meta"><a href="/#Num/6/22">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">יְבָרֶכְךָ יְהוָה</span> · <i>yevarekhekha YHWH</i> · YHWH bless you</p>
+<div class="note">Tree-derived v1: each verse top binary split (left/right) grounds one STEP. Not multi-verse English smear. Not full TIR yet.</div>
+<div class="meta">confidence: hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Reprocess num_06_priest_blessing (6:22-27, 6 vv) tree-first phase B.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Trees</td><td>Every verse via taamim_tree_parse.py v1; full tree_ascii recorded.</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Tree → steps</td><td>One STEP per verse citing left/right top-split arms. English [EN-AID] only.</td><td>hypothesis</td></tr>
+<tr><td><b>D</b></td><td>Oral dual-track</td><td>Sifrei Bamidbar samples when available; dual-track only; never silent-merge.</td><td>hypothesis</td></tr>
+<tr><td><b>E</b></td><td>Numbers 6:22-27 derivation 2026-09-09 — THE NUMBERS WALK sitting 2, Naso</td><td>The walk&#x27;s second reading, at the parashah grain (Naso 4:21-7:89 in one pass, seven ledgers per block): Onkelos Numbers 6:22-27 whole and fresh; the Sifrei on Numbers piskaot found BY POSITION, every row at the shelf&#x27;s row grain (two heads mistyped in the export — 19 for 5:28, 34 for 6:15 — placed by position, RESEARCH_LOG.md). Ledger num_06_priest_blessing_2026-09-09.md, coverage computed by script, the ink facts computed from the Tanakh DB and the snapshot store, every number by the engine&#x27;s own numeral parser (taught the census at sitting 1b), every quotation cut by consonants. Seated as claims NS06B-01..05: the blessing&#x27;s form, counted; the speech to the priests makes the act the priests&#x27;; the blessing&#x27;s form read off &#x27;thus&#x27; and &#x27;say to them&#x27;; one word, two renderings a verse apart; lifts his face / lifts no face — one hinge, eight pairs; great is peace; place my name — the explicit name in the temple; the blessing of my name. The compile (the four parser gaps measured here, the twelve days as timers, the 7:1 retrograde marker) follows in its own sitting (World/step9/NUMBERS_WALK.md).</td><td>tested</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Nm_6_22 · Num.6.22 · <span class='expr'>TREE_CLAIM</span></h3>
+<p><span class="he">וידבר יהוה … אל משה לאמר</span> · <i>vydbr yhvh … &#x27;l mshh l&#x27;mr</i> · From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive claim from Hebrew arms. Num 6:22.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וידבר יהוה</span> · <i>vydbr yhvh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">אל משה לאמר</span> · <i>&#x27;l mshh l&#x27;mr</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=tifcha; maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Nm_6_23 · Num.6.23 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">דבר אל אהרן ואל בניו לאמר כה תברכו את בני ישראל … אמור להם</span> · <i>dbr &#x27;l &#x27;hrn v&#x27;l bnyv l&#x27;mr kh tbrkv &#x27;t bny yshr&#x27;l … &#x27;mvr lhm</i> · From top split: LEFT «דבר אל אהרן ואל בניו לאמר כה תברכו את בני ישראל» / RIGHT «אמור להם». Derive claim from Hebrew arms. Num 6:23.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">דבר אל אהרן ואל בניו לאמר כה תברכו את בני ישראל</span> · <i>dbr &#x27;l &#x27;hrn v&#x27;l bnyv l&#x27;mr kh tbrkv &#x27;t bny yshr&#x27;l</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">אמור להם</span> · <i>&#x27;mvr lhm</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(thus_shall_you_bless, the_speech_to_the_priests_the_blessings_form)</span><br><span class="gloss">= WITNESS-READ(thus-shall-you-bless, the-speech-to-the-priests-the-blessings-form)</span><br>THE SPEECH TO THE PRIESTS MAKES THE ACT THE PRIESTS&#x27;; THE BLESSING&#x27;S FORM READ OFF &#x27;THUS&#x27; AND &#x27;SAY TO THEM&#x27; [claim NS06B-02]. THE SPEECH TO THE PRIESTS MAKES THE ACT THE PRIESTS&#x27;; THE BLESSING&#x27;S FORM READ OFF &#x27;THUS&#x27; AND &#x27;SAY TO THEM&#x27;. Aaron and his sons addressed inside Moses&#x27; frame (computed: 6:22-23) — THE RULE: where the speech is to the priests, the act is the priests&#x27;; to Israel, Israel&#x27;s; to all men, the proselytes included; &#x27;thus shall you bless&#x27; and &#x27;say to them&#x27; (each one seat, computed): IN THE HOLY TONGUE (the identity &#x27;bless&#x27;/&#x27;bless&#x27; with Deut 27:12; R. Yehudah — &#x27;answering&#x27;, &#x27;saying&#x27;, &#x27;thus&#x27; always mean Hebrew), STANDING (the same identity; R. Nathan — blessing likened to ministering, Deut 10:8), WITH RAISED HANDS (Lev 9:22; R. Yonathan&#x27;s objection answered by Deut 18:5 &#x27;he and his sons&#x27;), WITH THE EXPLICIT NAME in the Temple, an epithet in the province (the identity &#x27;place My name&#x27;/&#x27;place My name there&#x27;; R. Yonathan from Exod 20:21 inverted), for women, proselytes and servants (&#x27;say to them&#x27;), FACE TO FACE, ALOUD, the prayer leader&#x27;s prompt &#x27;say&#x27; — a verdict table of the blessing&#x27;s form (Mishnah Sotah 7:6; Sotah 37b-40a). Onkelos &#x27;THUS shall you bless... you shall say to them&#x27;.
+</td><td>—</td><td class='cite'>Sifrei Bamidbar 39:1, Onkelos Num 6:23</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Nm_6_24 · Num.6.24 · <span class='expr'>TREE_CLAIM</span></h3>
+<p><span class="he">יברכך יהוה</span> · <i>ybrkk yhvh</i> · From top split: LEFT «יברכך יהוה» / RIGHT «». Derive claim from Hebrew arms. Num 6:24.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">יברכך יהוה</span> · <i>ybrkk yhvh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br>Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_lord_bless_you, the_blessings_form_counted)</span><br><span class="gloss">= WITNESS-READ(the-lord-bless-you, the-blessings-form-counted)</span><br>THE BLESSING&#x27;S FORM, COUNTED [claim NS06B-01]. THE BLESSING&#x27;S FORM, COUNTED. Three verses of 3, 5, 7 words and 15, 20, 25 letters, the Name once in each — computed on the ink (the counts, not recited); &#x27;make His face shine&#x27; and &#x27;lift His face&#x27; each one Tanakh seat (computed); Onkelos &#x27;the LORD bless you and keep you&#x27; literal at 6:24.
+</td><td>—</td><td class='cite'>Onkelos Num 6:24, Onkelos Num 6:25, Onkelos Num 6:26</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=tifcha; maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Nm_6_25 · Num.6.25 · <span class='expr'>TREE_CLAIM</span></h3>
+<p><span class="he">יאר יהוה פניו אליך</span> · <i>y&#x27;r yhvh pnyv &#x27;lyk</i> · From top split: LEFT «יאר יהוה פניו אליך» / RIGHT «». Derive claim from Hebrew arms. Num 6:25.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">יאר יהוה פניו אליך</span> · <i>y&#x27;r yhvh pnyv &#x27;lyk</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br>Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(make_his_face_shine, one_word_two_renderings)</span><br><span class="gloss">= WITNESS-READ(make-his-face-shine, one-word-two-renderings)</span><br>ONE WORD, TWO RENDERINGS A VERSE APART [claim NS06B-03]. ONE WORD, TWO RENDERINGS A VERSE APART. &#x27;His face&#x27; is rendered &#x27;His SHEKHINAH&#x27; at 6:25 (&#x27;the LORD make His Shekhinah shine toward you and have mercy on you&#x27;) and &#x27;His FACE&#x27; at 6:26 (&#x27;the LORD lift His face toward you and set for you peace&#x27;) — computed on the shelf&#x27;s own bytes: the shining face is the Presence, the lifted face is the idiom of favor kept as an idiom; the Sifrei&#x27;s R. Nathan reads 6:25 as the light of the Shekhinah (Isa 60:1-2) — the translation carries his arm (row 41:1); &#x27;be gracious&#x27; → &#x27;have mercy&#x27;.
+</td><td>—</td><td class='cite'>Onkelos Num 6:25, Onkelos Num 6:26, Sifrei Bamidbar 41:1</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=tifcha; maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Nm_6_26 · Num.6.26 · <span class='expr'>TREE_CLAIM</span></h3>
+<p><span class="he">ישא יהוה פניו אליך … וישם לך שלום</span> · <i>ysh&#x27; yhvh pnyv &#x27;lyk … vyshm lk shlvm</i> · From top split: LEFT «ישא יהוה פניו אליך» / RIGHT «וישם לך שלום». Derive claim from Hebrew arms. Num 6:26.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ישא יהוה פניו אליך</span> · <i>ysh&#x27; yhvh pnyv &#x27;lyk</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">וישם לך שלום</span> · <i>vyshm lk shlvm</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(lift_his_face, lifts_his_face_lifts_no_face_the_sealed_decree)</span><br><span class="gloss">= WITNESS-READ(lift-his-face, lifts-his-face-lifts-no-face-the-sealed-decree)</span><br>LIFTS HIS FACE / LIFTS NO FACE — ONE HINGE, EIGHT PAIRS; GREAT IS PEACE [claim NS06B-04]. LIFTS HIS FACE / LIFTS NO FACE — ONE HINGE, EIGHT PAIRS; GREAT IS PEACE. &#x27;The LORD lift His face to you&#x27; — in prayer, as Lot&#x27;s for Abraham&#x27;s sake (Gen 19:21 — row 42:1); against Deut 10:17 &#x27;who lifts no face&#x27;: when Israel do His will / when not — or BEFORE THE DECREE IS SEALED / AFTER, the same hinge reconciling seven more pairs (Ps 65:3 / Lam 3:44; Ps 145:18 / 10:1; Lam 3:38 / Dan 9:14; Jer 4:14 / 2:22; Jer 3:22 / 8:4; Isa 55:6 / Ezek 20:3; Ezek 18:32 / 1 Sam 2:25) — a parameter with two settings and an answer sheet of eight verse-pairs (row 42:2; the exam&#x27;s Berakhot 20b, Rosh Hashanah 17b); &#x27;peace&#x27; — in your house (R. Chanina the deputy high priest), David&#x27;s kingdom (R. Nathan), Torah; and among &#x27;great is peace&#x27;: THE NAME WRITTEN IN HOLINESS IS ERASED BY THE BITTER WATERS to make peace between a man and his wife — the portion&#x27;s sotah (5:23) linked to its blessing by the shelf; all blessings sealed with peace (R. Elazar Hakappar — the three verses).
+</td><td>—</td><td class='cite'>Sifrei Bamidbar 42:1, Sifrei Bamidbar 42:2, Onkelos Num 6:26</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=zaqef qatan; maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Nm_6_27 · Num.6.27 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ושמו את שמי על בני ישראל … ואני אברכם</span> · <i>vshmv &#x27;t shmy &#x27;l bny yshr&#x27;l … v&#x27;ny &#x27;brkm</i> · From top split: LEFT «ושמו את שמי על בני ישראל» / RIGHT «ואני אברכם». Derive claim from Hebrew arms. Num 6:27.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ושמו את שמי על בני ישראל</span> · <i>vshmv &#x27;t shmy &#x27;l bny yshr&#x27;l</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">ואני אברכם</span> · <i>v&#x27;ny &#x27;brkm</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(place_my_name, the_explicit_name_in_the_temple_the_blessing_of_my_name)</span><br><span class="gloss">= WITNESS-READ(place-my-name, the-explicit-name-in-the-temple-the-blessing-fowl-my-name)</span><br>PLACE MY NAME — THE EXPLICIT NAME IN THE TEMPLE; THE BLESSING OF MY NAME [claim NS06B-05]. PLACE MY NAME — THE EXPLICIT NAME IN THE TEMPLE; THE BLESSING OF MY NAME. &#x27;They shall place My name on the children of Israel&#x27;: the Name distinctive to Me, not an epithet; IN THE TEMPLE by the identity of wording &#x27;place My name&#x27; / &#x27;to place My name there&#x27; (Deut 12:5 — the phrase&#x27;s seats Deut 12:5, 1 Kgs 14:21, 2 Chr 12:13, computed); in the province an epithet; &#x27;and I will bless them&#x27; — the PRIESTS blessed too; Israel&#x27;s blessing not by the priests&#x27; leave, nor the priests&#x27; &#x27;we bless Israel&#x27; — &#x27;I shall bless My people&#x27; (row 43:1; Chullin 49a); ONKELOS: &#x27;they shall place THE BLESSING OF My name&#x27; — a word inserted (cut from the shelf&#x27;s bytes): the placed thing is the blessing in the translation, the Name itself on the shelf — the two members of the spine RECORDED together.
+</td><td>—</td><td class='cite'>Sifrei Bamidbar 43:1, Onkelos Num 6:27</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">Coarse states for num_06_priest_blessing after tree-derived steps.</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_block_open</b></td><td>Entered 6:22-27</td></tr>
+<tr><td><b>S_block_mid</b></td><td>Mid-block after ~half of verse steps</td></tr>
+<tr><td><b>S_block_closed</b></td><td>Completed tree-derived steps for 6:22-27</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_block_open</td><td>S_block_mid</td><td>STEP_Nm_6_25</td></tr>
+<tr><td>S_block_mid</td><td>S_block_closed</td><td>STEP_Nm_6_27</td></tr>
+</table>
+<div class="note"><b>AFTER_S_block_closed</b> — Tree-derived v1 complete for num_06_priest_blessing</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Nm_6_22 — Num 6:22</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Nm_6_23 — Num 6:23</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Nm_6_24 — Num 6:24</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Nm_6_25 — Num 6:25</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Nm_6_26 — Num 6:26</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Nm_6_27 — Num 6:27</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S_last</b></td><td>after STEP_Nm_6_27 — Num 6:27</td><td></td><td>no test, no name.</td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_birkat_kohanim</td><td><span class="he">בִּרְכַּת כֹּהֲנִים</span> · <i>birkat kohanim</i> · Threefold priestly blessing</td></tr>
+<tr><td>EXPORT_yasem_shalom</td><td><span class="he">וְיָשֵׂם לְךָ שָׁלוֹם</span> · <i>ve-yasem lekha shalom</i> · And put for you peace</td></tr>
+<tr><td>EXPORT_tree_derived_v1_num_06_priest_blessing</td><td>Unit reprocessed tree-first (one STEP per verse, arm-cited)</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Numbers tree-derive oral policy</b><br><br><i>Written trees first. Prefer Sifrei Bamidbar on law densification; MH possible; never silent-merge.</i></div>
+<div class="note"><span class="badge tier-o">dual_track</span> <b>Sifrei Bamidbar</b><br><i>see Hebrew sample in local Data dump</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<div class="note"><span class="badge tier-o">dual_track</span> <b>Sifrei Bamidbar</b><br><i>see Hebrew sample in local Data dump</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<div class="note"><span class="badge tier-o">dual_track</span> <b>Sifrei Bamidbar</b><br><i>see Hebrew sample in local Data dump</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Num.6.22 · parser unique · 5 words</h3>
+<div class="meta"><span class="he">וידבר יהוה אל משה לאמר</span> · <i>vydbr yhvh &#x27;l mshh l&#x27;mr</i> · Free gloss — structure from Hebrew tree. 6:22.</div>
+<pre>PHRASE (binary 5w) וַ/יְדַבֵּ֥ר יְהוָ֖ה אֶל מֹשֶׁ֥ה לֵּ/אמֹֽר
+├── PHRASE (binary 2w) וַ/יְדַבֵּ֥ר יְהוָ֖ה
+│   ├── [0] וַ/יְדַבֵּ֥ר (mercha (conjunctive), rank=9)
+│   └── [1] יְהוָ֖ה (tifcha, rank=2)
+└── PHRASE (3-ary 3w) אֶל מֹשֶׁ֥ה לֵּ/אמֹֽר
+    ├── [2] אֶל (no cantillation mark — bind as conjunctive, rank=9)
+    ├── [3] מֹשֶׁ֥ה (mercha (conjunctive), rank=9)
+    └── [4] לֵּ/אמֹֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Num.6.23 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">דבר אל אהרן ואל בניו לאמר כה תברכו את בני ישראל אמור להם</span> · <i>dbr &#x27;l &#x27;hrn v&#x27;l bnyv l&#x27;mr kh tbrkv &#x27;t bny yshr&#x27;l &#x27;mvr lhm</i> · Free gloss — structure from Hebrew tree. 6:23.</div>
+<pre>PHRASE (binary 13w) דַּבֵּ֤ר אֶֽל אַהֲרֹן֙ וְ/אֶל בָּנָ֣י/ו לֵ/אמֹ֔…
+├── PHRASE (binary 11w) דַּבֵּ֤ר אֶֽל אַהֲרֹן֙ וְ/אֶל בָּנָ֣י/ו לֵ/אמֹ֔…
+│   ├── PHRASE (binary 6w) דַּבֵּ֤ר אֶֽל אַהֲרֹן֙ וְ/אֶל בָּנָ֣י/ו לֵ/אמֹ֔ר
+│   │   ├── PHRASE (3-ary 3w) דַּבֵּ֤ר אֶֽל אַהֲרֹן֙
+│   │   │   ├── [0] דַּבֵּ֤ר (mahpach (conjunctive), rank=9)
+│   │   │   ├── [1] אֶֽל (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │   └── [2] אַהֲרֹן֙ (pashta, rank=3)
+│   │   └── PHRASE (3-ary 3w) וְ/אֶל בָּנָ֣י/ו לֵ/אמֹ֔ר
+│   │       ├── [3] וְ/אֶל (no cantillation mark — bind as conjunctive, rank=9)
+│   │       ├── [4] בָּנָ֣י/ו (munach (conjunctive), rank=9)
+│   │       └── [5] לֵ/אמֹ֔ר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) כֹּ֥ה תְבָרֲכ֖וּ אֶת בְּנֵ֣י יִשְׂרָאֵ֑ל
+│       ├── PHRASE (binary 2w) כֹּ֥ה תְבָרֲכ֖וּ
+│       │   ├── [6] כֹּ֥ה (mercha (conjunctive), rank=9)
+│       │   └── [7] תְבָרֲכ֖וּ (tifcha, rank=2)
+│       └── PHRASE (3-ary 3w) אֶת בְּנֵ֣י יִשְׂרָאֵ֑ל
+│           ├── [8] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│           ├── [9] בְּנֵ֣י (munach (conjunctive), rank=9)
+│           └── [10] יִשְׂרָאֵ֑ל (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) אָמ֖וֹר לָ/הֶֽם
+    ├── [11] אָמ֖וֹר (tifcha, rank=2)
+    └── [12] לָ/הֶֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Num.6.24 · parser unique · 3 words</h3>
+<div class="meta"><span class="he">יברכך יהוה וישמרך</span> · <i>ybrkk yhvh vyshmrk</i> · Free gloss — structure from Hebrew tree. 6:24.</div>
+<pre>PHRASE (binary 3w) יְבָרֶכְ/ךָ֥ יְהוָ֖ה וְ/יִשְׁמְרֶֽ/ךָ
+├── PHRASE (binary 2w) יְבָרֶכְ/ךָ֥ יְהוָ֖ה
+│   ├── [0] יְבָרֶכְ/ךָ֥ (mercha (conjunctive), rank=9)
+│   └── [1] יְהוָ֖ה (tifcha, rank=2)
+└── [2] וְ/יִשְׁמְרֶֽ/ךָ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Num.6.25 · parser unique · 5 words</h3>
+<div class="meta"><span class="he">יאר יהוה פניו אליך ויחנך</span> · <i>y&#x27;r yhvh pnyv &#x27;lyk vychnk</i> · Free gloss — structure from Hebrew tree. 6:25.</div>
+<pre>PHRASE (binary 5w) יָאֵ֨ר יְהוָ֧ה פָּנָ֛י/ו אֵלֶ֖י/ךָ וִֽ/יחֻנֶּֽ/…
+├── PHRASE (binary 4w) יָאֵ֨ר יְהוָ֧ה פָּנָ֛י/ו אֵלֶ֖י/ךָ
+│   ├── PHRASE (3-ary 3w) יָאֵ֨ר יְהוָ֧ה פָּנָ֛י/ו
+│   │   ├── [0] יָאֵ֨ר (qadma (conjunctive), rank=9)
+│   │   ├── [1] יְהוָ֧ה (darga (conjunctive), rank=9)
+│   │   └── [2] פָּנָ֛י/ו (tevir, rank=3)
+│   └── [3] אֵלֶ֖י/ךָ (tifcha, rank=2)
+└── [4] וִֽ/יחֻנֶּֽ/ךָּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Num.6.26 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">ישא יהוה פניו אליך וישם לך שלום</span> · <i>ysh&#x27; yhvh pnyv &#x27;lyk vyshm lk shlvm</i> · Free gloss — structure from Hebrew tree. 6:26.</div>
+<pre>PHRASE (binary 7w) יִשָּׂ֨א יְהוָ֤ה פָּנָי/ו֙ אֵלֶ֔י/ךָ וְ/יָשֵׂ֥ם…
+├── PHRASE (binary 4w) יִשָּׂ֨א יְהוָ֤ה פָּנָי/ו֙ אֵלֶ֔י/ךָ
+│   ├── PHRASE (3-ary 3w) יִשָּׂ֨א יְהוָ֤ה פָּנָי/ו֙
+│   │   ├── [0] יִשָּׂ֨א (qadma (conjunctive), rank=9)
+│   │   ├── [1] יְהוָ֤ה (mahpach (conjunctive), rank=9)
+│   │   └── [2] פָּנָי/ו֙ (pashta, rank=3)
+│   └── [3] אֵלֶ֔י/ךָ (zaqef qatan, rank=2)
+└── PHRASE (binary 3w) וְ/יָשֵׂ֥ם לְ/ךָ֖ שָׁלֽוֹם
+    ├── PHRASE (binary 2w) וְ/יָשֵׂ֥ם לְ/ךָ֖
+    │   ├── [4] וְ/יָשֵׂ֥ם (mercha (conjunctive), rank=9)
+    │   └── [5] לְ/ךָ֖ (tifcha, rank=2)
+    └── [6] שָׁלֽוֹם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Num.6.27 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">ושמו את שמי על בני ישראל ואני אברכם</span> · <i>vshmv &#x27;t shmy &#x27;l bny yshr&#x27;l v&#x27;ny &#x27;brkm</i> · Free gloss — structure from Hebrew tree. 6:27.</div>
+<pre>PHRASE (binary 8w) וְ/שָׂמ֥וּ אֶת שְׁמִ֖/י עַל בְּנֵ֣י יִשְׂרָאֵ֑ל…
+├── PHRASE (binary 6w) וְ/שָׂמ֥וּ אֶת שְׁמִ֖/י עַל בְּנֵ֣י יִשְׂרָאֵ֑ל
+│   ├── PHRASE (3-ary 3w) וְ/שָׂמ֥וּ אֶת שְׁמִ֖/י
+│   │   ├── [0] וְ/שָׂמ֥וּ (mercha (conjunctive), rank=9)
+│   │   ├── [1] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│   │   └── [2] שְׁמִ֖/י (tifcha, rank=2)
+│   └── PHRASE (3-ary 3w) עַל בְּנֵ֣י יִשְׂרָאֵ֑ל
+│       ├── [3] עַל (no cantillation mark — bind as conjunctive, rank=9)
+│       ├── [4] בְּנֵ֣י (munach (conjunctive), rank=9)
+│       └── [5] יִשְׂרָאֵ֑ל (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) וַ/אֲנִ֖י אֲבָרֲכֵֽ/ם
+    ├── [6] וַ/אֲנִ֖י (tifcha, rank=2)
+    └── [7] אֲבָרֲכֵֽ/ם (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 41/41 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Num.6.22</td><td>0</td><td class='he-cell'>וידבר</td><td>vydbr</td><td>leaf 0 (וידבר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.22</td><td>1</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 1 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.22</td><td>2</td><td class='he-cell'>אל</td><td>&#x27;l</td><td>leaf 2 (אל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Num.6.22</td><td>3</td><td class='he-cell'>משה</td><td>mshh</td><td>leaf 3 (משה)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.22</td><td>4</td><td class='he-cell'>לאמר</td><td>l&#x27;mr</td><td>leaf 4 (לאמר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.23</td><td>0</td><td class='he-cell'>דבר</td><td>dbr</td><td>leaf 0 (דבר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.23</td><td>1</td><td class='he-cell'>אל</td><td>&#x27;l</td><td>leaf 1 (אל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Num.6.23</td><td>2</td><td class='he-cell'>אהרן</td><td>&#x27;hrn</td><td>leaf 2 (אהרן)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.23</td><td>3</td><td class='he-cell'>ואל</td><td>v&#x27;l</td><td>leaf 3 (ואל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.23</td><td>4</td><td class='he-cell'>בניו</td><td>bnyv</td><td>leaf 4 (בניו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.23</td><td>5</td><td class='he-cell'>לאמר</td><td>l&#x27;mr</td><td>leaf 5 (לאמר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.23</td><td>6</td><td class='he-cell'>כה</td><td>kh</td><td>leaf 6 (כה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.23</td><td>7</td><td class='he-cell'>תברכו</td><td>tbrkv</td><td>leaf 7 (תברכו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.23</td><td>8</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 8 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Num.6.23</td><td>9</td><td class='he-cell'>בני</td><td>bny</td><td>leaf 9 (בני)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.23</td><td>10</td><td class='he-cell'>ישראל</td><td>yshr&#x27;l</td><td>leaf 10 (ישראל)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.23</td><td>11</td><td class='he-cell'>אמור</td><td>&#x27;mvr</td><td>leaf 11 (אמור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.23</td><td>12</td><td class='he-cell'>להם</td><td>lhm</td><td>leaf 12 (להם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.24</td><td>0</td><td class='he-cell'>יברכך</td><td>ybrkk</td><td>leaf 0 (יברכך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.24</td><td>1</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 1 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.24</td><td>2</td><td class='he-cell'>וישמרך</td><td>vyshmrk</td><td>leaf 2 (וישמרך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.25</td><td>0</td><td class='he-cell'>יאר</td><td>y&#x27;r</td><td>leaf 0 (יאר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.25</td><td>1</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 1 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.25</td><td>2</td><td class='he-cell'>פניו</td><td>pnyv</td><td>leaf 2 (פניו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.25</td><td>3</td><td class='he-cell'>אליך</td><td>&#x27;lyk</td><td>leaf 3 (אליך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.25</td><td>4</td><td class='he-cell'>ויחנך</td><td>vychnk</td><td>leaf 4 (ויחנך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.26</td><td>0</td><td class='he-cell'>ישא</td><td>ysh&#x27;</td><td>leaf 0 (ישא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.26</td><td>1</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 1 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.26</td><td>2</td><td class='he-cell'>פניו</td><td>pnyv</td><td>leaf 2 (פניו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.26</td><td>3</td><td class='he-cell'>אליך</td><td>&#x27;lyk</td><td>leaf 3 (אליך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.26</td><td>4</td><td class='he-cell'>וישם</td><td>vyshm</td><td>leaf 4 (וישם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.26</td><td>5</td><td class='he-cell'>לך</td><td>lk</td><td>leaf 5 (לך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.26</td><td>6</td><td class='he-cell'>שלום</td><td>shlvm</td><td>leaf 6 (שלום)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.27</td><td>0</td><td class='he-cell'>ושמו</td><td>vshmv</td><td>leaf 0 (ושמו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.27</td><td>1</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 1 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Num.6.27</td><td>2</td><td class='he-cell'>שמי</td><td>shmy</td><td>leaf 2 (שמי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.27</td><td>3</td><td class='he-cell'>על</td><td>&#x27;l</td><td>leaf 3 (על)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Num.6.27</td><td>4</td><td class='he-cell'>בני</td><td>bny</td><td>leaf 4 (בני)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.27</td><td>5</td><td class='he-cell'>ישראל</td><td>yshr&#x27;l</td><td>leaf 5 (ישראל)</td><td>agent_or_person</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.27</td><td>6</td><td class='he-cell'>ואני</td><td>v&#x27;ny</td><td>leaf 6 (ואני)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Num.6.27</td><td>7</td><td class='he-cell'>אברכם</td><td>&#x27;brkm</td><td>leaf 7 (אברכם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: num_06_priest_blessing — Priestly blessing (birkat kohanim) (6:22–27) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Nm_6_22 — Num 6:22
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Nm_6_23 — Num 6:23
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Nm_6_24 — Num 6:24
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Nm_6_25 — Num 6:25
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Nm_6_26 — Num 6:26
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Nm_6_27 — Num 6:27
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S_last — after STEP_Nm_6_27 — Num 6:27
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the canonical YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/num_06_priest_blessing.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# num_06_priest_blessing — 6:22-27
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/num_06_priest_blessing.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Priestly blessing (birkat kohanim) (6:22–27)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;num_06_priest_blessing&quot;)
+
+# -------------------------- Num.6.22 · TREE_CLAIM --------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:22.&quot;
+m.step(&quot;Num.6.22&quot;)
+
+# -------------------------- Num.6.23 · ETNACHTA_SPLIT ----------------------
+# ‹דבר אל אהרן› (“speak to Aaron”)
+# ‹ואל בניו לאמר› (“and-to son-him/its to-say”)
+# ‹כה תברכו את› (“like-this bless obj-marker”)
+# ‹בני ישראל … אמור› (“son Israel … say”)
+# ‹להם› (“to-them/their”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:23.&quot;
+m.step(&quot;Num.6.23&quot;)
+# witness-tier presupposed read:
+# the_speech_to_the_priests_the_blessings_form on thus_shall_you_bless —
+# read, not installed
+m.witness_read(&quot;thus_shall_you_bless&quot;, &quot;the_speech_to_the_priests_the_blessings_form&quot;,
+                cites=[&quot;Sifrei Bamidbar 39:1&quot;, &quot;Onkelos Num 6:23&quot;])
+
+# -------------------------- Num.6.24 · TREE_CLAIM --------------------------
+# ‹יברכך יהוה› (“bless-you/your YHWH”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 6:24.&quot;
+m.step(&quot;Num.6.24&quot;)
+# witness-tier presupposed read: the_blessings_form_counted on
+# the_lord_bless_you — read, not installed
+m.witness_read(&quot;the_lord_bless_you&quot;, &quot;the_blessings_form_counted&quot;,
+                cites=[&quot;Onkelos Num 6:24&quot;, &quot;Onkelos Num 6:25&quot;, &quot;Onkelos Num 6:26&quot;])
+
+# -------------------------- Num.6.25 · TREE_CLAIM --------------------------
+# ‹יאר יהוה פניו› (“give-light YHWH face-him/its”)
+# ‹אליך› (“to-you/your”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 6:25.&quot;
+m.step(&quot;Num.6.25&quot;)
+# witness-tier presupposed read: one_word_two_renderings on
+# make_his_face_shine — read, not installed
+m.witness_read(&quot;make_his_face_shine&quot;, &quot;one_word_two_renderings&quot;,
+                cites=[&quot;Onkelos Num 6:25&quot;, &quot;Onkelos Num 6:26&quot;, &quot;Sifrei Bamidbar 41:1&quot;])
+
+# -------------------------- Num.6.26 · TREE_CLAIM --------------------------
+# ‹ישא יהוה פניו› (“lift/carry YHWH face-him/its”)
+# ‹אליך … וישם לך› (“to-you/your … and-put/set to-you/your”)
+# ‹שלום› (“safe”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:26.&quot;
+m.step(&quot;Num.6.26&quot;)
+# witness-tier presupposed read:
+# lifts_his_face_lifts_no_face_the_sealed_decree on lift_his_face — read,
+# not installed
+m.witness_read(&quot;lift_his_face&quot;, &quot;lifts_his_face_lifts_no_face_the_sealed_decree&quot;,
+                cites=[&quot;Sifrei Bamidbar 42:1&quot;, &quot;Sifrei Bamidbar 42:2&quot;, &quot;Onkelos Num 6:26&quot;])
+
+# -------------------------- Num.6.27 · ETNACHTA_SPLIT ----------------------
+# ‹ושמו את שמי› (“and-put/set obj-marker name-me/my”)
+# ‹על בני ישראל› (“over son Israel”)
+# ‹… ואני אברכם› (“and-I bless-them/their”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:27.&quot;
+m.step(&quot;Num.6.27&quot;)
+# witness-tier presupposed read:
+# the_explicit_name_in_the_temple_the_blessing_of_my_name on place_my_name —
+# read, not installed
+m.witness_read(&quot;place_my_name&quot;, &quot;the_explicit_name_in_the_temple_the_blessing_of_my_name&quot;,
+                cites=[&quot;Sifrei Bamidbar 43:1&quot;, &quot;Onkelos Num 6:27&quot;])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 0
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;thus_shall_you_bless&#x27;, &#x27;the_speech_to_the_priests_the_blessings_form&#x27;), (&#x27;the_lord_bless_you&#x27;, &#x27;the_blessings_form_counted&#x27;), (&#x27;make_his_face_shine&#x27;, &#x27;one_word_two_renderings&#x27;), (&#x27;lift_his_face&#x27;, &#x27;lifts_his_face_lifts_no_face_the_sealed_decree&#x27;), (&#x27;place_my_name&#x27;, &#x27;the_explicit_name_in_the_temple_the_blessing_of_my_name&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Sifrei Bamidbar 39:1&#x27;, &#x27;Onkelos Num 6:23&#x27;]
+    assert all(&#x27;the_speech_to_the_priests_the_blessings_form&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;thus_shall_you_bless&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Onkelos Num 6:24&#x27;, &#x27;Onkelos Num 6:25&#x27;, &#x27;Onkelos Num 6:26&#x27;]
+    assert all(&#x27;the_blessings_form_counted&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_lord_bless_you&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Onkelos Num 6:25&#x27;, &#x27;Onkelos Num 6:26&#x27;, &#x27;Sifrei Bamidbar 41:1&#x27;]
+    assert all(&#x27;one_word_two_renderings&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;make_his_face_shine&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Sifrei Bamidbar 42:1&#x27;, &#x27;Sifrei Bamidbar 42:2&#x27;, &#x27;Onkelos Num 6:26&#x27;]
+    assert all(&#x27;lifts_his_face_lifts_no_face_the_sealed_decree&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;lift_his_face&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Sifrei Bamidbar 43:1&#x27;, &#x27;Onkelos Num 6:27&#x27;]
+    assert all(&#x27;the_explicit_name_in_the_temple_the_blessing_of_my_name&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;place_my_name&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">Tree-derived v1 (phase B). One STEP per verse from top-split arms. Not binding religious law.</div><p class='meta'>Rendered 2026-09-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

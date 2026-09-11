@@ -1206,7 +1206,10 @@ def law_erection(event, world):
     if k == 'testimony_placed': return [E_('tablets_delivered', 'the-ark'), E_('staves_fixed', 'the-ark')]
     if k == 'veil_hung': return [E_('veil_divides', 'the-tabernacle')]
     if k == 'bread_arranged': return [E_('bread_set_weekly', 'the-table', due=day + 6)]           # the first SABBATH initiates the table (Menachot 4:4; a Sunday erection)
-    if k == 'lamps_raised': return [E_('lamp_arranged', 'the-lampstand'), E_('lamp_arranged', 'the-lampstand', due=day + 1)]
+    if k == 'lamps_raised':
+        if not src.startswith('Exod 40'):        # THE NUMBERS WALK 3b (2026-09-10): the kind's SECOND SEAT is Num 8:3 (Aaron's lighting — law_beha's own write); the erection's arranging and its morrow are this span's only (the shared-kind guard, O8 S4's lesson — else the lampstand's overlap pair would move 2 -> 4)
+            return []
+        return [E_('lamp_arranged', 'the-lampstand'), E_('lamp_arranged', 'the-lampstand', due=day + 1)]
     if k == 'incense_burned':
         if WE.seat(src) != ('Exod', 40): return []                                # THE TENT sitting 2 (2026-09-09): this daemon reads its own span — Korach's fire-pans (Num 16, the incense runner's recorded run) joined the tape with the fourth book and this unguarded branch would have initiated the continual incense a second time (O2: one act, one writer)
         return [E_('incense_continual', 'the-golden-altar'), E_('incense_continual', 'the-golden-altar', due=day + 1)]

@@ -52,3 +52,6 @@ Onkelos Num 3:13
 (13 Onkelos verses fresh = 13 sources in this ledger.)
 
 **read: 13 of 13 — COMPLETE** (13 Onkelos verses opened and verdicted this sitting at the shelf's row grain, coverage computed by script — missing 0, extra 0; verdicts MATERIAL 11 Onkelos, CONTEXT 2 Onkelos — the counts the script's own Counter measured)
+
+## CORRECTION appended 2026-09-10 (THE NUMBERS WALK sitting 3 — Beha'alotcha; the ledger append-only)
+- Onkelos Num 3:9's row above says "the single 'given' at Num 18:6, Num 8:16, Num 8:19". MEASURED at the Beha'alotcha reading (scratchpad beha_ink.py, the Tanakh DB's bytes): 8:16 DOUBLES the word — נְתֻנִים נְתֻנִים ("given, given", spelled with the yod), given "to Me" twice — against 3:9's נְתוּנִם נְתוּנִם ("given, given", spelled with the vav) given "to him"; the single "given" stands at 8:19 and 18:6 only. Claim NM03A-03 and its operator amended the same day (derivation_log step F); the second seat's delta is claim BH08A-05 in num_08_menorah_levites (ledger num_08_menorah_levites_2026-09-10.md). The hand had typed 8:16 as single; the script counts.

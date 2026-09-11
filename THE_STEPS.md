@@ -3262,6 +3262,419 @@ checkpoints on the arithmetic, the retrograde and the five closes; the
 cursor's bound rule found and fixed on the way; every gate and the
 sweep green. The portion is read, frozen, compiled and on the tape.
 
+THE SECOND SITTING, NASO (Numbers 4:21-7:89, 2026-09-09, on Brian's
+"Go"), read the largest portion of the book the same way — Onkelos
+whole and the Sifrei's fifty-eight piskaot found by position (two more
+heads mistyped in the export, placed between their neighbors and by
+their own quotations) — 257 sources, seven ledgers, fifty-one claims
+checked against the store, seven units frozen, the corpus refolded
+exactly as predicted. It taught the walk three more things. THE
+ACCENTS PARSE THE NUMBER AND THE TOTAL PROVES THE PARSE: "one pan, ten
+of gold" spells eleven as consonants; the cantillation mark on "one"
+is a disjunctive at all twelve pan-verses, while every true eleven in
+the Tanakh joins its one to its ten; and the chapter's own total, a
+hundred and twenty, is twelve tens, not twelve elevens — the same
+total the Sifrei uses for another question. The number parser had
+been ignoring its own front end's marks; the rule is registered as a
+move and owed to the compile with three more gaps the portion's
+numbers measured ("two of", "eleven", "one" before a weight). THE
+HAND'S FACTS ARE ASSERTS, READ ALL AT ONCE: the ink module typed forty
+expectations and nine failed on the first run — a sort order, a name
+caught by a root search, a final letter, the order of marks in a typed
+pointed form against the database's bytes — each a measurement, and a
+small driver now lists every failing assert in one run, as the cut
+checker lists every missed quotation. And THE LINT'S WINDOW IS NINETY
+CHARACTERS: a long Hebrew quotation with its whole translation after
+it flags every early word; quote short pieces, each glossed at once.
+The spine agreed with itself more than once — the Sifrei's "trespass
+is lying" is the translation's own word; the Sifrei's kitchen is the
+translation's inserted pot; the Sifrei's Shekhinah is the translation's
+noun — and disagreed on the record where it disagrees (the three
+readings of "wine and strong drink"; "the blessing of My name" against
+the Name itself). Eight entries of the tradition's own case law on its
+inference rules went into the middot file from these piskaot.
+
+THE THIRD SITTING, BEHA'ALOTCHA (Numbers 8:1-26 and 10:1-12:16,
+2026-09-10, on Brian's "Ok continue to next numbers span" — the reading
+called before Naso's compile, which stays owed), was the walk's first
+largely narrative portion, and chapter 9 was skipped as the ruling
+says. Onkelos whole and the Sifrei's forty piskaot found by position
+(four heads placed — one headless, one the mistyped "3:24" read at
+Bamidbar and credited here, a third mistyped head found by its opening
+words, one headed only "Ibid.") — 164 sources, four ledgers,
+thirty-four claims, four units frozen. It taught the walk four more
+things. THE PARSER IS MEASURED AGAIN AND FINDS A NEW CLASS: thirteen
+verses read right, and the dual noun ("two days", "two cubits" — the
+ark's own measure) and the suffixed numeral ("the three of you") left
+silent — the class Numbers 35:5's cubits already belong to. THE INK
+PROVES THE SHELF'S NUMBER: the two inverted nuns stand as marks on the
+database after 10:34 and 10:36, and the section between them has
+exactly eighty-five letters — the number the Sifrei gives for "a book
+in itself" — while the snapshot store carries no sign at all. THE RUN
+REWRITES THE SPEC'S PARAMETER: the Levites' age is thirty in chapter 4,
+twenty-five in chapter 8, and twenty in Chronicles and Ezra, every one
+read by the engine's parser, and Chronicles states the reason in its
+own ink — they no longer carry the tabernacle. And A FROZEN CLAIM WAS
+CORRECTED: the Bamidbar row that called 8:16's "given" single was
+measured wrong ("given, given" stands at 3:9 and 8:16 both, spelled two
+ways, given to Aaron and then to the LORD), and the correction went
+into both strata with a changelog step, the ledger appended, the unit
+re-ritualed. The shelf stated its own inference law again — DAYO, the
+a-fortiori's cap, on the very verse the Talmud derives it from; a move
+the catalog did not hold, the speaker split, was registered as M-27;
+and the translation showed its layer load-bearing once more, the
+teruah rendered as a wail — the rendering the exam itself uses to fix
+the sound.
+
+THE COMPILE OF NASO (sitting 2b, 2026-09-10) came on Brian's ruling
+after he asked why we were deriving but not compiling: "Finish
+compiling before moving on. That was misunderstanding." So the walk's
+form is fixed — READ a portion, then COMPILE it, then the next — and
+Naso's compile ran on the same order as Bamidbar's. The exam docket
+first: 638 rows from every tractate that cites a verse of chapters
+4:21-7:89, by the union rule, one verdict each. Then the parser was
+taught the four gaps the reading had measured, each probe run to fail
+first — "two of" by the points under the word, "eleven", "one" unfused
+from the weight after it, and the accent read (M-26) now built: a
+disjunctive mark on "one" or "two" closes the number — and the whole
+corpus diffed before the rule was kept, which found a homograph nothing
+in the store can split: "two of" and "the years of" are the same letters
+with the same vowels and the same tag, and only the neighbors decide.
+Then the nine cells — the work-count, the camp's purity, the theft and
+the gifts, the suspected wife, the nazirite, the blessing, the wagons,
+the dedication, the Voice — calling ten earlier engines (the census, the
+guilt-offering, the meal-offering, the priests' dues, the priesthood, the
+leper, the shekel, the offerings, the purity clocks, the leprosy
+verdicts), 274 of 274 on the first graded run, with the nazirite's term
+as a timer the engine sets, cancels at a defilement, and re-sets from
+the eighth day. Then the tape: the day Moses finished setting up the
+tabernacle stands a month BEFORE the census that opens the book, so 7:1
+is a retrograde marker, the twelve day-heads twelve more, and the
+princes' twelve offerings are not tape lines at all but twelve dues the
+7:11 command writes — "one prince per day" — every one already past
+when written, and checked against the text's own stamps day by day (the
+Sabbath among them, as the Talmud says it must be). The run tuple was
+predicted before the run and matched on the first tape run; the tape
+without Naso reproduced the previous sitting exactly. Two lessons for
+the machine: a daemon names every effect it can write LITERALLY, so an
+effect a cell returns that the daemon never named is a crash to read,
+not a silent write (it caught one at once — the firstborn's five
+shekels); and a checkpoint of an earlier sitting can move when a later
+portion closes its debts (Bamidbar's five spec/run pairs read eight once
+Naso's work-count closed three more) — the old checkpoint is scoped to
+its own verses, the new one counts the new closes. One divergence filed
+open on purpose: the Sifrei counts thirteen utterances "to Moses and to
+Aaron"; the ink has sixteen with the LORD speaking and nineteen with the
+bare phrase, and no census yields thirteen — the tradition's own counting
+problem, recorded, not repaired. Next: Beha'alotcha's compile (chapters
+8, 10-12), then Shelach's reading.
+
+THE COMPILE OF BEHA'ALOTCHA (sitting 3b, the same day) paid the last
+compile owed, so Numbers 1 through 12 is now read, frozen, compiled and
+on the tape. Three things stand out. The parser was taught the dual
+noun ("two days", "two cubits"), the numeral with a pronoun ("the two of
+them", "the three of you") and "and a half" — and the corpus-wide diff
+run after them showed two sevens nobody had taught: "the OATH of the
+LORD" and "Beer-sheba" had been counted as seven since the parser's
+first day. A measurement over the whole Torah found the class — one
+consonantal stem carrying seven, sated, plenty, oath, week, seventh and
+two place-names, told apart by a dot on the shin, a vowel under the
+second letter, or the word before — and every seat was typed to fail,
+then read right; Joseph's "seven years of great PLENTY" no longer reads
+as two sevens. Second, the shelf itself dates this portion: a page of
+Taanit lays the days end to end — the twentieth of Iyar, three days'
+journey, a month of flesh, seven days at Hazeroth, the spies sent on
+the twenty-ninth of Sivan — so the tape took three reading-placed
+markers from that page and ran the ink's three durations as timers
+between them. Two of the three fired exactly on the shelf's days; the
+month fired two days late, because the tradition counts a span
+inclusively and the machine does not — the same slip the page itself
+confesses when it finds "forty days minus one". That gap is filed open,
+not absorbed. Third, the halt while Miriam was shut out was first
+written as a block, and the engine could not close it: a block is a
+standing prohibition, written closed from the start; a halt the text
+ends is a wait owed, a debit the journey pays. The run then matched its
+prediction to the slot, the tape without this portion reproduced the
+previous sitting exactly, and the sweep stands at forty-five runners.
+Next: Shelach's reading, chapters 13:1-15:31.
+
+THE FOURTH SITTING, SHELACH (Numbers 13:1-15:31, 2026-09-10, on Brian's
+"Go" after the rereads; 15:32-41 frozen at the tent and skipped), read
+the spies, the decree and the libation laws in one pass — three
+ledgers, 121 sources, thirty claims, three units frozen, the corpus
+refolded exactly as predicted (190 units, standing 1959, the hash
+unmoved). It taught the walk four more things. THE SHELF CAN BE SILENT
+ON WHOLE CHAPTERS AND THE READING FORM HOLDS: the Sifrei on Numbers has
+no row on chapters 13 or 14 at all, asserted on every head of the
+export, so the spies and the decree were read on the translation alone
+— the ink's census and the translation's moves carried the chapters
+(the spy-verb twelve times and it is the ark's verb of 10:33; the
+spies' order a fourth order for the twelve; Joshua's new name at eight
+seats before the verse that gives it and the old name again at the
+Torah's last song; "they went up, he came to Hebron" in one verse;
+"that night" dated by the shelf to the ninth of Av; the attributes
+abridged by pure deletion and the translation restoring a dropped
+noun from its own Exodus; "this evil congregation" the Mishnah's ten;
+Hormah named six chapters after its use). THE RETELLINGS ARE INK TOO:
+Deuteronomy 1 writes the twelve the chapter never counts, Deuteronomy
+2 subtracts the forty to thirty-eight, Joshua 14 gives Caleb's forty and
+eighty-five and Moses' oath to him that Numbers never wrote, Ezekiel 4
+runs "a day for a year, a day for a year" verbatim, Nehemiah 9 quotes
+the head they made — every one measured beside the verse it retells.
+THE FRACTION IS A NEW PARSER CLASS: a quarter, a third and a half of the
+hin are silent to the engine, and the quarter is spelled six ways across
+the Torah's libation seats; with it the unit noun "a tenth" and "the one
+lamb" return unread — owed to the compile with the table itself. And A
+RULE OF THE SHELF CAN BE MEASURED: R. Yishmael's "Scripture varied this
+coming" — "upon your coming" at one seat against "when you come" at
+every other — is a lexical fact the ink confirms, entered as a move
+exemplar; and the Sifrei's whole reading of the communal error as
+idolatry rests on three differences from Leviticus 4 that the ink shows
+(the congregation for the assembly, a burnt-offering for a sin-offering,
+a goat added), with the sin-offering spelled without its aleph once in
+the Bible at that goat. Next: Shelach's compile (4b), then chapter 16.
+
+THE COMPILE OF SHELACH (sitting 4b, 2026-09-10, on Brian's "Go" after
+the rereads) paid the fourth portion's compile on the same order. The
+exam docket first: 313 rows — every Talmud, Mishnah and Tosefta segment
+on the shelf that cites a verse of chapters 13 to 15, and the Mishnah
+chapters the reading ledgers named by address — each read whole and
+given one verdict (141 of them laws the machine must answer). Then the
+parser was taught the three classes the reading had measured, with
+thirty-four probes written to fail first: A FRACTION READS ONLY BEFORE A
+MEASURE NOUN — the quarter spelled six ways is always before "the hin",
+the tenth-fraction before "the ephah", the half before the hin or the
+shekel, while "half the night" on the exodus's own marker verse stays a
+word; A UNIT NOUN STANDING ALONE COUNTS ONE — "a tenth" of flour, "a
+cubit" told from the maidservant and from "her mother" by the vowel
+under the first letter, so "a cubit and a half" now reads one and a
+half; and THE DEFINITE ONE — "for the ONE lamb", "under the ONE board",
+ninety-six tokens the parser had never read — counts one and closes its
+number, joining only when a conjunction follows ("the one and twentieth
+day"). The corpus-wide diff read every one of a hundred and ten moved
+verses and found three more homographs the hand had never listed: "the
+third generation" of the Decalogue and the attributes read as thirty at
+five seats, Sheshai the giant read as "the sixth", and the verb "to
+tithe" read as ten — each told apart by its vowel points. The libation
+table is then COMPUTED from the ink at 15:4-10 — lamb, ram and bull in
+tenths and fractions of the hin — and asserted equal to the same rows at
+Exodus 29:40 and Numbers 28, with the Mishnah's logs, mixing rule and
+donation floors falling out of the arithmetic; the census set of the
+decree is called from the Bamidbar engine, the idolatry column and the
+karet class from the sin-offering engine; 172 of 172 cells on the first
+graded run. The tape took seventeen lines and one reading-placed marker:
+the spies return on the Ninth of Av by the shelf's baraita, and the
+forty-day timer set at the sending fires one day later — the same
+inclusive-count gap the page itself confesses with "forty days minus
+one", filed open with Abaye's full Tammuz as the other arm; the decree's
+thirty-eight years by Deuteronomy 2:14's own ink land on the ninth of Av
+of the fortieth year, eight days past the tape's last marker, and stay
+pending. Three lessons for the machine: a timer's setting is not a
+ledger write and its entry lands at the fire; a kind's name is checked
+against the registry before it is typed — the spies' report reused the
+Joseph story's kind, and the tape-minus-the-newest-runner test caught
+the one stray write; and an edge is a call expression, not an attribute.
+Every gate and the sweep green (run_cold_all 46/46 runners green, 5,299 graded cells (5,127 + Shelach's 172; cold_run_shelach.py 172/172)). Next: chapter 16, Korach's reading.
+
+THE FIFTH SITTING, KORACH (Numbers 16:1-18:32, 2026-09-10, on Brian's
+"Go" after the rereads), read the rebellion, the plague and the staffs,
+and the priests' and Levites' dues in one pass — three ledgers, 109
+sources, thirty claims, three units frozen, the corpus refolded exactly
+as predicted (193 units, standing 1989, the hash unmoved). It taught
+the walk five more things. THE SHELF IS SILENT AGAIN, AND STOPS
+MID-ROW: the Sifrei on Numbers has no piska on chapters 16 or 17
+(asserted on every head), so the rebellion ran on the translation and
+the ink's census alone; on chapter 18 its seven piskaot sit in order
+with no mistyped head — but the export's translator gives up inside
+piska 121 ("has not been able to render meaningfully what follows"),
+and three citations inside the rows point to the wrong verse. The row
+is read to its last rendered word, the gap named, the citations read to
+their verses. THE INK RUNS ON THE FIRST MURDER'S VERSES: "it was hot to
+Moses, VERY" is Cain's clause (Gen 4:5), "do not turn to their
+OFFERING" answers "to Cain and his offering He did not turn", and "the
+GROUND opens its mouth" is the ground that "opened its mouth to receive
+your brother's blood" — the chapter's two Cain echoes measured; Korach's
+father's name and the priests' "fresh oil" are one pointed word, and
+18:12 alone runs oil–wine–grain backward; Korach himself is not named
+among the swallowed, and Deuteronomy and the Psalm retell the earth
+with Dathan and Abiram alone. THE PRIESTHOOD'S TOKENS RETURN: the
+blossom on Aaron's staff is the frontplate's word, the almonds the
+menorah's cousins, the staff is kept "before the testimony for a
+keeping" in the manna jar's own formula, and Aaron's censer takes fire
+"from off the altar" in the Day of Atonement's phrase against Nadab's
+strange fire. THE TRANSLATION COUNTS AND RESOLVES: "we expire, we
+perish, all of us perish" becomes three deaths in Onkelos — the sword,
+the earth, the plague; "I am your portion" becomes "the gifts I have
+given you, they are your portion"; and at 18:16 the shekel is a sela
+and the gerah a ma'ah — the very rendering the Talmud computes through
+(Bekhorot 50a's "and we translate twenty ma'in"), now measured on the
+shelf's bytes at its Numbers seat. And THE PARSER'S NEW GAP SITS ON THE
+PORTION'S OWN NUMBER: "THE fifty and two hundred men" (16:35) reads two
+hundred, the article on the first numeral silencing it, while the same
+compound without the article reads 250 twice — the definite numeral at
+the head of a compound, ten candidate seats in the Bible, owed to the
+compile with a probe written to fail. The Sifrei's own rules about its
+rules went into the middot file — an a-fortiori overridden by a decree
+on the record, "from it" named as the free word that licenses the
+analogy, the a-fortiori protocol run with its converse and refutation,
+"you would learn from what is itself learned?" — and the covenant of
+salt stands at two seats in the Bible, Aaron's and David's, the two the
+Sifrei ranks. Next: Korach's compile (5b), then chapter 19.
+
+THE COMPILE OF KORACH (sitting 5b, 2026-09-10, on Brian's "Go" after
+the rereads) paid the fifth portion's compile on the same order. The
+exam docket first: 316 rows, ninety-four of them already read in
+earlier ledgers and credited with a quick look. Then the parser was
+taught the definite numeral at the head of a compound — "THE fifty and
+two hundred men" reads 250 — and the census of that class over the
+whole Bible found three readings that had been wrong all along: Exodus
+38:28's "THE thousand and seven THE hundreds" had read as seven and
+seventy-five instead of 1,775 (the same number the parser reads right
+three verses earlier), "the captains of THE thousands and of THE
+hundreds" had read as 2,100, and the previous sitting's own rule for
+"the one" had joined it to a following "and fifty" — "in the ONE
+curtain, and fifty loops" as fifty-one — which the cantillation
+settles: a joining mark on "the one" joins (the twenty-first day), a
+dividing mark closes (the loops). The whole-corpus diff moved exactly
+seven verses, all of them these. Then the runner: five cells — the
+rebellion, the plague and the staffs, the watch, the gifts, the tithe —
+calling ten earlier engines (the firstborn's redemption is Bamidbar's
+own cell, the stranger's death mode Bamidbar's own row, the ass the
+Passover engine's, the devotions the temurah engine's, the breast and
+thigh the tzav engine's, the terumah's floor the naso engine's, the
+hundred-and-one the holiness engine's, the exclusion by sin the
+inheritance engine's, the household's eaters the priesthood engine's,
+the peace offering's window the offerings engine's), 155 of 155 on the
+first graded run, and — for the first time in the walk — the tape's
+narrative prediction matched in every slot without a retype: twenty-
+five lines, thirty-seven writes, two one-day timers ("tomorrow", "on
+the morrow") firing the day after the running clock's day on a stretch
+that carries no date in the ink or on the shelf. Korach's own death
+stays an open row on the ledger: the earth's verse names "every person
+who belonged to Korach" and not Korach, the census's retelling adds
+him, and the Talmud argues both ways. The dependency gate's token
+census named six more engines the span touches and three "as the LORD
+spoke" pointers, each read and filed; the daemon gate taught the
+machine that it reads only one branch form. Every gate and the sweep
+green. Next: chapter 19, the heifer's reading.
+
+THE SIXTH SITTING, CHUKAT (Numbers 19:1-21:35, 2026-09-11, on Brian's
+"Go" after the rereads; the portion's last verse, 22:1, opens the next
+draft and is read with it), read the red heifer, Miriam's death and
+the waters of Meribah, Edom's refusal, Aaron's death on Mount Hor, the
+serpents, the well and the two kings in one pass — three ledgers, 105
+sources, thirty-four claims, three units frozen, the corpus refolded
+exactly as predicted (196 units, standing 2023, the hash unmoved). It
+taught the walk five more things. THE SHELF SPEAKS ON THE HEIFER AND
+IS SILENT ON THE ROAD: the Sifrei's eight piskaot sit in order on
+chapter 19 with no mistyped head, and no piska at all stands on
+chapters 20 through 24 — the third whole stretch of story read on the
+translation alone; and the export's English reverses the first frame's
+addressees ("to Aaron and to Moses") where its own Hebrew row has
+Moses first — a new class of defect, caught by checking the head
+against the Hebrew file. THE HEIFER IS WRITTEN IN OTHER RITES' WORDS,
+MEASURED: its burn-list is the sin-bull's list of Exodus 29 and
+Leviticus 4 and 16 with the blood added; its cedar, hyssop and scarlet
+are the leper's bundle in the leper's word order; "take hyssop and dip"
+are the Passover's two verbs, blood there and water here; its ashes are
+kept "for a keeping" in the manna jar's and Aaron's staff's word; "a
+human soul" is the blasphemer chapter's murder clause; and the yoke
+clause "upon which no yoke has come" has one other seat in the Bible —
+the Philistine cows that carried the ark home. ONE CONSONANTAL SKIN
+HOLDS FOUR WORDS: Miriam's name, the bitter waters of Marah and of the
+suspected wife, and "the rebels" Moses shouts nine verses after her
+burial — told apart only by the vowel points, and the Psalm reads the
+sin at the rock as that speech. THE PARSER FOUND ITS GAP ON THE
+PORTION'S OWN NUMBER AGAIN: "he struck the rock TWICE" is a dual with
+the same consonants as "seven TIMES", told by one vowel, and the machine
+read nothing; the ordinal day-words ("the third day", "the seventh day",
+"the first month", the itinerary's "fortieth year, fifth month, first
+day" for Aaron's death) are silent too — a class named and left for the
+compile's timers. And THE RETELLINGS DATE AND REPEAT THE TEXT: the
+itinerary gives Aaron's death its full date, Deuteronomy 2 dates the
+brook Zered as the end of the thirty-eight years, and Deuteronomy 3
+repeats the Og verses with the pronouns shifted and one word changed,
+while Jeremiah quotes the parable-tellers' song and Joshua inherits
+"until no survivor was left" as his refrain. The Sifrei ran the
+a-fortiori's full protocol three times in one chapter and refused "a
+derivation from a derivation"; twelve entries went into the middot
+file.
+
+SITTING 6b — THE COMPILE OF CHUKAT (2026-09-11; NUMBERS_WALK.md "Sitting 6b"
+design + as-built), across a compaction. The parser learned the dual
+"twice" (one vowel telling it from "seven times") and the itinerary's
+"in the fortieth year" read whole; the diff over the whole corpus found
+five seats of that year-form, three the design had not named. Six cells
+compiled the portion's law — the heifer's rite with the age, the hairs,
+the blemish and the tevul yom (one who immersed that day) as data; the
+corpse's uncleanness with the third and seventh day as TIMERS and the
+four failure states; Meribah; Edom, Mount Hor and the succession by the
+vestments engine's own cell; Arad, the vow and the serpent; the well and
+the two kings — 159 answer-sheet rows green on the first graded run,
+nine engines called live, and the two edges Naso and Beha'alotcha owed
+to chapter 19 paid by calls. The tape gained four markers in the
+fortieth year: the arrival at Zin on the new moon of Nisan (the shelf's
+placement), Mount Hor three months on, Aaron's death on the first of
+Av by the itinerary's own stamp, the departure thirty days later by the
+ink's own arithmetic — and on that walk two timers fired: Shelach's
+thirty-eight years (due the ninth of Av of the fortieth year) and the
+thirty days' weeping. The run tuple was predicted and matched on the
+first tape run; ten checkpoints as declared, Miriam's day the one
+recorded divergence (the shelf's tenth of Nisan against the tape's
+first, open). Honest catches on the record: an engine BLOCK can never be
+closed (the sentence at Meribah retyped as Heaven's entry with an end);
+the assert driver over the joined parts found six typed facts wrong at
+once — chapter and verse reversed in five calls, a missing prefixed form,
+a homograph inside a census, and the kit's order, measured at six seats
+to be the house's dipping order, not the takings'.
+
+SITTING 7 — BALAK (Numbers 22:1-25:19, 2026-09-11, on Brian's
+"Continue" after the #130 rereads; NUMBERS_WALK.md "Sitting 7"). The
+shelf was silent on the whole Balaam story — no piska on chapters 22,
+23 or 24, computed on every head — and spoke once on 25 (piska 131, five
+rows on Shittim, Peor, Phinehas and the covenants), so the seer's four
+chapters were read on the translation alone; the draft's own edges
+governed the span (22:1, Chukat's last verse, and 25:10-19, Pinchas's
+opening, read with their drafts). The ink's finds computed on every verse:
+the Akedah's morning at Balaam's (rose, saddled, two young men); the
+satan-word's only two Torah seats; God coming by night to three gentiles;
+Pharaoh's verbs in Balaam's story (refuses, made sport, I have sinned);
+the word-formula six times with its verb turning and its restrictors;
+the ass struck "three feet" and the blessings counted "three times" — the
+two festival-words; the three stands on the last three stations of the
+well's road, the third the god of the sin; the parable-tellers' word paid
+seven times over; Samuel's verse over Agag restating Balaam's; the
+serpent and the omen one pointed word; Judah's blessing quoted but two
+words; Jeremiah fusing the poets' fire with Balaam's corner; the tents
+made land and the star made a king in the translation; Kittim quoted in
+Daniel; Shittim the tabernacle's timber; Exodus 34's warning run clause
+by clause with its feminine "their gods" at both seats alone; the curse
+Balak asked for spelled into the alcove where the plague stopped; Aaron's
+incense-clause at Phinehas's spear; the sotah's jealousy-word in the
+priest's deed; Cozbi's father among Midian's five kings; the harass-word
+that is Haman's title. The parser read ten numbers right and missed the
+plene "three" (a new gap on the portion's own number) — and the
+plague-count cross-check found the calf's "about three thousand" read as
+three since the parser's first day. The shelf's export joined the
+half-verse 25:19 into its 26:1 (a new defect class) and mistyped two
+citations in one row; the Sifrei's adjacency rule was found disputed on
+the verse between R. Akiva and Rebbi, and its reading of "and he atoned"
+as a future recorded against the morphology. Four units frozen (200),
+forty claims seated and checked, the fold matching its prediction. Next:
+Balak's compile (7b), then chapter 26 (the second census).
+
+SITTING 7b — THE COMPILE OF BALAK (Numbers 22:1-25:19, 2026-09-11, on Brian's "Go" after the #131 rereads; World/step9/NUMBERS_WALK.md "Sitting 7b"
+design + as-built): the exam docket 199 rows by the union rule (67 laws; the Balaam sugya — the Talmud's case discussion — read whole,
+Sanhedrin 105a-106b, with the Jerusalem Talmud's two law-sections); the parser taught the plene "three" (22:32) and the construct "thousands
+of" (Exod 32:28's 3,000, read 3 since the first day) — 159/159 probes, the corpus diff moving the four probed verses alone; cold_run_balak.py
+105/105 on the first graded run, twelve engines called live (the spec of Exod 34:15-16 at its Peor run, the judges' 78,600, Aaron's incense
+clause at the spear, the priesthood's addressees with Phinehas the exception, the wood-gatherer's court for the hanging); law_balak the 54th
+daemon with THE ZEALOTS' RULE INSTALLED BY A DEED (rule_installed on the tent at the covenant's output — THE TENT's form at a second seat, no
+halt and no docket); the forty-one lines on the tape with no marker (the stretch undated), RUN matched on the second tape run after two
+readings — a close without a value takes the FIRST open entry of that effect (Korach's plague, left open by its daemon — a filed debt) and
+a status can never close (the act in progress is a BODY entry); THE REST 6b's exactly; CL1-CL9 all MATCH; every gate green; the sweep 49/49 at
+5,718 cells. Numbers 1:1-25:19 read, frozen, compiled and on the tape. Next: chapter 26 (the second census) — the reading, then its compile.
+
 ## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)
 Whatever any exam, audit, or derivation surfaces gets FILED, never fixed
 on the spot: logic/findings/FINDINGS_QUEUE.md (append-only). The owner

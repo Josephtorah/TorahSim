@@ -417,6 +417,20 @@ same family (the sound of the token re-heard as a second law), one
 step further from the ink; a third such consonant-fragment exemplar
 would register its own move.
 
+**Exemplar 9 (2026-09-10, THE NUMBERS WALK sitting 4b — the spies' word,
+the teacher named at three seats):** Num 13:31 כִּי חָזָק הוּא מִמֶּנּוּ ("for they
+are stronger than us") — R. Chanina bar Pappa (Sotah 35a:7; Arakhin 15a:12;
+Menachot 53b:9): "do not read 'than us' (מִמֶּנּוּ, from us) but 'than Him'
+(מִמֶּנּוּ, from Him)" — the same consonants and the same points, the
+pronoun's referent turned from the speakers to the Owner: the spies said
+that even the Master of the house cannot remove His vessels. The move's
+first exemplar where NOTHING in the ink moves — not a vowel, not a
+consonant — only the antecedent of a suffix that the form leaves open
+(the third-person singular and the first-person plural share מִמֶּנּוּ in
+Hebrew); Arakhin 15a:13 then bounds the reading's reach: the punishment
+(14:37) was for the evil report, not for this blasphemy. Recorded with
+the sitting's reading ledger (SH13A-08) and the exam docket's rows.
+
 ## M-17 — THE TENSION RESOLUTION (two tokens in one clause pull opposite ways; the law is the geometry satisfying both)
 Registered 2026-09-04 (the Lev 1-8 offering-engine consolidation,
 cold_run_offerings.py). Exemplar: Lev 1:5 writes both וזרקו ("and
@@ -849,6 +863,22 @@ as a TEIKU on "upon the wood" (Menachot 27a:2), the tradition's own
 open question carried unresolved. The compiled cell camp('al') returns
 both.
 
+A NUMBERS EXEMPLAR (2026-09-11, THE NUMBERS WALK sitting 7 — Balak's
+reading): THE SPEC Exodus 34:15-16 — "lest you make a covenant with the
+inhabitants of the land, and they whore after their gods and sacrifice to
+their gods, and one CALLS you and you EAT of his sacrifice, and you take
+of their DAUGHTERS for your sons, and their daughters whore after THEIR
+gods" — and THE RUN Numbers 25:1-2: "the people began to whore after the
+DAUGHTERS of Moab; and they CALLED the people to the sacrifices of THEIR
+gods, and the people ATE and bowed to their gods" — the spec's clauses
+run in order (the daughters, the whoring, the calling, the sacrifices,
+the eating), and the spec's rare word, the FEMININE plural "their gods"
+(the daughters' gods), stands in the Bible at the spec (34:16) and the
+run (25:2) alone (computed on every verse). The Sifrei's teacher on the
+pair is the juxtaposition reader of piska 131:1 (R. Akiva); the pair
+itself is the ink's — filed as the run-teaches-spec form's Numbers
+exemplar, the claim BK25A-01 labeled M-22 with this exemplar named.
+
 ## M-23 — THE SECOND SEAT'S DELTA (a law written twice is diffed seat against seat, and the second writing's additions, drops, moves, and doublings legislate)
 ⚠ A GENERALIZATION (the link review law, LR3, 2026-09-07): the diff of
 two seats is the machine's ENUMERATION; what a delta LEGISLATES is the
@@ -978,6 +1008,48 @@ case-born law), so the statute stands amended on the ledger with a reach.
 Machine form: cold_run_zelophehad.the_daughters('second_output', 'reach',
 'lapse'); the row tribe_transfer_reach (this_generation / all_generations —
 the second arm refused at 120b:2); the tent daemon's command_relayed branch.
+Exemplar (12), registered 2026-09-10 (THE NUMBERS WALK sitting 4, Shelach's
+reading) — THE VARIED FORMULA: the delta is not between two seats of one law
+but between ONE seat and a FORMULA's many. R. Yishmael (Sifrei Bamidbar
+110:1): every other "coming" in the Torah reads "and it shall be, when you
+come to the land" or "when the LORD brings you"; Num 15:18 alone reads "UPON
+your coming to the land" — so the challah devolved at once on entering, not
+after inheritance and settlement (the reading 107:1 gives every OTHER
+coming). MEASURED on the ink: "upon your coming to the land" is the form's
+one Torah seat against Exod 12:25, 13:5; Lev 23:10, 25:2; Deut 6:10, 11:29,
+17:14 (computed in shelach_ink.py). The move's shape: a formula's odd seat
+is read as a deliberate variation, and the variation legislates. Machine
+form owed to the compile (4b): the challah cell's trigger at entry, the
+libations' at settlement — two triggers from one verb's two forms.
+Exemplar (13), registered the same sitting — THE PURE DELETION: Num 14:18
+against Exod 34:6-7 — every token of the second seat stands in the first and
+IN ORDER (a subsequence test), eleven dropped ("God merciful and gracious",
+"and truth", "keeping mercy for thousands", "and sin", "the children's
+children" and the frame), none added; and THE TRANSLATION READS THE FIRST
+SEAT BACK INTO THE SECOND — Onkelos 14:18 restores "and SINS" from its own
+Exod 34:7 and "(and truth)" as a bracketed variant, but not the children's
+children (cut from both seats' bytes): the delta's reverse direction, the
+harmonization partial and measured (RESEARCH_LOG.md 2026-09-10).
+Exemplar (14), the same sitting — THE OFFER'S SECOND SEAT on narrative:
+"I will make you a great nation" at the calf (Exod 32:10, "you" plene, the
+clause ending at "great") and at the spies (Num 14:12, "you" defective,
+"and mightier than it" added), with Deut 9:14's retelling of the calf's a
+third form ("mighty and more numerous than they"): the diff by spelling and
+by added clause on an offer, not a law — the same instrument, the register
+changed.
+
+Exemplar (15) — THE NUMBERS WALK sitting 5 (2026-09-10, Korach's reading):
+"AND THERE SHALL BE NO MORE WRATH UPON THE CHILDREN OF ISRAEL" (Num 18:5)
+diffed against "AND THERE SHALL BE NO WRATH UPON THE CONGREGATION OF THE
+CHILDREN OF ISRAEL" (Num 1:53, the Levites' camp): the second seat ADDS
+one token, "more" (the adverb), and drops "the congregation of" —
+measured as a token delta on the DB's bytes. The teacher: Sifrei Bamidbar
+116:1 — "why 'no more'? for He had already vented His wrath (17:11)" —
+reads the added adverb as the record of the intervening event, and
+generalizes it to four seats (the flood's "no more", the goat-demons',
+18:22's "shall no more draw near" paid by 16:35). The delta's legislation
+is the teacher's; the enumeration is the machine's (logic/MIDDOT.md, the
+Sifrei's own case law on Korach, entry 8).
 
 ## M-24 — THE REPETITION TEST (a law's scope across eras is decided by whether the code writes it twice; the second writing is the edge)
 ⚠ A GENERALIZATION (the link review law, LR3, 2026-09-07): the rule is
@@ -1070,3 +1142,104 @@ article itself restricts to the superlative member. **Machine form:**
 cold_run_family.sinew('the_thigh_articled', 'article_as_distinguished',
 'right_thigh'). **Middah correspondence:** a restriction (miut) read
 off the definite article; the four seats the rule's own census.
+
+## M-26 — THE ACCENT READ (a number's parse is decided by the cantillation marks — the third layer of the ink above consonants and vowels — and the ink's own total proves the cut)
+Registered 2026-09-09 (THE NUMBERS WALK sitting 2 — Naso, the ledger
+script naso_ink.py; the parser's rule OWED to the compile sitting,
+COMPILE_DEBT's THEN NUMBERS box). The exemplar: Num 7:14 כַּף אַחַת
+עֲשָׂרָה זָהָב ("one pan, ten of gold") — read as consonants, "one ten"
+spells ELEVEN (as it does at 2 Kgs 9:29, "the eleventh year"); read by
+the accents, the "one" carries a tevir, a disjunctive, at all twelve
+pan-verses of the chapter (7:14, 20, 26 ... 80 — measured on the DB's
+own marks), while every "eleven" written one-and-ten in the Tanakh
+(Gen 32:23, Deut 1:2, Josh 15:51, 2 Kgs 9:29) joins its "one" to its
+"ten" by a conjunctive (a merkha, a munach, a qadma) or by the joining
+stroke; 7:13's "one" before "a hundred and thirty" carries a revia, a
+disjunctive, the same cut. AND THE TOTAL DECIDES: 7:86's "all the gold
+of the pans, a hundred and twenty" = 12 × 10 (12 × 11 would be 132) —
+the very total the Sifrei uses to decide the pans were gold weighed in
+silver shekels (Sifrei Bamidbar 49:1, 55:1) decides one-versus-eleven
+for the parser. Onkelos parses as the accents do ("one pan, a weight of
+ten selas, it of gold") and answers as the Sifrei does. The engine's
+parser read 11 and 131 at the sitting — the rule it owes: a disjunctive
+accent on "one" ends the number unless a conjunctive joins it to "ten".
+**What separates it:** from M-16 (the revocalization read — a teacher
+changes the vowels) and from sitting 1b's points-on-the-stem law (the
+vowels tell two consonantal homographs apart): here the ACCENTS decide
+a syntactic cut inside one reading, and the arithmetic of the ink is
+the proof. The accents are the front end's own parse — the units'
+binary trees are derived from these marks (THE_STEPS Step 1) — so the
+number parser had been ignoring its own front end; the move restores
+the third layer to the numeral reader. **Machine form (owed):**
+cold_run_sequence.ink_numbers reading the accent on אחד/אחת ("one")
+before עשר/עשרה ("ten"); census_probes rows for 7:13, 7:14 and the four
+true elevens; the proof the 7:86 checkpoint (12 × 10). **Middah
+correspondence:** none of the thirteen — the Masoretic layer as an
+instrument, the total as its witness.
+**Machine form BUILT (2026-09-10, THE NUMBERS WALK sitting 2b — the
+compile of Naso):** cold_run_sequence.py's INK block now carries the
+rule as typed — a "one" or "two" (אחד / אחת / שנים / שתים, with or
+without the vav) carrying a DISJUNCTIVE accent (any mark in the
+cantillation range less the eight conjunctives: munach, merkha,
+mahapakh, darga, qadma, telisha qetana, yerach ben yomo, merkha kefula)
+and no maqqef (the joining stroke), followed by a bare numeral, is emitted with a bar and the
+phrase closes after it; census_probes rows R5-R10 and O1-O3 ran to FAIL
+before the code and 34/34 after, the corpus-wide diff read (189 verses
+moved, every one a true reading: 7:13 [1, 130, 1, 70], 7:14 [1, 10], 7:3
+[6, 12, 2, 1], 7:72 [11]; Lev 23:17's "two, two tenths" unfused by the
+same bar), the stitcher's marker verification green on 147 markers. The
+sitting's finding beside it: the construct "two of" (שְׁנֵי / שְׁתֵּי,
+"two of") and "the years of" (שְׁנֵי, "the years of") are ONE
+consonantal and vocalic form with ONE tagger morphology — the points and
+the tags cannot split them; the parser decides by the neighbors (a
+preceding "the days of", a following "the life of / the famine / his
+sojourning / his sale / a hireling"): RESEARCH_LOG 2026-09-10. The 7:86
+checkpoint is CD3 on the tape (12 × 10 = 120 with 2,400 and 24/60/60/60).
+
+Exemplar (2), THE NUMBERS WALK 5b (2026-09-10 — the compile of Korach): THE
+DEFINITE ONE'S JOIN GATED BY THE ACCENT. 4b's rule (14) had joined הָאֶחָד ("the
+one") to a following "and TENS" — right at Exod 12:18 "the ONE and twentieth
+day", wrong at Exod 26:5 and 36:12 "in the ONE curtain, and FIFTY loops" (read
+[50, 51]) and at 25:32 and 37:18 "from its ONE side, and THREE branches" (read
+[6, 3, 4]). The marks decide: 12:18's "the one" carries a darga (a conjunctive)
+and joins; 26:5's and 36:12's carry a segolta, 25:32's and 37:18's a zaqef —
+disjunctives, the number closes and the definite one counts one. Rule (18) in
+the parser; the corpus-wide diff moved exactly those four (with the three seats
+of the compound class). The accent read's second exemplar after Naso's "one
+pan, ten of gold".
+
+## M-27 — THE SPEAKER SPLIT (adjacent clauses of one verse are assigned to two speakers by the teacher's recorded rule, and the attribution decides the sense)
+Registered 2026-09-10 (THE NUMBERS WALK sitting 3 — Beha'alotcha; the
+ledger num_11_complaint_quail_2026-09-10.md, the Sifrei on Numbers
+88:1; claim BH11A-03). The exemplar: Num 11:6-7 — "only to the manna
+are our eyes" and "and the manna was like coriander seed, and its look
+like the look of bdellium": read as one voice, the second clause is the
+complainers' own dismissal; the Sifrei splits the verses — "you think
+that he who said this said that? Israel said 'only to the manna are our
+eyes', and the Holy One pacified all the generations: come and see what
+they grumble about — the manna was like coriander seed, like crystal"
+— the narrator's answer set beside the people's words. The rule comes
+with SEVEN recorded parallels, each a verse whose clauses change
+speaker without a marker: Gen 38:25-26 (Judah's "she is right, it is by
+me" / Scripture's "he did not know her again"), Deut 25:18 (Israel
+"faint and weary" / Amalek "did not fear God"), Judg 5:28-31 (Sisera's
+mother / the wisest of her ladies / Deborah), 1 Sam 4:8 (the righteous
+"who will save us" / the wicked "He had only ten plagues"), Jer 26:16-24
+(the righteous elders / the wicked on Uriah), Ruth 3:13 (Boaz to his
+inclination "as the LORD lives" / to Ruth "lie until the morning"), and
+the manna itself. **What separates it:** from M-15 (the verb's voice,
+active or passive, widening a ban) and from M-13 (where an operand
+sits) — here the CUT IS BETWEEN SPEAKERS, not inside a clause's
+grammar: the ink writes no "and God said" between the clauses, and the
+teacher's rule supplies the change of voice, so the same words become a
+complaint or an answer by who is heard saying them. It is the tradition's
+own version of the frame census the derivation era runs (the "and He
+spoke" frames counted on the ink): a frame the ink omits, restored by
+the teacher. **Machine form:** a speaker column on the clause table for
+the exemplar verses, the split recorded as a parameter (one voice / two
+voices) with the Sifrei's attribution as the running setting — for the
+compile of Beha'alotcha and, at the parallels, the Genesis, Deuteronomy,
+Judges, Samuel, Jeremiah and Ruth seats when their engines are asked.
+**Middah correspondence:** none of the thirteen or the thirty-two names
+it as such; nearest E11 (a divided sequence) — the division here is of
+voices, not of order.

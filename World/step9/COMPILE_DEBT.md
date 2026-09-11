@@ -189,6 +189,23 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
 
 ## THE WRAP WORKLIST — D9-iii, the wraps by engine family (opened at sitting D9-ii, 2026-09-07;
 ## every compiled function that writes the world and has no daemon is OWED to one of these lines in
+## THE NUMBERS WALK sitting 3 — BEHA'ALOTCHA 8:1-26 + 10:1-12:16 READ AND FROZEN (2026-09-10, the owner: "Ok continue to next numbers span";
+## NUMBERS_WALK.md "Sitting 3"; chapter 9 frozen and skipped): four ledgers by four modules (Onkelos whole, 113 verses; the Sifrei's piskaot 59-63
+## and 72-106 BY POSITION, 51 rows — four heads placed: 59 headless, 62 "3:24", 80 "10:30" a third mistyped head, 102 "Ibid. 4"), 34 claims labeled
+## and machine-checked, 34 operators seated, four rituals (+ num_03 re-ritualed after NM03A-03's correction). OWED TO THE COMPILE SITTING (3b),
+## MEASURED HERE: (a) THE PARSER — the DUAL NOUN (יומים "two days" 11:19 → [1, 5, 10, 20]; אמתים "two cubits" 11:31 → [], the ark's seven seats and
+## Exod 25:10 the same silence — a class with Num 35:5's cubits), the suffixed numeral (שלשתכם "the three of you", 12:4 → []), the construct "two of"
+## twice more (10:2, 11:26 → [] — with Naso's four, six seats), 10:36's two plurals silent where the shelf reads 22,000; census_probes rows to FAIL
+## first; the corpus-wide diff read again; (b) THE FUNCTIONS — the lamps and the lampstand / trumpets 2×2 (Sifrei 61:1); the Levites' rite with THE
+## AGE PARAMETER (30 / 25 / 20 — Chronicles' own reason 1 Chr 23:26 as the run's re-setting); THE TRUMPETS (the offices, tekiah-teruah-tekiah with the
+## Rosh Hashanah identity, the Torah / scribes split, the north-west count, the blemished priest, the vessel's instance-scope, war and oppression,
+## the days of gladness, the kingship-verses); THE MARCH in the camp's order with the Levites' places; the seven clouds (7 / 13 / 4 / 2); one plague,
+## two timers; THE SEVENTY BY LOT (the 273's mechanism too — Sanhedrin 17a); MIRIAM (the leper cell CALLED — the quarantine verb; the kin rule; DAYO
+## as I1's cap; measure for measure); the exam docket by the union rule (the topic windows BY ADDRESS in NUMBERS_WALK.md); (c) THE TAPE — 10:11's
+## FORWARD marker (2, 2, 20); 10:33's three days; the month (11:20) and the seven days (12:14-15) as timers; the places against 33:15-18 and
+## Deut 9:22; the acts (the lamps, the Levites, the march, Hobab, the fire, the quail, the plague, Miriam); the edges beha → bamidbar / pesach / the
+## leper cell / the erection; the heifer OWED FORWARD (8:7's water — chapter 19); the princes' registry rows (1, 2, 7, 10). M-27 THE SPEAKER SPLIT
+## registered; NM03A-03 corrected in both strata (step F).
 ## World/step9/daemon_dispositions.yaml; `python3 World/step9/daemon_census.py --debt` prints the list;
 ## each wrap sitting: the daemon declared FIRST in the dispositions (its watches), the conditions read
 ## from the ink's case tokens, the scene replay with literal checkpoints under the honest-pairing guard,
@@ -463,7 +480,91 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
 ## 9:5 retrograde, CB1-CB8. OWED FROM IT: bamidbar -> minchah — Num 4:16 'the continual meal-offering' among Eleazar's charge: the meal-offering
 ## engine's CALL owed to the service's sitting (Naso's Levite work-count, Num 28's daily offering); Num 35:5's 'two thousand cubits' (the dual
 ## before a measure noun) waits for Masei's walk; the princes' and the Levite houses' registry rows with the frozen units' tokens at the fold.
+## THE NUMBERS WALK sitting 2 — NASO 4:21-7:89 READ AND FROZEN (2026-09-09, the owner: "Go"; NUMBERS_WALK.md "Sitting 2"): seven ledgers by four
+## modules (Onkelos whole, 176 verses; the Sifrei's piskaot 1-58 BY POSITION, 81 rows — two heads mistyped in the export, 19 for 5:28 and 34 for
+## 6:15, placed by position), 51 claims labeled and machine-checked, 51 operators seated, seven rituals, 183 frozen units, standing 1895, hash
+## unmoved. OWED TO THE COMPILE SITTING (2b), MEASURED HERE: (a) THE PARSER'S FOUR GAPS ON THE PORTION'S OWN NUMBERS — the construct "two of"
+## (שני / שתי: 7:3 [6, 10, 1] for [6, 12, 2, 1]; 7:7; 6:10), עשתי עשר ("eleven", 7:72 — seven Torah seats), "one" fused to the number after it
+## (7:13 [131, 1, 70]), and 7:14's "one, ten" read as eleven — M-26 THE ACCENT READ: a disjunctive (the tevir at all twelve pan-verses) on "one"
+## ends the number unless a conjunctive or the maqqef joins it to "ten" (every true "eleven" in the Tanakh so joined), the total 7:86 = 12 × 10
+## the proof; census_probes rows to FAIL first, the stitcher's marker verification, the corpus-wide diff read again; (b) THE FUNCTIONS — the
+## camp's send-out, the theft's restitution (Lev 5's guilt cell CALLED), the gifts (the thirty days CALLED from the firstborn cell), THE SUSPECTED
+## WIFE (the secreting's minimum a six-setting parameter; merit_suspends {0, 3, 9, 12}; the ephah as three se'ah; the husband's gate), THE NAZIRITE
+## (the thirty-day default; the count voided on the ninety-ninth not the hundredth or the first; tumah voids all, shaving thirty; the breast and
+## thigh CALLED from Lev 7's cell), THE BLESSING (the form table; the sealed-decree parameter), the wagons (2/4/4/8), THE DEDICATION (the twelve
+## days as timers in the camp's order, the totals as checkpoints, the four exceptions), THE VOICE (the thirteen exclusions counted against the
+## frame census); the docket by the union rule with the topic windows BY ADDRESS; (c) THE TAPE — 7:1 RETROGRADE to (2, 1, 1) after 1:1's forward
+## (2, 2, 1); the twelve days 1-12 Nisan; 5:4; 4:34-49; 7:2-9; the princes' registry rows (chapters 1, 2, 7); the edges naso -> bamidbar / pesach /
+## incense_shekel / minchah (the sotah's fistful, with 4:16's owed edge) / the guilt cell / the peace-offering cell / the erection's anointing.
+## THE NUMBERS WALK sitting 2b — NASO 4:21-7:89 COMPILED (2026-09-10, the owner: "Finish compiling before moving on. That was
+## misunderstanding" — the walk's form READ THEN COMPILE per portion; NUMBERS_WALK.md "Sitting 2b" design + as-built): (a) PAID — the
+## parser's four gaps: the construct "two of" by the points (with the years-of homograph decided by neighbors — RESEARCH_LOG 2026-09-10),
+## "eleven" (עשתי עשר), M-26 THE ACCENT READ built (a disjunctive on "one"/"two" closes the phrase), "one" unfused before the number after
+## it; census_probes 34/34 after running to FAIL; the corpus-wide diff read (189 verses, all true readings); the stitcher's 147 markers
+## verified (two old rows retyped: Gen 19:15, Lev 8:2); (b) PAID — the nine cells F1-F9 in cold_run_naso.py, 274/274 on the first graded
+## run, the ten callee engines CALLED (bamidbar, vayikra5, minchah, tzav, priesthood, metzora, incense_shekel, offerings, clocks, negaim),
+## the docket 638 rows by the union rule; the nazirite's term a TIMER (set, cancelled by a defilement, re-set from the eighth); (c) PAID —
+## THE TAPE: 7:1 RETROGRADE at (2, 1, 1), the twelve day-heads as retrograde markers, THE SCHEDULE as twelve RETRO-WRITES from the 7:11
+## command's daemon (CD6: the dues = the stamps), 5:1 READING-PLACED (R. Levi), the eleven lines; the RUN tuple predicted and matched on
+## the first tape run, THE REST exact, 10/10 checkpoints (CD8 the thirteen DIVERGE expected, OPEN); the 49th daemon law_naso; the edges
+## naso -> chatat VIA offerings, family / lev24 / pesach FALSE, the 5:4 pointer RUN_CITATION. STILL OWED: the heifer's water (chapter 19),
+## 4:16's continual meal-offering CALL (Num 28), CD8's thirteen. NEXT: sitting 3b — Beha'alotcha's compile (8, 10-12) before Shelach.
+## THE NUMBERS WALK 3b (2026-09-10) — BEHA'ALOTCHA 8:1-26 + 10:1-12:16 COMPILED (the owner: "Keep going" on the ruling READ THEN COMPILE;
+## NUMBERS_WALK.md "Sitting 3b" design + as-built): (a) PAID — the parser's dual noun, the suffixed numeral and the half (census_probes D1-D12 to
+## FAIL, then 63/63); FOUR PRE-EXISTING FALSE READINGS surfaced by the sitting's corpus-wide diff and fixed by the points on the stem and a neighbor
+## (the sin dot's 'sated / plenty', the qubuts' 'oath / week', the hiriq's 'seventh', Beer-sheba and Shibah by the neighbor — E1-E17); the
+## stitcher's 147 markers verified (two old rows retyped: Gen 28:10, 29:28); (b) PAID — the seven cells F1-F7 in cold_run_beha.py, 154/154 on
+## the first graded run, five engines CALLED (bamidbar, pesach, sanctuary_build, moadim, negaim), the docket 212 rows by the union rule; the
+## narrative tuple PREDICTED before the run and matched (three timers firing on the walks between the shelf's markers); (c) PAID — THE TAPE:
+## 10:11's forward marker (2, 2, 20), THREE READING-PLACED markers by Taanit 29a:2-5 (11:1 the twenty-third, 11:35 the twenty-second of Sivan,
+## 12:16 the twenty-ninth), the ink's three durations as TIMERS (the three days, the month, Miriam's seven), the halt as a BLOCK closed by 12:16,
+## the trumpets' debit OPEN (its run Num 31:6 — Matot); law_beha the 50th daemon. STILL OWED (the gate's OWED rows name this line): the heifer's
+## water (8:7 — chapter 19); THE LEVITES' BULLS' OFFERINGS — the chatat, the olah and its meal offering of 8:8-12 as offerings (the cell carries
+## the docket's order and eating rows; the chatat / minchah / offerings engines' CALLs owed to the sitting that compiles the rite's offerings);
+## 10:10's trumpets OVER THE OFFERINGS — the offerings engine's CALL owed (the cell answers Arakhin 11b and Zevachim 55a from the docket);
+## CE3's month timer against the Hazeroth marker (DIVERGE expected — the inclusive count) and CE8's descents (eleven against ten) OPEN.
 ## `python3 World/step9/daemon_census.py --debt` prints the wrap worklist; this file is the checklist.
+
+## THE NUMBERS WALK sitting 4 — SHELACH 13:1-15:31 READ AND FROZEN (2026-09-10, the owner: "Go"; NUMBERS_WALK.md "Sitting 4"): three ledgers
+## by four modules, 121 sources (the Sifrei SILENT on chapters 13-14 — computed on every head; 110's head placed at 15:17), 30 claims seated,
+## three rituals → 190 units, standing 1959, hash unmoved. PAID AT 4b (2026-09-10; NUMBERS_WALK.md "Sitting 4b" design + as-built — every item below paid unless the STILL OWED line names it): (a) PAID — THE PARSER — THE FRACTION (a quarter / a third / a half
+## of a unit — the quarter spelled six ways across Exod 29:40, Lev 23:13, Num 15:4-10, 28:5-14), THE UNIT NOUN as one ("a tenth", six seats),
+## THE DEFINITE ONE ("the one lamb / ox / ram", 15:5, 15:11 — nine seats for the lamb) — probes to FAIL, the corpus-wide diff read (census_probes.py F1-F34 + O4, 110/110; the diff 110 verses read, every one right — and THREE MORE HOMOGRAPHS found: the third generation read as thirty, Sheshai as the ordinal, the tithe verb as ten);
+## (b) PAID — THE FUNCTIONS — THE LIBATION TABLE (lamb 1/10 + 1/4 + 1/4 = Exod 29:40; ram 2/10 + 1/3 + 1/3; bull 3/10 + 1/2 + 1/2 = Num 28:14) as the
+## offerings / minchah engines' cells with the vow-and-gift census of which offerings take libations, the mixing rule, libations donated
+## (3-4-6 logs), the gentile's (Shekalim 7:6), the proselyte's (6-4-3 logs); THE COMMUNAL AND INDIVIDUAL IDOLATRY OFFERINGS as the chatat
+## engine's CALL (Lev 4's bull displaced by a bull olah + a goat chatat; the tribe table of Horayot 1:5; the high priest's she-goat; Keritot
+## 1:2's principle as the class rule); THE CHALLAH cell (entry trigger by the varied formula; the measures 1/24, 1/48 as data; the pointer
+## to Numbers 18's terumah OWED forward); THE STRANGER'S ONE LAW; KARET as cessation with the doubled infinitive's two settings (Akiva /
+## Yishmael); THE SPIES' NARRATIVE cells (the questionnaire, the report, the decree by measure for measure, Hormah); the docket by the
+## union rule (Menachot 9, 12-13; Zevachim 8, 14; Shekalim 7; Challah 1-4; Terumot 4; Horayot 1-2; Keritot 1; Shabbat 7; Sanhedrin 1, 10;
+## Taanit 4; Sotah 7; Kinnim) — cold_run_shelach.py F1-F7, 172/172 first graded run, four engines CALLED (bamidbar, chatat, offerings, minchah), the docket 313 rows; (c) PAID — THE TAPE — the sending at 12:16's marker (2, 3, 29) with THE FORTY-DAY TIMER; the return and THAT NIGHT
+## reading-placed by Taanit 29a:5 as the ninth of Av (2, 5, 9), the checkpoint against the timer (the inclusive count; Abaye's "Tammuz
+## full" as a calendar parameter); THE DECREE with THE FORTY-YEAR TIMER and Deut 2:14's thirty-eight as its checkpoint; the deaths on the
+## census' set (Bamidbar's engine CALLED); the ten put to death (HEAVEN) at 14:37; the survivors; Caleb's ENTITLEMENT paid at Joshua 14;
+## the turn back and the march reversed; the Hormah defeat; THE PROLEPTIC NAME (Hormah's registry row with 21:3 beside 14:45); the twelve
+## spies' and the three giants' registry rows; the glory at 14:10 as the tent's interrupt; the edges shelach → bamidbar, offerings /
+## minchah / chatat, the terumah (OWED to 18), sequence → shelach. THE TAPE AS BUILT: seventeen lines, ONE reading-placed marker (13:25 at (2, 5, 9)), the forty days FIRED at (2, 5, 10) — CF2 DIVERGE by one, the inclusive count, OPEN (the row tammuz_length carries Abaye's arm); the thirty-eight years PENDING, due (40, 5, 9) (CF3); RUN (1136, 49, 48, 0, 12, 1332, 22, 284, four pairs, 101) matched on the second run (the first read the shared kind's stray write); THE REST exact; 10/10.
+## STILL OWED (the gate's OWED rows name this line): THE TERUMAH — 15:20 'as the terumah of the threshing floor' points to Numbers 18:8-32 (Mishnah Terumot 4:3's 1/40, 1/50, 1/60 the data channel's; the challah cell's as_terumah ask carries the pointer) — Korach's compile; CF2's one day and CF6's ten trials OPEN; THE OTHER BARE MEASURE NOUNS named and left with their homographs (the omer / the sheaf, the ephah / 'where', the homer / the donkey and the clay, the bath / the daughter, the gerah / the cud, the shekel after a numeral only); the forty-year timer's fire waits for Chukat's markers (its due eight days past the daughters' marker); the turn back's run at Num 21:4 (the debit OPEN on Israel); the ten spies' portions (Bava Batra 118b) and Caleb's Hebron (Josh 14:13-14) the sixth book's readbacks.
+## THE NUMBERS WALK sitting 5 — KORACH 16:1-18:32 READ AND FROZEN (2026-09-10, the owner: "Go"; NUMBERS_WALK.md "Sitting 5"): three ledgers
+## by five modules, 109 sources (the Sifrei SILENT on chapters 16-17 — computed on every head; seven piskaot on 18 in order, none mistyped; the
+## export's translator STOPS inside 121), 30 claims seated, three rituals → 193 units, standing 1989, hash unmoved. PAID AT 5b (2026-09-10; NUMBERS_WALK.md "Sitting 5b" design + as-built — every item below paid unless the STILL OWED line names it: the parser's rules (17), (17b), (17c), (18) with 130/130 probes and the corpus diff's seven verses read; cold_run_korach.py F1-F5, 155/155 first graded run, ten engines CALLED, the docket 316 rows; the tape's twenty-five lines, two morrow timers, law_korach the 52nd, the RUN tuple predicted and matched first run, THE REST exact, CK1-CK9 as designed; 15:20's pointer PAID by shelach -> korach CALL): (a) THE
+## PARSER — THE DEFINITE NUMERAL AT THE HEAD OF A COMPOUND ("THE fifty and two hundred", 16:35 → 200; ten candidate seats, one in the Torah) — a probe
+## to FAIL, the corpus-wide diff read; (b) THE FUNCTIONS — THE STRANGER'S LAW (17:5's "not of Aaron's seed"; 18:4 the warning, 18:7 the punishment at
+## four seats; the death-mode fork Heaven / strangulation a parameter); THE PRIESTS' AND LEVITES' WATCH (18:1-7, "both they and you"); THE TWENTY-FOUR
+## GIFTS as data (18:9's four lists; 18:12's five border terms; 5:8's theft; the betrothed daughter — the decree over the a-fortiori); THE FIRSTBORN'S
+## REDEMPTION (the shekel engine's CALL — five shekels, twenty gerah, from a month = 3:15's threshold; the ass with a sheep; the money's class; the clean
+## firstborn's one application and two days and a night — the offerings engine); THE DEVOTIONS' DEFAULT (Lev 27's CALL; default_owner the four-way
+## DISPUTE); THE TITHE ENGINE (the Levites' tithe as a wage conditioned on service; THE TITHE OF THE TITHE = 1/100; kind for kind; the thresholds —
+## evened, skimmed, dripped — and one-in-a-hundred as data; the best; what remains common; in every place; the covenant of salt); 15:20'S TERUMAH
+## POINTER PAID at 18:27 (the challah cell's as_terumah ask → the terumah cell; Mishnah Terumot 4:3's 1/40, 1/50, 1/60 data); THE EXCLUSION TABLE FROM
+## 26:53 (the inheritance engine's callee); the docket by the union rule (Bekhorot 1, 4, 8; Zevachim 5; Terumot 1, 2, 4; Ma'aserot 1; Ma'aser Sheni 5;
+## Challah; Arakhin 8; Ketubot 5; Yoma 2; Sanhedrin 9, 10; Middot 1, 5; Avot 4, 5; Tamid); (c) THE TAPE — the 250 and the censers, the refusal, the test,
+## the earth's mouth (KORACH'S DEATH-MODE an OPEN row, 16:32 vs 26:10), the fire, the plague 14,700 stayed by Aaron's incense, the staffs' budding on
+## the morrow (a one-day timer), Aaron's staff KEPT beside the manna jar (an object row), the dues INSTALLED — law_korach the 52nd daemon, the "no
+## more" edges to 1:53 and 17:11; the entities korach, dathan, abiram, on, the 250; the edges korach → bamidbar, shekel, offerings / shelamim, lev27,
+## chatat / terumah, zelophehad, sequence → korach; NO DATE IN THE INK (undated on the shelf — recorded).
+## STILL OWED (5b): Korach's death-mode row OPEN (CK4 — 16:32 against 26:10; the retelling at Pinchas's census, its compile); the Levites' tithe to the priests by Ezra's penalty (Yevamot 86b — the Writings' run); the twenty-four gifts' border items at their own seats (the first shearing and the shoulder-cheeks-maw at Deut 18; the field of holding Lev 27 by CALL); the exclusion table's 26:53-55 clauses at Pinchas; Shelach's placeholder DATA row terumah_measure (its home now cold_run_korach.py) retired at a registry pass; CF2's one day, CF6's ten and the forty-year timer's fire at Chukat's markers; the bare measure nouns named and left at 4b.
 
 ## THE LINK REVIEW (ruled by the owner 2026-09-07 after W5: "The teacher say not to create a link of our own unless it
 ## came from a teacher... we need to compact then link review as you recommend. we need to keep up with these" — runs
@@ -808,3 +909,63 @@ the docket by topic (links UNION topic rows, enumerated by script),
 the ledger written first, the cold function with the guard from birth,
 effects discovered from the verbs, seats auto-filed, records. NUMBERS
 follows the last check mark.
+
+## OWED TO THE COMPILE — SITTING 6b (THE NUMBERS WALK sitting 6, CHUKAT 19:1-21:35 READ AND FROZEN 2026-09-11; NUMBERS_WALK.md "Sitting 6"): (a) THE PARSER — THE DUAL
+## "TWICE" (20:11, pa'amayim by the patach; the class's four Torah seats Gen 27:36, 41:32, 43:10, Num 20:11 — a probe to FAIL, the corpus diff read); THE DATE-ORDINALS (the
+## third / seventh day, the first month, 33:38's fortieth year / fifth month / first day) — teach them with probes or read them as the timers' data: decided at 6b's design;
+## (b) THE FUNCTIONS — THE HEIFER'S RITE as a state machine (the standing tent, the adjutant, work from the slaughter to the ashes, the blood returned; the age's three
+## settings, the hairs, the blemish that passed, the tvul yom as data); THE CORPSE-TUMAH ENGINE (contact, tent, field; the four sources and the two bones; the removes
+## table — Oholot 1:1-3 as data; the vessel census's six classes; the lid; THE THIRD AND SEVENTH DAY AS TIMERS with the four failure states; the punishment SPLIT —
+## uncleanness for the omission, karet for the entry; the sprinkler's water-measure); THE OWED EDGES naso → heifer (5:2) and beha → heifer (8:7) PAID; the Midian war's
+## run (31:19-24) filed forward; THE MERIBAH SENTENCE (a HEAVEN entry on Moses and Aaron, closed at 20:28 and Deut 34); THE SUCCESSION (Exod 29:29-30 RUN — the
+## priesthood engine's CALL; Deut 10:6 Moserah a DIVERGE); EDOM'S REFUSAL (a block; Deut 2's purchase a DISPUTE); THE VOW AND THE CHEREM (21:2-3; Hormah's naming closes
+## CF9's proleptic row); THE SERPENT (a HEAVEN entry; the copper serpent an object ending at 2 Kgs 18:4); THE CONQUEST (the land east of the Jordan a status); the docket
+## by the union rule (Parah, Oholot, Kelim 1-2, 9-10, Mikvaot 1-2, Keritot 1, Shevuot 1-2, Eduyot 1, 6, Rosh Hashanah 3:8, Avot 5:6, Taanit 9a, Moed Katan 28a, Chullin
+## 60b, Berakhot 54a-b, Nedarim 55a, Bava Batra 14b, Seder Olam 9-10); (c) THE TAPE — Miriam's death in the fortieth year's first month (33:38's year; the shelf's tenth
+## of Nisan the reading arm), AARON'S DEATH (40, 5, 1) TEXT-CONSTRAINED by 33:38, the thirty days a TIMER, THE THIRTY-EIGHT-YEAR TIMER (CF3, due (40, 5, 9)) FIRING on the
+## walk to the Zered (21:12 — Deut 2:14's end), 14:25's turn-back debit RUN at 21:4, the entities (miriam, aaron, eleazar, edom, arad, sihon, og, the copper serpent, the
+## well), the six frames, the DIVERGE on the shelf's thirty-eight silent years against the ink's frames; the edges chukat → naso, beha, leper, yoma, chatat, tzav,
+## offerings, pesach, sotah, priesthood, shelach, korach, bamidbar, sequence → chukat; the retellings as run citations.
+## PAID (6b, 2026-09-11; NUMBERS_WALK.md "Sitting 6b" design + as-built): the whole box — (a) the dual "twice" and the year-construct's ordinal taught (census_probes 149/149; the diff's
+## eight moved seats read — five seats of the year-construct in the Tanakh, three the design had not named); (b) cold_run_chukat.py 159/159 first graded run, six cells, nine engines CALLED
+## (metzora, chatat, vayikra5, yoma, vestments, priesthood, temurah, sanctions, clocks), law_chukat the 53rd daemon (one timer, six closes); THE OWED EDGES naso -> chukat (5:2) and
+## beha -> chukat (8:7) PAID by live calls; the sentence a HEAVEN entry (retyped from block — a block cannot close), Edom's refusals, the cherem (the ban), the serpent, the conquest
+## as designed; the box's other edges (lev24, tzav, offerings, pesach, sotah, shelach, korach, bamidbar) not demanded by the token census — three homographs FALSE (the yoke's "came up",
+## Meribah's "strove", the serpent's "bit"); (c) THE TAPE — four markers in the fortieth year, the thirty days' TIMER firing at (40, 6, 1), CF3's thirty-eight years FIRING at (40, 5, 9)
+## on the walk from Aaron's death, 14:25's turn-back CLOSED at 21:4, the seven entities, RUN (1198, 52, 52, 0, 12, 1412, 24, 295, four pairs, 110) predicted and matched first tape run,
+## CM1-CM10 (CM5 Miriam's nine days DIVERGE, OPEN). STILL OWED (6b): Moses' bar OPEN to Deut 34; the heifer's debit OPEN forever (Parah 3:5); Moserah (Deut 10:6); the Midian war's run
+## of the schedule (31:19-24 — Matot); the parable-tellers' word at Balaam's seats (Balak); the duplicate Miriam registry rows (a registry pass); the Meribah seats beyond the Torah. The sweep 48/48 at 5,613.
+
+## OWED TO THE COMPILE — SITTING 7b (THE NUMBERS WALK sitting 7, BALAK 22:1-25:19 READ AND FROZEN 2026-09-11; NUMBERS_WALK.md "Sitting 7"): (a) THE PARSER — THE
+## PLENE "THREE" (22:32 shalosh with the vav; Deut 16:16, 19:2; forty-one seats in the Bible — a probe to FAIL, the corpus-wide diff read) and THE APPROXIMATION
+## PREFIX ON A CONSTRUCT PLURAL (Exod 32:28 "about three thousand men" reads 3 — found by the plague-count cross-check; a probe to FAIL, the class measured over the
+## four books); (b) THE FUNCTIONS — the word-formula's restrictors (akh / efes) as a compiled class and the three curse-roots as data; the three stands on 21:19-20's
+## stations by CALL to chukat's well cell; the seven altars × three (Zevachim 116a's gentile burnt offering the exam's row); the blessing formula by CALL to the
+## Genesis engines (Gen 12:3, 27:29 — the reversal a data row); THE PEOR ENGINE: the sin as the RUN of Exod 34:15-16 (the family engine by CALL), the hanging by the
+## judges (Sanhedrin 35a — the courts engine; Jethro's 78,600 × 2 the exam's arithmetic), THE ZEALOUS-SMITE RULE INSTALLED BY A DEED (Mishnah Sanhedrin 9:6 —
+## rule_installed by an act, THE TENT's form at a second seat), Phinehas's priesthood by the deed (Zevachim 101b — the priesthood engine's status change), the
+## covenant of peace a HEAVEN entry in force forever, THE PLAGUE a heaven entry on the people CLOSED at 25:8 (24,000 a data row; Simeon's delta a checkpoint at the
+## second census), the Midian command (25:17) a DEBIT on Israel closed at 31:7 (Matot), Balaam's death at 31:8 closing the ass's sword-clause, the decree on gentile
+## wine DATED after Peor (Avodah Zarah 36b — the shelf's own data row); (c) THE TAPE — no date in the ink (the fortieth year continues; no text-constrained marker;
+## the plague undated; 25:19's "after the plague" the second census's marker at the next reading); the entities balak, balaam, the she-ass, moab, midian, phinehas,
+## zimri, cozbi, the plague; the three angers; the edges balak → chukat / pre_sinai / family / pesach / the courts / sotah / korach / erection / vestments /
+## priesthood / sanctions / holiness / moadim / bamidbar, sequence → balak; the retellings as run citations (Deut 4:3, 23:5-6, 34:6; Josh 13:22, 22:17, 24:9-10;
+## Judg 11:25; 1 Sam 15:29; 2 Sam 21:6-9, 23:1; Jer 48:45; Mic 6:5; Ps 106:28-30; Dan 11:30; Neh 13:2); the exam docket by the union rule (Sanhedrin 105a-106b whole;
+## Mishnah Sanhedrin 7:6, 9:6, 10:2; Sanhedrin 35a, 60b-64a, 81b-82b, 90a; Avot 5:6, 5:19; Berakhot 7a, 12b, 21b; Avodah Zarah 4a-b, 36b; Makkot 10b; Nazir 23b;
+## Sotah 47a; Horayot 10b; Niddah 31a; Bava Batra 14b-15a, 60a; Zevachim 101b, 116a; Bava Kamma 110b; Yoma 9a, 18a; Taanit 20a; Yevamot 4a; Yerushalmi Taanit 4:5,
+## Sanhedrin 10:2; Seder Olam 9-10). The two Chukat rows this reading PAID on the ink: the parable-tellers' word (21:27 → Balaam's seven) and 19:15's lid (→ 25:3).
+## PAID (7b, 2026-09-11; NUMBERS_WALK.md "Sitting 7b" design + as-built): the whole box — (a) the plene "three" and the construct "thousands of" taught
+## (census_probes 159/159 after four rows failed first; the corpus diff moved the four probed verses and nothing else — the gap at Exod 32:28 was the construct
+## plural אַלְפֵי "thousands of" absent from the units table, not the approximation prefix: Exod 12:37 read right all along); (b) cold_run_balak.py 105/105 first graded
+## run — the word-formula's six seats and its restrictors as a cell, the three stands on 21:19-20's stations, the seven altars × three and the forty-two, the
+## blessing formula by CALL to the primeval and mamre engines, Judah's lion by the family engine; THE PEOR ENGINE — the spec of Exod 34:15-16 by CALL to the
+## erection engine at its run, the hanging by the wood-gatherer's court and the judges' 78,600 × 2 by the exodus engine, THE ZEALOTS' RULE INSTALLED BY THE DEED
+## (rule_installed on the tent at 25:10-13, no halt and no docket — THE TENT's form at a second seat), Phinehas's priesthood by the deed (the priesthood engine's
+## addressees row the exception's frame), the covenant of peace a HEAVEN entry, THE PLAGUE a heaven entry on the people CLOSED at 25:8 by value (24,000 in the
+## note), the Midian command a DEBIT on Israel OPEN to 31:7; (c) law_balak the 54th daemon, the forty-one lines page_order at (40, 6, 1), no marker, RUN
+## (1239, 52, 52, 0, 12, 1465, 25, 302, the four pairs, 113) predicted and matched on the second tape run, THE REST 6b's exactly, CL1-CL9 MATCH.
+## STILL OWED FROM THIS SITTING: KORACH'S PLAGUE ENTRY OPEN ON THE TAPE — law_korach writes plague_struck on Israel at 17:8-15 and never closes it at 17:13 'and the
+## plague was stayed' (law_balak's first close without a value took it — the first-open rule; now closed by value): a close owed to law_korach's declaration (its
+## closes are three) — the Korach runner's next touch; the two court debits of 25:4-5 (hang the heads on Moses, slay the yoked on the court) OPEN forever — the ink
+## narrates no hanging; the block on Balaam never closed (22:12); 25:19's half-verse the second census's marker (the next reading); Simeon's 59,300 -> 22,200 the
+## checkpoint at 26:14 by CALL from the census's compile; Balaam's death (31:8) and the Midian command's run (31:2, 31:7) at Matot.

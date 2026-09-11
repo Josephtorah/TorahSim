@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ALL_UNITS.py — frozen only (num_04 frozen 2026-09-09; 176 frozen units)."""
+"""ALL_UNITS.py — frozen only (num_25 frozen 2026-09-11; 200 frozen units)."""
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
@@ -67334,6 +67334,8990 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[3]["cites"] == ['Onkelos Num 4:17', 'Onkelos Num 4:18', 'Onkelos Num 4:19', 'Onkelos Num 4:20']
     assert all('cut_not_off_the_remedy_the_swallowing' not in f for f in m.WORLD["facts"])
     assert 'al_takhritu' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_04_gershon_merari
+###############################################################################
+
+m = Machine("num_04_gershon_merari")
+
+# -------------------------- Num.4.21 · TREE_CLAIM --------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:21."
+m.step("Num.4.21")
+
+# -------------------------- Num.4.22 · ETNACHTA_SPLIT ----------------------
+# ‹נשא את ראש› (“lift/carry obj-marker head”)
+# ‹בני גרשון גם› (“son Gershon also”)
+# ‹הם … לבית אבתם› (“they … to-house father-them/their”)
+# ‹למשפחתם› (“to-family-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:22."
+m.step("Num.4.22")
+
+# -------------------------- Num.4.23 · ETNACHTA_SPLIT ----------------------
+# ‹מבן שלשים שנה› (“from-son thirty years”)
+# ‹ומעלה עד בן› (“and-upper-part-ward until son”)
+# ‹חמשים שנה תפקד› (“fifty years count/visit”)
+# ‹אותם … כל הבא› (“obj-marker-them/their … all the-come/bring”)
+# ‹לצבא צבא לעבד› (“to-mass host to-work/serve”)
+# ‹עבדה באהל מועד› (“service/work in-tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:23."
+m.step("Num.4.23")
+
+# -------------------------- Num.4.24 · ETNACHTA_SPLIT ----------------------
+# ‹זאת עבדת משפחת› (“this service/work family”)
+# ‹הגרשני … לעבד ולמשא› (“the-Gereshonite … to-work/serve and-to-burden”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:24."
+m.step("Num.4.24")
+
+# -------------------------- Num.4.25 · ETNACHTA_SPLIT ----------------------
+# ‹ונשאו את יריעת› (“and-lift/carry obj-marker hanging”)
+# ‹המשכן ואת אהל› (“the-tabernacle and-obj-marker tent”)
+# ‹מועד מכסהו ומכסה› (“seasons covering-him/its and-covering”)
+# ‹התחש אשר עליו› (“the-animal-with-fur which over-him/its”)
+# ‹… ואת מסך פתח› (“and-obj-marker cover opening”)
+# ‹אהל מועד› (“tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:25."
+m.step("Num.4.25")
+
+# -------------------------- Num.4.26 · ETNACHTA_SPLIT ----------------------
+# ‹ואת קלעי החצר› (“and-obj-marker sling the-yard”)
+# ‹ואת מסך פתח› (“and-obj-marker cover opening”)
+# ‹שער החצר אשר› (“gate the-yard which”)
+# ‹על המשכן ועל› (“over the-tabernacle and-over”)
+# ‹המזבח סב … ואת› (“the-altar revolve … and-obj-marker”)
+# ‹כל אשר יעשה› (“all which make”)
+# ‹להם ועבדו› (“to-them/their and-work/serve”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:26."
+m.step("Num.4.26")
+
+# -------------------------- Num.4.27 · ETNACHTA_SPLIT ----------------------
+# ‹על פי אהרן› (“over mouth Aaron”)
+# ‹ובניו תהיה כל› (“and-son-him/its be all”)
+# ‹עבדת בני הגרשני› (“service/work son the-Gereshonite”)
+# ‹לכל משאם ולכל› (“to-all burden-them/their and-to-all”)
+# ‹עבדתם … ופקדתם עלהם› (“service/work-them/their … and-count/visit over-
+# them/their”)
+# ‹במשמרת את כל› (“in-watch obj-marker all”)
+# ‹משאם› (“burden-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:27."
+m.step("Num.4.27")
+
+# -------------------------- Num.4.28 · ETNACHTA_SPLIT ----------------------
+# ‹זאת עבדת משפחת› (“this service/work family”)
+# ‹בני הגרשני באהל› (“son the-Gereshonite in-tent”)
+# ‹מועד … ומשמרתם ביד› (“seasons … and-watch-them/their in-hand”)
+# ‹איתמר בן אהרן› (“Ithamar son Aaron”)
+# ‹הכהן› (“the-priest”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:28."
+m.step("Num.4.28")
+# witness-tier presupposed read: the_two_sons_portfolios on
+# in_the_hand_of_ithamar — read, not installed
+m.witness_read("in_the_hand_of_ithamar", "the_two_sons_portfolios",
+                cites=["Onkelos Num 4:28", "Onkelos Num 4:29", "Onkelos Num 4:30", "Onkelos Num 4:31", "Onkelos Num 4:32", "Onkelos Num 4:33"])
+
+# -------------------------- Num.4.29 · ETNACHTA_SPLIT ----------------------
+# ‹בני מררי … למשפחתם› (“son Merari … to-family-them/their”)
+# ‹לבית אבתם תפקד› (“to-house father-them/their count/visit”)
+# ‹אתם› (“obj-marker-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:29."
+m.step("Num.4.29")
+
+# -------------------------- Num.4.30 · ETNACHTA_SPLIT ----------------------
+# ‹מבן שלשים שנה› (“from-son thirty years”)
+# ‹ומעלה ועד בן› (“and-upper-part-ward and-until son”)
+# ‹חמשים שנה תפקדם› (“fifty years count/visit-them/their”)
+# ‹… כל הבא לצבא› (“all the-come/bring to-host”)
+# ‹לעבד את עבדת› (“to-work/serve obj-marker service/work”)
+# ‹אהל מועד› (“tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:30."
+m.step("Num.4.30")
+
+# -------------------------- Num.4.31 · ETNACHTA_SPLIT ----------------------
+# ‹וזאת משמרת משאם› (“and-this watch burden-them/their”)
+# ‹לכל עבדתם באהל› (“to-all service/work-them/their in-tent”)
+# ‹מועד … קרשי המשכן› (“seasons … slab the-tabernacle”)
+# ‹ובריחיו ועמודיו ואדניו› (“and-bolt-him/its and-column-him/its and-basis-
+# him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:31."
+m.step("Num.4.31")
+
+# -------------------------- Num.4.32 · ETNACHTA_SPLIT ----------------------
+# ‹ועמודי החצר סביב› (“and-column the-yard circle”)
+# ‹ואדניהם ויתדתם ומיתריהם› (“and-basis-them/their and-peg-them/their and-
+# cord-them/their”)
+# ‹לכל כליהם ולכל› (“to-all vessel-them/their and-to-all”)
+# ‹עבדת … ובשמת תפקדו› (“service/work … and-in-name count/visit”)
+# ‹את כלי משמרת› (“obj-marker vessel watch”)
+# ‹משאם› (“burden-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:32."
+m.step("Num.4.32")
+
+# -------------------------- Num.4.33 · ETNACHTA_SPLIT ----------------------
+# ‹זאת עבדת משפחת› (“this service/work family”)
+# ‹בני מררי לכל› (“son Merari to-all”)
+# ‹עבדתם באהל מועד› (“service/work-them/their in-tent seasons”)
+# ‹… ביד איתמר בן› (“in-hand Ithamar son”)
+# ‹אהרן הכהן› (“Aaron the-priest”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:33."
+m.step("Num.4.33")
+
+# -------------------------- Num.4.34 · ETNACHTA_SPLIT ----------------------
+# ‹ויפקד משה ואהרן› (“and-count/visit Moses and-Aaron”)
+# ‹ונשיאי העדה את› (“and-prince the-congregation obj-marker”)
+# ‹בני הקהתי … למשפחתם› (“son the-Kohathite … to-family-them/their”)
+# ‹ולבית אבתם› (“and-to-house father-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:34."
+m.step("Num.4.34")
+# witness-tier presupposed read: the_four_work_counts_and_their_sum on
+# the_princes_counted_with_moses — read, not installed
+m.witness_read("the_princes_counted_with_moses", "the_four_work_counts_and_their_sum",
+                cites=["Onkelos Num 4:34", "Onkelos Num 4:35", "Onkelos Num 4:36", "Onkelos Num 4:37", "Onkelos Num 4:38", "Onkelos Num 4:39", "Onkelos Num 4:40", "Onkelos Num 4:41", "Onkelos Num 4:42", "Onkelos Num 4:43", "Onkelos Num 4:44", "Onkelos Num 4:45", "Onkelos Num 4:46", "Onkelos Num 4:47", "Onkelos Num 4:48", "Onkelos Num 4:49"])
+
+# -------------------------- Num.4.35 · ETNACHTA_SPLIT ----------------------
+# ‹מבן שלשים שנה› (“from-son thirty years”)
+# ‹ומעלה ועד בן› (“and-upper-part-ward and-until son”)
+# ‹חמשים שנה … כל› (“fifty years … all”)
+# ‹הבא לצבא לעבדה› (“the-come/bring to-host to-service/work”)
+# ‹באהל מועד› (“in-tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:35."
+m.step("Num.4.35")
+
+# -------------------------- Num.4.36 · ETNACHTA_SPLIT ----------------------
+# ‹ויהיו פקדיהם למשפחתם› (“and-be count/visit-them/their to-family-
+# them/their”)
+# ‹… אלפים שבע מאות› (“thousand seven hundred”)
+# ‹וחמשים› (“and-fifty”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:36."
+m.step("Num.4.36")
+
+# -------------------------- Num.4.37 · ETNACHTA_SPLIT ----------------------
+# ‹אלה פקודי משפחת› (“these count/visit family”)
+# ‹הקהתי כל העבד› (“the-Kohathite all the-work/serve”)
+# ‹באהל מועד … אשר› (“in-tent seasons … which”)
+# ‹פקד משה ואהרן› (“count/visit Moses and-Aaron”)
+# ‹על פי יהוה› (“over mouth YHWH”)
+# ‹ביד משה› (“in-hand Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:37."
+m.step("Num.4.37")
+# witness-tier presupposed read: the_closing_formulas_one_variant on
+# by_the_mouth_of_the_lord — read, not installed
+m.witness_read("by_the_mouth_of_the_lord", "the_closing_formulas_one_variant",
+                cites=["Onkelos Num 4:37", "Onkelos Num 4:38", "Onkelos Num 4:39", "Onkelos Num 4:40", "Onkelos Num 4:41", "Onkelos Num 4:42", "Onkelos Num 4:43", "Onkelos Num 4:44", "Onkelos Num 4:45", "Onkelos Num 4:46", "Onkelos Num 4:47", "Onkelos Num 4:48", "Onkelos Num 4:49"])
+
+# -------------------------- Num.4.38 · ETNACHTA_SPLIT ----------------------
+# ‹ופקודי בני גרשון› (“and-count/visit son Gershon”)
+# ‹… למשפחותם ולבית אבתם› (“to-family-them/their and-to-house father-
+# them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:38."
+m.step("Num.4.38")
+
+# -------------------------- Num.4.39 · ETNACHTA_SPLIT ----------------------
+# ‹מבן שלשים שנה› (“from-son thirty years”)
+# ‹ומעלה ועד בן› (“and-upper-part-ward and-until son”)
+# ‹חמשים שנה … כל› (“fifty years … all”)
+# ‹הבא לצבא לעבדה› (“the-come/bring to-host to-service/work”)
+# ‹באהל מועד› (“in-tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:39."
+m.step("Num.4.39")
+
+# -------------------------- Num.4.40 · ETNACHTA_SPLIT ----------------------
+# ‹ויהיו פקדיהם למשפחתם› (“and-be count/visit-them/their to-family-
+# them/their”)
+# ‹לבית אבתם … אלפים› (“to-house father-them/their … thousand”)
+# ‹ושש מאות ושלשים› (“and-six hundred and-thirty”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:40."
+m.step("Num.4.40")
+
+# -------------------------- Num.4.41 · ETNACHTA_SPLIT ----------------------
+# ‹אלה פקודי משפחת› (“these count/visit family”)
+# ‹בני גרשון כל› (“son Gershon all”)
+# ‹העבד באהל מועד› (“the-work/serve in-tent seasons”)
+# ‹… אשר פקד משה› (“which count/visit Moses”)
+# ‹ואהרן על פי› (“and-Aaron over mouth”)
+# ‹יהוה› (“YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:41."
+m.step("Num.4.41")
+
+# -------------------------- Num.4.42 · ETNACHTA_SPLIT ----------------------
+# ‹ופקודי משפחת בני› (“and-count/visit family son”)
+# ‹מררי … למשפחתם לבית› (“Merari … to-family-them/their to-house”)
+# ‹אבתם› (“father-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:42."
+m.step("Num.4.42")
+
+# -------------------------- Num.4.43 · ETNACHTA_SPLIT ----------------------
+# ‹מבן שלשים שנה› (“from-son thirty years”)
+# ‹ומעלה ועד בן› (“and-upper-part-ward and-until son”)
+# ‹חמשים שנה … כל› (“fifty years … all”)
+# ‹הבא לצבא לעבדה› (“the-come/bring to-host to-service/work”)
+# ‹באהל מועד› (“in-tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:43."
+m.step("Num.4.43")
+
+# -------------------------- Num.4.44 · ETNACHTA_SPLIT ----------------------
+# ‹ויהיו פקדיהם למשפחתם› (“and-be count/visit-them/their to-family-
+# them/their”)
+# ‹… שלשת אלפים ומאתים› (“three thousand and-hundred”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:44."
+m.step("Num.4.44")
+
+# -------------------------- Num.4.45 · ETNACHTA_SPLIT ----------------------
+# ‹אלה פקודי משפחת› (“these count/visit family”)
+# ‹בני מררי … אשר› (“son Merari … which”)
+# ‹פקד משה ואהרן› (“count/visit Moses and-Aaron”)
+# ‹על פי יהוה› (“over mouth YHWH”)
+# ‹ביד משה› (“in-hand Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:45."
+m.step("Num.4.45")
+
+# -------------------------- Num.4.46 · ETNACHTA_SPLIT ----------------------
+# ‹כל הפקדים אשר› (“all the-count/visit which”)
+# ‹פקד משה ואהרן› (“count/visit Moses and-Aaron”)
+# ‹ונשיאי ישראל את› (“and-prince Israel obj-marker”)
+# ‹הלוים … למשפחתם ולבית› (“the-Levite … to-family-them/their and-to-house”)
+# ‹אבתם› (“father-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:46."
+m.step("Num.4.46")
+# witness-tier presupposed read: the_princes_join_the_counters on
+# the_princes_of_israel — read, not installed
+m.witness_read("the_princes_of_israel", "the_princes_join_the_counters",
+                cites=["Onkelos Num 4:34", "Onkelos Num 4:35", "Onkelos Num 4:36", "Onkelos Num 4:37", "Onkelos Num 4:38", "Onkelos Num 4:39", "Onkelos Num 4:40", "Onkelos Num 4:41", "Onkelos Num 4:42", "Onkelos Num 4:43", "Onkelos Num 4:44", "Onkelos Num 4:45", "Onkelos Num 4:46"])
+
+# -------------------------- Num.4.47 · ETNACHTA_SPLIT ----------------------
+# ‹מבן שלשים שנה› (“from-son thirty years”)
+# ‹ומעלה ועד בן› (“and-upper-part-ward and-until son”)
+# ‹חמשים שנה … כל› (“fifty years … all”)
+# ‹הבא לעבד עבדת› (“the-come/bring to-work/serve service/work”)
+# ‹עבדה ועבדת משא› (“service/work and-service/work burden”)
+# ‹באהל מועד› (“in-tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:47."
+m.step("Num.4.47")
+# witness-tier presupposed read: the_service_of_service on
+# the_service_of_service — read, not installed
+m.witness_read("the_service_of_service", "the_service_of_service",
+                cites=["Onkelos Num 4:47"])
+
+# -------------------------- Num.4.48 · ETNACHTA_SPLIT ----------------------
+# ‹ויהיו פקדיהם … שמנת› (“and-be count/visit-them/their … number”)
+# ‹אלפים וחמש מאות› (“thousand and-five hundred”)
+# ‹ושמנים› (“and-eighty”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:48."
+m.step("Num.4.48")
+
+# -------------------------- Num.4.49 · ETNACHTA_SPLIT ----------------------
+# ‹על פי יהוה› (“over mouth YHWH”)
+# ‹פקד אותם ביד› (“count/visit obj-marker-them/their in-hand”)
+# ‹משה איש איש› (“Moses man man”)
+# ‹על עבדתו ועל› (“over service/work-him/its and-over”)
+# ‹משאו … ופקדיו אשר› (“burden-him/its … and-count/visit-him/its which”)
+# ‹צוה יהוה את› (“command YHWH obj-marker”)
+# ‹משה› (“Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 4:49."
+m.step("Num.4.49")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('in_the_hand_of_ithamar', 'the_two_sons_portfolios'), ('the_princes_counted_with_moses', 'the_four_work_counts_and_their_sum'), ('by_the_mouth_of_the_lord', 'the_closing_formulas_one_variant'), ('the_princes_of_israel', 'the_princes_join_the_counters'), ('the_service_of_service', 'the_service_of_service')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Num 4:28', 'Onkelos Num 4:29', 'Onkelos Num 4:30', 'Onkelos Num 4:31', 'Onkelos Num 4:32', 'Onkelos Num 4:33']
+    assert all('the_two_sons_portfolios' not in f for f in m.WORLD["facts"])
+    assert 'in_the_hand_of_ithamar' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Num 4:34', 'Onkelos Num 4:35', 'Onkelos Num 4:36', 'Onkelos Num 4:37', 'Onkelos Num 4:38', 'Onkelos Num 4:39', 'Onkelos Num 4:40', 'Onkelos Num 4:41', 'Onkelos Num 4:42', 'Onkelos Num 4:43', 'Onkelos Num 4:44', 'Onkelos Num 4:45', 'Onkelos Num 4:46', 'Onkelos Num 4:47', 'Onkelos Num 4:48', 'Onkelos Num 4:49']
+    assert all('the_four_work_counts_and_their_sum' not in f for f in m.WORLD["facts"])
+    assert 'the_princes_counted_with_moses' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Num 4:37', 'Onkelos Num 4:38', 'Onkelos Num 4:39', 'Onkelos Num 4:40', 'Onkelos Num 4:41', 'Onkelos Num 4:42', 'Onkelos Num 4:43', 'Onkelos Num 4:44', 'Onkelos Num 4:45', 'Onkelos Num 4:46', 'Onkelos Num 4:47', 'Onkelos Num 4:48', 'Onkelos Num 4:49']
+    assert all('the_closing_formulas_one_variant' not in f for f in m.WORLD["facts"])
+    assert 'by_the_mouth_of_the_lord' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Num 4:34', 'Onkelos Num 4:35', 'Onkelos Num 4:36', 'Onkelos Num 4:37', 'Onkelos Num 4:38', 'Onkelos Num 4:39', 'Onkelos Num 4:40', 'Onkelos Num 4:41', 'Onkelos Num 4:42', 'Onkelos Num 4:43', 'Onkelos Num 4:44', 'Onkelos Num 4:45', 'Onkelos Num 4:46']
+    assert all('the_princes_join_the_counters' not in f for f in m.WORLD["facts"])
+    assert 'the_princes_of_israel' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Num 4:47']
+    assert all('the_service_of_service' not in f for f in m.WORLD["facts"])
+    assert 'the_service_of_service' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_05_camp_pure_theft
+###############################################################################
+
+m = Machine("num_05_camp_pure_theft")
+
+# -------------------------- Num.5.1 · TREE_CLAIM ---------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:1."
+m.step("Num.5.1")
+
+# -------------------------- Num.5.2 · ETNACHTA_SPLIT -----------------------
+# ‹צו את בני› (“command obj-marker son”)
+# ‹ישראל וישלחו מן› (“Israel and-send from”)
+# ‹המחנה כל צרוע› (“the-camp all scourge”)
+# ‹וכל זב … וכל› (“and-all flow-freely … and-all”)
+# ‹טמא לנפש› (“foul-in-a-religious-sense to-living-being”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:2."
+m.step("Num.5.2")
+# witness-tier presupposed read: three_camp_words_three_camps on
+# send_out_of_the_camp — read, not installed
+m.witness_read("send_out_of_the_camp", "three_camp_words_three_camps",
+                cites=["Sifrei Bamidbar 1:3", "Sifrei Bamidbar 1:4", "Sifrei Bamidbar 1:7", "Onkelos Num 5:2", "Onkelos Num 5:3"])
+
+# -------------------------- Num.5.3 · ETNACHTA_SPLIT -----------------------
+# ‹מזכר עד נקבה› (“from-male until female”)
+# ‹תשלחו אל מחוץ› (“send to from-outside”)
+# ‹למחנה תשלחום … ולא› (“to-camp send-them/their … and-not”)
+# ‹יטמאו את מחניהם› (“be-foul obj-marker camp-them/their”)
+# ‹אשר אני שכן› (“which reside”)
+# ‹בתוכם› (“in-midst-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:3."
+m.step("Num.5.3")
+# witness-tier presupposed read: the_warning_for_the_punishment on
+# they_shall_not_defile_their_camps — read, not installed
+m.witness_read("they_shall_not_defile_their_camps", "the_warning_for_the_punishment",
+                cites=["Sifrei Bamidbar 1:1", "Sifrei Bamidbar 1:2", "Onkelos Num 5:2", "Onkelos Num 5:3", "Onkelos Num 5:4"])
+# witness-tier presupposed read: my_shekhinah_in_their_midst on
+# in_whose_midst_i_dwell — read, not installed
+m.witness_read("in_whose_midst_i_dwell", "my_shekhinah_in_their_midst",
+                cites=["Onkelos Num 5:3", "Sifrei Bamidbar 1:7"])
+
+# -------------------------- Num.5.4 · ETNACHTA_SPLIT -----------------------
+# ‹ויעשו כן בני› (“and-make so son”)
+# ‹ישראל וישלחו אותם› (“Israel and-send obj-marker-them/their”)
+# ‹אל מחוץ למחנה› (“to from-outside to-camp”)
+# ‹… כאשר דבר יהוה› (“like-as/which speak YHWH”)
+# ‹אל משה כן› (“to Moses so”)
+# ‹עשו בני ישראל› (“make son Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:4."
+m.step("Num.5.4")
+
+# -------------------------- Num.5.5 · TREE_CLAIM ---------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:5."
+m.step("Num.5.5")
+
+# -------------------------- Num.5.6 · ETNACHTA_SPLIT -----------------------
+# ‹דבר אל בני› (“speak to son”)
+# ‹ישראל איש או› (“Israel man or”)
+# ‹אשה כי יעשו› (“woman that make”)
+# ‹מכל חטאת האדם› (“from-all sin-offering the-human”)
+# ‹למעל מעל ב› (“to-cover-up treachery ?”)
+# ‹… ואשמה הנפש ההוא› (“and-be-guilty the-living-being that”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:6."
+m.step("Num.5.6")
+# witness-tier presupposed read: trespass_is_lying_by_its_points on
+# to_commit_a_trespass — read, not installed
+m.witness_read("to_commit_a_trespass", "trespass_is_lying_by_its_points",
+                cites=["Onkelos Num 5:6", "Sifrei Bamidbar 2:1"])
+
+# -------------------------- Num.5.7 · ETNACHTA_SPLIT -----------------------
+# ‹והתודו את חטאתם› (“and-physically obj-marker sin-offering-them/their”)
+# ‹אשר עשו והשיב› (“which make and-return”)
+# ‹את אשמו בראשו› (“obj-marker guilt-him/its in-head-him/its”)
+# ‹וחמישתו יסף עליו› (“and-fifth-him/its add over-him/its”)
+# ‹… ונתן לאשר אשם› (“and-set to-which be-guilty”)
+# ‹לו› (“to-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:7."
+m.step("Num.5.7")
+# witness-tier presupposed read: the_fifths_base_disputed on its_fifth —
+# read, not installed
+m.witness_read("its_fifth", "the_fifths_base_disputed",
+                cites=["Sifrei Bamidbar 3:1", "Onkelos Num 5:7"])
+
+# -------------------------- Num.5.8 · COND_ואם (“and-if”) ------------------
+# ‹ואם אין לאיש› (“and-if there-is-not to-man”)
+# ‹גאל להשיב האשם› (“be-the-next-of-kin to-return the-guilt”)
+# ‹אליו האשם המושב› (“to-him/its the-guilt the-return”)
+# ‹ליהוה לכהן … מלבד› (“to-YHWH to-priest … from-to-separation”)
+# ‹איל הכפרים אשר› (“ram the-expiation which”)
+# ‹יכפר בו עליו› (“atone in-him/its over-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:8."
+m.step("Num.5.8")
+# witness-tier presupposed read: the_rule_of_repetition_the_proselytes_theft
+# on no_redeemer — read, not installed
+m.witness_read("no_redeemer", "the_rule_of_repetition_the_proselytes_theft",
+                cites=["Sifrei Bamidbar 2:1", "Sifrei Bamidbar 4:1", "Sifrei Bamidbar 4:2", "Sifrei Bamidbar 4:3", "Sifrei Bamidbar 4:4", "Onkelos Num 5:7", "Onkelos Num 5:8"])
+
+# -------------------------- Num.5.9 · TREE_CLAIM ---------------------------
+# ‹וכל תרומה לכל› (“and-all present to-all”)
+# ‹קדשי בני ישראל› (“holiness son Israel”)
+# ‹אשר יקריבו לכהן› (“which bring-near to-priest”)
+# ‹… לו יהיה› (“to-him/its be”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:9."
+m.step("Num.5.9")
+# witness-tier presupposed read:
+# the_tithe_inserted_the_first_fruits_the_thirty_days on
+# every_heave_offering — read, not installed
+m.witness_read("every_heave_offering", "the_tithe_inserted_the_first_fruits_the_thirty_days",
+                cites=["Onkelos Num 5:9", "Onkelos Num 5:10", "Sifrei Bamidbar 5:1", "Sifrei Bamidbar 6:1", "Sifrei Bamidbar 6:2"])
+
+# -------------------------- Num.5.10 · ETNACHTA_SPLIT ----------------------
+# ‹ואיש את קדשיו› (“and-man obj-marker holiness-him/its”)
+# ‹לו יהיו … איש› (“to-him/its be … man”)
+# ‹אשר יתן לכהן› (“which set to-priest”)
+# ‹לו יהיה› (“to-him/its be”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:10."
+m.step("Num.5.10")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('send_out_of_the_camp', 'three_camp_words_three_camps'), ('they_shall_not_defile_their_camps', 'the_warning_for_the_punishment'), ('in_whose_midst_i_dwell', 'my_shekhinah_in_their_midst'), ('to_commit_a_trespass', 'trespass_is_lying_by_its_points'), ('its_fifth', 'the_fifths_base_disputed'), ('no_redeemer', 'the_rule_of_repetition_the_proselytes_theft'), ('every_heave_offering', 'the_tithe_inserted_the_first_fruits_the_thirty_days')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifrei Bamidbar 1:3', 'Sifrei Bamidbar 1:4', 'Sifrei Bamidbar 1:7', 'Onkelos Num 5:2', 'Onkelos Num 5:3']
+    assert all('three_camp_words_three_camps' not in f for f in m.WORLD["facts"])
+    assert 'send_out_of_the_camp' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifrei Bamidbar 1:1', 'Sifrei Bamidbar 1:2', 'Onkelos Num 5:2', 'Onkelos Num 5:3', 'Onkelos Num 5:4']
+    assert all('the_warning_for_the_punishment' not in f for f in m.WORLD["facts"])
+    assert 'they_shall_not_defile_their_camps' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Num 5:3', 'Sifrei Bamidbar 1:7']
+    assert all('my_shekhinah_in_their_midst' not in f for f in m.WORLD["facts"])
+    assert 'in_whose_midst_i_dwell' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Num 5:6', 'Sifrei Bamidbar 2:1']
+    assert all('trespass_is_lying_by_its_points' not in f for f in m.WORLD["facts"])
+    assert 'to_commit_a_trespass' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifrei Bamidbar 3:1', 'Onkelos Num 5:7']
+    assert all('the_fifths_base_disputed' not in f for f in m.WORLD["facts"])
+    assert 'its_fifth' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifrei Bamidbar 2:1', 'Sifrei Bamidbar 4:1', 'Sifrei Bamidbar 4:2', 'Sifrei Bamidbar 4:3', 'Sifrei Bamidbar 4:4', 'Onkelos Num 5:7', 'Onkelos Num 5:8']
+    assert all('the_rule_of_repetition_the_proselytes_theft' not in f for f in m.WORLD["facts"])
+    assert 'no_redeemer' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Num 5:9', 'Onkelos Num 5:10', 'Sifrei Bamidbar 5:1', 'Sifrei Bamidbar 6:1', 'Sifrei Bamidbar 6:2']
+    assert all('the_tithe_inserted_the_first_fruits_the_thirty_days' not in f for f in m.WORLD["facts"])
+    assert 'every_heave_offering' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_05_sotah
+###############################################################################
+
+m = Machine("num_05_sotah")
+
+# -------------------------- Num.5.11 · TREE_CLAIM --------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:11."
+m.step("Num.5.11")
+
+# -------------------------- Num.5.12 · ETNACHTA_SPLIT ----------------------
+# ‹דבר אל בני› (“speak to son”)
+# ‹ישראל ואמרת אלהם› (“Israel and-say to-them/their”)
+# ‹… איש איש כי› (“man man that”)
+# ‹תשטה אשתו ומעלה› (“deviate-from-duty woman-him/its and-cover-up”)
+# ‹בו מעל› (“in-him/its treachery”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:12."
+m.step("Num.5.12")
+# witness-tier presupposed read: the_sections_purpose_doubt_after_warning on
+# a_man_a_man — read, not installed
+m.witness_read("a_man_a_man", "the_sections_purpose_doubt_after_warning",
+                cites=["Sifrei Bamidbar 7:1", "Sifrei Bamidbar 7:3", "Sifrei Bamidbar 20:1", "Onkelos Num 5:12", "Onkelos Num 5:13", "Onkelos Num 5:14"])
+
+# -------------------------- Num.5.13 · ETNACHTA_SPLIT ----------------------
+# ‹ושכב איש אתה› (“and-lie-down man obj-marker-her/its”)
+# ‹שכבת זרע ונעלם› (“lying-down seed and-veil-from-sight”)
+# ‹מעיני אישה ונסתרה› (“from-eye man-her/its and-hide”)
+# ‹והיא נטמאה … ועד› (“and-he/it be-foul … and-concretely”)
+# ‹אין בה והוא› (“there-is-not in-her/its and-he/it”)
+# ‹לא נתפשה› (“not manipulate”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:13."
+m.step("Num.5.13")
+# witness-tier presupposed read: the_six_conditions_the_minimum_time on
+# and_a_man_lie_with_her — read, not installed
+m.witness_read("and_a_man_lie_with_her", "the_six_conditions_the_minimum_time",
+                cites=["Onkelos Num 5:13", "Sifrei Bamidbar 7:2", "Sifrei Bamidbar 7:3"])
+
+# -------------------------- Num.5.14 · ETNACHTA_SPLIT ----------------------
+# ‹ועבר עליו רוח› (“and-pass-over over-him/its spirit”)
+# ‹קנאה וקנא את› (“jealousy and-be-zealous obj-marker”)
+# ‹אשתו והוא נטמאה› (“woman-him/its and-he/it be-foul”)
+# ‹… או עבר עליו› (“or pass-over over-him/its”)
+# ‹רוח קנאה וקנא› (“spirit jealousy and-be-zealous”)
+# ‹את אשתו והיא› (“obj-marker woman-him/its and-he/it”)
+# ‹לא נטמאה› (“not be-foul”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:14."
+m.step("Num.5.14")
+
+# -------------------------- Num.5.15 · ETNACHTA_SPLIT ----------------------
+# ‹והביא האיש את› (“and-come/bring the-man obj-marker”)
+# ‹אשתו אל הכהן› (“woman-him/its to the-priest”)
+# ‹והביא את קרבנה› (“and-come/bring obj-marker offering-her/its”)
+# ‹עליה עשירת האיפה› (“over-her/its tenth the-ephah”)
+# ‹ק … לא יצק› (“? … not pour-out”)
+# ‹עליו שמן ולא› (“over-him/its oil and-not”)
+# ‹יתן עליו לבנה› (“set over-him/its frankincense”)
+# ‹כי מנחת קנאת› (“that grain-offering jealousy”)
+# ‹הוא מנחת זכרו› (“he/it grain-offering ?”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:15."
+m.step("Num.5.15")
+# witness-tier presupposed read: merit_suspends_the_middots_case_law on
+# a_reminder_of_iniquity — read, not installed
+m.witness_read("a_reminder_of_iniquity", "merit_suspends_the_middots_case_law",
+                cites=["Sifrei Bamidbar 8:1", "Onkelos Num 5:15"])
+# witness-tier presupposed read: the_ephah_converted_the_laver_named on
+# a_tenth_of_the_ephah — read, not installed
+m.witness_read("a_tenth_of_the_ephah", "the_ephah_converted_the_laver_named",
+                cites=["Onkelos Num 5:15", "Onkelos Num 5:16", "Onkelos Num 5:17", "Sifrei Bamidbar 10:1", "Sifrei Bamidbar 8:1"])
+
+# -------------------------- Num.5.16 · ETNACHTA_SPLIT ----------------------
+# ‹והקריב אתה הכהן› (“and-bring-near obj-marker-her/its the-priest”)
+# ‹… והעמדה לפני יהוה› (“and-stand-her/its to-face YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:16."
+m.step("Num.5.16")
+# witness-tier presupposed read:
+# stood_alone_the_hair_the_oath_in_any_language on
+# the_priest_shall_bring_her_near — read, not installed
+m.witness_read("the_priest_shall_bring_her_near", "stood_alone_the_hair_the_oath_in_any_language",
+                cites=["Sifrei Bamidbar 9:1", "Sifrei Bamidbar 11:1", "Sifrei Bamidbar 12:1", "Sifrei Bamidbar 13:1", "Onkelos Num 5:16", "Onkelos Num 5:17", "Onkelos Num 5:18", "Onkelos Num 5:19", "Onkelos Num 5:20"])
+
+# -------------------------- Num.5.17 · ETNACHTA_SPLIT ----------------------
+# ‹ולקח הכהן מים› (“and-take the-priest waters”)
+# ‹קדשים בכלי חרש› (“sacred in-vessel piece-of-pottery”)
+# ‹… ומן העפר אשר› (“and-from the-dust which”)
+# ‹יהיה בקרקע המשכן› (“be in-floor the-tabernacle”)
+# ‹יקח הכהן ונתן› (“take the-priest and-set”)
+# ‹אל המים› (“to the-waters”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:17."
+m.step("Num.5.17")
+
+# -------------------------- Num.5.18 · ETNACHTA_SPLIT ----------------------
+# ‹והעמיד הכהן את› (“and-stand the-priest obj-marker”)
+# ‹האשה לפני יהוה› (“the-woman to-face YHWH”)
+# ‹ופרע את ראש› (“and-loosen obj-marker head”)
+# ‹האשה ונתן על› (“the-woman and-set over”)
+# ‹כפיה … וביד הכהן› (“palm-of-hand-her/its … and-in-hand the-priest”)
+# ‹יהיו מי המרים› (“be waters the-bitter”)
+# ‹המאררים› (“the-execrate”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:18."
+m.step("Num.5.18")
+
+# -------------------------- Num.5.19 · ETNACHTA_SPLIT ----------------------
+# ‹והשביע אתה הכהן› (“and-swear obj-marker-her/its the-priest”)
+# ‹ואמר אל האשה› (“and-say to the-woman”)
+# ‹אם לא שכב› (“if not lie-down”)
+# ‹איש אתך ואם› (“man obj-marker-you/your and-if”)
+# ‹לא שטית ט› (“not deviate-from-duty ?”)
+# ‹… הנקי ממי המרים› (“be-clean from-waters the-bitter”)
+# ‹המאררים האלה› (“the-execrate the-these”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:19."
+m.step("Num.5.19")
+
+# -------------------------- Num.5.20 · COND_כי (“that”) --------------------
+# ‹ואת כי שטית› (“and-thou-and-thee that deviate-from-duty”)
+# ‹תחת אישך וכי› (“under man-you/your and-that”)
+# ‹נטמאת … ויתן איש› (“be-foul … and-set man”)
+# ‹בך את שכבתו› (“in-you/your obj-marker lying-with-him/its”)
+# ‹מבלעדי אישך› (“from-except man-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:20."
+m.step("Num.5.20")
+
+# -------------------------- Num.5.21 · ETNACHTA_SPLIT ----------------------
+# ‹והשביע הכהן את› (“and-swear the-priest obj-marker”)
+# ‹האשה בשבעת האלה› (“the-woman in-something-sworn the-imprecation”)
+# ‹ואמר הכהן לאשה› (“and-say the-priest to-woman”)
+# ‹יתן יהוה אותך› (“set YHWH obj-marker-you/your”)
+# ‹… בתת יהוה את› (“in-set YHWH obj-marker”)
+# ‹ירכך נפלת ואת› (“thigh-you/your fall and-obj-marker”)
+# ‹בטנך צבה› (“belly-you/your turgid”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:21."
+m.step("Num.5.21")
+# witness-tier presupposed read: oath_is_curse_amen_amen_the_rolled_oath on
+# the_oath_of_the_curse — read, not installed
+m.witness_read("the_oath_of_the_curse", "oath_is_curse_amen_amen_the_rolled_oath",
+                cites=["Sifrei Bamidbar 14:1", "Sifrei Bamidbar 15:1", "Sifrei Bamidbar 15:2", "Onkelos Num 5:21", "Onkelos Num 5:22"])
+
+# -------------------------- Num.5.22 · ETNACHTA_SPLIT ----------------------
+# ‹ובאו המים המאררים› (“and-come/bring the-waters the-execrate”)
+# ‹האלה במעיך לצבות› (“the-these in-used-only-in-plural-the-inte-you/your
+# to-amass”)
+# ‹בטן ולנפל ירך› (“belly and-to-fall thigh”)
+# ‹… ואמרה האשה אמן› (“and-say the-woman sure”)
+# ‹אמן› (“sure”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:22."
+m.step("Num.5.22")
+# witness-tier presupposed read:
+# thigh_first_belly_first_the_limb_where_the_sin_began on to_swell_belly —
+# read, not installed
+m.witness_read("to_swell_belly", "thigh_first_belly_first_the_limb_where_the_sin_began",
+                cites=["Sifrei Bamidbar 15:1", "Sifrei Bamidbar 18:1", "Onkelos Num 5:21", "Onkelos Num 5:22", "Onkelos Num 5:23", "Onkelos Num 5:24", "Onkelos Num 5:25", "Onkelos Num 5:26", "Onkelos Num 5:27"])
+
+# -------------------------- Num.5.23 · ETNACHTA_SPLIT ----------------------
+# ‹וכתב את האלת› (“and-grave obj-marker the-imprecation”)
+# ‹האלה הכהן בספר› (“the-these the-priest in-writing”)
+# ‹… ומחה אל מי› (“and-stroke to waters”)
+# ‹המרים› (“the-bitter”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:23."
+m.step("Num.5.23")
+# witness-tier presupposed read: the_scroll_erased on and_erase — read, not
+# installed
+m.witness_read("and_erase", "the_scroll_erased",
+                cites=["Sifrei Bamidbar 16:1", "Onkelos Num 5:23"])
+
+# -------------------------- Num.5.24 · ETNACHTA_SPLIT ----------------------
+# ‹והשקה את האשה› (“and-give-drink obj-marker the-woman”)
+# ‹את מי המרים› (“obj-marker waters the-bitter”)
+# ‹המאררים … ובאו בה› (“the-execrate … and-come/bring in-her/its”)
+# ‹המים המאררים למרים› (“the-waters the-execrate to-bitter”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:24."
+m.step("Num.5.24")
+# witness-tier presupposed read: the_order_and_the_three_requirements on
+# make_the_woman_drink — read, not installed
+m.witness_read("make_the_woman_drink", "the_order_and_the_three_requirements",
+                cites=["Sifrei Bamidbar 17:1", "Onkelos Num 5:24", "Onkelos Num 5:25", "Onkelos Num 5:26"])
+
+# -------------------------- Num.5.25 · ETNACHTA_SPLIT ----------------------
+# ‹ולקח הכהן מיד› (“and-take the-priest from-hand”)
+# ‹האשה את מנחת› (“the-woman obj-marker grain-offering”)
+# ‹הקנאת … והניף את› (“the-jealousy … and-quiver obj-marker”)
+# ‹המנחה לפני יהוה› (“the-grain-offering to-face YHWH”)
+# ‹והקריב אתה אל› (“and-bring-near obj-marker-her/its to”)
+# ‹המזבח› (“the-altar”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:25."
+m.step("Num.5.25")
+
+# -------------------------- Num.5.26 · ETNACHTA_SPLIT ----------------------
+# ‹וקמץ הכהן מן› (“and-grasp-with-the-hand the-priest from”)
+# ‹המנחה את אזכרתה› (“the-grain-offering obj-marker reminder-her/its”)
+# ‹והקטיר המזבחה … ואחר› (“and-smoke the-altar-ward … and-after”)
+# ‹ישקה את האשה› (“give-drink obj-marker the-woman”)
+# ‹את המים› (“obj-marker the-waters”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:26."
+m.step("Num.5.26")
+
+# -------------------------- Num.5.27 · ETNACHTA_SPLIT ----------------------
+# ‹והשקה את המים› (“and-give-drink-her/its obj-marker the-waters”)
+# ‹והיתה אם נטמאה› (“and-be if be-foul”)
+# ‹ותמעל מעל באישה› (“and-cover-up treachery in-man-her/its”)
+# ‹ובאו בה המים› (“and-come/bring in-her/its the-waters”)
+# ‹המ … והיתה האשה› (“? … and-be the-woman”)
+# ‹לאלה בקרב עמה› (“to-imprecation in-nearest-part people-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:27."
+m.step("Num.5.27")
+
+# -------------------------- Num.5.28 · COND_ואם (“and-if”) -----------------
+# ‹ואם לא נטמאה› (“and-if not be-foul”)
+# ‹האשה וטהרה הוא› (“the-woman and-pure he/it”)
+# ‹… ונקתה ונזרעה זרע› (“and-be-clean and-yield-seed seed”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:28."
+m.step("Num.5.28")
+# witness-tier presupposed read: who_defiled_her_sown_with_seed on
+# sown_with_seed — read, not installed
+m.witness_read("sown_with_seed", "who_defiled_her_sown_with_seed",
+                cites=["Sifrei Bamidbar 19:1", "Onkelos Num 5:28"])
+
+# -------------------------- Num.5.29 · ETNACHTA_SPLIT ----------------------
+# ‹זאת תורת הקנאת› (“this precept the-jealousy”)
+# ‹… אשר תשטה אשה› (“which deviate-from-duty woman”)
+# ‹תחת אישה ונטמאה› (“under man-her/its and-be-foul”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:29."
+m.step("Num.5.29")
+# witness-tier presupposed read:
+# this_is_the_law_obligatory_the_clean_husband on
+# this_is_the_law_of_jealousies — read, not installed
+m.witness_read("this_is_the_law_of_jealousies", "this_is_the_law_obligatory_the_clean_husband",
+                cites=["Sifrei Bamidbar 20:1", "Sifrei Bamidbar 21:1", "Onkelos Num 5:29", "Onkelos Num 5:30", "Onkelos Num 5:31"])
+
+# -------------------------- Num.5.30 · ETNACHTA_SPLIT ----------------------
+# ‹או איש אשר› (“or man which”)
+# ‹תעבר עליו רוח› (“pass-over over-him/its spirit”)
+# ‹קנאה וקנא את› (“jealousy and-be-zealous obj-marker”)
+# ‹אשתו … והעמיד את› (“woman-him/its … and-stand obj-marker”)
+# ‹האשה לפני יהוה› (“the-woman to-face YHWH”)
+# ‹ועשה לה הכהן› (“and-make to-her/its the-priest”)
+# ‹את כל התורה› (“obj-marker all the-precept”)
+# ‹הזאת› (“the-this”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:30."
+m.step("Num.5.30")
+
+# -------------------------- Num.5.31 · ETNACHTA_SPLIT ----------------------
+# ‹ונקה האיש מעון› (“and-be-clean the-man from-perversity”)
+# ‹… והאשה ההוא תשא› (“and-the-woman that lift/carry”)
+# ‹את עונה› (“obj-marker perversity-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 5:31."
+m.step("Num.5.31")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('a_man_a_man', 'the_sections_purpose_doubt_after_warning'), ('and_a_man_lie_with_her', 'the_six_conditions_the_minimum_time'), ('a_reminder_of_iniquity', 'merit_suspends_the_middots_case_law'), ('a_tenth_of_the_ephah', 'the_ephah_converted_the_laver_named'), ('the_priest_shall_bring_her_near', 'stood_alone_the_hair_the_oath_in_any_language'), ('the_oath_of_the_curse', 'oath_is_curse_amen_amen_the_rolled_oath'), ('to_swell_belly', 'thigh_first_belly_first_the_limb_where_the_sin_began'), ('and_erase', 'the_scroll_erased'), ('make_the_woman_drink', 'the_order_and_the_three_requirements'), ('sown_with_seed', 'who_defiled_her_sown_with_seed'), ('this_is_the_law_of_jealousies', 'this_is_the_law_obligatory_the_clean_husband')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifrei Bamidbar 7:1', 'Sifrei Bamidbar 7:3', 'Sifrei Bamidbar 20:1', 'Onkelos Num 5:12', 'Onkelos Num 5:13', 'Onkelos Num 5:14']
+    assert all('the_sections_purpose_doubt_after_warning' not in f for f in m.WORLD["facts"])
+    assert 'a_man_a_man' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Num 5:13', 'Sifrei Bamidbar 7:2', 'Sifrei Bamidbar 7:3']
+    assert all('the_six_conditions_the_minimum_time' not in f for f in m.WORLD["facts"])
+    assert 'and_a_man_lie_with_her' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifrei Bamidbar 8:1', 'Onkelos Num 5:15']
+    assert all('merit_suspends_the_middots_case_law' not in f for f in m.WORLD["facts"])
+    assert 'a_reminder_of_iniquity' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Num 5:15', 'Onkelos Num 5:16', 'Onkelos Num 5:17', 'Sifrei Bamidbar 10:1', 'Sifrei Bamidbar 8:1']
+    assert all('the_ephah_converted_the_laver_named' not in f for f in m.WORLD["facts"])
+    assert 'a_tenth_of_the_ephah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifrei Bamidbar 9:1', 'Sifrei Bamidbar 11:1', 'Sifrei Bamidbar 12:1', 'Sifrei Bamidbar 13:1', 'Onkelos Num 5:16', 'Onkelos Num 5:17', 'Onkelos Num 5:18', 'Onkelos Num 5:19', 'Onkelos Num 5:20']
+    assert all('stood_alone_the_hair_the_oath_in_any_language' not in f for f in m.WORLD["facts"])
+    assert 'the_priest_shall_bring_her_near' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifrei Bamidbar 14:1', 'Sifrei Bamidbar 15:1', 'Sifrei Bamidbar 15:2', 'Onkelos Num 5:21', 'Onkelos Num 5:22']
+    assert all('oath_is_curse_amen_amen_the_rolled_oath' not in f for f in m.WORLD["facts"])
+    assert 'the_oath_of_the_curse' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifrei Bamidbar 15:1', 'Sifrei Bamidbar 18:1', 'Onkelos Num 5:21', 'Onkelos Num 5:22', 'Onkelos Num 5:23', 'Onkelos Num 5:24', 'Onkelos Num 5:25', 'Onkelos Num 5:26', 'Onkelos Num 5:27']
+    assert all('thigh_first_belly_first_the_limb_where_the_sin_began' not in f for f in m.WORLD["facts"])
+    assert 'to_swell_belly' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifrei Bamidbar 16:1', 'Onkelos Num 5:23']
+    assert all('the_scroll_erased' not in f for f in m.WORLD["facts"])
+    assert 'and_erase' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifrei Bamidbar 17:1', 'Onkelos Num 5:24', 'Onkelos Num 5:25', 'Onkelos Num 5:26']
+    assert all('the_order_and_the_three_requirements' not in f for f in m.WORLD["facts"])
+    assert 'make_the_woman_drink' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifrei Bamidbar 19:1', 'Onkelos Num 5:28']
+    assert all('who_defiled_her_sown_with_seed' not in f for f in m.WORLD["facts"])
+    assert 'sown_with_seed' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Sifrei Bamidbar 20:1', 'Sifrei Bamidbar 21:1', 'Onkelos Num 5:29', 'Onkelos Num 5:30', 'Onkelos Num 5:31']
+    assert all('this_is_the_law_obligatory_the_clean_husband' not in f for f in m.WORLD["facts"])
+    assert 'this_is_the_law_of_jealousies' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_06_nazir
+###############################################################################
+
+m = Machine("num_06_nazir")
+
+# -------------------------- Num.6.1 · TREE_CLAIM ---------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:1."
+m.step("Num.6.1")
+
+# -------------------------- Num.6.2 · ETNACHTA_SPLIT -----------------------
+# ‹דבר אל בני› (“speak to son”)
+# ‹ישראל ואמרת אלהם› (“Israel and-say to-them/their”)
+# ‹… איש או אשה› (“man or woman”)
+# ‹כי יפלא לנדר› (“that perhaps-to-separate to-promise”)
+# ‹נדר נזיר להזיר› (“promise separate to-hold-aloof”)
+# ‹ליהוה› (“to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:2."
+m.step("Num.6.2")
+# witness-tier presupposed read: the_thirty_days_the_default on
+# if_he_declares_to_vow — read, not installed
+m.witness_read("if_he_declares_to_vow", "the_thirty_days_the_default",
+                cites=["Sifrei Bamidbar 22:1", "Sifrei Bamidbar 25:1", "Onkelos Num 6:2"])
+
+# -------------------------- Num.6.3 · ETNACHTA_SPLIT -----------------------
+# ‹מיין ושכר יזיר› (“from-wine and-intoxicant hold-aloof”)
+# ‹חמץ יין וחמץ› (“vinegar wine and-vinegar”)
+# ‹שכר לא ישתה› (“intoxicant not drink”)
+# ‹… וכל משרת ענבים› (“and-all maceration grape”)
+# ‹לא ישתה וענבים› (“not drink and-grape”)
+# ‹לחים ויבשים לא› (“fresh and-dry not”)
+# ‹יאכל› (“eat”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:3."
+m.step("Num.6.3")
+# witness-tier presupposed read:
+# wine_three_readings_the_taste_as_the_substance on
+# from_wine_and_strong_drink — read, not installed
+m.witness_read("from_wine_and_strong_drink", "wine_three_readings_the_taste_as_the_substance",
+                cites=["Sifrei Bamidbar 23:1", "Onkelos Num 6:3"])
+
+# -------------------------- Num.6.4 · ETNACHTA_SPLIT -----------------------
+# ‹כל ימי נזרו› (“all day something-set-apart-him/its”)
+# ‹… מכל אשר יעשה› (“from-all which make”)
+# ‹מגפן היין מחרצנים› (“from-vine the-wine from-sour-grape”)
+# ‹ועד זג לא› (“and-until skin-of-a-grape not”)
+# ‹יאכל› (“eat”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:4."
+m.step("Num.6.4")
+# witness-tier presupposed read: general_particular_combination on
+# from_kernels_to_skin — read, not installed
+m.witness_read("from_kernels_to_skin", "general_particular_combination",
+                cites=["Sifrei Bamidbar 24:1", "Onkelos Num 6:4"])
+
+# -------------------------- Num.6.5 · ETNACHTA_SPLIT -----------------------
+# ‹כל ימי נדר› (“all day promise”)
+# ‹נזרו תער לא› (“something-set-apart-him/its knife not”)
+# ‹יעבר על ראשו› (“pass-over over head-him/its”)
+# ‹… עד מלאת הימם› (“until fill the-day”)
+# ‹אשר יזיר ליהוה› (“which hold-aloof to-YHWH”)
+# ‹קדש יהיה גדל› (“sacred be be-large”)
+# ‹פרע שער ראשו› (“hair hair head-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:5."
+m.step("Num.6.5")
+# witness-tier presupposed read:
+# the_locks_by_the_identity_the_failed_a_fortiori on a_razor_shall_not_pass
+# — read, not installed
+m.witness_read("a_razor_shall_not_pass", "the_locks_by_the_identity_the_failed_a_fortiori",
+                cites=["Sifrei Bamidbar 25:1", "Onkelos Num 6:5"])
+
+# -------------------------- Num.6.6 · ETNACHTA_SPLIT -----------------------
+# ‹כל ימי הזירו› (“all day hold-aloof-him/its”)
+# ‹ליהוה … על נפש› (“to-YHWH … over living-being”)
+# ‹מת לא יבא› (“die not come/bring”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:6."
+m.step("Num.6.6")
+# witness-tier presupposed read: not_for_kin_yes_for_the_unburied_the_crown
+# on upon_a_dead_soul — read, not installed
+m.witness_read("upon_a_dead_soul", "not_for_kin_yes_for_the_unburied_the_crown",
+                cites=["Sifrei Bamidbar 26:1", "Sifrei Bamidbar 27:1", "Onkelos Num 6:6", "Onkelos Num 6:7", "Onkelos Num 6:8"])
+
+# -------------------------- Num.6.7 · ETNACHTA_SPLIT -----------------------
+# ‹לאביו ולאמו לאחיו› (“to-father-him/its and-to-mother-him/its to-brother-
+# him/its”)
+# ‹ולאחתו לא יטמא› (“and-to-sister-him/its not be-foul”)
+# ‹להם במתם … כי› (“to-them/their in-death-them/their … that”)
+# ‹נזר אלהיו על› (“something-set-apart God-him/its over”)
+# ‹ראשו› (“head-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:7."
+m.step("Num.6.7")
+
+# -------------------------- Num.6.8 · ETNACHTA_SPLIT -----------------------
+# ‹כל ימי נזרו› (“all day something-set-apart-him/its”)
+# ‹… קדש הוא ליהוה› (“sacred he/it to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:8."
+m.step("Num.6.8")
+
+# -------------------------- Num.6.9 · COND_וכי (“and-that”) ----------------
+# ‹וכי ימות מת› (“and-that die die”)
+# ‹עליו בפתע פתאם› (“over-him/its in-wink instantly”)
+# ‹וטמא ראש נזרו› (“and-be-foul head something-set-apart-him/its”)
+# ‹… וגלח ראשו ביום› (“and-be-bald head-him/its in-day”)
+# ‹טהרתו ביום השביעי› (“ceremonial-purification-him/its in-day the-seventh”)
+# ‹יגלחנו› (“be-bald-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:9."
+m.step("Num.6.9")
+# witness-tier presupposed read: the_defiled_nazirite_the_first_days_fall on
+# if_one_die_on_him — read, not installed
+m.witness_read("if_one_die_on_him", "the_defiled_nazirite_the_first_days_fall",
+                cites=["Sifrei Bamidbar 28:1", "Sifrei Bamidbar 28:2", "Sifrei Bamidbar 29:1", "Sifrei Bamidbar 29:2", "Sifrei Bamidbar 30:1", "Sifrei Bamidbar 31:1", "Sifrei Bamidbar 31:2", "Onkelos Num 6:9", "Onkelos Num 6:10", "Onkelos Num 6:11", "Onkelos Num 6:12"])
+
+# -------------------------- Num.6.10 · ETNACHTA_SPLIT ----------------------
+# ‹וביום השמיני יבא› (“and-in-day the-eight come/bring”)
+# ‹שתי תרים או› (“two ring-dove or”)
+# ‹שני בני יונה› (“two son dove”)
+# ‹… אל הכהן אל› (“to the-priest to”)
+# ‹פתח אהל מועד› (“opening tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:10."
+m.step("Num.6.10")
+
+# -------------------------- Num.6.11 · ETNACHTA_SPLIT ----------------------
+# ‹ועשה הכהן אחד› (“and-make the-priest one”)
+# ‹לחטאת ואחד לעלה› (“to-sin-offering and-one to-burnt-offering”)
+# ‹וכפר עליו מאשר› (“and-atone over-him/its from-who”)
+# ‹חטא על הנפש› (“sin over the-living-being”)
+# ‹… וקדש את ראשו› (“and-sanctify obj-marker head-him/its”)
+# ‹ביום ההוא› (“in-day that”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:11."
+m.step("Num.6.11")
+
+# -------------------------- Num.6.12 · ETNACHTA_SPLIT ----------------------
+# ‹והזיר ליהוה את› (“and-hold-aloof to-YHWH obj-marker”)
+# ‹ימי נזרו והביא› (“day something-set-apart-him/its and-come/bring”)
+# ‹כבש בן שנתו› (“ram son years-him/its”)
+# ‹לאשם … והימים הראשנים› (“to-guilt … and-the-day the-first”)
+# ‹יפלו כי טמא› (“fall that be-foul”)
+# ‹נזרו› (“something-set-apart-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:12."
+m.step("Num.6.12")
+# witness-tier presupposed read:
+# the_argument_goes_round_the_extra_nazirite_decides on
+# the_first_days_shall_fall — read, not installed
+m.witness_read("the_first_days_shall_fall", "the_argument_goes_round_the_extra_nazirite_decides",
+                cites=["Sifrei Bamidbar 31:3", "Sifrei Bamidbar 25:1", "Onkelos Num 6:20"])
+
+# -------------------------- Num.6.13 · ETNACHTA_SPLIT ----------------------
+# ‹וזאת תורת הנזיר› (“and-this precept the-separate”)
+# ‹… ביום מלאת ימי› (“in-day fill day”)
+# ‹נזרו יביא אתו› (“something-set-apart-him/its come/bring obj-marker-
+# him/its”)
+# ‹אל פתח אהל› (“to opening tent”)
+# ‹מועד› (“seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:13."
+m.step("Num.6.13")
+# witness-tier presupposed read: he_brings_himself_the_pot_where_he_cooks on
+# he_shall_bring_himself — read, not installed
+m.witness_read("he_shall_bring_himself", "he_brings_himself_the_pot_where_he_cooks",
+                cites=["Sifrei Bamidbar 32:1", "Sifrei Bamidbar 33:1", "Sifrei Bamidbar 35:1", "Sifrei Bamidbar 36:1", "Onkelos Num 6:13", "Onkelos Num 6:14", "Onkelos Num 6:15", "Onkelos Num 6:16", "Onkelos Num 6:17", "Onkelos Num 6:18", "Onkelos Num 6:19"])
+
+# -------------------------- Num.6.14 · ETNACHTA_SPLIT ----------------------
+# ‹והקריב את קרבנו› (“and-bring-near obj-marker offering-him/its”)
+# ‹ליהוה כבש בן› (“to-YHWH ram son”)
+# ‹שנתו תמים אחד› (“years-him/its entire one”)
+# ‹לעלה וכבשה אחת› (“to-burnt-offering and-ewe one”)
+# ‹בת … ואיל אחד› (“daughter … and-ram one”)
+# ‹תמים לשלמים› (“entire to-requital”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:14."
+m.step("Num.6.14")
+
+# -------------------------- Num.6.15 · ETNACHTA_SPLIT ----------------------
+# ‹וסל מצות סלת› (“and-willow-twig sweetness flour”)
+# ‹חלת בלולת בשמן› (“cake overflow in-oil”)
+# ‹ורקיקי מצות משחים› (“and-thin-cake sweetness rub-with-oil”)
+# ‹בשמן … ומנחתם ונסכיהם› (“in-oil … and-grain-offering-them/their and-
+# libation-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:15."
+m.step("Num.6.15")
+# witness-tier presupposed read:
+# the_eleventh_rule_stated_libations_for_the_vowed on
+# a_basket_of_unleavened_bread — read, not installed
+m.witness_read("a_basket_of_unleavened_bread", "the_eleventh_rule_stated_libations_for_the_vowed",
+                cites=["Sifrei Bamidbar 34:1", "Sifrei Bamidbar 37:1", "Onkelos Num 6:15", "Onkelos Num 6:16", "Onkelos Num 6:17", "Onkelos Num 6:18", "Onkelos Num 6:19", "Onkelos Num 6:20"])
+
+# -------------------------- Num.6.16 · ETNACHTA_SPLIT ----------------------
+# ‹והקריב הכהן לפני› (“and-bring-near the-priest to-face”)
+# ‹יהוה … ועשה את› (“YHWH … and-make obj-marker”)
+# ‹חטאתו ואת עלתו› (“sin-offering-him/its and-obj-marker burnt-offering-
+# him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:16."
+m.step("Num.6.16")
+
+# -------------------------- Num.6.17 · ETNACHTA_SPLIT ----------------------
+# ‹ואת האיל יעשה› (“and-obj-marker the-ram make”)
+# ‹זבח שלמים ליהוה› (“sacrifice requital to-YHWH”)
+# ‹על סל המצות› (“over willow-twig the-sweetness”)
+# ‹… ועשה הכהן את› (“and-make the-priest obj-marker”)
+# ‹מנחתו ואת נסכו› (“grain-offering-him/its and-obj-marker libation-
+# him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:17."
+m.step("Num.6.17")
+
+# -------------------------- Num.6.18 · ETNACHTA_SPLIT ----------------------
+# ‹וגלח הנזיר פתח› (“and-be-bald the-separate opening”)
+# ‹אהל מועד את› (“tent seasons obj-marker”)
+# ‹ראש נזרו … ולקח› (“head something-set-apart-him/its … and-take”)
+# ‹את שער ראש› (“obj-marker hair head”)
+# ‹נזרו ונתן על› (“something-set-apart-him/its and-set over”)
+# ‹האש אשר תחת› (“the-fire which under”)
+# ‹זבח השלמים› (“sacrifice the-requital”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:18."
+m.step("Num.6.18")
+
+# -------------------------- Num.6.19 · ETNACHTA_SPLIT ----------------------
+# ‹ולקח הכהן את› (“and-take the-priest obj-marker”)
+# ‹הזרע בשלה מן› (“the-arm boiled from”)
+# ‹האיל וחלת מצה› (“the-ram and-cake sweetness”)
+# ‹אחת מן הסל› (“one from the-willow-twig”)
+# ‹ורקיק מצה … ונתן› (“and-thin-cake sweetness … and-set”)
+# ‹על כפי הנזיר› (“over palm-of-hand the-separate”)
+# ‹אחר התגלחו את› (“after be-bald-him/its obj-marker”)
+# ‹נזרו› (“something-set-apart-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:19."
+m.step("Num.6.19")
+
+# -------------------------- Num.6.20 · ETNACHTA_SPLIT ----------------------
+# ‹והניף אותם הכהן› (“and-quiver obj-marker-them/their the-priest”)
+# ‹תנופה לפני יהוה› (“brandishing to-face YHWH”)
+# ‹קדש הוא לכהן› (“holiness he/it to-priest”)
+# ‹על חזה התנופה› (“over breast the-brandishing”)
+# ‹ו … ואחר ישתה› (“? … and-after drink”)
+# ‹הנזיר יין› (“the-separate wine”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:20."
+m.step("Num.6.20")
+
+# -------------------------- Num.6.21 · ETNACHTA_SPLIT ----------------------
+# ‹זאת תורת הנזיר› (“this precept the-separate”)
+# ‹אשר ידר קרבנו› (“which promise offering-him/its”)
+# ‹ליהוה על נזרו› (“to-YHWH over something-set-apart-him/its”)
+# ‹מלבד אשר תשיג› (“from-to-separation which reach”)
+# ‹ידו … כפי נדרו› (“hand-him/its … like-mouth promise-him/its”)
+# ‹אשר ידר כן› (“which promise so”)
+# ‹יעשה על תורת› (“make over precept”)
+# ‹נזרו› (“something-set-apart-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:21."
+m.step("Num.6.21")
+# witness-tier presupposed read:
+# the_third_this_is_the_law_the_leper_nazirite on what_his_hand_attains —
+# read, not installed
+m.witness_read("what_his_hand_attains", "the_third_this_is_the_law_the_leper_nazirite",
+                cites=["Sifrei Bamidbar 38:1", "Onkelos Num 6:21"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('if_he_declares_to_vow', 'the_thirty_days_the_default'), ('from_wine_and_strong_drink', 'wine_three_readings_the_taste_as_the_substance'), ('from_kernels_to_skin', 'general_particular_combination'), ('a_razor_shall_not_pass', 'the_locks_by_the_identity_the_failed_a_fortiori'), ('upon_a_dead_soul', 'not_for_kin_yes_for_the_unburied_the_crown'), ('if_one_die_on_him', 'the_defiled_nazirite_the_first_days_fall'), ('the_first_days_shall_fall', 'the_argument_goes_round_the_extra_nazirite_decides'), ('he_shall_bring_himself', 'he_brings_himself_the_pot_where_he_cooks'), ('a_basket_of_unleavened_bread', 'the_eleventh_rule_stated_libations_for_the_vowed'), ('what_his_hand_attains', 'the_third_this_is_the_law_the_leper_nazirite')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifrei Bamidbar 22:1', 'Sifrei Bamidbar 25:1', 'Onkelos Num 6:2']
+    assert all('the_thirty_days_the_default' not in f for f in m.WORLD["facts"])
+    assert 'if_he_declares_to_vow' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifrei Bamidbar 23:1', 'Onkelos Num 6:3']
+    assert all('wine_three_readings_the_taste_as_the_substance' not in f for f in m.WORLD["facts"])
+    assert 'from_wine_and_strong_drink' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifrei Bamidbar 24:1', 'Onkelos Num 6:4']
+    assert all('general_particular_combination' not in f for f in m.WORLD["facts"])
+    assert 'from_kernels_to_skin' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifrei Bamidbar 25:1', 'Onkelos Num 6:5']
+    assert all('the_locks_by_the_identity_the_failed_a_fortiori' not in f for f in m.WORLD["facts"])
+    assert 'a_razor_shall_not_pass' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifrei Bamidbar 26:1', 'Sifrei Bamidbar 27:1', 'Onkelos Num 6:6', 'Onkelos Num 6:7', 'Onkelos Num 6:8']
+    assert all('not_for_kin_yes_for_the_unburied_the_crown' not in f for f in m.WORLD["facts"])
+    assert 'upon_a_dead_soul' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifrei Bamidbar 28:1', 'Sifrei Bamidbar 28:2', 'Sifrei Bamidbar 29:1', 'Sifrei Bamidbar 29:2', 'Sifrei Bamidbar 30:1', 'Sifrei Bamidbar 31:1', 'Sifrei Bamidbar 31:2', 'Onkelos Num 6:9', 'Onkelos Num 6:10', 'Onkelos Num 6:11', 'Onkelos Num 6:12']
+    assert all('the_defiled_nazirite_the_first_days_fall' not in f for f in m.WORLD["facts"])
+    assert 'if_one_die_on_him' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifrei Bamidbar 31:3', 'Sifrei Bamidbar 25:1', 'Onkelos Num 6:20']
+    assert all('the_argument_goes_round_the_extra_nazirite_decides' not in f for f in m.WORLD["facts"])
+    assert 'the_first_days_shall_fall' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifrei Bamidbar 32:1', 'Sifrei Bamidbar 33:1', 'Sifrei Bamidbar 35:1', 'Sifrei Bamidbar 36:1', 'Onkelos Num 6:13', 'Onkelos Num 6:14', 'Onkelos Num 6:15', 'Onkelos Num 6:16', 'Onkelos Num 6:17', 'Onkelos Num 6:18', 'Onkelos Num 6:19']
+    assert all('he_brings_himself_the_pot_where_he_cooks' not in f for f in m.WORLD["facts"])
+    assert 'he_shall_bring_himself' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifrei Bamidbar 34:1', 'Sifrei Bamidbar 37:1', 'Onkelos Num 6:15', 'Onkelos Num 6:16', 'Onkelos Num 6:17', 'Onkelos Num 6:18', 'Onkelos Num 6:19', 'Onkelos Num 6:20']
+    assert all('the_eleventh_rule_stated_libations_for_the_vowed' not in f for f in m.WORLD["facts"])
+    assert 'a_basket_of_unleavened_bread' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifrei Bamidbar 38:1', 'Onkelos Num 6:21']
+    assert all('the_third_this_is_the_law_the_leper_nazirite' not in f for f in m.WORLD["facts"])
+    assert 'what_his_hand_attains' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_06_priest_blessing
+###############################################################################
+
+m = Machine("num_06_priest_blessing")
+
+# -------------------------- Num.6.22 · TREE_CLAIM --------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:22."
+m.step("Num.6.22")
+
+# -------------------------- Num.6.23 · ETNACHTA_SPLIT ----------------------
+# ‹דבר אל אהרן› (“speak to Aaron”)
+# ‹ואל בניו לאמר› (“and-to son-him/its to-say”)
+# ‹כה תברכו את› (“like-this bless obj-marker”)
+# ‹בני ישראל … אמור› (“son Israel … say”)
+# ‹להם› (“to-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:23."
+m.step("Num.6.23")
+# witness-tier presupposed read:
+# the_speech_to_the_priests_the_blessings_form on thus_shall_you_bless —
+# read, not installed
+m.witness_read("thus_shall_you_bless", "the_speech_to_the_priests_the_blessings_form",
+                cites=["Sifrei Bamidbar 39:1", "Onkelos Num 6:23"])
+
+# -------------------------- Num.6.24 · TREE_CLAIM --------------------------
+# ‹יברכך יהוה› (“bless-you/your YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 6:24."
+m.step("Num.6.24")
+# witness-tier presupposed read: the_blessings_form_counted on
+# the_lord_bless_you — read, not installed
+m.witness_read("the_lord_bless_you", "the_blessings_form_counted",
+                cites=["Onkelos Num 6:24", "Onkelos Num 6:25", "Onkelos Num 6:26"])
+
+# -------------------------- Num.6.25 · TREE_CLAIM --------------------------
+# ‹יאר יהוה פניו› (“give-light YHWH face-him/its”)
+# ‹אליך› (“to-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 6:25."
+m.step("Num.6.25")
+# witness-tier presupposed read: one_word_two_renderings on
+# make_his_face_shine — read, not installed
+m.witness_read("make_his_face_shine", "one_word_two_renderings",
+                cites=["Onkelos Num 6:25", "Onkelos Num 6:26", "Sifrei Bamidbar 41:1"])
+
+# -------------------------- Num.6.26 · TREE_CLAIM --------------------------
+# ‹ישא יהוה פניו› (“lift/carry YHWH face-him/its”)
+# ‹אליך … וישם לך› (“to-you/your … and-put/set to-you/your”)
+# ‹שלום› (“safe”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:26."
+m.step("Num.6.26")
+# witness-tier presupposed read:
+# lifts_his_face_lifts_no_face_the_sealed_decree on lift_his_face — read,
+# not installed
+m.witness_read("lift_his_face", "lifts_his_face_lifts_no_face_the_sealed_decree",
+                cites=["Sifrei Bamidbar 42:1", "Sifrei Bamidbar 42:2", "Onkelos Num 6:26"])
+
+# -------------------------- Num.6.27 · ETNACHTA_SPLIT ----------------------
+# ‹ושמו את שמי› (“and-put/set obj-marker name-me/my”)
+# ‹על בני ישראל› (“over son Israel”)
+# ‹… ואני אברכם› (“and-I bless-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 6:27."
+m.step("Num.6.27")
+# witness-tier presupposed read:
+# the_explicit_name_in_the_temple_the_blessing_of_my_name on place_my_name —
+# read, not installed
+m.witness_read("place_my_name", "the_explicit_name_in_the_temple_the_blessing_of_my_name",
+                cites=["Sifrei Bamidbar 43:1", "Onkelos Num 6:27"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('thus_shall_you_bless', 'the_speech_to_the_priests_the_blessings_form'), ('the_lord_bless_you', 'the_blessings_form_counted'), ('make_his_face_shine', 'one_word_two_renderings'), ('lift_his_face', 'lifts_his_face_lifts_no_face_the_sealed_decree'), ('place_my_name', 'the_explicit_name_in_the_temple_the_blessing_of_my_name')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifrei Bamidbar 39:1', 'Onkelos Num 6:23']
+    assert all('the_speech_to_the_priests_the_blessings_form' not in f for f in m.WORLD["facts"])
+    assert 'thus_shall_you_bless' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Num 6:24', 'Onkelos Num 6:25', 'Onkelos Num 6:26']
+    assert all('the_blessings_form_counted' not in f for f in m.WORLD["facts"])
+    assert 'the_lord_bless_you' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Num 6:25', 'Onkelos Num 6:26', 'Sifrei Bamidbar 41:1']
+    assert all('one_word_two_renderings' not in f for f in m.WORLD["facts"])
+    assert 'make_his_face_shine' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifrei Bamidbar 42:1', 'Sifrei Bamidbar 42:2', 'Onkelos Num 6:26']
+    assert all('lifts_his_face_lifts_no_face_the_sealed_decree' not in f for f in m.WORLD["facts"])
+    assert 'lift_his_face' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifrei Bamidbar 43:1', 'Onkelos Num 6:27']
+    assert all('the_explicit_name_in_the_temple_the_blessing_of_my_name' not in f for f in m.WORLD["facts"])
+    assert 'place_my_name' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_07_carts_offerings_a
+###############################################################################
+
+m = Machine("num_07_carts_offerings_a")
+
+# -------------------------- Num.7.1 · ETNACHTA_SPLIT -----------------------
+# ‹ויהי ביום כלות› (“and-be in-day be-complete”)
+# ‹משה להקים את› (“Moses to-arise obj-marker”)
+# ‹המשכן וימשח אתו› (“the-tabernacle and-rub-with-oil obj-marker-him/its”)
+# ‹ויקדש אתו ואת› (“and-sanctify obj-marker-him/its and-obj-marker”)
+# ‹כל … וימשחם ויקדש› (“all … and-rub-with-oil-them/their and-sanctify”)
+# ‹אתם› (“obj-marker-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:1."
+m.step("Num.7.1")
+# witness-tier presupposed read: the_day_runs_backward_again on
+# the_day_moses_finished — read, not installed
+m.witness_read("the_day_moses_finished", "the_day_runs_backward_again",
+                cites=["Onkelos Num 7:1", "Sifrei Bamidbar 44:1"])
+
+# -------------------------- Num.7.2 · ETNACHTA_SPLIT -----------------------
+# ‹ויקריבו נשיאי ישראל› (“and-bring-near prince Israel”)
+# ‹ראשי בית אבתם› (“head house father-them/their”)
+# ‹… הם נשיאי המטת› (“they prince the-staff/tribe”)
+# ‹הם העמדים על› (“they the-stand over”)
+# ‹הפקדים› (“the-count/visit”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:2."
+m.step("Num.7.2")
+# witness-tier presupposed read: covered_wagons_a_wagon_for_two on
+# they_who_stood_over_the_counted — read, not installed
+m.witness_read("they_who_stood_over_the_counted", "covered_wagons_a_wagon_for_two",
+                cites=["Onkelos Num 7:2", "Onkelos Num 7:3", "Onkelos Num 7:4", "Onkelos Num 7:5", "Sifrei Bamidbar 45:1"])
+
+# -------------------------- Num.7.3 · ETNACHTA_SPLIT -----------------------
+# ‹ויביאו את קרבנם› (“and-come/bring obj-marker offering-them/their”)
+# ‹לפני יהוה שש› (“to-face YHWH six”)
+# ‹עגלת צב ושני› (“something-revolving palanquin and-two”)
+# ‹עשר בקר עגלה› (“-teen herd something-revolving”)
+# ‹על שנ … ויקריבו› (“over ? … and-bring-near”)
+# ‹אותם לפני המשכן› (“obj-marker-them/their to-face the-tabernacle”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:3."
+m.step("Num.7.3")
+
+# -------------------------- Num.7.4 · TREE_CLAIM ---------------------------
+# ‹ויאמר יהוה … אל› (“and-say YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:4."
+m.step("Num.7.4")
+
+# -------------------------- Num.7.5 · ETNACHTA_SPLIT -----------------------
+# ‹קח מאתם והיו› (“take from-with-them/their and-be”)
+# ‹לעבד את עבדת› (“to-work/serve obj-marker service/work”)
+# ‹אהל מועד … ונתתה› (“tent seasons … and-set”)
+# ‹אותם אל הלוים› (“obj-marker-them/their to the-Levite”)
+# ‹איש כפי עבדתו› (“man like-mouth service/work-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:5."
+m.step("Num.7.5")
+
+# -------------------------- Num.7.6 · ETNACHTA_SPLIT -----------------------
+# ‹ויקח משה את› (“and-take Moses obj-marker”)
+# ‹העגלת ואת הבקר› (“the-something-revolving and-obj-marker the-herd”)
+# ‹… ויתן אותם אל› (“and-set obj-marker-them/their to”)
+# ‹הלוים› (“the-Levite”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:6."
+m.step("Num.7.6")
+# witness-tier presupposed read: on_the_shoulder_davids_error on
+# moses_took_the_wagons — read, not installed
+m.witness_read("moses_took_the_wagons", "on_the_shoulder_davids_error",
+                cites=["Sifrei Bamidbar 46:1", "Sifrei Bamidbar 46:2", "Onkelos Num 7:6", "Onkelos Num 7:7", "Onkelos Num 7:8", "Onkelos Num 7:9"])
+
+# -------------------------- Num.7.7 · ETNACHTA_SPLIT -----------------------
+# ‹את שתי העגלת› (“obj-marker two the-something-revolving”)
+# ‹ואת ארבעת הבקר› (“and-obj-marker four the-herd”)
+# ‹נתן לבני גרשון› (“set to-son Gershon”)
+# ‹… כפי עבדתם› (“like-mouth service/work-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:7."
+m.step("Num.7.7")
+
+# -------------------------- Num.7.8 · ETNACHTA_SPLIT -----------------------
+# ‹ואת ארבע העגלת› (“and-obj-marker four the-something-revolving”)
+# ‹ואת שמנת הבקר› (“and-obj-marker number the-herd”)
+# ‹נתן לבני מררי› (“set to-son Merari”)
+# ‹… כפי עבדתם ביד› (“like-mouth service/work-them/their in-hand”)
+# ‹איתמר בן אהרן› (“Ithamar son Aaron”)
+# ‹הכהן› (“the-priest”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:8."
+m.step("Num.7.8")
+
+# -------------------------- Num.7.9 · ETNACHTA_SPLIT -----------------------
+# ‹ולבני קהת לא› (“and-to-son Kohath not”)
+# ‹נתן … כי עבדת› (“set … that service/work”)
+# ‹הקדש עלהם בכתף› (“the-holiness over-them/their in-shoulder”)
+# ‹ישאו› (“lift/carry”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:9."
+m.step("Num.7.9")
+
+# -------------------------- Num.7.10 · ETNACHTA_SPLIT ----------------------
+# ‹ויקריבו הנשאים את› (“and-bring-near the-prince obj-marker”)
+# ‹חנכת המזבח ביום› (“initiation the-altar in-day”)
+# ‹המשח אתו … ויקריבו› (“rub-with-oil obj-marker-him/its … and-bring-near”)
+# ‹הנשיאם את קרבנם› (“the-prince obj-marker offering-them/their”)
+# ‹לפני המזבח› (“to-face the-altar”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:10."
+m.step("Num.7.10")
+# witness-tier presupposed read: the_order_by_the_journeying_each_on_his_day
+# on the_dedication_of_the_altar — read, not installed
+m.witness_read("the_dedication_of_the_altar", "the_order_by_the_journeying_each_on_his_day",
+                cites=["Sifrei Bamidbar 47:1", "Sifrei Bamidbar 48:1", "Sifrei Bamidbar 52:1", "Onkelos Num 7:10", "Onkelos Num 7:11", "Onkelos Num 7:12"])
+
+# -------------------------- Num.7.11 · ETNACHTA_SPLIT ----------------------
+# ‹ויאמר יהוה אל› (“and-say YHWH to”)
+# ‹משה … נשיא אחד› (“Moses … prince one”)
+# ‹ליום נשיא אחד› (“to-day prince one”)
+# ‹ליום יקריבו את› (“to-day bring-near obj-marker”)
+# ‹קרבנם לחנכת המזבח› (“offering-them/their to-initiation the-altar”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:11."
+m.step("Num.7.11")
+
+# -------------------------- Num.7.12 · ETNACHTA_SPLIT ----------------------
+# ‹ויהי המקריב ביום› (“and-be the-bring-near in-day”)
+# ‹הראשון את קרבנו› (“the-first obj-marker offering-him/its”)
+# ‹… נחשון בן עמינדב› (“Naashon son Amminadab”)
+# ‹למטה יהודה› (“to-staff/tribe Judah”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:12."
+m.step("Num.7.12")
+# witness-tier presupposed read: the_twelve_offerings_are_one_text on
+# on_the_first_day_nahshon — read, not installed
+m.witness_read("on_the_first_day_nahshon", "the_twelve_offerings_are_one_text",
+                cites=["Onkelos Num 7:12", "Onkelos Num 7:13", "Onkelos Num 7:14", "Onkelos Num 7:15", "Onkelos Num 7:16", "Onkelos Num 7:17", "Onkelos Num 7:18", "Onkelos Num 7:19", "Onkelos Num 7:20", "Onkelos Num 7:21", "Onkelos Num 7:22", "Onkelos Num 7:23", "Onkelos Num 7:24", "Onkelos Num 7:25", "Onkelos Num 7:26", "Onkelos Num 7:27", "Onkelos Num 7:28", "Onkelos Num 7:29", "Onkelos Num 7:30", "Onkelos Num 7:31", "Onkelos Num 7:32", "Onkelos Num 7:33", "Onkelos Num 7:34", "Onkelos Num 7:35", "Onkelos Num 7:36", "Onkelos Num 7:37", "Onkelos Num 7:38", "Onkelos Num 7:39", "Onkelos Num 7:40", "Onkelos Num 7:41", "Onkelos Num 7:42", "Onkelos Num 7:43", "Onkelos Num 7:44", "Onkelos Num 7:45", "Onkelos Num 7:46", "Onkelos Num 7:47"])
+
+# -------------------------- Num.7.13 · ETNACHTA_SPLIT ----------------------
+# ‹וקרבנו קערת כסף› (“and-offering-him/its bowl silver”)
+# ‹אחת שלשים ומאה› (“one thirty and-hundred”)
+# ‹משקלה מזרק אחד› (“weight-her/its bowl one”)
+# ‹כסף שבעים שקל› (“silver seventy weight”)
+# ‹… שניהם מלאים סלת› (“two-them/their full flour”)
+# ‹בלולה בשמן למנחה› (“overflow in-oil to-grain-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:13."
+m.step("Num.7.13")
+# witness-tier presupposed read:
+# the_accents_parse_the_number_the_total_proves_it on one_silver_dish —
+# read, not installed
+m.witness_read("one_silver_dish", "the_accents_parse_the_number_the_total_proves_it",
+                cites=["Onkelos Num 7:13", "Onkelos Num 7:14", "Sifrei Bamidbar 49:1"])
+
+# -------------------------- Num.7.14 · TREE_CLAIM --------------------------
+# ‹כף אחת עשרה› (“palm-of-hand one ten”)
+# ‹זהב … מלאה קטרת› (“gold … full fumigation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:14."
+m.step("Num.7.14")
+
+# -------------------------- Num.7.15 · TREE_CLAIM --------------------------
+# ‹פר אחד בן› (“bullock one son”)
+# ‹בקר איל אחד› (“herd ram one”)
+# ‹כבש אחד בן› (“ram one son”)
+# ‹שנתו› (“years-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:15."
+m.step("Num.7.15")
+# witness-tier presupposed read: the_princes_four_exceptions on
+# one_bull_one_ram_one_lamb — read, not installed
+m.witness_read("one_bull_one_ram_one_lamb", "the_princes_four_exceptions",
+                cites=["Sifrei Bamidbar 50:1", "Sifrei Bamidbar 51:1", "Onkelos Num 7:15", "Onkelos Num 7:16", "Onkelos Num 7:17"])
+
+# -------------------------- Num.7.16 · TREE_CLAIM --------------------------
+# ‹שעיר עזים אחד› (“shaggy she-goat one”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:16."
+m.step("Num.7.16")
+
+# -------------------------- Num.7.17 · ETNACHTA_SPLIT ----------------------
+# ‹ולזבח השלמים בקר› (“and-to-sacrifice the-requital herd”)
+# ‹שנים אילם חמשה› (“two ram five”)
+# ‹עתודים חמשה כבשים› (“prepared five ram”)
+# ‹בני שנה חמ› (“son years ?”)
+# ‹… זה קרבן נחשון› (“this offering Naashon”)
+# ‹בן עמינדב› (“son Amminadab”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:17."
+m.step("Num.7.17")
+
+# -------------------------- Num.7.18 · ETNACHTA_SPLIT ----------------------
+# ‹ביום השני הקריב› (“in-day the-second bring-near”)
+# ‹נתנאל בן צוער› (“Nethaneel son Zuar”)
+# ‹… נשיא יששכר› (“prince Issachar”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:18."
+m.step("Num.7.18")
+
+# -------------------------- Num.7.19 · ETNACHTA_SPLIT ----------------------
+# ‹הקרב את קרבנו› (“bring-near obj-marker offering-him/its”)
+# ‹קערת כסף אחת› (“bowl silver one”)
+# ‹שלשים ומאה משקלה› (“thirty and-hundred weight-her/its”)
+# ‹מזרק אחד כסף› (“bowl one silver”)
+# ‹שבע … שניהם מלאים› (“seven … two-them/their full”)
+# ‹סלת בלולה בשמן› (“flour overflow in-oil”)
+# ‹למנחה› (“to-grain-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:19."
+m.step("Num.7.19")
+
+# -------------------------- Num.7.20 · TREE_CLAIM --------------------------
+# ‹כף אחת עשרה› (“palm-of-hand one ten”)
+# ‹זהב … מלאה קטרת› (“gold … full fumigation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:20."
+m.step("Num.7.20")
+
+# -------------------------- Num.7.21 · TREE_CLAIM --------------------------
+# ‹פר אחד בן› (“bullock one son”)
+# ‹בקר איל אחד› (“herd ram one”)
+# ‹כבש אחד בן› (“ram one son”)
+# ‹שנתו› (“years-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:21."
+m.step("Num.7.21")
+
+# -------------------------- Num.7.22 · TREE_CLAIM --------------------------
+# ‹שעיר עזים אחד› (“shaggy she-goat one”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:22."
+m.step("Num.7.22")
+
+# -------------------------- Num.7.23 · ETNACHTA_SPLIT ----------------------
+# ‹ולזבח השלמים בקר› (“and-to-sacrifice the-requital herd”)
+# ‹שנים אילם חמשה› (“two ram five”)
+# ‹עתודים חמשה כבשים› (“prepared five ram”)
+# ‹בני שנה חמ› (“son years ?”)
+# ‹… זה קרבן נתנאל› (“this offering Nethaneel”)
+# ‹בן צוער› (“son Zuar”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:23."
+m.step("Num.7.23")
+
+# -------------------------- Num.7.24 · ETNACHTA_SPLIT ----------------------
+# ‹ביום השלישי נשיא› (“in-day the-third prince”)
+# ‹לבני זבולן … אליאב› (“to-son Zebulun … Eliab”)
+# ‹בן חלן› (“son Helon”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:24."
+m.step("Num.7.24")
+
+# -------------------------- Num.7.25 · ETNACHTA_SPLIT ----------------------
+# ‹קרבנו קערת כסף› (“offering-him/its bowl silver”)
+# ‹אחת שלשים ומאה› (“one thirty and-hundred”)
+# ‹משקלה מזרק אחד› (“weight-her/its bowl one”)
+# ‹כסף שבעים שקל› (“silver seventy weight”)
+# ‹ב … שניהם מלאים› (“? … two-them/their full”)
+# ‹סלת בלולה בשמן› (“flour overflow in-oil”)
+# ‹למנחה› (“to-grain-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:25."
+m.step("Num.7.25")
+
+# -------------------------- Num.7.26 · TREE_CLAIM --------------------------
+# ‹כף אחת עשרה› (“palm-of-hand one ten”)
+# ‹זהב … מלאה קטרת› (“gold … full fumigation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:26."
+m.step("Num.7.26")
+
+# -------------------------- Num.7.27 · TREE_CLAIM --------------------------
+# ‹פר אחד בן› (“bullock one son”)
+# ‹בקר איל אחד› (“herd ram one”)
+# ‹כבש אחד בן› (“ram one son”)
+# ‹שנתו› (“years-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:27."
+m.step("Num.7.27")
+
+# -------------------------- Num.7.28 · TREE_CLAIM --------------------------
+# ‹שעיר עזים אחד› (“shaggy she-goat one”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:28."
+m.step("Num.7.28")
+
+# -------------------------- Num.7.29 · ETNACHTA_SPLIT ----------------------
+# ‹ולזבח השלמים בקר› (“and-to-sacrifice the-requital herd”)
+# ‹שנים אילם חמשה› (“two ram five”)
+# ‹עתדים חמשה כבשים› (“prepared five ram”)
+# ‹בני שנה חמש› (“son years five”)
+# ‹… זה קרבן אליאב› (“this offering Eliab”)
+# ‹בן חלן› (“son Helon”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:29."
+m.step("Num.7.29")
+
+# -------------------------- Num.7.30 · ETNACHTA_SPLIT ----------------------
+# ‹ביום הרביעי נשיא› (“in-day the-fourth prince”)
+# ‹לבני ראובן … אליצור› (“to-son Reuben … Elizur”)
+# ‹בן שדיאור› (“son Shedeur”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:30."
+m.step("Num.7.30")
+
+# -------------------------- Num.7.31 · ETNACHTA_SPLIT ----------------------
+# ‹קרבנו קערת כסף› (“offering-him/its bowl silver”)
+# ‹אחת שלשים ומאה› (“one thirty and-hundred”)
+# ‹משקלה מזרק אחד› (“weight-her/its bowl one”)
+# ‹כסף שבעים שקל› (“silver seventy weight”)
+# ‹ב … שניהם מלאים› (“? … two-them/their full”)
+# ‹סלת בלולה בשמן› (“flour overflow in-oil”)
+# ‹למנחה› (“to-grain-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:31."
+m.step("Num.7.31")
+
+# -------------------------- Num.7.32 · TREE_CLAIM --------------------------
+# ‹כף אחת עשרה› (“palm-of-hand one ten”)
+# ‹זהב … מלאה קטרת› (“gold … full fumigation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:32."
+m.step("Num.7.32")
+
+# -------------------------- Num.7.33 · TREE_CLAIM --------------------------
+# ‹פר אחד בן› (“bullock one son”)
+# ‹בקר איל אחד› (“herd ram one”)
+# ‹כבש אחד בן› (“ram one son”)
+# ‹שנתו› (“years-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:33."
+m.step("Num.7.33")
+
+# -------------------------- Num.7.34 · TREE_CLAIM --------------------------
+# ‹שעיר עזים אחד› (“shaggy she-goat one”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:34."
+m.step("Num.7.34")
+
+# -------------------------- Num.7.35 · ETNACHTA_SPLIT ----------------------
+# ‹ולזבח השלמים בקר› (“and-to-sacrifice the-requital herd”)
+# ‹שנים אילם חמשה› (“two ram five”)
+# ‹עתדים חמשה כבשים› (“prepared five ram”)
+# ‹בני שנה חמש› (“son years five”)
+# ‹… זה קרבן אליצור› (“this offering Elizur”)
+# ‹בן שדיאור› (“son Shedeur”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:35."
+m.step("Num.7.35")
+
+# -------------------------- Num.7.36 · ETNACHTA_SPLIT ----------------------
+# ‹ביום החמישי נשיא› (“in-day the-fifth prince”)
+# ‹לבני שמעון … שלמיאל› (“to-son Simeon … Shelumiel”)
+# ‹בן צורישדי› (“son Zurishaddai”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:36."
+m.step("Num.7.36")
+
+# -------------------------- Num.7.37 · ETNACHTA_SPLIT ----------------------
+# ‹קרבנו קערת כסף› (“offering-him/its bowl silver”)
+# ‹אחת שלשים ומאה› (“one thirty and-hundred”)
+# ‹משקלה מזרק אחד› (“weight-her/its bowl one”)
+# ‹כסף שבעים שקל› (“silver seventy weight”)
+# ‹ב … שניהם מלאים› (“? … two-them/their full”)
+# ‹סלת בלולה בשמן› (“flour overflow in-oil”)
+# ‹למנחה› (“to-grain-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:37."
+m.step("Num.7.37")
+
+# -------------------------- Num.7.38 · TREE_CLAIM --------------------------
+# ‹כף אחת עשרה› (“palm-of-hand one ten”)
+# ‹זהב … מלאה קטרת› (“gold … full fumigation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:38."
+m.step("Num.7.38")
+
+# -------------------------- Num.7.39 · TREE_CLAIM --------------------------
+# ‹פר אחד בן› (“bullock one son”)
+# ‹בקר איל אחד› (“herd ram one”)
+# ‹כבש אחד בן› (“ram one son”)
+# ‹שנתו› (“years-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:39."
+m.step("Num.7.39")
+
+# -------------------------- Num.7.40 · TREE_CLAIM --------------------------
+# ‹שעיר עזים אחד› (“shaggy she-goat one”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:40."
+m.step("Num.7.40")
+
+# -------------------------- Num.7.41 · ETNACHTA_SPLIT ----------------------
+# ‹ולזבח השלמים בקר› (“and-to-sacrifice the-requital herd”)
+# ‹שנים אילם חמשה› (“two ram five”)
+# ‹עתדים חמשה כבשים› (“prepared five ram”)
+# ‹בני שנה חמש› (“son years five”)
+# ‹… זה קרבן שלמיאל› (“this offering Shelumiel”)
+# ‹בן צורישדי› (“son Zurishaddai”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:41."
+m.step("Num.7.41")
+
+# -------------------------- Num.7.42 · ETNACHTA_SPLIT ----------------------
+# ‹ביום הששי נשיא› (“in-day the-sixth prince”)
+# ‹לבני גד … אליסף› (“to-son Gad … Eliasaph”)
+# ‹בן דעואל› (“son Deuel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:42."
+m.step("Num.7.42")
+
+# -------------------------- Num.7.43 · ETNACHTA_SPLIT ----------------------
+# ‹קרבנו קערת כסף› (“offering-him/its bowl silver”)
+# ‹אחת שלשים ומאה› (“one thirty and-hundred”)
+# ‹משקלה מזרק אחד› (“weight-her/its bowl one”)
+# ‹כסף שבעים שקל› (“silver seventy weight”)
+# ‹ב … שניהם מלאים› (“? … two-them/their full”)
+# ‹סלת בלולה בשמן› (“flour overflow in-oil”)
+# ‹למנחה› (“to-grain-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:43."
+m.step("Num.7.43")
+
+# -------------------------- Num.7.44 · TREE_CLAIM --------------------------
+# ‹כף אחת עשרה› (“palm-of-hand one ten”)
+# ‹זהב … מלאה קטרת› (“gold … full fumigation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:44."
+m.step("Num.7.44")
+
+# -------------------------- Num.7.45 · TREE_CLAIM --------------------------
+# ‹פר אחד בן› (“bullock one son”)
+# ‹בקר איל אחד› (“herd ram one”)
+# ‹כבש אחד בן› (“ram one son”)
+# ‹שנתו› (“years-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:45."
+m.step("Num.7.45")
+
+# -------------------------- Num.7.46 · TREE_CLAIM --------------------------
+# ‹שעיר עזים אחד› (“shaggy she-goat one”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:46."
+m.step("Num.7.46")
+
+# -------------------------- Num.7.47 · ETNACHTA_SPLIT ----------------------
+# ‹ולזבח השלמים בקר› (“and-to-sacrifice the-requital herd”)
+# ‹שנים אילם חמשה› (“two ram five”)
+# ‹עתדים חמשה כבשים› (“prepared five ram”)
+# ‹בני שנה חמש› (“son years five”)
+# ‹… זה קרבן אליסף› (“this offering Eliasaph”)
+# ‹בן דעואל› (“son Deuel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:47."
+m.step("Num.7.47")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_day_moses_finished', 'the_day_runs_backward_again'), ('they_who_stood_over_the_counted', 'covered_wagons_a_wagon_for_two'), ('moses_took_the_wagons', 'on_the_shoulder_davids_error'), ('the_dedication_of_the_altar', 'the_order_by_the_journeying_each_on_his_day'), ('on_the_first_day_nahshon', 'the_twelve_offerings_are_one_text'), ('one_silver_dish', 'the_accents_parse_the_number_the_total_proves_it'), ('one_bull_one_ram_one_lamb', 'the_princes_four_exceptions')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Num 7:1', 'Sifrei Bamidbar 44:1']
+    assert all('the_day_runs_backward_again' not in f for f in m.WORLD["facts"])
+    assert 'the_day_moses_finished' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Num 7:2', 'Onkelos Num 7:3', 'Onkelos Num 7:4', 'Onkelos Num 7:5', 'Sifrei Bamidbar 45:1']
+    assert all('covered_wagons_a_wagon_for_two' not in f for f in m.WORLD["facts"])
+    assert 'they_who_stood_over_the_counted' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifrei Bamidbar 46:1', 'Sifrei Bamidbar 46:2', 'Onkelos Num 7:6', 'Onkelos Num 7:7', 'Onkelos Num 7:8', 'Onkelos Num 7:9']
+    assert all('on_the_shoulder_davids_error' not in f for f in m.WORLD["facts"])
+    assert 'moses_took_the_wagons' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifrei Bamidbar 47:1', 'Sifrei Bamidbar 48:1', 'Sifrei Bamidbar 52:1', 'Onkelos Num 7:10', 'Onkelos Num 7:11', 'Onkelos Num 7:12']
+    assert all('the_order_by_the_journeying_each_on_his_day' not in f for f in m.WORLD["facts"])
+    assert 'the_dedication_of_the_altar' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Num 7:12', 'Onkelos Num 7:13', 'Onkelos Num 7:14', 'Onkelos Num 7:15', 'Onkelos Num 7:16', 'Onkelos Num 7:17', 'Onkelos Num 7:18', 'Onkelos Num 7:19', 'Onkelos Num 7:20', 'Onkelos Num 7:21', 'Onkelos Num 7:22', 'Onkelos Num 7:23', 'Onkelos Num 7:24', 'Onkelos Num 7:25', 'Onkelos Num 7:26', 'Onkelos Num 7:27', 'Onkelos Num 7:28', 'Onkelos Num 7:29', 'Onkelos Num 7:30', 'Onkelos Num 7:31', 'Onkelos Num 7:32', 'Onkelos Num 7:33', 'Onkelos Num 7:34', 'Onkelos Num 7:35', 'Onkelos Num 7:36', 'Onkelos Num 7:37', 'Onkelos Num 7:38', 'Onkelos Num 7:39', 'Onkelos Num 7:40', 'Onkelos Num 7:41', 'Onkelos Num 7:42', 'Onkelos Num 7:43', 'Onkelos Num 7:44', 'Onkelos Num 7:45', 'Onkelos Num 7:46', 'Onkelos Num 7:47']
+    assert all('the_twelve_offerings_are_one_text' not in f for f in m.WORLD["facts"])
+    assert 'on_the_first_day_nahshon' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Num 7:13', 'Onkelos Num 7:14', 'Sifrei Bamidbar 49:1']
+    assert all('the_accents_parse_the_number_the_total_proves_it' not in f for f in m.WORLD["facts"])
+    assert 'one_silver_dish' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifrei Bamidbar 50:1', 'Sifrei Bamidbar 51:1', 'Onkelos Num 7:15', 'Onkelos Num 7:16', 'Onkelos Num 7:17']
+    assert all('the_princes_four_exceptions' not in f for f in m.WORLD["facts"])
+    assert 'one_bull_one_ram_one_lamb' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_07_offerings_b_total
+###############################################################################
+
+m = Machine("num_07_offerings_b_total")
+
+# -------------------------- Num.7.48 · ETNACHTA_SPLIT ----------------------
+# ‹ביום השביעי נשיא› (“in-day the-seventh prince”)
+# ‹לבני אפרים … אלישמע› (“to-son Ephraim … Elishama”)
+# ‹בן עמיהוד› (“son Ammihud”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:48."
+m.step("Num.7.48")
+
+# -------------------------- Num.7.49 · ETNACHTA_SPLIT ----------------------
+# ‹קרבנו קערת כסף› (“offering-him/its bowl silver”)
+# ‹אחת שלשים ומאה› (“one thirty and-hundred”)
+# ‹משקלה מזרק אחד› (“weight-her/its bowl one”)
+# ‹כסף שבעים שקל› (“silver seventy weight”)
+# ‹ב … שניהם מלאים› (“? … two-them/their full”)
+# ‹סלת בלולה בשמן› (“flour overflow in-oil”)
+# ‹למנחה› (“to-grain-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:49."
+m.step("Num.7.49")
+
+# -------------------------- Num.7.50 · TREE_CLAIM --------------------------
+# ‹כף אחת עשרה› (“palm-of-hand one ten”)
+# ‹זהב … מלאה קטרת› (“gold … full fumigation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:50."
+m.step("Num.7.50")
+
+# -------------------------- Num.7.51 · TREE_CLAIM --------------------------
+# ‹פר אחד בן› (“bullock one son”)
+# ‹בקר איל אחד› (“herd ram one”)
+# ‹כבש אחד בן› (“ram one son”)
+# ‹שנתו› (“years-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:51."
+m.step("Num.7.51")
+
+# -------------------------- Num.7.52 · TREE_CLAIM --------------------------
+# ‹שעיר עזים אחד› (“shaggy she-goat one”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:52."
+m.step("Num.7.52")
+
+# -------------------------- Num.7.53 · ETNACHTA_SPLIT ----------------------
+# ‹ולזבח השלמים בקר› (“and-to-sacrifice the-requital herd”)
+# ‹שנים אילם חמשה› (“two ram five”)
+# ‹עתדים חמשה כבשים› (“prepared five ram”)
+# ‹בני שנה חמש› (“son years five”)
+# ‹… זה קרבן אלישמע› (“this offering Elishama”)
+# ‹בן עמיהוד› (“son Ammihud”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:53."
+m.step("Num.7.53")
+
+# -------------------------- Num.7.54 · ETNACHTA_SPLIT ----------------------
+# ‹ביום השמיני נשיא› (“in-day the-eight prince”)
+# ‹לבני מנשה … גמליאל› (“to-son Manasseh … Gamaliel”)
+# ‹בן פדה צור› (“son Pedahzur”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:54."
+m.step("Num.7.54")
+
+# -------------------------- Num.7.55 · ETNACHTA_SPLIT ----------------------
+# ‹קרבנו קערת כסף› (“offering-him/its bowl silver”)
+# ‹אחת שלשים ומאה› (“one thirty and-hundred”)
+# ‹משקלה מזרק אחד› (“weight-her/its bowl one”)
+# ‹כסף שבעים שקל› (“silver seventy weight”)
+# ‹ב … שניהם מלאים› (“? … two-them/their full”)
+# ‹סלת בלולה בשמן› (“flour overflow in-oil”)
+# ‹למנחה› (“to-grain-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:55."
+m.step("Num.7.55")
+
+# -------------------------- Num.7.56 · TREE_CLAIM --------------------------
+# ‹כף אחת עשרה› (“palm-of-hand one ten”)
+# ‹זהב … מלאה קטרת› (“gold … full fumigation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:56."
+m.step("Num.7.56")
+
+# -------------------------- Num.7.57 · TREE_CLAIM --------------------------
+# ‹פר אחד בן› (“bullock one son”)
+# ‹בקר איל אחד› (“herd ram one”)
+# ‹כבש אחד בן› (“ram one son”)
+# ‹שנתו› (“years-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:57."
+m.step("Num.7.57")
+
+# -------------------------- Num.7.58 · TREE_CLAIM --------------------------
+# ‹שעיר עזים אחד› (“shaggy she-goat one”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:58."
+m.step("Num.7.58")
+
+# -------------------------- Num.7.59 · ETNACHTA_SPLIT ----------------------
+# ‹ולזבח השלמים בקר› (“and-to-sacrifice the-requital herd”)
+# ‹שנים אילם חמשה› (“two ram five”)
+# ‹עתדים חמשה כבשים› (“prepared five ram”)
+# ‹בני שנה חמש› (“son years five”)
+# ‹… זה קרבן גמליאל› (“this offering Gamaliel”)
+# ‹בן פדה צור› (“son Pedahzur”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:59."
+m.step("Num.7.59")
+
+# -------------------------- Num.7.60 · ETNACHTA_SPLIT ----------------------
+# ‹ביום התשיעי נשיא› (“in-day the-ninth prince”)
+# ‹לבני בנימן … אבידן› (“to-son Benjamin … Abidan”)
+# ‹בן גדעני› (“son Gideoni”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:60."
+m.step("Num.7.60")
+
+# -------------------------- Num.7.61 · ETNACHTA_SPLIT ----------------------
+# ‹קרבנו קערת כסף› (“offering-him/its bowl silver”)
+# ‹אחת שלשים ומאה› (“one thirty and-hundred”)
+# ‹משקלה מזרק אחד› (“weight-her/its bowl one”)
+# ‹כסף שבעים שקל› (“silver seventy weight”)
+# ‹ב … שניהם מלאים› (“? … two-them/their full”)
+# ‹סלת בלולה בשמן› (“flour overflow in-oil”)
+# ‹למנחה› (“to-grain-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:61."
+m.step("Num.7.61")
+
+# -------------------------- Num.7.62 · TREE_CLAIM --------------------------
+# ‹כף אחת עשרה› (“palm-of-hand one ten”)
+# ‹זהב … מלאה קטרת› (“gold … full fumigation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:62."
+m.step("Num.7.62")
+
+# -------------------------- Num.7.63 · TREE_CLAIM --------------------------
+# ‹פר אחד בן› (“bullock one son”)
+# ‹בקר איל אחד› (“herd ram one”)
+# ‹כבש אחד בן› (“ram one son”)
+# ‹שנתו› (“years-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:63."
+m.step("Num.7.63")
+
+# -------------------------- Num.7.64 · TREE_CLAIM --------------------------
+# ‹שעיר עזים אחד› (“shaggy she-goat one”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:64."
+m.step("Num.7.64")
+
+# -------------------------- Num.7.65 · ETNACHTA_SPLIT ----------------------
+# ‹ולזבח השלמים בקר› (“and-to-sacrifice the-requital herd”)
+# ‹שנים אילם חמשה› (“two ram five”)
+# ‹עתדים חמשה כבשים› (“prepared five ram”)
+# ‹בני שנה חמש› (“son years five”)
+# ‹… זה קרבן אבידן› (“this offering Abidan”)
+# ‹בן גדעני› (“son Gideoni”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:65."
+m.step("Num.7.65")
+
+# -------------------------- Num.7.66 · ETNACHTA_SPLIT ----------------------
+# ‹ביום העשירי נשיא› (“in-day the-tenth prince”)
+# ‹לבני דן … אחיעזר› (“to-son Daniel … Ahiezer”)
+# ‹בן עמישדי› (“son Ammishaddai”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:66."
+m.step("Num.7.66")
+
+# -------------------------- Num.7.67 · ETNACHTA_SPLIT ----------------------
+# ‹קרבנו קערת כסף› (“offering-him/its bowl silver”)
+# ‹אחת שלשים ומאה› (“one thirty and-hundred”)
+# ‹משקלה מזרק אחד› (“weight-her/its bowl one”)
+# ‹כסף שבעים שקל› (“silver seventy weight”)
+# ‹ב … שניהם מלאים› (“? … two-them/their full”)
+# ‹סלת בלולה בשמן› (“flour overflow in-oil”)
+# ‹למנחה› (“to-grain-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:67."
+m.step("Num.7.67")
+
+# -------------------------- Num.7.68 · TREE_CLAIM --------------------------
+# ‹כף אחת עשרה› (“palm-of-hand one ten”)
+# ‹זהב … מלאה קטרת› (“gold … full fumigation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:68."
+m.step("Num.7.68")
+
+# -------------------------- Num.7.69 · TREE_CLAIM --------------------------
+# ‹פר אחד בן› (“bullock one son”)
+# ‹בקר איל אחד› (“herd ram one”)
+# ‹כבש אחד בן› (“ram one son”)
+# ‹שנתו› (“years-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:69."
+m.step("Num.7.69")
+
+# -------------------------- Num.7.70 · TREE_CLAIM --------------------------
+# ‹שעיר עזים אחד› (“shaggy she-goat one”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:70."
+m.step("Num.7.70")
+
+# -------------------------- Num.7.71 · ETNACHTA_SPLIT ----------------------
+# ‹ולזבח השלמים בקר› (“and-to-sacrifice the-requital herd”)
+# ‹שנים אילם חמשה› (“two ram five”)
+# ‹עתדים חמשה כבשים› (“prepared five ram”)
+# ‹בני שנה חמש› (“son years five”)
+# ‹… זה קרבן אחיעזר› (“this offering Ahiezer”)
+# ‹בן עמישדי› (“son Ammishaddai”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:71."
+m.step("Num.7.71")
+
+# -------------------------- Num.7.72 · ETNACHTA_SPLIT ----------------------
+# ‹ביום עשתי עשר› (“in-day eleven -teen”)
+# ‹יום נשיא לבני› (“day prince to-son”)
+# ‹אשר … פגעיאל בן› (“Asher … Pagiel son”)
+# ‹עכרן› (“Ocran”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:72."
+m.step("Num.7.72")
+
+# -------------------------- Num.7.73 · ETNACHTA_SPLIT ----------------------
+# ‹קרבנו קערת כסף› (“offering-him/its bowl silver”)
+# ‹אחת שלשים ומאה› (“one thirty and-hundred”)
+# ‹משקלה מזרק אחד› (“weight-her/its bowl one”)
+# ‹כסף שבעים שקל› (“silver seventy weight”)
+# ‹ב … שניהם מלאים› (“? … two-them/their full”)
+# ‹סלת בלולה בשמן› (“flour overflow in-oil”)
+# ‹למנחה› (“to-grain-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:73."
+m.step("Num.7.73")
+
+# -------------------------- Num.7.74 · TREE_CLAIM --------------------------
+# ‹כף אחת עשרה› (“palm-of-hand one ten”)
+# ‹זהב … מלאה קטרת› (“gold … full fumigation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:74."
+m.step("Num.7.74")
+
+# -------------------------- Num.7.75 · TREE_CLAIM --------------------------
+# ‹פר אחד בן› (“bullock one son”)
+# ‹בקר איל אחד› (“herd ram one”)
+# ‹כבש אחד בן› (“ram one son”)
+# ‹שנתו› (“years-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:75."
+m.step("Num.7.75")
+
+# -------------------------- Num.7.76 · TREE_CLAIM --------------------------
+# ‹שעיר עזים אחד› (“shaggy she-goat one”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:76."
+m.step("Num.7.76")
+
+# -------------------------- Num.7.77 · ETNACHTA_SPLIT ----------------------
+# ‹ולזבח השלמים בקר› (“and-to-sacrifice the-requital herd”)
+# ‹שנים אילם חמשה› (“two ram five”)
+# ‹עתדים חמשה כבשים› (“prepared five ram”)
+# ‹בני שנה חמש› (“son years five”)
+# ‹… זה קרבן פגעיאל› (“this offering Pagiel”)
+# ‹בן עכרן› (“son Ocran”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:77."
+m.step("Num.7.77")
+
+# -------------------------- Num.7.78 · ETNACHTA_SPLIT ----------------------
+# ‹ביום שנים עשר› (“in-day two -teen”)
+# ‹יום נשיא לבני› (“day prince to-son”)
+# ‹נפתלי … אחירע בן› (“Naphtali … Ahira son”)
+# ‹עינן› (“Enan”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:78."
+m.step("Num.7.78")
+
+# -------------------------- Num.7.79 · ETNACHTA_SPLIT ----------------------
+# ‹קרבנו קערת כסף› (“offering-him/its bowl silver”)
+# ‹אחת שלשים ומאה› (“one thirty and-hundred”)
+# ‹משקלה מזרק אחד› (“weight-her/its bowl one”)
+# ‹כסף שבעים שקל› (“silver seventy weight”)
+# ‹ב … שניהם מלאים› (“? … two-them/their full”)
+# ‹סלת בלולה בשמן› (“flour overflow in-oil”)
+# ‹למנחה› (“to-grain-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:79."
+m.step("Num.7.79")
+
+# -------------------------- Num.7.80 · TREE_CLAIM --------------------------
+# ‹כף אחת עשרה› (“palm-of-hand one ten”)
+# ‹זהב … מלאה קטרת› (“gold … full fumigation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:80."
+m.step("Num.7.80")
+
+# -------------------------- Num.7.81 · TREE_CLAIM --------------------------
+# ‹פר אחד בן› (“bullock one son”)
+# ‹בקר איל אחד› (“herd ram one”)
+# ‹כבש אחד בן› (“ram one son”)
+# ‹שנתו› (“years-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:81."
+m.step("Num.7.81")
+
+# -------------------------- Num.7.82 · TREE_CLAIM --------------------------
+# ‹שעיר עזים אחד› (“shaggy she-goat one”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 7:82."
+m.step("Num.7.82")
+
+# -------------------------- Num.7.83 · ETNACHTA_SPLIT ----------------------
+# ‹ולזבח השלמים בקר› (“and-to-sacrifice the-requital herd”)
+# ‹שנים אילם חמשה› (“two ram five”)
+# ‹עתדים חמשה כבשים› (“prepared five ram”)
+# ‹בני שנה חמש› (“son years five”)
+# ‹… זה קרבן אחירע› (“this offering Ahira”)
+# ‹בן עינן› (“son Enan”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:83."
+m.step("Num.7.83")
+
+# -------------------------- Num.7.84 · ETNACHTA_SPLIT ----------------------
+# ‹זאת חנכת המזבח› (“this initiation the-altar”)
+# ‹ביום המשח אתו› (“in-day rub-with-oil obj-marker-him/its”)
+# ‹מאת נשיאי ישראל› (“from-with prince Israel”)
+# ‹… קערת כסף שתים› (“bowl silver two”)
+# ‹עשרה מזרקי כסף› (“-teen bowl silver”)
+# ‹שנים עשר כפות› (“two -teen palm-of-hand”)
+# ‹זהב שתים עשרה› (“gold two -teen”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:84."
+m.step("Num.7.84")
+# witness-tier presupposed read: the_totals_by_the_taught_parser on
+# this_is_the_dedication — read, not installed
+m.witness_read("this_is_the_dedication", "the_totals_by_the_taught_parser",
+                cites=["Onkelos Num 7:84", "Onkelos Num 7:85", "Onkelos Num 7:86", "Onkelos Num 7:87", "Onkelos Num 7:88"])
+
+# -------------------------- Num.7.85 · ETNACHTA_SPLIT ----------------------
+# ‹שלשים ומאה הקערה› (“thirty and-hundred the-bowl”)
+# ‹האחת כסף ושבעים› (“the-one silver and-seventy”)
+# ‹המזרק האחד … כל› (“the-bowl the-one … all”)
+# ‹כסף הכלים אלפים› (“silver the-vessel thousand”)
+# ‹וארבע מאות בשקל› (“and-four hundred in-weight”)
+# ‹הקדש› (“the-holiness”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:85."
+m.step("Num.7.85")
+# witness-tier presupposed read:
+# temple_vessels_weights_each_credited_with_all on
+# each_dish_a_hundred_and_thirty — read, not installed
+m.witness_read("each_dish_a_hundred_and_thirty", "temple_vessels_weights_each_credited_with_all",
+                cites=["Sifrei Bamidbar 54:1", "Sifrei Bamidbar 55:1", "Sifrei Bamidbar 56:1", "Onkelos Num 7:85", "Onkelos Num 7:86", "Onkelos Num 7:87"])
+
+# -------------------------- Num.7.86 · ETNACHTA_SPLIT ----------------------
+# ‹כפות זהב שתים› (“palm-of-hand gold two”)
+# ‹עשרה מלאת קטרת› (“-teen full fumigation”)
+# ‹עשרה עשרה הכף› (“ten ten the-palm-of-hand”)
+# ‹בשקל הקדש … כל› (“in-weight the-holiness … all”)
+# ‹זהב הכפות עשרים› (“gold the-palm-of-hand twenty”)
+# ‹ומאה› (“and-hundred”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:86."
+m.step("Num.7.86")
+
+# -------------------------- Num.7.87 · ETNACHTA_SPLIT ----------------------
+# ‹כל הבקר לעלה› (“all the-herd to-burnt-offering”)
+# ‹שנים עשר פרים› (“two -teen bullock”)
+# ‹אילם שנים עשר› (“ram two -teen”)
+# ‹כבשים בני שנה› (“ram son years”)
+# ‹שנים … ושעירי עזים› (“two … and-shaggy she-goat”)
+# ‹שנים עשר לחטאת› (“two -teen to-sin-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:87."
+m.step("Num.7.87")
+
+# -------------------------- Num.7.88 · ETNACHTA_SPLIT ----------------------
+# ‹וכל בקר זבח› (“and-all herd sacrifice”)
+# ‹השלמים עשרים וארבעה› (“the-requital twenty and-four”)
+# ‹פרים אילם ששים› (“bullock ram sixty”)
+# ‹עתדים ששים כב› (“prepared sixty ?”)
+# ‹… זאת חנכת המזבח› (“this initiation the-altar”)
+# ‹אחרי המשח אתו› (“after rub-with-oil obj-marker-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:88."
+m.step("Num.7.88")
+# witness-tier presupposed read: on_the_day_and_after_the_same_day on
+# after_it_was_anointed — read, not installed
+m.witness_read("after_it_was_anointed", "on_the_day_and_after_the_same_day",
+                cites=["Sifrei Bamidbar 53:1", "Sifrei Bamidbar 57:1", "Onkelos Num 7:84", "Onkelos Num 7:85", "Onkelos Num 7:86", "Onkelos Num 7:87", "Onkelos Num 7:88"])
+
+# -------------------------- Num.7.89 · ETNACHTA_SPLIT ----------------------
+# ‹ובבא משה אל› (“and-in-come/bring Moses to”)
+# ‹אהל מועד לדבר› (“tent seasons to-speak”)
+# ‹אתו וישמע את› (“with-him/its and-hear obj-marker”)
+# ‹הקול מדבר אליו› (“the-voice/sound speak to-him/its”)
+# ‹מעל הכ … וידבר› (“from-over ? … and-speak”)
+# ‹אליו› (“to-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 7:89."
+m.step("Num.7.89")
+# witness-tier presupposed read: the_voice_speaking_itself_by_the_points on
+# the_voice_speaking_itself — read, not installed
+m.witness_read("the_voice_speaking_itself", "the_voice_speaking_itself_by_the_points",
+                cites=["Onkelos Num 7:89"])
+# witness-tier presupposed read:
+# two_verses_reconciled_by_a_third_thirteen_exclusions on
+# from_between_the_two_cherubim — read, not installed
+m.witness_read("from_between_the_two_cherubim", "two_verses_reconciled_by_a_third_thirteen_exclusions",
+                cites=["Sifrei Bamidbar 58:1", "Onkelos Num 7:89"])
+# witness-tier presupposed read: the_voice_great_not_low on
+# he_heard_the_voice — read, not installed
+m.witness_read("he_heard_the_voice", "the_voice_great_not_low",
+                cites=["Sifrei Bamidbar 58:2", "Onkelos Num 7:89"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('this_is_the_dedication', 'the_totals_by_the_taught_parser'), ('each_dish_a_hundred_and_thirty', 'temple_vessels_weights_each_credited_with_all'), ('after_it_was_anointed', 'on_the_day_and_after_the_same_day'), ('the_voice_speaking_itself', 'the_voice_speaking_itself_by_the_points'), ('from_between_the_two_cherubim', 'two_verses_reconciled_by_a_third_thirteen_exclusions'), ('he_heard_the_voice', 'the_voice_great_not_low')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Num 7:84', 'Onkelos Num 7:85', 'Onkelos Num 7:86', 'Onkelos Num 7:87', 'Onkelos Num 7:88']
+    assert all('the_totals_by_the_taught_parser' not in f for f in m.WORLD["facts"])
+    assert 'this_is_the_dedication' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifrei Bamidbar 54:1', 'Sifrei Bamidbar 55:1', 'Sifrei Bamidbar 56:1', 'Onkelos Num 7:85', 'Onkelos Num 7:86', 'Onkelos Num 7:87']
+    assert all('temple_vessels_weights_each_credited_with_all' not in f for f in m.WORLD["facts"])
+    assert 'each_dish_a_hundred_and_thirty' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifrei Bamidbar 53:1', 'Sifrei Bamidbar 57:1', 'Onkelos Num 7:84', 'Onkelos Num 7:85', 'Onkelos Num 7:86', 'Onkelos Num 7:87', 'Onkelos Num 7:88']
+    assert all('on_the_day_and_after_the_same_day' not in f for f in m.WORLD["facts"])
+    assert 'after_it_was_anointed' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Num 7:89']
+    assert all('the_voice_speaking_itself_by_the_points' not in f for f in m.WORLD["facts"])
+    assert 'the_voice_speaking_itself' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifrei Bamidbar 58:1', 'Onkelos Num 7:89']
+    assert all('two_verses_reconciled_by_a_third_thirteen_exclusions' not in f for f in m.WORLD["facts"])
+    assert 'from_between_the_two_cherubim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifrei Bamidbar 58:2', 'Onkelos Num 7:89']
+    assert all('the_voice_great_not_low' not in f for f in m.WORLD["facts"])
+    assert 'he_heard_the_voice' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_08_menorah_levites
+###############################################################################
+
+m = Machine("num_08_menorah_levites")
+
+# -------------------------- Num.8.1 · TREE_CLAIM ---------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:1."
+m.step("Num.8.1")
+
+# -------------------------- Num.8.2 · ETNACHTA_SPLIT -----------------------
+# ‹דבר אל אהרן› (“speak to Aaron”)
+# ‹ואמרת אליו … בהעלתך› (“and-say to-him/its … in-go-up-you/your”)
+# ‹את הנרת אל› (“obj-marker the-lamp to”)
+# ‹מול פני המנורה› (“abrupt face the-chandelier”)
+# ‹יאירו שבעת הנרות› (“give-light seven the-lamp”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:2."
+m.step("Num.8.2")
+# witness-tier presupposed read: the_lamps_face_the_middle on
+# toward_the_face_of_the_lampstand — read, not installed
+m.witness_read("toward_the_face_of_the_lampstand", "the_lamps_face_the_middle",
+                cites=["Sifrei Bamidbar 59:1", "Onkelos Num 8:2", "Onkelos Num 8:3"])
+
+# -------------------------- Num.8.3 · ETNACHTA_SPLIT -----------------------
+# ‹ויעש כן אהרן› (“and-make so Aaron”)
+# ‹אל מול פני› (“to abrupt face”)
+# ‹המנורה העלה נרתיה› (“the-chandelier go-up lamp-her/its”)
+# ‹… כאשר צוה יהוה› (“like-as/which command YHWH”)
+# ‹את משה› (“obj-marker Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:3."
+m.step("Num.8.3")
+# witness-tier presupposed read: the_three_facet_paradigm_again on
+# and_aaron_did_so — read, not installed
+m.witness_read("and_aaron_did_so", "the_three_facet_paradigm_again",
+                cites=["Sifrei Bamidbar 60:1", "Onkelos Num 8:3"])
+
+# -------------------------- Num.8.4 · ETNACHTA_SPLIT -----------------------
+# ‹וזה מעשה המנרה› (“and-this deed/work the-chandelier”)
+# ‹מקשה זהב עד› (“rounded-work gold until”)
+# ‹ירכה עד פרחה› (“thigh-her/its until calyx-her/its”)
+# ‹מקשה הוא … כמראה› (“rounded-work he/it … like-appearance”)
+# ‹אשר הראה יהוה› (“which see YHWH”)
+# ‹את משה כן› (“obj-marker Moses so”)
+# ‹עשה את המנרה› (“make obj-marker the-chandelier”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:4."
+m.step("Num.8.4")
+# witness-tier presupposed read: the_lampstand_against_the_trumpets on
+# beaten_work — read, not installed
+m.witness_read("beaten_work", "the_lampstand_against_the_trumpets",
+                cites=["Sifrei Bamidbar 61:1", "Onkelos Num 8:4"])
+
+# -------------------------- Num.8.5 · TREE_CLAIM ---------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:5."
+m.step("Num.8.5")
+
+# -------------------------- Num.8.6 · ETNACHTA_SPLIT -----------------------
+# ‹קח את הלוים› (“take obj-marker the-Levite”)
+# ‹מתוך בני ישראל› (“from-midst son Israel”)
+# ‹… וטהרת אתם› (“and-be-pure obj-marker-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:6."
+m.step("Num.8.6")
+
+# -------------------------- Num.8.7 · ETNACHTA_SPLIT -----------------------
+# ‹וכה תעשה להם› (“and-like-this make to-them/their”)
+# ‹לטהרם הזה עליהם› (“to-be-pure-them/their spirt over-them/their”)
+# ‹מי חטאת … והעבירו› (“waters sin-offering … and-pass-over”)
+# ‹תער על כל› (“knife over all”)
+# ‹בשרם וכבסו בגדיהם› (“flesh-them/their and-trample garment-them/their”)
+# ‹והטהרו› (“and-be-pure”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:7."
+m.step("Num.8.7")
+# witness-tier presupposed read: the_levites_rite_on_the_translation_alone
+# on water_of_purification — read, not installed
+m.witness_read("water_of_purification", "the_levites_rite_on_the_translation_alone",
+                cites=["Onkelos Num 8:6", "Onkelos Num 8:7", "Onkelos Num 8:8", "Onkelos Num 8:9", "Onkelos Num 8:10", "Onkelos Num 8:11", "Onkelos Num 8:12", "Onkelos Num 8:13", "Onkelos Num 8:14", "Onkelos Num 8:15"])
+
+# -------------------------- Num.8.8 · ETNACHTA_SPLIT -----------------------
+# ‹ולקחו פר בן› (“and-take bullock son”)
+# ‹בקר ומנחתו סלת› (“herd and-grain-offering-him/its flour”)
+# ‹בלולה בשמן … ופר› (“overflow in-oil … and-bullock”)
+# ‹שני בן בקר› (“second son herd”)
+# ‹תקח לחטאת› (“take to-sin-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:8."
+m.step("Num.8.8")
+
+# -------------------------- Num.8.9 · ETNACHTA_SPLIT -----------------------
+# ‹והקרבת את הלוים› (“and-bring-near obj-marker the-Levite”)
+# ‹לפני אהל מועד› (“to-face tent seasons”)
+# ‹… והקהלת את כל› (“and-convoke obj-marker all”)
+# ‹עדת בני ישראל› (“congregation son Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:9."
+m.step("Num.8.9")
+
+# -------------------------- Num.8.10 · ETNACHTA_SPLIT ----------------------
+# ‹והקרבת את הלוים› (“and-bring-near obj-marker the-Levite”)
+# ‹לפני יהוה … וסמכו› (“to-face YHWH … and-lay”)
+# ‹בני ישראל את› (“son Israel obj-marker”)
+# ‹ידיהם על הלוים› (“hand-them/their over the-Levite”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:10."
+m.step("Num.8.10")
+
+# -------------------------- Num.8.11 · ETNACHTA_SPLIT ----------------------
+# ‹והניף אהרן את› (“and-quiver Aaron obj-marker”)
+# ‹הלוים תנופה לפני› (“the-Levite brandishing to-face”)
+# ‹יהוה מאת בני› (“YHWH from-with son”)
+# ‹ישראל … והיו לעבד› (“Israel … and-be to-work/serve”)
+# ‹את עבדת יהוה› (“obj-marker service/work YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:11."
+m.step("Num.8.11")
+
+# -------------------------- Num.8.12 · ETNACHTA_SPLIT ----------------------
+# ‹והלוים יסמכו את› (“and-the-Levite lay obj-marker”)
+# ‹ידיהם על ראש› (“hand-them/their over head”)
+# ‹הפרים … ועשה את› (“the-bullock … and-make obj-marker”)
+# ‹האחד חטאת ואת› (“the-one sin-offering and-obj-marker”)
+# ‹האחד עלה ליהוה› (“the-one burnt-offering to-YHWH”)
+# ‹לכפר על הלוים› (“to-atone over the-Levite”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:12."
+m.step("Num.8.12")
+
+# -------------------------- Num.8.13 · ETNACHTA_SPLIT ----------------------
+# ‹והעמדת את הלוים› (“and-stand obj-marker the-Levite”)
+# ‹לפני אהרן ולפני› (“to-face Aaron and-to-face”)
+# ‹בניו … והנפת אתם› (“son-him/its … and-quiver obj-marker-them/their”)
+# ‹תנופה ליהוה› (“brandishing to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:13."
+m.step("Num.8.13")
+
+# -------------------------- Num.8.14 · ETNACHTA_SPLIT ----------------------
+# ‹והבדלת את הלוים› (“and-divide obj-marker the-Levite”)
+# ‹מתוך בני ישראל› (“from-midst son Israel”)
+# ‹… והיו לי הלוים› (“and-be to-me/my the-Levite”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:14."
+m.step("Num.8.14")
+
+# -------------------------- Num.8.15 · ETNACHTA_SPLIT ----------------------
+# ‹ואחרי כן יבאו› (“and-after so come/bring”)
+# ‹הלוים לעבד את› (“the-Levite to-work/serve obj-marker”)
+# ‹אהל מועד … וטהרת› (“tent seasons … and-be-pure”)
+# ‹אתם והנפת אתם› (“obj-marker-them/their and-quiver obj-marker-them/their”)
+# ‹תנופה› (“brandishing”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:15."
+m.step("Num.8.15")
+
+# -------------------------- Num.8.16 · COND_כי (“that”) --------------------
+# ‹כי נתנים נתנים› (“that set set”)
+# ‹המה לי מתוך› (“they to-me/my from-midst”)
+# ‹בני ישראל … תחת› (“son Israel … under”)
+# ‹פטרת כל רחם› (“fissure all womb”)
+# ‹בכור כל מבני› (“firstborn all from-son”)
+# ‹ישראל לקחתי אתם› (“Israel take obj-marker-them/their”)
+# ‹לי› (“to-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:16."
+m.step("Num.8.16")
+# witness-tier presupposed read: the_second_seats_delta on given_given —
+# read, not installed
+m.witness_read("given_given", "the_second_seats_delta",
+                cites=["Onkelos Num 8:16", "Onkelos Num 8:17", "Onkelos Num 8:18", "Onkelos Num 8:19"])
+
+# -------------------------- Num.8.17 · COND_כי (“that”) --------------------
+# ‹כי לי כל› (“that to-me/my all”)
+# ‹בכור בבני ישראל› (“firstborn in-son Israel”)
+# ‹באדם ובבהמה … ביום› (“in-human and-in-livestock … in-day”)
+# ‹הכתי כל בכור› (“strike-me/my all firstborn”)
+# ‹בארץ מצרים הקדשתי› (“in-earth Egypt sanctify”)
+# ‹אתם לי› (“obj-marker-them/their to-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:17."
+m.step("Num.8.17")
+
+# -------------------------- Num.8.18 · TREE_CLAIM --------------------------
+# ‹ואקח את הלוים› (“and-take obj-marker the-Levite”)
+# ‹… תחת כל בכור› (“under all firstborn”)
+# ‹בבני ישראל› (“in-son Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:18."
+m.step("Num.8.18")
+
+# -------------------------- Num.8.19 · ETNACHTA_SPLIT ----------------------
+# ‹ואתנה את הלוים› (“and-set-ward obj-marker the-Levite”)
+# ‹נתנים לאהרן ולבניו› (“set to-Aaron and-to-son-him/its”)
+# ‹מתוך בני ישראל› (“from-midst son Israel”)
+# ‹לעבד את עבד› (“to-work/serve obj-marker servant”)
+# ‹… ולא יהיה בבני› (“and-not be in-son”)
+# ‹ישראל נגף בגשת› (“Israel trip in-be”)
+# ‹בני ישראל אל› (“son Israel to”)
+# ‹הקדש› (“the-holiness”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:19."
+m.step("Num.8.19")
+# witness-tier presupposed read: unto_me_is_forever_ten_seats on
+# the_children_of_israel_five_times — read, not installed
+m.witness_read("the_children_of_israel_five_times", "unto_me_is_forever_ten_seats",
+                cites=["Onkelos Num 8:14", "Onkelos Num 8:15", "Onkelos Num 8:16", "Onkelos Num 8:17", "Onkelos Num 8:18", "Onkelos Num 8:19"])
+
+# -------------------------- Num.8.20 · ETNACHTA_SPLIT ----------------------
+# ‹ויעש משה ואהרן› (“and-make Moses and-Aaron”)
+# ‹וכל עדת בני› (“and-all congregation son”)
+# ‹ישראל ללוים … ככל› (“Israel to-Levite … like-all”)
+# ‹אשר צוה יהוה› (“which command YHWH”)
+# ‹את משה ללוים› (“obj-marker Moses to-Levite”)
+# ‹כן עשו להם› (“so make to-them/their”)
+# ‹בני ישראל› (“son Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:20."
+m.step("Num.8.20")
+
+# -------------------------- Num.8.21 · ETNACHTA_SPLIT ----------------------
+# ‹ויתחטאו הלוים ויכבסו› (“and-sin the-Levite and-trample”)
+# ‹בגדיהם וינף אהרן› (“garment-them/their and-quiver Aaron”)
+# ‹אתם תנופה לפני› (“obj-marker-them/their brandishing to-face”)
+# ‹יהוה … ויכפר עליהם› (“YHWH … and-atone over-them/their”)
+# ‹אהרן לטהרם› (“Aaron to-be-pure-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:21."
+m.step("Num.8.21")
+
+# -------------------------- Num.8.22 · ETNACHTA_SPLIT ----------------------
+# ‹ואחרי כן באו› (“and-after so come/bring”)
+# ‹הלוים לעבד את› (“the-Levite to-work/serve obj-marker”)
+# ‹עבדתם באהל מועד› (“service/work-them/their in-tent seasons”)
+# ‹לפני אהרן ולפני› (“to-face Aaron and-to-face”)
+# ‹ב … כאשר צוה› (“? … like-as/which command”)
+# ‹יהוה את משה› (“YHWH obj-marker Moses”)
+# ‹על הלוים כן› (“over the-Levite so”)
+# ‹עשו להם› (“make to-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:22."
+m.step("Num.8.22")
+
+# -------------------------- Num.8.23 · TREE_CLAIM --------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:23."
+m.step("Num.8.23")
+
+# -------------------------- Num.8.24 · ETNACHTA_SPLIT ----------------------
+# ‹זאת אשר ללוים› (“this which to-Levite”)
+# ‹… מבן חמש ועשרים› (“from-son five and-twenty”)
+# ‹שנה ומעלה יבוא› (“years and-upper-part-ward come/bring”)
+# ‹לצבא צבא בעבדת› (“to-mass host in-service/work”)
+# ‹אהל מועד› (“tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:24."
+m.step("Num.8.24")
+# witness-tier presupposed read:
+# the_age_a_three_setting_parameter_the_run_rewrites on from_twenty_five —
+# read, not installed
+m.witness_read("from_twenty_five", "the_age_a_three_setting_parameter_the_run_rewrites",
+                cites=["Sifrei Bamidbar 62:1", "Sifrei Bamidbar 63:1", "Onkelos Num 8:24", "Onkelos Num 8:25", "Onkelos Num 8:26"])
+
+# -------------------------- Num.8.25 · ETNACHTA_SPLIT ----------------------
+# ‹ומבן חמשים שנה› (“and-from-son fifty years”)
+# ‹ישוב מצבא העבדה› (“return from-host the-service/work”)
+# ‹… ולא יעבד עוד› (“and-not work/serve still/again”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:25."
+m.step("Num.8.25")
+
+# -------------------------- Num.8.26 · ETNACHTA_SPLIT ----------------------
+# ‹ושרת את אחיו› (“and-attend-as-a-menial obj-marker brother-him/its”)
+# ‹באהל מועד לשמר› (“in-tent seasons to-keep/guard”)
+# ‹משמרת ועבדה לא› (“watch and-service/work not”)
+# ‹יעבד … ככה תעשה› (“work/serve … just-so make”)
+# ‹ללוים במשמרתם› (“to-Levite in-watch-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 8:26."
+m.step("Num.8.26")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('toward_the_face_of_the_lampstand', 'the_lamps_face_the_middle'), ('and_aaron_did_so', 'the_three_facet_paradigm_again'), ('beaten_work', 'the_lampstand_against_the_trumpets'), ('water_of_purification', 'the_levites_rite_on_the_translation_alone'), ('given_given', 'the_second_seats_delta'), ('the_children_of_israel_five_times', 'unto_me_is_forever_ten_seats'), ('from_twenty_five', 'the_age_a_three_setting_parameter_the_run_rewrites')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifrei Bamidbar 59:1', 'Onkelos Num 8:2', 'Onkelos Num 8:3']
+    assert all('the_lamps_face_the_middle' not in f for f in m.WORLD["facts"])
+    assert 'toward_the_face_of_the_lampstand' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifrei Bamidbar 60:1', 'Onkelos Num 8:3']
+    assert all('the_three_facet_paradigm_again' not in f for f in m.WORLD["facts"])
+    assert 'and_aaron_did_so' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifrei Bamidbar 61:1', 'Onkelos Num 8:4']
+    assert all('the_lampstand_against_the_trumpets' not in f for f in m.WORLD["facts"])
+    assert 'beaten_work' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Num 8:6', 'Onkelos Num 8:7', 'Onkelos Num 8:8', 'Onkelos Num 8:9', 'Onkelos Num 8:10', 'Onkelos Num 8:11', 'Onkelos Num 8:12', 'Onkelos Num 8:13', 'Onkelos Num 8:14', 'Onkelos Num 8:15']
+    assert all('the_levites_rite_on_the_translation_alone' not in f for f in m.WORLD["facts"])
+    assert 'water_of_purification' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Num 8:16', 'Onkelos Num 8:17', 'Onkelos Num 8:18', 'Onkelos Num 8:19']
+    assert all('the_second_seats_delta' not in f for f in m.WORLD["facts"])
+    assert 'given_given' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Num 8:14', 'Onkelos Num 8:15', 'Onkelos Num 8:16', 'Onkelos Num 8:17', 'Onkelos Num 8:18', 'Onkelos Num 8:19']
+    assert all('unto_me_is_forever_ten_seats' not in f for f in m.WORLD["facts"])
+    assert 'the_children_of_israel_five_times' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifrei Bamidbar 62:1', 'Sifrei Bamidbar 63:1', 'Onkelos Num 8:24', 'Onkelos Num 8:25', 'Onkelos Num 8:26']
+    assert all('the_age_a_three_setting_parameter_the_run_rewrites' not in f for f in m.WORLD["facts"])
+    assert 'from_twenty_five' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_10_trumpets_depart
+###############################################################################
+
+m = Machine("num_10_trumpets_depart")
+
+# -------------------------- Num.10.1 · TREE_CLAIM --------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:1."
+m.step("Num.10.1")
+
+# -------------------------- Num.10.2 · ETNACHTA_SPLIT ----------------------
+# ‹עשה לך שתי› (“make to-you/your two”)
+# ‹חצוצרת כסף מקשה› (“trumpet silver rounded-work”)
+# ‹תעשה אתם … והיו› (“make obj-marker-them/their … and-be”)
+# ‹לך למקרא העדה› (“to-you/your to-something-called-out the-congregation”)
+# ‹ולמסע את המחנות› (“and-to-departure obj-marker the-camp”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:2."
+m.step("Num.10.2")
+# witness-tier presupposed read: two_trumpets_three_spellings on
+# two_trumpets_of_silver — read, not installed
+m.witness_read("two_trumpets_of_silver", "two_trumpets_three_spellings",
+                cites=["Sifrei Bamidbar 72:1", "Sifrei Bamidbar 73:1", "Onkelos Num 10:2", "Onkelos Num 10:3", "Onkelos Num 10:4"])
+
+# -------------------------- Num.10.3 · ETNACHTA_SPLIT ----------------------
+# ‹ותקעו בהן … ונועדו› (“and-clatter in-them/their … and-fix-upon”)
+# ‹אליך כל העדה› (“to-you/your all the-congregation”)
+# ‹אל פתח אהל› (“to opening tent”)
+# ‹מועד› (“seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:3."
+m.step("Num.10.3")
+
+# -------------------------- Num.10.4 · COND_ואם (“and-if”) -----------------
+# ‹ואם באחת יתקעו› (“and-if in-one clatter”)
+# ‹… ונועדו אליך הנשיאים› (“and-fix-upon to-you/your the-prince”)
+# ‹ראשי אלפי ישראל› (“head thousand Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:4."
+m.step("Num.10.4")
+
+# -------------------------- Num.10.5 · ETNACHTA_SPLIT ----------------------
+# ‹ותקעתם תרועה … ונסעו› (“and-clatter clamor … and-journey”)
+# ‹המחנות החנים קדמה› (“the-camp the-encamp front-ward”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:5."
+m.step("Num.10.5")
+# witness-tier presupposed read: tekiah_teruah_the_wail on blow_a_teruah —
+# read, not installed
+m.witness_read("blow_a_teruah", "tekiah_teruah_the_wail",
+                cites=["Sifrei Bamidbar 73:2", "Sifrei Bamidbar 73:3", "Sifrei Bamidbar 74:1", "Onkelos Num 10:5", "Onkelos Num 10:6", "Onkelos Num 10:7"])
+
+# -------------------------- Num.10.6 · ETNACHTA_SPLIT ----------------------
+# ‹ותקעתם תרועה שנית› (“and-clatter clamor second”)
+# ‹ונסעו המחנות החנים› (“and-journey the-camp the-encamp”)
+# ‹תימנה … תרועה יתקעו› (“south-ward … clamor clatter”)
+# ‹למסעיהם› (“to-departure-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:6."
+m.step("Num.10.6")
+
+# -------------------------- Num.10.7 · ETNACHTA_SPLIT ----------------------
+# ‹ובהקהיל את הקהל› (“and-in-convoke obj-marker the-assemblage”)
+# ‹… תתקעו ולא תריעו› (“clatter and-not mar”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:7."
+m.step("Num.10.7")
+
+# -------------------------- Num.10.8 · ETNACHTA_SPLIT ----------------------
+# ‹ובני אהרן הכהנים› (“and-son Aaron the-priest”)
+# ‹יתקעו בחצצרות … והיו› (“clatter in-trumpet … and-be”)
+# ‹לכם לחקת עולם› (“to-you/your(pl) to-statute forever”)
+# ‹לדרתיכם› (“to-generation-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:8."
+m.step("Num.10.8")
+# witness-tier presupposed read:
+# tarfon_saw_and_forgot_not_for_the_generations on
+# the_sons_of_aaron_shall_blow — read, not installed
+m.witness_read("the_sons_of_aaron_shall_blow", "tarfon_saw_and_forgot_not_for_the_generations",
+                cites=["Sifrei Bamidbar 75:1", "Onkelos Num 10:8"])
+
+# -------------------------- Num.10.9 · COND_וכי (“and-that”) ---------------
+# ‹וכי תבאו מלחמה› (“and-that come/bring battle”)
+# ‹בארצכם על הצר› (“in-earth-you/your(pl) over the-narrow”)
+# ‹הצרר אתכם והרעתם› (“the-cramp obj-marker-you/your(pl) and-mar”)
+# ‹בחצצרות … ונזכרתם לפני› (“in-trumpet … and-mark to-face”)
+# ‹יהוה אלהיכם ונושעתם› (“YHWH God-you/your(pl) and-be-open”)
+# ‹מאיביכם› (“from-hating-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:9."
+m.step("Num.10.9")
+# witness-tier presupposed read: oppression_gladness_kingship on
+# war_in_your_land — read, not installed
+m.witness_read("war_in_your_land", "oppression_gladness_kingship",
+                cites=["Sifrei Bamidbar 76:1", "Sifrei Bamidbar 77:1", "Onkelos Num 10:9", "Onkelos Num 10:10"])
+
+# -------------------------- Num.10.10 · ETNACHTA_SPLIT ---------------------
+# ‹וביום שמחתכם ובמועדיכם› (“and-in-day blithesomeness-you/your(pl) and-in-
+# seasons-you/your(pl)”)
+# ‹ובראשי חדשיכם ותקעתם› (“and-in-head new-moon-you/your(pl) and-clatter”)
+# ‹בחצצרת על עלתיכם› (“in-trumpet over burnt-offering-you/your(pl)”)
+# ‹… והיו לכם לזכרון› (“and-be to-you/your(pl) to-memento”)
+# ‹לפני אלהיכם אני› (“to-face God-you/your(pl)”)
+# ‹יהוה אלהיכם› (“YHWH God-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:10."
+m.step("Num.10.10")
+
+# -------------------------- Num.10.11 · ETNACHTA_SPLIT ---------------------
+# ‹ויהי בשנה השנית› (“and-be in-years the-second”)
+# ‹בחדש השני בעשרים› (“in-new-moon the-second in-twenty”)
+# ‹בחדש … נעלה הענן› (“in-new-moon … go-up the-cloud”)
+# ‹מעל משכן העדת› (“from-over tabernacle the-testimony”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:11."
+m.step("Num.10.11")
+# witness-tier presupposed read: the_tapes_next_forward_marker on
+# on_the_twentieth — read, not installed
+m.witness_read("on_the_twentieth", "the_tapes_next_forward_marker",
+                cites=["Onkelos Num 10:11", "Onkelos Num 10:12", "Onkelos Num 10:13"])
+
+# -------------------------- Num.10.12 · ETNACHTA_SPLIT ---------------------
+# ‹ויסעו בני ישראל› (“and-journey son Israel”)
+# ‹למסעיהם ממדבר סיני› (“to-departure-them/their from-pasture Sinai”)
+# ‹… וישכן הענן במדבר› (“and-reside the-cloud in-pasture”)
+# ‹פארן› (“Paran”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:12."
+m.step("Num.10.12")
+
+# -------------------------- Num.10.13 · ETNACHTA_SPLIT ---------------------
+# ‹ויסעו בראשנה … על› (“and-journey in-first … over”)
+# ‹פי יהוה ביד› (“mouth YHWH in-hand”)
+# ‹משה› (“Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:13."
+m.step("Num.10.13")
+
+# -------------------------- Num.10.14 · ETNACHTA_SPLIT ---------------------
+# ‹ויסע דגל מחנה› (“and-journey flag camp”)
+# ‹בני יהודה בראשנה› (“son Judah in-first”)
+# ‹לצבאתם … ועל צבאו› (“to-host-them/their … and-over host-him/its”)
+# ‹נחשון בן עמינדב› (“Naashon son Amminadab”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:14."
+m.step("Num.10.14")
+# witness-tier presupposed read: the_camps_order_four_spellings on
+# the_standard_of_judah — read, not installed
+m.witness_read("the_standard_of_judah", "the_camps_order_four_spellings",
+                cites=["Onkelos Num 10:14", "Onkelos Num 10:15", "Onkelos Num 10:16", "Onkelos Num 10:17", "Onkelos Num 10:18", "Onkelos Num 10:19", "Onkelos Num 10:20", "Onkelos Num 10:21", "Onkelos Num 10:22", "Onkelos Num 10:23", "Onkelos Num 10:24", "Onkelos Num 10:25", "Onkelos Num 10:26", "Onkelos Num 10:27", "Onkelos Num 10:28"])
+
+# -------------------------- Num.10.15 · ETNACHTA_SPLIT ---------------------
+# ‹ועל צבא מטה› (“and-over host staff/tribe”)
+# ‹בני יששכר … נתנאל› (“son Issachar … Nethaneel”)
+# ‹בן צוער› (“son Zuar”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:15."
+m.step("Num.10.15")
+
+# -------------------------- Num.10.16 · ETNACHTA_SPLIT ---------------------
+# ‹ועל צבא מטה› (“and-over host staff/tribe”)
+# ‹בני זבולן … אליאב› (“son Zebulun … Eliab”)
+# ‹בן חלון› (“son Helon”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:16."
+m.step("Num.10.16")
+
+# -------------------------- Num.10.17 · ETNACHTA_SPLIT ---------------------
+# ‹והורד המשכן … ונסעו› (“and-go-down the-tabernacle … and-journey”)
+# ‹בני גרשון ובני› (“son Gershon and-son”)
+# ‹מררי נשאי המשכן› (“Merari lift/carry the-tabernacle”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:17."
+m.step("Num.10.17")
+
+# -------------------------- Num.10.18 · ETNACHTA_SPLIT ---------------------
+# ‹ונסע דגל מחנה› (“and-journey flag camp”)
+# ‹ראובן לצבאתם … ועל› (“Reuben to-host-them/their … and-over”)
+# ‹צבאו אליצור בן› (“host-him/its Elizur son”)
+# ‹שדיאור› (“Shedeur”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:18."
+m.step("Num.10.18")
+
+# -------------------------- Num.10.19 · ETNACHTA_SPLIT ---------------------
+# ‹ועל צבא מטה› (“and-over host staff/tribe”)
+# ‹בני שמעון … שלמיאל› (“son Simeon … Shelumiel”)
+# ‹בן צורי שדי› (“son Zurishaddai”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:19."
+m.step("Num.10.19")
+
+# -------------------------- Num.10.20 · ETNACHTA_SPLIT ---------------------
+# ‹ועל צבא מטה› (“and-over host staff/tribe”)
+# ‹בני גד … אליסף› (“son Gad … Eliasaph”)
+# ‹בן דעואל› (“son Deuel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:20."
+m.step("Num.10.20")
+
+# -------------------------- Num.10.21 · ETNACHTA_SPLIT ---------------------
+# ‹ונסעו הקהתים נשאי› (“and-journey the-Kohathite lift/carry”)
+# ‹המקדש … והקימו את› (“the-consecrated-thing … and-arise obj-marker”)
+# ‹המשכן עד באם› (“the-tabernacle until come/bring-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:21."
+m.step("Num.10.21")
+
+# -------------------------- Num.10.22 · ETNACHTA_SPLIT ---------------------
+# ‹ונסע דגל מחנה› (“and-journey flag camp”)
+# ‹בני אפרים לצבאתם› (“son Ephraim to-host-them/their”)
+# ‹… ועל צבאו אלישמע› (“and-over host-him/its Elishama”)
+# ‹בן עמיהוד› (“son Ammihud”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:22."
+m.step("Num.10.22")
+
+# -------------------------- Num.10.23 · ETNACHTA_SPLIT ---------------------
+# ‹ועל צבא מטה› (“and-over host staff/tribe”)
+# ‹בני מנשה … גמליאל› (“son Manasseh … Gamaliel”)
+# ‹בן פדה צור› (“son Pedahzur Pedahzur”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:23."
+m.step("Num.10.23")
+
+# -------------------------- Num.10.24 · ETNACHTA_SPLIT ---------------------
+# ‹ועל צבא מטה› (“and-over host staff/tribe”)
+# ‹בני בנימן … אבידן› (“son Benjamin … Abidan”)
+# ‹בן גדעוני› (“son Gideoni”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:24."
+m.step("Num.10.24")
+
+# -------------------------- Num.10.25 · ETNACHTA_SPLIT ---------------------
+# ‹ונסע דגל מחנה› (“and-journey flag camp”)
+# ‹בני דן מאסף› (“son Daniel gather-for-any-purpose”)
+# ‹לכל המחנת לצבאתם› (“to-all the-camp to-host-them/their”)
+# ‹… ועל צבאו אחיעזר› (“and-over host-him/its Ahiezer”)
+# ‹בן עמישדי› (“son Ammishaddai”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:25."
+m.step("Num.10.25")
+
+# -------------------------- Num.10.26 · ETNACHTA_SPLIT ---------------------
+# ‹ועל צבא מטה› (“and-over host staff/tribe”)
+# ‹בני אשר … פגעיאל› (“son Asher … Pagiel”)
+# ‹בן עכרן› (“son Ocran”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:26."
+m.step("Num.10.26")
+
+# -------------------------- Num.10.27 · ETNACHTA_SPLIT ---------------------
+# ‹ועל צבא מטה› (“and-over host staff/tribe”)
+# ‹בני נפתלי … אחירע› (“son Naphtali … Ahira”)
+# ‹בן עינן› (“son Enan”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:27."
+m.step("Num.10.27")
+
+# -------------------------- Num.10.28 · ETNACHTA_SPLIT ---------------------
+# ‹אלה מסעי בני› (“these departure son”)
+# ‹ישראל לצבאתם› (“Israel to-host-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 10:28."
+m.step("Num.10.28")
+
+# -------------------------- Num.10.29 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר משה לחבב› (“and-say Moses to-Hobab”)
+# ‹בן רעואל המדיני› (“son Raguel the-Midjanite”)
+# ‹חתן משה נסעים› (“give-away-in-marriage Moses journey”)
+# ‹אנחנו אל המקום› (“we to the-place”)
+# ‹… לכה אתנו והטבנו› (“go-ward with-us/our and-be-make-well”)
+# ‹לך כי יהוה› (“to-you/your that YHWH”)
+# ‹דבר טוב על› (“speak good over”)
+# ‹ישראל› (“Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:29."
+m.step("Num.10.29")
+# witness-tier presupposed read: hobab_the_father_in_law_eyes_for_us on
+# hobab_son_of_reuel — read, not installed
+m.witness_read("hobab_son_of_reuel", "hobab_the_father_in_law_eyes_for_us",
+                cites=["Sifrei Bamidbar 78:1", "Sifrei Bamidbar 78:3", "Sifrei Bamidbar 79:1", "Sifrei Bamidbar 80:1", "Sifrei Bamidbar 81:1", "Onkelos Num 10:29", "Onkelos Num 10:30", "Onkelos Num 10:31", "Onkelos Num 10:32"])
+
+# -------------------------- Num.10.30 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר אליו לא› (“and-say to-him/its not”)
+# ‹אלך … כי אם› (“go … very-widely-used-as-a-relati as-demonstrative”)
+# ‹אל ארצי ואל› (“to earth-me/my and-to”)
+# ‹מולדתי אלך› (“nativity-me/my go”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:30."
+m.step("Num.10.30")
+
+# -------------------------- Num.10.31 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר אל נא› (“and-say do-not please”)
+# ‹תעזב אתנו … כי› (“loosen obj-marker-us/our … very-widely-used-as-a-
+# relati”)
+# ‹על כן ידעת› (“above set-upright know”)
+# ‹חנתנו במדבר והיית› (“encamp-us/our in-pasture and-be”)
+# ‹לנו לעינים› (“to-us/our to-eye”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:31."
+m.step("Num.10.31")
+
+# -------------------------- Num.10.32 · COND_כי (“that”) -------------------
+# ‹והיה כי תלך› (“and-be that go”)
+# ‹עמנו … והיה הטוב› (“with-us/our … and-be the-good-in-the-widest-sense”)
+# ‹ההוא אשר ייטיב› (“that which do-well”)
+# ‹יהוה עמנו והטבנו› (“YHWH with-us/our and-be-make-well”)
+# ‹לך› (“to-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:32."
+m.step("Num.10.32")
+
+# -------------------------- Num.10.33 · ETNACHTA_SPLIT ---------------------
+# ‹ויסעו מהר יהוה› (“and-journey from-mountain YHWH”)
+# ‹דרך שלשת ימים› (“way/road three day”)
+# ‹… וארון ברית יהוה› (“and-ark covenant YHWH”)
+# ‹נסע לפניהם דרך› (“journey to-face-them/their way/road”)
+# ‹שלשת ימים לתור› (“three day to-meander-about”)
+# ‹להם מנוחה› (“to-them/their repose”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:33."
+m.step("Num.10.33")
+# witness-tier presupposed read: the_ark_spies_the_seven_clouds on
+# a_journey_of_three_days — read, not installed
+m.witness_read("a_journey_of_three_days", "the_ark_spies_the_seven_clouds",
+                cites=["Sifrei Bamidbar 82:1", "Sifrei Bamidbar 83:1", "Sifrei Bamidbar 83:2", "Sifrei Bamidbar 83:3", "Onkelos Num 10:33", "Onkelos Num 10:34"])
+
+# -------------------------- Num.10.34 · ETNACHTA_SPLIT ---------------------
+# ‹וענן יהוה עליהם› (“and-cloud YHWH over-them/their”)
+# ‹יומם … בנסעם מן› (“daily … in-journey-them/their from”)
+# ‹המחנה› (“the-camp”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:34."
+m.step("Num.10.34")
+
+# -------------------------- Num.10.35 · ETNACHTA_SPLIT ---------------------
+# ‹ויהי בנסע הארן› (“and-be in-journey the-ark”)
+# ‹ויאמר משה … קומה› (“and-say Moses … arise-ward”)
+# ‹יהוה ויפצו איביך› (“YHWH and-dash-in-pieces hating-you/your”)
+# ‹וינסו משנאיך מפניך› (“and-flit hate-you/your from-face-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:35."
+m.step("Num.10.35")
+# witness-tier presupposed read: the_signs_eighty_five_letters on
+# when_the_ark_journeyed — read, not installed
+m.witness_read("when_the_ark_journeyed", "the_signs_eighty_five_letters",
+                cites=["Sifrei Bamidbar 84:1", "Sifrei Bamidbar 84:2", "Sifrei Bamidbar 84:3", "Sifrei Bamidbar 84:5", "Onkelos Num 10:35", "Onkelos Num 10:36"])
+# witness-tier presupposed read: scriptures_euphemisms on your_haters —
+# read, not installed
+m.witness_read("your_haters", "scriptures_euphemisms",
+                cites=["Sifrei Bamidbar 84:4", "Onkelos Num 10:35"])
+
+# -------------------------- Num.10.36 · ETNACHTA_SPLIT ---------------------
+# ‹ובנחה יאמר … שובה› (“and-in-rest-him/its say … return-ward”)
+# ‹יהוה רבבות אלפי› (“YHWH abundance thousand”)
+# ‹ישראל› (“Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 10:36."
+m.step("Num.10.36")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('two_trumpets_of_silver', 'two_trumpets_three_spellings'), ('blow_a_teruah', 'tekiah_teruah_the_wail'), ('the_sons_of_aaron_shall_blow', 'tarfon_saw_and_forgot_not_for_the_generations'), ('war_in_your_land', 'oppression_gladness_kingship'), ('on_the_twentieth', 'the_tapes_next_forward_marker'), ('the_standard_of_judah', 'the_camps_order_four_spellings'), ('hobab_son_of_reuel', 'hobab_the_father_in_law_eyes_for_us'), ('a_journey_of_three_days', 'the_ark_spies_the_seven_clouds'), ('when_the_ark_journeyed', 'the_signs_eighty_five_letters'), ('your_haters', 'scriptures_euphemisms')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifrei Bamidbar 72:1', 'Sifrei Bamidbar 73:1', 'Onkelos Num 10:2', 'Onkelos Num 10:3', 'Onkelos Num 10:4']
+    assert all('two_trumpets_three_spellings' not in f for f in m.WORLD["facts"])
+    assert 'two_trumpets_of_silver' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifrei Bamidbar 73:2', 'Sifrei Bamidbar 73:3', 'Sifrei Bamidbar 74:1', 'Onkelos Num 10:5', 'Onkelos Num 10:6', 'Onkelos Num 10:7']
+    assert all('tekiah_teruah_the_wail' not in f for f in m.WORLD["facts"])
+    assert 'blow_a_teruah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifrei Bamidbar 75:1', 'Onkelos Num 10:8']
+    assert all('tarfon_saw_and_forgot_not_for_the_generations' not in f for f in m.WORLD["facts"])
+    assert 'the_sons_of_aaron_shall_blow' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifrei Bamidbar 76:1', 'Sifrei Bamidbar 77:1', 'Onkelos Num 10:9', 'Onkelos Num 10:10']
+    assert all('oppression_gladness_kingship' not in f for f in m.WORLD["facts"])
+    assert 'war_in_your_land' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Num 10:11', 'Onkelos Num 10:12', 'Onkelos Num 10:13']
+    assert all('the_tapes_next_forward_marker' not in f for f in m.WORLD["facts"])
+    assert 'on_the_twentieth' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Num 10:14', 'Onkelos Num 10:15', 'Onkelos Num 10:16', 'Onkelos Num 10:17', 'Onkelos Num 10:18', 'Onkelos Num 10:19', 'Onkelos Num 10:20', 'Onkelos Num 10:21', 'Onkelos Num 10:22', 'Onkelos Num 10:23', 'Onkelos Num 10:24', 'Onkelos Num 10:25', 'Onkelos Num 10:26', 'Onkelos Num 10:27', 'Onkelos Num 10:28']
+    assert all('the_camps_order_four_spellings' not in f for f in m.WORLD["facts"])
+    assert 'the_standard_of_judah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifrei Bamidbar 78:1', 'Sifrei Bamidbar 78:3', 'Sifrei Bamidbar 79:1', 'Sifrei Bamidbar 80:1', 'Sifrei Bamidbar 81:1', 'Onkelos Num 10:29', 'Onkelos Num 10:30', 'Onkelos Num 10:31', 'Onkelos Num 10:32']
+    assert all('hobab_the_father_in_law_eyes_for_us' not in f for f in m.WORLD["facts"])
+    assert 'hobab_son_of_reuel' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifrei Bamidbar 82:1', 'Sifrei Bamidbar 83:1', 'Sifrei Bamidbar 83:2', 'Sifrei Bamidbar 83:3', 'Onkelos Num 10:33', 'Onkelos Num 10:34']
+    assert all('the_ark_spies_the_seven_clouds' not in f for f in m.WORLD["facts"])
+    assert 'a_journey_of_three_days' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifrei Bamidbar 84:1', 'Sifrei Bamidbar 84:2', 'Sifrei Bamidbar 84:3', 'Sifrei Bamidbar 84:5', 'Onkelos Num 10:35', 'Onkelos Num 10:36']
+    assert all('the_signs_eighty_five_letters' not in f for f in m.WORLD["facts"])
+    assert 'when_the_ark_journeyed' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifrei Bamidbar 84:4', 'Onkelos Num 10:35']
+    assert all('scriptures_euphemisms' not in f for f in m.WORLD["facts"])
+    assert 'your_haters' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_11_complaint_quail
+###############################################################################
+
+m = Machine("num_11_complaint_quail")
+
+# -------------------------- Num.11.1 · ETNACHTA_SPLIT ----------------------
+# ‹ויהי העם כמתאננים› (“and-be the-people like-mourn”)
+# ‹רע באזני יהוה› (“bad in-broadness.-i.e.-the-ear YHWH”)
+# ‹… וישמע יהוה ויחר› (“and-hear YHWH and-glow”)
+# ‹אפו ותבער בם› (“nose-him/its and-kindle in-them/their”)
+# ‹אש יהוה ותאכל› (“fire YHWH and-eat”)
+# ‹בקצה המחנה› (“in-end the-camp”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:1."
+m.step("Num.11.1")
+# witness-tier presupposed read: the_people_the_fire_sank_names_by_the_event
+# on the_murmurers — read, not installed
+m.witness_read("the_murmurers", "the_people_the_fire_sank_names_by_the_event",
+                cites=["Sifrei Bamidbar 85:1", "Sifrei Bamidbar 86:1", "Onkelos Num 11:1", "Onkelos Num 11:2", "Onkelos Num 11:3"])
+
+# -------------------------- Num.11.2 · ETNACHTA_SPLIT ----------------------
+# ‹ויצעק העם אל› (“and-shriek the-people to”)
+# ‹משה … ויתפלל משה› (“Moses … and-judge Moses”)
+# ‹אל יהוה ותשקע› (“to YHWH and-subside”)
+# ‹האש› (“the-fire”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:2."
+m.step("Num.11.2")
+
+# -------------------------- Num.11.3 · ETNACHTA_SPLIT ----------------------
+# ‹ויקרא שם המקום› (“and-call name the-place”)
+# ‹ההוא תבערה … כי› (“that Taberah … that”)
+# ‹בערה בם אש› (“kindle in-them/their fire”)
+# ‹יהוה› (“YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:3."
+m.step("Num.11.3")
+
+# -------------------------- Num.11.4 · ETNACHTA_SPLIT ----------------------
+# ‹והאספסף אשר בקרבו› (“and-the-gathered-up-together which in-nearest-part-
+# him/its”)
+# ‹התאוו תאוה … וישבו› (“wish-for longing … and-return”)
+# ‹ויבכו גם בני› (“and-weep also son”)
+# ‹ישראל ויאמרו מי› (“Israel and-say who?”)
+# ‹יאכלנו בשר› (“eat-us/our flesh”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:4."
+m.step("Num.11.4")
+# witness-tier presupposed read: the_mixed_multitude_the_five_foods on
+# the_rabble — read, not installed
+m.witness_read("the_rabble", "the_mixed_multitude_the_five_foods",
+                cites=["Sifrei Bamidbar 86:1", "Sifrei Bamidbar 87:1", "Onkelos Num 11:4", "Onkelos Num 11:5"])
+
+# -------------------------- Num.11.5 · ETNACHTA_SPLIT ----------------------
+# ‹זכרנו את הדגה› (“mark obj-marker the-fish”)
+# ‹אשר נאכל במצרים› (“which eat in-Egypt”)
+# ‹חנם … את הקשאים› (“gratis … obj-marker the-cucumber”)
+# ‹ואת האבטחים ואת› (“and-obj-marker the-melon and-obj-marker”)
+# ‹החציר ואת הבצלים› (“the-grass and-obj-marker the-onion”)
+# ‹ואת השומים› (“and-obj-marker the-garlic”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:5."
+m.step("Num.11.5")
+
+# -------------------------- Num.11.6 · ETNACHTA_SPLIT ----------------------
+# ‹ועתה נפשנו יבשה› (“and-now living-being-us/our dry”)
+# ‹אין כל … בלתי› (“there-is-not all … failure-of”)
+# ‹אל המן עינינו› (“to the-whatness eye-us/our”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:6."
+m.step("Num.11.6")
+# witness-tier presupposed read: the_speaker_split on only_to_the_manna —
+# read, not installed
+m.witness_read("only_to_the_manna", "the_speaker_split",
+                cites=["Sifrei Bamidbar 88:1", "Onkelos Num 11:6", "Onkelos Num 11:7"])
+
+# -------------------------- Num.11.7 · ETNACHTA_SPLIT ----------------------
+# ‹והמן כזרע גד› (“and-the-whatness like-seed coriander-seed”)
+# ‹הוא … ועינו כעין› (“he/it … and-eye-him/its like-eye”)
+# ‹הבדלח› (“the-something-in-pieces”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:7."
+m.step("Num.11.7")
+
+# -------------------------- Num.11.8 · ETNACHTA_SPLIT ----------------------
+# ‹שטו העם ולקטו› (“push-forth the-people and-pick-up”)
+# ‹וטחנו ברחים או› (“and-grind-meal in-mill-stone or”)
+# ‹דכו במדכה ובשלו› (“bruise-in-a-mortar in-mortar and-boil-up”)
+# ‹בפרור ועשו אתו› (“in-skillet and-make obj-marker-him/its”)
+# ‹… והיה טעמו כטעם› (“and-be taste-him/its like-taste”)
+# ‹לשד השמן› (“vigor the-oil”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:8."
+m.step("Num.11.8")
+# witness-tier presupposed read: the_manna_converted_two_tastes on
+# the_moist_cake — read, not installed
+m.witness_read("the_moist_cake", "the_manna_converted_two_tastes",
+                cites=["Sifrei Bamidbar 89:1", "Onkelos Num 11:8", "Onkelos Num 11:9"])
+
+# -------------------------- Num.11.9 · ETNACHTA_SPLIT ----------------------
+# ‹וברדת הטל על› (“and-in-go-down the-dew over”)
+# ‹המחנה לילה … ירד› (“the-camp night … go-down”)
+# ‹המן עליו› (“the-whatness over-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:9."
+m.step("Num.11.9")
+
+# -------------------------- Num.11.10 · ETNACHTA_SPLIT ---------------------
+# ‹וישמע משה את› (“and-hear Moses obj-marker”)
+# ‹העם בכה למשפחתיו› (“the-people weep to-family-him/its”)
+# ‹איש לפתח אהלו› (“man to-opening tent-him/its”)
+# ‹… ויחר אף יהוה› (“and-glow nose YHWH”)
+# ‹מאד ובעיני משה› (“very and-in-eye Moses”)
+# ‹רע› (“spoil”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:10."
+m.step("Num.11.10")
+# witness-tier presupposed read: the_families_weep_why_have_you_dealt_ill on
+# weeping_by_families — read, not installed
+m.witness_read("weeping_by_families", "the_families_weep_why_have_you_dealt_ill",
+                cites=["Sifrei Bamidbar 90:1", "Sifrei Bamidbar 91:1", "Onkelos Num 11:10", "Onkelos Num 11:11", "Onkelos Num 11:12", "Onkelos Num 11:13", "Onkelos Num 11:14", "Onkelos Num 11:15"])
+
+# -------------------------- Num.11.11 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר משה אל› (“and-say Moses to”)
+# ‹יהוה למה הרעת› (“YHWH to-what spoil”)
+# ‹לעבדך ולמה לא› (“to-servant-you/your and-to-what not”)
+# ‹מצתי חן בעיניך› (“find graciousness in-eye-you/your”)
+# ‹… לשום את משא› (“to-put/set obj-marker burden”)
+# ‹כל העם הזה› (“all the-people the-this”)
+# ‹עלי› (“over-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:11."
+m.step("Num.11.11")
+
+# -------------------------- Num.11.12 · ETNACHTA_SPLIT ---------------------
+# ‹האנכי הריתי את› (“the-? be-pregnant obj-marker”)
+# ‹כל העם הזה› (“all the-people the-this”)
+# ‹אם אנכי ילדתיהו› (“if bear-young-him/its”)
+# ‹… כי תאמר אלי› (“that say to-me/my”)
+# ‹שאהו בחיקך כאשר› (“lift/carry-him/its in-bosom-you/your like-as/which”)
+# ‹ישא האמן את› (“lift/carry the-build-up obj-marker”)
+# ‹הינק על האדמה› (“the-suck over the-ground”)
+# ‹אשר נש› (“which ?”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:12."
+m.step("Num.11.12")
+
+# -------------------------- Num.11.13 · ETNACHTA_SPLIT ---------------------
+# ‹מאין לי בשר› (“from-where? to-me/my flesh”)
+# ‹לתת לכל העם› (“to-set to-all the-people”)
+# ‹הזה … כי יבכו› (“the-this … that weep”)
+# ‹עלי לאמר תנה› (“over-me/my to-say set-ward”)
+# ‹לנו בשר ונאכלה› (“to-us/our flesh and-eat”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:13."
+m.step("Num.11.13")
+
+# -------------------------- Num.11.14 · ETNACHTA_SPLIT ---------------------
+# ‹לא אוכל אנכי› (“not be-able”)
+# ‹לבדי לשאת את› (“to-separation-me/my to-lift/carry obj-marker”)
+# ‹כל העם הזה› (“all the-people the-this”)
+# ‹… כי כבד ממני› (“that heavy from-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:14."
+m.step("Num.11.14")
+
+# -------------------------- Num.11.15 · COND_ואם (“and-if”) ----------------
+# ‹ואם ככה את› (“and-if just-so thou-and-thee”)
+# ‹עשה לי הרגני› (“make to-me/my smite-with-deadly-intent-me/my”)
+# ‹נא הרג אם› (“please smite-with-deadly-intent if”)
+# ‹מצאתי חן בעיניך› (“find graciousness in-eye-you/your”)
+# ‹… ואל אראה ברעתי› (“and-do-not see in-bad-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:15."
+m.step("Num.11.15")
+
+# -------------------------- Num.11.16 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר יהוה אל› (“and-say YHWH to”)
+# ‹משה אספה לי› (“Moses gather-for-any-purpose-ward to-me/my”)
+# ‹שבעים איש מזקני› (“seventy man from-old”)
+# ‹ישראל אשר ידעת› (“Israel which know”)
+# ‹כי … ולקחת אתם› (“that … and-take obj-marker-them/their”)
+# ‹אל אהל מועד› (“to tent seasons”)
+# ‹והתיצבו שם עמך› (“and-place there with-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:16."
+m.step("Num.11.16")
+# witness-tier presupposed read: unto_me_seventy_the_descents on seventy_men
+# — read, not installed
+m.witness_read("seventy_men", "unto_me_seventy_the_descents",
+                cites=["Sifrei Bamidbar 92:1", "Sifrei Bamidbar 93:1", "Onkelos Num 11:16", "Onkelos Num 11:17"])
+
+# -------------------------- Num.11.17 · ETNACHTA_SPLIT ---------------------
+# ‹וירדתי ודברתי עמך› (“and-go-down and-speak with-you/your”)
+# ‹שם ואצלתי מן› (“there and-separate from”)
+# ‹הרוח אשר עליך› (“the-spirit which over-you/your”)
+# ‹ושמתי עליהם … ונשאו› (“and-put/set over-them/their … and-lift/carry”)
+# ‹אתך במשא העם› (“with-you/your in-burden the-people”)
+# ‹ולא תשא אתה› (“and-not lift/carry you”)
+# ‹לבדך› (“to-separation-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:17."
+m.step("Num.11.17")
+
+# -------------------------- Num.11.18 · ETNACHTA_SPLIT ---------------------
+# ‹ואל העם תאמר› (“and-to the-people say”)
+# ‹התקדשו למחר ואכלתם› (“sanctify to-deferred and-eat”)
+# ‹בשר כי בכיתם› (“flesh that weep”)
+# ‹באזני יהוה לאמר› (“in-broadness.-i.e.-the-ear YHWH to-say”)
+# ‹… ונתן יהוה לכם› (“and-set YHWH to-you/your(pl)”)
+# ‹בשר ואכלתם› (“flesh and-eat”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:18."
+m.step("Num.11.18")
+# witness-tier presupposed read: one_plague_two_timers on
+# sanctify_yourselves_for_tomorrow — read, not installed
+m.witness_read("sanctify_yourselves_for_tomorrow", "one_plague_two_timers",
+                cites=["Sifrei Bamidbar 94:1", "Sifrei Bamidbar 95:1", "Onkelos Num 11:18", "Onkelos Num 11:19", "Onkelos Num 11:20", "Onkelos Num 11:21", "Onkelos Num 11:22", "Onkelos Num 11:23"])
+
+# -------------------------- Num.11.19 · ETNACHTA_SPLIT ---------------------
+# ‹לא יום אחד› (“not day one”)
+# ‹תאכלון ולא יומים› (“eat-ward and-not day”)
+# ‹… ולא חמשה ימים› (“and-not five day”)
+# ‹ולא עשרה ימים› (“and-not ten day”)
+# ‹ולא עשרים יום› (“and-not twenty day”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:19."
+m.step("Num.11.19")
+
+# -------------------------- Num.11.20 · ETNACHTA_SPLIT ---------------------
+# ‹עד חדש ימים› (“until new-moon day”)
+# ‹עד אשר יצא› (“until which bring-forth”)
+# ‹מאפכם והיה לכם› (“from-nose-you/your(pl) and-be to-you/your(pl)”)
+# ‹לזרא … יען כי› (“to-disgust … heed that”)
+# ‹מאסתם את יהוה› (“spurn obj-marker YHWH”)
+# ‹אשר בקרבכם ותבכו› (“which in-nearest-part-you/your(pl) and-weep”)
+# ‹לפניו לאמר למה› (“to-face-him/its to-say to-what”)
+# ‹זה יצאנ› (“this ?”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:20."
+m.step("Num.11.20")
+
+# -------------------------- Num.11.21 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר משה שש› (“and-say Moses six”)
+# ‹מאות אלף רגלי› (“hundred thousand footman”)
+# ‹העם אשר אנכי› (“the-people which”)
+# ‹בקרבו … ואתה אמרת› (“in-nearest-part-him/its … and-you say”)
+# ‹בשר אתן להם› (“flesh set to-them/their”)
+# ‹ואכלו חדש ימים› (“and-eat new-moon day”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:21."
+m.step("Num.11.21")
+
+# -------------------------- Num.11.22 · ETNACHTA_SPLIT ---------------------
+# ‹הצאן ובקר ישחט› (“the-flock and-herd slaughter”)
+# ‹להם ומצא להם› (“to-them/their and-find to-them/their”)
+# ‹… אם את כל› (“if obj-marker all”)
+# ‹דגי הים יאסף› (“fish the-seas gather-for-any-purpose”)
+# ‹להם ומצא להם› (“to-them/their and-find to-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:22."
+m.step("Num.11.22")
+
+# -------------------------- Num.11.23 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר יהוה אל› (“and-say YHWH to”)
+# ‹משה היד יהוה› (“Moses the-hand YHWH”)
+# ‹תקצר … עתה תראה› (“dock-off … now see”)
+# ‹היקרך דברי אם› (“the-light-upon-you/your word/thing-me/my if”)
+# ‹לא› (“not”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:23."
+m.step("Num.11.23")
+
+# -------------------------- Num.11.24 · ETNACHTA_SPLIT ---------------------
+# ‹ויצא משה וידבר› (“and-bring-forth Moses and-speak”)
+# ‹אל העם את› (“to the-people obj-marker”)
+# ‹דברי יהוה … ויאסף› (“word/thing YHWH … and-gather-for-any-purpose”)
+# ‹שבעים איש מזקני› (“seventy man from-old”)
+# ‹העם ויעמד אתם› (“the-people and-stand obj-marker-them/their”)
+# ‹סביבת האהל› (“circle the-tent”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:24."
+m.step("Num.11.24")
+
+# -------------------------- Num.11.25 · ETNACHTA_SPLIT ---------------------
+# ‹וירד יהוה בענן› (“and-go-down YHWH in-cloud”)
+# ‹וידבר אליו ויאצל› (“and-speak to-him/its and-separate”)
+# ‹מן הרוח אשר› (“from the-spirit which”)
+# ‹עליו ויתן על› (“over-him/its and-set over”)
+# ‹שבע … ויהי כנוח› (“seven … and-be like-rest”)
+# ‹עליהם הרוח ויתנבאו› (“over-them/their the-spirit and-prophesy”)
+# ‹ולא יספו› (“and-not add”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:25."
+m.step("Num.11.25")
+# witness-tier presupposed read: the_lots_did_not_cease on did_not_continue
+# — read, not installed
+m.witness_read("did_not_continue", "the_lots_did_not_cease",
+                cites=["Sifrei Bamidbar 95:2", "Sifrei Bamidbar 96:1", "Onkelos Num 11:24", "Onkelos Num 11:25", "Onkelos Num 11:26", "Onkelos Num 11:27", "Onkelos Num 11:28", "Onkelos Num 11:29", "Onkelos Num 11:30"])
+
+# -------------------------- Num.11.26 · ETNACHTA_SPLIT ---------------------
+# ‹וישארו שני אנשים› (“and-swell-up two man”)
+# ‹במחנה שם האחד› (“in-camp name the-one”)
+# ‹אלדד ושם השני› (“Eldad and-name the-second”)
+# ‹מידד ותנח עליהם› (“Medad and-rest over-them/their”)
+# ‹… ויתנבאו במחנה› (“and-prophesy in-camp”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:26."
+m.step("Num.11.26")
+
+# -------------------------- Num.11.27 · ETNACHTA_SPLIT ---------------------
+# ‹וירץ הנער ויגד› (“and-run the-boy and-tell”)
+# ‹למשה ויאמר … אלדד› (“to-Moses and-say … Eldad”)
+# ‹ומידד מתנבאים במחנה› (“and-Medad prophesy in-camp”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:27."
+m.step("Num.11.27")
+
+# -------------------------- Num.11.28 · ETNACHTA_SPLIT ---------------------
+# ‹ויען יהושע בן› (“and-eye Jehoshua son”)
+# ‹נון משרת משה› (“Non attend-as-a-menial Moses”)
+# ‹מבחריו ויאמר … אדני› (“from-youth-him/its and-say … lord-me/my”)
+# ‹משה כלאם› (“Moses restrict-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:28."
+m.step("Num.11.28")
+
+# -------------------------- Num.11.29 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר לו משה› (“and-say to-him/its Moses”)
+# ‹המקנא אתה לי› (“the-be-zealous you to-me/my”)
+# ‹… ומי יתן כל› (“and-who? set all”)
+# ‹עם יהוה נביאים› (“people YHWH prophet”)
+# ‹כי יתן יהוה› (“that set YHWH”)
+# ‹את רוחו עליהם› (“obj-marker spirit-him/its over-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:29."
+m.step("Num.11.29")
+
+# -------------------------- Num.11.30 · ETNACHTA_SPLIT ---------------------
+# ‹ויאסף משה אל› (“and-gather-for-any-purpose Moses to”)
+# ‹המחנה … הוא וזקני› (“the-camp … he/it and-old”)
+# ‹ישראל› (“Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:30."
+m.step("Num.11.30")
+
+# -------------------------- Num.11.31 · ETNACHTA_SPLIT ---------------------
+# ‹ורוח נסע מאת› (“and-spirit journey from-with”)
+# ‹יהוה ויגז שלוים› (“YHWH and-shear-off quail-collectively”)
+# ‹מן הים ויטש› (“from the-seas and-pound”)
+# ‹על המחנה כדרך› (“over the-camp like-way/road”)
+# ‹יום כ … וכאמתים› (“day ? … and-like-mother”)
+# ‹על פני הארץ› (“over face the-earth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:31."
+m.step("Num.11.31")
+# witness-tier presupposed read: two_cubits_ten_homers_plene_defective on
+# the_quail — read, not installed
+m.witness_read("the_quail", "two_cubits_ten_homers_plene_defective",
+                cites=["Sifrei Bamidbar 97:1", "Sifrei Bamidbar 98:1", "Onkelos Num 11:31", "Onkelos Num 11:32", "Onkelos Num 11:33", "Onkelos Num 11:34", "Onkelos Num 11:35"])
+
+# -------------------------- Num.11.32 · ETNACHTA_SPLIT ---------------------
+# ‹ויקם העם כל› (“and-arise the-people all”)
+# ‹היום ההוא וכל› (“the-day that and-all”)
+# ‹הלילה וכל יום› (“the-night and-all day”)
+# ‹המחרת ויאספו את› (“the-morrow and-gather-for-any-purpose obj-marker”)
+# ‹השלו … וישטחו להם› (“the-quail-collectively … and-expand to-them/their”)
+# ‹שטוח סביבות המחנה› (“expand circle the-camp”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:32."
+m.step("Num.11.32")
+
+# -------------------------- Num.11.33 · ETNACHTA_SPLIT ---------------------
+# ‹הבשר עודנו בין› (“the-flesh still/again-him/its between”)
+# ‹שניהם טרם יכרת› (“tooth-them/their non-occurrence cut”)
+# ‹… ואף יהוה חרה› (“and-nose YHWH glow”)
+# ‹בעם ויך יהוה› (“in-people and-strike YHWH”)
+# ‹בעם מכה רבה› (“in-people wound many/great”)
+# ‹מאד› (“very”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:33."
+m.step("Num.11.33")
+
+# -------------------------- Num.11.34 · ETNACHTA_SPLIT ---------------------
+# ‹ויקרא את שם› (“and-call obj-marker name”)
+# ‹המקום ההוא קברות› (“the-place that”)
+# ‹התאוה … כי שם› (“Kibroth-hattaavah … that there”)
+# ‹קברו את העם› (“bury obj-marker the-people”)
+# ‹המתאוים› (“the-wish-for”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:34."
+m.step("Num.11.34")
+
+# -------------------------- Num.11.35 · ETNACHTA_SPLIT ---------------------
+# ‹מקברות התאוה נסעו› (“from Kibroth-hattaavah journey”)
+# ‹העם חצרות … ויהיו› (“the-people Hazeroth … and-be”)
+# ‹בחצרות› (“in-Hazeroth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 11:35."
+m.step("Num.11.35")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_murmurers', 'the_people_the_fire_sank_names_by_the_event'), ('the_rabble', 'the_mixed_multitude_the_five_foods'), ('only_to_the_manna', 'the_speaker_split'), ('the_moist_cake', 'the_manna_converted_two_tastes'), ('weeping_by_families', 'the_families_weep_why_have_you_dealt_ill'), ('seventy_men', 'unto_me_seventy_the_descents'), ('sanctify_yourselves_for_tomorrow', 'one_plague_two_timers'), ('did_not_continue', 'the_lots_did_not_cease'), ('the_quail', 'two_cubits_ten_homers_plene_defective')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifrei Bamidbar 85:1', 'Sifrei Bamidbar 86:1', 'Onkelos Num 11:1', 'Onkelos Num 11:2', 'Onkelos Num 11:3']
+    assert all('the_people_the_fire_sank_names_by_the_event' not in f for f in m.WORLD["facts"])
+    assert 'the_murmurers' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifrei Bamidbar 86:1', 'Sifrei Bamidbar 87:1', 'Onkelos Num 11:4', 'Onkelos Num 11:5']
+    assert all('the_mixed_multitude_the_five_foods' not in f for f in m.WORLD["facts"])
+    assert 'the_rabble' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifrei Bamidbar 88:1', 'Onkelos Num 11:6', 'Onkelos Num 11:7']
+    assert all('the_speaker_split' not in f for f in m.WORLD["facts"])
+    assert 'only_to_the_manna' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifrei Bamidbar 89:1', 'Onkelos Num 11:8', 'Onkelos Num 11:9']
+    assert all('the_manna_converted_two_tastes' not in f for f in m.WORLD["facts"])
+    assert 'the_moist_cake' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifrei Bamidbar 90:1', 'Sifrei Bamidbar 91:1', 'Onkelos Num 11:10', 'Onkelos Num 11:11', 'Onkelos Num 11:12', 'Onkelos Num 11:13', 'Onkelos Num 11:14', 'Onkelos Num 11:15']
+    assert all('the_families_weep_why_have_you_dealt_ill' not in f for f in m.WORLD["facts"])
+    assert 'weeping_by_families' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifrei Bamidbar 92:1', 'Sifrei Bamidbar 93:1', 'Onkelos Num 11:16', 'Onkelos Num 11:17']
+    assert all('unto_me_seventy_the_descents' not in f for f in m.WORLD["facts"])
+    assert 'seventy_men' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifrei Bamidbar 94:1', 'Sifrei Bamidbar 95:1', 'Onkelos Num 11:18', 'Onkelos Num 11:19', 'Onkelos Num 11:20', 'Onkelos Num 11:21', 'Onkelos Num 11:22', 'Onkelos Num 11:23']
+    assert all('one_plague_two_timers' not in f for f in m.WORLD["facts"])
+    assert 'sanctify_yourselves_for_tomorrow' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifrei Bamidbar 95:2', 'Sifrei Bamidbar 96:1', 'Onkelos Num 11:24', 'Onkelos Num 11:25', 'Onkelos Num 11:26', 'Onkelos Num 11:27', 'Onkelos Num 11:28', 'Onkelos Num 11:29', 'Onkelos Num 11:30']
+    assert all('the_lots_did_not_cease' not in f for f in m.WORLD["facts"])
+    assert 'did_not_continue' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifrei Bamidbar 97:1', 'Sifrei Bamidbar 98:1', 'Onkelos Num 11:31', 'Onkelos Num 11:32', 'Onkelos Num 11:33', 'Onkelos Num 11:34', 'Onkelos Num 11:35']
+    assert all('two_cubits_ten_homers_plene_defective' not in f for f in m.WORLD["facts"])
+    assert 'the_quail' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_12_miriam
+###############################################################################
+
+m = Machine("num_12_miriam")
+
+# -------------------------- Num.12.1 · ETNACHTA_SPLIT ----------------------
+# ‹ותדבר מרים ואהרן› (“and-speak Miriam and-Aaron”)
+# ‹במשה על אדות› (“in-Moses over turnings”)
+# ‹האשה הכשית אשר› (“the-woman the-Cushite-woman which”)
+# ‹לקח … כי אשה› (“take … that woman”)
+# ‹כשית לקח› (“Cushite-woman take”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 12:1."
+m.step("Num.12.1")
+# witness-tier presupposed read: miriam_first_the_beautiful_woman_distanced
+# on and_miriam_spoke — read, not installed
+m.witness_read("and_miriam_spoke", "miriam_first_the_beautiful_woman_distanced",
+                cites=["Sifrei Bamidbar 99:1", "Onkelos Num 12:1"])
+
+# -------------------------- Num.12.2 · ETNACHTA_SPLIT ----------------------
+# ‹ויאמרו הרק אך› (“and-say the-leanness indeed”)
+# ‹במשה דבר יהוה› (“in-Moses speak YHWH”)
+# ‹הלא גם בנו› (“is-it-not also in-us/our”)
+# ‹דבר … וישמע יהוה› (“speak … and-hear YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 12:2."
+m.step("Num.12.2")
+# witness-tier presupposed read: humble_without_the_yod on
+# only_only_with_moses — read, not installed
+m.witness_read("only_only_with_moses", "humble_without_the_yod",
+                cites=["Sifrei Bamidbar 100:1", "Sifrei Bamidbar 101:1", "Onkelos Num 12:2", "Onkelos Num 12:3"])
+
+# -------------------------- Num.12.3 · ETNACHTA_SPLIT ----------------------
+# ‹והאיש משה ענו› (“and-the-man Moses afflicted”)
+# ‹עניו מאד … מכל› (“afflicted very … from-all”)
+# ‹האדם אשר על› (“the-human which over”)
+# ‹פני האדמה› (“face the-ground”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 12:3."
+m.step("Num.12.3")
+
+# -------------------------- Num.12.4 · ETNACHTA_SPLIT ----------------------
+# ‹ויאמר יהוה פתאם› (“and-say YHWH instantly”)
+# ‹אל משה ואל› (“to Moses and-to”)
+# ‹אהרן ואל מרים› (“Aaron and-to Miriam”)
+# ‹צאו שלשתכם אל› (“bring-forth three-you/your(pl) to”)
+# ‹אהל מ … ויצאו› (“tent ? … and-bring-forth”)
+# ‹שלשתם› (“three-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 12:4."
+m.step("Num.12.4")
+# witness-tier presupposed read:
+# the_three_by_one_utterance_praise_to_the_face on suddenly — read, not
+# installed
+m.witness_read("suddenly", "the_three_by_one_utterance_praise_to_the_face",
+                cites=["Sifrei Bamidbar 102:1", "Onkelos Num 12:4", "Onkelos Num 12:5"])
+
+# -------------------------- Num.12.5 · ETNACHTA_SPLIT ----------------------
+# ‹וירד יהוה בעמוד› (“and-go-down YHWH in-column”)
+# ‹ענן ויעמד פתח› (“cloud and-stand opening”)
+# ‹האהל … ויקרא אהרן› (“the-tent … and-call Aaron”)
+# ‹ומרים ויצאו שניהם› (“and-Miriam and-bring-forth two-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 12:5."
+m.step("Num.12.5")
+
+# -------------------------- Num.12.6 · ETNACHTA_SPLIT ----------------------
+# ‹ויאמר שמעו נא› (“and-say hear please”)
+# ‹דברי … אם יהיה› (“word/thing-me/my … if be”)
+# ‹נביאכם יהוה במראה› (“prophet-you/your(pl) YHWH in-vision”)
+# ‹אליו אתודע בחלום› (“to-him/its know in-dream”)
+# ‹אדבר בו› (“speak in-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 12:6."
+m.step("Num.12.6")
+# witness-tier presupposed read: mouth_to_mouth_the_likeness_beheld on
+# in_a_vision — read, not installed
+m.witness_read("in_a_vision", "mouth_to_mouth_the_likeness_beheld",
+                cites=["Sifrei Bamidbar 103:1", "Onkelos Num 12:6", "Onkelos Num 12:7", "Onkelos Num 12:8"])
+
+# -------------------------- Num.12.7 · ETNACHTA_SPLIT ----------------------
+# ‹לא כן עבדי› (“not so servant-me/my”)
+# ‹משה … בכל ביתי› (“Moses … in-all house-me/my”)
+# ‹נאמן הוא› (“build-up he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 12:7."
+m.step("Num.12.7")
+
+# -------------------------- Num.12.8 · ETNACHTA_SPLIT ----------------------
+# ‹פה אל פה› (“mouth to mouth”)
+# ‹אדבר בו ומראה› (“speak in-him/its and-appearance”)
+# ‹ולא בחידת ותמנת› (“and-not in-puzzle and-something-portioned-out”)
+# ‹יהוה יביט … ומדוע› (“YHWH look … and-what-known?”)
+# ‹לא יראתם לדבר› (“not fear to-speak”)
+# ‹בעבדי במשה› (“in-servant-me/my in-Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 12:8."
+m.step("Num.12.8")
+
+# -------------------------- Num.12.9 · TREE_CLAIM --------------------------
+# ‹ויחר אף יהוה› (“and-glow nose YHWH”)
+# ‹בם› (“in-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 12:9."
+m.step("Num.12.9")
+# witness-tier presupposed read: the_cloud_left_a_priest_not_his_kin on
+# anger_against_them — read, not installed
+m.witness_read("anger_against_them", "the_cloud_left_a_priest_not_his_kin",
+                cites=["Sifrei Bamidbar 104:1", "Sifrei Bamidbar 105:1", "Onkelos Num 12:9", "Onkelos Num 12:10", "Onkelos Num 12:11", "Onkelos Num 12:12"])
+
+# -------------------------- Num.12.10 · ETNACHTA_SPLIT ---------------------
+# ‹והענן סר מעל› (“and-the-cloud turn-aside from-over”)
+# ‹האהל והנה מרים› (“the-tent and-behold Miriam”)
+# ‹מצרעת כשלג … ויפן› (“scourge like-snow … and-turn”)
+# ‹אהרן אל מרים› (“Aaron to Miriam”)
+# ‹והנה מצרעת› (“and-behold scourge”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 12:10."
+m.step("Num.12.10")
+
+# -------------------------- Num.12.11 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר אהרן אל› (“and-say Aaron to”)
+# ‹משה … בי אדני› (“Moses … oh-that! lord-me/my”)
+# ‹אל נא תשת› (“do-not please place”)
+# ‹עלינו חטאת אשר› (“over-us/our sin-offering which”)
+# ‹נואלנו ואשר חטאנו› (“be-slack and-which sin”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 12:11."
+m.step("Num.12.11")
+
+# -------------------------- Num.12.12 · ETNACHTA_SPLIT ---------------------
+# ‹אל נא תהי› (“do-not please be”)
+# ‹כמת … אשר בצאתו› (“like-die … which in-bring-forth-him/its”)
+# ‹מרחם אמו ויאכל› (“from-womb mother-him/its and-eat”)
+# ‹חצי בשרו› (“half flesh-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 12:12."
+m.step("Num.12.12")
+
+# -------------------------- Num.12.13 · ETNACHTA_SPLIT ---------------------
+# ‹ויצעק משה אל› (“and-shriek Moses to”)
+# ‹יהוה לאמר … אל› (“YHWH to-say … to”)
+# ‹נא רפא נא› (“please mend please”)
+# ‹לה› (“to-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 12:13."
+m.step("Num.12.13")
+# witness-tier presupposed read: the_shortest_prayer_counted on god_heal_her
+# — read, not installed
+m.witness_read("god_heal_her", "the_shortest_prayer_counted",
+                cites=["Sifrei Bamidbar 105:1", "Onkelos Num 12:13"])
+
+# -------------------------- Num.12.14 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר יהוה אל› (“and-say YHWH to”)
+# ‹משה ואביה ירק› (“Moses and-father-her/its spit”)
+# ‹ירק בפניה הלא› (“spit in-face-her/its is-it-not”)
+# ‹תכלם שבעת ימים› (“wound seven day”)
+# ‹… תסגר שבעת ימים› (“shut-up seven day”)
+# ‹מחוץ למחנה ואחר› (“from-outside to-camp and-after”)
+# ‹תאסף› (“gather-for-any-purpose”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 12:14."
+m.step("Num.12.14")
+# witness-tier presupposed read: dayo on if_her_father_had_spat — read, not
+# installed
+m.witness_read("if_her_father_had_spat", "dayo",
+                cites=["Sifrei Bamidbar 106:1", "Onkelos Num 12:14"])
+
+# -------------------------- Num.12.15 · ETNACHTA_SPLIT ---------------------
+# ‹ותסגר מרים מחוץ› (“and-shut-up Miriam from-outside”)
+# ‹למחנה שבעת ימים› (“to-camp seven day”)
+# ‹… והעם לא נסע› (“and-the-people not journey”)
+# ‹עד האסף מרים› (“until gather-for-any-purpose Miriam”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 12:15."
+m.step("Num.12.15")
+# witness-tier presupposed read: measure_for_measure_the_quarantine_verb on
+# the_people_did_not_journey — read, not installed
+m.witness_read("the_people_did_not_journey", "measure_for_measure_the_quarantine_verb",
+                cites=["Sifrei Bamidbar 106:1", "Onkelos Num 12:14", "Onkelos Num 12:15", "Onkelos Num 12:16"])
+
+# -------------------------- Num.12.16 · ETNACHTA_SPLIT ---------------------
+# ‹ואחר נסעו העם› (“and-after journey the-people”)
+# ‹מחצרות … ויחנו במדבר› (“from-Hazeroth … and-encamp in-pasture”)
+# ‹פארן› (“Paran”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 12:16."
+m.step("Num.12.16")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('and_miriam_spoke', 'miriam_first_the_beautiful_woman_distanced'), ('only_only_with_moses', 'humble_without_the_yod'), ('suddenly', 'the_three_by_one_utterance_praise_to_the_face'), ('in_a_vision', 'mouth_to_mouth_the_likeness_beheld'), ('anger_against_them', 'the_cloud_left_a_priest_not_his_kin'), ('god_heal_her', 'the_shortest_prayer_counted'), ('if_her_father_had_spat', 'dayo'), ('the_people_did_not_journey', 'measure_for_measure_the_quarantine_verb')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifrei Bamidbar 99:1', 'Onkelos Num 12:1']
+    assert all('miriam_first_the_beautiful_woman_distanced' not in f for f in m.WORLD["facts"])
+    assert 'and_miriam_spoke' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifrei Bamidbar 100:1', 'Sifrei Bamidbar 101:1', 'Onkelos Num 12:2', 'Onkelos Num 12:3']
+    assert all('humble_without_the_yod' not in f for f in m.WORLD["facts"])
+    assert 'only_only_with_moses' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifrei Bamidbar 102:1', 'Onkelos Num 12:4', 'Onkelos Num 12:5']
+    assert all('the_three_by_one_utterance_praise_to_the_face' not in f for f in m.WORLD["facts"])
+    assert 'suddenly' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifrei Bamidbar 103:1', 'Onkelos Num 12:6', 'Onkelos Num 12:7', 'Onkelos Num 12:8']
+    assert all('mouth_to_mouth_the_likeness_beheld' not in f for f in m.WORLD["facts"])
+    assert 'in_a_vision' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifrei Bamidbar 104:1', 'Sifrei Bamidbar 105:1', 'Onkelos Num 12:9', 'Onkelos Num 12:10', 'Onkelos Num 12:11', 'Onkelos Num 12:12']
+    assert all('the_cloud_left_a_priest_not_his_kin' not in f for f in m.WORLD["facts"])
+    assert 'anger_against_them' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifrei Bamidbar 105:1', 'Onkelos Num 12:13']
+    assert all('the_shortest_prayer_counted' not in f for f in m.WORLD["facts"])
+    assert 'god_heal_her' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifrei Bamidbar 106:1', 'Onkelos Num 12:14']
+    assert all('dayo' not in f for f in m.WORLD["facts"])
+    assert 'if_her_father_had_spat' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifrei Bamidbar 106:1', 'Onkelos Num 12:14', 'Onkelos Num 12:15', 'Onkelos Num 12:16']
+    assert all('measure_for_measure_the_quarantine_verb' not in f for f in m.WORLD["facts"])
+    assert 'the_people_did_not_journey' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_13_spies_sent
+###############################################################################
+
+m = Machine("num_13_spies_sent")
+
+# -------------------------- Num.13.1 · TREE_CLAIM --------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:1."
+m.step("Num.13.1")
+
+# -------------------------- Num.13.2 · ETNACHTA_SPLIT ----------------------
+# ‹שלח לך אנשים› (“send to-you/your man”)
+# ‹ויתרו את ארץ› (“and-meander-about obj-marker earth”)
+# ‹כנען אשר אני› (“Canaan which”)
+# ‹נתן לבני ישראל› (“set to-son Israel”)
+# ‹… איש אחד איש› (“man one man”)
+# ‹אחד למטה אבתיו› (“one to-staff/tribe father-him/its”)
+# ‹תשלחו כל נשיא› (“send all prince”)
+# ‹בהם› (“in-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:2."
+m.step("Num.13.2")
+# witness-tier presupposed read: the_spy_verb_is_the_arks_the_shelf_silent
+# on send_for_yourself — read, not installed
+m.witness_read("send_for_yourself", "the_spy_verb_is_the_arks_the_shelf_silent",
+                cites=["Onkelos Num 13:2", "Onkelos Num 13:3"])
+
+# -------------------------- Num.13.3 · ETNACHTA_SPLIT ----------------------
+# ‹וישלח אתם משה› (“and-send obj-marker-them/their Moses”)
+# ‹ממדבר פארן על› (“from-pasture Paran over”)
+# ‹פי יהוה … כלם› (“mouth YHWH … all-them/their”)
+# ‹אנשים ראשי בני› (“man head son”)
+# ‹ישראל המה› (“Israel they”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:3."
+m.step("Num.13.3")
+
+# -------------------------- Num.13.4 · ETNACHTA_SPLIT ----------------------
+# ‹ואלה שמותם … למטה› (“and-these name-them/their … to-staff/tribe”)
+# ‹ראובן שמוע בן› (“Reuben Shammua son”)
+# ‹זכור› (“Zaccur”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:4."
+m.step("Num.13.4")
+# witness-tier presupposed read: a_fourth_order_josephs_name_over_manasseh
+# on these_are_their_names — read, not installed
+m.witness_read("these_are_their_names", "a_fourth_order_josephs_name_over_manasseh",
+                cites=["Onkelos Num 13:4", "Onkelos Num 13:5", "Onkelos Num 13:6", "Onkelos Num 13:7", "Onkelos Num 13:8", "Onkelos Num 13:9", "Onkelos Num 13:10", "Onkelos Num 13:11", "Onkelos Num 13:12", "Onkelos Num 13:13", "Onkelos Num 13:14", "Onkelos Num 13:15"])
+
+# -------------------------- Num.13.5 · TREE_CLAIM --------------------------
+# ‹למטה שמעון … שפט› (“to-staff/tribe Simeon … Shaphat”)
+# ‹בן חורי› (“son Hori”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:5."
+m.step("Num.13.5")
+
+# -------------------------- Num.13.6 · TREE_CLAIM --------------------------
+# ‹למטה יהודה … כלב› (“to-staff/tribe Judah … Caleb”)
+# ‹בן יפנה› (“son Jephunneh”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:6."
+m.step("Num.13.6")
+
+# -------------------------- Num.13.7 · TREE_CLAIM --------------------------
+# ‹למטה יששכר … יגאל› (“to-staff/tribe Issachar … Igal”)
+# ‹בן יוסף› (“son Joseph”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:7."
+m.step("Num.13.7")
+
+# -------------------------- Num.13.8 · TREE_CLAIM --------------------------
+# ‹למטה אפרים … הושע› (“to-staff/tribe Ephraim … Hosea”)
+# ‹בן נון› (“son Non”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:8."
+m.step("Num.13.8")
+
+# -------------------------- Num.13.9 · TREE_CLAIM --------------------------
+# ‹למטה בנימן … פלטי› (“to-staff/tribe Benjamin … Palti”)
+# ‹בן רפוא› (“son Raphu”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:9."
+m.step("Num.13.9")
+
+# -------------------------- Num.13.10 · TREE_CLAIM -------------------------
+# ‹למטה זבולן … גדיאל› (“to-staff/tribe Zebulun … Gaddiel”)
+# ‹בן סודי› (“son Sodi”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:10."
+m.step("Num.13.10")
+
+# -------------------------- Num.13.11 · ETNACHTA_SPLIT ---------------------
+# ‹למטה יוסף למטה› (“to-staff/tribe Joseph to-staff/tribe”)
+# ‹מנשה … גדי בן› (“Manasseh … Gaddi son”)
+# ‹סוסי› (“Susi”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:11."
+m.step("Num.13.11")
+
+# -------------------------- Num.13.12 · TREE_CLAIM -------------------------
+# ‹למטה דן … עמיאל› (“to-staff/tribe Daniel … Ammiel”)
+# ‹בן גמלי› (“son Gemalli”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:12."
+m.step("Num.13.12")
+
+# -------------------------- Num.13.13 · TREE_CLAIM -------------------------
+# ‹למטה אשר … סתור› (“to-staff/tribe Asher … Sethur”)
+# ‹בן מיכאל› (“son Michael”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:13."
+m.step("Num.13.13")
+
+# -------------------------- Num.13.14 · TREE_CLAIM -------------------------
+# ‹למטה נפתלי … נחבי› (“to-staff/tribe Naphtali … Nakbi”)
+# ‹בן ופסי› (“son Vophsi”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:14."
+m.step("Num.13.14")
+
+# -------------------------- Num.13.15 · TREE_CLAIM -------------------------
+# ‹למטה גד … גאואל› (“to-staff/tribe Gad … Geuel”)
+# ‹בן מכי› (“son Machi”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:15."
+m.step("Num.13.15")
+
+# -------------------------- Num.13.16 · ETNACHTA_SPLIT ---------------------
+# ‹אלה שמות האנשים› (“these name the-man”)
+# ‹אשר שלח משה› (“which send Moses”)
+# ‹לתור את הארץ› (“to-meander-about obj-marker the-earth”)
+# ‹… ויקרא משה להושע› (“and-call Moses to-Hosea”)
+# ‹בן נון יהושע› (“son Non Jehoshua”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:16."
+m.step("Num.13.16")
+# witness-tier presupposed read: the_new_name_before_the_old_name_after on
+# hoshea_called_joshua — read, not installed
+m.witness_read("hoshea_called_joshua", "the_new_name_before_the_old_name_after",
+                cites=["Onkelos Num 13:16"])
+
+# -------------------------- Num.13.17 · ETNACHTA_SPLIT ---------------------
+# ‹וישלח אתם משה› (“and-send obj-marker-them/their Moses”)
+# ‹לתור את ארץ› (“to-meander-about obj-marker earth”)
+# ‹כנען … ויאמר אלהם› (“Canaan … and-say to-them/their”)
+# ‹עלו זה בנגב› (“go-up this in-south”)
+# ‹ועליתם את ההר› (“and-go-up obj-marker the-mountain”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:17."
+m.step("Num.13.17")
+# witness-tier presupposed read: the_questionnaire_counted_the_season on
+# go_up_into_the_south — read, not installed
+m.witness_read("go_up_into_the_south", "the_questionnaire_counted_the_season",
+                cites=["Onkelos Num 13:17", "Onkelos Num 13:18", "Onkelos Num 13:19", "Onkelos Num 13:20"])
+
+# -------------------------- Num.13.18 · ETNACHTA_SPLIT ---------------------
+# ‹וראיתם את הארץ› (“and-see obj-marker the-earth”)
+# ‹מה הוא … ואת› (“what he/it … and-obj-marker”)
+# ‹העם הישב עליה› (“the-people the-dwell/sit over-her/its”)
+# ‹החזק הוא הרפה› (“the-strong he/it the-slack”)
+# ‹המעט הוא אם› (“the-little he/it if”)
+# ‹רב› (“many/great”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:18."
+m.step("Num.13.18")
+
+# -------------------------- Num.13.19 · ETNACHTA_SPLIT ---------------------
+# ‹ומה הארץ אשר› (“and-what the-earth which”)
+# ‹הוא ישב בה› (“he/it dwell/sit in-her/its”)
+# ‹הטובה הוא אם› (“the-good he/it if”)
+# ‹רעה … ומה הערים› (“bad … and-what the-city”)
+# ‹אשר הוא יושב› (“which he/it dwell/sit”)
+# ‹בהנה הבמחנים אם› (“in-themselves the-in-camp if”)
+# ‹במבצרים› (“in-fortification”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:19."
+m.step("Num.13.19")
+
+# -------------------------- Num.13.20 · ETNACHTA_SPLIT ---------------------
+# ‹ומה הארץ השמנה› (“and-what the-earth the-greasy”)
+# ‹הוא אם רזה› (“he/it if thin”)
+# ‹היש בה עץ› (“the-there-is in-her/its tree”)
+# ‹אם אין והתחזקתם› (“if there-is-not and-fasten-upon”)
+# ‹ולקחתם מ … והימים› (“and-take ? … and-the-day”)
+# ‹ימי בכורי ענבים› (“day first-fruits-of-the-crop grape”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:20."
+m.step("Num.13.20")
+
+# -------------------------- Num.13.21 · ETNACHTA_SPLIT ---------------------
+# ‹ויעלו ויתרו את› (“and-go-up and-meander-about obj-marker”)
+# ‹הארץ … ממדבר צן› (“the-earth … from-pasture Zin”)
+# ‹עד רחב לבא› (“until Rehob come/bring”)
+# ‹חמת› (“Hamath”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:21."
+m.step("Num.13.21")
+# witness-tier presupposed read: they_went_up_he_came_to_hebron on
+# from_zin_to_hamath — read, not installed
+m.witness_read("from_zin_to_hamath", "they_went_up_he_came_to_hebron",
+                cites=["Onkelos Num 13:21", "Onkelos Num 13:22"])
+
+# -------------------------- Num.13.22 · ETNACHTA_SPLIT ---------------------
+# ‹ויעלו בנגב ויבא› (“and-go-up in-south and-come/bring”)
+# ‹עד חברון ושם› (“until Hebron and-there”)
+# ‹אחימן ששי ותלמי› (“Ahiman Sheshai and-Talmai”)
+# ‹ילידי הענק … וחברון› (“born the-Anak … and-Hebron”)
+# ‹שבע שנים נבנתה› (“seven years build”)
+# ‹לפני צען מצרים› (“to-face Zoan Egypt”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:22."
+m.step("Num.13.22")
+
+# -------------------------- Num.13.23 · ETNACHTA_SPLIT ---------------------
+# ‹ויבאו עד נחל› (“and-come/bring until river”)
+# ‹אשכל ויכרתו משם› (“Eshcol and-cut from-there”)
+# ‹זמורה ואשכול ענבים› (“twig and-bunch-of-grapes grape”)
+# ‹אחד וישאהו ב› (“one and-lift/carry-him/its ?”)
+# ‹… ומן הרמנים ומן› (“and-from the-pomegranate and-from”)
+# ‹התאנים› (“the-fig”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:23."
+m.step("Num.13.23")
+# witness-tier presupposed read: the_dual_read_forty_days on
+# the_cluster_on_a_pole — read, not installed
+m.witness_read("the_cluster_on_a_pole", "the_dual_read_forty_days",
+                cites=["Onkelos Num 13:23", "Onkelos Num 13:24", "Onkelos Num 13:25"])
+
+# -------------------------- Num.13.24 · ETNACHTA_SPLIT ---------------------
+# ‹למקום ההוא קרא› (“to-place that call”)
+# ‹נחל אשכול … על› (“river Eshcol … over”)
+# ‹אדות האשכול אשר› (“turnings the-bunch-of-grapes which”)
+# ‹כרתו משם בני› (“cut from-there son”)
+# ‹ישראל› (“Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:24."
+m.step("Num.13.24")
+
+# -------------------------- Num.13.25 · ETNACHTA_SPLIT ---------------------
+# ‹וישבו מתור הארץ› (“and-return from-meander-about the-earth”)
+# ‹… מקץ ארבעים יום› (“from-end forty day”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:25."
+m.step("Num.13.25")
+
+# -------------------------- Num.13.26 · ETNACHTA_SPLIT ---------------------
+# ‹וילכו ויבאו אל› (“and-go and-come/bring to”)
+# ‹משה ואל אהרן› (“Moses and-to Aaron”)
+# ‹ואל כל עדת› (“and-to all congregation”)
+# ‹בני ישראל אל› (“son Israel to”)
+# ‹מדבר פאר … וישיבו› (“pasture ? … and-return”)
+# ‹אותם דבר ואת› (“obj-marker-them/their word/thing and-obj-marker”)
+# ‹כל העדה ויראום› (“all the-congregation and-see-them/their”)
+# ‹את פרי הארץ› (“obj-marker fruit the-earth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:26."
+m.step("Num.13.26")
+# witness-tier presupposed read:
+# rekem_milk_and_honey_the_maps_three_placements on to_kadesh — read, not
+# installed
+m.witness_read("to_kadesh", "rekem_milk_and_honey_the_maps_three_placements",
+                cites=["Onkelos Num 13:26", "Onkelos Num 13:27", "Onkelos Num 13:28", "Onkelos Num 13:29"])
+
+# -------------------------- Num.13.27 · ETNACHTA_SPLIT ---------------------
+# ‹ויספרו לו ויאמרו› (“and-count to-him/its and-say”)
+# ‹באנו אל הארץ› (“come/bring to the-earth”)
+# ‹אשר שלחתנו … וגם› (“which send-us/our … and-also”)
+# ‹זבת חלב ודבש› (“flow-freely milk and-honey”)
+# ‹הוא וזה פריה› (“he/it and-this fruit-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:27."
+m.step("Num.13.27")
+
+# -------------------------- Num.13.28 · COND_כי (“that”) -------------------
+# ‹אפס כי עז› (“cessation that strong”)
+# ‹העם הישב בארץ› (“the-people the-dwell/sit in-earth”)
+# ‹… והערים בצרות גדלת› (“and-the-city gather-grapes great”)
+# ‹מאד וגם ילדי› (“very and-also born”)
+# ‹הענק ראינו שם› (“the-Anak see there”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:28."
+m.step("Num.13.28")
+
+# -------------------------- Num.13.29 · ETNACHTA_SPLIT ---------------------
+# ‹עמלק יושב בארץ› (“Amalek dwell/sit in-earth”)
+# ‹הנגב … והחתי והיבוסי› (“the-south … and-the-Chittite and-the-Jebusite”)
+# ‹והאמרי יושב בהר› (“and-the-Emorite dwell/sit in-mountain”)
+# ‹והכנעני ישב על› (“and-the-Kenaanite dwell/sit over”)
+# ‹הים ועל יד› (“the-seas and-over hand”)
+# ‹הירד› (“the-go-down”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:29."
+m.step("Num.13.29")
+
+# -------------------------- Num.13.30 · ETNACHTA_SPLIT ---------------------
+# ‹ויהס כלב את› (“and-hush Caleb obj-marker”)
+# ‹העם אל משה› (“the-people to Moses”)
+# ‹… ויאמר עלה נעלה› (“and-say go-up go-up”)
+# ‹וירשנו אתה כי› (“and-possess/inherit obj-marker-her/its that”)
+# ‹יכול נוכל לה› (“be-able be-able to-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:30."
+m.step("Num.13.30")
+# witness-tier presupposed read: two_doubled_infinitives_than_we_than_he on
+# caleb_hushed — read, not installed
+m.witness_read("caleb_hushed", "two_doubled_infinitives_than_we_than_he",
+                cites=["Onkelos Num 13:30", "Onkelos Num 13:31"])
+
+# -------------------------- Num.13.31 · ETNACHTA_SPLIT ---------------------
+# ‹והאנשים אשר עלו› (“and-the-man which go-up”)
+# ‹עמו אמרו לא› (“with-him/its say not”)
+# ‹נוכל לעלות אל› (“be-able to-go-up to”)
+# ‹העם … כי חזק› (“the-people … that strong”)
+# ‹הוא ממנו› (“he/it from-us/our”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:31."
+m.step("Num.13.31")
+
+# -------------------------- Num.13.32 · ETNACHTA_SPLIT ---------------------
+# ‹ויוציאו דבת הארץ› (“and-bring-forth slander the-earth”)
+# ‹אשר תרו אתה› (“which meander-about obj-marker-her/its”)
+# ‹אל בני ישראל› (“to son Israel”)
+# ‹לאמר … הארץ אשר› (“to-say … the-earth which”)
+# ‹עברנו בה לתור› (“pass-over in-her/its to-meander-about”)
+# ‹אתה ארץ אכלת› (“obj-marker-her/its earth eat”)
+# ‹יושביה הוא וכל› (“dwell/sit-her/its he/it and-all”)
+# ‹העם אשר ר› (“the-people which ?”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:32."
+m.step("Num.13.32")
+# witness-tier presupposed read:
+# josephs_word_the_nephilim_plene_and_defective on the_slander_of_the_land —
+# read, not installed
+m.witness_read("the_slander_of_the_land", "josephs_word_the_nephilim_plene_and_defective",
+                cites=["Onkelos Num 13:32", "Onkelos Num 13:33"])
+
+# -------------------------- Num.13.33 · ETNACHTA_SPLIT ---------------------
+# ‹ושם ראינו את› (“and-there see obj-marker”)
+# ‹הנפילים בני ענק› (“the-feller son Anak”)
+# ‹מן הנפלים … ונהי› (“from the-feller … and-be”)
+# ‹בעינינו כחגבים וכן› (“in-eye-us/our like-locust and-so”)
+# ‹היינו בעיניהם› (“be in-eye-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 13:33."
+m.step("Num.13.33")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('send_for_yourself', 'the_spy_verb_is_the_arks_the_shelf_silent'), ('these_are_their_names', 'a_fourth_order_josephs_name_over_manasseh'), ('hoshea_called_joshua', 'the_new_name_before_the_old_name_after'), ('go_up_into_the_south', 'the_questionnaire_counted_the_season'), ('from_zin_to_hamath', 'they_went_up_he_came_to_hebron'), ('the_cluster_on_a_pole', 'the_dual_read_forty_days'), ('to_kadesh', 'rekem_milk_and_honey_the_maps_three_placements'), ('caleb_hushed', 'two_doubled_infinitives_than_we_than_he'), ('the_slander_of_the_land', 'josephs_word_the_nephilim_plene_and_defective')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Num 13:2', 'Onkelos Num 13:3']
+    assert all('the_spy_verb_is_the_arks_the_shelf_silent' not in f for f in m.WORLD["facts"])
+    assert 'send_for_yourself' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Num 13:4', 'Onkelos Num 13:5', 'Onkelos Num 13:6', 'Onkelos Num 13:7', 'Onkelos Num 13:8', 'Onkelos Num 13:9', 'Onkelos Num 13:10', 'Onkelos Num 13:11', 'Onkelos Num 13:12', 'Onkelos Num 13:13', 'Onkelos Num 13:14', 'Onkelos Num 13:15']
+    assert all('a_fourth_order_josephs_name_over_manasseh' not in f for f in m.WORLD["facts"])
+    assert 'these_are_their_names' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Num 13:16']
+    assert all('the_new_name_before_the_old_name_after' not in f for f in m.WORLD["facts"])
+    assert 'hoshea_called_joshua' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Num 13:17', 'Onkelos Num 13:18', 'Onkelos Num 13:19', 'Onkelos Num 13:20']
+    assert all('the_questionnaire_counted_the_season' not in f for f in m.WORLD["facts"])
+    assert 'go_up_into_the_south' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Num 13:21', 'Onkelos Num 13:22']
+    assert all('they_went_up_he_came_to_hebron' not in f for f in m.WORLD["facts"])
+    assert 'from_zin_to_hamath' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Num 13:23', 'Onkelos Num 13:24', 'Onkelos Num 13:25']
+    assert all('the_dual_read_forty_days' not in f for f in m.WORLD["facts"])
+    assert 'the_cluster_on_a_pole' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Num 13:26', 'Onkelos Num 13:27', 'Onkelos Num 13:28', 'Onkelos Num 13:29']
+    assert all('rekem_milk_and_honey_the_maps_three_placements' not in f for f in m.WORLD["facts"])
+    assert 'to_kadesh' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Num 13:30', 'Onkelos Num 13:31']
+    assert all('two_doubled_infinitives_than_we_than_he' not in f for f in m.WORLD["facts"])
+    assert 'caleb_hushed' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Num 13:32', 'Onkelos Num 13:33']
+    assert all('josephs_word_the_nephilim_plene_and_defective' not in f for f in m.WORLD["facts"])
+    assert 'the_slander_of_the_land' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_14_rejection
+###############################################################################
+
+m = Machine("num_14_rejection")
+
+# -------------------------- Num.14.1 · ETNACHTA_SPLIT ----------------------
+# ‹ותשא כל העדה› (“and-lift/carry all the-congregation”)
+# ‹ויתנו את קולם› (“and-set obj-marker voice/sound-them/their”)
+# ‹… ויבכו העם בלילה› (“and-weep the-people in-night”)
+# ‹ההוא› (“that”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:1."
+m.step("Num.14.1")
+# witness-tier presupposed read: the_ninth_of_av_the_murmur_root on
+# that_night — read, not installed
+m.witness_read("that_night", "the_ninth_of_av_the_murmur_root",
+                cites=["Onkelos Num 14:1", "Onkelos Num 14:2", "Onkelos Num 14:3", "Onkelos Num 14:4"])
+
+# -------------------------- Num.14.2 · ETNACHTA_SPLIT ----------------------
+# ‹וילנו על משה› (“and-stop over Moses”)
+# ‹ועל אהרן כל› (“and-over Aaron all”)
+# ‹בני ישראל … ויאמרו› (“son Israel … and-say”)
+# ‹אלהם כל העדה› (“to-them/their all the-congregation”)
+# ‹לו מתנו בארץ› (“conditional-particle die in-earth”)
+# ‹מצרים או במדבר› (“Egypt or in-pasture”)
+# ‹הזה לו מתנו› (“the-this conditional-particle die”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:2."
+m.step("Num.14.2")
+
+# -------------------------- Num.14.3 · ETNACHTA_SPLIT ----------------------
+# ‹ולמה יהוה מביא› (“and-to-what YHWH come/bring”)
+# ‹אתנו אל הארץ› (“obj-marker-us/our to the-earth”)
+# ‹הזאת לנפל בחרב› (“the-this to-fall in-drought”)
+# ‹נשינו וטפנו יהיו› (“woman-us/our and-family-us/our be”)
+# ‹… הלוא טוב לנו› (“is-it-not good to-us/our”)
+# ‹שוב מצרימה› (“return Egypt-ward”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:3."
+m.step("Num.14.3")
+
+# -------------------------- Num.14.4 · ETNACHTA_SPLIT ----------------------
+# ‹ויאמרו איש אל› (“and-say man to”)
+# ‹אחיו … נתנה ראש› (“brother-him/its … set head”)
+# ‹ונשובה מצרימה› (“and-return Egypt-ward”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:4."
+m.step("Num.14.4")
+
+# -------------------------- Num.14.5 · ETNACHTA_SPLIT ----------------------
+# ‹ויפל משה ואהרן› (“and-fall Moses and-Aaron”)
+# ‹על פניהם … לפני› (“over face-them/their … to-face”)
+# ‹כל קהל עדת› (“all assemblage congregation”)
+# ‹בני ישראל› (“son Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:5."
+m.step("Num.14.5")
+# witness-tier presupposed read: our_bread_delivered_the_glory_at_six_seats
+# on on_their_faces — read, not installed
+m.witness_read("on_their_faces", "our_bread_delivered_the_glory_at_six_seats",
+                cites=["Onkelos Num 14:5", "Onkelos Num 14:6", "Onkelos Num 14:7", "Onkelos Num 14:8", "Onkelos Num 14:9", "Onkelos Num 14:10"])
+
+# -------------------------- Num.14.6 · ETNACHTA_SPLIT ----------------------
+# ‹ויהושע בן נון› (“and-Jehoshua son Non”)
+# ‹וכלב בן יפנה› (“and-Caleb son Jephunneh”)
+# ‹מן התרים את› (“from the-meander-about obj-marker”)
+# ‹הארץ … קרעו בגדיהם› (“the-earth … rend garment-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:6."
+m.step("Num.14.6")
+
+# -------------------------- Num.14.7 · ETNACHTA_SPLIT ----------------------
+# ‹ויאמרו אל כל› (“and-say to all”)
+# ‹עדת בני ישראל› (“congregation son Israel”)
+# ‹לאמר … הארץ אשר› (“to-say … the-earth which”)
+# ‹עברנו בה לתור› (“pass-over in-her/its to-meander-about”)
+# ‹אתה טובה הארץ› (“obj-marker-her/its good the-earth”)
+# ‹מאד מאד› (“very very”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:7."
+m.step("Num.14.7")
+
+# -------------------------- Num.14.8 · COND_אם (“if”) ----------------------
+# ‹אם חפץ בנו› (“if incline-to in-us/our”)
+# ‹יהוה והביא אתנו› (“YHWH and-come/bring obj-marker-us/our”)
+# ‹אל הארץ הזאת› (“to the-earth the-this”)
+# ‹ונתנה לנו … ארץ› (“and-set-her/its to-us/our … earth”)
+# ‹אשר הוא זבת› (“which he/it flow-freely”)
+# ‹חלב ודבש› (“milk and-honey”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:8."
+m.step("Num.14.8")
+
+# -------------------------- Num.14.9 · ETNACHTA_SPLIT ----------------------
+# ‹אך ביהוה אל› (“indeed in-YHWH do-not”)
+# ‹תמרדו ואתם אל› (“rebel and-you do-not”)
+# ‹תיראו את עם› (“fear obj-marker people”)
+# ‹הארץ כי לחמנו› (“the-earth that food-us/our”)
+# ‹הם … סר צלם› (“they … turn-aside shade-them/their”)
+# ‹מעליהם ויהוה אתנו› (“from-over-them/their and-YHWH with-us/our”)
+# ‹אל תיראם› (“do-not fear-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:9."
+m.step("Num.14.9")
+
+# -------------------------- Num.14.10 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמרו כל העדה› (“and-say all the-congregation”)
+# ‹לרגום אתם באבנים› (“to-cast-together obj-marker-them/their in-stone”)
+# ‹… וכבוד יהוה נראה› (“and-weight YHWH see”)
+# ‹באהל מועד אל› (“in-tent seasons to”)
+# ‹כל בני ישראל› (“all son Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:10."
+m.step("Num.14.10")
+
+# -------------------------- Num.14.11 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר יהוה אל› (“and-say YHWH to”)
+# ‹משה עד אנה› (“Moses until where?”)
+# ‹ינאצני העם הזה› (“scorn-me/my the-people the-this”)
+# ‹… ועד אנה לא› (“and-until where? not”)
+# ‹יאמינו בי בכל› (“build-up in-me/my in-all”)
+# ‹האתות אשר עשיתי› (“the-signs which make”)
+# ‹בקרבו› (“in-nearest-part-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:11."
+m.step("Num.14.11")
+# witness-tier presupposed read: the_scorn_verb_the_offers_second_seat on
+# how_long — read, not installed
+m.witness_read("how_long", "the_scorn_verb_the_offers_second_seat",
+                cites=["Onkelos Num 14:11", "Onkelos Num 14:12"])
+
+# -------------------------- Num.14.12 · ETNACHTA_SPLIT ---------------------
+# ‹אכנו בדבר ואורשנו› (“strike-him/its in-pestilence and-possess/inherit-
+# him/its”)
+# ‹… ואעשה אתך לגוי› (“and-make obj-marker-you/your to-nation”)
+# ‹גדול ועצום ממנו› (“great and-powerful from-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:12."
+m.step("Num.14.12")
+
+# -------------------------- Num.14.13 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר משה אל› (“and-say Moses to”)
+# ‹יהוה … ושמעו מצרים› (“YHWH … and-hear Egyptian”)
+# ‹כי העלית בכחך› (“that go-up in-vigor-you/your”)
+# ‹את העם הזה› (“obj-marker the-people the-this”)
+# ‹מקרבו› (“from-nearest-part-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:13."
+m.step("Num.14.13")
+# witness-tier presupposed read: eye_to_eye_the_shekhinah on egypt_will_hear
+# — read, not installed
+m.witness_read("egypt_will_hear", "eye_to_eye_the_shekhinah",
+                cites=["Onkelos Num 14:13", "Onkelos Num 14:14", "Onkelos Num 14:15", "Onkelos Num 14:16", "Onkelos Num 14:17"])
+
+# -------------------------- Num.14.14 · ETNACHTA_SPLIT ---------------------
+# ‹ואמרו אל יושב› (“and-say to dwell/sit”)
+# ‹הארץ הזאת שמעו› (“the-earth the-this hear”)
+# ‹כי אתה יהוה› (“that you YHWH”)
+# ‹בקרב העם הזה› (“in-nearest-part the-people the-this”)
+# ‹… אשר עין בעין› (“which eye in-eye”)
+# ‹נראה אתה יהוה› (“see you YHWH”)
+# ‹ועננך עמד עלהם› (“and-cloud-you/your stand over-them/their”)
+# ‹ובעמד ענן אתה› (“and-in-column cloud you”)
+# ‹הלך› (“walk/go”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:14."
+m.step("Num.14.14")
+
+# -------------------------- Num.14.15 · ETNACHTA_SPLIT ---------------------
+# ‹והמתה את העם› (“and-die obj-marker the-people”)
+# ‹הזה כאיש אחד› (“the-this like-man one”)
+# ‹… ואמרו הגוים אשר› (“and-say the-nation which”)
+# ‹שמעו את שמעך› (“hear obj-marker something-heard-you/your”)
+# ‹לאמר› (“to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:15."
+m.step("Num.14.15")
+
+# -------------------------- Num.14.16 · ETNACHTA_SPLIT ---------------------
+# ‹מבלתי יכלת יהוה› (“from-failure-of be-able YHWH”)
+# ‹להביא את העם› (“to-come/bring obj-marker the-people”)
+# ‹הזה אל הארץ› (“the-this to the-earth”)
+# ‹אשר נשבע להם› (“which swear to-them/their”)
+# ‹… וישחטם במדבר› (“and-slaughter-them/their in-pasture”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:16."
+m.step("Num.14.16")
+
+# -------------------------- Num.14.17 · ETNACHTA_SPLIT ---------------------
+# ‹ועתה יגדל נא› (“and-now be-large please”)
+# ‹כח אדני … כאשר› (“vigor Lord-me/my … like-as/which”)
+# ‹דברת לאמר› (“speak to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:17."
+m.step("Num.14.17")
+
+# -------------------------- Num.14.18 · ETNACHTA_SPLIT ---------------------
+# ‹יהוה ארך אפים› (“YHWH long nose”)
+# ‹ורב חסד נשא› (“and-many/great kindness lift/carry”)
+# ‹עון ופשע … ונקה› (“perversity and-revolt … and-be-clean”)
+# ‹לא ינקה פקד› (“not be-clean count/visit”)
+# ‹עון אבות על› (“perversity father over”)
+# ‹בנים על שלשים› (“son over descendant-of-the-third-degr”)
+# ‹ועל רבעים› (“and-over descendant-of-the-fourth-gen”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:18."
+m.step("Num.14.18")
+# witness-tier presupposed read:
+# the_attributes_abridged_the_translation_restores on slow_to_anger — read,
+# not installed
+m.witness_read("slow_to_anger", "the_attributes_abridged_the_translation_restores",
+                cites=["Onkelos Num 14:18", "Onkelos Num 14:19", "Onkelos Num 14:20"])
+
+# -------------------------- Num.14.19 · ETNACHTA_SPLIT ---------------------
+# ‹סלח נא לעון› (“forgive please to-perversity”)
+# ‹העם הזה כגדל› (“the-people the-this like-magnitude”)
+# ‹חסדך … וכאשר נשאתה› (“kindness-you/your … and-like-as/which lift/carry”)
+# ‹לעם הזה ממצרים› (“to-people the-this from-Egypt”)
+# ‹ועד הנה› (“and-until hither”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:19."
+m.step("Num.14.19")
+
+# -------------------------- Num.14.20 · TREE_CLAIM -------------------------
+# ‹ויאמר יהוה … סלחתי› (“and-say YHWH … forgive”)
+# ‹כדברך› (“like-word/thing-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:20."
+m.step("Num.14.20")
+
+# -------------------------- Num.14.21 · ETNACHTA_SPLIT ---------------------
+# ‹ואולם חי אני› (“and-however living”)
+# ‹… וימלא כבוד יהוה› (“and-fill weight YHWH”)
+# ‹את כל הארץ› (“obj-marker all the-earth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:21."
+m.step("Num.14.21")
+# witness-tier presupposed read: ten_times_calebs_formula on as_i_live —
+# read, not installed
+m.witness_read("as_i_live", "ten_times_calebs_formula",
+                cites=["Onkelos Num 14:21", "Onkelos Num 14:22", "Onkelos Num 14:23", "Onkelos Num 14:24", "Onkelos Num 14:25"])
+
+# -------------------------- Num.14.22 · COND_כי (“that”) -------------------
+# ‹כי כל האנשים› (“that all the-man”)
+# ‹הראים את כבדי› (“the-see obj-marker weight-me/my”)
+# ‹ואת אתתי אשר› (“and-obj-marker signs-me/my which”)
+# ‹עשיתי במצרים ובמדבר› (“make in-Egypt and-in-pasture”)
+# ‹… וינסו אתי זה› (“and-test obj-marker-me/my this”)
+# ‹עשר פעמים ולא› (“ten stroke and-not”)
+# ‹שמעו בקולי› (“hear in-voice/sound-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:22."
+m.step("Num.14.22")
+
+# -------------------------- Num.14.23 · COND_אם (“if”) ---------------------
+# ‹אם יראו את› (“if see obj-marker”)
+# ‹הארץ אשר נשבעתי› (“the-earth which swear”)
+# ‹לאבתם … וכל מנאצי› (“to-father-them/their … and-all scorn-me/my”)
+# ‹לא יראוה› (“not see-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:23."
+m.step("Num.14.23")
+
+# -------------------------- Num.14.24 · ETNACHTA_SPLIT ---------------------
+# ‹ועבדי כלב עקב› (“and-servant-me/my Caleb heel”)
+# ‹היתה רוח אחרת› (“be spirit other”)
+# ‹עמו וימלא אחרי› (“with-him/its and-fill after-me/my”)
+# ‹… והביאתיו אל הארץ› (“and-come/bring-him/its to the-earth”)
+# ‹אשר בא שמה› (“which come/bring there-ward”)
+# ‹וזרעו יורשנה› (“and-seed-him/its possess/inherit-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:24."
+m.step("Num.14.24")
+
+# -------------------------- Num.14.25 · ETNACHTA_SPLIT ---------------------
+# ‹והעמלקי והכנעני יושב› (“and-the-Amalekite and-the-Kenaanite dwell/sit”)
+# ‹בעמק … מחר פנו› (“in-vale … deferred turn”)
+# ‹וסעו לכם המדבר› (“and-journey to-you/your(pl) the-pasture”)
+# ‹דרך ים סוף› (“way/road seas reed”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:25."
+m.step("Num.14.25")
+
+# -------------------------- Num.14.26 · TREE_CLAIM -------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה ואל אהרן› (“Moses and-to Aaron”)
+# ‹לאמר› (“to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:26."
+m.step("Num.14.26")
+
+# -------------------------- Num.14.27 · ETNACHTA_SPLIT ---------------------
+# ‹עד מתי לעדה› (“until extent to-congregation”)
+# ‹הרעה הזאת אשר› (“the-bad the-this which”)
+# ‹המה מלינים עלי› (“they stop over-me/my”)
+# ‹… את תלנות בני› (“obj-marker grumbling son”)
+# ‹ישראל אשר המה› (“Israel which they”)
+# ‹מלינים עלי שמעתי› (“stop over-me/my hear”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:27."
+m.step("Num.14.27")
+# witness-tier presupposed read: the_ten_measure_for_measure_the_census on
+# this_evil_congregation — read, not installed
+m.witness_read("this_evil_congregation", "the_ten_measure_for_measure_the_census",
+                cites=["Onkelos Num 14:26", "Onkelos Num 14:27", "Onkelos Num 14:28", "Onkelos Num 14:29", "Onkelos Num 14:30"])
+
+# -------------------------- Num.14.28 · ETNACHTA_SPLIT ---------------------
+# ‹אמר אלהם חי› (“say to-them/their living”)
+# ‹אני נאם יהוה› (“oracle YHWH”)
+# ‹אם לא כאשר› (“if not like-as/which”)
+# ‹דברתם באזני … כן› (“speak in-broadness.-i.e.-the-ear-me/my … so”)
+# ‹אעשה לכם› (“make to-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:28."
+m.step("Num.14.28")
+
+# -------------------------- Num.14.29 · ETNACHTA_SPLIT ---------------------
+# ‹במדבר הזה יפלו› (“in-pasture the-this fall”)
+# ‹פגריכם וכל פקדיכם› (“carcase-you/your(pl) and-all count/visit-
+# you/your(pl)”)
+# ‹לכל מספרכם מבן› (“to-all number-you/your(pl) from-son”)
+# ‹עשרים שנה ומ› (“twenty years ?”)
+# ‹… אשר הלינתם עלי› (“which stop over-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:29."
+m.step("Num.14.29")
+
+# -------------------------- Num.14.30 · COND_אם (“if”) ---------------------
+# ‹אם אתם תבאו› (“if you come/bring”)
+# ‹אל הארץ אשר› (“to the-earth which”)
+# ‹נשאתי את ידי› (“lift/carry obj-marker hand-me/my”)
+# ‹לשכן אתכם בה› (“to-reside obj-marker-you/your(pl) in-her/its”)
+# ‹… כי אם כלב› (“very-widely-used-as-a-relati as-demonstrative Caleb”)
+# ‹בן יפנה ויהושע› (“son Jephunneh and-Jehoshua”)
+# ‹בן נון› (“son Non”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:30."
+m.step("Num.14.30")
+
+# -------------------------- Num.14.31 · ETNACHTA_SPLIT ---------------------
+# ‹וטפכם אשר אמרתם› (“and-family-you/your(pl) which say”)
+# ‹לבז יהיה … והביאתי› (“to-plunder be … and-come/bring”)
+# ‹אתם וידעו את› (“obj-marker-them/their and-know obj-marker”)
+# ‹הארץ אשר מאסתם› (“the-earth which spurn”)
+# ‹בה› (“in-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:31."
+m.step("Num.14.31")
+# witness-tier presupposed read: a_day_for_a_year_ezekiel_runs_it on
+# your_little_ones — read, not installed
+m.witness_read("your_little_ones", "a_day_for_a_year_ezekiel_runs_it",
+                cites=["Onkelos Num 14:31", "Onkelos Num 14:32", "Onkelos Num 14:33", "Onkelos Num 14:34", "Onkelos Num 14:35"])
+
+# -------------------------- Num.14.32 · ETNACHTA_SPLIT ---------------------
+# ‹ופגריכם אתם … יפלו› (“and-carcase-you/your(pl) you … fall”)
+# ‹במדבר הזה› (“in-pasture the-this”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:32."
+m.step("Num.14.32")
+
+# -------------------------- Num.14.33 · ETNACHTA_SPLIT ---------------------
+# ‹ובניכם יהיו רעים› (“and-son-you/your(pl) be graze”)
+# ‹במדבר ארבעים שנה› (“in-pasture forty years”)
+# ‹ונשאו את זנותיכם› (“and-lift/carry obj-marker adultery-you/your(pl)”)
+# ‹… עד תם פגריכם› (“until complete carcase-you/your(pl)”)
+# ‹במדבר› (“in-pasture”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:33."
+m.step("Num.14.33")
+
+# -------------------------- Num.14.34 · ETNACHTA_SPLIT ---------------------
+# ‹במספר הימים אשר› (“in-number the-day which”)
+# ‹תרתם את הארץ› (“meander-about obj-marker the-earth”)
+# ‹ארבעים יום יום› (“forty day day”)
+# ‹לשנה יום לשנה› (“to-years day to-years”)
+# ‹תש … וידעתם את› (“? … and-know obj-marker”)
+# ‹תנואתי› (“alienation-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:34."
+m.step("Num.14.34")
+
+# -------------------------- Num.14.35 · COND_אם (“if”) ---------------------
+# ‹אני יהוה דברתי› (“YHWH speak”)
+# ‹אם לא זאת› (“if not this”)
+# ‹אעשה לכל העדה› (“make to-all the-congregation”)
+# ‹הרעה הזאת הנועדים› (“the-bad the-this the-fix-upon”)
+# ‹עלי … במדבר הזה› (“over-me/my … in-pasture the-this”)
+# ‹יתמו ושם ימתו› (“complete and-there die”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:35."
+m.step("Num.14.35")
+
+# -------------------------- Num.14.36 · ETNACHTA_SPLIT ---------------------
+# ‹והאנשים אשר שלח› (“and-the-man which send”)
+# ‹משה לתור את› (“Moses to-meander-about obj-marker”)
+# ‹הארץ … וישבו וילונו› (“the-earth … and-return and-stop”)
+# ‹וילינו עליו את› (“and-stop over-him/its obj-marker”)
+# ‹כל העדה להוציא› (“all the-congregation to-bring-forth”)
+# ‹דבה על הארץ› (“slander over the-earth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:36."
+m.step("Num.14.36")
+# witness-tier presupposed read: the_ten_in_the_plague on
+# the_men_who_slandered — read, not installed
+m.witness_read("the_men_who_slandered", "the_ten_in_the_plague",
+                cites=["Onkelos Num 14:36", "Onkelos Num 14:37", "Onkelos Num 14:38", "Onkelos Num 14:39"])
+
+# -------------------------- Num.14.37 · ETNACHTA_SPLIT ---------------------
+# ‹וימתו האנשים מוצאי› (“and-die the-man bring-forth”)
+# ‹דבת הארץ רעה› (“slander the-earth bad”)
+# ‹… במגפה לפני יהוה› (“in-pestilence to-face YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:37."
+m.step("Num.14.37")
+
+# -------------------------- Num.14.38 · ETNACHTA_SPLIT ---------------------
+# ‹ויהושע בן נון› (“and-Jehoshua son Non”)
+# ‹וכלב בן יפנה› (“and-Caleb son Jephunneh”)
+# ‹… חיו מן האנשים› (“live from the-man”)
+# ‹ההם ההלכים לתור› (“the-they the-walk/go to-meander-about”)
+# ‹את הארץ› (“obj-marker the-earth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:38."
+m.step("Num.14.38")
+
+# -------------------------- Num.14.39 · ETNACHTA_SPLIT ---------------------
+# ‹וידבר משה את› (“and-speak Moses obj-marker”)
+# ‹הדברים האלה אל› (“the-word/thing the-these to”)
+# ‹כל בני ישראל› (“all son Israel”)
+# ‹… ויתאבלו העם מאד› (“and-bewail the-people very”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:39."
+m.step("Num.14.39")
+
+# -------------------------- Num.14.40 · ETNACHTA_SPLIT ---------------------
+# ‹וישכמו בבקר ויעלו› (“and-rise-early in-morning and-go-up”)
+# ‹אל ראש ההר› (“to head the-mountain”)
+# ‹לאמר … הננו ועלינו› (“to-say … lo!-us/our and-go-up”)
+# ‹אל המקום אשר› (“to the-place which”)
+# ‹אמר יהוה כי› (“say YHWH that”)
+# ‹חטאנו› (“sin”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:40."
+m.step("Num.14.40")
+# witness-tier presupposed read: the_ark_stays_hormah_named_later on
+# they_rose_early — read, not installed
+m.witness_read("they_rose_early", "the_ark_stays_hormah_named_later",
+                cites=["Onkelos Num 14:40", "Onkelos Num 14:41", "Onkelos Num 14:42", "Onkelos Num 14:43", "Onkelos Num 14:44", "Onkelos Num 14:45"])
+
+# -------------------------- Num.14.41 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר משה למה› (“and-say Moses to-what”)
+# ‹זה אתם עברים› (“this you pass-over”)
+# ‹את פי יהוה› (“obj-marker mouth YHWH”)
+# ‹… והוא לא תצלח› (“and-he/it not push-forward”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:41."
+m.step("Num.14.41")
+
+# -------------------------- Num.14.42 · COND_כי (“that”) -------------------
+# ‹אל תעלו כי› (“do-not go-up that”)
+# ‹אין יהוה בקרבכם› (“there-is-not YHWH in-nearest-part-you/your(pl)”)
+# ‹… ולא תנגפו לפני› (“and-not push to-face”)
+# ‹איביכם› (“hating-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:42."
+m.step("Num.14.42")
+
+# -------------------------- Num.14.43 · COND_כי (“that”) -------------------
+# ‹כי העמלקי והכנעני› (“that the-Amalekite and-the-Kenaanite”)
+# ‹שם לפניכם ונפלתם› (“there to-face-you/your(pl) and-fall”)
+# ‹בחרב … כי על› (“in-drought … very-widely-used-as-a-relati above”)
+# ‹כן שבתם מאחרי› (“set-upright return from-after”)
+# ‹יהוה ולא יהיה› (“YHWH and-not be”)
+# ‹יהוה עמכם› (“YHWH with-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:43."
+m.step("Num.14.43")
+
+# -------------------------- Num.14.44 · ETNACHTA_SPLIT ---------------------
+# ‹ויעפלו לעלות אל› (“and-swell to-go-up to”)
+# ‹ראש ההר … וארון› (“head the-mountain … and-ark”)
+# ‹ברית יהוה ומשה› (“covenant YHWH and-Moses”)
+# ‹לא משו מקרב› (“not withdraw from-nearest-part”)
+# ‹המחנה› (“the-camp”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:44."
+m.step("Num.14.44")
+
+# -------------------------- Num.14.45 · ETNACHTA_SPLIT ---------------------
+# ‹וירד העמלקי והכנעני› (“and-go-down the-Amalekite and-the-Kenaanite”)
+# ‹הישב בהר ההוא› (“the-dwell/sit in-mountain that”)
+# ‹… ויכום ויכתום עד› (“and-strike-them/their and-bruise-them/their until”)
+# ‹החרמה› (“the-Hormah”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 14:45."
+m.step("Num.14.45")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('that_night', 'the_ninth_of_av_the_murmur_root'), ('on_their_faces', 'our_bread_delivered_the_glory_at_six_seats'), ('how_long', 'the_scorn_verb_the_offers_second_seat'), ('egypt_will_hear', 'eye_to_eye_the_shekhinah'), ('slow_to_anger', 'the_attributes_abridged_the_translation_restores'), ('as_i_live', 'ten_times_calebs_formula'), ('this_evil_congregation', 'the_ten_measure_for_measure_the_census'), ('your_little_ones', 'a_day_for_a_year_ezekiel_runs_it'), ('the_men_who_slandered', 'the_ten_in_the_plague'), ('they_rose_early', 'the_ark_stays_hormah_named_later')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Num 14:1', 'Onkelos Num 14:2', 'Onkelos Num 14:3', 'Onkelos Num 14:4']
+    assert all('the_ninth_of_av_the_murmur_root' not in f for f in m.WORLD["facts"])
+    assert 'that_night' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Num 14:5', 'Onkelos Num 14:6', 'Onkelos Num 14:7', 'Onkelos Num 14:8', 'Onkelos Num 14:9', 'Onkelos Num 14:10']
+    assert all('our_bread_delivered_the_glory_at_six_seats' not in f for f in m.WORLD["facts"])
+    assert 'on_their_faces' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Num 14:11', 'Onkelos Num 14:12']
+    assert all('the_scorn_verb_the_offers_second_seat' not in f for f in m.WORLD["facts"])
+    assert 'how_long' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Num 14:13', 'Onkelos Num 14:14', 'Onkelos Num 14:15', 'Onkelos Num 14:16', 'Onkelos Num 14:17']
+    assert all('eye_to_eye_the_shekhinah' not in f for f in m.WORLD["facts"])
+    assert 'egypt_will_hear' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Num 14:18', 'Onkelos Num 14:19', 'Onkelos Num 14:20']
+    assert all('the_attributes_abridged_the_translation_restores' not in f for f in m.WORLD["facts"])
+    assert 'slow_to_anger' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Num 14:21', 'Onkelos Num 14:22', 'Onkelos Num 14:23', 'Onkelos Num 14:24', 'Onkelos Num 14:25']
+    assert all('ten_times_calebs_formula' not in f for f in m.WORLD["facts"])
+    assert 'as_i_live' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Num 14:26', 'Onkelos Num 14:27', 'Onkelos Num 14:28', 'Onkelos Num 14:29', 'Onkelos Num 14:30']
+    assert all('the_ten_measure_for_measure_the_census' not in f for f in m.WORLD["facts"])
+    assert 'this_evil_congregation' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Num 14:31', 'Onkelos Num 14:32', 'Onkelos Num 14:33', 'Onkelos Num 14:34', 'Onkelos Num 14:35']
+    assert all('a_day_for_a_year_ezekiel_runs_it' not in f for f in m.WORLD["facts"])
+    assert 'your_little_ones' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Num 14:36', 'Onkelos Num 14:37', 'Onkelos Num 14:38', 'Onkelos Num 14:39']
+    assert all('the_ten_in_the_plague' not in f for f in m.WORLD["facts"])
+    assert 'the_men_who_slandered' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Num 14:40', 'Onkelos Num 14:41', 'Onkelos Num 14:42', 'Onkelos Num 14:43', 'Onkelos Num 14:44', 'Onkelos Num 14:45']
+    assert all('the_ark_stays_hormah_named_later' not in f for f in m.WORLD["facts"])
+    assert 'they_rose_early' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_15_offerings_laws
+###############################################################################
+
+m = Machine("num_15_offerings_laws")
+
+# -------------------------- Num.15.1 · TREE_CLAIM --------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:1."
+m.step("Num.15.1")
+
+# -------------------------- Num.15.2 · ETNACHTA_SPLIT ----------------------
+# ‹דבר אל בני› (“speak to son”)
+# ‹ישראל ואמרת אלהם› (“Israel and-say to-them/their”)
+# ‹… כי תבאו אל› (“that come/bring to”)
+# ‹ארץ מושבתיכם אשר› (“earth seat-you/your(pl) which”)
+# ‹אני נתן לכם› (“set to-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:2."
+m.step("Num.15.2")
+# witness-tier presupposed read: libations_after_settlement_or_against_and
+# on your_settlings — read, not installed
+m.witness_read("your_settlings", "libations_after_settlement_or_against_and",
+                cites=["Sifrei Bamidbar 107:1", "Onkelos Num 15:1", "Onkelos Num 15:2", "Onkelos Num 15:3"])
+
+# -------------------------- Num.15.3 · ETNACHTA_SPLIT ----------------------
+# ‹ועשיתם אשה ליהוה› (“and-make fire-offering to-YHWH”)
+# ‹עלה או זבח› (“burnt-offering or sacrifice”)
+# ‹לפלא נדר או› (“to-perhaps-to-separate promise or”)
+# ‹בנדבה או במעדיכם› (“in-spontaneity or in-seasons-you/your(pl)”)
+# ‹… לעשות ריח ניחח› (“to-make odor restful”)
+# ‹ליהוה מן הבקר› (“to-YHWH from the-herd”)
+# ‹או מן הצאן› (“or from the-flock”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:3."
+m.step("Num.15.3")
+
+# -------------------------- Num.15.4 · ETNACHTA_SPLIT ----------------------
+# ‹והקריב המקריב קרבנו› (“and-bring-near the-bring-near offering-him/its”)
+# ‹ליהוה … מנחה סלת› (“to-YHWH … grain-offering flour”)
+# ‹עשרון בלול ברבעית› (“tenth-part overflow in-fourth”)
+# ‹ההין שמן› (“the-hin oil”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:4."
+m.step("Num.15.4")
+# witness-tier presupposed read: the_table_the_fraction_class on
+# a_tenth_a_quarter — read, not installed
+m.witness_read("a_tenth_a_quarter", "the_table_the_fraction_class",
+                cites=["Sifrei Bamidbar 107:2", "Onkelos Num 15:4", "Onkelos Num 15:5", "Onkelos Num 15:6", "Onkelos Num 15:7"])
+
+# -------------------------- Num.15.5 · ETNACHTA_SPLIT ----------------------
+# ‹ויין לנסך רביעית› (“and-wine to-libation fourth”)
+# ‹ההין תעשה על› (“the-hin make over”)
+# ‹העלה או לזבח› (“the-burnt-offering or to-sacrifice”)
+# ‹… לכבש האחד› (“to-ram the-one”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:5."
+m.step("Num.15.5")
+
+# -------------------------- Num.15.6 · ETNACHTA_SPLIT ----------------------
+# ‹או לאיל תעשה› (“or to-ram make”)
+# ‹מנחה סלת שני› (“grain-offering flour two”)
+# ‹עשרנים … בלולה בשמן› (“tenth-part … overflow in-oil”)
+# ‹שלשית ההין› (“third the-hin”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:6."
+m.step("Num.15.6")
+
+# -------------------------- Num.15.7 · ETNACHTA_SPLIT ----------------------
+# ‹ויין לנסך שלשית› (“and-wine to-libation third”)
+# ‹ההין … תקריב ריח› (“the-hin … bring-near odor”)
+# ‹ניחח ליהוה› (“restful to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:7."
+m.step("Num.15.7")
+
+# -------------------------- Num.15.8 · COND_וכי (“and-that”) ---------------
+# ‹וכי תעשה בן› (“and-that make son”)
+# ‹בקר עלה או› (“herd burnt-offering or”)
+# ‹זבח … לפלא נדר› (“sacrifice … to-perhaps-to-separate promise”)
+# ‹או שלמים ליהוה› (“or requital to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:8."
+m.step("Num.15.8")
+# witness-tier presupposed read: the_bull_departs_on_bowls_the_mixing_rule
+# on a_young_bull — read, not installed
+m.witness_read("a_young_bull", "the_bull_departs_on_bowls_the_mixing_rule",
+                cites=["Sifrei Bamidbar 107:2", "Onkelos Num 15:8", "Onkelos Num 15:9", "Onkelos Num 15:10", "Onkelos Num 15:11", "Onkelos Num 15:12"])
+
+# -------------------------- Num.15.9 · ETNACHTA_SPLIT ----------------------
+# ‹והקריב על בן› (“and-bring-near over son”)
+# ‹הבקר מנחה סלת› (“the-herd grain-offering flour”)
+# ‹שלשה עשרנים … בלול› (“three tenth-part … overflow”)
+# ‹בשמן חצי ההין› (“in-oil half the-hin”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:9."
+m.step("Num.15.9")
+
+# -------------------------- Num.15.10 · ETNACHTA_SPLIT ---------------------
+# ‹ויין תקריב לנסך› (“and-wine bring-near to-libation”)
+# ‹חצי ההין … אשה› (“half the-hin … fire-offering”)
+# ‹ריח ניחח ליהוה› (“odor restful to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:10."
+m.step("Num.15.10")
+
+# -------------------------- Num.15.11 · ETNACHTA_SPLIT ---------------------
+# ‹ככה יעשה לשור› (“just-so make to-bullock”)
+# ‹האחד או לאיל› (“the-one or to-ram”)
+# ‹האחד … או לשה› (“the-one … or to-member-of-a-flock”)
+# ‹בכבשים או בעזים› (“in-ram or in-she-goat”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:11."
+m.step("Num.15.11")
+
+# -------------------------- Num.15.12 · ETNACHTA_SPLIT ---------------------
+# ‹כמספר אשר תעשו› (“like-number which make”)
+# ‹… ככה תעשו לאחד› (“just-so make to-one”)
+# ‹כמספרם› (“like-number-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:12."
+m.step("Num.15.12")
+
+# -------------------------- Num.15.13 · ETNACHTA_SPLIT ---------------------
+# ‹כל האזרח יעשה› (“all the-spontaneous-growth make”)
+# ‹ככה את אלה› (“just-so obj-marker these”)
+# ‹… להקריב אשה ריח› (“to-bring-near fire-offering odor”)
+# ‹ניחח ליהוה› (“restful to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:13."
+m.step("Num.15.13")
+# witness-tier presupposed read: libations_donated_the_gentiles on
+# all_the_native_born — read, not installed
+m.witness_read("all_the_native_born", "libations_donated_the_gentiles",
+                cites=["Sifrei Bamidbar 107:3", "Onkelos Num 15:13"])
+
+# -------------------------- Num.15.14 · COND_וכי (“and-that”) --------------
+# ‹וכי יגור אתכם› (“and-that turn-aside-from-the-road with-you/your(pl)”)
+# ‹גר או אשר› (“sojourner or which”)
+# ‹בתוככם לדרתיכם ועשה› (“in-midst-you/your(pl) to-generation-you/your(pl)
+# and-make”)
+# ‹אשה ריח ניחח› (“fire-offering odor restful”)
+# ‹ליה … כאשר תעשו› (“? … like-as/which make”)
+# ‹כן יעשה› (“so make”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:14."
+m.step("Num.15.14")
+# witness-tier presupposed read: the_proselyte_by_blood_one_torah on
+# a_stranger_sojourns — read, not installed
+m.witness_read("a_stranger_sojourns", "the_proselyte_by_blood_one_torah",
+                cites=["Sifrei Bamidbar 108:1", "Sifrei Bamidbar 109:1", "Onkelos Num 15:14", "Onkelos Num 15:15", "Onkelos Num 15:16"])
+
+# -------------------------- Num.15.15 · ETNACHTA_SPLIT ---------------------
+# ‹הקהל חקה אחת› (“the-assemblage statute one”)
+# ‹לכם ולגר הגר› (“to-you/your(pl) and-to-sojourner the-turn-aside-from-the-
+# road”)
+# ‹… חקת עולם לדרתיכם› (“statute forever to-generation-you/your(pl)”)
+# ‹ככם כגר יהיה› (“like-you/your(pl) like-sojourner be”)
+# ‹לפני יהוה› (“to-face YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:15."
+m.step("Num.15.15")
+
+# -------------------------- Num.15.16 · ETNACHTA_SPLIT ---------------------
+# ‹תורה אחת ומשפט› (“precept one and-judgment”)
+# ‹אחד יהיה לכם› (“one be to-you/your(pl)”)
+# ‹… ולגר הגר אתכם› (“and-to-sojourner the-turn-aside-from-the-road with-
+# you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:16."
+m.step("Num.15.16")
+
+# -------------------------- Num.15.17 · TREE_CLAIM -------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:17."
+m.step("Num.15.17")
+
+# -------------------------- Num.15.18 · ETNACHTA_SPLIT ---------------------
+# ‹דבר אל בני› (“speak to son”)
+# ‹ישראל ואמרת אלהם› (“Israel and-say to-them/their”)
+# ‹… בבאכם אל הארץ› (“in-come/bring-you/your(pl) to the-earth”)
+# ‹אשר אני מביא› (“which come/bring”)
+# ‹אתכם שמה› (“obj-marker-you/your(pl) there-ward”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:18."
+m.step("Num.15.18")
+# witness-tier presupposed read: the_varied_formula_read_as_law on
+# upon_your_coming — read, not installed
+m.witness_read("upon_your_coming", "the_varied_formula_read_as_law",
+                cites=["Sifrei Bamidbar 110:1", "Onkelos Num 15:17", "Onkelos Num 15:18", "Onkelos Num 15:19"])
+
+# -------------------------- Num.15.19 · ETNACHTA_SPLIT ---------------------
+# ‹והיה באכלכם מלחם› (“and-be in-eat-you/your(pl) from-food”)
+# ‹הארץ … תרימו תרומה› (“the-earth … rise-high present”)
+# ‹ליהוה› (“to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:19."
+m.step("Num.15.19")
+
+# -------------------------- Num.15.20 · ETNACHTA_SPLIT ---------------------
+# ‹ראשית ערסתכם חלה› (“beginning meal-you/your(pl) cake”)
+# ‹תרימו תרומה … כתרומת› (“rise-high present … like-present”)
+# ‹גרן כן תרימו› (“threshing-floor so rise-high”)
+# ‹אתה› (“obj-marker-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:20."
+m.step("Num.15.20")
+# witness-tier presupposed read: challah_the_analogys_target on
+# the_first_of_your_dough — read, not installed
+m.witness_read("the_first_of_your_dough", "challah_the_analogys_target",
+                cites=["Sifrei Bamidbar 110:1", "Sifrei Bamidbar 110:2", "Onkelos Num 15:20", "Onkelos Num 15:21"])
+
+# -------------------------- Num.15.21 · ETNACHTA_SPLIT ---------------------
+# ‹מראשית ערסתיכם תתנו› (“from-beginning meal-you/your(pl) set”)
+# ‹ליהוה תרומה› (“to-YHWH present”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «». Derive claim from Hebrew
+# arms. Num 15:21."
+m.step("Num.15.21")
+
+# -------------------------- Num.15.22 · COND_וכי (“and-that”) --------------
+# ‹וכי תשגו ולא› (“and-that stray and-not”)
+# ‹תעשו את כל› (“make obj-marker all”)
+# ‹המצות האלה … אשר› (“the-commandment the-these … which”)
+# ‹דבר יהוה אל› (“speak YHWH to”)
+# ‹משה› (“Moses”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:22."
+m.step("Num.15.22")
+# witness-tier presupposed read: idolatry_by_the_delta_without_the_aleph on
+# if_you_err — read, not installed
+m.witness_read("if_you_err", "idolatry_by_the_delta_without_the_aleph",
+                cites=["Sifrei Bamidbar 111:1", "Sifrei Bamidbar 111:2", "Onkelos Num 15:22", "Onkelos Num 15:23", "Onkelos Num 15:24"])
+
+# -------------------------- Num.15.23 · ETNACHTA_SPLIT ---------------------
+# ‹את כל אשר› (“obj-marker all which”)
+# ‹צוה יהוה אליכם› (“command YHWH to-you/your(pl)”)
+# ‹ביד משה … מן› (“in-hand Moses … from”)
+# ‹היום אשר צוה› (“the-day which command”)
+# ‹יהוה והלאה לדרתיכם› (“YHWH and-the-distance to-generation-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:23."
+m.step("Num.15.23")
+
+# -------------------------- Num.15.24 · COND_אם (“if”) ---------------------
+# ‹והיה אם מעיני› (“and-be if from-eye”)
+# ‹העדה נעשתה לשגגה› (“the-congregation make to-mistake”)
+# ‹ועשו כל העדה› (“and-make all the-congregation”)
+# ‹פר בן בקר› (“bullock son herd”)
+# ‹אחד לע … ושעיר› (“one ? … and-shaggy”)
+# ‹עזים אחד לחטת› (“she-goat one to-sin-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:24."
+m.step("Num.15.24")
+
+# -------------------------- Num.15.25 · ETNACHTA_SPLIT ---------------------
+# ‹וכפר הכהן על› (“and-atone the-priest over”)
+# ‹כל עדת בני› (“all congregation son”)
+# ‹ישראל ונסלח להם› (“Israel and-forgive to-them/their”)
+# ‹… כי שגגה הוא› (“that mistake he/it”)
+# ‹והם הביאו את› (“and-they come/bring obj-marker”)
+# ‹קרבנם אשה ליהוה› (“offering-them/their fire-offering to-YHWH”)
+# ‹וחטאתם לפני יהוה› (“and-sin-offering-them/their to-face YHWH”)
+# ‹על› (“over”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:25."
+m.step("Num.15.25")
+# witness-tier presupposed read: the_tribe_table_the_high_priest_excluded on
+# atone_for_all — read, not installed
+m.witness_read("atone_for_all", "the_tribe_table_the_high_priest_excluded",
+                cites=["Sifrei Bamidbar 111:3", "Onkelos Num 15:25", "Onkelos Num 15:26"])
+
+# -------------------------- Num.15.26 · ETNACHTA_SPLIT ---------------------
+# ‹ונסלח לכל עדת› (“and-forgive to-all congregation”)
+# ‹בני ישראל ולגר› (“son Israel and-to-sojourner”)
+# ‹הגר בתוכם … כי› (“the-turn-aside-from-the-road in-midst-them/their …
+# that”)
+# ‹לכל העם בשגגה› (“to-all the-people in-mistake”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:26."
+m.step("Num.15.26")
+
+# -------------------------- Num.15.27 · COND_ואם (“and-if”) ----------------
+# ‹ואם נפש אחת› (“and-if living-being one”)
+# ‹תחטא בשגגה … והקריבה› (“sin in-mistake … and-bring-near”)
+# ‹עז בת שנתה› (“she-goat daughter years-her/its”)
+# ‹לחטאת› (“to-sin-offering”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:27."
+m.step("Num.15.27")
+# witness-tier presupposed read:
+# the_she_goat_of_the_first_year_keritot_on_its_verse on one_soul — read,
+# not installed
+m.witness_read("one_soul", "the_she_goat_of_the_first_year_keritot_on_its_verse",
+                cites=["Sifrei Bamidbar 112:1", "Onkelos Num 15:27", "Onkelos Num 15:28", "Onkelos Num 15:29"])
+
+# -------------------------- Num.15.28 · ETNACHTA_SPLIT ---------------------
+# ‹וכפר הכהן על› (“and-atone the-priest over”)
+# ‹הנפש השגגת בחטאה› (“the-living-being the-mistake in-sin”)
+# ‹בשגגה לפני יהוה› (“in-stray to-face YHWH”)
+# ‹… לכפר עליו ונסלח› (“to-atone over-him/its and-forgive”)
+# ‹לו› (“to-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:28."
+m.step("Num.15.28")
+
+# -------------------------- Num.15.29 · ETNACHTA_SPLIT ---------------------
+# ‹האזרח בבני ישראל› (“the-spontaneous-growth in-son Israel”)
+# ‹ולגר הגר בתוכם› (“and-to-sojourner the-turn-aside-from-the-road in-midst-
+# them/their”)
+# ‹… תורה אחת יהיה› (“precept one be”)
+# ‹לכם לעשה בשגגה› (“to-you/your(pl) to-make in-mistake”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:29."
+m.step("Num.15.29")
+
+# -------------------------- Num.15.30 · ETNACHTA_SPLIT ---------------------
+# ‹והנפש אשר תעשה› (“and-the-living-being which make”)
+# ‹ביד רמה מן› (“in-hand hurl from”)
+# ‹האזרח ומן הגר› (“the-spontaneous-growth and-from the-sojourner”)
+# ‹את יהוה הוא› (“obj-marker YHWH he/it”)
+# ‹מגדף … ונכרתה הנפש› (“hack … and-cut the-living-being”)
+# ‹ההוא מקרב עמה› (“that from-nearest-part people-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:30."
+m.step("Num.15.30")
+# witness-tier presupposed read:
+# the_exodus_posture_the_doubled_infinitives_fork on with_a_high_hand —
+# read, not installed
+m.witness_read("with_a_high_hand", "the_exodus_posture_the_doubled_infinitives_fork",
+                cites=["Sifrei Bamidbar 112:2", "Onkelos Num 15:30", "Onkelos Num 15:31"])
+
+# -------------------------- Num.15.31 · COND_כי (“that”) -------------------
+# ‹כי דבר יהוה› (“that word/thing YHWH”)
+# ‹בזה ואת מצותו› (“disesteem and-obj-marker commandment-him/its”)
+# ‹הפר … הכרת תכרת› (“break-up … cut cut”)
+# ‹הנפש ההוא עונה› (“the-living-being that perversity-her/its”)
+# ‹בה› (“in-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 15:31."
+m.step("Num.15.31")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('your_settlings', 'libations_after_settlement_or_against_and'), ('a_tenth_a_quarter', 'the_table_the_fraction_class'), ('a_young_bull', 'the_bull_departs_on_bowls_the_mixing_rule'), ('all_the_native_born', 'libations_donated_the_gentiles'), ('a_stranger_sojourns', 'the_proselyte_by_blood_one_torah'), ('upon_your_coming', 'the_varied_formula_read_as_law'), ('the_first_of_your_dough', 'challah_the_analogys_target'), ('if_you_err', 'idolatry_by_the_delta_without_the_aleph'), ('atone_for_all', 'the_tribe_table_the_high_priest_excluded'), ('one_soul', 'the_she_goat_of_the_first_year_keritot_on_its_verse'), ('with_a_high_hand', 'the_exodus_posture_the_doubled_infinitives_fork')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifrei Bamidbar 107:1', 'Onkelos Num 15:1', 'Onkelos Num 15:2', 'Onkelos Num 15:3']
+    assert all('libations_after_settlement_or_against_and' not in f for f in m.WORLD["facts"])
+    assert 'your_settlings' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifrei Bamidbar 107:2', 'Onkelos Num 15:4', 'Onkelos Num 15:5', 'Onkelos Num 15:6', 'Onkelos Num 15:7']
+    assert all('the_table_the_fraction_class' not in f for f in m.WORLD["facts"])
+    assert 'a_tenth_a_quarter' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifrei Bamidbar 107:2', 'Onkelos Num 15:8', 'Onkelos Num 15:9', 'Onkelos Num 15:10', 'Onkelos Num 15:11', 'Onkelos Num 15:12']
+    assert all('the_bull_departs_on_bowls_the_mixing_rule' not in f for f in m.WORLD["facts"])
+    assert 'a_young_bull' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifrei Bamidbar 107:3', 'Onkelos Num 15:13']
+    assert all('libations_donated_the_gentiles' not in f for f in m.WORLD["facts"])
+    assert 'all_the_native_born' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifrei Bamidbar 108:1', 'Sifrei Bamidbar 109:1', 'Onkelos Num 15:14', 'Onkelos Num 15:15', 'Onkelos Num 15:16']
+    assert all('the_proselyte_by_blood_one_torah' not in f for f in m.WORLD["facts"])
+    assert 'a_stranger_sojourns' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifrei Bamidbar 110:1', 'Onkelos Num 15:17', 'Onkelos Num 15:18', 'Onkelos Num 15:19']
+    assert all('the_varied_formula_read_as_law' not in f for f in m.WORLD["facts"])
+    assert 'upon_your_coming' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifrei Bamidbar 110:1', 'Sifrei Bamidbar 110:2', 'Onkelos Num 15:20', 'Onkelos Num 15:21']
+    assert all('challah_the_analogys_target' not in f for f in m.WORLD["facts"])
+    assert 'the_first_of_your_dough' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifrei Bamidbar 111:1', 'Sifrei Bamidbar 111:2', 'Onkelos Num 15:22', 'Onkelos Num 15:23', 'Onkelos Num 15:24']
+    assert all('idolatry_by_the_delta_without_the_aleph' not in f for f in m.WORLD["facts"])
+    assert 'if_you_err' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifrei Bamidbar 111:3', 'Onkelos Num 15:25', 'Onkelos Num 15:26']
+    assert all('the_tribe_table_the_high_priest_excluded' not in f for f in m.WORLD["facts"])
+    assert 'atone_for_all' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifrei Bamidbar 112:1', 'Onkelos Num 15:27', 'Onkelos Num 15:28', 'Onkelos Num 15:29']
+    assert all('the_she_goat_of_the_first_year_keritot_on_its_verse' not in f for f in m.WORLD["facts"])
+    assert 'one_soul' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Sifrei Bamidbar 112:2', 'Onkelos Num 15:30', 'Onkelos Num 15:31']
+    assert all('the_exodus_posture_the_doubled_infinitives_fork' not in f for f in m.WORLD["facts"])
+    assert 'with_a_high_hand' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_16_korach
+###############################################################################
+
+m = Machine("num_16_korach")
+
+# -------------------------- Num.16.1 · ETNACHTA_SPLIT ----------------------
+# ‹ויקח קרח בן› (“and-take Korah son”)
+# ‹יצהר בן קהת› (“Izhar son Kohath”)
+# ‹בן לוי … ודתן› (“son Levi … and-Dathan”)
+# ‹ואבירם בני אליאב› (“and-Abiram son Eliab”)
+# ‹ואון בן פלת› (“and-On son Peleth”)
+# ‹בני ראובן› (“son Reuben”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:1."
+m.step("Num.16.1")
+# witness-tier presupposed read:
+# no_object_izhar_is_fresh_oil_the_shelf_silent on and_korach_took — read,
+# not installed
+m.witness_read("and_korach_took", "no_object_izhar_is_fresh_oil_the_shelf_silent",
+                cites=["Onkelos Num 16:1", "Onkelos Num 16:2"])
+
+# -------------------------- Num.16.2 · ETNACHTA_SPLIT ----------------------
+# ‹ויקמו לפני משה› (“and-arise to-face Moses”)
+# ‹ואנשים מבני ישראל› (“and-man from-son Israel”)
+# ‹חמשים ומאתים … נשיאי› (“fifty and-hundred … prince”)
+# ‹עדה קראי מועד› (“congregation called seasons”)
+# ‹אנשי שם› (“man name”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:2."
+m.step("Num.16.2")
+
+# -------------------------- Num.16.3 · ETNACHTA_SPLIT ----------------------
+# ‹ויקהלו על משה› (“and-convoke over Moses”)
+# ‹ועל אהרן ויאמרו› (“and-over Aaron and-say”)
+# ‹אלהם רב לכם› (“to-them/their many/great to-you/your(pl)”)
+# ‹כי כל העדה› (“that all the-congregation”)
+# ‹כלם קדש … ומדוע› (“all-them/their holiness … and-what-known?”)
+# ‹תתנשאו על קהל› (“lift/carry over assemblage”)
+# ‹יהוה› (“YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:3."
+m.step("Num.16.3")
+# witness-tier presupposed read:
+# returned_the_shekhinah_moses_alone_the_holy_one on too_much_for_you —
+# read, not installed
+m.witness_read("too_much_for_you", "returned_the_shekhinah_moses_alone_the_holy_one",
+                cites=["Onkelos Num 16:3", "Onkelos Num 16:4", "Onkelos Num 16:5", "Onkelos Num 16:6", "Onkelos Num 16:7"])
+
+# -------------------------- Num.16.4 · TREE_CLAIM --------------------------
+# ‹וישמע משה … ויפל› (“and-hear Moses … and-fall”)
+# ‹על פניו› (“over face-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:4."
+m.step("Num.16.4")
+
+# -------------------------- Num.16.5 · ETNACHTA_SPLIT ----------------------
+# ‹וידבר אל קרח› (“and-speak to Korah”)
+# ‹ואל כל עדתו› (“and-to all congregation-him/its”)
+# ‹לאמר בקר וידע› (“to-say morning and-know”)
+# ‹יהוה את אשר› (“YHWH obj-marker which”)
+# ‹לו ואת הק› (“to-him/its and-obj-marker ?”)
+# ‹… ואת אשר יבחר› (“and-obj-marker which try”)
+# ‹בו יקריב אליו› (“in-him/its bring-near to-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:5."
+m.step("Num.16.5")
+
+# -------------------------- Num.16.6 · ETNACHTA_SPLIT ----------------------
+# ‹זאת עשו … קחו› (“this make … take”)
+# ‹לכם מחתות קרח› (“to-you/your(pl) pan-for-live-coals Korah”)
+# ‹וכל עדתו› (“and-all congregation-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:6."
+m.step("Num.16.6")
+
+# -------------------------- Num.16.7 · ETNACHTA_SPLIT ----------------------
+# ‹ותנו בהן אש› (“and-set in-them/their fire”)
+# ‹ושימו עליהן קטרת› (“and-put/set over-them/their fumigation”)
+# ‹לפני יהוה מחר› (“to-face YHWH deferred”)
+# ‹והיה האיש אשר› (“and-be the-man which”)
+# ‹יבח … רב לכם› (“? … many/great to-you/your(pl)”)
+# ‹בני לוי› (“son Levi”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:7."
+m.step("Num.16.7")
+
+# -------------------------- Num.16.8 · ETNACHTA_SPLIT ----------------------
+# ‹ויאמר משה אל› (“and-say Moses to”)
+# ‹קרח … שמעו נא› (“Korah … hear please”)
+# ‹בני לוי› (“son Levi”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:8."
+m.step("Num.16.8")
+
+# -------------------------- Num.16.9 · COND_כי (“that”) --------------------
+# ‹המעט מכם כי› (“the-little from-you/your(pl) that”)
+# ‹הבדיל אלהי ישראל› (“divide God Israel”)
+# ‹אתכם מעדת ישראל› (“obj-marker-you/your(pl) from-congregation Israel”)
+# ‹להקריב אתכם אלי› (“to-bring-near obj-marker-you/your(pl) to-me/my”)
+# ‹… לעבד את עבדת› (“to-work/serve obj-marker service/work”)
+# ‹משכן יהוה ולעמד› (“tabernacle YHWH and-to-stand”)
+# ‹לפני העדה לשרתם› (“to-face the-congregation to-attend-as-a-menial-
+# them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:9."
+m.step("Num.16.9")
+# witness-tier presupposed read:
+# the_high_priesthood_gathered_against_defective on is_it_too_little — read,
+# not installed
+m.witness_read("is_it_too_little", "the_high_priesthood_gathered_against_defective",
+                cites=["Onkelos Num 16:8", "Onkelos Num 16:9", "Onkelos Num 16:10", "Onkelos Num 16:11"])
+
+# -------------------------- Num.16.10 · ETNACHTA_SPLIT ---------------------
+# ‹ויקרב אתך ואת› (“and-bring-near obj-marker-you/your and-obj-marker”)
+# ‹כל אחיך בני› (“all brother-you/your son”)
+# ‹לוי אתך … ובקשתם› (“Levi with-you/your … and-search-out”)
+# ‹גם כהנה› (“also priesthood”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:10."
+m.step("Num.16.10")
+
+# -------------------------- Num.16.11 · ETNACHTA_SPLIT ---------------------
+# ‹לכן אתה וכל› (“to-so you and-all”)
+# ‹עדתך הנעדים על› (“congregation-you/your the-fix-upon over”)
+# ‹יהוה … ואהרן מה› (“YHWH … and-Aaron what”)
+# ‹הוא כי תלונו› (“he/it that stop”)
+# ‹תלינו עליו› (“stop over-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:11."
+m.step("Num.16.11")
+
+# -------------------------- Num.16.12 · ETNACHTA_SPLIT ---------------------
+# ‹וישלח משה לקרא› (“and-send Moses to-call”)
+# ‹לדתן ולאבירם בני› (“to-Dathan and-to-Abiram son”)
+# ‹אליאב … ויאמרו לא› (“Eliab … and-say not”)
+# ‹נעלה› (“go-up”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:12."
+m.step("Num.16.12")
+# witness-tier presupposed read: milk_and_honey_of_egypt_lording_the_eyes on
+# we_will_not_go_up — read, not installed
+m.witness_read("we_will_not_go_up", "milk_and_honey_of_egypt_lording_the_eyes",
+                cites=["Onkelos Num 16:12", "Onkelos Num 16:13", "Onkelos Num 16:14"])
+
+# -------------------------- Num.16.13 · COND_כי (“that”) -------------------
+# ‹המעט כי העליתנו› (“the-little that go-up-us/our”)
+# ‹מארץ זבת חלב› (“from-earth flow-freely milk”)
+# ‹ודבש להמיתנו במדבר› (“and-honey to-die-us/our in-pasture”)
+# ‹… כי תשתרר עלינו› (“that have-dominion over-us/our”)
+# ‹גם השתרר› (“also have-dominion”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:13."
+m.step("Num.16.13")
+
+# -------------------------- Num.16.14 · ETNACHTA_SPLIT ---------------------
+# ‹אף לא אל› (“meaning-accession not to”)
+# ‹ארץ זבת חלב› (“earth flow-freely milk”)
+# ‹ודבש הביאתנו ותתן› (“and-honey come/bring-us/our and-set”)
+# ‹לנו נחלת שדה› (“to-us/our inheritance field”)
+# ‹וכרם … העיני האנשים› (“and-garden … the-eye the-man”)
+# ‹ההם תנקר לא› (“the-they bore not”)
+# ‹נעלה› (“go-up”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:14."
+m.step("Num.16.14")
+
+# -------------------------- Num.16.15 · ETNACHTA_SPLIT ---------------------
+# ‹ויחר למשה מאד› (“and-glow to-Moses very”)
+# ‹ויאמר אל יהוה› (“and-say to YHWH”)
+# ‹אל תפן אל› (“do-not turn to”)
+# ‹מנחתם … לא חמור› (“grain-offering-them/their … not male-ass”)
+# ‹אחד מהם נשאתי› (“one from-them/their lift/carry”)
+# ‹ולא הרעתי את› (“and-not spoil obj-marker”)
+# ‹אחד מהם› (“one from-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:15."
+m.step("Num.16.15")
+# witness-tier presupposed read: the_cain_echo_not_one_ass_samuels_run on
+# it_was_hot_to_moses — read, not installed
+m.witness_read("it_was_hot_to_moses", "the_cain_echo_not_one_ass_samuels_run",
+                cites=["Onkelos Num 16:15"])
+
+# -------------------------- Num.16.16 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר משה אל› (“and-say Moses to”)
+# ‹קרח אתה וכל› (“Korah you and-all”)
+# ‹עדתך היו לפני› (“congregation-you/your be to-face”)
+# ‹יהוה … אתה והם› (“YHWH … you and-they”)
+# ‹ואהרן מחר› (“and-Aaron deferred”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:16."
+m.step("Num.16.16")
+
+# -------------------------- Num.16.17 · ETNACHTA_SPLIT ---------------------
+# ‹וקחו איש מחתתו› (“and-take man pan-for-live-coals-him/its”)
+# ‹ונתתם עליהם קטרת› (“and-set over-them/their fumigation”)
+# ‹והקרבתם לפני יהוה› (“and-bring-near to-face YHWH”)
+# ‹איש מחתתו … ואתה› (“man pan-for-live-coals-him/its … and-you”)
+# ‹ואהרן איש מחתתו› (“and-Aaron man pan-for-live-coals-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:17."
+m.step("Num.16.17")
+# witness-tier presupposed read: nadabs_phrase_250_censers_the_glory on
+# each_his_censer — read, not installed
+m.witness_read("each_his_censer", "nadabs_phrase_250_censers_the_glory",
+                cites=["Onkelos Num 16:16", "Onkelos Num 16:17", "Onkelos Num 16:18", "Onkelos Num 16:19"])
+
+# -------------------------- Num.16.18 · ETNACHTA_SPLIT ---------------------
+# ‹ויקחו איש מחתתו› (“and-take man pan-for-live-coals-him/its”)
+# ‹ויתנו עליהם אש› (“and-set over-them/their fire”)
+# ‹וישימו עליהם קטרת› (“and-put/set over-them/their fumigation”)
+# ‹… ויעמדו פתח אהל› (“and-stand opening tent”)
+# ‹מועד ומשה ואהרן› (“seasons and-Moses and-Aaron”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:18."
+m.step("Num.16.18")
+
+# -------------------------- Num.16.19 · ETNACHTA_SPLIT ---------------------
+# ‹ויקהל עליהם קרח› (“and-convoke over-them/their Korah”)
+# ‹את כל העדה› (“obj-marker all the-congregation”)
+# ‹אל פתח אהל› (“to opening tent”)
+# ‹מועד … וירא כבוד› (“seasons … and-see weight”)
+# ‹יהוה אל כל› (“YHWH to all”)
+# ‹העדה› (“the-congregation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:19."
+m.step("Num.16.19")
+
+# -------------------------- Num.16.20 · TREE_CLAIM -------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה ואל אהרן› (“Moses and-to Aaron”)
+# ‹לאמר› (“to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:20."
+m.step("Num.16.20")
+
+# -------------------------- Num.16.21 · ETNACHTA_SPLIT ---------------------
+# ‹הבדלו מתוך העדה› (“divide from-midst the-congregation”)
+# ‹הזאת … ואכלה אתם› (“the-this … and-be-complete obj-marker-them/their”)
+# ‹כרגע› (“like-wink”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:21."
+m.step("Num.16.21")
+# witness-tier presupposed read:
+# one_aramaic_verb_god_of_the_spirits_the_dwelling on separate_yourselves —
+# read, not installed
+m.witness_read("separate_yourselves", "one_aramaic_verb_god_of_the_spirits_the_dwelling",
+                cites=["Onkelos Num 16:20", "Onkelos Num 16:21", "Onkelos Num 16:22", "Onkelos Num 16:23", "Onkelos Num 16:24"])
+
+# -------------------------- Num.16.22 · ETNACHTA_SPLIT ---------------------
+# ‹ויפלו על פניהם› (“and-fall over face-them/their”)
+# ‹ויאמרו אל אלהי› (“and-say strength God”)
+# ‹הרוחת לכל בשר› (“the-spirit to-all flesh”)
+# ‹… האיש אחד יחטא› (“the-man one sin”)
+# ‹ועל כל העדה› (“and-over all the-congregation”)
+# ‹תקצף› (“crack-off”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:22."
+m.step("Num.16.22")
+
+# -------------------------- Num.16.23 · TREE_CLAIM -------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:23."
+m.step("Num.16.23")
+
+# -------------------------- Num.16.24 · ETNACHTA_SPLIT ---------------------
+# ‹דבר אל העדה› (“speak to the-congregation”)
+# ‹לאמר … העלו מסביב› (“to-say … go-up from-circle”)
+# ‹למשכן קרח דתן› (“to-tabernacle Korah Dathan”)
+# ‹ואבירם› (“and-Abiram”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:24."
+m.step("Num.16.24")
+
+# -------------------------- Num.16.25 · ETNACHTA_SPLIT ---------------------
+# ‹ויקם משה וילך› (“and-arise Moses and-go”)
+# ‹אל דתן ואבירם› (“to Dathan and-Abiram”)
+# ‹… וילכו אחריו זקני› (“and-go after-him/its old”)
+# ‹ישראל› (“Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:25."
+m.step("Num.16.25")
+
+# -------------------------- Num.16.26 · ETNACHTA_SPLIT ---------------------
+# ‹וידבר אל העדה› (“and-speak to the-congregation”)
+# ‹לאמר סורו נא› (“to-say turn-aside please”)
+# ‹מעל אהלי האנשים› (“from-over tent the-man”)
+# ‹הרשעים האלה ואל› (“the-wrong the-these and-do-not”)
+# ‹ת … פן תספו› (“? … lest scrape-together”)
+# ‹בכל חטאתם› (“in-all sin-offering-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:26."
+m.step("Num.16.26")
+# witness-tier presupposed read: sodoms_verbs_by_this_you_shall_know_balaams
+# on turn_aside_i_pray — read, not installed
+m.witness_read("turn_aside_i_pray", "sodoms_verbs_by_this_you_shall_know_balaams",
+                cites=["Onkelos Num 16:25", "Onkelos Num 16:26", "Onkelos Num 16:27", "Onkelos Num 16:28", "Onkelos Num 16:29"])
+
+# -------------------------- Num.16.27 · ETNACHTA_SPLIT ---------------------
+# ‹ויעלו מעל משכן› (“and-go-up from-over tabernacle”)
+# ‹קרח דתן ואבירם› (“Korah Dathan and-Abiram”)
+# ‹מסביב … ודתן ואבירם› (“from-circle … and-Dathan and-Abiram”)
+# ‹יצאו נצבים פתח› (“bring-forth stand opening”)
+# ‹אהליהם ונשיהם ובניהם› (“tent-them/their and-woman-them/their and-son-
+# them/their”)
+# ‹וטפם› (“and-family-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:27."
+m.step("Num.16.27")
+
+# -------------------------- Num.16.28 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר משה בזאת› (“and-say Moses in-this”)
+# ‹תדעון כי יהוה› (“know-ward that YHWH”)
+# ‹שלחני לעשות את› (“send-me/my to-make obj-marker”)
+# ‹כל המעשים האלה› (“all the-deed/work the-these”)
+# ‹… כי לא מלבי› (“that not from-heart-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:28."
+m.step("Num.16.28")
+
+# -------------------------- Num.16.29 · COND_אם (“if”) ---------------------
+# ‹אם כמות כל› (“if like-death all”)
+# ‹האדם ימתון אלה› (“the-human die-ward these”)
+# ‹ופקדת כל האדם› (“and-visitation all the-human”)
+# ‹יפקד עליהם … לא› (“count/visit over-them/their … not”)
+# ‹יהוה שלחני› (“YHWH send-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:29."
+m.step("Num.16.29")
+
+# -------------------------- Num.16.30 · COND_ואם (“and-if”) ----------------
+# ‹ואם בריאה יברא› (“and-if creation create”)
+# ‹יהוה ופצתה האדמה› (“YHWH and-rend the-ground”)
+# ‹את פיה ובלעה› (“obj-marker mouth-her/its and-swallow”)
+# ‹אתם ואת כל› (“obj-marker-them/their and-obj-marker all”)
+# ‹אשר … וידעתם כי› (“which … and-know that”)
+# ‹נאצו האנשים האלה› (“scorn the-man the-these”)
+# ‹את יהוה› (“obj-marker YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:30."
+m.step("Num.16.30")
+# witness-tier presupposed read:
+# cains_ground_ground_to_earth_korach_not_named on a_creation_he_creates —
+# read, not installed
+m.witness_read("a_creation_he_creates", "cains_ground_ground_to_earth_korach_not_named",
+                cites=["Onkelos Num 16:30", "Onkelos Num 16:31", "Onkelos Num 16:32", "Onkelos Num 16:33", "Onkelos Num 16:34"])
+
+# -------------------------- Num.16.31 · ETNACHTA_SPLIT ---------------------
+# ‹ויהי ככלתו לדבר› (“and-be like-be-complete-him/its to-speak”)
+# ‹את כל הדברים› (“obj-marker all the-word/thing”)
+# ‹האלה … ותבקע האדמה› (“the-these … and-cleave the-ground”)
+# ‹אשר תחתיהם› (“which under-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:31."
+m.step("Num.16.31")
+
+# -------------------------- Num.16.32 · ETNACHTA_SPLIT ---------------------
+# ‹ותפתח הארץ את› (“and-open-wide the-earth obj-marker”)
+# ‹פיה ותבלע אתם› (“mouth-her/its and-swallow obj-marker-them/their”)
+# ‹ואת בתיהם … ואת› (“and-obj-marker house-them/their … and-obj-marker”)
+# ‹כל האדם אשר› (“all the-human which”)
+# ‹לקרח ואת כל› (“to-Korah and-obj-marker all”)
+# ‹הרכוש› (“the-property”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:32."
+m.step("Num.16.32")
+
+# -------------------------- Num.16.33 · ETNACHTA_SPLIT ---------------------
+# ‹וירדו הם וכל› (“and-go-down they and-all”)
+# ‹אשר להם חיים› (“which to-them/their living”)
+# ‹שאלה … ותכס עליהם› (“Shᵉ'Owl-ward … and-plump over-them/their”)
+# ‹הארץ ויאבדו מתוך› (“the-earth and-wander-away from-midst”)
+# ‹הקהל› (“the-assemblage”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:33."
+m.step("Num.16.33")
+
+# -------------------------- Num.16.34 · ETNACHTA_SPLIT ---------------------
+# ‹וכל ישראל אשר› (“and-all Israel which”)
+# ‹סביבתיהם נסו לקלם› (“circle-them/their flit to-voice/sound-them/their”)
+# ‹… כי אמרו פן› (“that say lest”)
+# ‹תבלענו הארץ› (“swallow-us/our the-earth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:34."
+m.step("Num.16.34")
+
+# -------------------------- Num.16.35 · ETNACHTA_SPLIT ---------------------
+# ‹ואש יצאה מאת› (“and-fire bring-forth from-with”)
+# ‹יהוה … ותאכל את› (“YHWH … and-eat obj-marker”)
+# ‹החמשים ומאתים איש› (“the-fifty and-hundred man”)
+# ‹מקריבי הקטרת› (“bring-near the-fumigation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 16:35."
+m.step("Num.16.35")
+# witness-tier presupposed read: the_parsers_gap_the_definite_numeral on
+# fire_from_with_the_lord — read, not installed
+m.witness_read("fire_from_with_the_lord", "the_parsers_gap_the_definite_numeral",
+                cites=["Onkelos Num 16:35"])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('and_korach_took', 'no_object_izhar_is_fresh_oil_the_shelf_silent'), ('too_much_for_you', 'returned_the_shekhinah_moses_alone_the_holy_one'), ('is_it_too_little', 'the_high_priesthood_gathered_against_defective'), ('we_will_not_go_up', 'milk_and_honey_of_egypt_lording_the_eyes'), ('it_was_hot_to_moses', 'the_cain_echo_not_one_ass_samuels_run'), ('each_his_censer', 'nadabs_phrase_250_censers_the_glory'), ('separate_yourselves', 'one_aramaic_verb_god_of_the_spirits_the_dwelling'), ('turn_aside_i_pray', 'sodoms_verbs_by_this_you_shall_know_balaams'), ('a_creation_he_creates', 'cains_ground_ground_to_earth_korach_not_named'), ('fire_from_with_the_lord', 'the_parsers_gap_the_definite_numeral')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Num 16:1', 'Onkelos Num 16:2']
+    assert all('no_object_izhar_is_fresh_oil_the_shelf_silent' not in f for f in m.WORLD["facts"])
+    assert 'and_korach_took' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Num 16:3', 'Onkelos Num 16:4', 'Onkelos Num 16:5', 'Onkelos Num 16:6', 'Onkelos Num 16:7']
+    assert all('returned_the_shekhinah_moses_alone_the_holy_one' not in f for f in m.WORLD["facts"])
+    assert 'too_much_for_you' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Num 16:8', 'Onkelos Num 16:9', 'Onkelos Num 16:10', 'Onkelos Num 16:11']
+    assert all('the_high_priesthood_gathered_against_defective' not in f for f in m.WORLD["facts"])
+    assert 'is_it_too_little' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Num 16:12', 'Onkelos Num 16:13', 'Onkelos Num 16:14']
+    assert all('milk_and_honey_of_egypt_lording_the_eyes' not in f for f in m.WORLD["facts"])
+    assert 'we_will_not_go_up' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Num 16:15']
+    assert all('the_cain_echo_not_one_ass_samuels_run' not in f for f in m.WORLD["facts"])
+    assert 'it_was_hot_to_moses' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Num 16:16', 'Onkelos Num 16:17', 'Onkelos Num 16:18', 'Onkelos Num 16:19']
+    assert all('nadabs_phrase_250_censers_the_glory' not in f for f in m.WORLD["facts"])
+    assert 'each_his_censer' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Num 16:20', 'Onkelos Num 16:21', 'Onkelos Num 16:22', 'Onkelos Num 16:23', 'Onkelos Num 16:24']
+    assert all('one_aramaic_verb_god_of_the_spirits_the_dwelling' not in f for f in m.WORLD["facts"])
+    assert 'separate_yourselves' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Num 16:25', 'Onkelos Num 16:26', 'Onkelos Num 16:27', 'Onkelos Num 16:28', 'Onkelos Num 16:29']
+    assert all('sodoms_verbs_by_this_you_shall_know_balaams' not in f for f in m.WORLD["facts"])
+    assert 'turn_aside_i_pray' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Num 16:30', 'Onkelos Num 16:31', 'Onkelos Num 16:32', 'Onkelos Num 16:33', 'Onkelos Num 16:34']
+    assert all('cains_ground_ground_to_earth_korach_not_named' not in f for f in m.WORLD["facts"])
+    assert 'a_creation_he_creates' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Num 16:35']
+    assert all('the_parsers_gap_the_definite_numeral' not in f for f in m.WORLD["facts"])
+    assert 'fire_from_with_the_lord' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_17_plague_staff
+###############################################################################
+
+m = Machine("num_17_plague_staff")
+
+# -------------------------- Num.17.1 · TREE_CLAIM --------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:1."
+m.step("Num.17.1")
+
+# -------------------------- Num.17.2 · ETNACHTA_SPLIT ----------------------
+# ‹אמר אל אלעזר› (“say to Eleazar”)
+# ‹בן אהרן הכהן› (“son Aaron the-priest”)
+# ‹וירם את המחתת› (“and-rise-high obj-marker the-pan-for-live-coals”)
+# ‹מבין השרפה ואת› (“from-between the-cremation and-obj-marker”)
+# ‹האש ז … כי› (“the-fire ? … that”)
+# ‹קדשו› (“sanctify”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:2."
+m.step("Num.17.2")
+# witness-tier presupposed read: beaten_plates_the_stranger_defined on
+# the_censers_from_the_burning — read, not installed
+m.witness_read("the_censers_from_the_burning", "beaten_plates_the_stranger_defined",
+                cites=["Onkelos Num 17:1", "Onkelos Num 17:2", "Onkelos Num 17:3", "Onkelos Num 17:4", "Onkelos Num 17:5"])
+
+# -------------------------- Num.17.3 · ETNACHTA_SPLIT ----------------------
+# ‹את מחתות החטאים› (“obj-marker pan-for-live-coals the-criminal”)
+# ‹האלה בנפשתם ועשו› (“the-these in-living-being-them/their and-make”)
+# ‹אתם רקעי פחים› (“obj-marker-them/their beaten-out sheet”)
+# ‹צפוי למזבח כי› (“encasement to-altar that”)
+# ‹… ויהיו לאות לבני› (“and-be to-signs to-son”)
+# ‹ישראל› (“Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:3."
+m.step("Num.17.3")
+
+# -------------------------- Num.17.4 · ETNACHTA_SPLIT ----------------------
+# ‹ויקח אלעזר הכהן› (“and-take Eleazar the-priest”)
+# ‹את מחתות הנחשת› (“obj-marker pan-for-live-coals the-copper”)
+# ‹אשר הקריבו השרפים› (“which bring-near the-be-on-fire”)
+# ‹… וירקעום צפוי למזבח› (“and-pound-the-earth-them/their encasement to-
+# altar”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:4."
+m.step("Num.17.4")
+
+# -------------------------- Num.17.5 · ETNACHTA_SPLIT ----------------------
+# ‹זכרון לבני ישראל› (“memento to-son Israel”)
+# ‹למען אשר לא› (“so-that which not”)
+# ‹יקרב איש זר› (“bring-near man turn-aside”)
+# ‹אשר לא מזרע› (“which not from-seed”)
+# ‹אהרן הו … ולא› (“Aaron ? … and-not”)
+# ‹יהיה כקרח וכעדתו› (“be like-Korah and-like-congregation-him/its”)
+# ‹כאשר דבר יהוה› (“like-as/which speak YHWH”)
+# ‹ביד משה לו› (“in-hand Moses to-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:5."
+m.step("Num.17.5")
+
+# -------------------------- Num.17.6 · ETNACHTA_SPLIT ----------------------
+# ‹וילנו כל עדת› (“and-stop all congregation”)
+# ‹בני ישראל ממחרת› (“son Israel from-morrow”)
+# ‹על משה ועל› (“over Moses and-over”)
+# ‹אהרן לאמר … אתם› (“Aaron to-say … you”)
+# ‹המתם את עם› (“die obj-marker people”)
+# ‹יהוה› (“YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:6."
+m.step("Num.17.6")
+# witness-tier presupposed read: the_threat_repeated_one_aramaic_verb on
+# you_have_killed — read, not installed
+m.witness_read("you_have_killed", "the_threat_repeated_one_aramaic_verb",
+                cites=["Onkelos Num 17:6", "Onkelos Num 17:7", "Onkelos Num 17:8", "Onkelos Num 17:9", "Onkelos Num 17:10"])
+
+# -------------------------- Num.17.7 · ETNACHTA_SPLIT ----------------------
+# ‹ויהי בהקהל העדה› (“and-be in-convoke the-congregation”)
+# ‹על משה ועל› (“over Moses and-over”)
+# ‹אהרן ויפנו אל› (“Aaron and-turn to”)
+# ‹אהל מועד והנה› (“tent seasons and-behold”)
+# ‹כסהו … וירא כבוד› (“plump-him/its … and-see weight”)
+# ‹יהוה› (“YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:7."
+m.step("Num.17.7")
+
+# -------------------------- Num.17.8 · TREE_CLAIM --------------------------
+# ‹ויבא משה ואהרן› (“and-come/bring Moses and-Aaron”)
+# ‹… אל פני אהל› (“to face tent”)
+# ‹מועד› (“seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:8."
+m.step("Num.17.8")
+
+# -------------------------- Num.17.9 · TREE_CLAIM --------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:9."
+m.step("Num.17.9")
+
+# -------------------------- Num.17.10 · ETNACHTA_SPLIT ---------------------
+# ‹הרמו מתוך העדה› (“rise from-midst the-congregation”)
+# ‹הזאת ואכלה אתם› (“the-this and-be-complete obj-marker-them/their”)
+# ‹כרגע … ויפלו על› (“like-wink … and-fall over”)
+# ‹פניהם› (“face-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:10."
+m.step("Num.17.10")
+
+# -------------------------- Num.17.11 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר משה אל› (“and-say Moses to”)
+# ‹אהרן קח את› (“Aaron take obj-marker”)
+# ‹המחתה ותן עליה› (“the-pan-for-live-coals and-set over-her/its”)
+# ‹אש מעל המזבח› (“fire from-over the-altar”)
+# ‹ושים קטר … כי› (“and-put/set ? … that”)
+# ‹יצא הקצף מלפני› (“bring-forth the-splinter from-to-face”)
+# ‹יהוה החל הנגף› (“YHWH bore the-trip”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:11."
+m.step("Num.17.11")
+# witness-tier presupposed read: yom_kippurs_phrase_the_plague_stayed on
+# fire_from_off_the_altar — read, not installed
+m.witness_read("fire_from_off_the_altar", "yom_kippurs_phrase_the_plague_stayed",
+                cites=["Onkelos Num 17:11", "Onkelos Num 17:12", "Onkelos Num 17:13", "Onkelos Num 17:14", "Onkelos Num 17:15"])
+
+# -------------------------- Num.17.12 · ETNACHTA_SPLIT ---------------------
+# ‹ויקח אהרן כאשר› (“and-take Aaron like-as/which”)
+# ‹דבר משה וירץ› (“speak Moses and-run”)
+# ‹אל תוך הקהל› (“to midst the-assemblage”)
+# ‹והנה החל הנגף› (“and-behold bore the-trip”)
+# ‹בעם … ויתן את› (“in-people … and-set obj-marker”)
+# ‹הקטרת ויכפר על› (“the-fumigation and-atone over”)
+# ‹העם› (“the-people”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:12."
+m.step("Num.17.12")
+
+# -------------------------- Num.17.13 · ETNACHTA_SPLIT ---------------------
+# ‹ויעמד בין המתים› (“and-stand between the-die”)
+# ‹ובין החיים … ותעצר› (“and-between the-living … and-close”)
+# ‹המגפה› (“the-pestilence”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:13."
+m.step("Num.17.13")
+
+# -------------------------- Num.17.14 · ETNACHTA_SPLIT ---------------------
+# ‹ויהיו המתים במגפה› (“and-be the-die in-pestilence”)
+# ‹ארבעה עשר אלף› (“four -teen thousand”)
+# ‹ושבע מאות … מלבד› (“and-seven hundred … from-to-separation”)
+# ‹המתים על דבר› (“the-die over word/thing”)
+# ‹קרח› (“Korah”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:14."
+m.step("Num.17.14")
+
+# -------------------------- Num.17.15 · ETNACHTA_SPLIT ---------------------
+# ‹וישב אהרן אל› (“and-return Aaron to”)
+# ‹משה אל פתח› (“Moses to opening”)
+# ‹אהל מועד … והמגפה› (“tent seasons … and-the-pestilence”)
+# ‹נעצרה› (“close”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:15."
+m.step("Num.17.15")
+
+# -------------------------- Num.17.16 · TREE_CLAIM -------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:16."
+m.step("Num.17.16")
+
+# -------------------------- Num.17.17 · ETNACHTA_SPLIT ---------------------
+# ‹דבר אל בני› (“speak to son”)
+# ‹ישראל וקח מאתם› (“Israel and-take from-with-them/their”)
+# ‹מטה מטה לבית› (“staff/tribe staff/tribe to-house”)
+# ‹אב מאת כל› (“father from-with all”)
+# ‹נשיאהם לבית … איש› (“prince-them/their to-house … man”)
+# ‹את שמו תכתב› (“obj-marker name-him/its grave”)
+# ‹על מטהו› (“over staff/tribe-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:17."
+m.step("Num.17.17")
+# witness-tier presupposed read: twelve_with_levi_among_them on
+# a_staff_a_staff — read, not installed
+m.witness_read("a_staff_a_staff", "twelve_with_levi_among_them",
+                cites=["Onkelos Num 17:16", "Onkelos Num 17:17", "Onkelos Num 17:18"])
+
+# -------------------------- Num.17.18 · ETNACHTA_SPLIT ---------------------
+# ‹ואת שם אהרן› (“and-obj-marker name Aaron”)
+# ‹תכתב על מטה› (“grave over staff/tribe”)
+# ‹לוי … כי מטה› (“Levi … that staff/tribe”)
+# ‹אחד לראש בית› (“one to-head house”)
+# ‹אבותם› (“father-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:18."
+m.step("Num.17.18")
+
+# -------------------------- Num.17.19 · ETNACHTA_SPLIT ---------------------
+# ‹והנחתם באהל מועד› (“and-deposit-them/their in-tent seasons”)
+# ‹… לפני העדות אשר› (“to-face the-testimony which”)
+# ‹אועד לכם שמה› (“fix-upon to-you/your(pl) there-ward”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:19."
+m.step("Num.17.19")
+# witness-tier presupposed read: the_spellings_alternate_the_floods_verb on
+# before_the_testimony — read, not installed
+m.witness_read("before_the_testimony", "the_spellings_alternate_the_floods_verb",
+                cites=["Onkelos Num 17:19", "Onkelos Num 17:20", "Onkelos Num 17:21", "Onkelos Num 17:22"])
+
+# -------------------------- Num.17.20 · ETNACHTA_SPLIT ---------------------
+# ‹והיה האיש אשר› (“and-be the-man which”)
+# ‹אבחר בו מטהו› (“try in-him/its staff/tribe-him/its”)
+# ‹יפרח … והשכתי מעלי› (“break-forth-as-a-bud … and-weave-a-trap from-over-
+# me/my”)
+# ‹את תלנות בני› (“obj-marker grumbling son”)
+# ‹ישראל אשר הם› (“Israel which they”)
+# ‹מלינם עליכם› (“stop over-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:20."
+m.step("Num.17.20")
+
+# -------------------------- Num.17.21 · ETNACHTA_SPLIT ---------------------
+# ‹וידבר משה אל› (“and-speak Moses to”)
+# ‹בני ישראל ויתנו› (“son Israel and-set”)
+# ‹אליו כל נשיאיהם› (“to-him/its all prince-them/their”)
+# ‹מטה לנשיא אחד› (“staff/tribe to-prince one”)
+# ‹מ … ומטה אהרן› (“? … and-staff/tribe Aaron”)
+# ‹בתוך מטותם› (“in-midst staff/tribe-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:21."
+m.step("Num.17.21")
+
+# -------------------------- Num.17.22 · ETNACHTA_SPLIT ---------------------
+# ‹וינח משה את› (“and-deposit Moses obj-marker”)
+# ‹המטת לפני יהוה› (“the-staff/tribe to-face YHWH”)
+# ‹… באהל העדת› (“in-tent the-testimony”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:22."
+m.step("Num.17.22")
+
+# -------------------------- Num.17.23 · ETNACHTA_SPLIT ---------------------
+# ‹ויהי ממחרת ויבא› (“and-be from-morrow and-come/bring”)
+# ‹משה אל אהל› (“Moses to tent”)
+# ‹העדות והנה פרח› (“the-testimony and-behold break-forth-as-a-bud”)
+# ‹מטה אהרן לבית› (“staff/tribe Aaron to-house”)
+# ‹לוי … ויצא פרח› (“Levi … and-bring-forth calyx”)
+# ‹ויצץ ציץ ויגמל› (“and-twinkle glistening and-treat-a-person”)
+# ‹שקדים› (“almond”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:23."
+m.step("Num.17.23")
+# witness-tier presupposed read: the_frontplates_word_almonds on
+# it_blossomed_a_blossom — read, not installed
+m.witness_read("it_blossomed_a_blossom", "the_frontplates_word_almonds",
+                cites=["Onkelos Num 17:23", "Onkelos Num 17:24"])
+
+# -------------------------- Num.17.24 · ETNACHTA_SPLIT ---------------------
+# ‹ויצא משה את› (“and-bring-forth Moses obj-marker”)
+# ‹כל המטת מלפני› (“all the-staff/tribe from-to-face”)
+# ‹יהוה אל כל› (“YHWH to all”)
+# ‹בני ישראל … ויראו› (“son Israel … and-see”)
+# ‹ויקחו איש מטהו› (“and-take man staff/tribe-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:24."
+m.step("Num.17.24")
+
+# -------------------------- Num.17.25 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר יהוה אל› (“and-say YHWH to”)
+# ‹משה השב את› (“Moses return obj-marker”)
+# ‹מטה אהרן לפני› (“staff/tribe Aaron to-face”)
+# ‹העדות למשמרת לאות› (“the-testimony to-watch to-signs”)
+# ‹לבנ … ותכל תלונתם› (“? … and-be-complete grumbling-them/their”)
+# ‹מעלי ולא ימתו› (“from-over-me/my and-not die”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:25."
+m.step("Num.17.25")
+# witness-tier presupposed read: the_manna_jars_formula_sons_of_rebellion on
+# return_aarons_staff — read, not installed
+m.witness_read("return_aarons_staff", "the_manna_jars_formula_sons_of_rebellion",
+                cites=["Onkelos Num 17:25", "Onkelos Num 17:26"])
+
+# -------------------------- Num.17.26 · ETNACHTA_SPLIT ---------------------
+# ‹ויעש משה … כאשר› (“and-make Moses … like-as/which”)
+# ‹צוה יהוה אתו› (“command YHWH obj-marker-him/its”)
+# ‹כן עשה› (“so make”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:26."
+m.step("Num.17.26")
+
+# -------------------------- Num.17.27 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמרו בני ישראל› (“and-say son Israel”)
+# ‹אל משה לאמר› (“to Moses to-say”)
+# ‹… הן גוענו אבדנו› (“lo! breathe-out wander-away”)
+# ‹כלנו אבדנו› (“all-us/our wander-away”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:27."
+m.step("Num.17.27")
+# witness-tier presupposed read: the_translations_three_deaths on
+# we_expire_we_perish — read, not installed
+m.witness_read("we_expire_we_perish", "the_translations_three_deaths",
+                cites=["Onkelos Num 17:27", "Onkelos Num 17:28"])
+
+# -------------------------- Num.17.28 · ETNACHTA_SPLIT ---------------------
+# ‹כל הקרב הקרב› (“all the-near the-near”)
+# ‹אל משכן יהוה› (“to tabernacle YHWH”)
+# ‹ימות … האם תמנו› (“die … the-if complete”)
+# ‹לגוע› (“to-breathe-out”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 17:28."
+m.step("Num.17.28")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_censers_from_the_burning', 'beaten_plates_the_stranger_defined'), ('you_have_killed', 'the_threat_repeated_one_aramaic_verb'), ('fire_from_off_the_altar', 'yom_kippurs_phrase_the_plague_stayed'), ('a_staff_a_staff', 'twelve_with_levi_among_them'), ('before_the_testimony', 'the_spellings_alternate_the_floods_verb'), ('it_blossomed_a_blossom', 'the_frontplates_word_almonds'), ('return_aarons_staff', 'the_manna_jars_formula_sons_of_rebellion'), ('we_expire_we_perish', 'the_translations_three_deaths')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Num 17:1', 'Onkelos Num 17:2', 'Onkelos Num 17:3', 'Onkelos Num 17:4', 'Onkelos Num 17:5']
+    assert all('beaten_plates_the_stranger_defined' not in f for f in m.WORLD["facts"])
+    assert 'the_censers_from_the_burning' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Num 17:6', 'Onkelos Num 17:7', 'Onkelos Num 17:8', 'Onkelos Num 17:9', 'Onkelos Num 17:10']
+    assert all('the_threat_repeated_one_aramaic_verb' not in f for f in m.WORLD["facts"])
+    assert 'you_have_killed' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Num 17:11', 'Onkelos Num 17:12', 'Onkelos Num 17:13', 'Onkelos Num 17:14', 'Onkelos Num 17:15']
+    assert all('yom_kippurs_phrase_the_plague_stayed' not in f for f in m.WORLD["facts"])
+    assert 'fire_from_off_the_altar' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Num 17:16', 'Onkelos Num 17:17', 'Onkelos Num 17:18']
+    assert all('twelve_with_levi_among_them' not in f for f in m.WORLD["facts"])
+    assert 'a_staff_a_staff' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Num 17:19', 'Onkelos Num 17:20', 'Onkelos Num 17:21', 'Onkelos Num 17:22']
+    assert all('the_spellings_alternate_the_floods_verb' not in f for f in m.WORLD["facts"])
+    assert 'before_the_testimony' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Num 17:23', 'Onkelos Num 17:24']
+    assert all('the_frontplates_word_almonds' not in f for f in m.WORLD["facts"])
+    assert 'it_blossomed_a_blossom' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Num 17:25', 'Onkelos Num 17:26']
+    assert all('the_manna_jars_formula_sons_of_rebellion' not in f for f in m.WORLD["facts"])
+    assert 'return_aarons_staff' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Num 17:27', 'Onkelos Num 17:28']
+    assert all('the_translations_three_deaths' not in f for f in m.WORLD["facts"])
+    assert 'we_expire_we_perish' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_18_priest_levite_dues
+###############################################################################
+
+m = Machine("num_18_priest_levite_dues")
+
+# -------------------------- Num.18.1 · ETNACHTA_SPLIT ----------------------
+# ‹ויאמר יהוה אל› (“and-say YHWH to”)
+# ‹אהרן אתה ובניך› (“Aaron you and-son-you/your”)
+# ‹ובית אביך אתך› (“and-house father-you/your with-you/your”)
+# ‹תשאו את עון› (“lift/carry obj-marker perversity”)
+# ‹המקדש … ואתה ובניך› (“the-consecrated-thing … and-you and-son-you/your”)
+# ‹אתך תשאו את› (“with-you/your lift/carry obj-marker”)
+# ‹עון כהנתכם› (“perversity priesthood-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:1."
+m.step("Num.18.1")
+# witness-tier presupposed read:
+# five_seats_the_frontplates_levis_naming_verb on the_lord_said_to_aaron —
+# read, not installed
+m.witness_read("the_lord_said_to_aaron", "five_seats_the_frontplates_levis_naming_verb",
+                cites=["Sifrei Bamidbar 116:1", "Onkelos Num 18:1", "Onkelos Num 18:2", "Onkelos Num 18:3"])
+
+# -------------------------- Num.18.2 · ETNACHTA_SPLIT ----------------------
+# ‹וגם את אחיך› (“and-also obj-marker brother-you/your”)
+# ‹מטה לוי שבט› (“staff/tribe Levi scion”)
+# ‹אביך הקרב אתך› (“father-you/your bring-near with-you/your”)
+# ‹וילוו עליך וישרתוך› (“and-twine over-you/your and-attend-as-a-menial-
+# you/your”)
+# ‹… ואתה ובניך אתך› (“and-you and-son-you/your with-you/your”)
+# ‹לפני אהל העדת› (“to-face tent the-testimony”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:2."
+m.step("Num.18.2")
+
+# -------------------------- Num.18.3 · ETNACHTA_SPLIT ----------------------
+# ‹ושמרו משמרתך ומשמרת› (“and-keep/guard watch-you/your and-watch”)
+# ‹כל האהל … אך› (“all the-tent … indeed”)
+# ‹אל כלי הקדש› (“to vessel the-holiness”)
+# ‹ואל המזבח לא› (“and-to the-altar not”)
+# ‹יקרבו ולא ימתו› (“bring-near and-not die”)
+# ‹גם הם גם› (“also they also”)
+# ‹אתם› (“you”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:3."
+m.step("Num.18.3")
+
+# -------------------------- Num.18.4 · ETNACHTA_SPLIT ----------------------
+# ‹ונלוו עליך ושמרו› (“and-twine over-you/your and-keep/guard”)
+# ‹את משמרת אהל› (“obj-marker watch tent”)
+# ‹מועד לכל עבדת› (“seasons to-all service/work”)
+# ‹האהל … וזר לא› (“the-tent … and-turn-aside not”)
+# ‹יקרב אליכם› (“bring-near to-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:4."
+m.step("Num.18.4")
+# witness-tier presupposed read: the_warning_the_punishment_no_more_wrath on
+# a_stranger_shall_not_come_near — read, not installed
+m.witness_read("a_stranger_shall_not_come_near", "the_warning_the_punishment_no_more_wrath",
+                cites=["Sifrei Bamidbar 116:1", "Sifrei Bamidbar 116:2", "Onkelos Num 18:4", "Onkelos Num 18:5", "Onkelos Num 18:6", "Onkelos Num 18:7"])
+
+# -------------------------- Num.18.5 · ETNACHTA_SPLIT ----------------------
+# ‹ושמרתם את משמרת› (“and-keep/guard obj-marker watch”)
+# ‹הקדש ואת משמרת› (“the-holiness and-obj-marker watch”)
+# ‹המזבח … ולא יהיה› (“the-altar … and-not be”)
+# ‹עוד קצף על› (“still/again splinter over”)
+# ‹בני ישראל› (“son Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:5."
+m.step("Num.18.5")
+
+# -------------------------- Num.18.6 · ETNACHTA_SPLIT ----------------------
+# ‹ואני הנה לקחתי› (“and-I behold take”)
+# ‹את אחיכם הלוים› (“obj-marker brother-you/your(pl) the-Levite”)
+# ‹מתוך בני ישראל› (“from-midst son Israel”)
+# ‹… לכם מתנה נתנים› (“to-you/your(pl) present set”)
+# ‹ליהוה לעבד את› (“to-YHWH to-work/serve obj-marker”)
+# ‹עבדת אהל מועד› (“service/work tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:6."
+m.step("Num.18.6")
+
+# -------------------------- Num.18.7 · ETNACHTA_SPLIT ----------------------
+# ‹ואתה ובניך אתך› (“and-you and-son-you/your with-you/your”)
+# ‹תשמרו את כהנתכם› (“keep/guard obj-marker priesthood-you/your(pl)”)
+# ‹לכל דבר המזבח› (“to-all word/thing the-altar”)
+# ‹ולמבית לפרכת וע› (“and-to-from-house to-separatrix ?”)
+# ‹… עבדת מתנה אתן› (“service/work present set”)
+# ‹את כהנתכם והזר› (“obj-marker priesthood-you/your(pl) and-the-turn-aside”)
+# ‹הקרב יומת› (“the-bring-near die”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:7."
+m.step("Num.18.7")
+
+# -------------------------- Num.18.8 · ETNACHTA_SPLIT ----------------------
+# ‹וידבר יהוה אל› (“and-speak YHWH to”)
+# ‹אהרן ואני הנה› (“Aaron and-I behold”)
+# ‹נתתי לך את› (“set to-you/your obj-marker”)
+# ‹משמרת תרומתי … לכל› (“watch present-me/my … to-all”)
+# ‹קדשי בני ישראל› (“sacred son Israel”)
+# ‹לך נתתים למשחה› (“to-you/your set-them/their to-unction”)
+# ‹ולבניך לחק עולם› (“and-to-son-you/your to-enactment forever”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:8."
+m.step("Num.18.8")
+# witness-tier presupposed read: through_moses_joy_the_deed_registered on
+# the_watch_of_my_terumah — read, not installed
+m.witness_read("the_watch_of_my_terumah", "through_moses_joy_the_deed_registered",
+                cites=["Sifrei Bamidbar 117:1", "Sifrei Bamidbar 117:2", "Onkelos Num 18:8", "Onkelos Num 18:9", "Onkelos Num 18:10"])
+
+# -------------------------- Num.18.9 · ETNACHTA_SPLIT ----------------------
+# ‹זה יהיה לך› (“this be to-you/your”)
+# ‹מקדש הקדשים מן› (“from-holiness the-holiness from”)
+# ‹האש … כל קרבנם› (“the-fire … all offering-them/their”)
+# ‹לכל מנחתם ולכל› (“to-all grain-offering-them/their and-to-all”)
+# ‹חטאתם ולכל אשמם› (“sin-offering-them/their and-to-all guilt-them/their”)
+# ‹אשר ישיבו לי› (“which return to-me/my”)
+# ‹קדש קדש› (“holiness holiness”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:9."
+m.step("Num.18.9")
+
+# -------------------------- Num.18.10 · ETNACHTA_SPLIT ---------------------
+# ‹בקדש הקדשים תאכלנו› (“in-holiness the-holiness eat-him/its”)
+# ‹… כל זכר יאכל› (“all male eat”)
+# ‹אתו קדש יהיה› (“obj-marker-him/its holiness be”)
+# ‹לך› (“to-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:10."
+m.step("Num.18.10")
+
+# -------------------------- Num.18.11 · ETNACHTA_SPLIT ---------------------
+# ‹וזה לך תרומת› (“and-this to-you/your present”)
+# ‹מתנם לכל תנופת› (“present-them/their to-all brandishing”)
+# ‹בני ישראל לך› (“son Israel to-you/your”)
+# ‹נתתים ולבניך ולבנתי› (“set-them/their and-to-son-you/your and-to-
+# daughter-me/my”)
+# ‹… כל טהור בביתך› (“all pure in-house-you/your”)
+# ‹יאכל אתו› (“eat obj-marker-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:11."
+m.step("Num.18.11")
+# witness-tier presupposed read:
+# the_betrothed_daughter_izhar_the_triad_reversed on
+# the_terumah_of_their_gift — read, not installed
+m.witness_read("the_terumah_of_their_gift", "the_betrothed_daughter_izhar_the_triad_reversed",
+                cites=["Sifrei Bamidbar 117:2", "Onkelos Num 18:11", "Onkelos Num 18:12", "Onkelos Num 18:13"])
+
+# -------------------------- Num.18.12 · ETNACHTA_SPLIT ---------------------
+# ‹כל חלב יצהר› (“all fat oil”)
+# ‹וכל חלב תירוש› (“and-all fat must”)
+# ‹ודגן … ראשיתם אשר› (“and-increase … beginning-them/their which”)
+# ‹יתנו ליהוה לך› (“set to-YHWH to-you/your”)
+# ‹נתתים› (“set-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:12."
+m.step("Num.18.12")
+
+# -------------------------- Num.18.13 · ETNACHTA_SPLIT ---------------------
+# ‹בכורי כל אשר› (“first-fruits-of-the-crop all which”)
+# ‹בארצם אשר יביאו› (“in-earth-them/their which come/bring”)
+# ‹ליהוה לך יהיה› (“to-YHWH to-you/your be”)
+# ‹… כל טהור בביתך› (“all pure in-house-you/your”)
+# ‹יאכלנו› (“eat-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:13."
+m.step("Num.18.13")
+
+# -------------------------- Num.18.14 · TREE_CLAIM -------------------------
+# ‹כל חרם בישראל› (“all physical-a-net in-Israel”)
+# ‹… לך יהיה› (“to-you/your be”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:14."
+m.step("Num.18.14")
+# witness-tier presupposed read: the_four_way_dispute on every_devoted_thing
+# — read, not installed
+m.witness_read("every_devoted_thing", "the_four_way_dispute",
+                cites=["Sifrei Bamidbar 117:3", "Onkelos Num 18:14"])
+
+# -------------------------- Num.18.15 · ETNACHTA_SPLIT ---------------------
+# ‹כל פטר רחם› (“all fissure womb”)
+# ‹לכל בשר אשר› (“to-all flesh which”)
+# ‹יקריבו ליהוה באדם› (“bring-near to-YHWH in-human”)
+# ‹ובבהמה יהיה לך› (“and-in-livestock be to-you/your”)
+# ‹… אך פדה תפדה› (“indeed sever sever”)
+# ‹את בכור האדם› (“obj-marker firstborn the-human”)
+# ‹ואת בכור הבהמה› (“and-obj-marker firstborn the-livestock”)
+# ‹הטמאה תפדה› (“the-foul-in-a-religious-sense sever”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:15."
+m.step("Num.18.15")
+# witness-tier presupposed read: kerem_beyavneh_the_sela_and_the_maah on
+# all_that_opens_the_womb — read, not installed
+m.witness_read("all_that_opens_the_womb", "kerem_beyavneh_the_sela_and_the_maah",
+                cites=["Sifrei Bamidbar 118:1", "Onkelos Num 18:15", "Onkelos Num 18:16"])
+
+# -------------------------- Num.18.16 · ETNACHTA_SPLIT ---------------------
+# ‹ופדויו מבן חדש› (“and-sever-him/its from-son new-moon”)
+# ‹תפדה בערכך כסף› (“sever in-pile-you/your silver”)
+# ‹חמשת שקלים בשקל› (“five weight in-weight”)
+# ‹הקדש … עשרים גרה› (“the-holiness … twenty gerah”)
+# ‹הוא› (“he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:16."
+m.step("Num.18.16")
+
+# -------------------------- Num.18.17 · ETNACHTA_SPLIT ---------------------
+# ‹אך בכור שור› (“indeed firstborn bullock”)
+# ‹או בכור כשב› (“or firstborn young-sheep”)
+# ‹או בכור עז› (“or firstborn she-goat”)
+# ‹לא תפדה קדש› (“not sever holiness”)
+# ‹הם … את דמם› (“they … obj-marker blood-them/their”)
+# ‹תזרק על המזבח› (“sprinkle over the-altar”)
+# ‹ואת חלבם תקטיר› (“and-obj-marker fat-them/their smoke”)
+# ‹אשה לריח ניחח› (“fire-offering to-odor restful”)
+# ‹ליהוה› (“to-YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:17."
+m.step("Num.18.17")
+# witness-tier presupposed read: one_application_two_days_and_a_night on
+# the_firstborn_of_an_ox — read, not installed
+m.witness_read("the_firstborn_of_an_ox", "one_application_two_days_and_a_night",
+                cites=["Sifrei Bamidbar 118:1", "Onkelos Num 18:17", "Onkelos Num 18:18"])
+
+# -------------------------- Num.18.18 · ETNACHTA_SPLIT ---------------------
+# ‹ובשרם יהיה לך› (“and-flesh-them/their be to-you/your”)
+# ‹… כחזה התנופה וכשוק› (“like-breast the-brandishing and-like-leg”)
+# ‹הימין לך יהיה› (“the-right-hand to-you/your be”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:18."
+m.step("Num.18.18")
+
+# -------------------------- Num.18.19 · ETNACHTA_SPLIT ---------------------
+# ‹כל תרומת הקדשים› (“all present the-holiness”)
+# ‹אשר ירימו בני› (“which rise-high son”)
+# ‹ישראל ליהוה נתתי› (“Israel to-YHWH set”)
+# ‹לך ולבניך ולב› (“to-you/your and-to-son-you/your and-heart”)
+# ‹… ברית מלח עולם› (“covenant powder forever”)
+# ‹הוא לפני יהוה› (“he/it to-face YHWH”)
+# ‹לך ולזרעך אתך› (“to-you/your and-to-seed-you/your with-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:19."
+m.step("Num.18.19")
+# witness-tier presupposed read: aarons_and_davids on a_covenant_of_salt —
+# read, not installed
+m.witness_read("a_covenant_of_salt", "aarons_and_davids",
+                cites=["Sifrei Bamidbar 118:1", "Sifrei Bamidbar 119:5", "Onkelos Num 18:19"])
+
+# -------------------------- Num.18.20 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר יהוה אל› (“and-say YHWH to”)
+# ‹אהרן בארצם לא› (“Aaron in-earth-them/their not”)
+# ‹תנחל וחלק לא› (“inherit-mode-of-generations) and-smoothness not”)
+# ‹יהיה לך בתוכם› (“be to-you/your in-midst-them/their”)
+# ‹… אני חלקך ונחלתך› (“smoothness-you/your and-inheritance-you/your”)
+# ‹בתוך בני ישראל› (“in-midst son Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:20."
+m.step("Num.18.20")
+# witness-tier presupposed read: the_exclusions_the_gifts_the_crowns on
+# i_am_your_portion — read, not installed
+m.witness_read("i_am_your_portion", "the_exclusions_the_gifts_the_crowns",
+                cites=["Sifrei Bamidbar 119:1", "Sifrei Bamidbar 119:2", "Sifrei Bamidbar 119:3", "Sifrei Bamidbar 119:4", "Onkelos Num 18:20"])
+
+# -------------------------- Num.18.21 · ETNACHTA_SPLIT ---------------------
+# ‹ולבני לוי הנה› (“and-to-son Levi behold”)
+# ‹נתתי כל מעשר› (“set all tenth”)
+# ‹בישראל לנחלה … חלף› (“in-Israel to-inheritance … exchange”)
+# ‹עבדתם אשר הם› (“service/work-them/their which they”)
+# ‹עבדים את עבדת› (“work/serve obj-marker service/work”)
+# ‹אהל מועד› (“tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:21."
+m.step("Num.18.21")
+# witness-tier presupposed read: in_exchange_the_levite_he on
+# all_the_tithe_in_israel — read, not installed
+m.witness_read("all_the_tithe_in_israel", "in_exchange_the_levite_he",
+                cites=["Sifrei Bamidbar 119:5", "Onkelos Num 18:21", "Onkelos Num 18:22", "Onkelos Num 18:23", "Onkelos Num 18:24"])
+
+# -------------------------- Num.18.22 · ETNACHTA_SPLIT ---------------------
+# ‹ולא יקרבו עוד› (“and-not bring-near still/again”)
+# ‹בני ישראל אל› (“son Israel to”)
+# ‹אהל מועד … לשאת› (“tent seasons … to-lift/carry”)
+# ‹חטא למות› (“crime to-die”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:22."
+m.step("Num.18.22")
+
+# -------------------------- Num.18.23 · ETNACHTA_SPLIT ---------------------
+# ‹ועבד הלוי הוא› (“and-work/serve the-Levite he/it”)
+# ‹את עבדת אהל› (“obj-marker service/work tent”)
+# ‹מועד והם ישאו› (“seasons and-they lift/carry”)
+# ‹עונם … חקת עולם› (“perversity-them/their … statute forever”)
+# ‹לדרתיכם ובתוך בני› (“to-generation-you/your(pl) and-in-midst son”)
+# ‹ישראל לא ינחלו› (“Israel not inherit-mode-of-generations)”)
+# ‹נחלה› (“inheritance”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:23."
+m.step("Num.18.23")
+
+# -------------------------- Num.18.24 · COND_כי (“that”) -------------------
+# ‹כי את מעשר› (“that obj-marker tenth”)
+# ‹בני ישראל אשר› (“son Israel which”)
+# ‹ירימו ליהוה תרומה› (“rise-high to-YHWH present”)
+# ‹נתתי ללוים לנחלה› (“set to-Levite to-inheritance”)
+# ‹… על כן אמרתי› (“over so say”)
+# ‹להם בתוך בני› (“to-them/their in-midst son”)
+# ‹ישראל לא ינחלו› (“Israel not inherit-mode-of-generations)”)
+# ‹נחלה› (“inheritance”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:24."
+m.step("Num.18.24")
+
+# -------------------------- Num.18.25 · TREE_CLAIM -------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:25."
+m.step("Num.18.25")
+
+# -------------------------- Num.18.26 · ETNACHTA_SPLIT ---------------------
+# ‹ואל הלוים תדבר› (“and-to the-Levite speak”)
+# ‹ואמרת אלהם כי› (“and-say to-them/their that”)
+# ‹תקחו מאת בני› (“take from-with son”)
+# ‹ישראל את המעשר› (“Israel obj-marker the-tenth”)
+# ‹אשר … והרמתם ממנו› (“which … and-rise-high from-us/our”)
+# ‹תרומת יהוה מעשר› (“present YHWH tenth”)
+# ‹מן המעשר› (“from the-tenth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:26."
+m.step("Num.18.26")
+# witness-tier presupposed read: the_threshing_floor_paid_the_thresholds on
+# a_tithe_from_the_tithe — read, not installed
+m.witness_read("a_tithe_from_the_tithe", "the_threshing_floor_paid_the_thresholds",
+                cites=["Sifrei Bamidbar 120:1", "Sifrei Bamidbar 121:1", "Onkelos Num 18:25", "Onkelos Num 18:26", "Onkelos Num 18:27", "Onkelos Num 18:28", "Onkelos Num 18:29"])
+
+# -------------------------- Num.18.27 · ETNACHTA_SPLIT ---------------------
+# ‹ונחשב לכם תרומתכם› (“and-plait to-you/your(pl) present-you/your(pl)”)
+# ‹… כדגן מן הגרן› (“like-increase from the-threshing-floor”)
+# ‹וכמלאה מן היקב› (“and-like-something-fulfilled from the-trough”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:27."
+m.step("Num.18.27")
+
+# -------------------------- Num.18.28 · ETNACHTA_SPLIT ---------------------
+# ‹כן תרימו גם› (“so rise-high also”)
+# ‹אתם תרומת יהוה› (“you present YHWH”)
+# ‹מכל מעשרתיכם אשר› (“from-all tenth-you/your(pl) which”)
+# ‹תקחו מאת בני› (“take from-with son”)
+# ‹ישר … ונתתם ממנו› (“? … and-set from-us/our”)
+# ‹את תרומת יהוה› (“obj-marker present YHWH”)
+# ‹לאהרן הכהן› (“to-Aaron the-priest”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:28."
+m.step("Num.18.28")
+
+# -------------------------- Num.18.29 · ETNACHTA_SPLIT ---------------------
+# ‹מכל מתנתיכם תרימו› (“from-all present-you/your(pl) rise-high”)
+# ‹את כל תרומת› (“obj-marker all present”)
+# ‹יהוה … מכל חלבו› (“YHWH … from-all fat-him/its”)
+# ‹את מקדשו ממנו› (“obj-marker consecrated-thing-him/its from-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:29."
+m.step("Num.18.29")
+
+# -------------------------- Num.18.30 · ETNACHTA_SPLIT ---------------------
+# ‹ואמרת אלהם … בהרימכם› (“and-say to-them/their … in-rise-high-
+# you/your(pl)”)
+# ‹את חלבו ממנו› (“obj-marker fat-him/its from-us/our”)
+# ‹ונחשב ללוים כתבואת› (“and-plait to-Levite like-income”)
+# ‹גרן וכתבואת יקב› (“threshing-floor and-like-income trough”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:30."
+m.step("Num.18.30")
+# witness-tier presupposed read: in_every_place_the_wage_you_shall_not_die
+# on its_best — read, not installed
+m.witness_read("its_best", "in_every_place_the_wage_you_shall_not_die",
+                cites=["Sifrei Bamidbar 122:1", "Onkelos Num 18:30", "Onkelos Num 18:31", "Onkelos Num 18:32"])
+
+# -------------------------- Num.18.31 · ETNACHTA_SPLIT ---------------------
+# ‹ואכלתם אתו בכל› (“and-eat obj-marker-him/its in-all”)
+# ‹מקום אתם וביתכם› (“place you and-house-you/your(pl)”)
+# ‹… כי שכר הוא› (“that wage he/it”)
+# ‹לכם חלף עבדתכם› (“to-you/your(pl) exchange service/work-you/your(pl)”)
+# ‹באהל מועד› (“in-tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:31."
+m.step("Num.18.31")
+
+# -------------------------- Num.18.32 · ETNACHTA_SPLIT ---------------------
+# ‹ולא תשאו עליו› (“and-not lift/carry over-him/its”)
+# ‹חטא בהרימכם את› (“crime in-rise-high-you/your(pl) obj-marker”)
+# ‹חלבו ממנו … ואת› (“fat-him/its from-us/our … and-obj-marker”)
+# ‹קדשי בני ישראל› (“sacred son Israel”)
+# ‹לא תחללו ולא› (“not bore and-not”)
+# ‹תמותו› (“die”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 18:32."
+m.step("Num.18.32")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_lord_said_to_aaron', 'five_seats_the_frontplates_levis_naming_verb'), ('a_stranger_shall_not_come_near', 'the_warning_the_punishment_no_more_wrath'), ('the_watch_of_my_terumah', 'through_moses_joy_the_deed_registered'), ('the_terumah_of_their_gift', 'the_betrothed_daughter_izhar_the_triad_reversed'), ('every_devoted_thing', 'the_four_way_dispute'), ('all_that_opens_the_womb', 'kerem_beyavneh_the_sela_and_the_maah'), ('the_firstborn_of_an_ox', 'one_application_two_days_and_a_night'), ('a_covenant_of_salt', 'aarons_and_davids'), ('i_am_your_portion', 'the_exclusions_the_gifts_the_crowns'), ('all_the_tithe_in_israel', 'in_exchange_the_levite_he'), ('a_tithe_from_the_tithe', 'the_threshing_floor_paid_the_thresholds'), ('its_best', 'in_every_place_the_wage_you_shall_not_die')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifrei Bamidbar 116:1', 'Onkelos Num 18:1', 'Onkelos Num 18:2', 'Onkelos Num 18:3']
+    assert all('five_seats_the_frontplates_levis_naming_verb' not in f for f in m.WORLD["facts"])
+    assert 'the_lord_said_to_aaron' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifrei Bamidbar 116:1', 'Sifrei Bamidbar 116:2', 'Onkelos Num 18:4', 'Onkelos Num 18:5', 'Onkelos Num 18:6', 'Onkelos Num 18:7']
+    assert all('the_warning_the_punishment_no_more_wrath' not in f for f in m.WORLD["facts"])
+    assert 'a_stranger_shall_not_come_near' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifrei Bamidbar 117:1', 'Sifrei Bamidbar 117:2', 'Onkelos Num 18:8', 'Onkelos Num 18:9', 'Onkelos Num 18:10']
+    assert all('through_moses_joy_the_deed_registered' not in f for f in m.WORLD["facts"])
+    assert 'the_watch_of_my_terumah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifrei Bamidbar 117:2', 'Onkelos Num 18:11', 'Onkelos Num 18:12', 'Onkelos Num 18:13']
+    assert all('the_betrothed_daughter_izhar_the_triad_reversed' not in f for f in m.WORLD["facts"])
+    assert 'the_terumah_of_their_gift' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifrei Bamidbar 117:3', 'Onkelos Num 18:14']
+    assert all('the_four_way_dispute' not in f for f in m.WORLD["facts"])
+    assert 'every_devoted_thing' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifrei Bamidbar 118:1', 'Onkelos Num 18:15', 'Onkelos Num 18:16']
+    assert all('kerem_beyavneh_the_sela_and_the_maah' not in f for f in m.WORLD["facts"])
+    assert 'all_that_opens_the_womb' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifrei Bamidbar 118:1', 'Onkelos Num 18:17', 'Onkelos Num 18:18']
+    assert all('one_application_two_days_and_a_night' not in f for f in m.WORLD["facts"])
+    assert 'the_firstborn_of_an_ox' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifrei Bamidbar 118:1', 'Sifrei Bamidbar 119:5', 'Onkelos Num 18:19']
+    assert all('aarons_and_davids' not in f for f in m.WORLD["facts"])
+    assert 'a_covenant_of_salt' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifrei Bamidbar 119:1', 'Sifrei Bamidbar 119:2', 'Sifrei Bamidbar 119:3', 'Sifrei Bamidbar 119:4', 'Onkelos Num 18:20']
+    assert all('the_exclusions_the_gifts_the_crowns' not in f for f in m.WORLD["facts"])
+    assert 'i_am_your_portion' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifrei Bamidbar 119:5', 'Onkelos Num 18:21', 'Onkelos Num 18:22', 'Onkelos Num 18:23', 'Onkelos Num 18:24']
+    assert all('in_exchange_the_levite_he' not in f for f in m.WORLD["facts"])
+    assert 'all_the_tithe_in_israel' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Sifrei Bamidbar 120:1', 'Sifrei Bamidbar 121:1', 'Onkelos Num 18:25', 'Onkelos Num 18:26', 'Onkelos Num 18:27', 'Onkelos Num 18:28', 'Onkelos Num 18:29']
+    assert all('the_threshing_floor_paid_the_thresholds' not in f for f in m.WORLD["facts"])
+    assert 'a_tithe_from_the_tithe' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Sifrei Bamidbar 122:1', 'Onkelos Num 18:30', 'Onkelos Num 18:31', 'Onkelos Num 18:32']
+    assert all('in_every_place_the_wage_you_shall_not_die' not in f for f in m.WORLD["facts"])
+    assert 'its_best' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_19_parah
+###############################################################################
+
+m = Machine("num_19_parah")
+
+# -------------------------- Num.19.1 · TREE_CLAIM --------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה ואל אהרן› (“Moses and-to Aaron”)
+# ‹לאמר› (“to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:1."
+m.step("Num.19.1")
+# witness-tier presupposed read:
+# the_heifer_noun_the_yoke_clause_the_reversed_frame on
+# the_statute_of_the_torah — read, not installed
+m.witness_read("the_statute_of_the_torah", "the_heifer_noun_the_yoke_clause_the_reversed_frame",
+                cites=["Sifrei Bamidbar 123:1", "Onkelos Num 19:1", "Onkelos Num 19:2"])
+
+# -------------------------- Num.19.2 · ETNACHTA_SPLIT ----------------------
+# ‹זאת חקת התורה› (“this statute the-precept”)
+# ‹אשר צוה יהוה› (“which command YHWH”)
+# ‹לאמר … דבר אל› (“to-say … speak to”)
+# ‹בני ישראל ויקחו› (“son Israel and-take”)
+# ‹אליך פרה אדמה› (“to-you/your cow rosy”)
+# ‹תמימה אשר אין› (“entire which there-is-not”)
+# ‹בה מום אש› (“in-her/its stain fire”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:2."
+m.step("Num.19.2")
+
+# -------------------------- Num.19.3 · ETNACHTA_SPLIT ----------------------
+# ‹ונתתם אתה אל› (“and-set obj-marker-her/its to”)
+# ‹אלעזר הכהן … והוציא› (“Eleazar the-priest … and-bring-forth”)
+# ‹אתה אל מחוץ› (“obj-marker-her/its to from-outside”)
+# ‹למחנה ושחט אתה› (“to-camp and-slaughter obj-marker-her/its”)
+# ‹לפניו› (“to-face-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:3."
+m.step("Num.19.3")
+# witness-tier presupposed read: the_adjutant_the_finger_the_gaze on
+# to_eleazar_the_priest — read, not installed
+m.witness_read("to_eleazar_the_priest", "the_adjutant_the_finger_the_gaze",
+                cites=["Sifrei Bamidbar 123:2", "Onkelos Num 19:3", "Onkelos Num 19:4"])
+
+# -------------------------- Num.19.4 · ETNACHTA_SPLIT ----------------------
+# ‹ולקח אלעזר הכהן› (“and-take Eleazar the-priest”)
+# ‹מדמה באצבעו … והזה› (“from-blood-her/its in-something-to-sieze-with-
+# him/its … and-spirt”)
+# ‹אל נכח פני› (“to front-part face”)
+# ‹אהל מועד מדמה› (“tent seasons from-blood-her/its”)
+# ‹שבע פעמים› (“seven stroke”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:4."
+m.step("Num.19.4")
+
+# -------------------------- Num.19.5 · ETNACHTA_SPLIT ----------------------
+# ‹ושרף את הפרה› (“and-be-on-fire obj-marker the-cow”)
+# ‹לעיניו … את ערה› (“to-eye-him/its … obj-marker skin-her/its”)
+# ‹ואת בשרה ואת› (“and-obj-marker flesh-her/its and-obj-marker”)
+# ‹דמה על פרשה› (“blood-her/its over excrement-her/its”)
+# ‹ישרף› (“be-on-fire”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:5."
+m.step("Num.19.5")
+# witness-tier presupposed read:
+# the_sin_bulls_list_with_the_blood_the_lepers_three on burn_the_heifer —
+# read, not installed
+m.witness_read("burn_the_heifer", "the_sin_bulls_list_with_the_blood_the_lepers_three",
+                cites=["Sifrei Bamidbar 124:1", "Onkelos Num 19:5", "Onkelos Num 19:6"])
+
+# -------------------------- Num.19.6 · ETNACHTA_SPLIT ----------------------
+# ‹ולקח הכהן עץ› (“and-take the-priest tree”)
+# ‹ארז ואזוב ושני› (“cedar-tree and-hyssop and-crimson”)
+# ‹תולעת … והשליך אל› (“crimson-grub … and-throw-out to”)
+# ‹תוך שרפת הפרה› (“midst cremation the-cow”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:6."
+m.step("Num.19.6")
+
+# -------------------------- Num.19.7 · ETNACHTA_SPLIT ----------------------
+# ‹וכבס בגדיו הכהן› (“and-trample garment-him/its the-priest”)
+# ‹ורחץ בשרו במים› (“and-lave flesh-him/its in-waters”)
+# ‹ואחר יבוא אל› (“and-after come/bring to”)
+# ‹המחנה … וטמא הכהן› (“the-camp … and-be-foul the-priest”)
+# ‹עד הערב› (“until the-evening”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:7."
+m.step("Num.19.7")
+# witness-tier presupposed read: the_caster_the_burner_forty_seah on
+# the_priest_washes — read, not installed
+m.witness_read("the_priest_washes", "the_caster_the_burner_forty_seah",
+                cites=["Sifrei Bamidbar 124:1", "Onkelos Num 19:7", "Onkelos Num 19:8"])
+
+# -------------------------- Num.19.8 · ETNACHTA_SPLIT ----------------------
+# ‹והשרף אתה יכבס› (“and-the-be-on-fire obj-marker-her/its trample”)
+# ‹בגדיו במים ורחץ› (“garment-him/its in-waters and-lave”)
+# ‹בשרו במים … וטמא› (“flesh-him/its in-waters … and-be-foul”)
+# ‹עד הערב› (“until the-evening”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:8."
+m.step("Num.19.8")
+
+# -------------------------- Num.19.9 · ETNACHTA_SPLIT ----------------------
+# ‹ואסף איש טהור› (“and-gather-for-any-purpose man pure”)
+# ‹את אפר הפרה› (“obj-marker ashes the-cow”)
+# ‹והניח מחוץ למחנה› (“and-deposit from-outside to-camp”)
+# ‹במקום טהור … והיתה› (“in-place pure … and-be”)
+# ‹לעדת בני ישראל› (“to-congregation son Israel”)
+# ‹למשמרת למי נדה› (“to-watch to-waters rejection”)
+# ‹חטאת הוא› (“sin-offering he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:9."
+m.step("Num.19.9")
+# witness-tier presupposed read: the_third_object_kept_the_waters_of_niddah
+# on a_clean_man_gathers — read, not installed
+m.witness_read("a_clean_man_gathers", "the_third_object_kept_the_waters_of_niddah",
+                cites=["Sifrei Bamidbar 124:1", "Sifrei Bamidbar 124:2", "Onkelos Num 19:9", "Onkelos Num 19:10"])
+
+# -------------------------- Num.19.10 · ETNACHTA_SPLIT ---------------------
+# ‹וכבס האסף את› (“and-trample the-gather-for-any-purpose obj-marker”)
+# ‹אפר הפרה את› (“ashes the-cow obj-marker”)
+# ‹בגדיו וטמא עד› (“garment-him/its and-be-foul until”)
+# ‹הערב … והיתה לבני› (“the-evening … and-be to-son”)
+# ‹ישראל ולגר הגר› (“Israel and-to-sojourner the-turn-aside-from-the-road”)
+# ‹בתוכם לחקת עולם› (“in-midst-them/their to-statute forever”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:10."
+m.step("Num.19.10")
+
+# -------------------------- Num.19.11 · ETNACHTA_SPLIT ---------------------
+# ‹הנגע במת לכל› (“the-touch in-die to-all”)
+# ‹נפש אדם … וטמא› (“living-being human … and-be-foul”)
+# ‹שבעת ימים› (“seven day”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:11."
+m.step("Num.19.11")
+# witness-tier presupposed read:
+# a_human_soul_the_third_and_seventh_the_four_failures on
+# who_touches_the_dead — read, not installed
+m.witness_read("who_touches_the_dead", "a_human_soul_the_third_and_seventh_the_four_failures",
+                cites=["Sifrei Bamidbar 125:1", "Onkelos Num 19:11", "Onkelos Num 19:12", "Onkelos Num 19:13"])
+
+# -------------------------- Num.19.12 · ETNACHTA_SPLIT ---------------------
+# ‹הוא יתחטא בו› (“he/it sin in-him/its”)
+# ‹ביום השלישי וביום› (“in-day the-third and-in-day”)
+# ‹השביעי יטהר … ואם› (“the-seventh be-pure … and-if”)
+# ‹לא יתחטא ביום› (“not sin in-day”)
+# ‹השלישי וביום השביעי› (“the-third and-in-day the-seventh”)
+# ‹לא יטהר› (“not be-pure”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:12."
+m.step("Num.19.12")
+
+# -------------------------- Num.19.13 · ETNACHTA_SPLIT ---------------------
+# ‹כל הנגע במת› (“all the-touch in-die”)
+# ‹בנפש האדם אשר› (“in-living-being the-human which”)
+# ‹ימות ולא יתחטא› (“die and-not sin”)
+# ‹את משכן יהוה› (“obj-marker tabernacle YHWH”)
+# ‹טמא ונ … כי› (“be-foul ? … that”)
+# ‹מי נדה לא› (“waters rejection not”)
+# ‹זרק עליו טמא› (“sprinkle over-him/its foul-in-a-religious-sense”)
+# ‹יהיה עוד טמאתו› (“be still/again religious-impurity-him/its”)
+# ‹בו› (“in-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:13."
+m.step("Num.19.13")
+
+# -------------------------- Num.19.14 · COND_כי (“that”) -------------------
+# ‹זאת התורה אדם› (“this the-precept human”)
+# ‹כי ימות באהל› (“that die in-tent”)
+# ‹… כל הבא אל› (“all the-come/bring to”)
+# ‹האהל וכל אשר› (“the-tent and-all which”)
+# ‹באהל יטמא שבעת› (“in-tent be-foul seven”)
+# ‹ימים› (“day”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:14."
+m.step("Num.19.14")
+# witness-tier presupposed read:
+# the_tabernacle_word_the_vessel_census_the_lid on a_man_who_dies_in_a_tent
+# — read, not installed
+m.witness_read("a_man_who_dies_in_a_tent", "the_tabernacle_word_the_vessel_census_the_lid",
+                cites=["Sifrei Bamidbar 126:1", "Onkelos Num 19:14", "Onkelos Num 19:15"])
+
+# -------------------------- Num.19.15 · ETNACHTA_SPLIT ---------------------
+# ‹וכל כלי פתוח› (“and-all vessel open-wide”)
+# ‹אשר אין צמיד› (“which there-is-not bracelet”)
+# ‹פתיל עליו … טמא› (“twine over-him/its … foul-in-a-religious-sense”)
+# ‹הוא› (“he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:15."
+m.step("Num.19.15")
+
+# -------------------------- Num.19.16 · ETNACHTA_SPLIT ---------------------
+# ‹וכל אשר יגע› (“and-all which touch”)
+# ‹על פני השדה› (“over face the-field”)
+# ‹בחלל חרב או› (“in-pierced drought or”)
+# ‹במת או בעצם› (“in-die or in-bone”)
+# ‹אדם או בקבר› (“human or in-sepulchre”)
+# ‹… יטמא שבעת ימים› (“be-foul seven day”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:16."
+m.step("Num.19.16")
+# witness-tier presupposed read: one_slain_the_four_reordered_two_bones on
+# on_the_open_field — read, not installed
+m.witness_read("on_the_open_field", "one_slain_the_four_reordered_two_bones",
+                cites=["Sifrei Bamidbar 127:1", "Sifrei Bamidbar 127:2", "Sifrei Bamidbar 127:3", "Sifrei Bamidbar 127:4", "Onkelos Num 19:16"])
+
+# -------------------------- Num.19.17 · ETNACHTA_SPLIT ---------------------
+# ‹ולקחו לטמא מעפר› (“and-take to-foul-in-a-religious-sense from-dust”)
+# ‹שרפת החטאת … ונתן› (“cremation the-sin-offering … and-set”)
+# ‹עליו מים חיים› (“over-him/its waters living”)
+# ‹אל כלי› (“to vessel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:17."
+m.step("Num.19.17")
+# witness-tier presupposed read: the_sotahs_earth_isaacs_well on
+# the_dust_of_the_burning — read, not installed
+m.witness_read("the_dust_of_the_burning", "the_sotahs_earth_isaacs_well",
+                cites=["Sifrei Bamidbar 127:5", "Sifrei Bamidbar 128:1", "Onkelos Num 19:17"])
+
+# -------------------------- Num.19.18 · ETNACHTA_SPLIT ---------------------
+# ‹ולקח אזוב וטבל› (“and-take hyssop and-dip”)
+# ‹במים איש טהור› (“in-waters man pure”)
+# ‹והזה על האהל› (“and-spirt over the-tent”)
+# ‹ועל כל הכלים› (“and-over all the-vessel”)
+# ‹ועל ה … ועל› (“and-over the … and-over”)
+# ‹הנגע בעצם או› (“the-touch in-bone or”)
+# ‹בחלל או במת› (“in-pierced or in-die”)
+# ‹או בקבר› (“or in-sepulchre”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:18."
+m.step("Num.19.18")
+# witness-tier presupposed read: the_passovers_verbs_the_tvul_yom on
+# take_hyssop_and_dip — read, not installed
+m.witness_read("take_hyssop_and_dip", "the_passovers_verbs_the_tvul_yom",
+                cites=["Sifrei Bamidbar 128:2", "Sifrei Bamidbar 129:1", "Onkelos Num 19:18"])
+
+# -------------------------- Num.19.19 · ETNACHTA_SPLIT ---------------------
+# ‹והזה הטהר על› (“and-spirt the-pure over”)
+# ‹הטמא ביום השלישי› (“the-foul-in-a-religious-sense in-day the-third”)
+# ‹וביום השביעי … וחטאו› (“and-in-day the-seventh … and-sin-him/its”)
+# ‹ביום השביעי וכבס› (“in-day the-seventh and-trample”)
+# ‹בגדיו ורחץ במים› (“garment-him/its and-lave in-waters”)
+# ‹וטהר בערב› (“and-be-pure in-evening”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:19."
+m.step("Num.19.19")
+# witness-tier presupposed read: the_seventh_repeated_korachs_phrase on
+# the_clean_sprinkles — read, not installed
+m.witness_read("the_clean_sprinkles", "the_seventh_repeated_korachs_phrase",
+                cites=["Sifrei Bamidbar 129:2", "Sifrei Bamidbar 129:3", "Onkelos Num 19:19", "Onkelos Num 19:20"])
+
+# -------------------------- Num.19.20 · ETNACHTA_SPLIT ---------------------
+# ‹ואיש אשר יטמא› (“and-man which be-foul”)
+# ‹ולא יתחטא ונכרתה› (“and-not sin and-cut”)
+# ‹הנפש ההוא מתוך› (“the-living-being that from-midst”)
+# ‹הקהל … כי את› (“the-assemblage … that obj-marker”)
+# ‹מקדש יהוה טמא› (“consecrated-thing YHWH be-foul”)
+# ‹מי נדה לא› (“waters rejection not”)
+# ‹זרק עליו טמא› (“sprinkle over-him/its foul-in-a-religious-sense”)
+# ‹הוא› (“he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:20."
+m.step("Num.19.20")
+
+# -------------------------- Num.19.21 · ETNACHTA_SPLIT ---------------------
+# ‹והיתה להם לחקת› (“and-be to-them/their to-statute”)
+# ‹עולם … ומזה מי› (“forever … and-spirt waters”)
+# ‹הנדה יכבס בגדיו› (“the-rejection trample garment-him/its”)
+# ‹והנגע במי הנדה› (“and-the-touch in-waters the-rejection”)
+# ‹יטמא עד הערב› (“be-foul until the-evening”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:21."
+m.step("Num.19.21")
+# witness-tier presupposed read: the_waters_measure_the_removes on
+# the_sprinkler_washes — read, not installed
+m.witness_read("the_sprinkler_washes", "the_waters_measure_the_removes",
+                cites=["Sifrei Bamidbar 129:4", "Sifrei Bamidbar 129:5", "Sifrei Bamidbar 130:1", "Onkelos Num 19:21", "Onkelos Num 19:22"])
+
+# -------------------------- Num.19.22 · ETNACHTA_SPLIT ---------------------
+# ‹וכל אשר יגע› (“and-all which touch”)
+# ‹בו הטמא יטמא› (“in-him/its the-foul-in-a-religious-sense be-foul”)
+# ‹… והנפש הנגעת תטמא› (“and-the-living-being the-touch be-foul”)
+# ‹עד הערב› (“until the-evening”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 19:22."
+m.step("Num.19.22")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_statute_of_the_torah', 'the_heifer_noun_the_yoke_clause_the_reversed_frame'), ('to_eleazar_the_priest', 'the_adjutant_the_finger_the_gaze'), ('burn_the_heifer', 'the_sin_bulls_list_with_the_blood_the_lepers_three'), ('the_priest_washes', 'the_caster_the_burner_forty_seah'), ('a_clean_man_gathers', 'the_third_object_kept_the_waters_of_niddah'), ('who_touches_the_dead', 'a_human_soul_the_third_and_seventh_the_four_failures'), ('a_man_who_dies_in_a_tent', 'the_tabernacle_word_the_vessel_census_the_lid'), ('on_the_open_field', 'one_slain_the_four_reordered_two_bones'), ('the_dust_of_the_burning', 'the_sotahs_earth_isaacs_well'), ('take_hyssop_and_dip', 'the_passovers_verbs_the_tvul_yom'), ('the_clean_sprinkles', 'the_seventh_repeated_korachs_phrase'), ('the_sprinkler_washes', 'the_waters_measure_the_removes')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifrei Bamidbar 123:1', 'Onkelos Num 19:1', 'Onkelos Num 19:2']
+    assert all('the_heifer_noun_the_yoke_clause_the_reversed_frame' not in f for f in m.WORLD["facts"])
+    assert 'the_statute_of_the_torah' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifrei Bamidbar 123:2', 'Onkelos Num 19:3', 'Onkelos Num 19:4']
+    assert all('the_adjutant_the_finger_the_gaze' not in f for f in m.WORLD["facts"])
+    assert 'to_eleazar_the_priest' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Sifrei Bamidbar 124:1', 'Onkelos Num 19:5', 'Onkelos Num 19:6']
+    assert all('the_sin_bulls_list_with_the_blood_the_lepers_three' not in f for f in m.WORLD["facts"])
+    assert 'burn_the_heifer' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifrei Bamidbar 124:1', 'Onkelos Num 19:7', 'Onkelos Num 19:8']
+    assert all('the_caster_the_burner_forty_seah' not in f for f in m.WORLD["facts"])
+    assert 'the_priest_washes' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifrei Bamidbar 124:1', 'Sifrei Bamidbar 124:2', 'Onkelos Num 19:9', 'Onkelos Num 19:10']
+    assert all('the_third_object_kept_the_waters_of_niddah' not in f for f in m.WORLD["facts"])
+    assert 'a_clean_man_gathers' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Sifrei Bamidbar 125:1', 'Onkelos Num 19:11', 'Onkelos Num 19:12', 'Onkelos Num 19:13']
+    assert all('a_human_soul_the_third_and_seventh_the_four_failures' not in f for f in m.WORLD["facts"])
+    assert 'who_touches_the_dead' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifrei Bamidbar 126:1', 'Onkelos Num 19:14', 'Onkelos Num 19:15']
+    assert all('the_tabernacle_word_the_vessel_census_the_lid' not in f for f in m.WORLD["facts"])
+    assert 'a_man_who_dies_in_a_tent' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifrei Bamidbar 127:1', 'Sifrei Bamidbar 127:2', 'Sifrei Bamidbar 127:3', 'Sifrei Bamidbar 127:4', 'Onkelos Num 19:16']
+    assert all('one_slain_the_four_reordered_two_bones' not in f for f in m.WORLD["facts"])
+    assert 'on_the_open_field' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Sifrei Bamidbar 127:5', 'Sifrei Bamidbar 128:1', 'Onkelos Num 19:17']
+    assert all('the_sotahs_earth_isaacs_well' not in f for f in m.WORLD["facts"])
+    assert 'the_dust_of_the_burning' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Sifrei Bamidbar 128:2', 'Sifrei Bamidbar 129:1', 'Onkelos Num 19:18']
+    assert all('the_passovers_verbs_the_tvul_yom' not in f for f in m.WORLD["facts"])
+    assert 'take_hyssop_and_dip' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Sifrei Bamidbar 129:2', 'Sifrei Bamidbar 129:3', 'Onkelos Num 19:19', 'Onkelos Num 19:20']
+    assert all('the_seventh_repeated_korachs_phrase' not in f for f in m.WORLD["facts"])
+    assert 'the_clean_sprinkles' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Sifrei Bamidbar 129:4', 'Sifrei Bamidbar 129:5', 'Sifrei Bamidbar 130:1', 'Onkelos Num 19:21', 'Onkelos Num 19:22']
+    assert all('the_waters_measure_the_removes' not in f for f in m.WORLD["facts"])
+    assert 'the_sprinkler_washes' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_20_meribah_edom_aaron
+###############################################################################
+
+m = Machine("num_20_meribah_edom_aaron")
+
+# -------------------------- Num.20.1 · ETNACHTA_SPLIT ----------------------
+# ‹ויבאו בני ישראל› (“and-come/bring son Israel”)
+# ‹כל העדה מדבר› (“all the-congregation pasture”)
+# ‹צן בחדש הראשון› (“Zin in-new-moon the-first”)
+# ‹וישב העם בקדש› (“and-dwell/sit the-people in-Kadesh”)
+# ‹… ותמת שם מרים› (“and-die there Miriam”)
+# ‹ותקבר שם› (“and-bury there”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:1."
+m.step("Num.20.1")
+# witness-tier presupposed read:
+# the_first_month_no_year_one_consonantal_skin on miriam_died_there — read,
+# not installed
+m.witness_read("miriam_died_there", "the_first_month_no_year_one_consonantal_skin",
+                cites=["Onkelos Num 20:1"])
+
+# -------------------------- Num.20.2 · ETNACHTA_SPLIT ----------------------
+# ‹ולא היה מים› (“and-not be waters”)
+# ‹לעדה … ויקהלו על› (“to-congregation … and-convoke over”)
+# ‹משה ועל אהרן› (“Moses and-over Aaron”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:2."
+m.step("Num.20.2")
+# witness-tier presupposed read: korachs_verb_the_first_meribahs_clause on
+# no_water — read, not installed
+m.witness_read("no_water", "korachs_verb_the_first_meribahs_clause",
+                cites=["Onkelos Num 20:2", "Onkelos Num 20:3", "Onkelos Num 20:4", "Onkelos Num 20:5"])
+
+# -------------------------- Num.20.3 · ETNACHTA_SPLIT ----------------------
+# ‹וירב העם עם› (“and-toss the-people with”)
+# ‹משה … ויאמרו לאמר› (“Moses … and-say to-say”)
+# ‹ולו גוענו בגוע› (“and-conditional-particle breathe-out in-breathe-out”)
+# ‹אחינו לפני יהוה› (“brother-us/our to-face YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:3."
+m.step("Num.20.3")
+
+# -------------------------- Num.20.4 · ETNACHTA_SPLIT ----------------------
+# ‹ולמה הבאתם את› (“and-to-what come/bring obj-marker”)
+# ‹קהל יהוה אל› (“assemblage YHWH to”)
+# ‹המדבר הזה … למות› (“the-pasture the-this … to-die”)
+# ‹שם אנחנו ובעירנו› (“there we and-cattle-us/our”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:4."
+m.step("Num.20.4")
+
+# -------------------------- Num.20.5 · ETNACHTA_SPLIT ----------------------
+# ‹ולמה העליתנו ממצרים› (“and-to-what go-up-us/our from-Egypt”)
+# ‹להביא אתנו אל› (“to-come/bring obj-marker-us/our to”)
+# ‹המקום הרע הזה› (“the-place the-bad the-this”)
+# ‹… לא מקום זרע› (“not place seed”)
+# ‹ותאנה וגפן ורמון› (“and-fig and-vine and-pomegranate”)
+# ‹ומים אין לשתות› (“and-waters there-is-not to-drink”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:5."
+m.step("Num.20.5")
+
+# -------------------------- Num.20.6 · ETNACHTA_SPLIT ----------------------
+# ‹ויבא משה ואהרן› (“and-come/bring Moses and-Aaron”)
+# ‹מפני הקהל אל› (“from-face the-assemblage to”)
+# ‹פתח אהל מועד› (“opening tent seasons”)
+# ‹ויפלו על פניהם› (“and-fall over face-them/their”)
+# ‹… וירא כבוד יהוה› (“and-see weight YHWH”)
+# ‹אליהם› (“to-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:6."
+m.step("Num.20.6")
+# witness-tier presupposed read:
+# the_staff_from_before_the_lord_the_two_rocks on the_glory_appeared — read,
+# not installed
+m.witness_read("the_glory_appeared", "the_staff_from_before_the_lord_the_two_rocks",
+                cites=["Onkelos Num 20:6", "Onkelos Num 20:7", "Onkelos Num 20:8", "Onkelos Num 20:9"])
+
+# -------------------------- Num.20.7 · TREE_CLAIM --------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:7."
+m.step("Num.20.7")
+
+# -------------------------- Num.20.8 · ETNACHTA_SPLIT ----------------------
+# ‹קח את המטה› (“take obj-marker the-staff/tribe”)
+# ‹והקהל את העדה› (“and-convoke obj-marker the-congregation”)
+# ‹אתה ואהרן אחיך› (“you and-Aaron brother-you/your”)
+# ‹ודברתם אל הסלע› (“and-speak to the-craggy-rock”)
+# ‹לעיני … והוצאת להם› (“to-eye … and-bring-forth to-them/their”)
+# ‹מים מן הסלע› (“waters from the-craggy-rock”)
+# ‹והשקית את העדה› (“and-give-drink obj-marker the-congregation”)
+# ‹ואת בעירם› (“and-obj-marker cattle-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:8."
+m.step("Num.20.8")
+
+# -------------------------- Num.20.9 · ETNACHTA_SPLIT ----------------------
+# ‹ויקח משה את› (“and-take Moses obj-marker”)
+# ‹המטה מלפני יהוה› (“the-staff/tribe from-to-face YHWH”)
+# ‹… כאשר צוהו› (“like-as/which command-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:9."
+m.step("Num.20.9")
+
+# -------------------------- Num.20.10 · ETNACHTA_SPLIT ---------------------
+# ‹ויקהלו משה ואהרן› (“and-convoke Moses and-Aaron”)
+# ‹את הקהל אל› (“obj-marker the-assemblage to”)
+# ‹פני הסלע … ויאמר› (“face the-craggy-rock … and-say”)
+# ‹להם שמעו נא› (“to-them/their hear please”)
+# ‹המרים המן הסלע› (“the-be-bitter the-from the-craggy-rock”)
+# ‹הזה נוציא לכם› (“the-this bring-forth to-you/your(pl)”)
+# ‹מים› (“waters”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:10."
+m.step("Num.20.10")
+# witness-tier presupposed read: miriams_consonants_twice_the_dual on
+# hear_now_rebels — read, not installed
+m.witness_read("hear_now_rebels", "miriams_consonants_twice_the_dual",
+                cites=["Onkelos Num 20:10", "Onkelos Num 20:11"])
+
+# -------------------------- Num.20.11 · ETNACHTA_SPLIT ---------------------
+# ‹וירם משה את› (“and-rise-high Moses obj-marker”)
+# ‹ידו ויך את› (“hand-him/its and-strike obj-marker”)
+# ‹הסלע במטהו פעמים› (“the-craggy-rock in-staff/tribe-him/its stroke”)
+# ‹… ויצאו מים רבים› (“and-bring-forth waters many/great”)
+# ‹ותשת העדה ובעירם› (“and-drink the-congregation and-cattle-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:11."
+m.step("Num.20.11")
+
+# -------------------------- Num.20.12 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר יהוה אל› (“and-say YHWH to”)
+# ‹משה ואל אהרן› (“Moses and-to Aaron”)
+# ‹יען לא האמנתם› (“heed not build-up”)
+# ‹בי להקדישני לעיני› (“in-me/my to-sanctify-me/my to-eye”)
+# ‹ב … לכן לא› (“? … to-so not”)
+# ‹תביאו את הקהל› (“come/bring obj-marker the-assemblage”)
+# ‹הזה אל הארץ› (“the-this to the-earth”)
+# ‹אשר נתתי להם› (“which set to-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:12."
+m.step("Num.20.12")
+# witness-tier presupposed read:
+# he_was_sanctified_nadabs_verse_the_psalms_reading on you_did_not_believe —
+# read, not installed
+m.witness_read("you_did_not_believe", "he_was_sanctified_nadabs_verse_the_psalms_reading",
+                cites=["Onkelos Num 20:12", "Onkelos Num 20:13"])
+
+# -------------------------- Num.20.13 · ETNACHTA_SPLIT ---------------------
+# ‹המה מי מריבה› (“they waters Meribah”)
+# ‹אשר רבו בני› (“which toss son”)
+# ‹ישראל את יהוה› (“Israel with YHWH”)
+# ‹… ויקדש בם› (“and-sanctify in-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:13."
+m.step("Num.20.13")
+
+# -------------------------- Num.20.14 · ETNACHTA_SPLIT ---------------------
+# ‹וישלח משה מלאכים› (“and-send Moses messenger”)
+# ‹מקדש אל מלך› (“from-Kadesh to king”)
+# ‹אדום … כה אמר› (“Edom … like-this say”)
+# ‹אחיך ישראל אתה› (“brother-you/your Israel you”)
+# ‹ידעת את כל› (“know obj-marker all”)
+# ‹התלאה אשר מצאתנו› (“the-distress which find-us/our”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:14."
+m.step("Num.20.14")
+# witness-tier presupposed read: the_firstfruits_declaration_the_angel on
+# messengers_to_edom — read, not installed
+m.witness_read("messengers_to_edom", "the_firstfruits_declaration_the_angel",
+                cites=["Onkelos Num 20:14", "Onkelos Num 20:15", "Onkelos Num 20:16"])
+
+# -------------------------- Num.20.15 · ETNACHTA_SPLIT ---------------------
+# ‹וירדו אבתינו מצרימה› (“and-go-down father-us/our Egypt-ward”)
+# ‹ונשב במצרים ימים› (“and-dwell/sit in-Egypt day”)
+# ‹רבים … וירעו לנו› (“many/great … and-spoil to-us/our”)
+# ‹מצרים ולאבתינו› (“Egyptian and-to-father-us/our”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:15."
+m.step("Num.20.15")
+
+# -------------------------- Num.20.16 · ETNACHTA_SPLIT ---------------------
+# ‹ונצעק אל יהוה› (“and-shriek to YHWH”)
+# ‹וישמע קלנו וישלח› (“and-hear voice/sound-us/our and-send”)
+# ‹מלאך ויצאנו ממצרים› (“messenger and-bring-forth-us/our from-Egypt”)
+# ‹… והנה אנחנו בקדש› (“and-behold we in-Kadesh”)
+# ‹עיר קצה גבולך› (“city end cord-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:16."
+m.step("Num.20.16")
+
+# -------------------------- Num.20.17 · ETNACHTA_SPLIT ---------------------
+# ‹נעברה נא בארצך› (“pass-over please in-earth-you/your”)
+# ‹לא נעבר בשדה› (“not pass-over in-field”)
+# ‹ובכרם ולא נשתה› (“and-in-garden and-not drink”)
+# ‹מי באר … דרך› (“waters pit … way/road”)
+# ‹המלך נלך לא› (“the-king go not”)
+# ‹נטה ימין ושמאול› (“stretch right-hand and-dark”)
+# ‹עד אשר נעבר› (“until which pass-over”)
+# ‹גבולך› (“cord-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:17."
+m.step("Num.20.17")
+# witness-tier presupposed read: the_two_messages_esaus_sword on let_us_pass
+# — read, not installed
+m.witness_read("let_us_pass", "the_two_messages_esaus_sword",
+                cites=["Onkelos Num 20:17", "Onkelos Num 20:18", "Onkelos Num 20:19"])
+
+# -------------------------- Num.20.18 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר אליו אדום› (“and-say to-him/its Edom”)
+# ‹לא תעבר בי› (“not pass-over in-me/my”)
+# ‹… פן בחרב אצא› (“lest in-drought bring-forth”)
+# ‹לקראתך› (“to-encountering-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:18."
+m.step("Num.20.18")
+
+# -------------------------- Num.20.19 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמרו אליו בני› (“and-say to-him/its son”)
+# ‹ישראל במסלה נעלה› (“Israel in-thoroughfare go-up”)
+# ‹ואם מימיך נשתה› (“and-if waters-you/your drink”)
+# ‹אני ומקני ונ› (“and-something-bought-me/my ?”)
+# ‹… רק אין דבר› (“leanness there-is-not word/thing”)
+# ‹ברגלי אעברה› (“in-foot-me/my pass-over”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:19."
+m.step("Num.20.19")
+
+# -------------------------- Num.20.20 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר לא תעבר› (“and-say not pass-over”)
+# ‹… ויצא אדום לקראתו› (“and-bring-forth Edom to-encountering-him/its”)
+# ‹בעם כבד וביד› (“in-people heavy and-in-hand”)
+# ‹חזקה› (“strong”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:20."
+m.step("Num.20.20")
+# witness-tier presupposed read: the_exoduss_phrase_jacobs_refusal on
+# with_a_strong_hand — read, not installed
+m.witness_read("with_a_strong_hand", "the_exoduss_phrase_jacobs_refusal",
+                cites=["Onkelos Num 20:20", "Onkelos Num 20:21"])
+
+# -------------------------- Num.20.21 · ETNACHTA_SPLIT ---------------------
+# ‹וימאן אדום נתן› (“and-refuse Edom set”)
+# ‹את ישראל עבר› (“obj-marker Israel pass-over”)
+# ‹בגבלו … ויט ישראל› (“in-cord-him/its … and-stretch Israel”)
+# ‹מעליו› (“from-over-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:21."
+m.step("Num.20.21")
+
+# -------------------------- Num.20.22 · ETNACHTA_SPLIT ---------------------
+# ‹ויסעו מקדש … ויבאו› (“and-journey from-Kadesh … and-come/bring”)
+# ‹בני ישראל כל› (“son Israel all”)
+# ‹העדה הר ההר› (“the-congregation Hor the-mountain”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:22."
+m.step("Num.20.22")
+# witness-tier presupposed read: two_hors_aaron_gathered_the_ashes_verb on
+# to_mount_hor — read, not installed
+m.witness_read("to_mount_hor", "two_hors_aaron_gathered_the_ashes_verb",
+                cites=["Onkelos Num 20:22", "Onkelos Num 20:23", "Onkelos Num 20:24"])
+
+# -------------------------- Num.20.23 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר יהוה אל› (“and-say YHWH to”)
+# ‹משה ואל אהרן› (“Moses and-to Aaron”)
+# ‹בהר ההר … על› (“in-Hor the-mountain … over”)
+# ‹גבול ארץ אדום› (“cord earth Edom”)
+# ‹לאמר› (“to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:23."
+m.step("Num.20.23")
+
+# -------------------------- Num.20.24 · ETNACHTA_SPLIT ---------------------
+# ‹יאסף אהרן אל› (“gather-for-any-purpose Aaron to”)
+# ‹עמיו כי לא› (“people-him/its that not”)
+# ‹יבא אל הארץ› (“come/bring to the-earth”)
+# ‹אשר נתתי לבני› (“which set to-son”)
+# ‹ישראל … על אשר› (“Israel … over which”)
+# ‹מריתם את פי› (“be-bitter obj-marker mouth-me/my”)
+# ‹למי מריבה› (“to-waters Meribah”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:24."
+m.step("Num.20.24")
+
+# -------------------------- Num.20.25 · ETNACHTA_SPLIT ---------------------
+# ‹קח את אהרן› (“take obj-marker Aaron”)
+# ‹ואת אלעזר בנו› (“and-obj-marker Eleazar son-him/its”)
+# ‹… והעל אתם הר› (“and-go-up obj-marker-them/their Hor”)
+# ‹ההר› (“the-mountain”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:25."
+m.step("Num.20.25")
+# witness-tier presupposed read: the_investiture_run_dated_thirty_days on
+# strip_aaron_clothe_eleazar — read, not installed
+m.witness_read("strip_aaron_clothe_eleazar", "the_investiture_run_dated_thirty_days",
+                cites=["Onkelos Num 20:25", "Onkelos Num 20:26", "Onkelos Num 20:27", "Onkelos Num 20:28", "Onkelos Num 20:29"])
+
+# -------------------------- Num.20.26 · ETNACHTA_SPLIT ---------------------
+# ‹והפשט את אהרן› (“and-spread-out obj-marker Aaron”)
+# ‹את בגדיו והלבשתם› (“obj-marker garment-him/its and-wrap-around-
+# them/their”)
+# ‹את אלעזר בנו› (“obj-marker Eleazar son-him/its”)
+# ‹… ואהרן יאסף ומת› (“and-Aaron gather-for-any-purpose and-die”)
+# ‹שם› (“there”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:26."
+m.step("Num.20.26")
+
+# -------------------------- Num.20.27 · ETNACHTA_SPLIT ---------------------
+# ‹ויעש משה כאשר› (“and-make Moses like-as/which”)
+# ‹צוה יהוה … ויעלו› (“command YHWH … and-go-up”)
+# ‹אל הר ההר› (“to Hor the-mountain”)
+# ‹לעיני כל העדה› (“to-eye all the-congregation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:27."
+m.step("Num.20.27")
+
+# -------------------------- Num.20.28 · ETNACHTA_SPLIT ---------------------
+# ‹ויפשט משה את› (“and-spread-out Moses obj-marker”)
+# ‹אהרן את בגדיו› (“Aaron obj-marker garment-him/its”)
+# ‹וילבש אתם את› (“and-wrap-around obj-marker-them/their obj-marker”)
+# ‹אלעזר בנו וימת› (“Eleazar son-him/its and-die”)
+# ‹אהרן … וירד משה› (“Aaron … and-go-down Moses”)
+# ‹ואלעזר מן ההר› (“and-Eleazar from the-mountain”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:28."
+m.step("Num.20.28")
+
+# -------------------------- Num.20.29 · COND_כי (“that”) -------------------
+# ‹ויראו כל העדה› (“and-see all the-congregation”)
+# ‹כי גוע אהרן› (“that breathe-out Aaron”)
+# ‹… ויבכו את אהרן› (“and-weep obj-marker Aaron”)
+# ‹שלשים יום כל› (“thirty day all”)
+# ‹בית ישראל› (“house Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 20:29."
+m.step("Num.20.29")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('miriam_died_there', 'the_first_month_no_year_one_consonantal_skin'), ('no_water', 'korachs_verb_the_first_meribahs_clause'), ('the_glory_appeared', 'the_staff_from_before_the_lord_the_two_rocks'), ('hear_now_rebels', 'miriams_consonants_twice_the_dual'), ('you_did_not_believe', 'he_was_sanctified_nadabs_verse_the_psalms_reading'), ('messengers_to_edom', 'the_firstfruits_declaration_the_angel'), ('let_us_pass', 'the_two_messages_esaus_sword'), ('with_a_strong_hand', 'the_exoduss_phrase_jacobs_refusal'), ('to_mount_hor', 'two_hors_aaron_gathered_the_ashes_verb'), ('strip_aaron_clothe_eleazar', 'the_investiture_run_dated_thirty_days')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Num 20:1']
+    assert all('the_first_month_no_year_one_consonantal_skin' not in f for f in m.WORLD["facts"])
+    assert 'miriam_died_there' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Num 20:2', 'Onkelos Num 20:3', 'Onkelos Num 20:4', 'Onkelos Num 20:5']
+    assert all('korachs_verb_the_first_meribahs_clause' not in f for f in m.WORLD["facts"])
+    assert 'no_water' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Num 20:6', 'Onkelos Num 20:7', 'Onkelos Num 20:8', 'Onkelos Num 20:9']
+    assert all('the_staff_from_before_the_lord_the_two_rocks' not in f for f in m.WORLD["facts"])
+    assert 'the_glory_appeared' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Num 20:10', 'Onkelos Num 20:11']
+    assert all('miriams_consonants_twice_the_dual' not in f for f in m.WORLD["facts"])
+    assert 'hear_now_rebels' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Num 20:12', 'Onkelos Num 20:13']
+    assert all('he_was_sanctified_nadabs_verse_the_psalms_reading' not in f for f in m.WORLD["facts"])
+    assert 'you_did_not_believe' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Num 20:14', 'Onkelos Num 20:15', 'Onkelos Num 20:16']
+    assert all('the_firstfruits_declaration_the_angel' not in f for f in m.WORLD["facts"])
+    assert 'messengers_to_edom' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Num 20:17', 'Onkelos Num 20:18', 'Onkelos Num 20:19']
+    assert all('the_two_messages_esaus_sword' not in f for f in m.WORLD["facts"])
+    assert 'let_us_pass' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Num 20:20', 'Onkelos Num 20:21']
+    assert all('the_exoduss_phrase_jacobs_refusal' not in f for f in m.WORLD["facts"])
+    assert 'with_a_strong_hand' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Num 20:22', 'Onkelos Num 20:23', 'Onkelos Num 20:24']
+    assert all('two_hors_aaron_gathered_the_ashes_verb' not in f for f in m.WORLD["facts"])
+    assert 'to_mount_hor' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Num 20:25', 'Onkelos Num 20:26', 'Onkelos Num 20:27', 'Onkelos Num 20:28', 'Onkelos Num 20:29']
+    assert all('the_investiture_run_dated_thirty_days' not in f for f in m.WORLD["facts"])
+    assert 'strip_aaron_clothe_eleazar' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_21_snakes_conquest
+###############################################################################
+
+m = Machine("num_21_snakes_conquest")
+
+# -------------------------- Num.21.1 · ETNACHTA_SPLIT ----------------------
+# ‹וישמע הכנעני מלך› (“and-hear the-Kenaanite king”)
+# ‹ערד ישב הנגב› (“Arad dwell/sit the-south”)
+# ‹כי בא ישראל› (“that come/bring Israel”)
+# ‹דרך האתרים … וילחם› (“way/road the-'Athariym … and-feed-on”)
+# ‹בישראל וישב ממנו› (“in-Israel and-transport-into-captivity from-us/our”)
+# ‹שבי› (“exiled”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:1."
+m.step("Num.21.1")
+# witness-tier presupposed read: the_spies_road_jacob_vowed_hormah_named on
+# arad_heard — read, not installed
+m.witness_read("arad_heard", "the_spies_road_jacob_vowed_hormah_named",
+                cites=["Onkelos Num 21:1", "Onkelos Num 21:2", "Onkelos Num 21:3"])
+
+# -------------------------- Num.21.2 · ETNACHTA_SPLIT ----------------------
+# ‹וידר ישראל נדר› (“and-promise Israel promise”)
+# ‹ליהוה ויאמר … אם› (“to-YHWH and-say … if”)
+# ‹נתן תתן את› (“set set obj-marker”)
+# ‹העם הזה בידי› (“the-people the-this in-hand-me/my”)
+# ‹והחרמתי את עריהם› (“and-seclude obj-marker city-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:2."
+m.step("Num.21.2")
+
+# -------------------------- Num.21.3 · ETNACHTA_SPLIT ----------------------
+# ‹וישמע יהוה בקול› (“and-hear YHWH in-voice/sound”)
+# ‹ישראל ויתן את› (“Israel and-set obj-marker”)
+# ‹הכנעני ויחרם אתהם› (“the-Kenaanite and-seclude obj-marker-them/their”)
+# ‹ואת עריהם … ויקרא› (“and-obj-marker city-them/their … and-call”)
+# ‹שם המקום חרמה› (“name the-place Hormah”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:3."
+m.step("Num.21.3")
+
+# -------------------------- Num.21.4 · ETNACHTA_SPLIT ----------------------
+# ‹ויסעו מהר ההר› (“and-journey from-Hor the-mountain”)
+# ‹דרך ים סוף› (“way/road seas reed”)
+# ‹לסבב את ארץ› (“to-revolve obj-marker earth”)
+# ‹אדום … ותקצר נפש› (“Edom … and-dock-off living-being”)
+# ‹העם בדרך› (“the-people in-way/road”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:4."
+m.step("Num.21.4")
+# witness-tier presupposed read:
+# the_command_run_the_soul_shortened_the_manna on by_the_way_of_the_red_sea
+# — read, not installed
+m.witness_read("by_the_way_of_the_red_sea", "the_command_run_the_soul_shortened_the_manna",
+                cites=["Onkelos Num 21:4", "Onkelos Num 21:5"])
+
+# -------------------------- Num.21.5 · ETNACHTA_SPLIT ----------------------
+# ‹וידבר העם באלהים› (“and-speak the-people in-God”)
+# ‹ובמשה למה העליתנו› (“and-in-Moses to-what go-up-us/our”)
+# ‹ממצרים למות במדבר› (“from-Egypt to-die in-pasture”)
+# ‹… כי אין לחם› (“that there-is-not food”)
+# ‹ואין מים ונפשנו› (“and-there-is-not waters and-living-being-us/our”)
+# ‹קצה בלחם הקלקל› (“be-disgusted in-food the-insubstantial”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:5."
+m.step("Num.21.5")
+
+# -------------------------- Num.21.6 · ETNACHTA_SPLIT ----------------------
+# ‹וישלח יהוה בעם› (“and-send YHWH in-people”)
+# ‹את הנחשים השרפים› (“obj-marker the-snake the-burning”)
+# ‹וינשכו את העם› (“and-strike-with-a-sting obj-marker the-people”)
+# ‹… וימת עם רב› (“and-die people many/great”)
+# ‹מישראל› (“from-Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:6."
+m.step("Num.21.6")
+# witness-tier presupposed read: the_burn_word_usurys_bite_moses_prayed on
+# the_fiery_serpents — read, not installed
+m.witness_read("the_fiery_serpents", "the_burn_word_usurys_bite_moses_prayed",
+                cites=["Onkelos Num 21:6", "Onkelos Num 21:7"])
+
+# -------------------------- Num.21.7 · ETNACHTA_SPLIT ----------------------
+# ‹ויבא העם אל› (“and-come/bring the-people to”)
+# ‹משה ויאמרו חטאנו› (“Moses and-say sin”)
+# ‹כי דברנו ביהוה› (“that speak in-YHWH”)
+# ‹ובך התפלל אל› (“and-in-you/your judge to”)
+# ‹יהו … ויתפלל משה› (“? … and-judge Moses”)
+# ‹בעד העם› (“in-up-to the-people”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:7."
+m.step("Num.21.7")
+
+# -------------------------- Num.21.8 · ETNACHTA_SPLIT ----------------------
+# ‹ויאמר יהוה אל› (“and-say YHWH to”)
+# ‹משה עשה לך› (“Moses make to-you/your”)
+# ‹שרף ושים אתו› (“burning and-put/set obj-marker-him/its”)
+# ‹על נס … והיה› (“over flag … and-be”)
+# ‹כל הנשוך וראה› (“all the-strike-with-a-sting and-see”)
+# ‹אתו וחי› (“obj-marker-him/its and-live”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:8."
+m.step("Num.21.8")
+# witness-tier presupposed read: yhwh_nissi_korachs_sign_lots_wife_nehushtan
+# on set_it_on_a_pole — read, not installed
+m.witness_read("set_it_on_a_pole", "yhwh_nissi_korachs_sign_lots_wife_nehushtan",
+                cites=["Onkelos Num 21:8", "Onkelos Num 21:9"])
+
+# -------------------------- Num.21.9 · ETNACHTA_SPLIT ----------------------
+# ‹ויעש משה נחש› (“and-make Moses snake”)
+# ‹נחשת וישמהו על› (“copper and-put/set-him/its over”)
+# ‹הנס … והיה אם› (“the-flag … and-be if”)
+# ‹נשך הנחש את› (“strike-with-a-sting the-snake obj-marker”)
+# ‹איש והביט אל› (“man and-scan to”)
+# ‹נחש הנחשת וחי› (“snake the-copper and-live”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:9."
+m.step("Num.21.9")
+
+# -------------------------- Num.21.10 · ETNACHTA_SPLIT ---------------------
+# ‹ויסעו בני ישראל› (“and-journey son Israel”)
+# ‹… ויחנו באבת› (“and-encamp in-Oboth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:10."
+m.step("Num.21.10")
+# witness-tier presupposed read: deuteronomy_dates_the_zered on the_stations
+# — read, not installed
+m.witness_read("the_stations", "deuteronomy_dates_the_zered",
+                cites=["Onkelos Num 21:10", "Onkelos Num 21:11", "Onkelos Num 21:12", "Onkelos Num 21:13"])
+
+# -------------------------- Num.21.11 · ETNACHTA_SPLIT ---------------------
+# ‹ויסעו מאבת … ויחנו› (“and-journey from-Oboth … and-encamp”)
+# ‹בעיי העברים במדבר› (“in Ije-abarim in-pasture”)
+# ‹אשר על פני› (“which over face”)
+# ‹מואב ממזרח השמש› (“Moab from-sunrise the-sun”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:11."
+m.step("Num.21.11")
+
+# -------------------------- Num.21.12 · ETNACHTA_SPLIT ---------------------
+# ‹משם נסעו … ויחנו› (“from-there journey … and-encamp”)
+# ‹בנחל זרד› (“in-river Zared”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:12."
+m.step("Num.21.12")
+
+# -------------------------- Num.21.13 · ETNACHTA_SPLIT ---------------------
+# ‹משם נסעו ויחנו› (“from-there journey and-encamp”)
+# ‹מעבר ארנון אשר› (“from-region-across Arnon which”)
+# ‹במדבר היצא מגבול› (“in-pasture the-bring-forth from-cord”)
+# ‹האמרי … כי ארנון› (“the-Emorite … that Arnon”)
+# ‹גבול מואב בין› (“cord Moab between”)
+# ‹מואב ובין האמרי› (“Moab and-between the-Emorite”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:13."
+m.step("Num.21.13")
+
+# -------------------------- Num.21.14 · ETNACHTA_SPLIT ---------------------
+# ‹על כן יאמר› (“over so say”)
+# ‹בספר מלחמת יהוה› (“in-writing battle YHWH”)
+# ‹… את והב בסופה› (“obj-marker Vaheb in-Red-Sea”)
+# ‹ואת הנחלים ארנון› (“and-obj-marker the-river Arnon”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:14."
+m.step("Num.21.14")
+# witness-tier presupposed read: the_saying_written_nowhere on
+# the_book_of_the_wars — read, not installed
+m.witness_read("the_book_of_the_wars", "the_saying_written_nowhere",
+                cites=["Onkelos Num 21:14", "Onkelos Num 21:15", "Onkelos Num 21:16"])
+
+# -------------------------- Num.21.15 · ETNACHTA_SPLIT ---------------------
+# ‹ואשד הנחלים אשר› (“and-outpouring the-river which”)
+# ‹נטה לשבת ער› (“stretch to-dwell/sit Ar”)
+# ‹… ונשען לגבול מואב› (“and-support-one's-self to-cord Moab”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:15."
+m.step("Num.21.15")
+
+# -------------------------- Num.21.16 · ETNACHTA_SPLIT ---------------------
+# ‹ומשם בארה … הוא› (“and-from-there Beer-ward … he/it”)
+# ‹הבאר אשר אמר› (“the-pit which say”)
+# ‹יהוה למשה אסף› (“YHWH to-Moses gather-for-any-purpose”)
+# ‹את העם ואתנה› (“obj-marker the-people and-set”)
+# ‹להם מים› (“to-them/their waters”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:16."
+m.step("Num.21.16")
+
+# -------------------------- Num.21.17 · ETNACHTA_SPLIT ---------------------
+# ‹אז ישיר ישראל› (“at-that-time sing Israel”)
+# ‹את השירה הזאת› (“obj-marker the-song the-this”)
+# ‹… עלי באר ענו› (“go-up pit eye”)
+# ‹לה› (“to-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:17."
+m.step("Num.21.17")
+# witness-tier presupposed read:
+# the_sea_songs_formula_miriams_verb_the_lawgiver on then_israel_sang —
+# read, not installed
+m.witness_read("then_israel_sang", "the_sea_songs_formula_miriams_verb_the_lawgiver",
+                cites=["Onkelos Num 21:17", "Onkelos Num 21:18"])
+
+# -------------------------- Num.21.18 · ETNACHTA_SPLIT ---------------------
+# ‹באר חפרוה שרים› (“pit dig-her/its officer”)
+# ‹כרוה נדיבי העם› (“dig-her/its voluntary the-people”)
+# ‹במחקק במשענתם … וממדבר› (“in-hack in-support-them/their … and-from-
+# pasture”)
+# ‹מתנה› (“Mattanah”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:18."
+m.step("Num.21.18")
+
+# -------------------------- Num.21.19 · ETNACHTA_SPLIT ---------------------
+# ‹וממתנה נחליאל … ומנחליאל› (“and-from-Mattanah Nahaliel … and-from-
+# Nahaliel”)
+# ‹במות› (“Bamoth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:19."
+m.step("Num.21.19")
+# witness-tier presupposed read: the_travelling_well_pisgah on
+# nahaliel_bamoth — read, not installed
+m.witness_read("nahaliel_bamoth", "the_travelling_well_pisgah",
+                cites=["Onkelos Num 21:19", "Onkelos Num 21:20"])
+
+# -------------------------- Num.21.20 · ETNACHTA_SPLIT ---------------------
+# ‹ומבמות הגיא אשר› (“and-from-Bamoth the-gorge which”)
+# ‹בשדה מואב ראש› (“in-field Moab head”)
+# ‹הפסגה … ונשקפה על› (“the-Pisgah … and-lean-out over”)
+# ‹פני הישימן› (“face the-desolation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:20."
+m.step("Num.21.20")
+
+# -------------------------- Num.21.21 · TREE_CLAIM -------------------------
+# ‹וישלח ישראל מלאכים› (“and-send Israel messenger”)
+# ‹… אל סיחן מלך› (“to Sihon king”)
+# ‹האמרי לאמר› (“the-Emorite to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:21."
+m.step("Num.21.21")
+# witness-tier presupposed read:
+# the_hardening_jacobs_ford_ammons_two_reasons on messengers_to_sihon —
+# read, not installed
+m.witness_read("messengers_to_sihon", "the_hardening_jacobs_ford_ammons_two_reasons",
+                cites=["Onkelos Num 21:21", "Onkelos Num 21:22", "Onkelos Num 21:23", "Onkelos Num 21:24"])
+
+# -------------------------- Num.21.22 · ETNACHTA_SPLIT ---------------------
+# ‹אעברה בארצך לא› (“pass-over in-earth-you/your not”)
+# ‹נטה בשדה ובכרם› (“stretch in-field and-in-garden”)
+# ‹לא נשתה מי› (“not drink waters”)
+# ‹באר … בדרך המלך› (“pit … in-way/road the-king”)
+# ‹נלך עד אשר› (“go until which”)
+# ‹נעבר גבלך› (“pass-over cord-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:22."
+m.step("Num.21.22")
+
+# -------------------------- Num.21.23 · ETNACHTA_SPLIT ---------------------
+# ‹ולא נתן סיחן› (“and-not set Sihon”)
+# ‹את ישראל עבר› (“obj-marker Israel pass-over”)
+# ‹בגבלו ויאסף סיחן› (“in-cord-him/its and-gather-for-any-purpose Sihon”)
+# ‹את כל עמו› (“obj-marker all people-him/its”)
+# ‹ויצא לק … וילחם› (“and-bring-forth ? … and-feed-on”)
+# ‹בישראל› (“in-Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:23."
+m.step("Num.21.23")
+
+# -------------------------- Num.21.24 · ETNACHTA_SPLIT ---------------------
+# ‹ויכהו ישראל לפי› (“and-strike-him/its Israel to-mouth”)
+# ‹חרב … ויירש את› (“drought … and-possess/inherit obj-marker”)
+# ‹ארצו מארנן עד› (“earth-him/its from-Arnon until”)
+# ‹יבק עד בני› (“Jabbok until son”)
+# ‹עמון כי עז› (“Ammon that strong”)
+# ‹גבול בני עמון› (“cord son Ammon”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:24."
+m.step("Num.21.24")
+
+# -------------------------- Num.21.25 · ETNACHTA_SPLIT ---------------------
+# ‹ויקח ישראל את› (“and-take Israel obj-marker”)
+# ‹כל הערים האלה› (“all the-city the-these”)
+# ‹… וישב ישראל בכל› (“and-dwell/sit Israel in-all”)
+# ‹ערי האמרי בחשבון› (“city the-Emorite in-Heshbon”)
+# ‹ובכל בנתיה› (“and-in-all daughter-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:25."
+m.step("Num.21.25")
+# witness-tier presupposed read: the_parable_tellers_jeremiah_quotes on
+# heshbon_and_its_daughters — read, not installed
+m.witness_read("heshbon_and_its_daughters", "the_parable_tellers_jeremiah_quotes",
+                cites=["Onkelos Num 21:25", "Onkelos Num 21:26", "Onkelos Num 21:27", "Onkelos Num 21:28", "Onkelos Num 21:29", "Onkelos Num 21:30"])
+
+# -------------------------- Num.21.26 · COND_כי (“that”) -------------------
+# ‹כי חשבון עיר› (“that Heshbon city”)
+# ‹סיחן מלך האמרי› (“Sihon king the-Emorite”)
+# ‹הוא … והוא נלחם› (“he/it … and-he/it feed-on”)
+# ‹במלך מואב הראשון› (“in-king Moab the-first”)
+# ‹ויקח את כל› (“and-take obj-marker all”)
+# ‹ארצו מידו עד› (“earth-him/its from-hand-him/its until”)
+# ‹ארנן› (“Arnon”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:26."
+m.step("Num.21.26")
+
+# -------------------------- Num.21.27 · ETNACHTA_SPLIT ---------------------
+# ‹על כן יאמרו› (“over so say”)
+# ‹המשלים באו חשבון› (“the-liken come/bring Heshbon”)
+# ‹… תבנה ותכונן עיר› (“build and-be-erect city”)
+# ‹סיחון› (“Sihon”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:27."
+m.step("Num.21.27")
+
+# -------------------------- Num.21.28 · COND_כי (“that”) -------------------
+# ‹כי אש יצאה› (“that fire bring-forth”)
+# ‹מחשבון להבה מקרית› (“from-Heshbon flash from-building”)
+# ‹סיחן … אכלה ער› (“Sihon … eat Ar”)
+# ‹מואב בעלי במות› (“Moab master Most-High”)
+# ‹ארנן› (“Arnon”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:28."
+m.step("Num.21.28")
+
+# -------------------------- Num.21.29 · ETNACHTA_SPLIT ---------------------
+# ‹אוי לך מואב› (“lamentation to-you/your Moab”)
+# ‹אבדת עם כמוש› (“wander-away people Chemosh”)
+# ‹… נתן בניו פליטם› (“set son-him/its refugee”)
+# ‹ובנתיו בשבית למלך› (“and-daughter-him/its in-exiled to-king”)
+# ‹אמרי סיחון› (“Emorite Sihon”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:29."
+m.step("Num.21.29")
+
+# -------------------------- Num.21.30 · ETNACHTA_SPLIT ---------------------
+# ‹ונירם אבד חשבון› (“and-flow-as-water-them/their wander-away Heshbon”)
+# ‹עד דיבון … ונשים› (“until Dibon … and-stun”)
+# ‹עד נפח אשר› (“until Nophah which”)
+# ‹עד מידבא› (“until Medeba”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:30."
+m.step("Num.21.30")
+
+# -------------------------- Num.21.31 · TREE_CLAIM -------------------------
+# ‹וישב ישראל … בארץ› (“and-dwell/sit Israel … in-earth”)
+# ‹האמרי› (“the-Emorite”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:31."
+m.step("Num.21.31")
+# witness-tier presupposed read: the_other_spy_verb_calebs on
+# to_spy_out_jazer — read, not installed
+m.witness_read("to_spy_out_jazer", "the_other_spy_verb_calebs",
+                cites=["Onkelos Num 21:31", "Onkelos Num 21:32"])
+
+# -------------------------- Num.21.32 · ETNACHTA_SPLIT ---------------------
+# ‹וישלח משה לרגל› (“and-send Moses to-walk-along”)
+# ‹את יעזר וילכדו› (“obj-marker Jaazer and-catch”)
+# ‹בנתיה … ויירש ויורש› (“daughter-her/its … and-possess/inherit and-
+# possess/inherit”)
+# ‹את האמרי אשר› (“obj-marker the-Emorite which”)
+# ‹שם› (“there”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:32."
+m.step("Num.21.32")
+
+# -------------------------- Num.21.33 · ETNACHTA_SPLIT ---------------------
+# ‹ויפנו ויעלו דרך› (“and-turn and-go-up way/road”)
+# ‹הבשן … ויצא עוג› (“the-Bashan … and-bring-forth Og”)
+# ‹מלך הבשן לקראתם› (“king the-Bashan to-encountering-them/their”)
+# ‹הוא וכל עמו› (“he/it and-all people-him/its”)
+# ‹למלחמה אדרעי› (“to-battle Edrei”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:33."
+m.step("Num.21.33")
+# witness-tier presupposed read:
+# deuteronomy_3_with_the_pronouns_shifted_joshuas_refrain on og_came_out —
+# read, not installed
+m.witness_read("og_came_out", "deuteronomy_3_with_the_pronouns_shifted_joshuas_refrain",
+                cites=["Onkelos Num 21:33", "Onkelos Num 21:34", "Onkelos Num 21:35"])
+
+# -------------------------- Num.21.34 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר יהוה אל› (“and-say YHWH to”)
+# ‹משה אל תירא› (“Moses do-not fear”)
+# ‹אתו כי בידך› (“obj-marker-him/its that in-hand-you/your”)
+# ‹נתתי אתו ואת› (“set obj-marker-him/its and-obj-marker”)
+# ‹כל עמו וא› (“all people-him/its ?”)
+# ‹… ועשית לו כאשר› (“and-make to-him/its like-as/which”)
+# ‹עשית לסיחן מלך› (“make to-Sihon king”)
+# ‹האמרי אשר יושב› (“the-Emorite which dwell/sit”)
+# ‹בחשבון› (“in-Heshbon”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:34."
+m.step("Num.21.34")
+
+# -------------------------- Num.21.35 · ETNACHTA_SPLIT ---------------------
+# ‹ויכו אתו ואת› (“and-strike obj-marker-him/its and-obj-marker”)
+# ‹בניו ואת כל› (“son-him/its and-obj-marker all”)
+# ‹עמו עד בלתי› (“people-him/its until failure-of”)
+# ‹השאיר לו שריד› (“swell-up to-him/its survivor”)
+# ‹… ויירשו את ארצו› (“and-possess/inherit obj-marker earth-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 21:35."
+m.step("Num.21.35")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('arad_heard', 'the_spies_road_jacob_vowed_hormah_named'), ('by_the_way_of_the_red_sea', 'the_command_run_the_soul_shortened_the_manna'), ('the_fiery_serpents', 'the_burn_word_usurys_bite_moses_prayed'), ('set_it_on_a_pole', 'yhwh_nissi_korachs_sign_lots_wife_nehushtan'), ('the_stations', 'deuteronomy_dates_the_zered'), ('the_book_of_the_wars', 'the_saying_written_nowhere'), ('then_israel_sang', 'the_sea_songs_formula_miriams_verb_the_lawgiver'), ('nahaliel_bamoth', 'the_travelling_well_pisgah'), ('messengers_to_sihon', 'the_hardening_jacobs_ford_ammons_two_reasons'), ('heshbon_and_its_daughters', 'the_parable_tellers_jeremiah_quotes'), ('to_spy_out_jazer', 'the_other_spy_verb_calebs'), ('og_came_out', 'deuteronomy_3_with_the_pronouns_shifted_joshuas_refrain')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Num 21:1', 'Onkelos Num 21:2', 'Onkelos Num 21:3']
+    assert all('the_spies_road_jacob_vowed_hormah_named' not in f for f in m.WORLD["facts"])
+    assert 'arad_heard' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Num 21:4', 'Onkelos Num 21:5']
+    assert all('the_command_run_the_soul_shortened_the_manna' not in f for f in m.WORLD["facts"])
+    assert 'by_the_way_of_the_red_sea' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Num 21:6', 'Onkelos Num 21:7']
+    assert all('the_burn_word_usurys_bite_moses_prayed' not in f for f in m.WORLD["facts"])
+    assert 'the_fiery_serpents' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Num 21:8', 'Onkelos Num 21:9']
+    assert all('yhwh_nissi_korachs_sign_lots_wife_nehushtan' not in f for f in m.WORLD["facts"])
+    assert 'set_it_on_a_pole' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Num 21:10', 'Onkelos Num 21:11', 'Onkelos Num 21:12', 'Onkelos Num 21:13']
+    assert all('deuteronomy_dates_the_zered' not in f for f in m.WORLD["facts"])
+    assert 'the_stations' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Num 21:14', 'Onkelos Num 21:15', 'Onkelos Num 21:16']
+    assert all('the_saying_written_nowhere' not in f for f in m.WORLD["facts"])
+    assert 'the_book_of_the_wars' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Num 21:17', 'Onkelos Num 21:18']
+    assert all('the_sea_songs_formula_miriams_verb_the_lawgiver' not in f for f in m.WORLD["facts"])
+    assert 'then_israel_sang' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Num 21:19', 'Onkelos Num 21:20']
+    assert all('the_travelling_well_pisgah' not in f for f in m.WORLD["facts"])
+    assert 'nahaliel_bamoth' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Num 21:21', 'Onkelos Num 21:22', 'Onkelos Num 21:23', 'Onkelos Num 21:24']
+    assert all('the_hardening_jacobs_ford_ammons_two_reasons' not in f for f in m.WORLD["facts"])
+    assert 'messengers_to_sihon' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Num 21:25', 'Onkelos Num 21:26', 'Onkelos Num 21:27', 'Onkelos Num 21:28', 'Onkelos Num 21:29', 'Onkelos Num 21:30']
+    assert all('the_parable_tellers_jeremiah_quotes' not in f for f in m.WORLD["facts"])
+    assert 'heshbon_and_its_daughters' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[10]["cites"] == ['Onkelos Num 21:31', 'Onkelos Num 21:32']
+    assert all('the_other_spy_verb_calebs' not in f for f in m.WORLD["facts"])
+    assert 'to_spy_out_jazer' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[11]["cites"] == ['Onkelos Num 21:33', 'Onkelos Num 21:34', 'Onkelos Num 21:35']
+    assert all('deuteronomy_3_with_the_pronouns_shifted_joshuas_refrain' not in f for f in m.WORLD["facts"])
+    assert 'og_came_out' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_22_balak_bilam_call
+###############################################################################
+
+m = Machine("num_22_balak_bilam_call")
+
+# -------------------------- Num.22.1 · ETNACHTA_SPLIT ----------------------
+# ‹ויסעו בני ישראל› (“and-journey son Israel”)
+# ‹… ויחנו בערבות מואב› (“and-encamp in-desert Moab”)
+# ‹מעבר לירדן ירחו› (“from-region-across to-Jordan Jericho”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:1."
+m.step("Num.22.1")
+# witness-tier presupposed read: the_last_camp_balak_saw_the_conquest on
+# the_plains_of_moab — read, not installed
+m.witness_read("the_plains_of_moab", "the_last_camp_balak_saw_the_conquest",
+                cites=["Onkelos Num 22:1", "Onkelos Num 22:2"])
+
+# -------------------------- Num.22.2 · ETNACHTA_SPLIT ----------------------
+# ‹וירא בלק בן› (“and-see Balak son”)
+# ‹צפור … את כל› (“Zippor … obj-marker all”)
+# ‹אשר עשה ישראל› (“which make Israel”)
+# ‹לאמרי› (“to-Emorite”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:2."
+m.step("Num.22.2")
+
+# -------------------------- Num.22.3 · ETNACHTA_SPLIT ----------------------
+# ‹ויגר מואב מפני› (“and-turn-aside-from-the-road Moab from-face”)
+# ‹העם מאד כי› (“the-people very that”)
+# ‹רב הוא … ויקץ› (“many/great he/it … and-be-disgusted”)
+# ‹מואב מפני בני› (“Moab from-face son”)
+# ‹ישראל› (“Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:3."
+m.step("Num.22.3")
+# witness-tier presupposed read:
+# the_sojourn_verb_the_mannas_verb_the_elders_of_midian on
+# moab_feared_and_loathed — read, not installed
+m.witness_read("moab_feared_and_loathed", "the_sojourn_verb_the_mannas_verb_the_elders_of_midian",
+                cites=["Onkelos Num 22:3", "Onkelos Num 22:4"])
+
+# -------------------------- Num.22.4 · ETNACHTA_SPLIT ----------------------
+# ‹ויאמר מואב אל› (“and-say Moab to”)
+# ‹זקני מדין עתה› (“old Midian now”)
+# ‹ילחכו הקהל את› (“lick the-assemblage obj-marker”)
+# ‹כל סביבתינו כלחך› (“all circle-us/our like-lick”)
+# ‹ה … ובלק בן› (“the … and-Balak son”)
+# ‹צפור מלך למואב› (“Zippor king to-Moab”)
+# ‹בעת ההוא› (“in-time that”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:4."
+m.step("Num.22.4")
+
+# -------------------------- Num.22.5 · ETNACHTA_SPLIT ----------------------
+# ‹וישלח מלאכים אל› (“and-send messenger to”)
+# ‹בלעם בן בעור› (“Balaam son Beor”)
+# ‹פתורה אשר על› (“Pethor-ward which over”)
+# ‹הנהר ארץ בני› (“the-river earth son”)
+# ‹עמו ל … לאמר› (“people-him/its ? … to-say”)
+# ‹הנה עם יצא› (“behold people bring-forth”)
+# ‹ממצרים הנה כסה› (“from-Egypt behold plump”)
+# ‹את עין הארץ› (“obj-marker eye the-earth”)
+# ‹והוא ישב ממלי› (“and-he/it dwell/sit from-abrupt-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:5."
+m.step("Num.22.5")
+# witness-tier presupposed read:
+# aram_and_the_euphrates_the_locusts_clause_three_curse_roots on
+# messengers_to_pethor — read, not installed
+m.witness_read("messengers_to_pethor", "aram_and_the_euphrates_the_locusts_clause_three_curse_roots",
+                cites=["Onkelos Num 22:5", "Onkelos Num 22:6"])
+
+# -------------------------- Num.22.6 · ETNACHTA_SPLIT ----------------------
+# ‹ועתה לכה נא› (“and-now go-ward please”)
+# ‹ארה לי את› (“execrate-ward to-me/my obj-marker”)
+# ‹העם הזה כי› (“the-people the-this that”)
+# ‹עצום הוא ממני› (“powerful he/it from-me/my”)
+# ‹אולי אוכל נכה› (“if-not be-able strike”)
+# ‹… כי ידעתי את› (“that know obj-marker”)
+# ‹אשר תברך מברך› (“which bless bless”)
+# ‹ואשר תאר יואר› (“and-which execrate execrate”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:6."
+m.step("Num.22.6")
+
+# -------------------------- Num.22.7 · ETNACHTA_SPLIT ----------------------
+# ‹וילכו זקני מואב› (“and-go old Moab”)
+# ‹וזקני מדין וקסמים› (“and-old Midian and-lot”)
+# ‹בידם … ויבאו אל› (“in-hand-them/their … and-come/bring to”)
+# ‹בלעם וידברו אליו› (“Balaam and-speak to-him/its”)
+# ‹דברי בלק› (“word/thing Balak”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:7."
+m.step("Num.22.7")
+# witness-tier presupposed read: god_came_to_three_gentiles_the_lord_refuses
+# on divinations_in_their_hand — read, not installed
+m.witness_read("divinations_in_their_hand", "god_came_to_three_gentiles_the_lord_refuses",
+                cites=["Onkelos Num 22:7", "Onkelos Num 22:8", "Onkelos Num 22:9", "Onkelos Num 22:10", "Onkelos Num 22:11", "Onkelos Num 22:12", "Onkelos Num 22:13"])
+
+# -------------------------- Num.22.8 · ETNACHTA_SPLIT ----------------------
+# ‹ויאמר אליהם לינו› (“and-say to-them/their stop”)
+# ‹פה הלילה והשבתי› (“this-place the-night and-return”)
+# ‹אתכם דבר כאשר› (“obj-marker-you/your(pl) word/thing like-as/which”)
+# ‹ידבר יהוה אלי› (“speak YHWH to-me/my”)
+# ‹… וישבו שרי מואב› (“and-dwell/sit officer Moab”)
+# ‹עם בלעם› (“with Balaam”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:8."
+m.step("Num.22.8")
+
+# -------------------------- Num.22.9 · ETNACHTA_SPLIT ----------------------
+# ‹ויבא אלהים אל› (“and-come/bring God to”)
+# ‹בלעם … ויאמר מי› (“Balaam … and-say who?”)
+# ‹האנשים האלה עמך› (“the-man the-these with-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:9."
+m.step("Num.22.9")
+
+# -------------------------- Num.22.10 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר בלעם אל› (“and-say Balaam to”)
+# ‹האלהים … בלק בן› (“the-God … Balak son”)
+# ‹צפר מלך מואב› (“Zippor king Moab”)
+# ‹שלח אלי› (“send to-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:10."
+m.step("Num.22.10")
+
+# -------------------------- Num.22.11 · ETNACHTA_SPLIT ---------------------
+# ‹הנה העם היצא› (“behold the-people the-bring-forth”)
+# ‹ממצרים ויכס את› (“from-Egypt and-plump obj-marker”)
+# ‹עין הארץ … עתה› (“eye the-earth … now”)
+# ‹לכה קבה לי› (“go-ward scoop-out-ward to-me/my”)
+# ‹אתו אולי אוכל› (“obj-marker-him/its if-not be-able”)
+# ‹להלחם בו וגרשתיו› (“to-feed-on in-him/its and-drive-out-from-a-
+# possession-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:11."
+m.step("Num.22.11")
+
+# -------------------------- Num.22.12 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר אלהים אל› (“and-say God to”)
+# ‹בלעם לא תלך› (“Balaam not go”)
+# ‹עמהם … לא תאר› (“with-them/their … not execrate”)
+# ‹את העם כי› (“obj-marker the-people that”)
+# ‹ברוך הוא› (“bless he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:12."
+m.step("Num.22.12")
+
+# -------------------------- Num.22.13 · ETNACHTA_SPLIT ---------------------
+# ‹ויקם בלעם בבקר› (“and-arise Balaam in-morning”)
+# ‹ויאמר אל שרי› (“and-say to officer”)
+# ‹בלק לכו אל› (“Balak go to”)
+# ‹ארצכם … כי מאן› (“earth-you/your(pl) … that refuse”)
+# ‹יהוה לתתי להלך› (“YHWH to-set-me/my to-walk/go”)
+# ‹עמכם› (“with-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:13."
+m.step("Num.22.13")
+
+# -------------------------- Num.22.14 · ETNACHTA_SPLIT ---------------------
+# ‹ויקומו שרי מואב› (“and-arise officer Moab”)
+# ‹ויבאו אל בלק› (“and-come/bring to Balak”)
+# ‹… ויאמרו מאן בלעם› (“and-say refuse Balaam”)
+# ‹הלך עמנו› (“walk/go with-us/our”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:14."
+m.step("Num.22.14")
+# witness-tier presupposed read:
+# the_honor_promised_the_house_of_silver_the_word_formula on
+# the_second_embassy — read, not installed
+m.witness_read("the_second_embassy", "the_honor_promised_the_house_of_silver_the_word_formula",
+                cites=["Onkelos Num 22:14", "Onkelos Num 22:15", "Onkelos Num 22:16", "Onkelos Num 22:17", "Onkelos Num 22:18", "Onkelos Num 22:19", "Onkelos Num 22:20"])
+
+# -------------------------- Num.22.15 · ETNACHTA_SPLIT ---------------------
+# ‹ויסף עוד בלק› (“and-add still/again Balak”)
+# ‹… שלח שרים רבים› (“send officer many/great”)
+# ‹ונכבדים מאלה› (“and-be-heavy from-these”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:15."
+m.step("Num.22.15")
+
+# -------------------------- Num.22.16 · ETNACHTA_SPLIT ---------------------
+# ‹ויבאו אל בלעם› (“and-come/bring to Balaam”)
+# ‹… ויאמרו לו כה› (“and-say to-him/its like-this”)
+# ‹אמר בלק בן› (“say Balak son”)
+# ‹צפור אל נא› (“Zippor do-not please”)
+# ‹תמנע מהלך אלי› (“debar-from-benefit from-walk/go to-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:16."
+m.step("Num.22.16")
+
+# -------------------------- Num.22.17 · COND_כי (“that”) -------------------
+# ‹כי כבד אכבדך› (“that be-heavy be-heavy-you/your”)
+# ‹מאד וכל אשר› (“very and-all which”)
+# ‹תאמר אלי אעשה› (“say to-me/my make”)
+# ‹… ולכה נא קבה› (“and-go-ward please scoop-out-ward”)
+# ‹לי את העם› (“to-me/my obj-marker the-people”)
+# ‹הזה› (“the-this”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:17."
+m.step("Num.22.17")
+
+# -------------------------- Num.22.18 · ETNACHTA_SPLIT ---------------------
+# ‹ויען בלעם ויאמר› (“and-eye Balaam and-say”)
+# ‹אל עבדי בלק› (“to servant Balak”)
+# ‹אם יתן לי› (“if set to-me/my”)
+# ‹בלק מלא ביתו› (“Balak fulness house-him/its”)
+# ‹כסף וזהב … לא› (“silver and-gold … not”)
+# ‹אוכל לעבר את› (“be-able to-pass-over obj-marker”)
+# ‹פי יהוה אלהי› (“mouth YHWH God-me/my”)
+# ‹לעשות קטנה או› (“to-make abbreviated or”)
+# ‹גדולה› (“great”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:18."
+m.step("Num.22.18")
+
+# -------------------------- Num.22.19 · ETNACHTA_SPLIT ---------------------
+# ‹ועתה שבו נא› (“and-now dwell/sit please”)
+# ‹בזה גם אתם› (“in-this also you”)
+# ‹הלילה … ואדעה מה› (“the-night … and-know what”)
+# ‹יסף יהוה דבר› (“add YHWH speak”)
+# ‹עמי› (“with-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:19."
+m.step("Num.22.19")
+
+# -------------------------- Num.22.20 · ETNACHTA_SPLIT ---------------------
+# ‹ויבא אלהים אל› (“and-come/bring God to”)
+# ‹בלעם לילה ויאמר› (“Balaam night and-say”)
+# ‹לו אם לקרא› (“to-him/its if to-call”)
+# ‹לך באו האנשים› (“to-you/your come/bring the-man”)
+# ‹קום ל … ואך› (“arise ? … and-indeed”)
+# ‹את הדבר אשר› (“obj-marker the-word/thing which”)
+# ‹אדבר אליך אתו› (“speak to-you/your obj-marker-him/its”)
+# ‹תעשה› (“make”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:20."
+m.step("Num.22.20")
+
+# -------------------------- Num.22.21 · ETNACHTA_SPLIT ---------------------
+# ‹ויקם בלעם בבקר› (“and-arise Balaam in-morning”)
+# ‹ויחבש את אתנו› (“and-wrap-firmly obj-marker female-donkey-him/its”)
+# ‹… וילך עם שרי› (“and-go with officer”)
+# ‹מואב› (“Moab”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:21."
+m.step("Num.22.21")
+# witness-tier presupposed read:
+# the_akedahs_morning_the_satan_word_the_angel on balaam_saddled_his_ass —
+# read, not installed
+m.witness_read("balaam_saddled_his_ass", "the_akedahs_morning_the_satan_word_the_angel",
+                cites=["Onkelos Num 22:21", "Onkelos Num 22:22"])
+
+# -------------------------- Num.22.22 · COND_כי (“that”) -------------------
+# ‹ויחר אף אלהים› (“and-glow nose God”)
+# ‹כי הולך הוא› (“that walk/go he/it”)
+# ‹ויתיצב מלאך יהוה› (“and-place messenger YHWH”)
+# ‹בדרך לשטן לו› (“in-way/road to-opponent to-him/its”)
+# ‹… והוא רכב על› (“and-he/it ride over”)
+# ‹אתנו ושני נעריו› (“female-donkey-him/its and-two boy-him/its”)
+# ‹עמו› (“with-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:22."
+m.step("Num.22.22")
+
+# -------------------------- Num.22.23 · ETNACHTA_SPLIT ---------------------
+# ‹ותרא האתון את› (“and-see the-female-donkey obj-marker”)
+# ‹מלאך יהוה נצב› (“messenger YHWH stand”)
+# ‹בדרך וחרבו שלופה› (“in-way/road and-drought-him/its pull-out”)
+# ‹בידו ותט האתון› (“in-hand-him/its and-stretch the-female-donkey”)
+# ‹… ויך בלעם את› (“and-strike Balaam obj-marker”)
+# ‹האתון להטתה הדרך› (“the-female-donkey to-stretch-her/its the-way/road”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:23."
+m.step("Num.22.23")
+# witness-tier presupposed read: three_seeings_the_sword_plene_the_foot on
+# the_ass_saw_the_angel — read, not installed
+m.witness_read("the_ass_saw_the_angel", "three_seeings_the_sword_plene_the_foot",
+                cites=["Onkelos Num 22:23", "Onkelos Num 22:24", "Onkelos Num 22:25", "Onkelos Num 22:26", "Onkelos Num 22:27"])
+
+# -------------------------- Num.22.24 · ETNACHTA_SPLIT ---------------------
+# ‹ויעמד מלאך יהוה› (“and-stand messenger YHWH”)
+# ‹במשעול הכרמים … גדר› (“in-hollow the-garden … circumvallation”)
+# ‹מזה וגדר מזה› (“from-this and-circumvallation from-this”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:24."
+m.step("Num.22.24")
+
+# -------------------------- Num.22.25 · ETNACHTA_SPLIT ---------------------
+# ‹ותרא האתון את› (“and-see the-female-donkey obj-marker”)
+# ‹מלאך יהוה ותלחץ› (“messenger YHWH and-press”)
+# ‹אל הקיר ותלחץ› (“to the-wall and-press”)
+# ‹את רגל בלעם› (“obj-marker foot Balaam”)
+# ‹אל ה … ויסף› (“to the … and-add”)
+# ‹להכתה› (“to-strike-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:25."
+m.step("Num.22.25")
+
+# -------------------------- Num.22.26 · ETNACHTA_SPLIT ---------------------
+# ‹ויוסף מלאך יהוה› (“and-add messenger YHWH”)
+# ‹עבור … ויעמד במקום› (“pass-over … and-stand in-place”)
+# ‹צר אשר אין› (“narrow which there-is-not”)
+# ‹דרך לנטות ימין› (“way/road to-stretch right-hand”)
+# ‹ושמאול› (“and-dark”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:26."
+m.step("Num.22.26")
+
+# -------------------------- Num.22.27 · ETNACHTA_SPLIT ---------------------
+# ‹ותרא האתון את› (“and-see the-female-donkey obj-marker”)
+# ‹מלאך יהוה ותרבץ› (“messenger YHWH and-crouch”)
+# ‹תחת בלעם … ויחר› (“under Balaam … and-glow”)
+# ‹אף בלעם ויך› (“nose Balaam and-strike”)
+# ‹את האתון במקל› (“obj-marker the-female-donkey in-shoot”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:27."
+m.step("Num.22.27")
+
+# -------------------------- Num.22.28 · ETNACHTA_SPLIT ---------------------
+# ‹ויפתח יהוה את› (“and-open-wide YHWH obj-marker”)
+# ‹פי האתון … ותאמר› (“mouth the-female-donkey … and-say”)
+# ‹לבלעם מה עשיתי› (“to-Balaam what make”)
+# ‹לך כי הכיתני› (“to-you/your that strike-me/my”)
+# ‹זה שלש רגלים› (“this three foot”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:28."
+m.step("Num.22.28")
+# witness-tier presupposed read:
+# three_feet_the_plene_three_egypts_verb_the_sword on the_mouth_opened —
+# read, not installed
+m.witness_read("the_mouth_opened", "three_feet_the_plene_three_egypts_verb_the_sword",
+                cites=["Onkelos Num 22:28", "Onkelos Num 22:29", "Onkelos Num 22:30"])
+
+# -------------------------- Num.22.29 · COND_כי (“that”) -------------------
+# ‹ויאמר בלעם לאתון› (“and-say Balaam to-female-donkey”)
+# ‹כי התעללת בי› (“that effect-thoroughly in-me/my”)
+# ‹… לו יש חרב› (“conditional-particle there-is drought”)
+# ‹בידי כי עתה› (“in-hand-me/my that now”)
+# ‹הרגתיך› (“smite-with-deadly-intent-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:29."
+m.step("Num.22.29")
+
+# -------------------------- Num.22.30 · ETNACHTA_SPLIT ---------------------
+# ‹ותאמר האתון אל› (“and-say the-female-donkey to”)
+# ‹בלעם הלוא אנכי› (“Balaam is-it-not”)
+# ‹אתנך אשר רכבת› (“female-donkey-you/your which ride”)
+# ‹עלי מעודך עד› (“over-me/my from-still/again-you/your until”)
+# ‹היו … ויאמר לא› (“be … and-say not”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:30."
+m.step("Num.22.30")
+
+# -------------------------- Num.22.31 · ETNACHTA_SPLIT ---------------------
+# ‹ויגל יהוה את› (“and-denude YHWH obj-marker”)
+# ‹עיני בלעם וירא› (“eye Balaam and-see”)
+# ‹את מלאך יהוה› (“obj-marker messenger YHWH”)
+# ‹נצב בדרך וחרבו› (“stand in-way/road and-drought-him/its”)
+# ‹שלפה … ויקד וישתחו› (“pull-out … and-shrivel-up and-afflict”)
+# ‹לאפיו› (“to-nose-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:31."
+m.step("Num.22.31")
+# witness-tier presupposed read: pharaohs_confession_the_formula_second on
+# the_eyes_uncovered — read, not installed
+m.witness_read("the_eyes_uncovered", "pharaohs_confession_the_formula_second",
+                cites=["Onkelos Num 22:31", "Onkelos Num 22:32", "Onkelos Num 22:33", "Onkelos Num 22:34", "Onkelos Num 22:35"])
+
+# -------------------------- Num.22.32 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר אליו מלאך› (“and-say to-him/its messenger”)
+# ‹יהוה על מה› (“YHWH over what”)
+# ‹הכית את אתנך› (“strike obj-marker female-donkey-you/your”)
+# ‹זה שלוש רגלים› (“this three foot”)
+# ‹… הנה אנכי יצאתי› (“behold bring-forth”)
+# ‹לשטן כי ירט› (“to-opponent that precipitate”)
+# ‹הדרך לנגדי› (“the-way/road to-front-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:32."
+m.step("Num.22.32")
+
+# -------------------------- Num.22.33 · ETNACHTA_SPLIT ---------------------
+# ‹ותראני האתון ותט› (“and-see-me/my the-female-donkey and-stretch”)
+# ‹לפני זה שלש› (“to-face-me/my this three”)
+# ‹רגלים … אולי נטתה› (“foot … if-not stretch”)
+# ‹מפני כי עתה› (“from-face-me/my that now”)
+# ‹גם אתכה הרגתי› (“also obj-marker-you/your smite-with-deadly-intent”)
+# ‹ואותה החייתי› (“and-obj-marker-her/its live”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:33."
+m.step("Num.22.33")
+
+# -------------------------- Num.22.34 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר בלעם אל› (“and-say Balaam to”)
+# ‹מלאך יהוה חטאתי› (“messenger YHWH sin”)
+# ‹כי לא ידעתי› (“that not know”)
+# ‹כי אתה נצב› (“that you stand”)
+# ‹לקראתי … ועתה אם› (“to-encountering-me/my … and-now if”)
+# ‹רע בעיניך אשובה› (“spoil in-eye-you/your return”)
+# ‹לי› (“to-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:34."
+m.step("Num.22.34")
+
+# -------------------------- Num.22.35 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר מלאך יהוה› (“and-say messenger YHWH”)
+# ‹אל בלעם לך› (“to Balaam go”)
+# ‹עם האנשים ואפס› (“with the-man and-cessation”)
+# ‹את הדבר אשר› (“obj-marker the-word/thing which”)
+# ‹אדבר א … וילך› (“speak ? … and-go”)
+# ‹בלעם עם שרי› (“Balaam with officer”)
+# ‹בלק› (“Balak”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:35."
+m.step("Num.22.35")
+
+# -------------------------- Num.22.36 · COND_כי (“that”) -------------------
+# ‹וישמע בלק כי› (“and-hear Balak that”)
+# ‹בא בלעם … ויצא› (“come/bring Balaam … and-bring-forth”)
+# ‹לקראתו אל עיר› (“to-encountering-him/its to city”)
+# ‹מואב אשר על› (“Moab which over”)
+# ‹גבול ארנן אשר› (“cord Arnon which”)
+# ‹בקצה הגבול› (“in-end the-cord”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:36."
+m.step("Num.22.36")
+# witness-tier presupposed read: the_border_drawn_bamoth_baal_the_edge on
+# balak_at_the_arnon — read, not installed
+m.witness_read("balak_at_the_arnon", "the_border_drawn_bamoth_baal_the_edge",
+                cites=["Onkelos Num 22:36", "Onkelos Num 22:37", "Onkelos Num 22:38", "Onkelos Num 22:39", "Onkelos Num 22:40", "Onkelos Num 22:41"])
+
+# -------------------------- Num.22.37 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר בלק אל› (“and-say Balak to”)
+# ‹בלעם הלא שלח› (“Balaam is-it-not send”)
+# ‹שלחתי אליך לקרא› (“send to-you/your to-call”)
+# ‹לך למה לא› (“to-you/your to-what not”)
+# ‹הלכת אלי … האמנם› (“walk/go to-me/my … the-verily”)
+# ‹לא אוכל כבדך› (“not be-able be-heavy-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:37."
+m.step("Num.22.37")
+
+# -------------------------- Num.22.38 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר בלעם אל› (“and-say Balaam to”)
+# ‹בלק הנה באתי› (“Balak behold come/bring”)
+# ‹אליך עתה היכול› (“to-you/your now the-be-able”)
+# ‹אוכל דבר מאומה› (“be-able speak speck”)
+# ‹… הדבר אשר ישים› (“the-word/thing which put/set”)
+# ‹אלהים בפי אתו› (“God in-mouth-me/my obj-marker-him/its”)
+# ‹אדבר› (“speak”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:38."
+m.step("Num.22.38")
+
+# -------------------------- Num.22.39 · ETNACHTA_SPLIT ---------------------
+# ‹וילך בלעם עם› (“and-go Balaam with”)
+# ‹בלק … ויבאו קרית› (“Balak … and-come/bring”)
+# ‹חצות› (“Kirjath-huzoth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:39."
+m.step("Num.22.39")
+
+# -------------------------- Num.22.40 · ETNACHTA_SPLIT ---------------------
+# ‹ויזבח בלק בקר› (“and-slaughter-an-animal Balak herd”)
+# ‹וצאן … וישלח לבלעם› (“and-flock … and-send to-Balaam”)
+# ‹ולשרים אשר אתו› (“and-to-officer which with-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:40."
+m.step("Num.22.40")
+
+# -------------------------- Num.22.41 · ETNACHTA_SPLIT ---------------------
+# ‹ויהי בבקר ויקח› (“and-be in-morning and-take”)
+# ‹בלק את בלעם› (“Balak obj-marker Balaam”)
+# ‹ויעלהו במות בעל› (“and-go-up-him/its Bamoth”)
+# ‹… וירא משם קצה› (“and-see from-there end”)
+# ‹העם› (“the-people”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 22:41."
+m.step("Num.22.41")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_plains_of_moab', 'the_last_camp_balak_saw_the_conquest'), ('moab_feared_and_loathed', 'the_sojourn_verb_the_mannas_verb_the_elders_of_midian'), ('messengers_to_pethor', 'aram_and_the_euphrates_the_locusts_clause_three_curse_roots'), ('divinations_in_their_hand', 'god_came_to_three_gentiles_the_lord_refuses'), ('the_second_embassy', 'the_honor_promised_the_house_of_silver_the_word_formula'), ('balaam_saddled_his_ass', 'the_akedahs_morning_the_satan_word_the_angel'), ('the_ass_saw_the_angel', 'three_seeings_the_sword_plene_the_foot'), ('the_mouth_opened', 'three_feet_the_plene_three_egypts_verb_the_sword'), ('the_eyes_uncovered', 'pharaohs_confession_the_formula_second'), ('balak_at_the_arnon', 'the_border_drawn_bamoth_baal_the_edge')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Num 22:1', 'Onkelos Num 22:2']
+    assert all('the_last_camp_balak_saw_the_conquest' not in f for f in m.WORLD["facts"])
+    assert 'the_plains_of_moab' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Num 22:3', 'Onkelos Num 22:4']
+    assert all('the_sojourn_verb_the_mannas_verb_the_elders_of_midian' not in f for f in m.WORLD["facts"])
+    assert 'moab_feared_and_loathed' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Num 22:5', 'Onkelos Num 22:6']
+    assert all('aram_and_the_euphrates_the_locusts_clause_three_curse_roots' not in f for f in m.WORLD["facts"])
+    assert 'messengers_to_pethor' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Num 22:7', 'Onkelos Num 22:8', 'Onkelos Num 22:9', 'Onkelos Num 22:10', 'Onkelos Num 22:11', 'Onkelos Num 22:12', 'Onkelos Num 22:13']
+    assert all('god_came_to_three_gentiles_the_lord_refuses' not in f for f in m.WORLD["facts"])
+    assert 'divinations_in_their_hand' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Num 22:14', 'Onkelos Num 22:15', 'Onkelos Num 22:16', 'Onkelos Num 22:17', 'Onkelos Num 22:18', 'Onkelos Num 22:19', 'Onkelos Num 22:20']
+    assert all('the_honor_promised_the_house_of_silver_the_word_formula' not in f for f in m.WORLD["facts"])
+    assert 'the_second_embassy' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Num 22:21', 'Onkelos Num 22:22']
+    assert all('the_akedahs_morning_the_satan_word_the_angel' not in f for f in m.WORLD["facts"])
+    assert 'balaam_saddled_his_ass' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Num 22:23', 'Onkelos Num 22:24', 'Onkelos Num 22:25', 'Onkelos Num 22:26', 'Onkelos Num 22:27']
+    assert all('three_seeings_the_sword_plene_the_foot' not in f for f in m.WORLD["facts"])
+    assert 'the_ass_saw_the_angel' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Num 22:28', 'Onkelos Num 22:29', 'Onkelos Num 22:30']
+    assert all('three_feet_the_plene_three_egypts_verb_the_sword' not in f for f in m.WORLD["facts"])
+    assert 'the_mouth_opened' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Num 22:31', 'Onkelos Num 22:32', 'Onkelos Num 22:33', 'Onkelos Num 22:34', 'Onkelos Num 22:35']
+    assert all('pharaohs_confession_the_formula_second' not in f for f in m.WORLD["facts"])
+    assert 'the_eyes_uncovered' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Num 22:36', 'Onkelos Num 22:37', 'Onkelos Num 22:38', 'Onkelos Num 22:39', 'Onkelos Num 22:40', 'Onkelos Num 22:41']
+    assert all('the_border_drawn_bamoth_baal_the_edge' not in f for f in m.WORLD["facts"])
+    assert 'balak_at_the_arnon' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_23_oracles_1_2
+###############################################################################
+
+m = Machine("num_23_oracles_1_2")
+
+# -------------------------- Num.23.1 · ETNACHTA_SPLIT ----------------------
+# ‹ויאמר בלעם אל› (“and-say Balaam to”)
+# ‹בלק בנה לי› (“Balak build to-me/my”)
+# ‹בזה שבעה מזבחת› (“in-this seven altar”)
+# ‹… והכן לי בזה› (“and-be-erect to-me/my in-this”)
+# ‹שבעה פרים ושבעה› (“seven bullock and-seven”)
+# ‹אילים› (“ram”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:1."
+m.step("Num.23.1")
+# witness-tier presupposed read: twenty_one_altars_every_altar on
+# seven_altars — read, not installed
+m.witness_read("seven_altars", "twenty_one_altars_every_altar",
+                cites=["Onkelos Num 23:1", "Onkelos Num 23:2"])
+
+# -------------------------- Num.23.2 · ETNACHTA_SPLIT ----------------------
+# ‹ויעש בלק כאשר› (“and-make Balak like-as/which”)
+# ‹דבר בלעם … ויעל› (“speak Balaam … and-go-up”)
+# ‹בלק ובלעם פר› (“Balak and-Balaam bullock”)
+# ‹ואיל במזבח› (“and-ram in-altar”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:2."
+m.step("Num.23.2")
+
+# -------------------------- Num.23.3 · ETNACHTA_SPLIT ----------------------
+# ‹ויאמר בלעם לבלק› (“and-say Balaam to-Balak”)
+# ‹התיצב על עלתך› (“place over burnt-offering-you/your”)
+# ‹ואלכה אולי יקרה› (“and-go if-not light-upon”)
+# ‹יהוה לקראתי וד› (“YHWH to-encountering-me/my ?”)
+# ‹… וילך שפי› (“and-go bareness”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:3."
+m.step("Num.23.3")
+# witness-tier presupposed read: the_chance_verb_the_word_in_the_mouth on
+# stand_by_your_offering — read, not installed
+m.witness_read("stand_by_your_offering", "the_chance_verb_the_word_in_the_mouth",
+                cites=["Onkelos Num 23:3", "Onkelos Num 23:4", "Onkelos Num 23:5", "Onkelos Num 23:6"])
+
+# -------------------------- Num.23.4 · ETNACHTA_SPLIT ----------------------
+# ‹ויקר אלהים אל› (“and-light-upon God to”)
+# ‹בלעם … ויאמר אליו› (“Balaam … and-say to-him/its”)
+# ‹את שבעת המזבחת› (“obj-marker seven the-altar”)
+# ‹ערכתי ואעל פר› (“set-in-a-row and-go-up bullock”)
+# ‹ואיל במזבח› (“and-ram in-altar”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:4."
+m.step("Num.23.4")
+
+# -------------------------- Num.23.5 · ETNACHTA_SPLIT ----------------------
+# ‹וישם יהוה דבר› (“and-put/set YHWH word/thing”)
+# ‹בפי בלעם … ויאמר› (“in-mouth Balaam … and-say”)
+# ‹שוב אל בלק› (“return to Balak”)
+# ‹וכה תדבר› (“and-like-this speak”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:5."
+m.step("Num.23.5")
+
+# -------------------------- Num.23.6 · ETNACHTA_SPLIT ----------------------
+# ‹וישב אליו והנה› (“and-return to-him/its and-behold”)
+# ‹נצב על עלתו› (“stand over burnt-offering-him/its”)
+# ‹… הוא וכל שרי› (“he/it and-all officer”)
+# ‹מואב› (“Moab”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:6."
+m.step("Num.23.6")
+
+# -------------------------- Num.23.7 · ETNACHTA_SPLIT ----------------------
+# ‹וישא משלו ויאמר› (“and-lift/carry pithy-maxim-him/its and-say”)
+# ‹… מן ארם ינחני› (“from Aram guide-me/my”)
+# ‹בלק מלך מואב› (“Balak king Moab”)
+# ‹מהררי קדם לכה› (“from-mountain front go-ward”)
+# ‹ארה לי יעקב› (“execrate-ward to-me/my Jacob”)
+# ‹ולכה זעמ› (“and-go-ward ?”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:7."
+m.step("Num.23.7")
+# witness-tier presupposed read: the_parable_tellers_paid_el_eight on
+# took_up_his_parable — read, not installed
+m.witness_read("took_up_his_parable", "the_parable_tellers_paid_el_eight",
+                cites=["Onkelos Num 23:7", "Onkelos Num 23:8"])
+
+# -------------------------- Num.23.8 · ETNACHTA_SPLIT ----------------------
+# ‹מה אקב לא› (“what puncture not”)
+# ‹קבה אל … ומה› (“scoop-out-him/its strength … and-what”)
+# ‹אזעם לא זעם› (“foam-at-the-mouth not foam-at-the-mouth”)
+# ‹יהוה› (“YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:8."
+m.step("Num.23.8")
+
+# -------------------------- Num.23.9 · COND_כי (“that”) --------------------
+# ‹כי מראש צרים› (“that from-head cliff”)
+# ‹אראנו ומגבעות אשורנו› (“see-him/its and-from-hillock spy-out-him/its”)
+# ‹… הן עם לבדד› (“lo! people to-separate”)
+# ‹ישכן ובגוים לא› (“reside and-in-nation not”)
+# ‹יתחשב› (“plait”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:9."
+m.step("Num.23.9")
+# witness-tier presupposed read:
+# the_lepers_words_abrahams_dust_the_fourth_part on
+# a_people_that_dwells_alone — read, not installed
+m.witness_read("a_people_that_dwells_alone", "the_lepers_words_abrahams_dust_the_fourth_part",
+                cites=["Onkelos Num 23:9", "Onkelos Num 23:10"])
+
+# -------------------------- Num.23.10 · ETNACHTA_SPLIT ---------------------
+# ‹מי מנה עפר› (“who? weigh-out dust”)
+# ‹יעקב ומספר את› (“Jacob and-number obj-marker”)
+# ‹רבע ישראל … תמת› (“quarter Israel … die”)
+# ‹נפשי מות ישרים› (“living-being-me/my death straight”)
+# ‹ותהי אחריתי כמהו› (“and-be last-me/my form-of-the-prefix-'k-'-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:10."
+m.step("Num.23.10")
+
+# -------------------------- Num.23.11 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר בלק אל› (“and-say Balak to”)
+# ‹בלעם מה עשית› (“Balaam what make”)
+# ‹לי … לקב איבי› (“to-me/my … to-scoop-out hating-me/my”)
+# ‹לקחתיך והנה ברכת› (“take-you/your and-behold bless”)
+# ‹ברך› (“bless”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:11."
+m.step("Num.23.11")
+# witness-tier presupposed read: the_formula_keep_only_its_edge_pisgah on
+# what_have_you_done — read, not installed
+m.witness_read("what_have_you_done", "the_formula_keep_only_its_edge_pisgah",
+                cites=["Onkelos Num 23:11", "Onkelos Num 23:12", "Onkelos Num 23:13", "Onkelos Num 23:14", "Onkelos Num 23:15"])
+
+# -------------------------- Num.23.12 · ETNACHTA_SPLIT ---------------------
+# ‹ויען ויאמר … הלא› (“and-eye and-say … is-it-not”)
+# ‹את אשר ישים› (“obj-marker which put/set”)
+# ‹יהוה בפי אתו› (“YHWH in-mouth-me/my obj-marker-him/its”)
+# ‹אשמר לדבר› (“keep/guard to-speak”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:12."
+m.step("Num.23.12")
+
+# -------------------------- Num.23.13 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר אליו בלק› (“and-say to-him/its Balak”)
+# ‹לך לכה נא› (“go walk/go-ward go”)
+# ‹אתי אל מקום› (“with-me/my to place”)
+# ‹אחר אשר תראנו› (“other which see-him/its”)
+# ‹משם אפס ק› (“from-there cessation ?”)
+# ‹… וקבנו לי משם› (“and-scoop-out-him/its to-me/my from-there”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:13."
+m.step("Num.23.13")
+
+# -------------------------- Num.23.14 · ETNACHTA_SPLIT ---------------------
+# ‹ויקחהו שדה צפים› (“and-take-him/its field Tsophim”)
+# ‹אל ראש הפסגה› (“to head the-Pisgah”)
+# ‹… ויבן שבעה מזבחת› (“and-build seven altar”)
+# ‹ויעל פר ואיל› (“and-go-up bullock and-ram”)
+# ‹במזבח› (“in-altar”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:14."
+m.step("Num.23.14")
+
+# -------------------------- Num.23.15 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר אל בלק› (“and-say to Balak”)
+# ‹התיצב כה על› (“place like-this over”)
+# ‹עלתך … ואנכי אקרה› (“burnt-offering-you/your … and-I light-upon”)
+# ‹כה› (“like-this”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:15."
+m.step("Num.23.15")
+
+# -------------------------- Num.23.16 · ETNACHTA_SPLIT ---------------------
+# ‹ויקר יהוה אל› (“and-light-upon YHWH to”)
+# ‹בלעם וישם דבר› (“Balaam and-put/set word/thing”)
+# ‹בפיו … ויאמר שוב› (“in-mouth-him/its … and-say return”)
+# ‹אל בלק וכה› (“to Balak and-like-this”)
+# ‹תדבר› (“speak”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:16."
+m.step("Num.23.16")
+# witness-tier presupposed read: god_is_not_a_man_samuel_over_agag on
+# the_lord_met_balaam — read, not installed
+m.witness_read("the_lord_met_balaam", "god_is_not_a_man_samuel_over_agag",
+                cites=["Onkelos Num 23:16", "Onkelos Num 23:17", "Onkelos Num 23:18", "Onkelos Num 23:19", "Onkelos Num 23:20"])
+
+# -------------------------- Num.23.17 · ETNACHTA_SPLIT ---------------------
+# ‹ויבא אליו והנו› (“and-come/bring to-him/its and-behold-him/its”)
+# ‹נצב על עלתו› (“stand over burnt-offering-him/its”)
+# ‹ושרי מואב אתו› (“and-officer Moab with-him/its”)
+# ‹… ויאמר לו בלק› (“and-say to-him/its Balak”)
+# ‹מה דבר יהוה› (“what speak YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:17."
+m.step("Num.23.17")
+
+# -------------------------- Num.23.18 · ETNACHTA_SPLIT ---------------------
+# ‹וישא משלו ויאמר› (“and-lift/carry pithy-maxim-him/its and-say”)
+# ‹… קום בלק ושמע› (“arise Balak and-hear”)
+# ‹האזינה עדי בנו› (“broaden-out-the-ear-ward until-me/my son-him/its”)
+# ‹צפר› (“Zippor”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:18."
+m.step("Num.23.18")
+
+# -------------------------- Num.23.19 · ETNACHTA_SPLIT ---------------------
+# ‹לא איש אל› (“not man strength”)
+# ‹ויכזב ובן אדם› (“and-lie and-son human”)
+# ‹ויתנחם … ההוא אמר› (“and-sigh … that say”)
+# ‹ולא יעשה ודבר› (“and-not make and-speak”)
+# ‹ולא יקימנה› (“and-not arise-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:19."
+m.step("Num.23.19")
+
+# -------------------------- Num.23.20 · ETNACHTA_SPLIT ---------------------
+# ‹הנה ברך לקחתי› (“behold bless take”)
+# ‹… וברך ולא אשיבנה› (“and-bless and-not return-her/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:20."
+m.step("Num.23.20")
+
+# -------------------------- Num.23.21 · ETNACHTA_SPLIT ---------------------
+# ‹לא הביט און› (“not look strictly-nothingness”)
+# ‹ביעקב ולא ראה› (“in-Jacob and-not see”)
+# ‹עמל בישראל … יהוה› (“toil in-Israel … YHWH”)
+# ‹אלהיו עמו ותרועת› (“God-him/its with-him/its and-clamor”)
+# ‹מלך בו› (“king in-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:21."
+m.step("Num.23.21")
+# witness-tier presupposed read: the_teruah_made_the_shekhinah_one_letter on
+# the_shout_of_a_king — read, not installed
+m.witness_read("the_shout_of_a_king", "the_teruah_made_the_shekhinah_one_letter",
+                cites=["Onkelos Num 23:21", "Onkelos Num 23:22"])
+
+# -------------------------- Num.23.22 · ETNACHTA_SPLIT ---------------------
+# ‹אל מוציאם ממצרים› (“strength bring-forth-them/their from-Egypt”)
+# ‹… כתועפת ראם לו› (“like-weariness wild-bull to-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:22."
+m.step("Num.23.22")
+
+# -------------------------- Num.23.23 · COND_כי (“that”) -------------------
+# ‹כי לא נחש› (“that not incantation”)
+# ‹ביעקב ולא קסם› (“in-Jacob and-not lot”)
+# ‹בישראל … כעת יאמר› (“in-Israel … like-time say”)
+# ‹ליעקב ולישראל מה› (“to-Jacob and-to-Israel what”)
+# ‹פעל אל› (“do strength”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:23."
+m.step("Num.23.23")
+# witness-tier presupposed read: the_serpents_word_the_lioness_and_the_lion
+# on no_divination_in_jacob — read, not installed
+m.witness_read("no_divination_in_jacob", "the_serpents_word_the_lioness_and_the_lion",
+                cites=["Onkelos Num 23:23", "Onkelos Num 23:24"])
+
+# -------------------------- Num.23.24 · COND_הן (“lo!”) --------------------
+# ‹הן עם כלביא› (“lo! people like-roar”)
+# ‹יקום וכארי יתנשא› (“arise and-like-lion lift/carry”)
+# ‹… לא ישכב עד› (“not lie-down until”)
+# ‹יאכל טרף ודם› (“eat something-torn and-blood”)
+# ‹חללים ישתה› (“pierced drink”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:24."
+m.step("Num.23.24")
+
+# -------------------------- Num.23.25 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר בלק אל› (“and-say Balak to”)
+# ‹בלעם גם קב› (“Balaam also scoop-out”)
+# ‹לא תקבנו … גם› (“not puncture-him/its … also”)
+# ‹ברך לא תברכנו› (“bless not bless-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:25."
+m.step("Num.23.25")
+# witness-tier presupposed read: the_top_of_peor_the_third_stand on
+# neither_curse_nor_bless — read, not installed
+m.witness_read("neither_curse_nor_bless", "the_top_of_peor_the_third_stand",
+                cites=["Onkelos Num 23:25", "Onkelos Num 23:26", "Onkelos Num 23:27", "Onkelos Num 23:28"])
+
+# -------------------------- Num.23.26 · ETNACHTA_SPLIT ---------------------
+# ‹ויען בלעם ויאמר› (“and-eye Balaam and-say”)
+# ‹אל בלק … הלא› (“to Balak … is-it-not”)
+# ‹דברתי אליך לאמר› (“speak to-you/your to-say”)
+# ‹כל אשר ידבר› (“all which speak”)
+# ‹יהוה אתו אעשה› (“YHWH obj-marker-him/its make”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:26."
+m.step("Num.23.26")
+
+# -------------------------- Num.23.27 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר בלק אל› (“and-say Balak to”)
+# ‹בלעם לכה נא› (“Balaam go-ward please”)
+# ‹אקחך אל מקום› (“take-you/your to place”)
+# ‹אחר … אולי יישר› (“other … if-not be-straight”)
+# ‹בעיני האלהים וקבתו› (“in-eye the-God and-scoop-out-him/its”)
+# ‹לי משם› (“to-me/my from-there”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:27."
+m.step("Num.23.27")
+
+# -------------------------- Num.23.28 · ETNACHTA_SPLIT ---------------------
+# ‹ויקח בלק את› (“and-take Balak obj-marker”)
+# ‹בלעם … ראש הפעור› (“Balaam … head the-Peor”)
+# ‹הנשקף על פני› (“the-lean-out over face”)
+# ‹הישימן› (“the-desolation”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:28."
+m.step("Num.23.28")
+
+# -------------------------- Num.23.29 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר בלעם אל› (“and-say Balaam to”)
+# ‹בלק בנה לי› (“Balak build to-me/my”)
+# ‹בזה שבעה מזבחת› (“in-this seven altar”)
+# ‹… והכן לי בזה› (“and-be-erect to-me/my in-this”)
+# ‹שבעה פרים ושבעה› (“seven bullock and-seven”)
+# ‹אילים› (“ram”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:29."
+m.step("Num.23.29")
+# witness-tier presupposed read: the_second_saying_verbatim on
+# seven_altars_again — read, not installed
+m.witness_read("seven_altars_again", "the_second_saying_verbatim",
+                cites=["Onkelos Num 23:29", "Onkelos Num 23:30"])
+
+# -------------------------- Num.23.30 · ETNACHTA_SPLIT ---------------------
+# ‹ויעש בלק כאשר› (“and-make Balak like-as/which”)
+# ‹אמר בלעם … ויעל› (“say Balaam … and-go-up”)
+# ‹פר ואיל במזבח› (“bullock and-ram in-altar”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 23:30."
+m.step("Num.23.30")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('seven_altars', 'twenty_one_altars_every_altar'), ('stand_by_your_offering', 'the_chance_verb_the_word_in_the_mouth'), ('took_up_his_parable', 'the_parable_tellers_paid_el_eight'), ('a_people_that_dwells_alone', 'the_lepers_words_abrahams_dust_the_fourth_part'), ('what_have_you_done', 'the_formula_keep_only_its_edge_pisgah'), ('the_lord_met_balaam', 'god_is_not_a_man_samuel_over_agag'), ('the_shout_of_a_king', 'the_teruah_made_the_shekhinah_one_letter'), ('no_divination_in_jacob', 'the_serpents_word_the_lioness_and_the_lion'), ('neither_curse_nor_bless', 'the_top_of_peor_the_third_stand'), ('seven_altars_again', 'the_second_saying_verbatim')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Num 23:1', 'Onkelos Num 23:2']
+    assert all('twenty_one_altars_every_altar' not in f for f in m.WORLD["facts"])
+    assert 'seven_altars' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Num 23:3', 'Onkelos Num 23:4', 'Onkelos Num 23:5', 'Onkelos Num 23:6']
+    assert all('the_chance_verb_the_word_in_the_mouth' not in f for f in m.WORLD["facts"])
+    assert 'stand_by_your_offering' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Num 23:7', 'Onkelos Num 23:8']
+    assert all('the_parable_tellers_paid_el_eight' not in f for f in m.WORLD["facts"])
+    assert 'took_up_his_parable' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Num 23:9', 'Onkelos Num 23:10']
+    assert all('the_lepers_words_abrahams_dust_the_fourth_part' not in f for f in m.WORLD["facts"])
+    assert 'a_people_that_dwells_alone' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Num 23:11', 'Onkelos Num 23:12', 'Onkelos Num 23:13', 'Onkelos Num 23:14', 'Onkelos Num 23:15']
+    assert all('the_formula_keep_only_its_edge_pisgah' not in f for f in m.WORLD["facts"])
+    assert 'what_have_you_done' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Num 23:16', 'Onkelos Num 23:17', 'Onkelos Num 23:18', 'Onkelos Num 23:19', 'Onkelos Num 23:20']
+    assert all('god_is_not_a_man_samuel_over_agag' not in f for f in m.WORLD["facts"])
+    assert 'the_lord_met_balaam' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Num 23:21', 'Onkelos Num 23:22']
+    assert all('the_teruah_made_the_shekhinah_one_letter' not in f for f in m.WORLD["facts"])
+    assert 'the_shout_of_a_king' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Num 23:23', 'Onkelos Num 23:24']
+    assert all('the_serpents_word_the_lioness_and_the_lion' not in f for f in m.WORLD["facts"])
+    assert 'no_divination_in_jacob' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Num 23:25', 'Onkelos Num 23:26', 'Onkelos Num 23:27', 'Onkelos Num 23:28']
+    assert all('the_top_of_peor_the_third_stand' not in f for f in m.WORLD["facts"])
+    assert 'neither_curse_nor_bless' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Num 23:29', 'Onkelos Num 23:30']
+    assert all('the_second_saying_verbatim' not in f for f in m.WORLD["facts"])
+    assert 'seven_altars_again' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_24_oracles_3_4
+###############################################################################
+
+m = Machine("num_24_oracles_3_4")
+
+# -------------------------- Num.24.1 · COND_כי (“that”) --------------------
+# ‹וירא בלעם כי› (“and-see Balaam that”)
+# ‹טוב בעיני יהוה› (“be-good-in-the-widest-sens in-eye YHWH”)
+# ‹לברך את ישראל› (“to-bless obj-marker Israel”)
+# ‹ולא הלך כפעם› (“and-not walk/go like-stroke”)
+# ‹בפעם … וישת אל› (“in-stroke … and-place to”)
+# ‹המדבר פניו› (“the-pasture face-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:1."
+m.step("Num.24.1")
+# witness-tier presupposed read: samsons_clause_the_spirit_of_god on
+# no_more_divinations — read, not installed
+m.witness_read("no_more_divinations", "samsons_clause_the_spirit_of_god",
+                cites=["Onkelos Num 24:1", "Onkelos Num 24:2"])
+
+# -------------------------- Num.24.2 · ETNACHTA_SPLIT ----------------------
+# ‹וישא בלעם את› (“and-lift/carry Balaam obj-marker”)
+# ‹עיניו וירא את› (“eye-him/its and-see obj-marker”)
+# ‹ישראל שכן לשבטיו› (“Israel reside to-scion-him/its”)
+# ‹… ותהי עליו רוח› (“and-be over-him/its spirit”)
+# ‹אלהים› (“God”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:2."
+m.step("Num.24.2")
+
+# -------------------------- Num.24.3 · ETNACHTA_SPLIT ----------------------
+# ‹וישא משלו ויאמר› (“and-lift/carry pithy-maxim-him/its and-say”)
+# ‹… נאם בלעם בנו› (“oracle Balaam son-him/its”)
+# ‹בער ונאם הגבר› (“Beor and-oracle the-valiant-man”)
+# ‹שתם העין› (“unveil the-eye”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:3."
+m.step("Num.24.3")
+# witness-tier presupposed read: davids_form_abrahams_vision_shaddai on
+# the_utterance_of_balaam — read, not installed
+m.witness_read("the_utterance_of_balaam", "davids_form_abrahams_vision_shaddai",
+                cites=["Onkelos Num 24:3", "Onkelos Num 24:4"])
+
+# -------------------------- Num.24.4 · ETNACHTA_SPLIT ----------------------
+# ‹נאם שמע אמרי› (“oracle hear something-said”)
+# ‹אל … אשר מחזה› (“strength … which vision”)
+# ‹שדי יחזה נפל› (“Almighty gaze-at fall”)
+# ‹וגלוי עינים› (“and-denude eye”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:4."
+m.step("Num.24.4")
+
+# -------------------------- Num.24.5 · ETNACHTA_SPLIT ----------------------
+# ‹מה טבו אהליך› (“what be-good-in-the-widest-sens tent-you/your”)
+# ‹יעקב … משכנתיך ישראל› (“Jacob … tabernacle-you/your Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:5."
+m.step("Num.24.5")
+# witness-tier presupposed read: psalm_84_the_aloes_the_land on
+# how_goodly_are_your_tents — read, not installed
+m.witness_read("how_goodly_are_your_tents", "psalm_84_the_aloes_the_land",
+                cites=["Onkelos Num 24:5", "Onkelos Num 24:6"])
+
+# -------------------------- Num.24.6 · ETNACHTA_SPLIT ----------------------
+# ‹כנחלים נטיו כגנת› (“like-river stretch like-garden”)
+# ‹עלי נהר … כאהלים› (“over river … like-aloe-wood”)
+# ‹נטע יהוה כארזים› (“strike-in YHWH like-cedar-tree”)
+# ‹עלי מים› (“over waters”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:6."
+m.step("Num.24.6")
+
+# -------------------------- Num.24.7 · ETNACHTA_SPLIT ----------------------
+# ‹יזל מים מדליו› (“drip waters from-pail-him/its”)
+# ‹וזרעו במים רבים› (“and-seed-him/its in-waters many/great”)
+# ‹… וירם מאגג מלכו› (“and-rise-high from-Agag king-him/its”)
+# ‹ותנשא מלכתו› (“and-lift/carry rule-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:7."
+m.step("Num.24.7")
+# witness-tier presupposed read: meribahs_many_waters_agag on
+# water_from_his_buckets — read, not installed
+m.witness_read("water_from_his_buckets", "meribahs_many_waters_agag",
+                cites=["Onkelos Num 24:7"])
+
+# -------------------------- Num.24.8 · ETNACHTA_SPLIT ----------------------
+# ‹אל מוציאו ממצרים› (“strength bring-forth-him/its from-Egypt”)
+# ‹כתועפת ראם לו› (“like-weariness wild-bull to-him/its”)
+# ‹… יאכל גוים צריו› (“eat nation narrow-him/its”)
+# ‹ועצמתיהם יגרם וחציו› (“and-bone-them/their bone and-piercer-him/its”)
+# ‹ימחץ› (“dash-asunder”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:8."
+m.step("Num.24.8")
+# witness-tier presupposed read:
+# one_letter_judahs_lion_isaacs_blessing_reversed on el_brings_him_out —
+# read, not installed
+m.witness_read("el_brings_him_out", "one_letter_judahs_lion_isaacs_blessing_reversed",
+                cites=["Onkelos Num 24:8", "Onkelos Num 24:9"])
+
+# -------------------------- Num.24.9 · ETNACHTA_SPLIT ----------------------
+# ‹כרע שכב כארי› (“bend-the-knee lie-down like-lion”)
+# ‹וכלביא מי יקימנו› (“and-like-roar who? arise-him/its”)
+# ‹… מברכיך ברוך וארריך› (“bless-you/your bless and-execrate-you/your”)
+# ‹ארור› (“execrate”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:9."
+m.step("Num.24.9")
+
+# -------------------------- Num.24.10 · ETNACHTA_SPLIT ---------------------
+# ‹ויחר אף בלק› (“and-glow nose Balak”)
+# ‹אל בלעם ויספק› (“to Balaam and-clap-the-hands”)
+# ‹את כפיו … ויאמר› (“obj-marker palm-of-hand-him/its … and-say”)
+# ‹בלק אל בלעם› (“Balak to Balaam”)
+# ‹לקב איבי קראתיך› (“to-scoop-out hating-me/my call-you/your”)
+# ‹והנה ברכת ברך› (“and-behold bless bless”)
+# ‹זה שלש פעמים› (“this three stroke”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:10."
+m.step("Num.24.10")
+# witness-tier presupposed read:
+# three_times_the_honor_revoked_the_formula_sixth on balak_clapped — read,
+# not installed
+m.witness_read("balak_clapped", "three_times_the_honor_revoked_the_formula_sixth",
+                cites=["Onkelos Num 24:10", "Onkelos Num 24:11", "Onkelos Num 24:12", "Onkelos Num 24:13"])
+
+# -------------------------- Num.24.11 · ETNACHTA_SPLIT ---------------------
+# ‹ועתה ברח לך› (“and-now bolt to-you/your”)
+# ‹אל מקומך … אמרתי› (“to place-you/your … say”)
+# ‹כבד אכבדך והנה› (“be-heavy be-heavy-you/your and-behold”)
+# ‹מנעך יהוה מכבוד› (“debar-from-benefit-you/your YHWH from-weight”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:11."
+m.step("Num.24.11")
+
+# -------------------------- Num.24.12 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר בלעם אל› (“and-say Balaam to”)
+# ‹בלק … הלא גם› (“Balak … is-it-not also”)
+# ‹אל מלאכיך אשר› (“to messenger-you/your which”)
+# ‹שלחת אלי דברתי› (“send to-me/my speak”)
+# ‹לאמר› (“to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:12."
+m.step("Num.24.12")
+
+# -------------------------- Num.24.13 · COND_אם (“if”) ---------------------
+# ‹אם יתן לי› (“if set to-me/my”)
+# ‹בלק מלא ביתו› (“Balak fulness house-him/its”)
+# ‹כסף וזהב לא› (“silver and-gold not”)
+# ‹אוכל לעבר את› (“be-able to-pass-over obj-marker”)
+# ‹פי יהוה לעשו› (“mouth YHWH to-Esau”)
+# ‹… אשר ידבר יהוה› (“which speak YHWH”)
+# ‹אתו אדבר› (“obj-marker-him/its speak”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:13."
+m.step("Num.24.13")
+
+# -------------------------- Num.24.14 · ETNACHTA_SPLIT ---------------------
+# ‹ועתה הנני הולך› (“and-now lo!-me/my walk/go”)
+# ‹לעמי … לכה איעצך› (“to-people-me/my … go-ward advise-you/your”)
+# ‹אשר יעשה העם› (“which make the-people”)
+# ‹הזה לעמך באחרית› (“the-this to-people-you/your in-last”)
+# ‹הימים› (“the-day”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:14."
+m.step("Num.24.14")
+# witness-tier presupposed read: the_fruit_at_31_16_the_end_of_days on
+# i_will_counsel_you — read, not installed
+m.witness_read("i_will_counsel_you", "the_fruit_at_31_16_the_end_of_days",
+                cites=["Onkelos Num 24:14"])
+
+# -------------------------- Num.24.15 · ETNACHTA_SPLIT ---------------------
+# ‹וישא משלו ויאמר› (“and-lift/carry pithy-maxim-him/its and-say”)
+# ‹… נאם בלעם בנו› (“oracle Balaam son-him/its”)
+# ‹בער ונאם הגבר› (“Beor and-oracle the-valiant-man”)
+# ‹שתם העין› (“unveil the-eye”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:15."
+m.step("Num.24.15")
+# witness-tier presupposed read: the_most_high_jeremiah_fuses_the_messiah on
+# the_star_and_the_scepter — read, not installed
+m.witness_read("the_star_and_the_scepter", "the_most_high_jeremiah_fuses_the_messiah",
+                cites=["Onkelos Num 24:15", "Onkelos Num 24:16", "Onkelos Num 24:17"])
+
+# -------------------------- Num.24.16 · ETNACHTA_SPLIT ---------------------
+# ‹נאם שמע אמרי› (“oracle hear something-said”)
+# ‹אל וידע דעת› (“strength and-know knowledge”)
+# ‹עליון … מחזה שדי› (“Most-High … vision Almighty”)
+# ‹יחזה נפל וגלוי› (“gaze-at fall and-denude”)
+# ‹עינים› (“eye”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:16."
+m.step("Num.24.16")
+
+# -------------------------- Num.24.17 · ETNACHTA_SPLIT ---------------------
+# ‹אראנו ולא עתה› (“see-him/its and-not now”)
+# ‹אשורנו ולא קרוב› (“spy-out-him/its and-not near”)
+# ‹… דרך כוכב מיעקב› (“tread stars from-Jacob”)
+# ‹וקם שבט מישראל› (“and-arise scion from-Israel”)
+# ‹ומחץ פאתי מואב› (“and-dash-asunder mouth-in-a-figurative-sense Moab”)
+# ‹וקרקר כל בני› (“and-trench all son”)
+# ‹שת› (“Sheth”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:17."
+m.step("Num.24.17")
+
+# -------------------------- Num.24.18 · ETNACHTA_SPLIT ---------------------
+# ‹והיה אדום ירשה› (“and-be Edom occupancy”)
+# ‹והיה ירשה שעיר› (“and-be occupancy Seir”)
+# ‹איביו … וישראל עשה› (“hating-him/its … and-Israel make”)
+# ‹חיל› (“force”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:18."
+m.step("Num.24.18")
+# witness-tier presupposed read: the_creations_verb_the_sela_closed_kayin on
+# edom_amalek_the_kenite — read, not installed
+m.witness_read("edom_amalek_the_kenite", "the_creations_verb_the_sela_closed_kayin",
+                cites=["Onkelos Num 24:18", "Onkelos Num 24:19", "Onkelos Num 24:20", "Onkelos Num 24:21", "Onkelos Num 24:22"])
+
+# -------------------------- Num.24.19 · ETNACHTA_SPLIT ---------------------
+# ‹וירד מיעקב … והאביד› (“and-rule-over from-Jacob … and-wander-away”)
+# ‹שריד מעיר› (“survivor from-city”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:19."
+m.step("Num.24.19")
+
+# -------------------------- Num.24.20 · ETNACHTA_SPLIT ---------------------
+# ‹וירא את עמלק› (“and-see obj-marker Amalek”)
+# ‹וישא משלו ויאמר› (“and-lift/carry pithy-maxim-him/its and-say”)
+# ‹… ראשית גוים עמלק› (“beginning nation Amalek”)
+# ‹ואחריתו עדי אבד› (“and-last-him/its terminus wretched”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:20."
+m.step("Num.24.20")
+
+# -------------------------- Num.24.21 · ETNACHTA_SPLIT ---------------------
+# ‹וירא את הקיני› (“and-see obj-marker the-Kenite”)
+# ‹וישא משלו ויאמר› (“and-lift/carry pithy-maxim-him/its and-say”)
+# ‹… איתן מושבך ושים› (“permanence seat-you/your and-put/set”)
+# ‹בסלע קנך› (“in-craggy-rock nest-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:21."
+m.step("Num.24.21")
+
+# -------------------------- Num.24.22 · COND_כי (“very-widely-used-as-a-relati”) -
+# ‹כי אם יהיה› (“very-widely-used-as-a-relati as-demonstrative be”)
+# ‹לבער קין … עד› (“to-kindle Cain … until”)
+# ‹מה אשור תשבך› (“what Asshur transport-into-captivity-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:22."
+m.step("Num.24.22")
+
+# -------------------------- Num.24.23 · ETNACHTA_SPLIT ---------------------
+# ‹וישא משלו ויאמר› (“and-lift/carry pithy-maxim-him/its and-say”)
+# ‹… אוי מי יחיה› (“lamentation who? live”)
+# ‹משמו אל› (“from-put/set-him/its strength”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:23."
+m.step("Num.24.23")
+# witness-tier presupposed read: daniel_quotes_rome_the_retellings on
+# ships_from_kittim — read, not installed
+m.witness_read("ships_from_kittim", "daniel_quotes_rome_the_retellings",
+                cites=["Onkelos Num 24:23", "Onkelos Num 24:24", "Onkelos Num 24:25"])
+
+# -------------------------- Num.24.24 · ETNACHTA_SPLIT ---------------------
+# ‹וצים מיד כתים› (“and-ship from-hand Chittim”)
+# ‹וענו אשור וענו› (“and-afflict-literally Asshur and-afflict-literally”)
+# ‹עבר … וגם הוא› (“Eber … and-also he/it”)
+# ‹עדי אבד› (“terminus wretched”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:24."
+m.step("Num.24.24")
+
+# -------------------------- Num.24.25 · ETNACHTA_SPLIT ---------------------
+# ‹ויקם בלעם וילך› (“and-arise Balaam and-go”)
+# ‹וישב למקמו … וגם› (“and-return to-place-him/its … and-also”)
+# ‹בלק הלך לדרכו› (“Balak walk/go to-way/road-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 24:25."
+m.step("Num.24.25")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('no_more_divinations', 'samsons_clause_the_spirit_of_god'), ('the_utterance_of_balaam', 'davids_form_abrahams_vision_shaddai'), ('how_goodly_are_your_tents', 'psalm_84_the_aloes_the_land'), ('water_from_his_buckets', 'meribahs_many_waters_agag'), ('el_brings_him_out', 'one_letter_judahs_lion_isaacs_blessing_reversed'), ('balak_clapped', 'three_times_the_honor_revoked_the_formula_sixth'), ('i_will_counsel_you', 'the_fruit_at_31_16_the_end_of_days'), ('the_star_and_the_scepter', 'the_most_high_jeremiah_fuses_the_messiah'), ('edom_amalek_the_kenite', 'the_creations_verb_the_sela_closed_kayin'), ('ships_from_kittim', 'daniel_quotes_rome_the_retellings')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Num 24:1', 'Onkelos Num 24:2']
+    assert all('samsons_clause_the_spirit_of_god' not in f for f in m.WORLD["facts"])
+    assert 'no_more_divinations' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Num 24:3', 'Onkelos Num 24:4']
+    assert all('davids_form_abrahams_vision_shaddai' not in f for f in m.WORLD["facts"])
+    assert 'the_utterance_of_balaam' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Num 24:5', 'Onkelos Num 24:6']
+    assert all('psalm_84_the_aloes_the_land' not in f for f in m.WORLD["facts"])
+    assert 'how_goodly_are_your_tents' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Num 24:7']
+    assert all('meribahs_many_waters_agag' not in f for f in m.WORLD["facts"])
+    assert 'water_from_his_buckets' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Num 24:8', 'Onkelos Num 24:9']
+    assert all('one_letter_judahs_lion_isaacs_blessing_reversed' not in f for f in m.WORLD["facts"])
+    assert 'el_brings_him_out' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Num 24:10', 'Onkelos Num 24:11', 'Onkelos Num 24:12', 'Onkelos Num 24:13']
+    assert all('three_times_the_honor_revoked_the_formula_sixth' not in f for f in m.WORLD["facts"])
+    assert 'balak_clapped' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Onkelos Num 24:14']
+    assert all('the_fruit_at_31_16_the_end_of_days' not in f for f in m.WORLD["facts"])
+    assert 'i_will_counsel_you' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Onkelos Num 24:15', 'Onkelos Num 24:16', 'Onkelos Num 24:17']
+    assert all('the_most_high_jeremiah_fuses_the_messiah' not in f for f in m.WORLD["facts"])
+    assert 'the_star_and_the_scepter' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Num 24:18', 'Onkelos Num 24:19', 'Onkelos Num 24:20', 'Onkelos Num 24:21', 'Onkelos Num 24:22']
+    assert all('the_creations_verb_the_sela_closed_kayin' not in f for f in m.WORLD["facts"])
+    assert 'edom_amalek_the_kenite' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Num 24:23', 'Onkelos Num 24:24', 'Onkelos Num 24:25']
+    assert all('daniel_quotes_rome_the_retellings' not in f for f in m.WORLD["facts"])
+    assert 'ships_from_kittim' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: num_25_peor_pinchas
+###############################################################################
+
+m = Machine("num_25_peor_pinchas")
+
+# -------------------------- Num.25.1 · ETNACHTA_SPLIT ----------------------
+# ‹וישב ישראל בשטים› (“and-dwell/sit Israel in-Shittim”)
+# ‹… ויחל העם לזנות› (“and-bore the-people to-commit-adultery”)
+# ‹אל בנות מואב› (“to daughter Moab”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:1."
+m.step("Num.25.1")
+# witness-tier presupposed read: the_timber_the_spec_and_its_run_the_wine on
+# israel_dwelt_in_shittim — read, not installed
+m.witness_read("israel_dwelt_in_shittim", "the_timber_the_spec_and_its_run_the_wine",
+                cites=["Sifrei Bamidbar 131:1", "Sifrei Bamidbar 131:2", "Onkelos Num 25:1", "Onkelos Num 25:2"])
+
+# -------------------------- Num.25.2 · ETNACHTA_SPLIT ----------------------
+# ‹ותקראן לעם לזבחי› (“and-call to-people to-sacrifice”)
+# ‹אלהיהן … ויאכל העם› (“God-them/their … and-eat the-people”)
+# ‹וישתחוו לאלהיהן› (“and-afflict to-God-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:2."
+m.step("Num.25.2")
+
+# -------------------------- Num.25.3 · ETNACHTA_SPLIT ----------------------
+# ‹ויצמד ישראל לבעל› (“and-link Israel to”)
+# ‹פעור … ויחר אף› (“Baal-peor … and-glow nose”)
+# ‹יהוה בישראל› (“YHWH in-Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:3."
+m.step("Num.25.3")
+# witness-tier presupposed read: the_lids_word_hang_them_the_judges on
+# israel_yoked_itself — read, not installed
+m.witness_read("israel_yoked_itself", "the_lids_word_hang_them_the_judges",
+                cites=["Sifrei Bamidbar 131:2", "Onkelos Num 25:3", "Onkelos Num 25:4", "Onkelos Num 25:5"])
+
+# -------------------------- Num.25.4 · ETNACHTA_SPLIT ----------------------
+# ‹ויאמר יהוה אל› (“and-say YHWH to”)
+# ‹משה קח את› (“Moses take obj-marker”)
+# ‹כל ראשי העם› (“all head the-people”)
+# ‹והוקע אותם ליהוה› (“and-sever-oneself obj-marker-them/their to-YHWH”)
+# ‹נגד השמ … וישב› (“front ? … and-return”)
+# ‹חרון אף יהוה› (“burning-of-anger nose YHWH”)
+# ‹מישראל› (“from-Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:4."
+m.step("Num.25.4")
+
+# -------------------------- Num.25.5 · ETNACHTA_SPLIT ----------------------
+# ‹ויאמר משה אל› (“and-say Moses to”)
+# ‹שפטי ישראל … הרגו› (“judge Israel … smite-with-deadly-intent”)
+# ‹איש אנשיו הנצמדים› (“man man-him/its the-link”)
+# ‹לבעל פעור› (“to Baal-peor”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:5."
+m.step("Num.25.5")
+
+# -------------------------- Num.25.6 · ETNACHTA_SPLIT ----------------------
+# ‹והנה איש מבני› (“and-behold man from-son”)
+# ‹ישראל בא ויקרב› (“Israel come/bring and-bring-near”)
+# ‹אל אחיו את› (“to brother-him/its obj-marker”)
+# ‹המדינית לעיני משה› (“the-Midjanite to-eye Moses”)
+# ‹ול … והמה בכים› (“? … and-they weep”)
+# ‹פתח אהל מועד› (“opening tent seasons”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:6."
+m.step("Num.25.6")
+# witness-tier presupposed read: the_offering_verb_the_door on
+# a_man_brought_near — read, not installed
+m.witness_read("a_man_brought_near", "the_offering_verb_the_door",
+                cites=["Onkelos Num 25:6"])
+
+# -------------------------- Num.25.7 · ETNACHTA_SPLIT ----------------------
+# ‹וירא פינחס בן› (“and-see Phinehas son”)
+# ‹אלעזר בן אהרן› (“Eleazar son Aaron”)
+# ‹הכהן … ויקם מתוך› (“the-priest … and-arise from-midst”)
+# ‹העדה ויקח רמח› (“the-congregation and-take lance”)
+# ‹בידו› (“in-hand-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:7."
+m.step("Num.25.7")
+# witness-tier presupposed read: korachs_phrase_the_spear on phinehas_rose —
+# read, not installed
+m.witness_read("phinehas_rose", "korachs_phrase_the_spear",
+                cites=["Sifrei Bamidbar 131:2", "Sifrei Bamidbar 131:3", "Onkelos Num 25:7"])
+
+# -------------------------- Num.25.8 · ETNACHTA_SPLIT ----------------------
+# ‹ויבא אחר איש› (“and-come/bring after man”)
+# ‹ישראל אל הקבה› (“Israel to the-pavilion”)
+# ‹וידקר את שניהם› (“and-stab obj-marker two-them/their”)
+# ‹את איש ישראל› (“obj-marker man Israel”)
+# ‹ואת ה … ותעצר› (“and-obj-marker the … and-close”)
+# ‹המגפה מעל בני› (“the-pestilence from-over son”)
+# ‹ישראל› (“Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:8."
+m.step("Num.25.8")
+# witness-tier presupposed read:
+# the_curse_skin_both_of_them_the_plague_stayed on into_the_alcove — read,
+# not installed
+m.witness_read("into_the_alcove", "the_curse_skin_both_of_them_the_plague_stayed",
+                cites=["Sifrei Bamidbar 131:3", "Onkelos Num 25:8"])
+
+# -------------------------- Num.25.9 · ETNACHTA_SPLIT ----------------------
+# ‹ויהיו המתים במגפה› (“and-be the-die in-pestilence”)
+# ‹… ארבעה ועשרים אלף› (“four and-twenty thousand”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:9."
+m.step("Num.25.9")
+# witness-tier presupposed read: korachs_formula_simeons_fall on
+# twenty_four_thousand — read, not installed
+m.witness_read("twenty_four_thousand", "korachs_formula_simeons_fall",
+                cites=["Onkelos Num 25:9"])
+
+# -------------------------- Num.25.10 · TREE_CLAIM -------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:10."
+m.step("Num.25.10")
+# witness-tier presupposed read: the_sotahs_zeal_word on
+# turned_back_my_wrath — read, not installed
+m.witness_read("turned_back_my_wrath", "the_sotahs_zeal_word",
+                cites=["Sifrei Bamidbar 131:3", "Onkelos Num 25:10", "Onkelos Num 25:11"])
+
+# -------------------------- Num.25.11 · ETNACHTA_SPLIT ---------------------
+# ‹פינחס בן אלעזר› (“Phinehas son Eleazar”)
+# ‹בן אהרן הכהן› (“son Aaron the-priest”)
+# ‹השיב את חמתי› (“return obj-marker heat-me/my”)
+# ‹מעל בני ישראל› (“from-over son Israel”)
+# ‹בקנאו … ולא כליתי› (“in-be-zealous-him/its … and-not be-complete”)
+# ‹את בני ישראל› (“obj-marker son Israel”)
+# ‹בקנאתי› (“in-jealousy-me/my”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:11."
+m.step("Num.25.11")
+
+# -------------------------- Num.25.12 · ETNACHTA_SPLIT ---------------------
+# ‹לכן אמר … הנני› (“to-so say … lo!-me/my”)
+# ‹נתן לו את› (“set to-him/its obj-marker”)
+# ‹בריתי שלום› (“covenant-me/my safe”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:12."
+m.step("Num.25.12")
+# witness-tier presupposed read:
+# everlasting_priesthood_aarons_verb_the_tense on my_covenant_of_peace —
+# read, not installed
+m.witness_read("my_covenant_of_peace", "everlasting_priesthood_aarons_verb_the_tense",
+                cites=["Sifrei Bamidbar 131:4", "Sifrei Bamidbar 131:5", "Onkelos Num 25:12", "Onkelos Num 25:13"])
+
+# -------------------------- Num.25.13 · ETNACHTA_SPLIT ---------------------
+# ‹והיתה לו ולזרעו› (“and-be to-him/its and-to-seed-him/its”)
+# ‹אחריו ברית כהנת› (“after-him/its covenant priesthood”)
+# ‹עולם … תחת אשר› (“forever … under which”)
+# ‹קנא לאלהיו ויכפר› (“be-zealous to-God-him/its and-atone”)
+# ‹על בני ישראל› (“over son Israel”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:13."
+m.step("Num.25.13")
+
+# -------------------------- Num.25.14 · ETNACHTA_SPLIT ---------------------
+# ‹ושם איש ישראל› (“and-name man Israel”)
+# ‹המכה אשר הכה› (“the-strike which strike”)
+# ‹את המדינית זמרי› (“with the-Midjanite Zimri”)
+# ‹בן סלוא … נשיא› (“son Sallai … prince”)
+# ‹בית אב לשמעני› (“house father to-Shimonite”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:14."
+m.step("Num.25.14")
+# witness-tier presupposed read: zur_of_the_five_kings_the_peoples on
+# zimri_and_cozbi_named — read, not installed
+m.witness_read("zimri_and_cozbi_named", "zur_of_the_five_kings_the_peoples",
+                cites=["Onkelos Num 25:14", "Onkelos Num 25:15"])
+
+# -------------------------- Num.25.15 · ETNACHTA_SPLIT ---------------------
+# ‹ושם האשה המכה› (“and-name the-woman the-strike”)
+# ‹המדינית כזבי בת› (“the-Midjanite Cozbi daughter”)
+# ‹צור … ראש אמות› (“Zur … head collection”)
+# ‹בית אב במדין› (“house father in-Midian”)
+# ‹הוא› (“he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:15."
+m.step("Num.25.15")
+
+# -------------------------- Num.25.16 · TREE_CLAIM -------------------------
+# ‹וידבר יהוה … אל› (“and-speak YHWH … to”)
+# ‹משה לאמר› (“Moses to-say”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:16."
+m.step("Num.25.16")
+# witness-tier presupposed read: hamans_title_the_broken_verse on
+# harass_the_midianites — read, not installed
+m.witness_read("harass_the_midianites", "hamans_title_the_broken_verse",
+                cites=["Onkelos Num 25:16", "Onkelos Num 25:17", "Onkelos Num 25:18", "Onkelos Num 25:19"])
+
+# -------------------------- Num.25.17 · ETNACHTA_SPLIT ---------------------
+# ‹צרור את המדינים› (“cramp obj-marker the-Midjanite”)
+# ‹… והכיתם אותם› (“and-strike obj-marker-them/their”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:17."
+m.step("Num.25.17")
+
+# -------------------------- Num.25.18 · COND_כי (“that”) -------------------
+# ‹כי צררים הם› (“that cramp they”)
+# ‹לכם בנכליהם אשר› (“to-you/your(pl) in-deceit-them/their which”)
+# ‹נכלו לכם על› (“defraud to-you/your(pl) over”)
+# ‹דבר פעור … ועל› (“word/thing Peor … and-over”)
+# ‹דבר כזבי בת› (“word/thing Cozbi daughter”)
+# ‹נשיא מדין אחתם› (“prince Midian sister-them/their”)
+# ‹המכה ביום המגפה› (“the-strike in-day the-pestilence”)
+# ‹על דבר פעור› (“over word/thing Peor”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:18."
+m.step("Num.25.18")
+
+# -------------------------- Num.25.19 · ETNACHTA_SPLIT ---------------------
+# ‹… אחרי המגפה› (“after the-pestilence”)
+# "[EN-AID] From top split: LEFT «» / RIGHT «…». Derive claim from Hebrew
+# arms. Num 25:19."
+m.step("Num.25.19")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('israel_dwelt_in_shittim', 'the_timber_the_spec_and_its_run_the_wine'), ('israel_yoked_itself', 'the_lids_word_hang_them_the_judges'), ('a_man_brought_near', 'the_offering_verb_the_door'), ('phinehas_rose', 'korachs_phrase_the_spear'), ('into_the_alcove', 'the_curse_skin_both_of_them_the_plague_stayed'), ('twenty_four_thousand', 'korachs_formula_simeons_fall'), ('turned_back_my_wrath', 'the_sotahs_zeal_word'), ('my_covenant_of_peace', 'everlasting_priesthood_aarons_verb_the_tense'), ('zimri_and_cozbi_named', 'zur_of_the_five_kings_the_peoples'), ('harass_the_midianites', 'hamans_title_the_broken_verse')]
+    assert m.WITNESS_READS[0]["cites"] == ['Sifrei Bamidbar 131:1', 'Sifrei Bamidbar 131:2', 'Onkelos Num 25:1', 'Onkelos Num 25:2']
+    assert all('the_timber_the_spec_and_its_run_the_wine' not in f for f in m.WORLD["facts"])
+    assert 'israel_dwelt_in_shittim' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Sifrei Bamidbar 131:2', 'Onkelos Num 25:3', 'Onkelos Num 25:4', 'Onkelos Num 25:5']
+    assert all('the_lids_word_hang_them_the_judges' not in f for f in m.WORLD["facts"])
+    assert 'israel_yoked_itself' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Num 25:6']
+    assert all('the_offering_verb_the_door' not in f for f in m.WORLD["facts"])
+    assert 'a_man_brought_near' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Sifrei Bamidbar 131:2', 'Sifrei Bamidbar 131:3', 'Onkelos Num 25:7']
+    assert all('korachs_phrase_the_spear' not in f for f in m.WORLD["facts"])
+    assert 'phinehas_rose' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Sifrei Bamidbar 131:3', 'Onkelos Num 25:8']
+    assert all('the_curse_skin_both_of_them_the_plague_stayed' not in f for f in m.WORLD["facts"])
+    assert 'into_the_alcove' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Num 25:9']
+    assert all('korachs_formula_simeons_fall' not in f for f in m.WORLD["facts"])
+    assert 'twenty_four_thousand' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[6]["cites"] == ['Sifrei Bamidbar 131:3', 'Onkelos Num 25:10', 'Onkelos Num 25:11']
+    assert all('the_sotahs_zeal_word' not in f for f in m.WORLD["facts"])
+    assert 'turned_back_my_wrath' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[7]["cites"] == ['Sifrei Bamidbar 131:4', 'Sifrei Bamidbar 131:5', 'Onkelos Num 25:12', 'Onkelos Num 25:13']
+    assert all('everlasting_priesthood_aarons_verb_the_tense' not in f for f in m.WORLD["facts"])
+    assert 'my_covenant_of_peace' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[8]["cites"] == ['Onkelos Num 25:14', 'Onkelos Num 25:15']
+    assert all('zur_of_the_five_kings_the_peoples' not in f for f in m.WORLD["facts"])
+    assert 'zimri_and_cozbi_named' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[9]["cites"] == ['Onkelos Num 25:16', 'Onkelos Num 25:17', 'Onkelos Num 25:18', 'Onkelos Num 25:19']
+    assert all('hamans_title_the_broken_verse' not in f for f in m.WORLD["facts"])
+    assert 'harass_the_midianites' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
 
 

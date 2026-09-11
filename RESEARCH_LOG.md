@@ -1570,3 +1570,641 @@ export is evidence and is not edited — the heads are found by position
 other heads in the export carry no parsable verse at all (piska 59
 opens without a citation; piska 102 cites "Ibid. 4" — measured), and
 the same rule covers them: their place is their address.
+
+## 2026-09-09 — TWO MORE MISTYPED HEADS IN THE SIFREI'S EXPORT (the same defect class,
+## found by the ledger script at THE NUMBERS WALK sitting 2 — Naso)
+
+The Sefaria export of the Sifrei on Numbers (Data/sefaria_export/
+Sifrei_Bamidbar/en.json) heads its piska 19 "(Bamidbar 5:298)" and its
+piska 34 "(Bamidbar 6:150" — a stray trailing digit in each. By POSITION
+piska 19 sits between 18 (headed 5:27) and 20 (headed 5:29) and opens on
+"And if the woman had not been defiled and she be clean" — the row on
+5:28; piska 34 sits between 33 (6:14) and 35 (6:18) and opens on "And a
+basket of unleavened bread" — the row on 6:15. Measured at the sitting:
+piskaot 1-58 head inside 5:1-7:89 in monotone order once the two digits
+are corrected; piska 59 opens without a citation (the menorah, 8:1-4).
+Consequences as before: the heads are FOUND BY POSITION and asserted
+between their neighbors (naso_ink.py's HEAD_FIX table names the two);
+the export is evidence and is not edited; the rows are read at their
+verses (num_05_sotah's and num_06_nazir's ledgers).
+
+## 2026-09-10 — A THIRD MISTYPED HEAD, AND A MISTYPED NUMERAL, IN THE SIFREI'S EXPORT
+## (the same defect class, found by the ledger script at THE NUMBERS WALK sitting 3 — Beha'alotcha)
+
+The Sefaria export of the Sifrei on Numbers (Data/sefaria_export/
+Sifrei_Bamidbar/en.json) heads its piska 80 "(Bamidbar 10:30)" — the
+same verse as piska 79's head. By POSITION piska 80 sits between 79
+(headed 10:30, "I will not go; but to my land") and 81 (headed 10:32,
+"if you go with us"), and it opens on "And he said: I pray you, do not
+leave us" — the words of 10:31. It is the row on Numbers 10:31 with the
+verse digit mistyped (the monotone-by-position check cannot catch a head
+equal to its predecessor's; the row's opening words do). Measured at
+the sitting beside it: piska 59 opens without a citation (the row on
+8:2, between 58 on 7:89 and 60 on 8:3) and piska 102 is headed
+"(Bamidbar, Ibid. 4)" (12:4, between 101 on 12:3 and 103 on 12:6) — both
+placed by position as the rule says. And a NUMERAL: piska 81's row
+quotes 1 Kings 6:1 as "the four hundred and eighteenth year of the
+exodus"; the ink says four hundred and eighty (the engine's parser reads
+[480] on 1 Kings 6:1), and the row's own arithmetic — "deduct forty
+years for the desert, and they ate of that land four hundred and forty
+years" — fits 480, not 418. The export's numeral is mistyped; the
+shelf's text stands as it is (as its 57:1 omitting the sixty he-goats
+stands). Consequences as before: the heads are FOUND BY POSITION and
+asserted between their neighbors (beha_ink.py's HEAD_FIX names 59, 62,
+80 and 102); the export is evidence and is not edited; the rows are read
+at their verses (num_10_trumpets_depart's ledger).
+
+## 2026-09-10 — THREE MEASUREMENTS AT THE COMPILE OF NASO (THE NUMBERS WALK
+## sitting 2b): a homograph the tagger cannot split, the doubled day-word, and
+## the frame census against the Sifrei's thirteen
+
+(1) THE HOMOGRAPH THE POINTS AND THE MORPHOLOGY CANNOT SPLIT. The
+construct "two of" (שְׁנֵי, "two of" — Num 7:3's "a wagon for TWO
+princes"; Lev 8:2's "the TWO rams"; Gen 19:15's "your TWO daughters",
+feminine שְׁתֵּי) and "the years of" (שְׁנֵי, "the years of" — Gen
+25:7 "the days of the years of Abraham's life", 41:47 "the seven years
+of plenty", 47:28, Exod 6:16 "the years of Levi's life", Lev 25:15 "the
+years of produce") are ONE consonantal string with ONE set of points
+(a sheva under the shin, a tsere under the nun) AND one morphology tag
+in the OSHB export (HAcmdc — a construct masculine dual-or-plural
+noun): neither the vowels nor the tagger tells them apart. The parser's
+construct rule, added at this sitting for the seven "two of" seats the
+sitting-2 reading measured, first read every "the years of" as 2 — the
+corpus-wide diff (the tool naso_parser_diff.py, run BEFORE the rule was
+kept) showed the five Genesis-Exodus-Leviticus verses moved. The rule
+now decides by the NEIGHBORS: a preceding "the days of" (יְמֵי), or a
+following "the life of" (חַיֵּי), "the plenty" (הַשָּׂבָע), "famine"
+(רָעָב / הָרָעָב), "his sojourning" (מְגוּרָי), "produce" (תְּבוּאֹת),
+"his sale" (מִמְכָּרוֹ), (שָׂכִיר) "a hireling" — marks the word as a
+year-word that keeps a number phrase open; after a year-word only a
+vav-prefixed numeral continues the number (Gen 31:41 "these twenty
+years... fourteen years... and six years" and Deut 1:3 "in the fortieth
+year" had fused across it). Consequence for the machine: a lexical
+homograph decided by context is a MODEL PARAMETER (the neighbor list is
+data, extended as the walk finds seats); the residue after the rule is
+one poetic verse off the tape (Deut 32:30 "one chase a thousand" read
+[1, 1002]). (2) THE DOUBLED DAY-WORD. Num 7:12-78's twelve day-heads
+are measured on the ink: the first ten carry only the prefixed "on the
+day" (בַּיּוֹם); 7:72 and 7:78 carry a second, bare "day" (יוֹם) after
+their numerals — "on the eleventh day, day" / "on the twelfth day, day"
+— the doubling the Sifrei reads. The runner's DAY_TOKENS census is
+{12: 0, 72: 1, 78: 1}; the hand had typed 1/2/2 (counting the prefixed
+word) and the first run corrected it — the assertion retyped from the
+reading, the note beside it. (3) THE FRAME CENSUS AGAINST THE SIFREI'S
+THIRTEEN. Sifrei 58:1 on Num 7:89 counts thirteen utterances "to Moses
+and to Aaron" against thirteen exclusions of Aaron. The ink, Exodus
+through Numbers: the bare string "to Moses and to Aaron" (אֶל מֹשֶׁה
+וְאֶל אַהֲרֹן) at NINETEEN verses; with the LORD as speaker ("and the
+LORD spoke / said to Moses and to Aaron") at SIXTEEN (Exod 6:13, 7:8,
+9:8, 12:1; Lev 11:1, 13:1, 14:33, 15:1; Num 2:1, 4:1, 4:17, 14:26,
+16:20, 19:1, 20:12, 20:23) — eleven with "spoke" and five with "said";
+no simple census yields thirteen. This is the tradition's own counting
+problem (the Ra'avad on the Sifra's opening piska counts the seats and
+reconciles), not the machine's: the sequential tape's checkpoint CD8
+declares the Sifrei's 13 against the computed 16 and is filed OPEN as
+an expected DIVERGE; the runner's voice('exclusions') cell reports the
+raw count beside the Sifrei's number. Nothing on the shelf is edited.
+
+## 2026-09-10 — THE SEVEN-STEM'S FOUR HOMOGRAPHS, THE BLOCK THAT CANNOT CLOSE, AND
+## THE INCLUSIVE COUNT (THE NUMBERS WALK sitting 3b — the compile of Beha'alotcha)
+
+(1) FOUR FALSE READINGS OF ONE CONSONANTAL STEM, found by the sitting's
+own corpus-wide diff. The parser was taught the dual noun (יומים "two
+days", אמתים "two cubits"), the suffixed numeral (שניהם "the two of
+them", שלשתכם "the three of you") and "and a half" after a numeral; the
+diff over every verse of the five books, read verse by verse, moved 49
+verses for those rules — and among them Exod 22:10 read [7, 2] and Gen
+21:31 [7, 2], where the 7 was NOT this sitting's: שְׁבֻעַת "the OATH of
+the LORD" and בְּאֵר שָׁבַע "BEER-SHEBA" had been read as "seven" since
+the parser's first day. A second measurement over the four books found
+the whole class: the consonants שבע carry (a) "seven" (שֶׁבַע, שִׁבְעָה,
+שִׁבְעַת — a sheva or a patah under the vet), (b) "sated / plenty"
+(שָׂבָע, שָׂבֵעַ, לָשֹׂבַע — the SIN DOT on the shin: eighteen seats,
+Gen 41:29's "seven years of great PLENTY" read [7, 7] among them), (c)
+"oath / week / weeks" (שְׁבֻעָה, שְׁבֻעַת, שָׁבֻעֹת, שְׁבֻעַ — a QUBUTS
+under the vet: Deut 16:9's "seven WEEKS... seven WEEKS" read [14, 7]),
+(d) the ordinal "seventh" spelled defectively (שְּׁבִעִת, Exod 21:2 — a
+HIRIQ under the vet), and (e) the names Beer-sheba (ten seats, after
+"well") and Shibah (Gen 26:33, after "he called it"). Rules by the
+points on the stem and by a neighbor (the 1b law) were typed to FAIL on
+seventeen probe rows first, then built; the corpus-wide diff after them
+moved 80 verses in all, every one read; two OLD marker rows of the
+sequential tape typed before these rules (Gen 28:10 "from Beer-sheba",
+Gen 29:28 "fulfilled the week of this one") carried [7] and were retyped
+from the reading. Consequence for the machine: the numeral reader's
+table of consonantal keys is UNSAFE without the points — every numeral
+key with a common-word homograph (seven / sated / oath / week; two /
+years of; hundred / from; one / God-to) is now split by its vowel or
+its neighbor, and the diff is run corpus-wide after every rule. The
+residue named and not read: the singular unit noun as one ("a cubit and
+a half" stays silent), and the plain "hundred" (מֵאָה) beside Beer-sheba's
+class of names built on numerals. (2) THE BLOCK THAT CANNOT CLOSE. The
+tape's first run wrote Miriam's halt ("the people did not journey until
+Miriam was gathered in", 12:15) as a BLOCK effect and closed it at
+12:16 — and the run's closes fell one short of the prediction while the
+checkpoint's closed_day was None: the engine writes a block CLOSED from
+the start (a standing prohibition has no open state), so close() finds
+nothing to end. A halt that the text ends is a WAIT OWED — a debit the
+journey pays. The effect's ledger op was changed to debit with the
+reading in its note; the prediction then held. A lesson for the
+vocabulary: the op is chosen by whether the text later ENDS the entry
+(debit / body / heaven), not by whether the entry forbids. (3) THE
+INCLUSIVE COUNT, TWICE. The checkpoint CE1 declared the twentieth of
+Iyar "fifty days after the erection" and the engine computed forty-nine
+(Nisan's thirty plus nineteen) — the hand had counted the first day
+in, as the gemara itself does at Taanit 29a:5 ("forty days minus one")
+and as Seder Olam counts the month of flesh from the twenty-third of
+Iyar to the twenty-second of Sivan with a full Iyar (thirty days
+inclusive). The engine's month timer from (2, 2, 23) fired at (2, 3, 24)
+against the shelf's Hazeroth marker at the twenty-second — a two-day
+DIVERGE filed OPEN (CE3), the tradition's own arithmetic; the three
+days' journey and Miriam's seven both MATCHED their markers (CE2, CE4)
+because those durations are counted exclusively by the shelf itself.
+The lesson: a duration stated by the tradition is inclusive unless it
+counts a walk; the machine's timers are exclusive; the difference is one
+day per stated span and is recorded, never absorbed. (4) A SHARED KIND
+AT ITS SECOND SEAT. The erection runner's lamps_raised kind (Exod 40:25)
+is the verb of Num 8:3 ("he raised its lamps"); law_erection consumed
+the Beha'alotcha line too and would have written the lampstand's
+arranging and its morrow timer a second time — the sequential run's
+double-write pair for the lampstand would have moved from 2 to 4. The
+branch was guarded to its own span (O8 S4's shared-kind lesson at its
+fifth instance); law_beha writes Aaron's own lighting. The cloud_lifted
+kind at 10:11 is the OPPOSITE case: the erection's standing rule ("when
+the cloud lifts they journey", Exod 40:36) fires at its first run by
+design, and the camp's entry is that daemon's write, predicted as such.
+
+## 2026-09-10 — THE SHELF SILENT ON TWO CHAPTERS, A FOURTH MISTYPED HEAD, THE FRACTION
+## CLASS, AND THE TRANSLATION READING THE FIRST SEAT INTO THE SECOND (THE NUMBERS WALK
+## sitting 4 — Shelach's reading)
+
+(1) THE SIFREI ON NUMBERS HAS NO PISKA ON CHAPTERS 13 OR 14 — asserted on every
+head of the export (the regex over each piska's first row): the heads run from 106
+on 12:14 to 107 on 15:2, and none names 13, 14, 16 or 17 (Korach's the same). The
+spies and the decree are read on Onkelos alone; the law layer waits for the exam
+(Sotah 34-35; Taanit 29a; Sanhedrin 1:6). Recorded as the shelf's own silence, not
+a gap of ours.
+
+(2) THE FOURTH MISTYPED HEAD: piska 110 is headed "(Bamidbar 15:15-17)" but opens
+"And the L-rd spoke to Moses, saying: ... upon your coming to the land whither I
+bring you there" — 15:17-18's words — and its content is the challah (15:17-21);
+between 109 on 15:15 and 111 on 15:22 it is placed at 15:17 by position and by its
+opening quotation. The same defect class as 62 ("3:24" for 8:24), 80 ("10:30" for
+10:31), 19 ("5:298") and 34 ("6:150"). Beside it a translation slip in the same
+export: 107:1 renders "or as a freewill offering" once as "or as a guilt-offering";
+the ink's word is the freewill offering (bi-nedavah), and the row's own logic (the
+guilt-offering EXCLUDED from libations) shows the slip.
+
+(3) THE FRACTION IS A PARSER CLASS THE ENGINE DOES NOT READ: "a quarter of the hin"
+(15:4, 15:5), "a third" (15:6, 15:7), "a half" (15:9, 15:10) all return [] from
+ink_numbers; 3b's "and a half" rule fires only after a numeral. Measured over the
+Torah: the QUARTER is spelled six ways at the libation seats — reva (Exod 29:40,
+first token), revi'it defective (Exod 29:40, second token), revi'at (Lev 23:13; Num
+28:5, 28:7), be-rivi'it with its prefix (15:4), revi'it plene (15:5), u-revi'at
+(28:14) — while the same consonants carry "the fourth part of Israel" (Num 23:10)
+and king Reba (31:8); the THIRD two ways (shelishit defective at 15:6-7, plene with
+a prefix at 28:14); the HALF bare at 15:9, 15:10, 28:14 (and Miriam's "half his
+flesh", 12:12). With it the two residues named at 3b return on this chapter: THE
+UNIT NOUN "a tenth" (issaron, six seats — read as nothing, its plural "tenths"
+read only when a numeral precedes it) and THE DEFINITE ONE — "for the ONE lamb"
+(nine seats), "the one ox" (15:11), "the one ram" (five) unread. Owed to the
+compile (4b) with probes to FAIL and the corpus-wide diff.
+
+(4) THE TRANSLATION READS THE FIRST SEAT INTO THE SECOND. The ink of 14:18 is a
+pure deletion of Exod 34:6-7 (every token of 14:18 stands there in order; eleven
+dropped, none added — measured by a subsequence test). Onkelos 14:18, cut from the
+shelf's bytes, reads "forgiving iniquities and rebellion AND SINS" — THREE nouns
+where the ink has two — and carries "(and truth)" in brackets: the third noun is
+Onkelos Exod 34:7's own word (cut there too), the bracketed one a variant restoring
+Exodus' "and truth"; yet "the children's children", also dropped by the ink, is
+NOT restored (Onkelos Exod 34:7 has it; 14:18 does not). The harmonization is
+partial and measurable: the translation layer carrying the first seat's fuller
+formula into the second where the ink abridged it — the reverse direction of the
+ink's own M-23 delta. Beside it the translation carries the exam's readings as
+text: "pardoning those who RETURN to His Torah, and those who do not return He
+does not acquit" (Yoma 86a's resolution of "clearing He will not clear") and
+"upon REBELLIOUS children" (Berakhot 7a's condition).
+
+(5) A NAME BEFORE ITS NAMING, AND A NAME AFTER ITS RENAMING. "Unto Hormah" (14:45)
+precedes "and he called the name of the place Hormah" (21:3) by six chapters, and
+Judges 1:17 names it a third time — for the tape, a registry row that carries the
+naming verse beside the first seat (the proleptic name). And "Joshua" stands at
+eight seats before "Moses called Hoshea son of Nun Joshua" (13:16) — Exod 17:9-14,
+24:13, 32:17, 33:11; Num 11:28 — while "Hoshea son of Nun" returns at Deut 32:44:
+the renaming verse sits inside a text that uses both names on either side of it.
+For the registry: one entity, two names, each name's seats computed.
+
+(6) THE HAND'S FACTS, SIXTEEN OF THEM WRONG ON THE FIRST TYPED PASS after a
+measurement pass had already printed the candidates — nine slice indices and sort
+orders (a union sorted by book NAME puts Ezekiel before Leviticus), seven the
+hand's own: "the native-born" with its article at SIX seats in the Bible, not
+fifteen (9:14's carries a prefix); the bare loaf-word "challah" at THREE Torah
+seats, two of them "fell sick" (Gen 48:1; Deut 29:21) and one the dough-offering
+(15:20) — the loaves elsewhere construct or plural; "blasphemes" as a participle
+ONCE in the Bible (15:30 — the root Rabshakeh's at 2 Kgs 19:6 in another form);
+"break a covenant" at Isaiah 33:8 alone (Lev 26:44's with a prefix); Caleb's
+"followed fully" at Joshua 14:8 in a first-person form the union lacked; the
+vow-annulment root's ketiv at 32:7; "at your festivals" spelled two ways (15:3,
+29:39). Each retyped from the print.
+
+## 2026-09-10 — THE FRACTION TAUGHT, THE UNIT NOUN AS ONE, THE DEFINITE ONE, AND THREE
+## MORE HOMOGRAPHS THE DIFF SURFACED (THE NUMBERS WALK sitting 4b — Shelach's compile)
+
+(1) THE FRACTION BEFORE A MEASURE NOUN. Censused on the whole Tanakh DB before the rule:
+the quarter's numeral forms in the Torah are רֶבַע (a quarter), רְבִעִית (a quarter),
+רְבִיעִת (a quarter), בִּרְבִעִית (with a quarter), רְבִיעִית (a quarter) and וּרְבִיעִת (and
+a quarter) — six spellings at eight tokens, EVERY ONE followed by הַהִין (the hin); the
+third שְׁלִשִׁית (a third) and וּשְׁלִישִׁת (and a third) at three, all before the hin; the
+tenth-fraction עֲשִׂירִת (a tenth) and וַעֲשִׂירִית (and a tenth) at four, all before
+הָאֵפָה (the ephah); the half חֲצִי (half) and מַחֲצִית (half) before the hin or הַשֶּׁקֶל
+(the shekel) at seven. The rule reads a fraction ONLY when the next word is a measure
+noun; before anything else the same words stay words — the night (Exod 12:29, the
+exodus marker's own verse), the blood, the curtain, the tribe, and the homographs: Reba
+the Midianite king (Num 31:8), the fourth part of Israel (23:10 — a holam), the ordinal
+"the fourth" (Lev 19:24). The parser returns exact fractions (Python's Fraction), and
+the libation table is COMPUTED from 15:4-10: lamb 1/10 + 1/4 + 1/4, ram 2/10 + 1/3 +
+1/3, bull 3/10 + 1/2 + 1/2 — the same rows at Exod 29:40, Num 28:5-7 and 28:14 (asserted
+at import), the omer's lamb with its flour doubled (Lev 23:13 — Mishnah Menachot 9:4's
+own exception); in logs by the hin's twelve (the data channel's): 3, 4, 6.
+
+(2) THE UNIT NOUN AS ONE. A singular measure noun standing without a numeral counts
+one: עִשָּׂרוֹן (a tenth) at fourteen tokens (the doubled "a tenth, a tenth" the
+distributive — one; before its own numeral adjective silent: Num 29:4 "a tenth, ONE",
+Lev 14:21); the cubit אַמָּה (a cubit) told BY ITS POINTS — a patach under the alef and
+a dagesh in the mem — from the maidservant אָמָה (a maidservant; Exod 21:32, a qamats)
+and from "her mother" אִמָּהּ (her mother; Deut 21:13, a hiriq and a mappiq): "a cubit
+and a half" now 1.5 (Exod 25:10 = [2.5, 1.5, 1.5]) — 3b's named residue paid; the hin
+הִין (a hin) at Exod 30:24. The other bare measure nouns were censused and LEFT with
+their homographs named: the omer (Exod 16:16) beside the sheaf (Deut 24:19, the same
+word), the ephah (Deut 25:14) beside אֵיפֹה (where; Gen 37:16), the homer (Deut 32:14)
+beside the donkey and the clay, the bath beside the daughter at seventy seats, the
+gerah beside the cud (Lev 11), the shekel only after a numeral.
+
+(3) THE DEFINITE ONE. הָאֶחָד / הָאַחַת (the one) — 96 Torah tokens in 77 verses, none
+read before this sitting — counts one and CLOSES its phrase ("for the one lamb, for the
+seven lambs" = [1, 7]); before a numeral joined by the conjunction it JOINS instead:
+"until the ONE AND TWENTIETH day" (Exod 12:18) — the corpus-wide diff's one false
+reading on the first rule ([14, 1, 20]), probe F34 typed to FAIL and the join added.
+The answer sheet reads the very token (Menachot 91b:9: "for THE one lamb" includes the
+woman's olah, "THE one" the tithe's eleventh; 91b:20: the calf). Naso's totals moved:
+7:85 "a hundred and thirty THE ONE dish... seventy THE ONE bowl" now [130, 1, 70, 1,
+2400] — the runner's assertion, the probe R8 and checkpoint CD3 retyped from the
+reading.
+
+(4) THREE HOMOGRAPHS THE MEASUREMENT AND THE DIFF SURFACED, each told by the points:
+שִׁלֵּשִׁים (the third generation) — a hiriq under the shin, a dagesh and a tsere in the
+lamed — had read as שְׁלֹשִׁים (thirty) at FIVE seats (Gen 50:23; Exod 20:5, 34:7; Num
+14:18; Deut 5:9 — the Decalogue's and the attributes' own verses), and וּשְׁלִשִׁים (third
+stories; Gen 6:16) and וּשְׁלִשִׁים (they journey THIRD; Num 2:24 — Ephraim's camp) the
+same: only a holam under the lamed is thirty. שֵׁשַׁי (Sheshai the Anakite; Num 13:22 —
+a tsere) had read as the ordinal שִׁשִּׁי (sixth) — the ordinal reader's first named
+homograph. עַשֵּׂר (tithe; Gen 28:22, Deut 14:22) and לַעְשֵׂר (to tithe; Deut 26:12) — a
+patach or a sheva under the ayin — had read as עֶשֶׂר (ten; a segol); the tenth-day noun
+בֶּעָשֹׂר (on the tenth; Exod 12:3 — a qamats) stays ten. Thirty-four probes to FAIL,
+110/110 after; the diff 110 verses, every one read.
+
+(5) A TIMER'S SETTING IS NOT A LEDGER WRITE — its entry lands at the fire, and a
+pending timer has no entry on the ledger at all. The runner's first narrative run read
+it: the thirty-eight years set at the decree (due (40, 5, 9), past the tape's last
+marker) counted 0 on Israel's ledger and the writes were the nineteen non-timer effects
+plus the forty days' fire, not twenty-two; the prediction's two slots retyped, the RUN
+tuple's arithmetic corrected before the sequence ran.
+
+(6) THE KIND REUSED, CAUGHT BY THE REST. The spies' report was named report_given —
+the Joseph story's kind (Gen 42:29, the sons' report to Jacob), registered since O8; the
+types script added twenty-three of twenty-four kinds and the hand did not read the
+difference. THE REST (the tape minus the newest runner) came back one write and one
+fired daemon over 3b's tuple: law_shelach had written on the sons' line. The branch
+seat-guarded to Num 13 (the sixth instance of 3b's shared-kind lesson), both registry
+rows annotated with the second seat, the second run exact.
+
+(7) THE FORTY MINUS ONE ON THE MACHINE. Taanit 29a:5 sends the spies on the twenty-ninth
+of Sivan and returns them "at the end of forty days" on the Ninth of Av, then counts
+thirty-nine itself; Abaye makes Tammuz full (29a:6). The Calendar's Tammuz is
+twenty-nine (the alternation), so the forty-day timer set at the sending fires at
+(2, 5, 10), one day after the return marker (2, 5, 9): CF2 DIVERGE by one, the inclusive
+count (CE3's class), OPEN — and under Abaye's arm the fortieth day is the ninth itself:
+the calendar registry's row tammuz_length carries both, the modeled setting running.
+
+## 2026-09-10 — THE TRANSLATOR STOPS INSIDE A PISKA, THREE MISTYPED CITATIONS IN THE ROWS,
+## THE DEFINITE NUMERAL AT THE HEAD OF A COMPOUND, AND THE TESTIMONY'S ALTERNATING SPELLING
+## (THE NUMBERS WALK sitting 5 — Korach's reading)
+
+(1) THE SIFREI ON NUMBERS HAS NO PISKA ON CHAPTERS 16 OR 17 — asserted on every head
+of the export (the regex over each piska's first row): the heads run from 115 on
+15:37 to 116 on 18:1, and none names 16 or 17. The rebellion, the earth's mouth, the
+fire, the plague and the staffs are read on Onkelos alone, as the spies and the
+decree were (the shelf's silence, recorded at sitting 4 in advance). On chapter 18
+seven piskaot sit in order, 116 on 18:1 through 122 on 18:30, every head asserted
+between its neighbors — the first Numbers stretch since 5:1 with no mistyped head.
+
+(2) THE EXPORT'S TRANSLATOR STOPS INSIDE PISKA 121. The row on 18:27-29 ends: "The
+translator, with all his consultation of the commentaries, has not been able to
+render meaningfully what follows (from here until #122)" — the rest of 121 (the
+a-fortiori from unclean terumah, and whatever follows) is ABSENT from the English
+export. The shelf's own gap, not ours: the row is read to its last rendered word and
+verdicted on that, and the untranslated tail is named in the ledger and the manifest
+(KR18A-11). Beside it, THREE MISTYPED CITATIONS INSIDE THE ROWS' TEXT — a defect class
+distinct from the mistyped HEADS of sittings 1-4: 116:1 cites "Vayikra 18:7" for the
+goat-demons (the verse is Lev 17:7); 116:2 cites "Devarim 18:4" for "a stranger shall
+not draw near to you" (the verse is Bamidbar 18:4, the row's own chapter); 121:1
+cites "Bamidbar 11:29" for "shall you separate all the terumah of the LORD" (18:29).
+Each read to its right verse by the quotation and recorded as the export's slip.
+
+(3) THE DEFINITE NUMERAL AT THE HEAD OF A COMPOUND IS A PARSER GAP: "and consumed
+THE fifty and two hundred men" (16:35) returns [200] from ink_numbers — the article
+on the first numeral silences it, and the chain yields the hundreds alone; 16:2 and
+16:17, the same compound without the article, read 250. Measured over the Bible:
+an article-bearing numeral immediately before a vav-conjoined word stands at ten
+seats (1 Chr 27:6; 1 Kgs 19:19; 2 Kgs 1:10; 2 Sam 2:23, 3:27, 4:6, 20:10; Neh 11:25,
+12:39; Num 16:35), one in the Torah — the candidate list for the compile's probe (to
+FAIL first), each seat to be read (several are "the twelfth" and "the fifty" of the
+Prophets' captains, homographs of the chain). Owed to the compile (5b).
+
+(4) THE TESTIMONY SPELLED PLENE AND DEFECTIVE IN ALTERNATION ACROSS FIVE VERSES:
+"the testimony" (ha-edut) is written PLENE (with the vav) at 17:19, DEFECTIVE at
+17:22, plene at 17:23 and 17:25, defective at 18:2 — measured on the DB's bytes;
+the murmur-noun the same way, DEFECTIVE at 17:20 and PLENE at 17:25. For the ink
+layer: two spelling pairs inside one column of the scroll, the kind of fact the
+Masorah's notes carry and the store shows. (The parser is not touched by it — a
+witness fact for the units, KR17A-05.)
+
+(5) ONE POINTED WORD FOR TWO REFERENTS: Izhar, Korach's father (16:1), and "fresh
+oil" (18:12) are identical on the DB's bytes to the vowel (yitzhar in both), the
+bare token at ten seats — the name at Exod 6:21, Num 16:1, 1 Chr 5:28, 6:23, 23:12,
+23:18; the oil at 2 Kgs 18:32, Jer 31:12, Joel 1:10, Num 18:12. Neither the points
+nor the tag split them; only the neighbors do (the 2b lesson's class — "two of" /
+"the years of"). Recorded for the registry: the entity's name is a common noun's
+homograph, and 18:12 runs the oil–wine–grain triad backward at its one seat.
+
+(6) THE HAND'S FACTS, NINE OF THEM WRONG ON THE FIRST TYPED PASS after the
+measurement pass had printed the candidates: five slice indices off by one (the
+translation's word lists at 16:3, 16:11, 18:9; 26:10's tokens; Deut 10:9's), three
+sets typed short (the murmur verb's third seat Deut 28:44 — "he shall lend", the
+consonants' homograph; the eye-gouging root at three seats, not five — 1 Sam 11:2
+and Job 30:17 carry other forms; "the winepress" at 2 Kgs 6:27 and Hag 2:16 beside
+18:27), and one form the hand had not listed (Lamentations 1:19's "expired" among
+the expire-verb's seats). Each retyped from the print (korach_asserts1.out).
+
+## 2026-09-10 — THE DEFINITE NUMERAL AT THE HEAD OF A COMPOUND TAUGHT, AND THE CLASS'S CENSUS SURFACING
+## THREE FALSE READINGS (ONE OF THEM THE PREVIOUS SITTING'S OWN ACCEPTED DIFF)
+
+At THE NUMBERS WALK sitting 5b (the compile of Korach, Numbers 16:1-18:32), the
+parser's gap measured at the reading — 16:35 "THE fifty and two hundred men" read
+[200], the article on the first numeral silencing it — was censused as a CLASS on
+the whole Tanakh DB before the rule was typed: every article-bearing numeral word
+with the word after it (korach_compile_measure.py). Findings:
+
+1. The class is small: nineteen tokens in the Bible where a vav-NUMERAL follows
+   (fifteen in the Torah), sixty-four where a vav-other word follows, 270 with no
+   vav. Of the fifteen, twelve are THE DEFINITE ONE (4b's class — "under the ONE
+   board, and two sockets"), one is Num 16:35, two are Exod 38:28's "THE thousand
+   and seven THE hundreds and five and seventy" — which the engine had read as
+   [7, 75] since the parser's first day: the article silenced the head, and the
+   article on the hundreds-word inside the chain silenced the multiplier. The
+   ink's own 1,775 (Exod 38:25's number, probe R4 since 1b) at its second seat,
+   never read. Rule (17): an article-bearing numeral before plain "and" + a bare
+   numeral opens the chain; (17b): the article on the hundreds-word after a unit
+   multiplies.
+2. The vav-other class held a fourth false reading: Num 31:54 "the captains of
+   THE THOUSANDS and of THE HUNDREDS" read [2100] — 1b's "and the" chain rule
+   (Num 3:46's "the three and the seventy and the two hundred") firing on two
+   plural unit-nouns after "captains of". Rule (17c): the article-bearing plural
+   thousands / hundreds with no unit numeral before it is a noun.
+3. THE PREVIOUS SITTING'S OWN DIFF, ACCEPTED WRONG: 4b's rule (14) for the
+   definite one joined "the ONE and twentieth" (Exod 12:18 — F34, read off that
+   sitting's diff). The same join fired at Exod 26:5 and 36:12 "in the ONE
+   curtain, and FIFTY loops" → [50, 51], and the 4b diff listed the rows as moved
+   and the hand accepted them; and at 25:32 and 37:18 "from its ONE side, and
+   three branches" → [6, 3, 4], which the 4b census had printed beside the rule
+   and the hand read past. THE ACCENT DECIDES: 12:18's "the one" carries a darga
+   (conjunctive) and joins; 26:5's and 36:12's carry a segolta, 25:32's and
+   37:18's a zaqef — disjunctives, the number closes. Rule (18): the definite
+   one's join is gated by the accent — M-26 (the accent read) extended to the
+   definite one; the exemplar appended to the catalog.
+4. THE HAND'S PROBE EXPECTATIONS FOR THE FOUR WERE WRONG TOO: typed [50, 50]
+   and [6, 3, 3] from the neighbor rule's shape, where 4b's rule (14) counts the
+   definite one as ONE (26:4, 26:10, 25:33 the same class, read [50, 1, 50] and
+   [3, 1, 3, 1, 6] since 4b). The run read it; the rows retyped from the class's
+   reading: [50, 1, 50], [50, 1, 50, 1, 1], [6, 3, 1, 3].
+5. The corpus-wide diff (the 4b parser as base): SEVEN verses moved — exactly the
+   three the design named and the four definite-one seats; nothing else. 130/130
+   probes after (the seven G rows and thirteen regression rows R22-R34 added).
+Beside the parser, two census lessons at the runner's import: the threshing-
+floor word counted on the bare token found one seat where the stem has three
+(15:20 "the terumah of the floor" bare in the construct, 18:27 "THE floor",
+18:30 "the produce of the floor") — count by the stem; and a LIKE on the
+pointed bytes for "salt" found nothing — a census runs on the stripped tokens
+(the covenant of salt at two seats in the Bible, 2 Chr 13:5 and Num 18:19, then
+confirmed).
+
+
+## 2026-09-11 — THE EXPORT'S ENGLISH REVERSES A FRAME, THE DATE-ORDINALS ARE SILENT, THE DUAL "TWICE"
+## IS A HOMOGRAPH OF "TIMES", AND ONE CONSONANTAL SKIN HOLDS MIRIAM, THE BITTER WATERS AND THE REBELS
+## (THE NUMBERS WALK sitting 6 — Chukat's reading)
+
+(1) THE SIFREI ON NUMBERS HAS EIGHT PISKAOT ON CHAPTER 19 AND NONE ON 20-24 — asserted on
+every head of the export: 123 on 19:1 (headed "19:1-2"), 124 on 19:5, 125 on 19:11, 126 on
+19:14, 127 on 19:16, 128 on 19:17, 129 on 19:18, 130 on 19:22, every head in order, none
+mistyped; the next head, 131, is Balak's close at 25:1. Miriam's death, Meribah, Edom,
+Aaron's death, Arad, the serpents, the well, Sihon and Og are read on Onkelos alone — the
+walk's third whole-narrative stretch without the spine (13-14, 16-17, 20-24).
+
+(2) A NEW DEFECT CLASS IN THE EXPORT: THE TRANSLATOR REVERSES THE FRAME'S ADDRESSEES. Piska
+123:1's English opens "And the L-rd spoke to Aaron and to Moses"; the export's own Hebrew
+row (he.json, the same piska and row) reads "and the LORD spoke to Moses and Aaron", as the
+verse does (19:1: to Moses and to Aaron — computed on the DB). Measured on the two files
+side by side (chukat_ink.py's assert): a transposition in the English alone. Read as the
+Hebrew has it; the ledger names it. The class joins the mistyped heads (four found) and the
+mistyped citations inside rows (three found at Korach).
+
+(3) THE PARSER ON CHUKAT'S NUMBERS: RIGHT at 19:4 [7], 19:11 [7], 19:14 [7], 19:16 [7],
+20:29 [30]; SILENT ON THE DATE-ORDINALS — 19:12 and 19:19's "on the third day and on the
+seventh day" read [], 20:1's "in the first month" [], 21:26's "the first king" [] (right —
+an adjective), and the itinerary's date for Aaron's death, "in the FORTIETH year... in the
+FIFTH month, on the FIRST of the month" (33:38), reads [1] alone. A class named and left:
+the ordinal day-words the compile's timers must read by their own rule (or the parser is
+taught them at 6b with probes to FAIL). ONE GAP ON THE PORTION'S OWN NUMBER: 20:11 "he
+struck the rock with his staff TWICE" reads [] — THE DUAL pa'amayim, the same consonants as
+19:4's plural pe'amim "seven TIMES" (read by its "seven"), told apart by the PATACH under the
+pe against the SHEVA (computed on the DB's bytes): the Torah's dual "twice" stands at Gen
+27:36 (Esau: "these two times"), 41:32 (the dream "doubled twice"), 43:10 (Judah: "we could
+have returned twice") and Num 20:11 — the four seats of the class, owed to the compile with
+a probe to FAIL. The translation reads it as a numeral and a noun, "two times". 19:6's
+"scarlet" (ushni tola'at) carries the consonants of "two of" and is silent by the chiriq
+(the dot-vowel i) under the nun — right. The retellings' numbers right: Aaron's 123 (33:39), the thirty-eight
+years (Deut 2:14), Og's bed 9 by 4 (Deut 3:11), Moses' thirty days (Deut 34:8).
+
+(4) ONE CONSONANTAL SKIN, FOUR WORDS, TOLD BY THE POINTS: Miriam (20:1, the chiriq under
+the mem), the BITTER waters of Marah ("for they were bitter", Exod 15:23, the qamats), the
+sotah's "bitter waters that curse" (5:18, 19, 23, 24, the qamats with the article), and
+"the REBELS" of Moses' rebuke nine verses after her death (20:10, the cholam) — measured on
+the DB's bytes (chukat_ink.py: vowels_on, the marks compared as a SET on the consonant, never
+as a typed string — the marks' order in the DB is not the hand's). Psalm 106:33 reads the
+sin at Meribah as this speech, "he spoke rashly with his lips", and turns the rebel-verb
+onto the people ("they embittered his spirit").
+
+(5) THE TWO ROCK-WORDS AND THE TRANSLATION'S TWO: Exodus' rock at Horeb is tzur ("you shall
+STRIKE the tzur", 17:6); Numbers' is sela ("SPEAK to the sela", 20:8, 10, 11; Balaam's Kenite
+nest 24:21 its other Torah seat); Deut 32:13 alone carries both; the Psalms, Isaiah and
+Deuteronomy retell the water-rock as tzur (Ps 78:20, 105:41, 114:8; Isa 48:21; Deut 8:15).
+Onkelos renders tzur TINARA and sela KEFA — measured on both books' bytes.
+
+(6) THE POLE-WORD'S HOMOGRAPHS: nes with the tsere (the pole, the banner) stands in the
+Torah at Exod 17:15 (YHWH-nissi), Num 21:8-9 and 26:10 (Korach's 250 "became a sign");
+"fled" (Deut 34:7, the qamats) and "to flee" (Deut 4:42, Num 35:6 — the manslayer's, the
+same consonants with the lamed) are its homographs, told by the points; the translation
+gives the serpent's pole and Korach's sign one Aramaic word (at). Likewise "Bamoth" the
+station (21:19-20, the qamats) against "in the DEATH of" (26:10, Gen 21:16, the sheva).
+
+(7) THE STORE'S GLOSS LAYER ON A HAPAX: 21:30's "we shot them" (a hapax) is glossed by the
+snapshot store's words.gloss as "and-flow-as-water-them" — the display layer's reading of
+another root; the ink's word stands, Onkelos reads "their KINGDOM ceased". Recorded as the
+store's, not the ink's (the gloss layer is the overrides file's business).
+
+(8) THE FORM'S OWN LESSONS: thirty-two asserts failed on the first typed pass even after the
+measurement pass — the compound asserts hid which leg had failed, and a diagnostic printing
+EACH LEG resolved them in one run (the leg-by-leg print joins the form); a typed pointed
+form is never compared by string (five asserts fell on the marks' order — vowels_on); an
+exact-token census needs EVERY prefixed and spelled form (hyssop's article, "in waters of
+niddah", "at Hormah", usury's "at bite", Meribah's plural, Chemosh spelled with a yod at Jer
+48:7) — the forms typed from the print; a check word's stem piece under six code points
+four times in one pass (the store splits the prefix: "by one slain", "at the brook", "to spy
+out", "from before") — the stem-bearing word chosen before typing; the lint's window on
+four long cuts in chapter 21, split into glossed pieces; and the cd at the head of a
+compound command persisted to its tail TWICE MORE (the lint loop's relative paths printed
+nothing; verify_claims from the scratchpad's cwd found no file) — the repo-root tools with
+absolute paths in their own call, never after a cd.
+
+## 2026-09-11 — THE YEAR-CONSTRUCT'S FIVE SEATS, THE KIT'S ORDER AT SIX SEATS, JEREMIAH'S FOUR TOKENS,
+## THE STRIFE HOMOGRAPH, THE BLOOD BROUGHT IN, AND A BLOCK THAT CANNOT CLOSE
+## (THE NUMBERS WALK sitting 6b — Chukat's compile)
+
+(1) THE DEFINITE NUMERAL AFTER THE YEAR-CONSTRUCT (rule 20, taught for Num 33:38's "in the fortieth year") HAS FIVE SEATS IN
+THE TANAKH, not the design's "the Torah's one seat": the corpus diff after the rule moved eight verses — the four "twice" seats,
+33:38, and THREE the design had not named (Deut 15:9 "the seventh year" [7], Lev 25:10 and 25:11 "the fiftieth year" [50]); the
+whole-DB census of the form adds 1 Chr 26:31; 1 Kgs 6:1 is not of the form. A count typed at a design without its census is a guess
+— the diff is the instrument (3b's lesson, a third time).
+
+(2) THE KIT'S ORDER MEASURED AT SIX SEATS: the heifer's cedar, hyssop, scarlet (Num 19:6) is the HOUSE'S DIPPING order of Lev 14:51-52
+(הָאֵזֹב "the hyssop" before שְׁנִי הַתּוֹלַעַת "the scarlet"), and all three TAKINGS — 14:4 (the person's), 14:6 (the person's dipping),
+14:49 (the house's) — run cedar, scarlet, hyssop. The compile's design had typed "= 14:49's"; the frozen reading's claim is a different
+fact (the two-word scarlet phrase's INTERNAL order, "shni tola'at", the leper's against the tabernacle's), precise and untouched.
+The runner's kit_order cell now says the six-seat fact.
+
+(3) JEREMIAH 48:45 QUOTES NUM 21:28 WITH FOUR EXACT TOKENS (כִּי אֵשׁ "for a fire", מֵחֶשְׁבּוֹן "from Heshbon", מוֹאָב "Moab") and
+three spelling shifts — יָצְאָה / יָצָא ("went out", the gender), לֶהָבָה / וְלֶהָבָה ("a flame" with the vav), סִיחֹן / סִיחוֹן ("Sihon",
+plene); 48:46 and 21:29 share five (אוֹי לְךָ מוֹאָב "woe to you, Moab", עַם כְּמוֹשׁ "people of Chemosh"). The hand had typed
+"at least five"; the assert driver read four.
+
+(4) GEN 13:8's מְרִיבָה ("strife" — "let there be no strife between me and you", Abram to Lot) SITS INSIDE THE MERIBAH CENSUS: the
+token census over the five books returned seven, the place-name's seats are six (Exod 17:7; Num 20:13, 20:24, 27:14; Deut 32:51, 33:8).
+Named as the homograph in the runner, not counted (O9's rule).
+
+(5) LEV 16:27 CARRIES THE BLOOD-WORD ONCE, AND AS THE INSIDE'S: אֲשֶׁר הוּבָא אֶת דָּמָם ("whose blood was brought in") to atone in the
+holy place — the verse's own contrast: the blood inside, the bodies outside; the burn-list after וְשָׂרְפוּ ("and they shall burn") is
+hide, flesh, dung. The heifer's list (19:5) adds the blood to the burning — the reading's crown holds, the assert sharpened to the
+burn-list.
+
+(6) A BLOCK OP CANNOT CLOSE: world_engine writes open=True for debit / heaven / body entries only; a 'block' entry is never open, so
+world.close finds nothing and returns False. The types step had typed barred_from_the_land as a block; the first narrative run read
+Moses' bar CLOSED (never opened) — the op retyped heaven in effect_vocabulary.yaml with its note: the sentence is Heaven's decree with an
+END (Aaron's at 20:28, Moses' at Deut 34:5). The rule for the types step: an entry the text will END is a debit, a heaven entry or a
+body entry.
+
+(7) THE HAND REVERSED CHAPTER AND VERSE IN FIVE CALLS of verse_text(ch, vs, book) — Jeremiah's, Exodus 17's two, Numbers 20:15-16's,
+Deuteronomy 26:7's — and the assert driver over the joined parts found all five, the lawgiver's missing vav-form (וּמְחֹקֵק "and a
+lawgiver", Gen 49:10) and the strife homograph in ONE pass where the runner's runs had fallen one assert at a time. The driver runs
+BEFORE the runner, on the parts joined.
+
+(8) THE STITCHER'S PER-RUNNER CENSUS TABLE GREW BY TWO OLDER ROWS: 5b's print had no shelach or korach rows; this print lists shelach
+(27 / 17 / 10) and korach (36 / 25 / 11) beside chukat (66 / 37 / 29), so the CENSUS tuple's scanned / history / case moved by 129 / 79 / 50
+where Chukat alone is 66 / 37 / 29. Read off the diff of the two prints; typed from the print with the reason.
+
+(9) THE REGISTRY HOLDS MIRIAM TWICE — `miryam` (members miryam + miriam[step9-scenes], the older row) and `miriam` (3b's row, the same
+scene token); registry_map takes the later row. Not moved this sitting (the hash's basis includes names): OWED to a registry pass with
+a dry run on the fold.
+
+(10) THE cd TRAP'S SIXTH INSTANCE (before compaction #129): `cd <repo-old> && ... python3 daemon_census.py` found no file —
+the gates live in World/step9. Absolute paths in every call, the seventh time written down.
+
+## 2026-09-11 — THE EXPORT JOINS A HALF-VERSE INTO THE NEXT CHAPTER, TWO MISTYPED CITATIONS IN ONE ROW, THE PLENE THREE,
+## THE CALF'S THREE THOUSAND READ THREE, AND THE MARKS' ORDER MET BY NORMALIZATION
+## (THE NUMBERS WALK sitting 7 — Balak's reading, Numbers 22:1-25:19; the four ledgers logic/oral_triage/num_22..25_*_2026-09-11.md)
+
+(1) THE EXPORT'S VERSE DIVISION DIFFERS FROM THE MASORETIC AT 25:19. The Onkelos Numbers export gives chapter 25 EIGHTEEN verses (the
+Tanakh DB and the snapshot store nineteen) and opens its 26:1 with "It was after the plague. And the LORD said to Moses and to Eleazar...":
+the Masoretic 25:19 — "and it was after the plague", three words, whose last carries the ETNACHTA (the mid-verse pause accent) and NO
+verse-end mark on the DB's bytes (the Masorah's paragraph break inside a verse; the store's tokens "and-be", "hind-part", "the-pestilence")
+— is joined into the next chapter. Measured on both export files; the 25:19 row was cut from 26:1's head with the join named in the row. A
+FOURTH DEFECT CLASS beside the mistyped heads, the mistyped citations and the reversed frame: the verse grid itself can differ, and a
+reader that indexes the export by (chapter, verse) falls off the end of chapter 25 (the first dump did, with an IndexError).
+
+(2) TWO CITATIONS MISTYPED INSIDE ONE SIFREI ROW (131:2): "Bereshit 48:9" for "a lion's whelp is Judah" — the verse is GENESIS 49:9 (the
+clause 24:9 quotes word for word but two); "Devarim 33:32" for "Dan is a lion's whelp" — the verse is DEUTERONOMY 33:22, the chapter having
+twenty-nine verses. Read to their verses; the fourth and fifth mistyped citations of the walk (three at Korach).
+
+(3) THE PLENE THREE — A PARSER GAP ON THE PORTION'S OWN NUMBER, THE FOURTH TIME. 22:32 "these three times" writes "three" PLENE (with the vav)
+where 22:28 and 22:33 write it defective; the engine reads 3 at the two defective seats and NOTHING at the plene one. The plene form's
+seats in the Torah are three (Num 22:32, Deut 16:16 "three times a year", Deut 19:2 "three cities"), forty-one in the Bible (Chronicles,
+Daniel, Esther, Ezekiel, Job the bulk) — computed on every verse. Owed to the compile with a probe to FAIL.
+
+(4) THE CALF'S THREE THOUSAND READ THREE. The plague-count cross-check (17:14's 14,700, 25:9's 24,000, 2 Sam 24:15's 70,000 all read right)
+ran Exod 32:28 "and there fell of the people that day about three thousand men" — and the parser returned [3]: "about three thousands of
+men" (ki-shloshet alfei ish = "about three thousands of men") carries the approximation prefix on a construct plural, and the class has been misread since the parser's
+first day. Owed to the compile with a probe to FAIL and the class measured over the four books.
+
+(5) THE MARKS' ORDER MET BY NORMALIZATION. Twelve of the thirty first-pass assert failures were typed pointed forms whose combining marks
+the DB orders otherwise (a dagesh before or after the vowel, a shin-dot before or after the sheva); the leg-by-leg diagnostic printed the
+two codepoint sequences and their NFC equality (True at every one), and the module now compares after Unicode normalization on BOTH sides
+(npt / ptn / NL). The same fact was met at sitting 6 by a set-comparison of the marks on one consonant; NFC is the general instrument.
+
+(6) THE FEMININE "THEIR GODS" AT TWO SEATS. Exodus 34:16 ("their daughters whore after THEIR gods", the feminine plural suffix) and Numbers
+25:2 ("the sacrifices of THEIR gods", the daughters') are the only two seats of the form in the Bible — the spec's rare word at its run.
+
+(7) JEREMIAH 48:45 FUSES TWO NUMBERS VERSES. "For a fire went out from Heshbon and a flame from the midst of Sihon, and devoured the corner
+of Moab and the crown of the sons of tumult": the first half is 21:28 (the parable-tellers' fire — four exact tokens shared, sitting 6), the
+second 24:17 ("crushes the corners of Moab and breaks down all the sons of Sheth" — "the corner of Moab" the phrase's only other seat). One
+prophetic verse built from the poets' line and Balaam's.
+
+(8) THE SERPENT AND THE OMEN IN ONE POINTED SKIN. 24:1's "divinations" (nechashim) and 21:6's "the serpents" (ha-nechashim = "the serpents") share consonants
+AND vowels — only the article and the story tell the fiery serpents from the diviner's art; 23:23's "no divination in Jacob" is the same
+consonants with other points. Measured on the DB's bytes.
+
+(9) THE SHELF AGAINST THE MORPHOLOGY, AND AGAINST ITSELF. 25:13's "and he atoned" is tagged by the morphology as the intensive stem's
+narrative past (the "and he did" form) and rendered past by Onkelos; the Sifrei (131:5) reads it as a FUTURE ("it is not written 'to atone'
+but 'and he will atone': he stands and atones until the revival of the dead"). And the Sifrei's "eighty high priests in the second Temple"
+(131:4) stands against Yoma 9a's "more than three hundred". Both recorded as disputes, neither adjudicated.
+
+(10) THE WRITER'S FIVE CUT MISSES WERE THE SHELF'S SPELLINGS: the Aramaic tokens for the staff (defective), the way (plene), "to speak"
+(twice, one lamed not two) and "his eyes" (defective) — the hand had re-spelled what the dump printed. The rule: the Aramaic is typed from
+the plain-token print, never from memory of the pointed line.
+
+## 2026-09-11 — THE PLENE "THREE" AND THE CONSTRUCT "THOUSANDS OF" TAUGHT, THE FIRST-OPEN CLOSE TAKES ANOTHER RUNNER'S ENTRY, A STATUS THAT CANNOT CLOSE, AND THE GATE'S BLIND LOOP (THE NUMBERS WALK sitting 7b, the compile of Balak)
+
+1. THE PLENE "THREE" (rule 21). שָׁלוֹשׁ ("three", written with the vav inside the word) read NOTHING at every seat while the defective שָׁלֹשׁ read 3:
+   the Torah's three plene seats are Num 22:32 ("why have you struck your she-ass these THREE times"), Deut 16:16 ("THREE times in the year"), Deut 19:2
+   ("THREE cities you shall separate"); fifty-nine tokens in the Tanakh under any prefix (the reading's forty-one were verse-seats of the bare and
+   vav-prefixed forms — two nets, one Torah count). The units table gains the vav-spelled forms (שלוש = "three" 3, שלושה = "three" masculine 3, שלושת = "three of" 3, שלושים = "thirty" 30); the corpus
+   diff over 5,853 verses moved exactly the four probed verses.
+2. THE CONSTRUCT "THOUSANDS OF" (rule 22). Exod 32:28 כִּשְׁלֹשֶׁת אַלְפֵי אִישׁ ("about three thousands of men") read 3 since the parser's first day — found
+   by the reading's plague-count cross-check. The gap was NOT the approximation prefix (Exod 12:37 כְּשֵׁשׁ מֵאוֹת אֶלֶף "about six hundred thousand"
+   read 600,000 all along) but the construct plural אַלְפֵי ("thousands of", the morph's HNcmpc) absent from the units table beside אֶלֶף ("a thousand") and אֲלָפִים ("thousands").
+   The rule: after a unit numeral the construct multiplies the group as the plural does; with no numeral before it the construct is a NOUN and stays
+   silent — Num 10:36 רִבְבוֹת אַלְפֵי יִשְׂרָאֵל ("the myriads of the thousands of Israel"), Deut 33:17 וְאַלְפֵי מְנַשֶּׁה ("and the thousands of Manasseh").
+3. THE FIRST-OPEN CLOSE. The engine's close without a value closes the FIRST open entry of that effect on the subject's ledger. On the sequential tape
+   law_balak's "and the plague was stayed" (Num 25:8 וַתֵּעָצַר הַמַּגֵּפָה) closed KORACH'S plague entry — 17:8-15's plague_struck on Israel, which law_korach
+   never closes at 17:13 (the same clause) — and left Peor's open: the first tape run's closes 112 against 113, CL7 DIVERGE. The remedy is O8 S1's frogs
+   lesson relearned: the Peor entry carries a VALUE (the_plague_of_peor) and the spear closes by value. Korach's open plague is a filed debt.
+4. A STATUS CANNOT CLOSE. Zimri's "in the act" state (Mishnah Sanhedrin 9:6's "one who cohabits with an Aramean woman") was typed a STATUS effect and
+   world.close returned False: the engine opens only debit / heaven / body entries (6b's lesson on the block). The act in progress that the text ENDS
+   (the spear, 25:8) is a BODY entry — retyped in the registry.
+5. THE GATE'S BLIND LOOP. The daemon gate reads LITERAL submits; a narrative written as a loop over a list of dicts read as one kind '?UNRESOLVED?' and
+   forty-one kinds "watched and submitted on NO tape" — while the recorder, instrumenting the engine, had captured every one of the loop's events. Two
+   instruments, two views of one scene; the narrative rewritten as forty-one literal submits.
+6. THE ATONEMENT VERB'S THIRD SEAT. וַיְכַפֵּר ("and he atoned") stands at THREE Numbers seats — 8:21 (Aaron for the Levites), 17:12 (Aaron for the people),
+   25:13 (Phinehas for the children of Israel); the reading paired the two "for the people" seats, the compile's token census found the third. And
+   וַתֵּעָצַר ("and was stayed") at TWO — 17:13 and 25:8; 17:15's stayed is another form (the hand had typed three).
+7. THE MEASUREMENT PASS ON THE PROBE TOKENS: six of the hand's forms fell before the runner was typed — בערבות (the plene "plains"), ואך ("but only" with
+   its vav), מעודך ("from your existence" — the hand's "from your youth" was the gloss, not the token), לבדד ("alone" with its lamed), ותרועת ("and the
+   shout of"), שפטי ("the judges of").

@@ -193,7 +193,7 @@ def i5():
     real = DC.load_yaml()[0]
     f_real = DC.check_installation(real)
     pend = [n for n, d in real.items() if d.get('installed_by') == 'pending']
-    ok = len(f_bad) == 5 and not f_real and len(real) == 48 and all('given_at' in d and 'installed_by' in d for d in real.values())   # THE NUMBERS WALK 1b (2026-09-09): 47 -> 48, law_census; THE TENT sitting 4: 46 -> 47, law_zelophehad; sitting 3: 45 -> 46, law_mekoshesh
+    ok = len(f_bad) == 5 and not f_real and len(real) == 54 and all('given_at' in d and 'installed_by' in d for d in real.values())   # THE NUMBERS WALK 7b (2026-09-11): 53 -> 54, law_balak; 6b: 52 -> 53, law_chukat; 5b: 51 -> 52, law_korach; 4b: 50 -> 51, law_shelach; 3b: 49 -> 50, law_beha; 2b: 48 -> 49, law_naso; 1b: 47 -> 48, law_census; THE TENT sitting 4: 46 -> 47, law_zelophehad; sitting 3: 45 -> 46, law_mekoshesh
     return ok, 'bad rows refused %d of 5; real file: %d daemons, fails %d, pending %s' % (len(f_bad), len(real), len(f_real), pend)
 
 
