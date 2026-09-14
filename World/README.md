@@ -1,3 +1,10 @@
+> **MERGED 2026-09-14 (D7'S MERGE; World/step9/THE_LOOP.md "D7'S MERGE — ONE DATABASE").** `world.sqlite` in this folder is gone. THE ONE
+> DATABASE is `World/journal/data/world.sqlite` — the journal's index: L0 the operators, L1 THE FOLD (this folder's world, one row per item),
+> L2 the cases, L3 the runs — and the tables below are VIEWS over it with their old names (`World/journal/fold_views.sql`; the fold's
+> events are `fold_events`). `python3 build_world.py` builds the layer, reindexes, creates the views and reconciles; `--check` reconciles
+> alone; `python3 ask.py …` answers over the one database. `run_genesis.py` is retired — the player is `step9/world_stepper.py`.
+> The rules below (read-only over the corpus; never invent a row; reconcile against the fold) are unchanged.
+
 # World
 
 **This is where the world gets built.** It stands on its own.

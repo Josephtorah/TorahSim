@@ -1,0 +1,31 @@
+# daughters.yaml — THE PORT's first queue (THE LOOP step 7 (c), 2026-09-14; World/step9/THE_LOOP.md "part (c) THE PORT", D16-D18).
+# A queue is a PRIMARY record (as scenarios.yaml is): a list of inputs, each entering the running world through World.submit — the one
+# door — at its position (the left edge of `at`; null = the session's first pause; past the tape's end = the end), in file order, journaled
+# with prov.unit 'port:daughters' and data.port {queue, id, label}. The port decides nothing about what an input is; this queue carries the
+# two horns of the daughters' own argument (scenarios.yaml's step-5 exemplar, Bava Batra 119b:10) positioned at the left edge of Num 27:5 —
+# after the plea (27:1-4) is on the ledger, before the judgment is brought near — so the port's first real inputs are the shelf's own.
+# Run: python3 World/step9/world_stepper.py --from 'Num 27:1' --to 'Num 28:1' --by verse --queue World/journal/port/daughters.yaml
+items:
+  - id: first_horn
+    at: "Num 27:5"
+    label: "Bava Batra 119b:10 — the first horn: if we are as a son, give us an inheritance as a son (oracle Mishnah Bava Batra 8:2)"
+    event:
+      kind: estate_claimed
+      subject: the-daughters-of-zelophehad
+      decedent: zelophehad
+      claimant: the-daughters-of-zelophehad
+      claimant_degree: daughter
+      survivors: {son: false, sons_line: false, daughter: true, daughters_line: false, father: false, brothers: true, fathers_brothers: true}
+      property: held
+      case_source: "Num 27:8 — if a man dies and has no son, you shall pass his inheritance to his daughter (the first horn: as a son)"
+  - id: second_horn
+    at: "Num 27:5"
+    label: "Bava Batra 119b:10 — the second horn: if not, let our mother enter levirate marriage (oracle Mishnah Yevamot 2:5; Yevamot 22b:6)"
+    event:
+      kind: levirate_claimed
+      subject: the-widow-of-zelophehad
+      widow: the-widow-of-zelophehad
+      decedent: zelophehad
+      children: {daughters: 5, sons: 0}
+      brothers_in_world: true
+      case_source: "Deut 25:5 — if brothers dwell together and one of them dies and has no son, her husband's brother shall come to her (the second horn: if not, our mother to the levir)"

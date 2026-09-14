@@ -15,6 +15,8 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
 ## SCOREBOARD (as of 2026-09-14, latest)
+- **ONE DATABASE — THE MERGE DONE: THE READING'S WORLD IS A LAYER OF THE JOURNAL, THE OLD TABLES ARE VIEWS OVER IT, AND THE OLD FILE IS GONE** (2026-09-14, on your "ok go the merge"; World/step9/THE_LOOP.md "D7'S MERGE — ONE DATABASE"): the fold of the 210 frozen units written as the journal's L1 layer — 6,558 items, 3,015 verses of the spine, the counts and the hash in its header (D19); the World folder's sixteen tables now views over those rows with their old names (D20), so `World/ask.py at Gen.30.24` answers over the same file the runs write into; the reconciliation upstream twice (D21) — the entry against a fresh fold on nine counts and the hash, all green; the journal gate against the pinned truth; merge_probes.py 0/8 then 8/8; the August tree model retired; run_genesis.py retired. THE LIST: item 4 done, eleven remain.
+- **THE LOOP THAT WAITS IS BUILT — STEP 7 (c) THE PORT: THE LOOP READS ITS NEXT INPUT FROM A QUEUE OUTSIDE THE CODE, EVERY INPUT THROUGH THE ONE DOOR, AND A WORLD WITH INPUTS IS ITS OWN WORLD** (2026-09-14, on your "ok go c. keep up with what we need to do to finish this. go"; World/step9/THE_LOOP.md "Step 7 ... part (c)" and "TO FINISH THE LOOP — THE LIST"): a queue file read once and validated at open (an unregistered kind or an unknown field refused), its items entering at their positions in file order before the text's line, journaled as port:<queue>; the session audited against the base to the first input and forked there, sealed whole under the queue's name with the fork in its header; the text the first producer (no queue = the base byte for byte); the first real queue the daughters' two horns at the left edge of 27:5, both answered by the daemon; port_probes.py 0/9 then 9/9; every probe file green; the tape after. The port decides nothing about what the inputs are. THE LIST of what finishes the loop is in the map, twelve items, kept current: three are yours (the inputs themselves, time without a marker, the position of an input), two wait for Deuteronomy (the second pass, the readback), two are sittings (the merge, the checkpoints as they fall), the rest small or later.
 - **THE STEP-THROUGH EXISTS — THE LOOP'S STEP 7 (b) THE STEPPER BUILT: THE TAPE RUNS ONE CALL AT A TIME, STOPS AT ANY VERSE'S LEFT EDGE, RESUMES, AND AT EVERY PAUSE THE STATE IS READ FROM THE DATABASE** (2026-09-14, on your "ok go b"; World/step9/THE_LOOP.md "Step 7 ... part (b)"; World/step9/world_stepper.py): measured first — the tape is 1,507 engine calls on 1,507 lines and the checkpoints are computed after the run, not on it — so the tape runs as a generator that yields the verse of each call before making it (decision D15; no thread, no engine change); step by call, verse, chapter, marker, day, or to a verse; the replay is the audit at every call; step_probes.py 0/8 then 9/9 (the ninth added after the first real session read a double-quoted source as no verse); the real sessions: chapter 27 stepped by verse from the left edge of 27:1, the whole tape by marker in 158 steps with its segment the base's body byte for byte; the tape 10/10 after, every probe file green. Next on your word: (c) the port — the queue the loop reads at the pause, the text its first producer.
 - **THE DATABASE IS LIVE — THE LOOP'S STEP 7 (a) WRITE AS YOU GO BUILT: EVERY JOURNAL LINE LANDS ON DISK AND IN THE DATABASE THE MOMENT ITS BLOCK ENDS, AND NOTHING IN THE JOURNAL MOVES AFTER IT IS WRITTEN** (2026-09-14, on your "ok go 1"; World/step9/THE_LOOP.md "Step 7 THE LOOP THAT WAITS — part (a)"): measured first — which payloads move after the engine logs them (the consumers inside the block, the bound's right edge after it), so the seal is at the block's end and the right edge is the next marker line's fact (decision D14); the audit at every seal (the chain, the count, an independent conversion, the rebuilt index equal to the live rows); live_probes.py 0/7 then 7/7; the tape 10/10 with the running world's 3,362 lines sealed in 1,533 blocks; the journal gate GREEN with its new live-index line (13,444 rows written line by line, the two processes identical); the cursor's audit green on the new base; every gate green. Next on your word: (b) the stepper — the pause between blocks; then (c) the port.
 - **THE REFUGE CITIES COMPILED — SITTING 15b DONE, AND WITH IT NUMBERS CLOSES: THE BARE DUAL THOUSAND TAUGHT (RULE 29 — 35:5'S FOUR "TWO THOUSAND" READ AT LAST, THE CORPUS DIFF FINDING TWO PAUSAL DUALS THE MEASURE HAD MISSED), THE LEVITE CITIES AND THE SIX CITIES TWO DEBITS ON THE PEOPLE OPEN TO JOSHUA, THE TERM "UNTIL THE DEATH OF THE HIGH PRIEST" AN EVENT-KEYED ENTRY CLOSED BY THE DEATH ACT — NOT A TIMER, THE LAND POLLUTED A STATUS ON THE LAND, "IN WHOSE MIDST I DWELL" THE BOOK'S INCLUSIO READ BACK TO 5:3** (2026-09-13; NUMBERS_WALK.md "Sitting 15b"): cold_run_refuge.py the 57th runner (51/51), law_refuge the 62nd daemon; the docket 666 rows — the Sabbath limit is this chapter's measure (Rav Chisda's chain of eight verbal analogies), the court of twenty-three from the congregation-tokens, the iron needs no measure, the three high priests, no ransom and why the ox has one; RUN (1279, 66, 52, 0, 12, 1527, 33, 318, four pairs, 121) predicted and matched first tape run; the sweep 57/57 at 6378; every gate green (the register gate after teaching its tilde test the dual thousand). NUMBERS 1:1-36:13 READ, FROZEN, COMPILED AND ON THE TAPE. Next on the owner's word: the next book.
@@ -470,6 +472,54 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Next alongside it: Leviticus (new spine — Sifra).
 
 ## ENTRIES (newest first)
+
+### 2026-09-14 — ONE DATABASE: THE READING'S WORLD AND THE RUN'S WORLD IN ONE FILE
+
+What changed: there were two database files. One held the reading's
+world — every thing the frozen chapters created and every fact,
+demand and naming the reading found — built in August and stale since.
+The other held the runs. Now the reading's world is a layer of the
+journal, rebuilt from today's 210 chapters, and the old tables are
+views over it with their old names. One file. The old one is deleted.
+
+Why it matters: a question like "what existed at Genesis 2:7, and what
+was owed on it" has one answer now, from one place. The board reads
+both kinds of rows from the same file. And a frozen chapter that moves
+the corpus's hash makes the gate say the layer is stale until it is
+rebuilt, so the two can never drift apart quietly again.
+
+What it took: a rewrite of the journal's builder, a file of views, an
+entry script that builds, reindexes and reconciles, and the gate's new
+line. No engine, runner or chapter changed. The August tree model and
+the slow teaching player are retired; the stepper is the player.
+
+### 2026-09-14 — THE PORT: THE LOOP READS FROM OUTSIDE ITSELF, AND THE LIST OF WHAT FINISHES IT
+
+What changed: the loop now takes inputs from a queue outside the code. A
+queue is a file of items, each a registered event at a position in the
+text. It is read once when a session opens, checked against the
+registry (an unregistered kind or a misspelled field is refused before
+anything runs), and at every pause the items due enter through the
+same door every tape line enters, in file order, before the text's own
+line. The journal marks them as the queue's. Nothing is typed at a
+prompt; the port cannot tell a program's file from a hand's and does
+not care.
+
+Why a world with inputs is its own world: an input changes the future —
+a timer it sets fires later, an entry it opens is what a later close
+finds. So the session is audited against the base run only up to the
+first input, forks there, and is sealed whole under the queue's name
+with the fork in its header. The base is never touched. The first real
+queue put the daughters' two horns at the left edge of 27:5; the daemon
+answered both as the Mishnah does.
+
+Going forward: the loop that waits is built. What remains to finish the
+loop is a list in the map, kept current from now on. Three items are
+yours to decide: what the inputs are, whether time may move without a
+verse, and whether an input's position or its citation moves the
+engine's place in the text. Two wait for Deuteronomy: the second pass
+and the readback. Two are sittings: the merge of the two databases and
+the checkpoints placed in the tape. The rest are small or later.
 
 ### 2026-09-14 — THE STEP-THROUGH: THE TAPE ONE CALL AT A TIME, THE STATE READ FROM THE DATABASE AT EVERY PAUSE
 

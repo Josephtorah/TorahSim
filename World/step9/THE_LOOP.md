@@ -1147,7 +1147,7 @@ WHAT THE OWNER MUST DECIDE (nothing moves before the word): (i) build the three,
 I would take the event as the atom; (iii) what "current state" shows — the five views as they are, plus the entities, the installed laws and the
 checkpoints as they fall; (iv) before or after Deuteronomy.
 
-- [ ] THE LOOP THAT WAITS (opened 2026-09-14, the owner: "ok go 1"; step 7 in the table): (a) [x] WRITE AS YOU GO — BUILT 2026-09-14 (D14 THE SEAL; the design and the as-built below); (b) [x] THE STEPPER — BUILT 2026-09-14 (D15 THE TAPE AS A GENERATOR; World/step9/world_stepper.py; the design and the as-built below); (c) [ ] THE PORT — NEXT on the owner's word (its design section here first, the probes to FAIL, then the code).
+- [ ] THE LOOP THAT WAITS (opened 2026-09-14, the owner: "ok go 1"; step 7 in the table): (a) [x] WRITE AS YOU GO — BUILT 2026-09-14 (D14 THE SEAL; the design and the as-built below); (b) [x] THE STEPPER — BUILT 2026-09-14 (D15 THE TAPE AS A GENERATOR; World/step9/world_stepper.py; the design and the as-built below); (c) [x] THE PORT — BUILT 2026-09-14 (D16-D18; World/step9/world_port.py + the stepper's --queue; the first queue World/journal/port/daughters.yaml; the design and the as-built below). THE LOOP THAT WAITS IS BUILT; what remains is TO FINISH THE LOOP — THE LIST, the section after the as-built, kept current.
 
 ## Step 7 THE LOOP THAT WAITS — part (a) WRITE AS YOU GO: the design (2026-09-14; the owner: "ok go 1" on the three-part
 ## recommendation of the section above; written AFTER the measurements and BEFORE the probes, the probes before the code — the loop's own order)
@@ -1424,3 +1424,282 @@ fixed price.
 LESSONS: A GENERATOR BEATS A THREAD for a pause — it yields BEFORE the call it is about to make, so the left edge is exact and the tape
 resumes; measure the tape's shape (one call per line) and make it the contract, asserted at every load. A PATTERN READS THE STITCHER'S OWN
 QUOTING — the repr writes double quotes when the text holds an apostrophe; a real session showed the None the probe tape could not.
+
+## Step 7 THE LOOP THAT WAITS — part (c) THE PORT: the design (2026-09-14; the owner: "ok go c. keep up with what we need to do to
+## finish this. go"; written AFTER the measurements and BEFORE the probes, the probes before the code — the loop's own order)
+
+THE OWNER'S FRAME (section 19 of the recovery file, his words): no hand inputs; the data from a second or third pass, maybe self-made;
+"we will decide what those are later". So THE PORT DECIDES NOTHING ABOUT WHAT THE INPUTS ARE. It is the DOOR and the WAITING: a queue
+outside the code, read at the pause of part (b), every item entering through World.submit — the one door — and journaled like any line.
+The text is the first producer: the tape's own lines are the port's default input, taken whenever the queue holds nothing due.
+
+THE MEASUREMENTS (2026-09-14):
+  1. THE INPUT FORM THAT EXISTS: World/step9/scenarios.yaml (step 5; primary in git) — an entry has a cursor verse and a list of events
+     (a registered CASE kind, a subject, the fields the daemon reads, a case_source, a label); cold_run_sequence --cursor submits them
+     through world_journal.scenario, which marks the EVENT line prov.unit 'scenario'. The port's item is that shape with a position.
+  2. THE ONE DOOR REFUSES UNREGISTERED KINDS: World.submit calls events_layer.validate — an unregistered kind is a SystemExit before
+     any line is logged. The registry carries a `fields` list per kind, HARVESTED from what the tape submitted (a census, not a
+     contract): estate_claimed's list is decedent, survivors, claimant, claimant_degree, property, scenario — the last a scenario's
+     own mark. So the port refuses an UNKNOWN field (a misspelling) and prints a registered field the item lacks as a warning; the
+     daemon's own read is the honest failure, at submit, on the tape.
+  3. THE PAUSE OF PART (b) IS THE SEAM: the stepper's step loop stands before each tape call with the NEXT call's verse known (the
+     generator yields it) — an item positioned at a verse can enter at that verse's left edge exactly, before the tape's own line.
+  4. THE AUDIT OF (b) CANNOT SURVIVE AN INPUT: an input changes the future (a timer it sets fires at a later marker; an entry it opens is
+     what a later close finds), so from the first input on the session's lines are no longer the base's — a world with inputs is a
+     NEW WORLD. The prefix up to the first input is still the base's, byte for byte.
+  5. THE JOURNAL'S HEADER writes its extra fields only on an appended segment (worldledger.Segment.write: `if self.start_chain`); a
+     whole-world segment that forks from the base needs the fields without a start chain — a one-line change in worldledger.
+
+THE DECISIONS (mine, on the measurements; the owner may overrule each):
+  D16 THE PORT IS A QUEUE, NEVER A PROMPT — a file of items (YAML: id, at, label, event{kind, subject, case_source, the fields}), read
+      ONCE when the session opens and validated then (an unregistered kind, an unknown field, a bad position, a position already passed
+      by a session starting later: REFUSED at open, named); at every pause the items DUE enter in file order through World.submit; an
+      item's EVENT line carries prov.unit 'port:<queue>' and data.port {queue, id, label}; the queue file is never rewritten — the
+      journal records what entered. Nothing is typed at a prompt; a program or a hand may write the file, the port cannot tell and
+      does not care. --pause of part (b) stays a control word.
+  D17 A WORLD WITH INPUTS IS ITS OWN WORLD — the session journals WHOLE under the queue's name (source cold_run_sequence/port@<queue>;
+      the segment L3_run_cold_run_sequence_port_<queue>.jsonl; every line from Gen 1:5 on, the chain from genesis), its header naming
+      the base and THE FORK (the ordinal of the first input's line); the prefix up to the fork audited against the base at every call
+      as in (b); after the fork no audit — the report says "forked at ordinal N by item <id>"; the base is never touched; D9's appended
+      form stays the cursor's. The database then holds each world whole and askable under its own name (--world).
+  D18 THE ORDER OF A PAUSE — the queue first, then the text: at every pause the items due at that position enter in file order, then the
+      next tape line runs; an item with no position enters at the FIRST pause of the session (the session's start, or the left edge of
+      --from); an item positioned at a verse enters at that verse's left edge; an item positioned past the tape's last verse, or with
+      no position and queued after the text ended, enters at THE END — the end of the text is a pause too, before the seal.
+
+THE DESIGN — World/step9/world_port.py + the stepper's hooks (no engine change; two one-line changes outside it):
+  (1) THE QUEUE FILE: World/journal/port/<queue>.yaml (tracked — an input is PRIMARY, as scenarios.yaml is; the folder new) — `items:` a
+      list of {id, at (a verse or null), label, event {kind, subject, case_source, ...the fields}}. The probe queues live in temp dirs.
+  (2) class Port(path): load, validate (measurement 2), due(next_key, at_end) → the items to submit now, in file order; consumed ids.
+  (3) THE STEPPER TAKES A QUEUE: Stepper(queue=path) → the source cold_run_sequence/port@<name>; before every tape call and at the end,
+      the due items are submitted (each a block: sealed by (a), a step's report lists them under `inputs`); the audit runs until the
+      first input's line, then records the fork; the seal writes the header {base, fork, forked_by, queue}; --queue on the command line.
+  (4) THE JOURNAL: _append_log's EVENT branch marks a port item prov.unit 'port:<queue>' (beside 'scenario' and 'tape'); worldledger
+      writes the header's extra fields whenever given.
+  (5) THE TEXT THE FIRST PRODUCER: a session with no queue is the stepper's plain session — the same loop, the tape its only input, the
+      segment the base's body byte for byte (the probe of (b) still holds).
+  (6) NOT BUILT, owed: what the inputs ARE (the owner's decision, later); a second pass writing a queue (the pass's own sitting); the
+      grading of an input's answer against an oracle (scenarios do that; the port only opens the door); the interface over the database.
+
+THE PROBES (World/step9/port_probes.py; written BEFORE the code and run to FAIL — every one a FAIL first; the probe tape and daemons of
+step_probes and live_probes; the queues written into temp dirs):
+  P1 THE QUEUE READS AND REFUSES: a queue of two items loads with their positions; an unregistered kind is REFUSED at open, named; an
+     unknown field is REFUSED, named; a bad position is REFUSED; a registered field the item lacks is a printed warning, not a refusal.
+  P2 THE ONE DOOR: an item with no position enters at the first pause through World.submit — the daemon fires, its lines are sealed
+     (event + the write) in the session's segment and rows, the EVENT line prov.unit 'port:<queue>' and data.port {queue, id, label}.
+  P3 THE POSITION: an item at 'Exod 24:1' enters at the left edge of Exod 24:1 — after the tape's fourth line (19:16) and before its
+     fifth (24:1) in the sealed order; a session started with --from past the item's verse REFUSES the queue at open, named.
+  P4 THE FORK: the prefix before the first input is audited against the base (audited: yes at those steps); from the input on the report
+     says forked, naming the ordinal and the item; the sealed header carries base, fork, forked_by and queue.
+  P5 THE FUTURE CHANGES: an item that sets a timer (installation_commanded through the port at the first pause) fires at the later
+     marker — the session seals MORE lines than the base and is not refused (the audit stopped at the fork).
+  P6 DETERMINISM: two sessions over the same queue in two directories seal byte-identical segments and identical rows.
+  P7 THE END IS A PAUSE: an item positioned past the tape's last verse enters after the last tape line and before the seal; the last
+     report lists it under inputs; the segment's last lines are its.
+  P8 THE TEXT ALONE: a session with no queue through the same loop seals the base's body byte for byte (the stepper's contract kept).
+  P9 THE ORDER: at one pause with two items due and a tape line, the sealed order is item 1, item 2, then the tape line.
+  After the code: step_probes 9/9, live_probes 7/7, journal_probes 7/7, cursor_probes 6/6 (the base untouched); THE REAL SESSION: a queue
+  with the daughters' first horn (scenarios.yaml's estate_claimed, positioned at 'Num 27:5') run `--from 'Num 27:1' --to 'Num 28:1'
+  --by verse --queue World/journal/port/daughters.yaml`: the item enters at the left edge of 27:5 after the plea and before the
+  judgment, the daemon's answer on the ledger, the session forked at that ordinal, sealed under its own name; the tape 10/10 after.
+
+TO FINISH THE LOOP — THE LIST (the owner, 2026-09-14: "keep up with what we need to do to finish this"; kept current at every loop sitting,
+the section below this design's as-built; echoed in memory).
+
+THE ORDER: this design → the probes to FAIL → world_port.py, the stepper's hooks, the two one-line changes → the probes → the real session
+→ the tape → the records, with the list.
+
+## As built — step 7 (c) THE PORT (2026-09-14, the same sitting; the owner: "ok go c. keep up with what we need to do to finish this. go";
+## the design above first, the probes to FAIL 0/9, then the code, then 9/9 with one probe index corrected on the engine's own order)
+
+THE PROBES FIRST: World/step9/port_probes.py P1-P9 written from the design and run on the unchanged tree — 0/9 (P1 "No module named
+world_port", P2-P9 the stepper refusing a queue); then 8/9 after the code, the one miss P5's hand-typed index (it put the marker's line
+between the fire's two — the walk fires inside the marker's call and the marker's own line follows, as part (a)'s L3 measured), corrected
+on the engine's order and noted in the probe; then 9/9.
+THE CODE: World/step9/world_port.py — class Port (the queue file read once and validated at open: an unregistered kind, an unknown field, a
+bad position, a position already passed by a session starting later REFUSED and named; a registered field the item lacks a WARNING; due()
+the items entering at a pause in file order; event_of() the item's event with the port's mark; pending); the stepper's hooks in
+world_stepper.py (Stepper(queue=…) → the source cold_run_sequence/port@<queue>; _enter() at every pause — before the text's line, at every
+pause inside a multi-line step, and at the end; the audit stops at the first input, THE FORK recorded by ordinal and item; the report's
+inputs / fork / forked_by; the header {base, fork, forked_by, queue, pending} at close; --queue on the command line; the session's own
+source named in the prints); world_journal._append_log's EVENT branch marks prov.unit 'port:<queue>' beside 'scenario' and 'tape';
+worldledger.Segment.write writes the header's extra fields whenever given. No engine change. The queue folder World/journal/port/ is
+tracked (an input is PRIMARY, as scenarios.yaml is); its first queue daughters.yaml carries the two horns of the daughters' argument
+(scenarios.yaml's step-5 exemplar) positioned at the left edge of Num 27:5. Lints 0 on every file.
+THE PROBES AFTER: port 9/9, step 9/9, live 7/7, journal 7/7, cursor 6/6 (the base untouched).
+THE REAL SESSION (`--from 'Num 27:1' --to 'Num 28:1' --by verse --queue World/journal/port/daughters.yaml --show custody`): the queue read at
+open — 2 items, first_horn@Num 27:5 and second_horn@Num 27:5, no warnings; THE REPLAY 3,221 lines to the left edge of 27:1, audited; STEP 1
+(27:1 with 27:1-4: marker + event + write) audited; STEP 2 AT THE LEFT EDGE OF 27:5 — THE TWO INPUTS ENTERED FIRST, then the text's line: 6
+sealed (event 3, write 3) — first_horn's event and its answer holding_owed on the daughters at Num 27:8 (seq 3226, law_zelophehad),
+second_horn's event and its answer exempt = child_of_any_kind on the widow at Deut 25:5 (seq 3228, law_zelophehad — the oracle's row,
+Mishnah Yevamot 2:5), then the judgment brought near with the court's custody row (seq 3230); FORKED AT ORDINAL 3225 BY first_horn — no
+audit past the fork; STEP 3 (27:6-11) the statute declared, the custody closed; the left edge of 28:1 reached; SEALED 3,233 lines in 1,497
+blocks, the chain VERIFIED, the fresh conversion EQUAL but the right edge, the rebuilt index EQUALS the live rows; the header
+{"base": the running world's segment, "fork": 3225, "forked_by": "first_horn", "queue": "daughters", "pending": []}; the world askable under
+--world cold_run_sequence/port@daughters (the daughters' two holding_owed rows; the widow's exempt).
+THE TAPE AFTER: green by the runner's own exit (the live report prints only after the grade passes) — the live report 26,511 rows: the port's world cold_run_sequence/port@daughters 3,233 rows = 3,233 lines MATCH beside the four worlds (3,362 / 3,362 / 3,358 / 3,362), the stepper's session (3,229) and the cursor's segment (4), every source current.
+A FINDING, filed in the list below: the second horn's case_source cites Deuteronomy 25:5 and the engine's VERSE REACHED moved to (Deut, 25, 5)
+inside Numbers 27 — an input's citation moves the position the installation gate reads (harmless under boot; the from_event setting would
+read it). The port's position and the input's citation are two things; which the engine's position follows is part of the inputs' own
+definition, the owner's.
+WHAT THE LOOP IS NOW: a running world with memory that WRITES AS IT RUNS (a), PAUSES BETWEEN CALLS (b) and READS ITS NEXT INPUT FROM OUTSIDE
+ITSELF (c) — the text its first producer, a queue its second; every input through the one door, journaled, audited to the fork, the world
+with inputs its own world in the one database. What the inputs are is not decided; the port does not decide it.
+
+## TO FINISH THE LOOP — THE LIST (the owner, 2026-09-14: "keep up with what we need to do to finish this"; A STANDING DUTY: this section is
+## brought current at every loop sitting, and the reply at every loop sitting's close echoes it; the boxes above are its ledger)
+
+BUILT: steps 1-5 (the sink; the index with the five views and the ask tool; installation; the cursor; scenarios), step 1's amendment (the
+close line), step 7 (a) write as you go, (b) the stepper, (c) the port — 2026-09-14.
+
+OPEN, each with its home and its size (the owner's items marked; nothing moves before his word):
+  1. THE INPUTS THEMSELVES — the owner's decision ("we will decide what those are later"): what a second or third pass produces, in what
+     form, at what positions; the port takes any registered kind now, from any file. OWNER. Then: a queue writer for that pass (a sitting).
+  2. THE SECOND PASS — D2 (2026-09-09): the installed run (installed_by from_event) after Deuteronomy, on the whole program; its findings a
+     queue for the port. AFTER DEUTERONOMY; a sitting.
+  3. STEP 6 THE READBACK — D12: the text re-read against the ledger the run left (Deuteronomy's repetition first, the prophets after); its
+     design at Deuteronomy. AFTER DEUTERONOMY; the design a sitting, then per book.
+  4. D7'S MERGE — one database: the World folder's corpus world (the reading era's 557 events, World/world.sqlite) as a journal layer, its
+     tables views over the journal, the reconciliation gate upstream; the August tree retired with it (D10). DONE 2026-09-14 — the design
+     and the as-built below (D19-D21): the fold is the L1 layer, the old tables are views over the one database, the gate moved twice.
+  5. THE CHECKPOINTS AS THEY FALL — the checkpoints are computed after the run from the marker table (part (b)'s measurement 2); the stitcher
+     places each at its verse in the tape so a pause shows them. A SITTING (the stitcher's rewrite; the base's bytes unchanged).
+  6. TIME WITHOUT A MARKER — may the loop advance a day with no verse? Fourteen timers wait past the tape's end (Midian's third and seventh
+     days, the altar's daily offering). OWNER's decision; the mechanism half a sitting if yes (the stepper never moves the clock today).
+  7. THE POSITION OF AN INPUT — part (c)'s finding: an input's citation moves the engine's verse reached (the installation gate's position);
+     whether the engine follows the port's position or the input's citation. OWNER's, inside item 1; the code one line either way.
+  8. THE CURSOR'S OWN LINES LIVE — the cursor's appended segment is converted late (part (a)'s (5)); the stepper with a queue does the
+     same job live, so the cursor may retire into the stepper (--from with a queue). SMALL; the owner's call whether the cursor stays.
+  9. THE WINDOW — CHRONICLE (ARCHITECTURE/CHRONICLE.md, the design thread's, design only): the observation deck over the live database now
+     that it is live. THE DESIGN THREAD'S; the main thread reads it.
+ 10. THE INTERFACE — "later we will create an interface to the database that will show the current states at all times": over the five
+     views and the sessions' sources; the ask tool is its first form. LATER, the owner's word; its own design.
+     THE AGREED SHAPE (2026-09-14, the two threads on the owner's word — "I want to see when a new event takes place… a world forming"; a
+     mockup of the panel form published the same day, the forms folder's mockup_state_page.html; the feed below is what the threads agreed):
+     A FEED, one line per event as it happens, newest at the bottom: the day (and the calendar date once one exists), the verse, the act in
+     the verse's own few words, then what changed in the tradition's words. STATE AS A STAMP, not prose — one colored word per line: NEW when
+     an entity appears, OPEN when an entry is owed, CLOSED when the text pays it, TIMER when one is set or fires (its due as a day and, once
+     a calendar exists, as a date in words). THE CLOCK MOVING IS ITS OWN LINE in its own color. EVERY LINE SAYS WHAT CHANGED — a line that
+     writes nothing says so or is no line. FEW COLORS, A KEY, NO GREY: five colors at most, each one meaning, a one-line key at the bottom.
+     GENERATED, NEVER TYPED: every line read from the journal's rows (the seal makes the rows current), the day from the clock, the counts
+     from the world. A strip above: the day, the position in the text, how many things exist. A 'next' control beside any auto-play; the
+     page scrolls as a page, no panes scrolling inside. NOT SHOWN: daemon names, ledger ops, ordinals, statuses that only restate.
+     Creation week reads as seven dated lines and the human appearing on the sixth. On the owner's word; its own sitting, display only.
+ 11. A GRADED INPUT — an input's answer against an oracle through the port (scenarios grade against Mishnah rows at a cursor; the port only
+     opens the door). WITH ITEM 1.
+ 12. THE OTHER WORLDS STEPPED — the stepper runs the running setting only; the sojourn forks and THE REST run whole in the tape. SMALL, if
+     ever wanted.
+
+## D7'S MERGE — ONE DATABASE: the design (2026-09-14; the owner: "ok go the merge" — item 4 of TO FINISH THE LOOP; decided in principle 2026-09-09
+## as D7 with D10; written AFTER the measurements and BEFORE the probes, the probes before the code — the loop's own order)
+
+THE MEASUREMENTS (2026-09-14):
+  1. TWO DATABASE FILES. World/world.sqlite (2 MB, 2026-09-08; gitignored) is the reading era's model: sixteen tables projected from
+     corpus_world.fold() by World/build_world.py (278 lines), reconciled against the fold on nine counts and the state hash, asked by
+     World/ask.py (names, called, at, open, career, who, entities, sql) and replayed slowly by World/run_genesis.py (the teaching run,
+     writing a narration table). <world-link> is a symlink to the repo's World folder. World/journal/data/world.sqlite is the
+     journal's index over every segment: L0 scripture (one row per operator), L1 structure, L2 cases, L3 the runs.
+  2. THE JOURNAL'S READING LAYERS ARE STALE AND ARE THE AUGUST TREE. World/journal/build_world.py (541 lines) reads the frozen units
+     through corpus_world and writes L0 (scripture.op) and L1 (the August tree model: node.born, partition.split, edge.insert, name.set…)
+     with a twenty-one-line checklist. Built 2026-09-09 from 163 units: L0 4,517, L1 2,041. Run today into a temporary folder on the
+     210 units: L0 4,902, L1 2,426, 2,033 nodes (37 unclassified), and the checklist FAILS four lines (the roots at Gen 1:1, the garden
+     inside Eden, the ark's slots, the forming/filling symmetry) — the same four as on 2026-09-09; D10 retires this tree at the merge. Its
+     index step drops the events table and indexes its own two segments alone — run against the data folder it would erase the runs'
+     rows until the next reindex.
+  3. THE FOLD IS THE READING'S TRUTH. corpus_world.fold(write=False) takes 29 s and yields ten lists: units 210, facts 1,809, events 557
+     (each with its themes), demands 341 (191 open), mentions 1,167 (273 entities; roles agent 461, speaker 341, presupposed 162, install
+     98, named 69, assigned / blesser / blessee 12 each), names 81, standing 2,163 (WITNESS_READ 1,770, WITNESS_STATE 116, STATUTE 75,
+     HANDLER 64 …), tests 14, checkpoints 210, ledger 6 (the creation days); the state hash 8b8fff1fa28953af — the numbers
+     logic/corpus/CORPUS_TRUTH.py pins as tripwires. The World folder's tables are exactly these lists plus four DERIVED ones (refs — the
+     spine of distinct verses in canonical order; entities — first mention and weights; relations — events × themes, names, demands;
+     entity_state — names with validity ranges) and event_themes.
+  4. WHO READS WHAT. ask.py reads refs, mentions, facts, events, demands, standing, relations, entity_state, entities. Nothing in
+     World/step9 reads World/world.sqlite; the run layer's tools read the journal's index. The board mockup read the August tree's
+     node.born rows — the births it wants are the fold's first mentions.
+
+THE DECISIONS (mine, on the measurements; the owner may overrule each):
+  D19 THE FOLD IS THE STRUCTURE LAYER. The journal's L1 becomes THE FOLD — one row per item of the fold's ten lists, the kinds fold.unit,
+      fold.fact, fold.event, fold.demand, fold.mention, fold.name, fold.standing, fold.test, fold.checkpoint, fold.ledger, and one row per
+      verse of the spine, fold.ref (the ordinal computed once, deterministically); each row's data the item as the fold holds it, its
+      prov {unit, ref}, its op the operator's ordinal; the segment L1_fold.jsonl, its header carrying the fold's counts and the state
+      hash. The August tree (L1_structure.jsonl, world_tree.json, the checklist) is RETIRED as D10 ruled; its kinds keep their register
+      entries marked retired. L0 (the operators) stays as it is, rebuilt from today's units.
+  D20 THE OLD TABLES ARE VIEWS WITH THEIR OLD NAMES. World/journal/fold_views.sql creates, over the events table's fold rows, the
+      views refs, units, facts, events, event_themes, demands, mentions, names, standing, tests, checkpoints, entities, relations and
+      entity_state with the columns World/schema.sql gave them — so World/ask.py runs unchanged but for its path, which becomes the
+      journal's index. World/world.sqlite is deleted; World/run_genesis.py is RETIRED with a guard (the loop's stepper is the player now);
+      World/schema.sql stays as the record of the columns the views keep.
+  D21 THE GATE MOVES UPSTREAM, TWICE. (a) World/build_world.py becomes the merge's entry: build the fold layer, reindex the whole journal,
+      create the views, RECONCILE the views against a fresh fold on the nine counts and the hash (the old reconcile, now over the journal)
+      — and `--check` reconciles alone. (b) The journal gate (world_journal.py --gate) reads the fold layer's header and refuses the index
+      when the header's hash and counts differ from CORPUS_TRUTH's pinned tripwires or from the index's own rows — no refold inside the
+      gate, the corpus gate's literals the reference. A frozen unit moves the hash; the gate then says "the fold layer is stale — run
+      World/build_world.py" until it is rebuilt.
+
+THE DESIGN — the code, no engine, runner or unit change:
+  (1) World/journal/build_world.py rewritten: L0 as now; L1 the fold (D19) with the spine; no checklist; no index step of its own (the
+      index is world_journal's, over every segment); the determinism self-test kept over both segments.
+  (2) World/journal/fold_views.sql — the fourteen views (D20); world_journal.views() creates them beside the five run views at every
+      reindex and at every attach; entities' births for the board = the entities view's first mention.
+  (3) World/build_world.py rewritten as the entry (D21 a): build → reindex → views → reconcile; `--check`.
+  (4) World/ask.py: the path; World/run_genesis.py: the retirement guard; the register: fold.* kinds added before first use, the August
+      kinds marked retired; World/journal/data: L1_structure.jsonl and world_tree.json removed; World/world.sqlite removed.
+  (5) world_journal.py --gate: the fold layer's header against CORPUS_TRUTH's literals and the index's counts (D21 b).
+  (6) The board's births come from the entities view (a note in the mockup's generator; the mockup itself stands as drawn).
+
+THE PROBES (World/step9/merge_probes.py; written BEFORE the code and run to FAIL — every one a FAIL first; one build into a temporary folder
+shared by the probes, the fold's 29 s paid once):
+  M1 THE FOLD LAYER: the build writes L0 and L1_fold.jsonl; the L1 rows per kind equal the fold's list lengths (units 210, facts 1,809,
+     events 557, demands 341, mentions 1,167, names 81, standing 2,163, tests 14, checkpoints 210, ledger 6) plus one fold.ref per distinct
+     verse; the header carries the counts and the hash 8b8fff1fa28953af; every row's data equals its fold item.
+  M2 DETERMINISM: a second build in a second process is byte-identical on both segments.
+  M3 THE VIEWS: over an index of the two segments the fourteen views exist and the old reconcile passes — nine counts and the hash.
+  M4 THE GATE: the header's hash equals CORPUS_TRUTH's pinned hash and its counts the pinned counts; a header with another hash is refused.
+  M5 THE ASK TOOL: ask.py's `at`, `open`, `who`, `entities`, `called` run over the index and answer (rows, no error).
+  M6 THE RUNS UNTOUCHED: an index over the fold's two segments and one L3 segment holds every L3 row and the five run views MATCH.
+  M7 THE AUGUST TREE RETIRED: the build leaves no L1_structure.jsonl and no world_tree.json; the register marks the August kinds retired.
+  M8 THE BIRTHS: the entities view gives the heavens and the earth their first mention at Gen.1.1 and light at Gen.1.3.
+  After the code: the real build into the data folder; the tape 10/10; the journal gate GREEN with its new fold line; live 7/7, step 9/9,
+  port 9/9, cursor 6/6; `World/ask.py at Gen.30.24` and `open Gen.30.24` answering over the one database; the sweep 57/57.
+
+THE ORDER: this design → the probes to FAIL → the code → the real build → the gates → the records (the list's item 4 ticked; the World
+folder's README and RESUME; the recovery file; the state doc).
+
+## As built — D7'S MERGE, ONE DATABASE (2026-09-14, the same sitting; the owner: "ok go the merge"; the design above first, the probes to FAIL
+## 0/8, then the code in six files, then 8/8 after four probe corrections on the tool's and the registry's own forms)
+
+THE PROBES FIRST: World/step9/merge_probes.py M1-M8 written from the design and run on the unchanged tree — 0/8; after the code 4/8, then
+6/8, then 8/8 — every miss the probe's own: a hand-derived kind key ("standin" for standing — the builder's own map used instead), the
+design's one named exception (`fold_events`, since `events` is the journal's table) missing from the probe's list of views, a who-span
+lacking the book on both sides (the tool splits on the dash; its own docstring's example lacks it), and the earth's id typed as its token
+(the registry maps aretz to the_earth; the heavens keep their token). No code changed for a probe.
+THE CODE: World/journal/build_world.py rewritten (L0 the operators as before; L1 THE FOLD — 6,558 items of the ten lists, 3,015 fold.ref
+rows of the spine, one fold.meta; the header with the counts and the hash; the August files removed; no index step; the determinism
+self-test kept); World/journal/fold_views.sql (the fourteen views + meta, with the old columns; `fold_events` the one renamed view;
+entities, relations, entity_state and event_themes computed as views with window functions and json_each); World/build_world.py
+rewritten as the merge's entry (build → reindex → views → reconcile; --check; World/world.sqlite deleted); World/ask.py (the path, the one
+view name); World/run_genesis.py RETIRED with a guard; World/journal/registers/event_kinds.yaml (12 fold kinds added before first use; the
+22 August L1 kinds marked retired); World/step9/world_journal.py (views() runs the fold views beside the run views at every reindex and
+attach; pinned_truth() reads CORPUS_TRUTH's literals; fold_gate(); --gate prints the fold layer's line). No engine, runner or unit change.
+THE REAL MERGE (`python3 World/build_world.py`, one run): the fold 29 s; L0 4,902 operators; L1 9,574 rows; the index 31,204 rows over 10
+segments; the fourteen fold views and the five run views created; World/world.sqlite retired (deleted); THE RECONCILIATION over the views
+against a fresh fold ALL GREEN — units 210, facts 1,809, events 557, demands 341, open demands 191, mentions 1,167, names 81, standing 2,163,
+tests 14, the state hash 8b8fff1fa28953af. The data folder holds L0, L1_fold, L2, the L3 segments and the one world.sqlite (15.6 MB);
+L1_structure.jsonl and world_tree.json are gone.
+THE ONE DATABASE ASKED (World/ask.py over World/journal/data/world.sqlite): `at Gen.30.24` — 216 entities known, 736 facts standing, 507
+events so far, 153 demands raised, 593 standing law, two demands outstanding (Rachel's at 30:3 and 30:14); `entities` — God 216 mentions,
+Abraham 104, Noah 46; `called jacob` — yaaqov from Gen.25.26, yisrael from Gen.35.10, still. The run's tool beside it: `--ask population
+reuben` 11 rows. run_genesis.py answers with its retirement.
+THE GATE: GREEN — the four segments byte-identical across two processes, chains verified; the live index 13,444 rows identical between the processes and equal to the rebuild; the five run views MATCH on every source; THE FOLD LAYER's new line: units 210, facts 1,809, demands 341, events 557, names 81, standing 2,163, open demands 191 and the state hash 8b8fff1fa28953af each MATCH the pinned truth, 12 kinds and 9,574 rows in the index MATCHING the header.
+THE PROBES AFTER: journal 7/7, live 7/7, step 9/9, port 9/9, cursor 6/6 after the journal module's change.
+WHAT THE DATABASE IS NOW: one file, World/journal/data/world.sqlite, four layers — the operators, the fold (what exists and what the
+reading found), the cases, the runs (what happened) — and nineteen views over them; every layer rebuilt from its segments, the fold layer
+proven against a fresh fold by the entry and against the pinned truth by the gate; a frozen unit moves the hash and the gate says the layer
+is stale until it is rebuilt. The board's births come from the entities view.
+OBSERVED, not this sitting's: a stray body file L3_run_cold_run_sequence_stepper.jsonl.live in the data folder — a stepping session that
+died mid-run (the owner's own run in a runner without a keyboard); the design's trace, harmless; the next session with that source
+overwrites it.
+LESSONS: THE VIEW MAY NOT WEAR THE TABLE'S NAME (`events` is the journal's — the fold's events are `fold_events`; the design named the
+exception and the probe learned it); A PROBE'S EXPECTATION FROM A TOOL'S OWN DOCSTRING IS STILL A HAND-TYPED CLAIM (the who-span);
+THE REGISTRY'S ID IS NOT THE TOKEN (the_earth, not aretz); A DERIVED KEY IS THE BUILDER'S MAP, NEVER A SLICE (standing[:-1]);
+A COMMENT INSIDE A BRACKET SWALLOWS THE LINE (twice — write the comment after the closing bracket).

@@ -1,0 +1,124 @@
+<title>A World Forming</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root { --ground:#EEF0F3; --surface:#FFFFFF; --line:#D3D8DF; --ink:#1B1F26; --soft:#3E4753;
+          --clock:#3D5A80; --clock-bg:#E1E8F2; --new:#2E7D4F; --new-bg:#DFF0E5; --open:#B7791F; --open-bg:#FBEDD0;
+          --closed:#5B4B8A; --closed-bg:#E7E1F3; --timer:#8C2F39; --timer-bg:#F5E1E3; --act:#1B1F26; --act-bg:#E4E7EB; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+          --ground:#15181D; --surface:#1E2229; --line:#353C47; --ink:#E7E9EC; --soft:#C3CAD3;
+          --clock:#8FB0D8; --clock-bg:#1F2C3D; --new:#7FC292; --new-bg:#1F3125; --open:#E0AE4C; --open-bg:#3A2E17;
+          --closed:#B7A6E0; --closed-bg:#2B2440; --timer:#DE7C85; --timer-bg:#3A2226; --act:#E7E9EC; --act-bg:#2A303A; } }
+  :root[data-theme="dark"] {
+          --ground:#15181D; --surface:#1E2229; --line:#353C47; --ink:#E7E9EC; --soft:#C3CAD3;
+          --clock:#8FB0D8; --clock-bg:#1F2C3D; --new:#7FC292; --new-bg:#1F3125; --open:#E0AE4C; --open-bg:#3A2E17;
+          --closed:#B7A6E0; --closed-bg:#2B2440; --timer:#DE7C85; --timer-bg:#3A2226; --act:#E7E9EC; --act-bg:#2A303A; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--ground); color:var(--ink); font-family:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif; font-size:15px; line-height:1.5; padding-block:0 56px; padding-inline:20px; }
+  .mono { font-family:"IBM Plex Mono",Menlo,monospace; font-variant-numeric:tabular-nums; }
+  .wrap { max-width:860px; margin:0 auto; }
+  .strip { position:sticky; top:0; background:var(--surface); border-bottom:1px solid var(--line); margin-inline:-20px; padding:14px 20px; z-index:2; }
+  .strip .in { max-width:860px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 22px; }
+  h1 { font-family:"Fraunces",Georgia,serif; font-weight:500; font-size:22px; margin:0; text-wrap:balance; }
+  .k { font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--soft); font-weight:600; display:block; }
+  .v { font-size:16px; font-weight:500; }
+  .next { margin-left:auto; display:flex; gap:8px; }
+  .btn { font:inherit; font-size:13px; padding:7px 14px; border:1px solid var(--line); background:var(--ground); color:var(--ink); border-radius:4px; }
+  .btn.primary { background:var(--clock); border-color:var(--clock); color:#fff; font-weight:600; }
+  .btn:focus-visible { outline:2px solid var(--timer); outline-offset:2px; }
+  .mock { font-size:12.5px; color:var(--soft); margin:14px 0 4px; }
+  .feed { display:grid; gap:0; margin-top:8px; }
+  .row { display:grid; grid-template-columns:96px 74px minmax(0,1fr); gap:12px; padding:10px 0; border-bottom:1px solid var(--line); align-items:start; }
+  .row.clock { background:var(--clock-bg); margin-inline:-12px; padding-inline:12px; border-radius:4px; border-bottom:0; margin-block:6px; }
+  .row .day { font-size:12.5px; color:var(--soft); padding-top:3px; white-space:nowrap; }
+  .row .body { min-width:0; }
+  .row .verse { font-size:12.5px; color:var(--soft); margin-right:6px; }
+  .row.clock .body { color:var(--clock); font-weight:500; }
+  .stamp { display:inline-block; font-size:11px; font-weight:700; letter-spacing:.06em; padding:2px 8px; border-radius:3px; line-height:1.5; white-space:nowrap; }
+  .stamp.clock { color:var(--clock); background:var(--surface); border:1px solid var(--clock); }
+  .stamp.act { color:var(--act); background:var(--act-bg); }
+  .stamp.new { color:var(--new); background:var(--new-bg); }
+  .stamp.open { color:var(--open); background:var(--open-bg); }
+  .stamp.closed { color:var(--closed); background:var(--closed-bg); }
+  .stamp.timer { color:var(--timer); background:var(--timer-bg); }
+  .chg { margin-top:4px; padding-left:14px; font-size:14px; }
+  .chg .stamp { margin-right:8px; }
+  .chg.none { color:var(--soft); font-style:italic; }
+  .gap { text-align:center; color:var(--soft); font-size:13px; padding:14px 0; border-bottom:1px solid var(--line); }
+  .key { margin-top:22px; display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; font-size:13px; color:var(--soft); }
+  .key .stamp { margin-right:2px; }
+  @media (max-width:560px) { .row { grid-template-columns:70px 1fr; } .row .body { grid-column:1 / -1; } }
+</style>
+<div class="strip"><div class="in">
+  <h1>A World Forming</h1>
+  <div><span class="k">Day</span><span class="v mono">604,905</span></div>
+  <div><span class="k">The text stands at</span><span class="v mono">Gen 7:11</span></div>
+  <div><span class="k">Things in the world</span><span class="v mono">19</span></div>
+  <div class="next"><button class="btn" disabled>Auto-play</button><button class="btn primary" disabled>Next ›</button></div>
+</div></div>
+<div class="wrap">
+  <p class="mock">Mockup, generated from the journal's own rows of the running world: nothing on this page is typed. The first seventy lines, then the flood's reprieve.</p>
+  <div class="feed">
+    <div class="row clock"><span class="day mono">day 0</span><span class="stamp clock">CLOCK</span><div class="body"><span class="verse mono">Gen 1:5</span> the clock moves to day 0 — the first day</div></div>
+    <div class="row"><span class="day mono">day 0</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 1:5</span> <b>the world</b> — evening and morning<div class="chg"><span class="stamp new">NEW</span><b>the world</b>: day counted — 1</div></div></div>
+    <div class="row clock"><span class="day mono">day 1</span><span class="stamp clock">CLOCK</span><div class="body"><span class="verse mono">Gen 1:8</span> the clock moves to day 1 — the second day</div></div>
+    <div class="row"><span class="day mono">day 1</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 1:8</span> <b>the world</b> — evening and morning<div class="chg"><b>the world</b>: day counted — 2</div></div></div>
+    <div class="row clock"><span class="day mono">day 2</span><span class="stamp clock">CLOCK</span><div class="body"><span class="verse mono">Gen 1:13</span> the clock moves to day 2 — the third day</div></div>
+    <div class="row"><span class="day mono">day 2</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 1:13</span> <b>the world</b> — evening and morning<div class="chg"><b>the world</b>: day counted — 3</div></div></div>
+    <div class="row clock"><span class="day mono">day 3</span><span class="stamp clock">CLOCK</span><div class="body"><span class="verse mono">Gen 1:19</span> the clock moves to day 3 — the fourth day</div></div>
+    <div class="row"><span class="day mono">day 3</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 1:19</span> <b>the world</b> — evening and morning<div class="chg"><b>the world</b>: day counted — 4</div></div></div>
+    <div class="row clock"><span class="day mono">day 4</span><span class="stamp clock">CLOCK</span><div class="body"><span class="verse mono">Gen 1:23</span> the clock moves to day 4 — the fifth day</div></div>
+    <div class="row"><span class="day mono">day 4</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 1:23</span> <b>the world</b> — evening and morning<div class="chg"><b>the world</b>: day counted — 5</div></div></div>
+    <div class="row"><span class="day mono">day 4</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 1:28</span> <b>the human</b> — blessed be fruitful<div class="chg"><span class="stamp new">NEW</span><b>the human</b>: fruitfulness blessed</div><div class="chg"><b>the human</b>: dominion granted</div></div></div>
+    <div class="row clock"><span class="day mono">day 5</span><span class="stamp clock">CLOCK</span><div class="body"><span class="verse mono">Gen 1:31</span> the clock moves to day 5 — the sixth day</div></div>
+    <div class="row"><span class="day mono">day 5</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 1:31</span> <b>the world</b> — evening and morning<div class="chg"><b>the world</b>: day counted — 6</div></div></div>
+    <div class="row clock"><span class="day mono">day 6</span><span class="stamp clock">CLOCK</span><div class="body"><span class="verse mono">Gen 2:2</span> the clock moves to day 6 — the seventh day</div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 2:2-3</span> <b>the seventh day</b> — ceased and blessed<div class="chg"><span class="stamp new">NEW</span><b>the seventh day</b>: seventh day blessed</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 2:7</span> <b>the human</b> — formed from dust<div class="chg"><b>the human</b>: living soul</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 2:8</span> <b>the human</b> — placed in the garden<div class="chg"><b>the human</b>: to work and keep — work, keep</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 2:20</span> <b>the beasts</b> — named<div class="chg"><span class="stamp new">NEW</span><b>the beasts</b>: name given — the names of all cattle, the fowl of the heavens and every beast of th…</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 2:21</span> <b>the human</b> — deep sleep fell<div class="chg"><b>the human</b>: deep sleep fell — the deep sleep of sleep (Bereshit Rabbah 17:5)</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 2:21-22</span> <b>the human</b> — woman built<div class="chg"><b>the human</b>: helper made — a help, against him</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 2:23</span> <b>Eve</b> — named<div class="chg"><span class="stamp new">NEW</span><b>Eve</b>: name given — Woman (אשה — for from man she was taken, 2:23)</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 3:1</span> <b>the serpent</b> — serpent spoke<div class="chg none">nothing written</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 3:6</span> <b>Eve</b> — ate of the tree<div class="chg"><b>Eve</b>: breached the first rule — vine, wheat, fig</div><div class="chg"><b>the human</b>: breached the first rule — vine, wheat, fig</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 3:7</span> <b>Adam and Eve</b> — eyes opened<div class="chg"><span class="stamp new">NEW</span><b>Adam and Eve</b>: eyes opened</div><div class="chg"><b>Adam and Eve</b>: girdles made</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 3:8</span> <b>Adam and Eve</b> — hid from the voice<div class="chg none">nothing written</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 3:9-13</span> <b>Adam and Eve</b> — interrogated<div class="chg"><b>Eve</b>: deceived — the serpent deceived me (3:13)</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 3:14-15</span> <b>the serpent</b> — sentenced<div class="chg"><span class="stamp new">NEW</span><b>the serpent</b>: serpent cursed — 71</div><div class="chg"><b>the serpent</b>: enmity set</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 3:16</span> <b>Eve</b> — sentenced<div class="chg"><b>Eve</b>: pain multiplied</div><div class="chg"><b>Eve</b>: ruled by the husband — 4</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 3:17-19</span> <b>the human</b> — sentenced<div class="chg"><span class="stamp new">NEW</span><b>the ground</b>: ground cursed</div><div class="chg"><b>the human</b>: sweat bread</div><div class="chg"><span class="stamp open">OPEN</span><b>the human</b>: return to dust — 1000, 930, 70</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 3:20</span> <b>Eve</b> — named<div class="chg"><b>Eve</b>: name given — Eve (חוה — the mother of all living, 3:20)</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 3:21</span> <b>Adam and Eve</b> — clothed in skins<div class="chg"><b>Adam and Eve</b>: clothed in skins — begins and ends with kindness</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 3:23-24</span> <b>Adam and Eve</b> — expelled<div class="chg"><b>Adam and Eve</b>: expelled — priests daughter cannot return, israelites daughter can</div><div class="chg"><span class="stamp new">NEW</span><b>the garden</b>: way guarded</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 4:1</span> <b>Eve</b> — bore<div class="chg"><span class="stamp new">NEW</span><b>Cain</b>: begotten</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 4:2</span> <b>Eve</b> — bore<div class="chg"><span class="stamp new">NEW</span><b>Abel</b>: begotten</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 4:3</span> <b>Cain</b> — first offerings brought<div class="chg"><b>Cain</b>: not regarded — from the refuse</div></div></div>
+    <div class="row"><span class="day mono">day 6</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 4:4</span> <b>Abel</b> — first offerings brought<div class="chg none">nothing written</div></div></div>
+    <div class="gap">… lines 71 to 169, the generations from Adam to Noah …</div>
+    <div class="row"><span class="day mono">day 568,319</span><span class="stamp new">NEW</span><div class="body"><span class="verse mono">Gen 6:2</span> <b>the daughters of men</b>: wife taken</div></div>
+    <div class="row clock"><span class="day mono">day 568,319</span><span class="stamp clock">CLOCK</span><div class="body"><span class="verse mono">Gen 6:3</span> the clock moves to day 568,319 — and his days shall be a hundred and twenty years</div></div>
+    <div class="row"><span class="day mono">day 568,319</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 6:3</span> <b>the generation of the flood</b> — decree of the reprieve<div class="chg"><span class="stamp timer">TIMER</span><b>the generation of the flood</b>: reprieve of a hundred and twenty — due day 604,905</div></div></div>
+    <div class="row"><span class="day mono">day 568,319</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 6:5</span> <b>Humankind</b> — wickedness seen<div class="chg"><span class="stamp new">NEW</span><b>Humankind</b>: wickedness great — with great they sinned with great judged</div></div></div>
+    <div class="row"><span class="day mono">day 568,319</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 6:6</span> <b>God</b> — regretted<div class="chg"><span class="stamp new">NEW</span><b>God</b>: regretted making man — well did i prepare graves, not well</div></div></div>
+    <div class="row"><span class="day mono">day 568,319</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 6:7</span> <b>the generation of the flood</b> — wipe resolved<div class="chg"><span class="stamp new">NEW</span><b>the generation of the flood</b>: to be wiped</div></div></div>
+    <div class="row"><span class="day mono">day 568,319</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 6:8</span> <b>Noah</b> — favor found<div class="chg"><span class="stamp new">NEW</span><b>Noah</b>: found favor — the decree sealed on noah too</div></div></div>
+    <div class="row"><span class="day mono">day 568,319</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 6:11-12</span> <b>the earth</b> — wickedness seen<div class="chg"><span class="stamp new">NEW</span><b>the earth</b>: earth corrupted — mated across kinds</div></div></div>
+    <div class="row"><span class="day mono">day 568,319</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 6:13</span> <b>the generation of the flood</b> — end decreed<div class="chg"><b>the generation of the flood</b>: sealed for violence — robbery</div></div></div>
+    <div class="row"><span class="day mono">day 568,319</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 6:14-21</span> <b>Noah</b> — ark commanded<div class="chg"><span class="stamp open">OPEN</span><b>Noah</b>: ark owed</div><div class="chg"><span class="stamp new">NEW</span><b>the ark</b>: ark spec — 300, 50, 30</div><div class="chg"><span class="stamp open">OPEN</span><b>Noah</b>: covenant promised</div></div></div>
+    <div class="row"><span class="day mono">day 568,319</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 6:22</span> <b>Noah</b> — ark made<div class="chg"><b>the ark</b>: ark built</div><div class="chg"><span class="stamp closed">CLOSED</span><b>Noah</b>: ark owed — paid at Gen 6:22</div></div></div>
+    <div class="row clock"><span class="day mono">day 604,898</span><span class="stamp clock">CLOCK</span><div class="body"><span class="verse mono">Gen 7:1</span> the clock moves to day 604,898 — for in yet seven days I will rain</div></div>
+    <div class="row"><span class="day mono">day 604,898</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 7:1-4</span> <b>Noah</b> — boarding commanded<div class="chg"><span class="stamp open">OPEN</span><b>Noah</b>: boarding owed</div><div class="chg"><span class="stamp timer">TIMER</span><b>the generation of the flood</b>: seven days reprieve — due day 604,905</div></div></div>
+    <div class="row"><span class="day mono">day 604,898</span><span class="stamp act">ACT</span><div class="body"><span class="verse mono">Gen 7:7</span> <b>Noah and sons</b> — entered the ark<div class="chg"><span class="stamp new">NEW</span><b>Noah and sons</b>: in the ark</div><div class="chg"><b>Noah and sons</b>: ark intercourse barred — barred at 6 18</div><div class="chg"><b>Noah</b>: shut in</div><div class="chg"><span class="stamp closed">CLOSED</span><b>Noah</b>: boarding owed — paid at Gen 7:7</div></div></div>
+    <div class="row"><span class="day mono">day 604,905</span><span class="stamp timer">TIMER</span><div class="body"><span class="verse mono">Gen 6:3</span> the timer <b>reprieve of a hundred and twenty</b> fires on <b>the generation of the flood</b><div class="chg"><b>the generation of the flood</b>: reprieve of a hundred and twenty — reprieve</div></div></div>
+    <div class="row"><span class="day mono">day 604,905</span><span class="stamp timer">TIMER</span><div class="body"><span class="verse mono">Gen 7:1-4</span> the timer <b>seven days reprieve</b> fires on <b>the generation of the flood</b><div class="chg"><b>the generation of the flood</b>: seven days reprieve — methuselahs mourning, the sun reversed, a taste of the world to come</div></div></div>
+    <div class="row clock"><span class="day mono">day 604,905</span><span class="stamp clock">CLOCK</span><div class="body"><span class="verse mono">Gen 7:11</span> the clock moves to day 604,905 — the 600th year of Noah, the second month, the seventeenth: the flood</div></div>
+  </div>
+  <div class="key"><span>Key:</span>
+    <span class="stamp clock">CLOCK</span> the clock moves
+    <span class="stamp act">ACT</span> the text's own act
+    <span class="stamp new">NEW</span> something appears in the world
+    <span class="stamp open">OPEN</span> an entry owed, still open
+    <span class="stamp closed">CLOSED</span> the text paid it
+    <span class="stamp timer">TIMER</span> a timer set or fired
+  </div>
+</div>

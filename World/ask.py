@@ -10,13 +10,13 @@
     python3 ask.py entities                  the cast, by weight
     python3 ask.py sql "SELECT ..."          raw SQL
 
-Read-only. Rebuild with build_world.py.
+Read-only. Rebuild with build_world.py (the merge of 2026-09-14: the one database World/journal/data/world.sqlite, the old tables its views).
 """
 from __future__ import annotations
 import sqlite3, sys
 from pathlib import Path
 
-DB = Path(__file__).resolve().parent / "world.sqlite"
+DB = Path(__file__).resolve().parent / "journal" / "data" / "world.sqlite"    # D7'S MERGE (2026-09-14): the one database — the journal's index; the old tables are views over it
 
 
 def con():
@@ -79,7 +79,7 @@ def cmd_at(c, a):
         ("entities known", "SELECT count(DISTINCT entity) n FROM mentions m "
                            "JOIN refs r ON r.ref=m.ref WHERE r.ord<=?"),
         ("facts standing", "SELECT count(*) n FROM facts f JOIN refs r ON r.ref=f.ref WHERE r.ord<=?"),
-        ("events so far", "SELECT count(*) n FROM events e JOIN refs r ON r.ref=e.ref WHERE r.ord<=?"),
+        ("events so far", "SELECT count(*) n FROM fold_events e JOIN refs r ON r.ref=e.ref WHERE r.ord<=?"),   # the fold's events are the view fold_events (the journal's own table is `events`)
         ("demands raised", "SELECT count(*) n FROM demands d JOIN refs r ON r.ref=d.ref WHERE r.ord<=?"),
         ("standing law", "SELECT count(*) n FROM standing s JOIN refs r ON r.ref=s.ref WHERE r.ord<=?"),
     ):

@@ -22,7 +22,10 @@ timers; --show reads the rows FROM THE DATABASE through the five views under the
 --pause waits for Enter between steps: a CONTROL word, never a data event (the port of part (c) is the only door for inputs).
 
 Run: python3 World/step9/world_stepper.py [--from <verse>] [--to <verse>] [--by call|verse|chapter|marker|day] [--steps N]
-     [--show open|ledger <entity>|custody|timers] [--pause] [--quiet]
+     [--show open|ledger <entity>|custody|timers] [--pause] [--quiet] [--queue World/journal/port/<queue>.yaml]
+THE PORT (part c, 2026-09-14; world_port.py): --queue names a file of inputs read once at open; the items due at each pause enter in file
+order through World.submit before the text's line; the session is then its own world (cold_run_sequence/port@<queue>), audited against the
+base up to the first input and forked there.
 """
 import os, re, sys, sqlite3, collections
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -85,11 +88,13 @@ def tape_section(path):
 class Stepper:
     """the tape one call at a time: Stepper(...).step(by) → a report; .show(what) → rows from the database; .close() → the seal"""
 
-    def __init__(self, tape_source=None, world=None, out_dir=None, namespace=None, base=None, from_verse=None, source=SOURCE):
+    def __init__(self, tape_source=None, world=None, out_dir=None, namespace=None, base=None, from_verse=None, source=SOURCE, queue=None):
         self.source = source
         self.P = {}
         if tape_source is None:                        # THE REAL TAPE: the world built as run_to builds it (the import is the session's fixed price)
-            import cold_run_sequence as CS
+            import io, contextlib
+            with contextlib.redirect_stdout(io.StringIO()):   # the runners announce their guards and probes at import — the session's screen is the state, not that
+                import cold_run_sequence as CS
             self.CS = CS
             tape_source = tape_section(CS.__file__)
             namespace = dict(vars(CS))
@@ -108,6 +113,13 @@ class Stepper:
         src, self.calls = transform(tape_source)
         ns = dict(namespace or {})
         exec(compile(src, '<the tape as a generator>', 'exec'), ns)
+        # THE LOOP step 7 (c) THE PORT (2026-09-14; D16-D18): the queue read once and validated at open; the session then its own world under the queue's name
+        self.port, self.fork, self.forked_by, self._inputs_now = None, None, None, []
+        if queue is not None:
+            import world_port as WP
+            self.port = WP.Port(queue, from_key=WE.verse_key(from_verse) if from_verse else None)
+            source = 'cold_run_sequence/port@%s' % self.port.name
+            self.source = source
         self.sink = WJ.attach(self.w, source, out_dir=out_dir)
         self.base, self.base_lines = base, None
         if base:
@@ -136,8 +148,9 @@ class Stepper:
         return v, i, len(self.sink.seg.events) - self._n0
 
     def _audit(self, v):
-        """THE REPLAY IS THE AUDIT: every line sealed by the call equals the base's line at the same ordinal, or the session is refused"""
-        if self.base_lines is None:
+        """THE REPLAY IS THE AUDIT: every line sealed by the call equals the base's line at the same ordinal, or the session is refused —
+        until the first input (D17): from the fork on the session is its own world and the base is no longer its truth"""
+        if self.base_lines is None or self.fork is not None:
             return
         evs = self.sink.seg.events
         for k in range(self._n0, len(evs)):
@@ -180,7 +193,10 @@ class Stepper:
         if until and until_key is None:
             raise SystemExit('THE STEPPER: --to %r is not a verse' % until)
         n0, day0, ran = len(self.sink.seg.events), self.w.clock.day, []
+        self._inputs_now = []
         if not self.done:
+            if not _replay:
+                self._enter()                                     # D18: the queue first — the items due at this pause enter before the text's line
             nk = WE.verse_key(self.next_verse) if self.next_verse else None
             at_edge = (target is not None and nk is not None and nk >= target) or (until_key is not None and nk is not None and nk >= until_key)
             if not at_edge:
@@ -189,10 +205,27 @@ class Stepper:
                     ran.append((v, i))
                     if self._pause(by, target, v, day0, until_key):
                         break
+                    if not _replay:
+                        self._enter()                             # the next pause inside a multi-line step: the queue first again
+            if self.done and not _replay:
+                self._enter(at_end=True)                          # D18: the end of the text is a pause too — the rest of the queue enters before the seal
         if not _replay:
             self.steps += 1
         self.report = self._report(ran, len(self.sink.seg.events) - n0)
         return self.report
+
+    def _enter(self, at_end=False):
+        """THE PORT (D16-D18): the items due at this pause enter in file order through World.submit — the one door; each a sealed block; the first
+        input is THE FORK — from it on the session is its own world (the audit stops, the header will say where)"""
+        if self.port is None:
+            return
+        nk = WE.verse_key(self.next_verse) if self.next_verse else None
+        for it in self.port.due(nk, at_end=at_end or self.done):
+            n0 = len(self.sink.seg.events)
+            self.w.submit(self.port.event_of(it))
+            if self.fork is None:
+                self.fork, self.forked_by = n0 + 1, it['id']
+            self._inputs_now.append(it['id'])
 
     def run(self, until=None):
         """to the end (or to the left edge of `until`) in one step"""
@@ -221,7 +254,9 @@ class Stepper:
                 'next_verse': self.next_verse, 'done': self.done, 'day': w.clock.day, 'date': self._date(), 'exodus': self._era('exodus'),
                 'verse_reached': (BOOK_NAME.get(vr[0], vr[0]), vr[1], vr[2]) if vr else None,
                 'entities': len(w.entities), 'open_entries': sum(len(e.open_entries()) for e in w.entities.values()),
-                'pending_timers': len(w.timers), 'audited': (self.audited_n == len(evs)) if self.base_lines is not None else None}
+                'pending_timers': len(w.timers),
+                'audited': None if (self.base_lines is None or self.fork is not None) else (self.audited_n == len(evs)),
+                'inputs': list(self._inputs_now), 'fork': self.fork, 'forked_by': self.forked_by}          # THE PORT (2026-09-14): the items that entered at this step; the fork once set
 
     def show(self, what, *args):
         """rows FROM THE DATABASE under the session's source, through the five views: open | ledger <entity> | custody | timers"""
@@ -246,6 +281,9 @@ class Stepper:
     def close(self, quiet=True):
         """the session's seal: the partial or whole segment written, part (a)'s audit run"""
         self.done = True
+        if self.port is not None:                          # D17: the forked world's header names its base, its fork, the item and the queue
+            self.sink.seg.header = {'base': os.path.basename(self.base) if self.base else None, 'fork': self.fork, 'forked_by': self.forked_by,
+                                    'queue': self.port.name, 'pending': self.port.pending}
         if getattr(self.w, 'journal', None) is self.sink:
             return self.sink.seal(quiet=quiet)
         return self.sink.path, len(self.sink.seg.events), sum(self.sink.coerced.values())
@@ -260,20 +298,25 @@ def print_report(r, label='STEP'):
                                                  'THE END OF THE TAPE' if r['done'] else 'the world stands before %s' % r['next_verse']))
     print('        day %d = %s (creation year, month, day); the exodus era %s; reached %s; entities %d, open entries %d, pending timers %d; %d lines in all; audited against the base: %s'
           % (r['day'], r['date'], r['exodus'], r['verse_reached'], r['entities'], r['open_entries'], r['pending_timers'], r['sealed_total'],
-             {True: 'yes', False: 'NO', None: 'no base on disk'}[r['audited']]))
+             ('forked at ordinal %d by the input %s — no audit past the fork' % (r['fork'], r['forked_by'])) if r.get('fork') else {True: 'yes', False: 'NO', None: 'no base on disk'}[r['audited']]))
+    if r.get('inputs'):
+        print('        INPUTS through the port at this pause: %s' % ', '.join(r['inputs']))
 
 
 def main(argv):
     def opt(name, default=None):
         return argv[argv.index(name) + 1] if name in argv else default
-    frm, to, by, steps = opt('--from'), opt('--to'), opt('--by', 'verse'), opt('--steps')
+    frm, to, by, steps, queue = opt('--from'), opt('--to'), opt('--by', 'verse'), opt('--steps'), opt('--queue')
     show = argv[argv.index('--show') + 1:argv.index('--show') + 3] if '--show' in argv else None
     if show and show[0] != 'ledger':
         show = show[:1]
     pause, quiet = '--pause' in argv, '--quiet' in argv
-    print('THE STEPPER (THE LOOP step 7 b): the tape one call at a time; the session journals as %s; --by %s%s%s' % (SOURCE, by, (' --from %s' % frm) if frm else '', (' --to %s' % to) if to else ''))
-    st = Stepper(from_verse=frm)
+    st = Stepper(from_verse=frm, queue=queue)
+    print('THE STEPPER (THE LOOP step 7 b): the tape one call at a time; the session journals as %s; --by %s%s%s' % (st.source, by, (' --from %s' % frm) if frm else '', (' --to %s' % to) if to else ''))
     print('the base: %s' % (os.path.basename(st.base) if st.base else 'none on disk — no audit'))
+    if st.port is not None:
+        print('THE PORT: the queue %s — %d item(s): %s; the session journals as %s%s' % (queue, len(st.port.items), ', '.join('%s@%s' % (it['id'], it['at'] or 'the first pause') for it in st.port.items), st.source,
+              ('; WARNINGS: ' + '; '.join('%s (%s) lacks %s' % w for w in st.port.warnings)) if st.port.warnings else ''))
     if frm:
         print_report(st.report, 'REPLAY')
     n, limit = 0, int(steps) if steps else None
@@ -292,13 +335,14 @@ def main(argv):
         if pause and not st.done:
             try:
                 word = input('        [Enter] to step, q to quit: ').strip().lower()
-            except EOFError:
+            except EOFError:                                  # no keyboard behind this run (a session's own runner): the pause cannot wait — say so and stop
+                print('\n        no keyboard behind this run — --pause needs a terminal window; the session stops here (run without --pause, or with --steps N, to watch)')
                 word = 'q'
             if word == 'q':
                 break
     path, nl, coerced = st.close(quiet=quiet)
     print('SESSION SEALED: %s (%d lines, coerced %d; %s); ask it: python3 World/step9/world_journal.py --ask ledger <entity> --world %s'
-          % (path, nl, coerced, 'the whole tape' if st.done and st.next_verse is None and nl == len(st.base_lines or []) else 'a partial segment', SOURCE))
+          % (path, nl, coerced, 'the whole tape' if st.done and st.next_verse is None and nl == len(st.base_lines or []) else 'a partial segment', st.source))
 
 
 if __name__ == '__main__':

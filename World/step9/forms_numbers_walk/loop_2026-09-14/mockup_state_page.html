@@ -1,0 +1,385 @@
+<title>The World at a Pause</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --ground: #EDEFF2; --surface: #FFFFFF; --surface-2: #F6F7F9; --line: #D5DAE1;
+    --ink: #1B1F26; --muted: #5D6673; --faint: #8A93A0;
+    --seal: #8C2F39; --seal-soft: #F3E3E5;
+    --open: #A66D0F; --open-soft: #FBEFD8; --closed: #4F7A5A; --closed-soft: #E3EFE6;
+    --marker: #3D5A80; --marker-soft: #E2E9F2; --port: #8C2F39; --port-soft: #F3E3E5;
+    --tape: #5D6673; --tape-soft: #E9ECF0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #15181D; --surface: #1E2229; --surface-2: #232830; --line: #343A44;
+      --ink: #E7E9EC; --muted: #A3ABB6; --faint: #7C8591;
+      --seal: #D26A73; --seal-soft: #3A2226;
+      --open: #D9A441; --open-soft: #3A2E17; --closed: #7FB08A; --closed-soft: #1F3125;
+      --marker: #7EA2CC; --marker-soft: #1F2C3D; --port: #D26A73; --port-soft: #3A2226;
+      --tape: #A3ABB6; --tape-soft: #2A303A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #15181D; --surface: #1E2229; --surface-2: #232830; --line: #343A44;
+    --ink: #E7E9EC; --muted: #A3ABB6; --faint: #7C8591;
+    --seal: #D26A73; --seal-soft: #3A2226;
+    --open: #D9A441; --open-soft: #3A2E17; --closed: #7FB08A; --closed-soft: #1F3125;
+    --marker: #7EA2CC; --marker-soft: #1F2C3D; --port: #D26A73; --port-soft: #3A2226;
+    --tape: #A3ABB6; --tape-soft: #2A303A;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; font-size: 14px; line-height: 1.5; padding-block: 24px 48px; padding-inline: 20px; }
+  a { color: var(--marker); }
+  .wrap { max-width: 1240px; margin: 0 auto; display: grid; gap: 20px; }
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 500; text-wrap: balance; margin: 0; }
+  h1 { font-size: 30px; line-height: 1.15; }
+  h2 { font-size: 17px; }
+  .eyebrow { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .mono { font-family: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace; font-variant-numeric: tabular-nums; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  /* the header: the summary before the detail */
+  .head { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px 22px; display: grid; gap: 14px; }
+  .head-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .mock { font-size: 12px; color: var(--muted); border: 1px dashed var(--line); padding: 4px 10px; border-radius: 4px; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px 24px; }
+  .fact .eyebrow { margin-bottom: 2px; }
+  .fact .v { font-size: 15px; font-weight: 500; }
+  .fact .v small { color: var(--muted); font-weight: 400; }
+  .status { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .pill { display: inline-block; font-size: 11.5px; font-weight: 600; letter-spacing: .03em; padding: 3px 9px; border-radius: 999px; border: 1px solid transparent; }
+  .pill.seal { color: var(--seal); background: var(--seal-soft); }
+  .pill.port { color: var(--port); background: var(--port-soft); }
+  .pill.ok { color: var(--closed); background: var(--closed-soft); }
+  .pill.open { color: var(--open); background: var(--open-soft); }
+  .pill.marker { color: var(--marker); background: var(--marker-soft); }
+  .pill.tape { color: var(--tape); background: var(--tape-soft); }
+  .pill.closed { color: var(--closed); background: var(--closed-soft); }
+
+  /* the controls, drawn not wired */
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .controls .lbl { color: var(--muted); font-size: 12.5px; margin-right: 4px; }
+  .btn { font: inherit; font-size: 13px; padding: 6px 12px; border: 1px solid var(--line); background: var(--surface-2); color: var(--ink); border-radius: 4px; cursor: pointer; }
+  .btn.primary { background: var(--seal); border-color: var(--seal); color: #fff; font-weight: 600; }
+  .btn.on { border-color: var(--ink); font-weight: 600; }
+  .btn:focus-visible { outline: 2px solid var(--marker); outline-offset: 2px; }
+  .btn:disabled { opacity: .6; cursor: default; }
+
+  /* the two columns */
+  .cols { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+  @media (max-width: 900px) { .cols { grid-template-columns: 1fr; } }
+  .stack { display: grid; gap: 20px; }
+  .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; display: grid; gap: 12px; }
+  .panel-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .panel-head .sub { color: var(--muted); font-size: 12.5px; }
+
+  /* the step's lines in words */
+  .lines { display: grid; gap: 0; border-top: 1px solid var(--line); }
+  .ln { display: grid; grid-template-columns: 58px 84px minmax(0, 1fr); gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); align-items: start; }
+  .ln .seq { color: var(--faint); font-size: 12px; padding-top: 3px; }
+  .ln .cls { padding-top: 1px; }
+  .ln .what { display: grid; gap: 3px; min-width: 0; }
+  .ln .what .s { font-size: 14px; }
+  .ln .what .s b { font-weight: 600; }
+  .ln .what .m { color: var(--muted); font-size: 12.5px; }
+  .ln .what .m .mono { font-size: 12px; }
+  .ln.input { background: linear-gradient(90deg, var(--port-soft), transparent 40%); margin-inline: -18px; padding-inline: 18px; }
+  @media (max-width: 520px) { .ln { grid-template-columns: 50px 1fr; } .ln .what { grid-column: 1 / -1; } }
+  details summary { cursor: pointer; color: var(--muted); font-size: 13px; }
+  details summary:focus-visible { outline: 2px solid var(--marker); }
+
+  /* what changed */
+  .delta { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+  .d { background: var(--surface-2); border-radius: 4px; padding: 10px 12px; display: grid; gap: 2px; }
+  .d .eyebrow { font-size: 10.5px; }
+  .d .v { font-size: 18px; font-weight: 600; line-height: 1.1; }
+  .d .v span { font-size: 12.5px; font-weight: 400; color: var(--muted); }
+
+  /* the tables */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; padding: 6px 8px 6px 0; border-bottom: 1px solid var(--line); }
+  td { padding: 7px 8px 7px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td.r, th.r { text-align: right; }
+  .tbl-wrap { overflow-x: auto; }
+  .ent { font-weight: 500; }
+  .verse { color: var(--muted); font-size: 12px; }
+
+  /* the population bars */
+  .bars { display: grid; gap: 6px; }
+  .bar { display: grid; grid-template-columns: 76px 1fr 64px; gap: 10px; align-items: center; font-size: 12.5px; }
+  .bar .track { height: 10px; background: var(--surface-2); border-radius: 2px; overflow: hidden; }
+  .bar .fill { height: 100%; background: var(--marker); border-radius: 2px; }
+  .bar .n { text-align: right; }
+
+  .foot { color: var(--muted); font-size: 12.5px; }
+  .foot code { font-family: "IBM Plex Mono", monospace; font-size: 12px; background: var(--surface-2); padding: 1px 5px; border-radius: 3px; }
+</style>
+
+<div class="wrap">
+
+  <header class="head">
+    <div class="head-top">
+      <div>
+        <div class="eyebrow">The loop that waits · a session paused between two lines</div>
+        <h1>The world stands before Numbers 27:6</h1>
+      </div>
+      <div class="mock">Mockup · every row below is a real row of the session <span class="mono">port@daughters</span>, paused after its second step</div>
+    </div>
+    <div class="facts">
+      <div class="fact"><div class="eyebrow">Day</div><div class="v num">908,718 <small>from the first day of creation</small></div></div>
+      <div class="fact"><div class="eyebrow">Creation calendar</div><div class="v num">year 2488 · month 6 · day 1</div></div>
+      <div class="fact"><div class="eyebrow">From the exodus</div><div class="v num">year 40 · month 6 · day 1 <small>Elul of the fortieth year</small></div></div>
+      <div class="fact"><div class="eyebrow">Last verse run</div><div class="v">Numbers 27:5 <small>the judgment brought near</small></div></div>
+      <div class="fact"><div class="eyebrow">Lines sealed</div><div class="v num">3,230 <small>on disk and in the database</small></div></div>
+    </div>
+    <div class="status">
+      <span class="pill seal">SEALED · chain verified</span>
+      <span class="pill port">FORKED at line 3,225 by the input first_horn</span>
+      <span class="pill ok">AUDITED against the base to the fork</span>
+      <span class="pill tape">base: seed_isaac</span>
+    </div>
+    <div class="controls" aria-label="the stepper's controls, drawn for the mockup">
+      <span class="lbl">Step by</span>
+      <button class="btn" disabled>call</button>
+      <button class="btn on" disabled>verse</button>
+      <button class="btn" disabled>chapter</button>
+      <button class="btn" disabled>marker</button>
+      <button class="btn" disabled>day</button>
+      <span class="lbl" style="margin-left:12px">Run to</span>
+      <button class="btn mono" disabled>Num 28:1</button>
+      <button class="btn primary" disabled>Step ›</button>
+      <span class="lbl">(the controls are drawn, not wired)</span>
+    </div>
+  </header>
+
+  <div class="cols">
+
+    <!-- LEFT: what happened, and how the state changed -->
+    <div class="stack">
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>What changed in this step</h2>
+          <span class="sub">step 2 · one tape line at Numbers 27:5, and two inputs before it</span>
+        </div>
+        <div class="delta">
+          <div class="d"><div class="eyebrow">Entities</div><div class="v num">303 <span>+1 · the widow</span></div></div>
+          <div class="d"><div class="eyebrow">Open entries</div><div class="v num">184 <span>+2</span></div></div>
+          <div class="d"><div class="eyebrow">Statuses set</div><div class="v num">1 <span>exempt</span></div></div>
+          <div class="d"><div class="eyebrow">Docket</div><div class="v num">1 <span>+1 · the court</span></div></div>
+          <div class="d"><div class="eyebrow">Timers</div><div class="v num">0 <span>set · 0 fired</span></div></div>
+          <div class="d"><div class="eyebrow">The clock</div><div class="v num">unmoved <span>no date in this step</span></div></div>
+          <div class="d"><div class="eyebrow">Inputs</div><div class="v num">2 <span>through the port</span></div></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>The lines of this step, in words</h2>
+          <span class="sub">six lines · 3,225 to 3,230 · the queue first, then the text</span>
+        </div>
+        <div class="lines">
+          <div class="ln input">
+            <div class="seq mono">3225</div>
+            <div class="cls"><span class="pill port">INPUT</span></div>
+            <div class="what">
+              <div class="s"><b>The daughters of Zelophehad</b> claim the estate as a son — <i>estate claimed</i>, on Numbers 27:8.</div>
+              <div class="m">Through the port <span class="mono">daughters</span>, item <span class="mono">first_horn</span>: Bava Batra 119b:10, the first horn — if we are as a son, give us an inheritance as a son. Answered by <span class="mono">law_zelophehad</span>.</div>
+            </div>
+          </div>
+          <div class="ln">
+            <div class="seq mono">3226</div>
+            <div class="cls"><span class="pill open">WRITE</span></div>
+            <div class="what">
+              <div class="s"><span class="mono">law_zelophehad</span> writes on <b>the daughters of Zelophehad</b>: <b>a holding is owed</b> — the daughter's share, a debit, open.</div>
+              <div class="m">From Numbers 27:8 — if a man dies and has no son, you shall pass his inheritance to his daughter.</div>
+            </div>
+          </div>
+          <div class="ln input">
+            <div class="seq mono">3227</div>
+            <div class="cls"><span class="pill port">INPUT</span></div>
+            <div class="what">
+              <div class="s"><b>The widow of Zelophehad</b> is claimed for the levir — <i>levirate claimed</i>, on Deuteronomy 25:5, five daughters and no son.</div>
+              <div class="m">Through the port <span class="mono">daughters</span>, item <span class="mono">second_horn</span>: the second horn — if not, let our mother enter levirate marriage. Answered by <span class="mono">law_zelophehad</span>.</div>
+            </div>
+          </div>
+          <div class="ln">
+            <div class="seq mono">3228</div>
+            <div class="cls"><span class="pill closed">STATUS</span></div>
+            <div class="what">
+              <div class="s"><span class="mono">law_zelophehad</span> sets on <b>the widow of Zelophehad</b>: <b>exempt</b> — a child of any kind exempts the mother.</div>
+              <div class="m">Deuteronomy 25:5 read as the Mishnah reads it, Yevamot 2:5. No levirate bond forms: the decedent did not die childless.</div>
+            </div>
+          </div>
+          <div class="ln">
+            <div class="seq mono">3229</div>
+            <div class="cls"><span class="pill tape">EVENT</span></div>
+            <div class="what">
+              <div class="s"><b>Moses</b> brings the daughters' judgment near before the LORD — <i>judgment brought near</i>, Numbers 27:5.</div>
+              <div class="m">The tape's own line. Consumed by <span class="mono">law_tent</span>: the halt's third form — no guard, no wait, the docket alone.</div>
+            </div>
+          </div>
+          <div class="ln">
+            <div class="seq mono">3230</div>
+            <div class="cls"><span class="pill open">WRITE</span></div>
+            <div class="what">
+              <div class="s"><span class="mono">law_tent</span> writes on <b>the court</b>: <b>a declaration is owed</b> — the scope, a debit, open, the daughters the party.</div>
+              <div class="m">Sifrei Bamidbar 133:4; Bava Batra 119a:6 — Moses knew daughters inherit; the fit against the held is what waits. Sanhedrin 8a:4: I will hear it.</div>
+            </div>
+          </div>
+        </div>
+        <details>
+          <summary>The previous step · three lines · 3,222 to 3,224 · Numbers 27:1 with 27:1-4</summary>
+          <div class="lines" style="margin-top:10px">
+            <div class="ln">
+              <div class="seq mono">3222</div>
+              <div class="cls"><span class="pill marker">MARKER</span></div>
+              <div class="what">
+                <div class="s">Numbers 27:1 — the daughters drew near. <b>The clock stands at day 908,718</b>, the fortieth year; the date is reading-placed.</div>
+                <div class="m">Sifrei Bamidbar 133:3 — Eleazar in the court's roster dates the case; Bava Batra 121a:9 — after the wilderness generation stopped dying.</div>
+              </div>
+            </div>
+            <div class="ln">
+              <div class="seq mono">3223</div>
+              <div class="cls"><span class="pill tape">EVENT</span></div>
+              <div class="what">
+                <div class="s"><b>The daughters of Zelophehad</b> draw near and stand before Moses, Eleazar, the princes and the congregation — <i>daughters approached</i>, Numbers 27:1-4.</div>
+                <div class="m">The tape's own line. Consumed by <span class="mono">law_zelophehad</span>.</div>
+              </div>
+            </div>
+            <div class="ln">
+              <div class="seq mono">3224</div>
+              <div class="cls"><span class="pill open">WRITE</span></div>
+              <div class="what">
+                <div class="s"><span class="mono">law_zelophehad</span> writes on <b>the daughters of Zelophehad</b>: <b>a holding is owed</b> — the daughter's share, a debit, open.</div>
+                <div class="m">From the plea itself, Numbers 27:1-4: give us a holding among our father's brothers.</div>
+              </div>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Open on the ledgers</h2>
+          <span class="sub">184 entries open · the newest first</span>
+        </div>
+        <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Entity</th><th>Effect</th><th>Kind</th><th>Written by</th><th>Verse</th></tr></thead>
+          <tbody>
+            <tr><td class="ent">the daughters of Zelophehad</td><td>holding owed · the daughter</td><td><span class="pill open">debit</span></td><td class="mono">law_zelophehad</td><td class="verse">Num 27:8</td></tr>
+            <tr><td class="ent">the court</td><td>declaration owed · the scope</td><td><span class="pill open">debit</span></td><td class="mono">law_tent</td><td class="verse">Num 27:5</td></tr>
+            <tr><td class="ent">the daughters of Zelophehad</td><td>holding owed · the daughter</td><td><span class="pill open">debit</span></td><td class="mono">law_zelophehad</td><td class="verse">Num 27:1-4</td></tr>
+            <tr><td class="ent">the people of Israel</td><td>commanded · divide the land</td><td><span class="pill open">debit</span></td><td class="mono">law_second_census</td><td class="verse">Num 26:52-56</td></tr>
+            <tr><td class="ent">the people of Israel</td><td>commanded · harass the Midianites</td><td><span class="pill open">debit</span></td><td class="mono">law_balak</td><td class="verse">Num 25:16-18</td></tr>
+            <tr><td class="ent">Pinchas</td><td>covenant of peace · in force forever</td><td><span class="pill marker">heaven</span></td><td class="mono">law_balak</td><td class="verse">Num 25:10-13</td></tr>
+            <tr><td class="ent">the court</td><td>commanded · slay the yoked</td><td><span class="pill open">debit</span></td><td class="mono">law_balak</td><td class="verse">Num 25:5</td></tr>
+            <tr><td class="ent">Moses</td><td>commanded · hang the heads</td><td><span class="pill open">debit</span></td><td class="mono">law_balak</td><td class="verse">Num 25:4</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="foot">176 more · filter by entity, effect or writer in the built page</div>
+      </section>
+
+    </div>
+
+    <!-- RIGHT: the state of each item -->
+    <div class="stack">
+
+      <section class="panel">
+        <div class="panel-head"><h2>The docket</h2><span class="sub">custody the court owes a declaration on</span></div>
+        <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Court</th><th>Party</th><th>Owed</th><th>Since</th><th></th></tr></thead>
+          <tbody>
+            <tr><td class="ent">the court</td><td>the daughters of Zelophehad</td><td>the scope</td><td class="num">day 908,718</td><td><span class="pill open">OPEN</span></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="foot">Three earlier declarations closed by their output verses: the blasphemer (Lev 24:12), the unclean men (Num 9:8), the wood-gatherer (Num 15:34).</div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>The people in this step</h2><span class="sub">their ledgers as they stand</span></div>
+        <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Entity</th><th>Effect</th><th>Value</th><th></th></tr></thead>
+          <tbody>
+            <tr><td class="ent">the daughters of Zelophehad</td><td>holding owed</td><td>the daughter · Num 27:1-4</td><td><span class="pill open">open</span></td></tr>
+            <tr><td class="ent">the daughters of Zelophehad</td><td>holding owed</td><td>the daughter · Num 27:8</td><td><span class="pill open">open</span></td></tr>
+            <tr><td class="ent">the widow of Zelophehad</td><td>exempt</td><td>a child of any kind · Deut 25:5</td><td><span class="pill closed">status</span></td></tr>
+            <tr><td class="ent">the court</td><td>declaration owed</td><td>the scope · Num 27:5</td><td><span class="pill open">open</span></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Timers</h2><span class="sub">0 pending · the last four fired</span></div>
+        <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Entity</th><th>Effect</th><th class="r">Set</th><th class="r">Fired</th></tr></thead>
+          <tbody>
+            <tr><td class="ent">the people of Israel</td><td>mourned thirty days <span class="verse">· Aaron</span></td><td class="r num">908,688</td><td class="r num">908,718</td></tr>
+            <tr><td class="ent">the people of Israel</td><td>carcasses fall in the wilderness</td><td class="r num">894,824</td><td class="r num">908,696</td></tr>
+            <tr><td class="ent">the twelve spies</td><td>spied forty days</td><td class="r num">894,785</td><td class="r num">894,825</td></tr>
+            <tr><td class="ent">Korach</td><td>censers test awaited</td><td class="r num">894,824</td><td class="r num">894,825</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Laws in force</h2><span class="sub">62 daemons · boot 22 · by an act 39 · pending 1</span></div>
+        <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Institution</th><th>Installed by</th><th>Verse</th></tr></thead>
+          <tbody>
+            <tr><td class="ent">the court</td><td>the judges appointed</td><td class="verse">Exod 18:21, 25-26</td></tr>
+            <tr><td class="ent">the covenant at Sinai</td><td>the covenant blood thrown</td><td class="verse">Exod 24:6-8</td></tr>
+            <tr><td class="ent">the tent of meeting</td><td>erected · called from the tent</td><td class="verse">Exod 40:17-18 · Lev 1:1</td></tr>
+            <tr><td class="ent">the priesthood</td><td>the investiture blood sprinkled</td><td class="verse">Lev 8:30</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>The population</h2><span class="sub">as of the second census · Num 26:5-51 · 601,730</span></div>
+        <div class="bars num">
+          <div class="bar"><span>Judah</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="n">76,500</span></div>
+          <div class="bar"><span>Dan</span><div class="track"><div class="fill" style="width:84.2%"></div></div><span class="n">64,400</span></div>
+          <div class="bar"><span>Issachar</span><div class="track"><div class="fill" style="width:84.1%"></div></div><span class="n">64,300</span></div>
+          <div class="bar"><span>Zebulun</span><div class="track"><div class="fill" style="width:79.1%"></div></div><span class="n">60,500</span></div>
+          <div class="bar"><span>Asher</span><div class="track"><div class="fill" style="width:69.8%"></div></div><span class="n">53,400</span></div>
+          <div class="bar"><span>Manasseh</span><div class="track"><div class="fill" style="width:68.9%"></div></div><span class="n">52,700</span></div>
+          <div class="bar"><span>Benjamin</span><div class="track"><div class="fill" style="width:59.6%"></div></div><span class="n">45,600</span></div>
+          <div class="bar"><span>Naphtali</span><div class="track"><div class="fill" style="width:59.3%"></div></div><span class="n">45,400</span></div>
+          <div class="bar"><span>Reuben</span><div class="track"><div class="fill" style="width:57.2%"></div></div><span class="n">43,730</span></div>
+          <div class="bar"><span>Gad</span><div class="track"><div class="fill" style="width:52.9%"></div></div><span class="n">40,500</span></div>
+          <div class="bar"><span>Ephraim</span><div class="track"><div class="fill" style="width:42.5%"></div></div><span class="n">32,500</span></div>
+          <div class="bar"><span>Simeon</span><div class="track"><div class="fill" style="width:29.0%"></div></div><span class="n">22,200</span></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>The port</h2><span class="sub">the queue <span class="mono">daughters.yaml</span> · 2 items · 0 pending</span></div>
+        <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Item</th><th>Position</th><th>Kind</th><th></th></tr></thead>
+          <tbody>
+            <tr><td class="mono">first_horn</td><td>the left edge of Num 27:5</td><td>estate claimed</td><td><span class="pill port">entered · 3225</span></td></tr>
+            <tr><td class="mono">second_horn</td><td>the left edge of Num 27:5</td><td>levirate claimed</td><td><span class="pill port">entered · 3227</span></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="foot">The text is the first producer: with no queue, the session is the base run byte for byte.</div>
+      </section>
+
+    </div>
+  </div>
+
+  <p class="foot">Every panel reads the one database, <code>World/journal/data/world.sqlite</code>, under the session's own source; nothing on this page writes. The built page would be rewritten by the stepper at every pause and opened in a browser, later polled live.</p>
+
+</div>

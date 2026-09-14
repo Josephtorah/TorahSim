@@ -73,7 +73,8 @@ Repo: <repo-old> (sole truth). The public mirror TorahSim is downstream, relay o
   (`python3 World/step9/register_census.py --strict`, ~90 s) at every compile sitting's gates step, NOT in the sweep;
   `--emit` prints yaml stubs for undeclared seats; a paid seat's entry is DELETED from register_dispositions.yaml
   (the key AND its indented body); the yaml is parsed before it is trusted (double single quotes inside a
-  single-quoted scalar).
+  single-quoted scalar). SINCE 2026-09-14 (section 23): the journal gate carries THE FOLD LAYER's line — after any freeze run
+  `python3 World/build_world.py` before it, or it refuses the stale layer.
 - Corpus bake: set the tripwire's literals to the PREDICTION first, then `python3 <repo-old>/corpus_world.py`
   and `python3 <repo-old>/logic/corpus/CORPUS_TRUTH.py`. Freeze automatically on green pre-flight.
   Every frozen unit gets logic/py_units/<uid>.py. A SEARCH OF THE SHELF STRIPS THE VOWEL POINTS.
@@ -141,7 +142,8 @@ Hebrew facts computed on the DB; asserts 1 fell → 0) → the rows files → th
 miss; lint 0) → the unit yaml + manifest (check words verified by the store) → the claims seated (the ritual, 13 PASS)
 → the fold predicted and matched (units +1, standing + the claims, hash unmoved) → the records (NUMBERS_WALK "Sitting
 N", RESEARCH_LOG, MIDDOT's case-law entries from the Sifrei, THE_STEPS, THE_BRIEFING, RESUME, memory, the state doc
-checkpoint).
+checkpoint). SINCE D7'S MERGE (2026-09-14, section 23): after the freeze, `python3 World/build_world.py` — the fold layer of the
+one database rebuilt and reconciled; the journal gate at the next compile sitting refuses a stale layer (the hash moved, the header did not).
 
 THE COMPILE SITTING (1b's order, as at 10b): the measurements (the tape's state, the callees live, the registries'
 counts, the register gate's seats in the span) → THE DESIGN written into NUMBERS_WALK.md BEFORE any code (the name, the
@@ -562,3 +564,72 @@ NEXT on the owner's word: (c) THE PORT — the design section in THE_LOOP.md fir
 producer; a later pass under its own run name; every input through World.submit alone — the one door; the registry refuses an unregistered
 kind; what a queued input looks like and where it lives — primary in git or derived; the stepper's pause the seam), the probes to FAIL, then
 the code. Still UNCOMMITTED since a42f518; commit only on "commit push" with the staging form of section 18.
+
+COMMITTED 08fa06e (2026-09-14, the owner: "commit push"; 821 files, everything since a42f518 — sittings 8-15b, the ARCHITECTURE folder, the review, the gloss patches, THE LOOP's step 7 (a) and (b); pushed to Josephtorah/Torah_Grok main). ⚠ THE PUSH LESSON: the GitHub tool is /opt/homebrew/bin/gh, not /usr/bin/gh — a wrong path skips the account switch silently and the push fails on credentials; the form is `GH=/opt/homebrew/bin/gh; $GH auth switch --user Josephtorah; git push origin main; $GH auth switch --user PeerloopLLC` (a fetch under PeerloopLLC fails — that account has no credentials on the owner's repo; the push's own line is the confirmation). Section 3's push line stands corrected by this.
+
+## 22. ADDENDUM (2026-09-14, THE LOOP STEP 7 (c) THE PORT — the owner: "ok go c. keep up with what we need to do to finish this. go"; the state doc's COMPACTION POINT #173). THE LOOP THAT WAITS IS BUILT.
+
+BUILT: THE_LOOP.md "Step 7 THE LOOP THAT WAITS — part (c) THE PORT: the design" + "As built" + "TO FINISH THE LOOP — THE LIST" (the box's (c)
+ticked). D16 THE PORT IS A QUEUE, NEVER A PROMPT: World/journal/port/<queue>.yaml (tracked, primary) — `items:` {id, at, label, event{kind,
+subject, case_source, the fields}}, read ONCE at open and validated (an unregistered kind, an unknown field, a bad position, a position already
+passed by a session starting later: REFUSED, named; a missing registered field a WARNING — the registry's field list is a census, not a
+contract); at every pause the items due enter in file order through World.submit — the one door — the EVENT line prov.unit 'port:<queue>' and
+data.port {queue, id, label}; the queue file never rewritten. D17 A WORLD WITH INPUTS IS ITS OWN WORLD: the session journals whole under
+cold_run_sequence/port@<queue>, audited against the base to the first input, THE FORK recorded (ordinal + item; the header {base, fork,
+forked_by, queue, pending}); the base untouched; D9's appended form stays the cursor's. D18 THE ORDER OF A PAUSE: the queue first, then the
+text's line; an unpositioned item at the first pause (the session's start or the left edge of --from); a positioned one at its verse's left
+edge; one past the tape's end at the end, before the seal. THE CODE: World/step9/world_port.py (Port: load, validate, due, event_of, pending);
+world_stepper.py (Stepper(queue=…), _enter() at every pause and at the end, the audit stopping at the fork, the report's inputs / fork /
+forked_by, the header at close, --queue, the session's own source in the prints); world_journal._append_log's EVENT branch ('port:<queue>');
+worldledger.Segment.write (the header's extra fields whenever given). No engine change. THE PRINTS: port_probes.py 0/9 → 8/9 → 9/9 (P5's
+hand-typed index corrected on the engine's order: the fire's lines precede the marker's own line); step 9/9, live 7/7, journal 7/7, cursor
+6/6; THE REAL SESSION `--from 'Num 27:1' --to 'Num 28:1' --by verse --queue World/journal/port/daughters.yaml --show custody`: 2 items at
+Num 27:5, no warnings; the replay 3,221 audited; step 1 (27:1 with 27:1-4) audited; step 2 at the left edge of 27:5 — THE TWO INPUTS FIRST
+(first_horn → holding_owed on the daughters at Num 27:8, seq 3226; second_horn → exempt = child_of_any_kind on the widow at Deut 25:5, seq 3228;
+both law_zelophehad), then the text's 27:5 line (the custody, seq 3230), FORKED AT 3225 BY first_horn; step 3 (27:6-11) the custody closed;
+stopped at the left edge of 28:1; sealed 3,233 lines in 1,497 blocks, the audit ok; the header {base, fork 3225, forked_by first_horn, queue
+daughters, pending []}; askable under --world cold_run_sequence/port@daughters. THE TAPE AFTER: green by the runner's own exit (the live report prints only after the grade passes) — the live report 26,511 rows: the port's world cold_run_sequence/port@daughters 3,233 rows = 3,233 lines MATCH beside the four worlds (3,362 / 3,362 / 3,358 / 3,362), the stepper's session (3,229) and the cursor's segment (4), every source current. A FINDING: the second horn's citation
+(Deut 25:5) moved the engine's VERSE REACHED to Deuteronomy inside Numbers 27 — an input's citation moves the position the installation gate
+reads; the port's position or the input's citation: the owner's, inside the inputs' definition (list item 7). LINTS 0 on every new and
+changed file; every record at its baseline. THE FORMS: forms_numbers_walk/loop_2026-09-14/ (loop_design_c.md, write_port_records.py).
+
+⚠ A STANDING DUTY FROM THIS SITTING: THE_LOOP.md "TO FINISH THE LOOP — THE LIST" is brought current at every loop sitting and echoed in the
+reply at its close. THE LIST NOW (twelve): the owner's — 1 the inputs themselves, 6 time without a marker, 7 the position of an input; after
+Deuteronomy — 2 the second pass (D2), 3 step 6 the readback (D12); sittings — 4 D7's merge, 5 the checkpoints as they fall (the stitcher);
+small — 8 the cursor's lines live (the cursor may retire into the stepper), 12 the other worlds stepped; the design thread's — 9 the window
+(CHRONICLE); later — 10 the interface, 11 a graded input. NEXT on the owner's word: one of the list's items (his three decisions first), or
+THE NEXT BOOK (Deuteronomy, as #160), or the py_units gloss sitting. UNCOMMITTED since 08fa06e: this sitting's files and the post-commit notes;
+commit only on "commit push" with the staging form of section 18 (the GitHub tool at /opt/homebrew/bin/gh).
+
+## 23. ADDENDUM (2026-09-14, D7'S MERGE — ONE DATABASE; the owner: "ok go the merge", THE LIST's item 4; the state doc's COMPACTION POINT #174)
+
+BUILT: THE_LOOP.md "D7'S MERGE — ONE DATABASE: the design" + "As built"; THE LIST's item 4 marked done. THE DECISIONS D19 THE FOLD IS THE
+STRUCTURE LAYER (the journal's L1 = corpus_world.fold()'s ten lists as rows — 6,558 items — plus 3,015 fold.ref rows of the spine and one
+fold.meta; the header carries the counts and the state hash; the August tree model — L1_structure.jsonl, world_tree.json, its checklist —
+RETIRED as D10 ruled), D20 THE OLD TABLES ARE VIEWS WITH THEIR OLD NAMES (World/journal/fold_views.sql: refs, units, facts, fold_events —
+the ONE exception, `events` being the journal's table — event_themes, demands, mentions, names, standing, tests, checkpoints, meta,
+entities, relations, entity_state; created by world_journal.views() at every reindex and attach beside the five run views), D21 THE GATE
+MOVED UPSTREAM TWICE (World/build_world.py the entry: build → reindex → views → reconcile against a fresh fold on nine counts and the hash,
+--check alone; world_journal.py --gate: fold_gate() — the fold layer's header against CORPUS_TRUTH's pinned literals and the index's own
+rows, no refold; a frozen unit moves the hash → "stale — run World/build_world.py"). THE CODE: World/journal/build_world.py (rewritten),
+World/journal/fold_views.sql (new), World/build_world.py (rewritten), World/ask.py (the path; fold_events), World/run_genesis.py (RETIRED with
+a guard), World/journal/registers/event_kinds.yaml (12 fold kinds added; 22 August L1 kinds marked retired), World/step9/world_journal.py
+(views; pinned_truth; fold_gate; the gate's line), World/step9/merge_probes.py (new). No engine, runner or unit change. THE PRINTS:
+merge_probes.py 0/8 → 4/8 → 6/8 → 8/8 (four probe corrections on the tool's and the registry's own forms — no code changed for a probe);
+THE REAL MERGE: the fold 29 s, L0 4,902, L1 9,574 rows, the index 31,204 rows over 10 segments, the fourteen fold views + the five run
+views, World/world.sqlite deleted, THE RECONCILIATION ALL GREEN (units 210, facts 1,809, events 557, demands 341, open 191, mentions 1,167,
+names 81, standing 2,163, tests 14, hash 8b8fff1fa28953af); `World/ask.py at Gen.30.24` over the one database: 216 entities, 736 facts, 507
+events, 153 demands, 593 standing law, two outstanding (Rachel's, 30:3 and 30:14); `entities`: God 216, Abraham 104, Noah 46; `called
+jacob`: yaaqov from Gen.25.26, yisrael from Gen.35.10; THE GATE: GREEN — the four segments byte-identical across two processes, chains verified; the live index 13,444 rows identical between the processes and equal to the rebuild; the five run views MATCH on every source; THE FOLD LAYER's new line: units 210, facts 1,809, demands 341, events 557, names 81, standing 2,163, open demands 191 and the state hash 8b8fff1fa28953af each MATCH the pinned truth, 12 kinds and 9,574 rows in the index MATCHING the header; THE PROBES AFTER: journal 7/7, live 7/7, step 9/9, port 9/9, cursor 6/6 after the journal module's change. LINTS 0 on every changed file; every record at its
+baseline. THE FORMS: forms_numbers_walk/loop_2026-09-14/ (loop_design_merge.md, write_merge_records.py). NEW COMMANDS: `python3
+World/build_world.py` (the merge whole; `--check` the reconcile alone — run it after any freeze, the gate says when); `python3 World/ask.py
+at|open|who|career|entities|called|names|sql …` over the one database. THE DATA FOLDER after: L0_scripture.jsonl, L1_fold.jsonl,
+L2_cases.jsonl, the L3 segments, world.sqlite (15.6 MB); a stray .live body file of a stepping session that died mid-run — the design's
+trace, harmless.
+
+⚠ THE STANDING DUTY (the list): eleven items remain — the owner's three (1 the inputs themselves; 6 time without a marker; 7 the position of
+an input), after Deuteronomy (2 the second pass; 3 the readback), a sitting (5 the checkpoints as they fall), small (8 the cursor's lines;
+12 the other worlds), the design thread's (9 the window), later (10 the interface — its shape agreed with the main thread and three mockups
+drawn: the panel, the feed, the output-only feed, THE BOARD; 11 a graded input). NEXT on the owner's word: an item of the list (his three
+decisions first; the board as a real page over the one database is item 10's build), THE NEXT BOOK (Deuteronomy, as #160), or the py_units
+gloss sitting. UNCOMMITTED since 08fa06e: step 7 (c), the merge, the mockups' forms and the post-commit notes; commit only on "commit push".

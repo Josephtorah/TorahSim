@@ -470,6 +470,11 @@ do any time; the gates are the only tax.
 One command, all green or the change doesn't ship: unit assertions,
 renderings reprinted, world refolded to its hash, scenes vs baseline,
 changelog check. (Deleting or rebaselining a TEST takes owner word.)
+SINCE D7'S MERGE (2026-09-14, THE_LOOP.md "D7'S MERGE — ONE DATABASE"):
+after any freeze, `python3 World/build_world.py` rebuilds the fold layer
+of the one database and reconciles it against the fresh fold. A freeze
+moves the corpus's hash; the journal gate then refuses the layer as
+stale until it is rebuilt. This is a gate step, not an option.
 
 ### The stamp (delegated 2026-09-01; owner word before that)
 When a span's declared reading is COMPLETE and its logic was rebuilt
@@ -3240,6 +3245,32 @@ timers). The replay is the audit: a sealed line that differs from the
 base's at the same ordinal refuses the session there. The pause is a
 control word, never a data event — the port of part (c), owed on the
 owner's word, is the only door for inputs.
+
+STEP 7 (c) THE PORT (2026-09-14, the owner's "ok go c. keep up with what
+we need to do to finish this. go"; THE_LOOP.md "Step 7 ... part (c)"
+design + as-built; World/step9/world_port.py): the loop reads its next
+input from a QUEUE outside the code — a file of items (World/journal/
+port/<queue>.yaml, primary), read once at open and validated against the
+registry (an unregistered kind or an unknown field refused — the one
+door), each entering at its position in file order before the text's
+own line, journaled as 'port:<queue>'. A world with inputs is its own
+world: audited against the base to the first input, forked there,
+sealed whole under the queue's name. The text is the first producer;
+the port decides nothing about what the inputs are. THE LOOP THAT
+WAITS IS BUILT; what finishes the loop is THE LIST in THE_LOOP.md,
+kept current at every loop sitting.
+
+D7'S MERGE — ONE DATABASE (2026-09-14, the owner's "ok go the merge";
+THE_LOOP.md "D7'S MERGE — ONE DATABASE" design + as-built): the reading's
+world — the fold of the frozen units, what exists and what the reading
+found — is the journal's own layer now, one row per item, and the World
+folder's old tables are views over it with their old names, so the old
+ask tool and the run's tool read one file: World/journal/data/
+world.sqlite. The reconciliation moved upstream: the entry proves the
+views against a fresh fold on nine counts and the state hash; the
+journal gate proves the layer's header against the pinned truth. The
+August tree model and the old world.sqlite are retired; the stepper is
+the player.
 
 ## THE NUMBERS WALK (owner-ruled 2026-09-09 at THE TENT's close; the map World/step9/NUMBERS_WALK.md)
 

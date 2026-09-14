@@ -521,6 +521,10 @@ def run(pause=True, quiet=False):
 
 
 def main():
+    # RETIRED 2026-09-14 at D7'S MERGE (World/step9/THE_LOOP.md): World/world.sqlite is gone — the one database is the journal's index and the
+    # player of the running world is World/step9/world_stepper.py (the tape one call at a time, the state read from the database at every
+    # pause). This file stays as the record of the reading era's teaching run.
+    raise SystemExit('run_genesis.py is RETIRED (2026-09-14, D7\'s merge): the player is World/step9/world_stepper.py; the database World/journal/data/world.sqlite (ask.py)')
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-pause", action="store_true")
     ap.add_argument("--quiet", action="store_true",

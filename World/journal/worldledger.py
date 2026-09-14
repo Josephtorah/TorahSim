@@ -47,7 +47,7 @@ class Segment:
                     "events": len(self.events), "chain_head": self._chain}
             if self.start_chain:                       # THE LOOP step 4 (2026-09-09): an appended segment names its start and its fork
                 head["start_chain"] = self.start_chain
-                head.update(self.header)
+            head.update(self.header)                       # THE LOOP step 7 (c) THE PORT (2026-09-14): a whole-world segment forked by an input names its base, its fork and its queue
             f.write(canon(head) + "\n")
             for ev in self.events:
                 f.write(canon(ev) + "\n")

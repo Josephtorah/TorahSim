@@ -2163,3 +2163,27 @@ real sessions: chapter 27 stepped by verse from the left edge of 27:1 (the repla
 27:5 and gone after 27:6-11, stopped at the left edge of 28:1);
 the whole tape by marker in 158 steps, its segment the base's body byte for byte. step_probes.py 0/8 → 9/9. NEXT on the owner's word:
 (c) THE PORT — the queue the loop reads at this pause, the text its first producer.
+
+### 2026-09-14 — STEP 7 (c) THE PORT BUILT: THE LOOP READS ITS NEXT INPUT FROM OUTSIDE ITSELF (the owner: "ok go c. keep up with what we need to do to finish this. go"; the map: World/step9/THE_LOOP.md "Step 7 ... part (c)" design + as-built + TO FINISH THE LOOP — THE LIST)
+
+The loop that waits is whole: it writes as it runs (a), pauses between calls (b), and now reads its next input from a QUEUE outside the code
+(c) — a file of items, read once at open and validated against the registry (an unregistered kind or an unknown field refused; the one door),
+each item entering at its position (a verse's left edge, the first pause, or the end) in file order before the text's own line, journaled
+with prov.unit 'port:<queue>'. A world with inputs is its own world (D17): the session audits against the base up to the first input, forks
+there, and seals whole under the queue's name with the fork in its header — askable in the one database. The text is the first producer (a
+session with no queue is the base byte for byte); the port decides nothing about what the inputs are. The first real queue: the daughters'
+two horns (Bava Batra 119b:10) at the left edge of Num 27:5 — both answered by the daemon (the daughters' holding owed; the widow exempt, a
+child of any kind), the session forked at ordinal 3,225. port_probes.py 0/9 → 9/9. THE LIST of what finishes the loop is in the map and is
+kept current from now on: the inputs themselves (yours), the second pass and the readback (after Deuteronomy), the merge, the checkpoints as
+they fall, time without a marker (yours), the position of an input (yours), the cursor's lines, the window, the interface, a graded input.
+
+### 2026-09-14 — D7'S MERGE BUILT: ONE DATABASE (the owner: "ok go the merge" — item 4 of the list; the map: World/step9/THE_LOOP.md "D7'S MERGE — ONE DATABASE" design + as-built)
+
+The two databases are one. The reading's world — what exists and what the reading found, the fold of the 210 frozen units — is now the
+journal's own L1 layer (D19): one row per item of the fold's ten lists, one per verse of the spine, one carrying the counts and the state
+hash; the August tree model is retired (D10). The World folder's sixteen tables are views over those rows with their old names (D20; one
+exception, the fold's events are fold_events), so the old ask tool answers over the same file the runs write into — "the world as of
+Gen.30.24: 216 entities, 736 facts, 507 events, 153 demands, two outstanding." The reconciliation moved upstream twice (D21): the entry
+proves the views against a fresh fold on nine counts and the hash; the journal gate proves the fold layer's header against the pinned truth
+without refolding. World/world.sqlite is deleted; run_genesis.py is retired — the stepper is the player. merge_probes.py 0/8 → 8/8. The
+board's births now come from the entities view. THE LIST: item 4 done; eleven remain, three of them yours.

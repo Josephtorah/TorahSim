@@ -77,7 +77,8 @@ def _append_log(seg, world, log, coerced):
             s = payload.get('subject')
             subj = reg.get(s, s) if s is not None else 'world'
             if cls == 'EVENT':
-                unit = 'scenario' if payload.get('scenario') else 'tape'   # THE LOOP step 5 (2026-09-09): a labeled hypothetical is told from the text's act
+                unit = ('scenario' if payload.get('scenario') else                                                        # THE LOOP step 5 (2026-09-09): a labeled hypothetical is told from the text's act
+                        'port:%s' % payload['port'].get('queue') if isinstance(payload.get('port'), dict) else 'tape')   # THE LOOP step 7 (c) (2026-09-14): an input through the port names its queue
             elif cls == 'SKIP':
                 unit = payload.get('daemon')          # step 3: the daemon not called — "who was skipped" beside "who wrote this"
             else:
@@ -360,6 +361,8 @@ def reindex(out_dir=None):
 # ---- THE LOOP step 2's remainder (2026-09-09; THE_LOOP.md "Step 2 THE INDEX — the remainder", D7/D8): the four views, their gate,
 # ---- the four questions ----
 VIEWS_SQL = os.path.join(JOURNAL, 'run_views.sql')
+FOLD_VIEWS_SQL = os.path.join(JOURNAL, 'fold_views.sql')     # D7'S MERGE (2026-09-14): the reading's fourteen views over the fold rows
+FOLD_SEGMENT = 'L1_fold.jsonl'
 RUNNING_WORLD = 'cold_run_sequence/seed_isaac'      # the running setting's segment — the ask-tool's default world (--world overrides)
 OPEN_OPS = ('debit', 'heaven', 'body')               # the ledger ops whose entries open and close (World._write's own rule)
 _VERSE_HEAD = re.compile(r'^\s*(\d?\s?[A-Za-z]+)\s+(\d+):(\d+)')
@@ -368,9 +371,12 @@ _VERSE_HEAD = re.compile(r'^\s*(\d?\s?[A-Za-z]+)\s+(\d+):(\d+)')
 def views(db_path):
     """create the four run views over the events table from World/journal/run_views.sql (drop-and-create)"""
     sql = open(VIEWS_SQL, encoding='utf-8').read()
+    fold_sql = open(FOLD_VIEWS_SQL, encoding='utf-8').read() if os.path.exists(FOLD_VIEWS_SQL) else ''
     c = sqlite3.connect(db_path)
     try:
         c.executescript(sql)
+        if fold_sql:
+            c.executescript(fold_sql)                  # D7'S MERGE: the old tables as views, beside the run views
         c.commit()
     finally:
         c.close()
@@ -425,6 +431,52 @@ def views_gate(db_path):
                         v['clock'], v['markers'], v['docket'], v['docket_open'], v['population'], v['rows'], v['closed'], v['closes_local'], v['closes_foreign'], v['skips'], 'MATCH' if not bad else 'DIVERGE %s' % bad))
     if not lines:
         ok, lines = False, ['  no L3 source in the index — ZERO-REPORT']
+    return ok, lines
+
+
+def pinned_truth():
+    """the tripwires logic/corpus/CORPUS_TRUTH.py pins (units, facts, demands, events, names, standing, open demands, the hash), read as literals"""
+    p = os.path.normpath(os.path.join(HERE, '..', '..', 'logic', 'corpus', 'CORPUS_TRUTH.py'))
+    t = open(p, encoding='utf-8').read()
+    out = {k: int(v) for k, v in re.findall(r'assert len\(W\["(\w+)"\]\) == (\d+)', t)}
+    m = re.search(r'assert len\(open_d\) == (\d+)', t)
+    if m:
+        out['open_demands'] = int(m.group(1))
+    m = re.search(r"_state_hash\(W\) == '([0-9a-f]+)'", t)
+    out['state_hash'] = m.group(1) if m else None
+    return out
+
+
+def fold_gate(db_path, out_dir=None):
+    """D7'S MERGE (D21 b): the fold layer's header against CORPUS_TRUTH's pinned tripwires and against the index's own fold rows — no refold;
+    a frozen unit moves the hash and the gate then says the layer is stale until World/build_world.py rebuilds it. Returns (ok, lines)."""
+    d = data_dir(out_dir)
+    seg = os.path.join(d, FOLD_SEGMENT)
+    if not os.path.exists(seg):
+        return False, ['  THE FOLD LAYER: no %s in %s — run python3 World/build_world.py' % (FOLD_SEGMENT, d)]
+    with open(seg, encoding='utf-8') as f:
+        head = json.loads(f.readline())
+    pinned = pinned_truth()
+    lines, ok = [], True
+    for k in ('units', 'facts', 'demands', 'events', 'names', 'standing', 'open_demands'):
+        same = head.get(k) == pinned.get(k)
+        ok = ok and same
+        lines.append('  THE FOLD LAYER %-13s header %6s  pinned %6s  %s' % (k, head.get(k), pinned.get(k), 'MATCH' if same else 'DIVERGE'))
+    same = head.get('state_hash') == pinned.get('state_hash')
+    ok = ok and same
+    lines.append('  THE FOLD LAYER state hash    header %s  pinned %s  %s' % (head.get('state_hash'), pinned.get('state_hash'), 'MATCH' if same else 'STALE — run python3 World/build_world.py'))
+    c = sqlite3.connect(db_path)
+    try:
+        rows = dict(c.execute("select kind, count(*) from events where kind like 'fold.%' group by kind").fetchall())
+    finally:
+        c.close()
+    for k, kind in (('units', 'fold.unit'), ('facts', 'fold.fact'), ('events', 'fold.event'), ('demands', 'fold.demand'), ('mentions', 'fold.mention'),
+                    ('names', 'fold.name'), ('standing', 'fold.standing'), ('tests', 'fold.test'), ('checkpoints', 'fold.checkpoint'), ('ledger', 'fold.ledger'), ('refs', 'fold.ref')):
+        same = rows.get(kind, 0) == head.get(k)
+        ok = ok and same
+        if not same:
+            lines.append('  THE FOLD LAYER %-13s index rows %6d  header %6s  DIVERGE' % (k, rows.get(kind, 0), head.get(k)))
+    lines.append('  THE FOLD LAYER: %d kinds, %d rows in the index %s the header' % (len(rows), sum(rows.values()), 'MATCHING' if ok else 'DIVERGING FROM'))
     return ok, lines
 
 
@@ -576,6 +628,10 @@ def gate():
         print('  THE FIVE RUN VIEWS (run_ledger, run_timers, run_clock, run_docket, run_population) — every count against the table\'s:')
         print('\n'.join(vlines))
         ok = ok and vok
+        # D7'S MERGE (2026-09-14): the reading's layer in the ONE database (the data folder's index) against the pinned truth and its own rows
+        fok, flines = fold_gate(os.path.join(data_dir(), 'world.sqlite'), data_dir())
+        print('\n'.join(flines))
+        ok = ok and fok
         print('GATE %s — %s' % ('GREEN' if ok else 'RED', 'the replay is the audit, the running world is the instrument' if ok else 'read the lines above'))
         return ok
 
